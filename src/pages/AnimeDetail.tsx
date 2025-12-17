@@ -6,7 +6,7 @@ import { ProgressTracker } from '@/components/ProgressTracker';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { getAnimeById } from '@/data/mockAnime';
-import { Play, BookOpen } from 'lucide-react';
+import { Play, BookOpen, Tv } from 'lucide-react';
 
 const AnimeDetail = () => {
   const { id } = useParams<{ id: string }>();
@@ -133,14 +133,14 @@ const AnimeDetail = () => {
               </Card>
               <Card className="border-dashed">
                 <CardContent className="p-3 text-center">
-                  <span className="block text-xs font-bold text-destructive mb-1">f</span>
+                  <span className="block text-xs font-bold text-destructive mb-1">ffff</span>
                   <div className="text-xl font-bold text-destructive">{fillerCount}</div>
                   <div className="text-[10px] text-muted-foreground">filler</div>
                 </CardContent>
               </Card>
               <Card className="border-dashed">
                 <CardContent className="p-3 text-center">
-                  <span className="block text-xs font-bold text-syntax-purple mb-1">a</span>
+                  <Tv className="w-4 h-4 mx-auto mb-1 text-syntax-purple" />
                   <div className="text-xl font-bold text-syntax-purple">{animeOnlyCount}</div>
                   <div className="text-[10px] text-muted-foreground">anime only</div>
                 </CardContent>
