@@ -64,7 +64,7 @@ export const AnimeCard = ({ anime, rank }: AnimeCardProps) => {
                   <span className="text-muted-foreground">: </span>
                   {anime.genres.slice(0, 3).map((genre, i) => (
                     <span key={genre}>
-                      <span className="text-syntax-amber">{genre}</span>
+                      <span className="text-syntax-amber">{genre.toLowerCase()}</span>
                       {i < Math.min(anime.genres.length, 3) - 1 && <span className="text-muted-foreground">, </span>}
                     </span>
                   ))}
@@ -74,7 +74,7 @@ export const AnimeCard = ({ anime, rank }: AnimeCardProps) => {
               {/* Current episode mapping */}
               {currentEpisode && (
                 <div className="mt-auto pt-2 border-t border-dashed">
-                  <p className="text-[10px] text-muted-foreground mb-2 uppercase tracking-wider">
+                  <p className="text-[10px] text-muted-foreground mb-2 tracking-wider">
                     // latest_episode
                   </p>
                   <MangaMappingDisplay episode={currentEpisode} showEpisodeNumber={false} />
