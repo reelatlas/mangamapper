@@ -5,7 +5,7 @@ import { AnimeCard } from '@/components/AnimeCard';
 import { SourceFilter } from '@/components/SourceFilter';
 import { getTopAiringAnime, searchAnime } from '@/data/mockAnime';
 import { AnimeSeries, StreamingService, STREAMING_SERVICES } from '@/types/anime';
-import { Terminal, TrendingUp } from 'lucide-react';
+import { TrendingUp } from 'lucide-react';
 import { useAuth } from '@/hooks/useAuth';
 import { supabase } from '@/integrations/supabase/client';
 
@@ -80,11 +80,6 @@ const Index = () => {
       <main className="container py-8">
         {/* Hero section */}
         <section className="text-center mb-10">
-          <div className="inline-flex items-center gap-2 px-3 py-1.5 border border-dashed text-primary text-xs mb-4">
-            <Terminal className="w-3.5 h-3.5" />
-            <span>{'>'} anime_to_manga_mapper</span>
-          </div>
-          
           <div className="mb-4">
             <pre className="text-2xl sm:text-3xl font-bold text-foreground inline-block">
               <span className="text-primary">find</span>
@@ -95,7 +90,7 @@ const Index = () => {
           
           <p className="text-sm text-muted-foreground max-w-xl mx-auto mb-8">
             <span className="text-syntax-cyan">// </span>
-            discover which manga volume and chapter corresponds to each anime episode
+            correlate manga volume and chapter to anime episodes
           </p>
           
           <SearchBar 
