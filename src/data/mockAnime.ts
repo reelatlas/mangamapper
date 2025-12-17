@@ -319,6 +319,40 @@ export const mockAnimeData: AnimeSeries[] = [
   },
 ];
 
+export type StatusFilter = 'all' | 'airing' | 'completed';
+export type SortBy = 'popularity' | 'release_date';
+
+export const getFilteredAnime = (
+  options: {
+    status?: StatusFilter;
+    limit?: number;
+    sortBy?: SortBy;
+  } = {}
+): AnimeSeries[] => {
+  const { status = 'all', limit = 10, sortBy = 'popularity' } = options;
+  
+  let filtered = [...mockAnimeData];
+  
+  // Filter by status
+  if (status !== 'all') {
+    filtered = filtered.filter(anime => anime.status === status);
+  }
+  
+  // Sort
+  if (sortBy === 'popularity') {
+    filtered.sort((a, b) => a.ranking.anilist - b.ranking.anilist);
+  } else if (sortBy === 'release_date') {
+    filtered.sort((a, b) => {
+      const aDate = a.episodes[0]?.airDate || '1900-01-01';
+      const bDate = b.episodes[0]?.airDate || '1900-01-01';
+      return new Date(bDate).getTime() - new Date(aDate).getTime();
+    });
+  }
+  
+  return filtered.slice(0, limit);
+};
+
+// Legacy function for backwards compatibility
 export const getTopAiringAnime = (
   count: number = 10,
   trackingSite: TrackingSite = 'mal',
