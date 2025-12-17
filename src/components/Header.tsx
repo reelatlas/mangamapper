@@ -19,7 +19,7 @@ export const Header = () => {
         <Link to="/" className="flex items-center gap-1.5 hover:opacity-80 transition-opacity">
           <Terminal className="w-4 h-4 text-muted-foreground" />
           <span className="text-sm tracking-tight">
-            <span className="text-muted-foreground font-medium">manga</span>
+            <span className="text-primary font-medium">manga</span>
             <span className="text-muted-foreground font-normal">mapper</span>
           </span>
         </Link>
