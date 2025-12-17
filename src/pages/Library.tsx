@@ -335,7 +335,18 @@ const Library = () => {
                         type="url"
                         placeholder="https://mangadex.org"
                         value={newSiteUrl}
-                        onChange={(e) => setNewSiteUrl(e.target.value)}
+                        onChange={(e) => {
+                          const url = e.target.value;
+                          setNewSiteUrl(url);
+                          // Pre-fill series URLs with the base URL + /
+                          if (url.trim()) {
+                            const baseUrl = url.trim().endsWith('/') ? url.trim() : url.trim() + '/';
+                            setSeriesAssignments(prev => prev.map(a => ({
+                              ...a,
+                              seriesUrl: a.seriesUrl || baseUrl
+                            })));
+                          }
+                        }}
                         className="font-mono text-sm border-dashed bg-muted/30"
                       />
                     </div>
@@ -433,60 +444,106 @@ const Library = () => {
               </CardContent>
             </Card>
 
-            {/* Reader sites list */}
+            {/* Reader sites list - grouped by name */}
             {readerSites.length > 0 ? (
               <div className="grid gap-3">
-                {readerSites.map((site) => {
-                  const assignedAnime = site.anime_id ? mockAnimeData.find(a => a.id === site.anime_id) : null;
-                  const openUrl = site.series_url || site.url;
+                {Object.values(
+                  readerSites.reduce((acc, site) => {
+                    const key = site.name.toLowerCase();
+                    if (!acc[key]) {
+                      acc[key] = {
+                        name: site.name,
+                        url: site.url,
+                        notes: site.notes,
+                        entries: []
+                      };
+                    }
+                    acc[key].entries.push(site);
+                    return acc;
+                  }, {} as Record<string, { name: string; url: string; notes: string | null; entries: ReaderSite[] }>)
+                ).map((group) => {
+                  const seriesEntries = group.entries.filter(e => e.anime_id);
                   
                   return (
-                    <Card key={site.id} className="border-dashed">
+                    <Card key={group.name} className="border-dashed">
                       <CardContent className="p-4">
                         <div className="flex items-start justify-between gap-4">
                           <div className="flex-1 min-w-0 text-sm space-y-1">
-                            <div>
-                              <span className="text-syntax-cyan">reader_name</span>
-                              <span className="text-muted-foreground">: </span>
-                              <span className="text-syntax-green">{site.name}</span>
-                            </div>
-                            {assignedAnime && (
-                              <div className="flex items-center gap-1.5">
-                                <Link2 className="w-3 h-3 text-primary" />
-                                <span className="text-syntax-cyan">series</span>
+                            <div className="flex items-center gap-2">
+                              <div>
+                                <span className="text-syntax-cyan">reader_name</span>
                                 <span className="text-muted-foreground">: </span>
-                                <span className="text-syntax-green text-xs">{assignedAnime.title}</span>
+                                <span className="text-syntax-green">{group.name}</span>
                               </div>
-                            )}
-                            {site.notes && (
+                              <Button
+                                variant="outline"
+                                size="sm"
+                                asChild
+                                className="border-dashed text-xs"
+                              >
+                                <a href={group.url} target="_blank" rel="noopener noreferrer" className="gap-1">
+                                  <ExternalLink className="w-3.5 h-3.5" />
+                                  open
+                                </a>
+                              </Button>
+                            </div>
+                            {group.notes && (
                               <div className="text-xs">
                                 <span className="text-syntax-cyan">notes</span>
                                 <span className="text-muted-foreground">: </span>
-                                <span className="text-muted-foreground">{site.notes}</span>
+                                <span className="text-muted-foreground">{group.notes}</span>
+                              </div>
+                            )}
+                            {seriesEntries.length > 0 && (
+                              <div className="border-t border-dashed pt-2 mt-2 space-y-1.5">
+                                {seriesEntries.map((entry) => {
+                                  const assignedAnime = mockAnimeData.find(a => a.id === entry.anime_id);
+                                  if (!assignedAnime) return null;
+                                  return (
+                                    <div key={entry.id} className="flex items-center justify-between gap-2">
+                                      <div className="flex items-center gap-1.5">
+                                        <Link2 className="w-3 h-3 text-primary" />
+                                        <span className="text-syntax-green text-xs">{assignedAnime.title}</span>
+                                      </div>
+                                      <div className="flex items-center gap-1">
+                                        {entry.series_url && (
+                                          <Button
+                                            variant="outline"
+                                            size="sm"
+                                            asChild
+                                            className="border-dashed text-xs h-6 px-2"
+                                          >
+                                            <a href={entry.series_url} target="_blank" rel="noopener noreferrer" className="gap-1">
+                                              <ExternalLink className="w-3 h-3" />
+                                              read
+                                            </a>
+                                          </Button>
+                                        )}
+                                        <Button
+                                          variant="ghost"
+                                          size="icon"
+                                          onClick={() => deleteReaderSite(entry.id)}
+                                          className="text-muted-foreground hover:text-destructive h-6 w-6"
+                                        >
+                                          <Trash2 className="w-3 h-3" />
+                                        </Button>
+                                      </div>
+                                    </div>
+                                  );
+                                })}
                               </div>
                             )}
                           </div>
-                          <div className="flex items-center gap-2">
-                            <Button
-                              variant="outline"
-                              size="sm"
-                              asChild
-                              className="border-dashed text-xs"
-                            >
-                              <a href={openUrl} target="_blank" rel="noopener noreferrer" className="gap-1">
-                                <ExternalLink className="w-3.5 h-3.5" />
-                                {site.series_url ? 'read' : 'open'}
-                              </a>
-                            </Button>
+                          {seriesEntries.length === 0 && (
                             <Button
                               variant="ghost"
                               size="icon"
-                              onClick={() => deleteReaderSite(site.id)}
+                              onClick={() => deleteReaderSite(group.entries[0].id)}
                               className="text-muted-foreground hover:text-destructive"
                             >
                               <Trash2 className="w-4 h-4" />
                             </Button>
-                          </div>
+                          )}
                         </div>
                       </CardContent>
                     </Card>
