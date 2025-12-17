@@ -118,7 +118,7 @@ const Index = () => {
                     onClick={() => setStatusFilter('completed')}
                     className={`font-mono text-xs border-dashed ${statusFilter === 'completed' ? 'bg-secondary text-foreground hover:bg-secondary hover:text-foreground' : 'hover:bg-muted hover:text-foreground'}`}
                   >
-                    completed
+                    complete
                   </Button>
                 </div>
               </div>
@@ -152,7 +152,7 @@ const Index = () => {
             <span>
               {isSearching 
                 ? <><span className="text-syntax-cyan">search_results</span><span className="text-muted-foreground">.length</span> = <span className="text-syntax-amber">{searchResults.length}</span></>
-                : <><span className="text-syntax-cyan">top</span> <span className="text-syntax-amber">{resultLimit}</span> <span className="text-syntax-cyan">{statusFilter}</span></>
+                : <><span className="text-syntax-cyan">top</span> <span className="text-syntax-amber">{resultLimit}</span> {statusFilter === 'airing' ? <span className="text-accent">airing</span> : <span>complete</span>}</>
               }
             </span>
           </div>
