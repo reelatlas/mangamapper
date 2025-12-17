@@ -105,18 +105,18 @@ const Index = () => {
                 </div>
                 <div className="flex gap-2">
                   <Button
-                    variant={statusFilter === 'airing' ? 'default' : 'outline'}
+                    variant="outline"
                     size="sm"
                     onClick={() => setStatusFilter('airing')}
-                    className={`font-mono text-xs border-dashed ${statusFilter !== 'airing' ? 'hover:bg-primary/10 hover:text-primary' : ''}`}
+                    className={`font-mono text-xs border-dashed ${statusFilter === 'airing' ? 'bg-secondary text-foreground' : 'hover:bg-muted hover:text-foreground'}`}
                   >
                     airing
                   </Button>
                   <Button
-                    variant={statusFilter === 'completed' ? 'default' : 'outline'}
+                    variant="outline"
                     size="sm"
                     onClick={() => setStatusFilter('completed')}
-                    className={`font-mono text-xs border-dashed ${statusFilter !== 'completed' ? 'hover:bg-primary/10 hover:text-primary' : ''}`}
+                    className={`font-mono text-xs border-dashed ${statusFilter === 'completed' ? 'bg-secondary text-foreground' : 'hover:bg-muted hover:text-foreground'}`}
                   >
                     completed
                   </Button>
@@ -130,10 +130,10 @@ const Index = () => {
                   {[10, 50, 100].map((limit) => (
                     <Button
                       key={limit}
-                      variant={resultLimit === limit ? 'default' : 'outline'}
+                      variant="outline"
                       size="sm"
                       onClick={() => setResultLimit(limit)}
-                      className={`font-mono text-xs border-dashed ${resultLimit !== limit ? 'hover:bg-primary/10 hover:text-primary' : ''}`}
+                      className={`font-mono text-xs border-dashed ${resultLimit === limit ? 'bg-secondary text-foreground' : 'hover:bg-muted hover:text-foreground'}`}
                     >
                       {limit}
                     </Button>
