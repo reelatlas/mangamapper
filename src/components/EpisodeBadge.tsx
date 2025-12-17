@@ -1,6 +1,5 @@
 import { EpisodeType } from '@/types/anime';
 import { cn } from '@/lib/utils';
-import { Tv } from 'lucide-react';
 
 interface EpisodeBadgeProps {
   type: EpisodeType;
@@ -12,29 +11,26 @@ export const EpisodeBadge = ({ type, className }: EpisodeBadgeProps) => {
     canon: {
       label: 'canon',
       className: 'text-accent border-accent',
-      icon: null,
     },
     filler: {
-      label: 'ffff',
+      label: 'filler',
       className: 'text-destructive border-destructive',
-      icon: null,
     },
     'anime-only-canon': {
-      label: null,
+      label: 'anime',
       className: 'text-syntax-purple border-syntax-purple',
-      icon: Tv,
     },
   };
 
-  const { label, className: badgeClassName, icon: Icon } = config[type];
+  const { label, className: badgeClassName } = config[type];
 
   return (
     <span className={cn(
-      'font-mono text-[10px] px-2 py-0.5 rounded-full border tracking-wider inline-flex items-center justify-center',
+      'font-mono text-[10px] px-2 py-0.5 rounded-full border tracking-wider',
       badgeClassName,
       className
     )}>
-      {Icon ? <Icon size={10} /> : label}
+      {label}
     </span>
   );
 };
