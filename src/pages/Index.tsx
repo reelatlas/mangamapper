@@ -47,11 +47,9 @@ const Index = () => {
           
           <div className="mb-4">
             <pre className="text-2xl sm:text-3xl font-bold text-foreground inline-block">
-              <span className="text-muted-foreground">{'{'}</span>
-              <span className="text-primary"> find</span>
+              <span className="text-primary">find</span>
               <span className="text-muted-foreground">:</span>
-              <span className="text-syntax-green"> "manga_chapter"</span>
-              <span className="text-muted-foreground"> {'}'}</span>
+              <span className="text-syntax-green"> manga_chapter</span>
             </pre>
           </div>
           
@@ -88,8 +86,8 @@ const Index = () => {
               {isSearching 
                 ? <><span className="text-syntax-cyan">search_results</span><span className="text-muted-foreground">.length</span> = <span className="text-syntax-amber">{searchResults.length}</span></>
                 : streamingService === 'all' 
-                  ? <><span className="text-syntax-cyan">top_airing</span><span className="text-muted-foreground">[</span><span className="text-syntax-amber">{trackingSiteLabel}</span><span className="text-muted-foreground">]</span></>
-                  : <><span className="text-syntax-cyan">top_airing</span><span className="text-muted-foreground">[</span><span className="text-syntax-amber">{streamingServiceLabel}</span><span className="text-muted-foreground">][</span><span className="text-syntax-amber">{trackingSiteLabel}</span><span className="text-muted-foreground">]</span></>
+                  ? <><span className="text-syntax-cyan">top_airing</span><span className="text-muted-foreground"> · </span><span className="text-syntax-amber">{trackingSiteLabel}</span></>
+                  : <><span className="text-syntax-cyan">top_airing</span><span className="text-muted-foreground"> · </span><span className="text-syntax-amber">{streamingServiceLabel}</span><span className="text-muted-foreground"> · </span><span className="text-syntax-amber">{trackingSiteLabel}</span></>
               }
             </span>
           </div>
@@ -122,9 +120,7 @@ const Index = () => {
       <footer className="border-t border-dashed mt-16">
         <div className="container py-6 text-center text-xs text-muted-foreground">
           <p>
-            <span className="text-syntax-cyan">{'{'}</span>
             <span className="text-primary">mangaMapper</span>
-            <span className="text-syntax-cyan">{'}'}</span>
             <span className="mx-2">—</span>
             <span>// your guide from anime to manga</span>
           </p>
