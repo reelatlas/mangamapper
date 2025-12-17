@@ -82,54 +82,53 @@ export const AnimeCard = ({ anime, rank, progress }: AnimeCardProps) => {
                 </div>
               </div>
 
-              {/* Bottom section - Last episode and progress (pushed to bottom) */}
-              <div className="mt-auto pt-2">
-                <div className="flex items-center justify-between gap-4">
-                  {/* Left - Last episode label */}
-                  <p className="text-[10px] text-muted-foreground tracking-wider">
-                    // last_episode
-                  </p>
-
-                  {/* Right - User progress */}
-                  {hasProgress && (
-                    <div className="flex items-center gap-1 text-[10px]">
-                      <span className="text-muted-foreground">// your_progress:</span>
-                      <div className="flex gap-2 text-xs">
-                        {progress.last_watched_episode !== null && (
-                          <span>
-                            <span className="text-primary/60">ep</span>
-                            <span className="text-muted-foreground">:</span>
-                            <span className="text-foreground">{progress.last_watched_episode}</span>
-                          </span>
-                        )}
-                        {(progress.last_read_volume !== null || progress.last_read_chapter !== null) && (
-                          <span>
-                            {progress.last_read_volume !== null && (
-                              <>
-                                <span className="text-primary/60">vol</span>
-                                <span className="text-muted-foreground">:</span>
-                                <span className="text-foreground">{progress.last_read_volume}</span>
-                              </>
-                            )}
-                            {progress.last_read_volume !== null && progress.last_read_chapter !== null && (
-                              <span className="text-muted-foreground"> · </span>
-                            )}
-                            {progress.last_read_chapter !== null && (
-                              <>
-                                <span className="text-primary/60">ch</span>
-                                <span className="text-muted-foreground">:</span>
-                                <span className="text-foreground">{progress.last_read_chapter}</span>
-                              </>
-                            )}
-                          </span>
-                        )}
-                      </div>
+              {/* Bottom section - Progress and last episode (pushed to bottom) */}
+              <div className="mt-auto pt-2 space-y-3">
+                {/* User progress */}
+                {hasProgress && (
+                  <div>
+                    <p className="text-[10px] text-muted-foreground mb-1 tracking-wider">
+                      // your_progress
+                    </p>
+                    <div className="flex gap-3 text-xs">
+                      {progress.last_watched_episode !== null && (
+                        <span>
+                          <span className="text-primary/60">ep</span>
+                          <span className="text-muted-foreground">:</span>
+                          <span className="text-foreground">{progress.last_watched_episode}</span>
+                        </span>
+                      )}
+                      {(progress.last_read_volume !== null || progress.last_read_chapter !== null) && (
+                        <span>
+                          {progress.last_read_volume !== null && (
+                            <>
+                              <span className="text-primary/60">vol</span>
+                              <span className="text-muted-foreground">:</span>
+                              <span className="text-foreground">{progress.last_read_volume}</span>
+                            </>
+                          )}
+                          {progress.last_read_volume !== null && progress.last_read_chapter !== null && (
+                            <span className="text-muted-foreground"> · </span>
+                          )}
+                          {progress.last_read_chapter !== null && (
+                            <>
+                              <span className="text-primary/60">ch</span>
+                              <span className="text-muted-foreground">:</span>
+                              <span className="text-foreground">{progress.last_read_chapter}</span>
+                            </>
+                          )}
+                        </span>
+                      )}
                     </div>
-                  )}
-                </div>
+                  </div>
+                )}
 
+                {/* Last episode */}
                 {currentEpisode && (
-                  <div className="mt-2">
+                  <div>
+                    <p className="text-[10px] text-muted-foreground tracking-wider mb-2">
+                      // last_episode
+                    </p>
                     <MangaMappingDisplay episode={currentEpisode} />
                   </div>
                 )}
