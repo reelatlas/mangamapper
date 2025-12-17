@@ -133,16 +133,16 @@ const AnimeDetail = () => {
               </Card>
               <Card className="border-dashed">
                 <CardContent className="p-3 text-center">
-                  <span className="block text-xs font-bold text-destructive mb-1">ffff</span>
-                  <div className="text-xl font-bold text-destructive">{fillerCount}</div>
-                  <div className="text-[10px] text-muted-foreground">filler</div>
+                  <Tv className="w-4 h-4 mx-auto mb-1 text-syntax-purple" />
+                  <div className="text-xl font-bold text-syntax-purple">{animeOnlyCount}</div>
+                  <div className="text-[10px] text-muted-foreground">anime only</div>
                 </CardContent>
               </Card>
               <Card className="border-dashed">
                 <CardContent className="p-3 text-center">
-                  <Tv className="w-4 h-4 mx-auto mb-1 text-syntax-purple" />
-                  <div className="text-xl font-bold text-syntax-purple">{animeOnlyCount}</div>
-                  <div className="text-[10px] text-muted-foreground">anime only</div>
+                  <span className="block text-xs font-bold text-destructive mb-1">ffff</span>
+                  <div className="text-xl font-bold text-destructive">{fillerCount}</div>
+                  <div className="text-[10px] text-muted-foreground">filler</div>
                 </CardContent>
               </Card>
             </div>
@@ -164,12 +164,12 @@ const AnimeDetail = () => {
                 <span className="text-muted-foreground">= follows manga</span>
               </div>
               <div className="flex items-center gap-2">
-                <EpisodeBadge type="filler" />
-                <span className="text-muted-foreground">= not in manga</span>
-              </div>
-              <div className="flex items-center gap-2">
                 <EpisodeBadge type="anime-only-canon" />
                 <span className="text-muted-foreground">= anime original story</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <EpisodeBadge type="filler" />
+                <span className="text-muted-foreground">= not in manga</span>
               </div>
             </div>
           </CardContent>
