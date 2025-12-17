@@ -182,55 +182,59 @@ const Library = () => {
                   const anime = getAnimeById(item.anime_id);
                   if (!anime) return null;
                   
-                  return (
-                    <Card key={item.id} className="border-dashed">
-                      <CardContent className="p-4">
-                        <div className="flex items-start gap-4">
-                          <img
-                            src={anime.coverImage}
-                            alt={anime.title}
-                            className="w-14 h-20 object-cover opacity-90"
-                          />
-                          <div className="flex-1 min-w-0">
-                            <Link to={`/anime/${anime.id}`} className="hover:text-primary transition-colors">
+                    return (
+                    <Link key={item.id} to={`/anime/${anime.id}`} className="block">
+                      <Card className="border-dashed hover:border-primary/50 transition-colors cursor-pointer">
+                        <CardContent className="p-4">
+                          <div className="flex items-start gap-4">
+                            <img
+                              src={anime.coverImage}
+                              alt={anime.title}
+                              className="w-14 h-20 object-cover opacity-90"
+                            />
+                            <div className="flex-1 min-w-0">
                               <span className="text-sm truncate block">
                                 <span className="text-syntax-cyan">title</span>
                                 <span className="text-muted-foreground">: </span>
                                 <span className="text-syntax-green">{anime.title}</span>
                               </span>
-                            </Link>
-                            <div className="flex flex-wrap gap-3 mt-2 text-xs">
-                              {item.last_watched_episode && (
-                                <span>
-                                  <span className="text-syntax-cyan">ep</span>
-                                  <span className="text-muted-foreground">: </span>
-                                  <span className="text-syntax-amber">{item.last_watched_episode}</span>
-                                </span>
-                              )}
-                              {item.last_read_chapter && (
-                                <span>
-                                  <span className="text-syntax-cyan">vol</span>
-                                  <span className="text-muted-foreground">: </span>
-                                  <span className="text-syntax-amber">{item.last_read_volume}</span>
-                                  <span className="text-muted-foreground"> · </span>
-                                  <span className="text-syntax-cyan">ch</span>
-                                  <span className="text-muted-foreground">: </span>
-                                  <span className="text-syntax-amber">{item.last_read_chapter}</span>
-                                </span>
-                              )}
+                              <div className="flex flex-wrap gap-3 mt-2 text-xs">
+                                {item.last_watched_episode && (
+                                  <span>
+                                    <span className="text-syntax-cyan">ep</span>
+                                    <span className="text-muted-foreground">: </span>
+                                    <span className="text-syntax-amber">{item.last_watched_episode}</span>
+                                  </span>
+                                )}
+                                {item.last_read_chapter && (
+                                  <span>
+                                    <span className="text-syntax-cyan">vol</span>
+                                    <span className="text-muted-foreground">: </span>
+                                    <span className="text-syntax-amber">{item.last_read_volume}</span>
+                                    <span className="text-muted-foreground"> · </span>
+                                    <span className="text-syntax-cyan">ch</span>
+                                    <span className="text-muted-foreground">: </span>
+                                    <span className="text-syntax-amber">{item.last_read_chapter}</span>
+                                  </span>
+                                )}
+                              </div>
                             </div>
+                            <Button
+                              variant="ghost"
+                              size="icon"
+                              onClick={(e) => {
+                                e.preventDefault();
+                                e.stopPropagation();
+                                deleteProgress(item.id);
+                              }}
+                              className="text-muted-foreground hover:text-destructive"
+                            >
+                              <Trash2 className="w-4 h-4" />
+                            </Button>
                           </div>
-                          <Button
-                            variant="ghost"
-                            size="icon"
-                            onClick={() => deleteProgress(item.id)}
-                            className="text-muted-foreground hover:text-destructive"
-                          >
-                            <Trash2 className="w-4 h-4" />
-                          </Button>
-                        </div>
-                      </CardContent>
-                    </Card>
+                        </CardContent>
+                      </Card>
+                    </Link>
                   );
                 })}
               </div>
