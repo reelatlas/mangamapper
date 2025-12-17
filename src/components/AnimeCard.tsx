@@ -1,7 +1,6 @@
 import { AnimeSeries } from '@/types/anime';
 import { Card, CardContent } from '@/components/ui/card';
 import { MangaMappingDisplay } from './MangaMappingDisplay';
-import { ChevronRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 interface UserProgress {
@@ -29,10 +28,13 @@ export const AnimeCard = ({ anime, rank, progress }: AnimeCardProps) => {
     <Link to={`/anime/${anime.id}`}>
       <Card className="group overflow-hidden transition-all duration-200 hover:border-primary/50 cursor-pointer border-dashed">
         <div className="terminal-header flex items-center justify-between">
-          <span>
+          <span className="flex items-center gap-2">
             {rank && <span className="text-syntax-amber">#{String(rank).padStart(2, '0')}</span>}
-            {rank && <span className="mx-2 text-border">|</span>}
+            {rank && <span className="text-border">|</span>}
             <span className="text-muted-foreground">anime_data</span>
+            <span className="text-primary opacity-0 group-hover:opacity-100 transition-opacity">
+              .view()
+            </span>
           </span>
           <span className="text-muted-foreground">
             {anime.status === 'airing' ? (
@@ -82,7 +84,7 @@ export const AnimeCard = ({ anime, rank, progress }: AnimeCardProps) => {
 
               {/* User progress section */}
               {hasProgress && (
-                <div className="mt-4">
+                <div>
                   <p className="text-[10px] text-muted-foreground mb-1 tracking-wider">
                     // your_progress
                   </p>
@@ -121,16 +123,10 @@ export const AnimeCard = ({ anime, rank, progress }: AnimeCardProps) => {
 
               {/* Current episode mapping - always at bottom */}
               {currentEpisode && (
-                <div className="mt-auto pt-2">
-                  <div className="flex items-center gap-2 mb-2">
-                    <p className="text-[10px] text-muted-foreground tracking-wider">
-                      // latest_episode
-                    </p>
-                    <div className="flex items-center gap-1 text-[10px] text-primary opacity-0 group-hover:opacity-100 transition-opacity">
-                      <span className="text-muted-foreground">{'>'}</span> view_all
-                      <ChevronRight className="w-3 h-3" />
-                    </div>
-                  </div>
+                <div className="mt-auto pt-4">
+                  <p className="text-[10px] text-muted-foreground tracking-wider mb-2">
+                    // latest_episode
+                  </p>
                   <MangaMappingDisplay episode={currentEpisode} />
                 </div>
               )}
