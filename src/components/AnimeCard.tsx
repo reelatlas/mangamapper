@@ -58,79 +58,78 @@ export const AnimeCard = ({ anime, rank, progress }: AnimeCardProps) => {
 
             {/* Content */}
             <div className="flex-1 p-4 flex flex-col font-mono">
-              {/* Top section - Data and Progress */}
-              <div className="flex justify-between gap-4">
-                {/* Left - Data structure */}
-                <div className="space-y-1 text-sm">
-                  <div>
-                    <span className="text-syntax-cyan">title</span>
-                    <span className="text-muted-foreground">: </span>
-                    <span className="text-syntax-green">{anime.title}</span>
-                  </div>
-                  <div>
-                    <span className="text-syntax-cyan">title_jp</span>
-                    <span className="text-muted-foreground">: </span>
-                    <span className="text-syntax-green text-xs">{anime.japaneseTitle}</span>
-                  </div>
-                  <div>
-                    <span className="text-syntax-cyan">genres</span>
-                    <span className="text-muted-foreground">: </span>
-                    {anime.genres.slice(0, 3).map((genre, i) => (
-                      <span key={genre}>
-                        <span className="text-syntax-amber">{genre.toLowerCase()}</span>
-                        {i < Math.min(anime.genres.length, 3) - 1 && <span className="text-muted-foreground">, </span>}
-                      </span>
-                    ))}
-                  </div>
+              {/* Top section - Data structure */}
+              <div className="space-y-1 text-sm">
+                <div>
+                  <span className="text-syntax-cyan">title</span>
+                  <span className="text-muted-foreground">: </span>
+                  <span className="text-syntax-green">{anime.title}</span>
                 </div>
-
-                {/* Right - User progress */}
-                {hasProgress && (
-                  <div className="text-right shrink-0">
-                    <p className="text-[10px] text-muted-foreground mb-1 tracking-wider">
-                      // your_progress
-                    </p>
-                    <div className="flex gap-3 text-xs">
-                      {progress.last_watched_episode !== null && (
-                        <span>
-                          <span className="text-primary/60">ep</span>
-                          <span className="text-muted-foreground">:</span>
-                          <span className="text-foreground">{progress.last_watched_episode}</span>
-                        </span>
-                      )}
-                      {(progress.last_read_volume !== null || progress.last_read_chapter !== null) && (
-                        <span>
-                          {progress.last_read_volume !== null && (
-                            <>
-                              <span className="text-primary/60">vol</span>
-                              <span className="text-muted-foreground">:</span>
-                              <span className="text-foreground">{progress.last_read_volume}</span>
-                            </>
-                          )}
-                          {progress.last_read_volume !== null && progress.last_read_chapter !== null && (
-                            <span className="text-muted-foreground"> · </span>
-                          )}
-                          {progress.last_read_chapter !== null && (
-                            <>
-                              <span className="text-primary/60">ch</span>
-                              <span className="text-muted-foreground">:</span>
-                              <span className="text-foreground">{progress.last_read_chapter}</span>
-                            </>
-                          )}
-                        </span>
-                      )}
-                    </div>
-                  </div>
-                )}
+                <div>
+                  <span className="text-syntax-cyan">title_jp</span>
+                  <span className="text-muted-foreground">: </span>
+                  <span className="text-syntax-green text-xs">{anime.japaneseTitle}</span>
+                </div>
+                <div>
+                  <span className="text-syntax-cyan">genres</span>
+                  <span className="text-muted-foreground">: </span>
+                  {anime.genres.slice(0, 3).map((genre, i) => (
+                    <span key={genre}>
+                      <span className="text-syntax-amber">{genre.toLowerCase()}</span>
+                      {i < Math.min(anime.genres.length, 3) - 1 && <span className="text-muted-foreground">, </span>}
+                    </span>
+                  ))}
+                </div>
               </div>
 
-              {/* Bottom section - Last episode (pushed to bottom) */}
+              {/* Bottom section - Last episode and progress (pushed to bottom) */}
               <div className="mt-auto pt-2">
+                <div className="flex items-center justify-between gap-4">
+                  {/* Left - Last episode label */}
+                  <p className="text-[10px] text-muted-foreground tracking-wider">
+                    // last_episode
+                  </p>
+
+                  {/* Right - User progress */}
+                  {hasProgress && (
+                    <div className="flex items-center gap-1 text-[10px]">
+                      <span className="text-muted-foreground">// your_progress:</span>
+                      <div className="flex gap-2 text-xs">
+                        {progress.last_watched_episode !== null && (
+                          <span>
+                            <span className="text-primary/60">ep</span>
+                            <span className="text-muted-foreground">:</span>
+                            <span className="text-foreground">{progress.last_watched_episode}</span>
+                          </span>
+                        )}
+                        {(progress.last_read_volume !== null || progress.last_read_chapter !== null) && (
+                          <span>
+                            {progress.last_read_volume !== null && (
+                              <>
+                                <span className="text-primary/60">vol</span>
+                                <span className="text-muted-foreground">:</span>
+                                <span className="text-foreground">{progress.last_read_volume}</span>
+                              </>
+                            )}
+                            {progress.last_read_volume !== null && progress.last_read_chapter !== null && (
+                              <span className="text-muted-foreground"> · </span>
+                            )}
+                            {progress.last_read_chapter !== null && (
+                              <>
+                                <span className="text-primary/60">ch</span>
+                                <span className="text-muted-foreground">:</span>
+                                <span className="text-foreground">{progress.last_read_chapter}</span>
+                              </>
+                            )}
+                          </span>
+                        )}
+                      </div>
+                    </div>
+                  )}
+                </div>
+
                 {currentEpisode && (
-                  <div>
-                    <p className="text-[10px] text-muted-foreground tracking-wider mb-2">
-                      // last_episode
-                    </p>
+                  <div className="mt-2">
                     <MangaMappingDisplay episode={currentEpisode} />
                   </div>
                 )}
