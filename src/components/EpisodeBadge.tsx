@@ -9,15 +9,15 @@ interface EpisodeBadgeProps {
 export const EpisodeBadge = ({ type, className }: EpisodeBadgeProps) => {
   const config = {
     canon: {
-      label: 'CANON',
+      label: 'canon',
       className: 'text-accent border-accent',
     },
     filler: {
-      label: 'FILLER',
+      label: 'filler',
       className: 'text-destructive border-destructive',
     },
     'anime-only-canon': {
-      label: 'ANIME',
+      label: 'anime',
       className: 'text-syntax-purple border-syntax-purple',
     },
   };
@@ -26,7 +26,7 @@ export const EpisodeBadge = ({ type, className }: EpisodeBadgeProps) => {
 
   return (
     <span className={cn(
-      'font-mono text-[10px] px-2 py-0.5 rounded-full border uppercase tracking-wider',
+      'font-mono text-[10px] px-2 py-0.5 rounded-full border tracking-wider',
       badgeClassName,
       className
     )}>

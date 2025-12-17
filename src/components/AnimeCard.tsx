@@ -23,9 +23,9 @@ export const AnimeCard = ({ anime, rank }: AnimeCardProps) => {
           </span>
           <span className="text-muted-foreground">
             {anime.status === 'airing' ? (
-              <span className="text-accent">AIRING</span>
+              <span className="text-accent">airing</span>
             ) : (
-              <span>COMPLETE</span>
+              <span>complete</span>
             )}
           </span>
         </div>
