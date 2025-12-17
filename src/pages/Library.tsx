@@ -202,20 +202,15 @@ const Library = () => {
                                 {item.last_watched_episode && (
                                   <div className="flex items-center gap-1.5">
                                     <Tv className="w-3.5 h-3.5 text-primary" />
-                                    <span className="text-muted-foreground">ep</span>
-                                    <span className="text-muted-foreground">:</span>
-                                    <span className="text-foreground">{item.last_watched_episode}</span>
+                                    <span><span className="text-muted-foreground">ep:</span><span className="text-foreground">{item.last_watched_episode}</span></span>
                                   </div>
                                 )}
                                 {item.last_read_chapter && (
                                   <div className="flex items-center gap-1.5">
                                     <BookOpen className="w-3.5 h-3.5 text-primary" />
-                                    <span className="text-muted-foreground">vol</span>
-                                    <span className="text-muted-foreground">:</span>
-                                    <span className="text-foreground">{item.last_read_volume}</span>
-                                    <span className="text-muted-foreground ml-1">ch</span>
-                                    <span className="text-muted-foreground">:</span>
-                                    <span className="text-foreground">{item.last_read_chapter}</span>
+                                    <span><span className="text-muted-foreground">vol:</span><span className="text-foreground">{item.last_read_volume}</span></span>
+                                    <span className="text-muted-foreground">·</span>
+                                    <span><span className="text-muted-foreground">ch:</span><span className="text-foreground">{item.last_read_chapter}</span></span>
                                   </div>
                                 )}
                               </div>
