@@ -117,7 +117,7 @@ const Index = () => {
                     onClick={() => setStatusFilter('airing')}
                     className="font-mono text-xs border-dashed"
                   >
-                    [AIRING]
+                    airing
                   </Button>
                   <Button
                     variant={statusFilter === 'completed' ? 'default' : 'outline'}
@@ -125,7 +125,7 @@ const Index = () => {
                     onClick={() => setStatusFilter('completed')}
                     className="font-mono text-xs border-dashed"
                   >
-                    [COMPLETE]
+                    complete
                   </Button>
                 </div>
               </div>
@@ -142,7 +142,7 @@ const Index = () => {
                       onClick={() => setResultLimit(limit)}
                       className="font-mono text-xs border-dashed"
                     >
-                      [{limit}]
+                      {limit}
                     </Button>
                   ))}
                 </div>
@@ -158,7 +158,7 @@ const Index = () => {
                     onClick={() => setSortBy('popularity')}
                     className="font-mono text-xs border-dashed"
                   >
-                    [POPULARITY]
+                    popularity
                   </Button>
                   <Button
                     variant={sortBy === 'release_date' ? 'default' : 'outline'}
@@ -166,7 +166,7 @@ const Index = () => {
                     onClick={() => setSortBy('release_date')}
                     className="font-mono text-xs border-dashed"
                   >
-                    [RELEASE]
+                    release
                   </Button>
                 </div>
               </div>
