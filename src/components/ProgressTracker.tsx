@@ -30,7 +30,7 @@ const formatTimestamp = (timestamp: string) => {
     day: 'numeric',
     hour: '2-digit',
     minute: '2-digit',
-  });
+  }).toLowerCase();
 };
 
 export const ProgressTracker = ({ anime }: ProgressTrackerProps) => {
@@ -138,7 +138,7 @@ export const ProgressTracker = ({ anime }: ProgressTrackerProps) => {
       <CardContent className="p-4 font-mono space-y-4">
         {/* Last watched row */}
         <div className="flex items-end gap-4">
-          <div className="flex items-center gap-1.5 text-xs min-w-[100px]">
+          <div className="flex items-center gap-1.5 text-xs w-28 shrink-0">
             <Tv className="w-3.5 h-3.5 text-primary" />
             <span className="text-syntax-cyan">last_watched</span>
           </div>
@@ -163,33 +163,35 @@ export const ProgressTracker = ({ anime }: ProgressTrackerProps) => {
         {/* Last read row */}
         {anime.hasManga && (
           <div className="flex items-end gap-4">
-            <div className="flex items-center gap-1.5 text-xs min-w-[100px]">
+            <div className="flex items-center gap-1.5 text-xs w-28 shrink-0">
               <BookOpen className="w-3.5 h-3.5 text-primary" />
               <span className="text-syntax-cyan">last_read</span>
             </div>
-            <div className="space-y-1">
-              <span className="text-muted-foreground text-xs">vol</span>
-              <Input
-                id="readVolume"
-                type="number"
-                min="1"
-                placeholder="—"
-                value={readVolume}
-                onChange={(e) => setReadVolume(e.target.value)}
-                className="font-mono text-sm border-dashed bg-muted/30 w-24 h-7"
-              />
-            </div>
-            <div className="space-y-1">
-              <span className="text-muted-foreground text-xs">ch</span>
-              <Input
-                id="readChapter"
-                type="number"
-                min="1"
-                placeholder="—"
-                value={readChapter}
-                onChange={(e) => setReadChapter(e.target.value)}
-                className="font-mono text-sm border-dashed bg-muted/30 w-24 h-7"
-              />
+            <div className="flex items-end gap-2">
+              <div className="space-y-1">
+                <span className="text-muted-foreground text-xs">vol</span>
+                <Input
+                  id="readVolume"
+                  type="number"
+                  min="1"
+                  placeholder="—"
+                  value={readVolume}
+                  onChange={(e) => setReadVolume(e.target.value)}
+                  className="font-mono text-sm border-dashed bg-muted/30 w-24 h-7"
+                />
+              </div>
+              <div className="space-y-1">
+                <span className="text-muted-foreground text-xs">ch</span>
+                <Input
+                  id="readChapter"
+                  type="number"
+                  min="1"
+                  placeholder="—"
+                  value={readChapter}
+                  onChange={(e) => setReadChapter(e.target.value)}
+                  className="font-mono text-sm border-dashed bg-muted/30 w-24 h-7"
+                />
+              </div>
             </div>
           </div>
         )}
@@ -206,9 +208,8 @@ export const ProgressTracker = ({ anime }: ProgressTrackerProps) => {
           </Button>
           {progress?.updated_at && (
             <span className="text-muted-foreground text-xs">
-              <span className="text-syntax-purple">updated_at</span>
-              <span className="text-muted-foreground">: </span>
-              <span className="text-syntax-string">"{formatTimestamp(progress.updated_at)}"</span>
+              <span className="text-syntax-cyan">last_saved:</span>
+              <span className="text-foreground ml-1">{formatTimestamp(progress.updated_at)}</span>
             </span>
           )}
         </div>
