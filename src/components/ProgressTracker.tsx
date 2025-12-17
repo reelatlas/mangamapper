@@ -136,41 +136,39 @@ export const ProgressTracker = ({ anime }: ProgressTrackerProps) => {
       <div className="terminal-header">
         <span className="text-muted-foreground">// your_progress</span>
       </div>
-      <CardContent className="p-4 font-mono space-y-4">
-        {/* Last watched row */}
-        <div className="flex items-end gap-4">
-          <div className="flex items-center gap-1.5 text-xs w-28 shrink-0">
+      <CardContent className="p-4 font-mono space-y-3">
+        {/* Last watched */}
+        <div className="space-y-2">
+          <div className="flex items-center gap-1.5 text-xs">
             <Tv className="w-3.5 h-3.5 text-primary" />
             <span className="text-syntax-cyan">last_watched</span>
           </div>
-          <div className="space-y-1">
-            <span className="text-muted-foreground text-xs">episode</span>
-            <div className="flex items-center gap-2">
-              <Input
-                id="watchedEpisode"
-                type="number"
-                min="1"
-                max={anime.totalEpisodes || anime.currentEpisode}
-                placeholder="—"
-                value={watchedEpisode}
-                onChange={(e) => setWatchedEpisode(e.target.value)}
-                className="font-mono text-sm border-dashed bg-muted/30 w-24 h-7"
-              />
-              <span className="text-muted-foreground text-xs">/{anime.totalEpisodes || anime.currentEpisode}</span>
-            </div>
+          <div className="flex items-center gap-2 pl-5">
+            <span className="text-muted-foreground text-xs">episode:</span>
+            <Input
+              id="watchedEpisode"
+              type="number"
+              min="1"
+              max={anime.totalEpisodes || anime.currentEpisode}
+              placeholder="—"
+              value={watchedEpisode}
+              onChange={(e) => setWatchedEpisode(e.target.value)}
+              className="font-mono text-sm border-dashed bg-muted/30 w-20 h-7"
+            />
+            <span className="text-muted-foreground text-xs">/{anime.totalEpisodes || anime.currentEpisode}</span>
           </div>
         </div>
 
-        {/* Last read row */}
+        {/* Last read */}
         {anime.hasManga && (
-          <div className="flex items-end gap-4">
-            <div className="flex items-center gap-1.5 text-xs w-28 shrink-0">
+          <div className="space-y-2">
+            <div className="flex items-center gap-1.5 text-xs">
               <BookOpen className="w-3.5 h-3.5 text-primary" />
               <span className="text-syntax-cyan">last_read</span>
             </div>
-            <div className="flex items-end gap-2">
-              <div className="space-y-1">
-                <span className="text-muted-foreground text-xs">vol</span>
+            <div className="flex items-center gap-3 pl-5">
+              <div className="flex items-center gap-2">
+                <span className="text-muted-foreground text-xs">vol:</span>
                 <Input
                   id="readVolume"
                   type="number"
@@ -178,11 +176,11 @@ export const ProgressTracker = ({ anime }: ProgressTrackerProps) => {
                   placeholder="—"
                   value={readVolume}
                   onChange={(e) => setReadVolume(e.target.value)}
-                  className="font-mono text-sm border-dashed bg-muted/30 w-24 h-7"
+                  className="font-mono text-sm border-dashed bg-muted/30 w-16 h-7"
                 />
               </div>
-              <div className="space-y-1">
-                <span className="text-muted-foreground text-xs">ch</span>
+              <div className="flex items-center gap-2">
+                <span className="text-muted-foreground text-xs">ch:</span>
                 <Input
                   id="readChapter"
                   type="number"
@@ -190,7 +188,7 @@ export const ProgressTracker = ({ anime }: ProgressTrackerProps) => {
                   placeholder="—"
                   value={readChapter}
                   onChange={(e) => setReadChapter(e.target.value)}
-                  className="font-mono text-sm border-dashed bg-muted/30 w-24 h-7"
+                  className="font-mono text-sm border-dashed bg-muted/30 w-16 h-7"
                 />
               </div>
             </div>
