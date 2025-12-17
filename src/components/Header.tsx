@@ -17,10 +17,10 @@ export const Header = () => {
     <header className="sticky top-0 z-50 w-full border-b border-dashed bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container flex h-14 items-center justify-between">
         <Link to="/" className="flex items-center gap-1.5 hover:opacity-80 transition-opacity">
-          <Terminal className="w-4 h-4 text-primary" />
-          <span className="font-normal text-sm tracking-tight">
-            <span className="text-primary">manga</span>
-            <span className="text-muted-foreground">mapper</span>
+          <Terminal className="w-4 h-4 text-muted-foreground" />
+          <span className="text-sm tracking-tight">
+            <span className="text-primary font-medium">manga</span>
+            <span className="text-muted-foreground font-normal">mapper</span>
           </span>
         </Link>
 
