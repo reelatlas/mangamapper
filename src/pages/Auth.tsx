@@ -14,10 +14,13 @@ const authSchema = z.object({
   password: z.string().min(6, { message: "Password must be at least 6 characters" }),
 });
 
+const TEST_EMAIL = 'test@mangamapper.com';
+const TEST_PASSWORD = 'test123456';
+
 const Auth = () => {
   const [isLogin, setIsLogin] = useState(true);
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
+  const [email, setEmail] = useState(TEST_EMAIL);
+  const [password, setPassword] = useState(TEST_PASSWORD);
   const [loading, setLoading] = useState(false);
   const { signIn, signUp, user } = useAuth();
   const navigate = useNavigate();
@@ -30,8 +33,11 @@ const Auth = () => {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    
-    const validation = authSchema.safeParse({ email, password });
+    await authenticateUser(email, password, isLogin);
+  };
+
+  const authenticateUser = async (userEmail: string, userPassword: string, isLoginAttempt: boolean) => {
+    const validation = authSchema.safeParse({ email: userEmail, password: userPassword });
     if (!validation.success) {
       toast.error(validation.error.errors[0].message);
       return;
@@ -40,10 +46,23 @@ const Auth = () => {
     setLoading(true);
     
     try {
-      if (isLogin) {
-        const { error } = await signIn(email, password);
+      if (isLoginAttempt) {
+        const { error } = await signIn(userEmail, userPassword);
         if (error) {
-          if (error.message.includes('Invalid login credentials')) {
+          // If login fails with test account, try signing up first
+          if (userEmail === TEST_EMAIL && error.message.includes('Invalid login credentials')) {
+            const { error: signUpError } = await signUp(userEmail, userPassword);
+            if (signUpError) {
+              if (signUpError.message.includes('already registered')) {
+                toast.error('Invalid password for test account');
+              } else {
+                toast.error(signUpError.message);
+              }
+            } else {
+              toast.success('Test account created! You are now logged in.');
+              navigate('/');
+            }
+          } else if (error.message.includes('Invalid login credentials')) {
             toast.error('Invalid email or password');
           } else {
             toast.error(error.message);
@@ -53,7 +72,7 @@ const Auth = () => {
           navigate('/');
         }
       } else {
-        const { error } = await signUp(email, password);
+        const { error } = await signUp(userEmail, userPassword);
         if (error) {
           if (error.message.includes('already registered')) {
             toast.error('An account with this email already exists');
@@ -125,6 +144,19 @@ const Auth = () => {
               {loading ? 'Loading...' : isLogin ? 'Sign in' : 'Sign up'}
             </Button>
           </form>
+
+          <div className="relative my-4">
+            <div className="absolute inset-0 flex items-center">
+              <span className="w-full border-t" />
+            </div>
+            <div className="relative flex justify-center text-xs uppercase">
+              <span className="bg-card px-2 text-muted-foreground">Or</span>
+            </div>
+          </div>
+
+          <p className="text-xs text-muted-foreground text-center mb-2">
+            Test credentials are pre-filled. Just click sign in!
+          </p>
           
           <div className="mt-4 text-center text-sm">
             <span className="text-muted-foreground">
