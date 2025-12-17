@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { Home, Library, User, LogOut, Terminal } from 'lucide-react';
+import { Home, Library, User, LogOut, Terminal, Mail } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { useAuth } from '@/hooks/useAuth';
 import {
@@ -58,6 +58,11 @@ export const Header = () => {
                   </Button>
                 </DropdownMenuTrigger>
                 <DropdownMenuContent align="end" className="bg-popover border-dashed font-mono">
+                  <DropdownMenuItem className="text-muted-foreground text-xs gap-2">
+                    <Mail className="w-3.5 h-3.5" />
+                    @{user.email?.split('@')[1] || 'email.com'}
+                  </DropdownMenuItem>
+                  <DropdownMenuSeparator className="border-dashed" />
                   <DropdownMenuItem asChild>
                     <Link to="/library" className="flex items-center gap-2 cursor-pointer text-xs">
                       <Library className="w-3.5 h-3.5" />
