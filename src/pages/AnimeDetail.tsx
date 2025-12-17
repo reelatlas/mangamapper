@@ -70,9 +70,9 @@ const AnimeDetail = () => {
                 <div className="absolute bottom-3 left-3 right-3">
                   <span className="text-xs border px-2 py-1 bg-background/80">
                     {anime.status === 'airing' ? (
-                      <span className="text-accent">AIRING</span>
+                      <span className="text-accent">airing</span>
                     ) : (
-                      <span className="text-muted-foreground">COMPLETE</span>
+                      <span className="text-muted-foreground">complete</span>
                     )}
                   </span>
                 </div>
@@ -135,14 +135,14 @@ const AnimeDetail = () => {
               </Card>
               <Card className="border-dashed">
                 <CardContent className="p-3 text-center">
-                  <span className="block text-xs font-bold text-destructive mb-1">F</span>
+                  <span className="block text-xs font-bold text-destructive mb-1">f</span>
                   <div className="text-xl font-bold text-destructive">{fillerCount}</div>
                   <div className="text-[10px] text-muted-foreground uppercase">filler</div>
                 </CardContent>
               </Card>
               <Card className="border-dashed">
                 <CardContent className="p-3 text-center">
-                  <span className="block text-xs font-bold text-syntax-purple mb-1">A</span>
+                  <span className="block text-xs font-bold text-syntax-purple mb-1">a</span>
                   <div className="text-xl font-bold text-syntax-purple">{animeOnlyCount}</div>
                   <div className="text-[10px] text-muted-foreground uppercase">anime only</div>
                 </CardContent>
