@@ -46,26 +46,32 @@ export type Database = {
       }
       manga_reader_sites: {
         Row: {
+          anime_id: string | null
           created_at: string
           id: string
           name: string
           notes: string | null
+          series_url: string | null
           url: string
           user_id: string
         }
         Insert: {
+          anime_id?: string | null
           created_at?: string
           id?: string
           name: string
           notes?: string | null
+          series_url?: string | null
           url: string
           user_id: string
         }
         Update: {
+          anime_id?: string | null
           created_at?: string
           id?: string
           name?: string
           notes?: string | null
+          series_url?: string | null
           url?: string
           user_id?: string
         }

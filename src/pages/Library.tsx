@@ -9,7 +9,9 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
-import { Library as LibraryIcon, BookOpen, Tv, Globe, Plus, Trash2, ExternalLink, Hourglass } from 'lucide-react';
+import { Library as LibraryIcon, BookOpen, Tv, Globe, Plus, Trash2, ExternalLink, Hourglass, Link2 } from 'lucide-react';
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
+import { mockAnimeData } from '@/data/mockAnime';
 import { toast } from 'sonner';
 import { Link } from 'react-router-dom';
 
@@ -27,6 +29,8 @@ interface ReaderSite {
   name: string;
   url: string;
   notes: string | null;
+  anime_id: string | null;
+  series_url: string | null;
 }
 
 const Library = () => {
@@ -39,6 +43,8 @@ const Library = () => {
   const [newSiteName, setNewSiteName] = useState('');
   const [newSiteUrl, setNewSiteUrl] = useState('');
   const [newSiteNotes, setNewSiteNotes] = useState('');
+  const [newSiteAnimeId, setNewSiteAnimeId] = useState<string>('');
+  const [newSiteSeriesUrl, setNewSiteSeriesUrl] = useState('');
 
   useEffect(() => {
     if (!authLoading && !user) {
@@ -98,6 +104,8 @@ const Library = () => {
         name: newSiteName.trim(),
         url: newSiteUrl.trim(),
         notes: newSiteNotes.trim() || null,
+        anime_id: newSiteAnimeId || null,
+        series_url: newSiteSeriesUrl.trim() || null,
       });
 
     if (error) {
@@ -107,6 +115,8 @@ const Library = () => {
       setNewSiteName('');
       setNewSiteUrl('');
       setNewSiteNotes('');
+      setNewSiteAnimeId('');
+      setNewSiteSeriesUrl('');
       fetchReaderSites();
     }
   };
@@ -294,6 +304,48 @@ const Library = () => {
                       className="font-mono text-sm border-dashed bg-muted/30"
                     />
                   </div>
+                  
+                  {/* Series assignment section */}
+                  <div className="border-t border-dashed pt-4 mt-4">
+                    <p className="text-xs text-muted-foreground mb-3">
+                      <span className="text-syntax-cyan">// </span>assign to series (optional)
+                    </p>
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                      <div className="space-y-2">
+                        <Label htmlFor="siteAnime" className="text-xs">
+                          <span className="text-syntax-cyan">series</span>
+                        </Label>
+                        <Select value={newSiteAnimeId} onValueChange={setNewSiteAnimeId}>
+                          <SelectTrigger className="font-mono text-sm border-dashed bg-muted/30">
+                            <SelectValue placeholder="select series..." />
+                          </SelectTrigger>
+                          <SelectContent>
+                            <SelectItem value="">none</SelectItem>
+                            {mockAnimeData.map((anime) => (
+                              <SelectItem key={anime.id} value={anime.id}>
+                                {anime.title}
+                              </SelectItem>
+                            ))}
+                          </SelectContent>
+                        </Select>
+                      </div>
+                      <div className="space-y-2">
+                        <Label htmlFor="siteSeriesUrl" className="text-xs">
+                          <span className="text-syntax-cyan">series_url</span>
+                          <span className="text-muted-foreground"> // direct link</span>
+                        </Label>
+                        <Input
+                          id="siteSeriesUrl"
+                          type="url"
+                          placeholder="https://mangadex.org/title/..."
+                          value={newSiteSeriesUrl}
+                          onChange={(e) => setNewSiteSeriesUrl(e.target.value)}
+                          className="font-mono text-sm border-dashed bg-muted/30"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                  
                   <Button type="submit" className="font-mono text-xs border-dashed">
                     {'>'} add_site()
                   </Button>
@@ -304,48 +356,62 @@ const Library = () => {
             {/* Reader sites list */}
             {readerSites.length > 0 ? (
               <div className="grid gap-3">
-                {readerSites.map((site) => (
-                  <Card key={site.id} className="border-dashed">
-                    <CardContent className="p-4">
-                      <div className="flex items-center justify-between gap-4">
-                        <div className="flex-1 min-w-0 text-sm">
-                          <span className="text-syntax-cyan">name</span>
-                          <span className="text-muted-foreground">: </span>
-                          <span className="text-syntax-green">{site.name}</span>
-                          {site.notes && (
-                            <>
-                              <span className="text-muted-foreground"> · </span>
-                              <span className="text-syntax-cyan">notes</span>
+                {readerSites.map((site) => {
+                  const assignedAnime = site.anime_id ? mockAnimeData.find(a => a.id === site.anime_id) : null;
+                  const openUrl = site.series_url || site.url;
+                  
+                  return (
+                    <Card key={site.id} className="border-dashed">
+                      <CardContent className="p-4">
+                        <div className="flex items-start justify-between gap-4">
+                          <div className="flex-1 min-w-0 text-sm space-y-1">
+                            <div>
+                              <span className="text-syntax-cyan">name</span>
                               <span className="text-muted-foreground">: </span>
-                              <span className="text-syntax-green text-xs">{site.notes}</span>
-                            </>
-                          )}
+                              <span className="text-syntax-green">{site.name}</span>
+                            </div>
+                            {assignedAnime && (
+                              <div className="flex items-center gap-1.5">
+                                <Link2 className="w-3 h-3 text-primary" />
+                                <span className="text-syntax-cyan">series</span>
+                                <span className="text-muted-foreground">: </span>
+                                <span className="text-syntax-green text-xs">{assignedAnime.title}</span>
+                              </div>
+                            )}
+                            {site.notes && (
+                              <div className="text-xs">
+                                <span className="text-syntax-cyan">notes</span>
+                                <span className="text-muted-foreground">: </span>
+                                <span className="text-muted-foreground">{site.notes}</span>
+                              </div>
+                            )}
+                          </div>
+                          <div className="flex items-center gap-2">
+                            <Button
+                              variant="outline"
+                              size="sm"
+                              asChild
+                              className="border-dashed text-xs"
+                            >
+                              <a href={openUrl} target="_blank" rel="noopener noreferrer" className="gap-1">
+                                <ExternalLink className="w-3.5 h-3.5" />
+                                {site.series_url ? 'read' : 'open'}
+                              </a>
+                            </Button>
+                            <Button
+                              variant="ghost"
+                              size="icon"
+                              onClick={() => deleteReaderSite(site.id)}
+                              className="text-muted-foreground hover:text-destructive"
+                            >
+                              <Trash2 className="w-4 h-4" />
+                            </Button>
+                          </div>
                         </div>
-                        <div className="flex items-center gap-2">
-                          <Button
-                            variant="outline"
-                            size="sm"
-                            asChild
-                            className="border-dashed text-xs"
-                          >
-                            <a href={site.url} target="_blank" rel="noopener noreferrer" className="gap-1">
-                              <ExternalLink className="w-3.5 h-3.5" />
-                              open
-                            </a>
-                          </Button>
-                          <Button
-                            variant="ghost"
-                            size="icon"
-                            onClick={() => deleteReaderSite(site.id)}
-                            className="text-muted-foreground hover:text-destructive"
-                          >
-                            <Trash2 className="w-4 h-4" />
-                          </Button>
-                        </div>
-                      </div>
-                    </CardContent>
-                  </Card>
-                ))}
+                      </CardContent>
+                    </Card>
+                  );
+                })}
               </div>
             ) : (
               <div className="text-center py-16 border border-dashed">
