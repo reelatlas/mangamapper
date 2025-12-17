@@ -58,10 +58,10 @@ export const Header = () => {
                   </Button>
                 </DropdownMenuTrigger>
                 <DropdownMenuContent align="end" className="bg-popover border-dashed font-mono">
-                  <DropdownMenuItem className="text-muted-foreground text-xs gap-2">
+                  <div className="text-muted-foreground text-xs gap-2 flex items-center px-2 py-1.5">
                     <Mail className="w-3.5 h-3.5" />
                     @{user.email?.split('@')[1] || 'email.com'}
-                  </DropdownMenuItem>
+                  </div>
                   <DropdownMenuSeparator className="border-dashed" />
                   <DropdownMenuItem asChild>
                     <Link to="/library" className="flex items-center gap-2 cursor-pointer text-xs">
