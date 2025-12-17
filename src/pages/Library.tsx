@@ -201,18 +201,18 @@ const Library = () => {
                               <div className="flex flex-wrap gap-6 mt-2 text-xs">
                                 {item.last_watched_episode && (
                                   <span>
-                                    <span className="text-primary/60">ep</span>
+                                    <span className="text-muted-foreground">ep</span>
                                     <span className="text-muted-foreground">:</span>
                                     <span className="text-foreground">{item.last_watched_episode}</span>
                                   </span>
                                 )}
                                 {item.last_read_chapter && (
                                   <span>
-                                    <span className="text-primary/60">vol</span>
+                                    <span className="text-muted-foreground">vol</span>
                                     <span className="text-muted-foreground">:</span>
                                     <span className="text-foreground">{item.last_read_volume}</span>
                                     <span className="text-muted-foreground"> · </span>
-                                    <span className="text-primary/60">ch</span>
+                                    <span className="text-muted-foreground">ch</span>
                                     <span className="text-muted-foreground">:</span>
                                     <span className="text-foreground">{item.last_read_chapter}</span>
                                   </span>
