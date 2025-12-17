@@ -167,11 +167,11 @@ const Library = () => {
           <TabsList className="bg-muted/30 border border-dashed">
             <TabsTrigger value="progress" className="gap-2 text-xs font-mono data-[state=active]:bg-primary data-[state=active]:text-primary-foreground">
               <Tv className="w-3.5 h-3.5" />
-              /progress
+              progress
             </TabsTrigger>
             <TabsTrigger value="readers" className="gap-2 text-xs font-mono data-[state=active]:bg-primary data-[state=active]:text-primary-foreground">
               <Globe className="w-3.5 h-3.5" />
-              /reader_sites
+              reader_sites
             </TabsTrigger>
           </TabsList>
 
