@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { BookOpen, Home, Search, Library, User, LogOut } from 'lucide-react';
+import { Home, Search, Library, User, LogOut, Terminal } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { useAuth } from '@/hooks/useAuth';
 import {
@@ -14,69 +14,77 @@ export const Header = () => {
   const { user, signOut } = useAuth();
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-      <div className="container flex h-16 items-center justify-between">
-        <Link to="/" className="flex items-center gap-2 hover:opacity-80 transition-opacity">
-          <div className="flex items-center justify-center w-9 h-9 rounded-lg bg-primary">
-            <BookOpen className="w-5 h-5 text-primary-foreground" />
+    <header className="sticky top-0 z-50 w-full border-b border-dashed bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+      <div className="container flex h-14 items-center justify-between">
+        <Link to="/" className="flex items-center gap-2 hover:opacity-80 transition-opacity group">
+          <div className="flex items-center gap-1 text-primary">
+            <span className="text-muted-foreground">{'{'}</span>
+            <Terminal className="w-4 h-4" />
+            <span className="text-muted-foreground">{'}'}</span>
           </div>
           <div className="flex flex-col">
-            <span className="font-bold text-lg leading-tight">MangaMapper</span>
-            <span className="text-xs text-muted-foreground leading-tight">Anime to manga</span>
+            <span className="font-semibold text-sm leading-tight tracking-tight">
+              <span className="text-primary">manga</span>
+              <span className="text-muted-foreground">Mapper</span>
+            </span>
+            <span className="text-[10px] text-muted-foreground leading-tight">// anime-to-manga</span>
           </div>
         </Link>
 
-        <nav className="flex items-center gap-2">
-          <Button variant="ghost" size="sm" asChild>
-            <Link to="/" className="flex items-center gap-2">
-              <Home className="w-4 h-4" />
-              <span className="hidden sm:inline">Home</span>
+        <nav className="flex items-center gap-1">
+          <Button variant="ghost" size="sm" asChild className="font-mono text-xs">
+            <Link to="/" className="flex items-center gap-1.5">
+              <span className="text-muted-foreground">$</span>
+              <Home className="w-3.5 h-3.5" />
+              <span className="hidden sm:inline">/home</span>
             </Link>
           </Button>
-          <Button variant="ghost" size="sm" asChild>
-            <Link to="/search" className="flex items-center gap-2">
-              <Search className="w-4 h-4" />
-              <span className="hidden sm:inline">Search</span>
+          <Button variant="ghost" size="sm" asChild className="font-mono text-xs">
+            <Link to="/search" className="flex items-center gap-1.5">
+              <span className="text-muted-foreground">$</span>
+              <Search className="w-3.5 h-3.5" />
+              <span className="hidden sm:inline">/search</span>
             </Link>
           </Button>
           
           {user ? (
             <>
-              <Button variant="ghost" size="sm" asChild>
-                <Link to="/library" className="flex items-center gap-2">
-                  <Library className="w-4 h-4" />
-                  <span className="hidden sm:inline">Library</span>
+              <Button variant="ghost" size="sm" asChild className="font-mono text-xs">
+                <Link to="/library" className="flex items-center gap-1.5">
+                  <span className="text-muted-foreground">$</span>
+                  <Library className="w-3.5 h-3.5" />
+                  <span className="hidden sm:inline">/library</span>
                 </Link>
               </Button>
               <DropdownMenu>
                 <DropdownMenuTrigger asChild>
-                  <Button variant="outline" size="sm" className="gap-2">
-                    <User className="w-4 h-4" />
-                    <span className="hidden sm:inline">Account</span>
+                  <Button variant="outline" size="sm" className="font-mono text-xs gap-1.5 border-dashed">
+                    <User className="w-3.5 h-3.5" />
+                    <span className="hidden sm:inline">user</span>
                   </Button>
                 </DropdownMenuTrigger>
-                <DropdownMenuContent align="end" className="bg-popover">
-                  <DropdownMenuItem className="text-muted-foreground text-sm">
-                    {user.email}
+                <DropdownMenuContent align="end" className="bg-popover border-dashed font-mono">
+                  <DropdownMenuItem className="text-muted-foreground text-xs">
+                    <span className="text-syntax-cyan">email:</span> {user.email}
                   </DropdownMenuItem>
-                  <DropdownMenuSeparator />
+                  <DropdownMenuSeparator className="border-dashed" />
                   <DropdownMenuItem asChild>
-                    <Link to="/library" className="flex items-center gap-2 cursor-pointer">
-                      <Library className="w-4 h-4" />
-                      My library
+                    <Link to="/library" className="flex items-center gap-2 cursor-pointer text-xs">
+                      <Library className="w-3.5 h-3.5" />
+                      {'>'} my_library
                     </Link>
                   </DropdownMenuItem>
-                  <DropdownMenuSeparator />
-                  <DropdownMenuItem onClick={signOut} className="cursor-pointer gap-2 text-destructive">
-                    <LogOut className="w-4 h-4" />
-                    Sign out
+                  <DropdownMenuSeparator className="border-dashed" />
+                  <DropdownMenuItem onClick={signOut} className="cursor-pointer gap-2 text-destructive text-xs">
+                    <LogOut className="w-3.5 h-3.5" />
+                    {'>'} sign_out
                   </DropdownMenuItem>
                 </DropdownMenuContent>
               </DropdownMenu>
             </>
           ) : (
-            <Button size="sm" asChild>
-              <Link to="/auth">Sign in</Link>
+            <Button size="sm" asChild className="font-mono text-xs border-dashed">
+              <Link to="/auth">{'>'} sign_in</Link>
             </Button>
           )}
         </nav>

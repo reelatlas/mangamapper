@@ -3,9 +3,8 @@ import { Header } from '@/components/Header';
 import { MangaMappingDisplay } from '@/components/MangaMappingDisplay';
 import { EpisodeBadge } from '@/components/EpisodeBadge';
 import { ProgressTracker } from '@/components/ProgressTracker';
-import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { Card, CardContent } from '@/components/ui/card';
 import { getAnimeById } from '@/data/mockAnime';
 import { ArrowLeft, Calendar, Play, BookOpen, Info } from 'lucide-react';
 
@@ -15,17 +14,22 @@ const AnimeDetail = () => {
 
   if (!anime) {
     return (
-      <div className="min-h-screen bg-background">
+      <div className="min-h-screen bg-background font-mono">
         <Header />
         <main className="container py-16 text-center">
-          <h1 className="text-2xl font-bold mb-4">Anime not found</h1>
-          <p className="text-muted-foreground mb-6">The anime you're looking for doesn't exist.</p>
-          <Button asChild>
-            <Link to="/">
-              <ArrowLeft className="w-4 h-4 mr-2" />
-              Back to home
-            </Link>
-          </Button>
+          <div className="border border-dashed p-8 max-w-md mx-auto">
+            <p className="text-destructive text-sm mb-4">
+              <span className="text-syntax-cyan">error</span>
+              <span className="text-muted-foreground">: </span>
+              <span className="text-syntax-green">"anime_not_found"</span>
+            </p>
+            <Button asChild className="border-dashed text-xs">
+              <Link to="/">
+                <ArrowLeft className="w-3.5 h-3.5 mr-2" />
+                {'<'}- back_to_home
+              </Link>
+            </Button>
+          </div>
         </main>
       </div>
     );
@@ -36,82 +40,112 @@ const AnimeDetail = () => {
   const animeOnlyCount = anime.episodes.filter(ep => ep.type === 'anime-only-canon').length;
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-background font-mono">
       <Header />
       
       <main className="container py-8">
         {/* Back button */}
-        <Button variant="ghost" size="sm" asChild className="mb-6">
+        <Button variant="ghost" size="sm" asChild className="mb-6 text-xs">
           <Link to="/" className="flex items-center gap-2">
-            <ArrowLeft className="w-4 h-4" />
-            Back to home
+            <ArrowLeft className="w-3.5 h-3.5" />
+            {'<'}- back_to_home
           </Link>
         </Button>
 
         {/* Hero section */}
         <div className="flex flex-col lg:flex-row gap-8 mb-10">
           {/* Cover image */}
-          <div className="w-full lg:w-72 shrink-0">
-            <div className="relative rounded-xl overflow-hidden shadow-xl aspect-[3/4]">
-              <img
-                src={anime.coverImage}
-                alt={anime.title}
-                className="w-full h-full object-cover"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-transparent" />
-              <div className="absolute bottom-4 left-4 right-4">
-                <Badge className={anime.status === 'airing' ? 'bg-green-500/90 text-primary-foreground' : 'bg-secondary'}>
-                  {anime.status === 'airing' ? 'Currently airing' : 'Completed'}
-                </Badge>
+          <div className="w-full lg:w-64 shrink-0">
+            <Card className="border-dashed overflow-hidden">
+              <div className="terminal-header">
+                <span className="text-muted-foreground">cover.jpg</span>
               </div>
-            </div>
+              <div className="relative aspect-[3/4]">
+                <img
+                  src={anime.coverImage}
+                  alt={anime.title}
+                  className="w-full h-full object-cover opacity-90"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-transparent" />
+                <div className="absolute bottom-3 left-3 right-3">
+                  <span className="text-xs border px-2 py-1 bg-background/80">
+                    {anime.status === 'airing' ? (
+                      <span className="text-accent">[AIRING]</span>
+                    ) : (
+                      <span className="text-muted-foreground">[COMPLETE]</span>
+                    )}
+                  </span>
+                </div>
+              </div>
+            </Card>
           </div>
 
           {/* Info */}
-          <div className="flex-1">
-            <h1 className="text-3xl sm:text-4xl font-bold mb-2">{anime.title}</h1>
-            <p className="text-xl text-muted-foreground mb-4">{anime.japaneseTitle}</p>
-            
-            <div className="flex flex-wrap gap-2 mb-6">
-              {anime.genres.map((genre) => (
-                <Badge key={genre} variant="secondary">{genre}</Badge>
-              ))}
-            </div>
-
-            <p className="text-muted-foreground mb-6 leading-relaxed">{anime.synopsis}</p>
+          <div className="flex-1 space-y-4">
+            <Card className="border-dashed">
+              <div className="terminal-header">
+                <span className="text-muted-foreground">anime_info.json</span>
+              </div>
+              <CardContent className="p-4 space-y-3 text-sm">
+                <div>
+                  <span className="text-syntax-cyan">"title"</span>
+                  <span className="text-muted-foreground">: </span>
+                  <span className="text-syntax-green text-lg">"{anime.title}"</span>
+                </div>
+                <div>
+                  <span className="text-syntax-cyan">"title_jp"</span>
+                  <span className="text-muted-foreground">: </span>
+                  <span className="text-syntax-green">"{anime.japaneseTitle}"</span>
+                </div>
+                <div>
+                  <span className="text-syntax-cyan">"genres"</span>
+                  <span className="text-muted-foreground">: [</span>
+                  {anime.genres.map((genre, i) => (
+                    <span key={genre}>
+                      <span className="text-syntax-amber">"{genre}"</span>
+                      {i < anime.genres.length - 1 && <span className="text-muted-foreground">, </span>}
+                    </span>
+                  ))}
+                  <span className="text-muted-foreground">]</span>
+                </div>
+                <div className="pt-2 border-t border-dashed">
+                  <span className="text-syntax-cyan">"synopsis"</span>
+                  <span className="text-muted-foreground">: </span>
+                  <p className="text-muted-foreground text-xs mt-1 leading-relaxed">
+                    "{anime.synopsis}"
+                  </p>
+                </div>
+              </CardContent>
+            </Card>
 
             {/* Stats */}
-            <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
-              <Card>
-                <CardContent className="p-4 text-center">
-                  <Play className="w-5 h-5 mx-auto mb-1 text-primary" />
-                  <div className="text-2xl font-bold">{anime.currentEpisode}</div>
-                  <div className="text-xs text-muted-foreground">Episodes</div>
+            <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
+              <Card className="border-dashed">
+                <CardContent className="p-3 text-center">
+                  <Play className="w-4 h-4 mx-auto mb-1 text-primary" />
+                  <div className="text-xl font-bold text-syntax-amber">{anime.currentEpisode}</div>
+                  <div className="text-[10px] text-muted-foreground uppercase">episodes</div>
                 </CardContent>
               </Card>
-              <Card>
-                <CardContent className="p-4 text-center">
-                  <BookOpen className="w-5 h-5 mx-auto mb-1 text-primary" />
-                  <div className="text-2xl font-bold">{canonCount}</div>
-                  <div className="text-xs text-muted-foreground">Canon</div>
+              <Card className="border-dashed">
+                <CardContent className="p-3 text-center">
+                  <BookOpen className="w-4 h-4 mx-auto mb-1 text-accent" />
+                  <div className="text-xl font-bold text-accent">{canonCount}</div>
+                  <div className="text-[10px] text-muted-foreground uppercase">canon</div>
                 </CardContent>
               </Card>
-              <Card>
-                <CardContent className="p-4 text-center">
-                  <div className="w-5 h-5 mx-auto mb-1 rounded-full bg-destructive/20 flex items-center justify-center">
-                    <span className="text-xs font-bold text-destructive">F</span>
-                  </div>
-                  <div className="text-2xl font-bold">{fillerCount}</div>
-                  <div className="text-xs text-muted-foreground">Filler</div>
+              <Card className="border-dashed">
+                <CardContent className="p-3 text-center">
+                  <span className="block text-xs font-bold text-destructive mb-1">[F]</span>
+                  <div className="text-xl font-bold text-destructive">{fillerCount}</div>
+                  <div className="text-[10px] text-muted-foreground uppercase">filler</div>
                 </CardContent>
               </Card>
-              <Card>
-                <CardContent className="p-4 text-center">
-                  <div className="w-5 h-5 mx-auto mb-1 rounded-full bg-accent-foreground/20 flex items-center justify-center">
-                    <span className="text-xs font-bold text-accent-foreground">A</span>
-                  </div>
-                  <div className="text-2xl font-bold">{animeOnlyCount}</div>
-                  <div className="text-xs text-muted-foreground">Anime only</div>
+              <Card className="border-dashed">
+                <CardContent className="p-3 text-center">
+                  <span className="block text-xs font-bold text-syntax-purple mb-1">[A]</span>
+                  <div className="text-xl font-bold text-syntax-purple">{animeOnlyCount}</div>
+                  <div className="text-[10px] text-muted-foreground uppercase">anime only</div>
                 </CardContent>
               </Card>
             </div>
@@ -124,38 +158,36 @@ const AnimeDetail = () => {
         </div>
 
         {/* Legend */}
-        <Card className="mb-6">
+        <Card className="mb-6 border-dashed">
           <CardContent className="p-4">
-            <div className="flex flex-wrap items-center gap-4 text-sm">
+            <div className="flex flex-wrap items-center gap-4 text-xs">
               <div className="flex items-center gap-2">
-                <Info className="w-4 h-4 text-muted-foreground" />
-                <span className="text-muted-foreground">Episode types:</span>
+                <Info className="w-3.5 h-3.5 text-muted-foreground" />
+                <span className="text-muted-foreground">// episode_types:</span>
               </div>
               <div className="flex items-center gap-2">
                 <EpisodeBadge type="canon" />
-                <span className="text-muted-foreground">— Follows manga</span>
+                <span className="text-muted-foreground">= follows manga</span>
               </div>
               <div className="flex items-center gap-2">
                 <EpisodeBadge type="filler" />
-                <span className="text-muted-foreground">— Not in manga</span>
+                <span className="text-muted-foreground">= not in manga</span>
               </div>
               <div className="flex items-center gap-2">
                 <EpisodeBadge type="anime-only-canon" />
-                <span className="text-muted-foreground">— Canon but anime-only story</span>
+                <span className="text-muted-foreground">= anime original story</span>
               </div>
             </div>
           </CardContent>
         </Card>
 
         {/* Episodes list */}
-        <Card>
-          <CardHeader>
-            <CardTitle className="flex items-center gap-2">
-              <Calendar className="w-5 h-5 text-primary" />
-              All episodes
-            </CardTitle>
-          </CardHeader>
-          <CardContent>
+        <Card className="border-dashed">
+          <div className="terminal-header flex items-center gap-2">
+            <Calendar className="w-3.5 h-3.5 text-primary" />
+            <span className="text-muted-foreground">episodes_list.json</span>
+          </div>
+          <CardContent className="p-4">
             <div className="space-y-2">
               {anime.episodes.map((episode) => (
                 <MangaMappingDisplay 
@@ -167,10 +199,12 @@ const AnimeDetail = () => {
             </div>
             
             {anime.episodes.length < anime.currentEpisode && (
-              <p className="text-center text-sm text-muted-foreground mt-6 py-4 border-t">
-                Showing {anime.episodes.length} of {anime.currentEpisode} episodes.
+              <p className="text-center text-xs text-muted-foreground mt-6 py-4 border-t border-dashed">
+                <span className="text-syntax-cyan">// </span>
+                showing {anime.episodes.length} of {anime.currentEpisode} episodes
                 <br />
-                Full episode list coming soon.
+                <span className="text-syntax-cyan">// </span>
+                full list coming soon
               </p>
             )}
           </CardContent>
@@ -178,9 +212,15 @@ const AnimeDetail = () => {
       </main>
 
       {/* Footer */}
-      <footer className="border-t mt-16">
-        <div className="container py-8 text-center text-sm text-muted-foreground">
-          <p>MangaMapper — Your guide from anime to manga</p>
+      <footer className="border-t border-dashed mt-16">
+        <div className="container py-6 text-center text-xs text-muted-foreground">
+          <p>
+            <span className="text-syntax-cyan">{'{'}</span>
+            <span className="text-primary">mangaMapper</span>
+            <span className="text-syntax-cyan">{'}'}</span>
+            <span className="mx-2">—</span>
+            <span>// your guide from anime to manga</span>
+          </p>
         </div>
       </footer>
     </div>

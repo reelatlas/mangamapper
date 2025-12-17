@@ -2,11 +2,11 @@ import { useState, useEffect } from 'react';
 import { useAuth } from '@/hooks/useAuth';
 import { supabase } from '@/integrations/supabase/client';
 import { AnimeSeries } from '@/types/anime';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { Card, CardContent, CardHeader } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
-import { Tv, BookOpen, Save, LogIn } from 'lucide-react';
+import { Tv, BookOpen, LogIn } from 'lucide-react';
 import { toast } from 'sonner';
 import { Link } from 'react-router-dom';
 
@@ -87,22 +87,19 @@ export const ProgressTracker = ({ anime }: ProgressTrackerProps) => {
 
   if (!user) {
     return (
-      <Card>
-        <CardHeader>
-          <CardTitle className="text-lg flex items-center gap-2">
-            <Save className="w-5 h-5" />
-            Track your progress
-          </CardTitle>
-        </CardHeader>
-        <CardContent>
-          <div className="text-center py-4">
-            <p className="text-muted-foreground mb-4">
-              Sign in to track your watched episodes and manga chapters
+      <Card className="border-dashed">
+        <div className="terminal-header">
+          <span className="text-muted-foreground">// user_progress.json</span>
+        </div>
+        <CardContent className="py-6">
+          <div className="text-center font-mono">
+            <p className="text-muted-foreground text-sm mb-4">
+              {'>'} authentication_required
             </p>
-            <Button asChild>
-              <Link to="/auth" className="gap-2">
-                <LogIn className="w-4 h-4" />
-                Sign in
+            <Button asChild className="border-dashed">
+              <Link to="/auth" className="gap-2 text-xs">
+                <LogIn className="w-3.5 h-3.5" />
+                {'>'} sign_in
               </Link>
             </Button>
           </div>
@@ -113,47 +110,49 @@ export const ProgressTracker = ({ anime }: ProgressTrackerProps) => {
 
   if (loading) {
     return (
-      <Card>
+      <Card className="border-dashed">
         <CardContent className="p-6">
-          <p className="text-muted-foreground text-center">Loading...</p>
+          <p className="text-muted-foreground text-center font-mono text-sm">...loading</p>
         </CardContent>
       </Card>
     );
   }
 
   return (
-    <Card>
-      <CardHeader>
-        <CardTitle className="text-lg flex items-center gap-2">
-          <Save className="w-5 h-5" />
-          Your progress
-        </CardTitle>
-      </CardHeader>
-      <CardContent className="space-y-4">
+    <Card className="border-dashed">
+      <div className="terminal-header">
+        <span className="text-muted-foreground">// your_progress.json</span>
+      </div>
+      <CardContent className="p-4 space-y-4 font-mono">
         <div className="space-y-2">
-          <Label htmlFor="watchedEpisode" className="flex items-center gap-2">
-            <Tv className="w-4 h-4" />
-            Last watched episode
+          <Label htmlFor="watchedEpisode" className="flex items-center gap-2 text-xs">
+            <Tv className="w-3.5 h-3.5 text-primary" />
+            <span className="text-syntax-cyan">"last_watched_episode"</span>
           </Label>
-          <Input
-            id="watchedEpisode"
-            type="number"
-            min="1"
-            max={anime.totalEpisodes || anime.currentEpisode}
-            placeholder={`1 - ${anime.totalEpisodes || anime.currentEpisode}`}
-            value={watchedEpisode}
-            onChange={(e) => setWatchedEpisode(e.target.value)}
-          />
+          <div className="flex items-center gap-2">
+            <span className="text-muted-foreground text-sm">$</span>
+            <Input
+              id="watchedEpisode"
+              type="number"
+              min="1"
+              max={anime.totalEpisodes || anime.currentEpisode}
+              placeholder={`1 - ${anime.totalEpisodes || anime.currentEpisode}`}
+              value={watchedEpisode}
+              onChange={(e) => setWatchedEpisode(e.target.value)}
+              className="font-mono text-sm border-dashed bg-muted/30"
+            />
+          </div>
         </div>
 
         {anime.hasManga && (
-          <>
-            <div className="grid grid-cols-2 gap-4">
-              <div className="space-y-2">
-                <Label htmlFor="readVolume" className="flex items-center gap-2">
-                  <BookOpen className="w-4 h-4" />
-                  Last read volume
-                </Label>
+          <div className="grid grid-cols-2 gap-4">
+            <div className="space-y-2">
+              <Label htmlFor="readVolume" className="flex items-center gap-2 text-xs">
+                <BookOpen className="w-3.5 h-3.5 text-primary" />
+                <span className="text-syntax-cyan">"last_read_volume"</span>
+              </Label>
+              <div className="flex items-center gap-2">
+                <span className="text-muted-foreground text-sm">$</span>
                 <Input
                   id="readVolume"
                   type="number"
@@ -161,23 +160,34 @@ export const ProgressTracker = ({ anime }: ProgressTrackerProps) => {
                   placeholder="e.g., 5"
                   value={readVolume}
                   onChange={(e) => setReadVolume(e.target.value)}
-                />
-              </div>
-              <div className="space-y-2">
-                <Label htmlFor="readChapter">Chapter</Label>
-                <Input
-                  id="readChapter"
-                  placeholder="e.g., 45 or 45-46"
-                  value={readChapter}
-                  onChange={(e) => setReadChapter(e.target.value)}
+                  className="font-mono text-sm border-dashed bg-muted/30"
                 />
               </div>
             </div>
-          </>
+            <div className="space-y-2">
+              <Label htmlFor="readChapter" className="text-xs">
+                <span className="text-syntax-cyan">"chapter"</span>
+              </Label>
+              <div className="flex items-center gap-2">
+                <span className="text-muted-foreground text-sm">$</span>
+                <Input
+                  id="readChapter"
+                  placeholder="e.g., 45"
+                  value={readChapter}
+                  onChange={(e) => setReadChapter(e.target.value)}
+                  className="font-mono text-sm border-dashed bg-muted/30"
+                />
+              </div>
+            </div>
+          </div>
         )}
 
-        <Button onClick={saveProgress} disabled={saving} className="w-full">
-          {saving ? 'Saving...' : 'Save progress'}
+        <Button 
+          onClick={saveProgress} 
+          disabled={saving} 
+          className="w-full font-mono text-xs border-dashed"
+        >
+          {'>'} {saving ? 'saving...' : 'save_progress()'}
         </Button>
       </CardContent>
     </Card>

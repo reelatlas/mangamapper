@@ -5,7 +5,7 @@ import { AnimeCard } from '@/components/AnimeCard';
 import { SourceFilter } from '@/components/SourceFilter';
 import { getTopAiringAnime, searchAnime } from '@/data/mockAnime';
 import { AnimeSeries, TrackingSite, StreamingService, TRACKING_SITES, STREAMING_SERVICES } from '@/types/anime';
-import { TrendingUp, Sparkles } from 'lucide-react';
+import { Terminal, TrendingUp } from 'lucide-react';
 
 const Index = () => {
   const [searchQuery, setSearchQuery] = useState('');
@@ -34,27 +34,35 @@ const Index = () => {
   const streamingServiceLabel = STREAMING_SERVICES.find(s => s.value === streamingService)?.label;
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-background font-mono">
       <Header />
       
       <main className="container py-8">
         {/* Hero section */}
         <section className="text-center mb-10">
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-primary/10 text-primary text-sm font-medium mb-4">
-            <Sparkles className="w-4 h-4" />
-            Track anime to manga chapters
+          <div className="inline-flex items-center gap-2 px-3 py-1.5 border border-dashed text-primary text-xs mb-4">
+            <Terminal className="w-3.5 h-3.5" />
+            <span>{'>'} anime_to_manga_mapper</span>
           </div>
-          <h1 className="text-4xl sm:text-5xl font-bold mb-4 bg-gradient-to-r from-foreground to-foreground/70 bg-clip-text text-transparent">
-            Find your manga chapter
-          </h1>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto mb-8">
-            Discover which manga volume and chapter corresponds to each anime episode.
-            Never miss where to continue reading.
+          
+          <div className="mb-4">
+            <pre className="text-2xl sm:text-3xl font-bold text-foreground inline-block">
+              <span className="text-muted-foreground">{'{'}</span>
+              <span className="text-primary"> find</span>
+              <span className="text-muted-foreground">:</span>
+              <span className="text-syntax-green"> "manga_chapter"</span>
+              <span className="text-muted-foreground"> {'}'}</span>
+            </pre>
+          </div>
+          
+          <p className="text-sm text-muted-foreground max-w-xl mx-auto mb-8">
+            <span className="text-syntax-cyan">// </span>
+            discover which manga volume and chapter corresponds to each anime episode
           </p>
           
           <SearchBar 
             onSearch={handleSearch}
-            placeholder="Search by anime title, Japanese name, or genre..."
+            placeholder="$ search --title 'anime name'"
             className="max-w-xl mx-auto"
           />
         </section>
@@ -73,16 +81,17 @@ const Index = () => {
 
         {/* Results section */}
         <section>
-          <div className="flex items-center gap-2 mb-6">
-            <TrendingUp className="w-5 h-5 text-primary" />
-            <h2 className="text-xl font-semibold">
+          <div className="flex items-center gap-2 mb-6 text-sm">
+            <TrendingUp className="w-4 h-4 text-primary" />
+            <span className="text-muted-foreground">{'>'}</span>
+            <span>
               {isSearching 
-                ? `Search results ${searchResults.length > 0 ? `(${searchResults.length})` : ''}`
+                ? <><span className="text-syntax-cyan">search_results</span><span className="text-muted-foreground">.length</span> = <span className="text-syntax-amber">{searchResults.length}</span></>
                 : streamingService === 'all' 
-                  ? `Top 10 currently airing (${trackingSiteLabel})`
-                  : `Top 10 currently airing on ${streamingServiceLabel} (${trackingSiteLabel})`
+                  ? <><span className="text-syntax-cyan">top_airing</span><span className="text-muted-foreground">[</span><span className="text-syntax-amber">{trackingSiteLabel}</span><span className="text-muted-foreground">]</span></>
+                  : <><span className="text-syntax-cyan">top_airing</span><span className="text-muted-foreground">[</span><span className="text-syntax-amber">{streamingServiceLabel}</span><span className="text-muted-foreground">][</span><span className="text-syntax-amber">{trackingSiteLabel}</span><span className="text-muted-foreground">]</span></>
               }
-            </h2>
+            </span>
           </div>
 
           {displayedAnime.length > 0 ? (
@@ -96,11 +105,12 @@ const Index = () => {
               ))}
             </div>
           ) : (
-            <div className="text-center py-16">
-              <p className="text-muted-foreground text-lg">
+            <div className="text-center py-16 border border-dashed">
+              <p className="text-muted-foreground text-sm">
+                <span className="text-syntax-cyan">// </span>
                 {isSearching 
-                  ? `No anime found matching "${searchQuery}"`
-                  : `No anime available on ${streamingServiceLabel}`
+                  ? `no results matching "${searchQuery}"`
+                  : `no anime available on ${streamingServiceLabel}`
                 }
               </p>
             </div>
@@ -109,9 +119,15 @@ const Index = () => {
       </main>
 
       {/* Footer */}
-      <footer className="border-t mt-16">
-        <div className="container py-8 text-center text-sm text-muted-foreground">
-          <p>MangaMapper — Your guide from anime to manga</p>
+      <footer className="border-t border-dashed mt-16">
+        <div className="container py-6 text-center text-xs text-muted-foreground">
+          <p>
+            <span className="text-syntax-cyan">{'{'}</span>
+            <span className="text-primary">mangaMapper</span>
+            <span className="text-syntax-cyan">{'}'}</span>
+            <span className="mx-2">—</span>
+            <span>// your guide from anime to manga</span>
+          </p>
         </div>
       </footer>
     </div>
