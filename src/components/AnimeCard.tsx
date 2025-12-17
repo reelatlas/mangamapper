@@ -95,7 +95,7 @@ export const AnimeCard = ({ anime, rank, progress }: AnimeCardProps) => {
                         <span>
                           <span className="text-syntax-cyan">ep</span>
                           <span className="text-muted-foreground">:</span>
-                          <span className="text-syntax-amber">{progress.last_watched_episode}</span>
+                          <span className="text-foreground">{progress.last_watched_episode}</span>
                         </span>
                       )}
                       {(progress.last_read_volume !== null || progress.last_read_chapter !== null) && (
@@ -104,7 +104,7 @@ export const AnimeCard = ({ anime, rank, progress }: AnimeCardProps) => {
                             <>
                               <span className="text-syntax-cyan">vol</span>
                               <span className="text-muted-foreground">:</span>
-                              <span className="text-syntax-amber">{progress.last_read_volume}</span>
+                              <span className="text-foreground">{progress.last_read_volume}</span>
                             </>
                           )}
                           {progress.last_read_volume !== null && progress.last_read_chapter !== null && (
@@ -114,7 +114,7 @@ export const AnimeCard = ({ anime, rank, progress }: AnimeCardProps) => {
                             <>
                               <span className="text-syntax-cyan">ch</span>
                               <span className="text-muted-foreground">:</span>
-                              <span className="text-syntax-amber">{progress.last_read_chapter}</span>
+                              <span className="text-foreground">{progress.last_read_chapter}</span>
                             </>
                           )}
                         </span>
