@@ -64,17 +64,17 @@ export const AnimeCard = ({ anime, rank }: AnimeCardProps) => {
                 ))}
               </div>
 
-              {/* Current Episode Mapping */}
+              {/* Current episode mapping */}
               {currentEpisode && (
                 <div className="mt-auto">
-                  <p className="text-xs text-muted-foreground mb-2 uppercase tracking-wide font-medium">
-                    Latest Episode
+                  <p className="text-xs text-muted-foreground mb-2 tracking-wide font-medium">
+                    Latest episode
                   </p>
                   <MangaMappingDisplay episode={currentEpisode} showEpisodeNumber={false} />
                 </div>
               )}
 
-              {/* View Details Hint */}
+              {/* View details hint */}
               <div className="flex items-center gap-1 text-sm text-primary opacity-0 group-hover:opacity-100 transition-opacity">
                 View all episodes
                 <ChevronRight className="w-4 h-4" />
