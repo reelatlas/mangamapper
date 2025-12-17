@@ -5,7 +5,7 @@ import { AnimeSeries } from '@/types/anime';
 import { Card, CardContent, CardHeader } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
-import { Label } from '@/components/ui/label';
+
 import { Tv, BookOpen, LogIn } from 'lucide-react';
 import { toast } from 'sonner';
 import { Link } from 'react-router-dom';
@@ -123,67 +123,65 @@ export const ProgressTracker = ({ anime }: ProgressTrackerProps) => {
       <div className="terminal-header">
         <span className="text-muted-foreground">// your_progress</span>
       </div>
-      <CardContent className="p-4 font-mono">
-        <div className="flex flex-wrap items-end gap-x-6 gap-y-3">
-          {/* Episode input */}
-          <div className="space-y-1.5">
-            <Label htmlFor="watchedEpisode" className="flex items-center gap-2 text-xs">
-              <Tv className="w-3.5 h-3.5 text-primary" />
-              <span className="text-syntax-cyan">last_watched_episode</span>
-            </Label>
+      <CardContent className="p-4 font-mono space-y-3">
+        {/* Last watched section */}
+        <div className="flex items-center gap-3">
+          <div className="flex items-center gap-2 text-xs min-w-[100px]">
+            <Tv className="w-3.5 h-3.5 text-primary" />
+            <span className="text-syntax-cyan">last_watched:</span>
+          </div>
+          <div className="flex items-center gap-2">
             <Input
               id="watchedEpisode"
               type="number"
               min="1"
               max={anime.totalEpisodes || anime.currentEpisode}
-              placeholder="—"
+              placeholder="ep"
               value={watchedEpisode}
               onChange={(e) => setWatchedEpisode(e.target.value)}
-              className="font-mono text-sm border-dashed bg-muted/30 w-28 h-8"
+              className="font-mono text-sm border-dashed bg-muted/30 w-20 h-7"
             />
+            <span className="text-muted-foreground text-xs">/{anime.totalEpisodes || anime.currentEpisode}</span>
           </div>
+        </div>
 
-          {anime.hasManga && (
-            <>
-              {/* Volume input */}
-              <div className="space-y-1.5">
-                <Label htmlFor="readVolume" className="flex items-center gap-2 text-xs">
-                  <BookOpen className="w-3.5 h-3.5 text-primary" />
-                  <span className="text-syntax-cyan">last_read_volume</span>
-                </Label>
-                <Input
-                  id="readVolume"
-                  type="number"
-                  min="1"
-                  placeholder="—"
-                  value={readVolume}
-                  onChange={(e) => setReadVolume(e.target.value)}
-                  className="font-mono text-sm border-dashed bg-muted/30 w-28 h-8"
-                />
-              </div>
+        {/* Last read section */}
+        {anime.hasManga && (
+          <div className="flex items-center gap-3">
+            <div className="flex items-center gap-2 text-xs min-w-[100px]">
+              <BookOpen className="w-3.5 h-3.5 text-primary" />
+              <span className="text-syntax-cyan">last_read:</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <span className="text-muted-foreground text-xs">vol</span>
+              <Input
+                id="readVolume"
+                type="number"
+                min="1"
+                placeholder="—"
+                value={readVolume}
+                onChange={(e) => setReadVolume(e.target.value)}
+                className="font-mono text-sm border-dashed bg-muted/30 w-16 h-7"
+              />
+              <span className="text-muted-foreground text-xs">ch</span>
+              <Input
+                id="readChapter"
+                placeholder="—"
+                value={readChapter}
+                onChange={(e) => setReadChapter(e.target.value)}
+                className="font-mono text-sm border-dashed bg-muted/30 w-20 h-7"
+              />
+            </div>
+          </div>
+        )}
 
-              {/* Chapter input */}
-              <div className="space-y-1.5">
-                <Label htmlFor="readChapter" className="text-xs">
-                  <span className="text-syntax-cyan">last_read_chapter</span>
-                </Label>
-                <Input
-                  id="readChapter"
-                  placeholder="—"
-                  value={readChapter}
-                  onChange={(e) => setReadChapter(e.target.value)}
-                  className="font-mono text-sm border-dashed bg-muted/30 w-28 h-8"
-                />
-              </div>
-            </>
-          )}
-
-          {/* Save button */}
+        {/* Save button */}
+        <div className="flex justify-end pt-1">
           <Button 
             onClick={saveProgress} 
             disabled={saving}
             size="sm"
-            className="font-mono text-xs border-dashed h-8"
+            className="font-mono text-xs border-dashed h-7"
           >
             {'>'} {saving ? 'saving...' : 'save_progress()'}
           </Button>
