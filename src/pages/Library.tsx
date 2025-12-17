@@ -265,32 +265,26 @@ const Library = () => {
                       <Label htmlFor="siteName" className="text-xs">
                         <span className="text-syntax-cyan">name</span>
                       </Label>
-                      <div className="flex items-center gap-2">
-                        <span className="text-muted-foreground text-sm">$</span>
-                        <Input
-                          id="siteName"
-                          placeholder="e.g., MangaDex"
-                          value={newSiteName}
-                          onChange={(e) => setNewSiteName(e.target.value)}
-                          className="font-mono text-sm border-dashed bg-muted/30"
-                        />
-                      </div>
+                      <Input
+                        id="siteName"
+                        placeholder="e.g., MangaDex"
+                        value={newSiteName}
+                        onChange={(e) => setNewSiteName(e.target.value)}
+                        className="font-mono text-sm border-dashed bg-muted/30"
+                      />
                     </div>
                     <div className="space-y-2">
                       <Label htmlFor="siteUrl" className="text-xs">
                         <span className="text-syntax-cyan">url</span>
                       </Label>
-                      <div className="flex items-center gap-2">
-                        <span className="text-muted-foreground text-sm">$</span>
-                        <Input
-                          id="siteUrl"
-                          type="url"
-                          placeholder="https://mangadex.org"
-                          value={newSiteUrl}
-                          onChange={(e) => setNewSiteUrl(e.target.value)}
-                          className="font-mono text-sm border-dashed bg-muted/30"
-                        />
-                      </div>
+                      <Input
+                        id="siteUrl"
+                        type="url"
+                        placeholder="https://mangadex.org"
+                        value={newSiteUrl}
+                        onChange={(e) => setNewSiteUrl(e.target.value)}
+                        className="font-mono text-sm border-dashed bg-muted/30"
+                      />
                     </div>
                   </div>
                   <div className="space-y-2">
@@ -298,16 +292,13 @@ const Library = () => {
                       <span className="text-syntax-cyan">notes</span>
                       <span className="text-muted-foreground"> // optional</span>
                     </Label>
-                    <div className="flex items-center gap-2">
-                      <span className="text-muted-foreground text-sm">$</span>
-                      <Input
-                        id="siteNotes"
-                        placeholder="e.g., Good for One Piece"
-                        value={newSiteNotes}
-                        onChange={(e) => setNewSiteNotes(e.target.value)}
-                        className="font-mono text-sm border-dashed bg-muted/30"
-                      />
-                    </div>
+                    <Input
+                      id="siteNotes"
+                      placeholder="e.g., Good for One Piece"
+                      value={newSiteNotes}
+                      onChange={(e) => setNewSiteNotes(e.target.value)}
+                      className="font-mono text-sm border-dashed bg-muted/30"
+                    />
                   </div>
                   <Button type="submit" className="font-mono text-xs border-dashed">
                     {'>'} add_site()
