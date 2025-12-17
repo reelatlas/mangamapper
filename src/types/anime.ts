@@ -31,10 +31,9 @@ export interface Episode {
   airDate: string;
 }
 
-export interface SourceRanking {
-  trackingSite: TrackingSite;
-  streamingService: StreamingService;
-  rank: number;
+export interface TrackingRanking {
+  mal: number;      // MAL popularity rank for currently airing
+  anilist: number;  // AniList popularity rank for currently airing
 }
 
 export interface AnimeSeries {
@@ -43,11 +42,12 @@ export interface AnimeSeries {
   japaneseTitle: string;
   coverImage: string;
   currentEpisode: number;
-  totalEpisodes: number | null; // null if ongoing
+  totalEpisodes: number | null;
   status: 'airing' | 'completed' | 'upcoming';
   hasManga: boolean;
   episodes: Episode[];
-  rankings: SourceRanking[];
+  ranking: TrackingRanking;
+  streamingOn: StreamingService[]; // Which services have this anime
   genres: string[];
   synopsis: string;
 }
