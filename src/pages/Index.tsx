@@ -125,7 +125,7 @@ const Index = () => {
 
               {/* Limit filter */}
               <div className="flex items-center gap-3">
-                <span className="text-xs text-muted-foreground">--limit</span>
+                <span className="text-xs text-muted-foreground">--top</span>
                 <div className="flex gap-2">
                   {[10, 50, 100].map((limit) => (
                     <Button
