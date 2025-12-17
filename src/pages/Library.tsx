@@ -202,18 +202,18 @@ const Library = () => {
                                 {item.last_watched_episode && (
                                   <span>
                                     <span className="text-syntax-cyan">ep</span>
-                                    <span className="text-muted-foreground">: </span>
+                                    <span className="text-muted-foreground">:</span>
                                     <span className="text-syntax-amber">{item.last_watched_episode}</span>
                                   </span>
                                 )}
                                 {item.last_read_chapter && (
                                   <span>
                                     <span className="text-syntax-cyan">vol</span>
-                                    <span className="text-muted-foreground">: </span>
+                                    <span className="text-muted-foreground">:</span>
                                     <span className="text-syntax-amber">{item.last_read_volume}</span>
                                     <span className="text-muted-foreground"> · </span>
                                     <span className="text-syntax-cyan">ch</span>
-                                    <span className="text-muted-foreground">: </span>
+                                    <span className="text-muted-foreground">:</span>
                                     <span className="text-syntax-amber">{item.last_read_chapter}</span>
                                   </span>
                                 )}
