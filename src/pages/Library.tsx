@@ -43,8 +43,23 @@ const Library = () => {
   const [newSiteName, setNewSiteName] = useState('');
   const [newSiteUrl, setNewSiteUrl] = useState('');
   const [newSiteNotes, setNewSiteNotes] = useState('');
-  const [newSiteAnimeId, setNewSiteAnimeId] = useState<string>('');
-  const [newSiteSeriesUrl, setNewSiteSeriesUrl] = useState('');
+  const [seriesAssignments, setSeriesAssignments] = useState<Array<{ animeId: string; seriesUrl: string }>>([{ animeId: '', seriesUrl: '' }]);
+
+  const addSeriesRow = () => {
+    setSeriesAssignments([...seriesAssignments, { animeId: '', seriesUrl: '' }]);
+  };
+
+  const updateSeriesAssignment = (index: number, field: 'animeId' | 'seriesUrl', value: string) => {
+    const updated = [...seriesAssignments];
+    updated[index][field] = value;
+    setSeriesAssignments(updated);
+  };
+
+  const removeSeriesRow = (index: number) => {
+    if (seriesAssignments.length > 1) {
+      setSeriesAssignments(seriesAssignments.filter((_, i) => i !== index));
+    }
+  };
 
   useEffect(() => {
     if (!authLoading && !user) {
@@ -93,32 +108,57 @@ const Library = () => {
   const addReaderSite = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!newSiteName.trim() || !newSiteUrl.trim()) {
-      toast.error('Please fill in site name and URL');
+      toast.error('Please fill in reader name and URL');
       return;
     }
 
-    const { error } = await supabase
-      .from('manga_reader_sites')
-      .insert({
+    // Filter valid series assignments (those with an anime selected)
+    const validAssignments = seriesAssignments.filter(a => a.animeId);
+    
+    // If no series assignments, insert one row with null anime_id
+    if (validAssignments.length === 0) {
+      const { error } = await supabase
+        .from('manga_reader_sites')
+        .insert({
+          user_id: user!.id,
+          name: newSiteName.trim(),
+          url: newSiteUrl.trim(),
+          notes: newSiteNotes.trim() || null,
+          anime_id: null,
+          series_url: null,
+        });
+
+      if (error) {
+        toast.error('Failed to add reader site');
+        return;
+      }
+    } else {
+      // Insert one row per series assignment
+      const inserts = validAssignments.map(assignment => ({
         user_id: user!.id,
         name: newSiteName.trim(),
         url: newSiteUrl.trim(),
         notes: newSiteNotes.trim() || null,
-        anime_id: newSiteAnimeId || null,
-        series_url: newSiteSeriesUrl.trim() || null,
-      });
+        anime_id: assignment.animeId,
+        series_url: assignment.seriesUrl.trim() || null,
+      }));
 
-    if (error) {
-      toast.error('Failed to add reader site');
-    } else {
-      toast.success('Reader site added');
-      setNewSiteName('');
-      setNewSiteUrl('');
-      setNewSiteNotes('');
-      setNewSiteAnimeId('');
-      setNewSiteSeriesUrl('');
-      fetchReaderSites();
+      const { error } = await supabase
+        .from('manga_reader_sites')
+        .insert(inserts);
+
+      if (error) {
+        toast.error('Failed to add reader site');
+        return;
+      }
     }
+
+    toast.success('Reader site added');
+    setNewSiteName('');
+    setNewSiteUrl('');
+    setNewSiteNotes('');
+    setSeriesAssignments([{ animeId: '', seriesUrl: '' }]);
+    fetchReaderSites();
   };
 
   const deleteReaderSite = async (id: string) => {
@@ -267,7 +307,7 @@ const Library = () => {
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div className="space-y-2">
                       <Label htmlFor="siteName" className="text-xs">
-                        <span className="text-syntax-cyan">name</span>
+                        <span className="text-syntax-cyan">reader_name</span>
                       </Label>
                       <Input
                         id="siteName"
@@ -279,7 +319,7 @@ const Library = () => {
                     </div>
                     <div className="space-y-2">
                       <Label htmlFor="siteUrl" className="text-xs">
-                        <span className="text-syntax-cyan">url</span>
+                        <span className="text-syntax-cyan">reader_url</span>
                       </Label>
                       <Input
                         id="siteUrl"
@@ -307,42 +347,69 @@ const Library = () => {
                   
                   {/* Series assignment section */}
                   <div className="border-t border-dashed pt-4 mt-4">
-                    <p className="text-xs text-muted-foreground mb-3">
-                      <span className="text-syntax-cyan">// </span>assign to series (optional)
+                    <p className="text-xs mb-3">
+                      <span className="text-syntax-cyan">assign to series</span>
+                      <span className="text-muted-foreground"> // optional</span>
                     </p>
-                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                      <div className="space-y-2">
-                        <Label htmlFor="siteAnime" className="text-xs">
-                          <span className="text-syntax-cyan">series</span>
-                        </Label>
-                        <Select value={newSiteAnimeId || "__none__"} onValueChange={(val) => setNewSiteAnimeId(val === "__none__" ? "" : val)}>
-                          <SelectTrigger className="font-mono text-sm border-dashed bg-muted/30">
-                            <SelectValue placeholder="select series..." />
-                          </SelectTrigger>
-                          <SelectContent>
-                            <SelectItem value="__none__">none</SelectItem>
-                            {mockAnimeData.map((anime) => (
-                              <SelectItem key={anime.id} value={anime.id}>
-                                {anime.title}
-                              </SelectItem>
-                            ))}
-                          </SelectContent>
-                        </Select>
-                      </div>
-                      <div className="space-y-2">
-                        <Label htmlFor="siteSeriesUrl" className="text-xs">
-                          <span className="text-syntax-cyan">series_url</span>
-                          <span className="text-muted-foreground"> // direct link</span>
-                        </Label>
-                        <Input
-                          id="siteSeriesUrl"
-                          type="url"
-                          placeholder="https://mangadex.org/title/..."
-                          value={newSiteSeriesUrl}
-                          onChange={(e) => setNewSiteSeriesUrl(e.target.value)}
-                          className="font-mono text-sm border-dashed bg-muted/30"
-                        />
-                      </div>
+                    <div className="space-y-3">
+                      {seriesAssignments.map((assignment, index) => (
+                        <div key={index} className="grid grid-cols-1 sm:grid-cols-[1fr_1fr_auto] gap-4 items-end">
+                          <div className="space-y-2">
+                            <Label className="text-xs">
+                              <span className="text-syntax-cyan">series</span>
+                            </Label>
+                            <Select 
+                              value={assignment.animeId || "__none__"} 
+                              onValueChange={(val) => updateSeriesAssignment(index, 'animeId', val === "__none__" ? "" : val)}
+                            >
+                              <SelectTrigger className="font-mono text-sm border-dashed bg-muted/30">
+                                <SelectValue placeholder="select series..." />
+                              </SelectTrigger>
+                              <SelectContent>
+                                <SelectItem value="__none__">none</SelectItem>
+                                {mockAnimeData.map((anime) => (
+                                  <SelectItem key={anime.id} value={anime.id}>
+                                    {anime.title}
+                                  </SelectItem>
+                                ))}
+                              </SelectContent>
+                            </Select>
+                          </div>
+                          <div className="space-y-2">
+                            <Label className="text-xs">
+                              <span className="text-syntax-cyan">series_url</span>
+                            </Label>
+                            <Input
+                              type="url"
+                              placeholder="https://mangadex.org/title/..."
+                              value={assignment.seriesUrl}
+                              onChange={(e) => updateSeriesAssignment(index, 'seriesUrl', e.target.value)}
+                              className="font-mono text-sm border-dashed bg-muted/30"
+                            />
+                          </div>
+                          {seriesAssignments.length > 1 && (
+                            <Button
+                              type="button"
+                              variant="ghost"
+                              size="icon"
+                              onClick={() => removeSeriesRow(index)}
+                              className="text-muted-foreground hover:text-destructive"
+                            >
+                              <Trash2 className="w-4 h-4" />
+                            </Button>
+                          )}
+                        </div>
+                      ))}
+                      <Button
+                        type="button"
+                        variant="outline"
+                        size="sm"
+                        onClick={addSeriesRow}
+                        className="text-xs border-dashed"
+                      >
+                        <Plus className="w-3.5 h-3.5 mr-1" />
+                        add another series
+                      </Button>
                     </div>
                   </div>
                   
@@ -366,7 +433,7 @@ const Library = () => {
                         <div className="flex items-start justify-between gap-4">
                           <div className="flex-1 min-w-0 text-sm space-y-1">
                             <div>
-                              <span className="text-syntax-cyan">name</span>
+                              <span className="text-syntax-cyan">reader_name</span>
                               <span className="text-muted-foreground">: </span>
                               <span className="text-syntax-green">{site.name}</span>
                             </div>
