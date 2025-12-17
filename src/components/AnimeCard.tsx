@@ -45,9 +45,9 @@ export const AnimeCard = ({ anime, rank, progress }: AnimeCardProps) => {
           </span>
         </div>
         <CardContent className="p-0">
-          <div className="flex flex-col sm:flex-row">
+          <div className="flex flex-col sm:flex-row sm:h-[220px]">
             {/* Cover Image */}
-            <div className="relative w-full sm:w-44 h-44 sm:h-auto shrink-0 overflow-hidden border-b sm:border-b-0 sm:border-r border-dashed">
+            <div className="relative w-full sm:w-44 h-44 sm:h-full shrink-0 overflow-hidden border-b sm:border-b-0 sm:border-r border-dashed">
               <img
                 src={anime.coverImage}
                 alt={anime.title}
@@ -57,8 +57,8 @@ export const AnimeCard = ({ anime, rank, progress }: AnimeCardProps) => {
             </div>
 
             {/* Content */}
-            <div className="flex-1 p-4 flex flex-col gap-3 font-mono min-h-[200px]">
-              {/* Data structure */}
+            <div className="flex-1 p-4 flex flex-col font-mono">
+              {/* Top section - Data structure */}
               <div className="space-y-1 text-sm">
                 <div>
                   <span className="text-syntax-cyan">title</span>
@@ -82,8 +82,8 @@ export const AnimeCard = ({ anime, rank, progress }: AnimeCardProps) => {
                 </div>
               </div>
 
-              {/* Progress and episode section - grouped at bottom */}
-              <div className="pt-4 space-y-3">
+              {/* Bottom section - Progress and episode (pushed to bottom) */}
+              <div className="mt-auto space-y-3">
                 {/* User progress section */}
                 {hasProgress && (
                   <div>
