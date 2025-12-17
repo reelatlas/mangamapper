@@ -16,17 +16,15 @@ export const Header = () => {
   return (
     <header className="sticky top-0 z-50 w-full border-b border-dashed bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container flex h-14 items-center justify-between">
-        <Link to="/" className="flex items-center gap-2 hover:opacity-80 transition-opacity group">
-          <div className="flex items-center gap-1 text-primary">
-            <Terminal className="w-4 h-4" />
-          </div>
-          <div className="flex flex-col">
+        <Link to="/" className="flex flex-col hover:opacity-80 transition-opacity group">
+          <div className="flex items-center gap-1.5">
+            <Terminal className="w-4 h-4 text-primary" />
             <span className="font-semibold text-sm leading-tight tracking-tight">
               <span className="text-primary">manga</span>
               <span className="text-muted-foreground">Mapper</span>
             </span>
-            <span className="text-[10px] text-muted-foreground leading-tight">// anime-to-manga</span>
           </div>
+          <span className="text-[10px] text-muted-foreground leading-tight">// anime-to-manga</span>
         </Link>
 
         <nav className="flex items-center gap-1">

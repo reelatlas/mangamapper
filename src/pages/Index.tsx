@@ -90,7 +90,7 @@ const Index = () => {
           
           <p className="text-sm text-muted-foreground max-w-xl mx-auto mb-8">
             <span className="text-syntax-cyan">// </span>
-            correlate manga volume and chapter to anime episodes
+            show manga volume and chapter for anime episode
           </p>
           
           <SearchBar 
