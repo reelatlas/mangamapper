@@ -87,7 +87,7 @@ const Index = () => {
                 ? <><span className="text-syntax-cyan">search_results</span><span className="text-muted-foreground">.length</span> = <span className="text-syntax-amber">{searchResults.length}</span></>
                 : streamingService === 'all' 
                   ? <><span className="text-syntax-cyan">top_airing</span><span className="text-muted-foreground"> · </span><span className="text-syntax-amber">{trackingSiteLabel}</span></>
-                  : <><span className="text-syntax-cyan">top_airing</span><span className="text-muted-foreground"> · </span><span className="text-syntax-amber">{streamingServiceLabel}</span><span className="text-muted-foreground"> · </span><span className="text-syntax-amber">{trackingSiteLabel}</span></>
+                  : <><span className="text-syntax-cyan">top_airing</span><span className="text-muted-foreground"> · </span><span className="text-syntax-amber">{trackingSiteLabel}</span><span className="text-muted-foreground"> · </span><span className="text-syntax-amber">{streamingServiceLabel}</span></>
               }
             </span>
           </div>
