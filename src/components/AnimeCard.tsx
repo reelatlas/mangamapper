@@ -33,7 +33,7 @@ export const AnimeCard = ({ anime, rank, progress }: AnimeCardProps) => {
             {rank && <span className="text-border">|</span>}
             <span className="text-muted-foreground">anime_data</span>
             <span className="text-primary opacity-0 group-hover:opacity-100 transition-opacity">
-              .view()
+              {'>'} view_all
             </span>
           </span>
           <span className="text-muted-foreground">
@@ -82,54 +82,57 @@ export const AnimeCard = ({ anime, rank, progress }: AnimeCardProps) => {
                 </div>
               </div>
 
-              {/* User progress section */}
-              {hasProgress && (
-                <div>
-                  <p className="text-[10px] text-muted-foreground mb-1 tracking-wider">
-                    // your_progress
-                  </p>
-                  <div className="flex flex-wrap gap-3 text-xs">
-                    {progress.last_watched_episode !== null && (
-                      <span>
-                        <span className="text-syntax-cyan">ep</span>
-                        <span className="text-muted-foreground">: </span>
-                        <span className="text-syntax-amber">{progress.last_watched_episode}</span>
-                      </span>
-                    )}
-                    {(progress.last_read_volume !== null || progress.last_read_chapter !== null) && (
-                      <span>
-                        {progress.last_read_volume !== null && (
-                          <>
-                            <span className="text-syntax-cyan">vol</span>
-                            <span className="text-muted-foreground">: </span>
-                            <span className="text-syntax-amber">{progress.last_read_volume}</span>
-                          </>
-                        )}
-                        {progress.last_read_volume !== null && progress.last_read_chapter !== null && (
-                          <span className="text-muted-foreground"> · </span>
-                        )}
-                        {progress.last_read_chapter !== null && (
-                          <>
-                            <span className="text-syntax-cyan">ch</span>
-                            <span className="text-muted-foreground">: </span>
-                            <span className="text-syntax-amber">{progress.last_read_chapter}</span>
-                          </>
-                        )}
-                      </span>
-                    )}
+              {/* Progress and episode section - grouped at bottom */}
+              <div className="mt-auto pt-4 space-y-3">
+                {/* User progress section */}
+                {hasProgress && (
+                  <div>
+                    <p className="text-[10px] text-muted-foreground mb-1 tracking-wider">
+                      // your_progress
+                    </p>
+                    <div className="flex flex-wrap gap-3 text-xs">
+                      {progress.last_watched_episode !== null && (
+                        <span>
+                          <span className="text-syntax-cyan">ep</span>
+                          <span className="text-muted-foreground">: </span>
+                          <span className="text-syntax-amber">{progress.last_watched_episode}</span>
+                        </span>
+                      )}
+                      {(progress.last_read_volume !== null || progress.last_read_chapter !== null) && (
+                        <span>
+                          {progress.last_read_volume !== null && (
+                            <>
+                              <span className="text-syntax-cyan">vol</span>
+                              <span className="text-muted-foreground">: </span>
+                              <span className="text-syntax-amber">{progress.last_read_volume}</span>
+                            </>
+                          )}
+                          {progress.last_read_volume !== null && progress.last_read_chapter !== null && (
+                            <span className="text-muted-foreground"> · </span>
+                          )}
+                          {progress.last_read_chapter !== null && (
+                            <>
+                              <span className="text-syntax-cyan">ch</span>
+                              <span className="text-muted-foreground">: </span>
+                              <span className="text-syntax-amber">{progress.last_read_chapter}</span>
+                            </>
+                          )}
+                        </span>
+                      )}
+                    </div>
                   </div>
-                </div>
-              )}
+                )}
 
-              {/* Current episode mapping - always at bottom */}
-              {currentEpisode && (
-                <div className="mt-auto pt-4">
-                  <p className="text-[10px] text-muted-foreground tracking-wider mb-2">
-                    // latest_episode
-                  </p>
-                  <MangaMappingDisplay episode={currentEpisode} />
-                </div>
-              )}
+                {/* Current episode mapping */}
+                {currentEpisode && (
+                  <div>
+                    <p className="text-[10px] text-muted-foreground tracking-wider mb-2">
+                      // latest_episode
+                    </p>
+                    <MangaMappingDisplay episode={currentEpisode} />
+                  </div>
+                )}
+              </div>
             </div>
           </div>
         </CardContent>
