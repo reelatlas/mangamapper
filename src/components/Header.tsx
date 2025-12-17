@@ -54,7 +54,7 @@ export const Header = () => {
                 <DropdownMenuTrigger asChild>
                   <Button variant="outline" size="sm" className="font-mono text-xs gap-1.5 border-dashed">
                     <User className="w-3.5 h-3.5" />
-                    <span className="hidden sm:inline">user</span>
+                    <span className="hidden sm:inline">{user.email?.split('@')[0] || 'user'}</span>
                   </Button>
                 </DropdownMenuTrigger>
                 <DropdownMenuContent align="end" className="bg-popover border-dashed font-mono">
