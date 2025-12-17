@@ -210,7 +210,7 @@ const AnimeDetail = () => {
           <p>
             <span className="text-primary">mangaMapper</span>
             <span className="mx-2">—</span>
-            <span>// your guide from anime to manga</span>
+            <span>// anime-to-manga</span>
           </p>
         </div>
       </footer>
