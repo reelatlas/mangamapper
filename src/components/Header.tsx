@@ -32,14 +32,12 @@ export const Header = () => {
         <nav className="flex items-center gap-1">
           <Button variant="ghost" size="sm" asChild className="font-mono text-xs">
             <Link to="/" className="flex items-center gap-1.5">
-              <span className="text-muted-foreground">$</span>
               <Home className="w-3.5 h-3.5" />
               <span className="hidden sm:inline">/home</span>
             </Link>
           </Button>
           <Button variant="ghost" size="sm" asChild className="font-mono text-xs">
             <Link to="/search" className="flex items-center gap-1.5">
-              <span className="text-muted-foreground">$</span>
               <Search className="w-3.5 h-3.5" />
               <span className="hidden sm:inline">/search</span>
             </Link>
@@ -49,7 +47,6 @@ export const Header = () => {
             <>
               <Button variant="ghost" size="sm" asChild className="font-mono text-xs">
                 <Link to="/library" className="flex items-center gap-1.5">
-                  <span className="text-muted-foreground">$</span>
                   <Library className="w-3.5 h-3.5" />
                   <span className="hidden sm:inline">/library</span>
                 </Link>

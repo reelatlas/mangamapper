@@ -6,7 +6,7 @@ import { ProgressTracker } from '@/components/ProgressTracker';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { getAnimeById } from '@/data/mockAnime';
-import { ArrowLeft, Calendar, Play, BookOpen } from 'lucide-react';
+import { Calendar, Play, BookOpen } from 'lucide-react';
 
 const AnimeDetail = () => {
   const { id } = useParams<{ id: string }>();
@@ -25,7 +25,6 @@ const AnimeDetail = () => {
             </p>
             <Button asChild className="border-dashed text-xs">
               <Link to="/">
-                <ArrowLeft className="w-3.5 h-3.5 mr-2" />
                 {'<'}- back_to_home
               </Link>
             </Button>
@@ -47,7 +46,6 @@ const AnimeDetail = () => {
         {/* Back button */}
         <Button variant="ghost" size="sm" asChild className="mb-6 text-xs">
           <Link to="/" className="flex items-center gap-2">
-            <ArrowLeft className="w-3.5 h-3.5" />
             {'<'}- back_to_home
           </Link>
         </Button>
