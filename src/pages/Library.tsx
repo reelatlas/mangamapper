@@ -252,7 +252,7 @@ const Library = () => {
             <Card className="border-dashed">
               <div className="terminal-header flex items-center gap-2">
                 <Plus className="w-3.5 h-3.5" />
-                <span className="text-muted-foreground">add_reader_site.json</span>
+                <span className="text-muted-foreground">add_reader_site</span>
               </div>
               <CardContent className="p-4">
                 <form onSubmit={addReaderSite} className="space-y-4">

@@ -26,7 +26,7 @@ export const EpisodeBadge = ({ type, className }: EpisodeBadgeProps) => {
 
   return (
     <span className={cn(
-      'font-mono text-[10px] px-1.5 py-0.5 border uppercase tracking-wider',
+      'font-mono text-[10px] px-2 py-0.5 rounded-full border uppercase tracking-wider',
       badgeClassName,
       className
     )}>

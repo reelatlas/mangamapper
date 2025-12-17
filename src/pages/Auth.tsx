@@ -94,7 +94,7 @@ const Auth = () => {
       <Card className="w-full max-w-md border-dashed">
         <div className="terminal-header flex items-center gap-2">
           <span className="text-syntax-amber">■</span>
-          <span className="text-muted-foreground">auth_terminal.exe</span>
+          <span className="text-muted-foreground">auth_terminal</span>
         </div>
         <CardContent className="p-6">
           {/* ASCII Logo */}

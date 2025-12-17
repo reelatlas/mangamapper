@@ -19,7 +19,7 @@ export const AnimeCard = ({ anime, rank }: AnimeCardProps) => {
           <span>
             {rank && <span className="text-syntax-amber">#{String(rank).padStart(2, '0')}</span>}
             {rank && <span className="mx-2 text-border">|</span>}
-            <span className="text-muted-foreground">anime_data.json</span>
+            <span className="text-muted-foreground">anime_data</span>
           </span>
           <span className="text-muted-foreground">
             {anime.status === 'airing' ? (
