@@ -123,72 +123,71 @@ export const ProgressTracker = ({ anime }: ProgressTrackerProps) => {
       <div className="terminal-header">
         <span className="text-muted-foreground">// your_progress</span>
       </div>
-      <CardContent className="p-4 space-y-4 font-mono">
-        <div className="space-y-2">
-          <Label htmlFor="watchedEpisode" className="flex items-center gap-2 text-xs">
-            <Tv className="w-3.5 h-3.5 text-primary" />
-            <span className="text-syntax-cyan">last_watched_episode</span>
-          </Label>
-          <div className="flex items-center gap-2">
-            <span className="text-muted-foreground text-sm">$</span>
+      <CardContent className="p-4 font-mono">
+        <div className="flex flex-wrap items-end gap-4">
+          {/* Episode input */}
+          <div className="space-y-1">
+            <Label htmlFor="watchedEpisode" className="flex items-center gap-1.5 text-[10px]">
+              <Tv className="w-3 h-3 text-primary" />
+              <span className="text-syntax-cyan">episode</span>
+            </Label>
             <Input
               id="watchedEpisode"
               type="number"
               min="1"
               max={anime.totalEpisodes || anime.currentEpisode}
-              placeholder={`1 - ${anime.totalEpisodes || anime.currentEpisode}`}
+              placeholder={`/${anime.totalEpisodes || anime.currentEpisode}`}
               value={watchedEpisode}
               onChange={(e) => setWatchedEpisode(e.target.value)}
-              className="font-mono text-sm border-dashed bg-muted/30"
+              className="font-mono text-sm border-dashed bg-muted/30 w-20 h-8"
             />
           </div>
-        </div>
 
-        {anime.hasManga && (
-          <div className="grid grid-cols-2 gap-4">
-            <div className="space-y-2">
-              <Label htmlFor="readVolume" className="flex items-center gap-2 text-xs">
-                <BookOpen className="w-3.5 h-3.5 text-primary" />
-                <span className="text-syntax-cyan">last_read_volume</span>
-              </Label>
-              <div className="flex items-center gap-2">
-                <span className="text-muted-foreground text-sm">$</span>
+          {anime.hasManga && (
+            <>
+              {/* Volume input */}
+              <div className="space-y-1">
+                <Label htmlFor="readVolume" className="flex items-center gap-1.5 text-[10px]">
+                  <BookOpen className="w-3 h-3 text-primary" />
+                  <span className="text-syntax-cyan">volume</span>
+                </Label>
                 <Input
                   id="readVolume"
                   type="number"
                   min="1"
-                  placeholder="e.g., 5"
+                  placeholder="—"
                   value={readVolume}
                   onChange={(e) => setReadVolume(e.target.value)}
-                  className="font-mono text-sm border-dashed bg-muted/30"
+                  className="font-mono text-sm border-dashed bg-muted/30 w-16 h-8"
                 />
               </div>
-            </div>
-            <div className="space-y-2">
-              <Label htmlFor="readChapter" className="text-xs">
-                <span className="text-syntax-cyan">chapter</span>
-              </Label>
-              <div className="flex items-center gap-2">
-                <span className="text-muted-foreground text-sm">$</span>
+
+              {/* Chapter input */}
+              <div className="space-y-1">
+                <Label htmlFor="readChapter" className="text-[10px]">
+                  <span className="text-syntax-cyan">chapter</span>
+                </Label>
                 <Input
                   id="readChapter"
-                  placeholder="e.g., 45"
+                  placeholder="—"
                   value={readChapter}
                   onChange={(e) => setReadChapter(e.target.value)}
-                  className="font-mono text-sm border-dashed bg-muted/30"
+                  className="font-mono text-sm border-dashed bg-muted/30 w-20 h-8"
                 />
               </div>
-            </div>
-          </div>
-        )}
+            </>
+          )}
 
-        <Button 
-          onClick={saveProgress} 
-          disabled={saving} 
-          className="w-full font-mono text-xs border-dashed"
-        >
-          {'>'} {saving ? 'saving...' : 'save_progress()'}
-        </Button>
+          {/* Save button */}
+          <Button 
+            onClick={saveProgress} 
+            disabled={saving}
+            size="sm"
+            className="font-mono text-xs border-dashed h-8 px-3"
+          >
+            {saving ? '...' : 'save'}
+          </Button>
+        </div>
       </CardContent>
     </Card>
   );
