@@ -212,7 +212,7 @@ export const ProgressTracker = ({ anime }: ProgressTrackerProps) => {
           </Button>
           {progress?.updated_at && (
             <span className="text-muted-foreground text-xs">
-              <span className="text-syntax-cyan">last_saved:</span>
+              <span className="text-muted-foreground">last_saved:</span>
               <span className="text-syntax-string ml-1">{formatTimestamp(progress.updated_at)}</span>
             </span>
           )}
