@@ -112,6 +112,15 @@ const Library = () => {
       return;
     }
 
+    // Check if reader with same name already exists
+    const existingReader = readerSites.find(
+      site => site.name.toLowerCase() === newSiteName.trim().toLowerCase()
+    );
+    if (existingReader) {
+      toast.error('A reader with this name already exists');
+      return;
+    }
+
     // Filter valid series assignments (those with an anime selected)
     const validAssignments = seriesAssignments.filter(a => a.animeId);
     
