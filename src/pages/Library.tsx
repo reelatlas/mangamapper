@@ -160,7 +160,7 @@ const Library = () => {
         <div className="flex items-center gap-2 mb-6 text-sm">
           <LibraryIcon className="w-4 h-4 text-primary" />
           <span className="text-muted-foreground">{'>'}</span>
-          <span className="text-syntax-cyan">user_library</span>
+          <span className="text-syntax-cyan">{user?.email?.split('@')[0] || 'user'}_library</span>
         </div>
 
         <Tabs defaultValue="progress" className="space-y-6">
@@ -380,9 +380,8 @@ const Library = () => {
       <footer className="border-t border-dashed mt-16">
         <div className="container py-6 text-center text-xs text-muted-foreground">
           <p>
-            <span className="text-primary">mangaMapper</span>
-            <span className="mx-2">—</span>
-            <span>// your guide from anime to manga</span>
+            <span className="text-foreground/40">mangaMapper</span>{' '}
+            <span>// anime-to-manga</span>
           </p>
         </div>
       </footer>
