@@ -28,7 +28,7 @@ export const MangaMappingDisplay = ({ episode, showEpisodeNumber = true }: Manga
             <span className="text-syntax-cyan">vol</span>
             <span className="text-muted-foreground">:</span>
             <span className="text-syntax-amber">{episode.mangaMapping.volume}</span>
-            <span className="text-muted-foreground"> · </span>
+            <span className="text-muted-foreground">·</span>
             <span className="text-syntax-cyan">ch</span>
             <span className="text-muted-foreground">:</span>
             <span className="text-syntax-amber">{episode.mangaMapping.chapters}</span>
