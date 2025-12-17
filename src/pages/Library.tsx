@@ -337,14 +337,32 @@ const Library = () => {
                         placeholder="https://mangadex.org"
                         value={newSiteUrl}
                         onChange={(e) => {
-                          const url = e.target.value;
-                          setNewSiteUrl(url);
-                          // Auto-update all series URLs to match
-                          const baseUrl = url.trim() ? (url.trim().endsWith('/') ? url.trim() : url.trim() + '/') : '';
-                          setSeriesAssignments(prev => prev.map(a => ({
-                            ...a,
-                            seriesUrl: baseUrl
-                          })));
+                          const oldUrl = newSiteUrl.trim();
+                          const oldBase = oldUrl.endsWith('/') ? oldUrl : oldUrl + '/';
+                          const newUrl = e.target.value;
+                          setNewSiteUrl(newUrl);
+                          
+                          // Auto-update series URLs, preserving any suffix after the base
+                          const newBase = newUrl.trim() ? (newUrl.trim().endsWith('/') ? newUrl.trim() : newUrl.trim() + '/') : '';
+                          setSeriesAssignments(prev => prev.map(a => {
+                            // Extract suffix (everything after the old base URL)
+                            let suffix = '';
+                            if (a.seriesUrl && oldBase && a.seriesUrl.startsWith(oldBase)) {
+                              suffix = a.seriesUrl.slice(oldBase.length);
+                            } else if (a.seriesUrl && !a.seriesUrl.startsWith(oldBase)) {
+                              // If URL doesn't match old base, try to extract path after domain
+                              try {
+                                const url = new URL(a.seriesUrl);
+                                suffix = url.pathname.slice(1) + url.search + url.hash;
+                              } catch {
+                                suffix = '';
+                              }
+                            }
+                            return {
+                              ...a,
+                              seriesUrl: newBase + suffix
+                            };
+                          }));
                         }}
                         className="font-mono text-sm border-dashed bg-muted/30"
                       />
