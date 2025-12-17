@@ -1,7 +1,7 @@
 import { AnimeSeries } from '@/types/anime';
 import { Card, CardContent } from '@/components/ui/card';
 import { MangaMappingDisplay } from './MangaMappingDisplay';
-import { Play, ChevronRight } from 'lucide-react';
+import { ChevronRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 interface AnimeCardProps {
@@ -39,15 +39,6 @@ export const AnimeCard = ({ anime, rank }: AnimeCardProps) => {
                 className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105 opacity-90 group-hover:opacity-100"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-background/20 to-transparent sm:bg-gradient-to-r" />
-              <div className="absolute bottom-2 left-2 flex items-center gap-1.5 text-xs">
-                <Play className="w-3 h-3 text-primary" />
-                <span className="text-primary font-semibold">
-                  #{String(currentEpisode?.number || anime.currentEpisode).padStart(4, '0')}
-                </span>
-                {currentEpisode?.title && (
-                  <span className="text-foreground/90 truncate max-w-[120px]">{currentEpisode.title}</span>
-                )}
-              </div>
             </div>
 
             {/* Content */}
@@ -82,7 +73,7 @@ export const AnimeCard = ({ anime, rank }: AnimeCardProps) => {
                   <p className="text-[10px] text-muted-foreground mb-2 tracking-wider">
                     // latest_episode
                   </p>
-                  <MangaMappingDisplay episode={currentEpisode} showEpisodeNumber={false} />
+                  <MangaMappingDisplay episode={currentEpisode} />
                 </div>
               )}
 
