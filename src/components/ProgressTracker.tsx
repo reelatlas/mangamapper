@@ -190,7 +190,7 @@ export const ProgressTracker = ({ anime }: ProgressTrackerProps) => {
             onClick={saveProgress} 
             disabled={saving}
             size="sm"
-            className="font-mono text-xs border-dashed h-7"
+            className="font-mono text-xs border-dashed h-7 min-w-[120px]"
           >
             {'>'} {saving ? 'saving...' : 'save_progress()'}
           </Button>
