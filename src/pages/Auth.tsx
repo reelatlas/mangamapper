@@ -3,11 +3,12 @@ import { useNavigate } from 'react-router-dom';
 import { useAuth } from '@/hooks/useAuth';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+import { Card, CardContent } from '@/components/ui/card';
 import { Label } from '@/components/ui/label';
-import { BookOpen, Mail, Lock } from 'lucide-react';
+import { Terminal, Mail, Lock } from 'lucide-react';
 import { toast } from 'sonner';
 import { z } from 'zod';
+import { Link } from 'react-router-dom';
 
 const authSchema = z.object({
   email: z.string().trim().email({ message: "Invalid email address" }),
@@ -49,7 +50,6 @@ const Auth = () => {
       if (isLoginAttempt) {
         const { error } = await signIn(userEmail, userPassword);
         if (error) {
-          // If login fails with test account, try signing up first
           if (userEmail === TEST_EMAIL && error.message.includes('Invalid login credentials')) {
             const { error: signUpError } = await signUp(userEmail, userPassword);
             if (signUpError) {
@@ -90,85 +90,113 @@ const Auth = () => {
   };
 
   return (
-    <div className="min-h-screen bg-background flex items-center justify-center p-4">
-      <Card className="w-full max-w-md">
-        <CardHeader className="text-center">
-          <div className="flex justify-center mb-4">
-            <div className="flex items-center justify-center w-12 h-12 rounded-lg bg-primary">
-              <BookOpen className="w-6 h-6 text-primary-foreground" />
+    <div className="min-h-screen bg-background flex items-center justify-center p-4 font-mono">
+      <Card className="w-full max-w-md border-dashed">
+        <div className="terminal-header flex items-center gap-2">
+          <span className="text-syntax-amber">■</span>
+          <span className="text-muted-foreground">auth_terminal.exe</span>
+        </div>
+        <CardContent className="p-6">
+          {/* ASCII Logo */}
+          <div className="text-center mb-6">
+            <div className="flex justify-center mb-3">
+              <div className="flex items-center gap-1 text-primary">
+                <span className="text-muted-foreground text-lg">{'{'}</span>
+                <Terminal className="w-5 h-5" />
+                <span className="text-muted-foreground text-lg">{'}'}</span>
+              </div>
             </div>
+            <div className="text-sm">
+              <span className="text-muted-foreground">// </span>
+              <span className="text-foreground">
+                {isLogin ? 'welcome_back' : 'create_account'}
+              </span>
+            </div>
+            <p className="text-xs text-muted-foreground mt-2">
+              {isLogin 
+                ? '> sign in to track your progress'
+                : '> sign up to start tracking'
+              }
+            </p>
           </div>
-          <CardTitle className="text-2xl">
-            {isLogin ? 'Welcome back' : 'Create an account'}
-          </CardTitle>
-          <CardDescription>
-            {isLogin 
-              ? 'Sign in to track your anime and manga progress'
-              : 'Sign up to start tracking your progress'
-            }
-          </CardDescription>
-        </CardHeader>
-        <CardContent>
+
           <form onSubmit={handleSubmit} className="space-y-4">
             <div className="space-y-2">
-              <Label htmlFor="email">Email</Label>
-              <div className="relative">
-                <Mail className="absolute left-3 top-3 h-4 w-4 text-muted-foreground" />
+              <Label htmlFor="email" className="text-xs">
+                <span className="text-syntax-cyan">"email"</span>
+              </Label>
+              <div className="flex items-center gap-2">
+                <Mail className="w-3.5 h-3.5 text-muted-foreground" />
+                <span className="text-muted-foreground">$</span>
                 <Input
                   id="email"
                   type="email"
                   placeholder="you@example.com"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
-                  className="pl-10"
+                  className="font-mono text-sm border-dashed bg-muted/30"
                   required
                 />
               </div>
             </div>
             <div className="space-y-2">
-              <Label htmlFor="password">Password</Label>
-              <div className="relative">
-                <Lock className="absolute left-3 top-3 h-4 w-4 text-muted-foreground" />
+              <Label htmlFor="password" className="text-xs">
+                <span className="text-syntax-cyan">"password"</span>
+              </Label>
+              <div className="flex items-center gap-2">
+                <Lock className="w-3.5 h-3.5 text-muted-foreground" />
+                <span className="text-muted-foreground">$</span>
                 <Input
                   id="password"
                   type="password"
                   placeholder="••••••••"
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
-                  className="pl-10"
+                  className="font-mono text-sm border-dashed bg-muted/30"
                   required
                 />
               </div>
             </div>
-            <Button type="submit" className="w-full" disabled={loading}>
-              {loading ? 'Loading...' : isLogin ? 'Sign in' : 'Sign up'}
+            <Button type="submit" className="w-full font-mono text-xs border-dashed" disabled={loading}>
+              {'>'} {loading ? 'processing...' : isLogin ? 'sign_in()' : 'sign_up()'}
             </Button>
           </form>
 
-          <div className="relative my-4">
+          <div className="relative my-6">
             <div className="absolute inset-0 flex items-center">
-              <span className="w-full border-t" />
+              <span className="w-full border-t border-dashed" />
             </div>
-            <div className="relative flex justify-center text-xs uppercase">
-              <span className="bg-card px-2 text-muted-foreground">Or</span>
+            <div className="relative flex justify-center text-xs">
+              <span className="bg-card px-2 text-muted-foreground">// or</span>
             </div>
           </div>
 
-          <p className="text-xs text-muted-foreground text-center mb-2">
-            Test credentials are pre-filled. Just click sign in!
-          </p>
-          
-          <div className="mt-4 text-center text-sm">
-            <span className="text-muted-foreground">
-              {isLogin ? "Don't have an account? " : "Already have an account? "}
-            </span>
-            <button
-              type="button"
-              onClick={() => setIsLogin(!isLogin)}
-              className="text-primary hover:underline font-medium"
+          <div className="text-center space-y-3">
+            <p className="text-xs text-muted-foreground">
+              <span className="text-syntax-green">// test credentials pre-filled</span>
+              <br />
+              <span>{'>'} just click sign_in</span>
+            </p>
+            
+            <div className="text-xs">
+              <span className="text-muted-foreground">
+                {isLogin ? "// no account? " : "// have account? "}
+              </span>
+              <button
+                type="button"
+                onClick={() => setIsLogin(!isLogin)}
+                className="text-primary hover:underline"
+              >
+                {isLogin ? 'sign_up' : 'sign_in'}
+              </button>
+            </div>
+
+            <Link 
+              to="/" 
+              className="inline-block text-xs text-muted-foreground hover:text-primary transition-colors"
             >
-              {isLogin ? 'Sign up' : 'Sign in'}
-            </button>
+              {'<'}- back_to_home
+            </Link>
           </div>
         </CardContent>
       </Card>

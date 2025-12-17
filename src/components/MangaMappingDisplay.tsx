@@ -1,6 +1,5 @@
 import { Episode } from '@/types/anime';
 import { EpisodeBadge } from './EpisodeBadge';
-import { BookOpen, Hash } from 'lucide-react';
 
 interface MangaMappingDisplayProps {
   episode: Episode;
@@ -9,32 +8,36 @@ interface MangaMappingDisplayProps {
 
 export const MangaMappingDisplay = ({ episode, showEpisodeNumber = true }: MangaMappingDisplayProps) => {
   return (
-    <div className="flex items-center justify-between gap-4 p-3 rounded-lg bg-muted/50 border border-border/50">
+    <div className="flex items-center justify-between gap-4 p-2.5 bg-muted/30 border border-dashed font-mono text-sm">
       <div className="flex items-center gap-3 flex-1 min-w-0">
         {showEpisodeNumber && (
-          <div className="flex items-center gap-1.5 text-muted-foreground shrink-0">
-            <Hash className="w-4 h-4" />
-            <span className="font-mono font-semibold text-foreground">{episode.number}</span>
-          </div>
+          <span className="text-syntax-amber shrink-0">
+            #{String(episode.number).padStart(4, '0')}
+          </span>
         )}
-        <div className="truncate text-sm text-muted-foreground">
+        <span className="truncate text-muted-foreground text-xs">
           {episode.title}
-        </div>
+        </span>
       </div>
       
       <div className="flex items-center gap-3 shrink-0">
         <EpisodeBadge type={episode.type} />
         
         {episode.mangaMapping ? (
-          <div className="flex items-center gap-2 text-sm">
-            <BookOpen className="w-4 h-4 text-primary" />
-            <span className="font-medium">
-              Vol. {episode.mangaMapping.volume}, Ch. {episode.mangaMapping.chapters}
-            </span>
-          </div>
+          <span className="text-xs">
+            <span className="text-muted-foreground">{'{'}</span>
+            <span className="text-syntax-cyan">"vol"</span>
+            <span className="text-muted-foreground">:</span>
+            <span className="text-syntax-amber">{episode.mangaMapping.volume}</span>
+            <span className="text-muted-foreground">, </span>
+            <span className="text-syntax-cyan">"ch"</span>
+            <span className="text-muted-foreground">:</span>
+            <span className="text-syntax-green">"{episode.mangaMapping.chapters}"</span>
+            <span className="text-muted-foreground">{'}'}</span>
+          </span>
         ) : (
-          <span className="text-sm text-muted-foreground italic">
-            {episode.type === 'filler' ? 'No manga source' : 'Anime original story'}
+          <span className="text-xs text-muted-foreground">
+            {episode.type === 'filler' ? '// no_source' : '// anime_original'}
           </span>
         )}
       </div>

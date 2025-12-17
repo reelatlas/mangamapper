@@ -4,11 +4,10 @@ import { Header } from '@/components/Header';
 import { useAuth } from '@/hooks/useAuth';
 import { supabase } from '@/integrations/supabase/client';
 import { getAnimeById } from '@/data/mockAnime';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
-import { Badge } from '@/components/ui/badge';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { Library as LibraryIcon, BookOpen, Tv, Globe, Plus, Trash2, ExternalLink } from 'lucide-react';
 import { toast } from 'sonner';
@@ -37,7 +36,6 @@ const Library = () => {
   const [readerSites, setReaderSites] = useState<ReaderSite[]>([]);
   const [loading, setLoading] = useState(true);
   
-  // New reader site form
   const [newSiteName, setNewSiteName] = useState('');
   const [newSiteUrl, setNewSiteUrl] = useState('');
   const [newSiteNotes, setNewSiteNotes] = useState('');
@@ -143,11 +141,11 @@ const Library = () => {
 
   if (authLoading || loading) {
     return (
-      <div className="min-h-screen bg-background">
+      <div className="min-h-screen bg-background font-mono">
         <Header />
         <main className="container py-8">
           <div className="flex items-center justify-center py-16">
-            <p className="text-muted-foreground">Loading...</p>
+            <p className="text-muted-foreground text-sm">...loading</p>
           </div>
         </main>
       </div>
@@ -155,59 +153,70 @@ const Library = () => {
   }
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-background font-mono">
       <Header />
       
       <main className="container py-8">
-        <div className="flex items-center gap-2 mb-6">
-          <LibraryIcon className="w-6 h-6 text-primary" />
-          <h1 className="text-2xl font-bold">My library</h1>
+        <div className="flex items-center gap-2 mb-6 text-sm">
+          <LibraryIcon className="w-4 h-4 text-primary" />
+          <span className="text-muted-foreground">{'>'}</span>
+          <span className="text-syntax-cyan">user_library</span>
         </div>
 
         <Tabs defaultValue="progress" className="space-y-6">
-          <TabsList>
-            <TabsTrigger value="progress" className="gap-2">
-              <Tv className="w-4 h-4" />
-              My progress
+          <TabsList className="bg-muted/30 border border-dashed">
+            <TabsTrigger value="progress" className="gap-2 text-xs font-mono data-[state=active]:bg-primary data-[state=active]:text-primary-foreground">
+              <Tv className="w-3.5 h-3.5" />
+              /progress
             </TabsTrigger>
-            <TabsTrigger value="readers" className="gap-2">
-              <Globe className="w-4 h-4" />
-              Reader sites
+            <TabsTrigger value="readers" className="gap-2 text-xs font-mono data-[state=active]:bg-primary data-[state=active]:text-primary-foreground">
+              <Globe className="w-3.5 h-3.5" />
+              /reader_sites
             </TabsTrigger>
           </TabsList>
 
           <TabsContent value="progress" className="space-y-4">
             {progress.length > 0 ? (
-              <div className="grid gap-4">
+              <div className="grid gap-3">
                 {progress.map((item) => {
                   const anime = getAnimeById(item.anime_id);
                   if (!anime) return null;
                   
                   return (
-                    <Card key={item.id}>
+                    <Card key={item.id} className="border-dashed">
                       <CardContent className="p-4">
                         <div className="flex items-start gap-4">
                           <img
                             src={anime.coverImage}
                             alt={anime.title}
-                            className="w-16 h-24 object-cover rounded"
+                            className="w-14 h-20 object-cover opacity-90"
                           />
                           <div className="flex-1 min-w-0">
-                            <Link to={`/anime/${anime.id}`} className="hover:text-primary">
-                              <h3 className="font-semibold truncate">{anime.title}</h3>
+                            <Link to={`/anime/${anime.id}`} className="hover:text-primary transition-colors">
+                              <span className="text-sm truncate block">
+                                <span className="text-syntax-cyan">"title"</span>
+                                <span className="text-muted-foreground">: </span>
+                                <span className="text-syntax-green">"{anime.title}"</span>
+                              </span>
                             </Link>
-                            <div className="flex flex-wrap gap-2 mt-2">
+                            <div className="flex flex-wrap gap-3 mt-2 text-xs">
                               {item.last_watched_episode && (
-                                <Badge variant="outline" className="gap-1">
-                                  <Tv className="w-3 h-3" />
-                                  Ep {item.last_watched_episode}
-                                </Badge>
+                                <span>
+                                  <span className="text-syntax-cyan">"ep"</span>
+                                  <span className="text-muted-foreground">: </span>
+                                  <span className="text-syntax-amber">{item.last_watched_episode}</span>
+                                </span>
                               )}
                               {item.last_read_chapter && (
-                                <Badge variant="outline" className="gap-1">
-                                  <BookOpen className="w-3 h-3" />
-                                  Vol. {item.last_read_volume}, Ch. {item.last_read_chapter}
-                                </Badge>
+                                <span>
+                                  <span className="text-syntax-cyan">"vol"</span>
+                                  <span className="text-muted-foreground">: </span>
+                                  <span className="text-syntax-amber">{item.last_read_volume}</span>
+                                  <span className="text-muted-foreground">, </span>
+                                  <span className="text-syntax-cyan">"ch"</span>
+                                  <span className="text-muted-foreground">: </span>
+                                  <span className="text-syntax-green">"{item.last_read_chapter}"</span>
+                                </span>
                               )}
                             </div>
                           </div>
@@ -226,11 +235,13 @@ const Library = () => {
                 })}
               </div>
             ) : (
-              <div className="text-center py-16">
-                <Tv className="w-12 h-12 text-muted-foreground mx-auto mb-4" />
-                <p className="text-muted-foreground">No progress tracked yet</p>
-                <p className="text-sm text-muted-foreground mt-1">
-                  Visit an anime page to start tracking
+              <div className="text-center py-16 border border-dashed">
+                <Tv className="w-8 h-8 text-muted-foreground mx-auto mb-3" />
+                <p className="text-muted-foreground text-sm">
+                  <span className="text-syntax-cyan">// </span>no progress tracked
+                </p>
+                <p className="text-xs text-muted-foreground mt-1">
+                  {'>'} visit an anime page to start
                 </p>
               </div>
             )}
@@ -238,72 +249,101 @@ const Library = () => {
 
           <TabsContent value="readers" className="space-y-6">
             {/* Add new reader site form */}
-            <Card>
-              <CardHeader>
-                <CardTitle className="text-lg flex items-center gap-2">
-                  <Plus className="w-5 h-5" />
-                  Add reader site
-                </CardTitle>
-              </CardHeader>
-              <CardContent>
+            <Card className="border-dashed">
+              <div className="terminal-header flex items-center gap-2">
+                <Plus className="w-3.5 h-3.5" />
+                <span className="text-muted-foreground">add_reader_site.json</span>
+              </div>
+              <CardContent className="p-4">
                 <form onSubmit={addReaderSite} className="space-y-4">
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div className="space-y-2">
-                      <Label htmlFor="siteName">Site name</Label>
-                      <Input
-                        id="siteName"
-                        placeholder="e.g., MangaDex"
-                        value={newSiteName}
-                        onChange={(e) => setNewSiteName(e.target.value)}
-                      />
+                      <Label htmlFor="siteName" className="text-xs">
+                        <span className="text-syntax-cyan">"name"</span>
+                      </Label>
+                      <div className="flex items-center gap-2">
+                        <span className="text-muted-foreground text-sm">$</span>
+                        <Input
+                          id="siteName"
+                          placeholder="e.g., MangaDex"
+                          value={newSiteName}
+                          onChange={(e) => setNewSiteName(e.target.value)}
+                          className="font-mono text-sm border-dashed bg-muted/30"
+                        />
+                      </div>
                     </div>
                     <div className="space-y-2">
-                      <Label htmlFor="siteUrl">URL</Label>
-                      <Input
-                        id="siteUrl"
-                        type="url"
-                        placeholder="https://mangadex.org"
-                        value={newSiteUrl}
-                        onChange={(e) => setNewSiteUrl(e.target.value)}
-                      />
+                      <Label htmlFor="siteUrl" className="text-xs">
+                        <span className="text-syntax-cyan">"url"</span>
+                      </Label>
+                      <div className="flex items-center gap-2">
+                        <span className="text-muted-foreground text-sm">$</span>
+                        <Input
+                          id="siteUrl"
+                          type="url"
+                          placeholder="https://mangadex.org"
+                          value={newSiteUrl}
+                          onChange={(e) => setNewSiteUrl(e.target.value)}
+                          className="font-mono text-sm border-dashed bg-muted/30"
+                        />
+                      </div>
                     </div>
                   </div>
                   <div className="space-y-2">
-                    <Label htmlFor="siteNotes">Notes (optional)</Label>
-                    <Input
-                      id="siteNotes"
-                      placeholder="e.g., Good for One Piece, fast updates"
-                      value={newSiteNotes}
-                      onChange={(e) => setNewSiteNotes(e.target.value)}
-                    />
+                    <Label htmlFor="siteNotes" className="text-xs">
+                      <span className="text-syntax-cyan">"notes"</span>
+                      <span className="text-muted-foreground"> // optional</span>
+                    </Label>
+                    <div className="flex items-center gap-2">
+                      <span className="text-muted-foreground text-sm">$</span>
+                      <Input
+                        id="siteNotes"
+                        placeholder="e.g., Good for One Piece"
+                        value={newSiteNotes}
+                        onChange={(e) => setNewSiteNotes(e.target.value)}
+                        className="font-mono text-sm border-dashed bg-muted/30"
+                      />
+                    </div>
                   </div>
-                  <Button type="submit">Add site</Button>
+                  <Button type="submit" className="font-mono text-xs border-dashed">
+                    {'>'} add_site()
+                  </Button>
                 </form>
               </CardContent>
             </Card>
 
             {/* Reader sites list */}
             {readerSites.length > 0 ? (
-              <div className="grid gap-4">
+              <div className="grid gap-3">
                 {readerSites.map((site) => (
-                  <Card key={site.id}>
+                  <Card key={site.id} className="border-dashed">
                     <CardContent className="p-4">
                       <div className="flex items-center justify-between gap-4">
-                        <div className="flex-1 min-w-0">
-                          <h3 className="font-semibold">{site.name}</h3>
+                        <div className="flex-1 min-w-0 text-sm">
+                          <span className="text-muted-foreground">{'{'}</span>
+                          <span className="text-syntax-cyan">"name"</span>
+                          <span className="text-muted-foreground">: </span>
+                          <span className="text-syntax-green">"{site.name}"</span>
                           {site.notes && (
-                            <p className="text-sm text-muted-foreground mt-1">{site.notes}</p>
+                            <>
+                              <span className="text-muted-foreground">, </span>
+                              <span className="text-syntax-cyan">"notes"</span>
+                              <span className="text-muted-foreground">: </span>
+                              <span className="text-syntax-green text-xs">"{site.notes}"</span>
+                            </>
                           )}
+                          <span className="text-muted-foreground">{'}'}</span>
                         </div>
                         <div className="flex items-center gap-2">
                           <Button
                             variant="outline"
                             size="sm"
                             asChild
+                            className="border-dashed text-xs"
                           >
                             <a href={site.url} target="_blank" rel="noopener noreferrer" className="gap-1">
-                              <ExternalLink className="w-4 h-4" />
-                              Visit
+                              <ExternalLink className="w-3.5 h-3.5" />
+                              open
                             </a>
                           </Button>
                           <Button
@@ -321,11 +361,13 @@ const Library = () => {
                 ))}
               </div>
             ) : (
-              <div className="text-center py-16">
-                <Globe className="w-12 h-12 text-muted-foreground mx-auto mb-4" />
-                <p className="text-muted-foreground">No reader sites saved yet</p>
-                <p className="text-sm text-muted-foreground mt-1">
-                  Add your favorite manga reading sites above
+              <div className="text-center py-16 border border-dashed">
+                <Globe className="w-8 h-8 text-muted-foreground mx-auto mb-3" />
+                <p className="text-muted-foreground text-sm">
+                  <span className="text-syntax-cyan">// </span>no reader sites saved
+                </p>
+                <p className="text-xs text-muted-foreground mt-1">
+                  {'>'} add your favorite manga sites above
                 </p>
               </div>
             )}
@@ -333,9 +375,15 @@ const Library = () => {
         </Tabs>
       </main>
 
-      <footer className="border-t mt-16">
-        <div className="container py-8 text-center text-sm text-muted-foreground">
-          <p>MangaMapper — Your guide from anime to manga</p>
+      <footer className="border-t border-dashed mt-16">
+        <div className="container py-6 text-center text-xs text-muted-foreground">
+          <p>
+            <span className="text-syntax-cyan">{'{'}</span>
+            <span className="text-primary">mangaMapper</span>
+            <span className="text-syntax-cyan">{'}'}</span>
+            <span className="mx-2">—</span>
+            <span>// your guide from anime to manga</span>
+          </p>
         </div>
       </footer>
     </div>

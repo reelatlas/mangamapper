@@ -1,5 +1,4 @@
 import { EpisodeType } from '@/types/anime';
-import { Badge } from '@/components/ui/badge';
 import { cn } from '@/lib/utils';
 
 interface EpisodeBadgeProps {
@@ -10,27 +9,28 @@ interface EpisodeBadgeProps {
 export const EpisodeBadge = ({ type, className }: EpisodeBadgeProps) => {
   const config = {
     canon: {
-      label: 'Canon',
-      variant: 'default' as const,
-      className: 'bg-primary/90 hover:bg-primary text-primary-foreground',
+      label: 'CANON',
+      className: 'text-accent border-accent',
     },
     filler: {
-      label: 'Filler',
-      variant: 'destructive' as const,
-      className: 'bg-destructive/90 hover:bg-destructive text-destructive-foreground',
+      label: 'FILLER',
+      className: 'text-destructive border-destructive',
     },
     'anime-only-canon': {
-      label: 'Anime original',
-      variant: 'secondary' as const,
-      className: 'bg-accent-foreground/90 hover:bg-accent-foreground text-accent',
+      label: 'ANIME',
+      className: 'text-syntax-purple border-syntax-purple',
     },
   };
 
   const { label, className: badgeClassName } = config[type];
 
   return (
-    <Badge className={cn(badgeClassName, className)}>
-      {label}
-    </Badge>
+    <span className={cn(
+      'font-mono text-[10px] px-1.5 py-0.5 border uppercase tracking-wider',
+      badgeClassName,
+      className
+    )}>
+      [{label}]
+    </span>
   );
 };

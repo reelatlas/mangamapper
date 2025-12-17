@@ -1,7 +1,6 @@
 import { AnimeSeries } from '@/types/anime';
 import { Card, CardContent } from '@/components/ui/card';
 import { MangaMappingDisplay } from './MangaMappingDisplay';
-import { Badge } from '@/components/ui/badge';
 import { Play, ChevronRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
@@ -15,69 +14,78 @@ export const AnimeCard = ({ anime, rank }: AnimeCardProps) => {
 
   return (
     <Link to={`/anime/${anime.id}`}>
-      <Card className="group overflow-hidden transition-all duration-300 hover:shadow-lg hover:border-primary/30 cursor-pointer">
+      <Card className="group overflow-hidden transition-all duration-200 hover:border-primary/50 cursor-pointer border-dashed">
+        <div className="terminal-header flex items-center justify-between">
+          <span>
+            {rank && <span className="text-syntax-amber">#{String(rank).padStart(2, '0')}</span>}
+            {rank && <span className="mx-2 text-border">|</span>}
+            <span className="text-muted-foreground">anime_data.json</span>
+          </span>
+          <span className="text-muted-foreground">
+            {anime.status === 'airing' ? (
+              <span className="text-accent">[AIRING]</span>
+            ) : (
+              <span>[COMPLETE]</span>
+            )}
+          </span>
+        </div>
         <CardContent className="p-0">
           <div className="flex flex-col sm:flex-row">
             {/* Cover Image */}
-            <div className="relative w-full sm:w-48 h-48 sm:h-auto shrink-0 overflow-hidden">
-              {rank && (
-                <div className="absolute top-2 left-2 z-10 w-8 h-8 flex items-center justify-center rounded-full bg-primary text-primary-foreground font-bold text-sm shadow-md">
-                  {rank}
-                </div>
-              )}
+            <div className="relative w-full sm:w-44 h-44 sm:h-auto shrink-0 overflow-hidden border-b sm:border-b-0 sm:border-r border-dashed">
               <img
                 src={anime.coverImage}
                 alt={anime.title}
-                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105 opacity-90 group-hover:opacity-100"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-transparent sm:bg-gradient-to-r" />
+              <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-background/20 to-transparent sm:bg-gradient-to-r" />
+              <div className="absolute bottom-2 left-2 flex items-center gap-1 text-xs">
+                <Play className="w-3 h-3 text-primary" />
+                <span className="text-primary font-semibold">ep_{anime.currentEpisode}</span>
+              </div>
             </div>
 
             {/* Content */}
-            <div className="flex-1 p-4 sm:p-5 flex flex-col gap-3">
-              {/* Header */}
-              <div className="flex items-start justify-between gap-3">
-                <div className="min-w-0">
-                  <h3 className="font-semibold text-lg truncate group-hover:text-primary transition-colors">
-                    {anime.title}
-                  </h3>
-                  <p className="text-sm text-muted-foreground truncate">{anime.japaneseTitle}</p>
+            <div className="flex-1 p-4 flex flex-col gap-3 font-mono">
+              {/* JSON-like structure */}
+              <div className="space-y-1 text-sm">
+                <div>
+                  <span className="text-syntax-cyan">"title"</span>
+                  <span className="text-muted-foreground">: </span>
+                  <span className="text-syntax-green">"{anime.title}"</span>
                 </div>
-                
-                <div className="flex items-center gap-2 shrink-0">
-                  <Badge variant="outline" className="gap-1">
-                    <Play className="w-3 h-3" />
-                    Ep {anime.currentEpisode}
-                  </Badge>
-                  {anime.status === 'airing' && (
-                    <Badge className="bg-green-500/90 text-primary-foreground hover:bg-green-500">Airing</Badge>
-                  )}
+                <div>
+                  <span className="text-syntax-cyan">"title_jp"</span>
+                  <span className="text-muted-foreground">: </span>
+                  <span className="text-syntax-green text-xs">"{anime.japaneseTitle}"</span>
                 </div>
-              </div>
-
-              {/* Genres */}
-              <div className="flex flex-wrap gap-1.5">
-                {anime.genres.slice(0, 3).map((genre) => (
-                  <Badge key={genre} variant="secondary" className="text-xs">
-                    {genre}
-                  </Badge>
-                ))}
+                <div>
+                  <span className="text-syntax-cyan">"genres"</span>
+                  <span className="text-muted-foreground">: [</span>
+                  {anime.genres.slice(0, 3).map((genre, i) => (
+                    <span key={genre}>
+                      <span className="text-syntax-amber">"{genre}"</span>
+                      {i < Math.min(anime.genres.length, 3) - 1 && <span className="text-muted-foreground">, </span>}
+                    </span>
+                  ))}
+                  <span className="text-muted-foreground">]</span>
+                </div>
               </div>
 
               {/* Current episode mapping */}
               {currentEpisode && (
-                <div className="mt-auto">
-                  <p className="text-xs text-muted-foreground mb-2 tracking-wide font-medium">
-                    Latest episode
+                <div className="mt-auto pt-2 border-t border-dashed">
+                  <p className="text-[10px] text-muted-foreground mb-2 uppercase tracking-wider">
+                    // latest_episode
                   </p>
                   <MangaMappingDisplay episode={currentEpisode} showEpisodeNumber={false} />
                 </div>
               )}
 
               {/* View details hint */}
-              <div className="flex items-center gap-1 text-sm text-primary opacity-0 group-hover:opacity-100 transition-opacity">
-                View all episodes
-                <ChevronRight className="w-4 h-4" />
+              <div className="flex items-center gap-1 text-xs text-primary opacity-0 group-hover:opacity-100 transition-opacity">
+                <span className="text-muted-foreground">{'>'}</span> view_all_episodes
+                <ChevronRight className="w-3 h-3" />
               </div>
             </div>
           </div>
