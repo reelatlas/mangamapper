@@ -186,7 +186,7 @@ const Index = () => {
       <footer className="border-t border-dashed mt-16">
         <div className="container py-6 text-center text-xs text-muted-foreground">
           <p>
-            <span className="text-primary">mangaMapper</span>
+            <span className="text-foreground/40">mangaMapper</span>
             <span className="mx-2">—</span>
             <span>// anime-to-manga</span>
           </p>
