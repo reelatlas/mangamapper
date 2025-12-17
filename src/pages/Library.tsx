@@ -315,12 +315,12 @@ const Library = () => {
                         <Label htmlFor="siteAnime" className="text-xs">
                           <span className="text-syntax-cyan">series</span>
                         </Label>
-                        <Select value={newSiteAnimeId} onValueChange={setNewSiteAnimeId}>
+                        <Select value={newSiteAnimeId || "__none__"} onValueChange={(val) => setNewSiteAnimeId(val === "__none__" ? "" : val)}>
                           <SelectTrigger className="font-mono text-sm border-dashed bg-muted/30">
                             <SelectValue placeholder="select series..." />
                           </SelectTrigger>
                           <SelectContent>
-                            <SelectItem value="">none</SelectItem>
+                            <SelectItem value="__none__">none</SelectItem>
                             {mockAnimeData.map((anime) => (
                               <SelectItem key={anime.id} value={anime.id}>
                                 {anime.title}
