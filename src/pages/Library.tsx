@@ -46,7 +46,8 @@ const Library = () => {
   const [seriesAssignments, setSeriesAssignments] = useState<Array<{ animeId: string; seriesUrl: string }>>([{ animeId: '', seriesUrl: '' }]);
 
   const addSeriesRow = () => {
-    setSeriesAssignments([...seriesAssignments, { animeId: '', seriesUrl: '' }]);
+    const baseUrl = newSiteUrl.trim() ? (newSiteUrl.trim().endsWith('/') ? newSiteUrl.trim() : newSiteUrl.trim() + '/') : '';
+    setSeriesAssignments([...seriesAssignments, { animeId: '', seriesUrl: baseUrl }]);
   };
 
   const updateSeriesAssignment = (index: number, field: 'animeId' | 'seriesUrl', value: string) => {
@@ -335,18 +336,7 @@ const Library = () => {
                         type="url"
                         placeholder="https://mangadex.org"
                         value={newSiteUrl}
-                        onChange={(e) => {
-                          const url = e.target.value;
-                          setNewSiteUrl(url);
-                          // Pre-fill series URLs with the base URL + /
-                          if (url.trim()) {
-                            const baseUrl = url.trim().endsWith('/') ? url.trim() : url.trim() + '/';
-                            setSeriesAssignments(prev => prev.map(a => ({
-                              ...a,
-                              seriesUrl: a.seriesUrl || baseUrl
-                            })));
-                          }
-                        }}
+                        onChange={(e) => setNewSiteUrl(e.target.value)}
                         className="font-mono text-sm border-dashed bg-muted/30"
                       />
                     </div>
@@ -407,6 +397,12 @@ const Library = () => {
                               type="url"
                               placeholder="https://mangadex.org/title/..."
                               value={assignment.seriesUrl}
+                              onFocus={() => {
+                                if (!assignment.seriesUrl && newSiteUrl.trim()) {
+                                  const baseUrl = newSiteUrl.trim().endsWith('/') ? newSiteUrl.trim() : newSiteUrl.trim() + '/';
+                                  updateSeriesAssignment(index, 'seriesUrl', baseUrl);
+                                }
+                              }}
                               onChange={(e) => updateSeriesAssignment(index, 'seriesUrl', e.target.value)}
                               className="font-mono text-sm border-dashed bg-muted/30"
                             />
