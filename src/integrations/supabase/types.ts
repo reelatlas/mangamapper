@@ -14,7 +14,87 @@ export type Database = {
   }
   public: {
     Tables: {
-      [_ in never]: never
+      anime_progress: {
+        Row: {
+          anime_id: string
+          id: string
+          last_read_chapter: string | null
+          last_read_volume: number | null
+          last_watched_episode: number | null
+          updated_at: string
+          user_id: string
+        }
+        Insert: {
+          anime_id: string
+          id?: string
+          last_read_chapter?: string | null
+          last_read_volume?: number | null
+          last_watched_episode?: number | null
+          updated_at?: string
+          user_id: string
+        }
+        Update: {
+          anime_id?: string
+          id?: string
+          last_read_chapter?: string | null
+          last_read_volume?: number | null
+          last_watched_episode?: number | null
+          updated_at?: string
+          user_id?: string
+        }
+        Relationships: []
+      }
+      manga_reader_sites: {
+        Row: {
+          created_at: string
+          id: string
+          name: string
+          notes: string | null
+          url: string
+          user_id: string
+        }
+        Insert: {
+          created_at?: string
+          id?: string
+          name: string
+          notes?: string | null
+          url: string
+          user_id: string
+        }
+        Update: {
+          created_at?: string
+          id?: string
+          name?: string
+          notes?: string | null
+          url?: string
+          user_id?: string
+        }
+        Relationships: []
+      }
+      profiles: {
+        Row: {
+          created_at: string
+          display_name: string | null
+          id: string
+          updated_at: string
+          user_id: string
+        }
+        Insert: {
+          created_at?: string
+          display_name?: string | null
+          id?: string
+          updated_at?: string
+          user_id: string
+        }
+        Update: {
+          created_at?: string
+          display_name?: string | null
+          id?: string
+          updated_at?: string
+          user_id?: string
+        }
+        Relationships: []
+      }
     }
     Views: {
       [_ in never]: never

@@ -2,6 +2,7 @@ import { useParams, Link } from 'react-router-dom';
 import { Header } from '@/components/Header';
 import { MangaMappingDisplay } from '@/components/MangaMappingDisplay';
 import { EpisodeBadge } from '@/components/EpisodeBadge';
+import { ProgressTracker } from '@/components/ProgressTracker';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
@@ -17,12 +18,12 @@ const AnimeDetail = () => {
       <div className="min-h-screen bg-background">
         <Header />
         <main className="container py-16 text-center">
-          <h1 className="text-2xl font-bold mb-4">Anime Not Found</h1>
+          <h1 className="text-2xl font-bold mb-4">Anime not found</h1>
           <p className="text-muted-foreground mb-6">The anime you're looking for doesn't exist.</p>
           <Button asChild>
             <Link to="/">
               <ArrowLeft className="w-4 h-4 mr-2" />
-              Back to Home
+              Back to home
             </Link>
           </Button>
         </main>
@@ -39,17 +40,17 @@ const AnimeDetail = () => {
       <Header />
       
       <main className="container py-8">
-        {/* Back Button */}
+        {/* Back button */}
         <Button variant="ghost" size="sm" asChild className="mb-6">
           <Link to="/" className="flex items-center gap-2">
             <ArrowLeft className="w-4 h-4" />
-            Back to Home
+            Back to home
           </Link>
         </Button>
 
-        {/* Hero Section */}
+        {/* Hero section */}
         <div className="flex flex-col lg:flex-row gap-8 mb-10">
-          {/* Cover Image */}
+          {/* Cover image */}
           <div className="w-full lg:w-72 shrink-0">
             <div className="relative rounded-xl overflow-hidden shadow-xl aspect-[3/4]">
               <img
@@ -60,7 +61,7 @@ const AnimeDetail = () => {
               <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-transparent" />
               <div className="absolute bottom-4 left-4 right-4">
                 <Badge className={anime.status === 'airing' ? 'bg-green-500/90 text-primary-foreground' : 'bg-secondary'}>
-                  {anime.status === 'airing' ? 'Currently Airing' : 'Completed'}
+                  {anime.status === 'airing' ? 'Currently airing' : 'Completed'}
                 </Badge>
               </div>
             </div>
@@ -110,11 +111,16 @@ const AnimeDetail = () => {
                     <span className="text-xs font-bold text-accent-foreground">A</span>
                   </div>
                   <div className="text-2xl font-bold">{animeOnlyCount}</div>
-                  <div className="text-xs text-muted-foreground">Anime Only</div>
+                  <div className="text-xs text-muted-foreground">Anime only</div>
                 </CardContent>
               </Card>
             </div>
           </div>
+        </div>
+
+        {/* Progress tracker */}
+        <div className="mb-6">
+          <ProgressTracker anime={anime} />
         </div>
 
         {/* Legend */}
@@ -123,7 +129,7 @@ const AnimeDetail = () => {
             <div className="flex flex-wrap items-center gap-4 text-sm">
               <div className="flex items-center gap-2">
                 <Info className="w-4 h-4 text-muted-foreground" />
-                <span className="text-muted-foreground">Episode Types:</span>
+                <span className="text-muted-foreground">Episode types:</span>
               </div>
               <div className="flex items-center gap-2">
                 <EpisodeBadge type="canon" />
@@ -141,12 +147,12 @@ const AnimeDetail = () => {
           </CardContent>
         </Card>
 
-        {/* Episodes List */}
+        {/* Episodes list */}
         <Card>
           <CardHeader>
             <CardTitle className="flex items-center gap-2">
               <Calendar className="w-5 h-5 text-primary" />
-              All Episodes
+              All episodes
             </CardTitle>
           </CardHeader>
           <CardContent>
