@@ -152,7 +152,7 @@ const Index = () => {
             <span>
               {isSearching 
                 ? <><span className="text-syntax-cyan">search_results</span><span className="text-muted-foreground">.length</span> = <span className="text-syntax-amber">{searchResults.length}</span></>
-                : <><span className="text-syntax-cyan">results</span><span className="text-muted-foreground">.length</span> = <span className="text-syntax-amber">{displayedAnime.length}</span></>
+                : <><span className="text-syntax-cyan">top</span> <span className="text-syntax-amber">{resultLimit}</span> <span className="text-syntax-cyan">{statusFilter}</span></>
               }
             </span>
           </div>
