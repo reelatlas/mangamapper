@@ -1,8 +1,18 @@
 import { Link } from 'react-router-dom';
-import { BookOpen, Home, Search } from 'lucide-react';
+import { BookOpen, Home, Search, Library, User, LogOut } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { useAuth } from '@/hooks/useAuth';
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuSeparator,
+  DropdownMenuTrigger,
+} from '@/components/ui/dropdown-menu';
 
 export const Header = () => {
+  const { user, signOut } = useAuth();
+
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container flex h-16 items-center justify-between">
@@ -29,6 +39,46 @@ export const Header = () => {
               <span className="hidden sm:inline">Search</span>
             </Link>
           </Button>
+          
+          {user ? (
+            <>
+              <Button variant="ghost" size="sm" asChild>
+                <Link to="/library" className="flex items-center gap-2">
+                  <Library className="w-4 h-4" />
+                  <span className="hidden sm:inline">Library</span>
+                </Link>
+              </Button>
+              <DropdownMenu>
+                <DropdownMenuTrigger asChild>
+                  <Button variant="outline" size="sm" className="gap-2">
+                    <User className="w-4 h-4" />
+                    <span className="hidden sm:inline">Account</span>
+                  </Button>
+                </DropdownMenuTrigger>
+                <DropdownMenuContent align="end" className="bg-popover">
+                  <DropdownMenuItem className="text-muted-foreground text-sm">
+                    {user.email}
+                  </DropdownMenuItem>
+                  <DropdownMenuSeparator />
+                  <DropdownMenuItem asChild>
+                    <Link to="/library" className="flex items-center gap-2 cursor-pointer">
+                      <Library className="w-4 h-4" />
+                      My library
+                    </Link>
+                  </DropdownMenuItem>
+                  <DropdownMenuSeparator />
+                  <DropdownMenuItem onClick={signOut} className="cursor-pointer gap-2 text-destructive">
+                    <LogOut className="w-4 h-4" />
+                    Sign out
+                  </DropdownMenuItem>
+                </DropdownMenuContent>
+              </DropdownMenu>
+            </>
+          ) : (
+            <Button size="sm" asChild>
+              <Link to="/auth">Sign in</Link>
+            </Button>
+          )}
         </nav>
       </div>
     </header>
