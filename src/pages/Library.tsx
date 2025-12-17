@@ -9,7 +9,7 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
-import { Library as LibraryIcon, BookOpen, Tv, Globe, Plus, Trash2, ExternalLink } from 'lucide-react';
+import { Library as LibraryIcon, BookOpen, Tv, Globe, Plus, Trash2, ExternalLink, Hourglass } from 'lucide-react';
 import { toast } from 'sonner';
 import { Link } from 'react-router-dom';
 
@@ -166,7 +166,7 @@ const Library = () => {
         <Tabs defaultValue="progress" className="space-y-6">
           <TabsList className="bg-muted/30 border border-dashed">
             <TabsTrigger value="progress" className="gap-2 text-xs font-mono data-[state=active]:bg-primary data-[state=active]:text-primary-foreground">
-              <Tv className="w-3.5 h-3.5" />
+              <Hourglass className="w-3.5 h-3.5" />
               progress
             </TabsTrigger>
             <TabsTrigger value="readers" className="gap-2 text-xs font-mono data-[state=active]:bg-primary data-[state=active]:text-primary-foreground">
