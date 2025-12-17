@@ -108,7 +108,7 @@ const Index = () => {
                     variant={statusFilter === 'airing' ? 'default' : 'outline'}
                     size="sm"
                     onClick={() => setStatusFilter('airing')}
-                    className="font-mono text-xs border-dashed hover:bg-primary/10 hover:text-primary"
+                    className={`font-mono text-xs border-dashed ${statusFilter !== 'airing' ? 'hover:bg-primary/10 hover:text-primary' : ''}`}
                   >
                     airing
                   </Button>
@@ -116,7 +116,7 @@ const Index = () => {
                     variant={statusFilter === 'completed' ? 'default' : 'outline'}
                     size="sm"
                     onClick={() => setStatusFilter('completed')}
-                    className="font-mono text-xs border-dashed hover:bg-primary/10 hover:text-primary"
+                    className={`font-mono text-xs border-dashed ${statusFilter !== 'completed' ? 'hover:bg-primary/10 hover:text-primary' : ''}`}
                   >
                     completed
                   </Button>
@@ -133,7 +133,7 @@ const Index = () => {
                       variant={resultLimit === limit ? 'default' : 'outline'}
                       size="sm"
                       onClick={() => setResultLimit(limit)}
-                      className="font-mono text-xs border-dashed hover:bg-primary/10 hover:text-primary"
+                      className={`font-mono text-xs border-dashed ${resultLimit !== limit ? 'hover:bg-primary/10 hover:text-primary' : ''}`}
                     >
                       {limit}
                     </Button>
