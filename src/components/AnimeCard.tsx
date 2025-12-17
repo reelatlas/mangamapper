@@ -58,49 +58,39 @@ export const AnimeCard = ({ anime, rank, progress }: AnimeCardProps) => {
 
             {/* Content */}
             <div className="flex-1 p-4 flex flex-col font-mono">
-              {/* Top section - Data structure */}
-              <div className="space-y-1 text-sm">
-                <div>
-                  <span className="text-syntax-cyan">title</span>
-                  <span className="text-muted-foreground">: </span>
-                  <span className="text-syntax-green">{anime.title}</span>
-                </div>
-                <div>
-                  <span className="text-syntax-cyan">title_jp</span>
-                  <span className="text-muted-foreground">: </span>
-                  <span className="text-syntax-green text-xs">{anime.japaneseTitle}</span>
-                </div>
-                <div>
-                  <span className="text-syntax-cyan">genres</span>
-                  <span className="text-muted-foreground">: </span>
-                  {anime.genres.slice(0, 3).map((genre, i) => (
-                    <span key={genre}>
-                      <span className="text-syntax-amber">{genre.toLowerCase()}</span>
-                      {i < Math.min(anime.genres.length, 3) - 1 && <span className="text-muted-foreground">, </span>}
-                    </span>
-                  ))}
-                </div>
-              </div>
-
-              {/* Bottom section - Progress and episode (pushed to bottom) */}
-              <div className="mt-auto pt-2 space-y-3">
-                {/* Current episode mapping */}
-                {currentEpisode && (
+              {/* Top section - Data and Progress */}
+              <div className="flex justify-between gap-4">
+                {/* Left - Data structure */}
+                <div className="space-y-1 text-sm">
                   <div>
-                    <p className="text-[10px] text-muted-foreground tracking-wider mb-2">
-                      // last_episode
-                    </p>
-                    <MangaMappingDisplay episode={currentEpisode} />
+                    <span className="text-syntax-cyan">title</span>
+                    <span className="text-muted-foreground">: </span>
+                    <span className="text-syntax-green">{anime.title}</span>
                   </div>
-                )}
-
-                {/* User progress section */}
-                {hasProgress && (
                   <div>
+                    <span className="text-syntax-cyan">title_jp</span>
+                    <span className="text-muted-foreground">: </span>
+                    <span className="text-syntax-green text-xs">{anime.japaneseTitle}</span>
+                  </div>
+                  <div>
+                    <span className="text-syntax-cyan">genres</span>
+                    <span className="text-muted-foreground">: </span>
+                    {anime.genres.slice(0, 3).map((genre, i) => (
+                      <span key={genre}>
+                        <span className="text-syntax-amber">{genre.toLowerCase()}</span>
+                        {i < Math.min(anime.genres.length, 3) - 1 && <span className="text-muted-foreground">, </span>}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+
+                {/* Right - User progress */}
+                {hasProgress && (
+                  <div className="text-right shrink-0">
                     <p className="text-[10px] text-muted-foreground mb-1 tracking-wider">
                       // your_progress
                     </p>
-                    <div className="flex flex-wrap gap-6 text-xs">
+                    <div className="flex flex-col gap-1 text-xs">
                       {progress.last_watched_episode !== null && (
                         <span>
                           <span className="text-primary/60">ep</span>
@@ -130,6 +120,18 @@ export const AnimeCard = ({ anime, rank, progress }: AnimeCardProps) => {
                         </span>
                       )}
                     </div>
+                  </div>
+                )}
+              </div>
+
+              {/* Bottom section - Last episode (pushed to bottom) */}
+              <div className="mt-auto pt-2">
+                {currentEpisode && (
+                  <div>
+                    <p className="text-[10px] text-muted-foreground tracking-wider mb-2">
+                      // last_episode
+                    </p>
+                    <MangaMappingDisplay episode={currentEpisode} />
                   </div>
                 )}
               </div>
