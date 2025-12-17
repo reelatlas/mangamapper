@@ -79,12 +79,12 @@ const AnimeDetail = () => {
           </div>
 
           {/* Info */}
-          <div className="flex-1 space-y-4">
-            <Card className="border-dashed">
+          <div className="flex-1 flex flex-col gap-4">
+            <Card className="border-dashed flex-1 flex flex-col">
               <div className="terminal-header">
                 <span className="text-muted-foreground">anime_info</span>
               </div>
-              <CardContent className="p-4 space-y-3 text-sm">
+              <CardContent className="p-4 space-y-3 text-sm flex-1">
                 <div>
                   <span className="text-syntax-cyan">title</span>
                   <span className="text-muted-foreground">: </span>
