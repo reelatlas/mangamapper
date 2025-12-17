@@ -9,13 +9,13 @@ export const TRACKING_SITES: { value: TrackingSite; label: string }[] = [
 ];
 
 export const STREAMING_SERVICES: { value: StreamingService; label: string }[] = [
-  { value: 'all', label: 'All' },
-  { value: 'crunchyroll', label: 'Crunchyroll' },
-  { value: 'netflix', label: 'Netflix' },
-  { value: 'amazon', label: 'Prime Video' },
-  { value: 'disney-hulu', label: 'Disney+/Hulu' },
-  { value: 'bilibili', label: 'Bilibili' },
-  { value: 'hidive', label: 'HiDive' },
+  { value: 'all', label: 'all' },
+  { value: 'crunchyroll', label: 'crunchyroll' },
+  { value: 'netflix', label: 'netflix' },
+  { value: 'amazon', label: 'prime video' },
+  { value: 'disney-hulu', label: 'disney+/hulu' },
+  { value: 'bilibili', label: 'bilibili' },
+  { value: 'hidive', label: 'hidive' },
 ];
 
 export interface MangaMapping {
