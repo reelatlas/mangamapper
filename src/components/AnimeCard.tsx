@@ -82,7 +82,7 @@ export const AnimeCard = ({ anime, rank, progress }: AnimeCardProps) => {
 
               {/* User progress section */}
               {hasProgress && (
-                <div className="mt-auto">
+                <div className="mt-4">
                   <p className="text-[10px] text-muted-foreground mb-1 tracking-wider">
                     // your_progress
                   </p>
@@ -119,21 +119,21 @@ export const AnimeCard = ({ anime, rank, progress }: AnimeCardProps) => {
                 </div>
               )}
 
-              {/* Current episode mapping */}
+              {/* Current episode mapping - always at bottom */}
               {currentEpisode && (
-                <div className={hasProgress ? "pt-2" : "mt-auto pt-2"}>
-                  <p className="text-[10px] text-muted-foreground mb-2 tracking-wider">
-                    // latest_episode
-                  </p>
+                <div className="mt-auto pt-2">
+                  <div className="flex items-center justify-between mb-2">
+                    <p className="text-[10px] text-muted-foreground tracking-wider">
+                      // latest_episode
+                    </p>
+                    <div className="flex items-center gap-1 text-xs text-primary opacity-0 group-hover:opacity-100 transition-opacity">
+                      <span className="text-muted-foreground">{'>'}</span> view_all_episodes
+                      <ChevronRight className="w-3 h-3" />
+                    </div>
+                  </div>
                   <MangaMappingDisplay episode={currentEpisode} />
                 </div>
               )}
-
-              {/* View details hint */}
-              <div className="flex items-center gap-1 text-xs text-primary opacity-0 group-hover:opacity-100 transition-opacity">
-                <span className="text-muted-foreground">{'>'}</span> view_all_episodes
-                <ChevronRight className="w-3 h-3" />
-              </div>
             </div>
           </div>
         </CardContent>
