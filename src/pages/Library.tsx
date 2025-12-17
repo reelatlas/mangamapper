@@ -355,9 +355,11 @@ const Library = () => {
                       {seriesAssignments.map((assignment, index) => (
                         <div key={index} className="grid grid-cols-1 sm:grid-cols-[1fr_1fr_auto] gap-4 items-end">
                           <div className="space-y-2">
-                            <Label className="text-xs">
-                              <span className="text-syntax-cyan">series</span>
-                            </Label>
+                            {index === 0 && (
+                              <Label className="text-xs">
+                                <span className="text-syntax-cyan">series</span>
+                              </Label>
+                            )}
                             <Select 
                               value={assignment.animeId || "__none__"} 
                               onValueChange={(val) => updateSeriesAssignment(index, 'animeId', val === "__none__" ? "" : val)}
@@ -376,9 +378,11 @@ const Library = () => {
                             </Select>
                           </div>
                           <div className="space-y-2">
-                            <Label className="text-xs">
-                              <span className="text-syntax-cyan">series_url</span>
-                            </Label>
+                            {index === 0 && (
+                              <Label className="text-xs">
+                                <span className="text-syntax-cyan">series_url</span>
+                              </Label>
+                            )}
                             <Input
                               type="url"
                               placeholder="https://mangadex.org/title/..."
