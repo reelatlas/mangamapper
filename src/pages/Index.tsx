@@ -79,8 +79,8 @@ const Index = () => {
               {isSearching 
                 ? `Search results ${searchResults.length > 0 ? `(${searchResults.length})` : ''}`
                 : streamingService === 'all' 
-                  ? `Top 10 airing (${trackingSiteLabel})`
-                  : `Top 10 on ${streamingServiceLabel} (${trackingSiteLabel})`
+                  ? `Top 10 currently airing (${trackingSiteLabel})`
+                  : `Top 10 currently airing on ${streamingServiceLabel} (${trackingSiteLabel})`
               }
             </h2>
           </div>

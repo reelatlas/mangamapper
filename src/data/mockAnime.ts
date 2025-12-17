@@ -10,12 +10,8 @@ export const mockAnimeData: AnimeSeries[] = [
     totalEpisodes: null,
     status: 'airing',
     hasManga: true,
-    rankings: [
-      { trackingSite: 'mal', streamingService: 'crunchyroll', rank: 1 },
-      { trackingSite: 'mal', streamingService: 'netflix', rank: 3 },
-      { trackingSite: 'anilist', streamingService: 'crunchyroll', rank: 2 },
-      { trackingSite: 'anilist', streamingService: 'netflix', rank: 4 },
-    ],
+    ranking: { mal: 1, anilist: 2 },
+    streamingOn: ['crunchyroll', 'netflix'],
     genres: ['Action', 'Adventure', 'Fantasy'],
     synopsis: 'Monkey D. Luffy sets off on an adventure to find the One Piece treasure and become King of the Pirates.',
     episodes: [
@@ -35,14 +31,8 @@ export const mockAnimeData: AnimeSeries[] = [
     totalEpisodes: null,
     status: 'airing',
     hasManga: true,
-    rankings: [
-      { trackingSite: 'mal', streamingService: 'crunchyroll', rank: 2 },
-      { trackingSite: 'mal', streamingService: 'netflix', rank: 1 },
-      { trackingSite: 'anilist', streamingService: 'crunchyroll', rank: 1 },
-      { trackingSite: 'anilist', streamingService: 'netflix', rank: 2 },
-      { trackingSite: 'mal', streamingService: 'amazon', rank: 5 },
-      { trackingSite: 'anilist', streamingService: 'amazon', rank: 6 },
-    ],
+    ranking: { mal: 2, anilist: 1 },
+    streamingOn: ['crunchyroll', 'netflix', 'amazon'],
     genres: ['Action', 'Supernatural', 'School'],
     synopsis: 'Yuji Itadori joins a secret organization of Jujutsu Sorcerers to kill a powerful Curse named Ryomen Sukuna.',
     episodes: [
@@ -54,30 +44,24 @@ export const mockAnimeData: AnimeSeries[] = [
     ]
   },
   {
-    id: 'my-hero-academia',
-    title: 'My Hero Academia',
-    japaneseTitle: '僕のヒーローアカデミア',
-    coverImage: 'https://cdn.myanimelist.net/images/anime/1908/135431.jpg',
-    currentEpisode: 153,
-    totalEpisodes: null,
+    id: 'dandadan',
+    title: 'DAN DA DAN',
+    japaneseTitle: 'ダンダダン',
+    coverImage: 'https://cdn.myanimelist.net/images/anime/1150/141957.jpg',
+    currentEpisode: 11,
+    totalEpisodes: 12,
     status: 'airing',
     hasManga: true,
-    rankings: [
-      { trackingSite: 'mal', streamingService: 'crunchyroll', rank: 3 },
-      { trackingSite: 'mal', streamingService: 'netflix', rank: 2 },
-      { trackingSite: 'mal', streamingService: 'disney-hulu', rank: 1 },
-      { trackingSite: 'anilist', streamingService: 'crunchyroll', rank: 4 },
-      { trackingSite: 'anilist', streamingService: 'netflix', rank: 3 },
-      { trackingSite: 'anilist', streamingService: 'disney-hulu', rank: 2 },
-    ],
-    genres: ['Action', 'Superhero', 'School'],
-    synopsis: 'In a world where most people have superpowers, Izuku Midoriya dreams of becoming a hero despite being born without one.',
+    ranking: { mal: 3, anilist: 3 },
+    streamingOn: ['crunchyroll', 'netflix', 'bilibili'],
+    genres: ['Action', 'Comedy', 'Supernatural'],
+    synopsis: 'A high school girl who believes in ghosts and a boy who believes in aliens team up after encountering the supernatural.',
     episodes: [
-      { number: 153, title: 'Deku vs Shigaraki: Final Act', type: 'canon', mangaMapping: { volume: 40, chapters: '420-421' }, airDate: '2024-12-14' },
-      { number: 152, title: 'One For All: Full Power', type: 'canon', mangaMapping: { volume: 40, chapters: '418-419' }, airDate: '2024-12-07' },
-      { number: 151, title: "The Heroes' Last Stand", type: 'canon', mangaMapping: { volume: 39, chapters: '416-417' }, airDate: '2024-11-30' },
-      { number: 150, title: 'All For One Falls', type: 'canon', mangaMapping: { volume: 39, chapters: '414-415' }, airDate: '2024-11-23' },
-      { number: 149, title: 'The Weight of Legacy', type: 'canon', mangaMapping: { volume: 39, chapters: '412-413' }, airDate: '2024-11-16' },
+      { number: 11, title: "Turbo Granny's Return", type: 'canon', mangaMapping: { volume: 3, chapters: '23-24' }, airDate: '2024-12-12' },
+      { number: 10, title: 'The Acrobatic Silky', type: 'canon', mangaMapping: { volume: 3, chapters: '21-22' }, airDate: '2024-12-05' },
+      { number: 9, title: 'Dover Demon Attack', type: 'canon', mangaMapping: { volume: 2, chapters: '19-20' }, airDate: '2024-11-28' },
+      { number: 8, title: 'Alien X Files', type: 'canon', mangaMapping: { volume: 2, chapters: '17-18' }, airDate: '2024-11-21' },
+      { number: 7, title: 'Serpo Connection', type: 'canon', mangaMapping: { volume: 2, chapters: '15-16' }, airDate: '2024-11-14' },
     ]
   },
   {
@@ -89,12 +73,8 @@ export const mockAnimeData: AnimeSeries[] = [
     totalEpisodes: 20,
     status: 'airing',
     hasManga: false,
-    rankings: [
-      { trackingSite: 'mal', streamingService: 'crunchyroll', rank: 4 },
-      { trackingSite: 'mal', streamingService: 'netflix', rank: 5 },
-      { trackingSite: 'anilist', streamingService: 'crunchyroll', rank: 3 },
-      { trackingSite: 'anilist', streamingService: 'netflix', rank: 5 },
-    ],
+    ranking: { mal: 4, anilist: 5 },
+    streamingOn: ['crunchyroll', 'netflix'],
     genres: ['Action', 'Adventure', 'Fantasy'],
     synopsis: 'Goku and his friends are turned into children by a mysterious wish and must journey to the Demon Realm.',
     episodes: [
@@ -114,14 +94,8 @@ export const mockAnimeData: AnimeSeries[] = [
     totalEpisodes: null,
     status: 'airing',
     hasManga: true,
-    rankings: [
-      { trackingSite: 'mal', streamingService: 'crunchyroll', rank: 5 },
-      { trackingSite: 'mal', streamingService: 'netflix', rank: 4 },
-      { trackingSite: 'anilist', streamingService: 'crunchyroll', rank: 5 },
-      { trackingSite: 'anilist', streamingService: 'netflix', rank: 6 },
-      { trackingSite: 'mal', streamingService: 'bilibili', rank: 2 },
-      { trackingSite: 'anilist', streamingService: 'bilibili', rank: 1 },
-    ],
+    ranking: { mal: 5, anilist: 4 },
+    streamingOn: ['crunchyroll', 'netflix', 'bilibili'],
     genres: ['Sports', 'Drama', 'Psychological'],
     synopsis: "Japan creates a radical program to forge the world's greatest egotist striker to win the World Cup.",
     episodes: [
@@ -133,6 +107,27 @@ export const mockAnimeData: AnimeSeries[] = [
     ]
   },
   {
+    id: 'my-hero-academia',
+    title: 'My Hero Academia',
+    japaneseTitle: '僕のヒーローアカデミア',
+    coverImage: 'https://cdn.myanimelist.net/images/anime/1908/135431.jpg',
+    currentEpisode: 153,
+    totalEpisodes: null,
+    status: 'airing',
+    hasManga: true,
+    ranking: { mal: 6, anilist: 6 },
+    streamingOn: ['crunchyroll', 'netflix', 'disney-hulu'],
+    genres: ['Action', 'Superhero', 'School'],
+    synopsis: 'In a world where most people have superpowers, Izuku Midoriya dreams of becoming a hero despite being born without one.',
+    episodes: [
+      { number: 153, title: 'Deku vs Shigaraki: Final Act', type: 'canon', mangaMapping: { volume: 40, chapters: '420-421' }, airDate: '2024-12-14' },
+      { number: 152, title: 'One For All: Full Power', type: 'canon', mangaMapping: { volume: 40, chapters: '418-419' }, airDate: '2024-12-07' },
+      { number: 151, title: "The Heroes' Last Stand", type: 'canon', mangaMapping: { volume: 39, chapters: '416-417' }, airDate: '2024-11-30' },
+      { number: 150, title: 'All For One Falls', type: 'canon', mangaMapping: { volume: 39, chapters: '414-415' }, airDate: '2024-11-23' },
+      { number: 149, title: 'The Weight of Legacy', type: 'canon', mangaMapping: { volume: 39, chapters: '412-413' }, airDate: '2024-11-16' },
+    ]
+  },
+  {
     id: 'spy-x-family',
     title: 'SPY×FAMILY',
     japaneseTitle: 'SPY×FAMILY',
@@ -141,14 +136,8 @@ export const mockAnimeData: AnimeSeries[] = [
     totalEpisodes: null,
     status: 'airing',
     hasManga: true,
-    rankings: [
-      { trackingSite: 'mal', streamingService: 'crunchyroll', rank: 6 },
-      { trackingSite: 'mal', streamingService: 'netflix', rank: 6 },
-      { trackingSite: 'anilist', streamingService: 'crunchyroll', rank: 6 },
-      { trackingSite: 'anilist', streamingService: 'netflix', rank: 7 },
-      { trackingSite: 'mal', streamingService: 'disney-hulu', rank: 2 },
-      { trackingSite: 'anilist', streamingService: 'disney-hulu', rank: 3 },
-    ],
+    ranking: { mal: 7, anilist: 8 },
+    streamingOn: ['crunchyroll', 'netflix', 'disney-hulu'],
     genres: ['Action', 'Comedy', 'Slice of Life'],
     synopsis: 'A spy, an assassin, and a telepath form a fake family, each hiding their true identities from each other.',
     episodes: [
@@ -168,14 +157,8 @@ export const mockAnimeData: AnimeSeries[] = [
     totalEpisodes: null,
     status: 'airing',
     hasManga: true,
-    rankings: [
-      { trackingSite: 'mal', streamingService: 'crunchyroll', rank: 7 },
-      { trackingSite: 'mal', streamingService: 'netflix', rank: 7 },
-      { trackingSite: 'anilist', streamingService: 'crunchyroll', rank: 7 },
-      { trackingSite: 'anilist', streamingService: 'netflix', rank: 8 },
-      { trackingSite: 'mal', streamingService: 'hidive', rank: 1 },
-      { trackingSite: 'anilist', streamingService: 'hidive', rank: 2 },
-    ],
+    ranking: { mal: 8, anilist: 7 },
+    streamingOn: ['crunchyroll', 'netflix', 'hidive'],
     genres: ['Action', 'Supernatural', 'Historical'],
     synopsis: 'Tanjiro Kamado joins the Demon Slayer Corps to avenge his family and cure his demon-turned sister.',
     episodes: [
@@ -187,6 +170,49 @@ export const mockAnimeData: AnimeSeries[] = [
     ]
   },
   {
+    id: 'bleach-tybw',
+    title: 'Bleach: Thousand-Year Blood War',
+    japaneseTitle: 'BLEACH 千年血戦篇',
+    coverImage: 'https://cdn.myanimelist.net/images/anime/1908/135431.jpg',
+    currentEpisode: 39,
+    totalEpisodes: null,
+    status: 'airing',
+    hasManga: true,
+    ranking: { mal: 9, anilist: 9 },
+    streamingOn: ['disney-hulu', 'hidive'],
+    genres: ['Action', 'Supernatural', 'Adventure'],
+    synopsis: 'Ichigo Kurosaki faces the Wandenreich, a hidden empire of Quincies, in the final arc of Bleach.',
+    episodes: [
+      { number: 39, title: 'The Final Battle Begins', type: 'canon', mangaMapping: { volume: 68, chapters: '630-632' }, airDate: '2024-12-14' },
+      { number: 38, title: 'Quincy Blood War', type: 'canon', mangaMapping: { volume: 68, chapters: '627-629' }, airDate: '2024-12-07' },
+      { number: 37, title: "Ichigo's New Bankai", type: 'canon', mangaMapping: { volume: 67, chapters: '624-626' }, airDate: '2024-11-30' },
+      { number: 36, title: 'Soul Society Falls', type: 'canon', mangaMapping: { volume: 67, chapters: '621-623' }, airDate: '2024-11-23' },
+      { number: 35, title: 'The Zero Division', type: 'canon', mangaMapping: { volume: 66, chapters: '618-620' }, airDate: '2024-11-16' },
+    ]
+  },
+  {
+    id: 're-zero',
+    title: 'Re:ZERO -Starting Life in Another World-',
+    japaneseTitle: 'Re:ゼロから始める異世界生活',
+    coverImage: 'https://cdn.myanimelist.net/images/anime/1286/117120.jpg',
+    currentEpisode: 50,
+    totalEpisodes: null,
+    status: 'airing',
+    hasManga: true,
+    ranking: { mal: 10, anilist: 10 },
+    streamingOn: ['crunchyroll'],
+    genres: ['Drama', 'Fantasy', 'Thriller'],
+    synopsis: 'Subaru Natsuki is transported to a fantasy world where he discovers he has the power to rewind time upon death.',
+    episodes: [
+      { number: 50, title: 'The Witch of Envy', type: 'canon', mangaMapping: { volume: 15, chapters: '62-63' }, airDate: '2024-12-11' },
+      { number: 49, title: 'Bonds of Sin', type: 'canon', mangaMapping: { volume: 15, chapters: '60-61' }, airDate: '2024-12-04' },
+      { number: 48, title: 'Return by Death', type: 'canon', mangaMapping: { volume: 14, chapters: '58-59' }, airDate: '2024-11-27' },
+      { number: 47, title: 'The Watchtower', type: 'canon', mangaMapping: { volume: 14, chapters: '56-57' }, airDate: '2024-11-20' },
+      { number: 46, title: 'Emilia Camp', type: 'canon', mangaMapping: { volume: 14, chapters: '54-55' }, airDate: '2024-11-13' },
+    ]
+  },
+  // Completed series for search
+  {
     id: 'black-clover',
     title: 'Black Clover',
     japaneseTitle: 'ブラッククローバー',
@@ -195,12 +221,8 @@ export const mockAnimeData: AnimeSeries[] = [
     totalEpisodes: 170,
     status: 'completed',
     hasManga: true,
-    rankings: [
-      { trackingSite: 'mal', streamingService: 'crunchyroll', rank: 8 },
-      { trackingSite: 'mal', streamingService: 'amazon', rank: 1 },
-      { trackingSite: 'anilist', streamingService: 'crunchyroll', rank: 8 },
-      { trackingSite: 'anilist', streamingService: 'amazon', rank: 2 },
-    ],
+    ranking: { mal: 15, anilist: 18 },
+    streamingOn: ['crunchyroll', 'amazon'],
     genres: ['Action', 'Fantasy', 'Magic'],
     synopsis: "Asta, born without magic in a world where it's everything, dreams of becoming the Wizard King.",
     episodes: [
@@ -220,14 +242,8 @@ export const mockAnimeData: AnimeSeries[] = [
     totalEpisodes: 12,
     status: 'completed',
     hasManga: true,
-    rankings: [
-      { trackingSite: 'mal', streamingService: 'crunchyroll', rank: 9 },
-      { trackingSite: 'mal', streamingService: 'amazon', rank: 2 },
-      { trackingSite: 'anilist', streamingService: 'crunchyroll', rank: 9 },
-      { trackingSite: 'anilist', streamingService: 'amazon', rank: 1 },
-      { trackingSite: 'mal', streamingService: 'hidive', rank: 3 },
-      { trackingSite: 'anilist', streamingService: 'hidive', rank: 1 },
-    ],
+    ranking: { mal: 12, anilist: 11 },
+    streamingOn: ['crunchyroll', 'amazon', 'hidive'],
     genres: ['Action', 'Horror', 'Supernatural'],
     synopsis: 'Denji, a young devil hunter, merges with his pet devil Pochita to become Chainsaw Man.',
     episodes: [
@@ -239,33 +255,6 @@ export const mockAnimeData: AnimeSeries[] = [
     ]
   },
   {
-    id: 'dandadan',
-    title: 'DAN DA DAN',
-    japaneseTitle: 'ダンダダン',
-    coverImage: 'https://cdn.myanimelist.net/images/anime/1150/141957.jpg',
-    currentEpisode: 11,
-    totalEpisodes: 12,
-    status: 'airing',
-    hasManga: true,
-    rankings: [
-      { trackingSite: 'mal', streamingService: 'crunchyroll', rank: 10 },
-      { trackingSite: 'mal', streamingService: 'netflix', rank: 8 },
-      { trackingSite: 'anilist', streamingService: 'crunchyroll', rank: 10 },
-      { trackingSite: 'anilist', streamingService: 'netflix', rank: 1 },
-      { trackingSite: 'mal', streamingService: 'bilibili', rank: 1 },
-      { trackingSite: 'anilist', streamingService: 'bilibili', rank: 2 },
-    ],
-    genres: ['Action', 'Comedy', 'Supernatural'],
-    synopsis: 'A high school girl who believes in ghosts and a boy who believes in aliens team up after encountering the supernatural.',
-    episodes: [
-      { number: 11, title: "Turbo Granny's Return", type: 'canon', mangaMapping: { volume: 3, chapters: '23-24' }, airDate: '2024-12-12' },
-      { number: 10, title: 'The Acrobatic Silky', type: 'canon', mangaMapping: { volume: 3, chapters: '21-22' }, airDate: '2024-12-05' },
-      { number: 9, title: 'Dover Demon Attack', type: 'canon', mangaMapping: { volume: 2, chapters: '19-20' }, airDate: '2024-11-28' },
-      { number: 8, title: 'Alien X Files', type: 'canon', mangaMapping: { volume: 2, chapters: '17-18' }, airDate: '2024-11-21' },
-      { number: 7, title: 'Serpo Connection', type: 'canon', mangaMapping: { volume: 2, chapters: '15-16' }, airDate: '2024-11-14' },
-    ]
-  },
-  {
     id: 'naruto',
     title: 'Naruto',
     japaneseTitle: 'ナルト',
@@ -274,12 +263,8 @@ export const mockAnimeData: AnimeSeries[] = [
     totalEpisodes: 220,
     status: 'completed',
     hasManga: true,
-    rankings: [
-      { trackingSite: 'mal', streamingService: 'crunchyroll', rank: 11 },
-      { trackingSite: 'mal', streamingService: 'netflix', rank: 9 },
-      { trackingSite: 'anilist', streamingService: 'crunchyroll', rank: 11 },
-      { trackingSite: 'anilist', streamingService: 'netflix', rank: 9 },
-    ],
+    ranking: { mal: 20, anilist: 22 },
+    streamingOn: ['crunchyroll', 'netflix'],
     genres: ['Action', 'Adventure', 'Martial Arts'],
     synopsis: 'Naruto Uzumaki, a young ninja who seeks recognition from his peers and dreams of becoming the Hokage.',
     episodes: [
@@ -291,31 +276,6 @@ export const mockAnimeData: AnimeSeries[] = [
     ]
   },
   {
-    id: 'bleach-tybw',
-    title: 'Bleach: Thousand-Year Blood War',
-    japaneseTitle: 'BLEACH 千年血戦篇',
-    coverImage: 'https://cdn.myanimelist.net/images/anime/1908/135431.jpg',
-    currentEpisode: 39,
-    totalEpisodes: null,
-    status: 'airing',
-    hasManga: true,
-    rankings: [
-      { trackingSite: 'mal', streamingService: 'disney-hulu', rank: 3 },
-      { trackingSite: 'anilist', streamingService: 'disney-hulu', rank: 1 },
-      { trackingSite: 'mal', streamingService: 'hidive', rank: 2 },
-      { trackingSite: 'anilist', streamingService: 'hidive', rank: 3 },
-    ],
-    genres: ['Action', 'Supernatural', 'Adventure'],
-    synopsis: 'Ichigo Kurosaki faces the Wandenreich, a hidden empire of Quincies, in the final arc of Bleach.',
-    episodes: [
-      { number: 39, title: 'The Final Battle Begins', type: 'canon', mangaMapping: { volume: 68, chapters: '630-632' }, airDate: '2024-12-14' },
-      { number: 38, title: 'Quincy Blood War', type: 'canon', mangaMapping: { volume: 68, chapters: '627-629' }, airDate: '2024-12-07' },
-      { number: 37, title: "Ichigo's New Bankai", type: 'canon', mangaMapping: { volume: 67, chapters: '624-626' }, airDate: '2024-11-30' },
-      { number: 36, title: 'Soul Society Falls', type: 'canon', mangaMapping: { volume: 67, chapters: '621-623' }, airDate: '2024-11-23' },
-      { number: 35, title: 'The Zero Division', type: 'canon', mangaMapping: { volume: 66, chapters: '618-620' }, airDate: '2024-11-16' },
-    ]
-  },
-  {
     id: 'solo-leveling',
     title: 'Solo Leveling',
     japaneseTitle: '俺だけレベルアップな件',
@@ -324,12 +284,8 @@ export const mockAnimeData: AnimeSeries[] = [
     totalEpisodes: 12,
     status: 'completed',
     hasManga: true,
-    rankings: [
-      { trackingSite: 'mal', streamingService: 'crunchyroll', rank: 12 },
-      { trackingSite: 'anilist', streamingService: 'crunchyroll', rank: 12 },
-      { trackingSite: 'mal', streamingService: 'bilibili', rank: 3 },
-      { trackingSite: 'anilist', streamingService: 'bilibili', rank: 3 },
-    ],
+    ranking: { mal: 14, anilist: 13 },
+    streamingOn: ['crunchyroll', 'bilibili'],
     genres: ['Action', 'Fantasy', 'Adventure'],
     synopsis: 'Sung Jinwoo, the weakest hunter, gains the power to level up through a mysterious system.',
     episodes: [
@@ -342,23 +298,19 @@ export const mockAnimeData: AnimeSeries[] = [
   },
   {
     id: 'frieren',
-    title: 'Frieren: Beyond Journey\'s End',
+    title: "Frieren: Beyond Journey's End",
     japaneseTitle: '葬送のフリーレン',
     coverImage: 'https://cdn.myanimelist.net/images/anime/1015/138006.jpg',
     currentEpisode: 28,
     totalEpisodes: 28,
     status: 'completed',
     hasManga: true,
-    rankings: [
-      { trackingSite: 'mal', streamingService: 'crunchyroll', rank: 13 },
-      { trackingSite: 'anilist', streamingService: 'crunchyroll', rank: 13 },
-      { trackingSite: 'mal', streamingService: 'netflix', rank: 10 },
-      { trackingSite: 'anilist', streamingService: 'netflix', rank: 10 },
-    ],
+    ranking: { mal: 11, anilist: 12 },
+    streamingOn: ['crunchyroll', 'netflix'],
     genres: ['Adventure', 'Drama', 'Fantasy'],
     synopsis: 'An elf mage begins a journey to understand humanity after her hero party disbands.',
     episodes: [
-      { number: 28, title: 'It Would Beستون to Call Thatستون', type: 'canon', mangaMapping: { volume: 6, chapters: '55-57' }, airDate: '2024-03-22' },
+      { number: 28, title: 'The End of the Journey', type: 'canon', mangaMapping: { volume: 6, chapters: '55-57' }, airDate: '2024-03-22' },
       { number: 27, title: 'The Height of Magic', type: 'canon', mangaMapping: { volume: 6, chapters: '52-54' }, airDate: '2024-03-15' },
       { number: 26, title: 'Privilege of the Young', type: 'canon', mangaMapping: { volume: 5, chapters: '49-51' }, airDate: '2024-03-08' },
       { number: 25, title: 'Sense', type: 'canon', mangaMapping: { volume: 5, chapters: '46-48' }, airDate: '2024-03-01' },
@@ -372,33 +324,15 @@ export const getTopAiringAnime = (
   trackingSite: TrackingSite = 'mal',
   streamingService: StreamingService = 'all'
 ): AnimeSeries[] => {
-  const isAllServices = streamingService === 'all';
-  
   return mockAnimeData
     .filter(anime => anime.status === 'airing')
     .filter(anime => {
-      if (isAllServices) {
-        return anime.rankings.some(r => r.trackingSite === trackingSite);
-      }
-      return anime.rankings.some(
-        r => r.trackingSite === trackingSite && r.streamingService === streamingService
-      );
+      if (streamingService === 'all') return true;
+      return anime.streamingOn.includes(streamingService);
     })
     .sort((a, b) => {
-      if (isAllServices) {
-        // For "all", use the best rank across all services for this tracking site
-        const aRanks = a.rankings.filter(r => r.trackingSite === trackingSite);
-        const bRanks = b.rankings.filter(r => r.trackingSite === trackingSite);
-        const aMinRank = aRanks.length > 0 ? Math.min(...aRanks.map(r => r.rank)) : 999;
-        const bMinRank = bRanks.length > 0 ? Math.min(...bRanks.map(r => r.rank)) : 999;
-        return aMinRank - bMinRank;
-      }
-      const aRank = a.rankings.find(
-        r => r.trackingSite === trackingSite && r.streamingService === streamingService
-      )?.rank ?? 999;
-      const bRank = b.rankings.find(
-        r => r.trackingSite === trackingSite && r.streamingService === streamingService
-      )?.rank ?? 999;
+      const aRank = trackingSite === 'mal' ? a.ranking.mal : a.ranking.anilist;
+      const bRank = trackingSite === 'mal' ? b.ranking.mal : b.ranking.anilist;
       return aRank - bRank;
     })
     .slice(0, count);
