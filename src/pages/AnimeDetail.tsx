@@ -58,7 +58,7 @@ const AnimeDetail = () => {
           <div className="w-full lg:w-64 shrink-0">
             <Card className="border-dashed overflow-hidden">
               <div className="terminal-header">
-                <span className="text-muted-foreground">cover.jpg</span>
+                <span className="text-muted-foreground">cover</span>
               </div>
               <div className="relative aspect-[3/4]">
                 <img
@@ -84,7 +84,7 @@ const AnimeDetail = () => {
           <div className="flex-1 space-y-4">
             <Card className="border-dashed">
               <div className="terminal-header">
-                <span className="text-muted-foreground">anime_info.json</span>
+                <span className="text-muted-foreground">anime_info</span>
               </div>
               <CardContent className="p-4 space-y-3 text-sm">
                 <div>
@@ -184,7 +184,7 @@ const AnimeDetail = () => {
         <Card className="border-dashed">
           <div className="terminal-header flex items-center gap-2">
             <Calendar className="w-3.5 h-3.5 text-primary" />
-            <span className="text-muted-foreground">episodes_list.json</span>
+            <span className="text-muted-foreground">episodes_list</span>
           </div>
           <CardContent className="p-4">
             <div className="space-y-2">

@@ -89,7 +89,7 @@ export const ProgressTracker = ({ anime }: ProgressTrackerProps) => {
     return (
       <Card className="border-dashed">
         <div className="terminal-header">
-          <span className="text-muted-foreground">// user_progress.json</span>
+          <span className="text-muted-foreground">// user_progress</span>
         </div>
         <CardContent className="py-6">
           <div className="text-center font-mono">
@@ -121,7 +121,7 @@ export const ProgressTracker = ({ anime }: ProgressTrackerProps) => {
   return (
     <Card className="border-dashed">
       <div className="terminal-header">
-        <span className="text-muted-foreground">// your_progress.json</span>
+        <span className="text-muted-foreground">// your_progress</span>
       </div>
       <CardContent className="p-4 space-y-4 font-mono">
         <div className="space-y-2">
