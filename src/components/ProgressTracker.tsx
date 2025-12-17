@@ -19,7 +19,19 @@ interface Progress {
   last_watched_episode: number | null;
   last_read_volume: number | null;
   last_read_chapter: string | null;
+  updated_at: string;
 }
+
+const formatTimestamp = (timestamp: string) => {
+  const date = new Date(timestamp);
+  return date.toLocaleString('en-US', {
+    year: 'numeric',
+    month: 'short',
+    day: 'numeric',
+    hour: '2-digit',
+    minute: '2-digit',
+  });
+};
 
 export const ProgressTracker = ({ anime }: ProgressTrackerProps) => {
   const { user } = useAuth();
@@ -123,14 +135,15 @@ export const ProgressTracker = ({ anime }: ProgressTrackerProps) => {
       <div className="terminal-header">
         <span className="text-muted-foreground">// your_progress</span>
       </div>
-      <CardContent className="p-4 font-mono">
-        <div className="flex flex-wrap items-end gap-x-6 gap-y-4">
-          {/* Last watched section */}
-          <div className="space-y-1.5">
-            <div className="flex items-center gap-1.5 text-xs">
-              <Tv className="w-3.5 h-3.5 text-primary" />
-              <span className="text-syntax-cyan">last_watched</span>
-            </div>
+      <CardContent className="p-4 font-mono space-y-4">
+        {/* Last watched row */}
+        <div className="flex items-end gap-4">
+          <div className="flex items-center gap-1.5 text-xs min-w-[100px]">
+            <Tv className="w-3.5 h-3.5 text-primary" />
+            <span className="text-syntax-cyan">last_watched</span>
+          </div>
+          <div className="space-y-1">
+            <span className="text-muted-foreground text-xs">episode</span>
             <div className="flex items-center gap-2">
               <Input
                 id="watchedEpisode"
@@ -145,38 +158,44 @@ export const ProgressTracker = ({ anime }: ProgressTrackerProps) => {
               <span className="text-muted-foreground text-xs">/{anime.totalEpisodes || anime.currentEpisode}</span>
             </div>
           </div>
+        </div>
 
-          {/* Last read section */}
-          {anime.hasManga && (
-            <div className="space-y-1.5">
-              <div className="flex items-center gap-1.5 text-xs">
-                <BookOpen className="w-3.5 h-3.5 text-primary" />
-                <span className="text-syntax-cyan">last_read</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <Input
-                  id="readVolume"
-                  type="number"
-                  min="1"
-                  placeholder="vol"
-                  value={readVolume}
-                  onChange={(e) => setReadVolume(e.target.value)}
-                  className="font-mono text-sm border-dashed bg-muted/30 w-24 h-7"
-                />
-                <Input
-                  id="readChapter"
-                  type="number"
-                  min="1"
-                  placeholder="ch"
-                  value={readChapter}
-                  onChange={(e) => setReadChapter(e.target.value)}
-                  className="font-mono text-sm border-dashed bg-muted/30 w-24 h-7"
-                />
-              </div>
+        {/* Last read row */}
+        {anime.hasManga && (
+          <div className="flex items-end gap-4">
+            <div className="flex items-center gap-1.5 text-xs min-w-[100px]">
+              <BookOpen className="w-3.5 h-3.5 text-primary" />
+              <span className="text-syntax-cyan">last_read</span>
             </div>
-          )}
+            <div className="space-y-1">
+              <span className="text-muted-foreground text-xs">vol</span>
+              <Input
+                id="readVolume"
+                type="number"
+                min="1"
+                placeholder="—"
+                value={readVolume}
+                onChange={(e) => setReadVolume(e.target.value)}
+                className="font-mono text-sm border-dashed bg-muted/30 w-24 h-7"
+              />
+            </div>
+            <div className="space-y-1">
+              <span className="text-muted-foreground text-xs">ch</span>
+              <Input
+                id="readChapter"
+                type="number"
+                min="1"
+                placeholder="—"
+                value={readChapter}
+                onChange={(e) => setReadChapter(e.target.value)}
+                className="font-mono text-sm border-dashed bg-muted/30 w-24 h-7"
+              />
+            </div>
+          </div>
+        )}
 
-          {/* Save button */}
+        {/* Save row */}
+        <div className="flex items-center gap-4 pt-2">
           <Button 
             onClick={saveProgress} 
             disabled={saving}
@@ -185,6 +204,13 @@ export const ProgressTracker = ({ anime }: ProgressTrackerProps) => {
           >
             {'>'} {saving ? 'saving...' : 'save_progress()'}
           </Button>
+          {progress?.updated_at && (
+            <span className="text-muted-foreground text-xs">
+              <span className="text-syntax-purple">updated_at</span>
+              <span className="text-muted-foreground">: </span>
+              <span className="text-syntax-string">"{formatTimestamp(progress.updated_at)}"</span>
+            </span>
+          )}
         </div>
       </CardContent>
     </Card>
