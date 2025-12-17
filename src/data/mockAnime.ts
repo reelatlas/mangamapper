@@ -370,14 +370,29 @@ export const mockAnimeData: AnimeSeries[] = [
 export const getTopAiringAnime = (
   count: number = 10,
   trackingSite: TrackingSite = 'mal',
-  streamingService: StreamingService = 'crunchyroll'
+  streamingService: StreamingService = 'all'
 ): AnimeSeries[] => {
+  const isAllServices = streamingService === 'all';
+  
   return mockAnimeData
     .filter(anime => anime.status === 'airing')
-    .filter(anime => anime.rankings.some(
-      r => r.trackingSite === trackingSite && r.streamingService === streamingService
-    ))
+    .filter(anime => {
+      if (isAllServices) {
+        return anime.rankings.some(r => r.trackingSite === trackingSite);
+      }
+      return anime.rankings.some(
+        r => r.trackingSite === trackingSite && r.streamingService === streamingService
+      );
+    })
     .sort((a, b) => {
+      if (isAllServices) {
+        // For "all", use the best rank across all services for this tracking site
+        const aRanks = a.rankings.filter(r => r.trackingSite === trackingSite);
+        const bRanks = b.rankings.filter(r => r.trackingSite === trackingSite);
+        const aMinRank = aRanks.length > 0 ? Math.min(...aRanks.map(r => r.rank)) : 999;
+        const bMinRank = bRanks.length > 0 ? Math.min(...bRanks.map(r => r.rank)) : 999;
+        return aMinRank - bMinRank;
+      }
       const aRank = a.rankings.find(
         r => r.trackingSite === trackingSite && r.streamingService === streamingService
       )?.rank ?? 999;

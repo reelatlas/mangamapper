@@ -1,17 +1,18 @@
 export type EpisodeType = 'canon' | 'filler' | 'anime-only-canon';
 
 export type TrackingSite = 'mal' | 'anilist';
-export type StreamingService = 'crunchyroll' | 'netflix' | 'amazon' | 'disney-hulu' | 'bilibili' | 'hidive';
+export type StreamingService = 'all' | 'crunchyroll' | 'netflix' | 'amazon' | 'disney-hulu' | 'bilibili' | 'hidive';
 
 export const TRACKING_SITES: { value: TrackingSite; label: string }[] = [
-  { value: 'mal', label: 'MyAnimeList' },
+  { value: 'mal', label: 'MAL' },
   { value: 'anilist', label: 'AniList' },
 ];
 
 export const STREAMING_SERVICES: { value: StreamingService; label: string }[] = [
+  { value: 'all', label: 'All' },
   { value: 'crunchyroll', label: 'Crunchyroll' },
   { value: 'netflix', label: 'Netflix' },
-  { value: 'amazon', label: 'Amazon Prime Video' },
+  { value: 'amazon', label: 'Prime Video' },
   { value: 'disney-hulu', label: 'Disney+/Hulu' },
   { value: 'bilibili', label: 'Bilibili' },
   { value: 'hidive', label: 'HiDive' },

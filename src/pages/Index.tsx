@@ -11,7 +11,7 @@ const Index = () => {
   const [searchQuery, setSearchQuery] = useState('');
   const [searchResults, setSearchResults] = useState<AnimeSeries[]>([]);
   const [trackingSite, setTrackingSite] = useState<TrackingSite>('mal');
-  const [streamingService, setStreamingService] = useState<StreamingService>('crunchyroll');
+  const [streamingService, setStreamingService] = useState<StreamingService>('all');
 
   const topAnime = useMemo(
     () => getTopAiringAnime(10, trackingSite, streamingService),
@@ -78,7 +78,9 @@ const Index = () => {
             <h2 className="text-xl font-semibold">
               {isSearching 
                 ? `Search results ${searchResults.length > 0 ? `(${searchResults.length})` : ''}`
-                : `Top 10 on ${streamingServiceLabel} (${trackingSiteLabel})`
+                : streamingService === 'all' 
+                  ? `Top 10 airing (${trackingSiteLabel})`
+                  : `Top 10 on ${streamingServiceLabel} (${trackingSiteLabel})`
               }
             </h2>
           </div>
