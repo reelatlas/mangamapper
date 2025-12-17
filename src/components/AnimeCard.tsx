@@ -90,7 +90,7 @@ export const AnimeCard = ({ anime, rank, progress }: AnimeCardProps) => {
                     <p className="text-[10px] text-muted-foreground mb-1 tracking-wider">
                       // your_progress
                     </p>
-                    <div className="flex flex-col gap-1 text-xs">
+                    <div className="flex gap-3 text-xs">
                       {progress.last_watched_episode !== null && (
                         <span>
                           <span className="text-primary/60">ep</span>
