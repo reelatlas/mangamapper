@@ -55,7 +55,7 @@ export const AnimeCard = ({ anime, rank, progress }: AnimeCardProps) => {
             </div>
 
             {/* Content */}
-            <div className="flex-1 p-4 flex flex-col gap-3 font-mono">
+            <div className="flex-1 p-4 flex flex-col gap-3 font-mono min-h-[200px]">
               {/* Data structure */}
               <div className="space-y-1 text-sm">
                 <div>
@@ -122,12 +122,12 @@ export const AnimeCard = ({ anime, rank, progress }: AnimeCardProps) => {
               {/* Current episode mapping - always at bottom */}
               {currentEpisode && (
                 <div className="mt-auto pt-2">
-                  <div className="flex items-center justify-between mb-2">
+                  <div className="flex items-center gap-2 mb-2">
                     <p className="text-[10px] text-muted-foreground tracking-wider">
                       // latest_episode
                     </p>
-                    <div className="flex items-center gap-1 text-xs text-primary opacity-0 group-hover:opacity-100 transition-opacity">
-                      <span className="text-muted-foreground">{'>'}</span> view_all_episodes
+                    <div className="flex items-center gap-1 text-[10px] text-primary opacity-0 group-hover:opacity-100 transition-opacity">
+                      <span className="text-muted-foreground">{'>'}</span> view_all
                       <ChevronRight className="w-3 h-3" />
                     </div>
                   </div>
