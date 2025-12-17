@@ -47,7 +47,7 @@ export const Header = () => {
               <Button variant="ghost" size="sm" asChild className="font-mono text-xs">
                 <Link to="/library" className="flex items-center gap-1.5">
                   <Library className="w-3.5 h-3.5" />
-                  <span className="hidden sm:inline">library</span>
+                  <span className="hidden sm:inline">my_library</span>
                 </Link>
               </Button>
               <DropdownMenu>
