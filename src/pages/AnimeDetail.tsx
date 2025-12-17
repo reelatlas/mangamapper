@@ -102,7 +102,7 @@ const AnimeDetail = () => {
                   <span className="text-muted-foreground">: </span>
                   {anime.genres.map((genre, i) => (
                     <span key={genre}>
-                      <span className="text-syntax-amber">{genre}</span>
+                      <span className="text-syntax-amber">{genre.toLowerCase()}</span>
                       {i < anime.genres.length - 1 && <span className="text-muted-foreground">, </span>}
                     </span>
                   ))}
@@ -123,28 +123,28 @@ const AnimeDetail = () => {
                 <CardContent className="p-3 text-center">
                   <Play className="w-4 h-4 mx-auto mb-1 text-primary" />
                   <div className="text-xl font-bold text-syntax-amber">{anime.currentEpisode}</div>
-                  <div className="text-[10px] text-muted-foreground uppercase">episodes</div>
+                  <div className="text-[10px] text-muted-foreground">episodes</div>
                 </CardContent>
               </Card>
               <Card className="border-dashed">
                 <CardContent className="p-3 text-center">
                   <BookOpen className="w-4 h-4 mx-auto mb-1 text-accent" />
                   <div className="text-xl font-bold text-accent">{canonCount}</div>
-                  <div className="text-[10px] text-muted-foreground uppercase">canon</div>
+                  <div className="text-[10px] text-muted-foreground">canon</div>
                 </CardContent>
               </Card>
               <Card className="border-dashed">
                 <CardContent className="p-3 text-center">
                   <span className="block text-xs font-bold text-destructive mb-1">f</span>
                   <div className="text-xl font-bold text-destructive">{fillerCount}</div>
-                  <div className="text-[10px] text-muted-foreground uppercase">filler</div>
+                  <div className="text-[10px] text-muted-foreground">filler</div>
                 </CardContent>
               </Card>
               <Card className="border-dashed">
                 <CardContent className="p-3 text-center">
                   <span className="block text-xs font-bold text-syntax-purple mb-1">a</span>
                   <div className="text-xl font-bold text-syntax-purple">{animeOnlyCount}</div>
-                  <div className="text-[10px] text-muted-foreground uppercase">anime only</div>
+                  <div className="text-[10px] text-muted-foreground">anime only</div>
                 </CardContent>
               </Card>
             </div>

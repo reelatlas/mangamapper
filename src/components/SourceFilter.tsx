@@ -29,7 +29,7 @@ export const SourceFilter = ({
             <ToggleGroupItem
               key={site.value}
               value={site.value}
-              className="px-4 data-[state=on]:bg-primary data-[state=on]:text-primary-foreground"
+              className="px-4 rounded-full data-[state=on]:bg-primary data-[state=on]:text-primary-foreground"
             >
               {site.label}
             </ToggleGroupItem>
@@ -50,7 +50,7 @@ export const SourceFilter = ({
             <ToggleGroupItem
               key={service.value}
               value={service.value}
-              className="px-3 data-[state=on]:bg-primary data-[state=on]:text-primary-foreground"
+              className="px-3 rounded-full data-[state=on]:bg-primary data-[state=on]:text-primary-foreground"
             >
               {service.label}
             </ToggleGroupItem>
