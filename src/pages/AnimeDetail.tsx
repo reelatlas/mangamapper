@@ -121,7 +121,7 @@ const AnimeDetail = () => {
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
               <Card className="border-dashed">
                 <CardContent className="p-3 text-center">
-                  <Play className="w-4 h-4 mx-auto mb-1 text-primary" />
+                  <Play className="w-4 h-4 mx-auto mb-1 text-syntax-amber" />
                   <div className="text-xl font-bold text-syntax-amber">{anime.currentEpisode}</div>
                   <div className="text-[10px] text-muted-foreground">episodes</div>
                 </CardContent>
