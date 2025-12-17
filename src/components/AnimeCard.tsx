@@ -83,7 +83,7 @@ export const AnimeCard = ({ anime, rank, progress }: AnimeCardProps) => {
               </div>
 
               {/* Bottom section - Progress and episode (pushed to bottom) */}
-              <div className="mt-auto pt-4 space-y-3">
+              <div className="mt-auto pt-2 space-y-3">
                 {/* User progress section */}
                 {hasProgress && (
                   <div>
