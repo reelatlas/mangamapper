@@ -160,7 +160,7 @@ const AnimeDetail = () => {
         <Card className="mb-6 border-dashed">
           <CardContent className="p-4">
             <div className="flex flex-wrap items-center gap-4 text-xs">
-              <span className="text-muted-foreground">// episode_types:</span>
+              <span className="text-muted-foreground">// episode_types</span>
               <div className="flex items-center gap-2">
                 <EpisodeBadge type="canon" />
                 <span className="text-muted-foreground">= follows manga</span>
