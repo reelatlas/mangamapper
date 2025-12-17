@@ -118,7 +118,7 @@ const Index = () => {
                     onClick={() => setStatusFilter('completed')}
                     className="font-mono text-xs border-dashed"
                   >
-                    complete
+                    completed
                   </Button>
                 </div>
               </div>
