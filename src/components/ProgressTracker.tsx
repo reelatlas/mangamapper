@@ -168,7 +168,7 @@ export const ProgressTracker = ({ anime }: ProgressTrackerProps) => {
               <BookOpen className="w-3.5 h-3.5 text-primary" />
               <span className="text-syntax-cyan">last_read</span>
             </div>
-            <div className="flex items-center gap-4 pl-5">
+            <div className="flex items-center gap-2 pl-5">
               <div>
                 <span className="text-muted-foreground text-xs block mb-1">vol</span>
                 <Input
@@ -210,7 +210,7 @@ export const ProgressTracker = ({ anime }: ProgressTrackerProps) => {
           {progress?.updated_at && (
             <span className="text-muted-foreground text-xs">
               <span className="text-syntax-cyan">last_saved:</span>
-              <span className="text-syntax-string ml-1">{formatTimestamp(progress.updated_at)}</span>
+              <span className="text-muted-foreground ml-1">{formatTimestamp(progress.updated_at)}</span>
             </span>
           )}
         </div>
