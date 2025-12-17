@@ -58,10 +58,6 @@ export const Header = () => {
                   </Button>
                 </DropdownMenuTrigger>
                 <DropdownMenuContent align="end" className="bg-popover border-dashed font-mono">
-                  <DropdownMenuItem className="text-muted-foreground text-xs">
-                    <span className="text-syntax-cyan">email:</span> {user.email}
-                  </DropdownMenuItem>
-                  <DropdownMenuSeparator className="border-dashed" />
                   <DropdownMenuItem asChild>
                     <Link to="/library" className="flex items-center gap-2 cursor-pointer text-xs">
                       <Library className="w-3.5 h-3.5" />
