@@ -124,28 +124,25 @@ export const ProgressTracker = ({ anime }: ProgressTrackerProps) => {
         <span className="text-muted-foreground">// your_progress</span>
       </div>
       <CardContent className="p-4 font-mono">
-        <div className="flex flex-wrap items-end gap-x-8 gap-y-4">
+        <div className="flex flex-wrap items-end gap-x-6 gap-y-4">
           {/* Last watched section */}
           <div className="space-y-1.5">
             <div className="flex items-center gap-1.5 text-xs">
               <Tv className="w-3.5 h-3.5 text-primary" />
               <span className="text-syntax-cyan">last_watched</span>
             </div>
-            <div className="space-y-1">
-              <span className="text-muted-foreground text-[10px]">episode</span>
-              <div className="flex items-center gap-2">
-                <Input
-                  id="watchedEpisode"
-                  type="number"
-                  min="1"
-                  max={anime.totalEpisodes || anime.currentEpisode}
-                  placeholder="—"
-                  value={watchedEpisode}
-                  onChange={(e) => setWatchedEpisode(e.target.value)}
-                  className="font-mono text-sm tabular-nums border-dashed bg-muted/30 w-24 h-7 px-2 pr-8"
-                />
-                <span className="text-muted-foreground text-xs">/{anime.totalEpisodes || anime.currentEpisode}</span>
-              </div>
+            <div className="flex items-center gap-2">
+              <Input
+                id="watchedEpisode"
+                type="number"
+                min="1"
+                max={anime.totalEpisodes || anime.currentEpisode}
+                placeholder="—"
+                value={watchedEpisode}
+                onChange={(e) => setWatchedEpisode(e.target.value)}
+                className="font-mono text-sm border-dashed bg-muted/30 w-16 h-7"
+              />
+              <span className="text-muted-foreground text-xs">/{anime.totalEpisodes || anime.currentEpisode}</span>
             </div>
           </div>
 
@@ -156,31 +153,23 @@ export const ProgressTracker = ({ anime }: ProgressTrackerProps) => {
                 <BookOpen className="w-3.5 h-3.5 text-primary" />
                 <span className="text-syntax-cyan">last_read</span>
               </div>
-              <div className="flex items-start gap-3">
-                <div className="space-y-1">
-                  <span className="text-muted-foreground text-[10px]">vol</span>
-                  <Input
-                    id="readVolume"
-                    type="number"
-                    min="1"
-                    placeholder="—"
-                    value={readVolume}
-                    onChange={(e) => setReadVolume(e.target.value)}
-                    className="font-mono text-sm tabular-nums border-dashed bg-muted/30 w-24 h-7 px-2 pr-8"
-                  />
-                </div>
-                <div className="space-y-1">
-                  <span className="text-muted-foreground text-[10px]">ch</span>
-                  <Input
-                    id="readChapter"
-                    type="number"
-                    min="1"
-                    placeholder="—"
-                    value={readChapter}
-                    onChange={(e) => setReadChapter(e.target.value)}
-                    className="font-mono text-sm tabular-nums border-dashed bg-muted/30 w-24 h-7 px-2 pr-8"
-                  />
-                </div>
+              <div className="flex items-center gap-2">
+                <Input
+                  id="readVolume"
+                  type="number"
+                  min="1"
+                  placeholder="vol"
+                  value={readVolume}
+                  onChange={(e) => setReadVolume(e.target.value)}
+                  className="font-mono text-sm border-dashed bg-muted/30 w-16 h-7"
+                />
+                <Input
+                  id="readChapter"
+                  placeholder="ch"
+                  value={readChapter}
+                  onChange={(e) => setReadChapter(e.target.value)}
+                  className="font-mono text-sm border-dashed bg-muted/30 w-16 h-7"
+                />
               </div>
             </div>
           )}
@@ -190,7 +179,7 @@ export const ProgressTracker = ({ anime }: ProgressTrackerProps) => {
             onClick={saveProgress} 
             disabled={saving}
             size="sm"
-            className="font-mono text-xs border-dashed h-7 min-w-[120px]"
+            className="font-mono text-xs border-dashed h-7"
           >
             {'>'} {saving ? 'saving...' : 'save_progress()'}
           </Button>
