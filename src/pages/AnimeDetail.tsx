@@ -43,13 +43,6 @@ const AnimeDetail = () => {
       <Header />
       
       <main className="container py-8">
-        {/* Back button */}
-        <Button variant="ghost" size="sm" asChild className="mb-6 text-xs">
-          <Link to="/" className="flex items-center gap-1.5">
-            <ArrowLeft className="w-3.5 h-3.5" /> back_to_home
-          </Link>
-        </Button>
-
         {/* Hero section */}
         <div className="flex flex-col lg:flex-row gap-8 mb-10">
           {/* Cover image */}
