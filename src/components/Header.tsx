@@ -12,15 +12,25 @@ import {
 
 export const Header = () => {
   const { user, signOut } = useAuth();
+  const logoText = "mangaMapper";
 
   return (
     <header className="sticky top-0 z-50 w-full border-b border-dashed bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container flex h-14 items-center justify-between">
-        <Link to="/" className="flex items-center gap-1.5 hover:opacity-80 transition-opacity">
-          <Terminal className="w-4 h-4 text-muted-foreground" />
-          <span className="text-sm tracking-tight text-foreground/40">
-            <span className="font-normal">manga</span>
-            <span className="font-normal">Mapper</span>
+        <Link to="/" className="group flex items-center gap-1.5">
+          <Terminal className="w-4 h-4 text-muted-foreground group-hover:text-accent transition-colors" />
+          <span className="text-sm tracking-tight">
+            {logoText.split('').map((letter, index) => (
+              <span
+                key={index}
+                className="inline-block text-foreground/40 transition-colors duration-150 group-hover:text-accent"
+                style={{
+                  transitionDelay: `${index * 50}ms`,
+                }}
+              >
+                {letter}
+              </span>
+            ))}
           </span>
         </Link>
 
