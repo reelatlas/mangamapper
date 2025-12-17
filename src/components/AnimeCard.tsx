@@ -108,7 +108,7 @@ export const AnimeCard = ({ anime, rank, progress }: AnimeCardProps) => {
                             </>
                           )}
                           {progress.last_read_volume !== null && progress.last_read_chapter !== null && (
-                            <span className="text-muted-foreground"> · </span>
+                            <span className="text-muted-foreground">·</span>
                           )}
                           {progress.last_read_chapter !== null && (
                             <>
