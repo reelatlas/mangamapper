@@ -198,7 +198,7 @@ const Library = () => {
                                 <span className="text-muted-foreground">: </span>
                                 <span className="text-syntax-green">{anime.title}</span>
                               </span>
-                              <div className="flex flex-wrap gap-3 mt-2 text-xs">
+                              <div className="flex flex-wrap gap-6 mt-2 text-xs">
                                 {item.last_watched_episode && (
                                   <span>
                                     <span className="text-syntax-cyan">ep</span>
