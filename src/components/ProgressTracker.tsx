@@ -134,7 +134,7 @@ export const ProgressTracker = ({ anime }: ProgressTrackerProps) => {
   return (
     <Card className="border-dashed">
       <div className="terminal-header">
-        <span className="text-muted-foreground">// your_progress</span>
+        <span className="text-muted-foreground">// my_progress</span>
       </div>
       <CardContent className="p-4 font-mono space-y-3">
         {/* Last watched & Last read row */}
