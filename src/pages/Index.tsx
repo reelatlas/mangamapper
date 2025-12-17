@@ -108,7 +108,7 @@ const Index = () => {
                     variant="outline"
                     size="sm"
                     onClick={() => setStatusFilter('airing')}
-                    className={`font-mono text-xs border-dashed ${statusFilter === 'airing' ? 'bg-secondary text-foreground' : 'hover:bg-muted hover:text-foreground'}`}
+                    className={`font-mono text-xs border-dashed ${statusFilter === 'airing' ? 'bg-secondary text-foreground hover:bg-secondary hover:text-foreground' : 'hover:bg-muted hover:text-foreground'}`}
                   >
                     airing
                   </Button>
@@ -116,7 +116,7 @@ const Index = () => {
                     variant="outline"
                     size="sm"
                     onClick={() => setStatusFilter('completed')}
-                    className={`font-mono text-xs border-dashed ${statusFilter === 'completed' ? 'bg-secondary text-foreground' : 'hover:bg-muted hover:text-foreground'}`}
+                    className={`font-mono text-xs border-dashed ${statusFilter === 'completed' ? 'bg-secondary text-foreground hover:bg-secondary hover:text-foreground' : 'hover:bg-muted hover:text-foreground'}`}
                   >
                     completed
                   </Button>
@@ -133,7 +133,7 @@ const Index = () => {
                       variant="outline"
                       size="sm"
                       onClick={() => setResultLimit(limit)}
-                      className={`font-mono text-xs border-dashed ${resultLimit === limit ? 'bg-secondary text-foreground' : 'hover:bg-muted hover:text-foreground'}`}
+                      className={`font-mono text-xs border-dashed ${resultLimit === limit ? 'bg-secondary text-foreground hover:bg-secondary hover:text-foreground' : 'hover:bg-muted hover:text-foreground'}`}
                     >
                       {limit}
                     </Button>
