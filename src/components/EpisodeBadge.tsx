@@ -20,7 +20,7 @@ export const EpisodeBadge = ({ type, className }: EpisodeBadgeProps) => {
       className: 'bg-destructive/90 hover:bg-destructive text-destructive-foreground',
     },
     'anime-only-canon': {
-      label: 'Anime Original',
+      label: 'Anime original',
       variant: 'secondary' as const,
       className: 'bg-accent-foreground/90 hover:bg-accent-foreground text-accent',
     },

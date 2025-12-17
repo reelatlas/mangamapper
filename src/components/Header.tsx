@@ -12,7 +12,7 @@ export const Header = () => {
           </div>
           <div className="flex flex-col">
             <span className="font-bold text-lg leading-tight">MangaMapper</span>
-            <span className="text-xs text-muted-foreground leading-tight">Anime to Manga</span>
+            <span className="text-xs text-muted-foreground leading-tight">Anime to manga</span>
           </div>
         </Link>
 

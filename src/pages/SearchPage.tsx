@@ -44,7 +44,7 @@ const SearchPage = () => {
         <section className="mb-8">
           <div className="flex items-center gap-2 mb-4">
             <SearchIcon className="w-6 h-6 text-primary" />
-            <h1 className="text-2xl font-bold">Search All Anime</h1>
+            <h1 className="text-2xl font-bold">Search all anime</h1>
           </div>
           
           <SearchBar 
