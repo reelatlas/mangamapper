@@ -24,13 +24,14 @@ interface Progress {
 
 const formatTimestamp = (timestamp: string) => {
   const date = new Date(timestamp);
-  return date.toLocaleString('en-US', {
-    year: 'numeric',
-    month: 'short',
-    day: 'numeric',
-    hour: '2-digit',
-    minute: '2-digit',
-  }).toLowerCase();
+  const month = date.toLocaleString('en-US', { month: 'short' }).toLowerCase();
+  const day = date.getDate();
+  const year = date.getFullYear();
+  const hours = date.getHours();
+  const minutes = date.getMinutes().toString().padStart(2, '0');
+  const ampm = hours >= 12 ? 'pm' : 'am';
+  const hour12 = hours % 12 || 12;
+  return `${month} ${day} ${year} ${hour12}:${minutes}${ampm}`;
 };
 
 export const ProgressTracker = ({ anime }: ProgressTrackerProps) => {
@@ -209,7 +210,7 @@ export const ProgressTracker = ({ anime }: ProgressTrackerProps) => {
           {progress?.updated_at && (
             <span className="text-muted-foreground text-xs">
               <span className="text-syntax-cyan">last_saved:</span>
-              <span className="text-foreground ml-1">{formatTimestamp(progress.updated_at)}</span>
+              <span className="text-syntax-string ml-1">{formatTimestamp(progress.updated_at)}</span>
             </span>
           )}
         </div>
