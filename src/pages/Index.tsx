@@ -1,59 +1,17 @@
-import { useState, useCallback, useMemo, useEffect } from 'react';
+import { useState, useCallback, useMemo } from 'react';
 import { Header } from '@/components/Header';
 import { SearchBar } from '@/components/SearchBar';
 import { AnimeCard } from '@/components/AnimeCard';
 import { getFilteredAnime, searchAnime, StatusFilter } from '@/data/mockAnime';
 import { AnimeSeries } from '@/types/anime';
 import { TrendingUp, Filter, Home } from 'lucide-react';
-import { useAuth } from '@/hooks/useAuth';
-import { supabase } from '@/integrations/supabase/client';
 import { Button } from '@/components/ui/button';
-
-interface UserProgress {
-  last_watched_episode: number | null;
-  last_read_volume: number | null;
-  last_read_chapter: string | null;
-}
 
 const Index = () => {
   const [searchQuery, setSearchQuery] = useState('');
   const [searchResults, setSearchResults] = useState<AnimeSeries[]>([]);
   const [statusFilter, setStatusFilter] = useState<StatusFilter>('airing');
   const [resultLimit, setResultLimit] = useState<number>(10);
-  const [userProgressMap, setUserProgressMap] = useState<Map<string, UserProgress>>(new Map());
-  const { user } = useAuth();
-
-  // Fetch user progress for all anime
-  useEffect(() => {
-    const fetchUserProgress = async () => {
-      if (!user) {
-        setUserProgressMap(new Map());
-        return;
-      }
-
-      const { data, error } = await supabase
-        .from('anime_progress')
-        .select('anime_id, last_watched_episode, last_read_volume, last_read_chapter')
-        .eq('user_id', user.id);
-
-      if (error) {
-        console.error('Error fetching user progress:', error);
-        return;
-      }
-
-      const progressMap = new Map<string, UserProgress>();
-      data?.forEach((item) => {
-        progressMap.set(item.anime_id, {
-          last_watched_episode: item.last_watched_episode,
-          last_read_volume: item.last_read_volume,
-          last_read_chapter: item.last_read_chapter,
-        });
-      });
-      setUserProgressMap(progressMap);
-    };
-
-    fetchUserProgress();
-  }, [user]);
 
   const filteredAnime = useMemo(
     () => getFilteredAnime({ status: statusFilter, limit: resultLimit, sortBy: 'popularity' }),
@@ -164,7 +122,6 @@ const Index = () => {
                   key={anime.id} 
                   anime={anime} 
                   rank={!isSearching ? index + 1 : undefined}
-                  progress={userProgressMap.get(anime.id)}
                 />
               ))}
             </div>
