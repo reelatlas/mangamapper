@@ -140,7 +140,7 @@ export const ProgressTracker = ({ anime }: ProgressTrackerProps) => {
                 placeholder="—"
                 value={watchedEpisode}
                 onChange={(e) => setWatchedEpisode(e.target.value)}
-                className="font-mono text-sm border-dashed bg-muted/30 w-16 h-7"
+                className="font-mono text-sm border-dashed bg-muted/30 w-24 h-7"
               />
               <span className="text-muted-foreground text-xs">/{anime.totalEpisodes || anime.currentEpisode}</span>
             </div>
@@ -161,14 +161,16 @@ export const ProgressTracker = ({ anime }: ProgressTrackerProps) => {
                   placeholder="vol"
                   value={readVolume}
                   onChange={(e) => setReadVolume(e.target.value)}
-                  className="font-mono text-sm border-dashed bg-muted/30 w-16 h-7"
+                  className="font-mono text-sm border-dashed bg-muted/30 w-24 h-7"
                 />
                 <Input
                   id="readChapter"
+                  type="number"
+                  min="1"
                   placeholder="ch"
                   value={readChapter}
                   onChange={(e) => setReadChapter(e.target.value)}
-                  className="font-mono text-sm border-dashed bg-muted/30 w-16 h-7"
+                  className="font-mono text-sm border-dashed bg-muted/30 w-24 h-7"
                 />
               </div>
             </div>
