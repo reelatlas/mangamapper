@@ -1,0 +1,268 @@
+import { AnimeSeries } from '@/types/anime';
+
+export const mockAnimeData: AnimeSeries[] = [
+  {
+    id: 'one-piece',
+    title: 'One Piece',
+    japaneseTitle: 'ワンピース',
+    coverImage: 'https://cdn.myanimelist.net/images/anime/1244/138851.jpg',
+    currentEpisode: 1122,
+    totalEpisodes: null,
+    status: 'airing',
+    hasManga: true,
+    popularity: 1,
+    genres: ['Action', 'Adventure', 'Fantasy'],
+    synopsis: 'Monkey D. Luffy sets off on an adventure to find the One Piece treasure and become King of the Pirates.',
+    episodes: [
+      { number: 1122, title: 'The Island of New Beginnings', type: 'canon', mangaMapping: { volume: 108, chapters: '1092' }, airDate: '2024-12-15' },
+      { number: 1121, title: 'Gear Fifth Unleashed', type: 'canon', mangaMapping: { volume: 108, chapters: '1091' }, airDate: '2024-12-08' },
+      { number: 1120, title: 'The Climax of Egghead', type: 'canon', mangaMapping: { volume: 108, chapters: '1090' }, airDate: '2024-12-01' },
+      { number: 1119, title: 'Saturn\'s True Power', type: 'canon', mangaMapping: { volume: 107, chapters: '1088-1089' }, airDate: '2024-11-24' },
+      { number: 1118, title: 'A Navy Admiral\'s Resolve', type: 'canon', mangaMapping: { volume: 107, chapters: '1087' }, airDate: '2024-11-17' },
+    ]
+  },
+  {
+    id: 'jujutsu-kaisen',
+    title: 'Jujutsu Kaisen',
+    japaneseTitle: '呪術廻戦',
+    coverImage: 'https://cdn.myanimelist.net/images/anime/1792/138022.jpg',
+    currentEpisode: 47,
+    totalEpisodes: null,
+    status: 'airing',
+    hasManga: true,
+    popularity: 2,
+    genres: ['Action', 'Supernatural', 'School'],
+    synopsis: 'Yuji Itadori joins a secret organization of Jujutsu Sorcerers to kill a powerful Curse named Ryomen Sukuna.',
+    episodes: [
+      { number: 47, title: 'Shinjuku Showdown - Final', type: 'canon', mangaMapping: { volume: 25, chapters: '236' }, airDate: '2024-12-14' },
+      { number: 46, title: 'Domain Expansion: Unlimited Void', type: 'canon', mangaMapping: { volume: 25, chapters: '234-235' }, airDate: '2024-12-07' },
+      { number: 45, title: 'Gojo vs Sukuna Continues', type: 'canon', mangaMapping: { volume: 25, chapters: '232-233' }, airDate: '2024-11-30' },
+      { number: 44, title: 'The Strongest Clash', type: 'canon', mangaMapping: { volume: 24, chapters: '230-231' }, airDate: '2024-11-23' },
+      { number: 43, title: 'Bath', type: 'canon', mangaMapping: { volume: 24, chapters: '228-229' }, airDate: '2024-11-16' },
+    ]
+  },
+  {
+    id: 'my-hero-academia',
+    title: 'My Hero Academia',
+    japaneseTitle: '僕のヒーローアカデミア',
+    coverImage: 'https://cdn.myanimelist.net/images/anime/1908/135431.jpg',
+    currentEpisode: 153,
+    totalEpisodes: null,
+    status: 'airing',
+    hasManga: true,
+    popularity: 3,
+    genres: ['Action', 'Superhero', 'School'],
+    synopsis: 'In a world where most people have superpowers, Izuku Midoriya dreams of becoming a hero despite being born without one.',
+    episodes: [
+      { number: 153, title: 'Deku vs Shigaraki: Final Act', type: 'canon', mangaMapping: { volume: 40, chapters: '420-421' }, airDate: '2024-12-14' },
+      { number: 152, title: 'One For All: Full Power', type: 'canon', mangaMapping: { volume: 40, chapters: '418-419' }, airDate: '2024-12-07' },
+      { number: 151, title: 'The Heroes\' Last Stand', type: 'canon', mangaMapping: { volume: 39, chapters: '416-417' }, airDate: '2024-11-30' },
+      { number: 150, title: 'All For One Falls', type: 'canon', mangaMapping: { volume: 39, chapters: '414-415' }, airDate: '2024-11-23' },
+      { number: 149, title: 'The Weight of Legacy', type: 'canon', mangaMapping: { volume: 39, chapters: '412-413' }, airDate: '2024-11-16' },
+    ]
+  },
+  {
+    id: 'dragon-ball-daima',
+    title: 'Dragon Ball DAIMA',
+    japaneseTitle: 'ドラゴンボールダイマ',
+    coverImage: 'https://cdn.myanimelist.net/images/anime/1075/143876.jpg',
+    currentEpisode: 8,
+    totalEpisodes: 20,
+    status: 'airing',
+    hasManga: false,
+    popularity: 4,
+    genres: ['Action', 'Adventure', 'Fantasy'],
+    synopsis: 'Goku and his friends are turned into children by a mysterious wish and must journey to the Demon Realm.',
+    episodes: [
+      { number: 8, title: 'The Demon Realm Unveiled', type: 'anime-only-canon', mangaMapping: null, airDate: '2024-12-13' },
+      { number: 7, title: 'Mini Warriors Unite', type: 'anime-only-canon', mangaMapping: null, airDate: '2024-12-06' },
+      { number: 6, title: 'A New Transformation', type: 'anime-only-canon', mangaMapping: null, airDate: '2024-11-29' },
+      { number: 5, title: 'Journey Begins', type: 'anime-only-canon', mangaMapping: null, airDate: '2024-11-22' },
+      { number: 4, title: 'The Shrinking Wish', type: 'anime-only-canon', mangaMapping: null, airDate: '2024-11-15' },
+    ]
+  },
+  {
+    id: 'blue-lock',
+    title: 'Blue Lock',
+    japaneseTitle: 'ブルーロック',
+    coverImage: 'https://cdn.myanimelist.net/images/anime/1258/126929.jpg',
+    currentEpisode: 35,
+    totalEpisodes: null,
+    status: 'airing',
+    hasManga: true,
+    popularity: 5,
+    genres: ['Sports', 'Drama', 'Psychological'],
+    synopsis: 'Japan creates a radical program to forge the world\'s greatest egotist striker to win the World Cup.',
+    episodes: [
+      { number: 35, title: 'U-20 Match - Second Half', type: 'canon', mangaMapping: { volume: 14, chapters: '118-119' }, airDate: '2024-12-14' },
+      { number: 34, title: 'The Flow State', type: 'canon', mangaMapping: { volume: 14, chapters: '116-117' }, airDate: '2024-12-07' },
+      { number: 33, title: 'Isagi\'s Evolution', type: 'canon', mangaMapping: { volume: 13, chapters: '114-115' }, airDate: '2024-11-30' },
+      { number: 32, title: 'U-20 Showdown Begins', type: 'canon', mangaMapping: { volume: 13, chapters: '112-113' }, airDate: '2024-11-23' },
+      { number: 31, title: 'Before the Battle', type: 'canon', mangaMapping: { volume: 13, chapters: '110-111' }, airDate: '2024-11-16' },
+    ]
+  },
+  {
+    id: 'spy-x-family',
+    title: 'SPY×FAMILY',
+    japaneseTitle: 'SPY×FAMILY',
+    coverImage: 'https://cdn.myanimelist.net/images/anime/1441/122795.jpg',
+    currentEpisode: 37,
+    totalEpisodes: null,
+    status: 'airing',
+    hasManga: true,
+    popularity: 6,
+    genres: ['Action', 'Comedy', 'Slice of Life'],
+    synopsis: 'A spy, an assassin, and a telepath form a fake family, each hiding their true identities from each other.',
+    episodes: [
+      { number: 37, title: 'Operation Strix: New Mission', type: 'canon', mangaMapping: { volume: 12, chapters: '73' }, airDate: '2024-12-14' },
+      { number: 36, title: 'Anya\'s School Festival', type: 'canon', mangaMapping: { volume: 12, chapters: '71-72' }, airDate: '2024-12-07' },
+      { number: 35, title: 'Bond\'s Big Day', type: 'filler', mangaMapping: null, airDate: '2024-11-30' },
+      { number: 34, title: 'The Tennis Arc', type: 'canon', mangaMapping: { volume: 11, chapters: '69-70' }, airDate: '2024-11-23' },
+      { number: 33, title: 'Family Outing', type: 'canon', mangaMapping: { volume: 11, chapters: '67-68' }, airDate: '2024-11-16' },
+    ]
+  },
+  {
+    id: 'demon-slayer',
+    title: 'Demon Slayer: Kimetsu no Yaiba',
+    japaneseTitle: '鬼滅の刃',
+    coverImage: 'https://cdn.myanimelist.net/images/anime/1286/99889.jpg',
+    currentEpisode: 55,
+    totalEpisodes: null,
+    status: 'airing',
+    hasManga: true,
+    popularity: 7,
+    genres: ['Action', 'Supernatural', 'Historical'],
+    synopsis: 'Tanjiro Kamado joins the Demon Slayer Corps to avenge his family and cure his demon-turned sister.',
+    episodes: [
+      { number: 55, title: 'Hashira Training Arc Finale', type: 'canon', mangaMapping: { volume: 16, chapters: '136' }, airDate: '2024-12-15' },
+      { number: 54, title: 'The Pillars\' True Strength', type: 'canon', mangaMapping: { volume: 16, chapters: '134-135' }, airDate: '2024-12-08' },
+      { number: 53, title: 'Training with Sanemi', type: 'canon', mangaMapping: { volume: 15, chapters: '132-133' }, airDate: '2024-12-01' },
+      { number: 52, title: 'Mist Hashira\'s Guidance', type: 'canon', mangaMapping: { volume: 15, chapters: '130-131' }, airDate: '2024-11-24' },
+      { number: 51, title: 'A New Beginning', type: 'canon', mangaMapping: { volume: 15, chapters: '128-129' }, airDate: '2024-11-17' },
+    ]
+  },
+  {
+    id: 'black-clover',
+    title: 'Black Clover',
+    japaneseTitle: 'ブラッククローバー',
+    coverImage: 'https://cdn.myanimelist.net/images/anime/2/88336.jpg',
+    currentEpisode: 170,
+    totalEpisodes: 170,
+    status: 'completed',
+    hasManga: true,
+    popularity: 8,
+    genres: ['Action', 'Fantasy', 'Magic'],
+    synopsis: 'Asta, born without magic in a world where it\'s everything, dreams of becoming the Wizard King.',
+    episodes: [
+      { number: 170, title: 'The Spade Kingdom Assault', type: 'canon', mangaMapping: { volume: 27, chapters: '272-274' }, airDate: '2021-03-30' },
+      { number: 169, title: 'The Devil\'s Power', type: 'canon', mangaMapping: { volume: 27, chapters: '270-271' }, airDate: '2021-03-23' },
+      { number: 168, title: 'Bonds of Trust', type: 'filler', mangaMapping: null, airDate: '2021-03-16' },
+      { number: 167, title: 'Black Bulls United', type: 'canon', mangaMapping: { volume: 26, chapters: '268-269' }, airDate: '2021-03-09' },
+      { number: 166, title: 'Captain Yami\'s Stand', type: 'canon', mangaMapping: { volume: 26, chapters: '266-267' }, airDate: '2021-03-02' },
+    ]
+  },
+  {
+    id: 'chainsaw-man',
+    title: 'Chainsaw Man',
+    japaneseTitle: 'チェンソーマン',
+    coverImage: 'https://cdn.myanimelist.net/images/anime/1806/126216.jpg',
+    currentEpisode: 12,
+    totalEpisodes: 12,
+    status: 'completed',
+    hasManga: true,
+    popularity: 9,
+    genres: ['Action', 'Horror', 'Supernatural'],
+    synopsis: 'Denji, a young devil hunter, merges with his pet devil Pochita to become Chainsaw Man.',
+    episodes: [
+      { number: 12, title: 'Katana vs. Chainsaw', type: 'canon', mangaMapping: { volume: 4, chapters: '37-38' }, airDate: '2022-12-27' },
+      { number: 11, title: 'Mission Start', type: 'canon', mangaMapping: { volume: 4, chapters: '35-36' }, airDate: '2022-12-20' },
+      { number: 10, title: 'Bruised & Battered', type: 'canon', mangaMapping: { volume: 4, chapters: '33-34' }, airDate: '2022-12-13' },
+      { number: 9, title: 'From Kyoto', type: 'canon', mangaMapping: { volume: 3, chapters: '30-32' }, airDate: '2022-12-06' },
+      { number: 8, title: 'Gunfire', type: 'canon', mangaMapping: { volume: 3, chapters: '27-29' }, airDate: '2022-11-29' },
+    ]
+  },
+  {
+    id: 'dandadan',
+    title: 'DAN DA DAN',
+    japaneseTitle: 'ダンダダン',
+    coverImage: 'https://cdn.myanimelist.net/images/anime/1150/141957.jpg',
+    currentEpisode: 11,
+    totalEpisodes: 12,
+    status: 'airing',
+    hasManga: true,
+    popularity: 10,
+    genres: ['Action', 'Comedy', 'Supernatural'],
+    synopsis: 'A high school girl who believes in ghosts and a boy who believes in aliens team up after encountering the supernatural.',
+    episodes: [
+      { number: 11, title: 'Turbo Granny\'s Return', type: 'canon', mangaMapping: { volume: 3, chapters: '23-24' }, airDate: '2024-12-12' },
+      { number: 10, title: 'The Acrobatic Silky', type: 'canon', mangaMapping: { volume: 3, chapters: '21-22' }, airDate: '2024-12-05' },
+      { number: 9, title: 'Dover Demon Attack', type: 'canon', mangaMapping: { volume: 2, chapters: '19-20' }, airDate: '2024-11-28' },
+      { number: 8, title: 'Alien X Files', type: 'canon', mangaMapping: { volume: 2, chapters: '17-18' }, airDate: '2024-11-21' },
+      { number: 7, title: 'Serpo Connection', type: 'canon', mangaMapping: { volume: 2, chapters: '15-16' }, airDate: '2024-11-14' },
+    ]
+  },
+  {
+    id: 'naruto',
+    title: 'Naruto',
+    japaneseTitle: 'ナルト',
+    coverImage: 'https://cdn.myanimelist.net/images/anime/1141/142503.jpg',
+    currentEpisode: 220,
+    totalEpisodes: 220,
+    status: 'completed',
+    hasManga: true,
+    popularity: 11,
+    genres: ['Action', 'Adventure', 'Martial Arts'],
+    synopsis: 'Naruto Uzumaki, a young ninja who seeks recognition from his peers and dreams of becoming the Hokage.',
+    episodes: [
+      { number: 220, title: 'Departure', type: 'filler', mangaMapping: null, airDate: '2007-02-08' },
+      { number: 219, title: 'The Ultimate Weapon Reborn', type: 'filler', mangaMapping: null, airDate: '2007-02-01' },
+      { number: 135, title: 'The Promise That Could Not Be Kept', type: 'canon', mangaMapping: { volume: 27, chapters: '234-238' }, airDate: '2005-07-13' },
+      { number: 134, title: 'The End of Tears', type: 'canon', mangaMapping: { volume: 27, chapters: '231-233' }, airDate: '2005-07-06' },
+      { number: 133, title: 'A Plea from a Friend', type: 'canon', mangaMapping: { volume: 26, chapters: '228-230' }, airDate: '2005-06-29' },
+    ]
+  },
+  {
+    id: 'bleach-tybw',
+    title: 'Bleach: Thousand-Year Blood War',
+    japaneseTitle: 'BLEACH 千年血戦篇',
+    coverImage: 'https://cdn.myanimelist.net/images/anime/1908/135431.jpg',
+    currentEpisode: 39,
+    totalEpisodes: null,
+    status: 'airing',
+    hasManga: true,
+    popularity: 12,
+    genres: ['Action', 'Supernatural', 'Adventure'],
+    synopsis: 'Ichigo Kurosaki faces the Wandenreich, a hidden empire of Quincies, in the final arc of Bleach.',
+    episodes: [
+      { number: 39, title: 'The Final Battle Begins', type: 'canon', mangaMapping: { volume: 68, chapters: '630-632' }, airDate: '2024-12-14' },
+      { number: 38, title: 'Quincy Blood War', type: 'canon', mangaMapping: { volume: 68, chapters: '627-629' }, airDate: '2024-12-07' },
+      { number: 37, title: 'Ichigo\'s New Bankai', type: 'canon', mangaMapping: { volume: 67, chapters: '624-626' }, airDate: '2024-11-30' },
+      { number: 36, title: 'Soul Society Falls', type: 'canon', mangaMapping: { volume: 67, chapters: '621-623' }, airDate: '2024-11-23' },
+      { number: 35, title: 'The Zero Division', type: 'canon', mangaMapping: { volume: 66, chapters: '618-620' }, airDate: '2024-11-16' },
+    ]
+  },
+];
+
+export const getTopAiringAnime = (count: number = 10): AnimeSeries[] => {
+  return mockAnimeData
+    .filter(anime => anime.status === 'airing')
+    .sort((a, b) => a.popularity - b.popularity)
+    .slice(0, count);
+};
+
+export const searchAnime = (query: string): AnimeSeries[] => {
+  const lowercaseQuery = query.toLowerCase();
+  return mockAnimeData.filter(anime =>
+    anime.title.toLowerCase().includes(lowercaseQuery) ||
+    anime.japaneseTitle.includes(query) ||
+    anime.genres.some(genre => genre.toLowerCase().includes(lowercaseQuery))
+  );
+};
+
+export const getAnimeById = (id: string): AnimeSeries | undefined => {
+  return mockAnimeData.find(anime => anime.id === id);
+};
+
+export const getAllAnime = (): AnimeSeries[] => {
+  return mockAnimeData.sort((a, b) => a.popularity - b.popularity);
+};
