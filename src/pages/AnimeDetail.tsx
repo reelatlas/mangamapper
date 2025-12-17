@@ -6,7 +6,7 @@ import { ProgressTracker } from '@/components/ProgressTracker';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { getAnimeById } from '@/data/mockAnime';
-import { Calendar, Play, BookOpen } from 'lucide-react';
+import { Play, BookOpen } from 'lucide-react';
 
 const AnimeDetail = () => {
   const { id } = useParams<{ id: string }>();
@@ -177,9 +177,8 @@ const AnimeDetail = () => {
 
         {/* Episodes list */}
         <Card className="border-dashed">
-          <div className="terminal-header flex items-center gap-2">
-            <Calendar className="w-3.5 h-3.5 text-primary" />
-            <span className="text-muted-foreground">episodes_list</span>
+          <div className="terminal-header">
+            <span className="text-muted-foreground">episode_list</span>
           </div>
           <CardContent className="p-4">
             <div className="space-y-2">
