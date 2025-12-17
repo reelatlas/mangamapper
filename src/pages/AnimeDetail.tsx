@@ -6,7 +6,7 @@ import { ProgressTracker } from '@/components/ProgressTracker';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { getAnimeById } from '@/data/mockAnime';
-import { Play, BookOpen, Tv } from 'lucide-react';
+import { Play, BookOpen, Tv, ArrowLeft } from 'lucide-react';
 
 const AnimeDetail = () => {
   const { id } = useParams<{ id: string }>();
@@ -24,8 +24,8 @@ const AnimeDetail = () => {
               <span className="text-syntax-green">anime_not_found</span>
             </p>
             <Button asChild className="border-dashed text-xs">
-              <Link to="/">
-                ← back_to_home
+              <Link to="/" className="flex items-center gap-1.5">
+                <ArrowLeft className="w-3.5 h-3.5" /> back_to_home
               </Link>
             </Button>
           </div>
@@ -45,8 +45,8 @@ const AnimeDetail = () => {
       <main className="container py-8">
         {/* Back button */}
         <Button variant="ghost" size="sm" asChild className="mb-6 text-xs">
-          <Link to="/" className="flex items-center gap-2">
-            ← back_to_home
+          <Link to="/" className="flex items-center gap-1.5">
+            <ArrowLeft className="w-3.5 h-3.5" /> back_to_home
           </Link>
         </Button>
 
