@@ -2,12 +2,12 @@ import { useState, useCallback, useMemo, useEffect } from 'react';
 import { Header } from '@/components/Header';
 import { SearchBar } from '@/components/SearchBar';
 import { AnimeCard } from '@/components/AnimeCard';
-import { SourceFilter } from '@/components/SourceFilter';
-import { getTopAiringAnime, searchAnime } from '@/data/mockAnime';
-import { AnimeSeries, StreamingService, STREAMING_SERVICES } from '@/types/anime';
-import { TrendingUp } from 'lucide-react';
+import { getFilteredAnime, searchAnime, StatusFilter, SortBy } from '@/data/mockAnime';
+import { AnimeSeries } from '@/types/anime';
+import { TrendingUp, Filter } from 'lucide-react';
 import { useAuth } from '@/hooks/useAuth';
 import { supabase } from '@/integrations/supabase/client';
+import { Button } from '@/components/ui/button';
 
 interface UserProgress {
   last_watched_episode: number | null;
@@ -18,7 +18,9 @@ interface UserProgress {
 const Index = () => {
   const [searchQuery, setSearchQuery] = useState('');
   const [searchResults, setSearchResults] = useState<AnimeSeries[]>([]);
-  const [streamingService, setStreamingService] = useState<StreamingService>('all');
+  const [statusFilter, setStatusFilter] = useState<StatusFilter>('airing');
+  const [resultLimit, setResultLimit] = useState<number>(10);
+  const [sortBy, setSortBy] = useState<SortBy>('popularity');
   const [userProgressMap, setUserProgressMap] = useState<Map<string, UserProgress>>(new Map());
   const { user } = useAuth();
 
@@ -54,9 +56,9 @@ const Index = () => {
     fetchUserProgress();
   }, [user]);
 
-  const topAnime = useMemo(
-    () => getTopAiringAnime(10, 'anilist', streamingService),
-    [streamingService]
+  const filteredAnime = useMemo(
+    () => getFilteredAnime({ status: statusFilter, limit: resultLimit, sortBy }),
+    [statusFilter, resultLimit, sortBy]
   );
 
   const handleSearch = useCallback((query: string) => {
@@ -69,9 +71,7 @@ const Index = () => {
   }, []);
 
   const isSearching = searchQuery.trim().length > 0;
-  const displayedAnime = isSearching ? searchResults : topAnime;
-
-  const streamingServiceLabel = STREAMING_SERVICES.find(s => s.value === streamingService)?.label;
+  const displayedAnime = isSearching ? searchResults : filteredAnime;
 
   return (
     <div className="min-h-screen bg-background font-mono">
@@ -100,13 +100,77 @@ const Index = () => {
           />
         </section>
 
-        {/* Source filters */}
+        {/* Filters */}
         {!isSearching && (
           <section className="mb-6">
-            <SourceFilter
-              streamingService={streamingService}
-              onStreamingServiceChange={setStreamingService}
-            />
+            <div className="flex flex-wrap items-center gap-4">
+              {/* Status filter */}
+              <div className="flex items-center gap-3">
+                <div className="flex items-center gap-2 text-xs text-muted-foreground">
+                  <Filter className="w-3.5 h-3.5" />
+                  <span>--status</span>
+                </div>
+                <div className="flex gap-2">
+                  <Button
+                    variant={statusFilter === 'airing' ? 'default' : 'outline'}
+                    size="sm"
+                    onClick={() => setStatusFilter('airing')}
+                    className="font-mono text-xs border-dashed"
+                  >
+                    [AIRING]
+                  </Button>
+                  <Button
+                    variant={statusFilter === 'completed' ? 'default' : 'outline'}
+                    size="sm"
+                    onClick={() => setStatusFilter('completed')}
+                    className="font-mono text-xs border-dashed"
+                  >
+                    [COMPLETE]
+                  </Button>
+                </div>
+              </div>
+
+              {/* Limit filter */}
+              <div className="flex items-center gap-3">
+                <span className="text-xs text-muted-foreground">--limit</span>
+                <div className="flex gap-2">
+                  {[10, 50, 100].map((limit) => (
+                    <Button
+                      key={limit}
+                      variant={resultLimit === limit ? 'default' : 'outline'}
+                      size="sm"
+                      onClick={() => setResultLimit(limit)}
+                      className="font-mono text-xs border-dashed"
+                    >
+                      [{limit}]
+                    </Button>
+                  ))}
+                </div>
+              </div>
+
+              {/* Sort filter */}
+              <div className="flex items-center gap-3">
+                <span className="text-xs text-muted-foreground">--sort</span>
+                <div className="flex gap-2">
+                  <Button
+                    variant={sortBy === 'popularity' ? 'default' : 'outline'}
+                    size="sm"
+                    onClick={() => setSortBy('popularity')}
+                    className="font-mono text-xs border-dashed"
+                  >
+                    [POPULARITY]
+                  </Button>
+                  <Button
+                    variant={sortBy === 'release_date' ? 'default' : 'outline'}
+                    size="sm"
+                    onClick={() => setSortBy('release_date')}
+                    className="font-mono text-xs border-dashed"
+                  >
+                    [RELEASE]
+                  </Button>
+                </div>
+              </div>
+            </div>
           </section>
         )}
 
@@ -118,9 +182,7 @@ const Index = () => {
             <span>
               {isSearching 
                 ? <><span className="text-syntax-cyan">search_results</span><span className="text-muted-foreground">.length</span> = <span className="text-syntax-amber">{searchResults.length}</span></>
-                : streamingService === 'all' 
-                  ? <><span className="text-syntax-cyan">top_airing</span></>
-                  : <><span className="text-syntax-cyan">top_airing</span><span className="text-muted-foreground"> · </span><span className="text-syntax-amber">{streamingServiceLabel}</span></>
+                : <><span className="text-syntax-cyan">results</span><span className="text-muted-foreground">.length</span> = <span className="text-syntax-amber">{displayedAnime.length}</span></>
               }
             </span>
           </div>
@@ -142,7 +204,7 @@ const Index = () => {
                 <span className="text-syntax-cyan">// </span>
                 {isSearching 
                   ? `no results matching "${searchQuery}"`
-                  : `no anime available on ${streamingServiceLabel}`
+                  : 'no anime found'
                 }
               </p>
             </div>
