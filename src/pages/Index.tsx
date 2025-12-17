@@ -85,21 +85,8 @@ const Index = () => {
           <span className="text-syntax-cyan">home</span>
         </div>
 
-        {/* Hero section */}
-        <section className="text-center mb-10">
-          <div className="mb-4">
-            <pre className="text-2xl sm:text-3xl font-bold text-foreground inline-block">
-              <span className="text-primary">find</span>
-              <span className="text-muted-foreground">:</span>
-              <span className="text-syntax-green"> manga_chapter</span>
-            </pre>
-          </div>
-          
-          <p className="text-sm text-muted-foreground max-w-xl mx-auto mb-8">
-            <span className="text-syntax-cyan">// </span>
-            show manga volume and chapter for anime episode
-          </p>
-          
+        {/* Search section */}
+        <section className="mb-10">
           <SearchBar 
             onSearch={handleSearch}
             placeholder="$ search --title 'anime name'"

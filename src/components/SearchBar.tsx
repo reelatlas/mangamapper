@@ -34,7 +34,7 @@ export const SearchBar = ({ onSearch, placeholder = "Search anime...", className
       className
     )}>
       <div className={cn(
-        "relative flex items-center rounded-lg border bg-card transition-all duration-200",
+        "relative flex items-center rounded-full border bg-card transition-all duration-200",
         isFocused ? "border-primary shadow-md ring-2 ring-primary/20" : "border-border"
       )}>
         <Search className="absolute left-3 w-5 h-5 text-muted-foreground" />
