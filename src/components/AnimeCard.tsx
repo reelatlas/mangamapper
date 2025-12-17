@@ -84,6 +84,16 @@ export const AnimeCard = ({ anime, rank, progress }: AnimeCardProps) => {
 
               {/* Bottom section - Progress and episode (pushed to bottom) */}
               <div className="mt-auto pt-2 space-y-3">
+                {/* Current episode mapping */}
+                {currentEpisode && (
+                  <div>
+                    <p className="text-[10px] text-muted-foreground tracking-wider mb-2">
+                      // last_episode
+                    </p>
+                    <MangaMappingDisplay episode={currentEpisode} />
+                  </div>
+                )}
+
                 {/* User progress section */}
                 {hasProgress && (
                   <div>
@@ -120,16 +130,6 @@ export const AnimeCard = ({ anime, rank, progress }: AnimeCardProps) => {
                         </span>
                       )}
                     </div>
-                  </div>
-                )}
-
-                {/* Current episode mapping */}
-                {currentEpisode && (
-                  <div>
-                    <p className="text-[10px] text-muted-foreground tracking-wider mb-2">
-                      // last_episode
-                    </p>
-                    <MangaMappingDisplay episode={currentEpisode} />
                   </div>
                 )}
               </div>
