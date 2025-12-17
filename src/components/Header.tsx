@@ -18,9 +18,9 @@ export const Header = () => {
       <div className="container flex h-14 items-center justify-between">
         <Link to="/" className="flex items-center gap-1.5 hover:opacity-80 transition-opacity">
           <Terminal className="w-4 h-4 text-muted-foreground" />
-          <span className="text-sm tracking-tight">
-            <span className="text-primary font-medium">manga</span>
-            <span className="text-muted-foreground font-normal">Mapper</span>
+          <span className="text-sm tracking-tight text-primary">
+            <span className="font-medium">manga</span>
+            <span className="font-normal">Mapper</span>
           </span>
         </Link>
 
