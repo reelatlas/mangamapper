@@ -45,7 +45,7 @@ export const AnimeCard = ({ anime, rank, progress }: AnimeCardProps) => {
           </span>
         </div>
         <CardContent className="p-0">
-          <div className="flex flex-col sm:flex-row sm:h-[280px]">
+          <div className="flex flex-col sm:flex-row sm:h-[240px]">
             {/* Cover Image */}
             <div className="relative w-full sm:w-44 h-44 sm:h-full shrink-0 overflow-hidden border-b sm:border-b-0 sm:border-r border-dashed">
               <img
@@ -83,7 +83,7 @@ export const AnimeCard = ({ anime, rank, progress }: AnimeCardProps) => {
               </div>
 
               {/* Bottom section - Progress and episode (pushed to bottom) */}
-              <div className="mt-auto space-y-3">
+              <div className="mt-auto pt-2 space-y-3">
                 {/* User progress section */}
                 {hasProgress && (
                   <div>
