@@ -33,13 +33,13 @@ export const Header = () => {
           <Button variant="ghost" size="sm" asChild className="font-mono text-xs">
             <Link to="/" className="flex items-center gap-1.5">
               <Home className="w-3.5 h-3.5" />
-              <span className="hidden sm:inline">/home</span>
+              <span className="hidden sm:inline">home</span>
             </Link>
           </Button>
           <Button variant="ghost" size="sm" asChild className="font-mono text-xs">
             <Link to="/search" className="flex items-center gap-1.5">
               <Search className="w-3.5 h-3.5" />
-              <span className="hidden sm:inline">/search</span>
+              <span className="hidden sm:inline">search</span>
             </Link>
           </Button>
           
@@ -48,7 +48,7 @@ export const Header = () => {
               <Button variant="ghost" size="sm" asChild className="font-mono text-xs">
                 <Link to="/library" className="flex items-center gap-1.5">
                   <Library className="w-3.5 h-3.5" />
-                  <span className="hidden sm:inline">/library</span>
+                  <span className="hidden sm:inline">library</span>
                 </Link>
               </Button>
               <DropdownMenu>
