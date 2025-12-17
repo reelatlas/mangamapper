@@ -32,15 +32,15 @@ export const AnimeCard = ({ anime, rank }: AnimeCardProps) => {
           </span>
         </div>
         <CardContent className="p-0">
-          <div className="flex flex-col sm:flex-row sm:h-[200px]">
+          <div className="flex flex-col sm:flex-row sm:h-[240px]">
             {/* Cover Image */}
-            <div className="relative w-full sm:w-44 h-44 sm:h-full shrink-0 overflow-hidden border-b sm:border-b-0 sm:border-r border-dashed bg-muted/30 flex items-center justify-center">
+            <div className="relative w-full sm:w-44 h-44 sm:h-full shrink-0 overflow-hidden border-b sm:border-b-0 sm:border-r border-dashed">
               <img
                 src={anime.coverImage}
                 alt={anime.title}
-                className="max-w-full max-h-full object-contain opacity-90 group-hover:opacity-100 transition-opacity duration-500"
+                className="w-full h-full object-cover opacity-90 group-hover:opacity-100 transition-opacity duration-500"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-background/20 to-transparent sm:bg-gradient-to-r pointer-events-none" />
+              <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-background/20 to-transparent sm:bg-gradient-to-r" />
             </div>
 
             {/* Content */}
