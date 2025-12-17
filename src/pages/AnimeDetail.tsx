@@ -25,7 +25,7 @@ const AnimeDetail = () => {
             </p>
             <Button asChild className="border-dashed text-xs">
               <Link to="/">
-                {'<'}- back_to_home
+                ← back_to_home
               </Link>
             </Button>
           </div>
@@ -46,7 +46,7 @@ const AnimeDetail = () => {
         {/* Back button */}
         <Button variant="ghost" size="sm" asChild className="mb-6 text-xs">
           <Link to="/" className="flex items-center gap-2">
-            {'<'}- back_to_home
+            ← back_to_home
           </Link>
         </Button>
 
