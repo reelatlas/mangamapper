@@ -3,26 +3,13 @@ import { Card, CardContent } from '@/components/ui/card';
 import { MangaMappingDisplay } from './MangaMappingDisplay';
 import { Link } from 'react-router-dom';
 
-interface UserProgress {
-  last_watched_episode: number | null;
-  last_read_volume: number | null;
-  last_read_chapter: string | null;
-}
-
 interface AnimeCardProps {
   anime: AnimeSeries;
   rank?: number;
-  progress?: UserProgress;
 }
 
-export const AnimeCard = ({ anime, rank, progress }: AnimeCardProps) => {
+export const AnimeCard = ({ anime, rank }: AnimeCardProps) => {
   const currentEpisode = anime.episodes[0]; // Most recent episode
-  
-  const hasProgress = progress && (
-    progress.last_watched_episode !== null || 
-    progress.last_read_volume !== null || 
-    progress.last_read_chapter !== null
-  );
 
   return (
     <Link to={`/anime/${anime.id}`}>
@@ -82,47 +69,8 @@ export const AnimeCard = ({ anime, rank, progress }: AnimeCardProps) => {
                 </div>
               </div>
 
-              {/* Bottom section - Progress and last episode (pushed to bottom) */}
-              <div className="mt-auto pt-2 space-y-3">
-                {/* User progress */}
-                {hasProgress && (
-                  <div>
-                    <p className="text-[10px] text-muted-foreground mb-1 tracking-wider">
-                      // your_progress
-                    </p>
-                    <div className="flex gap-6 text-xs">
-                      {progress.last_watched_episode !== null && (
-                        <span>
-                          <span className="text-muted-foreground">ep</span>
-                          <span className="text-muted-foreground">:</span>
-                          <span className="text-foreground">{progress.last_watched_episode}</span>
-                        </span>
-                      )}
-                      {(progress.last_read_volume !== null || progress.last_read_chapter !== null) && (
-                        <span>
-                          {progress.last_read_volume !== null && (
-                            <>
-                              <span className="text-muted-foreground">vol</span>
-                              <span className="text-muted-foreground">:</span>
-                              <span className="text-foreground">{progress.last_read_volume}</span>
-                            </>
-                          )}
-                          {progress.last_read_volume !== null && progress.last_read_chapter !== null && (
-                            <span className="text-muted-foreground"> · </span>
-                          )}
-                          {progress.last_read_chapter !== null && (
-                            <>
-                              <span className="text-muted-foreground">ch</span>
-                              <span className="text-muted-foreground">:</span>
-                              <span className="text-foreground">{progress.last_read_chapter}</span>
-                            </>
-                          )}
-                        </span>
-                      )}
-                    </div>
-                  </div>
-                )}
-
+              {/* Bottom section - Last episode (pushed to bottom) */}
+              <div className="mt-auto pt-2">
                 {/* Last episode */}
                 {currentEpisode && (
                   <div>
