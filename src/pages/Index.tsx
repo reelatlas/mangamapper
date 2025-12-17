@@ -2,7 +2,7 @@ import { useState, useCallback, useMemo, useEffect } from 'react';
 import { Header } from '@/components/Header';
 import { SearchBar } from '@/components/SearchBar';
 import { AnimeCard } from '@/components/AnimeCard';
-import { getFilteredAnime, searchAnime, StatusFilter, SortBy } from '@/data/mockAnime';
+import { getFilteredAnime, searchAnime, StatusFilter } from '@/data/mockAnime';
 import { AnimeSeries } from '@/types/anime';
 import { TrendingUp, Filter, Home } from 'lucide-react';
 import { useAuth } from '@/hooks/useAuth';
@@ -20,7 +20,6 @@ const Index = () => {
   const [searchResults, setSearchResults] = useState<AnimeSeries[]>([]);
   const [statusFilter, setStatusFilter] = useState<StatusFilter>('airing');
   const [resultLimit, setResultLimit] = useState<number>(10);
-  const [sortBy, setSortBy] = useState<SortBy>('popularity');
   const [userProgressMap, setUserProgressMap] = useState<Map<string, UserProgress>>(new Map());
   const { user } = useAuth();
 
@@ -57,8 +56,8 @@ const Index = () => {
   }, [user]);
 
   const filteredAnime = useMemo(
-    () => getFilteredAnime({ status: statusFilter, limit: resultLimit, sortBy }),
-    [statusFilter, resultLimit, sortBy]
+    () => getFilteredAnime({ status: statusFilter, limit: resultLimit, sortBy: 'popularity' }),
+    [statusFilter, resultLimit]
   );
 
   const handleSearch = useCallback((query: string) => {
@@ -139,29 +138,6 @@ const Index = () => {
                       {limit}
                     </Button>
                   ))}
-                </div>
-              </div>
-
-              {/* Sort filter */}
-              <div className="flex items-center gap-3">
-                <span className="text-xs text-muted-foreground">--sort</span>
-                <div className="flex gap-2">
-                  <Button
-                    variant={sortBy === 'popularity' ? 'default' : 'outline'}
-                    size="sm"
-                    onClick={() => setSortBy('popularity')}
-                    className="font-mono text-xs border-dashed"
-                  >
-                    popularity
-                  </Button>
-                  <Button
-                    variant={sortBy === 'release_date' ? 'default' : 'outline'}
-                    size="sm"
-                    onClick={() => setSortBy('release_date')}
-                    className="font-mono text-xs border-dashed"
-                  >
-                    release
-                  </Button>
                 </div>
               </div>
             </div>
