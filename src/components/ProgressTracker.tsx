@@ -143,19 +143,21 @@ export const ProgressTracker = ({ anime }: ProgressTrackerProps) => {
             <Tv className="w-3.5 h-3.5 text-primary" />
             <span className="text-syntax-cyan">last_watched</span>
           </div>
-          <div className="flex items-center gap-2 pl-5">
-            <span className="text-muted-foreground text-xs">episode:</span>
-            <Input
-              id="watchedEpisode"
-              type="number"
-              min="1"
-              max={anime.totalEpisodes || anime.currentEpisode}
-              placeholder="—"
-              value={watchedEpisode}
-              onChange={(e) => setWatchedEpisode(e.target.value)}
-              className="font-mono text-sm border-dashed bg-muted/30 w-20 h-7"
-            />
-            <span className="text-muted-foreground text-xs">/{anime.totalEpisodes || anime.currentEpisode}</span>
+          <div className="pl-5">
+            <span className="text-muted-foreground text-xs block mb-1">episode</span>
+            <div className="flex items-center gap-2">
+              <Input
+                id="watchedEpisode"
+                type="number"
+                min="1"
+                max={anime.totalEpisodes || anime.currentEpisode}
+                placeholder="—"
+                value={watchedEpisode}
+                onChange={(e) => setWatchedEpisode(e.target.value)}
+                className="font-mono text-sm border-dashed bg-muted/30 w-20 h-7"
+              />
+              <span className="text-muted-foreground text-xs">/{anime.totalEpisodes || anime.currentEpisode}</span>
+            </div>
           </div>
         </div>
 
@@ -166,9 +168,9 @@ export const ProgressTracker = ({ anime }: ProgressTrackerProps) => {
               <BookOpen className="w-3.5 h-3.5 text-primary" />
               <span className="text-syntax-cyan">last_read</span>
             </div>
-            <div className="flex items-center gap-3 pl-5">
-              <div className="flex items-center gap-2">
-                <span className="text-muted-foreground text-xs">vol:</span>
+            <div className="flex items-center gap-4 pl-5">
+              <div>
+                <span className="text-muted-foreground text-xs block mb-1">vol</span>
                 <Input
                   id="readVolume"
                   type="number"
@@ -179,8 +181,8 @@ export const ProgressTracker = ({ anime }: ProgressTrackerProps) => {
                   className="font-mono text-sm border-dashed bg-muted/30 w-16 h-7"
                 />
               </div>
-              <div className="flex items-center gap-2">
-                <span className="text-muted-foreground text-xs">ch:</span>
+              <div>
+                <span className="text-muted-foreground text-xs block mb-1">ch</span>
                 <Input
                   id="readChapter"
                   type="number"
