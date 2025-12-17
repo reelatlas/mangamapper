@@ -348,7 +348,7 @@ const Library = () => {
                   {/* Series assignment section */}
                   <div className="border-t border-dashed pt-4 mt-4">
                     <p className="text-xs mb-3">
-                      <span className="text-syntax-cyan">assign to series</span>
+                      <span className="text-syntax-cyan">assign_to</span>
                       <span className="text-muted-foreground"> // optional</span>
                     </p>
                     <div className="space-y-3">
@@ -412,7 +412,7 @@ const Library = () => {
                         className="text-xs border-dashed"
                       >
                         <Plus className="w-3.5 h-3.5 mr-1" />
-                        add another series
+                        add_another
                       </Button>
                     </div>
                   </div>
