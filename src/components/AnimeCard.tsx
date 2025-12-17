@@ -23,9 +23,9 @@ export const AnimeCard = ({ anime, rank }: AnimeCardProps) => {
           </span>
           <span className="text-muted-foreground">
             {anime.status === 'airing' ? (
-              <span className="text-accent">[AIRING]</span>
+              <span className="text-accent">AIRING</span>
             ) : (
-              <span>[COMPLETE]</span>
+              <span>COMPLETE</span>
             )}
           </span>
         </div>
@@ -47,28 +47,27 @@ export const AnimeCard = ({ anime, rank }: AnimeCardProps) => {
 
             {/* Content */}
             <div className="flex-1 p-4 flex flex-col gap-3 font-mono">
-              {/* JSON-like structure */}
+              {/* Data structure */}
               <div className="space-y-1 text-sm">
                 <div>
-                  <span className="text-syntax-cyan">"title"</span>
+                  <span className="text-syntax-cyan">title</span>
                   <span className="text-muted-foreground">: </span>
-                  <span className="text-syntax-green">"{anime.title}"</span>
+                  <span className="text-syntax-green">{anime.title}</span>
                 </div>
                 <div>
-                  <span className="text-syntax-cyan">"title_jp"</span>
+                  <span className="text-syntax-cyan">title_jp</span>
                   <span className="text-muted-foreground">: </span>
-                  <span className="text-syntax-green text-xs">"{anime.japaneseTitle}"</span>
+                  <span className="text-syntax-green text-xs">{anime.japaneseTitle}</span>
                 </div>
                 <div>
-                  <span className="text-syntax-cyan">"genres"</span>
-                  <span className="text-muted-foreground">: [</span>
+                  <span className="text-syntax-cyan">genres</span>
+                  <span className="text-muted-foreground">: </span>
                   {anime.genres.slice(0, 3).map((genre, i) => (
                     <span key={genre}>
-                      <span className="text-syntax-amber">"{genre}"</span>
+                      <span className="text-syntax-amber">{genre}</span>
                       {i < Math.min(anime.genres.length, 3) - 1 && <span className="text-muted-foreground">, </span>}
                     </span>
                   ))}
-                  <span className="text-muted-foreground">]</span>
                 </div>
               </div>
 

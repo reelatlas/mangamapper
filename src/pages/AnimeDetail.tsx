@@ -21,7 +21,7 @@ const AnimeDetail = () => {
             <p className="text-destructive text-sm mb-4">
               <span className="text-syntax-cyan">error</span>
               <span className="text-muted-foreground">: </span>
-              <span className="text-syntax-green">"anime_not_found"</span>
+              <span className="text-syntax-green">anime_not_found</span>
             </p>
             <Button asChild className="border-dashed text-xs">
               <Link to="/">
@@ -70,9 +70,9 @@ const AnimeDetail = () => {
                 <div className="absolute bottom-3 left-3 right-3">
                   <span className="text-xs border px-2 py-1 bg-background/80">
                     {anime.status === 'airing' ? (
-                      <span className="text-accent">[AIRING]</span>
+                      <span className="text-accent">AIRING</span>
                     ) : (
-                      <span className="text-muted-foreground">[COMPLETE]</span>
+                      <span className="text-muted-foreground">COMPLETE</span>
                     )}
                   </span>
                 </div>
@@ -88,31 +88,30 @@ const AnimeDetail = () => {
               </div>
               <CardContent className="p-4 space-y-3 text-sm">
                 <div>
-                  <span className="text-syntax-cyan">"title"</span>
+                  <span className="text-syntax-cyan">title</span>
                   <span className="text-muted-foreground">: </span>
-                  <span className="text-syntax-green text-lg">"{anime.title}"</span>
+                  <span className="text-syntax-green text-lg">{anime.title}</span>
                 </div>
                 <div>
-                  <span className="text-syntax-cyan">"title_jp"</span>
+                  <span className="text-syntax-cyan">title_jp</span>
                   <span className="text-muted-foreground">: </span>
-                  <span className="text-syntax-green">"{anime.japaneseTitle}"</span>
+                  <span className="text-syntax-green">{anime.japaneseTitle}</span>
                 </div>
                 <div>
-                  <span className="text-syntax-cyan">"genres"</span>
-                  <span className="text-muted-foreground">: [</span>
+                  <span className="text-syntax-cyan">genres</span>
+                  <span className="text-muted-foreground">: </span>
                   {anime.genres.map((genre, i) => (
                     <span key={genre}>
-                      <span className="text-syntax-amber">"{genre}"</span>
+                      <span className="text-syntax-amber">{genre}</span>
                       {i < anime.genres.length - 1 && <span className="text-muted-foreground">, </span>}
                     </span>
                   ))}
-                  <span className="text-muted-foreground">]</span>
                 </div>
                 <div className="pt-2 border-t border-dashed">
-                  <span className="text-syntax-cyan">"synopsis"</span>
+                  <span className="text-syntax-cyan">synopsis</span>
                   <span className="text-muted-foreground">: </span>
                   <p className="text-muted-foreground text-xs mt-1 leading-relaxed">
-                    "{anime.synopsis}"
+                    {anime.synopsis}
                   </p>
                 </div>
               </CardContent>
@@ -136,14 +135,14 @@ const AnimeDetail = () => {
               </Card>
               <Card className="border-dashed">
                 <CardContent className="p-3 text-center">
-                  <span className="block text-xs font-bold text-destructive mb-1">[F]</span>
+                  <span className="block text-xs font-bold text-destructive mb-1">F</span>
                   <div className="text-xl font-bold text-destructive">{fillerCount}</div>
                   <div className="text-[10px] text-muted-foreground uppercase">filler</div>
                 </CardContent>
               </Card>
               <Card className="border-dashed">
                 <CardContent className="p-3 text-center">
-                  <span className="block text-xs font-bold text-syntax-purple mb-1">[A]</span>
+                  <span className="block text-xs font-bold text-syntax-purple mb-1">A</span>
                   <div className="text-xl font-bold text-syntax-purple">{animeOnlyCount}</div>
                   <div className="text-[10px] text-muted-foreground uppercase">anime only</div>
                 </CardContent>
@@ -215,9 +214,7 @@ const AnimeDetail = () => {
       <footer className="border-t border-dashed mt-16">
         <div className="container py-6 text-center text-xs text-muted-foreground">
           <p>
-            <span className="text-syntax-cyan">{'{'}</span>
             <span className="text-primary">mangaMapper</span>
-            <span className="text-syntax-cyan">{'}'}</span>
             <span className="mx-2">—</span>
             <span>// your guide from anime to manga</span>
           </p>

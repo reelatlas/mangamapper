@@ -127,7 +127,7 @@ export const ProgressTracker = ({ anime }: ProgressTrackerProps) => {
         <div className="space-y-2">
           <Label htmlFor="watchedEpisode" className="flex items-center gap-2 text-xs">
             <Tv className="w-3.5 h-3.5 text-primary" />
-            <span className="text-syntax-cyan">"last_watched_episode"</span>
+            <span className="text-syntax-cyan">last_watched_episode</span>
           </Label>
           <div className="flex items-center gap-2">
             <span className="text-muted-foreground text-sm">$</span>
@@ -149,7 +149,7 @@ export const ProgressTracker = ({ anime }: ProgressTrackerProps) => {
             <div className="space-y-2">
               <Label htmlFor="readVolume" className="flex items-center gap-2 text-xs">
                 <BookOpen className="w-3.5 h-3.5 text-primary" />
-                <span className="text-syntax-cyan">"last_read_volume"</span>
+                <span className="text-syntax-cyan">last_read_volume</span>
               </Label>
               <div className="flex items-center gap-2">
                 <span className="text-muted-foreground text-sm">$</span>
@@ -166,7 +166,7 @@ export const ProgressTracker = ({ anime }: ProgressTrackerProps) => {
             </div>
             <div className="space-y-2">
               <Label htmlFor="readChapter" className="text-xs">
-                <span className="text-syntax-cyan">"chapter"</span>
+                <span className="text-syntax-cyan">chapter</span>
               </Label>
               <div className="flex items-center gap-2">
                 <span className="text-muted-foreground text-sm">$</span>

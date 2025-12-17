@@ -194,28 +194,28 @@ const Library = () => {
                           <div className="flex-1 min-w-0">
                             <Link to={`/anime/${anime.id}`} className="hover:text-primary transition-colors">
                               <span className="text-sm truncate block">
-                                <span className="text-syntax-cyan">"title"</span>
+                                <span className="text-syntax-cyan">title</span>
                                 <span className="text-muted-foreground">: </span>
-                                <span className="text-syntax-green">"{anime.title}"</span>
+                                <span className="text-syntax-green">{anime.title}</span>
                               </span>
                             </Link>
                             <div className="flex flex-wrap gap-3 mt-2 text-xs">
                               {item.last_watched_episode && (
                                 <span>
-                                  <span className="text-syntax-cyan">"ep"</span>
+                                  <span className="text-syntax-cyan">ep</span>
                                   <span className="text-muted-foreground">: </span>
                                   <span className="text-syntax-amber">{item.last_watched_episode}</span>
                                 </span>
                               )}
                               {item.last_read_chapter && (
                                 <span>
-                                  <span className="text-syntax-cyan">"vol"</span>
+                                  <span className="text-syntax-cyan">vol</span>
                                   <span className="text-muted-foreground">: </span>
                                   <span className="text-syntax-amber">{item.last_read_volume}</span>
-                                  <span className="text-muted-foreground">, </span>
-                                  <span className="text-syntax-cyan">"ch"</span>
+                                  <span className="text-muted-foreground"> · </span>
+                                  <span className="text-syntax-cyan">ch</span>
                                   <span className="text-muted-foreground">: </span>
-                                  <span className="text-syntax-green">"{item.last_read_chapter}"</span>
+                                  <span className="text-syntax-green">{item.last_read_chapter}</span>
                                 </span>
                               )}
                             </div>
@@ -259,7 +259,7 @@ const Library = () => {
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div className="space-y-2">
                       <Label htmlFor="siteName" className="text-xs">
-                        <span className="text-syntax-cyan">"name"</span>
+                        <span className="text-syntax-cyan">name</span>
                       </Label>
                       <div className="flex items-center gap-2">
                         <span className="text-muted-foreground text-sm">$</span>
@@ -274,7 +274,7 @@ const Library = () => {
                     </div>
                     <div className="space-y-2">
                       <Label htmlFor="siteUrl" className="text-xs">
-                        <span className="text-syntax-cyan">"url"</span>
+                        <span className="text-syntax-cyan">url</span>
                       </Label>
                       <div className="flex items-center gap-2">
                         <span className="text-muted-foreground text-sm">$</span>
@@ -291,7 +291,7 @@ const Library = () => {
                   </div>
                   <div className="space-y-2">
                     <Label htmlFor="siteNotes" className="text-xs">
-                      <span className="text-syntax-cyan">"notes"</span>
+                      <span className="text-syntax-cyan">notes</span>
                       <span className="text-muted-foreground"> // optional</span>
                     </Label>
                     <div className="flex items-center gap-2">
@@ -320,19 +320,17 @@ const Library = () => {
                     <CardContent className="p-4">
                       <div className="flex items-center justify-between gap-4">
                         <div className="flex-1 min-w-0 text-sm">
-                          <span className="text-muted-foreground">{'{'}</span>
-                          <span className="text-syntax-cyan">"name"</span>
+                          <span className="text-syntax-cyan">name</span>
                           <span className="text-muted-foreground">: </span>
-                          <span className="text-syntax-green">"{site.name}"</span>
+                          <span className="text-syntax-green">{site.name}</span>
                           {site.notes && (
                             <>
-                              <span className="text-muted-foreground">, </span>
-                              <span className="text-syntax-cyan">"notes"</span>
+                              <span className="text-muted-foreground"> · </span>
+                              <span className="text-syntax-cyan">notes</span>
                               <span className="text-muted-foreground">: </span>
-                              <span className="text-syntax-green text-xs">"{site.notes}"</span>
+                              <span className="text-syntax-green text-xs">{site.notes}</span>
                             </>
                           )}
-                          <span className="text-muted-foreground">{'}'}</span>
                         </div>
                         <div className="flex items-center gap-2">
                           <Button
@@ -378,9 +376,7 @@ const Library = () => {
       <footer className="border-t border-dashed mt-16">
         <div className="container py-6 text-center text-xs text-muted-foreground">
           <p>
-            <span className="text-syntax-cyan">{'{'}</span>
             <span className="text-primary">mangaMapper</span>
-            <span className="text-syntax-cyan">{'}'}</span>
             <span className="mx-2">—</span>
             <span>// your guide from anime to manga</span>
           </p>

@@ -101,9 +101,7 @@ const Auth = () => {
           <div className="text-center mb-6">
             <div className="flex justify-center mb-3">
               <div className="flex items-center gap-1 text-primary">
-                <span className="text-muted-foreground text-lg">{'{'}</span>
                 <Terminal className="w-5 h-5" />
-                <span className="text-muted-foreground text-lg">{'}'}</span>
               </div>
             </div>
             <div className="text-sm">
@@ -123,7 +121,7 @@ const Auth = () => {
           <form onSubmit={handleSubmit} className="space-y-4">
             <div className="space-y-2">
               <Label htmlFor="email" className="text-xs">
-                <span className="text-syntax-cyan">"email"</span>
+                <span className="text-syntax-cyan">email</span>
               </Label>
               <div className="flex items-center gap-2">
                 <Mail className="w-3.5 h-3.5 text-muted-foreground" />
@@ -141,7 +139,7 @@ const Auth = () => {
             </div>
             <div className="space-y-2">
               <Label htmlFor="password" className="text-xs">
-                <span className="text-syntax-cyan">"password"</span>
+                <span className="text-syntax-cyan">password</span>
               </Label>
               <div className="flex items-center gap-2">
                 <Lock className="w-3.5 h-3.5 text-muted-foreground" />

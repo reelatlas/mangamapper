@@ -30,7 +30,7 @@ export const EpisodeBadge = ({ type, className }: EpisodeBadgeProps) => {
       badgeClassName,
       className
     )}>
-      [{label}]
+      {label}
     </span>
   );
 };
