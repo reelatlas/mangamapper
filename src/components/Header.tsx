@@ -24,7 +24,7 @@ export const Header = () => {
               <span className="text-muted-foreground">Mapper</span>
             </span>
           </div>
-          <span className="text-[10px] text-muted-foreground leading-tight">// anime-to-manga</span>
+          <span className="text-[10px] text-muted-foreground leading-tight pl-[22px]">// anime-to-manga</span>
         </Link>
 
         <nav className="flex items-center gap-1">

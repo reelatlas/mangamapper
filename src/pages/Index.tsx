@@ -4,7 +4,7 @@ import { SearchBar } from '@/components/SearchBar';
 import { AnimeCard } from '@/components/AnimeCard';
 import { getFilteredAnime, searchAnime, StatusFilter, SortBy } from '@/data/mockAnime';
 import { AnimeSeries } from '@/types/anime';
-import { TrendingUp, Filter } from 'lucide-react';
+import { TrendingUp, Filter, Home } from 'lucide-react';
 import { useAuth } from '@/hooks/useAuth';
 import { supabase } from '@/integrations/supabase/client';
 import { Button } from '@/components/ui/button';
@@ -78,6 +78,13 @@ const Index = () => {
       <Header />
       
       <main className="container py-8">
+        {/* Page header */}
+        <div className="flex items-center gap-2 mb-6 text-sm">
+          <Home className="w-4 h-4 text-primary" />
+          <span className="text-muted-foreground">{'>'}</span>
+          <span className="text-syntax-cyan">home</span>
+        </div>
+
         {/* Hero section */}
         <section className="text-center mb-10">
           <div className="mb-4">
