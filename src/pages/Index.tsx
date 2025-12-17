@@ -4,18 +4,17 @@ import { SearchBar } from '@/components/SearchBar';
 import { AnimeCard } from '@/components/AnimeCard';
 import { SourceFilter } from '@/components/SourceFilter';
 import { getTopAiringAnime, searchAnime } from '@/data/mockAnime';
-import { AnimeSeries, TrackingSite, StreamingService, TRACKING_SITES, STREAMING_SERVICES } from '@/types/anime';
+import { AnimeSeries, StreamingService, STREAMING_SERVICES } from '@/types/anime';
 import { Terminal, TrendingUp } from 'lucide-react';
 
 const Index = () => {
   const [searchQuery, setSearchQuery] = useState('');
   const [searchResults, setSearchResults] = useState<AnimeSeries[]>([]);
-  const [trackingSite, setTrackingSite] = useState<TrackingSite>('mal');
   const [streamingService, setStreamingService] = useState<StreamingService>('all');
 
   const topAnime = useMemo(
-    () => getTopAiringAnime(10, trackingSite, streamingService),
-    [trackingSite, streamingService]
+    () => getTopAiringAnime(10, 'anilist', streamingService),
+    [streamingService]
   );
 
   const handleSearch = useCallback((query: string) => {
@@ -30,7 +29,6 @@ const Index = () => {
   const isSearching = searchQuery.trim().length > 0;
   const displayedAnime = isSearching ? searchResults : topAnime;
 
-  const trackingSiteLabel = TRACKING_SITES.find(s => s.value === trackingSite)?.label;
   const streamingServiceLabel = STREAMING_SERVICES.find(s => s.value === streamingService)?.label;
 
   return (
@@ -69,9 +67,7 @@ const Index = () => {
         {!isSearching && (
           <section className="mb-6">
             <SourceFilter
-              trackingSite={trackingSite}
               streamingService={streamingService}
-              onTrackingSiteChange={setTrackingSite}
               onStreamingServiceChange={setStreamingService}
             />
           </section>
@@ -86,8 +82,8 @@ const Index = () => {
               {isSearching 
                 ? <><span className="text-syntax-cyan">search_results</span><span className="text-muted-foreground">.length</span> = <span className="text-syntax-amber">{searchResults.length}</span></>
                 : streamingService === 'all' 
-                  ? <><span className="text-syntax-cyan">top_airing</span><span className="text-muted-foreground"> · </span><span className="text-syntax-amber">{trackingSiteLabel}</span></>
-                  : <><span className="text-syntax-cyan">top_airing</span><span className="text-muted-foreground"> · </span><span className="text-syntax-amber">{trackingSiteLabel}</span><span className="text-muted-foreground"> · </span><span className="text-syntax-amber">{streamingServiceLabel}</span></>
+                  ? <><span className="text-syntax-cyan">top_airing</span></>
+                  : <><span className="text-syntax-cyan">top_airing</span><span className="text-muted-foreground"> · </span><span className="text-syntax-amber">{streamingServiceLabel}</span></>
               }
             </span>
           </div>
