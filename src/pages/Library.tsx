@@ -198,24 +198,29 @@ const Library = () => {
                                 <span className="text-muted-foreground">: </span>
                                 <span className="text-syntax-green">{anime.title}</span>
                               </span>
-                              <div className="flex flex-wrap gap-6 mt-2 text-xs">
+                              <div className="flex flex-col gap-1.5 mt-2 text-xs">
                                 {item.last_watched_episode && (
-                                  <span>
+                                  <div className="flex items-center gap-1.5">
+                                    <Tv className="w-3.5 h-3.5 text-primary" />
+                                    <span className="text-syntax-cyan">last_watched</span>
+                                    <span className="text-muted-foreground">:</span>
                                     <span className="text-muted-foreground">ep</span>
                                     <span className="text-muted-foreground">:</span>
                                     <span className="text-foreground">{item.last_watched_episode}</span>
-                                  </span>
+                                  </div>
                                 )}
                                 {item.last_read_chapter && (
-                                  <span>
+                                  <div className="flex items-center gap-1.5">
+                                    <BookOpen className="w-3.5 h-3.5 text-primary" />
+                                    <span className="text-syntax-cyan">last_read</span>
+                                    <span className="text-muted-foreground">:</span>
                                     <span className="text-muted-foreground">vol</span>
                                     <span className="text-muted-foreground">:</span>
                                     <span className="text-foreground">{item.last_read_volume}</span>
-                                    <span className="text-muted-foreground"> · </span>
-                                    <span className="text-muted-foreground">ch</span>
+                                    <span className="text-muted-foreground ml-1">ch</span>
                                     <span className="text-muted-foreground">:</span>
                                     <span className="text-foreground">{item.last_read_chapter}</span>
-                                  </span>
+                                  </div>
                                 )}
                               </div>
                             </div>
