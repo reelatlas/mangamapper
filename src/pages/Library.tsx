@@ -193,10 +193,8 @@ const Library = () => {
                               className="w-14 h-20 object-cover opacity-90"
                             />
                             <div className="flex-1 min-w-0">
-                              <span className="text-sm truncate block">
-                                <span className="text-syntax-cyan">title</span>
-                                <span className="text-muted-foreground">: </span>
-                                <span className="text-syntax-green">{anime.title}</span>
+                              <span className="text-sm text-syntax-green truncate block">
+                                {anime.title}
                               </span>
                               <div className="flex flex-col gap-1.5 mt-2 text-xs">
                                 {item.last_watched_episode && (
