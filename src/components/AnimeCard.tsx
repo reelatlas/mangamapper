@@ -4,13 +4,26 @@ import { MangaMappingDisplay } from './MangaMappingDisplay';
 import { ChevronRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
+interface UserProgress {
+  last_watched_episode: number | null;
+  last_read_volume: number | null;
+  last_read_chapter: string | null;
+}
+
 interface AnimeCardProps {
   anime: AnimeSeries;
   rank?: number;
+  progress?: UserProgress;
 }
 
-export const AnimeCard = ({ anime, rank }: AnimeCardProps) => {
+export const AnimeCard = ({ anime, rank, progress }: AnimeCardProps) => {
   const currentEpisode = anime.episodes[0]; // Most recent episode
+  
+  const hasProgress = progress && (
+    progress.last_watched_episode !== null || 
+    progress.last_read_volume !== null || 
+    progress.last_read_chapter !== null
+  );
 
   return (
     <Link to={`/anime/${anime.id}`}>
@@ -74,6 +87,49 @@ export const AnimeCard = ({ anime, rank }: AnimeCardProps) => {
                     // latest_episode
                   </p>
                   <MangaMappingDisplay episode={currentEpisode} />
+                </div>
+              )}
+
+              {/* User progress section */}
+              {hasProgress && (
+                <div className="pt-2 border-t border-dashed">
+                  <p className="text-[10px] text-muted-foreground mb-1 tracking-wider">
+                    // your_progress
+                  </p>
+                  <div className="text-xs">
+                    {progress.last_watched_episode !== null && (
+                      <span>
+                        <span className="text-syntax-cyan">watched</span>
+                        <span className="text-muted-foreground">: </span>
+                        <span className="text-syntax-cyan">ep </span>
+                        <span className="text-syntax-amber">{progress.last_watched_episode}</span>
+                      </span>
+                    )}
+                    {progress.last_watched_episode !== null && (progress.last_read_volume !== null || progress.last_read_chapter !== null) && (
+                      <span className="text-muted-foreground"> · </span>
+                    )}
+                    {(progress.last_read_volume !== null || progress.last_read_chapter !== null) && (
+                      <span>
+                        <span className="text-syntax-cyan">reading</span>
+                        <span className="text-muted-foreground">: </span>
+                        {progress.last_read_volume !== null && (
+                          <>
+                            <span className="text-syntax-cyan">vol </span>
+                            <span className="text-syntax-amber">{progress.last_read_volume}</span>
+                          </>
+                        )}
+                        {progress.last_read_volume !== null && progress.last_read_chapter !== null && (
+                          <span className="text-muted-foreground">, </span>
+                        )}
+                        {progress.last_read_chapter !== null && (
+                          <>
+                            <span className="text-syntax-cyan">ch </span>
+                            <span className="text-syntax-amber">{progress.last_read_chapter}</span>
+                          </>
+                        )}
+                      </span>
+                    )}
+                  </div>
                 </div>
               )}
 
