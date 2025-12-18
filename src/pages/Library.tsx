@@ -828,7 +828,6 @@ const Library = () => {
                                     size="icon"
                                     onClick={() => {
                                       group.entries.forEach(entry => deleteReaderSite(entry.id));
-                                      setConfirmingDeleteReaderId(null);
                                     }}
                                     className="h-8 w-8 text-muted-foreground hover:text-destructive hover:bg-destructive/10"
                                   >
