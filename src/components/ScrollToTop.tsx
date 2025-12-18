@@ -25,9 +25,12 @@ export const ScrollToTop = () => {
       // Back/forward navigation - restore previous scroll position
       const savedPosition = sessionStorage.getItem(`scrollPos-${pathname}`);
       if (savedPosition) {
-        setTimeout(() => {
-          window.scrollTo(0, parseInt(savedPosition, 10));
-        }, 0);
+        // Use longer delay to ensure content is rendered
+        requestAnimationFrame(() => {
+          setTimeout(() => {
+            window.scrollTo(0, parseInt(savedPosition, 10));
+          }, 100);
+        });
       }
     } else if (navigationType === 'PUSH') {
       // New navigation (clicking links) - scroll to top
