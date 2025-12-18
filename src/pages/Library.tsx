@@ -533,7 +533,7 @@ const Library = () => {
                                 )}
                                 {/* Reader buttons below manga progress */}
                                 {getReadersForAnime(item.anime_id, readerSites).length > 0 && (
-                                  <div className="flex items-center gap-1 mt-1">
+                                  <div className="flex items-center gap-1.5 mt-1">
                                     {getReadersForAnime(item.anime_id, readerSites).map((reader) => (
                                       <Button
                                         key={reader.id}
