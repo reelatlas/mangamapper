@@ -236,11 +236,19 @@
   /* Override browser autofill styling to match our design system */
   input:-webkit-autofill,
   input:-webkit-autofill:hover,
-  input:-webkit-autofill:focus,
   input:-webkit-autofill:active {
     -webkit-box-shadow: 0 0 0px 1000px hsl(220 9% 15% / 0.3) inset !important;
     -webkit-text-fill-color: hsl(210 17% 82%) !important;
     caret-color: hsl(210 17% 82%) !important;
     transition: background-color 5000s ease-in-out 0s;
+  }
+
+  /* Autofill with focus - include ring styling */
+  input:-webkit-autofill:focus {
+    -webkit-box-shadow: 0 0 0px 1000px hsl(220 9% 15% / 0.3) inset !important;
+    -webkit-text-fill-color: hsl(210 17% 82%) !important;
+    caret-color: hsl(210 17% 82%) !important;
+    outline: 2px solid hsl(199 89% 70%);
+    outline-offset: 2px;
   }
 }
