@@ -315,8 +315,7 @@ const Library = () => {
             {/* Add new reader site form */}
             <Card className="border-dashed">
               <div className="terminal-header flex items-center gap-2">
-                <Plus className="w-3.5 h-3.5" />
-                <span className="text-muted-foreground">add_reader_site</span>
+                <span className="text-muted-foreground">add_reader</span>
               </div>
               <CardContent className="p-4">
                 <form onSubmit={addReaderSite} className="space-y-4">
@@ -492,23 +491,36 @@ const Library = () => {
                       <CardContent className="p-4">
                         <div className="flex items-start justify-between gap-4">
                           <div className="flex-1 min-w-0 text-sm space-y-1">
-                            <div className="flex items-center gap-2">
+                            <div className="flex items-center justify-between gap-2">
                               <div>
                                 <span className="text-syntax-cyan">reader_name</span>
                                 <span className="text-muted-foreground">: </span>
                                 <span className="text-syntax-green">{group.name}</span>
                               </div>
-                              <Button
-                                variant="outline"
-                                size="sm"
-                                asChild
-                                className="border-dashed text-xs"
-                              >
-                                <a href={group.url} target="_blank" rel="noopener noreferrer" className="gap-1">
-                                  <ExternalLink className="w-3.5 h-3.5" />
-                                  open
-                                </a>
-                              </Button>
+                              <div className="flex items-center gap-1">
+                                <Button
+                                  variant="outline"
+                                  size="sm"
+                                  asChild
+                                  className="border-dashed text-xs h-6 px-2"
+                                >
+                                  <a href={group.url} target="_blank" rel="noopener noreferrer" className="gap-1">
+                                    <ExternalLink className="w-3 h-3" />
+                                    open
+                                  </a>
+                                </Button>
+                                <Button
+                                  variant="ghost"
+                                  size="icon"
+                                  onClick={() => {
+                                    // Delete all entries for this reader group
+                                    group.entries.forEach(entry => deleteReaderSite(entry.id));
+                                  }}
+                                  className="text-muted-foreground hover:text-destructive h-6 w-6"
+                                >
+                                  <Trash2 className="w-3 h-3" />
+                                </Button>
+                              </div>
                             </div>
                             {group.notes && (
                               <div className="text-xs">
@@ -557,16 +569,6 @@ const Library = () => {
                               </div>
                             )}
                           </div>
-                          {seriesEntries.length === 0 && (
-                            <Button
-                              variant="ghost"
-                              size="icon"
-                              onClick={() => deleteReaderSite(group.entries[0].id)}
-                              className="text-muted-foreground hover:text-destructive"
-                            >
-                              <Trash2 className="w-4 h-4" />
-                            </Button>
-                          )}
                         </div>
                       </CardContent>
                     </Card>
