@@ -832,13 +832,13 @@ const Library = () => {
                                     }}
                                     className="h-8 w-8 text-muted-foreground hover:text-destructive hover:bg-destructive/10"
                                   >
-                                    <Check className="w-4 h-4" />
+                                    <Trash2 className="w-4 h-4" />
                                   </Button>
                                   <Button 
                                     variant="ghost"
                                     size="icon"
                                     onClick={() => setConfirmingDeleteReaderId(null)}
-                                    className="h-8 w-8 text-muted-foreground hover:text-accent-foreground hover:bg-accent"
+                                    className="h-8 w-8 text-muted-foreground hover:text-muted-foreground hover:bg-muted"
                                   >
                                     <X className="w-4 h-4" />
                                   </Button>
