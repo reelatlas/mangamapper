@@ -57,7 +57,7 @@ export function SeriesCombobox({
           role="combobox"
           aria-expanded={open}
           className={cn(
-            "w-full justify-between font-mono text-sm border-dashed bg-muted/30 hover:bg-muted/50 hover:text-muted-foreground",
+            "w-full justify-between font-mono text-sm border-dashed bg-muted/30 hover:bg-muted/50 hover:text-muted-foreground focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background",
             open && "ring-2 ring-ring ring-offset-2 ring-offset-background"
           )}
         >
@@ -67,10 +67,7 @@ export function SeriesCombobox({
           <ChevronsUpDown className="ml-2 h-4 w-4 shrink-0 opacity-50" />
         </Button>
       </PopoverTrigger>
-      <PopoverContent 
-        className="w-[--radix-popover-trigger-width] p-0 border-dashed outline outline-2 outline-offset-2 [outline-style:dashed] [outline-color:hsl(var(--ring))]" 
-        align="start"
-      >
+      <PopoverContent className="w-[--radix-popover-trigger-width] p-0 border-dashed" align="start">
         <Command shouldFilter={false}>
           <CommandInput 
             placeholder="type to search..." 
