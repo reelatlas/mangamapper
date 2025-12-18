@@ -155,10 +155,9 @@ const AnimeDetail = () => {
           {/* Inline legend */}
           <div className="px-4 pt-3 pb-0">
             <div className="flex flex-wrap items-center gap-4 text-xs text-muted-foreground">
-              <span>// types:</span>
               <div className="flex items-center gap-1.5">
                 <EpisodeBadge type="canon" />
-                <span>= manga</span>
+                <span>= follows manga</span>
               </div>
               <div className="flex items-center gap-1.5">
                 <EpisodeBadge type="anime-only-canon" />
@@ -166,7 +165,7 @@ const AnimeDetail = () => {
               </div>
               <div className="flex items-center gap-1.5">
                 <EpisodeBadge type="filler" />
-                <span>= filler</span>
+                <span>= fml</span>
               </div>
             </div>
           </div>
