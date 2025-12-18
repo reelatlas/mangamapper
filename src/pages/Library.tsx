@@ -662,7 +662,7 @@ const Library = () => {
                                 variant="ghost"
                                 size="icon"
                                 onClick={() => removeSeriesRow(index)}
-                                className="text-muted-foreground hover:text-destructive"
+                                className="text-muted-foreground hover:text-destructive hover:bg-destructive/10"
                               >
                                 <Trash2 className="w-4 h-4" />
                               </Button>
@@ -815,7 +815,7 @@ const Library = () => {
                                         variant="ghost"
                                         size="icon"
                                         onClick={() => removeEditSeriesRow(index)}
-                                        className="text-muted-foreground hover:text-destructive"
+                                        className="text-muted-foreground hover:text-destructive hover:bg-destructive/10"
                                       >
                                         <Trash2 className="w-4 h-4" />
                                       </Button>
