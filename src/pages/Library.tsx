@@ -506,11 +506,11 @@ const Library = () => {
                     <Link key={item.id} to={`/anime/${anime.id}`} className="block">
                       <Card className="border-dashed hover:border-primary/50 transition-colors cursor-pointer">
                         <CardContent className="p-4">
-                          <div className="flex items-start gap-4">
+                          <div className="flex items-stretch gap-4">
                             <img
                               src={anime.coverImage}
                               alt={anime.title}
-                              className="w-14 h-20 object-cover opacity-90"
+                              className="w-14 min-h-[5rem] object-cover opacity-90"
                             />
                             <div className="flex-1 min-w-0">
                               <span className="text-sm text-syntax-green truncate block">
