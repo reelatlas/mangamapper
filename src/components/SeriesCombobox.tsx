@@ -68,7 +68,7 @@ export function SeriesCombobox({
         </Button>
       </PopoverTrigger>
       <PopoverContent 
-        className="w-[--radix-popover-trigger-width] p-0 border-dashed ring-2 ring-ring ring-offset-2 ring-offset-background" 
+        className="w-[--radix-popover-trigger-width] p-0 border-2 border-dashed border-ring" 
         align="start"
       >
         <Command shouldFilter={false}>
