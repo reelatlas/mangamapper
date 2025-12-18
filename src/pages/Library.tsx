@@ -39,6 +39,7 @@ interface SeriesAssignment {
   seriesUrl: string;
   suffix: string;
   existingId?: string; // tracks if this came from an existing DB entry
+  userModified?: boolean; // tracks if user manually interacted with this row
 }
 
 const Library = () => {
@@ -53,7 +54,7 @@ const Library = () => {
   const [newSiteName, setNewSiteName] = useState('');
   const [newSiteUrl, setNewSiteUrl] = useState('');
   const [newSiteNotes, setNewSiteNotes] = useState('');
-  const [seriesAssignments, setSeriesAssignments] = useState<SeriesAssignment[]>([{ animeId: '', seriesUrl: '', suffix: '' }]);
+  const [seriesAssignments, setSeriesAssignments] = useState<SeriesAssignment[]>([{ animeId: '', seriesUrl: '', suffix: '', userModified: false }]);
 
   // Edit form state
   const [editingReaderName, setEditingReaderName] = useState<string | null>(null);
@@ -69,7 +70,7 @@ const Library = () => {
 
   const addSeriesRow = () => {
     const baseUrl = newSiteUrl.trim() ? (newSiteUrl.trim().endsWith('/') ? newSiteUrl.trim() : newSiteUrl.trim() + '/') : '';
-    setSeriesAssignments([...seriesAssignments, { animeId: '', seriesUrl: baseUrl, suffix: '' }]);
+    setSeriesAssignments([...seriesAssignments, { animeId: '', seriesUrl: baseUrl, suffix: '', userModified: false }]);
   };
 
   const updateSeriesAssignment = (index: number, field: 'animeId' | 'seriesUrl' | 'suffix', value: string) => {
@@ -80,6 +81,10 @@ const Library = () => {
       const suffix = baseUrl && value.startsWith(baseUrl) ? value.slice(baseUrl.length) : value;
       updated[index].seriesUrl = value;
       updated[index].suffix = suffix;
+      updated[index].userModified = true; // User manually typed in series_url
+    } else if (field === 'animeId') {
+      updated[index].animeId = value;
+      updated[index].userModified = true; // User selected a series
     } else {
       updated[index][field] = value;
     }
@@ -115,7 +120,7 @@ const Library = () => {
       setSeriesAssignments(seriesAssignments.filter((_, i) => i !== index));
     } else {
       // Single row - clear values instead of removing
-      setSeriesAssignments([{ animeId: '', seriesUrl: '', suffix: '' }]);
+      setSeriesAssignments([{ animeId: '', seriesUrl: '', suffix: '', userModified: false }]);
     }
   };
 
@@ -224,7 +229,7 @@ const Library = () => {
     setNewSiteName('');
     setNewSiteUrl('');
     setNewSiteNotes('');
-    setSeriesAssignments([{ animeId: '', seriesUrl: '', suffix: '' }]);
+    setSeriesAssignments([{ animeId: '', seriesUrl: '', suffix: '', userModified: false }]);
     fetchReaderSites();
   };
 
@@ -269,10 +274,11 @@ const Library = () => {
         animeId: e.anime_id || '',
         seriesUrl: e.series_url || '',
         suffix: '',
-        existingId: e.id
+        existingId: e.id,
+        userModified: true // Existing entries were previously saved by user
       })));
     } else {
-      setEditSeriesAssignments([{ animeId: '', seriesUrl: '', suffix: '' }]);
+      setEditSeriesAssignments([{ animeId: '', seriesUrl: '', suffix: '', userModified: false }]);
     }
   };
 
@@ -286,7 +292,7 @@ const Library = () => {
 
   const addEditSeriesRow = () => {
     const baseUrl = editSiteUrl.trim() ? (editSiteUrl.trim().endsWith('/') ? editSiteUrl.trim() : editSiteUrl.trim() + '/') : '';
-    setEditSeriesAssignments([...editSeriesAssignments, { animeId: '', seriesUrl: baseUrl, suffix: '' }]);
+    setEditSeriesAssignments([...editSeriesAssignments, { animeId: '', seriesUrl: baseUrl, suffix: '', userModified: false }]);
   };
 
   const updateEditSeriesAssignment = (index: number, field: 'animeId' | 'seriesUrl' | 'suffix', value: string) => {
@@ -296,6 +302,10 @@ const Library = () => {
       const suffix = baseUrl && value.startsWith(baseUrl) ? value.slice(baseUrl.length) : value;
       updated[index].seriesUrl = value;
       updated[index].suffix = suffix;
+      updated[index].userModified = true; // User manually typed in series_url
+    } else if (field === 'animeId') {
+      updated[index].animeId = value;
+      updated[index].userModified = true; // User selected a series
     } else {
       updated[index][field] = value;
     }
@@ -329,7 +339,7 @@ const Library = () => {
       setEditSeriesAssignments(editSeriesAssignments.filter((_, i) => i !== index));
     } else {
       // Single row - clear values instead of removing
-      setEditSeriesAssignments([{ animeId: '', seriesUrl: '', suffix: '' }]);
+      setEditSeriesAssignments([{ animeId: '', seriesUrl: '', suffix: '', userModified: false }]);
     }
   };
 
@@ -623,7 +633,7 @@ const Library = () => {
                               className="font-mono text-sm border-dashed bg-muted/30"
                             />
                           </div>
-                          {(seriesAssignments.length > 1 || assignment.animeId || assignment.seriesUrl) && (
+                          {(seriesAssignments.length > 1 || assignment.userModified) && (
                             <Button
                               type="button"
                               variant="ghost"
@@ -764,7 +774,7 @@ const Library = () => {
                                         className="font-mono text-sm border-dashed bg-muted/30"
                                       />
                                     </div>
-                                    {(editSeriesAssignments.length > 1 || assignment.animeId || assignment.seriesUrl) && (
+                                    {(editSeriesAssignments.length > 1 || assignment.userModified) && (
                                       <Button
                                         type="button"
                                         variant="ghost"
