@@ -63,6 +63,7 @@ const Library = () => {
   const [editSiteNotes, setEditSiteNotes] = useState('');
   const [editSeriesAssignments, setEditSeriesAssignments] = useState<SeriesAssignment[]>([]);
   const [confirmingDeleteReaderId, setConfirmingDeleteReaderId] = useState<string | null>(null);
+  const [showAddReaderForm, setShowAddReaderForm] = useState(false);
 
   const activeTab = searchParams.get('tab') || 'progress';
   const setActiveTab = (tab: string) => {
@@ -232,6 +233,7 @@ const Library = () => {
     setNewSiteUrl('');
     setNewSiteNotes('');
     setSeriesAssignments([{ animeId: '', seriesUrl: '', suffix: '', userModified: false }]);
+    setShowAddReaderForm(false);
     fetchReaderSites();
   };
 
@@ -291,6 +293,14 @@ const Library = () => {
     setEditSiteNotes('');
     setEditSeriesAssignments([]);
     setConfirmingDeleteReaderId(null);
+  };
+
+  const cancelAddReader = () => {
+    setNewSiteName('');
+    setNewSiteUrl('');
+    setNewSiteNotes('');
+    setSeriesAssignments([{ animeId: '', seriesUrl: '', suffix: '', userModified: false }]);
+    setShowAddReaderForm(false);
   };
 
   const addEditSeriesRow = () => {
@@ -552,125 +562,145 @@ const Library = () => {
 
           <TabsContent value="readers" className="space-y-6">
             {/* Add new reader site form */}
-            <Card className="border-dashed">
-              <div className="terminal-header flex items-center gap-2">
-                <span className="text-muted-foreground">add_reader</span>
-              </div>
-              <CardContent className="p-4">
-                <form onSubmit={addReaderSite} className="space-y-4">
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            {!showAddReaderForm ? (
+              <Button
+                onClick={() => setShowAddReaderForm(true)}
+                variant="outline"
+                className="font-mono text-xs border-dashed w-full"
+              >
+                {'>'} new_reader()
+              </Button>
+            ) : (
+              <Card className="border-dashed">
+                <div className="terminal-header flex items-center gap-2">
+                  <span className="text-muted-foreground">add_reader</span>
+                </div>
+                <CardContent className="p-4">
+                  <form onSubmit={addReaderSite} className="space-y-4">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                      <div className="space-y-2">
+                        <Label htmlFor="siteName" className="text-xs">
+                          <span className="text-syntax-cyan">reader_name</span>
+                        </Label>
+                        <Input
+                          id="siteName"
+                          placeholder="e.g., MangaDex"
+                          value={newSiteName}
+                          onChange={(e) => setNewSiteName(e.target.value)}
+                          className="font-mono text-sm border-dashed bg-muted/30"
+                        />
+                      </div>
+                      <div className="space-y-2">
+                        <Label htmlFor="siteUrl" className="text-xs">
+                          <span className="text-syntax-cyan">reader_url</span>
+                        </Label>
+                        <Input
+                          id="siteUrl"
+                          type="url"
+                          placeholder="https://mangadex.org"
+                          value={newSiteUrl}
+                          onChange={(e) => handleReaderUrlChange(e.target.value)}
+                          className="font-mono text-sm border-dashed bg-muted/30"
+                        />
+                      </div>
+                    </div>
                     <div className="space-y-2">
-                      <Label htmlFor="siteName" className="text-xs">
-                        <span className="text-syntax-cyan">reader_name</span>
+                      <Label htmlFor="siteNotes" className="text-xs">
+                        <span className="text-syntax-cyan">notes</span>
+                        <span className="text-muted-foreground"> // optional</span>
                       </Label>
                       <Input
-                        id="siteName"
-                        placeholder="e.g., MangaDex"
-                        value={newSiteName}
-                        onChange={(e) => setNewSiteName(e.target.value)}
+                        id="siteNotes"
+                        placeholder="e.g., Good for One Piece"
+                        value={newSiteNotes}
+                        onChange={(e) => setNewSiteNotes(e.target.value)}
                         className="font-mono text-sm border-dashed bg-muted/30"
                       />
                     </div>
-                    <div className="space-y-2">
-                      <Label htmlFor="siteUrl" className="text-xs">
-                        <span className="text-syntax-cyan">reader_url</span>
-                      </Label>
-                      <Input
-                        id="siteUrl"
-                        type="url"
-                        placeholder="https://mangadex.org"
-                        value={newSiteUrl}
-                        onChange={(e) => handleReaderUrlChange(e.target.value)}
-                        className="font-mono text-sm border-dashed bg-muted/30"
-                      />
+                    
+                    {/* Series assignment section */}
+                    <div className="border-t border-dashed pt-4 mt-4">
+                      <p className="text-xs mb-3">
+                        <span className="text-syntax-cyan">assign_to</span>
+                        <span className="text-muted-foreground"> // optional</span>
+                      </p>
+                      <div className="space-y-3">
+                        {seriesAssignments.map((assignment, index) => (
+                          <div key={index} className="grid grid-cols-1 sm:grid-cols-[1fr_1fr_auto] gap-4 items-end">
+                            <div className="space-y-2">
+                              {index === 0 && (
+                                <Label className="text-xs">
+                                  <span className="text-syntax-cyan">series</span>
+                                </Label>
+                              )}
+                              <SeriesCombobox
+                                value={assignment.animeId}
+                                onValueChange={(val) => updateSeriesAssignment(index, 'animeId', val)}
+                                excludeIds={seriesAssignments
+                                  .filter((_, i) => i !== index)
+                                  .map(a => a.animeId)
+                                  .filter(Boolean)}
+                              />
+                            </div>
+                            <div className="space-y-2">
+                              {index === 0 && (
+                                <Label className="text-xs">
+                                  <span className="text-syntax-cyan">series_url</span>
+                                </Label>
+                              )}
+                              <Input
+                                type="url"
+                                placeholder="https://mangadex.org/title/..."
+                                value={assignment.seriesUrl}
+                                onChange={(e) => updateSeriesAssignment(index, 'seriesUrl', e.target.value)}
+                                className="font-mono text-sm border-dashed bg-muted/30"
+                              />
+                            </div>
+                            {(seriesAssignments.length > 1 || assignment.userModified) && (
+                              <Button
+                                type="button"
+                                variant="ghost"
+                                size="icon"
+                                onClick={() => removeSeriesRow(index)}
+                                className="text-muted-foreground hover:text-destructive"
+                              >
+                                <Trash2 className="w-4 h-4" />
+                              </Button>
+                            )}
+                          </div>
+                        ))}
+                        <Button
+                          type="button"
+                          variant="outline"
+                          size="sm"
+                          onClick={addSeriesRow}
+                          className="text-xs border-dashed"
+                        >
+                          <Plus className="w-3.5 h-3.5 mr-1" />
+                          add_another
+                        </Button>
+                      </div>
                     </div>
-                  </div>
-                  <div className="space-y-2">
-                    <Label htmlFor="siteNotes" className="text-xs">
-                      <span className="text-syntax-cyan">notes</span>
-                      <span className="text-muted-foreground"> // optional</span>
-                    </Label>
-                    <Input
-                      id="siteNotes"
-                      placeholder="e.g., Good for One Piece"
-                      value={newSiteNotes}
-                      onChange={(e) => setNewSiteNotes(e.target.value)}
-                      className="font-mono text-sm border-dashed bg-muted/30"
-                    />
-                  </div>
-                  
-                  {/* Series assignment section */}
-                  <div className="border-t border-dashed pt-4 mt-4">
-                    <p className="text-xs mb-3">
-                      <span className="text-syntax-cyan">assign_to</span>
-                      <span className="text-muted-foreground"> // optional</span>
-                    </p>
-                    <div className="space-y-3">
-                      {seriesAssignments.map((assignment, index) => (
-                        <div key={index} className="grid grid-cols-1 sm:grid-cols-[1fr_1fr_auto] gap-4 items-end">
-                          <div className="space-y-2">
-                            {index === 0 && (
-                              <Label className="text-xs">
-                                <span className="text-syntax-cyan">series</span>
-                              </Label>
-                            )}
-                            <SeriesCombobox
-                              value={assignment.animeId}
-                              onValueChange={(val) => updateSeriesAssignment(index, 'animeId', val)}
-                              excludeIds={seriesAssignments
-                                .filter((_, i) => i !== index)
-                                .map(a => a.animeId)
-                                .filter(Boolean)}
-                            />
-                          </div>
-                          <div className="space-y-2">
-                            {index === 0 && (
-                              <Label className="text-xs">
-                                <span className="text-syntax-cyan">series_url</span>
-                              </Label>
-                            )}
-                            <Input
-                              type="url"
-                              placeholder="https://mangadex.org/title/..."
-                              value={assignment.seriesUrl}
-                              onChange={(e) => updateSeriesAssignment(index, 'seriesUrl', e.target.value)}
-                              className="font-mono text-sm border-dashed bg-muted/30"
-                            />
-                          </div>
-                          {(seriesAssignments.length > 1 || assignment.userModified) && (
-                            <Button
-                              type="button"
-                              variant="ghost"
-                              size="icon"
-                              onClick={() => removeSeriesRow(index)}
-                              className="text-muted-foreground hover:text-destructive"
-                            >
-                              <Trash2 className="w-4 h-4" />
-                            </Button>
-                          )}
-                        </div>
-                      ))}
+                    
+                    <div className="border-t border-dashed pt-4 mt-4" />
+                    
+                    <div className="flex gap-2">
+                      <Button type="submit" className="font-mono text-xs border-dashed">
+                        {'>'} add_reader()
+                      </Button>
                       <Button
                         type="button"
-                        variant="outline"
-                        size="sm"
-                        onClick={addSeriesRow}
-                        className="text-xs border-dashed"
+                        variant="ghost"
+                        onClick={cancelAddReader}
+                        className="font-mono text-xs"
                       >
-                        <Plus className="w-3.5 h-3.5 mr-1" />
-                        add_another
+                        cancel()
                       </Button>
                     </div>
-                  </div>
-                  
-                  <div className="border-t border-dashed pt-4 mt-4" />
-                  
-                  <Button type="submit" className="font-mono text-xs border-dashed">
-                    {'>'} add_reader()
-                  </Button>
-                </form>
-              </CardContent>
-            </Card>
+                  </form>
+                </CardContent>
+              </Card>
+            )}
 
             {/* Reader sites list - grouped by name */}
             {readerSites.length > 0 ? (
