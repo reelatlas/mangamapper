@@ -690,11 +690,12 @@ const Library = () => {
                       </Button>
                       <Button
                         type="button"
-                        variant="ghost"
+                        variant="outline"
                         onClick={cancelAddReader}
-                        className="font-mono text-xs"
+                        className="font-mono text-xs border-dashed"
                       >
-                        cancel()
+                        <X className="w-3.5 h-3.5 mr-1" />
+                        cancel
                       </Button>
                     </div>
                   </form>
