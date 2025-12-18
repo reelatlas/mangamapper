@@ -886,7 +886,7 @@ const Library = () => {
                                     <div key={entry.id} className="flex items-center justify-between gap-2">
                                       <div className="flex items-center gap-1.5">
                                         <Link2 className="w-3 h-3 text-primary" />
-                                        <span className="text-syntax-green text-xs">{assignedAnime.title}</span>
+                                        <Link to={`/anime/${assignedAnime.id}`} className="text-syntax-green text-xs hover:underline hover:text-primary transition-colors">{assignedAnime.title}</Link>
                                       </div>
                                       <div className="flex items-center gap-1">
                                         {entry.series_url && (
