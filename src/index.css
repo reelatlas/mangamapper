@@ -233,29 +233,34 @@
     z-index: 10;
   }
 
+  /* Keep inputs readable even when the browser applies autofill/spellcheck */
+  input,
+  textarea {
+    color: hsl(var(--foreground));
+    -webkit-text-fill-color: hsl(var(--foreground));
+    caret-color: hsl(var(--foreground));
+  }
+
   /* Override browser autofill styling to match our design system */
   input:-webkit-autofill,
   input:-webkit-autofill:hover,
-  input:-webkit-autofill:active {
-    -webkit-box-shadow: 0 0 0px 1000px hsl(220 9% 15% / 0.3) inset !important;
-    -webkit-text-fill-color: hsl(210 17% 82%) !important;
-    caret-color: hsl(210 17% 82%) !important;
+  input:-webkit-autofill:active,
+  textarea:-webkit-autofill,
+  textarea:-webkit-autofill:hover,
+  textarea:-webkit-autofill:active {
+    -webkit-box-shadow: 0 0 0px 1000px hsl(var(--muted) / 0.3) inset !important;
+    -webkit-text-fill-color: hsl(var(--foreground)) !important;
+    caret-color: hsl(var(--foreground)) !important;
     transition: background-color 5000s ease-in-out 0s;
-    color: hsl(210 17% 82%) !important;
   }
 
-  /* Autofill with focus - include ring styling */
-  input:-webkit-autofill:focus {
-    -webkit-box-shadow: 0 0 0px 1000px hsl(220 9% 15% / 0.3) inset !important;
-    -webkit-text-fill-color: hsl(210 17% 82%) !important;
-    caret-color: hsl(210 17% 82%) !important;
-    color: hsl(210 17% 82%) !important;
-    outline: 2px solid hsl(199 89% 70%);
+  /* Autofill with focus - keep focus outline visible */
+  input:-webkit-autofill:focus,
+  textarea:-webkit-autofill:focus {
+    -webkit-box-shadow: 0 0 0px 1000px hsl(var(--muted) / 0.3) inset !important;
+    -webkit-text-fill-color: hsl(var(--foreground)) !important;
+    caret-color: hsl(var(--foreground)) !important;
+    outline: 2px solid hsl(var(--ring));
     outline-offset: 2px;
-  }
-
-  /* Ensure text color stays consistent even with spellcheck */
-  input {
-    color: hsl(210 17% 82%);
   }
 }
