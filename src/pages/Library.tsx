@@ -524,32 +524,32 @@ const Library = () => {
                                   </div>
                                 )}
                                 {item.last_read_chapter && (
-                                  <div className="flex items-center gap-1.5 flex-wrap">
+                                  <div className="flex items-center gap-1.5">
                                     <BookOpen className="w-3.5 h-3.5 text-primary" />
                                     <span><span className="text-muted-foreground">vol:</span><span className="text-foreground">{item.last_read_volume}</span></span>
                                     <span className="text-muted-foreground">·</span>
                                     <span><span className="text-muted-foreground">ch:</span><span className="text-foreground">{item.last_read_chapter}</span></span>
-                                    {/* Inline reader buttons */}
-                                    {getReadersForAnime(item.anime_id, readerSites).length > 0 && (
-                                      <div className="flex items-center gap-0.5 ml-3">
-                                        {getReadersForAnime(item.anime_id, readerSites).map((reader) => (
-                                          <Button
-                                            key={reader.id}
-                                            variant="outline"
-                                            size="sm"
-                                            className="h-5 px-1.5 text-[10px] font-mono border-dashed gap-1"
-                                            onClick={(e) => {
-                                              e.preventDefault();
-                                              e.stopPropagation();
-                                              window.open(reader.series_url!, '_blank');
-                                            }}
-                                          >
-                                            {reader.name}
-                                            <ExternalLink className="w-2.5 h-2.5" />
-                                          </Button>
-                                        ))}
-                                      </div>
-                                    )}
+                                  </div>
+                                )}
+                                {/* Reader buttons below manga progress */}
+                                {getReadersForAnime(item.anime_id, readerSites).length > 0 && (
+                                  <div className="flex items-center gap-1 mt-1">
+                                    {getReadersForAnime(item.anime_id, readerSites).map((reader) => (
+                                      <Button
+                                        key={reader.id}
+                                        variant="outline"
+                                        size="sm"
+                                        className="h-5 px-1.5 text-[10px] font-mono border-dashed gap-1"
+                                        onClick={(e) => {
+                                          e.preventDefault();
+                                          e.stopPropagation();
+                                          window.open(reader.series_url!, '_blank');
+                                        }}
+                                      >
+                                        {reader.name}
+                                        <ExternalLink className="w-2.5 h-2.5" />
+                                      </Button>
+                                    ))}
                                   </div>
                                 )}
                               </div>
