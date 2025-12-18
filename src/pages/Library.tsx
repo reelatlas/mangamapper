@@ -113,6 +113,9 @@ const Library = () => {
   const removeSeriesRow = (index: number) => {
     if (seriesAssignments.length > 1) {
       setSeriesAssignments(seriesAssignments.filter((_, i) => i !== index));
+    } else {
+      // Single row - clear values instead of removing
+      setSeriesAssignments([{ animeId: '', seriesUrl: '', suffix: '' }]);
     }
   };
 
@@ -324,6 +327,9 @@ const Library = () => {
   const removeEditSeriesRow = (index: number) => {
     if (editSeriesAssignments.length > 1) {
       setEditSeriesAssignments(editSeriesAssignments.filter((_, i) => i !== index));
+    } else {
+      // Single row - clear values instead of removing
+      setEditSeriesAssignments([{ animeId: '', seriesUrl: '', suffix: '' }]);
     }
   };
 
@@ -617,7 +623,7 @@ const Library = () => {
                               className="font-mono text-sm border-dashed bg-muted/30"
                             />
                           </div>
-                          {seriesAssignments.length > 1 && (
+                          {(seriesAssignments.length > 1 || assignment.animeId || assignment.seriesUrl) && (
                             <Button
                               type="button"
                               variant="ghost"
@@ -758,7 +764,7 @@ const Library = () => {
                                         className="font-mono text-sm border-dashed bg-muted/30"
                                       />
                                     </div>
-                                    {editSeriesAssignments.length > 1 && (
+                                    {(editSeriesAssignments.length > 1 || assignment.animeId || assignment.seriesUrl) && (
                                       <Button
                                         type="button"
                                         variant="ghost"
