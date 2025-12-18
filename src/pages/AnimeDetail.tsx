@@ -1,4 +1,5 @@
 import { useParams, Link } from 'react-router-dom';
+import { useState, useEffect } from 'react';
 import { Header } from '@/components/Header';
 import { MangaMappingDisplay } from '@/components/MangaMappingDisplay';
 import { EpisodeBadge } from '@/components/EpisodeBadge';
@@ -6,11 +7,39 @@ import { ProgressTracker } from '@/components/ProgressTracker';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { getAnimeById } from '@/data/mockAnime';
-import { Play, BookOpen, Tv, ArrowLeft } from 'lucide-react';
+import { Play, BookOpen, Tv, ArrowLeft, ExternalLink } from 'lucide-react';
+import { useAuth } from '@/hooks/useAuth';
+import { supabase } from '@/integrations/supabase/client';
+
+interface ReaderSite {
+  id: string;
+  name: string;
+  series_url: string | null;
+}
 
 const AnimeDetail = () => {
   const { id } = useParams<{ id: string }>();
   const anime = getAnimeById(id || '');
+  const { user } = useAuth();
+  const [linkedReaders, setLinkedReaders] = useState<ReaderSite[]>([]);
+
+  useEffect(() => {
+    const fetchLinkedReaders = async () => {
+      if (!user || !id) return;
+      
+      const { data } = await supabase
+        .from('manga_reader_sites')
+        .select('id, name, series_url')
+        .eq('anime_id', id)
+        .not('series_url', 'is', null);
+      
+      if (data) {
+        setLinkedReaders(data);
+      }
+    };
+
+    fetchLinkedReaders();
+  }, [user, id]);
 
   if (!anime) {
     return (
@@ -146,6 +175,31 @@ const AnimeDetail = () => {
         <div className="mb-6">
           <ProgressTracker anime={anime} />
         </div>
+
+        {/* Linked manga readers */}
+        {linkedReaders.length > 0 && (
+          <Card className="border-dashed mb-6">
+            <div className="terminal-header">
+              <span className="text-muted-foreground">read_manga</span>
+            </div>
+            <CardContent className="p-4">
+              <div className="flex flex-wrap gap-2">
+                {linkedReaders.map((reader) => (
+                  <Button
+                    key={reader.id}
+                    variant="outline"
+                    size="sm"
+                    className="font-mono text-xs border-dashed gap-1.5"
+                    onClick={() => window.open(reader.series_url!, '_blank')}
+                  >
+                    {reader.name}
+                    <ExternalLink className="w-3 h-3" />
+                  </Button>
+                ))}
+              </div>
+            </CardContent>
+          </Card>
+        )}
 
         {/* Episodes list */}
         <Card className="border-dashed">
