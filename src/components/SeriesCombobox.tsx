@@ -68,7 +68,7 @@ export function SeriesCombobox({
         </Button>
       </PopoverTrigger>
       <PopoverContent 
-        className="w-[--radix-popover-trigger-width] p-0 border-2 border-dashed border-ring" 
+        className="w-[--radix-popover-trigger-width] p-0 border-dashed outline outline-2 outline-offset-2 [outline-style:dashed] [outline-color:hsl(var(--ring))]" 
         align="start"
       >
         <Command shouldFilter={false}>
