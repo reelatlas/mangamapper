@@ -141,6 +141,12 @@
     @apply bg-background text-foreground font-mono;
   }
 
+  /* Dashed focus rings for terminal aesthetic */
+  *:focus-visible {
+    outline: 2px dashed hsl(var(--ring));
+    outline-offset: 2px;
+  }
+
   /* Custom scrollbar for terminal feel */
   ::-webkit-scrollbar {
     width: 8px;
