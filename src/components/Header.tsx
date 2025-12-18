@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { Home, Library, User, LogOut, Terminal, Mail } from 'lucide-react';
+import { Home, Library, User, LogOut, Terminal, AtSign } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { useAuth } from '@/hooks/useAuth';
 import {
@@ -59,8 +59,8 @@ export const Header = () => {
                 </DropdownMenuTrigger>
                 <DropdownMenuContent align="end" className="bg-popover border-dashed font-mono">
                   <div className="text-muted-foreground text-xs gap-2 flex items-center px-2 py-1.5">
-                    <Mail className="w-3.5 h-3.5" />
-                    @{user.email?.split('@')[1] || 'email.com'}
+                    <AtSign className="w-3.5 h-3.5" />
+                    {user.email?.split('@')[1] || 'email.com'}
                   </div>
                   <DropdownMenuSeparator className="border-dashed" />
                   <DropdownMenuItem onClick={signOut} className="cursor-pointer gap-2 text-destructive text-xs">
