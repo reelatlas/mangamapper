@@ -42,6 +42,11 @@ interface SeriesAssignment {
   userModified?: boolean; // tracks if user manually interacted with this row
 }
 
+// Helper to get linked readers for an anime
+const getReadersForAnime = (animeId: string, readerSites: ReaderSite[]): ReaderSite[] => {
+  return readerSites.filter(site => site.anime_id === animeId && site.series_url);
+};
+
 const Library = () => {
   const { user, loading: authLoading } = useAuth();
   const navigate = useNavigate();
@@ -527,6 +532,31 @@ const Library = () => {
                                   </div>
                                 )}
                               </div>
+                              {/* Reader open buttons */}
+                              {(() => {
+                                const linkedReaders = getReadersForAnime(item.anime_id, readerSites);
+                                if (linkedReaders.length === 0) return null;
+                                return (
+                                  <div className="flex flex-wrap gap-1.5 mt-2">
+                                    {linkedReaders.map((reader) => (
+                                      <Button
+                                        key={reader.id}
+                                        variant="outline"
+                                        size="sm"
+                                        className="h-6 px-2 text-[10px] font-mono border-dashed gap-1"
+                                        onClick={(e) => {
+                                          e.preventDefault();
+                                          e.stopPropagation();
+                                          window.open(reader.series_url!, '_blank');
+                                        }}
+                                      >
+                                        {reader.name}
+                                        <ExternalLink className="w-2.5 h-2.5" />
+                                      </Button>
+                                    ))}
+                                  </div>
+                                );
+                              })()}
                             </div>
                             <Button
                               variant="ghost"
