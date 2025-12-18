@@ -237,8 +237,13 @@
   input,
   textarea {
     color: hsl(var(--foreground));
-    -webkit-text-fill-color: hsl(var(--foreground));
     caret-color: hsl(var(--foreground));
+  }
+
+  input::placeholder,
+  textarea::placeholder {
+    -webkit-text-fill-color: hsl(var(--muted-foreground));
+    color: hsl(var(--muted-foreground));
   }
 
   /* Override browser autofill styling to match our design system */

@@ -342,34 +342,7 @@ const Library = () => {
                         type="url"
                         placeholder="https://mangadex.org"
                         value={newSiteUrl}
-                        onChange={(e) => {
-                          const oldUrl = newSiteUrl.trim();
-                          const oldBase = oldUrl.endsWith('/') ? oldUrl : oldUrl + '/';
-                          const newUrl = e.target.value;
-                          setNewSiteUrl(newUrl);
-                          
-                          // Auto-update series URLs, preserving any suffix after the base
-                          const newBase = newUrl.trim() ? (newUrl.trim().endsWith('/') ? newUrl.trim() : newUrl.trim() + '/') : '';
-                          setSeriesAssignments(prev => prev.map(a => {
-                            // Extract suffix (everything after the old base URL)
-                            let suffix = '';
-                            if (a.seriesUrl && oldBase && a.seriesUrl.startsWith(oldBase)) {
-                              suffix = a.seriesUrl.slice(oldBase.length);
-                            } else if (a.seriesUrl && !a.seriesUrl.startsWith(oldBase)) {
-                              // If URL doesn't match old base, try to extract path after domain
-                              try {
-                                const url = new URL(a.seriesUrl);
-                                suffix = url.pathname.slice(1) + url.search + url.hash;
-                              } catch {
-                                suffix = '';
-                              }
-                            }
-                            return {
-                              ...a,
-                              seriesUrl: newBase + suffix
-                            };
-                          }));
-                        }}
+                        onChange={(e) => setNewSiteUrl(e.target.value)}
                         className="font-mono text-sm border-dashed bg-muted/30"
                       />
                     </div>
