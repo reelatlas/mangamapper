@@ -802,21 +802,33 @@ const Library = () => {
                               </div>
                             </div>
                             
-                            <div className="border-t border-dashed pt-4 mt-4 flex items-center gap-2">
+                            <div className="border-t border-dashed pt-4 mt-4 flex items-center justify-between">
+                              <div className="flex items-center gap-2">
+                                <Button 
+                                  onClick={() => saveReaderEdit(group.entries)} 
+                                  className="font-mono text-xs border-dashed"
+                                >
+                                  <Check className="w-3.5 h-3.5 mr-1" />
+                                  save_changes()
+                                </Button>
+                                <Button 
+                                  variant="outline"
+                                  onClick={cancelEditingReader} 
+                                  className="font-mono text-xs border-dashed"
+                                >
+                                  <X className="w-3.5 h-3.5 mr-1" />
+                                  cancel
+                                </Button>
+                              </div>
                               <Button 
-                                onClick={() => saveReaderEdit(group.entries)} 
-                                className="font-mono text-xs border-dashed"
+                                variant="ghost"
+                                onClick={() => {
+                                  group.entries.forEach(entry => deleteReaderSite(entry.id));
+                                }}
+                                className="font-mono text-xs text-muted-foreground hover:text-destructive"
                               >
-                                <Check className="w-3.5 h-3.5 mr-1" />
-                                save_changes()
-                              </Button>
-                              <Button 
-                                variant="outline"
-                                onClick={cancelEditingReader} 
-                                className="font-mono text-xs border-dashed"
-                              >
-                                <X className="w-3.5 h-3.5 mr-1" />
-                                cancel
+                                <Trash2 className="w-3.5 h-3.5 mr-1" />
+                                delete_reader()
                               </Button>
                             </div>
                           </div>
@@ -845,17 +857,6 @@ const Library = () => {
                                   className="text-muted-foreground hover:text-primary h-6 w-6"
                                 >
                                   <Pencil className="w-3 h-3" />
-                                </Button>
-                                <Button
-                                  variant="ghost"
-                                  size="icon"
-                                  onClick={() => {
-                                    // Delete all entries for this reader group
-                                    group.entries.forEach(entry => deleteReaderSite(entry.id));
-                                  }}
-                                  className="text-muted-foreground hover:text-destructive h-6 w-6"
-                                >
-                                  <Trash2 className="w-3 h-3" />
                                 </Button>
                                 <Button
                                   variant="outline"
