@@ -56,7 +56,10 @@ export function SeriesCombobox({
           variant="outline"
           role="combobox"
           aria-expanded={open}
-          className="w-full justify-between font-mono text-sm border-dashed bg-muted/30 hover:bg-muted/50 hover:text-muted-foreground focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background"
+          className={cn(
+            "w-full justify-between font-mono text-sm border-dashed bg-muted/30 hover:bg-muted/50 hover:text-muted-foreground focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background",
+            open && "ring-2 ring-ring ring-offset-2 ring-offset-background"
+          )}
         >
           <span className={cn(!selectedAnime && "text-muted-foreground")}>
             {selectedAnime ? selectedAnime.title : placeholder}
