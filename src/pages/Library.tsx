@@ -584,7 +584,7 @@ const Library = () => {
                         </Label>
                         <Input
                           id="siteName"
-                          placeholder="e.g., MangaDex"
+                          placeholder="LINE マンガ"
                           value={newSiteName}
                           onChange={(e) => setNewSiteName(e.target.value)}
                           className="font-mono text-sm border-dashed bg-muted/30"
@@ -596,8 +596,8 @@ const Library = () => {
                         </Label>
                         <Input
                           id="siteUrl"
-                          type="url"
-                          placeholder="https://mangadex.org"
+                          type="text"
+                          placeholder="manga.line.me"
                           value={newSiteUrl}
                           onChange={(e) => handleReaderUrlChange(e.target.value)}
                           className="font-mono text-sm border-dashed bg-muted/30"
@@ -611,7 +611,7 @@ const Library = () => {
                       </Label>
                       <Input
                         id="siteNotes"
-                        placeholder="e.g., Good for One Piece"
+                        placeholder="best berserk scans for golden age arc"
                         value={newSiteNotes}
                         onChange={(e) => setNewSiteNotes(e.target.value)}
                         className="font-mono text-sm border-dashed bg-muted/30"
@@ -649,8 +649,8 @@ const Library = () => {
                                 </Label>
                               )}
                               <Input
-                                type="url"
-                                placeholder="https://mangadex.org/title/..."
+                                type="text"
+                                placeholder="manga.line.me/title/..."
                                 value={assignment.seriesUrl}
                                 onChange={(e) => updateSeriesAssignment(index, 'seriesUrl', e.target.value)}
                                 className="font-mono text-sm border-dashed bg-muted/30"
@@ -739,7 +739,7 @@ const Library = () => {
                                   <span className="text-syntax-cyan">reader_name</span>
                                 </Label>
                                 <Input
-                                  placeholder="e.g., MangaDex"
+                                  placeholder="LINE マンガ"
                                   value={editSiteName}
                                   onChange={(e) => setEditSiteName(e.target.value)}
                                   className="font-mono text-sm border-dashed bg-muted/30"
@@ -750,8 +750,8 @@ const Library = () => {
                                   <span className="text-syntax-cyan">reader_url</span>
                                 </Label>
                                 <Input
-                                  type="url"
-                                  placeholder="https://mangadex.org"
+                                  type="text"
+                                  placeholder="manga.line.me"
                                   value={editSiteUrl}
                                   onChange={(e) => handleEditReaderUrlChange(e.target.value)}
                                   className="font-mono text-sm border-dashed bg-muted/30"
@@ -764,7 +764,7 @@ const Library = () => {
                                 <span className="text-muted-foreground"> // optional</span>
                               </Label>
                               <Input
-                                placeholder="e.g., Good for One Piece"
+                                placeholder="best berserk scans for golden age arc"
                                 value={editSiteNotes}
                                 onChange={(e) => setEditSiteNotes(e.target.value)}
                                 className="font-mono text-sm border-dashed bg-muted/30"
@@ -802,8 +802,8 @@ const Library = () => {
                                         </Label>
                                       )}
                                       <Input
-                                        type="url"
-                                        placeholder="https://mangadex.org/title/..."
+                                        type="text"
+                                        placeholder="manga.line.me/title/..."
                                         value={assignment.seriesUrl}
                                         onChange={(e) => updateEditSeriesAssignment(index, 'seriesUrl', e.target.value)}
                                         className="font-mono text-sm border-dashed bg-muted/30"
