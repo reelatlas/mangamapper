@@ -876,7 +876,7 @@ const Library = () => {
                                   variant="ghost"
                                   size="icon"
                                   onClick={() => startEditingReader(group)}
-                                  className="text-muted-foreground hover:text-primary h-6 w-6"
+                                  className="text-muted-foreground hover:text-accent hover:bg-accent/10 h-6 w-6"
                                 >
                                   <Pencil className="w-3 h-3" />
                                 </Button>
