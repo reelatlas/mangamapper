@@ -530,22 +530,26 @@ const Library = () => {
                                     <span className="text-muted-foreground">·</span>
                                     <span><span className="text-muted-foreground">ch:</span><span className="text-foreground">{item.last_read_chapter}</span></span>
                                     {/* Inline reader buttons */}
-                                    {getReadersForAnime(item.anime_id, readerSites).map((reader) => (
-                                      <Button
-                                        key={reader.id}
-                                        variant="outline"
-                                        size="sm"
-                                        className="h-5 px-1.5 text-[10px] font-mono border-dashed gap-1 ml-1"
-                                        onClick={(e) => {
-                                          e.preventDefault();
-                                          e.stopPropagation();
-                                          window.open(reader.series_url!, '_blank');
-                                        }}
-                                      >
-                                        {reader.name}
-                                        <ExternalLink className="w-2.5 h-2.5" />
-                                      </Button>
-                                    ))}
+                                    {getReadersForAnime(item.anime_id, readerSites).length > 0 && (
+                                      <div className="flex items-center gap-0.5 ml-3">
+                                        {getReadersForAnime(item.anime_id, readerSites).map((reader) => (
+                                          <Button
+                                            key={reader.id}
+                                            variant="outline"
+                                            size="sm"
+                                            className="h-5 px-1.5 text-[10px] font-mono border-dashed gap-1"
+                                            onClick={(e) => {
+                                              e.preventDefault();
+                                              e.stopPropagation();
+                                              window.open(reader.series_url!, '_blank');
+                                            }}
+                                          >
+                                            {reader.name}
+                                            <ExternalLink className="w-2.5 h-2.5" />
+                                          </Button>
+                                        ))}
+                                      </div>
+                                    )}
                                   </div>
                                 )}
                               </div>
