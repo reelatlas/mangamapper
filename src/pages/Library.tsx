@@ -10,8 +10,8 @@ import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { Library as LibraryIcon, BookOpen, Tv, Globe, Plus, Trash2, ExternalLink, Hourglass, Link2 } from 'lucide-react';
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { mockAnimeData } from '@/data/mockAnime';
+import { SeriesCombobox } from '@/components/SeriesCombobox';
 import { toast } from 'sonner';
 import { Link } from 'react-router-dom';
 
@@ -402,22 +402,14 @@ const Library = () => {
                                 <span className="text-syntax-cyan">series</span>
                               </Label>
                             )}
-                            <Select 
-                              value={assignment.animeId || "__none__"} 
-                              onValueChange={(val) => updateSeriesAssignment(index, 'animeId', val === "__none__" ? "" : val)}
-                            >
-                              <SelectTrigger className="font-mono text-sm border-dashed bg-muted/30">
-                                <SelectValue placeholder="select series..." />
-                              </SelectTrigger>
-                              <SelectContent>
-                                <SelectItem value="__none__">none</SelectItem>
-                                {mockAnimeData.map((anime) => (
-                                  <SelectItem key={anime.id} value={anime.id}>
-                                    {anime.title}
-                                  </SelectItem>
-                                ))}
-                              </SelectContent>
-                            </Select>
+                            <SeriesCombobox
+                              value={assignment.animeId}
+                              onValueChange={(val) => updateSeriesAssignment(index, 'animeId', val)}
+                              excludeIds={seriesAssignments
+                                .filter((_, i) => i !== index)
+                                .map(a => a.animeId)
+                                .filter(Boolean)}
+                            />
                           </div>
                           <div className="space-y-2">
                             {index === 0 && (
