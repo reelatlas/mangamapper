@@ -56,7 +56,10 @@ export function SeriesCombobox({
           variant="outline"
           role="combobox"
           aria-expanded={open}
-          className="w-full justify-between font-mono text-sm border-dashed bg-muted/30 hover:bg-muted/50 hover:text-muted-foreground"
+          className={cn(
+            "w-full justify-between font-mono text-sm border-dashed bg-muted/30 hover:bg-muted/50 hover:text-muted-foreground",
+            open && "ring-2 ring-ring ring-offset-2 ring-offset-background"
+          )}
         >
           <span className={cn(!selectedAnime && "text-muted-foreground")}>
             {selectedAnime ? selectedAnime.title : placeholder}
@@ -65,7 +68,7 @@ export function SeriesCombobox({
         </Button>
       </PopoverTrigger>
       <PopoverContent 
-        className="w-[--radix-popover-trigger-width] p-0 border-dashed" 
+        className="w-[--radix-popover-trigger-width] p-0 border-dashed outline outline-2 outline-offset-2 [outline-style:dashed] [outline-color:hsl(var(--ring))]" 
         align="start"
       >
         <Command shouldFilter={false}>
