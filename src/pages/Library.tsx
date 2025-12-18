@@ -498,7 +498,13 @@ const Library = () => {
                                 asChild
                                 className="border-dashed text-xs"
                               >
-                                <a href={group.url} target="_blank" rel="noopener noreferrer" className="gap-1">
+                                <a 
+                                  href={group.url} 
+                                  target="_blank" 
+                                  rel="noopener noreferrer" 
+                                  className="gap-1"
+                                  onClick={(e) => e.stopPropagation()}
+                                >
                                   <ExternalLink className="w-3.5 h-3.5" />
                                   open
                                 </a>
@@ -530,7 +536,13 @@ const Library = () => {
                                             asChild
                                             className="border-dashed text-xs h-6 px-2"
                                           >
-                                            <a href={entry.series_url} target="_blank" rel="noopener noreferrer" className="gap-1">
+                                            <a 
+                                              href={entry.series_url} 
+                                              target="_blank" 
+                                              rel="noopener noreferrer" 
+                                              className="gap-1"
+                                              onClick={(e) => e.stopPropagation()}
+                                            >
                                               <ExternalLink className="w-3 h-3" />
                                               read
                                             </a>
