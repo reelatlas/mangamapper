@@ -147,31 +147,28 @@ const AnimeDetail = () => {
           <ProgressTracker anime={anime} />
         </div>
 
-        {/* Legend */}
-        <Card className="mb-6 border-dashed">
-          <CardContent className="p-4">
-            <div className="flex flex-wrap items-center gap-4 text-xs">
-              <span className="text-muted-foreground">// episode_types</span>
-              <div className="flex items-center gap-2">
-                <EpisodeBadge type="canon" />
-                <span className="text-muted-foreground">= follows manga</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <EpisodeBadge type="anime-only-canon" />
-                <span className="text-muted-foreground">= anime original story</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <EpisodeBadge type="filler" />
-                <span className="text-muted-foreground">= not in manga</span>
-              </div>
-            </div>
-          </CardContent>
-        </Card>
-
         {/* Episodes list */}
         <Card className="border-dashed">
           <div className="terminal-header">
             <span className="text-muted-foreground">episode_list</span>
+          </div>
+          {/* Inline legend */}
+          <div className="px-4 pt-3 pb-0">
+            <div className="flex flex-wrap items-center gap-4 text-xs text-muted-foreground">
+              <span>// types:</span>
+              <div className="flex items-center gap-1.5">
+                <EpisodeBadge type="canon" />
+                <span>= manga</span>
+              </div>
+              <div className="flex items-center gap-1.5">
+                <EpisodeBadge type="anime-only-canon" />
+                <span>= anime original</span>
+              </div>
+              <div className="flex items-center gap-1.5">
+                <EpisodeBadge type="filler" />
+                <span>= filler</span>
+              </div>
+            </div>
           </div>
           <CardContent className="p-4">
             <div className="space-y-2">
