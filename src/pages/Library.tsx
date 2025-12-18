@@ -897,7 +897,7 @@ const Library = () => {
                               <div className="text-xs">
                                 <span className="text-syntax-cyan">notes</span>
                                 <span className="text-muted-foreground">: </span>
-                                <span className="text-muted-foreground">{group.notes}</span>
+                                <span className="text-muted-foreground break-words">{group.notes}</span>
                               </div>
                             )}
                             {seriesEntries.length > 0 && (
