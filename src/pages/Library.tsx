@@ -524,26 +524,18 @@ const Library = () => {
                                   </div>
                                 )}
                                 {item.last_read_chapter && (
-                                  <div className="flex items-center gap-1.5">
+                                  <div className="flex items-center gap-1.5 flex-wrap">
                                     <BookOpen className="w-3.5 h-3.5 text-primary" />
                                     <span><span className="text-muted-foreground">vol:</span><span className="text-foreground">{item.last_read_volume}</span></span>
                                     <span className="text-muted-foreground">·</span>
                                     <span><span className="text-muted-foreground">ch:</span><span className="text-foreground">{item.last_read_chapter}</span></span>
-                                  </div>
-                                )}
-                              </div>
-                              {/* Reader open buttons */}
-                              {(() => {
-                                const linkedReaders = getReadersForAnime(item.anime_id, readerSites);
-                                if (linkedReaders.length === 0) return null;
-                                return (
-                                  <div className="flex flex-wrap gap-1.5 mt-2">
-                                    {linkedReaders.map((reader) => (
+                                    {/* Inline reader buttons */}
+                                    {getReadersForAnime(item.anime_id, readerSites).map((reader) => (
                                       <Button
                                         key={reader.id}
                                         variant="outline"
                                         size="sm"
-                                        className="h-6 px-2 text-[10px] font-mono border-dashed gap-1"
+                                        className="h-5 px-1.5 text-[10px] font-mono border-dashed gap-1 ml-1"
                                         onClick={(e) => {
                                           e.preventDefault();
                                           e.stopPropagation();
@@ -555,8 +547,8 @@ const Library = () => {
                                       </Button>
                                     ))}
                                   </div>
-                                );
-                              })()}
+                                )}
+                              </div>
                             </div>
                             <Button
                               variant="ghost"
