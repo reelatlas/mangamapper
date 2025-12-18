@@ -866,10 +866,10 @@ const Library = () => {
                         <div className="flex items-start justify-between gap-4">
                           <div className="flex-1 min-w-0 text-sm space-y-1">
                             <div className="flex items-center justify-between gap-2">
-                              <div>
+                              <div className="overflow-hidden min-w-0">
                                 <span className="text-syntax-cyan">reader_name</span>
                                 <span className="text-muted-foreground">: </span>
-                                <span className="text-syntax-green">{group.name}</span>
+                                <span className="text-syntax-green break-all">{group.name}</span>
                               </div>
                               <div className="flex items-center gap-1">
                                 <Button
@@ -907,9 +907,9 @@ const Library = () => {
                                   if (!assignedAnime) return null;
                                   return (
                                     <div key={entry.id} className="flex items-center justify-between gap-2">
-                                      <div className="flex items-center gap-1.5">
-                                        <Link2 className="w-3 h-3 text-primary" />
-                                        <Link to={`/anime/${assignedAnime.id}`} className="text-syntax-green text-xs hover:underline hover:text-primary transition-colors">{assignedAnime.title}</Link>
+                                      <div className="flex items-center gap-1.5 min-w-0 overflow-hidden">
+                                        <Link2 className="w-3 h-3 text-primary flex-shrink-0" />
+                                        <Link to={`/anime/${assignedAnime.id}`} className="text-syntax-green text-xs hover:underline hover:text-primary transition-colors break-all">{assignedAnime.title}</Link>
                                       </div>
                                       <div className="flex items-center gap-1">
                                         {entry.series_url && (
