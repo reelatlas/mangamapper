@@ -839,17 +839,6 @@ const Library = () => {
                               </div>
                               <div className="flex items-center gap-1">
                                 <Button
-                                  variant="outline"
-                                  size="sm"
-                                  asChild
-                                  className="border-dashed text-xs h-6 px-2"
-                                >
-                                  <a href={group.url} target="_blank" rel="noopener noreferrer" className="gap-1">
-                                    <ExternalLink className="w-3 h-3" />
-                                    open
-                                  </a>
-                                </Button>
-                                <Button
                                   variant="ghost"
                                   size="icon"
                                   onClick={() => startEditingReader(group)}
@@ -867,6 +856,17 @@ const Library = () => {
                                   className="text-muted-foreground hover:text-destructive h-6 w-6"
                                 >
                                   <Trash2 className="w-3 h-3" />
+                                </Button>
+                                <Button
+                                  variant="outline"
+                                  size="sm"
+                                  asChild
+                                  className="border-dashed text-xs h-6 px-2"
+                                >
+                                  <a href={group.url} target="_blank" rel="noopener noreferrer" className="gap-1">
+                                    <ExternalLink className="w-3 h-3" />
+                                    open
+                                  </a>
                                 </Button>
                               </div>
                             </div>
