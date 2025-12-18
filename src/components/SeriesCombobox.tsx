@@ -82,25 +82,6 @@ export function SeriesCombobox({
               <CommandEmpty>no series found</CommandEmpty>
             ) : (
               <CommandGroup>
-                {value && (
-                  <CommandItem
-                    value="__none__"
-                    onSelect={() => {
-                      onValueChange('');
-                      setOpen(false);
-                      setSearch('');
-                    }}
-                    className="font-mono text-sm text-muted-foreground"
-                  >
-                    <Check
-                      className={cn(
-                        "mr-2 h-4 w-4",
-                        !value ? "opacity-100" : "opacity-0"
-                      )}
-                    />
-                    clear selection
-                  </CommandItem>
-                )}
                 {filteredAnime.map((anime) => (
                   <CommandItem
                     key={anime.id}
