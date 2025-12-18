@@ -119,8 +119,9 @@ const Library = () => {
     if (seriesAssignments.length > 1) {
       setSeriesAssignments(seriesAssignments.filter((_, i) => i !== index));
     } else {
-      // Single row - clear values instead of removing
-      setSeriesAssignments([{ animeId: '', seriesUrl: '', suffix: '', userModified: false }]);
+      // Single row - clear user values but keep base URL from reader_url
+      const baseUrl = newSiteUrl.trim() ? (newSiteUrl.trim().endsWith('/') ? newSiteUrl.trim() : newSiteUrl.trim() + '/') : '';
+      setSeriesAssignments([{ animeId: '', seriesUrl: baseUrl, suffix: '', userModified: false }]);
     }
   };
 
@@ -338,8 +339,9 @@ const Library = () => {
     if (editSeriesAssignments.length > 1) {
       setEditSeriesAssignments(editSeriesAssignments.filter((_, i) => i !== index));
     } else {
-      // Single row - clear values instead of removing
-      setEditSeriesAssignments([{ animeId: '', seriesUrl: '', suffix: '', userModified: false }]);
+      // Single row - clear user values but keep base URL from editSiteUrl
+      const baseUrl = editSiteUrl.trim() ? (editSiteUrl.trim().endsWith('/') ? editSiteUrl.trim() : editSiteUrl.trim() + '/') : '';
+      setEditSeriesAssignments([{ animeId: '', seriesUrl: baseUrl, suffix: '', userModified: false }]);
     }
   };
 
