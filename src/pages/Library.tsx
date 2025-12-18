@@ -290,6 +290,7 @@ const Library = () => {
     setEditSiteUrl('');
     setEditSiteNotes('');
     setEditSeriesAssignments([]);
+    setConfirmingDeleteReaderId(null);
   };
 
   const addEditSeriesRow = () => {
