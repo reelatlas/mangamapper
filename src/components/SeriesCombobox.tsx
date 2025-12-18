@@ -91,7 +91,7 @@ export function SeriesCombobox({
                       setOpen(false);
                       setSearch('');
                     }}
-                    className="font-mono text-sm data-[selected=true]:bg-muted/50"
+                    className="font-mono text-sm"
                   >
                     <Check
                       className={cn(
