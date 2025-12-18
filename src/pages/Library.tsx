@@ -62,6 +62,7 @@ const Library = () => {
   const [editSiteUrl, setEditSiteUrl] = useState('');
   const [editSiteNotes, setEditSiteNotes] = useState('');
   const [editSeriesAssignments, setEditSeriesAssignments] = useState<SeriesAssignment[]>([]);
+  const [confirmingDeleteReaderId, setConfirmingDeleteReaderId] = useState<string | null>(null);
 
   const activeTab = searchParams.get('tab') || 'progress';
   const setActiveTab = (tab: string) => {
@@ -820,16 +821,38 @@ const Library = () => {
                                   cancel
                                 </Button>
                               </div>
-                              <Button 
-                                variant="ghost"
-                                onClick={() => {
-                                  group.entries.forEach(entry => deleteReaderSite(entry.id));
-                                }}
-                                className="font-mono text-xs text-muted-foreground hover:text-destructive hover:bg-destructive/10"
-                              >
-                                <Trash2 className="w-3.5 h-3.5 mr-1" />
-                                delete_reader()
-                              </Button>
+                              {confirmingDeleteReaderId === group.name ? (
+                                <div className="flex items-center gap-1">
+                                  <Button 
+                                    variant="ghost"
+                                    size="icon"
+                                    onClick={() => {
+                                      group.entries.forEach(entry => deleteReaderSite(entry.id));
+                                      setConfirmingDeleteReaderId(null);
+                                    }}
+                                    className="h-8 w-8 text-muted-foreground hover:text-destructive hover:bg-destructive/10"
+                                  >
+                                    <Check className="w-4 h-4" />
+                                  </Button>
+                                  <Button 
+                                    variant="ghost"
+                                    size="icon"
+                                    onClick={() => setConfirmingDeleteReaderId(null)}
+                                    className="h-8 w-8 text-muted-foreground hover:text-accent-foreground hover:bg-accent"
+                                  >
+                                    <X className="w-4 h-4" />
+                                  </Button>
+                                </div>
+                              ) : (
+                                <Button 
+                                  variant="ghost"
+                                  onClick={() => setConfirmingDeleteReaderId(group.name)}
+                                  className="font-mono text-xs text-muted-foreground hover:text-destructive hover:bg-destructive/10"
+                                >
+                                  <Trash2 className="w-3.5 h-3.5 mr-1" />
+                                  delete_reader()
+                                </Button>
+                              )}
                             </div>
                           </div>
                         </CardContent>
