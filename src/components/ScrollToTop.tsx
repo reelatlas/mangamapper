@@ -5,6 +5,13 @@ export const ScrollToTop = () => {
   const { pathname } = useLocation();
   const navigationType = useNavigationType();
 
+  // Disable browser's automatic scroll restoration - we handle it manually
+  useEffect(() => {
+    if ('scrollRestoration' in history) {
+      history.scrollRestoration = 'manual';
+    }
+  }, []);
+
   // Save scroll position on scroll
   useEffect(() => {
     const saveScrollPosition = () => {
@@ -19,21 +26,14 @@ export const ScrollToTop = () => {
     };
   }, [pathname]);
 
-  // Handle scroll restoration/reset based on navigation type
+  // Handle scroll based on navigation type
   useEffect(() => {
     if (navigationType === 'POP') {
-      // Back/forward navigation - restore previous scroll position
       const savedPosition = sessionStorage.getItem(`scrollPos-${pathname}`);
       if (savedPosition) {
-        // Use longer delay to ensure content is rendered
-        requestAnimationFrame(() => {
-          setTimeout(() => {
-            window.scrollTo(0, parseInt(savedPosition, 10));
-          }, 100);
-        });
+        window.scrollTo(0, parseInt(savedPosition, 10));
       }
     } else if (navigationType === 'PUSH') {
-      // New navigation (clicking links) - scroll to top
       window.scrollTo(0, 0);
     }
   }, [pathname, navigationType]);
