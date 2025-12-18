@@ -883,23 +883,25 @@ const Library = () => {
                                   const assignedAnime = mockAnimeData.find(a => a.id === entry.anime_id);
                                   if (!assignedAnime) return null;
                                   return (
-                                    <div key={entry.id} className="flex items-center gap-2">
-                                      {entry.series_url && (
-                                        <Button
-                                          variant="outline"
-                                          size="sm"
-                                          asChild
-                                          className="border-dashed text-xs h-6 px-2"
-                                        >
-                                          <a href={entry.series_url} target="_blank" rel="noopener noreferrer" className="gap-1">
-                                            <ExternalLink className="w-3 h-3" />
-                                            read
-                                          </a>
-                                        </Button>
-                                      )}
+                                    <div key={entry.id} className="flex items-center justify-between gap-2">
                                       <div className="flex items-center gap-1.5">
                                         <Link2 className="w-3 h-3 text-primary" />
                                         <Link to={`/anime/${assignedAnime.id}`} className="text-syntax-green text-xs hover:underline hover:text-primary transition-colors">{assignedAnime.title}</Link>
+                                      </div>
+                                      <div className="flex items-center gap-1">
+                                        {entry.series_url && (
+                                          <Button
+                                            variant="outline"
+                                            size="sm"
+                                            asChild
+                                            className="border-dashed text-xs h-6 px-2"
+                                          >
+                                            <a href={entry.series_url} target="_blank" rel="noopener noreferrer" className="gap-1">
+                                              <ExternalLink className="w-3 h-3" />
+                                              read
+                                            </a>
+                                          </Button>
+                                        )}
                                       </div>
                                     </div>
                                   );
