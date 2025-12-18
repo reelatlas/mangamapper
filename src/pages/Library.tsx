@@ -894,7 +894,7 @@ const Library = () => {
                               </div>
                             </div>
                             {group.notes && (
-                              <div className="text-xs overflow-hidden">
+                              <div className="text-xs overflow-hidden pr-20">
                                 <span className="text-syntax-cyan">notes</span>
                                 <span className="text-muted-foreground">: </span>
                                 <span className="text-muted-foreground break-all">{group.notes}</span>
