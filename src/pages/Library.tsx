@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useSearchParams } from 'react-router-dom';
 import { Header } from '@/components/Header';
 import { useAuth } from '@/hooks/useAuth';
 import { supabase } from '@/integrations/supabase/client';
@@ -36,6 +36,7 @@ interface ReaderSite {
 const Library = () => {
   const { user, loading: authLoading } = useAuth();
   const navigate = useNavigate();
+  const [searchParams, setSearchParams] = useSearchParams();
   const [progress, setProgress] = useState<AnimeProgress[]>([]);
   const [readerSites, setReaderSites] = useState<ReaderSite[]>([]);
   const [loading, setLoading] = useState(true);
@@ -44,6 +45,11 @@ const Library = () => {
   const [newSiteUrl, setNewSiteUrl] = useState('');
   const [newSiteNotes, setNewSiteNotes] = useState('');
   const [seriesAssignments, setSeriesAssignments] = useState<Array<{ animeId: string; seriesUrl: string }>>([{ animeId: '', seriesUrl: '' }]);
+
+  const activeTab = searchParams.get('tab') || 'progress';
+  const setActiveTab = (tab: string) => {
+    setSearchParams({ tab }, { replace: true });
+  };
 
   const addSeriesRow = () => {
     const baseUrl = newSiteUrl.trim() ? (newSiteUrl.trim().endsWith('/') ? newSiteUrl.trim() : newSiteUrl.trim() + '/') : '';
@@ -223,7 +229,7 @@ const Library = () => {
           <span className="text-syntax-cyan">my_library</span>
         </div>
 
-        <Tabs defaultValue="progress" className="space-y-6">
+        <Tabs value={activeTab} onValueChange={setActiveTab} className="space-y-6">
           <TabsList className="bg-muted/30 border border-dashed">
             <TabsTrigger value="progress" className="gap-2 text-xs font-mono data-[state=active]:bg-primary data-[state=active]:text-primary-foreground">
               <Hourglass className="w-3.5 h-3.5" />
