@@ -45,7 +45,7 @@ const Library = () => {
   const [newSiteName, setNewSiteName] = useState('');
   const [newSiteUrl, setNewSiteUrl] = useState('');
   const [newSiteNotes, setNewSiteNotes] = useState('');
-  const [seriesAssignments, setSeriesAssignments] = useState<Array<{ animeId: string; seriesUrl: string }>>([{ animeId: '', seriesUrl: '' }]);
+  const [seriesAssignments, setSeriesAssignments] = useState<Array<{ animeId: string; seriesUrl: string; suffix: string }>>([{ animeId: '', seriesUrl: '', suffix: '' }]);
 
   const activeTab = searchParams.get('tab') || 'progress';
   const setActiveTab = (tab: string) => {
@@ -54,13 +54,45 @@ const Library = () => {
 
   const addSeriesRow = () => {
     const baseUrl = newSiteUrl.trim() ? (newSiteUrl.trim().endsWith('/') ? newSiteUrl.trim() : newSiteUrl.trim() + '/') : '';
-    setSeriesAssignments([...seriesAssignments, { animeId: '', seriesUrl: baseUrl }]);
+    setSeriesAssignments([...seriesAssignments, { animeId: '', seriesUrl: baseUrl, suffix: '' }]);
   };
 
-  const updateSeriesAssignment = (index: number, field: 'animeId' | 'seriesUrl', value: string) => {
+  const updateSeriesAssignment = (index: number, field: 'animeId' | 'seriesUrl' | 'suffix', value: string) => {
     const updated = [...seriesAssignments];
-    updated[index][field] = value;
+    if (field === 'seriesUrl') {
+      // When user edits seriesUrl directly, extract the suffix (part after base URL)
+      const baseUrl = newSiteUrl.trim() ? (newSiteUrl.trim().endsWith('/') ? newSiteUrl.trim() : newSiteUrl.trim() + '/') : '';
+      const suffix = baseUrl && value.startsWith(baseUrl) ? value.slice(baseUrl.length) : value;
+      updated[index].seriesUrl = value;
+      updated[index].suffix = suffix;
+    } else {
+      updated[index][field] = value;
+    }
     setSeriesAssignments(updated);
+  };
+
+  const handleReaderUrlChange = (newUrl: string) => {
+    const oldBase = newSiteUrl.trim() ? (newSiteUrl.trim().endsWith('/') ? newSiteUrl.trim() : newSiteUrl.trim() + '/') : '';
+    const newBase = newUrl.trim() ? (newUrl.trim().endsWith('/') ? newUrl.trim() : newUrl.trim() + '/') : '';
+    
+    setNewSiteUrl(newUrl);
+    
+    // Update series URLs: keep user's suffix, just change the prefix
+    setSeriesAssignments(prev => prev.map(a => {
+      // If no suffix tracked yet, try to extract it from current seriesUrl
+      let suffix = a.suffix;
+      if (!suffix && a.seriesUrl && oldBase && a.seriesUrl.startsWith(oldBase)) {
+        suffix = a.seriesUrl.slice(oldBase.length);
+      } else if (!suffix && a.seriesUrl && !oldBase) {
+        suffix = a.seriesUrl;
+      }
+      
+      return {
+        ...a,
+        suffix: suffix,
+        seriesUrl: newBase + suffix
+      };
+    }));
   };
 
   const removeSeriesRow = (index: number) => {
@@ -174,7 +206,7 @@ const Library = () => {
     setNewSiteName('');
     setNewSiteUrl('');
     setNewSiteNotes('');
-    setSeriesAssignments([{ animeId: '', seriesUrl: '' }]);
+    setSeriesAssignments([{ animeId: '', seriesUrl: '', suffix: '' }]);
     fetchReaderSites();
   };
 
@@ -342,7 +374,7 @@ const Library = () => {
                         type="url"
                         placeholder="https://mangadex.org"
                         value={newSiteUrl}
-                        onChange={(e) => setNewSiteUrl(e.target.value)}
+                        onChange={(e) => handleReaderUrlChange(e.target.value)}
                         className="font-mono text-sm border-dashed bg-muted/30"
                       />
                     </div>
