@@ -566,9 +566,9 @@ const Library = () => {
               <Button
                 onClick={() => setShowAddReaderForm(true)}
                 variant="outline"
-                className="font-mono text-xs border-dashed w-full"
+                className="font-mono text-xs border-dashed"
               >
-                {'>'} new_reader()
+                {'>'} new_reader
               </Button>
             ) : (
               <Card className="border-dashed">
