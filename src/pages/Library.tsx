@@ -611,7 +611,7 @@ const Library = () => {
                       </Label>
                       <Input
                         id="siteNotes"
-                        placeholder="best berserk scans for golden age arc"
+                        placeholder="best Berserk scans for golden age arc"
                         value={newSiteNotes}
                         onChange={(e) => setNewSiteNotes(e.target.value)}
                         className="font-mono text-sm border-dashed bg-muted/30"
@@ -764,7 +764,7 @@ const Library = () => {
                                 <span className="text-muted-foreground"> // optional</span>
                               </Label>
                               <Input
-                                placeholder="best berserk scans for golden age arc"
+                                placeholder="best Berserk scans for golden age arc"
                                 value={editSiteNotes}
                                 onChange={(e) => setEditSiteNotes(e.target.value)}
                                 className="font-mono text-sm border-dashed bg-muted/30"
