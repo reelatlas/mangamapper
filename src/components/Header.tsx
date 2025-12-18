@@ -63,13 +63,6 @@ export const Header = () => {
                     @{user.email?.split('@')[1] || 'email.com'}
                   </div>
                   <DropdownMenuSeparator className="border-dashed" />
-                  <DropdownMenuItem asChild>
-                    <Link to="/library" className="flex items-center gap-2 cursor-pointer text-xs">
-                      <Library className="w-3.5 h-3.5" />
-                      my_library
-                    </Link>
-                  </DropdownMenuItem>
-                  <DropdownMenuSeparator className="border-dashed" />
                   <DropdownMenuItem onClick={signOut} className="cursor-pointer gap-2 text-destructive text-xs">
                     <LogOut className="w-3.5 h-3.5" />
                     sign_out
