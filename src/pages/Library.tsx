@@ -5,7 +5,7 @@ import { useAuth } from '@/hooks/useAuth';
 import { supabase } from '@/integrations/supabase/client';
 import { getAnimeById } from '@/data/mockAnime';
 import { Card, CardContent } from '@/components/ui/card';
-import { Separator } from '@/components/ui/separator';
+
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
@@ -452,7 +452,7 @@ const Library = () => {
                     </div>
                   </div>
                   
-                  <Separator className="border-dashed" />
+                  <div className="border-t border-dashed pt-4 mt-4" />
                   
                   <Button type="submit" className="font-mono text-xs border-dashed">
                     {'>'} add_reader()
