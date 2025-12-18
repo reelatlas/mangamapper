@@ -825,7 +825,7 @@ const Library = () => {
                                 onClick={() => {
                                   group.entries.forEach(entry => deleteReaderSite(entry.id));
                                 }}
-                                className="font-mono text-xs text-muted-foreground hover:text-destructive"
+                                className="font-mono text-xs text-muted-foreground hover:text-destructive hover:bg-destructive/10"
                               >
                                 <Trash2 className="w-3.5 h-3.5 mr-1" />
                                 delete_reader()
