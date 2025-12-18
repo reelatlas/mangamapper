@@ -75,7 +75,7 @@ export const AnimeCard = ({ anime, rank }: AnimeCardProps) => {
                 {currentEpisode && (
                   <div>
                     <p className="text-[10px] text-muted-foreground tracking-wider mb-2">
-                      // last_episode
+                      last_episode
                     </p>
                     <MangaMappingDisplay episode={currentEpisode} />
                   </div>
