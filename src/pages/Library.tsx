@@ -79,7 +79,7 @@ const Library = () => {
 
         <div className="space-y-4">
           {progress.length > 0 && (
-            <div className="flex items-center gap-2">
+            <div className="flex flex-wrap items-center gap-2">
               <ArrowUpDown className="w-3.5 h-3.5 text-muted-foreground" />
               
               <ToggleGroup 

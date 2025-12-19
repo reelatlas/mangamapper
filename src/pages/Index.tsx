@@ -70,7 +70,7 @@ const Index = () => {
         {/* Filters */}
         {!isSearching && (
           <section className="mb-6">
-            <div className="flex items-center gap-2">
+            <div className="flex flex-wrap items-center gap-2">
               <Filter className="w-3.5 h-3.5 text-muted-foreground" />
               
               {/* Status filter group */}
