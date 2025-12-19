@@ -201,7 +201,7 @@ export const ProgressTracker = ({ anime }: ProgressTrackerProps) => {
         </div>
 
         {/* Save row */}
-        <div className="flex items-center gap-4 pt-2">
+        <div className="flex items-center gap-4">
           <Button 
             onClick={saveProgress} 
             disabled={saving}
