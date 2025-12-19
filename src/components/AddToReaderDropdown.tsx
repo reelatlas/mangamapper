@@ -106,7 +106,7 @@ export const AddToReaderDropdown = ({ animeId, onSuccess, linkedReaderNames = []
   if (hasFetched && userReaders.length === 0) {
     return (
       <p className="text-xs text-muted-foreground">
-        <span className="text-syntax-cyan">// </span>
+        <span className="text-muted-foreground">// </span>
         assign_series() → requires(
         <Link 
           to="/readers" 
