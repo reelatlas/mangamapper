@@ -133,7 +133,7 @@ export const AddToReaderDropdown = ({ animeId, onSuccess, linkedReaderNames = []
       </PopoverTrigger>
       <PopoverContent className="w-72 p-0 bg-background border-dashed" align="start">
         <div className="terminal-header text-xs">
-          <span className="text-muted-foreground">select_reader</span>
+          <span className="text-muted-foreground">select()</span>
         </div>
         
         {!selectedReader ? (
@@ -181,7 +181,7 @@ export const AddToReaderDropdown = ({ animeId, onSuccess, linkedReaderNames = []
                 disabled={loading || !seriesUrl.trim()}
               >
                 <Check className="w-3 h-3" />
-                confirm
+                confirm()
               </Button>
               <Button
                 size="sm"
