@@ -125,10 +125,11 @@ export const AddToReaderDropdown = ({ animeId, onSuccess, linkedReaderNames = []
       <PopoverTrigger asChild>
         <Button
           variant="ghost"
-          className="font-mono text-xs gap-1 h-auto py-0.5 px-1.5 text-muted-foreground hover:text-accent-foreground hover:bg-accent"
+          size="sm"
+          className="font-mono text-xs border-dashed h-7 text-muted-foreground hover:text-accent-foreground hover:bg-accent"
         >
-          <Plus className="w-3 h-3" />
-          add_to_reader()
+          <Plus className="w-3.5 h-3.5" />
+          + add_to_reader()
         </Button>
       </PopoverTrigger>
       <PopoverContent className="w-72 p-0 bg-background border-dashed" align="start">
