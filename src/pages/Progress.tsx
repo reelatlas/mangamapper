@@ -5,7 +5,7 @@ import { useLibraryData } from '@/hooks/useLibraryData';
 import { getAnimeById } from '@/data/mockAnime';
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
-import { Library, BookOpen, Tv, Trash2, ExternalLink, Link2, ArrowUpDown } from 'lucide-react';
+import { Library, BookOpen, Tv, Trash2, ExternalLink, Link2, ArrowUpDown, X } from 'lucide-react';
 import { ToggleGroup, ToggleGroupItem } from '@/components/ui/toggle-group';
 import type { SortOption } from '@/types/library';
 import { getReadersForAnime } from '@/types/library';
@@ -13,6 +13,7 @@ import { getReadersForAnime } from '@/types/library';
 const Progress = () => {
   const navigate = useNavigate();
   const { user, authLoading, loading, progress, readerSites, deleteProgress } = useLibraryData();
+  const [confirmingDeleteId, setConfirmingDeleteId] = useState<string | null>(null);
 
   const [progressSort, setProgressSort] = useState<SortOption>(() => {
     const saved = localStorage.getItem('mangamapper-library-progress-sort');
@@ -190,18 +191,48 @@ const Progress = () => {
                               )}
                             </div>
                           </div>
-                          <Button
-                            variant="ghost"
-                            size="icon"
-                            onClick={(e) => {
-                              e.preventDefault();
-                              e.stopPropagation();
-                              deleteProgress(item.id);
-                            }}
-                            className="text-muted-foreground hover:bg-destructive hover:text-destructive-foreground"
-                          >
-                            <Trash2 className="w-4 h-4" />
-                          </Button>
+                          {confirmingDeleteId === item.id ? (
+                            <div className="flex items-center gap-1">
+                              <Button
+                                variant="ghost"
+                                size="icon"
+                                onClick={(e) => {
+                                  e.preventDefault();
+                                  e.stopPropagation();
+                                  deleteProgress(item.id);
+                                  setConfirmingDeleteId(null);
+                                }}
+                                className="text-muted-foreground hover:text-destructive hover:bg-destructive/10"
+                              >
+                                <Trash2 className="w-4 h-4" />
+                              </Button>
+                              <Button
+                                variant="ghost"
+                                size="icon"
+                                onClick={(e) => {
+                                  e.preventDefault();
+                                  e.stopPropagation();
+                                  setConfirmingDeleteId(null);
+                                }}
+                                className="text-muted-foreground hover:text-muted-foreground hover:bg-muted"
+                              >
+                                <X className="w-4 h-4" />
+                              </Button>
+                            </div>
+                          ) : (
+                            <Button
+                              variant="ghost"
+                              size="icon"
+                              onClick={(e) => {
+                                e.preventDefault();
+                                e.stopPropagation();
+                                setConfirmingDeleteId(item.id);
+                              }}
+                              className="text-muted-foreground hover:text-destructive hover:bg-destructive/10"
+                            >
+                              <Trash2 className="w-4 h-4" />
+                            </Button>
+                          )}
                         </div>
                       </CardContent>
                     </Card>
