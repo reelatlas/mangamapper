@@ -74,7 +74,7 @@ const Library = () => {
         <div className="flex items-center gap-2 mb-6 text-sm">
           <LibraryIcon className="w-4 h-4 text-primary" />
           <span className="text-muted-foreground">{'>'}</span>
-          <span className="text-syntax-cyan">library</span>
+          <span className="text-syntax-cyan">my_library</span>
         </div>
 
         <div className="space-y-4">
