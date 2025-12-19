@@ -198,7 +198,7 @@ const Progress = () => {
                               e.stopPropagation();
                               deleteProgress(item.id);
                             }}
-                            className="text-muted-foreground hover:text-destructive"
+                            className="text-muted-foreground hover:bg-destructive hover:text-destructive-foreground"
                           >
                             <Trash2 className="w-4 h-4" />
                           </Button>
