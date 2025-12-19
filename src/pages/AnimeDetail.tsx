@@ -205,11 +205,11 @@ const AnimeDetail = () => {
                       key={reader.id}
                       variant="outline"
                       size="sm"
-                      className="font-mono text-xs border-dashed gap-1.5 max-w-full"
+                      className="font-mono text-xs border-dashed gap-1.5"
                       onClick={() => window.open(reader.series_url!, '_blank')}
                     >
-                      <span className="truncate">{reader.name}</span>
-                      <ExternalLink className="w-3 h-3 shrink-0" />
+                      {reader.name}
+                      <ExternalLink className="w-3 h-3" />
                     </Button>
                   ))}
                 </div>
