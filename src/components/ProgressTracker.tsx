@@ -270,11 +270,11 @@ export const ProgressTracker = ({ anime }: ProgressTrackerProps) => {
 
         {/* Library toggle button */}
         <Button
-          variant={inLibrary ? "default" : "outline"}
+          variant="outline"
           size="sm"
           onClick={toggleLibrary}
           disabled={togglingLibrary}
-          className={`font-mono text-xs h-7 ${!inLibrary ? 'border-dashed bg-transparent' : ''}`}
+          className={`font-mono text-xs h-7 ${inLibrary ? 'bg-foreground text-background hover:bg-foreground/90' : 'border-dashed bg-transparent'}`}
         >
           {togglingLibrary ? '...' : inLibrary ? '[✓] in_library' : '[ ] add_to_library'}
         </Button>
