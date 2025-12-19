@@ -252,14 +252,26 @@ export const ProgressTracker = ({ anime }: ProgressTrackerProps) => {
 
         {/* Save row */}
         <div className="flex flex-col gap-2">
-          <Button 
-            onClick={saveProgress} 
-            disabled={saving}
-            size="sm"
-            className="font-mono text-xs border-dashed h-7 w-fit"
-          >
-            {'>'} {saving ? 'saving...' : 'save_progress()'}
-          </Button>
+          <div className="flex items-center gap-2">
+            <Button 
+              onClick={saveProgress} 
+              disabled={saving}
+              size="sm"
+              className="font-mono text-xs border-dashed h-7"
+            >
+              {'>'} {saving ? 'saving...' : 'save_progress()'}
+            </Button>
+            {/* Library toggle button */}
+            <Button
+              variant="outline"
+              size="sm"
+              onClick={toggleLibrary}
+              disabled={togglingLibrary}
+              className={`font-mono text-xs h-7 ${inLibrary ? 'bg-foreground text-background hover:bg-foreground/90' : 'border-dashed bg-transparent'}`}
+            >
+              {togglingLibrary ? '...' : inLibrary ? '[✓] in_library' : '[ ] add_to_library'}
+            </Button>
+          </div>
           {progress?.updated_at && (
             <span className="text-muted-foreground text-xs">
               <span className="text-muted-foreground">last_saved:</span>
@@ -267,17 +279,6 @@ export const ProgressTracker = ({ anime }: ProgressTrackerProps) => {
             </span>
           )}
         </div>
-
-        {/* Library toggle button */}
-        <Button
-          variant="outline"
-          size="sm"
-          onClick={toggleLibrary}
-          disabled={togglingLibrary}
-          className={`font-mono text-xs h-7 ${inLibrary ? 'bg-foreground text-background hover:bg-foreground/90' : 'border-dashed bg-transparent'}`}
-        >
-          {togglingLibrary ? '...' : inLibrary ? '[✓] in_library' : '[ ] add_to_library'}
-        </Button>
       </CardContent>
     </Card>
   );
