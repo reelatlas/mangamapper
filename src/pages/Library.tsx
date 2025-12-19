@@ -169,15 +169,15 @@ const Library = () => {
                                           key={reader.id}
                                           variant="outline"
                                           size="sm"
-                                          className="h-5 px-1.5 text-[10px] font-mono border-dashed gap-1"
+                                          className="h-5 px-1.5 text-[10px] font-mono border-dashed gap-1 max-w-full"
                                           onClick={(e) => {
                                             e.preventDefault();
                                             e.stopPropagation();
                                             window.open(reader.series_url!, '_blank');
                                           }}
                                         >
-                                          {reader.name}
-                                          <ExternalLink className="w-2.5 h-2.5" />
+                                          <span className="truncate">{reader.name}</span>
+                                          <ExternalLink className="w-2.5 h-2.5 shrink-0" />
                                         </Button>
                                       ))}
                                     </div>
