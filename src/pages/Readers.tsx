@@ -79,7 +79,7 @@ const Readers = () => {
           animeId: locationState.preSelectAnimeId, 
           seriesUrl: '', 
           suffix: '', 
-          userModified: false 
+          userModified: true 
         }]);
       }
       
