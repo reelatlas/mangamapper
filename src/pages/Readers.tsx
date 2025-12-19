@@ -756,7 +756,7 @@ const Readers = () => {
                                     }}
                                     className="h-8 w-8 text-muted-foreground hover:text-destructive hover:bg-destructive/10"
                                   >
-                                    <Trash2 className="w-4 h-4" />
+                                    <Check className="w-4 h-4" />
                                   </Button>
                                   <Button 
                                     variant="ghost"
