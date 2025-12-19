@@ -9,7 +9,7 @@ interface MangaMappingDisplayProps {
 export const MangaMappingDisplay = ({ episode, showEpisodeNumber = true }: MangaMappingDisplayProps) => {
   return (
     <div className="flex flex-wrap items-center justify-between gap-2 p-2.5 bg-muted/30 border border-dashed font-mono text-sm rounded-lg">
-      <div className="flex items-center gap-3 flex-1 min-w-0">
+      <div className="flex items-center gap-3 w-full sm:w-auto sm:flex-1 min-w-0">
         {showEpisodeNumber && (
           <span className="text-syntax-amber shrink-0">
             #{String(episode.number).padStart(4, '0')}
