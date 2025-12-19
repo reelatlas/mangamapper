@@ -7,7 +7,7 @@ import { AuthProvider } from "@/hooks/useAuth";
 import Index from "./pages/Index";
 import AnimeDetail from "./pages/AnimeDetail";
 import Auth from "./pages/Auth";
-import Progress from "./pages/Progress";
+import Library from "./pages/Library";
 import Readers from "./pages/Readers";
 import NotFound from "./pages/NotFound";
 
@@ -24,10 +24,10 @@ const App = () => (
             <Route path="/" element={<Index />} />
             <Route path="/anime/:id" element={<AnimeDetail />} />
             <Route path="/auth" element={<Auth />} />
-            <Route path="/progress" element={<Progress />} />
+            <Route path="/library" element={<Library />} />
             <Route path="/readers" element={<Readers />} />
-            {/* Redirect old /library route to /progress */}
-            <Route path="/library" element={<Navigate to="/progress" replace />} />
+            {/* Redirect old /progress route to /library */}
+            <Route path="/progress" element={<Navigate to="/library" replace />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>
