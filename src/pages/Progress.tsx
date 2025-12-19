@@ -114,7 +114,7 @@ const Progress = () => {
                 return (
                   <Link key={item.id} to={`/anime/${anime.id}`} className="block">
                     <Card className="border-dashed hover:border-primary/50 transition-colors cursor-pointer">
-                      <CardContent className="p-4">
+                      <CardContent className="pt-4 px-4 pb-0">
                         <div className="flex items-stretch gap-4">
                           <img
                             src={anime.coverImage}
