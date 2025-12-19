@@ -191,9 +191,8 @@ const AnimeDetail = () => {
             ) : linkedReaders.length === 0 ? (
               // State B: Has manga but no linked readers
               <div className="space-y-3">
-                <p className="text-xs text-muted-foreground">
-                  <span className="text-syntax-cyan">// </span>
-                  no readers assigned
+                <p className="text-xs text-muted-foreground font-mono">
+                  // no_reader_assigned
                 </p>
                 {id && <AddToReaderDropdown animeId={id} onSuccess={fetchLinkedReaders} linkedReaderNames={linkedReaders.map(r => r.name)} />}
               </div>
