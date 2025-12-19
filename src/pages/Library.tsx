@@ -260,7 +260,7 @@ const Library = () => {
         <div className="container py-6 text-center text-xs text-muted-foreground">
           <p>
             <span className="text-foreground/40">mangaMapper</span>{' '}
-            <span>// anime-to-manga</span>
+            <span>// find your next chapter</span>
           </p>
         </div>
       </footer>
