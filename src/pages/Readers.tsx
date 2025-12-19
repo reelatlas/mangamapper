@@ -438,7 +438,7 @@ const Readers = () => {
         <div className="flex items-center gap-2 mb-6 text-sm">
           <Globe className="w-4 h-4 text-primary" />
           <span className="text-muted-foreground">{'>'}</span>
-          <span className="text-syntax-cyan">reader_sites</span>
+          <span className="text-syntax-cyan">my_readers</span>
         </div>
 
         <div className="space-y-6">
