@@ -46,24 +46,24 @@ export const AnimeCard = ({ anime, rank }: AnimeCardProps) => {
             {/* Content */}
             <div className="flex-1 p-4 flex flex-col font-mono">
               {/* Top section - Data structure */}
-              <div className="space-y-1 text-sm">
-                <div>
+              <div className="space-y-1 text-sm min-w-0">
+                <div className="break-words">
                   <span className="text-syntax-cyan">title</span>
                   <span className="text-muted-foreground">: </span>
                   <span className="text-syntax-green">{anime.title}</span>
                 </div>
-                <div>
+                <div className="break-words">
                   <span className="text-syntax-cyan">title_jp</span>
                   <span className="text-muted-foreground">: </span>
                   <span className="text-syntax-green text-xs">{anime.japaneseTitle}</span>
                 </div>
-                <div>
+                <div className="flex flex-wrap">
                   <span className="text-syntax-cyan">genres</span>
-                  <span className="text-muted-foreground">: </span>
+                  <span className="text-muted-foreground">:&nbsp;</span>
                   {anime.genres.slice(0, 3).map((genre, i) => (
                     <span key={genre}>
                       <span className="text-syntax-amber">{genre.toLowerCase()}</span>
-                      {i < Math.min(anime.genres.length, 3) - 1 && <span className="text-muted-foreground">, </span>}
+                      {i < Math.min(anime.genres.length, 3) - 1 && <span className="text-muted-foreground">,&nbsp;</span>}
                     </span>
                   ))}
                 </div>
