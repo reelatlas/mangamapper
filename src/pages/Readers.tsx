@@ -505,15 +505,22 @@ const Readers = () => {
                       <span className="text-syntax-cyan">assign_to</span>
                       <span className="text-muted-foreground"> // optional</span>
                     </p>
-                    <div className="space-y-6">
+                    <div className="space-y-6 sm:space-y-3">
                       {seriesAssignments.map((assignment, index) => (
                         <div key={index} className="space-y-2">
-                          <Label className="text-xs">
+                          {/* Mobile: Combined label for each row */}
+                          <Label className="text-xs sm:hidden">
                             <span className="text-syntax-cyan">series</span>
                             <span className="text-muted-foreground"> {'{'}name, url{'}'}</span>
                           </Label>
                           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                             <div className="min-w-0">
+                              {/* Desktop: Show series label only on first row */}
+                              {index === 0 && (
+                                <Label className="text-xs hidden sm:block mb-1.5">
+                                  <span className="text-syntax-cyan">series</span>
+                                </Label>
+                              )}
                               <SeriesCombobox
                                 value={assignment.animeId}
                                 onValueChange={(val) => updateSeriesAssignment(index, 'animeId', val)}
@@ -524,6 +531,12 @@ const Readers = () => {
                               />
                             </div>
                             <div className="min-w-0">
+                              {/* Desktop: Show series_url label only on first row */}
+                              {index === 0 && (
+                                <Label className="text-xs hidden sm:block mb-1.5">
+                                  <span className="text-syntax-cyan">series_url</span>
+                                </Label>
+                              )}
                               <div className="flex items-center gap-2">
                                 <Input
                                   type="text"
@@ -669,15 +682,22 @@ const Readers = () => {
                                 <span className="text-syntax-cyan">assign_to</span>
                                 <span className="text-muted-foreground"> // optional</span>
                               </p>
-                              <div className="space-y-6">
+                              <div className="space-y-6 sm:space-y-3">
                                 {editSeriesAssignments.map((assignment, index) => (
                                   <div key={index} className="space-y-2">
-                                    <Label className="text-xs">
+                                    {/* Mobile: Combined label for each row */}
+                                    <Label className="text-xs sm:hidden">
                                       <span className="text-syntax-cyan">series</span>
                                       <span className="text-muted-foreground"> {'{'}name, url{'}'}</span>
                                     </Label>
                                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                                       <div className="min-w-0">
+                                        {/* Desktop: Show series label only on first row */}
+                                        {index === 0 && (
+                                          <Label className="text-xs hidden sm:block mb-1.5">
+                                            <span className="text-syntax-cyan">series</span>
+                                          </Label>
+                                        )}
                                         <SeriesCombobox
                                           value={assignment.animeId}
                                           onValueChange={(val) => updateEditSeriesAssignment(index, 'animeId', val)}
@@ -688,6 +708,12 @@ const Readers = () => {
                                         />
                                       </div>
                                       <div className="min-w-0">
+                                        {/* Desktop: Show series_url label only on first row */}
+                                        {index === 0 && (
+                                          <Label className="text-xs hidden sm:block mb-1.5">
+                                            <span className="text-syntax-cyan">series_url</span>
+                                          </Label>
+                                        )}
                                         <div className="flex items-center gap-2">
                                           <Input
                                             type="text"
