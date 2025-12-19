@@ -856,10 +856,16 @@ const Readers = () => {
             <div className="text-center py-16 border border-dashed">
               <Globe className="w-8 h-8 text-muted-foreground mx-auto mb-3" />
               <p className="text-muted-foreground text-sm">
-                <span className="text-syntax-cyan">// </span>no reader sites saved
+                <span className="text-syntax-cyan">// </span>no_reader_found
               </p>
-              <p className="text-xs text-muted-foreground mt-1">
-                {'>'} add your favorite manga sites above
+              <p className="text-xs text-muted-foreground mt-2">
+                <Button
+                  variant="link"
+                  onClick={() => setShowAddReaderForm(true)}
+                  className="text-primary p-0 h-auto font-mono text-xs"
+                >
+                  $ new_reader
+                </Button>
               </p>
             </div>
           )}
