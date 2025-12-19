@@ -191,7 +191,7 @@ const Progress = () => {
                               )}
                             </div>
                           </div>
-                          <div className="flex items-center">
+                          <div className="flex items-start">
                           {confirmingDeleteId === item.id ? (
                             <div className="flex items-center gap-1">
                               <Button
