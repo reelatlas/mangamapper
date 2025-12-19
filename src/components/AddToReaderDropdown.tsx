@@ -1,0 +1,187 @@
+import { useState, useEffect } from 'react';
+import { Button } from '@/components/ui/button';
+import { Input } from '@/components/ui/input';
+import {
+  Popover,
+  PopoverContent,
+  PopoverTrigger,
+} from '@/components/ui/popover';
+import { Plus, Check, X } from 'lucide-react';
+import { supabase } from '@/integrations/supabase/client';
+import { useAuth } from '@/hooks/useAuth';
+import { toast } from '@/hooks/use-toast';
+
+interface UserReader {
+  name: string;
+  url: string;
+}
+
+interface AddToReaderDropdownProps {
+  animeId: string;
+  onSuccess: () => void;
+}
+
+export const AddToReaderDropdown = ({ animeId, onSuccess }: AddToReaderDropdownProps) => {
+  const { user } = useAuth();
+  const [open, setOpen] = useState(false);
+  const [userReaders, setUserReaders] = useState<UserReader[]>([]);
+  const [selectedReader, setSelectedReader] = useState<UserReader | null>(null);
+  const [seriesUrl, setSeriesUrl] = useState('');
+  const [loading, setLoading] = useState(false);
+
+  useEffect(() => {
+    const fetchUserReaders = async () => {
+      if (!user) return;
+
+      const { data } = await supabase
+        .from('manga_reader_sites')
+        .select('name, url')
+        .eq('user_id', user.id);
+
+      if (data) {
+        // Get distinct readers by name
+        const distinctReaders = [...new Map(data.map(r => [r.name, r])).values()];
+        setUserReaders(distinctReaders);
+      }
+    };
+
+    if (open) {
+      fetchUserReaders();
+    }
+  }, [user, open]);
+
+  const handleSelectReader = (reader: UserReader) => {
+    setSelectedReader(reader);
+    setSeriesUrl(reader.url);
+  };
+
+  const handleConfirm = async () => {
+    if (!user || !selectedReader || !seriesUrl.trim()) return;
+
+    setLoading(true);
+    const { error } = await supabase
+      .from('manga_reader_sites')
+      .insert({
+        user_id: user.id,
+        name: selectedReader.name,
+        url: selectedReader.url,
+        anime_id: animeId,
+        series_url: seriesUrl.trim()
+      });
+
+    setLoading(false);
+
+    if (error) {
+      toast({
+        title: "Error",
+        description: "Failed to add series to reader",
+        variant: "destructive"
+      });
+    } else {
+      toast({
+        title: "Success",
+        description: `Added to ${selectedReader.name}`
+      });
+      setOpen(false);
+      setSelectedReader(null);
+      setSeriesUrl('');
+      onSuccess();
+    }
+  };
+
+  const handleCancel = () => {
+    setSelectedReader(null);
+    setSeriesUrl('');
+  };
+
+  if (!user) return null;
+
+  if (userReaders.length === 0 && !open) {
+    return (
+      <p className="text-xs text-muted-foreground">
+        <span className="text-syntax-cyan">// </span>
+        add readers in{' '}
+        <a href="/readers" className="text-primary hover:underline">
+          readers
+        </a>{' '}
+        first
+      </p>
+    );
+  }
+
+  return (
+    <Popover open={open} onOpenChange={setOpen}>
+      <PopoverTrigger asChild>
+        <Button
+          variant="ghost"
+          size="sm"
+          className="font-mono text-xs gap-1.5 text-muted-foreground hover:text-foreground"
+        >
+          <Plus className="w-3 h-3" />
+          add_to_reader
+        </Button>
+      </PopoverTrigger>
+      <PopoverContent className="w-72 p-0 bg-background border-dashed" align="start">
+        <div className="terminal-header text-xs">
+          <span className="text-muted-foreground">select_reader</span>
+        </div>
+        
+        {!selectedReader ? (
+          <div className="p-2 space-y-1">
+            {userReaders.length === 0 ? (
+              <p className="text-xs text-muted-foreground p-2">
+                <span className="text-syntax-cyan">// </span>
+                no readers found
+              </p>
+            ) : (
+              userReaders.map((reader) => (
+                <button
+                  key={reader.name}
+                  onClick={() => handleSelectReader(reader)}
+                  className="w-full text-left px-3 py-2 text-xs font-mono hover:bg-muted rounded transition-colors"
+                >
+                  <span className="text-syntax-green">{reader.name}</span>
+                </button>
+              ))
+            )}
+          </div>
+        ) : (
+          <div className="p-3 space-y-3">
+            <div>
+              <p className="text-xs text-muted-foreground mb-1.5">
+                <span className="text-syntax-cyan">reader</span>
+                <span className="text-muted-foreground">: </span>
+                <span className="text-syntax-green">{selectedReader.name}</span>
+              </p>
+              <Input
+                value={seriesUrl}
+                onChange={(e) => setSeriesUrl(e.target.value)}
+                placeholder="series_url"
+                className="font-mono text-xs h-8"
+              />
+            </div>
+            <div className="flex gap-2">
+              <Button
+                size="sm"
+                className="flex-1 text-xs h-7 gap-1"
+                onClick={handleConfirm}
+                disabled={loading || !seriesUrl.trim()}
+              >
+                <Check className="w-3 h-3" />
+                confirm
+              </Button>
+              <Button
+                size="sm"
+                variant="outline"
+                className="text-xs h-7 gap-1 border-dashed"
+                onClick={handleCancel}
+              >
+                <X className="w-3 h-3" />
+              </Button>
+            </div>
+          </div>
+        )}
+      </PopoverContent>
+    </Popover>
+  );
+};
