@@ -259,7 +259,7 @@ export const ProgressTracker = ({ anime }: ProgressTrackerProps) => {
               size="sm"
               className="font-mono text-xs border-dashed h-7"
             >
-              {'>'} {saving ? 'saving...' : 'save_progress()'}
+              {'✓'} {saving ? 'saving...' : 'save_progress()'}
             </Button>
             {/* Library toggle button */}
             <Button
