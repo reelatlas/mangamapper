@@ -573,7 +573,7 @@ const Readers = () => {
                       type="button"
                       variant="outline"
                       onClick={cancelAddReader}
-                      className="font-mono text-xs border-dashed"
+                      className="font-mono text-xs border-dashed hover:bg-destructive hover:text-destructive-foreground hover:border-destructive"
                     >
                       <X className="w-3.5 h-3.5 mr-1" />
                       cancel
@@ -740,7 +740,7 @@ const Readers = () => {
                                 <Button 
                                   variant="outline"
                                   onClick={cancelEditingReader} 
-                                  className="font-mono text-xs border-dashed"
+                                  className="font-mono text-xs border-dashed hover:bg-destructive hover:text-destructive-foreground hover:border-destructive"
                                 >
                                   <X className="w-3.5 h-3.5 mr-1" />
                                   cancel
