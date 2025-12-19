@@ -126,7 +126,7 @@ export const AddToReaderDropdown = ({ animeId, onSuccess, linkedReaderNames = []
         <Button
           variant="outline"
           size="sm"
-          className="font-mono text-xs border-dashed h-7 text-muted-foreground hover:text-accent-foreground hover:bg-accent"
+          className="font-mono text-xs border-dashed h-7 bg-transparent text-muted-foreground hover:text-accent-foreground hover:bg-accent"
         >
           {'>'} add_to_reader
         </Button>
