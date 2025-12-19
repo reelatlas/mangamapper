@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useMemo } from 'react';
 import { useNavigate, useSearchParams } from 'react-router-dom';
 import { Header } from '@/components/Header';
 import { useAuth } from '@/hooks/useAuth';
@@ -10,11 +10,20 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
-import { Library as LibraryIcon, BookOpen, Tv, Globe, Plus, Trash2, ExternalLink, Hourglass, Link2, Pencil, X, Check } from 'lucide-react';
+import { Library as LibraryIcon, BookOpen, Tv, Globe, Plus, Trash2, ExternalLink, Hourglass, Link2, Pencil, X, Check, ArrowUpDown } from 'lucide-react';
 import { mockAnimeData } from '@/data/mockAnime';
 import { SeriesCombobox } from '@/components/SeriesCombobox';
 import { toast } from 'sonner';
 import { Link } from 'react-router-dom';
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from '@/components/ui/select';
+
+type SortOption = 'alpha-asc' | 'alpha-desc' | 'date-desc' | 'date-asc';
 
 interface AnimeProgress {
   id: string;
@@ -32,6 +41,7 @@ interface ReaderSite {
   notes: string | null;
   anime_id: string | null;
   series_url: string | null;
+  updated_at: string;
 }
 
 interface SeriesAssignment {
@@ -54,6 +64,10 @@ const Library = () => {
   const [progress, setProgress] = useState<AnimeProgress[]>([]);
   const [readerSites, setReaderSites] = useState<ReaderSite[]>([]);
   const [loading, setLoading] = useState(true);
+  
+  // Sort state
+  const [progressSort, setProgressSort] = useState<SortOption>('date-desc');
+  const [readerSort, setReaderSort] = useState<SortOption>('date-desc');
   
   // Add form state
   const [newSiteName, setNewSiteName] = useState('');
@@ -167,7 +181,7 @@ const Library = () => {
     const { data, error } = await supabase
       .from('manga_reader_sites')
       .select('*')
-      .order('created_at', { ascending: false });
+      .order('updated_at', { ascending: false });
     
     if (error) {
       console.error('Error fetching reader sites:', error);
@@ -175,6 +189,67 @@ const Library = () => {
       setReaderSites(data || []);
     }
   };
+
+  // Sorted progress list
+  const sortedProgress = useMemo(() => {
+    const sorted = [...progress];
+    switch (progressSort) {
+      case 'alpha-asc':
+        return sorted.sort((a, b) => {
+          const titleA = getAnimeById(a.anime_id)?.title || '';
+          const titleB = getAnimeById(b.anime_id)?.title || '';
+          return titleA.localeCompare(titleB);
+        });
+      case 'alpha-desc':
+        return sorted.sort((a, b) => {
+          const titleA = getAnimeById(a.anime_id)?.title || '';
+          const titleB = getAnimeById(b.anime_id)?.title || '';
+          return titleB.localeCompare(titleA);
+        });
+      case 'date-asc':
+        return sorted.sort((a, b) => new Date(a.updated_at).getTime() - new Date(b.updated_at).getTime());
+      case 'date-desc':
+      default:
+        return sorted.sort((a, b) => new Date(b.updated_at).getTime() - new Date(a.updated_at).getTime());
+    }
+  }, [progress, progressSort]);
+
+  // Grouped and sorted reader sites
+  const sortedReaderGroups = useMemo(() => {
+    // Group by name first
+    const grouped = readerSites.reduce((acc, site) => {
+      const key = site.name.toLowerCase();
+      if (!acc[key]) {
+        acc[key] = {
+          name: site.name,
+          url: site.url,
+          notes: site.notes,
+          entries: [],
+          latestUpdatedAt: site.updated_at
+        };
+      }
+      acc[key].entries.push(site);
+      // Track the latest updated_at for this group
+      if (new Date(site.updated_at) > new Date(acc[key].latestUpdatedAt)) {
+        acc[key].latestUpdatedAt = site.updated_at;
+      }
+      return acc;
+    }, {} as Record<string, { name: string; url: string; notes: string | null; entries: ReaderSite[]; latestUpdatedAt: string }>);
+
+    const groups = Object.values(grouped);
+    
+    switch (readerSort) {
+      case 'alpha-asc':
+        return groups.sort((a, b) => a.name.localeCompare(b.name));
+      case 'alpha-desc':
+        return groups.sort((a, b) => b.name.localeCompare(a.name));
+      case 'date-asc':
+        return groups.sort((a, b) => new Date(a.latestUpdatedAt).getTime() - new Date(b.latestUpdatedAt).getTime());
+      case 'date-desc':
+      default:
+        return groups.sort((a, b) => new Date(b.latestUpdatedAt).getTime() - new Date(a.latestUpdatedAt).getTime());
+    }
+  }, [readerSites, readerSort]);
 
   const addReaderSite = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -496,9 +571,25 @@ const Library = () => {
           </TabsList>
 
           <TabsContent value="progress" className="space-y-4">
+            {progress.length > 0 && (
+              <div className="flex items-center gap-2">
+                <ArrowUpDown className="w-3.5 h-3.5 text-muted-foreground" />
+                <Select value={progressSort} onValueChange={(val) => setProgressSort(val as SortOption)}>
+                  <SelectTrigger className="w-[140px] h-8 text-xs font-mono border-dashed bg-muted/30">
+                    <SelectValue />
+                  </SelectTrigger>
+                  <SelectContent className="font-mono bg-background border-dashed">
+                    <SelectItem value="alpha-asc" className="text-xs">a→z</SelectItem>
+                    <SelectItem value="alpha-desc" className="text-xs">z→a</SelectItem>
+                    <SelectItem value="date-desc" className="text-xs">last_updated</SelectItem>
+                    <SelectItem value="date-asc" className="text-xs">first_updated</SelectItem>
+                  </SelectContent>
+                </Select>
+              </div>
+            )}
             {progress.length > 0 ? (
               <div className="grid gap-3">
-                {progress.map((item) => {
+                {sortedProgress.map((item) => {
                   const anime = getAnimeById(item.anime_id);
                   if (!anime) return null;
                   
@@ -757,22 +848,23 @@ const Library = () => {
 
             {/* Reader sites list - grouped by name */}
             {readerSites.length > 0 ? (
-              <div className="grid gap-3">
-                {Object.values(
-                  readerSites.reduce((acc, site) => {
-                    const key = site.name.toLowerCase();
-                    if (!acc[key]) {
-                      acc[key] = {
-                        name: site.name,
-                        url: site.url,
-                        notes: site.notes,
-                        entries: []
-                      };
-                    }
-                    acc[key].entries.push(site);
-                    return acc;
-                  }, {} as Record<string, { name: string; url: string; notes: string | null; entries: ReaderSite[] }>)
-                ).map((group) => {
+              <>
+                <div className="flex items-center gap-2">
+                  <ArrowUpDown className="w-3.5 h-3.5 text-muted-foreground" />
+                  <Select value={readerSort} onValueChange={(val) => setReaderSort(val as SortOption)}>
+                    <SelectTrigger className="w-[140px] h-8 text-xs font-mono border-dashed bg-muted/30">
+                      <SelectValue />
+                    </SelectTrigger>
+                    <SelectContent className="font-mono bg-background border-dashed">
+                      <SelectItem value="alpha-asc" className="text-xs">a→z</SelectItem>
+                      <SelectItem value="alpha-desc" className="text-xs">z→a</SelectItem>
+                      <SelectItem value="date-desc" className="text-xs">last_updated</SelectItem>
+                      <SelectItem value="date-asc" className="text-xs">first_updated</SelectItem>
+                    </SelectContent>
+                  </Select>
+                </div>
+                <div className="grid gap-3">
+                  {sortedReaderGroups.map((group) => {
                   const seriesEntries = group.entries.filter(e => e.anime_id);
                   const isEditing = editingReaderName === group.name.toLowerCase();
                   
@@ -1021,7 +1113,8 @@ const Library = () => {
                     </Card>
                   );
                 })}
-              </div>
+                </div>
+              </>
             ) : (
               <div className="text-center py-16 border border-dashed">
                 <Globe className="w-8 h-8 text-muted-foreground mx-auto mb-3" />
