@@ -269,7 +269,7 @@ export const ProgressTracker = ({ anime }: ProgressTrackerProps) => {
                   onClick={saveProgress} 
                   disabled={saving || !hasChanges}
                   size="sm"
-                  className={`font-mono text-xs border-dashed h-7 ${!hasChanges ? 'bg-transparent text-muted-foreground hover:bg-transparent' : ''}`}
+                  className={`font-mono text-xs h-7 ${!hasChanges ? 'bg-transparent text-muted-foreground hover:bg-transparent border border-dashed border-border' : 'border-dashed'}`}
                 >
                   {'✓'} {saving ? 'saving...' : 'save_progress()'}
                 </Button>
