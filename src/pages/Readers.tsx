@@ -1,83 +1,30 @@
 import { useState, useEffect, useMemo } from 'react';
-import { useNavigate, useSearchParams } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 import { Header } from '@/components/Header';
+import { useLibraryData } from '@/hooks/useLibraryData';
 import { useAuth } from '@/hooks/useAuth';
 import { supabase } from '@/integrations/supabase/client';
-import { getAnimeById } from '@/data/mockAnime';
 import { Card, CardContent } from '@/components/ui/card';
-
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
-import { Library as LibraryIcon, BookOpen, Tv, Globe, Plus, Trash2, ExternalLink, Hourglass, Link2, Pencil, X, Check, ArrowUpDown } from 'lucide-react';
+import { Globe, Plus, Trash2, ExternalLink, Link2, Pencil, X, Check, ArrowUpDown } from 'lucide-react';
 import { mockAnimeData } from '@/data/mockAnime';
 import { SeriesCombobox } from '@/components/SeriesCombobox';
 import { toast } from 'sonner';
-import { Link } from 'react-router-dom';
 import { ToggleGroup, ToggleGroupItem } from '@/components/ui/toggle-group';
+import type { SortOption, SeriesAssignment, ReaderSite } from '@/types/library';
 
-type SortOption = 'alpha-asc' | 'alpha-desc' | 'date-desc' | 'date-asc';
-
-interface AnimeProgress {
-  id: string;
-  anime_id: string;
-  last_watched_episode: number | null;
-  last_read_volume: number | null;
-  last_read_chapter: string | null;
-  updated_at: string;
-}
-
-interface ReaderSite {
-  id: string;
-  name: string;
-  url: string;
-  notes: string | null;
-  anime_id: string | null;
-  series_url: string | null;
-  updated_at: string;
-}
-
-interface SeriesAssignment {
-  animeId: string;
-  seriesUrl: string;
-  suffix: string;
-  existingId?: string; // tracks if this came from an existing DB entry
-  userModified?: boolean; // tracks if user manually interacted with this row
-}
-
-// Helper to get linked readers for an anime
-const getReadersForAnime = (animeId: string, readerSites: ReaderSite[]): ReaderSite[] => {
-  return readerSites.filter(site => site.anime_id === animeId && site.series_url);
-};
-
-const Library = () => {
-  const { user, loading: authLoading } = useAuth();
+const Readers = () => {
   const navigate = useNavigate();
-  const [searchParams, setSearchParams] = useSearchParams();
-  const [progress, setProgress] = useState<AnimeProgress[]>([]);
-  const [readerSites, setReaderSites] = useState<ReaderSite[]>([]);
-  const [loading, setLoading] = useState(true);
-  
-  // Sort state
-  const [progressSort, setProgressSort] = useState<SortOption>(() => {
-    const saved = localStorage.getItem('mangamapper-library-progress-sort');
-    return (['alpha-asc', 'alpha-desc', 'date-desc', 'date-asc'].includes(saved || '')) ? saved as SortOption : 'date-desc';
-  });
+  const { user } = useAuth();
+  const { authLoading, loading, readerSites, fetchReaderSites, deleteReaderSite } = useLibraryData();
+
   const [readerSort, setReaderSort] = useState<SortOption>(() => {
     const saved = localStorage.getItem('mangamapper-library-reader-sort');
     return (['alpha-asc', 'alpha-desc', 'date-desc', 'date-asc'].includes(saved || '')) ? saved as SortOption : 'date-desc';
   });
 
-  // Persist sort preferences to localStorage
-  useEffect(() => {
-    localStorage.setItem('mangamapper-library-progress-sort', progressSort);
-  }, [progressSort]);
-
-  useEffect(() => {
-    localStorage.setItem('mangamapper-library-reader-sort', readerSort);
-  }, [readerSort]);
-  
   // Add form state
   const [newSiteName, setNewSiteName] = useState('');
   const [newSiteUrl, setNewSiteUrl] = useState('');
@@ -93,10 +40,15 @@ const Library = () => {
   const [confirmingDeleteReaderId, setConfirmingDeleteReaderId] = useState<string | null>(null);
   const [showAddReaderForm, setShowAddReaderForm] = useState(false);
 
-  const activeTab = searchParams.get('tab') || 'progress';
-  const setActiveTab = (tab: string) => {
-    setSearchParams({ tab }, { replace: true });
-  };
+  useEffect(() => {
+    localStorage.setItem('mangamapper-library-reader-sort', readerSort);
+  }, [readerSort]);
+
+  useEffect(() => {
+    if (!authLoading && !user) {
+      navigate('/auth');
+    }
+  }, [user, authLoading, navigate]);
 
   const addSeriesRow = () => {
     const baseUrl = newSiteUrl.trim() ? (newSiteUrl.trim().endsWith('/') ? newSiteUrl.trim() : newSiteUrl.trim() + '/') : '';
@@ -106,15 +58,14 @@ const Library = () => {
   const updateSeriesAssignment = (index: number, field: 'animeId' | 'seriesUrl' | 'suffix', value: string) => {
     const updated = [...seriesAssignments];
     if (field === 'seriesUrl') {
-      // When user edits seriesUrl directly, extract the suffix (part after base URL)
       const baseUrl = newSiteUrl.trim() ? (newSiteUrl.trim().endsWith('/') ? newSiteUrl.trim() : newSiteUrl.trim() + '/') : '';
       const suffix = baseUrl && value.startsWith(baseUrl) ? value.slice(baseUrl.length) : value;
       updated[index].seriesUrl = value;
       updated[index].suffix = suffix;
-      updated[index].userModified = true; // User manually typed in series_url
+      updated[index].userModified = true;
     } else if (field === 'animeId') {
       updated[index].animeId = value;
-      updated[index].userModified = true; // User selected a series
+      updated[index].userModified = true;
     } else {
       updated[index][field] = value;
     }
@@ -127,9 +78,7 @@ const Library = () => {
     
     setNewSiteUrl(newUrl);
     
-    // Update series URLs: keep user's suffix, just change the prefix
     setSeriesAssignments(prev => prev.map(a => {
-      // If no suffix tracked yet, try to extract it from current seriesUrl
       let suffix = a.suffix;
       if (!suffix && a.seriesUrl && oldBase && a.seriesUrl.startsWith(oldBase)) {
         suffix = a.seriesUrl.slice(oldBase.length);
@@ -149,83 +98,12 @@ const Library = () => {
     if (seriesAssignments.length > 1) {
       setSeriesAssignments(seriesAssignments.filter((_, i) => i !== index));
     } else {
-      // Single row - clear user values but keep base URL from reader_url
       const baseUrl = newSiteUrl.trim() ? (newSiteUrl.trim().endsWith('/') ? newSiteUrl.trim() : newSiteUrl.trim() + '/') : '';
       setSeriesAssignments([{ animeId: '', seriesUrl: baseUrl, suffix: '', userModified: false }]);
     }
   };
 
-  useEffect(() => {
-    if (!authLoading && !user) {
-      navigate('/auth');
-    }
-  }, [user, authLoading, navigate]);
-
-  useEffect(() => {
-    if (user) {
-      fetchData();
-    }
-  }, [user]);
-
-  const fetchData = async () => {
-    setLoading(true);
-    await Promise.all([fetchProgress(), fetchReaderSites()]);
-    setLoading(false);
-  };
-
-  const fetchProgress = async () => {
-    const { data, error } = await supabase
-      .from('anime_progress')
-      .select('*')
-      .order('updated_at', { ascending: false });
-    
-    if (error) {
-      console.error('Error fetching progress:', error);
-    } else {
-      setProgress(data || []);
-    }
-  };
-
-  const fetchReaderSites = async () => {
-    const { data, error } = await supabase
-      .from('manga_reader_sites')
-      .select('*')
-      .order('updated_at', { ascending: false });
-    
-    if (error) {
-      console.error('Error fetching reader sites:', error);
-    } else {
-      setReaderSites(data || []);
-    }
-  };
-
-  // Sorted progress list
-  const sortedProgress = useMemo(() => {
-    const sorted = [...progress];
-    switch (progressSort) {
-      case 'alpha-asc':
-        return sorted.sort((a, b) => {
-          const titleA = getAnimeById(a.anime_id)?.title || '';
-          const titleB = getAnimeById(b.anime_id)?.title || '';
-          return titleA.localeCompare(titleB);
-        });
-      case 'alpha-desc':
-        return sorted.sort((a, b) => {
-          const titleA = getAnimeById(a.anime_id)?.title || '';
-          const titleB = getAnimeById(b.anime_id)?.title || '';
-          return titleB.localeCompare(titleA);
-        });
-      case 'date-asc':
-        return sorted.sort((a, b) => new Date(a.updated_at).getTime() - new Date(b.updated_at).getTime());
-      case 'date-desc':
-      default:
-        return sorted.sort((a, b) => new Date(b.updated_at).getTime() - new Date(a.updated_at).getTime());
-    }
-  }, [progress, progressSort]);
-
-  // Grouped and sorted reader sites
   const sortedReaderGroups = useMemo(() => {
-    // Group by name first
     const grouped = readerSites.reduce((acc, site) => {
       const key = site.name.toLowerCase();
       if (!acc[key]) {
@@ -238,7 +116,6 @@ const Library = () => {
         };
       }
       acc[key].entries.push(site);
-      // Track the latest updated_at for this group
       if (new Date(site.updated_at) > new Date(acc[key].latestUpdatedAt)) {
         acc[key].latestUpdatedAt = site.updated_at;
       }
@@ -267,7 +144,6 @@ const Library = () => {
       return;
     }
 
-    // Check if reader with same name already exists
     const existingReader = readerSites.find(
       site => site.name.toLowerCase() === newSiteName.trim().toLowerCase()
     );
@@ -276,10 +152,8 @@ const Library = () => {
       return;
     }
 
-    // Filter valid series assignments (those with an anime selected)
     const validAssignments = seriesAssignments.filter(a => a.animeId);
     
-    // If no series assignments, insert one row with null anime_id
     if (validAssignments.length === 0) {
       const { error } = await supabase
         .from('manga_reader_sites')
@@ -297,7 +171,6 @@ const Library = () => {
         return;
       }
     } else {
-      // Insert one row per series assignment
       const inserts = validAssignments.map(assignment => ({
         user_id: user!.id,
         name: newSiteName.trim(),
@@ -326,35 +199,6 @@ const Library = () => {
     fetchReaderSites();
   };
 
-  const deleteReaderSite = async (id: string) => {
-    const { error } = await supabase
-      .from('manga_reader_sites')
-      .delete()
-      .eq('id', id);
-
-    if (error) {
-      toast.error('Failed to delete reader site');
-    } else {
-      toast.success('Reader site removed');
-      fetchReaderSites();
-    }
-  };
-
-  const deleteProgress = async (id: string) => {
-    const { error } = await supabase
-      .from('anime_progress')
-      .delete()
-      .eq('id', id);
-
-    if (error) {
-      toast.error('Failed to remove from library');
-    } else {
-      toast.success('Removed from library');
-      fetchProgress();
-    }
-  };
-
-  // Start editing a reader group
   const startEditingReader = (group: { name: string; url: string; notes: string | null; entries: ReaderSite[] }) => {
     setEditingReaderName(group.name.toLowerCase());
     setEditSiteName(group.name);
@@ -368,7 +212,7 @@ const Library = () => {
         seriesUrl: e.series_url || '',
         suffix: '',
         existingId: e.id,
-        userModified: true // Existing entries were previously saved by user
+        userModified: true
       })));
     } else {
       setEditSeriesAssignments([{ animeId: '', seriesUrl: '', suffix: '', userModified: false }]);
@@ -404,10 +248,10 @@ const Library = () => {
       const suffix = baseUrl && value.startsWith(baseUrl) ? value.slice(baseUrl.length) : value;
       updated[index].seriesUrl = value;
       updated[index].suffix = suffix;
-      updated[index].userModified = true; // User manually typed in series_url
+      updated[index].userModified = true;
     } else if (field === 'animeId') {
       updated[index].animeId = value;
-      updated[index].userModified = true; // User selected a series
+      updated[index].userModified = true;
     } else {
       updated[index][field] = value;
     }
@@ -440,7 +284,6 @@ const Library = () => {
     if (editSeriesAssignments.length > 1) {
       setEditSeriesAssignments(editSeriesAssignments.filter((_, i) => i !== index));
     } else {
-      // Single row - clear user values but keep base URL from editSiteUrl
       const baseUrl = editSiteUrl.trim() ? (editSiteUrl.trim().endsWith('/') ? editSiteUrl.trim() : editSiteUrl.trim() + '/') : '';
       setEditSeriesAssignments([{ animeId: '', seriesUrl: baseUrl, suffix: '', userModified: false }]);
     }
@@ -452,7 +295,6 @@ const Library = () => {
       return;
     }
 
-    // Check if new name conflicts with existing (different) reader
     const existingReader = readerSites.find(
       site => site.name.toLowerCase() === editSiteName.trim().toLowerCase() && 
               site.name.toLowerCase() !== editingReaderName
@@ -465,9 +307,7 @@ const Library = () => {
     const validAssignments = editSeriesAssignments.filter(a => a.animeId);
     const idsToKeep: string[] = [];
 
-    // Update or insert entries
     if (validAssignments.length === 0) {
-      // No series assignments - keep one entry with null anime_id
       const existingNullEntry = originalEntries.find(e => !e.anime_id);
       if (existingNullEntry) {
         await supabase
@@ -495,10 +335,8 @@ const Library = () => {
         if (data) idsToKeep.push(data.id);
       }
     } else {
-      // Handle each series assignment
       for (const assignment of validAssignments) {
         if (assignment.existingId) {
-          // Update existing
           await supabase
             .from('manga_reader_sites')
             .update({
@@ -511,7 +349,6 @@ const Library = () => {
             .eq('id', assignment.existingId);
           idsToKeep.push(assignment.existingId);
         } else {
-          // Insert new
           const { data } = await supabase
             .from('manga_reader_sites')
             .insert({
@@ -529,7 +366,6 @@ const Library = () => {
       }
     }
 
-    // Delete entries that are no longer needed
     const idsToDelete = originalEntries.map(e => e.id).filter(id => !idsToKeep.includes(id));
     if (idsToDelete.length > 0) {
       await supabase
@@ -562,346 +398,184 @@ const Library = () => {
       
       <main className="container py-8">
         <div className="flex items-center gap-2 mb-6 text-sm">
-          <LibraryIcon className="w-4 h-4 text-primary" />
+          <Globe className="w-4 h-4 text-primary" />
           <span className="text-muted-foreground">{'>'}</span>
-          <span className="text-syntax-cyan">my_library</span>
+          <span className="text-syntax-cyan">reader_sites</span>
         </div>
 
-        <Tabs value={activeTab} onValueChange={setActiveTab} className="space-y-6">
-          <TabsList className="bg-muted/30 border border-dashed">
-            <TabsTrigger value="progress" className="gap-2 text-xs font-mono data-[state=active]:bg-primary data-[state=active]:text-primary-foreground">
-              <Hourglass className="w-3.5 h-3.5" />
-              progress
-            </TabsTrigger>
-            <TabsTrigger value="readers" className="gap-2 text-xs font-mono data-[state=active]:bg-primary data-[state=active]:text-primary-foreground">
-              <Globe className="w-3.5 h-3.5" />
-              reader_sites
-            </TabsTrigger>
-          </TabsList>
+        <div className="space-y-6">
+          {/* Add new reader site form */}
+          {!showAddReaderForm ? (
+            <Button
+              onClick={() => setShowAddReaderForm(true)}
+              variant="outline"
+              className="font-mono text-xs border-dashed"
+            >
+              {'>'} new_reader
+            </Button>
+          ) : (
+            <Card className="border-dashed">
+              <div className="terminal-header flex items-center gap-2">
+                <span className="text-muted-foreground">add_reader</span>
+              </div>
+              <CardContent className="p-4">
+                <form onSubmit={addReaderSite} className="space-y-4">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div className="space-y-2">
+                      <Label htmlFor="siteName" className="text-xs">
+                        <span className="text-syntax-cyan">reader_name</span>
+                      </Label>
+                      <Input
+                        id="siteName"
+                        placeholder="LINE マンガ"
+                        value={newSiteName}
+                        onChange={(e) => setNewSiteName(e.target.value)}
+                        className="font-mono text-sm border-dashed bg-muted/30"
+                      />
+                    </div>
+                    <div className="space-y-2">
+                      <Label htmlFor="siteUrl" className="text-xs">
+                        <span className="text-syntax-cyan">reader_url</span>
+                      </Label>
+                      <Input
+                        id="siteUrl"
+                        type="text"
+                        placeholder="manga.line.me"
+                        value={newSiteUrl}
+                        onChange={(e) => handleReaderUrlChange(e.target.value)}
+                        className="font-mono text-sm border-dashed bg-muted/30"
+                      />
+                    </div>
+                  </div>
+                  <div className="space-y-2">
+                    <Label htmlFor="siteNotes" className="text-xs">
+                      <span className="text-syntax-cyan">notes</span>
+                      <span className="text-muted-foreground"> // optional</span>
+                    </Label>
+                    <Input
+                      id="siteNotes"
+                      placeholder="best Berserk scans for golden age arc"
+                      value={newSiteNotes}
+                      onChange={(e) => setNewSiteNotes(e.target.value)}
+                      className="font-mono text-sm border-dashed bg-muted/30"
+                    />
+                  </div>
+                  
+                  {/* Series assignment section */}
+                  <div className="border-t border-dashed pt-4 mt-4">
+                    <p className="text-xs mb-3">
+                      <span className="text-syntax-cyan">assign_to</span>
+                      <span className="text-muted-foreground"> // optional</span>
+                    </p>
+                    <div className="space-y-3">
+                      {seriesAssignments.map((assignment, index) => (
+                        <div key={index} className="grid grid-cols-1 sm:grid-cols-[1fr_1fr_auto] gap-4 items-end">
+                          <div className="space-y-2">
+                            {index === 0 && (
+                              <Label className="text-xs">
+                                <span className="text-syntax-cyan">series</span>
+                              </Label>
+                            )}
+                            <SeriesCombobox
+                              value={assignment.animeId}
+                              onValueChange={(val) => updateSeriesAssignment(index, 'animeId', val)}
+                              excludeIds={seriesAssignments
+                                .filter((_, i) => i !== index)
+                                .map(a => a.animeId)
+                                .filter(Boolean)}
+                            />
+                          </div>
+                          <div className="space-y-2">
+                            {index === 0 && (
+                              <Label className="text-xs">
+                                <span className="text-syntax-cyan">series_url</span>
+                              </Label>
+                            )}
+                            <Input
+                              type="text"
+                              placeholder="manga.line.me/title/..."
+                              value={assignment.seriesUrl}
+                              onChange={(e) => updateSeriesAssignment(index, 'seriesUrl', e.target.value)}
+                              className="font-mono text-sm border-dashed bg-muted/30"
+                            />
+                          </div>
+                          {(seriesAssignments.length > 1 || assignment.userModified) && (
+                            <Button
+                              type="button"
+                              variant="ghost"
+                              size="icon"
+                              onClick={() => removeSeriesRow(index)}
+                              className="text-muted-foreground hover:text-destructive hover:bg-destructive/10"
+                            >
+                              <Trash2 className="w-4 h-4" />
+                            </Button>
+                          )}
+                        </div>
+                      ))}
+                      <Button
+                        type="button"
+                        variant="outline"
+                        size="sm"
+                        onClick={addSeriesRow}
+                        className="text-xs border-dashed"
+                      >
+                        <Plus className="w-3.5 h-3.5 mr-1" />
+                        add_another
+                      </Button>
+                    </div>
+                  </div>
+                  
+                  <div className="border-t border-dashed pt-4 mt-4" />
+                  
+                  <div className="flex gap-2">
+                    <Button type="submit" className="font-mono text-xs border-dashed">
+                      {'>'} add_reader()
+                    </Button>
+                    <Button
+                      type="button"
+                      variant="outline"
+                      onClick={cancelAddReader}
+                      className="font-mono text-xs border-dashed"
+                    >
+                      <X className="w-3.5 h-3.5 mr-1" />
+                      cancel
+                    </Button>
+                  </div>
+                </form>
+              </CardContent>
+            </Card>
+          )}
 
-          <TabsContent value="progress" className="space-y-4">
-            {progress.length > 0 && (
+          {/* Reader sites list - grouped by name */}
+          {readerSites.length > 0 ? (
+            <>
               <div className="flex items-center gap-2">
                 <ArrowUpDown className="w-3.5 h-3.5 text-muted-foreground" />
                 
-                {/* Date sort group */}
                 <ToggleGroup 
                   type="single" 
-                  value={progressSort} 
-                  onValueChange={(val) => val && setProgressSort(val as SortOption)}
+                  value={readerSort} 
+                  onValueChange={(val) => val && setReaderSort(val as SortOption)}
                   className="gap-1"
                 >
                   <ToggleGroupItem value="date-desc" className="text-xs font-mono px-2.5 h-7 border-dashed text-muted-foreground data-[state=on]:bg-muted data-[state=on]:text-foreground">last_updated</ToggleGroupItem>
                   <ToggleGroupItem value="date-asc" className="text-xs font-mono px-2.5 h-7 border-dashed text-muted-foreground data-[state=on]:bg-muted data-[state=on]:text-foreground">first_updated</ToggleGroupItem>
                 </ToggleGroup>
                 
-                {/* Separator between groups */}
                 <div className="w-px h-5 bg-border mx-1" />
                 
-                {/* Alphabetical sort group */}
                 <ToggleGroup 
                   type="single" 
-                  value={progressSort} 
-                  onValueChange={(val) => val && setProgressSort(val as SortOption)}
+                  value={readerSort} 
+                  onValueChange={(val) => val && setReaderSort(val as SortOption)}
                   className="gap-1"
                 >
                   <ToggleGroupItem value="alpha-asc" className="text-xs font-mono px-2.5 h-7 border-dashed text-muted-foreground data-[state=on]:bg-muted data-[state=on]:text-foreground">a→z</ToggleGroupItem>
                   <ToggleGroupItem value="alpha-desc" className="text-xs font-mono px-2.5 h-7 border-dashed text-muted-foreground data-[state=on]:bg-muted data-[state=on]:text-foreground">z→a</ToggleGroupItem>
                 </ToggleGroup>
               </div>
-            )}
-            {progress.length > 0 ? (
               <div className="grid gap-3">
-                {sortedProgress.map((item) => {
-                  const anime = getAnimeById(item.anime_id);
-                  if (!anime) return null;
-                  
-                    return (
-                    <Link key={item.id} to={`/anime/${anime.id}`} className="block">
-                      <Card className="border-dashed hover:border-primary/50 transition-colors cursor-pointer">
-                        <CardContent className="p-4">
-                          <div className="flex items-stretch gap-4">
-                            <img
-                              src={anime.coverImage}
-                              alt={anime.title}
-                              className="w-14 min-h-[5rem] object-cover opacity-90"
-                            />
-                            <div className="flex-1 min-w-0 min-h-[6rem]">
-                              <span className="text-sm text-syntax-green truncate block">
-                                {anime.title}
-                              </span>
-                              <div className="flex flex-col gap-1.5 mt-2 text-xs">
-                                {/* Always show episode progress */}
-                                <div className="flex items-center gap-1.5">
-                                  <Tv className={`w-3.5 h-3.5 ${item.last_watched_episode != null ? "text-primary" : "text-muted-foreground"}`} />
-                                  <span>
-                                    <span className="text-muted-foreground">ep:</span>
-                                    <span className={item.last_watched_episode != null ? "text-foreground" : "text-muted-foreground"}>{item.last_watched_episode ?? '—'}</span>
-                                  </span>
-                                </div>
-                                
-                                {/* Manga section - show progress or "anime original" message */}
-                                {anime.hasManga ? (
-                                  <div className="flex items-center gap-1.5">
-                                    <BookOpen className={`w-3.5 h-3.5 ${(item.last_read_volume != null || item.last_read_chapter != null) ? "text-primary" : "text-muted-foreground"}`} />
-                                    <span>
-                                      <span className="text-muted-foreground">vol:</span>
-                                      <span className={item.last_read_volume != null ? "text-foreground" : "text-muted-foreground"}>{item.last_read_volume ?? '—'}</span>
-                                    </span>
-                                    <span className="text-muted-foreground">·</span>
-                                    <span>
-                                      <span className="text-muted-foreground">ch:</span>
-                                      <span className={item.last_read_chapter != null ? "text-foreground" : "text-muted-foreground"}>{item.last_read_chapter ?? '—'}</span>
-                                    </span>
-                                  </div>
-                                ) : (
-                                  <div className="flex items-center gap-1.5">
-                                    <BookOpen className="w-3.5 h-3.5 text-muted-foreground" />
-                                    <span className="text-muted-foreground">//anime_original; no_manga</span>
-                                  </div>
-                                )}
-                                
-                                {/* Reader section - show buttons, "no readers" message, or nothing for anime-only */}
-                                {anime.hasManga && (
-                                  <>
-                                    {getReadersForAnime(item.anime_id, readerSites).length > 0 ? (
-                                      <div className="flex items-center gap-1.5">
-                                        <Link2 className="w-3.5 h-3.5 text-primary" />
-                                        {getReadersForAnime(item.anime_id, readerSites).map((reader) => (
-                                          <Button
-                                            key={reader.id}
-                                            variant="outline"
-                                            size="sm"
-                                            className="h-5 px-1.5 text-[10px] font-mono border-dashed gap-1"
-                                            onClick={(e) => {
-                                              e.preventDefault();
-                                              e.stopPropagation();
-                                              window.open(reader.series_url!, '_blank');
-                                            }}
-                                          >
-                                            {reader.name}
-                                            <ExternalLink className="w-2.5 h-2.5" />
-                                          </Button>
-                                        ))}
-                                      </div>
-                                    ) : (
-                                      <div className="flex items-center gap-1.5 text-muted-foreground">
-                                        <Link2 className="w-3.5 h-3.5 text-muted-foreground" />
-                                        <span>//no_reader_link</span>
-                                      </div>
-                                    )}
-                                  </>
-                                )}
-                              </div>
-                            </div>
-                            <Button
-                              variant="ghost"
-                              size="icon"
-                              onClick={(e) => {
-                                e.preventDefault();
-                                e.stopPropagation();
-                                deleteProgress(item.id);
-                              }}
-                              className="text-muted-foreground hover:text-destructive"
-                            >
-                              <Trash2 className="w-4 h-4" />
-                            </Button>
-                          </div>
-                        </CardContent>
-                      </Card>
-                    </Link>
-                  );
-                })}
-              </div>
-            ) : (
-              <div className="text-center py-16 border border-dashed">
-                <Tv className="w-8 h-8 text-muted-foreground mx-auto mb-3" />
-                <p className="text-muted-foreground text-sm">
-                  <span className="text-syntax-cyan">// </span>no progress tracked
-                </p>
-                <p className="text-xs text-muted-foreground mt-1">
-                  {'>'} visit an anime page to start
-                </p>
-              </div>
-            )}
-          </TabsContent>
-
-          <TabsContent value="readers" className="space-y-6">
-            {/* Add new reader site form */}
-            {!showAddReaderForm ? (
-              <Button
-                onClick={() => setShowAddReaderForm(true)}
-                variant="outline"
-                className="font-mono text-xs border-dashed"
-              >
-                {'>'} new_reader
-              </Button>
-            ) : (
-              <Card className="border-dashed">
-                <div className="terminal-header flex items-center gap-2">
-                  <span className="text-muted-foreground">add_reader</span>
-                </div>
-                <CardContent className="p-4">
-                  <form onSubmit={addReaderSite} className="space-y-4">
-                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                      <div className="space-y-2">
-                        <Label htmlFor="siteName" className="text-xs">
-                          <span className="text-syntax-cyan">reader_name</span>
-                        </Label>
-                        <Input
-                          id="siteName"
-                          placeholder="LINE マンガ"
-                          value={newSiteName}
-                          onChange={(e) => setNewSiteName(e.target.value)}
-                          className="font-mono text-sm border-dashed bg-muted/30"
-                        />
-                      </div>
-                      <div className="space-y-2">
-                        <Label htmlFor="siteUrl" className="text-xs">
-                          <span className="text-syntax-cyan">reader_url</span>
-                        </Label>
-                        <Input
-                          id="siteUrl"
-                          type="text"
-                          placeholder="manga.line.me"
-                          value={newSiteUrl}
-                          onChange={(e) => handleReaderUrlChange(e.target.value)}
-                          className="font-mono text-sm border-dashed bg-muted/30"
-                        />
-                      </div>
-                    </div>
-                    <div className="space-y-2">
-                      <Label htmlFor="siteNotes" className="text-xs">
-                        <span className="text-syntax-cyan">notes</span>
-                        <span className="text-muted-foreground"> // optional</span>
-                      </Label>
-                      <Input
-                        id="siteNotes"
-                        placeholder="best Berserk scans for golden age arc"
-                        value={newSiteNotes}
-                        onChange={(e) => setNewSiteNotes(e.target.value)}
-                        className="font-mono text-sm border-dashed bg-muted/30"
-                      />
-                    </div>
-                    
-                    {/* Series assignment section */}
-                    <div className="border-t border-dashed pt-4 mt-4">
-                      <p className="text-xs mb-3">
-                        <span className="text-syntax-cyan">assign_to</span>
-                        <span className="text-muted-foreground"> // optional</span>
-                      </p>
-                      <div className="space-y-3">
-                        {seriesAssignments.map((assignment, index) => (
-                          <div key={index} className="grid grid-cols-1 sm:grid-cols-[1fr_1fr_auto] gap-4 items-end">
-                            <div className="space-y-2">
-                              {index === 0 && (
-                                <Label className="text-xs">
-                                  <span className="text-syntax-cyan">series</span>
-                                </Label>
-                              )}
-                              <SeriesCombobox
-                                value={assignment.animeId}
-                                onValueChange={(val) => updateSeriesAssignment(index, 'animeId', val)}
-                                excludeIds={seriesAssignments
-                                  .filter((_, i) => i !== index)
-                                  .map(a => a.animeId)
-                                  .filter(Boolean)}
-                              />
-                            </div>
-                            <div className="space-y-2">
-                              {index === 0 && (
-                                <Label className="text-xs">
-                                  <span className="text-syntax-cyan">series_url</span>
-                                </Label>
-                              )}
-                              <Input
-                                type="text"
-                                placeholder="manga.line.me/title/..."
-                                value={assignment.seriesUrl}
-                                onChange={(e) => updateSeriesAssignment(index, 'seriesUrl', e.target.value)}
-                                className="font-mono text-sm border-dashed bg-muted/30"
-                              />
-                            </div>
-                            {(seriesAssignments.length > 1 || assignment.userModified) && (
-                              <Button
-                                type="button"
-                                variant="ghost"
-                                size="icon"
-                                onClick={() => removeSeriesRow(index)}
-                                className="text-muted-foreground hover:text-destructive hover:bg-destructive/10"
-                              >
-                                <Trash2 className="w-4 h-4" />
-                              </Button>
-                            )}
-                          </div>
-                        ))}
-                        <Button
-                          type="button"
-                          variant="outline"
-                          size="sm"
-                          onClick={addSeriesRow}
-                          className="text-xs border-dashed"
-                        >
-                          <Plus className="w-3.5 h-3.5 mr-1" />
-                          add_another
-                        </Button>
-                      </div>
-                    </div>
-                    
-                    <div className="border-t border-dashed pt-4 mt-4" />
-                    
-                    <div className="flex gap-2">
-                      <Button type="submit" className="font-mono text-xs border-dashed">
-                        {'>'} add_reader()
-                      </Button>
-                      <Button
-                        type="button"
-                        variant="outline"
-                        onClick={cancelAddReader}
-                        className="font-mono text-xs border-dashed"
-                      >
-                        <X className="w-3.5 h-3.5 mr-1" />
-                        cancel
-                      </Button>
-                    </div>
-                  </form>
-                </CardContent>
-              </Card>
-            )}
-
-            {/* Reader sites list - grouped by name */}
-            {readerSites.length > 0 ? (
-              <>
-                <div className="flex items-center gap-2">
-                  <ArrowUpDown className="w-3.5 h-3.5 text-muted-foreground" />
-                  
-                  {/* Date sort group */}
-                  <ToggleGroup 
-                    type="single" 
-                    value={readerSort} 
-                    onValueChange={(val) => val && setReaderSort(val as SortOption)}
-                    className="gap-1"
-                  >
-                    <ToggleGroupItem value="date-desc" className="text-xs font-mono px-2.5 h-7 border-dashed text-muted-foreground data-[state=on]:bg-muted data-[state=on]:text-foreground">last_updated</ToggleGroupItem>
-                    <ToggleGroupItem value="date-asc" className="text-xs font-mono px-2.5 h-7 border-dashed text-muted-foreground data-[state=on]:bg-muted data-[state=on]:text-foreground">first_updated</ToggleGroupItem>
-                  </ToggleGroup>
-                  
-                  {/* Separator between groups */}
-                  <div className="w-px h-5 bg-border mx-1" />
-                  
-                  {/* Alphabetical sort group */}
-                  <ToggleGroup 
-                    type="single" 
-                    value={readerSort} 
-                    onValueChange={(val) => val && setReaderSort(val as SortOption)}
-                    className="gap-1"
-                  >
-                    <ToggleGroupItem value="alpha-asc" className="text-xs font-mono px-2.5 h-7 border-dashed text-muted-foreground data-[state=on]:bg-muted data-[state=on]:text-foreground">a→z</ToggleGroupItem>
-                    <ToggleGroupItem value="alpha-desc" className="text-xs font-mono px-2.5 h-7 border-dashed text-muted-foreground data-[state=on]:bg-muted data-[state=on]:text-foreground">z→a</ToggleGroupItem>
-                  </ToggleGroup>
-                </div>
-                <div className="grid gap-3">
-                  {sortedReaderGroups.map((group) => {
+                {sortedReaderGroups.map((group) => {
                   const seriesEntries = group.entries.filter(e => e.anime_id);
                   const isEditing = editingReaderName === group.name.toLowerCase();
                   
@@ -1150,21 +824,20 @@ const Library = () => {
                     </Card>
                   );
                 })}
-                </div>
-              </>
-            ) : (
-              <div className="text-center py-16 border border-dashed">
-                <Globe className="w-8 h-8 text-muted-foreground mx-auto mb-3" />
-                <p className="text-muted-foreground text-sm">
-                  <span className="text-syntax-cyan">// </span>no reader sites saved
-                </p>
-                <p className="text-xs text-muted-foreground mt-1">
-                  {'>'} add your favorite manga sites above
-                </p>
               </div>
-            )}
-          </TabsContent>
-        </Tabs>
+            </>
+          ) : (
+            <div className="text-center py-16 border border-dashed">
+              <Globe className="w-8 h-8 text-muted-foreground mx-auto mb-3" />
+              <p className="text-muted-foreground text-sm">
+                <span className="text-syntax-cyan">// </span>no reader sites saved
+              </p>
+              <p className="text-xs text-muted-foreground mt-1">
+                {'>'} add your favorite manga sites above
+              </p>
+            </div>
+          )}
+        </div>
       </main>
 
       <footer className="border-t border-dashed mt-16">
@@ -1179,4 +852,4 @@ const Library = () => {
   );
 };
 
-export default Library;
+export default Readers;
