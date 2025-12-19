@@ -859,7 +859,7 @@ const Readers = () => {
                 <span className="text-syntax-cyan">// </span>no_reader_found
               </p>
               <p className="text-xs text-muted-foreground mt-2">
-                $ new_reader
+                {'>'} new_reader
               </p>
             </div>
           )}
