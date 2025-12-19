@@ -729,7 +729,7 @@ const Readers = () => {
                               </div>
                             </div>
                             
-                            <div className="border-t border-dashed pt-4 mt-4 flex items-center justify-between">
+                            <div className="border-t border-dashed pt-4 mt-4 flex flex-wrap items-center justify-between gap-3">
                               <div className="flex items-center gap-2">
                                 <Button 
                                   onClick={() => saveReaderEdit(group.entries)} 
