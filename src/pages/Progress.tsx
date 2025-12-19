@@ -5,7 +5,7 @@ import { useLibraryData } from '@/hooks/useLibraryData';
 import { getAnimeById } from '@/data/mockAnime';
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
-import { Hourglass, BookOpen, Tv, Trash2, ExternalLink, Link2, ArrowUpDown } from 'lucide-react';
+import { Library, BookOpen, Tv, Trash2, ExternalLink, Link2, ArrowUpDown } from 'lucide-react';
 import { ToggleGroup, ToggleGroupItem } from '@/components/ui/toggle-group';
 import type { SortOption } from '@/types/library';
 import { getReadersForAnime } from '@/types/library';
@@ -71,9 +71,9 @@ const Progress = () => {
       
       <main className="container py-8">
         <div className="flex items-center gap-2 mb-6 text-sm">
-          <Hourglass className="w-4 h-4 text-primary" />
+          <Library className="w-4 h-4 text-primary" />
           <span className="text-muted-foreground">{'>'}</span>
-          <span className="text-syntax-cyan">progress</span>
+          <span className="text-syntax-cyan">library</span>
         </div>
 
         <div className="space-y-4">
