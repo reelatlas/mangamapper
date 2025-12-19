@@ -32,9 +32,9 @@ export const AnimeCard = ({ anime, rank }: AnimeCardProps) => {
           </span>
         </div>
         <CardContent className="p-0">
-          <div className="flex flex-col sm:flex-row sm:h-[240px]">
+          <div className="flex flex-col sm:flex-row sm:h-[200px]">
             {/* Cover Image */}
-            <div className="relative w-full sm:w-44 h-44 sm:h-full shrink-0 overflow-hidden border-b sm:border-b-0 sm:border-r border-dashed">
+            <div className="relative w-full h-44 sm:h-full sm:w-auto sm:aspect-[2/3] shrink-0 overflow-hidden border-b sm:border-b-0 sm:border-r border-dashed">
               <img
                 src={anime.coverImage}
                 alt={anime.title}
@@ -44,7 +44,7 @@ export const AnimeCard = ({ anime, rank }: AnimeCardProps) => {
             </div>
 
             {/* Content */}
-            <div className="flex-1 p-4 flex flex-col font-mono">
+            <div className="flex-1 p-3 flex flex-col font-mono">
               {/* Top section - Data structure */}
               <div className="space-y-1 text-sm">
                 <div>
@@ -69,8 +69,7 @@ export const AnimeCard = ({ anime, rank }: AnimeCardProps) => {
                 </div>
               </div>
 
-              {/* Bottom section - Last episode (pushed to bottom) */}
-              <div className="mt-auto pt-2">
+              <div className="mt-auto pt-1">
                 {/* Last episode */}
                 {currentEpisode && (
                   <div>
