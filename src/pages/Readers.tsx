@@ -759,7 +759,7 @@ const Readers = () => {
                                     onClick={() => {
                                       group.entries.forEach(entry => deleteReaderSite(entry.id));
                                     }}
-                                    className="h-8 w-8 text-muted-foreground hover:text-destructive hover:bg-destructive/10"
+                                    className="h-10 w-10 text-muted-foreground hover:text-destructive hover:bg-destructive/10"
                                   >
                                     <Check className="w-4 h-4" />
                                   </Button>
@@ -767,7 +767,7 @@ const Readers = () => {
                                     variant="ghost"
                                     size="icon"
                                     onClick={() => setConfirmingDeleteReaderId(null)}
-                                    className="h-8 w-8 text-muted-foreground hover:text-muted-foreground hover:bg-muted"
+                                    className="h-10 w-10 text-muted-foreground hover:text-muted-foreground hover:bg-muted"
                                   >
                                     <X className="w-4 h-4" />
                                   </Button>
