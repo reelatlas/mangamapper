@@ -121,7 +121,13 @@ export const AddToReaderDropdown = ({ animeId, onSuccess, linkedReaderNames = []
   }
 
   return (
-    <Popover open={open} onOpenChange={setOpen}>
+  <Popover open={open} onOpenChange={(isOpen) => {
+    setOpen(isOpen);
+    if (!isOpen) {
+      setSelectedReader(null);
+      setSeriesUrl('');
+    }
+  }}>
       <PopoverTrigger asChild>
         <Button
           variant="outline"
@@ -133,7 +139,7 @@ export const AddToReaderDropdown = ({ animeId, onSuccess, linkedReaderNames = []
       </PopoverTrigger>
       <PopoverContent className="w-72 p-0 bg-background border-dashed" align="start">
         <div className="terminal-header text-xs">
-          <span className="text-muted-foreground">select()</span>
+          <span className="text-muted-foreground">select_</span>
         </div>
         
         {!selectedReader ? (
