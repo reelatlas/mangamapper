@@ -543,7 +543,7 @@ const Library = () => {
                                 ) : (
                                   <div className="flex items-center gap-1.5">
                                     <BookOpen className="w-3.5 h-3.5 text-muted-foreground" />
-                                    <span className="text-muted-foreground">//anime_original, no_manga</span>
+                                    <span className="text-muted-foreground">//anime_original; no_manga</span>
                                   </div>
                                 )}
                                 
