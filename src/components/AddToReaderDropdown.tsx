@@ -187,7 +187,7 @@ export const AddToReaderDropdown = ({ animeId, onSuccess, linkedReaderNames = []
               <Button
                 size="sm"
                 variant="outline"
-                className="text-xs h-7 gap-1 border-dashed"
+                className="text-xs h-7 gap-1 border-dashed hover:bg-destructive hover:text-destructive-foreground hover:border-destructive"
                 onClick={handleCancel}
               >
                 <X className="w-3 h-3" />
