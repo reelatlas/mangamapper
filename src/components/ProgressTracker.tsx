@@ -6,7 +6,7 @@ import { Card, CardContent, CardHeader } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 
-import { Tv, BookOpen, LogIn } from 'lucide-react';
+import { Tv, BookOpen, LogIn, RotateCcw } from 'lucide-react';
 import { toast } from 'sonner';
 import { Link } from 'react-router-dom';
 
@@ -265,15 +265,33 @@ export const ProgressTracker = ({ anime }: ProgressTrackerProps) => {
               const hasChanges = watchedEpisode !== originalValues.watchedEpisode ||
                 readVolume !== originalValues.readVolume ||
                 readChapter !== originalValues.readChapter;
+              
+              const resetChanges = () => {
+                setWatchedEpisode(originalValues.watchedEpisode);
+                setReadVolume(originalValues.readVolume);
+                setReadChapter(originalValues.readChapter);
+              };
+              
               return (
-                <Button 
-                  onClick={saveProgress} 
-                  disabled={saving || !hasChanges}
-                  size="sm"
-                  className={`font-mono text-xs h-7 ${!hasChanges ? 'bg-transparent text-muted-foreground hover:bg-transparent border border-dashed border-border' : 'border-dashed'}`}
-                >
-                  {'✓'} {saving ? 'saving...' : 'save_progress()'}
-                </Button>
+                <>
+                  <Button 
+                    onClick={saveProgress} 
+                    disabled={saving || !hasChanges}
+                    size="sm"
+                    className={`font-mono text-xs h-7 ${!hasChanges ? 'bg-transparent text-muted-foreground hover:bg-transparent border border-dashed border-border' : 'border-dashed'}`}
+                  >
+                    {'✓'} {saving ? 'saving...' : 'save_progress()'}
+                  </Button>
+                  <Button
+                    onClick={resetChanges}
+                    disabled={!hasChanges}
+                    size="sm"
+                    variant="outline"
+                    className={`h-7 w-7 p-0 ${!hasChanges ? 'bg-transparent text-muted-foreground hover:bg-transparent border border-dashed border-border' : 'border-dashed'}`}
+                  >
+                    <RotateCcw className="w-3.5 h-3.5" />
+                  </Button>
+                </>
               );
             })()}
             {/* Library toggle button */}
