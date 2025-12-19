@@ -118,7 +118,6 @@ export const ProgressTracker = ({ anime }: ProgressTrackerProps) => {
       } else {
         toast.success('Added to library');
         setInLibrary(true);
-        fetchProgress();
       }
     }
     
