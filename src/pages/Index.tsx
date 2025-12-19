@@ -64,8 +64,8 @@ const Index = () => {
                 onValueChange={(val) => val && setStatusFilter(val as StatusFilter)}
                 className="gap-1"
               >
-                <ToggleGroupItem value="airing" className="text-xs font-mono px-2.5 h-7 border-dashed data-[state=on]:bg-muted data-[state=on]:text-foreground">airing</ToggleGroupItem>
-                <ToggleGroupItem value="completed" className="text-xs font-mono px-2.5 h-7 border-dashed data-[state=on]:bg-muted data-[state=on]:text-foreground">complete</ToggleGroupItem>
+                <ToggleGroupItem value="airing" className="text-xs font-mono px-2.5 h-7 border-dashed text-muted-foreground data-[state=on]:bg-muted data-[state=on]:text-foreground">airing</ToggleGroupItem>
+                <ToggleGroupItem value="completed" className="text-xs font-mono px-2.5 h-7 border-dashed text-muted-foreground data-[state=on]:bg-muted data-[state=on]:text-foreground">complete</ToggleGroupItem>
               </ToggleGroup>
               
               {/* Separator between groups */}
@@ -78,9 +78,9 @@ const Index = () => {
                 onValueChange={(val) => val && setResultLimit(parseInt(val))}
                 className="gap-1"
               >
-                <ToggleGroupItem value="10" className="text-xs font-mono px-2.5 h-7 border-dashed data-[state=on]:bg-muted data-[state=on]:text-foreground">10</ToggleGroupItem>
-                <ToggleGroupItem value="50" className="text-xs font-mono px-2.5 h-7 border-dashed data-[state=on]:bg-muted data-[state=on]:text-foreground">50</ToggleGroupItem>
-                <ToggleGroupItem value="100" className="text-xs font-mono px-2.5 h-7 border-dashed data-[state=on]:bg-muted data-[state=on]:text-foreground">100</ToggleGroupItem>
+                <ToggleGroupItem value="10" className="text-xs font-mono px-2.5 h-7 border-dashed text-muted-foreground data-[state=on]:bg-muted data-[state=on]:text-foreground">10</ToggleGroupItem>
+                <ToggleGroupItem value="50" className="text-xs font-mono px-2.5 h-7 border-dashed text-muted-foreground data-[state=on]:bg-muted data-[state=on]:text-foreground">50</ToggleGroupItem>
+                <ToggleGroupItem value="100" className="text-xs font-mono px-2.5 h-7 border-dashed text-muted-foreground data-[state=on]:bg-muted data-[state=on]:text-foreground">100</ToggleGroupItem>
               </ToggleGroup>
             </div>
           </section>
