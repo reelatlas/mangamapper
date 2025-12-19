@@ -130,7 +130,7 @@ export const ProgressTracker = ({ anime }: ProgressTrackerProps) => {
       last_watched_episode: watchedEpisode ? parseInt(watchedEpisode) : null,
       last_read_volume: readVolume ? parseInt(readVolume) : null,
       last_read_chapter: readChapter || null,
-      in_library: true,
+      in_library: inLibrary,
     };
 
     const { error } = await supabase
