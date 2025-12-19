@@ -116,18 +116,16 @@ const Progress = () => {
                     <Card className="border-dashed hover:border-primary/50 transition-colors cursor-pointer">
                       <CardContent className="p-4">
                         <div className="flex items-stretch gap-4">
-                          <div className="h-[7rem] w-12 flex-shrink-0 bg-muted/50">
-                            <img
-                              src={anime.coverImage}
-                              alt={anime.title}
-                              className="h-full w-full object-cover opacity-90"
-                            />
-                          </div>
-                          <div className="flex-1 min-w-0 h-[7rem] flex flex-col gap-1">
+                          <img
+                            src={anime.coverImage}
+                            alt={anime.title}
+                            className="w-14 min-h-[5rem] object-cover opacity-90"
+                          />
+                          <div className="flex-1 min-w-0 min-h-[6rem]">
                             <span className="text-sm text-syntax-green truncate block">
                               {anime.title}
                             </span>
-                            <div className="flex flex-col gap-1.5 text-xs">
+                            <div className="flex flex-col gap-1.5 mt-2 text-xs">
                               <div className="flex items-center gap-1.5">
                                 <Tv className={`w-3.5 h-3.5 ${item.last_watched_episode != null ? "text-primary" : "text-muted-foreground"}`} />
                                 <span>
