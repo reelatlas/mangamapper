@@ -18,6 +18,7 @@ export type Database = {
         Row: {
           anime_id: string
           id: string
+          in_library: boolean
           last_read_chapter: string | null
           last_read_volume: number | null
           last_watched_episode: number | null
@@ -27,6 +28,7 @@ export type Database = {
         Insert: {
           anime_id: string
           id?: string
+          in_library?: boolean
           last_read_chapter?: string | null
           last_read_volume?: number | null
           last_watched_episode?: number | null
@@ -36,6 +38,7 @@ export type Database = {
         Update: {
           anime_id?: string
           id?: string
+          in_library?: boolean
           last_read_chapter?: string | null
           last_read_volume?: number | null
           last_watched_episode?: number | null

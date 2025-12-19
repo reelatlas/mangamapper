@@ -12,7 +12,7 @@ import { getReadersForAnime } from '@/types/library';
 
 const Library = () => {
   const navigate = useNavigate();
-  const { user, authLoading, loading, progress, readerSites, deleteProgress } = useLibraryData();
+  const { user, authLoading, loading, progress, readerSites, removeFromLibrary } = useLibraryData();
   const [confirmingDeleteId, setConfirmingDeleteId] = useState<string | null>(null);
 
   const [progressSort, setProgressSort] = useState<SortOption>(() => {
@@ -200,7 +200,7 @@ const Library = () => {
                                 onClick={(e) => {
                                   e.preventDefault();
                                   e.stopPropagation();
-                                  deleteProgress(item.id);
+                                  removeFromLibrary(item.id);
                                   setConfirmingDeleteId(null);
                                 }}
                                 className="text-muted-foreground hover:text-destructive hover:bg-destructive/10"

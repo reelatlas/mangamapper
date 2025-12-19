@@ -1,0 +1,1 @@
+ALTER TABLE anime_progress ADD COLUMN in_library boolean NOT NULL DEFAULT true;
