@@ -501,9 +501,8 @@ const Readers = () => {
                   
                   {/* Series assignment section */}
                   <div className="border-t border-dashed pt-4 mt-4">
-                    <p className="text-xs mb-3">
-                      <span className="text-syntax-cyan">assign_to</span>
-                      <span className="text-muted-foreground"> // optional</span>
+                    <p className="text-xs text-muted-foreground mb-3">
+                      assign_to // optional
                     </p>
                     <div className="space-y-6 sm:space-y-3">
                       {seriesAssignments.map((assignment, index) => (
@@ -678,9 +677,8 @@ const Readers = () => {
                             
                             {/* Series assignment section */}
                             <div className="border-t border-dashed pt-4 mt-4">
-                              <p className="text-xs mb-3">
-                                <span className="text-syntax-cyan">assign_to</span>
-                                <span className="text-muted-foreground"> // optional</span>
+                              <p className="text-xs text-muted-foreground mb-3">
+                                assign_to // optional
                               </p>
                               <div className="space-y-6 sm:space-y-3">
                                 {editSeriesAssignments.map((assignment, index) => (
