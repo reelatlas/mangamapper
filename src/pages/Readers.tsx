@@ -859,13 +859,7 @@ const Readers = () => {
                 <span className="text-syntax-cyan">// </span>no_reader_found
               </p>
               <p className="text-xs text-muted-foreground mt-2">
-                <Button
-                  variant="link"
-                  onClick={() => setShowAddReaderForm(true)}
-                  className="text-primary p-0 h-auto font-mono text-xs"
-                >
-                  $ new_reader
-                </Button>
+                $ new_reader
               </p>
             </div>
           )}
