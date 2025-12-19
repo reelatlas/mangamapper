@@ -508,8 +508,9 @@ const Readers = () => {
                       {seriesAssignments.map((assignment, index) => (
                         <div key={index} className="space-y-2">
                           {/* Mobile: Combined label for each row */}
-                          <Label className="text-xs sm:hidden text-syntax-cyan">
-                            series{'{'}name, url{'}'}
+                          <Label className="text-xs sm:hidden">
+                            <span className="text-syntax-cyan">series</span>
+                            <span className="text-muted-foreground">{'{'}name,url{'}'}</span>
                           </Label>
                           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                             <div className="min-w-0">
@@ -683,8 +684,9 @@ const Readers = () => {
                                 {editSeriesAssignments.map((assignment, index) => (
                                   <div key={index} className="space-y-2">
                                     {/* Mobile: Combined label for each row */}
-                                    <Label className="text-xs sm:hidden text-syntax-cyan">
-                                      series{'{'}name, url{'}'}
+                                    <Label className="text-xs sm:hidden">
+                                      <span className="text-syntax-cyan">series</span>
+                                      <span className="text-muted-foreground">{'{'}name,url{'}'}</span>
                                     </Label>
                                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                                       <div className="min-w-0">
