@@ -120,38 +120,34 @@ const Auth = () => {
 
           <form onSubmit={handleSubmit} className="space-y-4">
             <div className="space-y-2">
-              <Label htmlFor="email" className="text-xs">
+              <Label htmlFor="email" className="text-xs flex items-center gap-1.5">
+                <Mail className="w-3.5 h-3.5 text-syntax-cyan" />
                 <span className="text-syntax-cyan">email</span>
               </Label>
-              <div className="flex items-center gap-2">
-                <Mail className="w-3.5 h-3.5 text-muted-foreground" />
-                <Input
-                  id="email"
-                  type="email"
-                  placeholder="you@example.com"
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
-                  className="font-mono text-sm border-dashed bg-muted/30"
-                  required
-                />
-              </div>
+              <Input
+                id="email"
+                type="email"
+                placeholder="you@example.com"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                className="font-mono text-sm border-dashed bg-muted/30"
+                required
+              />
             </div>
             <div className="space-y-2">
-              <Label htmlFor="password" className="text-xs">
+              <Label htmlFor="password" className="text-xs flex items-center gap-1.5">
+                <Lock className="w-3.5 h-3.5 text-syntax-cyan" />
                 <span className="text-syntax-cyan">password</span>
               </Label>
-              <div className="flex items-center gap-2">
-                <Lock className="w-3.5 h-3.5 text-muted-foreground" />
-                <Input
-                  id="password"
-                  type="password"
-                  placeholder="••••••••"
-                  value={password}
-                  onChange={(e) => setPassword(e.target.value)}
-                  className="font-mono text-sm border-dashed bg-muted/30"
-                  required
-                />
-              </div>
+              <Input
+                id="password"
+                type="password"
+                placeholder="••••••••"
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
+                className="font-mono text-sm border-dashed bg-muted/30"
+                required
+              />
             </div>
             <Button type="submit" className="w-full font-mono text-xs border-dashed" disabled={loading}>
               {'>'} {loading ? 'processing...' : isLogin ? 'sign_in()' : 'sign_up()'}
