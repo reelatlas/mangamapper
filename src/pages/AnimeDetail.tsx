@@ -199,7 +199,7 @@ const AnimeDetail = () => {
             ) : (
               // State C: Has linked readers
               <div className="space-y-3">
-                <div className="flex flex-wrap gap-2">
+                <div className="flex flex-wrap gap-2 min-w-0">
                   {linkedReaders.map((reader) => (
                     <Button
                       key={reader.id}
