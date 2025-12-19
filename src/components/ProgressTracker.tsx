@@ -194,6 +194,19 @@ export const ProgressTracker = ({ anime }: ProgressTrackerProps) => {
         <span className="text-muted-foreground">my_progress</span>
       </div>
       <CardContent className="p-4 font-mono space-y-4">
+        {/* Library toggle button */}
+        <div className="pb-2">
+          <Button
+            variant="outline"
+            size="sm"
+            onClick={toggleLibrary}
+            disabled={togglingLibrary}
+            className={`font-mono text-xs h-7 ${inLibrary ? 'border-dashed' : 'bg-transparent text-muted-foreground hover:text-accent-foreground hover:bg-accent border border-dashed border-border'}`}
+          >
+            {togglingLibrary ? '...' : inLibrary ? '[✓] in_library' : '[ ] add_to_library'}
+          </Button>
+        </div>
+
         {/* Last watched & Last read row */}
         <div className="flex flex-wrap gap-6">
           {/* Last watched */}
@@ -292,16 +305,6 @@ export const ProgressTracker = ({ anime }: ProgressTrackerProps) => {
                 </div>
               );
             })()}
-            {/* Library toggle button */}
-            <Button
-              variant="outline"
-              size="sm"
-              onClick={toggleLibrary}
-              disabled={togglingLibrary}
-              className={`font-mono text-xs h-7 ml-2 ${inLibrary ? 'border-dashed' : 'bg-transparent text-muted-foreground hover:text-accent-foreground hover:bg-accent border border-dashed border-border'}`}
-            >
-              {togglingLibrary ? '...' : inLibrary ? '[✓] in_library' : '[ ] add_to_library'}
-            </Button>
           </div>
           {progress?.updated_at && (
             <span className="text-muted-foreground text-xs">
