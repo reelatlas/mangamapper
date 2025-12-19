@@ -20,6 +20,18 @@ import { toast } from 'sonner';
 import { ToggleGroup, ToggleGroupItem } from '@/components/ui/toggle-group';
 import type { SortOption, SeriesAssignment, ReaderSite } from '@/types/library';
 
+const formatTimestamp = (timestamp: string) => {
+  const date = new Date(timestamp);
+  const month = date.toLocaleString('en-US', { month: 'short' }).toLowerCase();
+  const day = date.getDate();
+  const year = date.getFullYear();
+  const hours = date.getHours();
+  const minutes = date.getMinutes().toString().padStart(2, '0');
+  const ampm = hours >= 12 ? 'pm' : 'am';
+  const hour12 = hours % 12 || 12;
+  return `${month} ${day} ${year} ${hour12}:${minutes}${ampm}`;
+};
+
 const Readers = () => {
   const navigate = useNavigate();
   const location = useLocation();
@@ -813,6 +825,11 @@ const Readers = () => {
                                 <span className="text-muted-foreground break-all">{group.notes}</span>
                               </div>
                             )}
+                            <div className="text-xs overflow-hidden pr-28">
+                              <span className="text-syntax-cyan">last_updated</span>
+                              <span className="text-muted-foreground">: </span>
+                              <span className="text-muted-foreground break-all">{formatTimestamp(group.latestUpdatedAt)}</span>
+                            </div>
                             {seriesEntries.length > 0 && (
                               <div className="border-t border-dashed pt-2 mt-2 space-y-1.5">
                                 {seriesEntries.map((entry) => {
