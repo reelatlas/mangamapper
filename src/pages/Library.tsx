@@ -60,8 +60,23 @@ const Library = () => {
   const [loading, setLoading] = useState(true);
   
   // Sort state
-  const [progressSort, setProgressSort] = useState<SortOption>('date-desc');
-  const [readerSort, setReaderSort] = useState<SortOption>('date-desc');
+  const [progressSort, setProgressSort] = useState<SortOption>(() => {
+    const saved = localStorage.getItem('mangamapper-library-progress-sort');
+    return (['alpha-asc', 'alpha-desc', 'date-desc', 'date-asc'].includes(saved || '')) ? saved as SortOption : 'date-desc';
+  });
+  const [readerSort, setReaderSort] = useState<SortOption>(() => {
+    const saved = localStorage.getItem('mangamapper-library-reader-sort');
+    return (['alpha-asc', 'alpha-desc', 'date-desc', 'date-asc'].includes(saved || '')) ? saved as SortOption : 'date-desc';
+  });
+
+  // Persist sort preferences to localStorage
+  useEffect(() => {
+    localStorage.setItem('mangamapper-library-progress-sort', progressSort);
+  }, [progressSort]);
+
+  useEffect(() => {
+    localStorage.setItem('mangamapper-library-reader-sort', readerSort);
+  }, [readerSort]);
   
   // Add form state
   const [newSiteName, setNewSiteName] = useState('');
@@ -569,20 +584,6 @@ const Library = () => {
               <div className="flex items-center gap-2">
                 <ArrowUpDown className="w-3.5 h-3.5 text-muted-foreground" />
                 
-                {/* Alphabetical sort group */}
-                <ToggleGroup 
-                  type="single" 
-                  value={progressSort} 
-                  onValueChange={(val) => val && setProgressSort(val as SortOption)}
-                  className="gap-1"
-                >
-                  <ToggleGroupItem value="alpha-asc" className="text-xs font-mono px-2.5 h-7 border-dashed text-muted-foreground data-[state=on]:bg-muted data-[state=on]:text-foreground">a→z</ToggleGroupItem>
-                  <ToggleGroupItem value="alpha-desc" className="text-xs font-mono px-2.5 h-7 border-dashed text-muted-foreground data-[state=on]:bg-muted data-[state=on]:text-foreground">z→a</ToggleGroupItem>
-                </ToggleGroup>
-                
-                {/* Separator between groups */}
-                <div className="w-px h-5 bg-border mx-1" />
-                
                 {/* Date sort group */}
                 <ToggleGroup 
                   type="single" 
@@ -592,6 +593,20 @@ const Library = () => {
                 >
                   <ToggleGroupItem value="date-desc" className="text-xs font-mono px-2.5 h-7 border-dashed text-muted-foreground data-[state=on]:bg-muted data-[state=on]:text-foreground">last_updated</ToggleGroupItem>
                   <ToggleGroupItem value="date-asc" className="text-xs font-mono px-2.5 h-7 border-dashed text-muted-foreground data-[state=on]:bg-muted data-[state=on]:text-foreground">first_updated</ToggleGroupItem>
+                </ToggleGroup>
+                
+                {/* Separator between groups */}
+                <div className="w-px h-5 bg-border mx-1" />
+                
+                {/* Alphabetical sort group */}
+                <ToggleGroup 
+                  type="single" 
+                  value={progressSort} 
+                  onValueChange={(val) => val && setProgressSort(val as SortOption)}
+                  className="gap-1"
+                >
+                  <ToggleGroupItem value="alpha-asc" className="text-xs font-mono px-2.5 h-7 border-dashed text-muted-foreground data-[state=on]:bg-muted data-[state=on]:text-foreground">a→z</ToggleGroupItem>
+                  <ToggleGroupItem value="alpha-desc" className="text-xs font-mono px-2.5 h-7 border-dashed text-muted-foreground data-[state=on]:bg-muted data-[state=on]:text-foreground">z→a</ToggleGroupItem>
                 </ToggleGroup>
               </div>
             )}
@@ -860,20 +875,6 @@ const Library = () => {
                 <div className="flex items-center gap-2">
                   <ArrowUpDown className="w-3.5 h-3.5 text-muted-foreground" />
                   
-                  {/* Alphabetical sort group */}
-                  <ToggleGroup 
-                    type="single" 
-                    value={readerSort} 
-                    onValueChange={(val) => val && setReaderSort(val as SortOption)}
-                    className="gap-1"
-                  >
-                    <ToggleGroupItem value="alpha-asc" className="text-xs font-mono px-2.5 h-7 border-dashed text-muted-foreground data-[state=on]:bg-muted data-[state=on]:text-foreground">a→z</ToggleGroupItem>
-                    <ToggleGroupItem value="alpha-desc" className="text-xs font-mono px-2.5 h-7 border-dashed text-muted-foreground data-[state=on]:bg-muted data-[state=on]:text-foreground">z→a</ToggleGroupItem>
-                  </ToggleGroup>
-                  
-                  {/* Separator between groups */}
-                  <div className="w-px h-5 bg-border mx-1" />
-                  
                   {/* Date sort group */}
                   <ToggleGroup 
                     type="single" 
@@ -883,6 +884,20 @@ const Library = () => {
                   >
                     <ToggleGroupItem value="date-desc" className="text-xs font-mono px-2.5 h-7 border-dashed text-muted-foreground data-[state=on]:bg-muted data-[state=on]:text-foreground">last_updated</ToggleGroupItem>
                     <ToggleGroupItem value="date-asc" className="text-xs font-mono px-2.5 h-7 border-dashed text-muted-foreground data-[state=on]:bg-muted data-[state=on]:text-foreground">first_updated</ToggleGroupItem>
+                  </ToggleGroup>
+                  
+                  {/* Separator between groups */}
+                  <div className="w-px h-5 bg-border mx-1" />
+                  
+                  {/* Alphabetical sort group */}
+                  <ToggleGroup 
+                    type="single" 
+                    value={readerSort} 
+                    onValueChange={(val) => val && setReaderSort(val as SortOption)}
+                    className="gap-1"
+                  >
+                    <ToggleGroupItem value="alpha-asc" className="text-xs font-mono px-2.5 h-7 border-dashed text-muted-foreground data-[state=on]:bg-muted data-[state=on]:text-foreground">a→z</ToggleGroupItem>
+                    <ToggleGroupItem value="alpha-desc" className="text-xs font-mono px-2.5 h-7 border-dashed text-muted-foreground data-[state=on]:bg-muted data-[state=on]:text-foreground">z→a</ToggleGroupItem>
                   </ToggleGroup>
                 </div>
                 <div className="grid gap-3">

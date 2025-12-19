@@ -1,4 +1,4 @@
-import { useState, useCallback, useMemo } from 'react';
+import { useState, useCallback, useMemo, useEffect } from 'react';
 import { Header } from '@/components/Header';
 import { SearchBar } from '@/components/SearchBar';
 import { AnimeCard } from '@/components/AnimeCard';
@@ -10,8 +10,24 @@ import { ToggleGroup, ToggleGroupItem } from '@/components/ui/toggle-group';
 const Index = () => {
   const [searchQuery, setSearchQuery] = useState('');
   const [searchResults, setSearchResults] = useState<AnimeSeries[]>([]);
-  const [statusFilter, setStatusFilter] = useState<StatusFilter>('airing');
-  const [resultLimit, setResultLimit] = useState<number>(10);
+  const [statusFilter, setStatusFilter] = useState<StatusFilter>(() => {
+    const saved = localStorage.getItem('mangamapper-home-status');
+    return (saved === 'airing' || saved === 'completed') ? saved : 'airing';
+  });
+  const [resultLimit, setResultLimit] = useState<number>(() => {
+    const saved = localStorage.getItem('mangamapper-home-limit');
+    const parsed = saved ? parseInt(saved) : NaN;
+    return [10, 50, 100].includes(parsed) ? parsed : 10;
+  });
+
+  // Persist filter preferences to localStorage
+  useEffect(() => {
+    localStorage.setItem('mangamapper-home-status', statusFilter);
+  }, [statusFilter]);
+
+  useEffect(() => {
+    localStorage.setItem('mangamapper-home-limit', resultLimit.toString());
+  }, [resultLimit]);
 
   const filteredAnime = useMemo(
     () => getFilteredAnime({ status: statusFilter, limit: resultLimit, sortBy: 'popularity' }),
