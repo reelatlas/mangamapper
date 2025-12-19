@@ -5,7 +5,7 @@ import { useLibraryData } from '@/hooks/useLibraryData';
 import { getAnimeById } from '@/data/mockAnime';
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
-import { Library as LibraryIcon, BookOpen, Tv, Trash2, ExternalLink, Link2, ArrowUpDown, X } from 'lucide-react';
+import { Library as LibraryIcon, BookOpen, Tv, Trash2, ExternalLink, Link2, ArrowUpDown, X, Check } from 'lucide-react';
 import { ToggleGroup, ToggleGroupItem } from '@/components/ui/toggle-group';
 import type { SortOption } from '@/types/library';
 import { getReadersForAnime } from '@/types/library';
@@ -205,7 +205,7 @@ const Library = () => {
                                 }}
                                 className="text-muted-foreground hover:text-destructive hover:bg-destructive/10"
                               >
-                                <Trash2 className="w-4 h-4" />
+                                <Check className="w-4 h-4" />
                               </Button>
                               <Button
                                 variant="ghost"
