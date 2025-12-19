@@ -15,13 +15,7 @@ import { mockAnimeData } from '@/data/mockAnime';
 import { SeriesCombobox } from '@/components/SeriesCombobox';
 import { toast } from 'sonner';
 import { Link } from 'react-router-dom';
-import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from '@/components/ui/select';
+import { ToggleGroup, ToggleGroupItem } from '@/components/ui/toggle-group';
 
 type SortOption = 'alpha-asc' | 'alpha-desc' | 'date-desc' | 'date-asc';
 
@@ -574,17 +568,17 @@ const Library = () => {
             {progress.length > 0 && (
               <div className="flex items-center gap-2">
                 <ArrowUpDown className="w-3.5 h-3.5 text-muted-foreground" />
-                <Select value={progressSort} onValueChange={(val) => setProgressSort(val as SortOption)}>
-                  <SelectTrigger className="w-[140px] h-8 text-xs font-mono border-dashed bg-muted/30">
-                    <SelectValue />
-                  </SelectTrigger>
-                  <SelectContent className="font-mono bg-background border-dashed">
-                    <SelectItem value="alpha-asc" className="text-xs">a→z</SelectItem>
-                    <SelectItem value="alpha-desc" className="text-xs">z→a</SelectItem>
-                    <SelectItem value="date-desc" className="text-xs">last_updated</SelectItem>
-                    <SelectItem value="date-asc" className="text-xs">first_updated</SelectItem>
-                  </SelectContent>
-                </Select>
+                <ToggleGroup 
+                  type="single" 
+                  value={progressSort} 
+                  onValueChange={(val) => val && setProgressSort(val as SortOption)}
+                  className="gap-1"
+                >
+                  <ToggleGroupItem value="alpha-asc" className="text-xs font-mono px-2.5 h-7 border-dashed data-[state=on]:bg-primary data-[state=on]:text-primary-foreground">a→z</ToggleGroupItem>
+                  <ToggleGroupItem value="alpha-desc" className="text-xs font-mono px-2.5 h-7 border-dashed data-[state=on]:bg-primary data-[state=on]:text-primary-foreground">z→a</ToggleGroupItem>
+                  <ToggleGroupItem value="date-desc" className="text-xs font-mono px-2.5 h-7 border-dashed data-[state=on]:bg-primary data-[state=on]:text-primary-foreground">last_updated</ToggleGroupItem>
+                  <ToggleGroupItem value="date-asc" className="text-xs font-mono px-2.5 h-7 border-dashed data-[state=on]:bg-primary data-[state=on]:text-primary-foreground">first_updated</ToggleGroupItem>
+                </ToggleGroup>
               </div>
             )}
             {progress.length > 0 ? (
@@ -851,17 +845,17 @@ const Library = () => {
               <>
                 <div className="flex items-center gap-2">
                   <ArrowUpDown className="w-3.5 h-3.5 text-muted-foreground" />
-                  <Select value={readerSort} onValueChange={(val) => setReaderSort(val as SortOption)}>
-                    <SelectTrigger className="w-[140px] h-8 text-xs font-mono border-dashed bg-muted/30">
-                      <SelectValue />
-                    </SelectTrigger>
-                    <SelectContent className="font-mono bg-background border-dashed">
-                      <SelectItem value="alpha-asc" className="text-xs">a→z</SelectItem>
-                      <SelectItem value="alpha-desc" className="text-xs">z→a</SelectItem>
-                      <SelectItem value="date-desc" className="text-xs">last_updated</SelectItem>
-                      <SelectItem value="date-asc" className="text-xs">first_updated</SelectItem>
-                    </SelectContent>
-                  </Select>
+                  <ToggleGroup 
+                    type="single" 
+                    value={readerSort} 
+                    onValueChange={(val) => val && setReaderSort(val as SortOption)}
+                    className="gap-1"
+                  >
+                    <ToggleGroupItem value="alpha-asc" className="text-xs font-mono px-2.5 h-7 border-dashed data-[state=on]:bg-primary data-[state=on]:text-primary-foreground">a→z</ToggleGroupItem>
+                    <ToggleGroupItem value="alpha-desc" className="text-xs font-mono px-2.5 h-7 border-dashed data-[state=on]:bg-primary data-[state=on]:text-primary-foreground">z→a</ToggleGroupItem>
+                    <ToggleGroupItem value="date-desc" className="text-xs font-mono px-2.5 h-7 border-dashed data-[state=on]:bg-primary data-[state=on]:text-primary-foreground">last_updated</ToggleGroupItem>
+                    <ToggleGroupItem value="date-asc" className="text-xs font-mono px-2.5 h-7 border-dashed data-[state=on]:bg-primary data-[state=on]:text-primary-foreground">first_updated</ToggleGroupItem>
+                  </ToggleGroup>
                 </div>
                 <div className="grid gap-3">
                   {sortedReaderGroups.map((group) => {
