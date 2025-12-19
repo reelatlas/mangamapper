@@ -568,6 +568,8 @@ const Library = () => {
             {progress.length > 0 && (
               <div className="flex items-center gap-2">
                 <ArrowUpDown className="w-3.5 h-3.5 text-muted-foreground" />
+                
+                {/* Alphabetical sort group */}
                 <ToggleGroup 
                   type="single" 
                   value={progressSort} 
@@ -576,6 +578,18 @@ const Library = () => {
                 >
                   <ToggleGroupItem value="alpha-asc" className="text-xs font-mono px-2.5 h-7 border-dashed data-[state=on]:bg-primary data-[state=on]:text-primary-foreground">a→z</ToggleGroupItem>
                   <ToggleGroupItem value="alpha-desc" className="text-xs font-mono px-2.5 h-7 border-dashed data-[state=on]:bg-primary data-[state=on]:text-primary-foreground">z→a</ToggleGroupItem>
+                </ToggleGroup>
+                
+                {/* Separator between groups */}
+                <div className="w-px h-5 bg-border mx-1" />
+                
+                {/* Date sort group */}
+                <ToggleGroup 
+                  type="single" 
+                  value={progressSort} 
+                  onValueChange={(val) => val && setProgressSort(val as SortOption)}
+                  className="gap-1"
+                >
                   <ToggleGroupItem value="date-desc" className="text-xs font-mono px-2.5 h-7 border-dashed data-[state=on]:bg-primary data-[state=on]:text-primary-foreground">last_updated</ToggleGroupItem>
                   <ToggleGroupItem value="date-asc" className="text-xs font-mono px-2.5 h-7 border-dashed data-[state=on]:bg-primary data-[state=on]:text-primary-foreground">first_updated</ToggleGroupItem>
                 </ToggleGroup>
@@ -845,6 +859,8 @@ const Library = () => {
               <>
                 <div className="flex items-center gap-2">
                   <ArrowUpDown className="w-3.5 h-3.5 text-muted-foreground" />
+                  
+                  {/* Alphabetical sort group */}
                   <ToggleGroup 
                     type="single" 
                     value={readerSort} 
@@ -853,6 +869,18 @@ const Library = () => {
                   >
                     <ToggleGroupItem value="alpha-asc" className="text-xs font-mono px-2.5 h-7 border-dashed data-[state=on]:bg-primary data-[state=on]:text-primary-foreground">a→z</ToggleGroupItem>
                     <ToggleGroupItem value="alpha-desc" className="text-xs font-mono px-2.5 h-7 border-dashed data-[state=on]:bg-primary data-[state=on]:text-primary-foreground">z→a</ToggleGroupItem>
+                  </ToggleGroup>
+                  
+                  {/* Separator between groups */}
+                  <div className="w-px h-5 bg-border mx-1" />
+                  
+                  {/* Date sort group */}
+                  <ToggleGroup 
+                    type="single" 
+                    value={readerSort} 
+                    onValueChange={(val) => val && setReaderSort(val as SortOption)}
+                    className="gap-1"
+                  >
                     <ToggleGroupItem value="date-desc" className="text-xs font-mono px-2.5 h-7 border-dashed data-[state=on]:bg-primary data-[state=on]:text-primary-foreground">last_updated</ToggleGroupItem>
                     <ToggleGroupItem value="date-asc" className="text-xs font-mono px-2.5 h-7 border-dashed data-[state=on]:bg-primary data-[state=on]:text-primary-foreground">first_updated</ToggleGroupItem>
                   </ToggleGroup>

@@ -5,7 +5,7 @@ import { AnimeCard } from '@/components/AnimeCard';
 import { getFilteredAnime, searchAnime, StatusFilter } from '@/data/mockAnime';
 import { AnimeSeries } from '@/types/anime';
 import { TrendingUp, Filter, Home } from 'lucide-react';
-import { Button } from '@/components/ui/button';
+import { ToggleGroup, ToggleGroupItem } from '@/components/ui/toggle-group';
 
 const Index = () => {
   const [searchQuery, setSearchQuery] = useState('');
@@ -54,50 +54,34 @@ const Index = () => {
         {/* Filters */}
         {!isSearching && (
           <section className="mb-6">
-            <div className="flex flex-wrap items-center gap-4">
-              {/* Status filter */}
-              <div className="flex items-center gap-3">
-                <div className="flex items-center gap-2 text-xs text-muted-foreground">
-                  <Filter className="w-3.5 h-3.5" />
-                  <span>--status</span>
-                </div>
-                <div className="flex gap-2">
-                  <Button
-                    variant="outline"
-                    size="sm"
-                    onClick={() => setStatusFilter('airing')}
-                    className={`font-mono text-xs border-dashed ${statusFilter === 'airing' ? 'bg-secondary text-foreground hover:bg-secondary hover:text-foreground' : 'hover:bg-muted hover:text-foreground'}`}
-                  >
-                    airing
-                  </Button>
-                  <Button
-                    variant="outline"
-                    size="sm"
-                    onClick={() => setStatusFilter('completed')}
-                    className={`font-mono text-xs border-dashed ${statusFilter === 'completed' ? 'bg-secondary text-foreground hover:bg-secondary hover:text-foreground' : 'hover:bg-muted hover:text-foreground'}`}
-                  >
-                    complete
-                  </Button>
-                </div>
-              </div>
-
-              {/* Limit filter */}
-              <div className="flex items-center gap-3">
-                <span className="text-xs text-muted-foreground">--top</span>
-                <div className="flex gap-2">
-                  {[10, 50, 100].map((limit) => (
-                    <Button
-                      key={limit}
-                      variant="outline"
-                      size="sm"
-                      onClick={() => setResultLimit(limit)}
-                      className={`font-mono text-xs border-dashed ${resultLimit === limit ? 'bg-secondary text-foreground hover:bg-secondary hover:text-foreground' : 'hover:bg-muted hover:text-foreground'}`}
-                    >
-                      {limit}
-                    </Button>
-                  ))}
-                </div>
-              </div>
+            <div className="flex items-center gap-2">
+              <Filter className="w-3.5 h-3.5 text-muted-foreground" />
+              
+              {/* Status filter group */}
+              <ToggleGroup 
+                type="single" 
+                value={statusFilter} 
+                onValueChange={(val) => val && setStatusFilter(val as StatusFilter)}
+                className="gap-1"
+              >
+                <ToggleGroupItem value="airing" className="text-xs font-mono px-2.5 h-7 border-dashed data-[state=on]:bg-primary data-[state=on]:text-primary-foreground">airing</ToggleGroupItem>
+                <ToggleGroupItem value="completed" className="text-xs font-mono px-2.5 h-7 border-dashed data-[state=on]:bg-primary data-[state=on]:text-primary-foreground">complete</ToggleGroupItem>
+              </ToggleGroup>
+              
+              {/* Separator between groups */}
+              <div className="w-px h-5 bg-border mx-1" />
+              
+              {/* Limit filter group */}
+              <ToggleGroup 
+                type="single" 
+                value={resultLimit.toString()} 
+                onValueChange={(val) => val && setResultLimit(parseInt(val))}
+                className="gap-1"
+              >
+                <ToggleGroupItem value="10" className="text-xs font-mono px-2.5 h-7 border-dashed data-[state=on]:bg-primary data-[state=on]:text-primary-foreground">10</ToggleGroupItem>
+                <ToggleGroupItem value="50" className="text-xs font-mono px-2.5 h-7 border-dashed data-[state=on]:bg-primary data-[state=on]:text-primary-foreground">50</ToggleGroupItem>
+                <ToggleGroupItem value="100" className="text-xs font-mono px-2.5 h-7 border-dashed data-[state=on]:bg-primary data-[state=on]:text-primary-foreground">100</ToggleGroupItem>
+              </ToggleGroup>
             </div>
           </section>
         )}
