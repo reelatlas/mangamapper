@@ -522,7 +522,7 @@ const Library = () => {
                                   <Tv className="w-3.5 h-3.5 text-primary" />
                                   <span>
                                     <span className="text-muted-foreground">ep:</span>
-                                    <span className="text-foreground">{item.last_watched_episode ?? '—'}</span>
+                                    <span className={item.last_watched_episode != null ? "text-foreground" : "text-muted-foreground"}>{item.last_watched_episode ?? '—'}</span>
                                   </span>
                                 </div>
                                 
@@ -532,19 +532,19 @@ const Library = () => {
                                     <BookOpen className="w-3.5 h-3.5 text-primary" />
                                     <span>
                                       <span className="text-muted-foreground">vol:</span>
-                                      <span className="text-foreground">{item.last_read_volume ?? '—'}</span>
+                                      <span className={item.last_read_volume != null ? "text-foreground" : "text-muted-foreground"}>{item.last_read_volume ?? '—'}</span>
                                     </span>
                                     <span className="text-muted-foreground">·</span>
                                     <span>
                                       <span className="text-muted-foreground">ch:</span>
-                                      <span className="text-foreground">{item.last_read_chapter ?? '—'}</span>
+                                      <span className={item.last_read_chapter != null ? "text-foreground" : "text-muted-foreground"}>{item.last_read_chapter ?? '—'}</span>
                                     </span>
                                   </div>
                                 ) : (
-                                  <div className="flex items-center gap-1.5 text-muted-foreground">
-                                    <BookOpen className="w-3.5 h-3.5" />
-                                    <span className="text-syntax-cyan">// </span>
-                                    <span>anime original — no manga</span>
+                                  <div className="flex items-center gap-1.5">
+                                    <BookOpen className="w-3.5 h-3.5 text-primary" />
+                                    <span className="text-muted-foreground">// </span>
+                                    <span className="text-muted-foreground">anime original — no manga</span>
                                   </div>
                                 )}
                                 
@@ -553,6 +553,7 @@ const Library = () => {
                                   <>
                                     {getReadersForAnime(item.anime_id, readerSites).length > 0 ? (
                                       <div className="flex items-center gap-1.5 mt-1">
+                                        <Link2 className="w-3.5 h-3.5 text-primary" />
                                         {getReadersForAnime(item.anime_id, readerSites).map((reader) => (
                                           <Button
                                             key={reader.id}
@@ -573,7 +574,7 @@ const Library = () => {
                                     ) : (
                                       <div className="flex items-center gap-1.5 mt-1 text-muted-foreground">
                                         <Link2 className="w-3.5 h-3.5" />
-                                        <span className="text-syntax-cyan">// </span>
+                                        <span>// </span>
                                         <span>no reader sites linked</span>
                                       </div>
                                     )}
