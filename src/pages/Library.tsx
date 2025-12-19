@@ -512,45 +512,72 @@ const Library = () => {
                               alt={anime.title}
                               className="w-14 min-h-[5rem] object-cover opacity-90"
                             />
-                            <div className="flex-1 min-w-0">
+                            <div className="flex-1 min-w-0 min-h-[6rem]">
                               <span className="text-sm text-syntax-green truncate block">
                                 {anime.title}
                               </span>
                               <div className="flex flex-col gap-1.5 mt-2 text-xs">
-                                {item.last_watched_episode && (
-                                  <div className="flex items-center gap-1.5">
-                                    <Tv className="w-3.5 h-3.5 text-primary" />
-                                    <span><span className="text-muted-foreground">ep:</span><span className="text-foreground">{item.last_watched_episode}</span></span>
-                                  </div>
-                                )}
-                                {item.last_read_chapter && (
+                                {/* Always show episode progress */}
+                                <div className="flex items-center gap-1.5">
+                                  <Tv className="w-3.5 h-3.5 text-primary" />
+                                  <span>
+                                    <span className="text-muted-foreground">ep:</span>
+                                    <span className="text-foreground">{item.last_watched_episode ?? '—'}</span>
+                                  </span>
+                                </div>
+                                
+                                {/* Manga section - show progress or "anime original" message */}
+                                {anime.hasManga ? (
                                   <div className="flex items-center gap-1.5">
                                     <BookOpen className="w-3.5 h-3.5 text-primary" />
-                                    <span><span className="text-muted-foreground">vol:</span><span className="text-foreground">{item.last_read_volume}</span></span>
+                                    <span>
+                                      <span className="text-muted-foreground">vol:</span>
+                                      <span className="text-foreground">{item.last_read_volume ?? '—'}</span>
+                                    </span>
                                     <span className="text-muted-foreground">·</span>
-                                    <span><span className="text-muted-foreground">ch:</span><span className="text-foreground">{item.last_read_chapter}</span></span>
+                                    <span>
+                                      <span className="text-muted-foreground">ch:</span>
+                                      <span className="text-foreground">{item.last_read_chapter ?? '—'}</span>
+                                    </span>
+                                  </div>
+                                ) : (
+                                  <div className="flex items-center gap-1.5 text-muted-foreground">
+                                    <BookOpen className="w-3.5 h-3.5" />
+                                    <span className="text-syntax-cyan">// </span>
+                                    <span>anime original — no manga</span>
                                   </div>
                                 )}
-                                {/* Reader buttons below manga progress */}
-                                {getReadersForAnime(item.anime_id, readerSites).length > 0 && (
-                                  <div className="flex items-center gap-1.5 mt-1">
-                                    {getReadersForAnime(item.anime_id, readerSites).map((reader) => (
-                                      <Button
-                                        key={reader.id}
-                                        variant="outline"
-                                        size="sm"
-                                        className="h-5 px-1.5 text-[10px] font-mono border-dashed gap-1"
-                                        onClick={(e) => {
-                                          e.preventDefault();
-                                          e.stopPropagation();
-                                          window.open(reader.series_url!, '_blank');
-                                        }}
-                                      >
-                                        {reader.name}
-                                        <ExternalLink className="w-2.5 h-2.5" />
-                                      </Button>
-                                    ))}
-                                  </div>
+                                
+                                {/* Reader section - show buttons, "no readers" message, or nothing for anime-only */}
+                                {anime.hasManga && (
+                                  <>
+                                    {getReadersForAnime(item.anime_id, readerSites).length > 0 ? (
+                                      <div className="flex items-center gap-1.5 mt-1">
+                                        {getReadersForAnime(item.anime_id, readerSites).map((reader) => (
+                                          <Button
+                                            key={reader.id}
+                                            variant="outline"
+                                            size="sm"
+                                            className="h-5 px-1.5 text-[10px] font-mono border-dashed gap-1"
+                                            onClick={(e) => {
+                                              e.preventDefault();
+                                              e.stopPropagation();
+                                              window.open(reader.series_url!, '_blank');
+                                            }}
+                                          >
+                                            {reader.name}
+                                            <ExternalLink className="w-2.5 h-2.5" />
+                                          </Button>
+                                        ))}
+                                      </div>
+                                    ) : (
+                                      <div className="flex items-center gap-1.5 mt-1 text-muted-foreground">
+                                        <Link2 className="w-3.5 h-3.5" />
+                                        <span className="text-syntax-cyan">// </span>
+                                        <span>no reader sites linked</span>
+                                      </div>
+                                    )}
+                                  </>
                                 )}
                               </div>
                             </div>
