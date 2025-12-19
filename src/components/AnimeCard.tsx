@@ -13,7 +13,7 @@ export const AnimeCard = ({ anime, rank }: AnimeCardProps) => {
 
   return (
     <Link to={`/anime/${anime.id}`}>
-      <Card className="group overflow-hidden transition-all duration-200 hover:border-primary/50 cursor-pointer border-dashed">
+      <Card className="group overflow-hidden transition-all duration-200 hover:border-primary/50 cursor-pointer border-dashed w-full">
         <div className="terminal-header flex items-center justify-between">
           <span className="flex items-center gap-2">
             {rank && <span className="text-syntax-amber">#{String(rank).padStart(2, '0')}</span>}
@@ -44,18 +44,18 @@ export const AnimeCard = ({ anime, rank }: AnimeCardProps) => {
             </div>
 
             {/* Content */}
-            <div className="flex-1 p-4 flex flex-col font-mono">
+            <div className="flex-1 p-4 flex flex-col font-mono min-w-0 overflow-hidden">
               {/* Top section - Data structure */}
-              <div className="space-y-1 text-sm">
-                <div>
-                  <span className="text-syntax-cyan">title</span>
-                  <span className="text-muted-foreground">: </span>
-                  <span className="text-syntax-green">{anime.title}</span>
+              <div className="space-y-1 text-sm min-w-0">
+                <div className="flex min-w-0">
+                  <span className="text-syntax-cyan shrink-0">title</span>
+                  <span className="text-muted-foreground shrink-0">: </span>
+                  <span className="text-syntax-green truncate">{anime.title}</span>
                 </div>
-                <div>
-                  <span className="text-syntax-cyan">title_jp</span>
-                  <span className="text-muted-foreground">: </span>
-                  <span className="text-syntax-green text-xs">{anime.japaneseTitle}</span>
+                <div className="flex min-w-0">
+                  <span className="text-syntax-cyan shrink-0">title_jp</span>
+                  <span className="text-muted-foreground shrink-0">: </span>
+                  <span className="text-syntax-green text-xs truncate">{anime.japaneseTitle}</span>
                 </div>
                 <div>
                   <span className="text-syntax-cyan">genres</span>
