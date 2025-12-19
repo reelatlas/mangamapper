@@ -125,7 +125,6 @@ const Auth = () => {
               </Label>
               <div className="flex items-center gap-2">
                 <Mail className="w-3.5 h-3.5 text-muted-foreground" />
-                <span className="text-muted-foreground">$</span>
                 <Input
                   id="email"
                   type="email"
@@ -143,7 +142,6 @@ const Auth = () => {
               </Label>
               <div className="flex items-center gap-2">
                 <Lock className="w-3.5 h-3.5 text-muted-foreground" />
-                <span className="text-muted-foreground">$</span>
                 <Input
                   id="password"
                   type="password"
