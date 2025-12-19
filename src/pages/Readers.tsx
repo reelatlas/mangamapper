@@ -1,5 +1,10 @@
 import { useState, useEffect, useMemo } from 'react';
-import { useNavigate, Link } from 'react-router-dom';
+import { useNavigate, Link, useLocation } from 'react-router-dom';
+
+interface LocationState {
+  openAddReader?: boolean;
+  preSelectAnimeId?: string;
+}
 import { Header } from '@/components/Header';
 import { useLibraryData } from '@/hooks/useLibraryData';
 import { useAuth } from '@/hooks/useAuth';
@@ -17,6 +22,8 @@ import type { SortOption, SeriesAssignment, ReaderSite } from '@/types/library';
 
 const Readers = () => {
   const navigate = useNavigate();
+  const location = useLocation();
+  const locationState = location.state as LocationState | null;
   const { user } = useAuth();
   const { authLoading, loading, readerSites, fetchReaderSites, deleteReaderSite } = useLibraryData();
 
@@ -49,6 +56,25 @@ const Readers = () => {
       navigate('/auth');
     }
   }, [user, authLoading, navigate]);
+
+  // Handle deep link from anime detail page
+  useEffect(() => {
+    if (locationState?.openAddReader) {
+      setShowAddReaderForm(true);
+      
+      if (locationState.preSelectAnimeId) {
+        setSeriesAssignments([{ 
+          animeId: locationState.preSelectAnimeId, 
+          seriesUrl: '', 
+          suffix: '', 
+          userModified: false 
+        }]);
+      }
+      
+      // Clear the state so refreshing doesn't re-trigger
+      window.history.replaceState({}, document.title);
+    }
+  }, [locationState]);
 
   const addSeriesRow = () => {
     const baseUrl = newSiteUrl.trim() ? (newSiteUrl.trim().endsWith('/') ? newSiteUrl.trim() : newSiteUrl.trim() + '/') : '';

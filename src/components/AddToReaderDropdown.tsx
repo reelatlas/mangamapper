@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import {
@@ -104,11 +105,15 @@ export const AddToReaderDropdown = ({ animeId, onSuccess, linkedReaderNames = []
     return (
       <p className="text-xs text-muted-foreground">
         <span className="text-syntax-cyan">// </span>
-        add readers in{' '}
-        <a href="/readers" className="text-primary hover:underline">
+        assign_series() → requires(
+        <Link 
+          to="/readers" 
+          state={{ openAddReader: true, preSelectAnimeId: animeId }}
+          className="text-primary hover:underline"
+        >
           readers
-        </a>{' '}
-        first
+        </Link>
+        )
       </p>
     );
   }
