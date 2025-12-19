@@ -116,12 +116,14 @@ const Progress = () => {
                     <Card className="border-dashed hover:border-primary/50 transition-colors cursor-pointer">
                       <CardContent className="p-4">
                         <div className="flex items-stretch gap-4">
-                          <img
-                            src={anime.coverImage}
-                            alt={anime.title}
-                            className="h-[7rem] w-auto object-cover opacity-90"
-                          />
-                          <div className="flex-1 min-w-0 h-[7rem] flex flex-col justify-between">
+                          <div className="h-[7rem] w-12 flex-shrink-0 bg-muted/50">
+                            <img
+                              src={anime.coverImage}
+                              alt={anime.title}
+                              className="h-full w-full object-cover opacity-90"
+                            />
+                          </div>
+                          <div className="flex-1 min-w-0 h-[7rem] flex flex-col gap-1">
                             <span className="text-sm text-syntax-green truncate block">
                               {anime.title}
                             </span>
