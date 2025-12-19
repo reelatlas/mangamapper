@@ -507,7 +507,7 @@ const Readers = () => {
                     </p>
                     <div className="space-y-3">
                       {seriesAssignments.map((assignment, index) => (
-                        <div key={index} className="grid grid-cols-1 sm:grid-cols-[1fr_1fr_auto] gap-4 items-end">
+                        <div key={index} className="grid grid-cols-1 sm:grid-cols-2 gap-4 items-end">
                           <div className="space-y-2 min-w-0">
                             {index === 0 && (
                               <Label className="text-xs">
@@ -523,31 +523,33 @@ const Readers = () => {
                                 .filter(Boolean)}
                             />
                           </div>
-                          <div className="space-y-2">
+                          <div className="space-y-2 min-w-0">
                             {index === 0 && (
                               <Label className="text-xs">
                                 <span className="text-syntax-cyan">series_url</span>
                               </Label>
                             )}
-                            <Input
-                              type="text"
-                              placeholder="manga.line.me/title/..."
-                              value={assignment.seriesUrl}
-                              onChange={(e) => updateSeriesAssignment(index, 'seriesUrl', e.target.value)}
-                              className="font-mono text-sm border-dashed bg-muted/30"
-                            />
+                            <div className="flex items-center gap-2">
+                              <Input
+                                type="text"
+                                placeholder="manga.line.me/title/..."
+                                value={assignment.seriesUrl}
+                                onChange={(e) => updateSeriesAssignment(index, 'seriesUrl', e.target.value)}
+                                className="font-mono text-sm border-dashed bg-muted/30 flex-1 min-w-0"
+                              />
+                              {(seriesAssignments.length > 1 || assignment.userModified) && (
+                                <Button
+                                  type="button"
+                                  variant="ghost"
+                                  size="icon"
+                                  onClick={() => removeSeriesRow(index)}
+                                  className="text-muted-foreground hover:text-destructive hover:bg-destructive/10 flex-shrink-0"
+                                >
+                                  <Trash2 className="w-4 h-4" />
+                                </Button>
+                              )}
+                            </div>
                           </div>
-                          {(seriesAssignments.length > 1 || assignment.userModified) && (
-                            <Button
-                              type="button"
-                              variant="ghost"
-                              size="icon"
-                              onClick={() => removeSeriesRow(index)}
-                              className="text-muted-foreground hover:text-destructive hover:bg-destructive/10"
-                            >
-                              <Trash2 className="w-4 h-4" />
-                            </Button>
-                          )}
                         </div>
                       ))}
                       <Button
@@ -673,7 +675,7 @@ const Readers = () => {
                               </p>
                               <div className="space-y-3">
                                 {editSeriesAssignments.map((assignment, index) => (
-                                  <div key={index} className="grid grid-cols-1 sm:grid-cols-[1fr_1fr_auto] gap-4 items-end">
+                                  <div key={index} className="grid grid-cols-1 sm:grid-cols-2 gap-4 items-end">
                                     <div className="space-y-2 min-w-0">
                                       {index === 0 && (
                                         <Label className="text-xs">
@@ -689,31 +691,33 @@ const Readers = () => {
                                           .filter(Boolean)}
                                       />
                                     </div>
-                                    <div className="space-y-2">
+                                    <div className="space-y-2 min-w-0">
                                       {index === 0 && (
                                         <Label className="text-xs">
                                           <span className="text-syntax-cyan">series_url</span>
                                         </Label>
                                       )}
-                                      <Input
-                                        type="text"
-                                        placeholder="manga.line.me/title/..."
-                                        value={assignment.seriesUrl}
-                                        onChange={(e) => updateEditSeriesAssignment(index, 'seriesUrl', e.target.value)}
-                                        className="font-mono text-sm border-dashed bg-muted/30"
-                                      />
+                                      <div className="flex items-center gap-2">
+                                        <Input
+                                          type="text"
+                                          placeholder="manga.line.me/title/..."
+                                          value={assignment.seriesUrl}
+                                          onChange={(e) => updateEditSeriesAssignment(index, 'seriesUrl', e.target.value)}
+                                          className="font-mono text-sm border-dashed bg-muted/30 flex-1 min-w-0"
+                                        />
+                                        {(editSeriesAssignments.length > 1 || assignment.userModified) && (
+                                          <Button
+                                            type="button"
+                                            variant="ghost"
+                                            size="icon"
+                                            onClick={() => removeEditSeriesRow(index)}
+                                            className="text-muted-foreground hover:text-destructive hover:bg-destructive/10 flex-shrink-0"
+                                          >
+                                            <Trash2 className="w-4 h-4" />
+                                          </Button>
+                                        )}
+                                      </div>
                                     </div>
-                                    {(editSeriesAssignments.length > 1 || assignment.userModified) && (
-                                      <Button
-                                        type="button"
-                                        variant="ghost"
-                                        size="icon"
-                                        onClick={() => removeEditSeriesRow(index)}
-                                        className="text-muted-foreground hover:text-destructive hover:bg-destructive/10"
-                                      >
-                                        <Trash2 className="w-4 h-4" />
-                                      </Button>
-                                    )}
                                   </div>
                                 ))}
                                 <Button
