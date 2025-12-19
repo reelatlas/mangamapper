@@ -46,7 +46,7 @@ const Index = () => {
         <section className="mb-10">
           <SearchBar 
             onSearch={handleSearch}
-            placeholder="$ search --title 'anime name'"
+            placeholder="search anime title..."
             className="max-w-xl"
           />
         </section>
