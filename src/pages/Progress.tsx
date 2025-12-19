@@ -115,17 +115,17 @@ const Progress = () => {
                   <Link key={item.id} to={`/anime/${anime.id}`} className="block">
                     <Card className="border-dashed hover:border-primary/50 transition-colors cursor-pointer">
                       <CardContent className="p-3">
-                        <div className="flex items-stretch gap-3 h-24">
+                        <div className="flex items-stretch gap-3 h-28">
                           <img
                             src={anime.coverImage}
                             alt={anime.title}
-                            className="w-16 h-full object-cover rounded-sm opacity-90"
+                            className="w-auto h-full object-cover rounded-sm opacity-90"
                           />
-                          <div className="flex-1 min-w-0 flex flex-col justify-between py-0.5">
+                          <div className="flex-1 min-w-0 flex flex-col py-0.5">
                             <span className="text-sm text-syntax-green truncate block">
                               {anime.title}
                             </span>
-                            <div className="flex flex-wrap items-center gap-x-3 gap-y-1 text-xs">
+                            <div className="flex flex-col gap-1 mt-auto text-xs">
                               <div className="flex items-center gap-1.5">
                                 <Tv className={`w-3.5 h-3.5 ${item.last_watched_episode != null ? "text-primary" : "text-muted-foreground"}`} />
                                 <span>
