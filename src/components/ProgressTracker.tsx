@@ -6,7 +6,7 @@ import { Card, CardContent, CardHeader } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 
-import { Tv, BookOpen, LogIn, RotateCcw } from 'lucide-react';
+import { Tv, BookOpen, LogIn } from 'lucide-react';
 import { toast } from 'sonner';
 import { Link } from 'react-router-dom';
 
@@ -273,7 +273,7 @@ export const ProgressTracker = ({ anime }: ProgressTrackerProps) => {
               };
               
               return (
-                <>
+                <div className="flex items-center gap-2">
                   <Button 
                     onClick={saveProgress} 
                     disabled={saving || !hasChanges}
@@ -286,12 +286,11 @@ export const ProgressTracker = ({ anime }: ProgressTrackerProps) => {
                     onClick={resetChanges}
                     disabled={!hasChanges}
                     size="sm"
-                    variant="outline"
-                    className={`h-7 w-7 p-0 ${!hasChanges ? 'bg-transparent text-muted-foreground hover:bg-transparent border border-dashed border-border' : 'border-dashed'}`}
+                    className={`font-mono text-xs h-7 ${!hasChanges ? 'bg-transparent text-muted-foreground hover:bg-transparent border border-dashed border-border' : 'border-dashed'}`}
                   >
-                    <RotateCcw className="w-3.5 h-3.5" />
+                    {'↺'} reset_changes()
                   </Button>
-                </>
+                </div>
               );
             })()}
             {/* Library toggle button */}
@@ -300,7 +299,7 @@ export const ProgressTracker = ({ anime }: ProgressTrackerProps) => {
               size="sm"
               onClick={toggleLibrary}
               disabled={togglingLibrary}
-              className={`font-mono text-xs h-7 ${inLibrary ? 'border-dashed' : 'bg-transparent text-muted-foreground hover:text-accent-foreground hover:bg-accent border border-dashed border-border'}`}
+              className={`font-mono text-xs h-7 ml-2 ${inLibrary ? 'border-dashed' : 'bg-transparent text-muted-foreground hover:text-accent-foreground hover:bg-accent border border-dashed border-border'}`}
             >
               {togglingLibrary ? '...' : inLibrary ? '[✓] in_library' : '[ ] add_to_library'}
             </Button>
