@@ -116,7 +116,7 @@ const Index = () => {
           </div>
 
           {displayedAnime.length > 0 ? (
-            <div className="grid gap-4 overflow-hidden">
+            <div className="grid gap-4">
               {displayedAnime.map((anime, index) => (
                 <AnimeCard 
                   key={anime.id} 
