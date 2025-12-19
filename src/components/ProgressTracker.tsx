@@ -187,17 +187,6 @@ export const ProgressTracker = ({ anime }: ProgressTrackerProps) => {
         <span className="text-muted-foreground">my_progress</span>
       </div>
       <CardContent className="p-4 font-mono space-y-4">
-        {/* Library toggle button */}
-        <Button
-          variant={inLibrary ? "default" : "outline"}
-          size="sm"
-          onClick={toggleLibrary}
-          disabled={togglingLibrary}
-          className={`font-mono text-xs h-7 ${!inLibrary ? 'border-dashed bg-transparent' : ''}`}
-        >
-          {togglingLibrary ? '...' : inLibrary ? '[✓] in_library' : '[ ] add_to_library'}
-        </Button>
-
         {/* Last watched & Last read row */}
         <div className="flex flex-wrap gap-6">
           {/* Last watched */}
@@ -278,6 +267,17 @@ export const ProgressTracker = ({ anime }: ProgressTrackerProps) => {
             </span>
           )}
         </div>
+
+        {/* Library toggle button */}
+        <Button
+          variant={inLibrary ? "default" : "outline"}
+          size="sm"
+          onClick={toggleLibrary}
+          disabled={togglingLibrary}
+          className={`font-mono text-xs h-7 ${!inLibrary ? 'border-dashed bg-transparent' : ''}`}
+        >
+          {togglingLibrary ? '...' : inLibrary ? '[✓] in_library' : '[ ] add_to_library'}
+        </Button>
       </CardContent>
     </Card>
   );
