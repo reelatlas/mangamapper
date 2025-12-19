@@ -190,7 +190,7 @@ const AnimeDetail = () => {
               </p>
             ) : linkedReaders.length === 0 ? (
               // State B: Has manga but no linked readers
-              <div className="space-y-2">
+              <div className="space-y-4">
                 <p className="text-xs text-muted-foreground font-mono">
                   // no_reader_assigned
                 </p>
