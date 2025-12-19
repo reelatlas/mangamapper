@@ -576,8 +576,8 @@ const Library = () => {
                   onValueChange={(val) => val && setProgressSort(val as SortOption)}
                   className="gap-1"
                 >
-                  <ToggleGroupItem value="alpha-asc" className="text-xs font-mono px-2.5 h-7 border-dashed data-[state=on]:bg-primary data-[state=on]:text-primary-foreground">a→z</ToggleGroupItem>
-                  <ToggleGroupItem value="alpha-desc" className="text-xs font-mono px-2.5 h-7 border-dashed data-[state=on]:bg-primary data-[state=on]:text-primary-foreground">z→a</ToggleGroupItem>
+                  <ToggleGroupItem value="alpha-asc" className="text-xs font-mono px-2.5 h-7 border-dashed data-[state=on]:bg-muted data-[state=on]:text-foreground">a→z</ToggleGroupItem>
+                  <ToggleGroupItem value="alpha-desc" className="text-xs font-mono px-2.5 h-7 border-dashed data-[state=on]:bg-muted data-[state=on]:text-foreground">z→a</ToggleGroupItem>
                 </ToggleGroup>
                 
                 {/* Separator between groups */}
@@ -590,8 +590,8 @@ const Library = () => {
                   onValueChange={(val) => val && setProgressSort(val as SortOption)}
                   className="gap-1"
                 >
-                  <ToggleGroupItem value="date-desc" className="text-xs font-mono px-2.5 h-7 border-dashed data-[state=on]:bg-primary data-[state=on]:text-primary-foreground">last_updated</ToggleGroupItem>
-                  <ToggleGroupItem value="date-asc" className="text-xs font-mono px-2.5 h-7 border-dashed data-[state=on]:bg-primary data-[state=on]:text-primary-foreground">first_updated</ToggleGroupItem>
+                  <ToggleGroupItem value="date-desc" className="text-xs font-mono px-2.5 h-7 border-dashed data-[state=on]:bg-muted data-[state=on]:text-foreground">last_updated</ToggleGroupItem>
+                  <ToggleGroupItem value="date-asc" className="text-xs font-mono px-2.5 h-7 border-dashed data-[state=on]:bg-muted data-[state=on]:text-foreground">first_updated</ToggleGroupItem>
                 </ToggleGroup>
               </div>
             )}
@@ -867,8 +867,8 @@ const Library = () => {
                     onValueChange={(val) => val && setReaderSort(val as SortOption)}
                     className="gap-1"
                   >
-                    <ToggleGroupItem value="alpha-asc" className="text-xs font-mono px-2.5 h-7 border-dashed data-[state=on]:bg-primary data-[state=on]:text-primary-foreground">a→z</ToggleGroupItem>
-                    <ToggleGroupItem value="alpha-desc" className="text-xs font-mono px-2.5 h-7 border-dashed data-[state=on]:bg-primary data-[state=on]:text-primary-foreground">z→a</ToggleGroupItem>
+                    <ToggleGroupItem value="alpha-asc" className="text-xs font-mono px-2.5 h-7 border-dashed data-[state=on]:bg-muted data-[state=on]:text-foreground">a→z</ToggleGroupItem>
+                    <ToggleGroupItem value="alpha-desc" className="text-xs font-mono px-2.5 h-7 border-dashed data-[state=on]:bg-muted data-[state=on]:text-foreground">z→a</ToggleGroupItem>
                   </ToggleGroup>
                   
                   {/* Separator between groups */}
@@ -881,8 +881,8 @@ const Library = () => {
                     onValueChange={(val) => val && setReaderSort(val as SortOption)}
                     className="gap-1"
                   >
-                    <ToggleGroupItem value="date-desc" className="text-xs font-mono px-2.5 h-7 border-dashed data-[state=on]:bg-primary data-[state=on]:text-primary-foreground">last_updated</ToggleGroupItem>
-                    <ToggleGroupItem value="date-asc" className="text-xs font-mono px-2.5 h-7 border-dashed data-[state=on]:bg-primary data-[state=on]:text-primary-foreground">first_updated</ToggleGroupItem>
+                    <ToggleGroupItem value="date-desc" className="text-xs font-mono px-2.5 h-7 border-dashed data-[state=on]:bg-muted data-[state=on]:text-foreground">last_updated</ToggleGroupItem>
+                    <ToggleGroupItem value="date-asc" className="text-xs font-mono px-2.5 h-7 border-dashed data-[state=on]:bg-muted data-[state=on]:text-foreground">first_updated</ToggleGroupItem>
                   </ToggleGroup>
                 </div>
                 <div className="grid gap-3">
