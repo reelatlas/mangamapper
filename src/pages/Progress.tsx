@@ -121,7 +121,7 @@ const Progress = () => {
                             alt={anime.title}
                             className="w-14 min-h-[5rem] object-cover opacity-90"
                           />
-                          <div className="flex-1 min-w-0 min-h-[6rem]">
+                          <div className="flex-1 min-w-0">
                             <span className="text-sm text-syntax-green truncate block">
                               {anime.title}
                             </span>
