@@ -46,6 +46,7 @@ export const ProgressTracker = ({ anime }: ProgressTrackerProps) => {
   const [watchedEpisode, setWatchedEpisode] = useState<string>('');
   const [readVolume, setReadVolume] = useState<string>('');
   const [readChapter, setReadChapter] = useState<string>('');
+  const [originalValues, setOriginalValues] = useState({ watchedEpisode: '', readVolume: '', readChapter: '' });
 
   useEffect(() => {
     if (user) {
@@ -67,11 +68,16 @@ export const ProgressTracker = ({ anime }: ProgressTrackerProps) => {
     } else if (data) {
       setProgress(data);
       setInLibrary(data.in_library);
-      setWatchedEpisode(data.last_watched_episode?.toString() || '');
-      setReadVolume(data.last_read_volume?.toString() || '');
-      setReadChapter(data.last_read_chapter || '');
+      const ep = data.last_watched_episode?.toString() || '';
+      const vol = data.last_read_volume?.toString() || '';
+      const ch = data.last_read_chapter || '';
+      setWatchedEpisode(ep);
+      setReadVolume(vol);
+      setReadChapter(ch);
+      setOriginalValues({ watchedEpisode: ep, readVolume: vol, readChapter: ch });
     } else {
       setInLibrary(false);
+      setOriginalValues({ watchedEpisode: '', readVolume: '', readChapter: '' });
     }
     setLoading(false);
   };
@@ -142,6 +148,7 @@ export const ProgressTracker = ({ anime }: ProgressTrackerProps) => {
       console.error('Error saving progress:', error);
     } else {
       toast.success('Progress saved');
+      setOriginalValues({ watchedEpisode, readVolume, readChapter });
       fetchProgress();
     }
     
@@ -253,14 +260,21 @@ export const ProgressTracker = ({ anime }: ProgressTrackerProps) => {
         {/* Save row */}
         <div className="flex flex-col gap-2">
           <div className="flex items-center gap-2">
-            <Button 
-              onClick={saveProgress} 
-              disabled={saving}
-              size="sm"
-              className="font-mono text-xs border-dashed h-7"
-            >
-              {'✓'} {saving ? 'saving...' : 'save_progress()'}
-            </Button>
+            {(() => {
+              const hasChanges = watchedEpisode !== originalValues.watchedEpisode ||
+                readVolume !== originalValues.readVolume ||
+                readChapter !== originalValues.readChapter;
+              return (
+                <Button 
+                  onClick={saveProgress} 
+                  disabled={saving || !hasChanges}
+                  size="sm"
+                  className={`font-mono text-xs border-dashed h-7 ${!hasChanges ? 'bg-transparent text-muted-foreground hover:bg-transparent' : ''}`}
+                >
+                  {'✓'} {saving ? 'saving...' : 'save_progress()'}
+                </Button>
+              );
+            })()}
             {/* Library toggle button */}
             <Button
               variant="outline"
