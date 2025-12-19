@@ -508,7 +508,7 @@ const Readers = () => {
                     <div className="space-y-3">
                       {seriesAssignments.map((assignment, index) => (
                         <div key={index} className="grid grid-cols-1 sm:grid-cols-[1fr_1fr_auto] gap-4 items-end">
-                          <div className="space-y-2">
+                          <div className="space-y-2 min-w-0">
                             {index === 0 && (
                               <Label className="text-xs">
                                 <span className="text-syntax-cyan">series</span>
@@ -674,7 +674,7 @@ const Readers = () => {
                               <div className="space-y-3">
                                 {editSeriesAssignments.map((assignment, index) => (
                                   <div key={index} className="grid grid-cols-1 sm:grid-cols-[1fr_1fr_auto] gap-4 items-end">
-                                    <div className="space-y-2">
+                                    <div className="space-y-2 min-w-0">
                                       {index === 0 && (
                                         <Label className="text-xs">
                                           <span className="text-syntax-cyan">series</span>
