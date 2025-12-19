@@ -14,6 +14,7 @@ export const useLibraryData = () => {
     const { data, error } = await supabase
       .from('anime_progress')
       .select('*')
+      .eq('in_library', true)
       .order('updated_at', { ascending: false });
     
     if (error) {
@@ -42,10 +43,10 @@ export const useLibraryData = () => {
     setLoading(false);
   };
 
-  const deleteProgress = async (id: string) => {
+  const removeFromLibrary = async (id: string) => {
     const { error } = await supabase
       .from('anime_progress')
-      .delete()
+      .update({ in_library: false })
       .eq('id', id);
 
     if (error) {
@@ -84,7 +85,7 @@ export const useLibraryData = () => {
     readerSites,
     fetchProgress,
     fetchReaderSites,
-    deleteProgress,
+    removeFromLibrary,
     deleteReaderSite,
   };
 };

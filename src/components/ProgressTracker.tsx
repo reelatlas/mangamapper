@@ -19,6 +19,7 @@ interface Progress {
   last_watched_episode: number | null;
   last_read_volume: number | null;
   last_read_chapter: string | null;
+  in_library: boolean;
   updated_at: string;
 }
 
@@ -37,8 +38,10 @@ const formatTimestamp = (timestamp: string) => {
 export const ProgressTracker = ({ anime }: ProgressTrackerProps) => {
   const { user } = useAuth();
   const [progress, setProgress] = useState<Progress | null>(null);
+  const [inLibrary, setInLibrary] = useState(false);
   const [loading, setLoading] = useState(true);
   const [saving, setSaving] = useState(false);
+  const [togglingLibrary, setTogglingLibrary] = useState(false);
   
   const [watchedEpisode, setWatchedEpisode] = useState<string>('');
   const [readVolume, setReadVolume] = useState<string>('');
@@ -63,11 +66,57 @@ export const ProgressTracker = ({ anime }: ProgressTrackerProps) => {
       console.error('Error fetching progress:', error);
     } else if (data) {
       setProgress(data);
+      setInLibrary(data.in_library);
       setWatchedEpisode(data.last_watched_episode?.toString() || '');
       setReadVolume(data.last_read_volume?.toString() || '');
       setReadChapter(data.last_read_chapter || '');
+    } else {
+      setInLibrary(false);
     }
     setLoading(false);
+  };
+
+  const toggleLibrary = async () => {
+    if (!user) return;
+    
+    setTogglingLibrary(true);
+    
+    if (inLibrary) {
+      // Remove from library
+      const { error } = await supabase
+        .from('anime_progress')
+        .update({ in_library: false })
+        .eq('anime_id', anime.id)
+        .eq('user_id', user.id);
+
+      if (error) {
+        toast.error('Failed to remove from library');
+        console.error('Error removing from library:', error);
+      } else {
+        toast.success('Removed from library');
+        setInLibrary(false);
+      }
+    } else {
+      // Add to library (upsert with in_library = true)
+      const { error } = await supabase
+        .from('anime_progress')
+        .upsert({
+          user_id: user.id,
+          anime_id: anime.id,
+          in_library: true,
+        }, { onConflict: 'user_id,anime_id' });
+
+      if (error) {
+        toast.error('Failed to add to library');
+        console.error('Error adding to library:', error);
+      } else {
+        toast.success('Added to library');
+        setInLibrary(true);
+        fetchProgress();
+      }
+    }
+    
+    setTogglingLibrary(false);
   };
 
   const saveProgress = async () => {
@@ -81,6 +130,7 @@ export const ProgressTracker = ({ anime }: ProgressTrackerProps) => {
       last_watched_episode: watchedEpisode ? parseInt(watchedEpisode) : null,
       last_read_volume: readVolume ? parseInt(readVolume) : null,
       last_read_chapter: readChapter || null,
+      in_library: true,
     };
 
     const { error } = await supabase
@@ -137,6 +187,17 @@ export const ProgressTracker = ({ anime }: ProgressTrackerProps) => {
         <span className="text-muted-foreground">my_progress</span>
       </div>
       <CardContent className="p-4 font-mono space-y-4">
+        {/* Library toggle button */}
+        <Button
+          variant={inLibrary ? "default" : "outline"}
+          size="sm"
+          onClick={toggleLibrary}
+          disabled={togglingLibrary}
+          className={`font-mono text-xs h-7 ${!inLibrary ? 'border-dashed bg-transparent' : ''}`}
+        >
+          {togglingLibrary ? '...' : inLibrary ? '[✓] in_library' : '[ ] add_to_library'}
+        </Button>
+
         {/* Last watched & Last read row */}
         <div className="flex flex-wrap gap-6">
           {/* Last watched */}
