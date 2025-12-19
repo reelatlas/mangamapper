@@ -196,7 +196,7 @@ const AnimeDetail = () => {
                   <span className="text-syntax-cyan">// </span>
                   no readers assigned
                 </p>
-                {id && <AddToReaderDropdown animeId={id} onSuccess={fetchLinkedReaders} />}
+                {id && <AddToReaderDropdown animeId={id} onSuccess={fetchLinkedReaders} linkedReaderNames={linkedReaders.map(r => r.name)} />}
               </div>
             ) : (
               // State C: Has linked readers
@@ -215,7 +215,7 @@ const AnimeDetail = () => {
                     </Button>
                   ))}
                 </div>
-                {id && <AddToReaderDropdown animeId={id} onSuccess={fetchLinkedReaders} />}
+                {id && <AddToReaderDropdown animeId={id} onSuccess={fetchLinkedReaders} linkedReaderNames={linkedReaders.map(r => r.name)} />}
               </div>
             )}
           </CardContent>
