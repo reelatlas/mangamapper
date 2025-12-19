@@ -57,7 +57,9 @@ export const AddToReaderDropdown = ({ animeId, onSuccess, linkedReaderNames = []
 
   const handleSelectReader = (reader: UserReader) => {
     setSelectedReader(reader);
-    setSeriesUrl(reader.url);
+    // Ensure the default URL ends with a trailing slash
+    const baseUrl = reader.url.endsWith('/') ? reader.url : reader.url + '/';
+    setSeriesUrl(baseUrl);
   };
 
   const handleConfirm = async () => {
@@ -156,16 +158,19 @@ export const AddToReaderDropdown = ({ animeId, onSuccess, linkedReaderNames = []
           </div>
         ) : (
           <div className="p-3 space-y-3">
-            <div>
-              <p className="text-xs text-muted-foreground mb-1.5">
+            <div className="space-y-1.5">
+              <p className="text-xs text-muted-foreground">
                 <span className="text-syntax-cyan">reader</span>
                 <span className="text-muted-foreground">: </span>
                 <span className="text-syntax-green">{selectedReader.name}</span>
               </p>
+              <label className="text-xs text-muted-foreground">
+                <span className="text-syntax-cyan">series_url</span>
+              </label>
               <Input
                 value={seriesUrl}
                 onChange={(e) => setSeriesUrl(e.target.value)}
-                placeholder="series_url"
+                placeholder="https://example.com/series/..."
                 className="font-mono text-xs h-8"
               />
             </div>
