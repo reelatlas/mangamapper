@@ -154,9 +154,9 @@ export const AddToReaderDropdown = ({ animeId, onSuccess, linkedReaderNames = []
                 <button
                   key={reader.name}
                   onClick={() => handleSelectReader(reader)}
-                  className="w-full text-left px-3 py-2 text-xs font-mono hover:bg-muted rounded transition-colors"
+                  className="w-full text-left px-3 py-2 text-xs font-mono hover:bg-muted rounded transition-colors break-words"
                 >
-                  <span className="text-syntax-green">{reader.name}</span>
+                  <span className="text-syntax-green break-all">{reader.name}</span>
                 </button>
               ))
             )}
@@ -164,10 +164,10 @@ export const AddToReaderDropdown = ({ animeId, onSuccess, linkedReaderNames = []
         ) : (
           <div className="p-3 space-y-3">
             <div className="space-y-1.5">
-              <p className="text-xs text-muted-foreground">
+              <p className="text-xs text-muted-foreground break-words">
                 <span className="text-syntax-cyan">reader</span>
                 <span className="text-muted-foreground">: </span>
-                <span className="text-syntax-green">{selectedReader.name}</span>
+                <span className="text-syntax-green break-all">{selectedReader.name}</span>
               </p>
               <label className="text-xs text-muted-foreground">
                 <span className="text-syntax-cyan">series_url</span>
