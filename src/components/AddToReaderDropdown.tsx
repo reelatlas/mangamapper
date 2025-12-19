@@ -7,7 +7,7 @@ import {
   PopoverContent,
   PopoverTrigger,
 } from '@/components/ui/popover';
-import { Plus, Check, X } from 'lucide-react';
+import { Check, X } from 'lucide-react';
 import { supabase } from '@/integrations/supabase/client';
 import { useAuth } from '@/hooks/useAuth';
 import { toast } from '@/hooks/use-toast';
@@ -124,12 +124,11 @@ export const AddToReaderDropdown = ({ animeId, onSuccess, linkedReaderNames = []
     <Popover open={open} onOpenChange={setOpen}>
       <PopoverTrigger asChild>
         <Button
-          variant="ghost"
+          variant="outline"
           size="sm"
           className="font-mono text-xs border-dashed h-7 text-muted-foreground hover:text-accent-foreground hover:bg-accent"
         >
-          <Plus className="w-3.5 h-3.5" />
-          add_to_reader
+          {'>'} add_to_reader
         </Button>
       </PopoverTrigger>
       <PopoverContent className="w-72 p-0 bg-background border-dashed" align="start">
