@@ -185,9 +185,8 @@ const AnimeDetail = () => {
           <CardContent className="p-4">
             {!anime.hasManga ? (
               // State A: Anime original only
-              <p className="text-xs text-muted-foreground">
-                <span className="text-syntax-purple">// </span>
-                anime original only, no manga
+              <p className="text-xs text-muted-foreground font-mono">
+                // anime_original; no_manga
               </p>
             ) : linkedReaders.length === 0 ? (
               // State B: Has manga but no linked readers
