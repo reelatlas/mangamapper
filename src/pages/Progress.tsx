@@ -119,9 +119,9 @@ const Progress = () => {
                           <img
                             src={anime.coverImage}
                             alt={anime.title}
-                            className="w-14 min-h-[5rem] object-cover opacity-90"
+                            className="h-full w-auto object-cover opacity-90"
                           />
-                          <div className="flex-1 min-w-0 min-h-[6rem]">
+                          <div className="flex-1 min-w-0 min-h-[7.5rem]">
                             <span className="text-sm text-syntax-green truncate block">
                               {anime.title}
                             </span>
@@ -154,35 +154,38 @@ const Progress = () => {
                                 </div>
                               )}
                               
-                              {anime.hasManga && (
-                                <>
-                                  {getReadersForAnime(item.anime_id, readerSites).length > 0 ? (
-                                    <div className="flex items-center gap-1.5">
-                                      <Link2 className="w-3.5 h-3.5 text-primary" />
-                                      {getReadersForAnime(item.anime_id, readerSites).map((reader) => (
-                                        <Button
-                                          key={reader.id}
-                                          variant="outline"
-                                          size="sm"
-                                          className="h-5 px-1.5 text-[10px] font-mono border-dashed gap-1"
-                                          onClick={(e) => {
-                                            e.preventDefault();
-                                            e.stopPropagation();
-                                            window.open(reader.series_url!, '_blank');
-                                          }}
-                                        >
-                                          {reader.name}
-                                          <ExternalLink className="w-2.5 h-2.5" />
-                                        </Button>
-                                      ))}
-                                    </div>
-                                  ) : (
-                                    <div className="flex items-center gap-1.5 text-muted-foreground">
-                                      <Link2 className="w-3.5 h-3.5 text-muted-foreground" />
-                                      <span>//no_reader_link</span>
-                                    </div>
-                                  )}
-                                </>
+                              {anime.hasManga ? (
+                                getReadersForAnime(item.anime_id, readerSites).length > 0 ? (
+                                  <div className="flex items-center gap-1.5">
+                                    <Link2 className="w-3.5 h-3.5 text-primary" />
+                                    {getReadersForAnime(item.anime_id, readerSites).map((reader) => (
+                                      <Button
+                                        key={reader.id}
+                                        variant="outline"
+                                        size="sm"
+                                        className="h-5 px-1.5 text-[10px] font-mono border-dashed gap-1"
+                                        onClick={(e) => {
+                                          e.preventDefault();
+                                          e.stopPropagation();
+                                          window.open(reader.series_url!, '_blank');
+                                        }}
+                                      >
+                                        {reader.name}
+                                        <ExternalLink className="w-2.5 h-2.5" />
+                                      </Button>
+                                    ))}
+                                  </div>
+                                ) : (
+                                  <div className="flex items-center gap-1.5 text-muted-foreground">
+                                    <Link2 className="w-3.5 h-3.5 text-muted-foreground" />
+                                    <span>//no_reader_link</span>
+                                  </div>
+                                )
+                              ) : (
+                                <div className="flex items-center gap-1.5 text-muted-foreground">
+                                  <Link2 className="w-3.5 h-3.5 text-muted-foreground" />
+                                  <span>//anime_original</span>
+                                </div>
                               )}
                             </div>
                           </div>
