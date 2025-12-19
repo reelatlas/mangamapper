@@ -28,6 +28,7 @@ export const AddToReaderDropdown = ({ animeId, onSuccess }: AddToReaderDropdownP
   const [selectedReader, setSelectedReader] = useState<UserReader | null>(null);
   const [seriesUrl, setSeriesUrl] = useState('');
   const [loading, setLoading] = useState(false);
+  const [hasFetched, setHasFetched] = useState(false);
 
   useEffect(() => {
     const fetchUserReaders = async () => {
@@ -43,12 +44,11 @@ export const AddToReaderDropdown = ({ animeId, onSuccess }: AddToReaderDropdownP
         const distinctReaders = [...new Map(data.map(r => [r.name, r])).values()];
         setUserReaders(distinctReaders);
       }
+      setHasFetched(true);
     };
 
-    if (open) {
-      fetchUserReaders();
-    }
-  }, [user, open]);
+    fetchUserReaders();
+  }, [user]);
 
   const handleSelectReader = (reader: UserReader) => {
     setSelectedReader(reader);
@@ -96,7 +96,7 @@ export const AddToReaderDropdown = ({ animeId, onSuccess }: AddToReaderDropdownP
 
   if (!user) return null;
 
-  if (userReaders.length === 0 && !open) {
+  if (hasFetched && userReaders.length === 0) {
     return (
       <p className="text-xs text-muted-foreground">
         <span className="text-syntax-cyan">// </span>
