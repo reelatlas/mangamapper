@@ -67,10 +67,10 @@ const Library = () => {
   }
 
   return (
-    <div className="min-h-screen bg-background font-mono">
+    <div className="min-h-screen bg-background font-mono overflow-x-hidden">
       <Header />
       
-      <main className="container py-8">
+      <main className="container py-8 overflow-hidden">
         <div className="flex items-center gap-2 mb-6 text-sm">
           <LibraryIcon className="w-4 h-4 text-primary" />
           <span className="text-muted-foreground">{'>'}</span>
@@ -107,15 +107,15 @@ const Library = () => {
           )}
           
           {progress.length > 0 ? (
-            <div className="grid gap-3">
+            <div className="grid gap-3 overflow-hidden">
               {sortedProgress.map((item) => {
                 const anime = getAnimeById(item.anime_id);
                 if (!anime) return null;
                 
                 return (
-                  <Link key={item.id} to={`/anime/${anime.id}`} className="block">
-                    <Card className="border-dashed hover:border-primary/50 transition-colors cursor-pointer">
-                      <CardContent className="p-4">
+                  <Link key={item.id} to={`/anime/${anime.id}`} className="block overflow-hidden">
+                    <Card className="border-dashed hover:border-primary/50 transition-colors cursor-pointer overflow-hidden">
+                      <CardContent className="p-4 overflow-hidden">
                         <div className="flex items-stretch gap-4">
                           <img
                             src={anime.coverImage}
