@@ -170,7 +170,7 @@ export const AddToReaderDropdown = ({ animeId, onSuccess, linkedReaderNames = []
               <Input
                 value={seriesUrl}
                 onChange={(e) => setSeriesUrl(e.target.value)}
-                placeholder="https://example.com/series/..."
+                placeholder="manga.line.me/title/..."
                 className="font-mono text-xs h-8"
               />
             </div>
