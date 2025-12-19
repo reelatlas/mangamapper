@@ -19,9 +19,10 @@ interface UserReader {
 interface AddToReaderDropdownProps {
   animeId: string;
   onSuccess: () => void;
+  linkedReaderNames?: string[];
 }
 
-export const AddToReaderDropdown = ({ animeId, onSuccess }: AddToReaderDropdownProps) => {
+export const AddToReaderDropdown = ({ animeId, onSuccess, linkedReaderNames = [] }: AddToReaderDropdownProps) => {
   const { user } = useAuth();
   const [open, setOpen] = useState(false);
   const [userReaders, setUserReaders] = useState<UserReader[]>([]);
@@ -40,15 +41,18 @@ export const AddToReaderDropdown = ({ animeId, onSuccess }: AddToReaderDropdownP
         .eq('user_id', user.id);
 
       if (data) {
-        // Get distinct readers by name
+        // Get distinct readers by name, then filter out already-linked ones
         const distinctReaders = [...new Map(data.map(r => [r.name, r])).values()];
-        setUserReaders(distinctReaders);
+        const availableReaders = distinctReaders.filter(
+          r => !linkedReaderNames.includes(r.name)
+        );
+        setUserReaders(availableReaders);
       }
       setHasFetched(true);
     };
 
     fetchUserReaders();
-  }, [user]);
+  }, [user, linkedReaderNames]);
 
   const handleSelectReader = (reader: UserReader) => {
     setSelectedReader(reader);
