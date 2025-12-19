@@ -21,6 +21,8 @@ export const MangaMappingDisplay = ({ episode, showEpisodeNumber = true }: Manga
       </div>
       
       <div className="flex items-center gap-2 flex-wrap">
+        <EpisodeBadge type={episode.type} />
+        
         {episode.mangaMapping ? (
           <span className="text-xs">
             <span className="text-syntax-cyan">vol</span>
@@ -36,8 +38,6 @@ export const MangaMappingDisplay = ({ episode, showEpisodeNumber = true }: Manga
             {episode.type === 'filler' ? '// no_source' : '// anime_original'}
           </span>
         )}
-        
-        <EpisodeBadge type={episode.type} />
       </div>
     </div>
   );
