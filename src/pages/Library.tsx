@@ -120,9 +120,9 @@ const Library = () => {
                           <img
                             src={anime.coverImage}
                             alt={anime.title}
-                            className="w-14 min-h-[5rem] object-cover opacity-90"
+                            className="w-14 min-h-[5rem] object-cover opacity-90 shrink-0"
                           />
-                          <div className="flex-1 min-w-0">
+                          <div className="flex-1 min-w-0 overflow-hidden">
                             <span className="text-sm text-syntax-green truncate block">
                               {anime.title}
                             </span>
@@ -162,7 +162,7 @@ const Library = () => {
                               {anime.hasManga && (
                                 <>
                                   {getReadersForAnime(item.anime_id, readerSites).length > 0 ? (
-                                    <div className="flex items-center gap-1.5 min-h-5">
+                                    <div className="flex items-center gap-1.5 min-h-5 flex-wrap">
                                       <Link2 className="w-3.5 h-3.5 text-primary" />
                                       {getReadersForAnime(item.anime_id, readerSites).map((reader) => (
                                         <Button
