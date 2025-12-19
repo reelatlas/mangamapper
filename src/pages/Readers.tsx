@@ -567,7 +567,8 @@ const Readers = () => {
                   
                   <div className="flex gap-2">
                     <Button type="submit" className="font-mono text-xs border-dashed">
-                      {'>'} add_reader()
+                      <Plus className="w-3.5 h-3.5 mr-1" />
+                      add_reader()
                     </Button>
                     <Button
                       type="button"
