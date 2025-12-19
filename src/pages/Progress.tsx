@@ -121,11 +121,11 @@ const Progress = () => {
                             alt={anime.title}
                             className="h-[7rem] w-auto object-cover opacity-90"
                           />
-                          <div className="flex-1 min-w-0 h-[7rem]">
+                          <div className="flex-1 min-w-0 h-[7rem] flex flex-col justify-between">
                             <span className="text-sm text-syntax-green truncate block">
                               {anime.title}
                             </span>
-                            <div className="flex flex-col gap-1.5 mt-2 text-xs">
+                            <div className="flex flex-col gap-1.5 text-xs">
                               <div className="flex items-center gap-1.5">
                                 <Tv className={`w-3.5 h-3.5 ${item.last_watched_episode != null ? "text-primary" : "text-muted-foreground"}`} />
                                 <span>
