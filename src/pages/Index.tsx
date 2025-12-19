@@ -127,12 +127,14 @@ const Index = () => {
             </div>
           ) : (
             <div className="text-center py-16 border border-dashed">
-              <p className="text-muted-foreground text-sm">
-                <span className="text-syntax-cyan">// </span>
-                {isSearching 
-                  ? `no results matching "${searchQuery}"`
-                  : 'no anime found'
-                }
+              <p className="text-sm">
+                <span className="text-muted-foreground">// </span>
+                <span className="text-foreground">
+                  {isSearching 
+                    ? `no results matching "${searchQuery}"`
+                    : 'no anime found'
+                  }
+                </span>
               </p>
             </div>
           )}
