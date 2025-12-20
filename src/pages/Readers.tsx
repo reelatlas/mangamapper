@@ -238,7 +238,6 @@ const Readers = () => {
   };
 
   const startEditingReader = (group: { name: string; url: string; notes: string | null; entries: ReaderSite[] }) => {
-    setConfirmingDeleteReaderId(null);
     setEditingReaderName(group.name.toLowerCase());
     setEditSiteName(group.name);
     setEditSiteUrl(group.url);
