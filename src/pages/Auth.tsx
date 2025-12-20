@@ -9,7 +9,7 @@ import { Terminal, Mail, Lock, Eye, EyeClosed } from 'lucide-react';
 import { toast } from 'sonner';
 import { z } from 'zod';
 import { Link } from 'react-router-dom';
-import googleIcon from '@/assets/google_icon.svg';
+import AnimatedGoogleIcon from '@/components/AnimatedGoogleIcon';
 
 const authSchema = z.object({
   email: z.string().trim().email({ message: "Invalid email address" }),
@@ -26,6 +26,7 @@ const Auth = () => {
   const [loading, setLoading] = useState(false);
   const [googleLoading, setGoogleLoading] = useState(false);
   const [showPassword, setShowPassword] = useState(false);
+  const [googleHovered, setGoogleHovered] = useState(false);
   const { signIn, signUp, signInWithGoogle, user } = useAuth();
   const navigate = useNavigate();
 
@@ -174,8 +175,10 @@ const Auth = () => {
           <Button
             type="button"
             variant="outline"
-            className="w-full font-mono text-xs border-dashed gap-2 group"
+            className="w-full font-mono text-xs border-dashed gap-2"
             disabled={loading || googleLoading}
+            onMouseEnter={() => setGoogleHovered(true)}
+            onMouseLeave={() => setGoogleHovered(false)}
             onClick={async () => {
               setGoogleLoading(true);
               const { error } = await signInWithGoogle();
@@ -185,7 +188,7 @@ const Auth = () => {
               }
             }}
           >
-            <img src={googleIcon} alt="Google" className="w-4 h-4 transition-transform group-hover:animate-spin" />
+            <AnimatedGoogleIcon className="w-4 h-4" animate={googleHovered} />
             {googleLoading ? 'redirecting...' : 'google.sign_in()'}
           </Button>
 
