@@ -906,12 +906,14 @@ const Readers = () => {
               <p className="text-muted-foreground text-sm">
                 <span className="text-muted-foreground">// </span>no_reader_found
               </p>
-              <button 
-                onClick={() => setShowAddReaderForm(true)}
-                className="text-xs text-muted-foreground mt-2 hover:text-accent transition-colors cursor-pointer"
-              >
-                {'>'} new_reader
-              </button>
+              {!showAddReaderForm && (
+                <button 
+                  onClick={() => setShowAddReaderForm(true)}
+                  className="text-xs text-muted-foreground mt-2 hover:text-accent transition-colors cursor-pointer"
+                >
+                  {'>'} new_reader
+                </button>
+              )}
             </div>
           )}
         </div>
