@@ -5,7 +5,7 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Card, CardContent } from '@/components/ui/card';
 import { Label } from '@/components/ui/label';
-import { Terminal, Mail, Lock, Eye, EyeOff } from 'lucide-react';
+import { Terminal, Mail, Lock, Eye, EyeClosed } from 'lucide-react';
 import { toast } from 'sonner';
 import { z } from 'zod';
 import { Link } from 'react-router-dom';
@@ -141,9 +141,9 @@ const Auth = () => {
                   className="absolute right-3 top-1/2 -translate-y-1/2 text-muted-foreground hover:text-foreground transition-colors"
                 >
                   {showPassword ? (
-                    <EyeOff className="w-4 h-4" />
-                  ) : (
                     <Eye className="w-4 h-4" />
+                  ) : (
+                    <EyeClosed className="w-4 h-4" />
                   )}
                 </button>
               </div>
