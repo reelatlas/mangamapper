@@ -13,7 +13,7 @@ import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
-import { Plus, Trash2, ExternalLink, Link2, Pencil, X, Check, ArrowUpDown, Glasses, EyeOff } from 'lucide-react';
+import { Plus, Trash2, ExternalLink, Link2, Pencil, X, Check, ArrowUpDown, Glasses, EyeClosed } from 'lucide-react';
 import { mockAnimeData } from '@/data/mockAnime';
 import { SeriesCombobox } from '@/components/SeriesCombobox';
 import { toast } from 'sonner';
@@ -893,7 +893,7 @@ const Readers = () => {
             </>
           ) : (
             <div className="text-center py-16 border border-dashed">
-              <EyeOff className="w-8 h-8 text-muted-foreground mx-auto mb-3" />
+              <EyeClosed className="w-8 h-8 text-muted-foreground mx-auto mb-3" />
               <p className="text-muted-foreground text-sm">
                 <span className="text-muted-foreground">// </span>no_reader_found
               </p>
