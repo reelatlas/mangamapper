@@ -185,7 +185,7 @@ const Auth = () => {
               }
             }}
           >
-            <img src={googleIcon} alt="Google" className="w-4 h-4 grayscale opacity-60 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-200" />
+            <img src={googleIcon} alt="Google" className="w-4 h-4 grayscale opacity-80 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-200" />
             {googleLoading ? 'redirecting...' : 'google.sign_in()'}
           </Button>
 
