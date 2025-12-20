@@ -5,7 +5,7 @@ import { useLibraryData } from '@/hooks/useLibraryData';
 import { getAnimeById } from '@/data/mockAnime';
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
-import { Library as LibraryIcon, BookOpen, Tv, Trash2, ExternalLink, Link2, ArrowUpDown, X, Check } from 'lucide-react';
+import { Library as LibraryIcon, BookOpen, Tv, Trash2, ExternalLink, Link2, ArrowUpDown, X, Check, BookDashed, BookX, BookMinus, Archive, FolderOpen, PackageOpen, Inbox, FileQuestion } from 'lucide-react';
 import { ToggleGroup, ToggleGroupItem } from '@/components/ui/toggle-group';
 import type { SortOption } from '@/types/library';
 import { getReadersForAnime } from '@/types/library';
@@ -244,6 +244,42 @@ const Library = () => {
             </div>
           ) : (
             <div className="text-center py-16 border border-dashed">
+              {/* Temporary icon preview - pick your favorite */}
+              <div className="flex justify-center gap-8 mb-8 flex-wrap">
+                <div className="flex flex-col items-center gap-2">
+                  <BookDashed className="w-8 h-8 text-muted-foreground" />
+                  <span className="text-xs text-muted-foreground">BookDashed</span>
+                </div>
+                <div className="flex flex-col items-center gap-2">
+                  <BookX className="w-8 h-8 text-muted-foreground" />
+                  <span className="text-xs text-muted-foreground">BookX</span>
+                </div>
+                <div className="flex flex-col items-center gap-2">
+                  <BookMinus className="w-8 h-8 text-muted-foreground" />
+                  <span className="text-xs text-muted-foreground">BookMinus</span>
+                </div>
+                <div className="flex flex-col items-center gap-2">
+                  <Archive className="w-8 h-8 text-muted-foreground" />
+                  <span className="text-xs text-muted-foreground">Archive</span>
+                </div>
+                <div className="flex flex-col items-center gap-2">
+                  <FolderOpen className="w-8 h-8 text-muted-foreground" />
+                  <span className="text-xs text-muted-foreground">FolderOpen</span>
+                </div>
+                <div className="flex flex-col items-center gap-2">
+                  <PackageOpen className="w-8 h-8 text-muted-foreground" />
+                  <span className="text-xs text-muted-foreground">PackageOpen</span>
+                </div>
+                <div className="flex flex-col items-center gap-2">
+                  <Inbox className="w-8 h-8 text-muted-foreground" />
+                  <span className="text-xs text-muted-foreground">Inbox</span>
+                </div>
+                <div className="flex flex-col items-center gap-2">
+                  <FileQuestion className="w-8 h-8 text-muted-foreground" />
+                  <span className="text-xs text-muted-foreground">FileQuestion</span>
+                </div>
+              </div>
+              
               <LibraryIcon className="w-8 h-8 text-muted-foreground mx-auto mb-3" />
               <p className="text-muted-foreground text-sm">
                 <span className="text-muted-foreground">// </span>library_empty
