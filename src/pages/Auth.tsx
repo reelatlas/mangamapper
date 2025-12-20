@@ -152,12 +152,6 @@ const Auth = () => {
           </div>
 
           <div className="text-center space-y-3">
-            <p className="text-xs text-muted-foreground">
-              <span className="text-syntax-green">// test credentials pre-filled</span>
-              <br />
-              <span>{'>'} just click sign_in</span>
-            </p>
-            
             <div className="text-xs">
               <span className="text-muted-foreground">
                 {isLogin ? "// account(does_not_exist) → " : "// account(exists) → "}
