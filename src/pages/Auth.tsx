@@ -97,16 +97,8 @@ const Auth = () => {
           <span className="text-muted-foreground">auth_terminal</span>
         </div>
         <CardContent className="p-6">
-          <div className="text-center mb-6">
-            <div className="flex justify-center mb-2">
-              <Terminal className="w-6 h-6 text-primary" />
-            </div>
-            <div className="text-sm">
-              <span className="text-foreground">
-                {isLogin ? 'welcome_back' : 'create_account'}
-              </span>
-            </div>
-            <p className="text-xs text-muted-foreground mt-2">
+          <div className="mb-6">
+            <p className="text-xs text-muted-foreground">
               // {isLogin ? 'sign_in to view progress' : 'sign_up to start tracking'}
             </p>
           </div>
