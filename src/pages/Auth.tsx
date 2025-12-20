@@ -93,129 +93,131 @@ const Auth = () => {
 
   return (
     <div className="min-h-screen bg-background flex items-center justify-center p-4 font-mono">
-      <Card className="w-full max-w-md border-dashed">
-        <div className="terminal-header flex items-center gap-2">
-          <span className="text-syntax-amber">■</span>
-          <span className="text-muted-foreground">auth_terminal</span>
-        </div>
-        <CardContent className="p-6">
-          <div className="mb-6">
-            <p className="text-xs text-muted-foreground">
-              {isLogin ? '// sign in to view progress' : '// create account to start tracking'}
-            </p>
+      <div className="w-full max-w-md flex flex-col">
+        <Card className="w-full border-dashed">
+          <div className="terminal-header flex items-center gap-2">
+            <span className="text-syntax-amber">■</span>
+            <span className="text-muted-foreground">auth_terminal</span>
           </div>
-
-          <form onSubmit={handleSubmit} className="space-y-4">
-            <div className="space-y-2">
-              <Label htmlFor="email" className="text-xs flex items-center gap-1.5">
-                <Mail className="w-3.5 h-3.5 text-syntax-cyan" />
-                <span className="text-syntax-cyan">email</span>
-              </Label>
-              <Input
-                id="email"
-                type="email"
-                placeholder="you@example.com"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                className="font-mono text-sm border-dashed bg-muted/30"
-                required
-              />
+          <CardContent className="p-6">
+            <div className="mb-6">
+              <p className="text-xs text-muted-foreground">
+                {isLogin ? '// sign in to view progress' : '// create account to start tracking'}
+              </p>
             </div>
-            <div className="space-y-2">
-              <Label htmlFor="password" className="text-xs flex items-center gap-1.5">
-                <Lock className="w-3.5 h-3.5 text-syntax-cyan" />
-                <span className="text-syntax-cyan">password</span>
-              </Label>
-              <div className="relative">
+
+            <form onSubmit={handleSubmit} className="space-y-4">
+              <div className="space-y-2">
+                <Label htmlFor="email" className="text-xs flex items-center gap-1.5">
+                  <Mail className="w-3.5 h-3.5 text-syntax-cyan" />
+                  <span className="text-syntax-cyan">email</span>
+                </Label>
                 <Input
-                  id="password"
-                  type={showPassword ? "text" : "password"}
-                  placeholder="••••••••"
-                  value={password}
-                  onChange={(e) => setPassword(e.target.value)}
-                  className="font-mono text-sm border-dashed bg-muted/30 pr-10"
+                  id="email"
+                  type="email"
+                  placeholder="you@example.com"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  className="font-mono text-sm border-dashed bg-muted/30"
                   required
                 />
-                <button
-                  type="button"
-                  onClick={() => setShowPassword(!showPassword)}
-                  className="absolute right-3 top-1/2 -translate-y-1/2 text-muted-foreground hover:text-foreground transition-colors"
-                >
-                  {showPassword ? (
-                    <Eye className="w-4 h-4" />
-                  ) : (
-                    <EyeClosed className="w-4 h-4" />
-                  )}
-                </button>
               </div>
+              <div className="space-y-2">
+                <Label htmlFor="password" className="text-xs flex items-center gap-1.5">
+                  <Lock className="w-3.5 h-3.5 text-syntax-cyan" />
+                  <span className="text-syntax-cyan">password</span>
+                </Label>
+                <div className="relative">
+                  <Input
+                    id="password"
+                    type={showPassword ? "text" : "password"}
+                    placeholder="••••••••"
+                    value={password}
+                    onChange={(e) => setPassword(e.target.value)}
+                    className="font-mono text-sm border-dashed bg-muted/30 pr-10"
+                    required
+                  />
+                  <button
+                    type="button"
+                    onClick={() => setShowPassword(!showPassword)}
+                    className="absolute right-3 top-1/2 -translate-y-1/2 text-muted-foreground hover:text-foreground transition-colors"
+                  >
+                    {showPassword ? (
+                      <Eye className="w-4 h-4" />
+                    ) : (
+                      <EyeClosed className="w-4 h-4" />
+                    )}
+                  </button>
+                </div>
+              </div>
+              <Button type="submit" className="w-full font-mono text-xs border-dashed" disabled={loading || googleLoading}>
+                {loading ? 'auth_init...' : isLogin ? 'sign_in()' : 'sign_up()'}
+              </Button>
+            </form>
+
+            <div className="mt-6 text-left text-xs">
+              <span className="text-muted-foreground">
+                {isLogin ? "// account(does_not_exist) → " : "// account(exists) → "}
+              </span>
+              <button
+                type="button"
+                onClick={() => setIsLogin(!isLogin)}
+                className="text-primary hover:underline"
+              >
+                {isLogin ? 'sign_up' : 'sign_in'}
+              </button>
             </div>
-            <Button type="submit" className="w-full font-mono text-xs border-dashed" disabled={loading || googleLoading}>
-              {loading ? 'auth_init...' : isLogin ? 'sign_in()' : 'sign_up()'}
-            </Button>
-          </form>
 
-          <div className="mt-6 text-left text-xs">
-            <span className="text-muted-foreground">
-              {isLogin ? "// account(does_not_exist) → " : "// account(exists) → "}
-            </span>
-            <button
+            <div className="my-6">
+              <div className="w-full border-t border-dashed" />
+            </div>
+
+            <Button
               type="button"
-              onClick={() => setIsLogin(!isLogin)}
-              className="text-primary hover:underline"
-            >
-              {isLogin ? 'sign_up' : 'sign_in'}
-            </button>
-          </div>
-
-          <div className="my-6">
-            <div className="w-full border-t border-dashed" />
-          </div>
-
-          <Button
-            type="button"
-            variant="outline"
-            className="w-full font-mono text-xs border-dashed gap-2 group"
-            disabled={loading || googleLoading}
-            onClick={async () => {
-              setGoogleLoading(true);
-              const { error } = await signInWithGoogle();
-              if (error) {
-                toast.error(error.message);
-                setGoogleLoading(false);
-              }
-            }}
-          >
-            <GoogleIcon />
-            {googleLoading ? 'auth_redir...' : 'google.sign_in()'}
-          </Button>
-
-          <div className="mt-6 text-left">
-            <button
-              type="button"
-              onClick={() => {
-                if (window.history.length > 1) {
-                  navigate(-1);
-                } else {
-                  navigate('/');
+              variant="outline"
+              className="w-full font-mono text-xs border-dashed gap-2 group"
+              disabled={loading || googleLoading}
+              onClick={async () => {
+                setGoogleLoading(true);
+                const { error } = await signInWithGoogle();
+                if (error) {
+                  toast.error(error.message);
+                  setGoogleLoading(false);
                 }
               }}
-              className="group text-xs"
             >
-              {"← re_wind".split('').map((letter, index, arr) => (
-                <span
-                  key={index}
-                  className="inline-block text-muted-foreground transition-colors duration-150 group-hover:text-syntax-green"
-                  style={{
-                    transitionDelay: `${(arr.length - 1 - index) * 50}ms`,
-                  }}
-                >
-                  {letter === ' ' ? '\u00A0' : letter}
-                </span>
-              ))}
-            </button>
-          </div>
-        </CardContent>
-      </Card>
+              <GoogleIcon />
+              {googleLoading ? 'auth_redir...' : 'google.sign_in()'}
+            </Button>
+          </CardContent>
+        </Card>
+
+        <div className="mt-4 text-left">
+          <button
+            type="button"
+            onClick={() => {
+              if (window.history.length > 1) {
+                navigate(-1);
+              } else {
+                navigate('/');
+              }
+            }}
+            className="group text-xs"
+          >
+            {"← re_wind".split('').map((letter, index, arr) => (
+              <span
+                key={index}
+                className="inline-block text-muted-foreground transition-colors duration-150 group-hover:text-syntax-green"
+                style={{
+                  transitionDelay: `${(arr.length - 1 - index) * 50}ms`,
+                }}
+              >
+                {letter === ' ' ? '\u00A0' : letter}
+              </span>
+            ))}
+          </button>
+        </div>
+      </div>
     </div>
   );
 };
