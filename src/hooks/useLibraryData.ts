@@ -66,7 +66,7 @@ export const useLibraryData = () => {
     if (error) {
       toast.error('Failed to delete reader site');
     } else {
-      toast.success('Reader site removed');
+      toast.success('Reader removed');
       fetchReaderSites();
     }
   };
