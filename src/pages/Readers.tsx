@@ -899,7 +899,7 @@ const Readers = () => {
               </p>
               <button 
                 onClick={() => setShowAddReaderForm(true)}
-                className="text-xs text-muted-foreground mt-2 hover:text-primary transition-colors cursor-pointer"
+                className="text-xs text-muted-foreground mt-2 hover:text-accent transition-colors cursor-pointer"
               >
                 {'>'} new_reader
               </button>
