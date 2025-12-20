@@ -187,9 +187,19 @@ const Auth = () => {
                   navigate('/');
                 }
               }}
-              className="text-xs text-muted-foreground hover:text-primary transition-colors"
+              className="group text-xs"
             >
-              ← re_wind
+              {"← re_wind".split('').map((letter, index, arr) => (
+                <span
+                  key={index}
+                  className="inline-block text-muted-foreground transition-colors duration-150 group-hover:text-primary"
+                  style={{
+                    transitionDelay: `${(arr.length - 1 - index) * 50}ms`,
+                  }}
+                >
+                  {letter === ' ' ? '\u00A0' : letter}
+                </span>
+              ))}
             </button>
           </div>
         </CardContent>
