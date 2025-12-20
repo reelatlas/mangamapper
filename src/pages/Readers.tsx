@@ -895,11 +895,14 @@ const Readers = () => {
             <div className="text-center py-16 border border-dashed">
               <Globe className="w-8 h-8 text-muted-foreground mx-auto mb-3" />
               <p className="text-muted-foreground text-sm">
-                <span className="text-syntax-cyan">// </span>no_reader_found
+                <span className="text-muted-foreground">// </span>no_reader_found
               </p>
-              <p className="text-xs text-muted-foreground mt-2">
+              <button 
+                onClick={() => setShowAddReaderForm(true)}
+                className="text-xs text-muted-foreground mt-2 hover:text-primary transition-colors cursor-pointer"
+              >
                 {'>'} new_reader
-              </p>
+              </button>
             </div>
           )}
         </div>
