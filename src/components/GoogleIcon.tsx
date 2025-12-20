@@ -13,7 +13,7 @@ const GoogleIcon = ({ className }: GoogleIconProps) => (
   >
     {/* Top-right: Darkest → Blue */}
     <path 
-      className="fill-[#374151] group-hover:fill-[#3B82F6] transition-colors duration-200" 
+      className="fill-[#404958] group-hover:fill-[#3B82F6] transition-colors duration-200" 
       d="M789.307 407.484C789.307 374.708 786.647 350.791 780.892 325.988H406.626V473.921H626.311C621.884 510.684 597.966 566.049 544.815 603.252L544.07 608.205L662.406 699.878L670.605 700.696C745.899 631.157 789.307 528.843 789.307 407.484Z" 
     />
     {/* Bottom: Dark → Dark Green */}
@@ -28,7 +28,7 @@ const GoogleIcon = ({ className }: GoogleIconProps) => (
     />
     {/* Top-left: Lightest → Pink */}
     <path 
-      className="fill-[#9CA3AF] group-hover:fill-[#EC4899] transition-colors duration-200" 
+      className="fill-[#8B95A2] group-hover:fill-[#EC4899] transition-colors duration-200" 
       d="M406.626 154.134C481.478 154.134 531.969 186.467 560.76 213.487L673.261 103.643C604.168 39.4198 514.253 0 406.626 0C250.717 0 116.07 89.4687 50.519 219.685L179.408 319.786C211.743 223.673 301.212 154.134 406.626 154.134Z" 
     />
   </svg>
