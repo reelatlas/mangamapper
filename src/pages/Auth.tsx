@@ -98,7 +98,9 @@ const Auth = () => {
         </div>
         <CardContent className="p-6">
           <div className="text-center mb-6">
-            <div className="text-sm text-primary mb-1">{'>'}_</div>
+            <div className="flex justify-center mb-2">
+              <Terminal className="w-6 h-6 text-primary" />
+            </div>
             <div className="text-sm">
               <span className="text-foreground">
                 {isLogin ? 'welcome_back' : 'create_account'}
