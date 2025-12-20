@@ -178,12 +178,19 @@ const Auth = () => {
               </button>
             </div>
 
-            <Link 
-              to="/" 
-              className="inline-block text-xs text-muted-foreground hover:text-primary transition-colors"
+            <button
+              type="button"
+              onClick={() => {
+                if (window.history.length > 1) {
+                  navigate(-1);
+                } else {
+                  navigate('/');
+                }
+              }}
+              className="text-xs text-muted-foreground hover:text-primary transition-colors"
             >
               ← re_wind
-            </Link>
+            </button>
           </div>
         </CardContent>
       </Card>
