@@ -248,12 +248,15 @@ const Library = () => {
               <p className="text-muted-foreground text-sm">
                 <span className="text-muted-foreground">// </span>library_empty
               </p>
-              <Link 
-                to="/"
-                className="text-xs text-muted-foreground mt-2 hover:text-accent transition-colors cursor-pointer inline-block"
-              >
-                {'>'} explore_anime to add to your library
-              </Link>
+              <p className="text-xs text-muted-foreground mt-2">
+                <Link 
+                  to="/"
+                  className="hover:text-accent transition-colors"
+                >
+                  {'>'} explore_anime
+                </Link>
+                {' '}to add to your library
+              </p>
             </div>
           )}
         </div>
