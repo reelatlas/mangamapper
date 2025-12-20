@@ -69,7 +69,6 @@ const Auth = () => {
             toast.error(error.message);
           }
         } else {
-          toast.success('Welcome back!');
           navigate('/');
         }
       } else {
