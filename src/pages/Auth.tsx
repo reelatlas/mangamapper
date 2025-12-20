@@ -135,7 +135,7 @@ const Auth = () => {
               />
             </div>
             <Button type="submit" className="w-full font-mono text-xs border-dashed" disabled={loading}>
-              {loading ? 'processing...' : isLogin ? 'sign_in()' : 'sign_up()'}
+              {loading ? 'authenticating...' : isLogin ? 'sign_in()' : 'sign_up()'}
             </Button>
           </form>
 
