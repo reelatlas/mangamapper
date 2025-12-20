@@ -9,7 +9,7 @@ import { Terminal, Mail, Lock, Eye, EyeClosed } from 'lucide-react';
 import { toast } from 'sonner';
 import { z } from 'zod';
 import { Link } from 'react-router-dom';
-import googleIcon from '@/assets/google_icon.svg';
+import GoogleIcon from '@/components/GoogleIcon';
 
 const authSchema = z.object({
   email: z.string().trim().email({ message: "Invalid email address" }),
@@ -185,7 +185,7 @@ const Auth = () => {
               }
             }}
           >
-            <img src={googleIcon} alt="Google" className="w-4 h-4 grayscale opacity-80 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-200" />
+            <GoogleIcon />
             {googleLoading ? 'redirecting...' : 'google.sign_in()'}
           </Button>
 
