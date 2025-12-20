@@ -97,76 +97,56 @@ const Auth = () => {
           <span className="text-muted-foreground">auth_terminal</span>
         </div>
         <CardContent className="p-6">
-          {/* ASCII Logo */}
           <div className="text-center mb-6">
-            <div className="flex justify-center mb-3">
-              <div className="flex items-center gap-1 text-primary">
-                <Terminal className="w-5 h-5" />
-              </div>
-            </div>
             <div className="text-sm">
-              <span className="text-muted-foreground">// </span>
-              <span className="text-foreground">
+              <span className="text-muted-foreground">{'>'}_</span>
+              <span className="text-foreground ml-1">
                 {isLogin ? 'welcome_back' : 'create_account'}
               </span>
             </div>
             <p className="text-xs text-muted-foreground mt-2">
-              {isLogin 
-                ? '> sign in to track your progress'
-                : '> sign up to start tracking'
-              }
+              // {isLogin ? 'sign_in' : 'sign_up'} to track your progress
             </p>
           </div>
 
           <form onSubmit={handleSubmit} className="space-y-4">
             <div className="space-y-2">
-              <Label htmlFor="email" className="text-xs">
+              <Label htmlFor="email" className="text-xs flex items-center gap-1.5">
+                <Mail className="w-3.5 h-3.5 text-syntax-cyan" />
                 <span className="text-syntax-cyan">email</span>
               </Label>
-              <div className="flex items-center gap-2">
-                <Mail className="w-3.5 h-3.5 text-muted-foreground" />
-                <span className="text-muted-foreground">$</span>
-                <Input
-                  id="email"
-                  type="email"
-                  placeholder="you@example.com"
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
-                  className="font-mono text-sm border-dashed bg-muted/30"
-                  required
-                />
-              </div>
+              <Input
+                id="email"
+                type="email"
+                placeholder="you@example.com"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                className="font-mono text-sm border-dashed bg-muted/30"
+                required
+              />
             </div>
             <div className="space-y-2">
-              <Label htmlFor="password" className="text-xs">
+              <Label htmlFor="password" className="text-xs flex items-center gap-1.5">
+                <Lock className="w-3.5 h-3.5 text-syntax-cyan" />
                 <span className="text-syntax-cyan">password</span>
               </Label>
-              <div className="flex items-center gap-2">
-                <Lock className="w-3.5 h-3.5 text-muted-foreground" />
-                <span className="text-muted-foreground">$</span>
-                <Input
-                  id="password"
-                  type="password"
-                  placeholder="••••••••"
-                  value={password}
-                  onChange={(e) => setPassword(e.target.value)}
-                  className="font-mono text-sm border-dashed bg-muted/30"
-                  required
-                />
-              </div>
+              <Input
+                id="password"
+                type="password"
+                placeholder="••••••••"
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
+                className="font-mono text-sm border-dashed bg-muted/30"
+                required
+              />
             </div>
             <Button type="submit" className="w-full font-mono text-xs border-dashed" disabled={loading}>
-              {'>'} {loading ? 'processing...' : isLogin ? 'sign_in()' : 'sign_up()'}
+              {loading ? 'processing...' : isLogin ? 'sign_in()' : 'sign_up()'}
             </Button>
           </form>
 
-          <div className="relative my-6">
-            <div className="absolute inset-0 flex items-center">
-              <span className="w-full border-t border-dashed" />
-            </div>
-            <div className="relative flex justify-center text-xs">
-              <span className="bg-card px-2 text-muted-foreground">// or</span>
-            </div>
+          <div className="my-6">
+            <div className="w-full border-t border-dashed" />
           </div>
 
           <div className="text-center space-y-3">
@@ -178,7 +158,7 @@ const Auth = () => {
             
             <div className="text-xs">
               <span className="text-muted-foreground">
-                {isLogin ? "// no account? " : "// have account? "}
+                {isLogin ? "// account(does_not_exist) → " : "// account(exists) → "}
               </span>
               <button
                 type="button"
@@ -189,12 +169,29 @@ const Auth = () => {
               </button>
             </div>
 
-            <Link 
-              to="/" 
-              className="inline-block text-xs text-muted-foreground hover:text-primary transition-colors"
+            <button
+              type="button"
+              onClick={() => {
+                if (window.history.length > 1) {
+                  navigate(-1);
+                } else {
+                  navigate('/');
+                }
+              }}
+              className="group text-xs"
             >
-              {'<'}- back_to_home
-            </Link>
+              {"← re_wind".split('').map((letter, index, arr) => (
+                <span
+                  key={index}
+                  className="inline-block text-muted-foreground transition-colors duration-150 group-hover:text-syntax-green"
+                  style={{
+                    transitionDelay: `${(arr.length - 1 - index) * 50}ms`,
+                  }}
+                >
+                  {letter === ' ' ? '\u00A0' : letter}
+                </span>
+              ))}
+            </button>
           </div>
         </CardContent>
       </Card>

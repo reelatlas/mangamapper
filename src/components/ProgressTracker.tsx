@@ -162,13 +162,12 @@ export const ProgressTracker = ({ anime }: ProgressTrackerProps) => {
           <span className="text-muted-foreground">// user_progress</span>
         </div>
         <CardContent className="py-6">
-          <div className="text-center font-mono">
+          <div className="font-mono">
             <p className="text-muted-foreground text-sm mb-4">
-              {'>'} authentication_required
+              !auth_required
             </p>
             <Button asChild className="border-dashed">
-              <Link to="/auth" className="gap-2 text-xs">
-                <LogIn className="w-3.5 h-3.5" />
+              <Link to="/auth" className="text-xs">
                 {'>'} sign_in
               </Link>
             </Button>
