@@ -28,7 +28,7 @@ const GoogleIcon = ({ className }: GoogleIconProps) => (
     />
     {/* Top-left: Lightest → Red-Pink */}
     <path 
-      className="fill-[#8B95A2] group-hover:fill-[#E11D48] transition-colors duration-200" 
+      className="fill-[#8B95A2] group-hover:fill-[#F43F5E] transition-colors duration-200" 
       d="M406.626 154.134C481.478 154.134 531.969 186.467 560.76 213.487L673.261 103.643C604.168 39.4198 514.253 0 406.626 0C250.717 0 116.07 89.4687 50.519 219.685L179.408 319.786C211.743 223.673 301.212 154.134 406.626 154.134Z" 
     />
   </svg>
