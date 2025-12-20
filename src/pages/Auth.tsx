@@ -23,7 +23,8 @@ const Auth = () => {
   const [email, setEmail] = useState(TEST_EMAIL);
   const [password, setPassword] = useState(TEST_PASSWORD);
   const [loading, setLoading] = useState(false);
-  const { signIn, signUp, user } = useAuth();
+  const [googleLoading, setGoogleLoading] = useState(false);
+  const { signIn, signUp, signInWithGoogle, user } = useAuth();
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -134,10 +135,34 @@ const Auth = () => {
                 required
               />
             </div>
-            <Button type="submit" className="w-full font-mono text-xs border-dashed" disabled={loading}>
+            <Button type="submit" className="w-full font-mono text-xs border-dashed" disabled={loading || googleLoading}>
               {loading ? 'auth_init...' : isLogin ? 'sign_in()' : 'sign_up()'}
             </Button>
           </form>
+
+          <div className="my-6 flex items-center gap-3">
+            <div className="flex-1 border-t border-dashed" />
+            <span className="text-xs text-muted-foreground">// or</span>
+            <div className="flex-1 border-t border-dashed" />
+          </div>
+
+          <Button
+            type="button"
+            variant="outline"
+            className="w-full font-mono text-xs border-dashed"
+            disabled={loading || googleLoading}
+            onClick={async () => {
+              setGoogleLoading(true);
+              const { error } = await signInWithGoogle();
+              if (error) {
+                toast.error(error.message);
+                setGoogleLoading(false);
+              }
+              // Don't setGoogleLoading(false) on success - redirect will happen
+            }}
+          >
+            {googleLoading ? 'redirecting...' : 'sign_in_with_google()'}
+          </Button>
 
           <div className="my-6">
             <div className="w-full border-t border-dashed" />
