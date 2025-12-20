@@ -107,7 +107,7 @@ const Auth = () => {
               </span>
             </div>
             <p className="text-xs text-muted-foreground mt-2">
-              // {isLogin ? 'sign_in' : 'sign_up'} to track your progress
+              // {isLogin ? 'sign_in to view progress' : 'sign_up to start tracking'}
             </p>
           </div>
 
