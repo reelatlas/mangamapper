@@ -232,48 +232,48 @@
     pointer-events: none;
     z-index: 10;
   }
-  /* Google icon color cycling animations */
+  /* Google icon color cycling animations - clockwise rotation */
   @keyframes color-cycle-1 {
     0%, 100% { fill: #6FDAEA; }
-    25% { fill: #74DB85; }
+    25% { fill: #D55B53; }
     50% { fill: #DCAB55; }
-    75% { fill: #D55B53; }
+    75% { fill: #74DB85; }
   }
 
   @keyframes color-cycle-2 {
     0%, 100% { fill: #74DB85; }
-    25% { fill: #DCAB55; }
+    25% { fill: #6FDAEA; }
     50% { fill: #D55B53; }
-    75% { fill: #6FDAEA; }
+    75% { fill: #DCAB55; }
   }
 
   @keyframes color-cycle-3 {
     0%, 100% { fill: #DCAB55; }
-    25% { fill: #D55B53; }
+    25% { fill: #74DB85; }
     50% { fill: #6FDAEA; }
-    75% { fill: #74DB85; }
+    75% { fill: #D55B53; }
   }
 
   @keyframes color-cycle-4 {
     0%, 100% { fill: #D55B53; }
-    25% { fill: #6FDAEA; }
+    25% { fill: #DCAB55; }
     50% { fill: #74DB85; }
-    75% { fill: #DCAB55; }
+    75% { fill: #6FDAEA; }
   }
 
   .animate-color-cycle-1 {
-    animation: color-cycle-1 2s ease-in-out infinite;
+    animation: color-cycle-1 1.2s linear infinite;
   }
 
   .animate-color-cycle-2 {
-    animation: color-cycle-2 2s ease-in-out infinite;
+    animation: color-cycle-2 1.2s linear infinite;
   }
 
   .animate-color-cycle-3 {
-    animation: color-cycle-3 2s ease-in-out infinite;
+    animation: color-cycle-3 1.2s linear infinite;
   }
 
   .animate-color-cycle-4 {
-    animation: color-cycle-4 2s ease-in-out infinite;
+    animation: color-cycle-4 1.2s linear infinite;
   }
 }
