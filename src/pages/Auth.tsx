@@ -186,7 +186,7 @@ const Auth = () => {
             }}
           >
             <GoogleIcon />
-            {googleLoading ? 'redirecting...' : 'google.sign_in()'}
+            {googleLoading ? 'auth_redir...' : 'google.sign_in()'}
           </Button>
 
           <div className="mt-6 text-left">
