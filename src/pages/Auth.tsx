@@ -99,6 +99,11 @@ const Auth = () => {
         <CardContent className="p-6">
           {/* ASCII Logo */}
           <div className="text-center mb-6">
+            <div className="flex justify-center mb-3">
+              <div className="flex items-center gap-1 text-primary">
+                <Terminal className="w-5 h-5" />
+              </div>
+            </div>
             <div className="text-sm">
               <span className="text-muted-foreground">// </span>
               <span className="text-foreground">
