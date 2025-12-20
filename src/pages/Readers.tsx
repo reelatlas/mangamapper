@@ -893,7 +893,10 @@ const Readers = () => {
             </>
           ) : (
             <div className="text-center py-16 border border-dashed">
-              <EyeClosed className="w-8 h-8 text-muted-foreground mx-auto mb-3" />
+              <div className="flex items-center justify-center gap-1 mb-3">
+                <EyeClosed className="w-6 h-6 text-muted-foreground" />
+                <EyeClosed className="w-6 h-6 text-muted-foreground" />
+              </div>
               <p className="text-muted-foreground text-sm">
                 <span className="text-muted-foreground">// </span>no_reader_found
               </p>
