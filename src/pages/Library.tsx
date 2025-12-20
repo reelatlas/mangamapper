@@ -5,7 +5,7 @@ import { useLibraryData } from '@/hooks/useLibraryData';
 import { getAnimeById } from '@/data/mockAnime';
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
-import { Library as LibraryIcon, BookOpen, Tv, Trash2, ExternalLink, Link2, ArrowUpDown, X, Check, BookDashed } from 'lucide-react';
+import { Library as LibraryIcon, BookOpen, BookOpenText, Tv, Trash2, ExternalLink, Link2, ArrowUpDown, X, Check, BookDashed } from 'lucide-react';
 import { ToggleGroup, ToggleGroupItem } from '@/components/ui/toggle-group';
 import type { SortOption } from '@/types/library';
 import { getReadersForAnime } from '@/types/library';
@@ -246,7 +246,7 @@ const Library = () => {
             <div className="text-center py-16 border border-dashed">
               <div className="group cursor-default mx-auto mb-3 w-fit">
                 <BookDashed className="w-8 h-8 text-muted-foreground group-hover:hidden" />
-                <BookOpen className="w-8 h-8 text-muted-foreground hidden group-hover:block" />
+                <BookOpenText className="w-8 h-8 text-muted-foreground hidden group-hover:block" />
               </div>
               <p className="text-muted-foreground text-sm">
                 <span className="text-muted-foreground">// </span>library_empty
