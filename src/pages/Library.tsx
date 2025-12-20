@@ -244,13 +244,16 @@ const Library = () => {
             </div>
           ) : (
             <div className="text-center py-16 border border-dashed">
-              <Tv className="w-8 h-8 text-muted-foreground mx-auto mb-3" />
+              <LibraryIcon className="w-8 h-8 text-muted-foreground mx-auto mb-3" />
               <p className="text-muted-foreground text-sm">
-                <span className="text-syntax-cyan">// </span>no progress tracked
+                <span className="text-muted-foreground">// </span>library_empty
               </p>
-              <p className="text-xs text-muted-foreground mt-1">
-                {'>'} visit an anime page to start
-              </p>
+              <Link 
+                to="/"
+                className="text-xs text-muted-foreground mt-2 hover:text-accent transition-colors cursor-pointer inline-block"
+              >
+                {'>'} explore_anime to add to your library
+              </Link>
             </div>
           )}
         </div>
