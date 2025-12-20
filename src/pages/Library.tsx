@@ -123,7 +123,7 @@ const Library = () => {
                             className="w-14 min-h-[5rem] object-cover opacity-90 shrink-0"
                           />
                           <div className="flex-1 min-w-0 overflow-hidden">
-                            <span className="text-sm text-syntax-green truncate block">
+                            <span className="text-sm text-syntax-green line-clamp-2">
                               {anime.title}
                             </span>
                             <div className="flex flex-col gap-1.5 mt-2 text-xs">
@@ -182,7 +182,7 @@ const Library = () => {
                                       ))}
                                     </div>
                                   ) : (
-                                    <div className="flex items-center gap-1.5 text-muted-foreground min-h-5">
+                                    <div className="flex items-center gap-1.5 text-muted-foreground min-h-5 flex-wrap">
                                       <Link2 className="w-3.5 h-3.5 shrink-0 text-muted-foreground" />
                                       <span>no_reader_link</span>
                                     </div>
