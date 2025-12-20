@@ -13,7 +13,7 @@ import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
-import { Globe, Plus, Trash2, ExternalLink, Link2, Pencil, X, Check, ArrowUpDown, Glasses, BookOpen, BookOpenText, BookOpenCheck, Scroll, ScrollText, Bookmark, BookmarkPlus, BookmarkCheck, BookMarked, BookText, BookHeart, BookImage, Eye, ScanEye } from 'lucide-react';
+import { Plus, Trash2, ExternalLink, Link2, Pencil, X, Check, ArrowUpDown, Glasses } from 'lucide-react';
 import { mockAnimeData } from '@/data/mockAnime';
 import { SeriesCombobox } from '@/components/SeriesCombobox';
 import { toast } from 'sonner';
@@ -437,76 +437,9 @@ const Readers = () => {
       
       <main className="container py-8">
         <div className="flex items-center gap-2 mb-6 text-sm">
-          <Globe className="w-4 h-4 text-primary" />
+          <Glasses className="w-4 h-4 text-primary" />
           <span className="text-muted-foreground">{'>'}</span>
           <span className="text-syntax-cyan">my_readers</span>
-        </div>
-
-        {/* Temporary icon preview - pick your favorite */}
-        <div className="border border-dashed p-4 mb-6">
-          <p className="text-xs text-muted-foreground mb-4">// icon_preview - pick your favorite for reader representation</p>
-          <div className="flex justify-center gap-6 flex-wrap">
-            <div className="flex flex-col items-center gap-2">
-              <Glasses className="w-8 h-8 text-muted-foreground" />
-              <span className="text-xs text-muted-foreground">Glasses</span>
-            </div>
-            <div className="flex flex-col items-center gap-2">
-              <BookOpen className="w-8 h-8 text-muted-foreground" />
-              <span className="text-xs text-muted-foreground">BookOpen</span>
-            </div>
-            <div className="flex flex-col items-center gap-2">
-              <BookOpenText className="w-8 h-8 text-muted-foreground" />
-              <span className="text-xs text-muted-foreground">BookOpenText</span>
-            </div>
-            <div className="flex flex-col items-center gap-2">
-              <BookOpenCheck className="w-8 h-8 text-muted-foreground" />
-              <span className="text-xs text-muted-foreground">BookOpenCheck</span>
-            </div>
-            <div className="flex flex-col items-center gap-2">
-              <Scroll className="w-8 h-8 text-muted-foreground" />
-              <span className="text-xs text-muted-foreground">Scroll</span>
-            </div>
-            <div className="flex flex-col items-center gap-2">
-              <ScrollText className="w-8 h-8 text-muted-foreground" />
-              <span className="text-xs text-muted-foreground">ScrollText</span>
-            </div>
-            <div className="flex flex-col items-center gap-2">
-              <Bookmark className="w-8 h-8 text-muted-foreground" />
-              <span className="text-xs text-muted-foreground">Bookmark</span>
-            </div>
-            <div className="flex flex-col items-center gap-2">
-              <BookmarkPlus className="w-8 h-8 text-muted-foreground" />
-              <span className="text-xs text-muted-foreground">BookmarkPlus</span>
-            </div>
-            <div className="flex flex-col items-center gap-2">
-              <BookmarkCheck className="w-8 h-8 text-muted-foreground" />
-              <span className="text-xs text-muted-foreground">BookmarkCheck</span>
-            </div>
-            <div className="flex flex-col items-center gap-2">
-              <BookMarked className="w-8 h-8 text-muted-foreground" />
-              <span className="text-xs text-muted-foreground">BookMarked</span>
-            </div>
-            <div className="flex flex-col items-center gap-2">
-              <BookText className="w-8 h-8 text-muted-foreground" />
-              <span className="text-xs text-muted-foreground">BookText</span>
-            </div>
-            <div className="flex flex-col items-center gap-2">
-              <BookHeart className="w-8 h-8 text-muted-foreground" />
-              <span className="text-xs text-muted-foreground">BookHeart</span>
-            </div>
-            <div className="flex flex-col items-center gap-2">
-              <BookImage className="w-8 h-8 text-muted-foreground" />
-              <span className="text-xs text-muted-foreground">BookImage</span>
-            </div>
-            <div className="flex flex-col items-center gap-2">
-              <Eye className="w-8 h-8 text-muted-foreground" />
-              <span className="text-xs text-muted-foreground">Eye</span>
-            </div>
-            <div className="flex flex-col items-center gap-2">
-              <ScanEye className="w-8 h-8 text-muted-foreground" />
-              <span className="text-xs text-muted-foreground">ScanEye</span>
-            </div>
-          </div>
         </div>
 
         <div className="space-y-6">
@@ -960,7 +893,7 @@ const Readers = () => {
             </>
           ) : (
             <div className="text-center py-16 border border-dashed">
-              <Globe className="w-8 h-8 text-muted-foreground mx-auto mb-3" />
+              <Glasses className="w-8 h-8 text-muted-foreground mx-auto mb-3" />
               <p className="text-muted-foreground text-sm">
                 <span className="text-muted-foreground">// </span>no_reader_found
               </p>
