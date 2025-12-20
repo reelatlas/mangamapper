@@ -28,10 +28,15 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
         setUser(session?.user ?? null);
         setLoading(false);
         
+        // Only show toast for OAuth sign-ins (email/password handled in signIn function)
         if (event === 'SIGNED_IN') {
-          setTimeout(() => {
-            toast.success('Welcome back!');
-          }, 0);
+          const pendingOAuth = sessionStorage.getItem('pending_oauth_signin');
+          if (pendingOAuth) {
+            sessionStorage.removeItem('pending_oauth_signin');
+            setTimeout(() => {
+              toast.success('Welcome back!');
+            }, 0);
+          }
         }
       }
     );
@@ -63,10 +68,14 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
       email,
       password,
     });
+    if (!error) {
+      toast.success('Welcome back!');
+    }
     return { error: error as Error | null };
   };
 
   const signInWithGoogle = async () => {
+    sessionStorage.setItem('pending_oauth_signin', 'true');
     const redirectUrl = `${window.location.origin}/`;
     const { error } = await supabase.auth.signInWithOAuth({
       provider: 'google',
