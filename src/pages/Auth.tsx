@@ -112,8 +112,8 @@ const Auth = () => {
             </div>
             <p className="text-xs text-muted-foreground mt-2">
               {isLogin 
-                ? '> sign in to track your progress'
-                : '> sign up to start tracking'
+                ? '> sign_in to track your progress'
+                : '> sign_up to start tracking'
               }
             </p>
           </div>
@@ -150,7 +150,7 @@ const Auth = () => {
               />
             </div>
             <Button type="submit" className="w-full font-mono text-xs border-dashed" disabled={loading}>
-              {'>'} {loading ? 'processing...' : isLogin ? 'sign_in()' : 'sign_up()'}
+              {loading ? 'processing...' : isLogin ? 'sign_in()' : 'sign_up()'}
             </Button>
           </form>
 
@@ -167,7 +167,7 @@ const Auth = () => {
             
             <div className="text-xs">
               <span className="text-muted-foreground">
-                {isLogin ? "// no account? " : "// have account? "}
+                {isLogin ? "// account(not_found) → " : "// account(found) → "}
               </span>
               <button
                 type="button"
