@@ -167,7 +167,7 @@ const Auth = () => {
             
             <div className="text-xs">
               <span className="text-muted-foreground">
-                {isLogin ? "// account(not_found) → " : "// account(found) → "}
+                {isLogin ? "// account(does_not_exist) → " : "// account(exists) → "}
               </span>
               <button
                 type="button"
@@ -192,7 +192,7 @@ const Auth = () => {
               {"← re_wind".split('').map((letter, index, arr) => (
                 <span
                   key={index}
-                  className="inline-block text-muted-foreground transition-colors duration-150 group-hover:text-primary"
+                  className="inline-block text-muted-foreground transition-colors duration-150 group-hover:text-syntax-green"
                   style={{
                     transitionDelay: `${(arr.length - 1 - index) * 50}ms`,
                   }}
