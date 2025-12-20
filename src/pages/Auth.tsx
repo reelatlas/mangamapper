@@ -193,7 +193,7 @@ const Auth = () => {
             {googleLoading ? 'redirecting...' : 'google.sign_in()'}
           </Button>
 
-          <div className="mt-6 text-center">
+          <div className="mt-6 text-left">
             <button
               type="button"
               onClick={() => {
