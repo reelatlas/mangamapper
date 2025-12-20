@@ -153,10 +153,21 @@ const Auth = () => {
             </Button>
           </form>
 
-          <div className="my-6 flex items-center gap-3">
-            <div className="flex-1 border-t border-dashed" />
-            <span className="text-xs text-muted-foreground">// or</span>
-            <div className="flex-1 border-t border-dashed" />
+          <div className="mt-4 text-center text-xs">
+            <span className="text-muted-foreground">
+              {isLogin ? "// account(does_not_exist) → " : "// account(exists) → "}
+            </span>
+            <button
+              type="button"
+              onClick={() => setIsLogin(!isLogin)}
+              className="text-primary hover:underline"
+            >
+              {isLogin ? 'sign_up' : 'sign_in'}
+            </button>
+          </div>
+
+          <div className="my-6">
+            <div className="w-full border-t border-dashed" />
           </div>
 
           <Button
@@ -171,7 +182,6 @@ const Auth = () => {
                 toast.error(error.message);
                 setGoogleLoading(false);
               }
-              // Don't setGoogleLoading(false) on success - redirect will happen
             }}
           >
             <svg className="w-4 h-4" viewBox="0 0 24 24" fill="currentColor">
@@ -183,24 +193,7 @@ const Auth = () => {
             {googleLoading ? 'redirecting...' : 'google.sign_in()'}
           </Button>
 
-          <div className="my-6">
-            <div className="w-full border-t border-dashed" />
-          </div>
-
-          <div className="text-center space-y-3">
-            <div className="text-xs">
-              <span className="text-muted-foreground">
-                {isLogin ? "// account(does_not_exist) → " : "// account(exists) → "}
-              </span>
-              <button
-                type="button"
-                onClick={() => setIsLogin(!isLogin)}
-                className="text-primary hover:underline"
-              >
-                {isLogin ? 'sign_up' : 'sign_in'}
-              </button>
-            </div>
-
+          <div className="mt-6 text-center">
             <button
               type="button"
               onClick={() => {
