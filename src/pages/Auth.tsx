@@ -182,7 +182,7 @@ const Auth = () => {
               to="/" 
               className="inline-block text-xs text-muted-foreground hover:text-primary transition-colors"
             >
-              {'<'}- back_to_home
+              ← re_wind
             </Link>
           </div>
         </CardContent>
