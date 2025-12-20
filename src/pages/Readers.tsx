@@ -13,7 +13,7 @@ import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
-import { Plus, Trash2, ExternalLink, Link2, Pencil, X, Check, ArrowUpDown, Glasses, EyeClosed } from 'lucide-react';
+import { Plus, Trash2, ExternalLink, Link2, Pencil, X, Check, ArrowUpDown, Glasses, EyeClosed, Eye } from 'lucide-react';
 import { mockAnimeData } from '@/data/mockAnime';
 import { SeriesCombobox } from '@/components/SeriesCombobox';
 import { toast } from 'sonner';
@@ -893,9 +893,11 @@ const Readers = () => {
             </>
           ) : (
             <div className="text-center py-16 border border-dashed">
-              <div className="flex items-center justify-center gap-1 mb-3">
-                <EyeClosed className="w-6 h-6 text-muted-foreground" />
-                <EyeClosed className="w-6 h-6 text-muted-foreground" />
+              <div className="group flex items-center justify-center gap-1 mb-3 cursor-default">
+                <EyeClosed className="w-6 h-6 text-muted-foreground group-hover:hidden" />
+                <EyeClosed className="w-6 h-6 text-muted-foreground group-hover:hidden" />
+                <Eye className="w-6 h-6 text-muted-foreground hidden group-hover:block" />
+                <Eye className="w-6 h-6 text-muted-foreground hidden group-hover:block" />
               </div>
               <p className="text-muted-foreground text-sm">
                 <span className="text-muted-foreground">// </span>no_reader_found
