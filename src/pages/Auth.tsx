@@ -100,7 +100,7 @@ const Auth = () => {
         <CardContent className="p-6">
           <div className="mb-6">
             <p className="text-xs text-muted-foreground">
-              // {isLogin ? 'view progress' : 'create account to start tracking'}
+              {isLogin ? '// sign in to view progress' : '// create account to start tracking'}
             </p>
           </div>
 
