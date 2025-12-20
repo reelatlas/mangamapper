@@ -98,9 +98,9 @@ const Auth = () => {
         </div>
         <CardContent className="p-6">
           <div className="text-center mb-6">
+            <div className="text-sm text-primary mb-1">{'>'}_</div>
             <div className="text-sm">
-              <span className="text-muted-foreground">{'>'}_</span>
-              <span className="text-foreground ml-1">
+              <span className="text-foreground">
                 {isLogin ? 'welcome_back' : 'create_account'}
               </span>
             </div>
