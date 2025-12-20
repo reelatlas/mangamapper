@@ -153,7 +153,7 @@ const Auth = () => {
             </Button>
           </form>
 
-          <div className="mt-4 text-center text-xs">
+          <div className="mt-6 text-left text-xs">
             <span className="text-muted-foreground">
               {isLogin ? "// account(does_not_exist) → " : "// account(exists) → "}
             </span>
