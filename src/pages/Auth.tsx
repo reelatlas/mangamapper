@@ -174,7 +174,7 @@ const Auth = () => {
           <Button
             type="button"
             variant="outline"
-            className="w-full font-mono text-xs border-dashed gap-2"
+            className="w-full font-mono text-xs border-dashed gap-2 group"
             disabled={loading || googleLoading}
             onClick={async () => {
               setGoogleLoading(true);
@@ -185,7 +185,7 @@ const Auth = () => {
               }
             }}
           >
-            <img src={googleIcon} alt="Google" className="w-4 h-4" />
+            <img src={googleIcon} alt="Google" className="w-4 h-4 opacity-80 group-hover:opacity-100 transition-opacity" />
             {googleLoading ? 'redirecting...' : 'google.sign_in()'}
           </Button>
 
