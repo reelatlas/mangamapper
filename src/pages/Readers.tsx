@@ -712,7 +712,7 @@ const Readers = () => {
                                           </Button>
                                         ) : (
                                           <span className="text-xs text-muted-foreground">
-                                            series_url<span className="text-destructive/70">(not_defined)</span>
+                                            series_url(unset)
                                           </span>
                                         )}
                                       </div>
