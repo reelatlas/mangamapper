@@ -265,7 +265,9 @@ const Readers = () => {
     setEditSiteName(group.name);
     setEditSiteUrl(group.url);
     setEditSiteNotes(group.notes || '');
-    const seriesEntries = group.entries.filter(e => e.anime_id);
+    const seriesEntries = group.entries
+      .filter(e => e.anime_id)
+      .sort((a, b) => new Date(a.created_at).getTime() - new Date(b.created_at).getTime());
     if (seriesEntries.length > 0) {
       setEditSeriesAssignments(seriesEntries.map(e => ({
         animeId: e.anime_id || '',
@@ -555,7 +557,7 @@ const Readers = () => {
               </div>
               <div className="grid gap-3">
                 {sortedReaderGroups.map(group => {
-              const seriesEntries = group.entries.filter(e => e.anime_id);
+              const seriesEntries = group.entries.filter(e => e.anime_id).sort((a, b) => new Date(a.created_at).getTime() - new Date(b.created_at).getTime());
               const isEditing = editingReaderName === group.name.toLowerCase();
 
               // Edit mode

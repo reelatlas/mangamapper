@@ -17,6 +17,7 @@ export interface ReaderSite {
   notes: string | null;
   anime_id: string | null;
   series_url: string | null;
+  created_at: string;
   updated_at: string;
 }
 
