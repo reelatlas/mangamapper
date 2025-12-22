@@ -223,26 +223,25 @@ export const ProgressTracker = ({ anime }: ProgressTrackerProps) => {
                 setReadChapter(originalValues.readChapter);
               };
               
-              return (
+              return hasChanges ? (
                 <div className="flex items-center gap-2">
                   <Button 
                     onClick={saveProgress} 
-                    disabled={saving || !hasChanges}
+                    disabled={saving}
                     size="sm"
-                    className={`font-mono text-xs h-7 ${!hasChanges ? 'bg-transparent text-muted-foreground hover:bg-transparent border border-dashed border-border' : 'border-dashed'}`}
+                    className="font-mono text-xs h-7 border-dashed"
                   >
                     {'✓'} {saving ? 'saving...' : 'save_progress()'}
                   </Button>
                   <Button
                     onClick={resetChanges}
-                    disabled={!hasChanges}
                     size="sm"
-                    className={`h-7 w-7 p-0 ${!hasChanges ? 'bg-transparent text-muted-foreground hover:bg-transparent border border-dashed border-border' : 'border-dashed'}`}
+                    className="h-7 w-7 p-0 border-dashed"
                   >
                     <RotateCcw className="w-3.5 h-3.5" />
                   </Button>
                 </div>
-              );
+              ) : null;
             })()}
           </div>
           {progress?.updated_at && (
