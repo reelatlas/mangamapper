@@ -28,7 +28,7 @@ export const useLibraryData = () => {
     const { data, error } = await supabase
       .from('manga_reader_sites')
       .select('*')
-      .order('updated_at', { ascending: false });
+      .order('created_at', { ascending: true });
     
     if (error) {
       console.error('Error fetching reader sites:', error);
