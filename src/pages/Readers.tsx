@@ -31,6 +31,15 @@ const formatTimestamp = (timestamp: string) => {
   const hour12 = hours % 12 || 12;
   return `${month} ${day} ${year} ${hour12}:${minutes}${ampm}`;
 };
+
+const normalizeUrl = (url: string): string => {
+  return url.trim().replace(/\/+$/, '');
+};
+
+const isSeriesUrlDefined = (readerUrl: string, seriesUrl: string | null): boolean => {
+  if (!seriesUrl) return false;
+  return normalizeUrl(seriesUrl) !== normalizeUrl(readerUrl);
+};
 const Readers = () => {
   const navigate = useNavigate();
   const location = useLocation();
@@ -687,18 +696,25 @@ const Readers = () => {
                                 {seriesEntries.map(entry => {
                           const assignedAnime = mockAnimeData.find(a => a.id === entry.anime_id);
                           if (!assignedAnime) return null;
+                          const hasDefinedSeriesUrl = isSeriesUrlDefined(group.url, entry.series_url);
                           return <div key={entry.id} className="flex items-center justify-between gap-2">
                                       <div className="flex items-center gap-1.5 min-w-0 overflow-hidden">
                                         <Link2 className="w-3 h-3 text-primary flex-shrink-0" />
                                         <Link to={`/anime/${assignedAnime.id}`} className="text-syntax-green text-xs hover:underline hover:text-primary transition-colors break-all">{assignedAnime.title}</Link>
                                       </div>
                                       <div className="flex items-center gap-1">
-                                        {entry.series_url && <Button variant="outline" size="sm" asChild className="border-dashed text-xs h-6 px-2">
-                                            <a href={entry.series_url} target="_blank" rel="noopener noreferrer" className="gap-1">
+                                        {hasDefinedSeriesUrl ? (
+                                          <Button variant="outline" size="sm" asChild className="border-dashed text-xs h-6 px-2">
+                                            <a href={entry.series_url!} target="_blank" rel="noopener noreferrer" className="gap-1">
                                               <ExternalLink className="w-3 h-3" />
                                               read
                                             </a>
-                                          </Button>}
+                                          </Button>
+                                        ) : (
+                                          <span className="text-xs text-muted-foreground">
+                                            series_url<span className="text-destructive/70">(not_defined)</span>
+                                          </span>
+                                        )}
                                       </div>
                                     </div>;
                         })}
