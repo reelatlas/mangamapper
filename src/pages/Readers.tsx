@@ -241,7 +241,7 @@ const Readers = () => {
         return;
       }
     }
-    toast.success('Reader site added');
+    toast.success('Reader added');
     setNewSiteName('');
     setNewSiteUrl('');
     setNewSiteNotes('');
@@ -425,7 +425,7 @@ const Readers = () => {
     if (idsToDelete.length > 0) {
       await supabase.from('manga_reader_sites').delete().in('id', idsToDelete);
     }
-    toast.success('Reader site updated');
+    toast.success('Reader updated');
     cancelEditingReader();
     fetchReaderSites();
   };
