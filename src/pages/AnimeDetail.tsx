@@ -4,6 +4,7 @@ import { Header } from '@/components/Header';
 import { MangaMappingDisplay } from '@/components/MangaMappingDisplay';
 import { EpisodeBadge } from '@/components/EpisodeBadge';
 import { ProgressTracker } from '@/components/ProgressTracker';
+import { LibrarySection } from '@/components/LibrarySection';
 import { AddToReaderDropdown } from '@/components/AddToReaderDropdown';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
@@ -170,6 +171,11 @@ const AnimeDetail = () => {
               </Card>
             </div>
           </div>
+        </div>
+
+        {/* Library section */}
+        <div className="mb-6">
+          <LibrarySection animeId={anime.id} />
         </div>
 
         {/* Progress tracker */}
