@@ -712,7 +712,7 @@ const Readers = () => {
                                           </Button>
                                         ) : (
                                           <span className="text-xs text-muted-foreground">
-                                            series_url(unset)
+                                            series_url(null)
                                           </span>
                                         )}
                                       </div>
