@@ -9,17 +9,18 @@ import { supabase } from '@/integrations/supabase/client';
 import { toast } from 'sonner';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { InlineNewReaderForm } from './InlineNewReaderForm';
-import type { ReaderSite } from '@/types/library';
+import type { ReaderSite, AnimeProgress } from '@/types/library';
 
 interface NewSeriesFormProps {
   userId: string;
   readerSites: ReaderSite[];
+  progress: AnimeProgress[];
   onSuccess: () => void;
   onCancel: () => void;
   preSelectAnimeId?: string;
 }
 
-export const NewSeriesForm = ({ userId, readerSites, onSuccess, onCancel, preSelectAnimeId }: NewSeriesFormProps) => {
+export const NewSeriesForm = ({ userId, readerSites, progress, onSuccess, onCancel, preSelectAnimeId }: NewSeriesFormProps) => {
   const [animeId, setAnimeId] = useState(preSelectAnimeId || '');
   const [selectedReaderName, setSelectedReaderName] = useState('');
   const [seriesUrl, setSeriesUrl] = useState('');
@@ -118,6 +119,7 @@ export const NewSeriesForm = ({ userId, readerSites, onSuccess, onCancel, preSel
             <SeriesCombobox
               value={animeId}
               onValueChange={setAnimeId}
+              excludeIds={progress.map(p => p.anime_id)}
               placeholder="search series..."
             />
           </div>
