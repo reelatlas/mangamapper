@@ -196,6 +196,15 @@ export const LibraryGroupedView = ({ userId, readerSites, progress, fetchReaderS
     if (seriesChanged && idsToKeep.length > 0) {
       await supabase.from('manga_reader_sites').update({ updated_at: new Date().toISOString() }).in('id', idsToKeep);
     }
+    // Ensure each assigned series appears in library
+    for (const assignment of validAssignments) {
+      if (assignment.animeId) {
+        await supabase.from('anime_progress').upsert(
+          { user_id: userId, anime_id: assignment.animeId, in_library: true, updated_at: new Date().toISOString() },
+          { onConflict: 'user_id,anime_id' }
+        );
+      }
+    }
     toast.success('Reader updated');
     cancelEditingReader();
     fetchReaderSites();
