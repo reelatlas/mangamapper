@@ -85,6 +85,11 @@ export const AddToReaderDropdown = ({ animeId, onSuccess, linkedReaderNames = []
         variant: "destructive"
       });
     } else {
+      // Ensure the series appears in library
+      await supabase.from('anime_progress').upsert(
+        { user_id: user.id, anime_id: animeId, in_library: true, updated_at: new Date().toISOString() },
+        { onConflict: 'user_id,anime_id' }
+      );
       toast({
         title: "Success",
         description: `Added to ${selectedReader.name}`

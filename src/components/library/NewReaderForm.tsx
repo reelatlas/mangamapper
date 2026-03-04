@@ -97,6 +97,13 @@ export const NewReaderForm = ({ userId, readerSites, onSuccess, onCancel, preSel
       }));
       const { error } = await supabase.from('manga_reader_sites').insert(inserts);
       if (error) { toast.error('Failed to add reader site'); return; }
+      // Ensure each assigned series appears in library
+      for (const assignment of validAssignments) {
+        await supabase.from('anime_progress').upsert(
+          { user_id: userId, anime_id: assignment.animeId, in_library: true, updated_at: new Date().toISOString() },
+          { onConflict: 'user_id,anime_id' }
+        );
+      }
     }
     toast.success('Reader added');
     onSuccess();
