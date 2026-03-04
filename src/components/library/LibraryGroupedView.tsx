@@ -188,8 +188,13 @@ export const LibraryGroupedView = ({ userId, readerSites, progress, fetchReaderS
       }
     }
     const idsToDelete = originalEntries.map(e => e.id).filter(id => !idsToKeep.includes(id));
+    const seriesChanged = idsToDelete.length > 0 || idsToKeep.some(id => !originalEntries.find(e => e.id === id));
     if (idsToDelete.length > 0) {
       await supabase.from('manga_reader_sites').delete().in('id', idsToDelete);
+    }
+    // Bump updated_at on all kept rows when series were added or removed
+    if (seriesChanged && idsToKeep.length > 0) {
+      await supabase.from('manga_reader_sites').update({ updated_at: new Date().toISOString() }).in('id', idsToKeep);
     }
     toast.success('Reader updated');
     cancelEditingReader();
