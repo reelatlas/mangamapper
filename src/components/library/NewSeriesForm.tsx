@@ -29,9 +29,16 @@ export const NewSeriesForm = ({ userId, readerSites, progress, onSuccess, onCanc
   const [notes, setNotes] = useState('');
   const [showNewReader, setShowNewReader] = useState(false);
   const [saving, setSaving] = useState(false);
+  const [newlyCreatedReader, setNewlyCreatedReader] = useState<{name: string, url: string} | null>(null);
 
-  // Get distinct reader names
-  const distinctReaders = [...new Map(readerSites.map(r => [r.name.toLowerCase(), r])).values()];
+  // Get distinct reader names, including any just-created reader optimistically
+  const distinctReaders = (() => {
+    const list = [...new Map(readerSites.map(r => [r.name.toLowerCase(), r])).values()];
+    if (newlyCreatedReader && !list.find(r => r.name.toLowerCase() === newlyCreatedReader.name.toLowerCase())) {
+      list.push({ id: '', name: newlyCreatedReader.name, url: newlyCreatedReader.url, notes: null, anime_id: null, series_url: null, created_at: '', updated_at: '' });
+    }
+    return list;
+  })();
 
   
 
@@ -52,12 +59,13 @@ export const NewSeriesForm = ({ userId, readerSites, progress, onSuccess, onCanc
   };
 
   const handleNewReaderCreated = (readerName: string, readerUrl: string) => {
+    setNewlyCreatedReader({ name: readerName, url: readerUrl });
     setShowNewReader(false);
     setSelectedReaderName(readerName);
     setSelectedReaderUrl(readerUrl);
     const baseUrl = readerUrl.endsWith('/') ? readerUrl : readerUrl + '/';
     setSeriesUrl(baseUrl);
-    onSuccess(); // refresh reader sites
+    onSuccess(); // refresh reader sites in background
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
