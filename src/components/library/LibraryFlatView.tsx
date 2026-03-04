@@ -7,14 +7,17 @@ import { ArrowUpDown, BookOpen, Tv, Trash2, ExternalLink, Link2, X, Check, BookD
 import { getAnimeById } from '@/data/mockAnime';
 import type { SortOption, AnimeProgress, ReaderSite } from '@/types/library';
 import { getReadersForAnime } from '@/types/library';
+import { ViewModeToggle, type ViewMode } from './ViewModeToggle';
 
 interface LibraryFlatViewProps {
   progress: AnimeProgress[];
   readerSites: ReaderSite[];
   removeFromLibrary: (id: string) => void;
+  viewMode: ViewMode;
+  onViewModeChange: (mode: ViewMode) => void;
 }
 
-export const LibraryFlatView = ({ progress, readerSites, removeFromLibrary }: LibraryFlatViewProps) => {
+export const LibraryFlatView = ({ progress, readerSites, removeFromLibrary, viewMode, onViewModeChange }: LibraryFlatViewProps) => {
   const [confirmingDeleteId, setConfirmingDeleteId] = useState<string | null>(null);
   const [progressSort, setProgressSort] = useState<SortOption>(() => {
     const saved = localStorage.getItem('mangamapper-library-progress-sort');
@@ -50,20 +53,25 @@ export const LibraryFlatView = ({ progress, readerSites, removeFromLibrary }: Li
 
   if (progress.length === 0) {
     return (
-      <div className="text-center py-16 border border-dashed">
-        <div className="group cursor-default mx-auto mb-3 w-fit">
-          <BookDashed className="w-8 h-8 text-muted-foreground group-hover:hidden" />
-          <BookOpenText className="w-8 h-8 text-muted-foreground hidden group-hover:block" />
+      <div className="space-y-4">
+        <div className="flex flex-wrap items-center gap-2">
+          <ViewModeToggle viewMode={viewMode} onViewModeChange={onViewModeChange} />
         </div>
-        <p className="text-muted-foreground text-sm">
-          <span className="text-muted-foreground">// </span>library_empty
-        </p>
-        <p className="text-xs text-muted-foreground mt-2">
-          <Link to="/" className="hover:text-accent transition-colors">
-            {'>'} explore_anime
-          </Link>
-          {' '}to add to your library
-        </p>
+        <div className="text-center py-16 border border-dashed">
+          <div className="group cursor-default mx-auto mb-3 w-fit">
+            <BookDashed className="w-8 h-8 text-muted-foreground group-hover:hidden" />
+            <BookOpenText className="w-8 h-8 text-muted-foreground hidden group-hover:block" />
+          </div>
+          <p className="text-muted-foreground text-sm">
+            <span className="text-muted-foreground">// </span>library_empty
+          </p>
+          <p className="text-xs text-muted-foreground mt-2">
+            <Link to="/" className="hover:text-accent transition-colors">
+              {'>'} explore_anime
+            </Link>
+            {' '}to add to your library
+          </p>
+        </div>
       </div>
     );
   }
@@ -81,6 +89,8 @@ export const LibraryFlatView = ({ progress, readerSites, removeFromLibrary }: Li
           <ToggleGroupItem value="alpha-asc" className="text-xs font-mono px-2.5 h-7 border-dashed text-muted-foreground data-[state=on]:bg-muted data-[state=on]:text-foreground">a→z</ToggleGroupItem>
           <ToggleGroupItem value="alpha-desc" className="text-xs font-mono px-2.5 h-7 border-dashed text-muted-foreground data-[state=on]:bg-muted data-[state=on]:text-foreground">z→a</ToggleGroupItem>
         </ToggleGroup>
+        <div className="w-px h-5 bg-border mx-1" />
+        <ViewModeToggle viewMode={viewMode} onViewModeChange={onViewModeChange} />
       </div>
 
       <div className="grid gap-3 overflow-hidden">

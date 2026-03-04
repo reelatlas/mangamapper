@@ -11,6 +11,7 @@ import { SeriesCombobox } from '@/components/SeriesCombobox';
 import { supabase } from '@/integrations/supabase/client';
 import { toast } from 'sonner';
 import type { SortOption, SeriesAssignment, ReaderSite, AnimeProgress } from '@/types/library';
+import { ViewModeToggle, type ViewMode } from './ViewModeToggle';
 
 const formatTimestamp = (timestamp: string) => {
   const date = new Date(timestamp);
@@ -36,9 +37,11 @@ interface LibraryGroupedViewProps {
   progress: AnimeProgress[];
   fetchReaderSites: () => void;
   deleteReaderSite: (id: string) => void;
+  viewMode: ViewMode;
+  onViewModeChange: (mode: ViewMode) => void;
 }
 
-export const LibraryGroupedView = ({ userId, readerSites, progress, fetchReaderSites, deleteReaderSite }: LibraryGroupedViewProps) => {
+export const LibraryGroupedView = ({ userId, readerSites, progress, fetchReaderSites, deleteReaderSite, viewMode, onViewModeChange }: LibraryGroupedViewProps) => {
   const [readerSort, setReaderSort] = useState<SortOption>(() => {
     const saved = localStorage.getItem('mangamapper-library-reader-sort');
     return ['alpha-asc', 'alpha-desc', 'date-desc', 'date-asc'].includes(saved || '') ? saved as SortOption : 'date-desc';
@@ -194,14 +197,19 @@ export const LibraryGroupedView = ({ userId, readerSites, progress, fetchReaderS
 
   if (readerSites.length === 0 && unassignedProgress.length === 0) {
     return (
-      <div className="text-center py-16 border border-dashed">
-        <div className="group cursor-default mx-auto mb-3 w-fit">
-          <BookDashed className="w-8 h-8 text-muted-foreground group-hover:hidden" />
-          <BookOpenText className="w-8 h-8 text-muted-foreground hidden group-hover:block" />
+      <div className="space-y-4">
+        <div className="flex flex-wrap items-center gap-2">
+          <ViewModeToggle viewMode={viewMode} onViewModeChange={onViewModeChange} />
         </div>
-        <p className="text-muted-foreground text-sm">
-          <span className="text-muted-foreground">// </span>no_readers_or_series
-        </p>
+        <div className="text-center py-16 border border-dashed">
+          <div className="group cursor-default mx-auto mb-3 w-fit">
+            <BookDashed className="w-8 h-8 text-muted-foreground group-hover:hidden" />
+            <BookOpenText className="w-8 h-8 text-muted-foreground hidden group-hover:block" />
+          </div>
+          <p className="text-muted-foreground text-sm">
+            <span className="text-muted-foreground">// </span>no_readers_or_series
+          </p>
+        </div>
       </div>
     );
   }
@@ -220,6 +228,8 @@ export const LibraryGroupedView = ({ userId, readerSites, progress, fetchReaderS
             <ToggleGroupItem value="alpha-asc" className="text-xs font-mono px-2.5 h-7 border-dashed text-muted-foreground data-[state=on]:bg-muted data-[state=on]:text-foreground">a→z</ToggleGroupItem>
             <ToggleGroupItem value="alpha-desc" className="text-xs font-mono px-2.5 h-7 border-dashed text-muted-foreground data-[state=on]:bg-muted data-[state=on]:text-foreground">z→a</ToggleGroupItem>
           </ToggleGroup>
+          <div className="w-px h-5 bg-border mx-1" />
+          <ViewModeToggle viewMode={viewMode} onViewModeChange={onViewModeChange} />
         </div>
       )}
 
