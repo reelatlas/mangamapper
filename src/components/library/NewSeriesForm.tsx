@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useMemo } from 'react';
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
@@ -7,10 +7,16 @@ import { Plus, X } from 'lucide-react';
 import { SeriesCombobox } from '@/components/SeriesCombobox';
 import { supabase } from '@/integrations/supabase/client';
 import { toast } from 'sonner';
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
+import { Select, SelectContent, SelectItem, SelectSeparator, SelectTrigger, SelectValue } from '@/components/ui/select';
 
 import { InlineNewReaderForm } from './InlineNewReaderForm';
 import type { ReaderSite, AnimeProgress } from '@/types/library';
+
+interface ReaderOption {
+  key: string;
+  name: string;
+  url: string;
+}
 
 interface NewSeriesFormProps {
   userId: string;
