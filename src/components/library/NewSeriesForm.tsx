@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useMemo } from 'react';
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
@@ -7,10 +7,16 @@ import { Plus, X } from 'lucide-react';
 import { SeriesCombobox } from '@/components/SeriesCombobox';
 import { supabase } from '@/integrations/supabase/client';
 import { toast } from 'sonner';
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
+import { Select, SelectContent, SelectItem, SelectSeparator, SelectTrigger, SelectValue } from '@/components/ui/select';
 
 import { InlineNewReaderForm } from './InlineNewReaderForm';
 import type { ReaderSite, AnimeProgress } from '@/types/library';
+
+interface ReaderOption {
+  key: string;
+  name: string;
+  url: string;
+}
 
 interface NewSeriesFormProps {
   userId: string;
@@ -23,6 +29,7 @@ interface NewSeriesFormProps {
 
 export const NewSeriesForm = ({ userId, readerSites, progress, onSuccess, onCancel, preSelectAnimeId }: NewSeriesFormProps) => {
   const [animeId, setAnimeId] = useState(preSelectAnimeId || '');
+  const [selectedReaderKey, setSelectedReaderKey] = useState('');
   const [selectedReaderName, setSelectedReaderName] = useState('');
   const [selectedReaderUrl, setSelectedReaderUrl] = useState('');
   const [seriesUrl, setSeriesUrl] = useState('');
@@ -31,28 +38,37 @@ export const NewSeriesForm = ({ userId, readerSites, progress, onSuccess, onCanc
   const [saving, setSaving] = useState(false);
   const [newlyCreatedReader, setNewlyCreatedReader] = useState<{name: string, url: string} | null>(null);
 
-  // Get distinct reader names, including any just-created reader optimistically
-  const distinctReaders = (() => {
-    const list = [...new Map(readerSites.map(r => [r.name.toLowerCase(), r])).values()];
-    if (newlyCreatedReader && !list.find(r => r.name.toLowerCase() === newlyCreatedReader.name.toLowerCase())) {
-      list.push({ id: '', name: newlyCreatedReader.name, url: newlyCreatedReader.url, notes: null, anime_id: null, series_url: null, created_at: '', updated_at: '' });
+  const readerOptions: ReaderOption[] = useMemo(() => {
+    const distinct = [...new Map(readerSites.map(r => [r.name.toLowerCase(), r])).values()];
+    const options = distinct.map(r => ({
+      key: `${r.name.toLowerCase()}|${r.url}`,
+      name: r.name,
+      url: r.url,
+    }));
+    if (newlyCreatedReader && !options.find(o => o.name.toLowerCase() === newlyCreatedReader.name.toLowerCase())) {
+      options.push({
+        key: `${newlyCreatedReader.name.toLowerCase()}|${newlyCreatedReader.url}`,
+        name: newlyCreatedReader.name,
+        url: newlyCreatedReader.url,
+      });
     }
-    return list;
-  })();
+    return options;
+  }, [readerSites, newlyCreatedReader]);
 
-  
-
-  const handleReaderChange = (value: string) => {
-    if (value === '__new_reader__') {
+  const handleReaderChange = (key: string) => {
+    if (key === '__new_reader__') {
       setShowNewReader(true);
+      setSelectedReaderKey('');
       setSelectedReaderName('');
+      setSelectedReaderUrl('');
     } else {
       setShowNewReader(false);
-      setSelectedReaderName(value);
-      const reader = distinctReaders.find(r => r.name === value);
-      if (reader) {
-        setSelectedReaderUrl(reader.url);
-        const baseUrl = reader.url.endsWith('/') ? reader.url : reader.url + '/';
+      const option = readerOptions.find(o => o.key === key);
+      if (option) {
+        setSelectedReaderKey(key);
+        setSelectedReaderName(option.name);
+        setSelectedReaderUrl(option.url);
+        const baseUrl = option.url.endsWith('/') ? option.url : option.url + '/';
         setSeriesUrl(baseUrl);
       }
     }
@@ -60,6 +76,8 @@ export const NewSeriesForm = ({ userId, readerSites, progress, onSuccess, onCanc
 
   const handleNewReaderCreated = (readerName: string, readerUrl: string) => {
     setNewlyCreatedReader({ name: readerName, url: readerUrl });
+    const key = `${readerName.toLowerCase()}|${readerUrl}`;
+    setSelectedReaderKey(key);
     setShowNewReader(false);
     setSelectedReaderName(readerName);
     setSelectedReaderUrl(readerUrl);
@@ -141,17 +159,17 @@ export const NewSeriesForm = ({ userId, readerSites, progress, onSuccess, onCanc
               <span className="text-syntax-cyan">reader</span>
               <span className="text-muted-foreground"> // optional</span>
             </Label>
-            <Select value={selectedReaderName} onValueChange={handleReaderChange}>
+            <Select value={selectedReaderKey} onValueChange={handleReaderChange}>
               <SelectTrigger className="font-mono text-sm border-dashed bg-muted/30 data-[placeholder]:text-muted-foreground">
                 <SelectValue placeholder="select reader..." />
               </SelectTrigger>
               <SelectContent className="font-mono border-dashed">
-                {distinctReaders.map(reader => (
-                  <SelectItem key={reader.name} value={reader.name} className="text-sm">
-                    {reader.name}
+                {readerOptions.map(option => (
+                  <SelectItem key={option.key} value={option.key} className="text-sm">
+                    {option.name}
                   </SelectItem>
                 ))}
-                <div className="border-t border-dashed my-1" />
+                <SelectSeparator className="border-dashed" />
                 <SelectItem value="__new_reader__" className="text-sm text-primary">
                   + new_reader
                 </SelectItem>
