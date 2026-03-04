@@ -8,7 +8,7 @@ import { SeriesCombobox } from '@/components/SeriesCombobox';
 import { supabase } from '@/integrations/supabase/client';
 import { toast } from 'sonner';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
-import { Separator } from '@/components/ui/separator';
+
 import { InlineNewReaderForm } from './InlineNewReaderForm';
 import type { ReaderSite, AnimeProgress } from '@/types/library';
 
@@ -140,7 +140,7 @@ export const NewSeriesForm = ({ userId, readerSites, progress, onSuccess, onCanc
                     {reader.name}
                   </SelectItem>
                 ))}
-                <Separator className="my-1" />
+                <div className="border-t border-dashed my-1" />
                 <SelectItem value="__new_reader__" className="text-sm text-primary">
                   + new_reader
                 </SelectItem>
@@ -149,12 +149,14 @@ export const NewSeriesForm = ({ userId, readerSites, progress, onSuccess, onCanc
           </div>
 
           {showNewReader && (
-            <InlineNewReaderForm
-              userId={userId}
-              existingReaders={readerSites}
-              onCreated={handleNewReaderCreated}
-              onCancel={() => setShowNewReader(false)}
-            />
+            <div className="pl-4">
+              <InlineNewReaderForm
+                userId={userId}
+                existingReaders={readerSites}
+                onCreated={handleNewReaderCreated}
+                onCancel={() => setShowNewReader(false)}
+              />
+            </div>
           )}
 
           {selectedReaderName && !showNewReader && (

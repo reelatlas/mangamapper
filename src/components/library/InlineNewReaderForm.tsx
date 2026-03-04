@@ -56,8 +56,11 @@ export const InlineNewReaderForm = ({ userId, existingReaders, onCreated, onCanc
   };
 
   return (
-    <div className="border border-dashed rounded-md p-3 space-y-3 bg-muted/10">
-      <p className="text-xs text-muted-foreground">// new_reader</p>
+    <div className="border border-dashed bg-muted/10">
+      <div className="terminal-header flex items-center gap-2">
+        <span className="text-muted-foreground">new_reader</span>
+      </div>
+      <div className="p-3 space-y-3">
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
         <div className="space-y-1.5">
           <Label className="text-xs">
@@ -98,12 +101,13 @@ export const InlineNewReaderForm = ({ userId, existingReaders, onCreated, onCanc
       <div className="flex gap-2">
         <Button type="button" size="sm" disabled={saving} onClick={handleSubmit} className="font-mono text-xs border-dashed">
           <Plus className="w-3.5 h-3.5 mr-1" />
-          {saving ? 'creating...' : 'create_reader()'}
+          {saving ? 'adding...' : 'add_reader()'}
         </Button>
         <Button type="button" variant="outline" size="sm" onClick={onCancel} className="font-mono text-xs border-dashed hover:bg-destructive hover:text-destructive-foreground hover:border-destructive">
           <X className="w-3.5 h-3.5 mr-1" />
           cancel
         </Button>
+      </div>
       </div>
     </div>
   );
