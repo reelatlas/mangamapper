@@ -29,6 +29,7 @@ interface NewSeriesFormProps {
 
 export const NewSeriesForm = ({ userId, readerSites, progress, onSuccess, onCancel, preSelectAnimeId }: NewSeriesFormProps) => {
   const [animeId, setAnimeId] = useState(preSelectAnimeId || '');
+  const [selectedReaderKey, setSelectedReaderKey] = useState('');
   const [selectedReaderName, setSelectedReaderName] = useState('');
   const [selectedReaderUrl, setSelectedReaderUrl] = useState('');
   const [seriesUrl, setSeriesUrl] = useState('');
@@ -37,28 +38,37 @@ export const NewSeriesForm = ({ userId, readerSites, progress, onSuccess, onCanc
   const [saving, setSaving] = useState(false);
   const [newlyCreatedReader, setNewlyCreatedReader] = useState<{name: string, url: string} | null>(null);
 
-  // Get distinct reader names, including any just-created reader optimistically
-  const distinctReaders = (() => {
-    const list = [...new Map(readerSites.map(r => [r.name.toLowerCase(), r])).values()];
-    if (newlyCreatedReader && !list.find(r => r.name.toLowerCase() === newlyCreatedReader.name.toLowerCase())) {
-      list.push({ id: '', name: newlyCreatedReader.name, url: newlyCreatedReader.url, notes: null, anime_id: null, series_url: null, created_at: '', updated_at: '' });
+  const readerOptions: ReaderOption[] = useMemo(() => {
+    const distinct = [...new Map(readerSites.map(r => [r.name.toLowerCase(), r])).values()];
+    const options = distinct.map(r => ({
+      key: `${r.name.toLowerCase()}|${r.url}`,
+      name: r.name,
+      url: r.url,
+    }));
+    if (newlyCreatedReader && !options.find(o => o.name.toLowerCase() === newlyCreatedReader.name.toLowerCase())) {
+      options.push({
+        key: `${newlyCreatedReader.name.toLowerCase()}|${newlyCreatedReader.url}`,
+        name: newlyCreatedReader.name,
+        url: newlyCreatedReader.url,
+      });
     }
-    return list;
-  })();
+    return options;
+  }, [readerSites, newlyCreatedReader]);
 
-  
-
-  const handleReaderChange = (value: string) => {
-    if (value === '__new_reader__') {
+  const handleReaderChange = (key: string) => {
+    if (key === '__new_reader__') {
       setShowNewReader(true);
+      setSelectedReaderKey('');
       setSelectedReaderName('');
+      setSelectedReaderUrl('');
     } else {
       setShowNewReader(false);
-      setSelectedReaderName(value);
-      const reader = distinctReaders.find(r => r.name === value);
-      if (reader) {
-        setSelectedReaderUrl(reader.url);
-        const baseUrl = reader.url.endsWith('/') ? reader.url : reader.url + '/';
+      const option = readerOptions.find(o => o.key === key);
+      if (option) {
+        setSelectedReaderKey(key);
+        setSelectedReaderName(option.name);
+        setSelectedReaderUrl(option.url);
+        const baseUrl = option.url.endsWith('/') ? option.url : option.url + '/';
         setSeriesUrl(baseUrl);
       }
     }
