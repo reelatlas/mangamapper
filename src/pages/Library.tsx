@@ -102,6 +102,7 @@ const Library = () => {
             <NewSeriesForm
               userId={user.id}
               readerSites={readerSites}
+              progress={progress}
               onSuccess={handleRefreshAll}
               onCancel={() => setShowNewSeries(false)}
               preSelectAnimeId={preSelectAnimeId}
