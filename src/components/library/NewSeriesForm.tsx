@@ -24,6 +24,7 @@ interface NewSeriesFormProps {
 export const NewSeriesForm = ({ userId, readerSites, progress, onSuccess, onCancel, preSelectAnimeId }: NewSeriesFormProps) => {
   const [animeId, setAnimeId] = useState(preSelectAnimeId || '');
   const [selectedReaderName, setSelectedReaderName] = useState('');
+  const [selectedReaderUrl, setSelectedReaderUrl] = useState('');
   const [seriesUrl, setSeriesUrl] = useState('');
   const [notes, setNotes] = useState('');
   const [showNewReader, setShowNewReader] = useState(false);
@@ -32,7 +33,7 @@ export const NewSeriesForm = ({ userId, readerSites, progress, onSuccess, onCanc
   // Get distinct reader names
   const distinctReaders = [...new Map(readerSites.map(r => [r.name.toLowerCase(), r])).values()];
 
-  const selectedReader = distinctReaders.find(r => r.name === selectedReaderName);
+  
 
   const handleReaderChange = (value: string) => {
     if (value === '__new_reader__') {
@@ -43,6 +44,7 @@ export const NewSeriesForm = ({ userId, readerSites, progress, onSuccess, onCanc
       setSelectedReaderName(value);
       const reader = distinctReaders.find(r => r.name === value);
       if (reader) {
+        setSelectedReaderUrl(reader.url);
         const baseUrl = reader.url.endsWith('/') ? reader.url : reader.url + '/';
         setSeriesUrl(baseUrl);
       }
@@ -52,6 +54,7 @@ export const NewSeriesForm = ({ userId, readerSites, progress, onSuccess, onCanc
   const handleNewReaderCreated = (readerName: string, readerUrl: string) => {
     setShowNewReader(false);
     setSelectedReaderName(readerName);
+    setSelectedReaderUrl(readerUrl);
     const baseUrl = readerUrl.endsWith('/') ? readerUrl : readerUrl + '/';
     setSeriesUrl(baseUrl);
     onSuccess(); // refresh reader sites
@@ -83,13 +86,13 @@ export const NewSeriesForm = ({ userId, readerSites, progress, onSuccess, onCanc
     }
 
     // If reader selected, create manga_reader_sites entry
-    if (selectedReaderName && selectedReader) {
+    if (selectedReaderName && selectedReaderUrl) {
       const { error: readerError } = await supabase
         .from('manga_reader_sites')
         .insert({
           user_id: userId,
-          name: selectedReader.name,
-          url: selectedReader.url,
+          name: selectedReaderName,
+          url: selectedReaderUrl,
           anime_id: animeId,
           series_url: seriesUrl.trim() || null,
           notes: notes.trim() || null,
