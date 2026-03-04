@@ -199,7 +199,9 @@ export const LibraryGroupedView = ({ userId, readerSites, progress, fetchReaderS
     return (
       <div className="space-y-4">
         <div className="flex flex-wrap items-center gap-2">
-          <ViewModeToggle viewMode={viewMode} onViewModeChange={onViewModeChange} />
+          <div className="ml-auto">
+            <ViewModeToggle viewMode={viewMode} onViewModeChange={onViewModeChange} />
+          </div>
         </div>
         <div className="text-center py-16 border border-dashed">
           <div className="group cursor-default mx-auto mb-3 w-fit">
