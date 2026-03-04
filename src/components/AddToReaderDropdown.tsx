@@ -109,7 +109,7 @@ export const AddToReaderDropdown = ({ animeId, onSuccess, linkedReaderNames = []
         <span className="text-muted-foreground">// </span>
         assign_series() → requires(
         <Link 
-          to="/readers" 
+          to="/library" 
           state={{ openAddReader: true, preSelectAnimeId: animeId }}
           className="text-primary hover:underline"
         >
