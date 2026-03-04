@@ -59,12 +59,13 @@ export const NewSeriesForm = ({ userId, readerSites, progress, onSuccess, onCanc
   };
 
   const handleNewReaderCreated = (readerName: string, readerUrl: string) => {
+    setNewlyCreatedReader({ name: readerName, url: readerUrl });
     setShowNewReader(false);
     setSelectedReaderName(readerName);
     setSelectedReaderUrl(readerUrl);
     const baseUrl = readerUrl.endsWith('/') ? readerUrl : readerUrl + '/';
     setSeriesUrl(baseUrl);
-    onSuccess(); // refresh reader sites
+    onSuccess(); // refresh reader sites in background
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
