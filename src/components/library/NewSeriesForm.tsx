@@ -130,8 +130,8 @@ export const NewSeriesForm = ({ userId, readerSites, progress, onSuccess, onCanc
               <span className="text-muted-foreground"> // optional</span>
             </Label>
             <Select value={selectedReaderName} onValueChange={handleReaderChange}>
-              <SelectTrigger className="font-mono text-sm border-dashed bg-muted/30">
-                <SelectValue placeholder="select reader..." className="text-muted-foreground" />
+              <SelectTrigger className="font-mono text-sm border-dashed bg-muted/30 data-[placeholder]:text-muted-foreground">
+                <SelectValue placeholder="select reader..." />
               </SelectTrigger>
               <SelectContent className="font-mono border-dashed">
                 {distinctReaders.map(reader => (
