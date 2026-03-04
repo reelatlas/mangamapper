@@ -332,96 +332,94 @@ export const LibraryGroupedView = ({ userId, readerSites, progress, fetchReaderS
 
           // View mode
           return (
-            <Card key={group.name} className="border-dashed">
-              <CardContent className="p-4">
-                <div className="flex items-start justify-between gap-4">
-                  <div className="flex-1 min-w-0 text-sm space-y-1">
-                    <div className="flex items-center justify-between gap-2">
-                      <div className="overflow-hidden min-w-0">
-                        <span className="text-syntax-cyan">reader_name</span>
-                        <span className="text-muted-foreground">: </span>
-                        <span className="text-syntax-green break-all">{group.name}</span>
-                      </div>
-                      <div className="flex items-center gap-1">
-                        <Button variant="ghost" size="icon" onClick={() => startEditingReader(group)} className="text-muted-foreground hover:text-accent hover:bg-accent/10 h-6 w-6">
-                          <Pencil className="w-3 h-3" />
-                        </Button>
-                        <Button variant="outline" size="sm" asChild className="border-dashed text-xs h-6 px-2">
-                          <a href={group.url} target="_blank" rel="noopener noreferrer" className="gap-1">
-                            <ExternalLink className="w-3 h-3" />open
-                          </a>
-                        </Button>
-                      </div>
-                    </div>
-                    {group.notes && (
-                      <div className="text-xs overflow-hidden pr-28">
-                        <span className="text-syntax-cyan">notes</span>
-                        <span className="text-muted-foreground">: </span>
-                        <span className="text-muted-foreground break-all">{group.notes}</span>
-                      </div>
-                    )}
-                    <div className="text-xs overflow-hidden pr-28">
-                      <span className="text-syntax-cyan">last_updated</span>
-                      <span className="text-muted-foreground">: </span>
-                      <span className="text-muted-foreground break-all">{formatTimestamp(group.latestUpdatedAt)}</span>
-                    </div>
-                    {seriesEntries.length > 0 && (
-                      <div className="border-t border-dashed pt-2 mt-2 space-y-1.5">
-                        {seriesEntries.map(entry => {
-                          const assignedAnime = mockAnimeData.find(a => a.id === entry.anime_id);
-                          if (!assignedAnime) return null;
-                          const hasDefinedSeriesUrl = isSeriesUrlDefined(group.url, entry.series_url);
-                          return (
-                            <div key={entry.id} className="flex items-center justify-between gap-2">
-                              <div className="flex items-center gap-1.5 min-w-0 overflow-hidden">
-                                <Link2 className="w-3 h-3 text-primary flex-shrink-0" />
-                                <Link to={`/anime/${assignedAnime.id}`} className="text-syntax-green text-xs hover:underline hover:text-primary transition-colors break-all">{assignedAnime.title}</Link>
-                              </div>
-                              <div className="flex items-center gap-1">
-                                {hasDefinedSeriesUrl ? (
-                                  <Button variant="outline" size="sm" asChild className="border-dashed text-xs h-6 px-2">
-                                    <a href={entry.series_url!} target="_blank" rel="noopener noreferrer" className="gap-1">
-                                      <ExternalLink className="w-3 h-3" />read
-                                    </a>
-                                  </Button>
-                                ) : (
-                                  <span className="text-xs text-muted-foreground h-6 flex items-center">series_url(null)</span>
-                                )}
-                              </div>
-                            </div>
-                          );
-                        })}
-                      </div>
-                    )}
+            <div key={group.name} className="space-y-3">
+              <div className="border border-dashed p-3 space-y-1">
+                <div className="flex items-center justify-between gap-2">
+                  <div className="overflow-hidden min-w-0 text-sm">
+                    <span className="text-syntax-cyan">reader_name</span>
+                    <span className="text-muted-foreground">: </span>
+                    <span className="text-syntax-green break-all">{group.name}</span>
+                  </div>
+                  <div className="flex items-center gap-1 shrink-0">
+                    <Button variant="ghost" size="icon" onClick={() => startEditingReader(group)} className="text-muted-foreground hover:text-accent hover:bg-accent/10 h-6 w-6">
+                      <Pencil className="w-3 h-3" />
+                    </Button>
+                    <Button variant="outline" size="sm" asChild className="border-dashed text-xs h-6 px-2">
+                      <a href={group.url} target="_blank" rel="noopener noreferrer" className="gap-1">
+                        <ExternalLink className="w-3 h-3" />open
+                      </a>
+                    </Button>
                   </div>
                 </div>
-              </CardContent>
-            </Card>
+                {group.notes && (
+                  <div className="text-xs overflow-hidden">
+                    <span className="text-syntax-cyan">notes</span>
+                    <span className="text-muted-foreground">: </span>
+                    <span className="text-muted-foreground break-all">{group.notes}</span>
+                  </div>
+                )}
+                <div className="text-xs overflow-hidden">
+                  <span className="text-syntax-cyan">last_updated</span>
+                  <span className="text-muted-foreground">: </span>
+                  <span className="text-muted-foreground break-all">{formatTimestamp(group.latestUpdatedAt)}</span>
+                </div>
+                {seriesEntries.length === 0 && (
+                  <div className="text-xs text-muted-foreground pt-1">// no_series_assigned</div>
+                )}
+              </div>
+              {seriesEntries.length > 0 && (
+                <div className="grid gap-3 pl-3 border-l border-dashed">
+                  {seriesEntries.map(entry => {
+                    const progressItem = progress.find(p => p.anime_id === entry.anime_id);
+                    if (!progressItem) return null;
+                    return (
+                      <SeriesCard
+                        key={entry.id}
+                        item={progressItem}
+                        readerSites={readerSites}
+                        onRemove={(id) => {
+                          // Remove from library
+                          const removeFromLibrary = async () => {
+                            const { error } = await supabase.from('anime_progress').update({ in_library: false }).eq('id', id);
+                            if (!error) {
+                              toast.success('Removed from library');
+                              fetchReaderSites();
+                            }
+                          };
+                          removeFromLibrary();
+                        }}
+                      />
+                    );
+                  })}
+                </div>
+              )}
+            </div>
           );
         })}
       </div>
 
       {/* Unassigned series */}
       {unassignedProgress.length > 0 && (
-        <div className="space-y-2">
+        <div className="space-y-3">
           <p className="text-xs text-muted-foreground">// unassigned_series ({unassignedProgress.length})</p>
-          <div className="grid gap-2">
-            {unassignedProgress.map(item => {
-              const anime = mockAnimeData.find(a => a.id === item.anime_id);
-              if (!anime) return null;
-              return (
-                <Link key={item.id} to={`/anime/${anime.id}`} className="block">
-                  <Card className="border-dashed hover:border-primary/50 transition-colors cursor-pointer">
-                    <CardContent className="p-3">
-                      <div className="flex items-center gap-3">
-                        <img src={anime.coverImage} alt={anime.title} className="w-8 h-12 object-cover opacity-90 shrink-0" />
-                        <span className="text-sm text-syntax-green line-clamp-1">{anime.title}</span>
-                      </div>
-                    </CardContent>
-                  </Card>
-                </Link>
-              );
-            })}
+          <div className="grid gap-3">
+            {unassignedProgress.map(item => (
+              <SeriesCard
+                key={item.id}
+                item={item}
+                readerSites={readerSites}
+                onRemove={(id) => {
+                  const removeFromLibrary = async () => {
+                    const { error } = await supabase.from('anime_progress').update({ in_library: false }).eq('id', id);
+                    if (!error) {
+                      toast.success('Removed from library');
+                      fetchReaderSites();
+                    }
+                  };
+                  removeFromLibrary();
+                }}
+              />
+            ))}
           </div>
         </div>
       )}
