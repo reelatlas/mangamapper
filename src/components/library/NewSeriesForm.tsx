@@ -8,6 +8,7 @@ import { SeriesCombobox } from '@/components/SeriesCombobox';
 import { supabase } from '@/integrations/supabase/client';
 import { toast } from 'sonner';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
+import { Separator } from '@/components/ui/separator';
 import { InlineNewReaderForm } from './InlineNewReaderForm';
 import type { ReaderSite, AnimeProgress } from '@/types/library';
 
@@ -139,6 +140,7 @@ export const NewSeriesForm = ({ userId, readerSites, progress, onSuccess, onCanc
                     {reader.name}
                   </SelectItem>
                 ))}
+                <Separator className="my-1" />
                 <SelectItem value="__new_reader__" className="text-sm text-primary">
                   + new_reader
                 </SelectItem>
@@ -177,7 +179,7 @@ export const NewSeriesForm = ({ userId, readerSites, progress, onSuccess, onCanc
               <span className="text-muted-foreground"> // optional</span>
             </Label>
             <Input
-              placeholder="-- best Berserk scans for golden age arc --"
+              placeholder="best Berserk scans for golden age arc"
               value={notes}
               onChange={(e) => setNotes(e.target.value)}
               className="font-mono text-sm border-dashed bg-muted/30"
