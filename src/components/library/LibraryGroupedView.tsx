@@ -197,14 +197,19 @@ export const LibraryGroupedView = ({ userId, readerSites, progress, fetchReaderS
 
   if (readerSites.length === 0 && unassignedProgress.length === 0) {
     return (
-      <div className="text-center py-16 border border-dashed">
-        <div className="group cursor-default mx-auto mb-3 w-fit">
-          <BookDashed className="w-8 h-8 text-muted-foreground group-hover:hidden" />
-          <BookOpenText className="w-8 h-8 text-muted-foreground hidden group-hover:block" />
+      <div className="space-y-4">
+        <div className="flex flex-wrap items-center gap-2">
+          <ViewModeToggle viewMode={viewMode} onViewModeChange={onViewModeChange} />
         </div>
-        <p className="text-muted-foreground text-sm">
-          <span className="text-muted-foreground">// </span>no_readers_or_series
-        </p>
+        <div className="text-center py-16 border border-dashed">
+          <div className="group cursor-default mx-auto mb-3 w-fit">
+            <BookDashed className="w-8 h-8 text-muted-foreground group-hover:hidden" />
+            <BookOpenText className="w-8 h-8 text-muted-foreground hidden group-hover:block" />
+          </div>
+          <p className="text-muted-foreground text-sm">
+            <span className="text-muted-foreground">// </span>no_readers_or_series
+          </p>
+        </div>
       </div>
     );
   }
