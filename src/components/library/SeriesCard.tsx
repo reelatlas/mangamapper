@@ -29,7 +29,7 @@ export const SeriesCard = ({ item, readerSites, onRemove }: SeriesCardProps) => 
                 <span className="text-[9px] text-muted-foreground line-clamp-3 text-center break-all">{anime.title}</span>
               </div>
             ) : (
-              <img src={anime.coverImage} alt={anime.title} className="w-14 min-h-[5rem] max-h-[5rem] object-cover opacity-90 shrink-0" onError={() => setImgError(true)} />
+              <img src={anime.coverImage} alt={anime.title} className="w-14 object-cover opacity-90 shrink-0" onError={() => setImgError(true)} />
             )}
             <div className="flex-1 min-w-0 overflow-hidden">
               <span className="text-sm text-syntax-green line-clamp-2">{anime.title}</span>
