@@ -385,11 +385,11 @@ export const LibraryGroupedView = ({ userId, readerSites, progress, fetchReaderS
                 <div className="grid gap-3">
                   {seriesEntries.map(entry => {
                     const progressItem = progress.find(p => p.anime_id === entry.anime_id);
-                    if (!progressItem) return null;
                     return (
                       <SeriesCard
                         key={entry.id}
                         item={progressItem}
+                        animeId={entry.anime_id ?? undefined}
                         readerSites={readerSites}
                         onRemove={(id) => {
                           // Remove from library
