@@ -15,7 +15,7 @@ interface LocationState {
   preSelectAnimeId?: string;
 }
 
-type _ViewMode = ViewMode; // re-export usage
+
 
 const Library = () => {
   const navigate = useNavigate();
@@ -125,6 +125,8 @@ const Library = () => {
               progress={progress}
               readerSites={readerSites}
               removeFromLibrary={removeFromLibrary}
+              viewMode={viewMode}
+              onViewModeChange={setViewMode}
             />
           ) : (
             <LibraryGroupedView
@@ -133,6 +135,8 @@ const Library = () => {
               progress={progress}
               fetchReaderSites={handleRefreshAll}
               deleteReaderSite={deleteReaderSite}
+              viewMode={viewMode}
+              onViewModeChange={setViewMode}
             />
           )}
         </div>
