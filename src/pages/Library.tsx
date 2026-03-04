@@ -3,19 +3,19 @@ import { useNavigate, useLocation } from 'react-router-dom';
 import { Header } from '@/components/Header';
 import { useLibraryData } from '@/hooks/useLibraryData';
 import { Button } from '@/components/ui/button';
-import { ToggleGroup, ToggleGroupItem } from '@/components/ui/toggle-group';
-import { Library as LibraryIcon, List, Glasses } from 'lucide-react';
+import { Library as LibraryIcon } from 'lucide-react';
 import { LibraryFlatView } from '@/components/library/LibraryFlatView';
 import { LibraryGroupedView } from '@/components/library/LibraryGroupedView';
 import { NewSeriesForm } from '@/components/library/NewSeriesForm';
 import { NewReaderForm } from '@/components/library/NewReaderForm';
+import type { ViewMode } from '@/components/library/ViewModeToggle';
 
 interface LocationState {
   openAddReader?: boolean;
   preSelectAnimeId?: string;
 }
 
-type ViewMode = 'flat' | 'by_reader';
+type _ViewMode = ViewMode; // re-export usage
 
 const Library = () => {
   const navigate = useNavigate();
