@@ -4,7 +4,7 @@ import { Header } from '@/components/Header';
 import { useLibraryData } from '@/hooks/useLibraryData';
 import { Button } from '@/components/ui/button';
 import { ToggleGroup, ToggleGroupItem } from '@/components/ui/toggle-group';
-import { Library as LibraryIcon, List, Layers } from 'lucide-react';
+import { Library as LibraryIcon, List, Glasses } from 'lucide-react';
 import { LibraryFlatView } from '@/components/library/LibraryFlatView';
 import { LibraryGroupedView } from '@/components/library/LibraryGroupedView';
 import { NewSeriesForm } from '@/components/library/NewSeriesForm';
@@ -95,18 +95,6 @@ const Library = () => {
               </>
             )}
             
-            <div className="ml-auto">
-              <ToggleGroup type="single" value={viewMode} onValueChange={(val) => val && setViewMode(val as ViewMode)} className="gap-1">
-                <ToggleGroupItem value="flat" className="text-xs font-mono px-2.5 h-7 border-dashed text-muted-foreground data-[state=on]:bg-muted data-[state=on]:text-foreground gap-1">
-                  <List className="w-3 h-3" />
-                  <span className="hidden sm:inline">all</span>
-                </ToggleGroupItem>
-                <ToggleGroupItem value="by_reader" className="text-xs font-mono px-2.5 h-7 border-dashed text-muted-foreground data-[state=on]:bg-muted data-[state=on]:text-foreground gap-1">
-                  <Layers className="w-3 h-3" />
-                  <span className="hidden sm:inline">by_reader</span>
-                </ToggleGroupItem>
-              </ToggleGroup>
-            </div>
           </div>
 
           {/* New Series Form */}
