@@ -29,9 +29,16 @@ export const NewSeriesForm = ({ userId, readerSites, progress, onSuccess, onCanc
   const [notes, setNotes] = useState('');
   const [showNewReader, setShowNewReader] = useState(false);
   const [saving, setSaving] = useState(false);
+  const [newlyCreatedReader, setNewlyCreatedReader] = useState<{name: string, url: string} | null>(null);
 
-  // Get distinct reader names
-  const distinctReaders = [...new Map(readerSites.map(r => [r.name.toLowerCase(), r])).values()];
+  // Get distinct reader names, including any just-created reader optimistically
+  const distinctReaders = (() => {
+    const list = [...new Map(readerSites.map(r => [r.name.toLowerCase(), r])).values()];
+    if (newlyCreatedReader && !list.find(r => r.name.toLowerCase() === newlyCreatedReader.name.toLowerCase())) {
+      list.push({ id: '', name: newlyCreatedReader.name, url: newlyCreatedReader.url, notes: null, anime_id: null, series_url: null, created_at: '', updated_at: '' });
+    }
+    return list;
+  })();
 
   
 
