@@ -251,7 +251,7 @@ export const LibraryGroupedView = ({ userId, readerSites, progress, fetchReaderS
         </div>
       )}
 
-      <div className="grid gap-3">
+      <div className="grid gap-8">
         {sortedReaderGroups.map(group => {
           const seriesEntries = group.entries.filter(e => e.anime_id).sort((a, b) => new Date(a.created_at).getTime() - new Date(b.created_at).getTime());
           const isEditing = editingReaderName === group.name.toLowerCase();
@@ -382,7 +382,7 @@ export const LibraryGroupedView = ({ userId, readerSites, progress, fetchReaderS
                 )}
               </div>
               {seriesEntries.length > 0 && (
-                <div className="grid gap-3 pl-3 border-l border-dashed">
+                <div className="grid gap-3">
                   {seriesEntries.map(entry => {
                     const progressItem = progress.find(p => p.anime_id === entry.anime_id);
                     if (!progressItem) return null;
