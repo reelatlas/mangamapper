@@ -73,8 +73,8 @@ export const NewReaderForm = ({ userId, readerSites, onSuccess, onCancel, preSel
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (!newSiteName.trim() || !newSiteUrl.trim()) {
-      toast.error('Please fill in reader name and URL');
+    if (!newSiteName.trim()) {
+      toast.error('Please fill in reader name');
       return;
     }
     const existingReader = readerSites.find(site => site.name.toLowerCase() === newSiteName.trim().toLowerCase());

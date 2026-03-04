@@ -21,8 +21,8 @@ export const InlineNewReaderForm = ({ userId, existingReaders, onCreated, onCanc
   const [saving, setSaving] = useState(false);
 
   const handleSubmit = async () => {
-    if (!name.trim() || !url.trim()) {
-      toast.error('Please fill in reader name and URL');
+    if (!name.trim()) {
+      toast.error('Please fill in reader name');
       return;
     }
 
