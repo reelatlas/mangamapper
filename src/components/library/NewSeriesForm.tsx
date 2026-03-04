@@ -159,17 +159,17 @@ export const NewSeriesForm = ({ userId, readerSites, progress, onSuccess, onCanc
               <span className="text-syntax-cyan">reader</span>
               <span className="text-muted-foreground"> // optional</span>
             </Label>
-            <Select value={selectedReaderName} onValueChange={handleReaderChange}>
+            <Select value={selectedReaderKey} onValueChange={handleReaderChange}>
               <SelectTrigger className="font-mono text-sm border-dashed bg-muted/30 data-[placeholder]:text-muted-foreground">
                 <SelectValue placeholder="select reader..." />
               </SelectTrigger>
               <SelectContent className="font-mono border-dashed">
-                {distinctReaders.map(reader => (
-                  <SelectItem key={reader.name} value={reader.name} className="text-sm">
-                    {reader.name}
+                {readerOptions.map(option => (
+                  <SelectItem key={option.key} value={option.key} className="text-sm">
+                    {option.name}
                   </SelectItem>
                 ))}
-                <div className="border-t border-dashed my-1" />
+                <SelectSeparator className="border-dashed" />
                 <SelectItem value="__new_reader__" className="text-sm text-primary">
                   + new_reader
                 </SelectItem>
