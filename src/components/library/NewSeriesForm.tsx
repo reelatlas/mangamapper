@@ -76,6 +76,8 @@ export const NewSeriesForm = ({ userId, readerSites, progress, onSuccess, onCanc
 
   const handleNewReaderCreated = (readerName: string, readerUrl: string) => {
     setNewlyCreatedReader({ name: readerName, url: readerUrl });
+    const key = `${readerName.toLowerCase()}|${readerUrl}`;
+    setSelectedReaderKey(key);
     setShowNewReader(false);
     setSelectedReaderName(readerName);
     setSelectedReaderUrl(readerUrl);
