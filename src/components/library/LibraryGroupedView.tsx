@@ -347,7 +347,7 @@ export const LibraryGroupedView = ({ userId, readerSites, progress, fetchReaderS
           // View mode
           return (
             <div key={group.name} className="space-y-3">
-              <div className="border border-dashed p-3 space-y-1">
+              <div className="border border-dashed p-3 space-y-1 bg-muted/30">
                 <div className="flex items-center justify-between gap-2">
                   <div className="overflow-hidden min-w-0 text-sm">
                     <span className="text-syntax-cyan">reader_name</span>
