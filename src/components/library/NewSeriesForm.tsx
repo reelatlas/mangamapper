@@ -7,6 +7,7 @@ import { Plus, X } from 'lucide-react';
 import { SeriesCombobox } from '@/components/SeriesCombobox';
 import { supabase } from '@/integrations/supabase/client';
 import { toast } from 'sonner';
+import * as SelectPrimitive from '@radix-ui/react-select';
 import { Select, SelectContent, SelectItem, SelectSeparator, SelectTrigger, SelectValue } from '@/components/ui/select';
 
 import { InlineNewReaderForm } from './InlineNewReaderForm';
@@ -163,16 +164,20 @@ export const NewSeriesForm = ({ userId, readerSites, progress, onSuccess, onCanc
               <SelectTrigger className="font-mono text-sm border-dashed bg-muted/30 data-[placeholder]:text-muted-foreground">
                 <SelectValue placeholder="select reader..." />
               </SelectTrigger>
-              <SelectContent className="font-mono border-dashed">
-                {readerOptions.map(option => (
-                  <SelectItem key={option.key} value={option.key} className="text-sm">
-                    {option.name}
-                  </SelectItem>
-                ))}
+              <SelectContent className="font-mono border-dashed p-0">
+                <SelectPrimitive.Viewport className="max-h-[200px] overflow-y-auto p-1">
+                  {readerOptions.map(option => (
+                    <SelectItem key={option.key} value={option.key} className="text-sm">
+                      {option.name}
+                    </SelectItem>
+                  ))}
+                </SelectPrimitive.Viewport>
                 <SelectSeparator className="border-dashed" />
-                <SelectItem value="__new_reader__" className="text-sm text-primary">
-                  + new_reader
-                </SelectItem>
+                <div className="p-1">
+                  <SelectItem value="__new_reader__" className="text-sm text-primary font-medium">
+                    + new_reader
+                  </SelectItem>
+                </div>
               </SelectContent>
             </Select>
           </div>
