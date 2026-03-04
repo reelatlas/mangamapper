@@ -25,11 +25,11 @@ export const SeriesCard = ({ item, readerSites, onRemove }: SeriesCardProps) => 
         <CardContent className="p-4 overflow-hidden">
           <div className="flex items-stretch gap-4">
             {imgError ? (
-              <div className="w-14 min-h-[5rem] max-h-[5rem] bg-muted/50 shrink-0 overflow-hidden flex items-center justify-center p-1">
+              <div className="w-16 self-stretch bg-muted/50 shrink-0 overflow-hidden flex items-center justify-center p-1">
                 <span className="text-[9px] text-muted-foreground line-clamp-3 text-center break-all">{anime.title}</span>
               </div>
             ) : (
-              <img src={anime.coverImage} alt={anime.title} className="w-14 object-cover opacity-90 shrink-0" onError={() => setImgError(true)} />
+              <img src={anime.coverImage} alt={anime.title} className="w-16 object-contain opacity-90 shrink-0" onError={() => setImgError(true)} />
             )}
             <div className="flex-1 min-w-0 overflow-hidden">
               <span className="text-sm text-syntax-green line-clamp-2">{anime.title}</span>
