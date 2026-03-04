@@ -156,8 +156,8 @@ export const LibraryGroupedView = ({ userId, readerSites, progress, fetchReaderS
   };
 
   const saveReaderEdit = async (originalEntries: ReaderSite[]) => {
-    if (!editSiteName.trim() || !editSiteUrl.trim()) {
-      toast.error('Please fill in reader name and URL');
+    if (!editSiteName.trim()) {
+      toast.error('Please fill in reader name');
       return;
     }
     const existingReader = readerSites.find(site => site.name.toLowerCase() === editSiteName.trim().toLowerCase() && site.name.toLowerCase() !== editingReaderName);

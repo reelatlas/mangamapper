@@ -199,8 +199,8 @@ const Readers = () => {
   }, [readerSites, readerSort]);
   const addReaderSite = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (!newSiteName.trim() || !newSiteUrl.trim()) {
-      toast.error('Please fill in reader name and URL');
+    if (!newSiteName.trim()) {
+      toast.error('Please fill in reader name');
       return;
     }
     const existingReader = readerSites.find(site => site.name.toLowerCase() === newSiteName.trim().toLowerCase());
@@ -362,8 +362,8 @@ const Readers = () => {
     }
   };
   const saveReaderEdit = async (originalEntries: ReaderSite[]) => {
-    if (!editSiteName.trim() || !editSiteUrl.trim()) {
-      toast.error('Please fill in reader name and URL');
+    if (!editSiteName.trim()) {
+      toast.error('Please fill in reader name');
       return;
     }
     const existingReader = readerSites.find(site => site.name.toLowerCase() === editSiteName.trim().toLowerCase() && site.name.toLowerCase() !== editingReaderName);
