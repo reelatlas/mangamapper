@@ -11,6 +11,7 @@ import { SeriesCombobox } from '@/components/SeriesCombobox';
 import { supabase } from '@/integrations/supabase/client';
 import { toast } from 'sonner';
 import type { SortOption, SeriesAssignment, ReaderSite, AnimeProgress } from '@/types/library';
+import { ViewModeToggle, type ViewMode } from './ViewModeToggle';
 
 const formatTimestamp = (timestamp: string) => {
   const date = new Date(timestamp);
@@ -36,9 +37,11 @@ interface LibraryGroupedViewProps {
   progress: AnimeProgress[];
   fetchReaderSites: () => void;
   deleteReaderSite: (id: string) => void;
+  viewMode: ViewMode;
+  onViewModeChange: (mode: ViewMode) => void;
 }
 
-export const LibraryGroupedView = ({ userId, readerSites, progress, fetchReaderSites, deleteReaderSite }: LibraryGroupedViewProps) => {
+export const LibraryGroupedView = ({ userId, readerSites, progress, fetchReaderSites, deleteReaderSite, viewMode, onViewModeChange }: LibraryGroupedViewProps) => {
   const [readerSort, setReaderSort] = useState<SortOption>(() => {
     const saved = localStorage.getItem('mangamapper-library-reader-sort');
     return ['alpha-asc', 'alpha-desc', 'date-desc', 'date-asc'].includes(saved || '') ? saved as SortOption : 'date-desc';
@@ -220,6 +223,8 @@ export const LibraryGroupedView = ({ userId, readerSites, progress, fetchReaderS
             <ToggleGroupItem value="alpha-asc" className="text-xs font-mono px-2.5 h-7 border-dashed text-muted-foreground data-[state=on]:bg-muted data-[state=on]:text-foreground">a→z</ToggleGroupItem>
             <ToggleGroupItem value="alpha-desc" className="text-xs font-mono px-2.5 h-7 border-dashed text-muted-foreground data-[state=on]:bg-muted data-[state=on]:text-foreground">z→a</ToggleGroupItem>
           </ToggleGroup>
+          <div className="w-px h-5 bg-border mx-1" />
+          <ViewModeToggle viewMode={viewMode} onViewModeChange={onViewModeChange} />
         </div>
       )}
 

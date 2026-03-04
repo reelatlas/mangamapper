@@ -7,14 +7,17 @@ import { ArrowUpDown, BookOpen, Tv, Trash2, ExternalLink, Link2, X, Check, BookD
 import { getAnimeById } from '@/data/mockAnime';
 import type { SortOption, AnimeProgress, ReaderSite } from '@/types/library';
 import { getReadersForAnime } from '@/types/library';
+import { ViewModeToggle, type ViewMode } from './ViewModeToggle';
 
 interface LibraryFlatViewProps {
   progress: AnimeProgress[];
   readerSites: ReaderSite[];
   removeFromLibrary: (id: string) => void;
+  viewMode: ViewMode;
+  onViewModeChange: (mode: ViewMode) => void;
 }
 
-export const LibraryFlatView = ({ progress, readerSites, removeFromLibrary }: LibraryFlatViewProps) => {
+export const LibraryFlatView = ({ progress, readerSites, removeFromLibrary, viewMode, onViewModeChange }: LibraryFlatViewProps) => {
   const [confirmingDeleteId, setConfirmingDeleteId] = useState<string | null>(null);
   const [progressSort, setProgressSort] = useState<SortOption>(() => {
     const saved = localStorage.getItem('mangamapper-library-progress-sort');
@@ -81,6 +84,8 @@ export const LibraryFlatView = ({ progress, readerSites, removeFromLibrary }: Li
           <ToggleGroupItem value="alpha-asc" className="text-xs font-mono px-2.5 h-7 border-dashed text-muted-foreground data-[state=on]:bg-muted data-[state=on]:text-foreground">a→z</ToggleGroupItem>
           <ToggleGroupItem value="alpha-desc" className="text-xs font-mono px-2.5 h-7 border-dashed text-muted-foreground data-[state=on]:bg-muted data-[state=on]:text-foreground">z→a</ToggleGroupItem>
         </ToggleGroup>
+        <div className="w-px h-5 bg-border mx-1" />
+        <ViewModeToggle viewMode={viewMode} onViewModeChange={onViewModeChange} />
       </div>
 
       <div className="grid gap-3 overflow-hidden">
