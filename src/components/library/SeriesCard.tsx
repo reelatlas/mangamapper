@@ -8,15 +8,17 @@ import type { AnimeProgress, ReaderSite } from '@/types/library';
 import { getReadersForAnime } from '@/types/library';
 
 interface SeriesCardProps {
-  item: AnimeProgress;
+  item?: AnimeProgress;
+  animeId?: string;
   readerSites: ReaderSite[];
   onRemove: (id: string) => void;
 }
 
-export const SeriesCard = ({ item, readerSites, onRemove }: SeriesCardProps) => {
+export const SeriesCard = ({ item, animeId, readerSites, onRemove }: SeriesCardProps) => {
   const [confirmingDelete, setConfirmingDelete] = useState(false);
   const [imgError, setImgError] = useState(false);
-  const anime = getAnimeById(item.anime_id);
+  const resolvedAnimeId = item?.anime_id ?? animeId;
+  const anime = resolvedAnimeId ? getAnimeById(resolvedAnimeId) : null;
   if (!anime) return null;
 
   return (
@@ -35,23 +37,23 @@ export const SeriesCard = ({ item, readerSites, onRemove }: SeriesCardProps) => 
               <span className="text-sm text-syntax-green line-clamp-2">{anime.title}</span>
               <div className="flex flex-col gap-1.5 mt-2 text-xs">
                 <div className="flex items-center gap-1.5 flex-wrap">
-                  <Tv className={`w-3.5 h-3.5 shrink-0 ${item.last_watched_episode != null ? "text-primary" : "text-muted-foreground"}`} />
+                  <Tv className={`w-3.5 h-3.5 shrink-0 ${item?.last_watched_episode != null ? "text-primary" : "text-muted-foreground"}`} />
                   <span>
                     <span className="text-muted-foreground">ep:</span>
-                    <span className={item.last_watched_episode != null ? "text-foreground" : "text-muted-foreground"}>{item.last_watched_episode ?? '—'}</span>
+                    <span className={item?.last_watched_episode != null ? "text-foreground" : "text-muted-foreground"}>{item?.last_watched_episode ?? '—'}</span>
                   </span>
                 </div>
                 {anime.hasManga ? (
                   <div className="flex items-center gap-1.5 flex-wrap">
-                    <BookOpen className={`w-3.5 h-3.5 shrink-0 ${(item.last_read_volume != null || item.last_read_chapter != null) ? "text-primary" : "text-muted-foreground"}`} />
+                    <BookOpen className={`w-3.5 h-3.5 shrink-0 ${(item?.last_read_volume != null || item?.last_read_chapter != null) ? "text-primary" : "text-muted-foreground"}`} />
                     <span>
                       <span className="text-muted-foreground">vol:</span>
-                      <span className={item.last_read_volume != null ? "text-foreground" : "text-muted-foreground"}>{item.last_read_volume ?? '—'}</span>
+                      <span className={item?.last_read_volume != null ? "text-foreground" : "text-muted-foreground"}>{item?.last_read_volume ?? '—'}</span>
                     </span>
                     <span className="text-muted-foreground">·</span>
                     <span>
                       <span className="text-muted-foreground">ch:</span>
-                      <span className={item.last_read_chapter != null ? "text-foreground" : "text-muted-foreground"}>{item.last_read_chapter ?? '—'}</span>
+                      <span className={item?.last_read_chapter != null ? "text-foreground" : "text-muted-foreground"}>{item?.last_read_chapter ?? '—'}</span>
                     </span>
                   </div>
                 ) : (
@@ -65,10 +67,10 @@ export const SeriesCard = ({ item, readerSites, onRemove }: SeriesCardProps) => 
                 )}
                 {anime.hasManga && (
                   <>
-                    {getReadersForAnime(item.anime_id, readerSites).length > 0 ? (
+                    {getReadersForAnime(resolvedAnimeId!, readerSites).length > 0 ? (
                       <div className="flex items-center gap-1.5 min-h-5 flex-wrap">
                         <Glasses className="w-3.5 h-3.5 shrink-0 text-primary" />
-                        {getReadersForAnime(item.anime_id, readerSites).map((reader) => (
+                        {getReadersForAnime(resolvedAnimeId!, readerSites).map((reader) => (
                           <Button
                             key={reader.id}
                             variant="outline"
@@ -96,7 +98,7 @@ export const SeriesCard = ({ item, readerSites, onRemove }: SeriesCardProps) => 
               </div>
             </div>
             <div className="flex items-start">
-              {confirmingDelete ? (
+              {item && confirmingDelete ? (
                 <div className="flex items-center gap-1">
                   <Button variant="ghost" size="icon" onClick={(e) => { e.preventDefault(); e.stopPropagation(); onRemove(item.id); setConfirmingDelete(false); }} className="text-muted-foreground hover:text-destructive hover:bg-destructive/10">
                     <Check className="w-4 h-4" />
@@ -105,11 +107,11 @@ export const SeriesCard = ({ item, readerSites, onRemove }: SeriesCardProps) => 
                     <X className="w-4 h-4" />
                   </Button>
                 </div>
-              ) : (
+              ) : item ? (
                 <Button variant="ghost" size="icon" onClick={(e) => { e.preventDefault(); e.stopPropagation(); setConfirmingDelete(true); }} className="text-muted-foreground hover:text-destructive hover:bg-destructive/10">
                   <Trash2 className="w-4 h-4" />
                 </Button>
-              )}
+              ) : null}
             </div>
           </div>
         </CardContent>
