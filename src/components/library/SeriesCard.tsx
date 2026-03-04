@@ -15,6 +15,7 @@ interface SeriesCardProps {
 
 export const SeriesCard = ({ item, readerSites, onRemove }: SeriesCardProps) => {
   const [confirmingDelete, setConfirmingDelete] = useState(false);
+  const [imgError, setImgError] = useState(false);
   const anime = getAnimeById(item.anime_id);
   if (!anime) return null;
 
@@ -23,7 +24,13 @@ export const SeriesCard = ({ item, readerSites, onRemove }: SeriesCardProps) => 
       <Card className="border-dashed hover:border-primary/50 transition-colors cursor-pointer overflow-hidden">
         <CardContent className="p-4 overflow-hidden">
           <div className="flex items-stretch gap-4">
-            <img src={anime.coverImage} alt={anime.title} className="w-14 min-h-[5rem] object-cover opacity-90 shrink-0" />
+            {imgError ? (
+              <div className="w-14 min-h-[5rem] max-h-[5rem] bg-muted/50 shrink-0 overflow-hidden flex items-center justify-center p-1">
+                <span className="text-[9px] text-muted-foreground line-clamp-3 text-center break-all">{anime.title}</span>
+              </div>
+            ) : (
+              <img src={anime.coverImage} alt={anime.title} className="w-14 min-h-[5rem] max-h-[5rem] object-cover opacity-90 shrink-0" onError={() => setImgError(true)} />
+            )}
             <div className="flex-1 min-w-0 overflow-hidden">
               <span className="text-sm text-syntax-green line-clamp-2">{anime.title}</span>
               <div className="flex flex-col gap-1.5 mt-2 text-xs">
