@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
-import { BookOpen, Tv, Trash2, ExternalLink, Link2, X, Check } from 'lucide-react';
+import { BookOpen, Tv, Trash2, ExternalLink, Glasses, X, Check } from 'lucide-react';
 import { getAnimeById } from '@/data/mockAnime';
 import type { AnimeProgress, ReaderSite } from '@/types/library';
 import { getReadersForAnime } from '@/types/library';
@@ -67,7 +67,7 @@ export const SeriesCard = ({ item, readerSites, onRemove }: SeriesCardProps) => 
                   <>
                     {getReadersForAnime(item.anime_id, readerSites).length > 0 ? (
                       <div className="flex items-center gap-1.5 min-h-5 flex-wrap">
-                        <Link2 className="w-3.5 h-3.5 shrink-0 text-primary" />
+                        <Glasses className="w-3.5 h-3.5 shrink-0 text-primary" />
                         {getReadersForAnime(item.anime_id, readerSites).map((reader) => (
                           <Button
                             key={reader.id}
@@ -87,7 +87,7 @@ export const SeriesCard = ({ item, readerSites, onRemove }: SeriesCardProps) => 
                       </div>
                     ) : (
                       <div className="flex items-center gap-1.5 text-muted-foreground min-h-5 flex-wrap">
-                        <Link2 className="w-3.5 h-3.5 shrink-0 text-muted-foreground" />
+                        <Glasses className="w-3.5 h-3.5 shrink-0 text-muted-foreground" />
                         <span>no_reader_link</span>
                       </div>
                     )}
