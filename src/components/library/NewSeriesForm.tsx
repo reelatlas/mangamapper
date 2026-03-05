@@ -208,7 +208,7 @@ export const NewSeriesForm = ({ userId, readerSites, progress, onSuccess, onCanc
           </div>
 
           {showNewReader && (
-            <div className="pl-4">
+            <div>
               <InlineNewReaderForm
                 userId={userId}
                 existingReaders={readerSites}
