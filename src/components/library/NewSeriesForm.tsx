@@ -248,9 +248,7 @@ export const NewSeriesForm = ({ userId, readerSites, progress, onSuccess, onCanc
             />
           </div>
 
-          <div className="border-t border-dashed pt-4 mt-4" />
-
-          <div className="flex gap-2">
+          <div className="flex gap-2 mt-4">
             <Button type="submit" disabled={saving} className="font-mono text-xs border-dashed">
               <Plus className="w-3.5 h-3.5 mr-1" />
               {saving ? 'adding...' : 'add_series()'}
