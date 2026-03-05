@@ -482,7 +482,7 @@ const Readers = () => {
                   </div>
                   
                   {/* Series assignment section */}
-                  <div className="mt-8">
+                  <div className="mt-4">
                     <p className="text-xs text-muted-foreground mb-3">assign_to <span className="text-muted-foreground/60">// optional</span></p>
                     <div className="space-y-6 sm:space-y-3">
                       {seriesAssignments.map((assignment, index) => <div key={index} className="space-y-2">
@@ -520,7 +520,7 @@ const Readers = () => {
                     </div>
                   </div>
                   
-                  <div className="flex gap-2 mt-8">
+                  <div className="flex gap-2">
                     <Button type="submit" className="font-mono text-xs border-dashed">
                       <Plus className="w-3.5 h-3.5 mr-1" />
                       add_reader()
@@ -587,7 +587,7 @@ const Readers = () => {
                             </div>
                             
                             {/* Series assignment section */}
-                            <div className="mt-8">
+                            <div className="mt-4">
                               <p className="text-xs text-muted-foreground mb-3">assign_to <span className="text-muted-foreground/60">// optional</span></p>
                               <div className="space-y-6 sm:space-y-3">
                                 {editSeriesAssignments.map((assignment, index) => <div key={index} className="space-y-2">
@@ -625,7 +625,7 @@ const Readers = () => {
                               </div>
                             </div>
                             
-                            <div className="mt-8 flex flex-wrap items-center justify-between gap-3">
+                            <div className="mt-4 flex flex-wrap items-center justify-between gap-3">
                               <div className="flex items-center gap-2">
                                 <Button onClick={() => saveReaderEdit(group.entries)} className="font-mono text-xs border-dashed">
                                   <Check className="w-3.5 h-3.5 mr-1" />
