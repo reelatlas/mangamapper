@@ -409,36 +409,38 @@ export const LibraryGroupedView = ({ userId, readerSites, progress, fetchReaderS
 
                 {/* Hover overlay */}
                 {confirmingDeleteReaderView === group.name ? (
-                  <div className="absolute inset-0 bg-background/90 flex items-center justify-center gap-3 p-3 z-10" onClick={e => e.stopPropagation()}>
+                  <div className="absolute inset-0 bg-background/90 flex items-center justify-center gap-3 p-3 z-10">
                     <span className="text-xs text-muted-foreground font-mono mr-1">delete_reader?</span>
-                    <Button variant="ghost" size="icon" onClick={() => { group.entries.forEach(entry => deleteReaderSite(entry.id)); setConfirmingDeleteReaderView(null); }} className="text-muted-foreground hover:text-destructive hover:bg-destructive/10 h-8 w-8">
+                    <Button variant="ghost" size="icon" onClick={e => { e.stopPropagation(); group.entries.forEach(entry => deleteReaderSite(entry.id)); setConfirmingDeleteReaderView(null); }} className="text-muted-foreground hover:text-destructive hover:bg-destructive/10 h-8 w-8">
                       <Check className="w-3.5 h-3.5" />
                     </Button>
-                    <Button variant="ghost" size="icon" onClick={() => setConfirmingDeleteReaderView(null)} className="text-muted-foreground hover:text-muted-foreground hover:bg-muted h-8 w-8">
+                    <Button variant="ghost" size="icon" onClick={e => { e.stopPropagation(); setConfirmingDeleteReaderView(null); }} className="text-muted-foreground hover:text-muted-foreground hover:bg-muted h-8 w-8">
                       <X className="w-3.5 h-3.5" />
                     </Button>
                   </div>
                 ) : (
-                  <div className="absolute inset-0 bg-background/90 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center p-3 z-10" onClick={e => e.stopPropagation()}>
+                  <div className="absolute inset-0 bg-background/90 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-between p-3 z-10">
+                    <div className="flex items-center">
+                      <div className="flex items-center gap-1 px-3">
+                        <Button variant="ghost" size="sm" asChild className="font-mono text-xs gap-1" onClick={e => e.stopPropagation()}>
+                          <a href={group.url} target="_blank" rel="noopener noreferrer">
+                            <Glasses className="w-3 h-3" />open_reader
+                          </a>
+                        </Button>
+                      </div>
+                      <div className="flex items-center gap-1 pl-3">
+                        <Button variant="ghost" size="sm" onClick={e => { e.stopPropagation(); startEditingReader(group); }} className="font-mono text-xs gap-1">
+                          <Pencil className="w-3 h-3" />edit
+                        </Button>
+                        <Button variant="ghost" size="sm" onClick={e => { e.stopPropagation(); setConfirmingDeleteReaderView(group.name); }} className="font-mono text-xs gap-1 text-muted-foreground hover:text-destructive hover:bg-destructive/10">
+                          <Trash2 className="w-3 h-3" />delete
+                        </Button>
+                      </div>
+                    </div>
                     <div className="flex items-center gap-1 px-3">
                       <Button variant="ghost" size="sm" onClick={() => toggleGroup(group.name.toLowerCase())} className="font-mono text-xs gap-1">
                         <TripleArrow collapsed={collapsedGroups.has(group.name.toLowerCase())} compact />
                         {collapsedGroups.has(group.name.toLowerCase()) ? 'expand' : 'collapse'}
-                      </Button>
-                    </div>
-                    <div className="flex items-center gap-1 px-3">
-                      <Button variant="ghost" size="sm" asChild className="font-mono text-xs gap-1">
-                        <a href={group.url} target="_blank" rel="noopener noreferrer">
-                          <Glasses className="w-3 h-3" />open_reader
-                        </a>
-                      </Button>
-                    </div>
-                    <div className="flex items-center gap-1 pl-3">
-                      <Button variant="ghost" size="sm" onClick={() => startEditingReader(group)} className="font-mono text-xs gap-1">
-                        <Pencil className="w-3 h-3" />edit
-                      </Button>
-                      <Button variant="ghost" size="sm" onClick={() => setConfirmingDeleteReaderView(group.name)} className="font-mono text-xs gap-1 text-muted-foreground hover:text-destructive hover:bg-destructive/10">
-                        <Trash2 className="w-3 h-3" />delete
                       </Button>
                     </div>
                   </div>
