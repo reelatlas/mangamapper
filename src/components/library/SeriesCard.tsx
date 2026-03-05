@@ -85,7 +85,7 @@ export const SeriesCard = ({ item, animeId, readerSites, onRemove, userId, onSav
         userModified: true,
       })));
     } else {
-      setEditReaderAssignments([]);
+      setEditReaderAssignments([{ readerName: '', readerUrl: '', seriesUrl: '', suffix: '', userModified: false }]);
     }
     setIsEditing(true);
   };
