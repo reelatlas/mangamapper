@@ -434,8 +434,8 @@ export const CollectionSection = ({ anime }: CollectionSectionProps) => {
             <div className="flex flex-wrap gap-6">
               <div className="space-y-2">
                 <div className="flex items-center gap-1.5 text-xs">
-                  <Tv className="w-3.5 h-3.5 text-primary" />
-                  <span className="text-syntax-cyan">last_watched</span>
+                  <Tv className={`w-3.5 h-3.5 ${watchedEpisode.trim() ? 'text-primary' : 'text-muted-foreground'}`} />
+                  <span className={watchedEpisode.trim() ? 'text-syntax-cyan' : 'text-muted-foreground'}>last_watched</span>
                 </div>
                 <div>
                   <span className="text-muted-foreground text-xs block mb-1">episode</span>
@@ -449,8 +449,8 @@ export const CollectionSection = ({ anime }: CollectionSectionProps) => {
               {anime.hasManga ? (
                 <div className="space-y-2">
                   <div className="flex items-center gap-1.5 text-xs">
-                    <BookOpen className="w-3.5 h-3.5 text-primary" />
-                    <span className="text-syntax-cyan">last_read</span>
+                    <BookOpen className={`w-3.5 h-3.5 ${(readVolume.trim() || readChapter.trim()) ? 'text-primary' : 'text-muted-foreground'}`} />
+                    <span className={(readVolume.trim() || readChapter.trim()) ? 'text-syntax-cyan' : 'text-muted-foreground'}>last_read</span>
                   </div>
                   <div className="flex items-center gap-2">
                     <div>
@@ -489,9 +489,13 @@ export const CollectionSection = ({ anime }: CollectionSectionProps) => {
 
         {/* Section 3: Reader links */}
         {inLibrary && anime.hasManga && (
-          <div className="flex flex-wrap items-center gap-2">
+          <div className="space-y-2">
+            <div className="flex items-center gap-1.5 text-xs">
+              <Glasses className={`w-3.5 h-3.5 ${linkedReaders.length > 0 ? 'text-primary' : 'text-muted-foreground'}`} />
+              <span className={linkedReaders.length > 0 ? 'text-syntax-cyan' : 'text-muted-foreground'}>readers</span>
+            </div>
             {linkedReaders.length > 0 ? (
-              <>
+              <div className="flex flex-wrap items-center gap-2">
                 {linkedReaders.map((reader) => (
                   <Button
                     key={reader.id}
@@ -504,12 +508,9 @@ export const CollectionSection = ({ anime }: CollectionSectionProps) => {
                     <ExternalLink className="w-3 h-3 shrink-0" />
                   </Button>
                 ))}
-              </>
-            ) : (
-              <div className="flex items-center gap-1.5 text-muted-foreground">
-                <Glasses className="w-3.5 h-3.5 shrink-0 text-muted-foreground" />
-                <span className="text-xs">reader(null)</span>
               </div>
+            ) : (
+              <span className="text-xs text-muted-foreground">reader(null)</span>
             )}
           </div>
         )}
