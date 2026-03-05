@@ -44,6 +44,7 @@ export const useLibraryData = () => {
   };
 
   const removeFromLibrary = async (id: string) => {
+    const entry = progress.find(p => p.id === id);
     const { error } = await supabase
       .from('anime_progress')
       .update({ in_library: false })
@@ -52,8 +53,17 @@ export const useLibraryData = () => {
     if (error) {
       toast.error('Failed to remove from library');
     } else {
+      // Clean up reader assignments for this anime
+      if (entry && user) {
+        await supabase
+          .from('manga_reader_sites')
+          .delete()
+          .eq('user_id', user.id)
+          .eq('anime_id', entry.anime_id);
+      }
       toast.success('Removed from library');
       fetchProgress();
+      fetchReaderSites();
     }
   };
 
