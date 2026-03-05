@@ -520,7 +520,7 @@ const Readers = () => {
                     </div>
                   </div>
                   
-                            <div className="flex gap-2 mt-6">
+                            <div className="flex gap-2 !mt-8">
                     <Button type="submit" className="font-mono text-xs border-dashed">
                       <Plus className="w-3.5 h-3.5 mr-1" />
                       add_reader()
@@ -625,7 +625,7 @@ const Readers = () => {
                               </div>
                             </div>
                             
-                            <div className="mt-6 flex flex-wrap items-center justify-between gap-3">
+                            <div className="!mt-8 flex flex-wrap items-center justify-between gap-3">
                               <div className="flex items-center gap-2">
                                 <Button onClick={() => saveReaderEdit(group.entries)} className="font-mono text-xs border-dashed">
                                   <Check className="w-3.5 h-3.5 mr-1" />
