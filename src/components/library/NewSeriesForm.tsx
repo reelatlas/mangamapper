@@ -173,7 +173,7 @@ export const NewSeriesForm = ({ userId, readerSites, progress, onSuccess, onCanc
             <div className="flex gap-2 items-center">
               <div className="flex-1 min-w-0">
                 <Select value={selectedReaderKey} onValueChange={handleReaderChange}>
-                  <SelectTrigger className="font-mono text-sm border-dashed bg-muted/30 data-[placeholder]:text-muted-foreground">
+                  <SelectTrigger className={`font-mono text-sm border-dashed bg-muted/30 data-[placeholder]:text-muted-foreground ${selectedReaderKey ? 'text-syntax-green' : ''}`}>
                     <SelectValue placeholder="select reader..." />
                   </SelectTrigger>
                   <SelectPrimitive.Portal>
@@ -208,7 +208,7 @@ export const NewSeriesForm = ({ userId, readerSites, progress, onSuccess, onCanc
           </div>
 
           {showNewReader && (
-            <div className="pl-4">
+            <div>
               <InlineNewReaderForm
                 userId={userId}
                 existingReaders={readerSites}
