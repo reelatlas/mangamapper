@@ -386,25 +386,25 @@ export const LibraryGroupedView = ({ userId, readerSites, progress, fetchReaderS
                 className="group relative border border-dashed border-muted-foreground/80 bg-primary/10 p-3 cursor-pointer select-none overflow-hidden"
                 onClick={() => toggleGroup(group.name.toLowerCase())}
               >
-                <div className="flex items-center gap-4">
-                  <div className="space-y-1 flex-1 min-w-0">
+                <div className="space-y-1">
+                  <div className="flex items-center justify-between gap-2">
                     <div className="overflow-hidden min-w-0 text-sm flex items-center gap-1.5">
                       <span className="text-syntax-cyan">reader_name</span>
                       <span className="text-muted-foreground">: </span>
                       <span className="text-syntax-green break-all">{group.name}</span>
                     </div>
-                    {group.notes && (
-                      <div className="text-xs overflow-hidden">
-                        <span className="text-syntax-cyan">notes</span>
-                        <span className="text-muted-foreground">: </span>
-                        <span className="text-muted-foreground break-all">{group.notes}</span>
-                      </div>
-                    )}
+                    <div className="flex items-center gap-2 flex-shrink-0">
+                      <span className="text-muted-foreground text-sm">({seriesEntries.length})</span>
+                      <TripleArrow collapsed={collapsedGroups.has(group.name.toLowerCase())} />
+                    </div>
                   </div>
-                  <div className="flex items-center gap-2 flex-shrink-0">
-                    <span className="text-muted-foreground text-sm">({seriesEntries.length})</span>
-                    <TripleArrow collapsed={collapsedGroups.has(group.name.toLowerCase())} />
-                  </div>
+                  {group.notes && (
+                    <div className="text-xs overflow-hidden">
+                      <span className="text-syntax-cyan">notes</span>
+                      <span className="text-muted-foreground">: </span>
+                      <span className="text-muted-foreground break-all">{group.notes}</span>
+                    </div>
+                  )}
                 </div>
 
                 {/* Hover overlay */}
