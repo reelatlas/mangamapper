@@ -44,6 +44,22 @@ interface LibraryGroupedViewProps {
 }
 
 export const LibraryGroupedView = ({ userId, readerSites, progress, fetchReaderSites, deleteReaderSite, removeFromLibrary, viewMode, onViewModeChange }: LibraryGroupedViewProps) => {
+  const [collapsedGroups, setCollapsedGroups] = useState<Set<string>>(() => {
+    try {
+      const saved = localStorage.getItem('mangamapper-library-collapsed-groups');
+      return saved ? new Set(JSON.parse(saved)) : new Set();
+    } catch { return new Set(); }
+  });
+
+  const toggleGroup = (groupName: string) => {
+    setCollapsedGroups(prev => {
+      const next = new Set(prev);
+      if (next.has(groupName)) next.delete(groupName); else next.add(groupName);
+      localStorage.setItem('mangamapper-library-collapsed-groups', JSON.stringify([...next]));
+      return next;
+    });
+  };
+
   const [readerSort, setReaderSort] = useState<SortOption>(() => {
     const saved = localStorage.getItem('mangamapper-library-reader-sort');
     return ['alpha-asc', 'alpha-desc', 'date-desc', 'date-asc'].includes(saved || '') ? saved as SortOption : 'date-desc';
