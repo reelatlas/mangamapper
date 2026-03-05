@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { Check, ChevronDown, Search } from 'lucide-react';
 import { cn } from '@/lib/utils';
-import { Button } from '@/components/ui/button';
+
 import {
   Command,
   CommandEmpty,
@@ -28,7 +28,7 @@ export function SeriesCombobox({
   value, 
   onValueChange, 
   excludeIds = [],
-  placeholder = "search series..."
+  placeholder = "search series"
 }: SeriesComboboxProps) {
   const [open, setOpen] = useState(false);
   const [search, setSearch] = useState('');

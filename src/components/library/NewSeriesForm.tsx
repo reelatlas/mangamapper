@@ -153,7 +153,7 @@ export const NewSeriesForm = ({ userId, readerSites, progress, onSuccess, onCanc
                   value={animeId}
                   onValueChange={setAnimeId}
                   excludeIds={progress.map(p => p.anime_id)}
-                  placeholder="search series..."
+                  placeholder="search series"
                 />
               </div>
               {animeId && (
@@ -174,7 +174,7 @@ export const NewSeriesForm = ({ userId, readerSites, progress, onSuccess, onCanc
               <div className="flex-1 min-w-0">
                 <Select value={selectedReaderKey} onValueChange={handleReaderChange}>
                   <SelectTrigger className="font-mono text-sm border-dashed bg-muted/30 data-[placeholder]:text-muted-foreground">
-                    <SelectValue placeholder="select reader..." />
+                    <SelectValue placeholder="select reader" />
                   </SelectTrigger>
                   <SelectPrimitive.Portal>
                     <SelectPrimitive.Content className="font-mono border-dashed relative z-50 w-[var(--radix-select-trigger-width)] overflow-hidden rounded-md border bg-popover text-popover-foreground shadow-md data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 data-[side=bottom]:slide-in-from-top-2 data-[side=bottom]:translate-y-1" position="popper">
