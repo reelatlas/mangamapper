@@ -5,7 +5,7 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { ToggleGroup, ToggleGroupItem } from '@/components/ui/toggle-group';
-import { ArrowUpDown, ExternalLink, Pencil, X, Check, Trash2, Plus, BookDashed, BookOpenText } from 'lucide-react';
+import { ArrowUpDown, ExternalLink, Pencil, X, Check, Trash2, Plus, BookDashed, BookOpenText, ChevronDown, ChevronRight } from 'lucide-react';
 import { mockAnimeData } from '@/data/mockAnime';
 import { SeriesCard } from './SeriesCard';
 import { SeriesCombobox } from '@/components/SeriesCombobox';
@@ -44,6 +44,22 @@ interface LibraryGroupedViewProps {
 }
 
 export const LibraryGroupedView = ({ userId, readerSites, progress, fetchReaderSites, deleteReaderSite, removeFromLibrary, viewMode, onViewModeChange }: LibraryGroupedViewProps) => {
+  const [collapsedGroups, setCollapsedGroups] = useState<Set<string>>(() => {
+    try {
+      const saved = localStorage.getItem('mangamapper-library-collapsed-groups');
+      return saved ? new Set(JSON.parse(saved)) : new Set();
+    } catch { return new Set(); }
+  });
+
+  const toggleGroup = (groupName: string) => {
+    setCollapsedGroups(prev => {
+      const next = new Set(prev);
+      if (next.has(groupName)) next.delete(groupName); else next.add(groupName);
+      localStorage.setItem('mangamapper-library-collapsed-groups', JSON.stringify([...next]));
+      return next;
+    });
+  };
+
   const [readerSort, setReaderSort] = useState<SortOption>(() => {
     const saved = localStorage.getItem('mangamapper-library-reader-sort');
     return ['alpha-asc', 'alpha-desc', 'date-desc', 'date-asc'].includes(saved || '') ? saved as SortOption : 'date-desc';
@@ -351,14 +367,25 @@ export const LibraryGroupedView = ({ userId, readerSites, progress, fetchReaderS
           // View mode
           return (
             <div key={group.name} className="space-y-3">
-              <div className="border border-dashed p-3 space-y-1 bg-card">
+              <div
+                className="border border-dashed p-3 space-y-1 bg-card cursor-pointer select-none"
+                onClick={() => toggleGroup(group.name.toLowerCase())}
+              >
                 <div className="flex items-center justify-between gap-2">
-                  <div className="overflow-hidden min-w-0 text-sm">
+                  <div className="overflow-hidden min-w-0 text-sm flex items-center gap-1.5">
+                    {collapsedGroups.has(group.name.toLowerCase()) ? (
+                      <ChevronRight className="w-3.5 h-3.5 text-muted-foreground flex-shrink-0" />
+                    ) : (
+                      <ChevronDown className="w-3.5 h-3.5 text-muted-foreground flex-shrink-0" />
+                    )}
                     <span className="text-syntax-cyan">reader_name</span>
                     <span className="text-muted-foreground">: </span>
                     <span className="text-syntax-green break-all">{group.name}</span>
+                    {seriesEntries.length > 0 && (
+                      <span className="text-muted-foreground text-xs">({seriesEntries.length})</span>
+                    )}
                   </div>
-                  <div className="flex items-center gap-1 shrink-0">
+                  <div className="flex items-center gap-1 shrink-0" onClick={e => e.stopPropagation()}>
                     <Button variant="ghost" size="icon" onClick={() => startEditingReader(group)} className="text-muted-foreground hover:text-accent hover:bg-accent/10 h-6 w-6">
                       <Pencil className="w-3 h-3" />
                     </Button>
@@ -377,34 +404,38 @@ export const LibraryGroupedView = ({ userId, readerSites, progress, fetchReaderS
                   </div>
                 )}
               </div>
-              {seriesEntries.length === 0 && (
-                <div
-                  className="border border-dashed rounded-sm py-6 flex flex-col items-center justify-center gap-2 cursor-pointer hover:border-primary/40 transition-colors"
-                  onClick={() => startEditingReader(group)}
-                >
-                  <Plus className="w-4 h-4 text-muted-foreground" />
-                  <p className="text-xs text-muted-foreground">
-                    <span className="text-muted-foreground/60">// </span>assign_series
-                  </p>
-                </div>
-              )}
-              {seriesEntries.length > 0 && (
-                <div className="grid gap-3">
-                  {seriesEntries.map(entry => {
-                    const progressItem = progress.find(p => p.anime_id === entry.anime_id);
-                    return (
-                      <SeriesCard
-                        key={entry.id}
-                        item={progressItem}
-                        animeId={entry.anime_id ?? undefined}
-                        readerSites={readerSites}
-                        onRemove={removeFromLibrary}
-                        userId={userId}
-                        onSave={fetchReaderSites}
-                      />
-                    );
-                  })}
-                </div>
+              {!collapsedGroups.has(group.name.toLowerCase()) && (
+                <>
+                  {seriesEntries.length === 0 && (
+                    <div
+                      className="border border-dashed rounded-sm py-6 flex flex-col items-center justify-center gap-2 cursor-pointer hover:border-primary/40 transition-colors"
+                      onClick={() => startEditingReader(group)}
+                    >
+                      <Plus className="w-4 h-4 text-muted-foreground" />
+                      <p className="text-xs text-muted-foreground">
+                        <span className="text-muted-foreground/60">// </span>assign_series
+                      </p>
+                    </div>
+                  )}
+                  {seriesEntries.length > 0 && (
+                    <div className="grid gap-3">
+                      {seriesEntries.map(entry => {
+                        const progressItem = progress.find(p => p.anime_id === entry.anime_id);
+                        return (
+                          <SeriesCard
+                            key={entry.id}
+                            item={progressItem}
+                            animeId={entry.anime_id ?? undefined}
+                            readerSites={readerSites}
+                            onRemove={removeFromLibrary}
+                            userId={userId}
+                            onSave={fetchReaderSites}
+                          />
+                        );
+                      })}
+                    </div>
+                  )}
+                </>
               )}
             </div>
           );
