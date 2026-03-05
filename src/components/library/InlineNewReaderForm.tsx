@@ -70,7 +70,7 @@ export const InlineNewReaderForm = ({ userId, existingReaders, onCreated, onCanc
             placeholder="LINE マンガ"
             value={name}
             onChange={(e) => setName(e.target.value)}
-            className="font-mono text-sm border-dashed bg-background/80"
+            className="font-mono text-sm border-dashed bg-card"
           />
         </div>
         <div className="space-y-1.5">
@@ -82,7 +82,7 @@ export const InlineNewReaderForm = ({ userId, existingReaders, onCreated, onCanc
             placeholder="manga.line.me"
             value={url}
             onChange={(e) => setUrl(e.target.value)}
-            className="font-mono text-sm border-dashed bg-background/80"
+            className="font-mono text-sm border-dashed bg-card"
           />
         </div>
       </div>
@@ -95,7 +95,7 @@ export const InlineNewReaderForm = ({ userId, existingReaders, onCreated, onCanc
           placeholder="reliable fan subs"
           value={notes}
           onChange={(e) => setNotes(e.target.value)}
-          className="font-mono text-sm border-dashed bg-background/80"
+          className="font-mono text-sm border-dashed bg-card"
         />
       </div>
       <div className="flex gap-2 !mt-8">
