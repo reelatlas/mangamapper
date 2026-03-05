@@ -92,7 +92,7 @@ export const InlineNewReaderForm = ({ userId, existingReaders, onCreated, onCanc
           
         </Label>
         <Input
-          placeholder="reliable fan subs"
+          placeholder="top-tier fan subs"
           value={notes}
           onChange={(e) => setNotes(e.target.value)}
           className="font-mono text-sm border-dashed bg-card"
