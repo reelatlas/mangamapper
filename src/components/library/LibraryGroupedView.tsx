@@ -437,12 +437,9 @@ export const LibraryGroupedView = ({ userId, readerSites, progress, fetchReaderS
                         </Button>
                       </div>
                     </div>
-                    <div className="flex items-center gap-1 px-3">
-                      <Button variant="ghost" size="sm" onClick={() => toggleGroup(group.name.toLowerCase())} className="font-mono text-xs gap-1">
-                        <TripleArrow collapsed={collapsedGroups.has(group.name.toLowerCase())} compact />
-                        {collapsedGroups.has(group.name.toLowerCase()) ? 'expand' : 'collapse'}
-                      </Button>
-                    </div>
+                    <span className="font-mono text-xs text-muted-foreground px-3">
+                      {collapsedGroups.has(group.name.toLowerCase()) ? 'expand' : 'collapse'}
+                    </span>
                   </div>
                 )}
               </div>
@@ -481,19 +478,40 @@ export const LibraryGroupedView = ({ userId, readerSites, progress, fetchReaderS
         {/* Unassigned series */}
         {unassignedProgress.length > 0 && (
           <div className="space-y-3">
-            <p className="text-xs text-muted-foreground">// unassigned_series ({unassignedProgress.length})</p>
-            <div className="grid gap-3">
-              {unassignedProgress.map(item => (
-                <SeriesCard
-                  key={item.id}
-                  item={item}
-                  readerSites={readerSites}
-                  onRemove={removeFromLibrary}
-                  userId={userId}
-                  onSave={fetchReaderSites}
-                />
-              ))}
+            <div
+              className="group relative border border-dashed border-muted-foreground/80 bg-primary/10 p-3 cursor-pointer select-none overflow-hidden"
+              onClick={() => toggleGroup('unassigned')}
+            >
+              <div className="flex items-center justify-between gap-2">
+                <div className="text-sm text-muted-foreground">
+                  <span className="text-muted-foreground/60">// </span>
+                  <span className="text-syntax-green">unassigned_series</span>
+                </div>
+                <div className="flex items-center gap-2 flex-shrink-0">
+                  <span className="text-muted-foreground text-sm">({unassignedProgress.length})</span>
+                  <TripleArrow collapsed={collapsedGroups.has('unassigned')} />
+                </div>
+              </div>
+              <div className="absolute inset-0 bg-background/90 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-end p-3 z-10">
+                <span className="font-mono text-xs text-muted-foreground px-3">
+                  {collapsedGroups.has('unassigned') ? 'expand' : 'collapse'}
+                </span>
+              </div>
             </div>
+            {!collapsedGroups.has('unassigned') && (
+              <div className="grid gap-3">
+                {unassignedProgress.map(item => (
+                  <SeriesCard
+                    key={item.id}
+                    item={item}
+                    readerSites={readerSites}
+                    onRemove={removeFromLibrary}
+                    userId={userId}
+                    onSave={fetchReaderSites}
+                  />
+                ))}
+              </div>
+            )}
           </div>
         )}
       </div>
