@@ -53,7 +53,7 @@ export const NewSeriesForm = ({ userId, readerSites, progress, onSuccess, onCanc
         url: newlyCreatedReader.url,
       });
     }
-    return options;
+    return options.sort((a, b) => a.name.localeCompare(b.name));
   }, [readerSites, newlyCreatedReader]);
 
   const handleReaderChange = (key: string) => {
