@@ -372,19 +372,19 @@ export const SeriesCard = ({ item, animeId, readerSites, onRemove, userId, onSav
                         </div>
                       </div>
                     );
-                  })}
+                })}
+                  {showInlineNewReader && userId && (
+                    <InlineNewReaderForm
+                      userId={userId}
+                      existingReaders={readerSites}
+                      onCreated={handleNewReaderCreated}
+                      onCancel={() => setShowInlineNewReader(false)}
+                    />
+                  )}
                   <Button type="button" variant="outline" size="sm" onClick={addReaderRow} className="text-xs border-dashed">
                     <Plus className="w-3.5 h-3.5 mr-1" />add_another
                   </Button>
                 </div>
-                {showInlineNewReader && userId && (
-                  <InlineNewReaderForm
-                    userId={userId}
-                    existingReaders={readerSites}
-                    onCreated={handleNewReaderCreated}
-                    onCancel={() => setShowInlineNewReader(false)}
-                  />
-                )}
               </div>
             )}
 
