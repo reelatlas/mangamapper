@@ -77,7 +77,7 @@ const AnimeDetail = () => {
       
       <main className="container py-8">
         {/* Hero section */}
-        <div className="flex flex-col lg:flex-row gap-8 mb-10">
+        <div className="flex flex-col lg:flex-row gap-6 mb-10">
           {/* Cover image */}
           <div className="w-full lg:w-64 shrink-0">
             <Card className="border-dashed overflow-hidden">
