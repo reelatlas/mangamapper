@@ -629,7 +629,6 @@ const Readers = () => {
                                   add_another
                                 </Button>
                               </div>
-                              </div>
                             </div>
                             
                             <div className="border-t border-dashed pt-4 mt-4 flex flex-wrap items-center justify-between gap-3">
