@@ -375,11 +375,6 @@ export const LibraryGroupedView = ({ userId, readerSites, progress, fetchReaderS
                     <span className="text-muted-foreground break-all">{group.notes}</span>
                   </div>
                 )}
-                <div className="text-xs overflow-hidden">
-                  <span className="text-syntax-cyan">last_updated</span>
-                  <span className="text-muted-foreground">: </span>
-                  <span className="text-muted-foreground break-all">{formatTimestamp(group.latestUpdatedAt)}</span>
-                </div>
                 {seriesEntries.length === 0 && (
                   <div className="text-xs text-muted-foreground pt-1">// no_series_assigned</div>
                 )}
