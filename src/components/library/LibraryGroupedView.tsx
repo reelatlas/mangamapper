@@ -414,33 +414,32 @@ export const LibraryGroupedView = ({ userId, readerSites, progress, fetchReaderS
             </div>
           );
         })}
-      </div>
-
-      {/* Unassigned series */}
-      {unassignedProgress.length > 0 && (
-        <div className="space-y-3">
-          <p className="text-xs text-muted-foreground">// unassigned_series ({unassignedProgress.length})</p>
-          <div className="grid gap-3">
-            {unassignedProgress.map(item => (
-              <SeriesCard
-                key={item.id}
-                item={item}
-                readerSites={readerSites}
-                onRemove={(id) => {
-                  const removeFromLibrary = async () => {
-                    const { error } = await supabase.from('anime_progress').update({ in_library: false }).eq('id', id);
-                    if (!error) {
-                      toast.success('Removed from library');
-                      fetchReaderSites();
-                    }
-                  };
-                  removeFromLibrary();
-                }}
-              />
-            ))}
+        {/* Unassigned series */}
+        {unassignedProgress.length > 0 && (
+          <div className="space-y-3">
+            <p className="text-xs text-muted-foreground">// unassigned_series ({unassignedProgress.length})</p>
+            <div className="grid gap-3">
+              {unassignedProgress.map(item => (
+                <SeriesCard
+                  key={item.id}
+                  item={item}
+                  readerSites={readerSites}
+                  onRemove={(id) => {
+                    const removeFromLibrary = async () => {
+                      const { error } = await supabase.from('anime_progress').update({ in_library: false }).eq('id', id);
+                      if (!error) {
+                        toast.success('Removed from library');
+                        fetchReaderSites();
+                      }
+                    };
+                    removeFromLibrary();
+                  }}
+                />
+              ))}
+            </div>
           </div>
-        </div>
-      )}
+        )}
+      </div>
     </div>
   );
 };
