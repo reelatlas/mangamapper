@@ -429,7 +429,7 @@ export const LibraryGroupedView = ({ userId, readerSites, progress, fetchReaderS
                     <div className="flex items-center gap-1 px-3">
                       <Button variant="ghost" size="sm" asChild className="font-mono text-xs gap-1">
                         <a href={group.url} target="_blank" rel="noopener noreferrer">
-                          <ExternalLink className="w-3 h-3" />open_reader
+                          <Glasses className="w-3 h-3" />open_reader
                         </a>
                       </Button>
                     </div>
@@ -447,13 +447,9 @@ export const LibraryGroupedView = ({ userId, readerSites, progress, fetchReaderS
               {!collapsedGroups.has(group.name.toLowerCase()) && (
                 <>
                   {seriesEntries.length === 0 && (
-                    <div
-                      className="border border-dashed rounded-sm py-6 flex flex-col items-center justify-center gap-2 cursor-pointer hover:border-primary/40 transition-colors"
-                      onClick={() => startEditingReader(group)}
-                    >
-                      <Plus className="w-4 h-4 text-muted-foreground" />
-                      <p className="text-xs text-muted-foreground">
-                        <span className="text-muted-foreground/60">// </span>assign_series
+                    <div className="px-3 py-2">
+                      <p className="text-xs text-muted-foreground font-mono">
+                        <span className="text-muted-foreground/60">// </span>series_assigned(null)
                       </p>
                     </div>
                   )}
