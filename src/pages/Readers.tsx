@@ -581,7 +581,7 @@ const Readers = () => {
                               <Label className="text-xs">
                                 <span className="text-syntax-cyan">notes</span>
                               </Label>
-                              <Input placeholder="best Berserk scans for golden age arc" value={editSiteNotes} onChange={e => setEditSiteNotes(e.target.value)} className="font-mono text-sm border-dashed bg-muted/30" />
+                              <Input placeholder="reliable fan subs" value={editSiteNotes} onChange={e => setEditSiteNotes(e.target.value)} className="font-mono text-sm border-dashed bg-muted/30" />
                             </div>
                             
                             {/* Series assignment section */}
