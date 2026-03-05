@@ -82,23 +82,8 @@ const Library = () => {
         </div>
 
         <div className="space-y-6">
-          {/* Action buttons row */}
-          <div className="flex flex-wrap items-center gap-2">
-            {!showNewSeries && !showNewReader && (
-              <>
-                <Button onClick={() => setShowNewSeries(true)} variant="outline" className="font-mono text-xs border-dashed">
-                  {'>'} new_series
-                </Button>
-                <Button onClick={() => setShowNewReader(true)} variant="outline" className="font-mono text-xs border-dashed">
-                  {'>'} new_reader
-                </Button>
-              </>
-            )}
-            
-          </div>
-
-          {/* New Series Form */}
-          {showNewSeries && user && (
+          {/* Action buttons or active form */}
+          {showNewSeries && user ? (
             <NewSeriesForm
               userId={user.id}
               readerSites={readerSites}
@@ -107,10 +92,7 @@ const Library = () => {
               onCancel={() => setShowNewSeries(false)}
               preSelectAnimeId={preSelectAnimeId}
             />
-          )}
-
-          {/* New Reader Form */}
-          {showNewReader && user && (
+          ) : showNewReader && user ? (
             <NewReaderForm
               userId={user.id}
               readerSites={readerSites}
@@ -118,6 +100,15 @@ const Library = () => {
               onCancel={() => { setShowNewReader(false); setPreSelectAnimeId(undefined); }}
               preSelectAnimeId={preSelectAnimeId}
             />
+          ) : (
+            <div className="flex flex-wrap items-center gap-2">
+              <Button onClick={() => setShowNewSeries(true)} variant="outline" className="font-mono text-xs border-dashed">
+                {'>'} new_series
+              </Button>
+              <Button onClick={() => setShowNewReader(true)} variant="outline" className="font-mono text-xs border-dashed">
+                {'>'} new_reader
+              </Button>
+            </div>
           )}
 
           {/* View content */}
