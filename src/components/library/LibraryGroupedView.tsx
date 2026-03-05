@@ -388,11 +388,13 @@ export const LibraryGroupedView = ({ userId, readerSites, progress, fetchReaderS
                     <span className="text-syntax-cyan">reader_name</span>
                     <span className="text-muted-foreground">: </span>
                     <span className="text-syntax-green break-all">{group.name}</span>
-                    {seriesEntries.length > 0 && (
-                      <span className="text-muted-foreground text-xs">({seriesEntries.length})</span>
-                    )}
                   </div>
-                  <TripleArrow collapsed={collapsedGroups.has(group.name.toLowerCase())} />
+                  <div className="flex items-center gap-2 flex-shrink-0">
+                    {seriesEntries.length > 0 && (
+                      <span className="text-muted-foreground text-sm">({seriesEntries.length})</span>
+                    )}
+                    <TripleArrow collapsed={collapsedGroups.has(group.name.toLowerCase())} />
+                  </div>
                 </div>
                 {group.notes && (
                   <div className="text-xs overflow-hidden">
