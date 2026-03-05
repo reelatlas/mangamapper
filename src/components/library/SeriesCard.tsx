@@ -503,29 +503,29 @@ export const SeriesCard = ({ item, animeId, readerSites, onRemove, userId, onSav
           </div>
         ) : (
           <div className="absolute inset-0 bg-background/90 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center z-10">
-            <div className="flex items-center gap-1 px-3 border-r border-border/50">
-              <Button variant="outline" size="sm" className="font-mono text-xs border-dashed gap-1" asChild>
+            <div className="flex items-center gap-1 px-3">
+              <Button variant="ghost" size="sm" className="font-mono text-xs gap-1" asChild>
                 <Link to={`/anime/${anime.id}`}>
                   view_details
                 </Link>
               </Button>
             </div>
             {linkedReaders.length > 0 && (
-              <div className="flex items-center gap-1 px-3 border-r border-border/50">
+              <div className="flex items-center gap-1 px-3">
                 {linkedReaders.length === 1 ? (
-                  <Button variant="outline" size="sm" onClick={(e) => { e.stopPropagation(); window.open(linkedReaders[0].series_url!, '_blank'); }} className="font-mono text-xs border-dashed gap-1">
+                  <Button variant="ghost" size="sm" onClick={(e) => { e.stopPropagation(); window.open(linkedReaders[0].series_url!, '_blank'); }} className="font-mono text-xs gap-1">
                     <Glasses className="w-3 h-3" />{linkedReaders[0].name}
                   </Button>
                 ) : (
                   linkedReaders.map(reader => (
-                    <Button key={reader.id} variant="outline" size="sm" onClick={(e) => { e.stopPropagation(); window.open(reader.series_url!, '_blank'); }} className="font-mono text-xs border-dashed gap-1">
+                    <Button key={reader.id} variant="ghost" size="sm" onClick={(e) => { e.stopPropagation(); window.open(reader.series_url!, '_blank'); }} className="font-mono text-xs gap-1">
                       <Glasses className="w-3 h-3" />{reader.name}
                     </Button>
                   ))
                 )}
               </div>
             )}
-            <div className="flex items-center gap-1 pl-3">
+            <div className="flex items-center gap-1 px-3">
               {userId && (
                 <Button variant="ghost" size="sm" onClick={startEditing} className="font-mono text-xs gap-1">
                   <Pencil className="w-3 h-3" />edit

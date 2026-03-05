@@ -420,14 +420,14 @@ export const LibraryGroupedView = ({ userId, readerSites, progress, fetchReaderS
                   </div>
                 ) : (
                   <div className="absolute inset-0 bg-background/90 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center z-10" onClick={e => e.stopPropagation()}>
-                    <div className="flex items-center gap-1 px-3 border-r border-border/50">
+                    <div className="flex items-center gap-1 px-3">
                       <Button variant="ghost" size="sm" onClick={() => toggleGroup(group.name.toLowerCase())} className="font-mono text-xs gap-1">
                         <TripleArrow collapsed={collapsedGroups.has(group.name.toLowerCase())} compact />
                         {collapsedGroups.has(group.name.toLowerCase()) ? 'expand' : 'collapse'}
                       </Button>
                     </div>
-                    <div className="flex items-center gap-1 px-3 border-r border-border/50">
-                      <Button variant="outline" size="sm" asChild className="font-mono text-xs border-dashed gap-1">
+                    <div className="flex items-center gap-1 px-3">
+                      <Button variant="ghost" size="sm" asChild className="font-mono text-xs gap-1">
                         <a href={group.url} target="_blank" rel="noopener noreferrer">
                           <ExternalLink className="w-3 h-3" />open_reader
                         </a>
