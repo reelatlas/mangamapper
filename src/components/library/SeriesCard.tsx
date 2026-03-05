@@ -192,17 +192,10 @@ export const SeriesCard = ({ item, animeId, readerSites, onRemove, userId, onSav
       <Card className="border-dashed border-primary/50 overflow-hidden">
         <div className="terminal-header flex items-center gap-2">
           <span className="text-muted-foreground">edit_series</span>
-          <span className="text-primary">{'>'} {anime.title}</span>
+          <span className="text-primary">{'>'}</span> <span className="text-syntax-green truncate">{anime.title}</span>
         </div>
         <CardContent className="p-4">
           <div className="space-y-2">
-            {/* Series title (read-only) */}
-            <div className="flex items-center gap-3 mb-2">
-              {!imgError ? (
-                <img src={anime.coverImage} alt={anime.title} className="w-10 h-auto object-contain opacity-90 shrink-0" onError={() => setImgError(true)} />
-              ) : null}
-              <span className="text-sm text-syntax-green line-clamp-2">{anime.title}</span>
-            </div>
 
             <div className="flex flex-wrap gap-6">
               {/* last_watched */}
