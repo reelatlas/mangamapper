@@ -375,10 +375,10 @@ export const LibraryGroupedView = ({ userId, readerSites, progress, fetchReaderS
                     <span className="text-muted-foreground break-all">{group.notes}</span>
                   </div>
                 )}
-                {seriesEntries.length === 0 && (
-                  <div className="text-xs text-muted-foreground pt-1">// no_series_assigned</div>
-                )}
               </div>
+              {seriesEntries.length === 0 && (
+                <p className="text-xs text-muted-foreground">series_assigned(null)</p>
+              )}
               {seriesEntries.length > 0 && (
                 <div className="grid gap-3">
                   {seriesEntries.map(entry => {
