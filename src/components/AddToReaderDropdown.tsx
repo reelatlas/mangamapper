@@ -10,7 +10,7 @@ import {
 import { Check, X } from 'lucide-react';
 import { supabase } from '@/integrations/supabase/client';
 import { useAuth } from '@/hooks/useAuth';
-import { toast } from '@/hooks/use-toast';
+import { toast } from 'sonner';
 
 interface UserReader {
   name: string;
@@ -79,21 +79,14 @@ export const AddToReaderDropdown = ({ animeId, onSuccess, linkedReaderNames = []
     setLoading(false);
 
     if (error) {
-      toast({
-        title: "Error",
-        description: "Failed to add series to reader",
-        variant: "destructive"
-      });
+      toast.error('Failed to add series to reader');
     } else {
       // Ensure the series appears in library
       await supabase.from('anime_progress').upsert(
         { user_id: user.id, anime_id: animeId, in_library: true, updated_at: new Date().toISOString() },
         { onConflict: 'user_id,anime_id' }
       );
-      toast({
-        title: "Success",
-        description: `Added to ${selectedReader.name}`
-      });
+      toast.success(`Added to ${selectedReader.name}`);
       setOpen(false);
       setSelectedReader(null);
       setSeriesUrl('');

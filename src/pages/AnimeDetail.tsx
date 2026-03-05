@@ -24,6 +24,7 @@ const AnimeDetail = () => {
   const anime = getAnimeById(id || '');
   const { user } = useAuth();
   const [linkedReaders, setLinkedReaders] = useState<ReaderSite[]>([]);
+  const [libraryKey, setLibraryKey] = useState(0);
 
   const fetchLinkedReaders = useCallback(async () => {
     if (!user || !id) return;
@@ -37,6 +38,7 @@ const AnimeDetail = () => {
     if (data) {
       setLinkedReaders(data);
     }
+    setLibraryKey(prev => prev + 1);
   }, [user, id]);
 
   useEffect(() => {
@@ -175,7 +177,7 @@ const AnimeDetail = () => {
 
         {/* Library section */}
         <div className="mb-6">
-          <LibrarySection animeId={anime.id} onLibraryChange={fetchLinkedReaders} />
+          <LibrarySection key={libraryKey} animeId={anime.id} onLibraryChange={fetchLinkedReaders} />
         </div>
 
         {/* Progress tracker */}
