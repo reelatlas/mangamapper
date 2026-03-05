@@ -1,23 +1,12 @@
 import { useParams, Link } from 'react-router-dom';
-import { useState, useEffect, useCallback } from 'react';
 import { Header } from '@/components/Header';
 import { MangaMappingDisplay } from '@/components/MangaMappingDisplay';
 import { EpisodeBadge } from '@/components/EpisodeBadge';
-import { ProgressTracker } from '@/components/ProgressTracker';
-import { LibrarySection } from '@/components/LibrarySection';
-import { AddToReaderDropdown } from '@/components/AddToReaderDropdown';
+import { CollectionSection } from '@/components/CollectionSection';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { getAnimeById } from '@/data/mockAnime';
-import { Play, BookOpen, Tv, ArrowLeft, ExternalLink } from 'lucide-react';
-import { useAuth } from '@/hooks/useAuth';
-import { supabase } from '@/integrations/supabase/client';
-
-interface ReaderSite {
-  id: string;
-  name: string;
-  series_url: string | null;
-}
+import { Play, BookOpen, Tv, ArrowLeft } from 'lucide-react';
 
 const AnimeDetail = () => {
   const { id } = useParams<{ id: string }>();
