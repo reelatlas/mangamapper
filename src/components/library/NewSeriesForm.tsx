@@ -239,7 +239,7 @@ export const NewSeriesForm = ({ userId, readerSites, progress, onSuccess, onCanc
               <span className="text-syntax-cyan">notes</span>
             </Label>
             <Input
-              placeholder="reliable fan subs"
+              placeholder="best Berserk scans for golden age arc"
               value={notes}
               onChange={(e) => setNotes(e.target.value)}
               className="font-mono text-sm border-dashed bg-muted/30"
