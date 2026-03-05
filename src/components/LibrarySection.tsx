@@ -8,9 +8,10 @@ import { Link } from 'react-router-dom';
 
 interface LibrarySectionProps {
   animeId: string;
+  onLibraryChange?: () => void;
 }
 
-export const LibrarySection = ({ animeId }: LibrarySectionProps) => {
+export const LibrarySection = ({ animeId, onLibraryChange }: LibrarySectionProps) => {
   const { user } = useAuth();
   const [inLibrary, setInLibrary] = useState(false);
   const [loading, setLoading] = useState(true);
@@ -57,8 +58,16 @@ export const LibrarySection = ({ animeId }: LibrarySectionProps) => {
         toast.error('Failed to remove from library');
         console.error('Error removing from library:', error);
       } else {
+        // Also clean up reader assignments for this anime
+        await supabase
+          .from('manga_reader_sites')
+          .delete()
+          .eq('user_id', user.id)
+          .eq('anime_id', animeId);
+        
         toast.success('Removed from library');
         setInLibrary(false);
+        onLibraryChange?.();
       }
     } else {
       const { error } = await supabase
