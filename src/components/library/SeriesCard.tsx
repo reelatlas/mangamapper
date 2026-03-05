@@ -192,6 +192,7 @@ export const SeriesCard = ({ item, animeId, readerSites, onRemove, userId, onSav
       <Card className="border-dashed border-primary/50 overflow-hidden">
         <div className="terminal-header flex items-center gap-2">
           <span className="text-muted-foreground">edit_series</span>
+          <span className="text-primary">{'>'} {anime.title}</span>
         </div>
         <CardContent className="p-4">
           <div className="space-y-2">
@@ -353,7 +354,7 @@ export const SeriesCard = ({ item, animeId, readerSites, onRemove, userId, onSav
                   </div>
                 ) : (
                   <Button variant="ghost" onClick={() => setConfirmingDelete(true)} className="font-mono text-xs text-muted-foreground hover:text-destructive hover:bg-destructive/10">
-                    <Trash2 className="w-3.5 h-3.5 mr-1" />delete_from_library()
+                    <Trash2 className="w-3.5 h-3.5 mr-1" />delete_series()
                   </Button>
                 )
               )}
