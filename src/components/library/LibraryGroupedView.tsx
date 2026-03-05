@@ -10,7 +10,7 @@ import { ArrowUpDown, ExternalLink, Pencil, X, Check, Trash2, Plus, BookDashed, 
 const TripleArrow = ({ collapsed }: { collapsed: boolean }) => {
   const Icon = collapsed ? ChevronRight : ChevronDown;
   return (
-    <div className={`flex flex-shrink-0 ${collapsed ? 'flex-row -space-x-1.5' : 'flex-col -space-y-1.5'}`}>
+    <div className={`flex flex-shrink-0 ${collapsed ? 'flex-row -space-x-2' : 'flex-col -space-y-2'}`}>
       <Icon className="w-2.5 h-2.5 text-syntax-cyan" />
       <Icon className="w-2.5 h-2.5 text-syntax-purple" />
       <Icon className="w-2.5 h-2.5 text-syntax-pink" />
