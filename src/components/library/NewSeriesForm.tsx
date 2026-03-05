@@ -142,7 +142,7 @@ export const NewSeriesForm = ({ userId, readerSites, progress, onSuccess, onCanc
         <span className="text-muted-foreground">new_series</span>
       </div>
       <CardContent className="p-4">
-        <form onSubmit={handleSubmit} className="space-y-3">
+        <form onSubmit={handleSubmit} className="space-y-2">
           <div className="space-y-1.5">
             <Label className="text-xs">
               <span className="text-syntax-cyan">series</span>
