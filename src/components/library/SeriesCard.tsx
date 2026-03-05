@@ -203,55 +203,62 @@ export const SeriesCard = ({ item, animeId, readerSites, onRemove, userId, onSav
               <span className="text-sm text-syntax-green line-clamp-2">{anime.title}</span>
             </div>
 
-            {/* last_watched */}
-            <div className="space-y-1.5">
-              <Label className="text-xs">
-                <span className="text-syntax-cyan">last_watched</span>
-              </Label>
-              <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
-                <div className="space-y-1">
-                  <Label className="text-[10px] text-muted-foreground">episode</Label>
-                  <Input
-                    type="number"
-                    placeholder="—"
-                    value={editWatchedEpisode}
-                    onChange={e => setEditWatchedEpisode(e.target.value)}
-                    className="font-mono text-sm border-dashed bg-muted/30"
-                  />
+            <div className="flex flex-wrap gap-6">
+              {/* last_watched */}
+              <div className="space-y-2">
+                <div className="flex items-center gap-1.5 text-xs">
+                  <Tv className="w-3.5 h-3.5 text-primary" />
+                  <span className="text-syntax-cyan">last_watched</span>
                 </div>
-              </div>
-            </div>
-
-            {/* last_read (only if hasManga) */}
-            {anime.hasManga && (
-              <div className="space-y-1.5">
-                <Label className="text-xs">
-                  <span className="text-syntax-cyan">last_read</span>
-                </Label>
-                <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
-                  <div className="space-y-1">
-                    <Label className="text-[10px] text-muted-foreground">vol</Label>
+                <div>
+                  <span className="text-muted-foreground text-xs block mb-1">episode</span>
+                  <div className="flex items-center gap-2">
                     <Input
                       type="number"
                       placeholder="—"
-                      value={editReadVolume}
-                      onChange={e => setEditReadVolume(e.target.value)}
-                      className="font-mono text-sm border-dashed bg-muted/30"
+                      value={editWatchedEpisode}
+                      onChange={e => setEditWatchedEpisode(e.target.value)}
+                      className="font-mono text-sm border-dashed bg-muted/30 w-24 h-7"
                     />
-                  </div>
-                  <div className="space-y-1">
-                    <Label className="text-[10px] text-muted-foreground">ch</Label>
-                    <Input
-                      type="text"
-                      placeholder="—"
-                      value={editReadChapter}
-                      onChange={e => setEditReadChapter(e.target.value)}
-                      className="font-mono text-sm border-dashed bg-muted/30"
-                    />
+                    <span className="text-muted-foreground text-xs">
+                      /{anime.totalEpisodes || anime.currentEpisode}
+                    </span>
                   </div>
                 </div>
               </div>
-            )}
+
+              {/* last_read (only if hasManga) */}
+              {anime.hasManga && (
+                <div className="space-y-2">
+                  <div className="flex items-center gap-1.5 text-xs">
+                    <BookOpen className="w-3.5 h-3.5 text-primary" />
+                    <span className="text-syntax-cyan">last_read</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <div>
+                      <span className="text-muted-foreground text-xs block mb-1">vol</span>
+                      <Input
+                        type="number"
+                        placeholder="—"
+                        value={editReadVolume}
+                        onChange={e => setEditReadVolume(e.target.value)}
+                        className="font-mono text-sm border-dashed bg-muted/30 w-24 h-7"
+                      />
+                    </div>
+                    <div>
+                      <span className="text-muted-foreground text-xs block mb-1">ch</span>
+                      <Input
+                        type="text"
+                        placeholder="—"
+                        value={editReadChapter}
+                        onChange={e => setEditReadChapter(e.target.value)}
+                        className="font-mono text-sm border-dashed bg-muted/30 w-24 h-7"
+                      />
+                    </div>
+                  </div>
+                </div>
+              )}
+            </div>
 
             {/* assign_to readers */}
             {anime.hasManga && (
