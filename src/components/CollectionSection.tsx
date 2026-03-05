@@ -515,7 +515,7 @@ export const CollectionSection = ({ anime }: CollectionSectionProps) => {
         {/* Section 4: Last saved */}
         {inLibrary && progress?.updated_at && (
           <span className="text-muted-foreground text-xs block">
-            last_saved: <span className="text-syntax-string">{formatTimestamp(progress.updated_at)}</span>
+            last_updated: <span className="text-syntax-string">{formatTimestamp(progress.updated_at)}</span>
           </span>
         )}
       </CardContent>
