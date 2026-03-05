@@ -483,12 +483,7 @@ const Readers = () => {
                   
                   {/* Series assignment section */}
                   <div className="mt-4">
-                    <div className="border border-dashed border-border mb-3">
-                      <div className="px-3 py-2 text-xs text-muted-foreground font-mono flex items-center gap-2">
-                        <span>assign_to</span>
-                        <span className="text-muted-foreground/60">// optional</span>
-                      </div>
-                    </div>
+                    <p className="text-xs text-muted-foreground mb-3">assign_to <span className="text-muted-foreground/60">// optional</span></p>
                     <div className="space-y-6 sm:space-y-3">
                       {seriesAssignments.map((assignment, index) => <div key={index} className="space-y-2">
                           {/* Mobile: Combined label for each row */}
@@ -593,12 +588,7 @@ const Readers = () => {
                             
                             {/* Series assignment section */}
                             <div className="mt-4">
-                              <div className="border border-dashed border-border mb-3">
-                                <div className="px-3 py-2 text-xs text-muted-foreground font-mono flex items-center gap-2">
-                                  <span>assign_to</span>
-                                  <span className="text-muted-foreground/60">// optional</span>
-                                </div>
-                              </div>
+                              <p className="text-xs text-muted-foreground mb-3">assign_to <span className="text-muted-foreground/60">// optional</span></p>
                               <div className="space-y-6 sm:space-y-3">
                                 {editSeriesAssignments.map((assignment, index) => <div key={index} className="space-y-2">
                                     {/* Mobile: Combined label for each row */}
