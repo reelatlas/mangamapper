@@ -175,7 +175,7 @@ const AnimeDetail = () => {
 
         {/* Library section */}
         <div className="mb-6">
-          <LibrarySection animeId={anime.id} />
+          <LibrarySection animeId={anime.id} onLibraryChange={fetchLinkedReaders} />
         </div>
 
         {/* Progress tracker */}
