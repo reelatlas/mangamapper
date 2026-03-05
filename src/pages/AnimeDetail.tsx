@@ -11,28 +11,6 @@ import { Play, BookOpen, Tv, ArrowLeft } from 'lucide-react';
 const AnimeDetail = () => {
   const { id } = useParams<{ id: string }>();
   const anime = getAnimeById(id || '');
-  const { user } = useAuth();
-  const [linkedReaders, setLinkedReaders] = useState<ReaderSite[]>([]);
-  const [libraryKey, setLibraryKey] = useState(0);
-
-  const fetchLinkedReaders = useCallback(async () => {
-    if (!user || !id) return;
-    
-    const { data } = await supabase
-      .from('manga_reader_sites')
-      .select('id, name, series_url')
-      .eq('anime_id', id)
-      .not('series_url', 'is', null);
-    
-    if (data) {
-      setLinkedReaders(data);
-    }
-    setLibraryKey(prev => prev + 1);
-  }, [user, id]);
-
-  useEffect(() => {
-    fetchLinkedReaders();
-  }, [fetchLinkedReaders]);
 
   if (!anime) {
     return (
