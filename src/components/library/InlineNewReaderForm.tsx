@@ -56,7 +56,7 @@ export const InlineNewReaderForm = ({ userId, existingReaders, onCreated, onCanc
   };
 
   return (
-    <div className="border border-dashed bg-muted/10">
+    <div className="border border-dashed bg-primary/10">
       <div className="terminal-header flex items-center gap-2">
         <span className="text-muted-foreground">new_reader</span>
       </div>
