@@ -137,7 +137,7 @@ export const NewSeriesForm = ({ userId, readerSites, progress, onSuccess, onCanc
   };
 
   return (
-    <Card className="border-dashed">
+    <Card className="border-dashed border-primary/50">
       <div className="terminal-header flex items-center gap-2">
         <span className="text-muted-foreground">new_series</span>
       </div>

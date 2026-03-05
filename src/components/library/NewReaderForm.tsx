@@ -114,7 +114,7 @@ export const NewReaderForm = ({ userId, readerSites, onSuccess, onCancel, preSel
   };
 
   return (
-    <Card className="border-dashed">
+    <Card className="border-dashed border-primary/50">
       <div className="terminal-header flex items-center gap-2">
         <span className="text-muted-foreground">new_reader</span>
       </div>
