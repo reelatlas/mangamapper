@@ -5,7 +5,7 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { ToggleGroup, ToggleGroupItem } from '@/components/ui/toggle-group';
-import { ArrowUpDown, ExternalLink, Pencil, X, Check, Trash2, Plus, BookDashed, BookOpenText } from 'lucide-react';
+import { ArrowUpDown, ExternalLink, Pencil, X, Check, Trash2, Plus, BookDashed, BookOpenText, ChevronDown, ChevronRight } from 'lucide-react';
 import { mockAnimeData } from '@/data/mockAnime';
 import { SeriesCard } from './SeriesCard';
 import { SeriesCombobox } from '@/components/SeriesCombobox';
