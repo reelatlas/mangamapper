@@ -119,6 +119,8 @@ const Library = () => {
               removeFromLibrary={removeFromLibrary}
               viewMode={viewMode}
               onViewModeChange={setViewMode}
+              userId={user!.id}
+              onSave={handleRefreshAll}
             />
           ) : (
             <LibraryGroupedView
