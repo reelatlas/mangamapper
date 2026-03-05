@@ -506,7 +506,7 @@ export const CollectionSection = ({ anime }: CollectionSectionProps) => {
                 <span className="text-xs text-muted-foreground">reader(null)</span>
               )}
               <Button variant="ghost" size="sm" onClick={startEditing} className="font-mono text-xs h-7 gap-1 text-muted-foreground">
-                <Pencil className="w-3 h-3" /> edit_readers
+                <Pencil className="w-3 h-3" /> edit
               </Button>
             </div>
           </div>
