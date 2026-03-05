@@ -482,7 +482,7 @@ const Readers = () => {
                   </div>
                   
                   {/* Series assignment section */}
-                  <div className="mt-4">
+                   <div className="!mt-8">
                     <p className="text-xs text-muted-foreground mb-3">assign_to <span className="text-muted-foreground/60">// optional</span></p>
                     <div className="space-y-6 sm:space-y-3">
                       {seriesAssignments.map((assignment, index) => <div key={index} className="space-y-2">
@@ -587,7 +587,7 @@ const Readers = () => {
                             </div>
                             
                             {/* Series assignment section */}
-                            <div className="mt-4">
+                            <div className="!mt-8">
                               <p className="text-xs text-muted-foreground mb-3">assign_to <span className="text-muted-foreground/60">// optional</span></p>
                               <div className="space-y-6 sm:space-y-3">
                                 {editSeriesAssignments.map((assignment, index) => <div key={index} className="space-y-2">
