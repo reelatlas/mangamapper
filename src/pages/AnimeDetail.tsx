@@ -142,57 +142,10 @@ const AnimeDetail = () => {
           </div>
         </div>
 
-        {/* Library section */}
+        {/* Collection section */}
         <div className="mb-6">
-          <LibrarySection key={libraryKey} animeId={anime.id} onLibraryChange={fetchLinkedReaders} />
+          <CollectionSection anime={anime} />
         </div>
-
-        {/* Progress tracker */}
-        <div className="mb-6">
-          <ProgressTracker anime={anime} />
-        </div>
-
-        {/* Read manga section - three states */}
-        <Card className="border-dashed mb-6">
-          <div className="terminal-header">
-            <span className="text-muted-foreground">read_manga</span>
-          </div>
-          <CardContent className="p-4">
-            {!anime.hasManga ? (
-              // State A: Anime original only
-              <p className="text-xs text-muted-foreground font-mono">
-                // anime_original; no_manga
-              </p>
-            ) : linkedReaders.length === 0 ? (
-              // State B: Has manga but no linked readers
-              <div className="space-y-4">
-                <p className="text-xs text-muted-foreground font-mono">
-                  // no_reader_assigned
-                </p>
-                {id && <AddToReaderDropdown animeId={id} onSuccess={fetchLinkedReaders} linkedReaderNames={linkedReaders.map(r => r.name)} />}
-              </div>
-            ) : (
-              // State C: Has linked readers
-              <div className="space-y-3">
-                <div className="flex flex-wrap gap-2 min-w-0">
-                  {linkedReaders.map((reader) => (
-                    <Button
-                      key={reader.id}
-                      variant="outline"
-                      size="sm"
-                      className="font-mono text-xs border-dashed gap-1.5 max-w-full"
-                      onClick={() => window.open(reader.series_url!, '_blank')}
-                    >
-                      <span className="truncate">{reader.name}</span>
-                      <ExternalLink className="w-3 h-3 shrink-0" />
-                    </Button>
-                  ))}
-                </div>
-                {id && <AddToReaderDropdown animeId={id} onSuccess={fetchLinkedReaders} linkedReaderNames={linkedReaders.map(r => r.name)} />}
-              </div>
-            )}
-          </CardContent>
-        </Card>
 
         {/* Episodes list */}
         <Card className="border-dashed">
