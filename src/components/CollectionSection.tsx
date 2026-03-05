@@ -284,7 +284,7 @@ export const CollectionSection = ({ anime }: CollectionSectionProps) => {
     return (
       <Card className="border-dashed">
         <div className="terminal-header">
-          <span className="text-muted-foreground">my_collection</span>
+          <span className="text-muted-foreground">my_library</span>
         </div>
         <CardContent className="py-6">
           <div className="font-mono">
@@ -303,7 +303,7 @@ export const CollectionSection = ({ anime }: CollectionSectionProps) => {
     return (
       <Card className="border-dashed">
         <div className="terminal-header">
-          <span className="text-muted-foreground">my_collection</span>
+          <span className="text-muted-foreground">my_library</span>
         </div>
         <CardContent className="p-4">
           <p className="text-muted-foreground font-mono text-sm">...loading</p>
@@ -407,7 +407,7 @@ export const CollectionSection = ({ anime }: CollectionSectionProps) => {
   return (
     <Card className="border-dashed">
       <div className="terminal-header">
-        <span className="text-muted-foreground">my_collection</span>
+        <span className="text-muted-foreground">my_library</span>
       </div>
       <CardContent className="p-4 font-mono space-y-6">
         {/* Section 1: Library toggle + edit readers */}
