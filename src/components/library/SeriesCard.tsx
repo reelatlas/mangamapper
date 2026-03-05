@@ -472,10 +472,10 @@ export const SeriesCard = ({ item, animeId, readerSites, onRemove, userId, onSav
                   <>
                     {linkedReaders.length > 0 ? (
                       <div className="flex items-center gap-1.5 min-h-5 flex-wrap">
-                        <Glasses className="w-3.5 h-3.5 shrink-0 text-primary" />
-                        {linkedReaders.map((reader) => (
-                          <span key={reader.id} className="text-[10px] font-mono text-muted-foreground truncate">{reader.name}</span>
-                        ))}
+                         <Glasses className="w-3.5 h-3.5 shrink-0 text-primary" />
+                        <span className="text-xs text-muted-foreground">
+                          {linkedReaders.map(r => r.name).join(', ')}
+                        </span>
                       </div>
                     ) : (
                       <div className="flex items-center gap-1.5 text-muted-foreground min-h-5 flex-wrap">
@@ -505,7 +505,7 @@ export const SeriesCard = ({ item, animeId, readerSites, onRemove, userId, onSav
           <div className="absolute inset-0 bg-background/90 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center gap-2 z-10">
             <Button variant="outline" size="sm" className="font-mono text-xs border-dashed gap-1" asChild>
               <Link to={`/anime/${anime.id}`}>
-                <ExternalLink className="w-3 h-3" />view_details
+                view_details
               </Link>
             </Button>
             {userId && (
