@@ -44,9 +44,9 @@ export function SeriesCombobox({
   const showResults = search.length >= 1;
   
   const filteredAnime = showResults
-    ? availableAnime.filter(anime => 
-        anime.title.toLowerCase().includes(search.toLowerCase())
-      )
+    ? availableAnime
+        .filter(anime => anime.title.toLowerCase().includes(search.toLowerCase()))
+        .sort((a, b) => a.title.localeCompare(b.title))
     : [];
 
   return (
