@@ -142,8 +142,8 @@ export const NewSeriesForm = ({ userId, readerSites, progress, onSuccess, onCanc
         <span className="text-muted-foreground">new_series</span>
       </div>
       <CardContent className="p-4">
-        <form onSubmit={handleSubmit} className="space-y-4">
-          <div className="space-y-2">
+        <form onSubmit={handleSubmit} className="space-y-3">
+          <div className="space-y-1.5">
             <Label className="text-xs">
               <span className="text-syntax-cyan">series</span>
             </Label>
@@ -166,10 +166,9 @@ export const NewSeriesForm = ({ userId, readerSites, progress, onSuccess, onCanc
             </div>
           </div>
 
-          <div className="space-y-2">
+          <div className="space-y-1.5">
             <Label className="text-xs">
               <span className="text-syntax-cyan">reader</span>
-              <span className="text-muted-foreground"> // optional</span>
             </Label>
             <div className="flex gap-2 items-center">
               <div className="flex-1 min-w-0">
@@ -220,7 +219,7 @@ export const NewSeriesForm = ({ userId, readerSites, progress, onSuccess, onCanc
           )}
 
           {selectedReaderName && !showNewReader && (
-            <div className="space-y-2">
+            <div className="space-y-1.5">
               <Label className="text-xs">
                 <span className="text-syntax-cyan">series_url</span>
                 <span className="text-muted-foreground"> // optional</span>
@@ -235,10 +234,9 @@ export const NewSeriesForm = ({ userId, readerSites, progress, onSuccess, onCanc
             </div>
           )}
 
-          <div className="space-y-2">
+          <div className="space-y-1.5">
             <Label className="text-xs">
               <span className="text-syntax-cyan">notes</span>
-              <span className="text-muted-foreground"> // optional</span>
             </Label>
             <Input
               placeholder="best Berserk scans for golden age arc"
