@@ -147,7 +147,7 @@ export const NewSeriesForm = ({ userId, readerSites, progress, onSuccess, onCanc
             <Label className="text-xs">
               <span className="text-syntax-cyan">series</span>
             </Label>
-            <div className="flex gap-1 items-center">
+            <div className="flex gap-2 items-center">
               <div className="flex-1 min-w-0">
                 <SeriesCombobox
                   value={animeId}
