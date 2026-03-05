@@ -55,10 +55,7 @@ export const CollectionSection = ({ anime }: CollectionSectionProps) => {
   const [togglingLibrary, setTogglingLibrary] = useState(false);
   const [isEditing, setIsEditing] = useState(false);
 
-  // Edit state
-  const [editWatchedEpisode, setEditWatchedEpisode] = useState('');
-  const [editReadVolume, setEditReadVolume] = useState('');
-  const [editReadChapter, setEditReadChapter] = useState('');
+  // Edit state (readers only)
   const [editReaderAssignments, setEditReaderAssignments] = useState<ReaderAssignment[]>([]);
   const [saving, setSaving] = useState(false);
   const [savingProgress, setSavingProgress] = useState(false);
