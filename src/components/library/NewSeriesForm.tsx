@@ -246,14 +246,14 @@ export const NewSeriesForm = ({ userId, readerSites, progress, onSuccess, onCanc
             />
           </div>
 
-          <div className="flex gap-2 justify-end !mt-8">
-            <Button type="button" variant="outline" onClick={onCancel} className="font-mono text-xs border-dashed hover:bg-destructive hover:text-destructive-foreground hover:border-destructive">
-              <X className="w-3.5 h-3.5 mr-1" />
-              cancel
-            </Button>
+          <div className="flex gap-2 !mt-8">
             <Button type="submit" disabled={saving} className="font-mono text-xs border-dashed">
               <Plus className="w-3.5 h-3.5 mr-1" />
               {saving ? 'adding...' : 'add_series()'}
+            </Button>
+            <Button type="button" variant="outline" onClick={onCancel} className="font-mono text-xs border-dashed hover:bg-destructive hover:text-destructive-foreground hover:border-destructive">
+              <X className="w-3.5 h-3.5 mr-1" />
+              cancel
             </Button>
           </div>
         </form>

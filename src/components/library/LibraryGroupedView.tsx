@@ -344,14 +344,20 @@ export const LibraryGroupedView = ({ userId, readerSites, progress, fetchReaderS
                             </div>
                           </div>
                         ))}
-                        <div className="flex justify-end">
-                          <Button type="button" variant="outline" size="sm" onClick={addEditSeriesRow} className="text-xs border-dashed">
-                            <Plus className="w-3.5 h-3.5 mr-1" />add_another
-                          </Button>
-                        </div>
+                        <Button type="button" variant="outline" size="sm" onClick={addEditSeriesRow} className="text-xs border-dashed">
+                          <Plus className="w-3.5 h-3.5 mr-1" />add_another
+                        </Button>
                       </div>
                     </div>
                     <div className="!mt-8 flex flex-wrap items-center justify-between gap-3">
+                      <div className="flex items-center gap-2">
+                        <Button onClick={() => saveReaderEdit(group.entries)} className="font-mono text-xs border-dashed">
+                          <Check className="w-3.5 h-3.5 mr-1" />save_changes()
+                        </Button>
+                        <Button variant="outline" onClick={cancelEditingReader} className="font-mono text-xs border-dashed hover:bg-destructive hover:text-destructive-foreground hover:border-destructive">
+                          <X className="w-3.5 h-3.5 mr-1" />cancel
+                        </Button>
+                      </div>
                       {confirmingDeleteReaderId === group.name ? (
                         <div className="flex items-center gap-1">
                           <Button variant="ghost" size="icon" onClick={() => { group.entries.forEach(entry => deleteReaderSite(entry.id)); }} className="h-10 w-10 text-muted-foreground hover:text-destructive hover:bg-destructive/10">
@@ -366,14 +372,6 @@ export const LibraryGroupedView = ({ userId, readerSites, progress, fetchReaderS
                           <Trash2 className="w-3.5 h-3.5 mr-1" />delete_reader()
                         </Button>
                       )}
-                      <div className="flex items-center gap-2 ml-auto">
-                        <Button variant="outline" onClick={cancelEditingReader} className="font-mono text-xs border-dashed hover:bg-destructive hover:text-destructive-foreground hover:border-destructive">
-                          <X className="w-3.5 h-3.5 mr-1" />cancel
-                        </Button>
-                        <Button onClick={() => saveReaderEdit(group.entries)} className="font-mono text-xs border-dashed">
-                          <Check className="w-3.5 h-3.5 mr-1" />save_changes()
-                        </Button>
-                      </div>
                     </div>
                   </div>
                 </CardContent>

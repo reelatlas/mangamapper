@@ -169,20 +169,18 @@ export const NewReaderForm = ({ userId, readerSites, onSuccess, onCancel, preSel
                   </div>
                 </div>
               ))}
-              <div className="flex justify-end">
-                <Button type="button" variant="outline" size="sm" onClick={addSeriesRow} className="text-xs border-dashed">
-                  <Plus className="w-3.5 h-3.5 mr-1" />add_another
-                </Button>
-              </div>
+              <Button type="button" variant="outline" size="sm" onClick={addSeriesRow} className="text-xs border-dashed">
+                <Plus className="w-3.5 h-3.5 mr-1" />add_another
+              </Button>
                     </div>
                     </div>
           
-          <div className="flex gap-2 justify-end !mt-8">
-            <Button type="button" variant="outline" onClick={handleCancel} className="font-mono text-xs border-dashed hover:bg-destructive hover:text-destructive-foreground hover:border-destructive">
-              <X className="w-3.5 h-3.5 mr-1" />cancel
-            </Button>
+          <div className="flex gap-2 !mt-8">
             <Button type="submit" className="font-mono text-xs border-dashed">
               <Plus className="w-3.5 h-3.5 mr-1" />add_reader()
+            </Button>
+            <Button type="button" variant="outline" onClick={handleCancel} className="font-mono text-xs border-dashed hover:bg-destructive hover:text-destructive-foreground hover:border-destructive">
+              <X className="w-3.5 h-3.5 mr-1" />cancel
             </Button>
           </div>
         </form>
