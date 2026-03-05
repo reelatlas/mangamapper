@@ -285,9 +285,12 @@ export const LibraryGroupedView = ({ userId, readerSites, progress, fetchReaderS
                       </Label>
                       <Input placeholder="notes..." value={editSiteNotes} onChange={e => setEditSiteNotes(e.target.value)} className="font-mono text-sm border-dashed bg-muted/30" />
                     </div>
-                    <div className="border-t border-dashed pt-4 mt-4">
-                      <p className="text-xs text-muted-foreground mb-3">assign_to // optional</p>
-                      <div className="space-y-6 sm:space-y-3">
+                    <div className="border border-dashed mt-4">
+                      <div className="terminal-header flex items-center gap-2">
+                        <span className="text-muted-foreground">assign_to</span>
+                        <span className="text-muted-foreground/60">// optional</span>
+                      </div>
+                      <div className="p-4 space-y-6 sm:space-y-3">
                         {editSeriesAssignments.map((assignment, index) => (
                           <div key={index} className="space-y-2">
                             <Label className="text-xs sm:hidden">
