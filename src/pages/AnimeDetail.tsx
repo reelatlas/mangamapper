@@ -1,49 +1,16 @@
 import { useParams, Link } from 'react-router-dom';
-import { useState, useEffect, useCallback } from 'react';
 import { Header } from '@/components/Header';
 import { MangaMappingDisplay } from '@/components/MangaMappingDisplay';
 import { EpisodeBadge } from '@/components/EpisodeBadge';
-import { ProgressTracker } from '@/components/ProgressTracker';
-import { LibrarySection } from '@/components/LibrarySection';
-import { AddToReaderDropdown } from '@/components/AddToReaderDropdown';
+import { CollectionSection } from '@/components/CollectionSection';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { getAnimeById } from '@/data/mockAnime';
-import { Play, BookOpen, Tv, ArrowLeft, ExternalLink } from 'lucide-react';
-import { useAuth } from '@/hooks/useAuth';
-import { supabase } from '@/integrations/supabase/client';
-
-interface ReaderSite {
-  id: string;
-  name: string;
-  series_url: string | null;
-}
+import { Play, BookOpen, Tv, ArrowLeft } from 'lucide-react';
 
 const AnimeDetail = () => {
   const { id } = useParams<{ id: string }>();
   const anime = getAnimeById(id || '');
-  const { user } = useAuth();
-  const [linkedReaders, setLinkedReaders] = useState<ReaderSite[]>([]);
-  const [libraryKey, setLibraryKey] = useState(0);
-
-  const fetchLinkedReaders = useCallback(async () => {
-    if (!user || !id) return;
-    
-    const { data } = await supabase
-      .from('manga_reader_sites')
-      .select('id, name, series_url')
-      .eq('anime_id', id)
-      .not('series_url', 'is', null);
-    
-    if (data) {
-      setLinkedReaders(data);
-    }
-    setLibraryKey(prev => prev + 1);
-  }, [user, id]);
-
-  useEffect(() => {
-    fetchLinkedReaders();
-  }, [fetchLinkedReaders]);
 
   if (!anime) {
     return (
@@ -175,57 +142,10 @@ const AnimeDetail = () => {
           </div>
         </div>
 
-        {/* Library section */}
+        {/* Collection section */}
         <div className="mb-6">
-          <LibrarySection key={libraryKey} animeId={anime.id} onLibraryChange={fetchLinkedReaders} />
+          <CollectionSection anime={anime} />
         </div>
-
-        {/* Progress tracker */}
-        <div className="mb-6">
-          <ProgressTracker anime={anime} />
-        </div>
-
-        {/* Read manga section - three states */}
-        <Card className="border-dashed mb-6">
-          <div className="terminal-header">
-            <span className="text-muted-foreground">read_manga</span>
-          </div>
-          <CardContent className="p-4">
-            {!anime.hasManga ? (
-              // State A: Anime original only
-              <p className="text-xs text-muted-foreground font-mono">
-                // anime_original; no_manga
-              </p>
-            ) : linkedReaders.length === 0 ? (
-              // State B: Has manga but no linked readers
-              <div className="space-y-4">
-                <p className="text-xs text-muted-foreground font-mono">
-                  // no_reader_assigned
-                </p>
-                {id && <AddToReaderDropdown animeId={id} onSuccess={fetchLinkedReaders} linkedReaderNames={linkedReaders.map(r => r.name)} />}
-              </div>
-            ) : (
-              // State C: Has linked readers
-              <div className="space-y-3">
-                <div className="flex flex-wrap gap-2 min-w-0">
-                  {linkedReaders.map((reader) => (
-                    <Button
-                      key={reader.id}
-                      variant="outline"
-                      size="sm"
-                      className="font-mono text-xs border-dashed gap-1.5 max-w-full"
-                      onClick={() => window.open(reader.series_url!, '_blank')}
-                    >
-                      <span className="truncate">{reader.name}</span>
-                      <ExternalLink className="w-3 h-3 shrink-0" />
-                    </Button>
-                  ))}
-                </div>
-                {id && <AddToReaderDropdown animeId={id} onSuccess={fetchLinkedReaders} linkedReaderNames={linkedReaders.map(r => r.name)} />}
-              </div>
-            )}
-          </CardContent>
-        </Card>
 
         {/* Episodes list */}
         <Card className="border-dashed">
