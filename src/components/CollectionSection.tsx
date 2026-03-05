@@ -499,9 +499,9 @@ export const CollectionSection = ({ anime }: CollectionSectionProps) => {
                 {linkedReaders.map((reader) => (
                   <Button
                     key={reader.id}
-                    variant="ghost"
+                    variant="outline"
                     size="sm"
-                    className="font-mono text-xs gap-1 h-7"
+                    className="font-mono text-xs gap-1 h-7 border-dashed"
                     onClick={() => window.open(reader.series_url!, '_blank')}
                   >
                     <Glasses className="w-3 h-3" />
