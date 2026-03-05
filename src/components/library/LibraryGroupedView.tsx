@@ -419,25 +419,23 @@ export const LibraryGroupedView = ({ userId, readerSites, progress, fetchReaderS
                     </Button>
                   </div>
                 ) : (
-                  <div className="absolute inset-0 bg-background/90 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-between p-3 z-10">
-                    <div className="flex items-center">
-                      <div className="flex items-center gap-1 px-3">
-                        <Button variant="ghost" size="sm" asChild className="font-mono text-xs gap-1" onClick={e => e.stopPropagation()}>
-                          <a href={group.url} target="_blank" rel="noopener noreferrer">
-                            <Glasses className="w-3 h-3" />open_reader
-                          </a>
-                        </Button>
-                      </div>
-                      <div className="flex items-center gap-1 pl-3">
-                        <Button variant="ghost" size="sm" onClick={e => { e.stopPropagation(); startEditingReader(group); }} className="font-mono text-xs gap-1">
-                          <Pencil className="w-3 h-3" />edit
-                        </Button>
-                        <Button variant="ghost" size="sm" onClick={e => { e.stopPropagation(); setConfirmingDeleteReaderView(group.name); }} className="font-mono text-xs gap-1 text-muted-foreground hover:text-destructive hover:bg-destructive/10">
-                          <Trash2 className="w-3 h-3" />delete
-                        </Button>
-                      </div>
+                  <div className="absolute inset-0 bg-background/90 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center p-3 z-10">
+                    <div className="flex items-center gap-1 px-3">
+                      <Button variant="ghost" size="sm" asChild className="font-mono text-xs gap-1" onClick={e => e.stopPropagation()}>
+                        <a href={group.url} target="_blank" rel="noopener noreferrer">
+                          <Glasses className="w-3 h-3" />open_reader
+                        </a>
+                      </Button>
                     </div>
-                    <div className="flex items-center gap-1 font-mono text-xs text-foreground px-3">
+                    <div className="flex items-center gap-1 pl-3">
+                      <Button variant="ghost" size="sm" onClick={e => { e.stopPropagation(); startEditingReader(group); }} className="font-mono text-xs gap-1">
+                        <Pencil className="w-3 h-3" />edit
+                      </Button>
+                      <Button variant="ghost" size="sm" onClick={e => { e.stopPropagation(); setConfirmingDeleteReaderView(group.name); }} className="font-mono text-xs gap-1 text-muted-foreground hover:text-destructive hover:bg-destructive/10">
+                        <Trash2 className="w-3 h-3" />delete
+                      </Button>
+                    </div>
+                    <div className="absolute right-3 flex items-center gap-1 font-mono text-xs text-foreground">
                       {collapsedGroups.has(group.name.toLowerCase()) ? 'expand' : 'collapse'}
                       <TripleArrow collapsed={collapsedGroups.has(group.name.toLowerCase())} compact />
                     </div>
