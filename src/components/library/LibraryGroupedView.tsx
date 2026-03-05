@@ -383,27 +383,29 @@ export const LibraryGroupedView = ({ userId, readerSites, progress, fetchReaderS
           return (
             <div key={group.name} className="space-y-3">
               <div
-                className="group relative border border-dashed p-3 space-y-1 cursor-pointer select-none overflow-hidden"
+                className="group relative border border-dashed p-3 cursor-pointer select-none overflow-hidden"
                 onClick={() => toggleGroup(group.name.toLowerCase())}
               >
-                <div className="flex items-center justify-between gap-2">
-                  <div className="overflow-hidden min-w-0 text-sm flex items-center gap-1.5">
-                    <span className="text-syntax-cyan">reader_name</span>
-                    <span className="text-muted-foreground">: </span>
-                    <span className="text-syntax-green break-all">{group.name}</span>
+                <div className="space-y-1">
+                  <div className="flex items-center justify-between gap-2">
+                    <div className="overflow-hidden min-w-0 text-sm flex items-center gap-1.5">
+                      <span className="text-syntax-cyan">reader_name</span>
+                      <span className="text-muted-foreground">: </span>
+                      <span className="text-syntax-green break-all">{group.name}</span>
+                    </div>
+                    <div className="flex items-center gap-2 flex-shrink-0">
+                      <span className="text-muted-foreground text-sm">({seriesEntries.length})</span>
+                      <TripleArrow collapsed={collapsedGroups.has(group.name.toLowerCase())} />
+                    </div>
                   </div>
-                  <div className="flex items-center gap-2 flex-shrink-0">
-                    <span className="text-muted-foreground text-sm">({seriesEntries.length})</span>
-                    <TripleArrow collapsed={collapsedGroups.has(group.name.toLowerCase())} />
-                  </div>
+                  {group.notes && (
+                    <div className="text-xs overflow-hidden">
+                      <span className="text-syntax-cyan">notes</span>
+                      <span className="text-muted-foreground">: </span>
+                      <span className="text-muted-foreground break-all">{group.notes}</span>
+                    </div>
+                  )}
                 </div>
-                {group.notes && (
-                  <div className="text-xs overflow-hidden">
-                    <span className="text-syntax-cyan">notes</span>
-                    <span className="text-muted-foreground">: </span>
-                    <span className="text-muted-foreground break-all">{group.notes}</span>
-                  </div>
-                )}
 
                 {/* Hover overlay */}
                 {confirmingDeleteReaderView === group.name ? (
