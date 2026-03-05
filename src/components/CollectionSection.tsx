@@ -55,14 +55,17 @@ export const CollectionSection = ({ anime }: CollectionSectionProps) => {
   const [togglingLibrary, setTogglingLibrary] = useState(false);
   const [isEditing, setIsEditing] = useState(false);
 
-  // Edit state
-  const [editWatchedEpisode, setEditWatchedEpisode] = useState('');
-  const [editReadVolume, setEditReadVolume] = useState('');
-  const [editReadChapter, setEditReadChapter] = useState('');
+  // Edit state (readers only)
   const [editReaderAssignments, setEditReaderAssignments] = useState<ReaderAssignment[]>([]);
   const [saving, setSaving] = useState(false);
+  const [savingProgress, setSavingProgress] = useState(false);
   const [showInlineNewReader, setShowInlineNewReader] = useState(false);
   const [newlyCreatedReader, setNewlyCreatedReader] = useState<{ name: string; url: string } | null>(null);
+
+  // Always-visible progress inputs
+  const [watchedEpisode, setWatchedEpisode] = useState('');
+  const [readVolume, setReadVolume] = useState('');
+  const [readChapter, setReadChapter] = useState('');
 
   const fetchData = useCallback(async () => {
     if (!user) { setLoading(false); return; }
@@ -86,6 +89,55 @@ export const CollectionSection = ({ anime }: CollectionSectionProps) => {
   }, [user, anime.id]);
 
   useEffect(() => { fetchData(); }, [fetchData]);
+
+  // Sync progress inputs when data loads
+  useEffect(() => {
+    if (progress) {
+      setWatchedEpisode(progress.last_watched_episode?.toString() ?? '');
+      setReadVolume(progress.last_read_volume?.toString() ?? '');
+      setReadChapter(progress.last_read_chapter ?? '');
+    } else {
+      setWatchedEpisode('');
+      setReadVolume('');
+      setReadChapter('');
+    }
+  }, [progress]);
+
+  const isProgressDirty = (() => {
+    const origEp = progress?.last_watched_episode?.toString() ?? '';
+    const origVol = progress?.last_read_volume?.toString() ?? '';
+    const origCh = progress?.last_read_chapter ?? '';
+    return watchedEpisode !== origEp || readVolume !== origVol || readChapter !== origCh;
+  })();
+
+  const resetProgress = () => {
+    setWatchedEpisode(progress?.last_watched_episode?.toString() ?? '');
+    setReadVolume(progress?.last_read_volume?.toString() ?? '');
+    setReadChapter(progress?.last_read_chapter ?? '');
+  };
+
+  const saveProgress = async () => {
+    if (!user) return;
+    setSavingProgress(true);
+    const update: Record<string, unknown> = {
+      user_id: user.id,
+      anime_id: anime.id,
+      updated_at: new Date().toISOString(),
+      last_watched_episode: watchedEpisode.trim() ? parseInt(watchedEpisode.trim(), 10) : null,
+    };
+    if (anime.hasManga) {
+      update.last_read_volume = readVolume.trim() ? parseInt(readVolume.trim(), 10) : null;
+      update.last_read_chapter = readChapter.trim() || null;
+    }
+    const { error } = await supabase.from('anime_progress').upsert(update as any, { onConflict: 'user_id,anime_id' });
+    if (error) {
+      toast.error('Failed to save progress');
+    } else {
+      toast.success('Progress saved');
+      fetchData();
+    }
+    setSavingProgress(false);
+  };
 
   const readerOptions: ReaderOption[] = useMemo(() => {
     const distinct = [...new Map(allReaderSites.map(r => [r.name.toLowerCase(), r])).values()];
@@ -124,9 +176,6 @@ export const CollectionSection = ({ anime }: CollectionSectionProps) => {
 
   const startEditing = () => {
     setShowInlineNewReader(false);
-    setEditWatchedEpisode(progress?.last_watched_episode?.toString() ?? '');
-    setEditReadVolume(progress?.last_read_volume?.toString() ?? '');
-    setEditReadChapter(progress?.last_read_chapter ?? '');
 
     if (linkedReaders.length > 0) {
       setEditReaderAssignments(linkedReaders.map(r => ({
@@ -199,25 +248,6 @@ export const CollectionSection = ({ anime }: CollectionSectionProps) => {
     if (!user) return;
     setSaving(true);
 
-    const progressUpdate: Record<string, unknown> = {
-      user_id: user.id,
-      anime_id: anime.id,
-      in_library: true,
-      updated_at: new Date().toISOString(),
-      last_watched_episode: editWatchedEpisode.trim() ? parseInt(editWatchedEpisode.trim(), 10) : null,
-    };
-    if (anime.hasManga) {
-      progressUpdate.last_read_volume = editReadVolume.trim() ? parseInt(editReadVolume.trim(), 10) : null;
-      progressUpdate.last_read_chapter = editReadChapter.trim() || null;
-    }
-
-    const { error: progressError } = await supabase.from('anime_progress').upsert(progressUpdate as any, { onConflict: 'user_id,anime_id' });
-    if (progressError) {
-      toast.error('Failed to update progress');
-      setSaving(false);
-      return;
-    }
-
     // Diff reader assignments
     const validAssignments = editReaderAssignments.filter(a => a.readerName);
     const idsToKeep: string[] = [];
@@ -243,10 +273,9 @@ export const CollectionSection = ({ anime }: CollectionSectionProps) => {
       await supabase.from('manga_reader_sites').delete().in('id', idsToDelete);
     }
 
-    toast.success('Collection updated');
+    toast.success('Readers updated');
     setSaving(false);
     setIsEditing(false);
-    setInLibrary(true);
     fetchData();
   };
 
@@ -283,124 +312,86 @@ export const CollectionSection = ({ anime }: CollectionSectionProps) => {
     );
   }
 
-  // --- Edit mode ---
+  // --- Edit mode (readers only) ---
   if (isEditing) {
     const assignedReaderKeys = editReaderAssignments.map(a => `${a.readerName.toLowerCase()}|${a.readerUrl}`);
 
     return (
       <Card className="border-dashed border-primary/50">
         <div className="terminal-header flex items-center gap-2">
-          <span className="text-muted-foreground">edit_collection</span>
+          <span className="text-muted-foreground">edit_readers</span>
           <span className="text-syntax-green">{'>'} <span className="truncate">{anime.title}</span></span>
         </div>
         <CardContent className="p-4">
           <div className="space-y-2">
-            {/* Progress inputs */}
-            <div className="flex flex-wrap gap-6">
-              <div className="space-y-2">
-                <div className="flex items-center gap-1.5 text-xs">
-                  <Tv className="w-3.5 h-3.5 text-primary" />
-                  <span className="text-syntax-cyan">last_watched</span>
-                </div>
-                <div>
-                  <span className="text-muted-foreground text-xs block mb-1">episode</span>
-                  <div className="flex items-center gap-2">
-                    <Input type="number" placeholder="—" value={editWatchedEpisode} onChange={e => setEditWatchedEpisode(e.target.value)} className="font-mono text-sm border-dashed bg-muted/30 w-24 h-7" />
-                    <span className="text-muted-foreground text-xs">/{anime.totalEpisodes || anime.currentEpisode}</span>
-                  </div>
-                </div>
-              </div>
-
-              {anime.hasManga && (
-                <div className="space-y-2">
-                  <div className="flex items-center gap-1.5 text-xs">
-                    <BookOpen className="w-3.5 h-3.5 text-primary" />
-                    <span className="text-syntax-cyan">last_read</span>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <div>
-                      <span className="text-muted-foreground text-xs block mb-1">vol</span>
-                      <Input type="number" placeholder="—" value={editReadVolume} onChange={e => setEditReadVolume(e.target.value)} className="font-mono text-sm border-dashed bg-muted/30 w-24 h-7" />
-                    </div>
-                    <div>
-                      <span className="text-muted-foreground text-xs block mb-1">ch</span>
-                      <Input type="number" placeholder="—" value={editReadChapter} onChange={e => setEditReadChapter(e.target.value)} className="font-mono text-sm border-dashed bg-muted/30 w-24 h-7" />
-                    </div>
-                  </div>
-                </div>
-              )}
-            </div>
-
             {/* Reader assignments */}
-            {anime.hasManga && (
-              <div className="!mt-8">
-                <p className="text-xs text-muted-foreground mb-3">assign_to <span className="text-muted-foreground/60">// optional</span></p>
-                <div className="space-y-6 sm:space-y-3">
-                  {editReaderAssignments.map((assignment, index) => {
-                    const currentKey = assignment.readerName ? `${assignment.readerName.toLowerCase()}|${assignment.readerUrl}` : '';
-                    const availableOptions = readerOptions.filter(o => o.key === currentKey || !assignedReaderKeys.includes(o.key));
+            <div>
+              <p className="text-xs text-muted-foreground mb-3 font-mono">assign_to <span className="text-muted-foreground/60">// optional</span></p>
+              <div className="space-y-6 sm:space-y-3">
+                {editReaderAssignments.map((assignment, index) => {
+                  const currentKey = assignment.readerName ? `${assignment.readerName.toLowerCase()}|${assignment.readerUrl}` : '';
+                  const availableOptions = readerOptions.filter(o => o.key === currentKey || !assignedReaderKeys.includes(o.key));
 
-                    return (
-                      <div key={index} className="space-y-1.5">
-                        <Label className="text-xs sm:hidden">
-                          <span className="text-syntax-cyan">reader</span>
-                          <span className="text-muted-foreground">{'{'}name,url{'}'}</span>
-                        </Label>
-                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                          <div className="min-w-0">
-                            {index === 0 && <Label className="text-xs hidden sm:block mb-1.5"><span className="text-syntax-cyan">reader</span></Label>}
-                            <Select value={currentKey} onValueChange={val => handleReaderSelect(index, val)}>
-                              <SelectTrigger className="font-mono text-sm border-dashed bg-muted/30 data-[placeholder]:text-muted-foreground">
-                                <SelectValue placeholder="select reader" />
-                              </SelectTrigger>
-                              <SelectPrimitive.Portal>
-                                <SelectPrimitive.Content className="font-mono border-dashed relative z-50 w-[var(--radix-select-trigger-width)] overflow-hidden rounded-md border bg-popover text-popover-foreground shadow-md data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 data-[side=bottom]:slide-in-from-top-2 data-[side=bottom]:translate-y-1" position="popper">
-                                  <div className="h-[25px]"><SelectScrollUpButton /></div>
-                                  <SelectPrimitive.Viewport className="max-h-[200px] overflow-y-auto p-1 w-full min-w-[var(--radix-select-trigger-width)]">
-                                    {availableOptions.map(option => (
-                                      <SelectItem key={option.key} value={option.key} className="text-sm">{option.name}</SelectItem>
-                                    ))}
-                                  </SelectPrimitive.Viewport>
-                                  <div className="h-[25px]"><SelectScrollDownButton /></div>
-                                  <div className="border-t border-dashed border-border" />
-                                  <div className="p-1">
-                                    <SelectItem value="__new_reader__" className="text-sm text-primary font-medium">+ new_reader</SelectItem>
-                                  </div>
-                                </SelectPrimitive.Content>
-                              </SelectPrimitive.Portal>
-                            </Select>
-                          </div>
-                          <div className="min-w-0">
-                            {index === 0 && <Label className="text-xs hidden sm:block mb-1.5"><span className="text-syntax-cyan">series_url</span></Label>}
-                            <div className="flex items-center gap-2">
-                              <Input type="text" placeholder="manga.line.me/title/..." value={assignment.seriesUrl} onChange={e => handleSeriesUrlChange(index, e.target.value)} className="font-mono text-sm border-dashed bg-muted/30 flex-1 min-w-0" />
-                              {(editReaderAssignments.length > 1 || assignment.readerName) && (
-                                <Button type="button" variant="ghost" size="icon" onClick={() => removeReaderRow(index)} className="text-muted-foreground hover:text-destructive hover:bg-destructive/10 flex-shrink-0">
-                                  <Trash2 className="w-4 h-4" />
-                                </Button>
-                              )}
-                            </div>
+                  return (
+                    <div key={index} className="space-y-1.5">
+                      <Label className="text-xs sm:hidden">
+                        <span className="text-syntax-cyan">reader</span>
+                        <span className="text-muted-foreground">{'{'}name,url{'}'}</span>
+                      </Label>
+                      <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                        <div className="min-w-0">
+                          {index === 0 && <Label className="text-xs hidden sm:block mb-1.5"><span className="text-syntax-cyan">reader</span></Label>}
+                          <Select value={currentKey} onValueChange={val => handleReaderSelect(index, val)}>
+                            <SelectTrigger className="font-mono text-sm border-dashed bg-muted/30 data-[placeholder]:text-muted-foreground">
+                              <SelectValue placeholder="select reader" />
+                            </SelectTrigger>
+                            <SelectPrimitive.Portal>
+                              <SelectPrimitive.Content className="font-mono border-dashed relative z-50 w-[var(--radix-select-trigger-width)] overflow-hidden rounded-md border bg-popover text-popover-foreground shadow-md data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 data-[side=bottom]:slide-in-from-top-2 data-[side=bottom]:translate-y-1" position="popper">
+                                <div className="h-[25px]"><SelectScrollUpButton /></div>
+                                <SelectPrimitive.Viewport className="max-h-[200px] overflow-y-auto p-1 w-full min-w-[var(--radix-select-trigger-width)]">
+                                  {availableOptions.map(option => (
+                                    <SelectItem key={option.key} value={option.key} className="text-sm">{option.name}</SelectItem>
+                                  ))}
+                                </SelectPrimitive.Viewport>
+                                <div className="h-[25px]"><SelectScrollDownButton /></div>
+                                <div className="border-t border-dashed border-border" />
+                                <div className="p-1">
+                                  <SelectItem value="__new_reader__" className="text-sm text-primary font-medium">+ new_reader</SelectItem>
+                                </div>
+                              </SelectPrimitive.Content>
+                            </SelectPrimitive.Portal>
+                          </Select>
+                        </div>
+                        <div className="min-w-0">
+                          {index === 0 && <Label className="text-xs hidden sm:block mb-1.5"><span className="text-syntax-cyan">series_url</span></Label>}
+                          <div className="flex items-center gap-2">
+                            <Input type="text" placeholder="manga.line.me/title/..." value={assignment.seriesUrl} onChange={e => handleSeriesUrlChange(index, e.target.value)} className="font-mono text-sm border-dashed bg-muted/30 flex-1 min-w-0" />
+                            {(editReaderAssignments.length > 1 || assignment.readerName) && (
+                              <Button type="button" variant="ghost" size="icon" onClick={() => removeReaderRow(index)} className="text-muted-foreground hover:text-destructive hover:bg-destructive/10 flex-shrink-0">
+                                <Trash2 className="w-4 h-4" />
+                              </Button>
+                            )}
                           </div>
                         </div>
                       </div>
-                    );
-                  })}
-                  {showInlineNewReader && user && (
-                    <InlineNewReaderForm userId={user.id} existingReaders={allReaderSites} onCreated={handleNewReaderCreated} onCancel={() => setShowInlineNewReader(false)} />
-                  )}
-                  {!showInlineNewReader && (
-                    <Button type="button" variant="outline" size="sm" onClick={addReaderRow} className="text-xs border-dashed">
-                      <Plus className="w-3.5 h-3.5 mr-1" />add_another
-                    </Button>
-                  )}
-                </div>
+                    </div>
+                  );
+                })}
+                {showInlineNewReader && user && (
+                  <InlineNewReaderForm userId={user.id} existingReaders={allReaderSites} onCreated={handleNewReaderCreated} onCancel={() => setShowInlineNewReader(false)} />
+                )}
+                {!showInlineNewReader && (
+                  <Button type="button" variant="outline" size="sm" onClick={addReaderRow} className="text-xs border-dashed">
+                    <Plus className="w-3.5 h-3.5 mr-1" />add_another
+                  </Button>
+                )}
               </div>
-            )}
+            </div>
 
             {/* Actions */}
             <div className="!mt-8 flex flex-wrap items-center gap-3">
               <Button onClick={saveChanges} disabled={saving} className="font-mono text-xs border-dashed">
-                <Check className="w-3.5 h-3.5 mr-1" />{saving ? 'saving...' : 'save_changes()'}
+                <Check className="w-3.5 h-3.5 mr-1" />{saving ? 'saving...' : 'save_readers()'}
               </Button>
               <Button variant="outline" onClick={cancelEditing} className="font-mono text-xs border-dashed hover:bg-destructive hover:text-destructive-foreground hover:border-destructive">
                 <X className="w-3.5 h-3.5 mr-1" />cancel
@@ -418,8 +409,8 @@ export const CollectionSection = ({ anime }: CollectionSectionProps) => {
       <div className="terminal-header">
         <span className="text-muted-foreground">my_collection</span>
       </div>
-      <CardContent className="p-4 font-mono space-y-3">
-        {/* Row 1: Library toggle + edit */}
+      <CardContent className="p-4 font-mono space-y-5">
+        {/* Section 1: Library toggle + edit readers */}
         <div className="flex items-center justify-between">
           <Button
             variant="outline"
@@ -430,49 +421,73 @@ export const CollectionSection = ({ anime }: CollectionSectionProps) => {
           >
             {togglingLibrary ? '...' : inLibrary ? '[✓] in_library' : '[ ] add_to_library'}
           </Button>
-          {inLibrary && (
+          {inLibrary && anime.hasManga && (
             <Button variant="ghost" size="sm" onClick={startEditing} className="font-mono text-xs h-7 gap-1 text-muted-foreground">
-              <Pencil className="w-3 h-3" /> edit
+              <Pencil className="w-3 h-3" /> edit_readers
             </Button>
           )}
         </div>
 
-        {/* Row 2: Progress display */}
+        {/* Section 2: Always-visible progress inputs */}
         {inLibrary && (
-          <div className="flex flex-wrap items-center gap-x-4 gap-y-1.5 text-xs">
-            <div className="flex items-center gap-1.5">
-              <Tv className={`w-3.5 h-3.5 shrink-0 ${progress?.last_watched_episode != null ? 'text-primary' : 'text-muted-foreground'}`} />
-              <span>
-                <span className="text-muted-foreground">ep: </span>
-                <span className={progress?.last_watched_episode != null ? 'text-foreground' : 'text-muted-foreground'}>
-                  {progress?.last_watched_episode ?? '—'}
-                </span>
-                <span className="text-muted-foreground"> /{anime.totalEpisodes || anime.currentEpisode}</span>
-              </span>
-            </div>
-            {anime.hasManga ? (
-              <div className="flex items-center gap-1.5">
-                <BookOpen className={`w-3.5 h-3.5 shrink-0 ${(progress?.last_read_volume != null || progress?.last_read_chapter != null) ? 'text-primary' : 'text-muted-foreground'}`} />
-                <span>
-                  <span className="text-muted-foreground">vol: </span>
-                  <span className={progress?.last_read_volume != null ? 'text-foreground' : 'text-muted-foreground'}>{progress?.last_read_volume ?? '—'}</span>
-                </span>
-                <span className="text-muted-foreground">·</span>
-                <span>
-                  <span className="text-muted-foreground">ch: </span>
-                  <span className={progress?.last_read_chapter != null ? 'text-foreground' : 'text-muted-foreground'}>{progress?.last_read_chapter ?? '—'}</span>
-                </span>
+          <div className="space-y-3">
+            <div className="flex flex-wrap gap-6">
+              <div className="space-y-2">
+                <div className="flex items-center gap-1.5 text-xs">
+                  <Tv className="w-3.5 h-3.5 text-primary" />
+                  <span className="text-syntax-cyan">last_watched</span>
+                </div>
+                <div>
+                  <span className="text-muted-foreground text-xs block mb-1">episode</span>
+                  <div className="flex items-center gap-2">
+                    <Input type="number" placeholder="—" value={watchedEpisode} onChange={e => setWatchedEpisode(e.target.value)} className="font-mono text-sm border-dashed bg-muted/30 w-24 h-7" />
+                    <span className="text-muted-foreground text-xs">/{anime.totalEpisodes || anime.currentEpisode}</span>
+                  </div>
+                </div>
               </div>
-            ) : (
-              <div className="flex items-center gap-1.5">
-                <BookOpen className="w-3.5 h-3.5 shrink-0 text-muted-foreground" />
-                <span className="text-muted-foreground">anime_original; no_manga</span>
+
+              {anime.hasManga ? (
+                <div className="space-y-2">
+                  <div className="flex items-center gap-1.5 text-xs">
+                    <BookOpen className="w-3.5 h-3.5 text-primary" />
+                    <span className="text-syntax-cyan">last_read</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <div>
+                      <span className="text-muted-foreground text-xs block mb-1">vol</span>
+                      <Input type="number" placeholder="—" value={readVolume} onChange={e => setReadVolume(e.target.value)} className="font-mono text-sm border-dashed bg-muted/30 w-24 h-7" />
+                    </div>
+                    <div>
+                      <span className="text-muted-foreground text-xs block mb-1">ch</span>
+                      <Input type="number" placeholder="—" value={readChapter} onChange={e => setReadChapter(e.target.value)} className="font-mono text-sm border-dashed bg-muted/30 w-24 h-7" />
+                    </div>
+                  </div>
+                </div>
+              ) : (
+                <div className="space-y-2">
+                  <div className="flex items-center gap-1.5 text-xs">
+                    <BookOpen className="w-3.5 h-3.5 text-muted-foreground" />
+                    <span className="text-muted-foreground">anime_original; no_manga</span>
+                  </div>
+                </div>
+              )}
+            </div>
+
+            {/* Save/reset progress (only when dirty) */}
+            {isProgressDirty && (
+              <div className="flex items-center gap-2">
+                <Button size="sm" onClick={saveProgress} disabled={savingProgress} className="font-mono text-xs h-7 border-dashed">
+                  <Check className="w-3 h-3 mr-1" />{savingProgress ? 'saving...' : 'save_progress()'}
+                </Button>
+                <Button variant="ghost" size="sm" onClick={resetProgress} className="font-mono text-xs h-7 text-muted-foreground">
+                  <RotateCcw className="w-3 h-3 mr-1" />reset
+                </Button>
               </div>
             )}
           </div>
         )}
 
-        {/* Row 3: Reader links */}
+        {/* Section 3: Reader links */}
         {inLibrary && anime.hasManga && (
           <div className="flex flex-wrap items-center gap-2">
             {linkedReaders.length > 0 ? (
@@ -496,7 +511,7 @@ export const CollectionSection = ({ anime }: CollectionSectionProps) => {
           </div>
         )}
 
-        {/* Row 4: Last saved */}
+        {/* Section 4: Last saved */}
         {inLibrary && progress?.updated_at && (
           <span className="text-muted-foreground text-xs block">
             last_saved: <span className="text-syntax-string">{formatTimestamp(progress.updated_at)}</span>
