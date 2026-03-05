@@ -390,7 +390,9 @@ export const LibraryGroupedView = ({ userId, readerSites, progress, fetchReaderS
                         item={progressItem}
                         animeId={entry.anime_id ?? undefined}
                         readerSites={readerSites}
-                      onRemove={removeFromLibrary}
+                        onRemove={removeFromLibrary}
+                        userId={userId}
+                        onSave={fetchReaderSites}
                       />
                     );
                   })}
@@ -410,6 +412,8 @@ export const LibraryGroupedView = ({ userId, readerSites, progress, fetchReaderS
                   item={item}
                   readerSites={readerSites}
                   onRemove={removeFromLibrary}
+                  userId={userId}
+                  onSave={fetchReaderSites}
                 />
               ))}
             </div>

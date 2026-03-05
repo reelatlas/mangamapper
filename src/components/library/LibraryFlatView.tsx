@@ -13,9 +13,11 @@ interface LibraryFlatViewProps {
   removeFromLibrary: (id: string) => void;
   viewMode: ViewMode;
   onViewModeChange: (mode: ViewMode) => void;
+  userId: string;
+  onSave: () => void;
 }
 
-export const LibraryFlatView = ({ progress, readerSites, removeFromLibrary, viewMode, onViewModeChange }: LibraryFlatViewProps) => {
+export const LibraryFlatView = ({ progress, readerSites, removeFromLibrary, viewMode, onViewModeChange, userId, onSave }: LibraryFlatViewProps) => {
   const [progressSort, setProgressSort] = useState<SortOption>(() => {
     const saved = localStorage.getItem('mangamapper-library-progress-sort');
     return (['alpha-asc', 'alpha-desc', 'date-desc', 'date-asc'].includes(saved || '')) ? saved as SortOption : 'date-desc';
@@ -100,6 +102,8 @@ export const LibraryFlatView = ({ progress, readerSites, removeFromLibrary, view
             item={item}
             readerSites={readerSites}
             onRemove={removeFromLibrary}
+            userId={userId}
+            onSave={onSave}
           />
         ))}
       </div>

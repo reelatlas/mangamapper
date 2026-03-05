@@ -29,6 +29,15 @@ export interface SeriesAssignment {
   userModified?: boolean;
 }
 
+export interface ReaderAssignment {
+  readerName: string;
+  readerUrl: string;
+  seriesUrl: string;
+  suffix: string;
+  existingSiteId?: string;
+  userModified?: boolean;
+}
+
 export const getReadersForAnime = (animeId: string, readerSites: ReaderSite[]): ReaderSite[] => {
   return readerSites.filter(site => site.anime_id === animeId && site.series_url);
 };
