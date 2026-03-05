@@ -61,8 +61,14 @@ export const CollectionSection = ({ anime }: CollectionSectionProps) => {
   const [editReadChapter, setEditReadChapter] = useState('');
   const [editReaderAssignments, setEditReaderAssignments] = useState<ReaderAssignment[]>([]);
   const [saving, setSaving] = useState(false);
+  const [savingProgress, setSavingProgress] = useState(false);
   const [showInlineNewReader, setShowInlineNewReader] = useState(false);
   const [newlyCreatedReader, setNewlyCreatedReader] = useState<{ name: string; url: string } | null>(null);
+
+  // Always-visible progress inputs
+  const [watchedEpisode, setWatchedEpisode] = useState('');
+  const [readVolume, setReadVolume] = useState('');
+  const [readChapter, setReadChapter] = useState('');
 
   const fetchData = useCallback(async () => {
     if (!user) { setLoading(false); return; }
