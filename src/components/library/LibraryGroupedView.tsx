@@ -389,8 +389,6 @@ export const LibraryGroupedView = ({ userId, readerSites, progress, fetchReaderS
                 <div className="space-y-1">
                   <div className="flex items-center justify-between gap-2">
                     <div className="overflow-hidden min-w-0 text-sm flex items-center gap-1.5">
-                      <span className="text-syntax-cyan">reader_name</span>
-                      <span className="text-muted-foreground">: </span>
                       <span className="text-syntax-green break-all">{group.name}</span>
                     </div>
                     <div className="flex items-center gap-2 flex-shrink-0">
