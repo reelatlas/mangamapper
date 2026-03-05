@@ -42,7 +42,6 @@ export const SeriesCard = ({ item, animeId, readerSites, onRemove, userId, onSav
 
   const resolvedAnimeId = item?.anime_id ?? animeId;
   const anime = resolvedAnimeId ? getAnimeById(resolvedAnimeId) : null;
-  if (!anime) return null;
 
   const readerOptions: ReaderOption[] = useMemo(() => {
     const distinct = [...new Map(readerSites.map(r => [r.name.toLowerCase(), r])).values()];
@@ -52,6 +51,8 @@ export const SeriesCard = ({ item, animeId, readerSites, onRemove, userId, onSav
       url: r.url,
     })).sort((a, b) => a.name.localeCompare(b.name));
   }, [readerSites]);
+
+  if (!anime) return null;
 
   const startEditing = (e: React.MouseEvent) => {
     e.preventDefault();
