@@ -425,7 +425,7 @@ export const LibraryGroupedView = ({ userId, readerSites, progress, fetchReaderS
                         </a>
                       </Button>
                     </div>
-                    <div className="h-4 w-px bg-border mx-3" />
+                    <div className="h-4 w-px bg-muted-foreground/40 mx-3" />
                     <div className="flex items-center gap-1">
                       <Button variant="ghost" size="sm" onClick={e => { e.stopPropagation(); startEditingReader(group); }} className="font-mono text-xs gap-1">
                         <Pencil className="w-3 h-3" />edit
