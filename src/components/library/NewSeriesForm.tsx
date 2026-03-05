@@ -147,7 +147,7 @@ export const NewSeriesForm = ({ userId, readerSites, progress, onSuccess, onCanc
             <Label className="text-xs">
               <span className="text-syntax-cyan">series</span>
             </Label>
-            <div className="flex gap-1 items-center">
+            <div className="flex gap-2 items-center">
               <div className="flex-1 min-w-0">
                 <SeriesCombobox
                   value={animeId}
@@ -171,7 +171,7 @@ export const NewSeriesForm = ({ userId, readerSites, progress, onSuccess, onCanc
               <span className="text-syntax-cyan">reader</span>
               <span className="text-muted-foreground"> // optional</span>
             </Label>
-            <div className="flex gap-1 items-center">
+            <div className="flex gap-2 items-center">
               <div className="flex-1 min-w-0">
                 <Select value={selectedReaderKey} onValueChange={handleReaderChange}>
                   <SelectTrigger className="font-mono text-sm border-dashed bg-muted/30 data-[placeholder]:text-muted-foreground">
