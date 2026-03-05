@@ -138,7 +138,7 @@ export const NewReaderForm = ({ userId, readerSites, onSuccess, onCancel, preSel
             <Label htmlFor="siteNotes" className="text-xs">
               <span className="text-syntax-cyan">notes</span>
             </Label>
-            <Input id="siteNotes" placeholder="best Berserk scans for golden age arc" value={newSiteNotes} onChange={e => setNewSiteNotes(e.target.value)} className="font-mono text-sm border-dashed bg-muted/30" />
+            <Input id="siteNotes" placeholder="reliable fan subs" value={newSiteNotes} onChange={e => setNewSiteNotes(e.target.value)} className="font-mono text-sm border-dashed bg-muted/30" />
           </div>
           
           <div className="!mt-8">
