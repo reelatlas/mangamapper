@@ -38,6 +38,7 @@ const AnimeDetail = () => {
     if (data) {
       setLinkedReaders(data);
     }
+    setLibraryKey(prev => prev + 1);
   }, [user, id]);
 
   useEffect(() => {
