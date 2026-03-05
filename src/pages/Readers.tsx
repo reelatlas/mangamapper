@@ -458,7 +458,7 @@ const Readers = () => {
                 <span className="text-muted-foreground">new_reader</span>
               </div>
               <CardContent className="p-4">
-                <form onSubmit={addReaderSite} className="space-y-3">
+                <form onSubmit={addReaderSite} className="space-y-2">
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                     <div className="space-y-1.5">
                       <Label htmlFor="siteName" className="text-xs">
@@ -562,7 +562,7 @@ const Readers = () => {
                           <span className="text-muted-foreground">edit_reader</span>
                         </div>
                         <CardContent className="p-4">
-                          <div className="space-y-3">
+                          <div className="space-y-2">
                             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                               <div className="space-y-1.5">
                                 <Label className="text-xs">
