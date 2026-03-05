@@ -132,7 +132,7 @@ export const SeriesCard = ({ item, animeId, readerSites, onRemove, userId, onSav
     // Auto-select in the last empty row or add a new one
     const emptyIndex = editReaderAssignments.findIndex(a => !a.readerName);
     const key = `${readerName.toLowerCase()}|${readerUrl}`;
-    const baseUrl = readerUrl.endsWith('/') ? readerUrl : readerUrl + '/';
+    const baseUrl = readerUrl ? (readerUrl.endsWith('/') ? readerUrl : readerUrl + '/') : '';
     const newAssignment: ReaderAssignment = {
       readerName,
       readerUrl,
