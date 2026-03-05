@@ -416,7 +416,7 @@ export const LibraryGroupedView = ({ userId, readerSites, progress, fetchReaderS
                         <ExternalLink className="w-3 h-3" />open
                       </a>
                     </Button>
-                    <Button variant="outline" size="sm" onClick={() => setConfirmingDeleteReaderView(group.name)} className="font-mono text-xs border-dashed gap-1 text-muted-foreground hover:text-destructive hover:border-destructive">
+                    <Button variant="outline" size="sm" onClick={() => setConfirmingDeleteReaderView(group.name)} className="font-mono text-xs border-dashed gap-1 text-muted-foreground hover:text-destructive hover:border-destructive hover:bg-destructive/10">
                       <Trash2 className="w-3 h-3" />delete
                     </Button>
                   </div>
