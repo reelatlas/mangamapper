@@ -253,7 +253,7 @@ export const LibraryGroupedView = ({ userId, readerSites, progress, fetchReaderS
 
       <div className="grid gap-8">
         {sortedReaderGroups.map(group => {
-          const seriesEntries = group.entries.filter(e => e.anime_id).sort((a, b) => {
+          const seriesEntries = group.entries.filter(e => e.anime_id).filter(e => progress.some(p => p.anime_id === e.anime_id)).sort((a, b) => {
             const animeA = mockAnimeData.find(m => m.id === a.anime_id);
             const animeB = mockAnimeData.find(m => m.id === b.anime_id);
             return (animeA?.title || '').localeCompare(animeB?.title || '');
