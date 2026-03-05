@@ -117,7 +117,11 @@ export const SeriesCard = ({ item, animeId, readerSites, onRemove, userId, onSav
   };
 
   const removeReaderRow = (index: number) => {
-    setEditReaderAssignments(editReaderAssignments.filter((_, i) => i !== index));
+    if (editReaderAssignments.length === 1) {
+      setEditReaderAssignments([{ readerName: '', readerUrl: '', seriesUrl: '', suffix: '', userModified: false }]);
+    } else {
+      setEditReaderAssignments(editReaderAssignments.filter((_, i) => i !== index));
+    }
   };
 
   const saveChanges = async () => {
@@ -242,7 +246,7 @@ export const SeriesCard = ({ item, animeId, readerSites, onRemove, userId, onSav
                     <div>
                       <span className="text-muted-foreground text-xs block mb-1">ch</span>
                       <Input
-                        type="text"
+                        type="number"
                         placeholder="—"
                         value={editReadChapter}
                         onChange={e => setEditReadChapter(e.target.value)}
@@ -303,15 +307,17 @@ export const SeriesCard = ({ item, animeId, readerSites, onRemove, userId, onSav
                                 onChange={e => handleSeriesUrlChange(index, e.target.value)}
                                 className="font-mono text-sm border-dashed bg-muted/30 flex-1 min-w-0"
                               />
-                              <Button
-                                type="button"
-                                variant="ghost"
-                                size="icon"
-                                onClick={() => removeReaderRow(index)}
-                                className="text-muted-foreground hover:text-destructive hover:bg-destructive/10 flex-shrink-0"
-                              >
-                                <Trash2 className="w-4 h-4" />
-                              </Button>
+                              {(editReaderAssignments.length > 1 || assignment.readerName) && (
+                                <Button
+                                  type="button"
+                                  variant="ghost"
+                                  size="icon"
+                                  onClick={() => removeReaderRow(index)}
+                                  className="text-muted-foreground hover:text-destructive hover:bg-destructive/10 flex-shrink-0"
+                                >
+                                  <Trash2 className="w-4 h-4" />
+                                </Button>
+                              )}
                             </div>
                           </div>
                         </div>
