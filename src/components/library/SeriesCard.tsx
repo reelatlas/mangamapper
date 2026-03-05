@@ -40,18 +40,28 @@ export const SeriesCard = ({ item, animeId, readerSites, onRemove, userId, onSav
   const [editReadChapter, setEditReadChapter] = useState('');
   const [editReaderAssignments, setEditReaderAssignments] = useState<ReaderAssignment[]>([]);
   const [saving, setSaving] = useState(false);
+  const [showInlineNewReader, setShowInlineNewReader] = useState(false);
+  const [newlyCreatedReader, setNewlyCreatedReader] = useState<{name: string, url: string} | null>(null);
 
   const resolvedAnimeId = item?.anime_id ?? animeId;
   const anime = resolvedAnimeId ? getAnimeById(resolvedAnimeId) : null;
 
   const readerOptions: ReaderOption[] = useMemo(() => {
     const distinct = [...new Map(readerSites.map(r => [r.name.toLowerCase(), r])).values()];
-    return distinct.map(r => ({
+    const options = distinct.map(r => ({
       key: `${r.name.toLowerCase()}|${r.url}`,
       name: r.name,
       url: r.url,
-    })).sort((a, b) => a.name.localeCompare(b.name));
-  }, [readerSites]);
+    }));
+    if (newlyCreatedReader && !options.find(o => o.name.toLowerCase() === newlyCreatedReader.name.toLowerCase())) {
+      options.push({
+        key: `${newlyCreatedReader.name.toLowerCase()}|${newlyCreatedReader.url}`,
+        name: newlyCreatedReader.name,
+        url: newlyCreatedReader.url,
+      });
+    }
+    return options.sort((a, b) => a.name.localeCompare(b.name));
+  }, [readerSites, newlyCreatedReader]);
 
   if (!anime) return null;
 
@@ -59,6 +69,7 @@ export const SeriesCard = ({ item, animeId, readerSites, onRemove, userId, onSav
     e.preventDefault();
     e.stopPropagation();
     setConfirmingDelete(false);
+    setShowInlineNewReader(false);
     setEditWatchedEpisode(item?.last_watched_episode?.toString() ?? '');
     setEditReadVolume(item?.last_read_volume?.toString() ?? '');
     setEditReadChapter(item?.last_read_chapter ?? '');
@@ -82,6 +93,7 @@ export const SeriesCard = ({ item, animeId, readerSites, onRemove, userId, onSav
   const cancelEditing = () => {
     setIsEditing(false);
     setConfirmingDelete(false);
+    setShowInlineNewReader(false);
   };
 
   const addReaderRow = () => {
@@ -95,8 +107,13 @@ export const SeriesCard = ({ item, animeId, readerSites, onRemove, userId, onSav
   };
 
   const handleReaderSelect = (index: number, key: string) => {
+    if (key === '__new_reader__') {
+      setShowInlineNewReader(true);
+      return;
+    }
     const option = readerOptions.find(o => o.key === key);
     if (!option) return;
+    setShowInlineNewReader(false);
     const updated = [...editReaderAssignments];
     updated[index] = {
       ...updated[index],
@@ -107,6 +124,30 @@ export const SeriesCard = ({ item, animeId, readerSites, onRemove, userId, onSav
       userModified: true,
     };
     setEditReaderAssignments(updated);
+  };
+
+  const handleNewReaderCreated = (readerName: string, readerUrl: string) => {
+    setNewlyCreatedReader({ name: readerName, url: readerUrl });
+    setShowInlineNewReader(false);
+    // Auto-select in the last empty row or add a new one
+    const emptyIndex = editReaderAssignments.findIndex(a => !a.readerName);
+    const key = `${readerName.toLowerCase()}|${readerUrl}`;
+    const baseUrl = readerUrl.endsWith('/') ? readerUrl : readerUrl + '/';
+    const newAssignment: ReaderAssignment = {
+      readerName,
+      readerUrl,
+      seriesUrl: baseUrl,
+      suffix: '',
+      userModified: true,
+    };
+    if (emptyIndex >= 0) {
+      const updated = [...editReaderAssignments];
+      updated[emptyIndex] = newAssignment;
+      setEditReaderAssignments(updated);
+    } else {
+      setEditReaderAssignments([...editReaderAssignments, newAssignment]);
+    }
+    onSave?.(); // refresh reader sites in background
   };
 
   const handleSeriesUrlChange = (index: number, value: string) => {
