@@ -6,6 +6,17 @@ import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { ToggleGroup, ToggleGroupItem } from '@/components/ui/toggle-group';
 import { ArrowUpDown, ExternalLink, Pencil, X, Check, Trash2, Plus, BookDashed, BookOpenText, ChevronDown, ChevronRight } from 'lucide-react';
+
+const TripleArrow = ({ collapsed }: { collapsed: boolean }) => {
+  const Icon = collapsed ? ChevronRight : ChevronDown;
+  return (
+    <div className={`flex flex-shrink-0 ${collapsed ? 'flex-row -space-x-1.5' : 'flex-col -space-y-1.5'}`}>
+      <Icon className="w-2.5 h-2.5 text-syntax-cyan" />
+      <Icon className="w-2.5 h-2.5 text-syntax-purple" />
+      <Icon className="w-2.5 h-2.5 text-syntax-pink" />
+    </div>
+  );
+};
 import { mockAnimeData } from '@/data/mockAnime';
 import { SeriesCard } from './SeriesCard';
 import { SeriesCombobox } from '@/components/SeriesCombobox';
@@ -372,13 +383,8 @@ export const LibraryGroupedView = ({ userId, readerSites, progress, fetchReaderS
                 className="group relative border border-dashed p-3 space-y-1 bg-card cursor-pointer select-none overflow-hidden"
                 onClick={() => toggleGroup(group.name.toLowerCase())}
               >
-                <div className="flex items-center gap-2">
+                <div className="flex items-center justify-between gap-2">
                   <div className="overflow-hidden min-w-0 text-sm flex items-center gap-1.5">
-                    {collapsedGroups.has(group.name.toLowerCase()) ? (
-                      <ChevronRight className="w-3.5 h-3.5 text-muted-foreground flex-shrink-0" />
-                    ) : (
-                      <ChevronDown className="w-3.5 h-3.5 text-muted-foreground flex-shrink-0" />
-                    )}
                     <span className="text-syntax-cyan">reader_name</span>
                     <span className="text-muted-foreground">: </span>
                     <span className="text-syntax-green break-all">{group.name}</span>
@@ -386,6 +392,7 @@ export const LibraryGroupedView = ({ userId, readerSites, progress, fetchReaderS
                       <span className="text-muted-foreground text-xs">({seriesEntries.length})</span>
                     )}
                   </div>
+                  <TripleArrow collapsed={collapsedGroups.has(group.name.toLowerCase())} />
                 </div>
                 {group.notes && (
                   <div className="text-xs overflow-hidden">
@@ -410,11 +417,8 @@ export const LibraryGroupedView = ({ userId, readerSites, progress, fetchReaderS
                   <div className="absolute inset-0 bg-background/90 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center z-10" onClick={e => e.stopPropagation()}>
                     <div className="flex items-center gap-1 px-3 border-r border-border/50">
                       <Button variant="outline" size="sm" onClick={() => toggleGroup(group.name.toLowerCase())} className="font-mono text-xs border-dashed gap-1">
-                        {collapsedGroups.has(group.name.toLowerCase()) ? (
-                          <><ChevronRight className="w-3 h-3" />expand</>
-                        ) : (
-                          <><ChevronDown className="w-3 h-3" />collapse</>
-                        )}
+                        <TripleArrow collapsed={collapsedGroups.has(group.name.toLowerCase())} />
+                        {collapsedGroups.has(group.name.toLowerCase()) ? 'expand' : 'collapse'}
                       </Button>
                     </div>
                     <div className="flex items-center gap-1 px-3 border-r border-border/50">
