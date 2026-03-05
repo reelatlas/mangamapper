@@ -192,7 +192,7 @@ export const SeriesCard = ({ item, animeId, readerSites, onRemove, userId, onSav
       <Card className="border-dashed border-primary/50 overflow-hidden">
         <div className="terminal-header flex items-center gap-2">
           <span className="text-muted-foreground">edit_series</span>
-          <span className="text-primary">{'>'}</span> <span className="text-syntax-green truncate">{anime.title}</span>
+          <span className="text-syntax-green">{'>'} <span className="truncate">{anime.title}</span></span>
         </div>
         <CardContent className="p-4">
           <div className="space-y-2">
