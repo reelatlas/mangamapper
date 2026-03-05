@@ -81,7 +81,7 @@ const Library = () => {
           <span className="text-syntax-cyan">my_library</span>
         </div>
 
-        <div className="space-y-4">
+        <div className="space-y-6">
           {/* Action buttons row */}
           <div className="flex flex-wrap items-center gap-2">
             {!showNewSeries && !showNewReader && (
