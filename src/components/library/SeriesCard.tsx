@@ -57,6 +57,7 @@ export const SeriesCard = ({ item, animeId, readerSites, onRemove, userId, onSav
   const startEditing = (e: React.MouseEvent) => {
     e.preventDefault();
     e.stopPropagation();
+    setConfirmingDelete(false);
     setEditWatchedEpisode(item?.last_watched_episode?.toString() ?? '');
     setEditReadVolume(item?.last_read_volume?.toString() ?? '');
     setEditReadChapter(item?.last_read_chapter ?? '');
