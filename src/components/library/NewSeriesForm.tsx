@@ -173,13 +173,13 @@ export const NewSeriesForm = ({ userId, readerSites, progress, onSuccess, onCanc
             <div className="flex gap-2 items-center">
               <div className="flex-1 min-w-0">
                 <Select value={selectedReaderKey} onValueChange={handleReaderChange}>
-                  <SelectTrigger className={`font-mono text-sm border-dashed bg-muted/30 data-[placeholder]:text-muted-foreground ${selectedReaderKey ? 'text-syntax-green' : ''}`}>
+                  <SelectTrigger className={`font-mono text-sm border-dashed bg-muted/30 data-[placeholder]:text-muted-foreground focus:ring-2 focus:ring-ring focus:ring-offset-2 focus:ring-offset-background ${selectedReaderKey ? 'text-syntax-green' : ''}`}>
                     <SelectValue placeholder="select reader..." />
                   </SelectTrigger>
                   <SelectPrimitive.Portal>
                     <SelectPrimitive.Content className="font-mono border-dashed relative z-50 min-w-[8rem] overflow-hidden rounded-md border bg-popover text-popover-foreground shadow-md data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 data-[side=bottom]:slide-in-from-top-2 data-[side=bottom]:translate-y-1" position="popper">
                       <SelectScrollUpButton className="h-[25px]" />
-                      <SelectPrimitive.Viewport className="max-h-[200px] overflow-y-auto p-1 w-full min-w-[var(--radix-select-trigger-width)]">
+                      <SelectPrimitive.Viewport className="max-h-[200px] overflow-y-auto p-1 w-[var(--radix-select-trigger-width)]">
                         {readerOptions.map(option => (
                           <SelectItem key={option.key} value={option.key} className="text-sm">
                             {option.name}
