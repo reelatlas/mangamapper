@@ -336,6 +336,12 @@ export const SeriesCard = ({ item, animeId, readerSites, onRemove, userId, onSav
                                     ))}
                                   </SelectPrimitive.Viewport>
                                   <SelectScrollDownButton className="h-[25px]" />
+                                  <div className="border-t border-dashed border-border" />
+                                  <div className="p-1">
+                                    <SelectItem value="__new_reader__" className="text-sm text-primary font-medium">
+                                      + new_reader
+                                    </SelectItem>
+                                  </div>
                                 </SelectPrimitive.Content>
                               </SelectPrimitive.Portal>
                             </Select>
@@ -371,6 +377,14 @@ export const SeriesCard = ({ item, animeId, readerSites, onRemove, userId, onSav
                     <Plus className="w-3.5 h-3.5 mr-1" />add_another
                   </Button>
                 </div>
+                {showInlineNewReader && userId && (
+                  <InlineNewReaderForm
+                    userId={userId}
+                    existingReaders={readerSites}
+                    onCreated={handleNewReaderCreated}
+                    onCancel={() => setShowInlineNewReader(false)}
+                  />
+                )}
               </div>
             )}
 
