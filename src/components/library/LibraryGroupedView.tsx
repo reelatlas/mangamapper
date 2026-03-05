@@ -318,7 +318,7 @@ export const LibraryGroupedView = ({ userId, readerSites, progress, fetchReaderS
                         </Button>
                       </div>
                     </div>
-                    <div className="mt-4 flex flex-wrap items-center justify-between gap-3">
+                    <div className="mt-8 flex flex-wrap items-center justify-between gap-3">
                       <div className="flex items-center gap-2">
                         <Button onClick={() => saveReaderEdit(group.entries)} className="font-mono text-xs border-dashed">
                           <Check className="w-3.5 h-3.5 mr-1" />save_changes()
