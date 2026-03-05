@@ -421,10 +421,12 @@ export const SeriesCard = ({ item, animeId, readerSites, onRemove, userId, onSav
     );
   }
 
-  // View mode (original)
+  const linkedReaders = getReadersForAnime(resolvedAnimeId!, readerSites);
+
+  // View mode
   return (
-    <Link to={`/anime/${anime.id}`} className="block overflow-hidden">
-      <Card className="border-dashed hover:border-primary/50 transition-colors cursor-pointer overflow-hidden">
+    <div className="block overflow-hidden">
+      <Card className="group relative border-dashed hover:border-primary/50 transition-colors overflow-hidden">
         <CardContent className="p-4 overflow-hidden">
           <div className="flex items-stretch gap-4">
             {imgError ? (
@@ -468,24 +470,11 @@ export const SeriesCard = ({ item, animeId, readerSites, onRemove, userId, onSav
                 )}
                 {anime.hasManga && (
                   <>
-                    {getReadersForAnime(resolvedAnimeId!, readerSites).length > 0 ? (
+                    {linkedReaders.length > 0 ? (
                       <div className="flex items-center gap-1.5 min-h-5 flex-wrap">
                         <Glasses className="w-3.5 h-3.5 shrink-0 text-primary" />
-                        {getReadersForAnime(resolvedAnimeId!, readerSites).map((reader) => (
-                          <Button
-                            key={reader.id}
-                            variant="outline"
-                            size="sm"
-                            className="h-5 px-1.5 text-[10px] font-mono border-dashed gap-1 max-w-full"
-                            onClick={(e) => {
-                              e.preventDefault();
-                              e.stopPropagation();
-                              window.open(reader.series_url!, '_blank');
-                            }}
-                          >
-                            <span className="truncate">{reader.name}</span>
-                            <ExternalLink className="w-2.5 h-2.5 shrink-0" />
-                          </Button>
+                        {linkedReaders.map((reader) => (
+                          <span key={reader.id} className="text-[10px] font-mono text-muted-foreground truncate">{reader.name}</span>
                         ))}
                       </div>
                     ) : (
@@ -498,30 +487,55 @@ export const SeriesCard = ({ item, animeId, readerSites, onRemove, userId, onSav
                 )}
               </div>
             </div>
-            <div className="flex items-start gap-1">
-              {userId && (
-                <Button variant="ghost" size="icon" onClick={startEditing} className="text-muted-foreground hover:text-accent hover:bg-accent/10 h-8 w-8">
-                  <Pencil className="w-3.5 h-3.5" />
-                </Button>
-              )}
-              {item && confirmingDelete ? (
-                <div className="flex items-center gap-1">
-                  <Button variant="ghost" size="icon" onClick={(e) => { e.preventDefault(); e.stopPropagation(); onRemove(item.id); setConfirmingDelete(false); }} className="text-muted-foreground hover:text-destructive hover:bg-destructive/10 h-8 w-8">
-                    <Check className="w-3.5 h-3.5" />
-                  </Button>
-                  <Button variant="ghost" size="icon" onClick={(e) => { e.preventDefault(); e.stopPropagation(); setConfirmingDelete(false); }} className="text-muted-foreground hover:text-muted-foreground hover:bg-muted h-8 w-8">
-                    <X className="w-3.5 h-3.5" />
-                  </Button>
-                </div>
-              ) : item ? (
-                <Button variant="ghost" size="icon" onClick={(e) => { e.preventDefault(); e.stopPropagation(); setConfirmingDelete(true); }} className="text-muted-foreground hover:text-destructive hover:bg-destructive/10 h-8 w-8">
-                  <Trash2 className="w-3.5 h-3.5" />
-                </Button>
-              ) : null}
-            </div>
           </div>
         </CardContent>
+
+        {/* Hover overlay */}
+        {confirmingDelete ? (
+          <div className="absolute inset-0 bg-background/90 flex items-center justify-center gap-3 z-10">
+            <span className="text-xs text-muted-foreground font-mono mr-1">delete?</span>
+            <Button variant="ghost" size="icon" onClick={() => { if (item) { onRemove(item.id); } setConfirmingDelete(false); }} className="text-muted-foreground hover:text-destructive hover:bg-destructive/10 h-8 w-8">
+              <Check className="w-3.5 h-3.5" />
+            </Button>
+            <Button variant="ghost" size="icon" onClick={() => setConfirmingDelete(false)} className="text-muted-foreground hover:text-muted-foreground hover:bg-muted h-8 w-8">
+              <X className="w-3.5 h-3.5" />
+            </Button>
+          </div>
+        ) : (
+          <div className="absolute inset-0 bg-background/90 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center gap-2 z-10">
+            <Button variant="outline" size="sm" className="font-mono text-xs border-dashed gap-1" asChild>
+              <Link to={`/anime/${anime.id}`}>
+                <ExternalLink className="w-3 h-3" />view_details
+              </Link>
+            </Button>
+            {userId && (
+              <Button variant="outline" size="sm" onClick={startEditing} className="font-mono text-xs border-dashed gap-1">
+                <Pencil className="w-3 h-3" />edit
+              </Button>
+            )}
+            {item && (
+              <Button variant="outline" size="sm" onClick={(e) => { e.stopPropagation(); setConfirmingDelete(true); }} className="font-mono text-xs border-dashed gap-1 text-muted-foreground hover:text-destructive hover:border-destructive">
+                <Trash2 className="w-3 h-3" />delete
+              </Button>
+            )}
+            {linkedReaders.length > 0 && (
+              linkedReaders.length === 1 ? (
+                <Button variant="outline" size="sm" onClick={(e) => { e.stopPropagation(); window.open(linkedReaders[0].series_url!, '_blank'); }} className="font-mono text-xs border-dashed gap-1">
+                  <Glasses className="w-3 h-3" />read_manga
+                </Button>
+              ) : (
+                <div className="flex items-center gap-1">
+                  {linkedReaders.map(reader => (
+                    <Button key={reader.id} variant="outline" size="sm" onClick={(e) => { e.stopPropagation(); window.open(reader.series_url!, '_blank'); }} className="font-mono text-xs border-dashed gap-1">
+                      <Glasses className="w-3 h-3" />{reader.name}
+                    </Button>
+                  ))}
+                </div>
+              )
+            )}
+          </div>
+        )}
       </Card>
-    </Link>
+    </div>
   );
 };

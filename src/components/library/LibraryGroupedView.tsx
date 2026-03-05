@@ -65,6 +65,7 @@ export const LibraryGroupedView = ({ userId, readerSites, progress, fetchReaderS
     return ['alpha-asc', 'alpha-desc', 'date-desc', 'date-asc'].includes(saved || '') ? saved as SortOption : 'date-desc';
   });
 
+  const [confirmingDeleteReaderView, setConfirmingDeleteReaderView] = useState<string | null>(null);
   const [editingReaderName, setEditingReaderName] = useState<string | null>(null);
   const [editSiteName, setEditSiteName] = useState('');
   const [editSiteUrl, setEditSiteUrl] = useState('');
