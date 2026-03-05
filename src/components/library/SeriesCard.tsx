@@ -511,20 +511,22 @@ export const SeriesCard = ({ item, animeId, readerSites, onRemove, userId, onSav
               </Button>
             </div>
             {linkedReaders.length > 0 && (
-              <div className="h-4 w-px bg-border mx-3" />
-              <div className="flex items-center gap-1 px-3">
-                {linkedReaders.length === 1 ? (
-                  <Button variant="ghost" size="sm" onClick={(e) => { e.stopPropagation(); window.open(linkedReaders[0].series_url!, '_blank'); }} className="font-mono text-xs gap-1">
-                    <Glasses className="w-3 h-3" />{linkedReaders[0].name}
-                  </Button>
-                ) : (
-                  linkedReaders.map(reader => (
-                    <Button key={reader.id} variant="ghost" size="sm" onClick={(e) => { e.stopPropagation(); window.open(reader.series_url!, '_blank'); }} className="font-mono text-xs gap-1">
-                      <Glasses className="w-3 h-3" />{reader.name}
+              <>
+                <div className="h-4 w-px bg-border mx-3" />
+                <div className="flex items-center gap-1 px-3">
+                  {linkedReaders.length === 1 ? (
+                    <Button variant="ghost" size="sm" onClick={(e) => { e.stopPropagation(); window.open(linkedReaders[0].series_url!, '_blank'); }} className="font-mono text-xs gap-1">
+                      <Glasses className="w-3 h-3" />{linkedReaders[0].name}
                     </Button>
-                  ))
-                )}
-              </div>
+                  ) : (
+                    linkedReaders.map(reader => (
+                      <Button key={reader.id} variant="ghost" size="sm" onClick={(e) => { e.stopPropagation(); window.open(reader.series_url!, '_blank'); }} className="font-mono text-xs gap-1">
+                        <Glasses className="w-3 h-3" />{reader.name}
+                      </Button>
+                    ))
+                  )}
+                </div>
+              </>
             )}
             <div className="h-4 w-px bg-border mx-3" />
             <div className="flex items-center gap-1 px-3">
