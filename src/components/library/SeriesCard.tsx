@@ -493,7 +493,7 @@ export const SeriesCard = ({ item, animeId, readerSites, onRemove, userId, onSav
         {/* Hover overlay */}
         {confirmingDelete ? (
           <div className="absolute inset-0 bg-background/90 flex items-center justify-center gap-3 z-10">
-            <span className="text-xs text-muted-foreground font-mono mr-1">delete?</span>
+            <span className="text-xs text-muted-foreground font-mono mr-1">delete_series?</span>
             <Button variant="ghost" size="icon" onClick={() => { if (item) { onRemove(item.id); } setConfirmingDelete(false); }} className="text-muted-foreground hover:text-destructive hover:bg-destructive/10 h-8 w-8">
               <Check className="w-3.5 h-3.5" />
             </Button>
