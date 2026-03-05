@@ -407,18 +407,31 @@ export const LibraryGroupedView = ({ userId, readerSites, progress, fetchReaderS
                     </Button>
                   </div>
                 ) : (
-                  <div className="absolute inset-0 bg-background/90 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center gap-2 z-10" onClick={e => e.stopPropagation()}>
-                    <Button variant="outline" size="sm" onClick={() => startEditingReader(group)} className="font-mono text-xs border-dashed gap-1">
-                      <Pencil className="w-3 h-3" />edit
-                    </Button>
-                    <Button variant="outline" size="sm" asChild className="font-mono text-xs border-dashed gap-1">
-                      <a href={group.url} target="_blank" rel="noopener noreferrer">
-                        <ExternalLink className="w-3 h-3" />open
-                      </a>
-                    </Button>
-                    <Button variant="outline" size="sm" onClick={() => setConfirmingDeleteReaderView(group.name)} className="font-mono text-xs border-dashed gap-1 text-muted-foreground hover:text-destructive hover:border-destructive hover:bg-destructive/10">
-                      <Trash2 className="w-3 h-3" />delete
-                    </Button>
+                  <div className="absolute inset-0 bg-background/90 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center z-10" onClick={e => e.stopPropagation()}>
+                    <div className="flex items-center gap-1 px-3 border-r border-border/50">
+                      <Button variant="outline" size="sm" onClick={() => toggleGroup(group.name.toLowerCase())} className="font-mono text-xs border-dashed gap-1">
+                        {collapsedGroups.has(group.name.toLowerCase()) ? (
+                          <><ChevronRight className="w-3 h-3" />expand</>
+                        ) : (
+                          <><ChevronDown className="w-3 h-3" />collapse</>
+                        )}
+                      </Button>
+                    </div>
+                    <div className="flex items-center gap-1 px-3 border-r border-border/50">
+                      <Button variant="outline" size="sm" asChild className="font-mono text-xs border-dashed gap-1">
+                        <a href={group.url} target="_blank" rel="noopener noreferrer">
+                          <ExternalLink className="w-3 h-3" />open_reader
+                        </a>
+                      </Button>
+                    </div>
+                    <div className="flex items-center gap-1 pl-3">
+                      <Button variant="ghost" size="sm" onClick={() => startEditingReader(group)} className="font-mono text-xs gap-1">
+                        <Pencil className="w-3 h-3" />edit
+                      </Button>
+                      <Button variant="ghost" size="sm" onClick={() => setConfirmingDeleteReaderView(group.name)} className="font-mono text-xs gap-1 text-muted-foreground hover:text-destructive hover:bg-destructive/10">
+                        <Trash2 className="w-3 h-3" />delete
+                      </Button>
+                    </div>
                   </div>
                 )}
               </div>
