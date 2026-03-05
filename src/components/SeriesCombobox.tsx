@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { Check, ChevronDown, Search } from 'lucide-react';
 import { cn } from '@/lib/utils';
-import { Button } from '@/components/ui/button';
+
 import {
   Command,
   CommandEmpty,
@@ -28,7 +28,7 @@ export function SeriesCombobox({
   value, 
   onValueChange, 
   excludeIds = [],
-  placeholder = "search series..."
+  placeholder = "search series"
 }: SeriesComboboxProps) {
   const [open, setOpen] = useState(false);
   const [search, setSearch] = useState('');
@@ -52,12 +52,11 @@ export function SeriesCombobox({
   return (
     <Popover open={open} onOpenChange={setOpen}>
       <PopoverTrigger asChild>
-        <Button
-          variant="outline"
+        <button
           role="combobox"
           aria-expanded={open}
           className={cn(
-            "w-full justify-between font-mono text-sm border-dashed bg-muted/30 hover:bg-muted/50 hover:text-muted-foreground focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background min-w-0",
+            "flex h-10 w-full items-center justify-between rounded-md border border-input px-3 py-2 text-sm ring-offset-background font-mono border-dashed bg-muted/30 focus:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 [&>span]:line-clamp-1 min-w-0",
             open && "ring-2 ring-ring ring-offset-2 ring-offset-background"
           )}
         >
@@ -67,13 +66,13 @@ export function SeriesCombobox({
           )}>
             {selectedAnime ? selectedAnime.title : placeholder}
           </span>
-          <ChevronDown className="ml-2 h-4 w-4 shrink-0 opacity-50" />
-        </Button>
+          <ChevronDown className="h-4 w-4 opacity-50" />
+        </button>
       </PopoverTrigger>
       <PopoverContent className="w-[--radix-popover-trigger-width] p-0 border-dashed" align="start">
         <Command shouldFilter={false}>
           <CommandInput 
-            placeholder="type to search..." 
+            placeholder="type to search" 
             value={search}
             onValueChange={setSearch}
             className="font-mono text-sm"

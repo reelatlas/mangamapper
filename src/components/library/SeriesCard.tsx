@@ -323,7 +323,7 @@ export const SeriesCard = ({ item, animeId, readerSites, onRemove, userId, onSav
                             {index === 0 && <Label className="text-xs hidden sm:block mb-1.5"><span className="text-syntax-cyan">reader</span></Label>}
                             <Select value={currentKey} onValueChange={val => handleReaderSelect(index, val)}>
                               <SelectTrigger className="font-mono text-sm border-dashed bg-muted/30 data-[placeholder]:text-muted-foreground">
-                                <SelectValue placeholder="select reader..." />
+                                <SelectValue placeholder="select reader" />
                               </SelectTrigger>
                               <SelectPrimitive.Portal>
                                 <SelectPrimitive.Content className="font-mono border-dashed relative z-50 w-[var(--radix-select-trigger-width)] overflow-hidden rounded-md border bg-popover text-popover-foreground shadow-md data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 data-[side=bottom]:slide-in-from-top-2 data-[side=bottom]:translate-y-1" position="popper">
