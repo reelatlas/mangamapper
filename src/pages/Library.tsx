@@ -127,6 +127,7 @@ const Library = () => {
               progress={progress}
               fetchReaderSites={handleRefreshAll}
               deleteReaderSite={deleteReaderSite}
+              removeFromLibrary={removeFromLibrary}
               viewMode={viewMode}
               onViewModeChange={setViewMode}
             />

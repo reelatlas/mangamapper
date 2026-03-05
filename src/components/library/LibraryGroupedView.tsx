@@ -38,11 +38,12 @@ interface LibraryGroupedViewProps {
   progress: AnimeProgress[];
   fetchReaderSites: () => void;
   deleteReaderSite: (id: string) => void;
+  removeFromLibrary: (id: string) => void;
   viewMode: ViewMode;
   onViewModeChange: (mode: ViewMode) => void;
 }
 
-export const LibraryGroupedView = ({ userId, readerSites, progress, fetchReaderSites, deleteReaderSite, viewMode, onViewModeChange }: LibraryGroupedViewProps) => {
+export const LibraryGroupedView = ({ userId, readerSites, progress, fetchReaderSites, deleteReaderSite, removeFromLibrary, viewMode, onViewModeChange }: LibraryGroupedViewProps) => {
   const [readerSort, setReaderSort] = useState<SortOption>(() => {
     const saved = localStorage.getItem('mangamapper-library-reader-sort');
     return ['alpha-asc', 'alpha-desc', 'date-desc', 'date-asc'].includes(saved || '') ? saved as SortOption : 'date-desc';
@@ -389,17 +390,7 @@ export const LibraryGroupedView = ({ userId, readerSites, progress, fetchReaderS
                         item={progressItem}
                         animeId={entry.anime_id ?? undefined}
                         readerSites={readerSites}
-                        onRemove={(id) => {
-                          // Remove from library
-                          const removeFromLibrary = async () => {
-                            const { error } = await supabase.from('anime_progress').update({ in_library: false }).eq('id', id);
-                            if (!error) {
-                              toast.success('Removed from library');
-                              fetchReaderSites();
-                            }
-                          };
-                          removeFromLibrary();
-                        }}
+                      onRemove={removeFromLibrary}
                       />
                     );
                   })}
@@ -418,16 +409,7 @@ export const LibraryGroupedView = ({ userId, readerSites, progress, fetchReaderS
                   key={item.id}
                   item={item}
                   readerSites={readerSites}
-                  onRemove={(id) => {
-                    const removeFromLibrary = async () => {
-                      const { error } = await supabase.from('anime_progress').update({ in_library: false }).eq('id', id);
-                      if (!error) {
-                        toast.success('Removed from library');
-                        fetchReaderSites();
-                      }
-                    };
-                    removeFromLibrary();
-                  }}
+                  onRemove={removeFromLibrary}
                 />
               ))}
             </div>
