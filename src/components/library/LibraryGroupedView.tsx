@@ -10,7 +10,7 @@ import { ArrowUpDown, ExternalLink, Pencil, X, Check, Trash2, Plus, BookDashed, 
 const TripleArrow = ({ collapsed, compact = false }: { collapsed: boolean; compact?: boolean }) => {
   const Icon = collapsed ? ChevronRight : ChevronDown;
   const spacing = compact
-    ? (collapsed ? '-space-x-2.5' : '-space-y-2.5')
+    ? (collapsed ? '-space-x-1.5' : '-space-y-1.5')
     : (collapsed ? '-space-x-1.5' : '-space-y-1.5');
   return (
     <div className={`flex flex-shrink-0 ${collapsed ? 'flex-row' : 'flex-col'} ${spacing}`}>
