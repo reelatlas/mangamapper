@@ -179,9 +179,6 @@ export const CollectionSection = ({ anime }: CollectionSectionProps) => {
 
   const startEditing = () => {
     setShowInlineNewReader(false);
-    setEditWatchedEpisode(progress?.last_watched_episode?.toString() ?? '');
-    setEditReadVolume(progress?.last_read_volume?.toString() ?? '');
-    setEditReadChapter(progress?.last_read_chapter ?? '');
 
     if (linkedReaders.length > 0) {
       setEditReaderAssignments(linkedReaders.map(r => ({
@@ -254,25 +251,6 @@ export const CollectionSection = ({ anime }: CollectionSectionProps) => {
     if (!user) return;
     setSaving(true);
 
-    const progressUpdate: Record<string, unknown> = {
-      user_id: user.id,
-      anime_id: anime.id,
-      in_library: true,
-      updated_at: new Date().toISOString(),
-      last_watched_episode: editWatchedEpisode.trim() ? parseInt(editWatchedEpisode.trim(), 10) : null,
-    };
-    if (anime.hasManga) {
-      progressUpdate.last_read_volume = editReadVolume.trim() ? parseInt(editReadVolume.trim(), 10) : null;
-      progressUpdate.last_read_chapter = editReadChapter.trim() || null;
-    }
-
-    const { error: progressError } = await supabase.from('anime_progress').upsert(progressUpdate as any, { onConflict: 'user_id,anime_id' });
-    if (progressError) {
-      toast.error('Failed to update progress');
-      setSaving(false);
-      return;
-    }
-
     // Diff reader assignments
     const validAssignments = editReaderAssignments.filter(a => a.readerName);
     const idsToKeep: string[] = [];
@@ -298,10 +276,9 @@ export const CollectionSection = ({ anime }: CollectionSectionProps) => {
       await supabase.from('manga_reader_sites').delete().in('id', idsToDelete);
     }
 
-    toast.success('Collection updated');
+    toast.success('Readers updated');
     setSaving(false);
     setIsEditing(false);
-    setInLibrary(true);
     fetchData();
   };
 
