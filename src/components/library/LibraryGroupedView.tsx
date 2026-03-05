@@ -438,8 +438,8 @@ export const LibraryGroupedView = ({ userId, readerSites, progress, fetchReaderS
                       </div>
                     </div>
                     <div className="flex items-center gap-1 font-mono text-xs text-foreground px-3">
-                      <TripleArrow collapsed={collapsedGroups.has(group.name.toLowerCase())} compact />
                       {collapsedGroups.has(group.name.toLowerCase()) ? 'expand' : 'collapse'}
+                      <TripleArrow collapsed={collapsedGroups.has(group.name.toLowerCase())} compact />
                     </div>
                   </div>
                 )}
@@ -495,8 +495,8 @@ export const LibraryGroupedView = ({ userId, readerSites, progress, fetchReaderS
               </div>
               <div className="absolute inset-0 bg-background/90 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-end p-3 z-10">
                 <div className="flex items-center gap-1 font-mono text-xs text-foreground px-3">
-                  <TripleArrow collapsed={collapsedGroups.has('unassigned')} compact />
                   {collapsedGroups.has('unassigned') ? 'expand' : 'collapse'}
+                  <TripleArrow collapsed={collapsedGroups.has('unassigned')} compact />
                 </div>
               </div>
             </div>
