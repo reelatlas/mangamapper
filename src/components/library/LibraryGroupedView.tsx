@@ -320,7 +320,6 @@ export const LibraryGroupedView = ({ userId, readerSites, progress, fetchReaderS
                           <Plus className="w-3.5 h-3.5 mr-1" />add_another
                         </Button>
                       </div>
-                      </div>
                     </div>
                     <div className="border-t border-dashed pt-4 mt-4 flex flex-wrap items-center justify-between gap-3">
                       <div className="flex items-center gap-2">

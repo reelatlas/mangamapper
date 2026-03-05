@@ -521,7 +521,6 @@ const Readers = () => {
                         add_another
                       </Button>
                     </div>
-                    </div>
                   </div>
                   
                   <div className="flex gap-2">

@@ -177,7 +177,6 @@ export const NewReaderForm = ({ userId, readerSites, onSuccess, onCancel, preSel
                 <Plus className="w-3.5 h-3.5 mr-1" />add_another
               </Button>
             </div>
-            </div>
           </div>
           
           <div className="flex gap-2">
