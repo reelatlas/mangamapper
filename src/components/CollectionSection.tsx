@@ -409,7 +409,7 @@ export const CollectionSection = ({ anime }: CollectionSectionProps) => {
       <div className="terminal-header">
         <span className="text-muted-foreground">my_collection</span>
       </div>
-      <CardContent className="p-4 font-mono space-y-5">
+      <CardContent className="p-4 font-mono space-y-6">
         {/* Section 1: Library toggle + edit readers */}
         <div className="flex items-center justify-between">
           <Button
@@ -506,7 +506,10 @@ export const CollectionSection = ({ anime }: CollectionSectionProps) => {
                 ))}
               </>
             ) : (
-              <span className="text-xs text-muted-foreground">// no_reader_assigned</span>
+              <div className="flex items-center gap-1.5 text-muted-foreground">
+                <Glasses className="w-3.5 h-3.5 shrink-0 text-muted-foreground" />
+                <span className="text-xs">reader(null)</span>
+              </div>
             )}
           </div>
         )}
