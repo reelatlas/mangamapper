@@ -267,21 +267,20 @@ export const LibraryGroupedView = ({ userId, readerSites, progress, fetchReaderS
                   <span className="text-muted-foreground">edit_reader</span>
                 </div>
                 <CardContent className="p-4">
-                  <div className="space-y-4">
-                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                      <div className="space-y-2">
+                  <div className="space-y-3">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                      <div className="space-y-1.5">
                         <Label className="text-xs"><span className="text-syntax-cyan">reader_name</span></Label>
                         <Input placeholder="LINE マンガ" value={editSiteName} onChange={e => setEditSiteName(e.target.value)} className="font-mono text-sm border-dashed bg-muted/30" />
                       </div>
-                      <div className="space-y-2">
+                      <div className="space-y-1.5">
                         <Label className="text-xs"><span className="text-syntax-cyan">reader_url</span></Label>
                         <Input type="text" placeholder="manga.line.me" value={editSiteUrl} onChange={e => handleEditReaderUrlChange(e.target.value)} className="font-mono text-sm border-dashed bg-muted/30" />
                       </div>
                     </div>
-                    <div className="space-y-2">
+                    <div className="space-y-1.5">
                       <Label className="text-xs">
                         <span className="text-syntax-cyan">notes</span>
-                        <span className="text-muted-foreground"> // optional</span>
                       </Label>
                       <Input placeholder="notes..." value={editSiteNotes} onChange={e => setEditSiteNotes(e.target.value)} className="font-mono text-sm border-dashed bg-muted/30" />
                     </div>
@@ -289,12 +288,12 @@ export const LibraryGroupedView = ({ userId, readerSites, progress, fetchReaderS
                       <p className="text-xs text-muted-foreground mb-3">assign_to <span className="text-muted-foreground/60">// optional</span></p>
                       <div className="space-y-6 sm:space-y-3">
                         {editSeriesAssignments.map((assignment, index) => (
-                          <div key={index} className="space-y-2">
+                          <div key={index} className="space-y-1.5">
                             <Label className="text-xs sm:hidden">
                               <span className="text-syntax-cyan">series</span>
                               <span className="text-muted-foreground">{'{'}name,url{'}'}</span>
                             </Label>
-                            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                               <div className="min-w-0">
                                 {index === 0 && <Label className="text-xs hidden sm:block mb-1.5"><span className="text-syntax-cyan">series</span></Label>}
                                 <SeriesCombobox value={assignment.animeId} onValueChange={val => updateEditSeriesAssignment(index, 'animeId', val)} excludeIds={editSeriesAssignments.filter((_, i) => i !== index).map(a => a.animeId).filter(Boolean)} />

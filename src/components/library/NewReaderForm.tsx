@@ -119,25 +119,24 @@ export const NewReaderForm = ({ userId, readerSites, onSuccess, onCancel, preSel
         <span className="text-muted-foreground">new_reader</span>
       </div>
       <CardContent className="p-4">
-        <form onSubmit={handleSubmit} className="space-y-4">
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-            <div className="space-y-2">
+        <form onSubmit={handleSubmit} className="space-y-3">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+            <div className="space-y-1.5">
               <Label htmlFor="siteName" className="text-xs">
                 <span className="text-syntax-cyan">reader_name</span>
               </Label>
               <Input id="siteName" placeholder="LINE マンガ" value={newSiteName} onChange={e => setNewSiteName(e.target.value)} className="font-mono text-sm border-dashed bg-muted/30" />
             </div>
-            <div className="space-y-2">
+            <div className="space-y-1.5">
               <Label htmlFor="siteUrl" className="text-xs">
                 <span className="text-syntax-cyan">reader_url</span>
               </Label>
               <Input id="siteUrl" type="text" placeholder="manga.line.me" value={newSiteUrl} onChange={e => handleReaderUrlChange(e.target.value)} className="font-mono text-sm border-dashed bg-muted/30" />
             </div>
           </div>
-          <div className="space-y-2">
+          <div className="space-y-1.5">
             <Label htmlFor="siteNotes" className="text-xs">
               <span className="text-syntax-cyan">notes</span>
-              <span className="text-muted-foreground"> // optional</span>
             </Label>
             <Input id="siteNotes" placeholder="best Berserk scans for golden age arc" value={newSiteNotes} onChange={e => setNewSiteNotes(e.target.value)} className="font-mono text-sm border-dashed bg-muted/30" />
           </div>
@@ -146,12 +145,12 @@ export const NewReaderForm = ({ userId, readerSites, onSuccess, onCancel, preSel
                     <p className="text-xs text-muted-foreground mb-3">assign_to <span className="text-muted-foreground/60">// optional</span></p>
                     <div className="space-y-6 sm:space-y-3">
               {seriesAssignments.map((assignment, index) => (
-                <div key={index} className="space-y-2">
+                <div key={index} className="space-y-1.5">
                   <Label className="text-xs sm:hidden">
                     <span className="text-syntax-cyan">series</span>
                     <span className="text-muted-foreground">{'{'}name,url{'}'}</span>
                   </Label>
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                     <div className="min-w-0">
                       {index === 0 && <Label className="text-xs hidden sm:block mb-1.5"><span className="text-syntax-cyan">series</span></Label>}
                       <SeriesCombobox value={assignment.animeId} onValueChange={val => updateSeriesAssignment(index, 'animeId', val)} excludeIds={seriesAssignments.filter((_, i) => i !== index).map(a => a.animeId).filter(Boolean)} />
