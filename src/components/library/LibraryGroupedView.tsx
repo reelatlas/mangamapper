@@ -447,7 +447,7 @@ export const LibraryGroupedView = ({ userId, readerSites, progress, fetchReaderS
               {!collapsedGroups.has(group.name.toLowerCase()) && (
                 <>
                   {seriesEntries.length === 0 && (
-                    <div className="px-3 py-2">
+                    <div className="border border-dashed rounded-sm py-4 flex items-center justify-center">
                       <p className="text-xs text-muted-foreground font-mono">
                         <span className="text-muted-foreground/60">// </span>series_assigned(null)
                       </p>
