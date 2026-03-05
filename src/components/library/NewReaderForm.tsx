@@ -143,9 +143,11 @@ export const NewReaderForm = ({ userId, readerSites, onSuccess, onCancel, preSel
           </div>
           
           <div className="mt-4">
-            <div className="terminal-header flex items-center gap-2 mb-3">
-              <span className="text-muted-foreground">assign_to</span>
-              <span className="text-muted-foreground/60">// optional</span>
+            <div className="border border-dashed border-border mb-3">
+              <div className="px-3 py-2 text-xs text-muted-foreground font-mono flex items-center gap-2">
+                <span>assign_to</span>
+                <span className="text-muted-foreground/60">// optional</span>
+              </div>
             </div>
             <div className="space-y-6 sm:space-y-3">
               {seriesAssignments.map((assignment, index) => (
