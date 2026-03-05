@@ -383,7 +383,7 @@ export const LibraryGroupedView = ({ userId, readerSites, progress, fetchReaderS
           return (
             <div key={group.name} className="space-y-3">
               <div
-                className="group relative border border-dashed border-border/80 bg-primary/5 p-3 cursor-pointer select-none overflow-hidden brightness-125"
+                className="group relative border border-dashed border-muted-foreground/40 bg-primary/5 p-3 cursor-pointer select-none overflow-hidden"
                 onClick={() => toggleGroup(group.name.toLowerCase())}
               >
                 <div className="space-y-1">
