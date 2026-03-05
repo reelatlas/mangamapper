@@ -378,7 +378,15 @@ export const LibraryGroupedView = ({ userId, readerSites, progress, fetchReaderS
                 )}
               </div>
               {seriesEntries.length === 0 && (
-                <p className="text-xs text-muted-foreground">series_assigned(null)</p>
+                <div
+                  className="border border-dashed rounded-sm py-6 flex flex-col items-center justify-center gap-2 cursor-pointer hover:border-primary/40 transition-colors"
+                  onClick={() => startEditingReader(group)}
+                >
+                  <Plus className="w-4 h-4 text-muted-foreground" />
+                  <p className="text-xs text-muted-foreground">
+                    <span className="text-muted-foreground/60">// </span>assign_series
+                  </p>
+                </div>
               )}
               {seriesEntries.length > 0 && (
                 <div className="grid gap-3">
