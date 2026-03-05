@@ -60,7 +60,7 @@ export const InlineNewReaderForm = ({ userId, existingReaders, onCreated, onCanc
       <div className="terminal-header flex items-center gap-2">
         <span className="text-muted-foreground">new_reader</span>
       </div>
-      <div className="p-3 space-y-3">
+      <div className="p-3 space-y-2">
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
         <div className="space-y-1.5">
           <Label className="text-xs">
@@ -89,7 +89,7 @@ export const InlineNewReaderForm = ({ userId, existingReaders, onCreated, onCanc
       <div className="space-y-1.5">
         <Label className="text-xs">
           <span className="text-syntax-cyan">notes</span>
-          <span className="text-muted-foreground"> // optional</span>
+          
         </Label>
         <Input
           placeholder="notes about this reader..."
@@ -98,7 +98,7 @@ export const InlineNewReaderForm = ({ userId, existingReaders, onCreated, onCanc
           className="font-mono text-sm border-dashed bg-muted/30"
         />
       </div>
-      <div className="flex gap-2">
+      <div className="flex gap-2 !mt-8">
         <Button type="button" size="sm" disabled={saving} onClick={handleSubmit} className="font-mono text-xs border-dashed">
           <Plus className="w-3.5 h-3.5 mr-1" />
           {saving ? 'adding...' : 'add_reader()'}
