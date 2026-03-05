@@ -10,6 +10,7 @@ import { supabase } from '@/integrations/supabase/client';
 import { toast } from 'sonner';
 import * as SelectPrimitive from '@radix-ui/react-select';
 import { Select, SelectItem, SelectScrollUpButton, SelectScrollDownButton, SelectTrigger, SelectValue } from '@/components/ui/select';
+import { InlineNewReaderForm } from './InlineNewReaderForm';
 import type { AnimeProgress, ReaderSite, ReaderAssignment } from '@/types/library';
 import { getReadersForAnime } from '@/types/library';
 
