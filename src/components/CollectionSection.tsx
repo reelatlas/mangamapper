@@ -93,6 +93,55 @@ export const CollectionSection = ({ anime }: CollectionSectionProps) => {
 
   useEffect(() => { fetchData(); }, [fetchData]);
 
+  // Sync progress inputs when data loads
+  useEffect(() => {
+    if (progress) {
+      setWatchedEpisode(progress.last_watched_episode?.toString() ?? '');
+      setReadVolume(progress.last_read_volume?.toString() ?? '');
+      setReadChapter(progress.last_read_chapter ?? '');
+    } else {
+      setWatchedEpisode('');
+      setReadVolume('');
+      setReadChapter('');
+    }
+  }, [progress]);
+
+  const isProgressDirty = (() => {
+    const origEp = progress?.last_watched_episode?.toString() ?? '';
+    const origVol = progress?.last_read_volume?.toString() ?? '';
+    const origCh = progress?.last_read_chapter ?? '';
+    return watchedEpisode !== origEp || readVolume !== origVol || readChapter !== origCh;
+  })();
+
+  const resetProgress = () => {
+    setWatchedEpisode(progress?.last_watched_episode?.toString() ?? '');
+    setReadVolume(progress?.last_read_volume?.toString() ?? '');
+    setReadChapter(progress?.last_read_chapter ?? '');
+  };
+
+  const saveProgress = async () => {
+    if (!user) return;
+    setSavingProgress(true);
+    const update: Record<string, unknown> = {
+      user_id: user.id,
+      anime_id: anime.id,
+      updated_at: new Date().toISOString(),
+      last_watched_episode: watchedEpisode.trim() ? parseInt(watchedEpisode.trim(), 10) : null,
+    };
+    if (anime.hasManga) {
+      update.last_read_volume = readVolume.trim() ? parseInt(readVolume.trim(), 10) : null;
+      update.last_read_chapter = readChapter.trim() || null;
+    }
+    const { error } = await supabase.from('anime_progress').upsert(update as any, { onConflict: 'user_id,anime_id' });
+    if (error) {
+      toast.error('Failed to save progress');
+    } else {
+      toast.success('Progress saved');
+      fetchData();
+    }
+    setSavingProgress(false);
+  };
+
   const readerOptions: ReaderOption[] = useMemo(() => {
     const distinct = [...new Map(allReaderSites.map(r => [r.name.toLowerCase(), r])).values()];
     const options = distinct.map(r => ({ key: `${r.name.toLowerCase()}|${r.url}`, name: r.name, url: r.url }));
