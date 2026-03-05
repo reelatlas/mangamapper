@@ -449,16 +449,16 @@ export const SeriesCard = ({ item, animeId, readerSites, onRemove, userId, onSav
               )}
               {item && confirmingDelete ? (
                 <div className="flex items-center gap-1">
-                  <Button variant="ghost" size="icon" onClick={(e) => { e.preventDefault(); e.stopPropagation(); onRemove(item.id); setConfirmingDelete(false); }} className="text-muted-foreground hover:text-destructive hover:bg-destructive/10">
-                    <Check className="w-4 h-4" />
+                  <Button variant="ghost" size="icon" onClick={(e) => { e.preventDefault(); e.stopPropagation(); onRemove(item.id); setConfirmingDelete(false); }} className="text-muted-foreground hover:text-destructive hover:bg-destructive/10 h-8 w-8">
+                    <Check className="w-3.5 h-3.5" />
                   </Button>
-                  <Button variant="ghost" size="icon" onClick={(e) => { e.preventDefault(); e.stopPropagation(); setConfirmingDelete(false); }} className="text-muted-foreground hover:text-muted-foreground hover:bg-muted">
-                    <X className="w-4 h-4" />
+                  <Button variant="ghost" size="icon" onClick={(e) => { e.preventDefault(); e.stopPropagation(); setConfirmingDelete(false); }} className="text-muted-foreground hover:text-muted-foreground hover:bg-muted h-8 w-8">
+                    <X className="w-3.5 h-3.5" />
                   </Button>
                 </div>
               ) : item ? (
-                <Button variant="ghost" size="icon" onClick={(e) => { e.preventDefault(); e.stopPropagation(); setConfirmingDelete(true); }} className="text-muted-foreground hover:text-destructive hover:bg-destructive/10">
-                  <Trash2 className="w-4 h-4" />
+                <Button variant="ghost" size="icon" onClick={(e) => { e.preventDefault(); e.stopPropagation(); setConfirmingDelete(true); }} className="text-muted-foreground hover:text-destructive hover:bg-destructive/10 h-8 w-8">
+                  <Trash2 className="w-3.5 h-3.5" />
                 </Button>
               ) : null}
             </div>
