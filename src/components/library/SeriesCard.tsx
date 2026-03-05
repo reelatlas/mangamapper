@@ -514,7 +514,7 @@ export const SeriesCard = ({ item, animeId, readerSites, onRemove, userId, onSav
               </Button>
             )}
             {item && (
-              <Button variant="outline" size="sm" onClick={(e) => { e.stopPropagation(); setConfirmingDelete(true); }} className="font-mono text-xs border-dashed gap-1 text-muted-foreground hover:text-destructive hover:border-destructive">
+              <Button variant="outline" size="sm" onClick={(e) => { e.stopPropagation(); setConfirmingDelete(true); }} className="font-mono text-xs border-dashed gap-1 text-muted-foreground hover:text-destructive hover:border-destructive hover:bg-destructive/10">
                 <Trash2 className="w-3 h-3" />delete
               </Button>
             )}
