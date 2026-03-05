@@ -421,11 +421,7 @@ export const CollectionSection = ({ anime }: CollectionSectionProps) => {
           >
             {togglingLibrary ? '...' : inLibrary ? '[✓] in_library' : '[ ] add_to_library'}
           </Button>
-          {inLibrary && anime.hasManga && (
-            <Button variant="ghost" size="sm" onClick={startEditing} className="font-mono text-xs h-7 gap-1 text-muted-foreground">
-              <Pencil className="w-3 h-3" /> edit_readers
-            </Button>
-          )}
+          {/* edit_readers moved to readers section */}
         </div>
 
         {/* Section 2: Always-visible progress inputs */}
@@ -494,24 +490,25 @@ export const CollectionSection = ({ anime }: CollectionSectionProps) => {
               <Glasses className={`w-3.5 h-3.5 ${linkedReaders.length > 0 ? 'text-primary' : 'text-muted-foreground'}`} />
               <span className={linkedReaders.length > 0 ? 'text-syntax-cyan' : 'text-muted-foreground'}>readers</span>
             </div>
-            {linkedReaders.length > 0 ? (
-              <div className="flex flex-wrap items-center gap-2">
-                {linkedReaders.map((reader) => (
-                  <Button
-                    key={reader.id}
-                    variant="outline"
-                    size="sm"
-                    className="font-mono text-xs gap-1 h-7 border-dashed"
-                    onClick={() => window.open(reader.series_url!, '_blank')}
-                  >
-                    <Glasses className="w-3 h-3" />
-                    {reader.name}
-                  </Button>
-                ))}
-              </div>
-            ) : (
-              <span className="text-xs text-muted-foreground">reader(null)</span>
-            )}
+            <div className="flex flex-wrap items-center gap-2">
+              {linkedReaders.map((reader) => (
+                <Button
+                  key={reader.id}
+                  variant="outline"
+                  size="sm"
+                  className="font-mono text-xs h-7 border-dashed"
+                  onClick={() => window.open(reader.series_url!, '_blank')}
+                >
+                  {reader.name}
+                </Button>
+              ))}
+              {linkedReaders.length === 0 && (
+                <span className="text-xs text-muted-foreground">reader(null)</span>
+              )}
+              <Button variant="ghost" size="sm" onClick={startEditing} className="font-mono text-xs h-7 gap-1 text-muted-foreground">
+                <Pencil className="w-3 h-3" /> edit_readers
+              </Button>
+            </div>
           </div>
         )}
 
