@@ -1,6 +1,5 @@
 import { useState, useMemo, useEffect } from 'react';
 import { ToggleGroup, ToggleGroupItem } from '@/components/ui/toggle-group';
-import { ToggleGroup, ToggleGroupItem } from '@/components/ui/toggle-group';
 import { ArrowUpDown } from 'lucide-react';
 import { getAnimeById } from '@/data/mockAnime';
 import type { SortOption, AnimeProgress, ReaderSite } from '@/types/library';
