@@ -1,6 +1,6 @@
 import { useState, useMemo, useEffect } from 'react';
 import { ToggleGroup, ToggleGroupItem } from '@/components/ui/toggle-group';
-import { ArrowUpDown } from 'lucide-react';
+import { ArrowUpDown, BookDashed, BookOpenText } from 'lucide-react';
 import { getAnimeById } from '@/data/mockAnime';
 import type { SortOption, AnimeProgress, ReaderSite } from '@/types/library';
 import { ViewModeToggle, type ViewMode } from './ViewModeToggle';
@@ -60,6 +60,10 @@ export const LibraryFlatView = ({ progress, readerSites, removeFromLibrary, view
         </div>
         <div className="text-center py-16 border border-dashed">
           <div className="group/lib cursor-pointer" onClick={onNewSeries}>
+            <div className="flex items-center justify-center mb-3">
+              <BookDashed className="w-6 h-6 text-muted-foreground group-hover/lib:hidden" />
+              <BookOpenText className="w-6 h-6 text-muted-foreground hidden group-hover/lib:block" />
+            </div>
             <p className="text-muted-foreground text-sm">
               <span>// library(empty)</span>
               <span className="hidden group-hover/lib:inline text-primary ml-2">{'>'} new_series</span>

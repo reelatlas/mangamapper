@@ -253,6 +253,16 @@ export const LibraryGroupedView = ({ userId, readerSites, progress, fetchReaderS
           </div>
         </div>
         <div className="text-center py-16 border border-dashed">
+          <div className="flex items-center justify-center gap-1 mb-3">
+            <div className="group/eye1 cursor-default">
+              <EyeClosed className="w-6 h-6 text-muted-foreground group-hover/eye1:hidden" />
+              <Eye className="w-6 h-6 text-muted-foreground hidden group-hover/eye1:block" />
+            </div>
+            <div className="group/eye2 cursor-default">
+              <EyeClosed className="w-6 h-6 text-muted-foreground group-hover/eye2:hidden" />
+              <Eye className="w-6 h-6 text-muted-foreground hidden group-hover/eye2:block" />
+            </div>
+          </div>
           <div className="group/series cursor-pointer mb-1" onClick={onNewSeries}>
             <p className="text-muted-foreground text-sm">
               <span>// series_assigned(null);</span>
