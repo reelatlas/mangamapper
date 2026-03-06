@@ -1,5 +1,5 @@
 import { useState, useMemo, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import { ToggleGroup, ToggleGroupItem } from '@/components/ui/toggle-group';
 import { ToggleGroup, ToggleGroupItem } from '@/components/ui/toggle-group';
 import { ArrowUpDown } from 'lucide-react';
 import { getAnimeById } from '@/data/mockAnime';
