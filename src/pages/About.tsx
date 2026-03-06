@@ -22,7 +22,7 @@ const About = () => {
               <span>// welcome</span>
             </div>
             <p className="text-sm text-foreground/80 leading-relaxed mb-4">
-              welcome traveler, your anime has ended
+              welcome <span className="text-syntax-purple">traveler</span>, your anime has ended
             </p>
             <ul className="space-y-1.5 text-sm text-foreground/70 mb-5">
               <li className="flex gap-2">
@@ -44,7 +44,7 @@ const About = () => {
             <ul className="space-y-1.5 text-sm text-foreground/70">
               <li className="flex gap-2">
                 <span className="text-muted-foreground">*</span>
-                <span>find where the anime leaves… and the <span className="text-syntax-green">manga enters</span></span>
+                <span>find where the <span className="text-syntax-amber">anime leaves…</span> and the <span className="text-syntax-green">manga enters</span></span>
               </li>
               <li className="flex gap-2">
                 <span className="text-muted-foreground">*</span>
@@ -56,7 +56,7 @@ const About = () => {
               </li>
               <li className="flex gap-2">
                 <span className="text-muted-foreground">*</span>
-                <span>to reignite your soul and fulfill what was written</span>
+                <span>to <span className="text-foreground">reignite your soul</span> and fulfill what was written</span>
               </li>
             </ul>
           </section>
