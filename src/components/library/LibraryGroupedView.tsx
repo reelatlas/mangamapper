@@ -248,9 +248,8 @@ export const LibraryGroupedView = ({ userId, readerSites, progress, fetchReaderS
     return (
       <div className="space-y-4">
         <div className="flex flex-wrap items-center gap-2">
-          <div className="ml-auto">
-            <ViewModeToggle viewMode={viewMode} onViewModeChange={onViewModeChange} />
-          </div>
+          <ViewModeToggle viewMode={viewMode} onViewModeChange={onViewModeChange} />
+          <div className="w-px h-5 bg-border mx-1" />
         </div>
         <div className="text-center py-16 border border-dashed">
           <div className="flex items-center justify-center gap-1 mb-3">
@@ -312,9 +311,8 @@ export const LibraryGroupedView = ({ userId, readerSites, progress, fetchReaderS
             <ToggleGroupItem value="alpha-asc" className="text-xs font-mono px-2.5 h-7 border-dashed text-muted-foreground data-[state=on]:bg-muted data-[state=on]:text-foreground">a→z</ToggleGroupItem>
             <ToggleGroupItem value="alpha-desc" className="text-xs font-mono px-2.5 h-7 border-dashed text-muted-foreground data-[state=on]:bg-muted data-[state=on]:text-foreground">z→a</ToggleGroupItem>
           </ToggleGroup>
-          <div className="ml-auto">
-            <ViewModeToggle viewMode={viewMode} onViewModeChange={onViewModeChange} />
-          </div>
+          <ViewModeToggle viewMode={viewMode} onViewModeChange={onViewModeChange} />
+          <div className="w-px h-5 bg-border mx-1" />
         </div>
       )}
 
