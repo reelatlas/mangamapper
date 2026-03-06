@@ -178,7 +178,7 @@ export const NewSeriesForm = ({ userId, readerSites, progress, onSuccess, onCanc
                   </SelectTrigger>
                   <SelectPrimitive.Portal>
                     <SelectPrimitive.Content className="font-mono border-dashed relative z-50 w-[var(--radix-select-trigger-width)] overflow-hidden rounded-md border bg-popover text-popover-foreground shadow-md data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 data-[side=bottom]:slide-in-from-top-2 data-[side=bottom]:translate-y-1" position="popper">
-                      <div className="h-[25px]"><SelectScrollUpButton /></div>
+                      <SelectScrollUpButton />
                       <SelectPrimitive.Viewport className="max-h-[200px] overflow-y-auto p-1 w-full min-w-[var(--radix-select-trigger-width)]">
                         {readerOptions.map(option => (
                           <SelectItem key={option.key} value={option.key} className="text-sm">
@@ -186,7 +186,7 @@ export const NewSeriesForm = ({ userId, readerSites, progress, onSuccess, onCanc
                           </SelectItem>
                         ))}
                       </SelectPrimitive.Viewport>
-                      <div className="h-[25px]"><SelectScrollDownButton /></div>
+                      <SelectScrollDownButton />
                       <div className="border-t border-dashed border-border" />
                       <div className="p-1">
                         <SelectItem value="__new_reader__" className="text-sm text-primary font-medium">
