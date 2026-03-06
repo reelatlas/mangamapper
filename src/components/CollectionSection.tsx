@@ -427,7 +427,7 @@ export const CollectionSection = ({ anime }: CollectionSectionProps) => {
         {/* Section 2: Always-visible progress inputs */}
         {inLibrary && (
           <div className="space-y-3">
-            <div className="flex flex-wrap gap-6">
+            <div className="flex flex-wrap items-end gap-6">
               <div className="space-y-2">
                 <div className="flex items-center gap-1.5 text-xs">
                   <Tv className={`w-3.5 h-3.5 ${watchedEpisode.trim() ? 'text-primary' : 'text-muted-foreground'}`} />
@@ -467,19 +467,19 @@ export const CollectionSection = ({ anime }: CollectionSectionProps) => {
                   </div>
                 </div>
               )}
-            </div>
 
-            {/* Save/reset progress (only when dirty) */}
-            {isProgressDirty && (
-              <div className="flex items-center gap-2">
-                <Button size="sm" onClick={saveProgress} disabled={savingProgress} className="font-mono text-xs h-7 border-dashed">
-                  <Check className="w-3 h-3 mr-1" />{savingProgress ? 'saving...' : 'save_progress()'}
-                </Button>
-                <Button variant="ghost" size="sm" onClick={resetProgress} className="font-mono text-xs h-7 text-muted-foreground">
-                  <RotateCcw className="w-3 h-3 mr-1" />reset
-                </Button>
-              </div>
-            )}
+              {/* Save/reset progress (inline to the right) */}
+              {isProgressDirty && (
+                <div className="flex items-center gap-2">
+                  <Button size="sm" onClick={saveProgress} disabled={savingProgress} className="font-mono text-xs h-7 border-dashed">
+                    <Check className="w-3 h-3 mr-1" />{savingProgress ? 'saving...' : 'save_progress()'}
+                  </Button>
+                  <Button variant="ghost" size="sm" onClick={resetProgress} className="font-mono text-xs h-7 text-muted-foreground">
+                    <RotateCcw className="w-3 h-3 mr-1" />reset
+                  </Button>
+                </div>
+              )}
+            </div>
           </div>
         )}
 
