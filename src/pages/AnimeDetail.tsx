@@ -156,10 +156,9 @@ const AnimeDetail = () => {
           <div className="terminal-header">
             <span className="text-muted-foreground">episode_list</span>
           </div>
-          <div className="px-4 pt-3 pb-0 flex items-center justify-between flex-wrap gap-2">
+          <div className="px-4 pt-3 pb-0 flex items-end justify-between flex-wrap gap-2">
             <div className="text-xs text-muted-foreground">
-              <span className="text-syntax-cyan">// </span>
-              episodes_shown {'>'} {anime.episodes.length} of {anime.currentEpisode}
+              episodes shown {'>_'}{anime.episodes.length} of {anime.currentEpisode}
             </div>
             <div className="flex flex-wrap items-center gap-4 text-xs text-muted-foreground">
               <div className="flex items-center gap-1.5">
