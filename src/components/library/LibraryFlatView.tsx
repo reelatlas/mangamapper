@@ -1,7 +1,6 @@
 import { useState, useMemo, useEffect } from 'react';
-import { Link } from 'react-router-dom';
 import { ToggleGroup, ToggleGroupItem } from '@/components/ui/toggle-group';
-import { ArrowUpDown, BookDashed, BookOpenText } from 'lucide-react';
+import { ArrowUpDown } from 'lucide-react';
 import { getAnimeById } from '@/data/mockAnime';
 import type { SortOption, AnimeProgress, ReaderSite } from '@/types/library';
 import { ViewModeToggle, type ViewMode } from './ViewModeToggle';
@@ -15,9 +14,10 @@ interface LibraryFlatViewProps {
   onViewModeChange: (mode: ViewMode) => void;
   userId: string;
   onSave: () => void;
+  onNewSeries: () => void;
 }
 
-export const LibraryFlatView = ({ progress, readerSites, removeFromLibrary, viewMode, onViewModeChange, userId, onSave }: LibraryFlatViewProps) => {
+export const LibraryFlatView = ({ progress, readerSites, removeFromLibrary, viewMode, onViewModeChange, userId, onSave, onNewSeries }: LibraryFlatViewProps) => {
   const [progressSort, setProgressSort] = useState<SortOption>(() => {
     const saved = localStorage.getItem('mangamapper-library-progress-sort');
     return (['alpha-asc', 'alpha-desc', 'date-desc', 'date-asc'].includes(saved || '')) ? saved as SortOption : 'date-desc';
@@ -59,19 +59,12 @@ export const LibraryFlatView = ({ progress, readerSites, removeFromLibrary, view
           </div>
         </div>
         <div className="text-center py-16 border border-dashed">
-          <div className="group cursor-default mx-auto mb-3 w-fit">
-            <BookDashed className="w-8 h-8 text-muted-foreground group-hover:hidden" />
-            <BookOpenText className="w-8 h-8 text-muted-foreground hidden group-hover:block" />
+          <div className="group/lib cursor-pointer" onClick={onNewSeries}>
+            <p className="text-muted-foreground text-sm">
+              <span>// library(empty)</span>
+              <span className="hidden group-hover/lib:inline text-primary ml-2">{'>'} new_series</span>
+            </p>
           </div>
-          <p className="text-muted-foreground text-sm">
-            <span className="text-muted-foreground">// </span>library_empty
-          </p>
-          <p className="text-xs text-muted-foreground mt-2">
-            <Link to="/" className="hover:text-accent transition-colors">
-              {'>'} explore_anime
-            </Link>
-            {' '}to add to your library
-          </p>
         </div>
       </div>
     );

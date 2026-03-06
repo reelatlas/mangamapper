@@ -121,6 +121,7 @@ const Library = () => {
               onViewModeChange={setViewMode}
               userId={user!.id}
               onSave={handleRefreshAll}
+              onNewSeries={() => setShowNewSeries(true)}
             />
           ) : (
             <LibraryGroupedView
@@ -132,6 +133,8 @@ const Library = () => {
               removeFromLibrary={removeFromLibrary}
               viewMode={viewMode}
               onViewModeChange={setViewMode}
+              onNewSeries={() => setShowNewSeries(true)}
+              onNewReader={() => setShowNewReader(true)}
             />
           )}
         </div>
