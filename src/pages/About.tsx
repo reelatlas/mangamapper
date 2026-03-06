@@ -1,5 +1,5 @@
 import { Header } from '@/components/Header';
-import { Info, Code, MessageSquare, Heart } from 'lucide-react';
+import { Fingerprint, Code, MessageSquare, Heart } from 'lucide-react';
 
 const About = () => {
   return (
@@ -9,7 +9,7 @@ const About = () => {
       <main className="container py-8 max-w-2xl">
         {/* Breadcrumb */}
         <div className="flex items-center gap-2 mb-8 text-sm">
-          <Info className="w-4 h-4 text-primary" />
+          <Fingerprint className="w-4 h-4 text-primary" />
           <span className="text-muted-foreground">{'>'}</span>
           <span className="text-syntax-cyan">about</span>
         </div>
@@ -18,7 +18,7 @@ const About = () => {
           {/* // about */}
           <section className="border border-dashed p-5">
             <div className="flex items-center gap-2 mb-3 text-xs text-muted-foreground">
-              <Info className="w-3.5 h-3.5" />
+              <Fingerprint className="w-3.5 h-3.5" />
               <span>// about</span>
             </div>
             <p className="text-sm text-foreground/80 leading-relaxed">

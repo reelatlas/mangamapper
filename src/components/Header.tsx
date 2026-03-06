@@ -68,7 +68,7 @@ export const Header = () => {
                     {user.email?.split('@')[1] || 'email.com'}
                   </div>
                   <DropdownMenuSeparator className="border-dashed" />
-                  <DropdownMenuItem onClick={signOut} className="cursor-pointer gap-2 text-destructive text-xs">
+                  <DropdownMenuItem onClick={signOut} className="cursor-pointer gap-2 text-destructive text-xs focus:bg-destructive/15 focus:text-destructive">
                     <LogOut className="w-3.5 h-3.5" />
                     sign_out
                   </DropdownMenuItem>
