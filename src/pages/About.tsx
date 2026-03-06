@@ -186,7 +186,7 @@ const About = () => {
         <div className="container py-6 text-center text-xs text-muted-foreground">
           <p>
             <span className="text-foreground/40">mangaMapper</span>{' '}
-            <span>// find your next chapter</span>
+            <span>// your journey continues</span>
           </p>
         </div>
       </footer>
