@@ -158,7 +158,7 @@ const AnimeDetail = () => {
           </div>
           <div className="px-4 pt-3 pb-0 flex items-end justify-between flex-wrap gap-2">
             <div className="text-xs text-muted-foreground">
-              episodes shown {'>_'}{anime.episodes.length} of {anime.currentEpisode}
+              showing {'>_'}{anime.episodes.length} of {anime.currentEpisode}
             </div>
             <div className="flex flex-wrap items-center gap-4 text-xs text-muted-foreground">
               <div className="flex items-center gap-1.5">
