@@ -60,7 +60,7 @@ const AnimeDetail = () => {
                 <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-transparent" />
                 <div className="absolute bottom-3 left-3 right-3">
                   <span className="text-xs border px-2 py-1 bg-background/80 rounded-full">
-                    {anime.animeStatus === 'airing' ? (
+                    {anime.status === 'airing' ? (
                       <span className="text-accent">airing</span>
                     ) : (
                       <span className="text-muted-foreground">complete</span>
@@ -98,27 +98,6 @@ const AnimeDetail = () => {
                     </span>
                   ))}
                 </div>
-                <div>
-                  <span className="text-syntax-cyan">anime_status</span>
-                  <span className="text-muted-foreground">: </span>
-                  <span className={
-                    anime.animeStatus === 'airing' ? 'text-accent' :
-                    anime.animeStatus === 'hiatus' ? 'text-syntax-amber' :
-                    anime.animeStatus === 'upcoming' ? 'text-syntax-purple' :
-                    'text-muted-foreground'
-                  }>{anime.animeStatus}</span>
-                </div>
-                {anime.mangaStatus && (
-                  <div>
-                    <span className="text-syntax-cyan">manga_status</span>
-                    <span className="text-muted-foreground">: </span>
-                    <span className={
-                      anime.mangaStatus === 'publishing' ? 'text-accent' :
-                      anime.mangaStatus === 'hiatus' ? 'text-syntax-amber' :
-                      'text-muted-foreground'
-                    }>{anime.mangaStatus}</span>
-                  </div>
-                )}
                 <div className="pt-2 border-t border-dashed">
                   <span className="text-syntax-cyan">synopsis</span>
                   <span className="text-muted-foreground">: </span>

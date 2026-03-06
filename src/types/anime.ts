@@ -1,8 +1,5 @@
 export type EpisodeType = 'canon' | 'filler' | 'anime-only-canon';
 
-export type AnimeStatus = 'airing' | 'hiatus' | 'completed' | 'upcoming';
-export type MangaStatus = 'publishing' | 'hiatus' | 'finished';
-
 export type TrackingSite = 'mal' | 'anilist';
 export type StreamingService = 'all' | 'crunchyroll' | 'netflix' | 'amazon' | 'disney-hulu' | 'bilibili' | 'hidive';
 
@@ -46,8 +43,7 @@ export interface AnimeSeries {
   coverImage: string;
   currentEpisode: number;
   totalEpisodes: number | null;
-  animeStatus: AnimeStatus;
-  mangaStatus: MangaStatus | null;
+  status: 'airing' | 'completed' | 'upcoming';
   hasManga: boolean;
   episodes: Episode[];
   ranking: TrackingRanking;

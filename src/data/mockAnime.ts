@@ -1,4 +1,4 @@
-import { AnimeSeries, AnimeStatus, TrackingSite, StreamingService } from '@/types/anime';
+import { AnimeSeries, TrackingSite, StreamingService } from '@/types/anime';
 
 export const mockAnimeData: AnimeSeries[] = [
   {
@@ -8,8 +8,7 @@ export const mockAnimeData: AnimeSeries[] = [
     coverImage: 'https://cdn.myanimelist.net/images/anime/1244/138851.jpg',
     currentEpisode: 1122,
     totalEpisodes: null,
-    animeStatus: 'airing',
-    mangaStatus: 'publishing',
+    status: 'airing',
     hasManga: true,
     ranking: { mal: 1, anilist: 2 },
     streamingOn: ['crunchyroll', 'netflix'],
@@ -30,8 +29,7 @@ export const mockAnimeData: AnimeSeries[] = [
     coverImage: 'https://cdn.myanimelist.net/images/anime/1792/138022.jpg',
     currentEpisode: 47,
     totalEpisodes: null,
-    animeStatus: 'airing',
-    mangaStatus: 'finished',
+    status: 'airing',
     hasManga: true,
     ranking: { mal: 2, anilist: 1 },
     streamingOn: ['crunchyroll', 'netflix', 'amazon'],
@@ -52,8 +50,7 @@ export const mockAnimeData: AnimeSeries[] = [
     coverImage: 'https://cdn.myanimelist.net/images/anime/1150/141957.jpg',
     currentEpisode: 11,
     totalEpisodes: 12,
-    animeStatus: 'airing',
-    mangaStatus: 'publishing',
+    status: 'airing',
     hasManga: true,
     ranking: { mal: 3, anilist: 3 },
     streamingOn: ['crunchyroll', 'netflix', 'bilibili'],
@@ -74,8 +71,7 @@ export const mockAnimeData: AnimeSeries[] = [
     coverImage: 'https://cdn.myanimelist.net/images/anime/1075/143876.jpg',
     currentEpisode: 8,
     totalEpisodes: 20,
-    animeStatus: 'airing',
-    mangaStatus: null,
+    status: 'airing',
     hasManga: false,
     ranking: { mal: 4, anilist: 5 },
     streamingOn: ['crunchyroll', 'netflix'],
@@ -96,8 +92,7 @@ export const mockAnimeData: AnimeSeries[] = [
     coverImage: 'https://cdn.myanimelist.net/images/anime/1258/126929.jpg',
     currentEpisode: 35,
     totalEpisodes: null,
-    animeStatus: 'airing',
-    mangaStatus: 'publishing',
+    status: 'airing',
     hasManga: true,
     ranking: { mal: 5, anilist: 4 },
     streamingOn: ['crunchyroll', 'netflix', 'bilibili'],
@@ -118,8 +113,7 @@ export const mockAnimeData: AnimeSeries[] = [
     coverImage: 'https://cdn.myanimelist.net/images/anime/1908/135431.jpg',
     currentEpisode: 153,
     totalEpisodes: null,
-    animeStatus: 'airing',
-    mangaStatus: 'finished',
+    status: 'airing',
     hasManga: true,
     ranking: { mal: 6, anilist: 6 },
     streamingOn: ['crunchyroll', 'netflix', 'disney-hulu'],
@@ -140,8 +134,7 @@ export const mockAnimeData: AnimeSeries[] = [
     coverImage: 'https://cdn.myanimelist.net/images/anime/1441/122795.jpg',
     currentEpisode: 37,
     totalEpisodes: null,
-    animeStatus: 'airing',
-    mangaStatus: 'publishing',
+    status: 'airing',
     hasManga: true,
     ranking: { mal: 7, anilist: 8 },
     streamingOn: ['crunchyroll', 'netflix', 'disney-hulu'],
@@ -162,8 +155,7 @@ export const mockAnimeData: AnimeSeries[] = [
     coverImage: 'https://cdn.myanimelist.net/images/anime/1286/99889.jpg',
     currentEpisode: 55,
     totalEpisodes: null,
-    animeStatus: 'airing',
-    mangaStatus: 'finished',
+    status: 'airing',
     hasManga: true,
     ranking: { mal: 8, anilist: 7 },
     streamingOn: ['crunchyroll', 'netflix', 'hidive'],
@@ -184,8 +176,7 @@ export const mockAnimeData: AnimeSeries[] = [
     coverImage: 'https://cdn.myanimelist.net/images/anime/1908/135431.jpg',
     currentEpisode: 39,
     totalEpisodes: null,
-    animeStatus: 'airing',
-    mangaStatus: 'finished',
+    status: 'airing',
     hasManga: true,
     ranking: { mal: 9, anilist: 9 },
     streamingOn: ['disney-hulu', 'hidive'],
@@ -206,8 +197,7 @@ export const mockAnimeData: AnimeSeries[] = [
     coverImage: 'https://cdn.myanimelist.net/images/anime/1286/117120.jpg',
     currentEpisode: 50,
     totalEpisodes: null,
-    animeStatus: 'airing',
-    mangaStatus: 'publishing',
+    status: 'airing',
     hasManga: true,
     ranking: { mal: 10, anilist: 10 },
     streamingOn: ['crunchyroll'],
@@ -229,8 +219,7 @@ export const mockAnimeData: AnimeSeries[] = [
     coverImage: 'https://cdn.myanimelist.net/images/anime/2/88336.jpg',
     currentEpisode: 170,
     totalEpisodes: 170,
-    animeStatus: 'completed',
-    mangaStatus: 'publishing',
+    status: 'completed',
     hasManga: true,
     ranking: { mal: 15, anilist: 18 },
     streamingOn: ['crunchyroll', 'amazon'],
@@ -251,8 +240,7 @@ export const mockAnimeData: AnimeSeries[] = [
     coverImage: 'https://cdn.myanimelist.net/images/anime/1806/126216.jpg',
     currentEpisode: 12,
     totalEpisodes: 12,
-    animeStatus: 'completed',
-    mangaStatus: 'publishing',
+    status: 'completed',
     hasManga: true,
     ranking: { mal: 12, anilist: 11 },
     streamingOn: ['crunchyroll', 'amazon', 'hidive'],
@@ -273,8 +261,7 @@ export const mockAnimeData: AnimeSeries[] = [
     coverImage: 'https://cdn.myanimelist.net/images/anime/1141/142503.jpg',
     currentEpisode: 220,
     totalEpisodes: 220,
-    animeStatus: 'completed',
-    mangaStatus: 'finished',
+    status: 'completed',
     hasManga: true,
     ranking: { mal: 20, anilist: 22 },
     streamingOn: ['crunchyroll', 'netflix'],
@@ -295,8 +282,7 @@ export const mockAnimeData: AnimeSeries[] = [
     coverImage: 'https://cdn.myanimelist.net/images/anime/1301/142478.jpg',
     currentEpisode: 12,
     totalEpisodes: 12,
-    animeStatus: 'completed',
-    mangaStatus: 'finished',
+    status: 'completed',
     hasManga: true,
     ranking: { mal: 14, anilist: 13 },
     streamingOn: ['crunchyroll', 'bilibili'],
@@ -317,8 +303,7 @@ export const mockAnimeData: AnimeSeries[] = [
     coverImage: 'https://cdn.myanimelist.net/images/anime/1015/138006.jpg',
     currentEpisode: 28,
     totalEpisodes: 28,
-    animeStatus: 'completed',
-    mangaStatus: 'publishing',
+    status: 'completed',
     hasManga: true,
     ranking: { mal: 11, anilist: 12 },
     streamingOn: ['crunchyroll', 'netflix'],
@@ -350,7 +335,7 @@ export const getFilteredAnime = (
   
   // Filter by status
   if (status !== 'all') {
-    filtered = filtered.filter(anime => anime.animeStatus === status);
+    filtered = filtered.filter(anime => anime.status === status);
   }
   
   // Sort
@@ -374,14 +359,14 @@ export const getTopAiringAnime = (
   streamingService: StreamingService = 'all'
 ): AnimeSeries[] => {
   return mockAnimeData
-    .filter(anime => anime.animeStatus === 'airing')
+    .filter(anime => anime.status === 'airing')
     .filter(anime => {
       if (streamingService === 'all') return true;
       return anime.streamingOn.includes(streamingService);
     })
     .sort((a, b) => {
-      const aRank = trackingSite === 'mal' ? a.ranking.mal : b.ranking.mal;
-      const bRank = trackingSite === 'mal' ? b.ranking.mal : a.ranking.mal;
+      const aRank = trackingSite === 'mal' ? a.ranking.mal : a.ranking.anilist;
+      const bRank = trackingSite === 'mal' ? b.ranking.mal : b.ranking.anilist;
       return aRank - bRank;
     })
     .slice(0, count);
