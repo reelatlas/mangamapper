@@ -426,13 +426,13 @@ export const CollectionSection = ({ anime }: CollectionSectionProps) => {
                 disabled={togglingLibrary}
                 className="h-7 w-7 p-0 hover:text-destructive hover:bg-destructive/10"
               >
-                <Check className="w-3.5 h-3.5" />
+                <Trash2 className="w-3.5 h-3.5" />
               </Button>
               <Button
                 variant="ghost"
                 size="sm"
                 onClick={() => setConfirmRemove(false)}
-                className="h-7 w-7 p-0 hover:text-destructive hover:bg-destructive/10"
+                className="h-7 w-7 p-0 hover:text-muted-foreground hover:bg-muted/50"
               >
                 <X className="w-3.5 h-3.5" />
               </Button>
@@ -443,7 +443,7 @@ export const CollectionSection = ({ anime }: CollectionSectionProps) => {
                 {togglingLibrary ? '...' : inLibrary ? '[✓] in_library' : '[ ] add_to_library'}
               </span>
               <span
-                className="hidden group-hover/lib:inline ml-2 text-primary cursor-pointer"
+                className={`hidden group-hover/lib:inline ml-2 cursor-pointer ${inLibrary ? 'text-destructive' : 'text-primary'}`}
                 onClick={inLibrary ? () => setConfirmRemove(true) : toggleLibrary}
               >
                 {'>'} {inLibrary ? 'remove_from(library)' : 'add_to(library)'}
