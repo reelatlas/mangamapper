@@ -48,6 +48,7 @@ export const SearchBar = forwardRef<SearchBarRef, SearchBarProps>(({ onSearch, p
       )}>
         <Search className="absolute left-3 w-5 h-5 text-muted-foreground" />
         <Input
+          ref={inputRef}
           type="text"
           value={query}
           onChange={(e) => setQuery(e.target.value)}
