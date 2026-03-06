@@ -87,9 +87,6 @@ export const LibraryFlatView = ({ progress, readerSites, removeFromLibrary, view
         <ToggleGroup type="single" value={progressSort} onValueChange={(val) => val && setProgressSort(val as SortOption)} className="gap-1">
           <ToggleGroupItem value="date-desc" className="text-xs font-mono px-2.5 h-7 border-dashed text-muted-foreground data-[state=on]:bg-muted data-[state=on]:text-foreground">last_updated</ToggleGroupItem>
           <ToggleGroupItem value="date-asc" className="text-xs font-mono px-2.5 h-7 border-dashed text-muted-foreground data-[state=on]:bg-muted data-[state=on]:text-foreground">first_updated</ToggleGroupItem>
-        </ToggleGroup>
-        <div className="w-px h-5 bg-border mx-1" />
-        <ToggleGroup type="single" value={progressSort} onValueChange={(val) => val && setProgressSort(val as SortOption)} className="gap-1">
           <ToggleGroupItem value="alpha-asc" className="text-xs font-mono px-2.5 h-7 border-dashed text-muted-foreground data-[state=on]:bg-muted data-[state=on]:text-foreground">a→z</ToggleGroupItem>
           <ToggleGroupItem value="alpha-desc" className="text-xs font-mono px-2.5 h-7 border-dashed text-muted-foreground data-[state=on]:bg-muted data-[state=on]:text-foreground">z→a</ToggleGroupItem>
         </ToggleGroup>
