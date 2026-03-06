@@ -57,9 +57,11 @@ interface LibraryGroupedViewProps {
   onViewModeChange: (mode: ViewMode) => void;
   onNewSeries: () => void;
   onNewReader: () => void;
+  sortOption: SortOption;
+  onSortChange: (sort: SortOption) => void;
 }
 
-export const LibraryGroupedView = ({ userId, readerSites, progress, fetchReaderSites, deleteReaderSite, removeFromLibrary, viewMode, onViewModeChange, onNewSeries, onNewReader }: LibraryGroupedViewProps) => {
+export const LibraryGroupedView = ({ userId, readerSites, progress, fetchReaderSites, deleteReaderSite, removeFromLibrary, viewMode, onViewModeChange, onNewSeries, onNewReader, sortOption: readerSort, onSortChange }: LibraryGroupedViewProps) => {
   const [collapsedGroups, setCollapsedGroups] = useState<Set<string>>(() => {
     try {
       const saved = localStorage.getItem('mangamapper-library-collapsed-groups');
@@ -76,10 +78,11 @@ export const LibraryGroupedView = ({ userId, readerSites, progress, fetchReaderS
     });
   };
 
-  const [readerSort, setReaderSort] = useState<SortOption>(() => {
-    const saved = localStorage.getItem('mangamapper-library-reader-sort');
-    return ['alpha-asc', 'alpha-desc', 'date-desc', 'date-asc'].includes(saved || '') ? saved as SortOption : 'date-desc';
-  });
+  const handleSortChange = (val: string) => {
+    if (val) {
+      onSortChange(val as SortOption);
+    }
+  };
 
   const [confirmingDeleteReaderView, setConfirmingDeleteReaderView] = useState<string | null>(null);
   const [editingReaderName, setEditingReaderName] = useState<string | null>(null);
@@ -88,13 +91,6 @@ export const LibraryGroupedView = ({ userId, readerSites, progress, fetchReaderS
   const [editSiteNotes, setEditSiteNotes] = useState('');
   const [editSeriesAssignments, setEditSeriesAssignments] = useState<SeriesAssignment[]>([]);
   const [confirmingDeleteReaderId, setConfirmingDeleteReaderId] = useState<string | null>(null);
-
-  const handleSortChange = (val: string) => {
-    if (val) {
-      setReaderSort(val as SortOption);
-      localStorage.setItem('mangamapper-library-reader-sort', val);
-    }
-  };
 
   const sortedReaderGroups = useMemo(() => {
     const grouped = readerSites.reduce((acc, site) => {
