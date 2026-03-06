@@ -4,9 +4,10 @@ import { cn } from '@/lib/utils';
 interface EpisodeBadgeProps {
   type: EpisodeType;
   className?: string;
+  inactive?: boolean;
 }
 
-export const EpisodeBadge = ({ type, className }: EpisodeBadgeProps) => {
+export const EpisodeBadge = ({ type, className, inactive }: EpisodeBadgeProps) => {
   const config = {
     canon: {
       label: 'canon',
@@ -26,8 +27,8 @@ export const EpisodeBadge = ({ type, className }: EpisodeBadgeProps) => {
 
   return (
     <span className={cn(
-      'font-mono text-[10px] px-2 py-0.5 rounded-full border tracking-wider',
-      badgeClassName,
+      'font-mono text-[10px] px-2 py-0.5 rounded-full border tracking-wider transition-colors',
+      inactive ? 'text-muted-foreground/40 border-muted-foreground/30' : badgeClassName,
       className
     )}>
       {label}

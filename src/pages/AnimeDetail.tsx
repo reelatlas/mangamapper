@@ -1,5 +1,6 @@
-import { useState } from 'react';
+import { useState, useCallback } from 'react';
 import { useParams, Link } from 'react-router-dom';
+import { EpisodeType } from '@/types/anime';
 import { Header } from '@/components/Header';
 import { MangaMappingDisplay } from '@/components/MangaMappingDisplay';
 import { EpisodeBadge } from '@/components/EpisodeBadge';
@@ -14,6 +15,17 @@ const AnimeDetail = () => {
   const { id } = useParams<{ id: string }>();
   const anime = getAnimeById(id || '');
   const [showAll, setShowAll] = useState(false);
+  const [activeFilters, setActiveFilters] = useState<Set<EpisodeType>>(new Set(['canon', 'filler', 'anime-only-canon']));
+
+  const toggleFilter = useCallback((type: EpisodeType) => {
+    setActiveFilters(prev => {
+      const next = new Set(prev);
+      if (next.has(type)) next.delete(type);
+      else next.add(type);
+      return next;
+    });
+  }, []);
+
   if (!anime) {
     return (
       <div className="min-h-screen bg-background font-mono">
