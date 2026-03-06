@@ -20,7 +20,7 @@ export const AnimeCard = ({ anime, rank }: AnimeCardProps) => {
             {rank && <span className="text-border">|</span>}
             <span className="text-muted-foreground">series_data</span>
             <span className="text-primary opacity-0 group-hover:opacity-100 transition-opacity">
-              {'>'} view_all
+              {'>'} view_details
             </span>
           </span>
           <span className="text-muted-foreground">
