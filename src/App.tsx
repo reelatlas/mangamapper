@@ -8,6 +8,7 @@ import Index from "./pages/Index";
 import AnimeDetail from "./pages/AnimeDetail";
 import Auth from "./pages/Auth";
 import Library from "./pages/Library";
+import About from "./pages/About";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -24,6 +25,7 @@ const App = () => (
             <Route path="/anime/:id" element={<AnimeDetail />} />
             <Route path="/auth" element={<Auth />} />
             <Route path="/library" element={<Library />} />
+            <Route path="/about" element={<About />} />
             {/* Redirect old routes to /library */}
             <Route path="/readers" element={<Navigate to="/library" replace />} />
             <Route path="/progress" element={<Navigate to="/library" replace />} />

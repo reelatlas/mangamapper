@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { Home, Library, User, LogOut, Terminal, AtSign } from 'lucide-react';
+import { Home, Library, User, LogOut, Terminal, AtSign, Info } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { useAuth } from '@/hooks/useAuth';
 import {
@@ -39,6 +39,12 @@ export const Header = () => {
             <Link to="/" className="flex items-center gap-1.5">
               <Home className="w-3.5 h-3.5" />
               <span className="hidden sm:inline">home</span>
+            </Link>
+          </Button>
+          <Button variant="ghost" size="sm" asChild className="font-mono text-xs">
+            <Link to="/about" className="flex items-center gap-1.5">
+              <Info className="w-3.5 h-3.5" />
+              <span className="hidden sm:inline">about</span>
             </Link>
           </Button>
           
