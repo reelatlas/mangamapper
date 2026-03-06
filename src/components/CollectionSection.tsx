@@ -538,7 +538,7 @@ export const CollectionSection = ({ anime }: CollectionSectionProps) => {
               ))}
               {linkedReaders.length === 0 ? (
                 <span
-                  className="text-xs text-muted-foreground font-mono cursor-pointer transition-colors hover:text-foreground"
+                  className="text-xs text-muted-foreground font-mono cursor-pointer"
                   onMouseEnter={() => setIsReaderHovered(true)}
                   onMouseLeave={() => setIsReaderHovered(false)}
                   onClick={startEditing}
