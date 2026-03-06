@@ -5,7 +5,7 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { ToggleGroup, ToggleGroupItem } from '@/components/ui/toggle-group';
-import { ArrowUpDown, ExternalLink, Pencil, X, Check, Trash2, Plus, BookDashed, BookOpenText, ChevronDown, ChevronRight, Glasses } from 'lucide-react';
+import { ArrowUpDown, ExternalLink, Pencil, X, Check, Trash2, Plus, EyeClosed, Eye, ChevronDown, ChevronRight, Glasses } from 'lucide-react';
 
 const TripleArrow = ({ collapsed, compact = false }: { collapsed: boolean; compact?: boolean }) => {
   const Icon = collapsed ? ChevronRight : ChevronDown;
@@ -251,9 +251,15 @@ export const LibraryGroupedView = ({ userId, readerSites, progress, fetchReaderS
           </div>
         </div>
         <div className="text-center py-16 border border-dashed">
-          <div className="group cursor-default mx-auto mb-3 w-fit">
-            <BookDashed className="w-8 h-8 text-muted-foreground group-hover:hidden" />
-            <BookOpenText className="w-8 h-8 text-muted-foreground hidden group-hover:block" />
+          <div className="flex items-center justify-center gap-1 mb-3">
+            <div className="group/eye1 cursor-default">
+              <EyeClosed className="w-6 h-6 text-muted-foreground group-hover/eye1:hidden" />
+              <Eye className="w-6 h-6 text-muted-foreground hidden group-hover/eye1:block" />
+            </div>
+            <div className="group/eye2 cursor-default">
+              <EyeClosed className="w-6 h-6 text-muted-foreground group-hover/eye2:hidden" />
+              <Eye className="w-6 h-6 text-muted-foreground hidden group-hover/eye2:block" />
+            </div>
           </div>
           <p className="text-muted-foreground text-sm">
             <span className="text-muted-foreground">// </span>no_readers_or_series
