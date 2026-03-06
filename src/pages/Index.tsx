@@ -1,6 +1,6 @@
-import { useState, useCallback, useMemo, useEffect } from 'react';
+import { useState, useCallback, useMemo, useEffect, useRef } from 'react';
 import { Header } from '@/components/Header';
-import { SearchBar } from '@/components/SearchBar';
+import { SearchBar, SearchBarRef } from '@/components/SearchBar';
 import { AnimeCard } from '@/components/AnimeCard';
 import { getFilteredAnime, searchAnime, StatusFilter } from '@/data/mockAnime';
 import { AnimeSeries } from '@/types/anime';
@@ -8,6 +8,7 @@ import { TrendingUp, Filter, Home, Hash } from 'lucide-react';
 import { ToggleGroup, ToggleGroupItem } from '@/components/ui/toggle-group';
 
 const Index = () => {
+  const searchBarRef = useRef<SearchBarRef>(null);
   const [searchQuery, setSearchQuery] = useState('');
   const [searchResults, setSearchResults] = useState<AnimeSeries[]>([]);
   const [statusFilter, setStatusFilter] = useState<StatusFilter>(() => {
@@ -61,6 +62,7 @@ const Index = () => {
         {/* Search section */}
         <section className="mb-10">
           <SearchBar 
+            ref={searchBarRef}
             onSearch={handleSearch}
             placeholder="search anime title..."
             className="max-w-xl"
@@ -129,9 +131,13 @@ const Index = () => {
               ))}
             </div>
           ) : (
-            <div className="text-center py-16 border border-dashed">
+            <div 
+              className="text-center py-16 border border-dashed group/empty cursor-pointer"
+              onClick={() => searchBarRef.current?.focus()}
+            >
               <p className="text-sm text-muted-foreground">
-                // series_data(<span className="text-syntax-amber">null</span>)
+                // series_data(null)
+                <span className="text-primary opacity-0 group-hover/empty:opacity-100 transition-opacity ml-2">{'>'} search</span>
               </p>
             </div>
           )}
