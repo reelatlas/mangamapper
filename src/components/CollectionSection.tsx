@@ -440,7 +440,7 @@ export const CollectionSection = ({ anime }: CollectionSectionProps) => {
           ) : (
             <div className="group/lib flex items-center h-7 font-mono text-xs">
               <span className={`px-3 py-1 border border-dashed ${inLibrary ? 'text-foreground' : 'text-muted-foreground'}`}>
-                {togglingLibrary ? '...' : inLibrary ? '[✓] in_library' : '[ ] in_library'}
+                {togglingLibrary ? '...' : inLibrary ? 'in_library [✓]' : 'in_library [ ]'}
               </span>
               <span
                 className={`hidden group-hover/lib:inline ml-2 cursor-pointer ${inLibrary ? 'text-destructive' : 'text-primary'}`}
