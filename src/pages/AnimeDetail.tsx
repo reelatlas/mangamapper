@@ -156,8 +156,11 @@ const AnimeDetail = () => {
           <div className="terminal-header">
             <span className="text-muted-foreground">episode_list</span>
           </div>
-          {/* Inline legend */}
-          <div className="px-4 pt-3 pb-0">
+          <div className="px-4 pt-3 pb-0 flex items-center justify-between flex-wrap gap-2">
+            <div className="text-xs text-muted-foreground">
+              <span className="text-syntax-cyan">// </span>
+              episodes_shown {'>'} {anime.episodes.length} of {anime.currentEpisode}
+            </div>
             <div className="flex flex-wrap items-center gap-4 text-xs text-muted-foreground">
               <div className="flex items-center gap-1.5">
                 <EpisodeBadge type="canon" />
@@ -186,9 +189,6 @@ const AnimeDetail = () => {
             
             {anime.episodes.length < anime.currentEpisode && (
               <p className="text-center text-xs text-muted-foreground mt-6 py-4 border-t border-dashed">
-                <span className="text-syntax-cyan">// </span>
-                showing {anime.episodes.length} of {anime.currentEpisode} episodes
-                <br />
                 <span className="text-syntax-cyan">// </span>
                 full list coming soon
               </p>
