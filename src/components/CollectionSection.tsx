@@ -496,7 +496,7 @@ export const CollectionSection = ({ anime }: CollectionSectionProps) => {
                   <div>
                     <span className="text-muted-foreground text-xs block mb-1">&nbsp;</span>
                     <div className="flex items-center h-7">
-                      <span className="text-muted-foreground text-xs font-mono">anime_original, no_manga</span>
+                      <span className="text-muted-foreground text-xs font-mono">anime_original; no_manga</span>
                     </div>
                   </div>
                 </div>
