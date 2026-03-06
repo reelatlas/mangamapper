@@ -13,7 +13,7 @@ import { Play, BookOpen, Tv, ArrowLeft } from 'lucide-react';
 const AnimeDetail = () => {
   const { id } = useParams<{ id: string }>();
   const anime = getAnimeById(id || '');
-
+  const [showAll, setShowAll] = useState(false);
   if (!anime) {
     return (
       <div className="min-h-screen bg-background font-mono">
@@ -159,8 +159,15 @@ const AnimeDetail = () => {
             <span className="text-muted-foreground">episode_list</span>
           </div>
           <div className="px-4 pt-3 pb-0 flex items-end justify-between flex-wrap gap-2">
-            <div className="text-xs text-muted-foreground">
-              showing {'>_'}{anime.episodes.length} of {anime.currentEpisode}
+            <div
+              className="group cursor-pointer flex items-center gap-1 text-xs text-muted-foreground"
+              onClick={() => setShowAll(!showAll)}
+            >
+              <span className="text-syntax-cyan">{'//'}</span>
+              {' '}show {'>'} {showAll ? anime.currentEpisode : anime.episodes.length} of {anime.currentEpisode}
+              <span className="opacity-0 group-hover:opacity-100 ml-2 text-syntax-cyan transition-opacity">
+                {'>'} {showAll ? 'show_episodes(less)' : 'show_episodes(all)'}
+              </span>
             </div>
             <div className="flex flex-wrap items-center gap-4 text-xs text-muted-foreground">
               <div className="flex items-center gap-1.5">
@@ -178,22 +185,42 @@ const AnimeDetail = () => {
             </div>
           </div>
           <CardContent className="p-4">
-            <div className="space-y-2">
-              {anime.episodes.map((episode) => (
-                <MangaMappingDisplay 
-                  key={episode.number} 
-                  episode={episode}
-                  showEpisodeNumber={true}
-                />
-              ))}
-            </div>
-            
-            {anime.episodes.length < anime.currentEpisode && (
-              <p className="text-center text-xs text-muted-foreground mt-6 py-4 border-t border-dashed">
-                <span className="text-syntax-cyan">// </span>
-                full list coming soon
-              </p>
-            )}
+            <ScrollArea className={showAll ? 'max-h-[500px]' : ''}>
+              <div className="space-y-2">
+                {showAll
+                  ? Array.from({ length: anime.currentEpisode }, (_, i) => {
+                      const epNum = i + 1;
+                      const episode = anime.episodes.find(ep => ep.number === epNum);
+                      if (episode) {
+                        return (
+                          <MangaMappingDisplay
+                            key={episode.number}
+                            episode={episode}
+                            showEpisodeNumber={true}
+                          />
+                        );
+                      }
+                      return (
+                        <div
+                          key={epNum}
+                          className="flex items-center gap-3 p-2.5 bg-muted/30 border border-dashed font-mono text-sm rounded-lg text-muted-foreground"
+                        >
+                          <span className="text-syntax-amber shrink-0">
+                            #{String(epNum).padStart(4, '0')}
+                          </span>
+                          <span className="text-xs">// data_pending</span>
+                        </div>
+                      );
+                    })
+                  : anime.episodes.map((episode) => (
+                      <MangaMappingDisplay
+                        key={episode.number}
+                        episode={episode}
+                        showEpisodeNumber={true}
+                      />
+                    ))}
+              </div>
+            </ScrollArea>
           </CardContent>
         </Card>
       </main>
