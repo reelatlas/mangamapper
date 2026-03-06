@@ -442,7 +442,7 @@ export const LibraryGroupedView = ({ userId, readerSites, progress, fetchReaderS
 
                 {/* Hover overlay */}
                 {confirmingDeleteReaderView === group.name ? (
-                  <div className="absolute inset-0 bg-background/80 flex items-center justify-center gap-3 p-3 z-10">
+                  <div className="absolute inset-0 bg-background/90 flex items-center justify-center gap-3 p-3 z-10">
                     <span className="text-xs text-muted-foreground font-mono mr-1">delete_reader?</span>
                     <Button variant="ghost" size="icon" onClick={e => { e.stopPropagation(); group.entries.forEach(entry => deleteReaderSite(entry.id)); setConfirmingDeleteReaderView(null); }} className="text-muted-foreground hover:text-destructive hover:bg-destructive/10 h-8 w-8">
                       <Check className="w-3.5 h-3.5" />
@@ -452,7 +452,7 @@ export const LibraryGroupedView = ({ userId, readerSites, progress, fetchReaderS
                     </Button>
                   </div>
                 ) : (
-                  <div className="absolute inset-0 bg-background/80 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center p-3 z-10">
+                  <div className="absolute inset-0 bg-background/90 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center p-3 z-10">
                     <div className="flex items-center gap-1 px-3">
                       <Button variant="ghost" size="sm" asChild className="font-mono text-xs gap-1" onClick={e => e.stopPropagation()}>
                         <a href={group.url} target="_blank" rel="noopener noreferrer">
@@ -529,7 +529,7 @@ export const LibraryGroupedView = ({ userId, readerSites, progress, fetchReaderS
                   <TripleArrow collapsed={collapsedGroups.has('unassigned')} />
                 </div>
               </div>
-              <div className="absolute inset-0 bg-background/80 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-end p-3 z-10">
+              <div className="absolute inset-0 bg-background/90 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-end p-3 z-10">
                 <div className="flex items-center gap-1 font-mono text-xs text-foreground px-3">
                   {collapsedGroups.has('unassigned') ? 'expand' : 'collapse'}
                   <TripleArrow collapsed={collapsedGroups.has('unassigned')} compact />
