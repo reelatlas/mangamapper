@@ -54,6 +54,7 @@ export const CollectionSection = ({ anime }: CollectionSectionProps) => {
   const [loading, setLoading] = useState(true);
   const [togglingLibrary, setTogglingLibrary] = useState(false);
   const [isEditing, setIsEditing] = useState(false);
+  const [isReaderHovered, setIsReaderHovered] = useState(false);
 
   // Edit state (readers only)
   const [editReaderAssignments, setEditReaderAssignments] = useState<ReaderAssignment[]>([]);
