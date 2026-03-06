@@ -245,7 +245,6 @@ export const LibraryGroupedView = ({ userId, readerSites, progress, fetchReaderS
       <div className="space-y-4">
         <div className="flex flex-wrap items-center gap-2">
           <ViewModeToggle viewMode={viewMode} onViewModeChange={onViewModeChange} />
-          <div className="w-px h-5 bg-border mx-1" />
         </div>
         <div className="text-center py-16 border border-dashed">
           <div className="flex items-center justify-center gap-1 mb-3">
