@@ -102,10 +102,10 @@ const Library = () => {
             />
           ) : (
             <div className="flex flex-wrap items-center gap-2">
-              <Button onClick={() => setShowNewSeries(true)} variant="outline" className="font-mono text-xs border-dashed">
+              <Button onClick={() => { setShowNewReader(false); setShowNewSeries(true); }} variant="outline" className="font-mono text-xs border-dashed">
                 {'>'} new_series
               </Button>
-              <Button onClick={() => setShowNewReader(true)} variant="outline" className="font-mono text-xs border-dashed">
+              <Button onClick={() => { setShowNewSeries(false); setShowNewReader(true); }} variant="outline" className="font-mono text-xs border-dashed">
                 {'>'} new_reader
               </Button>
             </div>
@@ -121,7 +121,7 @@ const Library = () => {
               onViewModeChange={setViewMode}
               userId={user!.id}
               onSave={handleRefreshAll}
-              onNewSeries={() => setShowNewSeries(true)}
+              onNewSeries={() => { setShowNewReader(false); setShowNewSeries(true); }}
             />
           ) : (
             <LibraryGroupedView
@@ -133,8 +133,8 @@ const Library = () => {
               removeFromLibrary={removeFromLibrary}
               viewMode={viewMode}
               onViewModeChange={setViewMode}
-              onNewSeries={() => setShowNewSeries(true)}
-              onNewReader={() => setShowNewReader(true)}
+              onNewSeries={() => { setShowNewReader(false); setShowNewSeries(true); }}
+              onNewReader={() => { setShowNewSeries(false); setShowNewReader(true); }}
             />
           )}
         </div>
