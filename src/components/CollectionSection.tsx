@@ -485,7 +485,10 @@ export const CollectionSection = ({ anime }: CollectionSectionProps) => {
 
         {/* Section 3: Reader links */}
         {inLibrary && anime.hasManga && (
-          <div className="space-y-2 group/readers">
+          <div
+            className={`space-y-2 group/readers ${linkedReaders.length === 0 ? 'cursor-pointer' : ''}`}
+            onClick={linkedReaders.length === 0 ? startEditing : undefined}
+          >
             <div className="flex items-center gap-1.5 text-xs">
               <Glasses className={`w-3.5 h-3.5 transition-colors ${linkedReaders.length > 0 ? 'text-primary' : 'text-muted-foreground group-hover/readers:text-primary'}`} />
               <span className={`transition-colors ${linkedReaders.length > 0 ? 'text-syntax-cyan' : 'text-muted-foreground group-hover/readers:text-syntax-cyan'}`}>readers</span>
@@ -503,12 +506,9 @@ export const CollectionSection = ({ anime }: CollectionSectionProps) => {
                 </Button>
               ))}
               {linkedReaders.length === 0 ? (
-                <span
-                  onClick={startEditing}
-                  className="group/reader text-xs text-muted-foreground cursor-pointer font-mono"
-                >
+                <span className="text-xs text-muted-foreground font-mono">
                   reader(null)
-                  <span className="hidden group-hover/reader:inline text-primary ml-2">{'>'} add_reader</span>
+                  <span className="hidden group-hover/readers:inline text-primary ml-2">{'>'} add_reader</span>
                 </span>
               ) : (
                 <Button variant="ghost" size="sm" onClick={startEditing} className="font-mono text-xs h-7 gap-1 text-muted-foreground">
