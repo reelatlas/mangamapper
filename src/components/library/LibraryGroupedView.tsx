@@ -55,9 +55,11 @@ interface LibraryGroupedViewProps {
   removeFromLibrary: (id: string) => void;
   viewMode: ViewMode;
   onViewModeChange: (mode: ViewMode) => void;
+  onNewSeries: () => void;
+  onNewReader: () => void;
 }
 
-export const LibraryGroupedView = ({ userId, readerSites, progress, fetchReaderSites, deleteReaderSite, removeFromLibrary, viewMode, onViewModeChange }: LibraryGroupedViewProps) => {
+export const LibraryGroupedView = ({ userId, readerSites, progress, fetchReaderSites, deleteReaderSite, removeFromLibrary, viewMode, onViewModeChange, onNewSeries, onNewReader }: LibraryGroupedViewProps) => {
   const [collapsedGroups, setCollapsedGroups] = useState<Set<string>>(() => {
     try {
       const saved = localStorage.getItem('mangamapper-library-collapsed-groups');
@@ -251,19 +253,18 @@ export const LibraryGroupedView = ({ userId, readerSites, progress, fetchReaderS
           </div>
         </div>
         <div className="text-center py-16 border border-dashed">
-          <div className="flex items-center justify-center gap-1 mb-3">
-            <div className="group/eye1 cursor-default">
-              <EyeClosed className="w-6 h-6 text-muted-foreground group-hover/eye1:hidden" />
-              <Eye className="w-6 h-6 text-muted-foreground hidden group-hover/eye1:block" />
-            </div>
-            <div className="group/eye2 cursor-default">
-              <EyeClosed className="w-6 h-6 text-muted-foreground group-hover/eye2:hidden" />
-              <Eye className="w-6 h-6 text-muted-foreground hidden group-hover/eye2:block" />
-            </div>
+          <div className="group/series cursor-pointer mb-1" onClick={onNewSeries}>
+            <p className="text-muted-foreground text-sm">
+              <span>// series_assigned(null);</span>
+              <span className="hidden group-hover/series:inline text-primary ml-2">{'>'} new_series</span>
+            </p>
           </div>
-          <p className="text-muted-foreground text-sm">
-            <span className="text-muted-foreground">// </span>no_readers_or_series
-          </p>
+          <div className="group/reader cursor-pointer" onClick={onNewReader}>
+            <p className="text-muted-foreground text-sm">
+              <span>// reader_assigned(null)</span>
+              <span className="hidden group-hover/reader:inline text-primary ml-2">{'>'} new_reader</span>
+            </p>
+          </div>
         </div>
       </div>
     );
