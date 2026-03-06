@@ -82,6 +82,8 @@ const Index = () => {
               >
                 <ToggleGroupItem value="airing" className="text-xs font-mono px-2.5 h-7 border-dashed text-muted-foreground data-[state=on]:bg-muted data-[state=on]:text-foreground">airing</ToggleGroupItem>
                 <ToggleGroupItem value="finished" className="text-xs font-mono px-2.5 h-7 border-dashed text-muted-foreground data-[state=on]:bg-muted data-[state=on]:text-foreground">finished</ToggleGroupItem>
+                <ToggleGroupItem value="hiatus" className="text-xs font-mono px-2.5 h-7 border-dashed text-muted-foreground data-[state=on]:bg-muted data-[state=on]:text-foreground">hiatus</ToggleGroupItem>
+                <ToggleGroupItem value="upcoming" className="text-xs font-mono px-2.5 h-7 border-dashed text-muted-foreground data-[state=on]:bg-muted data-[state=on]:text-foreground">upcoming</ToggleGroupItem>
               </ToggleGroup>
               
               {/* Separator between groups */}
@@ -111,7 +113,7 @@ const Index = () => {
             <span>
               {isSearching 
                 ? <><span className="text-syntax-cyan">search_results</span><span className="text-muted-foreground">.length</span> = <span className="text-syntax-amber">{searchResults.length}</span></>
-                : <><span className="text-syntax-cyan">top</span> <span className="text-syntax-amber">{resultLimit}</span> {statusFilter === 'airing' ? <span className="text-accent">airing</span> : <span className="text-muted-foreground">{statusFilter}</span>}</>
+                : <><span className="text-syntax-cyan">top</span> <span className="text-syntax-amber">{resultLimit}</span> {statusFilter === 'airing' ? <span className="text-accent">airing</span> : statusFilter === 'hiatus' ? <span className="text-syntax-amber">hiatus</span> : statusFilter === 'upcoming' ? <span className="text-syntax-cyan">upcoming</span> : <span className="text-muted-foreground">{statusFilter}</span>}</>
               }
             </span>
           </div>
