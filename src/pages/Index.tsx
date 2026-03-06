@@ -132,17 +132,28 @@ const Index = () => {
             </div>
           ) : (
             <div className="flex flex-col items-center justify-center py-16 border border-dashed gap-3">
-              <div className="group/icon relative w-8 h-8 cursor-pointer" onClick={() => searchBarRef.current?.focus()}>
-                <Wand2 className="w-8 h-8 text-muted-foreground absolute inset-0 transition-opacity group-hover/icon:opacity-0" />
-                <Sparkles className="w-8 h-8 text-primary absolute inset-0 opacity-0 transition-opacity group-hover/icon:opacity-100" />
+              <div className="flex items-center justify-center">
+                <div
+                  className="cursor-pointer"
+                  onClick={() => searchBarRef.current?.focus()}
+                  onMouseEnter={() => { document.getElementById('wand-default')?.classList.add('hidden'); document.getElementById('wand-hover')?.classList.remove('hidden'); }}
+                  onMouseLeave={() => { document.getElementById('wand-default')?.classList.remove('hidden'); document.getElementById('wand-hover')?.classList.add('hidden'); }}
+                >
+                  <Wand2 className="w-6 h-6 text-muted-foreground" id="wand-default" />
+                  <Sparkles className="w-6 h-6 text-muted-foreground hidden" id="wand-hover" />
+                </div>
               </div>
-              <p 
-                className="text-sm text-muted-foreground group/text cursor-pointer"
+              <div
+                className="group/empty cursor-pointer"
                 onClick={() => searchBarRef.current?.focus()}
+                onMouseEnter={() => { document.getElementById('wand-default')?.classList.add('hidden'); document.getElementById('wand-hover')?.classList.remove('hidden'); }}
+                onMouseLeave={() => { document.getElementById('wand-default')?.classList.remove('hidden'); document.getElementById('wand-hover')?.classList.add('hidden'); }}
               >
-                // series_data(null)
-                <span className="text-primary opacity-0 group-hover/text:opacity-100 transition-opacity ml-2">{'>'} search</span>
-              </p>
+                <p className="text-muted-foreground text-sm">
+                  <span>// series_data(null)</span>
+                  <span className="hidden group-hover/empty:inline text-primary ml-2">{'>'} search</span>
+                </p>
+              </div>
             </div>
           )}
         </section>
