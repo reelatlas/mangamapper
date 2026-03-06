@@ -9,6 +9,7 @@ import { LibraryGroupedView } from '@/components/library/LibraryGroupedView';
 import { NewSeriesForm } from '@/components/library/NewSeriesForm';
 import { NewReaderForm } from '@/components/library/NewReaderForm';
 import type { ViewMode } from '@/components/library/ViewModeToggle';
+import type { SortOption } from '@/types/library';
 
 interface LocationState {
   openAddReader?: boolean;
@@ -27,6 +28,10 @@ const Library = () => {
     const saved = localStorage.getItem('mangamapper-library-view-mode');
     return saved === 'by_reader' ? 'by_reader' : 'flat';
   });
+  const [librarySort, setLibrarySort] = useState<SortOption>(() => {
+    const saved = localStorage.getItem('mangamapper-library-sort');
+    return (['alpha-asc', 'alpha-desc', 'date-desc', 'date-asc'].includes(saved || '')) ? saved as SortOption : 'date-desc';
+  });
   const [showNewSeries, setShowNewSeries] = useState(false);
   const [showNewReader, setShowNewReader] = useState(false);
   const [preSelectAnimeId, setPreSelectAnimeId] = useState<string | undefined>();
@@ -34,6 +39,10 @@ const Library = () => {
   useEffect(() => {
     localStorage.setItem('mangamapper-library-view-mode', viewMode);
   }, [viewMode]);
+
+  useEffect(() => {
+    localStorage.setItem('mangamapper-library-sort', librarySort);
+  }, [librarySort]);
 
   useEffect(() => {
     if (!authLoading && !user) {
@@ -122,6 +131,8 @@ const Library = () => {
               userId={user!.id}
               onSave={handleRefreshAll}
               onNewSeries={() => { setShowNewReader(false); setShowNewSeries(true); }}
+              sortOption={librarySort}
+              onSortChange={setLibrarySort}
             />
           ) : (
             <LibraryGroupedView
@@ -135,6 +146,8 @@ const Library = () => {
               onViewModeChange={setViewMode}
               onNewSeries={() => { setShowNewReader(false); setShowNewSeries(true); }}
               onNewReader={() => { setShowNewSeries(false); setShowNewReader(true); }}
+              sortOption={librarySort}
+              onSortChange={setLibrarySort}
             />
           )}
         </div>

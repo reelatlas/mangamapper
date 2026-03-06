@@ -1,4 +1,4 @@
-import { useState, useMemo, useEffect } from 'react';
+import { useMemo } from 'react';
 import { ToggleGroup, ToggleGroupItem } from '@/components/ui/toggle-group';
 import { ArrowUpDown, BookDashed, BookOpenText } from 'lucide-react';
 import { getAnimeById } from '@/data/mockAnime';
@@ -15,17 +15,11 @@ interface LibraryFlatViewProps {
   userId: string;
   onSave: () => void;
   onNewSeries: () => void;
+  sortOption: SortOption;
+  onSortChange: (sort: SortOption) => void;
 }
 
-export const LibraryFlatView = ({ progress, readerSites, removeFromLibrary, viewMode, onViewModeChange, userId, onSave, onNewSeries }: LibraryFlatViewProps) => {
-  const [progressSort, setProgressSort] = useState<SortOption>(() => {
-    const saved = localStorage.getItem('mangamapper-library-progress-sort');
-    return (['alpha-asc', 'alpha-desc', 'date-desc', 'date-asc'].includes(saved || '')) ? saved as SortOption : 'date-desc';
-  });
-
-  useEffect(() => {
-    localStorage.setItem('mangamapper-library-progress-sort', progressSort);
-  }, [progressSort]);
+export const LibraryFlatView = ({ progress, readerSites, removeFromLibrary, viewMode, onViewModeChange, userId, onSave, onNewSeries, sortOption: progressSort, onSortChange: setProgressSort }: LibraryFlatViewProps) => {
 
   const sortedProgress = useMemo(() => {
     const sorted = [...progress];
