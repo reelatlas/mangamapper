@@ -253,23 +253,33 @@ export const LibraryGroupedView = ({ userId, readerSites, progress, fetchReaderS
           </div>
         </div>
         <div className="text-center py-16 border border-dashed">
-          <div className="flex items-center justify-center gap-1 mb-3">
-            <div className="group/eye1 cursor-default">
-              <EyeClosed className="w-6 h-6 text-muted-foreground group-hover/eye1:hidden" />
-              <Eye className="w-6 h-6 text-muted-foreground hidden group-hover/eye1:block" />
+          <div className="flex items-center justify-center gap-1 mb-3 pointer-events-none">
+            <div>
+              <EyeClosed className="w-6 h-6 text-muted-foreground" id="eye-left-closed" />
+              <Eye className="w-6 h-6 text-muted-foreground hidden" id="eye-left-open" />
             </div>
-            <div className="group/eye2 cursor-default">
-              <EyeClosed className="w-6 h-6 text-muted-foreground group-hover/eye2:hidden" />
-              <Eye className="w-6 h-6 text-muted-foreground hidden group-hover/eye2:block" />
+            <div>
+              <EyeClosed className="w-6 h-6 text-muted-foreground" id="eye-right-closed" />
+              <Eye className="w-6 h-6 text-muted-foreground hidden" id="eye-right-open" />
             </div>
           </div>
-          <div className="group/series cursor-pointer mb-1" onClick={onNewSeries}>
+          <div
+            className="group/series cursor-pointer mb-1"
+            onClick={onNewSeries}
+            onMouseEnter={() => { document.getElementById('eye-left-closed')?.classList.add('hidden'); document.getElementById('eye-left-open')?.classList.remove('hidden'); }}
+            onMouseLeave={() => { document.getElementById('eye-left-closed')?.classList.remove('hidden'); document.getElementById('eye-left-open')?.classList.add('hidden'); }}
+          >
             <p className="text-muted-foreground text-sm">
               <span>// series_assigned(null);</span>
               <span className="hidden group-hover/series:inline text-primary ml-2">{'>'} new_series</span>
             </p>
           </div>
-          <div className="group/reader cursor-pointer" onClick={onNewReader}>
+          <div
+            className="group/reader cursor-pointer"
+            onClick={onNewReader}
+            onMouseEnter={() => { document.getElementById('eye-right-closed')?.classList.add('hidden'); document.getElementById('eye-right-open')?.classList.remove('hidden'); }}
+            onMouseLeave={() => { document.getElementById('eye-right-closed')?.classList.remove('hidden'); document.getElementById('eye-right-open')?.classList.add('hidden'); }}
+          >
             <p className="text-muted-foreground text-sm">
               <span>// reader_assigned(null)</span>
               <span className="hidden group-hover/reader:inline text-primary ml-2">{'>'} new_reader</span>
