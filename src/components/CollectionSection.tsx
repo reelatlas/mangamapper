@@ -55,6 +55,7 @@ export const CollectionSection = ({ anime }: CollectionSectionProps) => {
   const [togglingLibrary, setTogglingLibrary] = useState(false);
   const [isEditing, setIsEditing] = useState(false);
   const [isReaderHovered, setIsReaderHovered] = useState(false);
+  const [confirmRemove, setConfirmRemove] = useState(false);
 
   // Edit state (readers only)
   const [editReaderAssignments, setEditReaderAssignments] = useState<ReaderAssignment[]>([]);
@@ -190,12 +191,14 @@ export const CollectionSection = ({ anime }: CollectionSectionProps) => {
     } else {
       setEditReaderAssignments([{ readerName: '', readerUrl: '', seriesUrl: '', suffix: '', userModified: false }]);
     }
+    setConfirmRemove(false);
     setIsEditing(true);
   };
 
   const cancelEditing = () => {
     setIsEditing(false);
     setShowInlineNewReader(false);
+    setConfirmRemove(false);
   };
 
   const addReaderRow = () => {
@@ -413,16 +416,43 @@ export const CollectionSection = ({ anime }: CollectionSectionProps) => {
       <CardContent className="p-4 font-mono space-y-6">
         {/* Section 1: Library toggle + edit readers */}
         <div className="flex items-center justify-between">
-          <Button
-            variant="outline"
-            size="sm"
-            onClick={toggleLibrary}
-            disabled={togglingLibrary}
-            className={`font-mono text-xs h-7 ${inLibrary ? 'border-dashed' : 'bg-transparent text-muted-foreground hover:text-accent-foreground hover:bg-accent border border-dashed border-border'}`}
-          >
-            {togglingLibrary ? '...' : inLibrary ? '[✓] in_library' : '[ ] add_to_library'}
-          </Button>
-          {/* edit_readers moved to readers section */}
+          {inLibrary && confirmRemove ? (
+            <div className="flex items-center gap-1">
+              <span className="text-xs text-muted-foreground mr-1">remove?</span>
+              <Button
+                variant="ghost"
+                size="sm"
+                onClick={() => { toggleLibrary(); setConfirmRemove(false); }}
+                disabled={togglingLibrary}
+                className="h-7 w-7 p-0 hover:text-destructive hover:bg-destructive/10"
+              >
+                <Check className="w-3.5 h-3.5" />
+              </Button>
+              <Button
+                variant="ghost"
+                size="sm"
+                onClick={() => setConfirmRemove(false)}
+                className="h-7 w-7 p-0 hover:text-destructive hover:bg-destructive/10"
+              >
+                <X className="w-3.5 h-3.5" />
+              </Button>
+            </div>
+          ) : (
+            <Button
+              variant="outline"
+              size="sm"
+              onClick={inLibrary ? () => setConfirmRemove(true) : toggleLibrary}
+              disabled={togglingLibrary}
+              className={`font-mono text-xs h-7 group/lib ${inLibrary ? 'border-dashed' : 'bg-transparent text-muted-foreground hover:text-accent-foreground hover:bg-accent border border-dashed border-border'}`}
+            >
+              {togglingLibrary ? '...' : inLibrary ? (
+                <>
+                  [✓] in_library
+                  <span className="hidden group-hover/lib:inline ml-1 text-primary">{'>'} remove_from(library)</span>
+                </>
+              ) : '[ ] add_to_library'}
+            </Button>
+          )}
         </div>
 
         {/* Section 2: Always-visible progress inputs */}
