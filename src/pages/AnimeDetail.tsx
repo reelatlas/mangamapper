@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { Header } from '@/components/Header';
 import { MangaMappingDisplay } from '@/components/MangaMappingDisplay';
@@ -5,6 +6,7 @@ import { EpisodeBadge } from '@/components/EpisodeBadge';
 import { CollectionSection } from '@/components/CollectionSection';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
+import { ScrollArea } from '@/components/ui/scroll-area';
 import { getAnimeById } from '@/data/mockAnime';
 import { Play, BookOpen, Tv, ArrowLeft } from 'lucide-react';
 
