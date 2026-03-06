@@ -538,12 +538,12 @@ export const CollectionSection = ({ anime }: CollectionSectionProps) => {
               ))}
               {linkedReaders.length === 0 ? (
                 <span
-                  className="text-xs text-muted-foreground font-mono cursor-pointer"
+                  className="text-xs text-muted-foreground font-mono cursor-pointer transition-colors hover:text-foreground"
                   onMouseEnter={() => setIsReaderHovered(true)}
                   onMouseLeave={() => setIsReaderHovered(false)}
                   onClick={startEditing}
                 >
-                  // reader(null)
+                  <span className="text-syntax-cyan">//</span> reader(null)
                   <span className={`${isReaderHovered ? 'inline' : 'hidden'} text-primary ml-2`}>{'>'} add_reader</span>
                 </span>
               ) : (
