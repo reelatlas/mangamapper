@@ -449,9 +449,8 @@ export const LibraryGroupedView = ({ userId, readerSites, progress, fetchReaderS
                       className="group/empty border border-dashed rounded-sm py-4 flex items-center justify-center cursor-pointer hover:border-primary/50 transition-colors"
                     >
                       <p className="text-xs text-muted-foreground font-mono">
-                        <span className="text-muted-foreground/60">// </span>
-                        <span className="group-hover/empty:hidden">series_assigned(null)</span>
-                        <span className="hidden group-hover/empty:inline text-primary">{'>'} add_series</span>
+                        <span className="text-muted-foreground/60">// </span>series_assigned(null)
+                        <span className="hidden group-hover/empty:inline text-primary ml-2">{'>'} add_series</span>
                       </p>
                     </div>
                   )}
