@@ -60,7 +60,7 @@ const AnimeDetail = () => {
                 <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-transparent" />
                 <div className="absolute bottom-3 left-3 right-3">
                   <span className="text-xs border px-2 py-1 bg-background/80 rounded-full">
-                    {anime.status === 'airing' ? (
+                    {anime.animeStatus === 'airing' ? (
                       <span className="text-accent">airing</span>
                     ) : (
                       <span className="text-muted-foreground">complete</span>
