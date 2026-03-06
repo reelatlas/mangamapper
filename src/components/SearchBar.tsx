@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef, useImperativeHandle, forwardRef } from 'react';
 import { Search, X } from 'lucide-react';
 import { Input } from '@/components/ui/input';
 import { Button } from '@/components/ui/button';
@@ -10,9 +10,18 @@ interface SearchBarProps {
   className?: string;
 }
 
-export const SearchBar = ({ onSearch, placeholder = "Search anime...", className }: SearchBarProps) => {
+export interface SearchBarRef {
+  focus: () => void;
+}
+
+export const SearchBar = forwardRef<SearchBarRef, SearchBarProps>(({ onSearch, placeholder = "Search anime...", className }, ref) => {
   const [query, setQuery] = useState('');
   const [isFocused, setIsFocused] = useState(false);
+  const inputRef = useRef<HTMLInputElement>(null);
+
+  useImperativeHandle(ref, () => ({
+    focus: () => inputRef.current?.focus(),
+  }));
 
   useEffect(() => {
     const debounce = setTimeout(() => {
@@ -39,6 +48,7 @@ export const SearchBar = ({ onSearch, placeholder = "Search anime...", className
       )}>
         <Search className="absolute left-3 w-5 h-5 text-muted-foreground" />
         <Input
+          ref={inputRef}
           type="text"
           value={query}
           onChange={(e) => setQuery(e.target.value)}
@@ -60,4 +70,6 @@ export const SearchBar = ({ onSearch, placeholder = "Search anime...", className
       </div>
     </div>
   );
-};
+});
+
+SearchBar.displayName = 'SearchBar';
