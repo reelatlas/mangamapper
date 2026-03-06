@@ -41,12 +41,24 @@ export const Header = () => {
               <span className="hidden sm:inline">home</span>
             </Link>
           </Button>
+          <Button variant="ghost" size="sm" asChild className="font-mono text-xs">
+            <Link to="/about" className="flex items-center gap-1.5">
+              <Fingerprint className="w-3.5 h-3.5" />
+              <span className="hidden sm:inline">about</span>
+            </Link>
+          </Button>
           {user ? (
             <>
               <Button variant="ghost" size="sm" asChild className="font-mono text-xs">
                 <Link to="/library" className="flex items-center gap-1.5">
                   <Library className="w-3.5 h-3.5" />
                   <span className="hidden sm:inline">library</span>
+                </Link>
+              </Button>
+              <Button variant="ghost" size="sm" asChild className="font-mono text-xs">
+                <Link to="/about" className="flex items-center gap-1.5">
+                  <Fingerprint className="w-3.5 h-3.5" />
+                  <span className="hidden sm:inline">about</span>
                 </Link>
               </Button>
               <DropdownMenu>
@@ -70,16 +82,18 @@ export const Header = () => {
               </DropdownMenu>
             </>
           ) : (
-            <Button size="sm" asChild className="font-mono text-xs border-dashed">
-              <Link to="/auth">{'>'} sign_in</Link>
-            </Button>
+            <>
+              <Button variant="ghost" size="sm" asChild className="font-mono text-xs">
+                <Link to="/about" className="flex items-center gap-1.5">
+                  <Fingerprint className="w-3.5 h-3.5" />
+                  <span className="hidden sm:inline">about</span>
+                </Link>
+              </Button>
+              <Button size="sm" asChild className="font-mono text-xs border-dashed">
+                <Link to="/auth">{'>'} sign_in</Link>
+              </Button>
+            </>
           )}
-          <Button variant="ghost" size="sm" asChild className="font-mono text-xs">
-            <Link to="/about" className="flex items-center gap-1.5">
-              <Fingerprint className="w-3.5 h-3.5" />
-              <span className="hidden sm:inline">about</span>
-            </Link>
-          </Button>
         </nav>
       </div>
     </header>
