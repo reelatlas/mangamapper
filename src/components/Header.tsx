@@ -49,6 +49,12 @@ export const Header = () => {
                   <span className="hidden sm:inline">library</span>
                 </Link>
               </Button>
+              <Button variant="ghost" size="sm" asChild className="font-mono text-xs">
+                <Link to="/about" className="flex items-center gap-1.5">
+                  <Fingerprint className="w-3.5 h-3.5" />
+                  <span className="hidden sm:inline">about</span>
+                </Link>
+              </Button>
               <DropdownMenu>
                 <DropdownMenuTrigger asChild>
                   <Button variant="outline" size="sm" className="font-mono text-xs gap-1.5 border-dashed">
@@ -70,16 +76,18 @@ export const Header = () => {
               </DropdownMenu>
             </>
           ) : (
-            <Button size="sm" asChild className="font-mono text-xs border-dashed">
-              <Link to="/auth">{'>'} sign_in</Link>
-            </Button>
+            <>
+              <Button variant="ghost" size="sm" asChild className="font-mono text-xs">
+                <Link to="/about" className="flex items-center gap-1.5">
+                  <Fingerprint className="w-3.5 h-3.5" />
+                  <span className="hidden sm:inline">about</span>
+                </Link>
+              </Button>
+              <Button size="sm" asChild className="font-mono text-xs border-dashed">
+                <Link to="/auth">{'>'} sign_in</Link>
+              </Button>
+            </>
           )}
-          <Button variant="ghost" size="sm" asChild className="font-mono text-xs">
-            <Link to="/about" className="flex items-center gap-1.5">
-              <Fingerprint className="w-3.5 h-3.5" />
-              <span className="hidden sm:inline">about</span>
-            </Link>
-          </Button>
         </nav>
       </div>
     </header>
