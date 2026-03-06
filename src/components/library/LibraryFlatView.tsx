@@ -54,9 +54,8 @@ export const LibraryFlatView = ({ progress, readerSites, removeFromLibrary, view
     return (
       <div className="space-y-4">
         <div className="flex flex-wrap items-center gap-2">
-          <div className="ml-auto">
-            <ViewModeToggle viewMode={viewMode} onViewModeChange={onViewModeChange} />
-          </div>
+          <ViewModeToggle viewMode={viewMode} onViewModeChange={onViewModeChange} />
+          <div className="w-px h-5 bg-border mx-1" />
         </div>
         <div className="text-center py-16 border border-dashed">
           <div className="flex items-center justify-center mb-3">
@@ -88,6 +87,8 @@ export const LibraryFlatView = ({ progress, readerSites, removeFromLibrary, view
   return (
     <div className="space-y-4">
       <div className="flex flex-wrap items-center gap-2">
+        <ViewModeToggle viewMode={viewMode} onViewModeChange={onViewModeChange} />
+        <div className="w-px h-5 bg-border mx-1" />
         <ArrowUpDown className="w-3.5 h-3.5 text-muted-foreground" />
         <ToggleGroup type="single" value={progressSort} onValueChange={(val) => val && setProgressSort(val as SortOption)} className="gap-1">
           <ToggleGroupItem value="date-desc" className="text-xs font-mono px-2.5 h-7 border-dashed text-muted-foreground data-[state=on]:bg-muted data-[state=on]:text-foreground">last_updated</ToggleGroupItem>
@@ -98,9 +99,6 @@ export const LibraryFlatView = ({ progress, readerSites, removeFromLibrary, view
           <ToggleGroupItem value="alpha-asc" className="text-xs font-mono px-2.5 h-7 border-dashed text-muted-foreground data-[state=on]:bg-muted data-[state=on]:text-foreground">a→z</ToggleGroupItem>
           <ToggleGroupItem value="alpha-desc" className="text-xs font-mono px-2.5 h-7 border-dashed text-muted-foreground data-[state=on]:bg-muted data-[state=on]:text-foreground">z→a</ToggleGroupItem>
         </ToggleGroup>
-        <div className="ml-auto">
-          <ViewModeToggle viewMode={viewMode} onViewModeChange={onViewModeChange} />
-        </div>
       </div>
 
       <div className="grid gap-3 overflow-hidden">
