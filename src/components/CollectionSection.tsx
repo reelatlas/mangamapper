@@ -502,12 +502,19 @@ export const CollectionSection = ({ anime }: CollectionSectionProps) => {
                   {reader.name}
                 </Button>
               ))}
-              {linkedReaders.length === 0 && (
-                <span className="text-xs text-muted-foreground">reader(null)</span>
+              {linkedReaders.length === 0 ? (
+                <span
+                  onClick={startEditing}
+                  className="group/reader text-xs text-muted-foreground cursor-pointer font-mono"
+                >
+                  reader(null)
+                  <span className="hidden group-hover/reader:inline text-primary ml-2">{'>'} add_reader</span>
+                </span>
+              ) : (
+                <Button variant="ghost" size="sm" onClick={startEditing} className="font-mono text-xs h-7 gap-1 text-muted-foreground">
+                  <Pencil className="w-3 h-3" /> edit
+                </Button>
               )}
-              <Button variant="ghost" size="sm" onClick={startEditing} className="font-mono text-xs h-7 gap-1 text-muted-foreground">
-                <Pencil className="w-3 h-3" /> edit
-              </Button>
             </div>
           </div>
         )}
