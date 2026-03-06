@@ -4,7 +4,7 @@ import { SearchBar, SearchBarRef } from '@/components/SearchBar';
 import { AnimeCard } from '@/components/AnimeCard';
 import { getFilteredAnime, searchAnime, StatusFilter } from '@/data/mockAnime';
 import { AnimeSeries } from '@/types/anime';
-import { TrendingUp, Filter, Home, Hash } from 'lucide-react';
+import { TrendingUp, Filter, Home, Hash, Wand2, Sparkles } from 'lucide-react';
 import { ToggleGroup, ToggleGroupItem } from '@/components/ui/toggle-group';
 
 const Index = () => {
@@ -131,13 +131,17 @@ const Index = () => {
               ))}
             </div>
           ) : (
-            <div 
-              className="text-center py-16 border border-dashed group/empty cursor-pointer"
-              onClick={() => searchBarRef.current?.focus()}
-            >
-              <p className="text-sm text-muted-foreground">
+            <div className="flex flex-col items-center justify-center py-16 border border-dashed gap-3">
+              <div className="group/icon relative w-8 h-8 cursor-pointer" onClick={() => searchBarRef.current?.focus()}>
+                <Wand2 className="w-8 h-8 text-muted-foreground absolute inset-0 transition-opacity group-hover/icon:opacity-0" />
+                <Sparkles className="w-8 h-8 text-primary absolute inset-0 opacity-0 transition-opacity group-hover/icon:opacity-100" />
+              </div>
+              <p 
+                className="text-sm text-muted-foreground group/text cursor-pointer"
+                onClick={() => searchBarRef.current?.focus()}
+              >
                 // series_data(null)
-                <span className="text-primary opacity-0 group-hover/empty:opacity-100 transition-opacity ml-2">{'>'} search</span>
+                <span className="text-primary opacity-0 group-hover/text:opacity-100 transition-opacity ml-2">{'>'} search</span>
               </p>
             </div>
           )}
