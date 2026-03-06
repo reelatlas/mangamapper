@@ -482,7 +482,7 @@ export const SeriesCard = ({ item, animeId, readerSites, onRemove, userId, onSav
                     ) : (
                       <div className="flex items-center gap-1.5 text-muted-foreground min-h-5 flex-wrap">
                         <Glasses className="w-3.5 h-3.5 shrink-0 text-muted-foreground" />
-                        <span>reader(null)</span>
+                        <span><span className="text-syntax-cyan">//</span> reader(null)</span>
                       </div>
                     )}
                   </>
