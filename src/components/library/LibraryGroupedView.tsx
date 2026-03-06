@@ -294,19 +294,17 @@ export const LibraryGroupedView = ({ userId, readerSites, progress, fetchReaderS
 
   return (
     <div className="space-y-4">
-      {readerSites.length > 0 && (
-        <div className="flex flex-wrap items-center gap-2">
-          <ViewModeToggle viewMode={viewMode} onViewModeChange={onViewModeChange} />
-          <div className="w-px h-5 bg-border mx-1" />
-          <ArrowUpDown className="w-3.5 h-3.5 text-muted-foreground" />
-          <ToggleGroup type="single" value={readerSort} onValueChange={handleSortChange} className="gap-1">
-            <ToggleGroupItem value="date-desc" className="text-xs font-mono px-2.5 h-7 border-dashed text-muted-foreground data-[state=on]:bg-muted data-[state=on]:text-foreground">last_updated</ToggleGroupItem>
-            <ToggleGroupItem value="date-asc" className="text-xs font-mono px-2.5 h-7 border-dashed text-muted-foreground data-[state=on]:bg-muted data-[state=on]:text-foreground">first_updated</ToggleGroupItem>
-            <ToggleGroupItem value="alpha-asc" className="text-xs font-mono px-2.5 h-7 border-dashed text-muted-foreground data-[state=on]:bg-muted data-[state=on]:text-foreground">a→z</ToggleGroupItem>
-            <ToggleGroupItem value="alpha-desc" className="text-xs font-mono px-2.5 h-7 border-dashed text-muted-foreground data-[state=on]:bg-muted data-[state=on]:text-foreground">z→a</ToggleGroupItem>
-          </ToggleGroup>
-        </div>
-      )}
+      <div className="flex flex-wrap items-center gap-2">
+        <ViewModeToggle viewMode={viewMode} onViewModeChange={onViewModeChange} />
+        <div className="w-px h-5 bg-border mx-1" />
+        <ArrowUpDown className="w-3.5 h-3.5 text-muted-foreground" />
+        <ToggleGroup type="single" value={readerSort} onValueChange={handleSortChange} className="gap-1">
+          <ToggleGroupItem value="date-desc" className="text-xs font-mono px-2.5 h-7 border-dashed text-muted-foreground data-[state=on]:bg-muted data-[state=on]:text-foreground">last_updated</ToggleGroupItem>
+          <ToggleGroupItem value="date-asc" className="text-xs font-mono px-2.5 h-7 border-dashed text-muted-foreground data-[state=on]:bg-muted data-[state=on]:text-foreground">first_updated</ToggleGroupItem>
+          <ToggleGroupItem value="alpha-asc" className="text-xs font-mono px-2.5 h-7 border-dashed text-muted-foreground data-[state=on]:bg-muted data-[state=on]:text-foreground">a→z</ToggleGroupItem>
+          <ToggleGroupItem value="alpha-desc" className="text-xs font-mono px-2.5 h-7 border-dashed text-muted-foreground data-[state=on]:bg-muted data-[state=on]:text-foreground">z→a</ToggleGroupItem>
+        </ToggleGroup>
+      </div>
 
       <div className="grid gap-8">
         {sortedReaderGroups.map(group => {
