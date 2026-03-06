@@ -98,6 +98,27 @@ const AnimeDetail = () => {
                     </span>
                   ))}
                 </div>
+                <div>
+                  <span className="text-syntax-cyan">anime_status</span>
+                  <span className="text-muted-foreground">: </span>
+                  <span className={
+                    anime.animeStatus === 'airing' ? 'text-accent' :
+                    anime.animeStatus === 'hiatus' ? 'text-syntax-amber' :
+                    anime.animeStatus === 'upcoming' ? 'text-syntax-purple' :
+                    'text-muted-foreground'
+                  }>{anime.animeStatus}</span>
+                </div>
+                {anime.mangaStatus && (
+                  <div>
+                    <span className="text-syntax-cyan">manga_status</span>
+                    <span className="text-muted-foreground">: </span>
+                    <span className={
+                      anime.mangaStatus === 'publishing' ? 'text-accent' :
+                      anime.mangaStatus === 'hiatus' ? 'text-syntax-amber' :
+                      'text-muted-foreground'
+                    }>{anime.mangaStatus}</span>
+                  </div>
+                )}
                 <div className="pt-2 border-t border-dashed">
                   <span className="text-syntax-cyan">synopsis</span>
                   <span className="text-muted-foreground">: </span>
