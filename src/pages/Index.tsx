@@ -131,10 +131,7 @@ const Index = () => {
           ) : (
             <div className="text-center py-16 border border-dashed">
               <p className="text-sm text-muted-foreground">
-                // {isSearching 
-                  ? `no results matching "${searchQuery}"`
-                  : 'no anime found'
-                }
+                // series_data(<span className="text-syntax-amber">null</span>)
               </p>
             </div>
           )}
