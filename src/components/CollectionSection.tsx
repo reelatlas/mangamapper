@@ -491,7 +491,10 @@ export const CollectionSection = ({ anime }: CollectionSectionProps) => {
                 <div className="space-y-2">
                   <div className="flex items-center gap-1.5 text-xs">
                     <BookOpen className="w-3.5 h-3.5 text-muted-foreground" />
-                    <span className="text-muted-foreground">anime_original; no_manga</span>
+                    <span className="text-muted-foreground">last_read</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <span className="text-muted-foreground text-xs font-mono">anime_original, no_manga</span>
                   </div>
                 </div>
               )}
