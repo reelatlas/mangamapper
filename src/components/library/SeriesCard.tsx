@@ -119,7 +119,7 @@ export const SeriesCard = ({ item, animeId, readerSites, onRemove, userId, onSav
       ...updated[index],
       readerName: option.name,
       readerUrl: option.url,
-      seriesUrl: option.url.endsWith('/') ? option.url : option.url + '/',
+      seriesUrl: option.url ? (option.url.endsWith('/') ? option.url : option.url + '/') : '',
       suffix: '',
       userModified: true,
     };

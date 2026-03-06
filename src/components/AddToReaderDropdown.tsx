@@ -58,7 +58,7 @@ export const AddToReaderDropdown = ({ animeId, onSuccess, linkedReaderNames = []
   const handleSelectReader = (reader: UserReader) => {
     setSelectedReader(reader);
     // Ensure the default URL ends with a trailing slash
-    const baseUrl = reader.url.endsWith('/') ? reader.url : reader.url + '/';
+    const baseUrl = reader.url ? (reader.url.endsWith('/') ? reader.url : reader.url + '/') : '';
     setSeriesUrl(baseUrl);
   };
 

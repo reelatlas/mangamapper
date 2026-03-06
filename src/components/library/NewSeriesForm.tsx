@@ -69,7 +69,7 @@ export const NewSeriesForm = ({ userId, readerSites, progress, onSuccess, onCanc
         setSelectedReaderKey(key);
         setSelectedReaderName(option.name);
         setSelectedReaderUrl(option.url);
-        const baseUrl = option.url.endsWith('/') ? option.url : option.url + '/';
+        const baseUrl = option.url ? (option.url.endsWith('/') ? option.url : option.url + '/') : '';
         setSeriesUrl(baseUrl);
       }
     }
@@ -82,7 +82,7 @@ export const NewSeriesForm = ({ userId, readerSites, progress, onSuccess, onCanc
     setShowNewReader(false);
     setSelectedReaderName(readerName);
     setSelectedReaderUrl(readerUrl);
-    const baseUrl = readerUrl.endsWith('/') ? readerUrl : readerUrl + '/';
+    const baseUrl = readerUrl ? (readerUrl.endsWith('/') ? readerUrl : readerUrl + '/') : '';
     setSeriesUrl(baseUrl);
     onSuccess(); // refresh reader sites in background
   };
