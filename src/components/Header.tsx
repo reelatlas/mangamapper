@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { Home, Library, User, LogOut, Terminal, AtSign } from 'lucide-react';
+import { Home, Library, User, LogOut, Terminal, AtSign, Info } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { useAuth } from '@/hooks/useAuth';
 import {
