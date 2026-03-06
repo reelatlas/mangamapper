@@ -191,12 +191,14 @@ export const CollectionSection = ({ anime }: CollectionSectionProps) => {
     } else {
       setEditReaderAssignments([{ readerName: '', readerUrl: '', seriesUrl: '', suffix: '', userModified: false }]);
     }
+    setConfirmRemove(false);
     setIsEditing(true);
   };
 
   const cancelEditing = () => {
     setIsEditing(false);
     setShowInlineNewReader(false);
+    setConfirmRemove(false);
   };
 
   const addReaderRow = () => {
