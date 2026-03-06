@@ -453,7 +453,7 @@ export const CollectionSection = ({ anime }: CollectionSectionProps) => {
         </div>
 
         {/* Section 2: Always-visible progress inputs */}
-        {inLibrary && (
+        {progress && (
           <div className="space-y-3">
             <div className="flex flex-wrap items-end gap-6">
               <div className="space-y-2">
@@ -550,7 +550,7 @@ export const CollectionSection = ({ anime }: CollectionSectionProps) => {
         )}
 
         {/* Section 4: Last saved */}
-        {inLibrary && progress?.updated_at && (
+        {progress?.updated_at && (
           <span className="text-muted-foreground text-xs block">
             last_updated: <span className="text-syntax-string">{formatTimestamp(progress.updated_at)}</span>
           </span>
