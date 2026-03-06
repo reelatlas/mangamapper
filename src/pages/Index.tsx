@@ -12,7 +12,7 @@ const Index = () => {
   const [searchResults, setSearchResults] = useState<AnimeSeries[]>([]);
   const [statusFilter, setStatusFilter] = useState<StatusFilter>(() => {
     const saved = localStorage.getItem('mangamapper-home-status');
-    return (saved === 'airing' || saved === 'completed') ? saved : 'airing';
+    return (saved === 'airing' || saved === 'finished') ? saved : 'airing';
   });
   const [resultLimit, setResultLimit] = useState<number>(() => {
     const saved = localStorage.getItem('mangamapper-home-limit');
@@ -81,7 +81,7 @@ const Index = () => {
                 className="gap-1"
               >
                 <ToggleGroupItem value="airing" className="text-xs font-mono px-2.5 h-7 border-dashed text-muted-foreground data-[state=on]:bg-muted data-[state=on]:text-foreground">airing</ToggleGroupItem>
-                <ToggleGroupItem value="completed" className="text-xs font-mono px-2.5 h-7 border-dashed text-muted-foreground data-[state=on]:bg-muted data-[state=on]:text-foreground">complete</ToggleGroupItem>
+                <ToggleGroupItem value="finished" className="text-xs font-mono px-2.5 h-7 border-dashed text-muted-foreground data-[state=on]:bg-muted data-[state=on]:text-foreground">finished</ToggleGroupItem>
               </ToggleGroup>
               
               {/* Separator between groups */}
