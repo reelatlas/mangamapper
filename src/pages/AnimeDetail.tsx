@@ -1,5 +1,6 @@
-import { useState } from 'react';
+import { useState, useCallback } from 'react';
 import { useParams, Link } from 'react-router-dom';
+import { EpisodeType } from '@/types/anime';
 import { Header } from '@/components/Header';
 import { MangaMappingDisplay } from '@/components/MangaMappingDisplay';
 import { EpisodeBadge } from '@/components/EpisodeBadge';
@@ -14,6 +15,17 @@ const AnimeDetail = () => {
   const { id } = useParams<{ id: string }>();
   const anime = getAnimeById(id || '');
   const [showAll, setShowAll] = useState(false);
+  const [activeFilters, setActiveFilters] = useState<Set<EpisodeType>>(new Set(['canon', 'filler', 'anime-only-canon']));
+
+  const toggleFilter = useCallback((type: EpisodeType) => {
+    setActiveFilters(prev => {
+      const next = new Set(prev);
+      if (next.has(type)) next.delete(type);
+      else next.add(type);
+      return next;
+    });
+  }, []);
+
   if (!anime) {
     return (
       <div className="min-h-screen bg-background font-mono">
@@ -170,17 +182,17 @@ const AnimeDetail = () => {
               </span>
             </div>
             <div className="flex flex-wrap items-center gap-4 text-xs text-muted-foreground">
-              <div className="flex items-center gap-1.5">
-                <EpisodeBadge type="canon" />
-                <span>= follows manga</span>
+              <div className="flex items-center gap-1.5 cursor-pointer select-none" onClick={() => toggleFilter('canon')}>
+                <EpisodeBadge type="canon" inactive={!activeFilters.has('canon')} />
+                <span className={activeFilters.has('canon') ? '' : 'opacity-40'}>= follows manga</span>
               </div>
-              <div className="flex items-center gap-1.5">
-                <EpisodeBadge type="anime-only-canon" />
-                <span>= anime original</span>
+              <div className="flex items-center gap-1.5 cursor-pointer select-none" onClick={() => toggleFilter('anime-only-canon')}>
+                <EpisodeBadge type="anime-only-canon" inactive={!activeFilters.has('anime-only-canon')} />
+                <span className={activeFilters.has('anime-only-canon') ? '' : 'opacity-40'}>= anime original</span>
               </div>
-              <div className="flex items-center gap-1.5">
-                <EpisodeBadge type="filler" />
-                <span>= fml</span>
+              <div className="flex items-center gap-1.5 cursor-pointer select-none" onClick={() => toggleFilter('filler')}>
+                <EpisodeBadge type="filler" inactive={!activeFilters.has('filler')} />
+                <span className={activeFilters.has('filler') ? '' : 'opacity-40'}>= fml</span>
               </div>
             </div>
           </div>
@@ -192,6 +204,7 @@ const AnimeDetail = () => {
                       const epNum = i + 1;
                       const episode = anime.episodes.find(ep => ep.number === epNum);
                       if (episode) {
+                        if (!activeFilters.has(episode.type)) return null;
                         return (
                           <MangaMappingDisplay
                             key={episode.number}
@@ -212,13 +225,15 @@ const AnimeDetail = () => {
                         </div>
                       );
                     })
-                  : anime.episodes.map((episode) => (
-                      <MangaMappingDisplay
-                        key={episode.number}
-                        episode={episode}
-                        showEpisodeNumber={true}
-                      />
-                    ))}
+                  : anime.episodes
+                      .filter(ep => activeFilters.has(ep.type))
+                      .map((episode) => (
+                        <MangaMappingDisplay
+                          key={episode.number}
+                          episode={episode}
+                          showEpisodeNumber={true}
+                        />
+                      ))}
               </div>
             </ScrollArea>
           </CardContent>
