@@ -488,8 +488,8 @@ export const CollectionSection = ({ anime }: CollectionSectionProps) => {
         {inLibrary && anime.hasManga && (
           <div className="space-y-2">
             <div className="flex items-center gap-1.5 text-xs">
-              <Glasses className={`w-3.5 h-3.5 transition-colors ${linkedReaders.length > 0 ? 'text-primary' : isReaderHovered ? 'text-primary' : 'text-muted-foreground'}`} />
-              <span className={`transition-colors ${linkedReaders.length > 0 ? 'text-syntax-cyan' : isReaderHovered ? 'text-syntax-cyan' : 'text-muted-foreground'}`}>readers</span>
+              <Glasses className={`w-3.5 h-3.5 transition-colors ${linkedReaders.length > 0 ? 'text-primary' : 'text-muted-foreground'}`} />
+              <span className={`transition-colors ${linkedReaders.length > 0 ? 'text-syntax-cyan' : 'text-muted-foreground'}`}>readers</span>
             </div>
             <div className="flex flex-wrap items-center gap-2">
               {linkedReaders.map((reader) => (
