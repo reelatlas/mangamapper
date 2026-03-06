@@ -438,20 +438,17 @@ export const CollectionSection = ({ anime }: CollectionSectionProps) => {
               </Button>
             </div>
           ) : (
-            <Button
-              variant="outline"
-              size="sm"
-              onClick={inLibrary ? () => setConfirmRemove(true) : toggleLibrary}
-              disabled={togglingLibrary}
-              className={`font-mono text-xs h-7 group/lib ${inLibrary ? 'border-dashed' : 'bg-transparent text-muted-foreground hover:text-accent-foreground hover:bg-accent border border-dashed border-border'}`}
-            >
-              {togglingLibrary ? '...' : inLibrary ? (
-                <>
-                  [✓] in_library
-                  <span className="hidden group-hover/lib:inline ml-1 text-primary">{'>'} remove_from(library)</span>
-                </>
-              ) : '[ ] add_to_library'}
-            </Button>
+            <div className="group/lib flex items-center h-7 font-mono text-xs">
+              <span className={`px-3 py-1 border border-dashed ${inLibrary ? 'text-foreground' : 'text-muted-foreground'}`}>
+                {togglingLibrary ? '...' : inLibrary ? '[✓] in_library' : '[ ] add_to_library'}
+              </span>
+              <span
+                className="hidden group-hover/lib:inline-flex items-center ml-1 text-primary cursor-pointer hover:underline"
+                onClick={inLibrary ? () => setConfirmRemove(true) : toggleLibrary}
+              >
+                {'>'} {inLibrary ? 'remove_from(library)' : 'add_to(library)'}
+              </span>
+            </div>
           )}
         </div>
 
