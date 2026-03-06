@@ -4,7 +4,7 @@ import { SearchBar, SearchBarRef } from '@/components/SearchBar';
 import { AnimeCard } from '@/components/AnimeCard';
 import { getFilteredAnime, searchAnime, StatusFilter } from '@/data/mockAnime';
 import { AnimeSeries } from '@/types/anime';
-import { TrendingUp, Filter, Home, Hash, Wand2, Sparkles } from 'lucide-react';
+import { TrendingUp, Filter, Home, Hash, Wand, Sparkles } from 'lucide-react';
 import { ToggleGroup, ToggleGroupItem } from '@/components/ui/toggle-group';
 
 const Index = () => {
@@ -135,23 +135,23 @@ const Index = () => {
               <div className="flex items-center justify-center">
                 <div
                   className="cursor-pointer"
-                  onClick={() => searchBarRef.current?.focus()}
+                  onClick={() => { setStatusFilter('airing'); setResultLimit(10); }}
                   onMouseEnter={() => { document.getElementById('wand-default')?.classList.add('hidden'); document.getElementById('wand-hover')?.classList.remove('hidden'); }}
                   onMouseLeave={() => { document.getElementById('wand-default')?.classList.remove('hidden'); document.getElementById('wand-hover')?.classList.add('hidden'); }}
                 >
-                  <Wand2 className="w-6 h-6 text-muted-foreground" id="wand-default" />
+                  <Wand className="w-6 h-6 text-muted-foreground" id="wand-default" />
                   <Sparkles className="w-6 h-6 text-muted-foreground hidden" id="wand-hover" />
                 </div>
               </div>
               <div
                 className="group/empty cursor-pointer"
-                onClick={() => searchBarRef.current?.focus()}
+                onClick={() => { setStatusFilter('airing'); setResultLimit(10); }}
                 onMouseEnter={() => { document.getElementById('wand-default')?.classList.add('hidden'); document.getElementById('wand-hover')?.classList.remove('hidden'); }}
                 onMouseLeave={() => { document.getElementById('wand-default')?.classList.remove('hidden'); document.getElementById('wand-hover')?.classList.add('hidden'); }}
               >
                 <p className="text-muted-foreground text-sm">
                   <span>// series_data(null)</span>
-                  <span className="hidden group-hover/empty:inline text-primary ml-2">{'>'} search</span>
+                  <span className="hidden group-hover/empty:inline text-primary ml-2">{'>'} reset_filters</span>
                 </p>
               </div>
             </div>
