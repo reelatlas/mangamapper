@@ -493,8 +493,11 @@ export const CollectionSection = ({ anime }: CollectionSectionProps) => {
                     <BookOpen className="w-3.5 h-3.5 text-muted-foreground" />
                     <span className="text-muted-foreground">last_read</span>
                   </div>
-                  <div className="flex items-center gap-2">
-                    <span className="text-muted-foreground text-xs font-mono">anime_original, no_manga</span>
+                  <div>
+                    <span className="text-muted-foreground text-xs block mb-1">&nbsp;</span>
+                    <div className="flex items-center h-7">
+                      <span className="text-muted-foreground text-xs font-mono">anime_original, no_manga</span>
+                    </div>
                   </div>
                 </div>
               )}
