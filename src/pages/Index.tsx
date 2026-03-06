@@ -4,7 +4,7 @@ import { SearchBar } from '@/components/SearchBar';
 import { AnimeCard } from '@/components/AnimeCard';
 import { getFilteredAnime, searchAnime, StatusFilter } from '@/data/mockAnime';
 import { AnimeSeries } from '@/types/anime';
-import { TrendingUp, Filter, Home } from 'lucide-react';
+import { TrendingUp, Filter, Home, Hash } from 'lucide-react';
 import { ToggleGroup, ToggleGroupItem } from '@/components/ui/toggle-group';
 
 const Index = () => {
@@ -87,6 +87,7 @@ const Index = () => {
               {/* Separator between groups */}
               <div className="w-px h-5 bg-border mx-1" />
               
+              <Hash className="w-3.5 h-3.5 text-muted-foreground" />
               {/* Limit filter group */}
               <ToggleGroup 
                 type="single" 
