@@ -194,7 +194,7 @@ const About = () => {
               </li>
             </ul>
             <div className="flex items-center text-xs">
-              <span className="text-muted-foreground mr-1">{'>'}</span>
+              <span className="text-muted-foreground">{'>'} </span>
               <span className="text-syntax-amber">send_to</span>
               <span className="text-muted-foreground">(</span>
               <span className="text-syntax-green">"newestArc@gmail.com"</span>
