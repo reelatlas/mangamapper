@@ -193,7 +193,7 @@ const About = () => {
                 <span>feedback, suggestions, bug reports, feature requests welcome</span>
               </li>
             </ul>
-            <div className="flex items-center gap-0 text-xs">
+            <div className="flex items-center text-xs">
               <span className="text-muted-foreground">{'>'} </span>
               <span className="text-syntax-amber">send_to</span>
               <span className="text-muted-foreground">(</span>
