@@ -33,7 +33,7 @@ const About = () => {
           <section className="group/card border border-dashed p-5">
             <SectionHeader icon={Fingerprint} label="welcome" />
             <p className="text-sm text-foreground/80 leading-relaxed mb-4">
-              welcome <span className="text-syntax-purple">traveler</span>, your anime has ended
+              welcome <span className="text-syntax-purple">traveler</span>, your anime ended
             </p>
             <ul className="space-y-1.5 text-sm text-foreground/70 mb-5">
               <li className="flex gap-2">
