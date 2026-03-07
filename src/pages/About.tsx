@@ -26,15 +26,15 @@ const About = () => {
             </p>
             <ul className="space-y-1.5 text-sm text-foreground/70 mb-5">
               <li className="flex gap-2">
-                <span className="text-muted-foreground">├─</span>
+                <span className="text-muted-foreground">→</span>
                 <span>another season is far away</span>
               </li>
               <li className="flex gap-2">
-                <span className="text-muted-foreground">├─</span>
+                <span className="text-muted-foreground">→</span>
                 <span>what if it never comes</span>
               </li>
               <li className="flex gap-2">
-                <span className="text-muted-foreground">└─</span>
+                <span className="text-muted-foreground">→</span>
                 <span>the fabric of your being fades each waiting moment</span>
               </li>
             </ul>
@@ -43,19 +43,19 @@ const About = () => {
             </p>
             <ul className="space-y-1.5 text-sm text-foreground/70">
               <li className="flex gap-2">
-                <span className="text-muted-foreground">├─</span>
+                <span className="text-muted-foreground">→</span>
                 <span>find where the <span className="text-syntax-amber">anime leaves…</span> and the <span className="text-syntax-green">manga enters</span></span>
               </li>
               <li className="flex gap-2">
-                <span className="text-muted-foreground">├─</span>
+                <span className="text-muted-foreground">→</span>
                 <span>this your defining moment</span>
               </li>
               <li className="flex gap-2">
-                <span className="text-muted-foreground">├─</span>
+                <span className="text-muted-foreground">→</span>
                 <span>dive back into the exact chapter</span>
               </li>
               <li className="flex gap-2">
-                <span className="text-muted-foreground">└─</span>
+                <span className="text-muted-foreground">→</span>
                 <span>to <span className="text-foreground">reignite your soul</span> and fulfill what was written</span>
               </li>
             </ul>
@@ -69,19 +69,19 @@ const About = () => {
             </div>
             <ul className="space-y-1.5 text-sm text-foreground/70">
               <li className="flex gap-2">
-                <span className="text-muted-foreground">├─</span>
+                <span className="text-muted-foreground">→</span>
                 <span>match anime episode to manga chapters</span>
               </li>
               <li className="flex gap-2">
-                <span className="text-muted-foreground">├─</span>
+                <span className="text-muted-foreground">→</span>
                 <span>track your favorite series in library</span>
               </li>
               <li className="flex gap-2">
-                <span className="text-muted-foreground">├─</span>
+                <span className="text-muted-foreground">→</span>
                 <span>save <span className="text-syntax-purple">last_watched</span> and <span className="text-syntax-purple">last_read</span> progress</span>
               </li>
               <li className="flex gap-2">
-                <span className="text-muted-foreground">└─</span>
+                <span className="text-muted-foreground">→</span>
                 <span>manage manga readers of choice for favorite series</span>
               </li>
             </ul>
@@ -95,15 +95,15 @@ const About = () => {
             </div>
             <ul className="space-y-2.5 text-sm text-foreground/70">
               <li className="flex gap-2">
-                <span className="text-muted-foreground shrink-0">├─</span>
+                <span className="text-muted-foreground shrink-0">→</span>
                 <span>existing anime DBs are robust and feature rich, inconvenient for simple anime to manga comparison and tracking</span>
               </li>
               <li className="flex gap-2">
-                <span className="text-muted-foreground shrink-0">├─</span>
+                <span className="text-muted-foreground shrink-0">→</span>
                 <span>manga readers can have long URLs or require many clicks and searches, use readers in the library for cleaner reader management</span>
               </li>
               <li className="flex gap-2">
-                <span className="text-muted-foreground shrink-0">└─</span>
+                <span className="text-muted-foreground shrink-0">→</span>
                 <span>migrate links and bookmarks easily if a manga reader site changes URLs, mirror links shift, disappears, or gets shut down</span>
               </li>
             </ul>
@@ -117,15 +117,15 @@ const About = () => {
             </div>
             <ul className="space-y-2.5 text-sm text-foreground/70">
               <li className="flex gap-2">
-                <span className="text-muted-foreground shrink-0">├─</span>
+                <span className="text-muted-foreground shrink-0">→</span>
                 <span>remove the need for a notepad or browser bookmarks to track and manage my favorite anime/manga series</span>
               </li>
               <li className="flex gap-2">
-                <span className="text-muted-foreground shrink-0">├─</span>
+                <span className="text-muted-foreground shrink-0">→</span>
                 <span>a personal project to experiment with and learn AI coding, coding was not possible for me before</span>
               </li>
               <li className="flex gap-2">
-                <span className="text-muted-foreground shrink-0">└─</span>
+                <span className="text-muted-foreground shrink-0">→</span>
                 <span>very niche, curious if any other will find it of use</span>
               </li>
             </ul>
@@ -151,7 +151,7 @@ const About = () => {
             </div>
             <ul className="space-y-1.5 text-sm text-foreground/70 mb-4">
               <li className="flex gap-2">
-                <span className="text-muted-foreground">└─</span>
+                <span className="text-muted-foreground">→</span>
                 <span>feedback, suggestions, bug reporting, feature requests all welcome</span>
               </li>
             </ul>
