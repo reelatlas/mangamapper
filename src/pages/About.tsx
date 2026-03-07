@@ -193,16 +193,13 @@ const About = () => {
                 <span>feedback, suggestions, bug reports, feature requests welcome</span>
               </li>
             </ul>
-            <div className="flex items-center gap-2 text-xs">
+            <div
+              onClick={() => handleCopy('email', 'newestArc@gmail.com')}
+              className="group/copy flex items-center gap-1 text-xs cursor-pointer select-none"
+            >
               <span className="text-muted-foreground">{'>'} </span>
-              <span className="text-syntax-amber">send_to</span>
-              <span className="text-muted-foreground">(</span>
-              <span className="text-syntax-green">"newestArc@gmail.com"</span>
-              <span className="text-muted-foreground">)</span>
-              <button
-                onClick={() => handleCopy('email', 'newestArc@gmail.com')}
-                className="group/copy ml-1 flex items-center gap-1 text-muted-foreground hover:text-foreground transition-colors duration-200"
-              >
+              <span><span className="text-syntax-amber">send_to</span><span className="text-muted-foreground">(</span><span className="text-syntax-green">"newestArc@gmail.com"</span><span className="text-muted-foreground">)</span></span>
+              <div className="ml-1 flex items-center gap-1 text-muted-foreground group-hover/copy:text-foreground transition-colors duration-200">
                 {copiedKey === 'email' ? (
                   <Check className="w-3 h-3 text-syntax-green" />
                 ) : (
@@ -213,7 +210,7 @@ const About = () => {
                     </span>
                   </>
                 )}
-              </button>
+              </div>
             </div>
           </section>
 
