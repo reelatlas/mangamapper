@@ -113,7 +113,7 @@ export const NewSeriesForm = ({ userId, readerSites, progress, onSuccess, onCanc
     }
 
     // If reader selected, create manga_reader_sites entry
-    if (selectedReaderName && selectedReaderUrl) {
+    if (selectedReaderName) {
       const { error: readerError } = await supabase
         .from('manga_reader_sites')
         .insert({
