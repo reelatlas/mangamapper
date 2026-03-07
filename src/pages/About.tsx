@@ -196,7 +196,7 @@ const About = () => {
           <section className="group/card border border-transparent border-dashed hover:border-border p-5 transition-colors duration-300">
             <SectionHeader icon={Bird} hoverIcon={Heart} label="support" />
             <p className="text-sm text-foreground/70 mb-3">
-              $$$ for <span className="text-syntax-amber">sushi</span>, <span className="text-syntax-amber">ai tokens</span>, <span className="text-syntax-amber">api credits</span>, <span className="text-syntax-amber">hosting</span>
+              $$$ for <span className="text-syntax-amber">sushi</span>, <span className="text-syntax-amber">gundams</span>, <span className="text-syntax-amber">s-tier relics</span>, <span className="text-syntax-amber">ai tokens</span>, <span className="text-syntax-amber">api credits</span>, <span className="text-syntax-amber">hosting</span>
             </p>
             <p className="text-xs text-muted-foreground">
               <span className="text-syntax-purple">donations</span>: <span className="text-syntax-amber">coming_soon</span>
