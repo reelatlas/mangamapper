@@ -195,9 +195,9 @@ const About = () => {
             </ul>
             <div
               onClick={() => handleCopy('email', 'newestArc@gmail.com')}
-              className="group/copy flex items-center gap-1 text-xs cursor-pointer select-none"
+              className="group/copy flex items-center gap-2 text-xs cursor-pointer select-none"
             >
-              <span className="text-muted-foreground">{'>'} </span>
+              <span className="text-muted-foreground">{'>'}</span>
               <span><span className="text-syntax-amber">send_to</span><span className="text-muted-foreground">(</span><span className="text-syntax-green">"newestArc@gmail.com"</span><span className="text-muted-foreground">)</span></span>
               <div className="ml-1 flex items-center gap-1 text-muted-foreground group-hover/copy:text-foreground transition-colors duration-200">
                 {copiedKey === 'email' ? (
