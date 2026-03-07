@@ -521,16 +521,22 @@ export const SeriesCard = ({ item, animeId, readerSites, onRemove, userId, onSav
               <>
                 <div className="h-4 w-px bg-border mx-3" />
                 <div className="flex items-center gap-1 px-3">
-                  {linkedReaders.length === 1 ? (
-                    <Button variant="ghost" size="sm" onClick={(e) => { e.stopPropagation(); const url = linkedReaders[0].series_url || linkedReaders[0].url; if (url) window.open(url, '_blank'); }} className="font-mono text-xs gap-1">
-                      <Glasses className="w-3 h-3" />{linkedReaders[0].name}{(linkedReaders[0].series_url || linkedReaders[0].url) && <ExternalLink className="w-3 h-3" />}
-                    </Button>
-                  ) : (
-                    linkedReaders.map(reader => (
-                    <Button key={reader.id} variant="ghost" size="sm" onClick={(e) => { e.stopPropagation(); const url = reader.series_url || reader.url; if (url) window.open(url, '_blank'); }} className="font-mono text-xs gap-1">
-                      <Glasses className="w-3 h-3" />{reader.name}{(reader.series_url || reader.url) && <ExternalLink className="w-3 h-3" />}
-                    </Button>
-                    ))
+                  {linkedReaders.length === 1 ? (() => {
+                    const hasUrl = !!(linkedReaders[0].series_url || linkedReaders[0].url);
+                    return (
+                      <Button variant="ghost" size="sm" onClick={(e) => { e.stopPropagation(); if (hasUrl) window.open(linkedReaders[0].series_url || linkedReaders[0].url, '_blank'); }} className={`font-mono text-xs gap-1 ${!hasUrl ? 'text-muted-foreground hover:bg-muted/50 hover:text-muted-foreground' : ''}`}>
+                        <Glasses className="w-3 h-3" />{hasUrl ? linkedReaders[0].name : 'reader_url(null)'}{hasUrl && <ExternalLink className="w-3 h-3" />}
+                      </Button>
+                    );
+                  })() : (
+                    linkedReaders.map(reader => {
+                      const hasUrl = !!(reader.series_url || reader.url);
+                      return (
+                        <Button key={reader.id} variant="ghost" size="sm" onClick={(e) => { e.stopPropagation(); if (hasUrl) window.open(reader.series_url || reader.url, '_blank'); }} className={`font-mono text-xs gap-1 ${!hasUrl ? 'text-muted-foreground hover:bg-muted/50 hover:text-muted-foreground' : ''}`}>
+                          <Glasses className="w-3 h-3" />{hasUrl ? reader.name : 'reader_url(null)'}{hasUrl && <ExternalLink className="w-3 h-3" />}
+                        </Button>
+                      );
+                    })
                   )}
                 </div>
               </>
