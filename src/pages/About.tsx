@@ -186,7 +186,7 @@ const About = () => {
                 </li>
                 <li className="flex gap-2">
                   <span className="text-muted-foreground">→</span>
-                  <span><span className="text-syntax-purple">backend</span>: <span className="text-syntax-green">"supabase, aniDB api"</span></span>
+                  <span><span className="text-syntax-purple">backend</span>: <span className="text-syntax-green">"supabase, anilist api"</span></span>
                 </li>
                 <li className="flex gap-2">
                   <span className="text-muted-foreground">→</span>
