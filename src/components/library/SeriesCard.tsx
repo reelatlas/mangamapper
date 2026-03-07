@@ -487,7 +487,7 @@ export const SeriesCard = ({ item, animeId, readerSites, onRemove, userId, onSav
                     ) : (
                       <div className="flex items-center gap-1.5 text-muted-foreground min-h-5 flex-wrap">
                         <Glasses className="w-3.5 h-3.5 shrink-0 text-muted-foreground" />
-                        <span><span className="text-syntax-cyan">//</span> reader(null)</span>
+                        <span className="text-xs">reader(null)</span>
                       </div>
                     )}
                   </>
@@ -523,12 +523,12 @@ export const SeriesCard = ({ item, animeId, readerSites, onRemove, userId, onSav
                 <div className="flex items-center gap-1 px-3">
                   {linkedReaders.length === 1 ? (
                     <Button variant="ghost" size="sm" onClick={(e) => { e.stopPropagation(); const url = linkedReaders[0].series_url || linkedReaders[0].url; if (url) window.open(url, '_blank'); }} className="font-mono text-xs gap-1">
-                      <Glasses className="w-3 h-3" />{linkedReaders[0].name}
+                      <Glasses className="w-3 h-3" />{linkedReaders[0].name}{(linkedReaders[0].series_url || linkedReaders[0].url) && <ExternalLink className="w-3 h-3" />}
                     </Button>
                   ) : (
                     linkedReaders.map(reader => (
                     <Button key={reader.id} variant="ghost" size="sm" onClick={(e) => { e.stopPropagation(); const url = reader.series_url || reader.url; if (url) window.open(url, '_blank'); }} className="font-mono text-xs gap-1">
-                      <Glasses className="w-3 h-3" />{reader.name}
+                      <Glasses className="w-3 h-3" />{reader.name}{(reader.series_url || reader.url) && <ExternalLink className="w-3 h-3" />}
                     </Button>
                     ))
                   )}
