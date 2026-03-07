@@ -122,7 +122,7 @@ const About = () => {
             <ul className="space-y-2.5 text-sm text-foreground/70">
               <li className="flex gap-2">
                 <span className="text-muted-foreground shrink-0">→</span>
-                <span>no more notepads and browser bookmarks to track my favorite anime/manga series</span>
+                <span>no more notepads and browser bookmarks to track favorite anime/manga series</span>
               </li>
               <li className="flex gap-2">
                 <span className="text-muted-foreground shrink-0">→</span>
