@@ -62,7 +62,7 @@ const About = () => {
 
         <div className="grid gap-0">
           {/* // welcome */}
-          <section onClick={() => toggleSection('welcome')} className="group/card cursor-pointer border border-transparent border-dashed hover:border-border p-5 transition-colors duration-300">
+          <section onClick={() => toggleSection('welcome')} className={`group/card cursor-pointer border border-dashed hover:border-border p-5 transition-colors duration-300 ${openSection === 'welcome' ? 'border-border' : 'border-transparent'}`}>
             <SectionHeader icon={Shell} hoverIcon={Snail} label="welcome" isOpen={openSection === 'welcome'} />
             {openSection === 'welcome' && (
               <div className="mt-3">
