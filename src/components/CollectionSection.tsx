@@ -462,26 +462,30 @@ export const CollectionSection = ({ anime }: CollectionSectionProps) => {
       <CardContent className="p-4 font-mono space-y-6">
         {/* Section 1: Library toggle + edit readers */}
         <div className="flex items-center justify-between">
-          {inLibrary && confirmRemove ? (
-            <div className="flex items-center gap-1">
-              <span className="text-xs text-muted-foreground mr-1">remove?</span>
-              <Button
-                variant="ghost"
-                size="sm"
-                onClick={() => { toggleLibrary(); setConfirmRemove(false); }}
-                disabled={togglingLibrary}
-                className="h-7 w-7 p-0 text-muted-foreground hover:text-destructive hover:bg-destructive/10"
-              >
-                <Check className="w-3.5 h-3.5" />
-              </Button>
-              <Button
-                variant="ghost"
-                size="sm"
-                onClick={() => setConfirmRemove(false)}
-                className="h-7 w-7 p-0 text-muted-foreground hover:text-muted-foreground hover:bg-muted"
-              >
-                <X className="w-3.5 h-3.5" />
-              </Button>
+           {inLibrary && confirmRemove ? (
+            <div className="group/lib flex items-center h-7 font-mono text-xs">
+              <span className="px-3 py-1 border border-dashed text-foreground">
+                {togglingLibrary ? '...' : 'in_library [✓]'}
+              </span>
+              <span className="inline ml-3 flex items-center gap-1">
+                <Button
+                  variant="ghost"
+                  size="sm"
+                  onClick={() => { toggleLibrary(); setConfirmRemove(false); }}
+                  disabled={togglingLibrary}
+                  className="h-7 w-7 p-0 text-muted-foreground hover:text-destructive hover:bg-destructive/10"
+                >
+                  <Check className="w-3.5 h-3.5" />
+                </Button>
+                <Button
+                  variant="ghost"
+                  size="sm"
+                  onClick={() => setConfirmRemove(false)}
+                  className="h-7 w-7 p-0 text-muted-foreground hover:text-muted-foreground hover:bg-muted"
+                >
+                  <X className="w-3.5 h-3.5" />
+                </Button>
+              </span>
             </div>
           ) : (
             <div className="group/lib flex items-center h-7 font-mono text-xs">
