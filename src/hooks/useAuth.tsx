@@ -83,12 +83,13 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
       window.location.hostname.endsWith('lovableproject.com');
     const isEmbedded = window.parent !== window;
 
-    // In Lovable preview (iframe), use popup flow to avoid embedded OAuth restrictions.
+    // In Lovable preview (iframe), use popup + token handoff to the embedded window.
     if (isLovableHost && isEmbedded) {
+      const callbackUrl = `${window.location.origin}/auth/popup-callback`;
       const { data, error } = await supabase.auth.signInWithOAuth({
         provider: 'google',
         options: {
-          redirectTo: redirectUrl,
+          redirectTo: callbackUrl,
           skipBrowserRedirect: true,
         },
       });
@@ -116,37 +117,56 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
         const finish = (err: Error | null) => {
           if (settled) return;
           settled = true;
+          window.removeEventListener('message', messageHandler);
           clearInterval(closedInterval);
           clearTimeout(timeoutId);
-          subscription.unsubscribe();
           if (err) {
             sessionStorage.removeItem('pending_oauth_signin');
           }
           resolve({ error: err });
         };
 
-        const {
-          data: { subscription },
-        } = supabase.auth.onAuthStateChange((event) => {
-          if (event === 'SIGNED_IN') {
-            if (!popup.closed) {
-              popup.close();
-            }
-            finish(null);
+        const handleMessage = async (event: MessageEvent) => {
+          if (event.origin !== window.location.origin) return;
+
+          const data = event.data as {
+            type?: string;
+            message?: string;
+            payload?: { accessToken?: string; refreshToken?: string };
+          };
+
+          if (data?.type === 'oauth-error') {
+            finish(new Error(data.message || 'Google sign-in failed.'));
+            return;
           }
-        });
 
-        const closedInterval = window.setInterval(async () => {
-          if (!popup || popup.closed) {
-            const {
-              data: { session },
-            } = await supabase.auth.getSession();
+          if (data?.type === 'oauth-session') {
+            const accessToken = data.payload?.accessToken;
+            const refreshToken = data.payload?.refreshToken;
 
-            if (session) {
-              finish(null);
-            } else {
-              finish(new Error('Google sign-in was cancelled.'));
+            if (!accessToken || !refreshToken) {
+              finish(new Error('Missing auth session from popup.'));
+              return;
             }
+
+            const { error: sessionError } = await supabase.auth.setSession({
+              access_token: accessToken,
+              refresh_token: refreshToken,
+            });
+
+            finish(sessionError ? (sessionError as Error) : null);
+          }
+        };
+
+        const messageHandler = (event: MessageEvent) => {
+          void handleMessage(event);
+        };
+
+        window.addEventListener('message', messageHandler);
+
+        const closedInterval = window.setInterval(() => {
+          if (popup.closed && !settled) {
+            finish(new Error('Google sign-in was cancelled.'));
           }
         }, 400);
 
