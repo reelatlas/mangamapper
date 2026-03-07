@@ -77,7 +77,7 @@ const About = () => {
 
         <div className="grid gap-6">
           {/* // welcome */}
-          <section id="welcome" className="group/card border border-transparent border-dashed hover:border-border p-5 transition-colors duration-300 scroll-mt-14">
+          <section id="welcome" className="group/card border border-transparent border-dashed hover:border-border p-5 transition-colors duration-300 scroll-mt-28">
             <SectionHeader icon={Shell} hoverIcon={Snail} label="welcome" />
             <p className="text-sm text-foreground/80 leading-relaxed mb-4">
               welcome <span className="text-syntax-purple">traveler</span>, your anime ended
@@ -120,7 +120,7 @@ const About = () => {
           </section>
 
           {/* // features */}
-          <section id="features" className="group/card border border-transparent border-dashed hover:border-border p-5 transition-colors duration-300 scroll-mt-14">
+          <section id="features" className="group/card border border-transparent border-dashed hover:border-border p-5 transition-colors duration-300 scroll-mt-28">
             <SectionHeader icon={Cloud} hoverIcon={Zap} label="features" />
             <ul className="space-y-1.5 text-sm text-foreground/70">
               <li className="flex gap-2">
@@ -143,7 +143,7 @@ const About = () => {
           </section>
 
           {/* // pain_points_solved */}
-          <section id="solve-for-pain" className="group/card border border-transparent border-dashed hover:border-border p-5 transition-colors duration-300 scroll-mt-14">
+          <section id="solve-for-pain" className="group/card border border-transparent border-dashed hover:border-border p-5 transition-colors duration-300 scroll-mt-28">
             <SectionHeader icon={Target} hoverIcon={Goal} label="solve_for(pain)" />
             <ul className="space-y-2.5 text-sm text-foreground/70">
               <li className="flex gap-2">
@@ -162,7 +162,7 @@ const About = () => {
           </section>
 
           {/* // why_build */}
-          <section id="why-build" className="group/card border border-transparent border-dashed hover:border-border p-5 transition-colors duration-300 scroll-mt-14">
+          <section id="why-build" className="group/card border border-transparent border-dashed hover:border-border p-5 transition-colors duration-300 scroll-mt-28">
             <SectionHeader icon={SunDim} hoverIcon={Rainbow} label="why_build" />
             <ul className="space-y-2.5 text-sm text-foreground/70">
               <li className="flex gap-2">
@@ -181,7 +181,7 @@ const About = () => {
           </section>
 
           {/* // built_with */}
-          <section id="built-with" className="group/card border border-transparent border-dashed hover:border-border p-5 transition-colors duration-300 scroll-mt-14">
+          <section id="built-with" className="group/card border border-transparent border-dashed hover:border-border p-5 transition-colors duration-300 scroll-mt-28">
             <SectionHeader icon={Bot} hoverIcon={Rocket} label="built_with" />
             <ul className="space-y-1.5 text-xs text-muted-foreground">
               <li className="flex gap-2">
@@ -208,7 +208,7 @@ const About = () => {
           </section>
 
           {/* // feedback */}
-          <section id="feedback" className="group/card border border-transparent border-dashed hover:border-border p-5 transition-colors duration-300 scroll-mt-14">
+          <section id="feedback" className="group/card border border-transparent border-dashed hover:border-border p-5 transition-colors duration-300 scroll-mt-28">
             <SectionHeader icon={Sprout} hoverIcon={TreePine} label="feedback" />
             <ul className="space-y-1.5 text-sm text-foreground/70 mb-4">
               <li className="flex gap-2">
@@ -237,7 +237,7 @@ const About = () => {
           </section>
 
           {/* // support */}
-          <section id="support" className="group/card border border-transparent border-dashed hover:border-border p-5 transition-colors duration-300 scroll-mt-14">
+          <section id="support" className="group/card border border-transparent border-dashed hover:border-border p-5 transition-colors duration-300 scroll-mt-28">
             <SectionHeader icon={Bird} hoverIcon={Heart} label="support" />
             <p className="text-sm text-foreground/70 mb-3">
               $$$ for <span className="text-syntax-amber">sushi</span>, <span className="text-syntax-amber">ai tokens</span>, <span className="text-syntax-amber">api credits</span>, <span className="text-syntax-amber">hosting</span>
