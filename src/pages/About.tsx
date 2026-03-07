@@ -77,7 +77,7 @@ const About = () => {
 
         <div className="grid gap-6">
           {/* // welcome */}
-          <section id="welcome" className="group/card border border-transparent border-dashed hover:border-border p-5 transition-colors duration-300 scroll-mt-4">
+          <section id="welcome" className="group/card border border-transparent border-dashed hover:border-border p-5 transition-colors duration-300 scroll-mt-14">
             <SectionHeader icon={Shell} hoverIcon={Snail} label="welcome" />
             <p className="text-sm text-foreground/80 leading-relaxed mb-4">
               welcome <span className="text-syntax-purple">traveler</span>, your anime ended
