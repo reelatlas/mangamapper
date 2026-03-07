@@ -234,10 +234,12 @@ const About = () => {
                 {CRYPTO_WALLETS.map(({ ticker, address }) => (
                   <div
                     key={ticker}
-                    onClick={() => handleCopy(ticker, address)}
-                    className="flex items-center gap-2 text-xs cursor-pointer select-none"
+                    className="flex items-center text-xs select-none"
                   >
-                    <span className="group/copy inline-flex items-center gap-2">
+                    <span
+                      onClick={() => handleCopy(ticker, address)}
+                      className="group/copy inline-flex items-center gap-2 cursor-pointer"
+                    >
                       <span className="text-muted-foreground">→</span>
                       <span className="text-syntax-purple w-10">{ticker}</span>
                       <span className="text-syntax-green font-mono">{truncateAddress(address)}</span>
