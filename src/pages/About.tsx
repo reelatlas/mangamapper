@@ -311,12 +311,11 @@ const About = () => {
                           className="group/link inline-flex items-center gap-2 cursor-pointer"
                         >
                           <span className="text-muted-foreground">→</span>
-                          <span className="text-syntax-purple">{label}</span>
+                          <span className="text-syntax-green">{label}</span>
                           <span className="ml-1 inline-flex items-center gap-1 text-muted-foreground group-hover/link:text-foreground transition-colors duration-200">
                             <span className="max-w-0 opacity-0 group-hover/link:max-w-[150px] group-hover/link:opacity-100 transition-all duration-300 overflow-hidden whitespace-nowrap inline-flex items-center gap-1">
                               <span className="text-muted-foreground">{'>'}</span>
-                              <ExternalLink className="w-3 h-3" />
-                              <span className="text-muted-foreground">new_tab</span>
+                              <span className="text-muted-foreground">new_tab(</span><ExternalLink className="w-3 h-3 text-syntax-amber" /><span className="text-muted-foreground">)</span>
                             </span>
                           </span>
                         </span>
