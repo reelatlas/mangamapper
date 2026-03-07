@@ -199,15 +199,11 @@ const About = () => {
               <span className="text-syntax-green">"newestArc@gmail.com"</span>
               <span className="text-muted-foreground">)</span>
               <button
-                onClick={() => {
-                  navigator.clipboard.writeText('newestArc@gmail.com');
-                  setCopied(true);
-                  setTimeout(() => setCopied(false), 2000);
-                }}
+                onClick={() => handleCopy('email', 'newestArc@gmail.com')}
                 className="ml-1 text-muted-foreground hover:text-foreground transition-colors duration-200"
                 title="Copy email"
               >
-                {copied ? <Check className="w-3 h-3 text-syntax-green" /> : <Copy className="w-3 h-3" />}
+                {copiedKey === 'email' ? <Check className="w-3 h-3 text-syntax-green" /> : <Copy className="w-3 h-3" />}
               </button>
             </div>
           </section>
