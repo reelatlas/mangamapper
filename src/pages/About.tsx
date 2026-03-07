@@ -17,8 +17,27 @@ const SectionHeader = ({ icon: Icon, hoverIcon: HoverIcon, label }: { icon: Luci
   </div>
 );
 
+const CRYPTO_WALLETS = [
+  { ticker: 'btc', address: 'bc1qr3ds2qraxelt3kan0nn7h2k0ky30aecg28l3a4' },
+  { ticker: 'eth', address: '0xDFB385030eED21389057056c0811608A97Ca5e26' },
+  { ticker: 'sol', address: 'D9XA7UNynfCtuNJX7FEg5E6C7eDhkePUkKKSodaeSYRs' },
+  { ticker: 'doge', address: 'DLkjxfspJanrSeMbmYzTepQxtV57edxErM' },
+  { ticker: 'ltc', address: 'ltc1qgg7yqyx2vd4wjfryzt62gmx7d946qs3e9s3v6y' },
+  { ticker: 'xmr', address: '4AHSPyQM3iBYe14TsYUUWkH4MCStrzh7UGFefUs6mjoAN1QGztwcHCfG7SAdP6SVL1SWmPe9UnKS2Fxy3S2kzUv8EDGLVW8' },
+];
+
+const truncateAddress = (addr: string) =>
+  addr.length > 16 ? `${addr.slice(0, 8)}...${addr.slice(-4)}` : addr;
+
 const About = () => {
-  const [copied, setCopied] = useState(false);
+  const [copiedKey, setCopiedKey] = useState<string | null>(null);
+  const [cryptoOpen, setCryptoOpen] = useState(false);
+
+  const handleCopy = (key: string, value: string) => {
+    navigator.clipboard.writeText(value);
+    setCopiedKey(key);
+    setTimeout(() => setCopiedKey(null), 2000);
+  };
 
   return (
     <div className="min-h-screen bg-background font-mono">
