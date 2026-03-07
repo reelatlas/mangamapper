@@ -74,7 +74,7 @@ export const CollectionSection = ({ anime }: CollectionSectionProps) => {
 
     const [progressRes, linkedRes, allReadersRes] = await Promise.all([
       supabase.from('anime_progress').select('*').eq('anime_id', anime.id).maybeSingle(),
-      supabase.from('manga_reader_sites').select('*').eq('anime_id', anime.id).not('series_url', 'is', null),
+      supabase.from('manga_reader_sites').select('*').eq('anime_id', anime.id),
       supabase.from('manga_reader_sites').select('*').order('created_at', { ascending: true }),
     ]);
 
@@ -253,23 +253,56 @@ export const CollectionSection = ({ anime }: CollectionSectionProps) => {
     if (!user) return;
     setSaving(true);
 
+    // Normalize helper
+    const norm = (s: string) => s.trim().toLowerCase();
+
+    // Clean up any existing duplicates for this anime first
+    const { data: allForAnime } = await supabase
+      .from('manga_reader_sites')
+      .select('id, name')
+      .eq('anime_id', anime.id)
+      .eq('user_id', user.id);
+
+    if (allForAnime) {
+      const seen = new Map<string, string>();
+      const dupeIds: string[] = [];
+      for (const row of allForAnime) {
+        const key = norm(row.name);
+        if (seen.has(key)) dupeIds.push(row.id);
+        else seen.set(key, row.id);
+      }
+      if (dupeIds.length > 0) {
+        await supabase.from('manga_reader_sites').delete().in('id', dupeIds);
+      }
+    }
+
+    // Re-fetch linked readers after cleanup for accurate diff
+    const { data: freshLinked } = await supabase
+      .from('manga_reader_sites')
+      .select('*')
+      .eq('anime_id', anime.id)
+      .eq('user_id', user.id);
+    const currentLinked: ReaderSite[] = freshLinked || [];
+
     // Diff reader assignments
     const validAssignments = editReaderAssignments.filter(a => a.readerName);
     const idsToKeep: string[] = [];
+    const existingNames = new Set(currentLinked.map(r => norm(r.name)));
+    const batchNames = new Set<string>();
 
     for (const assignment of validAssignments) {
+      const normalizedName = norm(assignment.readerName);
+
       if (assignment.existingSiteId) {
         await supabase.from('manga_reader_sites').update({ series_url: assignment.seriesUrl.trim() || null }).eq('id', assignment.existingSiteId);
         idsToKeep.push(assignment.existingSiteId);
       } else {
-        // Prevent duplicate: skip if this reader is already linked to this anime
-        const isDuplicate = linkedReaders.some(
-          r => r.name.toLowerCase() === assignment.readerName.toLowerCase() && r.anime_id === anime.id
-        );
-        if (isDuplicate) {
+        // Block duplicates against DB and within same batch
+        if (existingNames.has(normalizedName) || batchNames.has(normalizedName)) {
           toast.error(`${assignment.readerName} is already assigned to this series`);
           continue;
         }
+        batchNames.add(normalizedName);
 
         const { data } = await supabase.from('manga_reader_sites').insert({
           user_id: user.id,
@@ -282,7 +315,7 @@ export const CollectionSection = ({ anime }: CollectionSectionProps) => {
       }
     }
 
-    const idsToDelete = linkedReaders.map(r => r.id).filter(id => !idsToKeep.includes(id));
+    const idsToDelete = currentLinked.map(r => r.id).filter(id => !idsToKeep.includes(id));
     if (idsToDelete.length > 0) {
       await supabase.from('manga_reader_sites').delete().in('id', idsToDelete);
     }
@@ -535,17 +568,25 @@ export const CollectionSection = ({ anime }: CollectionSectionProps) => {
               <span className={`transition-colors ${linkedReaders.length > 0 ? 'text-syntax-cyan' : 'text-muted-foreground'}`}>readers</span>
             </div>
             <div className="flex flex-wrap items-center gap-2">
-              {linkedReaders.map((reader) => (
-                <Button
-                  key={reader.id}
-                  variant="outline"
-                  size="sm"
-                  className="font-mono text-xs h-7 border-dashed"
-                  onClick={() => window.open(reader.series_url!, '_blank')}
-                >
-                  {reader.name}
-                </Button>
-              ))}
+              {linkedReaders.map((reader) => {
+                const targetUrl = reader.series_url || reader.url || null;
+                return targetUrl ? (
+                  <Button
+                    key={reader.id}
+                    variant="outline"
+                    size="sm"
+                    className="font-mono text-xs h-7 border-dashed"
+                    onClick={() => window.open(targetUrl, '_blank')}
+                  >
+                    {reader.name}
+                    <ExternalLink className="w-3 h-3 ml-1" />
+                  </Button>
+                ) : (
+                  <span key={reader.id} className="font-mono text-xs px-2 py-1 border border-dashed text-muted-foreground rounded">
+                    {reader.name}
+                  </span>
+                );
+              })}
               {linkedReaders.length === 0 ? (
                 <span
                   className="text-xs text-muted-foreground font-mono cursor-pointer"
