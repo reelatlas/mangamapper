@@ -4,12 +4,13 @@ import { Fingerprint, Zap, Target, HelpCircle, Code, MessageSquare, Heart, Lucid
 const SectionHeader = ({ icon: Icon, label }: { icon: LucideIcon; label: string }) => (
   <div className="group/header flex items-center gap-2 mb-3 text-xs text-muted-foreground hover:text-foreground transition-colors duration-300 cursor-default select-none">
     <Icon className="w-3.5 h-3.5 transition-colors duration-300" />
-    <span>// {label}</span>
+    <span className="max-w-0 opacity-0 group-hover/header:max-w-[20px] group-hover/header:opacity-100 transition-all duration-500 ease-out overflow-hidden whitespace-nowrap">//</span>
+    <span>{label}</span>
     <div className="flex items-center gap-1.5 overflow-hidden max-w-0 opacity-0 group-hover/header:max-w-[120px] group-hover/header:opacity-100 transition-all duration-500 ease-out">
       <span className="text-muted-foreground/60">{'>'}</span>
-      <Icon className="w-3 h-3 text-syntax-cyan transition-colors duration-300" />
-      <Icon className="w-3 h-3 text-syntax-purple transition-colors duration-300" />
-      <Icon className="w-3 h-3 text-syntax-pink transition-colors duration-300" />
+      <Icon className="w-3 h-3 text-syntax-cyan" />
+      <Icon className="w-3 h-3 text-syntax-purple" />
+      <Icon className="w-3 h-3 text-syntax-pink" />
     </div>
   </div>
 );
