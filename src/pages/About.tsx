@@ -84,7 +84,7 @@ const About = () => {
               </li>
               <li className="flex gap-2">
                 <span className="text-muted-foreground">→</span>
-                <span>track your favorite series in library <span className="text-muted-foreground">[requires {'>'} sign_in]</span></span>
+                <span>track your favorite series in library</span>
               </li>
               <li className="flex gap-2">
                 <span className="text-muted-foreground">→</span>
@@ -92,7 +92,7 @@ const About = () => {
               </li>
               <li className="flex gap-2">
                 <span className="text-muted-foreground">→</span>
-                <span>manage manga readers of choice for favorite series</span>
+                <span>manage manga readers for favorite series</span>
               </li>
             </ul>
           </section>
