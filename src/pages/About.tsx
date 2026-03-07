@@ -130,7 +130,7 @@ const About = () => {
               </li>
               <li className="flex gap-2">
                 <span className="text-muted-foreground shrink-0">→</span>
-                <span>very niche, will any one else find this useful?</span>
+                <span>very niche, will any find it of use?</span>
               </li>
             </ul>
           </section>
