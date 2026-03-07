@@ -101,15 +101,15 @@ const About = () => {
             <ul className="space-y-2.5 text-sm text-foreground/70">
               <li className="flex gap-2">
                 <span className="text-muted-foreground shrink-0">→</span>
-                <span>existing anime DBs are robust and feature rich, inconvenient for simple anime to manga comparison and tracking</span>
+                <span>existing anime DBs are robust and feature rich, inconvenient for simple anime to manga tracking</span>
               </li>
               <li className="flex gap-2">
                 <span className="text-muted-foreground shrink-0">→</span>
-                <span>manga readers can have long URLs or require many clicks and searches, use readers in the library for cleaner reader management</span>
+                <span>long URLs or nested series links are hard to manage, need clean reader management</span>
               </li>
               <li className="flex gap-2">
                 <span className="text-muted-foreground shrink-0">→</span>
-                <span>migrate links and bookmarks easily if a manga reader site changes URLs, mirror links shift, disappears, or gets shut down</span>
+                <span>reader sites change URLs, mirror links shift, disappear, or get shut down, no easy way to migrate links and bookmarks</span>
               </li>
             </ul>
           </section>
