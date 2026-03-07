@@ -230,10 +230,18 @@ const About = () => {
                     <span className="text-syntax-green font-mono">{truncateAddress(address)}</span>
                     <button
                       onClick={() => handleCopy(ticker, address)}
-                      className="ml-1 text-muted-foreground hover:text-foreground transition-colors duration-200"
-                      title={`Copy ${ticker} address`}
+                      className="group/copy ml-1 flex items-center gap-1 text-muted-foreground hover:text-foreground transition-colors duration-200"
                     >
-                      {copiedKey === ticker ? <Check className="w-3 h-3 text-syntax-green" /> : <Copy className="w-3 h-3" />}
+                      {copiedKey === ticker ? (
+                        <Check className="w-3 h-3 text-syntax-green" />
+                      ) : (
+                        <>
+                          <Copy className="w-3 h-3" />
+                          <span className="max-w-0 opacity-0 group-hover/copy:max-w-[120px] group-hover/copy:opacity-100 transition-all duration-300 overflow-hidden whitespace-nowrap text-muted-foreground">
+                            copy(<span className="text-syntax-amber">{ticker}_address</span>)
+                          </span>
+                        </>
+                      )}
                     </button>
                   </div>
                 ))}
