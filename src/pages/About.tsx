@@ -235,23 +235,25 @@ const About = () => {
                   <div
                     key={ticker}
                     onClick={() => handleCopy(ticker, address)}
-                    className="group/copy flex items-center gap-2 text-xs cursor-pointer select-none"
+                    className="flex items-center gap-2 text-xs cursor-pointer select-none"
                   >
-                    <span className="text-muted-foreground">→</span>
-                    <span className="text-syntax-purple w-10">{ticker}</span>
-                    <span className="text-syntax-green font-mono">{truncateAddress(address)}</span>
-                    <div className="ml-1 flex items-center gap-1 text-muted-foreground group-hover/copy:text-foreground transition-colors duration-200">
-                      {copiedKey === ticker ? (
-                        <Check className="w-3 h-3 text-syntax-green" />
-                      ) : (
-                        <>
-                          <Copy className="w-3 h-3" />
-                          <span className="max-w-0 opacity-0 group-hover/copy:max-w-[150px] group-hover/copy:opacity-100 transition-all duration-300 overflow-hidden whitespace-nowrap text-muted-foreground">
-                            copy(<span className="text-syntax-amber">{ticker}_address</span>)
-                          </span>
-                        </>
-                      )}
-                    </div>
+                    <span className="group/copy inline-flex items-center gap-2">
+                      <span className="text-muted-foreground">→</span>
+                      <span className="text-syntax-purple w-10">{ticker}</span>
+                      <span className="text-syntax-green font-mono">{truncateAddress(address)}</span>
+                      <span className="ml-1 inline-flex items-center gap-1 text-muted-foreground group-hover/copy:text-foreground transition-colors duration-200">
+                        {copiedKey === ticker ? (
+                          <Check className="w-3 h-3 text-syntax-green" />
+                        ) : (
+                          <>
+                            <Copy className="w-3 h-3" />
+                            <span className="max-w-0 opacity-0 group-hover/copy:max-w-[150px] group-hover/copy:opacity-100 transition-all duration-300 overflow-hidden whitespace-nowrap text-muted-foreground">
+                              copy(<span className="text-syntax-amber">{ticker}_address</span>)
+                            </span>
+                          </>
+                        )}
+                      </span>
+                    </span>
                   </div>
                 ))}
               </CollapsibleContent>
