@@ -87,7 +87,7 @@ const About = () => {
               </li>
               <li className="flex gap-2">
                 <span className="text-muted-foreground">→</span>
-                <span>dive back into the exact chapter</span>
+                <span>dive right into the next chapter</span>
               </li>
               <li className="flex gap-2">
                 <span className="text-muted-foreground">→</span>
