@@ -246,7 +246,7 @@ const About = () => {
                         <>
                           <Copy className="w-3 h-3" />
                           <span className="max-w-0 opacity-0 group-hover/copy:max-w-[120px] group-hover/copy:opacity-100 transition-all duration-300 overflow-hidden whitespace-nowrap text-muted-foreground">
-                            copy_address(<span className="text-syntax-amber">{ticker}</span>)
+                            copy(<span className="text-syntax-amber">{ticker}_address</span>)
                           </span>
                         </>
                       )}
