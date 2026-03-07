@@ -1,5 +1,5 @@
 import { Header } from '@/components/Header';
-import { Fingerprint, Shell, Snail, Cloud, Zap, Target, Goal, Sprout, TreeDeciduous, TreePine, Bot, Rocket, Heart, Bird, Sun, Rainbow, LucideIcon } from 'lucide-react';
+import { Fingerprint, Shell, Snail, Cloud, Zap, Target, Goal, Sprout, TreeDeciduous, TreePine, Bot, Rocket, Heart, Bird, SunDim, Rainbow, LucideIcon } from 'lucide-react';
 
 const SectionHeader = ({ icon: Icon, hoverIcon: HoverIcon, label }: { icon: LucideIcon; hoverIcon: LucideIcon; label: string }) => (
   <div className="group/header flex items-center gap-2 mb-3 text-xs text-muted-foreground group-hover/card:text-foreground transition-colors duration-300 cursor-default select-none">
@@ -116,7 +116,7 @@ const About = () => {
 
           {/* // why_build */}
           <section className="group/card border border-transparent border-dashed hover:border-border p-5 transition-colors duration-300">
-            <SectionHeader icon={Sun} hoverIcon={Rainbow} label="why_build" />
+            <SectionHeader icon={SunDim} hoverIcon={Rainbow} label="why_build" />
             <ul className="space-y-2.5 text-sm text-foreground/70">
               <li className="flex gap-2">
                 <span className="text-muted-foreground shrink-0">→</span>
