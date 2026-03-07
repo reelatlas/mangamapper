@@ -25,10 +25,9 @@ const About = () => {
   const sectionIds = ['welcome', 'features', 'solve-for-pain', 'why-build', 'built-with', 'feedback', 'support'];
 
   const measureOffset = useCallback(() => {
-    const header = document.querySelector('header');
-    const headerH = header?.getBoundingClientRect().height ?? 56;
+    const headerH = 56; // global header h-14 = 3.5rem = 56px
     const navH = navRef.current?.getBoundingClientRect().height ?? 40;
-    setStickyOffset(headerH + navH + 16); // 16px extra gap
+    setStickyOffset(headerH + navH + 16);
   }, []);
 
   useEffect(() => {
@@ -98,7 +97,7 @@ const About = () => {
           ))}
         </nav>
 
-        <div className="grid gap-6">
+        <div className="grid gap-6 mt-6">
           {/* // welcome */}
           <section id="welcome" className="group/card border border-transparent border-dashed hover:border-border p-5 transition-colors duration-300" style={{ scrollMarginTop: `${stickyOffset}px` }}>
             <SectionHeader icon={Shell} hoverIcon={Snail} label="welcome" />
