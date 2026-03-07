@@ -1,5 +1,5 @@
 import { Header } from '@/components/Header';
-import { Fingerprint, Shell, Snail, Cloud, Zap, Target, Goal, Sprout, TreeDeciduous, Bot, Rocket, Heart, Rabbit, LucideIcon } from 'lucide-react';
+import { Fingerprint, Shell, Snail, Cloud, Zap, Target, Goal, Sprout, TreeDeciduous, Bot, Rocket, Heart, Bird, Sun, Rainbow, LucideIcon } from 'lucide-react';
 
 const SectionHeader = ({ icon: Icon, hoverIcon: HoverIcon, label }: { icon: LucideIcon; hoverIcon: LucideIcon; label: string }) => (
   <div className="group/header flex items-center gap-2 mb-3 text-xs text-muted-foreground group-hover/card:text-foreground transition-colors duration-300 cursor-default select-none">
@@ -10,7 +10,7 @@ const SectionHeader = ({ icon: Icon, hoverIcon: HoverIcon, label }: { icon: Luci
     <span>{label}</span>
     <div className="flex items-center gap-1.5 overflow-hidden max-w-0 opacity-0 group-hover/card:max-w-[120px] group-hover/card:opacity-100 transition-all duration-500 ease-out">
       <span className="text-muted-foreground/60">{'>'}</span>
-      <HoverIcon className="w-3 h-3 text-syntax-cyan" />
+      <Icon className="w-3 h-3 text-syntax-cyan" />
       <HoverIcon className="w-3 h-3 text-syntax-purple" />
       <HoverIcon className="w-3 h-3 text-syntax-pink" />
     </div>
@@ -118,7 +118,7 @@ const About = () => {
 
           {/* // why_build */}
           <section className="group/card border border-transparent border-dashed hover:border-border p-5 transition-colors duration-300">
-            <SectionHeader icon={Sprout} hoverIcon={TreeDeciduous} label="why_build" />
+            <SectionHeader icon={Sun} hoverIcon={Rainbow} label="why_build" />
             <ul className="space-y-2.5 text-sm text-foreground/70">
               <li className="flex gap-2">
                 <span className="text-muted-foreground shrink-0">→</span>
@@ -164,7 +164,7 @@ const About = () => {
 
           {/* // support */}
           <section className="group/card border border-transparent border-dashed hover:border-border p-5 transition-colors duration-300">
-            <SectionHeader icon={Heart} hoverIcon={Rabbit} label="support" />
+            <SectionHeader icon={Bird} hoverIcon={Heart} label="support" />
             <p className="text-sm text-foreground/70 mb-3">
               support goes toward <span className="text-syntax-amber">AI tokens</span>, <span className="text-syntax-amber">API credits</span>, <span className="text-syntax-amber">hosting</span>, <span className="text-syntax-amber">sushi</span>
             </p>
