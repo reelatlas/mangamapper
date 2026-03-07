@@ -67,7 +67,7 @@ const About = () => {
               </li>
               <li className="flex gap-2">
                 <span className="text-muted-foreground">→</span>
-                <span>to <span className="text-foreground">reignite your soul</span> and fulfill what was written</span>
+                <span><span className="text-foreground">reignite your soul</span> and fulfill what was written</span>
               </li>
             </ul>
           </section>
