@@ -228,19 +228,20 @@ const About = () => {
             <Collapsible open={cryptoOpen} onOpenChange={setCryptoOpen} className="mb-4">
               <CollapsibleTrigger className="flex items-center gap-1.5 text-xs text-muted-foreground hover:text-foreground transition-colors duration-200 cursor-pointer select-none">
                 <span className="text-muted-foreground">{'>'}</span>
-                <span className="text-syntax-purple">crypto_wallets</span>
+                <span className="text-syntax-cyan">crypto_wallets</span>
                 <TripleArrow collapsed={!cryptoOpen} compact />
               </CollapsibleTrigger>
               <CollapsibleContent className="mt-2 ml-4 space-y-1.5">
                 {CRYPTO_WALLETS.map(({ ticker, address }) => (
-                  <div key={ticker} className="flex items-center gap-2 text-xs">
+                  <div
+                    key={ticker}
+                    onClick={() => handleCopy(ticker, address)}
+                    className="group/copy flex items-center gap-2 text-xs cursor-pointer select-none"
+                  >
                     <span className="text-muted-foreground">→</span>
                     <span className="text-syntax-purple w-10">{ticker}</span>
                     <span className="text-syntax-green font-mono">{truncateAddress(address)}</span>
-                    <button
-                      onClick={() => handleCopy(ticker, address)}
-                      className="group/copy ml-1 flex items-center gap-1 text-muted-foreground hover:text-foreground transition-colors duration-200"
-                    >
+                    <div className="ml-1 flex items-center gap-1 text-muted-foreground group-hover/copy:text-foreground transition-colors duration-200">
                       {copiedKey === ticker ? (
                         <Check className="w-3 h-3 text-syntax-green" />
                       ) : (
@@ -251,7 +252,7 @@ const About = () => {
                           </span>
                         </>
                       )}
-                    </button>
+                    </div>
                   </div>
                 ))}
               </CollapsibleContent>
