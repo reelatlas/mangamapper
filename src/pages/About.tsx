@@ -141,11 +141,23 @@ const About = () => {
             <ul className="space-y-1.5 text-xs text-muted-foreground">
               <li className="flex gap-2">
                 <span className="text-muted-foreground">→</span>
-                <span><span className="text-syntax-purple">stack</span>: <span className="text-syntax-green">"React + TypeScript + Tailwind, aniDB API"</span></span>
+                <span><span className="text-syntax-purple">frontend</span>: <span className="text-syntax-green">"react, typescript, tailwind css"</span></span>
               </li>
               <li className="flex gap-2">
                 <span className="text-muted-foreground">→</span>
-                <span><span className="text-syntax-purple">tools</span>: <span className="text-syntax-green">"Lovable, Claude, Vercel, Supabase, VSCode, GitHub"</span></span>
+                <span><span className="text-syntax-purple">backend</span>: <span className="text-syntax-green">"supabase, aniDB api"</span></span>
+              </li>
+              <li className="flex gap-2">
+                <span className="text-muted-foreground">→</span>
+                <span><span className="text-syntax-purple">deployment</span>: <span className="text-syntax-green">"vercel"</span></span>
+              </li>
+              <li className="flex gap-2">
+                <span className="text-muted-foreground">→</span>
+                <span><span className="text-syntax-purple">dev_flow</span>: <span className="text-syntax-green">"VSCode, github"</span></span>
+              </li>
+              <li className="flex gap-2">
+                <span className="text-muted-foreground">→</span>
+                <span><span className="text-syntax-purple">ai_flow</span>: <span className="text-syntax-green">"lovable, claude"</span></span>
               </li>
             </ul>
           </section>
