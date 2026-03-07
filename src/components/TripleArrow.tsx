@@ -1,6 +1,6 @@
 import { ChevronRight, ChevronDown } from 'lucide-react';
 
-export const TripleArrow = ({ collapsed, compact = false }: { collapsed: boolean; compact?: boolean }) => {
+export const TripleArrow = ({ collapsed, compact = false, className = '' }: { collapsed: boolean; compact?: boolean; className?: string }) => {
   const Icon = collapsed ? ChevronRight : ChevronDown;
   return (
     <div className="relative w-4 h-4 flex-shrink-0">
