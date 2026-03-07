@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef, useCallback } from 'react';
 import { Header } from '@/components/Header';
 import { Fingerprint, Shell, Snail, Cloud, Zap, Target, Goal, Sprout, TreePine, Bot, Rocket, Heart, Bird, SunDim, Rainbow, Copy, Check, LucideIcon } from 'lucide-react';
 
@@ -19,10 +19,33 @@ const SectionHeader = ({ icon: Icon, hoverIcon: HoverIcon, label }: { icon: Luci
 const About = () => {
   const [copied, setCopied] = useState(false);
   const [activeSection, setActiveSection] = useState('welcome');
+  const [stickyOffset, setStickyOffset] = useState(112); // fallback ~7rem
+  const navRef = useRef<HTMLElement>(null);
 
   const sectionIds = ['welcome', 'features', 'solve-for-pain', 'why-build', 'built-with', 'feedback', 'support'];
 
+  const measureOffset = useCallback(() => {
+    const header = document.querySelector('header');
+    const headerH = header?.getBoundingClientRect().height ?? 56;
+    const navH = navRef.current?.getBoundingClientRect().height ?? 40;
+    setStickyOffset(headerH + navH + 16); // 16px extra gap
+  }, []);
+
   useEffect(() => {
+    measureOffset();
+    window.addEventListener('resize', measureOffset);
+    return () => window.removeEventListener('resize', measureOffset);
+  }, [measureOffset]);
+
+  const scrollToSection = useCallback((id: string) => {
+    const el = document.getElementById(id);
+    if (!el) return;
+    const top = el.getBoundingClientRect().top + window.scrollY - stickyOffset;
+    window.scrollTo({ top, behavior: 'smooth' });
+  }, [stickyOffset]);
+
+  useEffect(() => {
+    const topMargin = stickyOffset + 20;
     const observer = new IntersectionObserver(
       (entries) => {
         const visible = entries.filter(e => e.isIntersecting);
@@ -30,14 +53,14 @@ const About = () => {
           setActiveSection(visible[0].target.id);
         }
       },
-      { rootMargin: '-80px 0px -60% 0px', threshold: 0 }
+      { rootMargin: `-${topMargin}px 0px -60% 0px`, threshold: 0 }
     );
     sectionIds.forEach(id => {
       const el = document.getElementById(id);
       if (el) observer.observe(el);
     });
     return () => observer.disconnect();
-  }, []);
+  }, [stickyOffset]);
 
   return (
     <div className="min-h-screen bg-background font-mono">
@@ -52,7 +75,7 @@ const About = () => {
         </div>
 
         {/* Section navigation */}
-        <nav className="sticky top-14 z-10 bg-background/95 backdrop-blur-sm border-b border-dashed border-border/50 -mx-5 px-5 py-3 flex flex-wrap gap-x-4 gap-y-1.5 text-xs text-muted-foreground">
+        <nav ref={navRef} className="sticky top-14 z-10 bg-background/95 backdrop-blur-sm border-b border-dashed border-border/50 -mx-5 px-5 py-3 flex flex-wrap gap-x-4 gap-y-1.5 text-xs text-muted-foreground">
           {[
             { id: 'welcome', label: 'welcome' },
             { id: 'features', label: 'features' },
@@ -65,7 +88,7 @@ const About = () => {
             <span key={item.id} className="flex items-center gap-1.5">
               {i > 0 && <span className="text-muted-foreground/40">/</span>}
               <button
-                onClick={() => document.getElementById(item.id)?.scrollIntoView({ behavior: 'smooth', block: 'start' })}
+                onClick={() => scrollToSection(item.id)}
                 className={`transition-colors duration-200 ${activeSection === item.id ? 'text-foreground' : 'hover:text-foreground'}`}
               >
                 {activeSection === item.id && <span className="text-syntax-cyan">{'> '}</span>}
