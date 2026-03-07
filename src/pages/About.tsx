@@ -36,7 +36,7 @@ const truncateAddress = (addr: string) =>
 const About = () => {
   const [copiedKey, setCopiedKey] = useState<string | null>(null);
   const [cryptoOpen, setCryptoOpen] = useState(false);
-  const [openSection, setOpenSection] = useState<SectionKey | null>(null);
+  const [openSection, setOpenSection] = useState<SectionKey | null>('welcome');
 
   const toggleSection = (key: SectionKey) => {
     setOpenSection(prev => prev === key ? null : key);
