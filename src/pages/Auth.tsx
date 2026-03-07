@@ -182,8 +182,8 @@ const Auth = () => {
                 const { error } = await signInWithGoogle();
                 if (error) {
                   toast.error(error.message);
-                  setGoogleLoading(false);
                 }
+                setGoogleLoading(false);
               }}
             >
               <GoogleIcon />
