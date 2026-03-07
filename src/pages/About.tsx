@@ -52,7 +52,7 @@ const About = () => {
         </div>
 
         {/* Section navigation */}
-        <nav className="sticky top-0 z-10 bg-background/95 backdrop-blur-sm border-b border-dashed border-border/50 -mx-5 px-5 py-3 flex flex-wrap gap-x-4 gap-y-1.5 text-xs text-muted-foreground">
+        <nav className="sticky top-14 z-10 bg-background/95 backdrop-blur-sm border-b border-dashed border-border/50 -mx-5 px-5 py-3 flex flex-wrap gap-x-4 gap-y-1.5 text-xs text-muted-foreground">
           {[
             { id: 'welcome', label: 'welcome' },
             { id: 'features', label: 'features' },
