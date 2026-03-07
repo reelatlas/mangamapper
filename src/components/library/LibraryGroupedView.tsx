@@ -437,8 +437,8 @@ export const LibraryGroupedView = ({ userId, readerSites, progress, fetchReaderS
                           </a>
                         </Button>
                       ) : (
-                        <Button variant="ghost" size="sm" className="font-mono text-xs gap-1 text-muted-foreground hover:bg-muted/50 hover:text-muted-foreground" onClick={e => e.stopPropagation()}>
-                          <Glasses className="w-3 h-3" />reader_url(null)
+                        <Button variant="ghost" size="sm" className="font-mono text-xs gap-1 hover:bg-muted/50 hover:text-muted-foreground group/rbtn" onClick={e => e.stopPropagation()}>
+                          <Glasses className="w-3 h-3" /><span className="group-hover/rbtn:hidden">open_reader</span><span className="hidden group-hover/rbtn:inline text-muted-foreground">reader_url(null)</span>
                         </Button>
                       )}
                     </div>
