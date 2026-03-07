@@ -2,14 +2,11 @@ import { ChevronRight, ChevronDown } from 'lucide-react';
 
 export const TripleArrow = ({ collapsed, compact = false }: { collapsed: boolean; compact?: boolean }) => {
   const Icon = collapsed ? ChevronRight : ChevronDown;
-  const spacing = compact
-    ? (collapsed ? '-space-x-1.5' : '-space-y-1.5')
-    : (collapsed ? '-space-x-1.5' : '-space-y-1.5');
   return (
-    <div className={`flex flex-shrink-0 ${collapsed ? 'flex-row' : 'flex-col'} ${spacing}`}>
-      <Icon className="w-2.5 h-2.5 text-syntax-cyan" />
-      <Icon className="w-2.5 h-2.5 text-syntax-purple" />
-      <Icon className="w-2.5 h-2.5 text-syntax-pink" />
+    <div className="relative w-4 h-4 flex-shrink-0">
+      <Icon className="absolute w-2.5 h-2.5 text-syntax-cyan" style={collapsed ? { left: 0, top: '50%', transform: 'translateY(-50%)' } : { top: 0, left: '50%', transform: 'translateX(-50%)' }} />
+      <Icon className="absolute w-2.5 h-2.5 text-syntax-purple" style={collapsed ? { left: 4, top: '50%', transform: 'translateY(-50%)' } : { top: 4, left: '50%', transform: 'translateX(-50%)' }} />
+      <Icon className="absolute w-2.5 h-2.5 text-syntax-pink" style={collapsed ? { left: 8, top: '50%', transform: 'translateY(-50%)' } : { top: 8, left: '50%', transform: 'translateX(-50%)' }} />
     </div>
   );
 };

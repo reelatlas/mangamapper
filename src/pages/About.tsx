@@ -228,7 +228,7 @@ const About = () => {
             <Collapsible open={cryptoOpen} onOpenChange={setCryptoOpen} className="mb-4">
               <CollapsibleTrigger className="flex items-center gap-1.5 text-xs text-muted-foreground hover:text-foreground transition-colors duration-200 cursor-pointer select-none">
                 <span className="text-muted-foreground">{'>'}</span>
-                <span className="text-syntax-cyan">crypto_wallets</span>
+                <span className="text-syntax-purple">crypto_wallets</span>
                 <TripleArrow collapsed={!cryptoOpen} compact />
               </CollapsibleTrigger>
               <CollapsibleContent className="mt-2 ml-4 space-y-1.5">
