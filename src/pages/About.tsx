@@ -255,8 +255,39 @@ const About = () => {
                   $$$ for <span className="text-syntax-amber">sushi</span>, <span className="text-syntax-amber">gundams</span>, <span className="text-syntax-amber">s-tier relics</span>, <span className="text-syntax-amber">ai tokens</span>, <span className="text-syntax-amber">api credits</span>, <span className="text-syntax-amber">hosting</span>
                 </p>
 
+                {/* Stripe donate */}
+                <Collapsible open={stripeOpen} onOpenChange={setStripeOpen} className="mb-4">
+                  <CollapsibleTrigger onClick={(e) => e.stopPropagation()} className="flex items-center gap-1.5 text-xs text-muted-foreground hover:text-foreground transition-colors duration-200 cursor-pointer select-none">
+                    <span className="text-muted-foreground">{'>'}</span>
+                    <span className="text-syntax-cyan">stripe_donate</span>
+                    <TripleArrow collapsed={!stripeOpen} compact />
+                  </CollapsibleTrigger>
+                  <CollapsibleContent className="mt-2 ml-4 space-y-1.5">
+                    {STRIPE_LINKS.map(({ label, url }) => (
+                      <div
+                        key={label}
+                        className="flex items-center text-xs select-none"
+                      >
+                        <span
+                          onClick={(e) => { e.stopPropagation(); window.open(url, '_blank'); }}
+                          className="group/link inline-flex items-center gap-1 cursor-pointer"
+                        >
+                          <span className="text-muted-foreground">→</span>
+                          <span className="text-syntax-green">{label}</span>
+                          <span className="inline-flex items-center text-muted-foreground group-hover/link:text-foreground transition-colors duration-200">
+                            <span className="max-w-0 opacity-0 group-hover/link:max-w-[150px] group-hover/link:opacity-100 transition-all duration-300 overflow-hidden whitespace-nowrap inline-flex items-center">
+                              <span className="text-muted-foreground mr-1">{'>'}</span>
+                              <span className="text-muted-foreground">new_tab(</span><ExternalLink className="w-3 h-3 text-syntax-amber" style={{ margin: 0, padding: 0, display: 'inline-block', verticalAlign: 'middle' }} /><span className="text-muted-foreground">)</span>
+                            </span>
+                          </span>
+                        </span>
+                      </div>
+                    ))}
+                  </CollapsibleContent>
+                </Collapsible>
+
                 {/* Crypto wallets */}
-                <Collapsible open={cryptoOpen} onOpenChange={setCryptoOpen} className="mb-4">
+                <Collapsible open={cryptoOpen} onOpenChange={setCryptoOpen}>
                   <CollapsibleTrigger onClick={(e) => e.stopPropagation()} className="flex items-center gap-1.5 text-xs text-muted-foreground hover:text-foreground transition-colors duration-200 cursor-pointer select-none">
                     <span className="text-muted-foreground">{'>'}</span>
                     <span className="text-syntax-cyan">crypto_wallets</span>
@@ -286,37 +317,6 @@ const About = () => {
                                 </span>
                               </>
                             )}
-                          </span>
-                        </span>
-                      </div>
-                    ))}
-                  </CollapsibleContent>
-                </Collapsible>
-
-                {/* Stripe placeholder */}
-                <Collapsible open={stripeOpen} onOpenChange={setStripeOpen}>
-                  <CollapsibleTrigger onClick={(e) => e.stopPropagation()} className="flex items-center gap-1.5 text-xs text-muted-foreground hover:text-foreground transition-colors duration-200 cursor-pointer select-none">
-                    <span className="text-muted-foreground">{'>'}</span>
-                    <span className="text-syntax-cyan">stripe_donate</span>
-                    <TripleArrow collapsed={!stripeOpen} compact />
-                  </CollapsibleTrigger>
-                  <CollapsibleContent className="mt-2 ml-4 space-y-1.5">
-                    {STRIPE_LINKS.map(({ label, url }) => (
-                      <div
-                        key={label}
-                        className="flex items-center text-xs select-none"
-                      >
-                        <span
-                          onClick={(e) => { e.stopPropagation(); window.open(url, '_blank'); }}
-                          className="group/link inline-flex items-center gap-1 cursor-pointer"
-                        >
-                          <span className="text-muted-foreground">→</span>
-                          <span className="text-syntax-green">{label}</span>
-                          <span className="inline-flex items-center text-muted-foreground group-hover/link:text-foreground transition-colors duration-200">
-                            <span className="max-w-0 opacity-0 group-hover/link:max-w-[150px] group-hover/link:opacity-100 transition-all duration-300 overflow-hidden whitespace-nowrap inline-flex items-center">
-                              <span className="text-muted-foreground mr-1">{'>'}</span>
-                              <span className="text-muted-foreground">new_tab(</span><ExternalLink className="w-3 h-3 text-syntax-amber" style={{ margin: 0, padding: 0, display: 'inline-block', verticalAlign: 'middle' }} /><span className="text-muted-foreground">)</span>
-                            </span>
                           </span>
                         </span>
                       </div>
