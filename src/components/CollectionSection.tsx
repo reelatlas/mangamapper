@@ -211,7 +211,8 @@ export const CollectionSection = ({ anime }: CollectionSectionProps) => {
     if (!option) return;
     setShowInlineNewReader(false);
     const updated = [...editReaderAssignments];
-    updated[index] = { ...updated[index], readerName: option.name, readerUrl: option.url, seriesUrl: option.url.endsWith('/') ? option.url : option.url + '/', suffix: '', userModified: true };
+    const baseUrl = option.url?.trim() ? (option.url.trim().endsWith('/') ? option.url.trim() : option.url.trim() + '/') : '';
+    updated[index] = { ...updated[index], readerName: option.name, readerUrl: option.url, seriesUrl: baseUrl, suffix: '', userModified: true };
     setEditReaderAssignments(updated);
   };
 
