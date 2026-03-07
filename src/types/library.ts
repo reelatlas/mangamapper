@@ -39,5 +39,5 @@ export interface ReaderAssignment {
 }
 
 export const getReadersForAnime = (animeId: string, readerSites: ReaderSite[]): ReaderSite[] => {
-  return readerSites.filter(site => site.anime_id === animeId && site.series_url);
+  return readerSites.filter(site => site.anime_id === animeId);
 };
