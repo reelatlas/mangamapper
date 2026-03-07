@@ -148,7 +148,7 @@ const About = () => {
                 </li>
                 <li className="flex gap-2">
                   <span className="text-muted-foreground shrink-0">→</span>
-                  <span>reader sites change URLs, mirror links shift, disappear, or get shut down, no easy way to migrate links and bookmarks</span>
+                  <span>reader sites change URLs, mirror links shift, completely disappear, or get shut down, no easy way to migrate links and bookmarks</span>
                 </li>
               </ul>
             )}
