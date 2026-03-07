@@ -430,11 +430,15 @@ export const LibraryGroupedView = ({ userId, readerSites, progress, fetchReaderS
                 ) : (
                   <div className="absolute inset-0 bg-background/90 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center p-3 z-10">
                     <div className="flex items-center gap-1 px-3">
-                      {group.url && (
+                      {group.url ? (
                         <Button variant="ghost" size="sm" asChild className="font-mono text-xs gap-1" onClick={e => e.stopPropagation()}>
                           <a href={group.url} target="_blank" rel="noopener noreferrer">
                             <Glasses className="w-3 h-3" />open_reader<ExternalLink className="w-3 h-3" />
                           </a>
+                        </Button>
+                      ) : (
+                        <Button variant="ghost" size="sm" className="font-mono text-xs gap-1 text-muted-foreground hover:bg-muted/50 hover:text-muted-foreground" onClick={e => e.stopPropagation()}>
+                          <Glasses className="w-3 h-3" />reader_url(null)
                         </Button>
                       )}
                     </div>
