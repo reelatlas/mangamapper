@@ -52,7 +52,7 @@ const About = () => {
         </div>
 
         {/* Section navigation */}
-        <nav className="flex flex-wrap gap-x-4 gap-y-1.5 mb-8 text-xs text-muted-foreground">
+        <nav className="sticky top-0 z-10 bg-background/95 backdrop-blur-sm border-b border-dashed border-border/50 -mx-5 px-5 py-3 flex flex-wrap gap-x-4 gap-y-1.5 text-xs text-muted-foreground">
           {[
             { id: 'welcome', label: 'welcome' },
             { id: 'features', label: 'features' },
@@ -66,8 +66,9 @@ const About = () => {
               {i > 0 && <span className="text-muted-foreground/40">/</span>}
               <button
                 onClick={() => document.getElementById(item.id)?.scrollIntoView({ behavior: 'smooth', block: 'start' })}
-                className="hover:text-foreground transition-colors duration-200"
+                className={`transition-colors duration-200 ${activeSection === item.id ? 'text-foreground' : 'hover:text-foreground'}`}
               >
+                {activeSection === item.id && <span className="text-syntax-cyan">{'> '}</span>}
                 {item.label}
               </button>
             </span>
