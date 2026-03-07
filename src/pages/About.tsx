@@ -1,7 +1,8 @@
 import { useState } from 'react';
 import { Header } from '@/components/Header';
-import { Fingerprint, Shell, Snail, Cloud, Zap, Target, Goal, Sprout, TreePine, Bot, Rocket, Heart, Bird, SunDim, Rainbow, Copy, Check, ChevronRight, LucideIcon } from 'lucide-react';
+import { Fingerprint, Shell, Snail, Cloud, Zap, Target, Goal, Sprout, TreePine, Bot, Rocket, Heart, Bird, SunDim, Rainbow, Copy, Check, LucideIcon } from 'lucide-react';
 import { Collapsible, CollapsibleTrigger, CollapsibleContent } from '@/components/ui/collapsible';
+import { TripleArrow } from '@/components/TripleArrow';
 
 const SectionHeader = ({ icon: Icon, hoverIcon: HoverIcon, label }: { icon: LucideIcon; hoverIcon: LucideIcon; label: string }) => (
   <div className="group/header flex items-center gap-2 mb-3 text-xs text-muted-foreground group-hover/card:text-foreground transition-colors duration-300 cursor-default select-none">
@@ -218,8 +219,7 @@ const About = () => {
             {/* Crypto wallets */}
             <Collapsible open={cryptoOpen} onOpenChange={setCryptoOpen} className="mb-4">
               <CollapsibleTrigger className="flex items-center gap-1.5 text-xs text-muted-foreground hover:text-foreground transition-colors duration-200 cursor-pointer select-none">
-                <span>{'>'}</span>
-                <ChevronRight className={`w-3 h-3 transition-transform duration-200 ${cryptoOpen ? 'rotate-90' : ''}`} />
+                <TripleArrow collapsed={!cryptoOpen} compact />
                 <span className="text-syntax-amber">crypto_wallets</span>
               </CollapsibleTrigger>
               <CollapsibleContent className="mt-2 ml-4 space-y-1.5">
