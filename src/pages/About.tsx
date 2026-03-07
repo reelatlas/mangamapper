@@ -40,6 +40,7 @@ const truncateAddress = (addr: string) =>
 
 const About = () => {
   const [copiedKey, setCopiedKey] = useState<string | null>(null);
+  const [stripeOpen, setStripeOpen] = useState(false);
   const [cryptoOpen, setCryptoOpen] = useState(false);
   const [openSection, setOpenSection] = useState<SectionKey | null>('welcome');
 
