@@ -18,6 +18,27 @@ const SectionHeader = ({ icon: Icon, hoverIcon: HoverIcon, label }: { icon: Luci
 
 const About = () => {
   const [copied, setCopied] = useState(false);
+  const [activeSection, setActiveSection] = useState('welcome');
+
+  const sectionIds = ['welcome', 'features', 'solve-for-pain', 'why-build', 'built-with', 'feedback', 'support'];
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        const visible = entries.filter(e => e.isIntersecting);
+        if (visible.length > 0) {
+          setActiveSection(visible[0].target.id);
+        }
+      },
+      { rootMargin: '-80px 0px -60% 0px', threshold: 0 }
+    );
+    sectionIds.forEach(id => {
+      const el = document.getElementById(id);
+      if (el) observer.observe(el);
+    });
+    return () => observer.disconnect();
+  }, []);
+
   return (
     <div className="min-h-screen bg-background font-mono">
       <Header />
