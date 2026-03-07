@@ -196,7 +196,7 @@ const About = () => {
             <div className="flex items-center text-xs select-none">
               <span
                 onClick={() => handleCopy('email', 'newestArc@gmail.com')}
-                className="group/copy inline-flex items-center gap-1 cursor-pointer"
+                className="group/copy inline-flex items-center gap-2 cursor-pointer"
               >
                 <span className="text-muted-foreground">{'>'}</span>
                 <span><span className="text-syntax-amber">send_to</span><span className="text-muted-foreground">(</span><span className="text-syntax-green">"newestArc@gmail.com"</span><span className="text-muted-foreground">)</span></span>
