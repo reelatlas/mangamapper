@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef, useCallback } from 'react';
 import { Header } from '@/components/Header';
 import { Fingerprint, Shell, Snail, Cloud, Zap, Target, Goal, Sprout, TreePine, Bot, Rocket, Heart, Bird, SunDim, Rainbow, Copy, Check, LucideIcon } from 'lucide-react';
 
@@ -19,10 +19,33 @@ const SectionHeader = ({ icon: Icon, hoverIcon: HoverIcon, label }: { icon: Luci
 const About = () => {
   const [copied, setCopied] = useState(false);
   const [activeSection, setActiveSection] = useState('welcome');
+  const [stickyOffset, setStickyOffset] = useState(112); // fallback ~7rem
+  const navRef = useRef<HTMLElement>(null);
 
   const sectionIds = ['welcome', 'features', 'solve-for-pain', 'why-build', 'built-with', 'feedback', 'support'];
 
+  const measureOffset = useCallback(() => {
+    const header = document.querySelector('header');
+    const headerH = header?.getBoundingClientRect().height ?? 56;
+    const navH = navRef.current?.getBoundingClientRect().height ?? 40;
+    setStickyOffset(headerH + navH + 16); // 16px extra gap
+  }, []);
+
   useEffect(() => {
+    measureOffset();
+    window.addEventListener('resize', measureOffset);
+    return () => window.removeEventListener('resize', measureOffset);
+  }, [measureOffset]);
+
+  const scrollToSection = useCallback((id: string) => {
+    const el = document.getElementById(id);
+    if (!el) return;
+    const top = el.getBoundingClientRect().top + window.scrollY - stickyOffset;
+    window.scrollTo({ top, behavior: 'smooth' });
+  }, [stickyOffset]);
+
+  useEffect(() => {
+    const topMargin = stickyOffset + 20;
     const observer = new IntersectionObserver(
       (entries) => {
         const visible = entries.filter(e => e.isIntersecting);
@@ -30,14 +53,14 @@ const About = () => {
           setActiveSection(visible[0].target.id);
         }
       },
-      { rootMargin: '-80px 0px -60% 0px', threshold: 0 }
+      { rootMargin: `-${topMargin}px 0px -60% 0px`, threshold: 0 }
     );
     sectionIds.forEach(id => {
       const el = document.getElementById(id);
       if (el) observer.observe(el);
     });
     return () => observer.disconnect();
-  }, []);
+  }, [stickyOffset]);
 
   return (
     <div className="min-h-screen bg-background font-mono">
@@ -52,7 +75,7 @@ const About = () => {
         </div>
 
         {/* Section navigation */}
-        <nav className="sticky top-14 z-10 bg-background/95 backdrop-blur-sm border-b border-dashed border-border/50 -mx-5 px-5 py-3 flex flex-wrap gap-x-4 gap-y-1.5 text-xs text-muted-foreground">
+        <nav ref={navRef} className="sticky top-14 z-10 bg-background/95 backdrop-blur-sm border-b border-dashed border-border/50 -mx-5 px-5 py-3 flex flex-wrap gap-x-4 gap-y-1.5 text-xs text-muted-foreground">
           {[
             { id: 'welcome', label: 'welcome' },
             { id: 'features', label: 'features' },
@@ -65,7 +88,7 @@ const About = () => {
             <span key={item.id} className="flex items-center gap-1.5">
               {i > 0 && <span className="text-muted-foreground/40">/</span>}
               <button
-                onClick={() => document.getElementById(item.id)?.scrollIntoView({ behavior: 'smooth', block: 'start' })}
+                onClick={() => scrollToSection(item.id)}
                 className={`transition-colors duration-200 ${activeSection === item.id ? 'text-foreground' : 'hover:text-foreground'}`}
               >
                 {activeSection === item.id && <span className="text-syntax-cyan">{'> '}</span>}
@@ -77,7 +100,7 @@ const About = () => {
 
         <div className="grid gap-6">
           {/* // welcome */}
-          <section id="welcome" className="group/card border border-transparent border-dashed hover:border-border p-5 transition-colors duration-300 scroll-mt-28">
+          <section id="welcome" className="group/card border border-transparent border-dashed hover:border-border p-5 transition-colors duration-300" style={{ scrollMarginTop: `${stickyOffset}px` }}>
             <SectionHeader icon={Shell} hoverIcon={Snail} label="welcome" />
             <p className="text-sm text-foreground/80 leading-relaxed mb-4">
               welcome <span className="text-syntax-purple">traveler</span>, your anime ended
@@ -120,7 +143,7 @@ const About = () => {
           </section>
 
           {/* // features */}
-          <section id="features" className="group/card border border-transparent border-dashed hover:border-border p-5 transition-colors duration-300 scroll-mt-28">
+          <section id="features" className="group/card border border-transparent border-dashed hover:border-border p-5 transition-colors duration-300" style={{ scrollMarginTop: `${stickyOffset}px` }}>
             <SectionHeader icon={Cloud} hoverIcon={Zap} label="features" />
             <ul className="space-y-1.5 text-sm text-foreground/70">
               <li className="flex gap-2">
@@ -143,7 +166,7 @@ const About = () => {
           </section>
 
           {/* // pain_points_solved */}
-          <section id="solve-for-pain" className="group/card border border-transparent border-dashed hover:border-border p-5 transition-colors duration-300 scroll-mt-28">
+          <section id="solve-for-pain" className="group/card border border-transparent border-dashed hover:border-border p-5 transition-colors duration-300" style={{ scrollMarginTop: `${stickyOffset}px` }}>
             <SectionHeader icon={Target} hoverIcon={Goal} label="solve_for(pain)" />
             <ul className="space-y-2.5 text-sm text-foreground/70">
               <li className="flex gap-2">
@@ -162,7 +185,7 @@ const About = () => {
           </section>
 
           {/* // why_build */}
-          <section id="why-build" className="group/card border border-transparent border-dashed hover:border-border p-5 transition-colors duration-300 scroll-mt-28">
+          <section id="why-build" className="group/card border border-transparent border-dashed hover:border-border p-5 transition-colors duration-300" style={{ scrollMarginTop: `${stickyOffset}px` }}>
             <SectionHeader icon={SunDim} hoverIcon={Rainbow} label="why_build" />
             <ul className="space-y-2.5 text-sm text-foreground/70">
               <li className="flex gap-2">
@@ -181,7 +204,7 @@ const About = () => {
           </section>
 
           {/* // built_with */}
-          <section id="built-with" className="group/card border border-transparent border-dashed hover:border-border p-5 transition-colors duration-300 scroll-mt-28">
+          <section id="built-with" className="group/card border border-transparent border-dashed hover:border-border p-5 transition-colors duration-300" style={{ scrollMarginTop: `${stickyOffset}px` }}>
             <SectionHeader icon={Bot} hoverIcon={Rocket} label="built_with" />
             <ul className="space-y-1.5 text-xs text-muted-foreground">
               <li className="flex gap-2">
@@ -208,7 +231,7 @@ const About = () => {
           </section>
 
           {/* // feedback */}
-          <section id="feedback" className="group/card border border-transparent border-dashed hover:border-border p-5 transition-colors duration-300 scroll-mt-28">
+          <section id="feedback" className="group/card border border-transparent border-dashed hover:border-border p-5 transition-colors duration-300" style={{ scrollMarginTop: `${stickyOffset}px` }}>
             <SectionHeader icon={Sprout} hoverIcon={TreePine} label="feedback" />
             <ul className="space-y-1.5 text-sm text-foreground/70 mb-4">
               <li className="flex gap-2">
@@ -237,7 +260,7 @@ const About = () => {
           </section>
 
           {/* // support */}
-          <section id="support" className="group/card border border-transparent border-dashed hover:border-border p-5 transition-colors duration-300 scroll-mt-28">
+          <section id="support" className="group/card border border-transparent border-dashed hover:border-border p-5 transition-colors duration-300" style={{ scrollMarginTop: `${stickyOffset}px` }}>
             <SectionHeader icon={Bird} hoverIcon={Heart} label="support" />
             <p className="text-sm text-foreground/70 mb-3">
               $$$ for <span className="text-syntax-amber">sushi</span>, <span className="text-syntax-amber">ai tokens</span>, <span className="text-syntax-amber">api credits</span>, <span className="text-syntax-amber">hosting</span>
