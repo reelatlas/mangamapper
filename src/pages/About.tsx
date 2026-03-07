@@ -195,22 +195,24 @@ const About = () => {
             </ul>
             <div
               onClick={() => handleCopy('email', 'newestArc@gmail.com')}
-              className="group/copy flex items-center gap-2 text-xs cursor-pointer select-none"
+              className="flex items-center gap-2 text-xs cursor-pointer select-none"
             >
-              <span className="text-muted-foreground">{'>'}</span>
-              <span><span className="text-syntax-amber">send_to</span><span className="text-muted-foreground">(</span><span className="text-syntax-green">"newestArc@gmail.com"</span><span className="text-muted-foreground">)</span></span>
-              <div className="ml-1 flex items-center gap-1 text-muted-foreground group-hover/copy:text-foreground transition-colors duration-200">
-                {copiedKey === 'email' ? (
-                  <Check className="w-3 h-3 text-syntax-green" />
-                ) : (
-                  <>
-                    <Copy className="w-3 h-3" />
-                    <span className="max-w-0 opacity-0 group-hover/copy:max-w-[100px] group-hover/copy:opacity-100 transition-all duration-300 overflow-hidden whitespace-nowrap text-muted-foreground">
-                      copy(<span className="text-syntax-amber">email</span>)
-                    </span>
-                  </>
-                )}
-              </div>
+              <span className="group/copy inline-flex items-center gap-1">
+                <span className="text-muted-foreground">{'>'}</span>
+                <span><span className="text-syntax-amber">send_to</span><span className="text-muted-foreground">(</span><span className="text-syntax-green">"newestArc@gmail.com"</span><span className="text-muted-foreground">)</span></span>
+                <span className="ml-1 inline-flex items-center gap-1 text-muted-foreground group-hover/copy:text-foreground transition-colors duration-200">
+                  {copiedKey === 'email' ? (
+                    <Check className="w-3 h-3 text-syntax-green" />
+                  ) : (
+                    <>
+                      <Copy className="w-3 h-3" />
+                      <span className="max-w-0 opacity-0 group-hover/copy:max-w-[100px] group-hover/copy:opacity-100 transition-all duration-300 overflow-hidden whitespace-nowrap text-muted-foreground">
+                        copy(<span className="text-syntax-amber">email</span>)
+                      </span>
+                    </>
+                  )}
+                </span>
+              </span>
             </div>
           </section>
 
