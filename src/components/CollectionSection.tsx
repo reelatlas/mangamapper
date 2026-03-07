@@ -262,6 +262,15 @@ export const CollectionSection = ({ anime }: CollectionSectionProps) => {
         await supabase.from('manga_reader_sites').update({ series_url: assignment.seriesUrl.trim() || null }).eq('id', assignment.existingSiteId);
         idsToKeep.push(assignment.existingSiteId);
       } else {
+        // Prevent duplicate: skip if this reader is already linked to this anime
+        const isDuplicate = linkedReaders.some(
+          r => r.name.toLowerCase() === assignment.readerName.toLowerCase() && r.anime_id === anime.id
+        );
+        if (isDuplicate) {
+          toast.error(`${assignment.readerName} is already assigned to this series`);
+          continue;
+        }
+
         const { data } = await supabase.from('manga_reader_sites').insert({
           user_id: user.id,
           name: assignment.readerName,
@@ -279,9 +288,9 @@ export const CollectionSection = ({ anime }: CollectionSectionProps) => {
     }
 
     toast.success('Readers updated');
+    await fetchData();
     setSaving(false);
     setIsEditing(false);
-    fetchData();
   };
 
   // --- Not logged in ---
