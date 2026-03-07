@@ -212,7 +212,10 @@ export const CollectionSection = ({ anime }: CollectionSectionProps) => {
     setShowInlineNewReader(false);
     const updated = [...editReaderAssignments];
     const baseUrl = option.url?.trim() ? (option.url.trim().endsWith('/') ? option.url.trim() : option.url.trim() + '/') : '';
-    updated[index] = { ...updated[index], readerName: option.name, readerUrl: option.url, seriesUrl: baseUrl, suffix: '', userModified: true };
+    // Clear existingSiteId when switching to a different reader so save treats it as a new insert
+    const prev = updated[index];
+    const keepId = prev.existingSiteId && prev.readerName.trim().toLowerCase() === option.name.trim().toLowerCase() ? prev.existingSiteId : undefined;
+    updated[index] = { ...updated[index], readerName: option.name, readerUrl: option.url, seriesUrl: baseUrl, suffix: '', userModified: true, existingSiteId: keepId };
     setEditReaderAssignments(updated);
   };
 
@@ -294,7 +297,7 @@ export const CollectionSection = ({ anime }: CollectionSectionProps) => {
       const normalizedName = norm(assignment.readerName);
 
       if (assignment.existingSiteId) {
-        await supabase.from('manga_reader_sites').update({ series_url: assignment.seriesUrl.trim() || null }).eq('id', assignment.existingSiteId);
+        await supabase.from('manga_reader_sites').update({ name: assignment.readerName, url: assignment.readerUrl, series_url: assignment.seriesUrl.trim() || null }).eq('id', assignment.existingSiteId);
         idsToKeep.push(assignment.existingSiteId);
       } else {
         // Block duplicates against DB and within same batch

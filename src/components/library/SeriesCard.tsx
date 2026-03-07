@@ -115,6 +115,8 @@ export const SeriesCard = ({ item, animeId, readerSites, onRemove, userId, onSav
     if (!option) return;
     setShowInlineNewReader(false);
     const updated = [...editReaderAssignments];
+    const prev = updated[index];
+    const keepId = prev.existingSiteId && prev.readerName.trim().toLowerCase() === option.name.trim().toLowerCase() ? prev.existingSiteId : undefined;
     updated[index] = {
       ...updated[index],
       readerName: option.name,
@@ -122,6 +124,7 @@ export const SeriesCard = ({ item, animeId, readerSites, onRemove, userId, onSav
       seriesUrl: option.url ? (option.url.endsWith('/') ? option.url : option.url + '/') : '',
       suffix: '',
       userModified: true,
+      existingSiteId: keepId,
     };
     setEditReaderAssignments(updated);
   };
@@ -203,6 +206,8 @@ export const SeriesCard = ({ item, animeId, readerSites, onRemove, userId, onSav
       if (assignment.existingSiteId) {
         // Update existing
         await supabase.from('manga_reader_sites').update({
+          name: assignment.readerName,
+          url: assignment.readerUrl,
           series_url: assignment.seriesUrl.trim() || null,
         }).eq('id', assignment.existingSiteId);
         idsToKeep.push(assignment.existingSiteId);
