@@ -194,14 +194,14 @@ const About = () => {
               </li>
             </ul>
             <div className="flex items-center text-xs">
-              <span className="text-muted-foreground">{'>'} </span>
+              <span className="text-muted-foreground mr-1">{'>'}</span>
               <span className="text-syntax-amber">send_to</span>
               <span className="text-muted-foreground">(</span>
               <span className="text-syntax-green">"newestArc@gmail.com"</span>
               <span className="text-muted-foreground">)</span>
               <button
                 onClick={() => handleCopy('email', 'newestArc@gmail.com')}
-                className="group/copy ml-1 flex items-center gap-1 text-muted-foreground hover:text-foreground transition-colors duration-200"
+                className="group/copy ml-2 flex items-center gap-1 text-muted-foreground hover:text-foreground transition-colors duration-200"
               >
                 {copiedKey === 'email' ? (
                   <Check className="w-3 h-3 text-syntax-green" />
