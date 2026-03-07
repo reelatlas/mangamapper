@@ -215,11 +215,39 @@ const About = () => {
           {/* // support */}
           <section className="group/card border border-transparent border-dashed hover:border-border p-5 transition-colors duration-300">
             <SectionHeader icon={Bird} hoverIcon={Heart} label="support" />
-            <p className="text-sm text-foreground/70 mb-3">
+            <p className="text-sm text-foreground/70 mb-4">
               $$$ for <span className="text-syntax-amber">sushi</span>, <span className="text-syntax-amber">gundams</span>, <span className="text-syntax-amber">s-tier relics</span>, <span className="text-syntax-amber">ai tokens</span>, <span className="text-syntax-amber">api credits</span>, <span className="text-syntax-amber">hosting</span>
             </p>
+
+            {/* Crypto wallets */}
+            <Collapsible open={cryptoOpen} onOpenChange={setCryptoOpen} className="mb-4">
+              <CollapsibleTrigger className="flex items-center gap-1.5 text-xs text-muted-foreground hover:text-foreground transition-colors duration-200 cursor-pointer select-none">
+                <span>{'>'}</span>
+                <ChevronRight className={`w-3 h-3 transition-transform duration-200 ${cryptoOpen ? 'rotate-90' : ''}`} />
+                <span className="text-syntax-amber">crypto_wallets</span>
+              </CollapsibleTrigger>
+              <CollapsibleContent className="mt-2 ml-4 space-y-1.5">
+                {CRYPTO_WALLETS.map(({ ticker, address }) => (
+                  <div key={ticker} className="flex items-center gap-2 text-xs">
+                    <span className="text-muted-foreground">→</span>
+                    <span className="text-syntax-purple w-10">{ticker}</span>
+                    <span className="text-syntax-green font-mono">{truncateAddress(address)}</span>
+                    <button
+                      onClick={() => handleCopy(ticker, address)}
+                      className="ml-1 text-muted-foreground hover:text-foreground transition-colors duration-200"
+                      title={`Copy ${ticker} address`}
+                    >
+                      {copiedKey === ticker ? <Check className="w-3 h-3 text-syntax-green" /> : <Copy className="w-3 h-3" />}
+                    </button>
+                  </div>
+                ))}
+              </CollapsibleContent>
+            </Collapsible>
+
+            {/* Stripe placeholder */}
             <p className="text-xs text-muted-foreground">
-              <span className="text-syntax-purple">donations</span>: <span className="text-syntax-amber">coming_soon</span>
+              <span>{'>'} </span>
+              <span className="text-syntax-purple">stripe_donate</span>: <span className="text-syntax-amber">coming_soon</span>
               <span className="text-foreground/30"> // payment link TBD</span>
             </p>
           </section>
