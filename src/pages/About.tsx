@@ -30,7 +30,7 @@ const About = () => {
 
         <div className="grid gap-6">
           {/* // welcome */}
-          <section className="group/card border border-dashed p-5">
+          <section className="group/card border border-transparent border-dashed hover:border-border p-5 transition-colors duration-300">
             <SectionHeader icon={Fingerprint} label="welcome" />
             <p className="text-sm text-foreground/80 leading-relaxed mb-4">
               welcome <span className="text-syntax-purple">traveler</span>, your anime ended
@@ -73,7 +73,7 @@ const About = () => {
           </section>
 
           {/* // features */}
-          <section className="group/card border border-dashed p-5">
+          <section className="group/card border border-transparent border-dashed hover:border-border p-5 transition-colors duration-300">
             <SectionHeader icon={Zap} label="features" />
             <ul className="space-y-1.5 text-sm text-foreground/70">
               <li className="flex gap-2">
@@ -96,7 +96,7 @@ const About = () => {
           </section>
 
           {/* // pain_points_solved */}
-          <section className="group/card border border-dashed p-5">
+          <section className="group/card border border-transparent border-dashed hover:border-border p-5 transition-colors duration-300">
             <SectionHeader icon={Target} label="pain_points_solved" />
             <ul className="space-y-2.5 text-sm text-foreground/70">
               <li className="flex gap-2">
@@ -115,7 +115,7 @@ const About = () => {
           </section>
 
           {/* // why_build */}
-          <section className="group/card border border-dashed p-5">
+          <section className="group/card border border-transparent border-dashed hover:border-border p-5 transition-colors duration-300">
             <SectionHeader icon={HelpCircle} label="why_build" />
             <ul className="space-y-2.5 text-sm text-foreground/70">
               <li className="flex gap-2">
@@ -134,7 +134,7 @@ const About = () => {
           </section>
 
           {/* // built_with */}
-          <section className="group/card border border-dashed p-5">
+          <section className="group/card border border-transparent border-dashed hover:border-border p-5 transition-colors duration-300">
             <SectionHeader icon={Code} label="built_with" />
             <div className="text-xs text-muted-foreground space-y-1">
               <p><span className="text-syntax-purple">stack</span>: <span className="text-syntax-green">"React + TypeScript + Tailwind, aniDB API"</span></p>
@@ -143,7 +143,7 @@ const About = () => {
           </section>
 
           {/* // feedback */}
-          <section className="group/card border border-dashed p-5">
+          <section className="group/card border border-transparent border-dashed hover:border-border p-5 transition-colors duration-300">
             <SectionHeader icon={MessageSquare} label="feedback" />
             <ul className="space-y-1.5 text-sm text-foreground/70 mb-4">
               <li className="flex gap-2">
@@ -161,7 +161,7 @@ const About = () => {
           </section>
 
           {/* // support */}
-          <section className="group/card border border-dashed p-5">
+          <section className="group/card border border-transparent border-dashed hover:border-border p-5 transition-colors duration-300">
             <SectionHeader icon={Heart} label="support" />
             <p className="text-sm text-foreground/70 mb-3">
               support goes toward <span className="text-syntax-amber">AI tokens</span>, <span className="text-syntax-amber">API credits</span>, <span className="text-syntax-amber">hosting</span>, <span className="text-syntax-amber">sushi</span>
