@@ -7,11 +7,11 @@ import { TripleArrow } from '@/components/TripleArrow';
 type SectionKey = 'welcome' | 'features' | 'pain' | 'why' | 'built' | 'feedback' | 'support';
 
 const SectionHeader = ({ icon: Icon, hoverIcon: HoverIcon, label, isOpen }: { icon: LucideIcon; hoverIcon: LucideIcon; label: string; isOpen: boolean }) => (
-  <div className="group/header flex items-center gap-2 text-xs text-muted-foreground group-hover/card:text-foreground transition-colors duration-300 select-none">
+  <div className={`group/header flex items-center gap-2 text-xs text-muted-foreground group-hover/card:text-foreground transition-colors duration-300 select-none ${isOpen ? 'text-foreground' : ''}`}>
     <Icon className="w-3.5 h-3.5" />
-    <span className="max-w-0 opacity-0 group-hover/card:max-w-[20px] group-hover/card:opacity-100 transition-all duration-500 ease-out overflow-hidden whitespace-nowrap">//</span>
+    <span className={`transition-all duration-500 ease-out overflow-hidden whitespace-nowrap ${isOpen ? 'max-w-[20px] opacity-100' : 'max-w-0 opacity-0 group-hover/card:max-w-[20px] group-hover/card:opacity-100'}`}>//</span>
     <span>{label}</span>
-    <div className="flex items-center gap-1.5 overflow-hidden max-w-0 opacity-0 group-hover/card:max-w-[120px] group-hover/card:opacity-100 transition-all duration-500 ease-out">
+    <div className={`flex items-center gap-1.5 overflow-hidden transition-all duration-500 ease-out ${isOpen ? 'max-w-[120px] opacity-100' : 'max-w-0 opacity-0 group-hover/card:max-w-[120px] group-hover/card:opacity-100'}`}>
       <span className="text-muted-foreground/60">{'>'}</span>
       <HoverIcon className="w-3 h-3 text-syntax-cyan" />
       <HoverIcon className="w-3 h-3 text-syntax-purple" />
@@ -62,7 +62,7 @@ const About = () => {
 
         <div className="grid gap-0">
           {/* // welcome */}
-          <section onClick={() => toggleSection('welcome')} className="group/card cursor-pointer border border-transparent border-dashed hover:border-border p-5 transition-colors duration-300">
+          <section onClick={() => toggleSection('welcome')} className={`group/card cursor-pointer border border-dashed hover:border-border p-5 transition-colors duration-300 ${openSection === 'welcome' ? 'border-border' : 'border-transparent'}`}>
             <SectionHeader icon={Shell} hoverIcon={Snail} label="welcome" isOpen={openSection === 'welcome'} />
             {openSection === 'welcome' && (
               <div className="mt-3">
@@ -109,7 +109,7 @@ const About = () => {
           </section>
 
           {/* // features */}
-          <section onClick={() => toggleSection('features')} className="group/card cursor-pointer border border-transparent border-dashed hover:border-border p-5 transition-colors duration-300">
+          <section onClick={() => toggleSection('features')} className={`group/card cursor-pointer border border-dashed hover:border-border p-5 transition-colors duration-300 ${openSection === 'features' ? 'border-border' : 'border-transparent'}`}>
             <SectionHeader icon={Cloud} hoverIcon={Zap} label="features" isOpen={openSection === 'features'} />
             {openSection === 'features' && (
               <ul className="mt-3 space-y-1.5 text-sm text-foreground/70">
@@ -134,7 +134,7 @@ const About = () => {
           </section>
 
           {/* // pain_points_solved */}
-          <section onClick={() => toggleSection('pain')} className="group/card cursor-pointer border border-transparent border-dashed hover:border-border p-5 transition-colors duration-300">
+          <section onClick={() => toggleSection('pain')} className={`group/card cursor-pointer border border-dashed hover:border-border p-5 transition-colors duration-300 ${openSection === 'pain' ? 'border-border' : 'border-transparent'}`}>
             <SectionHeader icon={Target} hoverIcon={Goal} label="solve_for(pain)" isOpen={openSection === 'pain'} />
             {openSection === 'pain' && (
               <ul className="mt-3 space-y-2.5 text-sm text-foreground/70">
@@ -155,7 +155,7 @@ const About = () => {
           </section>
 
           {/* // why_build */}
-          <section onClick={() => toggleSection('why')} className="group/card cursor-pointer border border-transparent border-dashed hover:border-border p-5 transition-colors duration-300">
+          <section onClick={() => toggleSection('why')} className={`group/card cursor-pointer border border-dashed hover:border-border p-5 transition-colors duration-300 ${openSection === 'why' ? 'border-border' : 'border-transparent'}`}>
             <SectionHeader icon={SunDim} hoverIcon={Rainbow} label="why_build" isOpen={openSection === 'why'} />
             {openSection === 'why' && (
               <ul className="mt-3 space-y-2.5 text-sm text-foreground/70">
@@ -176,7 +176,7 @@ const About = () => {
           </section>
 
           {/* // built_with */}
-          <section onClick={() => toggleSection('built')} className="group/card cursor-pointer border border-transparent border-dashed hover:border-border p-5 transition-colors duration-300">
+          <section onClick={() => toggleSection('built')} className={`group/card cursor-pointer border border-dashed hover:border-border p-5 transition-colors duration-300 ${openSection === 'built' ? 'border-border' : 'border-transparent'}`}>
             <SectionHeader icon={Bot} hoverIcon={Rocket} label="built_with" isOpen={openSection === 'built'} />
             {openSection === 'built' && (
               <ul className="mt-3 space-y-1.5 text-xs text-muted-foreground">
@@ -205,7 +205,7 @@ const About = () => {
           </section>
 
           {/* // feedback */}
-          <section onClick={() => toggleSection('feedback')} className="group/card cursor-pointer border border-transparent border-dashed hover:border-border p-5 transition-colors duration-300">
+          <section onClick={() => toggleSection('feedback')} className={`group/card cursor-pointer border border-dashed hover:border-border p-5 transition-colors duration-300 ${openSection === 'feedback' ? 'border-border' : 'border-transparent'}`}>
             <SectionHeader icon={Sprout} hoverIcon={TreePine} label="feedback" isOpen={openSection === 'feedback'} />
             {openSection === 'feedback' && (
               <div className="mt-3">
@@ -241,7 +241,7 @@ const About = () => {
           </section>
 
           {/* // support */}
-          <section onClick={() => toggleSection('support')} className="group/card cursor-pointer border border-transparent border-dashed hover:border-border p-5 transition-colors duration-300">
+          <section onClick={() => toggleSection('support')} className={`group/card cursor-pointer border border-dashed hover:border-border p-5 transition-colors duration-300 ${openSection === 'support' ? 'border-border' : 'border-transparent'}`}>
             <SectionHeader icon={Bird} hoverIcon={Heart} label="support" isOpen={openSection === 'support'} />
             {openSection === 'support' && (
               <div className="mt-3">
