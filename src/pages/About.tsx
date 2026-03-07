@@ -84,11 +84,11 @@ const About = () => {
               </li>
               <li className="flex gap-2">
                 <span className="text-muted-foreground">→</span>
-                <span>track your favorite series in library</span>
+                <span>track your favorite series in library <span className="text-muted-foreground">[requires {'>'} sign_in]</span></span>
               </li>
               <li className="flex gap-2">
                 <span className="text-muted-foreground">→</span>
-                <span>save <span className="text-syntax-purple">last_watched</span> and <span className="text-syntax-purple">last_read</span> progress</span>
+                <span>save last_watched and last_read progress</span>
               </li>
               <li className="flex gap-2">
                 <span className="text-muted-foreground">→</span>
