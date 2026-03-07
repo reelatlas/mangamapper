@@ -489,7 +489,7 @@ export const CollectionSection = ({ anime }: CollectionSectionProps) => {
                 {togglingLibrary ? '...' : inLibrary ? 'in_library [✓]' : 'in_library [ ]'}
               </span>
               <span
-                className={`hidden group-hover/lib:inline ml-1 cursor-pointer ${inLibrary ? 'text-destructive' : 'text-primary'}`}
+                className={`hidden group-hover/lib:inline ml-3 cursor-pointer ${inLibrary ? 'text-destructive' : 'text-primary'}`}
                 onClick={inLibrary ? () => setConfirmRemove(true) : toggleLibrary}
               >
                 {'>'} {inLibrary ? 'remove_from(library)' : 'add_to(library)'}
