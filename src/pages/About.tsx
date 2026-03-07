@@ -19,6 +19,7 @@ const SectionHeader = ({ icon: Icon, hoverIcon: HoverIcon, label }: { icon: Luci
 const About = () => {
   const [copied, setCopied] = useState(false);
   const [activeSection, setActiveSection] = useState('welcome');
+  const [hoveredSection, setHoveredSection] = useState<string | null>(null);
   const [stickyOffset, setStickyOffset] = useState(112); // fallback ~7rem
   const navRef = useRef<HTMLElement>(null);
 
@@ -37,6 +38,7 @@ const About = () => {
   }, [measureOffset]);
 
   const scrollToSection = useCallback((id: string) => {
+    setActiveSection(id);
     const el = document.getElementById(id);
     if (!el) return;
     const top = el.getBoundingClientRect().top + window.scrollY - stickyOffset;
@@ -47,7 +49,9 @@ const About = () => {
     const topMargin = stickyOffset + 20;
     const observer = new IntersectionObserver(
       (entries) => {
-        const visible = entries.filter(e => e.isIntersecting);
+        const visible = entries
+          .filter(e => e.isIntersecting)
+          .sort((a, b) => a.boundingClientRect.top - b.boundingClientRect.top);
         if (visible.length > 0) {
           setActiveSection(visible[0].target.id);
         }
@@ -88,7 +92,13 @@ const About = () => {
               {i > 0 && <span className="text-muted-foreground/40">/</span>}
               <button
                 onClick={() => scrollToSection(item.id)}
-                className={`transition-colors duration-200 ${activeSection === item.id ? 'text-foreground' : 'hover:text-foreground'}`}
+                className={`transition-colors duration-200 ${
+                  activeSection === item.id
+                    ? 'text-foreground'
+                    : hoveredSection === item.id
+                      ? 'text-syntax-cyan/70'
+                      : 'hover:text-foreground'
+                }`}
               >
                 {activeSection === item.id && <span className="text-syntax-cyan">{'> '}</span>}
                 {item.label}
@@ -99,7 +109,7 @@ const About = () => {
 
         <div className="grid gap-6 mt-6">
           {/* // welcome */}
-          <section id="welcome" className="group/card border border-transparent border-dashed hover:border-border p-5 transition-colors duration-300" style={{ scrollMarginTop: `${stickyOffset}px` }}>
+          <section id="welcome" onMouseEnter={() => setHoveredSection('welcome')} onMouseLeave={() => setHoveredSection(null)} className="group/card border border-transparent border-dashed hover:border-border p-5 transition-colors duration-300" style={{ scrollMarginTop: `${stickyOffset}px` }}>
             <SectionHeader icon={Shell} hoverIcon={Snail} label="welcome" />
             <p className="text-sm text-foreground/80 leading-relaxed mb-4">
               welcome <span className="text-syntax-purple">traveler</span>, your anime ended
@@ -142,7 +152,7 @@ const About = () => {
           </section>
 
           {/* // features */}
-          <section id="features" className="group/card border border-transparent border-dashed hover:border-border p-5 transition-colors duration-300" style={{ scrollMarginTop: `${stickyOffset}px` }}>
+          <section id="features" onMouseEnter={() => setHoveredSection('features')} onMouseLeave={() => setHoveredSection(null)} className="group/card border border-transparent border-dashed hover:border-border p-5 transition-colors duration-300" style={{ scrollMarginTop: `${stickyOffset}px` }}>
             <SectionHeader icon={Cloud} hoverIcon={Zap} label="features" />
             <ul className="space-y-1.5 text-sm text-foreground/70">
               <li className="flex gap-2">
@@ -165,7 +175,7 @@ const About = () => {
           </section>
 
           {/* // pain_points_solved */}
-          <section id="solve-for-pain" className="group/card border border-transparent border-dashed hover:border-border p-5 transition-colors duration-300" style={{ scrollMarginTop: `${stickyOffset}px` }}>
+          <section id="solve-for-pain" onMouseEnter={() => setHoveredSection('solve-for-pain')} onMouseLeave={() => setHoveredSection(null)} className="group/card border border-transparent border-dashed hover:border-border p-5 transition-colors duration-300" style={{ scrollMarginTop: `${stickyOffset}px` }}>
             <SectionHeader icon={Target} hoverIcon={Goal} label="solve_for(pain)" />
             <ul className="space-y-2.5 text-sm text-foreground/70">
               <li className="flex gap-2">
@@ -184,7 +194,7 @@ const About = () => {
           </section>
 
           {/* // why_build */}
-          <section id="why-build" className="group/card border border-transparent border-dashed hover:border-border p-5 transition-colors duration-300" style={{ scrollMarginTop: `${stickyOffset}px` }}>
+          <section id="why-build" onMouseEnter={() => setHoveredSection('why-build')} onMouseLeave={() => setHoveredSection(null)} className="group/card border border-transparent border-dashed hover:border-border p-5 transition-colors duration-300" style={{ scrollMarginTop: `${stickyOffset}px` }}>
             <SectionHeader icon={SunDim} hoverIcon={Rainbow} label="why_build" />
             <ul className="space-y-2.5 text-sm text-foreground/70">
               <li className="flex gap-2">
@@ -203,7 +213,7 @@ const About = () => {
           </section>
 
           {/* // built_with */}
-          <section id="built-with" className="group/card border border-transparent border-dashed hover:border-border p-5 transition-colors duration-300" style={{ scrollMarginTop: `${stickyOffset}px` }}>
+          <section id="built-with" onMouseEnter={() => setHoveredSection('built-with')} onMouseLeave={() => setHoveredSection(null)} className="group/card border border-transparent border-dashed hover:border-border p-5 transition-colors duration-300" style={{ scrollMarginTop: `${stickyOffset}px` }}>
             <SectionHeader icon={Bot} hoverIcon={Rocket} label="built_with" />
             <ul className="space-y-1.5 text-xs text-muted-foreground">
               <li className="flex gap-2">
@@ -230,7 +240,7 @@ const About = () => {
           </section>
 
           {/* // feedback */}
-          <section id="feedback" className="group/card border border-transparent border-dashed hover:border-border p-5 transition-colors duration-300" style={{ scrollMarginTop: `${stickyOffset}px` }}>
+          <section id="feedback" onMouseEnter={() => setHoveredSection('feedback')} onMouseLeave={() => setHoveredSection(null)} className="group/card border border-transparent border-dashed hover:border-border p-5 transition-colors duration-300" style={{ scrollMarginTop: `${stickyOffset}px` }}>
             <SectionHeader icon={Sprout} hoverIcon={TreePine} label="feedback" />
             <ul className="space-y-1.5 text-sm text-foreground/70 mb-4">
               <li className="flex gap-2">
@@ -259,7 +269,7 @@ const About = () => {
           </section>
 
           {/* // support */}
-          <section id="support" className="group/card border border-transparent border-dashed hover:border-border p-5 transition-colors duration-300" style={{ scrollMarginTop: `${stickyOffset}px` }}>
+          <section id="support" onMouseEnter={() => setHoveredSection('support')} onMouseLeave={() => setHoveredSection(null)} className="group/card border border-transparent border-dashed hover:border-border p-5 transition-colors duration-300" style={{ scrollMarginTop: `${stickyOffset}px` }}>
             <SectionHeader icon={Bird} hoverIcon={Heart} label="support" />
             <p className="text-sm text-foreground/70 mb-3">
               $$$ for <span className="text-syntax-amber">sushi</span>, <span className="text-syntax-amber">ai tokens</span>, <span className="text-syntax-amber">api credits</span>, <span className="text-syntax-amber">hosting</span>
