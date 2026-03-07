@@ -1,5 +1,6 @@
+import { useState } from 'react';
 import { Header } from '@/components/Header';
-import { Fingerprint, Shell, Snail, Cloud, Zap, Target, Goal, Sprout, TreeDeciduous, TreePine, Bot, Rocket, Heart, Bird, SunDim, Rainbow, LucideIcon } from 'lucide-react';
+import { Fingerprint, Shell, Snail, Cloud, Zap, Target, Goal, Sprout, TreePine, Bot, Rocket, Heart, Bird, SunDim, Rainbow, Copy, Check, LucideIcon } from 'lucide-react';
 
 const SectionHeader = ({ icon: Icon, hoverIcon: HoverIcon, label }: { icon: LucideIcon; hoverIcon: LucideIcon; label: string }) => (
   <div className="group/header flex items-center gap-2 mb-3 text-xs text-muted-foreground group-hover/card:text-foreground transition-colors duration-300 cursor-default select-none">
@@ -120,15 +121,15 @@ const About = () => {
             <ul className="space-y-2.5 text-sm text-foreground/70">
               <li className="flex gap-2">
                 <span className="text-muted-foreground shrink-0">→</span>
-                <span>remove the need for a notepad or browser bookmarks to track and manage my favorite anime/manga series</span>
+                <span>no more notepads and browser bookmarks to track my favorite anime/manga series</span>
               </li>
               <li className="flex gap-2">
                 <span className="text-muted-foreground shrink-0">→</span>
-                <span>a personal project to experiment with and learn AI coding, coding was not possible for me before</span>
+                <span>personal project to experiment with AI coding, coding was not possible for me before</span>
               </li>
               <li className="flex gap-2">
                 <span className="text-muted-foreground shrink-0">→</span>
-                <span>very niche, curious if any other will find it of use</span>
+                <span>very niche, will any one else find this useful?</span>
               </li>
             </ul>
           </section>
@@ -136,10 +137,16 @@ const About = () => {
           {/* // built_with */}
           <section className="group/card border border-transparent border-dashed hover:border-border p-5 transition-colors duration-300">
             <SectionHeader icon={Bot} hoverIcon={Rocket} label="built_with" />
-            <div className="text-xs text-muted-foreground space-y-1">
-              <p><span className="text-syntax-purple">stack</span>: <span className="text-syntax-green">"React + TypeScript + Tailwind, aniDB API"</span></p>
-              <p><span className="text-syntax-purple">tools</span>: <span className="text-syntax-green">"Lovable, Claude, Vercel, Supabase, VSCode, GitHub"</span></p>
-            </div>
+            <ul className="space-y-1.5 text-xs text-muted-foreground">
+              <li className="flex gap-2">
+                <span className="text-muted-foreground">→</span>
+                <span><span className="text-syntax-purple">stack</span>: <span className="text-syntax-green">"React + TypeScript + Tailwind, aniDB API"</span></span>
+              </li>
+              <li className="flex gap-2">
+                <span className="text-muted-foreground">→</span>
+                <span><span className="text-syntax-purple">tools</span>: <span className="text-syntax-green">"Lovable, Claude, Vercel, Supabase, VSCode, GitHub"</span></span>
+              </li>
+            </ul>
           </section>
 
           {/* // feedback */}
@@ -148,23 +155,34 @@ const About = () => {
             <ul className="space-y-1.5 text-sm text-foreground/70 mb-4">
               <li className="flex gap-2">
                 <span className="text-muted-foreground">→</span>
-                <span>feedback, suggestions, bug reporting, feature requests all welcome</span>
+                <span>feedback, suggestions, bug reports, feature requests welcome</span>
               </li>
             </ul>
-            <p className="text-xs">
+            <div className="flex items-center gap-2 text-xs">
               <span className="text-muted-foreground">{'>'} </span>
               <span className="text-syntax-amber">send_to</span>
               <span className="text-muted-foreground">(</span>
               <span className="text-syntax-green">"newestArc@gmail.com"</span>
               <span className="text-muted-foreground">)</span>
-            </p>
+              <button
+                onClick={() => {
+                  navigator.clipboard.writeText('newestArc@gmail.com');
+                  setCopied(true);
+                  setTimeout(() => setCopied(false), 2000);
+                }}
+                className="ml-1 text-muted-foreground hover:text-foreground transition-colors duration-200"
+                title="Copy email"
+              >
+                {copied ? <Check className="w-3 h-3 text-syntax-green" /> : <Copy className="w-3 h-3" />}
+              </button>
+            </div>
           </section>
 
           {/* // support */}
           <section className="group/card border border-transparent border-dashed hover:border-border p-5 transition-colors duration-300">
             <SectionHeader icon={Bird} hoverIcon={Heart} label="support" />
             <p className="text-sm text-foreground/70 mb-3">
-              support goes toward <span className="text-syntax-amber">AI tokens</span>, <span className="text-syntax-amber">API credits</span>, <span className="text-syntax-amber">hosting</span>, <span className="text-syntax-amber">sushi</span>
+              $$$ used for <span className="text-syntax-amber">sushi</span>, <span className="text-syntax-amber">ai tokens</span>, <span className="text-syntax-amber">api credits</span>, <span className="text-syntax-amber">hosting</span>
             </p>
             <p className="text-xs text-muted-foreground">
               <span className="text-syntax-purple">donations</span>: <span className="text-syntax-amber">coming_soon</span>
