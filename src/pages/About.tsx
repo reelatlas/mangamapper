@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Header } from '@/components/Header';
-import { Fingerprint, Shell, Snail, Cloud, Zap, Target, Goal, Sprout, TreePine, Bot, Rocket, Heart, Bird, SunDim, Rainbow, Copy, Check, LucideIcon } from 'lucide-react';
+import { Fingerprint, Shell, Snail, Cloud, Zap, Target, Goal, Sprout, TreePine, Bot, Rocket, Heart, Bird, SunDim, Rainbow, Copy, Check, ExternalLink, LucideIcon } from 'lucide-react';
 import { Collapsible, CollapsibleTrigger, CollapsibleContent } from '@/components/ui/collapsible';
 import { TripleArrow } from '@/components/TripleArrow';
 
