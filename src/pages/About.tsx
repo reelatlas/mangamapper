@@ -44,11 +44,11 @@ const About = () => {
               </li>
               <li className="flex gap-2">
                 <span className="text-muted-foreground">→</span>
-                <span>what if it never comes</span>
+                <span>what if it never comes?</span>
               </li>
               <li className="flex gap-2">
                 <span className="text-muted-foreground">→</span>
-                <span>the fabric of your being fades each waiting moment</span>
+                <span>the fabric of your being fades each waiting moment...</span>
               </li>
             </ul>
             <p className="text-sm text-foreground/80 leading-relaxed mb-3">
