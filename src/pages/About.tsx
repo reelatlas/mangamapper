@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Header } from '@/components/Header';
-import { Fingerprint, Shell, Snail, Cloud, Zap, Target, Goal, Sprout, TreePine, Bot, Rocket, Heart, Bird, SunDim, Rainbow, Copy, Check, LucideIcon } from 'lucide-react';
+import { Fingerprint, Shell, Snail, Cloud, Zap, Target, Goal, Sprout, TreePine, Bot, Rocket, Heart, Bird, SunDim, Rainbow, Copy, Check, ExternalLink, LucideIcon } from 'lucide-react';
 import { Collapsible, CollapsibleTrigger, CollapsibleContent } from '@/components/ui/collapsible';
 import { TripleArrow } from '@/components/TripleArrow';
 
@@ -30,11 +30,17 @@ const CRYPTO_WALLETS = [
   { ticker: 'xmr', address: '4AHSPyQM3iBYe14TsYUUWkH4MCStrzh7UGFefUs6mjoAN1QGztwcHCfG7SAdP6SVL1SWmPe9UnKS2Fxy3S2kzUv8EDGLVW8' },
 ];
 
+const STRIPE_LINKS = [
+  { label: 'one_time', url: 'https://donate.stripe.com/3cIeVf1Rz9NG7CP2FycbC01' },
+  { label: 'recurring_sub', url: 'https://buy.stripe.com/6oUbJ3eEl6Bue1dfskcbC02' },
+];
+
 const truncateAddress = (addr: string) =>
   addr.length > 16 ? `${addr.slice(0, 8)}...${addr.slice(-4)}` : addr;
 
 const About = () => {
   const [copiedKey, setCopiedKey] = useState<string | null>(null);
+  const [stripeOpen, setStripeOpen] = useState(false);
   const [cryptoOpen, setCryptoOpen] = useState(false);
   const [openSection, setOpenSection] = useState<SectionKey | null>('welcome');
 
@@ -288,11 +294,36 @@ const About = () => {
                 </Collapsible>
 
                 {/* Stripe placeholder */}
-                <p className="text-xs text-muted-foreground">
-                  <span>{'>'} </span>
-                  <span className="text-syntax-cyan">stripe_donate</span>: <span className="text-syntax-amber">coming_soon</span>
-                  <span className="text-foreground/30"> // payment link TBD</span>
-                </p>
+                <Collapsible open={stripeOpen} onOpenChange={setStripeOpen}>
+                  <CollapsibleTrigger onClick={(e) => e.stopPropagation()} className="flex items-center gap-1.5 text-xs text-muted-foreground hover:text-foreground transition-colors duration-200 cursor-pointer select-none">
+                    <span className="text-muted-foreground">{'>'}</span>
+                    <span className="text-syntax-cyan">stripe_donate</span>
+                    <TripleArrow collapsed={!stripeOpen} compact />
+                  </CollapsibleTrigger>
+                  <CollapsibleContent className="mt-2 ml-4 space-y-1.5">
+                    {STRIPE_LINKS.map(({ label, url }) => (
+                      <div
+                        key={label}
+                        className="flex items-center text-xs select-none"
+                      >
+                        <span
+                          onClick={(e) => { e.stopPropagation(); window.open(url, '_blank'); }}
+                          className="group/link inline-flex items-center gap-2 cursor-pointer"
+                        >
+                          <span className="text-muted-foreground">→</span>
+                          <span className="text-syntax-purple">{label}</span>
+                          <span className="ml-1 inline-flex items-center gap-1 text-muted-foreground group-hover/link:text-foreground transition-colors duration-200">
+                            <span className="max-w-0 opacity-0 group-hover/link:max-w-[150px] group-hover/link:opacity-100 transition-all duration-300 overflow-hidden whitespace-nowrap inline-flex items-center gap-1">
+                              <span className="text-muted-foreground">{'>'}</span>
+                              <ExternalLink className="w-3 h-3" />
+                              <span className="text-muted-foreground">new_tab</span>
+                            </span>
+                          </span>
+                        </span>
+                      </div>
+                    ))}
+                  </CollapsibleContent>
+                </Collapsible>
               </div>
             )}
           </section>
