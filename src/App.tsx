@@ -10,6 +10,7 @@ import Auth from "./pages/Auth";
 import Library from "./pages/Library";
 import About from "./pages/About";
 import NotFound from "./pages/NotFound";
+import OAuthPopupCallback from "./pages/OAuthPopupCallback";
 
 const queryClient = new QueryClient();
 
@@ -30,6 +31,7 @@ const App = () => (
             <Route path="/readers" element={<Navigate to="/library" replace />} />
             <Route path="/progress" element={<Navigate to="/library" replace />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
+            <Route path="/auth/popup-callback" element={<OAuthPopupCallback />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </BrowserRouter>
