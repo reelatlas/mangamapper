@@ -2,8 +2,10 @@ import { Header } from '@/components/Header';
 import { Fingerprint, Zap, Target, HelpCircle, Code, MessageSquare, Heart, LucideIcon } from 'lucide-react';
 
 const SectionHeader = ({ icon: Icon, label }: { icon: LucideIcon; label: string }) => (
-  <div className="flex items-center gap-2 mb-3 text-xs text-muted-foreground group-hover/card:text-foreground transition-colors duration-300 cursor-default select-none">
-    <Icon className="w-3.5 h-3.5 transition-colors duration-300" />
+  <div className="group/header flex items-center gap-2 mb-3 text-xs text-muted-foreground group-hover/card:text-foreground transition-colors duration-300 cursor-default select-none">
+    <div className="w-3.5 h-3.5 group-hover/card:w-0 group-hover/card:h-0 group-hover/card:opacity-0 opacity-100 transition-all duration-300 overflow-hidden">
+      <Icon className="w-3.5 h-3.5" />
+    </div>
     <span className="max-w-0 opacity-0 group-hover/card:max-w-[20px] group-hover/card:opacity-100 transition-all duration-500 ease-out overflow-hidden whitespace-nowrap">//</span>
     <span>{label}</span>
     <div className="flex items-center gap-1.5 overflow-hidden max-w-0 opacity-0 group-hover/card:max-w-[120px] group-hover/card:opacity-100 transition-all duration-500 ease-out">
