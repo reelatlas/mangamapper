@@ -30,6 +30,11 @@ const CRYPTO_WALLETS = [
   { ticker: 'xmr', address: '4AHSPyQM3iBYe14TsYUUWkH4MCStrzh7UGFefUs6mjoAN1QGztwcHCfG7SAdP6SVL1SWmPe9UnKS2Fxy3S2kzUv8EDGLVW8' },
 ];
 
+const STRIPE_LINKS = [
+  { label: 'one_time', url: 'https://donate.stripe.com/3cIeVf1Rz9NG7CP2FycbC01' },
+  { label: 'recurring_sub', url: 'https://buy.stripe.com/6oUbJ3eEl6Bue1dfskcbC02' },
+];
+
 const truncateAddress = (addr: string) =>
   addr.length > 16 ? `${addr.slice(0, 8)}...${addr.slice(-4)}` : addr;
 
