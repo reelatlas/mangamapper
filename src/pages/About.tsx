@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { Header } from '@/components/Header';
-import { Fingerprint, Shell, Snail, Cloud, Zap, Target, Goal, Sprout, TreePine, Bot, Rocket, Heart, Bird, SunDim, Rainbow, Copy, Check, LucideIcon } from 'lucide-react';
+import { Fingerprint, Shell, Snail, Cloud, Zap, Target, Goal, Sprout, TreePine, Bot, Rocket, Heart, Bird, SunDim, Rainbow, Copy, Check, ChevronRight, LucideIcon } from 'lucide-react';
+import { Collapsible, CollapsibleTrigger, CollapsibleContent } from '@/components/ui/collapsible';
 
 const SectionHeader = ({ icon: Icon, hoverIcon: HoverIcon, label }: { icon: LucideIcon; hoverIcon: LucideIcon; label: string }) => (
   <div className="group/header flex items-center gap-2 mb-3 text-xs text-muted-foreground group-hover/card:text-foreground transition-colors duration-300 cursor-default select-none">
@@ -16,8 +17,27 @@ const SectionHeader = ({ icon: Icon, hoverIcon: HoverIcon, label }: { icon: Luci
   </div>
 );
 
+const CRYPTO_WALLETS = [
+  { ticker: 'btc', address: 'bc1qr3ds2qraxelt3kan0nn7h2k0ky30aecg28l3a4' },
+  { ticker: 'eth', address: '0xDFB385030eED21389057056c0811608A97Ca5e26' },
+  { ticker: 'sol', address: 'D9XA7UNynfCtuNJX7FEg5E6C7eDhkePUkKKSodaeSYRs' },
+  { ticker: 'doge', address: 'DLkjxfspJanrSeMbmYzTepQxtV57edxErM' },
+  { ticker: 'ltc', address: 'ltc1qgg7yqyx2vd4wjfryzt62gmx7d946qs3e9s3v6y' },
+  { ticker: 'xmr', address: '4AHSPyQM3iBYe14TsYUUWkH4MCStrzh7UGFefUs6mjoAN1QGztwcHCfG7SAdP6SVL1SWmPe9UnKS2Fxy3S2kzUv8EDGLVW8' },
+];
+
+const truncateAddress = (addr: string) =>
+  addr.length > 16 ? `${addr.slice(0, 8)}...${addr.slice(-4)}` : addr;
+
 const About = () => {
-  const [copied, setCopied] = useState(false);
+  const [copiedKey, setCopiedKey] = useState<string | null>(null);
+  const [cryptoOpen, setCryptoOpen] = useState(false);
+
+  const handleCopy = (key: string, value: string) => {
+    navigator.clipboard.writeText(value);
+    setCopiedKey(key);
+    setTimeout(() => setCopiedKey(null), 2000);
+  };
 
   return (
     <div className="min-h-screen bg-background font-mono">
@@ -179,15 +199,11 @@ const About = () => {
               <span className="text-syntax-green">"newestArc@gmail.com"</span>
               <span className="text-muted-foreground">)</span>
               <button
-                onClick={() => {
-                  navigator.clipboard.writeText('newestArc@gmail.com');
-                  setCopied(true);
-                  setTimeout(() => setCopied(false), 2000);
-                }}
+                onClick={() => handleCopy('email', 'newestArc@gmail.com')}
                 className="ml-1 text-muted-foreground hover:text-foreground transition-colors duration-200"
                 title="Copy email"
               >
-                {copied ? <Check className="w-3 h-3 text-syntax-green" /> : <Copy className="w-3 h-3" />}
+                {copiedKey === 'email' ? <Check className="w-3 h-3 text-syntax-green" /> : <Copy className="w-3 h-3" />}
               </button>
             </div>
           </section>
@@ -195,11 +211,39 @@ const About = () => {
           {/* // support */}
           <section className="group/card border border-transparent border-dashed hover:border-border p-5 transition-colors duration-300">
             <SectionHeader icon={Bird} hoverIcon={Heart} label="support" />
-            <p className="text-sm text-foreground/70 mb-3">
+            <p className="text-sm text-foreground/70 mb-4">
               $$$ for <span className="text-syntax-amber">sushi</span>, <span className="text-syntax-amber">gundams</span>, <span className="text-syntax-amber">s-tier relics</span>, <span className="text-syntax-amber">ai tokens</span>, <span className="text-syntax-amber">api credits</span>, <span className="text-syntax-amber">hosting</span>
             </p>
+
+            {/* Crypto wallets */}
+            <Collapsible open={cryptoOpen} onOpenChange={setCryptoOpen} className="mb-4">
+              <CollapsibleTrigger className="flex items-center gap-1.5 text-xs text-muted-foreground hover:text-foreground transition-colors duration-200 cursor-pointer select-none">
+                <span>{'>'}</span>
+                <ChevronRight className={`w-3 h-3 transition-transform duration-200 ${cryptoOpen ? 'rotate-90' : ''}`} />
+                <span className="text-syntax-amber">crypto_wallets</span>
+              </CollapsibleTrigger>
+              <CollapsibleContent className="mt-2 ml-4 space-y-1.5">
+                {CRYPTO_WALLETS.map(({ ticker, address }) => (
+                  <div key={ticker} className="flex items-center gap-2 text-xs">
+                    <span className="text-muted-foreground">→</span>
+                    <span className="text-syntax-purple w-10">{ticker}</span>
+                    <span className="text-syntax-green font-mono">{truncateAddress(address)}</span>
+                    <button
+                      onClick={() => handleCopy(ticker, address)}
+                      className="ml-1 text-muted-foreground hover:text-foreground transition-colors duration-200"
+                      title={`Copy ${ticker} address`}
+                    >
+                      {copiedKey === ticker ? <Check className="w-3 h-3 text-syntax-green" /> : <Copy className="w-3 h-3" />}
+                    </button>
+                  </div>
+                ))}
+              </CollapsibleContent>
+            </Collapsible>
+
+            {/* Stripe placeholder */}
             <p className="text-xs text-muted-foreground">
-              <span className="text-syntax-purple">donations</span>: <span className="text-syntax-amber">coming_soon</span>
+              <span>{'>'} </span>
+              <span className="text-syntax-purple">stripe_donate</span>: <span className="text-syntax-amber">coming_soon</span>
               <span className="text-foreground/30"> // payment link TBD</span>
             </p>
           </section>
