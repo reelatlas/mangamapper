@@ -120,7 +120,7 @@ const About = () => {
           </section>
 
           {/* // features */}
-          <section id="features" className="group/card border border-transparent border-dashed hover:border-border p-5 transition-colors duration-300 scroll-mt-4">
+          <section id="features" className="group/card border border-transparent border-dashed hover:border-border p-5 transition-colors duration-300 scroll-mt-14">
             <SectionHeader icon={Cloud} hoverIcon={Zap} label="features" />
             <ul className="space-y-1.5 text-sm text-foreground/70">
               <li className="flex gap-2">
