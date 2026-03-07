@@ -99,7 +99,7 @@ const About = () => {
 
           {/* // pain_points_solved */}
           <section className="group/card border border-transparent border-dashed hover:border-border p-5 transition-colors duration-300">
-            <SectionHeader icon={BowArrow} hoverIcon={Goal} label="pain_points_solved" />
+            <SectionHeader icon={BowArrow} hoverIcon={Goal} label="solve_for(pain)" />
             <ul className="space-y-2.5 text-sm text-foreground/70">
               <li className="flex gap-2">
                 <span className="text-muted-foreground shrink-0">→</span>
