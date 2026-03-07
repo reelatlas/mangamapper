@@ -478,7 +478,7 @@ export const CollectionSection = ({ anime }: CollectionSectionProps) => {
                 variant="ghost"
                 size="sm"
                 onClick={() => setConfirmRemove(false)}
-                className="h-7 w-7 p-0 hover:text-muted-foreground hover:bg-muted/50"
+                className="h-7 w-7 p-0 text-muted-foreground hover:text-muted-foreground hover:bg-muted"
               >
                 <X className="w-3.5 h-3.5" />
               </Button>
