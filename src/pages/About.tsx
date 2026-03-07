@@ -17,6 +17,7 @@ const SectionHeader = ({ icon: Icon, hoverIcon: HoverIcon, label }: { icon: Luci
 );
 
 const About = () => {
+  const [copied, setCopied] = useState(false);
   return (
     <div className="min-h-screen bg-background font-mono">
       <Header />
