@@ -264,7 +264,7 @@ const About = () => {
             {/* Stripe placeholder */}
             <p className="text-xs text-muted-foreground">
               <span>{'>'} </span>
-              <span className="text-syntax-purple">stripe_donate</span>: <span className="text-syntax-amber">coming_soon</span>
+              <span className="text-syntax-cyan">stripe_donate</span>: <span className="text-syntax-amber">coming_soon</span>
               <span className="text-foreground/30"> // payment link TBD</span>
             </p>
           </section>
