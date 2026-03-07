@@ -6,8 +6,8 @@ import { TripleArrow } from '@/components/TripleArrow';
 
 type SectionKey = 'welcome' | 'features' | 'pain' | 'why' | 'built' | 'feedback' | 'support';
 
-const SectionHeader = ({ icon: Icon, hoverIcon: HoverIcon, label, isOpen, onToggle }: { icon: LucideIcon; hoverIcon: LucideIcon; label: string; isOpen: boolean; onToggle: () => void }) => (
-  <div onClick={onToggle} className="group/header flex items-center gap-2 text-xs text-muted-foreground group-hover/card:text-foreground transition-colors duration-300 cursor-pointer select-none">
+const SectionHeader = ({ icon: Icon, hoverIcon: HoverIcon, label, isOpen }: { icon: LucideIcon; hoverIcon: LucideIcon; label: string; isOpen: boolean }) => (
+  <div className="group/header flex items-center gap-2 text-xs text-muted-foreground group-hover/card:text-foreground transition-colors duration-300 select-none">
     <Icon className="w-3.5 h-3.5" />
     <span className="max-w-0 opacity-0 group-hover/card:max-w-[20px] group-hover/card:opacity-100 transition-all duration-500 ease-out overflow-hidden whitespace-nowrap">//</span>
     <span>{label}</span>
@@ -62,8 +62,8 @@ const About = () => {
 
         <div className="grid gap-6">
           {/* // welcome */}
-          <section className="group/card border border-transparent border-dashed hover:border-border p-5 transition-colors duration-300">
-            <SectionHeader icon={Shell} hoverIcon={Snail} label="welcome" isOpen={openSection === 'welcome'} onToggle={() => toggleSection('welcome')} />
+          <section onClick={() => toggleSection('welcome')} className="group/card cursor-pointer border border-transparent border-dashed hover:border-border p-5 transition-colors duration-300">
+            <SectionHeader icon={Shell} hoverIcon={Snail} label="welcome" isOpen={openSection === 'welcome'} />
             {openSection === 'welcome' && (
               <div className="mt-3">
                 <p className="text-sm text-foreground/80 leading-relaxed mb-4">
@@ -109,8 +109,8 @@ const About = () => {
           </section>
 
           {/* // features */}
-          <section className="group/card border border-transparent border-dashed hover:border-border p-5 transition-colors duration-300">
-            <SectionHeader icon={Cloud} hoverIcon={Zap} label="features" isOpen={openSection === 'features'} onToggle={() => toggleSection('features')} />
+          <section onClick={() => toggleSection('features')} className="group/card cursor-pointer border border-transparent border-dashed hover:border-border p-5 transition-colors duration-300">
+            <SectionHeader icon={Cloud} hoverIcon={Zap} label="features" isOpen={openSection === 'features'} />
             {openSection === 'features' && (
               <ul className="mt-3 space-y-1.5 text-sm text-foreground/70">
                 <li className="flex gap-2">
@@ -134,8 +134,8 @@ const About = () => {
           </section>
 
           {/* // pain_points_solved */}
-          <section className="group/card border border-transparent border-dashed hover:border-border p-5 transition-colors duration-300">
-            <SectionHeader icon={Target} hoverIcon={Goal} label="solve_for(pain)" isOpen={openSection === 'pain'} onToggle={() => toggleSection('pain')} />
+          <section onClick={() => toggleSection('pain')} className="group/card cursor-pointer border border-transparent border-dashed hover:border-border p-5 transition-colors duration-300">
+            <SectionHeader icon={Target} hoverIcon={Goal} label="solve_for(pain)" isOpen={openSection === 'pain'} />
             {openSection === 'pain' && (
               <ul className="mt-3 space-y-2.5 text-sm text-foreground/70">
                 <li className="flex gap-2">
@@ -155,8 +155,8 @@ const About = () => {
           </section>
 
           {/* // why_build */}
-          <section className="group/card border border-transparent border-dashed hover:border-border p-5 transition-colors duration-300">
-            <SectionHeader icon={SunDim} hoverIcon={Rainbow} label="why_build" isOpen={openSection === 'why'} onToggle={() => toggleSection('why')} />
+          <section onClick={() => toggleSection('why')} className="group/card cursor-pointer border border-transparent border-dashed hover:border-border p-5 transition-colors duration-300">
+            <SectionHeader icon={SunDim} hoverIcon={Rainbow} label="why_build" isOpen={openSection === 'why'} />
             {openSection === 'why' && (
               <ul className="mt-3 space-y-2.5 text-sm text-foreground/70">
                 <li className="flex gap-2">
@@ -176,8 +176,8 @@ const About = () => {
           </section>
 
           {/* // built_with */}
-          <section className="group/card border border-transparent border-dashed hover:border-border p-5 transition-colors duration-300">
-            <SectionHeader icon={Bot} hoverIcon={Rocket} label="built_with" isOpen={openSection === 'built'} onToggle={() => toggleSection('built')} />
+          <section onClick={() => toggleSection('built')} className="group/card cursor-pointer border border-transparent border-dashed hover:border-border p-5 transition-colors duration-300">
+            <SectionHeader icon={Bot} hoverIcon={Rocket} label="built_with" isOpen={openSection === 'built'} />
             {openSection === 'built' && (
               <ul className="mt-3 space-y-1.5 text-xs text-muted-foreground">
                 <li className="flex gap-2">
@@ -205,8 +205,8 @@ const About = () => {
           </section>
 
           {/* // feedback */}
-          <section className="group/card border border-transparent border-dashed hover:border-border p-5 transition-colors duration-300">
-            <SectionHeader icon={Sprout} hoverIcon={TreePine} label="feedback" isOpen={openSection === 'feedback'} onToggle={() => toggleSection('feedback')} />
+          <section onClick={() => toggleSection('feedback')} className="group/card cursor-pointer border border-transparent border-dashed hover:border-border p-5 transition-colors duration-300">
+            <SectionHeader icon={Sprout} hoverIcon={TreePine} label="feedback" isOpen={openSection === 'feedback'} />
             {openSection === 'feedback' && (
               <div className="mt-3">
                 <ul className="space-y-1.5 text-sm text-foreground/70 mb-4">
@@ -241,8 +241,8 @@ const About = () => {
           </section>
 
           {/* // support */}
-          <section className="group/card border border-transparent border-dashed hover:border-border p-5 transition-colors duration-300">
-            <SectionHeader icon={Bird} hoverIcon={Heart} label="support" isOpen={openSection === 'support'} onToggle={() => toggleSection('support')} />
+          <section onClick={() => toggleSection('support')} className="group/card cursor-pointer border border-transparent border-dashed hover:border-border p-5 transition-colors duration-300">
+            <SectionHeader icon={Bird} hoverIcon={Heart} label="support" isOpen={openSection === 'support'} />
             {openSection === 'support' && (
               <div className="mt-3">
                 <p className="text-sm text-foreground/70 mb-4">
@@ -251,7 +251,7 @@ const About = () => {
 
                 {/* Crypto wallets */}
                 <Collapsible open={cryptoOpen} onOpenChange={setCryptoOpen} className="mb-4">
-                  <CollapsibleTrigger className="flex items-center gap-1.5 text-xs text-muted-foreground hover:text-foreground transition-colors duration-200 cursor-pointer select-none">
+                  <CollapsibleTrigger onClick={(e) => e.stopPropagation()} className="flex items-center gap-1.5 text-xs text-muted-foreground hover:text-foreground transition-colors duration-200 cursor-pointer select-none">
                     <span className="text-muted-foreground">{'>'}</span>
                     <span className="text-syntax-cyan">crypto_wallets</span>
                     <TripleArrow collapsed={!cryptoOpen} compact />
