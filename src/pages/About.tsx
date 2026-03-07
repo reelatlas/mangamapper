@@ -294,11 +294,36 @@ const About = () => {
                 </Collapsible>
 
                 {/* Stripe placeholder */}
-                <p className="text-xs text-muted-foreground">
-                  <span>{'>'} </span>
-                  <span className="text-syntax-cyan">stripe_donate</span>: <span className="text-syntax-amber">coming_soon</span>
-                  <span className="text-foreground/30"> // payment link TBD</span>
-                </p>
+                <Collapsible open={stripeOpen} onOpenChange={setStripeOpen}>
+                  <CollapsibleTrigger onClick={(e) => e.stopPropagation()} className="flex items-center gap-1.5 text-xs text-muted-foreground hover:text-foreground transition-colors duration-200 cursor-pointer select-none">
+                    <span className="text-muted-foreground">{'>'}</span>
+                    <span className="text-syntax-cyan">stripe_donate</span>
+                    <TripleArrow collapsed={!stripeOpen} compact />
+                  </CollapsibleTrigger>
+                  <CollapsibleContent className="mt-2 ml-4 space-y-1.5">
+                    {STRIPE_LINKS.map(({ label, url }) => (
+                      <div
+                        key={label}
+                        className="flex items-center text-xs select-none"
+                      >
+                        <span
+                          onClick={(e) => { e.stopPropagation(); window.open(url, '_blank'); }}
+                          className="group/link inline-flex items-center gap-2 cursor-pointer"
+                        >
+                          <span className="text-muted-foreground">→</span>
+                          <span className="text-syntax-purple">{label}</span>
+                          <span className="ml-1 inline-flex items-center gap-1 text-muted-foreground group-hover/link:text-foreground transition-colors duration-200">
+                            <span className="max-w-0 opacity-0 group-hover/link:max-w-[150px] group-hover/link:opacity-100 transition-all duration-300 overflow-hidden whitespace-nowrap inline-flex items-center gap-1">
+                              <span className="text-muted-foreground">{'>'}</span>
+                              <ExternalLink className="w-3 h-3" />
+                              <span className="text-muted-foreground">new_tab</span>
+                            </span>
+                          </span>
+                        </span>
+                      </div>
+                    ))}
+                  </CollapsibleContent>
+                </Collapsible>
               </div>
             )}
           </section>
