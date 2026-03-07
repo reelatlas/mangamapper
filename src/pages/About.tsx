@@ -7,11 +7,11 @@ import { TripleArrow } from '@/components/TripleArrow';
 type SectionKey = 'welcome' | 'features' | 'pain' | 'why' | 'built' | 'feedback' | 'support';
 
 const SectionHeader = ({ icon: Icon, hoverIcon: HoverIcon, label, isOpen }: { icon: LucideIcon; hoverIcon: LucideIcon; label: string; isOpen: boolean }) => (
-  <div className="group/header flex items-center gap-2 text-xs text-muted-foreground group-hover/card:text-foreground transition-colors duration-300 select-none">
+  <div className={`group/header flex items-center gap-2 text-xs text-muted-foreground group-hover/card:text-foreground transition-colors duration-300 select-none ${isOpen ? 'text-foreground' : ''}`}>
     <Icon className="w-3.5 h-3.5" />
-    <span className="max-w-0 opacity-0 group-hover/card:max-w-[20px] group-hover/card:opacity-100 transition-all duration-500 ease-out overflow-hidden whitespace-nowrap">//</span>
+    <span className={`transition-all duration-500 ease-out overflow-hidden whitespace-nowrap ${isOpen ? 'max-w-[20px] opacity-100' : 'max-w-0 opacity-0 group-hover/card:max-w-[20px] group-hover/card:opacity-100'}`}>//</span>
     <span>{label}</span>
-    <div className="flex items-center gap-1.5 overflow-hidden max-w-0 opacity-0 group-hover/card:max-w-[120px] group-hover/card:opacity-100 transition-all duration-500 ease-out">
+    <div className={`flex items-center gap-1.5 overflow-hidden transition-all duration-500 ease-out ${isOpen ? 'max-w-[120px] opacity-100' : 'max-w-0 opacity-0 group-hover/card:max-w-[120px] group-hover/card:opacity-100'}`}>
       <span className="text-muted-foreground/60">{'>'}</span>
       <HoverIcon className="w-3 h-3 text-syntax-cyan" />
       <HoverIcon className="w-3 h-3 text-syntax-purple" />
