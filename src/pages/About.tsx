@@ -30,9 +30,32 @@ const About = () => {
           <span className="text-syntax-cyan">about</span>
         </div>
 
+        {/* Section navigation */}
+        <nav className="flex flex-wrap gap-x-4 gap-y-1.5 mb-8 text-xs text-muted-foreground">
+          {[
+            { id: 'welcome', label: 'welcome' },
+            { id: 'features', label: 'features' },
+            { id: 'solve-for-pain', label: 'solve_for(pain)' },
+            { id: 'why-build', label: 'why_build' },
+            { id: 'built-with', label: 'built_with' },
+            { id: 'feedback', label: 'feedback' },
+            { id: 'support', label: 'support' },
+          ].map((item, i) => (
+            <span key={item.id} className="flex items-center gap-1.5">
+              {i > 0 && <span className="text-muted-foreground/40">/</span>}
+              <button
+                onClick={() => document.getElementById(item.id)?.scrollIntoView({ behavior: 'smooth', block: 'start' })}
+                className="hover:text-foreground transition-colors duration-200"
+              >
+                {item.label}
+              </button>
+            </span>
+          ))}
+        </nav>
+
         <div className="grid gap-6">
           {/* // welcome */}
-          <section className="group/card border border-transparent border-dashed hover:border-border p-5 transition-colors duration-300">
+          <section id="welcome" className="group/card border border-transparent border-dashed hover:border-border p-5 transition-colors duration-300 scroll-mt-4">
             <SectionHeader icon={Shell} hoverIcon={Snail} label="welcome" />
             <p className="text-sm text-foreground/80 leading-relaxed mb-4">
               welcome <span className="text-syntax-purple">traveler</span>, your anime ended
@@ -75,7 +98,7 @@ const About = () => {
           </section>
 
           {/* // features */}
-          <section className="group/card border border-transparent border-dashed hover:border-border p-5 transition-colors duration-300">
+          <section id="features" className="group/card border border-transparent border-dashed hover:border-border p-5 transition-colors duration-300 scroll-mt-4">
             <SectionHeader icon={Cloud} hoverIcon={Zap} label="features" />
             <ul className="space-y-1.5 text-sm text-foreground/70">
               <li className="flex gap-2">
@@ -98,7 +121,7 @@ const About = () => {
           </section>
 
           {/* // pain_points_solved */}
-          <section className="group/card border border-transparent border-dashed hover:border-border p-5 transition-colors duration-300">
+          <section id="solve-for-pain" className="group/card border border-transparent border-dashed hover:border-border p-5 transition-colors duration-300 scroll-mt-4">
             <SectionHeader icon={Target} hoverIcon={Goal} label="solve_for(pain)" />
             <ul className="space-y-2.5 text-sm text-foreground/70">
               <li className="flex gap-2">
@@ -117,7 +140,7 @@ const About = () => {
           </section>
 
           {/* // why_build */}
-          <section className="group/card border border-transparent border-dashed hover:border-border p-5 transition-colors duration-300">
+          <section id="why-build" className="group/card border border-transparent border-dashed hover:border-border p-5 transition-colors duration-300 scroll-mt-4">
             <SectionHeader icon={SunDim} hoverIcon={Rainbow} label="why_build" />
             <ul className="space-y-2.5 text-sm text-foreground/70">
               <li className="flex gap-2">
@@ -136,7 +159,7 @@ const About = () => {
           </section>
 
           {/* // built_with */}
-          <section className="group/card border border-transparent border-dashed hover:border-border p-5 transition-colors duration-300">
+          <section id="built-with" className="group/card border border-transparent border-dashed hover:border-border p-5 transition-colors duration-300 scroll-mt-4">
             <SectionHeader icon={Bot} hoverIcon={Rocket} label="built_with" />
             <ul className="space-y-1.5 text-xs text-muted-foreground">
               <li className="flex gap-2">
@@ -163,7 +186,7 @@ const About = () => {
           </section>
 
           {/* // feedback */}
-          <section className="group/card border border-transparent border-dashed hover:border-border p-5 transition-colors duration-300">
+          <section id="feedback" className="group/card border border-transparent border-dashed hover:border-border p-5 transition-colors duration-300 scroll-mt-4">
             <SectionHeader icon={Sprout} hoverIcon={TreePine} label="feedback" />
             <ul className="space-y-1.5 text-sm text-foreground/70 mb-4">
               <li className="flex gap-2">
@@ -192,7 +215,7 @@ const About = () => {
           </section>
 
           {/* // support */}
-          <section className="group/card border border-transparent border-dashed hover:border-border p-5 transition-colors duration-300">
+          <section id="support" className="group/card border border-transparent border-dashed hover:border-border p-5 transition-colors duration-300 scroll-mt-4">
             <SectionHeader icon={Bird} hoverIcon={Heart} label="support" />
             <p className="text-sm text-foreground/70 mb-3">
               $$$ for <span className="text-syntax-amber">sushi</span>, <span className="text-syntax-amber">ai tokens</span>, <span className="text-syntax-amber">api credits</span>, <span className="text-syntax-amber">hosting</span>
