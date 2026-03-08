@@ -80,32 +80,47 @@ export const LibraryGroupedView = ({ userId, readerSites, progress, fetchReaderS
   const [editSeriesAssignments, setEditSeriesAssignments] = useState<SeriesAssignment[]>([]);
   const [confirmingDeleteReaderId, setConfirmingDeleteReaderId] = useState<string | null>(null);
 
-  const sortedReaderGroups = useMemo(() => {
+  type ReaderGroup = { type: 'reader'; name: string; url: string; notes: string | null; entries: ReaderSite[]; latestUpdatedAt: string };
+  type UnassignedGroup = { type: 'unassigned'; entries: AnimeProgress[]; latestUpdatedAt: string };
+  type SortedGroup = ReaderGroup | UnassignedGroup;
+
+  const unassignedProgress = useMemo(() => {
+    const assignedAnimeIds = new Set(readerSites.filter(s => s.anime_id).map(s => s.anime_id));
+    return progress.filter(p => !assignedAnimeIds.has(p.anime_id));
+  }, [progress, readerSites]);
+
+  const sortedGroups = useMemo((): SortedGroup[] => {
     const grouped = readerSites.reduce((acc, site) => {
       const key = site.name.toLowerCase();
       if (!acc[key]) {
-        acc[key] = { name: site.name, url: site.url, notes: site.notes, entries: [], latestUpdatedAt: site.updated_at };
+        acc[key] = { type: 'reader' as const, name: site.name, url: site.url, notes: site.notes, entries: [], latestUpdatedAt: site.updated_at };
       }
       acc[key].entries.push(site);
       if (new Date(site.updated_at) > new Date(acc[key].latestUpdatedAt)) {
         acc[key].latestUpdatedAt = site.updated_at;
       }
       return acc;
-    }, {} as Record<string, { name: string; url: string; notes: string | null; entries: ReaderSite[]; latestUpdatedAt: string }>);
-    const groups = Object.values(grouped);
-    switch (readerSort) {
-      case 'alpha-asc': return groups.sort((a, b) => a.name.localeCompare(b.name));
-      case 'alpha-desc': return groups.sort((a, b) => b.name.localeCompare(a.name));
-      case 'date-asc': return groups.sort((a, b) => new Date(a.latestUpdatedAt).getTime() - new Date(b.latestUpdatedAt).getTime());
-      case 'date-desc': default: return groups.sort((a, b) => new Date(b.latestUpdatedAt).getTime() - new Date(a.latestUpdatedAt).getTime());
-    }
-  }, [readerSites, readerSort]);
+    }, {} as Record<string, ReaderGroup>);
 
-  // Unassigned series: in library but not linked to any reader
-  const unassignedProgress = useMemo(() => {
-    const assignedAnimeIds = new Set(readerSites.filter(s => s.anime_id).map(s => s.anime_id));
-    return progress.filter(p => !assignedAnimeIds.has(p.anime_id));
-  }, [progress, readerSites]);
+    const allGroups: SortedGroup[] = Object.values(grouped);
+
+    if (unassignedProgress.length > 0) {
+      const latestUpdatedAt = unassignedProgress.reduce((latest, p) =>
+        new Date(p.updated_at) > new Date(latest) ? p.updated_at : latest,
+        unassignedProgress[0].updated_at
+      );
+      allGroups.push({ type: 'unassigned', entries: unassignedProgress, latestUpdatedAt });
+    }
+
+    const getName = (g: SortedGroup) => g.type === 'reader' ? g.name : 'unassigned_series';
+
+    switch (readerSort) {
+      case 'alpha-asc': return allGroups.sort((a, b) => getName(a).localeCompare(getName(b)));
+      case 'alpha-desc': return allGroups.sort((a, b) => getName(b).localeCompare(getName(a)));
+      case 'date-asc': return allGroups.sort((a, b) => new Date(a.latestUpdatedAt).getTime() - new Date(b.latestUpdatedAt).getTime());
+      case 'date-desc': default: return allGroups.sort((a, b) => new Date(b.latestUpdatedAt).getTime() - new Date(a.latestUpdatedAt).getTime());
+    }
+  }, [readerSites, readerSort, unassignedProgress]);
 
   const startEditingReader = (group: { name: string; url: string; notes: string | null; entries: ReaderSite[] }) => {
     setConfirmingDeleteReaderId(null);
