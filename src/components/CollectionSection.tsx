@@ -64,7 +64,7 @@ export const CollectionSection = ({ anime }: CollectionSectionProps) => {
 
   // Edit state
   const [editReaderAssignments, setEditReaderAssignments] = useState<ReaderAssignment[]>([]);
-  const [editNotes, setEditNotes] = useState('');
+  
   const [saving, setSaving] = useState(false);
   const [savingProgress, setSavingProgress] = useState(false);
   const [showInlineNewReader, setShowInlineNewReader] = useState(false);
