@@ -56,6 +56,10 @@ export const CollectionSection = ({ anime }: CollectionSectionProps) => {
   const [togglingLibrary, setTogglingLibrary] = useState(false);
   const [isEditing, setIsEditing] = useState(false);
   const [isReaderHovered, setIsReaderHovered] = useState(false);
+  const [isNotesHovered, setIsNotesHovered] = useState(false);
+  const [isEditingNotes, setIsEditingNotes] = useState(false);
+  const [editNotesValue, setEditNotesValue] = useState('');
+  const [savingNotes, setSavingNotes] = useState(false);
   const [confirmRemove, setConfirmRemove] = useState(false);
 
   // Edit state
