@@ -172,12 +172,12 @@ const AnimeDetail = () => {
           </div>
           <div className="px-4 pt-3 pb-0 flex items-end justify-between flex-wrap gap-2">
             <div
-              className="group cursor-pointer flex items-center gap-1 text-xs text-muted-foreground"
+              className="group cursor-pointer flex items-center text-xs text-muted-foreground"
               onClick={() => setShowAll(!showAll)}
             >
               <span className="text-syntax-cyan">{'//'}</span>
-              {' '}show {showAll ? anime.currentEpisode : anime.episodes.length} of {anime.currentEpisode}
-              <span className="opacity-0 group-hover:opacity-100 text-syntax-cyan transition-opacity">
+              <span className="ml-1">show {showAll ? anime.currentEpisode : anime.episodes.length} of {anime.currentEpisode}</span>
+              <span className="opacity-0 group-hover:opacity-100 ml-1 text-syntax-cyan transition-opacity">
                 {'>'} {showAll ? 'show_episodes(less)' : 'show_episodes(all)'}
               </span>
             </div>
