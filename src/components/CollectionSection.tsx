@@ -488,13 +488,12 @@ export const CollectionSection = ({ anime }: CollectionSectionProps) => {
               </span>
             </div>
           ) : (
-            <div className="group/lib flex items-center h-7 font-mono text-xs">
+            <div className="group/lib flex items-center h-7 font-mono text-xs cursor-pointer" onClick={inLibrary ? () => setConfirmRemove(true) : toggleLibrary}>
               <span className={`px-3 py-1 border border-dashed ${inLibrary ? 'text-foreground' : 'text-muted-foreground'}`}>
-                {togglingLibrary ? '...' : inLibrary ? 'in_library [✓]' : 'in_library [ ]'}
+                {togglingLibrary ? '...' : inLibrary ? '[✓] in_library' : '[ ] in_library'}
               </span>
               <span
-                className={`hidden group-hover/lib:inline ml-3 cursor-pointer ${inLibrary ? 'text-destructive' : 'text-primary'}`}
-                onClick={inLibrary ? () => setConfirmRemove(true) : toggleLibrary}
+                className={`hidden group-hover/lib:inline ml-3 ${inLibrary ? 'text-destructive' : 'text-primary'}`}
               >
                 {'>'} {inLibrary ? 'remove_from(library)' : 'add_to(library)'}
               </span>
