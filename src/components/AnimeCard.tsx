@@ -26,9 +26,7 @@ export const AnimeCard = ({ anime, rank, inLibrary }: AnimeCardProps) => {
           </span>
           <span className="flex items-center gap-2 text-muted-foreground">
             {inLibrary && (
-              <span className="text-muted-foreground text-xs">
-                [✓] in_library
-              </span>
+              <span className="text-muted-foreground text-xs">[✓]in_library</span>
             )}
             {anime.status === 'airing' ? (
               <span className="text-accent">airing</span>
