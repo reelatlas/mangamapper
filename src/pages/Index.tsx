@@ -6,9 +6,12 @@ import { getFilteredAnime, searchAnime, StatusFilter } from '@/data/mockAnime';
 import { AnimeSeries } from '@/types/anime';
 import { TrendingUp, Filter, Home, Hash, Wand, Sparkles } from 'lucide-react';
 import { ToggleGroup, ToggleGroupItem } from '@/components/ui/toggle-group';
+import { useLibraryData } from '@/hooks/useLibraryData';
 
 const Index = () => {
   const searchBarRef = useRef<SearchBarRef>(null);
+  const { progress } = useLibraryData();
+  const libraryAnimeIds = useMemo(() => new Set(progress.map(p => p.anime_id)), [progress]);
   const [searchQuery, setSearchQuery] = useState('');
   const [searchResults, setSearchResults] = useState<AnimeSeries[]>([]);
   const [statusFilter, setStatusFilter] = useState<StatusFilter>(() => {
@@ -127,6 +130,7 @@ const Index = () => {
                   key={anime.id} 
                   anime={anime} 
                   rank={!isSearching ? index + 1 : undefined}
+                  inLibrary={libraryAnimeIds.has(anime.id)}
                 />
               ))}
             </div>
