@@ -6,9 +6,10 @@ import { Link } from 'react-router-dom';
 interface AnimeCardProps {
   anime: AnimeSeries;
   rank?: number;
+  inLibrary?: boolean;
 }
 
-export const AnimeCard = ({ anime, rank }: AnimeCardProps) => {
+export const AnimeCard = ({ anime, rank, inLibrary }: AnimeCardProps) => {
   const currentEpisode = anime.episodes[0]; // Most recent episode
 
   return (
@@ -23,7 +24,8 @@ export const AnimeCard = ({ anime, rank }: AnimeCardProps) => {
               {'>'} view_details
             </span>
           </span>
-          <span className="text-muted-foreground">
+          <span className="flex items-center gap-2 text-muted-foreground">
+            {inLibrary && <span className="text-muted-foreground text-xs">[✓]</span>}
             {anime.status === 'airing' ? (
               <span className="text-accent">airing</span>
             ) : anime.status === 'hiatus' ? (
