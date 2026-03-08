@@ -4,7 +4,7 @@ import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
-import { BookOpen, Tv, Trash2, ExternalLink, Glasses, X, Check, Pencil, Plus } from 'lucide-react';
+import { BookOpen, Tv, Trash2, ExternalLink, Glasses, X, Check, Pencil, Plus, StickyNote } from 'lucide-react';
 import { getAnimeById } from '@/data/mockAnime';
 import { supabase } from '@/integrations/supabase/client';
 import { toast } from 'sonner';
@@ -38,6 +38,7 @@ export const SeriesCard = ({ item, animeId, readerSites, onRemove, userId, onSav
   const [editWatchedEpisode, setEditWatchedEpisode] = useState('');
   const [editReadVolume, setEditReadVolume] = useState('');
   const [editReadChapter, setEditReadChapter] = useState('');
+  const [editNotes, setEditNotes] = useState('');
   const [editReaderAssignments, setEditReaderAssignments] = useState<ReaderAssignment[]>([]);
   const [saving, setSaving] = useState(false);
   const [showInlineNewReader, setShowInlineNewReader] = useState(false);
@@ -73,6 +74,7 @@ export const SeriesCard = ({ item, animeId, readerSites, onRemove, userId, onSav
     setEditWatchedEpisode(item?.last_watched_episode?.toString() ?? '');
     setEditReadVolume(item?.last_read_volume?.toString() ?? '');
     setEditReadChapter(item?.last_read_chapter ?? '');
+    setEditNotes(item?.notes ?? '');
 
     const linkedReaders = getReadersForAnime(resolvedAnimeId!, readerSites);
     if (linkedReaders.length > 0) {
@@ -181,6 +183,7 @@ export const SeriesCard = ({ item, animeId, readerSites, onRemove, userId, onSav
       in_library: true,
       updated_at: new Date().toISOString(),
       last_watched_episode: editWatchedEpisode.trim() ? parseInt(editWatchedEpisode.trim(), 10) : null,
+      notes: editNotes.trim() || null,
     };
     if (anime.hasManga) {
       progressUpdate.last_read_volume = editReadVolume.trim() ? parseInt(editReadVolume.trim(), 10) : null;
@@ -395,6 +398,20 @@ export const SeriesCard = ({ item, animeId, readerSites, onRemove, userId, onSav
               </div>
             )}
 
+            {/* Series notes */}
+            <div className="space-y-1.5">
+              <Label className="text-xs">
+                <span className="text-syntax-cyan">notes</span>
+                <span className="text-muted-foreground/60"> // optional</span>
+              </Label>
+              <Input
+                placeholder="any notes about this series..."
+                value={editNotes}
+                onChange={e => setEditNotes(e.target.value)}
+                className="font-mono text-sm border-dashed bg-muted/30"
+              />
+            </div>
+
             {/* Actions */}
             <div className="!mt-8 flex flex-wrap items-center justify-between gap-3">
               <div className="flex items-center gap-2">
@@ -491,6 +508,12 @@ export const SeriesCard = ({ item, animeId, readerSites, onRemove, userId, onSav
                       </div>
                     )}
                   </>
+                )}
+                {item?.notes && (
+                  <div className="flex items-start gap-1.5 flex-wrap">
+                    <StickyNote className="w-3.5 h-3.5 shrink-0 text-primary mt-0.5" />
+                    <span className="text-xs text-muted-foreground line-clamp-2">{item.notes}</span>
+                  </div>
                 )}
               </div>
             </div>

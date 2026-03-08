@@ -47,7 +47,7 @@ export const useLibraryData = () => {
     const entry = progress.find(p => p.id === id);
     const { error } = await supabase
       .from('anime_progress')
-      .update({ in_library: false })
+      .update({ in_library: false, notes: null })
       .eq('id', id);
 
     if (error) {

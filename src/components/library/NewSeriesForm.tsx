@@ -103,6 +103,7 @@ export const NewSeriesForm = ({ userId, readerSites, progress, onSuccess, onCanc
         user_id: userId,
         anime_id: animeId,
         in_library: true,
+        notes: notes.trim() || null,
         updated_at: new Date().toISOString(),
       }, { onConflict: 'user_id,anime_id' });
 
@@ -122,7 +123,6 @@ export const NewSeriesForm = ({ userId, readerSites, progress, onSuccess, onCanc
           url: selectedReaderUrl,
           anime_id: animeId,
           series_url: seriesUrl.trim() || null,
-          notes: notes.trim() || null,
         });
 
       if (readerError) {

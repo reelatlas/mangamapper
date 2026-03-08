@@ -22,6 +22,7 @@ export type Database = {
           last_read_chapter: string | null
           last_read_volume: number | null
           last_watched_episode: number | null
+          notes: string | null
           updated_at: string
           user_id: string
         }
@@ -32,6 +33,7 @@ export type Database = {
           last_read_chapter?: string | null
           last_read_volume?: number | null
           last_watched_episode?: number | null
+          notes?: string | null
           updated_at?: string
           user_id: string
         }
@@ -42,6 +44,7 @@ export type Database = {
           last_read_chapter?: string | null
           last_read_volume?: number | null
           last_watched_episode?: number | null
+          notes?: string | null
           updated_at?: string
           user_id?: string
         }

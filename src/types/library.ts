@@ -7,6 +7,7 @@ export interface AnimeProgress {
   last_read_volume: number | null;
   last_read_chapter: string | null;
   in_library: boolean;
+  notes: string | null;
   updated_at: string;
 }
 
