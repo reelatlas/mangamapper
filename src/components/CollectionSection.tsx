@@ -465,7 +465,7 @@ export const CollectionSection = ({ anime }: CollectionSectionProps) => {
            {inLibrary && confirmRemove ? (
             <div className="group/lib flex items-center h-7 font-mono text-xs">
               <span className="px-3 py-1 border border-dashed text-foreground">
-                {togglingLibrary ? '...' : 'in_library [✓]'}
+                {togglingLibrary ? '...' : '[✓] in_library'}
               </span>
               <span className="inline ml-3 flex items-center gap-1">
                 <Button
