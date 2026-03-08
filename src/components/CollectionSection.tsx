@@ -557,7 +557,7 @@ export const CollectionSection = ({ anime }: CollectionSectionProps) => {
                   <Button size="sm" onClick={saveProgress} disabled={savingProgress} className="font-mono text-xs h-7 border-dashed">
                     <Check className="w-3 h-3 mr-1" />{savingProgress ? 'saving...' : 'save()'}
                   </Button>
-                  <Button variant="ghost" size="sm" onClick={resetProgress} className="font-mono text-xs h-7 text-muted-foreground">
+                  <Button variant="ghost" size="sm" onClick={resetProgress} className="font-mono text-xs h-7 text-muted-foreground hover:text-muted-foreground hover:bg-muted">
                     <RotateCcw className="w-3 h-3 mr-1" />reset
                   </Button>
                 </div>
