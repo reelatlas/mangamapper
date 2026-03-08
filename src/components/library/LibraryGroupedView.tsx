@@ -80,32 +80,47 @@ export const LibraryGroupedView = ({ userId, readerSites, progress, fetchReaderS
   const [editSeriesAssignments, setEditSeriesAssignments] = useState<SeriesAssignment[]>([]);
   const [confirmingDeleteReaderId, setConfirmingDeleteReaderId] = useState<string | null>(null);
 
-  const sortedReaderGroups = useMemo(() => {
+  type ReaderGroup = { type: 'reader'; name: string; url: string; notes: string | null; entries: ReaderSite[]; latestUpdatedAt: string };
+  type UnassignedGroup = { type: 'unassigned'; entries: AnimeProgress[]; latestUpdatedAt: string };
+  type SortedGroup = ReaderGroup | UnassignedGroup;
+
+  const unassignedProgress = useMemo(() => {
+    const assignedAnimeIds = new Set(readerSites.filter(s => s.anime_id).map(s => s.anime_id));
+    return progress.filter(p => !assignedAnimeIds.has(p.anime_id));
+  }, [progress, readerSites]);
+
+  const sortedGroups = useMemo((): SortedGroup[] => {
     const grouped = readerSites.reduce((acc, site) => {
       const key = site.name.toLowerCase();
       if (!acc[key]) {
-        acc[key] = { name: site.name, url: site.url, notes: site.notes, entries: [], latestUpdatedAt: site.updated_at };
+        acc[key] = { type: 'reader' as const, name: site.name, url: site.url, notes: site.notes, entries: [], latestUpdatedAt: site.updated_at };
       }
       acc[key].entries.push(site);
       if (new Date(site.updated_at) > new Date(acc[key].latestUpdatedAt)) {
         acc[key].latestUpdatedAt = site.updated_at;
       }
       return acc;
-    }, {} as Record<string, { name: string; url: string; notes: string | null; entries: ReaderSite[]; latestUpdatedAt: string }>);
-    const groups = Object.values(grouped);
-    switch (readerSort) {
-      case 'alpha-asc': return groups.sort((a, b) => a.name.localeCompare(b.name));
-      case 'alpha-desc': return groups.sort((a, b) => b.name.localeCompare(a.name));
-      case 'date-asc': return groups.sort((a, b) => new Date(a.latestUpdatedAt).getTime() - new Date(b.latestUpdatedAt).getTime());
-      case 'date-desc': default: return groups.sort((a, b) => new Date(b.latestUpdatedAt).getTime() - new Date(a.latestUpdatedAt).getTime());
-    }
-  }, [readerSites, readerSort]);
+    }, {} as Record<string, ReaderGroup>);
 
-  // Unassigned series: in library but not linked to any reader
-  const unassignedProgress = useMemo(() => {
-    const assignedAnimeIds = new Set(readerSites.filter(s => s.anime_id).map(s => s.anime_id));
-    return progress.filter(p => !assignedAnimeIds.has(p.anime_id));
-  }, [progress, readerSites]);
+    const allGroups: SortedGroup[] = Object.values(grouped);
+
+    if (unassignedProgress.length > 0) {
+      const latestUpdatedAt = unassignedProgress.reduce((latest, p) =>
+        new Date(p.updated_at) > new Date(latest) ? p.updated_at : latest,
+        unassignedProgress[0].updated_at
+      );
+      allGroups.push({ type: 'unassigned', entries: unassignedProgress, latestUpdatedAt });
+    }
+
+    const getName = (g: SortedGroup) => g.type === 'reader' ? g.name : 'unassigned_series';
+
+    switch (readerSort) {
+      case 'alpha-asc': return allGroups.sort((a, b) => getName(a).localeCompare(getName(b)));
+      case 'alpha-desc': return allGroups.sort((a, b) => getName(b).localeCompare(getName(a)));
+      case 'date-asc': return allGroups.sort((a, b) => new Date(a.latestUpdatedAt).getTime() - new Date(b.latestUpdatedAt).getTime());
+      case 'date-desc': default: return allGroups.sort((a, b) => new Date(b.latestUpdatedAt).getTime() - new Date(a.latestUpdatedAt).getTime());
+    }
+  }, [readerSites, readerSort, unassignedProgress]);
 
   const startEditingReader = (group: { name: string; url: string; notes: string | null; entries: ReaderSite[] }) => {
     setConfirmingDeleteReaderId(null);
@@ -295,7 +310,54 @@ export const LibraryGroupedView = ({ userId, readerSites, progress, fetchReaderS
       </div>
 
       <div className="grid gap-8">
-        {sortedReaderGroups.map(group => {
+        {sortedGroups.map(group => {
+          if (group.type === 'unassigned') {
+            const sortedEntries = [...group.entries].sort((a, b) => {
+              const animeA = mockAnimeData.find(m => m.id === a.anime_id);
+              const animeB = mockAnimeData.find(m => m.id === b.anime_id);
+              return (animeA?.title || '').localeCompare(animeB?.title || '');
+            });
+            return (
+              <div key="unassigned" className="space-y-3">
+                <div
+                  className="group relative border border-dashed border-muted-foreground/80 bg-primary/10 p-3 cursor-pointer select-none overflow-hidden"
+                  onClick={() => toggleGroup('unassigned')}
+                >
+                  <div className="flex items-center justify-between gap-2">
+                    <div className="text-sm text-muted-foreground">
+                      <span className="text-muted-foreground/60">// </span>
+                      <span className="text-syntax-green">unassigned_series</span>
+                    </div>
+                    <div className="flex items-center gap-2 flex-shrink-0">
+                      <span className="text-muted-foreground text-sm">({sortedEntries.length})</span>
+                      <TripleArrow collapsed={collapsedGroups.has('unassigned')} />
+                    </div>
+                  </div>
+                  <div className="absolute inset-0 bg-background/90 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center p-3 z-10">
+                    <div className="absolute right-3 flex items-center gap-1 font-mono text-xs text-foreground">
+                      {collapsedGroups.has('unassigned') ? 'expand' : 'collapse'}
+                      <TripleArrow collapsed={collapsedGroups.has('unassigned')} compact />
+                    </div>
+                  </div>
+                </div>
+                {!collapsedGroups.has('unassigned') && (
+                  <div className="grid gap-3">
+                    {sortedEntries.map(item => (
+                      <SeriesCard
+                        key={item.id}
+                        item={item}
+                        readerSites={readerSites}
+                        onRemove={removeFromLibrary}
+                        userId={userId}
+                        onSave={fetchReaderSites}
+                      />
+                    ))}
+                  </div>
+                )}
+              </div>
+            );
+          }
+
           const seriesEntries = group.entries.filter(e => e.anime_id).filter(e => progress.some(p => p.anime_id === e.anime_id)).sort((a, b) => {
             const animeA = mockAnimeData.find(m => m.id === a.anime_id);
             const animeB = mockAnimeData.find(m => m.id === b.anime_id);
@@ -371,7 +433,7 @@ export const LibraryGroupedView = ({ userId, readerSites, progress, fetchReaderS
                       </div>
                       {confirmingDeleteReaderId === group.name ? (
                         <div className="flex items-center gap-1">
-                          <Button variant="ghost" size="icon" onClick={() => { group.entries.forEach(entry => deleteReaderSite(entry.id)); }} className="h-10 w-10 text-muted-foreground hover:text-destructive hover:bg-destructive/10">
+                          <Button variant="ghost" size="icon" onClick={e => { e.stopPropagation(); group.entries.forEach(entry => deleteReaderSite(entry.id)); }} className="h-10 w-10 text-muted-foreground hover:text-destructive hover:bg-destructive/10">
                             <Check className="w-4 h-4" />
                           </Button>
                           <Button variant="ghost" size="icon" onClick={() => setConfirmingDeleteReaderId(null)} className="h-10 w-10 text-muted-foreground hover:text-muted-foreground hover:bg-muted">
@@ -494,46 +556,6 @@ export const LibraryGroupedView = ({ userId, readerSites, progress, fetchReaderS
             </div>
           );
         })}
-        {/* Unassigned series */}
-        {unassignedProgress.length > 0 && (
-          <div className="space-y-3">
-            <div
-              className="group relative border border-dashed border-muted-foreground/80 bg-primary/10 p-3 cursor-pointer select-none overflow-hidden"
-              onClick={() => toggleGroup('unassigned')}
-            >
-              <div className="flex items-center justify-between gap-2">
-                <div className="text-sm text-muted-foreground">
-                  <span className="text-muted-foreground/60">// </span>
-                  <span className="text-syntax-green">unassigned_series</span>
-                </div>
-                <div className="flex items-center gap-2 flex-shrink-0">
-                  <span className="text-muted-foreground text-sm">({unassignedProgress.length})</span>
-                  <TripleArrow collapsed={collapsedGroups.has('unassigned')} />
-                </div>
-              </div>
-              <div className="absolute inset-0 bg-background/90 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center p-3 z-10">
-                <div className="absolute right-3 flex items-center gap-1 font-mono text-xs text-foreground">
-                  {collapsedGroups.has('unassigned') ? 'expand' : 'collapse'}
-                  <TripleArrow collapsed={collapsedGroups.has('unassigned')} compact />
-                </div>
-              </div>
-            </div>
-            {!collapsedGroups.has('unassigned') && (
-              <div className="grid gap-3">
-                {unassignedProgress.map(item => (
-                  <SeriesCard
-                    key={item.id}
-                    item={item}
-                    readerSites={readerSites}
-                    onRemove={removeFromLibrary}
-                    userId={userId}
-                    onSave={fetchReaderSites}
-                  />
-                ))}
-              </div>
-            )}
-          </div>
-        )}
       </div>
     </div>
   );
