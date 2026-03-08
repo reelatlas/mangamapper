@@ -184,7 +184,6 @@ export const CollectionSection = ({ anime }: CollectionSectionProps) => {
 
   const startEditing = () => {
     setShowInlineNewReader(false);
-    setEditNotes(progress?.notes ?? '');
 
     if (linkedReaders.length > 0) {
       setEditReaderAssignments(linkedReaders.map(r => ({
@@ -262,22 +261,6 @@ export const CollectionSection = ({ anime }: CollectionSectionProps) => {
   const saveChanges = async () => {
     if (!user) return;
     setSaving(true);
-
-    // Save series notes to anime_progress
-    const { error: notesError } = await supabase
-      .from('anime_progress')
-      .upsert({
-        user_id: user.id,
-        anime_id: anime.id,
-        notes: editNotes.trim() || null,
-        updated_at: new Date().toISOString(),
-      } as any, { onConflict: 'user_id,anime_id' });
-
-    if (notesError) {
-      toast.error('Failed to save notes');
-      setSaving(false);
-      return;
-    }
 
     // Normalize helper
     const norm = (s: string) => s.trim().toLowerCase();
@@ -392,7 +375,7 @@ export const CollectionSection = ({ anime }: CollectionSectionProps) => {
     return (
       <Card className="border-dashed border-primary/50">
         <div className="terminal-header flex items-center gap-2">
-          <span className="text-muted-foreground">edit_series</span>
+          <span className="text-muted-foreground">edit_readers</span>
           <span className="text-syntax-green">{'>'} <span className="truncate">{anime.title}</span></span>
         </div>
         <CardContent className="p-4">
@@ -461,24 +444,13 @@ export const CollectionSection = ({ anime }: CollectionSectionProps) => {
               </div>
             </div>
 
-            {/* Series notes */}
-            <div className="space-y-1.5">
-              <Label className="text-xs font-mono">
-                <span className="text-syntax-cyan">notes</span>
-                <span className="text-muted-foreground/60"> // optional</span>
-              </Label>
-              <Input
-                placeholder="any notes about this series..."
-                value={editNotes}
-                onChange={e => setEditNotes(e.target.value)}
-                className="font-mono text-sm border-dashed bg-muted/30"
-              />
-            </div>
+
+
 
             {/* Actions */}
             <div className="!mt-8 flex flex-wrap items-center gap-3">
               <Button onClick={saveChanges} disabled={saving} className="font-mono text-xs border-dashed">
-                <Check className="w-3.5 h-3.5 mr-1" />{saving ? 'saving...' : 'save()'}
+                <Check className="w-3.5 h-3.5 mr-1" />{saving ? 'saving...' : 'save_readers()'}
               </Button>
               <Button variant="outline" onClick={cancelEditing} className="font-mono text-xs border-dashed hover:bg-destructive hover:text-destructive-foreground hover:border-destructive">
                 <X className="w-3.5 h-3.5 mr-1" />cancel
