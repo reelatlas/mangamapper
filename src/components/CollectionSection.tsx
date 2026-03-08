@@ -6,7 +6,7 @@ import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
-import { Tv, BookOpen, Glasses, ExternalLink, Pencil, Check, X, Plus, Trash2, RotateCcw } from 'lucide-react';
+import { Tv, BookOpen, Glasses, ExternalLink, Pencil, Check, X, Plus, Trash2, RotateCcw, StickyNote } from 'lucide-react';
 import { toast } from 'sonner';
 import { AnimeSeries } from '@/types/anime';
 import type { ReaderSite, ReaderAssignment } from '@/types/library';
@@ -24,6 +24,7 @@ interface Progress {
   last_read_volume: number | null;
   last_read_chapter: string | null;
   in_library: boolean;
+  notes: string | null;
   updated_at: string;
 }
 
@@ -57,8 +58,9 @@ export const CollectionSection = ({ anime }: CollectionSectionProps) => {
   const [isReaderHovered, setIsReaderHovered] = useState(false);
   const [confirmRemove, setConfirmRemove] = useState(false);
 
-  // Edit state (readers only)
+  // Edit state
   const [editReaderAssignments, setEditReaderAssignments] = useState<ReaderAssignment[]>([]);
+  const [editNotes, setEditNotes] = useState('');
   const [saving, setSaving] = useState(false);
   const [savingProgress, setSavingProgress] = useState(false);
   const [showInlineNewReader, setShowInlineNewReader] = useState(false);
@@ -155,7 +157,7 @@ export const CollectionSection = ({ anime }: CollectionSectionProps) => {
     setTogglingLibrary(true);
 
     if (inLibrary) {
-      const { error } = await supabase.from('anime_progress').update({ in_library: false }).eq('anime_id', anime.id).eq('user_id', user.id);
+      const { error } = await supabase.from('anime_progress').update({ in_library: false, notes: null }).eq('anime_id', anime.id).eq('user_id', user.id);
       if (error) {
         toast.error('Failed to remove from library');
       } else {
@@ -178,6 +180,7 @@ export const CollectionSection = ({ anime }: CollectionSectionProps) => {
 
   const startEditing = () => {
     setShowInlineNewReader(false);
+    setEditNotes(progress?.notes ?? '');
 
     if (linkedReaders.length > 0) {
       setEditReaderAssignments(linkedReaders.map(r => ({
@@ -255,6 +258,22 @@ export const CollectionSection = ({ anime }: CollectionSectionProps) => {
   const saveChanges = async () => {
     if (!user) return;
     setSaving(true);
+
+    // Save series notes to anime_progress
+    const { error: notesError } = await supabase
+      .from('anime_progress')
+      .upsert({
+        user_id: user.id,
+        anime_id: anime.id,
+        notes: editNotes.trim() || null,
+        updated_at: new Date().toISOString(),
+      } as any, { onConflict: 'user_id,anime_id' });
+
+    if (notesError) {
+      toast.error('Failed to save notes');
+      setSaving(false);
+      return;
+    }
 
     // Normalize helper
     const norm = (s: string) => s.trim().toLowerCase();
@@ -362,14 +381,14 @@ export const CollectionSection = ({ anime }: CollectionSectionProps) => {
     );
   }
 
-  // --- Edit mode (readers only) ---
+  // --- Edit mode ---
   if (isEditing) {
     const assignedReaderKeys = editReaderAssignments.map(a => `${a.readerName.toLowerCase()}|${a.readerUrl}`);
 
     return (
       <Card className="border-dashed border-primary/50">
         <div className="terminal-header flex items-center gap-2">
-          <span className="text-muted-foreground">edit_readers</span>
+          <span className="text-muted-foreground">edit_series</span>
           <span className="text-syntax-green">{'>'} <span className="truncate">{anime.title}</span></span>
         </div>
         <CardContent className="p-4">
@@ -438,10 +457,24 @@ export const CollectionSection = ({ anime }: CollectionSectionProps) => {
               </div>
             </div>
 
+            {/* Series notes */}
+            <div className="space-y-1.5">
+              <Label className="text-xs font-mono">
+                <span className="text-syntax-cyan">notes</span>
+                <span className="text-muted-foreground/60"> // optional</span>
+              </Label>
+              <Input
+                placeholder="any notes about this series..."
+                value={editNotes}
+                onChange={e => setEditNotes(e.target.value)}
+                className="font-mono text-sm border-dashed bg-muted/30"
+              />
+            </div>
+
             {/* Actions */}
             <div className="!mt-8 flex flex-wrap items-center gap-3">
               <Button onClick={saveChanges} disabled={saving} className="font-mono text-xs border-dashed">
-                <Check className="w-3.5 h-3.5 mr-1" />{saving ? 'saving...' : 'save_readers()'}
+                <Check className="w-3.5 h-3.5 mr-1" />{saving ? 'saving...' : 'save()'}
               </Button>
               <Button variant="outline" onClick={cancelEditing} className="font-mono text-xs border-dashed hover:bg-destructive hover:text-destructive-foreground hover:border-destructive">
                 <X className="w-3.5 h-3.5 mr-1" />cancel
@@ -609,6 +642,17 @@ export const CollectionSection = ({ anime }: CollectionSectionProps) => {
                 </Button>
               )}
             </div>
+          </div>
+        )}
+
+        {/* Section 4: Series notes */}
+        {inLibrary && progress?.notes && (
+          <div className="space-y-2">
+            <div className="flex items-center gap-1.5 text-xs">
+              <StickyNote className="w-3.5 h-3.5 text-primary" />
+              <span className="text-syntax-cyan">notes</span>
+            </div>
+            <p className="text-xs text-muted-foreground font-mono">{progress.notes}</p>
           </div>
         )}
 
