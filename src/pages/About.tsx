@@ -175,7 +175,7 @@ const About = () => {
                 </li>
                 <li className="flex gap-2">
                   <span className="text-muted-foreground shrink-0">→</span>
-                  <span>very niche, will any find it of use?</span>
+                  <span>personal project to experiment with AI coding, coding was not possible for me before</span>
                 </li>
               </ul>
             )}
