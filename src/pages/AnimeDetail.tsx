@@ -176,7 +176,7 @@ const AnimeDetail = () => {
               onClick={() => setShowAll(!showAll)}
             >
               <span className="text-syntax-cyan">{'//'}</span>
-              {' '}show {'>'} {showAll ? anime.currentEpisode : anime.episodes.length} of {anime.currentEpisode}
+              {' '}show {showAll ? anime.currentEpisode : anime.episodes.length} of {anime.currentEpisode}
               <span className="opacity-0 group-hover:opacity-100 ml-2 text-syntax-cyan transition-opacity">
                 {'>'} {showAll ? 'show_episodes(less)' : 'show_episodes(all)'}
               </span>
