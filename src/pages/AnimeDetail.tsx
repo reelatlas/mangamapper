@@ -177,7 +177,7 @@ const AnimeDetail = () => {
             >
               <span className="text-syntax-cyan">{'//'}</span>
               <span className="ml-1">show {showAll ? anime.currentEpisode : anime.episodes.length} of {anime.currentEpisode}</span>
-              <span className="opacity-0 group-hover:opacity-100 ml-1 text-syntax-cyan transition-opacity">
+              <span className="opacity-0 group-hover:opacity-100 ml-2 text-syntax-cyan transition-opacity">
                 {'>'} {showAll ? 'show_episodes(less)' : 'show_episodes(all)'}
               </span>
             </div>
