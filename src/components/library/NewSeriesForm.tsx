@@ -49,7 +49,7 @@ export const NewSeriesForm = ({ userId, readerSites, progress, onSuccess, onCanc
         return {
           readerName: r.name,
           readerUrl: r.url,
-          seriesUrl: r.series_url || base,
+          seriesUrl: r.series_url ?? '',
           suffix,
           existingSiteId: r.id,
           userModified: false,
