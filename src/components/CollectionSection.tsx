@@ -678,7 +678,7 @@ export const CollectionSection = ({ anime }: CollectionSectionProps) => {
                   onClick={startEditing}
                 >
                   <span className="text-syntax-cyan">//</span> reader(null)
-                  <span className={`${isReaderHovered ? 'inline' : 'hidden'} text-primary ml-2`}>{'>'} add_reader</span>
+                  <span className={`${isReaderHovered ? 'inline' : 'hidden'} text-primary ml-2`}>{'>'} add_readers</span>
                 </span>
               ) : (
                 <Button variant="ghost" size="sm" onClick={startEditing} className="font-mono text-xs h-7 gap-1 text-muted-foreground">
