@@ -459,7 +459,7 @@ export const SeriesCard = ({ item, animeId, readerSites, onRemove, userId, onSav
     );
   }
 
-  const linkedReaders = getReadersForAnime(resolvedAnimeId!, readerSites);
+  const linkedReaders = getReadersForAnime(resolvedAnimeId!, readerSites).sort((a, b) => a.name.localeCompare(b.name));
 
   // View mode
   return (

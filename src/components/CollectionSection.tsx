@@ -182,7 +182,7 @@ export const CollectionSection = ({ anime }: CollectionSectionProps) => {
         setInLibrary(true);
         // Re-fetch persisted readers and progress
         const { data: readers } = await supabase.from('manga_reader_sites').select('*').eq('user_id', user.id).eq('anime_id', anime.id);
-        if (readers) setLinkedReaders(readers);
+        if (readers) setLinkedReaders(readers.sort((a, b) => a.name.localeCompare(b.name)));
         const { data: prog } = await supabase.from('anime_progress').select('*').eq('user_id', user.id).eq('anime_id', anime.id).single();
         if (prog) {
           setProgress(prog);
