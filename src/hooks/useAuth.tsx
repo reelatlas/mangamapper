@@ -19,6 +19,15 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
   const [user, setUser] = useState<User | null>(null);
   const [session, setSession] = useState<Session | null>(null);
   const [loading, setLoading] = useState(true);
+  const userIdRef = useRef<string | null>(null);
+
+  const stableSetUser = (newUser: User | null) => {
+    const newId = newUser?.id ?? null;
+    if (newId !== userIdRef.current) {
+      userIdRef.current = newId;
+      setUser(newUser);
+    }
+  };
 
   useEffect(() => {
     // Set up auth state listener FIRST
