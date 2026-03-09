@@ -442,7 +442,7 @@ export const CollectionSection = ({ anime }: CollectionSectionProps) => {
     return (
       <Card className="border-dashed border-primary/50">
         <div className="terminal-header flex items-center gap-2">
-          <span className="text-muted-foreground">{isAddingReaders ? 'add_readers' : 'edit_readers'}</span>
+          <span className="text-muted-foreground">{isAddingReaders ? 'add_reader' : 'edit_readers'}</span>
           <span className="text-syntax-green">{'>'} <span className="truncate">{anime.title}</span></span>
         </div>
         <CardContent className="p-4">
@@ -518,7 +518,7 @@ export const CollectionSection = ({ anime }: CollectionSectionProps) => {
             <div className="!mt-8 flex flex-wrap items-center gap-3">
               <Button onClick={saveChanges} disabled={saving || !isReadersDirty} className="font-mono text-xs border-dashed">
                 {isAddingReaders ? <Plus className="w-3.5 h-3.5 mr-1" /> : <Check className="w-3.5 h-3.5 mr-1" />}
-                {saving ? 'saving...' : isAddingReaders ? 'add_readers()' : 'save_readers()'}
+                {saving ? 'saving...' : isAddingReaders ? 'add_reader()' : 'save_changes()'}
               </Button>
               <Button variant="outline" onClick={cancelEditing} className="font-mono text-xs border-dashed hover:bg-destructive hover:text-destructive-foreground hover:border-destructive">
                 <X className="w-3.5 h-3.5 mr-1" />cancel
@@ -677,8 +677,8 @@ export const CollectionSection = ({ anime }: CollectionSectionProps) => {
                   onMouseLeave={() => setIsReaderHovered(false)}
                   onClick={startEditing}
                 >
-                  <span className="text-syntax-cyan">//</span> readers(null)
-                  <span className={`${isReaderHovered ? 'inline' : 'hidden'} text-primary ml-2`}>{'>'} add_readers</span>
+                  <span className="text-syntax-cyan">//</span> reader(null)
+                  <span className={`${isReaderHovered ? 'inline' : 'hidden'} text-primary ml-2`}>{'>'} add_reader</span>
                 </span>
               ) : (
                 <Button variant="ghost" size="sm" onClick={startEditing} className="font-mono text-xs h-7 gap-1 text-muted-foreground">
