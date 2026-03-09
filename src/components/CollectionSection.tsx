@@ -170,7 +170,7 @@ export const CollectionSection = ({ anime }: CollectionSectionProps) => {
         
       }
     } else {
-      const { error } = await supabase.from('anime_progress').upsert({ user_id: user.id, anime_id: anime.id, in_library: true }, { onConflict: 'user_id,anime_id' });
+      const { error } = await supabase.from('anime_progress').upsert({ user_id: user.id, anime_id: anime.id, in_library: true, updated_at: new Date().toISOString() }, { onConflict: 'user_id,anime_id' });
       if (error) {
         toast.error('Failed to add to library');
       } else {

@@ -46,7 +46,7 @@ export const useLibraryData = () => {
   const removeFromLibrary = async (id: string) => {
     const { error } = await supabase
       .from('anime_progress')
-      .update({ in_library: false })
+      .update({ in_library: false, updated_at: new Date().toISOString() })
       .eq('id', id);
 
     if (error) {
