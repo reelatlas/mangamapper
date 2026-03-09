@@ -167,7 +167,7 @@ export const CollectionSection = ({ anime }: CollectionSectionProps) => {
       } else {
         toast.success('Removed from library');
         setInLibrary(false);
-        setLinkedReaders([]);
+        
       }
     } else {
       const { error } = await supabase.from('anime_progress').upsert({ user_id: user.id, anime_id: anime.id, in_library: true }, { onConflict: 'user_id,anime_id' });
@@ -615,7 +615,7 @@ export const CollectionSection = ({ anime }: CollectionSectionProps) => {
         )}
 
         {/* Section 3: Reader links */}
-        {inLibrary && anime.hasManga && (
+        {anime.hasManga && (
           <div className="space-y-2">
             <div className="flex items-center gap-1.5 text-xs">
               <Glasses className={`w-3.5 h-3.5 transition-colors ${linkedReaders.length > 0 ? 'text-primary' : 'text-muted-foreground'}`} />
@@ -661,7 +661,7 @@ export const CollectionSection = ({ anime }: CollectionSectionProps) => {
         )}
 
         {/* Section 4: Series notes */}
-        {inLibrary && (
+        {(
           <div className="space-y-2">
             <div className="flex items-center gap-1.5 text-xs">
               <StickyNote className={`w-3.5 h-3.5 ${progress?.notes ? 'text-primary' : 'text-muted-foreground'}`} />
