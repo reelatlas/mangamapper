@@ -236,7 +236,7 @@ export const NewSeriesForm = ({ userId, readerSites, progress, onSuccess, onCanc
               <div className="flex-1 min-w-0">
                 <SeriesCombobox
                   value={animeId}
-                  onValueChange={setAnimeId}
+                  onValueChange={handleAnimeSelect}
                   excludeIds={progress.map(p => p.anime_id)}
                   placeholder="search series"
                 />
