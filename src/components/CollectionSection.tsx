@@ -522,7 +522,7 @@ export const CollectionSection = ({ anime }: CollectionSectionProps) => {
            {inLibrary && confirmRemove ? (
             <div className="group/lib flex items-center h-7 font-mono text-xs">
               <span className="px-3 py-1 border border-dashed text-foreground">
-                {togglingLibrary ? '...' : '[✓] in_library'}
+                {togglingLibrary ? '...' : <><span className="text-foreground">[✓]</span><span className="text-muted-foreground"> in_library</span></>}
               </span>
               <span className="inline ml-3 flex items-center gap-1">
                 <Button
@@ -547,7 +547,7 @@ export const CollectionSection = ({ anime }: CollectionSectionProps) => {
           ) : (
             <div className="group/lib flex items-center h-7 font-mono text-xs cursor-pointer" onClick={inLibrary ? () => setConfirmRemove(true) : toggleLibrary}>
               <span className={`px-3 py-1 border border-dashed ${inLibrary ? 'text-foreground' : 'text-muted-foreground'}`}>
-                {togglingLibrary ? '...' : inLibrary ? '[✓] in_library' : '[ ] in_library'}
+                {togglingLibrary ? '...' : inLibrary ? <><span className="text-foreground">[✓]</span><span className="text-muted-foreground"> in_library</span></> : '[ ] in_library'}
               </span>
               <span
                 className={`hidden group-hover/lib:inline ml-3 ${inLibrary ? 'text-destructive' : 'text-primary'}`}
