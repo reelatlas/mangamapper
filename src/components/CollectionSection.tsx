@@ -700,7 +700,7 @@ export const CollectionSection = ({ anime }: CollectionSectionProps) => {
                   autoFocus
                 />
                 <div className="flex items-center gap-2">
-                  <Button size="sm" onClick={saveNotes} disabled={savingNotes} className="font-mono text-xs h-7 border-dashed">
+                  <Button size="sm" onClick={saveNotes} disabled={savingNotes || editNotesValue === (progress?.notes ?? '')} className="font-mono text-xs h-7 border-dashed">
                     <Check className="w-3 h-3 mr-1" />{savingNotes ? 'saving...' : 'save()'}
                   </Button>
                   <Button variant="ghost" size="sm" onClick={cancelEditingNotes} className="font-mono text-xs h-7 text-muted-foreground hover:text-muted-foreground hover:bg-muted">
