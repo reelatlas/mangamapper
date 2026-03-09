@@ -442,7 +442,7 @@ export const CollectionSection = ({ anime }: CollectionSectionProps) => {
     return (
       <Card className="border-dashed border-primary/50">
         <div className="terminal-header flex items-center gap-2">
-          <span className="text-muted-foreground">{isAddingReaders ? 'add_readers' : 'edit_readers'}</span>
+          <span className="text-muted-foreground">{isAddingReaders ? 'add_reader' : 'edit_readers'}</span>
           <span className="text-syntax-green">{'>'} <span className="truncate">{anime.title}</span></span>
         </div>
         <CardContent className="p-4">
