@@ -146,7 +146,7 @@ const About = () => {
               <ul className="mt-3 space-y-2.5 text-sm text-foreground/70">
                 <li className="flex gap-2">
                   <span className="text-muted-foreground shrink-0">→</span>
-                  <span>simple anime to manga tracking, existing anime DBs or all-in-one readers are robust and feature rich</span>
+                  <span>simple anime to manga tracking, existing anime DBs or all-in-one readers are too robust and feature rich</span>
                 </li>
                 <li className="flex gap-2">
                   <span className="text-muted-foreground shrink-0">→</span>
