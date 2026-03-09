@@ -76,6 +76,7 @@ const Readers = () => {
   const [editSiteUrl, setEditSiteUrl] = useState('');
   const [editSiteNotes, setEditSiteNotes] = useState('');
   const [editSeriesAssignments, setEditSeriesAssignments] = useState<SeriesAssignment[]>([]);
+  const [editInitialSnapshot, setEditInitialSnapshot] = useState<string>('');
   const [confirmingDeleteReaderId, setConfirmingDeleteReaderId] = useState<string | null>(null);
   const [showAddReaderForm, setShowAddReaderForm] = useState(false);
   useEffect(() => {
@@ -254,6 +255,16 @@ const Readers = () => {
     setShowAddReaderForm(false);
     fetchReaderSites();
   };
+  const makeEditSnapshot = (name: string, url: string, notes: string, assignments: SeriesAssignment[]) => {
+    return JSON.stringify({ name, url, notes, assignments: assignments.map(a => ({ animeId: a.animeId, seriesUrl: a.seriesUrl })) });
+  };
+
+  const isEditReaderDirty = useMemo(() => {
+    if (!editingReaderName) return false;
+    const current = makeEditSnapshot(editSiteName, editSiteUrl, editSiteNotes, editSeriesAssignments);
+    return current !== editInitialSnapshot;
+  }, [editingReaderName, editSiteName, editSiteUrl, editSiteNotes, editSeriesAssignments, editInitialSnapshot]);
+
   const startEditingReader = (group: {
     name: string;
     url: string;
@@ -268,22 +279,25 @@ const Readers = () => {
     const seriesEntries = group.entries
       .filter(e => e.anime_id)
       .sort((a, b) => new Date(a.created_at).getTime() - new Date(b.created_at).getTime());
+    let assignments: SeriesAssignment[];
     if (seriesEntries.length > 0) {
-      setEditSeriesAssignments(seriesEntries.map(e => ({
+      assignments = seriesEntries.map(e => ({
         animeId: e.anime_id || '',
         seriesUrl: e.series_url || '',
         suffix: '',
         existingId: e.id,
         userModified: true
-      })));
+      }));
     } else {
-      setEditSeriesAssignments([{
+      assignments = [{
         animeId: '',
         seriesUrl: '',
         suffix: '',
         userModified: false
-      }]);
+      }];
     }
+    setEditSeriesAssignments(assignments);
+    setEditInitialSnapshot(makeEditSnapshot(group.name, group.url, group.notes || '', assignments));
   };
   const cancelEditingReader = () => {
     setEditingReaderName(null);
@@ -520,7 +534,7 @@ const Readers = () => {
                   </div>
                   
                             <div className="flex gap-2 !mt-8">
-                    <Button type="submit" className="font-mono text-xs border-dashed">
+                    <Button type="submit" disabled={!newSiteName.trim()} className="font-mono text-xs border-dashed">
                       <Plus className="w-3.5 h-3.5 mr-1" />
                       add_reader()
                     </Button>
@@ -625,7 +639,7 @@ const Readers = () => {
                             
                             <div className="!mt-8 flex flex-wrap items-center justify-between gap-3">
                               <div className="flex items-center gap-2">
-                                <Button onClick={() => saveReaderEdit(group.entries)} className="font-mono text-xs border-dashed">
+                                <Button onClick={() => saveReaderEdit(group.entries)} disabled={!isEditReaderDirty || !editSiteName.trim()} className="font-mono text-xs border-dashed">
                                   <Check className="w-3.5 h-3.5 mr-1" />
                                   save_changes()
                                 </Button>
