@@ -677,7 +677,7 @@ export const CollectionSection = ({ anime }: CollectionSectionProps) => {
                   onMouseLeave={() => setIsReaderHovered(false)}
                   onClick={startEditing}
                 >
-                  <span className="text-syntax-cyan">//</span> reader(null)
+                  <span className="text-syntax-cyan">//</span> readers(null)
                   <span className={`${isReaderHovered ? 'inline' : 'hidden'} text-primary ml-2`}>{'>'} add_readers</span>
                 </span>
               ) : (
