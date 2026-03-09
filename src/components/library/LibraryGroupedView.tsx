@@ -129,7 +129,7 @@ export const LibraryGroupedView = ({ userId, readerSites, progress, fetchReaderS
     setEditSiteName(group.name);
     setEditSiteUrl(group.url);
     setEditSiteNotes(group.notes || '');
-    const seriesEntries = group.entries.filter(e => e.anime_id).sort((a, b) => new Date(a.created_at).getTime() - new Date(b.created_at).getTime());
+    const seriesEntries = group.entries.filter(e => e.anime_id && progress.some(p => p.anime_id === e.anime_id)).sort((a, b) => new Date(a.created_at).getTime() - new Date(b.created_at).getTime());
     if (seriesEntries.length > 0) {
       setEditSeriesAssignments(seriesEntries.map(e => ({ animeId: e.anime_id || '', seriesUrl: e.series_url || '', suffix: '', existingId: e.id, userModified: true })));
     } else {
