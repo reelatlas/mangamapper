@@ -43,6 +43,7 @@ export const SeriesCard = ({ item, animeId, readerSites, onRemove, userId, onSav
   const [saving, setSaving] = useState(false);
   const [showInlineNewReader, setShowInlineNewReader] = useState(false);
   const [newlyCreatedReader, setNewlyCreatedReader] = useState<{name: string, url: string} | null>(null);
+  const [initialEditSnapshot, setInitialEditSnapshot] = useState<string | null>(null);
 
   const resolvedAnimeId = item?.anime_id ?? animeId;
   const anime = resolvedAnimeId ? getAnimeById(resolvedAnimeId) : null;
@@ -63,6 +64,18 @@ export const SeriesCard = ({ item, animeId, readerSites, onRemove, userId, onSav
     }
     return options.sort((a, b) => a.name.localeCompare(b.name));
   }, [readerSites, newlyCreatedReader]);
+
+  const isEditSeriesDirty = useMemo(() => {
+    if (!initialEditSnapshot) return false;
+    const current = JSON.stringify({
+      episode: editWatchedEpisode,
+      volume: editReadVolume,
+      chapter: editReadChapter,
+      notes: editNotes,
+      assignments: JSON.stringify(editReaderAssignments.map(a => ({ readerName: a.readerName, readerUrl: a.readerUrl, seriesUrl: a.seriesUrl }))),
+    });
+    return current !== initialEditSnapshot;
+  }, [editWatchedEpisode, editReadVolume, editReadChapter, editNotes, editReaderAssignments, initialEditSnapshot]);
 
   if (!anime) return null;
 
@@ -89,6 +102,17 @@ export const SeriesCard = ({ item, animeId, readerSites, onRemove, userId, onSav
     } else {
       setEditReaderAssignments([{ readerName: '', readerUrl: '', seriesUrl: '', suffix: '', userModified: false }]);
     }
+    const linkedReaders2 = getReadersForAnime(resolvedAnimeId!, readerSites).sort((a, b) => a.name.localeCompare(b.name));
+    const snapshotAssignments = linkedReaders2.length > 0
+      ? linkedReaders2.map(r => ({ readerName: r.name, readerUrl: r.url, seriesUrl: r.series_url || '' }))
+      : [{ readerName: '', readerUrl: '', seriesUrl: '' }];
+    setInitialEditSnapshot(JSON.stringify({
+      episode: item?.last_watched_episode?.toString() ?? '',
+      volume: item?.last_read_volume?.toString() ?? '',
+      chapter: item?.last_read_chapter ?? '',
+      notes: item?.notes ?? '',
+      assignments: JSON.stringify(snapshotAssignments),
+    }));
     setIsEditing(true);
   };
 
@@ -429,7 +453,7 @@ export const SeriesCard = ({ item, animeId, readerSites, onRemove, userId, onSav
             {/* Actions */}
             <div className="!mt-8 flex flex-wrap items-center justify-between gap-3">
               <div className="flex items-center gap-2">
-                <Button onClick={saveChanges} disabled={saving} className="font-mono text-xs border-dashed">
+                <Button onClick={saveChanges} disabled={saving || !isEditSeriesDirty} className="font-mono text-xs border-dashed">
                   <Check className="w-3.5 h-3.5 mr-1" />{saving ? 'saving...' : 'save_changes()'}
                 </Button>
                 <Button variant="outline" onClick={cancelEditing} className="font-mono text-xs border-dashed hover:bg-destructive hover:text-destructive-foreground hover:border-destructive">

@@ -80,6 +80,7 @@ export const LibraryGroupedView = ({ userId, readerSites, progress, fetchReaderS
   const [editSiteNotes, setEditSiteNotes] = useState('');
   const [editSeriesAssignments, setEditSeriesAssignments] = useState<SeriesAssignment[]>([]);
   const [confirmingDeleteReaderId, setConfirmingDeleteReaderId] = useState<string | null>(null);
+  const [initialEditReaderSnapshot, setInitialEditReaderSnapshot] = useState<string | null>(null);
 
   type ReaderGroup = { type: 'reader'; name: string; url: string; notes: string | null; entries: ReaderSite[]; latestUpdatedAt: string };
   type UnassignedGroup = { type: 'unassigned'; entries: AnimeProgress[]; latestUpdatedAt: string };
@@ -123,6 +124,17 @@ export const LibraryGroupedView = ({ userId, readerSites, progress, fetchReaderS
     }
   }, [readerSites, readerSort, unassignedProgress]);
 
+  const isEditReaderDirty = useMemo(() => {
+    if (!initialEditReaderSnapshot) return false;
+    const current = JSON.stringify({
+      name: editSiteName,
+      url: editSiteUrl,
+      notes: editSiteNotes,
+      assignments: JSON.stringify(editSeriesAssignments.map(a => ({ animeId: a.animeId, seriesUrl: a.seriesUrl }))),
+    });
+    return current !== initialEditReaderSnapshot;
+  }, [editSiteName, editSiteUrl, editSiteNotes, editSeriesAssignments, initialEditReaderSnapshot]);
+
   const startEditingReader = (group: { name: string; url: string; notes: string | null; entries: ReaderSite[] }) => {
     setConfirmingDeleteReaderId(null);
     setEditingReaderName(group.name.toLowerCase());
@@ -130,6 +142,15 @@ export const LibraryGroupedView = ({ userId, readerSites, progress, fetchReaderS
     setEditSiteUrl(group.url);
     setEditSiteNotes(group.notes || '');
     const seriesEntries = group.entries.filter(e => e.anime_id && progress.some(p => p.anime_id === e.anime_id)).sort((a, b) => new Date(a.created_at).getTime() - new Date(b.created_at).getTime());
+    const snapshotAssignments = seriesEntries.length > 0
+      ? seriesEntries.map(e => ({ animeId: e.anime_id || '', seriesUrl: e.series_url || '' }))
+      : [{ animeId: '', seriesUrl: '' }];
+    setInitialEditReaderSnapshot(JSON.stringify({
+      name: group.name,
+      url: group.url,
+      notes: group.notes || '',
+      assignments: JSON.stringify(snapshotAssignments),
+    }));
     if (seriesEntries.length > 0) {
       setEditSeriesAssignments(seriesEntries.map(e => ({ animeId: e.anime_id || '', seriesUrl: e.series_url || '', suffix: '', existingId: e.id, userModified: true })));
     } else {
@@ -144,6 +165,7 @@ export const LibraryGroupedView = ({ userId, readerSites, progress, fetchReaderS
     setEditSiteNotes('');
     setEditSeriesAssignments([]);
     setConfirmingDeleteReaderId(null);
+    setInitialEditReaderSnapshot(null);
   };
 
   const addEditSeriesRow = () => {
@@ -443,7 +465,7 @@ export const LibraryGroupedView = ({ userId, readerSites, progress, fetchReaderS
                     </div>
                     <div className="!mt-8 flex flex-wrap items-center justify-between gap-3">
                       <div className="flex items-center gap-2">
-                        <Button onClick={() => saveReaderEdit(group.entries)} className="font-mono text-xs border-dashed">
+                        <Button onClick={() => saveReaderEdit(group.entries)} disabled={!isEditReaderDirty || !editSiteName.trim()} className="font-mono text-xs border-dashed">
                           <Check className="w-3.5 h-3.5 mr-1" />save_changes()
                         </Button>
                         <Button variant="outline" onClick={cancelEditingReader} className="font-mono text-xs border-dashed hover:bg-destructive hover:text-destructive-foreground hover:border-destructive">
