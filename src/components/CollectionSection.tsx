@@ -195,21 +195,35 @@ export const CollectionSection = ({ anime }: CollectionSectionProps) => {
     setTogglingLibrary(false);
   };
 
+  const [initialReaderSnapshot, setInitialReaderSnapshot] = useState<string>('');
+
+  const makeReaderSnapshot = (assignments: ReaderAssignment[]) => {
+    return JSON.stringify(assignments.map(a => ({ readerName: a.readerName, readerUrl: a.readerUrl, seriesUrl: a.seriesUrl })));
+  };
+
+  const isReadersDirty = useMemo(() => {
+    if (!isEditing) return false;
+    return makeReaderSnapshot(editReaderAssignments) !== initialReaderSnapshot;
+  }, [isEditing, editReaderAssignments, initialReaderSnapshot]);
+
   const startEditing = () => {
     setShowInlineNewReader(false);
 
+    let assignments: ReaderAssignment[];
     if (linkedReaders.length > 0) {
-      setEditReaderAssignments(linkedReaders.map(r => ({
+      assignments = linkedReaders.map(r => ({
         readerName: r.name,
         readerUrl: r.url,
         seriesUrl: r.series_url || '',
         suffix: '',
         existingSiteId: r.id,
         userModified: true,
-      })));
+      }));
     } else {
-      setEditReaderAssignments([{ readerName: '', readerUrl: '', seriesUrl: '', suffix: '', userModified: false }]);
+      assignments = [{ readerName: '', readerUrl: '', seriesUrl: '', suffix: '', userModified: false }];
     }
+    setEditReaderAssignments(assignments);
+    setInitialReaderSnapshot(makeReaderSnapshot(assignments));
     setConfirmRemove(false);
     setIsEditing(true);
   };
