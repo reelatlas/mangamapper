@@ -243,7 +243,7 @@ export const NewSeriesForm = ({ userId, readerSites, progress, onSuccess, onCanc
               </div>
               {animeId && (
                 <Button type="button" variant="ghost" size="icon"
-                  onClick={() => setAnimeId('')}
+                  onClick={() => handleAnimeSelect('')}
                   className="text-muted-foreground hover:text-destructive hover:bg-destructive/10 flex-shrink-0">
                   <Trash2 className="w-4 h-4" />
                 </Button>
