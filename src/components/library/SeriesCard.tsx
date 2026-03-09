@@ -476,8 +476,8 @@ export const SeriesCard = ({ item, animeId, readerSites, onRemove, userId, onSav
             )}
             <div className="flex-1 min-w-0 overflow-hidden">
               <span className="text-sm text-syntax-green line-clamp-2">{anime.title}</span>
-              <div className="flex flex-col gap-1.5 mt-2 text-xs">
-                <div className="flex items-center gap-1.5 flex-wrap">
+              <div className="flex items-center gap-4 mt-2 text-xs flex-wrap">
+                <div className="flex items-center gap-1.5">
                   <Tv className={`w-3.5 h-3.5 shrink-0 ${item?.last_watched_episode != null ? "text-primary" : "text-muted-foreground"}`} />
                   <span>
                     <span className="text-muted-foreground">ep:</span>
@@ -485,7 +485,7 @@ export const SeriesCard = ({ item, animeId, readerSites, onRemove, userId, onSav
                   </span>
                 </div>
                 {anime.hasManga ? (
-                  <div className="flex items-center gap-1.5 flex-wrap">
+                  <div className="flex items-center gap-1.5">
                     <BookOpen className={`w-3.5 h-3.5 shrink-0 ${(item?.last_read_volume != null || item?.last_read_chapter != null) ? "text-primary" : "text-muted-foreground"}`} />
                     <span>
                       <span className="text-muted-foreground">vol:</span>
@@ -498,13 +498,10 @@ export const SeriesCard = ({ item, animeId, readerSites, onRemove, userId, onSav
                     </span>
                   </div>
                 ) : (
-                  <>
-                    <div className="flex items-center gap-1.5 flex-wrap">
-                      <BookOpen className="w-3.5 h-3.5 shrink-0 text-muted-foreground" />
-                      <span className="text-muted-foreground">anime_original; no_manga</span>
-                    </div>
-                    <div className="min-h-5" />
-                  </>
+                  <div className="flex items-center gap-1.5">
+                    <BookOpen className="w-3.5 h-3.5 shrink-0 text-muted-foreground" />
+                    <span className="text-muted-foreground">anime_original; no_manga</span>
+                  </div>
                 )}
                 {anime.hasManga && (
                   <>
