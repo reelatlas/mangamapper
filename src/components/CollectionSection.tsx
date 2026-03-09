@@ -167,7 +167,7 @@ export const CollectionSection = ({ anime }: CollectionSectionProps) => {
       } else {
         toast.success('Removed from library');
         setInLibrary(false);
-        setLinkedReaders([]);
+        
       }
     } else {
       const { error } = await supabase.from('anime_progress').upsert({ user_id: user.id, anime_id: anime.id, in_library: true }, { onConflict: 'user_id,anime_id' });
