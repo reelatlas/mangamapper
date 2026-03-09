@@ -90,6 +90,17 @@ export const SeriesCard = ({ item, animeId, readerSites, onRemove, userId, onSav
     } else {
       setEditReaderAssignments([{ readerName: '', readerUrl: '', seriesUrl: '', suffix: '', userModified: false }]);
     }
+    const linkedReaders2 = getReadersForAnime(resolvedAnimeId!, readerSites).sort((a, b) => a.name.localeCompare(b.name));
+    const snapshotAssignments = linkedReaders2.length > 0
+      ? linkedReaders2.map(r => ({ readerName: r.name, readerUrl: r.url, seriesUrl: r.series_url || '' }))
+      : [{ readerName: '', readerUrl: '', seriesUrl: '' }];
+    setInitialEditSnapshot(JSON.stringify({
+      episode: item?.last_watched_episode?.toString() ?? '',
+      volume: item?.last_read_volume?.toString() ?? '',
+      chapter: item?.last_read_chapter ?? '',
+      notes: item?.notes ?? '',
+      assignments: JSON.stringify(snapshotAssignments),
+    }));
     setIsEditing(true);
   };
 
