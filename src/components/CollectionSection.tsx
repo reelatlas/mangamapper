@@ -449,7 +449,7 @@ export const CollectionSection = ({ anime }: CollectionSectionProps) => {
           <div className="space-y-2">
             {/* Reader assignments */}
             <div>
-              <p className="text-xs text-muted-foreground mb-3 font-mono">assign_to <span className="text-muted-foreground/60">// optional</span></p>
+              
               <div className="space-y-6 sm:space-y-3">
                 {editReaderAssignments.map((assignment, index) => {
                   const currentKey = assignment.readerName ? `${assignment.readerName.toLowerCase()}|${assignment.readerUrl}` : '';
