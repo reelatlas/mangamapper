@@ -91,7 +91,7 @@ export const CollectionSection = ({ anime }: CollectionSectionProps) => {
       setProgress(null);
       setInLibrary(false);
     }
-    setLinkedReaders(linkedRes.data || []);
+    setLinkedReaders((linkedRes.data || []).sort((a, b) => a.name.localeCompare(b.name)));
     setAllReaderSites(allReadersRes.data || []);
     setLoading(false);
   }, [user, anime.id]);
