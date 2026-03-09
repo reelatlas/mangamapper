@@ -329,7 +329,7 @@ export const SeriesCard = ({ item, animeId, readerSites, onRemove, userId, onSav
                         placeholder="—"
                         value={editReadVolume}
                         onChange={e => setEditReadVolume(e.target.value)}
-                        className="font-mono text-sm border-dashed bg-muted/30 w-24 h-7"
+                        className="font-mono text-sm border-dashed bg-muted/30 w-24 h-10"
                       />
                     </div>
                     <div>
