@@ -276,40 +276,40 @@ export const NewSeriesForm = ({ userId, readerSites, progress, onSuccess, onCanc
       </div>
       <CardContent className="p-4">
         <form onSubmit={handleSubmit} className="space-y-2">
-          <div className="space-y-1.5">
-            <Label className="text-xs">
-              <span className="text-syntax-cyan">series</span>
-            </Label>
-            <div className="flex gap-2 items-center">
-              <div className="flex-1 min-w-0">
-                <SeriesCombobox
-                  value={animeId}
-                  onValueChange={handleAnimeSelect}
-                  excludeIds={progress.map(p => p.anime_id)}
-                  placeholder="search series"
-                />
+          <div className="space-y-3">
+            <div className="space-y-1.5">
+              <Label className="text-xs">
+                <span className="text-syntax-cyan">series</span>
+              </Label>
+              <div className="flex gap-2 items-center">
+                <div className="flex-1 min-w-0">
+                  <SeriesCombobox
+                    value={animeId}
+                    onValueChange={handleAnimeSelect}
+                    excludeIds={progress.map(p => p.anime_id)}
+                    placeholder="search series"
+                  />
+                </div>
+                {animeId && (
+                  <Button type="button" variant="ghost" size="icon"
+                    onClick={() => handleAnimeSelect('')}
+                    className="text-muted-foreground hover:text-destructive hover:bg-destructive/10 flex-shrink-0">
+                    <Trash2 className="w-4 h-4" />
+                  </Button>
+                )}
               </div>
-              {animeId && (
-                <Button type="button" variant="ghost" size="icon"
-                  onClick={() => handleAnimeSelect('')}
-                  className="text-muted-foreground hover:text-destructive hover:bg-destructive/10 flex-shrink-0">
-                  <Trash2 className="w-4 h-4" />
-                </Button>
-              )}
             </div>
-          </div>
-
-          {/* Notes */}
-          <div className="!mt-8 space-y-1.5">
-            <Label className="text-xs">
-              <span className="text-syntax-cyan">series_notes</span>
-            </Label>
-            <Input
-              placeholder="best Berserk scans for golden age arc"
-              value={notes}
-              onChange={(e) => setNotes(e.target.value)}
-              className="font-mono text-sm border-dashed bg-muted/30"
-            />
+            <div className="space-y-1.5">
+              <Label className="text-xs">
+                <span className="text-syntax-cyan">series_notes</span>
+              </Label>
+              <Input
+                placeholder="best Berserk scans for golden age arc"
+                value={notes}
+                onChange={(e) => setNotes(e.target.value)}
+                className="font-mono text-sm border-dashed bg-muted/30"
+              />
+            </div>
           </div>
 
           {/* assign_to readers */}
