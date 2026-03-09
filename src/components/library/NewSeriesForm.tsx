@@ -44,6 +44,7 @@ export const NewSeriesForm = ({ userId, readerSites, progress, onSuccess, onCanc
     // Populate reader assignments from existing reader sites
     const matchingReaders = readerSites.filter(s => s.anime_id === id);
     if (matchingReaders.length > 0) {
+      setInitialExistingSiteIds(matchingReaders.map(r => r.id));
       setEditReaderAssignments(matchingReaders.map(r => {
         const base = r.url ? (r.url.endsWith('/') ? r.url : r.url + '/') : '';
         const suffix = base && r.series_url?.startsWith(base) ? r.series_url.slice(base.length) : '';
