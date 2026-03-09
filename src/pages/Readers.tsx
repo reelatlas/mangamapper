@@ -677,7 +677,7 @@ const Readers = () => {
                               </div>
                             </div>
                             {group.notes && <div className="text-xs overflow-hidden pr-28">
-                                <span className="text-syntax-cyan">notes</span>
+                                <span className="text-syntax-cyan">reader_notes</span>
                                 <span className="text-muted-foreground">: </span>
                                 <span className="text-muted-foreground break-all">{group.notes}</span>
                               </div>}

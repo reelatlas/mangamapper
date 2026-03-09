@@ -298,7 +298,7 @@ export const NewSeriesForm = ({ userId, readerSites, progress, onSuccess, onCanc
           {/* Notes */}
           <div className="!mt-8 space-y-1.5">
             <Label className="text-xs">
-              <span className="text-syntax-cyan">notes</span>
+              <span className="text-syntax-cyan">series_notes</span>
               <span className="text-muted-foreground/60"> // optional</span>
             </Label>
             <Input

@@ -702,8 +702,8 @@ export const CollectionSection = ({ anime }: CollectionSectionProps) => {
                 onMouseLeave={() => setIsNotesHovered(false)}
                 onClick={startEditingNotes}
               >
-                <span className="text-syntax-cyan">//</span> notes(null)
-                <span className={`${isNotesHovered ? 'inline' : 'hidden'} text-primary ml-2`}>{'>'} add_notes</span>
+                <span className="text-syntax-cyan">//</span> series_notes(null)
+                <span className={`${isNotesHovered ? 'inline' : 'hidden'} text-primary ml-2`}>{'>'} add_series_notes</span>
               </span>
             )}
           </div>

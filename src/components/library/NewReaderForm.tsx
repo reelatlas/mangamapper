@@ -136,7 +136,7 @@ export const NewReaderForm = ({ userId, readerSites, onSuccess, onCancel, preSel
           </div>
           <div className="space-y-1.5">
             <Label htmlFor="siteNotes" className="text-xs">
-              <span className="text-syntax-cyan">notes</span>
+              <span className="text-syntax-cyan">reader_notes</span>
             </Label>
             <Input id="siteNotes" placeholder="top-tier fan subs" value={newSiteNotes} onChange={e => setNewSiteNotes(e.target.value)} className="font-mono text-sm border-dashed bg-muted/30" />
           </div>

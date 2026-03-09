@@ -88,7 +88,7 @@ export const InlineNewReaderForm = ({ userId, existingReaders, onCreated, onCanc
       </div>
       <div className="space-y-1.5">
         <Label className="text-xs">
-          <span className="text-syntax-cyan">notes</span>
+          <span className="text-syntax-cyan">reader_notes</span>
           
         </Label>
         <Input
