@@ -161,11 +161,10 @@ export const CollectionSection = ({ anime }: CollectionSectionProps) => {
     setTogglingLibrary(true);
 
     if (inLibrary) {
-      const { error } = await supabase.from('anime_progress').update({ in_library: false, notes: null }).eq('anime_id', anime.id).eq('user_id', user.id);
+      const { error } = await supabase.from('anime_progress').update({ in_library: false }).eq('anime_id', anime.id).eq('user_id', user.id);
       if (error) {
         toast.error('Failed to remove from library');
       } else {
-        await supabase.from('manga_reader_sites').delete().eq('user_id', user.id).eq('anime_id', anime.id);
         toast.success('Removed from library');
         setInLibrary(false);
         setLinkedReaders([]);
@@ -177,6 +176,16 @@ export const CollectionSection = ({ anime }: CollectionSectionProps) => {
       } else {
         toast.success('Added to library');
         setInLibrary(true);
+        // Re-fetch persisted readers and progress
+        const { data: readers } = await supabase.from('manga_reader_sites').select('*').eq('user_id', user.id).eq('anime_id', anime.id);
+        if (readers) setLinkedReaders(readers);
+        const { data: prog } = await supabase.from('anime_progress').select('*').eq('user_id', user.id).eq('anime_id', anime.id).single();
+        if (prog) {
+          setLastWatched(prog.last_watched_episode ?? null);
+          setLastReadVolume(prog.last_read_volume ?? null);
+          setLastReadChapter(prog.last_read_chapter ?? null);
+          setNotes(prog.notes ?? null);
+        }
       }
     }
     setTogglingLibrary(false);
