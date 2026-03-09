@@ -39,9 +39,10 @@ export const useLibraryData = () => {
   };
 
   const fetchData = async () => {
-    setLoading(true);
+    if (!initialLoadDone.current) setLoading(true);
     await Promise.all([fetchProgress(), fetchReaderSites()]);
     setLoading(false);
+    initialLoadDone.current = true;
   };
 
   const removeFromLibrary = async (id: string) => {
