@@ -590,7 +590,7 @@ export const CollectionSection = ({ anime }: CollectionSectionProps) => {
                 <div>
                   <span className="text-muted-foreground text-xs block mb-1">episode</span>
                   <div className="flex items-center gap-2">
-                    <Input type="number" placeholder="—" value={watchedEpisode} onChange={e => setWatchedEpisode(e.target.value)} className="font-mono text-sm border-dashed bg-muted/30 w-24 h-7" />
+                    <Input type="number" placeholder="—" value={watchedEpisode} onChange={e => setWatchedEpisode(e.target.value)} className="font-mono text-sm border-dashed bg-muted/30 w-24 h-10" />
                     <span className="text-muted-foreground text-xs">/{anime.totalEpisodes || anime.currentEpisode}</span>
                   </div>
                 </div>
@@ -605,11 +605,11 @@ export const CollectionSection = ({ anime }: CollectionSectionProps) => {
                   <div className="flex items-center gap-2">
                     <div>
                       <span className="text-muted-foreground text-xs block mb-1">vol</span>
-                      <Input type="number" placeholder="—" value={readVolume} onChange={e => setReadVolume(e.target.value)} className="font-mono text-sm border-dashed bg-muted/30 w-24 h-7" />
+                      <Input type="number" placeholder="—" value={readVolume} onChange={e => setReadVolume(e.target.value)} className="font-mono text-sm border-dashed bg-muted/30 w-24 h-10" />
                     </div>
                     <div>
                       <span className="text-muted-foreground text-xs block mb-1">ch</span>
-                      <Input type="number" placeholder="—" value={readChapter} onChange={e => setReadChapter(e.target.value)} className="font-mono text-sm border-dashed bg-muted/30 w-24 h-7" />
+                      <Input type="number" placeholder="—" value={readChapter} onChange={e => setReadChapter(e.target.value)} className="font-mono text-sm border-dashed bg-muted/30 w-24 h-10" />
                     </div>
                   </div>
                 </div>
