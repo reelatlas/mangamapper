@@ -255,6 +255,16 @@ const Readers = () => {
     setShowAddReaderForm(false);
     fetchReaderSites();
   };
+  const makeEditSnapshot = (name: string, url: string, notes: string, assignments: SeriesAssignment[]) => {
+    return JSON.stringify({ name, url, notes, assignments: assignments.map(a => ({ animeId: a.animeId, seriesUrl: a.seriesUrl })) });
+  };
+
+  const isEditReaderDirty = useMemo(() => {
+    if (!editingReaderName) return false;
+    const current = makeEditSnapshot(editSiteName, editSiteUrl, editSiteNotes, editSeriesAssignments);
+    return current !== editInitialSnapshot;
+  }, [editingReaderName, editSiteName, editSiteUrl, editSiteNotes, editSeriesAssignments, editInitialSnapshot]);
+
   const startEditingReader = (group: {
     name: string;
     url: string;
@@ -269,22 +279,25 @@ const Readers = () => {
     const seriesEntries = group.entries
       .filter(e => e.anime_id)
       .sort((a, b) => new Date(a.created_at).getTime() - new Date(b.created_at).getTime());
+    let assignments: SeriesAssignment[];
     if (seriesEntries.length > 0) {
-      setEditSeriesAssignments(seriesEntries.map(e => ({
+      assignments = seriesEntries.map(e => ({
         animeId: e.anime_id || '',
         seriesUrl: e.series_url || '',
         suffix: '',
         existingId: e.id,
         userModified: true
-      })));
+      }));
     } else {
-      setEditSeriesAssignments([{
+      assignments = [{
         animeId: '',
         seriesUrl: '',
         suffix: '',
         userModified: false
-      }]);
+      }];
     }
+    setEditSeriesAssignments(assignments);
+    setEditInitialSnapshot(makeEditSnapshot(group.name, group.url, group.notes || '', assignments));
   };
   const cancelEditingReader = () => {
     setEditingReaderName(null);
