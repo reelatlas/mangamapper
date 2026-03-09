@@ -607,19 +607,19 @@ export const CollectionSection = ({ anime }: CollectionSectionProps) => {
                   </div>
                 </div>
               )}
-
-              {/* Save/reset progress (inline to the right) */}
-              {isProgressDirty && (
-                <div className="flex items-center gap-2">
-                  <Button size="sm" onClick={saveProgress} disabled={savingProgress} className="font-mono text-xs h-7 border-dashed">
-                    <Check className="w-3 h-3 mr-1" />{savingProgress ? 'saving...' : 'save()'}
-                  </Button>
-                  <Button variant="ghost" size="sm" onClick={resetProgress} className="font-mono text-xs h-7 text-muted-foreground hover:text-muted-foreground hover:bg-muted">
-                    <RotateCcw className="w-3 h-3 mr-1" />reset
-                  </Button>
-                </div>
-              )}
             </div>
+
+            {/* Save/reset progress (below inputs) */}
+            {isProgressDirty && (
+              <div className="flex items-center gap-2">
+                <Button size="sm" onClick={saveProgress} disabled={savingProgress} className="font-mono text-xs h-7 border-dashed">
+                  <Check className="w-3 h-3 mr-1" />{savingProgress ? 'saving...' : 'save()'}
+                </Button>
+                <Button variant="ghost" size="sm" onClick={resetProgress} className="font-mono text-xs h-7 text-muted-foreground hover:text-muted-foreground hover:bg-muted">
+                  <RotateCcw className="w-3 h-3 mr-1" />reset
+                </Button>
+              </div>
+            )}
           </div>
         )}
 
