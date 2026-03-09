@@ -76,7 +76,7 @@ export const SeriesCard = ({ item, animeId, readerSites, onRemove, userId, onSav
     setEditReadChapter(item?.last_read_chapter ?? '');
     setEditNotes(item?.notes ?? '');
 
-    const linkedReaders = getReadersForAnime(resolvedAnimeId!, readerSites);
+    const linkedReaders = getReadersForAnime(resolvedAnimeId!, readerSites).sort((a, b) => a.name.localeCompare(b.name));
     if (linkedReaders.length > 0) {
       setEditReaderAssignments(linkedReaders.map(r => ({
         readerName: r.name,
@@ -459,7 +459,7 @@ export const SeriesCard = ({ item, animeId, readerSites, onRemove, userId, onSav
     );
   }
 
-  const linkedReaders = getReadersForAnime(resolvedAnimeId!, readerSites);
+  const linkedReaders = getReadersForAnime(resolvedAnimeId!, readerSites).sort((a, b) => a.name.localeCompare(b.name));
 
   // View mode
   return (

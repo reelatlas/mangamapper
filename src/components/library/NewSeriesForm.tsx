@@ -42,7 +42,7 @@ export const NewSeriesForm = ({ userId, readerSites, progress, onSuccess, onCanc
     }
 
     // Populate reader assignments from existing reader sites
-    const matchingReaders = readerSites.filter(s => s.anime_id === id);
+    const matchingReaders = readerSites.filter(s => s.anime_id === id).sort((a, b) => a.name.localeCompare(b.name));
     if (matchingReaders.length > 0) {
       setInitialExistingSiteIds(matchingReaders.map(r => r.id));
       setEditReaderAssignments(matchingReaders.map(r => {
