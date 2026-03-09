@@ -76,6 +76,7 @@ const Readers = () => {
   const [editSiteUrl, setEditSiteUrl] = useState('');
   const [editSiteNotes, setEditSiteNotes] = useState('');
   const [editSeriesAssignments, setEditSeriesAssignments] = useState<SeriesAssignment[]>([]);
+  const [editInitialSnapshot, setEditInitialSnapshot] = useState<string>('');
   const [confirmingDeleteReaderId, setConfirmingDeleteReaderId] = useState<string | null>(null);
   const [showAddReaderForm, setShowAddReaderForm] = useState(false);
   useEffect(() => {
