@@ -173,6 +173,8 @@ export const LibraryGroupedView = ({ userId, readerSites, progress, fetchReaderS
     const newBase = newUrl.trim() ? (newUrl.trim().endsWith('/') ? newUrl.trim() : newUrl.trim() + '/') : '';
     setEditSiteUrl(newUrl);
     setEditSeriesAssignments(prev => prev.map(a => {
+      // Skip auto-updating series_url for assignments where the user intentionally cleared it
+      if (!a.seriesUrl && a.userModified) return a;
       let suffix = a.suffix;
       if (!suffix && a.seriesUrl && oldBase && a.seriesUrl.startsWith(oldBase)) suffix = a.seriesUrl.slice(oldBase.length);
       else if (!suffix && a.seriesUrl && !oldBase) suffix = a.seriesUrl;
