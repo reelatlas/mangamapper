@@ -167,7 +167,11 @@ export const CollectionSection = ({ anime }: CollectionSectionProps) => {
       } else {
         toast.success('Removed from library');
         setInLibrary(false);
-        
+        // Re-fetch progress to update displayed updated_at
+        const { data: prog } = await supabase.from('anime_progress').select('*').eq('user_id', user.id).eq('anime_id', anime.id).single();
+        if (prog) {
+          setProgress(prog);
+        }
       }
     } else {
       const { error } = await supabase.from('anime_progress').upsert({ user_id: user.id, anime_id: anime.id, in_library: true, updated_at: new Date().toISOString() }, { onConflict: 'user_id,anime_id' });
