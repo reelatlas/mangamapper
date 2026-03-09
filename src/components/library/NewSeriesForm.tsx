@@ -249,6 +249,18 @@ export const NewSeriesForm = ({ userId, readerSites, progress, onSuccess, onCanc
       }
     }
 
+    // Unlink removed reader associations
+    const remainingExistingIds = validAssignments
+      .filter(a => a.existingSiteId)
+      .map(a => a.existingSiteId!);
+    const removedIds = initialExistingSiteIds.filter(id => !remainingExistingIds.includes(id));
+    if (removedIds.length > 0) {
+      await supabase
+        .from('manga_reader_sites')
+        .update({ anime_id: null, series_url: null })
+        .in('id', removedIds);
+    }
+
     toast.success('Series added to library');
     setSaving(false);
     onSuccess();
