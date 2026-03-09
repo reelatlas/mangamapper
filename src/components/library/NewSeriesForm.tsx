@@ -259,7 +259,7 @@ export const NewSeriesForm = ({ userId, readerSites, progress, onSuccess, onCanc
     if (removedIds.length > 0) {
       await supabase
         .from('manga_reader_sites')
-        .update({ anime_id: null, series_url: null })
+        .update({ anime_id: null, series_url: null, updated_at: new Date(Date.now() - 2000).toISOString() })
         .in('id', removedIds);
     }
 
