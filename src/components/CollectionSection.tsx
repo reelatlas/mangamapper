@@ -206,8 +206,12 @@ export const CollectionSection = ({ anime }: CollectionSectionProps) => {
     return makeReaderSnapshot(editReaderAssignments) !== initialReaderSnapshot;
   }, [isEditing, editReaderAssignments, initialReaderSnapshot]);
 
+  const [isAddingReaders, setIsAddingReaders] = useState(false);
+  const [isAddingNotes, setIsAddingNotes] = useState(false);
+
   const startEditing = () => {
     setShowInlineNewReader(false);
+    setIsAddingReaders(linkedReaders.length === 0);
 
     let assignments: ReaderAssignment[];
     if (linkedReaders.length > 0) {
