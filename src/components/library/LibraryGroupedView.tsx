@@ -454,7 +454,7 @@ export const LibraryGroupedView = ({ userId, readerSites, progress, fetchReaderS
                     </div>
                     <div className="!mt-8 flex flex-wrap items-center justify-between gap-3">
                       <div className="flex items-center gap-2">
-                        <Button onClick={() => saveReaderEdit(group.entries)} className="font-mono text-xs border-dashed">
+                        <Button onClick={() => saveReaderEdit(group.entries)} disabled={!isEditReaderDirty || !editSiteName.trim()} className="font-mono text-xs border-dashed">
                           <Check className="w-3.5 h-3.5 mr-1" />save_changes()
                         </Button>
                         <Button variant="outline" onClick={cancelEditingReader} className="font-mono text-xs border-dashed hover:bg-destructive hover:text-destructive-foreground hover:border-destructive">

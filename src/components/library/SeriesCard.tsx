@@ -441,7 +441,7 @@ export const SeriesCard = ({ item, animeId, readerSites, onRemove, userId, onSav
             {/* Actions */}
             <div className="!mt-8 flex flex-wrap items-center justify-between gap-3">
               <div className="flex items-center gap-2">
-                <Button onClick={saveChanges} disabled={saving} className="font-mono text-xs border-dashed">
+                <Button onClick={saveChanges} disabled={saving || !isEditSeriesDirty} className="font-mono text-xs border-dashed">
                   <Check className="w-3.5 h-3.5 mr-1" />{saving ? 'saving...' : 'save_changes()'}
                 </Button>
                 <Button variant="outline" onClick={cancelEditing} className="font-mono text-xs border-dashed hover:bg-destructive hover:text-destructive-foreground hover:border-destructive">
