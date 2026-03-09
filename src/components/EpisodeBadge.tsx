@@ -27,7 +27,7 @@ export const EpisodeBadge = ({ type, className, inactive }: EpisodeBadgeProps) =
 
   return (
     <span className={cn(
-      'font-mono text-[10px] px-2 py-0.5 rounded-full border tracking-wider transition-colors',
+      'font-mono text-[10px] leading-tight px-2 py-0.5 rounded-full border tracking-wider transition-colors',
       inactive ? 'text-muted-foreground/40 border-muted-foreground/30' : badgeClassName,
       className
     )}>
