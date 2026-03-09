@@ -226,6 +226,7 @@ export const NewSeriesForm = ({ userId, readerSites, progress, onSuccess, onCanc
             url: assignment.readerUrl,
             anime_id: animeId,
             series_url: assignment.seriesUrl.trim() || null,
+            updated_at: new Date().toISOString(),
           })
           .eq('id', assignment.existingSiteId);
 
@@ -241,6 +242,7 @@ export const NewSeriesForm = ({ userId, readerSites, progress, onSuccess, onCanc
             url: assignment.readerUrl,
             anime_id: animeId,
             series_url: assignment.seriesUrl.trim() || null,
+            updated_at: new Date().toISOString(),
           });
 
         if (readerError) {
