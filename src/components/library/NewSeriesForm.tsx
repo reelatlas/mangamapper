@@ -11,7 +11,7 @@ import * as SelectPrimitive from '@radix-ui/react-select';
 import { Select, SelectItem, SelectScrollUpButton, SelectScrollDownButton, SelectTrigger, SelectValue } from '@/components/ui/select';
 
 import { InlineNewReaderForm } from './InlineNewReaderForm';
-import type { ReaderSite, AnimeProgress } from '@/types/library';
+import type { ReaderSite, AnimeProgress, ReaderAssignment } from '@/types/library';
 
 interface ReaderOption {
   key: string;
@@ -30,13 +30,12 @@ interface NewSeriesFormProps {
 
 export const NewSeriesForm = ({ userId, readerSites, progress, onSuccess, onCancel, preSelectAnimeId }: NewSeriesFormProps) => {
   const [animeId, setAnimeId] = useState(preSelectAnimeId || '');
-  const [selectedReaderKey, setSelectedReaderKey] = useState('');
-  const [selectedReaderName, setSelectedReaderName] = useState('');
-  const [selectedReaderUrl, setSelectedReaderUrl] = useState('');
-  const [seriesUrl, setSeriesUrl] = useState('');
   const [notes, setNotes] = useState('');
-  const [showNewReader, setShowNewReader] = useState(false);
   const [saving, setSaving] = useState(false);
+  const [editReaderAssignments, setEditReaderAssignments] = useState<ReaderAssignment[]>([
+    { readerName: '', readerUrl: '', seriesUrl: '', suffix: '', userModified: false },
+  ]);
+  const [showInlineNewReader, setShowInlineNewReader] = useState(false);
   const [newlyCreatedReader, setNewlyCreatedReader] = useState<{name: string, url: string} | null>(null);
 
   const readerOptions: ReaderOption[] = useMemo(() => {
@@ -56,34 +55,76 @@ export const NewSeriesForm = ({ userId, readerSites, progress, onSuccess, onCanc
     return options.sort((a, b) => a.name.localeCompare(b.name));
   }, [readerSites, newlyCreatedReader]);
 
-  const handleReaderChange = (key: string) => {
+  const assignedReaderKeys = editReaderAssignments
+    .filter(a => a.readerName)
+    .map(a => `${a.readerName.toLowerCase()}|${a.readerUrl}`);
+
+  const handleReaderSelect = (index: number, key: string) => {
     if (key === '__new_reader__') {
-      setShowNewReader(true);
-      setSelectedReaderKey('');
-      setSelectedReaderName('');
-      setSelectedReaderUrl('');
-    } else {
-      setShowNewReader(false);
-      const option = readerOptions.find(o => o.key === key);
-      if (option) {
-        setSelectedReaderKey(key);
-        setSelectedReaderName(option.name);
-        setSelectedReaderUrl(option.url);
-        const baseUrl = option.url ? (option.url.endsWith('/') ? option.url : option.url + '/') : '';
-        setSeriesUrl(baseUrl);
-      }
+      setShowInlineNewReader(true);
+      return;
     }
+    const option = readerOptions.find(o => o.key === key);
+    if (!option) return;
+    setShowInlineNewReader(false);
+    const updated = [...editReaderAssignments];
+    updated[index] = {
+      ...updated[index],
+      readerName: option.name,
+      readerUrl: option.url,
+      seriesUrl: option.url ? (option.url.endsWith('/') ? option.url : option.url + '/') : '',
+      suffix: '',
+      userModified: true,
+    };
+    setEditReaderAssignments(updated);
+  };
+
+  const handleSeriesUrlChange = (index: number, value: string) => {
+    const updated = [...editReaderAssignments];
+    const baseUrl = updated[index].readerUrl.trim();
+    const base = baseUrl ? (baseUrl.endsWith('/') ? baseUrl : baseUrl + '/') : '';
+    const suffix = base && value.startsWith(base) ? value.slice(base.length) : value;
+    updated[index] = { ...updated[index], seriesUrl: value, suffix, userModified: true };
+    setEditReaderAssignments(updated);
+  };
+
+  const removeReaderRow = (index: number) => {
+    if (editReaderAssignments.length === 1) {
+      setEditReaderAssignments([{ readerName: '', readerUrl: '', seriesUrl: '', suffix: '', userModified: false }]);
+    } else {
+      setEditReaderAssignments(editReaderAssignments.filter((_, i) => i !== index));
+    }
+  };
+
+  const addReaderRow = () => {
+    setEditReaderAssignments([...editReaderAssignments, {
+      readerName: '',
+      readerUrl: '',
+      seriesUrl: '',
+      suffix: '',
+      userModified: false,
+    }]);
   };
 
   const handleNewReaderCreated = (readerName: string, readerUrl: string) => {
     setNewlyCreatedReader({ name: readerName, url: readerUrl });
-    const key = `${readerName.toLowerCase()}|${readerUrl}`;
-    setSelectedReaderKey(key);
-    setShowNewReader(false);
-    setSelectedReaderName(readerName);
-    setSelectedReaderUrl(readerUrl);
+    setShowInlineNewReader(false);
     const baseUrl = readerUrl ? (readerUrl.endsWith('/') ? readerUrl : readerUrl + '/') : '';
-    setSeriesUrl(baseUrl);
+    const newAssignment: ReaderAssignment = {
+      readerName,
+      readerUrl,
+      seriesUrl: baseUrl,
+      suffix: '',
+      userModified: true,
+    };
+    const emptyIndex = editReaderAssignments.findIndex(a => !a.readerName);
+    if (emptyIndex >= 0) {
+      const updated = [...editReaderAssignments];
+      updated[emptyIndex] = newAssignment;
+      setEditReaderAssignments(updated);
+    } else {
+      setEditReaderAssignments([...editReaderAssignments, newAssignment]);
+    }
     onSuccess(); // refresh reader sites in background
   };
 
@@ -113,16 +154,17 @@ export const NewSeriesForm = ({ userId, readerSites, progress, onSuccess, onCanc
       return;
     }
 
-    // If reader selected, create manga_reader_sites entry
-    if (selectedReaderName) {
+    // Insert reader assignments
+    const validAssignments = editReaderAssignments.filter(a => a.readerName);
+    for (const assignment of validAssignments) {
       const { error: readerError } = await supabase
         .from('manga_reader_sites')
         .insert({
           user_id: userId,
-          name: selectedReaderName,
-          url: selectedReaderUrl,
+          name: assignment.readerName,
+          url: assignment.readerUrl,
           anime_id: animeId,
-          series_url: seriesUrl.trim() || null,
+          series_url: assignment.seriesUrl.trim() || null,
         });
 
       if (readerError) {
@@ -166,77 +208,98 @@ export const NewSeriesForm = ({ userId, readerSites, progress, onSuccess, onCanc
             </div>
           </div>
 
-          <div className="space-y-1.5">
-            <Label className="text-xs">
-              <span className="text-syntax-cyan">reader</span>
-            </Label>
-            <div className="flex gap-2 items-center">
-              <div className="flex-1 min-w-0">
-                <Select value={selectedReaderKey} onValueChange={handleReaderChange}>
-                  <SelectTrigger className="font-mono text-sm border-dashed bg-muted/30 data-[placeholder]:text-muted-foreground">
-                    <SelectValue placeholder="select reader" />
-                  </SelectTrigger>
-                  <SelectPrimitive.Portal>
-                    <SelectPrimitive.Content className="font-mono border-dashed relative z-50 w-[var(--radix-select-trigger-width)] overflow-hidden rounded-md border bg-popover text-popover-foreground shadow-md data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 data-[side=bottom]:slide-in-from-top-2 data-[side=bottom]:translate-y-1" position="popper">
-                      <SelectScrollUpButton />
-                      <SelectPrimitive.Viewport className="max-h-[200px] overflow-y-auto p-1 w-full min-w-[var(--radix-select-trigger-width)]">
-                        {readerOptions.map(option => (
-                          <SelectItem key={option.key} value={option.key} className="text-sm">
-                            {option.name}
-                          </SelectItem>
-                        ))}
-                      </SelectPrimitive.Viewport>
-                      <SelectScrollDownButton />
-                      <div className="border-t border-dashed border-border" />
-                      <div className="p-1">
-                        <SelectItem value="__new_reader__" className="text-sm text-primary font-medium">
-                          + new_reader
-                        </SelectItem>
+          {/* assign_to readers */}
+          <div className="!mt-8">
+            <p className="text-xs text-muted-foreground mb-3">assign_to <span className="text-muted-foreground/60">// optional</span></p>
+            <div className="space-y-6 sm:space-y-3">
+              {editReaderAssignments.map((assignment, index) => {
+                const currentKey = assignment.readerName ? `${assignment.readerName.toLowerCase()}|${assignment.readerUrl}` : '';
+                const availableOptions = readerOptions.filter(o =>
+                  o.key === currentKey || !assignedReaderKeys.includes(o.key)
+                );
+
+                return (
+                  <div key={index} className="space-y-1.5">
+                    <Label className="text-xs sm:hidden">
+                      <span className="text-syntax-cyan">reader</span>
+                      <span className="text-muted-foreground">{'{'}name,url{'}'}</span>
+                    </Label>
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                      <div className="min-w-0">
+                        {index === 0 && <Label className="text-xs hidden sm:block mb-1.5"><span className="text-syntax-cyan">reader</span></Label>}
+                        <Select value={currentKey} onValueChange={val => handleReaderSelect(index, val)}>
+                          <SelectTrigger className="font-mono text-sm border-dashed bg-muted/30 data-[placeholder]:text-muted-foreground">
+                            <SelectValue placeholder="select reader" />
+                          </SelectTrigger>
+                          <SelectPrimitive.Portal>
+                            <SelectPrimitive.Content className="font-mono border-dashed relative z-50 w-[var(--radix-select-trigger-width)] overflow-hidden rounded-md border bg-popover text-popover-foreground shadow-md data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 data-[side=bottom]:slide-in-from-top-2 data-[side=bottom]:translate-y-1" position="popper">
+                              <SelectScrollUpButton />
+                              <SelectPrimitive.Viewport className="max-h-[200px] overflow-y-auto p-1 w-full min-w-[var(--radix-select-trigger-width)]">
+                                {availableOptions.map(option => (
+                                  <SelectItem key={option.key} value={option.key} className="text-sm">
+                                    {option.name}
+                                  </SelectItem>
+                                ))}
+                              </SelectPrimitive.Viewport>
+                              <SelectScrollDownButton />
+                              <div className="border-t border-dashed border-border" />
+                              <div className="p-1">
+                                <SelectItem value="__new_reader__" className="text-sm text-primary font-medium">
+                                  + new_reader
+                                </SelectItem>
+                              </div>
+                            </SelectPrimitive.Content>
+                          </SelectPrimitive.Portal>
+                        </Select>
                       </div>
-                    </SelectPrimitive.Content>
-                  </SelectPrimitive.Portal>
-                </Select>
-              </div>
-              {selectedReaderKey && (
-                <Button type="button" variant="ghost" size="icon"
-                  onClick={() => { setSelectedReaderKey(''); setSelectedReaderName(''); setSelectedReaderUrl(''); setSeriesUrl(''); }}
-                  className="text-muted-foreground hover:text-destructive hover:bg-destructive/10 flex-shrink-0">
-                  <Trash2 className="w-4 h-4" />
+                      <div className="min-w-0">
+                        {index === 0 && <Label className="text-xs hidden sm:block mb-1.5"><span className="text-syntax-cyan">series_url</span></Label>}
+                        <div className="flex items-center gap-2">
+                          <Input
+                            type="text"
+                            placeholder="manga.line.me/title/..."
+                            value={assignment.seriesUrl}
+                            onChange={e => handleSeriesUrlChange(index, e.target.value)}
+                            className="font-mono text-sm border-dashed bg-muted/30 flex-1 min-w-0"
+                          />
+                          {(editReaderAssignments.length > 1 || assignment.readerName) && (
+                            <Button
+                              type="button"
+                              variant="ghost"
+                              size="icon"
+                              onClick={() => removeReaderRow(index)}
+                              className="text-muted-foreground hover:text-destructive hover:bg-destructive/10 flex-shrink-0"
+                            >
+                              <Trash2 className="w-4 h-4" />
+                            </Button>
+                          )}
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                );
+              })}
+              {showInlineNewReader && (
+                <InlineNewReaderForm
+                  userId={userId}
+                  existingReaders={readerSites}
+                  onCreated={handleNewReaderCreated}
+                  onCancel={() => setShowInlineNewReader(false)}
+                />
+              )}
+              {!showInlineNewReader && (
+                <Button type="button" variant="outline" size="sm" onClick={addReaderRow} className="text-xs border-dashed">
+                  <Plus className="w-3.5 h-3.5 mr-1" />add_another
                 </Button>
               )}
             </div>
           </div>
 
-          {showNewReader && (
-            <div>
-              <InlineNewReaderForm
-                userId={userId}
-                existingReaders={readerSites}
-                onCreated={handleNewReaderCreated}
-                onCancel={() => setShowNewReader(false)}
-              />
-            </div>
-          )}
-
-          {selectedReaderName && !showNewReader && (
-            <div className="space-y-1.5">
-              <Label className="text-xs">
-                <span className="text-syntax-cyan">series_url</span>
-                <span className="text-muted-foreground/60"> // optional</span>
-              </Label>
-              <Input
-                type="text"
-                placeholder="manga.line.me/title/..."
-                value={seriesUrl}
-                onChange={(e) => setSeriesUrl(e.target.value)}
-                className="font-mono text-sm border-dashed bg-muted/30"
-              />
-            </div>
-          )}
-
-          <div className="space-y-1.5">
+          {/* Notes */}
+          <div className="!mt-8 space-y-1.5">
             <Label className="text-xs">
               <span className="text-syntax-cyan">notes</span>
+              <span className="text-muted-foreground/60"> // optional</span>
             </Label>
             <Input
               placeholder="best Berserk scans for golden age arc"
@@ -246,7 +309,7 @@ export const NewSeriesForm = ({ userId, readerSites, progress, onSuccess, onCanc
             />
           </div>
 
-          <div className="flex gap-2 !mt-8">
+          <div className="!mt-8 flex gap-2">
             <Button type="submit" disabled={saving} className="font-mono text-xs border-dashed">
               <Plus className="w-3.5 h-3.5 mr-1" />
               {saving ? 'adding...' : 'add_series()'}
