@@ -248,7 +248,7 @@ const About = () => {
             {openSection === 'support' && (
               <div className="mt-3">
                 <p className="text-sm text-foreground/70 mb-4">
-                  $$$ for <span className="text-syntax-amber">sushi</span>, <span className="text-syntax-amber">gundams</span>, <span className="text-syntax-amber">s-tier relics</span>, <span className="text-syntax-amber">ai tokens</span>, <span className="text-syntax-amber">api credits</span>, <span className="text-syntax-amber">hosting</span>
+                  <span className="text-syntax-green">$$$</span> for <span className="text-syntax-amber">sushi</span>, <span className="text-syntax-amber">gundams</span>, <span className="text-syntax-amber">s-tier relics</span>, <span className="text-syntax-amber">ai tokens</span>, <span className="text-syntax-amber">api credits</span>, <span className="text-syntax-amber">hosting</span>
                 </p>
 
                 {/* Stripe donate */}
