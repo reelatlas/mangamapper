@@ -80,6 +80,7 @@ export const LibraryGroupedView = ({ userId, readerSites, progress, fetchReaderS
   const [editSiteNotes, setEditSiteNotes] = useState('');
   const [editSeriesAssignments, setEditSeriesAssignments] = useState<SeriesAssignment[]>([]);
   const [confirmingDeleteReaderId, setConfirmingDeleteReaderId] = useState<string | null>(null);
+  const [initialEditReaderSnapshot, setInitialEditReaderSnapshot] = useState<string | null>(null);
 
   type ReaderGroup = { type: 'reader'; name: string; url: string; notes: string | null; entries: ReaderSite[]; latestUpdatedAt: string };
   type UnassignedGroup = { type: 'unassigned'; entries: AnimeProgress[]; latestUpdatedAt: string };
