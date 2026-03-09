@@ -401,7 +401,7 @@ export const SeriesCard = ({ item, animeId, readerSites, onRemove, userId, onSav
             {/* Series notes */}
             <div className="!mt-8 space-y-1.5">
               <Label className="text-xs">
-                <span className="text-syntax-cyan">notes</span>
+                <span className="text-syntax-cyan">series_notes</span>
                 <span className="text-muted-foreground/60"> // optional</span>
               </Label>
               <Input
