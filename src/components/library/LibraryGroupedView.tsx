@@ -154,6 +154,7 @@ export const LibraryGroupedView = ({ userId, readerSites, progress, fetchReaderS
     setEditSiteNotes('');
     setEditSeriesAssignments([]);
     setConfirmingDeleteReaderId(null);
+    setInitialEditReaderSnapshot(null);
   };
 
   const addEditSeriesRow = () => {
