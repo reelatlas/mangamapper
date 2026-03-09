@@ -240,6 +240,7 @@ export const CollectionSection = ({ anime }: CollectionSectionProps) => {
 
   const startEditingNotes = () => {
     setEditNotesValue(progress?.notes ?? '');
+    setIsAddingNotes(!progress?.notes);
     setIsEditingNotes(true);
   };
 
