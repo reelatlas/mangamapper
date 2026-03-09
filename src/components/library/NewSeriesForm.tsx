@@ -58,6 +58,7 @@ export const NewSeriesForm = ({ userId, readerSites, progress, onSuccess, onCanc
         };
       }));
     } else {
+      setInitialExistingSiteIds([]);
       setEditReaderAssignments([{ readerName: '', readerUrl: '', seriesUrl: '', suffix: '', userModified: false }]);
     }
 
