@@ -78,6 +78,7 @@ export const NewSeriesForm = ({ userId, readerSites, progress, onSuccess, onCanc
   const [editReaderAssignments, setEditReaderAssignments] = useState<ReaderAssignment[]>([
     { readerName: '', readerUrl: '', seriesUrl: '', suffix: '', userModified: false },
   ]);
+  const [initialExistingSiteIds, setInitialExistingSiteIds] = useState<string[]>([]);
   const [showInlineNewReader, setShowInlineNewReader] = useState(false);
   const [newlyCreatedReader, setNewlyCreatedReader] = useState<{name: string, url: string} | null>(null);
 
