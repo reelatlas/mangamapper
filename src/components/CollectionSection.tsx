@@ -677,7 +677,7 @@ export const CollectionSection = ({ anime }: CollectionSectionProps) => {
               <span className={progress?.notes ? 'text-syntax-cyan' : 'text-muted-foreground'}>series_notes</span>
             </div>
             {isEditingNotes ? (
-              <div className="space-y-2">
+              <div className="space-y-3">
                 <Input
                   placeholder="any notes about this series..."
                   value={editNotesValue}
