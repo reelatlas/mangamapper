@@ -509,10 +509,15 @@ export const SeriesCard = ({ item, animeId, readerSites, onRemove, userId, onSav
                     )}
                   </>
                 )}
-                {item?.notes && (
+                {item?.notes ? (
                   <div className="flex items-start gap-1.5 flex-wrap">
                     <StickyNote className="w-3.5 h-3.5 shrink-0 text-primary mt-0.5" />
                     <span className="text-xs text-muted-foreground line-clamp-2">{item.notes}</span>
+                  </div>
+                ) : (
+                  <div className="flex items-center gap-1.5 flex-wrap">
+                    <StickyNote className="w-3.5 h-3.5 shrink-0 text-muted-foreground" />
+                    <span className="text-xs text-muted-foreground">notes(null)</span>
                   </div>
                 )}
               </div>
