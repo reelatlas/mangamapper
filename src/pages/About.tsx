@@ -146,15 +146,15 @@ const About = () => {
               <ul className="mt-3 space-y-2.5 text-sm text-foreground/70">
                 <li className="flex gap-2">
                   <span className="text-muted-foreground shrink-0">→</span>
-                  <span>existing anime DBs or all-in-one readers are robust and feature rich, inconvenient for simple anime to manga tracking</span>
+                  <span>simple anime to manga tracking, existing anime DBs or all-in-one readers are robust and feature rich</span>
                 </li>
                 <li className="flex gap-2">
                   <span className="text-muted-foreground shrink-0">→</span>
-                  <span>long URLs or nested series links are hard to manage, need clean reader management</span>
+                  <span>clean reader management for long urls or nested series links</span>
                 </li>
                 <li className="flex gap-2">
                   <span className="text-muted-foreground shrink-0">→</span>
-                  <span>reader site URLs and mirrors change, disappear, or get shut down, no easy way to migrate bookmarks</span>
+                  <span>easily migrate bookmarks when urls or mirrors change, disappear, or get shut down</span>
                 </li>
               </ul>
             )}
