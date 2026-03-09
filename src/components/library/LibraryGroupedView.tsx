@@ -162,6 +162,23 @@ export const LibraryGroupedView = ({ userId, readerSites, progress, fetchReaderS
     } else if (field === 'animeId') {
       updated[index].animeId = value;
       updated[index].userModified = true;
+
+      // Look up existing reader association for this anime+reader combo
+      if (value && editingReaderName) {
+        const existingEntry = readerSites.find(
+          site => site.anime_id === value && site.name.toLowerCase() === editingReaderName.toLowerCase()
+        );
+        if (existingEntry) {
+          updated[index].existingId = existingEntry.id;
+          updated[index].seriesUrl = existingEntry.series_url || '';
+          const baseUrl = editSiteUrl.trim() ? (editSiteUrl.trim().endsWith('/') ? editSiteUrl.trim() : editSiteUrl.trim() + '/') : '';
+          updated[index].suffix = baseUrl && (existingEntry.series_url || '').startsWith(baseUrl) 
+            ? (existingEntry.series_url || '').slice(baseUrl.length) 
+            : (existingEntry.series_url || '');
+        } else {
+          updated[index].existingId = undefined;
+        }
+      }
     } else {
       updated[index][field] = value;
     }
