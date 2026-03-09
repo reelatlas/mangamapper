@@ -471,9 +471,8 @@ export const LibraryGroupedView = ({ userId, readerSites, progress, fetchReaderS
                     </div>
                   </div>
                   {group.notes && (
-                    <div className="text-xs overflow-hidden">
-                      <span className="text-syntax-cyan">reader_notes</span>
-                      <span className="text-muted-foreground">: </span>
+                    <div className="text-xs overflow-hidden flex items-start gap-1.5">
+                      <StickyNote className="w-3.5 h-3.5 shrink-0 text-primary mt-0.5" />
                       <span className="text-muted-foreground break-all">{group.notes}</span>
                     </div>
                   )}
