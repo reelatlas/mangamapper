@@ -6,7 +6,7 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { ToggleGroup, ToggleGroupItem } from '@/components/ui/toggle-group';
-import { ArrowUpDown, ExternalLink, Pencil, X, Check, Trash2, Plus, EyeClosed, Eye, Glasses } from 'lucide-react';
+import { ArrowUpDown, ExternalLink, Pencil, X, Check, Trash2, Plus, EyeClosed, Eye, Glasses, StickyNote } from 'lucide-react';
 
 import { TripleArrow } from '@/components/TripleArrow';
 import { mockAnimeData } from '@/data/mockAnime';
@@ -471,9 +471,8 @@ export const LibraryGroupedView = ({ userId, readerSites, progress, fetchReaderS
                     </div>
                   </div>
                   {group.notes && (
-                    <div className="text-xs overflow-hidden">
-                      <span className="text-syntax-cyan">reader_notes</span>
-                      <span className="text-muted-foreground">: </span>
+                    <div className="text-xs overflow-hidden flex items-start gap-1.5">
+                      <StickyNote className="w-3.5 h-3.5 shrink-0 text-primary mt-0.5" />
                       <span className="text-muted-foreground break-all">{group.notes}</span>
                     </div>
                   )}
