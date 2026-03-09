@@ -9,6 +9,7 @@ export const useLibraryData = () => {
   const [progress, setProgress] = useState<AnimeProgress[]>([]);
   const [readerSites, setReaderSites] = useState<ReaderSite[]>([]);
   const [loading, setLoading] = useState(true);
+  const initialLoadDone = useRef(false);
 
   const fetchProgress = async () => {
     const { data, error } = await supabase
