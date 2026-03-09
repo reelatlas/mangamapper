@@ -55,9 +55,23 @@ export const AddToReaderDropdown = ({ animeId, onSuccess, linkedReaderNames = []
     fetchUserReaders();
   }, [user, linkedReaderNames]);
 
-  const handleSelectReader = (reader: UserReader) => {
+  const handleSelectReader = async (reader: UserReader) => {
     setSelectedReader(reader);
-    // Ensure the default URL ends with a trailing slash
+    // Check for existing DB record for this reader + current anime
+    if (user) {
+      const { data } = await supabase
+        .from('manga_reader_sites')
+        .select('series_url')
+        .eq('user_id', user.id)
+        .eq('name', reader.name)
+        .eq('anime_id', animeId)
+        .maybeSingle();
+      if (data) {
+        setSeriesUrl(data.series_url ?? '');
+        return;
+      }
+    }
+    // No existing record — default to base URL
     const baseUrl = reader.url ? (reader.url.endsWith('/') ? reader.url : reader.url + '/') : '';
     setSeriesUrl(baseUrl);
   };

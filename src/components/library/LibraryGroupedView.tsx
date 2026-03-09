@@ -186,8 +186,7 @@ export const LibraryGroupedView = ({ userId, readerSites, progress, fetchReaderS
     if (editSeriesAssignments.length > 1) {
       setEditSeriesAssignments(editSeriesAssignments.filter((_, i) => i !== index));
     } else {
-      const baseUrl = editSiteUrl.trim() ? (editSiteUrl.trim().endsWith('/') ? editSiteUrl.trim() : editSiteUrl.trim() + '/') : '';
-      setEditSeriesAssignments([{ animeId: '', seriesUrl: baseUrl, suffix: '', userModified: false }]);
+      setEditSeriesAssignments([{ animeId: '', seriesUrl: '', suffix: '', userModified: false }]);
     }
   };
 
