@@ -78,7 +78,7 @@ export const useLibraryData = () => {
     if (user) {
       fetchData();
     }
-  }, [user]);
+  }, [user?.id]);
 
   return {
     user,
