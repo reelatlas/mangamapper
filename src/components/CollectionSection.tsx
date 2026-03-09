@@ -615,7 +615,7 @@ export const CollectionSection = ({ anime }: CollectionSectionProps) => {
         )}
 
         {/* Section 3: Reader links */}
-        {inLibrary && anime.hasManga && (
+        {anime.hasManga && (
           <div className="space-y-2">
             <div className="flex items-center gap-1.5 text-xs">
               <Glasses className={`w-3.5 h-3.5 transition-colors ${linkedReaders.length > 0 ? 'text-primary' : 'text-muted-foreground'}`} />
