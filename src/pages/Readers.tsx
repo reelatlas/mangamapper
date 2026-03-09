@@ -12,7 +12,7 @@ import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
-import { Plus, Trash2, ExternalLink, Link2, Pencil, X, Check, ArrowUpDown, Glasses, EyeClosed, Eye } from 'lucide-react';
+import { Plus, Trash2, ExternalLink, Link2, Pencil, X, Check, ArrowUpDown, Glasses, EyeClosed, Eye, StickyNote } from 'lucide-react';
 import { mockAnimeData } from '@/data/mockAnime';
 import { SeriesCombobox } from '@/components/SeriesCombobox';
 import { toast } from 'sonner';

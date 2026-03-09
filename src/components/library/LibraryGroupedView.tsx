@@ -6,7 +6,7 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { ToggleGroup, ToggleGroupItem } from '@/components/ui/toggle-group';
-import { ArrowUpDown, ExternalLink, Pencil, X, Check, Trash2, Plus, EyeClosed, Eye, Glasses } from 'lucide-react';
+import { ArrowUpDown, ExternalLink, Pencil, X, Check, Trash2, Plus, EyeClosed, Eye, Glasses, StickyNote } from 'lucide-react';
 
 import { TripleArrow } from '@/components/TripleArrow';
 import { mockAnimeData } from '@/data/mockAnime';
