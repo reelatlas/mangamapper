@@ -214,18 +214,34 @@ export const NewSeriesForm = ({ userId, readerSites, progress, onSuccess, onCanc
     // Insert reader assignments
     const validAssignments = editReaderAssignments.filter(a => a.readerName);
     for (const assignment of validAssignments) {
-      const { error: readerError } = await supabase
-        .from('manga_reader_sites')
-        .insert({
-          user_id: userId,
-          name: assignment.readerName,
-          url: assignment.readerUrl,
-          anime_id: animeId,
-          series_url: assignment.seriesUrl.trim() || null,
-        });
+      if (assignment.existingSiteId) {
+        const { error: readerError } = await supabase
+          .from('manga_reader_sites')
+          .update({
+            name: assignment.readerName,
+            url: assignment.readerUrl,
+            anime_id: animeId,
+            series_url: assignment.seriesUrl.trim() || null,
+          })
+          .eq('id', assignment.existingSiteId);
 
-      if (readerError) {
-        toast.error('Series added but failed to link reader');
+        if (readerError) {
+          toast.error('Series added but failed to update reader');
+        }
+      } else {
+        const { error: readerError } = await supabase
+          .from('manga_reader_sites')
+          .insert({
+            user_id: userId,
+            name: assignment.readerName,
+            url: assignment.readerUrl,
+            anime_id: animeId,
+            series_url: assignment.seriesUrl.trim() || null,
+          });
+
+        if (readerError) {
+          toast.error('Series added but failed to link reader');
+        }
       }
     }
 
