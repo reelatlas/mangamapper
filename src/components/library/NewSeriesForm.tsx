@@ -37,6 +37,7 @@ export const NewSeriesForm = ({ userId, readerSites, progress, onSuccess, onCanc
     if (!id) {
       setNotes('');
       setEditReaderAssignments([{ readerName: '', readerUrl: '', seriesUrl: '', suffix: '', userModified: false }]);
+      setInitialExistingSiteIds([]);
       return;
     }
 
