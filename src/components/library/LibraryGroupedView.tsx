@@ -466,7 +466,7 @@ export const LibraryGroupedView = ({ userId, readerSites, progress, fetchReaderS
                       <span className="text-syntax-green break-all">{group.name}</span>
                     </div>
                     <div className="flex items-center gap-2 flex-shrink-0">
-                      <Badge variant="secondary" className="text-xs font-mono">{seriesEntries.length} series</Badge>
+                      <Badge variant="secondary" className="text-xs font-mono font-normal">{seriesEntries.length} series</Badge>
                       <TripleArrow collapsed={collapsedGroups.has(group.name.toLowerCase())} />
                     </div>
                   </div>
