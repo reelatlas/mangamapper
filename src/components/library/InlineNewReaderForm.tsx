@@ -99,7 +99,7 @@ export const InlineNewReaderForm = ({ userId, existingReaders, onCreated, onCanc
         />
       </div>
       <div className="flex gap-2 !mt-8">
-        <Button type="button" size="sm" disabled={saving} onClick={handleSubmit} className="font-mono text-xs border-dashed">
+        <Button type="button" size="sm" disabled={saving || !name.trim()} onClick={handleSubmit} className="font-mono text-xs border-dashed">
           <Plus className="w-3.5 h-3.5 mr-1" />
           {saving ? 'adding...' : 'add_reader()'}
         </Button>
