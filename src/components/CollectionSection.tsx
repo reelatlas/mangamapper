@@ -665,7 +665,7 @@ export const CollectionSection = ({ anime }: CollectionSectionProps) => {
           <div className="space-y-2">
             <div className="flex items-center gap-1.5 text-xs">
               <StickyNote className={`w-3.5 h-3.5 ${progress?.notes ? 'text-primary' : 'text-muted-foreground'}`} />
-              <span className={progress?.notes ? 'text-syntax-cyan' : 'text-muted-foreground'}>notes</span>
+              <span className={progress?.notes ? 'text-syntax-cyan' : 'text-muted-foreground'}>series_notes</span>
             </div>
             {isEditingNotes ? (
               <div className="space-y-2">
@@ -702,8 +702,8 @@ export const CollectionSection = ({ anime }: CollectionSectionProps) => {
                 onMouseLeave={() => setIsNotesHovered(false)}
                 onClick={startEditingNotes}
               >
-                <span className="text-syntax-cyan">//</span> notes(null)
-                <span className={`${isNotesHovered ? 'inline' : 'hidden'} text-primary ml-2`}>{'>'} add_notes</span>
+                <span className="text-syntax-cyan">//</span> series_notes(null)
+                <span className={`${isNotesHovered ? 'inline' : 'hidden'} text-primary ml-2`}>{'>'} add_series_notes</span>
               </span>
             )}
           </div>

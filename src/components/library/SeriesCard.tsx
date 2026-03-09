@@ -401,7 +401,7 @@ export const SeriesCard = ({ item, animeId, readerSites, onRemove, userId, onSav
             {/* Series notes */}
             <div className="!mt-8 space-y-1.5">
               <Label className="text-xs">
-                <span className="text-syntax-cyan">notes</span>
+                <span className="text-syntax-cyan">series_notes</span>
                 <span className="text-muted-foreground/60"> // optional</span>
               </Label>
               <Input
@@ -517,7 +517,7 @@ export const SeriesCard = ({ item, animeId, readerSites, onRemove, userId, onSav
                 ) : (
                   <div className="flex items-center gap-1.5 flex-wrap">
                     <StickyNote className="w-3.5 h-3.5 shrink-0 text-muted-foreground" />
-                    <span className="text-xs text-muted-foreground">notes(null)</span>
+                    <span className="text-xs text-muted-foreground">series_notes(null)</span>
                   </div>
                 )}
               </div>
