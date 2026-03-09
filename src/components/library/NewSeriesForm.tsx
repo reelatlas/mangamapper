@@ -31,6 +31,49 @@ interface NewSeriesFormProps {
 export const NewSeriesForm = ({ userId, readerSites, progress, onSuccess, onCancel, preSelectAnimeId }: NewSeriesFormProps) => {
   const [animeId, setAnimeId] = useState(preSelectAnimeId || '');
   const [notes, setNotes] = useState('');
+
+  const handleAnimeSelect = async (id: string) => {
+    setAnimeId(id);
+    if (!id) {
+      setNotes('');
+      setEditReaderAssignments([{ readerName: '', readerUrl: '', seriesUrl: '', suffix: '', userModified: false }]);
+      return;
+    }
+
+    // Populate reader assignments from existing reader sites
+    const matchingReaders = readerSites.filter(s => s.anime_id === id);
+    if (matchingReaders.length > 0) {
+      setEditReaderAssignments(matchingReaders.map(r => {
+        const base = r.url ? (r.url.endsWith('/') ? r.url : r.url + '/') : '';
+        const suffix = base && r.series_url?.startsWith(base) ? r.series_url.slice(base.length) : '';
+        return {
+          readerName: r.name,
+          readerUrl: r.url,
+          seriesUrl: r.series_url || base,
+          suffix,
+          existingSiteId: r.id,
+          userModified: false,
+        };
+      }));
+    } else {
+      setEditReaderAssignments([{ readerName: '', readerUrl: '', seriesUrl: '', suffix: '', userModified: false }]);
+    }
+
+    // Populate notes from progress or query DB
+    const existing = progress.find(p => p.anime_id === id);
+    if (existing?.notes) {
+      setNotes(existing.notes);
+    } else {
+      // Query for non-library progress that might have notes
+      const { data } = await supabase
+        .from('anime_progress')
+        .select('notes')
+        .eq('anime_id', id)
+        .eq('user_id', userId)
+        .maybeSingle();
+      setNotes(data?.notes || '');
+    }
+  };
   const [saving, setSaving] = useState(false);
   const [editReaderAssignments, setEditReaderAssignments] = useState<ReaderAssignment[]>([
     { readerName: '', readerUrl: '', seriesUrl: '', suffix: '', userModified: false },
