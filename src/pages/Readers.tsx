@@ -579,7 +579,7 @@ const Readers = () => {
                             </div>
                             <div className="space-y-1.5">
                               <Label className="text-xs">
-                                <span className="text-syntax-cyan">notes</span>
+                                <span className="text-syntax-cyan">reader_notes</span>
                               </Label>
                               <Input placeholder="top-tier fan subs" value={editSiteNotes} onChange={e => setEditSiteNotes(e.target.value)} className="font-mono text-sm border-dashed bg-muted/30" />
                             </div>
