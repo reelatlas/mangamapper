@@ -206,8 +206,12 @@ export const CollectionSection = ({ anime }: CollectionSectionProps) => {
     return makeReaderSnapshot(editReaderAssignments) !== initialReaderSnapshot;
   }, [isEditing, editReaderAssignments, initialReaderSnapshot]);
 
+  const [isAddingReaders, setIsAddingReaders] = useState(false);
+  const [isAddingNotes, setIsAddingNotes] = useState(false);
+
   const startEditing = () => {
     setShowInlineNewReader(false);
+    setIsAddingReaders(linkedReaders.length === 0);
 
     let assignments: ReaderAssignment[];
     if (linkedReaders.length > 0) {
@@ -236,6 +240,7 @@ export const CollectionSection = ({ anime }: CollectionSectionProps) => {
 
   const startEditingNotes = () => {
     setEditNotesValue(progress?.notes ?? '');
+    setIsAddingNotes(!progress?.notes);
     setIsEditingNotes(true);
   };
 
@@ -437,7 +442,7 @@ export const CollectionSection = ({ anime }: CollectionSectionProps) => {
     return (
       <Card className="border-dashed border-primary/50">
         <div className="terminal-header flex items-center gap-2">
-          <span className="text-muted-foreground">edit_readers</span>
+          <span className="text-muted-foreground">{isAddingReaders ? 'add_readers' : 'edit_readers'}</span>
           <span className="text-syntax-green">{'>'} <span className="truncate">{anime.title}</span></span>
         </div>
         <CardContent className="p-4">
@@ -512,7 +517,8 @@ export const CollectionSection = ({ anime }: CollectionSectionProps) => {
             {/* Actions */}
             <div className="!mt-8 flex flex-wrap items-center gap-3">
               <Button onClick={saveChanges} disabled={saving || !isReadersDirty} className="font-mono text-xs border-dashed">
-                <Check className="w-3.5 h-3.5 mr-1" />{saving ? 'saving...' : 'save_readers()'}
+                {isAddingReaders ? <Plus className="w-3.5 h-3.5 mr-1" /> : <Check className="w-3.5 h-3.5 mr-1" />}
+                {saving ? 'saving...' : isAddingReaders ? 'add_readers()' : 'save_readers()'}
               </Button>
               <Button variant="outline" onClick={cancelEditing} className="font-mono text-xs border-dashed hover:bg-destructive hover:text-destructive-foreground hover:border-destructive">
                 <X className="w-3.5 h-3.5 mr-1" />cancel
@@ -700,8 +706,9 @@ export const CollectionSection = ({ anime }: CollectionSectionProps) => {
                   autoFocus
                 />
                 <div className="flex items-center gap-2">
-                  <Button size="sm" onClick={saveNotes} disabled={savingNotes || editNotesValue === (progress?.notes ?? '')} className="font-mono text-xs h-7 border-dashed">
-                    <Check className="w-3 h-3 mr-1" />{savingNotes ? 'saving...' : 'save()'}
+                  <Button size="sm" onClick={saveNotes} disabled={savingNotes || (isAddingNotes ? !editNotesValue.trim() : editNotesValue === (progress?.notes ?? ''))} className="font-mono text-xs h-7 border-dashed">
+                    {isAddingNotes ? <Plus className="w-3 h-3 mr-1" /> : <Check className="w-3 h-3 mr-1" />}
+                    {savingNotes ? 'saving...' : isAddingNotes ? 'add_notes()' : 'save()'}
                   </Button>
                   <Button variant="ghost" size="sm" onClick={cancelEditingNotes} className="font-mono text-xs h-7 text-muted-foreground hover:text-muted-foreground hover:bg-muted">
                     <X className="w-3 h-3 mr-1" />cancel
