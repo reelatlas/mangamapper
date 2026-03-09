@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { useAuth } from '@/hooks/useAuth';
 import { supabase } from '@/integrations/supabase/client';
 import { toast } from 'sonner';
@@ -9,6 +9,7 @@ export const useLibraryData = () => {
   const [progress, setProgress] = useState<AnimeProgress[]>([]);
   const [readerSites, setReaderSites] = useState<ReaderSite[]>([]);
   const [loading, setLoading] = useState(true);
+  const initialLoadDone = useRef(false);
 
   const fetchProgress = async () => {
     const { data, error } = await supabase
@@ -38,9 +39,10 @@ export const useLibraryData = () => {
   };
 
   const fetchData = async () => {
-    setLoading(true);
+    if (!initialLoadDone.current) setLoading(true);
     await Promise.all([fetchProgress(), fetchReaderSites()]);
     setLoading(false);
+    initialLoadDone.current = true;
   };
 
   const removeFromLibrary = async (id: string) => {
@@ -76,7 +78,7 @@ export const useLibraryData = () => {
     if (user) {
       fetchData();
     }
-  }, [user]);
+  }, [user?.id]);
 
   return {
     user,
