@@ -37,12 +37,14 @@ export const NewSeriesForm = ({ userId, readerSites, progress, onSuccess, onCanc
     if (!id) {
       setNotes('');
       setEditReaderAssignments([{ readerName: '', readerUrl: '', seriesUrl: '', suffix: '', userModified: false }]);
+      setInitialExistingSiteIds([]);
       return;
     }
 
     // Populate reader assignments from existing reader sites
     const matchingReaders = readerSites.filter(s => s.anime_id === id);
     if (matchingReaders.length > 0) {
+      setInitialExistingSiteIds(matchingReaders.map(r => r.id));
       setEditReaderAssignments(matchingReaders.map(r => {
         const base = r.url ? (r.url.endsWith('/') ? r.url : r.url + '/') : '';
         const suffix = base && r.series_url?.startsWith(base) ? r.series_url.slice(base.length) : '';
@@ -56,6 +58,7 @@ export const NewSeriesForm = ({ userId, readerSites, progress, onSuccess, onCanc
         };
       }));
     } else {
+      setInitialExistingSiteIds([]);
       setEditReaderAssignments([{ readerName: '', readerUrl: '', seriesUrl: '', suffix: '', userModified: false }]);
     }
 
@@ -78,6 +81,7 @@ export const NewSeriesForm = ({ userId, readerSites, progress, onSuccess, onCanc
   const [editReaderAssignments, setEditReaderAssignments] = useState<ReaderAssignment[]>([
     { readerName: '', readerUrl: '', seriesUrl: '', suffix: '', userModified: false },
   ]);
+  const [initialExistingSiteIds, setInitialExistingSiteIds] = useState<string[]>([]);
   const [showInlineNewReader, setShowInlineNewReader] = useState(false);
   const [newlyCreatedReader, setNewlyCreatedReader] = useState<{name: string, url: string} | null>(null);
 
@@ -243,6 +247,18 @@ export const NewSeriesForm = ({ userId, readerSites, progress, onSuccess, onCanc
           toast.error('Series added but failed to link reader');
         }
       }
+    }
+
+    // Unlink removed reader associations
+    const remainingExistingIds = validAssignments
+      .filter(a => a.existingSiteId)
+      .map(a => a.existingSiteId!);
+    const removedIds = initialExistingSiteIds.filter(id => !remainingExistingIds.includes(id));
+    if (removedIds.length > 0) {
+      await supabase
+        .from('manga_reader_sites')
+        .update({ anime_id: null, series_url: null })
+        .in('id', removedIds);
     }
 
     toast.success('Series added to library');
