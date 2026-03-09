@@ -299,6 +299,19 @@ export const NewSeriesForm = ({ userId, readerSites, progress, onSuccess, onCanc
             </div>
           </div>
 
+          {/* Notes */}
+          <div className="!mt-8 space-y-1.5">
+            <Label className="text-xs">
+              <span className="text-syntax-cyan">series_notes</span>
+            </Label>
+            <Input
+              placeholder="best Berserk scans for golden age arc"
+              value={notes}
+              onChange={(e) => setNotes(e.target.value)}
+              className="font-mono text-sm border-dashed bg-muted/30"
+            />
+          </div>
+
           {/* assign_to readers */}
           <div className="!mt-8">
             <p className="text-xs text-muted-foreground mb-3">assign_to <span className="text-muted-foreground/60">// optional</span></p>
@@ -384,20 +397,6 @@ export const NewSeriesForm = ({ userId, readerSites, progress, onSuccess, onCanc
                 </Button>
               )}
             </div>
-          </div>
-
-          {/* Notes */}
-          <div className="!mt-8 space-y-1.5">
-            <Label className="text-xs">
-              <span className="text-syntax-cyan">series_notes</span>
-              <span className="text-muted-foreground/60"> // optional</span>
-            </Label>
-            <Input
-              placeholder="best Berserk scans for golden age arc"
-              value={notes}
-              onChange={(e) => setNotes(e.target.value)}
-              className="font-mono text-sm border-dashed bg-muted/30"
-            />
           </div>
 
           <div className="!mt-8 flex gap-2">
