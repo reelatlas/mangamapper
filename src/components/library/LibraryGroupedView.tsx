@@ -124,6 +124,17 @@ export const LibraryGroupedView = ({ userId, readerSites, progress, fetchReaderS
     }
   }, [readerSites, readerSort, unassignedProgress]);
 
+  const isEditReaderDirty = useMemo(() => {
+    if (!initialEditReaderSnapshot) return false;
+    const current = JSON.stringify({
+      name: editSiteName,
+      url: editSiteUrl,
+      notes: editSiteNotes,
+      assignments: JSON.stringify(editSeriesAssignments.map(a => ({ animeId: a.animeId, seriesUrl: a.seriesUrl }))),
+    });
+    return current !== initialEditReaderSnapshot;
+  }, [editSiteName, editSiteUrl, editSiteNotes, editSeriesAssignments, initialEditReaderSnapshot]);
+
   const startEditingReader = (group: { name: string; url: string; notes: string | null; entries: ReaderSite[] }) => {
     setConfirmingDeleteReaderId(null);
     setEditingReaderName(group.name.toLowerCase());
