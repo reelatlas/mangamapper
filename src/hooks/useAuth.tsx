@@ -34,7 +34,7 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
     const { data: { subscription } } = supabase.auth.onAuthStateChange(
       (event, session) => {
         setSession(session);
-        setUser(session?.user ?? null);
+        stableSetUser(session?.user ?? null);
         setLoading(false);
         
         // Only show toast for OAuth sign-ins (email/password handled in signIn function)
