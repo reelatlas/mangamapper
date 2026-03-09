@@ -609,7 +609,7 @@ export const CollectionSection = ({ anime }: CollectionSectionProps) => {
                     </div>
                     <div>
                       <span className="text-muted-foreground text-xs block mb-1">ch</span>
-                      <Input type="number" placeholder="—" value={readChapter} onChange={e => setReadChapter(e.target.value)} className="font-mono text-sm border-dashed bg-muted/30 w-24 h-7" />
+                      <Input type="number" placeholder="—" value={readChapter} onChange={e => setReadChapter(e.target.value)} className="font-mono text-sm border-dashed bg-muted/30 w-24 h-10" />
                     </div>
                   </div>
                 </div>
