@@ -181,10 +181,10 @@ export const CollectionSection = ({ anime }: CollectionSectionProps) => {
         if (readers) setLinkedReaders(readers);
         const { data: prog } = await supabase.from('anime_progress').select('*').eq('user_id', user.id).eq('anime_id', anime.id).single();
         if (prog) {
-          setLastWatched(prog.last_watched_episode ?? null);
-          setLastReadVolume(prog.last_read_volume ?? null);
-          setLastReadChapter(prog.last_read_chapter ?? null);
-          setNotes(prog.notes ?? null);
+          setProgress(prog);
+          setWatchedEpisode(prog.last_watched_episode?.toString() ?? '');
+          setReadVolume(prog.last_read_volume?.toString() ?? '');
+          setReadChapter(prog.last_read_chapter ?? '');
         }
       }
     }
