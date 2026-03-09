@@ -119,15 +119,29 @@ export const SeriesCard = ({ item, animeId, readerSites, onRemove, userId, onSav
     const updated = [...editReaderAssignments];
     const prev = updated[index];
     const keepId = prev.existingSiteId && prev.readerName.trim().toLowerCase() === option.name.trim().toLowerCase() ? prev.existingSiteId : undefined;
-    updated[index] = {
-      ...updated[index],
-      readerName: option.name,
-      readerUrl: option.url,
-      seriesUrl: option.url ? (option.url.endsWith('/') ? option.url : option.url + '/') : '',
-      suffix: '',
-      userModified: true,
-      existingSiteId: keepId,
-    };
+    // Check for existing DB record for this reader + current series
+    const existingRecord = resolvedAnimeId ? readerSites.find(s => s.name.toLowerCase() === option.name.toLowerCase() && s.anime_id === resolvedAnimeId) : null;
+    if (existingRecord) {
+      updated[index] = {
+        ...updated[index],
+        readerName: option.name,
+        readerUrl: option.url,
+        seriesUrl: existingRecord.series_url ?? '',
+        suffix: '',
+        userModified: true,
+        existingSiteId: existingRecord.id,
+      };
+    } else {
+      updated[index] = {
+        ...updated[index],
+        readerName: option.name,
+        readerUrl: option.url,
+        seriesUrl: option.url ? (option.url.endsWith('/') ? option.url : option.url + '/') : '',
+        suffix: '',
+        userModified: true,
+        existingSiteId: keepId,
+      };
+    }
     setEditReaderAssignments(updated);
   };
 

@@ -256,11 +256,16 @@ export const CollectionSection = ({ anime }: CollectionSectionProps) => {
     if (!option) return;
     setShowInlineNewReader(false);
     const updated = [...editReaderAssignments];
-    const baseUrl = option.url?.trim() ? (option.url.trim().endsWith('/') ? option.url.trim() : option.url.trim() + '/') : '';
-    // Clear existingSiteId when switching to a different reader so save treats it as a new insert
     const prev = updated[index];
     const keepId = prev.existingSiteId && prev.readerName.trim().toLowerCase() === option.name.trim().toLowerCase() ? prev.existingSiteId : undefined;
-    updated[index] = { ...updated[index], readerName: option.name, readerUrl: option.url, seriesUrl: baseUrl, suffix: '', userModified: true, existingSiteId: keepId };
+    // Check for existing DB record for this reader + current series
+    const existingRecord = allReaderSites.find(s => s.name.toLowerCase() === option.name.toLowerCase() && s.anime_id === anime.id);
+    if (existingRecord) {
+      updated[index] = { ...updated[index], readerName: option.name, readerUrl: option.url, seriesUrl: existingRecord.series_url ?? '', suffix: '', userModified: true, existingSiteId: existingRecord.id };
+    } else {
+      const baseUrl = option.url?.trim() ? (option.url.trim().endsWith('/') ? option.url.trim() : option.url.trim() + '/') : '';
+      updated[index] = { ...updated[index], readerName: option.name, readerUrl: option.url, seriesUrl: baseUrl, suffix: '', userModified: true, existingSiteId: keepId };
+    }
     setEditReaderAssignments(updated);
   };
 

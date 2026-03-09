@@ -49,7 +49,7 @@ export const NewSeriesForm = ({ userId, readerSites, progress, onSuccess, onCanc
         return {
           readerName: r.name,
           readerUrl: r.url,
-          seriesUrl: r.series_url || base,
+          seriesUrl: r.series_url ?? '',
           suffix,
           existingSiteId: r.id,
           userModified: false,
@@ -111,14 +111,28 @@ export const NewSeriesForm = ({ userId, readerSites, progress, onSuccess, onCanc
     if (!option) return;
     setShowInlineNewReader(false);
     const updated = [...editReaderAssignments];
-    updated[index] = {
-      ...updated[index],
-      readerName: option.name,
-      readerUrl: option.url,
-      seriesUrl: option.url ? (option.url.endsWith('/') ? option.url : option.url + '/') : '',
-      suffix: '',
-      userModified: true,
-    };
+    // Check if there's an existing DB record for this reader + current series
+    const existingRecord = animeId ? readerSites.find(s => s.name.toLowerCase() === option.name.toLowerCase() && s.anime_id === animeId) : null;
+    if (existingRecord) {
+      updated[index] = {
+        ...updated[index],
+        readerName: option.name,
+        readerUrl: option.url,
+        seriesUrl: existingRecord.series_url ?? '',
+        suffix: '',
+        existingSiteId: existingRecord.id,
+        userModified: true,
+      };
+    } else {
+      updated[index] = {
+        ...updated[index],
+        readerName: option.name,
+        readerUrl: option.url,
+        seriesUrl: option.url ? (option.url.endsWith('/') ? option.url : option.url + '/') : '',
+        suffix: '',
+        userModified: true,
+      };
+    }
     setEditReaderAssignments(updated);
   };
 
