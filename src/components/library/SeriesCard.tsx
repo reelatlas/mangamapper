@@ -65,6 +65,18 @@ export const SeriesCard = ({ item, animeId, readerSites, onRemove, userId, onSav
     return options.sort((a, b) => a.name.localeCompare(b.name));
   }, [readerSites, newlyCreatedReader]);
 
+  const isEditSeriesDirty = useMemo(() => {
+    if (!initialEditSnapshot) return false;
+    const current = JSON.stringify({
+      episode: editWatchedEpisode,
+      volume: editReadVolume,
+      chapter: editReadChapter,
+      notes: editNotes,
+      assignments: JSON.stringify(editReaderAssignments.map(a => ({ readerName: a.readerName, readerUrl: a.readerUrl, seriesUrl: a.seriesUrl }))),
+    });
+    return current !== initialEditSnapshot;
+  }, [editWatchedEpisode, editReadVolume, editReadChapter, editNotes, editReaderAssignments, initialEditSnapshot]);
+
   if (!anime) return null;
 
   const startEditing = (e: React.MouseEvent) => {
