@@ -154,7 +154,7 @@ const About = () => {
                 </li>
                 <li className="flex gap-2">
                   <span className="text-muted-foreground shrink-0">→</span>
-                  <span>easily migrate bookmarks when urls or mirrors change, disappear, or get shut down</span>
+                  <span>easily update bookmarks when urls or mirrors change, disappear, or get shut down</span>
                 </li>
               </ul>
             )}
