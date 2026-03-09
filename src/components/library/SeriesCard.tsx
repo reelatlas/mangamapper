@@ -405,7 +405,7 @@ export const SeriesCard = ({ item, animeId, readerSites, onRemove, userId, onSav
                 <span className="text-muted-foreground/60"> // optional</span>
               </Label>
               <Input
-                placeholder="any notes about this series..."
+                placeholder="best Berserk scans for golden age arc"
                 value={editNotes}
                 onChange={e => setEditNotes(e.target.value)}
                 className="font-mono text-sm border-dashed bg-muted/30"
