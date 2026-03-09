@@ -215,8 +215,20 @@ export const NewSeriesForm = ({ userId, readerSites, progress, onSuccess, onCanc
       return;
     }
 
-    // Insert reader assignments
+    // Unlink removed reader associations FIRST so kept readers get a later timestamp
     const validAssignments = editReaderAssignments.filter(a => a.readerName);
+    const remainingExistingIds = validAssignments
+      .filter(a => a.existingSiteId)
+      .map(a => a.existingSiteId!);
+    const removedIds = initialExistingSiteIds.filter(id => !remainingExistingIds.includes(id));
+    if (removedIds.length > 0) {
+      await supabase
+        .from('manga_reader_sites')
+        .update({ anime_id: null, series_url: null, updated_at: new Date().toISOString() })
+        .in('id', removedIds);
+    }
+
+    // Insert/update kept reader assignments (runs after unlink, so timestamps are later)
     for (const assignment of validAssignments) {
       if (assignment.existingSiteId) {
         const { error: readerError } = await supabase
@@ -249,18 +261,6 @@ export const NewSeriesForm = ({ userId, readerSites, progress, onSuccess, onCanc
           toast.error('Series added but failed to link reader');
         }
       }
-    }
-
-    // Unlink removed reader associations
-    const remainingExistingIds = validAssignments
-      .filter(a => a.existingSiteId)
-      .map(a => a.existingSiteId!);
-    const removedIds = initialExistingSiteIds.filter(id => !remainingExistingIds.includes(id));
-    if (removedIds.length > 0) {
-      await supabase
-        .from('manga_reader_sites')
-        .update({ anime_id: null, series_url: null })
-        .in('id', removedIds);
     }
 
     toast.success('Series added to library');
