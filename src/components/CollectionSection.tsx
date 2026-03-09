@@ -518,7 +518,7 @@ export const CollectionSection = ({ anime }: CollectionSectionProps) => {
             <div className="!mt-8 flex flex-wrap items-center gap-3">
               <Button onClick={saveChanges} disabled={saving || !isReadersDirty} className="font-mono text-xs border-dashed">
                 {isAddingReaders ? <Plus className="w-3.5 h-3.5 mr-1" /> : <Check className="w-3.5 h-3.5 mr-1" />}
-                {saving ? 'saving...' : isAddingReaders ? 'add_readers()' : 'save_readers()'}
+                {saving ? 'saving...' : isAddingReaders ? 'add_reader()' : 'save_changes()'}
               </Button>
               <Button variant="outline" onClick={cancelEditing} className="font-mono text-xs border-dashed hover:bg-destructive hover:text-destructive-foreground hover:border-destructive">
                 <X className="w-3.5 h-3.5 mr-1" />cancel
