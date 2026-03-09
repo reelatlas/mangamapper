@@ -21,7 +21,7 @@ export const MangaMappingDisplay = ({ episode, showEpisodeNumber = true }: Manga
       </div>
       
       <div className="flex items-center gap-2 flex-wrap">
-        <EpisodeBadge type={episode.type} />
+        <EpisodeBadge type={episode.type} className="text-[9px] px-1.5 py-px" />
         
         {episode.mangaMapping ? (
           <span className="text-xs">
