@@ -43,6 +43,7 @@ export const SeriesCard = ({ item, animeId, readerSites, onRemove, userId, onSav
   const [saving, setSaving] = useState(false);
   const [showInlineNewReader, setShowInlineNewReader] = useState(false);
   const [newlyCreatedReader, setNewlyCreatedReader] = useState<{name: string, url: string} | null>(null);
+  const [initialEditSnapshot, setInitialEditSnapshot] = useState<string | null>(null);
 
   const resolvedAnimeId = item?.anime_id ?? animeId;
   const anime = resolvedAnimeId ? getAnimeById(resolvedAnimeId) : null;
