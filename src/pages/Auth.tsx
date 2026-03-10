@@ -138,13 +138,15 @@ const Auth = () => {
           }
         }
       } else {
-        const { error } = await signUp(userEmail, userPassword);
+        const { data, error } = await signUp(userEmail, userPassword);
         if (error) {
           if (error.message.includes('already registered')) {
             toast.error('An account with this email already exists');
           } else {
             toast.error(error.message);
           }
+        } else if (!data?.user?.identities?.length) {
+          toast.error('Account already exists');
         } else {
           toast.success('Account created');
           setChecking(true);
