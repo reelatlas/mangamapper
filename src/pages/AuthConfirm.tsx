@@ -115,9 +115,9 @@ const AuthConfirm = () => {
 
           {/* ASCII progress bar */}
           <div className="flex items-center text-primary">
-            <span className="text-muted-foreground text-sm">[</span>
+            <span className="text-muted-foreground text-base">[</span>
             <span className="text-[10px] leading-none whitespace-pre-wrap">{progressBar}</span>
-            <span className="text-muted-foreground text-sm">]</span>
+            <span className="text-muted-foreground text-base">]</span>
           </div>
 
           {/* Controls */}
@@ -125,7 +125,7 @@ const AuthConfirm = () => {
             <Button
               variant="outline"
               size="sm"
-              className={`text-xs border-dashed ${paused ? 'hover:text-syntax-green hover:border-syntax-green' : 'hover:text-syntax-amber hover:border-syntax-amber'}`}
+              className={`text-xs border-dashed ${paused ? 'hover:bg-accent hover:text-accent-foreground' : 'hover:bg-[hsl(var(--syntax-amber))] hover:text-background'}`}
               onClick={togglePause}
               disabled={filledBlocks >= totalBlocks}
             >
@@ -134,7 +134,7 @@ const AuthConfirm = () => {
             <Button
               variant="outline"
               size="sm"
-              className={`group text-xs border-dashed ${atMaxLimit ? 'cursor-not-allowed hover:opacity-50' : ''}`}
+              className={`group text-xs border-dashed ${atMaxLimit ? 'cursor-not-allowed hover:bg-muted/50 hover:text-muted-foreground' : ''}`}
               onClick={atMaxLimit ? undefined : addTime}
               disabled={filledBlocks >= totalBlocks && !atMaxLimit}
             >
