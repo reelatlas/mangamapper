@@ -80,12 +80,12 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
   };
 
   const signIn = async (email: string, password: string) => {
-    const { error } = await supabase.auth.signInWithPassword({
+    const { data, error } = await supabase.auth.signInWithPassword({
       email,
       password,
     });
-    if (!error) {
-      toast.success('Welcome back!');
+    if (!error && data.user) {
+      toast.success(isFirstSignIn(data.user) ? 'Welcome aboard!' : 'Welcome back!');
     }
     return { error: error as Error | null };
   };
