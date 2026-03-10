@@ -134,7 +134,7 @@ const AuthConfirm = () => {
             <Button
               variant="outline"
               size="sm"
-              className={`group text-xs border-dashed ${atMaxLimit ? 'cursor-not-allowed hover:opacity-50' : ''}`}
+              className={`group text-xs border-dashed ${atMaxLimit ? 'cursor-not-allowed hover:bg-muted/50 hover:text-muted-foreground' : ''}`}
               onClick={atMaxLimit ? undefined : addTime}
               disabled={filledBlocks >= totalBlocks && !atMaxLimit}
             >
