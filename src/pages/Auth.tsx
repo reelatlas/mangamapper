@@ -157,7 +157,7 @@ const Auth = () => {
 
             <div className="mt-6 text-left text-xs">
               <span className="text-muted-foreground">
-                {isLogin ? "// account(does_not_exist) → " : "// account(exists) → "}
+                {isLogin ? "// account_exists(false) → " : "// account_exists(true) → "}
               </span>
               <button
                 type="button"
