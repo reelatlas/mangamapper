@@ -9,7 +9,7 @@ interface AuthContextType {
   loading: boolean;
   signUp: (email: string, password: string) => Promise<{ error: Error | null }>;
   signIn: (email: string, password: string) => Promise<{ error: Error | null }>;
-  signInWithGoogle: () => Promise<{ error: Error | null }>;
+  signInWithGoogle: (redirectPath?: string) => Promise<{ error: Error | null }>;
   signOut: () => Promise<void>;
 }
 
@@ -45,14 +45,6 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
             setTimeout(() => {
               toast.success('Welcome back!');
             }, 0);
-          }
-          // Handle post-login redirect for OAuth flows
-          const postLoginRedirect = sessionStorage.getItem('post_login_redirect');
-          if (postLoginRedirect) {
-            sessionStorage.removeItem('post_login_redirect');
-            setTimeout(() => {
-              window.location.replace(postLoginRedirect);
-            }, 100);
           }
         }
       }
@@ -91,9 +83,11 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
     return { error: error as Error | null };
   };
 
-  const signInWithGoogle = async () => {
+  const signInWithGoogle = async (redirectPath?: string) => {
     sessionStorage.setItem('pending_oauth_signin', 'true');
-    const redirectUrl = `${window.location.origin}/`;
+    const authRedirect = redirectPath
+      ? `${window.location.origin}/auth?redirect=${encodeURIComponent(redirectPath)}`
+      : `${window.location.origin}/auth`;
 
     const isLovableHost =
       window.location.hostname.endsWith('lovable.app') ||
@@ -199,7 +193,7 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
     const { error } = await supabase.auth.signInWithOAuth({
       provider: 'google',
       options: {
-        redirectTo: redirectUrl,
+        redirectTo: authRedirect,
       },
     });
 
