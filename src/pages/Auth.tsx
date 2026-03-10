@@ -31,15 +31,12 @@ const Auth = () => {
   const [searchParams] = useSearchParams();
   const [redirect] = useState(() => {
     const stored = sessionStorage.getItem('redirectAfterLogin');
-    if (stored) {
-      sessionStorage.removeItem('redirectAfterLogin');
-      return stored;
-    }
-    return searchParams.get('redirect') || '/';
+    return stored || searchParams.get('redirect') || '/';
   });
 
   useEffect(() => {
     if (user) {
+      sessionStorage.removeItem('redirectAfterLogin');
       navigate(redirect, { replace: true });
     }
   }, [user, navigate, redirect]);
