@@ -125,7 +125,7 @@ const AuthConfirm = () => {
             <Button
               variant="outline"
               size="sm"
-              className="text-xs border-dashed"
+              className={`text-xs border-dashed ${paused ? 'hover:text-syntax-green hover:border-syntax-green' : 'hover:text-syntax-amber hover:border-syntax-amber'}`}
               onClick={togglePause}
               disabled={filledBlocks >= totalBlocks}
             >
@@ -134,11 +134,18 @@ const AuthConfirm = () => {
             <Button
               variant="outline"
               size="sm"
-              className={`text-xs border-dashed ${atMaxLimit ? 'opacity-50 cursor-not-allowed' : ''}`}
-              onClick={addTime}
-              disabled={atMaxLimit || filledBlocks >= totalBlocks}
+              className={`group text-xs border-dashed ${atMaxLimit ? 'cursor-not-allowed hover:opacity-50' : ''}`}
+              onClick={atMaxLimit ? undefined : addTime}
+              disabled={filledBlocks >= totalBlocks && !atMaxLimit}
             >
-              {atMaxLimit ? 'add_time(max_limit)' : 'add_time(5s)'}
+              {atMaxLimit ? (
+                <>
+                  <span className="group-hover:hidden">add_time(5s)</span>
+                  <span className="hidden group-hover:inline text-muted-foreground">add_time(max_limit)</span>
+                </>
+              ) : (
+                'add_time(5s)'
+              )}
             </Button>
           </div>
 
