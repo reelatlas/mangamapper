@@ -70,7 +70,7 @@ const Auth = () => {
             toast.error(error.message);
           }
         } else {
-          toast.success('Account created! Check your email to confirm your account before signing in.');
+          toast.success('Account created, confirm your email before signing in');
         }
       }
     } finally {
