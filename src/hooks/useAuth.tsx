@@ -62,6 +62,11 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
       setSession(session);
       stableSetUser(session?.user ?? null);
       setLoading(false);
+
+      if (session?.user && sessionStorage.getItem('pending_welcome') === 'true') {
+        sessionStorage.removeItem('pending_welcome');
+        setTimeout(() => toast.success('Welcome aboard!'), 0);
+      }
     });
 
     return () => subscription.unsubscribe();
