@@ -173,7 +173,7 @@ const Auth = () => {
 
       {checking && (
         <p className="text-xs text-muted-foreground">
-          // auth_checking<AnimatedDots />
+          // auth_init<AnimatedDots />
         </p>
       )}
 
