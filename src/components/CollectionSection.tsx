@@ -48,6 +48,7 @@ const formatTimestamp = (timestamp: string) => {
 
 export const CollectionSection = ({ anime }: CollectionSectionProps) => {
   const { user } = useAuth();
+  const location = useLocation();
   const [progress, setProgress] = useState<Progress | null>(null);
   const [inLibrary, setInLibrary] = useState(false);
   const [linkedReaders, setLinkedReaders] = useState<ReaderSite[]>([]);
