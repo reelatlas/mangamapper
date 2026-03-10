@@ -77,6 +77,8 @@ export const useLibraryData = () => {
   useEffect(() => {
     if (user) {
       fetchData();
+    } else {
+      setLoading(false);
     }
   }, [user?.id]);
 
