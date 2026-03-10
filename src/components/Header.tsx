@@ -78,6 +78,12 @@ export const Header = () => {
           ) : (
             <>
               <Button variant="ghost" size="sm" asChild className="font-mono text-xs">
+                <Link to="/library" className="flex items-center gap-1.5">
+                  <Library className="w-3.5 h-3.5" />
+                  <span className="hidden sm:inline">library</span>
+                </Link>
+              </Button>
+              <Button variant="ghost" size="sm" asChild className="font-mono text-xs">
                 <Link to="/about" className="flex items-center gap-1.5">
                   <Fingerprint className="w-3.5 h-3.5" />
                   <span className="hidden sm:inline">about</span>
