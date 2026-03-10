@@ -33,9 +33,9 @@ const Auth = () => {
 
   useEffect(() => {
     if (user) {
-      navigate(redirect);
+      navigate(redirect, { replace: true });
     }
-  }, [user, navigate]);
+  }, [user, navigate, redirect]);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
