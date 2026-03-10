@@ -73,7 +73,7 @@ const Auth = () => {
             toast.error(error.message);
           }
         } else {
-          navigate('/');
+          navigate(redirect);
         }
       } else {
         const { error } = await signUp(userEmail, userPassword);
