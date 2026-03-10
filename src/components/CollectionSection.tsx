@@ -246,6 +246,7 @@ export const CollectionSection = ({ anime }: CollectionSectionProps) => {
 
   const cancelEditingNotes = () => {
     setIsEditingNotes(false);
+    setIsNotesHovered(false);
   };
 
   const saveNotes = async () => {
@@ -267,6 +268,7 @@ export const CollectionSection = ({ anime }: CollectionSectionProps) => {
     }
     setSavingNotes(false);
     setIsEditingNotes(false);
+    setIsNotesHovered(false);
   };
 
   const addReaderRow = () => {
