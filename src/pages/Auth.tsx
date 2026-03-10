@@ -85,7 +85,7 @@ const Auth = () => {
           }
         } else {
           toast.success('Account created! You are now logged in.');
-          navigate('/');
+          navigate(redirect);
         }
       }
     } finally {

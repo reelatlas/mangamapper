@@ -415,7 +415,7 @@ export const CollectionSection = ({ anime }: CollectionSectionProps) => {
           <div className="font-mono">
             <p className="text-muted-foreground text-sm mb-4">!auth_required</p>
             <Button asChild className="border-dashed">
-              <Link to="/auth" className="text-xs">{'>'} sign_in</Link>
+              <Link to={`/auth?redirect=${encodeURIComponent(location.pathname)}`} className="text-xs">{'>'} sign_in</Link>
             </Button>
           </div>
         </CardContent>
