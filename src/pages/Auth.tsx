@@ -29,7 +29,14 @@ const Auth = () => {
   const { signIn, signUp, signInWithGoogle, user } = useAuth();
   const navigate = useNavigate();
   const [searchParams] = useSearchParams();
-  const redirect = searchParams.get('redirect') || '/';
+  const [redirect] = useState(() => {
+    const stored = sessionStorage.getItem('redirectAfterLogin');
+    if (stored) {
+      sessionStorage.removeItem('redirectAfterLogin');
+      return stored;
+    }
+    return searchParams.get('redirect') || '/';
+  });
 
   useEffect(() => {
     if (user) {
