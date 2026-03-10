@@ -125,7 +125,7 @@ const AuthConfirm = () => {
             <Button
               variant="outline"
               size="sm"
-              className={`text-xs border-dashed ${paused ? 'hover:text-syntax-green hover:border-syntax-green' : 'hover:text-syntax-amber hover:border-syntax-amber'}`}
+              className={`text-xs border-dashed ${paused ? 'hover:bg-accent hover:text-accent-foreground' : 'hover:bg-[hsl(var(--syntax-amber))] hover:text-background'}`}
               onClick={togglePause}
               disabled={filledBlocks >= totalBlocks}
             >
