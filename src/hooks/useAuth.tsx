@@ -46,14 +46,6 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
               toast.success('Welcome back!');
             }, 0);
           }
-          // Handle post-login redirect for OAuth flows
-          const postLoginRedirect = sessionStorage.getItem('post_login_redirect');
-          if (postLoginRedirect) {
-            sessionStorage.removeItem('post_login_redirect');
-            setTimeout(() => {
-              window.location.replace(postLoginRedirect);
-            }, 100);
-          }
         }
       }
     );
