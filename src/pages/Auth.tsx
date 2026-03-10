@@ -16,6 +16,17 @@ const authSchema = z.object({
   password: z.string().min(6, { message: "Password must be at least 6 characters" }),
 });
 
+const AnimatedDots = () => {
+  const [dots, setDots] = useState('.');
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setDots(prev => prev.length >= 3 ? '.' : prev + '.');
+    }, 400);
+    return () => clearInterval(interval);
+  }, []);
+  return <span>{dots}</span>;
+};
+
 const Auth = () => {
   const [isLogin, setIsLogin] = useState(true);
   const [email, setEmail] = useState('');
@@ -25,11 +36,14 @@ const Auth = () => {
   const [showPassword, setShowPassword] = useState(false);
   const [signupPending, setSignupPending] = useState(false);
   const [emailConfirmed, setEmailConfirmed] = useState(false);
+  const [checking, setChecking] = useState(false);
+  const [visuallyConfirmed, setVisuallyConfirmed] = useState(false);
   const [redirecting, setRedirecting] = useState(false);
   const { signIn, signUp, signInWithGoogle, user } = useAuth();
   const navigate = useNavigate();
   const [searchParams] = useSearchParams();
   const redirectTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const checkingTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
   // Normal redirect for already-authenticated users (not in signup pending flow)
   useEffect(() => {
@@ -59,13 +73,18 @@ const Auth = () => {
     if (!emailConfirmed) return;
 
     const doRedirect = () => {
-      setRedirecting(true);
-      redirectTimerRef.current = setTimeout(() => {
-        const stored = sessionStorage.getItem('redirectAfterLogin');
-        sessionStorage.removeItem('redirectAfterLogin');
-        const destination = stored || searchParams.get('redirect') || '/';
-        navigate(destination, { replace: true });
-      }, 3000);
+      setChecking(true);
+      checkingTimerRef.current = setTimeout(() => {
+        setChecking(false);
+        setVisuallyConfirmed(true);
+        setRedirecting(true);
+        redirectTimerRef.current = setTimeout(() => {
+          const stored = sessionStorage.getItem('redirectAfterLogin');
+          sessionStorage.removeItem('redirectAfterLogin');
+          const destination = stored || searchParams.get('redirect') || '/';
+          navigate(destination, { replace: true });
+        }, 3000);
+      }, 2000);
     };
 
     if (document.visibilityState === 'visible') {
@@ -80,11 +99,13 @@ const Auth = () => {
       document.addEventListener('visibilitychange', onVisible);
       return () => {
         document.removeEventListener('visibilitychange', onVisible);
+        if (checkingTimerRef.current) clearTimeout(checkingTimerRef.current);
         if (redirectTimerRef.current) clearTimeout(redirectTimerRef.current);
       };
     }
 
     return () => {
+      if (checkingTimerRef.current) clearTimeout(checkingTimerRef.current);
       if (redirectTimerRef.current) clearTimeout(redirectTimerRef.current);
     };
   }, [emailConfirmed, navigate, searchParams]);
@@ -136,21 +157,27 @@ const Auth = () => {
   const renderConfirmationView = () => (
     <div className="space-y-4">
       <div className="flex items-center gap-2 font-mono text-sm">
-        <span className={emailConfirmed ? 'text-syntax-green' : 'text-muted-foreground'}>
-          [{emailConfirmed ? <Check className="inline w-3.5 h-3.5 -mt-0.5" /> : ' '}]
+        <span className={visuallyConfirmed ? 'text-syntax-green' : 'text-muted-foreground'}>
+          [{visuallyConfirmed ? <Check className="inline w-3.5 h-3.5 -mt-0.5" /> : ' '}]
         </span>
-        <span className={emailConfirmed ? 'text-syntax-green' : 'text-muted-foreground'}>
+        <span className={visuallyConfirmed ? 'text-syntax-green' : 'text-muted-foreground'}>
           confirm_email
         </span>
         <span className="text-muted-foreground">to</span>
-        <span className={emailConfirmed ? 'text-foreground' : 'text-muted-foreground'}>
+        <span className={visuallyConfirmed ? 'text-foreground' : 'text-muted-foreground'}>
           sign_in
         </span>
       </div>
 
+      {checking && (
+        <p className="text-xs text-muted-foreground">
+          // auth_checking<AnimatedDots />
+        </p>
+      )}
+
       {redirecting && (
         <p className="text-xs text-muted-foreground">
-          // auth_confirmed &gt; redirecting...
+          // auth_confirmed &gt; redirecting<AnimatedDots />
         </p>
       )}
     </div>
@@ -161,7 +188,7 @@ const Auth = () => {
       <div className="w-full max-w-md flex flex-col">
         <Card className="w-full border-dashed">
           <div className="terminal-header flex items-center gap-2">
-            <span className={signupPending && emailConfirmed ? "text-syntax-green" : "text-syntax-amber"}>■</span>
+            <span className={signupPending && visuallyConfirmed ? "text-syntax-green" : "text-syntax-amber"}>■</span>
             <span className="text-muted-foreground">auth_terminal</span>
           </div>
           <CardContent className="p-6">
