@@ -96,7 +96,7 @@ const AuthConfirm = () => {
 
   const speedUp = useCallback(() => {
     setSpeedMultiplier(prev => {
-      const next = prev * 1.05;
+      const next = prev * 1.15;
       speedMultiplierRef.current = next;
       return next;
     });
