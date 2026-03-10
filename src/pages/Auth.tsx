@@ -147,6 +147,7 @@ const Auth = () => {
           }
         } else {
           toast.success('Account created');
+          setChecking(true);
           setSignupPending(true);
         }
       }
@@ -172,13 +173,13 @@ const Auth = () => {
 
       {checking && (
         <p className="text-xs text-muted-foreground">
-          // auth_checking<AnimatedDots />
+          // auth_init<AnimatedDots />
         </p>
       )}
 
       {redirecting && (
         <p className="text-xs text-muted-foreground">
-          // auth_confirmed &gt; redirecting<AnimatedDots />
+          // auth_success &gt; redirecting<AnimatedDots />
         </p>
       )}
     </div>
