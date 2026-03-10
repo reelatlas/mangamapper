@@ -184,6 +184,7 @@ const Auth = () => {
               disabled={loading || googleLoading}
               onClick={async () => {
                 setGoogleLoading(true);
+                sessionStorage.setItem('redirectAfterLogin', redirect);
                 const { error } = await signInWithGoogle(redirect);
                 if (error) {
                   toast.error(error.message);
