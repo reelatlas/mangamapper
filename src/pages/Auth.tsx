@@ -53,17 +53,8 @@ const Auth = () => {
       if (isLoginAttempt) {
         const { error } = await signIn(userEmail, userPassword);
         if (error) {
-          if (userEmail === TEST_EMAIL && error.message.includes('Invalid login credentials')) {
-            const { error: signUpError } = await signUp(userEmail, userPassword);
-            if (signUpError) {
-              if (signUpError.message.includes('already registered')) {
-                toast.error('Invalid password for test account');
-              } else {
-                toast.error(signUpError.message);
-              }
-            } else {
-              toast.success('Test account created! You are now logged in.');
-            }
+          if (error.message.includes('Email not confirmed')) {
+            toast.error('Please check your email and confirm your account before signing in.');
           } else if (error.message.includes('Invalid login credentials')) {
             toast.error('Invalid email or password');
           } else {
