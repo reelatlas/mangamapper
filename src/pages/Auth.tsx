@@ -167,11 +167,6 @@ const Auth = () => {
           <CardContent className="p-6">
             {signupPending ? (
               <>
-                <div className="mb-6">
-                  <p className="text-xs text-muted-foreground">
-                    // check your inbox to confirm
-                  </p>
-                </div>
                 {renderConfirmationView()}
               </>
             ) : (
@@ -276,7 +271,12 @@ const Auth = () => {
           <button
             type="button"
             onClick={() => {
-              if (window.history.length > 1) {
+              if (signupPending) {
+                setSignupPending(false);
+                setEmailConfirmed(false);
+                setRedirecting(false);
+                setIsLogin(false);
+              } else if (window.history.length > 1) {
                 navigate(-1);
               } else {
                 navigate('/');
