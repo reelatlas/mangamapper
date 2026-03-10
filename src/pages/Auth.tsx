@@ -150,7 +150,7 @@ const Auth = () => {
 
       {redirecting && (
         <p className="text-xs text-muted-foreground">
-          // auth_confirmed — redirecting...
+          // auth_confirmed &gt; redirecting...
         </p>
       )}
     </div>
