@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
-import { useNavigate, useLocation } from 'react-router-dom';
+import { useNavigate, useLocation, Link } from 'react-router-dom';
 import { Header } from '@/components/Header';
+import { Card, CardContent } from '@/components/ui/card';
 import { useLibraryData } from '@/hooks/useLibraryData';
 import { Button } from '@/components/ui/button';
 import { Library as LibraryIcon } from 'lucide-react';
