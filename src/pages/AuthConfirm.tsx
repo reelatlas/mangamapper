@@ -19,8 +19,11 @@ const AuthConfirm = () => {
   const [totalBlocks, setTotalBlocks] = useState(INITIAL_BLOCKS);
   const [paused, setPaused] = useState(false);
   const [closeJammed, setCloseJammed] = useState(false);
+  const [speedMultiplier, setSpeedMultiplier] = useState(1);
   const pausedRef = useRef(false);
   const pollStartRef = useRef(Date.now());
+  const speedMultiplierRef = useRef(1);
+  const timerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
   // Poll for session
   useEffect(() => {
@@ -43,30 +46,41 @@ const AuthConfirm = () => {
     return () => clearInterval(interval);
   }, [user, loading, navigate]);
 
-  // Progress bar + auto-close
+  // Progress bar + auto-close (recursive setTimeout for dynamic speed)
   const totalBlocksRef = useRef(totalBlocks);
   totalBlocksRef.current = totalBlocks;
+  const filledBlocksRef = useRef(filledBlocks);
+  filledBlocksRef.current = filledBlocks;
 
   useEffect(() => {
     if (!sessionConfirmed) return;
 
-    const interval = setInterval(() => {
-      if (pausedRef.current) return;
+    const tick = () => {
+      if (pausedRef.current) {
+        timerRef.current = setTimeout(tick, 100);
+        return;
+      }
 
       setFilledBlocks(prev => {
         const next = prev + 1;
+        filledBlocksRef.current = next;
         if (next >= totalBlocksRef.current) {
-          clearInterval(interval);
           setTimeout(() => {
             window.close();
             setTimeout(() => setCloseJammed(true), 500);
-          }, TICK_MS);
+          }, TICK_MS / speedMultiplierRef.current);
+        } else {
+          timerRef.current = setTimeout(tick, TICK_MS / speedMultiplierRef.current);
         }
         return next;
       });
-    }, TICK_MS);
+    };
 
-    return () => clearInterval(interval);
+    timerRef.current = setTimeout(tick, TICK_MS / speedMultiplierRef.current);
+
+    return () => {
+      if (timerRef.current) clearTimeout(timerRef.current);
+    };
   }, [sessionConfirmed]);
 
   const togglePause = useCallback(() => {
@@ -80,7 +94,17 @@ const AuthConfirm = () => {
     setTotalBlocks(prev => Math.min(prev + ADD_BLOCKS, MAX_BLOCKS));
   }, []);
 
+  const speedUp = useCallback(() => {
+    setSpeedMultiplier(prev => {
+      const next = prev * 1.05;
+      speedMultiplierRef.current = next;
+      return next;
+    });
+  }, []);
+
   const atMaxLimit = totalBlocks >= MAX_BLOCKS;
+  const remainingBlocks = totalBlocks - filledBlocks;
+  const remainingSeconds = Math.round(remainingBlocks * (TICK_MS / speedMultiplier) / 1000);
 
   const progressBar = '▓'.repeat(Math.min(filledBlocks, totalBlocks)).padEnd(totalBlocks, ' ');
 
@@ -105,12 +129,12 @@ const AuthConfirm = () => {
           {/* Status indicator */}
           <div className="flex items-center gap-2">
             <span className="text-syntax-green text-sm">[✓] confirm_email</span>
-            <span className="text-sm">{'>'} welcome aboard!</span>
+            <span className="text-sm">{'>'} auth_success</span>
           </div>
 
           {/* Comment */}
           <p className="text-muted-foreground text-xs">
-            // auth_terminal will close in {totalBlocks - filledBlocks}s or close it manually
+            // auth_terminal will close in {remainingSeconds}s or close it manually
           </p>
 
           {/* ASCII progress bar */}
@@ -147,6 +171,16 @@ const AuthConfirm = () => {
                 'add_time(5s)'
               )}
             </Button>
+            {atMaxLimit && filledBlocks < totalBlocks && (
+              <Button
+                variant="outline"
+                size="sm"
+                className="text-xs border-dashed ml-auto"
+                onClick={speedUp}
+              >
+                speed_up
+              </Button>
+            )}
           </div>
 
           {/* Jammed message */}
