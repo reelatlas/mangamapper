@@ -167,11 +167,6 @@ const Auth = () => {
           <CardContent className="p-6">
             {signupPending ? (
               <>
-                <div className="mb-6">
-                  <p className="text-xs text-muted-foreground">
-                    // check your inbox to confirm
-                  </p>
-                </div>
                 {renderConfirmationView()}
               </>
             ) : (
