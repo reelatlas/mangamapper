@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import { Home, Library, User, LogOut, Terminal, AtSign, Fingerprint } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { useAuth } from '@/hooks/useAuth';
@@ -12,6 +12,7 @@ import {
 
 export const Header = () => {
   const { user, signOut } = useAuth();
+  const location = useLocation();
   const logoText = "mangaMapper";
 
   return (
@@ -90,7 +91,7 @@ export const Header = () => {
                 </Link>
               </Button>
               <Button size="sm" asChild className="font-mono text-xs border-dashed">
-                <Link to="/auth">{'>'} sign_in</Link>
+                <Link to={`/auth?redirect=${encodeURIComponent(location.pathname)}`}>{'>'} sign_in</Link>
               </Button>
             </>
           )}
