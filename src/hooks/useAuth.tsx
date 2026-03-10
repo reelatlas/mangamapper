@@ -3,6 +3,12 @@ import { User, Session } from '@supabase/supabase-js';
 import { supabase } from '@/integrations/supabase/client';
 import { toast } from 'sonner';
 
+const isFirstSignIn = (user: User): boolean => {
+  const created = new Date(user.created_at).getTime();
+  const lastSignIn = new Date(user.last_sign_in_at || user.created_at).getTime();
+  return Math.abs(lastSignIn - created) < 60_000;
+};
+
 interface AuthContextType {
   user: User | null;
   session: Session | null;
