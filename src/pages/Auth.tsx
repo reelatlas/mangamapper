@@ -271,7 +271,12 @@ const Auth = () => {
           <button
             type="button"
             onClick={() => {
-              if (window.history.length > 1) {
+              if (signupPending) {
+                setSignupPending(false);
+                setEmailConfirmed(false);
+                setRedirecting(false);
+                setIsLogin(false);
+              } else if (window.history.length > 1) {
                 navigate(-1);
               } else {
                 navigate('/');
