@@ -110,7 +110,7 @@ const AuthConfirm = () => {
 
           {/* Comment */}
           <p className="text-muted-foreground text-xs">
-            // auth_terminal will close in {totalBlocks}s or close it manually
+            // auth_terminal will close in {totalBlocks - filledBlocks}s or close it manually
           </p>
 
           {/* ASCII progress bar */}
