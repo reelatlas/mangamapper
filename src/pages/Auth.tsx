@@ -33,7 +33,7 @@ const Auth = () => {
 
   useEffect(() => {
     if (user) {
-      navigate('/');
+      navigate(redirect);
     }
   }, [user, navigate]);
 
