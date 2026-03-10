@@ -104,7 +104,7 @@ const AuthConfirm = () => {
         <CardContent className="p-6 space-y-4">
           {/* Status indicator */}
           <div className="flex items-center gap-2">
-            <span className="text-syntax-green text-sm">[✓] email_confirmed</span>
+            <span className="text-syntax-green text-sm">[✓] confirm_email</span>
             <span className="text-sm">{'>'} welcome aboard!</span>
           </div>
 
