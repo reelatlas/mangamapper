@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useSearchParams } from 'react-router-dom';
 import { useAuth } from '@/hooks/useAuth';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
@@ -28,10 +28,12 @@ const Auth = () => {
   const [showPassword, setShowPassword] = useState(false);
   const { signIn, signUp, signInWithGoogle, user } = useAuth();
   const navigate = useNavigate();
+  const [searchParams] = useSearchParams();
+  const redirect = searchParams.get('redirect') || '/';
 
   useEffect(() => {
     if (user) {
-      navigate('/');
+      navigate(redirect);
     }
   }, [user, navigate]);
 
@@ -63,7 +65,7 @@ const Auth = () => {
               }
             } else {
               toast.success('Test account created! You are now logged in.');
-              navigate('/');
+              navigate(redirect);
             }
           } else if (error.message.includes('Invalid login credentials')) {
             toast.error('Invalid email or password');
@@ -71,7 +73,7 @@ const Auth = () => {
             toast.error(error.message);
           }
         } else {
-          navigate('/');
+          navigate(redirect);
         }
       } else {
         const { error } = await signUp(userEmail, userPassword);
@@ -83,7 +85,7 @@ const Auth = () => {
           }
         } else {
           toast.success('Account created! You are now logged in.');
-          navigate('/');
+          navigate(redirect);
         }
       }
     } finally {
@@ -179,6 +181,7 @@ const Auth = () => {
               disabled={loading || googleLoading}
               onClick={async () => {
                 setGoogleLoading(true);
+                sessionStorage.setItem('post_login_redirect', redirect);
                 const { error } = await signInWithGoogle();
                 if (error) {
                   toast.error(error.message);
