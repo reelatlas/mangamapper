@@ -45,11 +45,6 @@ const Library = () => {
     localStorage.setItem('mangamapper-library-sort', librarySort);
   }, [librarySort]);
 
-  useEffect(() => {
-    if (!authLoading && !user) {
-      navigate('/auth');
-    }
-  }, [user, authLoading, navigate]);
 
   // Handle deep link from anime detail page
   useEffect(() => {
