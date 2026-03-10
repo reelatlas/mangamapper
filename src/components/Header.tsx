@@ -12,6 +12,7 @@ import {
 
 export const Header = () => {
   const { user, signOut } = useAuth();
+  const location = useLocation();
   const logoText = "mangaMapper";
 
   return (
