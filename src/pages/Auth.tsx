@@ -29,17 +29,14 @@ const Auth = () => {
   const { signIn, signUp, signInWithGoogle, user } = useAuth();
   const navigate = useNavigate();
   const [searchParams] = useSearchParams();
-  const [redirect] = useState(() => {
-    const stored = sessionStorage.getItem('redirectAfterLogin');
-    return stored || searchParams.get('redirect') || '/';
-  });
-
   useEffect(() => {
     if (user) {
+      const stored = sessionStorage.getItem('redirectAfterLogin');
       sessionStorage.removeItem('redirectAfterLogin');
-      navigate(redirect, { replace: true });
+      const destination = stored || searchParams.get('redirect') || '/';
+      navigate(destination, { replace: true });
     }
-  }, [user, navigate, redirect]);
+  }, [user, navigate, searchParams]);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -181,8 +178,9 @@ const Auth = () => {
               disabled={loading || googleLoading}
               onClick={async () => {
                 setGoogleLoading(true);
-                sessionStorage.setItem('redirectAfterLogin', redirect);
-                const { error } = await signInWithGoogle(redirect);
+                const currentRedirect = sessionStorage.getItem('redirectAfterLogin') || searchParams.get('redirect') || '/';
+                sessionStorage.setItem('redirectAfterLogin', currentRedirect);
+                const { error } = await signInWithGoogle();
                 if (error) {
                   toast.error(error.message);
                 }
