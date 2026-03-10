@@ -147,6 +147,7 @@ const Auth = () => {
           }
         } else {
           toast.success('Account created');
+          setChecking(true);
           setSignupPending(true);
         }
       }
