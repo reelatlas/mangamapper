@@ -268,6 +268,7 @@ export const CollectionSection = ({ anime }: CollectionSectionProps) => {
     }
     setSavingNotes(false);
     setIsEditingNotes(false);
+    setIsNotesHovered(false);
   };
 
   const addReaderRow = () => {
