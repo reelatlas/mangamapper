@@ -11,6 +11,7 @@ import Library from "./pages/Library";
 import About from "./pages/About";
 import NotFound from "./pages/NotFound";
 import OAuthPopupCallback from "./pages/OAuthPopupCallback";
+import AuthConfirm from "./pages/AuthConfirm";
 
 const queryClient = new QueryClient();
 
