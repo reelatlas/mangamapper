@@ -180,7 +180,7 @@ const Auth = () => {
                 setGoogleLoading(true);
                 const currentRedirect = sessionStorage.getItem('redirectAfterLogin') || searchParams.get('redirect') || '/';
                 sessionStorage.setItem('redirectAfterLogin', currentRedirect);
-                const { error } = await signInWithGoogle();
+                const { error } = await signInWithGoogle(currentRedirect);
                 if (error) {
                   toast.error(error.message);
                 }
