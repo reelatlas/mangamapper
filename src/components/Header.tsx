@@ -91,7 +91,7 @@ export const Header = () => {
                 </Link>
               </Button>
               <Button size="sm" asChild className="font-mono text-xs border-dashed">
-                <Link to="/auth">{'>'} sign_in</Link>
+                <Link to={`/auth?redirect=${encodeURIComponent(location.pathname)}`}>{'>'} sign_in</Link>
               </Button>
             </>
           )}
