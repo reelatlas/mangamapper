@@ -49,7 +49,8 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
           if (pendingOAuth) {
             sessionStorage.removeItem('pending_oauth_signin');
             setTimeout(() => {
-              toast.success('Welcome back!');
+              const msg = session?.user && isFirstSignIn(session.user) ? 'Welcome aboard!' : 'Welcome back!';
+              toast.success(msg);
             }, 0);
           }
         }
