@@ -699,7 +699,7 @@ export const CollectionSection = ({ anime }: CollectionSectionProps) => {
             {isEditingNotes ? (
               <div className="space-y-3 max-w-[349px]">
                 <Input
-                  placeholder="any notes about this series..."
+                  placeholder="best Berserk scans for golden age arc"
                   value={editNotesValue}
                   onChange={e => setEditNotesValue(e.target.value)}
                   className="font-mono text-sm border-dashed bg-muted/30"
