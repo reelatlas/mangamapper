@@ -33,9 +33,9 @@ const Auth = () => {
 
   useEffect(() => {
     if (user) {
-      navigate(redirect);
+      navigate(redirect, { replace: true });
     }
-  }, [user, navigate]);
+  }, [user, navigate, redirect]);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -65,15 +65,12 @@ const Auth = () => {
               }
             } else {
               toast.success('Test account created! You are now logged in.');
-              navigate(redirect);
             }
           } else if (error.message.includes('Invalid login credentials')) {
             toast.error('Invalid email or password');
           } else {
             toast.error(error.message);
           }
-        } else {
-          navigate(redirect);
         }
       } else {
         const { error } = await signUp(userEmail, userPassword);
@@ -85,7 +82,6 @@ const Auth = () => {
           }
         } else {
           toast.success('Account created! You are now logged in.');
-          navigate(redirect);
         }
       }
     } finally {
