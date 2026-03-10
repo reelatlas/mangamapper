@@ -79,7 +79,7 @@ const Auth = () => {
         setVisuallyConfirmed(true);
         setRedirecting(true);
         redirectTimerRef.current = setTimeout(() => {
-          toast.success('Welcome aboard!');
+          sessionStorage.setItem('pending_welcome', 'true');
           const stored = sessionStorage.getItem('redirectAfterLogin');
           sessionStorage.removeItem('redirectAfterLogin');
           const destination = stored || searchParams.get('redirect') || '/';
