@@ -73,13 +73,18 @@ const Auth = () => {
     if (!emailConfirmed) return;
 
     const doRedirect = () => {
-      setRedirecting(true);
-      redirectTimerRef.current = setTimeout(() => {
-        const stored = sessionStorage.getItem('redirectAfterLogin');
-        sessionStorage.removeItem('redirectAfterLogin');
-        const destination = stored || searchParams.get('redirect') || '/';
-        navigate(destination, { replace: true });
-      }, 3000);
+      setChecking(true);
+      checkingTimerRef.current = setTimeout(() => {
+        setChecking(false);
+        setVisuallyConfirmed(true);
+        setRedirecting(true);
+        redirectTimerRef.current = setTimeout(() => {
+          const stored = sessionStorage.getItem('redirectAfterLogin');
+          sessionStorage.removeItem('redirectAfterLogin');
+          const destination = stored || searchParams.get('redirect') || '/';
+          navigate(destination, { replace: true });
+        }, 3000);
+      }, 2000);
     };
 
     if (document.visibilityState === 'visible') {
@@ -94,11 +99,13 @@ const Auth = () => {
       document.addEventListener('visibilitychange', onVisible);
       return () => {
         document.removeEventListener('visibilitychange', onVisible);
+        if (checkingTimerRef.current) clearTimeout(checkingTimerRef.current);
         if (redirectTimerRef.current) clearTimeout(redirectTimerRef.current);
       };
     }
 
     return () => {
+      if (checkingTimerRef.current) clearTimeout(checkingTimerRef.current);
       if (redirectTimerRef.current) clearTimeout(redirectTimerRef.current);
     };
   }, [emailConfirmed, navigate, searchParams]);
