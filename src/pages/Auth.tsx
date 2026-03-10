@@ -157,21 +157,27 @@ const Auth = () => {
   const renderConfirmationView = () => (
     <div className="space-y-4">
       <div className="flex items-center gap-2 font-mono text-sm">
-        <span className={emailConfirmed ? 'text-syntax-green' : 'text-muted-foreground'}>
-          [{emailConfirmed ? <Check className="inline w-3.5 h-3.5 -mt-0.5" /> : ' '}]
+        <span className={visuallyConfirmed ? 'text-syntax-green' : 'text-muted-foreground'}>
+          [{visuallyConfirmed ? <Check className="inline w-3.5 h-3.5 -mt-0.5" /> : ' '}]
         </span>
-        <span className={emailConfirmed ? 'text-syntax-green' : 'text-muted-foreground'}>
+        <span className={visuallyConfirmed ? 'text-syntax-green' : 'text-muted-foreground'}>
           confirm_email
         </span>
         <span className="text-muted-foreground">to</span>
-        <span className={emailConfirmed ? 'text-foreground' : 'text-muted-foreground'}>
+        <span className={visuallyConfirmed ? 'text-foreground' : 'text-muted-foreground'}>
           sign_in
         </span>
       </div>
 
+      {checking && (
+        <p className="text-xs text-muted-foreground">
+          // auth_checking<AnimatedDots />
+        </p>
+      )}
+
       {redirecting && (
         <p className="text-xs text-muted-foreground">
-          // auth_confirmed &gt; redirecting...
+          // auth_confirmed &gt; redirecting<AnimatedDots />
         </p>
       )}
     </div>
@@ -182,7 +188,7 @@ const Auth = () => {
       <div className="w-full max-w-md flex flex-col">
         <Card className="w-full border-dashed">
           <div className="terminal-header flex items-center gap-2">
-            <span className={signupPending && emailConfirmed ? "text-syntax-green" : "text-syntax-amber"}>■</span>
+            <span className={signupPending && visuallyConfirmed ? "text-syntax-green" : "text-syntax-amber"}>■</span>
             <span className="text-muted-foreground">auth_terminal</span>
           </div>
           <CardContent className="p-6">
