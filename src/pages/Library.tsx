@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
-import { useNavigate, useLocation } from 'react-router-dom';
+import { useNavigate, useLocation, Link } from 'react-router-dom';
 import { Header } from '@/components/Header';
+import { Card, CardContent } from '@/components/ui/card';
 import { useLibraryData } from '@/hooks/useLibraryData';
 import { Button } from '@/components/ui/button';
 import { Library as LibraryIcon } from 'lucide-react';
@@ -44,11 +45,6 @@ const Library = () => {
     localStorage.setItem('mangamapper-library-sort', librarySort);
   }, [librarySort]);
 
-  useEffect(() => {
-    if (!authLoading && !user) {
-      navigate('/auth');
-    }
-  }, [user, authLoading, navigate]);
 
   // Handle deep link from anime detail page
   useEffect(() => {
@@ -75,6 +71,42 @@ const Library = () => {
             <p className="text-muted-foreground text-sm">...loading</p>
           </div>
         </main>
+      </div>
+    );
+  }
+
+  if (!user) {
+    return (
+      <div className="min-h-screen bg-background font-mono overflow-x-hidden">
+        <Header />
+        <main className="container py-8 overflow-hidden">
+          <div className="flex items-center gap-2 mb-6 text-sm">
+            <LibraryIcon className="w-4 h-4 text-primary" />
+            <span className="text-muted-foreground">{'>'}</span>
+            <span className="text-syntax-cyan">my_library</span>
+          </div>
+          <Card className="border-dashed">
+            <div className="terminal-header">
+              <span className="text-muted-foreground">library_data</span>
+            </div>
+            <CardContent className="py-6">
+              <div className="font-mono">
+                <p className="text-muted-foreground text-sm mb-4">!auth_required</p>
+                <Button asChild className="border-dashed">
+                  <Link to="/auth" className="text-xs">{'>'} sign_in</Link>
+                </Button>
+              </div>
+            </CardContent>
+          </Card>
+        </main>
+        <footer className="border-t border-dashed mt-16">
+          <div className="container py-6 text-center text-xs text-muted-foreground">
+            <p>
+              <span className="text-foreground/40">mangaMapper</span>{' '}
+              <span>// your journey continues</span>
+            </p>
+          </div>
+        </footer>
       </div>
     );
   }
