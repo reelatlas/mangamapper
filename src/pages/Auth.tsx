@@ -1,15 +1,15 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { useNavigate, useSearchParams } from 'react-router-dom';
 import { useAuth } from '@/hooks/useAuth';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Card, CardContent } from '@/components/ui/card';
 import { Label } from '@/components/ui/label';
-import { Terminal, Mail, Lock, Eye, EyeClosed } from 'lucide-react';
+import { Mail, Lock, Eye, EyeClosed, Check } from 'lucide-react';
 import { toast } from 'sonner';
 import { z } from 'zod';
-import { Link } from 'react-router-dom';
 import GoogleIcon from '@/components/GoogleIcon';
+import { supabase } from '@/integrations/supabase/client';
 
 const authSchema = z.object({
   email: z.string().trim().email({ message: "Invalid email address" }),
@@ -23,17 +23,71 @@ const Auth = () => {
   const [loading, setLoading] = useState(false);
   const [googleLoading, setGoogleLoading] = useState(false);
   const [showPassword, setShowPassword] = useState(false);
+  const [signupPending, setSignupPending] = useState(false);
+  const [emailConfirmed, setEmailConfirmed] = useState(false);
+  const [redirecting, setRedirecting] = useState(false);
   const { signIn, signUp, signInWithGoogle, user } = useAuth();
   const navigate = useNavigate();
   const [searchParams] = useSearchParams();
+  const redirectTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+
+  // Normal redirect for already-authenticated users (not in signup pending flow)
   useEffect(() => {
-    if (user) {
+    if (user && !signupPending) {
       const stored = sessionStorage.getItem('redirectAfterLogin');
       sessionStorage.removeItem('redirectAfterLogin');
       const destination = stored || searchParams.get('redirect') || '/';
       navigate(destination, { replace: true });
     }
-  }, [user, navigate, searchParams]);
+  }, [user, navigate, searchParams, signupPending]);
+
+  // Listen for email confirmation when signup is pending
+  useEffect(() => {
+    if (!signupPending) return;
+
+    const { data: { subscription } } = supabase.auth.onAuthStateChange((event) => {
+      if (event === 'SIGNED_IN') {
+        setEmailConfirmed(true);
+      }
+    });
+
+    return () => subscription.unsubscribe();
+  }, [signupPending]);
+
+  // Visibility-aware redirect after email confirmation
+  useEffect(() => {
+    if (!emailConfirmed) return;
+
+    const doRedirect = () => {
+      setRedirecting(true);
+      redirectTimerRef.current = setTimeout(() => {
+        const stored = sessionStorage.getItem('redirectAfterLogin');
+        sessionStorage.removeItem('redirectAfterLogin');
+        const destination = stored || searchParams.get('redirect') || '/';
+        navigate(destination, { replace: true });
+      }, 3000);
+    };
+
+    if (document.visibilityState === 'visible') {
+      doRedirect();
+    } else {
+      const onVisible = () => {
+        if (document.visibilityState === 'visible') {
+          document.removeEventListener('visibilitychange', onVisible);
+          doRedirect();
+        }
+      };
+      document.addEventListener('visibilitychange', onVisible);
+      return () => {
+        document.removeEventListener('visibilitychange', onVisible);
+        if (redirectTimerRef.current) clearTimeout(redirectTimerRef.current);
+      };
+    }
+
+    return () => {
+      if (redirectTimerRef.current) clearTimeout(redirectTimerRef.current);
+    };
+  }, [emailConfirmed, navigate, searchParams]);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -70,13 +124,37 @@ const Auth = () => {
             toast.error(error.message);
           }
         } else {
-          toast.success('Account created, confirm your email before signing in');
+          toast.success('Account created');
+          setSignupPending(true);
         }
       }
     } finally {
       setLoading(false);
     }
   };
+
+  const renderConfirmationView = () => (
+    <div className="space-y-4">
+      <div className="flex items-center gap-2 font-mono text-sm">
+        <span className={emailConfirmed ? 'text-syntax-green' : 'text-muted-foreground'}>
+          [{emailConfirmed ? <Check className="inline w-3.5 h-3.5 -mt-0.5" /> : ' '}]
+        </span>
+        <span className={emailConfirmed ? 'text-syntax-green' : 'text-muted-foreground'}>
+          confirm_email
+        </span>
+        <span className="text-muted-foreground">to</span>
+        <span className={emailConfirmed ? 'text-foreground' : 'text-muted-foreground'}>
+          sign_in
+        </span>
+      </div>
+
+      {redirecting && (
+        <p className="text-xs text-muted-foreground">
+          // auth_confirmed — redirecting...
+        </p>
+      )}
+    </div>
+  );
 
   return (
     <div className="min-h-screen bg-background flex items-center justify-center p-4 font-mono">
@@ -87,97 +165,110 @@ const Auth = () => {
             <span className="text-muted-foreground">auth_terminal</span>
           </div>
           <CardContent className="p-6">
-            <div className="mb-6">
-              <p className="text-xs text-muted-foreground">
-                {isLogin ? '// sign in to view progress' : '// create account to start tracking'}
-              </p>
-            </div>
+            {signupPending ? (
+              <>
+                <div className="mb-6">
+                  <p className="text-xs text-muted-foreground">
+                    // check your inbox to confirm
+                  </p>
+                </div>
+                {renderConfirmationView()}
+              </>
+            ) : (
+              <>
+                <div className="mb-6">
+                  <p className="text-xs text-muted-foreground">
+                    {isLogin ? '// sign in to view progress' : '// create account to start tracking'}
+                  </p>
+                </div>
 
-            <form onSubmit={handleSubmit} className="space-y-4">
-              <div className="space-y-2">
-                <Label htmlFor="email" className="text-xs flex items-center gap-1.5">
-                  <Mail className="w-3.5 h-3.5 text-syntax-cyan" />
-                  <span className="text-syntax-cyan">email</span>
-                </Label>
-                <Input
-                  id="email"
-                  type="email"
-                  placeholder="you@example.com"
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
-                  className="font-mono text-sm border-dashed bg-muted/30"
-                  required
-                />
-              </div>
-              <div className="space-y-2">
-                <Label htmlFor="password" className="text-xs flex items-center gap-1.5">
-                  <Lock className="w-3.5 h-3.5 text-syntax-cyan" />
-                  <span className="text-syntax-cyan">password</span>
-                </Label>
-                <div className="relative">
-                  <Input
-                    id="password"
-                    type={showPassword ? "text" : "password"}
-                    placeholder="••••••••"
-                    value={password}
-                    onChange={(e) => setPassword(e.target.value)}
-                    className="font-mono text-sm border-dashed bg-muted/30 pr-10"
-                    required
-                  />
+                <form onSubmit={handleSubmit} className="space-y-4">
+                  <div className="space-y-2">
+                    <Label htmlFor="email" className="text-xs flex items-center gap-1.5">
+                      <Mail className="w-3.5 h-3.5 text-syntax-cyan" />
+                      <span className="text-syntax-cyan">email</span>
+                    </Label>
+                    <Input
+                      id="email"
+                      type="email"
+                      placeholder="you@example.com"
+                      value={email}
+                      onChange={(e) => setEmail(e.target.value)}
+                      className="font-mono text-sm border-dashed bg-muted/30"
+                      required
+                    />
+                  </div>
+                  <div className="space-y-2">
+                    <Label htmlFor="password" className="text-xs flex items-center gap-1.5">
+                      <Lock className="w-3.5 h-3.5 text-syntax-cyan" />
+                      <span className="text-syntax-cyan">password</span>
+                    </Label>
+                    <div className="relative">
+                      <Input
+                        id="password"
+                        type={showPassword ? "text" : "password"}
+                        placeholder="••••••••"
+                        value={password}
+                        onChange={(e) => setPassword(e.target.value)}
+                        className="font-mono text-sm border-dashed bg-muted/30 pr-10"
+                        required
+                      />
+                      <button
+                        type="button"
+                        onClick={() => setShowPassword(!showPassword)}
+                        className="absolute right-3 top-1/2 -translate-y-1/2 text-muted-foreground hover:text-foreground transition-colors"
+                      >
+                        {showPassword ? (
+                          <Eye className="w-4 h-4" />
+                        ) : (
+                          <EyeClosed className="w-4 h-4" />
+                        )}
+                      </button>
+                    </div>
+                  </div>
+                  <Button type="submit" className="w-full font-mono text-xs border-dashed" disabled={loading || googleLoading}>
+                    {loading ? 'auth_init...' : isLogin ? 'sign_in()' : 'sign_up()'}
+                  </Button>
+                </form>
+
+                <div className="mt-6 text-left text-xs">
+                  <span className="text-muted-foreground">
+                    {isLogin ? "// account_exists(false) → " : "// account_exists(true) → "}
+                  </span>
                   <button
                     type="button"
-                    onClick={() => setShowPassword(!showPassword)}
-                    className="absolute right-3 top-1/2 -translate-y-1/2 text-muted-foreground hover:text-foreground transition-colors"
+                    onClick={() => setIsLogin(!isLogin)}
+                    className="text-primary hover:underline"
                   >
-                    {showPassword ? (
-                      <Eye className="w-4 h-4" />
-                    ) : (
-                      <EyeClosed className="w-4 h-4" />
-                    )}
+                    {isLogin ? 'sign_up' : 'sign_in'}
                   </button>
                 </div>
-              </div>
-              <Button type="submit" className="w-full font-mono text-xs border-dashed" disabled={loading || googleLoading}>
-                {loading ? 'auth_init...' : isLogin ? 'sign_in()' : 'sign_up()'}
-              </Button>
-            </form>
 
-            <div className="mt-6 text-left text-xs">
-              <span className="text-muted-foreground">
-                {isLogin ? "// account_exists(false) → " : "// account_exists(true) → "}
-              </span>
-              <button
-                type="button"
-                onClick={() => setIsLogin(!isLogin)}
-                className="text-primary hover:underline"
-              >
-                {isLogin ? 'sign_up' : 'sign_in'}
-              </button>
-            </div>
+                <div className="my-6">
+                  <div className="w-full border-t border-dashed" />
+                </div>
 
-            <div className="my-6">
-              <div className="w-full border-t border-dashed" />
-            </div>
-
-            <Button
-              type="button"
-              variant="outline"
-              className="w-full font-mono text-xs border-dashed gap-2 group"
-              disabled={loading || googleLoading}
-              onClick={async () => {
-                setGoogleLoading(true);
-                const currentRedirect = sessionStorage.getItem('redirectAfterLogin') || searchParams.get('redirect') || '/';
-                sessionStorage.setItem('redirectAfterLogin', currentRedirect);
-                const { error } = await signInWithGoogle(currentRedirect);
-                if (error) {
-                  toast.error(error.message);
-                }
-                setGoogleLoading(false);
-              }}
-            >
-              <GoogleIcon />
-              {googleLoading ? 'auth_redir...' : 'google.sign_in()'}
-            </Button>
+                <Button
+                  type="button"
+                  variant="outline"
+                  className="w-full font-mono text-xs border-dashed gap-2 group"
+                  disabled={loading || googleLoading}
+                  onClick={async () => {
+                    setGoogleLoading(true);
+                    const currentRedirect = sessionStorage.getItem('redirectAfterLogin') || searchParams.get('redirect') || '/';
+                    sessionStorage.setItem('redirectAfterLogin', currentRedirect);
+                    const { error } = await signInWithGoogle(currentRedirect);
+                    if (error) {
+                      toast.error(error.message);
+                    }
+                    setGoogleLoading(false);
+                  }}
+                >
+                  <GoogleIcon />
+                  {googleLoading ? 'auth_redir...' : 'google.sign_in()'}
+                </Button>
+              </>
+            )}
           </CardContent>
         </Card>
 
