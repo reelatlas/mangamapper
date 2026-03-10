@@ -83,9 +83,11 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
     return { error: error as Error | null };
   };
 
-  const signInWithGoogle = async () => {
+  const signInWithGoogle = async (redirectPath?: string) => {
     sessionStorage.setItem('pending_oauth_signin', 'true');
-    const redirectUrl = `${window.location.origin}/`;
+    const authRedirect = redirectPath
+      ? `${window.location.origin}/auth?redirect=${encodeURIComponent(redirectPath)}`
+      : `${window.location.origin}/auth`;
 
     const isLovableHost =
       window.location.hostname.endsWith('lovable.app') ||
