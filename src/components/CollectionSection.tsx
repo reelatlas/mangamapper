@@ -246,6 +246,7 @@ export const CollectionSection = ({ anime }: CollectionSectionProps) => {
 
   const cancelEditingNotes = () => {
     setIsEditingNotes(false);
+    setIsNotesHovered(false);
   };
 
   const saveNotes = async () => {
