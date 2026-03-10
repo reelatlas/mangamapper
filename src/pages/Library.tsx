@@ -111,6 +111,7 @@ const Library = () => {
     );
   }
 
+  return (
     <div className="min-h-screen bg-background font-mono overflow-x-hidden">
       <Header />
       
