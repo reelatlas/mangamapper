@@ -16,6 +16,17 @@ const authSchema = z.object({
   password: z.string().min(6, { message: "Password must be at least 6 characters" }),
 });
 
+const AnimatedDots = () => {
+  const [dots, setDots] = useState('.');
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setDots(prev => prev.length >= 3 ? '.' : prev + '.');
+    }, 400);
+    return () => clearInterval(interval);
+  }, []);
+  return <span>{dots}</span>;
+};
+
 const Auth = () => {
   const [isLogin, setIsLogin] = useState(true);
   const [email, setEmail] = useState('');
@@ -25,11 +36,14 @@ const Auth = () => {
   const [showPassword, setShowPassword] = useState(false);
   const [signupPending, setSignupPending] = useState(false);
   const [emailConfirmed, setEmailConfirmed] = useState(false);
+  const [checking, setChecking] = useState(false);
+  const [visuallyConfirmed, setVisuallyConfirmed] = useState(false);
   const [redirecting, setRedirecting] = useState(false);
   const { signIn, signUp, signInWithGoogle, user } = useAuth();
   const navigate = useNavigate();
   const [searchParams] = useSearchParams();
   const redirectTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const checkingTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
   // Normal redirect for already-authenticated users (not in signup pending flow)
   useEffect(() => {
