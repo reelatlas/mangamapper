@@ -3,6 +3,12 @@ import { User, Session } from '@supabase/supabase-js';
 import { supabase } from '@/integrations/supabase/client';
 import { toast } from 'sonner';
 
+const isFirstSignIn = (user: User): boolean => {
+  const created = new Date(user.created_at).getTime();
+  const lastSignIn = new Date(user.last_sign_in_at || user.created_at).getTime();
+  return Math.abs(lastSignIn - created) < 60_000;
+};
+
 interface AuthContextType {
   user: User | null;
   session: Session | null;
@@ -43,7 +49,8 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
           if (pendingOAuth) {
             sessionStorage.removeItem('pending_oauth_signin');
             setTimeout(() => {
-              toast.success('Welcome back!');
+              const msg = session?.user && isFirstSignIn(session.user) ? 'Welcome aboard!' : 'Welcome back!';
+              toast.success(msg);
             }, 0);
           }
         }
@@ -73,12 +80,12 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
   };
 
   const signIn = async (email: string, password: string) => {
-    const { error } = await supabase.auth.signInWithPassword({
+    const { data, error } = await supabase.auth.signInWithPassword({
       email,
       password,
     });
-    if (!error) {
-      toast.success('Welcome back!');
+    if (!error && data.user) {
+      toast.success(isFirstSignIn(data.user) ? 'Welcome aboard!' : 'Welcome back!');
     }
     return { error: error as Error | null };
   };
