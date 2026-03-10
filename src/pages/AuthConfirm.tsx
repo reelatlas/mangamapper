@@ -115,9 +115,9 @@ const AuthConfirm = () => {
 
           {/* ASCII progress bar */}
           <div className="flex items-center text-primary">
-            <span className="text-muted-foreground text-sm">[</span>
+            <span className="text-muted-foreground text-base">[</span>
             <span className="text-[10px] leading-none whitespace-pre-wrap">{progressBar}</span>
-            <span className="text-muted-foreground text-sm">]</span>
+            <span className="text-muted-foreground text-base">]</span>
           </div>
 
           {/* Controls */}
