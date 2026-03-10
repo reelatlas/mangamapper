@@ -161,7 +161,7 @@ const Auth = () => {
       <div className="w-full max-w-md flex flex-col">
         <Card className="w-full border-dashed">
           <div className="terminal-header flex items-center gap-2">
-            <span className="text-syntax-amber">■</span>
+            <span className={signupPending && emailConfirmed ? "text-syntax-green" : "text-syntax-amber"}>■</span>
             <span className="text-muted-foreground">auth_terminal</span>
           </div>
           <CardContent className="p-6">
