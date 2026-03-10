@@ -84,8 +84,8 @@ const Auth = () => {
           sessionStorage.removeItem('redirectAfterLogin');
           const destination = stored || searchParams.get('redirect') || '/';
           navigate(destination, { replace: true });
-      }, 6000);
       }, 5000);
+      }, 4000);
     };
 
     if (document.visibilityState === 'visible') {
