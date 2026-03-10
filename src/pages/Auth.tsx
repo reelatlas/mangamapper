@@ -65,7 +65,7 @@ const Auth = () => {
               }
             } else {
               toast.success('Test account created! You are now logged in.');
-              navigate('/');
+              navigate(redirect);
             }
           } else if (error.message.includes('Invalid login credentials')) {
             toast.error('Invalid email or password');
