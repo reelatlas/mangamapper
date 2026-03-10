@@ -85,7 +85,7 @@ const Auth = () => {
           const destination = stored || searchParams.get('redirect') || '/';
           navigate(destination, { replace: true });
       }, 6000);
-      }, 6000);
+      }, 5000);
     };
 
     if (document.visibilityState === 'visible') {
