@@ -1,11 +1,13 @@
-import { useState, useEffect, useRef } from 'react';
+import { useState, useEffect, useRef, useCallback } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useAuth } from '@/hooks/useAuth';
 import { Card, CardContent } from '@/components/ui/card';
-import { Terminal } from 'lucide-react';
+import { Button } from '@/components/ui/button';
 
-const TOTAL_BLOCKS = 20;
-const TICK_MS = 500;
+const TICK_MS = 1000;
+const INITIAL_BLOCKS = 10;
+const MAX_BLOCKS = 60;
+const ADD_BLOCKS = 5;
 const POLL_MS = 500;
 const POLL_TIMEOUT_MS = 5000;
 
@@ -14,18 +16,19 @@ const AuthConfirm = () => {
   const navigate = useNavigate();
   const [sessionConfirmed, setSessionConfirmed] = useState(false);
   const [filledBlocks, setFilledBlocks] = useState(0);
+  const [totalBlocks, setTotalBlocks] = useState(INITIAL_BLOCKS);
+  const [paused, setPaused] = useState(false);
   const [closeJammed, setCloseJammed] = useState(false);
+  const pausedRef = useRef(false);
   const pollStartRef = useRef(Date.now());
 
   // Poll for session
   useEffect(() => {
     if (loading) return;
-
     if (user) {
       setSessionConfirmed(true);
       return;
     }
-
     const interval = setInterval(() => {
       if (user) {
         setSessionConfirmed(true);
@@ -37,26 +40,26 @@ const AuthConfirm = () => {
         navigate('/auth', { replace: true });
       }
     }, POLL_MS);
-
     return () => clearInterval(interval);
   }, [user, loading, navigate]);
 
   // Progress bar + auto-close
+  const totalBlocksRef = useRef(totalBlocks);
+  totalBlocksRef.current = totalBlocks;
+
   useEffect(() => {
     if (!sessionConfirmed) return;
 
     const interval = setInterval(() => {
+      if (pausedRef.current) return;
+
       setFilledBlocks(prev => {
         const next = prev + 1;
-        if (next >= TOTAL_BLOCKS) {
+        if (next >= totalBlocksRef.current) {
           clearInterval(interval);
-          // Attempt auto-close after one more tick
           setTimeout(() => {
             window.close();
-            // If still open after 500ms, it was blocked
-            setTimeout(() => {
-              setCloseJammed(true);
-            }, 500);
+            setTimeout(() => setCloseJammed(true), 500);
           }, TICK_MS);
         }
         return next;
@@ -66,7 +69,20 @@ const AuthConfirm = () => {
     return () => clearInterval(interval);
   }, [sessionConfirmed]);
 
-  const progressBar = '▓'.repeat(Math.min(filledBlocks, TOTAL_BLOCKS)).padEnd(TOTAL_BLOCKS, ' ');
+  const togglePause = useCallback(() => {
+    setPaused(prev => {
+      pausedRef.current = !prev;
+      return !prev;
+    });
+  }, []);
+
+  const addTime = useCallback(() => {
+    setTotalBlocks(prev => Math.min(prev + ADD_BLOCKS, MAX_BLOCKS));
+  }, []);
+
+  const atMaxLimit = totalBlocks >= MAX_BLOCKS;
+
+  const progressBar = '▓'.repeat(Math.min(filledBlocks, totalBlocks)).padEnd(totalBlocks, ' ');
 
   if (loading || (!sessionConfirmed && !closeJammed)) {
     return (
@@ -77,42 +93,59 @@ const AuthConfirm = () => {
   }
 
   return (
-    <div className="min-h-screen bg-background flex items-center justify-center p-4">
-      <Card className="w-full max-w-md border border-dashed border-border bg-card">
+    <div className="min-h-screen bg-background flex items-center justify-center p-4 font-mono">
+      <Card className="w-full max-w-md border-dashed">
         {/* Terminal header */}
-        <div className="border-b border-dashed border-border px-4 py-3 flex items-center gap-2">
-          <Terminal className="h-4 w-4 text-accent" />
-          <span className="text-sm font-mono text-muted-foreground">auth_terminal</span>
-          <div className="ml-auto flex gap-1.5">
-            <div className="w-2 h-2 rounded-full bg-accent" />
-            <div className="w-2 h-2 rounded-full bg-accent/60" />
-            <div className="w-2 h-2 rounded-full bg-accent/30" />
-          </div>
+        <div className="terminal-header flex items-center gap-2">
+          <span className="text-syntax-green">■</span>
+          <span className="text-muted-foreground">auth_terminal</span>
         </div>
 
-        <CardContent className="p-6 space-y-6">
+        <CardContent className="p-6 space-y-4">
           {/* Status indicator */}
           <div className="flex items-center gap-2">
-            <span className="text-accent font-mono text-sm">[✓]</span>
-            <span className="text-accent font-mono text-sm">email_confirmed</span>
+            <span className="text-syntax-green text-sm">[✓]</span>
+            <span className="text-syntax-green text-sm">email_confirmed {'>'} welcome aboard!</span>
           </div>
 
           {/* Comment */}
-          <p className="text-muted-foreground font-mono text-xs">
-            // close this tab manually or it will attempt to close in 10 seconds ...
+          <p className="text-muted-foreground text-xs">
+            // auth_terminal will close in {totalBlocks}s or close it manually
           </p>
 
           {/* ASCII progress bar */}
-          <div className="font-mono text-xs text-accent">
+          <div className="text-xs text-primary break-all">
             <span className="text-muted-foreground">[</span>
-            <span className="whitespace-pre">{progressBar}</span>
+            <span className="whitespace-pre-wrap">{progressBar}</span>
             <span className="text-muted-foreground">]</span>
+          </div>
+
+          {/* Controls */}
+          <div className="flex items-center gap-2">
+            <Button
+              variant="outline"
+              size="sm"
+              className="text-xs border-dashed"
+              onClick={togglePause}
+              disabled={filledBlocks >= totalBlocks}
+            >
+              {paused ? 'start' : 'pause'}
+            </Button>
+            <Button
+              variant="outline"
+              size="sm"
+              className={`text-xs border-dashed ${atMaxLimit ? 'opacity-50 cursor-not-allowed' : ''}`}
+              onClick={addTime}
+              disabled={atMaxLimit || filledBlocks >= totalBlocks}
+            >
+              {atMaxLimit ? 'add_time(max_limit)' : 'add_time(5s)'}
+            </Button>
           </div>
 
           {/* Jammed message */}
           {closeJammed && (
-            <p className="text-syntax-amber font-mono text-xs">
-              auto-close jammed → close manually at your convenience
+            <p className="text-syntax-amber text-xs">
+              autoclose_jammed {'>'} requires(manual_intervention)
             </p>
           )}
         </CardContent>
