@@ -6,13 +6,17 @@ import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
-import { Tv, BookOpen, Glasses, ExternalLink, Pencil, Check, X, Plus, Trash2, RotateCcw } from 'lucide-react';
+import { Glasses, ExternalLink, Pencil, Check, X, Plus, Trash2, RotateCcw } from 'lucide-react';
+import { TvIcon as Tv, BookOpenIcon as BookOpen } from '@/components/icons';
 import { toast } from 'sonner';
 import { AnimeSeries } from '@/types/anime';
 import type { ReaderSite, ReaderAssignment } from '@/types/library';
 import * as SelectPrimitive from '@radix-ui/react-select';
 import { Select, SelectItem, SelectScrollUpButton, SelectScrollDownButton, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { InlineNewReaderForm } from '@/components/library/InlineNewReaderForm';
+import { PositionLabel } from '@/components/PositionLabel';
+import { formatTimestamp } from '@/lib/format';
+import type { TablesInsert } from '@/integrations/supabase/types';
 
 interface CollectionSectionProps {
   anime: AnimeSeries;
@@ -32,18 +36,6 @@ interface ReaderOption {
   name: string;
   url: string;
 }
-
-const formatTimestamp = (timestamp: string) => {
-  const date = new Date(timestamp);
-  const month = date.toLocaleString('en-US', { month: 'short' }).toLowerCase();
-  const day = date.getDate();
-  const year = date.getFullYear();
-  const hours = date.getHours();
-  const minutes = date.getMinutes().toString().padStart(2, '0');
-  const ampm = hours >= 12 ? 'pm' : 'am';
-  const hour12 = hours % 12 || 12;
-  return `${month} ${day} ${year} ${hour12}:${minutes}${ampm}`;
-};
 
 export const CollectionSection = ({ anime }: CollectionSectionProps) => {
   const { user } = useAuth();
@@ -121,7 +113,7 @@ export const CollectionSection = ({ anime }: CollectionSectionProps) => {
   const saveProgress = async () => {
     if (!user) return;
     setSavingProgress(true);
-    const update: Record<string, unknown> = {
+    const update: TablesInsert<'anime_progress'> = {
       user_id: user.id,
       anime_id: anime.id,
       updated_at: new Date().toISOString(),
@@ -131,7 +123,7 @@ export const CollectionSection = ({ anime }: CollectionSectionProps) => {
       update.last_read_volume = readVolume.trim() ? parseInt(readVolume.trim(), 10) : null;
       update.last_read_chapter = readChapter.trim() || null;
     }
-    const { error } = await supabase.from('anime_progress').upsert(update as any, { onConflict: 'user_id,anime_id' });
+    const { error } = await supabase.from('anime_progress').upsert(update, { onConflict: 'user_id,anime_id' });
     if (error) {
       toast.error('Failed to save progress');
     } else {
@@ -457,10 +449,7 @@ export const CollectionSection = ({ anime }: CollectionSectionProps) => {
           <div className="space-y-3">
             <div className="flex flex-wrap items-end gap-6">
               <div className="space-y-2">
-                <div className="flex items-center gap-1.5 text-xs">
-                  <Tv className={`w-3.5 h-3.5 ${watchedEpisode.trim() ? 'text-primary' : 'text-muted-foreground'}`} />
-                  <span className={watchedEpisode.trim() ? 'text-syntax-cyan' : 'text-muted-foreground'}>last_watched</span>
-                </div>
+                <PositionLabel icon={Tv} label="last_watched" active={!!watchedEpisode.trim()} />
                 <div>
                   <span className="text-muted-foreground text-xs block mb-1">episode</span>
                   <div className="flex items-center gap-2">
@@ -472,10 +461,7 @@ export const CollectionSection = ({ anime }: CollectionSectionProps) => {
 
               {anime.hasManga ? (
                 <div className="space-y-2">
-                  <div className="flex items-center gap-1.5 text-xs">
-                    <BookOpen className={`w-3.5 h-3.5 ${(readVolume.trim() || readChapter.trim()) ? 'text-primary' : 'text-muted-foreground'}`} />
-                    <span className={(readVolume.trim() || readChapter.trim()) ? 'text-syntax-cyan' : 'text-muted-foreground'}>last_read</span>
-                  </div>
+                  <PositionLabel icon={BookOpen} label="last_read" active={!!(readVolume.trim() || readChapter.trim())} />
                   <div className="flex items-center gap-2">
                     <div>
                       <span className="text-muted-foreground text-xs block mb-1">vol</span>
@@ -558,7 +544,7 @@ export const CollectionSection = ({ anime }: CollectionSectionProps) => {
         {/* Section 4: Last saved */}
         {progress?.updated_at && (
           <span className="text-muted-foreground text-xs block">
-            last_updated: <span className="text-syntax-string">{formatTimestamp(progress.updated_at)}</span>
+            last_updated: <span className="text-syntax-green">{formatTimestamp(progress.updated_at)}</span>
           </span>
         )}
       </CardContent>

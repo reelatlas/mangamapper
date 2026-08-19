@@ -161,76 +161,42 @@
 }
 
 @layer utilities {
-  /* Terminal window styling */
-  .terminal-window {
-    @apply border border-dashed border-border bg-card;
-  }
-
   .terminal-header {
     @apply border-b border-dashed border-border px-3 py-2 text-xs text-muted-foreground font-mono;
   }
 
-  /* JSON-like display */
-  .json-key {
-    color: hsl(var(--syntax-cyan));
+  /* The meta-row contract (see DESIGN_SYSTEM.md): any line mixing tags,
+     values, and actions aligns text on the BASELINE — never box-centered,
+     which floats smaller tags above larger values. align-content centers
+     the whole line in the row's height; spacing is gap-only. */
+  .meta-row {
+    @apply flex flex-wrap items-baseline content-center gap-x-2 gap-y-1 tabular-nums;
+  }
+  .meta-row > * {
+    @apply leading-none m-0;
+  }
+  /* The baseline strut: block layout gives every text line an invisible
+     reference glyph at the parent's font size; flex rows lose it, so a line
+     of only-small text (e.g. a lone tag + clear()) floats higher than a line
+     containing full-size values. This zero-width strut restores the
+     reference, so every meta-row line shares one baseline regardless of its
+     content mix. (margin cancels the flex gap the strut would introduce.) */
+  .meta-row::before {
+    content: '\200B';
+    line-height: 1;
+    margin-right: -0.5rem; /* = gap-x-2 */
   }
 
-  .json-string {
-    color: hsl(var(--syntax-green));
+  /* Inputs whose steppers are component-owned (StepperInput) — native
+     spinners off so stepping always routes through the seeding logic. */
+  .no-spinner {
+    -moz-appearance: textfield;
+    appearance: textfield;
   }
-
-  .json-number {
-    color: hsl(var(--syntax-amber));
+  .no-spinner::-webkit-inner-spin-button,
+  .no-spinner::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+    display: none;
   }
-
-  .json-bracket {
-    color: hsl(var(--syntax-purple));
-  }
-
-  /* ASCII badge style */
-  .ascii-badge {
-    @apply font-mono text-xs px-1.5 py-0.5 border border-current;
-  }
-
-  /* Command button style */
-  .cmd-button {
-    @apply font-mono text-sm border border-dashed hover:border-solid transition-all;
-  }
-
-  /* Line numbers */
-  .line-number {
-    @apply text-muted-foreground text-xs font-mono select-none w-8 text-right pr-2;
-  }
-
-  /* Blinking cursor effect */
-  .cursor-blink::after {
-    content: '▌';
-    animation: blink 1s step-end infinite;
-  }
-
-  @keyframes blink {
-    0%, 100% { opacity: 1; }
-    50% { opacity: 0; }
-  }
-
-  /* Scanline effect (subtle) */
-  .scanlines {
-    position: relative;
-  }
-
-  .scanlines::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background: repeating-linear-gradient(
-      0deg,
-      transparent,
-      transparent 2px,
-      hsl(0 0% 0% / 0.03) 2px,
-      hsl(0 0% 0% / 0.03) 4px
-    );
-    pointer-events: none;
-    z-index: 10;
-  }
-
 }

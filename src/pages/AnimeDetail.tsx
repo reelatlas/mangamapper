@@ -8,14 +8,18 @@ import { CollectionSection } from '@/components/CollectionSection';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { ScrollArea } from '@/components/ui/scroll-area';
-import { getAnimeById } from '@/data/mockAnime';
-import { Play, BookOpen, Tv, ArrowLeft } from 'lucide-react';
+import { useCatalogSeries, useCatalogMapping } from '@/hooks/useCatalog';
+import { MappingStrip } from '@/components/MappingStrip';
+import { motion } from 'motion/react';
+import { Play, ArrowLeft } from 'lucide-react';
+import { TvIcon as Tv, BookOpenIcon as BookOpen } from '@/components/icons';
 
 const AnimeDetail = () => {
   const { id } = useParams<{ id: string }>();
-  const anime = getAnimeById(id || '');
+  const { data: anime, isLoading } = useCatalogSeries(id);
+  const { data: mapping } = useCatalogMapping(id);
   const [showAll, setShowAll] = useState(false);
-  const [activeFilters, setActiveFilters] = useState<Set<EpisodeType>>(new Set(['canon', 'filler', 'anime-only-canon']));
+  const [activeFilters, setActiveFilters] = useState<Set<EpisodeType>>(new Set(['canon', 'mixed', 'filler', 'anime-only-canon']));
 
   const toggleFilter = useCallback((type: EpisodeType) => {
     setActiveFilters(prev => {
@@ -25,6 +29,26 @@ const AnimeDetail = () => {
       return next;
     });
   }, []);
+
+  if (isLoading) {
+    return (
+      <div className="min-h-screen bg-background font-mono">
+        <Header />
+        <main className="container py-16">
+          <div className="flex items-center gap-2 py-16 justify-center border border-dashed text-sm">
+            <motion.span
+              className="text-muted-foreground"
+              initial={{ opacity: 0.35 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 0.6, repeat: Infinity, repeatType: 'mirror', ease: 'easeInOut' }}
+            >
+              {'>'} fetch_series({id}) ...
+            </motion.span>
+          </div>
+        </main>
+      </div>
+    );
+  }
 
   if (!anime) {
     return (
@@ -48,9 +72,11 @@ const AnimeDetail = () => {
     );
   }
 
-  const canonCount = anime.episodes.filter(ep => ep.type === 'canon').length;
-  const fillerCount = anime.episodes.filter(ep => ep.type === 'filler').length;
-  const animeOnlyCount = anime.episodes.filter(ep => ep.type === 'anime-only-canon').length;
+  // Full-run counts from the mapping summary; fall back to the loaded
+  // episode sample while the mapping is in flight.
+  const canonCount = mapping?.canonCount ?? anime.episodes.filter(ep => ep.type === 'canon').length;
+  const fillerCount = mapping?.fillerCount ?? anime.episodes.filter(ep => ep.type === 'filler').length;
+  const animeOnlyCount = mapping?.animeOnlyCount ?? anime.episodes.filter(ep => ep.type === 'anime-only-canon').length;
 
   return (
     <div className="min-h-screen bg-background font-mono">
@@ -157,6 +183,33 @@ const AnimeDetail = () => {
                 </CardContent>
               </Card>
             </div>
+
+            {/* Full-run density strip */}
+            {mapping && (
+              <Card className="border-dashed">
+                <div className="terminal-header flex items-center justify-between">
+                  <span className="text-muted-foreground">episode_density</span>
+                  <span className="text-muted-foreground">
+                    ep_1 → ep_{mapping.airedEpisodes}
+                    {mapping.sourceType !== 'original' && (
+                      <> · <span className="text-destructive">filler</span>:{mapping.fillerPercent}%</>
+                    )}
+                    {mapping.mangaAheadChapters != null && (
+                      <> · <span className="text-accent/50">manga_only</span>:+{mapping.mangaAheadChapters}ch</>
+                    )}
+                  </span>
+                </div>
+                <CardContent className="p-4">
+                  <MappingStrip
+                    spans={mapping.spans}
+                    airedEpisodes={mapping.airedEpisodes}
+                    mangaAheadUnits={mapping.mangaAheadUnits}
+                    mangaAheadChapters={mapping.mangaAheadChapters}
+                    className="h-2.5"
+                  />
+                </CardContent>
+              </Card>
+            )}
           </div>
         </div>
 

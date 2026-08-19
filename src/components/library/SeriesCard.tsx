@@ -4,7 +4,8 @@ import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
-import { BookOpen, Tv, Trash2, ExternalLink, Glasses, X, Check, Pencil, Plus } from 'lucide-react';
+import { Trash2, ExternalLink, Glasses, X, Check, Pencil, Plus } from 'lucide-react';
+import { TvIcon as Tv, BookOpenIcon as BookOpen } from '@/components/icons';
 import { getAnimeById } from '@/data/mockAnime';
 import { supabase } from '@/integrations/supabase/client';
 import { toast } from 'sonner';
@@ -13,6 +14,7 @@ import { Select, SelectItem, SelectScrollUpButton, SelectScrollDownButton, Selec
 import { InlineNewReaderForm } from './InlineNewReaderForm';
 import type { AnimeProgress, ReaderSite, ReaderAssignment } from '@/types/library';
 import { getReadersForAnime } from '@/types/library';
+import type { TablesInsert } from '@/integrations/supabase/types';
 
 interface ReaderOption {
   key: string;
@@ -172,7 +174,7 @@ export const SeriesCard = ({ item, animeId, readerSites, onRemove, userId, onSav
     setSaving(true);
 
     // 1. Upsert progress
-    const progressUpdate: Record<string, unknown> = {
+    const progressUpdate: TablesInsert<'anime_progress'> = {
       user_id: userId,
       anime_id: resolvedAnimeId,
       in_library: true,
@@ -186,7 +188,7 @@ export const SeriesCard = ({ item, animeId, readerSites, onRemove, userId, onSav
 
     const { error: progressError } = await supabase
       .from('anime_progress')
-      .upsert(progressUpdate as any, { onConflict: 'user_id,anime_id' });
+      .upsert(progressUpdate, { onConflict: 'user_id,anime_id' });
 
     if (progressError) {
       toast.error('Failed to update progress');

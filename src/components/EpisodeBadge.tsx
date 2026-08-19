@@ -13,6 +13,10 @@ export const EpisodeBadge = ({ type, className, inactive }: EpisodeBadgeProps) =
       label: 'canon',
       className: 'text-accent border-accent',
     },
+    mixed: {
+      label: 'mixed',
+      className: 'text-syntax-amber border-syntax-amber',
+    },
     filler: {
       label: 'filler',
       className: 'text-destructive border-destructive',

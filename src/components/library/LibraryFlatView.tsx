@@ -1,4 +1,4 @@
-import { useMemo } from 'react';
+import { useMemo, useState } from 'react';
 import { ToggleGroup, ToggleGroupItem } from '@/components/ui/toggle-group';
 import { ArrowUpDown, BookDashed, BookOpenText } from 'lucide-react';
 import { getAnimeById } from '@/data/mockAnime';
@@ -20,6 +20,7 @@ interface LibraryFlatViewProps {
 }
 
 export const LibraryFlatView = ({ progress, readerSites, removeFromLibrary, viewMode, onViewModeChange, userId, onSave, onNewSeries, sortOption: progressSort, onSortChange: setProgressSort }: LibraryFlatViewProps) => {
+  const [emptyHover, setEmptyHover] = useState(false);
 
   const sortedProgress = useMemo(() => {
     const sorted = [...progress];
@@ -54,22 +55,23 @@ export const LibraryFlatView = ({ progress, readerSites, removeFromLibrary, view
           <div className="flex items-center justify-center mb-3">
             <div
               className="cursor-default"
-              onMouseEnter={() => { document.getElementById('book-closed')?.classList.add('hidden'); document.getElementById('book-open')?.classList.remove('hidden'); }}
-              onMouseLeave={() => { document.getElementById('book-closed')?.classList.remove('hidden'); document.getElementById('book-open')?.classList.add('hidden'); }}
+              onMouseEnter={() => setEmptyHover(true)}
+              onMouseLeave={() => setEmptyHover(false)}
             >
-              <BookDashed className="w-6 h-6 text-muted-foreground" id="book-closed" />
-              <BookOpenText className="w-6 h-6 text-muted-foreground hidden" id="book-open" />
+              {emptyHover
+                ? <BookOpenText className="w-6 h-6 text-muted-foreground" />
+                : <BookDashed className="w-6 h-6 text-muted-foreground" />}
             </div>
           </div>
           <div
-            className="group/lib cursor-pointer"
+            className="cursor-pointer"
             onClick={onNewSeries}
-            onMouseEnter={() => { document.getElementById('book-closed')?.classList.add('hidden'); document.getElementById('book-open')?.classList.remove('hidden'); }}
-            onMouseLeave={() => { document.getElementById('book-closed')?.classList.remove('hidden'); document.getElementById('book-open')?.classList.add('hidden'); }}
+            onMouseEnter={() => setEmptyHover(true)}
+            onMouseLeave={() => setEmptyHover(false)}
           >
             <p className="text-muted-foreground text-sm">
               <span>// library(empty)</span>
-              <span className="hidden group-hover/lib:inline text-primary ml-2">{'>'} new_series</span>
+              {emptyHover && <span className="text-primary ml-2">{'>'} new_series</span>}
             </p>
           </div>
         </div>

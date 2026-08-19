@@ -16,23 +16,8 @@ import { toast } from 'sonner';
 import type { SortOption, SeriesAssignment, ReaderSite, AnimeProgress } from '@/types/library';
 import { ViewModeToggle, type ViewMode } from './ViewModeToggle';
 
-const formatTimestamp = (timestamp: string) => {
-  const date = new Date(timestamp);
-  const month = date.toLocaleString('en-US', { month: 'short' }).toLowerCase();
-  const day = date.getDate();
-  const year = date.getFullYear();
-  const hours = date.getHours();
-  const minutes = date.getMinutes().toString().padStart(2, '0');
-  const ampm = hours >= 12 ? 'pm' : 'am';
-  const hour12 = hours % 12 || 12;
-  return `${month} ${day} ${year} ${hour12}:${minutes}${ampm}`;
-};
-
-const normalizeUrl = (url: string): string => url.trim().replace(/\/+$/, '');
-const isSeriesUrlDefined = (readerUrl: string, seriesUrl: string | null): boolean => {
-  if (!seriesUrl) return false;
-  return normalizeUrl(seriesUrl) !== normalizeUrl(readerUrl);
-};
+import { formatTimestamp } from '@/lib/format';
+import { isSeriesUrlDefined } from '@/lib/urls';
 
 interface LibraryGroupedViewProps {
   userId: string;
@@ -73,6 +58,8 @@ export const LibraryGroupedView = ({ userId, readerSites, progress, fetchReaderS
   };
 
   const [confirmingDeleteReaderView, setConfirmingDeleteReaderView] = useState<string | null>(null);
+  const [leftEyeOpen, setLeftEyeOpen] = useState(false);
+  const [rightEyeOpen, setRightEyeOpen] = useState(false);
   const [editingReaderName, setEditingReaderName] = useState<string | null>(null);
   const [editSiteName, setEditSiteName] = useState('');
   const [editSiteUrl, setEditSiteUrl] = useState('');
@@ -238,41 +225,43 @@ export const LibraryGroupedView = ({ userId, readerSites, progress, fetchReaderS
           <div className="flex items-center justify-center gap-1 mb-3">
             <div
               className="cursor-default"
-              onMouseEnter={() => { document.getElementById('eye-left-closed')?.classList.add('hidden'); document.getElementById('eye-left-open')?.classList.remove('hidden'); }}
-              onMouseLeave={() => { document.getElementById('eye-left-closed')?.classList.remove('hidden'); document.getElementById('eye-left-open')?.classList.add('hidden'); }}
+              onMouseEnter={() => setLeftEyeOpen(true)}
+              onMouseLeave={() => setLeftEyeOpen(false)}
             >
-              <EyeClosed className="w-6 h-6 text-muted-foreground" id="eye-left-closed" />
-              <Eye className="w-6 h-6 text-muted-foreground hidden" id="eye-left-open" />
+              {leftEyeOpen
+                ? <Eye className="w-6 h-6 text-muted-foreground" />
+                : <EyeClosed className="w-6 h-6 text-muted-foreground" />}
             </div>
             <div
               className="cursor-default"
-              onMouseEnter={() => { document.getElementById('eye-right-closed')?.classList.add('hidden'); document.getElementById('eye-right-open')?.classList.remove('hidden'); }}
-              onMouseLeave={() => { document.getElementById('eye-right-closed')?.classList.remove('hidden'); document.getElementById('eye-right-open')?.classList.add('hidden'); }}
+              onMouseEnter={() => setRightEyeOpen(true)}
+              onMouseLeave={() => setRightEyeOpen(false)}
             >
-              <EyeClosed className="w-6 h-6 text-muted-foreground" id="eye-right-closed" />
-              <Eye className="w-6 h-6 text-muted-foreground hidden" id="eye-right-open" />
+              {rightEyeOpen
+                ? <Eye className="w-6 h-6 text-muted-foreground" />
+                : <EyeClosed className="w-6 h-6 text-muted-foreground" />}
             </div>
           </div>
           <div
-            className="group/series cursor-pointer mb-1"
+            className="cursor-pointer mb-1"
             onClick={onNewSeries}
-            onMouseEnter={() => { document.getElementById('eye-left-closed')?.classList.add('hidden'); document.getElementById('eye-left-open')?.classList.remove('hidden'); }}
-            onMouseLeave={() => { document.getElementById('eye-left-closed')?.classList.remove('hidden'); document.getElementById('eye-left-open')?.classList.add('hidden'); }}
+            onMouseEnter={() => setLeftEyeOpen(true)}
+            onMouseLeave={() => setLeftEyeOpen(false)}
           >
             <p className="text-muted-foreground text-sm">
               <span>// series_assigned(null);</span>
-              <span className="hidden group-hover/series:inline text-primary ml-2">{'>'} new_series</span>
+              {leftEyeOpen && <span className="text-primary ml-2">{'>'} new_series</span>}
             </p>
           </div>
           <div
-            className="group/reader cursor-pointer"
+            className="cursor-pointer"
             onClick={onNewReader}
-            onMouseEnter={() => { document.getElementById('eye-right-closed')?.classList.add('hidden'); document.getElementById('eye-right-open')?.classList.remove('hidden'); }}
-            onMouseLeave={() => { document.getElementById('eye-right-closed')?.classList.remove('hidden'); document.getElementById('eye-right-open')?.classList.add('hidden'); }}
+            onMouseEnter={() => setRightEyeOpen(true)}
+            onMouseLeave={() => setRightEyeOpen(false)}
           >
             <p className="text-muted-foreground text-sm">
               <span>// reader_assigned(null)</span>
-              <span className="hidden group-hover/reader:inline text-primary ml-2">{'>'} new_reader</span>
+              {rightEyeOpen && <span className="text-primary ml-2">{'>'} new_reader</span>}
             </p>
           </div>
         </div>

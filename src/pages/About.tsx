@@ -89,19 +89,15 @@ const About = () => {
                 <ul className="space-y-1.5 text-sm text-foreground/70">
                   <li className="flex gap-2">
                     <span className="text-muted-foreground">→</span>
-                    <span>find where the <span className="text-syntax-amber">anime leaves…</span> and the <span className="text-syntax-green">manga enters</span></span>
+                    <span>find where the <span className="text-syntax-amber">anime leaves</span> and the <span className="text-syntax-green">manga enters</span></span>
                   </li>
                   <li className="flex gap-2">
                     <span className="text-muted-foreground">→</span>
-                    <span>this your defining moment</span>
+                    <span>the defining moment to <span className="text-foreground">reignite your soul</span></span>
                   </li>
                   <li className="flex gap-2">
                     <span className="text-muted-foreground">→</span>
-                    <span>dive into the next chapter</span>
-                  </li>
-                  <li className="flex gap-2">
-                    <span className="text-muted-foreground">→</span>
-                    <span><span className="text-foreground">reignite your soul</span> and fulfill what was written</span>
+                    <span>dive into the next chapter and fulfill what was written</span>
                   </li>
                 </ul>
               </div>
@@ -165,7 +161,7 @@ const About = () => {
                 </li>
                 <li className="flex gap-2">
                   <span className="text-muted-foreground shrink-0">→</span>
-                  <span>personal project to experiment with AI coding, coding was not possible for me before</span>
+                  <span>personal project to experiment with AI coding</span>
                 </li>
                 <li className="flex gap-2">
                   <span className="text-muted-foreground shrink-0">→</span>
