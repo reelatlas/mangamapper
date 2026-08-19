@@ -66,6 +66,12 @@ export default {
           pink: 'hsl(var(--syntax-pink))'
         }
       },
+      // semantic card-rhythm spacings — see index.css tokens
+      spacing: {
+        loose: 'var(--space-loose)',
+        region: 'var(--space-region)',
+        tight: 'var(--space-tight)'
+      },
       borderRadius: {
         lg: 'var(--radius)',
         md: 'calc(var(--radius) - 1px)',

@@ -42,3 +42,44 @@ export const BookOpenIcon = forwardRef<SVGSVGElement, SVGProps<SVGSVGElement>>(
   ),
 );
 BookOpenIcon.displayName = 'BookOpenIcon';
+
+// Canonical disclosure chevrons (stroke 2.5 for legibility at ~0.7rem).
+// Drawn assets, perfectly centered by construction — a disclosure marker must
+// rotate/swap inside a fixed SQUARE, flex-centered box (rotating a tall inline
+// text box swings the glyph around the wrong center; the v5 caret bug).
+export const ChevronRightIcon = forwardRef<SVGSVGElement, SVGProps<SVGSVGElement>>(
+  (props, ref) => (
+    <svg ref={ref} {...svgProps} strokeWidth={2.5} {...props}>
+      <polyline points="9 18 15 12 9 6" />
+    </svg>
+  ),
+);
+ChevronRightIcon.displayName = 'ChevronRightIcon';
+
+export const ChevronDownIcon = forwardRef<SVGSVGElement, SVGProps<SVGSVGElement>>(
+  (props, ref) => (
+    <svg ref={ref} {...svgProps} strokeWidth={2.5} {...props}>
+      <polyline points="6 9 12 15 18 9" />
+    </svg>
+  ),
+);
+ChevronDownIcon.displayName = 'ChevronDownIcon';
+
+// List glyph for the episode_list label — lucide `list` with the rows
+// STRETCHED from stock y6-18 to y4-20: the stock ink fills only half the
+// frame's height and read optically smaller than TvIcon (ink ~1-20) and
+// BookOpenIcon (ink 5-23) at the 12px PositionLabel size. Corrected asset,
+// same center, matched ink height — never a per-usage size nudge.
+export const ListIcon = forwardRef<SVGSVGElement, SVGProps<SVGSVGElement>>(
+  (props, ref) => (
+    <svg ref={ref} {...svgProps} {...props}>
+      <line x1="8" y1="4" x2="21" y2="4" />
+      <line x1="8" y1="12" x2="21" y2="12" />
+      <line x1="8" y1="20" x2="21" y2="20" />
+      <line x1="3" y1="4" x2="3.01" y2="4" />
+      <line x1="3" y1="12" x2="3.01" y2="12" />
+      <line x1="3" y1="20" x2="3.01" y2="20" />
+    </svg>
+  ),
+);
+ListIcon.displayName = 'ListIcon';

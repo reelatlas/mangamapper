@@ -89,6 +89,16 @@
     
     --tracking-normal: 0em;
     --spacing: 0.25rem;
+
+    /* Card vertical rhythm tokens (2026-08-19) — the ONLY spacings allowed
+       between a card's major regions. Use via the semantic utilities
+       gap-region / mt-region / mt-tight etc. (tailwind.config spacing).
+       loose:  the card header (title block) → its content
+       region: between content regions (legend→list, …)
+       tight:  pairs that read as one unit (positions→strip, strip→legend) */
+    --space-loose: 1.5rem;
+    --space-region: 1rem;
+    --space-tight: 0.75rem;
   }
 
   /* Light mode - inverted terminal */
@@ -198,5 +208,32 @@
     -webkit-appearance: none;
     margin: 0;
     display: none;
+  }
+
+  /* EpisodeList row highlight after a lookup/strip-driven jump.
+     Opacity-only overlay (compositor-friendly) — never animate
+     background-color for this. */
+  .animate-row-pulse::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background: hsl(var(--primary) / 0.22);
+    animation: row-pulse-fade 0.9s ease-out forwards;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .animate-row-pulse::after {
+      animation: none;
+      opacity: 0;
+    }
+  }
+}
+
+@keyframes row-pulse-fade {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
   }
 }

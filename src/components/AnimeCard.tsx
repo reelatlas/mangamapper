@@ -1,11 +1,13 @@
-import { AnimeSeries } from '@/types/anime';
+import { useMemo, useState } from 'react';
+import { AnimeSeries, EpisodeType } from '@/types/anime';
 import { Card, CardContent } from '@/components/ui/card';
-import { TvIcon as Tv, BookOpenIcon as BookOpen } from '@/components/icons';
 import { useCatalogMapping } from '@/hooks/useCatalog';
 import { usePositionLookup } from '@/hooks/usePositionLookup';
+import { buildEpisodeList } from '@/lib/mapping';
 import { MappingStrip } from './MappingStrip';
-import { PositionLabel } from './PositionLabel';
-import { MapLookup } from './MapLookup';
+import { InlinePositionRow } from './InlinePositionRow';
+import { EpisodeList } from './EpisodeList';
+import { TypeBadge, type TypeBadgeKind } from './TypeBadge';
 
 interface AnimeCardProps {
   anime: AnimeSeries;
@@ -20,10 +22,66 @@ export const AnimeCard = ({ anime, rank }: AnimeCardProps) => {
   // click-to-set) operate as one instrument.
   const lookup = usePositionLookup(anime, mapping);
 
-  // newest episode WITH a mapping — a series can end on filler (e.g. Naruto)
-  const latestMapping = anime.episodes.find((e) => e.mangaMapping)?.mangaMapping ?? null;
   const hasSource = mapping ? mapping.sourceType !== 'original' : anime.hasManga;
-  const lookupEnabled = hasSource && !!mapping?.latestKnown;
+  // The ep field works for EVERY mapped series (incl. anime-original) —
+  // inline field, strip clicks, and list rows are one instrument. The vol/ch
+  // fields are editable only when manga values exist (the hook handles it).
+  const lookupEnabled = !!mapping && mapping.airedEpisodes > 0;
+
+  // full aired run as rows + collapsible sections (docs/components/episode-list.md)
+  const episodeList = useMemo(
+    () => (mapping && mapping.airedEpisodes > 0 ? buildEpisodeList(anime, mapping) : null),
+    [anime, mapping],
+  );
+
+  // list selection follows the lookup; a manga_only (hatch) position orients
+  // the list at the nearest aired episode before it
+  const selectedEp = useMemo(() => {
+    const r = lookup.result;
+    if (!r || !mapping) return null;
+    if (r.state === 'run' && r.ep !== null && r.ep <= mapping.airedEpisodes) return r.ep;
+    if (r.state === 'hatch') return mapping.airedEpisodes;
+    return null;
+  }, [lookup.result, mapping]);
+
+  // visible slice of the list → the strip's minimap band (M1 fill-only)
+  const [viewband, setViewband] = useState<{ start: number; end: number } | null>(null);
+
+  // legend-as-filter, CLICK-TO-HIDE: everything is "selected" by default;
+  // clicking a badge hides that type, clicking again restores it. Purely a
+  // VIEW concern — the lookup instrument is never filtered.
+  const [hiddenKinds, setHiddenKinds] = useState<ReadonlySet<TypeBadgeKind>>(new Set());
+  const toggleFilter = (kind: TypeBadgeKind) =>
+    setHiddenKinds((prev) => {
+      const next = new Set(prev);
+      if (next.has(kind)) next.delete(kind);
+      else next.add(kind);
+      return next;
+    });
+  const hiddenTypes = useMemo(() => {
+    if (hiddenKinds.size === 0) return undefined;
+    const hidden = new Set<EpisodeType | 'manga_only'>();
+    (['canon', 'mixed', 'filler'] as const).forEach((t) => {
+      if (hiddenKinds.has(t)) hidden.add(t);
+    });
+    if (hiddenKinds.has('anime_only')) hidden.add('anime-only-canon');
+    if (hiddenKinds.has('manga_only')) hidden.add('manga_only');
+    return hidden;
+  }, [hiddenKinds]);
+  const visibleSections = useMemo(
+    () =>
+      episodeList
+        ? hiddenTypes
+          ? episodeList.sections.filter((s) => !hiddenTypes.has(s.type))
+          : episodeList.sections
+        : [],
+    [episodeList, hiddenTypes],
+  );
+  const badgeState = (kind: TypeBadgeKind) => ({
+    onClick: () => toggleFilter(kind),
+    pressed: !hiddenKinds.has(kind), // visible = selected
+    dimmed: hiddenKinds.has(kind),
+  });
 
   // Navigation to the details page is intentionally disabled in browse mode —
   // clicking will become expand/collapse when the compact variant lands.
@@ -58,7 +116,9 @@ export const AnimeCard = ({ anime, rank }: AnimeCardProps) => {
             </div>
 
             {/* Readout */}
-            <div className="flex-1 p-4 flex flex-col gap-3.5 font-mono min-w-0">
+            {/* card rhythm: per-seam tokens (region/tight), not a uniform gap —
+                positions→strip and strip→legend are the tight pairs */}
+            <div className="flex-1 p-4 flex flex-col font-mono min-w-0">
               {/* Title block */}
               <div className="min-w-0">
                 <div className="text-base font-semibold text-syntax-green leading-tight break-words">
@@ -69,77 +129,78 @@ export const AnimeCard = ({ anime, rank }: AnimeCardProps) => {
                 </div>
               </div>
 
-              {/* Positions: labeled columns */}
-              <div className="flex flex-wrap gap-x-10 gap-y-2 text-sm tabular-nums">
-                <div>
-                  <PositionLabel icon={Tv} label="anime" iconActive className="mb-0.5" />
-                  <span>
-                    <span className="text-muted-foreground">ep:</span>
-                    <span className="text-foreground">{anime.currentEpisode}</span>
-                    <span className="text-muted-foreground">/{anime.totalEpisodes ?? '—'}</span>
-                  </span>
-                </div>
-                <div>
-                  <PositionLabel icon={BookOpen} label="manga" iconActive={hasSource} className="mb-0.5" />
-                  {hasSource && latestMapping ? (
-                    <span>
-                      <span className="text-muted-foreground">vol:</span>
-                      <span className="text-foreground">{latestMapping.volume}</span>
-                      <span className="text-muted-foreground">/{anime.totalVolumes ?? '—'}</span>
-                      <span className="text-muted-foreground"> · </span>
-                      <span className="text-muted-foreground">ch:</span>
-                      <span className="text-foreground">{latestMapping.chapters}</span>
-                      <span className="text-muted-foreground">/{anime.totalChapters ?? '—'}</span>
-                    </span>
-                  ) : hasSource ? (
-                    <span className="text-muted-foreground">// mapping_pending</span>
-                  ) : (
-                    <span className="text-syntax-purple">// no_source (anime_original)</span>
-                  )}
-                </div>
+              {/* THE position instrument — totals row and lookup merged: the
+                  current numbers are the inputs, totals live after the /.
+                  Spec: docs/components/position-row.md */}
+              <div className="mt-loose">
+                <InlinePositionRow anime={anime} mapping={mapping} lookup={lookup} hasSource={hasSource} />
               </div>
 
-              {/* anime ↔ manga lookup (spec: docs/components/map-lookup.md) */}
-              {lookupEnabled && <MapLookup lookup={lookup} seriesTitle={anime.title} />}
-
-              {/* Whole-story density */}
-              <div className="mt-auto pt-1 space-y-1.5">
+              {/* Whole-story density + episode list (C1 hierarchy: the badge
+                  legend lives with the strip it describes; the list header is
+                  purely functional; the episode total lives in anime totals) */}
+              <div className="mt-tight">
                 {mapping ? (
                   <>
                     <MappingStrip
                       spans={mapping.spans}
                       airedEpisodes={mapping.airedEpisodes}
                       markerEpisode={lookup.markerUnit}
+                      markerRest={lookup.markerRest}
                       mangaAheadUnits={mapping.mangaAheadUnits}
                       mangaAheadChapters={mapping.mangaAheadChapters}
                       onUnitClick={lookupEnabled ? lookup.stripClick : undefined}
+                      viewband={viewband}
+                      hiddenTypes={hiddenTypes}
                     />
-                    <p className="text-[10px] tracking-wider text-muted-foreground">
+                    {/* badge legend — below the strip, right-aligned (G4,
+                        2026-08-19): graphic first, key tucked right. Badges
+                        with no data don't render; each badge is a
+                        click-to-hide filter toggle */}
+                    <div className="mt-tight flex flex-wrap items-center justify-end gap-1.5">
                       {mapping.sourceType === 'original' ? (
-                        <>
-                          <span className="text-syntax-purple">anime_only</span>:{mapping.animeOnlyCount}
-                        </>
+                        <TypeBadge
+                          type="anime_only"
+                          count={mapping.animeOnlyCount}
+                          {...badgeState('anime_only')}
+                        />
                       ) : (
                         <>
-                          <span className="text-accent">canon</span>:{mapping.canonCount}
+                          <TypeBadge type="canon" count={mapping.canonCount} {...badgeState('canon')} />
                           {mapping.mixedCount > 0 && (
-                            <>
-                              {' · '}
-                              <span className="text-syntax-amber">mixed</span>:{mapping.mixedCount}
-                            </>
+                            <TypeBadge type="mixed" count={mapping.mixedCount} {...badgeState('mixed')} />
                           )}
-                          {' · '}
-                          <span className="text-destructive">filler</span>:{mapping.fillerCount}{' '}
-                          ({mapping.fillerPercent}%)
-                          {mapping.mangaAheadChapters != null && (
-                            <>
-                              {' · '}
-                              <span className="text-accent/50">manga_only</span>:+{mapping.mangaAheadChapters}ch
-                            </>
+                          {mapping.fillerCount > 0 && (
+                            <TypeBadge
+                              type="filler"
+                              count={`${mapping.fillerCount} (${mapping.fillerPercent}%)`}
+                              {...badgeState('filler')}
+                            />
+                          )}
+                          {mapping.mangaAheadChapters != null && mapping.mangaAheadChapters > 0 && (
+                            <TypeBadge
+                              type="manga_only"
+                              count={`+${mapping.mangaAheadChapters}ch`}
+                              {...badgeState('manga_only')}
+                            />
                           )}
                         </>
                       )}
-                    </p>
+                    </div>
+                    {/* legend → list spacing matches the card's region rhythm;
+                        separation is spacing, not divider lines */}
+                    {episodeList && (
+                      <div className="mt-region">
+                        <EpisodeList
+                          rows={episodeList.rows}
+                          sections={visibleSections}
+                          selectedEp={selectedEp}
+                          interactive={lookupEnabled}
+                          onSelectEpisode={lookupEnabled ? lookup.selectEpisode : undefined}
+                          onVisibleRangeChange={setViewband}
+                        />
+                      </div>
+                    )}
                   </>
                 ) : (
                   <div className="h-1.5 w-full bg-muted" aria-hidden />

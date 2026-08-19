@@ -18,11 +18,14 @@ export const lastChapterNumber = (chapters: string): number | null => {
 };
 
 // Does a chapter string ("1088-1089", "8-12,14,16-19") contain this chapter?
+// NB: a single-number part has NO hi element — it must compare as equality
+// (Number.isNaN(undefined) is false, so a plain isNaN(hi) check silently
+// broke every single-chapter mapping; fixed 2026-08-19).
 const chapterInRange = (chapters: string, chapter: number): boolean =>
   chapters.split(',').some((part) => {
     const [lo, hi] = part.split('-').map((n) => parseInt(n, 10));
     if (Number.isNaN(lo)) return false;
-    return Number.isNaN(hi) ? chapter === lo : chapter >= lo && chapter <= hi;
+    return hi === undefined || Number.isNaN(hi) ? chapter === lo : chapter >= lo && chapter <= hi;
   });
 
 // ── canon-aware span math ────────────────────────────────────────────────────
@@ -141,10 +144,23 @@ export const chapterForEpisode = (
   const est = canonEpToCh(anime, m, ep);
   if (est === null) return null;
   const { startCh, covered } = ratios(anime, m);
-  for (const cand of [est, est + 1, est - 1, est + 2, est - 2]) {
+  // Candidates must be validated with the SAME resolution solvePosition uses —
+  // confirmed episode ranges win before the estimator — or a candidate that
+  // passes chToEp can still land inside a neighbor's confirmed range.
+  const resolves = (ch: number): boolean => {
+    const hit = anime.episodes.find(
+      (e) => e.mangaMapping && chapterInRange(e.mangaMapping.chapters, ch),
+    );
+    return hit ? hit.number === ep : chToEp(anime, m, ch) === ep;
+  };
+  for (const cand of [est, est + 1, est - 1, est + 2, est - 2, est + 3, est - 3]) {
     if (cand < startCh || (covered !== null && cand > covered)) continue;
-    if (chToEp(anime, m, cand) === ep) return cand;
+    if (resolves(cand)) return cand;
   }
+  // No chapter resolves to this episode — the linear estimate disagrees with
+  // nearby confirmed anchors. Anchor-aware interpolation (estimate BETWEEN
+  // confirmed points) is the real fix once AniList data lands; until then the
+  // estimate is returned and the solver's answer wins.
   return est;
 };
 
@@ -313,6 +329,80 @@ export const fieldMin = (
   if (field === 'ep') return 1;
   if (field === 'ch') return anime.mangaStartChapter ?? 1;
   return anime.mangaStartVolume ?? 1;
+};
+
+// ── episode list synthesis ───────────────────────────────────────────────────
+// The full aired run as rows + its spans as collapsible sections.
+// Interaction spec: docs/components/episode-list.md
+
+export interface EpisodeRow {
+  ep: number;
+  type: EpisodeType;
+  title: string | null; // null → rendered as // title_pending
+  vol: number | null;   // null for filler/anime-only (no manga values exist)
+  ch: string | null;    // display string — confirmed data may be a range ("1088-1089")
+}
+
+export interface EpisodeSection {
+  index: number;
+  start: number;
+  end: number;
+  type: EpisodeType;
+  count: number;
+  // manga coverage of the section — WHOLE volumes, no partial marking
+  volStart: number | null;
+  volEnd: number | null;
+  chStart: number | null;
+  chEnd: number | null;
+}
+
+export interface EpisodeListData {
+  rows: EpisodeRow[];
+  sections: EpisodeSection[];
+}
+
+export const buildEpisodeList = (anime: AnimeSeries, m: MappingSummary): EpisodeListData => {
+  const r = ratios(anime, m);
+  const byNumber = new Map(anime.episodes.map((e) => [e.number, e]));
+  const rows: EpisodeRow[] = [];
+  for (let ep = 1; ep <= m.airedEpisodes; ep++) {
+    const exact = byNumber.get(ep);
+    const type = exact?.type ?? episodeTypeAt(m, ep);
+    let vol: number | null = null;
+    let ch: string | null = null;
+    // filler/anime-only rows keep manga values null by design (— in the UI)
+    if (type !== 'filler' && type !== 'anime-only-canon') {
+      if (exact?.mangaMapping) {
+        vol = exact.mangaMapping.volume;
+        ch = exact.mangaMapping.chapters;
+      } else {
+        const chNum = canonEpToCh(anime, m, ep);
+        vol = chNum !== null ? chToVol(anime, r, chNum) : null;
+        ch = chNum !== null ? String(chNum) : null;
+      }
+    }
+    rows.push({ ep, type, title: exact?.title ?? null, vol, ch });
+  }
+  // section coverage reads from the rows themselves, so header ranges always
+  // agree with the rows revealed on expand
+  const sections: EpisodeSection[] = m.spans.map((span, index) => {
+    const first = rows[span.start - 1];
+    const last = rows[span.end - 1];
+    const chStart = first?.ch != null ? parseInt(first.ch.split(/[-,]/)[0], 10) || null : null;
+    const chEnd = last?.ch != null ? lastChapterNumber(last.ch) : null;
+    return {
+      index,
+      start: span.start,
+      end: span.end,
+      type: span.type,
+      count: span.end - span.start + 1,
+      volStart: first?.vol ?? null,
+      volEnd: last?.vol ?? null,
+      chStart,
+      chEnd,
+    };
+  });
+  return { rows, sections };
 };
 
 // ── seeded stepping ──────────────────────────────────────────────────────────

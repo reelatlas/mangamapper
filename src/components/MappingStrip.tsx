@@ -25,9 +25,18 @@ interface MappingStripProps {
   spans: EpisodeSpan[];
   airedEpisodes: number;
   markerEpisode?: number | null; // position indicator, in episode-equivalent units
+  markerRest?: boolean;          // dim marker: the series' PRESENT position (inline instrument at rest)
   mangaAheadUnits?: number;      // manga_only tail width, in episode-equivalents
   mangaAheadChapters?: number | null; // for the tail's tooltip
   onUnitClick?: (unit: number) => void; // click-to-set (MapLookup's stripClick)
+  // Minimap band: the episode range currently visible in the EpisodeList.
+  // Treatment is M1 fill-only (chosen 2026-08-19): a brighter neutral fill,
+  // NO edge lines — the highlight alone carries it.
+  viewband?: { start: number; end: number } | null;
+  // Legend-as-filter: types excluded from the active filter selection render
+  // as neutral ghosts IN PLACE — strip geometry (units, needle, clicks) never
+  // changes, so filtering is purely a view concern.
+  hiddenTypes?: ReadonlySet<EpisodeType | 'manga_only'>;
   className?: string;
 }
 
@@ -40,9 +49,12 @@ export const MappingStrip = ({
   spans,
   airedEpisodes,
   markerEpisode,
+  markerRest,
   mangaAheadUnits = 0,
   mangaAheadChapters,
   onUnitClick,
+  viewband,
+  hiddenTypes,
   className,
 }: MappingStripProps) => {
   const wrapRef = useRef<HTMLDivElement>(null);
@@ -92,35 +104,51 @@ export const MappingStrip = ({
     >
       <div className="relative">
       <motion.div
-        className={cn('flex h-1.5 w-full overflow-hidden', className)}
+        // double-height trial (2026-08-19) — was h-1.5 (6px); the strip is
+        // the card's primary data visual and earns more presence
+        className={cn('flex h-3 w-full overflow-hidden', className)}
         style={{ transformOrigin: 'left' }}
         initial={{ transform: 'scaleX(0)' }}
         whileInView={{ transform: 'scaleX(1)' }}
         viewport={{ once: true, amount: 0.5 }}
         transition={{ duration: 0.5, ease: 'easeOut' }}
       >
-        {spans.map((span) => (
-          <div
-            key={`${span.start}-${span.type}`}
-            className={SPAN_COLORS[span.type]}
-            style={{ width: `${((span.end - span.start + 1) / totalUnits) * 100}%` }}
-            title={
-              span.start === span.end
-                ? `ep_${span.start} // ${SPAN_LABELS[span.type]}`
-                : `ep_${span.start}-${span.end} // ${SPAN_LABELS[span.type]}`
-            }
-          />
-        ))}
+        {spans.map((span) => {
+          const hidden = hiddenTypes?.has(span.type) ?? false;
+          return (
+            <div
+              key={`${span.start}-${span.type}`}
+              className={hidden ? 'bg-muted/60' : SPAN_COLORS[span.type]}
+              style={{ width: `${((span.end - span.start + 1) / totalUnits) * 100}%` }}
+              title={
+                span.start === span.end
+                  ? `ep_${span.start} // ${SPAN_LABELS[span.type]}${hidden ? ' (filtered)' : ''}`
+                  : `ep_${span.start}-${span.end} // ${SPAN_LABELS[span.type]}${hidden ? ' (filtered)' : ''}`
+              }
+            />
+          );
+        })}
         {mangaAheadUnits > 0 && (
           <div
+            className={hiddenTypes?.has('manga_only') ? 'bg-muted/60' : undefined}
             style={{
               width: `${(mangaAheadUnits / totalUnits) * 100}%`,
-              background: MANGA_ONLY_BACKGROUND,
+              background: hiddenTypes?.has('manga_only') ? undefined : MANGA_ONLY_BACKGROUND,
             }}
-            title={`+${mangaAheadChapters ?? '?'}ch // manga_only (not_animated)`}
+            title={`+${mangaAheadChapters ?? '?'}ch // manga_only (not_animated)${hiddenTypes?.has('manga_only') ? ' (filtered)' : ''}`}
           />
         )}
       </motion.div>
+      {viewband && (
+        <div
+          aria-hidden
+          className="absolute -top-[3px] -bottom-[3px] bg-foreground/[0.18] pointer-events-none"
+          style={{
+            left: `${((viewband.start - 1) / totalUnits) * 100}%`,
+            width: `${Math.max(0.4, ((viewband.end - viewband.start + 1) / totalUnits) * 100)}%`,
+          }}
+        />
+      )}
       {onUnitClick && ghostPct !== null && (
         <div
           aria-hidden
@@ -133,13 +161,19 @@ export const MappingStrip = ({
           aria-hidden
           className={cn(
             'absolute -top-1 -bottom-1 w-0.5 -ml-px pointer-events-none',
-            isProjection ? 'bg-muted-foreground' : 'bg-foreground',
+            isProjection ? 'bg-muted-foreground' : markerRest ? 'bg-foreground/45' : 'bg-foreground',
           )}
           style={{ left: `${markerLeft}%` }}
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.15, ease: 'easeOut' }}
-          title={isProjection ? `ep_${Math.round(markerEpisode)} // projected` : `ep_${Math.round(markerEpisode)}`}
+          title={
+            isProjection
+              ? `ep_${Math.round(markerEpisode)} // projected`
+              : markerRest
+                ? `ep_${Math.round(markerEpisode)} // current`
+                : `ep_${Math.round(markerEpisode)}`
+          }
         />
       )}
       </div>

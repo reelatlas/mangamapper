@@ -1,5 +1,13 @@
 # MapLookup — the anime↔manga position instrument
 
+> **SUPERSEDED (2026-08-19)** by the inline position instrument —
+> **[position-row.md](position-row.md)** is the current contract. The pure
+> math and the hardened input behaviors documented here carry over unchanged;
+> the CHANNEL model (ep ⇄ vol.ch toggle) and PINS described below dissolved
+> when the totals row and the lookup merged (all three fields are always
+> visible; driver = last field touched; filler/manga_only positions render as
+> — values). Kept as the historical record of how the contract was derived.
+
 > The AnimeCard's core interaction: type (or click) a position in one medium and
 > instantly see where it lands in the other. Converged through the "MapLookup
 > Synthesis" artifact explorations, 2026-08-18. This document is the behavioral

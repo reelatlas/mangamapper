@@ -60,7 +60,9 @@ The five-color "syntax highlighting" scale is what makes the app feel like code.
 
 ### 1.4 Borders — the strongest motif
 
-`border-dashed` + `border-border` is the single most identifiable visual signature. Cards, buttons, inputs, section dividers, headers, footers, empty states — all dashed. Hover/active states may switch `border-dashed → border-solid` (`.cmd-button` pattern) or recolor to `primary`/`accent`.
+`border-dashed` + `border-border` is the single most identifiable visual signature. Cards, buttons, inputs, headers, footers, empty states — all dashed. Hover/active states may switch `border-dashed → border-solid` (`.cmd-button` pattern) or recolor to `primary`/`accent`.
+
+**Interior dividers ruling (2026-08-19):** dashed borders frame *containers and controls* — they are **not** used as horizontal dividers between data regions inside a card. Separation inside a card is **spacing only**, via the **card rhythm tokens** (index.css → tailwind `spacing`): `--space-loose` (1.5rem — the card header/title block → its content), `--space-region` (1rem — between content regions: legend → episode list) and `--space-tight` (0.75rem — pairs that read as one unit: positions → strip, strip → its legend). Applied as **per-seam `mt-*` utilities** (`mt-region`, `mt-tight`), not a uniform column gap. Never raw spacing numbers between card regions.
 
 ### 1.5 Copy & microcopy conventions
 
@@ -70,8 +72,14 @@ The UI copy is written *as code*:
 - De-emphasized/system text is a comment: `// no_source`, `// data_pending`, `// anime_original`, `// something(null)`.
 - Command-style headers: `> command_name()`.
 - Keys end with `:` and use snake_case: `last_updated:`, `title_jp:`.
+- **`—` is the universal null** for a missing value in a data position (`ep:1122/—`, a filler row's manga column, a filler section's coverage). Reserve `// comments` for system *messages*; a missing *value* is an em dash in the neutral disabled tone (`muted-foreground/60` — same as `// title_pending`).
+- **Vocabulary: contiguous same-type episode spans are "sections", never "arcs"** — arcs are story/lore arcs, a section boundary is a data boundary (user ruling, 2026-08-19).
 
 **Rule:** any new label must pick one of these three forms (function call, `// comment`, `key:`). No Title Case marketing copy inside the app UI.
+
+**Dimmed-symbol rule:** when a symbol prefixes a colored value (`#337` in the episode list), the symbol takes the **disabled tone of the value's own color** (the type color at 0.45 alpha), not neutral muted — one hue, two intensities per token.
+
+**Card type scale (2026-08-19):** inside a card, *labels* (`anime`, `manga`, `ep`/`vol`/`ch`, `episode_list`, the expanded/collapsed controls) are `text-xs tracking-wider`; *values/body* (`ep:1122/—`, `vol:108 · ch:1092`, lookup readout, every episode-list row and section-header line) are `text-sm tabular-nums`. One size per row — hierarchy by color, never size (the meta-row rule, generalized). Badges carry their own component scale.
 
 ### 1.6 Custom utility classes ([src/index.css](src/index.css#L163-L236))
 
@@ -85,6 +93,7 @@ The UI copy is written *as code*:
 | `.line-number` | Right-aligned muted number gutter | 🧹 unused — delete |
 | `.cursor-blink` | `▌` blinking cursor via `blink` keyframe | 🧹 unused — delete or adopt for empty/loading states |
 | `.scanlines` | CRT scanline overlay | 🧹 unused — delete |
+| `.animate-row-pulse` | EpisodeList row highlight after a lookup/strip-driven jump (primary @ 22% → transparent, 0.9s ease-out; off under reduced motion) | ✅ new |
 
 ---
 
@@ -106,7 +115,9 @@ Durations in use: 150 / 200 / 300 / 500ms. Keep micro-interactions ≤200ms, rev
 5. **List entrance stagger** — rows fade + rise 8px (`opacity` + `transform` string → WAAPI), 250ms easeOut, delay `min(index,10) × 40ms` ([Index.tsx](src/pages/Index.tsx)).
 6. **Strip reveal** — MappingStrip scales X from 0 origin-left on scroll-into-view, 500ms easeOut, once.
 7. **Terminal loading pulse** — `> fetch_series() ...` opacity 0.35↔1 mirror loop, 600ms (Index, AnimeDetail).
-8. `MotionConfig reducedMotion="user"` wraps the app ([App.tsx](src/App.tsx)) — transforms drop, opacity stays, for reduced-motion users.
+8. `MotionConfig reducedMotion="user"` wraps the app ([src/App.tsx](src/App.tsx)) — transforms drop, opacity stays, for reduced-motion users.
+9. **Disclosure chevron rotate-in-place** — 150ms transform on a fixed square flex-centered box (EpisodeList section markers). Rule: a disclosure marker must rotate/swap inside a square centered box, never a tall inline text box (rotating the text box swings the glyph off its own center).
+10. **Row pulse** — after a lookup/strip-driven jump, the landed row flashes via `.animate-row-pulse`: an absolutely-positioned overlay fading **opacity** 1→0 over 0.9s (compositor-friendly; never animate background-color for this). Off under reduced motion.
 
 ### Rules going forward
 
@@ -124,12 +135,14 @@ Durations in use: 150 / 200 / 300 / 500ms. Keep micro-interactions ≤200ms, rev
 |---|---|---|
 | `Header` | ✅ | Signature staggered logo. Keep. |
 | `SearchBar` | ✅ | Debounced, ref-exposed focus. Core to list-first UX. |
-| `AnimeCard` | 🚧 | Two variants. **Expanded = "v1 refined_pane"** (chosen from the AnimeCard Lab explorations, 2026-08-18): plain title block, PositionLabel columns (canonical Tv/BookOpen icons), MapLookup instrument, whole-story density strip + legend. **Card navigation to the details page is disabled in browse mode** (2026-08-18) — clicking will become expand/collapse when the **compact** variant lands (see "v5 row_drawer"); details-page linking returns with the library/customization phase. `continue_from` removed from UI (data stays in the model). |
+| `AnimeCard` | 🚧 | **Expanded variant: functionality-complete (2026-08-19) — see §7 for the full anatomy.** Hosts `usePositionLookup` + the filter state so InlinePositionRow, MappingStrip, and EpisodeList act as ONE instrument. **Card navigation to the details page is disabled in browse mode** — clicking will become expand/collapse when the **compact/collapsed** variant lands (the NEXT work item); details-page linking returns with the library phase. `continue_from` removed from UI (data stays in the model). |
 | `MangaMappingDisplay` | ✅ | Episode→chapter row. The heart of the read-only content. |
-| `MappingStrip` | ✅ new | **Whole-story** density strip — five states: canon (green) / mixed (amber) / filler (red) / anime_only (purple) as solid segments, plus **manga_only** (dimmed green 45° hatch) as the tail for published canon chapters the anime hasn't adapted (`mangaAheadUnits` in episode-equivalents keeps proportions honest). WAAPI scaleX reveal, optional `markerEpisode` indicator. Used in AnimeCard + AnimeDetail. |
-| `MapLookup` | ✅ shipped | The anime↔manga position instrument — **full interaction spec: [docs/components/map-lookup.md](docs/components/map-lookup.md)** (channels, driver/derived/pin, canon-aware filler-skip math, seeded stepping, carry, strip semantics, keyboard). Layered: pure math in `lib/mapping.ts` → state in `usePositionLookup` → presentation in `MapLookup`/`StepperInput`/`MappingStrip`; the **host component owns the hook** so inputs and strip act as one instrument. |
-| `StepperInput` | ✅ new | Numeric input in the details-page format with **component-owned steppers** (▲▼ on hover/focus, ↑/↓ + shift, wheel-when-focused, Esc) — owned so every step path routes through the seeding logic. Native spinners disabled via `.no-spinner`. Reuse for any numeric field wanting step behavior. |
-| `EpisodeBadge` | ✅ | canon/mixed/filler/anime pill. Clean, tokenized. `mixed` added (amber). |
+| `MappingStrip` | ✅ new | **Whole-story** density strip — five states: canon (green) / mixed (amber) / filler (red) / anime_only (purple) as solid segments, plus **manga_only** (dimmed green 45° hatch) as the tail for published canon chapters the anime hasn't adapted (`mangaAheadUnits` in episode-equivalents keeps proportions honest). WAAPI scaleX reveal, optional `markerEpisode` indicator, optional `viewband` — the EpisodeList's visible slice as an **M1 fill-only** minimap band (`foreground/18%`, no edge lines; chosen 2026-08-19). Used in AnimeCard + AnimeDetail. |
+| `TypeBadge` | ✅ new | **THE type-token treatment** ("S2 tint", chosen 2026-08-19): colored text on ~10% tint of the same hue, 1px faint border, 2px radius. Only `manga_only` (green) wears the strip's hatch — `anime_only` (purple) is a full solid tint because that content IS canon to the show (user ruling, 2026-08-19). The badge is the **legend unit** — counts render inside it (dimmed, one size down) — and the **filter affordance**: clickable badges (`onClick`/`pressed`/`dimmed` props, real `<button>` + `aria-pressed`) work **click-to-hide** — everything selected by default, clicking removes that type from view; hidden badges dim to 40%. A badge with no data does not render (empty-state rule). `px` is load-bearing for the EpisodeList column contract — see [docs/components/episode-list.md](docs/components/episode-list.md). Supersedes `EpisodeBadge` for legend/section use. |
+| `EpisodeList` | ✅ new | The full aired run inside the expanded card, grouped by **sections** (never "arcs") with sticky headers, type-colored chevron markers (A3), `expanded:# · collapsed:#` controls with the hover-append `⌄ all` / `› all` hints, three-way sync (rows ⇄ lookup ⇄ strip band), legend-as-filter (excluded sections drop from the list, excluded strip zones ghost in place, lookup never filtered), j/k walking over visible sections only, `@tanstack/react-virtual` windowing. **Full behavioral contract: [docs/components/episode-list.md](docs/components/episode-list.md).** |
+| `InlinePositionRow` | ✅ new | **THE position instrument** ("Q1", 2026-08-19) — the totals row and the lookup merged: the current numbers ARE the inputs, totals static after the `/`, metadata (tag + `// reset()`) in-row right of the fields. Rest = the series' present position (dim strip marker); driver = last field touched; no channels, no pins (filler/manga_only positions render as `—` values); focus-only **width lock** (fields freeze at series-max digit widths while focused). **Full contract: [docs/components/position-row.md](docs/components/position-row.md)** (map-lookup.md kept as the historical derivation). Layered: pure math in `lib/mapping.ts` → state in `usePositionLookup` → `InlinePositionRow`/`StepperInput`/`MappingStrip`; the host (AnimeCard) owns the hook so row, strip, and episode list act as one instrument. |
+| `StepperInput` | ✅ | **One input component, two skins** — `variant="box"` (details-page dashed box) and `variant="inline"` (the position-row skin: data at rest, dashed underline on hover/focus — never solid/primary, steppers take zero space until focus, ch-based width, neutral caret, no select-all). Component-owned steppers (▲▼, ↑/↓ + shift, wheel-when-focused, Esc) so every step path routes through the seeding logic; **hold-to-repeat with acceleration** (400ms → 130 → 80 → 40ms). Never fork the behavior — new looks are new skins. |
+| `EpisodeBadge` | 🚧 | canon/mixed/filler/anime pill (999px radius). `TypeBadge` is now the standard type-token treatment — migrate remaining `EpisodeBadge` usages to `TypeBadge`, then delete. |
 | `CollectionSection` | 📝🚧 | 567 lines mixing UI + data. Belongs to the *later* bookmark/track phase; extract visual pieces now. |
 | `SeriesCombobox` | 📝 | Fine UI, but reads mock data directly — data source must become injectable. |
 | `TripleArrow` | ✅ | Fun signature chevron. |
@@ -199,18 +212,17 @@ All belong to the *phase-2* (bookmark/track/update) feature set. They work but a
 
 **Phase 1 — read-only list-first.** The homepage is an anime list optimized for the anime↔manga *comparison* — "I'm at episode X, where am I in the manga?" — with filler visibility.
 
-*Progress (2026-08-19):* MapLookup instrument shipped and hardened (canon-aware math, source-scope model, pins, seeded stepping, directional integrity — spec: [docs/components/map-lookup.md](docs/components/map-lookup.md)); shared primitives shipped (PositionLabel, StepperInput, meta-row, canonical icons); card navigation disabled for browse mode.
+*Progress (2026-08-19, second pass):* **The expanded card's functionality is COMPLETE** (aesthetic exploration still to come). The EpisodeList shipped (virtualized, span-sections, sticky headers, three-way sync, legend-as-filter, X6 hover-command control — [docs/components/episode-list.md](docs/components/episode-list.md)); then the totals row and the lookup **merged into the InlinePositionRow** instrument (driver-field model, Q1 inline fields — [docs/components/position-row.md](docs/components/position-row.md); map-lookup.md kept as historical derivation); TypeBadge became the type-token standard; the card rhythm tokens landed (§1.4). See **§7 — the expanded card anatomy** for the region-by-region reference.
 
-*Agreed build order:* **(1) episode list inside the expanded card** — full-run scrollable list, fixed height, virtualized; account-free read-only. **(2) collapsed card state** + expand/collapse interaction. **(3) UI/aesthetic/interaction polish pass** + search & browse model (motion + d3-style visuals). **(4) then phase 2:** library, save/track, auth.
+*Agreed build order:* **(1) episode list inside the expanded card ✅ done.** **(2) collapsed card state** + expand/collapse interaction ← **NEXT** (artifact exploration first, per workflow). **(3) UI/aesthetic/interaction polish pass** + search & browse model (motion + d3-style visuals). **(4) then phase 2:** library, save/track, auth.
 
 Design constraints:
 - The list row/card is comparison-first: episode position vs manga volume/chapter alignment, filler density at a glance — not a generic anime card.
 - **Homepage end-state (agreed 2026-08-18):** default view is a clean *compact list* of series (AnimeCard `compact` variant); clicking a row expands it in place to the `expanded` variant. Search filters the list (later: fuzzy matching with exact matches surfaced above fuzzy ones, shown as distinct sections). Scroll presentation lives in a fixed vertical range — futuristic hacker feel. Nail expanded first, then compact + search/scroll.
-- **Position formatting rules:** `Tv` icon labels anime, `BookOpen` labels manga (lucide icons only, never emoji). Values are compact with **no spaces**: `ep:1122/—`, `vol:108/110 · ch:1092/1130` — never `ep_`/`vol_` underscore style, never `ep 1122 / —` spaced style. Label is just "manga", not "manga coverage". The colon-tight rule extends to strip legends: `canon:1024 · mixed:3 · filler:95 (8%) · manga_only:+38ch`.
+- **Position formatting rules:** `Tv` icon labels anime, `BookOpen` labels manga (lucide icons only, never emoji). Values are compact with **no spaces**: `ep:1122/—`, `vol:108/110 · ch:1092/1130` — never `ep_`/`vol_` underscore style, never `ep 1122 / —` spaced style. Label is just "manga", not "manga coverage". The colon-tight rule extends everywhere a key meets a value (`ep:337-381` in section headers). The strip legend is **TypeBadges with counts inside** (right-aligned below the strip), not a text line.
 - **Icon+label rows use `PositionLabel`** ([src/components/PositionLabel.tsx](src/components/PositionLabel.tsx)) — never hand-rolled. Its contract: (1) **icon size = 1em of the label type** (`w-3 h-3` = 12px beside `text-xs`) — larger icons read oversized against lowercase mono labels, whose visual mass is only the x-height band; (2) the icon box and the text line box are the **same height** (`leading-3` = 12px), so `items-center` aligns two equal boxes and alignment cannot drift; spacing is `gap-1.5`; states are `active` (text cyan + icon primary) and `iconActive` (icon primary only). No positional nudges, ever — if a glyph reads unbalanced, fix the artwork itself. **Canonical watch/read glyphs live in [src/components/icons.tsx](src/components/icons.tsx)** (chosen via icon fit test, 2026-08-18): `TvIcon` = lucide tv with art shifted up 2 units in its frame; `BookOpenIcon` = lucide book-open shifted down 2 units. Always import these from icons.tsx — never raw lucide `Tv`/`BookOpen`. Adopted across AnimeCard, AnimeDetail, CollectionSection, SeriesCard.
 - **The meta-row contract (alignment rule):** any line mixing tags, values, and actions (lookup results) uses **ONE font size for every child — hierarchy inside a line is expressed by COLOR, never by size.** Size tiers exist *between* component types (labels `text-xs`, body/meta `text-sm`, strip captions 10px), never within a single line: mixing sizes in a line is what creates baseline-balancing problems in the first place. The `.meta-row` utility ([index.css](src/index.css)) enforces the rest: baseline alignment, `align-content:center`, gap-only spacing, `line-height:1` on children, plus a **baseline strut** (flex rows lack block layout's built-in font strut) as defense-in-depth so the line's position stays fixed regardless of content. Use the utility, never re-implement.
-- **Result metadata format:** tag-first, no `//` on position tags, `→` after the tag: `canon → vol:108 · ch:1092`. The hatch state is named `manga_only` everywhere (result tags, legends, tooltips) — one vocabulary. `// out_of_range (…)` keeps its comment prefix (system message, not a position tag). No `~` on estimates — approximation is assumed; when an episode covers multiple vols/chapters use commas + ranges (`vol:1,2 · ch:8-12,14`).
-- **The position lookup** is the card's core interaction — two channels (ep ⇄ vol.ch), click-the-strip-to-set, canon-aware filler-skip conversion, seeded stepping, pin/carry. Full behavioral contract: [docs/components/map-lookup.md](docs/components/map-lookup.md).
+- **The position instrument** is the card's core interaction — the **InlinePositionRow**: the current numbers ARE the inputs (rest = the series' present position), driver = last field touched, full derivation, `—` for positions that don't exist, `// reset()` restores the present. No channels, no pins (both dissolved in the merge, 2026-08-19). Exploring shows **no type tag** — the strip zone, list selection, and `—` values carry it; only `// out_of_range (…)` keeps its comment prefix (system message). No `~` on estimates — approximation is assumed. Full contract: [docs/components/position-row.md](docs/components/position-row.md).
 - **The strip shows the whole story, not just the anime run:** the `manga_only` hatched tail represents published canon the anime never adapted, so users see at a glance how much of the collection actually got animated. (Future data upgrade: manga_only gaps can also appear *before or between* adapted spans, not just as a tail.)
 - **The source-scope rule (data modeling):** a series entry adapts a **range** of the source, never "the whole franchise." Distinct series are separate entries — Naruto (Part I: vol 1-27 / ch 1-244) and Shippuden are never lumped; Part II is NOT Naruto's manga_only tail. Seasons within one continuous run stay cohesive as one entry. Sequels starting mid-manga carry `mangaStartVolume`/`mangaStartChapter` (Bleach TYBW: vol 55 / ch 480) so estimates map correctly and pre-scope chapters answer `// out_of_range (ch 480-686)` — they belong to the predecessor's entry. All lookup math, stepping bounds, and the manga_only tail are scope-aware.
 - **First-class empty states**: most series have no filler and some have no manga source. `// no_source` / no-filler must look intentional, not broken.
@@ -219,3 +231,55 @@ Design constraints:
 **Phase 2 — accounts & library.** Curate favorite series; manage manga reader sites (the pain: dead mirrors, long/nested URLs, scattered bookmarks). Interactions should feel near drag-and-drop: easy add/remove series and readers, quick vol/chapter updates, easy link swaps when a mirror dies. AniList manga lists as default readers + user custom readers. Rebuild the current manual forms (CollectionSection, New*Forms) on the documented components; consolidate the still-duplicated reader-URL rewriting, `readerOptions` memo, and assignment diff-and-save logic when these are reworked.
 
 **Later (only after the above):** light novels and other source material.
+
+---
+
+## 7. The expanded card — anatomy & contracts (frozen 2026-08-19)
+
+The functionality-complete reference for the expanded AnimeCard, top to bottom.
+Every region has a contract; if a component and its doc disagree, one is a bug.
+Aesthetic/UI exploration is still to come — behavior below is settled.
+
+```
+┌ terminal-header  (#rank | series_map · status)
+│  [cover]  title + title_jp
+│           ── loose (24px) ──
+│           ⌚ anime ep:[1122]/—   ▤ manga vol:[108]/110 · ch:[1092]/1130   // reset()
+│           ── tight (12px) ──                    ← InlinePositionRow (position-row.md)
+│           ━━━━━━━━━━━ mapping strip (h-3) ━━━━━╪━━━▨▨▨
+│           ── tight (12px) ──                    ← MappingStrip
+│                          [canon 1021][mixed 3][filler 98 (9%)][manga_only +38ch]
+│           ── region (16px) ──                   ← TypeBadge legend (click-to-hide filter)
+│           ☰ episode_list ( > expand_all on hover)
+│           ❯ [canon]  ep:1-45 (45)               vol:1-5 · ch:5-45
+│              #1  title…                         vol:1 · ch:1
+│           ❯ [filler] ep:46-47 (2)               —
+│           …                                     ← EpisodeList (episode-list.md)
+└
+```
+
+**Region contracts & where they live:**
+
+| Region | Component | Contract doc |
+|---|---|---|
+| Position instrument (totals = inputs, reset, width-lock, seeding) | `InlinePositionRow` + `usePositionLookup` + `StepperInput inline` | [docs/components/position-row.md](docs/components/position-row.md) |
+| Strip (spans, needle states, viewband, click rules, filter ghosting) | `MappingStrip` | position-row.md §5 + episode-list.md §6 |
+| Legend (badges w/ counts, click-to-hide filter) | `TypeBadge` | episode-list.md §8 + §3.1 entry |
+| Episode list (sections, sync, X6 control, j/k, band) | `EpisodeList` + `buildEpisodeList` | [docs/components/episode-list.md](docs/components/episode-list.md) |
+| Pure math (canon-aware conversion, solve, seeding, scope) | `lib/mapping.ts` | map-lookup.md (historical) + code docs |
+
+**Cross-cutting rules (quick recall):**
+- **Rhythm tokens** (§1.4): `loose` 24 (header→content) / `tight` 12 (positions→strip→legend) / `region` 16 (legend→list). Never raw numbers between regions.
+- **Card type scale** (§1.5): labels `text-xs tracking-wider`; values `text-sm tabular-nums`; ONE size per row, hierarchy by color.
+- **Tone scale**: `foreground` (values) → `muted-foreground` (labels/keys) → `muted-foreground/60` (disabled: `—` nulls, `// title_pending`) → type-color at 0.45 (the `#` prefix in list rows). `—` is the universal null, always disabled tone.
+- **Vocabulary**: "sections" never "arcs"; `manga_only` for the hatch; `anime_only` solid purple (canon to the show).
+- **Focus scope**: width-lock and derived-dimming exist ONLY while a field is focused; blurred = data mode.
+- **Disclosure**: chevrons rotate in fixed square boxes; hover-appended commands are literal inline text (real mono spaces), never flex-positioned.
+- **Interior dividers**: none — spacing only (§1.4).
+
+**Known open items (not blockers):**
+- 4 anchor-shadowed estimated rows catalog-wide (episode-list.md §10) — real fix is anchor-aware interpolation when AniList data lands.
+- `EpisodeBadge` → migrate remaining usages to `TypeBadge`, then delete.
+- AnimeDetail page still uses pre-merge patterns (own totals/inputs, text legend) — reconcile with the card system in the polish pass.
+- Strip double-height (`h-3`) is a trial; needle overhang & zone tint may want tuning with it.
+- Aesthetic/UI exploration pass for the whole expanded card: NOT started (deliberately).
