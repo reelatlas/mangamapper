@@ -8,15 +8,30 @@ import { MappingStrip } from './MappingStrip';
 import { InlinePositionRow } from './InlinePositionRow';
 import { EpisodeList } from './EpisodeList';
 import { TypeBadge, type TypeBadgeKind } from './TypeBadge';
+import { StatusChip } from './StatusChip';
 
 interface AnimeCardProps {
   anime: AnimeSeries;
-  rank?: number;
+  // takeover host wires the card's own close control (path bar x)
+  onClose?: () => void;
 }
 
-// Expanded variant ("v1 refined_pane"). A compact list-row variant will join
-// it when the homepage becomes the compact list view.
-export const AnimeCard = ({ anime, rank }: AnimeCardProps) => {
+// original run years for the identity line: "1997–1998", "1999", "2023–"
+const airYears = (a: AnimeSeries): string | null => {
+  if (!a.episodes.length) return null;
+  const first = new Date(a.episodes[0].airDate).getFullYear();
+  if (a.status === 'airing') return `${first}–`;
+  const last = new Date(a.episodes[a.episodes.length - 1].airDate).getFullYear();
+  return first === last ? String(first) : `${first}–${last}`;
+};
+
+// entrance line index for the print choreography (see .card-print in index.css)
+const line = (i: number) => ({ 'data-line': true, style: { '--line-i': i } as React.CSSProperties });
+
+// Expanded variant — skin: instrument_v1 (Card Skin Lab a3222c3b, locked
+// 2026-08-20). Solid border-strong (dashed = list vocabulary), path-bar
+// window chrome, duotone cover with hover reveal, print entrance.
+export const AnimeCard = ({ anime, onClose }: AnimeCardProps) => {
   const { data: mapping } = useCatalogMapping(anime.id);
   // Lookup state lives here so MapLookup (inputs) and MappingStrip (needle +
   // click-to-set) operate as one instrument.
@@ -83,56 +98,64 @@ export const AnimeCard = ({ anime, rank }: AnimeCardProps) => {
     dimmed: hiddenKinds.has(kind),
   });
 
-  // Navigation to the details page is intentionally disabled in browse mode —
-  // clicking will become expand/collapse when the compact variant lands.
+  const years = airYears(anime);
+
   return (
-      <Card className="group overflow-hidden transition-all duration-200 hover:border-primary/50 border-dashed">
-        <div className="terminal-header flex items-center justify-between">
-          <span className="flex items-center gap-2">
-            {rank && <span className="text-syntax-amber">#{String(rank).padStart(2, '0')}</span>}
-            {rank && <span className="text-border">|</span>}
-            <span className="text-muted-foreground">series_map</span>
-          </span>
-          <span className="text-muted-foreground">
-            {anime.status === 'airing' ? (
-              <span className="text-accent">airing</span>
-            ) : anime.status === 'hiatus' ? (
-              <span className="text-syntax-amber">hiatus</span>
-            ) : (
-              <span>{anime.status}</span>
-            )}
-          </span>
+      <Card className="overflow-hidden border-border-strong">
+        {/* path bar — window chrome: where you are + the kill switch. The
+            command metaphor ("> open(...)") was rejected as stale once the
+            card is running; a path stays true for the card's whole life. */}
+        <div
+          className="flex items-center justify-between border-b border-border-strong px-3 py-2 text-[11px] leading-none"
+          {...line(0)}
+        >
+          <span className="text-muted-foreground">~/catalog/{anime.id}</span>
+          {onClose && (
+            <button
+              aria-label="close"
+              onClick={onClose}
+              className="text-[13px] leading-none text-muted-foreground hover:text-primary"
+            >
+              x
+            </button>
+          )}
         </div>
         <CardContent className="p-0">
-          <div className="flex flex-col sm:flex-row">
-            {/* Cover */}
-            <div className="relative w-full sm:w-32 h-40 sm:h-auto shrink-0 self-stretch overflow-hidden border-b sm:border-b-0 sm:border-r border-dashed">
-              <img
-                src={anime.coverImage}
-                alt={anime.title}
-                className="w-full h-full object-cover opacity-90 group-hover:opacity-100 transition-opacity duration-500"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-background/20 to-transparent sm:bg-gradient-to-r" />
-            </div>
 
-            {/* Readout */}
-            {/* card rhythm: per-seam tokens (region/tight), not a uniform gap —
-                positions→strip and strip→legend are the tight pairs */}
-            <div className="flex-1 p-4 flex flex-col font-mono min-w-0">
-              {/* Title block */}
-              <div className="min-w-0">
-                <div className="text-base font-semibold text-syntax-green leading-tight break-words">
-                  {anime.title}
+            {/* Readout — full width; card rhythm: per-seam tokens
+                (region/tight), not a uniform gap */}
+            <div className="p-4 flex flex-col font-mono min-w-0">
+              {/* Identity BAND (stamp ruling, 2026-08-20): 2:3 poster stamp
+                  left (shown as-is; duotone shelved), titles top-aligned
+                  beside it, chip far right. Gap stamp→titles = the readout's
+                  own padding (gap-4 = p-4). The instrument runs full-width
+                  BELOW the band. */}
+              <div className="flex items-start justify-between gap-4 min-w-0" {...line(1)}>
+                <div className="flex min-w-0 items-start gap-4">
+                  <div className="relative aspect-[2/3] w-[104px] shrink-0 overflow-hidden border border-border-strong">
+                    <img
+                      src={anime.coverImage}
+                      alt={anime.title}
+                      className="h-full w-full object-cover"
+                    />
+                  </div>
+                  <div className="min-w-0 pt-0.5">
+                    <div className="title-glow text-base font-semibold text-syntax-green leading-tight break-words">
+                      {anime.title}
+                    </div>
+                    <div className="text-xs text-muted-foreground mt-0.5 break-words">
+                      {anime.japaneseTitle}
+                      {years && <span className="whitespace-nowrap"> · {years}</span>}
+                    </div>
+                  </div>
                 </div>
-                <div className="text-xs text-muted-foreground mt-0.5 break-words">
-                  {anime.japaneseTitle}
-                </div>
+                <StatusChip status={anime.status} className="mt-0.5 shrink-0" />
               </div>
 
               {/* THE position instrument — totals row and lookup merged: the
                   current numbers are the inputs, totals live after the /.
                   Spec: docs/components/position-row.md */}
-              <div className="mt-loose">
+              <div className="mt-loose" {...line(2)}>
                 <InlinePositionRow anime={anime} mapping={mapping} lookup={lookup} hasSource={hasSource} />
               </div>
 
@@ -142,6 +165,7 @@ export const AnimeCard = ({ anime, rank }: AnimeCardProps) => {
               <div className="mt-tight">
                 {mapping ? (
                   <>
+                    <div {...line(3)}>
                     <MappingStrip
                       spans={mapping.spans}
                       airedEpisodes={mapping.airedEpisodes}
@@ -153,11 +177,12 @@ export const AnimeCard = ({ anime, rank }: AnimeCardProps) => {
                       viewband={viewband}
                       hiddenTypes={hiddenTypes}
                     />
+                    </div>
                     {/* badge legend — below the strip, right-aligned (G4,
                         2026-08-19): graphic first, key tucked right. Badges
                         with no data don't render; each badge is a
                         click-to-hide filter toggle */}
-                    <div className="mt-tight flex flex-wrap items-center justify-end gap-1.5">
+                    <div className="mt-tight flex flex-wrap items-center justify-end gap-1.5" {...line(4)}>
                       {mapping.sourceType === 'original' ? (
                         <TypeBadge
                           type="anime_only"
@@ -190,7 +215,7 @@ export const AnimeCard = ({ anime, rank }: AnimeCardProps) => {
                     {/* legend → list spacing matches the card's region rhythm;
                         separation is spacing, not divider lines */}
                     {episodeList && (
-                      <div className="mt-region">
+                      <div className="mt-region" {...line(5)}>
                         <EpisodeList
                           rows={episodeList.rows}
                           sections={visibleSections}
@@ -207,7 +232,6 @@ export const AnimeCard = ({ anime, rank }: AnimeCardProps) => {
                 )}
               </div>
             </div>
-          </div>
         </CardContent>
       </Card>
   );

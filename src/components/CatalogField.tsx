@@ -675,7 +675,8 @@ const TakeoverOverlay = ({
 }: TakeoverOverlayProps) => {
   const ovlRef = useRef<HTMLDivElement>(null);
   const innerRef = useRef<HTMLDivElement>(null);
-  const geomRef = useRef({ H: 0, startTop: 0, finalTop: 0 });
+  const geomRef = useRef({ H: 0, startTop: 0, finalTop: 0, stageH: 0 });
+  const openedRef = useRef(false);
 
   useLayoutEffect(() => {
     const stage = stageRef.current;
@@ -684,31 +685,66 @@ const TakeoverOverlay = ({
     if (!stage || !ovl || !inner) return;
     const stageH = stage.clientHeight;
     const stageW = stage.clientWidth;
-    const w = Math.min(768, stageW - 32);
+    const w = Math.min(960, stageW - 32);
     ovl.style.left = (stageW - w) / 2 + 'px';
     ovl.style.width = w + 'px';
-    const H = Math.min(stageH - 24, inner.scrollHeight);
-    const startTop = anchorY - ROW_H / 2;
-    const finalTop = Math.max(12, Math.min(stageH - 12 - H, anchorY - H / 2));
-    geomRef.current = { H, startTop, finalTop };
+    // a tall card may borrow the headroom above the field (the search band) —
+    // the takeover is an overlay, not a prisoner of the field's frame
+    const HEADROOM = 132;
+    const solve = () => {
+      const H = Math.max(ROW_H, Math.min(stageH + HEADROOM - 24, inner.scrollHeight));
+      geomRef.current = {
+        H,
+        startTop: anchorY - ROW_H / 2,
+        finalTop: Math.max(12 - HEADROOM, Math.min(stageH - 12 - H, anchorY - H / 2)),
+        stageH,
+      };
+    };
+    solve();
     const apply = (e: number) => {
-      ovl.style.top = (startTop + (finalTop - startTop) * e).toFixed(1) + 'px';
-      ovl.style.height = (ROW_H + (H - ROW_H) * e).toFixed(1) + 'px';
+      const g = geomRef.current;
+      ovl.style.top = (g.startTop + (g.finalTop - g.startTop) * e).toFixed(1) + 'px';
+      ovl.style.height = (ROW_H + (g.H - ROW_H) * e).toFixed(1) + 'px';
       inner.style.opacity = (0.25 + 0.75 * e).toFixed(2);
     };
+    // the card's data loads async (mapping → strip + episode list), so the
+    // measured height GROWS after mount — re-solve and follow, or the first
+    // open clips to the placeholder card (the "tiny card" bug, 2026-08-20)
+    const ro = new ResizeObserver(() => {
+      const prev = geomRef.current.H;
+      solve();
+      if (Math.abs(geomRef.current.H - prev) < 4) return;
+      if (openedRef.current) {
+        if (reducedMotion) apply(1);
+        else animate(0, 1, { duration: 0.18, ease: 'easeOut', onUpdate: () => apply(1) });
+      }
+      // mid-grow: the running tween's next frame picks up the new geometry
+    });
+    ro.observe(inner);
     if (reducedMotion) {
       apply(1);
+      inner.classList.add('card-in');
+      openedRef.current = true;
       onOpened();
-      return;
+      return () => ro.disconnect();
     }
     apply(0);
+    // the print entrance (instrument_v1) starts its stepped line delays now —
+    // they land mid-grow (see .card-print in index.css)
+    requestAnimationFrame(() => inner.classList.add('card-in'));
     const c = animate(0, 1, {
       duration: OPEN_MS / 1000,
       ease: 'easeOut',
       onUpdate: apply,
-      onComplete: onOpened,
+      onComplete: () => {
+        openedRef.current = true;
+        onOpened();
+      },
     });
-    return () => c.stop();
+    return () => {
+      ro.disconnect();
+      c.stop();
+    };
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
@@ -742,16 +778,8 @@ const TakeoverOverlay = ({
       className="absolute z-20 overflow-hidden"
       onClick={(e) => e.stopPropagation()}
     >
-      <div ref={innerRef} style={{ opacity: 0.25 }}>
-        <div className="flex justify-end pb-1">
-          <button
-            className="font-mono text-[11px] text-muted-foreground hover:text-primary"
-            onClick={onRequestClose}
-          >
-            [x]
-          </button>
-        </div>
-        <AnimeCard anime={anime} />
+      <div ref={innerRef} className="card-print" style={{ opacity: 0.25 }}>
+        <AnimeCard anime={anime} onClose={onRequestClose} />
       </div>
     </div>
   );
