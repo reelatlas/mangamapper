@@ -397,6 +397,69 @@ export const mockAnimeData: AnimeSeries[] = [
 export type StatusFilter = 'all' | 'airing' | 'finished' | 'hiatus' | 'upcoming';
 export type SortBy = 'popularity' | 'release_date';
 
+// ─── DEV FILLER (remove when AniList lands) ─────────────────────────────────
+// ~185 placeholder series so the catalog field is testable at lab scale
+// (scroll feel, letter rail, watermark, grep). Title-only entries: no
+// episodes and no manga scope, so the expanded card renders its no-mapping
+// state. Flip DEV_FILLER off to restore the real 15-series mock.
+const DEV_FILLER = true;
+const DEV_FILLER_TITLES: string[] = [
+  '86 Eighty-Six', '91 Days',
+  'A Place Further than the Universe', 'A Silent Voice', 'Ace of Diamond', 'Afro Samurai', 'Air Gear', 'Ajin', 'Akame ga Kill!', 'Akira', 'Aldnoah.Zero', 'Angel Beats!', 'Anohana', 'Aria the Animation', 'Assassination Classroom', 'Astra Lost in Space', 'Attack on Titan',
+  'Baccano!', 'Bakemonogatari', 'Banana Fish', 'Barakamon', 'Basilisk', 'Beastars', 'Berserk', 'Black Butler', 'Black Lagoon', 'Bleach', 'Blood+', 'Blue Exorcist', 'Blue Period', 'Bocchi the Rock!', 'Btooom!', 'Buddy Daddies', 'Bungo Stray Dogs',
+  'Campione!', 'Cardcaptor Sakura', 'Carole & Tuesday', 'Cells at Work!', 'Charlotte', 'Chihayafuru', 'Chobits', 'Chrono Crusade', 'Citrus', 'Claymore', 'Code Geass', 'Cowboy Bebop', 'Cyberpunk: Edgerunners',
+  'D.Gray-man', 'Danganronpa', 'Darker than Black', 'Darling in the Franxx', 'Death Note', 'Death Parade', 'Devilman Crybaby', 'Dorohedoro', 'Dr. Stone', 'Dragon Ball', 'Dragon Ball Z', 'Drifters', 'Durarara!!',
+  'Elfen Lied', 'Erased', 'Ergo Proxy', 'Eureka Seven', 'Eyeshield 21',
+  'FLCL', 'Fairy Tail', 'Fate/Zero', 'Fire Force', 'Fist of the North Star', 'Food Wars!', 'Fruits Basket', 'Fullmetal Alchemist', 'Fullmetal Alchemist: Brotherhood', 'Fushigi Yugi', 'Future Diary',
+  'Gantz', 'Ghost in the Shell', 'Gintama', 'Given', 'Golden Kamuy', 'Grand Blue', 'Great Teacher Onizuka', 'Gundam Wing', 'Gurren Lagann',
+  'Haikyu!!', 'Hajime no Ippo', "Hell's Paradise", 'Hellsing', 'High School DxD', 'Horimiya', 'Hunter x Hunter', 'Hyouka',
+  'ID: Invaded', 'Initial D', 'Inuyasha', 'Is It Wrong to Try to Pick Up Girls in a Dungeon?',
+  "JoJo's Bizarre Adventure", 'Jormungand', 'Just Because!',
+  'K-On!', 'Kaguya-sama: Love Is War', 'Kaiji', 'Kakegurui', 'Kekkai Sensen', 'Kill la Kill', 'Kingdom', "Kino's Journey", 'Kiznaiver', 'KonoSuba', "Kuroko's Basketball",
+  'Laid-Back Camp', 'Land of the Lustrous', 'Level E', 'Log Horizon', 'Love Live!', 'Lucky Star', 'Lupin III',
+  'Made in Abyss', 'Magi', 'March Comes in Like a Lion', 'Mashle', 'Megalobox', 'Mob Psycho 100', 'Monster', 'Mushishi', 'My Dress-Up Darling',
+  'Nana', 'Naruto Shippuden', 'Neon Genesis Evangelion', 'Nichijou', 'Nisekoi', 'No Game No Life', 'Noragami',
+  'Odd Taxi', 'One Outs', 'One Punch Man', 'Orange', 'Oshi no Ko', 'Ouran High School Host Club', 'Overlord',
+  'Paranoia Agent', 'Parasyte', 'Ping Pong the Animation', 'Planetes', 'Pluto', 'Prison School', 'Psycho-Pass',
+  'Qualidea Code',
+  'Rainbow', 'Ranking of Kings', 'Ranma ½', 'ReLIFE', 'Record of Ragnarok', 'Rurouni Kenshin',
+  'Sailor Moon', 'Samurai Champloo', 'Shaman King', 'Shangri-La Frontier', 'Silver Spoon', 'Slam Dunk', 'Soul Eater', 'Space Dandy', 'Spice and Wolf', 'Spy x Family', 'Steins;Gate', 'Summertime Rendering', 'Sword Art Online',
+  'Terror in Resonance', 'That Time I Got Reincarnated as a Slime', 'The Apothecary Diaries', 'The Promised Neverland', 'The Rising of the Shield Hero', 'To Your Eternity', 'Tokyo Ghoul', 'Tokyo Revengers', 'Toradora!', 'Trigun',
+  'Undead Unluck', 'Urusei Yatsura', 'Ushio & Tora', 'Uzumaki',
+  'Vinland Saga', 'Violet Evergarden', "Vivy: Fluorite Eye's Song",
+  'Welcome to the N.H.K.', 'Wind Breaker', "Wolf's Rain", 'World Trigger', 'Wotakoi',
+  'X/1999', 'xxxHOLiC',
+  'Yona of the Dawn', 'Your Lie in April', 'Yu Yu Hakusho', 'Yuri!!! on Ice',
+  'Zom 100: Bucket List of the Dead', 'Zombie Land Saga',
+];
+if (DEV_FILLER) {
+  const realCount = mockAnimeData.length;
+  const existing = new Set(mockAnimeData.map((a) => a.title.toLowerCase()));
+  DEV_FILLER_TITLES.forEach((title, i) => {
+    if (existing.has(title.toLowerCase())) return;
+    mockAnimeData.push({
+      id: 'dev-' + title.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, ''),
+      title,
+      japaneseTitle: '—',
+      coverImage: mockAnimeData[i % realCount].coverImage,
+      currentEpisode: 12 + ((i * 7) % 88),
+      totalEpisodes: null,
+      status: i % 3 === 0 ? 'airing' : 'finished',
+      mangaStatus: 'publishing',
+      hasManga: false,
+      totalVolumes: null,
+      totalChapters: null,
+      mangaStartVolume: null,
+      mangaStartChapter: null,
+      episodes: [],
+      ranking: { mal: 1000 + i, anilist: 1000 + i },
+      streamingOn: [],
+      genres: [],
+      synopsis: '',
+    });
+  });
+}
+
 export const getFilteredAnime = (
   options: {
     status?: StatusFilter;

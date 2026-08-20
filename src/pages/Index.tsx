@@ -1,186 +1,85 @@
-import { useState, useCallback, useEffect, useRef } from 'react';
-import { motion } from 'motion/react';
+import { useEffect, useState } from 'react';
+import { Search } from 'lucide-react';
 import { Header } from '@/components/Header';
-import { SearchBar, SearchBarRef } from '@/components/SearchBar';
-import { AnimeCard } from '@/components/AnimeCard';
-import { useCatalogList, useCatalogSearch } from '@/hooks/useCatalog';
-import type { StatusFilter } from '@/data/catalog';
-import { TrendingUp, Filter, Home, Hash, Wand, Sparkles } from 'lucide-react';
-import { ToggleGroup, ToggleGroupItem } from '@/components/ui/toggle-group';
+import { CatalogField } from '@/components/CatalogField';
+import { useCatalogList } from '@/hooks/useCatalog';
 
+// The homepage IS the catalog field: every series as a title row, grep to
+// narrow, click to expand in place (docs/components/catalog-field.md).
 const Index = () => {
-  const searchBarRef = useRef<SearchBarRef>(null);
-  const [searchQuery, setSearchQuery] = useState('');
-  const [resetHover, setResetHover] = useState(false);
-  const [statusFilter, setStatusFilter] = useState<StatusFilter>(() => {
-    const saved = localStorage.getItem('mangamapper-home-status');
-    return (saved === 'airing' || saved === 'finished') ? saved : 'airing';
-  });
-  const [resultLimit, setResultLimit] = useState<number>(() => {
-    const saved = localStorage.getItem('mangamapper-home-limit');
-    const parsed = saved ? parseInt(saved) : NaN;
-    return [10, 50, 100].includes(parsed) ? parsed : 10;
-  });
-
-  // Persist filter preferences to localStorage
+  const [input, setInput] = useState('');
+  const [query, setQuery] = useState('');
   useEffect(() => {
-    localStorage.setItem('mangamapper-home-status', statusFilter);
-  }, [statusFilter]);
+    const t = setTimeout(() => setQuery(input), 200);
+    return () => clearTimeout(t);
+  }, [input]);
 
-  useEffect(() => {
-    localStorage.setItem('mangamapper-home-limit', resultLimit.toString());
-  }, [resultLimit]);
-
-  const isSearching = searchQuery.trim().length > 0;
-  const listQuery = useCatalogList({ status: statusFilter, limit: resultLimit, sortBy: 'popularity' });
-  const searchResultsQuery = useCatalogSearch(searchQuery);
-
-  const handleSearch = useCallback((query: string) => {
-    setSearchQuery(query);
-  }, []);
-
-  const displayedAnime = (isSearching ? searchResultsQuery.data : listQuery.data) ?? [];
-  const isInitialLoading = isSearching ? searchResultsQuery.isLoading : listQuery.isLoading;
+  // whole catalog, sorted A–Z by the field — grep narrows client-side while
+  // the catalog is mock-scale (see contract §3 for the AniList swap)
+  const listQuery = useCatalogList({ status: 'all', limit: 500, sortBy: 'popularity' });
 
   return (
-    <div className="min-h-screen bg-background font-mono">
+    <div className="flex h-screen flex-col overflow-hidden bg-background font-mono">
       <Header />
 
-      <main className="container py-8">
-        {/* Page header */}
-        <div className="flex items-center gap-2 mb-6 text-sm">
-          <Home className="w-4 h-4 text-primary" />
-          <span className="text-muted-foreground">{'>'}</span>
-          <span className="text-syntax-cyan">home</span>
-        </div>
-
-        {/* Search section */}
-        <section className="mb-10">
-          <SearchBar
-            ref={searchBarRef}
-            onSearch={handleSearch}
-            placeholder="search anime title..."
-            className="max-w-xl"
-          />
-        </section>
-
-        {/* Filters */}
-        {!isSearching && (
-          <section className="mb-6">
-            <div className="flex flex-wrap items-center gap-2">
-              <Filter className="w-3.5 h-3.5 text-muted-foreground" />
-
-              {/* Status filter group */}
-              <ToggleGroup
-                type="single"
-                value={statusFilter}
-                onValueChange={(val) => val && setStatusFilter(val as StatusFilter)}
-                className="gap-1"
-              >
-                <ToggleGroupItem value="airing" className="text-xs font-mono px-2.5 h-7 border-dashed text-muted-foreground data-[state=on]:bg-muted data-[state=on]:text-foreground">airing</ToggleGroupItem>
-                <ToggleGroupItem value="finished" className="text-xs font-mono px-2.5 h-7 border-dashed text-muted-foreground data-[state=on]:bg-muted data-[state=on]:text-foreground">finished</ToggleGroupItem>
-                <ToggleGroupItem value="hiatus" className="text-xs font-mono px-2.5 h-7 border-dashed text-muted-foreground data-[state=on]:bg-muted data-[state=on]:text-foreground">hiatus</ToggleGroupItem>
-                <ToggleGroupItem value="upcoming" className="text-xs font-mono px-2.5 h-7 border-dashed text-muted-foreground data-[state=on]:bg-muted data-[state=on]:text-foreground">upcoming</ToggleGroupItem>
-              </ToggleGroup>
-
-              {/* Separator between groups */}
-              <div className="w-px h-5 bg-border mx-1" />
-
-              <Hash className="w-3.5 h-3.5 text-muted-foreground" />
-              {/* Limit filter group */}
-              <ToggleGroup
-                type="single"
-                value={resultLimit.toString()}
-                onValueChange={(val) => val && setResultLimit(parseInt(val))}
-                className="gap-1"
-              >
-                <ToggleGroupItem value="10" className="text-xs font-mono px-2.5 h-7 border-dashed text-muted-foreground data-[state=on]:bg-muted data-[state=on]:text-foreground">10</ToggleGroupItem>
-                <ToggleGroupItem value="50" className="text-xs font-mono px-2.5 h-7 border-dashed text-muted-foreground data-[state=on]:bg-muted data-[state=on]:text-foreground">50</ToggleGroupItem>
-                <ToggleGroupItem value="100" className="text-xs font-mono px-2.5 h-7 border-dashed text-muted-foreground data-[state=on]:bg-muted data-[state=on]:text-foreground">100</ToggleGroupItem>
-              </ToggleGroup>
-            </div>
-          </section>
-        )}
-
-        {/* Results section */}
-        <section>
-          <div className="flex items-center gap-2 mb-6 text-sm">
-            <TrendingUp className="w-4 h-4 text-primary" />
-            <span className="text-muted-foreground">{'>'}</span>
-            <span>
-              {isSearching
-                ? <><span className="text-syntax-cyan">search_results</span><span className="text-muted-foreground">.length</span> = <span className="text-syntax-amber">{displayedAnime.length}</span></>
-                : <><span className="text-syntax-cyan">top</span> <span className="text-syntax-amber">{resultLimit}</span> {statusFilter === 'airing' ? <span className="text-accent">airing</span> : statusFilter === 'hiatus' ? <span className="text-syntax-amber">hiatus</span> : statusFilter === 'upcoming' ? <span className="text-syntax-cyan">upcoming</span> : <span className="text-muted-foreground">{statusFilter}</span>}</>
-              }
+      {/* lone search — 96px below the global header, 64px above the field
+          (spacing ruling, 2026-08-19). Left-aligned with the series title
+          column: same width formula as the field's column, plus the 2ch
+          cursor gutter so the label sits flush with the title glyphs. */}
+      <div className="container pb-16 pt-24 text-sm">
+        {/* fontSize 18 = the field's TEXT_PX, so 52ch/2ch resolve identically
+            to the title column's; the children size themselves in rem */}
+        <div className="mx-auto w-[min(52ch,82%)] pl-[2ch]" style={{ fontSize: 18 }}>
+          {/* the icon is part of the dashed line: the underline lives on the
+              wrapper; icon + input sit on it as one instrument */}
+          {/* active state lives on the ICON, not the line (ruling 2026-08-19) */}
+          <span className="group/search inline-flex items-center gap-[1ch] border-b border-dashed border-border pb-1">
+            <Search
+              aria-hidden
+              className="h-3.5 w-3.5 shrink-0 text-muted-foreground/60 transition-colors group-focus-within/search:text-primary"
+            />
+            <span className="relative flex items-baseline">
+              <input
+                id="search"
+                aria-label="search series"
+                value={input}
+                onChange={(e) => setInput(e.target.value)}
+                autoComplete="off"
+                spellCheck={false}
+                className="w-[22ch] border-0 bg-transparent p-0 pr-[2ch] font-mono text-sm text-foreground [caret-color:currentColor] focus:outline-none"
+              />
+              {input && (
+                <button
+                  aria-label="clear search"
+                  onClick={() => {
+                    setInput('');
+                    setQuery('');
+                  }}
+                  className="absolute right-0 text-muted-foreground hover:text-primary"
+                >
+                  x
+                </button>
+              )}
             </span>
-          </div>
-
-          {isInitialLoading ? (
-            <div className="flex items-center gap-2 py-16 justify-center border border-dashed text-sm">
-              <motion.span
-                className="text-muted-foreground"
-                initial={{ opacity: 0.35 }}
-                animate={{ opacity: 1 }}
-                transition={{ duration: 0.6, repeat: Infinity, repeatType: 'mirror', ease: 'easeInOut' }}
-              >
-                {'>'} fetch_series() ...
-              </motion.span>
-            </div>
-          ) : displayedAnime.length > 0 ? (
-            <div className="grid gap-4">
-              {displayedAnime.map((anime, index) => (
-                <motion.div
-                  key={anime.id}
-                  initial={{ opacity: 0, transform: 'translateY(8px)' }}
-                  animate={{ opacity: 1, transform: 'translateY(0px)' }}
-                  transition={{ duration: 0.25, ease: 'easeOut', delay: Math.min(index, 10) * 0.04 }}
-                >
-                  <AnimeCard
-                    anime={anime}
-                    rank={!isSearching ? index + 1 : undefined}
-                  />
-                </motion.div>
-              ))}
-            </div>
-          ) : (
-            <div className="flex flex-col items-center justify-center py-16 border border-dashed gap-3">
-              <div className="flex items-center justify-center">
-                <div
-                  className="cursor-pointer"
-                  onClick={() => { setStatusFilter('airing'); setResultLimit(10); }}
-                  onMouseEnter={() => setResetHover(true)}
-                  onMouseLeave={() => setResetHover(false)}
-                >
-                  {resetHover
-                    ? <Sparkles className="w-6 h-6 text-muted-foreground" />
-                    : <Wand className="w-6 h-6 text-muted-foreground" />}
-                </div>
-              </div>
-              <div
-                className="cursor-pointer"
-                onClick={() => { setStatusFilter('airing'); setResultLimit(10); }}
-                onMouseEnter={() => setResetHover(true)}
-                onMouseLeave={() => setResetHover(false)}
-              >
-                <p className="text-muted-foreground text-sm">
-                  <span>// series_data(null)</span>
-                  {resetHover && <span className="text-primary ml-2">{'>'} reset_filters</span>}
-                </p>
-              </div>
-            </div>
-          )}
-        </section>
-      </main>
-
-      {/* Footer */}
-      <footer className="border-t border-dashed mt-16">
-        <div className="container py-6 text-center text-xs text-muted-foreground">
-          <p>
-            <span className="text-foreground/40">mangaMapper</span>{' '}
-            <span>// your journey continues</span>
-          </p>
+          </span>
         </div>
-      </footer>
+      </div>
+
+      <main className="min-h-0 flex-1">
+        {/* the field's chrome (watermark letter, A–Z rail) aligns to the same
+            content frame as the Header — container, not viewport edges. Frame
+            law = fill_offset (Sean's pick, Frame Size Lab): header + search
+            spacing stay fixed, ALL remaining height goes to the field. The
+            traveling focus law anchors the list to the frame's top edge, so
+            there is no dead space regardless of frame height. */}
+        <div className="container h-full">
+          <CatalogField
+            series={listQuery.data ?? []}
+            query={query}
+            loading={listQuery.isLoading}
+          />
+        </div>
+      </main>
     </div>
   );
 };

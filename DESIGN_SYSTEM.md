@@ -112,12 +112,19 @@ Durations in use: 150 / 200 / 300 / 500ms. Keep micro-interactions ≤200ms, rev
 
 ### Motion vocabulary added in phase 1 (all audited S-tier)
 
-5. **List entrance stagger** — rows fade + rise 8px (`opacity` + `transform` string → WAAPI), 250ms easeOut, delay `min(index,10) × 40ms` ([Index.tsx](src/pages/Index.tsx)).
+5. **List entrance stagger** — rows fade + rise 8px, 250ms easeOut, delay `min(index,10) × 40ms`. *Superseded on the homepage (2026-08-19) by the CatalogField decode-in (№12); pattern remains valid for other lists.*
 6. **Strip reveal** — MappingStrip scales X from 0 origin-left on scroll-into-view, 500ms easeOut, once.
 7. **Terminal loading pulse** — `> fetch_series() ...` opacity 0.35↔1 mirror loop, 600ms (Index, AnimeDetail).
 8. `MotionConfig reducedMotion="user"` wraps the app ([src/App.tsx](src/App.tsx)) — transforms drop, opacity stays, for reduced-motion users.
 9. **Disclosure chevron rotate-in-place** — 150ms transform on a fixed square flex-centered box (EpisodeList section markers). Rule: a disclosure marker must rotate/swap inside a square centered box, never a tall inline text box (rotating the text box swings the glyph off its own center).
 10. **Row pulse** — after a lookup/strip-driven jump, the landed row flashes via `.animate-row-pulse`: an absolutely-positioned overlay fading **opacity** 1→0 over 0.9s (compositor-friendly; never animate background-color for this). Off under reduced motion.
+
+### Motion vocabulary added with the catalog field (2026-08-19; contract: docs/components/catalog-field.md)
+
+11. **The field ramp** — one rAF pass writes opacity/tracking/weight per visible row from distance-to-focus; emphasis reads a lerped scrollTop (lag 0.4) so the highlight *chases* the focus. The loop sleeps when idle; direct DOM writes, never React state per frame.
+12. **Decode-in** — on filter change and first load, visible titles scramble through terminal glyphs, 240ms with a 12ms/row cascade; the match highlight ignites on resolve. Event-scoped, never continuous (the taste line). Off under reduced motion.
+13. **Glyph push** — the watermark letter re-enters via `.animate-glyph-push` (260ms rise + fade to its resting opacity-5) on letter change.
+14. **Takeover choreography** — glide (distance-proportional, ≤600ms, never opens mid-motion) → settle 320ms → grow-from-row-line 360ms (close 220ms); already-focused click opens instantly; closing re-centers the opened title.
 
 ### Rules going forward
 
@@ -134,7 +141,8 @@ Durations in use: 150 / 200 / 300 / 500ms. Keep micro-interactions ≤200ms, rev
 | Component | Status | Notes for the new list-first concept |
 |---|---|---|
 | `Header` | ✅ | Signature staggered logo. Keep. |
-| `SearchBar` | ✅ | Debounced, ref-exposed focus. Core to list-first UX. |
+| `SearchBar` | ⚠️ | Debounced, ref-exposed focus. **No longer on the homepage** (replaced by the field's inline `grep:` input, 2026-08-19); still available for other surfaces. |
+| `CatalogField` | ✅ new | **The browse instrument (2026-08-19)** — the homepage: every series as a title row under the **traveling focus law** (`FOCUS_LOCK 0.36` — focus rides the first row, migrates 1:1, locks; last row rests AT the lock; every rule — fades, falloff, runway, chrome anchor, targeting — derives from the lock, frame, and real viewport, never one-off), flat_basis_v1 treatment untouched; status meta at focus; decode grep with match highlight; watermark + overflow-column A–Z rail; takeover_v1 expand-in-place. Frame = fill_offset under the icon search line (96/64). **Full contract: [docs/components/catalog-field.md](docs/components/catalog-field.md).** |
 | `AnimeCard` | 🚧 | **Expanded variant: functionality-complete (2026-08-19) — see §7 for the full anatomy.** Hosts `usePositionLookup` + the filter state so InlinePositionRow, MappingStrip, and EpisodeList act as ONE instrument. **Card navigation to the details page is disabled in browse mode** — clicking will become expand/collapse when the **compact/collapsed** variant lands (the NEXT work item); details-page linking returns with the library phase. `continue_from` removed from UI (data stays in the model). |
 | `MangaMappingDisplay` | ✅ | Episode→chapter row. The heart of the read-only content. |
 | `MappingStrip` | ✅ new | **Whole-story** density strip — five states: canon (green) / mixed (amber) / filler (red) / anime_only (purple) as solid segments, plus **manga_only** (dimmed green 45° hatch) as the tail for published canon chapters the anime hasn't adapted (`mangaAheadUnits` in episode-equivalents keeps proportions honest). WAAPI scaleX reveal, optional `markerEpisode` indicator, optional `viewband` — the EpisodeList's visible slice as an **M1 fill-only** minimap band (`foreground/18%`, no edge lines; chosen 2026-08-19). Used in AnimeCard + AnimeDetail. |
@@ -214,7 +222,7 @@ All belong to the *phase-2* (bookmark/track/update) feature set. They work but a
 
 *Progress (2026-08-19, second pass):* **The expanded card's functionality is COMPLETE** (aesthetic exploration still to come). The EpisodeList shipped (virtualized, span-sections, sticky headers, three-way sync, legend-as-filter, X6 hover-command control — [docs/components/episode-list.md](docs/components/episode-list.md)); then the totals row and the lookup **merged into the InlinePositionRow** instrument (driver-field model, Q1 inline fields — [docs/components/position-row.md](docs/components/position-row.md); map-lookup.md kept as historical derivation); TypeBadge became the type-token standard; the card rhythm tokens landed (§1.4). See **§7 — the expanded card anatomy** for the region-by-region reference.
 
-*Agreed build order:* **(1) episode list inside the expanded card ✅ done.** **(2) collapsed card state** + expand/collapse interaction ← **NEXT** (artifact exploration first, per workflow). **(3) UI/aesthetic/interaction polish pass** + search & browse model (motion + d3-style visuals). **(4) then phase 2:** library, save/track, auth.
+*Agreed build order:* **(1) episode list inside the expanded card ✅ done.** **(2) collapsed catalog + expand-in-place ✅ done (2026-08-19)** — CatalogField shipped from three lab cycles (Rolodex → Expand → Row Meta & Grep); contract in docs/components/catalog-field.md. **(3) UI/aesthetic/interaction polish pass ← NEXT** — brief: *make the card feel like the catalog instrument* (fade masks, dim levels, cyan-as-focus, decode restraint are the vocabulary); includes the card's internal enter stagger deferred from takeover_v1. **(4) then phase 2:** library, save/track, auth.
 
 Design constraints:
 - The list row/card is comparison-first: episode position vs manga volume/chapter alignment, filler density at a glance — not a generic anime card.

@@ -229,6 +229,30 @@
   }
 }
 
+@layer utilities {
+  /* CatalogField watermark letter — retriggered by the wayfinding pass on
+     letter change. Opacity target matches the glyph's resting opacity-5. */
+  .animate-glyph-push {
+    animation: glyph-push 260ms ease-out;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .animate-glyph-push {
+      animation: none;
+    }
+  }
+}
+
+@keyframes glyph-push {
+  from {
+    transform: translateY(calc(-50% + 0.35em));
+    opacity: 0;
+  }
+  to {
+    transform: translateY(-50%);
+    opacity: 0.05;
+  }
+}
+
 @keyframes row-pulse-fade {
   from {
     opacity: 1;
