@@ -14,9 +14,9 @@ import { cn } from '@/lib/utils';
 // correctly over any surface it lands on (page, card, hovered row), which
 // a solid face cannot. md tier = 18px cap, 11px base glyph. Cap gap = 4px
 // at call sites (gap-1) — the industry chord gap (Raycast/Linear/Motion).
-// Tier vocabulary for future registers (see the lab): lg 22px/13px
-// (trigger, empty-state hints) · md 18px/11px (rows, menus) · sm
-// 14px/10px (footer legends, dense chrome).
+// TIERS are real via the `tier` prop (lab vocabulary): lg 22px/13px
+// (trigger, empty-state hints) · md 18px/11px (rows, menus — DEFAULT) ·
+// sm 14px/10px (footer legends, dense chrome).
 //
 // Per-glyph optical sizing off the tier's base: symbol glyphs are drawn
 // small inside their em box so they render +2px; word keys (ctrl/esc) drop
@@ -31,22 +31,50 @@ const SYMBOLS = new Set(['⌘', '⌥', '⇧', '⌃', '↵', '⇥', '↑', '↓',
 // trailing text-[..] silently deletes an earlier leading-none — the caps
 // then inherit line-height 1.5 and every glyph seats low (the lab-vs-live
 // misalignment bug, found 2026-08-21). Keep size+leading atomic here.
-const glyphClass = (glyph: string) =>
-  SYMBOLS.has(glyph)
-    ? 'text-[13px] leading-none'
-    : glyph.length > 1
-      ? 'text-[10px] leading-none tracking-wider'
-      : 'text-[11px] leading-none';
+// Static class strings per tier — Tailwind JIT needs them literal.
+export type KbdTier = 'lg' | 'md' | 'sm';
 
-export const Kbd = ({ glyph, className }: { glyph: string; className?: string }) => (
-  <kbd
-    className={cn(
-      'grid h-[18px] min-w-[18px] select-none place-items-center rounded-[4px] px-1 pt-px font-medium',
-      'bg-muted-foreground/[0.16] text-muted-foreground',
-      glyphClass(glyph),
-      className,
-    )}
-  >
-    {glyph}
-  </kbd>
-);
+const TIER: Record<KbdTier, { cap: string; sym: string; chr: string; word: string }> = {
+  lg: {
+    cap: 'h-[22px] min-w-[22px]',
+    sym: 'text-[15px] leading-none',
+    chr: 'text-[13px] leading-none',
+    word: 'text-xs leading-none tracking-wider',
+  },
+  md: {
+    cap: 'h-[18px] min-w-[18px]',
+    sym: 'text-[13px] leading-none',
+    chr: 'text-[11px] leading-none',
+    word: 'text-[10px] leading-none tracking-wider',
+  },
+  sm: {
+    cap: 'h-3.5 min-w-3.5',
+    sym: 'text-[12px] leading-none',
+    chr: 'text-[10px] leading-none',
+    word: 'text-[9px] leading-none tracking-wider',
+  },
+};
+
+interface KbdProps {
+  glyph: string;
+  tier?: KbdTier;
+  className?: string;
+}
+
+export const Kbd = ({ glyph, tier = 'md', className }: KbdProps) => {
+  const t = TIER[tier];
+  const g = SYMBOLS.has(glyph) ? t.sym : glyph.length > 1 ? t.word : t.chr;
+  return (
+    <kbd
+      className={cn(
+        'grid select-none place-items-center rounded-[4px] px-1 pt-px font-medium',
+        'bg-muted-foreground/[0.16] text-muted-foreground',
+        t.cap,
+        g,
+        className,
+      )}
+    >
+      {glyph}
+    </kbd>
+  );
+};

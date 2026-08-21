@@ -481,7 +481,9 @@ export const EpisodeList = ({
           Label metrics replicate the PositionLabel contract (1em icon, equal
           boxes) — inlined because the label here is a <button> with an
           inline command suffix. */}
-      <div className="px-0.5 pb-1.5">
+      {/* block-label seam (§1.4 token): a label over a whole frame earns
+          2× the inline label seam */}
+      <div className="px-0.5 pb-label-block">
         <button
           type="button"
           disabled={sections.length === 0}

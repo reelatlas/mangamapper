@@ -112,7 +112,7 @@ export const InlinePositionRow = ({ anime, mapping, lookup, hasSource }: InlineP
   return (
     <div className="flex flex-wrap gap-x-10 gap-y-2 text-sm tabular-nums font-mono">
       <div>
-        <PositionLabel icon={Tv} label="anime" iconActive className="mb-0.5" />
+        <PositionLabel icon={Tv} label="anime" iconActive className="mb-label" />
         <span className="inline-flex items-baseline">
           <span className="text-muted-foreground">ep:</span>
           {field('ep')}
@@ -120,7 +120,7 @@ export const InlinePositionRow = ({ anime, mapping, lookup, hasSource }: InlineP
         </span>
       </div>
       <div>
-        <PositionLabel icon={BookOpen} label="manga" iconActive={hasSource} className="mb-0.5" />
+        <PositionLabel icon={BookOpen} label="manga" iconActive={hasSource} className="mb-label" />
         {hasSource && mapping?.latestKnown ? (
           <span className="inline-flex items-baseline">
             <span className="text-muted-foreground">vol:</span>
@@ -141,7 +141,7 @@ export const InlinePositionRow = ({ anime, mapping, lookup, hasSource }: InlineP
       </div>
       {/* metadata column: baseline-aligned with the values via a hidden label */}
       <div>
-        <PositionLabel icon={Tv} label="meta" className="mb-0.5 invisible" />
+        <PositionLabel icon={Tv} label="meta" className="mb-label invisible" />
         <span className="meta-row min-h-5 text-sm">
           <Meta lookup={lookup} />
         </span>

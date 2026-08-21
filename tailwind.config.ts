@@ -79,7 +79,9 @@ export default {
       spacing: {
         loose: 'var(--space-loose)',
         region: 'var(--space-region)',
-        tight: 'var(--space-tight)'
+        tight: 'var(--space-tight)',
+        label: 'var(--space-label)',
+        'label-block': 'var(--space-label-block)'
       },
       borderRadius: {
         lg: 'var(--radius)',

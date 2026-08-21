@@ -152,16 +152,19 @@ widen the band. The pinned header itself counts only when its section is
 collapsed (then its full range is included — it's the section's only
 visible representation).
 
-**Minimap toggle (2026-08-21)**: the band is user-hideable — a chip in the
-legend line's empty **left** slot (the badges stay right-aligned), wearing
-the TypeBadge chip grammar (neutral foreground tint wash, radius token,
-off-state = the badges' fade-to-40%) but carrying a drawn **miniature of
-the strip with its band** instead of a word (`// minimap(on|off)` text was
-tried and rejected same day — too wordy). It matches the badges' format but
-is not a filter: badges hide data, this hides view chrome. Preference
-persists in `localStorage` (`mm:minimap`), shared across cards; off simply
-passes `viewband=null` to the strip — range reporting itself keeps
-running.
+**Minimap toggle (picked 2026-08-21, Minimap Toggle Lab `ae6bae37`)**:
+the band is user-hideable — the **bare_miniature** in the legend line's
+empty **left** slot (the badges stay right-aligned): a drawn miniature of
+the strip alone — no chip wash, no word — so the control IS a picture of
+its state (on: band shown; off: band gone, track dimmed). Glyph anatomy
+(lab tuning walk): 28×6 track, band 26–64% — left-of-center, dead center
+reads as a logo mark — flush height, 1px radii; invisible button padding
+is the hit area. Rejected en route: `// minimap(on|off)` text (wordy), the
+TypeBadge-grammar chip (read as a bandaid / fifth badge — badges hide
+data, this hides view chrome, and the shared form muddied the kinds).
+Preference persists in `localStorage` (`mm:minimap`), shared across cards;
+off simply passes `viewband=null` to the strip — range reporting itself
+keeps running.
 
 ## 7. expand/collapse control ("X6 hover_command", 2026-08-19)
 

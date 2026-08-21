@@ -122,6 +122,10 @@
     --space-loose: 1.5rem;
     --space-region: 1rem;
     --space-tight: 0.75rem;
+    /* label seams (2026-08-21): the rhythm scale's bottom step — a caption
+       sits 4px above the single line it labels, 8px above a whole frame */
+    --space-label: 0.25rem;
+    --space-label-block: 0.5rem;
   }
 
   /* Light mode - inverted terminal */
