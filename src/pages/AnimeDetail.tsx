@@ -3,7 +3,8 @@ import { useParams, Link } from 'react-router-dom';
 import { EpisodeType } from '@/types/anime';
 import { Header } from '@/components/Header';
 import { MangaMappingDisplay } from '@/components/MangaMappingDisplay';
-import { EpisodeBadge } from '@/components/EpisodeBadge';
+import { TypeBadge } from '@/components/TypeBadge';
+import { StatusChip } from '@/components/StatusChip';
 import { CollectionSection } from '@/components/CollectionSection';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
@@ -11,7 +12,7 @@ import { ScrollArea } from '@/components/ui/scroll-area';
 import { useCatalogSeries, useCatalogMapping } from '@/hooks/useCatalog';
 import { MappingStrip } from '@/components/MappingStrip';
 import { motion } from 'motion/react';
-import { Play, ArrowLeft } from 'lucide-react';
+import { Play, ArrowLeft, SkipForward } from 'lucide-react';
 import { TvIcon as Tv, BookOpenIcon as BookOpen } from '@/components/icons';
 
 const AnimeDetail = () => {
@@ -75,6 +76,7 @@ const AnimeDetail = () => {
   // Full-run counts from the mapping summary; fall back to the loaded
   // episode sample while the mapping is in flight.
   const canonCount = mapping?.canonCount ?? anime.episodes.filter(ep => ep.type === 'canon').length;
+  const mixedCount = mapping?.mixedCount ?? anime.episodes.filter(ep => ep.type === 'mixed').length;
   const fillerCount = mapping?.fillerCount ?? anime.episodes.filter(ep => ep.type === 'filler').length;
   const animeOnlyCount = mapping?.animeOnlyCount ?? anime.episodes.filter(ep => ep.type === 'anime-only-canon').length;
 
@@ -98,17 +100,11 @@ const AnimeDetail = () => {
                   className="w-full h-full object-cover opacity-90"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-transparent" />
+                {/* StatusChip is THE airing-status render (drift fix
+                    2026-08-21) — the wrapper pill only grounds it on art */}
                 <div className="absolute bottom-3 left-3 right-3">
-                  <span className="text-xs border px-2 py-1 bg-background/80 rounded-full">
-                  {anime.status === 'airing' ? (
-                      <span className="text-accent">airing</span>
-                    ) : anime.status === 'hiatus' ? (
-                      <span className="text-syntax-amber">hiatus</span>
-                    ) : anime.status === 'upcoming' ? (
-                      <span className="text-syntax-cyan">upcoming</span>
-                    ) : (
-                      <span className="text-muted-foreground">finished</span>
-                    )}
+                  <span className="border px-2 py-1 bg-background/80 rounded-full">
+                    <StatusChip status={anime.status} />
                   </span>
                 </div>
               </div>
@@ -161,24 +157,28 @@ const AnimeDetail = () => {
                   <div className="text-[10px] text-muted-foreground">episodes</div>
                 </CardContent>
               </Card>
+              {/* type-encoded stats wear the syntax_v1 TYPE tokens (drift
+                  fix 2026-08-21 — accent/destructive/syntax-purple were the
+                  pre-syntax_v1 colors; episode-type encodings use ONLY
+                  --type-*) */}
               <Card className="border-dashed">
                 <CardContent className="p-3 text-center">
-                  <BookOpen className="w-4 h-4 mx-auto mb-1 text-accent" />
-                  <div className="text-xl font-bold text-accent">{canonCount}</div>
+                  <BookOpen className="w-4 h-4 mx-auto mb-1 text-type-canon" />
+                  <div className="text-xl font-bold text-type-canon">{canonCount}</div>
                   <div className="text-[10px] text-muted-foreground">canon</div>
                 </CardContent>
               </Card>
               <Card className="border-dashed">
                 <CardContent className="p-3 text-center">
-                  <Tv className="w-4 h-4 mx-auto mb-1 text-syntax-purple" />
-                  <div className="text-xl font-bold text-syntax-purple">{animeOnlyCount}</div>
+                  <Tv className="w-4 h-4 mx-auto mb-1 text-type-anime" />
+                  <div className="text-xl font-bold text-type-anime">{animeOnlyCount}</div>
                   <div className="text-[10px] text-muted-foreground">anime only</div>
                 </CardContent>
               </Card>
               <Card className="border-dashed">
                 <CardContent className="p-3 text-center">
-                  <span className="block text-xs font-bold text-destructive mb-1">ffff</span>
-                  <div className="text-xl font-bold text-destructive">{fillerCount}</div>
+                  <SkipForward className="w-4 h-4 mx-auto mb-1 text-type-filler" />
+                  <div className="text-xl font-bold text-type-filler">{fillerCount}</div>
                   <div className="text-[10px] text-muted-foreground">filler</div>
                 </CardContent>
               </Card>
@@ -189,13 +189,15 @@ const AnimeDetail = () => {
               <Card className="border-dashed">
                 <div className="terminal-header flex items-center justify-between">
                   <span className="text-muted-foreground">episode_density</span>
-                  <span className="text-muted-foreground">
-                    ep_1 → ep_{mapping.airedEpisodes}
+                  {/* colon-tight key:value + type tokens (drift fix — the
+                      ep_1 underscore style and pre-syntax_v1 hues retired) */}
+                  <span className="text-muted-foreground tabular-nums">
+                    ep:1-{mapping.airedEpisodes}
                     {mapping.sourceType !== 'original' && (
-                      <> · <span className="text-destructive">filler</span>:{mapping.fillerPercent}%</>
+                      <> · <span className="text-type-filler">filler</span>:{mapping.fillerPercent}%</>
                     )}
                     {mapping.mangaAheadChapters != null && (
-                      <> · <span className="text-accent/50">manga_only</span>:+{mapping.mangaAheadChapters}ch</>
+                      <> · <span className="text-type-manga">manga_only</span>:+{mapping.mangaAheadChapters}ch</>
                     )}
                   </span>
                 </div>
@@ -234,19 +236,46 @@ const AnimeDetail = () => {
                 {'>'} {showAll ? 'show_episodes(less)' : 'show_episodes(all)'}
               </span>
             </div>
-            <div className="flex flex-wrap items-center gap-4 text-xs text-muted-foreground">
-              <div className="flex items-center gap-1.5 cursor-pointer select-none" onClick={() => toggleFilter('canon')}>
-                <EpisodeBadge type="canon" inactive={!activeFilters.has('canon')} />
-                <span className={activeFilters.has('canon') ? '' : 'opacity-40'}>= follows manga</span>
-              </div>
-              <div className="flex items-center gap-1.5 cursor-pointer select-none" onClick={() => toggleFilter('anime-only-canon')}>
-                <EpisodeBadge type="anime-only-canon" inactive={!activeFilters.has('anime-only-canon')} />
-                <span className={activeFilters.has('anime-only-canon') ? '' : 'opacity-40'}>= anime original</span>
-              </div>
-              <div className="flex items-center gap-1.5 cursor-pointer select-none" onClick={() => toggleFilter('filler')}>
-                <EpisodeBadge type="filler" inactive={!activeFilters.has('filler')} />
-                <span className={activeFilters.has('filler') ? '' : 'opacity-40'}>= fml</span>
-              </div>
+            {/* legend = TypeBadges with counts inside, click-to-hide (the
+                card's legend grammar; EpisodeBadge + "= explainer" text
+                retired 2026-08-21). A badge with no data doesn't render. */}
+            <div className="flex flex-wrap items-center gap-2">
+              {canonCount > 0 && (
+                <TypeBadge
+                  type="canon"
+                  count={canonCount}
+                  onClick={() => toggleFilter('canon')}
+                  pressed={activeFilters.has('canon')}
+                  dimmed={!activeFilters.has('canon')}
+                />
+              )}
+              {mixedCount > 0 && (
+                <TypeBadge
+                  type="mixed"
+                  count={mixedCount}
+                  onClick={() => toggleFilter('mixed')}
+                  pressed={activeFilters.has('mixed')}
+                  dimmed={!activeFilters.has('mixed')}
+                />
+              )}
+              {fillerCount > 0 && (
+                <TypeBadge
+                  type="filler"
+                  count={fillerCount}
+                  onClick={() => toggleFilter('filler')}
+                  pressed={activeFilters.has('filler')}
+                  dimmed={!activeFilters.has('filler')}
+                />
+              )}
+              {animeOnlyCount > 0 && (
+                <TypeBadge
+                  type="anime_only"
+                  count={animeOnlyCount}
+                  onClick={() => toggleFilter('anime-only-canon')}
+                  pressed={activeFilters.has('anime-only-canon')}
+                  dimmed={!activeFilters.has('anime-only-canon')}
+                />
+              )}
             </div>
           </div>
           <CardContent className="p-4">
@@ -271,9 +300,7 @@ const AnimeDetail = () => {
                           key={epNum}
                           className="flex items-center gap-3 p-2.5 bg-muted/30 border border-dashed font-mono text-sm rounded-lg text-muted-foreground"
                         >
-                          <span className="text-syntax-amber shrink-0">
-                            #{String(epNum).padStart(4, '0')}
-                          </span>
+                          <span className="text-syntax-amber shrink-0">#{epNum}</span>
                           <span className="text-xs">// data_pending</span>
                         </div>
                       );
