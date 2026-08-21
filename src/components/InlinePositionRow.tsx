@@ -97,10 +97,10 @@ export const InlinePositionRow = ({ anime, mapping, lookup, hasSource }: InlineP
     );
   };
 
-  // interior_v1 denominator dim (2026-08-21): the CURRENT number is the
-  // instrument, the total is context — denominators + separators sit at 40%
-  // foreground (FabFilter/vim-statusline grammar: bright value, dim unit)
-  const DENOM_TONE = 'text-foreground/40';
+  // visibility trial (2026-08-21, supersedes the interior_v1 denominator dim
+  // at /40): totals read at FULL foreground — value and total share one tone,
+  // only labels stay muted. The ` · ` separator keeps the dim punctuation.
+  const DENOM_TONE = 'text-foreground';
   const total = (v: number | null) =>
     v !== null ? <span className={DENOM_TONE}>/{v}</span> : (
       <span>

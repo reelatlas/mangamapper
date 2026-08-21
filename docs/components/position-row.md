@@ -74,9 +74,10 @@ components/AnimeCard.tsx      host — wires row ⇄ strip ⇄ episode list
   with the catalog's keyboard walking, never forked per surface),
   wheel-when-focused (non-passive), blur never clears an explored value
   (blur with an *emptied* field resets; suppressed when Esc-undo owns the
-  blur), stepper press focuses the field. Denominators + separators render
-  at `text-foreground/40` (interior_v1: bright value, dim context —
-  FabFilter/vim grammar).
+  blur), stepper press focuses the field. Totals (`/110`) render at full
+  foreground (visibility trial 2026-08-21 — supersedes the interior_v1
+  denominator dim at `text-foreground/40`); the ` · ` separator keeps the
+  dim `/40` punctuation tone.
 
 ## 3. Width lock (focus-only)
 

@@ -64,9 +64,10 @@ Counts appear exactly once each:
   - **Marker (A3)**: the canonical SVG chevron in the section's type color,
     inside a fixed square flex-centered box (`0.8rem`), rotating right→down in
     place. Never rotate a text glyph in a tall inline box (the v5 caret bug).
-  - ep range + count use the muted label color — except while the section is
-    OPEN: the range/coverage NUMBERS (not their labels) brighten to the
-    normal text color ("engaged"), returning to muted on collapse.
+  - range/coverage NUMBERS are always the normal text color, collapsed or
+    open (visibility trial 2026-08-21 — supersedes the interior_v1 "engaged"
+    brightening, where collapsed numbers sat muted); the `ep:`/`vol:`/`ch:`
+    labels and the `(count)` keep the muted label color (key:value grammar).
   - Coverage: **whole volumes, no partial marking** (`vol:29-30` even when
     vol 30 flows into the next section). Filler sections show `—`.
 - **Sticky**: the active section's header stays pinned at the top of the
@@ -79,10 +80,19 @@ Counts appear exactly once each:
 Column alignment contract — row columns are **derived from header geometry**
 (pad 0.3 + marker 0.8 + gap 0.6):
 
-- `#` column starts at `pl-[calc(2.15rem+1px)]`; the header's ep-range sits
-  over the rows' `#ep` column (**number-over-number**, 2026-08-21 — the old
-  adaptive badge column retired with the header tag; `EP_COL_REM = 3.75`
-  preserves the retired column's derived width so row geometry is unchanged).
+- `#` column starts at `pl-[1.7rem]` — exactly the header's text start — so
+  the rows' `#` shares a left edge with the header's `ep:` token
+  (**edge-over-edge**, 2026-08-21; supersedes the badge-era `2.15rem+1px`
+  indent and the number-over-number framing that went with it).
+- The `#ep` gutter is sized like an **editor line-number gutter**: width =
+  `(digits of the series' max episode + 1)ch` (`#999` → 4ch, `#1122` → 5ch;
+  a 5-digit run auto-fits). Mono + `tabular-nums` make every glyph exactly
+  1ch, so the `#` rail and the digits' start edge are both dead vertical.
+  **Left-aligned** — episode numbers are identifiers, not quantities
+  (right-alignment is for magnitude comparison; identifiers keep the prefix
+  rail).
+- Title follows after the shared `0.6rem` flex gap, so all titles in a card
+  align to one column.
 - Changing the marker box size or header padding **must** update these.
 
 **Type scale** (matches the rest of the card): labels — `episode_list`, the
@@ -141,6 +151,17 @@ rows; a **collapsed header contributes its whole range**. "Visible" means
 widen the band. The pinned header itself counts only when its section is
 collapsed (then its full range is included — it's the section's only
 visible representation).
+
+**Minimap toggle (2026-08-21)**: the band is user-hideable — a chip in the
+legend line's empty **left** slot (the badges stay right-aligned), wearing
+the TypeBadge chip grammar (neutral foreground tint wash, radius token,
+off-state = the badges' fade-to-40%) but carrying a drawn **miniature of
+the strip with its band** instead of a word (`// minimap(on|off)` text was
+tried and rejected same day — too wordy). It matches the badges' format but
+is not a filter: badges hide data, this hides view chrome. Preference
+persists in `localStorage` (`mm:minimap`), shared across cards; off simply
+passes `viewband=null` to the strip — range reporting itself keeps
+running.
 
 ## 7. expand/collapse control ("X6 hover_command", 2026-08-19)
 

@@ -126,7 +126,7 @@ const Index = () => {
             <span
               aria-hidden
               onClick={() => searchRef.current?.focus()}
-              className="ml-3 flex shrink-0 cursor-pointer select-none items-center gap-0.5 group-focus-within/search:hidden"
+              className="ml-3 flex shrink-0 cursor-pointer select-none items-center gap-1 group-focus-within/search:hidden"
             >
               {(IS_MAC ? ['⌘', 'K'] : ['ctrl', 'K']).map((key) => (
                 <Kbd key={key} glyph={key} />

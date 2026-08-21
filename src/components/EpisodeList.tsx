@@ -30,13 +30,14 @@ const ROW_H = 28;
 
 // COLUMN ALIGNMENT CONTRACT (derived from header geometry, not eyeballed):
 //   header: pad 0.3rem + marker 0.8rem + gap 0.6rem → ep:range
-//   rows:   indent 2.15rem+1px → #ep column (EP_COL) → title
-// Header range and row #ep share a left edge (number-over-number). The old
-// adaptive badge column retired with the header type tag (2026-08-21) —
-// the section band color + colored marker carry the type now. EP_COL keeps
-// the retired column's derived value so row geometry is unchanged.
-const EP_COL_REM = 3.75;
-const ROW_INDENT = 'pl-[calc(2.15rem+1px)]';
+//   rows:   indent 1.7rem (= 0.3+0.8+0.6) → #ep gutter → gap 0.6rem → title
+// The rows' `#` shares its left edge with the header's `ep:` token
+// (edge-over-edge, 2026-08-21 — supersedes the badge-era 2.15rem indent).
+// The #ep gutter is sized like an editor line-number gutter: (digits of the
+// series' max episode + 1)ch — mono + tabular-nums make every glyph exactly
+// 1ch, so `#` forms a solid rail and the digits start dead vertical.
+// Left-aligned: episode numbers are identifiers, not quantities.
+const ROW_INDENT = 'pl-[1.7rem]';
 const MARKER_BOX = 'w-[0.8rem] h-[0.8rem]';
 
 const MARKER_COLOR: Record<EpisodeType, string> = {
@@ -87,13 +88,14 @@ type ListItem =
   | { kind: 'row'; row: EpisodeRow; sectionIndex: number };
 
 // section coverage label: whole volumes, no partial marking; — is the null.
-// when the section is OPEN its numbers brighten to the normal text color
-// ("engaged"); labels stay muted; collapse returns everything to muted.
-const coverageLabel = (s: EpisodeSection, open: boolean) => {
+// Numbers are ALWAYS the normal text color, collapsed or open (visibility
+// trial 2026-08-21 — supersedes the interior_v1 "engaged" brightening that
+// kept collapsed numbers muted); labels stay muted (key:value grammar).
+const coverageLabel = (s: EpisodeSection) => {
   if (s.chStart === null || s.chEnd === null) {
     return <span className="text-muted-foreground/60">—</span>;
   }
-  const num = open ? 'text-foreground' : undefined;
+  const num = 'text-foreground';
   const vol =
     s.volStart !== null
       ? s.volEnd !== null && s.volEnd > s.volStart
@@ -148,9 +150,9 @@ export const EpisodeList = ({
   // variant is the fallback if top feels abrupt.)
   const pendingScrollRef = useRef<{ ep: number; align: 'jump' | 'auto'; pulse: boolean } | null>(null);
 
-  // rows' #ep column — fixed width (was derived from the header badge column,
-  // retired 2026-08-21; value preserved so row geometry is unchanged)
-  const enoStyle = { width: `calc(${EP_COL_REM}rem - 1px)` };
+  // rows' #ep gutter — editor-gutter sizing (see the alignment contract):
+  // hash + the series' max episode digits (ep numbers are 1..rows.length)
+  const enoStyle = { width: `${String(Math.max(rows.length, 1)).length + 1}ch` };
 
   const items = useMemo<ListItem[]>(() => {
     const out: ListItem[] = [];
@@ -557,14 +559,14 @@ export const EpisodeList = ({
                       now sits over the rows' #ep column */}
                   <span className="text-muted-foreground">
                     ep:
-                    <span className={isOpen ? 'text-foreground' : undefined}>
+                    <span className="text-foreground">
                       {s.start}
                       {s.end > s.start && `-${s.end}`}
                     </span>
                   </span>
                   <span className="text-muted-foreground">({s.count})</span>
                   <span className="ml-auto shrink-0 text-muted-foreground">
-                    {coverageLabel(s, isOpen)}
+                    {coverageLabel(s)}
                   </span>
                 </button>
               );

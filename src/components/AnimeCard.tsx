@@ -1,5 +1,6 @@
 import { useMemo, useState } from 'react';
 import { AnimeSeries, EpisodeType } from '@/types/anime';
+import { cn } from '@/lib/utils';
 import { Card, CardContent } from '@/components/ui/card';
 import { useCatalogMapping } from '@/hooks/useCatalog';
 import { usePositionLookup } from '@/hooks/usePositionLookup';
@@ -61,6 +62,26 @@ export const AnimeCard = ({ anime, onClose }: AnimeCardProps) => {
 
   // visible slice of the list → the strip's minimap band (M1 fill-only)
   const [viewband, setViewband] = useState<{ start: number; end: number } | null>(null);
+  // minimap visibility — user chrome preference (2026-08-21: some users
+  // won't want the band), shared across cards via localStorage; the toggle
+  // sits in the legend line's empty LEFT slot as a comment-command (it is
+  // view chrome, not a data filter — never a TypeBadge)
+  const [minimapOn, setMinimapOn] = useState(() => {
+    try {
+      return localStorage.getItem('mm:minimap') !== 'off';
+    } catch {
+      return true;
+    }
+  });
+  const toggleMinimap = () =>
+    setMinimapOn((v) => {
+      try {
+        localStorage.setItem('mm:minimap', v ? 'off' : 'on');
+      } catch {
+        /* private mode: session-only */
+      }
+      return !v;
+    });
 
   // legend-as-filter, CLICK-TO-HIDE: everything is "selected" by default;
   // clicking a badge hides that type, clicking again restores it. Purely a
@@ -174,7 +195,7 @@ export const AnimeCard = ({ anime, onClose }: AnimeCardProps) => {
                       mangaAheadUnits={mapping.mangaAheadUnits}
                       mangaAheadChapters={mapping.mangaAheadChapters}
                       onUnitClick={lookupEnabled ? lookup.stripClick : undefined}
-                      viewband={viewband}
+                      viewband={minimapOn ? viewband : null}
                       hiddenTypes={hiddenTypes}
                     />
                     </div>
@@ -185,6 +206,28 @@ export const AnimeCard = ({ anime, onClose }: AnimeCardProps) => {
                     {/* chips carry their own boxes — gap back down from the
                         naked-tag gap-5 (that air was doing the brackets' job) */}
                     <div className="mt-tight flex flex-wrap items-center justify-end gap-2" {...line(4)}>
+                      {/* minimap toggle — TypeBadge chip grammar (neutral
+                          foreground tint, same wash/radius/fade-when-off),
+                          but the "glyph" is a drawn MINIATURE of the strip
+                          with its band — no word needed. Left slot: view
+                          chrome, not a data filter. */}
+                      <button
+                        type="button"
+                        onClick={toggleMinimap}
+                        aria-pressed={minimapOn}
+                        aria-label="toggle minimap band"
+                        title="minimap"
+                        className={cn(
+                          'mr-auto inline-flex cursor-pointer items-center rounded-sm bg-foreground/[0.12] px-1.5 py-[0.4375rem] transition-opacity hover:opacity-75',
+                          !minimapOn && 'opacity-40 hover:opacity-60',
+                        )}
+                      >
+                        {/* the track (dim) with the band slice (bright) —
+                            same tones as the real strip's M1 band */}
+                        <span className="relative h-1.5 w-7 overflow-hidden rounded-[1px] bg-foreground/20">
+                          <span className="absolute inset-y-0 left-[35%] w-[30%] bg-foreground/70" />
+                        </span>
+                      </button>
                       {mapping.sourceType === 'original' ? (
                         <TypeBadge
                           type="anime_only"
