@@ -65,7 +65,7 @@ Counts appear exactly once each:
     inside a fixed square flex-centered box (`0.8rem`), rotating right→down in
     place. Never rotate a text glyph in a tall inline box (the v5 caret bug).
   - range/coverage NUMBERS are always the normal text color, collapsed or
-    open (visibility trial 2026-08-21 — supersedes the interior_v1 "engaged"
+    open (confirmed ruling 2026-08-21 — supersedes the interior_v1 "engaged"
     brightening, where collapsed numbers sat muted); the `ep:`/`vol:`/`ch:`
     labels and the `(count)` keep the muted label color (key:value grammar).
   - Coverage: **whole volumes, no partial marking** (`vol:29-30` even when

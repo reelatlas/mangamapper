@@ -97,7 +97,7 @@ export const InlinePositionRow = ({ anime, mapping, lookup, hasSource }: InlineP
     );
   };
 
-  // visibility trial (2026-08-21, supersedes the interior_v1 denominator dim
+  // CONFIRMED ruling (2026-08-21, supersedes the interior_v1 denominator dim
   // at /40): totals read at FULL foreground — value and total share one tone,
   // only labels stay muted. The ` · ` separator keeps the dim punctuation.
   const DENOM_TONE = 'text-foreground';

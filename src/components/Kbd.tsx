@@ -2,10 +2,10 @@ import { cn } from '@/lib/utils';
 
 // Kbd — THE keycap (used for hotkey hints wherever they appear).
 //
-// **kbd_v4: tonal @ md, 4px gap** (locked 2026-08-21, held loosely —
-// "satisfied for the moment, may change later"). Picked from the Keycap
-// Lab `ea48caa3` after auditioning the whole boxed family live on the
-// search line: tonal/vscode/ledge_v1/bevel at md, gaps dialed 6→4→2.
+// **kbd_v4: tonal @ md, 4px gap** (locked + CONFIRMED 2026-08-21).
+// Picked from the Keycap Lab `ea48caa3` after auditioning the whole boxed
+// family live on the search line: tonal/vscode/ledge_v1/bevel at md, gaps
+// dialed 6→4→2.
 // Runner-up and first fallback if tonal ever reads too soft: vscode
 // (alpha fill + hairline border + 1px inset bottom ledge, 3px radius).
 //

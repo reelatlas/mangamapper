@@ -75,7 +75,7 @@ components/AnimeCard.tsx      host — wires row ⇄ strip ⇄ episode list
   wheel-when-focused (non-passive), blur never clears an explored value
   (blur with an *emptied* field resets; suppressed when Esc-undo owns the
   blur), stepper press focuses the field. Totals (`/110`) render at full
-  foreground (visibility trial 2026-08-21 — supersedes the interior_v1
+  foreground (confirmed ruling 2026-08-21 — supersedes the interior_v1
   denominator dim at `text-foreground/40`); the ` · ` separator keeps the
   dim `/40` punctuation tone.
 

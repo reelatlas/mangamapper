@@ -88,8 +88,8 @@ type ListItem =
   | { kind: 'row'; row: EpisodeRow; sectionIndex: number };
 
 // section coverage label: whole volumes, no partial marking; — is the null.
-// Numbers are ALWAYS the normal text color, collapsed or open (visibility
-// trial 2026-08-21 — supersedes the interior_v1 "engaged" brightening that
+// Numbers are ALWAYS the normal text color, collapsed or open (CONFIRMED
+// ruling 2026-08-21 — supersedes the interior_v1 "engaged" brightening that
 // kept collapsed numbers muted); labels stay muted (key:value grammar).
 const coverageLabel = (s: EpisodeSection) => {
   if (s.chStart === null || s.chEnd === null) {
