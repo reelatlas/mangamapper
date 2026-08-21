@@ -1,18 +1,53 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { Search } from 'lucide-react';
 import { Header } from '@/components/Header';
+import { Kbd } from '@/components/Kbd';
 import { CatalogField } from '@/components/CatalogField';
 import { useCatalogList } from '@/hooks/useCatalog';
+
+// ⌘K on mac, ctrl K elsewhere — display only; the handler accepts both
+const IS_MAC = /mac/i.test(navigator.platform || navigator.userAgent);
 
 // The homepage IS the catalog field: every series as a title row, grep to
 // narrow, click to expand in place (docs/components/catalog-field.md).
 const Index = () => {
   const [input, setInput] = useState('');
   const [query, setQuery] = useState('');
+  const [cardOpen, setCardOpen] = useState(false);
+  const searchRef = useRef<HTMLInputElement>(null);
   useEffect(() => {
     const t = setTimeout(() => setQuery(input), 200);
     return () => clearTimeout(t);
   }, [input]);
+
+  // page hotkeys (2026-08-21): ⌘K activates search from anywhere; ←/→ with a
+  // query but focus elsewhere recall the search caret (walking the list with
+  // ↑/↓ keeps the search text one arrow away). Both defer to an open card.
+  useEffect(() => {
+    const onKey = (e: KeyboardEvent) => {
+      if ((e.metaKey || e.ctrlKey) && e.key.toLowerCase() === 'k') {
+        e.preventDefault(); // browsers own ⌘K otherwise
+        searchRef.current?.focus();
+        return;
+      }
+      if (e.key !== 'ArrowLeft' && e.key !== 'ArrowRight') return;
+      if (e.metaKey || e.ctrlKey || e.altKey || cardOpen) return;
+      const el = searchRef.current;
+      if (!el || !el.value || document.activeElement === el) return;
+      const t = e.target instanceof HTMLElement ? e.target : null;
+      if (t?.closest('input, textarea, select, [contenteditable]')) return;
+      e.preventDefault();
+      el.focus(); // browsers restore the pre-blur caret; step it one glyph
+      const pos = el.selectionStart ?? el.value.length;
+      const next = Math.max(
+        0,
+        Math.min(el.value.length, pos + (e.key === 'ArrowRight' ? 1 : -1)),
+      );
+      el.setSelectionRange(next, next);
+    };
+    window.addEventListener('keydown', onKey);
+    return () => window.removeEventListener('keydown', onKey);
+  }, [cardOpen]);
 
   // whole catalog, sorted A–Z by the field — grep narrows client-side while
   // the catalog is mock-scale (see contract §3 for the AniList swap)
@@ -33,7 +68,10 @@ const Index = () => {
           {/* the icon is part of the dashed line: the underline lives on the
               wrapper; icon + input sit on it as one instrument */}
           {/* active state lives on the ICON, not the line (ruling 2026-08-19) */}
-          <span className="group/search inline-flex items-center gap-[1ch] border-b border-dashed border-border pb-1">
+          {/* group on the ROW so the keycap hint (outside the underline)
+              also reads the focus state */}
+          <span className="group/search inline-flex items-center">
+          <span className="inline-flex items-center gap-[1ch] border-b border-dashed border-border pb-1">
             <Search
               aria-hidden
               className="h-3.5 w-3.5 shrink-0 text-muted-foreground/60 transition-colors group-focus-within/search:text-primary"
@@ -41,9 +79,26 @@ const Index = () => {
             <span className="relative flex items-baseline">
               <input
                 id="search"
+                ref={searchRef}
                 aria-label="search series"
                 value={input}
                 onChange={(e) => setInput(e.target.value)}
+                onKeyDown={(e) => {
+                  if (e.key !== 'Escape') return;
+                  // While a card is open, Esc belongs to the CARD (close it,
+                  // keep the query) — decline it here and let it bubble to
+                  // the window close handler. The search's own ladder only
+                  // runs with no card: text → clear but stay active; empty →
+                  // blur (= clicking out). Consumed then — layering rule.
+                  if (cardOpen) return;
+                  e.stopPropagation();
+                  if (input) {
+                    setInput('');
+                    setQuery('');
+                  } else {
+                    e.currentTarget.blur();
+                  }
+                }}
                 autoComplete="off"
                 spellCheck={false}
                 className="w-[22ch] border-0 bg-transparent p-0 pr-[2ch] font-mono text-sm text-foreground [caret-color:currentColor] focus:outline-none"
@@ -62,6 +117,23 @@ const Index = () => {
               )}
             </span>
           </span>
+          {/* hotkey hint OFF the instrument (settled 2026-08-21 after
+              in-line/leading-slot trials kept disturbing the underline
+              geometry): keycaps a little right of the bar, only while the
+              search is empty and inactive; the caps themselves are the Kbd
+              component (the one keycap recipe) */}
+          {!input && (
+            <span
+              aria-hidden
+              onClick={() => searchRef.current?.focus()}
+              className="ml-3 flex shrink-0 cursor-pointer select-none items-center gap-0.5 group-focus-within/search:hidden"
+            >
+              {(IS_MAC ? ['⌘', 'K'] : ['ctrl', 'K']).map((key) => (
+                <Kbd key={key} glyph={key} />
+              ))}
+            </span>
+          )}
+          </span>
         </div>
       </div>
 
@@ -77,6 +149,7 @@ const Index = () => {
             series={listQuery.data ?? []}
             query={query}
             loading={listQuery.isLoading}
+            onOpenChange={setCardOpen}
           />
         </div>
       </main>

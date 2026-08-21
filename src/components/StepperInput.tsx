@@ -1,12 +1,7 @@
 import { useCallback, useEffect, useRef } from 'react';
 import { Input } from '@/components/ui/input';
 import { cn } from '@/lib/utils';
-
-// Hold-to-repeat pacing: one step on press, repeat after an initial delay,
-// then accelerate in two stages the longer the hold lasts. Keyboard holds
-// (↑/↓) accelerate for free via native key repeat.
-const HOLD_DELAY = 400;
-const holdInterval = (ticks: number) => (ticks > 22 ? 40 : ticks > 8 ? 80 : 130);
+import { HOLD_DELAY, holdInterval } from '@/lib/hold';
 
 interface StepperInputProps {
   value: string;
@@ -129,8 +124,19 @@ export const StepperInput = ({
       onBlur={() => onFocusChange?.(false)}
       onKeyDown={(e) => {
         if (e.key === 'Escape') {
+          // consumed here (undo) — stop it reaching the card's window-level
+          // Esc-to-close. A second Esc, with focus released, closes as usual.
+          e.stopPropagation();
           onEscape?.();
           if (inline) inputRef.current?.blur();
+          return;
+        }
+        if (e.key === 'Enter') {
+          // Enter = confirm = exactly a click-out (2026-08-21): values
+          // already commit live (driver model), so confirming just ends the
+          // edit — blur drops the underline/steppers and hands the keys
+          // back to the global episode walker
+          inputRef.current?.blur();
           return;
         }
         if (e.key === 'ArrowUp' || e.key === 'ArrowDown') {

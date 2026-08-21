@@ -58,6 +58,14 @@ export default {
           border: 'hsl(var(--sidebar-border))',
           ring: 'hsl(var(--sidebar-ring))'
         },
+        // forest_v1 episode-type palette — see index.css tokens
+        type: {
+          canon: 'hsl(var(--type-canon))',
+          mixed: 'hsl(var(--type-mixed))',
+          filler: 'hsl(var(--type-filler))',
+          anime: 'hsl(var(--type-anime))',
+          manga: 'hsl(var(--type-manga))'
+        },
         // Syntax highlighting colors
         syntax: {
           purple: 'hsl(var(--syntax-purple))',

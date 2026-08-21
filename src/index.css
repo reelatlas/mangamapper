@@ -14,8 +14,10 @@
     --background: 220 13% 8%;
     --foreground: 210 17% 82%;
 
-    /* Card - slightly lighter than bg */
-    --card: 220 13% 11%;
+    /* Card - bg step +2% (Sean's retune 2026-08-21; instrument_v1 locked +3%,
+       1% trialed and rejected. Separation = surface step + border + dim,
+       no shadow — this step is one third of that formula) */
+    --card: 220 13% 10%;
     --card-foreground: 210 17% 82%;
 
     /* Popover */
@@ -41,6 +43,23 @@
     /* Destructive - Terminal red */
     --destructive: 0 72% 60%;
     --destructive-foreground: 0 0% 98%;
+
+    /* syntax_v1 TYPE palette (2026-08-21, supersedes forest_v1 — Sean's
+       return to the terminal-syntax look: cyan canon / amber mixed / rose
+       filler / green manga hatch / purple anime). Validator-tuned from the
+       original syntax hues, which failed as-is: manga green darkened to L36
+       (amber↔green protan confusion), anime purple pulled to 256 (purple↔rose
+       normal-vision floor). All 10 pairs pass: worst CVD ΔE 9.6, no warns.
+       DOCUMENTED DEVIATION: brighter than the dataviz lightness band —
+       punchy fills on the 18px strip are the point. Episode-type encodings
+       use ONLY these — never the semantic colors (accent=airing,
+       amber=flash fallback, destructive=error); values are near the syntax
+       family but deliberately dedicated tokens. */
+    --type-canon: 199 72% 62%;
+    --type-mixed: 38 80% 62%;
+    --type-filler: 330 62% 64%;
+    --type-anime: 256 62% 64%;
+    --type-manga: 147 55% 36%;
 
     /* Syntax highlighting colors */
     --syntax-purple: 270 70% 70%;
@@ -239,14 +258,51 @@
 
   /* EpisodeList row highlight after a lookup/strip-driven jump.
      Opacity-only overlay (compositor-friendly) — never animate
-     background-color for this. */
+     background-color for this. Ruling 2026-08-21: the flash wears the row's
+     OWN TYPE color (--pulse-color set inline per row — cohesion with the
+     strip/tags/rail); amber remains only as the no-context fallback. */
   .animate-row-pulse::after {
     content: '';
     position: absolute;
     inset: 0;
     pointer-events: none;
-    background: hsl(var(--primary) / 0.22);
+    background: var(--pulse-color, hsl(var(--syntax-amber) / 0.18));
     animation: row-pulse-fade 0.9s ease-out forwards;
+  }
+
+  /* interior_v1 banded section headers — the section's own type color washed
+     over the OPAQUE card surface (sticky headers must occlude the rows
+     scrolling beneath them, so the tint is composited, never transparent).
+     manga_only wears its own purple (2026-08-21, reverses shares-canon). */
+  .section-band-canon {
+    background: linear-gradient(hsl(var(--type-canon) / 0.07), hsl(var(--type-canon) / 0.07)), hsl(var(--card));
+  }
+  .section-band-canon:hover {
+    background: linear-gradient(hsl(var(--type-canon) / 0.12), hsl(var(--type-canon) / 0.12)), hsl(var(--card));
+  }
+  .section-band-manga {
+    background: linear-gradient(hsl(var(--type-manga) / 0.07), hsl(var(--type-manga) / 0.07)), hsl(var(--card));
+  }
+  .section-band-manga:hover {
+    background: linear-gradient(hsl(var(--type-manga) / 0.12), hsl(var(--type-manga) / 0.12)), hsl(var(--card));
+  }
+  .section-band-mixed {
+    background: linear-gradient(hsl(var(--type-mixed) / 0.07), hsl(var(--type-mixed) / 0.07)), hsl(var(--card));
+  }
+  .section-band-mixed:hover {
+    background: linear-gradient(hsl(var(--type-mixed) / 0.12), hsl(var(--type-mixed) / 0.12)), hsl(var(--card));
+  }
+  .section-band-filler {
+    background: linear-gradient(hsl(var(--type-filler) / 0.07), hsl(var(--type-filler) / 0.07)), hsl(var(--card));
+  }
+  .section-band-filler:hover {
+    background: linear-gradient(hsl(var(--type-filler) / 0.12), hsl(var(--type-filler) / 0.12)), hsl(var(--card));
+  }
+  .section-band-anime {
+    background: linear-gradient(hsl(var(--type-anime) / 0.07), hsl(var(--type-anime) / 0.07)), hsl(var(--card));
+  }
+  .section-band-anime:hover {
+    background: linear-gradient(hsl(var(--type-anime) / 0.12), hsl(var(--type-anime) / 0.12)), hsl(var(--card));
   }
   @media (prefers-reduced-motion: reduce) {
     .animate-row-pulse::after {

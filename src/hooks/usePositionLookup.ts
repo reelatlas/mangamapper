@@ -1,4 +1,4 @@
-import { useCallback, useMemo, useState } from 'react';
+import { useCallback, useMemo, useRef, useState } from 'react';
 import type { AnimeSeries, MappingSummary } from '@/types/anime';
 import {
   solvePosition,
@@ -42,8 +42,21 @@ export interface PositionLookup {
   setField: (f: PositionField, raw: string) => void;
   step: (f: PositionField, dir: number) => void;
   reset: () => void;
+  // Esc = UNDO, not reset (2026-08-21): beginEdit snapshots the whole
+  // exploration state (driver + raw) when a field gains focus; cancelEdit
+  // restores it — Esc reverts to wherever you were BEFORE clicking in
+  // (which may be another field's exploration, not rest). reset() remains
+  // the explicit full return to the present position.
+  beginEdit: () => void;
+  cancelEdit: () => void;
   stripClick: (unit: number) => void;   // aired zone → ep drives; hatch → ch drives
   selectEpisode: (ep: number) => void;  // episode-list rows route here
+  // Keyboard-handoff intent (ruling 2026-08-21): ONLY a strip click hands the
+  // keyboard to the episode list. Monotonic serial — bumped by stripClick,
+  // never by field edits (typing/stepping must not lose the input's focus).
+  // The list focuses itself when this changes; explicit intent, no
+  // activeElement sniffing.
+  jumpSerial: number;
 }
 
 const FIELDS: PositionField[] = ['ep', 'vol', 'ch'];
@@ -59,6 +72,7 @@ export const usePositionLookup = (
 ): PositionLookup => {
   const [driver, setDriver] = useState<PositionField | null>(null);
   const [raw, setRaw] = useState('');
+  const [jumpSerial, setJumpSerial] = useState(0);
 
   const hasSource = mapping ? mapping.sourceType !== 'original' : anime.hasManga;
   const mangaEditable = hasSource && !!mapping?.latestKnown;
@@ -133,6 +147,17 @@ export const usePositionLookup = (
     setRaw('');
   }, []);
 
+  // Esc-undo snapshot (see interface note): captured on focus, restored on Esc
+  const editSnapshotRef = useRef<{ driver: PositionField | null; raw: string } | null>(null);
+  const beginEdit = useCallback(() => {
+    editSnapshotRef.current = { driver, raw };
+  }, [driver, raw]);
+  const cancelEdit = useCallback(() => {
+    const s = editSnapshotRef.current;
+    setDriver(s ? s.driver : null);
+    setRaw(s ? s.raw : '');
+  }, []);
+
   const step = useCallback(
     (f: PositionField, dir: number) => {
       if (!mapping) return;
@@ -177,6 +202,7 @@ export const usePositionLookup = (
     (unit: number) => {
       if (!mapping) return;
       const u = Math.max(1, Math.min(Math.round(unit), mapping.airedEpisodes + Math.max(0, mapping.mangaAheadUnits)));
+      setJumpSerial((n) => n + 1); // strip origin → list takes the keyboard
       if (u <= mapping.airedEpisodes) {
         setField('ep', String(u)); // filler included — ep is a real value there
         return;
@@ -200,8 +226,11 @@ export const usePositionLookup = (
     setField,
     step,
     reset,
+    beginEdit,
+    cancelEdit,
     stripClick,
     selectEpisode,
+    jumpSerial,
   };
 };
 

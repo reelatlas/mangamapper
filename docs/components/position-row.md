@@ -36,9 +36,24 @@ components/AnimeCard.tsx      host — wires row ⇄ strip ⇄ episode list
   needle sits). The old "vol never fills ch" rule protected a typed ch from
   autofill in the two-box model; in the driver model derived display
   overwrites nothing, so it retired.
-- **`// reset()`** (or Esc) restores the present position — exploring never
-  destroys anything. The reset link appears only while exploring; rest shows
-  no metadata.
+- **The key grammar (2026-08-21) — confirm / cancel / reset:**
+  - **Enter = confirm = exactly a click-out.** Values commit live via the
+    driver model, so confirming just blurs — underline/steppers drop and the
+    keys return to the list's global walker.
+  - **Esc = UNDO to the pre-focus snapshot** — `beginEdit` captures the
+    whole exploration state (driver + raw) when a field gains focus;
+    `cancelEdit` restores it. Esc may restore another field's exploration —
+    it never jumps to rest. The restore re-enters the normal state pipeline,
+    so a restored valid episode re-orients the list/strip (scroll + pulse)
+    for free; a rest/null restore moves nothing. Two guards, both required:
+    the input **stops Esc's propagation** (the card's window-level
+    Esc-to-close must not also fire — next Esc, with focus free, closes as
+    usual), and an intent flag (`escapingRef`) keeps the blur handler's
+    empty-field reset from stomping the restore (Esc blurs synchronously,
+    before state flushes).
+  - **`// reset()`** stays the one explicit full return to the present
+    position — exploring never destroys anything. The reset link appears
+    only while exploring; rest shows no metadata.
 - **Metadata sits IN the row**, right of the fields (third column,
   baseline-aligned via a hidden label). **No type tag** (removed 2026-08-19
   — the strip zone under the needle, the selected list row, and the `—`
@@ -54,10 +69,14 @@ components/AnimeCard.tsx      host — wires row ⇄ strip ⇄ episode list
   caret lands where clicked.
 - Steppers (▲▼) occupy **zero space until the field is focused** (Q1).
 - All hardened behaviors, shared with the box skin by construction:
-  ↑/↓ ± shift×10 (native key-repeat on hold), stepper hold-to-repeat
-  (400ms → 130 → 80 → 40ms), wheel-when-focused (non-passive), blur never
-  clears an explored value (blur with an *emptied* field resets), stepper
-  press focuses the field.
+  ↑/↓ ± shift×10 (native key-repeat on hold), stepper hold-to-repeat (the
+  app-wide pacing token `src/lib/hold.ts`: 400ms → 130 → 80 → 40ms — shared
+  with the catalog's keyboard walking, never forked per surface),
+  wheel-when-focused (non-passive), blur never clears an explored value
+  (blur with an *emptied* field resets; suppressed when Esc-undo owns the
+  blur), stepper press focuses the field. Denominators + separators render
+  at `text-foreground/40` (interior_v1: bright value, dim context —
+  FabFilter/vim grammar).
 
 ## 3. Width lock (focus-only)
 

@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useRef, useState } from 'react';
 import type { AnimeSeries, MappingSummary } from '@/types/anime';
 import type { PositionField } from '@/lib/mapping';
 import type { InlineField, PositionLookup } from '@/hooks/usePositionLookup';
@@ -51,6 +51,8 @@ export const InlinePositionRow = ({ anime, mapping, lookup, hasSource }: InlineP
   // focus-only width lock (2026-08-19 ruling): the shift problem exists
   // solely when the affordances can move under the user's own cursor
   const [focusLock, setFocusLock] = useState(false);
+  // set while an Esc-undo is blurring the field — see onEscape below
+  const escapingRef = useRef(false);
 
   const field = (f: PositionField) => {
     const view: InlineField = lookup.fields[f];
@@ -64,7 +66,14 @@ export const InlinePositionRow = ({ anime, mapping, lookup, hasSource }: InlineP
         widthCh={focusLock ? view.maxCh : Math.max(1, view.display.length)}
         onValueChange={(raw) => lookup.setField(f, raw)}
         onStep={(dir) => lookup.step(f, dir)}
-        onEscape={lookup.reset}
+        // Esc = undo to the pre-focus state (2026-08-21) — never the full
+        // reset; // reset() stays the explicit way back to rest. The flag
+        // stops the blur handler's empty-field reset from stomping the
+        // restore (Esc blurs synchronously, before state flushes).
+        onEscape={() => {
+          escapingRef.current = true;
+          lookup.cancelEdit();
+        }}
         // derived dimming only WHILE editing (focused): the moment focus
         // leaves, every non-null value returns to the normal text color —
         // rest state and strip/list selections read as plain data
@@ -72,18 +81,30 @@ export const InlinePositionRow = ({ anime, mapping, lookup, hasSource }: InlineP
         nullValue={view.isNull}
         onFocusChange={(focused) => {
           setFocusLock(focused);
-          // blur with an emptied driver → back to the present position
-          if (!focused && lookup.fields[f].display === '') lookup.reset();
+          // focus opens an edit: snapshot for Esc-undo
+          if (focused) lookup.beginEdit();
+          if (!focused) {
+            if (escapingRef.current) {
+              escapingRef.current = false; // Esc-undo owns this blur
+            } else if (lookup.fields[f].display === '') {
+              // blur with an emptied driver → back to the present position
+              lookup.reset();
+            }
+          }
         }}
         aria-label={`map ${f} for ${anime.title}`}
       />
     );
   };
 
+  // interior_v1 denominator dim (2026-08-21): the CURRENT number is the
+  // instrument, the total is context — denominators + separators sit at 40%
+  // foreground (FabFilter/vim-statusline grammar: bright value, dim unit)
+  const DENOM_TONE = 'text-foreground/40';
   const total = (v: number | null) =>
-    v !== null ? <span className="text-muted-foreground">/{v}</span> : (
+    v !== null ? <span className={DENOM_TONE}>/{v}</span> : (
       <span>
-        <span className="text-muted-foreground">/</span>
+        <span className={DENOM_TONE}>/</span>
         <span className={NULL_TONE}>—</span>
       </span>
     );
@@ -106,7 +127,7 @@ export const InlinePositionRow = ({ anime, mapping, lookup, hasSource }: InlineP
             {field('vol')}
             {total(anime.totalVolumes)}
             {/* whitespace-pre: a flex item's edge spaces are otherwise stripped */}
-            <span className="text-muted-foreground whitespace-pre">{' · '}</span>
+            <span className="text-foreground/40 whitespace-pre">{' · '}</span>
             <span className="text-muted-foreground">ch:</span>
             {field('ch')}
             {total(anime.totalChapters)}

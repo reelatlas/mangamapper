@@ -168,8 +168,24 @@ opacity/weight by position) remains — it's layout, not motion.
 
 ## 7. Open items
 
-- Keyboard traversal (j/k like EpisodeList) and focus management for the
-  overlay (focus trap + return-to-row).
+- ~~Keyboard traversal~~ **SHIPPED 2026-08-21 — the field's keyboard suite:**
+  ↑/↓ walk the catalog through the focus line with the app-wide hold pacing
+  (`src/lib/hold.ts` — same acceleration as the position steppers; `e.repeat`
+  ignored, our timer chain owns the hold). Enter opens the focused row
+  (rows/buttons keep their native Enter). Works while the search input is
+  focused (its ↑/↓ have no vertical meaning); other editables win. ⌘K /
+  ctrl K activates search from anywhere. The keycap hint lives OFF the
+  instrument (settled 2026-08-21 after in-line and leading-slot-swap trials
+  both disturbed the underline geometry): caps a little right of the bar,
+  rendered only while the search is empty AND inactive — the underline (glass
+  + 22ch) never changes size in any state. Keycap recipe: page-flush face,
+  border, 3px radius, 1.5px bottom-only muted ledge, per-glyph optical
+  tuning (⌘ 15px / K 11px, 1px nudge down). Esc in search: text → clear + stay active; empty → blur;
+  consumed via stopPropagation (layering rule). ←/→ with a query but focus
+  elsewhere recall the search caret and step it one glyph (walking keeps the
+  text one arrow away). All page hotkeys defer to an open card
+  (`onOpenChange` prop).
+- Focus management for the overlay (focus trap + return-to-row).
 - Content stagger inside the opening card (aesthetic pass).
 - Server-side search + virtualization at AniList scale.
 - Status filters (airing/finished) as field-level controls — the old homepage

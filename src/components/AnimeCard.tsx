@@ -182,7 +182,9 @@ export const AnimeCard = ({ anime, onClose }: AnimeCardProps) => {
                         2026-08-19): graphic first, key tucked right. Badges
                         with no data don't render; each badge is a
                         click-to-hide filter toggle */}
-                    <div className="mt-tight flex flex-wrap items-center justify-end gap-1.5" {...line(4)}>
+                    {/* chips carry their own boxes — gap back down from the
+                        naked-tag gap-5 (that air was doing the brackets' job) */}
+                    <div className="mt-tight flex flex-wrap items-center justify-end gap-2" {...line(4)}>
                       {mapping.sourceType === 'original' ? (
                         <TypeBadge
                           type="anime_only"
@@ -220,6 +222,7 @@ export const AnimeCard = ({ anime, onClose }: AnimeCardProps) => {
                           rows={episodeList.rows}
                           sections={visibleSections}
                           selectedEp={selectedEp}
+                          jumpSerial={lookup.jumpSerial}
                           interactive={lookupEnabled}
                           onSelectEpisode={lookupEnabled ? lookup.selectEpisode : undefined}
                           onVisibleRangeChange={setViewband}

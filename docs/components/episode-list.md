@@ -54,17 +54,19 @@ Counts appear exactly once each:
 
 ## 4. Sections
 
-- Header row: `[typed chevron] [TypeBadge] ep:337-381 (45)   vol:29-33 · ch:289-336`
+- Header row: `[typed chevron] ep:337-381 (45)   vol:29-33 · ch:289-336`
   (colon-tight `ep:` — same key:value format as everywhere else in the card)
+  - **interior_v1 (2026-08-21): headers carry NO type tag.** The section's
+    type reads from its **band color** (`.section-band-*` — the type color
+    tinted at 0.07/0.12-hover, composited over the OPAQUE card surface so
+    sticky headers occlude the rows scrolling beneath) plus the colored
+    chevron. manga_only wears its own `--type-manga` purple band.
   - **Marker (A3)**: the canonical SVG chevron in the section's type color,
     inside a fixed square flex-centered box (`0.8rem`), rotating right→down in
     place. Never rotate a text glyph in a tall inline box (the v5 caret bug).
-  - **TypeBadge** in a fixed `4.2rem` column; the header owns the type — rows
-    carry **no** type marker.
-  - ep range + count use the muted label color; only the badge carries
-    color — except while the section is OPEN: the range/coverage NUMBERS
-    (not their labels) brighten to the normal text color ("engaged"),
-    returning to muted on collapse.
+  - ep range + count use the muted label color — except while the section is
+    OPEN: the range/coverage NUMBERS (not their labels) brighten to the
+    normal text color ("engaged"), returning to muted on collapse.
   - Coverage: **whole volumes, no partial marking** (`vol:29-30` even when
     vol 30 flows into the next section). Filler sections show `—`.
 - **Sticky**: the active section's header stays pinned at the top of the
@@ -75,15 +77,13 @@ Counts appear exactly once each:
 ## 5. Rows
 
 Column alignment contract — row columns are **derived from header geometry**
-(pad 0.3 + marker 0.8 + gap 0.6 + badge border 1px + badge pad 0.45rem):
+(pad 0.3 + marker 0.8 + gap 0.6):
 
-- `#` starts exactly at the badge's first letter → `pl-[calc(2.15rem+1px)]`
-- title starts exactly where the header's ep-range starts → eno column
-  `calc(W − 0.45rem − 1px)` + `0.6rem` gap, where **W is the adaptive badge
-  column**: 4.2rem normally, 5.7rem when the list contains anime_only
-  sections (the token text never shortens — the column adapts, and every row
-  column adapts with it).
-- Changing TypeBadge's padding or the marker box size **must** update these.
+- `#` column starts at `pl-[calc(2.15rem+1px)]`; the header's ep-range sits
+  over the rows' `#ep` column (**number-over-number**, 2026-08-21 — the old
+  adaptive badge column retired with the header tag; `EP_COL_REM = 3.75`
+  preserves the retired column's derived width so row geometry is unchanged).
+- Changing the marker box size or header padding **must** update these.
 
 **Type scale** (matches the rest of the card): labels — `episode_list`, the
 expanded/collapsed controls — are `text-xs tracking-wider`; all values — the
@@ -108,23 +108,32 @@ exists for row clicks; see [position-row.md](position-row.md) for the
 driver-field model.
 
 **Lookup → list** (selection follows `result`):
-- `state:'run'` with `ep ≤ aired` → that row is selected. If its section is
-  collapsed it auto-expands; if the change came from the inputs or the strip
-  the row **jumps to the top of the frame, directly under the sticky header**
-  (align `start` + `scrollPaddingStart`; maximum forward context) and pulses
-  (`.animate-row-pulse`). The jump **clamps naturally**: near the end of the
-  list the scroll stops at its limit and the selection sits lower in view; a
-  fully-visible list never scrolls — selection only. No artificial overscroll
-  space. If the change came from the list itself there is **no jump scroll**
-  (click = no scroll, j/k = minimal "nearest" scroll).
+- `state:'run'` with `ep ≤ aired` → that row is selected: `bg-muted/40` + a
+  2px inset rail in the row's **own type color** (interior_v1 — never zebra,
+  never the generic primary). If its section is collapsed it auto-expands; if
+  the change came from the inputs or the strip the row **jumps to the top of
+  the frame, directly under the sticky header** (maximum forward context) and
+  pulses (`.animate-row-pulse`, **type-colored** via `--pulse-color`; amber
+  only as the no-context fallback). The jump **clamps naturally**: near the
+  end of the list the scroll stops at its limit and the selection sits lower
+  in view; a fully-visible list never scrolls — selection only. No artificial
+  overscroll space. If the change came from the list itself there is **no
+  jump scroll** (click = no scroll, arrow walk = minimal "nearest" scroll).
+- **Keyboard handoff by explicit intent (2026-08-21)**: ONLY a strip click
+  hands the keyboard to the list — the lookup bumps a monotonic `jumpSerial`
+  in `stripClick` and the list focuses its scroll frame when it changes.
+  Field typing/stepping also moves the selection but NEVER steals focus.
+  Intent travels as a signal from the source — never inferred from selection
+  changes or `document.activeElement` sniffing.
 - `state:'hatch'` (a manga_only position, typed or clicked) → the list
   orients at the **last aired episode** — the nearest value before the
   manga_only zone — selected and centered. The lookup keeps its pin/readout.
 - cleared / out_of_range → no selection.
 
 **List → strip (M1 band)**: the visible slice of the list is reported as an
-episode range and drawn on the strip as the minimap band — brighter neutral
-fill (`foreground/18%`), **no edge lines**. Derived from the actually
+episode range and drawn on the strip as the minimap band — bright neutral
+fill (`foreground/45%`, retuned 2026-08-21: 18% vanished against syntax_v1's
+fills and a muted grey read as dimming), **no edge lines**. Derived from the actually
 rendered items (grouping-aware): an open section contributes its visible
 rows; a **collapsed header contributes its whole range**. "Visible" means
 **at least half the item shows in the area below the pinned sticky header**
@@ -174,11 +183,54 @@ from view; clicking it again restores it.
 - j/k walks only through visible sections (no-op at the visible edge —
   directional integrity).
 
-## 9. Keyboard
+## 9. Keyboard — global selection walking (2026-08-21)
 
-Focus the list (tab or click), then `j`/`↓` and `k`/`↑` walk episodes ±1
-through the same mode-preserving path as row clicks; the needle and lookup
-track; scrolling is minimal ("nearest"), never recentering.
+Gmail/Linear-pattern list shortcuts, from a **document-level** listener:
+
+- While a selection exists, `↑`/`↓` (and `j`/`k`) walk episodes ±1 **no
+  matter where focus sits** — through the same mode-preserving path as row
+  clicks; the needle and lookup track; scrolling is minimal ("nearest"),
+  never recentering.
+- **Editable controls always win**: typing/stepping in the position row
+  never walks the list.
+- `reset()` clears the selection and returns the keys to their native
+  meaning. One extra case: focus IN the list frame with no selection —
+  arrows seed from the first/last episode (standard listbox behavior).
+- Walks only through visible (legend-filtered) sections; no-ops at the
+  visible edge (directional integrity).
+
+## 9b. Scroll behavior — the three rules (2026-08-21)
+
+All scroll positions are computed from the fixed `HEADER_H`/`ROW_H`
+geometry — never measured, never delegated:
+
+1. **Component-owned scroll.** Selection scrolls set `scrollTop` directly;
+   `virtualizer.scrollToIndex` is NEVER used (its internal offset only syncs
+   on scroll events, so it computes wrong targets in the same frame as a
+   compensation — the root of the expand-jump bug). The virtualizer is
+   purely a render window; its scroll listener flushSyncs the window
+   pre-paint, so direct `scrollTop` writes are exactly as safe as its own
+   API. Compensation + selection scroll run as consecutive layout effects →
+   one painted frame, no intermediate state.
+2. **Toggle scroll clamp.** Toggling a section you're scrolled past clamps
+   `scrollTop` to the header's natural offset (iOS grouped-list / VS Code
+   tree rule): close lands the closed header pinned at the top; open shows
+   the new rows under the clicked header. Mid-list toggles are untouched.
+3. **Scroll anchoring, reimplemented** (native `overflow-anchor` can't act
+   on absolutely-positioned virtual rows), by walk direction:
+   - **UP into a collapsed section**: the landed row is the block's LAST
+     row — pin the user's focus (full inserted height compensated before
+     paint, marked by the walk's explicit direction) and the block unfolds
+     above the frame with zero extra motion. The anchor is the focus NODE,
+     not the viewport-top pixel — a visible collapsed header must not
+     disable it.
+   - **DOWN into a collapsed section**: the landed row is the block's FIRST
+     row — minimal scroll only; the rows appearing beneath it ARE the
+     section visibly opening (same as clicking its header). Forcing the
+     unfold below the fold ('end' bottom-snap) was tried and REJECTED — it
+     teleports the view on mid-frame crossings.
+   - Other expansions (`expand_all` while scrolled) anchor insertions above
+     the viewport top.
 
 ## 10. Known limitation — anchor-shadowed rows
 
@@ -194,10 +246,11 @@ scroll jump**. The real fix is anchor-aware interpolation (estimating
 ## 11. Virtualization
 
 `@tanstack/react-virtual`, fixed item heights (header 30px, row 28px —
-forced via inline style so estimate and reality cannot drift), overscan 8,
-`scrollPaddingStart: HEADER_H`. The scroll container **hugs its content** up
-to a `max-h-80` (320px) cap — never a fixed height (short series don't get
-empty space), and no artificial overscroll space past the end (jumps clamp
-naturally — see §6). Items = headers + rows of open sections; the
-size cache is dropped (`virtualizer.measure()`) whenever the item list
-changes shape.
+forced via inline style so estimate and reality cannot drift), overscan 8.
+No `scrollPaddingStart` — selection scrolls are component-owned (§9b) and
+the virtualizer only windows the rendering. The scroll container **hugs its
+content** up to a `max-h-80` (320px) cap — never a fixed height (short
+series don't get empty space), and no artificial overscroll space past the
+end (jumps clamp naturally — see §6). Items = headers + rows of open
+sections; the size cache is dropped (`virtualizer.measure()`) whenever the
+item list changes shape.

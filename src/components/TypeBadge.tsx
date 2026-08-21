@@ -2,12 +2,13 @@ import type { ReactNode } from 'react';
 import { cn } from '@/lib/utils';
 
 // ─────────────────────────────────────────────────────────────────────────────
-// TypeBadge — THE type-token treatment ("S2 tint", chosen 2026-08-19).
-// One visual language for the strip legend and episode-list section headers:
-// colored text on a ~10% tint of the same hue, 1px faint border, system
-// radius (2px). The *_only zones carry their strip identity — their badge
-// background IS the strip's hatch pattern (green for manga_only, purple for
-// anime_only).
+// TypeBadge — THE type-token treatment. TINT CHIP (trial 2026-08-21): the
+// type color as text over its own tint wash (/0.12, matching the section
+// bands' tint grammar), radius token, no border. Supersedes the naked tag
+// (which superseded brackets, which superseded the S2 tint boxes).
+//
+// manga_only wears its OWN purple (2026-08-21, reverses the shares-canon
+// ruling): same hue as the strip's hatched tail and its section band.
 //
 // Rules (DESIGN_SYSTEM.md):
 // - the badge is the legend unit: counts live INSIDE it (dimmer, one size down)
@@ -18,21 +19,12 @@ import { cn } from '@/lib/utils';
 
 export type TypeBadgeKind = 'canon' | 'mixed' | 'filler' | 'manga_only' | 'anime_only';
 
-// anime_only gets the full solid tint like canon/mixed/filler — that content
-// IS canon to the show; only manga_only (the not-yet-animated zone) carries
-// the hatch identity. Most series never surface the anime_only badge at all
-// (empty-state rule) — it renders only where the tag exists.
 const STYLES: Record<TypeBadgeKind, string> = {
-  canon: 'text-accent border-accent/[0.35] bg-accent/10',
-  mixed: 'text-syntax-amber border-syntax-amber/[0.35] bg-syntax-amber/10',
-  filler: 'text-destructive border-destructive/[0.35] bg-destructive/10',
-  manga_only: 'text-accent/[0.85] border-accent/30',
-  anime_only: 'text-syntax-purple border-syntax-purple/[0.35] bg-syntax-purple/10',
-};
-
-const HATCH: Partial<Record<TypeBadgeKind, string>> = {
-  manga_only:
-    'repeating-linear-gradient(45deg, hsl(var(--accent) / 0.16) 0 3px, transparent 3px 6px)',
+  canon: 'text-type-canon bg-type-canon/[0.12]',
+  mixed: 'text-type-mixed bg-type-mixed/[0.12]',
+  filler: 'text-type-filler bg-type-filler/[0.12]',
+  manga_only: 'text-type-manga bg-type-manga/[0.12]',
+  anime_only: 'text-type-anime bg-type-anime/[0.12]',
 };
 
 interface TypeBadgeProps {
@@ -48,15 +40,15 @@ interface TypeBadgeProps {
 
 export const TypeBadge = ({ type, count, className, onClick, pressed, dimmed }: TypeBadgeProps) => {
   const classes = cn(
-    // px must stay 0.45rem: the episode list's column-alignment contract
-    // derives the row indent from this padding (docs/components/episode-list.md)
-    'inline-flex items-baseline gap-1.5 whitespace-nowrap rounded-lg border px-[0.45rem] py-px text-[0.68rem] leading-normal tracking-wider',
+    // tint chip (trial 2026-08-21): colored text over its own /0.12 wash,
+    // radius token — the tint carries the chip, no border
+    'inline-flex items-baseline gap-1.5 whitespace-nowrap rounded-sm px-1.5 py-0.5 text-[0.68rem] leading-normal tracking-wider',
     STYLES[type],
     onClick && 'cursor-pointer transition-opacity hover:opacity-75',
+    // hidden-state = fade (interior_v1): the tag recedes, never struck/boxed
     dimmed && 'opacity-40 hover:opacity-60',
     className,
   );
-  const style = HATCH[type] ? { backgroundImage: HATCH[type] } : undefined;
   const content = (
     <>
       {type}
@@ -65,14 +57,10 @@ export const TypeBadge = ({ type, count, className, onClick, pressed, dimmed }: 
   );
   if (onClick) {
     return (
-      <button type="button" onClick={onClick} aria-pressed={pressed} className={classes} style={style}>
+      <button type="button" onClick={onClick} aria-pressed={pressed} className={classes}>
         {content}
       </button>
     );
   }
-  return (
-    <span className={classes} style={style}>
-      {content}
-    </span>
-  );
+  return <span className={classes}>{content}</span>;
 };

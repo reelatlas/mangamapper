@@ -1,11 +1,10 @@
-import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
+import { useCallback, useEffect, useLayoutEffect, useMemo, useRef, useState } from 'react';
 import {
   useVirtualizer,
   defaultRangeExtractor,
   type Range,
 } from '@tanstack/react-virtual';
 import { ChevronRightIcon, ListIcon } from '@/components/icons';
-import { TypeBadge, type TypeBadgeKind } from '@/components/TypeBadge';
 import { cn } from '@/lib/utils';
 import type { EpisodeType } from '@/types/anime';
 import type { EpisodeRow, EpisodeSection } from '@/lib/mapping';
@@ -30,36 +29,58 @@ const HEADER_H = 30;
 const ROW_H = 28;
 
 // COLUMN ALIGNMENT CONTRACT (derived from header geometry, not eyeballed):
-//   header: pad 0.3rem + marker 0.8rem + gap 0.6rem → badge col (W) → gap → range
-//   rows:   # starts at the badge's first letter  = 0.3+0.8+0.6 + 1px border + 0.45rem pad
-//           title starts where the header's range starts = 2.3rem + W + 0.6rem gap
-//           → eno column width = W − 0.45rem − 1px
-// The badge column W is ADAPTIVE: 4.2rem fits canon/mixed/filler; a list that
-// contains anime_only sections widens to 5.7rem — the token text never
-// shortens, the column adapts (and the row columns adapt with it).
-const BADGE_COL_REM = 4.2;
-const BADGE_COL_WIDE_REM = 5.7;
+//   header: pad 0.3rem + marker 0.8rem + gap 0.6rem → ep:range
+//   rows:   indent 2.15rem+1px → #ep column (EP_COL) → title
+// Header range and row #ep share a left edge (number-over-number). The old
+// adaptive badge column retired with the header type tag (2026-08-21) —
+// the section band color + colored marker carry the type now. EP_COL keeps
+// the retired column's derived value so row geometry is unchanged.
+const EP_COL_REM = 3.75;
 const ROW_INDENT = 'pl-[calc(2.15rem+1px)]';
 const MARKER_BOX = 'w-[0.8rem] h-[0.8rem]';
 
 const MARKER_COLOR: Record<EpisodeType, string> = {
-  canon: 'text-accent',
-  mixed: 'text-syntax-amber',
-  filler: 'text-destructive',
-  'anime-only-canon': 'text-syntax-purple',
+  canon: 'text-type-canon',
+  mixed: 'text-type-mixed',
+  filler: 'text-type-filler',
+  'anime-only-canon': 'text-type-anime',
 };
 
 // # symbol = disabled tone OF the section's color; the number = full color
 const HASH_COLOR: Record<EpisodeType, string> = {
-  canon: 'text-accent/[0.45]',
-  mixed: 'text-syntax-amber/[0.45]',
-  filler: 'text-destructive/[0.45]',
-  'anime-only-canon': 'text-syntax-purple/[0.45]',
+  canon: 'text-type-canon/[0.45]',
+  mixed: 'text-type-mixed/[0.45]',
+  filler: 'text-type-filler/[0.45]',
+  'anime-only-canon': 'text-type-anime/[0.45]',
 };
 const NUM_COLOR: Record<EpisodeType, string> = MARKER_COLOR;
 
-const badgeKindForEpisodeType = (t: EpisodeType): TypeBadgeKind =>
-  t === 'anime-only-canon' ? 'anime_only' : t;
+// selection rail wears the row's TYPE color (Sean's ruling 2026-08-21 —
+// cohesion with the strip/tags beats the generic primary)
+const RAIL_COLOR: Record<EpisodeType, string> = {
+  canon: 'shadow-[inset_2px_0_0_hsl(var(--type-canon))]',
+  mixed: 'shadow-[inset_2px_0_0_hsl(var(--type-mixed))]',
+  filler: 'shadow-[inset_2px_0_0_hsl(var(--type-filler))]',
+  'anime-only-canon': 'shadow-[inset_2px_0_0_hsl(var(--type-anime))]',
+};
+// …and so does the jump flash (same ruling): the pulse washes the row in its
+// own type color (--pulse-color feeds .animate-row-pulse in index.css)
+const PULSE_COLOR: Record<EpisodeType, string> = {
+  canon: 'hsl(var(--type-canon) / 0.18)',
+  mixed: 'hsl(var(--type-mixed) / 0.18)',
+  filler: 'hsl(var(--type-filler) / 0.18)',
+  'anime-only-canon': 'hsl(var(--type-anime) / 0.18)',
+};
+
+// interior_v1 banded section headers (index.css); manga_only wears its own
+// purple band (2026-08-21, reverses the earlier shares-canon ruling)
+const SECTION_BAND: Record<string, string> = {
+  canon: 'section-band-canon',
+  mixed: 'section-band-mixed',
+  filler: 'section-band-filler',
+  'anime-only-canon': 'section-band-anime',
+  manga_only: 'section-band-manga',
+};
 
 type ListItem =
   | { kind: 'header'; section: EpisodeSection }
@@ -96,6 +117,10 @@ interface EpisodeListProps {
   rows: EpisodeRow[];
   sections: EpisodeSection[];
   selectedEp: number | null; // from the lookup result (hatch → last aired ep)
+  // strip→list keyboard handoff: the lookup bumps this ONLY on a strip click
+  // (never on field typing/stepping — those must keep the input's focus);
+  // the list focuses its scroll frame when it changes
+  jumpSerial?: number;
   interactive: boolean;      // false when the lookup is disabled (no source/mapping)
   onSelectEpisode?: (ep: number) => void; // routes into lookup.stripClick(ep)
   onVisibleRangeChange?: (range: { start: number; end: number } | null) => void;
@@ -105,6 +130,7 @@ export const EpisodeList = ({
   rows,
   sections,
   selectedEp,
+  jumpSerial,
   interactive,
   onSelectEpisode,
   onVisibleRangeChange,
@@ -114,7 +140,7 @@ export const EpisodeList = ({
   const [pulse, setPulse] = useState<{ ep: number; n: number } | null>(null);
   // which interaction produced the next selectedEp change: rows/keys must not
   // recenter the list the user is already looking at
-  const interactionRef = useRef<{ ep: number; kind: 'click' | 'key' } | null>(null);
+  const interactionRef = useRef<{ ep: number; kind: 'click' | 'key'; dir?: number } | null>(null);
   // jump placement: 'jump' = lookup/strip-driven → row lands at the TOP of
   // the frame, directly under the sticky header (via scrollPaddingStart) —
   // maximum forward context ("continue from here"). 'auto' = j/k walking →
@@ -122,13 +148,9 @@ export const EpisodeList = ({
   // variant is the fallback if top feels abrupt.)
   const pendingScrollRef = useRef<{ ep: number; align: 'jump' | 'auto'; pulse: boolean } | null>(null);
 
-  // adaptive badge column: widen only when this list carries anime_only sections
-  const badgeColRem = useMemo(
-    () => (sections.some((s) => s.type === 'anime-only-canon') ? BADGE_COL_WIDE_REM : BADGE_COL_REM),
-    [sections],
-  );
-  const badgeColStyle = { width: `${badgeColRem}rem` };
-  const enoStyle = { width: `calc(${badgeColRem - 0.45}rem - 1px)` };
+  // rows' #ep column — fixed width (was derived from the header badge column,
+  // retired 2026-08-21; value preserved so row geometry is unchanged)
+  const enoStyle = { width: `calc(${EP_COL_REM}rem - 1px)` };
 
   const items = useMemo<ListItem[]>(() => {
     const out: ListItem[] = [];
@@ -171,7 +193,8 @@ export const EpisodeList = ({
     getScrollElement: () => scrollRef.current,
     estimateSize: (i) => (items[i].kind === 'header' ? HEADER_H : ROW_H),
     overscan: 8,
-    scrollPaddingStart: HEADER_H, // scrollToIndex never hides a row under the pinned header
+    // no scrollPaddingStart: selection scrolls are component-owned
+    // (applyScroll) — the virtualizer only windows the rendering
     rangeExtractor,
   });
 
@@ -180,15 +203,98 @@ export const EpisodeList = ({
     virtualizer.measure();
   }, [items, virtualizer]);
 
-  const toggleSection = (index: number) =>
+  // a header's natural flow offset — computable exactly because geometry is
+  // fixed (HEADER_H / ROW_H, no measuring); only sections ABOVE it contribute
+  const headerOffset = (index: number) => {
+    let y = 0;
+    for (const s of sections) {
+      if (s.index === index) break;
+      y += HEADER_H + (open.has(s.index) ? s.count * ROW_H : 0);
+    }
+    return y;
+  };
+
+  const toggleSection = (index: number) => {
+    // Toggling a section you're scrolled past (its header stuck or above the
+    // frame) clamps scroll to the header's natural offset — the section you
+    // just toggled lands at the top of the frame. Close: without this the
+    // browser keeps scrollTop while the rows vanish, landing the view on
+    // arbitrary later content with a DIFFERENT header suddenly pinned (the
+    // iOS grouped-list / VS Code tree rule). Open: the new rows must appear
+    // under the header you clicked, not above the viewport. Mid-list toggles
+    // (header below the frame top) are naturally untouched by the clamp.
+    const el = scrollRef.current;
+    const top = headerOffset(index);
+    if (el && el.scrollTop > top) el.scrollTop = top;
     setOpen((prev) => {
       const next = new Set(prev);
       if (next.has(index)) next.delete(index);
       else next.add(index);
       return next;
     });
+  };
   const setAll = (openAll: boolean) =>
     setOpen(openAll ? new Set(sections.map((s) => s.index)) : new Set());
+
+  // SCROLL ANCHORING, reimplemented (2026-08-21): the browser's native
+  // overflow-anchor keeps an anchor NODE visually still when content is
+  // inserted before it — but virtualized rows (absolutely positioned
+  // transforms) opt out of it, so section expansion shoves the view. We
+  // supply the same rule ourselves, before paint, computed from the fixed
+  // HEADER_H/ROW_H geometry (never measured):
+  //   · upward-walk auto-expand → the anchor is the user's FOCUS (the
+  //     outgoing selection's section): compensate by the full inserted
+  //     height, even when the collapsed header was visible in-frame
+  //     (expandCompRef, set with the walk's explicit direction)
+  //   · any other expansion (expand_all while scrolled) → anchor insertions
+  //     above the viewport top
+  // Collapses never reach this: a user collapse is the toggle clamp above,
+  // and removals below the viewport need no anchoring. After the pin, the
+  // pending selection scroll moves minimally as usual.
+  const expandCompRef = useRef<{ index: number; rows: number } | null>(null);
+  const prevOpenRef = useRef<ReadonlySet<number> | null>(null);
+  useLayoutEffect(() => {
+    const prev = prevOpenRef.current;
+    prevOpenRef.current = open;
+    const req = expandCompRef.current;
+    expandCompRef.current = null;
+    const el = scrollRef.current;
+    if (!prev || !el) return;
+    let y = 0; // offsets in the PREVIOUS geometry — where insertion happens
+    let delta = 0;
+    for (const s of sections) {
+      if (open.has(s.index) && !prev.has(s.index)) {
+        if (req?.index === s.index) delta += req.rows * ROW_H;
+        else if (y + HEADER_H <= el.scrollTop) delta += s.count * ROW_H;
+      }
+      y += HEADER_H + (prev.has(s.index) ? s.count * ROW_H : 0);
+    }
+    if (delta > 0) el.scrollTop += delta;
+  }, [open, sections]);
+
+  // COMPONENT-OWNED SCROLL (2026-08-21): selection scrolls set scrollTop from
+  // the list's own fixed geometry, never virtualizer.scrollToIndex — the
+  // virtualizer's internal offset only syncs on real scroll events, so in the
+  // same frame as an anchoring compensation it is STALE and computes a wrong
+  // absolute target (the expand-above jump). The virtualizer stays a pure
+  // render window; scrolling is ours. 'jump' pins the row at the top under
+  // the sticky header; 'auto' scrolls minimally (scroll-into-view semantics).
+  const applyScroll = useCallback(
+    (p: { ep: number; align: 'jump' | 'auto'; pulse: boolean }) => {
+      const el = scrollRef.current;
+      if (!el) return;
+      const idx = items.findIndex((it) => it.kind === 'row' && it.row.ep === p.ep);
+      if (idx < 0) return;
+      let top = 0;
+      for (let i = 0; i < idx; i++) top += items[i].kind === 'header' ? HEADER_H : ROW_H;
+      const pinnedTop = top - HEADER_H; // the row must clear the pinned header
+      if (p.align === 'jump' || el.scrollTop > pinnedTop) el.scrollTop = pinnedTop;
+      else if (top + ROW_H > el.scrollTop + el.clientHeight)
+        el.scrollTop = top + ROW_H - el.clientHeight;
+      if (p.pulse) setPulse((prev) => ({ ep: p.ep, n: (prev?.n ?? 0) + 1 }));
+    },
+    [items],
+  );
 
   // ── lookup → list: selection, auto-expand, scroll, pulse ──────────────────
   useEffect(() => {
@@ -204,30 +310,53 @@ export const EpisodeList = ({
       pendingScrollRef.current = { ep: selectedEp, align, pulse: align === 'jump' };
     }
     if (!open.has(section.index)) {
+      // Walk-driven expansion, by direction (2026-08-21, after both were
+      // tried the other way):
+      // · UP: the landed row is the block's LAST row — pinning the user's
+      //   focus (anchoring pass, full inserted height) unfolds the whole
+      //   block above the frame with ZERO extra motion. The anchor is the
+      //   focus NODE, not the viewport-top pixel (native scroll-anchoring
+      //   semantics; a visible collapsed header must not disable it).
+      // · DOWN: the landed row is the block's FIRST row — minimal scroll
+      //   only ('auto'). The rows appearing beneath it ARE the section
+      //   visibly opening (same as clicking its header); forcing the unfold
+      //   below the fold ('end' align) was tried and rejected — it teleports
+      //   the view when crossing mid-frame.
+      if (ia?.kind === 'key' && ia.dir === -1) {
+        expandCompRef.current = { index: section.index, rows: section.count };
+      }
       setOpen((prev) => new Set(prev).add(section.index));
     } else if (pendingScrollRef.current) {
       // section already open — items won't change, scroll now
       const p = pendingScrollRef.current;
       pendingScrollRef.current = null;
-      const idx = items.findIndex((it) => it.kind === 'row' && it.row.ep === p.ep);
-      if (idx >= 0) {
-        virtualizer.scrollToIndex(idx, { align: p.align === 'jump' ? 'start' : 'auto' });
-        if (p.pulse) setPulse((prev) => ({ ep: p.ep, n: (prev?.n ?? 0) + 1 }));
-      }
+      applyScroll(p);
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps -- reacts to selection changes only
   }, [selectedEp]);
 
-  // deferred scroll: runs after an auto-expanded section's rows are in items
+  // strip → list keyboard handoff (ruling 2026-08-21): ONLY an actual strip
+  // click hands the keyboard over — arrows/jk walk from the landed episode
+  // exactly as if the row had been clicked. Field edits in the position row
+  // also move the selection but must NEVER steal focus mid-typing, so this
+  // keys off the lookup's explicit jumpSerial, not the selection change.
+  const lastJumpRef = useRef(jumpSerial);
   useEffect(() => {
+    if (jumpSerial === undefined || jumpSerial === lastJumpRef.current) return;
+    lastJumpRef.current = jumpSerial;
+    scrollRef.current?.focus({ preventScroll: true });
+  }, [jumpSerial]);
+
+  // deferred scroll: runs after an auto-expanded section's rows are in items.
+  // LAYOUT effect, declared after the anchoring pass above so it runs second:
+  // compensation + selection scroll land in the SAME painted frame — no
+  // intermediate state ever reaches the screen.
+  useLayoutEffect(() => {
     const p = pendingScrollRef.current;
     if (!p) return;
     pendingScrollRef.current = null;
-    const idx = items.findIndex((it) => it.kind === 'row' && it.row.ep === p.ep);
-    if (idx < 0) return;
-    virtualizer.scrollToIndex(idx, { align: p.align === 'jump' ? 'start' : 'auto' });
-    if (p.pulse) setPulse((prev) => ({ ep: p.ep, n: (prev?.n ?? 0) + 1 }));
-  }, [items, virtualizer]);
+    applyScroll(p);
+  }, [applyScroll]);
 
   // ── list → strip: visible episode range for the minimap band ──────────────
   // Derived from the actually-rendered items (grouping-aware): an open
@@ -285,37 +414,58 @@ export const EpisodeList = ({
     computeRange();
   });
 
-  // ── keyboard: j/k (or ↑/↓) walks episodes through the lookup ──────────────
+  // ── keyboard: ↑/↓ (or j/k) walks episodes through the lookup — GLOBALLY ───
+  // Gmail/Linear-pattern list shortcuts (ruling 2026-08-21): while a selection
+  // exists, the keys walk episodes no matter where focus sits — EXCEPT inside
+  // an editable control (the position-row inputs keep their own arrows for
+  // stepping). reset() clears the selection and returns the keys to their
+  // native meaning; the one extra case is focus IN the list frame with no
+  // selection, where arrows seed from the edge (standard listbox behavior).
   // Walks only through VISIBLE sections (the sections prop is pre-filtered by
   // the legend filter); at the edge of visible content it no-ops.
-  const nextVisibleEp = (cur: number, dir: number): number | null => {
-    if (dir > 0) {
-      for (const s of sections) {
-        if (s.end <= cur) continue;
-        return cur >= s.start ? cur + 1 : s.start;
+  const nextVisibleEp = useCallback(
+    (cur: number, dir: number): number | null => {
+      if (dir > 0) {
+        for (const s of sections) {
+          if (s.end <= cur) continue;
+          return cur >= s.start ? cur + 1 : s.start;
+        }
+        return null;
+      }
+      for (let i = sections.length - 1; i >= 0; i--) {
+        const s = sections[i];
+        if (s.start >= cur) continue;
+        return cur <= s.end ? cur - 1 : s.end;
       }
       return null;
-    }
-    for (let i = sections.length - 1; i >= 0; i--) {
-      const s = sections[i];
-      if (s.start >= cur) continue;
-      return cur <= s.end ? cur - 1 : s.end;
-    }
-    return null;
-  };
-  const handleKeyDown = (e: React.KeyboardEvent) => {
+    },
+    [sections],
+  );
+  useEffect(() => {
     if (!interactive || !onSelectEpisode) return;
-    let dir = 0;
-    if (e.key === 'j' || e.key === 'ArrowDown') dir = 1;
-    else if (e.key === 'k' || e.key === 'ArrowUp') dir = -1;
-    else return;
-    e.preventDefault();
-    const cur = selectedEp ?? (dir > 0 ? 0 : rows.length + 1);
-    const next = nextVisibleEp(cur, dir);
-    if (next === null) return; // directional integrity: nothing that way → no-op
-    interactionRef.current = { ep: next, kind: 'key' };
-    onSelectEpisode(next);
-  };
+    const onKey = (e: KeyboardEvent) => {
+      if (e.metaKey || e.ctrlKey || e.altKey) return;
+      let dir = 0;
+      if (e.key === 'j' || e.key === 'ArrowDown') dir = 1;
+      else if (e.key === 'k' || e.key === 'ArrowUp') dir = -1;
+      else return;
+      const t = e.target instanceof HTMLElement ? e.target : null;
+      // editable targets always win — typing/stepping never walks the list
+      if (t?.closest('input, textarea, select, [contenteditable]')) return;
+      const inList = t !== null && (scrollRef.current?.contains(t) ?? false);
+      // reset state (no selection) → the keys keep their native meaning,
+      // unless focus sits in the list frame (listbox edge-seeding)
+      if (selectedEp === null && !inList) return;
+      e.preventDefault();
+      const cur = selectedEp ?? (dir > 0 ? 0 : rows.length + 1);
+      const next = nextVisibleEp(cur, dir);
+      if (next === null) return; // directional integrity: nothing that way → no-op
+      interactionRef.current = { ep: next, kind: 'key', dir };
+      onSelectEpisode(next);
+    };
+    document.addEventListener('keydown', onKey);
+    return () => document.removeEventListener('keydown', onKey);
+  }, [interactive, onSelectEpisode, selectedEp, nextVisibleEp, rows.length]);
 
   const anyOpen = open.size > 0;
 
@@ -355,7 +505,6 @@ export const EpisodeList = ({
       <div
         ref={scrollRef}
         tabIndex={0}
-        onKeyDown={handleKeyDown}
         onScroll={computeRange}
         className="relative max-h-80 overflow-y-auto tabular-nums outline-none focus-visible:outline focus-visible:outline-1 focus-visible:outline-dashed focus-visible:outline-foreground/25 focus-visible:outline-offset-[-1px]"
         role="listbox"
@@ -374,7 +523,12 @@ export const EpisodeList = ({
                   key={vi.key}
                   type="button"
                   onClick={() => toggleSection(s.index)}
-                  className="flex w-full cursor-pointer items-center gap-[0.6rem] bg-card px-[0.3rem] text-left text-sm hover:bg-popover"
+                  className={cn(
+                    // interior_v1: banded headers — the section's type color
+                    // washed over the opaque surface (index.css utilities)
+                    'flex w-full cursor-pointer items-center gap-[0.6rem] px-[0.3rem] text-left text-sm',
+                    SECTION_BAND[s.type] ?? 'bg-card hover:bg-popover',
+                  )}
                   style={
                     stuck
                       ? { position: 'sticky', top: 0, zIndex: 10, height: HEADER_H }
@@ -398,9 +552,9 @@ export const EpisodeList = ({
                   >
                     <ChevronRightIcon className="h-[0.7rem] w-[0.7rem]" />
                   </span>
-                  <span className="inline-flex shrink-0" style={badgeColStyle}>
-                    <TypeBadge type={badgeKindForEpisodeType(s.type)} />
-                  </span>
+                  {/* type tag retired from headers (2026-08-21): the section
+                      band color + colored marker carry the type; the range
+                      now sits over the rows' #ep column */}
                   <span className="text-muted-foreground">
                     ep:
                     <span className={isOpen ? 'text-foreground' : undefined}>
@@ -435,7 +589,9 @@ export const EpisodeList = ({
                   'flex items-center gap-[0.6rem] pr-[0.3rem] text-sm',
                   ROW_INDENT,
                   interactive && 'cursor-pointer hover:bg-muted/50',
-                  selected && 'bg-secondary/80',
+                  // interior_v1 selection grammar: hover = neutral bg step,
+                  // selected = bg step + 2px TYPE-colored rail (never zebra)
+                  selected && cn('bg-muted/40', RAIL_COLOR[row.type]),
                   pulsing && 'animate-row-pulse',
                 )}
                 style={{
@@ -445,6 +601,9 @@ export const EpisodeList = ({
                   right: 0,
                   height: ROW_H,
                   transform: `translateY(${vi.start}px)`,
+                  ...(pulsing
+                    ? ({ '--pulse-color': PULSE_COLOR[row.type] } as React.CSSProperties)
+                    : {}),
                 }}
                 role="option"
                 aria-selected={selected}

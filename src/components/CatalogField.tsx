@@ -2,6 +2,7 @@ import { useEffect, useLayoutEffect, useMemo, useRef, useState } from 'react';
 import { animate } from 'motion/react';
 import { AnimeSeries } from '@/types/anime';
 import { AnimeCard } from './AnimeCard';
+import { HOLD_DELAY, holdInterval } from '@/lib/hold';
 
 // ─── lab-tuned constants — rulings, not suggestions ─────────────────────────
 // flat_basis_v1 (Rolodex Lab aac0a3db) · takeover_v1 (Expand Lab 1a9ff4ed) ·
@@ -49,9 +50,12 @@ interface CatalogFieldProps {
   series: AnimeSeries[];
   query: string;
   loading?: boolean;
+  // lets the page scope its own hotkeys (⌘K, ←/→ caret recall) to the
+  // field state — true while a takeover card is open
+  onOpenChange?: (open: boolean) => void;
 }
 
-export const CatalogField = ({ series, query, loading }: CatalogFieldProps) => {
+export const CatalogField = ({ series, query, loading, onOpenChange }: CatalogFieldProps) => {
   const q = query.trim().toLowerCase();
   const reducedMotion = useMemo(
     () => window.matchMedia('(prefers-reduced-motion: reduce)').matches,
@@ -497,6 +501,82 @@ export const CatalogField = ({ series, query, loading }: CatalogFieldProps) => {
     return () => window.removeEventListener('keydown', onKey);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [open, closing]);
+
+  useEffect(() => {
+    onOpenChange?.(open !== null);
+  }, [open, onOpenChange]);
+
+  // ── keyboard walking (2026-08-21): ↑/↓ step the catalog through the focus
+  // line with the stepper's hold pacing (one app-wide acceleration
+  // vocabulary — imported, never forked); Enter opens the focused row. The
+  // search input is the page's one editable and ↑/↓ have no vertical meaning
+  // in it, so walking works while typing; other editables win. Hold pacing
+  // is ours (e.repeat ignored) so keyboard and pointer holds feel identical.
+  const focusedIndex = () => {
+    const sc = scrollerRef.current;
+    if (!sc || !vis.length) return -1;
+    const centerY = focusAbs(sc.scrollTop);
+    return Math.max(0, Math.min(vis.length - 1, Math.round((centerY - ROW_H / 2) / ROW_H)));
+  };
+  useEffect(() => {
+    let timer = 0;
+    let held: string | null = null;
+    const end = () => {
+      if (timer) window.clearTimeout(timer);
+      timer = 0;
+      held = null;
+    };
+    const stepRow = (dir: number) => {
+      const sc = scrollerRef.current;
+      if (!sc || openRef.current || busyRef.current) return;
+      const ci = focusedIndex();
+      if (ci < 0) return;
+      sc.scrollTop = scrollForRow(Math.max(0, Math.min(vis.length - 1, ci + dir)));
+      wake();
+    };
+    const onKey = (e: KeyboardEvent) => {
+      if (openRef.current || e.metaKey || e.ctrlKey || e.altKey) return;
+      const t = e.target instanceof HTMLElement ? e.target : null;
+      if (t?.closest('textarea, select, [contenteditable]')) return;
+      if (e.key === 'Enter') {
+        // rows/buttons own their native Enter; anywhere else (incl. the
+        // search input) Enter opens the focused row
+        if (t?.closest('button, a, [role="button"]')) return;
+        const ci = focusedIndex();
+        if (ci < 0) return;
+        e.preventDefault();
+        openRow(ci);
+        return;
+      }
+      if (e.key !== 'ArrowUp' && e.key !== 'ArrowDown') return;
+      e.preventDefault();
+      if (e.repeat) return;
+      end();
+      held = e.key;
+      const dir = e.key === 'ArrowUp' ? -1 : 1;
+      stepRow(dir);
+      let ticks = 0;
+      const tick = () => {
+        ticks++;
+        stepRow(dir);
+        timer = window.setTimeout(tick, holdInterval(ticks));
+      };
+      timer = window.setTimeout(tick, HOLD_DELAY);
+    };
+    const onUp = (e: KeyboardEvent) => {
+      if (e.key === held) end();
+    };
+    window.addEventListener('keydown', onKey);
+    window.addEventListener('keyup', onUp);
+    window.addEventListener('blur', end);
+    return () => {
+      end();
+      window.removeEventListener('keydown', onKey);
+      window.removeEventListener('keyup', onUp);
+      window.removeEventListener('blur', end);
+    };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [vis]);
 
   // Titles render as ONE opaque HTML string (dangerouslySetInnerHTML), never
   // as React children: the decode churn rewrites these nodes directly, and

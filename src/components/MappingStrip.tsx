@@ -1,13 +1,15 @@
-import { useRef, useState } from 'react';
+import { useLayoutEffect, useMemo, useRef, useState } from 'react';
 import { motion } from 'motion/react';
 import type { EpisodeSpan, EpisodeType } from '@/types/anime';
 import { cn } from '@/lib/utils';
 
+// forest_v1 type palette (2026-08-21) — dedicated --type-* tokens, decoupled
+// from semantic colors
 const SPAN_COLORS: Record<EpisodeType, string> = {
-  canon: 'bg-accent',
-  mixed: 'bg-syntax-amber',
-  filler: 'bg-destructive',
-  'anime-only-canon': 'bg-syntax-purple',
+  canon: 'bg-type-canon',
+  mixed: 'bg-type-mixed',
+  filler: 'bg-type-filler',
+  'anime-only-canon': 'bg-type-anime',
 };
 
 const SPAN_LABELS: Record<EpisodeType, string> = {
@@ -17,9 +19,35 @@ const SPAN_LABELS: Record<EpisodeType, string> = {
   'anime-only-canon': 'anime_only',
 };
 
-// Dimmed hatch for source material the anime hasn't covered
+// Dimmed hatch for source material the anime hasn't covered — manga_only's
+// own purple (2026-08-21, reverses the shares-canon ruling)
 const MANGA_ONLY_BACKGROUND =
-  'repeating-linear-gradient(45deg, hsl(var(--accent) / 0.3) 0 3px, transparent 3px 6px)';
+  'repeating-linear-gradient(45deg, hsl(var(--type-manga) / 0.4) 0 3px, transparent 3px 6px)';
+
+// ─── THE CHAPTER-BAR LAYOUT MODEL (final, 2026-08-21) ────────────────────────
+// The reference implementation is the YouTube chapter bar / GitHub language
+// bar: (1) every segment gets a MINIMUM paint width so nothing is sub-pixel,
+// (2) a fixed 1px gap separates every pair of segments, (3) interaction is
+// DECOUPLED from raw proportions — the pointer hit-tests the painted segment
+// and maps within that segment's own unit range (a gap pixel snaps to the
+// nearest segment), and the needle/band placement is the exact inverse of the
+// same mapping, so indicators always sit inside their segment's paint, never
+// in a gap. Large segments absorb what the minimums borrow, proportionally.
+const GAP_PX = 1;
+const MIN_SEG_PX = 2;
+
+interface Seg {
+  key: string;
+  type: EpisodeType | 'manga_only';
+  u0: number; // 0-based start in unit space
+  units: number;
+  hidden: boolean;
+  title: string;
+}
+interface SegRect extends Seg {
+  x: number;
+  w: number;
+}
 
 interface MappingStripProps {
   spans: EpisodeSpan[];
@@ -28,7 +56,7 @@ interface MappingStripProps {
   markerRest?: boolean;          // dim marker: the series' PRESENT position (inline instrument at rest)
   mangaAheadUnits?: number;      // manga_only tail width, in episode-equivalents
   mangaAheadChapters?: number | null; // for the tail's tooltip
-  onUnitClick?: (unit: number) => void; // click-to-set (MapLookup's stripClick)
+  onUnitClick?: (unit: number) => void; // click-to-set (the lookup's stripClick)
   // Minimap band: the episode range currently visible in the EpisodeList.
   // Treatment is M1 fill-only (chosen 2026-08-19): a brighter neutral fill,
   // NO edge lines — the highlight alone carries it.
@@ -40,11 +68,6 @@ interface MappingStripProps {
   className?: string;
 }
 
-// Whole-story density strip: one colored segment per contiguous span of
-// canon/mixed/filler/anime-only episodes, plus a hatched manga_only tail for
-// published chapters the anime hasn't adapted. Clickable when onUnitClick is
-// provided (hover shows a ghost needle); the marker dims for projected
-// positions beyond the aired run and pegs at the bar's end past the story.
 export const MappingStrip = ({
   spans,
   airedEpisodes,
@@ -58,23 +81,134 @@ export const MappingStrip = ({
   className,
 }: MappingStripProps) => {
   const wrapRef = useRef<HTMLDivElement>(null);
-  const [ghostPct, setGhostPct] = useState<number | null>(null);
+  const [ghostX, setGhostX] = useState<number | null>(null);
+  const [stripW, setStripW] = useState(0);
+
+  useLayoutEffect(() => {
+    const el = wrapRef.current;
+    if (!el) return;
+    const ro = new ResizeObserver(() => setStripW(el.clientWidth));
+    ro.observe(el);
+    setStripW(el.clientWidth);
+    return () => ro.disconnect();
+  }, []);
+
+  const totalUnits = airedEpisodes + Math.max(0, mangaAheadUnits);
+
+  // unit-space segments (data) — geometry-free
+  const segs = useMemo<Seg[]>(() => {
+    const out: Seg[] = [];
+    let u0 = 0;
+    for (const s of spans) {
+      const units = s.end - s.start + 1;
+      const hidden = hiddenTypes?.has(s.type) ?? false;
+      out.push({
+        key: `${s.start}-${s.type}`,
+        type: s.type,
+        u0,
+        units,
+        hidden,
+        title:
+          (s.start === s.end ? `ep_${s.start}` : `ep_${s.start}-${s.end}`) +
+          ` // ${SPAN_LABELS[s.type]}${hidden ? ' (filtered)' : ''}`,
+      });
+      u0 += units;
+    }
+    if (mangaAheadUnits > 0) {
+      const hidden = hiddenTypes?.has('manga_only') ?? false;
+      out.push({
+        key: 'manga_only',
+        type: 'manga_only',
+        u0,
+        units: mangaAheadUnits,
+        hidden,
+        title: `+${mangaAheadChapters ?? '?'}ch // manga_only (not_animated)${hidden ? ' (filtered)' : ''}`,
+      });
+    }
+    return out;
+  }, [spans, mangaAheadUnits, mangaAheadChapters, hiddenTypes]);
+
+  // paint-space rects: proportional widths, floored at MIN_SEG_PX, the
+  // borrow re-absorbed by segments with slack, fixed gaps between all
+  const rects = useMemo<SegRect[]>(() => {
+    if (stripW <= 0 || segs.length === 0 || totalUnits <= 0) return [];
+    const avail = Math.max(0, stripW - GAP_PX * (segs.length - 1));
+    let w = segs.map((s) => Math.max(MIN_SEG_PX, (s.units / totalUnits) * avail));
+    const over = w.reduce((a, b) => a + b, 0) - avail;
+    if (over > 0) {
+      const slack = w.map((x) => x - MIN_SEG_PX);
+      const S = slack.reduce((a, b) => a + b, 0);
+      if (S > 0) w = w.map((x, i) => x - over * (slack[i] / S));
+    }
+    // pixel-snap the layout: rounding each cumulative boundary keeps every
+    // gap EXACTLY 1 device px (crisp, never an antialiased fractional edge)
+    // and never shrinks a segment below its floor (round(c+w)-round(c) ≥ ⌊w⌋)
+    let cursor = 0;
+    return segs.map((s, i) => {
+      const x = Math.round(cursor);
+      const wi = Math.max(1, Math.round(cursor + w[i]) - x);
+      cursor += w[i] + GAP_PX;
+      return { ...s, x, w: wi };
+    });
+  }, [segs, stripW, totalUnits]);
 
   if (airedEpisodes <= 0 || spans.length === 0) return null;
 
-  const totalUnits = airedEpisodes + Math.max(0, mangaAheadUnits);
-  const showMarker = markerEpisode != null && markerEpisode >= 1;
-  const isProjection = showMarker && markerEpisode > airedEpisodes;
-  const markerLeft = showMarker
-    ? Math.min(((markerEpisode - 0.5) / totalUnits) * 100, 99.8)
-    : 0;
-
+  // pointer → unit: hit-test the painted segment (gaps snap to nearest)
   const unitAt = (clientX: number): number | null => {
     const rect = wrapRef.current?.getBoundingClientRect();
-    if (!rect || rect.width === 0) return null;
-    const frac = Math.max(0, Math.min(1, (clientX - rect.left) / rect.width));
-    // cell-accurate: unit k owns [(k-1)/T, k/T) of the width
-    return Math.max(1, Math.min(totalUnits, Math.floor(frac * totalUnits) + 1));
+    if (!rect || rects.length === 0) return null;
+    const px = clientX - rect.left;
+    let best: SegRect = rects[0];
+    let bestD = Infinity;
+    for (const r of rects) {
+      if (px >= r.x && px <= r.x + r.w) {
+        best = r;
+        bestD = 0;
+        break;
+      }
+      const d = px < r.x ? r.x - px : px - (r.x + r.w);
+      if (d < bestD) {
+        bestD = d;
+        best = r;
+      }
+    }
+    const local = Math.max(0, Math.min(0.999, (px - best.x) / best.w));
+    return best.u0 + Math.floor(local * best.units) + 1;
+  };
+
+  // unit-continuum → paint x: the exact inverse of unitAt (u in [0, total])
+  const xAt = (u: number): number => {
+    if (rects.length === 0) return 0;
+    const c = Math.max(0, Math.min(totalUnits - 0.0001, u));
+    const r = rects.find((r) => c >= r.u0 && c < r.u0 + r.units) ?? rects[rects.length - 1];
+    return r.x + ((c - r.u0) / r.units) * r.w;
+  };
+
+  // indicator ticks are 2px wide (w-0.5 -ml-px), CENTERED on a point — at a
+  // segment's first/last episode that center sits <1px from the boundary, so
+  // a raw xAt() tick would bleed into the gap (Sean's ep_336/382 report).
+  // Video-player playheads solve this by clamping the tick's extent inside
+  // the segment's PAINT: center ∈ [x+1, x+w-1] — never in a gap.
+  const tickX = (u: number): number => {
+    if (rects.length === 0) return 0;
+    const c = Math.max(0, Math.min(totalUnits - 0.0001, u));
+    const r = rects.find((s) => c >= s.u0 && c < s.u0 + s.units) ?? rects[rects.length - 1];
+    const x = r.x + ((c - r.u0) / r.units) * r.w;
+    const lo = r.x + 1;
+    const hi = Math.max(lo, r.x + r.w - 1);
+    return Math.min(Math.max(x, lo), hi);
+  };
+
+  const showMarker = markerEpisode != null && markerEpisode >= 1 && rects.length > 0;
+  const isProjection = showMarker && markerEpisode! > airedEpisodes;
+  const markerX = showMarker ? tickX(markerEpisode! - 0.5) : 0;
+
+  // the ghost previews EXACTLY where a click would land: pointer → episode
+  // (unitAt, gaps snap to nearest) → that episode's tick position
+  const snapGhost = (clientX: number): number | null => {
+    const u = unitAt(clientX);
+    return u === null ? null : tickX(u - 0.5);
   };
 
   return (
@@ -94,88 +228,85 @@ export const MappingStrip = ({
       onPointerMove={
         onUnitClick
           ? (e) => {
-              const rect = wrapRef.current?.getBoundingClientRect();
-              if (!rect || rect.width === 0) return;
-              setGhostPct(Math.max(0, Math.min(99.8, ((e.clientX - rect.left) / rect.width) * 100)));
+              setGhostX(snapGhost(e.clientX));
             }
           : undefined
       }
-      onPointerLeave={onUnitClick ? () => setGhostPct(null) : undefined}
+      onPointerLeave={onUnitClick ? () => setGhostX(null) : undefined}
     >
       <div className="relative">
-      <motion.div
-        // double-height trial (2026-08-19) — was h-1.5 (6px); the strip is
-        // the card's primary data visual and earns more presence
-        className={cn('flex h-3 w-full overflow-hidden', className)}
-        style={{ transformOrigin: 'left' }}
-        initial={{ transform: 'scaleX(0)' }}
-        whileInView={{ transform: 'scaleX(1)' }}
-        viewport={{ once: true, amount: 0.5 }}
-        transition={{ duration: 0.5, ease: 'easeOut' }}
-      >
-        {spans.map((span) => {
-          const hidden = hiddenTypes?.has(span.type) ?? false;
-          return (
+        <motion.div
+          // interior_v1 (2026-08-21): 18px tall; segments are absolutely
+          // placed from the paint-space layout above
+          className={cn('relative h-[18px] w-full overflow-hidden', className)}
+          style={{ transformOrigin: 'left' }}
+          initial={{ transform: 'scaleX(0)' }}
+          whileInView={{ transform: 'scaleX(1)' }}
+          viewport={{ once: true, amount: 0.5 }}
+          transition={{ duration: 0.5, ease: 'easeOut' }}
+        >
+          {rects.map((r) => (
             <div
-              key={`${span.start}-${span.type}`}
-              className={hidden ? 'bg-muted/60' : SPAN_COLORS[span.type]}
-              style={{ width: `${((span.end - span.start + 1) / totalUnits) * 100}%` }}
-              title={
-                span.start === span.end
-                  ? `ep_${span.start} // ${SPAN_LABELS[span.type]}${hidden ? ' (filtered)' : ''}`
-                  : `ep_${span.start}-${span.end} // ${SPAN_LABELS[span.type]}${hidden ? ' (filtered)' : ''}`
-              }
+              key={r.key}
+              className={cn(
+                'absolute inset-y-0',
+                r.hidden
+                  ? 'bg-muted/60'
+                  : r.type === 'manga_only'
+                    ? undefined
+                    : SPAN_COLORS[r.type],
+              )}
+              style={{
+                left: r.x,
+                width: r.w,
+                background:
+                  !r.hidden && r.type === 'manga_only' ? MANGA_ONLY_BACKGROUND : undefined,
+              }}
+              title={r.title}
             />
-          );
-        })}
-        {mangaAheadUnits > 0 && (
+          ))}
+        </motion.div>
+        {viewband && rects.length > 0 && (
           <div
-            className={hiddenTypes?.has('manga_only') ? 'bg-muted/60' : undefined}
+            aria-hidden
+            // M1 fill-only band; BRIGHT veil (2026-08-21): foreground at 45% —
+            // the original 18% vanished against forest_v1's bright fills and a
+            // muted mid-grey read as dimming, so the band went brighter instead
+            // (alpha is the dial if it ever fights the fills)
+            className="absolute -top-[3px] -bottom-[3px] bg-foreground/[0.45] pointer-events-none"
             style={{
-              width: `${(mangaAheadUnits / totalUnits) * 100}%`,
-              background: hiddenTypes?.has('manga_only') ? undefined : MANGA_ONLY_BACKGROUND,
+              left: xAt(viewband.start - 1),
+              width: Math.max(2, xAt(viewband.end) - xAt(viewband.start - 1)),
             }}
-            title={`+${mangaAheadChapters ?? '?'}ch // manga_only (not_animated)${hiddenTypes?.has('manga_only') ? ' (filtered)' : ''}`}
           />
         )}
-      </motion.div>
-      {viewband && (
-        <div
-          aria-hidden
-          className="absolute -top-[3px] -bottom-[3px] bg-foreground/[0.18] pointer-events-none"
-          style={{
-            left: `${((viewband.start - 1) / totalUnits) * 100}%`,
-            width: `${Math.max(0.4, ((viewband.end - viewband.start + 1) / totalUnits) * 100)}%`,
-          }}
-        />
-      )}
-      {onUnitClick && ghostPct !== null && (
-        <div
-          aria-hidden
-          className="absolute -top-0.5 -bottom-0.5 w-0.5 -ml-px bg-foreground/25 pointer-events-none"
-          style={{ left: `${ghostPct}%` }}
-        />
-      )}
-      {showMarker && (
-        <motion.div
-          aria-hidden
-          className={cn(
-            'absolute -top-1 -bottom-1 w-0.5 -ml-px pointer-events-none',
-            isProjection ? 'bg-muted-foreground' : markerRest ? 'bg-foreground/45' : 'bg-foreground',
-          )}
-          style={{ left: `${markerLeft}%` }}
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.15, ease: 'easeOut' }}
-          title={
-            isProjection
-              ? `ep_${Math.round(markerEpisode)} // projected`
-              : markerRest
-                ? `ep_${Math.round(markerEpisode)} // current`
-                : `ep_${Math.round(markerEpisode)}`
-          }
-        />
-      )}
+        {onUnitClick && ghostX !== null && (
+          <div
+            aria-hidden
+            className="absolute -top-0.5 -bottom-0.5 w-0.5 -ml-px bg-foreground/25 pointer-events-none"
+            style={{ left: ghostX }}
+          />
+        )}
+        {showMarker && (
+          <motion.div
+            aria-hidden
+            className={cn(
+              'absolute -top-1 -bottom-1 w-0.5 -ml-px pointer-events-none',
+              isProjection ? 'bg-muted-foreground' : markerRest ? 'bg-foreground/45' : 'bg-foreground',
+            )}
+            style={{ left: markerX }}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.15, ease: 'easeOut' }}
+            title={
+              isProjection
+                ? `ep_${Math.round(markerEpisode!)} // projected`
+                : markerRest
+                  ? `ep_${Math.round(markerEpisode!)} // current`
+                  : `ep_${Math.round(markerEpisode!)}`
+            }
+          />
+        )}
       </div>
     </div>
   );
