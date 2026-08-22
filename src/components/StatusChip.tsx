@@ -6,6 +6,11 @@ import { cn } from '@/lib/utils';
 // grammar now belongs to the legend's interactive filters, and placement
 // (top-right of the identity band) + the status hue carry the state on
 // their own. airing = accent green, hiatus = amber, terminal = muted.
+//
+// ONE REGISTER everywhere (Sean's max-consistency ruling, 2026-08-21):
+// 12px (text-xs), no tracking — the homepage row meta is the reference,
+// and the card/detail seats match it exactly. Seats may position the chip
+// (margins/shrink) but never restyle its size, tracking, or hues.
 export const StatusChip = ({
   status,
   className,
@@ -15,7 +20,7 @@ export const StatusChip = ({
 }) => (
   <span
     className={cn(
-      'py-px text-[10px] tracking-wide',
+      'text-xs',
       status === 'airing' && 'text-accent',
       status === 'hiatus' && 'text-syntax-amber',
       (status === 'finished' || status === 'upcoming') && 'text-muted-foreground',

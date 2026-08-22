@@ -596,13 +596,10 @@ export const CatalogField = ({ series, query, loading, onOpenChange }: CatalogFi
       esc(title.slice(idx + q.length))
     );
   };
-  // status renders through StatusChip (harmony pass 2026-08-21 — the one
-  // component for every airing-status render); the row meta keeps its own
-  // register (META_PX via the wrapper, no tracking, no padding), so only
-  // the hue mapping is inherited
-  const statusMeta = (s: AnimeSeries) => (
-    <StatusChip status={s.status} className="p-0 text-[length:inherit] tracking-normal" />
-  );
+  // status renders through StatusChip, unstyled (one-register ruling
+  // 2026-08-21: 12px untracked everywhere — this row meta IS the reference;
+  // META_PX = text-xs by definition, so wrapper and chip agree)
+  const statusMeta = (s: AnimeSeries) => <StatusChip status={s.status} />;
 
   // MODAL BACKGROUND (2026-08-21): while the takeover is open, the field
   // scroller + rail are `inert` — unfocusable, unclickable, hidden from

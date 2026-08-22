@@ -96,10 +96,10 @@ frame. iOS-style `A · C · E` abbreviation was tried and rejected.
 ## 2. Row metadata (Row Meta & Grep Lab ruling)
 
 `meta: status` — the series' status word, right-aligned in the row at **12px**,
-tone-scale muted (airing = accent green, hiatus = amber, else muted). The hue
-mapping renders through **`StatusChip`** (harmony pass 2026-08-21 — one
-component for every airing-status render); the row meta keeps its own
-register (12px via the wrapper, no tracking).
+tone-scale muted (airing = accent green, hiatus = amber, else muted). Renders through **`StatusChip`, unstyled** (2026-08-21): the chip's one
+register (12px `text-xs`, no tracking) IS this row meta's — Sean's
+max-consistency ruling made the homepage the reference and the card/detail
+seats match it exactly.
 **reveal = center**: meta opacity is f², so it fades in only as a row
 approaches focus. The field reads as pure titles; the focused row quietly
 reports. Progress/full variants were explored and rejected for v1.
