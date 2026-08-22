@@ -1,0 +1,1 @@
+ALTER TABLE anime_progress ADD COLUMN notes text;;
