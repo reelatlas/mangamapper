@@ -226,10 +226,18 @@ const buildMapping = (row: SeriesRow, eps: EpisodeRow[], anchors: AnchorRow[], b
   const scopeStartCh = row.manga_start_chapter ?? 1;
   const adaptedSpan = coveredChapter !== null ? coveredChapter - scopeStartCh + 1 : null;
   const canonEpisodes = counts.canon + counts.mixed;
+  // The manga_only tail is only knowable when anchors reach the end of the
+  // run. Sparse coverage (AFG's Naruto table stops early) would fabricate a
+  // giant tail out of chapters the anime DID adapt — an unknown frontier
+  // shows no tail (first-class empty state beats a false claim).
+  const lastCanonEp = eps.reduce((m, e) => (e.type !== 'filler' ? Math.max(m, e.number) : m), 0);
+  const anchorsReachEnd =
+    latestAnchor !== null && lastCanonEp > 0 && latestAnchor.episode >= lastCanonEp - 12;
   let mangaAheadChapters: number | null = null;
   let mangaAheadUnits = 0;
   if (
     hasSource &&
+    anchorsReachEnd &&
     row.total_chapters &&
     coveredChapter &&
     adaptedSpan &&

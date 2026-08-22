@@ -97,6 +97,22 @@ export function parseAfgPage(html: string): AfgPage {
   return { title, seasons, episodes: deduped };
 }
 
+// Anchor derivation from a parsed page, with a monotonicity filter: chapters
+// never decrease as episodes advance, so any anchor below the running maximum
+// is page junk (AFG's Naruto page: ep 141 → "ch 21") and gets dropped.
+export function deriveAnchors(episodes: AfgEpisode[]): { episode: number; chapter: number; arc: string | null }[] {
+  const out: { episode: number; chapter: number; arc: string | null }[] = [];
+  let maxSeen = 0;
+  for (const e of [...episodes].sort((a, b) => a.number - b.number)) {
+    if (!e.chapters.length) continue;
+    const chapter = Math.max(...e.chapters);
+    if (chapter < maxSeen) continue; // non-monotonic = junk cell
+    maxSeen = chapter;
+    out.push({ episode: e.number, chapter, arc: e.arc });
+  }
+  return out;
+}
+
 export function parseSitemap(xml: string): string[] {
   const slugs: string[] = [];
   for (const m of xml.matchAll(/<loc>https?:\/\/www\.animefillerguide\.com\/anime\/([^/<]+)\/?<\/loc>/g)) {

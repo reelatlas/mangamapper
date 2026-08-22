@@ -197,42 +197,37 @@ export const AnimeCard = ({ anime, onClose }: AnimeCardProps) => {
                       {/* left slot: view chrome, not a data filter —
                           bare_miniature contract lives in MinimapToggle */}
                       <MinimapToggle on={minimapOn} onToggle={toggleMinimap} className="mr-auto" />
-                      {mapping.sourceType === 'original' ? (
+                      {/* legend renders purely by count — NO source-type
+                          branching. The mock era's two branches each hid real
+                          tags on real data: manga series with anime-original
+                          canon (One Piece's 21 eps), originals with filler
+                          (Super Dragon Ball Heroes). Data decides, not class. */}
+                      {mapping.canonCount > 0 && (
+                        <TypeBadge type="canon" count={mapping.canonCount} {...badgeState('canon')} />
+                      )}
+                      {mapping.mixedCount > 0 && (
+                        <TypeBadge type="mixed" count={mapping.mixedCount} {...badgeState('mixed')} />
+                      )}
+                      {mapping.fillerCount > 0 && (
+                        <TypeBadge
+                          type="filler"
+                          count={`${mapping.fillerCount} (${mapping.fillerPercent}%)`}
+                          {...badgeState('filler')}
+                        />
+                      )}
+                      {mapping.animeOnlyCount > 0 && (
                         <TypeBadge
                           type="anime_only"
                           count={mapping.animeOnlyCount}
                           {...badgeState('anime_only')}
                         />
-                      ) : (
-                        <>
-                          <TypeBadge type="canon" count={mapping.canonCount} {...badgeState('canon')} />
-                          {mapping.mixedCount > 0 && (
-                            <TypeBadge type="mixed" count={mapping.mixedCount} {...badgeState('mixed')} />
-                          )}
-                          {mapping.fillerCount > 0 && (
-                            <TypeBadge
-                              type="filler"
-                              count={`${mapping.fillerCount} (${mapping.fillerPercent}%)`}
-                              {...badgeState('filler')}
-                            />
-                          )}
-                          {/* manga series carry anime-original canon too (One
-                              Piece has 21 such eps) — the mock era hid this */}
-                          {mapping.animeOnlyCount > 0 && (
-                            <TypeBadge
-                              type="anime_only"
-                              count={mapping.animeOnlyCount}
-                              {...badgeState('anime_only')}
-                            />
-                          )}
-                          {mapping.mangaAheadChapters != null && mapping.mangaAheadChapters > 0 && (
-                            <TypeBadge
-                              type="manga_only"
-                              count={`+${mapping.mangaAheadChapters}ch`}
-                              {...badgeState('manga_only')}
-                            />
-                          )}
-                        </>
+                      )}
+                      {mapping.mangaAheadChapters != null && mapping.mangaAheadChapters > 0 && (
+                        <TypeBadge
+                          type="manga_only"
+                          count={`+${mapping.mangaAheadChapters}ch`}
+                          {...badgeState('manga_only')}
+                        />
                       )}
                     </div>
                     {/* legend → list spacing matches the card's region rhythm;

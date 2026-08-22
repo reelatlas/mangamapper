@@ -4,7 +4,7 @@
 // pacing; ~460 pages ≈ 80 min; resumable via the 24h staging window.
 //   npx tsx --env-file=.env.ingest scripts/ingest/afg-backfill.ts
 
-import { AFG_BASE, parseAfgPage, parseSitemap } from './lib/afg';
+import { AFG_BASE, parseAfgPage, parseSitemap, deriveAnchors } from './lib/afg';
 import { politeFetch } from './lib/http';
 import { contentHash } from './lib/hash';
 import { db, startRun, finishRun, fileFlagOnce } from './lib/db';
@@ -115,13 +115,13 @@ async function main() {
         }
 
         await db.from('chapter_anchors').delete().eq('series_id', target.id).eq('source', 'afg');
-        const rows = withChapters.map((e) => ({
+        const rows = deriveAnchors(page.episodes).map((a) => ({
           series_id: target.id,
-          episode: e.number,
+          episode: a.episode,
           volume: null,
-          chapter: Math.max(...e.chapters),
+          chapter: a.chapter,
           source: 'afg',
-          note: e.arc,
+          note: a.arc,
         }));
         for (let j = 0; j < rows.length; j += 500) {
           const { error: aErr } = await db.from('chapter_anchors').upsert(rows.slice(j, j + 500));
