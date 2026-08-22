@@ -487,6 +487,27 @@ export const CatalogField = ({ series, query, loading, onOpenChange }: CatalogFi
   const requestClose = () => {
     if (openRef.current && !closing) setClosing(true);
   };
+
+  // LIGHT DISMISS, document-level (2026-08-21, Sean's report: clicks ABOVE
+  // the card didn't close it — the old handler lived on the stage div, but
+  // the card borrows 132px of headroom above the stage and the search band
+  // + header belong to no stage). Best practice: ANY pointerdown outside
+  // the dialog dismisses (pointerdown, not click — dismiss on press, like
+  // native <dialog>/Radix). requestClose is idempotent, so overlap with
+  // Esc/x paths is safe. Phase-2 caveat: portal-rendered content (Radix
+  // selects) lives OUTSIDE the dialog DOM — exempt it here when it
+  // arrives.
+  useEffect(() => {
+    if (!open) return;
+    const onDown = (e: PointerEvent) => {
+      const t = e.target instanceof Element ? e.target : null;
+      if (t?.closest('[role="dialog"]')) return;
+      requestClose();
+    };
+    document.addEventListener('pointerdown', onDown);
+    return () => document.removeEventListener('pointerdown', onDown);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [open]);
   const finishClose = () => {
     // the field uncovers already positioned on the opened title (focus ruling)
     setOpen(null);
@@ -617,7 +638,9 @@ export const CatalogField = ({ series, query, loading, onOpenChange }: CatalogFi
   }, [open]);
 
   return (
-    <div ref={stageRef} className="relative h-full min-h-0" onClick={requestClose}>
+    {/* close-on-click lives at the document level (light dismiss above),
+        not on the stage — the card overhangs the stage's top edge */}
+    <div ref={stageRef} className="relative h-full min-h-0">
       {/* watermark letter — centered on the field, i.e. on the focus line */}
       <div
         ref={glyphRef}
@@ -781,7 +804,16 @@ const TakeoverOverlay = ({
     const prev = document.activeElement instanceof HTMLElement ? document.activeElement : null;
     ovlRef.current?.focus({ preventScroll: true });
     return () => {
-      if (prev && prev !== document.body && prev.isConnected) {
+      // restore ONLY if focus is still ours (in the overlay, or fell to
+      // body) — a light-dismiss click may have already placed focus where
+      // the user aimed (e.g. the search input above the card), and
+      // stealing it back would fight their click (2026-08-21)
+      const active = document.activeElement;
+      const stillOurs =
+        active === null ||
+        active === document.body ||
+        (ovlRef.current?.contains(active) ?? false);
+      if (stillOurs && prev && prev !== document.body && prev.isConnected) {
         prev.focus({ preventScroll: true });
       }
     };

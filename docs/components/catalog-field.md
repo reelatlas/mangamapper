@@ -155,6 +155,15 @@ Click a row (or Enter when focused) →
    resizes and mobile soft-keyboard resizes alike)) — reverse grow, then
    the field uncovers **already centered on the title you opened**. Focus
    follows what you opened, never the pre-click scroll position.
+   **Click-away is DOCUMENT-level light dismiss (2026-08-21, Sean's
+   report: clicks above the card didn't close):** any pointerdown outside
+   `[role="dialog"]` dismisses — the old stage-scoped handler missed the
+   headroom band, search line, and header the card can overhang. Dismiss
+   on press (pointerdown), the native-dialog/Radix convention. Focus
+   restore yields if the dismissing click already placed focus (clicking
+   the search input closes the card AND lands the caret there — no
+   steal-back). Phase-2 caveat: exempt portal-rendered content (Radix
+   selects render outside the dialog DOM).
 
 ~~Deferred to the aesthetic pass: content stagger~~ **SHIPPED with
 instrument_v1 (2026-08-20):** the card's own **print entrance** (`.card-print`,
