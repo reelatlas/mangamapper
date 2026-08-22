@@ -144,7 +144,12 @@ export const AnimeCard = ({ anime, onClose }: AnimeCardProps) => {
                     />
                   </div>
                   <div className="min-w-0 pt-0.5">
-                    <div className="title-glow text-base font-semibold text-syntax-green leading-tight break-words">
+                    {/* 18px = the field's TEXT_PX (title seam ruling,
+                        2026-08-21): the takeover morph keeps the title's
+                        SIZE; the hue change stays semantic — cyan =
+                        transient focus (field), green glow = string-value
+                        content at rest (instrument_v1's one phosphor) */}
+                    <div className="title-glow text-[18px] font-semibold text-syntax-green leading-tight break-words">
                       {anime.title}
                     </div>
                     <div className="text-xs text-muted-foreground mt-0.5 break-words">
