@@ -225,6 +225,7 @@ in code (`scripts/ingest/`), and every violation flags rather than guesses:
 | **Identity registry** | every external id maps into series.id via series_external_ids; writers register inline; collisions throw | registerIds (resolve.ts) |
 | **Scope-audit gate** | AFL classifying MORE than the matched entry aired (>2) = mis-scope, stitch or flag — AFL cannot know unaired episodes | stitch.ts candidates |
 | AFG alignment gate | AFG's numbering must match ours ±12 before anchors write; strict episode-cell parse (no digit-mashing) | afg-backfill / afg.ts |
+| **Source-scope enforcement** | an entry shows ONLY its own range of the manga (Naruto = vol 1-27/ch 1-244, never the franchise); curated `series_scopes` rows applied by every writer; sequel-linked series sharing a manga without scope rows are auto-flagged | applyScope (resolve.ts) / scopes-apply.ts |
 | Dispositions | active / excluded / duplicate / merged rulings are durable data; backfill skips non-active | source_map |
 
 **Hard-won learnings** (why some rules exist): AFL's Drupal is corrupt since

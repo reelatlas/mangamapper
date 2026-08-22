@@ -7,7 +7,7 @@
 
 import { db, startRun, finishRun, fileFlagOnce } from './lib/db';
 import { mediaByIds, type AniListMedia } from './lib/anilist';
-import { stageAniList, registerIds, searchTextFor } from './lib/resolve';
+import { stageAniList, registerIds, searchTextFor, applyScope } from './lib/resolve';
 import { slugify } from './lib/slug';
 import type { AflShowPage } from './lib/afl';
 
@@ -308,6 +308,15 @@ async function main() {
         series.title = override.title;
         series.id = slugify(override.title);
       }
+      Object.assign(
+        series,
+        await applyScope(cand.slug, {
+          total_volumes: series.total_volumes,
+          total_chapters: series.total_chapters,
+          manga_start_volume: series.manga_start_volume,
+          manga_start_chapter: series.manga_start_chapter,
+        }),
+      );
 
       const { data: old } = await db.from('series').select('id').eq('afl_slug', cand.slug).maybeSingle();
       if (old && old.id !== series.id) await db.from('series').delete().eq('id', old.id);

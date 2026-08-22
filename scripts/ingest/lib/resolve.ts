@@ -26,6 +26,28 @@ const decodeSlug = (s: string) => {
 export const searchTextFor = (parts: (string | null | undefined)[], synonyms: string[]): string =>
   [...new Set([...parts, ...synonyms].filter(Boolean).map((s) => String(s).toLowerCase()))].join(' ');
 
+// Source-scope enforcement (DESIGN_SYSTEM §6): curated series_scopes rows
+// override manga-wide totals with the entry's OWN range. Applied by every
+// writer AND runnable standalone (scopes-apply) after curated edits.
+export async function applyScope(
+  aflSlug: string,
+  fields: {
+    total_volumes: number | null;
+    total_chapters: number | null;
+    manga_start_volume: number | null;
+    manga_start_chapter: number | null;
+  },
+) {
+  const { data: scope } = await db.from('series_scopes').select('*').eq('afl_slug', aflSlug).maybeSingle();
+  if (!scope) return fields;
+  return {
+    total_volumes: scope.end_volume ?? fields.total_volumes,
+    total_chapters: scope.end_chapter ?? fields.total_chapters,
+    manga_start_volume: scope.start_volume ?? fields.manga_start_volume,
+    manga_start_chapter: scope.start_chapter ?? fields.manga_start_chapter,
+  };
+}
+
 // The identity registry (data-pipeline.md): external ids map INTO our id.
 // A different series already holding the id is a hard error — the exact
 // cross-source mixup the registry exists to prevent.
@@ -353,12 +375,12 @@ export async function resolveSeries(runId: number, slug: string): Promise<{ epis
     external_links: media.externalLinks,
     manga_anilist_id: manga?.id ?? null,
     manga_status: manga ? MANGA_STATUS_MAP[manga.status ?? ''] ?? 'publishing' : 'anime_only',
-    total_volumes: manga?.volumes ?? null,
-    total_chapters: manga?.chapters ?? null,
-    // Source-scope floors (sequels starting mid-manga) need franchise-level
-    // resolution — manual/override work, not derivable per-series. Left null.
-    manga_start_volume: null,
-    manga_start_chapter: null,
+    ...(await applyScope(slug, {
+      total_volumes: manga?.volumes ?? null,
+      total_chapters: manga?.chapters ?? null,
+      manga_start_volume: null,
+      manga_start_chapter: null,
+    })),
     search_text: searchTextFor(
       [media.title.english, media.title.romaji, media.title.native, page.title],
       media.synonyms,
