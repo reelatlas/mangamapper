@@ -81,18 +81,21 @@ search line (96px under the global header, 64px above the field) stays fixed
 and ALL remaining viewport height goes to the field's frame. The search line
 is left-aligned with the title column (same `min(52ch,82%)` width formula at
 the field's 18px so the ch-math resolves identically, plus the 2ch cursor
-gutter). Its idiom: a muted **search icon sitting ON the dashed underline**
-(one continuous rule with the input and the clear `x`); **the active state
-lights the ICON primary, never the line** — in this system a dashed underline
-means *editability*, not activity. **The underline spans 2/3 of the
+gutter). Its idiom: the muted **magnifier hangs LEFT of the underline in the 2ch
+cursor gutter** — the same column where the rows' `> ` caret renders
+(2026-08-21, supersedes icon-on-the-line: the gutter is the cursor zone in
+both registers — `>` lights primary at row focus, the magnifier lights
+primary at search focus), so the typed query starts flush with the title
+glyphs; **the active state lights the ICON primary, never the line** — in
+this system a dashed underline means *editability*, not activity. **The underline spans HALF the
 title area (Sean's tuning walk, 2026-08-21: full column → title area →
-2/3):** one fixed rule from the title-glyph start (the 2ch gutter),
-width = `(column − status zone) × 2/3` — the status-zone reserve is
-derived, not eyeballed (widest status word "finished"/"upcoming" = 8ch at
-META_PX × Plex's 0.6em advance + the rows' pl-4 = 73.6px). The width is a
-formula, so the line's geometry is state-invariant by construction; the
-keycap hint hangs right of the line's end (ml-3, empty+inactive only) and
-the input flexes inside the line. (96/64 are a composition ruling, not
+2/3 → 58% → 50%):** one fixed rule from the title-glyph start, width =
+`(column − status zone) × 0.5` — the status-zone reserve is derived, not
+eyeballed (widest status word "finished"/"upcoming" = 8ch at META_PX ×
+Plex's 0.6em advance + the rows' pl-4 = 73.6px). The width is a formula,
+so the line's geometry is state-invariant by construction; the keycap
+hint hangs right of the line's end (ml-3, empty+inactive only) and the
+input flexes inside the line. (96/64 are a composition ruling, not
 tokens yet — mint page-rhythm tokens when a second page needs them.)
 
 **The rail is responsive by columns (ruling 2026-08-19):** every letter stays
@@ -196,7 +199,11 @@ opacity/weight by position) remains — it's layout, not motion.
   ([src/components/Kbd.tsx](../../src/components/Kbd.tsx) — tonal @ md,
   `gap-1` chord gap; the recipe lives in the component + DESIGN_SYSTEM §3.1,
   never restated here). Esc in search: text → clear + stay active; empty → blur;
-  consumed via stopPropagation (layering rule). ←/→ with a query but focus
+  consumed via stopPropagation (layering rule). **Esc from anywhere
+  (2026-08-21, the ladder's blurred rung):** search inactive but holding a
+  query → Esc clears it (the field un-filters); inactive and empty → Esc
+  stays free. An open card still owns Esc first; other editables keep
+  their native Esc. ←/→ with a query but focus
   elsewhere recall the search caret and step it one glyph (walking keeps the
   text one arrow away). All page hotkeys defer to an open card
   (`onOpenChange` prop).

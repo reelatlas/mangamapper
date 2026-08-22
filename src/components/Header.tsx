@@ -38,7 +38,7 @@ export const Header = () => {
           <Button variant="ghost" size="sm" asChild className="font-mono text-xs">
             <Link to="/" className="flex items-center gap-1.5">
               <Home className="w-3.5 h-3.5" />
-              <span className="hidden sm:inline">catalog</span>
+              <span className="hidden sm:inline">home</span>
             </Link>
           </Button>
           {user ? (

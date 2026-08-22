@@ -22,12 +22,30 @@ const Index = () => {
 
   // page hotkeys (2026-08-21): ⌘K activates search from anywhere; ←/→ with a
   // query but focus elsewhere recall the search caret (walking the list with
-  // ↑/↓ keeps the search text one arrow away). Both defer to an open card.
+  // ↑/↓ keeps the search text one arrow away). All defer to an open card.
   useEffect(() => {
     const onKey = (e: KeyboardEvent) => {
       if ((e.metaKey || e.ctrlKey) && e.key.toLowerCase() === 'k') {
         e.preventDefault(); // browsers own ⌘K otherwise
         searchRef.current?.focus();
+        return;
+      }
+      // Esc from ANYWHERE clears a standing query (Sean, 2026-08-21 — the
+      // ladder's blurred rung): search inactive but holding text → clear;
+      // inactive and empty → Esc stays free (no-op). The layering law
+      // holds: an open card owns Esc first; a focused search runs its own
+      // ladder (text → clear + stay active; empty → blur); other editables
+      // keep their native Esc.
+      if (e.key === 'Escape') {
+        if (cardOpen) return; // the card's window handler owns this press
+        const el = searchRef.current;
+        if (!el || document.activeElement === el) return; // input's own ladder
+        const t = e.target instanceof HTMLElement ? e.target : null;
+        if (t?.closest('input, textarea, select, [contenteditable]')) return;
+        if (el.value) {
+          setInput('');
+          setQuery('');
+        }
         return;
       }
       if (e.key !== 'ArrowLeft' && e.key !== 'ArrowRight') return;
@@ -66,9 +84,9 @@ const Index = () => {
             to the title column's; the children size themselves in rem */}
         <div className="mx-auto w-[min(52ch,82%)] pl-[2ch]" style={{ fontSize: 18 }}>
           {/* THE UNDERLINE (Sean's tuning walk, 2026-08-21: full column →
-              title area → **2/3 of the title area**): one fixed dashed rule
+              title area → 2/3 → 58% → **50%**): one fixed dashed rule
               from the title-glyph start (the 2ch gutter, via the wrapper's
-              padding), spanning 2/3 of the title area. Title area = column
+              padding), spanning HALF the title area. Title area = column
               minus the rows' status zone; the reserve is derived, not
               eyeballed: widest status word ("finished"/"upcoming") = 8ch at
               META_PX 12px × Plex Mono's 0.6em advance = 57.6px + the rows'
@@ -77,11 +95,17 @@ const Index = () => {
               keycap hint hangs right of the line's end (empty+inactive
               only), and the input flexes inside the line. */}
           {/* active state lives on the ICON, not the line (ruling 2026-08-19) */}
+          {/* icon trial (2026-08-21): the magnifier hangs LEFT of the line,
+              in the 2ch cursor gutter — the same column where the rows'
+              `> ` caret renders. The gutter is the cursor zone in both
+              registers: `>` lights primary at row focus, the magnifier
+              lights primary at search focus. The input now starts flush
+              with the line = flush with the title glyphs. */}
           <div className="group/search flex items-center">
-            <span className="flex w-[calc((100%-73.6px)*2/3)] items-center gap-[1ch] border-b border-dashed border-border pb-1">
+            <span className="relative flex w-[calc((100%-73.6px)*0.5)] items-center border-b border-dashed border-border pb-1">
               <Search
                 aria-hidden
-                className="h-3.5 w-3.5 shrink-0 text-muted-foreground/60 transition-colors group-focus-within/search:text-primary"
+                className="absolute -left-[2ch] top-[calc(50%-2px)] h-3.5 w-3.5 -translate-y-1/2 text-muted-foreground/60 transition-colors group-focus-within/search:text-primary"
               />
               <span className="relative flex flex-1 items-baseline">
                 <input
