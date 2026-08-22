@@ -22,6 +22,45 @@ const decodeSlug = (s: string) => {
   }
 };
 
+// Every name a series answers to, for search (english/romaji/native + synonyms).
+export const searchTextFor = (parts: (string | null | undefined)[], synonyms: string[]): string =>
+  [...new Set([...parts, ...synonyms].filter(Boolean).map((s) => String(s).toLowerCase()))].join(' ');
+
+// The identity registry (data-pipeline.md): external ids map INTO our id.
+// A different series already holding the id is a hard error — the exact
+// cross-source mixup the registry exists to prevent.
+export async function registerIds(
+  seriesId: string,
+  ids: Record<string, string | number | null | undefined>,
+) {
+  for (const [source, val] of Object.entries(ids)) {
+    if (val == null) continue;
+    const external_id = String(val);
+    const { error } = await db.from('series_external_ids').insert({ series_id: seriesId, source, external_id });
+    if (!error) continue;
+    if (error.code !== '23505') throw new Error(`registerIds(${seriesId}/${source}): ${error.message}`);
+    const { data: existing } = await db
+      .from('series_external_ids')
+      .select('series_id, external_id')
+      .eq('source', source)
+      .eq('external_id', external_id)
+      .maybeSingle();
+    if (existing && existing.series_id !== seriesId) {
+      throw new Error(
+        `ID COLLISION: ${source}:${external_id} already maps to "${existing.series_id}", refused for "${seriesId}"`,
+      );
+    }
+    if (!existing) {
+      // (series_id, source) unique hit: this series' id for the source changed
+      await db
+        .from('series_external_ids')
+        .update({ external_id })
+        .eq('series_id', seriesId)
+        .eq('source', source);
+    }
+  }
+}
+
 const STOP = new Set(['the', 'a', 'an', 'of', 'on', 'in', 'to', 'and', 'no', 'wa', 'ga']);
 const titleTokens = (s: string) =>
   new Set(
@@ -320,11 +359,16 @@ export async function resolveSeries(runId: number, slug: string): Promise<{ epis
     // resolution — manual/override work, not derivable per-series. Left null.
     manga_start_volume: null,
     manga_start_chapter: null,
+    search_text: searchTextFor(
+      [media.title.english, media.title.romaji, media.title.native, page.title],
+      media.synonyms,
+    ),
     updated_at: new Date().toISOString(),
   };
 
   const { error: e4 } = await db.from('series').upsert(series);
   if (e4) throw new Error(`series upsert (${slug}): ${e4.message}`);
+  await registerIds(id, { anilist: media.id, mal: media.idMal, afl: slug });
 
   // Full replace: episode sets only ever change via a staging write that
   // already passed the hash/large-diff gates.

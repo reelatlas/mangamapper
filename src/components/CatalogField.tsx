@@ -76,7 +76,10 @@ export const CatalogField = ({ series, query, loading, onOpenChange }: CatalogFi
     [series],
   );
   const vis = useMemo(
-    () => (q ? sorted.filter((s) => s.title.toLowerCase().includes(q)) : sorted),
+    // grep sweeps every name a series answers to — "higurashi" (romaji),
+    // "when they cry" (english), "ひぐらしのなく頃に" (native) all land; the
+    // decode-highlight still marks only the display title's own matches
+    () => (q ? sorted.filter((s) => s.title.toLowerCase().includes(q) || s.searchText?.includes(q)) : sorted),
     [sorted, q],
   );
   const letters = useMemo(() => {

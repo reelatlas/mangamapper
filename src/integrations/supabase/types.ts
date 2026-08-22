@@ -397,6 +397,7 @@ export type Database = {
           mean_score: number | null
           next_airing_at: string | null
           popularity: number
+          search_text: string
           season: string | null
           season_year: number | null
           source_type: string
@@ -439,6 +440,7 @@ export type Database = {
           mean_score?: number | null
           next_airing_at?: string | null
           popularity?: number
+          search_text?: string
           season?: string | null
           season_year?: number | null
           source_type?: string
@@ -481,6 +483,7 @@ export type Database = {
           mean_score?: number | null
           next_airing_at?: string | null
           popularity?: number
+          search_text?: string
           season?: string | null
           season_year?: number | null
           source_type?: string
@@ -538,6 +541,35 @@ export type Database = {
         Relationships: [
           {
             foreignKeyName: "series_components_series_id_fkey"
+            columns: ["series_id"]
+            isOneToOne: false
+            referencedRelation: "series"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      series_external_ids: {
+        Row: {
+          created_at: string
+          external_id: string
+          series_id: string
+          source: string
+        }
+        Insert: {
+          created_at?: string
+          external_id: string
+          series_id: string
+          source: string
+        }
+        Update: {
+          created_at?: string
+          external_id?: string
+          series_id?: string
+          source?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "series_external_ids_series_id_fkey"
             columns: ["series_id"]
             isOneToOne: false
             referencedRelation: "series"

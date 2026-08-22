@@ -216,6 +216,15 @@ export const AnimeCard = ({ anime, onClose }: AnimeCardProps) => {
                               {...badgeState('filler')}
                             />
                           )}
+                          {/* manga series carry anime-original canon too (One
+                              Piece has 21 such eps) — the mock era hid this */}
+                          {mapping.animeOnlyCount > 0 && (
+                            <TypeBadge
+                              type="anime_only"
+                              count={mapping.animeOnlyCount}
+                              {...badgeState('anime_only')}
+                            />
+                          )}
                           {mapping.mangaAheadChapters != null && mapping.mangaAheadChapters > 0 && (
                             <TypeBadge
                               type="manga_only"

@@ -95,6 +95,9 @@ export interface AnimeSeries {
   mangaStartVolume: number | null;
   mangaStartChapter: number | null;
   episodes: Episode[];
+  // every name the series answers to (english/romaji/native + synonyms),
+  // lowercased — the field's grep haystack beyond the display title
+  searchText?: string;
   ranking: TrackingRanking;
   streamingOn: StreamingService[]; // Which services have this anime
   genres: string[];

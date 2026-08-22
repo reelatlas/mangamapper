@@ -8,6 +8,7 @@ import { AFG_BASE, parseAfgPage, parseSitemap } from './lib/afg';
 import { politeFetch } from './lib/http';
 import { contentHash } from './lib/hash';
 import { db, startRun, finishRun, fileFlagOnce } from './lib/db';
+import { registerIds } from './lib/resolve';
 import { slugify } from './lib/slug';
 
 const RESUME_WINDOW_MS = 24 * 60 * 60 * 1000;
@@ -127,6 +128,7 @@ async function main() {
           if (aErr) throw new Error(`anchors: ${aErr.message}`);
         }
         anchored++;
+        await registerIds(target.id, { afg: slug });
         // a successful anchor write supersedes any earlier misalignment flag
         await db
           .from('ingest_flags')

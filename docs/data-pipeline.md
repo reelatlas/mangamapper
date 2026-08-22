@@ -228,6 +228,29 @@ via `supabase projects api-keys`).
 - `pilot.ts` / `cleanup.ts` / `stabilize.ts` / `polish-ids.ts` / `fix-mismatch.ts` — historical one-shots, kept as patterns.
 - Flag review: `ingest_flags` where status='open' — confirm/dismiss is the human loop; nothing suspicious ever auto-applies.
 
+### New-source checklist (Sean's ruling 2026-08-22: no one-offs, ever)
+
+Any new data source (MangaUpdates, Wikipedia volumes, …) enters through the
+same repeatable mechanism or not at all:
+
+1. **Staging table** (`ingest_<source>_*`): raw payload jsonb + content hash +
+   fetch metadata; service-role only. Greedy — store everything, ideally
+   including raw HTML/source text (AFG re-fetch lesson).
+2. **Identity registration FIRST**: map the source's id to our `series.id` in
+   `series_external_ids` before writing any derived data. The registry's
+   constraints make cross-series mixups impossible; collisions throw.
+3. **Rules layer**: what the source is authoritative for vs cross-check-only
+   (§10 table gets a row); conflicts and anomalies flag, never guess.
+4. **Inline upkeep**: registration and derived writes happen inside the
+   source's regular puller — never a separate script someone must remember.
+5. **Docs**: source added to §1 roster with its role and reliability verdict.
+
+Reliability tiers (Sean 2026-08-22): authoritative sources write canonical;
+lower-reliability sources serve as cross-checks and require manual
+confirmation via flags before influencing anything. Long-term note: no single
+external source covers everything we need well — mangaMapper's own curated
+dataset may eventually become the better provider; track gaps accordingly.
+
 **Refresh cadence (design decided, implementation = build-order step 9):**
 fully automatable — Supabase Cron triggers an Edge Function running the same
 puller modules; no manual triggering needed. Cadence per §4: airing shows
@@ -263,7 +286,25 @@ Fixed weekly is correct.
    ratio-estimated when totals known). `DEV_FILLER` retired.
 9. Promote refreshers to Edge Function + Cron (backfill honors dispositions; weekly AFL tier + daily AniList tier; periodic audit-titles re-audit). Fixed-weekly ruling: §11.
 
-Open items: ongoing-manga denominators (MangaUpdates/MangaDex as later
-enrichment); duotone cover treatment unblocks if covers are ever mirrored to
-Supabase Storage (`coverImage.color` already stored); anchor coverage beyond
-AFG's 458 shows is manual/wiki work, headliners first.
+Open items & backlog (triaged with Sean 2026-08-22 after the visual pass):
+- **Volumes** (researched, plan set): MangaUpdates releases resolve only ~50%
+  of chapters and die in the simulpub era — NOT the source. Plan: a
+  `volume_boundaries` table from Wikipedia per-series chapter lists (static
+  once printed → one-time ingest per series), MU releases + MU's curated
+  `anime` coverage field as cross-checks, **MangaDex as the verified id
+  bridge** (its entries carry AniList+MAL+MU ids together). Also retires the
+  ongoing-manga denominator gap.
+- **AFG expansion**: ingest the ~80 chapter-mapped AFG-only shows (Frieren,
+  Solo Leveling…) as canonical series — needs rules for AFG's 3-way taxonomy
+  (no anime-canon) + provenance marking.
+- **Strip type-color brightness** + **source-type color tokens**
+  (light_novel/webtoon zones à la manga_only): one design pass, validator
+  re-checked, Sean picks.
+- **Arc divisions** (strip + episode list): design lab; data ready — every
+  AFG anchor already carries its arc name.
+- **Franchise IA** (related series / watch order / chronological order — the
+  Yu-Gi-Oh/Berserk/Spider-Man problem): needs a franchise/IP entity above
+  series (own id per Sean's identity ruling) + IA design phase.
+  `series_relations` already holds the typed link data to design around.
+- Duotone cover treatment unblocks if covers are mirrored to Supabase Storage
+  (`coverImage.color` already stored).

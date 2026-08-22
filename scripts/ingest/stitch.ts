@@ -7,7 +7,7 @@
 
 import { db, startRun, finishRun, fileFlagOnce } from './lib/db';
 import { mediaByIds, type AniListMedia } from './lib/anilist';
-import { stageAniList } from './lib/resolve';
+import { stageAniList, registerIds, searchTextFor } from './lib/resolve';
 import { slugify } from './lib/slug';
 import type { AflShowPage } from './lib/afl';
 
@@ -225,6 +225,11 @@ function aggregate(chain: AniListMedia[], aflSlug: string, page: AflShowPage) {
     total_chapters: manga?.chapters ?? null,
     manga_start_volume: null,
     manga_start_chapter: null,
+    search_text: searchTextFor(
+      [head.title.english, head.title.romaji, head.title.native, page.title,
+        ...chain.map((m) => m.title.english), ...chain.map((m) => m.title.romaji)],
+      chain.flatMap((m) => m.synonyms),
+    ),
     updated_at: new Date().toISOString(),
   };
 }
@@ -235,8 +240,10 @@ async function main() {
   const actions: string[] = [];
 
   try {
-    // Candidates: AFL classified far MORE than the matched entry aired —
-    // the lumped-page signature. (AFL having FEWER = site lag, not a stitch.)
+    // Candidates: AFL classified MORE than the matched entry aired — the
+    // lumped-page signature; AFL cannot know more episodes than exist, so any
+    // excess >2 is suspect (Tokyo Ghoul slipped a +12 gate: S1+√A page vs the
+    // √A entry was exactly 12 over). (AFL having FEWER = site lag, no stitch.)
     const { data: flags } = await db
       .from('ingest_flags')
       .select('id, series_key, detail')
@@ -249,10 +256,11 @@ async function main() {
         afl: (f.detail as { aflClassified?: number }).aflClassified ?? 0,
         anilist: (f.detail as { anilistAired?: number }).anilistAired ?? 0,
       }))
-      .filter((c) => c.afl > c.anilist + 12 && !HOLD.has(c.slug));
+      .filter((c) => c.afl > c.anilist + 2 && !HOLD.has(c.slug));
     console.log(`[stitch] ${candidates.length} candidates`);
 
     for (const cand of candidates) {
+      try {
       const { data: map } = await db
         .from('source_map')
         .select('anilist_id, disposition')
@@ -305,6 +313,7 @@ async function main() {
       if (old && old.id !== series.id) await db.from('series').delete().eq('id', old.id);
       const { error: e1 } = await db.from('series').upsert(series);
       if (e1) throw new Error(`series (${cand.slug}): ${e1.message}`);
+      await registerIds(series.id, { anilist: series.anilist_id, mal: series.mal_id, afl: cand.slug });
 
       await db.from('episodes').delete().eq('series_id', series.id);
       const epRows = page.episodes.map((e) => ({
@@ -368,6 +377,11 @@ async function main() {
       actions.push(
         `STITCHED ${cand.slug} → ${series.id}: ${chain.length} seasons, ${chainAired} eps (${chain.map((m) => m.id).join(' → ')})`,
       );
+      } catch (err) {
+        // one candidate's failure (e.g. AniList outage on a cache miss) must
+        // never kill the run — it stays flagged and retries next time
+        actions.push(`ERROR ${cand.slug}: ${String(err).slice(0, 140)}`);
+      }
     }
 
     await finishRun(runId, 'ok', counters, 'stitcher');

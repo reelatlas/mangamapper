@@ -30,3 +30,4 @@ dist-ssr
 
 # TypeScript incremental build state
 *.tsbuildinfo
+supabase/.temp/

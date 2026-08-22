@@ -36,10 +36,11 @@ type SeriesRow = {
   genres: string[];
   synopsis_html: string | null;
   external_links: { site: string; type: string | null }[];
+  search_text: string;
 };
 
 const SERIES_COLS =
-  'id, title, title_native, cover_url, status, source_type, manga_status, manga_anilist_id, aired_episodes, total_episodes, total_volumes, total_chapters, manga_start_volume, manga_start_chapter, popularity, genres, synopsis_html, external_links';
+  'id, title, title_native, cover_url, status, source_type, manga_status, manga_anilist_id, aired_episodes, total_episodes, total_volumes, total_chapters, manga_start_volume, manga_start_chapter, popularity, genres, synopsis_html, external_links, search_text';
 
 type EpisodeRow = { number: number; title: string; type: string; air_date: string | null };
 type AnchorRow = { episode: number; volume: number | null; chapter: number };
@@ -106,6 +107,7 @@ const toAnimeSeries = (row: SeriesRow, rank: number, episodes: Episode[]): Anime
   mangaStartVolume: row.manga_start_volume,
   mangaStartChapter: row.manga_start_chapter,
   episodes,
+  searchText: row.search_text || undefined,
   ranking: { mal: rank, anilist: rank },
   streamingOn: streamingOn(row.external_links),
   genres: row.genres ?? [],
@@ -258,7 +260,7 @@ export const supabaseCatalogSource: CatalogSource = {
     const { data, error } = await supabase
       .from('series')
       .select(SERIES_COLS)
-      .or(`title.ilike.${pattern},title_native.ilike.${pattern}`)
+      .ilike('search_text', pattern)
       .order('popularity', { ascending: false })
       .limit(50);
     if (error) throw error;
