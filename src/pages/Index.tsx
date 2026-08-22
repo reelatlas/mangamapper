@@ -65,73 +65,82 @@ const Index = () => {
         {/* fontSize 18 = the field's TEXT_PX, so 52ch/2ch resolve identically
             to the title column's; the children size themselves in rem */}
         <div className="mx-auto w-[min(52ch,82%)] pl-[2ch]" style={{ fontSize: 18 }}>
-          {/* THE UNDERLINE = THE TITLE COLUMN (Sean's ruling, 2026-08-21):
-              one fixed dashed rule from the title-glyph start (the 2ch
-              gutter, via the wrapper's padding) to the column's right edge —
-              it lines up exactly over the space the series titles occupy.
-              Geometry is state-invariant BY CONSTRUCTION now, which
-              dissolves the old "caps off the instrument" objection: the
-              keycap hint sits ON the line's right end (empty+inactive only;
-              the clear x takes that end while text exists). The input
-              flexes to fill between icon and hint. */}
+          {/* THE UNDERLINE = THE TITLE AREA (Sean's ruling, 2026-08-21,
+              refined same day from full-column): one fixed dashed rule from
+              the title-glyph start (the 2ch gutter, via the wrapper's
+              padding) to where the TITLE area ends — the column minus the
+              rows' status zone. The reserve is derived, not eyeballed:
+              widest status word ("finished"/"upcoming") = 8ch at META_PX
+              12px × Plex Mono's 0.6em advance = 57.6px, + the rows' pl-4
+              gap (16px) = 73.6px. The keycap hint HANGS RIGHT of the line
+              in that reserved zone (Sean: off the line, not on it) — the
+              zone persists when the caps hide, so the line's geometry is
+              state-invariant by construction. The input flexes to fill
+              the line. */}
           {/* active state lives on the ICON, not the line (ruling 2026-08-19) */}
-          <span className="group/search flex w-full items-center gap-[1ch] border-b border-dashed border-border pb-1">
-            <Search
-              aria-hidden
-              className="h-3.5 w-3.5 shrink-0 text-muted-foreground/60 transition-colors group-focus-within/search:text-primary"
-            />
-            <span className="relative flex flex-1 items-baseline">
-              <input
-                id="search"
-                ref={searchRef}
-                aria-label="search series"
-                value={input}
-                onChange={(e) => setInput(e.target.value)}
-                onKeyDown={(e) => {
-                  if (e.key !== 'Escape') return;
-                  // While a card is open, Esc belongs to the CARD (close it,
-                  // keep the query) — decline it here and let it bubble to
-                  // the window close handler. The search's own ladder only
-                  // runs with no card: text → clear but stay active; empty →
-                  // blur (= clicking out). Consumed then — layering rule.
-                  if (cardOpen) return;
-                  e.stopPropagation();
-                  if (input) {
-                    setInput('');
-                    setQuery('');
-                  } else {
-                    e.currentTarget.blur();
-                  }
-                }}
-                autoComplete="off"
-                spellCheck={false}
-                className="w-full border-0 bg-transparent p-0 pr-[2ch] font-mono text-sm text-foreground [caret-color:currentColor] focus:outline-none"
+          <div className="group/search flex items-center">
+            <span className="flex flex-1 items-center gap-[1ch] border-b border-dashed border-border pb-1">
+              <Search
+                aria-hidden
+                className="h-3.5 w-3.5 shrink-0 text-muted-foreground/60 transition-colors group-focus-within/search:text-primary"
               />
-              {input && (
-                <button
-                  aria-label="clear search"
-                  onClick={() => {
-                    setInput('');
-                    setQuery('');
+              <span className="relative flex flex-1 items-baseline">
+                <input
+                  id="search"
+                  ref={searchRef}
+                  aria-label="search series"
+                  value={input}
+                  onChange={(e) => setInput(e.target.value)}
+                  onKeyDown={(e) => {
+                    if (e.key !== 'Escape') return;
+                    // While a card is open, Esc belongs to the CARD (close
+                    // it, keep the query) — decline it here and let it
+                    // bubble to the window close handler. The search's own
+                    // ladder only runs with no card: text → clear but stay
+                    // active; empty → blur (= clicking out). Consumed then
+                    // — layering rule.
+                    if (cardOpen) return;
+                    e.stopPropagation();
+                    if (input) {
+                      setInput('');
+                      setQuery('');
+                    } else {
+                      e.currentTarget.blur();
+                    }
                   }}
-                  className="absolute right-0 text-muted-foreground hover:text-primary"
+                  autoComplete="off"
+                  spellCheck={false}
+                  className="w-full border-0 bg-transparent p-0 pr-[2ch] font-mono text-sm text-foreground [caret-color:currentColor] focus:outline-none"
+                />
+                {input && (
+                  <button
+                    aria-label="clear search"
+                    onClick={() => {
+                      setInput('');
+                      setQuery('');
+                    }}
+                    className="absolute right-0 text-muted-foreground hover:text-primary"
+                  >
+                    x
+                  </button>
+                )}
+              </span>
+            </span>
+            {/* the status-zone reserve — always mounted so the line never
+                resizes; the caps live inside it, empty+inactive only */}
+            <span aria-hidden className="w-[73.6px] shrink-0 self-stretch">
+              {!input && (
+                <span
+                  onClick={() => searchRef.current?.focus()}
+                  className="flex h-full cursor-pointer select-none items-center gap-1 pl-3 group-focus-within/search:hidden"
                 >
-                  x
-                </button>
+                  {(IS_MAC ? ['⌘', 'K'] : ['ctrl', 'K']).map((key) => (
+                    <Kbd key={key} glyph={key} />
+                  ))}
+                </span>
               )}
             </span>
-            {!input && (
-              <span
-                aria-hidden
-                onClick={() => searchRef.current?.focus()}
-                className="flex shrink-0 cursor-pointer select-none items-center gap-1 group-focus-within/search:hidden"
-              >
-                {(IS_MAC ? ['⌘', 'K'] : ['ctrl', 'K']).map((key) => (
-                  <Kbd key={key} glyph={key} />
-                ))}
-              </span>
-            )}
-          </span>
+          </div>
         </div>
       </div>
 

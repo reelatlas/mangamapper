@@ -84,12 +84,16 @@ the field's 18px so the ch-math resolves identically, plus the 2ch cursor
 gutter). Its idiom: a muted **search icon sitting ON the dashed underline**
 (one continuous rule with the input and the clear `x`); **the active state
 lights the ICON primary, never the line** — in this system a dashed underline
-means *editability*, not activity. **The underline IS the title column
-(Sean's ruling, 2026-08-21):** one fixed rule from the title-glyph start
-(the 2ch gutter) to the column's right edge — it sits exactly over the
-space the series titles occupy, and its geometry is state-invariant by
-construction (the input flexes inside it; nothing the search does changes
-the line). (96/64 are a composition ruling, not
+means *editability*, not activity. **The underline IS the title AREA
+(Sean's ruling, 2026-08-21, refined same day from full-column):** one
+fixed rule from the title-glyph start (the 2ch gutter) to where the title
+area ends — the column MINUS the rows' status zone (reserve derived, not
+eyeballed: widest status word "finished"/"upcoming" = 8ch at META_PX ×
+Plex's 0.6em advance + the rows' pl-4 = 73.6px). It sits exactly over the
+space the series titles occupy; the keycap hint hangs right of the line
+IN the status zone; geometry is state-invariant by construction (the
+input flexes inside the line; the zone stays mounted when the caps
+hide). (96/64 are a composition ruling, not
 tokens yet — mint page-rhythm tokens when a second page needs them.)
 
 **The rail is responsive by columns (ruling 2026-08-19):** every letter stays
@@ -183,13 +187,13 @@ opacity/weight by position) remains — it's layout, not motion.
   ignored, our timer chain owns the hold). Enter opens the focused row
   (rows/buttons keep their native Enter). Works while the search input is
   focused (its ↑/↓ have no vertical meaning); other editables win. ⌘K /
-  ctrl K activates search from anywhere. The keycap hint sits **ON the
-  underline's right end** (2026-08-21 — supersedes the "off the instrument"
-  seat same day: that ruling existed because the content-hugging underline
-  changed size under in-line caps; the full-column underline is fixed by
-  construction, so the objection dissolved). Rendered only while the search
-  is empty AND inactive; while text exists the clear `x` holds that end
-  instead. Keycap recipe = **kbd_v4**
+  ctrl K activates search from anywhere. The keycap hint **hangs RIGHT
+  of the underline, in the rows' status zone** (2026-08-21 — the line ends
+  at the title area, the caps occupy the meta column; on-the-line was
+  trialed for an hour and pulled). Rendered only while the search is empty
+  AND inactive; the always-mounted zone keeps the line's geometry
+  state-invariant. The clear `x` sits at the line's own right end while
+  text exists. Keycap recipe = **kbd_v4**
   ([src/components/Kbd.tsx](../../src/components/Kbd.tsx) — tonal @ md,
   `gap-1` chord gap; the recipe lives in the component + DESIGN_SYSTEM §3.1,
   never restated here). Esc in search: text → clear + stay active; empty → blur;
