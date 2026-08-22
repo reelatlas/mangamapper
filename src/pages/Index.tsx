@@ -111,10 +111,35 @@ const Index = () => {
               className="relative flex items-center border-b border-dashed border-border pb-1"
               style={{ width: `calc((100% - ${META_RESERVE}px) * ${LINE_FRACTION})` }}
             >
-              <Search
-                aria-hidden
-                className="absolute -left-[2ch] top-[calc(50%-2px)] h-3.5 w-3.5 -translate-y-1/2 text-muted-foreground/60 transition-colors group-focus-within/search:text-primary"
-              />
+              {/* the magnifier is a real control (2026-08-21): click =
+                  activate search, same target as ⌘K. Hover steps muted →
+                  foreground (the rail letters' pressable grammar); active
+                  = primary, as ever. */}
+              <button
+                type="button"
+                aria-label="activate search"
+                onClick={() => searchRef.current?.focus()}
+                className="absolute -left-[2ch] top-[calc(50%-2px)] -translate-y-1/2 cursor-pointer text-muted-foreground/60 transition-colors hover:text-foreground group-focus-within/search:text-primary"
+              >
+                <Search className="h-3.5 w-3.5" />
+              </button>
+              {/* keycap hint LEFT-ALIGNED on the bar (placement walk
+                  2026-08-21: off-line right → on-line right → on-line
+                  LEFT): the caps rest where the caret will land — trigger
+                  and they vanish into the typing position. Same behavior:
+                  empty+inactive only. Line width is a formula, so caps
+                  mounting cannot move the rule. */}
+              {!input && (
+                <span
+                  aria-hidden
+                  onClick={() => searchRef.current?.focus()}
+                  className="flex shrink-0 cursor-pointer select-none items-center gap-1 group-focus-within/search:hidden"
+                >
+                  {(IS_MAC ? ['⌘', 'K'] : ['ctrl', 'K']).map((key) => (
+                    <Kbd key={key} glyph={key} />
+                  ))}
+                </span>
+              )}
               <span className="relative flex flex-1 items-baseline">
                 <input
                   id="search"
@@ -157,17 +182,6 @@ const Index = () => {
                 )}
               </span>
             </span>
-            {!input && (
-              <span
-                aria-hidden
-                onClick={() => searchRef.current?.focus()}
-                className="ml-3 flex shrink-0 cursor-pointer select-none items-center gap-1 group-focus-within/search:hidden"
-              >
-                {(IS_MAC ? ['⌘', 'K'] : ['ctrl', 'K']).map((key) => (
-                  <Kbd key={key} glyph={key} />
-                ))}
-              </span>
-            )}
           </div>
         </div>
       </div>

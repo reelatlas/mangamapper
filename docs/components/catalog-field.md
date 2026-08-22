@@ -86,7 +86,9 @@ cursor gutter** — the same column where the rows' `> ` caret renders
 (2026-08-21, supersedes icon-on-the-line: the gutter is the cursor zone in
 both registers — `>` lights primary at row focus, the magnifier lights
 primary at search focus), so the typed query starts flush with the title
-glyphs; **the active state lights the ICON primary, never the line** — in
+glyphs. **The magnifier is a real control (2026-08-21): click = activate
+search, same target as ⌘K** (hover steps muted → foreground, the rail
+letters' pressable grammar); **the active state lights the ICON primary, never the line** — in
 this system a dashed underline means *editability*, not activity. **The underline spans HALF the
 title area (Sean's tuning walk, 2026-08-21: full column → title area →
 2/3 → 58% → 50%):** one fixed rule from the title-glyph start, width =
@@ -191,13 +193,13 @@ opacity/weight by position) remains — it's layout, not motion.
   ignored, our timer chain owns the hold). Enter opens the focused row
   (rows/buttons keep their native Enter). Works while the search input is
   focused (its ↑/↓ have no vertical meaning); other editables win. ⌘K /
-  ctrl K activates search from anywhere. The keycap hint **hangs RIGHT
-  of the underline, in the rows' status zone** (2026-08-21 — the line ends
-  at the title area, the caps occupy the meta column; on-the-line was
-  trialed for an hour and pulled). Rendered only while the search is empty
-  AND inactive; the always-mounted zone keeps the line's geometry
-  state-invariant. The clear `x` sits at the line's own right end while
-  text exists. Keycap recipe = **kbd_v4**
+  ctrl K activates search from anywhere. The keycap hint sits **LEFT-ALIGNED
+  ON the bar, where the caret will land** (2026-08-21 placement walk:
+  off-line right → on-line right → on-line LEFT) — triggering reads as the
+  caps dissolving into the typing position. Rendered only while the search
+  is empty AND inactive; the formula-width line keeps geometry
+  state-invariant. The clear `x` sits at the line's right end while text
+  exists. Keycap recipe = **kbd_v4**
   ([src/components/Kbd.tsx](../../src/components/Kbd.tsx) — tonal @ md,
   `gap-1` chord gap; the recipe lives in the component + DESIGN_SYSTEM §3.1,
   never restated here). Esc in search: text → clear + stay active; empty → blur;
