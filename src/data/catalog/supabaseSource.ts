@@ -211,7 +211,9 @@ const buildMapping = (row: SeriesRow, eps: EpisodeRow[], anchors: AnchorRow[], b
   const total = counts.canon + counts.mixed + counts.filler + counts['anime-only-canon'];
 
   const latestAnchor = anchors.length ? anchors[anchors.length - 1] : null;
-  const latestKnown =
+  const lastCanonEpisode = eps.reduce((m, e) => (e.type !== 'filler' ? Math.max(m, e.number) : m), 0);
+
+  let latestKnown =
     hasSource && latestAnchor
       ? {
           episode: latestAnchor.episode,
@@ -219,12 +221,24 @@ const buildMapping = (row: SeriesRow, eps: EpisodeRow[], anchors: AnchorRow[], b
           chapters: String(latestAnchor.chapter),
         }
       : null;
+  // No anchors (most of the catalog): a FINISHED entry's coverage IS its
+  // scope end — that's what the source-scope semantics mean — so the
+  // position instrument works from totals instead of rendering
+  // mapping_pending across ~260 series (mock-era assumption: anchors always
+  // existed). Airing series without anchors stay pending (frontier unknown).
+  if (!latestKnown && hasSource && row.total_chapters && row.status === 'finished' && lastCanonEpisode > 0) {
+    latestKnown = {
+      episode: lastCanonEpisode,
+      volume: row.total_volumes ?? volumeFor(row, row.total_chapters, boundaries),
+      chapters: String(row.total_chapters),
+    };
+  }
   const continueFrom =
-    hasSource && latestAnchor
+    hasSource && latestKnown
       ? {
-          episode: latestAnchor.episode,
-          volume: latestAnchor.volume ?? volumeFor(row, latestAnchor.chapter + 1, boundaries),
-          chapters: String(latestAnchor.chapter + 1),
+          episode: latestKnown.episode,
+          volume: volumeFor(row, Number(latestKnown.chapters) + 1, boundaries) ?? latestKnown.volume,
+          chapters: String(Number(latestKnown.chapters) + 1),
         }
       : null;
 
@@ -236,9 +250,8 @@ const buildMapping = (row: SeriesRow, eps: EpisodeRow[], anchors: AnchorRow[], b
   // run. Sparse coverage (AFG's Naruto table stops early) would fabricate a
   // giant tail out of chapters the anime DID adapt — an unknown frontier
   // shows no tail (first-class empty state beats a false claim).
-  const lastCanonEp = eps.reduce((m, e) => (e.type !== 'filler' ? Math.max(m, e.number) : m), 0);
   const anchorsReachEnd =
-    latestAnchor !== null && lastCanonEp > 0 && latestAnchor.episode >= lastCanonEp - 12;
+    latestAnchor !== null && lastCanonEpisode > 0 && latestAnchor.episode >= lastCanonEpisode - 12;
   let mangaAheadChapters: number | null = null;
   let mangaAheadUnits = 0;
   if (
