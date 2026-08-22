@@ -173,7 +173,9 @@ async function fetchSeriesRow(id: string): Promise<SeriesRow | null> {
 }
 
 // Contiguous same-type runs; classification gaps and the not-yet-classified
-// tail default to canon (the overwhelmingly common type for fresh episodes).
+// tail default to the series' OWN base type (canon for manga series,
+// anime-only for originals — hardcoding canon fabricated "canon" episodes on
+// Super Dragon Ball Heroes' unclassified tail).
 const buildSpans = (eps: EpisodeRow[], aired: number, fallback: EpisodeType): EpisodeSpan[] => {
   if (!eps.length) return aired > 0 ? [{ start: 1, end: aired, type: fallback }] : [];
   const spans: EpisodeSpan[] = [];
@@ -183,13 +185,13 @@ const buildSpans = (eps: EpisodeRow[], aired: number, fallback: EpisodeType): Ep
     const prev = spans[spans.length - 1];
     if (prev && prev.type === type && e.number === prev.end + 1) prev.end = e.number;
     else if (prev && e.number <= prev.end) continue;
-    else if (prev && prev.type === 'canon' && type === 'canon') prev.end = e.number; // gap folds into canon
+    else if (prev && prev.type === fallback && type === fallback) prev.end = e.number; // gap folds into base type
     else spans.push({ start: e.number, end: e.number, type });
   }
   const last = spans[spans.length - 1];
   if (last && aired > last.end) {
-    if (last.type === 'canon') last.end = aired;
-    else spans.push({ start: last.end + 1, end: aired, type: 'canon' });
+    if (last.type === fallback) last.end = aired;
+    else spans.push({ start: last.end + 1, end: aired, type: fallback });
   }
   return spans;
 };
