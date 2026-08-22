@@ -273,6 +273,39 @@ export type Database = {
           },
         ]
       }
+      ingest_mangaupdates: {
+        Row: {
+          changed_at: string
+          content_hash: string
+          fetched_at: string
+          manga_anilist_id: number
+          mangadex_uuid: string | null
+          mu_series_id: number
+          mu_slug: string | null
+          raw: Json
+        }
+        Insert: {
+          changed_at?: string
+          content_hash: string
+          fetched_at?: string
+          manga_anilist_id: number
+          mangadex_uuid?: string | null
+          mu_series_id: number
+          mu_slug?: string | null
+          raw: Json
+        }
+        Update: {
+          changed_at?: string
+          content_hash?: string
+          fetched_at?: string
+          manga_anilist_id?: number
+          mangadex_uuid?: string | null
+          mu_series_id?: number
+          mu_slug?: string | null
+          raw?: Json
+        }
+        Relationships: []
+      }
       ingest_runs: {
         Row: {
           changed: number
@@ -416,6 +449,7 @@ export type Database = {
           genres: string[]
           id: string
           is_adult: boolean
+          latest_known_chapters: number | null
           mal_id: number | null
           manga_anilist_id: number | null
           manga_start_chapter: number | null
@@ -459,6 +493,7 @@ export type Database = {
           genres?: string[]
           id: string
           is_adult?: boolean
+          latest_known_chapters?: number | null
           mal_id?: number | null
           manga_anilist_id?: number | null
           manga_start_chapter?: number | null
@@ -502,6 +537,7 @@ export type Database = {
           genres?: string[]
           id?: string
           is_adult?: boolean
+          latest_known_chapters?: number | null
           mal_id?: number | null
           manga_anilist_id?: number | null
           manga_start_chapter?: number | null
@@ -637,6 +673,36 @@ export type Database = {
           },
         ]
       }
+      series_scopes: {
+        Row: {
+          afl_slug: string
+          end_chapter: number | null
+          end_volume: number | null
+          note: string | null
+          start_chapter: number | null
+          start_volume: number | null
+          updated_at: string
+        }
+        Insert: {
+          afl_slug: string
+          end_chapter?: number | null
+          end_volume?: number | null
+          note?: string | null
+          start_chapter?: number | null
+          start_volume?: number | null
+          updated_at?: string
+        }
+        Update: {
+          afl_slug?: string
+          end_chapter?: number | null
+          end_volume?: number | null
+          note?: string | null
+          start_chapter?: number | null
+          start_volume?: number | null
+          updated_at?: string
+        }
+        Relationships: []
+      }
       source_map: {
         Row: {
           afg_slug: string | null
@@ -714,7 +780,11 @@ export type Database = {
       [_ in never]: never
     }
     Functions: {
-      [_ in never]: never
+      invoke_edge_refresh: { Args: { fn: string }; Returns: undefined }
+      set_vault_secret: {
+        Args: { secret_name: string; secret_value: string }
+        Returns: undefined
+      }
     }
     Enums: {
       [_ in never]: never

@@ -37,10 +37,11 @@ type SeriesRow = {
   synopsis_html: string | null;
   external_links: { site: string; type: string | null }[];
   search_text: string;
+  latest_known_chapters: number | null;
 };
 
 const SERIES_COLS =
-  'id, title, title_native, cover_url, status, source_type, manga_status, manga_anilist_id, aired_episodes, total_episodes, total_volumes, total_chapters, manga_start_volume, manga_start_chapter, popularity, genres, synopsis_html, external_links, search_text';
+  'id, title, title_native, cover_url, status, source_type, manga_status, manga_anilist_id, aired_episodes, total_episodes, total_volumes, total_chapters, manga_start_volume, manga_start_chapter, popularity, genres, synopsis_html, external_links, search_text, latest_known_chapters';
 
 type EpisodeRow = { number: number; title: string; type: string; air_date: string | null };
 type AnchorRow = { episode: number; volume: number | null; chapter: number };
@@ -122,7 +123,10 @@ const toAnimeSeries = (row: SeriesRow, rank: number, episodes: Episode[], publis
   // ongoing manga: AniList totals are null — published volume count (from
   // real boundaries) stands in as the latest-known denominator
   totalVolumes: row.total_volumes ?? (publishedVolumes || null),
-  totalChapters: row.total_chapters,
+  // ongoing manga: AniList nulls chapter totals until completion — the
+  // MangaUpdates-sourced latest published chapter stands in (semantically
+  // LATEST KNOWN, not total; cross-check tier via the MangaDex id bridge)
+  totalChapters: row.total_chapters ?? row.latest_known_chapters,
   mangaStartVolume: row.manga_start_volume,
   mangaStartChapter: row.manga_start_chapter,
   episodes,
