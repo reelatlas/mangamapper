@@ -48,6 +48,48 @@ export async function applyScope(
   };
 }
 
+// Volatile-field refresh for STITCHED series (the daily AniList sweep):
+// aggregates recompute from the components' freshly staged media without
+// touching the stitcher's structure. Single-season series use resolveSeries.
+export async function refreshStitchedVolatile(seriesId: string) {
+  const { data: comps } = await db
+    .from('series_components')
+    .select('anilist_id')
+    .eq('series_id', seriesId);
+  if (!comps?.length) return;
+  const media: AniListMedia[] = [];
+  for (const c of comps) {
+    const { data } = await db.from('ingest_anilist_media').select('raw').eq('anilist_id', c.anilist_id).maybeSingle();
+    if (data) media.push(data.raw as AniListMedia);
+  }
+  if (!media.length) return;
+  const aired = (m: AniListMedia) => (m.nextAiringEpisode ? m.nextAiringEpisode.episode - 1 : m.episodes ?? 0);
+  const statuses = new Set(media.map((m) => m.status));
+  const releasing = media.find((m) => m.status === 'RELEASING');
+  const weightSum = media.reduce((s, m) => s + m.popularity, 0) || 1;
+  await db
+    .from('series')
+    .update({
+      status: statuses.has('RELEASING')
+        ? 'airing'
+        : statuses.has('NOT_YET_RELEASED')
+          ? 'upcoming'
+          : statuses.has('HIATUS')
+            ? 'hiatus'
+            : 'finished',
+      aired_episodes: media.reduce((s, m) => s + aired(m), 0),
+      total_episodes: media.every((m) => m.episodes != null) ? media.reduce((s, m) => s + (m.episodes ?? 0), 0) : null,
+      next_airing_at: releasing?.nextAiringEpisode
+        ? new Date(releasing.nextAiringEpisode.airingAt * 1000).toISOString()
+        : null,
+      popularity: Math.max(...media.map((m) => m.popularity)),
+      average_score: Math.round(media.reduce((s, m) => s + (m.averageScore ?? 0) * m.popularity, 0) / weightSum) || null,
+      trending: Math.max(...media.map((m) => m.trending ?? 0)) || null,
+      updated_at: new Date().toISOString(),
+    })
+    .eq('id', seriesId);
+}
+
 // The identity registry (data-pipeline.md): external ids map INTO our id.
 // A different series already holding the id is a hard error — the exact
 // cross-source mixup the registry exists to prevent.

@@ -1,7 +1,14 @@
 import { createClient } from '@supabase/supabase-js';
 
-const url = process.env.SUPABASE_URL;
-const secretKey = process.env.SUPABASE_SECRET_KEY;
+// Runs under Node (tsx scripts) AND the Supabase Edge runtime (Deno) — the
+// edge runtime injects SUPABASE_URL / SUPABASE_SERVICE_ROLE_KEY by default.
+declare const Deno: { env: { get(k: string): string | undefined } } | undefined;
+const env = (k: string): string | undefined =>
+  (typeof Deno !== 'undefined' ? Deno.env.get(k) : undefined) ??
+  (typeof process !== 'undefined' ? process.env[k] : undefined);
+
+const url = env('SUPABASE_URL');
+const secretKey = env('SUPABASE_SECRET_KEY') ?? env('SUPABASE_SERVICE_ROLE_KEY');
 if (!url || !secretKey) {
   throw new Error('Missing SUPABASE_URL or SUPABASE_SECRET_KEY (run via: npx tsx --env-file=.env.ingest ...)');
 }

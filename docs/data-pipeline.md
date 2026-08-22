@@ -282,10 +282,32 @@ confirmation via flags before influencing anything. Long-term note: no single
 external source covers everything we need well — mangaMapper's own curated
 dataset may eventually become the better provider; track gaps accordingly.
 
-**Refresh cadence (design decided, implementation = build-order step 9):**
-fully automatable — Supabase Cron triggers an Edge Function running the same
-puller modules; no manual triggering needed. Cadence per §4: airing shows
-AniList daily + AFL weekly; finished shows monthly verify rotation.
+**Refresh cadence — IMPLEMENTED 2026-08-23 (fully automated, zero manual triggering):**
+- `refresh-anilist` edge function, **daily 08:10 UTC**: full-catalog metadata
+  sweep (~10 batched requests over all series + season components); changed
+  media re-resolve their series (stitched series get a volatile-field
+  recompute via `refreshStitchedVolatile` — the stitcher's structure is never
+  touched by refresh).
+- `refresh-afl` edge function, **hourly at :40, ≤20 stalest pages per run**
+  (staleness > 6 days): edge wall-time limits forbid one big sweep, so small
+  batches cycle the catalog inside the weekly cadence; most runs no-op
+  instantly. Conditional GETs + the inline alias-corruption defenses apply.
+- **Validation tier is EVENT-DRIVEN, never scheduled** (Sean's ruling
+  2026-08-23): Wikipedia boundaries are static-once-printed (one-time ingest
+  when a manga enters, `volumes-backfill` re-run only on flags);
+  MangaUpdates/etc. are invoked to verify or cross-check when a change or
+  conflict warrants it — cross-check sources validate, they don't refresh.
+- Mechanics: pg_cron → `invoke_edge_refresh(fn)` (SECURITY DEFINER, reads
+  Vault: edge_base_url / edge_anon_key / edge_cron_secret) → pg_net POST with
+  the shared-secret header; functions verify `x-cron-secret`. Secrets set via
+  the service-role-only `set_vault_secret` RPC — never in the repo. Edge
+  artifacts are GENERATED bundles of `scripts/ingest/lib`
+  (`build-functions.ts`) — the libs remain the single source of truth; never
+  edit `supabase/functions/*/index.ts`.
+- Not yet cron'd (deliberately): the stitcher (runs on flags after refreshes —
+  weekly manual or watcher until AniList stabilizes), audit-titles re-audit
+  (monthly manual), new-show discovery from AFL's index (backfill.ts run
+  occasionally; the hourly function refreshes known pages only).
 **On randomized intervals to obscure footprint: deliberately NOT doing that.**
 Our strategy is the opposite of stealth — an identifying User-Agent with
 contact info, honored crawl-delay, conditional GETs that cost the host ~zero.
