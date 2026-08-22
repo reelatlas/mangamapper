@@ -226,6 +226,10 @@ in code (`scripts/ingest/`), and every violation flags rather than guesses:
 | **Scope-audit gate** | AFL classifying MORE than the matched entry aired (>2) = mis-scope, stitch or flag — AFL cannot know unaired episodes | stitch.ts candidates |
 | AFG alignment gate | AFG's numbering must match ours ±12 before anchors write; strict episode-cell parse (no digit-mashing) | afg-backfill / afg.ts |
 | **Source-scope enforcement** | an entry shows ONLY its own range of the manga (Naruto = vol 1-27/ch 1-244, never the franchise); curated `series_scopes` rows applied by every writer; sequel-linked series sharing a manga without scope rows are auto-flagged | applyScope (resolve.ts) / scopes-apply.ts |
+| **Anchor monotonicity** | chapters never decrease as episodes advance — junk source cells self-identify and drop (AFG's Naruto "ep 141 → ch 21"; 63 junk anchors on One Piece) | deriveAnchors (afg.ts) |
+| **Tail honesty (coverage gate)** | the manga_only tail computes only when anchors reach the run's end; an unknown adaptation frontier shows NO tail rather than a fabricated one | buildMapping (supabaseSource.ts) |
+| **Base-type padding** | unclassified gaps/tails pad with the series' own base type (canon for manga series, anime-only for originals) — never hardcoded canon | buildSpans (supabaseSource.ts) |
+| **Legend by count** | type badges render purely from data counts, never source-type branching (mock-era branches hid real tags twice) | AnimeCard legend |
 | Dispositions | active / excluded / duplicate / merged rulings are durable data; backfill skips non-active | source_map |
 
 **Hard-won learnings** (why some rules exist): AFL's Drupal is corrupt since
@@ -240,14 +244,19 @@ All scripts run as `npx tsx --env-file=.env.ingest scripts/ingest/<script>.ts`
 (`.env.ingest` = SUPABASE_URL + SUPABASE_SECRET_KEY, gitignored; regenerate
 via `supabase projects api-keys`).
 
-- `parser-check.ts` — fixture regressions; run after touching the parser.
+- `parser-check.ts` — fixture regressions (AFL, AFG, Wikipedia); run after touching any parser.
 - `backfill.ts` — full AFL sweep (honors dispositions, ~65 min, resumable 24h window).
+- `afg-backfill.ts` — AFG sweep → staging + chapter anchors (`--force` re-fetches after parser changes).
+- `volumes-backfill.ts` — Wikipedia volume boundaries for anchored manga (one-time-ish; boundaries are static).
+- `rederive-anchors.ts` — recompute anchors from STAGED AFG pages, no refetch (after derivation-logic changes).
+- `scopes-apply.ts` — sync curated series_scopes into canonical + auto-flag unscoped shared-manga series.
 - `stitch.ts` — multi-season chains; idempotent; override chains + ruled titles live at the top.
 - `merge.ts` — multi-AFL-page merges (config at top).
 - `relations.ts` — rebuilds series_relations (auto + RULED pairs).
 - `audit-titles.ts` — periodic corruption re-audit against a fresh index snapshot.
-- `wayback-recover2.ts` — archive recovery for corruption victims.
-- `pilot.ts` / `cleanup.ts` / `stabilize.ts` / `polish-ids.ts` / `fix-mismatch.ts` — historical one-shots, kept as patterns.
+- `wayback-recover2.ts` — archive recovery for corruption victims (rendered snapshots + count validation; the v1 id_-form script was deleted — id_ URLs redirect to captures years off).
+- `rebuild.ts` — **DANGER post-stitching**: re-resolves everything as single-season, clobbering stitched aggregates. Only for canonical-shape migrations, and re-run stitch after.
+- `pilot.ts` / `cleanup.ts` / `stabilize.ts` / `polish-ids.ts` / `fix-mismatch.ts` / `assisted-prep.ts` — historical one-shots, kept as patterns.
 - Flag review: `ingest_flags` where status='open' — confirm/dismiss is the human loop; nothing suspicious ever auto-applies.
 
 ### New-source checklist (Sean's ruling 2026-08-22: no one-offs, ever)
@@ -306,7 +315,16 @@ Fixed weekly is correct.
    mock's exact span/continue-point/manga-ahead semantics.
    `MangaMapping.volume` is nullable (AFG gives chapters, not volumes;
    ratio-estimated when totals known). `DEV_FILLER` retired.
-9. Promote refreshers to Edge Function + Cron (backfill honors dispositions; weekly AFL tier + daily AniList tier; periodic audit-titles re-audit). Fixed-weekly ruling: §11.
+9. ✅ Volume boundaries (2026-08-23): Wikipedia-derived, 25/29 anchored manga,
+   888 rows — One Piece ep 1000 → ch 990 → vol 98 of 115, all from our data.
+10. ✅ Source-scope enforcement + data-honesty pass (2026-08-23, driven by
+   Sean's visual QA): series_scopes curation + discovery guard; anchor
+   monotonicity filter; tail coverage gate; base-type padding; count-driven
+   legend. Every fix was a mock-era assumption exposed by real data.
+11. Promote refreshers to Edge Function + Cron (backfill honors dispositions; weekly AFL tier + daily AniList tier; periodic audit-titles re-audit). Fixed-weekly ruling: §11. **← next build item.**
+12. Pending AniList API recovery (outage since 2026-08-22): the 32 scope-fix
+   stitches (auto-run by watcher), then AFG-only show expansion (~80 shows
+   needing AniList enrichment). Berserk scope ranges need curation (flagged).
 
 Open items & backlog (triaged with Sean 2026-08-22 after the visual pass):
 - **Volumes** (researched, plan set): MangaUpdates releases resolve only ~50%

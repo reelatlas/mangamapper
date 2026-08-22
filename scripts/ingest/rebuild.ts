@@ -1,6 +1,9 @@
+// ⚠️ DANGER POST-STITCHING: this re-resolves every series as SINGLE-SEASON,
+// clobbering stitched aggregates and components. Only for canonical-shape
+// migrations — and ALWAYS re-run stitch.ts (and scopes-apply.ts) afterwards.
+//
 // Rebuild canonical from staging (no network): wipe series (episodes /
 // components / relations cascade) and re-resolve every active, matched slug.
-// Used for canonical-shape changes like the own-slug identity migration.
 //   npx tsx --env-file=.env.ingest scripts/ingest/rebuild.ts
 
 import { db, startRun, finishRun } from './lib/db';
