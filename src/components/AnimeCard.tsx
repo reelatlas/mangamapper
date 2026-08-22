@@ -235,6 +235,7 @@ export const AnimeCard = ({ anime, onClose }: AnimeCardProps) => {
                           sections={visibleSections}
                           selectedEp={selectedEp}
                           jumpSerial={lookup.jumpSerial}
+                          restEp={lookup.restEp}
                           interactive={lookupEnabled}
                           onSelectEpisode={lookupEnabled ? lookup.selectEpisode : undefined}
                           onVisibleRangeChange={setViewband}

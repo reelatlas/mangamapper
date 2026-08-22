@@ -39,6 +39,10 @@ export interface PositionLookup {
   exploring: boolean;
   markerUnit: number | null; // strip marker: rest → present position (dim)
   markerRest: boolean;
+  // the rest position's episode — the seed anchor for reset-state arrow
+  // walking (2026-08-21): today = latest aired; phase-2 user progress
+  // changes it HERE and the seeding follows
+  restEp: number;
   setField: (f: PositionField, raw: string) => void;
   step: (f: PositionField, dir: number) => void;
   reset: () => void;
@@ -223,6 +227,7 @@ export const usePositionLookup = (
     exploring,
     markerUnit,
     markerRest: !exploring,
+    restEp: rest.ep,
     setField,
     step,
     reset,

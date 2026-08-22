@@ -123,6 +123,9 @@ interface EpisodeListProps {
   // (never on field typing/stepping — those must keep the input's focus);
   // the list focuses its scroll frame when it changes
   jumpSerial?: number;
+  // rest-position seed for reset-state walking (2026-08-21): with no
+  // selection, ↑/↓ start exploring at restEp±1 instead of no-op'ing
+  restEp?: number | null;
   interactive: boolean;      // false when the lookup is disabled (no source/mapping)
   onSelectEpisode?: (ep: number) => void; // routes into lookup.stripClick(ep)
   onVisibleRangeChange?: (range: { start: number; end: number } | null) => void;
@@ -133,6 +136,7 @@ export const EpisodeList = ({
   sections,
   selectedEp,
   jumpSerial,
+  restEp,
   interactive,
   onSelectEpisode,
   onVisibleRangeChange,
@@ -420,11 +424,13 @@ export const EpisodeList = ({
   // Gmail/Linear-pattern list shortcuts (ruling 2026-08-21): while a selection
   // exists, the keys walk episodes no matter where focus sits — EXCEPT inside
   // an editable control (the position-row inputs keep their own arrows for
-  // stepping). reset() clears the selection and returns the keys to their
-  // native meaning; the one extra case is focus IN the list frame with no
-  // selection, where arrows seed from the edge (standard listbox behavior).
-  // Walks only through VISIBLE sections (the sections prop is pre-filtered by
-  // the legend filter); at the edge of visible content it no-ops.
+  // stepping). With NO selection (card just opened, or after reset()), the
+  // keys SEED from the rest position: rest±1 on the first press (Sean,
+  // 2026-08-21 — exploration starts without touching an input/row/strip;
+  // supersedes both keys-stay-native and the list-frame edge-seed, which
+  // survive only as no-rest fallbacks). Walks only through VISIBLE sections
+  // (the sections prop is pre-filtered by the legend filter); at the edge of
+  // visible content it no-ops.
   const nextVisibleEp = useCallback(
     (cur: number, dir: number): number | null => {
       if (dir > 0) {
@@ -455,11 +461,15 @@ export const EpisodeList = ({
       // editable targets always win — typing/stepping never walks the list
       if (t?.closest('input, textarea, select, [contenteditable]')) return;
       const inList = t !== null && (scrollRef.current?.contains(t) ?? false);
-      // reset state (no selection) → the keys keep their native meaning,
-      // unless focus sits in the list frame (listbox edge-seeding)
-      if (selectedEp === null && !inList) return;
+      // reset state (no selection): SEED from the REST position (Sean,
+      // 2026-08-21) — the first press activates exploration at rest±1
+      // (up = previous ep, down = next), no input/row/strip click needed;
+      // the dim rest marker stays dim until that first press. Fallbacks
+      // when no rest exists: keys keep their native meaning unless focus
+      // sits in the list frame (listbox edge-seeding from the frame ends).
+      if (selectedEp === null && restEp == null && !inList) return;
       e.preventDefault();
-      const cur = selectedEp ?? (dir > 0 ? 0 : rows.length + 1);
+      const cur = selectedEp ?? restEp ?? (dir > 0 ? 0 : rows.length + 1);
       const next = nextVisibleEp(cur, dir);
       if (next === null) return; // directional integrity: nothing that way → no-op
       interactionRef.current = { ep: next, kind: 'key', dir };
@@ -467,7 +477,7 @@ export const EpisodeList = ({
     };
     document.addEventListener('keydown', onKey);
     return () => document.removeEventListener('keydown', onKey);
-  }, [interactive, onSelectEpisode, selectedEp, nextVisibleEp, rows.length]);
+  }, [interactive, onSelectEpisode, selectedEp, restEp, nextVisibleEp, rows.length]);
 
   const anyOpen = open.size > 0;
 

@@ -217,9 +217,13 @@ Gmail/Linear-pattern list shortcuts, from a **document-level** listener:
   never recentering.
 - **Editable controls always win**: typing/stepping in the position row
   never walks the list.
-- `reset()` clears the selection and returns the keys to their native
-  meaning. One extra case: focus IN the list frame with no selection —
-  arrows seed from the first/last episode (standard listbox behavior).
+- **Rest-seeding (2026-08-21):** with NO selection (card just opened, or
+  after `reset()`), the first press **seeds from the rest position**:
+  `↑` lands rest−1, `↓` lands rest+1 — exploration starts without touching
+  an input, row, or strip first. The dim rest marker stays dim until that
+  press. The seed anchor is `lookup.restEp` (today = latest aired; phase-2
+  user progress moves it in ONE place). Supersedes both keys-stay-native
+  and the list-frame edge-seed, which survive only as no-rest fallbacks.
 - Walks only through visible (legend-filtered) sections; no-ops at the
   visible edge (directional integrity).
 
