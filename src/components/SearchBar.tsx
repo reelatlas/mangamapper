@@ -38,12 +38,14 @@ export const SearchBar = forwardRef<SearchBarRef, SearchBarProps>(({ onSearch, p
 
   return (
     <div className={cn(
-      "relative transition-all duration-300",
+      // transition-transform, never transition-all (motion audit 2026-08-21:
+      // "all" silently animates any prop that changes, layout included)
+      "relative transition-transform duration-300",
       isFocused && "scale-[1.01]",
       className
     )}>
       <div className={cn(
-        "relative flex items-center rounded-none border bg-card transition-all duration-200",
+        "relative flex items-center rounded-none border bg-card transition-[border-color,box-shadow] duration-200",
         isFocused ? "border-primary shadow-md ring-2 ring-primary/20" : "border-border"
       )}>
         <Search className="absolute left-3 w-5 h-5 text-muted-foreground" />
