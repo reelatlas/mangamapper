@@ -282,7 +282,9 @@ confirmation via flags before influencing anything. Long-term note: no single
 external source covers everything we need well — mangaMapper's own curated
 dataset may eventually become the better provider; track gaps accordingly.
 
-**Refresh cadence — IMPLEMENTED 2026-08-23 (fully automated, zero manual triggering):**
+**Refresh cadence — IMPLEMENTED 2026-08-23, RATIFIED by Sean (re-evaluate
+freely as needs evolve — faster or slower per safety/usefulness; the knobs
+are one-line cron edits + the staleness windows in each function):**
 - `refresh-anilist` edge function, **daily 08:10 UTC**: full-catalog metadata
   sweep (~10 batched requests over all series + season components); changed
   media re-resolve their series (stitched series get a volatile-field
