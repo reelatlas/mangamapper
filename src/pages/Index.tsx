@@ -2,11 +2,15 @@ import { useEffect, useRef, useState } from 'react';
 import { Search } from 'lucide-react';
 import { Header } from '@/components/Header';
 import { Kbd } from '@/components/Kbd';
-import { CatalogField } from '@/components/CatalogField';
+import { CatalogField, META_RESERVE } from '@/components/CatalogField';
 import { useCatalogList } from '@/hooks/useCatalog';
 
 // ⌘K on mac, ctrl K elsewhere — display only; the handler accepts both
 const IS_MAC = /mac/i.test(navigator.platform || navigator.userAgent);
+
+// the underline's share of the title area — Sean's tuning walk 2026-08-21:
+// full column → title area → 2/3 → 58% → 0.5. A ruling, not a suggestion.
+const LINE_FRACTION = 0.5;
 
 // The homepage IS the catalog field: every series as a title row, grep to
 // narrow, click to expand in place (docs/components/catalog-field.md).
@@ -86,26 +90,27 @@ const Index = () => {
         {/* fontSize 18 = the field's TEXT_PX, so 52ch/2ch resolve identically
             to the title column's; the children size themselves in rem */}
         <div className="mx-auto w-[min(52ch,82%)] pl-[2ch]" style={{ fontSize: 18 }}>
-          {/* THE UNDERLINE (Sean's tuning walk, 2026-08-21: full column →
-              title area → 2/3 → 58% → **50%**): one fixed dashed rule
-              from the title-glyph start (the 2ch gutter, via the wrapper's
-              padding), spanning HALF the title area. Title area = column
-              minus the rows' status zone; the reserve is derived, not
-              eyeballed: widest status word ("finished"/"upcoming") = 8ch at
-              META_PX 12px × Plex Mono's 0.6em advance = 57.6px + the rows'
-              pl-4 gap (16px) = 73.6px. The width is a formula, so the
-              line's geometry is state-invariant by construction; the
-              keycap hint hangs right of the line's end (empty+inactive
-              only), and the input flexes inside the line. */}
+          {/* THE UNDERLINE: one fixed dashed rule from the title-glyph
+              start (the 2ch gutter, via the wrapper's padding), width =
+              (title area) × LINE_FRACTION. Title area = column minus
+              META_RESERVE — the rows' status zone, imported from
+              CatalogField so line and rows share ONE derivation. The
+              width is a formula, so the line's geometry is
+              state-invariant by construction; the keycap hint hangs right
+              of the line's end (empty+inactive only), and the input
+              flexes inside the line. */}
           {/* active state lives on the ICON, not the line (ruling 2026-08-19) */}
-          {/* icon trial (2026-08-21): the magnifier hangs LEFT of the line,
+          {/* gutter magnifier (ruling 2026-08-21): hangs LEFT of the line,
               in the 2ch cursor gutter — the same column where the rows'
               `> ` caret renders. The gutter is the cursor zone in both
               registers: `>` lights primary at row focus, the magnifier
               lights primary at search focus. The input now starts flush
               with the line = flush with the title glyphs. */}
           <div className="group/search flex items-center">
-            <span className="relative flex w-[calc((100%-73.6px)*0.5)] items-center border-b border-dashed border-border pb-1">
+            <span
+              className="relative flex items-center border-b border-dashed border-border pb-1"
+              style={{ width: `calc((100% - ${META_RESERVE}px) * ${LINE_FRACTION})` }}
+            >
               <Search
                 aria-hidden
                 className="absolute -left-[2ch] top-[calc(50%-2px)] h-3.5 w-3.5 -translate-y-1/2 text-muted-foreground/60 transition-colors group-focus-within/search:text-primary"

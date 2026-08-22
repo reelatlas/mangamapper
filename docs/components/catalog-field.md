@@ -90,9 +90,11 @@ glyphs; **the active state lights the ICON primary, never the line** — in
 this system a dashed underline means *editability*, not activity. **The underline spans HALF the
 title area (Sean's tuning walk, 2026-08-21: full column → title area →
 2/3 → 58% → 50%):** one fixed rule from the title-glyph start, width =
-`(column − status zone) × 0.5` — the status-zone reserve is derived, not
-eyeballed (widest status word "finished"/"upcoming" = 8ch at META_PX ×
-Plex's 0.6em advance + the rows' pl-4 = 73.6px). The width is a formula,
+`(column − META_RESERVE) × LINE_FRACTION` — both named constants
+(`META_RESERVE` exported from CatalogField.tsx beside META_PX: widest
+status word 8ch × Plex's 0.6em advance + the rows' pl-4 = 73.6px;
+`LINE_FRACTION = 0.5` in Index.tsx), so the line and the rows share one
+derivation. The width is a formula,
 so the line's geometry is state-invariant by construction; the keycap
 hint hangs right of the line's end (ml-3, empty+inactive only) and the
 input flexes inside the line. (96/64 are a composition ruling, not

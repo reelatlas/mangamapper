@@ -25,6 +25,11 @@ const OP_EXP = 1.5;
 const TRACK_MAX = 2;
 const LAG = 0.4;
 const META_PX = 12;
+// the rows' status zone: widest status word ("finished"/"upcoming" = 8ch)
+// at META_PX × Plex Mono's 0.6em advance, + the rows' pl-4 gap (16px).
+// EXPORTED: the search line's underline formula subtracts it (Index.tsx),
+// so the line and the rows stay coupled through this ONE derivation.
+export const META_RESERVE = 8 * META_PX * 0.6 + 16; // 73.6px
 const GLIDE_MAX = 600;
 const SETTLE_MS = 320;
 const OPEN_MS = 360;
