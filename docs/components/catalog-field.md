@@ -190,13 +190,19 @@ opacity/weight by position) remains — it's layout, not motion.
   elsewhere recall the search caret and step it one glyph (walking keeps the
   text one arrow away). All page hotkeys defer to an open card
   (`onOpenChange` prop).
-- ~~Focus handoff~~ **SHIPPED 2026-08-21 (Sean's repro: search active →
-  Enter-open → dead arrows):** the overlay takes DOM focus on open
-  (`tabIndex -1`, programmatic, no ring) — without it, focus stays in the
-  editable that triggered the open and the card's global walkers correctly
-  defer to it. Close restores focus to whoever had it (if still connected),
-  so query iteration flows: type → Enter → explore → Esc → keep typing.
-  Still open: a real focus TRAP (Tab cycling inside the card).
+- ~~Focus management for the overlay~~ **SHIPPED 2026-08-21, all three
+  pieces (WAI-ARIA dialog pattern):** (1) the overlay takes DOM focus on
+  open (`tabIndex -1`, programmatic, no ring) — Sean's repro: with the
+  search still active, Enter-open left focus in the input and the card's
+  global walkers correctly deferred to the editable, so ↑/↓ went dead;
+  close restores focus to whoever had it (if still connected), so query
+  iteration flows type → Enter → explore → Esc → keep typing. (2) the
+  overlay is `role="dialog" aria-modal` with a Tab/Shift+Tab **trap**
+  cycling the card's tabbables (the page header above is not inert — the
+  trap is what keeps keyboard focus in the modal). (3) the field scroller
+  + A–Z rail go **`inert`** while open (attribute-toggled; React 18 has no
+  prop) — unfocusable, unclickable, hidden from assistive tech; pointer-
+  events dimming alone never closed the keyboard/AT path.
 - Content stagger inside the opening card (aesthetic pass).
 - Server-side search + virtualization at AniList scale.
 - Status filters (airing/finished) as field-level controls — the old homepage

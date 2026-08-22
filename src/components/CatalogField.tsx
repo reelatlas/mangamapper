@@ -604,6 +604,17 @@ export const CatalogField = ({ series, query, loading, onOpenChange }: CatalogFi
     <StatusChip status={s.status} className="p-0 text-[length:inherit] tracking-normal" />
   );
 
+  // MODAL BACKGROUND (2026-08-21): while the takeover is open, the field
+  // scroller + rail are `inert` — unfocusable, unclickable, hidden from
+  // assistive tech (pointer-events was already cut; inert closes the
+  // keyboard/AT path so Tab can never land in the dimmed field). Attribute-
+  // toggled because React 18 has no inert prop.
+  const railWrapRef = useRef<HTMLDivElement>(null);
+  useEffect(() => {
+    scrollerRef.current?.toggleAttribute('inert', !!open);
+    railWrapRef.current?.toggleAttribute('inert', !!open);
+  }, [open]);
+
   return (
     <div ref={stageRef} className="relative h-full min-h-0" onClick={requestClose}>
       {/* watermark letter — centered on the field, i.e. on the focus line */}
@@ -673,6 +684,7 @@ export const CatalogField = ({ series, query, loading, onOpenChange }: CatalogFi
           overflows into further columns when vertical space runs out */}
       {railUi && railUi.items.length > 1 && (
         <div
+          ref={railWrapRef}
           className="absolute right-0 z-10 flex -translate-y-1/2 flex-col flex-wrap items-center gap-x-0.5 text-sm text-muted-foreground/60"
           style={{ top: railUi.top, height: railUi.h, lineHeight: RAIL_LINE + 'px' }}
         >
@@ -868,12 +880,47 @@ const TakeoverOverlay = ({
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [closing]);
 
+  // FOCUS TRAP (2026-08-21, completes the focus-management item): Tab and
+  // Shift+Tab cycle within the card — the WAI-ARIA dialog pattern. The
+  // background field is inert (host-side), but the page header above is
+  // not; the trap keeps keyboard focus in the modal regardless.
+  const trapTab = (e: React.KeyboardEvent) => {
+    if (e.key !== 'Tab') return;
+    const ovl = ovlRef.current;
+    if (!ovl) return;
+    const els = Array.from(
+      ovl.querySelectorAll<HTMLElement>(
+        'a[href], button:not([disabled]), input:not([disabled]), select:not([disabled]), textarea:not([disabled]), [tabindex]:not([tabindex="-1"])',
+      ),
+    ).filter((el) => el.offsetParent !== null);
+    if (els.length === 0) {
+      e.preventDefault();
+      return;
+    }
+    const first = els[0];
+    const last = els[els.length - 1];
+    const active = document.activeElement;
+    if (e.shiftKey) {
+      if (active === first || active === ovl) {
+        e.preventDefault();
+        last.focus();
+      }
+    } else if (active === last || active === ovl) {
+      e.preventDefault();
+      first.focus();
+    }
+  };
+
   return (
     <div
       ref={ovlRef}
       tabIndex={-1}
+      role="dialog"
+      aria-modal="true"
+      aria-label={`${anime.title} — series map`}
       className="absolute z-20 overflow-hidden outline-none"
       onClick={(e) => e.stopPropagation()}
+      onKeyDown={trapTab}
     >
       <div ref={innerRef} className="card-print" style={{ opacity: 0.25 }}>
         <AnimeCard anime={anime} onClose={onRequestClose} />
