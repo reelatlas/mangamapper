@@ -248,12 +248,15 @@ const MANGA_STATUS_MAP: Record<string, string> = {
   CANCELLED: 'finished',
 };
 
-function sourceType(media: AniListMedia): string {
+function sourceType(media: AniListMedia, hasMangaEdge: boolean): string {
   const src = media.source ?? '';
   if (src === 'MANGA' || src === 'DOUJINSHI' || src === 'ONE_SHOT') {
     return media.countryOfOrigin === 'KR' || media.countryOfOrigin === 'CN' ? 'webtoon' : 'manga';
   }
   if (src === 'LIGHT_NOVEL' || src === 'NOVEL' || src === 'WEB_NOVEL') return 'light_novel';
+  // no declared source but a manga ADAPTATION edge exists: old AniList
+  // entries often omit `source` — the edge is evidence of a manga source
+  if (!src && hasMangaEdge) return 'manga';
   return 'original';
 }
 
@@ -301,7 +304,11 @@ export async function resolveSeries(runId: number, slug: string): Promise<{ epis
     return { episodes: 0, flagged: true };
   }
 
-  const manga = pickManga(media);
+  // AniList's ADAPTATION edge is DIRECTIONLESS: on an anime-original show
+  // (source=ORIGINAL) the linked manga is an adaptation OF the anime, not
+  // source material — never attach it (Evangelion/Madoka class, 2026-08-23).
+  const mangaEdge = pickManga(media);
+  const manga = media.source === 'ORIGINAL' ? null : mangaEdge;
 
   // A STITCHED series (multiple components) is owned by the stitcher — a
   // plain resolve would collapse it back to one season. Refresh only the
@@ -393,7 +400,7 @@ export async function resolveSeries(runId: number, slug: string): Promise<{ epis
     banner_url: media.bannerImage,
     format: media.format,
     status: STATUS_MAP[media.status] ?? 'finished',
-    source_type: sourceType(media),
+    source_type: sourceType(media, mangaEdge !== null),
     start_date: fuzzyDate(media.startDate),
     end_date: fuzzyDate(media.endDate),
     season: media.season,
