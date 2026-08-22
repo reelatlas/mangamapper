@@ -65,18 +65,22 @@ const Index = () => {
         {/* fontSize 18 = the field's TEXT_PX, so 52ch/2ch resolve identically
             to the title column's; the children size themselves in rem */}
         <div className="mx-auto w-[min(52ch,82%)] pl-[2ch]" style={{ fontSize: 18 }}>
-          {/* the icon is part of the dashed line: the underline lives on the
-              wrapper; icon + input sit on it as one instrument */}
+          {/* THE UNDERLINE = THE TITLE COLUMN (Sean's ruling, 2026-08-21):
+              one fixed dashed rule from the title-glyph start (the 2ch
+              gutter, via the wrapper's padding) to the column's right edge —
+              it lines up exactly over the space the series titles occupy.
+              Geometry is state-invariant BY CONSTRUCTION now, which
+              dissolves the old "caps off the instrument" objection: the
+              keycap hint sits ON the line's right end (empty+inactive only;
+              the clear x takes that end while text exists). The input
+              flexes to fill between icon and hint. */}
           {/* active state lives on the ICON, not the line (ruling 2026-08-19) */}
-          {/* group on the ROW so the keycap hint (outside the underline)
-              also reads the focus state */}
-          <span className="group/search inline-flex items-center">
-          <span className="inline-flex items-center gap-[1ch] border-b border-dashed border-border pb-1">
+          <span className="group/search flex w-full items-center gap-[1ch] border-b border-dashed border-border pb-1">
             <Search
               aria-hidden
               className="h-3.5 w-3.5 shrink-0 text-muted-foreground/60 transition-colors group-focus-within/search:text-primary"
             />
-            <span className="relative flex items-baseline">
+            <span className="relative flex flex-1 items-baseline">
               <input
                 id="search"
                 ref={searchRef}
@@ -101,7 +105,7 @@ const Index = () => {
                 }}
                 autoComplete="off"
                 spellCheck={false}
-                className="w-[22ch] border-0 bg-transparent p-0 pr-[2ch] font-mono text-sm text-foreground [caret-color:currentColor] focus:outline-none"
+                className="w-full border-0 bg-transparent p-0 pr-[2ch] font-mono text-sm text-foreground [caret-color:currentColor] focus:outline-none"
               />
               {input && (
                 <button
@@ -116,23 +120,17 @@ const Index = () => {
                 </button>
               )}
             </span>
-          </span>
-          {/* hotkey hint OFF the instrument (settled 2026-08-21 after
-              in-line/leading-slot trials kept disturbing the underline
-              geometry): keycaps a little right of the bar, only while the
-              search is empty and inactive; the caps themselves are the Kbd
-              component (the one keycap recipe) */}
-          {!input && (
-            <span
-              aria-hidden
-              onClick={() => searchRef.current?.focus()}
-              className="ml-3 flex shrink-0 cursor-pointer select-none items-center gap-1 group-focus-within/search:hidden"
-            >
-              {(IS_MAC ? ['⌘', 'K'] : ['ctrl', 'K']).map((key) => (
-                <Kbd key={key} glyph={key} />
-              ))}
-            </span>
-          )}
+            {!input && (
+              <span
+                aria-hidden
+                onClick={() => searchRef.current?.focus()}
+                className="flex shrink-0 cursor-pointer select-none items-center gap-1 group-focus-within/search:hidden"
+              >
+                {(IS_MAC ? ['⌘', 'K'] : ['ctrl', 'K']).map((key) => (
+                  <Kbd key={key} glyph={key} />
+                ))}
+              </span>
+            )}
           </span>
         </div>
       </div>
