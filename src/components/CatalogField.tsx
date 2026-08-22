@@ -385,11 +385,10 @@ export const CatalogField = ({ series, query, loading, onOpenChange }: CatalogFi
       wake();
     };
     const onResize = () => {
-      if (openRef.current) {
-        setOpen(null);
-        setClosing(false);
-        busyRef.current = false;
-      }
+      // a resize NEVER dismisses the open card (Sean's ruling 2026-08-21 —
+      // only Esc / the x / click-away close it; this also covers mobile
+      // soft-keyboard resizes). The overlay re-solves its own geometry via
+      // its window-resize handler; the field just re-measures beneath it.
       measure();
       eng.prevLo = 0;
       eng.prevHi = -1;
@@ -793,15 +792,20 @@ const TakeoverOverlay = ({
     const ovl = ovlRef.current;
     const inner = innerRef.current;
     if (!stage || !ovl || !inner) return;
-    const stageH = stage.clientHeight;
-    const stageW = stage.clientWidth;
-    const w = Math.min(960, stageW - 32);
-    ovl.style.left = (stageW - w) / 2 + 'px';
-    ovl.style.width = w + 'px';
     // a tall card may borrow the headroom above the field (the search band) —
     // the takeover is an overlay, not a prisoner of the field's frame
     const HEADROOM = 132;
-    const solve = () => {
+    // layout() reads FRESH stage dimensions every call (2026-08-21 —
+    // resize-survivable: the mount-time snapshot forced the old handler to
+    // close the card on any resize). anchorY stays the mount-time anchor;
+    // the finalTop clamp re-runs against the new stage, so the card holds
+    // its place and stays inside the frame.
+    const layout = () => {
+      const stageH = stage.clientHeight;
+      const stageW = stage.clientWidth;
+      const w = Math.min(960, stageW - 32);
+      ovl.style.left = (stageW - w) / 2 + 'px';
+      ovl.style.width = w + 'px';
       const H = Math.max(ROW_H, Math.min(stageH + HEADROOM - 24, inner.scrollHeight));
       geomRef.current = {
         H,
@@ -810,6 +814,7 @@ const TakeoverOverlay = ({
         stageH,
       };
     };
+    const solve = layout;
     solve();
     const apply = (e: number) => {
       const g = geomRef.current;
@@ -831,12 +836,23 @@ const TakeoverOverlay = ({
       // mid-grow: the running tween's next frame picks up the new geometry
     });
     ro.observe(inner);
+    // window resize: re-solve against the fresh stage and snap the OPEN
+    // card to its new geometry (mid-grow, the running tween's next frame
+    // picks it up). The card stays open — resizes never dismiss it.
+    const onWinResize = () => {
+      layout();
+      if (openedRef.current) apply(1);
+    };
+    window.addEventListener('resize', onWinResize);
     if (reducedMotion) {
       apply(1);
       inner.classList.add('card-in');
       openedRef.current = true;
       onOpened();
-      return () => ro.disconnect();
+      return () => {
+        ro.disconnect();
+        window.removeEventListener('resize', onWinResize);
+      };
     }
     apply(0);
     // the print entrance (instrument_v1) starts its stepped line delays now —
@@ -853,6 +869,7 @@ const TakeoverOverlay = ({
     });
     return () => {
       ro.disconnect();
+      window.removeEventListener('resize', onWinResize);
       c.stop();
     };
     // eslint-disable-next-line react-hooks/exhaustive-deps

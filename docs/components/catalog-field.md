@@ -148,9 +148,13 @@ Click a row (or Enter when focused) →
    clamped inside the stage) — height ROW_H → card height over OPEN_MS =
    **360ms**, card fading 0.25 → 1. Overlay width `min(48rem, stage−2rem)`,
    height capped to the stage; the overlay hosts the REAL `AnimeCard`.
-4. **close** (esc / `[x]` / click-away) — reverse grow, then the field
-   uncovers **already centered on the title you opened**. Focus follows what
-   you opened, never the pre-click scroll position.
+4. **close** (esc / `[x]` / click-away — **and NOTHING else**: a window
+   resize never dismisses the card (Sean's ruling 2026-08-21 — the old
+   handler closed on resize as a geometry shortcut; the overlay now
+   re-solves against the fresh stage and snaps in place, covering desktop
+   resizes and mobile soft-keyboard resizes alike)) — reverse grow, then
+   the field uncovers **already centered on the title you opened**. Focus
+   follows what you opened, never the pre-click scroll position.
 
 ~~Deferred to the aesthetic pass: content stagger~~ **SHIPPED with
 instrument_v1 (2026-08-20):** the card's own **print entrance** (`.card-print`,
