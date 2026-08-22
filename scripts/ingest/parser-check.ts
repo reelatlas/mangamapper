@@ -47,3 +47,18 @@ if (boruto.episodes.length !== 292) fail(`boruto count (dup row should collapse)
 if (!boruto.integrity.ok) fail(`boruto integrity: ${boruto.integrity.mismatches.join('; ')}`);
 
 console.log('OK: another (ep 0) and boruto (dup row) regressions pass');
+
+// AFG parser regression (fixture: One Piece conversion guide).
+import { parseAfgPage, parseChapters } from './lib/afg';
+const afg = parseAfgPage(readFileSync('scripts/ingest/fixtures/afg-one-piece.html', 'utf8'));
+if (!/one piece/i.test(afg.title)) fail(`afg title: ${JSON.stringify(afg.title)}`);
+if (afg.episodes.length < 1000) fail(`afg episode count: ${afg.episodes.length}`);
+const afgEp1 = afg.episodes[0];
+if (afgEp1.number !== 1 || !afgEp1.chapters.includes(2)) fail(`afg ep1: ${JSON.stringify(afgEp1)}`);
+const ep62 = afg.episodes.find((e) => e.number === 62);
+if (!ep62 || ep62.chapters.join(',') !== '102,103') fail(`afg ep62: ${JSON.stringify(ep62)}`);
+if (JSON.stringify(parseChapters('3, 4, 5')) !== '[3,4,5]') fail('parseChapters list');
+if (JSON.stringify(parseChapters('1,144')) !== '[1144]') fail('parseChapters thousands');
+if (JSON.stringify(parseChapters('102-104')) !== '[102,103,104]') fail('parseChapters range');
+const withCh = afg.episodes.filter((e) => e.chapters.length > 0).length;
+console.log(`OK: afg one-piece ${afg.episodes.length} eps, ${withCh} with chapters, ${afg.seasons.length} seasons, arcs like "${ep62.arc}"`);

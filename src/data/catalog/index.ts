@@ -1,8 +1,9 @@
 import type { CatalogSource } from './source';
-import { mockCatalogSource } from './mockSource';
+import { supabaseCatalogSource } from './supabaseSource';
 
-// The swap point: replace mockCatalogSource with an AniList-backed source
-// (plus filler feed) and the entire read-only UI follows.
-export const catalog: CatalogSource = mockCatalogSource;
+// THE SWAP happened 2026-08-22: the catalog reads our Supabase canonical
+// (AFL types + AniList metadata + AFG anchors — docs/data-pipeline.md).
+// mockSource stays in-tree for offline reference; swap back here if needed.
+export const catalog: CatalogSource = supabaseCatalogSource;
 
 export type { CatalogSource, ListOptions, StatusFilter, SortBy } from './source';

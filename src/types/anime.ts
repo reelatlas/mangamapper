@@ -55,7 +55,9 @@ export const STREAMING_SERVICES: { value: StreamingService; label: string }[] = 
 ];
 
 export interface MangaMapping {
-  volume: number;
+  // null when the source knows the chapter but not the volume (AFG anchors);
+  // display sites render the vol: segment conditionally.
+  volume: number | null;
   chapters: string; // e.g., "1-3" or "45"
 }
 

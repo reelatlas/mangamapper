@@ -402,7 +402,7 @@ export type SortBy = 'popularity' | 'release_date';
 // (scroll feel, letter rail, watermark, grep). Title-only entries: no
 // episodes and no manga scope, so the expanded card renders its no-mapping
 // state. Flip DEV_FILLER off to restore the real 15-series mock.
-const DEV_FILLER = true;
+const DEV_FILLER = false; // retired 2026-08-22: real catalog live (supabaseSource)
 const DEV_FILLER_TITLES: string[] = [
   '86 Eighty-Six', '91 Days',
   'A Place Further than the Universe', 'A Silent Voice', 'Ace of Diamond', 'Afro Samurai', 'Air Gear', 'Ajin', 'Akame ga Kill!', 'Akira', 'Aldnoah.Zero', 'Angel Beats!', 'Anohana', 'Aria the Animation', 'Assassination Classroom', 'Astra Lost in Space', 'Attack on Titan',

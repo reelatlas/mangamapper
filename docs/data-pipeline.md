@@ -247,9 +247,21 @@ Fixed weekly is correct.
 4. ✅ AniList puller (30/min paced).
 5. ✅ Backfill + repair passes: **289 series / ~16.9k episodes in canonical**; alias corruption quarantined; exclusions/duplicates/empties applied.
 6. ⏳ Franchise evaluation (research → docs/franchise-rulings.md → Sean confirms) + the stitcher (multi-season chains → series_components) + manual-mapping batch for the last ambiguous slugs.
-7. AFG parser (anchor candidates + cross-check flags).
-8. `SupabaseCatalogSource` swap; retire `DEV_FILLER`; revisit virtualization threshold (episode-list.md §6).
-9. Promote refreshers to Edge Function + Cron (backfill honors dispositions; weekly AFL tier + daily AniList tier; periodic audit-titles re-audit).
+7. ✅ AFG parser + backfill: **dense per-episode chapter anchors** (their pages
+   are episode→chapter conversion tables) — 23 series / ~2.8k anchors incl.
+   One Piece's full 1,077. Strict episode-cell parsing (summary rows must not
+   digit-mash) + alignment gate (±12) withholds scope-mismatched pages (AFG's
+   Bleach page spans TYBW; their Tokyo Ghoul spans all series). Learnings:
+   staging should keep raw HTML so parser fixes don't need re-fetches; AFG
+   also chapter-maps ~80 shows OUTSIDE the AFL spine (Frieren, Solo
+   Leveling…) — a ready catalog-expansion source later.
+8. ✅ `SupabaseCatalogSource` swap (2026-08-22): the app reads canonical via
+   the anon key (RLS verified: staging/source_map blocked). `list()` stays
+   shallow; episodes+anchors page in on card-open; `getMapping` mirrors the
+   mock's exact span/continue-point/manga-ahead semantics.
+   `MangaMapping.volume` is nullable (AFG gives chapters, not volumes;
+   ratio-estimated when totals known). `DEV_FILLER` retired.
+9. Promote refreshers to Edge Function + Cron (backfill honors dispositions; weekly AFL tier + daily AniList tier; periodic audit-titles re-audit). Fixed-weekly ruling: §11.
 
 Open items: ongoing-manga denominators (MangaUpdates/MangaDex as later
 enrichment); duotone cover treatment unblocks if covers are ever mirrored to

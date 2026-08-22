@@ -12,6 +12,31 @@ export type Database = {
   __InternalSupabase: {
     PostgrestVersion: "14.1"
   }
+  graphql_public: {
+    Tables: {
+      [_ in never]: never
+    }
+    Views: {
+      [_ in never]: never
+    }
+    Functions: {
+      graphql: {
+        Args: {
+          extensions?: Json
+          operationName?: string
+          query?: string
+          variables?: Json
+        }
+        Returns: Json
+      }
+    }
+    Enums: {
+      [_ in never]: never
+    }
+    CompositeTypes: {
+      [_ in never]: never
+    }
+  }
   public: {
     Tables: {
       anime_progress: {
@@ -22,6 +47,7 @@ export type Database = {
           last_read_chapter: string | null
           last_read_volume: number | null
           last_watched_episode: number | null
+          notes: string | null
           updated_at: string
           user_id: string
         }
@@ -32,6 +58,7 @@ export type Database = {
           last_read_chapter?: string | null
           last_read_volume?: number | null
           last_watched_episode?: number | null
+          notes?: string | null
           updated_at?: string
           user_id: string
         }
@@ -42,8 +69,246 @@ export type Database = {
           last_read_chapter?: string | null
           last_read_volume?: number | null
           last_watched_episode?: number | null
+          notes?: string | null
           updated_at?: string
           user_id?: string
+        }
+        Relationships: []
+      }
+      chapter_anchors: {
+        Row: {
+          chapter: number
+          created_at: string
+          episode: number
+          note: string | null
+          series_id: string
+          source: string
+          volume: number | null
+        }
+        Insert: {
+          chapter: number
+          created_at?: string
+          episode: number
+          note?: string | null
+          series_id: string
+          source: string
+          volume?: number | null
+        }
+        Update: {
+          chapter?: number
+          created_at?: string
+          episode?: number
+          note?: string | null
+          series_id?: string
+          source?: string
+          volume?: number | null
+        }
+        Relationships: [
+          {
+            foreignKeyName: "chapter_anchors_series_id_fkey"
+            columns: ["series_id"]
+            isOneToOne: false
+            referencedRelation: "series"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      episodes: {
+        Row: {
+          air_date: string | null
+          number: number
+          series_id: string
+          title: string
+          type: string
+        }
+        Insert: {
+          air_date?: string | null
+          number: number
+          series_id: string
+          title?: string
+          type: string
+        }
+        Update: {
+          air_date?: string | null
+          number?: number
+          series_id?: string
+          title?: string
+          type?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "episodes_series_id_fkey"
+            columns: ["series_id"]
+            isOneToOne: false
+            referencedRelation: "series"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      ingest_afg_pages: {
+        Row: {
+          changed_at: string
+          content_hash: string
+          etag: string | null
+          fetched_at: string
+          last_modified: string | null
+          raw: Json
+          slug: string
+        }
+        Insert: {
+          changed_at?: string
+          content_hash: string
+          etag?: string | null
+          fetched_at?: string
+          last_modified?: string | null
+          raw: Json
+          slug: string
+        }
+        Update: {
+          changed_at?: string
+          content_hash?: string
+          etag?: string | null
+          fetched_at?: string
+          last_modified?: string | null
+          raw?: Json
+          slug?: string
+        }
+        Relationships: []
+      }
+      ingest_afl_shows: {
+        Row: {
+          changed_at: string
+          content_hash: string
+          etag: string | null
+          fetched_at: string
+          last_modified: string | null
+          raw: Json
+          slug: string
+        }
+        Insert: {
+          changed_at?: string
+          content_hash: string
+          etag?: string | null
+          fetched_at?: string
+          last_modified?: string | null
+          raw: Json
+          slug: string
+        }
+        Update: {
+          changed_at?: string
+          content_hash?: string
+          etag?: string | null
+          fetched_at?: string
+          last_modified?: string | null
+          raw?: Json
+          slug?: string
+        }
+        Relationships: []
+      }
+      ingest_anilist_media: {
+        Row: {
+          anilist_id: number
+          changed_at: string
+          content_hash: string
+          fetched_at: string
+          raw: Json
+        }
+        Insert: {
+          anilist_id: number
+          changed_at?: string
+          content_hash: string
+          fetched_at?: string
+          raw: Json
+        }
+        Update: {
+          anilist_id?: number
+          changed_at?: string
+          content_hash?: string
+          fetched_at?: string
+          raw?: Json
+        }
+        Relationships: []
+      }
+      ingest_flags: {
+        Row: {
+          created_at: string
+          detail: Json
+          id: number
+          kind: string
+          resolved_at: string | null
+          run_id: number | null
+          series_key: string
+          source: string
+          status: string
+        }
+        Insert: {
+          created_at?: string
+          detail?: Json
+          id?: never
+          kind: string
+          resolved_at?: string | null
+          run_id?: number | null
+          series_key: string
+          source: string
+          status?: string
+        }
+        Update: {
+          created_at?: string
+          detail?: Json
+          id?: never
+          kind?: string
+          resolved_at?: string | null
+          run_id?: number | null
+          series_key?: string
+          source?: string
+          status?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "ingest_flags_run_id_fkey"
+            columns: ["run_id"]
+            isOneToOne: false
+            referencedRelation: "ingest_runs"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      ingest_runs: {
+        Row: {
+          changed: number
+          fetched: number
+          finished_at: string | null
+          flagged: number
+          id: number
+          note: string | null
+          source: string
+          started_at: string
+          status: string
+          unchanged: number
+        }
+        Insert: {
+          changed?: number
+          fetched?: number
+          finished_at?: string | null
+          flagged?: number
+          id?: never
+          note?: string | null
+          source: string
+          started_at?: string
+          status?: string
+          unchanged?: number
+        }
+        Update: {
+          changed?: number
+          fetched?: number
+          finished_at?: string | null
+          flagged?: number
+          id?: never
+          note?: string | null
+          source?: string
+          started_at?: string
+          status?: string
+          unchanged?: number
         }
         Relationships: []
       }
@@ -104,6 +369,254 @@ export type Database = {
           id?: string
           updated_at?: string
           user_id?: string
+        }
+        Relationships: []
+      }
+      series: {
+        Row: {
+          afl_slug: string | null
+          aired_episodes: number
+          anilist_id: number | null
+          average_score: number | null
+          banner_url: string | null
+          cover_color: string | null
+          cover_url: string | null
+          duration_min: number | null
+          end_date: string | null
+          external_links: Json
+          favourites: number | null
+          format: string | null
+          genres: string[]
+          id: string
+          is_adult: boolean
+          mal_id: number | null
+          manga_anilist_id: number | null
+          manga_start_chapter: number | null
+          manga_start_volume: number | null
+          manga_status: string | null
+          mean_score: number | null
+          next_airing_at: string | null
+          popularity: number
+          season: string | null
+          season_year: number | null
+          source_type: string
+          start_date: string | null
+          status: string
+          studios: string[]
+          synonyms: string[]
+          synopsis_html: string | null
+          tags: Json
+          title: string
+          title_english: string | null
+          title_native: string | null
+          total_chapters: number | null
+          total_episodes: number | null
+          total_volumes: number | null
+          trending: number | null
+          updated_at: string
+        }
+        Insert: {
+          afl_slug?: string | null
+          aired_episodes?: number
+          anilist_id?: number | null
+          average_score?: number | null
+          banner_url?: string | null
+          cover_color?: string | null
+          cover_url?: string | null
+          duration_min?: number | null
+          end_date?: string | null
+          external_links?: Json
+          favourites?: number | null
+          format?: string | null
+          genres?: string[]
+          id: string
+          is_adult?: boolean
+          mal_id?: number | null
+          manga_anilist_id?: number | null
+          manga_start_chapter?: number | null
+          manga_start_volume?: number | null
+          manga_status?: string | null
+          mean_score?: number | null
+          next_airing_at?: string | null
+          popularity?: number
+          season?: string | null
+          season_year?: number | null
+          source_type?: string
+          start_date?: string | null
+          status: string
+          studios?: string[]
+          synonyms?: string[]
+          synopsis_html?: string | null
+          tags?: Json
+          title: string
+          title_english?: string | null
+          title_native?: string | null
+          total_chapters?: number | null
+          total_episodes?: number | null
+          total_volumes?: number | null
+          trending?: number | null
+          updated_at?: string
+        }
+        Update: {
+          afl_slug?: string | null
+          aired_episodes?: number
+          anilist_id?: number | null
+          average_score?: number | null
+          banner_url?: string | null
+          cover_color?: string | null
+          cover_url?: string | null
+          duration_min?: number | null
+          end_date?: string | null
+          external_links?: Json
+          favourites?: number | null
+          format?: string | null
+          genres?: string[]
+          id?: string
+          is_adult?: boolean
+          mal_id?: number | null
+          manga_anilist_id?: number | null
+          manga_start_chapter?: number | null
+          manga_start_volume?: number | null
+          manga_status?: string | null
+          mean_score?: number | null
+          next_airing_at?: string | null
+          popularity?: number
+          season?: string | null
+          season_year?: number | null
+          source_type?: string
+          start_date?: string | null
+          status?: string
+          studios?: string[]
+          synonyms?: string[]
+          synopsis_html?: string | null
+          tags?: Json
+          title?: string
+          title_english?: string | null
+          title_native?: string | null
+          total_chapters?: number | null
+          total_episodes?: number | null
+          total_volumes?: number | null
+          trending?: number | null
+          updated_at?: string
+        }
+        Relationships: []
+      }
+      series_components: {
+        Row: {
+          afl_offset: number
+          afl_slug: string | null
+          anilist_id: number
+          episode_end: number | null
+          episode_start: number | null
+          kind: string
+          label: string | null
+          season_order: number
+          series_id: string
+        }
+        Insert: {
+          afl_offset?: number
+          afl_slug?: string | null
+          anilist_id: number
+          episode_end?: number | null
+          episode_start?: number | null
+          kind?: string
+          label?: string | null
+          season_order: number
+          series_id: string
+        }
+        Update: {
+          afl_offset?: number
+          afl_slug?: string | null
+          anilist_id?: number
+          episode_end?: number | null
+          episode_start?: number | null
+          kind?: string
+          label?: string | null
+          season_order?: number
+          series_id?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "series_components_series_id_fkey"
+            columns: ["series_id"]
+            isOneToOne: false
+            referencedRelation: "series"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      series_relations: {
+        Row: {
+          from_series: string
+          kind: string
+          to_series: string
+        }
+        Insert: {
+          from_series: string
+          kind: string
+          to_series: string
+        }
+        Update: {
+          from_series?: string
+          kind?: string
+          to_series?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "series_relations_from_series_fkey"
+            columns: ["from_series"]
+            isOneToOne: false
+            referencedRelation: "series"
+            referencedColumns: ["id"]
+          },
+          {
+            foreignKeyName: "series_relations_to_series_fkey"
+            columns: ["to_series"]
+            isOneToOne: false
+            referencedRelation: "series"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      source_map: {
+        Row: {
+          afg_slug: string | null
+          afl_slug: string
+          anilist_id: number | null
+          confidence: number
+          created_at: string
+          disposition: string
+          mal_id: number | null
+          match_method: string
+          note: string | null
+          updated_at: string
+          verified: boolean
+        }
+        Insert: {
+          afg_slug?: string | null
+          afl_slug: string
+          anilist_id?: number | null
+          confidence?: number
+          created_at?: string
+          disposition?: string
+          mal_id?: number | null
+          match_method: string
+          note?: string | null
+          updated_at?: string
+          verified?: boolean
+        }
+        Update: {
+          afg_slug?: string | null
+          afl_slug?: string
+          anilist_id?: number | null
+          confidence?: number
+          created_at?: string
+          disposition?: string
+          mal_id?: number | null
+          match_method?: string
+          note?: string | null
+          updated_at?: string
+          verified?: boolean
         }
         Relationships: []
       }
@@ -241,6 +754,9 @@ export type CompositeTypes<
     : never
 
 export const Constants = {
+  graphql_public: {
+    Enums: {},
+  },
   public: {
     Enums: {},
   },
