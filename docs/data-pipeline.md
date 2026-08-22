@@ -234,7 +234,7 @@ in code (`scripts/ingest/`), and every violation flags rather than guesses:
 | **latestKnown synthesis** | a FINISHED series' coverage IS its scope end — position instrument synthesizes from totals when anchors are absent; airing-unanchored stays honestly pending | buildMapping (supabaseSource) |
 | **MU-frontier rule** | MangaUpdates' curated anime-coverage field ("Vol X, Chap Y as of EP Z") becomes a real anchor (source 'mu') — the adaptation frontier for series AFG doesn't anchor | audit-manga-coverage.ts |
 | **Coverage audit** | every series self-classifies (anchored / synthesized / mu-frontier / honest-pending / unknown-flagged / no-source); new pending classes get RULES, never per-series fixes | audit-manga-coverage.ts |
-| **Expansion guards** | AFG-only series enter through exact-match-or-flag, sparse, and alignment gates; the dedup guard flags AFG pages of existing series rather than duplicating them | afg-expansion.ts |
+| **Expansion guards** | AFG-only series enter through exact-match-or-flag, sparse, and alignment gates; the dedup guard flags AFG pages of existing series rather than duplicating them. KNOWN GAP (audit 2026-08-24): AFG numbers franchise-continuously but expansion matches a single AniList entry, so every multi-season AFG-only show trips the ±12 alignment gate (8 of the 14 open afg flags — Solo Leveling, Oshi no Ko, …). Fix = stitch-aware expansion (walk the SEQUEL chain like stitch.ts before comparing counts), pending Sean's go | afg-expansion.ts / audit-afg-structure.ts |
 | Dispositions | active / excluded / duplicate / merged rulings are durable data; backfill skips non-active | source_map |
 
 **Hard-won learnings** (why some rules exist): AFL's Drupal is corrupt since
@@ -259,6 +259,7 @@ via `supabase projects api-keys`).
 - `merge.ts` — multi-AFL-page merges (config at top).
 - `relations.ts` — rebuilds series_relations (auto + RULED pairs).
 - `audit-titles.ts` — periodic corruption re-audit against a fresh index snapshot.
+- `audit-afg-structure.ts` — READ-ONLY structural cross-check of every staged AFG page vs canonical (naming / episode-grouping / season-hierarchy); classifies aligned vs conflict vs registry-gap. Run before ruling on AFG-related flags — AFG numbers episodes franchise-continuously, so `AFG max > ours` usually means unstitched newer seasons (extension evidence) or a deliberate split of ours to confirm, and `< ours` means a season-scoped page.
 - `wayback-recover2.ts` — archive recovery for corruption victims (rendered snapshots + count validation; the v1 id_-form script was deleted — id_ URLs redirect to captures years off).
 - `rebuild.ts` — **DANGER post-stitching**: re-resolves everything as single-season, clobbering stitched aggregates. Only for canonical-shape migrations, and re-run stitch after.
 - `pilot.ts` / `cleanup.ts` / `stabilize.ts` / `polish-ids.ts` / `fix-mismatch.ts` / `assisted-prep.ts` — historical one-shots, kept as patterns.
