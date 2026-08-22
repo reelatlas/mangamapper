@@ -59,6 +59,14 @@ async function main() {
         .update({ ...next, updated_at: new Date().toISOString() })
         .eq('id', s.id);
       if (error) throw new Error(`${scope.afl_slug}: ${error.message}`);
+      // a curated scope satisfies the discovery guard's flag for this slug
+      await db
+        .from('ingest_flags')
+        .update({ status: 'dismissed', resolved_at: new Date().toISOString() })
+        .eq('series_key', scope.afl_slug)
+        .eq('status', 'open')
+        .eq('kind', 'count_mismatch')
+        .contains('detail', { note: 'shares a manga with a sequel-linked series but has no series_scopes row — needs scope curation' });
       actions.push(
         `${scope.afl_slug}: vol ${next.manga_start_volume ?? 1}-${next.total_volumes ?? '—'} · ch ${next.manga_start_chapter ?? 1}-${next.total_chapters ?? '—'}`,
       );
