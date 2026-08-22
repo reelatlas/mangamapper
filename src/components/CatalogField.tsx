@@ -637,9 +637,9 @@ export const CatalogField = ({ series, query, loading, onOpenChange }: CatalogFi
     railWrapRef.current?.toggleAttribute('inert', !!open);
   }, [open]);
 
+  // close-on-click lives at the DOCUMENT level (light dismiss effect
+  // above), not on the stage — the card overhangs the stage's top edge
   return (
-    {/* close-on-click lives at the document level (light dismiss above),
-        not on the stage — the card overhangs the stage's top edge */}
     <div ref={stageRef} className="relative h-full min-h-0">
       {/* watermark letter — centered on the field, i.e. on the focus line */}
       <div
