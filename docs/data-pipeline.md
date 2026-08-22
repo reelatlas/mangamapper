@@ -230,6 +230,7 @@ in code (`scripts/ingest/`), and every violation flags rather than guesses:
 | **Tail honesty (coverage gate)** | the manga_only tail computes only when anchors reach the run's end; an unknown adaptation frontier shows NO tail rather than a fabricated one | buildMapping (supabaseSource.ts) |
 | **Base-type padding** | unclassified gaps/tails pad with the series' own base type (canon for manga series, anime-only for originals) — never hardcoded canon | buildSpans (supabaseSource.ts) |
 | **Legend by count** | type badges render purely from data counts, never source-type branching (mock-era branches hid real tags twice) | AnimeCard legend |
+| **Derivative-manga rule** | AniList's ADAPTATION edge is directionless: a source=ORIGINAL anime never claims its linked manga (that manga adapts the ANIME — Evangelion class); a manga edge on a source-less old entry counts as source-evidence | resolveSeries / sourceType |
 | Dispositions | active / excluded / duplicate / merged rulings are durable data; backfill skips non-active | source_map |
 
 **Hard-won learnings** (why some rules exist): AFL's Drupal is corrupt since
