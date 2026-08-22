@@ -190,7 +190,13 @@ opacity/weight by position) remains — it's layout, not motion.
   elsewhere recall the search caret and step it one glyph (walking keeps the
   text one arrow away). All page hotkeys defer to an open card
   (`onOpenChange` prop).
-- Focus management for the overlay (focus trap + return-to-row).
+- ~~Focus handoff~~ **SHIPPED 2026-08-21 (Sean's repro: search active →
+  Enter-open → dead arrows):** the overlay takes DOM focus on open
+  (`tabIndex -1`, programmatic, no ring) — without it, focus stays in the
+  editable that triggered the open and the card's global walkers correctly
+  defer to it. Close restores focus to whoever had it (if still connected),
+  so query iteration flows: type → Enter → explore → Esc → keep typing.
+  Still open: a real focus TRAP (Tab cycling inside the card).
 - Content stagger inside the opening card (aesthetic pass).
 - Server-side search + virtualization at AniList scale.
 - Status filters (airing/finished) as field-level controls — the old homepage

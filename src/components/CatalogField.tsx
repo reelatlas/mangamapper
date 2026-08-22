@@ -758,6 +758,22 @@ const TakeoverOverlay = ({
   const geomRef = useRef({ H: 0, startTop: 0, finalTop: 0, stageH: 0 });
   const openedRef = useRef(false);
 
+  // FOCUS OWNERSHIP (2026-08-21, Sean's repro): the overlay takes DOM focus
+  // on open — otherwise focus stays wherever it was (typically the ACTIVE
+  // SEARCH INPUT on an Enter-open), and the card's global walkers correctly
+  // defer to the editable, so ↑/↓ go dead. Programmatic focus (tabIndex -1),
+  // no visible ring. Close restores focus to whoever had it (query iteration:
+  // Enter → explore → Esc → keep typing), if it still exists.
+  useEffect(() => {
+    const prev = document.activeElement instanceof HTMLElement ? document.activeElement : null;
+    ovlRef.current?.focus({ preventScroll: true });
+    return () => {
+      if (prev && prev !== document.body && prev.isConnected) {
+        prev.focus({ preventScroll: true });
+      }
+    };
+  }, []);
+
   useLayoutEffect(() => {
     const stage = stageRef.current;
     const ovl = ovlRef.current;
@@ -855,7 +871,8 @@ const TakeoverOverlay = ({
   return (
     <div
       ref={ovlRef}
-      className="absolute z-20 overflow-hidden"
+      tabIndex={-1}
+      className="absolute z-20 overflow-hidden outline-none"
       onClick={(e) => e.stopPropagation()}
     >
       <div ref={innerRef} className="card-print" style={{ opacity: 0.25 }}>
