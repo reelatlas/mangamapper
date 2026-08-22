@@ -232,7 +232,7 @@ export async function stageAniList(media: AniListMedia): Promise<StageOutcome> {
   return 'changed';
 }
 
-const STATUS_MAP: Record<string, string> = {
+export const STATUS_MAP: Record<string, string> = {
   RELEASING: 'airing',
   FINISHED: 'finished',
   HIATUS: 'hiatus',
@@ -240,7 +240,7 @@ const STATUS_MAP: Record<string, string> = {
   CANCELLED: 'finished',
 };
 
-const MANGA_STATUS_MAP: Record<string, string> = {
+export const MANGA_STATUS_MAP: Record<string, string> = {
   RELEASING: 'publishing',
   FINISHED: 'finished',
   HIATUS: 'hiatus',
@@ -248,7 +248,7 @@ const MANGA_STATUS_MAP: Record<string, string> = {
   CANCELLED: 'finished',
 };
 
-function sourceType(media: AniListMedia, hasMangaEdge: boolean): string {
+export function sourceType(media: AniListMedia, hasMangaEdge: boolean): string {
   const src = media.source ?? '';
   if (src === 'MANGA' || src === 'DOUJINSHI' || src === 'ONE_SHOT') {
     return media.countryOfOrigin === 'KR' || media.countryOfOrigin === 'CN' ? 'webtoon' : 'manga';
@@ -260,14 +260,14 @@ function sourceType(media: AniListMedia, hasMangaEdge: boolean): string {
   return 'original';
 }
 
-function fuzzyDate(d: { year: number | null; month: number | null; day: number | null }): string | null {
+export function fuzzyDate(d: { year: number | null; month: number | null; day: number | null }): string | null {
   // Display only uses years; month/day default to 1 when AniList omits them.
   if (!d.year) return null;
   return `${d.year}-${String(d.month ?? 1).padStart(2, '0')}-${String(d.day ?? 1).padStart(2, '0')}`;
 }
 
 // The source manga: ADAPTATION edge, format MANGA, most popular on ties.
-function pickManga(media: AniListMedia) {
+export function pickManga(media: AniListMedia) {
   const candidates = media.relations.edges
     .filter((e) => e.relationType === 'ADAPTATION' && e.node.type === 'MANGA' && e.node.format === 'MANGA')
     .sort((a, b) => (b.node.popularity ?? 0) - (a.node.popularity ?? 0));

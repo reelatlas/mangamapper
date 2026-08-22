@@ -44,6 +44,13 @@ const OVERRIDE_CHAINS: Record<
   'love-ru-darkness': { ids: [13663, 20995] },
   'kamisama-kiss': { ids: [14713, 20801, 21186] },
   x: { ids: [156] },
+  // AniList relation-graph gaps found post-recovery (2026-08-23):
+  'tokyo-ghoul': { ids: [20605, 20850] }, // S1 + √A (AFL page = both, 24 eps)
+  'tokyo-ghoul-re-0': { ids: [100240, 102351] }, // :re parts 1+2
+  'fatestay-night-unlimited-blade-works': { ids: [19603, 20792] }, // UBW two cours
+  'rurouni-kenshin-2023': { ids: [142877, 171637] }, // 2023 + Kyoto Disturbance
+  'berserk-2016': { ids: [21560, 97643] }, // 2016+2017 (Memorial is its PREQUEL edge — separate entry by ruling)
+  'blade-immortal-2019': { ids: [109616] }, // 2019 ONA (match had landed on the 2008 TV)
   'hokuto-no-ken': { ids: [967, 1356] },
   'black-butler': { ids: [4898, 6707, 20606] },
 };

@@ -14,6 +14,10 @@ export interface AfgEpisode {
   arc: string | null;
   canonStart: string | null; // "(2:05)" timestamps on mixed episodes
   chapters: number[];        // chapters this episode covers (empty = filler/none)
+  // AFG's 3-way taxonomy via cell classes: red = filler, blue = mixed,
+  // unstyled = canon. Only used where AFL is absent (expansion series) —
+  // AFL stays the type authority everywhere it exists.
+  type: 'canon' | 'mixed' | 'filler';
 }
 
 export interface AfgPage {
@@ -79,12 +83,14 @@ export function parseAfgPage(html: string): AfgPage {
         const hasStart = /^\(?[\d:]+\)?$/.test(cells[1] ?? '');
         const titleCell = hasStart ? cells[2] : cells[1];
         const chaptersCell = hasStart ? cells[3] : cells[2];
+        const numberClass = $(tr).find('td').first().attr('class') ?? '';
         episodes.push({
           number,
           title: titleCell ?? '',
           arc: currentArc,
           canonStart: hasStart ? (cells[1].replace(/[()]/g, '') || null) : null,
           chapters: parseChapters(chaptersCell ?? ''),
+          type: /\bred\b/.test(numberClass) ? 'filler' : /\bblue\b/.test(numberClass) ? 'mixed' : 'canon',
         });
       });
   });
