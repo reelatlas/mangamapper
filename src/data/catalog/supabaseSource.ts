@@ -63,14 +63,31 @@ const streamingOn = (links: SeriesRow['external_links']): StreamingService[] => 
   return [...out];
 };
 
-// Volume from chapter at the series' own pacing, when totals are known
-// (ongoing manga report null totals — the UI omits vol: for those rows).
-const volumeFor = (row: SeriesRow, chapter: number): number | null => {
+type Boundary = { volume: number; chapter_start: number; chapter_end: number | null };
+
+// Volume from chapter: real published boundaries first (Wikipedia-derived,
+// volume_boundaries table), ratio estimate as fallback when totals are known,
+// null otherwise (the UI omits vol: for those rows).
+const volumeFor = (row: SeriesRow, chapter: number, boundaries: Boundary[]): number | null => {
+  for (const b of boundaries) {
+    if (chapter >= b.chapter_start && (b.chapter_end === null || chapter <= b.chapter_end)) return b.volume;
+  }
   if (!row.total_volumes || !row.total_chapters) return null;
   return Math.min(row.total_volumes, Math.max(1, Math.ceil((chapter * row.total_volumes) / row.total_chapters)));
 };
 
-const toEpisodes = (row: SeriesRow, eps: EpisodeRow[], anchors: AnchorRow[]): Episode[] => {
+async function allBoundaries(mangaId: number | null): Promise<Boundary[]> {
+  if (!mangaId) return [];
+  const { data, error } = await supabase
+    .from('volume_boundaries')
+    .select('volume, chapter_start, chapter_end')
+    .eq('manga_anilist_id', mangaId)
+    .order('volume');
+  if (error) throw error;
+  return (data ?? []) as Boundary[];
+}
+
+const toEpisodes = (row: SeriesRow, eps: EpisodeRow[], anchors: AnchorRow[], boundaries: Boundary[]): Episode[] => {
   const anchorByEp = new Map(anchors.map((a) => [a.episode, a]));
   return eps.map((e) => {
     const anchor = anchorByEp.get(e.number);
@@ -83,7 +100,7 @@ const toEpisodes = (row: SeriesRow, eps: EpisodeRow[], anchors: AnchorRow[]): Ep
       mangaMapping:
         mappable && anchor
           ? {
-              volume: anchor.volume ?? volumeFor(row, anchor.chapter),
+              volume: anchor.volume ?? volumeFor(row, anchor.chapter, boundaries),
               chapters: String(anchor.chapter),
             }
           : null,
@@ -92,7 +109,7 @@ const toEpisodes = (row: SeriesRow, eps: EpisodeRow[], anchors: AnchorRow[]): Ep
   });
 };
 
-const toAnimeSeries = (row: SeriesRow, rank: number, episodes: Episode[]): AnimeSeries => ({
+const toAnimeSeries = (row: SeriesRow, rank: number, episodes: Episode[], publishedVolumes = 0): AnimeSeries => ({
   id: row.id,
   title: row.title,
   japaneseTitle: row.title_native ?? row.title,
@@ -102,7 +119,9 @@ const toAnimeSeries = (row: SeriesRow, rank: number, episodes: Episode[]): Anime
   status: row.status as AnimeStatus,
   mangaStatus: (row.manga_status ?? 'anime_only') as MangaStatus,
   hasManga: row.manga_status !== null && row.manga_status !== 'anime_only',
-  totalVolumes: row.total_volumes,
+  // ongoing manga: AniList totals are null — published volume count (from
+  // real boundaries) stands in as the latest-known denominator
+  totalVolumes: row.total_volumes ?? (publishedVolumes || null),
   totalChapters: row.total_chapters,
   mangaStartVolume: row.manga_start_volume,
   mangaStartChapter: row.manga_start_chapter,
@@ -175,7 +194,7 @@ const buildSpans = (eps: EpisodeRow[], aired: number, fallback: EpisodeType): Ep
   return spans;
 };
 
-const buildMapping = (row: SeriesRow, eps: EpisodeRow[], anchors: AnchorRow[]): MappingSummary => {
+const buildMapping = (row: SeriesRow, eps: EpisodeRow[], anchors: AnchorRow[], boundaries: Boundary[]): MappingSummary => {
   const sourceType = row.source_type as SourceType;
   const hasSource = sourceType !== 'original' && row.manga_status !== 'anime_only';
   const aired = Math.max(row.aired_episodes, eps.reduce((m, e) => Math.max(m, e.number), 0));
@@ -190,7 +209,7 @@ const buildMapping = (row: SeriesRow, eps: EpisodeRow[], anchors: AnchorRow[]): 
     hasSource && latestAnchor
       ? {
           episode: latestAnchor.episode,
-          volume: latestAnchor.volume ?? volumeFor(row, latestAnchor.chapter),
+          volume: latestAnchor.volume ?? volumeFor(row, latestAnchor.chapter, boundaries),
           chapters: String(latestAnchor.chapter),
         }
       : null;
@@ -198,7 +217,7 @@ const buildMapping = (row: SeriesRow, eps: EpisodeRow[], anchors: AnchorRow[]): 
     hasSource && latestAnchor
       ? {
           episode: latestAnchor.episode,
-          volume: latestAnchor.volume ?? volumeFor(row, latestAnchor.chapter + 1),
+          volume: latestAnchor.volume ?? volumeFor(row, latestAnchor.chapter + 1, boundaries),
           chapters: String(latestAnchor.chapter + 1),
         }
       : null;
@@ -270,18 +289,26 @@ export const supabaseCatalogSource: CatalogSource = {
   async getById(id: string) {
     const row = await fetchSeriesRow(id);
     if (!row) return null;
-    const [eps, anchors] = await Promise.all([allEpisodes(id), allAnchors(id)]);
+    const [eps, anchors, boundaries] = await Promise.all([
+      allEpisodes(id),
+      allAnchors(id),
+      allBoundaries(row.manga_anilist_id),
+    ]);
     const { count } = await supabase
       .from('series')
       .select('*', { count: 'exact', head: true })
       .gt('popularity', row.popularity);
-    return toAnimeSeries(row, (count ?? 0) + 1, toEpisodes(row, eps, anchors));
+    return toAnimeSeries(row, (count ?? 0) + 1, toEpisodes(row, eps, anchors, boundaries), boundaries.length);
   },
 
   async getMapping(id: string) {
     const row = await fetchSeriesRow(id);
     if (!row) return null;
-    const [eps, anchors] = await Promise.all([allEpisodes(id), allAnchors(id)]);
-    return buildMapping(row, eps, anchors);
+    const [eps, anchors, boundaries] = await Promise.all([
+      allEpisodes(id),
+      allAnchors(id),
+      allBoundaries(row.manga_anilist_id),
+    ]);
+    return buildMapping(row, eps, anchors, boundaries);
   },
 };

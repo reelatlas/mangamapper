@@ -1,0 +1,599 @@
+{{Short description|none}}
+{{about|One Piece chapters 1 to 186|a guide|lists of One Piece chapters{{!}}lists of ''One Piece'' chapters}}
+[[File:One Piece, Volume 1.jpg|thumb|right|alt=Manga cover, with three characters|First volume of ''One Piece'', released in Japan by Shueisha on December 24, 1997]]
+{{One Piece manga intro}}
+__TOC__
+{{Clear}}
+
+== Volumes ==
+<onlyinclude>
+{{Graphic novel list/header
+| Language    = Japanese
+| LineColor   = C64043
+| WithTitle   = yes
+}}
+{{Graphic novel list
+| SublistOf     = List of One Piece manga volumes
+| VolumeNumber  = 1
+| OriginalRelDate = December 24, 1997<ref name="JPv1"/>
+| OriginalISBN  = 4-08-872509-3
+| LicensedRelDate = June 30, 2003<ref name="ENv1"/>
+| LicensedISBN  = 1-56931-901-4
+| ChapterList   =
+{{Numbered list|start=1
+|{{nihongo|"Romance Dawn"|Romance Dawn {{nowrap|—冒険の夜明け—}}|"Romance Dawn: Bōken no Yoake"}}
+|{{nihongo|"They Call Him 'Straw Hat Luffy'"|その男「麦わらのルフィ」|"Sono Otoko 'Mugiwara no Rufi'"}}
+|{{nihongo|"Enter Zoro: Pirate Hunter"|「海賊狩りロロノア・ゾロ」登場|"'Kaizoku-Gari Roronoa Zoro' Tōjō"}}
+|{{nihongo|"The Great Captain Morgan"|海軍大佐「斧手のモーガン」|"Kaigun Taisa 'Onote no Mōgan'"}}
+}}
+| ChapterListCol2 =
+{{Numbered list|start=5
+|{{nihongo|"The King of the Pirates and the Master Swordsman"|海賊王と大剣豪|"Kaizoku Ō to Daikengō"}}
+|{{nihongo|"Number One"|一人目|"Hitorime"}}
+|{{nihongo|"Friends"|友達|"Tomodachi"}}
+|{{nihongo|"Nami"|ナミ登場|"Nami Tōjō"}}
+}}
+| LicensedTitle = Romance Dawn
+| OriginalTitle = Romance Dawn {{nowrap|—冒険の夜明け—}}
+| TranslitTitle = Romance Dawn: Bōken no Yoake
+| Summary       = Seven-year-old Monkey D. Luffy tries to join [["Red-Haired" Shanks]]' pirate crew, but is rejected as too young. He accidentally eats a [[devil fruit]] which causes his body to gain the properties of rubber, but makes him unable to swim. After an ordeal with mountain bandits, Luffy abandons his plan to join Shanks' crew; instead, he vows to surpass Shanks, build up a crew of his own and become the next King of the Pirates. Ten years later Luffy sets out to sea, frees the young [[Coby (One Piece)|Coby]] from a slave's life in [[Alvida (One Piece)|Alvida's]] pirate crew and saves three-sword-wielding Pirate Hunter [[Roronoa Zoro]] from being executed by the [[Navy (One Piece)|Navy]]. With Zoro Luffy's first crewman, they set sail for the [[Grand Line]] (the sea where the One Piece – the treasure of the last king of the pirates – is supposedly hidden), and meet thief (and expert navigator) [[Nami (One Piece)|Nami]].
+| LineColor   = C64043
+}}
+{{Graphic novel list
+| SublistOf     = List of One Piece manga volumes
+| VolumeNumber  = 2
+| OriginalRelDate = April 3, 1998<ref name="JPv2">{{cite web |archiveurl=https://web.archive.org/web/20090216111659/http://books.shueisha.co.jp/CGI/search/syousai_put.cgi?isbn_cd=4-08-872544-1&mode=1 |archivedate=February 16, 2009 |url=http://books.shueisha.co.jp/CGI/search/syousai_put.cgi?isbn_cd=4-08-872544-1&mode=1 |title=One Piece/2 |publisher=Shueisha |accessdate=March 22, 2009 |language=ja |url-status=dead}}</ref>
+| OriginalISBN  = 4-08-872544-1
+| LicensedRelDate = November 19, 2003<ref name="ENv2">{{cite book|title=Buggy the Clown (One Piece, Vol. 2) |isbn=159116057X |last1=Oda |first1=Eiichiro |date=16 December 2003 |publisher=VIZ Media LLC }}</ref>
+| LicensedISBN  = 1-59116-057-X
+| ChapterList   =
+{{Numbered list|start=9
+|{{nihongo|"Femme Fatale"|魔性の女|"Mashō no Onna"}}
+|{{nihongo|"Incident at the Tavern"|酒場の一件|"Sakaba no Ikken"}}
+|{{nihongo|"Flight"|敗走|"Haisō"}}
+|{{nihongo|"Dog"|犬|"Inu"}}
+|{{nihongo|"Treasure"|宝物|"Takaramono"}}
+}}
+| ChapterListCol2 =
+{{Numbered list|start=14
+|{{nihongo|"Reckless"|無謀っ!!|"Mubō!!"}}
+|"Gong"
+|{{nihongo|"Versus Buggy's Crew"|Versus!! バギー海賊団|Versus!! {{nowrap|"Bagī Kaizoku-Dan"}}}}
+|{{nihongo|"High Level, Low Level"|格|"Kaku"}}
+}}
+| LicensedTitle = Buggy the Clown
+| OriginalTitle = Versus!! {{nowrap|バギー海賊団}}
+| TranslitTitle = Versus!! Bagī Kaizoku-Dan
+| Summary     = Luffy begs Nami to become a pirate and his crew's navigator, but she refuses and uses him as bait to steal the treasure of pirate captain [[Buggy the Clown]]. As Luffy and Zoro fight the Buggy Pirates, Buggy is found to have the power of a devil fruit which allows him to separate his body parts at will. With Buggy's crewmen defeated, Luffy fights him one-on-one.
+| LineColor   = C64043
+}}
+{{Graphic novel list
+| SublistOf     = List of One Piece manga volumes
+| VolumeNumber  = 3
+| OriginalRelDate = June 4, 1998<ref name="JPv3">{{cite web |archiveurl=https://web.archive.org/web/20090216111947/http://books.shueisha.co.jp/CGI/search/syousai_put.cgi?isbn_cd=4-08-872569-7&mode=1 |archivedate=February 16, 2009 |url=http://books.shueisha.co.jp/CGI/search/syousai_put.cgi?isbn_cd=4-08-872569-7&mode=1 |title=One Piece/3 |publisher=Shueisha |accessdate=March 22, 2009 |language=ja |url-status=dead}}</ref>
+| OriginalISBN  = 4-08-872569-7
+| LicensedRelDate = March 17, 2004<ref name="ENv3">{{cite book|title=Don't Get Fooled Again (One Piece, Vol. 3) |isbn=1591161843 |last1=Oda |first1=Eiichiro |date=18 February 2004 |publisher=VIZ Media LLC }}</ref>
+| LicensedISBN  = 1-59116-184-3
+| ChapterList   =
+{{Numbered list|start=18
+|{{nihongo|"The Pirate Buggy the Clown"|海賊「道化のバギー」|"Kaizoku 'Dōke no Bagī'"}}
+|{{nihongo|"Devil Fruit"|悪魔の実|"Akuma no Mi"}}
+|{{nihongo|"The Way of the Thief"|泥棒道|"Dorobō-Dō"}}
+|{{nihongo|"Townies"|町|"Machi"}}
+|{{nihongo|"Strange Creatures"|あんたが珍獣|"Anta ga Chinjū"}}
+}}
+| ChapterListCol2 =
+{{Numbered list|start=23
+|{{nihongo|"The Dread Captain Usopp"|キャプテン・ウソップ登場|"Kyaputen Usoppu Tōjō"}}
+|{{nihongo|"The Lie Rejecter"|偽れぬもの|"Itsuwarenu Mono"}}
+|{{nihongo|"Lies"|ウソ800|"Usoppappyaku"}}
+|{{nihongo|"Captain Kuro's Plan"|キャプテン・クロの一計|"Kyaputen Kuro no Ikkei"}}
+}}
+| LicensedTitle = Don't Get Fooled Again
+| OriginalTitle = 偽れぬもの
+| TranslitTitle = Itsuwarenu Mono
+| Summary     = Luffy and Buggy fight in a bizarre show of devil-fruit powers until Nami joins the fight and Buggy is defeated by the two (temporary) allies. Leaving with some of Buggy's treasure, they and Zoro set sail for the hometown of chronic liar [[Usopp]]. In search of a large ship, Luffy and his crew visit the mansion of the sickly young Kaya; they are turned away by her overprotective butler, Klahador. Usopp and Luffy later overhear Klahador (who is really the notorious pirate [[Kuro (One Piece)|Kuro]]) and his first mate, [[Django (One Piece)|Django]], plan to kill Kaya so Kuro can inherit her wealth and social status.
+| LineColor   = C64043
+}}
+{{Graphic novel list
+| SublistOf     = List of One Piece manga volumes
+| VolumeNumber  = 4
+| OriginalRelDate = August 4, 1998<ref name="JPv4">{{cite web |archiveurl=https://web.archive.org/web/20090216111704/http://books.shueisha.co.jp/CGI/search/syousai_put.cgi?isbn_cd=4-08-872594-8&mode=1 |archivedate=February 16, 2009 |url=http://books.shueisha.co.jp/CGI/search/syousai_put.cgi?isbn_cd=4-08-872594-8&mode=1 |title=One Piece/4 |publisher=Shueisha |accessdate=March 22, 2009 |language=ja |url-status=dead}}</ref>
+| OriginalISBN  = 4-08-872594-8
+| LicensedRelDate = July 14, 2004<ref name="ENv4">{{cite book|title=One Piece Vol. 4: The Black Cat Pirates |isbn=1591163374 |last1=Oda |first1=Eiichiro |date=17 August 2004 |publisher=VIZ Media LLC }}</ref>
+| LicensedISBN  = 1-59116-337-4
+| ChapterList   =
+{{Numbered list|start=27
+|{{nihongo|"True Lies"|筋|"Suji"}}
+|{{nihongo|"Crescent Moon"|三日月|"Mikazuki"}}
+|{{nihongo|"Uphill Battle"|坂道|"Sakamichi"}}
+|{{nihongo|"Backfire"|GREAT!!!}}
+|{{nihongo|"Truth"|真実|"Shinjitsu"}}
+}}
+| ChapterListCol2 =
+{{Numbered list|start=32
+|{{nihongo|"Cruel Fortune"|大凶|"Daikyō"}}
+|{{nihongo|"The Creeping Cat"|音無き男|"Otonaki Otoko"}}
+|{{nihongo|"A Humble Servant"|執事クラハドール|"Shitsuji Kurahadōru"}}
+|{{nihongo|"The Steep Slope"|ネオ坂道|"Neo Sakamichi"}}
+}}
+| LicensedTitle = The Black Cat Pirates
+| OriginalTitle = 三日月
+| TranslitTitle = Mikazuki
+| Summary     = Usopp fails to convince the villagers of the impending pirate invasion, but when he decides to prevent the raiding party from reaching them he is joined by the Straw Hat Pirates. They spend the night in preparation, planning to stop the Black Cat Pirates on the coast. However, they pick the wrong side of the village to protect; when they realize their mistake, they have to hurry to reach the other coast. The fight goes well, although they are unprepared and greatly outnumbered. Kuro, angered by the raiding party's delay, appears on the battlefield; so does Kaya, in a futile attempt to negotiate a compromise.
+| LineColor   = C64043
+}}
+{{Graphic novel list
+| SublistOf     = List of One Piece manga volumes
+| VolumeNumber  = 5
+| OriginalRelDate = October 2, 1998<ref name="JPv5">{{cite web |archiveurl=https://web.archive.org/web/20090216111950/http://books.shueisha.co.jp/CGI/search/syousai_put.cgi?isbn_cd=4-08-872619-7&mode=1 |archivedate=February 16, 2009 |url=http://books.shueisha.co.jp/CGI/search/syousai_put.cgi?isbn_cd=4-08-872619-7&mode=1 |title=One Piece/5 |publisher=Shueisha |accessdate=March 22, 2009 |language=ja |url-status=dead}}</ref>
+| OriginalISBN  = 4-08-872619-7
+| LicensedRelDate = November 17, 2004<ref name="ENv5">{{cite web|archiveurl=https://web.archive.org/web/20090605141928/http://www.viz.com/products/products.php?product_id=2407 |archivedate=June 5, 2009 |url=http://www.viz.com/products/products.php?product_id=2407 |title=One Piece, Vol. 5 |publisher=Viz Media |accessdate=March 22, 2009 |url-status=dead}}</ref>
+| LicensedISBN  = 1-59116-615-2
+| ChapterList   =
+{{Numbered list|start=36
+|{{nihongo|"After Them!!"|追え!!|"Oe!!"}}
+|{{nihongo|"Captain Kuro, of the Thousand Plans"|海賊「百計のクロ」|"Kaizoku 'Hyakkei no Kuro'"}}
+|{{nihongo|"Pirate Crew"|海賊団|"Kaizoku-Dan"}}
+|{{nihongo|"For Whom the Bell Tolls"|誰が為に鐘は鳴る|"Tagatameni Kane wa Naru"}}
+|{{nihongo|"Usopp's Pirate Crew"|ウソップ海賊団|"Usoppu Kaizoku-Dan"}}
+}}
+| ChapterListCol2 =
+{{Numbered list|start=41
+|{{nihongo|"To the Sea"|海へ|"Umi e"}}
+|{{nihongo|"Yosaku and Johnny"|ヨサクとジョニー|"Yosaku to Jonī"}}
+|{{nihongo|"Sanji"|サンジ登場|"Sanji Tōjō"}}
+|{{nihongo|"Three Tough Cooks"|三人のコック|"Sannin no Kokku"}}
+}}
+| LicensedTitle = For Whom the Bell Tolls
+| OriginalTitle = 誰が為に鐘は鳴る
+| TranslitTitle = Tagatameni Kane wa Naru
+| Summary     = Django, ordered to kill Kaya after forcing her to write a will favoring Kuro, chases her through the forest; Zoro and Usopp are chasing them. On the shore, Luffy and Kuro fight one-on-one and the Straw Hats prevail. With Usopp the newest addition to the crew and a ship named ''Going Merry'' as a parting gift from Kaya, they leave the island. At sea they meet Zoro's former bounty-hunting partners Johnny and Yosaku, who tell them about a [[floating restaurant]] near the Grand Line where the crew might find a cook and (to Zoro's delight) [[Dracule Mihawk|"Hawk-Eyes" Dracule Mihawk]] – the world's greatest swordsman – was reportedly sighted. When they arrive, Luffy accidentally damages the restaurant and injures its head chef. In compensation, he agrees to work there for one week. When he sees assistant head chef [[Sanji (One Piece)|Sanji]] give free food to Gin, a starving pirate, he decides to persuade the cook to join his crew.
+| LineColor   = C64043
+}}
+{{Graphic novel list
+| SublistOf     = List of One Piece manga volumes
+| VolumeNumber  = 6
+| OriginalRelDate = December 3, 1998<ref name="JPv6">{{cite web |archiveurl=https://web.archive.org/web/20090216111438/http://books.shueisha.co.jp/CGI/search/syousai_put.cgi?isbn_cd=4-08-872642-1&mode=1 |archivedate=February 16, 2009 |url=http://books.shueisha.co.jp/CGI/search/syousai_put.cgi?isbn_cd=4-08-872642-1&mode=1 |title=One Piece/6 |publisher=Shueisha |accessdate=March 22, 2009 |language=ja |url-status=dead}}</ref>
+| OriginalISBN  = 4-08-872642-1
+| LicensedRelDate = March 1, 2005<ref name="ENv6">{{cite web|archiveurl=https://web.archive.org/web/20090608141511/http://www.viz.com/products/products.php?product_id=1271 |archivedate=June 8, 2009 |url=http://www.viz.com/products/products.php?product_id=1271 |title=One Piece, Vol. 6 |publisher=Viz Media |accessdate=March 22, 2009 |url-status=dead}}</ref>
+| LicensedISBN  = 1-59116-723-X
+| ChapterList   =
+{{Numbered list|start=45
+|{{nihongo|"Before the Storm"|嵐前|"Arashi Mae"}}
+|{{nihongo|"An Uninvited Guest"|招かれざる客|"Manekarezaru Kyaku"}}
+|{{nihongo|"The Don's Offer"|海賊艦隊提督「首領・クリーク」|"Kaizoku Kantai Teitoku 'Don Kurīku'"}}
+|{{nihongo|"Steer Clear"|その航路、やめときな|"Sono Kōro, Yametoki na"}}
+|{{nihongo|"Storm"|嵐|"Arashi"}}
+}}
+| ChapterListCol2 =
+{{Numbered list|start=50
+|{{nihongo|"A Parting of Ways"|己々が路|"Ono'ono ga Michi"}}
+|{{nihongo|"Zoro Overboard"|ロロノア・ゾロ海に散る|"Roronoa Zoro Umi ni Chiru"}}
+|{{nihongo|"The Oath"|誓い|"Chikai"}}
+|{{nihongo|"Mackerel Head"|サバガシラ１号|"Sabagashira Ichi-gō"}}
+}}
+| LicensedTitle = The Oath
+| OriginalTitle = 誓い
+| TranslitTitle = Chikai
+| Summary     = Luffy is a kitchen assistant and waiter until the torn-up flagship of Pirate Commodore [[Don Krieg]] lays anchor next to the floating restaurant and a half-starved Krieg, leaning on Gin, staggers inside. He begs for food, which Sanji provides without hesitation. When Krieg's strength is restored he reverts to his normal self, demanding ownership of the restaurant and food for his 100 men. Nami leaves with the ''Going Merry'', and Mihawk arrives. The master swordsman followed Krieg from the Grand Line, where he had wiped out his entire fleet. Zoro challenges him to a duel and, despite his best efforts, is defeated. After the fight, Usopp, Johnny, and Yosaku take Zoro aboard the bounty hunters' boat and set sail to follow Nami. Luffy is left behind to pay his debt to the restaurant by defeating Krieg and his men.
+| LineColor   = C64043
+}}
+{{Graphic novel list
+| SublistOf     = List of One Piece manga volumes
+| VolumeNumber  = 7
+| OriginalRelDate = March 4, 1999<ref name="JPv7">{{cite web |archiveurl=https://web.archive.org/web/20090216112213/http://books.shueisha.co.jp/CGI/search/syousai_put.cgi?isbn_cd=4-08-872683-9&mode=1 |archivedate=February 16, 2009 |url=http://books.shueisha.co.jp/CGI/search/syousai_put.cgi?isbn_cd=4-08-872683-9&mode=1 |title=One Piece/7 |publisher=Shueisha |accessdate=March 22, 2009 |language=ja |url-status=dead}}</ref>
+| OriginalISBN  = 4-08-872683-9
+| LicensedRelDate = July 5, 2005<ref name="ENv7">{{cite web|archiveurl=https://web.archive.org/web/20090605134040/http://www.viz.com/products/products.php?product_id=5067 |archivedate=June 5, 2009 |url=http://www.viz.com/products/products.php?product_id=5067 |title=One Piece, Vol. 7 |publisher=Viz Media |accessdate=March 22, 2009 |url-status=dead}}</ref>
+| LicensedISBN  = 1-59116-852-X
+| ChapterList   =
+{{Numbered list|start=54
+|{{nihongo|"Pearl"|パールさん|"Pāru-san"}}
+|"Jungle Blood"
+|{{nihongo|"I Refuse"|やなこった|"Ya na Kotta"}}
+|{{nihongo|"If You Have a Dream"|夢在るがゆえ|"Yume Aru ga Yue"}}
+|{{nihongo|"The Crap-Geezer"|クソジジイ|"Kuso Jijī"}}
+}}
+| ChapterListCol2 =
+{{Numbered list|start=59
+|{{nihongo|"Sanji's Debt"|恩|"On"}}
+|{{nihongo|"Resolution"|ケジメ|"Kejime"}}
+|{{nihongo|"The Demon"|鬼|"Oni"}}
+|{{nihongo|"MH5"|"M·H·5"}}
+}}
+| LicensedTitle = The Crap-Geezer
+| OriginalTitle = クソジジイ
+| TranslitTitle = Kuso Jijī
+| Summary     = Luffy and the cooks defend the restaurant until Gin takes the one-legged head chef Zeff hostage, hoping to resolve the situation without Sanji's death. Fearing for Zeff's life, Sanji stops fighting but does not surrender the ship to the pirates. In a flashback, a young Sanji and Zeff (a renowned pirate) are shipwrecked. Zeff gives Sanji a small bundle of food and sends him to the other side of the island to keep watch, while Zeff keeps a much larger bundle for himself. Weeks later, a famished Sanji returns to take the pirate's food only to discover that the bundle contains nothing but gold and that Zeff has devoured his own leg. In the present, Gin realizes that he cannot save Sanji's life because he is hell-bent on protecting Zeff's restaurant. Instead, Gin decides to kill Sanji with his own hands. When the time comes, he cannot do it and begs Krieg to leave the restaurant alone. Outraged at Gin's disobedience, Krieg uses poison gas against his right-hand man.
+| LineColor   = C64043
+}}
+{{Graphic novel list
+| SublistOf     = List of One Piece manga volumes
+| VolumeNumber  = 8
+| OriginalRelDate = April 30, 1999<ref name="JPv8">{{cite web |archiveurl=https://web.archive.org/web/20090216111711/http://books.shueisha.co.jp/CGI/search/syousai_put.cgi?isbn_cd=4-08-872712-6&mode=1 |archivedate=February 16, 2009 |url=http://books.shueisha.co.jp/CGI/search/syousai_put.cgi?isbn_cd=4-08-872712-6&mode=1 |title=One Piece/8 |publisher=Shueisha |accessdate=March 22, 2009 |language=ja |url-status=dead}}</ref>
+| OriginalISBN  = 4-08-872712-6
+| LicensedRelDate = October 10, 2005<ref name="ENv8">{{cite web|archiveurl=https://web.archive.org/web/20090616034308/http://www.viz.com/products/products.php?product_id=5238 |archivedate=June 16, 2009 |url=http://www.viz.com/products/products.php?product_id=5238 |title=One Piece, Vol. 8 |publisher=Viz Media |accessdate=March 22, 2009 |url-status=dead}}</ref>
+| LicensedISBN  = 1-4215-0075-2
+| ChapterList   =
+{{Numbered list|start=63
+|{{nihongo|"I Won't Die"|死なねェよ|"Shinanē yo"}}
+|{{nihongo|"The Mighty Battle Spear"|大戦槍|"Daisensō"}}
+|{{nihongo|"Prepared"|覚悟|"Kakugo"}}
+|{{nihongo|"The Chewed-up Spear"|噛み殺した槍|"Kamikoroshita Yari"}}
+|"The Soup (Soup)"
+}}
+| ChapterListCol2 =
+{{Numbered list|start=68
+|{{nihongo|"The Fourth Person"|４人目|"Yonninme"}}
+|{{nihongo|"Arlong Park"|アーロンパーク|"Āron Pāku"}}
+|{{nihongo|"The Great Adventure of Usopp the Man"|男ウソップ大冒険|"Otoko Usoppu Daibōken"}}
+|{{nihongo|"Lords of All Creation"|万物の霊長|"Banbutsu no Reichō"}}
+}}
+| LicensedTitle = I Won't Die
+| OriginalTitle = 死なねェよ
+| TranslitTitle = Shinanē yo
+| Summary     = While the cooks (ordered by Sanji) tend to the poisoned Gin, Luffy charges at Krieg. Although the commodore uses his many weapons to severely injure him, Luffy wins; with his debt repaid, he is finally free to go. However, Sanji still refuses to join Luffy's crew. Only after an attempt by the cooks to convince him he is unwanted does he finally agree. Nami is welcomed back to Arlong Park, the base of [[Arlong]]'s pirates (a crew consisting, aside from Nami, only of fish-men – beings who are half fish and half human.) Zoro and Usopp learn separately that Nami is one of Arlong's officers – Usopp from Nami's adoptive older sister Nojiko, and Zoro from Nami when he is captured and dragged into Arlong Park.
+| LineColor   = C64043
+}}
+{{Graphic novel list
+| SublistOf     = List of One Piece manga volumes
+| VolumeNumber  = 9
+| OriginalRelDate = July 2, 1999<ref name="JPv9">{{cite web |archiveurl=https://web.archive.org/web/20090216111716/http://books.shueisha.co.jp/CGI/search/syousai_put.cgi?isbn_cd=4-08-872735-5&mode=1 |archivedate=February 16, 2009 |url=http://books.shueisha.co.jp/CGI/search/syousai_put.cgi?isbn_cd=4-08-872735-5&mode=1 |title=One Piece/9 |publisher=Shueisha |accessdate=March 22, 2009 |language=ja |url-status=dead}}</ref>
+| OriginalISBN  = 4-08-872735-5
+| LicensedRelDate = January 3, 2006<ref name="ENv9">{{cite web|archiveurl=https://web.archive.org/web/20090603171313/http://www.viz.com/products/products.php?product_id=5388 |archivedate=June 3, 2009 |url=http://www.viz.com/products/products.php?product_id=5388 |title=One Piece, Vol. 9 |publisher=Viz Media |accessdate=March 22, 2009 |url-status=dead}}</ref>
+| LicensedISBN  = 1-4215-0191-0
+| ChapterList   =
+{{Numbered list|start=72
+|{{nihongo|"Proper Living"|分相応|"Bunsō'ō"}}
+|{{nihongo|"Monsters of the Grand Line"|偉大なる航路から来た怪物|"Gurando Rain kara Kita Kaibutsu"}}
+|{{nihongo|"Business"|仕事|"Bijinesu"}}
+|{{nihongo|"Of Maps and Fish-Men"|海図と魚人|"Kaizu to Gyojin"}}
+|{{nihongo|"Sleep"|ねる|"Neru"}}
+}}
+| ChapterListCol2 =
+{{Numbered list|start=77
+|{{nihongo|"The First Step Toward a Dream"|夢の一歩|"Yume no Ippo"}}
+|{{nihongo|"Belle-Mère"|ベルメールさん|"Berumēru-san"}}
+|{{nihongo|"To Live"|生きる|"Ikiru"}}
+|{{nihongo|"A Thief Is a Thief"|罪は罪|"Tsumi wa Tsumi"}}
+|{{nihongo|"Tears"|涙|"Namida"}}
+}}
+| LicensedTitle = Tears
+| OriginalTitle = 涙
+| TranslitTitle = Namida
+| Summary     = To save the life of the villager Genzo, Usopp angers Arlong by shooting at him. Zoro (freed by Nami and told to run away while he still can) defeats Arlong's low-ranking crews at Arlong Park and meets gullible octopus fish-man [[Hatchan]], who brings him to Nami's hometown. Usopp is captured and brought to Arlong Park, where Nami is accused of hiring Zoro to kill Arlong. To increase the crew's mistrust and save Usopp's life, she apparently kills him and kicks his body into the sea. Luffy and Sanji arrive; although they want to help, Nami turns them away. In a flashback, Arlong's crew arrives and extorts protection money from the island's inhabitants. Nami and Nojiko's foster mother, Bellemere, who cannot pay for all three of them, gives up her life to save her daughters. Nami joins Arlong's crew as their cartographer, and they agree on a price for which she can buy her village back. In the present Arlong breaks the agreement, and Nami accepts Luffy's help and he puts his straw hat on Nami's head.
+| LineColor   = C64043
+}}
+{{Graphic novel list
+| SublistOf     = List of One Piece manga volumes
+| VolumeNumber  = 10
+| OriginalRelDate = October 4, 1999<ref name="JPv10">{{cite web |archiveurl=https://web.archive.org/web/20090216111956/http://books.shueisha.co.jp/CGI/search/syousai_put.cgi?isbn_cd=4-08-872773-8&mode=1 |archivedate=February 16, 2009 |url=http://books.shueisha.co.jp/CGI/search/syousai_put.cgi?isbn_cd=4-08-872773-8&mode=1 |title=One Piece/10 |publisher=Shueisha |accessdate=March 22, 2009 |language=ja |url-status=dead}}</ref>
+| OriginalISBN  = 4-08-872773-8
+| LicensedRelDate = April 4, 2006<ref name="ENv10">{{cite web|archiveurl=https://web.archive.org/web/20090603170844/http://www.viz.com/products/products.php?product_id=5621 |archivedate=June 3, 2009 |url=http://www.viz.com/products/products.php?product_id=5621 |title=One Piece, Vol. 10 |publisher=Viz Media |accessdate=March 22, 2009 |url-status=dead}}</ref>
+| LicensedISBN  = 1-4215-0406-5
+| ChapterList   =
+{{Numbered list|start=82
+|"OK, Let's STAND UP!"
+|{{nihongo|"Luffy in Black"|ルフィ in Black|"Rufi in Black"}}
+|{{nihongo|"Zombie"|ゾンビ|"Zonbi"}}
+|{{nihongo|"Three Swords vs. Six"|三刀流対六刀流|"Santōryū tai Rokutōryū"}}
+|{{nihongo|"Heroism vs. Fish-Man Cruelty"|騎士道VS魚人空手|"Kishidō vs. Gyojin Karate"}}
+}}
+| ChapterListCol2 =
+{{Numbered list|start=87
+|{{nihongo|"It's All Over!!"|終わったんだ!!|"Owattanda!!"}}
+|{{nihongo|"Die!!!"|死んで!!!|"Shinde!!!"}}
+|{{nihongo|"Trade-off"|交替|"Kōtai"}}
+|{{nihongo|"What Can You Do?"|何ができる|"Nani ga Dekiru"}}
+}}
+| LicensedTitle = OK, Let's STAND UP!
+| TranslitTitle =
+| Summary     = The Straw Hats charge into Arlong Park. Luffy takes out the fish-men's pet sea monster and most of the crew, but his feet become stuck in the ground. Arlong uses the opportunity to dig out the ground containing Luffy's feet and throw it into the sea. Zoro, struggling with a severe injury received from Mihawk and armed with only one sword, fights the six-sword-wielding Hatchan and Sanji uses karate on the fish-men with swordfish-man Kuroobi. Genzo and Nojiko try to save Luffy from drowning, and further inland Usopp duels with the long-mouthed fish-man Choo. All of Arlong's crew are defeated except for Arlong himself. With Zoro's last bit of strength, he buys Sanji enough time to dive under and remove the rock from his captain's feet. When he is finally free, Luffy takes Zoro's place and his final fight with Arlong begins.
+| LineColor   = C64043
+}}
+{{Graphic novel list
+| SublistOf     = List of One Piece manga volumes
+| VolumeNumber  = 11
+| OriginalRelDate = December 2, 1999<ref name="JPv11">{{cite web |archiveurl=https://web.archive.org/web/20090216111721/http://books.shueisha.co.jp/CGI/search/syousai_put.cgi?isbn_cd=4-08-872797-5&mode=1 |archivedate=February 16, 2009 |url=http://books.shueisha.co.jp/CGI/search/syousai_put.cgi?isbn_cd=4-08-872797-5&mode=1 |title=One Piece/11 |publisher=Shueisha |accessdate=March 22, 2009 |language=ja |url-status=dead}}</ref>
+| OriginalISBN  = 4-08-872797-5
+| LicensedRelDate = July 5, 2006<ref name="ENv11">{{cite web|archiveurl=https://web.archive.org/web/20090608160455/http://www.viz.com/products/products.php?product_id=5926 |archivedate=June 8, 2009 |url=http://www.viz.com/products/products.php?product_id=5926 |title=One Piece, Vol. 11 |publisher=Viz Media |accessdate=March 22, 2009 |url-status=dead}}</ref>
+| LicensedISBN  = 1-4215-0663-7
+| ChapterList   =
+{{Numbered list|start=91
+|"Darts"
+|{{nihongo|"Happiness"|幸せ|"Shiawase"}}
+|{{nihongo|"Going Down"|下へまいります|"Shita e Mairimasu"}}
+|{{nihongo|"The Other Villain"|二人目|"Futarime"}}
+|{{nihongo|"Spin, Pinwheel"|まわれ風車|"Maware Kazaguruma"}}
+}}
+| ChapterListCol2 =
+{{Numbered list|start=96
+|{{nihongo|"The Meanest Man in the East"|東一番の悪|"Higashi Ichiban no Waru"}}
+|{{nihongo|"Kitetsu III"|三代鬼徹|"Sandai Kitetsu"}}
+|{{nihongo|"Dark Clouds"|暗雲|"An'un"}}
+|{{nihongo|"Luffy Died"|ルフィが死んだ|"Rufi ga Shinda"}}
+}}
+| LicensedTitle = The Meanest Man in the East
+| OriginalTitle = 東一番の悪
+| TranslitTitle = Higashi Ichiban no Waru
+| Summary     = Arlong and Luffy exchange blows until Arlong impatiently picks up his large sword. Tearing through Arlong Park, he chases Luffy into the cartography room where Nami spent eight years drawing maps for the fish-men. When he sees blood stains on her pen, Luffy becomes enraged and decides that he must destroy the room. He breaks the blade of Arlong's sword, and crushes the fish-man and his park into the ground. Overjoyed at their regained freedom, the island's inhabitants celebrate for three days and nights. Johnny and Yosaku take their leave and with Nami on board and the Straw Hat Pirates set sail for the next port – Lougetown, where [[Gol D. Roger]] (the King of the Pirates) was born and executed. News of Luffy's victory over Arlong and the first bounty placed on his head by the [[World Government (One Piece)|World Government]] reaches the ears of Navy captain [[Smoker (One Piece)|Smoker]]; Zoro meets sergeant-major [[Tashigi]] (Smoker's second-in-command) and Luffy visits the execution site, seeing his former opponents Buggy and Alvida.
+| LineColor   = C64043
+}}
+{{Graphic novel list
+| SublistOf     = List of One Piece manga volumes
+| VolumeNumber  = 12
+| OriginalRelDate = February 2, 2000<ref name="JPv12">{{cite web |archiveurl=https://web.archive.org/web/20090216111726/http://books.shueisha.co.jp/CGI/search/syousai_put.cgi?isbn_cd=4-08-872822-X&mode=1 |archivedate=February 16, 2009 |url=http://books.shueisha.co.jp/CGI/search/syousai_put.cgi?isbn_cd=4-08-872822-X&mode=1 |title=One Piece/12 |publisher=Shueisha |accessdate=March 22, 2009 |language=ja |url-status=dead}}</ref>
+| OriginalISBN  = 4-08-872822-X
+| LicensedRelDate = October 3, 2006<ref name="ENv12">{{cite web|archiveurl=https://web.archive.org/web/20081206051829/http://www.viz.com/products/products.php?product_id=5927 |archivedate=December 6, 2008 |url=http://www.viz.com/products/products.php?product_id=5927 |title=One Piece, Vol. 12 |publisher=Viz Media |accessdate=March 22, 2009 |url-status=dead}}</ref>
+| LicensedISBN  = 1-4215-0664-5
+| ChapterList   =
+{{Numbered list|start=100
+|{{nihongo|"The Legend Begins"|伝説は始まった|"Densetsu wa Hajimatta"}}
+|{{nihongo|"Reverse Mountain"|リヴァースマウンテン|"Rivāsu Maunten"}}
+|{{nihongo|"And Now, the Grand Line"|さて、偉大なる航路|"Sate, Gurando Rain"}}
+|{{nihongo|"The Whale"|クジラ|"Kujira"}}
+|{{nihongo|"Cape Promise"|約束の岬|"Yakusoku no Misaki"}}
+}}
+| ChapterListCol2 =
+{{Numbered list|start=105
+|{{nihongo|"Log Pose"|記録指針|"Rogu Pōsu"}}
+|{{nihongo|"The Town of Welcome"|歓迎の町|"Kangei no Machi"}}
+|{{nihongo|"Moonlight and Tombstones"|月光と墓標|"Gekkō to Bihyō"}}
+|{{nihongo|"100 Bounty Hunters"|100人の賞金稼ぎ|"Hyakunin no Shōkin Kasegi"}}
+}}
+| LicensedTitle = The Legend Begins
+| OriginalTitle = 伝説は始まった
+| TranslitTitle = Densetsu wa Hajimatta
+| Summary     = As the Straw Hats try to flee the island, Smoker gets in their way. Luffy fights him, but is quickly pinned to the ground. With the help of a mysterious man named [[Monkey D. Dragon|Dragon]], he escapes. The Straw Hats enter the Grand Line by crossing [[Reverse Mountain]], where they are swallowed by the giant whale Laboon. In its stomach they meet Mr. 9 and [[Miss Wednesday]] (who try to kill the whale to feed their village) and Crocus, Laboon's caretaker. Crocus shows them the way out, telling the whale's story, and introduces the Straw Hats to navigating the Grand Line. Luffy impulsively gives Miss Wednesday and Mr. 9 a ride to Whiskey Peak, their home village. Their arrival is celebrated by the townspeople, who are bounty hunters for [[Baroque Works]]. With his comrades fast asleep after the party, Zoro must fight the roughly 100 bounty hunters himself.
+| LineColor   = C64043
+}}
+{{Graphic novel list
+| SublistOf     = List of One Piece manga volumes
+| VolumeNumber  = 13
+| OriginalRelDate = April 28, 2000<ref name="JPv13">{{cite web |archiveurl=https://web.archive.org/web/20090216112220/http://books.shueisha.co.jp/CGI/search/syousai_put.cgi?isbn_cd=4-08-872863-7&mode=1 |archivedate=February 16, 2009 |url=http://books.shueisha.co.jp/CGI/search/syousai_put.cgi?isbn_cd=4-08-872863-7&mode=1 |title=One Piece/13 |publisher=Shueisha |accessdate=March 22, 2009 |language=ja |url-status=dead}}</ref>
+| OriginalISBN  = 4-08-872863-7
+| LicensedRelDate = January 2, 2007<ref name="ENv13">{{cite web|archiveurl=https://web.archive.org/web/20090603152113/http://www.viz.com/products/products.php?product_id=5928 |archivedate=June 3, 2009 |url=http://www.viz.com/products/products.php?product_id=5928 |title=One Piece, Vol. 13 |publisher=Viz Media |accessdate=March 22, 2009 |url-status=dead}}</ref>
+| LicensedISBN  = 1-4215-0665-3
+| ChapterList   =
+{{Numbered list|start=109
+|{{nihongo|"A Question of Duty"|責任問題|"Sekinin Mondai"}}
+|{{nihongo|"The Night Isn't Over"|夜は終わらない|"Yoru wa Owaranai"}}
+|{{nihongo|"The Secret Criminal Organization"|秘密犯罪会社|"Himitsu Hanzai Kaisha"}}
+|{{nihongo|"Luffy vs. Zoro"|ルフィVSゾロ|"Rufi vs. Zoro"}}
+|{{nihongo|"It's All Right"|大丈夫!!!|"Daijōbu!!!"}}
+}}
+| ChapterListCol2 =
+{{Numbered list|start=114
+|{{nihongo|"The Course"|進路|"Shinro"}}
+|{{nihongo|"Little Garden of Adventure"|冒険のリトルガーデン|"Bōken no Ritoru Gāden"}}
+|{{nihongo|"Big"|でっけェ|"Dekkē"}}
+|{{nihongo|"Dorry and Broggy"|ドリーとブロギー|"Dorī to Burogī"}}
+}}
+| LicensedTitle = It's All Right!
+| OriginalTitle = 大丈夫!!!
+| TranslitTitle = Daijōbu!!!
+| Summary     = Zoro fights the four remaining bounty hunters as a far-greater threat enters the village: the high-ranking Baroque Works agents [[Mr. 5]] and [[Miss Valentine]]. Their target is not the Straw Hats but Miss Wednesday, whose true identity is [[Nefeltari Vivi]] (princess of the kingdom of Alabasta). Vivi runs for her life; Nami (who had feigned sleep) makes a deal to save Vivi's life with Mr. 8 – who is actually Igaram, captain of the Alabastan Royal Guard. Nami then forces Zoro to take on the agents. Out of immediate danger, Vivi tells the Straw Hats that Mr. 0 (in charge of Baroque Works) plans to use the organization to overthrow her country and reveals his true identity: [[Sir Crocodile]] – like Mihawk, a member of the government-sanctioned [[Seven Warlords of the Sea]] pirate group. The Straw Hats agree to bring Vivi to Alabasta. They reach the jungle-covered island of Little Garden, where the giants Dorry and Broggy engage in a hundred-year-long battle.
+| LineColor   = C64043
+}}
+{{Graphic novel list
+| SublistOf     = List of One Piece manga volumes
+| VolumeNumber  = 14
+| OriginalRelDate = July 4, 2000<ref name="JPv14">{{cite web |archiveurl=https://web.archive.org/web/20090216111444/http://books.shueisha.co.jp/CGI/search/syousai_put.cgi?isbn_cd=4-08-872888-2&mode=1 |archivedate=February 16, 2009 |url=http://books.shueisha.co.jp/CGI/search/syousai_put.cgi?isbn_cd=4-08-872888-2&mode=1 |title=One Piece/14 |publisher=Shueisha |accessdate=March 22, 2009 |language=ja |url-status=dead}}</ref>
+| OriginalISBN  = 4-08-872888-2
+| LicensedRelDate = April 3, 2007<ref name="ENv14">{{cite web|archiveurl=https://web.archive.org/web/20081206051839/http://www.viz.com/products/products.php?product_id=6397 |archivedate=December 6, 2008 |url=http://www.viz.com/products/products.php?product_id=6397 |title=One Piece, Vol. 14 |publisher=Viz Media |accessdate=March 22, 2009 |url-status=dead}}</ref>
+| LicensedISBN  = 1-4215-1091-X
+| ChapterList   =
+{{Numbered list|start=118
+|{{nihongo|"Someone's Out There"|誰かいる|"Dare ka Iru"}}
+|{{nihongo|"Deadly Improvisation"|姑息|"Kosoku"}}
+|{{nihongo|"The Red Ogre Weeps"|赤鬼が泣いた|"Aka-Oni ga Naita"}}
+|{{nihongo|"I Knew"|わかっていた|"Wakatteita"}}
+|{{nihongo|"A Dead Body Is Useless"|死人は役に立たぬ|"Shinin wa Yaku ni Tatanu"}}
+}}
+| ChapterListCol2 =
+{{Numbered list|start=123
+|{{nihongo|"Luffy vs. Mr. 3"|ルフィVSMr. 3|"Rufi vs. Mr. 3"}}
+|{{nihongo|"The Tea Is Good"|お茶がうめェ|"Ocha ga Umē"}}
+|{{nihongo|"Candle Champion"|キャンドルチャンピオン|"Kyandoru Chanpion"}}
+|{{nihongo|"Instinct"|本能|Honnō}}
+}}
+| LicensedTitle = Instinct
+| OriginalTitle = 本能
+| TranslitTitle = Honnō
+| Summary     = Baroque Works agents [[Mr. 3]] and [[Miss Golden Week]] are on the island in search of the Straw Hats and the bounties on the giants' heads. With the help of Mr. 5 and Miss Valentine, they rig the giants' fight. After thousands of draws, Broggy strikes Dorry down and, while weeping over his friend's body, is captivated by Mr. 3's wax-creation powers. Zoro, Nami and Vivi are captured and placed on a large candle with a rotating top, designed by Mr. 3 to slowly turn them into wax figures by covering them in vaporized wax. Luffy, Usopp and Vivi's ostrich-sized duck, Karoo, come to save them. Mr. 5 and Miss Valentine chase Usopp and Karoo, while Luffy fights Mr. 3 and sends him flying into the jungle. However, Luffy is no match for Miss Golden Week and her hypnotic paintings. Joining forces, though, Luffy, Usopp and Karoo destroy the wax structure and free their friends.
+| LineColor   = C64043
+}}
+{{Graphic novel list
+| SublistOf     = List of One Piece manga volumes
+| VolumeNumber  = 15
+| OriginalRelDate = September 4, 2000<ref name="JPv15">{{cite web |archiveurl=https://web.archive.org/web/20090216111448/http://books.shueisha.co.jp/CGI/search/syousai_put.cgi?isbn_cd=4-08-873009-7&mode=1 |archivedate=February 16, 2009 |url=http://books.shueisha.co.jp/CGI/search/syousai_put.cgi?isbn_cd=4-08-873009-7&mode=1 |title=One Piece/15 |publisher=Shueisha |accessdate=March 22, 2009 |language=ja |url-status=dead}}</ref>
+| OriginalISBN  = 4-08-873009-7
+| LicensedRelDate = August 7, 2007<ref name="ENv15">{{cite web|archiveurl=https://web.archive.org/web/20090603165530/http://www.viz.com/products/products.php?product_id=6398 |archivedate=June 3, 2009 |url=http://www.viz.com/products/products.php?product_id=6398 |title=One Piece, Vol. 15 |publisher=Viz Media |accessdate=March 22, 2009 |url-status=dead}}</ref>
+| LicensedISBN  = 1-4215-1092-8
+| ChapterList   =
+{{Numbered list|start=127
+|{{nihongo|"Snail-o-phone"|電伝虫|"Dendenmushi"}}
+|{{nihongo|"Pirate Pride"|海賊旗|"Hokori"}}
+|{{nihongo|"Straight Ahead!!!"|まっすぐ!!!|"Massugu!!!"}}
+|{{nihongo|"Maximum Speed"|最高速度|"Saikō Sokudo"}}
+|{{nihongo|"Wapol of Tin"|ブリキのワポル|"Buriki no Waporu"}}
+}}
+| ChapterListCol2 =
+{{Numbered list|start=132
+|{{nihongo|"See?"|ね|"Ne"}}
+|{{nihongo|"Adventure in a Nameless Country"|名もなき国の冒険|"Namonaki Kuni no Bōken"}}
+|{{nihongo|"Dr. Kureha"|Dr.くれは|"Dr. Kureha"}}
+|{{nihongo|"Lapins"|ラパーン|"Rapān"}}
+|{{nihongo|"A Man Named Dalton"|ドルトンという男|"Doruton to Iu Otoko"}}
+}}
+| LicensedTitle = Straight Ahead!!!
+| OriginalTitle = まっすぐ!!!
+| TranslitTitle = Massugu!!!
+| Summary     = Sanji, drinking tea in Mr. 3's hideout, receives a call from Mr. 0. Pretending to be the agent, he convinces the warlord that he killed Vivi and her companions. Messengers arrive during the conversation; Sanji defeats them and takes their [[eternal pose]] compass, intended for Mr. 3. Although Broggy is still grieving his fellow giant's apparent death, after a century of battle his axe had become dull and Dorry is only unconscious. Using the eternal pose, the crew can continue their journey. However, Nami falls ill and the crew must find a doctor. After a hostile encounter with the pirates of the omnivorous [[Wapol]], they arrive at a snow-covered island. The only physician there, who lives in a castle on a mountain, is said to be a 140-year-old witch. Sanji and Luffy, carrying Nami on his back, face the island's dangerous wildlife and bring their friend to medical care and Wapol reinstates himself as king of the country.
+| LineColor   = C64043
+}}
+{{Graphic novel list
+| SublistOf     = List of One Piece manga volumes
+| VolumeNumber  = 16
+| OriginalRelDate = December 4, 2000<ref name="JPv16">{{cite web |archiveurl=https://web.archive.org/web/20090216112226/http://books.shueisha.co.jp/CGI/search/syousai_put.cgi?isbn_cd=4-08-873045-3&mode=1 |archivedate=February 16, 2009 |url=http://books.shueisha.co.jp/CGI/search/syousai_put.cgi?isbn_cd=4-08-873045-3&mode=1 |title=One Piece/16 |publisher=Shueisha |accessdate=March 22, 2009 |language=ja |url-status=dead}}</ref>
+| OriginalISBN  = 4-08-873045-3
+| LicensedRelDate = November 6, 2007<ref name="ENv16">{{cite web|archiveurl=https://web.archive.org/web/20090605213829/http://www.viz.com/products/products.php?product_id=6399 |archivedate=June 5, 2009 |url=http://www.viz.com/products/products.php?product_id=6399 |title=One Piece, Vol. 16 |publisher=Viz Media |accessdate=March 22, 2009 |url-status=dead}}</ref>
+| LicensedISBN  = 1-4215-1093-6
+| ChapterList   =
+{{Numbered list|start=137
+|{{nihongo|"Avalanche"|雪崩|"Nadare"}}
+|{{nihongo|"The Summit"|頂上|"Chōjō"}}
+|{{nihongo|"Enter Tony Tony Chopper"|トニートニー・チョッパー登場|"Tonītonī Choppā Tōjō"}}
+|{{nihongo|"The Castle of Snow"|雪の住む城|"Yuki no Sumu Shiro"}}
+|{{nihongo|"Quack Doctor"|ヤブ医者|"Yabu Isha"}}
+}}
+| ChapterListCol2 =
+{{Numbered list|start=142
+|{{nihongo|"Skull & Cherry Blossoms"|ドクロと桜|"Dokuro to Sakura"}}
+|{{nihongo|"Clumsy"|不器用|"Bukiyō"}}
+|{{nihongo|"Snowy Tale"|雪物語|"Yuki Monogatari"}}
+|{{nihongo|"Carrying on His Will"|受け継がれる意志|"Uketsugareru Ishi"}}
+}}
+| LicensedTitle = Carrying on His Will
+| OriginalTitle = 受け継がれる意志
+| TranslitTitle = Uketsugareru Ishi
+| Summary     = Luffy carries Nami, and later Sanji as well, uphill and over a steep stone wall to bring them to Doctor Kureha. Everyone recovers quickly under her care and that of her blue-nosed pet reindeer, [[Tony Tony Chopper|Chopper]], who can think, speak and assume human appearance since eating a devil fruit. Kureha tells Nami about Chopper's difficult past, and Luffy decides to take him with them. Wapol arrives at the castle, intent on reclaiming his former home. In a flashback, Chopper meets the quack doctor Hiruluk and spends a year in his care. When Hiruluk is dying of an illness, he chases Chopper away to spare him the sight. Chopper, learning about Hiruluk's reason for chasing him, goes on a dangerous journey to find a poisonous mushroom to cure him. Impressed with the reindeer's compassion, before he dies Hiruluk arranges for Kureha to teach Chopper medicine.
+| LineColor   = C64043
+}}
+{{Graphic novel list
+| SublistOf     = List of One Piece manga volumes
+| VolumeNumber  = 17
+| OriginalRelDate = February 2, 2001<ref name="JPv17">{{cite web |archiveurl=https://web.archive.org/web/20090216111731/http://books.shueisha.co.jp/CGI/search/syousai_put.cgi?isbn_cd=4-08-873073-9&mode=1 |archivedate=February 16, 2009 |url=http://books.shueisha.co.jp/CGI/search/syousai_put.cgi?isbn_cd=4-08-873073-9&mode=1 |title=One Piece/17 |publisher=Shueisha |accessdate=March 22, 2009 |language=ja |url-status=dead}}</ref>
+| OriginalISBN  = 4-08-873073-9
+| LicensedRelDate = March 4, 2008<ref name="ENv17">{{cite web|archiveurl=https://web.archive.org/web/20090604123526/http://www.viz.com/products/products.php?product_id=6781 |archivedate=June 4, 2009 |url=http://www.viz.com/products/products.php?product_id=6781 |title=One Piece, Vol. 17 |publisher=Viz Media |accessdate=March 22, 2009 |url-status=dead}}</ref>
+| LicensedISBN  = 1-4215-1511-3
+| ChapterList   =
+{{Numbered list|start=146
+|{{nihongo|"Battle to Defend the Kingdom"|国防戦|"Kokubōsen"}}
+|{{nihongo|"Frauds"|ウソッパチ|"Usoppachi"}}
+|{{nihongo|"Unbreakable"|折れない|"Orenai"}}
+|"Rumble (Rumble!!)"
+|{{nihongo|"Royal Drum Crown 7-Shot Tin Tyrant Cannon"|ロイヤルドラムクラウン７連散弾ブリキング大砲|"Roiyaru Doramu Kuraun Nana-ren Shotto Burikingu Kyanon"}}
+}}
+| ChapterListCol2 =
+{{Numbered list|start=151
+|{{nihongo|"The Skies of Drum"|ドラムの空|"Doramu no Sora"}}
+|{{nihongo|"Full Moon"|満月|"Mangetsu"}}
+|{{nihongo|"Hiruluk's Cherry Blossoms"|ヒルルクの桜|"Hiruruku no Sakura"}}
+|{{nihongo|"On to Alabasta"|アラバスタへ|"Arabasuta e"}}
+|{{nihongo|"Sir Crocodile, the Pirate"|海賊 サー・クロコダイル|"Kaizoku Sā Kurokodairu"}}
+}}
+| LicensedTitle = Hiruluk's Cherry Blossoms
+| OriginalTitle = ヒルルクの桜
+| TranslitTitle = Hiruruku no Sakura
+| Summary     = Luffy, Sanji and Chopper fight Wapol and his henchmen, Chess and Kuromarimo. Wapol uses his devil-fruit power to become a cannon-armed house and fuses his men into the two-headed, four-armed Chessmarimo. Sanji's back aches, keeping him from fighting. Chopper takes a drug he calls Rumble Ball, and defeats Chessmarimo. Wapol sneaks into the castle and chases Nami. Luffy catches up to them as Wapol attempts to open the weapon storage. Unable to do so because Nami has taken his key, Wapol retreats to his cannon at the top of the castle. The cannon does not work, and Luffy sends him flying off the island. Luffy tries to persuade Chopper to join the crew, and the reindeer finally agrees. With a doctor aboard, the crew continues its journey to Alabasta.
+| LineColor   = C64043
+}}
+{{Graphic novel list
+| SublistOf     = List of One Piece manga volumes
+| VolumeNumber  = 18
+| OriginalRelDate = April 4, 2001<ref name="JPv18">{{cite web |archiveurl=https://web.archive.org/web/20090216111736/http://books.shueisha.co.jp/CGI/search/syousai_put.cgi?isbn_cd=4-08-873100-X&mode=1 |archivedate=February 16, 2009 |url=http://books.shueisha.co.jp/CGI/search/syousai_put.cgi?isbn_cd=4-08-873100-X&mode=1 |title=One Piece/18 |publisher=Shueisha |accessdate=March 22, 2009 |language=ja |url-status=dead}}</ref>
+| OriginalISBN  = 4-08-873100-X
+| LicensedRelDate = June 3, 2008<ref name="ENv18">{{cite web|archiveurl=https://web.archive.org/web/20090603151523/http://www.viz.com/products/products.php?product_id=6782 |archivedate=June 3, 2009 |url=http://www.viz.com/products/products.php?product_id=6782 |title=One Piece, Vol. 18 |publisher=Viz Media |accessdate=March 22, 2009 |url-status=dead}}</ref>
+| LicensedISBN  = 1-4215-1512-1
+| ChapterList   =
+{{Numbered list|start=156
+|{{nihongo|"Oh Come My Way Days"|オカマ日和|"Okama Biyori"}}
+|{{nihongo|"Ace Arrives"|エース登場|"Ēsu Tōjō"}}
+|{{nihongo|"Landing in Alabasta"|上陸のアラバスタ|"Jōriku no Arabasuta"}}
+|{{nihongo|"Come On"|来いよ|"Koi yo"}}
+|{{nihongo|"Spiders Café at Eight O'Clock"|スパイダーズカフェに８時|"Supaidāzu Kafe ni Hachi-ji"}}
+|{{nihongo|"The Green City Erumalu"|緑の町エルマル|"Midori no Machi Erumaru"}}
+}}
+| ChapterListCol2 =
+{{Numbered list|start=162
+|{{nihongo|"Adventure in the Kingdom of Sand"|砂の国の冒険|"Suna no Kuni no Bōken"}}
+|{{nihongo|"Yuba, the Town of Rebels"|反乱軍の町ユバ|"Hanran-Gun no Machi Yuba"}}
+|{{nihongo|"I Love My Country"|国が好き|"Kuni ga Suki"}}
+|{{nihongo|"Operation Utopia"|作戦名ユートピア|"Sakusenmei Yūtopia"}}
+|{{nihongo|"Luffy vs. Vivi"|ルフィVSビビ|"Rufi vs. Bibi"}}
+}}
+| LicensedTitle = Ace Arrives
+| OriginalTitle = エース登場
+| TranslitTitle = Ēsu Tōjō
+| Summary     = En route to Alabasta, the Straw Hats encounter Baroque Works agent [[Mr. 2 Bon Clay]]; naively, he shows them his ability to impersonate the voice, face and body of any person whose face he touches with his right hand. In Alabasta, Luffy goes to find something to eat. He encounters his older brother [[Portgas D. Ace]] and Captain Smoker, who chases him through the town. With Ace's help, Luffy escapes. The top Baroque Works agents meet at a cafe in the desert. From there they are brought to a city, Rainbase, to meet Mr. 0. The Straw Hats cross the desert to the oasis of Yuba, where the rebel army reportedly has its headquarters. They find a ghost town, plagued by sandstorms. Vivi tells a story about herself and her childhood friend, [[List of One Piece characters#Koza|Koza]]. In Rainbase, Crocodile reveals himself and his master plan to conquer Alabasta to his agents. When Mr. 3 reports his failure to kill Vivi and the Straw Hats, Crocodile feeds him to one of his oversized crocodiles. Although Luffy is discouraged, Vivi's passion for the cause inspires him to persevere.
+| LineColor   = C64043
+}}
+{{Graphic novel list
+| SublistOf     = List of One Piece manga volumes
+| VolumeNumber  = 19
+| OriginalRelDate = July 4, 2001<ref name="JPv19">{{cite web |archiveurl=https://web.archive.org/web/20090216112002/http://books.shueisha.co.jp/CGI/search/syousai_put.cgi?isbn_cd=4-08-873133-6&mode=1 |archivedate=February 16, 2009 |url=http://books.shueisha.co.jp/CGI/search/syousai_put.cgi?isbn_cd=4-08-873133-6&mode=1 |title=One Piece/19 |publisher=Shueisha |accessdate=March 22, 2009 |language=ja |url-status=dead}}</ref>
+| OriginalISBN  = 4-08-873133-6
+| LicensedRelDate = October 7, 2008<ref name="ENv19">{{cite web|archiveurl=https://web.archive.org/web/20090326132753/http://www.viz.com/products/products.php?product_id=6783 |archivedate=March 26, 2009 |url=http://www.viz.com/products/products.php?product_id=6783 |title=One Piece, Vol. 19 |publisher=Viz Media |accessdate=March 22, 2009 |url-status=dead}}</ref>
+| LicensedISBN  = 1-4215-1513-X
+| ChapterList   =
+{{Numbered list|start=167
+|{{nihongo|"Battlefront"|戦線|"Sensen"}}
+|{{nihongo|"Rainbase, the City of Dreams"|夢の町 レインベース|"Yume no Machi Reinbēsu"}}
+|{{nihongo|"The Kingdom's Strongest Warrior"|王国最強の戦士|"Ōkoku Saikyō no Senshi"}}
+|{{nihongo|"Beginning"|始まる|"Hajimaru"}}
+|{{nihongo|"Koza, Leader of the Rebels"|反乱軍統率者コーザ|"Hanran-Gun Rīdā Kōza"}}
+}}
+| ChapterListCol2 =
+{{Numbered list|start=172
+|{{nihongo|"Rebellion"|反乱|"Uneri"}}
+|{{nihongo|"Bananagator"|バナナワニ|"Bananawani"}}
+|{{nihongo|"Mr. Prince"|Mr. プリンス|"Mr. Purinsu"}}
+|{{nihongo|"Release"|解放|"Kaihō"}}
+|"Rush!!"
+}}
+| LicensedTitle = Rebellion
+| OriginalTitle = 反乱
+| TranslitTitle = Uneri
+| Summary     = Karoo brings news of Crocodile's treachery to the king, who decides to attack Rainbase and sends Pell (the country's strongest soldier) to scout ahead. Smoker awaits the Straw Hats in Rainbase and chases several of them into Crocodile's casino, where they fall through a trapdoor into a cage. After defeating Pell, Crocodile's partner [[Miss All-Sunday]] captures Vivi and brings her to the casino; Baroque Works' final plan is set in motion. The king is abducted, and the rebellion supplied with weapons. Mr. 2, impersonating the king, admits stealing the country's rain. In response, the rebels attack the capital. Crocodile leaves the cage surrounded by his oversized crocodiles, while the room floods with water. Chopper lures Crocodile away from the casino, while Sanji enters it and fights the crocodiles. One of them spits out Mr. 3, and Sanji forces him to open the cage by creating a key. Smoker, aware of Crocodile's plan, calls for reinforcements while the Straw Hats head for Alubarna. Luffy, however, stays behind to take on the warlord.
+| LineColor   = C64043
+}}
+{{Graphic novel list
+| SublistOf     = List of One Piece manga volumes
+| VolumeNumber  = 20
+| OriginalRelDate = September 4, 2001<ref name="JPv20">{{cite web |archiveurl=https://web.archive.org/web/20090216112232/http://books.shueisha.co.jp/CGI/search/syousai_put.cgi?isbn_cd=4-08-873158-1&mode=1 |archivedate=February 16, 2009 |url=http://books.shueisha.co.jp/CGI/search/syousai_put.cgi?isbn_cd=4-08-873158-1&mode=1 |title=One Piece/20 |publisher=Shueisha |accessdate=March 22, 2009 |language=ja |url-status=dead}}</ref>
+| OriginalISBN  = 4-08-873158-1
+| LicensedRelDate = February 3, 2009<ref name="ENv20">{{cite web|archiveurl=https://web.archive.org/web/20090405041348/http://www.viz.com/products/products.php?product_id=6784 |archivedate=April 5, 2009 |url=http://www.viz.com/products/products.php?product_id=6784 |title=One Piece, Vol. 20 |publisher=Viz Media |accessdate=March 22, 2009 |url-status=dead}}</ref>
+| LicensedISBN  = 1-4215-1514-8
+| ChapterList   =
+{{Numbered list|start=177
+|{{nihongo|"30 Million vs. 81 Million"|3000万VS8100万|"Sanzen-man vs. Hassenhyaku-man"}}
+|{{nihongo|"Grand Line Level"|Level. G・L|"Level. G. L."}}
+|{{nihongo|"Showdown at Alubarna"|決戦はアルバーナ|"Kessen wa Arubāna"}}
+|{{nihongo|"Alabasta Animal Land"|アラバスタ動物ランド|"Arabasuta Dōbutsu Rando"}}
+|{{nihongo|"Supersonic Duck Quiz"|超カルガモクイズ|"Chōkarugamo Kuizu"}}
+}}
+| ChapterListCol2 =
+{{Numbered list|start=182
+|{{nihongo|"Roar"|怒号|"Dogō"}}
+|{{nihongo|"Squadron Leader Karoo"|カルー隊長|"Karū-Taichō"}}
+|{{nihongo|"Moletown Block Four"|モグラ塚４番街|"Mogurazuka Yonban-gai"}}
+|{{nihongo|"Oh... Is That So?"|へーそう|"Hē Sō"}}
+|"4"
+}}
+| LicensedTitle = Showdown at Alubarna
+| OriginalTitle = 決戦はアルバーナ
+| TranslitTitle = Kessen wa Arubāna
+| Summary     = Luffy fights Crocodile; despite many hits, his opponent is unfazed. Crocodile, using his devil-fruit ability to dissolve and reintegrate whatever part of his body Luffy attacks, toys with him until he impales him through the chest with his [[prosthetic hook]] and buries him in the sand. The rest of the Straw Hats hurry to intercept the rebel army. They cross the desert on a giant crab, cross the river Sandora and are picked up on the other side by Karoo and his squad of spot-billed ducks. In front of the capital, the high-ranking Baroque Works agents try to intercept Vivi and are lured into the city by disguised Straw Hats. Vivi tries to stop the rebels, but the enraged army storms past her. She flees from Mr. 2, who chases her into the city (where Sanji comes to her rescue). On the other side of the city, Usopp and Chopper battle the agents [[Mr. 4]] and [[Miss Merry Christmas]].
+| LineColor   = C64043
+}}
+{{Graphic novel list/footer}}</onlyinclude>
+
+== Lists of main series chapters ==
+* [[List of One Piece chapters (187–388)|List of ''One Piece'' chapters 187 to 388]]
+* [[List of One Piece chapters (389–594)|List of ''One Piece'' chapters 389 to 594]]
+* [[List of One Piece chapters (595–806)|List of ''One Piece'' chapters 595 to 806]]
+* [[List of One Piece chapters (807–1015)|List of ''One Piece'' chapters 807 to 1015]]
+* [[List of One Piece chapters (1016–current)|List of ''One Piece'' chapters 1016 to now]]
+
+== See also ==
+* [[List of One Piece media|List of ''One Piece'' media]]
+
+== References ==
+{{Reflist}}
+
+{{One Piece general}}
+
+{{DEFAULTSORT:List of One Piece chapters (1-186)}}
+{{DISPLAYTITLE:List of ''One Piece'' chapters (1–186)}}
+[[Category:One Piece chapter lists|Chapter 1]]

@@ -1,0 +1,123 @@
+// Wikipedia chapter-list parsing → volume boundaries. The pages use
+// {{Graphic novel list}} templates: VolumeNumber plus ChapterList columns of
+// {{Numbered list|start=N|...}} — the start values give chapter boundaries
+// deterministically. Volume N spans [its first start .. next volume's first
+// start - 1]; the final (ongoing) volume stays open-ended.
+
+const WIKI_API = 'https://en.wikipedia.org/w/api.php';
+const UA = 'mangaMapper/0.1 (ingest; contact: seanreedux@gmail.com)';
+
+export interface WikiVolume {
+  volume: number;
+  chapterStart: number;
+}
+
+export function parseVolumes(wikitext: string): WikiVolume[] {
+  const out: WikiVolume[] = [];
+  // split on template openings; each block runs to the next one
+  const blocks = wikitext.split(/\{\{Graphic novel list\s*(?=\|||\n)/i).slice(1);
+  for (const block of blocks) {
+    const volMatch = block.match(/\|\s*VolumeNumber\s*=\s*(\d+)/i);
+    if (!volMatch) continue;
+    // chapter numbering appears in three page dialects: {{Numbered list|start=N}},
+    // a plain # list opening with #<li value="N"> (Naruto-style pages avoiding
+    // the template for transclusion cost), or a bare range in the ChapterList
+    // value with a series-specific label ("*Mission: 1–5", Spy×Family-style)
+    let startMatch =
+      block.match(/\{\{Numbered list\s*\|\s*start\s*=\s*(\d+(?:\.\d+)?)/i) ??
+      block.match(/<li value="(\d+(?:\.\d+)?)"/i);
+    if (!startMatch) {
+      const listValue = block.match(/\|\s*ChapterList\w*\s*=\s*([^\n]*)/i)?.[1] ?? '';
+      startMatch = listValue.match(/(\d+(?:\.\d+)?)/);
+    }
+    if (!startMatch) continue;
+    out.push({ volume: Number(volMatch[1]), chapterStart: Number(startMatch[1]) });
+  }
+  out.sort((a, b) => a.volume - b.volume);
+  return out;
+}
+
+export interface VolumeBoundary {
+  volume: number;
+  chapterStart: number;
+  chapterEnd: number | null; // null = open (final volume of an ongoing run)
+}
+
+// Combine volumes from all part-pages into contiguous boundaries.
+export function toBoundaries(volumes: WikiVolume[]): VolumeBoundary[] {
+  const dedup = new Map<number, number>();
+  for (const v of volumes) if (!dedup.has(v.volume)) dedup.set(v.volume, v.chapterStart);
+  const sorted = [...dedup.entries()].sort(([a], [b]) => a - b);
+  return sorted.map(([volume, chapterStart], i) => ({
+    volume,
+    chapterStart,
+    chapterEnd: i + 1 < sorted.length ? sorted[i + 1][1] - 1 : null,
+  }));
+}
+
+async function wikiGet(params: Record<string, string>): Promise<unknown> {
+  const qs = new URLSearchParams({ format: 'json', formatversion: '2', ...params });
+  const res = await fetch(`${WIKI_API}?${qs}`, { headers: { 'User-Agent': UA } });
+  if (!res.ok) throw new Error(`wikipedia ${res.status}`);
+  return res.json();
+}
+
+async function prefixFamily(base: string): Promise<string[]> {
+  const data = (await wikiGet({
+    action: 'query',
+    list: 'prefixsearch',
+    pssearch: base,
+    pslimit: '20',
+  })) as { query?: { prefixsearch?: { title: string }[] } };
+  const hits = (data.query?.prefixsearch ?? []).map((p) => p.title);
+  return hits.filter((t) => t === base || t.startsWith(`${base} (`));
+}
+
+// All pages in the "List of X chapters" family (part pages included).
+// Titles vary (anime vs manga naming, casing, subtitles) — try candidate
+// variants via prefixsearch, then fall back to full-text search.
+export async function findChapterPages(titleCandidates: string[]): Promise<string[]> {
+  const tried = new Set<string>();
+  const variants: string[] = [];
+  for (const t of titleCandidates) {
+    for (const v of [t, t.replace(/\s*\([^)]*\)\s*$/, '').trim()]) {
+      if (v && !tried.has(v.toLowerCase())) {
+        tried.add(v.toLowerCase());
+        variants.push(v);
+      }
+    }
+  }
+  for (const v of variants) {
+    const family = await prefixFamily(`List of ${v} chapters`);
+    if (family.length) return family;
+  }
+  // full-text fallback (case-insensitive; catches ALL-CAPS titles and
+  // subtitle variants): accept hits shaped like "List of … chapters" with or
+  // without a part-page suffix, then expand the family from the base name.
+  for (const v of variants.slice(0, 2)) {
+    const data = (await wikiGet({
+      action: 'query',
+      list: 'search',
+      srsearch: `intitle:"chapters" List of ${v}`,
+      srlimit: '5',
+    })) as { query?: { search?: { title: string }[] } };
+    const hit = (data.query?.search ?? []).find((p) => /^List of .+ chapters(\s*\(.+\))?$/.test(p.title));
+    if (hit) {
+      const base = hit.title.replace(/\s*\(.+\)$/, '');
+      const family = await prefixFamily(base);
+      if (family.length) return family;
+      return [hit.title];
+    }
+  }
+  return [];
+}
+
+export async function fetchWikitext(pageTitle: string): Promise<string | null> {
+  const data = (await wikiGet({
+    action: 'parse',
+    page: pageTitle,
+    prop: 'wikitext',
+    redirects: '1',
+  })) as { parse?: { wikitext?: string } };
+  return data.parse?.wikitext ?? null;
+}

@@ -312,6 +312,33 @@ export type Database = {
         }
         Relationships: []
       }
+      ingest_wikipedia_chapters: {
+        Row: {
+          changed_at: string
+          content_hash: string
+          fetched_at: string
+          manga_anilist_id: number
+          page_title: string
+          raw_wikitext: string
+        }
+        Insert: {
+          changed_at?: string
+          content_hash: string
+          fetched_at?: string
+          manga_anilist_id: number
+          page_title: string
+          raw_wikitext: string
+        }
+        Update: {
+          changed_at?: string
+          content_hash?: string
+          fetched_at?: string
+          manga_anilist_id?: number
+          page_title?: string
+          raw_wikitext?: string
+        }
+        Relationships: []
+      }
       manga_reader_sites: {
         Row: {
           anime_id: string | null
@@ -649,6 +676,36 @@ export type Database = {
           note?: string | null
           updated_at?: string
           verified?: boolean
+        }
+        Relationships: []
+      }
+      volume_boundaries: {
+        Row: {
+          chapter_end: number | null
+          chapter_start: number
+          created_at: string
+          manga_anilist_id: number
+          source: string
+          source_page: string | null
+          volume: number
+        }
+        Insert: {
+          chapter_end?: number | null
+          chapter_start: number
+          created_at?: string
+          manga_anilist_id: number
+          source?: string
+          source_page?: string | null
+          volume: number
+        }
+        Update: {
+          chapter_end?: number | null
+          chapter_start?: number
+          created_at?: string
+          manga_anilist_id?: number
+          source?: string
+          source_page?: string | null
+          volume?: number
         }
         Relationships: []
       }

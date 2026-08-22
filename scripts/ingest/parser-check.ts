@@ -62,3 +62,15 @@ if (JSON.stringify(parseChapters('1,144')) !== '[1144]') fail('parseChapters tho
 if (JSON.stringify(parseChapters('102-104')) !== '[102,103,104]') fail('parseChapters range');
 const withCh = afg.episodes.filter((e) => e.chapters.length > 0).length;
 console.log(`OK: afg one-piece ${afg.episodes.length} eps, ${withCh} with chapters, ${afg.seasons.length} seasons, arcs like "${ep62.arc}"`);
+
+// Wikipedia volume-boundary regression (fixture: One Piece chapters 1–186).
+import { parseVolumes, toBoundaries } from './lib/wikipedia';
+const wikiVols = parseVolumes(readFileSync('scripts/ingest/fixtures/wiki-op-1-186.txt', 'utf8'));
+if (wikiVols.length !== 20) fail(`wiki volume count: ${wikiVols.length}`);
+if (wikiVols[0].volume !== 1 || wikiVols[0].chapterStart !== 1) fail(`wiki v1: ${JSON.stringify(wikiVols[0])}`);
+const bounds = toBoundaries(wikiVols);
+const v1 = bounds[0];
+// One Piece vol 1 = chapters 1-8 (vol 2 starts at ch 9)
+if (v1.chapterStart !== 1 || v1.chapterEnd !== 8) fail(`wiki v1 bounds: ${JSON.stringify(v1)}`);
+if (bounds[bounds.length - 1].chapterEnd !== null) fail('wiki: final volume should be open');
+console.log(`OK: wiki one-piece(1-186) ${wikiVols.length} volumes, v1 = ch ${v1.chapterStart}-${v1.chapterEnd}`);
