@@ -4,20 +4,17 @@
 // pacing; ~460 pages ≈ 80 min; resumable via the 24h staging window.
 //   npx tsx --env-file=.env.ingest scripts/ingest/afg-backfill.ts
 
-import { AFG_BASE, parseAfgPage, parseSitemap, deriveAnchors } from './lib/afg';
+import { AFG_BASE, parseAfgPage, parseSitemap } from './lib/afg';
 import { politeFetch } from './lib/http';
 import { contentHash } from './lib/hash';
-import { db, startRun, finishRun, fileFlagOnce } from './lib/db';
-import { registerIds } from './lib/resolve';
+import { db, startRun, finishRun } from './lib/db';
 import { slugify } from './lib/slug';
+import { syncAnchors } from './lib/anchors';
 
 const RESUME_WINDOW_MS = 24 * 60 * 60 * 1000;
 // --force: re-fetch + re-parse everything (parser fixes; staging holds parsed
 // output, not HTML, so a parser change needs a fresh sweep)
 const FORCE = process.argv.includes('--force');
-// AFG numbering must line up with our (AFL-derived) numbering before anchors
-// are trusted; a season-scoped or divergent page flags instead.
-const ALIGN_TOLERANCE = 12;
 
 async function main() {
   const runId = await startRun('afg');
@@ -89,54 +86,18 @@ async function main() {
         if (error) throw new Error(error.message);
         counters.changed++;
 
-        // anchors for matched series only
+        // anchors for matched series only — shared write path (lib/anchors)
         const target = bySlug.get(slug) ?? bySlug.get(slugify(page.title));
         if (!target) continue;
-        const withChapters = page.episodes.filter((e) => e.chapters.length > 0);
-        if (!withChapters.length) continue;
-
-        const { data: maxRow } = await db
-          .from('episodes')
-          .select('number')
-          .eq('series_id', target.id)
-          .order('number', { ascending: false })
-          .limit(1);
-        const ourMax = maxRow?.[0]?.number ?? 0;
-        const afgMax = page.episodes.reduce((m, e) => Math.max(m, e.number), 0);
-        if (ourMax && Math.abs(afgMax - ourMax) > ALIGN_TOLERANCE) {
-          await fileFlagOnce(runId, slug, 'afg', 'count_mismatch', {
-            afgMax,
-            ourMax,
-            seriesId: target.id,
-            note: 'AFG numbering misaligned — anchors withheld',
-          });
+        const result = await syncAnchors(runId, target.id, slug, page);
+        if (result.withheld) {
           counters.flagged++;
           continue;
         }
-
-        await db.from('chapter_anchors').delete().eq('series_id', target.id).eq('source', 'afg');
-        const rows = deriveAnchors(page.episodes).map((a) => ({
-          series_id: target.id,
-          episode: a.episode,
-          volume: null,
-          chapter: a.chapter,
-          source: 'afg',
-          note: a.arc,
-        }));
-        for (let j = 0; j < rows.length; j += 500) {
-          const { error: aErr } = await db.from('chapter_anchors').upsert(rows.slice(j, j + 500));
-          if (aErr) throw new Error(`anchors: ${aErr.message}`);
+        if (result.anchors > 0) {
+          anchored++;
+          console.log(`[afg] anchored ${target.id} (${result.anchors} anchors) [${i + 1}/${slugs.length}]`);
         }
-        anchored++;
-        await registerIds(target.id, { afg: slug });
-        // a successful anchor write supersedes any earlier misalignment flag
-        await db
-          .from('ingest_flags')
-          .update({ status: 'dismissed', resolved_at: new Date().toISOString() })
-          .eq('series_key', slug)
-          .eq('source', 'afg')
-          .eq('status', 'open');
-        console.log(`[afg] anchored ${target.id} (${rows.length} anchors) [${i + 1}/${slugs.length}]`);
       } catch (err) {
         errors.push(`${slug}: ${err}`);
       }

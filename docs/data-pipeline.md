@@ -292,6 +292,14 @@ dataset may eventually become the better provider; track gaps accordingly.
   (staleness > 6 days): edge wall-time limits forbid one big sweep, so small
   batches cycle the catalog inside the weekly cadence; most runs no-op
   instantly. Conditional GETs + the inline alias-corruption defenses apply.
+- `refresh-afg` edge function, **daily 09:20 UTC, ≤25 stalest pages per run**
+  (staleness > 13 days → pages cycle ~biweekly, matching AFG's slow editorial
+  pace). Changed pages re-sync anchors through the shared `syncAnchors` path
+  (lib/anchors.ts: monotonicity filter, alignment gate, registry, flag
+  dismissal) — which also fires the **volumes-staleness event**: anchors
+  advancing past the last known volume boundary flag that manga for a
+  `volumes-backfill` re-run (how the event-driven validation tier gets its
+  events).
 - **Validation tier is EVENT-DRIVEN, never scheduled** (Sean's ruling
   2026-08-23): Wikipedia boundaries are static-once-printed (one-time ingest
   when a manga enters, `volumes-backfill` re-run only on flags);
