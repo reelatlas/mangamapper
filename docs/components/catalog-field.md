@@ -200,10 +200,12 @@ opacity/weight by position) remains — it's layout, not motion.
   `gap-1` chord gap; the recipe lives in the component + DESIGN_SYSTEM §3.1,
   never restated here). Esc in search: text → clear + stay active; empty → blur;
   consumed via stopPropagation (layering rule). **Esc from anywhere
-  (2026-08-21, the ladder's blurred rung):** search inactive but holding a
-  query → Esc clears it (the field un-filters); inactive and empty → Esc
-  stays free. An open card still owns Esc first; other editables keep
-  their native Esc. ←/→ with a query but focus
+  (2026-08-21, the ladder's blurred rung — one press = one rung):** search
+  inactive but holding a query → Esc clears it AND activates the search
+  (focused, blank — the field un-filters and the ladder re-enters at
+  focused+empty, so one more Esc blurs); inactive and empty → Esc stays
+  free. An open card still owns Esc first; other editables keep their
+  native Esc. ←/→ with a query but focus
   elsewhere recall the search caret and step it one glyph (walking keeps the
   text one arrow away). All page hotkeys defer to an open card
   (`onOpenChange` prop).

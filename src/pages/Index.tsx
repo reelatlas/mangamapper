@@ -30,12 +30,14 @@ const Index = () => {
         searchRef.current?.focus();
         return;
       }
-      // Esc from ANYWHERE clears a standing query (Sean, 2026-08-21 — the
-      // ladder's blurred rung): search inactive but holding text → clear;
-      // inactive and empty → Esc stays free (no-op). The layering law
-      // holds: an open card owns Esc first; a focused search runs its own
-      // ladder (text → clear + stay active; empty → blur); other editables
-      // keep their native Esc.
+      // Esc from ANYWHERE with a standing query (Sean, 2026-08-21 — the
+      // ladder's blurred rung, one press = one rung): blurred + text →
+      // CLEAR AND ACTIVATE (the search re-enters the ladder focused and
+      // blank; the next Esc blurs it via the input's own ladder). Blurred
+      // + empty → Esc stays free (no-op). The layering law holds: an open
+      // card owns Esc first; a focused search runs its own ladder (text →
+      // clear + stay active; empty → blur); other editables keep their
+      // native Esc.
       if (e.key === 'Escape') {
         if (cardOpen) return; // the card's window handler owns this press
         const el = searchRef.current;
@@ -45,6 +47,7 @@ const Index = () => {
         if (el.value) {
           setInput('');
           setQuery('');
+          el.focus(); // re-enter at focused+empty — one more Esc → inactive
         }
         return;
       }
