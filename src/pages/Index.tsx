@@ -65,21 +65,20 @@ const Index = () => {
         {/* fontSize 18 = the field's TEXT_PX, so 52ch/2ch resolve identically
             to the title column's; the children size themselves in rem */}
         <div className="mx-auto w-[min(52ch,82%)] pl-[2ch]" style={{ fontSize: 18 }}>
-          {/* THE UNDERLINE = THE TITLE AREA (Sean's ruling, 2026-08-21,
-              refined same day from full-column): one fixed dashed rule from
-              the title-glyph start (the 2ch gutter, via the wrapper's
-              padding) to where the TITLE area ends — the column minus the
-              rows' status zone. The reserve is derived, not eyeballed:
-              widest status word ("finished"/"upcoming") = 8ch at META_PX
-              12px × Plex Mono's 0.6em advance = 57.6px, + the rows' pl-4
-              gap (16px) = 73.6px. The keycap hint HANGS RIGHT of the line
-              in that reserved zone (Sean: off the line, not on it) — the
-              zone persists when the caps hide, so the line's geometry is
-              state-invariant by construction. The input flexes to fill
-              the line. */}
+          {/* THE UNDERLINE (Sean's tuning walk, 2026-08-21: full column →
+              title area → **2/3 of the title area**): one fixed dashed rule
+              from the title-glyph start (the 2ch gutter, via the wrapper's
+              padding), spanning 2/3 of the title area. Title area = column
+              minus the rows' status zone; the reserve is derived, not
+              eyeballed: widest status word ("finished"/"upcoming") = 8ch at
+              META_PX 12px × Plex Mono's 0.6em advance = 57.6px + the rows'
+              pl-4 gap (16px) = 73.6px. The width is a formula, so the
+              line's geometry is state-invariant by construction; the
+              keycap hint hangs right of the line's end (empty+inactive
+              only), and the input flexes inside the line. */}
           {/* active state lives on the ICON, not the line (ruling 2026-08-19) */}
           <div className="group/search flex items-center">
-            <span className="flex flex-1 items-center gap-[1ch] border-b border-dashed border-border pb-1">
+            <span className="flex w-[calc((100%-73.6px)*2/3)] items-center gap-[1ch] border-b border-dashed border-border pb-1">
               <Search
                 aria-hidden
                 className="h-3.5 w-3.5 shrink-0 text-muted-foreground/60 transition-colors group-focus-within/search:text-primary"
@@ -126,20 +125,17 @@ const Index = () => {
                 )}
               </span>
             </span>
-            {/* the status-zone reserve — always mounted so the line never
-                resizes; the caps live inside it, empty+inactive only */}
-            <span aria-hidden className="w-[73.6px] shrink-0 self-stretch">
-              {!input && (
-                <span
-                  onClick={() => searchRef.current?.focus()}
-                  className="flex h-full cursor-pointer select-none items-center gap-1 pl-3 group-focus-within/search:hidden"
-                >
-                  {(IS_MAC ? ['⌘', 'K'] : ['ctrl', 'K']).map((key) => (
-                    <Kbd key={key} glyph={key} />
-                  ))}
-                </span>
-              )}
-            </span>
+            {!input && (
+              <span
+                aria-hidden
+                onClick={() => searchRef.current?.focus()}
+                className="ml-3 flex shrink-0 cursor-pointer select-none items-center gap-1 group-focus-within/search:hidden"
+              >
+                {(IS_MAC ? ['⌘', 'K'] : ['ctrl', 'K']).map((key) => (
+                  <Kbd key={key} glyph={key} />
+                ))}
+              </span>
+            )}
           </div>
         </div>
       </div>

@@ -84,16 +84,15 @@ the field's 18px so the ch-math resolves identically, plus the 2ch cursor
 gutter). Its idiom: a muted **search icon sitting ON the dashed underline**
 (one continuous rule with the input and the clear `x`); **the active state
 lights the ICON primary, never the line** — in this system a dashed underline
-means *editability*, not activity. **The underline IS the title AREA
-(Sean's ruling, 2026-08-21, refined same day from full-column):** one
-fixed rule from the title-glyph start (the 2ch gutter) to where the title
-area ends — the column MINUS the rows' status zone (reserve derived, not
-eyeballed: widest status word "finished"/"upcoming" = 8ch at META_PX ×
-Plex's 0.6em advance + the rows' pl-4 = 73.6px). It sits exactly over the
-space the series titles occupy; the keycap hint hangs right of the line
-IN the status zone; geometry is state-invariant by construction (the
-input flexes inside the line; the zone stays mounted when the caps
-hide). (96/64 are a composition ruling, not
+means *editability*, not activity. **The underline spans 2/3 of the
+title area (Sean's tuning walk, 2026-08-21: full column → title area →
+2/3):** one fixed rule from the title-glyph start (the 2ch gutter),
+width = `(column − status zone) × 2/3` — the status-zone reserve is
+derived, not eyeballed (widest status word "finished"/"upcoming" = 8ch at
+META_PX × Plex's 0.6em advance + the rows' pl-4 = 73.6px). The width is a
+formula, so the line's geometry is state-invariant by construction; the
+keycap hint hangs right of the line's end (ml-3, empty+inactive only) and
+the input flexes inside the line. (96/64 are a composition ruling, not
 tokens yet — mint page-rhythm tokens when a second page needs them.)
 
 **The rail is responsive by columns (ruling 2026-08-19):** every letter stays
