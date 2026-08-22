@@ -21,8 +21,18 @@ separate, periodic concern.
 | **AniList** GraphQL | Metadata backbone | Open endpoint, no key. Titles/covers/status/scores/genres/relations/`idMal`/external links. Hard budget: **30 req/min** (degraded limit, enforced; treat as permanent). |
 | **animefillerguide.com** (AFG) | Cross-check + **chapter anchors** | Semi-independent editorial (~458 shows, ~4 months behind AFL, 3-way taxonomy). Its arc sections carry **manga chapter equivalents** — the only structured episode↔chapter source found anywhere. AFG never overrides AFL on type; discrepancies raise flags. |
 | AOD 2026-27 snapshot · animeapi.my.id · arm.haglund.dev · AniList `idMal` | ID mapping utilities | For AFL-slug ↔ AniList joins the title matcher can't settle. |
+| **MangaDex** | **ID bridge** (verified 2026-08-22) | Its entries carry AniList + MAL + MangaUpdates ids together (`links.al/mal/mu`; MU slug base36-decodes to their numeric id). The join layer for manga-side sources. Its chapter data itself: unusable coverage for licensed series. |
+| **MangaUpdates** | Cross-check tier (manual-confirm) | Public-read API, caching required by their AUP, credit requested. Release data resolves only ~50% of chapters to volumes and dies in the simulpub era — NOT the volume source. Gems: curated per-series `anime` coverage field ("Vol 112, Chap 1138 as of EP 1168") as a continue-point cross-check. |
+| **Wikipedia chapter lists** (planned) | Volume-boundary source | Per-series "List of X chapters" pages are publisher-derived and complete; volume boundaries are static once printed → one-time ingest per series into `volume_boundaries`. Enters via the new-source checklist (§11). |
 | AniraTeam/AniFiller (GitHub) | Matcher validation seed only | 182 AFL shows with `anilist_id`/`mal_id` pre-joined. **No license — never ship its data**; use only to test our matcher's output. |
 | Jikan/MAL, Simkl, AniDB, SEO clones | **Dropped** | Jikan: boolean-only taxonomy, proven AFL copy, chronic 504s, MAL ToS forbids aggregation. Simkl: filler is website-only (0 mentions in their API spec). AniDB: no filler concept in schema. skipthefiller.com / animefillerlist.tv etc.: derivative rewrites. |
+
+**Reliability tiers**: authoritative sources (AFL for types, AniList for
+metadata, AFG for anchors) write canonical directly through their gates;
+cross-check-tier sources (MangaUpdates, MU anime-field, MAL flags if ever)
+only raise flags that require manual confirmation before influencing
+canonical. Naming/structure authority = AniList (Sean's ruling — official
+titles verbatim, e.g. "Digimon Adventure:" keeps its colon).
 
 ## 2. Architecture: staging → resolution → canonical
 
@@ -100,20 +110,28 @@ resolution recorded per-case in `source_map`.
 - Secrets: scripts read `SUPABASE_SECRET_KEY` from env (gitignored `.env.ingest`);
   no AniList/AFL/AFG credentials exist at all.
 
-## 6. Schema (migration `catalog_pipeline`)
+## 6. Schema (migrations `catalog_pipeline` → `id_registry_search`)
 
 Staging: `ingest_afl_shows`, `ingest_afg_pages`, `ingest_anilist_media` — pk =
 source key, `raw` jsonb, `content_hash`, `etag`/`last_modified`, `fetched_at`,
 `changed_at`. Service-role only (RLS enabled, no anon policies).
 
-Mapping: `source_map` (afl_slug pk, anilist_id, mal_id, afg_slug,
-match_method, confidence, verified).
+Identity: **`series_external_ids`** (pk (source, external_id) + unique
+(series_id, source)) — THE registry; every external identifier maps into our
+canonical id here, and its constraints make cross-series mixups structurally
+impossible. `source_map` (afl_slug pk, anilist_id, mal_id, disposition,
+match_method, confidence, verified) remains the AFL-specific matching ledger
+(dispositions: active/excluded/duplicate/merged).
 
 Canonical (anon `SELECT` via RLS): `series` (tier 1+2 columns incl.
 `average_score`, `popularity`, `genres`, `external_links` jsonb, cover url +
-`cover_color`, source-scope fields), `episodes` (pk series_id+number; `type`
-check-constrained to the four tokens), `chapter_anchors` (sparse ep↔vol/ch
-with `source` provenance).
+`cover_color`, source-scope fields, `search_text` = every name the series
+answers to), `episodes` (pk series_id+number; `type` check-constrained to the
+four tokens), `chapter_anchors` (per-episode ep↔chapter, `source`
+provenance, arc name in `note`; dense where AFG covers, sparse otherwise),
+`series_components` (per-season AniList entries with episode ranges + `kind`
+season/movie/ova/special), `series_relations` (typed links between canonical
+series: sequel/prequel/side_story/spin_off/alternative/remake).
 
 Ops: `ingest_runs` (per-run counters + status), `ingest_flags` (kind, detail
 jsonb, status open/confirmed/dismissed) — the confirm queue.
@@ -204,6 +222,9 @@ in code (`scripts/ingest/`), and every violation flags rather than guesses:
 | Duplicate rule | two AFL pages, one series: more classified episodes wins; per-season pages duplicating a stitched series = duplicate disposition | cleanup/stabilize |
 | Match ladder | source_map → AniFiller seed → exact title → synonym (series formats preferred), else flag | match.ts |
 | Identity | series.id is OURS (slugified title, stable once assigned); afl_slug is provenance only | resolveSeries |
+| **Identity registry** | every external id maps into series.id via series_external_ids; writers register inline; collisions throw | registerIds (resolve.ts) |
+| **Scope-audit gate** | AFL classifying MORE than the matched entry aired (>2) = mis-scope, stitch or flag — AFL cannot know unaired episodes | stitch.ts candidates |
+| AFG alignment gate | AFG's numbering must match ours ±12 before anchors write; strict episode-cell parse (no digit-mashing) | afg-backfill / afg.ts |
 | Dispositions | active / excluded / duplicate / merged rulings are durable data; backfill skips non-active | source_map |
 
 **Hard-won learnings** (why some rules exist): AFL's Drupal is corrupt since
