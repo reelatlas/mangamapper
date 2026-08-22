@@ -96,7 +96,10 @@ frame. iOS-style `A · C · E` abbreviation was tried and rejected.
 ## 2. Row metadata (Row Meta & Grep Lab ruling)
 
 `meta: status` — the series' status word, right-aligned in the row at **12px**,
-tone-scale muted (airing = accent green, hiatus = amber, else muted).
+tone-scale muted (airing = accent green, hiatus = amber, else muted). The hue
+mapping renders through **`StatusChip`** (harmony pass 2026-08-21 — one
+component for every airing-status render); the row meta keeps its own
+register (12px via the wrapper, no tracking).
 **reveal = center**: meta opacity is f², so it fades in only as a row
 approaches focus. The field reads as pure titles; the focused row quietly
 reports. Progress/full variants were explored and rejected for v1.
@@ -134,9 +137,10 @@ Click a row (or Enter when focused) →
    uncovers **already centered on the title you opened**. Focus follows what
    you opened, never the pre-click scroll position.
 
-Deferred to the aesthetic pass: takeover_v1's 26ms per-region content stagger
-(the lab card staggered its lines; the real AnimeCard enters as one fade until
-the card skin pass decides its internal choreography).
+~~Deferred to the aesthetic pass: content stagger~~ **SHIPPED with
+instrument_v1 (2026-08-20):** the card's own **print entrance** (`.card-print`,
+per-line choreography — Card Skin Lab №15) plays inside the growing overlay,
+replacing takeover_v1's placeholder 26ms region stagger.
 
 ## 5. Reduced motion
 
@@ -178,9 +182,10 @@ opacity/weight by position) remains — it's layout, not motion.
   instrument (settled 2026-08-21 after in-line and leading-slot-swap trials
   both disturbed the underline geometry): caps a little right of the bar,
   rendered only while the search is empty AND inactive — the underline (glass
-  + 22ch) never changes size in any state. Keycap recipe: page-flush face,
-  border, 3px radius, 1.5px bottom-only muted ledge, per-glyph optical
-  tuning (⌘ 15px / K 11px, 1px nudge down). Esc in search: text → clear + stay active; empty → blur;
+  + 22ch) never changes size in any state. Keycap recipe = **kbd_v4**
+  ([src/components/Kbd.tsx](../../src/components/Kbd.tsx) — tonal @ md,
+  `gap-1` chord gap; the recipe lives in the component + DESIGN_SYSTEM §3.1,
+  never restated here). Esc in search: text → clear + stay active; empty → blur;
   consumed via stopPropagation (layering rule). ←/→ with a query but focus
   elsewhere recall the search caret and step it one glyph (walking keeps the
   text one arrow away). All page hotkeys defer to an open card

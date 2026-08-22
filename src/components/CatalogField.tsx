@@ -2,6 +2,7 @@ import { useEffect, useLayoutEffect, useMemo, useRef, useState } from 'react';
 import { animate } from 'motion/react';
 import { AnimeSeries } from '@/types/anime';
 import { AnimeCard } from './AnimeCard';
+import { StatusChip } from './StatusChip';
 import { HOLD_DELAY, holdInterval } from '@/lib/hold';
 
 // ─── lab-tuned constants — rulings, not suggestions ─────────────────────────
@@ -595,14 +596,13 @@ export const CatalogField = ({ series, query, loading, onOpenChange }: CatalogFi
       esc(title.slice(idx + q.length))
     );
   };
-  const statusMeta = (s: AnimeSeries) =>
-    s.status === 'airing' ? (
-      <span className="text-accent">airing</span>
-    ) : s.status === 'hiatus' ? (
-      <span className="text-syntax-amber">hiatus</span>
-    ) : (
-      <span>{s.status}</span>
-    );
+  // status renders through StatusChip (harmony pass 2026-08-21 — the one
+  // component for every airing-status render); the row meta keeps its own
+  // register (META_PX via the wrapper, no tracking, no padding), so only
+  // the hue mapping is inherited
+  const statusMeta = (s: AnimeSeries) => (
+    <StatusChip status={s.status} className="p-0 text-[length:inherit] tracking-normal" />
+  );
 
   return (
     <div ref={stageRef} className="relative h-full min-h-0" onClick={requestClose}>
