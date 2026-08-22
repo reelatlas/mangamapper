@@ -12,5 +12,5 @@ insert into public.chapter_anchors (series_id, episode, volume, chapter, source,
   ('berserk-2016', 13, 22, 177, 'wiki', 'season 2 opening — Millennium Falcon arc'),
   ('berserk-2016', 24, 29, 249, 'wiki', 'series finale (ch 244-249, Vritannis)'),
   -- Memorial Edition: recut ends at ch 91 (arc eps 92-94 not adapted)
-  ('berserk-golden-age-arc-memorial-edition', 13, 13, 91, 'wiki', 'recut endpoint — Golden Age through ch 91')
+  ('berserk-the-golden-age-arc-memorial-edition', 13, 13, 91, 'wiki', 'recut endpoint — Golden Age through ch 91')
 on conflict (series_id, episode) do nothing;
