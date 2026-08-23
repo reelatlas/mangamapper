@@ -16,13 +16,10 @@ const authSchema = z.object({
   password: z.string().min(6, { message: "Password must be at least 6 characters" }),
 });
 
-const TEST_EMAIL = 'test@mangamapper.com';
-const TEST_PASSWORD = 'test123456';
-
 const Auth = () => {
   const [isLogin, setIsLogin] = useState(true);
-  const [email, setEmail] = useState(TEST_EMAIL);
-  const [password, setPassword] = useState(TEST_PASSWORD);
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
   const [loading, setLoading] = useState(false);
   const [googleLoading, setGoogleLoading] = useState(false);
   const [showPassword, setShowPassword] = useState(false);
@@ -53,19 +50,7 @@ const Auth = () => {
       if (isLoginAttempt) {
         const { error } = await signIn(userEmail, userPassword);
         if (error) {
-          if (userEmail === TEST_EMAIL && error.message.includes('Invalid login credentials')) {
-            const { error: signUpError } = await signUp(userEmail, userPassword);
-            if (signUpError) {
-              if (signUpError.message.includes('already registered')) {
-                toast.error('Invalid password for test account');
-              } else {
-                toast.error(signUpError.message);
-              }
-            } else {
-              toast.success('Test account created! You are now logged in.');
-              navigate('/');
-            }
-          } else if (error.message.includes('Invalid login credentials')) {
+          if (error.message.includes('Invalid login credentials')) {
             toast.error('Invalid email or password');
           } else {
             toast.error(error.message);
