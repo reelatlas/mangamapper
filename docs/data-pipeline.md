@@ -273,6 +273,9 @@ in code (`scripts/ingest/`), and every violation flags rather than guesses:
 | **Asterisk review workflow (Sean 2026-08-23)** | what an asterisk entails DERIVES from episode_annotations by aggregation (single source of truth — no series-level list to drift; one series can carry multiple kinds across multiple episodes). series.asterisk_review tracks the WORKFLOW: null = no annotations, 'pending' = awaiting Sean's sign-off (set automatically by writers + healed by the audit), 'approved' = signed off in the asterisk UI pass. asterisk_unreviewed audit class = the sign-off queue | episode_annotations + series.asterisk_review + audit-ui-truth |
 | **Source numbering translation (Sean 2026-08-23, the Ryuusui lesson)** | every per-episode source lives in its OWN numbering space. A watch-order entry (special/OVA/movie) that a source NUMBERS but our community count holds order-only shifts every later row — titles AND types (AFL numbered Ryuusui as dr-stone ep 36; our 36-58 were +1 poisoned). SOURCE_NUMBERING_SHIFTS (lib/resolve) declares drop+shift per series, applied inside filterEpisodeRows so EVERY writer translates; merge delete-boundaries use the TRANSLATED max. Fractional wiki labels (35.5 / 0.5 — community notation for between-episodes entries) PROVE a page shares our numbering space; a mid-run order-only series whose page shows no fractional separators is withheld until verified. Ryuusui-class verification queue: k, hayate, ippo, monogatari flagged | SOURCE_NUMBERING_SHIFTS / filterEpisodeRows / wiki-episodes-backfill fractional evidence |
 | **Fractional watch-order positions (design decision QUEUED for the UI phase)** | Sean 2026-08-23: consider rendering order-only entries at their community fractional positions (35.5-style) inside episode lists, or asterisk them — decided alongside arcs/watch-order/IP-umbrella UI. Data side already models them (order-only comps + annotations); wiki fractional rows are parsed and available | UI phase backlog |
+| **Research-logged non-main entries (Sean 2026-08-23)** | every fractional/OVA/movie/special/recap ruling carries its REASONING in data (ingest_fractionals.note + disposition: excluded_recap / order_only / modeled; component kind + notes; REVIEWED set comments with confidence) — the UI pass decides surfacing FROM this record, never from memory | ingest_fractionals / series_components / REVIEWED_NUMBERED_SPECIALS |
+| **LN instrument ruling (Sean 2026-08-23)** | light-novel-sourced series (34: the 86/Re:Zero class) get a VOLUME-space instrument — anchors/frontier/continue-from in LN volumes, same machinery; per-series behavior research logged as it lands; UI adaptation in the UI pass. Implementation = a coming batch | docs ruling; build pending |
+| **/consolidate skill (Sean 2026-08-23)** | the standing consolidation directive is an invocable skill (.claude/skills/consolidate) — writer sweep, lib→edges, staging freshness, healer rescans, census with ruling_violation=0 gate, docs ledger, frontend contract, save point. Run after every significant rules change | .claude/skills/consolidate/SKILL.md |
 | Dispositions | active / excluded / duplicate / merged rulings are durable data; backfill skips non-active | source_map |
 
 **Hard-won learnings** (why some rules exist): AFL's Drupal is corrupt since
@@ -603,6 +606,26 @@ Fixed weekly is correct.
    Revengers eps 24/37/50 → chs 73/121/185. pending_airing_no_anchor = 0.
    Census: ok_full 235 / 4 loose / all integrity classes 0. Shonan
    creation auto-retrying (AniList outage, their side).
+23. ✅ **REVIEW-QUEUE RULINGS + Consolidation pass 4 (2026-08-23 end —
+   SAVE POINT; Sean signed off all four queues)**: Q1 fractionals — all
+   dispositioned with reasoning (UY 193.5 + Dr. Stone 24.5 =
+   excluded_recap; Cells 11.5 Pocari collab = order_only; Ryuusui =
+   modeled). Q2 — Groups A+B (19 entries) marked REVIEWED as episodic
+   canon (kind stays on comps for UI differentiation; B = medium
+   confidence); Group C (7) DEMOTED to order-only with full renumbering
+   (comps, rows, anchors, annotations shifted; SOURCE_NUMBERING_SHIFTS
+   entries added so AFL refreshes translate; watch positions re-swept —
+   21 order-only comps tagged). Q3 — LN volume-space instrument ruled
+   (build pending). Q4 — four bookmarks closed with resolution verdicts
+   (kenshin, haikyu, boruto, x); kenshin-2023 + monogatari stay open.
+   ALL review classes at 0 (special_numbered_unreviewed 26→0,
+   fractional_unmodeled 0, ruling_violation 0). Item-4 batches 1-2 done
+   (30 series, 93 anchors); item-5 curves: title_incomplete 77→27,
+   airdate_incomplete 67→22. /consolidate SKILL created. NEXT: item-4
+   batch 3 · Kingdom S5/S6 stitch · LN volume instrument build ·
+   item-5 tail (SHY case-sensitivity, kenshin-2023 namesake, One Piece
+   later seasons, WTC Gou rows) · TYBW Part 4 anchor (Sep 2026) ·
+   asterisk queue (12) = UI phase.
 21. ✅ **Consolidation pass 2 (2026-08-23, post-Kenshin)**: every write path
    swept against the day's rules — filterEpisodeRows (caps + type
    overrides) now in ALL five episode writers (resolve, stitched-guard,

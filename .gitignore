@@ -33,4 +33,5 @@ dist-ssr
 supabase/.temp/
 
 # Claude Code session artifacts (worktrees, local settings)
-.claude/
+.claude/*
+!.claude/skills/

@@ -35145,8 +35145,25 @@ var EPISODE_TYPE_OVERRIDES = {
   claymore: { 24: "anime-only-canon", 25: "anime-only-canon", 26: "anime-only-canon" }
 };
 var SOURCE_NUMBERING_SHIFTS = {
-  "dr-stone": { drop: [36], shifts: [{ from: 37, offset: -1 }] }
+  "dr-stone": { drop: [36], shifts: [{ from: 37, offset: -1 }] },
   // AFL numbers the Ryuusui special as ep 36; our ruling holds it order-only at position 36
+  // Queue-2 Group C demotions (Sean sign-off 2026-08-23): standalone
+  // bonuses/films the community does not number — order-only by ruling;
+  // AFL numbers them, so its rows translate on every refresh.
+  "yu-yu-hakusho-ghostfiles": { drop: [113], shifts: [] },
+  // Picture Drama bonus
+  "miss-kobayashis-dragon-maid": { drop: [14], shifts: [{ from: 15, offset: -1 }] },
+  // Valentine/Onsen bonus OVA
+  "fate-kaleid-liner-prisma-illya": { drop: [11], shifts: [{ from: 12, offset: -1 }] },
+  // Undoukai DE Dance bonus
+  "prison-school": { drop: [13], shifts: [] },
+  // Mad Wax bonus OVA
+  "to-love-ru-darkness": { drop: [25, 26], shifts: [] },
+  // 2nd Specials bonuses
+  "ghost-in-the-shell-stand-alone-complex": { drop: [53], shifts: [] },
+  // Solid State Society is a FILM (movies order-only unless community-numbered)
+  "yu-gi-oh-2000": { drop: [225], shifts: [] }
+  // Dark Side of Dimensions is a FILM
 };
 var filterEpisodeRows = (seriesId, rows) => {
   const t = SOURCE_NUMBERING_SHIFTS[seriesId];

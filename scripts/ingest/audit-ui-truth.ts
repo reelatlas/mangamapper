@@ -82,6 +82,29 @@ async function main() {
     'fist-of-the-blue-sky:3864', // 4 DVD episodes, AFL numbers 23-26
     'hajime-no-ippo-the-fighting:12069', // Boxer's Fist = community ep 76
     'dr-stone:142876', // Ryuusui: order-only at position 36 (after Stone Wars) — Sean confirmed 2026-08-24 (his 'ep 95' was a typo; community places it mid-run)
+    // ── Queue-2 Groups A+B, Sean sign-off 2026-08-23: continuation/finale
+    // content the community counts as episodic canon (kind stays on the
+    // component for UI differentiation later). A = high confidence,
+    // B = medium (community-practice based; re-open if evidence emerges).
+    'haikyu:111790', // A: Riku vs Kuu OVA 61-62 (our conversion ruling)
+    'attack-on-titan:162314', // A: Final Chapters Kouhen 89 (twin of reviewed 88)
+    'monogatari-series:100815', // A: Zoku Owari 97-102 (one-series numbering)
+    'relife:98635', // A: Kanketsu-hen 14-17 = the actual ending
+    'black-lagoon:4901', // A: Roberta's Blood Trail = functionally S3
+    'when-they-cry:3652', // A: Rei 51-55 counted as the third entry
+    'kenichi-the-mightiest-disciple:11813', // A: OVA 51-61 direct continuation
+    'steins-gate:10863', // A: Egg OVA 25 epilogue, near-universally counted
+    'cardcaptor-sakura:372', // A: Sealed Card 71 = the true finale
+    'the-future-diary:16762', // A: Redial 27 epilogue
+    'heavens-lost-property:9790', // A: Clockwork Angeloid film 26, canon continuation
+    'heavens-lost-property:12783', // A: Final film 27, canon conclusion
+    'gintama:126819', // A: Semi-Final 368-369, canon prelude to the finale film
+    'to-love-ru:5667', // B: OVA 27-32 bridges to Motto (medium confidence)
+    'kill-la-kill:20572', // B: Tokubetsu-hen 25 commonly counted (medium)
+    'high-school-of-the-dead:9515', // B: Drifters of the Dead 13 (medium)
+    'dragon-ball-z-kai:11359', // B: Kai special 98 (medium)
+    'dragon-ball-gt:987', // B: A Hero's Legacy 65 epilogue special (medium)
+    'kamisama-kiss:21186', // B: Kako-hen 26-29 prequel OVAs (medium)
   ]);
   for (const c of comps) {
     if (c.kind && c.kind !== 'season' && c.episode_start != null && !REVIEWED_NUMBERED_SPECIALS.has(`${c.series_id}:${c.anilist_id}`)) {
@@ -173,7 +196,7 @@ async function main() {
   // position is a non-main entry we have NOT yet ruled on — the ask-Sean
   // queue for specials/recaps/OVAs worth (or not worth) surfacing.
   {
-    const fracs = await pageAll('ingest_fractionals', 'series_id, position, title');
+    const fracs = (await pageAll('ingest_fractionals', 'series_id, position, title, disposition')).filter((f: any) => !f.disposition);
     const oo = await pageAll('series_components', 'series_id, watch_position, episode_start');
     const modeled = new Set(
       oo.filter((c: any) => c.episode_start === null && c.watch_position != null).map((c: any) => `${c.series_id}#${Math.floor(Number(c.watch_position))}`),
