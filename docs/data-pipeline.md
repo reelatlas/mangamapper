@@ -67,8 +67,11 @@ associated change is **held** until confirmed. Flags carry enough detail
 
 ## 3. Identity & matching
 
-Canonical series id = the **AFL slug** (kebab-case, already the app's id style
-and the path-bar identity). `anilist_id` (unique) and `mal_id` are columns.
+Canonical series id = **OUR OWN slug** (stable once assigned — superseded the
+early AFL-slug plan 2026-08-22; own-slug migration + identity registry).
+External ids (`anilist`, `mal`, `afl`, `afg`) map INTO our id via
+`series_external_ids` (registry tiers: §10). `afl_slug` remains a column for
+the AFL relationship, never the identity.
 Matching AFL slug → AniList id, in order of confidence:
 
 1. AniFiller seed (182 verified pairs — validation set and bootstrap).
@@ -82,6 +85,10 @@ one AFL show sometimes spans what AniList models as several seasons/series —
 resolution recorded per-case in `source_map`.
 
 ## 4. Refresh model
+
+> **SUPERSEDED by the implemented freshness map (§11 top)** — kept for the
+> original reasoning; the live cadences are the four edge crons + event
+> triggers documented there.
 
 - **Cadence tiers** (change likelihood drives cost):
   - `airing` series: AniList daily (aired count via `nextAiringEpisode`), AFL weekly.
