@@ -35143,9 +35143,18 @@ var EPISODE_TYPE_OVERRIDES = {
   //   + sportskeeda), Sean sign-off
   claymore: { 24: "anime-only-canon", 25: "anime-only-canon", 26: "anime-only-canon" }
 };
+var SOURCE_NUMBERING_SHIFTS = {
+  "dr-stone": { drop: [36], shifts: [{ from: 37, offset: -1 }] }
+  // AFL numbers the Ryuusui special as ep 36; our ruling holds it order-only at position 36
+};
 var filterEpisodeRows = (seriesId, rows) => {
+  const t = SOURCE_NUMBERING_SHIFTS[seriesId];
+  let translated = rows;
+  if (t) {
+    translated = rows.filter((r) => !t.drop.includes(r.number)).map((r) => ({ ...r, number: r.number + t.shifts.reduce((s, x) => r.number >= x.from ? s + x.offset : s, 0) }));
+  }
   const o = COMMUNITY_COUNT_OVERRIDES[seriesId];
-  const capped = o ? rows.filter((r) => r.number <= o.cap) : rows;
+  const capped = o ? translated.filter((r) => r.number <= o.cap) : translated;
   const types = EPISODE_TYPE_OVERRIDES[seriesId];
   if (!types) return capped;
   return capped.map((r) => types[r.number] && "type" in r ? { ...r, type: types[r.number] } : r);
@@ -35287,8 +35296,6 @@ async function resolveSeries(runId, slug) {
   if (existing) {
     const { count: compCount } = await db.from("series_components").select("*", { count: "exact", head: true }).eq("series_id", existing.id);
     if ((compCount ?? 0) > 1) {
-      const aflPageMax = page.episodes.reduce((m, e) => Math.max(m, e.number), 0);
-      await db.from("episodes").delete().eq("series_id", existing.id).lte("number", aflPageMax);
       const stitchedRows = filterEpisodeRows(
         existing.id,
         page.episodes.map((e) => ({
@@ -35299,6 +35306,8 @@ async function resolveSeries(runId, slug) {
           air_date: e.airDate
         }))
       );
+      const ourPageMax = stitchedRows.reduce((m, e) => Math.max(m, e.number), 0);
+      await db.from("episodes").delete().eq("series_id", existing.id).lte("number", ourPageMax);
       for (let i = 0; i < stitchedRows.length; i += 500) {
         const { error } = await db.from("episodes").insert(stitchedRows.slice(i, i + 500));
         if (error) throw new Error(`episodes refresh (${slug}): ${error.message}`);
@@ -35392,8 +35401,6 @@ async function resolveSeries(runId, slug) {
   const { error: e4 } = await db.from("series").upsert(series);
   if (e4) throw new Error(`series upsert (${slug}): ${e4.message}`);
   await registerIds(id, { anilist: media.id, mal: media.idMal, afl: slug });
-  const { error: e5 } = await db.from("episodes").delete().eq("series_id", id).lte("number", aflMax);
-  if (e5) throw new Error(`episodes clear (${slug}): ${e5.message}`);
   const rows = filterEpisodeRows(id, page.episodes.map((e) => ({
     series_id: id,
     number: e.number,
@@ -35401,6 +35408,9 @@ async function resolveSeries(runId, slug) {
     type: e.type,
     air_date: e.airDate
   })));
+  const ourMax = rows.reduce((m, e) => Math.max(m, e.number), 0) || aflMax;
+  const { error: e5 } = await db.from("episodes").delete().eq("series_id", id).lte("number", ourMax);
+  if (e5) throw new Error(`episodes clear (${slug}): ${e5.message}`);
   for (let i = 0; i < rows.length; i += 500) {
     const { error: e6 } = await db.from("episodes").insert(rows.slice(i, i + 500));
     if (e6) throw new Error(`episodes insert (${slug}): ${e6.message}`);

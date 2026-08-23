@@ -115,12 +115,31 @@ export const EPISODE_TYPE_OVERRIDES: Record<string, Record<number, string>> = {
   claymore: { 24: 'anime-only-canon', 25: 'anime-only-canon', 26: 'anime-only-canon' },
 };
 
-// Per-series episode-row rulings, applied by EVERY episode writer: community
-// count caps drop rows the consensus does not number; type overrides correct
-// source misclassification.
+// SOURCE NUMBERING TRANSLATION (Sean's ruling 2026-08-23, the Dr. Stone /
+// Ryuusui lesson): a source that NUMBERS an entry our community count holds
+// order-only lives in a different numbering space — its rows past the
+// insert must shift into ours, and the insert's own row drops (it exists as
+// a watch-order component, never an episode). Without this, titles AND
+// types downstream of the insert are silently off by the insert's length.
+//   drop: source-space numbers whose rows are the order-only entry itself
+//   shifts: source number n ≥ from maps to our number n + offset
+export const SOURCE_NUMBERING_SHIFTS: Record<string, { drop: number[]; shifts: { from: number; offset: number }[] }> = {
+  'dr-stone': { drop: [36], shifts: [{ from: 37, offset: -1 }] }, // AFL numbers the Ryuusui special as ep 36; our ruling holds it order-only at position 36
+};
+
+// Per-series episode-row rulings, applied by EVERY episode writer:
+// source-numbering translation first, then community caps, then type
+// overrides.
 export const filterEpisodeRows = <T extends { number: number; type?: string }>(seriesId: string, rows: T[]): T[] => {
+  const t = SOURCE_NUMBERING_SHIFTS[seriesId];
+  let translated = rows;
+  if (t) {
+    translated = rows
+      .filter((r) => !t.drop.includes(r.number))
+      .map((r) => ({ ...r, number: r.number + t.shifts.reduce((s, x) => (r.number >= x.from ? s + x.offset : s), 0) }));
+  }
   const o = COMMUNITY_COUNT_OVERRIDES[seriesId];
-  const capped = o ? rows.filter((r) => r.number <= o.cap) : rows;
+  const capped = o ? translated.filter((r) => r.number <= o.cap) : translated;
   const types = EPISODE_TYPE_OVERRIDES[seriesId];
   if (!types) return capped;
   return capped.map((r) => (types[r.number] && 'type' in r ? { ...r, type: types[r.number] } : r));
@@ -424,10 +443,11 @@ export async function resolveSeries(runId: number, slug: string): Promise<{ epis
       .eq('series_id', existing.id);
     if ((compCount ?? 0) > 1) {
       // MERGE, not full replace: AFL owns only its own numbering range —
-      // rows beyond aflMax (AFG-filled tails, curated specials like
-      // Dr. Stone's ep 95) must survive an AFL page refresh
-      const aflPageMax = page.episodes.reduce((m, e) => Math.max(m, e.number), 0);
-      await db.from('episodes').delete().eq('series_id', existing.id).lte('number', aflPageMax);
+      // rows beyond it (AFG-filled tails, curated specials) must survive a
+      // page refresh. The boundary uses the TRANSLATED max: AFL's numbering
+      // can sit +N of ours past an order-only insert (Ryuusui), and
+      // deleting to the source-space max would eat rows the translation
+      // doesn't refill.
       const stitchedRows = filterEpisodeRows(
         existing.id,
         page.episodes.map((e) => ({
@@ -438,6 +458,8 @@ export async function resolveSeries(runId: number, slug: string): Promise<{ epis
           air_date: e.airDate,
         })),
       );
+      const ourPageMax = stitchedRows.reduce((m, e) => Math.max(m, e.number), 0);
+      await db.from('episodes').delete().eq('series_id', existing.id).lte('number', ourPageMax);
       for (let i = 0; i < stitchedRows.length; i += 500) {
         const { error } = await db.from('episodes').insert(stitchedRows.slice(i, i + 500));
         if (error) throw new Error(`episodes refresh (${slug}): ${error.message}`);
@@ -557,8 +579,6 @@ export async function resolveSeries(runId: number, slug: string): Promise<{ epis
   // the hash/large-diff gates); rows beyond aflMax — AFG tails, curated
   // specials — survive. Community-count caps drop rows the consensus does
   // not number (Psycho-Pass 42-44).
-  const { error: e5 } = await db.from('episodes').delete().eq('series_id', id).lte('number', aflMax);
-  if (e5) throw new Error(`episodes clear (${slug}): ${e5.message}`);
   const rows = filterEpisodeRows(id, page.episodes.map((e) => ({
     series_id: id,
     number: e.number,
@@ -566,6 +586,11 @@ export async function resolveSeries(runId: number, slug: string): Promise<{ epis
     type: e.type,
     air_date: e.airDate,
   })));
+  // translated-max boundary (see the stitched-guard note): never delete past
+  // what the translated rows refill
+  const ourMax = rows.reduce((m, e) => Math.max(m, e.number), 0) || aflMax;
+  const { error: e5 } = await db.from('episodes').delete().eq('series_id', id).lte('number', ourMax);
+  if (e5) throw new Error(`episodes clear (${slug}): ${e5.message}`);
   for (let i = 0; i < rows.length; i += 500) {
     const { error: e6 } = await db.from('episodes').insert(rows.slice(i, i + 500));
     if (e6) throw new Error(`episodes insert (${slug}): ${e6.message}`);

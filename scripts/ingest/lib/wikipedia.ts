@@ -136,7 +136,13 @@ export async function findChapterPages(titleCandidates: string[]): Promise<strin
 // the one that matches our cumulative numbering.
 
 export interface WikiEpisode {
-  number: number; // overall/cumulative when the page provides it
+  // overall/cumulative when the page provides it. FRACTIONAL numbers (35.5,
+  // 13.5, 0.5) are the community convention for specials/OVAs/movies slotted
+  // BETWEEN episodes without being counted — exactly our order-only concept
+  // (Sean 2026-08-23: Wikipedia labels Dr. Stone's Ryuusui 35.5). Their
+  // presence proves the page shares our numbering space; their data can
+  // describe order-only components; they are never episode rows.
+  number: number;
   title: string | null;
   airDate: string | null; // ISO yyyy-mm-dd
 }
@@ -157,7 +163,7 @@ export function parseEpisodeList(wikitext: string): WikiEpisode[] {
   for (const block of blocks) {
     // overall number preferred; a lone EpisodeNumber on a season page may be
     // season-relative — the caller's alignment gate decides trustworthiness
-    const overall = block.match(/\|\s*EpisodeNumber\s*=\s*(\d+)/i);
+    const overall = block.match(/\|\s*EpisodeNumber\s*=\s*(\d+(?:\.\d+)?)/i);
     if (!overall) continue;
     const number = Number(overall[1]);
     const titleRaw = block.match(/\|\s*Title\s*=\s*([^\n]*)/i)?.[1] ?? '';

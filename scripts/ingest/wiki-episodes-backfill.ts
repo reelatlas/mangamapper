@@ -21,6 +21,26 @@ import { filterEpisodeRows } from './lib/resolve';
 
 const sleep = (ms: number) => new Promise((r) => setTimeout(r, ms));
 
+// NUMBERING-SPACE TRANSLATION (Sean's ruling 2026-08-23, the Dr. Stone
+// Ryuusui lesson): every per-episode external source has its OWN numbering
+// space. A watch-order entry (special/OVA/movie) that Wikipedia numbers but
+// we hold order-only shifts every later episode — the fill poisoned
+// dr-stone 36-94 by one (ep 36 got "Ryusui"). Rules:
+//   · series with a MID-RUN order-only component REQUIRE a declared shift
+//     here before any fill past that position — otherwise skip + flag
+//   · declared shifts also run in CORRECTION mode: a stored row matching
+//     the wiki title at the WRONG offset is rewritten to the right one
+// [from, offset]: our episode n ≥ from maps to wiki number n + offset.
+// (Dr. Stone resolved differently: Wikipedia labels Ryuusui 35.5 — a
+// FRACTIONAL position, meaning wiki already shares our numbering space;
+// the shifted source was AFL, handled by SOURCE_NUMBERING_SHIFTS in
+// lib/resolve. This map stays for sources that flatten inserts into
+// integers.)
+const WIKI_NUMBERING_SHIFTS: Record<string, { from: number; offset: number }[]> = {};
+
+const shiftFor = (sid: string, ep: number): number =>
+  (WIKI_NUMBERING_SHIFTS[sid] ?? []).reduce((s, r) => (ep >= r.from ? s + r.offset : s), 0);
+
 async function main() {
   const only = process.argv.slice(2);
   const runId = await startRun('resolve');
@@ -85,23 +105,65 @@ async function main() {
           console.log(`  ${t.id}: WITHHELD (wiki max ${wikiMax} vs aired ${t.aired_episodes})`);
           continue;
         }
+        // mid-run order-only guard: filling past an order-only position
+        // without a declared numbering shift is forbidden (Ryuusui lesson)
+        const { data: comps } = await db
+          .from('series_components')
+          .select('season_order, episode_start')
+          .eq('series_id', t.id)
+          .order('season_order');
+        const cl = comps ?? [];
+        const midRunOrderOnly = cl.some(
+          (c, i) => c.episode_start === null && cl.slice(i + 1).some((n) => n.episode_start !== null),
+        );
+        const firstAfterOrderOnly = midRunOrderOnly
+          ? cl.find((c, i) => c.episode_start !== null && cl.slice(0, i).some((p) => p.episode_start === null))?.episode_start ?? 1
+          : Number.POSITIVE_INFINITY;
+        // FRACTIONAL rows (35.5-style) prove the page separates watch-order
+        // entries the way we do — the numbering spaces align. Without them,
+        // a mid-run order-only series stays unverified: withhold + flag.
+        const fractionals = wiki.filter((w) => !Number.isInteger(w.number));
+        const wikiAligned = fractionals.length > 0;
+        if (midRunOrderOnly && !wikiAligned && !WIKI_NUMBERING_SHIFTS[t.id]) {
+          await fileFlagOnce(runId, t.id, 'wikipedia', 'count_mismatch', {
+            note: 'mid-run order-only component and the wiki page shows no fractional separators — numbering space unverified; fills past the insert withheld until a shift is declared or alignment verified',
+          });
+          counters.flagged++;
+        }
+        if (fractionals.length) {
+          console.log(`  ${t.id}: wiki separates ${fractionals.length} watch-order entr${fractionals.length === 1 ? 'y' : 'ies'} fractionally (${fractionals.map((f) => f.number).join(', ')}) — numbering aligned`);
+        }
+        const wikiByNumber = new Map(wiki.filter((w) => Number.isInteger(w.number)).map((w) => [w.number, w]));
         const existing = new Map(eps.filter((e) => e.series_id === t.id).map((e) => [e.number, e]));
-        let filled = 0, conflicts = 0, created = 0;
+        let filled = 0, conflicts = 0, created = 0, corrected = 0;
         const newRows: any[] = [];
-        for (const w of wiki) {
-          if (w.number < 1 || w.number > t.aired_episodes) continue;
-          const cur = existing.get(w.number);
+        for (let n = 1; n <= t.aired_episodes; n++) {
+          if (midRunOrderOnly && !wikiAligned && !WIKI_NUMBERING_SHIFTS[t.id] && n >= firstAfterOrderOnly) continue;
+          const shift = shiftFor(t.id, n);
+          const w = wikiByNumber.get(n + shift);
+          if (!w) continue;
+          const cur = existing.get(n);
           if (!cur) {
-            newRows.push({ series_id: t.id, number: w.number, title: w.title ?? '', type: 'canon', air_date: w.airDate });
+            newRows.push({ series_id: t.id, number: n, title: w.title ?? '', type: 'canon', air_date: w.airDate });
             continue;
           }
           const curTitle = String(cur.title ?? '').trim();
           const patch: Record<string, unknown> = {};
+          // correction mode: a stored title matching the wiki value at the
+          // WRONG offset is a poisoned fill — rewrite to the right one
+          if (shift !== 0 && curTitle) {
+            const wrong = wikiByNumber.get(n);
+            if (wrong?.title && curTitle.toLowerCase() === wrong.title.toLowerCase() && w.title) {
+              patch.title = w.title;
+              if (w.airDate) patch.air_date = w.airDate;
+              corrected++;
+            }
+          }
           if (!curTitle && w.title) patch.title = w.title;
           if (!cur.air_date && w.airDate) patch.air_date = w.airDate;
-          if (curTitle && w.title && curTitle.toLowerCase() !== w.title.toLowerCase()) conflicts++;
+          if (!patch.title && curTitle && w.title && curTitle.toLowerCase() !== w.title.toLowerCase()) conflicts++;
           if (Object.keys(patch).length) {
-            await db.from('episodes').update(patch).eq('series_id', t.id).eq('number', w.number);
+            await db.from('episodes').update(patch).eq('series_id', t.id).eq('number', n);
             filled++;
           }
         }
@@ -121,7 +183,7 @@ async function main() {
           counters.flagged++;
         }
         if (filled || created) counters.changed++;
-        console.log(`  ${t.id}: filled ${filled}, created ${created}${conflicts ? `, ${conflicts} title conflicts (kept stored)` : ''} [${pages.length} page(s)]`);
+        console.log(`  ${t.id}: filled ${filled}, created ${created}${corrected ? `, CORRECTED ${corrected} shifted` : ''}${conflicts ? `, ${conflicts} title conflicts (kept stored)` : ''} [${pages.length} page(s)]`);
         await sleep(400);
       } catch (e) {
         console.log(`  ${t.id}: ERROR ${String(e).slice(0, 90)}`);
