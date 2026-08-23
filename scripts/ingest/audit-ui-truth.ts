@@ -23,8 +23,8 @@ async function pageAll(table: string, select: string): Promise<any[]> {
 }
 
 async function main() {
-  const series = await pageAll('series', 'id, source_type, manga_status, status, aired_episodes, total_episodes, total_chapters, total_volumes, latest_known_chapters, manga_anilist_id, manga_start_chapter, mapping_mode');
-  const episodes = await pageAll('episodes', 'series_id, number, type, title');
+  const series = await pageAll('series', 'id, source_type, manga_status, status, aired_episodes, total_episodes, total_chapters, total_volumes, latest_known_chapters, manga_anilist_id, manga_start_chapter, mapping_mode, asterisk_review');
+  const episodes = await pageAll('episodes', 'series_id, number, type, title, air_date');
   const anchors = await pageAll('chapter_anchors', 'series_id, episode, chapter, volume');
   const comps = await pageAll('series_components', 'series_id, episode_end, episode_start, anilist_id, kind, label');
   const bounds = await pageAll('volume_boundaries', 'manga_anilist_id, volume, chapter_start, chapter_end');
@@ -63,7 +63,7 @@ async function main() {
     integrity_eps_beyond_total: [], integrity_total_beyond_eps: [], integrity_double_claimed: [],
     special_numbered_unreviewed: [], anchor_gap_research: [], frontier_tail_null: [],
     anchor_nonmonotonic: [], anchor_beyond_chapter_space: [], ruling_violation: [],
-    title_incomplete: [],
+    title_incomplete: [], airdate_incomplete: [], asterisk_unreviewed: [],
     no_source: [], ok_full: [], ok_no_volume: [], ok_loose: [],
     pending_airing_no_anchor: [], pending_finished_no_totals: [], pending_no_canon: [], pending_other: [],
   };
@@ -140,6 +140,43 @@ async function main() {
       else if (missing > 0) classes.title_incomplete.push(`${row.id}: ${missing}/${rows} rows missing titles`);
       else if (rows > 0 && rows < (row.aired_episodes ?? 0)) {
         classes.title_incomplete.push(`${row.id}: ${(row.aired_episodes ?? 0) - rows} aired eps have no rows (AFL lag) — render title_pending`);
+      }
+    }
+  }
+
+  // AIR-DATE completeness (metadata contract, Sean 2026-08-23): the year
+  // line derives from episode air dates — missing dates degrade metadata.
+  // Work-list for the episode-data initiative (dates come from AniList's
+  // per-season start/end alongside Wikipedia titles).
+  {
+    const missingBy = new Map<string, number>();
+    const totalBy = new Map<string, number>();
+    for (const e of episodes) {
+      totalBy.set(e.series_id, (totalBy.get(e.series_id) ?? 0) + 1);
+      if (!e.air_date || !String(e.air_date).trim()) missingBy.set(e.series_id, (missingBy.get(e.series_id) ?? 0) + 1);
+    }
+    for (const [sid, n] of missingBy) classes.airdate_incomplete.push(`${sid}: ${n}/${totalBy.get(sid)} rows missing air_date`);
+  }
+
+  // ASTERISK review workflow (Sean 2026-08-23): kinds derive from
+  // episode_annotations (single source of truth); series.asterisk_review
+  // tracks sign-off. Heals annotated-but-unmarked series to 'pending';
+  // 'pending' rows are Sean's sign-off queue for the asterisk UI pass.
+  {
+    const annos = await pageAll('episode_annotations', 'series_id, kind');
+    const kindsBy = new Map<string, Set<string>>();
+    for (const a of annos) {
+      if (!kindsBy.has(a.series_id)) kindsBy.set(a.series_id, new Set());
+      kindsBy.get(a.series_id)!.add(a.kind);
+    }
+    for (const [sid, kinds] of kindsBy) {
+      const row = series.find((s: any) => s.id === sid);
+      if (row && !row.asterisk_review) {
+        await db.from('series').update({ asterisk_review: 'pending' }).eq('id', sid);
+        row.asterisk_review = 'pending';
+      }
+      if (row?.asterisk_review !== 'approved') {
+        classes.asterisk_unreviewed.push(`${sid}: [${[...kinds].join(', ')}] — awaiting Sean sign-off`);
       }
     }
   }

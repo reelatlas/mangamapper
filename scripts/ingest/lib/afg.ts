@@ -81,7 +81,11 @@ export function parseAfgPage(html: string): AfgPage {
         const number = Number(numMatch[1]);
         if (number <= 0) return;
         const hasStart = /^\(?[\d:]+\)?$/.test(cells[1] ?? '');
-        const titleCell = hasStart ? cells[2] : cells[1];
+        // AFG's newer page formats emit placeholder cells like "(01)." where
+        // no real title exists — junk stored as a title renders as a WRONG
+        // title (Sean's Dorohedoro report 2026-08-23); normalize to pending
+        const rawTitle = hasStart ? cells[2] : cells[1];
+        const titleCell = rawTitle && /^\(?\d{1,4}\)?\.?$/.test(rawTitle.trim()) ? '' : rawTitle;
         const chaptersCell = hasStart ? cells[3] : cells[2];
         const numberClass = $(tr).find('td').first().attr('class') ?? '';
         episodes.push({

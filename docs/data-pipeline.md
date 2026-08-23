@@ -269,6 +269,8 @@ in code (`scripts/ingest/`), and every violation flags rather than guesses:
 | **AFG continua source (Sean's full-source ruling 2026-08-23)** | every AFG page — chartless all-canon shows included — carries a structured continua-manga table: end-of-anime frontier (episode → chapter equivalence), continue-from chapter, and that volume's collected range (a real volume boundary). Parsed by parseContinua (lib/afg), staged in ingest_afg_pages.raw.continua, applied via applyContinua (lib/anchors) behind the FULL gate stack: identity guard (the heading names the series, entity-decoded + year-suffix-stripped — AFG template bugs are REAL: Cuckoos' page carried Dandadan's table → withheld + flag), sanity band (continue-from is READING GUIDANCE, not a frontier restatement — AFG legitimately says "skip ahead"/"restart earlier"; only a >40-ch gap marks the parse suspect), chapter-space gate, episode sanity. PRECEDENCE at the one-anchor-per-episode PK: manual/wiki never overwritten (continua cross-CHECKS them; >1 ch disagreement flags), chart-'afg'/mu yield to the curated continua (>2 ch disagreement still flags). Boundaries write absent-only; Wikipedia disagreement flags. Wikipedia + manual research stay CO-VERIFIERS everywhere — AFG coverage never limits the other sources (Sean, verbatim). Freshness: refresh-afg applies inline per page refresh; afg-continua-apply.ts sweeps for backfills/rule-fix healing; afg-continua-backfill.ts is the fetch campaign | parseContinua (lib/afg) / applyContinua (lib/anchors) / refresh-afg / afg-continua-* scripts |
 | **Asterisk model (Sean's ruling 2026-08-23)** | non-linear adaptation facts become first-class per-episode data in `episode_annotations` (kind: divergence / partial / graft / rearranged / side_story / loose_parallel / abridged + chapters + cited note). ANY annotated episode renders an asterisk in the UI — representation is a later design pass, the data lands now. This IS the side-story notation's data model (Kenshin 95-98 = side_story 'pilot one-shots'). Research findings populate it; never guessed | episode_annotations table / apply-research batches |
 | **Three-numbers model (research finding 2026-08-23)** | a finale is often non-linear, so three DIFFERENT quantities exist: the frontier (anchors), `series.max_adapted_chapter` (highest chapter touched when ≠ frontier — Kowloon reaches 82 in ep 11 while its finale sits on 79), and `series.continue_from_chapter` (where to actually resume — may skip recaps or backtrack; AFG continua parses it explicitly, refreshed daily; continua owns it only where it owns the frontier — manual rules both otherwise) | series columns + applyContinua + research batches |
+| **Metadata contract (Sean 2026-08-23)** | every displayed field has EXACTLY ONE derivation path, and episode-level display data comes ONLY from the hydrated series (getById) — the shallow list item renders identity fields only (title/cover/status/counts). Incomplete inputs degrade GRACEFULLY, never garbage: junk-pattern titles ("(01).") normalize to pending at parse time (570 rows across 32 series were stored junk from AFG extension fills); the year line computes from VALID air dates only and hides when none exist (never NaN). Completeness is AUDITED: title_incomplete + airdate_incomplete are the episode-data initiative's work-lists | parseAfgPage title guard / airYears (AnimeCard) / audit-ui-truth |
+| **Asterisk review workflow (Sean 2026-08-23)** | what an asterisk entails DERIVES from episode_annotations by aggregation (single source of truth — no series-level list to drift; one series can carry multiple kinds across multiple episodes). series.asterisk_review tracks the WORKFLOW: null = no annotations, 'pending' = awaiting Sean's sign-off (set automatically by writers + healed by the audit), 'approved' = signed off in the asterisk UI pass. asterisk_unreviewed audit class = the sign-off queue | episode_annotations + series.asterisk_review + audit-ui-truth |
 | Dispositions | active / excluded / duplicate / merged rulings are durable data; backfill skips non-active | source_map |
 
 **Hard-won learnings** (why some rules exist): AFL's Drupal is corrupt since
@@ -558,17 +560,18 @@ Fixed weekly is correct.
       canon-default typing (existing spans gap rule), AniList structure,
       AFG continua anchor, MU upkeep. Anime-original holds (Gundams,
       Digimons) have no manga side — watch-order value only, defer.
-   d. **EPISODE-TITLE COMPLETENESS initiative (Sean's directive)**: titles
-      (episode / special / OVA / movie names) become first-class data across
-      every fetch, freshness mechanism, and rule — never title_pending.
-      Sources: AFL rows + AFG rows (titles already stored), Wikipedia
-      episode lists (parser addition — same pages as chapter lists),
-      AniList entry titles for components/specials (labels already stored).
-      Plan: title-completeness audit class (missing/placeholder titles per
-      series) → populate from sources by precedence → discrepancy/missing →
-      flag → ask Sean → research tier. Titles also power research
-      correlation (matching specials/OVAs by NAME across sources — exactly
-      how the Kenshin 95-98 pilot-one-shot discovery worked).
+   d. **EPISODE DATA COMPLETENESS initiative (Sean's directive; scope
+      WIDENED 2026-08-23 to titles + AIR DATES)**: titles and air dates
+      become first-class across every fetch, freshness mechanism, and rule
+      — never title_pending, never a hidden year line. Sources: AFL rows +
+      AFG rows (already stored; junk-pattern titles now normalize to
+      pending at parse), Wikipedia episode lists (parser addition — titles
+      AND air dates on the same pages), AniList entry data (per-season
+      start/end dates + special/movie labels, already staged). Audit
+      classes title_incomplete (77) + airdate_incomplete (67) are the
+      standing work-lists. Plan: populate by precedence → discrepancy →
+      flag → research tier. Titles also power research correlation
+      (matching specials by NAME — the Kenshin pilot-one-shot method).
    e. Standing queues: **Slime structure gap** (entry holds only S1's 24
       eps — stitch S2/S3, then MU coverage can pin correctly; found by the
       chapter-space gate 2026-08-23) · **4KOTA MU self-inconsistency**

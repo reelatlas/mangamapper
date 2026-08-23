@@ -17,12 +17,20 @@ interface AnimeCardProps {
   onClose?: () => void;
 }
 
-// original run years for the identity line: "1997–1998", "1999", "2023–"
+// original run years for the identity line: "1997–1998", "1999", "2023–".
+// Air dates are INCOMPLETE data (45+ series lack them on some rows — AFL
+// omits dates on newer pages; AFG/canon-tier rows never had them): compute
+// from the VALID dates only, and render nothing rather than NaN when none
+// exist (Sean 2026-08-23). Full date completeness ships with the episode
+// data initiative (§12.19d).
 const airYears = (a: AnimeSeries): string | null => {
-  if (!a.episodes.length) return null;
-  const first = new Date(a.episodes[0].airDate).getFullYear();
+  const years = a.episodes
+    .map((e) => new Date(e.airDate).getFullYear())
+    .filter((y) => Number.isFinite(y));
+  if (!years.length) return null;
+  const first = years[0];
   if (a.status === 'airing') return `${first}–`;
-  const last = new Date(a.episodes[a.episodes.length - 1].airDate).getFullYear();
+  const last = years[years.length - 1];
   return first === last ? String(first) : `${first}–${last}`;
 };
 
