@@ -68,9 +68,18 @@ async function main() {
 
       // MU-frontier rule via the shared lib (scope segment, chapter
       // progress, EP pin only from single-pair text) + the manga-status
-      // cross-check (MU vs our AniList-derived manga_status)
+      // cross-check (MU vs our AniList-derived manga_status). latest_known
+      // self-heals from staged data (chapter-NUMBER space, all manga).
       const mu = muByManga.get(s.manga_anilist_id);
-      if (mu) await crossCheckMangaStatus(runId, s.id, s.manga_status, mu);
+      if (mu) {
+        await crossCheckMangaStatus(runId, s.id, s.manga_status, mu);
+        if (mu.latest_chapter && mu.latest_chapter > 0 && mu.latest_chapter < 10000) {
+          await db
+            .from('series')
+            .update({ latest_known_chapters: mu.latest_chapter, updated_at: new Date().toISOString() })
+            .eq('id', s.id);
+        }
+      }
       const result = await applyMuFrontier(
         { id: s.id, aired_episodes: s.aired_episodes, total_chapters: s.total_chapters, manga_start_chapter: s.manga_start_chapter },
         mu?.anime?.end ?? null,

@@ -204,7 +204,33 @@ const buildSpans = (eps: EpisodeRow[], aired: number, fallback: EpisodeType): Ep
   return spans;
 };
 
-const buildMapping = (row: SeriesRow, eps: EpisodeRow[], anchors: AnchorRow[], boundaries: Boundary[]): MappingSummary => {
+// Same-manga continuation (segment model, Sean 2026-08-24): a sibling entry
+// whose scope starts at/inside this entry's scope end continues the story
+// (Naruto→Shippuden, Berserk 1997→2016) — the residue between our frontier
+// and our scope end is adapted THERE, so it is a handoff, not a manga-only
+// tail. Returns the continuation's first chapter, or null.
+async function continuationStart(row: SeriesRow): Promise<number | null> {
+  if (!row.manga_anilist_id || !row.total_chapters) return null;
+  const { data } = await supabase
+    .from('series')
+    .select('manga_start_chapter')
+    .eq('manga_anilist_id', row.manga_anilist_id)
+    .neq('id', row.id)
+    .not('manga_start_chapter', 'is', null);
+  const ourStart = row.manga_start_chapter ?? 1;
+  const starts = (data ?? [])
+    .map((s) => s.manga_start_chapter as number)
+    .filter((st) => st > ourStart && st <= row.total_chapters! + 1);
+  return starts.length ? Math.min(...starts) : null;
+}
+
+const buildMapping = (
+  row: SeriesRow,
+  eps: EpisodeRow[],
+  anchors: AnchorRow[],
+  boundaries: Boundary[],
+  continuationStartCh: number | null = null,
+): MappingSummary => {
   const sourceType = row.source_type as SourceType;
   const hasSource = sourceType !== 'original' && row.manga_status !== 'anime_only';
   const aired = Math.max(row.aired_episodes, eps.reduce((m, e) => Math.max(m, e.number), 0));
@@ -250,12 +276,18 @@ const buildMapping = (row: SeriesRow, eps: EpisodeRow[], anchors: AnchorRow[], b
   const scopeStartCh = row.manga_start_chapter ?? 1;
   const adaptedSpan = coveredChapter !== null ? coveredChapter - scopeStartCh + 1 : null;
   const canonEpisodes = counts.canon + counts.mixed;
-  // Sean's ruling 2026-08-24: while a manga publishes, AniList totals are
-  // null — but latest_known (MU) bounds the series from below, so it is the
-  // EFFECTIVE total for tail math. Displayed totals stay null (= "ongoing");
-  // synthesis still requires real totals (an ongoing manga's latest chapter
-  // is NOT proof the anime adapted that far).
-  const effectiveTotalChapters = row.total_chapters ?? row.latest_known_chapters;
+  // Sean's rulings 2026-08-24: while a manga publishes, AniList totals are
+  // null — latest_known (MU) bounds the series from below and is the
+  // EFFECTIVE total for tail math. For finished manga BOTH exist in
+  // different spaces: AniList totals is a COUNT (mid-run specials included —
+  // AoT says 141), MU latest is the last chapter NUMBER (139, matching the
+  // anchor space) — take the min so the tail never claims chapters that
+  // exist only as count-space padding. Displayed totals stay AniList's
+  // (= null while ongoing); synthesis still requires real totals.
+  const effectiveTotalChapters =
+    row.total_chapters != null || row.latest_known_chapters != null
+      ? Math.min(row.total_chapters ?? Infinity, row.latest_known_chapters ?? Infinity)
+      : null;
   // The manga_only tail is only knowable when anchors reach the end of the
   // run. Sparse coverage (AFG's Naruto table stops early) would fabricate a
   // giant tail out of chapters the anime DID adapt — an unknown frontier
@@ -264,9 +296,16 @@ const buildMapping = (row: SeriesRow, eps: EpisodeRow[], anchors: AnchorRow[], b
     latestAnchor !== null && lastCanonEpisode > 0 && latestAnchor.episode >= lastCanonEpisode - 12;
   let mangaAheadChapters: number | null = null;
   let mangaAheadUnits = 0;
+  // continuation handoff: a same-manga sibling whose scope adjoins our scope
+  // end continues the story — the residue between our frontier and scope end
+  // is franchise flow (Shippuden adapted Naruto's ch 239-244), not a
+  // "manga only" tail. Inter-segment reading gaps (Berserk 1997 ch 88-94
+  // before 2016) surface in the universe view, not here.
+  const residueHandedOff = continuationStartCh !== null;
   if (
     hasSource &&
     anchorsReachEnd &&
+    !residueHandedOff &&
     effectiveTotalChapters &&
     coveredChapter &&
     adaptedSpan &&
@@ -341,11 +380,12 @@ export const supabaseCatalogSource: CatalogSource = {
   async getMapping(id: string) {
     const row = await fetchSeriesRow(id);
     if (!row) return null;
-    const [eps, anchors, boundaries] = await Promise.all([
+    const [eps, anchors, boundaries, continuationStartCh] = await Promise.all([
       allEpisodes(id),
       allAnchors(id),
       allBoundaries(row.manga_anilist_id),
+      continuationStart(row),
     ]);
-    return buildMapping(row, eps, anchors, boundaries);
+    return buildMapping(row, eps, anchors, boundaries, continuationStartCh);
   },
 };

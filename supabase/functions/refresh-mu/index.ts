@@ -20399,7 +20399,7 @@ async function run() {
         counters.changed++;
         const { data: linked } = await db.from("series").select("id, aired_episodes, total_chapters, manga_start_chapter, manga_status").eq("manga_anilist_id", row.manga_anilist_id);
         for (const s of linked ?? []) {
-          if (s.manga_status === "publishing" && mu.latest_chapter && mu.latest_chapter > 0 && mu.latest_chapter < 1e4) {
+          if (mu.latest_chapter && mu.latest_chapter > 0 && mu.latest_chapter < 1e4) {
             await db.from("series").update({ latest_known_chapters: mu.latest_chapter, updated_at: (/* @__PURE__ */ new Date()).toISOString() }).eq("id", s.id);
           }
           const { data: epTop } = await db.from("chapter_anchors").select("episode").eq("series_id", s.id).neq("source", "mu").order("episode", { ascending: false }).limit(1);

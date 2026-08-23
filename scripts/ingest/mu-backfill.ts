@@ -115,9 +115,10 @@ async function main() {
         }
 
         if (mu.latest_chapter && mu.latest_chapter > 0 && mu.latest_chapter < 10000) {
-          // denominator semantics: only meaningful while the manga publishes
+          // MU's last chapter NUMBER: the publishing frontier for ongoing
+          // manga AND the number-space end for finished ones (AniList totals
+          // are a COUNT that includes mid-run specials — AoT 141 vs 139)
           for (const sid of t.seriesIds) {
-            if (t.statuses.get(sid) !== 'publishing') continue;
             await db.from('series').update({ latest_known_chapters: mu.latest_chapter, updated_at: new Date().toISOString() }).eq('id', sid);
           }
           actions.push(`${t.title}: latest ch ${mu.latest_chapter} ("${mu.status}")`);
