@@ -487,7 +487,43 @@ Fixed weekly is correct.
    strategy ratified: AniList has no current-chapter field, so frontiers
    come from MU (or research); every source contributes what it actually
    knows.
-19. ✅ Consolidation pass (2026-08-24 end, Sean's reflection point): all
+19. **POST-COMPACT AGENDA (Sean 2026-08-24, in order):**
+   a. **Kenshin read-path debug (UNRESOLVED)**: ep-28 anchor VERIFIED STORED
+      (ch 48/vol 7, source manual) but Sean's card shows ch 52 — some UI
+      element (section label? inline position? strip?) is not reading the
+      manual anchor. Get exact repro (which element), fix the read path so
+      every display consumes the same anchor-aware curve. THEN:
+   b. **Side-story mapping notation (ruling needed)**: Kenshin eps 95-98
+      adapt the PILOT ONE-SHOTS — content outside mainline chapter numbering.
+      Current beyond-frontier rule nulls them (over-correction per Sean —
+      canon episodes should show what they correspond to). Needs a notation
+      (e.g., mapping to named side content, not a mainline ch number) —
+      design + data model with Sean.
+   c. **Anchor-gap research program (Sean approved)**: 112 series with >12
+      unanchored canon eps between confirmed points (audit-ui-truth
+      anchor_gap_research). Batches of 15-20 by popularity: arc-boundary
+      anchors, ≥2 corroborating sources, applied as manual anchors, re-audit
+      after each batch. Kenshin was the pilot (Kyoto ep 28 → ch 48). Only
+      start once (a) proves displays read what we store.
+   d. **EPISODE-TITLE COMPLETENESS initiative (Sean's directive)**: titles
+      (episode / special / OVA / movie names) become first-class data across
+      every fetch, freshness mechanism, and rule — never title_pending.
+      Sources: AFL rows + AFG rows (titles already stored), Wikipedia
+      episode lists (parser addition — same pages as chapter lists),
+      AniList entry titles for components/specials (labels already stored).
+      Plan: title-completeness audit class (missing/placeholder titles per
+      series) → populate from sources by precedence → discrepancy/missing →
+      flag → ask Sean → research tier. Titles also power research
+      correlation (matching specials/OVAs by NAME across sources — exactly
+      how the Kenshin 95-98 pilot-one-shot discovery worked).
+   e. Standing queues: 26 numbered-specials evaluations (ask-Sean loop) ·
+      LN-instrument decision (38 series) · segment-model UI (universe view /
+      handoff pointers) · Dororo eps 16-24 typing · wiki 4th dialect + MU
+      unbridgeable (~29) · AFL-sparse keep-vs-dismiss ruling · ruled-split
+      anchor routing · footer credits · Sean review bookmarks (6, incl.
+      monogatari UI note) — query: detail->>'kind_of_note' =
+      'sean_review_bookmark'.
+20. ✅ Consolidation pass (2026-08-24 end, Sean's reflection point): all
    mechanisms aligned to the session's rulings — episode-floor invariant in
    every totals writer (edges redeployed), MU targeting universal with the
    daily cron, shared rule logic exclusively in lib/ (chain, mu-frontier,
@@ -495,7 +531,7 @@ Fixed weekly is correct.
    freshness map (§11 top) documents pull → fresh → canonical per source.
    Movies-count-only-when-numbered ruling recorded (Initial D ep 40 vs
    Kizu order-only components).
-20. **Remaining triage** (all understood, none urgent): LN-instrument ruling
+21. **Remaining triage** (all understood, none urgent): LN-instrument ruling
    (item 16) · segment-model rulings (handoff pointers, universe-view bar —
    sketch above, Sean's go needed) · 3
    unknown-coverage research cases (x, sgt-frog, outlaw-star) · genuinely
