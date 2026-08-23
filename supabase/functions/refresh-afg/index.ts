@@ -24073,9 +24073,9 @@ function parseDataValue(value) {
     return true;
   if (value === "false")
     return false;
-  const num = Number(value);
-  if (value === String(num))
-    return num;
+  const num2 = Number(value);
+  if (value === String(num2))
+    return num2;
   if (rbrace.test(value)) {
     try {
       return JSON.parse(value);
@@ -25625,17 +25625,17 @@ function isFilter(s) {
   return false;
 }
 function getLimit(filter4, data2, partLimit) {
-  const num = data2 != null ? parseInt(data2, 10) : NaN;
+  const num2 = data2 != null ? parseInt(data2, 10) : NaN;
   switch (filter4) {
     case "first":
       return 1;
     case "nth":
     case "eq":
-      return isFinite(num) ? num >= 0 ? num + 1 : Infinity : 0;
+      return isFinite(num2) ? num2 >= 0 ? num2 + 1 : Infinity : 0;
     case "lt":
-      return isFinite(num) ? num >= 0 ? Math.min(num, partLimit) : Infinity : 0;
+      return isFinite(num2) ? num2 >= 0 ? Math.min(num2, partLimit) : Infinity : 0;
     case "gt":
-      return isFinite(num) ? Infinity : 0;
+      return isFinite(num2) ? Infinity : 0;
     case "odd":
       return 2 * partLimit;
     case "even":
@@ -25685,7 +25685,7 @@ function some(elements, selector, options = {}) {
   return plain.length > 0 && elements.some(_compileToken(plain, options)) || filtered.some((sel) => filterBySelector(sel, elements, options).length > 0);
 }
 function filterByPosition(filter4, elems, data2, options) {
-  const num = typeof data2 === "string" ? parseInt(data2, 10) : NaN;
+  const num2 = typeof data2 === "string" ? parseInt(data2, 10) : NaN;
   switch (filter4) {
     case "first":
     case "lt":
@@ -25694,9 +25694,9 @@ function filterByPosition(filter4, elems, data2, options) {
       return elems.length > 0 ? [elems[elems.length - 1]] : elems;
     case "nth":
     case "eq":
-      return isFinite(num) && Math.abs(num) < elems.length ? [num < 0 ? elems[elems.length + num] : elems[num]] : [];
+      return isFinite(num2) && Math.abs(num2) < elems.length ? [num2 < 0 ? elems[elems.length + num2] : elems[num2]] : [];
     case "gt":
-      return isFinite(num) ? elems.slice(num + 1) : [];
+      return isFinite(num2) ? elems.slice(num2 + 1) : [];
     case "even":
       return elems.filter((_, i) => i % 2 === 0);
     case "odd":
@@ -35061,6 +35061,40 @@ function deriveAnchors(episodes) {
   }
   return out;
 }
+var num = (s) => s ? Number(s) : null;
+function parseContinua(html3) {
+  const i = html3.indexOf("continua-manga");
+  if (i < 0) return null;
+  const end2 = html3.indexOf("</table>", i);
+  const text3 = html3.slice(i, end2 < 0 ? i + 4e3 : end2).replace(/<[^>]+>/g, " ").replace(/\s+/g, " ").trim();
+  const heading = /Where to start (.+?) manga after (?:the )?anime/i.exec(text3)?.[1]?.trim() ?? null;
+  let endEpisode = null;
+  let endSeason = null;
+  const mAbs = /ended at episode (\d+)(?:\s*\(\s*\d+ of Season (\d+)\s*\))?(?:\s*of Season (\d+))?/i.exec(text3);
+  const mLast = /last canon episode[^.]*?is (?:the )?(\d+)(?:st|nd|rd|th)?(?:\s*(?:episode)?\s*of Season (\d+))?/i.exec(text3);
+  if (mAbs) {
+    endEpisode = num(mAbs[1]);
+    endSeason = num(mAbs[2]) ?? num(mAbs[3]);
+  } else if (mLast) {
+    endSeason = num(mLast[2]);
+    endEpisode = endSeason === null || endSeason === 1 ? num(mLast[1]) : null;
+  }
+  const mCh = /(?:corresponds? to|equivalent to) Chapters? ([^.]*?)(?: of the manga|\.)/i.exec(text3);
+  const endChapter = mCh ? Math.max(...(mCh[1].match(/\d+/g) ?? ["0"]).map(Number)) || null : null;
+  const continueChapter = num(/start reading from Chapter (\d+)/i.exec(text3)?.[1]);
+  const mVol = /Volume (\d+) \(collect(?:s|ing) chapters? (\d+) to (\d+)\)/i.exec(text3);
+  return {
+    heading,
+    endEpisode,
+    endSeason,
+    endChapter,
+    continueChapter,
+    continueVolume: num(mVol?.[1]),
+    volumeStart: num(mVol?.[2]),
+    volumeEnd: num(mVol?.[3]),
+    text: text3
+  };
+}
 
 // scripts/ingest/lib/http.ts
 var USER_AGENT = "mangaMapper/0.1 (ingest; contact: seanreedux@gmail.com)";
@@ -35123,6 +35157,90 @@ async function registerIds(seriesId, ids) {
 }
 
 // scripts/ingest/lib/anchors.ts
+var norm = (s) => s.toLowerCase().replace(/[^a-z0-9]+/g, " ").trim();
+async function applyContinua(runId, seriesId, continua) {
+  if (!continua || continua.endChapter === null) return "no_data";
+  const { data: s } = await db.from("series").select("id, title, title_native, aired_episodes, total_chapters, latest_known_chapters, manga_anilist_id, search_text").eq("id", seriesId).maybeSingle();
+  if (!s) return "no_data";
+  await db.from("chapter_anchors").delete().eq("series_id", s.id).eq("source", "afg-continua");
+  const heading = continua.heading ? norm(continua.heading) : null;
+  const names = norm(`${s.title} ${s.title_native ?? ""} ${s.search_text ?? ""}`);
+  if (heading && !names.includes(heading)) {
+    await fileFlagOnce(runId, s.id, "afg", "parse_integrity", {
+      continuaHeading: continua.heading,
+      note: "continua table heading names a DIFFERENT series (AFG template bug class) \u2014 data withheld, verify by hand"
+    });
+    return "withheld";
+  }
+  if (continua.continueChapter !== null && continua.continueChapter - 1 !== continua.endChapter) {
+    await fileFlagOnce(runId, s.id, "afg", "parse_integrity", {
+      endChapter: continua.endChapter,
+      continueChapter: continua.continueChapter,
+      note: "continua table internally inconsistent (continue-1 \u2260 end) \u2014 withheld"
+    });
+    return "withheld";
+  }
+  const spaceMax = Math.max(s.total_chapters ?? 0, s.latest_known_chapters ?? 0);
+  if (spaceMax > 0 && continua.endChapter > spaceMax + 10) {
+    await fileFlagOnce(runId, s.id, "afg", "count_mismatch", {
+      continuaEndChapter: continua.endChapter,
+      spaceMax,
+      note: "continua frontier exceeds this entry's chapter space \u2014 partial structure or edition mismatch; withheld"
+    });
+    return "withheld";
+  }
+  const ep = continua.endEpisode !== null && continua.endEpisode <= (s.aired_episodes ?? 0) ? continua.endEpisode : s.aired_episodes;
+  if (!ep) return "no_data";
+  const { data: holder } = await db.from("chapter_anchors").select("source, chapter").eq("series_id", s.id).eq("episode", ep).maybeSingle();
+  const diff = holder ? Math.abs(Number(holder.chapter) - continua.endChapter) : 0;
+  if (holder && (holder.source === "manual" || holder.source === "wiki")) {
+    if (diff > 1) {
+      await fileFlagOnce(runId, s.id, "afg", "count_mismatch", {
+        episode: ep,
+        [holder.source]: holder.chapter,
+        afgContinua: continua.endChapter,
+        note: `continua frontier disagrees with the ${holder.source} anchor at ep ${ep} \u2014 cross-check finding, ${holder.source} kept`
+      });
+    }
+    return "kept_curated";
+  }
+  if (holder && diff > 2) {
+    await fileFlagOnce(runId, s.id, "afg", "count_mismatch", {
+      episode: ep,
+      [holder.source]: holder.chapter,
+      afgContinua: continua.endChapter,
+      note: `continua frontier disagrees with the ${holder.source} anchor at ep ${ep} by ${diff} ch \u2014 continua (curated) applied, verify`
+    });
+  }
+  const { error } = await db.from("chapter_anchors").upsert({
+    series_id: s.id,
+    episode: ep,
+    volume: null,
+    chapter: continua.endChapter,
+    source: "afg-continua",
+    note: `AFG continua table: "${continua.text.slice(0, 180)}"`
+  });
+  if (error) throw new Error(`applyContinua(${s.id}): ${error.message}`);
+  if (s.manga_anilist_id && continua.continueVolume !== null && continua.volumeStart !== null && continua.volumeEnd !== null) {
+    const { data: existing } = await db.from("volume_boundaries").select("chapter_start, chapter_end").eq("manga_anilist_id", s.manga_anilist_id).eq("volume", continua.continueVolume).maybeSingle();
+    if (!existing) {
+      await db.from("volume_boundaries").insert({
+        manga_anilist_id: s.manga_anilist_id,
+        volume: continua.continueVolume,
+        chapter_start: continua.volumeStart,
+        chapter_end: continua.volumeEnd
+      });
+    } else if (existing.chapter_start !== continua.volumeStart || existing.chapter_end !== continua.volumeEnd) {
+      await fileFlagOnce(runId, s.id, "afg", "count_mismatch", {
+        volume: continua.continueVolume,
+        staged: existing,
+        afg: { chapter_start: continua.volumeStart, chapter_end: continua.volumeEnd },
+        note: "AFG continua volume boundary disagrees with the staged (Wikipedia) boundary \u2014 verify which edition"
+      });
+    }
+  }
+  return "applied";
+}
 var VOLUME_STALE_MARGIN = 20;
 async function syncAnchors(runId, seriesId, afgSlug, page) {
   const anchors = deriveAnchors(page.episodes);
@@ -35220,7 +35338,8 @@ async function run() {
           continue;
         }
         const page = parseAfgPage(res.html);
-        const raw = { title: page.title, seasons: page.seasons, episodes: page.episodes };
+        const continua = parseContinua(res.html);
+        const raw = { title: page.title, seasons: page.seasons, episodes: page.episodes, continua };
         const hash = contentHash(raw);
         const { data: prev2 } = await db.from("ingest_afg_pages").select("content_hash").eq("slug", s.slug).maybeSingle();
         if (prev2?.content_hash === hash) {
@@ -35247,6 +35366,8 @@ async function run() {
         if (target) {
           const result = await syncAnchors(runId, target, s.slug, page);
           if (result.withheld) counters.flagged++;
+          const c = await applyContinua(runId, target, continua);
+          if (c === "withheld") counters.flagged++;
         }
       } catch (e) {
         notes.push(`${s.slug}: ${String(e).slice(0, 100)}`);

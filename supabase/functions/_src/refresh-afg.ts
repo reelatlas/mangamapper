@@ -6,10 +6,10 @@
 // gate, volumes-staleness event trigger included).
 
 import { db, startRun, finishRun } from '../../../scripts/ingest/lib/db';
-import { AFG_BASE, parseAfgPage } from '../../../scripts/ingest/lib/afg';
+import { AFG_BASE, parseAfgPage, parseContinua } from '../../../scripts/ingest/lib/afg';
 import { politeFetch } from '../../../scripts/ingest/lib/http';
 import { contentHash } from '../../../scripts/ingest/lib/hash';
-import { syncAnchors } from '../../../scripts/ingest/lib/anchors';
+import { applyContinua, syncAnchors } from '../../../scripts/ingest/lib/anchors';
 import { slugify } from '../../../scripts/ingest/lib/slug';
 
 declare const Deno: {
@@ -61,7 +61,8 @@ async function run() {
           continue;
         }
         const page = parseAfgPage(res.html);
-        const raw = { title: page.title, seasons: page.seasons, episodes: page.episodes };
+        const continua = parseContinua(res.html);
+        const raw = { title: page.title, seasons: page.seasons, episodes: page.episodes, continua };
         const hash = contentHash(raw);
         const { data: prev } = await db.from('ingest_afg_pages').select('content_hash').eq('slug', s.slug).maybeSingle();
         if (prev?.content_hash === hash) {
@@ -98,6 +99,11 @@ async function run() {
         if (target) {
           const result = await syncAnchors(runId, target, s.slug, page);
           if (result.withheld) counters.flagged++;
+          // continua inline upkeep (Sean's full-source ruling 2026-08-23):
+          // the end-frontier + boundary land WITH the pull via the same
+          // shared gates as the sweep script
+          const c = await applyContinua(runId, target, continua);
+          if (c === 'withheld') counters.flagged++;
         }
       } catch (e) {
         notes.push(`${s.slug}: ${String(e).slice(0, 100)}`);

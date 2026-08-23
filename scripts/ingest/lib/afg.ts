@@ -119,6 +119,81 @@ export function deriveAnchors(episodes: AfgEpisode[]): { episode: number; chapte
   return out;
 }
 
+// ── continua-manga table (Sean's full-source ruling 2026-08-23) ─────────────
+// Every AFG page — chartless all-canon shows included — carries a structured
+// "Where does the anime end? / Where should I start reading?" table:
+// end-of-anime frontier (episode → chapter equivalence), the continue-from
+// chapter, and that chapter's print volume with its collected range (a real
+// volume boundary). The heading names the series — pages exist where the
+// template names the WRONG series (SHY's said Kamonohashi Ron), so the
+// heading is captured for the apply step's identity guard, never trusted
+// blindly. Wikipedia + research stay co-verifiers everywhere (Sean: AFG
+// coverage never limits the other sources).
+export interface AfgContinua {
+  heading: string | null; // series name the table claims to describe
+  endEpisode: number | null; // absolute episode number of the frontier
+  endSeason: number | null;
+  endChapter: number | null; // highest chapter the frontier episode reaches
+  continueChapter: number | null; // "start reading from Chapter N"
+  continueVolume: number | null;
+  volumeStart: number | null; // that volume's collected range
+  volumeEnd: number | null;
+  text: string; // the table's plain text — citation + future re-parses
+}
+
+const num = (s: string | undefined | null): number | null => (s ? Number(s) : null);
+
+export function parseContinua(html: string): AfgContinua | null {
+  const i = html.indexOf('continua-manga');
+  if (i < 0) return null;
+  const end = html.indexOf('</table>', i);
+  const text = html
+    .slice(i, end < 0 ? i + 4000 : end)
+    .replace(/<[^>]+>/g, ' ')
+    .replace(/\s+/g, ' ')
+    .trim();
+
+  const heading = /Where to start (.+?) manga after (?:the )?anime/i.exec(text)?.[1]?.trim() ?? null;
+
+  // frontier: "ended at episode 99 (14 of Season 3)" | "ended at episode 23
+  // of Season 1" | "last canon episode that aired is 12th of Season 1"
+  let endEpisode: number | null = null;
+  let endSeason: number | null = null;
+  const mAbs = /ended at episode (\d+)(?:\s*\(\s*\d+ of Season (\d+)\s*\))?(?:\s*of Season (\d+))?/i.exec(text);
+  const mLast = /last canon episode[^.]*?is (?:the )?(\d+)(?:st|nd|rd|th)?(?:\s*(?:episode)?\s*of Season (\d+))?/i.exec(text);
+  if (mAbs) {
+    endEpisode = num(mAbs[1]);
+    endSeason = num(mAbs[2]) ?? num(mAbs[3]);
+  } else if (mLast) {
+    endSeason = num(mLast[2]);
+    // season-relative: only trustable as absolute for season 1
+    endEpisode = endSeason === null || endSeason === 1 ? num(mLast[1]) : null;
+  }
+
+  // the equivalence list runs to " of the manga" / sentence end ("Chapter
+  // 150, 151, 152, 153, 154 and 155 of the manga") — frontier = its max;
+  // continueChapter-1 must agree (the apply step's self-consistency gate)
+  const mCh = /(?:corresponds? to|equivalent to) Chapters? ([^.]*?)(?: of the manga|\.)/i.exec(text);
+  const endChapter = mCh
+    ? Math.max(...(mCh[1].match(/\d+/g) ?? ['0']).map(Number)) || null
+    : null;
+
+  const continueChapter = num(/start reading from Chapter (\d+)/i.exec(text)?.[1]);
+  const mVol = /Volume (\d+) \(collect(?:s|ing) chapters? (\d+) to (\d+)\)/i.exec(text);
+
+  return {
+    heading,
+    endEpisode,
+    endSeason,
+    endChapter,
+    continueChapter,
+    continueVolume: num(mVol?.[1]),
+    volumeStart: num(mVol?.[2]),
+    volumeEnd: num(mVol?.[3]),
+    text,
+  };
+}
+
 export function parseSitemap(xml: string): string[] {
   const slugs: string[] = [];
   for (const m of xml.matchAll(/<loc>https?:\/\/www\.animefillerguide\.com\/anime\/([^/<]+)\/?<\/loc>/g)) {

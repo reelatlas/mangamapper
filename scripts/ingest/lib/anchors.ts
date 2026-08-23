@@ -3,9 +3,130 @@
 // write path: monotonicity-filtered derivation, alignment gate, registry,
 // flag dismissal, and the volumes-staleness event trigger).
 
-import { deriveAnchors, type AfgPage } from './afg';
+import { deriveAnchors, type AfgPage, type AfgContinua } from './afg';
 import { db, fileFlagOnce } from './db';
 import { registerIds } from './resolve';
+
+const norm = (s: string) => s.toLowerCase().replace(/[^a-z0-9]+/g, ' ').trim();
+
+// AFG continua-manga application (Sean's full-source ruling 2026-08-23):
+// a staged continua table becomes an end-frontier anchor (source
+// 'afg-continua') + a volume boundary — behind the full gate stack:
+// identity guard (heading vs series names — SHY's page carried Kamonohashi
+// Ron's heading), self-consistency (continue-1 = end), chapter-space gate,
+// episode sanity. PRECEDENCE at the (series, episode) PK: manual/wiki are
+// never overwritten (continua cross-CHECKS them, disagreement >1 flags);
+// chart-'afg'/mu yield to the curated continua (>2 disagreement flags).
+// Boundaries write absent-only; a disagreeing Wikipedia boundary flags —
+// sources verify each other in conjunction, none limits another.
+// Shared by afg-continua-apply.ts (sweep) and refresh-afg (inline upkeep).
+export async function applyContinua(
+  runId: number,
+  seriesId: string,
+  continua: AfgContinua | null | undefined,
+): Promise<'applied' | 'withheld' | 'kept_curated' | 'no_data'> {
+  if (!continua || continua.endChapter === null) return 'no_data';
+  const { data: s } = await db
+    .from('series')
+    .select('id, title, title_native, aired_episodes, total_chapters, latest_known_chapters, manga_anilist_id, search_text')
+    .eq('id', seriesId)
+    .maybeSingle();
+  if (!s) return 'no_data';
+
+  await db.from('chapter_anchors').delete().eq('series_id', s.id).eq('source', 'afg-continua');
+
+  const heading = continua.heading ? norm(continua.heading) : null;
+  const names = norm(`${s.title} ${s.title_native ?? ''} ${s.search_text ?? ''}`);
+  if (heading && !names.includes(heading)) {
+    await fileFlagOnce(runId, s.id, 'afg', 'parse_integrity', {
+      continuaHeading: continua.heading,
+      note: 'continua table heading names a DIFFERENT series (AFG template bug class) — data withheld, verify by hand',
+    });
+    return 'withheld';
+  }
+  if (continua.continueChapter !== null && continua.continueChapter - 1 !== continua.endChapter) {
+    await fileFlagOnce(runId, s.id, 'afg', 'parse_integrity', {
+      endChapter: continua.endChapter,
+      continueChapter: continua.continueChapter,
+      note: 'continua table internally inconsistent (continue-1 ≠ end) — withheld',
+    });
+    return 'withheld';
+  }
+  const spaceMax = Math.max(s.total_chapters ?? 0, s.latest_known_chapters ?? 0);
+  if (spaceMax > 0 && continua.endChapter > spaceMax + 10) {
+    await fileFlagOnce(runId, s.id, 'afg', 'count_mismatch', {
+      continuaEndChapter: continua.endChapter,
+      spaceMax,
+      note: "continua frontier exceeds this entry's chapter space — partial structure or edition mismatch; withheld",
+    });
+    return 'withheld';
+  }
+  const ep = continua.endEpisode !== null && continua.endEpisode <= (s.aired_episodes ?? 0)
+    ? continua.endEpisode
+    : s.aired_episodes;
+  if (!ep) return 'no_data';
+
+  const { data: holder } = await db
+    .from('chapter_anchors')
+    .select('source, chapter')
+    .eq('series_id', s.id)
+    .eq('episode', ep)
+    .maybeSingle();
+  const diff = holder ? Math.abs(Number(holder.chapter) - continua.endChapter) : 0;
+  if (holder && (holder.source === 'manual' || holder.source === 'wiki')) {
+    if (diff > 1) {
+      await fileFlagOnce(runId, s.id, 'afg', 'count_mismatch', {
+        episode: ep,
+        [holder.source]: holder.chapter,
+        afgContinua: continua.endChapter,
+        note: `continua frontier disagrees with the ${holder.source} anchor at ep ${ep} — cross-check finding, ${holder.source} kept`,
+      });
+    }
+    return 'kept_curated';
+  }
+  if (holder && diff > 2) {
+    await fileFlagOnce(runId, s.id, 'afg', 'count_mismatch', {
+      episode: ep,
+      [holder.source]: holder.chapter,
+      afgContinua: continua.endChapter,
+      note: `continua frontier disagrees with the ${holder.source} anchor at ep ${ep} by ${diff} ch — continua (curated) applied, verify`,
+    });
+  }
+  const { error } = await db.from('chapter_anchors').upsert({
+    series_id: s.id,
+    episode: ep,
+    volume: null,
+    chapter: continua.endChapter,
+    source: 'afg-continua',
+    note: `AFG continua table: "${continua.text.slice(0, 180)}"`,
+  });
+  if (error) throw new Error(`applyContinua(${s.id}): ${error.message}`);
+
+  if (s.manga_anilist_id && continua.continueVolume !== null && continua.volumeStart !== null && continua.volumeEnd !== null) {
+    const { data: existing } = await db
+      .from('volume_boundaries')
+      .select('chapter_start, chapter_end')
+      .eq('manga_anilist_id', s.manga_anilist_id)
+      .eq('volume', continua.continueVolume)
+      .maybeSingle();
+    if (!existing) {
+      await db.from('volume_boundaries').insert({
+        manga_anilist_id: s.manga_anilist_id,
+        volume: continua.continueVolume,
+        chapter_start: continua.volumeStart,
+        chapter_end: continua.volumeEnd,
+      });
+    } else if (existing.chapter_start !== continua.volumeStart || existing.chapter_end !== continua.volumeEnd) {
+      await fileFlagOnce(runId, s.id, 'afg', 'count_mismatch', {
+        volume: continua.continueVolume,
+        staged: existing,
+        afg: { chapter_start: continua.volumeStart, chapter_end: continua.volumeEnd },
+        note: 'AFG continua volume boundary disagrees with the staged (Wikipedia) boundary — verify which edition',
+      });
+    }
+  }
+  return 'applied';
+}
 
 // New anchors reaching this far past the last known volume boundary mean the
 // manga has published new volumes — the EVENT that triggers a volumes

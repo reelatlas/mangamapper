@@ -266,6 +266,7 @@ in code (`scripts/ingest/`), and every violation flags rather than guesses:
 | **Chapter-space gates (all anchor writers)** | an anchor chapter must fit the series' own manga space (max(total_chapters, latest_known)+10). AFG: one out-of-space anchor means the page is franchise-continuous numbering — whole page withheld + flag (Boruto ch 702-710). MU: a coverage pin past the space means partial structure (Slime held only S1) or edition mismatch — withheld + flag ('out_of_space') | syncAnchors (lib/anchors) / applyMuFrontier (lib/mu-frontier) |
 | **Chapter-floor invariant (Sean 2026-08-23, symmetric to the episode floor)** | the chapter space can never be SMALLER than what confirmed anchors reach: latest_known writes reject an MU number below the non-MU anchor max (Kakegurui's "9" was a volume count against ch-55 anchors). Fallback: MU's status string often carries the real chapter count ("67 Chapters (Ongoing)") — bestLatestKnown tries release-derived first, status-parse second, both behind band + floor; failures null-heal + flag | bestLatestKnown / muStatusChapterCount (lib/mu-frontier), all three latest_known writers |
 | **Boundary-aware volumes everywhere** | EVERY chapter→volume readout prefers real print boundaries (volume_boundaries), ratio only as boundary-less fallback — estimated episode rows must never contradict curated anchor volumes (Kenshin ep-29 showed ratio vol 6 beside the anchor's real vol 7). Boundaries ride on AnimeSeries.volumeBoundaries into the client curve | chToVol (src/lib/mapping.ts) + toAnimeSeries (supabaseSource) |
+| **AFG continua source (Sean's full-source ruling 2026-08-23)** | every AFG page — chartless all-canon shows included — carries a structured continua-manga table: end-of-anime frontier (episode → chapter equivalence), continue-from chapter, and that volume's collected range (a real volume boundary). Parsed by parseContinua (lib/afg), staged in ingest_afg_pages.raw.continua, applied via applyContinua (lib/anchors) behind the FULL gate stack: identity guard (the heading names the series — AFG template bugs exist: SHY's page carried Kamonohashi Ron's heading → withheld + flag), self-consistency (continue−1 must equal end), chapter-space gate, episode sanity. PRECEDENCE at the one-anchor-per-episode PK: manual/wiki never overwritten (continua cross-CHECKS them; >1 ch disagreement flags), chart-'afg'/mu yield to the curated continua (>2 ch disagreement still flags). Boundaries write absent-only; Wikipedia disagreement flags. Wikipedia + manual research stay CO-VERIFIERS everywhere — AFG coverage never limits the other sources (Sean, verbatim). Freshness: refresh-afg applies inline per page refresh; afg-continua-apply.ts sweeps for backfills/rule-fix healing; afg-continua-backfill.ts is the fetch campaign | parseContinua (lib/afg) / applyContinua (lib/anchors) / refresh-afg / afg-continua-* scripts |
 | Dispositions | active / excluded / duplicate / merged rulings are durable data; backfill skips non-active | source_map |
 
 **Hard-won learnings** (why some rules exist): AFL's Drupal is corrupt since
@@ -282,7 +283,7 @@ AniList `chapters/volumes` are null while publishing.
 |---|---|---|---|---|
 | **AFL** | `backfill.ts` (full sweep / new sources via checklist) | `refresh-afl` hourly :40, ≤20 stalest, 6d window | episode rows + types via `resolveSeries` (episode floor applied) | alias-corruption defenses, count gates, sparse guard, dispositions, per-series rulings via filterEpisodeRows (community caps + type overrides — EVERY episode writer: resolve, stitched-guard, stitch, expansion, extend) |
 | **AniList** | staged inline by every chain walk / match | `refresh-anilist` daily 08:10, full batched sweep | series metadata + totals (floored), volatile fields; stitched series via `refreshStitchedVolatile` (floored) | naming authority, derivative-manga rule, ownership guard, scope application |
-| **AFG** | `afg-backfill` (`--force` after parser changes); `afg-expansion` / `afg-extend` for structure | `refresh-afg` daily 09:20, ≤25 stalest, 13d window | anchors via shared `syncAnchors` (registry-first); expansion/extension structures (floored) | monotonicity, alignment ±12, **chapter-space gate** (franchise-continuous numbering withheld whole-page), chain-confirm ±2, ruled-split skips, registry tiers |
+| **AFG** | `afg-backfill` (`--force` after parser changes); `afg-expansion` / `afg-extend` for structure; `afg-continua-backfill` (campaign) | `refresh-afg` daily 09:20, ≤25 stalest, 13d window | anchors via shared `syncAnchors` (registry-first); **continua frontiers + volume boundaries via shared `applyContinua` (inline per refresh)**; expansion/extension structures (floored) | monotonicity, alignment ±12, **chapter-space gate** (franchise-continuous numbering withheld whole-page), **continua gates** (identity guard, self-consistency, precedence: manual/wiki kept + cross-checked), chain-confirm ±2, ruled-split skips, registry tiers |
 | **MangaUpdates** | `mu-backfill` (universal — every manga behind a canonical series) | `refresh-mu` daily 09:50, ≤20 stalest, 7d window | `latest_known_chapters` via `bestLatestKnown` (release number → status-string chapter count, band + chapter-floor guarded), frontier anchors, status-conflict + edition-divergence + out-of-space flags — all via `lib/mu-frontier` | MangaDex-bridge-only identity, scope-segment multi-pair parse, chapter-progress guard, **chapter-space gate on pins**, **chapter-floor invariant on latest_known**, anchor-freshness rule |
 | **Wikipedia** | `volumes-backfill` (event: volumes-staleness flag from syncAnchors) | none — boundaries static once printed | `volume_boundaries` | title-token overlap, 3 wikitext dialects, exceed-totals flag |
 
@@ -518,12 +519,29 @@ Fixed weekly is correct.
       canon episodes should show what they correspond to). Needs a notation
       (e.g., mapping to named side content, not a mainline ch number) —
       design + data model with Sean.
-   c. **Anchor-gap research program (Sean approved)**: 112 series with >12
-      unanchored canon eps between confirmed points (audit-ui-truth
-      anchor_gap_research). Batches of 15-20 by popularity: arc-boundary
-      anchors, ≥2 corroborating sources, applied as manual anchors, re-audit
-      after each batch. Kenshin was the pilot (Kyoto ep 28 → ch 48). Only
-      start once (a) proves displays read what we store.
+   c. **Anchor-gap research program (Sean approved; REFRAMED 2026-08-23 by
+      the continua ruling)**: first pass = AFG continua extraction (rule-
+      based, gated — see §10) supplies END-frontiers catalog-wide; Wikipedia
+      + manual research remain CO-VERIFIERS on everything continua covers
+      (Sean: never limited to what it doesn't cover) AND the source for what
+      it can't (INTERIOR arc-boundary anchors — continua only gives the
+      run's end). Then the manual batches (15-20 by popularity, ≥2 sources,
+      re-audit per batch) work the remaining anchor_gap_research list.
+      Kenshin was the pilot (Kyoto ep 28 → ch 48).
+   c2. **source_map cleanup (Sean's rulings 2026-08-23, applied)**:
+      kuroko recovered (75-row Wayback page → kurokos-basketball, 3 seasons
+      stitched) · noragami-aragoto = merged (already inside noragami) ·
+      digimon-tamers wrong-match cleared · miraculous + 3 pokemon excluded
+      (out of scope) · shy AFL excluded (AFG is its source) · sparse holds
+      KEPT (auto-return at 60%) + actively closed via better sources — AFL
+      becomes validation when it returns · PENDING: canon-tier creation
+      (Sean ruled YES) for manga-sourced shows with no episode chart
+      anywhere (~0% filler): SHY, Cells at Work ×2, Ranking of Kings,
+      Chrono Crusade, Orient, Shaman King 2001, + sparse-hold shows where
+      sources allow (City Hunter, Kinnikuman, Elemental Gelade, Shonan) —
+      canon-default typing (existing spans gap rule), AniList structure,
+      AFG continua anchor, MU upkeep. Anime-original holds (Gundams,
+      Digimons) have no manga side — watch-order value only, defer.
    d. **EPISODE-TITLE COMPLETENESS initiative (Sean's directive)**: titles
       (episode / special / OVA / movie names) become first-class data across
       every fetch, freshness mechanism, and rule — never title_pending.

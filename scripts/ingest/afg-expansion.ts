@@ -48,11 +48,16 @@ async function main() {
     const { data: afgReg } = await db.from('series_external_ids').select('external_id').eq('source', 'afg');
     for (const r of afgReg ?? []) taken.add(r.external_id);
 
+    // Zero-episode staged pages are the identity-registration tier (title +
+    // season headers only) — for UNSERVED slugs they're still candidates:
+    // the loop's fresh fetch supplies the real parse (SHY sat invisible
+    // behind this filter, 2026-08-23). Served slugs stay excluded via taken.
     const targets = (pages ?? []).filter((p) => {
       const raw = p.raw as { title: string; episodes: unknown[] };
-      return raw.episodes.length >= 6 && !taken.has(p.slug) && !taken.has(slugify(raw.title));
+      if (taken.has(p.slug) || taken.has(slugify(raw.title))) return false;
+      return raw.episodes.length >= 6 || raw.episodes.length === 0;
     });
-    console.log(`[expansion] ${targets.length} AFG-only candidates`);
+    console.log(`[expansion] ${targets.length} AFG-only candidates (incl. registration-tier refetches)`);
 
     const owned = await ownedAnilistIds();
 
@@ -67,7 +72,10 @@ async function main() {
           continue;
         }
         const page = parseAfgPage(res.html);
-        if (page.episodes.length < 6) continue;
+        if (page.episodes.length < 6) {
+          actions.push(`${t.slug}: page carries ${page.episodes.length} episode rows — not expandable`);
+          continue;
+        }
         await db.from('ingest_afg_pages').upsert({
           slug: t.slug,
           raw: { title: page.title, seasons: page.seasons, episodes: page.episodes },
