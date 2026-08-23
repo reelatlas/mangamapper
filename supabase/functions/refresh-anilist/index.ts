@@ -20369,6 +20369,21 @@ var EXTRAS_ADOPTED = /* @__PURE__ */ new Set([
   "eyeshield-21"
   // 10 specials beyond AniList's 145
 ]);
+var COMMUNITY_COUNT_OVERRIDES = {
+  "psycho-pass": { cap: 41, note: "First Inspector + films are watch-order events, not numbered episodes (Sean 2026-08-24)" },
+  "monogatari-series": { cap: 100, note: "community numbering excludes the 3 Second Season recaps (Sean 2026-08-24)" },
+  "high-school-dxd": { cap: 48, note: "HERO's Episode 0 is a mid-run special the community's continuous numbering excludes \u2014 order-only (Sean 2026-08-24)" }
+};
+function applyCommunityCap(seriesId, row) {
+  const o = COMMUNITY_COUNT_OVERRIDES[seriesId];
+  if (!o) return;
+  if (row.aired_episodes != null) row.aired_episodes = Math.min(row.aired_episodes, o.cap);
+  if (row.total_episodes != null) row.total_episodes = Math.min(row.total_episodes, o.cap);
+}
+var filterEpisodeRows = (seriesId, rows) => {
+  const o = COMMUNITY_COUNT_OVERRIDES[seriesId];
+  return o ? rows.filter((r) => r.number <= o.cap) : rows;
+};
 function applyEpisodeFloor(seriesId, row, epMax) {
   if (!epMax) return;
   const aired = row.aired_episodes ?? 0;
@@ -20379,7 +20394,7 @@ function applyEpisodeFloor(seriesId, row, epMax) {
   if (row.total_episodes != null) row.total_episodes = Math.max(row.total_episodes, epMax);
 }
 async function refreshStitchedVolatile(seriesId) {
-  const { data: comps } = await db.from("series_components").select("anilist_id").eq("series_id", seriesId);
+  const { data: comps } = await db.from("series_components").select("anilist_id").eq("series_id", seriesId).not("episode_start", "is", null);
   if (!comps?.length) return;
   const media = [];
   for (const c of comps) {
@@ -20397,6 +20412,7 @@ async function refreshStitchedVolatile(seriesId) {
     total_episodes: media.every((m) => m.episodes != null) ? media.reduce((s, m) => s + (m.episodes ?? 0), 0) : null
   };
   applyEpisodeFloor(seriesId, volatile, topEp?.[0]?.number ?? 0);
+  applyCommunityCap(seriesId, volatile);
   await db.from("series").update({
     ...volatile,
     status: statuses.has("RELEASING") ? "airing" : statuses.has("NOT_YET_RELEASED") ? "upcoming" : statuses.has("HIATUS") ? "hiatus" : "finished",
@@ -20497,14 +20513,18 @@ async function resolveSeries(runId, slug) {
   if (existing) {
     const { count: compCount } = await db.from("series_components").select("*", { count: "exact", head: true }).eq("series_id", existing.id);
     if ((compCount ?? 0) > 1) {
-      await db.from("episodes").delete().eq("series_id", existing.id);
-      const stitchedRows = page.episodes.map((e) => ({
-        series_id: existing.id,
-        number: e.number,
-        title: e.title,
-        type: e.type,
-        air_date: e.airDate
-      }));
+      const aflPageMax = page.episodes.reduce((m, e) => Math.max(m, e.number), 0);
+      await db.from("episodes").delete().eq("series_id", existing.id).lte("number", aflPageMax);
+      const stitchedRows = filterEpisodeRows(
+        existing.id,
+        page.episodes.map((e) => ({
+          series_id: existing.id,
+          number: e.number,
+          title: e.title,
+          type: e.type,
+          air_date: e.airDate
+        }))
+      );
       for (let i = 0; i < stitchedRows.length; i += 500) {
         const { error } = await db.from("episodes").insert(stitchedRows.slice(i, i + 500));
         if (error) throw new Error(`episodes refresh (${slug}): ${error.message}`);
@@ -20594,18 +20614,19 @@ async function resolveSeries(runId, slug) {
     updated_at: (/* @__PURE__ */ new Date()).toISOString()
   };
   applyEpisodeFloor(id, series, aflMax);
+  applyCommunityCap(id, series);
   const { error: e4 } = await db.from("series").upsert(series);
   if (e4) throw new Error(`series upsert (${slug}): ${e4.message}`);
   await registerIds(id, { anilist: media.id, mal: media.idMal, afl: slug });
-  const { error: e5 } = await db.from("episodes").delete().eq("series_id", id);
+  const { error: e5 } = await db.from("episodes").delete().eq("series_id", id).lte("number", aflMax);
   if (e5) throw new Error(`episodes clear (${slug}): ${e5.message}`);
-  const rows = page.episodes.map((e) => ({
+  const rows = filterEpisodeRows(id, page.episodes.map((e) => ({
     series_id: id,
     number: e.number,
     title: e.title,
     type: e.type,
     air_date: e.airDate
-  }));
+  })));
   for (let i = 0; i < rows.length; i += 500) {
     const { error: e6 } = await db.from("episodes").insert(rows.slice(i, i + 500));
     if (e6) throw new Error(`episodes insert (${slug}): ${e6.message}`);

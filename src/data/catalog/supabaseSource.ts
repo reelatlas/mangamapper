@@ -38,10 +38,11 @@ type SeriesRow = {
   external_links: { site: string; type: string | null }[];
   search_text: string;
   latest_known_chapters: number | null;
+  mapping_mode: 'chapter' | 'loose';
 };
 
 const SERIES_COLS =
-  'id, title, title_native, cover_url, status, source_type, manga_status, manga_anilist_id, aired_episodes, total_episodes, total_volumes, total_chapters, manga_start_volume, manga_start_chapter, popularity, genres, synopsis_html, external_links, search_text, latest_known_chapters';
+  'id, title, title_native, cover_url, status, source_type, manga_status, manga_anilist_id, aired_episodes, total_episodes, total_volumes, total_chapters, manga_start_volume, manga_start_chapter, popularity, genres, synopsis_html, external_links, search_text, latest_known_chapters, mapping_mode';
 
 type EpisodeRow = { number: number; title: string; type: string; air_date: string | null };
 type AnchorRow = { episode: number; volume: number | null; chapter: number };
@@ -133,6 +134,7 @@ const toAnimeSeries = (row: SeriesRow, rank: number, episodes: Episode[], publis
   // the two agree within a same-edition band (a divergent MU edition like
   // Space Cobra's 28-vs-156 must not hijack the display; those flag in the
   // audit). The EFFECTIVE total for tail math lives in buildMapping.
+  mappingMode: row.mapping_mode,
   totalChapters:
     row.total_chapters != null &&
     row.latest_known_chapters != null &&
@@ -252,8 +254,9 @@ const buildMapping = (
   const latestAnchor = anchors.length ? anchors[anchors.length - 1] : null;
   const lastCanonEpisode = eps.reduce((m, e) => (e.type !== 'filler' ? Math.max(m, e.number) : m), 0);
 
+  const loose = row.mapping_mode === 'loose';
   let latestKnown =
-    hasSource && latestAnchor
+    hasSource && !loose && latestAnchor
       ? {
           episode: latestAnchor.episode,
           volume: latestAnchor.volume ?? volumeFor(row, latestAnchor.chapter, boundaries),
@@ -265,7 +268,7 @@ const buildMapping = (
   // position instrument works from totals instead of rendering
   // mapping_pending across ~260 series (mock-era assumption: anchors always
   // existed). Airing series without anchors stay pending (frontier unknown).
-  if (!latestKnown && hasSource && row.total_chapters && row.status === 'finished' && lastCanonEpisode > 0) {
+  if (!latestKnown && hasSource && !loose && row.total_chapters && row.status === 'finished' && lastCanonEpisode > 0) {
     latestKnown = {
       episode: lastCanonEpisode,
       volume: row.total_volumes ?? volumeFor(row, row.total_chapters, boundaries),

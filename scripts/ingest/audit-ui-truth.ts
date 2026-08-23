@@ -22,10 +22,10 @@ async function pageAll(table: string, select: string): Promise<any[]> {
 }
 
 async function main() {
-  const series = await pageAll('series', 'id, source_type, manga_status, status, aired_episodes, total_episodes, total_chapters, total_volumes, latest_known_chapters, manga_anilist_id, manga_start_chapter');
+  const series = await pageAll('series', 'id, source_type, manga_status, status, aired_episodes, total_episodes, total_chapters, total_volumes, latest_known_chapters, manga_anilist_id, manga_start_chapter, mapping_mode');
   const episodes = await pageAll('episodes', 'series_id, number, type');
   const anchors = await pageAll('chapter_anchors', 'series_id, episode, chapter, volume');
-  const comps = await pageAll('series_components', 'series_id, episode_end, anilist_id');
+  const comps = await pageAll('series_components', 'series_id, episode_end, episode_start, anilist_id, kind, label');
   const bounds = await pageAll('volume_boundaries', 'manga_anilist_id, volume, chapter_start, chapter_end');
 
   const epsBy = new Map<string, { max: number; lastCanon: number; count: number }>();
@@ -60,9 +60,29 @@ async function main() {
 
   const classes: Record<string, string[]> = {
     integrity_eps_beyond_total: [], integrity_total_beyond_eps: [], integrity_double_claimed: [],
-    no_source: [], ok_full: [], ok_no_volume: [],
+    special_numbered_unreviewed: [],
+    no_source: [], ok_full: [], ok_no_volume: [], ok_loose: [],
     pending_airing_no_anchor: [], pending_finished_no_totals: [], pending_no_canon: [], pending_other: [],
   };
+  // Sean's standing rule (2026-08-24): any non-typical entry (special/OVA/
+  // movie/recap) NUMBERED into a run by any source is a research trigger —
+  // verify against community consensus, ask Sean, then record the ruling
+  // here. Reviewed = verified community-counted this session.
+  const REVIEWED_NUMBERED_SPECIALS = new Set<string>([
+    'initial-d:187', // Third Stage = AFL's ep 40 (the founding precedent)
+    'attack-on-titan:146984', // Final Chapters Zenpen = ep 88 (AFL-numbered)
+    'attack-on-titan:165790', // Final Chapters Kouhen = ep 89
+    'hunter-x-hunter:137', // HxH 1999 OVA continuations (ruled in-flow)
+    'hunter-x-hunter:138',
+    'hunter-x-hunter:139',
+    'fist-of-the-blue-sky:3864', // 4 DVD episodes, AFL numbers 23-26
+    'hajime-no-ippo-the-fighting:12069', // Boxer's Fist = community ep 76
+  ]);
+  for (const c of comps) {
+    if (c.kind && c.kind !== 'season' && c.episode_start != null && !REVIEWED_NUMBERED_SPECIALS.has(`${c.series_id}:${c.anilist_id}`)) {
+      classes.special_numbered_unreviewed.push(`${c.series_id}: ${c.kind} "${c.label ?? c.anilist_id}" numbered ${c.episode_start}-${c.episode_end ?? '?'} [${c.series_id}:${c.anilist_id}]`);
+    }
+  }
   // ownership integrity: one AniList entry claimed by two series' components
   // = legacy pre-ownership-guard damage or an unresolved duplicate entry
   {
@@ -90,12 +110,13 @@ async function main() {
     // series whose totals exceed its listed episodes means a source counts
     // content our episode list lacks (AFL missing a final special) — the
     // card would promise more episodes than the list shows
-    if (row.status === 'finished' && row.aired_episodes > 0 && e.count > 0 && row.aired_episodes > e.max) {
-      classes.integrity_total_beyond_eps.push(`${row.id} (aired/total=${row.aired_episodes}, eps listed→${e.max})`);
+    if (row.status === 'finished' && row.aired_episodes > 0 && e.count > 0 && row.aired_episodes > e.count) {
+      classes.integrity_total_beyond_eps.push(`${row.id} (aired/total=${row.aired_episodes}, rows=${e.count})`);
     }
     const hasSource = row.source_type !== 'original' && row.manga_status !== 'anime_only';
     if (!hasSource) { classes.no_source.push(row.id); continue; }
     if (row.source_type === 'light_novel') lightNovel.push(row.id);
+    if (row.mapping_mode === 'loose') { classes.ok_loose.push(row.id); continue; }
     const latestAnchor = anchBy.get(row.id) ?? null;
     let latestKnown: { volume: number | null; chapters: number } | null = null;
     if (latestAnchor) latestKnown = { volume: latestAnchor.volume ?? volumeFor(row, latestAnchor.chapter), chapters: latestAnchor.chapter };

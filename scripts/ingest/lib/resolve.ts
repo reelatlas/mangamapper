@@ -63,6 +63,37 @@ export const EXTRAS_ADOPTED = new Set<string>([
   'eyeshield-21', // 10 specials beyond AniList's 145
 ]);
 
+// Community-count rulings (Sean 2026-08-24: the community-consensus episode
+// count is the truth — specials/ep-0s the community numbers are IN; large
+// events it does not number are order-only components). Per-series caps for
+// cases where a source numbers content the community consensus does not:
+//   psycho-pass: AFL numbers First Inspector as 42-44, but community treats
+//   it + the films as watch-order events → 41 episodes (Sean's ruling).
+//   monogatari-series: AniList's Second Season count includes 3 recaps the
+//   community numbering excludes → 100.
+// Enforced at every episode-row write (rows above the cap are dropped) and
+// as a totals clamp after the floor.
+export const COMMUNITY_COUNT_OVERRIDES: Record<string, { cap: number; note: string }> = {
+  'psycho-pass': { cap: 41, note: 'First Inspector + films are watch-order events, not numbered episodes (Sean 2026-08-24)' },
+  'monogatari-series': { cap: 100, note: 'community numbering excludes the 3 Second Season recaps (Sean 2026-08-24)' },
+  'high-school-dxd': { cap: 48, note: "HERO's Episode 0 is a mid-run special the community's continuous numbering excludes — order-only (Sean 2026-08-24)" },
+};
+
+export function applyCommunityCap(
+  seriesId: string,
+  row: { aired_episodes?: number | null; total_episodes?: number | null },
+) {
+  const o = COMMUNITY_COUNT_OVERRIDES[seriesId];
+  if (!o) return;
+  if (row.aired_episodes != null) row.aired_episodes = Math.min(row.aired_episodes, o.cap);
+  if (row.total_episodes != null) row.total_episodes = Math.min(row.total_episodes, o.cap);
+}
+
+export const filterEpisodeRows = <T extends { number: number }>(seriesId: string, rows: T[]): T[] => {
+  const o = COMMUNITY_COUNT_OVERRIDES[seriesId];
+  return o ? rows.filter((r) => r.number <= o.cap) : rows;
+};
+
 export function applyEpisodeFloor(
   seriesId: string,
   row: { aired_episodes?: number | null; total_episodes?: number | null },
@@ -78,10 +109,13 @@ export function applyEpisodeFloor(
 }
 
 export async function refreshStitchedVolatile(seriesId: string) {
+  // order-only components (null episode range — Kizu movies, Psycho-Pass
+  // films) hold watch-order positions and NEVER count toward aired/totals
   const { data: comps } = await db
     .from('series_components')
     .select('anilist_id')
-    .eq('series_id', seriesId);
+    .eq('series_id', seriesId)
+    .not('episode_start', 'is', null);
   if (!comps?.length) return;
   const media: AniListMedia[] = [];
   for (const c of comps) {
@@ -104,6 +138,7 @@ export async function refreshStitchedVolatile(seriesId: string) {
     total_episodes: media.every((m) => m.episodes != null) ? media.reduce((s, m) => s + (m.episodes ?? 0), 0) : null,
   };
   applyEpisodeFloor(seriesId, volatile, topEp?.[0]?.number ?? 0);
+  applyCommunityCap(seriesId, volatile);
   await db
     .from('series')
     .update({
@@ -356,14 +391,21 @@ export async function resolveSeries(runId: number, slug: string): Promise<{ epis
       .select('*', { count: 'exact', head: true })
       .eq('series_id', existing.id);
     if ((compCount ?? 0) > 1) {
-      await db.from('episodes').delete().eq('series_id', existing.id);
-      const stitchedRows = page.episodes.map((e) => ({
-        series_id: existing.id,
-        number: e.number,
-        title: e.title,
-        type: e.type,
-        air_date: e.airDate,
-      }));
+      // MERGE, not full replace: AFL owns only its own numbering range —
+      // rows beyond aflMax (AFG-filled tails, curated specials like
+      // Dr. Stone's ep 95) must survive an AFL page refresh
+      const aflPageMax = page.episodes.reduce((m, e) => Math.max(m, e.number), 0);
+      await db.from('episodes').delete().eq('series_id', existing.id).lte('number', aflPageMax);
+      const stitchedRows = filterEpisodeRows(
+        existing.id,
+        page.episodes.map((e) => ({
+          series_id: existing.id,
+          number: e.number,
+          title: e.title,
+          type: e.type,
+          air_date: e.airDate,
+        })),
+      );
       for (let i = 0; i < stitchedRows.length; i += 500) {
         const { error } = await db.from('episodes').insert(stitchedRows.slice(i, i + 500));
         if (error) throw new Error(`episodes refresh (${slug}): ${error.message}`);
@@ -473,22 +515,25 @@ export async function resolveSeries(runId: number, slug: string): Promise<{ epis
     updated_at: new Date().toISOString(),
   };
   applyEpisodeFloor(id, series, aflMax);
+  applyCommunityCap(id, series);
 
   const { error: e4 } = await db.from('series').upsert(series);
   if (e4) throw new Error(`series upsert (${slug}): ${e4.message}`);
   await registerIds(id, { anilist: media.id, mal: media.idMal, afl: slug });
 
-  // Full replace: episode sets only ever change via a staging write that
-  // already passed the hash/large-diff gates.
-  const { error: e5 } = await db.from('episodes').delete().eq('series_id', id);
+  // MERGE within AFL's own numbering range (staging writes already passed
+  // the hash/large-diff gates); rows beyond aflMax — AFG tails, curated
+  // specials — survive. Community-count caps drop rows the consensus does
+  // not number (Psycho-Pass 42-44).
+  const { error: e5 } = await db.from('episodes').delete().eq('series_id', id).lte('number', aflMax);
   if (e5) throw new Error(`episodes clear (${slug}): ${e5.message}`);
-  const rows = page.episodes.map((e) => ({
+  const rows = filterEpisodeRows(id, page.episodes.map((e) => ({
     series_id: id,
     number: e.number,
     title: e.title,
     type: e.type,
     air_date: e.airDate,
-  }));
+  })));
   for (let i = 0; i < rows.length; i += 500) {
     const { error: e6 } = await db.from('episodes').insert(rows.slice(i, i + 500));
     if (e6) throw new Error(`episodes insert (${slug}): ${e6.message}`);

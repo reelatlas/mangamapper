@@ -132,6 +132,9 @@ export const InlinePositionRow = ({ anime, mapping, lookup, hasSource }: InlineP
             {field('ch')}
             {total(anime.totalChapters)}
           </span>
+        ) : hasSource && anime.mappingMode === 'loose' ? (
+          // parallel telling — an honest verdict, not a data gap
+          <span className="text-muted-foreground">// loose_adaptation</span>
         ) : hasSource ? (
           <span className="text-muted-foreground">// mapping_pending</span>
         ) : (

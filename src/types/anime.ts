@@ -92,6 +92,10 @@ export interface AnimeSeries {
   // Bleach TYBW start mid-manga (vol 55 / ch 480).
   totalVolumes: number | null;   // last volume in this entry's scope (null = no source)
   totalChapters: number | null;  // last chapter in this entry's scope (null = no source)
+  // 'loose': parallel telling, no chapter mapping is meaningful (Outlaw
+  // Star, Sgt. Frog — research-tier verdicts); card shows an honest state
+  // instead of mapping_pending
+  mappingMode?: 'chapter' | 'loose';
   mangaStartVolume: number | null;
   mangaStartChapter: number | null;
   episodes: Episode[];
