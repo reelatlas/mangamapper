@@ -128,6 +128,101 @@ export async function findChapterPages(titleCandidates: string[]): Promise<strin
   return [];
 }
 
+// ── episode lists (episode-data initiative, §12.19d) ────────────────────────
+// Wikipedia episode pages use {{Episode list}} templates: EpisodeNumber
+// (overall), EpisodeNumber2 (in-season), Title (plain, quoted, or the
+// English arg of {{nihongo|...}}), OriginalAirDate ({{Start date|Y|M|D}}).
+// Season part-pages often carry BOTH number columns — the overall column is
+// the one that matches our cumulative numbering.
+
+export interface WikiEpisode {
+  number: number; // overall/cumulative when the page provides it
+  title: string | null;
+  airDate: string | null; // ISO yyyy-mm-dd
+}
+
+const stripMarkup = (s: string) =>
+  s
+    .replace(/\{\{[Nn]ihongo\|((?:[^{}|]|\{\{[^{}]*\}\})*?)(\|[^{}]*)?\}\}/g, '$1')
+    .replace(/\[\[(?:[^\]|]*\|)?([^\]]+)\]\]/g, '$1')
+    .replace(/\{\{[^{}]*\}\}/g, '')
+    .replace(/<[^>]+>/g, '')
+    .replace(/^\s*"|"\s*$/g, '')
+    .replace(/\s+/g, ' ')
+    .trim();
+
+export function parseEpisodeList(wikitext: string): WikiEpisode[] {
+  const out: WikiEpisode[] = [];
+  const blocks = wikitext.split(/\{\{Episode list/i).slice(1);
+  for (const block of blocks) {
+    // overall number preferred; a lone EpisodeNumber on a season page may be
+    // season-relative — the caller's alignment gate decides trustworthiness
+    const overall = block.match(/\|\s*EpisodeNumber\s*=\s*(\d+)/i);
+    if (!overall) continue;
+    const number = Number(overall[1]);
+    const titleRaw = block.match(/\|\s*Title\s*=\s*([^\n]*)/i)?.[1] ?? '';
+    const title = stripMarkup(titleRaw) || null;
+    const dateMatch =
+      block.match(/\{\{Start date\|(\d{4})\|(\d{1,2})\|(\d{1,2})/i) ??
+      block.match(/OriginalAirDate\s*=\s*[^\n]*?(\d{4})-(\d{2})-(\d{2})/i);
+    const airDate = dateMatch
+      ? `${dateMatch[1]}-${String(dateMatch[2]).padStart(2, '0')}-${String(dateMatch[3]).padStart(2, '0')}`
+      : null;
+    out.push({ number, title, airDate });
+  }
+  // dedup by number (transcluded rows can repeat); first occurrence wins
+  const seen = new Set<number>();
+  return out.filter((e) => (seen.has(e.number) ? false : (seen.add(e.number), true))).sort((a, b) => a.number - b.number);
+}
+
+// "List of X episodes" family — mirrors findChapterPages.
+export async function findEpisodePages(titleCandidates: string[]): Promise<string[]> {
+  const tried = new Set<string>();
+  const variants: string[] = [];
+  for (const t of titleCandidates) {
+    for (const v of [t, t.replace(/\s*\([^)]*\)\s*$/, '').trim()]) {
+      if (v && !tried.has(v.toLowerCase())) {
+        tried.add(v.toLowerCase());
+        variants.push(v);
+      }
+    }
+  }
+  for (const v of variants) {
+    const family = await prefixFamily(`List of ${v} episodes`);
+    if (family.length) return family;
+  }
+  const tokens = (s: string) =>
+    new Set(s.toLowerCase().normalize('NFKD').replace(/[^a-z0-9]+/g, ' ').trim().split(' ').filter(Boolean));
+  const titleAgrees = (inner: string) =>
+    variants.some((v) => {
+      const a = tokens(inner);
+      const b = tokens(v);
+      if (!a.size || !b.size) return false;
+      let shared = 0;
+      for (const t of a) if (b.has(t)) shared++;
+      return shared / Math.min(a.size, b.size) >= 0.5;
+    });
+  for (const v of variants.slice(0, 2)) {
+    const data = (await wikiGet({
+      action: 'query',
+      list: 'search',
+      srsearch: `intitle:"episodes" List of ${v}`,
+      srlimit: '5',
+    })) as { query?: { search?: { title: string }[] } };
+    const hit = (data.query?.search ?? []).find((p) => {
+      const m = p.title.match(/^List of (.+) episodes(\s*\(.+\))?$/);
+      return m !== null && titleAgrees(m[1]);
+    });
+    if (hit) {
+      const base = hit.title.replace(/\s*\(.+\)$/, '');
+      const family = await prefixFamily(base);
+      if (family.length) return family;
+      return [hit.title];
+    }
+  }
+  return [];
+}
+
 export async function fetchWikitext(pageTitle: string): Promise<string | null> {
   const data = (await wikiGet({
     action: 'parse',
