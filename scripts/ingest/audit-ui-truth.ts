@@ -60,7 +60,7 @@ async function main() {
 
   const classes: Record<string, string[]> = {
     integrity_eps_beyond_total: [], integrity_total_beyond_eps: [], integrity_double_claimed: [],
-    special_numbered_unreviewed: [],
+    special_numbered_unreviewed: [], anchor_gap_research: [],
     no_source: [], ok_full: [], ok_no_volume: [], ok_loose: [],
     pending_airing_no_anchor: [], pending_finished_no_totals: [], pending_no_canon: [], pending_other: [],
   };
@@ -126,6 +126,30 @@ async function main() {
     }
     if (latestKnown) {
       (latestKnown.volume != null ? classes.ok_full : classes.ok_no_volume).push(row.id);
+      // anchor-density audit (Sean 2026-08-24: iron-clad accuracy, no
+      // one-offs): a large canon-episode desert between confirmed anchor
+      // points means the interpolated middle rests on nothing — those series
+      // are research-tier targets for interior (arc-boundary) anchors
+      const pts = (anchors.filter((a: any) => a.series_id === row.id) as any[])
+        .map((a) => a.episode)
+        .sort((x, y) => x - y);
+      if (pts.length) {
+        let worst = 0;
+        let at = '';
+        let prevEp = 0;
+        for (const ep of [...pts, latestAnchor?.episode ?? pts[pts.length - 1]]) {
+          // count canon/mixed rows in the gap (filler deserts are fine)
+          const canonInGap = episodes.filter(
+            (e: any) => e.series_id === row.id && e.number > prevEp && e.number < ep && e.type !== 'filler',
+          ).length;
+          if (canonInGap > worst) {
+            worst = canonInGap;
+            at = `eps ${prevEp + 1}-${ep - 1}`;
+          }
+          prevEp = ep;
+        }
+        if (worst > 12) classes.anchor_gap_research.push(`${row.id}: ${worst} unanchored canon eps (${at})`);
+      }
     } else if (e.lastCanon === 0) classes.pending_no_canon.push(row.id);
     else if (row.status !== 'finished') classes.pending_airing_no_anchor.push(row.id);
     else if (!row.total_chapters) classes.pending_finished_no_totals.push(`${row.id} (manga ${row.manga_status}, latest_known=${row.latest_known_chapters})`);

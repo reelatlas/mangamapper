@@ -166,8 +166,10 @@ export const canonEpToCh = (anime: AnimeSeries, m: MappingSummary, ep: number): 
     }
     prev = p;
   }
-  // beyond the last confirmed point: clamp — never extrapolate past it
-  return Math.max(startCh, Math.min(covered, prev.ch));
+  // BEYOND the last confirmed point the honest estimate is NO estimate:
+  // canon-typed episodes past the frontier may adapt side stories or nothing
+  // (Kenshin's "lost episodes" 95-98 repeated ch 151 under the old clamp)
+  return null;
 };
 
 // The canon/mixed episode covering a chapter — piecewise inverse of the same
