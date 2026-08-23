@@ -275,7 +275,7 @@ in code (`scripts/ingest/`), and every violation flags rather than guesses:
 | **Fractional watch-order positions (design decision QUEUED for the UI phase)** | Sean 2026-08-23: consider rendering order-only entries at their community fractional positions (35.5-style) inside episode lists, or asterisk them — decided alongside arcs/watch-order/IP-umbrella UI. Data side already models them (order-only comps + annotations); wiki fractional rows are parsed and available | UI phase backlog |
 | **Research-logged non-main entries (Sean 2026-08-23)** | every fractional/OVA/movie/special/recap ruling carries its REASONING in data (ingest_fractionals.note + disposition: excluded_recap / order_only / modeled; component kind + notes; REVIEWED set comments with confidence) — the UI pass decides surfacing FROM this record, never from memory | ingest_fractionals / series_components / REVIEWED_NUMBERED_SPECIALS |
 | **LN instrument ruling (Sean 2026-08-23)** | light-novel-sourced series (34: the 86/Re:Zero class) get a VOLUME-space instrument — anchors/frontier/continue-from in LN volumes, same machinery; per-series behavior research logged as it lands; UI adaptation in the UI pass. Implementation = a coming batch | docs ruling; build pending |
-| **/consolidate skill (Sean 2026-08-23)** | the standing consolidation directive is an invocable skill (.claude/skills/consolidate) — writer sweep, lib→edges, staging freshness, healer rescans, census with ruling_violation=0 gate, docs ledger, frontend contract, save point. Run after every significant rules change | .claude/skills/consolidate/SKILL.md |
+| **/consolidate skill (Sean 2026-08-23)** | the standing consolidation directive is an invocable skill (.claude/skills/consolidate) — writer sweep, lib→edges, staging freshness, healer rescans, census with ruling_violation=0 gate, docs ledger, frontend contract, save point. Run after every significant rules change. **`deep` mode (Sean 2026-08-23)** adds a full-catalog rescan: all entries re-evaluated against current rules; notes/suppressions are scanned not skipped (invalid note → surface to Sean; clear-cut supersession → apply + update note + report, never silently); stale logic/flags/staging cleaned; FINISHED + fully-published + Sean-signed series are LOCKED and drop out of routine rescans. Deep runs often while data logic is in flux, tapers as it stabilizes | .claude/skills/consolidate/SKILL.md §9 |
 | Dispositions | active / excluded / duplicate / merged rulings are durable data; backfill skips non-active | source_map |
 
 **Hard-won learnings** (why some rules exist): AFL's Drupal is corrupt since
@@ -626,6 +626,18 @@ Fixed weekly is correct.
    item-5 tail (SHY case-sensitivity, kenshin-2023 namesake, One Piece
    later seasons, WTC Gou rows) · TYBW Part 4 anchor (Sep 2026) ·
    asterisk queue (12) = UI phase.
+24. ✅ **/consolidate `deep` mode (2026-08-23, post-compact; Sean
+   directive)**: skill amended with an optional step 9 — full-catalog
+   rescan against current rules. Notes/rulings/suppressions are
+   precedence, not blindfolds: still scanned each deep pass; a note
+   blocking something no longer valid goes to Sean with evidence; a
+   clear-cut supersession under an established rule is applied with the
+   note updated and reported (never silent). Stale cleanup (dead
+   constants, orphaned staging, lingering flags) with every deletion
+   listed. Permanence tiers: finished + fully published + Sean-signed
+   series are LOCKED (decisions permanent, exempt from routine deep
+   rescans unless a rule change explicitly touches them); the locked set
+   grows over time until deep passes become rare — the goal state.
 21. ✅ **Consolidation pass 2 (2026-08-23, post-Kenshin)**: every write path
    swept against the day's rules — filterEpisodeRows (caps + type
    overrides) now in ALL five episode writers (resolve, stitched-guard,

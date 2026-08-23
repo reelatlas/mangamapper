@@ -1,6 +1,6 @@
 ---
 name: consolidate
-description: mangaMapper consolidation pass — verify every rule is enforced through the data logic, clean stale logic, sync all pull/freshness/cross-check mechanisms to current thinking, rescan data, and cut a committed save point. Run after any significant rules/logic change.
+description: mangaMapper consolidation pass — verify every rule is enforced through the data logic, clean stale logic, sync all pull/freshness/cross-check mechanisms to current thinking, rescan data, and cut a committed save point. Run after any significant rules/logic change. Invoke with "deep" to add the full-catalog rescan (step 9).
 ---
 
 # Consolidation pass (Sean's standing directive, systematized)
@@ -10,6 +10,15 @@ code consumed identically by scripts and edge functions; rulings are
 declarative records; audits verify OUTCOMES so a misbehaving writer
 surfaces as data; incomplete inputs degrade gracefully, never into
 garbage; nothing is presented to Sean unresearched.
+
+Two modes:
+- **`/consolidate`** — the standard pass: steps 1–8.
+- **`/consolidate deep`** — steps 1–8 PLUS step 9 (full-catalog rescan
+  against current rules, notes re-validated, stale cleanup). Also run
+  deep without being asked when a rule change plausibly invalidates
+  prior per-series decisions — say so when doing it. Expect deep to run
+  often while the data logic is under active design, and to taper off as
+  mangaMapper stabilizes; once the data logic closes, rarely.
 
 ## 1. Writer-consistency sweep
 Grep every write site and confirm it goes through the shared gates:
@@ -56,3 +65,32 @@ parse wouldn't produce. AFG: re-parse `ingest_afg_pages.raw_html` into
 - Update the memory file (`mangamapper-data-sources.md`) as a REFRESH POINT: current census, new rules, open queues, next steps.
 - Commit with a message that reads as the ruling record; push to main (Vercel deploys from main).
 - Report the census delta and any items awaiting Sean.
+
+## 9. Deep rescan (only in `deep` mode — see the modes note up top)
+Re-evaluate ALL existing data entries against CURRENT rules, staying
+ahead of stale data instead of waiting for it to surface as a bug.
+
+- **Notes are precedence, not blindfolds.** Rulings, suppressions,
+  overrides, closed flags, and "don't touch" notes are still SCANNED —
+  respect them as the default, but re-check that each one is still
+  valid under current rules:
+  - Note is blocking something **no longer valid** (the rule it encoded
+    was superseded, the source healed, the premise changed) → bring it
+    to Sean's attention with the evidence.
+  - The needed change is **clear-cut** under an established rule →
+    disregard the note, apply the change, update the note to record the
+    supersession, and REPORT it (never silently).
+  - Ambiguous → flag, research first, present a verdict.
+- **Stale cleanup.** Delete no-longer-referenced logic (dead constants,
+  ruling entries pointing at series/episodes that no longer exist,
+  orphaned staging rows, resolved-but-lingering flags, dead scripts).
+  Every deletion is listed in the report.
+- **Permanence tiers.** A series that is FINISHED and FULLY PUBLISHED,
+  with its mapping researched, cross-verified, and Sean-signed, is
+  effectively LOCKED: its decisions are permanent and it drops out of
+  routine deep rescans — revisit only when a rule change explicitly
+  touches it. Airing/ongoing/unverified series stay in the active
+  rescan pool. Over time the locked set grows and deep rescans shrink;
+  that is the goal state.
+- End with the same census gate as step 5 (ruling_violation = 0) and
+  fold results into the step-8 save point.
