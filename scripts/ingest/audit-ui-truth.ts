@@ -59,7 +59,7 @@ async function main() {
   };
 
   const classes: Record<string, string[]> = {
-    integrity_eps_beyond_total: [], no_source: [], ok_full: [], ok_no_volume: [],
+    integrity_eps_beyond_total: [], integrity_total_beyond_eps: [], no_source: [], ok_full: [], ok_no_volume: [],
     pending_airing_no_anchor: [], pending_finished_no_totals: [], pending_no_canon: [], pending_other: [],
   };
   const lightNovel: string[] = [];
@@ -71,6 +71,13 @@ async function main() {
     // confirm; what remains here = ruled extras + accepted 1-2 tolerance)
     if (e.max > covered) {
       classes.integrity_eps_beyond_total.push(`${row.id} (eps→${e.max}, structure=${covered})`);
+    }
+    // inverse direction (Sean's ±2 interrogation 2026-08-24): a FINISHED
+    // series whose totals exceed its listed episodes means a source counts
+    // content our episode list lacks (AFL missing a final special) — the
+    // card would promise more episodes than the list shows
+    if (row.status === 'finished' && row.aired_episodes > 0 && e.count > 0 && row.aired_episodes > e.max) {
+      classes.integrity_total_beyond_eps.push(`${row.id} (aired/total=${row.aired_episodes}, eps listed→${e.max})`);
     }
     const hasSource = row.source_type !== 'original' && row.manga_status !== 'anime_only';
     if (!hasSource) { classes.no_source.push(row.id); continue; }
