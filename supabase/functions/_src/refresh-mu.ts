@@ -56,7 +56,7 @@ async function run() {
         // inline upkeep for every series backed by this manga
         const { data: linked } = await db
           .from('series')
-          .select('id, aired_episodes, total_chapters, manga_start_chapter, manga_status')
+          .select('id, status, aired_episodes, total_chapters, manga_start_chapter, manga_status')
           .eq('manga_anilist_id', row.manga_anilist_id);
         for (const s of linked ?? []) {
           const { data: epTop } = await db.from('chapter_anchors').select('episode').eq('series_id', s.id).neq('source', 'mu').order('episode', { ascending: false }).limit(1);

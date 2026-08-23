@@ -24,7 +24,7 @@ async function pageAll(table: string, select: string): Promise<any[]> {
 
 async function main() {
   const series = await pageAll('series', 'id, source_type, manga_status, status, aired_episodes, total_episodes, total_chapters, total_volumes, latest_known_chapters, manga_anilist_id, manga_start_chapter, mapping_mode');
-  const episodes = await pageAll('episodes', 'series_id, number, type');
+  const episodes = await pageAll('episodes', 'series_id, number, type, title');
   const anchors = await pageAll('chapter_anchors', 'series_id, episode, chapter, volume');
   const comps = await pageAll('series_components', 'series_id, episode_end, episode_start, anilist_id, kind, label');
   const bounds = await pageAll('volume_boundaries', 'manga_anilist_id, volume, chapter_start, chapter_end');
@@ -63,6 +63,7 @@ async function main() {
     integrity_eps_beyond_total: [], integrity_total_beyond_eps: [], integrity_double_claimed: [],
     special_numbered_unreviewed: [], anchor_gap_research: [], frontier_tail_null: [],
     anchor_nonmonotonic: [], anchor_beyond_chapter_space: [], ruling_violation: [],
+    title_incomplete: [],
     no_source: [], ok_full: [], ok_no_volume: [], ok_loose: [],
     pending_airing_no_anchor: [], pending_finished_no_totals: [], pending_no_canon: [], pending_other: [],
   };
@@ -116,6 +117,30 @@ async function main() {
     for (const [num, want] of Object.entries(types)) {
       const row = episodes.find((e: any) => e.series_id === sid && e.number === Number(num));
       if (row && row.type !== want) classes.ruling_violation.push(`${sid} ep ${num}: type "${row.type}" contradicts the ruled override "${want}"`);
+    }
+  }
+
+  // TITLE COMPLETENESS (episode-title initiative, agenda §12.19d — the audit
+  // step): every aired episode should carry a real title (never
+  // title_pending). Missing = AFL lag on new cours, canon-tier series with
+  // no rows yet (titles come from Wikipedia episode lists / AniList labels),
+  // or sparse pages. This class is the initiative's work-list.
+  {
+    const missingBy = new Map<string, number>();
+    for (const e of episodes) {
+      if (e.title == null || String(e.title).trim() === '') {
+        missingBy.set(e.series_id, (missingBy.get(e.series_id) ?? 0) + 1);
+      }
+    }
+    for (const row of series) {
+      const rows = epsBy.get(row.id)?.count ?? 0;
+      const missing = missingBy.get(row.id) ?? 0;
+      const rowless = rows === 0 && (row.aired_episodes ?? 0) > 0;
+      if (rowless) classes.title_incomplete.push(`${row.id}: ALL ${row.aired_episodes} eps title_pending (no episode rows — canon-tier)`);
+      else if (missing > 0) classes.title_incomplete.push(`${row.id}: ${missing}/${rows} rows missing titles`);
+      else if (rows > 0 && rows < (row.aired_episodes ?? 0)) {
+        classes.title_incomplete.push(`${row.id}: ${(row.aired_episodes ?? 0) - rows} aired eps have no rows (AFL lag) — render title_pending`);
+      }
     }
   }
 

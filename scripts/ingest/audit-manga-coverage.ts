@@ -97,7 +97,7 @@ async function main() {
       }
       const result = await applyMuFrontier(
         runId,
-        { id: s.id, aired_episodes: s.aired_episodes, total_chapters: s.total_chapters, manga_start_chapter: s.manga_start_chapter },
+        { id: s.id, status: s.status, aired_episodes: s.aired_episodes, total_chapters: s.total_chapters, manga_start_chapter: s.manga_start_chapter },
         mu?.anime?.end ?? null,
         anchorMax.get(s.id),
         chapterMax.get(s.id),

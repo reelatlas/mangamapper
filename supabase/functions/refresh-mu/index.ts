@@ -20348,6 +20348,9 @@ async function applyMuFrontier(runId, s, muEnd, nonMuMaxEp, nonMuMaxCh) {
     });
     return "out_of_space";
   }
+  if (!explicitEp && s.status && s.status !== "finished") {
+    return "no_coverage";
+  }
   const episode = explicitEp && explicitEp <= s.aired_episodes ? explicitEp : s.aired_episodes;
   const { error } = await db.from("chapter_anchors").upsert({
     series_id: s.id,
@@ -20420,7 +20423,7 @@ async function run() {
         }
         await db.from("ingest_mangaupdates").update({ raw: mu, content_hash: hash, fetched_at: (/* @__PURE__ */ new Date()).toISOString(), changed_at: (/* @__PURE__ */ new Date()).toISOString() }).eq("manga_anilist_id", row.manga_anilist_id);
         counters.changed++;
-        const { data: linked } = await db.from("series").select("id, aired_episodes, total_chapters, manga_start_chapter, manga_status").eq("manga_anilist_id", row.manga_anilist_id);
+        const { data: linked } = await db.from("series").select("id, status, aired_episodes, total_chapters, manga_start_chapter, manga_status").eq("manga_anilist_id", row.manga_anilist_id);
         for (const s of linked ?? []) {
           const { data: epTop } = await db.from("chapter_anchors").select("episode").eq("series_id", s.id).neq("source", "mu").order("episode", { ascending: false }).limit(1);
           const { data: chTop } = await db.from("chapter_anchors").select("chapter").eq("series_id", s.id).neq("source", "mu").order("chapter", { ascending: false }).limit(1);

@@ -30,6 +30,9 @@ export interface FrontierSeries {
   aired_episodes: number;
   total_chapters: number | null;
   manga_start_chapter: number | null;
+  // anime status — an MU pin without an explicit episode may only anchor a
+  // FINISHED run (see the airing-pin rule below)
+  status?: string | null;
 }
 
 export type FrontierResult = 'applied' | 'skipped_fresh' | 'no_progress' | 'no_coverage' | 'out_of_space';
@@ -75,6 +78,17 @@ export async function applyMuFrontier(
     return 'out_of_space';
   }
 
+  // AIRING-PIN rule (Sean's TYBW report, 2026-08-23): without an explicit
+  // episode in MU's text, the pin lands at the RUN END — which is a MOVING
+  // target while the series airs. MU's coverage can describe the completed
+  // portion (or even the announced final coverage: TYBW's said ch 705 while
+  // part 4 was mid-air), so pinning it to today's episode count claims
+  // chapters the aired episodes haven't reached and inflates the whole back
+  // curve. Finished runs only; airing series need the explicit episode or a
+  // research anchor.
+  if (!explicitEp && s.status && s.status !== 'finished') {
+    return 'no_coverage';
+  }
   const episode = explicitEp && explicitEp <= s.aired_episodes ? explicitEp : s.aired_episodes;
   const { error } = await db.from('chapter_anchors').upsert({
     series_id: s.id,

@@ -103,7 +103,7 @@ async function main() {
         for (const sid of t.seriesIds) {
           const { data: srow } = await db
             .from('series')
-            .select('id, aired_episodes, total_chapters, manga_start_chapter, manga_status')
+            .select('id, status, aired_episodes, total_chapters, manga_start_chapter, manga_status')
             .eq('id', sid)
             .single();
           if (!srow) continue;
