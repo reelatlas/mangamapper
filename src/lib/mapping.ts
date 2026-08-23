@@ -181,6 +181,25 @@ export const canonEpToCh = (anime: AnimeSeries, m: MappingSummary, ep: number): 
   return null;
 };
 
+// DISPLAY chapter for an episode = the FIRST chapter it animates (Sean's
+// ruling 2026-08-23): an episode row anchors where it STARTS in the manga,
+// not where it ends — "ep 35 = ch 119", never the mid/end point 127. Derived
+// from the same end-position curve (one derivation path): start(ep) =
+// previous canon episode's end + 1, clamped to this episode's own end. This
+// clamp IS the majority rule — when the previous episode ended mid-chapter
+// leaving only scraps, the next full chapter is shown; when two episodes
+// share a chapter (end(prev) = end(ep)) the shared chapter is shown. The
+// anchors themselves stay end-position instruments (interpolation, frontier,
+// continue-from all rest on them).
+export const canonEpStartCh = (anime: AnimeSeries, m: MappingSummary, ep: number): number | null => {
+  const end = canonEpToCh(anime, m, ep);
+  if (end === null) return null;
+  const prev = prevCanonEp(m, ep);
+  if (prev === null) return Math.min(end, ratios(anime, m).startCh);
+  const prevEnd = canonEpToCh(anime, m, prev);
+  return prevEnd === null ? end : Math.min(end, prevEnd + 1);
+};
+
 // The canon/mixed episode covering a chapter — piecewise inverse of the same
 // curve; by construction never filler
 export const chToEp = (anime: AnimeSeries, m: MappingSummary, ch: number): number | null => {
@@ -340,7 +359,8 @@ export const solvePosition = (
           vol: exact.mangaMapping.volume, ch: exact.mangaMapping.chapters,
         });
       }
-      const chNum = canonEpToCh(anime, mapping, ep);
+      // estimated rows display the episode's START chapter (Sean's ruling)
+      const chNum = canonEpStartCh(anime, mapping, ep);
       return base({
         state: 'run', driver: 'ep', ep, type, unit: ep,
         vol: chNum !== null ? chToVol(anime, r, chNum) : null,
@@ -440,35 +460,45 @@ export const buildEpisodeList = (anime: AnimeSeries, m: MappingSummary): Episode
   const r = ratios(anime, m);
   const byNumber = new Map(anime.episodes.map((e) => [e.number, e]));
   const rows: EpisodeRow[] = [];
+  // per-row COVERAGE end (end-position curve) — rows display their START
+  // chapter (Sean's ruling 2026-08-23), but section headers describe the
+  // section's full coverage, so the true end is tracked alongside
+  const rowEnd: (number | null)[] = [];
   for (let ep = 1; ep <= m.airedEpisodes; ep++) {
     const exact = byNumber.get(ep);
     const type = exact?.type ?? episodeTypeAt(m, ep);
     let vol: number | null = null;
     let ch: string | null = null;
+    let end: number | null = null;
     // filler/anime-only rows keep manga values null by design (— in the UI)
     if (type !== 'filler' && type !== 'anime-only-canon') {
       if (exact?.mangaMapping) {
         vol = exact.mangaMapping.volume;
         ch = exact.mangaMapping.chapters;
+        end = lastChapterNumber(exact.mangaMapping.chapters);
       } else {
-        const chNum = canonEpToCh(anime, m, ep);
+        const chNum = canonEpStartCh(anime, m, ep);
         vol = chNum !== null ? chToVol(anime, r, chNum) : null;
         ch = chNum !== null ? String(chNum) : null;
+        end = canonEpToCh(anime, m, ep);
       }
     }
     rows.push({ ep, type, title: exact?.title ?? null, vol, ch });
+    rowEnd.push(end);
   }
   // section coverage reads from the rows themselves, so header ranges always
   // agree with the rows revealed on expand. PARTIAL knowledge renders as
   // partial (Sean 2026-08-23): a section straddling the frontier keeps its
   // KNOWN start/end from the first/last valued rows and marks the tail
   // open-ended ("ch:48–?") — never a bare dash while values exist inside.
+  // chStart = first row's START; chEnd = last valued row's true COVERAGE end.
   const sections: EpisodeSection[] = m.spans.map((span, index) => {
     const valued = rows.slice(span.start - 1, span.end).filter((r) => r.ch != null);
     const first = valued[0];
     const last = valued[valued.length - 1];
     const chStart = first?.ch != null ? parseInt(first.ch.split(/[-,]/)[0], 10) || null : null;
-    const chEnd = last?.ch != null ? lastChapterNumber(last.ch) : null;
+    const lastIdx = last ? rows.indexOf(last) : -1;
+    const chEnd = lastIdx >= 0 ? (rowEnd[lastIdx] ?? lastChapterNumber(last!.ch!)) : null;
     const tailRow = rows[span.end - 1];
     return {
       index,
@@ -477,7 +507,8 @@ export const buildEpisodeList = (anime: AnimeSeries, m: MappingSummary): Episode
       type: span.type,
       count: span.end - span.start + 1,
       volStart: first?.vol ?? null,
-      volEnd: last?.vol ?? null,
+      // coverage end's volume, not the last row's start-volume
+      volEnd: chEnd !== null ? chToVol(anime, r, chEnd) : (last?.vol ?? null),
       chStart,
       chEnd,
       // known values exist but the section's final row is unmapped —
