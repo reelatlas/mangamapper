@@ -5,8 +5,9 @@
 // component structure BY ANY AMOUNT, walk the AniList chain to the episodes'
 // end (ownership-guarded, bridge formats included). Chain confirms (±2/lag)
 // → structure rebuilds (id/title/afl_slug preserved, scope applied). No
-// confirm → accepted-extras flag; nothing is guessed. Ruled extras (episodes
-// with no AniList entries, accepted by Sean) are skipped by name.
+// confirm → accepted-extras flag; nothing is guessed. Ruled extras
+// (EXTRAS_ADOPTED in lib/resolve — episodes with no AniList entries,
+// accepted by Sean) ADOPT the episode count per the episode-floor invariant.
 //   npx tsx --env-file=.env.ingest scripts/ingest/reconcile-structure.ts
 
 import { db, startRun, finishRun, fileFlagOnce } from './lib/db';

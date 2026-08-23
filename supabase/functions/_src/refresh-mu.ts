@@ -2,7 +2,7 @@
 // MU earned the scheduled tier 2026-08-24 (Sean): it supplies the frontier
 // anchors for ~140 series and the latest_known denominator for every
 // publishing manga — both go stale as chapters release weekly. Daily tick,
-// ≤15 stalest staged rows older than 7 days → each manga cycles ~weekly at
+// ≤20 stalest staged rows older than 7 days → each manga cycles ~weekly at
 // ~1.5s API spacing (well within MU's AUP; responses hash-gated). Inline
 // upkeep on change: latest_known (publishing only), frontier re-derivation
 // via the shared lib, and the manga-status cross-check.

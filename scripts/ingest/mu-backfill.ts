@@ -1,14 +1,16 @@
-// MangaUpdates backfill (cross-check tier), two target classes:
-//   A. ONGOING manga behind series whose total_chapters is null — the
-//      position-row denominator AniList cannot provide.
-//   B. (Sean 2026-08-24) ANY series with a manga link but NO chapter anchors —
-//      staging MU's curated anime-coverage field gives audit-manga-coverage
-//      a frontier ('mu' anchors) for airing series with finished manga (TYBW
-//      class) and finished series with unknown coverage alike.
+// MangaUpdates backfill — UNIVERSAL targeting (Sean 2026-08-24: MU applies
+// to ALL series as check + validation). Every manga behind a canonical
+// series stages MU's payload; inline upkeep applies what MU knows:
+//   - latest_chapter → latest_known_chapters (chapter-NUMBER space, all
+//     manga — the publishing frontier AND the number-space end for finished
+//     ones, since AniList's total is a COUNT including mid-run specials)
+//   - anime-coverage field → frontier anchors via lib/mu-frontier (only
+//     where anchors are absent/stale; scope-segment + progress guards)
+//   - status/completed → manga_status cross-check (conflicts flag)
 // Identity strictly via the MangaDex bridge (no title-guessing);
-// unbridgeable manga flag for review. Refresh policy: event/manual
-// (validation-tier ruling), re-run when anchors approach latest_known or on
-// demand. latest_known_chapters only ever writes for PUBLISHING manga.
+// unbridgeable manga flag for review. Freshness: refresh-mu edge cron
+// (daily, ≤20 stalest, ~weekly cycle); this script = event trigger for new
+// series and full re-syncs.
 //   npx tsx --env-file=.env.ingest scripts/ingest/mu-backfill.ts
 
 import { db, startRun, finishRun, fileFlagOnce } from './lib/db';
@@ -23,39 +25,17 @@ async function main() {
   const counters = { fetched: 0, unchanged: 0, changed: 0, flagged: 0 };
   const actions: string[] = [];
   try {
-    // class A: ongoing manga needing a denominator
-    const { data: classA } = await db
-      .from('series')
-      .select('id, title, manga_anilist_id, manga_status, total_chapters, popularity')
-      .eq('manga_status', 'publishing')
-      .is('total_chapters', null)
-      .not('manga_anilist_id', 'is', null)
-      .order('popularity', { ascending: false });
-
-    // class B: any manga-linked series without anchors — MU's anime-coverage
-    // field is their only frontier candidate.
-    // class C (Sean 2026-08-24, the MHA finding): series whose anchors are
-    // STALE — max anchor episode far behind the run (sparse AFG pages chart
-    // only early seasons; MHA's stops at ep 13 of 170) — need MU's curated
-    // frontier just as much as unanchored ones.
-    const anchorMax = new Map<string, number>();
-    for (let from = 0; ; from += 1000) {
-      const { data } = await db.from('chapter_anchors').select('series_id, episode').range(from, from + 999);
-      for (const r of data ?? []) anchorMax.set(r.series_id, Math.max(anchorMax.get(r.series_id) ?? 0, r.episode));
-      if (!data || data.length < 1000) break;
-    }
+    // UNIVERSAL: every manga behind a canonical series (the DBZ 520-vs-519
+    // display needed MU's number for a manga whose anchors were fresh, which
+    // the old absent-or-stale filter skipped)
     const { data: linked } = await db
       .from('series')
       .select('id, title, manga_anilist_id, manga_status, total_chapters, popularity, aired_episodes')
       .not('manga_anilist_id', 'is', null)
       .order('popularity', { ascending: false });
-    // UNIVERSAL (Sean 2026-08-24: MU applies to ALL series as check +
-    // validation — the DBZ 520-vs-519 display needed MU's number for a manga
-    // whose anchors were fresh, which the old absent-or-stale filter skipped)
-    const classB = linked ?? [];
 
     const byManga = new Map<number, { title: string; seriesIds: string[]; statuses: Map<string, string> }>();
-    for (const s of [...(classA ?? []), ...classB]) {
+    for (const s of linked ?? []) {
       const e = byManga.get(s.manga_anilist_id!) ?? { title: s.title, seriesIds: [], statuses: new Map() };
       if (!e.seriesIds.includes(s.id)) {
         e.seriesIds.push(s.id);
@@ -63,7 +43,7 @@ async function main() {
       }
       byManga.set(s.manga_anilist_id!, e);
     }
-    console.log(`[mu] ${byManga.size} manga targets (A: denominators, B: frontier candidates)`);
+    console.log(`[mu] ${byManga.size} manga targets (universal)`);
 
     for (const [mangaId, t] of byManga) {
       try {

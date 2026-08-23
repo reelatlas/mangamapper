@@ -1,9 +1,11 @@
 // Systematic manga-coverage audit (Sean 2026-08-23: never one-off fixes —
 // classify every series' manga-instrument state, apply GENERAL rules, flag
-// what no rule can honestly solve). Also applies the MU-frontier rule:
-// MangaUpdates' curated anime-coverage field ("Vol 112, Chap 1138 as of EP
-// 1168") becomes a real anchor (source 'mu') for series AFG doesn't cover —
-// retiring mapping_pending for airing series with staged MU data.
+// what no rule can honestly solve). Self-healing applications each run, all
+// via lib/mu-frontier (shared with mu-backfill + refresh-mu):
+//   - MU frontier anchors where anchors are absent/STALE (anchor-freshness
+//     rule; scope-segment multi-pair parse; chapter-progress guard)
+//   - latest_known_chapters from staged MU (chapter-NUMBER space, all manga)
+//   - manga-status cross-check + edition-divergence flags
 //   npx tsx --env-file=.env.ingest scripts/ingest/audit-manga-coverage.ts
 
 import { db, startRun, finishRun, fileFlagOnce } from './lib/db';

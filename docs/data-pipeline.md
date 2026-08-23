@@ -258,6 +258,25 @@ AniList `chapters/volumes` are null while publishing.
 
 ## 11. Operations runbook
 
+### The freshness map (one view of pull → fresh → canonical, 2026-08-24)
+
+| Source | Event pull (new data enters) | Scheduled freshness | What reaches canonical | Gates on the way in |
+|---|---|---|---|---|
+| **AFL** | `backfill.ts` (full sweep / new sources via checklist) | `refresh-afl` hourly :40, ≤20 stalest, 6d window | episode rows + types via `resolveSeries` (episode floor applied) | alias-corruption defenses, count gates, sparse guard, dispositions |
+| **AniList** | staged inline by every chain walk / match | `refresh-anilist` daily 08:10, full batched sweep | series metadata + totals (floored), volatile fields; stitched series via `refreshStitchedVolatile` (floored) | naming authority, derivative-manga rule, ownership guard, scope application |
+| **AFG** | `afg-backfill` (`--force` after parser changes); `afg-expansion` / `afg-extend` for structure | `refresh-afg` daily 09:20, ≤25 stalest, 13d window | anchors via shared `syncAnchors` (registry-first); expansion/extension structures (floored) | monotonicity, alignment ±12, chain-confirm ±2, ruled-split skips, registry tiers |
+| **MangaUpdates** | `mu-backfill` (universal — every manga behind a canonical series) | `refresh-mu` daily 09:50, ≤20 stalest, 7d window | `latest_known_chapters` (chapter-number space, all manga), frontier anchors, status-conflict + edition-divergence flags — all via `lib/mu-frontier` | MangaDex-bridge-only identity, scope-segment multi-pair parse, chapter-progress guard, anchor-freshness rule |
+| **Wikipedia** | `volumes-backfill` (event: volumes-staleness flag from syncAnchors) | none — boundaries static once printed | `volume_boundaries` | title-token overlap, 3 wikitext dialects, exceed-totals flag |
+
+**Maintenance audits** (run after any batch; all idempotent):
+`audit-manga-coverage` (self-healing: frontiers + latest_known + cross-checks),
+`reconcile-structure` (episode-floor invariant + late-airing entries),
+`audit-ui-truth` (read-only: what the card actually renders),
+`audit-afg-structure` (AFG cross-check + `--register`),
+`cleanup-flags` (dedupe). Shared rule logic lives in `lib/` only — scripts and
+edge functions consume the same functions (chain.ts, mu-frontier.ts,
+anchors.ts, resolve.ts), so a rule fix lands everywhere at once.
+
 All scripts run as `npx tsx --env-file=.env.ingest scripts/ingest/<script>.ts`
 (`.env.ingest` = SUPABASE_URL + SUPABASE_SECRET_KEY, gitignored; regenerate
 via `supabase projects api-keys`).
@@ -444,7 +463,15 @@ Fixed weekly is correct.
    strategy ratified: AniList has no current-chapter field, so frontiers
    come from MU (or research); every source contributes what it actually
    knows.
-19. **Remaining triage** (all understood, none urgent): LN-instrument ruling
+19. ✅ Consolidation pass (2026-08-24 end, Sean's reflection point): all
+   mechanisms aligned to the session's rulings — episode-floor invariant in
+   every totals writer (edges redeployed), MU targeting universal with the
+   daily cron, shared rule logic exclusively in lib/ (chain, mu-frontier,
+   anchors, resolve), stale class-A/B/C code and comments removed, the
+   freshness map (§11 top) documents pull → fresh → canonical per source.
+   Movies-count-only-when-numbered ruling recorded (Initial D ep 40 vs
+   Kizu order-only components).
+20. **Remaining triage** (all understood, none urgent): LN-instrument ruling
    (item 16) · segment-model rulings (handoff pointers, universe-view bar —
    sketch above, Sean's go needed) · 3
    unknown-coverage research cases (x, sgt-frog, outlaw-star) · genuinely
