@@ -90,6 +90,15 @@ export async function applyMuFrontier(
     return 'no_coverage';
   }
   const episode = explicitEp && explicitEp <= s.aired_episodes ? explicitEp : s.aired_episodes;
+  // curated precedence (the same one-anchor-per-episode PK rule as every
+  // derived writer): a manual/wiki anchor at the pin episode IS the frontier
+  const { data: holder } = await db
+    .from('chapter_anchors')
+    .select('source')
+    .eq('series_id', s.id)
+    .eq('episode', episode)
+    .maybeSingle();
+  if (holder && holder.source !== 'mu') return 'skipped_fresh';
   const { error } = await db.from('chapter_anchors').upsert({
     series_id: s.id,
     episode,

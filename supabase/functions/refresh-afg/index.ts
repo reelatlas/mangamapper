@@ -35286,7 +35286,9 @@ async function syncAnchors(runId, seriesId, afgSlug, page) {
     return { anchors: 0, withheld: true };
   }
   await db.from("chapter_anchors").delete().eq("series_id", seriesId).eq("source", "afg");
-  const rows = anchors.map((a) => ({
+  const { data: curated } = await db.from("chapter_anchors").select("episode").eq("series_id", seriesId).in("source", ["manual", "wiki"]);
+  const protectedEps = new Set((curated ?? []).map((c) => c.episode));
+  const rows = anchors.filter((a) => !protectedEps.has(a.episode)).map((a) => ({
     series_id: seriesId,
     episode: a.episode,
     volume: null,

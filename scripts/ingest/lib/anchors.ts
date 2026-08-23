@@ -228,14 +228,26 @@ export async function syncAnchors(
   }
 
   await db.from('chapter_anchors').delete().eq('series_id', seriesId).eq('source', 'afg');
-  const rows = anchors.map((a) => ({
-    series_id: seriesId,
-    episode: a.episode,
-    volume: null,
-    chapter: a.chapter,
-    source: 'afg',
-    note: a.arc,
-  }));
+  // PRECEDENCE (completed 2026-08-23, the HxH ep-140 lesson): the PK allows
+  // one anchor per episode, so a derived chart row at an episode holding a
+  // manual/wiki (research-tier) anchor would OVERWRITE the ruling on every
+  // refresh. Curated rows always win — derived rows at their episodes drop.
+  const { data: curated } = await db
+    .from('chapter_anchors')
+    .select('episode')
+    .eq('series_id', seriesId)
+    .in('source', ['manual', 'wiki']);
+  const protectedEps = new Set((curated ?? []).map((c) => c.episode));
+  const rows = anchors
+    .filter((a) => !protectedEps.has(a.episode))
+    .map((a) => ({
+      series_id: seriesId,
+      episode: a.episode,
+      volume: null,
+      chapter: a.chapter,
+      source: 'afg',
+      note: a.arc,
+    }));
   for (let i = 0; i < rows.length; i += 500) {
     const { error } = await db.from('chapter_anchors').upsert(rows.slice(i, i + 500));
     if (error) throw new Error(`anchors (${seriesId}): ${error.message}`);

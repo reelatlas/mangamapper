@@ -20352,6 +20352,8 @@ async function applyMuFrontier(runId, s, muEnd, nonMuMaxEp, nonMuMaxCh) {
     return "no_coverage";
   }
   const episode = explicitEp && explicitEp <= s.aired_episodes ? explicitEp : s.aired_episodes;
+  const { data: holder } = await db.from("chapter_anchors").select("source").eq("series_id", s.id).eq("episode", episode).maybeSingle();
+  if (holder && holder.source !== "mu") return "skipped_fresh";
   const { error } = await db.from("chapter_anchors").upsert({
     series_id: s.id,
     episode,

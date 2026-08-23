@@ -287,7 +287,21 @@ AniList `chapters/volumes` are null while publishing.
 | **MangaUpdates** | `mu-backfill` (universal — every manga behind a canonical series) | `refresh-mu` daily 09:50, ≤20 stalest, 7d window | `latest_known_chapters` via `bestLatestKnown` (release number → status-string chapter count, band + chapter-floor guarded), frontier anchors, status-conflict + edition-divergence + out-of-space flags — all via `lib/mu-frontier` | MangaDex-bridge-only identity, scope-segment multi-pair parse, chapter-progress guard, **chapter-space gate on pins**, **chapter-floor invariant on latest_known**, anchor-freshness rule |
 | **Wikipedia** | `volumes-backfill` (event: volumes-staleness flag from syncAnchors) | none — boundaries static once printed | `volume_boundaries` | title-token overlap, 3 wikitext dialects, exceed-totals flag |
 
-### The research tier (Sean 2026-08-24)
+### The research tier (Sean 2026-08-24; AMENDED 2026-08-23)
+
+**RESEARCH-FIRST rule (Sean's accuracy directive, 2026-08-23)**: flags and
+source disagreements are NEVER presented to Sean as raw numbers. Web
+research (search, wikis, community threads, AI-assisted lookups) runs
+FIRST — it is cheap and usually decisive (the Beelzebub "disagreement" was
+actually a cancelled-ending rearrangement neither source captured; HxH's
+chart cell counted a one-scene gag reference as coverage). What reaches
+Sean is a cited verdict with context he can evaluate in one read: what the
+episode actually adapts, which source was right and why, links. Derived
+writers (AFG chart, AFG continua, MU) can be WRONG in ways only prose
+knowledge catches — partial adaptations, timeline rearrangement, gag
+references — so ties and oddities escalate to research, not to a blanket
+precedence rule.
+
 
 When a flag survives rule resolution AND cross-source checks — the answer
 verifiably exists in community knowledge but not in our structured sources —
