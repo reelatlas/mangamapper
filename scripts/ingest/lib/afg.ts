@@ -70,6 +70,14 @@ export function parseAfgPage(html: string): AfgPage {
           .get();
         if (!cells.length) return;
         if (cells.length === 1) {
+          // DIVIDER lines ("<—— Pelicula 2: The Last Mission ——>") mark
+          // where a film/OVA sits in the chart's watch order — they are NOT
+          // arc labels and must never become the running arc (propagating
+          // one poisoned every later row's arc, and the old divider-pattern
+          // anchor guard then dropped whole stretches — the Naruto 6-27
+          // regression, 2026-08-23). Watch-order surfacing is the fractional
+          // pipeline's job, not the arc field's.
+          if (cells[0] && /[—–-]{3,}|^<.*>$/.test(cells[0])) return;
           currentArc = cells[0] || currentArc; // arc label row
           return;
         }
@@ -111,22 +119,56 @@ export function parseAfgPage(html: string): AfgPage {
 // never decrease as episodes advance, so any anchor below the running maximum
 // is page junk (AFG's Naruto page: ep 141 → "ch 21") and gets dropped.
 export function deriveAnchors(episodes: AfgEpisode[]): { episode: number; chapter: number; arc: string | null }[] {
-  const out: { episode: number; chapter: number; arc: string | null }[] = [];
-  let maxSeen = 0;
+  // the derived POSITION anchor uses the highest MAINLINE (integer) chapter
+  // per row — a fractional value in the chart is a bonus/Memoire entry
+  // (Vanitas ep-5 listed "8, 9, 10, 15.5"; taking the max scraped 15.5).
+  // Bonus chapters are NEVER silently dropped: deriveBonusChapters records
+  // them (Sean's ruling 2026-08-23), and a research-verified fractional
+  // anchor MAY be written at the manual tier when the bonus IS what the
+  // episode adapts.
+  const candidates: { episode: number; chapter: number; arc: string | null }[] = [];
+  for (const e of [...episodes].sort((a, b) => a.number - b.number)) {
+    const mainline = e.chapters.filter((c) => Number.isInteger(c));
+    if (!mainline.length) continue; // bonus-only episode: association recorded, anchor is research's call
+    candidates.push({ episode: e.number, chapter: Math.max(...mainline), arc: e.arc });
+  }
+  // SPIKE FILTER: keep the longest non-decreasing chapter subsequence. A
+  // stray value — divider-row digits merging into a row, a flash-forward
+  // graft (HxH ep-83 carried ch 288 mid-Chimera-lead-in) — is an outlier
+  // against the chart's own trend and gets dropped, without the old
+  // arc-pattern guard that nuked whole stretches when a divider's text
+  // propagated as the running arc label (the Naruto 6-27 regression).
+  if (candidates.length < 2) return candidates;
+  const lis: number[] = new Array(candidates.length).fill(1);
+  const prev: number[] = new Array(candidates.length).fill(-1);
+  let best = 0;
+  for (let i = 1; i < candidates.length; i++) {
+    for (let j = 0; j < i; j++) {
+      if (candidates[j].chapter <= candidates[i].chapter && lis[j] + 1 > lis[i]) {
+        lis[i] = lis[j] + 1;
+        prev[i] = j;
+      }
+    }
+    if (lis[i] > lis[best]) best = i;
+  }
+  const keep = new Set<number>();
+  for (let i = best; i >= 0; i = prev[i]) {
+    keep.add(i);
+    if (prev[i] === -1) break;
+  }
+  return candidates.filter((_, i) => keep.has(i));
+}
+
+// Bonus/fractional chapters a chart associates with episodes (Sean's ruling
+// 2026-08-23): real content making up the episode — recorded so we always
+// know they exist (asterisk workflow now, possible "everything in this
+// episode" UI later), even though they don't drive the derived position.
+export function deriveBonusChapters(episodes: AfgEpisode[]): { episode: number; chapters: number[] }[] {
+  const out: { episode: number; chapters: number[] }[] = [];
   for (const e of [...episodes].sort((a, b) => a.number - b.number)) {
     if (!e.chapters.length) continue;
-    // AFG interleaves DIVIDER rows for films/specials ("<—— Pelicula 2:
-    // The Last Mission ——>") whose stray digits parse as chapters — HxH's
-    // ep-83 got an impossible ch-288 from one (2026-08-23). Never anchors.
-    if (e.arc && /—{3,}|pel[ií]cula|movie|film|special/i.test(e.arc)) continue;
-    const chapter = Math.max(...e.chapters);
-    if (chapter < maxSeen) continue; // non-monotonic = junk cell
-    // fractional chapters are bonus/Memoire entries in the source chart,
-    // never mainline positions (Vanitas ep-5 got ch 15.5, 2026-08-23) —
-    // audited outcome-side by anchor_fractional_chapter
-    if (!Number.isInteger(chapter)) continue;
-    maxSeen = chapter;
-    out.push({ episode: e.number, chapter, arc: e.arc });
+    const bonus = e.chapters.filter((c) => !Number.isInteger(c));
+    if (bonus.length) out.push({ episode: e.number, chapters: bonus });
   }
   return out;
 }

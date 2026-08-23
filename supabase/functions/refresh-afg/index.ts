@@ -35022,6 +35022,7 @@ function parseAfgPage(html3) {
       const cells = $2(tr).find("td, th").map((_j, c) => $2(c).text().trim()).get();
       if (!cells.length) return;
       if (cells.length === 1) {
+        if (cells[0] && /[—–-]{3,}|^<.*>$/.test(cells[0])) return;
         currentArc = cells[0] || currentArc;
         return;
       }
@@ -35051,16 +35052,38 @@ function parseAfgPage(html3) {
   return { title, seasons, episodes: deduped };
 }
 function deriveAnchors(episodes) {
+  const candidates = [];
+  for (const e of [...episodes].sort((a, b) => a.number - b.number)) {
+    const mainline = e.chapters.filter((c) => Number.isInteger(c));
+    if (!mainline.length) continue;
+    candidates.push({ episode: e.number, chapter: Math.max(...mainline), arc: e.arc });
+  }
+  if (candidates.length < 2) return candidates;
+  const lis = new Array(candidates.length).fill(1);
+  const prev2 = new Array(candidates.length).fill(-1);
+  let best = 0;
+  for (let i = 1; i < candidates.length; i++) {
+    for (let j = 0; j < i; j++) {
+      if (candidates[j].chapter <= candidates[i].chapter && lis[j] + 1 > lis[i]) {
+        lis[i] = lis[j] + 1;
+        prev2[i] = j;
+      }
+    }
+    if (lis[i] > lis[best]) best = i;
+  }
+  const keep = /* @__PURE__ */ new Set();
+  for (let i = best; i >= 0; i = prev2[i]) {
+    keep.add(i);
+    if (prev2[i] === -1) break;
+  }
+  return candidates.filter((_, i) => keep.has(i));
+}
+function deriveBonusChapters(episodes) {
   const out = [];
-  let maxSeen = 0;
   for (const e of [...episodes].sort((a, b) => a.number - b.number)) {
     if (!e.chapters.length) continue;
-    if (e.arc && /—{3,}|pel[ií]cula|movie|film|special/i.test(e.arc)) continue;
-    const chapter = Math.max(...e.chapters);
-    if (chapter < maxSeen) continue;
-    if (!Number.isInteger(chapter)) continue;
-    maxSeen = chapter;
-    out.push({ episode: e.number, chapter, arc: e.arc });
+    const bonus = e.chapters.filter((c) => !Number.isInteger(c));
+    if (bonus.length) out.push({ episode: e.number, chapters: bonus });
   }
   return out;
 }
@@ -35324,9 +35347,13 @@ async function syncAnchors(runId, seriesId, afgSlug, page) {
     return { anchors: 0, withheld: true };
   }
   await db.from("chapter_anchors").delete().eq("series_id", seriesId).eq("source", "afg");
-  const { data: curated } = await db.from("chapter_anchors").select("episode").eq("series_id", seriesId).in("source", ["manual", "wiki"]);
+  const { data: curated } = await db.from("chapter_anchors").select("episode, chapter").eq("series_id", seriesId).in("source", ["manual", "wiki"]);
   const protectedEps = new Set((curated ?? []).map((c) => c.episode));
-  const rows = anchors.filter((a) => !protectedEps.has(a.episode)).map((a) => ({
+  const rows = anchors.filter((a) => !protectedEps.has(a.episode)).filter(
+    (a) => (curated ?? []).every(
+      (c) => a.episode < c.episode ? a.chapter <= c.chapter : a.episode > c.episode ? a.chapter >= c.chapter : true
+    )
+  ).map((a) => ({
     series_id: seriesId,
     episode: a.episode,
     volume: null,
@@ -35337,6 +35364,22 @@ async function syncAnchors(runId, seriesId, afgSlug, page) {
   for (let i = 0; i < rows.length; i += 500) {
     const { error } = await db.from("chapter_anchors").upsert(rows.slice(i, i + 500));
     if (error) throw new Error(`anchors (${seriesId}): ${error.message}`);
+  }
+  const bonus = deriveBonusChapters(page.episodes);
+  for (const b of bonus) {
+    await db.from("episode_annotations").upsert(
+      {
+        series_id: seriesId,
+        episode: b.episode,
+        kind: "graft",
+        chapters: b.chapters.join(", "),
+        note: `AFG chart lists bonus/fractional chapter(s) ${b.chapters.join(", ")} woven into this episode beyond the mainline (auto-recorded; research refines \u2014 may even BE the anchor if the episode adapts the bonus)`
+      },
+      { ignoreDuplicates: true }
+    );
+  }
+  if (bonus.length) {
+    await db.from("series").update({ asterisk_review: "pending" }).eq("id", seriesId).is("asterisk_review", null);
   }
   await registerIds(seriesId, { afg: afgSlug });
   await db.from("ingest_flags").update({ status: "dismissed", resolved_at: (/* @__PURE__ */ new Date()).toISOString() }).eq("series_key", afgSlug).eq("source", "afg").eq("status", "open");

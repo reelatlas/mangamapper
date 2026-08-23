@@ -3,7 +3,7 @@
 // write path: monotonicity-filtered derivation, alignment gate, registry,
 // flag dismissal, and the volumes-staleness event trigger).
 
-import { deriveAnchors, type AfgPage, type AfgContinua } from './afg';
+import { deriveAnchors, deriveBonusChapters, type AfgPage, type AfgContinua } from './afg';
 import { db, fileFlagOnce } from './db';
 import { CONTINUA_SUPPRESSED, registerIds } from './resolve';
 
@@ -251,12 +251,22 @@ export async function syncAnchors(
   // refresh. Curated rows always win — derived rows at their episodes drop.
   const { data: curated } = await db
     .from('chapter_anchors')
-    .select('episode')
+    .select('episode, chapter')
     .eq('series_id', seriesId)
     .in('source', ['manual', 'wiki']);
   const protectedEps = new Set((curated ?? []).map((c) => c.episode));
   const rows = anchors
     .filter((a) => !protectedEps.has(a.episode))
+    // curated-CONSISTENCY (2026-08-23, the Boruto ep-219 lesson): a derived
+    // row that contradicts the ordering around a research-tier anchor
+    // (chapter above a later curated anchor, or below an earlier one) is
+    // chart imprecision — the ruling wins, the derived row drops. Ruled
+    // rearrangements live as annotations, never as derived rows.
+    .filter((a) =>
+      (curated ?? []).every((c) =>
+        a.episode < c.episode ? a.chapter <= c.chapter : a.episode > c.episode ? a.chapter >= c.chapter : true,
+      ),
+    )
     .map((a) => ({
       series_id: seriesId,
       episode: a.episode,
@@ -268,6 +278,26 @@ export async function syncAnchors(
   for (let i = 0; i < rows.length; i += 500) {
     const { error } = await db.from('chapter_anchors').upsert(rows.slice(i, i + 500));
     if (error) throw new Error(`anchors (${seriesId}): ${error.message}`);
+  }
+  // bonus/fractional chapter associations → graft annotations, FILL-ONLY
+  // (Sean's ruling 2026-08-23: never silently dropped — we must always know
+  // what content makes up an episode; research-tier annotations at the same
+  // episode+kind are never clobbered, and the pending review flags it)
+  const bonus = deriveBonusChapters(page.episodes);
+  for (const b of bonus) {
+    await db.from('episode_annotations').upsert(
+      {
+        series_id: seriesId,
+        episode: b.episode,
+        kind: 'graft',
+        chapters: b.chapters.join(', '),
+        note: `AFG chart lists bonus/fractional chapter(s) ${b.chapters.join(', ')} woven into this episode beyond the mainline (auto-recorded; research refines — may even BE the anchor if the episode adapts the bonus)`,
+      },
+      { ignoreDuplicates: true },
+    );
+  }
+  if (bonus.length) {
+    await db.from('series').update({ asterisk_review: 'pending' }).eq('id', seriesId).is('asterisk_review', null);
   }
   await registerIds(seriesId, { afg: afgSlug });
   await db

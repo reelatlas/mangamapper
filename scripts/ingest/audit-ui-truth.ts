@@ -289,11 +289,13 @@ async function main() {
         if (space > 0 && a.chapter > space + 10) {
           classes.anchor_beyond_chapter_space.push(`${sid}: ep ${a.episode}→ch${a.chapter} exceeds manga space (${space})`);
         }
-        // fractional CHAPTER values are bonus/Memoire chapters mis-scraped
-        // from a source chart, never mainline positions (the Vanitas ep-5 →
-        // ch-15.5 case, Sean 2026-08-23) — each needs research + correction
-        if (!Number.isInteger(a.chapter)) {
-          classes.anchor_fractional_chapter.push(`${sid}: ep ${a.episode}→ch${a.chapter} (${a.source}) — bonus-chapter scrape? research the true mainline value`);
+        // a DERIVED fractional-chapter anchor is a bonus/Memoire chapter
+        // mis-scraped from a source chart (the Vanitas ep-5 → ch-15.5 case,
+        // Sean 2026-08-23) — research it. A research-tier (manual/wiki)
+        // fractional anchor is LEGAL: sometimes the bonus IS what the
+        // episode adapts (Sean's amendment 2026-08-23).
+        if (!Number.isInteger(a.chapter) && a.source !== 'manual' && a.source !== 'wiki') {
+          classes.anchor_fractional_chapter.push(`${sid}: ep ${a.episode}→ch${a.chapter} (${a.source}) — bonus-chapter scrape? research the true value (bonus association belongs in episode_annotations)`);
         }
       }
     }
