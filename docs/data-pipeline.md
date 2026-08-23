@@ -667,6 +667,27 @@ Fixed weekly is correct.
    fractional-chapter gate + audit. Shonan retry expired (AniList still
    down). ruling_violation 0; census ok_full 234 / no_volume 11 /
    loose 5.
+26. ✅ **ITEM-4 BATCH 4 = research batch 9 (2026-08-23)**: next 16-series
+   gap tier (MHA S6, Naruto retrieval, Shippuden 33-87, early Bleach,
+   Haikyu TTT, 7DS Wrath, Food Wars S1, Blue Lock S2, Komi, Oshi no Ko,
+   To Your Eternity S3, Tokyo Ghoul:re, Kuroko, Dragon Maid, Seraph,
+   Rent-a-Girlfriend) — 93 anchors + 53 annotation groups
+   (apply-research-batch-9.ts). FOUR MU/continua pins REFUTED and
+   repaired: RAG ep36 255→167/v20 (255 was S5-era curation), Dragon Maid
+   ep25 78→64/v7 (nothing in vol 8 adapted), Oshi no Ko ep35 120→127
+   (finale ends mid-127), Seraph ep25 = the anime-original OVA 'Vampire
+   Shahal' (Group-C drop + shift entry; anchor re-pinned to TV ep 24 →
+   41/v11). Dragon Maid OVA enriched: adapts EXACTLY gap chs 10+33.
+   RAG structurally STALE (S4 2025 + S5 airing missing) → flagged,
+   stitch queued with Kingdom on AniList recovery. Also this session:
+   /consolidate deep mode ruling amendment (bonus chapters
+   record-never-drop, §10), divider/LNDS derivation fix (Naruto 6-27
+   regression healed; ok_full 234→237), curated-consistency precedence
+   (Boruto ep-219 lesson), AssClass batch-8 transcription patch.
+   anchor_gap 108→89 across both batches; asterisk pending 41;
+   ruling_violation 0. Gintama (345-ep desert) deferred to a dedicated
+   pass. Shonan watcher re-armed (24h, 30-min checks; AniList still
+   down).
 21. ✅ **Consolidation pass 2 (2026-08-23, post-Kenshin)**: every write path
    swept against the day's rules — filterEpisodeRows (caps + type
    overrides) now in ALL five episode writers (resolve, stitched-guard,

@@ -161,6 +161,11 @@ export const SOURCE_NUMBERING_SHIFTS: Record<string, { drop: number[]; shifts: {
   //   'Twilight Goodbye'. The OVA holds watch position 24.5 (order-only,
   //   adapts ~ch 40 side material).
   'bungo-stray-dogs': { drop: [25], shifts: [{ from: 26, offset: -1 }] },
+  //   AFL counts the anime-original OVA 'Vampire Shahal' (May 2016) as a
+  //   trailing ep 25; only 24 TV episodes exist (research batch 9,
+  //   2026-08-23). No shift — the row is at the end. OVA holds watch
+  //   position 24.5 (order-only, adapts no manga).
+  'seraph-of-the-end-vampire-reign': { drop: [25], shifts: [] },
 };
 
 // Per-series episode-row rulings, applied by EVERY episode writer:
