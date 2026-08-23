@@ -19,7 +19,7 @@ import { AFG_BASE, parseAfgPage } from './lib/afg';
 import { politeFetch } from './lib/http';
 import { contentHash } from './lib/hash';
 import { db, startRun, finishRun, fileFlagOnce } from './lib/db';
-import { stageAniList, applyScope, applyEpisodeFloor } from './lib/resolve';
+import { stageAniList, applyScope, applyEpisodeFloor, filterEpisodeRows } from './lib/resolve';
 import { aired, walkChain, aggregate, writeComponents, ownedAnilistIds } from './lib/chain';
 import { syncAnchors } from './lib/anchors';
 
@@ -164,9 +164,11 @@ async function main() {
           for (const r of data ?? []) have.add(r.number);
           if (!data || data.length < 1000) break;
         }
-        const fill = page.episodes
+        // per-series rulings (community caps + type overrides) apply to
+        // every episode writer, extension fills included
+        const fill = filterEpisodeRows(s.id, page.episodes
           .filter((e) => !have.has(e.number))
-          .map((e) => ({ series_id: s.id, number: e.number, title: e.title, type: e.type, air_date: null }));
+          .map((e) => ({ series_id: s.id, number: e.number, title: e.title, type: e.type, air_date: null })));
         for (let i = 0; i < fill.length; i += 500) {
           const { error } = await db.from('episodes').insert(fill.slice(i, i + 500));
           if (error) throw new Error(error.message);

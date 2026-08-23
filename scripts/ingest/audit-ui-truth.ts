@@ -9,6 +9,7 @@
 //   npx tsx --env-file=.env.ingest scripts/ingest/audit-ui-truth.ts
 
 import { db } from './lib/db';
+import { COMMUNITY_COUNT_OVERRIDES, EPISODE_TYPE_OVERRIDES } from './lib/resolve';
 
 async function pageAll(table: string, select: string): Promise<any[]> {
   const out: any[] = [];
@@ -61,7 +62,7 @@ async function main() {
   const classes: Record<string, string[]> = {
     integrity_eps_beyond_total: [], integrity_total_beyond_eps: [], integrity_double_claimed: [],
     special_numbered_unreviewed: [], anchor_gap_research: [], frontier_tail_null: [],
-    anchor_nonmonotonic: [], anchor_beyond_chapter_space: [],
+    anchor_nonmonotonic: [], anchor_beyond_chapter_space: [], ruling_violation: [],
     no_source: [], ok_full: [], ok_no_volume: [], ok_loose: [],
     pending_airing_no_anchor: [], pending_finished_no_totals: [], pending_no_canon: [], pending_other: [],
   };
@@ -98,6 +99,26 @@ async function main() {
       if (owners.size > 1) classes.integrity_double_claimed.push(`anilist ${aid} ← ${[...owners].join(' AND ')}`);
     }
   }
+  // RULING VIOLATIONS (Sean 2026-08-23, "no one-offs — ways to ensure
+  // integrity"): every ruling in lib/resolve is verified OUTCOME-side here,
+  // so a writer that forgets the shared gate (or a new writer added later)
+  // surfaces as data, regardless of which code path misbehaved. Enforcement
+  // lives in filterEpisodeRows/applyCommunityCap; this checks the DB agrees.
+  for (const [sid, o] of Object.entries(COMMUNITY_COUNT_OVERRIDES)) {
+    const above = episodes.filter((e: any) => e.series_id === sid && e.number > o.cap);
+    if (above.length) classes.ruling_violation.push(`${sid}: ${above.length} episode rows above the community cap ${o.cap}`);
+    const row = series.find((s: any) => s.id === sid);
+    if (row && (row.aired_episodes > o.cap || (row.total_episodes ?? 0) > o.cap)) {
+      classes.ruling_violation.push(`${sid}: totals ${row.aired_episodes}/${row.total_episodes} exceed the community cap ${o.cap}`);
+    }
+  }
+  for (const [sid, types] of Object.entries(EPISODE_TYPE_OVERRIDES)) {
+    for (const [num, want] of Object.entries(types)) {
+      const row = episodes.find((e: any) => e.series_id === sid && e.number === Number(num));
+      if (row && row.type !== want) classes.ruling_violation.push(`${sid} ep ${num}: type "${row.type}" contradicts the ruled override "${want}"`);
+    }
+  }
+
   // non-monotonic anchor sequences (Sean 2026-08-23): confirmed chapters may
   // legitimately jump BACK at a later episode (adaptation reorder) — the
   // display now renders them as stored. Each hit here is therefore either

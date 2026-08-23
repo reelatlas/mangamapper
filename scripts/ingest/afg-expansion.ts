@@ -18,7 +18,7 @@ import { politeFetch } from './lib/http';
 import { contentHash } from './lib/hash';
 import { searchAnime } from './lib/anilist';
 import { db, startRun, finishRun, fileFlagOnce } from './lib/db';
-import { stageAniList, registerIds, applyScope, applyEpisodeFloor } from './lib/resolve';
+import { stageAniList, registerIds, applyScope, applyEpisodeFloor, filterEpisodeRows } from './lib/resolve';
 import { aired, walkChain, aggregate, writeComponents, ownedAnilistIds } from './lib/chain';
 import { syncAnchors } from './lib/anchors';
 import { slugify } from './lib/slug';
@@ -191,8 +191,11 @@ async function main() {
           type: e.type, // AFG's 3-way; no anime-canon in their vocabulary
           air_date: null,
         }));
-        for (let i = 0; i < epRows.length; i += 500) {
-          const { error } = await db.from('episodes').insert(epRows.slice(i, i + 500));
+        // per-series rulings (community caps + type overrides) apply to
+        // every episode writer, expansion included
+        const ruledRows = filterEpisodeRows(id!, epRows);
+        for (let i = 0; i < ruledRows.length; i += 500) {
+          const { error } = await db.from('episodes').insert(ruledRows.slice(i, i + 500));
           if (error) throw new Error(error.message);
         }
         await writeComponents(id, chain, null);

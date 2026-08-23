@@ -7,7 +7,7 @@
 
 import { db, startRun, finishRun, fileFlagOnce } from './lib/db';
 import { type AniListMedia } from './lib/anilist';
-import { stageAniList, registerIds, applyScope, applyEpisodeFloor } from './lib/resolve';
+import { stageAniList, registerIds, applyScope, applyEpisodeFloor, filterEpisodeRows } from './lib/resolve';
 import { slugify } from './lib/slug';
 import type { AflShowPage } from './lib/afl';
 import { getMedia, aired, walkChain, aggregate, writeComponents, ownedAnilistIds } from './lib/chain';
@@ -152,13 +152,16 @@ async function main() {
       await registerIds(series.id, { anilist: series.anilist_id, mal: series.mal_id, afl: cand.slug });
 
       await db.from('episodes').delete().eq('series_id', series.id);
-      const epRows = page.episodes.map((e) => ({
+      // every episode writer goes through the per-series rulings (community
+      // caps + type overrides) — a re-stitch must never resurrect rows or
+      // types a ruling removed
+      const epRows = filterEpisodeRows(series.id, page.episodes.map((e) => ({
         series_id: series.id,
         number: e.number,
         title: e.title,
         type: e.type,
         air_date: e.airDate,
-      }));
+      })));
       for (let i = 0; i < epRows.length; i += 500) {
         const { error } = await db.from('episodes').insert(epRows.slice(i, i + 500));
         if (error) throw new Error(`episodes (${cand.slug}): ${error.message}`);

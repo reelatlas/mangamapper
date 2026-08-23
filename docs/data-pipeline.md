@@ -280,10 +280,10 @@ AniList `chapters/volumes` are null while publishing.
 
 | Source | Event pull (new data enters) | Scheduled freshness | What reaches canonical | Gates on the way in |
 |---|---|---|---|---|
-| **AFL** | `backfill.ts` (full sweep / new sources via checklist) | `refresh-afl` hourly :40, ≤20 stalest, 6d window | episode rows + types via `resolveSeries` (episode floor applied) | alias-corruption defenses, count gates, sparse guard, dispositions |
+| **AFL** | `backfill.ts` (full sweep / new sources via checklist) | `refresh-afl` hourly :40, ≤20 stalest, 6d window | episode rows + types via `resolveSeries` (episode floor applied) | alias-corruption defenses, count gates, sparse guard, dispositions, per-series rulings via filterEpisodeRows (community caps + type overrides — EVERY episode writer: resolve, stitched-guard, stitch, expansion, extend) |
 | **AniList** | staged inline by every chain walk / match | `refresh-anilist` daily 08:10, full batched sweep | series metadata + totals (floored), volatile fields; stitched series via `refreshStitchedVolatile` (floored) | naming authority, derivative-manga rule, ownership guard, scope application |
-| **AFG** | `afg-backfill` (`--force` after parser changes); `afg-expansion` / `afg-extend` for structure | `refresh-afg` daily 09:20, ≤25 stalest, 13d window | anchors via shared `syncAnchors` (registry-first); expansion/extension structures (floored) | monotonicity, alignment ±12, chain-confirm ±2, ruled-split skips, registry tiers |
-| **MangaUpdates** | `mu-backfill` (universal — every manga behind a canonical series) | `refresh-mu` daily 09:50, ≤20 stalest, 7d window | `latest_known_chapters` (chapter-number space, all manga), frontier anchors, status-conflict + edition-divergence flags — all via `lib/mu-frontier` | MangaDex-bridge-only identity, scope-segment multi-pair parse, chapter-progress guard, anchor-freshness rule |
+| **AFG** | `afg-backfill` (`--force` after parser changes); `afg-expansion` / `afg-extend` for structure | `refresh-afg` daily 09:20, ≤25 stalest, 13d window | anchors via shared `syncAnchors` (registry-first); expansion/extension structures (floored) | monotonicity, alignment ±12, **chapter-space gate** (franchise-continuous numbering withheld whole-page), chain-confirm ±2, ruled-split skips, registry tiers |
+| **MangaUpdates** | `mu-backfill` (universal — every manga behind a canonical series) | `refresh-mu` daily 09:50, ≤20 stalest, 7d window | `latest_known_chapters` via `bestLatestKnown` (release number → status-string chapter count, band + chapter-floor guarded), frontier anchors, status-conflict + edition-divergence + out-of-space flags — all via `lib/mu-frontier` | MangaDex-bridge-only identity, scope-segment multi-pair parse, chapter-progress guard, **chapter-space gate on pins**, **chapter-floor invariant on latest_known**, anchor-freshness rule |
 | **Wikipedia** | `volumes-backfill` (event: volumes-staleness flag from syncAnchors) | none — boundaries static once printed | `volume_boundaries` | title-token overlap, 3 wikitext dialects, exceed-totals flag |
 
 ### The research tier (Sean 2026-08-24)
@@ -546,6 +546,22 @@ Fixed weekly is correct.
       anchor routing · footer credits · Sean review bookmarks (6, incl.
       monogatari UI note) — query: detail->>'kind_of_note' =
       'sean_review_bookmark'.
+21. ✅ **Consolidation pass 2 (2026-08-23, post-Kenshin)**: every write path
+   swept against the day's rules — filterEpisodeRows (caps + type
+   overrides) now in ALL five episode writers (resolve, stitched-guard,
+   stitch, expansion, extend); all three latest_known writers on
+   bestLatestKnown; anchor writers gated (AFG + MU chapter-space); all four
+   edge functions rebuilt + redeployed. New `ruling_violation` audit class
+   verifies every ruling OUTCOME-side in the DB — a future writer that
+   forgets a shared gate surfaces as data, whichever code path misbehaved.
+   Shared-id coherence verified: 0 orphaned child rows, 329/329 registry
+   coverage, source_map dangling-actives = the documented AFL-sparse/
+   Wayback backlog (not breakage). Frontend: catalog hard-wired to
+   supabaseSource (no mock fallback); mock data only behind the deferred
+   library phase; card-hydration rule enforced (the only two episode-level
+   consumers, AnimeCard + AnimeDetail, both hydrate). Census:
+   221 ok_full / 15 ok_no_volume / 2 loose / ruling_violation 0 /
+   anchor integrity classes 0.
 20. ✅ Consolidation pass (2026-08-24 end, Sean's reflection point): all
    mechanisms aligned to the session's rulings — episode-floor invariant in
    every totals writer (edges redeployed), MU targeting universal with the
