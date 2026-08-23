@@ -35128,7 +35128,8 @@ var EXTRAS_ADOPTED = /* @__PURE__ */ new Set([
 var COMMUNITY_COUNT_OVERRIDES = {
   "psycho-pass": { cap: 41, note: "First Inspector + films are watch-order events, not numbered episodes (Sean 2026-08-24)" },
   "monogatari-series": { cap: 100, note: "community numbering excludes the 3 Second Season recaps (Sean 2026-08-24)" },
-  "high-school-dxd": { cap: 48, note: "HERO's Episode 0 is a mid-run special the community's continuous numbering excludes \u2014 order-only (Sean 2026-08-24)" }
+  "high-school-dxd": { cap: 48, note: "HERO's Episode 0 is a mid-run special the community's continuous numbering excludes \u2014 order-only (Sean 2026-08-24)" },
+  "urusei-yatsura": { cap: 194, note: "MAL/AniList count the farewell RECAP special (rebroadcast of ep 44 + countdown) as #194; Wikipedia holds it at 193.5 unnumbered \u2014 recap rule (Monogatari precedent): excluded, finale = 194 (research-verified 2026-08-23)" }
 };
 function applyCommunityCap(seriesId, row) {
   const o = COMMUNITY_COUNT_OVERRIDES[seriesId];
