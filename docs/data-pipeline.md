@@ -19,7 +19,7 @@ separate, periodic concern.
 |---|---|---|
 | **animefillerlist.com** (AFL) | **Filler authority** | The community wiki where classifications are *authored* (376 shows, actively edited). Server-rendered Drupal 7 HTML; episode `<tr>`s carry semantic classes `manga_canon` / `mixed_canon/filler` / `filler` / `anime_canon` — 1:1 with our `EpisodeType`. Data stated twice per page (episode table + Quick List ranges) → parse both, assert agreement. |
 | **AniList** GraphQL | Metadata backbone | Open endpoint, no key. Titles/covers/status/scores/genres/relations/`idMal`/external links. Hard budget: **30 req/min** (degraded limit, enforced; treat as permanent). |
-| **animefillerguide.com** (AFG) | Anchors + **structural cross-check** + expansion | Semi-independent editorial (~458 shows, 3-way taxonomy: red=filler, blue=mixed, plain=canon). Arc sections carry **manga chapter equivalents** — the only structured episode↔chapter source found anywhere. AFG never overrides AFL on episode TYPE; but its **series/season structuring is thoughtfully curated** (Sean 2026-08-23) — consult it as evidence for stitch/franchise decisions even where AFL exists, and when unsure, confirm with Sean before choosing. Where AFL is absent entirely, AFG's own taxonomy classifies expansion series (provenance: registry source 'afg', afl_slug null). |
+| **animefillerguide.com** (AFG) | Anchors + **structural cross-check** + expansion + **extension** | Semi-independent editorial (~458 shows, 3-way taxonomy: red=filler, blue=mixed, plain=canon). Arc sections carry **manga chapter equivalents** — the only structured episode↔chapter source found anywhere. AFG never overrides AFL on episode TYPE; but its **series/season structuring is thoughtfully curated** (Sean 2026-08-23) — consult it as evidence for stitch/franchise decisions even where AFL exists, and when unsure, confirm with Sean before choosing. Where AFL is absent entirely, AFG's own taxonomy classifies expansion series (provenance: registry source 'afg', afl_slug null); where AFL lags or stops short, AFG fills ONLY the missing episode numbers after the AniList chain independently confirms its numbering (afg-extend.ts, 2026-08-24). Its pages also carry **between-season reading guidance** in prose ("read ch 136–143 before :re") — raw HTML is kept greedily (`ingest_afg_pages.raw_html`) for the IA/arc phase. We don't mirror AFG's presentation (ruled splits stay split); we capture its data to evaluate (Sean 2026-08-24). |
 | AOD 2026-27 snapshot · animeapi.my.id · arm.haglund.dev · AniList `idMal` | ID mapping utilities | For AFL-slug ↔ AniList joins the title matcher can't settle. |
 | **MangaDex** | **ID bridge** (verified 2026-08-22) | Its entries carry AniList + MAL + MangaUpdates ids together (`links.al/mal/mu`; MU slug base36-decodes to their numeric id). The join layer for manga-side sources. Its chapter data itself: unusable coverage for licensed series. |
 | **MangaUpdates** | Cross-check tier (manual-confirm) | Public-read API, caching required by their AUP, credit requested. Release data resolves only ~50% of chapters to volumes and dies in the simulpub era — NOT the volume source. Gems: curated per-series `anime` coverage field ("Vol 112, Chap 1138 as of EP 1168") as a continue-point cross-check. |
@@ -234,7 +234,12 @@ in code (`scripts/ingest/`), and every violation flags rather than guesses:
 | **latestKnown synthesis** | a FINISHED series' coverage IS its scope end — position instrument synthesizes from totals when anchors are absent; airing-unanchored stays honestly pending | buildMapping (supabaseSource) |
 | **MU-frontier rule** | MangaUpdates' curated anime-coverage field ("Vol X, Chap Y as of EP Z") becomes a real anchor (source 'mu') — the adaptation frontier for series AFG doesn't anchor | audit-manga-coverage.ts |
 | **Coverage audit** | every series self-classifies (anchored / synthesized / mu-frontier / honest-pending / unknown-flagged / no-source); new pending classes get RULES, never per-series fixes | audit-manga-coverage.ts |
-| **Expansion guards** | AFG-only series enter through exact-match-or-flag, sparse, and alignment gates; the dedup guard flags AFG pages of existing series rather than duplicating them. KNOWN GAP (audit 2026-08-24): AFG numbers franchise-continuously but expansion matches a single AniList entry, so every multi-season AFG-only show trips the ±12 alignment gate (8 of the 14 open afg flags — Solo Leveling, Oshi no Ko, …). Fix = stitch-aware expansion (walk the SEQUEL chain like stitch.ts before comparing counts), pending Sean's go | afg-expansion.ts / audit-afg-structure.ts |
+| **Expansion guards** | AFG-only series enter through exact-match-or-flag (whitespace-insensitive full-title equality; accented queries retry ASCII-folded), sparse, and alignment gates; the dedup guard flags AFG pages of existing series rather than duplicating them. STITCH-AWARE since 2026-08-24 (Sean's go): AFG numbers franchise-continuously, so the matched entry's SEQUEL chain is walked before the alignment gate — multi-season AFG-only shows (Solo Leveling, Oshi no Ko…) create with proper season components | afg-expansion.ts |
+| **Ownership guard** | a chain walk (stitch, expansion, extension) never crosses into an AniList entry another canonical series already claims — ruled splits (Bleach→TYBW, TG→:re, Naruto→Shippuden) are safe by construction, whatever a source's continuous numbering suggests | ownedAnilistIds / walkChain (lib/chain.ts) |
+| **Prequel-hijack fallback** | AniList PREQUEL edges can be chronological side stories, not series heads (MONSTERS ONA → One Piece; Berserk Memorial class): when the walked-back chain lands far from target, retry forward-only from the matched entry and keep whichever numbering fits | walkChain (lib/chain.ts) |
+| **AFG extension (merge, never replace)** | for REGISTERED afg pages covering more than we hold: the AniList chain must independently confirm AFG's numbering (same ±2/lag finalize gate as the stitcher); on confirm, components rebuild and AFG fills ONLY missing episode numbers — existing AFL rows stay the type authority; id/title/afl_slug never change; ruled-split pages skip by name; unconfirmed → flag | afg-extend.ts |
+| **Registration tiers** | AFG↔canonical identity enters the registry by evidence strength: slug / full-title equality auto-register; prefix (subtitle-stripped) matches need INDEPENDENT episode-span agreement (±2 of our max or a component boundary); a title key two series claim is ambiguous and never auto-matches; explicit rulings live in the RULED map (Sailor Moon 90s ≠ Crystal; AFG digimon-adventure = the 1999 series) | audit-afg-structure.ts --register |
+| **MU frontier targets (class B)** | any manga-linked series without chapter anchors is an MU staging target — MU's curated anime-coverage gives airing-series-with-finished-manga (TYBW class) and finished-unknown-coverage series their frontier; latest_known_chapters only ever writes for PUBLISHING manga | mu-backfill.ts |
 | Dispositions | active / excluded / duplicate / merged rulings are durable data; backfill skips non-active | source_map |
 
 **Hard-won learnings** (why some rules exist): AFL's Drupal is corrupt since
@@ -259,7 +264,8 @@ via `supabase projects api-keys`).
 - `merge.ts` — multi-AFL-page merges (config at top).
 - `relations.ts` — rebuilds series_relations (auto + RULED pairs).
 - `audit-titles.ts` — periodic corruption re-audit against a fresh index snapshot.
-- `audit-afg-structure.ts` — READ-ONLY structural cross-check of every staged AFG page vs canonical (naming / episode-grouping / season-hierarchy); classifies aligned vs conflict vs registry-gap. Run before ruling on AFG-related flags — AFG numbers episodes franchise-continuously, so `AFG max > ours` usually means unstitched newer seasons (extension evidence) or a deliberate split of ours to confirm, and `< ours` means a season-scoped page.
+- `audit-afg-structure.ts` — structural cross-check of every staged AFG page vs canonical (naming / episode-grouping / season-hierarchy); classifies aligned vs conflict vs registry-gap. With `--register`, enters confident matches into the identity registry (tiers + RULED map, §10). AFG numbers episodes franchise-continuously, so `AFG max > ours` usually means unstitched newer seasons (afg-extend candidates) or a deliberate split of ours, and `< ours` means a season-scoped page.
+- `afg-extend.ts` — for registered afg pages covering more than we hold: chain-confirmed component rebuild + episode tail/gap fill from AFG (merge semantics, §10). Run after registration; re-run any time AFL lags a currently-airing season.
 - `wayback-recover2.ts` — archive recovery for corruption victims (rendered snapshots + count validation; the v1 id_-form script was deleted — id_ URLs redirect to captures years off).
 - `rebuild.ts` — **DANGER post-stitching**: re-resolves everything as single-season, clobbering stitched aggregates. Only for canonical-shape migrations, and re-run stitch after.
 - `pilot.ts` / `cleanup.ts` / `stabilize.ts` / `polish-ids.ts` / `fix-mismatch.ts` / `assisted-prep.ts` — historical one-shots, kept as patterns.
@@ -367,14 +373,24 @@ Fixed weekly is correct.
 13. ✅ AFG expansion (2026-08-23): +36 AFG-only series (canonical: 326), AFG
    type encoding parsed, all guards applied; 6 candidates correctly flagged
    as probable-existing-series (triage list).
-14. **Triage queue (next sitting)**: 6 expansion flags (register-to-existing:
-   kenichi/boruto/rurouni-kenshin-1996/hajime-no-ippo; title-variant:
-   ao-ashi/megami-no-cafe-terrace) · 3 airing-pendings (extend mu-backfill to
-   airing series' FINISHED parent manga: TYBW/Tokyo Revengers/Railgun) · 7
-   unknown-coverage curations · count flags where AFL numbers extras
-   (angel-beats/detective-conan/rurouni-kenshin-1996) · remaining
-   match_ambiguous/parse_integrity review · footer credits (AFL+AFG+MU) at
-   the design return.
+14. ✅ AFG structural cross-check + triage batch (2026-08-24, Sean's go on
+   all three tracks): `audit-afg-structure.ts` built (repeatable scan:
+   naming/grouping/hierarchy vs AFG) → **66 registered AFG identities**
+   (tiers + RULED map), stitch-aware expansion (**+8 series: Solo Leveling,
+   Oshi no Ko, Apothecary Diaries, Iruma-kun, Shangri-La Frontier, Kimi ni
+   Todoke, World Trigger, Café Terrace** — canonical: 334), `afg-extend.ts`
+   (**17 series extended** where AFL lagged: dan-da-dan 3→24, dr-stone
+   58→94, blue-exorcist 37→73, One Piece current), ownership guard +
+   prequel-hijack fallback in lib/chain.ts, MU class-B frontier targets,
+   AFG raw_html greedy staging (reading-guidance prose for the IA phase).
+   Old triage items 1 (register-to-existing + title-variants) fully
+   absorbed; item 2 (airing-pendings) via MU class B.
+15. **Remaining triage**: attack-on-titan AFG 94v89 (OAD numbering — rule
+   TBD) · AFL-extras count flags (angel-beats 16v13, detective-conan
+   1212v1209, rurouni-kenshin-1996 100v96 — specials/ep-0 beyond the run;
+   per-case rulings, not a code rule) · unknown-coverage curations that MU
+   class B couldn't frontier · remaining match_ambiguous/parse_integrity
+   review · footer credits (AFL+AFG+MU) at the design return.
 
 Open items & backlog (triaged with Sean 2026-08-22 after the visual pass):
 - **Volumes** (researched, plan set): MangaUpdates releases resolve only ~50%

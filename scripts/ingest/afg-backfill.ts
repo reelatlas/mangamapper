@@ -30,14 +30,29 @@ async function main() {
     }
     console.log(`[afg] ${slugs.length} pages in sitemaps`);
 
-    // series lookup: by afl_slug, own id, and slugified title
+    // pages still missing stored HTML (greedy staging: reading-guidance prose)
+    const noHtml = new Set<string>();
+    for (let from = 0; ; from += 1000) {
+      const { data } = await db.from('ingest_afg_pages').select('slug').is('raw_html', null).range(from, from + 999);
+      for (const r of data ?? []) noHtml.add(r.slug);
+      if (!data || data.length < 1000) break;
+    }
+
+    // series lookup: identity registry FIRST, then afl_slug / own id /
+    // slugified title as fallback for never-registered pages
     const { data: series } = await db.from('series').select('id, afl_slug, title, total_chapters');
     const bySlug = new Map<string, { id: string; total_chapters: number | null }>();
+    const byId = new Map((series ?? []).map((s) => [s.id, { id: s.id, total_chapters: s.total_chapters }]));
     for (const s of series ?? []) {
-      const entry = { id: s.id, total_chapters: s.total_chapters };
+      const entry = byId.get(s.id)!;
       if (s.afl_slug) bySlug.set(s.afl_slug, entry);
       bySlug.set(s.id, entry);
       bySlug.set(slugify(s.title), entry);
+    }
+    const { data: reg } = await db.from('series_external_ids').select('series_id, external_id').eq('source', 'afg');
+    for (const r of reg ?? []) {
+      const entry = byId.get(r.series_id);
+      if (entry) bySlug.set(r.external_id, entry);
     }
 
     for (const [i, slug] of slugs.entries()) {
@@ -70,13 +85,17 @@ async function main() {
         const raw = { title: page.title, seasons: page.seasons, episodes: page.episodes };
         const hash = contentHash(raw);
         if (staged?.content_hash === hash) {
-          await db.from('ingest_afg_pages').update({ fetched_at: new Date().toISOString() }).eq('slug', slug);
+          await db
+            .from('ingest_afg_pages')
+            .update({ fetched_at: new Date().toISOString(), ...(noHtml.has(slug) ? { raw_html: res.html } : {}) })
+            .eq('slug', slug);
           counters.unchanged++;
           continue;
         }
         const { error } = await db.from('ingest_afg_pages').upsert({
           slug,
           raw,
+          raw_html: res.html,
           content_hash: hash,
           etag: res.etag,
           last_modified: res.lastModified,

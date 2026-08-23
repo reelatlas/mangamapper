@@ -58,6 +58,25 @@ universe — Railgun), `remake` (superseding re-adaptation — HxH 2011),
   framing obscures it); the lag-rule auto-stitch stands. Chain: 2006 → Kai →
   Rei OVA → Gou (Sotsu joins when AFL classifies it).
 
+## Rulings 2026-08-24 (AFG structural cross-check session)
+
+- **Tokyo Ghoul :re stays a SEPARATE entry** (Sean): it matches the
+  Naruto→Shippuden pattern. AFG's page runs the whole story continuously
+  (1–48); we don't mirror their presentation. When the IA/hierarchy rework
+  lands, both may live under one franchise umbrella — not now. Same holds for
+  Bleach→TYBW. Enforced structurally by the ownership guard (lib/chain.ts)
+  and the RULED_SPLITS skip list (afg-extend.ts).
+- **AFG as story-flow reference** (Sean): AFG's structuring — watch order,
+  what constitutes filler/mixed/canon, and especially the between-season
+  reading guidance ("S2 diverges from canon: read ch 136–143 before :re") —
+  is more poignant and precise than most alternatives. We capture the data
+  (greedy raw_html staging) and cross-reference against AniList/AFL/wikis/MU,
+  without being bound to present it AFG's way.
+- **AFG digimon-adventure page = the 1999 series** (romaji "Digimon
+  Adventure"; the 2020 reboot is "Digimon Adventure:" per AniList naming).
+- **AFG bishoujo-senshi-sailor-moon page = the 90s original**, not Crystal
+  (synonym collision caught by the ambiguity rule).
+
 ## Meta-finding
 
 AFL page granularity agreed with community consensus in 17 of 18 franchises

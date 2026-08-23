@@ -35205,12 +35205,13 @@ var MANGA_STATUS_MAP = {
   NOT_YET_RELEASED: "publishing",
   CANCELLED: "finished"
 };
-function sourceType(media) {
+function sourceType(media, hasMangaEdge) {
   const src = media.source ?? "";
   if (src === "MANGA" || src === "DOUJINSHI" || src === "ONE_SHOT") {
     return media.countryOfOrigin === "KR" || media.countryOfOrigin === "CN" ? "webtoon" : "manga";
   }
   if (src === "LIGHT_NOVEL" || src === "NOVEL" || src === "WEB_NOVEL") return "light_novel";
+  if (!src && hasMangaEdge) return "manga";
   return "original";
 }
 function fuzzyDate(d) {
@@ -35238,7 +35239,8 @@ async function resolveSeries(runId, slug) {
     await fileFlagOnce(runId, slug, "resolve", "parse_integrity", { empty: true });
     return { episodes: 0, flagged: true };
   }
-  const manga = pickManga(media);
+  const mangaEdge = pickManga(media);
+  const manga = media.source === "ORIGINAL" ? null : mangaEdge;
   const { data: existing } = await db.from("series").select("id").eq("afl_slug", slug).maybeSingle();
   if (existing) {
     const { count: compCount } = await db.from("series_components").select("*", { count: "exact", head: true }).eq("series_id", existing.id);
@@ -35305,7 +35307,7 @@ async function resolveSeries(runId, slug) {
     banner_url: media.bannerImage,
     format: media.format,
     status: STATUS_MAP[media.status] ?? "finished",
-    source_type: sourceType(media),
+    source_type: sourceType(media, mangaEdge !== null),
     start_date: fuzzyDate(media.startDate),
     end_date: fuzzyDate(media.endDate),
     season: media.season,

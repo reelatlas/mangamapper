@@ -1,9 +1,14 @@
-// MangaUpdates backfill (cross-check tier): latest published chapter for
-// ONGOING manga behind canonical series whose total_chapters is null — the
-// position-row denominator AniList cannot provide. Identity strictly via the
-// MangaDex bridge (no title-guessing); unbridgeable manga flag for review.
-// Refresh policy: event/manual (validation-tier ruling), re-run when anchors
-// approach latest_known or on demand.
+// MangaUpdates backfill (cross-check tier), two target classes:
+//   A. ONGOING manga behind series whose total_chapters is null — the
+//      position-row denominator AniList cannot provide.
+//   B. (Sean 2026-08-24) ANY series with a manga link but NO chapter anchors —
+//      staging MU's curated anime-coverage field gives audit-manga-coverage
+//      a frontier ('mu' anchors) for airing series with finished manga (TYBW
+//      class) and finished series with unknown coverage alike.
+// Identity strictly via the MangaDex bridge (no title-guessing);
+// unbridgeable manga flag for review. Refresh policy: event/manual
+// (validation-tier ruling), re-run when anchors approach latest_known or on
+// demand. latest_known_chapters only ever writes for PUBLISHING manga.
 //   npx tsx --env-file=.env.ingest scripts/ingest/mu-backfill.ts
 
 import { db, startRun, finishRun, fileFlagOnce } from './lib/db';
@@ -17,7 +22,8 @@ async function main() {
   const counters = { fetched: 0, unchanged: 0, changed: 0, flagged: 0 };
   const actions: string[] = [];
   try {
-    const { data: series } = await db
+    // class A: ongoing manga needing a denominator
+    const { data: classA } = await db
       .from('series')
       .select('id, title, manga_anilist_id, manga_status, total_chapters, popularity')
       .eq('manga_status', 'publishing')
@@ -25,13 +31,31 @@ async function main() {
       .not('manga_anilist_id', 'is', null)
       .order('popularity', { ascending: false });
 
-    const byManga = new Map<number, { title: string; seriesIds: string[] }>();
-    for (const s of series ?? []) {
-      const e = byManga.get(s.manga_anilist_id!) ?? { title: s.title, seriesIds: [] };
-      e.seriesIds.push(s.id);
+    // class B: any manga-linked series without anchors — MU's anime-coverage
+    // field is their only frontier candidate
+    const anchored = new Set<string>();
+    for (let from = 0; ; from += 1000) {
+      const { data } = await db.from('chapter_anchors').select('series_id').range(from, from + 999);
+      for (const r of data ?? []) anchored.add(r.series_id);
+      if (!data || data.length < 1000) break;
+    }
+    const { data: linked } = await db
+      .from('series')
+      .select('id, title, manga_anilist_id, manga_status, total_chapters, popularity')
+      .not('manga_anilist_id', 'is', null)
+      .order('popularity', { ascending: false });
+    const classB = (linked ?? []).filter((s) => !anchored.has(s.id));
+
+    const byManga = new Map<number, { title: string; seriesIds: string[]; statuses: Map<string, string> }>();
+    for (const s of [...(classA ?? []), ...classB]) {
+      const e = byManga.get(s.manga_anilist_id!) ?? { title: s.title, seriesIds: [], statuses: new Map() };
+      if (!e.seriesIds.includes(s.id)) {
+        e.seriesIds.push(s.id);
+        e.statuses.set(s.id, s.manga_status);
+      }
       byManga.set(s.manga_anilist_id!, e);
     }
-    console.log(`[mu] ${byManga.size} ongoing manga targets`);
+    console.log(`[mu] ${byManga.size} manga targets (A: denominators, B: frontier candidates)`);
 
     for (const [mangaId, t] of byManga) {
       try {
@@ -83,7 +107,9 @@ async function main() {
         }
 
         if (mu.latest_chapter && mu.latest_chapter > 0 && mu.latest_chapter < 10000) {
+          // denominator semantics: only meaningful while the manga publishes
           for (const sid of t.seriesIds) {
+            if (t.statuses.get(sid) !== 'publishing') continue;
             await db.from('series').update({ latest_known_chapters: mu.latest_chapter, updated_at: new Date().toISOString() }).eq('id', sid);
           }
           actions.push(`${t.title}: latest ch ${mu.latest_chapter} ("${mu.status}")`);

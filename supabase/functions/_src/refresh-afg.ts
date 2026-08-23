@@ -33,6 +33,7 @@ async function run() {
     const cutoff = Date.now() - STALE_MS;
     const batch = (staged ?? []).filter((s) => new Date(s.fetched_at).getTime() < cutoff).slice(0, BATCH);
 
+    // identity registry FIRST, slug/title heuristics as fallback
     const { data: series } = await db.from('series').select('id, afl_slug, title');
     const bySlug = new Map<string, string>();
     for (const s of series ?? []) {
@@ -40,6 +41,8 @@ async function run() {
       bySlug.set(s.id, s.id);
       bySlug.set(slugify(s.title), s.id);
     }
+    const { data: reg } = await db.from('series_external_ids').select('series_id, external_id').eq('source', 'afg');
+    for (const r of reg ?? []) bySlug.set(r.external_id, r.series_id);
 
     for (const s of batch) {
       try {
@@ -63,12 +66,26 @@ async function run() {
         const { data: prev } = await db.from('ingest_afg_pages').select('content_hash').eq('slug', s.slug).maybeSingle();
         if (prev?.content_hash === hash) {
           counters.unchanged++;
-          await db.from('ingest_afg_pages').update({ fetched_at: new Date().toISOString() }).eq('slug', s.slug);
+          // greedy staging: keep the HTML even when the parse is unchanged
+          // (head-count probe — never pull the text column itself)
+          const { count: missingHtml } = await db
+            .from('ingest_afg_pages')
+            .select('slug', { count: 'exact', head: true })
+            .eq('slug', s.slug)
+            .is('raw_html', null);
+          await db
+            .from('ingest_afg_pages')
+            .update({
+              fetched_at: new Date().toISOString(),
+              ...(missingHtml ? { raw_html: res.html } : {}),
+            })
+            .eq('slug', s.slug);
           continue;
         }
         await db.from('ingest_afg_pages').upsert({
           slug: s.slug,
           raw,
+          raw_html: res.html,
           content_hash: hash,
           etag: res.etag,
           last_modified: res.lastModified,

@@ -12,6 +12,10 @@ async function main() {
   const runId = await startRun('afg');
   const actions: string[] = [];
   try {
+    // identity registry FIRST (the canonical afg↔series mapping), slug/title
+    // heuristics only as fallback for never-registered pages
+    const { data: reg } = await db.from('series_external_ids').select('series_id, external_id').eq('source', 'afg');
+    const byRegistry = new Map((reg ?? []).map((r) => [r.external_id, r.series_id]));
     const { data: series } = await db.from('series').select('id, afl_slug, title');
     const bySlug = new Map<string, string>();
     for (const s of series ?? []) {
@@ -22,7 +26,7 @@ async function main() {
     const { data: pages } = await db.from('ingest_afg_pages').select('slug, raw');
     for (const p of pages ?? []) {
       const raw = p.raw as AfgPage;
-      const target = bySlug.get(p.slug) ?? bySlug.get(slugify(raw.title));
+      const target = byRegistry.get(p.slug) ?? bySlug.get(p.slug) ?? bySlug.get(slugify(raw.title));
       if (!target) continue;
       const result = await syncAnchors(runId, target, p.slug, raw);
       if (result.anchors === 0) continue;

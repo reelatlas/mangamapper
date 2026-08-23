@@ -2,35 +2,32 @@
 // shows (Frieren, Solo Leveling…) become canonical series. AFL stays the type
 // authority wherever it exists; here AFG's own 3-way taxonomy (red=filler,
 // blue=mixed, plain=canon; no anime-canon) classifies episodes, with
-// provenance via the identity registry (source 'afg'). All standard guards
-// apply: exact-match-or-flag, sparse guard, alignment, scopes, registry.
-// NOTE: staged AFG raw predating the type-parser lacks `type` — those pages
-// re-parse on the next --force AFG sweep; this script re-fetches its targets
-// live so types are always present.
+// provenance via the identity registry (source 'afg').
+//
+// STITCH-AWARE (2026-08-24, Sean's go): AFG numbers episodes continuously
+// across a whole story while AniList holds one entry per season, so the
+// matched entry's SEQUEL chain is walked (lib/chain, ownership-guarded)
+// before the alignment gate — multi-season AFG-only shows (Solo Leveling,
+// Oshi no Ko…) now pass with proper season components instead of tripping
+// the ±12 gate. All standard guards still apply: exact-match-or-flag,
+// sparse guard, alignment ±2 with airing-lag allowance, scopes, registry.
 //   npx tsx --env-file=.env.ingest scripts/ingest/afg-expansion.ts
 
 import { AFG_BASE, parseAfgPage } from './lib/afg';
 import { politeFetch } from './lib/http';
 import { contentHash } from './lib/hash';
-import { mediaByIds, searchAnime } from './lib/anilist';
+import { searchAnime } from './lib/anilist';
 import { db, startRun, finishRun, fileFlagOnce } from './lib/db';
-import {
-  stageAniList,
-  registerIds,
-  searchTextFor,
-  applyScope,
-  STATUS_MAP,
-  MANGA_STATUS_MAP,
-  sourceType,
-  fuzzyDate,
-  pickManga,
-} from './lib/resolve';
+import { stageAniList, registerIds, applyScope } from './lib/resolve';
+import { aired, walkChain, aggregate, writeComponents, ownedAnilistIds } from './lib/chain';
 import { syncAnchors } from './lib/anchors';
 import { slugify } from './lib/slug';
 
 const sleep = (ms: number) => new Promise((r) => setTimeout(r, ms));
 const normalize = (s: string) =>
   s.toLowerCase().normalize('NFKD').replace(/[^a-z0-9]+/g, ' ').trim();
+// whitespace-insensitive second key: AFG "Ao Ashi" vs AniList "Aoashi"
+const squash = (s: string) => normalize(s).replace(/ /g, '');
 
 async function main() {
   const runId = await startRun('afg');
@@ -57,9 +54,12 @@ async function main() {
     });
     console.log(`[expansion] ${targets.length} AFG-only candidates`);
 
+    const owned = await ownedAnilistIds();
+
     for (const t of targets) {
       try {
-        // fresh fetch so the typed parser output is guaranteed
+        // fresh fetch so the typed parser output is guaranteed (raw HTML kept
+        // greedily — AFG's between-season reading guidance lives in the prose)
         const res = await politeFetch(`${AFG_BASE}/anime/${t.slug}/`);
         counters.fetched++;
         if (res.status !== 200 || !res.html) {
@@ -71,6 +71,7 @@ async function main() {
         await db.from('ingest_afg_pages').upsert({
           slug: t.slug,
           raw: { title: page.title, seasons: page.seasons, episodes: page.episodes },
+          raw_html: res.html,
           content_hash: contentHash({ title: page.title, seasons: page.seasons, episodes: page.episodes }),
           etag: res.etag,
           last_modified: res.lastModified,
@@ -78,10 +79,17 @@ async function main() {
           changed_at: new Date().toISOString(),
         });
 
-        // exact-match-or-flag against AniList (series formats preferred)
-        const hits = await searchAnime(page.title);
+        // exact-match-or-flag against AniList (series formats preferred;
+        // whitespace-insensitive full-title equality, never prefix-matching).
+        // Accented queries can return zero hits (Café Terrace) — retry the
+        // search ASCII-folded; the equality check itself is unchanged.
+        let hits = await searchAnime(page.title);
         await sleep(800);
-        const want = normalize(page.title);
+        if (!hits.length) {
+          hits = await searchAnime(normalize(page.title));
+          await sleep(800);
+        }
+        const want = squash(page.title);
         const SERIES_FORMATS = new Set(['TV', 'TV_SHORT', 'ONA']);
         const sorted = [...hits].sort(
           (a, b) => Number(SERIES_FORMATS.has(b.format ?? '')) - Number(SERIES_FORMATS.has(a.format ?? '')),
@@ -89,7 +97,7 @@ async function main() {
         const hit = sorted.find((h) =>
           [h.title.romaji, h.title.english, h.title.native, ...h.synonyms]
             .filter(Boolean)
-            .some((x) => normalize(String(x)) === want),
+            .some((x) => squash(String(x)) === want),
         );
         if (!hit) {
           await fileFlagOnce(runId, `afg:${t.slug}`, 'afg', 'match_ambiguous', {
@@ -101,37 +109,54 @@ async function main() {
           continue;
         }
 
-        const [media] = await mediaByIds([hit.id]);
-        if (!media) continue;
-        await stageAniList(media);
-
-        const aired = media.nextAiringEpisode ? media.nextAiringEpisode.episode - 1 : media.episodes ?? 0;
         const afgMax = page.episodes.reduce((m, e) => Math.max(m, e.number), 0);
-        if (aired && Math.abs(afgMax - aired) > 12) {
-          await fileFlagOnce(runId, `afg:${t.slug}`, 'afg', 'count_mismatch', {
-            afgMax,
-            anilistAired: aired,
-            note: 'AFG page numbering misaligned with matched entry — expansion withheld',
+
+        // AFG numbers the whole story: walk the matched entry's chain
+        // (ownership-guarded — never crosses into another canonical series)
+        const { chain, ambiguity } = await walkChain(hit.id, afgMax, owned);
+        if (!chain.length || ambiguity) {
+          await fileFlagOnce(runId, `afg:${t.slug}`, 'afg', 'match_ambiguous', {
+            title: page.title,
+            anilistId: hit.id,
+            ambiguity: ambiguity ?? 'empty chain',
           });
           counters.flagged++;
+          actions.push(`${t.slug}: chain ambiguity — flagged (${ambiguity})`);
           continue;
         }
-        // sparse guard (same rule as the resolver's)
-        if (media.status !== 'RELEASING' && media.episodes != null && page.episodes.length < media.episodes * 0.6) {
+        const chainAired = chain.reduce((s, m) => s + aired(m), 0);
+        const lagOk =
+          chainAired > afgMax && chainAired - afgMax <= aired(chain[chain.length - 1]);
+        if (Math.abs(chainAired - afgMax) > 2 && !lagOk) {
+          await fileFlagOnce(runId, `afg:${t.slug}`, 'afg', 'count_mismatch', {
+            afgMax,
+            chainAired,
+            chain: chain.map((m) => ({ id: m.id, title: m.title.romaji, aired: aired(m) })),
+            note: 'AFG numbering misaligned with the AniList chain — expansion withheld',
+          });
+          counters.flagged++;
+          actions.push(`${t.slug}: afg ${afgMax} vs chain ${chainAired} — flagged`);
+          continue;
+        }
+        // sparse guard against the whole chain (same rule as the resolver's)
+        const chainFinished = chain.every((m) => m.status !== 'RELEASING');
+        const chainTotal = chain.every((m) => m.episodes != null)
+          ? chain.reduce((s, m) => s + (m.episodes ?? 0), 0)
+          : null;
+        if (chainFinished && chainTotal != null && page.episodes.length < chainTotal * 0.6) {
           await fileFlagOnce(runId, `afg:${t.slug}`, 'afg', 'count_mismatch', {
             sparse: true,
             afgClassified: page.episodes.length,
-            anilistTotal: media.episodes,
+            chainTotal,
           });
           counters.flagged++;
           continue;
         }
 
-        const mangaEdge = pickManga(media);
-        const manga = media.source === 'ORIGINAL' ? null : mangaEdge;
-        const base = slugify(media.title.english ?? media.title.romaji ?? page.title);
+        for (const m of chain) await stageAniList(m);
+        const row = aggregate(chain, null, page.title);
         let id: string | null = null;
-        for (const candidate of [base, `${base}-${media.startDate.year ?? ''}`, `${base}-${media.id}`]) {
+        for (const candidate of [row.id, `${row.id}-${chain[0].startDate.year ?? ''}`, `${row.id}-${chain[0].id}`]) {
           const clean = candidate.replace(/-$/, '');
           const { data: clash } = await db.from('series').select('id').eq('id', clean).maybeSingle();
           if (!clash) {
@@ -140,60 +165,22 @@ async function main() {
           }
         }
         if (!id) continue;
+        row.id = id;
+        row.search_text = [row.search_text, page.title.toLowerCase()].join(' ');
+        Object.assign(
+          row,
+          await applyScope(`afg:${t.slug}`, {
+            total_volumes: row.total_volumes,
+            total_chapters: row.total_chapters,
+            manga_start_volume: row.manga_start_volume,
+            manga_start_chapter: row.manga_start_chapter,
+          }),
+        );
 
-        const row = {
-          id,
-          afl_slug: null,
-          anilist_id: media.id,
-          mal_id: media.idMal,
-          title: media.title.english ?? media.title.romaji ?? page.title,
-          title_english: media.title.english,
-          title_native: media.title.native,
-          synonyms: media.synonyms,
-          cover_url: media.coverImage.extraLarge,
-          cover_color: media.coverImage.color,
-          banner_url: media.bannerImage,
-          format: media.format,
-          status: STATUS_MAP[media.status] ?? 'finished',
-          source_type: sourceType(media, mangaEdge !== null),
-          start_date: fuzzyDate(media.startDate),
-          end_date: fuzzyDate(media.endDate),
-          season: media.season,
-          season_year: media.seasonYear,
-          total_episodes: media.episodes,
-          aired_episodes: aired || afgMax,
-          next_airing_at: media.nextAiringEpisode
-            ? new Date(media.nextAiringEpisode.airingAt * 1000).toISOString()
-            : null,
-          duration_min: media.duration,
-          average_score: media.averageScore,
-          mean_score: media.meanScore,
-          popularity: media.popularity,
-          favourites: media.favourites,
-          trending: media.trending,
-          genres: media.genres,
-          tags: media.tags,
-          studios: media.studios.nodes.map((s) => s.name),
-          is_adult: media.isAdult,
-          synopsis_html: media.description,
-          external_links: media.externalLinks,
-          manga_anilist_id: manga?.id ?? null,
-          manga_status: manga ? MANGA_STATUS_MAP[manga.status ?? ''] ?? 'publishing' : 'anime_only',
-          ...(await applyScope(`afg:${t.slug}`, {
-            total_volumes: manga?.volumes ?? null,
-            total_chapters: manga?.chapters ?? null,
-            manga_start_volume: null,
-            manga_start_chapter: null,
-          })),
-          search_text: searchTextFor(
-            [media.title.english, media.title.romaji, media.title.native, page.title],
-            media.synonyms,
-          ),
-          updated_at: new Date().toISOString(),
-        };
         const { error: sErr } = await db.from('series').upsert(row);
         if (sErr) throw new Error(sErr.message);
-        await registerIds(id, { anilist: media.id, mal: media.idMal, afg: t.slug });
+        await registerIds(id, { anilist: chain[0].id, mal: chain[0].idMal, afg: t.slug });
+        for (const m of chain) owned.add(m.id);
 
         await db.from('episodes').delete().eq('series_id', id);
         const epRows = page.episodes.map((e) => ({
@@ -207,20 +194,21 @@ async function main() {
           const { error } = await db.from('episodes').insert(epRows.slice(i, i + 500));
           if (error) throw new Error(error.message);
         }
-        await db.from('series_components').upsert({
-          series_id: id,
-          anilist_id: media.id,
-          season_order: 1,
-          episode_start: 1,
-          episode_end: media.episodes ?? (aired || null),
-          afl_slug: null,
-          afl_offset: 0,
-        });
+        await writeComponents(id, chain, null);
         await syncAnchors(runId, id, t.slug, page);
+
+        // identity + counts resolved: close any flags this page accumulated
+        await db
+          .from('ingest_flags')
+          .update({ status: 'dismissed', resolved_at: new Date().toISOString() })
+          .eq('series_key', `afg:${t.slug}`)
+          .eq('status', 'open');
 
         created++;
         counters.changed++;
-        actions.push(`CREATED ${id} (${epRows.length} eps, anilist ${media.id})`);
+        actions.push(
+          `CREATED ${id} (${epRows.length} eps, ${chain.length} season${chain.length > 1 ? 's' : ''}: ${chain.map((m) => m.id).join(' → ')})`,
+        );
       } catch (e) {
         actions.push(`${t.slug}: ERROR ${String(e).slice(0, 100)}`);
       }

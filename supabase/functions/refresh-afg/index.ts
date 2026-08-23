@@ -35033,12 +35033,14 @@ function parseAfgPage(html3) {
       const hasStart = /^\(?[\d:]+\)?$/.test(cells[1] ?? "");
       const titleCell = hasStart ? cells[2] : cells[1];
       const chaptersCell = hasStart ? cells[3] : cells[2];
+      const numberClass = $2(tr).find("td").first().attr("class") ?? "";
       episodes.push({
         number,
         title: titleCell ?? "",
         arc: currentArc,
         canonStart: hasStart ? cells[1].replace(/[()]/g, "") || null : null,
-        chapters: parseChapters(chaptersCell ?? "")
+        chapters: parseChapters(chaptersCell ?? ""),
+        type: /\bred\b/.test(numberClass) ? "filler" : /\bblue\b/.test(numberClass) ? "mixed" : "canon"
       });
     });
   });
@@ -35187,6 +35189,8 @@ async function run() {
       bySlug.set(s.id, s.id);
       bySlug.set(slugify(s.title), s.id);
     }
+    const { data: reg } = await db.from("series_external_ids").select("series_id, external_id").eq("source", "afg");
+    for (const r of reg ?? []) bySlug.set(r.external_id, r.series_id);
     for (const s of batch) {
       try {
         const res = await politeFetch(`${AFG_BASE}/anime/${s.slug}/`, {
@@ -35209,12 +35213,17 @@ async function run() {
         const { data: prev2 } = await db.from("ingest_afg_pages").select("content_hash").eq("slug", s.slug).maybeSingle();
         if (prev2?.content_hash === hash) {
           counters.unchanged++;
-          await db.from("ingest_afg_pages").update({ fetched_at: (/* @__PURE__ */ new Date()).toISOString() }).eq("slug", s.slug);
+          const { count: missingHtml } = await db.from("ingest_afg_pages").select("slug", { count: "exact", head: true }).eq("slug", s.slug).is("raw_html", null);
+          await db.from("ingest_afg_pages").update({
+            fetched_at: (/* @__PURE__ */ new Date()).toISOString(),
+            ...missingHtml ? { raw_html: res.html } : {}
+          }).eq("slug", s.slug);
           continue;
         }
         await db.from("ingest_afg_pages").upsert({
           slug: s.slug,
           raw,
+          raw_html: res.html,
           content_hash: hash,
           etag: res.etag,
           last_modified: res.lastModified,
