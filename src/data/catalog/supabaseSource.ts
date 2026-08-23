@@ -45,7 +45,7 @@ const SERIES_COLS =
   'id, title, title_native, cover_url, status, source_type, manga_status, manga_anilist_id, aired_episodes, total_episodes, total_volumes, total_chapters, manga_start_volume, manga_start_chapter, popularity, genres, synopsis_html, external_links, search_text, latest_known_chapters, mapping_mode';
 
 type EpisodeRow = { number: number; title: string; type: string; air_date: string | null };
-type AnchorRow = { episode: number; volume: number | null; chapter: number };
+type AnchorRow = { episode: number; volume: number | null; chapter: number; start_chapter: number | null };
 
 const STREAM_TOKENS: [RegExp, StreamingService][] = [
   [/crunchyroll/i, 'crunchyroll'],
@@ -101,11 +101,17 @@ const toEpisodes = (row: SeriesRow, eps: EpisodeRow[], anchors: AnchorRow[], bou
       // title_pending render keys off null
       title: e.title?.trim() ? e.title : null,
       type,
+      // chapters carries the REAL adapted span when the start is known
+      // ("119-127"); a bare end value means only the end-position is known
+      // and display derives the start (Sean's first-chapter ruling)
       mangaMapping:
         mappable && anchor
           ? {
               volume: anchor.volume ?? volumeFor(row, anchor.chapter, boundaries),
-              chapters: String(anchor.chapter),
+              chapters:
+                anchor.start_chapter != null && anchor.start_chapter !== anchor.chapter
+                  ? `${anchor.start_chapter}-${anchor.chapter}`
+                  : String(anchor.chapter),
             }
           : null,
       airDate: e.air_date ?? '',
@@ -190,7 +196,7 @@ async function allAnchors(seriesId: string): Promise<AnchorRow[]> {
   for (let from = 0; ; from += 1000) {
     const { data, error } = await supabase
       .from('chapter_anchors')
-      .select('episode, volume, chapter')
+      .select('episode, volume, chapter, start_chapter')
       .eq('series_id', seriesId)
       .order('episode')
       .range(from, from + 999);

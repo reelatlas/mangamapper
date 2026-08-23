@@ -279,7 +279,7 @@ in code (`scripts/ingest/`), and every violation flags rather than guesses:
 | **Bonus/fractional chapters: record, never drop (Sean 2026-08-23, the Vanitas lesson + amendment)** | a NON-INTEGER chapter in a source chart is a bonus/Memoire/Entracte entry (AFG listed Vanitas ep 5 as "8, 9, 10, 15.5"; max-take scraped 15.5 — Sean caught it). The derived POSITION anchor uses the highest MAINLINE integer — but the bonus association is NEVER silently dropped: deriveBonusChapters records every one as a fill-only graft annotation (asterisk_review → pending), because we must always know what content makes up an episode (possible "everything in this episode" UI later). A research-verified fractional anchor IS legal at the manual tier — sometimes the bonus is what the episode adapts. anchor_fractional_chapter audits DERIVED fractional anchors only | lib/afg.ts deriveAnchors + deriveBonusChapters / syncAnchors / audit-ui-truth |
 | **No degenerate component spans (2026-08-23, the Santen Sensou-hen lesson)** | a component with nothing aired holds a NULL episode span — never start > end (Tokyo Revengers' announced season was written 51-50). writeComponents guards; integrity_degenerate_span audits | lib/chain.ts writeComponents / audit-ui-truth |
 | **anime-only-canon ≠ anchor desert (2026-08-23, the Black Clover lesson)** | episodes typed anime-only-canon have no manga counterpart BY DESIGN — they never count toward anchor_gap_research (Black Clover 130-157 adapts ZERO chapters across 28 episodes; position holds at ch 228 until ep 158). The typing itself is research-ruled per episode (EPISODE_TYPE_OVERRIDES) | audit-ui-truth gap counter / EPISODE_TYPE_OVERRIDES |
-| **Episode display = FIRST chapter animated (Sean 2026-08-23)** | an episode row shows where it STARTS in the manga, never its end/mid point (Oshi no Ko ep 35 displays 119, not 127). Exception = the majority rule: when only scraps of a chapter open the episode, the majority-content chapter shows; a tie triggers a ruling. ANCHORS ARE UNCHANGED: chapter_anchors stays the END-POSITION instrument (interpolation, frontier, continue-from rest on it; scan verified all 4337 anchors share that semantics) — display derives start(ep) = min(end(ep), end(prevCanon)+1) in the mapping layer, which implements the majority rule by construction. Section headers keep TRUE coverage (start of first row → coverage end of last). Long-term: every chapter correlates to its episode (annotations + chart rows accumulate this); visually we anchor at starts for simplicity | src/lib/mapping.ts canonEpStartCh + buildEpisodeList |
+| **Episode display = FIRST chapter animated (Sean 2026-08-23)** | an episode row shows where it STARTS in the manga, never its end/mid point (Oshi no Ko ep 35 displays 119, not 127). Starts are REAL SOURCE DATA, not formula output: AFG chart rows list every chapter a row adapts — deriveAnchors captures the first mainline chapter into chapter_anchors.start_chapter on EVERY refresh (baked into lib + all four edges; 3888 anchors carry it), and research anchors populate it when a batch names the span (majority rule applied at research time when a span opens with a chapter tail; ties → ruling). The mapping-layer derivation min(end(ep), end(prevCanon)+1) is the FALLBACK for end-only anchors (MU pins, unseeded research rows) — it implements the majority rule by construction. chapter_anchors.chapter stays the END-POSITION instrument (interpolation, frontier, continue-from; scan verified all 4337 anchors share that semantics). The source layer emits the real span ("119-127") so display takes the first number; section headers keep TRUE coverage (start of first row → coverage end of last). Future research batches include start_chapter with their anchors. Long-term: every chapter correlates to its episode (spans + annotations accumulate this); visually we anchor at starts | lib/afg.ts deriveAnchors / syncAnchors / chapter_anchors.start_chapter / supabaseSource toEpisodes / mapping.ts canonEpStartCh |
 | **Continue-reading points (Sean 2026-08-23; UI deferred)** | where to RESUME READING after an episode is first-class data, distinct from display: default = anchor end + 1 (the end chapter itself when a partial annotation marks a mid-chapter stop); research-named exceptions (skips, grafts, mid-chapter endings) live in chapter_anchors.continue_chapter with the why in the note (9 seeded: JJK 47→138, Oshi 35→127, RAG 12→52 + 24→103, Dragon Maid 25→65, Seraph 24→42, Blue Exorcist 37→38, Food Wars 73→265, Vanitas 5→10). series.continue_from_chapter stays the series-level lever. When a point changes, update the column + note via a ruling record | chapter_anchors.continue_chapter / apply-continue-points.ts |
 | Dispositions | active / excluded / duplicate / merged rulings are durable data; backfill skips non-active | source_map |
 
@@ -690,18 +690,23 @@ Fixed weekly is correct.
    ruling_violation 0. Gintama (345-ep desert) deferred to a dedicated
    pass. Shonan watcher re-armed (24h, 30-min checks; AniList still
    down).
-27. ✅ **DISPLAY/CONTINUE SPLIT (2026-08-23, Sean's first-chapter ruling)**:
-   episode rows now display the FIRST chapter animated (start semantics,
-   majority rule built into the derivation) while anchors stay the
-   end-position instrument — one derivation path, no data rewrite.
-   Semantic scan of all 4337 anchors: end-semantics consistent (17
-   start-ish notes = false positives describing the NEXT episode).
-   Section headers keep true coverage ends. NEW
+27. ✅ **DISPLAY/CONTINUE SPLIT (2026-08-23, Sean's first-chapter ruling —
+   v2 after Sean's routing catch)**: episode rows display the FIRST
+   chapter animated. v1 derived starts by formula and MISSED anchored
+   rows (Oshi ep 35 still showed 127 — the exact-mapping branch
+   bypassed the derivation). v2 = Sean's correction: starts are DATA —
+   chapter_anchors.start_chapter (migration 20260825170000) captured
+   from AFG chart rows by deriveAnchors on every refresh (edges
+   redeployed; 3888 anchors backfilled via restage+rederive) + 27
+   research-anchor starts seeded from batch-8/9 span verdicts
+   (apply-start-chapters.ts). Source layer emits real spans
+   ("119-127"); display takes the first number on BOTH anchored and
+   estimated rows; formula = fallback for end-only anchors. Anchors
+   stay end-position instruments (scan: all 4337 consistent).
    chapter_anchors.continue_chapter (migration 20260825160000) stores
-   research-named continue-reading exceptions (9 seeded); default
-   derives end+1 / end-when-partial. UI surfacing deferred; the data
-   points are first-class now. Long-term goal logged: full per-chapter →
-   episode correlation, visual anchor at starts.
+   continue-reading exceptions (9 seeded; default end+1). UI surfacing
+   of continue points deferred; display fix live. Future batches
+   include start_chapter.
 21. ✅ **Consolidation pass 2 (2026-08-23, post-Kenshin)**: every write path
    swept against the day's rules — filterEpisodeRows (caps + type
    overrides) now in ALL five episode writers (resolve, stitched-guard,

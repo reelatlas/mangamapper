@@ -118,19 +118,28 @@ export function parseAfgPage(html: string): AfgPage {
 // Anchor derivation from a parsed page, with a monotonicity filter: chapters
 // never decrease as episodes advance, so any anchor below the running maximum
 // is page junk (AFG's Naruto page: ep 141 → "ch 21") and gets dropped.
-export function deriveAnchors(episodes: AfgEpisode[]): { episode: number; chapter: number; arc: string | null }[] {
+export function deriveAnchors(
+  episodes: AfgEpisode[],
+): { episode: number; chapter: number; startChapter: number; arc: string | null }[] {
   // the derived POSITION anchor uses the highest MAINLINE (integer) chapter
   // per row — a fractional value in the chart is a bonus/Memoire entry
   // (Vanitas ep-5 listed "8, 9, 10, 15.5"; taking the max scraped 15.5).
-  // Bonus chapters are NEVER silently dropped: deriveBonusChapters records
-  // them (Sean's ruling 2026-08-23), and a research-verified fractional
-  // anchor MAY be written at the manual tier when the bonus IS what the
-  // episode adapts.
-  const candidates: { episode: number; chapter: number; arc: string | null }[] = [];
+  // The row's FIRST mainline chapter is the episode's START — real source
+  // data (Sean's ruling 2026-08-23: display anchors at starts), captured
+  // here rather than re-derived by formula downstream. Bonus chapters are
+  // NEVER silently dropped: deriveBonusChapters records them, and a
+  // research-verified fractional anchor MAY be written at the manual tier
+  // when the bonus IS what the episode adapts.
+  const candidates: { episode: number; chapter: number; startChapter: number; arc: string | null }[] = [];
   for (const e of [...episodes].sort((a, b) => a.number - b.number)) {
     const mainline = e.chapters.filter((c) => Number.isInteger(c));
     if (!mainline.length) continue; // bonus-only episode: association recorded, anchor is research's call
-    candidates.push({ episode: e.number, chapter: Math.max(...mainline), arc: e.arc });
+    candidates.push({
+      episode: e.number,
+      chapter: Math.max(...mainline),
+      startChapter: Math.min(...mainline),
+      arc: e.arc,
+    });
   }
   // SPIKE FILTER: keep the longest non-decreasing chapter subsequence. A
   // stray value — divider-row digits merging into a row, a flash-forward

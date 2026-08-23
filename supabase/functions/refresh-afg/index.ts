@@ -35056,7 +35056,12 @@ function deriveAnchors(episodes) {
   for (const e of [...episodes].sort((a, b) => a.number - b.number)) {
     const mainline = e.chapters.filter((c) => Number.isInteger(c));
     if (!mainline.length) continue;
-    candidates.push({ episode: e.number, chapter: Math.max(...mainline), arc: e.arc });
+    candidates.push({
+      episode: e.number,
+      chapter: Math.max(...mainline),
+      startChapter: Math.min(...mainline),
+      arc: e.arc
+    });
   }
   if (candidates.length < 2) return candidates;
   const lis = new Array(candidates.length).fill(1);
@@ -35358,6 +35363,7 @@ async function syncAnchors(runId, seriesId, afgSlug, page) {
     episode: a.episode,
     volume: null,
     chapter: a.chapter,
+    start_chapter: a.startChapter,
     source: "afg",
     note: a.arc
   }));

@@ -272,6 +272,7 @@ export async function syncAnchors(
       episode: a.episode,
       volume: null,
       chapter: a.chapter,
+      start_chapter: a.startChapter,
       source: 'afg',
       note: a.arc,
     }));

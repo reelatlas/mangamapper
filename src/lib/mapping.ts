@@ -354,9 +354,15 @@ export const solvePosition = (
         return base({ state: 'run', driver: 'ep', ep, type, unit: ep, noManga: true });
       }
       if (exact?.mangaMapping) {
+        // position readout mirrors the episode list: START chapter (span's
+        // first number when the real span is known, derivation otherwise)
+        const first = parseInt(exact.mangaMapping.chapters.split(/[-,]/)[0], 10);
+        const hasSpan = /[-,]/.test(exact.mangaMapping.chapters);
+        const startNum = hasSpan && !Number.isNaN(first) ? first : canonEpStartCh(anime, mapping, ep);
         return base({
           state: 'run', driver: 'ep', ep, type, unit: ep,
-          vol: exact.mangaMapping.volume, ch: exact.mangaMapping.chapters,
+          vol: startNum !== null ? (chToVol(anime, r, startNum) ?? exact.mangaMapping.volume) : exact.mangaMapping.volume,
+          ch: startNum !== null ? String(startNum) : exact.mangaMapping.chapters,
         });
       }
       // estimated rows display the episode's START chapter (Sean's ruling)
@@ -473,9 +479,15 @@ export const buildEpisodeList = (anime: AnimeSeries, m: MappingSummary): Episode
     // filler/anime-only rows keep manga values null by design (— in the UI)
     if (type !== 'filler' && type !== 'anime-only-canon') {
       if (exact?.mangaMapping) {
-        vol = exact.mangaMapping.volume;
-        ch = exact.mangaMapping.chapters;
         end = lastChapterNumber(exact.mangaMapping.chapters);
+        // display the episode's START (Sean's first-chapter ruling): a span
+        // ("119-127") carries the real start as data; a bare end value
+        // falls back to the derivation
+        const first = parseInt(exact.mangaMapping.chapters.split(/[-,]/)[0], 10);
+        const hasSpan = /[-,]/.test(exact.mangaMapping.chapters);
+        const startNum = hasSpan && !Number.isNaN(first) ? first : canonEpStartCh(anime, m, ep);
+        ch = startNum !== null ? String(startNum) : exact.mangaMapping.chapters;
+        vol = startNum !== null ? (chToVol(anime, r, startNum) ?? exact.mangaMapping.volume) : exact.mangaMapping.volume;
       } else {
         const chNum = canonEpStartCh(anime, m, ep);
         vol = chNum !== null ? chToVol(anime, r, chNum) : null;
