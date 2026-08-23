@@ -413,9 +413,20 @@ Fixed weekly is correct.
    series' SCOPED totals, so scoped entries (Bleach 675v479, Berserk
    374v94) false-positive — fix belongs to the segment model (compare
    against the manga's own totals/family max).
-18. **Remaining triage** (all understood, none urgent): LN-instrument ruling
-   (item 16) · segment-model rulings (tail denominator fallback, handoff
-   pointers, universe-view bar — §13 sketch, Sean's go needed) · 3
+18. **UNRESOLVED — Sean 2026-08-24: "will not work for our model right now,
+   we need to figure that out": the D-Frag tail gap.** Every anchored series
+   whose manga is still PUBLISHING shows NO manga-only tail (buildMapping's
+   manga-ahead math accepts only AniList `total_chapters`, null while
+   publishing) while the card's denominator happily shows MU's
+   latest_known (D-Frag: ep 12 → ch 36, "of 182", tail absent). This is a
+   data-logic hole, not a display choice — the coverage-segment sketch
+   (§ above) holds the proposed fix (tail denominator falls back to
+   latest_known, labeled "as of latest published"), but it is NOT resolved
+   until worked through with Sean and built. Do not close this item on a
+   doc update.
+19. **Remaining triage** (all understood, none urgent): LN-instrument ruling
+   (item 16) · segment-model rulings (handoff pointers, universe-view bar —
+   sketch above, Sean's go needed) · 3
    unknown-coverage research cases (x, sgt-frog, outlaw-star) · genuinely
    page-less manga on Wikipedia (Zom 100, Gachiakuta, Nagatoro, MF Ghost…
    — permanent unless an alternative volume source lands; same keep-open vs
