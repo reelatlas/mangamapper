@@ -71,8 +71,27 @@ async function main() {
           .from('episodes')
           .select('*', { count: 'exact', head: true })
           .eq('series_id', s.id);
-        // candidate when AFG numbers past us, or fills interior gaps
-        if (stagedMax <= ourMax + 2 && (ourCount ?? 0) >= stagedRaw.episodes.length) continue;
+        // candidacy compares against the series' STRUCTURE (components /
+        // totals / aired), not the episodes table — a pre-stitch-aware
+        // expansion could hold AFG's full multi-season list against a
+        // single-season structure (Cuckoos 36 eps vs total 24), which the
+        // episode count alone can't see
+        const { data: comps } = await db
+          .from('series_components')
+          .select('episode_end')
+          .eq('series_id', s.id);
+        const covered = Math.max(
+          0,
+          ...(comps ?? []).map((c) => c.episode_end ?? 0),
+        );
+        const structure = Math.max(covered, s.aired_episodes ?? 0);
+        // extend only when AFG'S numbering outruns our structure — our own
+        // episodes exceeding it is the ruled AFL-extras class (Angel Beats
+        // OVAs, Kenshin 95-100), already accepted per-case; walking chains to
+        // "explain" extras grabs unrelated OVAs
+        const wantsExtend = stagedMax > structure + 2;
+        const wantsFill = stagedMax > ourMax + 2 || (ourCount ?? 0) < stagedRaw.episodes.length;
+        if (!wantsExtend && !wantsFill) continue;
 
         // fresh fetch: typed parser output + raw HTML guaranteed
         const res = await politeFetch(`${AFG_BASE}/anime/${reg.external_id}/`);
@@ -93,7 +112,7 @@ async function main() {
           changed_at: new Date().toISOString(),
         });
         const afgMax = page.episodes.reduce((m, e) => Math.max(m, e.number), 0);
-        if (afgMax <= ourMax + 2 && (ourCount ?? 0) >= page.episodes.length) continue;
+        if (afgMax <= structure + 2 && afgMax <= ourMax + 2 && (ourCount ?? 0) >= page.episodes.length) continue;
 
         // the AniList chain must independently confirm AFG's numbering
         const owned = await ownedAnilistIds(s.id);
