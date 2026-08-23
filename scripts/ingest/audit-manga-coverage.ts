@@ -78,6 +78,16 @@ async function main() {
             .from('series')
             .update({ latest_known_chapters: mu.latest_chapter, updated_at: new Date().toISOString() })
             .eq('id', s.id);
+          // edition sanity: a finished manga whose MU chapter count diverges
+          // far from AniList's (beyond the specials margin) means the two
+          // sources track different editions — review, never auto-pick
+          if (s.total_chapters && mu.latest_chapter < s.total_chapters * 0.8) {
+            await fileFlagOnce(runId, s.id, 'mangaupdates', 'count_mismatch', {
+              anilistCount: s.total_chapters,
+              muLatestChapter: mu.latest_chapter,
+              note: 'MU chapter numbering diverges >20% from AniList count — likely different editions; which is the reading edition?',
+            });
+          }
         }
       }
       const result = await applyMuFrontier(

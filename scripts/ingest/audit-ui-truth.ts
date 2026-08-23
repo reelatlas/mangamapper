@@ -67,8 +67,10 @@ async function main() {
   for (const row of series) {
     const e = epsBy.get(row.id) ?? { max: 0, lastCanon: 0, count: 0 };
     const covered = Math.max(row.total_episodes ?? 0, compEnd.get(row.id) ?? 0, row.aired_episodes ?? 0);
-    if (e.max > covered + 2 || (row.total_episodes && e.max > row.total_episodes + 2)) {
-      classes.integrity_eps_beyond_total.push(`${row.id} (eps→${e.max}, total=${row.total_episodes}, aired=${row.aired_episodes})`);
+    // any overshoot lists (reconcile-structure resolves what the chain can
+    // confirm; what remains here = ruled extras + accepted 1-2 tolerance)
+    if (e.max > covered) {
+      classes.integrity_eps_beyond_total.push(`${row.id} (eps→${e.max}, structure=${covered})`);
     }
     const hasSource = row.source_type !== 'original' && row.manga_status !== 'anime_only';
     if (!hasSource) { classes.no_source.push(row.id); continue; }

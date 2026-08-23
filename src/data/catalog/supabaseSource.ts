@@ -126,11 +126,20 @@ const toAnimeSeries = (row: SeriesRow, rank: number, episodes: Episode[], publis
   // ongoing manga: AniList nulls chapter totals until completion — the
   // MangaUpdates-sourced latest published chapter stands in (semantically
   // LATEST KNOWN, not total; cross-check tier via the MangaDex id bridge)
-  // DISPLAY total only: null while the manga publishes (the card renders the
-  // em dash — "no final chapter yet", Sean 2026-08-24). The EFFECTIVE total
-  // (latest_known fallback) lives in buildMapping's tail math and reaches the
-  // strip via mangaAheadChapters — never through this field.
-  totalChapters: row.total_chapters,
+  // DISPLAY total: null while the manga publishes (the card renders the em
+  // dash — "no final chapter yet", Sean 2026-08-24). For finished manga,
+  // AniList's value is a COUNT (mid-run specials included — AoT says 141);
+  // the last chapter NUMBER is MU's latest (139) — show that, but only when
+  // the two agree within a same-edition band (a divergent MU edition like
+  // Space Cobra's 28-vs-156 must not hijack the display; those flag in the
+  // audit). The EFFECTIVE total for tail math lives in buildMapping.
+  totalChapters:
+    row.total_chapters != null &&
+    row.latest_known_chapters != null &&
+    row.latest_known_chapters < row.total_chapters &&
+    row.latest_known_chapters >= row.total_chapters * 0.8
+      ? row.latest_known_chapters
+      : row.total_chapters,
   mangaStartVolume: row.manga_start_volume,
   mangaStartChapter: row.manga_start_chapter,
   episodes,
