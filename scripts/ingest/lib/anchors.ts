@@ -145,6 +145,16 @@ export async function applyContinua(
     note: `AFG continua table: "${continua.text.slice(0, 180)}"`,
   });
   if (error) throw new Error(`applyContinua(${s.id}): ${error.message}`);
+  // three-numbers model (2026-08-23): the explicit continue-from is data of
+  // its own (may skip recaps or backtrack — never derived as frontier+1).
+  // Continua owns it ONLY where it owns the frontier: where manual/wiki
+  // rule (kept_curated above), research rules the continue-point too.
+  if (continua.continueChapter !== null) {
+    await db
+      .from('series')
+      .update({ continue_from_chapter: continua.continueChapter, updated_at: new Date().toISOString() })
+      .eq('id', s.id);
+  }
 
   if (s.manga_anilist_id && continua.continueVolume !== null && continua.volumeStart !== null && continua.volumeEnd !== null) {
     const { data: existing } = await db

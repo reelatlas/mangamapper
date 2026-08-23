@@ -267,6 +267,8 @@ in code (`scripts/ingest/`), and every violation flags rather than guesses:
 | **Chapter-floor invariant (Sean 2026-08-23, symmetric to the episode floor)** | the chapter space can never be SMALLER than what confirmed anchors reach: latest_known writes reject an MU number below the non-MU anchor max (Kakegurui's "9" was a volume count against ch-55 anchors). Fallback: MU's status string often carries the real chapter count ("67 Chapters (Ongoing)") — bestLatestKnown tries release-derived first, status-parse second, both behind band + floor; failures null-heal + flag | bestLatestKnown / muStatusChapterCount (lib/mu-frontier), all three latest_known writers |
 | **Boundary-aware volumes everywhere** | EVERY chapter→volume readout prefers real print boundaries (volume_boundaries), ratio only as boundary-less fallback — estimated episode rows must never contradict curated anchor volumes (Kenshin ep-29 showed ratio vol 6 beside the anchor's real vol 7). Boundaries ride on AnimeSeries.volumeBoundaries into the client curve | chToVol (src/lib/mapping.ts) + toAnimeSeries (supabaseSource) |
 | **AFG continua source (Sean's full-source ruling 2026-08-23)** | every AFG page — chartless all-canon shows included — carries a structured continua-manga table: end-of-anime frontier (episode → chapter equivalence), continue-from chapter, and that volume's collected range (a real volume boundary). Parsed by parseContinua (lib/afg), staged in ingest_afg_pages.raw.continua, applied via applyContinua (lib/anchors) behind the FULL gate stack: identity guard (the heading names the series, entity-decoded + year-suffix-stripped — AFG template bugs are REAL: Cuckoos' page carried Dandadan's table → withheld + flag), sanity band (continue-from is READING GUIDANCE, not a frontier restatement — AFG legitimately says "skip ahead"/"restart earlier"; only a >40-ch gap marks the parse suspect), chapter-space gate, episode sanity. PRECEDENCE at the one-anchor-per-episode PK: manual/wiki never overwritten (continua cross-CHECKS them; >1 ch disagreement flags), chart-'afg'/mu yield to the curated continua (>2 ch disagreement still flags). Boundaries write absent-only; Wikipedia disagreement flags. Wikipedia + manual research stay CO-VERIFIERS everywhere — AFG coverage never limits the other sources (Sean, verbatim). Freshness: refresh-afg applies inline per page refresh; afg-continua-apply.ts sweeps for backfills/rule-fix healing; afg-continua-backfill.ts is the fetch campaign | parseContinua (lib/afg) / applyContinua (lib/anchors) / refresh-afg / afg-continua-* scripts |
+| **Asterisk model (Sean's ruling 2026-08-23)** | non-linear adaptation facts become first-class per-episode data in `episode_annotations` (kind: divergence / partial / graft / rearranged / side_story / loose_parallel / abridged + chapters + cited note). ANY annotated episode renders an asterisk in the UI — representation is a later design pass, the data lands now. This IS the side-story notation's data model (Kenshin 95-98 = side_story 'pilot one-shots'). Research findings populate it; never guessed | episode_annotations table / apply-research batches |
+| **Three-numbers model (research finding 2026-08-23)** | a finale is often non-linear, so three DIFFERENT quantities exist: the frontier (anchors), `series.max_adapted_chapter` (highest chapter touched when ≠ frontier — Kowloon reaches 82 in ep 11 while its finale sits on 79), and `series.continue_from_chapter` (where to actually resume — may skip recaps or backtrack; AFG continua parses it explicitly, refreshed daily; continua owns it only where it owns the frontier — manual rules both otherwise) | series columns + applyContinua + research batches |
 | Dispositions | active / excluded / duplicate / merged rulings are durable data; backfill skips non-active | source_map |
 
 **Hard-won learnings** (why some rules exist): AFL's Drupal is corrupt since
@@ -527,12 +529,12 @@ Fixed weekly is correct.
       present). LESSON (iron-clad): any component consuming episode-level
       data must consume the HYDRATED series — the shallow list item is for
       list rendering only. THEN:
-   b. **Side-story mapping notation (ruling needed)**: Kenshin eps 95-98
-      adapt the PILOT ONE-SHOTS — content outside mainline chapter numbering.
-      Current beyond-frontier rule nulls them (over-correction per Sean —
-      canon episodes should show what they correspond to). Needs a notation
-      (e.g., mapping to named side content, not a mainline ch number) —
-      design + data model with Sean.
+   b. **Side-story notation — DATA MODEL SHIPPED 2026-08-23** (the asterisk
+      model, §10): Kenshin 95-98 carry side_story annotations ('pilot
+      one-shots'); Claymore 21-23 loose_parallel; Kowloon 12-13 divergence;
+      etc. REMAINING: the UI representation pass (how the asterisk renders
+      and expands) — designed with Sean during the loose-adaptation /
+      annotation UI phase.
    c. **Anchor-gap research program (Sean approved; REFRAMED 2026-08-23 by
       the continua ruling)**: first pass = AFG continua extraction (rule-
       based, gated — see §10) supplies END-frontiers catalog-wide; Wikipedia

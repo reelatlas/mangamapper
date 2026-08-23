@@ -99,6 +99,10 @@ export function applyCommunityCap(
 //   chapter counterpart BY DESIGN, not mapping-pending null).
 export const EPISODE_TYPE_OVERRIDES: Record<string, Record<number, string>> = {
   x: { 21: 'anime-only-canon', 22: 'anime-only-canon', 23: 'anime-only-canon', 24: 'anime-only-canon' },
+  //   claymore 24-26: fully anime-original ending (Madhouse outran the
+  //   manga) — research verdict 2026-08-23 (AFG + wheredoestheanimeleaveoff
+  //   + sportskeeda), Sean sign-off
+  claymore: { 24: 'anime-only-canon', 25: 'anime-only-canon', 26: 'anime-only-canon' },
 };
 
 // Per-series episode-row rulings, applied by EVERY episode writer: community

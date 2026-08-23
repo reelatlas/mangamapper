@@ -97,7 +97,9 @@ const toEpisodes = (row: SeriesRow, eps: EpisodeRow[], anchors: AnchorRow[], bou
     const mappable = type === 'canon' || type === 'mixed';
     return {
       number: e.number,
-      title: e.title,
+      // DB uses '' for pending titles (NOT NULL column); the UI's
+      // title_pending render keys off null
+      title: e.title?.trim() ? e.title : null,
       type,
       mangaMapping:
         mappable && anchor
