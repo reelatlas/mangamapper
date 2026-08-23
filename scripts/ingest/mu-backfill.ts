@@ -16,7 +16,7 @@
 import { db, startRun, finishRun, fileFlagOnce } from './lib/db';
 import { bridgeViaMangaDex, fetchMuSeries, muHash } from './lib/mangaupdates';
 import { contentHash } from './lib/hash';
-import { applyMuFrontier, crossCheckMangaStatus } from './lib/mu-frontier';
+import { applyMuFrontier, crossCheckMangaStatus, sameEditionLatest } from './lib/mu-frontier';
 
 const sleep = (ms: number) => new Promise((r) => setTimeout(r, ms));
 
@@ -94,17 +94,16 @@ async function main() {
           counters.changed++;
         }
 
-        if (mu.latest_chapter && mu.latest_chapter > 0 && mu.latest_chapter < 10000) {
-          // MU's last chapter NUMBER: the publishing frontier for ongoing
-          // manga AND the number-space end for finished ones (AniList totals
-          // are a COUNT that includes mid-run specials — AoT 141 vs 139)
-          for (const sid of t.seriesIds) {
-            await db.from('series').update({ latest_known_chapters: mu.latest_chapter, updated_at: new Date().toISOString() }).eq('id', sid);
-          }
-          actions.push(`${t.title}: latest ch ${mu.latest_chapter} ("${mu.status}")`);
-        } else {
-          actions.push(`${t.title}: MU has no usable latest_chapter`);
+        // MU's last chapter NUMBER (publishing frontier / number-space end
+        // for finished manga), same-edition band guarded per series
+        let wrote = false;
+        for (const sid of t.seriesIds) {
+          const { data: st } = await db.from('series').select('total_chapters').eq('id', sid).single();
+          const editionLatest = sameEditionLatest(mu.latest_chapter, st?.total_chapters);
+          await db.from('series').update({ latest_known_chapters: editionLatest, updated_at: new Date().toISOString() }).eq('id', sid);
+          wrote = wrote || editionLatest !== null;
         }
+        actions.push(wrote ? `${t.title}: latest ch ${mu.latest_chapter} ("${mu.status}")` : `${t.title}: MU latest unusable/out-of-edition ("${mu.status}")`);
 
         // inline upkeep (new-source checklist): frontier + status cross-check
         // land WITH the pull, never in a separate step someone must remember

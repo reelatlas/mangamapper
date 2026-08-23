@@ -66,6 +66,20 @@ export async function applyMuFrontier(
   return error ? 'no_coverage' : 'applied';
 }
 
+// MU's latest_chapter is release-record-derived: reliable for currently
+// publishing/scanlated manga, GARBAGE for old completed ones (Dragon Ball
+// came back "149" of 519). Same-edition band: accept only when it reaches at
+// least 80% of AniList's count (when a count exists) — beyond that the two
+// sources track different editions; callers flag, never write.
+export function sameEditionLatest(
+  muLatest: number | null | undefined,
+  anilistCount: number | null | undefined,
+): number | null {
+  if (!muLatest || muLatest <= 0 || muLatest >= 10000) return null;
+  if (anilistCount != null && muLatest < anilistCount * 0.8) return null;
+  return muLatest;
+}
+
 // MU's publication status: the explicit `completed` boolean when present
 // (newer staged rows), else the status string ("182 Chapters (Ongoing)",
 // "74 Volumes (Complete)") mapped onto our manga_status vocabulary.

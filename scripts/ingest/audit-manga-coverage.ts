@@ -9,7 +9,7 @@
 //   npx tsx --env-file=.env.ingest scripts/ingest/audit-manga-coverage.ts
 
 import { db, startRun, finishRun, fileFlagOnce } from './lib/db';
-import { applyMuFrontier, crossCheckMangaStatus } from './lib/mu-frontier';
+import { applyMuFrontier, crossCheckMangaStatus, sameEditionLatest } from './lib/mu-frontier';
 
 interface MuRaw {
   latest_chapter: number | null;
@@ -75,21 +75,20 @@ async function main() {
       const mu = muByManga.get(s.manga_anilist_id);
       if (mu) {
         await crossCheckMangaStatus(runId, s.id, s.manga_status, mu);
-        if (mu.latest_chapter && mu.latest_chapter > 0 && mu.latest_chapter < 10000) {
-          await db
-            .from('series')
-            .update({ latest_known_chapters: mu.latest_chapter, updated_at: new Date().toISOString() })
-            .eq('id', s.id);
-          // edition sanity: a finished manga whose MU chapter count diverges
-          // far from AniList's (beyond the specials margin) means the two
-          // sources track different editions — review, never auto-pick
-          if (s.total_chapters && mu.latest_chapter < s.total_chapters * 0.8) {
-            await fileFlagOnce(runId, s.id, 'mangaupdates', 'count_mismatch', {
-              anilistCount: s.total_chapters,
-              muLatestChapter: mu.latest_chapter,
-              note: 'MU chapter numbering diverges >20% from AniList count — likely different editions; which is the reading edition?',
-            });
-          }
+        const editionLatest = sameEditionLatest(mu.latest_chapter, s.total_chapters);
+        // same-edition band: write the number-space end only when MU tracks
+        // the same edition; band failures null-heal (a bad write from before
+        // the guard must not linger) and flag for review
+        await db
+          .from('series')
+          .update({ latest_known_chapters: editionLatest, updated_at: new Date().toISOString() })
+          .eq('id', s.id);
+        if (mu.latest_chapter && editionLatest === null) {
+          await fileFlagOnce(runId, s.id, 'mangaupdates', 'count_mismatch', {
+            anilistCount: s.total_chapters,
+            muLatestChapter: mu.latest_chapter,
+            note: 'MU chapter numbering diverges >20% from AniList count — likely different editions (or release-derived garbage on an old manga); which is the reading edition?',
+          });
         }
       }
       const result = await applyMuFrontier(

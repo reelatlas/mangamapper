@@ -10,7 +10,7 @@
 import { db, startRun, finishRun } from '../../../scripts/ingest/lib/db';
 import { fetchMuSeries, muHash } from '../../../scripts/ingest/lib/mangaupdates';
 import { contentHash } from '../../../scripts/ingest/lib/hash';
-import { applyMuFrontier, crossCheckMangaStatus } from '../../../scripts/ingest/lib/mu-frontier';
+import { applyMuFrontier, crossCheckMangaStatus, sameEditionLatest } from '../../../scripts/ingest/lib/mu-frontier';
 
 declare const Deno: {
   env: { get(k: string): string | undefined };
@@ -59,12 +59,13 @@ async function run() {
           .select('id, aired_episodes, total_chapters, manga_start_chapter, manga_status')
           .eq('manga_anilist_id', row.manga_anilist_id);
         for (const s of linked ?? []) {
-          if (mu.latest_chapter && mu.latest_chapter > 0 && mu.latest_chapter < 10000) {
-            await db
-              .from('series')
-              .update({ latest_known_chapters: mu.latest_chapter, updated_at: new Date().toISOString() })
-              .eq('id', s.id);
-          }
+          await db
+            .from('series')
+            .update({
+              latest_known_chapters: sameEditionLatest(mu.latest_chapter, s.total_chapters),
+              updated_at: new Date().toISOString(),
+            })
+            .eq('id', s.id);
           const { data: epTop } = await db.from('chapter_anchors').select('episode').eq('series_id', s.id).neq('source', 'mu').order('episode', { ascending: false }).limit(1);
           const { data: chTop } = await db.from('chapter_anchors').select('chapter').eq('series_id', s.id).neq('source', 'mu').order('chapter', { ascending: false }).limit(1);
           await crossCheckMangaStatus(runId, s.id, s.manga_status, mu);
