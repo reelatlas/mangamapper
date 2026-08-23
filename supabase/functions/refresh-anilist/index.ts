@@ -20380,9 +20380,15 @@ function applyCommunityCap(seriesId, row) {
   if (row.aired_episodes != null) row.aired_episodes = Math.min(row.aired_episodes, o.cap);
   if (row.total_episodes != null) row.total_episodes = Math.min(row.total_episodes, o.cap);
 }
+var EPISODE_TYPE_OVERRIDES = {
+  x: { 21: "anime-only-canon", 22: "anime-only-canon", 23: "anime-only-canon", 24: "anime-only-canon" }
+};
 var filterEpisodeRows = (seriesId, rows) => {
   const o = COMMUNITY_COUNT_OVERRIDES[seriesId];
-  return o ? rows.filter((r) => r.number <= o.cap) : rows;
+  const capped = o ? rows.filter((r) => r.number <= o.cap) : rows;
+  const types = EPISODE_TYPE_OVERRIDES[seriesId];
+  if (!types) return capped;
+  return capped.map((r) => types[r.number] && "type" in r ? { ...r, type: types[r.number] } : r);
 };
 function applyEpisodeFloor(seriesId, row, epMax) {
   if (!epMax) return;

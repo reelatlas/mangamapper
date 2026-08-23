@@ -20327,7 +20327,7 @@ function parseCoverageAll(text) {
   const ep = pairs.length === 1 ? text.match(/EP\.?\s*(\d+)/i) : null;
   return { pairs, explicitEp: ep ? Number(ep[1]) : null };
 }
-async function applyMuFrontier(s, muEnd, nonMuMaxEp, nonMuMaxCh) {
+async function applyMuFrontier(runId, s, muEnd, nonMuMaxEp, nonMuMaxCh) {
   await db.from("chapter_anchors").delete().eq("series_id", s.id).eq("source", "mu");
   const anchorsFresh = nonMuMaxEp !== void 0 && nonMuMaxEp >= (s.aired_episodes ?? 0) - 12;
   if (anchorsFresh) return "skipped_fresh";
@@ -20338,6 +20338,16 @@ async function applyMuFrontier(s, muEnd, nonMuMaxEp, nonMuMaxCh) {
   if (!inScope.length) return "no_coverage";
   const coverage = inScope.reduce((a, b) => b.chapter > a.chapter ? b : a);
   if (coverage.chapter <= (nonMuMaxCh ?? 0)) return "no_progress";
+  const { data: srow } = await db.from("series").select("latest_known_chapters").eq("id", s.id).maybeSingle();
+  const spaceMax = Math.max(s.total_chapters ?? 0, srow?.latest_known_chapters ?? 0);
+  if (spaceMax > 0 && coverage.chapter > spaceMax + 10) {
+    await fileFlagOnce(runId, s.id, "mangaupdates", "count_mismatch", {
+      muCoverageChapter: coverage.chapter,
+      spaceMax,
+      note: "MU coverage pin exceeds this entry's chapter space \u2014 partial structure (unstitched seasons?) or edition mismatch; frontier withheld"
+    });
+    return "out_of_space";
+  }
   const episode = explicitEp && explicitEp <= s.aired_episodes ? explicitEp : s.aired_episodes;
   const { error } = await db.from("chapter_anchors").upsert({
     series_id: s.id,
@@ -20349,10 +20359,18 @@ async function applyMuFrontier(s, muEnd, nonMuMaxEp, nonMuMaxCh) {
   });
   return error ? "no_coverage" : "applied";
 }
-function sameEditionLatest(muLatest, anilistCount) {
+function sameEditionLatest(muLatest, anilistCount, anchorFloorCh = 0) {
   if (!muLatest || muLatest <= 0 || muLatest >= 1e4) return null;
   if (anilistCount != null && muLatest < anilistCount * 0.8) return null;
+  if (anchorFloorCh > 0 && muLatest < anchorFloorCh) return null;
   return muLatest;
+}
+function muStatusChapterCount(mu) {
+  const m = /(\d+)\s+Chapters?\b/i.exec(mu.status ?? "");
+  return m ? Number(m[1]) : null;
+}
+function bestLatestKnown(mu, anilistCount, anchorFloorCh = 0) {
+  return sameEditionLatest(mu.latest_chapter, anilistCount, anchorFloorCh) ?? sameEditionLatest(muStatusChapterCount(mu), anilistCount, anchorFloorCh);
 }
 function muPublicationStatus(mu) {
   if (mu.completed === true) return "finished";
@@ -20404,14 +20422,14 @@ async function run() {
         counters.changed++;
         const { data: linked } = await db.from("series").select("id, aired_episodes, total_chapters, manga_start_chapter, manga_status").eq("manga_anilist_id", row.manga_anilist_id);
         for (const s of linked ?? []) {
-          await db.from("series").update({
-            latest_known_chapters: sameEditionLatest(mu.latest_chapter, s.total_chapters),
-            updated_at: (/* @__PURE__ */ new Date()).toISOString()
-          }).eq("id", s.id);
           const { data: epTop } = await db.from("chapter_anchors").select("episode").eq("series_id", s.id).neq("source", "mu").order("episode", { ascending: false }).limit(1);
           const { data: chTop } = await db.from("chapter_anchors").select("chapter").eq("series_id", s.id).neq("source", "mu").order("chapter", { ascending: false }).limit(1);
+          await db.from("series").update({
+            latest_known_chapters: bestLatestKnown(mu, s.total_chapters, chTop?.[0]?.chapter ?? 0),
+            updated_at: (/* @__PURE__ */ new Date()).toISOString()
+          }).eq("id", s.id);
           await crossCheckMangaStatus(runId, s.id, s.manga_status, mu);
-          await applyMuFrontier(s, mu.anime?.end ?? null, epTop?.[0]?.episode, chTop?.[0]?.chapter);
+          await applyMuFrontier(runId, s, mu.anime?.end ?? null, epTop?.[0]?.episode, chTop?.[0]?.chapter);
         }
       } catch (e) {
         notes.push(`mu:${row.mu_series_id}: ${String(e).slice(0, 100)}`);

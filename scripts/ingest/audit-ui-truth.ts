@@ -61,6 +61,7 @@ async function main() {
   const classes: Record<string, string[]> = {
     integrity_eps_beyond_total: [], integrity_total_beyond_eps: [], integrity_double_claimed: [],
     special_numbered_unreviewed: [], anchor_gap_research: [], frontier_tail_null: [],
+    anchor_nonmonotonic: [], anchor_beyond_chapter_space: [],
     no_source: [], ok_full: [], ok_no_volume: [], ok_loose: [],
     pending_airing_no_anchor: [], pending_finished_no_totals: [], pending_no_canon: [], pending_other: [],
   };
@@ -95,6 +96,37 @@ async function main() {
     }
     for (const [aid, owners] of claims) {
       if (owners.size > 1) classes.integrity_double_claimed.push(`anilist ${aid} ← ${[...owners].join(' AND ')}`);
+    }
+  }
+  // non-monotonic anchor sequences (Sean 2026-08-23): confirmed chapters may
+  // legitimately jump BACK at a later episode (adaptation reorder) — the
+  // display now renders them as stored. Each hit here is therefore either
+  // real flow (fine, review once) or numbering-space junk that slipped the
+  // write-time chapter-space gate (Boruto's ch-710 class) — ask Sean.
+  // Beyond-chapter-space anchors are flagged separately: an anchor chapter
+  // past the series' own manga space is junk by definition.
+  {
+    const bySeries = new Map<string, any[]>();
+    for (const a of anchors) {
+      if (!bySeries.has(a.series_id)) bySeries.set(a.series_id, []);
+      bySeries.get(a.series_id)!.push(a);
+    }
+    const spaceOf = new Map(series.map((s: any) => [s.id, Math.max(s.total_chapters ?? 0, s.latest_known_chapters ?? 0)]));
+    for (const [sid, list] of bySeries) {
+      list.sort((x, y) => x.episode - y.episode);
+      for (let i = 1; i < list.length; i++) {
+        if (list[i].chapter < list[i - 1].chapter) {
+          classes.anchor_nonmonotonic.push(
+            `${sid}: ep ${list[i - 1].episode}→ch${list[i - 1].chapter} then ep ${list[i].episode}→ch${list[i].chapter} — real reorder or junk? (ask Sean)`,
+          );
+        }
+      }
+      const space = spaceOf.get(sid) ?? 0;
+      for (const a of list) {
+        if (space > 0 && a.chapter > space + 10) {
+          classes.anchor_beyond_chapter_space.push(`${sid}: ep ${a.episode}→ch${a.chapter} exceeds manga space (${space})`);
+        }
+      }
     }
   }
   const lightNovel: string[] = [];

@@ -16,7 +16,7 @@
 import { db, startRun, finishRun, fileFlagOnce } from './lib/db';
 import { bridgeViaMangaDex, fetchMuSeries, muHash } from './lib/mangaupdates';
 import { contentHash } from './lib/hash';
-import { applyMuFrontier, crossCheckMangaStatus, sameEditionLatest } from './lib/mu-frontier';
+import { applyMuFrontier, bestLatestKnown, crossCheckMangaStatus } from './lib/mu-frontier';
 
 const sleep = (ms: number) => new Promise((r) => setTimeout(r, ms));
 
@@ -94,19 +94,12 @@ async function main() {
           counters.changed++;
         }
 
-        // MU's last chapter NUMBER (publishing frontier / number-space end
-        // for finished manga), same-edition band guarded per series
+        // inline upkeep (new-source checklist): latest_known + frontier +
+        // status cross-check land WITH the pull, never in a separate step.
+        // latest_known: release-derived number first, status-string chapter
+        // count fallback — same-edition band + confirmed-anchor chapter
+        // floor (Kakegurui's "9" was a volume count against ch-55 anchors)
         let wrote = false;
-        for (const sid of t.seriesIds) {
-          const { data: st } = await db.from('series').select('total_chapters').eq('id', sid).single();
-          const editionLatest = sameEditionLatest(mu.latest_chapter, st?.total_chapters);
-          await db.from('series').update({ latest_known_chapters: editionLatest, updated_at: new Date().toISOString() }).eq('id', sid);
-          wrote = wrote || editionLatest !== null;
-        }
-        actions.push(wrote ? `${t.title}: latest ch ${mu.latest_chapter} ("${mu.status}")` : `${t.title}: MU latest unusable/out-of-edition ("${mu.status}")`);
-
-        // inline upkeep (new-source checklist): frontier + status cross-check
-        // land WITH the pull, never in a separate step someone must remember
         for (const sid of t.seriesIds) {
           const { data: srow } = await db
             .from('series')
@@ -116,9 +109,13 @@ async function main() {
           if (!srow) continue;
           const { data: epTop } = await db.from('chapter_anchors').select('episode').eq('series_id', sid).neq('source', 'mu').order('episode', { ascending: false }).limit(1);
           const { data: chTop } = await db.from('chapter_anchors').select('chapter').eq('series_id', sid).neq('source', 'mu').order('chapter', { ascending: false }).limit(1);
+          const latest = bestLatestKnown(mu, srow.total_chapters, chTop?.[0]?.chapter ?? 0);
+          await db.from('series').update({ latest_known_chapters: latest, updated_at: new Date().toISOString() }).eq('id', sid);
+          wrote = wrote || latest !== null;
           await crossCheckMangaStatus(runId, sid, srow.manga_status, mu);
-          await applyMuFrontier(srow, mu.anime?.end ?? null, epTop?.[0]?.episode, chTop?.[0]?.chapter);
+          await applyMuFrontier(runId, srow, mu.anime?.end ?? null, epTop?.[0]?.episode, chTop?.[0]?.chapter);
         }
+        actions.push(wrote ? `${t.title}: latest ch ("${mu.status}")` : `${t.title}: MU latest unusable/out-of-edition ("${mu.status}")`);
       } catch (e) {
         actions.push(`${t.title}: ERROR ${String(e).slice(0, 100)}`);
       }

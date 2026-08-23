@@ -35139,6 +35139,18 @@ async function syncAnchors(runId, seriesId, afgSlug, page) {
     });
     return { anchors: 0, withheld: true };
   }
+  const { data: chapterSpace } = await db.from("series").select("total_chapters, latest_known_chapters").eq("id", seriesId).maybeSingle();
+  const spaceMax = Math.max(chapterSpace?.total_chapters ?? 0, chapterSpace?.latest_known_chapters ?? 0);
+  const maxAnchorCh = anchors.reduce((m, a) => Math.max(m, a.chapter), 0);
+  if (spaceMax > 0 && maxAnchorCh > spaceMax + 10) {
+    await fileFlagOnce(runId, afgSlug, "afg", "parse_integrity", {
+      seriesId,
+      maxAnchorCh,
+      spaceMax,
+      note: "AFG chapters exceed this series' own manga space \u2014 franchise-continuous numbering suspected; anchors withheld"
+    });
+    return { anchors: 0, withheld: true };
+  }
   await db.from("chapter_anchors").delete().eq("series_id", seriesId).eq("source", "afg");
   const rows = anchors.map((a) => ({
     series_id: seriesId,

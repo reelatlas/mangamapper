@@ -9,7 +9,7 @@
 //   npx tsx --env-file=.env.ingest scripts/ingest/audit-manga-coverage.ts
 
 import { db, startRun, finishRun, fileFlagOnce } from './lib/db';
-import { applyMuFrontier, crossCheckMangaStatus, sameEditionLatest } from './lib/mu-frontier';
+import { applyMuFrontier, bestLatestKnown, crossCheckMangaStatus } from './lib/mu-frontier';
 
 interface MuRaw {
   latest_chapter: number | null;
@@ -75,10 +75,14 @@ async function main() {
       const mu = muByManga.get(s.manga_anilist_id);
       if (mu) {
         await crossCheckMangaStatus(runId, s.id, s.manga_status, mu);
-        const editionLatest = sameEditionLatest(mu.latest_chapter, s.total_chapters);
-        // same-edition band: write the number-space end only when MU tracks
-        // the same edition; band failures null-heal (a bad write from before
-        // the guard must not linger) and flag for review
+        const editionLatest = bestLatestKnown(mu, s.total_chapters, chapterMax.get(s.id) ?? 0);
+        // same-edition band + confirmed-anchor chapter floor: write the
+        // number-space end only when MU tracks the same edition AND the
+        // number reaches at least the confirmed anchors (release-derived
+        // "latest" is sometimes a volume count — Kakegurui's "9"); the
+        // status-string chapter count stands in when the release number
+        // fails. Failures null-heal (a bad write from before the guard must
+        // not linger) and flag for review
         await db
           .from('series')
           .update({ latest_known_chapters: editionLatest, updated_at: new Date().toISOString() })
@@ -92,6 +96,7 @@ async function main() {
         }
       }
       const result = await applyMuFrontier(
+        runId,
         { id: s.id, aired_episodes: s.aired_episodes, total_chapters: s.total_chapters, manga_start_chapter: s.manga_start_chapter },
         mu?.anime?.end ?? null,
         anchorMax.get(s.id),

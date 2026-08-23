@@ -39,6 +39,29 @@ export async function syncAnchors(
     return { anchors: 0, withheld: true };
   }
 
+  // CHAPTER-SPACE gate (Sean 2026-08-23, the Boruto ch-710 class): an AFG
+  // page charted in franchise-continuous chapter numbering produces anchors
+  // outside this series' own manga space (Boruto has 81 chapters; AFG's rows
+  // said 702-710 — Naruto-space). One out-of-space anchor means the whole
+  // page's numbering is suspect: withhold and flag, never partially write.
+  // The margin absorbs a frontier slightly ahead of stale totals.
+  const { data: chapterSpace } = await db
+    .from('series')
+    .select('total_chapters, latest_known_chapters')
+    .eq('id', seriesId)
+    .maybeSingle();
+  const spaceMax = Math.max(chapterSpace?.total_chapters ?? 0, chapterSpace?.latest_known_chapters ?? 0);
+  const maxAnchorCh = anchors.reduce((m, a) => Math.max(m, a.chapter), 0);
+  if (spaceMax > 0 && maxAnchorCh > spaceMax + 10) {
+    await fileFlagOnce(runId, afgSlug, 'afg', 'parse_integrity', {
+      seriesId,
+      maxAnchorCh,
+      spaceMax,
+      note: 'AFG chapters exceed this series\' own manga space — franchise-continuous numbering suspected; anchors withheld',
+    });
+    return { anchors: 0, withheld: true };
+  }
+
   await db.from('chapter_anchors').delete().eq('series_id', seriesId).eq('source', 'afg');
   const rows = anchors.map((a) => ({
     series_id: seriesId,

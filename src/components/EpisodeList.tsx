@@ -91,6 +91,9 @@ type ListItem =
 // Numbers are ALWAYS the normal text color, collapsed or open (CONFIRMED
 // ruling 2026-08-21 — supersedes the interior_v1 "engaged" brightening that
 // kept collapsed numbers muted); labels stay muted (key:value grammar).
+// Ranges render AS STORED in either direction (Sean 2026-08-23: adaptation
+// order may legitimately jump back — a high-to-low section is real flow,
+// never collapsed to a single number).
 const coverageLabel = (s: EpisodeSection) => {
   if (s.chStart === null || s.chEnd === null) {
     return <span className="text-muted-foreground/60">—</span>;
@@ -98,11 +101,11 @@ const coverageLabel = (s: EpisodeSection) => {
   const num = 'text-foreground';
   const vol =
     s.volStart !== null
-      ? s.volEnd !== null && s.volEnd > s.volStart
+      ? s.volEnd !== null && s.volEnd !== s.volStart
         ? `${s.volStart}-${s.volEnd}`
         : String(s.volStart)
       : null;
-  const ch = s.chEnd > s.chStart ? `${s.chStart}-${s.chEnd}` : String(s.chStart);
+  const ch = s.chEnd !== s.chStart ? `${s.chStart}-${s.chEnd}` : String(s.chStart);
   return (
     <span>
       {vol !== null && (

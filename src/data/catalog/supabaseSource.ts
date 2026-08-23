@@ -111,7 +111,21 @@ const toEpisodes = (row: SeriesRow, eps: EpisodeRow[], anchors: AnchorRow[], bou
   });
 };
 
-const toAnimeSeries = (row: SeriesRow, rank: number, episodes: Episode[], publishedVolumes = 0): AnimeSeries => ({
+const toAnimeSeries = (
+  row: SeriesRow,
+  rank: number,
+  episodes: Episode[],
+  publishedVolumes = 0,
+  boundaries: Boundary[] = [],
+): AnimeSeries => ({
+  // real print boundaries ride along so EVERY chapter→volume readout
+  // (including interpolated episode rows) uses them — the ratio estimate
+  // must never contradict a curated neighbor (Sean 2026-08-23)
+  volumeBoundaries: boundaries.map((b) => ({
+    volume: b.volume,
+    chapterStart: b.chapter_start,
+    chapterEnd: b.chapter_end,
+  })),
   id: row.id,
   title: row.title,
   japaneseTitle: row.title_native ?? row.title,
@@ -386,7 +400,7 @@ export const supabaseCatalogSource: CatalogSource = {
       .from('series')
       .select('*', { count: 'exact', head: true })
       .gt('popularity', row.popularity);
-    return toAnimeSeries(row, (count ?? 0) + 1, toEpisodes(row, eps, anchors, boundaries), boundaries.length);
+    return toAnimeSeries(row, (count ?? 0) + 1, toEpisodes(row, eps, anchors, boundaries), boundaries.length, boundaries);
   },
 
   async getMapping(id: string) {

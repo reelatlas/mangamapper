@@ -32,11 +32,12 @@ export interface FrontierSeries {
   manga_start_chapter: number | null;
 }
 
-export type FrontierResult = 'applied' | 'skipped_fresh' | 'no_progress' | 'no_coverage';
+export type FrontierResult = 'applied' | 'skipped_fresh' | 'no_progress' | 'no_coverage' | 'out_of_space';
 
 // nonMuMaxEp/nonMuMaxCh: the series' anchor maxima EXCLUDING source 'mu'
 // (undefined when the series has no non-MU anchors at all).
 export async function applyMuFrontier(
+  runId: number,
   s: FrontierSeries,
   muEnd: string | null,
   nonMuMaxEp: number | undefined,
@@ -53,6 +54,26 @@ export async function applyMuFrontier(
   if (!inScope.length) return 'no_coverage';
   const coverage = inScope.reduce((a, b) => (b.chapter > a.chapter ? b : a));
   if (coverage.chapter <= (nonMuMaxCh ?? 0)) return 'no_progress';
+
+  // CHAPTER-SPACE gate on MU pins (Sean 2026-08-23, the Slime/4KOTA class):
+  // MU's coverage prose describes the whole FRANCHISE — against a partial
+  // entry (Slime held only S1's 24 eps) the largest pair lands a chapter the
+  // entry's own space can't contain. A pin past max(total, latest_known)+10
+  // is a structure/edition mismatch: withhold + flag, never write.
+  const { data: srow } = await db
+    .from('series')
+    .select('latest_known_chapters')
+    .eq('id', s.id)
+    .maybeSingle();
+  const spaceMax = Math.max(s.total_chapters ?? 0, srow?.latest_known_chapters ?? 0);
+  if (spaceMax > 0 && coverage.chapter > spaceMax + 10) {
+    await fileFlagOnce(runId, s.id, 'mangaupdates', 'count_mismatch', {
+      muCoverageChapter: coverage.chapter,
+      spaceMax,
+      note: 'MU coverage pin exceeds this entry\'s chapter space — partial structure (unstitched seasons?) or edition mismatch; frontier withheld',
+    });
+    return 'out_of_space';
+  }
 
   const episode = explicitEp && explicitEp <= s.aired_episodes ? explicitEp : s.aired_episodes;
   const { error } = await db.from('chapter_anchors').upsert({
@@ -71,13 +92,43 @@ export async function applyMuFrontier(
 // came back "149" of 519). Same-edition band: accept only when it reaches at
 // least 80% of AniList's count (when a count exists) — beyond that the two
 // sources track different editions; callers flag, never write.
+// CHAPTER-FLOOR (Sean 2026-08-23, symmetric to the episode-floor invariant):
+// the chapter space can never be smaller than what confirmed anchors reach.
+// MU's latest_chapter is release-record-derived and sometimes counts VOLUMES
+// (Kakegurui came back "9" while anchors confirm ch 55+) — a latest below the
+// anchor floor is a different unit space, never a chapter number.
 export function sameEditionLatest(
   muLatest: number | null | undefined,
   anilistCount: number | null | undefined,
+  anchorFloorCh = 0,
 ): number | null {
   if (!muLatest || muLatest <= 0 || muLatest >= 10000) return null;
   if (anilistCount != null && muLatest < anilistCount * 0.8) return null;
+  if (anchorFloorCh > 0 && muLatest < anchorFloorCh) return null;
   return muLatest;
+}
+
+// MU's status string often carries an explicit chapter count ("67 Chapters
+// (Ongoing)") even when latest_chapter tracks volume releases — use the best
+// info available (Sean's standing rule): it stands in as latest_known when
+// the release-derived number fails the guards, same floor applied.
+export function muStatusChapterCount(mu: { status?: string | null }): number | null {
+  const m = /(\d+)\s+Chapters?\b/i.exec(mu.status ?? '');
+  return m ? Number(m[1]) : null;
+}
+
+// The one latest_known derivation every writer uses: release-derived
+// latest_chapter first, the status string's chapter count as fallback —
+// both behind the same-edition band AND the confirmed-anchor chapter floor.
+export function bestLatestKnown(
+  mu: { latest_chapter?: number | null; status?: string | null },
+  anilistCount: number | null | undefined,
+  anchorFloorCh = 0,
+): number | null {
+  return (
+    sameEditionLatest(mu.latest_chapter, anilistCount, anchorFloorCh) ??
+    sameEditionLatest(muStatusChapterCount(mu), anilistCount, anchorFloorCh)
+  );
 }
 
 // MU's publication status: the explicit `completed` boolean when present

@@ -10,7 +10,7 @@
 import { db, startRun, finishRun } from '../../../scripts/ingest/lib/db';
 import { fetchMuSeries, muHash } from '../../../scripts/ingest/lib/mangaupdates';
 import { contentHash } from '../../../scripts/ingest/lib/hash';
-import { applyMuFrontier, crossCheckMangaStatus, sameEditionLatest } from '../../../scripts/ingest/lib/mu-frontier';
+import { applyMuFrontier, bestLatestKnown, crossCheckMangaStatus } from '../../../scripts/ingest/lib/mu-frontier';
 
 declare const Deno: {
   env: { get(k: string): string | undefined };
@@ -59,17 +59,17 @@ async function run() {
           .select('id, aired_episodes, total_chapters, manga_start_chapter, manga_status')
           .eq('manga_anilist_id', row.manga_anilist_id);
         for (const s of linked ?? []) {
+          const { data: epTop } = await db.from('chapter_anchors').select('episode').eq('series_id', s.id).neq('source', 'mu').order('episode', { ascending: false }).limit(1);
+          const { data: chTop } = await db.from('chapter_anchors').select('chapter').eq('series_id', s.id).neq('source', 'mu').order('chapter', { ascending: false }).limit(1);
           await db
             .from('series')
             .update({
-              latest_known_chapters: sameEditionLatest(mu.latest_chapter, s.total_chapters),
+              latest_known_chapters: bestLatestKnown(mu, s.total_chapters, chTop?.[0]?.chapter ?? 0),
               updated_at: new Date().toISOString(),
             })
             .eq('id', s.id);
-          const { data: epTop } = await db.from('chapter_anchors').select('episode').eq('series_id', s.id).neq('source', 'mu').order('episode', { ascending: false }).limit(1);
-          const { data: chTop } = await db.from('chapter_anchors').select('chapter').eq('series_id', s.id).neq('source', 'mu').order('chapter', { ascending: false }).limit(1);
           await crossCheckMangaStatus(runId, s.id, s.manga_status, mu);
-          await applyMuFrontier(s, mu.anime?.end ?? null, epTop?.[0]?.episode, chTop?.[0]?.chapter);
+          await applyMuFrontier(runId, s, mu.anime?.end ?? null, epTop?.[0]?.episode, chTop?.[0]?.chapter);
         }
       } catch (e) {
         notes.push(`mu:${row.mu_series_id}: ${String(e).slice(0, 100)}`);

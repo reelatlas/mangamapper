@@ -100,8 +100,13 @@ const ratios = (anime: AnimeSeries, m: MappingSummary): Ratios => {
   return { startCh, covered, published, adapted, perVol };
 };
 
-// absolute chapter → volume, respecting the entry's scope start
+// absolute chapter → volume: REAL print boundaries first (estimated rows must
+// never contradict anchor rows' curated volumes — the Kenshin ep-29 wobble,
+// Sean 2026-08-23), ratio estimate as the boundary-less fallback.
 const chToVol = (anime: AnimeSeries, r: Ratios, ch: number): number | null => {
+  for (const b of anime.volumeBoundaries ?? []) {
+    if (ch >= b.chapterStart && (b.chapterEnd === null || ch <= b.chapterEnd)) return b.volume;
+  }
   if (!r.perVol) return null;
   const startVol = anime.mangaStartVolume ?? 1;
   const vol = startVol + Math.floor((ch - r.startCh) / r.perVol);
@@ -137,12 +142,16 @@ const anchorPoints = (anime: AnimeSeries, m: MappingSummary): AnchorPoint[] => {
     if (covered !== null) raw.push({ idx: epToCanonIdx(m, m.latestKnown.episode), ch: covered });
   }
   raw.sort((a, b) => a.idx - b.idx || a.ch - b.ch);
-  // monotonic filter: same idx keeps the max; decreasing chapters are junk
+  // same idx keeps the max. DECREASING chapters at later episodes are KEPT
+  // (Sean 2026-08-23: adaptation order may legitimately jump back — the curve
+  // renders confirmed flow as stored). Junk numbering-space anchors are gated
+  // at write time (chapter-space gate, lib/anchors) and audited
+  // (anchor_nonmonotonic), never silently dropped at display time.
   const pts: AnchorPoint[] = [];
   for (const p of raw) {
     const prev = pts[pts.length - 1];
     if (prev && p.idx === prev.idx) prev.ch = Math.max(prev.ch, p.ch);
-    else if (!prev || p.ch >= prev.ch) pts.push({ ...p });
+    else pts.push({ ...p });
   }
   anchorPointsCache.set(m, pts);
   return pts;

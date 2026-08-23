@@ -96,6 +96,10 @@ export interface AnimeSeries {
   // Star, Sgt. Frog — research-tier verdicts); card shows an honest state
   // instead of mapping_pending
   mappingMode?: 'chapter' | 'loose';
+  // real print-volume boundaries (Wikipedia-derived) — every chapter→volume
+  // readout prefers these; the ratio estimate is only the boundary-less
+  // fallback (estimated rows must never contradict curated neighbors)
+  volumeBoundaries?: { volume: number; chapterStart: number; chapterEnd: number | null }[];
   mangaStartVolume: number | null;
   mangaStartChapter: number | null;
   episodes: Episode[];
