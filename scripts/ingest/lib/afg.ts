@@ -143,15 +143,26 @@ export interface AfgContinua {
 
 const num = (s: string | undefined | null): number | null => (s ? Number(s) : null);
 
+// AFG serves smart-quote apostrophes etc. as numeric entities — decode so
+// headings compare cleanly ("Hell&#8217;s Paradise" → "Hell's Paradise")
+const decodeEntities = (s: string) =>
+  s
+    .replace(/&#(\d+);/g, (_, d) => String.fromCharCode(Number(d)))
+    .replace(/&amp;/g, '&')
+    .replace(/&quot;/g, '"')
+    .replace(/&#x([0-9a-f]+);/gi, (_, h) => String.fromCharCode(parseInt(h, 16)));
+
 export function parseContinua(html: string): AfgContinua | null {
   const i = html.indexOf('continua-manga');
   if (i < 0) return null;
   const end = html.indexOf('</table>', i);
-  const text = html
-    .slice(i, end < 0 ? i + 4000 : end)
-    .replace(/<[^>]+>/g, ' ')
-    .replace(/\s+/g, ' ')
-    .trim();
+  const text = decodeEntities(
+    html
+      .slice(i, end < 0 ? i + 4000 : end)
+      .replace(/<[^>]+>/g, ' ')
+      .replace(/\s+/g, ' ')
+      .trim(),
+  );
 
   const heading = /Where to start (.+?) manga after (?:the )?anime/i.exec(text)?.[1]?.trim() ?? null;
 

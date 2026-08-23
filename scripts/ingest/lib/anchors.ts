@@ -7,7 +7,16 @@ import { deriveAnchors, type AfgPage, type AfgContinua } from './afg';
 import { db, fileFlagOnce } from './db';
 import { registerIds } from './resolve';
 
-const norm = (s: string) => s.toLowerCase().replace(/[^a-z0-9]+/g, ' ').trim();
+// heading comparison: decode leftover entities, drop parenthetical year
+// suffixes ("Rurouni Kenshin (1996)"), then collapse to word soup
+const norm = (s: string) =>
+  s
+    .replace(/&#(\d+);/g, (_, d) => String.fromCharCode(Number(d)))
+    .replace(/&amp;/g, '&')
+    .replace(/\(\s*\d{4}\s*\)/g, ' ')
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, ' ')
+    .trim();
 
 // AFG continua-manga application (Sean's full-source ruling 2026-08-23):
 // a staged continua table becomes an end-frontier anchor (source
@@ -36,19 +45,26 @@ export async function applyContinua(
   await db.from('chapter_anchors').delete().eq('series_id', s.id).eq('source', 'afg-continua');
 
   const heading = continua.heading ? norm(continua.heading) : null;
-  const names = norm(`${s.title} ${s.title_native ?? ''} ${s.search_text ?? ''}`);
+  const names = norm(`${s.title} ${s.title_native ?? ''} ${s.search_text ?? ''} ${s.id.replace(/-/g, ' ')}`);
   if (heading && !names.includes(heading)) {
     await fileFlagOnce(runId, s.id, 'afg', 'parse_integrity', {
       continuaHeading: continua.heading,
-      note: 'continua table heading names a DIFFERENT series (AFG template bug class) — data withheld, verify by hand',
+      note: 'continua table heading names a DIFFERENT series (AFG template bug class — Cuckoos carried Dandadan\'s table) — data withheld, verify by hand',
     });
     return 'withheld';
   }
-  if (continua.continueChapter !== null && continua.continueChapter - 1 !== continua.endChapter) {
+  // continue-from is READING GUIDANCE, not a restatement of the frontier —
+  // AFG legitimately says "skip ahead to 127" (recap chapters) or "restart
+  // at 76" (rushed adaptation). Only an absurd gap (>40 ch) marks the parse
+  // itself suspect.
+  if (
+    continua.continueChapter !== null &&
+    Math.abs(continua.continueChapter - 1 - continua.endChapter) > 40
+  ) {
     await fileFlagOnce(runId, s.id, 'afg', 'parse_integrity', {
       endChapter: continua.endChapter,
       continueChapter: continua.continueChapter,
-      note: 'continua table internally inconsistent (continue-1 ≠ end) — withheld',
+      note: 'continua frontier and continue-from are wildly apart — parse suspect, withheld',
     });
     return 'withheld';
   }

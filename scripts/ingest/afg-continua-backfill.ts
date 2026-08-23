@@ -33,9 +33,12 @@ async function main() {
         let etag = t.etag as string | null;
         let lastModified = t.last_modified as string | null;
         if (!html) {
-          const res = await politeFetch(`${AFG_BASE}/anime/${t.slug}/`, { etag, lastModified });
+          // NO conditional headers here: we don't hold this page's body, so
+          // a 304 would leave us with nothing (the first campaign run lost
+          // most targets exactly this way — registration-tier rows carried
+          // etags but no raw_html)
+          const res = await politeFetch(`${AFG_BASE}/anime/${t.slug}/`);
           counters.fetched++;
-          if (res.status === 304) { counters.unchanged++; continue; }
           if (res.status !== 200 || !res.html) {
             console.log(`  ${t.slug}: HTTP ${res.status}`);
             continue;
