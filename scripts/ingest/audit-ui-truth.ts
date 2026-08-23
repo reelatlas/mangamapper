@@ -77,6 +77,7 @@ async function main() {
     'hunter-x-hunter:139',
     'fist-of-the-blue-sky:3864', // 4 DVD episodes, AFL numbers 23-26
     'hajime-no-ippo-the-fighting:12069', // Boxer's Fist = community ep 76
+    'dr-stone:142876', // Ryuusui: order-only at position 36 (after Stone Wars) — Sean confirmed 2026-08-24 (his 'ep 95' was a typo; community places it mid-run)
   ]);
   for (const c of comps) {
     if (c.kind && c.kind !== 'season' && c.episode_start != null && !REVIEWED_NUMBERED_SPECIALS.has(`${c.series_id}:${c.anilist_id}`)) {
