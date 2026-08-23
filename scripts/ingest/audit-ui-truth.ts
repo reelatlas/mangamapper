@@ -157,11 +157,19 @@ async function main() {
       if (!bySeries.has(a.series_id)) bySeries.set(a.series_id, []);
       bySeries.get(a.series_id)!.push(a);
     }
+    // ruled reorders carry rearranged/graft annotations — settled, stop asking
+    const annos = await pageAll('episode_annotations', 'series_id, episode, kind');
+    const ruled = new Set(
+      annos
+        .filter((a: any) => a.kind === 'rearranged' || a.kind === 'graft')
+        .map((a: any) => `${a.series_id}#${a.episode}`),
+    );
     const spaceOf = new Map(series.map((s: any) => [s.id, Math.max(s.total_chapters ?? 0, s.latest_known_chapters ?? 0)]));
     for (const [sid, list] of bySeries) {
       list.sort((x, y) => x.episode - y.episode);
       for (let i = 1; i < list.length; i++) {
         if (list[i].chapter < list[i - 1].chapter) {
+          if (ruled.has(`${sid}#${list[i].episode}`) || ruled.has(`${sid}#${list[i - 1].episode}`)) continue;
           classes.anchor_nonmonotonic.push(
             `${sid}: ep ${list[i - 1].episode}→ch${list[i - 1].chapter} then ep ${list[i].episode}→ch${list[i].chapter} — real reorder or junk? (ask Sean)`,
           );
