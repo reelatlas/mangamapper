@@ -108,12 +108,31 @@ export const CONTINUA_SUPPRESSED: Record<string, string> = {
   'kimi-ni-todoke-from-me-to-you': 'continua says ep 43 → ch 86 — ch 86 is unsupported anywhere (mid-vol 21, unadapted; research 2026-08-23); manual ep-44 → ch-75 is the frontier',
 };
 
+const range = (from: number, to: number, type: string) =>
+  Object.fromEntries(Array.from({ length: to - from + 1 }, (_, i) => [from + i, type]));
+
 export const EPISODE_TYPE_OVERRIDES: Record<string, Record<number, string>> = {
   x: { 21: 'anime-only-canon', 22: 'anime-only-canon', 23: 'anime-only-canon', 24: 'anime-only-canon' },
   //   claymore 24-26: fully anime-original ending (Madhouse outran the
   //   manga) — research verdict 2026-08-23 (AFG + wheredoestheanimeleaveoff
   //   + sportskeeda), Sean sign-off
   claymore: { 24: 'anime-only-canon', 25: 'anime-only-canon', 26: 'anime-only-canon' },
+  //   black-clover 130-157: zero manga chapters adapted anywhere in the
+  //   stretch (blackclover.fandom infoboxes all empty + animefillerguide +
+  //   animefillerlist agree; research batch 8, 2026-08-23) — manga position
+  //   holds at ch 228 until canon resumes at ep 158 → ch 229-231.
+  //   Tabata-supervised side stories = anime-only-canon; the disputed
+  //   131/134-135 and the Devil Banishers arc 142-149 = filler (2-of-3
+  //   sources).
+  'black-clover': {
+    ...range(130, 130, 'anime-only-canon'),
+    ...range(131, 131, 'filler'),
+    ...range(132, 133, 'anime-only-canon'),
+    ...range(134, 135, 'filler'),
+    ...range(136, 141, 'anime-only-canon'),
+    ...range(142, 149, 'filler'),
+    ...range(150, 157, 'anime-only-canon'),
+  },
 };
 
 // SOURCE NUMBERING TRANSLATION (Sean's ruling 2026-08-23, the Dr. Stone /
@@ -136,6 +155,12 @@ export const SOURCE_NUMBERING_SHIFTS: Record<string, { drop: number[]; shifts: {
   'to-love-ru-darkness': { drop: [25, 26], shifts: [] }, // 2nd Specials bonuses
   'ghost-in-the-shell-stand-alone-complex': { drop: [53], shifts: [] }, // Solid State Society is a FILM (movies order-only unless community-numbered)
   'yu-gi-oh-2000': { drop: [225], shifts: [] }, // Dark Side of Dimensions is a FILM
+  //   AFL counts the 2017 OVA 'Hitori Ayumu' as ep 25 (aired between S2 and
+  //   S3), shifting S3+ by +1 vs the community's 60-episode TV numbering —
+  //   research batch 8 (2026-08-23): fandom's 'Episode 61' = TV ep 60
+  //   'Twilight Goodbye'. The OVA holds watch position 24.5 (order-only,
+  //   adapts ~ch 40 side material).
+  'bungo-stray-dogs': { drop: [25], shifts: [{ from: 26, offset: -1 }] },
 };
 
 // Per-series episode-row rulings, applied by EVERY episode writer:

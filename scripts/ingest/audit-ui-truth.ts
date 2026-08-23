@@ -43,8 +43,15 @@ async function main() {
     if (!cur || a.episode > cur.episode) anchBy.set(a.series_id, a);
   }
   const compEnd = new Map<string, number>();
+  const degenerateSpans: string[] = [];
   for (const c of comps) {
     if (c.episode_end != null) compEnd.set(c.series_id, Math.max(compEnd.get(c.series_id) ?? 0, c.episode_end));
+    // an unaired component must hold a NULL span, never start > end
+    // (writeComponents guards this; Tokyo Revengers' Santen Sensou-hen
+    // was the 51-50 escape that motivated the class)
+    if (c.episode_start != null && c.episode_end != null && c.episode_start > c.episode_end) {
+      degenerateSpans.push(`${c.series_id}: ${c.label} spans ${c.episode_start}-${c.episode_end}`);
+    }
   }
   const boundsBy = new Map<number, any[]>();
   for (const b of bounds) {
@@ -61,8 +68,9 @@ async function main() {
 
   const classes: Record<string, string[]> = {
     integrity_eps_beyond_total: [], integrity_total_beyond_eps: [], integrity_double_claimed: [],
+    integrity_degenerate_span: degenerateSpans,
     special_numbered_unreviewed: [], anchor_gap_research: [], frontier_tail_null: [],
-    anchor_nonmonotonic: [], anchor_beyond_chapter_space: [], ruling_violation: [],
+    anchor_nonmonotonic: [], anchor_beyond_chapter_space: [], anchor_fractional_chapter: [], ruling_violation: [],
     title_incomplete: [], airdate_incomplete: [], asterisk_unreviewed: [],
     fractional_unmodeled: [],
     no_source: [], ok_full: [], ok_no_volume: [], ok_loose: [],
@@ -281,6 +289,12 @@ async function main() {
         if (space > 0 && a.chapter > space + 10) {
           classes.anchor_beyond_chapter_space.push(`${sid}: ep ${a.episode}→ch${a.chapter} exceeds manga space (${space})`);
         }
+        // fractional CHAPTER values are bonus/Memoire chapters mis-scraped
+        // from a source chart, never mainline positions (the Vanitas ep-5 →
+        // ch-15.5 case, Sean 2026-08-23) — each needs research + correction
+        if (!Number.isInteger(a.chapter)) {
+          classes.anchor_fractional_chapter.push(`${sid}: ep ${a.episode}→ch${a.chapter} (${a.source}) — bonus-chapter scrape? research the true mainline value`);
+        }
       }
     }
   }
@@ -330,9 +344,11 @@ async function main() {
         let at = '';
         let prevEp = 0;
         for (const ep of [...pts, latestAnchor?.episode ?? pts[pts.length - 1]]) {
-          // count canon/mixed rows in the gap (filler deserts are fine)
+          // count canon/mixed rows in the gap (filler deserts are fine;
+          // anime-only-canon has no manga counterpart BY DESIGN — the
+          // Black Clover 130-157 lesson, research batch 8)
           const canonInGap = episodes.filter(
-            (e: any) => e.series_id === row.id && e.number > prevEp && e.number < ep && e.type !== 'filler',
+            (e: any) => e.series_id === row.id && e.number > prevEp && e.number < ep && e.type !== 'filler' && e.type !== 'anime-only-canon',
           ).length;
           if (canonInGap > worst) {
             worst = canonInGap;

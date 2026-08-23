@@ -2070,24 +2070,24 @@ var PostgrestFilterBuilder = class extends PostgrestTransformBuilder {
     else this.url.searchParams.append(column, `cd.${JSON.stringify(value)}`);
     return this;
   }
-  rangeGt(column, range) {
-    this.url.searchParams.append(column, `sr.${range}`);
+  rangeGt(column, range2) {
+    this.url.searchParams.append(column, `sr.${range2}`);
     return this;
   }
-  rangeGte(column, range) {
-    this.url.searchParams.append(column, `nxl.${range}`);
+  rangeGte(column, range2) {
+    this.url.searchParams.append(column, `nxl.${range2}`);
     return this;
   }
-  rangeLt(column, range) {
-    this.url.searchParams.append(column, `sl.${range}`);
+  rangeLt(column, range2) {
+    this.url.searchParams.append(column, `sl.${range2}`);
     return this;
   }
-  rangeLte(column, range) {
-    this.url.searchParams.append(column, `nxr.${range}`);
+  rangeLte(column, range2) {
+    this.url.searchParams.append(column, `nxr.${range2}`);
     return this;
   }
-  rangeAdjacent(column, range) {
-    this.url.searchParams.append(column, `adj.${range}`);
+  rangeAdjacent(column, range2) {
+    this.url.searchParams.append(column, `adj.${range2}`);
     return this;
   }
   overlaps(column, value) {
@@ -35058,6 +35058,7 @@ function deriveAnchors(episodes) {
     if (e.arc && /—{3,}|pel[ií]cula|movie|film|special/i.test(e.arc)) continue;
     const chapter = Math.max(...e.chapters);
     if (chapter < maxSeen) continue;
+    if (!Number.isInteger(chapter)) continue;
     maxSeen = chapter;
     out.push({ episode: e.number, chapter, arc: e.arc });
   }
@@ -35145,6 +35146,30 @@ function slugify(title) {
 var CONTINUA_SUPPRESSED = {
   claymore: "continua says ep 26 \u2192 ch 54, but eps 24-26 are fully anime-original (research 2026-08-23) \u2014 the manual ep-20 \u2192 ch-56 anchor is the frontier",
   "kimi-ni-todoke-from-me-to-you": "continua says ep 43 \u2192 ch 86 \u2014 ch 86 is unsupported anywhere (mid-vol 21, unadapted; research 2026-08-23); manual ep-44 \u2192 ch-75 is the frontier"
+};
+var range = (from, to, type) => Object.fromEntries(Array.from({ length: to - from + 1 }, (_, i) => [from + i, type]));
+var EPISODE_TYPE_OVERRIDES = {
+  x: { 21: "anime-only-canon", 22: "anime-only-canon", 23: "anime-only-canon", 24: "anime-only-canon" },
+  //   claymore 24-26: fully anime-original ending (Madhouse outran the
+  //   manga) — research verdict 2026-08-23 (AFG + wheredoestheanimeleaveoff
+  //   + sportskeeda), Sean sign-off
+  claymore: { 24: "anime-only-canon", 25: "anime-only-canon", 26: "anime-only-canon" },
+  //   black-clover 130-157: zero manga chapters adapted anywhere in the
+  //   stretch (blackclover.fandom infoboxes all empty + animefillerguide +
+  //   animefillerlist agree; research batch 8, 2026-08-23) — manga position
+  //   holds at ch 228 until canon resumes at ep 158 → ch 229-231.
+  //   Tabata-supervised side stories = anime-only-canon; the disputed
+  //   131/134-135 and the Devil Banishers arc 142-149 = filler (2-of-3
+  //   sources).
+  "black-clover": {
+    ...range(130, 130, "anime-only-canon"),
+    ...range(131, 131, "filler"),
+    ...range(132, 133, "anime-only-canon"),
+    ...range(134, 135, "filler"),
+    ...range(136, 141, "anime-only-canon"),
+    ...range(142, 149, "filler"),
+    ...range(150, 157, "anime-only-canon")
+  }
 };
 async function registerIds(seriesId, ids) {
   for (const [source, val2] of Object.entries(ids)) {

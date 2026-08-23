@@ -272,8 +272,11 @@ export async function writeComponents(
       series_id: seriesId,
       anilist_id: m.id,
       season_order: order,
-      episode_start: cursor + 1,
-      episode_end: m.episodes != null || m.nextAiringEpisode ? cursor + len : null,
+      // a component with nothing aired holds NO span (a 0-length entry
+      // would produce start > end, e.g. Tokyo Revengers' announced
+      // Santen Sensou-hen at 51-50); the span appears once episodes air
+      episode_start: len > 0 ? cursor + 1 : null,
+      episode_end: len > 0 && (m.episodes != null || m.nextAiringEpisode) ? cursor + len : null,
       label: m.title.romaji,
       kind: KIND_BY_FORMAT[m.format ?? ''] ?? 'season',
       afl_slug: aflSlug,

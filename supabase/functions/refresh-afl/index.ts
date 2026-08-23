@@ -2070,24 +2070,24 @@ var PostgrestFilterBuilder = class extends PostgrestTransformBuilder {
     else this.url.searchParams.append(column, `cd.${JSON.stringify(value)}`);
     return this;
   }
-  rangeGt(column, range) {
-    this.url.searchParams.append(column, `sr.${range}`);
+  rangeGt(column, range2) {
+    this.url.searchParams.append(column, `sr.${range2}`);
     return this;
   }
-  rangeGte(column, range) {
-    this.url.searchParams.append(column, `nxl.${range}`);
+  rangeGte(column, range2) {
+    this.url.searchParams.append(column, `nxl.${range2}`);
     return this;
   }
-  rangeLt(column, range) {
-    this.url.searchParams.append(column, `sl.${range}`);
+  rangeLt(column, range2) {
+    this.url.searchParams.append(column, `sl.${range2}`);
     return this;
   }
-  rangeLte(column, range) {
-    this.url.searchParams.append(column, `nxr.${range}`);
+  rangeLte(column, range2) {
+    this.url.searchParams.append(column, `nxr.${range2}`);
     return this;
   }
-  rangeAdjacent(column, range) {
-    this.url.searchParams.append(column, `adj.${range}`);
+  rangeAdjacent(column, range2) {
+    this.url.searchParams.append(column, `adj.${range2}`);
     return this;
   }
   overlaps(column, value) {
@@ -35137,12 +35137,29 @@ function applyCommunityCap(seriesId, row) {
   if (row.aired_episodes != null) row.aired_episodes = Math.min(row.aired_episodes, o.cap);
   if (row.total_episodes != null) row.total_episodes = Math.min(row.total_episodes, o.cap);
 }
+var range = (from, to, type) => Object.fromEntries(Array.from({ length: to - from + 1 }, (_, i) => [from + i, type]));
 var EPISODE_TYPE_OVERRIDES = {
   x: { 21: "anime-only-canon", 22: "anime-only-canon", 23: "anime-only-canon", 24: "anime-only-canon" },
   //   claymore 24-26: fully anime-original ending (Madhouse outran the
   //   manga) — research verdict 2026-08-23 (AFG + wheredoestheanimeleaveoff
   //   + sportskeeda), Sean sign-off
-  claymore: { 24: "anime-only-canon", 25: "anime-only-canon", 26: "anime-only-canon" }
+  claymore: { 24: "anime-only-canon", 25: "anime-only-canon", 26: "anime-only-canon" },
+  //   black-clover 130-157: zero manga chapters adapted anywhere in the
+  //   stretch (blackclover.fandom infoboxes all empty + animefillerguide +
+  //   animefillerlist agree; research batch 8, 2026-08-23) — manga position
+  //   holds at ch 228 until canon resumes at ep 158 → ch 229-231.
+  //   Tabata-supervised side stories = anime-only-canon; the disputed
+  //   131/134-135 and the Devil Banishers arc 142-149 = filler (2-of-3
+  //   sources).
+  "black-clover": {
+    ...range(130, 130, "anime-only-canon"),
+    ...range(131, 131, "filler"),
+    ...range(132, 133, "anime-only-canon"),
+    ...range(134, 135, "filler"),
+    ...range(136, 141, "anime-only-canon"),
+    ...range(142, 149, "filler"),
+    ...range(150, 157, "anime-only-canon")
+  }
 };
 var SOURCE_NUMBERING_SHIFTS = {
   "dr-stone": { drop: [36], shifts: [{ from: 37, offset: -1 }] },
@@ -35162,8 +35179,14 @@ var SOURCE_NUMBERING_SHIFTS = {
   // 2nd Specials bonuses
   "ghost-in-the-shell-stand-alone-complex": { drop: [53], shifts: [] },
   // Solid State Society is a FILM (movies order-only unless community-numbered)
-  "yu-gi-oh-2000": { drop: [225], shifts: [] }
+  "yu-gi-oh-2000": { drop: [225], shifts: [] },
   // Dark Side of Dimensions is a FILM
+  //   AFL counts the 2017 OVA 'Hitori Ayumu' as ep 25 (aired between S2 and
+  //   S3), shifting S3+ by +1 vs the community's 60-episode TV numbering —
+  //   research batch 8 (2026-08-23): fandom's 'Episode 61' = TV ep 60
+  //   'Twilight Goodbye'. The OVA holds watch position 24.5 (order-only,
+  //   adapts ~ch 40 side material).
+  "bungo-stray-dogs": { drop: [25], shifts: [{ from: 26, offset: -1 }] }
 };
 var filterEpisodeRows = (seriesId, rows) => {
   const t = SOURCE_NUMBERING_SHIFTS[seriesId];

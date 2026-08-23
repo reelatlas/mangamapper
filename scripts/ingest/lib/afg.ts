@@ -121,6 +121,10 @@ export function deriveAnchors(episodes: AfgEpisode[]): { episode: number; chapte
     if (e.arc && /—{3,}|pel[ií]cula|movie|film|special/i.test(e.arc)) continue;
     const chapter = Math.max(...e.chapters);
     if (chapter < maxSeen) continue; // non-monotonic = junk cell
+    // fractional chapters are bonus/Memoire entries in the source chart,
+    // never mainline positions (Vanitas ep-5 got ch 15.5, 2026-08-23) —
+    // audited outcome-side by anchor_fractional_chapter
+    if (!Number.isInteger(chapter)) continue;
     maxSeen = chapter;
     out.push({ episode: e.number, chapter, arc: e.arc });
   }
