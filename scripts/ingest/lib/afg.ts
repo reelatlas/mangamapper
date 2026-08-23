@@ -115,6 +115,10 @@ export function deriveAnchors(episodes: AfgEpisode[]): { episode: number; chapte
   let maxSeen = 0;
   for (const e of [...episodes].sort((a, b) => a.number - b.number)) {
     if (!e.chapters.length) continue;
+    // AFG interleaves DIVIDER rows for films/specials ("<—— Pelicula 2:
+    // The Last Mission ——>") whose stray digits parse as chapters — HxH's
+    // ep-83 got an impossible ch-288 from one (2026-08-23). Never anchors.
+    if (e.arc && /—{3,}|pel[ií]cula|movie|film|special/i.test(e.arc)) continue;
     const chapter = Math.max(...e.chapters);
     if (chapter < maxSeen) continue; // non-monotonic = junk cell
     maxSeen = chapter;

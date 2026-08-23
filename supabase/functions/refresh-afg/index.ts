@@ -35055,6 +35055,7 @@ function deriveAnchors(episodes) {
   let maxSeen = 0;
   for (const e of [...episodes].sort((a, b) => a.number - b.number)) {
     if (!e.chapters.length) continue;
+    if (e.arc && /—{3,}|pel[ií]cula|movie|film|special/i.test(e.arc)) continue;
     const chapter = Math.max(...e.chapters);
     if (chapter < maxSeen) continue;
     maxSeen = chapter;
