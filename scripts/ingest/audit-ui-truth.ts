@@ -9,7 +9,7 @@
 //   npx tsx --env-file=.env.ingest scripts/ingest/audit-ui-truth.ts
 
 import { db } from './lib/db';
-import { COMMUNITY_COUNT_OVERRIDES, CONTINUA_SUPPRESSED, EPISODE_TYPE_OVERRIDES } from './lib/resolve';
+import { COMMUNITY_COUNT_OVERRIDES, CONTINUA_SUPPRESSED, EPISODE_TYPE_OVERRIDES, SOURCE_NUMBERING_SHIFTS } from './lib/resolve';
 
 async function pageAll(table: string, select: string): Promise<any[]> {
   const out: any[] = [];
@@ -111,6 +111,21 @@ async function main() {
     const row = series.find((s: any) => s.id === sid);
     if (row && (row.aired_episodes > o.cap || (row.total_episodes ?? 0) > o.cap)) {
       classes.ruling_violation.push(`${sid}: totals ${row.aired_episodes}/${row.total_episodes} exceed the community cap ${o.cap}`);
+    }
+  }
+  // SHIFT VERIFICATION (Sean 2026-08-23: rules that move numbering must
+  // prove nothing broke): for every SOURCE_NUMBERING_SHIFTS series, verify
+  // outcome-side that (a) no two ADJACENT rows share a non-empty title (the
+  // stale-zone signature — dr-stone's ep 57/58 wore the same title after a
+  // partial heal) and (b) the numbered run is contiguous 1..max (translation
+  // must never leave holes).
+  for (const sid of Object.keys(SOURCE_NUMBERING_SHIFTS)) {
+    const rows = episodes.filter((e: any) => e.series_id === sid).sort((a: any, b: any) => a.number - b.number);
+    for (let i = 1; i < rows.length; i++) {
+      const a = String(rows[i - 1].title ?? '').trim();
+      const b = String(rows[i].title ?? '').trim();
+      if (a && a === b) classes.ruling_violation.push(`${sid}: eps ${rows[i - 1].number}/${rows[i].number} share title "${a.slice(0, 30)}" — stale shifted row suspected`);
+      if (rows[i].number !== rows[i - 1].number + 1) classes.ruling_violation.push(`${sid}: numbering hole between ${rows[i - 1].number} and ${rows[i].number} after translation`);
     }
   }
   {

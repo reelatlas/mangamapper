@@ -460,6 +460,14 @@ export async function resolveSeries(runId: number, slug: string): Promise<{ epis
       );
       const ourPageMax = stitchedRows.reduce((m, e) => Math.max(m, e.number), 0);
       await db.from('episodes').delete().eq('series_id', existing.id).lte('number', ourPageMax);
+      // STALE-ZONE healing (Sean 2026-08-23): when translation SHRINKS the
+      // range (ourMax < source max), rows stranded in (ourMax, sourceMax]
+      // are pre-translation leftovers wearing shifted titles — purge them
+      // (an AFG tail re-extends; stale wrong data never self-heals)
+      const srcMax = page.episodes.reduce((m, e) => Math.max(m, e.number), 0);
+      if (srcMax > ourPageMax) {
+        await db.from('episodes').delete().eq('series_id', existing.id).gt('number', ourPageMax).lte('number', srcMax);
+      }
       for (let i = 0; i < stitchedRows.length; i += 500) {
         const { error } = await db.from('episodes').insert(stitchedRows.slice(i, i + 500));
         if (error) throw new Error(`episodes refresh (${slug}): ${error.message}`);
@@ -591,6 +599,10 @@ export async function resolveSeries(runId: number, slug: string): Promise<{ epis
   const ourMax = rows.reduce((m, e) => Math.max(m, e.number), 0) || aflMax;
   const { error: e5 } = await db.from('episodes').delete().eq('series_id', id).lte('number', ourMax);
   if (e5) throw new Error(`episodes clear (${slug}): ${e5.message}`);
+  // stale-zone healing (see the stitched-guard note)
+  if (aflMax > ourMax) {
+    await db.from('episodes').delete().eq('series_id', id).gt('number', ourMax).lte('number', aflMax);
+  }
   for (let i = 0; i < rows.length; i += 500) {
     const { error: e6 } = await db.from('episodes').insert(rows.slice(i, i + 500));
     if (e6) throw new Error(`episodes insert (${slug}): ${e6.message}`);

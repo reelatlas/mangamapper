@@ -35308,6 +35308,10 @@ async function resolveSeries(runId, slug) {
       );
       const ourPageMax = stitchedRows.reduce((m, e) => Math.max(m, e.number), 0);
       await db.from("episodes").delete().eq("series_id", existing.id).lte("number", ourPageMax);
+      const srcMax = page.episodes.reduce((m, e) => Math.max(m, e.number), 0);
+      if (srcMax > ourPageMax) {
+        await db.from("episodes").delete().eq("series_id", existing.id).gt("number", ourPageMax).lte("number", srcMax);
+      }
       for (let i = 0; i < stitchedRows.length; i += 500) {
         const { error } = await db.from("episodes").insert(stitchedRows.slice(i, i + 500));
         if (error) throw new Error(`episodes refresh (${slug}): ${error.message}`);
@@ -35411,6 +35415,9 @@ async function resolveSeries(runId, slug) {
   const ourMax = rows.reduce((m, e) => Math.max(m, e.number), 0) || aflMax;
   const { error: e5 } = await db.from("episodes").delete().eq("series_id", id).lte("number", ourMax);
   if (e5) throw new Error(`episodes clear (${slug}): ${e5.message}`);
+  if (aflMax > ourMax) {
+    await db.from("episodes").delete().eq("series_id", id).gt("number", ourMax).lte("number", aflMax);
+  }
   for (let i = 0; i < rows.length; i += 500) {
     const { error: e6 } = await db.from("episodes").insert(rows.slice(i, i + 500));
     if (e6) throw new Error(`episodes insert (${slug}): ${e6.message}`);
