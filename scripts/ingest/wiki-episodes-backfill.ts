@@ -16,7 +16,7 @@
 //   npx tsx --env-file=.env.ingest scripts/ingest/wiki-episodes-backfill.ts [seriesId ...]
 
 import { db, startRun, finishRun, fileFlagOnce } from './lib/db';
-import { findEpisodePages, fetchWikitext, parseEpisodeList, type WikiEpisode } from './lib/wikipedia';
+import { extractTransclusions, findEpisodePages, fetchWikitext, parseEpisodeList, type WikiEpisode } from './lib/wikipedia';
 import { filterEpisodeRows } from './lib/resolve';
 
 const sleep = (ms: number) => new Promise((r) => setTimeout(r, ms));
@@ -84,7 +84,15 @@ async function main() {
         let wiki: WikiEpisode[] = [];
         for (const p of pages) {
           const wt = await fetchWikitext(p);
-          if (wt) wiki = wiki.concat(parseEpisodeList(wt));
+          if (!wt) continue;
+          wiki = wiki.concat(parseEpisodeList(wt));
+          // season pages transcluded into the list page hold the actual
+          // rows (Dr. Stone class) — follow depth-1 transclusions
+          for (const sub of extractTransclusions(wt).slice(0, 12)) {
+            const swt = await fetchWikitext(sub);
+            if (swt) wiki = wiki.concat(parseEpisodeList(swt));
+            await sleep(600);
+          }
           await sleep(600);
         }
         const seen = new Set<number>();

@@ -181,6 +181,15 @@ export function parseEpisodeList(wikitext: string): WikiEpisode[] {
   return out.filter((e) => (seen.has(e.number) ? false : (seen.add(e.number), true))).sort((a, b) => a.number - b.number);
 }
 
+// Episode tables often live on SEASON pages transcluded into the main list
+// ("List of Dr. Stone episodes" holds only {{:Dr. Stone season N}} markers —
+// the raw wikitext has no rows). Depth-1 transclusion targets to follow.
+export function extractTransclusions(wikitext: string): string[] {
+  const out: string[] = [];
+  for (const m of wikitext.matchAll(/\{\{:([^{}|]+)\}\}/g)) out.push(m[1].trim());
+  return [...new Set(out)];
+}
+
 // "List of X episodes" family — mirrors findChapterPages.
 export async function findEpisodePages(titleCandidates: string[]): Promise<string[]> {
   const tried = new Set<string>();
