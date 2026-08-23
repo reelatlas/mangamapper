@@ -89,9 +89,27 @@ export function applyCommunityCap(
   if (row.total_episodes != null) row.total_episodes = Math.min(row.total_episodes, o.cap);
 }
 
-export const filterEpisodeRows = <T extends { number: number }>(seriesId: string, rows: T[]): T[] => {
+// Research-ruled per-episode TYPE corrections (Sean 2026-08-23): where a
+// source site misclasses episodes against community consensus, the ruling
+// lives here and re-applies on every episode write — a bare DB update would
+// be clobbered by the next AFL page refresh. Each entry carries citations.
+//   x 21-24: the anime-original ending (manga on hiatus at broadcast) — AFL
+//   classes them manga-canon; research verdict (xtvclamp.fandom, Wikipedia,
+//   cbr.com) says original. anime-only-canon renders them truthfully (no
+//   chapter counterpart BY DESIGN, not mapping-pending null).
+export const EPISODE_TYPE_OVERRIDES: Record<string, Record<number, string>> = {
+  x: { 21: 'anime-only-canon', 22: 'anime-only-canon', 23: 'anime-only-canon', 24: 'anime-only-canon' },
+};
+
+// Per-series episode-row rulings, applied by EVERY episode writer: community
+// count caps drop rows the consensus does not number; type overrides correct
+// source misclassification.
+export const filterEpisodeRows = <T extends { number: number; type?: string }>(seriesId: string, rows: T[]): T[] => {
   const o = COMMUNITY_COUNT_OVERRIDES[seriesId];
-  return o ? rows.filter((r) => r.number <= o.cap) : rows;
+  const capped = o ? rows.filter((r) => r.number <= o.cap) : rows;
+  const types = EPISODE_TYPE_OVERRIDES[seriesId];
+  if (!types) return capped;
+  return capped.map((r) => (types[r.number] && 'type' in r ? { ...r, type: types[r.number] } : r));
 };
 
 export function applyEpisodeFloor(

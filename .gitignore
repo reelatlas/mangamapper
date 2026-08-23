@@ -31,3 +31,6 @@ dist-ssr
 # TypeScript incremental build state
 *.tsbuildinfo
 supabase/.temp/
+
+# Claude Code session artifacts (worktrees, local settings)
+.claude/

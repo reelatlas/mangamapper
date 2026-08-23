@@ -259,6 +259,9 @@ in code (`scripts/ingest/`), and every violation flags rather than guesses:
 | **Chapter-number vs chapter-count spaces** | AniList `chapters` is a COUNT (mid-run specials included — AoT says 141); MU `latest_chapter` is the last chapter NUMBER (139, the space anchors live in). Tail math uses `min(totals, latest_known)`; latest_known now writes for ALL manga (the number-space end), display totals stay AniList's | buildMapping (supabaseSource) / MU writers |
 | **Same-edition band (MU latest)** | MU's latest_chapter is release-record-derived: reliable for currently publishing manga, GARBAGE for old completed ones (Dragon Ball came back "149" of 519). Every latest_known writer accepts it only within 80% of AniList's count; failures write NULL (heal prior bad writes) + flag. Scope rows are the ruling lever for consensus ends (DBZ/Kai end_chapter=519 completed 2026-08-24 — the seed notes always said 195-519) | sameEditionLatest (lib/mu-frontier) / all MU writers |
 | **Continuation handoff** | a same-manga sibling whose scope adjoins this entry's scope end continues the story — the residue between frontier and scope end is franchise flow (Shippuden adapted Naruto's ch 239-244), NOT a manga-only tail; suppressed in buildMapping (Naruto→Shippuden, Berserk 1997→2016). Inter-segment reading gaps (Berserk ch 88-94) surface in the universe view later | continuationStart/buildMapping (supabaseSource) |
+| **Anchor numbering conversion (Sean 2026-08-23)** | research anchors arrive in EXTERNAL numbering (MAL/Wikipedia season counts) but our community-count numbering can differ — a mid-run numbered OVA/special SHIFTS every later episode (Haikyu's Riku vs Kuu OVA = our eps 61-62, so "S4 end = MAL ep 85" is OUR ep 87; recorded unconverted, eps 86-87 nulled). Convert at application time and say so in the anchor note; the frontier_tail_null audit class catches misses | apply-research scripts + audit-ui-truth |
+| **Episode-type overrides** | research-ruled type corrections where a source misclasses episodes against community consensus (X eps 21-24: AFL says manga-canon, research says anime-original ending → anime-only-canon renders them truthfully, no chapter counterpart BY DESIGN). Lives in EPISODE_TYPE_OVERRIDES, re-applied inside filterEpisodeRows at EVERY episode write — a bare DB update would be clobbered by the next AFL refresh | EPISODE_TYPE_OVERRIDES / filterEpisodeRows (lib/resolve.ts) |
+| **Frontier-tail triage (audit class frontier_tail_null)** | canon eps past the last anchor render null ch (beyond-frontier honesty). Every hit is exactly one of: (a) mis-numbered anchor → convert numbering (Haikyu), (b) mistyped episodes → type override (X), (c) real side-story/continuation content → research or side-story notation (Kenshin 95-98, S2-aired-since-anchor series). Never auto-fix — each needs a ruling | audit-ui-truth.ts |
 | Dispositions | active / excluded / duplicate / merged rulings are durable data; backfill skips non-active | source_map |
 
 **Hard-won learnings** (why some rules exist): AFL's Drupal is corrupt since
@@ -488,11 +491,18 @@ Fixed weekly is correct.
    come from MU (or research); every source contributes what it actually
    knows.
 19. **POST-COMPACT AGENDA (Sean 2026-08-24, in order):**
-   a. **Kenshin read-path debug (UNRESOLVED)**: ep-28 anchor VERIFIED STORED
-      (ch 48/vol 7, source manual) but Sean's card shows ch 52 — some UI
-      element (section label? inline position? strip?) is not reading the
-      manual anchor. Get exact repro (which element), fix the read path so
-      every display consumes the same anchor-aware curve. THEN:
+   a. **Kenshin read-path debug — RESOLVED 2026-08-23: NOT a code bug.**
+      Sean's repro (episode table, ep 28 = vol 6 ch 52; section header
+      vol 6-17 ch 52-151) is the fingerprint of the OLD pre-interpolation
+      linear estimator (18/52 × 151 = 52 exactly; vol 17 = ratio estimate
+      where the anchor stores 18) running against current data — i.e. a
+      STALE CLIENT: the deployed app is ~35 unpushed commits behind, and
+      react-query holds fetches 5 min. Verified end-to-end: the anon key
+      returns all 18 Kenshin anchors incl. ep 28 → ch 48 vol 7; current
+      code renders a direct anchor hit (buildEpisodeList reads
+      exact.mangaMapping first) — mathematically cannot show 52.
+      VERIFY WITH SEAN after he pushes/refreshes: ep 28 should read
+      vol 7 ch 48; header 28-62 should read vol 7-18 · ch 48-151. THEN:
    b. **Side-story mapping notation (ruling needed)**: Kenshin eps 95-98
       adapt the PILOT ONE-SHOTS — content outside mainline chapter numbering.
       Current beyond-frontier rule nulls them (over-correction per Sean —

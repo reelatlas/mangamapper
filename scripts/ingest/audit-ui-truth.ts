@@ -60,7 +60,7 @@ async function main() {
 
   const classes: Record<string, string[]> = {
     integrity_eps_beyond_total: [], integrity_total_beyond_eps: [], integrity_double_claimed: [],
-    special_numbered_unreviewed: [], anchor_gap_research: [],
+    special_numbered_unreviewed: [], anchor_gap_research: [], frontier_tail_null: [],
     no_source: [], ok_full: [], ok_no_volume: [], ok_loose: [],
     pending_airing_no_anchor: [], pending_finished_no_totals: [], pending_no_canon: [], pending_other: [],
   };
@@ -149,6 +149,20 @@ async function main() {
           prevEp = ep;
         }
         if (worst > 12) classes.anchor_gap_research.push(`${row.id}: ${worst} unanchored canon eps (${at})`);
+      }
+      // TRAILING nulls (Sean 2026-08-23, the Kenshin/Haikyu/X class): canon
+      // eps past the last anchor render null ch (beyond-frontier rule refuses
+      // to extrapolate). Every hit is one of: a mis-numbered anchor (Haikyu's
+      // OVA shift), a mistyped episode (X's anime-original ending), or real
+      // side-story/continuation content needing research or the side-story
+      // notation (Kenshin 95-98). Never auto-fix — each needs a ruling.
+      if (latestAnchor) {
+        const trailing = episodes.filter(
+          (e: any) => e.series_id === row.id && e.number > latestAnchor.episode && (e.type === 'canon' || e.type === 'mixed'),
+        ).length;
+        if (trailing > 0) {
+          classes.frontier_tail_null.push(`${row.id}: ${trailing} canon eps past anchor ep ${latestAnchor.episode} render null`);
+        }
       }
     } else if (e.lastCanon === 0) classes.pending_no_canon.push(row.id);
     else if (row.status !== 'finished') classes.pending_airing_no_anchor.push(row.id);
