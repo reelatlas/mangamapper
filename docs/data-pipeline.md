@@ -331,6 +331,31 @@ conversation. Curated results land as: manual anchors (source 'manual'),
 scope rows, EXTRAS_ADOPTED entries, or episode-row curation — all durable,
 all surviving refreshes.
 
+**BATCH PROTOCOL (amended 2026-08-23 for the full-record model)** — every
+anchor a research batch delivers carries the FULL shape, not just the end:
+
+- **Agent contract**: for each anchor, agents report the complete adapted
+  span/list ("adapts 119-127", "63-64, 67 pulled forward"), the episode's
+  END chapter, the FIRST chapter animated (majority rule applied at
+  research time when a span opens with a chapter tail), a continue-reading
+  point when it differs from end+1 (skips, grafts, mid-chapter endings),
+  and rearrangement/graft/partial/divergence annotations. 2+ sources with
+  URLs per anchor. Numbering conversions into OUR cumulative space are the
+  agent's job (per-season → cumulative; OVA-inclusive sources flagged).
+- **Apply-script contract** (apply-research-batch-N.ts): anchors upsert
+  chapter + start_chapter + chapters_adapted + volume; continue_chapter
+  where named; annotations + asterisk_review pending; repairs of existing
+  curated values are called out as REPAIRS in the script header, never
+  silent. Fandom wikis fetched via api.php (HTML is Cloudflare-blocked);
+  animefillerguide often shares lineage with fandom — corroborate key
+  boundaries with a genuinely independent third source (episode↔chapter
+  TITLE matches and Wikipedia volume boundaries are strong independents).
+- **Post-batch**: audits re-run; batch-cleared series may surface their
+  NEXT-worst stretch (>12) — that is the rolling work-list by design, not
+  a failure. Every batch that adds interior anchors near a run end relies
+  on the MU-pin episode-keyed redundancy rule (lib/mu-frontier) — the
+  2026-08-23 regression class.
+
 **Maintenance audits** (run after any batch; all idempotent):
 `audit-manga-coverage` (self-healing: frontiers + latest_known + cross-checks),
 `reconcile-structure` (episode-floor invariant + late-airing entries),
