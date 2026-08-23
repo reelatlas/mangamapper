@@ -1,7 +1,7 @@
 import { useMemo, useState } from 'react';
 import { AnimeSeries, EpisodeType } from '@/types/anime';
 import { Card, CardContent } from '@/components/ui/card';
-import { useCatalogMapping } from '@/hooks/useCatalog';
+import { useCatalogMapping, useCatalogSeries } from '@/hooks/useCatalog';
 import { usePositionLookup } from '@/hooks/usePositionLookup';
 import { buildEpisodeList } from '@/lib/mapping';
 import { MappingStrip } from './MappingStrip';
@@ -32,7 +32,15 @@ const line = (i: number) => ({ 'data-line': true, style: { '--line-i': i } as Re
 // Expanded variant — skin: instrument_v1 (Card Skin Lab a3222c3b, locked
 // 2026-08-20). Solid border-strong (dashed = list vocabulary), path-bar
 // window chrome, duotone cover with hover reveal, print entrance.
-export const AnimeCard = ({ anime, onClose }: AnimeCardProps) => {
+export const AnimeCard = ({ anime: listItem, onClose }: AnimeCardProps) => {
+  // HYDRATION (Sean's Kenshin report, 2026-08-23): the prop is the SHALLOW
+  // catalog-list item — episodes deliberately empty (list() stays light). The
+  // expanded card must run on the FULL series (episode rows with titles +
+  // anchor mangaMappings + volume boundaries) or every readout silently
+  // degrades to the anchor-less linear estimate. getById hydrates on open;
+  // until it lands, the shallow item renders identity fields only.
+  const { data: hydrated } = useCatalogSeries(listItem.id);
+  const anime = hydrated ?? listItem;
   const { data: mapping } = useCatalogMapping(anime.id);
   // Lookup state lives here so MapLookup (inputs) and MappingStrip (needle +
   // click-to-set) operate as one instrument.

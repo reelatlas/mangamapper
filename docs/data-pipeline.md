@@ -495,18 +495,23 @@ Fixed weekly is correct.
    come from MU (or research); every source contributes what it actually
    knows.
 19. **POST-COMPACT AGENDA (Sean 2026-08-24, in order):**
-   a. **Kenshin read-path debug — RESOLVED 2026-08-23: NOT a code bug.**
-      Sean's repro (episode table, ep 28 = vol 6 ch 52; section header
-      vol 6-17 ch 52-151) is the fingerprint of the OLD pre-interpolation
-      linear estimator (18/52 × 151 = 52 exactly; vol 17 = ratio estimate
-      where the anchor stores 18) running against current data — i.e. a
-      STALE CLIENT: the deployed app is ~35 unpushed commits behind, and
-      react-query holds fetches 5 min. Verified end-to-end: the anon key
-      returns all 18 Kenshin anchors incl. ep 28 → ch 48 vol 7; current
-      code renders a direct anchor hit (buildEpisodeList reads
-      exact.mangaMapping first) — mathematically cannot show 52.
-      VERIFY WITH SEAN after he pushes/refreshes: ep 28 should read
-      vol 7 ch 48; header 28-62 should read vol 7-18 · ch 48-151. THEN:
+   a. **Kenshin read-path debug — RESOLVED 2026-08-23 (for real): CARD
+      HYDRATION GAP.** First diagnosis ("stale client") was WRONG — Sean's
+      screenshot disproved it. Actual cause: AnimeCard received the SHALLOW
+      catalog-list item (list() deliberately skips episode hydration —
+      episodes:[]) and only fetched the mapping on expand, so
+      buildEpisodeList + the position lookup ran with NO episode rows: no
+      titles (title_pending everywhere), no anchor mangaMappings, no
+      boundaries → pure origin→frontier linear (ep 28 = 52 exactly).
+      getMapping reads anchors DB-side, which is why spans/latestKnown/151
+      were right while every per-episode value was an estimate. FIX:
+      AnimeCard hydrates via useCatalogSeries (getById) on open; shallow
+      item renders identity fields until it lands. Reproduced+verified both
+      paths through the real modules (shallow = Sean's screenshot exactly;
+      hydrated = ep 28 vol 7 ch 48, header vol 7-18 · ch 48-151, titles
+      present). LESSON (iron-clad): any component consuming episode-level
+      data must consume the HYDRATED series — the shallow list item is for
+      list rendering only. THEN:
    b. **Side-story mapping notation (ruling needed)**: Kenshin eps 95-98
       adapt the PILOT ONE-SHOTS — content outside mainline chapter numbering.
       Current beyond-frontier rule nulls them (over-correction per Sean —
