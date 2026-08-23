@@ -9,7 +9,7 @@
 //   npx tsx --env-file=.env.ingest scripts/ingest/audit-ui-truth.ts
 
 import { db } from './lib/db';
-import { COMMUNITY_COUNT_OVERRIDES, EPISODE_TYPE_OVERRIDES } from './lib/resolve';
+import { COMMUNITY_COUNT_OVERRIDES, CONTINUA_SUPPRESSED, EPISODE_TYPE_OVERRIDES } from './lib/resolve';
 
 async function pageAll(table: string, select: string): Promise<any[]> {
   const out: any[] = [];
@@ -111,6 +111,14 @@ async function main() {
     const row = series.find((s: any) => s.id === sid);
     if (row && (row.aired_episodes > o.cap || (row.total_episodes ?? 0) > o.cap)) {
       classes.ruling_violation.push(`${sid}: totals ${row.aired_episodes}/${row.total_episodes} exceed the community cap ${o.cap}`);
+    }
+  }
+  {
+    // suppressed sources must hold ZERO anchors on their series
+    const suppressed = Object.keys(CONTINUA_SUPPRESSED);
+    if (suppressed.length) {
+      const { data: bad } = await db.from('chapter_anchors').select('series_id, episode, chapter').in('series_id', suppressed).eq('source', 'afg-continua');
+      for (const b of bad ?? []) classes.ruling_violation.push(`${b.series_id}: suppressed afg-continua anchor present (ep ${b.episode} → ch ${b.chapter})`);
     }
   }
   for (const [sid, types] of Object.entries(EPISODE_TYPE_OVERRIDES)) {

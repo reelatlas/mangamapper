@@ -427,6 +427,8 @@ export interface EpisodeSection {
   volEnd: number | null;
   chStart: number | null;
   chEnd: number | null;
+  // known values exist but the section's tail is unmapped (frontier inside)
+  openEnded?: boolean;
 }
 
 export interface EpisodeListData {
@@ -457,12 +459,17 @@ export const buildEpisodeList = (anime: AnimeSeries, m: MappingSummary): Episode
     rows.push({ ep, type, title: exact?.title ?? null, vol, ch });
   }
   // section coverage reads from the rows themselves, so header ranges always
-  // agree with the rows revealed on expand
+  // agree with the rows revealed on expand. PARTIAL knowledge renders as
+  // partial (Sean 2026-08-23): a section straddling the frontier keeps its
+  // KNOWN start/end from the first/last valued rows and marks the tail
+  // open-ended ("ch:48–?") — never a bare dash while values exist inside.
   const sections: EpisodeSection[] = m.spans.map((span, index) => {
-    const first = rows[span.start - 1];
-    const last = rows[span.end - 1];
+    const valued = rows.slice(span.start - 1, span.end).filter((r) => r.ch != null);
+    const first = valued[0];
+    const last = valued[valued.length - 1];
     const chStart = first?.ch != null ? parseInt(first.ch.split(/[-,]/)[0], 10) || null : null;
     const chEnd = last?.ch != null ? lastChapterNumber(last.ch) : null;
+    const tailRow = rows[span.end - 1];
     return {
       index,
       start: span.start,
@@ -473,6 +480,9 @@ export const buildEpisodeList = (anime: AnimeSeries, m: MappingSummary): Episode
       volEnd: last?.vol ?? null,
       chStart,
       chEnd,
+      // known values exist but the section's final row is unmapped —
+      // the range is open-ended past the frontier
+      openEnded: chEnd !== null && tailRow?.ch == null,
     };
   });
   return { rows, sections };

@@ -5,7 +5,7 @@
 
 import { deriveAnchors, type AfgPage, type AfgContinua } from './afg';
 import { db, fileFlagOnce } from './db';
-import { registerIds } from './resolve';
+import { CONTINUA_SUPPRESSED, registerIds } from './resolve';
 
 // heading comparison: decode leftover entities, drop parenthetical year
 // suffixes ("Rurouni Kenshin (1996)"), then collapse to word soup
@@ -36,7 +36,14 @@ export async function applyContinua(
   // the AFG page's own highest charted episode — tells us which numbering
   // space the page lives in (see the conversion note below)
   afgPageMax?: number,
-): Promise<'applied' | 'withheld' | 'kept_curated' | 'no_data'> {
+): Promise<'applied' | 'withheld' | 'kept_curated' | 'no_data' | 'suppressed'> {
+  // research-ruled suppression (Claymore/Kimi lesson): a source value proven
+  // WRONG for a series must not re-enter on any refresh — same-episode
+  // precedence can't stop it landing on a different episode
+  if (CONTINUA_SUPPRESSED[seriesId]) {
+    await db.from('chapter_anchors').delete().eq('series_id', seriesId).eq('source', 'afg-continua');
+    return 'suppressed';
+  }
   if (!continua || continua.endChapter === null) return 'no_data';
   const { data: s } = await db
     .from('series')

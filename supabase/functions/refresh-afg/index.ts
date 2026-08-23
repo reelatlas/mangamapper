@@ -35031,7 +35031,8 @@ function parseAfgPage(html3) {
       const number = Number(numMatch[1]);
       if (number <= 0) return;
       const hasStart = /^\(?[\d:]+\)?$/.test(cells[1] ?? "");
-      const titleCell = hasStart ? cells[2] : cells[1];
+      const rawTitle = hasStart ? cells[2] : cells[1];
+      const titleCell = rawTitle && /^\(?\d{1,4}\)?\.?$/.test(rawTitle.trim()) ? "" : rawTitle;
       const chaptersCell = hasStart ? cells[3] : cells[2];
       const numberClass = $2(tr).find("td").first().attr("class") ?? "";
       episodes.push({
@@ -35140,6 +35141,10 @@ function slugify(title) {
 }
 
 // scripts/ingest/lib/resolve.ts
+var CONTINUA_SUPPRESSED = {
+  claymore: "continua says ep 26 \u2192 ch 54, but eps 24-26 are fully anime-original (research 2026-08-23) \u2014 the manual ep-20 \u2192 ch-56 anchor is the frontier",
+  "kimi-ni-todoke-from-me-to-you": "continua says ep 43 \u2192 ch 86 \u2014 ch 86 is unsupported anywhere (mid-vol 21, unadapted; research 2026-08-23); manual ep-44 \u2192 ch-75 is the frontier"
+};
 async function registerIds(seriesId, ids) {
   for (const [source, val2] of Object.entries(ids)) {
     if (val2 == null) continue;
@@ -35162,6 +35167,10 @@ async function registerIds(seriesId, ids) {
 // scripts/ingest/lib/anchors.ts
 var norm = (s) => s.replace(/&#(\d+);/g, (_, d) => String.fromCharCode(Number(d))).replace(/&amp;/g, "&").replace(/\(\s*\d{4}\s*\)/g, " ").toLowerCase().replace(/[^a-z0-9]+/g, " ").trim();
 async function applyContinua(runId, seriesId, continua, afgPageMax) {
+  if (CONTINUA_SUPPRESSED[seriesId]) {
+    await db.from("chapter_anchors").delete().eq("series_id", seriesId).eq("source", "afg-continua");
+    return "suppressed";
+  }
   if (!continua || continua.endChapter === null) return "no_data";
   const { data: s } = await db.from("series").select("id, title, title_native, aired_episodes, total_chapters, latest_known_chapters, manga_anilist_id, search_text").eq("id", seriesId).maybeSingle();
   if (!s) return "no_data";
@@ -35237,6 +35246,9 @@ async function applyContinua(runId, seriesId, continua, afgPageMax) {
     note: `AFG continua table: "${continua.text.slice(0, 180)}"`
   });
   if (error) throw new Error(`applyContinua(${s.id}): ${error.message}`);
+  if (continua.continueChapter !== null) {
+    await db.from("series").update({ continue_from_chapter: continua.continueChapter, updated_at: (/* @__PURE__ */ new Date()).toISOString() }).eq("id", s.id);
+  }
   if (s.manga_anilist_id && continua.continueVolume !== null && continua.volumeStart !== null && continua.volumeEnd !== null) {
     const { data: existing } = await db.from("volume_boundaries").select("chapter_start, chapter_end").eq("manga_anilist_id", s.manga_anilist_id).eq("volume", continua.continueVolume).maybeSingle();
     if (!existing) {

@@ -35137,7 +35137,11 @@ function applyCommunityCap(seriesId, row) {
   if (row.total_episodes != null) row.total_episodes = Math.min(row.total_episodes, o.cap);
 }
 var EPISODE_TYPE_OVERRIDES = {
-  x: { 21: "anime-only-canon", 22: "anime-only-canon", 23: "anime-only-canon", 24: "anime-only-canon" }
+  x: { 21: "anime-only-canon", 22: "anime-only-canon", 23: "anime-only-canon", 24: "anime-only-canon" },
+  //   claymore 24-26: fully anime-original ending (Madhouse outran the
+  //   manga) — research verdict 2026-08-23 (AFG + wheredoestheanimeleaveoff
+  //   + sportskeeda), Sean sign-off
+  claymore: { 24: "anime-only-canon", 25: "anime-only-canon", 26: "anime-only-canon" }
 };
 var filterEpisodeRows = (seriesId, rows) => {
   const o = COMMUNITY_COUNT_OVERRIDES[seriesId];

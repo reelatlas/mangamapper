@@ -583,6 +583,24 @@ Fixed weekly is correct.
       anchor routing · footer credits · Sean review bookmarks (6, incl.
       monogatari UI note) — query: detail->>'kind_of_note' =
       'sean_review_bookmark'.
+22. ✅ **Consolidation pass 3 (2026-08-23 end — the pre-item-4/5 rescan)**:
+   all 266 AFG staged pages RESTAGED from stored html with the current
+   parser (45 carried junk titles — staging must never hold what a current
+   parse wouldn't produce); all four edges rebuilt + redeployed; continua
+   sweep re-run (72 applied / 8 kept_curated / 2 suppressed); coverage
+   audit + cleanup-flags run. NEW RULE — source suppressions
+   (CONTINUA_SUPPRESSED): same-episode precedence can't stop a ruled-WRONG
+   source value landing on a DIFFERENT episode (Claymore/Kimi resurrection
+   caught by the rescan) — research can now suppress a source per series,
+   writer-enforced + ruling_violation-audited. Section headers render
+   PARTIAL knowledge ("ch 48-60+", vol same) instead of a dash when the
+   frontier sits inside a section. Research batch 4 (agent-verified):
+   TYBW part boundaries eps 13/26/40 → chs 542/609/661 + scope end 686
+   (AniList 706 = count space) + Part 3 = eps 27-40 correction; Railgun T
+   ep 73 → ch 96 (magazine 96/97 merge noted, continue 98); Tokyo
+   Revengers eps 24/37/50 → chs 73/121/185. pending_airing_no_anchor = 0.
+   Census: ok_full 235 / 4 loose / all integrity classes 0. Shonan
+   creation auto-retrying (AniList outage, their side).
 21. ✅ **Consolidation pass 2 (2026-08-23, post-Kenshin)**: every write path
    swept against the day's rules — filterEpisodeRows (caps + type
    overrides) now in ALL five episode writers (resolve, stitched-guard,

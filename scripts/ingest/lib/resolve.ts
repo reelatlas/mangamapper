@@ -97,6 +97,16 @@ export function applyCommunityCap(
 //   classes them manga-canon; research verdict (xtvclamp.fandom, Wikipedia,
 //   cbr.com) says original. anime-only-canon renders them truthfully (no
 //   chapter counterpart BY DESIGN, not mapping-pending null).
+// Research-ruled SOURCE SUPPRESSIONS (2026-08-23, the Claymore/Kimi lesson):
+// same-episode precedence cannot stop a ruled-WRONG source value landing on
+// a DIFFERENT episode — when research proves a source's frontier wrong for a
+// series, that source is suppressed there entirely. Applied by the source's
+// writer; verified outcome-side by the ruling_violation audit.
+export const CONTINUA_SUPPRESSED: Record<string, string> = {
+  claymore: 'continua says ep 26 → ch 54, but eps 24-26 are fully anime-original (research 2026-08-23) — the manual ep-20 → ch-56 anchor is the frontier',
+  'kimi-ni-todoke-from-me-to-you': 'continua says ep 43 → ch 86 — ch 86 is unsupported anywhere (mid-vol 21, unadapted; research 2026-08-23); manual ep-44 → ch-75 is the frontier',
+};
+
 export const EPISODE_TYPE_OVERRIDES: Record<string, Record<number, string>> = {
   x: { 21: 'anime-only-canon', 22: 'anime-only-canon', 23: 'anime-only-canon', 24: 'anime-only-canon' },
   //   claymore 24-26: fully anime-original ending (Madhouse outran the

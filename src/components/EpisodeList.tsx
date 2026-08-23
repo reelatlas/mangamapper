@@ -99,13 +99,19 @@ const coverageLabel = (s: EpisodeSection) => {
     return <span className="text-muted-foreground/60">—</span>;
   }
   const num = 'text-foreground';
-  const vol =
+  const volKnown =
     s.volStart !== null
       ? s.volEnd !== null && s.volEnd !== s.volStart
         ? `${s.volStart}-${s.volEnd}`
         : String(s.volStart)
       : null;
-  const ch = s.chEnd !== s.chStart ? `${s.chStart}-${s.chEnd}` : String(s.chStart);
+  // vol gets the same open-ended treatment as ch (Sean 2026-08-23)
+  const vol = volKnown !== null && s.openEnded ? `${volKnown}+` : volKnown;
+  // open-ended: known coverage plus an unmapped tail (frontier inside the
+  // section) — show everything we know and mark the unknown with '+'
+  // rather than collapsing to a bare dash (Sean 2026-08-23)
+  const known = s.chEnd !== s.chStart ? `${s.chStart}-${s.chEnd}` : String(s.chStart);
+  const ch = s.openEnded ? `${known}+` : known;
   return (
     <span>
       {vol !== null && (
