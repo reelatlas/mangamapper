@@ -25,7 +25,7 @@ async function main() {
   const series = await pageAll('series', 'id, source_type, manga_status, status, aired_episodes, total_episodes, total_chapters, total_volumes, latest_known_chapters, manga_anilist_id, manga_start_chapter');
   const episodes = await pageAll('episodes', 'series_id, number, type');
   const anchors = await pageAll('chapter_anchors', 'series_id, episode, chapter, volume');
-  const comps = await pageAll('series_components', 'series_id, episode_end');
+  const comps = await pageAll('series_components', 'series_id, episode_end, anilist_id');
   const bounds = await pageAll('volume_boundaries', 'manga_anilist_id, volume, chapter_start, chapter_end');
 
   const epsBy = new Map<string, { max: number; lastCanon: number; count: number }>();
@@ -59,9 +59,23 @@ async function main() {
   };
 
   const classes: Record<string, string[]> = {
-    integrity_eps_beyond_total: [], integrity_total_beyond_eps: [], no_source: [], ok_full: [], ok_no_volume: [],
+    integrity_eps_beyond_total: [], integrity_total_beyond_eps: [], integrity_double_claimed: [],
+    no_source: [], ok_full: [], ok_no_volume: [],
     pending_airing_no_anchor: [], pending_finished_no_totals: [], pending_no_canon: [], pending_other: [],
   };
+  // ownership integrity: one AniList entry claimed by two series' components
+  // = legacy pre-ownership-guard damage or an unresolved duplicate entry
+  {
+    const claims = new Map<number, Set<string>>();
+    for (const c of comps) {
+      if (c.anilist_id == null) continue;
+      if (!claims.has(c.anilist_id)) claims.set(c.anilist_id, new Set());
+      claims.get(c.anilist_id)!.add(c.series_id);
+    }
+    for (const [aid, owners] of claims) {
+      if (owners.size > 1) classes.integrity_double_claimed.push(`anilist ${aid} ← ${[...owners].join(' AND ')}`);
+    }
+  }
   const lightNovel: string[] = [];
 
   for (const row of series) {

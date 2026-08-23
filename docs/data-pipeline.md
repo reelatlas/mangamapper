@@ -276,6 +276,19 @@ AniList `chapters/volumes` are null while publishing.
 | **MangaUpdates** | `mu-backfill` (universal — every manga behind a canonical series) | `refresh-mu` daily 09:50, ≤20 stalest, 7d window | `latest_known_chapters` (chapter-number space, all manga), frontier anchors, status-conflict + edition-divergence flags — all via `lib/mu-frontier` | MangaDex-bridge-only identity, scope-segment multi-pair parse, chapter-progress guard, anchor-freshness rule |
 | **Wikipedia** | `volumes-backfill` (event: volumes-staleness flag from syncAnchors) | none — boundaries static once printed | `volume_boundaries` | title-token overlap, 3 wikitext dialects, exceed-totals flag |
 
+### The research tier (Sean 2026-08-24)
+
+When a flag survives rule resolution AND cross-source checks — the answer
+verifiably exists in community knowledge but not in our structured sources —
+it escalates to **deeper research**: web/wiki/community investigation
+("where do I continue the manga" threads are first-class evidence), with
+**≥2 corroborating sources required**, findings recorded in the flag's
+verdict with URLs, and application only on Sean's sign-off. The escalation
+question ("want deeper research on this?") belongs in any flag-confirmation
+conversation. Curated results land as: manual anchors (source 'manual'),
+scope rows, EXTRAS_ADOPTED entries, or episode-row curation — all durable,
+all surviving refreshes.
+
 **Maintenance audits** (run after any batch; all idempotent):
 `audit-manga-coverage` (self-healing: frontiers + latest_known + cross-checks),
 `reconcile-structure` (episode-floor invariant + late-airing entries),
