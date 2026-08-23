@@ -102,7 +102,12 @@ async function run() {
           // continua inline upkeep (Sean's full-source ruling 2026-08-23):
           // the end-frontier + boundary land WITH the pull via the same
           // shared gates as the sweep script
-          const c = await applyContinua(runId, target, continua);
+          const c = await applyContinua(
+            runId,
+            target,
+            continua,
+            page.episodes.reduce((m, e) => Math.max(m, e.number), 0),
+          );
           if (c === 'withheld') counters.flagged++;
         }
       } catch (e) {

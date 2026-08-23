@@ -266,7 +266,15 @@ const buildMapping = (
   const total = counts.canon + counts.mixed + counts.filler + counts['anime-only-canon'];
 
   const latestAnchor = anchors.length ? anchors[anchors.length - 1] : null;
-  const lastCanonEpisode = eps.reduce((m, e) => (e.type !== 'filler' ? Math.max(m, e.number) : m), 0);
+  // canon-tier series (Sean 2026-08-23) carry NO episode rows — their spans
+  // default to canon (buildSpans fallback), so the last canon episode IS the
+  // last aired one; without this the finished-series latestKnown fallback
+  // never fires and a fully-mappable series renders mapping_pending
+  const lastCanonEpisode = eps.length
+    ? eps.reduce((m, e) => (e.type !== 'filler' ? Math.max(m, e.number) : m), 0)
+    : hasSource
+      ? aired
+      : 0;
 
   const loose = row.mapping_mode === 'loose';
   let latestKnown =

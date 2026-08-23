@@ -33,6 +33,9 @@ export async function applyContinua(
   runId: number,
   seriesId: string,
   continua: AfgContinua | null | undefined,
+  // the AFG page's own highest charted episode — tells us which numbering
+  // space the page lives in (see the conversion note below)
+  afgPageMax?: number,
 ): Promise<'applied' | 'withheld' | 'kept_curated' | 'no_data'> {
   if (!continua || continua.endChapter === null) return 'no_data';
   const { data: s } = await db
@@ -77,9 +80,34 @@ export async function applyContinua(
     });
     return 'withheld';
   }
-  const ep = continua.endEpisode !== null && continua.endEpisode <= (s.aired_episodes ?? 0)
-    ? continua.endEpisode
-    : s.aired_episodes;
+  // NUMBERING CONVERSION (§10 rule, systematized 2026-08-23): AFG counts in
+  // MAL-style numbering — our community count can insert numbered OVAs/
+  // specials mid-run (Haikyu's Riku vs Kuu = our eps 61-62, so AFG's "ep 85"
+  // finale is OUR ep 87). The components table knows every insert: walk the
+  // non-season numbered components in order, shifting the claimed episode
+  // past each insert that lands at or before it.
+  let ep: number | null = null;
+  if (continua.endEpisode !== null) {
+    let shifted = continua.endEpisode;
+    // a page whose own chart reaches our full count is ALREADY in our
+    // numbering space (its count includes the inserts) — no conversion
+    const pageMatchesOurs = afgPageMax !== undefined && afgPageMax >= (s.aired_episodes ?? 0);
+    if (!pageMatchesOurs) {
+      const { data: inserts } = await db
+        .from('series_components')
+        .select('episode_start, episode_end, kind')
+        .eq('series_id', s.id)
+        .not('kind', 'eq', 'season')
+        .not('episode_start', 'is', null)
+        .order('episode_start');
+      for (const c of inserts ?? []) {
+        const len = (c.episode_end ?? c.episode_start!) - c.episode_start! + 1;
+        if (c.episode_start! <= shifted) shifted += len;
+      }
+    }
+    if (shifted <= (s.aired_episodes ?? 0)) ep = shifted;
+  }
+  ep ??= s.aired_episodes;
   if (!ep) return 'no_data';
 
   const { data: holder } = await db

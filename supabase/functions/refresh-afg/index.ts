@@ -22824,7 +22824,7 @@ var Sequences = {
   // `</xmp`
 };
 var Tokenizer = class {
-  constructor({ xmlMode = false, decodeEntities = true }, cbs) {
+  constructor({ xmlMode = false, decodeEntities: decodeEntities2 = true }, cbs) {
     this.cbs = cbs;
     this.state = State.Text;
     this.buffer = "";
@@ -22838,7 +22838,7 @@ var Tokenizer = class {
     this.currentSequence = void 0;
     this.sequenceIndex = 0;
     this.xmlMode = xmlMode;
-    this.decodeEntities = decodeEntities;
+    this.decodeEntities = decodeEntities2;
     this.entityDecoder = new EntityDecoder2(xmlMode ? xmlDecodeTree : htmlDecodeTree, (cp, consumed) => this.emitCodePoint(cp, consumed));
   }
   reset() {
@@ -35062,11 +35062,14 @@ function deriveAnchors(episodes) {
   return out;
 }
 var num = (s) => s ? Number(s) : null;
+var decodeEntities = (s) => s.replace(/&#(\d+);/g, (_, d) => String.fromCharCode(Number(d))).replace(/&amp;/g, "&").replace(/&quot;/g, '"').replace(/&#x([0-9a-f]+);/gi, (_, h) => String.fromCharCode(parseInt(h, 16)));
 function parseContinua(html3) {
   const i = html3.indexOf("continua-manga");
   if (i < 0) return null;
   const end2 = html3.indexOf("</table>", i);
-  const text3 = html3.slice(i, end2 < 0 ? i + 4e3 : end2).replace(/<[^>]+>/g, " ").replace(/\s+/g, " ").trim();
+  const text3 = decodeEntities(
+    html3.slice(i, end2 < 0 ? i + 4e3 : end2).replace(/<[^>]+>/g, " ").replace(/\s+/g, " ").trim()
+  );
   const heading = /Where to start (.+?) manga after (?:the )?anime/i.exec(text3)?.[1]?.trim() ?? null;
   let endEpisode = null;
   let endSeason = null;
@@ -35157,26 +35160,26 @@ async function registerIds(seriesId, ids) {
 }
 
 // scripts/ingest/lib/anchors.ts
-var norm = (s) => s.toLowerCase().replace(/[^a-z0-9]+/g, " ").trim();
-async function applyContinua(runId, seriesId, continua) {
+var norm = (s) => s.replace(/&#(\d+);/g, (_, d) => String.fromCharCode(Number(d))).replace(/&amp;/g, "&").replace(/\(\s*\d{4}\s*\)/g, " ").toLowerCase().replace(/[^a-z0-9]+/g, " ").trim();
+async function applyContinua(runId, seriesId, continua, afgPageMax) {
   if (!continua || continua.endChapter === null) return "no_data";
   const { data: s } = await db.from("series").select("id, title, title_native, aired_episodes, total_chapters, latest_known_chapters, manga_anilist_id, search_text").eq("id", seriesId).maybeSingle();
   if (!s) return "no_data";
   await db.from("chapter_anchors").delete().eq("series_id", s.id).eq("source", "afg-continua");
   const heading = continua.heading ? norm(continua.heading) : null;
-  const names = norm(`${s.title} ${s.title_native ?? ""} ${s.search_text ?? ""}`);
+  const names = norm(`${s.title} ${s.title_native ?? ""} ${s.search_text ?? ""} ${s.id.replace(/-/g, " ")}`);
   if (heading && !names.includes(heading)) {
     await fileFlagOnce(runId, s.id, "afg", "parse_integrity", {
       continuaHeading: continua.heading,
-      note: "continua table heading names a DIFFERENT series (AFG template bug class) \u2014 data withheld, verify by hand"
+      note: "continua table heading names a DIFFERENT series (AFG template bug class \u2014 Cuckoos carried Dandadan's table) \u2014 data withheld, verify by hand"
     });
     return "withheld";
   }
-  if (continua.continueChapter !== null && continua.continueChapter - 1 !== continua.endChapter) {
+  if (continua.continueChapter !== null && Math.abs(continua.continueChapter - 1 - continua.endChapter) > 40) {
     await fileFlagOnce(runId, s.id, "afg", "parse_integrity", {
       endChapter: continua.endChapter,
       continueChapter: continua.continueChapter,
-      note: "continua table internally inconsistent (continue-1 \u2260 end) \u2014 withheld"
+      note: "continua frontier and continue-from are wildly apart \u2014 parse suspect, withheld"
     });
     return "withheld";
   }
@@ -35189,7 +35192,20 @@ async function applyContinua(runId, seriesId, continua) {
     });
     return "withheld";
   }
-  const ep = continua.endEpisode !== null && continua.endEpisode <= (s.aired_episodes ?? 0) ? continua.endEpisode : s.aired_episodes;
+  let ep = null;
+  if (continua.endEpisode !== null) {
+    let shifted = continua.endEpisode;
+    const pageMatchesOurs = afgPageMax !== void 0 && afgPageMax >= (s.aired_episodes ?? 0);
+    if (!pageMatchesOurs) {
+      const { data: inserts } = await db.from("series_components").select("episode_start, episode_end, kind").eq("series_id", s.id).not("kind", "eq", "season").not("episode_start", "is", null).order("episode_start");
+      for (const c of inserts ?? []) {
+        const len = (c.episode_end ?? c.episode_start) - c.episode_start + 1;
+        if (c.episode_start <= shifted) shifted += len;
+      }
+    }
+    if (shifted <= (s.aired_episodes ?? 0)) ep = shifted;
+  }
+  ep ??= s.aired_episodes;
   if (!ep) return "no_data";
   const { data: holder } = await db.from("chapter_anchors").select("source, chapter").eq("series_id", s.id).eq("episode", ep).maybeSingle();
   const diff = holder ? Math.abs(Number(holder.chapter) - continua.endChapter) : 0;
@@ -35366,7 +35382,12 @@ async function run() {
         if (target) {
           const result = await syncAnchors(runId, target, s.slug, page);
           if (result.withheld) counters.flagged++;
-          const c = await applyContinua(runId, target, continua);
+          const c = await applyContinua(
+            runId,
+            target,
+            continua,
+            page.episodes.reduce((m, e) => Math.max(m, e.number), 0)
+          );
           if (c === "withheld") counters.flagged++;
         }
       } catch (e) {

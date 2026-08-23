@@ -154,6 +154,11 @@ async function main() {
 
   for (const row of series) {
     const e = epsBy.get(row.id) ?? { max: 0, lastCanon: 0, count: 0 };
+    // lockstep with buildMapping: row-less canon-tier series default to
+    // canon spans, so the last canon episode is the last aired one
+    if (e.count === 0 && row.source_type !== 'original' && row.manga_status !== 'anime_only') {
+      e.lastCanon = row.aired_episodes ?? 0;
+    }
     const covered = Math.max(row.total_episodes ?? 0, compEnd.get(row.id) ?? 0, row.aired_episodes ?? 0);
     // any overshoot lists (reconcile-structure resolves what the chain can
     // confirm; what remains here = ruled extras + accepted 1-2 tolerance)

@@ -20,10 +20,12 @@ async function main() {
     const bySlug = new Map((reg ?? []).map((r) => [r.external_id, r.series_id]));
 
     for (const p of pages ?? []) {
-      const continua = (p.raw as { continua?: AfgContinua | null }).continua;
+      const raw = p.raw as { continua?: AfgContinua | null; episodes?: { number: number }[] };
+      const continua = raw.continua;
       const seriesId = bySlug.get(p.slug);
       if (!seriesId) continue; // unserved pages apply at series-creation time
-      const result = await applyContinua(runId, seriesId, continua);
+      const pageMax = (raw.episodes ?? []).reduce((m, e) => Math.max(m, e.number), 0);
+      const result = await applyContinua(runId, seriesId, continua, pageMax);
       tally[result] = (tally[result] ?? 0) + 1;
       if (result === 'applied') counters.changed++;
       if (result === 'withheld') counters.flagged++;
