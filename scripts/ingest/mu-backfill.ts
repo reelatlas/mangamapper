@@ -32,19 +32,26 @@ async function main() {
       .order('popularity', { ascending: false });
 
     // class B: any manga-linked series without anchors — MU's anime-coverage
-    // field is their only frontier candidate
-    const anchored = new Set<string>();
+    // field is their only frontier candidate.
+    // class C (Sean 2026-08-24, the MHA finding): series whose anchors are
+    // STALE — max anchor episode far behind the run (sparse AFG pages chart
+    // only early seasons; MHA's stops at ep 13 of 170) — need MU's curated
+    // frontier just as much as unanchored ones.
+    const anchorMax = new Map<string, number>();
     for (let from = 0; ; from += 1000) {
-      const { data } = await db.from('chapter_anchors').select('series_id').range(from, from + 999);
-      for (const r of data ?? []) anchored.add(r.series_id);
+      const { data } = await db.from('chapter_anchors').select('series_id, episode').range(from, from + 999);
+      for (const r of data ?? []) anchorMax.set(r.series_id, Math.max(anchorMax.get(r.series_id) ?? 0, r.episode));
       if (!data || data.length < 1000) break;
     }
     const { data: linked } = await db
       .from('series')
-      .select('id, title, manga_anilist_id, manga_status, total_chapters, popularity')
+      .select('id, title, manga_anilist_id, manga_status, total_chapters, popularity, aired_episodes')
       .not('manga_anilist_id', 'is', null)
       .order('popularity', { ascending: false });
-    const classB = (linked ?? []).filter((s) => !anchored.has(s.id));
+    const classB = (linked ?? []).filter((s) => {
+      const ma = anchorMax.get(s.id);
+      return ma === undefined || ma < (s.aired_episodes ?? 0) - 12;
+    });
 
     const byManga = new Map<number, { title: string; seriesIds: string[]; statuses: Map<string, string> }>();
     for (const s of [...(classA ?? []), ...classB]) {

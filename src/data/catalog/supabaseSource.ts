@@ -246,6 +246,12 @@ const buildMapping = (row: SeriesRow, eps: EpisodeRow[], anchors: AnchorRow[], b
   const scopeStartCh = row.manga_start_chapter ?? 1;
   const adaptedSpan = coveredChapter !== null ? coveredChapter - scopeStartCh + 1 : null;
   const canonEpisodes = counts.canon + counts.mixed;
+  // Sean's ruling 2026-08-24: while a manga publishes, AniList totals are
+  // null — but latest_known (MU) bounds the series from below, so it is the
+  // EFFECTIVE total for tail math. Displayed totals stay null (= "ongoing");
+  // synthesis still requires real totals (an ongoing manga's latest chapter
+  // is NOT proof the anime adapted that far).
+  const effectiveTotalChapters = row.total_chapters ?? row.latest_known_chapters;
   // The manga_only tail is only knowable when anchors reach the end of the
   // run. Sparse coverage (AFG's Naruto table stops early) would fabricate a
   // giant tail out of chapters the anime DID adapt — an unknown frontier
@@ -257,14 +263,14 @@ const buildMapping = (row: SeriesRow, eps: EpisodeRow[], anchors: AnchorRow[], b
   if (
     hasSource &&
     anchorsReachEnd &&
-    row.total_chapters &&
+    effectiveTotalChapters &&
     coveredChapter &&
     adaptedSpan &&
     adaptedSpan > 0 &&
     canonEpisodes > 0 &&
-    row.total_chapters > coveredChapter
+    effectiveTotalChapters > coveredChapter
   ) {
-    mangaAheadChapters = row.total_chapters - coveredChapter;
+    mangaAheadChapters = effectiveTotalChapters - coveredChapter;
     mangaAheadUnits = Math.round(mangaAheadChapters * (canonEpisodes / adaptedSpan));
   }
 

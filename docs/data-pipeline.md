@@ -232,14 +232,16 @@ in code (`scripts/ingest/`), and every violation flags rather than guesses:
 | **Legend by count** | type badges render purely from data counts, never source-type branching (mock-era branches hid real tags twice) | AnimeCard legend |
 | **Derivative-manga rule** | AniList's ADAPTATION edge is directionless: a source=ORIGINAL anime never claims its linked manga (that manga adapts the ANIME — Evangelion class); a manga edge on a source-less old entry counts as source-evidence | resolveSeries / sourceType |
 | **latestKnown synthesis** | a FINISHED series' coverage IS its scope end — position instrument synthesizes from totals when anchors are absent; airing-unanchored stays honestly pending | buildMapping (supabaseSource) |
-| **MU-frontier rule** | MangaUpdates' curated anime-coverage field ("Vol X, Chap Y as of EP Z") becomes a real anchor (source 'mu') — the adaptation frontier for series AFG doesn't anchor | audit-manga-coverage.ts |
+| **MU-frontier rule** | MangaUpdates' curated anime-coverage field becomes a real anchor (source 'mu'). The field is MULTI-SEGMENT prose (MHA lists every season's endpoint; Naruto's covers three series with an EP number belonging to the Boruto clause): parse ALL Vol/Chap pairs, pick the largest inside THIS series' scope segment, require chapter progress beyond existing anchors (else same-stale, skip), trust an EP pin only in single-pair text (else pin at run end). 'mu' anchors are wiped + rebuilt every audit run — a rule fix heals all series at once | audit-manga-coverage.ts |
 | **Coverage audit** | every series self-classifies (anchored / synthesized / mu-frontier / honest-pending / unknown-flagged / no-source); new pending classes get RULES, never per-series fixes | audit-manga-coverage.ts |
 | **Expansion guards** | AFG-only series enter through exact-match-or-flag (whitespace-insensitive full-title equality; accented queries retry ASCII-folded), sparse, and alignment gates; the dedup guard flags AFG pages of existing series rather than duplicating them. STITCH-AWARE since 2026-08-24 (Sean's go): AFG numbers franchise-continuously, so the matched entry's SEQUEL chain is walked before the alignment gate — multi-season AFG-only shows (Solo Leveling, Oshi no Ko…) create with proper season components | afg-expansion.ts |
 | **Ownership guard** | a chain walk (stitch, expansion, extension) never crosses into an AniList entry another canonical series already claims — ruled splits (Bleach→TYBW, TG→:re, Naruto→Shippuden) are safe by construction, whatever a source's continuous numbering suggests | ownedAnilistIds / walkChain (lib/chain.ts) |
 | **Prequel-hijack fallback** | AniList PREQUEL edges can be chronological side stories, not series heads (MONSTERS ONA → One Piece; Berserk Memorial class): when the walked-back chain lands far from target, retry forward-only from the matched entry and keep whichever numbering fits | walkChain (lib/chain.ts) |
 | **AFG extension (merge, never replace)** | for REGISTERED afg pages covering more than we hold: the AniList chain must independently confirm AFG's numbering (same ±2/lag finalize gate as the stitcher); on confirm, components rebuild and AFG fills ONLY missing episode numbers — existing AFL rows stay the type authority; id/title/afl_slug never change; ruled-split pages skip by name; unconfirmed → flag | afg-extend.ts |
 | **Registration tiers** | AFG↔canonical identity enters the registry by evidence strength: slug / full-title equality auto-register; prefix (subtitle-stripped) matches need INDEPENDENT episode-span agreement (±2 of our max or a component boundary); a title key two series claim is ambiguous and never auto-matches; explicit rulings live in the RULED map (Sailor Moon 90s ≠ Crystal; AFG digimon-adventure = the 1999 series) | audit-afg-structure.ts --register |
-| **MU frontier targets (class B)** | any manga-linked series without chapter anchors is an MU staging target — MU's curated anime-coverage gives airing-series-with-finished-manga (TYBW class) and finished-unknown-coverage series their frontier; latest_known_chapters only ever writes for PUBLISHING manga | mu-backfill.ts |
+| **MU frontier targets (classes B+C)** | any manga-linked series whose anchors are absent OR STALE (max anchor episode > 12 behind the run — sparse AFG pages chart only early seasons, MHA's stops at ep 13/170) is an MU staging target — MU's curated anime-coverage supplies the real frontier; latest_known_chapters only ever writes for PUBLISHING manga | mu-backfill.ts |
+| **Anchor freshness** | anchors count as an active frontier only when they reach near the run's end; a stale set shows its truthful-but-old "as of ep N" and files a research flag — synthesis NEVER overrides a stale anchor (a diverged anime — Soul Eater — would otherwise claim full-manga coverage) | audit-manga-coverage.ts |
+| **Effective total (Sean 2026-08-24)** | while a manga publishes, AniList totals are null but MU's latest_known bounds the series from below: it is the EFFECTIVE total for tail math and the bar cutoff; DISPLAYED totals stay null (signals "ongoing"); synthesis still requires real totals. AniList has NO current-chapter field at all — the frontier can only come from MU (or research) | buildMapping (supabaseSource) |
 | Dispositions | active / excluded / duplicate / merged rulings are durable data; backfill skips non-active | source_map |
 
 **Hard-won learnings** (why some rules exist): AFL's Drupal is corrupt since
@@ -413,17 +415,17 @@ Fixed weekly is correct.
    series' SCOPED totals, so scoped entries (Bleach 675v479, Berserk
    374v94) false-positive — fix belongs to the segment model (compare
    against the manga's own totals/family max).
-18. **UNRESOLVED — Sean 2026-08-24: "will not work for our model right now,
-   we need to figure that out": the D-Frag tail gap.** Every anchored series
-   whose manga is still PUBLISHING shows NO manga-only tail (buildMapping's
-   manga-ahead math accepts only AniList `total_chapters`, null while
-   publishing) while the card's denominator happily shows MU's
-   latest_known (D-Frag: ep 12 → ch 36, "of 182", tail absent). This is a
-   data-logic hole, not a display choice — the coverage-segment sketch
-   (§ above) holds the proposed fix (tail denominator falls back to
-   latest_known, labeled "as of latest published"), but it is NOT resolved
-   until worked through with Sean and built. Do not close this item on a
-   doc update.
+18. ✅ RULED + BUILT (Sean 2026-08-24), pending his visual confirm — the
+   D-Frag tail gap: latest_known is the EFFECTIVE total (tail math + bar
+   cutoff) while displayed totals stay null to signal "ongoing" (§10
+   effective-total rule). Same session, Sean's MHA report exposed the
+   STALE-ANCHOR class (30 series: sparse AFG pages — MHA's anchors stop at
+   ep 13/170, Naruto's at 27/220): fixed by MU class C (curated
+   anime-coverage as the real frontier) + the anchor-freshness rule;
+   MU-less stragglers carry research flags, never guesses. Sean's source
+   strategy ratified: AniList has no current-chapter field, so frontiers
+   come from MU (or research); every source contributes what it actually
+   knows.
 19. **Remaining triage** (all understood, none urgent): LN-instrument ruling
    (item 16) · segment-model rulings (handoff pointers, universe-view bar —
    sketch above, Sean's go needed) · 3

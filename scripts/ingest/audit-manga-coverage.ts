@@ -13,13 +13,23 @@ interface MuRaw {
   anime: { start: string | null; end: string | null } | null;
 }
 
-// "Vol 112, Chap 1138 (As of EP 1168)" — volume/chapter required, episode optional
-function parseCoverage(text: string | null): { volume: number | null; chapter: number; episode: number | null } | null {
-  if (!text) return null;
-  const m = text.match(/Vol\.?\s*(\d+)\s*,\s*Chap(?:ter)?\.?\s*(\d+)/i);
-  if (!m) return null;
-  const ep = text.match(/EP\.?\s*(\d+)/i);
-  return { volume: Number(m[1]), chapter: Number(m[2]), episode: ep ? Number(ep[1]) : null };
+// MU's anime field is often MULTI-SEGMENT prose: MHA's end lists every
+// season's endpoint ("Vol 3, Chap 21 (S1) / … / Vol 42, Chap 432 (S8)");
+// Naruto's covers three series in one string with an EP number belonging to
+// the BORUTO clause. Parse ALL Vol/Chap pairs; the caller picks the pair
+// inside the series' own scope (segment model). An EP marker is only
+// trustworthy when the text holds exactly one pair.
+function parseCoverageAll(text: string | null): {
+  pairs: { volume: number; chapter: number }[];
+  explicitEp: number | null;
+} {
+  if (!text) return { pairs: [], explicitEp: null };
+  const pairs = [...text.matchAll(/Vol\.?\s*(\d+)\s*,\s*Chap(?:ter)?\.?\s*(\d+)/gi)].map((m) => ({
+    volume: Number(m[1]),
+    chapter: Number(m[2]),
+  }));
+  const ep = pairs.length === 1 ? text.match(/EP\.?\s*(\d+)/i) : null;
+  return { pairs, explicitEp: ep ? Number(ep[1]) : null };
 }
 
 async function main() {
@@ -28,6 +38,7 @@ async function main() {
     active_anchored: [],
     active_synthesized: [],
     mu_frontier_applied: [],
+    stale_anchor_no_frontier: [],
     pending_airing_no_frontier: [],
     pending_finished_unknown_coverage: [],
     no_source: [],
@@ -35,10 +46,23 @@ async function main() {
   };
 
   try {
-    const anchored = new Set<string>();
+    // 'mu' anchors are pure derivations of staged MU data — wipe and rebuild
+    // them every run so a rule fix heals all series at once.
+    await db.from('chapter_anchors').delete().eq('source', 'mu');
+
+    // "anchored" only counts when the frontier is FRESH — a max anchor far
+    // behind the run (sparse AFG page: MHA's stops at ep 13 of 170) is a
+    // stale picture, and the series still needs a real frontier (MU) or a
+    // research flag. Sean 2026-08-24. maxChapter guards MU staleness: an MU
+    // pair that adds no chapter progress is the SAME stale frontier.
+    const anchorMax = new Map<string, number>();
+    const chapterMax = new Map<string, number>();
     for (let from = 0; ; from += 1000) {
-      const { data } = await db.from('chapter_anchors').select('series_id').range(from, from + 999);
-      for (const r of data ?? []) anchored.add(r.series_id);
+      const { data } = await db.from('chapter_anchors').select('series_id, episode, chapter').range(from, from + 999);
+      for (const r of data ?? []) {
+        anchorMax.set(r.series_id, Math.max(anchorMax.get(r.series_id) ?? 0, r.episode));
+        chapterMax.set(r.series_id, Math.max(chapterMax.get(r.series_id) ?? 0, r.chapter));
+      }
       if (!data || data.length < 1000) break;
     }
     const { data: muRows } = await db.from('ingest_mangaupdates').select('manga_anilist_id, raw');
@@ -46,7 +70,7 @@ async function main() {
 
     const { data: series } = await db
       .from('series')
-      .select('id, status, source_type, manga_status, manga_anilist_id, total_chapters, aired_episodes');
+      .select('id, status, source_type, manga_status, manga_anilist_id, total_chapters, aired_episodes, manga_start_chapter');
 
     for (const s of series ?? []) {
       const hasSource = s.source_type !== 'original' && s.manga_status !== 'anime_only';
@@ -61,16 +85,26 @@ async function main() {
         });
         continue;
       }
-      if (anchored.has(s.id)) {
+      const maxAnchor = anchorMax.get(s.id);
+      const anchorsFresh = maxAnchor !== undefined && maxAnchor >= (s.aired_episodes ?? 0) - 12;
+      if (anchorsFresh) {
         classes.active_anchored.push(s.id);
         continue;
       }
 
-      // MU-frontier rule: curated coverage becomes a real anchor
+      // MU-frontier rule: curated coverage becomes a real anchor — the pair
+      // must fall inside THIS series' scope segment, add chapter progress
+      // beyond existing anchors (else it's the same stale frontier), and an
+      // episode pin is only taken from single-pair text
       const mu = muByManga.get(s.manga_anilist_id);
-      const coverage = parseCoverage(mu?.anime?.end ?? null);
-      if (coverage) {
-        const episode = coverage.episode && coverage.episode <= s.aired_episodes ? coverage.episode : s.aired_episodes;
+      const { pairs, explicitEp } = parseCoverageAll(mu?.anime?.end ?? null);
+      const scopeStart = s.manga_start_chapter ?? 1;
+      const scopeEnd = s.total_chapters ?? Number.POSITIVE_INFINITY;
+      const inScope = pairs.filter((p) => p.chapter >= scopeStart && p.chapter <= scopeEnd);
+      const coverage = inScope.length ? inScope.reduce((a, b) => (b.chapter > a.chapter ? b : a)) : null;
+      const priorChapterMax = chapterMax.get(s.id) ?? 0;
+      if (coverage && coverage.chapter > priorChapterMax) {
+        const episode = explicitEp && explicitEp <= s.aired_episodes ? explicitEp : s.aired_episodes;
         const { error } = await db.from('chapter_anchors').upsert({
           series_id: s.id,
           episode,
@@ -85,7 +119,17 @@ async function main() {
         }
       }
 
-      if (s.status === 'finished' && s.total_chapters) {
+      if (maxAnchor !== undefined) {
+        // stale anchors + no MU frontier: the card shows a truthful-but-old
+        // "as of ep N" — synthesis must NOT override (diverged anime would
+        // claim full coverage). Research closes these, never guesses.
+        classes.stale_anchor_no_frontier.push(s.id);
+        await fileFlagOnce(runId, s.id, 'resolve', 'count_mismatch', {
+          maxAnchorEpisode: maxAnchor,
+          airedEpisodes: s.aired_episodes,
+          note: 'anchors stale (sparse source page) and MU has no anime-coverage — frontier needs research',
+        });
+      } else if (s.status === 'finished' && s.total_chapters) {
         classes.active_synthesized.push(s.id); // the scope-semantics rule covers it
       } else if (s.status === 'airing' || s.status === 'upcoming') {
         classes.pending_airing_no_frontier.push(s.id);
