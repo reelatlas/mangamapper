@@ -415,6 +415,39 @@ Fixed weekly is correct.
    excel-saga (AFL types everything filler — parody edge case) · footer
    credits (AFL+AFG+MU) at the design return.
 
+### Coverage-segment model (designed with Sean 2026-08-24 — NOT built; do not act without his go)
+
+Sean's D-Frag/Berserk tail questions converge on one model: **an entry's
+manga coverage is a SEGMENT [start, end] of the manga**, and the tail
+question is "what lies beyond my segment, and does another entry claim it?"
+
+1. **Denominator rule gap (D-Frag class)**: the card's display denominator is
+   `total_chapters ?? latest_known_chapters`, but buildMapping's manga-ahead
+   tail only accepts `total_chapters` — null while a manga publishes — so
+   every anchored series with a publishing manga (D-Frag: ep 12 → ch 36 of
+   MU's 182) shows NO tail while displaying "of 182". Fix when ruled: tail
+   denominator falls back to latest_known, labeled "ahead as of the latest
+   published chapter".
+2. **Claimed continuation → handoff, not tail**: when another entry's segment
+   on the SAME manga starts at this entry's end+1 (Naruto→Shippuden,
+   Bleach→TYBW, and — the data surprise — Berserk 1997 ends ch 94, Berserk
+   2016 starts ch 95), the honest display is a "continues in X" pointer.
+   Fully derivable: shared manga_anilist_id + adjacent scope boundaries.
+3. **Unclaimed range → universe tail**: manga beyond the LAST segment of the
+   family (Berserk ch 250–386 after 2016; D-Frag ch 37–182) belongs as a
+   tail on the final covering entry.
+4. **Two bar modes (Sean's toggle idea)**: *entry view* (today: bar spans the
+   entry's scope) and *universe view* (bar spans the whole manga — this
+   entry's segment lit, sibling segments ghosted+labeled, unclaimed ranges
+   manga-only). Universe view = the franchise-IA visualization; ALL data
+   already exists (series_scopes = segments, shared manga_anilist_id = the
+   family, latest_known/totals = frontier). The episode-table visibility
+   toggle already exists; the bar needs the same duality.
+
+Sean's framing to preserve: Naruto's tail is wrong to show because Shippuden
+*closes it continuously*; Berserk feels different because studios/eras split
+the coverage — but the segment map expresses both without special cases.
+
 Open items & backlog (triaged with Sean 2026-08-22 after the visual pass):
 - **Volumes** (researched, plan set): MangaUpdates releases resolve only ~50%
   of chapters and die in the simulpub era — NOT the source. Plan: a
