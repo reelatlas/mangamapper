@@ -109,22 +109,84 @@ const chToVol = (anime: AnimeSeries, r: Ratios, ch: number): number | null => {
 };
 
 
-// Estimated chapter for a canon/mixed episode (chapters spread over canon eps only)
+// ── anchor-aware interpolation (Sean 2026-08-24) ────────────────────────────
+// A single far-end frontier anchor (Boruto: ep 293 → ch 67) made the old
+// global linear estimate paint wrong values across the whole run. Confirmed
+// points — every episode with a real mangaMapping (its last chapter = the
+// frontier reached BY that episode) plus the latestKnown frontier — form a
+// piecewise curve in canon-index space; estimates interpolate BETWEEN
+// surrounding points and never extrapolate past the last confirmed one.
+
+interface AnchorPoint {
+  idx: number; // canon/mixed episode index
+  ch: number; // chapter frontier reached at that episode
+}
+
+const anchorPointsCache = new WeakMap<MappingSummary, AnchorPoint[]>();
+const anchorPoints = (anime: AnimeSeries, m: MappingSummary): AnchorPoint[] => {
+  const hit = anchorPointsCache.get(m);
+  if (hit) return hit;
+  const raw: AnchorPoint[] = [];
+  for (const e of anime.episodes) {
+    if (!e.mangaMapping) continue;
+    const last = lastChapterNumber(e.mangaMapping.chapters);
+    if (last !== null) raw.push({ idx: epToCanonIdx(m, e.number), ch: last });
+  }
+  if (m.latestKnown?.chapters) {
+    const covered = lastChapterNumber(m.latestKnown.chapters);
+    if (covered !== null) raw.push({ idx: epToCanonIdx(m, m.latestKnown.episode), ch: covered });
+  }
+  raw.sort((a, b) => a.idx - b.idx || a.ch - b.ch);
+  // monotonic filter: same idx keeps the max; decreasing chapters are junk
+  const pts: AnchorPoint[] = [];
+  for (const p of raw) {
+    const prev = pts[pts.length - 1];
+    if (prev && p.idx === prev.idx) prev.ch = Math.max(prev.ch, p.ch);
+    else if (!prev || p.ch >= prev.ch) pts.push({ ...p });
+  }
+  anchorPointsCache.set(m, pts);
+  return pts;
+};
+
+// Estimated chapter for a canon/mixed episode — piecewise between confirmed
+// anchor points (falls back to the origin→frontier line when no interior
+// anchors exist, which is the old behavior)
 export const canonEpToCh = (anime: AnimeSeries, m: MappingSummary, ep: number): number | null => {
   const { startCh, covered, adapted } = ratios(anime, m);
   const ct = canonTotal(m);
   if (!covered || !adapted || ct <= 0) return null;
-  const within = Math.max(1, Math.min(adapted, Math.round((epToCanonIdx(m, ep) / ct) * adapted)));
-  return startCh - 1 + within;
+  const idx = epToCanonIdx(m, ep);
+  let prev: AnchorPoint = { idx: 0, ch: startCh - 1 }; // synthetic origin
+  for (const p of anchorPoints(anime, m)) {
+    if (p.idx >= idx) {
+      if (p.idx === prev.idx) return Math.max(startCh, Math.min(covered, p.ch));
+      const frac = (idx - prev.idx) / (p.idx - prev.idx);
+      const ch = Math.round(prev.ch + frac * (p.ch - prev.ch));
+      return Math.max(startCh, Math.min(covered, ch));
+    }
+    prev = p;
+  }
+  // beyond the last confirmed point: clamp — never extrapolate past it
+  return Math.max(startCh, Math.min(covered, prev.ch));
 };
 
-// The canon/mixed episode covering a chapter — by construction never filler
+// The canon/mixed episode covering a chapter — piecewise inverse of the same
+// curve; by construction never filler
 export const chToEp = (anime: AnimeSeries, m: MappingSummary, ch: number): number | null => {
   const { startCh, covered, adapted } = ratios(anime, m);
   const ct = canonTotal(m);
   if (!covered || !adapted || ct <= 0 || ch < startCh) return null;
-  const idx = Math.max(1, Math.min(ct, Math.round(((ch - startCh + 1) / adapted) * ct)));
-  return canonIdxToEp(m, idx);
+  let prev: AnchorPoint = { idx: 0, ch: startCh - 1 };
+  for (const p of anchorPoints(anime, m)) {
+    if (ch <= p.ch) {
+      if (p.ch === prev.ch || p.idx === prev.idx) return canonIdxToEp(m, Math.max(1, p.idx));
+      const frac = (ch - prev.ch) / (p.ch - prev.ch);
+      const idx = Math.max(1, Math.min(ct, Math.round(prev.idx + frac * (p.idx - prev.idx))));
+      return canonIdxToEp(m, idx);
+    }
+    prev = p;
+  }
+  return canonIdxToEp(m, Math.max(1, Math.min(ct, prev.idx)));
 };
 
 // A chapter guaranteed to resolve back to this canon/mixed episode — used by
