@@ -385,12 +385,24 @@ Fixed weekly is correct.
    AFG raw_html greedy staging (reading-guidance prose for the IA phase).
    Old triage items 1 (register-to-existing + title-variants) fully
    absorbed; item 2 (airing-pendings) via MU class B.
-15. **Remaining triage**: attack-on-titan AFG 94v89 (OAD numbering — rule
-   TBD) · AFL-extras count flags (angel-beats 16v13, detective-conan
-   1212v1209, rurouni-kenshin-1996 100v96 — specials/ep-0 beyond the run;
-   per-case rulings, not a code rule) · unknown-coverage curations that MU
-   class B couldn't frontier · remaining match_ambiguous/parse_integrity
-   review · footer credits (AFL+AFG+MU) at the design return.
+15. ✅ Coverage close-out (2026-08-24 end): registry-first anchor sync +
+   MU class B → **194 anchored / 36 synthesized / 89 mu-frontiered / 0
+   airing-pendings / 0 data holes**. AoT 94v89 ruled (AFG interleaves the 5
+   OADs — IA-phase chain-override material). AFL-extras flags ruled per-case
+   (Angel Beats OVAs + Kenshin 95-100 real content kept; Conan = airing
+   lag). Flag queue deduped (cleanup-flags.ts); tokyo-ghoul #578 stays open
+   as the standing ruled-split marker.
+16. **Remaining triage** (all understood, none urgent): 3 unknown-coverage
+   research cases (x, sgt-frog, outlaw-star — obscure manga, MU has no
+   coverage) · Wikipedia volumes batch (4th wikitext dialect + search-
+   fallback tightening — it matched "Ranma ½ chapters" for Dress-Up Darling)
+   before more volume boundaries · ~29 MU-unbridgeable manga (older titles
+   without MangaDex al+mu links — alternative bridge or accept) · ~30
+   AFL-sparse community-gap flags (documentation; decide keep-open vs
+   dismiss-as-documented) · corruption-era match_ambiguous review ·
+   ruled-split anchor routing (bleach/tokyo-ghoul pages could serve both
+   sides of their splits with offsets) · footer credits (AFL+AFG+MU) at the
+   design return.
 
 Open items & backlog (triaged with Sean 2026-08-22 after the visual pass):
 - **Volumes** (researched, plan set): MangaUpdates releases resolve only ~50%
