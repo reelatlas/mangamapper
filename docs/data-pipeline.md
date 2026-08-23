@@ -265,6 +265,8 @@ via `supabase projects api-keys`).
 - `relations.ts` — rebuilds series_relations (auto + RULED pairs).
 - `audit-titles.ts` — periodic corruption re-audit against a fresh index snapshot.
 - `audit-afg-structure.ts` — structural cross-check of every staged AFG page vs canonical (naming / episode-grouping / season-hierarchy); classifies aligned vs conflict vs registry-gap. With `--register`, enters confident matches into the identity registry (tiers + RULED map, §10). AFG numbers episodes franchise-continuously, so `AFG max > ours` usually means unstitched newer seasons (afg-extend candidates) or a deliberate split of ours, and `< ours` means a season-scoped page.
+- `audit-ui-truth.ts` — replicates buildMapping's exact per-series decisions (what the CARD renders: full / ch-only / pending / no-source / structure-integrity); run after any pipeline batch — the data-level coverage audit can say "resolved" while a UI gate still blanks the display. Keep in lockstep with supabaseSource.ts.
+- `cleanup-flags.ts` — dedupe exact-duplicate open flags (keeps oldest); never dismisses unique flags.
 - `afg-extend.ts` — for registered afg pages covering more than we hold: chain-confirmed component rebuild + episode tail/gap fill from AFG (merge semantics, §10). Run after registration; re-run any time AFL lags a currently-airing season.
 - `wayback-recover2.ts` — archive recovery for corruption victims (rendered snapshots + count validation; the v1 id_-form script was deleted — id_ URLs redirect to captures years off).
 - `rebuild.ts` — **DANGER post-stitching**: re-resolves everything as single-season, clobbering stitched aggregates. Only for canonical-shape migrations, and re-run stitch after.
@@ -392,17 +394,26 @@ Fixed weekly is correct.
    (Angel Beats OVAs + Kenshin 95-100 real content kept; Conan = airing
    lag). Flag queue deduped (cleanup-flags.ts); tokyo-ghoul #578 stays open
    as the standing ruled-split marker.
-16. **Remaining triage** (all understood, none urgent): 3 unknown-coverage
-   research cases (x, sgt-frog, outlaw-star — obscure manga, MU has no
-   coverage) · Wikipedia volumes batch (4th wikitext dialect + search-
-   fallback tightening — it matched "Ranma ½ chapters" for Dress-Up Darling)
-   before more volume boundaries · ~29 MU-unbridgeable manga (older titles
-   without MangaDex al+mu links — alternative bridge or accept) · ~30
-   AFL-sparse community-gap flags (documentation; decide keep-open vs
-   dismiss-as-documented) · corruption-era match_ambiguous review ·
-   ruled-split anchor routing (bleach/tokyo-ghoul pages could serve both
-   sides of their splits with offsets) · footer credits (AFL+AFG+MU) at the
-   design return.
+16. ✅ UI-truth pass (2026-08-24, Sean's QA: Cuckoos "36/24", 86 blank):
+   `audit-ui-truth.ts` replicates buildMapping's exact decisions per series.
+   Structure-based extend candidacy fixed the pre-stitch-aware class (12
+   re-componentized: Frieren 38, Cuckoos 36…); volumes-backfill rerun for
+   the newly anchored manga (boundaries 888 → 3,345 rows). End census:
+   **220 full vol+ch / 17 ch-only / 3 pending / 93 no-source** — of the 93,
+   52 originals correct, **38 = the LIGHT-NOVEL CLASS (86, Re:Zero, SAO,
+   Overlord…): no instrument because their ADAPTATION edge is format NOVEL.
+   Proposed: LN-volume instrument (AniList NOVEL volumes + MU LN coverage),
+   awaiting Sean's presentation ruling**; DB Super/GT deliberate.
+17. **Remaining triage** (all understood, none urgent): LN-instrument ruling
+   (item 16) · 3 unknown-coverage research cases (x, sgt-frog, outlaw-star) ·
+   17 ch-only series (publishing manga without Wikipedia chapter lists — 4th
+   wikitext dialect + search-fallback tightening may recover some; ~33 wiki
+   flags from the rerun to review) · ~29 MU-unbridgeable manga · ~30
+   AFL-sparse community-gap flags (keep-open vs dismiss-as-documented) ·
+   corruption-era match_ambiguous review · ruled-split anchor routing
+   (bleach/tokyo-ghoul pages could serve both sides with offsets) ·
+   excel-saga (AFL types everything filler — parody edge case) · footer
+   credits (AFL+AFG+MU) at the design return.
 
 Open items & backlog (triaged with Sean 2026-08-22 after the visual pass):
 - **Volumes** (researched, plan set): MangaUpdates releases resolve only ~50%
