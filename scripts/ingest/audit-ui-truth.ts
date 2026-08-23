@@ -64,6 +64,7 @@ async function main() {
     special_numbered_unreviewed: [], anchor_gap_research: [], frontier_tail_null: [],
     anchor_nonmonotonic: [], anchor_beyond_chapter_space: [], ruling_violation: [],
     title_incomplete: [], airdate_incomplete: [], asterisk_unreviewed: [],
+    fractional_unmodeled: [],
     no_source: [], ok_full: [], ok_no_volume: [], ok_loose: [],
     pending_airing_no_anchor: [], pending_finished_no_totals: [], pending_no_canon: [], pending_other: [],
   };
@@ -163,6 +164,23 @@ async function main() {
       else if (missing > 0) classes.title_incomplete.push(`${row.id}: ${missing}/${rows} rows missing titles`);
       else if (rows > 0 && rows < (row.aired_episodes ?? 0)) {
         classes.title_incomplete.push(`${row.id}: ${(row.aired_episodes ?? 0) - rows} aired eps have no rows (AFL lag) — render title_pending`);
+      }
+    }
+  }
+
+  // FRACTIONAL entries lacking a watch-order model (Sean 2026-08-23): a
+  // staged fractional separator with no order-only component near its
+  // position is a non-main entry we have NOT yet ruled on — the ask-Sean
+  // queue for specials/recaps/OVAs worth (or not worth) surfacing.
+  {
+    const fracs = await pageAll('ingest_fractionals', 'series_id, position, title');
+    const oo = await pageAll('series_components', 'series_id, watch_position, episode_start');
+    const modeled = new Set(
+      oo.filter((c: any) => c.episode_start === null && c.watch_position != null).map((c: any) => `${c.series_id}#${Math.floor(Number(c.watch_position))}`),
+    );
+    for (const f of fracs) {
+      if (!modeled.has(`${f.series_id}#${Math.floor(Number(f.position))}`)) {
+        classes.fractional_unmodeled.push(`${f.series_id} @ ${f.position}: "${String(f.title ?? '?').slice(0, 45)}" — rule: order-only comp, excluded-recap, or ignore?`);
       }
     }
   }

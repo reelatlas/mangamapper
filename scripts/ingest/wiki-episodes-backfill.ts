@@ -77,50 +77,173 @@ async function main() {
       try {
         const pages = await findEpisodePages([t.title, t.title_native ?? ''].filter(Boolean));
         counters.fetched++;
-        if (!pages.length) {
-          console.log(`  ${t.id}: no episode-list page found`);
-          continue;
-        }
-        let wiki: WikiEpisode[] = [];
+        // no list page is NOT terminal — the main-article fallback below
+        // still runs (SHY-class: tables live on the series article)
+        // gather PER-PAGE row sets (main page + each transclusion separately)
+        // — franchise families number per-season, so offsets are per PAGE
+        const pageSets: { name: string; eps: WikiEpisode[] }[] = [];
         for (const p of pages) {
           const wt = await fetchWikitext(p);
           if (!wt) continue;
-          wiki = wiki.concat(parseEpisodeList(wt));
-          // season pages transcluded into the list page hold the actual
-          // rows (Dr. Stone class) — follow depth-1 transclusions
-          for (const sub of extractTransclusions(wt).slice(0, 12)) {
+          const own = parseEpisodeList(wt);
+          if (own.length) pageSets.push({ name: p, eps: own });
+          for (const sub of extractTransclusions(wt).slice(0, 15)) {
             const swt = await fetchWikitext(sub);
-            if (swt) wiki = wiki.concat(parseEpisodeList(swt));
+            if (swt) {
+              const se = parseEpisodeList(swt);
+              if (se.length) pageSets.push({ name: sub, eps: se });
+            }
             await sleep(600);
           }
           await sleep(600);
         }
+        if (!pageSets.length && pages.length) {
+          console.log(`  ${t.id}: list pages held no parseable rows (${pages.join('; ')}) — trying main article`);
+        }
+        // our component structure — used by the component lock below and
+        // the mid-run order-only guard after the merge list is built
+        const { data: comps } = await db
+          .from('series_components')
+          .select('season_order, episode_start, episode_end')
+          .eq('series_id', t.id)
+          .order('season_order');
+        const cl = comps ?? [];
+        // EVIDENCE-LOCKED per-page offsets (Sean's When They Cry case,
+        // 2026-08-23): a page's offset into OUR numbering must be PROVEN
+        // before its rows merge — votes come from exact air-date matches
+        // (strong) and title similarity (fallback) against stored rows.
+        // ≥3 consistent votes lock the page; a page with no stored overlap
+        // falls back to offset 0 only when its own numbering fits our run
+        // (the old gate). Unlockable pages skip with a log line, per-page —
+        // a franchise family fills the seasons it can prove.
+        const storedRows = eps.filter((e) => e.series_id === t.id);
+        const byDate = new Map(storedRows.filter((e) => e.air_date).map((e) => [String(e.air_date), e.number]));
+        const norm2 = (x: string) => x.toLowerCase().replace(/[^a-z0-9]+/g, ' ').trim();
+        // similarity voting (exact equality missed translation variants —
+        // Kenshin-2023's season pages were unlockable): ≥75% token overlap
+        const simTokens = (a: string, b: string) => {
+          const ta = new Set(norm2(a).split(' ').filter(Boolean));
+          const tb = new Set(norm2(b).split(' ').filter(Boolean));
+          if (!ta.size || !tb.size) return 0;
+          let sh = 0;
+          for (const x of ta) if (tb.has(x)) sh++;
+          return sh / Math.min(ta.size, tb.size);
+        };
+        const titleVotes = (w: WikiEpisode): number[] => {
+          if (!w.title) return [];
+          return storedRows
+            .filter((r) => String(r.title ?? '').trim() && simTokens(String(r.title), w.title!) >= 0.75)
+            .map((r) => r.number - w.number);
+        };
+        // no-overlap fallback is only safe when the PAGE NAME strongly names
+        // this series (the Orphan-Black/HBO-Girls lesson: search can return
+        // token-overlapping strangers; evidence-locked pages prove identity
+        // by content, fallback pages must prove it by name)
+        const pageNames = norm2(`${t.title} ${t.title_native ?? ''}`);
+        const pageNameMatches = (name: string) => {
+          const inner = name.replace(/^List of /i, '').replace(/ episodes.*$/i, '');
+          return simTokens(inner, pageNames) >= 0.99 || norm2(inner) === norm2(t.title);
+        };
+        let wiki: WikiEpisode[] = [];
+        const lockAndMerge = (sets: { name: string; eps: WikiEpisode[]; isOwnArticle?: boolean }[]) => {
+        for (const ps of sets) {
+          const ints = ps.eps.filter((w) => Number.isInteger(w.number));
+          const tally = new Map<number, number>();
+          for (const w of ints) {
+            if (w.airDate && byDate.has(w.airDate)) {
+              const o = byDate.get(w.airDate)! - w.number;
+              tally.set(o, (tally.get(o) ?? 0) + 2); // date votes weigh double
+            }
+            for (const o of titleVotes(w)) tally.set(o, (tally.get(o) ?? 0) + 1);
+          }
+          const ranked = [...tally.entries()].sort((a, b) => b[1] - a[1]);
+          const best = ranked[0];
+          const second = ranked[1]?.[1] ?? 0;
+          let offset: number | null = null;
+          // margin lock: the winner must dominate the runner-up (top-vs-
+          // total drowned in cross-title vote spam — When They Cry had 223
+          // votes at 0 yet failed the old ratio)
+          if (best && best[1] >= 3 && best[1] >= 3 * Math.max(second, 1)) offset = best[0];
+          // component lock: a page named "... season N" maps to our season-
+          // order-N component's start (Kenshin-2023's junk-cleaned rows had
+          // no votes to give)
+          if (offset === null) {
+            const sm = ps.name.match(/season (\d+)/i);
+            if (sm) {
+              const ourSeasons = cl.filter((c) => c.episode_start !== null);
+              const comp = ourSeasons[Number(sm[1]) - 1];
+              if (comp?.episode_start != null) {
+                const len = comp.episode_end != null ? comp.episode_end - comp.episode_start + 1 : null;
+                const pmax = Math.max(...ints.map((w) => w.number));
+                const pmin = Math.min(...ints.map((w) => w.number));
+                if (pmin >= comp.episode_start && comp.episode_end != null && pmax <= comp.episode_end + 2) {
+                  // season page already numbered in OVERALL space
+                  offset = 0;
+                  console.log(`  ${t.id}: page "${ps.name}" component-locked (overall numbering)`);
+                } else if (pmin <= 2 && (len === null || pmax <= len + 2)) {
+                  offset = comp.episode_start - 1;
+                  console.log(`  ${t.id}: page "${ps.name}" component-locked at +${offset}`);
+                }
+              }
+            }
+          }
+          // first-segment fallback: exact-name page starting at 1 merges its
+          // opening segment even when the family numbering runs past our
+          // count (Kinnikuman's page runs to 205; rows ≤ aired cap protects)
+          if (
+            offset === null &&
+            best === undefined &&
+            (ps.isOwnArticle || pageNameMatches(ps.name)) &&
+            Math.min(...ints.map((w) => w.number)) === 1
+          ) {
+            offset = 0;
+          }
+          if (offset === null) {
+            console.log(`  ${t.id}: page "${ps.name}" offset unprovable (votes ${JSON.stringify([...tally.entries()].slice(0, 3))}) — skipped`);
+            continue;
+          }
+          wiki = wiki.concat(ps.eps.map((w) => ({ ...w, number: w.number + offset })));
+          if (offset !== 0) console.log(`  ${t.id}: page "${ps.name}" locked at offset ${offset > 0 ? '+' : ''}${offset}`);
+        }
+        };
+        lockAndMerge(pageSets);
+        // MAIN-ARTICLE fallback (the SHY / Kenshin-2023 class): newer or
+        // remake series keep their episode tables on the series article
+        // itself — and list-page search can surface a NAMESAKE's pages (all
+        // four "Rurouni Kenshin" list pages belong to the 1996 series). The
+        // article fetched by OUR exact title is identity-proven by name.
+        if (!wiki.length) {
+          for (const cand of [t.title, `${t.title} (TV series)`, `${t.title} (Japanese TV series)`, `${t.title} (manga)`]) {
+            const wt = await fetchWikitext(cand);
+            await sleep(500);
+            if (!wt) continue;
+            const own = parseEpisodeList(wt);
+            const subs: { name: string; eps: WikiEpisode[]; isOwnArticle?: boolean }[] = own.length
+              ? [{ name: cand, eps: own, isOwnArticle: true }]
+              : [];
+            for (const sub of extractTransclusions(wt).slice(0, 12)) {
+              const swt = await fetchWikitext(sub);
+              if (swt) {
+                const se = parseEpisodeList(swt);
+                if (se.length) subs.push({ name: sub, eps: se, isOwnArticle: true });
+              }
+              await sleep(500);
+            }
+            if (subs.length) {
+              console.log(`  ${t.id}: main-article tables found on "${cand}" (${subs.length} set(s))`);
+              lockAndMerge(subs);
+              break;
+            }
+          }
+        }
         const seen = new Set<number>();
         wiki = wiki.filter((e) => (seen.has(e.number) ? false : (seen.add(e.number), true)));
         if (!wiki.length) {
-          console.log(`  ${t.id}: pages held no parseable episode rows (${pages.join('; ')})`);
-          continue;
-        }
-        const wikiMax = Math.max(...wiki.map((e) => e.number));
-        if (wikiMax > t.aired_episodes + 2) {
-          await fileFlagOnce(runId, t.id, 'wikipedia', 'count_mismatch', {
-            wikiMax,
-            aired: t.aired_episodes,
-            pages,
-            note: 'episode-list numbering exceeds our aired count — franchise page or numbering-space mismatch; withheld',
-          });
-          counters.flagged++;
-          console.log(`  ${t.id}: WITHHELD (wiki max ${wikiMax} vs aired ${t.aired_episodes})`);
+          console.log(`  ${t.id}: no page could be offset-locked — nothing merged`);
           continue;
         }
         // mid-run order-only guard: filling past an order-only position
         // without a declared numbering shift is forbidden (Ryuusui lesson)
-        const { data: comps } = await db
-          .from('series_components')
-          .select('season_order, episode_start')
-          .eq('series_id', t.id)
-          .order('season_order');
-        const cl = comps ?? [];
         const midRunOrderOnly = cl.some(
           (c, i) => c.episode_start === null && cl.slice(i + 1).some((n) => n.episode_start !== null),
         );
@@ -140,6 +263,17 @@ async function main() {
         }
         if (fractionals.length) {
           console.log(`  ${t.id}: wiki separates ${fractionals.length} watch-order entr${fractionals.length === 1 ? 'y' : 'ies'} fractionally (${fractionals.map((f) => f.number).join(', ')}) — numbering aligned`);
+          // stage every fractional entry durably (Sean's ruling: non-main
+          // entries are NOTED so the UI/watch-order phase decides from data)
+          for (const f of fractionals) {
+            await db.from('ingest_fractionals').upsert({
+              series_id: t.id,
+              position: f.number,
+              title: f.title,
+              air_date: f.airDate,
+              note: 'wiki fractional separator (community between-episodes notation)',
+            });
+          }
         }
         const wikiByNumber = new Map(wiki.filter((w) => Number.isInteger(w.number)).map((w) => [w.number, w]));
         const existing = new Map(eps.filter((e) => e.series_id === t.id).map((e) => [e.number, e]));
