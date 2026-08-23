@@ -118,9 +118,38 @@ export function parseAfgPage(html: string): AfgPage {
 // Anchor derivation from a parsed page, with a monotonicity filter: chapters
 // never decrease as episodes advance, so any anchor below the running maximum
 // is page junk (AFG's Naruto page: ep 141 → "ch 21") and gets dropped.
+// Canonical adaptation-list serialization (Sean's full-record ruling
+// 2026-08-23): comma-separated, consecutive integer runs compressed to
+// ranges, ORDER PRESERVED AS ADAPTED — "63-64, 67" keeps TokyoRev's
+// pulled-forward ch 67 visible; "8-10, 15.5" keeps Vanitas's woven-in bonus.
+export function serializeChapters(chapters: number[]): string {
+  const parts: string[] = [];
+  let runStart: number | null = null;
+  let runEnd: number | null = null;
+  const flush = () => {
+    if (runStart === null) return;
+    parts.push(runStart === runEnd ? String(runStart) : `${runStart}-${runEnd}`);
+    runStart = runEnd = null;
+  };
+  for (const c of chapters) {
+    if (Number.isInteger(c) && runEnd !== null && c === runEnd + 1) {
+      runEnd = c;
+      continue;
+    }
+    flush();
+    if (Number.isInteger(c)) {
+      runStart = runEnd = c;
+    } else {
+      parts.push(String(c));
+    }
+  }
+  flush();
+  return parts.join(', ');
+}
+
 export function deriveAnchors(
   episodes: AfgEpisode[],
-): { episode: number; chapter: number; startChapter: number; arc: string | null }[] {
+): { episode: number; chapter: number; startChapter: number; chaptersAdapted: string; arc: string | null }[] {
   // the derived POSITION anchor uses the highest MAINLINE (integer) chapter
   // per row — a fractional value in the chart is a bonus/Memoire entry
   // (Vanitas ep-5 listed "8, 9, 10, 15.5"; taking the max scraped 15.5).
@@ -130,7 +159,7 @@ export function deriveAnchors(
   // NEVER silently dropped: deriveBonusChapters records them, and a
   // research-verified fractional anchor MAY be written at the manual tier
   // when the bonus IS what the episode adapts.
-  const candidates: { episode: number; chapter: number; startChapter: number; arc: string | null }[] = [];
+  const candidates: { episode: number; chapter: number; startChapter: number; chaptersAdapted: string; arc: string | null }[] = [];
   for (const e of [...episodes].sort((a, b) => a.number - b.number)) {
     const mainline = e.chapters.filter((c) => Number.isInteger(c));
     if (!mainline.length) continue; // bonus-only episode: association recorded, anchor is research's call
@@ -138,6 +167,8 @@ export function deriveAnchors(
       episode: e.number,
       chapter: Math.max(...mainline),
       startChapter: Math.min(...mainline),
+      // the FULL record, bonus values included, in adaptation order
+      chaptersAdapted: serializeChapters(e.chapters),
       arc: e.arc,
     });
   }

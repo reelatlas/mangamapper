@@ -281,6 +281,9 @@ in code (`scripts/ingest/`), and every violation flags rather than guesses:
 | **anime-only-canon ≠ anchor desert (2026-08-23, the Black Clover lesson)** | episodes typed anime-only-canon have no manga counterpart BY DESIGN — they never count toward anchor_gap_research (Black Clover 130-157 adapts ZERO chapters across 28 episodes; position holds at ch 228 until ep 158). The typing itself is research-ruled per episode (EPISODE_TYPE_OVERRIDES) | audit-ui-truth gap counter / EPISODE_TYPE_OVERRIDES |
 | **Episode display = FIRST chapter animated (Sean 2026-08-23)** | an episode row shows where it STARTS in the manga, never its end/mid point (Oshi no Ko ep 35 displays 119, not 127). Starts are REAL SOURCE DATA, not formula output: AFG chart rows list every chapter a row adapts — deriveAnchors captures the first mainline chapter into chapter_anchors.start_chapter on EVERY refresh (baked into lib + all four edges; 3888 anchors carry it), and research anchors populate it when a batch names the span (majority rule applied at research time when a span opens with a chapter tail; ties → ruling). The mapping-layer derivation min(end(ep), end(prevCanon)+1) is the FALLBACK for end-only anchors (MU pins, unseeded research rows) — it implements the majority rule by construction. chapter_anchors.chapter stays the END-POSITION instrument (interpolation, frontier, continue-from; scan verified all 4337 anchors share that semantics). The source layer emits the real span ("119-127") so display takes the first number; section headers keep TRUE coverage (start of first row → coverage end of last). Future research batches include start_chapter with their anchors. Long-term: every chapter correlates to its episode (spans + annotations accumulate this); visually we anchor at starts | lib/afg.ts deriveAnchors / syncAnchors / chapter_anchors.start_chapter / supabaseSource toEpisodes / mapping.ts canonEpStartCh |
 | **Continue-reading points (Sean 2026-08-23; UI deferred)** | where to RESUME READING after an episode is first-class data, distinct from display: default = anchor end + 1 (the end chapter itself when a partial annotation marks a mid-chapter stop); research-named exceptions (skips, grafts, mid-chapter endings) live in chapter_anchors.continue_chapter with the why in the note (9 seeded: JJK 47→138, Oshi 35→127, RAG 12→52 + 24→103, Dragon Maid 25→65, Seraph 24→42, Blue Exorcist 37→38, Food Wars 73→265, Vanitas 5→10). series.continue_from_chapter stays the series-level lever. When a point changes, update the column + note via a ruling record | chapter_anchors.continue_chapter / apply-continue-points.ts |
+| **Full adaptation record (Sean 2026-08-23)** | for EVERY episode/special/movie we store everything the sources know about what it adapts: chapter_anchors.chapters_adapted = the complete chapter list IN ADAPTATION ORDER (canonical "63-64, 67" serialization — non-contiguous, non-chronological, bonus values included), alongside start_chapter / chapter(end) / continue_chapter. Captured from AFG chart rows on every refresh; research batches supply it for their anchors; higher-fidelity fills lower (full list > span > end-only), never the reverse. This is the correlation the UI can later surface ("everything in this episode") | chapter_anchors.chapters_adapted / serializeChapters (lib/afg) / syncAnchors |
+| **Anchor numbering translation (2026-08-23)** | per-episode data from a source translates through SOURCE_NUMBERING_SHIFTS exactly like episode rows — anchors AND bonus annotations (translateEpisodeNumber in lib/resolve; dropped order-only entries never anchor). Closed the gap where a shift-ruled series with an AFG chart could receive anchors at untranslated numbers | translateEpisodeNumber / syncAnchors |
+| **MU pin redundancy keys on the PIN EPISODE (2026-08-23, Sean's AoT 88-89 report)** | applyMuFrontier deletes + re-derives each run, so its skip-gates decide what knowledge survives. The old "non-MU anchors within 12 eps" freshness window and chapter no-progress gate deleted real run-end pins the moment research added interior anchors nearby (AoT ep-89→139, Kuroko 75→275, Naruto 220→238) — and the beyond-frontier display rule then nulled every trailing episode. A pin is redundant ONLY when a non-MU anchor covers the pin episode itself; episode-space knowledge counts even at zero chapter progress. frontier_tail_null 23→7 (better than the pre-regression 14 — the old gate had been suppressing pins all along) | lib/mu-frontier applyMuFrontier |
 | Dispositions | active / excluded / duplicate / merged rulings are durable data; backfill skips non-active | source_map |
 
 **Hard-won learnings** (why some rules exist): AFL's Drupal is corrupt since
@@ -707,6 +710,27 @@ Fixed weekly is correct.
    continue-reading exceptions (9 seeded; default end+1). UI surfacing
    of continue points deferred; display fix live. Future batches
    include start_chapter.
+28. ✅ **FULL-RECORD RULING + CONSOLIDATE DEEP PASS 1 (2026-08-23 end)**:
+   Sean's full-data directive → chapters_adapted (migration
+   20260825180000; 3888 anchors carry the complete in-order adaptation
+   list from chart rows, edges redeployed) + anchor numbering
+   translation (translateEpisodeNumber closes the shift-series gap) +
+   serializeChapters canonical form. DEEP PASS findings: (1) MU-pin
+   regression CAUGHT + FIXED — the freshness/no-progress gates deleted
+   run-end pins when batch-9 interior anchors landed nearby (Sean's AoT
+   88-89 report = live symptom); redundancy now keys on the pin episode;
+   frontier_tail_null 23→7, BETTER than the old 14 (the gate had been
+   suppressing pins pre-existing). Remaining 7 tails = honest set
+   (Kenshin side stories, Soul Eater/Twin Star anime-original endings —
+   future type-override research, One Piece airing lag). (2) Naruto
+   'mixed' report investigated: AFL's Mixed Canon/Filler classification,
+   long-standing data matching animefillerlist; hydration made real
+   types visible — data correct. (3) Note re-validation: flags on
+   repaired series (bungo/seraph/rag/kingdom/food-wars) all still-valid
+   forward-looking notes; ruling constants all reference live series;
+   nothing stale to delete. (4) Permanence tier: LOCKED set empty until
+   asterisk sign-offs begin (41 pending — Sean's queue). Census:
+   ok_full 238, ruling_violation 0, all anchor-integrity classes 0.
 21. ✅ **Consolidation pass 2 (2026-08-23, post-Kenshin)**: every write path
    swept against the day's rules — filterEpisodeRows (caps + type
    overrides) now in ALL five episode writers (resolve, stitched-guard,

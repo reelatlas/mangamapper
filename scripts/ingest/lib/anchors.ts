@@ -5,7 +5,7 @@
 
 import { deriveAnchors, deriveBonusChapters, type AfgPage, type AfgContinua } from './afg';
 import { db, fileFlagOnce } from './db';
-import { CONTINUA_SUPPRESSED, registerIds } from './resolve';
+import { CONTINUA_SUPPRESSED, registerIds, translateEpisodeNumber } from './resolve';
 
 // heading comparison: decode leftover entities, drop parenthetical year
 // suffixes ("Rurouni Kenshin (1996)"), then collapse to word soup
@@ -255,7 +255,13 @@ export async function syncAnchors(
     .eq('series_id', seriesId)
     .in('source', ['manual', 'wiki']);
   const protectedEps = new Set((curated ?? []).map((c) => c.episode));
-  const rows = anchors
+  // NUMBERING TRANSLATION (2026-08-23): chart episode numbers live in the
+  // source's space — shift-ruled series translate exactly like episode rows
+  // (dropped order-only entries never anchor)
+  const translated = anchors
+    .map((a) => ({ ...a, episode: translateEpisodeNumber(seriesId, a.episode) }))
+    .filter((a): a is typeof anchors[number] => a.episode !== null);
+  const rows = translated
     .filter((a) => !protectedEps.has(a.episode))
     // curated-CONSISTENCY (2026-08-23, the Boruto ep-219 lesson): a derived
     // row that contradicts the ordering around a research-tier anchor
@@ -273,6 +279,7 @@ export async function syncAnchors(
       volume: null,
       chapter: a.chapter,
       start_chapter: a.startChapter,
+      chapters_adapted: a.chaptersAdapted,
       source: 'afg',
       note: a.arc,
     }));
@@ -284,7 +291,9 @@ export async function syncAnchors(
   // (Sean's ruling 2026-08-23: never silently dropped — we must always know
   // what content makes up an episode; research-tier annotations at the same
   // episode+kind are never clobbered, and the pending review flags it)
-  const bonus = deriveBonusChapters(page.episodes);
+  const bonus = deriveBonusChapters(page.episodes)
+    .map((b) => ({ ...b, episode: translateEpisodeNumber(seriesId, b.episode) }))
+    .filter((b): b is { episode: number; chapters: number[] } => b.episode !== null);
   for (const b of bonus) {
     await db.from('episode_annotations').upsert(
       {

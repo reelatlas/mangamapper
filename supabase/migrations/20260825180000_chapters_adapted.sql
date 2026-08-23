@@ -1,0 +1,11 @@
+-- The FULL adaptation record (Sean's ruling 2026-08-23): for every episode /
+-- special / movie we store everything the sources know about what it adapts —
+-- not just start and end but the complete chapter list IN ADAPTATION ORDER,
+-- non-contiguous and non-chronological included ("63-64, 67" — TokyoRev ep 22
+-- pulls ch 67 forward; "8-10, 15.5" — Vanitas ep 5 weaves in a bonus).
+-- Canonical serialization: comma-separated, consecutive runs compressed to
+-- ranges, order preserved as adapted. start_chapter / chapter (end) remain
+-- the derived instruments; this is the source-of-truth correlation the UI
+-- can later surface ("everything in this episode"). Higher-fidelity data
+-- fills lower (full list > span > end-only), never the reverse.
+alter table chapter_anchors add column if not exists chapters_adapted text;

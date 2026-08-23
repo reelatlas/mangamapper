@@ -20329,15 +20329,12 @@ function parseCoverageAll(text) {
 }
 async function applyMuFrontier(runId, s, muEnd, nonMuMaxEp, nonMuMaxCh) {
   await db.from("chapter_anchors").delete().eq("series_id", s.id).eq("source", "mu");
-  const anchorsFresh = nonMuMaxEp !== void 0 && nonMuMaxEp >= (s.aired_episodes ?? 0) - 12;
-  if (anchorsFresh) return "skipped_fresh";
   const { pairs, explicitEp } = parseCoverageAll(muEnd);
   const scopeStart = s.manga_start_chapter ?? 1;
   const scopeEnd = s.total_chapters ?? Number.POSITIVE_INFINITY;
   const inScope = pairs.filter((p) => p.chapter >= scopeStart && p.chapter <= scopeEnd);
   if (!inScope.length) return "no_coverage";
   const coverage = inScope.reduce((a, b) => b.chapter > a.chapter ? b : a);
-  if (coverage.chapter <= (nonMuMaxCh ?? 0)) return "no_progress";
   const { data: srow } = await db.from("series").select("latest_known_chapters").eq("id", s.id).maybeSingle();
   const spaceMax = Math.max(s.total_chapters ?? 0, srow?.latest_known_chapters ?? 0);
   if (spaceMax > 0 && coverage.chapter > spaceMax + 10) {
@@ -20352,6 +20349,7 @@ async function applyMuFrontier(runId, s, muEnd, nonMuMaxEp, nonMuMaxCh) {
     return "no_coverage";
   }
   const episode = explicitEp && explicitEp <= s.aired_episodes ? explicitEp : s.aired_episodes;
+  if (nonMuMaxEp !== void 0 && nonMuMaxEp >= episode) return "skipped_fresh";
   const { data: holder } = await db.from("chapter_anchors").select("source").eq("series_id", s.id).eq("episode", episode).maybeSingle();
   if (holder && holder.source !== "mu") return "skipped_fresh";
   const { error } = await db.from("chapter_anchors").upsert({

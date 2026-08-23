@@ -168,6 +168,19 @@ export const SOURCE_NUMBERING_SHIFTS: Record<string, { drop: number[]; shifts: {
   'seraph-of-the-end-vampire-reign': { drop: [25], shifts: [] },
 };
 
+// Translate ONE source-space episode number into ours (null = the number IS
+// a dropped order-only entry). Anchor/annotation writers use this so a
+// shift-ruled series (Bungo's OVA row, Dr. Stone's Ryuusui) can never
+// receive per-episode data at untranslated numbers — the same rule
+// filterEpisodeRows applies to episode rows (gap closed 2026-08-23,
+// Sean's bake-into-sources directive).
+export const translateEpisodeNumber = (seriesId: string, n: number): number | null => {
+  const t = SOURCE_NUMBERING_SHIFTS[seriesId];
+  if (!t) return n;
+  if (t.drop.includes(n)) return null;
+  return n + t.shifts.reduce((s, x) => (n >= x.from ? s + x.offset : s), 0);
+};
+
 // Per-series episode-row rulings, applied by EVERY episode writer:
 // source-numbering translation first, then community caps, then type
 // overrides.

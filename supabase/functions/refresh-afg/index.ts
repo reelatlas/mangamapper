@@ -35051,6 +35051,30 @@ function parseAfgPage(html3) {
   deduped.sort((a, b) => a.number - b.number);
   return { title, seasons, episodes: deduped };
 }
+function serializeChapters(chapters) {
+  const parts = [];
+  let runStart = null;
+  let runEnd = null;
+  const flush = () => {
+    if (runStart === null) return;
+    parts.push(runStart === runEnd ? String(runStart) : `${runStart}-${runEnd}`);
+    runStart = runEnd = null;
+  };
+  for (const c of chapters) {
+    if (Number.isInteger(c) && runEnd !== null && c === runEnd + 1) {
+      runEnd = c;
+      continue;
+    }
+    flush();
+    if (Number.isInteger(c)) {
+      runStart = runEnd = c;
+    } else {
+      parts.push(String(c));
+    }
+  }
+  flush();
+  return parts.join(", ");
+}
 function deriveAnchors(episodes) {
   const candidates = [];
   for (const e of [...episodes].sort((a, b) => a.number - b.number)) {
@@ -35060,6 +35084,8 @@ function deriveAnchors(episodes) {
       episode: e.number,
       chapter: Math.max(...mainline),
       startChapter: Math.min(...mainline),
+      // the FULL record, bonus values included, in adaptation order
+      chaptersAdapted: serializeChapters(e.chapters),
       arc: e.arc
     });
   }
@@ -35198,6 +35224,44 @@ var EPISODE_TYPE_OVERRIDES = {
     ...range(142, 149, "filler"),
     ...range(150, 157, "anime-only-canon")
   }
+};
+var SOURCE_NUMBERING_SHIFTS = {
+  "dr-stone": { drop: [36], shifts: [{ from: 37, offset: -1 }] },
+  // AFL numbers the Ryuusui special as ep 36; our ruling holds it order-only at position 36
+  // Queue-2 Group C demotions (Sean sign-off 2026-08-23): standalone
+  // bonuses/films the community does not number — order-only by ruling;
+  // AFL numbers them, so its rows translate on every refresh.
+  "yu-yu-hakusho-ghostfiles": { drop: [113], shifts: [] },
+  // Picture Drama bonus
+  "miss-kobayashis-dragon-maid": { drop: [14], shifts: [{ from: 15, offset: -1 }] },
+  // Valentine/Onsen bonus OVA
+  "fate-kaleid-liner-prisma-illya": { drop: [11], shifts: [{ from: 12, offset: -1 }] },
+  // Undoukai DE Dance bonus
+  "prison-school": { drop: [13], shifts: [] },
+  // Mad Wax bonus OVA
+  "to-love-ru-darkness": { drop: [25, 26], shifts: [] },
+  // 2nd Specials bonuses
+  "ghost-in-the-shell-stand-alone-complex": { drop: [53], shifts: [] },
+  // Solid State Society is a FILM (movies order-only unless community-numbered)
+  "yu-gi-oh-2000": { drop: [225], shifts: [] },
+  // Dark Side of Dimensions is a FILM
+  //   AFL counts the 2017 OVA 'Hitori Ayumu' as ep 25 (aired between S2 and
+  //   S3), shifting S3+ by +1 vs the community's 60-episode TV numbering —
+  //   research batch 8 (2026-08-23): fandom's 'Episode 61' = TV ep 60
+  //   'Twilight Goodbye'. The OVA holds watch position 24.5 (order-only,
+  //   adapts ~ch 40 side material).
+  "bungo-stray-dogs": { drop: [25], shifts: [{ from: 26, offset: -1 }] },
+  //   AFL counts the anime-original OVA 'Vampire Shahal' (May 2016) as a
+  //   trailing ep 25; only 24 TV episodes exist (research batch 9,
+  //   2026-08-23). No shift — the row is at the end. OVA holds watch
+  //   position 24.5 (order-only, adapts no manga).
+  "seraph-of-the-end-vampire-reign": { drop: [25], shifts: [] }
+};
+var translateEpisodeNumber = (seriesId, n) => {
+  const t = SOURCE_NUMBERING_SHIFTS[seriesId];
+  if (!t) return n;
+  if (t.drop.includes(n)) return null;
+  return n + t.shifts.reduce((s, x) => n >= x.from ? s + x.offset : s, 0);
 };
 async function registerIds(seriesId, ids) {
   for (const [source, val2] of Object.entries(ids)) {
@@ -35354,7 +35418,8 @@ async function syncAnchors(runId, seriesId, afgSlug, page) {
   await db.from("chapter_anchors").delete().eq("series_id", seriesId).eq("source", "afg");
   const { data: curated } = await db.from("chapter_anchors").select("episode, chapter").eq("series_id", seriesId).in("source", ["manual", "wiki"]);
   const protectedEps = new Set((curated ?? []).map((c) => c.episode));
-  const rows = anchors.filter((a) => !protectedEps.has(a.episode)).filter(
+  const translated = anchors.map((a) => ({ ...a, episode: translateEpisodeNumber(seriesId, a.episode) })).filter((a) => a.episode !== null);
+  const rows = translated.filter((a) => !protectedEps.has(a.episode)).filter(
     (a) => (curated ?? []).every(
       (c) => a.episode < c.episode ? a.chapter <= c.chapter : a.episode > c.episode ? a.chapter >= c.chapter : true
     )
@@ -35364,6 +35429,7 @@ async function syncAnchors(runId, seriesId, afgSlug, page) {
     volume: null,
     chapter: a.chapter,
     start_chapter: a.startChapter,
+    chapters_adapted: a.chaptersAdapted,
     source: "afg",
     note: a.arc
   }));
@@ -35371,7 +35437,7 @@ async function syncAnchors(runId, seriesId, afgSlug, page) {
     const { error } = await db.from("chapter_anchors").upsert(rows.slice(i, i + 500));
     if (error) throw new Error(`anchors (${seriesId}): ${error.message}`);
   }
-  const bonus = deriveBonusChapters(page.episodes);
+  const bonus = deriveBonusChapters(page.episodes).map((b) => ({ ...b, episode: translateEpisodeNumber(seriesId, b.episode) })).filter((b) => b.episode !== null);
   for (const b of bonus) {
     await db.from("episode_annotations").upsert(
       {

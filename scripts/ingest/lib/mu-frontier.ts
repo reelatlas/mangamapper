@@ -47,8 +47,6 @@ export async function applyMuFrontier(
   nonMuMaxCh: number | undefined,
 ): Promise<FrontierResult> {
   await db.from('chapter_anchors').delete().eq('series_id', s.id).eq('source', 'mu');
-  const anchorsFresh = nonMuMaxEp !== undefined && nonMuMaxEp >= (s.aired_episodes ?? 0) - 12;
-  if (anchorsFresh) return 'skipped_fresh';
 
   const { pairs, explicitEp } = parseCoverageAll(muEnd);
   const scopeStart = s.manga_start_chapter ?? 1;
@@ -56,7 +54,6 @@ export async function applyMuFrontier(
   const inScope = pairs.filter((p) => p.chapter >= scopeStart && p.chapter <= scopeEnd);
   if (!inScope.length) return 'no_coverage';
   const coverage = inScope.reduce((a, b) => (b.chapter > a.chapter ? b : a));
-  if (coverage.chapter <= (nonMuMaxCh ?? 0)) return 'no_progress';
 
   // CHAPTER-SPACE gate on MU pins (Sean 2026-08-23, the Slime/4KOTA class):
   // MU's coverage prose describes the whole FRANCHISE — against a partial
@@ -90,6 +87,18 @@ export async function applyMuFrontier(
     return 'no_coverage';
   }
   const episode = explicitEp && explicitEp <= s.aired_episodes ? explicitEp : s.aired_episodes;
+  // REDUNDANCY keys on the PIN EPISODE, never a freshness window (fixed
+  // 2026-08-23, Sean's AoT 88-89 report): the old "non-MU anchors within 12
+  // eps of the run end" blanket-skip deleted real run-end pins the moment
+  // research added interior anchors nearby (AoT's ep-89 → 139 finale pin,
+  // Kuroko's 75 → 275) and nulled every trailing episode — the beyond-
+  // frontier display rule refuses to extrapolate past the last anchor, so
+  // "fresh enough" and "covers the run end" are NOT the same thing. Chapter
+  // no-progress was the same trap in chapter space (Naruto's ep-220 → 238
+  // pin adds EPISODE-space knowledge even at zero chapter progress). The
+  // pin is redundant only when a non-MU anchor covers the pin episode
+  // itself.
+  if (nonMuMaxEp !== undefined && nonMuMaxEp >= episode) return 'skipped_fresh';
   // curated precedence (the same one-anchor-per-episode PK rule as every
   // derived writer): a manual/wiki anchor at the pin episode IS the frontier
   const { data: holder } = await db
