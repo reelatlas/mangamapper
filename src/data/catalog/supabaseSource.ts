@@ -126,7 +126,11 @@ const toAnimeSeries = (row: SeriesRow, rank: number, episodes: Episode[], publis
   // ongoing manga: AniList nulls chapter totals until completion — the
   // MangaUpdates-sourced latest published chapter stands in (semantically
   // LATEST KNOWN, not total; cross-check tier via the MangaDex id bridge)
-  totalChapters: row.total_chapters ?? row.latest_known_chapters,
+  // DISPLAY total only: null while the manga publishes (the card renders the
+  // em dash — "no final chapter yet", Sean 2026-08-24). The EFFECTIVE total
+  // (latest_known fallback) lives in buildMapping's tail math and reaches the
+  // strip via mangaAheadChapters — never through this field.
+  totalChapters: row.total_chapters,
   mangaStartVolume: row.manga_start_volume,
   mangaStartChapter: row.manga_start_chapter,
   episodes,

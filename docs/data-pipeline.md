@@ -22,7 +22,7 @@ separate, periodic concern.
 | **animefillerguide.com** (AFG) | Anchors + **structural cross-check** + expansion + **extension** | Semi-independent editorial (~458 shows, 3-way taxonomy: red=filler, blue=mixed, plain=canon). Arc sections carry **manga chapter equivalents** — the only structured episode↔chapter source found anywhere. AFG never overrides AFL on episode TYPE; but its **series/season structuring is thoughtfully curated** (Sean 2026-08-23) — consult it as evidence for stitch/franchise decisions even where AFL exists, and when unsure, confirm with Sean before choosing. Where AFL is absent entirely, AFG's own taxonomy classifies expansion series (provenance: registry source 'afg', afl_slug null); where AFL lags or stops short, AFG fills ONLY the missing episode numbers after the AniList chain independently confirms its numbering (afg-extend.ts, 2026-08-24). Its pages also carry **between-season reading guidance** in prose ("read ch 136–143 before :re") — raw HTML is kept greedily (`ingest_afg_pages.raw_html`) for the IA/arc phase. We don't mirror AFG's presentation (ruled splits stay split); we capture its data to evaluate (Sean 2026-08-24). |
 | AOD 2026-27 snapshot · animeapi.my.id · arm.haglund.dev · AniList `idMal` | ID mapping utilities | For AFL-slug ↔ AniList joins the title matcher can't settle. |
 | **MangaDex** | **ID bridge** (verified 2026-08-22) | Its entries carry AniList + MAL + MangaUpdates ids together (`links.al/mal/mu`; MU slug base36-decodes to their numeric id). The join layer for manga-side sources. Its chapter data itself: unusable coverage for licensed series. |
-| **MangaUpdates** | Cross-check tier (manual-confirm) | Public-read API, caching required by their AUP, credit requested. Release data resolves only ~50% of chapters to volumes and dies in the simulpub era — NOT the volume source. Gems: curated per-series `anime` coverage field ("Vol 112, Chap 1138 as of EP 1168") as a continue-point cross-check. |
+| **MangaUpdates** | **Frontier + denominator authority** where AFG is absent/stale; status cross-check; scheduled tier (Sean 2026-08-24, promoted from event-only) | Public-read API, caching required by their AUP, credit requested. Supplies: the `anime` coverage field (frontier anchors, ~140 series — multi-segment parse, §10), `latest_chapter` (effective-total denominator for publishing manga), explicit `completed` boolean + status string (manga_status cross-check — caught Frieren/Gangsta hiatuses, confirmed Outlaw Star complete), `type` Manga/Manhwa/Manhua/Novel (source_type validation, unused yet), `licensed`, `related_series` (future franchise cross-check). Full payload stages greedily. NO arc-level data (arcs stay AFG episode-side + wiki research manga-side). Release data resolves only ~50% of chapters to volumes — NOT the volume source. |
 | **Wikipedia chapter lists** (planned) | Volume-boundary source | Per-series "List of X chapters" pages are publisher-derived and complete; volume boundaries are static once printed → one-time ingest per series into `volume_boundaries`. Enters via the new-source checklist (§11). |
 | AniraTeam/AniFiller (GitHub) | Matcher validation seed only | 182 AFL shows with `anilist_id`/`mal_id` pre-joined. **No license — never ship its data**; use only to test our matcher's output. |
 | Jikan/MAL, Simkl, AniDB, SEO clones | **Dropped** | Jikan: boolean-only taxonomy, proven AFL copy, chronic 504s, MAL ToS forbids aggregation. Simkl: filler is website-only (0 mentions in their API spec). AniDB: no filler concept in schema. skipthefiller.com / animefillerlist.tv etc.: derivative rewrites. |
@@ -241,7 +241,8 @@ in code (`scripts/ingest/`), and every violation flags rather than guesses:
 | **Registration tiers** | AFG↔canonical identity enters the registry by evidence strength: slug / full-title equality auto-register; prefix (subtitle-stripped) matches need INDEPENDENT episode-span agreement (±2 of our max or a component boundary); a title key two series claim is ambiguous and never auto-matches; explicit rulings live in the RULED map (Sailor Moon 90s ≠ Crystal; AFG digimon-adventure = the 1999 series) | audit-afg-structure.ts --register |
 | **MU frontier targets (classes B+C)** | any manga-linked series whose anchors are absent OR STALE (max anchor episode > 12 behind the run — sparse AFG pages chart only early seasons, MHA's stops at ep 13/170) is an MU staging target — MU's curated anime-coverage supplies the real frontier; latest_known_chapters only ever writes for PUBLISHING manga | mu-backfill.ts |
 | **Anchor freshness** | anchors count as an active frontier only when they reach near the run's end; a stale set shows its truthful-but-old "as of ep N" and files a research flag — synthesis NEVER overrides a stale anchor (a diverged anime — Soul Eater — would otherwise claim full-manga coverage) | audit-manga-coverage.ts |
-| **Effective total (Sean 2026-08-24)** | while a manga publishes, AniList totals are null but MU's latest_known bounds the series from below: it is the EFFECTIVE total for tail math and the bar cutoff; DISPLAYED totals stay null (signals "ongoing"); synthesis still requires real totals. AniList has NO current-chapter field at all — the frontier can only come from MU (or research) | buildMapping (supabaseSource) |
+| **Effective total (Sean 2026-08-24)** | while a manga publishes, AniList totals are null but MU's latest_known bounds the series from below: it is the EFFECTIVE total for tail math and the bar cutoff; the DISPLAYED count renders the em dash (AnimeSeries.totalChapters carries NO latest_known fallback — the strip gets the effective total via mangaAheadChapters); synthesis still requires real totals. AniList has NO current-chapter field at all — the frontier can only come from MU (or research) | buildMapping + toAnimeSeries (supabaseSource) |
+| **Manga-status cross-check** | MU independently states publication status (`completed` boolean, first line of the status string) vs our AniList-derived manga_status — disagreement flags for review, never auto-applies (caught Frieren/Gangsta/Ahiru no Sora hiatuses, confirmed Outlaw Star complete where AniList never filled totals) | crossCheckMangaStatus (lib/mu-frontier.ts) |
 | Dispositions | active / excluded / duplicate / merged rulings are durable data; backfill skips non-active | source_map |
 
 **Hard-won learnings** (why some rules exist): AFL's Drupal is corrupt since
@@ -318,10 +319,21 @@ are one-line cron edits + the staleness windows in each function):**
   advancing past the last known volume boundary flag that manga for a
   `volumes-backfill` re-run (how the event-driven validation tier gets its
   events).
+- `refresh-mu` edge function, **daily 09:50 UTC, ≤15 stalest staged MU rows
+  per run** (staleness > 7 days → each manga cycles ~weekly; ~1.5s API
+  spacing, hash-gated on the acted-on fields only so rating churn doesn't
+  fake changes). MU was PROMOTED to the scheduled tier 2026-08-24 (Sean):
+  it supplies frontier anchors and the latest_known denominator — weekly-
+  release data that goes stale on a wall clock. Inline upkeep on change:
+  latest_known (publishing only), frontier re-derivation, manga-status
+  cross-check (all via lib/mu-frontier.ts — shared with mu-backfill and
+  audit-manga-coverage). Event triggers remain: mu-backfill on new-series
+  ingestion.
 - **Validation tier is EVENT-DRIVEN, never scheduled** (Sean's ruling
-  2026-08-23): Wikipedia boundaries are static-once-printed (one-time ingest
+  2026-08-23; MU graduated OUT of this tier 2026-08-24): Wikipedia
+  boundaries are static-once-printed (one-time ingest
   when a manga enters, `volumes-backfill` re-run only on flags);
-  MangaUpdates/etc. are invoked to verify or cross-check when a change or
+  niche sources are invoked to verify or cross-check when a change or
   conflict warrants it — cross-check sources validate, they don't refresh.
 - Mechanics: pg_cron → `invoke_edge_refresh(fn)` (SECURITY DEFINER, reads
   Vault: edge_base_url / edge_anon_key / edge_cron_secret) → pg_net POST with

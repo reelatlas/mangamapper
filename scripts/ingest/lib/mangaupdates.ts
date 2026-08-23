@@ -42,7 +42,10 @@ export interface MuSeries {
   title: string;
   latest_chapter: number | null;
   status: string | null; // free text: "115 Volumes (Ongoing)"
+  completed: boolean | null; // MU's explicit flag — stronger than the status string
+  type: string | null; // Manga / Manhwa / Manhua / Novel — validates our source_type
   anime: { start: string | null; end: string | null } | null;
+  [extra: string]: unknown; // greedy staging: the FULL MU payload, never a trim
 }
 
 export async function fetchMuSeries(muSeriesId: number): Promise<MuSeries | null> {
@@ -53,10 +56,23 @@ export async function fetchMuSeries(muSeriesId: number): Promise<MuSeries | null
   if (!res.ok) return null;
   const j = (await res.json()) as Record<string, unknown>;
   return {
+    ...j,
     series_id: Number(j.series_id),
     title: String(j.title ?? ''),
     latest_chapter: j.latest_chapter != null ? Number(j.latest_chapter) : null,
     status: j.status != null ? String(j.status) : null,
+    completed: j.completed != null ? Boolean(j.completed) : null,
+    type: j.type != null ? String(j.type) : null,
     anime: (j.anime as MuSeries['anime']) ?? null,
   };
 }
+
+// Hash only the fields our rules act on — MU payloads carry rating/rank
+// churn that would otherwise fake a change every fetch.
+export const muHash = (mu: MuSeries) => ({
+  latest_chapter: mu.latest_chapter,
+  status: mu.status,
+  completed: mu.completed,
+  type: mu.type,
+  anime: mu.anime,
+});

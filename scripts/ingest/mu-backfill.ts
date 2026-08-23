@@ -12,8 +12,9 @@
 //   npx tsx --env-file=.env.ingest scripts/ingest/mu-backfill.ts
 
 import { db, startRun, finishRun, fileFlagOnce } from './lib/db';
-import { bridgeViaMangaDex, fetchMuSeries } from './lib/mangaupdates';
+import { bridgeViaMangaDex, fetchMuSeries, muHash } from './lib/mangaupdates';
 import { contentHash } from './lib/hash';
+import { applyMuFrontier, crossCheckMangaStatus } from './lib/mu-frontier';
 
 const sleep = (ms: number) => new Promise((r) => setTimeout(r, ms));
 
@@ -95,7 +96,7 @@ async function main() {
           actions.push(`${t.title}: MU fetch failed`);
           continue;
         }
-        const hash = contentHash(mu);
+        const hash = contentHash(muHash(mu));
         if (staged?.content_hash === hash) {
           counters.unchanged++;
           await db.from('ingest_mangaupdates').update({ fetched_at: new Date().toISOString() }).eq('manga_anilist_id', mangaId);
@@ -122,6 +123,21 @@ async function main() {
           actions.push(`${t.title}: latest ch ${mu.latest_chapter} ("${mu.status}")`);
         } else {
           actions.push(`${t.title}: MU has no usable latest_chapter`);
+        }
+
+        // inline upkeep (new-source checklist): frontier + status cross-check
+        // land WITH the pull, never in a separate step someone must remember
+        for (const sid of t.seriesIds) {
+          const { data: srow } = await db
+            .from('series')
+            .select('id, aired_episodes, total_chapters, manga_start_chapter, manga_status')
+            .eq('id', sid)
+            .single();
+          if (!srow) continue;
+          const { data: epTop } = await db.from('chapter_anchors').select('episode').eq('series_id', sid).neq('source', 'mu').order('episode', { ascending: false }).limit(1);
+          const { data: chTop } = await db.from('chapter_anchors').select('chapter').eq('series_id', sid).neq('source', 'mu').order('chapter', { ascending: false }).limit(1);
+          await crossCheckMangaStatus(runId, sid, srow.manga_status, mu);
+          await applyMuFrontier(srow, mu.anime?.end ?? null, epTop?.[0]?.episode, chTop?.[0]?.chapter);
         }
       } catch (e) {
         actions.push(`${t.title}: ERROR ${String(e).slice(0, 100)}`);
