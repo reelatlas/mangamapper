@@ -7,7 +7,7 @@
 
 import { db, startRun, finishRun, fileFlagOnce } from './lib/db';
 import { type AniListMedia } from './lib/anilist';
-import { stageAniList, registerIds, applyScope } from './lib/resolve';
+import { stageAniList, registerIds, applyScope, applyEpisodeFloor } from './lib/resolve';
 import { slugify } from './lib/slug';
 import type { AflShowPage } from './lib/afl';
 import { getMedia, aired, walkChain, aggregate, writeComponents, ownedAnilistIds } from './lib/chain';
@@ -143,6 +143,7 @@ async function main() {
           manga_start_chapter: series.manga_start_chapter,
         }),
       );
+      applyEpisodeFloor(series.id, series, aflMax);
 
       const { data: old } = await db.from('series').select('id').eq('afl_slug', cand.slug).maybeSingle();
       if (old && old.id !== series.id) await db.from('series').delete().eq('id', old.id);

@@ -10,16 +10,8 @@
 //   npx tsx --env-file=.env.ingest scripts/ingest/reconcile-structure.ts
 
 import { db, startRun, finishRun, fileFlagOnce } from './lib/db';
-import { stageAniList, applyScope } from './lib/resolve';
+import { stageAniList, applyScope, EXTRAS_ADOPTED, applyEpisodeFloor } from './lib/resolve';
 import { aired, walkChain, aggregate, writeComponents, ownedAnilistIds } from './lib/chain';
-
-// Sean's standing extras rulings (2026-08-24): real broadcast content AFL
-// numbers beyond any AniList entry — never chain-walkable, never an error.
-const RULED_EXTRAS = new Set<string>([
-  'angel-beats', // OVA specials 14-16
-  'rurouni-kenshin', // 1996 broadcast tail 95-100
-  'eyeshield-21', // 10 specials beyond AniList's 145
-]);
 
 async function main() {
   const runId = await startRun('resolve');
@@ -49,8 +41,15 @@ async function main() {
         const eps = epMax.get(s.id) ?? 0;
         const covered = Math.max(compEnd.get(s.id) ?? 0, s.total_episodes ?? 0, s.aired_episodes ?? 0);
         if (!eps || !s.anilist_id || eps <= covered) continue;
-        if (RULED_EXTRAS.has(s.id)) {
-          actions.push(`${s.id}: eps ${eps} > structure ${covered} — ruled extras, accepted`);
+        // ruled extras ADOPT the episode count (Sean's invariant: displayed
+        // totals can never be lower than our own episode numbering) — the
+        // same floor every totals writer now applies, so refreshes keep it
+        if (EXTRAS_ADOPTED.has(s.id)) {
+          const floor = { aired_episodes: s.aired_episodes, total_episodes: s.total_episodes };
+          applyEpisodeFloor(s.id, floor, eps);
+          await db.from('series').update({ ...floor, updated_at: new Date().toISOString() }).eq('id', s.id);
+          counters.changed++;
+          actions.push(`${s.id}: ADOPTED ruled extras — totals floored to ${eps}`);
           continue;
         }
 
@@ -58,8 +57,24 @@ async function main() {
         const { chain, ambiguity } = await walkChain(s.anilist_id, eps, owned);
         const chainAired = chain.reduce((sum, m) => sum + aired(m), 0);
         // no progress = the structure is already the best the chain knows;
-        // a 1-2 episode overshoot inside tolerance is accepted, not churned
-        if (!ambiguity && chain.length && chainAired <= covered) continue;
+        // a 1-2 episode overshoot (recap/ep-0 numbering) floors the totals
+        // (invariant), larger unexplained ones flag for research
+        if (!ambiguity && chain.length && chainAired <= covered) {
+          if (eps - covered <= 2) {
+            const floor = { aired_episodes: s.aired_episodes, total_episodes: s.total_episodes };
+            applyEpisodeFloor(s.id, floor, eps);
+            await db.from('series').update({ ...floor, updated_at: new Date().toISOString() }).eq('id', s.id);
+            await db
+              .from('ingest_flags')
+              .update({ status: 'dismissed', resolved_at: new Date().toISOString() })
+              .eq('series_key', s.id)
+              .eq('kind', 'count_mismatch')
+              .eq('status', 'open');
+            counters.changed++;
+            actions.push(`${s.id}: FLOORED totals to ${eps} (small numbering overshoot)`);
+          }
+          continue;
+        }
         const lagOk = chainAired > eps && chain.length > 0 && chainAired - eps <= aired(chain[chain.length - 1]);
         if (!chain.length || ambiguity || (Math.abs(chainAired - eps) > 2 && !lagOk)) {
           await fileFlagOnce(runId, s.id, 'resolve', 'count_mismatch', {
@@ -88,6 +103,7 @@ async function main() {
             manga_start_chapter: row.manga_start_chapter,
           }),
         );
+        applyEpisodeFloor(s.id, row, eps);
         const { error } = await db.from('series').upsert(row);
         if (error) throw new Error(error.message);
         await writeComponents(s.id, chain, s.afl_slug);

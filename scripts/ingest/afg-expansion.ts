@@ -18,7 +18,7 @@ import { politeFetch } from './lib/http';
 import { contentHash } from './lib/hash';
 import { searchAnime } from './lib/anilist';
 import { db, startRun, finishRun, fileFlagOnce } from './lib/db';
-import { stageAniList, registerIds, applyScope } from './lib/resolve';
+import { stageAniList, registerIds, applyScope, applyEpisodeFloor } from './lib/resolve';
 import { aired, walkChain, aggregate, writeComponents, ownedAnilistIds } from './lib/chain';
 import { syncAnchors } from './lib/anchors';
 import { slugify } from './lib/slug';
@@ -177,6 +177,7 @@ async function main() {
           }),
         );
 
+        applyEpisodeFloor(id, row, afgMax);
         const { error: sErr } = await db.from('series').upsert(row);
         if (sErr) throw new Error(sErr.message);
         await registerIds(id, { anilist: chain[0].id, mal: chain[0].idMal, afg: t.slug });

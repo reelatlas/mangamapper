@@ -20372,7 +20372,7 @@ async function crossCheckMangaStatus(runId, seriesId, ourStatus, mu) {
 
 // supabase/functions/_src/refresh-mu.ts
 var STALE_MS = 7 * 24 * 60 * 60 * 1e3;
-var BATCH = 15;
+var BATCH = 20;
 async function run() {
   const runId = await startRun("resolve");
   const counters = { fetched: 0, unchanged: 0, changed: 0, flagged: 0 };

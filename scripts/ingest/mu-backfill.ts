@@ -49,10 +49,10 @@ async function main() {
       .select('id, title, manga_anilist_id, manga_status, total_chapters, popularity, aired_episodes')
       .not('manga_anilist_id', 'is', null)
       .order('popularity', { ascending: false });
-    const classB = (linked ?? []).filter((s) => {
-      const ma = anchorMax.get(s.id);
-      return ma === undefined || ma < (s.aired_episodes ?? 0) - 12;
-    });
+    // UNIVERSAL (Sean 2026-08-24: MU applies to ALL series as check +
+    // validation — the DBZ 520-vs-519 display needed MU's number for a manga
+    // whose anchors were fresh, which the old absent-or-stale filter skipped)
+    const classB = linked ?? [];
 
     const byManga = new Map<number, { title: string; seriesIds: string[]; statuses: Map<string, string> }>();
     for (const s of [...(classA ?? []), ...classB]) {

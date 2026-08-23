@@ -18,7 +18,7 @@ declare const Deno: {
 };
 
 const STALE_MS = 7 * 24 * 60 * 60 * 1000;
-const BATCH = 15;
+const BATCH = 20;
 
 async function run() {
   const runId = await startRun('resolve');

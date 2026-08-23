@@ -35117,6 +35117,23 @@ async function applyScope(aflSlug, fields) {
     manga_start_chapter: scope.start_chapter ?? fields.manga_start_chapter
   };
 }
+var EXTRAS_ADOPTED = /* @__PURE__ */ new Set([
+  "angel-beats",
+  // OVA specials 14-16 (broadcast content, ruled 2026-08-24)
+  "rurouni-kenshin",
+  // 1996 broadcast tail 95-100
+  "eyeshield-21"
+  // 10 specials beyond AniList's 145
+]);
+function applyEpisodeFloor(seriesId, row, epMax) {
+  if (!epMax) return;
+  const aired = row.aired_episodes ?? 0;
+  const overshoot = epMax - Math.max(aired, row.total_episodes ?? 0);
+  if (overshoot <= 0) return;
+  if (overshoot > 2 && !EXTRAS_ADOPTED.has(seriesId)) return;
+  row.aired_episodes = Math.max(aired, epMax);
+  if (row.total_episodes != null) row.total_episodes = Math.max(row.total_episodes, epMax);
+}
 async function registerIds(seriesId, ids) {
   for (const [source, val2] of Object.entries(ids)) {
     if (val2 == null) continue;
@@ -35341,6 +35358,7 @@ async function resolveSeries(runId, slug) {
     ),
     updated_at: (/* @__PURE__ */ new Date()).toISOString()
   };
+  applyEpisodeFloor(id, series, aflMax);
   const { error: e4 } = await db.from("series").upsert(series);
   if (e4) throw new Error(`series upsert (${slug}): ${e4.message}`);
   await registerIds(id, { anilist: media.id, mal: media.idMal, afl: slug });

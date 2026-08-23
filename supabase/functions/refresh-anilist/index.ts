@@ -20361,6 +20361,23 @@ async function applyScope(aflSlug, fields) {
     manga_start_chapter: scope.start_chapter ?? fields.manga_start_chapter
   };
 }
+var EXTRAS_ADOPTED = /* @__PURE__ */ new Set([
+  "angel-beats",
+  // OVA specials 14-16 (broadcast content, ruled 2026-08-24)
+  "rurouni-kenshin",
+  // 1996 broadcast tail 95-100
+  "eyeshield-21"
+  // 10 specials beyond AniList's 145
+]);
+function applyEpisodeFloor(seriesId, row, epMax) {
+  if (!epMax) return;
+  const aired = row.aired_episodes ?? 0;
+  const overshoot = epMax - Math.max(aired, row.total_episodes ?? 0);
+  if (overshoot <= 0) return;
+  if (overshoot > 2 && !EXTRAS_ADOPTED.has(seriesId)) return;
+  row.aired_episodes = Math.max(aired, epMax);
+  if (row.total_episodes != null) row.total_episodes = Math.max(row.total_episodes, epMax);
+}
 async function refreshStitchedVolatile(seriesId) {
   const { data: comps } = await db.from("series_components").select("anilist_id").eq("series_id", seriesId);
   if (!comps?.length) return;
@@ -20374,10 +20391,15 @@ async function refreshStitchedVolatile(seriesId) {
   const statuses = new Set(media.map((m) => m.status));
   const releasing = media.find((m) => m.status === "RELEASING");
   const weightSum = media.reduce((s, m) => s + m.popularity, 0) || 1;
-  await db.from("series").update({
-    status: statuses.has("RELEASING") ? "airing" : statuses.has("NOT_YET_RELEASED") ? "upcoming" : statuses.has("HIATUS") ? "hiatus" : "finished",
+  const { data: topEp } = await db.from("episodes").select("number").eq("series_id", seriesId).order("number", { ascending: false }).limit(1);
+  const volatile = {
     aired_episodes: media.reduce((s, m) => s + aired(m), 0),
-    total_episodes: media.every((m) => m.episodes != null) ? media.reduce((s, m) => s + (m.episodes ?? 0), 0) : null,
+    total_episodes: media.every((m) => m.episodes != null) ? media.reduce((s, m) => s + (m.episodes ?? 0), 0) : null
+  };
+  applyEpisodeFloor(seriesId, volatile, topEp?.[0]?.number ?? 0);
+  await db.from("series").update({
+    ...volatile,
+    status: statuses.has("RELEASING") ? "airing" : statuses.has("NOT_YET_RELEASED") ? "upcoming" : statuses.has("HIATUS") ? "hiatus" : "finished",
     next_airing_at: releasing?.nextAiringEpisode ? new Date(releasing.nextAiringEpisode.airingAt * 1e3).toISOString() : null,
     popularity: Math.max(...media.map((m) => m.popularity)),
     average_score: Math.round(media.reduce((s, m) => s + (m.averageScore ?? 0) * m.popularity, 0) / weightSum) || null,
@@ -20571,6 +20593,7 @@ async function resolveSeries(runId, slug) {
     ),
     updated_at: (/* @__PURE__ */ new Date()).toISOString()
   };
+  applyEpisodeFloor(id, series, aflMax);
   const { error: e4 } = await db.from("series").upsert(series);
   if (e4) throw new Error(`series upsert (${slug}): ${e4.message}`);
   await registerIds(id, { anilist: media.id, mal: media.idMal, afl: slug });

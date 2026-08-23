@@ -51,6 +51,32 @@ export async function applyScope(
 // Volatile-field refresh for STITCHED series (the daily AniList sweep):
 // aggregates recompute from the components' freshly staged media without
 // touching the stitcher's structure. Single-season series use resolveSeries.
+// Episode-floor invariant (Sean 2026-08-24: displayed totals can NEVER be
+// lower than our own episode numbering). Small overshoots (≤2: recap/ep-0
+// numbering) floor automatically — a lumped multi-season page overshoots by
+// a whole cour, so they can't be confused. Larger overshoots floor only once
+// RULED (Sean's confirm loop via reconcile-structure flags); until then the
+// flag is the research trigger. Every totals writer applies this.
+export const EXTRAS_ADOPTED = new Set<string>([
+  'angel-beats', // OVA specials 14-16 (broadcast content, ruled 2026-08-24)
+  'rurouni-kenshin', // 1996 broadcast tail 95-100
+  'eyeshield-21', // 10 specials beyond AniList's 145
+]);
+
+export function applyEpisodeFloor(
+  seriesId: string,
+  row: { aired_episodes?: number | null; total_episodes?: number | null },
+  epMax: number,
+) {
+  if (!epMax) return;
+  const aired = row.aired_episodes ?? 0;
+  const overshoot = epMax - Math.max(aired, row.total_episodes ?? 0);
+  if (overshoot <= 0) return;
+  if (overshoot > 2 && !EXTRAS_ADOPTED.has(seriesId)) return; // flag-first: research before adopting
+  row.aired_episodes = Math.max(aired, epMax);
+  if (row.total_episodes != null) row.total_episodes = Math.max(row.total_episodes, epMax);
+}
+
 export async function refreshStitchedVolatile(seriesId: string) {
   const { data: comps } = await db
     .from('series_components')
@@ -67,9 +93,21 @@ export async function refreshStitchedVolatile(seriesId: string) {
   const statuses = new Set(media.map((m) => m.status));
   const releasing = media.find((m) => m.status === 'RELEASING');
   const weightSum = media.reduce((s, m) => s + m.popularity, 0) || 1;
+  const { data: topEp } = await db
+    .from('episodes')
+    .select('number')
+    .eq('series_id', seriesId)
+    .order('number', { ascending: false })
+    .limit(1);
+  const volatile = {
+    aired_episodes: media.reduce((s, m) => s + aired(m), 0),
+    total_episodes: media.every((m) => m.episodes != null) ? media.reduce((s, m) => s + (m.episodes ?? 0), 0) : null,
+  };
+  applyEpisodeFloor(seriesId, volatile, topEp?.[0]?.number ?? 0);
   await db
     .from('series')
     .update({
+      ...volatile,
       status: statuses.has('RELEASING')
         ? 'airing'
         : statuses.has('NOT_YET_RELEASED')
@@ -77,8 +115,6 @@ export async function refreshStitchedVolatile(seriesId: string) {
           : statuses.has('HIATUS')
             ? 'hiatus'
             : 'finished',
-      aired_episodes: media.reduce((s, m) => s + aired(m), 0),
-      total_episodes: media.every((m) => m.episodes != null) ? media.reduce((s, m) => s + (m.episodes ?? 0), 0) : null,
       next_airing_at: releasing?.nextAiringEpisode
         ? new Date(releasing.nextAiringEpisode.airingAt * 1000).toISOString()
         : null,
@@ -436,6 +472,7 @@ export async function resolveSeries(runId: number, slug: string): Promise<{ epis
     ),
     updated_at: new Date().toISOString(),
   };
+  applyEpisodeFloor(id, series, aflMax);
 
   const { error: e4 } = await db.from('series').upsert(series);
   if (e4) throw new Error(`series upsert (${slug}): ${e4.message}`);

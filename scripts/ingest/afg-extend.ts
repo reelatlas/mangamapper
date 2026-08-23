@@ -19,7 +19,7 @@ import { AFG_BASE, parseAfgPage } from './lib/afg';
 import { politeFetch } from './lib/http';
 import { contentHash } from './lib/hash';
 import { db, startRun, finishRun, fileFlagOnce } from './lib/db';
-import { stageAniList, applyScope } from './lib/resolve';
+import { stageAniList, applyScope, applyEpisodeFloor } from './lib/resolve';
 import { aired, walkChain, aggregate, writeComponents, ownedAnilistIds } from './lib/chain';
 import { syncAnchors } from './lib/anchors';
 
@@ -152,6 +152,7 @@ async function main() {
             manga_start_chapter: row.manga_start_chapter,
           }),
         );
+        applyEpisodeFloor(s.id, row, Math.max(afgMax, ourMax));
         const { error: sErr } = await db.from('series').upsert(row);
         if (sErr) throw new Error(sErr.message);
 
