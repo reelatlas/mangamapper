@@ -94,6 +94,19 @@ export async function findChapterPages(titleCandidates: string[]): Promise<strin
   // full-text fallback (case-insensitive; catches ALL-CAPS titles and
   // subtitle variants): accept hits shaped like "List of … chapters" with or
   // without a part-page suffix, then expand the family from the base name.
+  // The hit's inner title must SHARE TOKENS with a candidate — search ranking
+  // alone once returned "List of Ranma ½ chapters" for My Dress-Up Darling.
+  const tokens = (s: string) =>
+    new Set(s.toLowerCase().normalize('NFKD').replace(/[^a-z0-9]+/g, ' ').trim().split(' ').filter(Boolean));
+  const titleAgrees = (inner: string) =>
+    variants.some((v) => {
+      const a = tokens(inner);
+      const b = tokens(v);
+      if (!a.size || !b.size) return false;
+      let shared = 0;
+      for (const t of a) if (b.has(t)) shared++;
+      return shared / Math.min(a.size, b.size) >= 0.5;
+    });
   for (const v of variants.slice(0, 2)) {
     const data = (await wikiGet({
       action: 'query',
@@ -101,7 +114,10 @@ export async function findChapterPages(titleCandidates: string[]): Promise<strin
       srsearch: `intitle:"chapters" List of ${v}`,
       srlimit: '5',
     })) as { query?: { search?: { title: string }[] } };
-    const hit = (data.query?.search ?? []).find((p) => /^List of .+ chapters(\s*\(.+\))?$/.test(p.title));
+    const hit = (data.query?.search ?? []).find((p) => {
+      const m = p.title.match(/^List of (.+) chapters(\s*\(.+\))?$/);
+      return m !== null && titleAgrees(m[1]);
+    });
     if (hit) {
       const base = hit.title.replace(/\s*\(.+\)$/, '');
       const family = await prefixFamily(base);

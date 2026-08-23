@@ -404,16 +404,26 @@ Fixed weekly is correct.
    Overlord…): no instrument because their ADAPTATION edge is format NOVEL.
    Proposed: LN-volume instrument (AniList NOVEL volumes + MU LN coverage),
    awaiting Sean's presentation ruling**; DB Super/GT deliberate.
-17. **Remaining triage** (all understood, none urgent): LN-instrument ruling
-   (item 16) · 3 unknown-coverage research cases (x, sgt-frog, outlaw-star) ·
-   17 ch-only series (publishing manga without Wikipedia chapter lists — 4th
-   wikitext dialect + search-fallback tightening may recover some; ~33 wiki
-   flags from the rerun to review) · ~29 MU-unbridgeable manga · ~30
-   AFL-sparse community-gap flags (keep-open vs dismiss-as-documented) ·
-   corruption-era match_ambiguous review · ruled-split anchor routing
-   (bleach/tokyo-ghoul pages could serve both sides with offsets) ·
-   excel-saga (AFL types everything filler — parody edge case) · footer
-   credits (AFL+AFG+MU) at the design return.
+17. ✅ Wiki flag triage (2026-08-24): search fallback now REQUIRES token
+   overlap between the found page and the manga title (it had matched
+   "Ranma ½ chapters" for Dress-Up Darling, "Delta Kappa Epsilon chapters"
+   [a fraternity] for ReLIFE); 18 stale flags dismissed (their manga now
+   have boundaries — the parser dialects were already fixed). NEW FINDING:
+   the exceed-totals gate compares manga-GLOBAL wiki boundaries against a
+   series' SCOPED totals, so scoped entries (Bleach 675v479, Berserk
+   374v94) false-positive — fix belongs to the segment model (compare
+   against the manga's own totals/family max).
+18. **Remaining triage** (all understood, none urgent): LN-instrument ruling
+   (item 16) · segment-model rulings (tail denominator fallback, handoff
+   pointers, universe-view bar — §13 sketch, Sean's go needed) · 3
+   unknown-coverage research cases (x, sgt-frog, outlaw-star) · genuinely
+   page-less manga on Wikipedia (Zom 100, Gachiakuta, Nagatoro, MF Ghost…
+   — permanent unless an alternative volume source lands; same keep-open vs
+   dismiss-as-documented ruling as the ~30 AFL-sparse gap flags) ·
+   exceed-totals gate scope fix + volumes rerun · ~29 MU-unbridgeable
+   manga · corruption-era match_ambiguous review · ruled-split anchor
+   routing · excel-saga (AFL types everything filler — parody edge case) ·
+   footer credits (AFL+AFG+MU) at the design return.
 
 ### Coverage-segment model (designed with Sean 2026-08-24 — NOT built; do not act without his go)
 
