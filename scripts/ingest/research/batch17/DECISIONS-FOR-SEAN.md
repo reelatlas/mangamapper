@@ -90,9 +90,15 @@ you disagree:
   as episodes, adapting the Yami/YOMI saga out of manga order (Spark 158-166
   before Eclair 145-150, a backfill of TV-skipped 106-109, Boris 175-180 before
   173-174). Now anchored with the reorder recorded.
-- **rurouni-kenshin (1996) eps 63-70 were a false positive** — already typed
-  filler; the whole 63-94 block is anime-original. The `frontier_tail_null`
-  audit class was flagging filler tails as if they were unmapped canon.
+- **rurouni-kenshin (1996): the audit was RIGHT and the earlier "false
+  positive" framing here was wrong** (corrected in Sean's post-switch review).
+  `frontier_tail_null` filters to canon/mixed rows correctly; it fired because
+  eps 79-82 were MISTYPED mixed (retyped filler per the verdict's own sources —
+  the whole 63-94 block is anime-original) and because rows 95-98 turn out to
+  be the **Trust & Betrayal OVAs adopted as episodes** — genuine manga
+  adaptation (Remembrance arc, ~chs 165-179) typed canon with no anchors.
+  95-98 are now a flagged research target; the batch-17 tail verdict's "ep 62
+  is the true end of adaptation" is superseded by that discovery.
 - **shugo-chara episode rows 73-96 diverge from broadcast order** (no #73 row;
   broadcast ep 95 missing entirely). Episode-row audit recommended — anchors
   were title-matched into OUR numbering, so one honest non-monotonic pair

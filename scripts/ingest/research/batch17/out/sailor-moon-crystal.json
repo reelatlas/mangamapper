@@ -1,616 +1,616 @@
 {
-  "series_id": "sailor-moon-crystal",
-  "summary": "Crystal seasons 1-3 (our eps 1-39) adapt the manga strictly 1:1 per Act in the renumbered 60-act space: eps 1-26 = Acts 1-26 (Dark Kingdom Acts 1-13, transition Act 14, Black Moon Acts 15-26), and the Death Busters season's 13 episodes cover Infinity Acts 27-38, with Act 27 uniquely split across eps 27-28 (Part 1/Part 2) and eps 29-39 = Acts 28-38. Every episode title equals its act title on both the fandom wiki and Wikipedia's episode list, and the fandom wiki's episode pages ('Nth episode overall', prev/next chains, 'based on manga chapter Act N') confirm each correspondence. The stored ep39->ch60 v18 anchor was a finale-inflated last-chapter fill and is repaired to Act 38 v10. Numbering conversion: our chapter space (volume boundaries, last chapter 60) uses the renumbered act scheme popularized by the 2003 shinsouban (Act 27 = Infinity 1, Act 60 = Stars 11); the original 1992-97 tankobon instead numbered 52 acts + 9 side stories (= AniList's 61 count, explaining flag #696). Both research sources use the renumbered scheme, so source->our-space conversion is the identity.",
-  "anchors": [
-    {
-      "episode": 1,
-      "end_chapter": 1,
-      "start_chapter": 1,
-      "chapters_adapted": "1",
-      "volume": 1,
-      "confidence": "high",
-      "note": "1:1 adaptation: episode title = manga Act 1 title (renumbered/shinsouban act space)",
-      "sources": [
-        "https://sailormoon.fandom.com/wiki/Act_1_Usagi_-_Sailor_Moon_(episode)",
-        "https://en.wikipedia.org/wiki/List_of_Sailor_Moon_Crystal_episodes",
-        "https://en.wikipedia.org/wiki/List_of_Sailor_Moon_chapters"
-      ]
-    },
-    {
-      "episode": 2,
-      "end_chapter": 2,
-      "start_chapter": 2,
-      "chapters_adapted": "2",
-      "volume": 1,
-      "confidence": "high",
-      "note": "1:1 adaptation: episode title = manga Act 2 title (renumbered/shinsouban act space)",
-      "sources": [
-        "https://sailormoon.fandom.com/wiki/Act_2_Ami_-_Sailor_Mercury_(episode)",
-        "https://en.wikipedia.org/wiki/List_of_Sailor_Moon_Crystal_episodes",
-        "https://en.wikipedia.org/wiki/List_of_Sailor_Moon_chapters"
-      ]
-    },
-    {
-      "episode": 3,
-      "end_chapter": 3,
-      "start_chapter": 3,
-      "chapters_adapted": "3",
-      "volume": 1,
-      "confidence": "high",
-      "note": "1:1 adaptation: episode title = manga Act 3 title (renumbered/shinsouban act space)",
-      "sources": [
-        "https://sailormoon.fandom.com/wiki/Act_3_Rei_-_Sailor_Mars_(episode)",
-        "https://en.wikipedia.org/wiki/List_of_Sailor_Moon_Crystal_episodes",
-        "https://en.wikipedia.org/wiki/List_of_Sailor_Moon_chapters"
-      ]
-    },
-    {
-      "episode": 4,
-      "end_chapter": 4,
-      "start_chapter": 4,
-      "chapters_adapted": "4",
-      "volume": 1,
-      "confidence": "high",
-      "note": "1:1 adaptation: episode title = manga Act 4 title (renumbered/shinsouban act space)",
-      "sources": [
-        "https://sailormoon.fandom.com/wiki/Act_4_Masquerade_Dance_Party_(episode)",
-        "https://en.wikipedia.org/wiki/List_of_Sailor_Moon_Crystal_episodes",
-        "https://en.wikipedia.org/wiki/List_of_Sailor_Moon_chapters"
-      ]
-    },
-    {
-      "episode": 5,
-      "end_chapter": 5,
-      "start_chapter": 5,
-      "chapters_adapted": "5",
-      "volume": 1,
-      "confidence": "high",
-      "note": "1:1 adaptation: episode title = manga Act 5 title (renumbered/shinsouban act space)",
-      "sources": [
-        "https://sailormoon.fandom.com/wiki/Act_5_Makoto_-_Sailor_Jupiter_(episode)",
-        "https://en.wikipedia.org/wiki/List_of_Sailor_Moon_Crystal_episodes",
-        "https://en.wikipedia.org/wiki/List_of_Sailor_Moon_chapters"
-      ]
-    },
-    {
-      "episode": 6,
-      "end_chapter": 6,
-      "start_chapter": 6,
-      "chapters_adapted": "6",
-      "volume": 2,
-      "confidence": "high",
-      "note": "1:1 adaptation: episode title = manga Act 6 title (renumbered/shinsouban act space)",
-      "sources": [
-        "https://sailormoon.fandom.com/wiki/Act_6_Tuxedo_Mask_(episode)",
-        "https://en.wikipedia.org/wiki/List_of_Sailor_Moon_Crystal_episodes",
-        "https://en.wikipedia.org/wiki/List_of_Sailor_Moon_chapters"
-      ]
-    },
-    {
-      "episode": 7,
-      "end_chapter": 7,
-      "start_chapter": 7,
-      "chapters_adapted": "7",
-      "volume": 2,
-      "confidence": "high",
-      "note": "1:1 adaptation: episode title = manga Act 7 title (renumbered/shinsouban act space)",
-      "sources": [
-        "https://sailormoon.fandom.com/wiki/Act_7_Mamoru_Chiba_-_Tuxedo_Mask_-_(episode)",
-        "https://en.wikipedia.org/wiki/List_of_Sailor_Moon_Crystal_episodes",
-        "https://en.wikipedia.org/wiki/List_of_Sailor_Moon_chapters"
-      ]
-    },
-    {
-      "episode": 8,
-      "end_chapter": 8,
-      "start_chapter": 8,
-      "chapters_adapted": "8",
-      "volume": 2,
-      "confidence": "high",
-      "note": "1:1 adaptation: episode title = manga Act 8 title (renumbered/shinsouban act space)",
-      "sources": [
-        "https://sailormoon.fandom.com/wiki/Act_8_Minako_-_Sailor_V_-_(episode)",
-        "https://en.wikipedia.org/wiki/List_of_Sailor_Moon_Crystal_episodes",
-        "https://en.wikipedia.org/wiki/List_of_Sailor_Moon_chapters"
-      ]
-    },
-    {
-      "episode": 9,
-      "end_chapter": 9,
-      "start_chapter": 9,
-      "chapters_adapted": "9",
-      "volume": 2,
-      "confidence": "high",
-      "note": "1:1 adaptation: episode title = manga Act 9 title (renumbered/shinsouban act space)",
-      "sources": [
-        "https://sailormoon.fandom.com/wiki/Act_9_Serenity_-_Princess_-_(episode)",
-        "https://en.wikipedia.org/wiki/List_of_Sailor_Moon_Crystal_episodes",
-        "https://en.wikipedia.org/wiki/List_of_Sailor_Moon_chapters"
-      ]
-    },
-    {
-      "episode": 10,
-      "end_chapter": 10,
-      "start_chapter": 10,
-      "chapters_adapted": "10",
-      "volume": 3,
-      "confidence": "high",
-      "note": "1:1 adaptation: episode title = manga Act 10 title (renumbered/shinsouban act space)",
-      "sources": [
-        "https://sailormoon.fandom.com/wiki/Act_10_Moon_(episode)",
-        "https://en.wikipedia.org/wiki/List_of_Sailor_Moon_Crystal_episodes",
-        "https://en.wikipedia.org/wiki/List_of_Sailor_Moon_chapters"
-      ]
-    },
-    {
-      "episode": 11,
-      "end_chapter": 11,
-      "start_chapter": 11,
-      "chapters_adapted": "11",
-      "volume": 3,
-      "confidence": "high",
-      "note": "1:1 adaptation: episode title = manga Act 11 title (renumbered/shinsouban act space)",
-      "sources": [
-        "https://sailormoon.fandom.com/wiki/Act_11_Reunion_-_Endymion_-_(episode)",
-        "https://en.wikipedia.org/wiki/List_of_Sailor_Moon_Crystal_episodes",
-        "https://en.wikipedia.org/wiki/List_of_Sailor_Moon_chapters"
-      ]
-    },
-    {
-      "episode": 12,
-      "end_chapter": 12,
-      "start_chapter": 12,
-      "chapters_adapted": "12",
-      "volume": 3,
-      "confidence": "high",
-      "note": "1:1 adaptation: episode title = manga Act 12 title (renumbered/shinsouban act space)",
-      "sources": [
-        "https://sailormoon.fandom.com/wiki/Act_12_Enemy_-_Queen_Metalia_-_(episode)",
-        "https://en.wikipedia.org/wiki/List_of_Sailor_Moon_Crystal_episodes",
-        "https://en.wikipedia.org/wiki/List_of_Sailor_Moon_chapters"
-      ]
-    },
-    {
-      "episode": 13,
-      "end_chapter": 13,
-      "start_chapter": 13,
-      "chapters_adapted": "13",
-      "volume": 3,
-      "confidence": "high",
-      "note": "1:1 adaptation: episode title = manga Act 13 title (renumbered/shinsouban act space)",
-      "sources": [
-        "https://sailormoon.fandom.com/wiki/Act_13_Final_Battle_-_Reincarnation_-_(episode)",
-        "https://en.wikipedia.org/wiki/List_of_Sailor_Moon_Crystal_episodes",
-        "https://en.wikipedia.org/wiki/List_of_Sailor_Moon_chapters"
-      ]
-    },
-    {
-      "episode": 14,
-      "end_chapter": 14,
-      "start_chapter": 14,
-      "chapters_adapted": "14",
-      "volume": 4,
-      "confidence": "high",
-      "note": "1:1 adaptation: episode title = manga Act 14 title (renumbered/shinsouban act space)",
-      "sources": [
-        "https://sailormoon.fandom.com/wiki/Act_14_Conclusion_and_Commencement_-_Petite_%C3%89trangere_-_(episode)",
-        "https://en.wikipedia.org/wiki/List_of_Sailor_Moon_Crystal_episodes",
-        "https://en.wikipedia.org/wiki/List_of_Sailor_Moon_chapters"
-      ]
-    },
-    {
-      "episode": 15,
-      "end_chapter": 15,
-      "start_chapter": 15,
-      "chapters_adapted": "15",
-      "volume": 4,
-      "confidence": "high",
-      "note": "1:1 adaptation: episode title = manga Act 15 title (renumbered/shinsouban act space)",
-      "sources": [
-        "https://sailormoon.fandom.com/wiki/Act_15_Infiltration_-_Sailor_Mars_-_(episode)",
-        "https://en.wikipedia.org/wiki/List_of_Sailor_Moon_Crystal_episodes",
-        "https://en.wikipedia.org/wiki/List_of_Sailor_Moon_chapters"
-      ]
-    },
-    {
-      "episode": 16,
-      "end_chapter": 16,
-      "start_chapter": 16,
-      "chapters_adapted": "16",
-      "volume": 4,
-      "confidence": "high",
-      "note": "1:1 adaptation: episode title = manga Act 16 title (renumbered/shinsouban act space)",
-      "sources": [
-        "https://sailormoon.fandom.com/wiki/Act_16_Abduction_-_Sailor_Mercury_-_(episode)",
-        "https://en.wikipedia.org/wiki/List_of_Sailor_Moon_Crystal_episodes",
-        "https://en.wikipedia.org/wiki/List_of_Sailor_Moon_chapters"
-      ]
-    },
-    {
-      "episode": 17,
-      "end_chapter": 17,
-      "start_chapter": 17,
-      "chapters_adapted": "17",
-      "volume": 4,
-      "confidence": "high",
-      "note": "1:1 adaptation: episode title = manga Act 17 title (renumbered/shinsouban act space)",
-      "sources": [
-        "https://sailormoon.fandom.com/wiki/Act_17_Secret_-_Sailor_Jupiter_-_(episode)",
-        "https://en.wikipedia.org/wiki/List_of_Sailor_Moon_Crystal_episodes",
-        "https://en.wikipedia.org/wiki/List_of_Sailor_Moon_chapters"
-      ]
-    },
-    {
-      "episode": 18,
-      "end_chapter": 18,
-      "start_chapter": 18,
-      "chapters_adapted": "18",
-      "volume": 5,
-      "confidence": "high",
-      "note": "1:1 adaptation: episode title = manga Act 18 title (renumbered/shinsouban act space)",
-      "sources": [
-        "https://sailormoon.fandom.com/wiki/Act_18_Invasion_-_Sailor_Venus_(episode)",
-        "https://en.wikipedia.org/wiki/List_of_Sailor_Moon_Crystal_episodes",
-        "https://en.wikipedia.org/wiki/List_of_Sailor_Moon_chapters"
-      ]
-    },
-    {
-      "episode": 19,
-      "end_chapter": 19,
-      "start_chapter": 19,
-      "chapters_adapted": "19",
-      "volume": 5,
-      "confidence": "high",
-      "note": "1:1 adaptation: episode title = manga Act 19 title (renumbered/shinsouban act space)",
-      "sources": [
-        "https://sailormoon.fandom.com/wiki/Act_19_Time_Warp_-_Sailor_Pluto_-_(episode)",
-        "https://en.wikipedia.org/wiki/List_of_Sailor_Moon_Crystal_episodes",
-        "https://en.wikipedia.org/wiki/List_of_Sailor_Moon_chapters"
-      ]
-    },
-    {
-      "episode": 20,
-      "end_chapter": 20,
-      "start_chapter": 20,
-      "chapters_adapted": "20",
-      "volume": 5,
-      "confidence": "high",
-      "note": "1:1 adaptation: episode title = manga Act 20 title (renumbered/shinsouban act space)",
-      "sources": [
-        "https://sailormoon.fandom.com/wiki/Act_20_Crystal_Tokyo_-_King_Endymion_-_(episode)",
-        "https://en.wikipedia.org/wiki/List_of_Sailor_Moon_Crystal_episodes",
-        "https://en.wikipedia.org/wiki/List_of_Sailor_Moon_chapters"
-      ]
-    },
-    {
-      "episode": 21,
-      "end_chapter": 21,
-      "start_chapter": 21,
-      "chapters_adapted": "21",
-      "volume": 6,
-      "confidence": "high",
-      "note": "1:1 adaptation: episode title = manga Act 21 title (renumbered/shinsouban act space)",
-      "sources": [
-        "https://sailormoon.fandom.com/wiki/Act_21_Complication_-_Nemesis_(episode)",
-        "https://en.wikipedia.org/wiki/List_of_Sailor_Moon_Crystal_episodes",
-        "https://en.wikipedia.org/wiki/List_of_Sailor_Moon_chapters"
-      ]
-    },
-    {
-      "episode": 22,
-      "end_chapter": 22,
-      "start_chapter": 22,
-      "chapters_adapted": "22",
-      "volume": 6,
-      "confidence": "high",
-      "note": "1:1 adaptation: episode title = manga Act 22 title (renumbered/shinsouban act space)",
-      "sources": [
-        "https://sailormoon.fandom.com/wiki/Act_22_Hidden_Agenda_-_Nemesis_(episode)",
-        "https://en.wikipedia.org/wiki/List_of_Sailor_Moon_Crystal_episodes",
-        "https://en.wikipedia.org/wiki/List_of_Sailor_Moon_chapters"
-      ]
-    },
-    {
-      "episode": 23,
-      "end_chapter": 23,
-      "start_chapter": 23,
-      "chapters_adapted": "23",
-      "volume": 6,
-      "confidence": "high",
-      "note": "1:1 adaptation: episode title = manga Act 23 title (renumbered/shinsouban act space)",
-      "sources": [
-        "https://sailormoon.fandom.com/wiki/Act_23_Covert_Maneuvers_-_Wiseman_(episode)",
-        "https://en.wikipedia.org/wiki/List_of_Sailor_Moon_Crystal_episodes",
-        "https://en.wikipedia.org/wiki/List_of_Sailor_Moon_chapters"
-      ]
-    },
-    {
-      "episode": 24,
-      "end_chapter": 24,
-      "start_chapter": 24,
-      "chapters_adapted": "24",
-      "volume": 6,
-      "confidence": "high",
-      "note": "1:1 adaptation: episode title = manga Act 24 title (renumbered/shinsouban act space)",
-      "sources": [
-        "https://sailormoon.fandom.com/wiki/Act_24_Attack_-_Black_Lady_-_(episode)",
-        "https://en.wikipedia.org/wiki/List_of_Sailor_Moon_Crystal_episodes",
-        "https://en.wikipedia.org/wiki/List_of_Sailor_Moon_chapters"
-      ]
-    },
-    {
-      "episode": 25,
-      "end_chapter": 25,
-      "start_chapter": 25,
-      "chapters_adapted": "25",
-      "volume": 7,
-      "confidence": "high",
-      "note": "1:1 adaptation: episode title = manga Act 25 title (renumbered/shinsouban act space)",
-      "sources": [
-        "https://sailormoon.fandom.com/wiki/Act_25_Showdown_-_Death_Phantom_-_(episode)",
-        "https://en.wikipedia.org/wiki/List_of_Sailor_Moon_Crystal_episodes",
-        "https://en.wikipedia.org/wiki/List_of_Sailor_Moon_chapters"
-      ]
-    },
-    {
-      "episode": 26,
-      "end_chapter": 26,
-      "start_chapter": 26,
-      "chapters_adapted": "26",
-      "volume": 7,
-      "confidence": "high",
-      "note": "1:1 adaptation: episode title = manga Act 26 title (renumbered/shinsouban act space)",
-      "sources": [
-        "https://sailormoon.fandom.com/wiki/Act_26_Replay_-_Never_Ending_(episode)",
-        "https://en.wikipedia.org/wiki/List_of_Sailor_Moon_Crystal_episodes",
-        "https://en.wikipedia.org/wiki/List_of_Sailor_Moon_chapters"
-      ]
-    },
-    {
-      "episode": 27,
-      "end_chapter": 27,
-      "start_chapter": 27,
-      "chapters_adapted": "27 (first half)",
-      "volume": 7,
-      "confidence": "high",
-      "note": "Act 27 'Infinity 1 Premonition' Part 1 — the only Crystal chapter split over two episodes; ep ends mid-chapter",
-      "sources": [
-        "https://sailormoon.fandom.com/wiki/Act_27_Infinity_1_Premonition,_Part_1",
-        "https://en.wikipedia.org/wiki/List_of_Sailor_Moon_Crystal_episodes",
-        "https://en.wikipedia.org/wiki/List_of_Sailor_Moon_chapters"
-      ]
-    },
-    {
-      "episode": 28,
-      "end_chapter": 27,
-      "start_chapter": 27,
-      "chapters_adapted": "27 (second half)",
-      "volume": 7,
-      "confidence": "high",
-      "note": "Act 27 'Infinity 1 Premonition' Part 2 — second half of the same chapter; no Act 28 content",
-      "sources": [
-        "https://sailormoon.fandom.com/wiki/Act_27_Infinity_1_Premonition,_Part_2",
-        "https://en.wikipedia.org/wiki/List_of_Sailor_Moon_Crystal_episodes",
-        "https://en.wikipedia.org/wiki/List_of_Sailor_Moon_chapters"
-      ]
-    },
-    {
-      "episode": 29,
-      "end_chapter": 18,
-      "start_chapter": 18,
-      "chapters_adapted": "18",
-      "volume": 5,
-      "confidence": "high",
-      "note": "1:1 adaptation: episode title = manga Act 18 title (renumbered/shinsouban act space)",
-      "sources": [
-        "https://sailormoon.fandom.com/wiki/Act_28_Infinity_2_Ripples_(episode)",
-        "https://en.wikipedia.org/wiki/List_of_Sailor_Moon_Crystal_episodes",
-        "https://en.wikipedia.org/wiki/List_of_Sailor_Moon_chapters"
-      ]
-    },
-    {
-      "episode": 30,
-      "end_chapter": 19,
-      "start_chapter": 19,
-      "chapters_adapted": "19",
-      "volume": 5,
-      "confidence": "high",
-      "note": "1:1 adaptation: episode title = manga Act 19 title (renumbered/shinsouban act space)",
-      "sources": [
-        "https://sailormoon.fandom.com/wiki/Act_29_Infinity_3_Two_-_New_Guardians_-_(episode)",
-        "https://en.wikipedia.org/wiki/List_of_Sailor_Moon_Crystal_episodes",
-        "https://en.wikipedia.org/wiki/List_of_Sailor_Moon_chapters"
-      ]
-    },
-    {
-      "episode": 31,
-      "end_chapter": 20,
-      "start_chapter": 20,
-      "chapters_adapted": "20",
-      "volume": 5,
-      "confidence": "high",
-      "note": "1:1 adaptation: episode title = manga Act 20 title (renumbered/shinsouban act space)",
-      "sources": [
-        "https://sailormoon.fandom.com/wiki/Act_30_Infinity_4_Haruka_&_Michiru_-_Sailor_Uranus_&_Sailor_Neptune_-_(episode)",
-        "https://en.wikipedia.org/wiki/List_of_Sailor_Moon_Crystal_episodes",
-        "https://en.wikipedia.org/wiki/List_of_Sailor_Moon_chapters"
-      ]
-    },
-    {
-      "episode": 32,
-      "end_chapter": 21,
-      "start_chapter": 21,
-      "chapters_adapted": "21",
-      "volume": 6,
-      "confidence": "high",
-      "note": "1:1 adaptation: episode title = manga Act 21 title (renumbered/shinsouban act space)",
-      "sources": [
-        "https://sailormoon.fandom.com/wiki/Act_31_Infinity_5_Setsuna_-_Sailor_Pluto_-_(episode)",
-        "https://en.wikipedia.org/wiki/List_of_Sailor_Moon_Crystal_episodes",
-        "https://en.wikipedia.org/wiki/List_of_Sailor_Moon_chapters"
-      ]
-    },
-    {
-      "episode": 33,
-      "end_chapter": 22,
-      "start_chapter": 22,
-      "chapters_adapted": "22",
-      "volume": 6,
-      "confidence": "high",
-      "note": "1:1 adaptation: episode title = manga Act 22 title (renumbered/shinsouban act space)",
-      "sources": [
-        "https://sailormoon.fandom.com/wiki/Act_32_Infinity_6_Three_Guardians_(episode)",
-        "https://en.wikipedia.org/wiki/List_of_Sailor_Moon_Crystal_episodes",
-        "https://en.wikipedia.org/wiki/List_of_Sailor_Moon_chapters"
-      ]
-    },
-    {
-      "episode": 34,
-      "end_chapter": 23,
-      "start_chapter": 23,
-      "chapters_adapted": "23",
-      "volume": 6,
-      "confidence": "high",
-      "note": "1:1 adaptation: episode title = manga Act 23 title (renumbered/shinsouban act space)",
-      "sources": [
-        "https://sailormoon.fandom.com/wiki/Act_33_Infinity_7_Transformation_-_Super_Sailor_Moon_-_(episode)",
-        "https://en.wikipedia.org/wiki/List_of_Sailor_Moon_Crystal_episodes",
-        "https://en.wikipedia.org/wiki/List_of_Sailor_Moon_chapters"
-      ]
-    },
-    {
-      "episode": 35,
-      "end_chapter": 24,
-      "start_chapter": 24,
-      "chapters_adapted": "24",
-      "volume": 6,
-      "confidence": "high",
-      "note": "1:1 adaptation: episode title = manga Act 24 title (renumbered/shinsouban act space)",
-      "sources": [
-        "https://sailormoon.fandom.com/wiki/Act_34_Infinity_8_%22Infinite_Labyrinth%22_1_(episode)",
-        "https://en.wikipedia.org/wiki/List_of_Sailor_Moon_Crystal_episodes",
-        "https://en.wikipedia.org/wiki/List_of_Sailor_Moon_chapters"
-      ]
-    },
-    {
-      "episode": 36,
-      "end_chapter": 25,
-      "start_chapter": 25,
-      "chapters_adapted": "25",
-      "volume": 7,
-      "confidence": "high",
-      "note": "1:1 adaptation: episode title = manga Act 25 title (renumbered/shinsouban act space)",
-      "sources": [
-        "https://sailormoon.fandom.com/wiki/Act_35_Infinity_9_%22Infinite_Labyrinth%22_2_(episode)",
-        "https://en.wikipedia.org/wiki/List_of_Sailor_Moon_Crystal_episodes",
-        "https://en.wikipedia.org/wiki/List_of_Sailor_Moon_chapters"
-      ]
-    },
-    {
-      "episode": 37,
-      "end_chapter": 26,
-      "start_chapter": 26,
-      "chapters_adapted": "26",
-      "volume": 7,
-      "confidence": "high",
-      "note": "1:1 adaptation: episode title = manga Act 26 title (renumbered/shinsouban act space)",
-      "sources": [
-        "https://sailormoon.fandom.com/wiki/Act_36_Infinity_10_Infinite_-_Upper_Atmosphere_-_(episode)",
-        "https://en.wikipedia.org/wiki/List_of_Sailor_Moon_Crystal_episodes",
-        "https://en.wikipedia.org/wiki/List_of_Sailor_Moon_chapters"
-      ]
-    },
-    {
-      "episode": 38,
-      "end_chapter": 27,
-      "start_chapter": 27,
-      "chapters_adapted": "27",
-      "volume": 7,
-      "confidence": "high",
-      "note": "1:1 adaptation: episode title = manga Act 27 title (renumbered/shinsouban act space)",
-      "sources": [
-        "https://sailormoon.fandom.com/wiki/Act_37_Infinity_11_Infinite_-_Judgement_-_(episode)",
-        "https://en.wikipedia.org/wiki/List_of_Sailor_Moon_Crystal_episodes",
-        "https://en.wikipedia.org/wiki/List_of_Sailor_Moon_chapters"
-      ]
-    },
-    {
-      "episode": 39,
-      "end_chapter": 28,
-      "start_chapter": 28,
-      "chapters_adapted": "38",
-      "volume": 8,
-      "confidence": "high",
-      "note": "S3 finale = Act 38 Infinity 12 only (episode ends slightly before the chapter's final scene); replaces the finale-inflated ch60 anchor",
-      "sources": [
-        "https://sailormoon.fandom.com/wiki/Act_38_Infinity_12_Infinite_-_Journey_(episode)",
-        "https://en.wikipedia.org/wiki/List_of_Sailor_Moon_Crystal_episodes",
-        "https://en.wikipedia.org/wiki/List_of_Sailor_Moon_chapters"
-      ]
-    }
-  ],
-  "continue_points": [
-    {
-      "episode": 27,
-      "continue_chapter": 27,
-      "note": "ends mid-Act 27 (chapter split over eps 27-28); resume Act 27 itself"
-    },
-    {
-      "episode": 39,
-      "continue_chapter": 38,
-      "note": "episode ends slightly before Act 38's end (fandom: 'ends a little earlier than the chapter'); resume Act 38, then side stories sit between Infinity and Dream outside mainline numbering"
-    }
-  ],
-  "annotations": [
-    {
-      "episodes": [
-        27,
-        28
-      ],
-      "kind": "partial",
-      "chapters": "27",
-      "note": "Act 27 Infinity 1 Premonition split into Part 1 (ep27) / Part 2 (ep28) — fandom: 'the only story based on a single manga chapter that is split into two parts'"
-    },
-    {
-      "episodes": [
-        39
-      ],
-      "kind": "partial",
-      "chapters": "38",
-      "note": "finale ends a little earlier than Act 38's last pages (Juban High epilogue trimmed); intervening side chapters (Exam Battle shorts etc.) skipped — they are outside mainline act numbering"
-    }
-  ],
-  "type_corrections": [],
-  "repairs": [
-    {
-      "episode": 39,
-      "field": "end_chapter",
-      "old": 60,
-      "new": 38,
-      "why": "ep39 is the Infinity/Death Busters finale adapting Act 38 'Infinity 12 Infinite - Journey' only; ch60 (Stars 11) is the manga's final chapter — a finale-inflated auto-fill from MU. Fandom ep page: '39th episode... final episode of the 3rd season', chapter counterpart Act 38.",
-      "sources": [
-        "https://sailormoon.fandom.com/wiki/Act_38_Infinity_12_Infinite_-_Journey_(episode)",
-        "https://en.wikipedia.org/wiki/List_of_Sailor_Moon_Crystal_episodes",
-        "https://en.wikipedia.org/wiki/List_of_Sailor_Moon_chapters"
-      ]
-    },
-    {
-      "episode": 39,
-      "field": "volume",
-      "old": 18,
-      "new": 10,
-      "why": "Act 38 sits in volume 10 (v10 = Acts 36-38 per Wikipedia's original-18-volume distribution); v18 = Stars arc end.",
-      "sources": [
-        "https://en.wikipedia.org/wiki/List_of_Sailor_Moon_chapters"
-      ]
-    }
-  ],
-  "structure": {
-    "notes": "CHAPTER-SPACE / NUMBERING CONVERSION: our chapter space is the renumbered 60-act scheme (2003 shinsouban re-cut: 8 long original acts split, Infinity 1 = Act 27 ... Stars 11 = Act 60) laid over the ORIGINAL 18-volume boundaries exactly as Wikipedia's List of Sailor Moon chapters presents them (v1:1-5, v2:6-9, v3:10-13, v4:14-17, v5:18-20, v6:21-24, v7:25-27, v8:28-31, v9:32-35, v10:36-38; v11 = side stories only, hence no mainline boundary). The original tankobon's own 52-act numbering appears nowhere in our pipeline or in the cited sources — no conversion needed (identity). AniList's total_chapters=61 = original 52 acts + 9 side stories, a different counting basis from our 60-act space (see flag #696). Episode numbering: Wikipedia and AniList agree on cumulative 1-39 (AniList components 1-26 + 27-39; Wikipedia splits the same episodes 14/12/13 across Dark Kingdom/Black Moon/Death Busters seasons — same cumulative numbers). Season boundaries in our components: ep26/27 (S2 starts at Act 27 Part 1); S3 finale ep39 = Act 38. Crystal continues in the Eternal movies (Dream arc, Acts 39-49), outside this series entry.",
-    "order_only": []
+ "series_id": "sailor-moon-crystal",
+ "summary": "Crystal seasons 1-3 (our eps 1-39) adapt the manga strictly 1:1 per Act in the renumbered 60-act space: eps 1-26 = Acts 1-26 (Dark Kingdom Acts 1-13, transition Act 14, Black Moon Acts 15-26), and the Death Busters season's 13 episodes cover Infinity Acts 27-38, with Act 27 uniquely split across eps 27-28 (Part 1/Part 2) and eps 29-39 = Acts 28-38. Every episode title equals its act title on both the fandom wiki and Wikipedia's episode list, and the fandom wiki's episode pages ('Nth episode overall', prev/next chains, 'based on manga chapter Act N') confirm each correspondence. The stored ep39->ch60 v18 anchor was a finale-inflated last-chapter fill and is repaired to Act 38 v10. Numbering conversion: our chapter space (volume boundaries, last chapter 60) uses the renumbered act scheme popularized by the 2003 shinsouban (Act 27 = Infinity 1, Act 60 = Stars 11); the original 1992-97 tankobon instead numbered 52 acts + 9 side stories (= AniList's 61 count, explaining flag #696). Both research sources use the renumbered scheme, so source->our-space conversion is the identity. [CORRECTION 2026-08-24: anchors for eps 29-39 as originally written were 10 acts too low (ep29=18..ep39=28), contradicting this verdict's own structure statement and ep 39's chapters_adapted; rows corrected to Acts 28-38 with volumes from the healed boundary table (v8=28-31, v9=32-35, v10=36-38). The error was caught in Sean's post-switch review after the REORDER_REGIMES automation had laundered the resulting fake back-jump into a 'ruled' annotation.]",
+ "anchors": [
+  {
+   "episode": 1,
+   "end_chapter": 1,
+   "start_chapter": 1,
+   "chapters_adapted": "1",
+   "volume": 1,
+   "confidence": "high",
+   "note": "1:1 adaptation: episode title = manga Act 1 title (renumbered/shinsouban act space)",
+   "sources": [
+    "https://sailormoon.fandom.com/wiki/Act_1_Usagi_-_Sailor_Moon_(episode)",
+    "https://en.wikipedia.org/wiki/List_of_Sailor_Moon_Crystal_episodes",
+    "https://en.wikipedia.org/wiki/List_of_Sailor_Moon_chapters"
+   ]
   },
-  "flags_for_sean": [
-    "flag #696 (count mismatch) explained: AniList 61 chapters = original-tankobon basis (52 acts + 9 side stories); our anchor space is the renumbered 60-act scheme (last chapter 60, 18-volume boundaries) — the reading edition assumed by our data is the renumbered one (all modern releases: shinsouban, kanzenban, Kodansha English). No anchor changes needed, but the AniList count should not be used as the chapter-space ceiling.",
-    "context-file episode rows carry a few air-date typos vs fandom/Wikipedia (e.g. ep26 2015-07-28 vs July 18 2015; ep29 2016-04-08 vs April 18 2016) — cosmetic, no anchor impact."
-  ]
+  {
+   "episode": 2,
+   "end_chapter": 2,
+   "start_chapter": 2,
+   "chapters_adapted": "2",
+   "volume": 1,
+   "confidence": "high",
+   "note": "1:1 adaptation: episode title = manga Act 2 title (renumbered/shinsouban act space)",
+   "sources": [
+    "https://sailormoon.fandom.com/wiki/Act_2_Ami_-_Sailor_Mercury_(episode)",
+    "https://en.wikipedia.org/wiki/List_of_Sailor_Moon_Crystal_episodes",
+    "https://en.wikipedia.org/wiki/List_of_Sailor_Moon_chapters"
+   ]
+  },
+  {
+   "episode": 3,
+   "end_chapter": 3,
+   "start_chapter": 3,
+   "chapters_adapted": "3",
+   "volume": 1,
+   "confidence": "high",
+   "note": "1:1 adaptation: episode title = manga Act 3 title (renumbered/shinsouban act space)",
+   "sources": [
+    "https://sailormoon.fandom.com/wiki/Act_3_Rei_-_Sailor_Mars_(episode)",
+    "https://en.wikipedia.org/wiki/List_of_Sailor_Moon_Crystal_episodes",
+    "https://en.wikipedia.org/wiki/List_of_Sailor_Moon_chapters"
+   ]
+  },
+  {
+   "episode": 4,
+   "end_chapter": 4,
+   "start_chapter": 4,
+   "chapters_adapted": "4",
+   "volume": 1,
+   "confidence": "high",
+   "note": "1:1 adaptation: episode title = manga Act 4 title (renumbered/shinsouban act space)",
+   "sources": [
+    "https://sailormoon.fandom.com/wiki/Act_4_Masquerade_Dance_Party_(episode)",
+    "https://en.wikipedia.org/wiki/List_of_Sailor_Moon_Crystal_episodes",
+    "https://en.wikipedia.org/wiki/List_of_Sailor_Moon_chapters"
+   ]
+  },
+  {
+   "episode": 5,
+   "end_chapter": 5,
+   "start_chapter": 5,
+   "chapters_adapted": "5",
+   "volume": 1,
+   "confidence": "high",
+   "note": "1:1 adaptation: episode title = manga Act 5 title (renumbered/shinsouban act space)",
+   "sources": [
+    "https://sailormoon.fandom.com/wiki/Act_5_Makoto_-_Sailor_Jupiter_(episode)",
+    "https://en.wikipedia.org/wiki/List_of_Sailor_Moon_Crystal_episodes",
+    "https://en.wikipedia.org/wiki/List_of_Sailor_Moon_chapters"
+   ]
+  },
+  {
+   "episode": 6,
+   "end_chapter": 6,
+   "start_chapter": 6,
+   "chapters_adapted": "6",
+   "volume": 2,
+   "confidence": "high",
+   "note": "1:1 adaptation: episode title = manga Act 6 title (renumbered/shinsouban act space)",
+   "sources": [
+    "https://sailormoon.fandom.com/wiki/Act_6_Tuxedo_Mask_(episode)",
+    "https://en.wikipedia.org/wiki/List_of_Sailor_Moon_Crystal_episodes",
+    "https://en.wikipedia.org/wiki/List_of_Sailor_Moon_chapters"
+   ]
+  },
+  {
+   "episode": 7,
+   "end_chapter": 7,
+   "start_chapter": 7,
+   "chapters_adapted": "7",
+   "volume": 2,
+   "confidence": "high",
+   "note": "1:1 adaptation: episode title = manga Act 7 title (renumbered/shinsouban act space)",
+   "sources": [
+    "https://sailormoon.fandom.com/wiki/Act_7_Mamoru_Chiba_-_Tuxedo_Mask_-_(episode)",
+    "https://en.wikipedia.org/wiki/List_of_Sailor_Moon_Crystal_episodes",
+    "https://en.wikipedia.org/wiki/List_of_Sailor_Moon_chapters"
+   ]
+  },
+  {
+   "episode": 8,
+   "end_chapter": 8,
+   "start_chapter": 8,
+   "chapters_adapted": "8",
+   "volume": 2,
+   "confidence": "high",
+   "note": "1:1 adaptation: episode title = manga Act 8 title (renumbered/shinsouban act space)",
+   "sources": [
+    "https://sailormoon.fandom.com/wiki/Act_8_Minako_-_Sailor_V_-_(episode)",
+    "https://en.wikipedia.org/wiki/List_of_Sailor_Moon_Crystal_episodes",
+    "https://en.wikipedia.org/wiki/List_of_Sailor_Moon_chapters"
+   ]
+  },
+  {
+   "episode": 9,
+   "end_chapter": 9,
+   "start_chapter": 9,
+   "chapters_adapted": "9",
+   "volume": 2,
+   "confidence": "high",
+   "note": "1:1 adaptation: episode title = manga Act 9 title (renumbered/shinsouban act space)",
+   "sources": [
+    "https://sailormoon.fandom.com/wiki/Act_9_Serenity_-_Princess_-_(episode)",
+    "https://en.wikipedia.org/wiki/List_of_Sailor_Moon_Crystal_episodes",
+    "https://en.wikipedia.org/wiki/List_of_Sailor_Moon_chapters"
+   ]
+  },
+  {
+   "episode": 10,
+   "end_chapter": 10,
+   "start_chapter": 10,
+   "chapters_adapted": "10",
+   "volume": 3,
+   "confidence": "high",
+   "note": "1:1 adaptation: episode title = manga Act 10 title (renumbered/shinsouban act space)",
+   "sources": [
+    "https://sailormoon.fandom.com/wiki/Act_10_Moon_(episode)",
+    "https://en.wikipedia.org/wiki/List_of_Sailor_Moon_Crystal_episodes",
+    "https://en.wikipedia.org/wiki/List_of_Sailor_Moon_chapters"
+   ]
+  },
+  {
+   "episode": 11,
+   "end_chapter": 11,
+   "start_chapter": 11,
+   "chapters_adapted": "11",
+   "volume": 3,
+   "confidence": "high",
+   "note": "1:1 adaptation: episode title = manga Act 11 title (renumbered/shinsouban act space)",
+   "sources": [
+    "https://sailormoon.fandom.com/wiki/Act_11_Reunion_-_Endymion_-_(episode)",
+    "https://en.wikipedia.org/wiki/List_of_Sailor_Moon_Crystal_episodes",
+    "https://en.wikipedia.org/wiki/List_of_Sailor_Moon_chapters"
+   ]
+  },
+  {
+   "episode": 12,
+   "end_chapter": 12,
+   "start_chapter": 12,
+   "chapters_adapted": "12",
+   "volume": 3,
+   "confidence": "high",
+   "note": "1:1 adaptation: episode title = manga Act 12 title (renumbered/shinsouban act space)",
+   "sources": [
+    "https://sailormoon.fandom.com/wiki/Act_12_Enemy_-_Queen_Metalia_-_(episode)",
+    "https://en.wikipedia.org/wiki/List_of_Sailor_Moon_Crystal_episodes",
+    "https://en.wikipedia.org/wiki/List_of_Sailor_Moon_chapters"
+   ]
+  },
+  {
+   "episode": 13,
+   "end_chapter": 13,
+   "start_chapter": 13,
+   "chapters_adapted": "13",
+   "volume": 3,
+   "confidence": "high",
+   "note": "1:1 adaptation: episode title = manga Act 13 title (renumbered/shinsouban act space)",
+   "sources": [
+    "https://sailormoon.fandom.com/wiki/Act_13_Final_Battle_-_Reincarnation_-_(episode)",
+    "https://en.wikipedia.org/wiki/List_of_Sailor_Moon_Crystal_episodes",
+    "https://en.wikipedia.org/wiki/List_of_Sailor_Moon_chapters"
+   ]
+  },
+  {
+   "episode": 14,
+   "end_chapter": 14,
+   "start_chapter": 14,
+   "chapters_adapted": "14",
+   "volume": 4,
+   "confidence": "high",
+   "note": "1:1 adaptation: episode title = manga Act 14 title (renumbered/shinsouban act space)",
+   "sources": [
+    "https://sailormoon.fandom.com/wiki/Act_14_Conclusion_and_Commencement_-_Petite_%C3%89trangere_-_(episode)",
+    "https://en.wikipedia.org/wiki/List_of_Sailor_Moon_Crystal_episodes",
+    "https://en.wikipedia.org/wiki/List_of_Sailor_Moon_chapters"
+   ]
+  },
+  {
+   "episode": 15,
+   "end_chapter": 15,
+   "start_chapter": 15,
+   "chapters_adapted": "15",
+   "volume": 4,
+   "confidence": "high",
+   "note": "1:1 adaptation: episode title = manga Act 15 title (renumbered/shinsouban act space)",
+   "sources": [
+    "https://sailormoon.fandom.com/wiki/Act_15_Infiltration_-_Sailor_Mars_-_(episode)",
+    "https://en.wikipedia.org/wiki/List_of_Sailor_Moon_Crystal_episodes",
+    "https://en.wikipedia.org/wiki/List_of_Sailor_Moon_chapters"
+   ]
+  },
+  {
+   "episode": 16,
+   "end_chapter": 16,
+   "start_chapter": 16,
+   "chapters_adapted": "16",
+   "volume": 4,
+   "confidence": "high",
+   "note": "1:1 adaptation: episode title = manga Act 16 title (renumbered/shinsouban act space)",
+   "sources": [
+    "https://sailormoon.fandom.com/wiki/Act_16_Abduction_-_Sailor_Mercury_-_(episode)",
+    "https://en.wikipedia.org/wiki/List_of_Sailor_Moon_Crystal_episodes",
+    "https://en.wikipedia.org/wiki/List_of_Sailor_Moon_chapters"
+   ]
+  },
+  {
+   "episode": 17,
+   "end_chapter": 17,
+   "start_chapter": 17,
+   "chapters_adapted": "17",
+   "volume": 4,
+   "confidence": "high",
+   "note": "1:1 adaptation: episode title = manga Act 17 title (renumbered/shinsouban act space)",
+   "sources": [
+    "https://sailormoon.fandom.com/wiki/Act_17_Secret_-_Sailor_Jupiter_-_(episode)",
+    "https://en.wikipedia.org/wiki/List_of_Sailor_Moon_Crystal_episodes",
+    "https://en.wikipedia.org/wiki/List_of_Sailor_Moon_chapters"
+   ]
+  },
+  {
+   "episode": 18,
+   "end_chapter": 18,
+   "start_chapter": 18,
+   "chapters_adapted": "18",
+   "volume": 5,
+   "confidence": "high",
+   "note": "1:1 adaptation: episode title = manga Act 18 title (renumbered/shinsouban act space)",
+   "sources": [
+    "https://sailormoon.fandom.com/wiki/Act_18_Invasion_-_Sailor_Venus_(episode)",
+    "https://en.wikipedia.org/wiki/List_of_Sailor_Moon_Crystal_episodes",
+    "https://en.wikipedia.org/wiki/List_of_Sailor_Moon_chapters"
+   ]
+  },
+  {
+   "episode": 19,
+   "end_chapter": 19,
+   "start_chapter": 19,
+   "chapters_adapted": "19",
+   "volume": 5,
+   "confidence": "high",
+   "note": "1:1 adaptation: episode title = manga Act 19 title (renumbered/shinsouban act space)",
+   "sources": [
+    "https://sailormoon.fandom.com/wiki/Act_19_Time_Warp_-_Sailor_Pluto_-_(episode)",
+    "https://en.wikipedia.org/wiki/List_of_Sailor_Moon_Crystal_episodes",
+    "https://en.wikipedia.org/wiki/List_of_Sailor_Moon_chapters"
+   ]
+  },
+  {
+   "episode": 20,
+   "end_chapter": 20,
+   "start_chapter": 20,
+   "chapters_adapted": "20",
+   "volume": 5,
+   "confidence": "high",
+   "note": "1:1 adaptation: episode title = manga Act 20 title (renumbered/shinsouban act space)",
+   "sources": [
+    "https://sailormoon.fandom.com/wiki/Act_20_Crystal_Tokyo_-_King_Endymion_-_(episode)",
+    "https://en.wikipedia.org/wiki/List_of_Sailor_Moon_Crystal_episodes",
+    "https://en.wikipedia.org/wiki/List_of_Sailor_Moon_chapters"
+   ]
+  },
+  {
+   "episode": 21,
+   "end_chapter": 21,
+   "start_chapter": 21,
+   "chapters_adapted": "21",
+   "volume": 6,
+   "confidence": "high",
+   "note": "1:1 adaptation: episode title = manga Act 21 title (renumbered/shinsouban act space)",
+   "sources": [
+    "https://sailormoon.fandom.com/wiki/Act_21_Complication_-_Nemesis_(episode)",
+    "https://en.wikipedia.org/wiki/List_of_Sailor_Moon_Crystal_episodes",
+    "https://en.wikipedia.org/wiki/List_of_Sailor_Moon_chapters"
+   ]
+  },
+  {
+   "episode": 22,
+   "end_chapter": 22,
+   "start_chapter": 22,
+   "chapters_adapted": "22",
+   "volume": 6,
+   "confidence": "high",
+   "note": "1:1 adaptation: episode title = manga Act 22 title (renumbered/shinsouban act space)",
+   "sources": [
+    "https://sailormoon.fandom.com/wiki/Act_22_Hidden_Agenda_-_Nemesis_(episode)",
+    "https://en.wikipedia.org/wiki/List_of_Sailor_Moon_Crystal_episodes",
+    "https://en.wikipedia.org/wiki/List_of_Sailor_Moon_chapters"
+   ]
+  },
+  {
+   "episode": 23,
+   "end_chapter": 23,
+   "start_chapter": 23,
+   "chapters_adapted": "23",
+   "volume": 6,
+   "confidence": "high",
+   "note": "1:1 adaptation: episode title = manga Act 23 title (renumbered/shinsouban act space)",
+   "sources": [
+    "https://sailormoon.fandom.com/wiki/Act_23_Covert_Maneuvers_-_Wiseman_(episode)",
+    "https://en.wikipedia.org/wiki/List_of_Sailor_Moon_Crystal_episodes",
+    "https://en.wikipedia.org/wiki/List_of_Sailor_Moon_chapters"
+   ]
+  },
+  {
+   "episode": 24,
+   "end_chapter": 24,
+   "start_chapter": 24,
+   "chapters_adapted": "24",
+   "volume": 6,
+   "confidence": "high",
+   "note": "1:1 adaptation: episode title = manga Act 24 title (renumbered/shinsouban act space)",
+   "sources": [
+    "https://sailormoon.fandom.com/wiki/Act_24_Attack_-_Black_Lady_-_(episode)",
+    "https://en.wikipedia.org/wiki/List_of_Sailor_Moon_Crystal_episodes",
+    "https://en.wikipedia.org/wiki/List_of_Sailor_Moon_chapters"
+   ]
+  },
+  {
+   "episode": 25,
+   "end_chapter": 25,
+   "start_chapter": 25,
+   "chapters_adapted": "25",
+   "volume": 7,
+   "confidence": "high",
+   "note": "1:1 adaptation: episode title = manga Act 25 title (renumbered/shinsouban act space)",
+   "sources": [
+    "https://sailormoon.fandom.com/wiki/Act_25_Showdown_-_Death_Phantom_-_(episode)",
+    "https://en.wikipedia.org/wiki/List_of_Sailor_Moon_Crystal_episodes",
+    "https://en.wikipedia.org/wiki/List_of_Sailor_Moon_chapters"
+   ]
+  },
+  {
+   "episode": 26,
+   "end_chapter": 26,
+   "start_chapter": 26,
+   "chapters_adapted": "26",
+   "volume": 7,
+   "confidence": "high",
+   "note": "1:1 adaptation: episode title = manga Act 26 title (renumbered/shinsouban act space)",
+   "sources": [
+    "https://sailormoon.fandom.com/wiki/Act_26_Replay_-_Never_Ending_(episode)",
+    "https://en.wikipedia.org/wiki/List_of_Sailor_Moon_Crystal_episodes",
+    "https://en.wikipedia.org/wiki/List_of_Sailor_Moon_chapters"
+   ]
+  },
+  {
+   "episode": 27,
+   "end_chapter": 27,
+   "start_chapter": 27,
+   "chapters_adapted": "27 (first half)",
+   "volume": 7,
+   "confidence": "high",
+   "note": "Act 27 'Infinity 1 Premonition' Part 1 — the only Crystal chapter split over two episodes; ep ends mid-chapter",
+   "sources": [
+    "https://sailormoon.fandom.com/wiki/Act_27_Infinity_1_Premonition,_Part_1",
+    "https://en.wikipedia.org/wiki/List_of_Sailor_Moon_Crystal_episodes",
+    "https://en.wikipedia.org/wiki/List_of_Sailor_Moon_chapters"
+   ]
+  },
+  {
+   "episode": 28,
+   "end_chapter": 27,
+   "start_chapter": 27,
+   "chapters_adapted": "27 (second half)",
+   "volume": 7,
+   "confidence": "high",
+   "note": "Act 27 'Infinity 1 Premonition' Part 2 — second half of the same chapter; no Act 28 content",
+   "sources": [
+    "https://sailormoon.fandom.com/wiki/Act_27_Infinity_1_Premonition,_Part_2",
+    "https://en.wikipedia.org/wiki/List_of_Sailor_Moon_Crystal_episodes",
+    "https://en.wikipedia.org/wiki/List_of_Sailor_Moon_chapters"
+   ]
+  },
+  {
+   "episode": 29,
+   "end_chapter": 28,
+   "start_chapter": 28,
+   "chapters_adapted": "28",
+   "volume": 8,
+   "confidence": "high",
+   "note": "1:1 adaptation: ep 29 = Act 28 (renumbered/shinsouban act space). CORRECTED 2026-08-24: the agent's original row said end 18 — a transcription error 10 acts low, contradicting the verdict's own structure statement ('eps 29-39 = Acts 28-38') and, on ep 39, its own chapters_adapted '38'; corrected from the structure statement + the Act-27-split rows + Wikipedia's episode list.",
+   "sources": [
+    "https://sailormoon.fandom.com/wiki/Act_28_Infinity_2_Ripples_(episode)",
+    "https://en.wikipedia.org/wiki/List_of_Sailor_Moon_Crystal_episodes",
+    "https://en.wikipedia.org/wiki/List_of_Sailor_Moon_chapters"
+   ]
+  },
+  {
+   "episode": 30,
+   "end_chapter": 29,
+   "start_chapter": 29,
+   "chapters_adapted": "29",
+   "volume": 8,
+   "confidence": "high",
+   "note": "1:1 adaptation: ep 30 = Act 29 (renumbered/shinsouban act space). CORRECTED 2026-08-24: the agent's original row said end 19 — a transcription error 10 acts low, contradicting the verdict's own structure statement ('eps 29-39 = Acts 28-38') and, on ep 39, its own chapters_adapted '38'; corrected from the structure statement + the Act-27-split rows + Wikipedia's episode list.",
+   "sources": [
+    "https://sailormoon.fandom.com/wiki/Act_29_Infinity_3_Two_-_New_Guardians_-_(episode)",
+    "https://en.wikipedia.org/wiki/List_of_Sailor_Moon_Crystal_episodes",
+    "https://en.wikipedia.org/wiki/List_of_Sailor_Moon_chapters"
+   ]
+  },
+  {
+   "episode": 31,
+   "end_chapter": 30,
+   "start_chapter": 30,
+   "chapters_adapted": "30",
+   "volume": 8,
+   "confidence": "high",
+   "note": "1:1 adaptation: ep 31 = Act 30 (renumbered/shinsouban act space). CORRECTED 2026-08-24: the agent's original row said end 20 — a transcription error 10 acts low, contradicting the verdict's own structure statement ('eps 29-39 = Acts 28-38') and, on ep 39, its own chapters_adapted '38'; corrected from the structure statement + the Act-27-split rows + Wikipedia's episode list.",
+   "sources": [
+    "https://sailormoon.fandom.com/wiki/Act_30_Infinity_4_Haruka_&_Michiru_-_Sailor_Uranus_&_Sailor_Neptune_-_(episode)",
+    "https://en.wikipedia.org/wiki/List_of_Sailor_Moon_Crystal_episodes",
+    "https://en.wikipedia.org/wiki/List_of_Sailor_Moon_chapters"
+   ]
+  },
+  {
+   "episode": 32,
+   "end_chapter": 31,
+   "start_chapter": 31,
+   "chapters_adapted": "31",
+   "volume": 8,
+   "confidence": "high",
+   "note": "1:1 adaptation: ep 32 = Act 31 (renumbered/shinsouban act space). CORRECTED 2026-08-24: the agent's original row said end 21 — a transcription error 10 acts low, contradicting the verdict's own structure statement ('eps 29-39 = Acts 28-38') and, on ep 39, its own chapters_adapted '38'; corrected from the structure statement + the Act-27-split rows + Wikipedia's episode list.",
+   "sources": [
+    "https://sailormoon.fandom.com/wiki/Act_31_Infinity_5_Setsuna_-_Sailor_Pluto_-_(episode)",
+    "https://en.wikipedia.org/wiki/List_of_Sailor_Moon_Crystal_episodes",
+    "https://en.wikipedia.org/wiki/List_of_Sailor_Moon_chapters"
+   ]
+  },
+  {
+   "episode": 33,
+   "end_chapter": 32,
+   "start_chapter": 32,
+   "chapters_adapted": "32",
+   "volume": 9,
+   "confidence": "high",
+   "note": "1:1 adaptation: ep 33 = Act 32 (renumbered/shinsouban act space). CORRECTED 2026-08-24: the agent's original row said end 22 — a transcription error 10 acts low, contradicting the verdict's own structure statement ('eps 29-39 = Acts 28-38') and, on ep 39, its own chapters_adapted '38'; corrected from the structure statement + the Act-27-split rows + Wikipedia's episode list.",
+   "sources": [
+    "https://sailormoon.fandom.com/wiki/Act_32_Infinity_6_Three_Guardians_(episode)",
+    "https://en.wikipedia.org/wiki/List_of_Sailor_Moon_Crystal_episodes",
+    "https://en.wikipedia.org/wiki/List_of_Sailor_Moon_chapters"
+   ]
+  },
+  {
+   "episode": 34,
+   "end_chapter": 33,
+   "start_chapter": 33,
+   "chapters_adapted": "33",
+   "volume": 9,
+   "confidence": "high",
+   "note": "1:1 adaptation: ep 34 = Act 33 (renumbered/shinsouban act space). CORRECTED 2026-08-24: the agent's original row said end 23 — a transcription error 10 acts low, contradicting the verdict's own structure statement ('eps 29-39 = Acts 28-38') and, on ep 39, its own chapters_adapted '38'; corrected from the structure statement + the Act-27-split rows + Wikipedia's episode list.",
+   "sources": [
+    "https://sailormoon.fandom.com/wiki/Act_33_Infinity_7_Transformation_-_Super_Sailor_Moon_-_(episode)",
+    "https://en.wikipedia.org/wiki/List_of_Sailor_Moon_Crystal_episodes",
+    "https://en.wikipedia.org/wiki/List_of_Sailor_Moon_chapters"
+   ]
+  },
+  {
+   "episode": 35,
+   "end_chapter": 34,
+   "start_chapter": 34,
+   "chapters_adapted": "34",
+   "volume": 9,
+   "confidence": "high",
+   "note": "1:1 adaptation: ep 35 = Act 34 (renumbered/shinsouban act space). CORRECTED 2026-08-24: the agent's original row said end 24 — a transcription error 10 acts low, contradicting the verdict's own structure statement ('eps 29-39 = Acts 28-38') and, on ep 39, its own chapters_adapted '38'; corrected from the structure statement + the Act-27-split rows + Wikipedia's episode list.",
+   "sources": [
+    "https://sailormoon.fandom.com/wiki/Act_34_Infinity_8_%22Infinite_Labyrinth%22_1_(episode)",
+    "https://en.wikipedia.org/wiki/List_of_Sailor_Moon_Crystal_episodes",
+    "https://en.wikipedia.org/wiki/List_of_Sailor_Moon_chapters"
+   ]
+  },
+  {
+   "episode": 36,
+   "end_chapter": 35,
+   "start_chapter": 35,
+   "chapters_adapted": "35",
+   "volume": 9,
+   "confidence": "high",
+   "note": "1:1 adaptation: ep 36 = Act 35 (renumbered/shinsouban act space). CORRECTED 2026-08-24: the agent's original row said end 25 — a transcription error 10 acts low, contradicting the verdict's own structure statement ('eps 29-39 = Acts 28-38') and, on ep 39, its own chapters_adapted '38'; corrected from the structure statement + the Act-27-split rows + Wikipedia's episode list.",
+   "sources": [
+    "https://sailormoon.fandom.com/wiki/Act_35_Infinity_9_%22Infinite_Labyrinth%22_2_(episode)",
+    "https://en.wikipedia.org/wiki/List_of_Sailor_Moon_Crystal_episodes",
+    "https://en.wikipedia.org/wiki/List_of_Sailor_Moon_chapters"
+   ]
+  },
+  {
+   "episode": 37,
+   "end_chapter": 36,
+   "start_chapter": 36,
+   "chapters_adapted": "36",
+   "volume": 10,
+   "confidence": "high",
+   "note": "1:1 adaptation: ep 37 = Act 36 (renumbered/shinsouban act space). CORRECTED 2026-08-24: the agent's original row said end 26 — a transcription error 10 acts low, contradicting the verdict's own structure statement ('eps 29-39 = Acts 28-38') and, on ep 39, its own chapters_adapted '38'; corrected from the structure statement + the Act-27-split rows + Wikipedia's episode list.",
+   "sources": [
+    "https://sailormoon.fandom.com/wiki/Act_36_Infinity_10_Infinite_-_Upper_Atmosphere_-_(episode)",
+    "https://en.wikipedia.org/wiki/List_of_Sailor_Moon_Crystal_episodes",
+    "https://en.wikipedia.org/wiki/List_of_Sailor_Moon_chapters"
+   ]
+  },
+  {
+   "episode": 38,
+   "end_chapter": 37,
+   "start_chapter": 37,
+   "chapters_adapted": "37",
+   "volume": 10,
+   "confidence": "high",
+   "note": "1:1 adaptation: ep 38 = Act 37 (renumbered/shinsouban act space). CORRECTED 2026-08-24: the agent's original row said end 27 — a transcription error 10 acts low, contradicting the verdict's own structure statement ('eps 29-39 = Acts 28-38') and, on ep 39, its own chapters_adapted '38'; corrected from the structure statement + the Act-27-split rows + Wikipedia's episode list.",
+   "sources": [
+    "https://sailormoon.fandom.com/wiki/Act_37_Infinity_11_Infinite_-_Judgement_-_(episode)",
+    "https://en.wikipedia.org/wiki/List_of_Sailor_Moon_Crystal_episodes",
+    "https://en.wikipedia.org/wiki/List_of_Sailor_Moon_chapters"
+   ]
+  },
+  {
+   "episode": 39,
+   "end_chapter": 38,
+   "start_chapter": 38,
+   "chapters_adapted": "38",
+   "volume": 10,
+   "confidence": "high",
+   "note": "1:1 adaptation: ep 39 = Act 38 (renumbered/shinsouban act space). CORRECTED 2026-08-24: the agent's original row said end 28 — a transcription error 10 acts low, contradicting the verdict's own structure statement ('eps 29-39 = Acts 28-38') and, on ep 39, its own chapters_adapted '38'; corrected from the structure statement + the Act-27-split rows + Wikipedia's episode list.",
+   "sources": [
+    "https://sailormoon.fandom.com/wiki/Act_38_Infinity_12_Infinite_-_Journey_(episode)",
+    "https://en.wikipedia.org/wiki/List_of_Sailor_Moon_Crystal_episodes",
+    "https://en.wikipedia.org/wiki/List_of_Sailor_Moon_chapters"
+   ]
+  }
+ ],
+ "continue_points": [
+  {
+   "episode": 27,
+   "continue_chapter": 27,
+   "note": "ends mid-Act 27 (chapter split over eps 27-28); resume Act 27 itself"
+  },
+  {
+   "episode": 39,
+   "continue_chapter": 38,
+   "note": "episode ends slightly before Act 38's end (fandom: 'ends a little earlier than the chapter'); resume Act 38, then side stories sit between Infinity and Dream outside mainline numbering"
+  }
+ ],
+ "annotations": [
+  {
+   "episodes": [
+    27,
+    28
+   ],
+   "kind": "partial",
+   "chapters": "27",
+   "note": "Act 27 Infinity 1 Premonition split into Part 1 (ep27) / Part 2 (ep28) — fandom: 'the only story based on a single manga chapter that is split into two parts'"
+  },
+  {
+   "episodes": [
+    39
+   ],
+   "kind": "partial",
+   "chapters": "38",
+   "note": "finale ends a little earlier than Act 38's last pages (Juban High epilogue trimmed); intervening side chapters (Exam Battle shorts etc.) skipped — they are outside mainline act numbering"
+  }
+ ],
+ "type_corrections": [],
+ "repairs": [
+  {
+   "episode": 39,
+   "field": "end_chapter",
+   "old": 60,
+   "new": 38,
+   "why": "ep39 is the Infinity/Death Busters finale adapting Act 38 'Infinity 12 Infinite - Journey' only; ch60 (Stars 11) is the manga's final chapter — a finale-inflated auto-fill from MU. Fandom ep page: '39th episode... final episode of the 3rd season', chapter counterpart Act 38.",
+   "sources": [
+    "https://sailormoon.fandom.com/wiki/Act_38_Infinity_12_Infinite_-_Journey_(episode)",
+    "https://en.wikipedia.org/wiki/List_of_Sailor_Moon_Crystal_episodes",
+    "https://en.wikipedia.org/wiki/List_of_Sailor_Moon_chapters"
+   ]
+  },
+  {
+   "episode": 39,
+   "field": "volume",
+   "old": 18,
+   "new": 10,
+   "why": "Act 38 sits in volume 10 (v10 = Acts 36-38 per Wikipedia's original-18-volume distribution); v18 = Stars arc end.",
+   "sources": [
+    "https://en.wikipedia.org/wiki/List_of_Sailor_Moon_chapters"
+   ]
+  }
+ ],
+ "structure": {
+  "notes": "CHAPTER-SPACE / NUMBERING CONVERSION: our chapter space is the renumbered 60-act scheme (2003 shinsouban re-cut: 8 long original acts split, Infinity 1 = Act 27 ... Stars 11 = Act 60) laid over the ORIGINAL 18-volume boundaries exactly as Wikipedia's List of Sailor Moon chapters presents them (v1:1-5, v2:6-9, v3:10-13, v4:14-17, v5:18-20, v6:21-24, v7:25-27, v8:28-31, v9:32-35, v10:36-38; v11 = side stories only, hence no mainline boundary). The original tankobon's own 52-act numbering appears nowhere in our pipeline or in the cited sources — no conversion needed (identity). AniList's total_chapters=61 = original 52 acts + 9 side stories, a different counting basis from our 60-act space (see flag #696). Episode numbering: Wikipedia and AniList agree on cumulative 1-39 (AniList components 1-26 + 27-39; Wikipedia splits the same episodes 14/12/13 across Dark Kingdom/Black Moon/Death Busters seasons — same cumulative numbers). Season boundaries in our components: ep26/27 (S2 starts at Act 27 Part 1); S3 finale ep39 = Act 38. Crystal continues in the Eternal movies (Dream arc, Acts 39-49), outside this series entry.",
+  "order_only": []
+ },
+ "flags_for_sean": [
+  "flag #696 (count mismatch) explained: AniList 61 chapters = original-tankobon basis (52 acts + 9 side stories); our anchor space is the renumbered 60-act scheme (last chapter 60, 18-volume boundaries) — the reading edition assumed by our data is the renumbered one (all modern releases: shinsouban, kanzenban, Kodansha English). No anchor changes needed, but the AniList count should not be used as the chapter-space ceiling.",
+  "context-file episode rows carry a few air-date typos vs fandom/Wikipedia (e.g. ep26 2015-07-28 vs July 18 2015; ep29 2016-04-08 vs April 18 2016) — cosmetic, no anchor impact."
+ ]
 }

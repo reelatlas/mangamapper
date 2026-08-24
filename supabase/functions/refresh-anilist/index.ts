@@ -20408,6 +20408,46 @@ var EPISODE_TYPE_OVERRIDES = {
   "kamisama-kiss": { 10: "mixed" },
   "miss-kobayashis-dragon-maid": { 19: "mixed", 20: "mixed", 21: "mixed", 23: "mixed" },
   "naruto-shippuden": { 452: "anime-only-canon", 453: "anime-only-canon", 454: "anime-only-canon", 456: "anime-only-canon", 457: "anime-only-canon" },
+  //   RESEARCH BATCH 17 (2026-08-24, gap tier — 2+ sources each, verdict
+  //   JSONs in research/batch17/out). Sean's vocabulary (2026-08-24):
+  //   anime-only-canon = made for the anime but standing as canon;
+  //   filler = outside both canons (retconned or disposable).
+  //   chrono-crusade: anime departs after ep 13 — 5/7/8/11/12 are original
+  //   bridges on canon continuity, 14-21 the "primarily original" stretch
+  //   that still pulls manga beats (Wikipedia lead + MU + ja-WP), 22-24 the
+  //   original ending. kenichi 51: OAD 1 is an author-original scenario
+  //   (ja-WP 原作者オリジナルの書き下ろし). rave-master 41: filler sites say
+  //   filler, but its core IS ch 74 (Let joins / Silver Knights) — mixed.
+  //   rurouni-kenshin-2023 34/44: zero chapters adapted (fandom blank +
+  //   no Act page); 34 is Watsuki's own exhibition storyboard = canon-grade.
+  //   sailor-moon 167-172: Nehelenia-revival arc, anime-original
+  //   continuation of SuperS's villain. twin-star 20 mixed (canon to
+  //   ~14:05) and 21-50 the anime's own serialized finale — never returns
+  //   to the manga (contradicts it: Yuto dies here, survives there).
+  //   world-trigger 48 = anime-original breather inside the canon arc;
+  //   49-63 = the Fugitive Arc, RETCONNED by S2 → filler, not canon.
+  "chrono-crusade": {
+    ...range(5, 5, "mixed"),
+    ...range(7, 8, "mixed"),
+    ...range(11, 12, "mixed"),
+    ...range(14, 21, "mixed"),
+    ...range(22, 24, "anime-only-canon")
+  },
+  "kenichi-the-mightiest-disciple": { 51: "mixed" },
+  "rave-master": { 41: "mixed" },
+  "rurouni-kenshin-2023": { 34: "anime-only-canon", 44: "anime-only-canon" },
+  //   rurouni-kenshin (1996) 79-82: were typed mixed, but the whole 63-94
+  //   block is anime-original (batch-17 verdict: Wikipedia season-3 "not
+  //   adapted from the manga" + AFL) — the Shimabara/Christian arc included.
+  //   Found in Sean's post-switch review 2026-08-24: these four mistyped rows
+  //   were why frontier_tail_null flagged the series (the audit was RIGHT;
+  //   the earlier "false positive" framing was wrong). Rows 95-98 are the
+  //   Trust & Betrayal OVAs adopted as episodes — real manga adaptation
+  //   (Remembrance arc), kept canon, flagged for anchor research.
+  "rurouni-kenshin": { 79: "filler", 80: "filler", 81: "filler", 82: "filler" },
+  "sailor-moon": { ...range(167, 172, "anime-only-canon") },
+  "twin-star-exorcists": { 20: "mixed", ...range(21, 50, "anime-only-canon") },
+  "world-trigger": { 48: "anime-only-canon", ...range(49, 63, "filler") },
   //   claymore 24-26: fully anime-original ending (Madhouse outran the
   //   manga) — research verdict 2026-08-23 (AFG + wheredoestheanimeleaveoff
   //   + sportskeeda), Sean sign-off

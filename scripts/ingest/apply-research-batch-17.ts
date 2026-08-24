@@ -105,6 +105,14 @@ const BOUNDARY_SEEDS: { sid: string; why: string; full?: boolean; rows: { volume
       { volume: 10, chapter_start: 74, chapter_end: 79 },
     ],
   },
+  {
+    sid: 'sailor-moon-crystal',
+    why: 'restores two of the volumes the monotonic-start heal dropped (their parsed starts were the VOLUME NUMBER — v4 "4", v7 "7" — the corruption signature): true v4 = Acts 14-17 and v7 = Acts 25-27 per the crystal verdict\'s volume fields (Wikipedia original-18-volume distribution). Shared manga 30092, so this fixes the 90s entry too; run heal-volume-boundaries after so v3/v6 re-close to 10-13 / 21-24',
+    rows: [
+      { volume: 4, chapter_start: 14, chapter_end: 17 },
+      { volume: 7, chapter_start: 25, chapter_end: 27 },
+    ],
+  },
 ];
 // Anchors excluded from apply pending Sean's ruling (key `${sid}#${episode}`):
 const EXCLUDED_ANCHORS = new Map<string, string>([]);
@@ -152,7 +160,14 @@ const REORDER_REGIMES: Record<string, string> = {
   'hunter-x-hunter': 'reorder regime (batch 17): the Yorknew stretch pre-grafts and re-treads chapters (ch 72 p.1-3 into ep 50, the Uvogin fight stretched with overlapping page splits across eps 53-56, ch 83 mainline in ep 56 after its ep-45 pre-graft)',
   'that-time-i-got-reincarnated-as-a-slime': 'reorder regime (batch 17): S1 skips chs 40-42 and 44-45 and jumps to ch 43 + 46-52 for its final four episodes, leaving the skipped block to S2',
   kingdom: 'reorder regime (batch 17): ep 16 grafts the Ryo Fui introduction (chs 96-100) ahead of the campaign arc, and ep 22 skips 74-81 (adapted later in S2)',
-  'sailor-moon-crystal': 'reorder regime (batch 17): Act 27 is split across eps 27-28, so the pair shares a chapter rather than advancing',
+  // sailor-moon-crystal REMOVED (Sean's post-switch review, 2026-08-24): it
+  // never belonged here — a shared-chapter split (Act 27 over eps 27-28) is
+  // not a below-predecessor jump — and its presence LAUNDERED a corrupted
+  // verdict tail (eps 29-39 written 10 acts low) into a "ruled" annotation
+  // instead of letting the order guard trip. The regime mechanism is a
+  // waiver of that guard: list a series ONLY when its verdict documents
+  // pervasive out-of-publication-order adaptation, and expect every derived
+  // annotation to correspond to a jump the verdict itself describes.
 };
 const REPAIR_FIELDS: Record<string, string> = {
   end_chapter: 'chapter', chapter: 'chapter', start_chapter: 'start_chapter',

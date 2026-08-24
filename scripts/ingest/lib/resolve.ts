@@ -162,6 +162,15 @@ export const EPISODE_TYPE_OVERRIDES: Record<string, Record<number, string>> = {
   'kenichi-the-mightiest-disciple': { 51: 'mixed' },
   'rave-master': { 41: 'mixed' },
   'rurouni-kenshin-2023': { 34: 'anime-only-canon', 44: 'anime-only-canon' },
+  //   rurouni-kenshin (1996) 79-82: were typed mixed, but the whole 63-94
+  //   block is anime-original (batch-17 verdict: Wikipedia season-3 "not
+  //   adapted from the manga" + AFL) — the Shimabara/Christian arc included.
+  //   Found in Sean's post-switch review 2026-08-24: these four mistyped rows
+  //   were why frontier_tail_null flagged the series (the audit was RIGHT;
+  //   the earlier "false positive" framing was wrong). Rows 95-98 are the
+  //   Trust & Betrayal OVAs adopted as episodes — real manga adaptation
+  //   (Remembrance arc), kept canon, flagged for anchor research.
+  'rurouni-kenshin': { 79: 'filler', 80: 'filler', 81: 'filler', 82: 'filler' },
   'sailor-moon': { ...range(167, 172, 'anime-only-canon') },
   'twin-star-exorcists': { 20: 'mixed', ...range(21, 50, 'anime-only-canon') },
   'world-trigger': { 48: 'anime-only-canon', ...range(49, 63, 'filler') },
