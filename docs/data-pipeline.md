@@ -1181,6 +1181,23 @@ Fixed weekly is correct.
    (2) gap tier 46 → (3) mu_pin sweep 65 → (4) automation pass →
    (5) arcs table → (6) parked design pass → (7) continue-read UI →
    (8) segment model (Sean's go).
+41. ✅ **Consolidation pass (2026-08-24, post-batch-16 + count-space rule)**:
+   Sean's Tokyo Ghoul 144/143 report became a catalog-wide rule (§10
+   count-space vs number-space): applyMuFrontier converts band-crossing
+   pins at the writer; audit class anchor_beyond_display_total guards
+   END/START/CONTINUE outcome-side (in the consolidate skill's triage
+   roster); healed tokyo-ghoul 144→143, fire-force 305→304,
+   prisma-illya 14→13 — the only 3 in the catalog. Berserk 94-vs-87
+   clarified as CORRECT segment-vs-coverage data (display treatment =
+   the parked segment-model pass). D1 RULED (Sean): kamisama-kiss ep10
+   END 25→50 / v9 (ja-wiki segment order; goukon = ch 50); anchor note
+   carries the ruling. Pass results: writer sweep clean (no new
+   ungated writers; batch-16 apply = research tier), all four edges
+   rebuilt+redeployed, healers idempotent-clean (continua 0 new,
+   coverage 3 known research cases, 0 dup flags, parity fully
+   stamped), census ZERO delta vs batch-16 end state (ruling_violation
+   0, beyond_display_total 0, ok_full 235), tsc + build green. NEXT =
+   roadmap (2): gap tier 46.
 21. ✅ **Consolidation pass 2 (2026-08-23, post-Kenshin)**: every write path
    swept against the day's rules — filterEpisodeRows (caps + type
    overrides) now in ALL five episode writers (resolve, stitched-guard,

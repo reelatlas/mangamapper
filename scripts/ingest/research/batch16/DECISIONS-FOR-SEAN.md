@@ -8,7 +8,13 @@ zone-level fallbacks, all high confidence. The reorder-hole work-list from
 
 ## The one open decision
 
-### D1. kamisama-kiss ep 10 — END/volume follow-up (LOW stakes)
+### D1. kamisama-kiss ep 10 — ✅ RULED (Sean 2026-08-24): END 50 / v9
+Sean approved the recommendation: ja-Wikipedia's segment order (mixer
+closes the episode) stands as the evidence; anchor updated (END 25→50,
+volume 5→9, start stays 25), ruling recorded in the anchor note.
+Original write-up kept below for the record.
+
+### (original) kamisama-kiss ep 10 — END/volume follow-up (LOW stakes)
 Batch 16 proved the S1 ep-10 Christmas goukon adapts **ch 50** (vol 9) pulled
 forward — the mixer boy is Kohiruimaki, a named ch-50 character (batch 15
 wrongly called him anime-only; that note is now repaired in
