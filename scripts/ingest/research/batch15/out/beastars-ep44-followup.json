@@ -1,0 +1,93 @@
+{
+  "series_id": "beastars",
+  "summary": "Focused follow-up on ep 44 (FS ep 20 'Gotta Buy a Step Stool'). Verdict: the batch-14 anime-original call STANDS — ep 44 adapts no manga chapter, and the doubt is resolved with positive evidence: the previously-unclaimed range 169-171 turns out to be the Kyuu chapters (Kyuu is a lop-eared rabbit, on all three covers and in every character list for 169-171), and Kyuu never physically appears in the anime (fandom infobox: anime = 'Episode 29 (image on TV)'), so that range is cut, not relocated into ep 44 — the rat-base/frame-up/kines material matches no chapter title or character list anywhere in 161-179, and the MAL ep-8 thread's viewer descriptions (framing, planted kines, sewer rat base, Gosha stalking Haru) carry zero chapter citations. One real gain elsewhere: ep 43 DOES adapt ch 166 in part — its opening Festival of Odd Souls (turtle praying to the frozen Brachiosaurus bone) is ch-166 material per the fandom Holidays page's two ch-166 citations, corroborated by es-fandom's ch-166 character list (herbivore crowd + Haru, with Legoshi only in her imagination and Melon in flashback) — so ep 43's list gains a leading '166 (part)'. Bonus range fact: the manga's real first kiss is ch 173 (manga-reader post, April 2020), which the anime cuts from its ep-47 '172-176 abridged' span and relocates as an anime-original public kiss in the ep-48 finale; ep 44's kiss-deferral scene is therefore original writing, at most a motif-level echo of ch 166's Haru-imagines-Legoshi beat (the ep title 'Gotta Buy a Step Stool' / 踏み台を買わなきゃ pairs with ch 166's Haru-stature title 身の丈の運命わたしにください, but no source confirms the line exists in the chapter).",
+  "anchors": [
+    {
+      "episode": 43,
+      "end_chapter": 151,
+      "start_chapter": 150,
+      "chapters_adapted": "166 (part, festival exposition), 150 (part), 151 (part)",
+      "volume": 17,
+      "confidence": "medium",
+      "note": "Adds ch 166 (part) to the stored 150-151 record: the episode opens with the Festival of Odd Souls, whose worship of the frozen Brachiosaurus bone / holy water / amulet offerings is cited to Chapter 166 twice on the fandom Holidays page, and Anime Rants ep-19 review confirms the anime staged exactly that detail (turtle praying to the dinosaur deity) as the episode's opening; es-fandom's Capítulo 166 character list (herbivore crowd, Haru, Legoshi only in Haru's imagination, Melon in flashback) corroborates that 166 is the festival/Haru chapter. Only the festival/Haru side of 166 is usable — its Louis-inherits-the-conglomerate half (Ogma in a funeral photo) is contradicted by the anime's Ogma-survives divergence. START stays 150 (first mainline chapter; 166 is a graft leading the list, same convention as eps 45/47). END 151, vol 17, resume 156 all unchanged.",
+      "sources": [
+        "https://beastars.fandom.com/wiki/Holidays",
+        "https://animerants.net/2026/05/24/beastars-final-season-episodes-19-to-21-reviews/",
+        "https://beastars.fandom.com/es/wiki/Cap%C3%ADtulo_166",
+        "https://beastars.fandom.com/wiki/Chapter_166_(Beastars)"
+      ]
+    }
+  ],
+  "zone_level_only": [
+    {
+      "episode": 44,
+      "zone": "no manga zone — anime-original episode (between ep 43's mainline 150-151 and ep 45's 189/162-163 grafts)",
+      "best_bound": "No chapter is adapted; the batch-14 anime-original call is CONFIRMED, now with positive range evidence rather than stub silence. Every ep-44 thread is original: Legoshi framed for the interspecies murders (the murders plot itself is anime-original, eps 37-43), kines planted in his room, police questioning his connections, the rat informant + sewer rat base (no rats in any chapter title/character list 161-179; the manga's rat lore, ch 138, was already used in ep 26), Louis's 'Live Together' channel, Kuroe/Ogma artificial-meat Zoolympics scene (Kuroe is anime-exclusive, Ogma-alive is a divergence), and Gosha stalking/guarding Haru (setup for ep 45's ch-189 graft). The candidate range 169-171 is disproven: those are the Kyuu chapters (169 'Who Says He's Just a Giraffe Meat Sausage?', 170 'Infinite Table Manners', 171 'Blackmail While Staring at Her Lips' — Kyuu on all three covers, in all character lists), and Kyuu never appears in the anime (infobox anime field: 'Episode 29 (image on TV)'), so 169-171 are cut outright, not relocated. The park kiss-deferral is also original: the manga's actual first kiss is ch 173 (manga-reader post dated April 2020), which the anime removes from ep 47's 172-176 abridgement and restages as an anime-original public kiss in the ep-48 finale.",
+      "tried": "Full ep-44 content inventory from Anime Rants ep-20 review (detailed scene-by-scene recap) cross-checked against: Wikipedia's List of Beastars chapters titles for vols 19-20 (161-179), en-fandom chapter pages 166/169/170/171 (covers + character lists; synopses still stubs), es-fandom Capítulo 166 (order-of-appearance character list), fandom Kyuu/Haru/Gosha/Legoshi character pages, fandom Episode_44 (still adapted_from = TBA, checked 2026-08-24), es-fandom Episodio_44 (does not exist), MAL Part 2 ep-8 discussion topic 2255721 (all 7 posts read — no chapter citations, viewer descriptions match the recap), MAL ep-7 topic 2255718 (same), and JP web searches for the episode title and ch-166 title (no chapter-correspondence sources). Would upgrade it: fandom filling in Episode_44 adapted_from, or a manga reader confirming whether ch 166 contains the step-stool/kiss-fantasy line.",
+      "sources": [
+        "https://animerants.net/2026/05/24/beastars-final-season-episodes-19-to-21-reviews/",
+        "https://beastars.fandom.com/wiki/Chapter_169_(Beastars)",
+        "https://beastars.fandom.com/wiki/Chapter_170_(Beastars)",
+        "https://beastars.fandom.com/wiki/Chapter_171_(Beastars)",
+        "https://beastars.fandom.com/wiki/Kyuu",
+        "https://en.wikipedia.org/wiki/List_of_Beastars_chapters",
+        "https://myanimelist.net/forum/?topicid=2255721",
+        "https://www.tumblr.com/fleshypop/615660833137115136/173-chapters-later-legosi-and-haru-finally-kiss"
+      ]
+    }
+  ],
+  "continue_points": [
+    {
+      "episode": 43,
+      "continue_chapter": 156,
+      "note": "Unchanged from batch 14 (152-155 already adapted in eps 38-39/42); restated so the updated ep-43 anchor does not default to end+1. The added 166 (part) graft does not move the reader's mainline position."
+    }
+  ],
+  "annotation_updates": [
+    {
+      "episodes": [43],
+      "kind": "divergence",
+      "chapters": "150-151 + 166 graft",
+      "note": "Refined zone facts: the Festival of Odd Souls opening is ch-166 material grafted ahead of the 150-151 capture/escape rework (fandom Holidays page cites ch 166 for the festival's Brachiosaurus-bone worship shown on screen). Melon's jump, Louis kidnapping Haru, and the tattoo-parlour frame-up remain anime-original."
+    },
+    {
+      "episodes": [44],
+      "kind": "divergence",
+      "chapters": "",
+      "note": "Anime-original episode CONFIRMED (batch-14 doubt resolved): frame-up/kines/police, rat informant + rat base, Live Together channel, Kuroe/Ogma Zoolympics, Gosha guarding Haru — none maps to any chapter title or character list in 161-179. Chapters 169-171 (Kyuu) are cut from the anime entirely, not relocated here. The park kiss-deferral is at most a motif echo of ch 166's Haru-imagines-Legoshi beat (title pair: 踏み台を買わなきゃ vs 身の丈の運命わたしにください) — not counted as adaptation."
+    }
+  ],
+  "type_corrections": [
+    {
+      "episodes": [44],
+      "type": "anime-only-canon",
+      "note": "RE-CONFIRMATION, not a change: batch 14's anime-only-canon call stands, upgraded from 'stub sources were silent' to positive evidence — full scene inventory (Anime Rants detailed recap + MAL ep-8 viewer posts) matched against complete chapter titles 161-179 and chapter character lists; the only unclaimed nearby range (169-171) is proven to be cut Kyuu material. The episode is official in-continuity Netflix story (drives the manhunt plot that eps 45-48 resolve) with zero manga chapters adapted.",
+      "sources": [
+        "https://animerants.net/2026/05/24/beastars-final-season-episodes-19-to-21-reviews/",
+        "https://myanimelist.net/forum/?topicid=2255721",
+        "https://en.wikipedia.org/wiki/List_of_Beastars_chapters",
+        "https://beastars.fandom.com/wiki/Kyuu"
+      ]
+    }
+  ],
+  "repairs": [
+    {
+      "episode": 43,
+      "field": "chapters_adapted",
+      "old": "150 (part), 151 (part)",
+      "new": "166 (part, festival exposition), 150 (part), 151 (part)",
+      "why": "The episode's opening Festival of Odd Souls is manga content from ch 166: the fandom Holidays page cites Chapter 166 (twice) for the festival's frozen-Brachiosaurus-bone worship, holy water, and amulet offerings; Anime Rants confirms the anime staged that exact detail (turtle praying to the dinosaur deity) at the top of the episode; es-fandom's Capítulo 166 character list (herbivore crowd + Haru + Melon flashback) confirms 166 is the festival/Haru chapter. end/start/volume/continue unchanged.",
+      "sources": [
+        "https://beastars.fandom.com/wiki/Holidays",
+        "https://animerants.net/2026/05/24/beastars-final-season-episodes-19-to-21-reviews/",
+        "https://beastars.fandom.com/es/wiki/Cap%C3%ADtulo_166"
+      ]
+    }
+  ],
+  "flags_for_sean": [
+    "Ep 44 doubt RESOLVED: anime-only-canon confirmed. The suspicion that the frame-up/rat-base material adapted the unclaimed ~169-175 range is disproven — 169-171 are the Kyuu chapters (lop-eared rabbit, on every cover/character list in that span) and Kyuu never appears in the anime (fandom infobox: 'Episode 29 (image on TV)' only); 172-176 already belong to ep 47. So the Final Season's unadapted pockets in the 160s-170s are: 165 (Ogma's death — contradicted by the anime's Ogma-survives divergence), most of 166 (only the festival exposition is used, in ep 43), and 169-171 (Kyuu, cut with the rest of her thread 159-161/186).",
+    "Motif watch, not an anchor: ep 44's title 'Gotta Buy a Step Stool' (踏み台を買わなきゃ) pairs suspiciously with ch 166's title 'Give Me the Destiny I Deserve' (身の丈の運命わたしにください — 'a fate matching my stature'), and es-fandom confirms ch 166 contains Haru imagining Legoshi (with a Melon flashback). If a manga reader ever confirms ch 166 contains Haru's step-stool/kiss-fantasy line, ep 44's park scene would earn '166 (part)' and the type would flip to mixed. Current evidence says the scene as aired (self-defense tools, rat informant, Legoshi's deferral speech) is original — chapter synopses 165-185 are still stubs, so this stays a flag.",
+    "Kiss divergence worth an in-app note: the manga's first real Legoshi-Haru kiss is ch 173 ('Thawing ××××', the snowmelt kiss — manga-reader post from April 2020, '173 chapters later... finally kiss for real'), inside ep 47's '172-176 (abridged)' span; the anime cuts it there and instead stages an anime-original public kiss in the ep-48 finale (Haru kisses Legoshi in front of the Zoolympics crowd after the mayor fight, per Anime Rants ep-24 review). Ep 44's deferral scene ('no kiss until Melon is behind bars') is the anime's setup for that relocation.",
+    "MAL Part 2 episode-discussion topic map recovered for future use (eps 1-12 = topics 2255684, 2255691, 2255698, 2255700, 2255706, 2255713, 2255718, 2255721, 2255724, 2255730, 2255735, 2255738) — all threads checked here were chapter-silent; fandom Episode_44 is still an 'adapted_from = TBA' stub and es-fandom Episodio_44 does not exist (checked 2026-08-24)."
+  ]
+}

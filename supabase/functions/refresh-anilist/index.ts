@@ -20465,7 +20465,13 @@ var EPISODE_TYPE_OVERRIDES = {
   "hunter-x-hunter": { 7: "mixed" },
   // ---- research batch 14 (2026-08-23 s2) type corrections, 2+ sources each
   //   beastars Final Season: ep 44 adapts no chapter (reviewer recap vs every
-  //   chapter synopsis 149-196); eps 37/42 mix anime-original plots with 141 / 155
+  //   chapter synopsis 149-196); eps 37/42 mix anime-original plots with 141 / 155.
+  //   ep 44 SEAN-RULED anime-only-canon 2026-08-24 on positive evidence
+  //   (batch15/out/beastars-ep44-followup.json): chs 169-171 = cut Kyuu
+  //   chapters, 172-176 in ep 47, frame-up/rat-base/kiss-deferral content
+  //   matches no chapter in 161-179 (the manga's ch-173 first kiss is
+  //   relocated to the ep-48 finale). Caveat: flips to mixed if the
+  //   step-stool line is ever confirmed inside ch 166.
   beastars: { 37: "mixed", 42: "mixed", 44: "anime-only-canon" },
   //   cardcaptor-sakura: Wood/Rain (4) and Silent (7) are anime-only cards with
   //   anime-original plots; 5 (ch-1 flashback video only) and 39 (Cloud, on the
