@@ -79,8 +79,8 @@ const OVERRIDE_CHAINS: Record<
     ruledExtent: 'AFL page stops at S3 (104 rows); S5 (2024, our 130-142) + S6 (Oct-Dec 2025, our 143-155) aired — flag #814. Zoku-hen (204688) joins when it airs',
   },
   'rent-girlfriend': {
-    ids: [113813, 124410, 154745, 179344],
-    ruledExtent: 'AFL page = S1-S3 (36); S4 (ONA, Jul 2025, our 37-48) aired — flag #839. S5 joins when AniList lists it',
+    ids: [113813, 124410, 154745, 179344, 199029],
+    ruledExtent: 'AFL page = S1-S3 (36); S4 (ONA, Jul 2025, our 37-48) + S5 (ONA, Apr 2026, our 49-60) aired — flag #839',
   },
   beastars: {
     ids: [107660, 114194, 136880, 187267],
