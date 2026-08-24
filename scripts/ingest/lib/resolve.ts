@@ -166,6 +166,10 @@ export const SOURCE_NUMBERING_SHIFTS: Record<string, { drop: number[]; shifts: {
   //   2026-08-23). No shift — the row is at the end. OVA holds watch
   //   position 24.5 (order-only, adapts no manga).
   'seraph-of-the-end-vampire-reign': { drop: [25], shifts: [] },
+  //   Netflix lists a ~14-min RECAP special ('S3 Episode 00') as a sixth S3
+  //   item; AFL numbers it as a trailing ep 44 — only 43 story episodes
+  //   exist (research batch 10, 2026-08-23). Recap rule: excluded.
+  'kimi-ni-todoke-from-me-to-you': { drop: [44], shifts: [] },
 };
 
 // Translate ONE source-space episode number into ours (null = the number IS

@@ -756,6 +756,27 @@ Fixed weekly is correct.
    nothing stale to delete. (4) Permanence tier: LOCKED set empty until
    asterisk sign-offs begin (41 pending — Sean's queue). Census:
    ok_full 238, ruling_violation 0, all anchor-integrity classes 0.
+29. ✅ **ITEM-4 BATCH 5 = research batch 10 (2026-08-23) — first
+   FULL-RECORD batch**: 16 series, 95 anchors each carrying end +
+   start_chapter + chapters_adapted + volume, 28 continue points, 63
+   annotation groups (apply-research-batch-10.ts). SIX REPAIRS:
+   black-butler ep46 108→36/v8 (MU folded in OVAs/film/2024-25 TV;
+   those seasons = stitch flag), beastars ep24 196→99/v12 (whole-manga
+   pin; Final Season 25-48 missing = stitch flag), magus-bride ep24
+   95→45/v9 (S2 endpoint bleeding into S1-only entry; S2 missing =
+   stitch flag), nisekoi ep32 107→106/v12 (MU stored the CONTINUE
+   pointer as an end anchor — new failure mode), kimi-ni-todoke
+   trailing ep 44 = Netflix recap special (recap rule: dropped + shift
+   entry; frontier re-pinned 43→75/v18; 127-vs-123 chapter-count flag),
+   ouran → mapping_mode loose (volume-jumping from ep 10 +
+   anime-original finale; MU pin → continue point 37). Black Lagoon's
+   pin VERIFIED (29→76/v9) with its arc reorders stored as adapted
+   (5 load-bearing continue exceptions); ReLIFE pin verified (222 =
+   story end; 238-vs-222 = unadapted x.5 extras); TYE S1 endpoint
+   corrected (ep 20 = chs 53-54, new anchor). anchor_gap 89→76;
+   asterisk pending 49; stitch queue now Kingdom + RAG + Black Butler +
+   Beastars + Magus Bride (all AniList-gated). ruling_violation 0;
+   ok_full 238; tails hold at 7.
 21. ✅ **Consolidation pass 2 (2026-08-23, post-Kenshin)**: every write path
    swept against the day's rules — filterEpisodeRows (caps + type
    overrides) now in ALL five episode writers (resolve, stitched-guard,
