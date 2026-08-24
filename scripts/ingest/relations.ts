@@ -14,6 +14,7 @@ const AUTO_KINDS = new Set(['SEQUEL', 'PREQUEL', 'SIDE_STORY', 'SPIN_OFF', 'ALTE
 // not in canonical yet — recovery-dependent pairs appear on a later run).
 const RULED: [string, string, string][] = [
   ['naruto-shippuden', 'naruto', 'sequel'],
+  ['cardcaptor-sakura-clear-card', 'cardcaptor-sakura', 'sequel'], // Sean 2026-08-24: Clear Card split (different manga)
   ['boruto-naruto-next-generations', 'naruto-shippuden', 'sequel'],
   ['dragon-ball-z', 'dragon-ball', 'sequel'],
   ['dragon-ball-gt', 'dragon-ball-z', 'sequel'],

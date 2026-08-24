@@ -86,14 +86,14 @@ its keep.
 
 ## Rulings / findings 2026-08-23 (session 2, batch 14)
 
-- **Cardcaptor Sakura: Clear Card adapts a SEPARATE manga** (AniList 87296,
-  80 ch) — our entry's manga is the original (30106, 50 ch). Eps 72-93
-  render honest-null until Sean rules: separate entry `cardcaptor-sakura-
-  clear-card` (the Naruto→Shippuden / Boruto pattern, different manga) is
-  the recommendation; the Clear Card per-episode map (16 anchors in Clear
-  Card numbering) is parked in research/batch14/out/cardcaptor-sakura.json
-  (`clear_card` block). Component 2 corrected to the Clear Card Prologue
-  OVA (98554, our ep 71 = chs 46-50).
+- **Cardcaptor Sakura: Clear Card = SEPARATE SERIES — RULED (Sean
+  2026-08-24)**, the Naruto→Shippuden pattern (different manga, AniList
+  87296). Built as `cardcaptor-sakura-clear-card` (AniList 97881, 22 eps in
+  its own 1-22 numbering, 16 batch-14 anchors vs the Clear Card manga,
+  sequel relation); `cardcaptor-sakura` = 71 (1998 TV + Prologue OVA 98554
+  at ep 71 = chs 46-50; community cap 71 keeps the shared AFL page's tail
+  out). The announced Clear Card sequel (163326) joins the NEW entry when
+  it airs.
 - **Golden Kamuy**: the Final Season (166521) ends on ch 302 (vol 30); the
   announced *Saishuushou – Bousou Ressha-hen* (210073) adapts 303-314 and
   joins the ruled chain when it airs. Sapporo Beer Koujou-hen films
@@ -102,8 +102,15 @@ its keep.
   component 7 when it airs, not an extension of 190840.
 - **Arslan**: Fuujin Ranbu (21424) stitched as S2 (our 26-33, chs 72-107);
   the 1991 OVA (1762) is a separate novel adaptation, excluded.
-- **My Hero Academia**: post-finale specials "No. 170+1: More" (204356, ch
-  431) and "I am a hero too" (211711, ch 431.5) exist as AniList SEQUELs —
-  pending Sean: components (then the series is fully adapted) or order-only.
+- **My Hero Academia post-finale specials — RULED (Sean 2026-08-24)**:
+  essential canon the community groups with the series; both join as
+  ORDER-ONLY entries (counts stay 170). Surface positions follow the fan
+  numbering: "No. 170+1: More" (204356, ch 431) at **170+1**; the Eri
+  special "I am a hero too" (211711, ch 431.5) at **170+1.5** — Sean's own
+  convention (no settled community number; the .5 matches the manga's
+  bonus-chapter format and the special's length). Stored at
+  ingest_fractionals positions 171/171.5 + OVERRIDE_CHAINS extras. The +N
+  surface format is a PER-SERIES ruling recorded in data, not a global
+  format — other series get their own rulings at the UI pass.
 - **Rent-a-Girlfriend**: S6 (213581) announced, undated — joins when listed
   with dates.

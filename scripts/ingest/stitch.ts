@@ -105,8 +105,16 @@ const OVERRIDE_CHAINS: Record<
     ruledExtent: 'AFL page = S1+S2 (24); S3 (2020, our 25-36) + S4 (2022, our 37-49) + Final Season (Jan-Mar 2026, our 50-62 → ch 302, NOT the manga end: Bousou Ressha-hen 210073 will adapt 303-314) — flag #856; OVAs order-only per batch 14. Sapporo Beer Koujou-hen films (196115) = recut of eps 50-55, excluded',
   },
   'cardcaptor-sakura': {
-    ids: [232, 98554, 97881],
-    ruledExtent: "component 2 is the Clear Card PROLOGUE OVA 98554 ('Sakura and the Two Bears', our ep 71, adapts chs 46-50), NOT the Sealed Card film 372 the relation walk bridged through — batch 14 (2026-08-23 s2). Clear Card TV (97881, our 72-93) adapts a SEPARATE manga (87296): split decision pending Sean",
+    ids: [232, 98554],
+    ruledExtent: "1998 TV (232, 1-70) + Clear Card PROLOGUE OVA 98554 ('Sakura and the Two Bears', ep 71, adapts chs 46-50 — NOT the Sealed Card film 372 the relation walk bridged through). Clear Card TV (97881) = SEPARATE series cardcaptor-sakura-clear-card (Sean 2026-08-24, different manga 87296); community cap 71 keeps the shared AFL page's tail out",
+  },
+  'my-hero-academia': {
+    ids: [21459, 21856, 100166, 104276, 117193, 139630, 163139, 182896],
+    extras: [
+      { id: 204356, after: 182896 }, // "No. 170+1: More" (2026-05-02, ch 431) — community-numbered 170+1 (Sean 2026-08-24)
+      { id: 211711, after: 182896 }, // "I am a hero too" Eri special (2026-08-03, ch 431.5) — mangaMapper position 170+1.5 (Sean's ruling)
+    ],
+    ruledExtent: "post-finale specials join as order-only entries (Sean 2026-08-24: essential canon the community groups with the series; surfaced with the community +N format — 'No. 170+1: More' at 170+1, the Eri fan-book special at Sean's 170+1.5, matching the manga's .5 bonus format). Counts stay 170",
   },
   'heroic-legend-arslan': {
     ids: [20935, 21424],

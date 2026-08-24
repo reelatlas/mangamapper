@@ -967,6 +967,18 @@ Fixed weekly is correct.
    refresh path). Remaining UI-phase gap: rearranged/graft rows carry
    annotations but no visible mark, so a correct reorder reads as a bug —
    Sean's call on a provisional glyph vs the full asterisk pass.
+35. ✅ **Sean's rulings 2026-08-24 applied as data
+   (apply-rulings-20260824.ts)**: (a) Clear Card SPLIT into
+   `cardcaptor-sakura-clear-card` (97881, own 1-22 numbering, batch-14
+   clear_card anchors, sequel relation, type overrides moved into the new
+   numbering; cardcaptor-sakura → 71 with a community cap holding the
+   shared AFL page's tail out; the wrong mu ep93→50 pin deleted). (b) MHA
+   post-finale specials = order-only entries with ruled SURFACE positions
+   170+1 (community) and 170+1.5 (Sean's convention, the Eri fan-book
+   special) — ingest_fractionals 171/171.5 + OVERRIDE_CHAINS extras;
+   counts stay 170. Standing principle (Sean, verbatim intent): every
+   classification lands as REAL DATA VALUES keyed to series ids — the UI
+   passes choose what to surface, never re-research.
 21. ✅ **Consolidation pass 2 (2026-08-23, post-Kenshin)**: every write path
    swept against the day's rules — filterEpisodeRows (caps + type
    overrides) now in ALL five episode writers (resolve, stitched-guard,
