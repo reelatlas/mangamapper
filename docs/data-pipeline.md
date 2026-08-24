@@ -1101,6 +1101,42 @@ Fixed weekly is correct.
    types regenerated post-migration; npm build green. Deep rescan:
    suppressions/overrides/REVIEWED sets re-validated, 2 dup flags
    cleaned, locked set still empty pending asterisk sign-offs (84).
+39. 📍 **RESUME POINT 2026-08-24 (Sean compacting; THE ROADMAP — start here
+   next session)**. State: batch 15 + all rulings + consolidate deep DONE
+   and pushed (d708dfb); census ruling_violation 0, rearranged_zone_
+   unanchored 0 (CLOSED), special_numbered 0, nonmonotonic 0, ok_full
+   235; verify 220/220; all 21 pre-batch bookmarks dispositioned; parity
+   continue-reads live + cron-safe; edges deployed; Vercel current.
+   ROADMAP (Sean-agreed order):
+   (1) **BATCH 16 — the 35 next-tier reorder holes** ← NEXT SESSION'S
+       TASK (Sean approved). `verify-series-display --all` prints the
+       list (kamisama S2 14-24, shippuden 121-125/130-132, dragon-maid
+       4-7, tgre 19-22, black-butler 4-5, food-wars 17/57, naruto
+       108-109, tybw 39, nisekoi 26). Batch-15 playbook: context files
+       (batch15/context.ts pattern), research agents (PROTOCOL.md exact-
+       record-or-zone-verdict), apply script lineage, verify + census.
+       Alongside: Sean's light sweep of the 42 batch-15 bookmarks.
+   (2) Gap tier (anchor_gap_research 46, by popularity: sailor-moon-
+       crystal, skip-beat, gantz, ace-of-diamond-act-ii, kingdom 1-37,
+       world-trigger 48-63, shippuden 262-298…).
+   (3) mu_pin_unverified 65 (drains passively per batch; dedicated
+       sweep finishes it).
+   (4) Automation-reliability pass AFTER data logic closes (Sean's
+       framing): Wikipedia as a 5th cron, parity-stamp inside
+       refresh-mu, anilist backoff cap if the orphan-run recurs.
+   (5) Arcs table modeling pass (name↔chapter-span↔episode-span; AFG
+       arc column = backfill source).
+   (6) The parked design pass: specials/OVAs/movies status + watch-order
+       surfacing (MHA 170+1 reference logic in §10) + asterisk queue 84
+       + kind badges.
+   (7) Continue-reading UI surface (parity data ready, invisible by
+       design).
+   (8) Coverage-segment model (designed, NOT built — Sean's go
+       required).
+   Event-driven: Golden Kamuy Bousou Ressha-hen stitch (winter
+   2026/27), TYBW Part 4 finale anchor (Sep 2026), Arslan S2 titles,
+   9 cleared-boundary manga (main-article fallback gap), title/airdate
+   classes (29/22) via wiki backfill.
 21. ✅ **Consolidation pass 2 (2026-08-23, post-Kenshin)**: every write path
    swept against the day's rules — filterEpisodeRows (caps + type
    overrides) now in ALL five episode writers (resolve, stitched-guard,
