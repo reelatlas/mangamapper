@@ -350,6 +350,13 @@ anchor a research batch delivers carries the FULL shape, not just the end:
   animefillerguide often shares lineage with fandom — corroborate key
   boundaries with a genuinely independent third source (episode↔chapter
   TITLE matches and Wikipedia volume boundaries are strong independents).
+- **Rearranged zones (the GTO 20/21 lesson, Sean 2026-08-23)**: exact known
+  per-episode adaptation ALWAYS becomes an anchor — even non-monotonic
+  (as-stored rendering + the rearranged annotation make it legal). Leaving
+  exact values annotation-only lets interpolation paint plausible-but-WRONG
+  numbers across the zone (GTO ep 20 showed ~68 while the annotation knew
+  73-74). Zone-level-only knowledge stays annotation + acknowledged
+  approximation, surfaced by rearranged_zone_unanchored until researched.
 - **Post-batch**: audits re-run; batch-cleared series may surface their
   NEXT-worst stretch (>12) — that is the rolling work-list by design, not
   a failure. Every batch that adds interior anchors near a run end relies
