@@ -25,7 +25,7 @@ async function pageAll(table: string, select: string): Promise<any[]> {
 async function main() {
   const series = await pageAll('series', 'id, source_type, manga_status, status, aired_episodes, total_episodes, total_chapters, total_volumes, latest_known_chapters, manga_anilist_id, manga_start_chapter, mapping_mode, asterisk_review');
   const episodes = await pageAll('episodes', 'series_id, number, type, title, air_date');
-  const anchors = await pageAll('chapter_anchors', 'series_id, episode, chapter, volume');
+  const anchors = await pageAll('chapter_anchors', 'series_id, episode, chapter, volume, source');
   const comps = await pageAll('series_components', 'series_id, episode_end, episode_start, anilist_id, kind, label');
   const bounds = await pageAll('volume_boundaries', 'manga_anilist_id, volume, chapter_start, chapter_end');
 
@@ -38,9 +38,20 @@ async function main() {
     epsBy.set(e.series_id, s);
   }
   const anchBy = new Map<string, { episode: number; chapter: number; volume: number | null }>();
+  // MU-pin verification queue (Sean 2026-08-23): 5 of the first 10 solo MU
+  // pins research checked were WRONG (whole-manga counts, other-season
+  // endpoints, continue-pointers stored as ends). A series whose ONLY
+  // anchors are source 'mu' is unverified BY DEFINITION — batches drain the
+  // big ones via anchor_gap_research, but short series never cross the gap
+  // threshold, so this class keeps every remaining unverified pin visible.
+  // Verification exit: research confirms or corrects the pin and the batch
+  // record rewrites it as source 'manual' with citations.
+  const anchorSrcs = new Map<string, Set<string>>();
   for (const a of anchors) {
     const cur = anchBy.get(a.series_id);
     if (!cur || a.episode > cur.episode) anchBy.set(a.series_id, a);
+    if (!anchorSrcs.has(a.series_id)) anchorSrcs.set(a.series_id, new Set());
+    anchorSrcs.get(a.series_id)!.add(a.source);
   }
   const compEnd = new Map<string, number>();
   const degenerateSpans: string[] = [];
@@ -71,6 +82,7 @@ async function main() {
     integrity_degenerate_span: degenerateSpans,
     special_numbered_unreviewed: [], anchor_gap_research: [], frontier_tail_null: [],
     anchor_nonmonotonic: [], anchor_beyond_chapter_space: [], anchor_fractional_chapter: [], ruling_violation: [],
+    mu_pin_unverified: [],
     title_incomplete: [], airdate_incomplete: [], asterisk_unreviewed: [],
     fractional_unmodeled: [],
     no_source: [], ok_full: [], ok_no_volume: [], ok_loose: [],
@@ -331,6 +343,11 @@ async function main() {
     if (latestAnchor) latestKnown = { volume: latestAnchor.volume ?? volumeFor(row, latestAnchor.chapter), chapters: latestAnchor.chapter };
     if (!latestKnown && row.total_chapters && row.status === 'finished' && e.lastCanon > 0) {
       latestKnown = { volume: row.total_volumes ?? volumeFor(row, row.total_chapters), chapters: row.total_chapters };
+    }
+    // MU-only anchor set = unverified pin (research promotes to 'manual')
+    const srcs = anchorSrcs.get(row.id);
+    if (srcs && srcs.size === 1 && srcs.has('mu')) {
+      classes.mu_pin_unverified.push(`${row.id}: sole anchor(s) are unverified MU pin(s) (ep ${anchBy.get(row.id)?.episode}→ch${anchBy.get(row.id)?.chapter})`);
     }
     if (latestKnown) {
       (latestKnown.volume != null ? classes.ok_full : classes.ok_no_volume).push(row.id);
