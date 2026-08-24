@@ -35107,7 +35107,16 @@ function deriveAnchors(episodes) {
     keep.add(i);
     if (prev2[i] === -1) break;
   }
-  return candidates.filter((_, i) => keep.has(i));
+  const kept = candidates.filter((_, i) => keep.has(i));
+  let prevEnd = 0;
+  const eps = new Map(episodes.map((e) => [e.number, e]));
+  for (const k of kept) {
+    const mainline = (eps.get(k.episode)?.chapters ?? []).filter((c) => Number.isInteger(c));
+    const onTrend = mainline.filter((c) => c >= prevEnd - 1 && c <= k.chapter);
+    k.startChapter = onTrend.length ? Math.min(...onTrend) : k.chapter;
+    prevEnd = k.chapter;
+  }
+  return kept;
 }
 function deriveBonusChapters(episodes) {
   const out = [];

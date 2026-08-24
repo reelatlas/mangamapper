@@ -25,7 +25,7 @@ async function pageAll(table: string, select: string): Promise<any[]> {
 async function main() {
   const series = await pageAll('series', 'id, source_type, manga_status, status, aired_episodes, total_episodes, total_chapters, total_volumes, latest_known_chapters, manga_anilist_id, manga_start_chapter, mapping_mode, asterisk_review');
   const episodes = await pageAll('episodes', 'series_id, number, type, title, air_date');
-  const anchors = await pageAll('chapter_anchors', 'series_id, episode, chapter, volume, source');
+  const anchors = await pageAll('chapter_anchors', 'series_id, episode, chapter, start_chapter, volume, source');
   const comps = await pageAll('series_components', 'series_id, episode_end, episode_start, anilist_id, kind, label');
   const bounds = await pageAll('volume_boundaries', 'manga_anilist_id, volume, chapter_start, chapter_end');
 
@@ -81,7 +81,7 @@ async function main() {
     integrity_eps_beyond_total: [], integrity_total_beyond_eps: [], integrity_double_claimed: [],
     integrity_degenerate_span: degenerateSpans,
     special_numbered_unreviewed: [], anchor_gap_research: [], frontier_tail_null: [],
-    anchor_nonmonotonic: [], anchor_beyond_chapter_space: [], anchor_fractional_chapter: [], ruling_violation: [],
+    anchor_nonmonotonic: [], anchor_start_offtrend: [], anchor_beyond_chapter_space: [], anchor_fractional_chapter: [], ruling_violation: [],
     mu_pin_unverified: [],
     rearranged_zone_unanchored: [],
     title_incomplete: [], airdate_incomplete: [], asterisk_unreviewed: [],
@@ -326,6 +326,18 @@ async function main() {
           if (ruled.has(`${sid}#${list[i].episode}`) || ruled.has(`${sid}#${list[i - 1].episode}`)) continue;
           classes.anchor_nonmonotonic.push(
             `${sid}: ep ${list[i - 1].episode}→ch${list[i - 1].chapter} then ep ${list[i].episode}→ch${list[i].chapter} — real reorder or junk? (ask Sean)`,
+          );
+        }
+        // START off-trend (Sean's Oshi ep-4 report, 2026-08-23): a start far
+        // below the previous anchor's end means a stray chart value or typo
+        // poisoned the "first chapter animated" — the derive guard prevents
+        // this for AFG rows; this outcome check catches manual/wiki typos and
+        // any future writer that bypasses the guard. Ruled reorders are legal.
+        const st = list[i].start_chapter;
+        if (st != null && st < list[i - 1].chapter - 1) {
+          if (ruled.has(`${sid}#${list[i].episode}`) || ruled.has(`${sid}#${list[i - 1].episode}`)) continue;
+          classes.anchor_start_offtrend.push(
+            `${sid}: ep ${list[i].episode} start ch${st} sits below prev anchor ep ${list[i - 1].episode}→ch${list[i - 1].chapter} — poisoned start or unruled reorder`,
           );
         }
       }

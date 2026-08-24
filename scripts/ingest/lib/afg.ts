@@ -196,7 +196,22 @@ export function deriveAnchors(
     keep.add(i);
     if (prev[i] === -1) break;
   }
-  return candidates.filter((_, i) => keep.has(i));
+  const kept = candidates.filter((_, i) => keep.has(i));
+  // START sanity (Sean's Oshi ep-4 report, 2026-08-23): the row's raw min is
+  // poisoned by stray low values — grafts/backfills a chart lists alongside
+  // the mainline (Oshi ep 4 listed a stray 10 beside 17-19 → start read 10).
+  // The start must sit on the same trend the LNDS kept: recompute it as the
+  // lowest chapter ≥ the previous kept row's end - 1 (split tolerance).
+  // Off-trend values stay recorded in chapters_adapted — data, not position.
+  let prevEnd = 0;
+  const eps = new Map(episodes.map((e) => [e.number, e]));
+  for (const k of kept) {
+    const mainline = (eps.get(k.episode)?.chapters ?? []).filter((c) => Number.isInteger(c));
+    const onTrend = mainline.filter((c) => c >= prevEnd - 1 && c <= k.chapter);
+    k.startChapter = onTrend.length ? Math.min(...onTrend) : k.chapter;
+    prevEnd = k.chapter;
+  }
+  return kept;
 }
 
 // Bonus/fractional chapters a chart associates with episodes (Sean's ruling

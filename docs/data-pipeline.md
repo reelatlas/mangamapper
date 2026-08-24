@@ -362,6 +362,28 @@ anchor a research batch delivers carries the FULL shape, not just the end:
   a failure. Every batch that adds interior anchors near a run end relies
   on the MU-pin episode-keyed redundancy rule (lib/mu-frontier) — the
   2026-08-23 regression class.
+- **Start-sanity guard (the Oshi ep-4 lesson, Sean 2026-08-23)**: a chart
+  row's raw min is NOT the start — stray low values (grafts, backfills,
+  divider digits) poison it the same way stray highs poisoned ends before
+  LNDS (Oshi ep 4 listed a stray 10 beside 17-19 → start read 10, and the
+  UI displayed "10"). deriveAnchors recomputes each kept row's start as
+  the lowest mainline chapter on the LNDS trend (≥ previous kept end − 1);
+  off-trend values stay recorded in chapters_adapted — data, not position.
+  Outcome side: audit class `anchor_start_offtrend` flags any anchor
+  (manual/wiki typos included) whose start sits below the previous
+  anchor's end without a rearranged/graft annotation ruling it. Its first
+  run caught the stale Black Lagoon batch-10 arc-BLOCK anchors that
+  pass-2's per-episode map had superseded — block-end aggregate anchors
+  spanning several episodes are a deprecated shape; per-episode records
+  replace them, never coexist with them.
+- **Fan mapping threads are a first-class verification source**: the
+  r/OshiNoKo-style episode↔chapter threads that power "instant" AI-search
+  answers are the SAME sources our research agents cite — use them for
+  cross-checks, but never alone: they carry judgment calls at split
+  chapters and go stale at finales (that thread ended Oshi ep 35 at ch
+  122; four cited sources — Wikipedia, fandom, dexerto, mystiqora — agree
+  the 1-hr finale runs to mid-ch-127, which Sean confirmed). Two agreeing
+  citations beat one instant answer.
 
 **Maintenance audits** (run after any batch; all idempotent):
 `audit-manga-coverage` (self-healing: frontiers + latest_known + cross-checks),
