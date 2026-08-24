@@ -1,0 +1,698 @@
+{
+  "series_id": "sailor-moon",
+  "summary": "Each 90s season loosely adapts one manga arc in our 1-60 unified act numbering (Dark Kingdom 1-14 / eps 1-46; Black Moon 15-26 / eps 60-88 after the anime-original Makai Tree eps 47-59; Infinity 27-38 / eps 90-127; Dream 39-49 / eps 128-166; Stars 50-60 / eps 173-200 after the anime-original Nehelenia-revival eps 167-172). No source anywhere carries per-episode chapter fields for this show - the adaptation borrows landmark beats and pads everything else, so the deliverable is a 37-anchor checkpoint lattice (arc boundaries + landmark beats), dense annotations for the anime-original devices (Rainbow Crystals, breakup subplot, pure-heart/talisman quest, dream-mirror hunts, Animamates-of-the-week), and a type correction: eps 167-172 are anime-original, not manga canon as AFL claims. STRUCTURE VERDICT: chapter-level interpolation between checkpoints is unreliable mid-season for this title; treat the mapping as arc-faithful checkpoints over a loose-parallel adaptation, not act-by-act coverage.",
+  "anchors": [
+    {
+      "episode": 1,
+      "end_chapter": 1,
+      "start_chapter": 1,
+      "chapters_adapted": "1",
+      "volume": 1,
+      "confidence": "high",
+      "note": "Near-faithful premiere: Usagi meets Luna, becomes Sailor Moon, Morga-as-Naru's-mother fight = Act 1 beat for beat.",
+      "sources": [
+        "https://sailormoon.fandom.com/wiki/The_Crybaby%3A_Usagi%27s_Beautiful_Transformation",
+        "https://sailormoon.fandom.com/wiki/Act_2_Ami_-_Sailor_Mercury",
+        "https://sailormoon.fandom.com/wiki/Pretty_Guardian_Sailor_Moon_(anime_season)"
+      ]
+    },
+    {
+      "episode": 8,
+      "end_chapter": 2,
+      "start_chapter": 2,
+      "chapters_adapted": "2",
+      "volume": 1,
+      "confidence": "high",
+      "note": "Ami intro + Jadeite's brainwashing Crystal Seminar cram school = Act 2 exactly.",
+      "sources": [
+        "https://sailormoon.fandom.com/wiki/Is_the_Girl_Genius_a_Monster%3F%3A_The_Brainwashing_Cram_School_of_Horror",
+        "https://sailormoon.fandom.com/wiki/Act_2_Ami_-_Sailor_Mercury"
+      ]
+    },
+    {
+      "episode": 10,
+      "end_chapter": 3,
+      "start_chapter": 3,
+      "chapters_adapted": "3",
+      "volume": 1,
+      "confidence": "high",
+      "note": "Rei/Hikawa Shrine + the disappearance bus = Act 3 exactly.",
+      "sources": [
+        "https://sailormoon.fandom.com/wiki/The_Cursed_Bus%3A_Enter_Mars%2C_the_Guardian_of_Fire",
+        "https://sailormoon.fandom.com/wiki/Act_3_-_The_Third_Sailor_Guardian_is_Rei_the_Miko",
+        "https://en.wikipedia.org/wiki/List_of_Sailor_Moon_chapters"
+      ]
+    },
+    {
+      "episode": 22,
+      "end_chapter": 4,
+      "start_chapter": 4,
+      "chapters_adapted": "4 (loose)",
+      "volume": 1,
+      "confidence": "medium",
+      "note": "Princess party, Usagi's dress + first kiss with drunk Usagi = Act 4 Masquerade Dance Party, loosely staged.",
+      "sources": [
+        "https://sailormoon.fandom.com/wiki/Romance_Under_the_Moon%3A_Usagi%27s_First_Kiss",
+        "https://sailormoon.fandom.com/wiki/Act_4_-_Infiltrating_the_Party%21",
+        "https://en.wikipedia.org/wiki/List_of_Sailor_Moon_chapters"
+      ]
+    },
+    {
+      "episode": 25,
+      "end_chapter": 5,
+      "start_chapter": 5,
+      "chapters_adapted": "5 (loose)",
+      "volume": 1,
+      "confidence": "medium",
+      "note": "Makoto transfers in and joins = Act 5; anime wraps it in the anime-original Rainbow Crystal device.",
+      "sources": [
+        "https://sailormoon.fandom.com/wiki/Jupiter%2C_the_Powerful_Girl_in_Love",
+        "https://sailormoon.fandom.com/wiki/Act_5_Makoto_-_Sailor_Jupiter"
+      ]
+    },
+    {
+      "episode": 33,
+      "end_chapter": 8,
+      "start_chapter": 7,
+      "chapters_adapted": "7 (closing beat: Venus's debut), 8 (loose)",
+      "volume": 2,
+      "confidence": "medium",
+      "note": "Sailor Venus debuts saving the Guardians, Tuxedo Mask gravely injured = Act 7 ending into Act 8; anime staging differs (Zoisite's fake Sailor Moon trap).",
+      "sources": [
+        "https://sailormoon.fandom.com/wiki/Enter_Venus%2C_the_Last_Sailor_Guardian",
+        "https://sailormoon.fandom.com/wiki/Act_8_Minako_-_Sailor_V_-"
+      ]
+    },
+    {
+      "episode": 34,
+      "end_chapter": 9,
+      "start_chapter": 9,
+      "chapters_adapted": "9 (princess reveal)",
+      "volume": 2,
+      "confidence": "high",
+      "note": "Usagi revealed as Princess Serenity when Tuxedo Mask falls = Act 9's central beat in both.",
+      "sources": [
+        "https://sailormoon.fandom.com/wiki/The_Shining_Silver_Crystal%3A_The_Moon_Princess_Appears",
+        "https://sailormoon.fandom.com/wiki/Act_9_Serenity_-_Princess_-"
+      ]
+    },
+    {
+      "episode": 35,
+      "end_chapter": 10,
+      "start_chapter": 9,
+      "chapters_adapted": "9 (end)-10 (loose: Silver Millennium exposition)",
+      "volume": 3,
+      "confidence": "medium",
+      "note": "Past-life memories + Luna/Artemis exposition = Act 10 content; the Moon-ruins visit itself is deferred to ep 44 (rearranged).",
+      "sources": [
+        "https://sailormoon.fandom.com/wiki/Returning_Memories%3A_Usagi_and_Mamoru%27s_Past",
+        "https://sailormoon.fandom.com/wiki/Act_9_Serenity_-_Princess_-",
+        "https://sailormoon.fandom.com/wiki/Act_10_Moon"
+      ]
+    },
+    {
+      "episode": 44,
+      "end_chapter": 10,
+      "start_chapter": 10,
+      "chapters_adapted": "10 (Moon Kingdom ruins + Queen Serenity's message; rearranged)",
+      "volume": 3,
+      "confidence": "medium",
+      "note": "The Guardians visit the ruined Moon Kingdom and meet Queen Serenity's spirit = Act 10's signature scene, relocated to the season endgame.",
+      "sources": [
+        "https://sailormoon.fandom.com/wiki/Usagi%27s_Awakening%3A_A_Message_from_the_Distant_Past",
+        "https://sailormoon.fandom.com/wiki/Act_10_Moon"
+      ]
+    },
+    {
+      "episode": 45,
+      "end_chapter": 12,
+      "start_chapter": 11,
+      "chapters_adapted": "11-12 (loose: assault toward the Dark Kingdom)",
+      "volume": 3,
+      "confidence": "medium",
+      "note": "D Point final assault parallels Act 12 (Enemy - Queen Metaria); the four Guardians' on-screen deaths are anime-original staging.",
+      "sources": [
+        "https://sailormoon.fandom.com/wiki/Death_of_the_Sailor_Guardians%3A_The_Tragic_Final_Battle",
+        "https://sailormoon.fandom.com/wiki/Act_12_Enemy_-_Queen_Metalia_-",
+        "https://en.wikipedia.org/wiki/List_of_Sailor_Moon_episodes"
+      ]
+    },
+    {
+      "episode": 46,
+      "end_chapter": 13,
+      "start_chapter": 12,
+      "chapters_adapted": "12-13 (heavily altered: Beryl/Metalia destroyed, reincarnation), 14 (daily-life reset echoed)",
+      "volume": 3,
+      "confidence": "medium",
+      "note": "Season finale = Acts 12-13's final battle + rebirth, minus the manga's Usagi-kills-Mamoru-and-herself beat; Act 14's reset opening is echoed.",
+      "sources": [
+        "https://sailormoon.fandom.com/wiki/Usagi%27s_Eternal_Wish%3A_A_Brand_New_Life",
+        "https://sailormoon.fandom.com/wiki/Act_12_Enemy_-_Queen_Metalia_-",
+        "https://sailormoon.fandom.com/wiki/Act_13_Final_Battle_-_Reincarnation_-",
+        "https://sailormoon.fandom.com/wiki/Act_14_Conclusion_and_Commencement_-_Petite_%C3%89trangere_-"
+      ]
+    },
+    {
+      "episode": 60,
+      "end_chapter": 15,
+      "start_chapter": 14,
+      "chapters_adapted": "14 (closing pages: Chibiusa's arrival)-15 (opening)",
+      "volume": 4,
+      "confidence": "medium",
+      "note": "Chibiusa falls from the sky onto Usagi+Mamoru and demands the Silver Crystal = Act 14's ending into Act 15's opening, padded with an anime-original Koan fight.",
+      "sources": [
+        "https://sailormoon.fandom.com/wiki/Angel_or_Devil%3F_the_Mysterious_Girl_from_the_Sky",
+        "https://sailormoon.fandom.com/wiki/Act_14_Conclusion_and_Commencement_-_Petite_%C3%89trangere_-",
+        "https://sailormoon.fandom.com/wiki/Act_15_Infiltration_-_Sailor_Mars_-",
+        "https://sailormoon.fandom.com/wiki/Pretty_Guardian_Sailor_Moon_R"
+      ]
+    },
+    {
+      "episode": 68,
+      "end_chapter": 15,
+      "start_chapter": 15,
+      "chapters_adapted": "15 (loose: Black Moon vs Guardians over Chibiusa)",
+      "volume": 4,
+      "confidence": "medium",
+      "note": "Spectre Sisters + Rubeus vs the five Guardians protecting Chibiusa parallels Act 15's Black Moon offensive; no abduction here (manga takes Mars).",
+      "sources": [
+        "https://sailormoon.fandom.com/wiki/Protect_Chibiusa%3A_Clash_of_the_Ten_Warriors",
+        "https://sailormoon.fandom.com/wiki/Act_15_Infiltration_-_Sailor_Mars_-"
+      ]
+    },
+    {
+      "episode": 71,
+      "end_chapter": 16,
+      "start_chapter": 16,
+      "chapters_adapted": "16 (loose: Berthier vs Mercury chess duel)",
+      "volume": 4,
+      "confidence": "medium",
+      "note": "Berthier's chess challenge to Ami = Act 16's Berthier/Mercury duel; anime skips Ami's abduction.",
+      "sources": [
+        "https://sailormoon.fandom.com/wiki/For_Friendship%3A_Ami_vs._Bertheir",
+        "https://sailormoon.fandom.com/wiki/Act_16_Abduction_-_Sailor_Mercury_-"
+      ]
+    },
+    {
+      "episode": 73,
+      "end_chapter": 17,
+      "start_chapter": 15,
+      "chapters_adapted": "15-17 (abduction motif condensed)",
+      "volume": 4,
+      "confidence": "medium",
+      "note": "Rubeus abducts the four Guardians at once; the manga abducts Mars, Mercury, Jupiter across Acts 15-17 (they stay captive until Act 25).",
+      "sources": [
+        "https://sailormoon.fandom.com/wiki/A_UFO_Appears%3A_The_Sailor_Guardians_Abducted",
+        "https://sailormoon.fandom.com/wiki/Act_15_Infiltration_-_Sailor_Mars_-",
+        "https://sailormoon.fandom.com/wiki/Act_16_Abduction_-_Sailor_Mercury_-",
+        "https://sailormoon.fandom.com/wiki/Act_17_Secret_-_Sailor_Jupiter"
+      ]
+    },
+    {
+      "episode": 75,
+      "end_chapter": 19,
+      "start_chapter": 19,
+      "chapters_adapted": "19 (partial: Sailor Pluto's debut, ahead of the time warp)",
+      "volume": 5,
+      "confidence": "medium",
+      "note": "Pluto introduced (via Chibiusa/Luna-P) before the corridor journey; in the manga she debuts at the Space-Time Door in Act 19.",
+      "sources": [
+        "https://sailormoon.fandom.com/wiki/The_Mysterious_New_Guardian%3A_Sailor_Pluto_Appears",
+        "https://sailormoon.fandom.com/wiki/Act_19_Time_Warp_-_Sailor_Pluto_-"
+      ]
+    },
+    {
+      "episode": 82,
+      "end_chapter": 19,
+      "start_chapter": 19,
+      "chapters_adapted": "19 (time warp, Space-Time Door, Pluto in person)",
+      "volume": 5,
+      "confidence": "high",
+      "note": "Party travels the corridor to the 30th century and meets Sailor Pluto at the Door = Act 19 in both summaries.",
+      "sources": [
+        "https://sailormoon.fandom.com/wiki/Journey_to_the_Future%3A_Battle_in_the_Space-Time_Corridor",
+        "https://sailormoon.fandom.com/wiki/Act_19_Time_Warp_-_Sailor_Pluto_-"
+      ]
+    },
+    {
+      "episode": 83,
+      "end_chapter": 20,
+      "start_chapter": 20,
+      "chapters_adapted": "20 (Crystal Tokyo, King Endymion, Chibiusa's parentage)-21 elements",
+      "volume": 5,
+      "confidence": "high",
+      "note": "King Endymion explains the Black Moon and reveals Chibiusa as Usagi+Mamoru's daughter; Demande covets Sailor Moon = Acts 20-21.",
+      "sources": [
+        "https://sailormoon.fandom.com/wiki/The_Shocking_Future%3A_Demande%27s_Dark_Ambition",
+        "https://sailormoon.fandom.com/wiki/Act_20_Crystal_Tokyo_-_King_Endymion_-"
+      ]
+    },
+    {
+      "episode": 85,
+      "end_chapter": 23,
+      "start_chapter": 22,
+      "chapters_adapted": "22-23 (loose: Wiseman corrupts Chibiusa; Black Lady debuts)",
+      "volume": 6,
+      "confidence": "medium",
+      "note": "Wiseman turns Chibiusa into Black Lady = Act 23's arrival of Black Lady (manga stages it on Nemesis; anime moves fast to the Dark Gate plot).",
+      "sources": [
+        "https://sailormoon.fandom.com/wiki/The_Dark_Queen%3A_Birth_of_Black_Lady",
+        "https://sailormoon.fandom.com/wiki/Act_23_Covert_Maneuvers_-_Wiseman",
+        "https://sailormoon.fandom.com/wiki/Act_24_Attack_-_Black_Lady_-"
+      ]
+    },
+    {
+      "episode": 88,
+      "end_chapter": 26,
+      "start_chapter": 24,
+      "chapters_adapted": "24-26 (condensed and altered)",
+      "volume": 7,
+      "confidence": "medium",
+      "note": "Finale: Death Phantom's full power vs Neo-Queen-empowered Sailor Moon; Chibiusa healed = Acts 24-26 compressed; manga's Sailor Chibi Moon debut and Sailor Pluto's death (Act 25) are omitted.",
+      "sources": [
+        "https://sailormoon.fandom.com/wiki/The_Final_Battle_Between_Light_and_Dark%3A_Pledge_of_Love_for_the_Future",
+        "https://sailormoon.fandom.com/wiki/Act_24_Attack_-_Black_Lady_-",
+        "https://sailormoon.fandom.com/wiki/Act_25_Showdown_-_Death_Phantom_-",
+        "https://sailormoon.fandom.com/wiki/Act_26_Replay_-_Never_Ending",
+        "https://en.wikipedia.org/wiki/Sailor_Moon_R"
+      ]
+    },
+    {
+      "episode": 90,
+      "end_chapter": 27,
+      "start_chapter": 27,
+      "chapters_adapted": "27 (loose: omens of ruin, first Daimon fights, Uranus/Neptune glimpsed)",
+      "volume": 7,
+      "confidence": "high",
+      "note": "S opener = Act 27 Infinity 1 Premonition: apocalyptic vision, Daimon the inners can't beat, two mysterious new Guardians; anime re-stages the particulars.",
+      "sources": [
+        "https://sailormoon.fandom.com/wiki/Premonition_of_the_Apocalypse%3A_the_Mysterious_New_Guardians_Appear",
+        "https://sailormoon.fandom.com/wiki/Act_27_Infinity_1_Premonition",
+        "https://en.wikipedia.org/wiki/Sailor_Moon_S"
+      ]
+    },
+    {
+      "episode": 92,
+      "end_chapter": 29,
+      "start_chapter": 28,
+      "chapters_adapted": "28-29 (loose: the Haruka/Michiru enigma)",
+      "volume": 8,
+      "confidence": "medium",
+      "note": "Haruka introduced as an enigmatic 'boy', paired with Michiru = the mysterious pair the Guardians puzzle over in Acts 28-29.",
+      "sources": [
+        "https://sailormoon.fandom.com/wiki/A_Handsome_Boy%3F_Haruka_Tenoh%E2%80%99s_Secret",
+        "https://sailormoon.fandom.com/wiki/Act_28_Infinity_2_Ripples",
+        "https://sailormoon.fandom.com/wiki/Act_29_Infinity_3_Two_-_New_Guardians_-"
+      ]
+    },
+    {
+      "episode": 111,
+      "end_chapter": 33,
+      "start_chapter": 33,
+      "chapters_adapted": "33 (Holy Grail; Super Sailor Moon's first transformation)",
+      "volume": 9,
+      "confidence": "high",
+      "note": "Sailor Moon becomes Super Sailor Moon via the Holy Grail = Act 33's exact beat; the grail's origin story differs (anime talisman quest is original).",
+      "sources": [
+        "https://sailormoon.fandom.com/wiki/The_Holy_Grail%27s_Mystical_Power%3A_Moon%E2%80%99s_Double_Transformation",
+        "https://sailormoon.fandom.com/wiki/Act_33_Infinity_7_Transformation_-_Super_Sailor_Moon_-"
+      ]
+    },
+    {
+      "episode": 119,
+      "end_chapter": 34,
+      "start_chapter": 33,
+      "chapters_adapted": "33-34 (loose: standoff over Hotaru/Saturn)",
+      "volume": 9,
+      "confidence": "medium",
+      "note": "Hotaru revealed as Sailor Saturn's vessel; outers resolve to kill her = Infinity's late-arc standoff (arc-span derivation, anime order differs).",
+      "sources": [
+        "https://sailormoon.fandom.com/wiki/The_Messiah_of_Silence_Awakens%3F_Stars_of_Destiny",
+        "https://sailormoon.fandom.com/wiki/Act_34_Infinity_8_%22Infinite_Labyrinth%22_1",
+        "https://en.wikipedia.org/wiki/List_of_Sailor_Moon_chapters"
+      ]
+    },
+    {
+      "episode": 123,
+      "end_chapter": 35,
+      "start_chapter": 34,
+      "chapters_adapted": "34-35 (loose: Mistress 9 fully emerges)",
+      "volume": 9,
+      "confidence": "medium",
+      "note": "Messiah of Silence awakens in Hotaru's body = Act 35's Mistress-9-awakens-Pharaoh-90 phase (arc-span derivation).",
+      "sources": [
+        "https://sailormoon.fandom.com/wiki/Shadow_of_Destruction%3A_the_Messiah_of_Silence_Awakens",
+        "https://sailormoon.fandom.com/wiki/Act_35_Infinity_9_%22Infinite_Labyrinth%22_2"
+      ]
+    },
+    {
+      "episode": 125,
+      "end_chapter": 37,
+      "start_chapter": 36,
+      "chapters_adapted": "36-37 (Saturn awakens; Pharaoh 90 destroyed - mechanism altered)",
+      "volume": 10,
+      "confidence": "high",
+      "note": "Hotaru expels Mistress 9, Sailor Saturn awakens, Pharaoh 90 finished = Acts 36-37's climax beats (talisman resonance vs anime's self-sacrifice staging).",
+      "sources": [
+        "https://sailormoon.fandom.com/wiki/The_Shining_Shooting_Star%3A_Saturn_and_the_Messiah",
+        "https://sailormoon.fandom.com/wiki/Act_36_Infinity_10_Infinite_-_Upper_Atmosphere_-",
+        "https://sailormoon.fandom.com/wiki/Act_37_Infinity_11_Infinite_-_Judgement_-"
+      ]
+    },
+    {
+      "episode": 126,
+      "end_chapter": 38,
+      "start_chapter": 38,
+      "chapters_adapted": "38 (epilogue: infant Hotaru, outers' departure)",
+      "volume": 10,
+      "confidence": "high",
+      "note": "Season close = Act 38 Infinite Journey epilogue: reborn baby Hotaru handed over, outers exit; anime adds the Uranus/Neptune challenge to Sailor Moon.",
+      "sources": [
+        "https://sailormoon.fandom.com/wiki/A_New_Life%3A_Parting_of_the_Stars_of_Destiny",
+        "https://en.wikipedia.org/wiki/List_of_Sailor_Moon_chapters",
+        "https://en.wikipedia.org/wiki/Sailor_Moon_S"
+      ]
+    },
+    {
+      "episode": 128,
+      "end_chapter": 39,
+      "start_chapter": 39,
+      "chapters_adapted": "39 (solar eclipse; Dead Moon Circus arrives; Pegasus meets Chibiusa in her dream)",
+      "volume": 12,
+      "confidence": "high",
+      "note": "SuperS opener = Act 39 Dream 1 Eclipse Dream beat for beat in both summaries.",
+      "sources": [
+        "https://sailormoon.fandom.com/wiki/Meeting_of_Destiny%3A_The_Night_Pegasus_Dances",
+        "https://sailormoon.fandom.com/wiki/Act_39_Dream_1_-_Eclipse_Dream",
+        "https://en.wikipedia.org/wiki/Sailor_Moon_SuperS"
+      ]
+    },
+    {
+      "episode": 143,
+      "end_chapter": 43,
+      "start_chapter": 40,
+      "chapters_adapted": "40-43 (motif condensation: the four inners' Super forms)",
+      "volume": 13,
+      "confidence": "medium",
+      "note": "Mercury/Mars/Jupiter/Venus gain Super forms at once via Pegasus; the manga devotes one Dream act to each Guardian's own Sailor Crystal (Acts 40-43).",
+      "sources": [
+        "https://sailormoon.fandom.com/wiki/Believe_in_Pegasus%3A_The_Four_Guardians%27_Super_Transformation",
+        "https://sailormoon.fandom.com/wiki/Act_40_Dream_2_-_Mercury_Dream",
+        "https://sailormoon.fandom.com/wiki/Act_43_Dream_5_-_Venus_Dream"
+      ]
+    },
+    {
+      "episode": 158,
+      "end_chapter": 46,
+      "start_chapter": 43,
+      "chapters_adapted": "43 (Helios's origins), 46 (Elysion exposition) - loose",
+      "volume": 14,
+      "confidence": "medium",
+      "note": "Pegasus's identity as Helios, guardian of the dream realm Elysion = Acts 43/46 exposition beats, heavily re-staged.",
+      "sources": [
+        "https://sailormoon.fandom.com/wiki/Pegasus%27s_Secret%3A_the_Boy_Who_Protects_the_Dream_World",
+        "https://sailormoon.fandom.com/wiki/Act_43_Dream_5_-_Venus_Dream",
+        "https://sailormoon.fandom.com/wiki/Act_46_Dream_8_-_Elysion_Dream"
+      ]
+    },
+    {
+      "episode": 166,
+      "end_chapter": 49,
+      "start_chapter": 48,
+      "chapters_adapted": "48-49 (heavily altered finale vs Nehelenia)",
+      "volume": 15,
+      "confidence": "high",
+      "note": "SuperS finale = Acts 48-49: Nehellenia beaten with the Golden Crystal's power; manga's Sailor Quartet awakening and outer-Guardian participation are absent.",
+      "sources": [
+        "https://sailormoon.fandom.com/wiki/Dreams_Forever%3A_Fill_the_Heavens_With_Light",
+        "https://sailormoon.fandom.com/wiki/Act_48_Dream_10_-_Princess_Dream",
+        "https://sailormoon.fandom.com/wiki/Act_49_Dream_11_-_Earth_and_Moon_Dream",
+        "https://en.wikipedia.org/wiki/Sailor_Moon_SuperS"
+      ]
+    },
+    {
+      "episode": 173,
+      "end_chapter": 50,
+      "start_chapter": 50,
+      "chapters_adapted": "50 (Mamoru's airport departure; Starlights debut)-51 elements",
+      "volume": 16,
+      "confidence": "high",
+      "note": "Stars-arc adaptation starts here: Mamoru leaves for America (Galaxia takes his star seed in both - anime conceals it until ep 193) and the Three Lights arrive = Acts 50-51.",
+      "sources": [
+        "https://sailormoon.fandom.com/wiki/Farewells_and_Encounters%3A_the_Transitioning_Stars_of_Destiny",
+        "https://sailormoon.fandom.com/wiki/Act_50_Stars_1",
+        "https://sailormoon.fandom.com/wiki/Act_51_Stars_2",
+        "https://en.wikipedia.org/wiki/Sailor_Moon_Sailor_Stars"
+      ]
+    },
+    {
+      "episode": 180,
+      "end_chapter": 52,
+      "start_chapter": 51,
+      "chapters_adapted": "51-53 elements (loose: outers' hard line against the Starlights)",
+      "volume": 16,
+      "confidence": "medium",
+      "note": "Outer Guardians confront the Starlights' interference = the outers' independent plan of Acts 52-53 (arc-span derivation).",
+      "sources": [
+        "https://sailormoon.fandom.com/wiki/Calling_of_the_Shining_Stars%3A_Enter_Haruka_and_Michiru",
+        "https://sailormoon.fandom.com/wiki/Act_52_Stars_3",
+        "https://sailormoon.fandom.com/wiki/Act_53_Stars_4"
+      ]
+    },
+    {
+      "episode": 187,
+      "end_chapter": 53,
+      "start_chapter": 53,
+      "chapters_adapted": "53 (arc-span checkpoint: Galaxia/Animamates campaign)",
+      "volume": 17,
+      "confidence": "medium",
+      "note": "Mid-campaign checkpoint; Chibi Chibi's guardian turn loosely parallels Act 54's Sailor Chibi Chibi; anime order diverges.",
+      "sources": [
+        "https://sailormoon.fandom.com/wiki/The_Shining_Power_of_a_Star%3A_Chibi-Chibi%27s_Transformation",
+        "https://sailormoon.fandom.com/wiki/Act_53_Stars_4",
+        "https://sailormoon.fandom.com/wiki/Act_54_Stars_5"
+      ]
+    },
+    {
+      "episode": 193,
+      "end_chapter": 54,
+      "start_chapter": 54,
+      "chapters_adapted": "54 (Princess Kakyuu emerges from the incense burner)",
+      "volume": 17,
+      "confidence": "medium",
+      "note": "Kakyuu's emergence and reunion with the Starlights = Act 54's Kakyuu beats; anime wraps it in the stolen-Silver-Crystal plot.",
+      "sources": [
+        "https://sailormoon.fandom.com/wiki/The_Stolen_Silver_Crystal%3A_Princess_Kakyu_Appears",
+        "https://sailormoon.fandom.com/wiki/Act_54_Stars_5"
+      ]
+    },
+    {
+      "episode": 196,
+      "end_chapter": 55,
+      "start_chapter": 55,
+      "chapters_adapted": "55 (loose: the Guardians fall to Galaxia)",
+      "volume": 17,
+      "confidence": "medium",
+      "note": "Inner Guardians eliminated by Galaxia; the manga staggers the Guardians' deaths across Acts 52-56 rather than one battle.",
+      "sources": [
+        "https://sailormoon.fandom.com/wiki/Countdown_to_Destruction%3A_the_Sailor_Guardians%27_Last_Battle",
+        "https://sailormoon.fandom.com/wiki/Act_55_Stars_6",
+        "https://sailormoon.fandom.com/wiki/Act_56_Stars_7"
+      ]
+    },
+    {
+      "episode": 199,
+      "end_chapter": 59,
+      "start_chapter": 58,
+      "chapters_adapted": "58-59 elements (very loose: endgame vs Galaxia/Chaos)",
+      "volume": 18,
+      "confidence": "medium",
+      "note": "Final confrontation with Galaxia as Chaos's host, light-of-hope beat; the manga's Galaxy Cauldron setting and losses are absent.",
+      "sources": [
+        "https://sailormoon.fandom.com/wiki/The_Light_of_Hope%3A_Final_Battle_for_the_Galaxy",
+        "https://sailormoon.fandom.com/wiki/Act_59_Stars_10",
+        "https://en.wikipedia.org/wiki/Sailor_Moon_Sailor_Stars"
+      ]
+    }
+  ],
+  "continue_points": [
+    {
+      "episode": 60,
+      "continue_chapter": 15,
+      "note": "ep 60 only reaches Act 15's opening scenes - resume at Act 15 itself"
+    },
+    {
+      "episode": 143,
+      "continue_chapter": 40,
+      "note": "Acts 40-43 are only echoed as a condensed motif; a reader should still read the four Dream acts in full"
+    }
+  ],
+  "annotations": [
+    {
+      "episodes": [
+        25,
+        43
+      ],
+      "kind": "divergence",
+      "chapters": "6-9",
+      "note": "Rainbow Crystals / Seven Great Youma device is anime-original; manga's mid-arc (Tuxedo Mask broadcast, blackout, Silver Crystal race, Acts 6-9) only loosely echoed"
+    },
+    {
+      "episodes": [
+        36,
+        43
+      ],
+      "kind": "loose_parallel",
+      "chapters": "11",
+      "note": "brainwashed/ambiguous-Endymion phase stretches Act 11 Reunion - Endymion across the late season"
+    },
+    {
+      "episodes": [
+        35,
+        44
+      ],
+      "kind": "rearranged",
+      "chapters": "10",
+      "note": "Act 10 split: past-life memories surface in ep 35, the Moon-ruins visit with Queen Serenity is deferred to ep 44"
+    },
+    {
+      "episodes": [
+        45,
+        46
+      ],
+      "kind": "divergence",
+      "chapters": "12-13",
+      "note": "the Guardians' deaths (ep 45) and Usagi's solo duel staging are anime-original; manga's Usagi-kills-Mamoru-and-herself beat is absent"
+    },
+    {
+      "episodes": [
+        61,
+        77
+      ],
+      "kind": "divergence",
+      "chapters": "15-19",
+      "note": "Mamoru's visions/breakup subplot is an anime-original overlay across the Black Moon episodes"
+    },
+    {
+      "episodes": [
+        70,
+        74
+      ],
+      "kind": "abridged",
+      "chapters": "15-18",
+      "note": "Spectre Sisters block: manga's serial abductions of Mars/Mercury/Jupiter condensed into one mass abduction (ep 73); anime redeems the sisters, manga kills them"
+    },
+    {
+      "episodes": [
+        86,
+        88
+      ],
+      "kind": "divergence",
+      "chapters": "23-26",
+      "note": "Saphir's defection/death subplot is largely anime-original; the finale omits Sailor Chibi Moon's manga debut and Sailor Pluto's death (Act 25)"
+    },
+    {
+      "episodes": [
+        101,
+        118
+      ],
+      "kind": "divergence",
+      "chapters": "28-33",
+      "note": "pure-heart crystals, the talisman hunt and the Grail quest are anime-original devices over Infinity's midsection (manga talismans are the outers' own weapons)"
+    },
+    {
+      "episodes": [
+        103,
+        104
+      ],
+      "kind": "rearranged",
+      "chapters": "26-27",
+      "note": "Chibiusa's return and Sailor Chibi Moon's presence sit at Black Moon's epilogue / Infinity's start in the manga; the anime defers them to mid-S"
+    },
+    {
+      "episodes": [
+        113,
+        118
+      ],
+      "kind": "rearranged",
+      "chapters": "27-29",
+      "note": "Hotaru is introduced at Infinity's opening in the manga, mid-season in the anime"
+    },
+    {
+      "episodes": [
+        129,
+        163
+      ],
+      "kind": "loose_parallel",
+      "chapters": "40-47",
+      "note": "dream-mirror victim-of-the-week structure is anime-original; the manga's per-senshi Dream acts (40-43) have no true episode counterparts, and the outer Guardians - central to the manga arc - never appear in SuperS"
+    },
+    {
+      "episodes": [
+        133,
+        133
+      ],
+      "kind": "rearranged",
+      "chapters": "20",
+      "note": "Diana's debut; the manga introduces her in 30th-century Crystal Tokyo during Black Moon"
+    },
+    {
+      "episodes": [
+        148,
+        150
+      ],
+      "kind": "divergence",
+      "chapters": "40-42",
+      "note": "Amazon Trio endgame (humanity, sacrifice) is anime-original; the manga dispatches the Trio inside Acts 40-42"
+    },
+    {
+      "episodes": [
+        174,
+        192
+      ],
+      "kind": "loose_parallel",
+      "chapters": "51-54",
+      "note": "idol-life / Animamates-of-the-week structure is anime-original; only landmark beats track the manga"
+    },
+    {
+      "episodes": [
+        193,
+        200
+      ],
+      "kind": "divergence",
+      "chapters": "55-60",
+      "note": "anime replaces the manga's Galaxy Cauldron journey (Sagittarius Zero Star, Lethe/Mnemosyne, Chaos, Sailor Cosmos) with an Earth-bound finale; deaths compressed and reordered; Chibi Chibi's identity changed (manga: Sailor Cosmos guise; anime: Galaxia's star seed / light of hope)"
+    }
+  ],
+  "type_corrections": [
+    {
+      "episodes": [
+        167,
+        168,
+        169,
+        170,
+        171,
+        172
+      ],
+      "type": "anime-only-canon",
+      "note": "Nehelenia-revival arc is an anime-original continuation of SuperS's villain (Wikipedia: 'anime-original storyline'; fandom season page: continues the 4th season's story; manga Acts 50-52 open the Stars arc with Mamoru's departure and the Starlights - no Nehelenia revival). AFL's 'Manga Canon' typing here is wrong - a concrete AFL discredit instance.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Sailor_Moon_Sailor_Stars",
+        "https://sailormoon.fandom.com/wiki/Pretty_Guardian_Sailor_Moon_Sailor_Stars_(anime_season)",
+        "https://sailormoon.fandom.com/wiki/Act_50_Stars_1",
+        "https://www.animefillerlist.com/shows/sailor-moon"
+      ]
+    }
+  ],
+  "repairs": [],
+  "structure": {
+    "notes": "NUMBERING: our chapter space 1-60 = the unified 'renewal' act numbering (introduced with the 2003-04 shinsoban, kept by kanzenban/Eternal/Kodansha USA, used by en-Wikipedia's chapter list and sailormoon.fandom.com) - identity mapping to our chapters, so no conversion was needed for any source used here. The original 1992-97 tankobon numbered the same content as 52 acts (8 long acts later split, e.g. original Act 24 = renewal Act 27); beware old sources (WikiMoon-era) that still use 52-act numbers. ARC SPANS (renewal numbering): Dark Kingdom 1-14, Black Moon 15-26, Infinity 27-38, Dream 39-49, Stars 50-60. SEASON MAP: S1 eps 1-46 <- Dark Kingdom; R eps 47-89 (47-59 anime-original Makai Tree, 60-88 <- Black Moon, 89 filler); S eps 90-127 <- Infinity; SuperS eps 128-166 <- Dream; Stars eps 167-200 (167-172 anime-original Nehelenia revival, 173-200 <- Stars). VOLUMES: our volume_boundaries follow the ORIGINAL 18-volume packaging carrying renewal act numbers (per en-WP chapter list): v1 1-5, v2 6-9, v3 10-13, v4 14-17, v5 18-20, v6 21-24, v7 25-27, v8 28-31, v9 32-35, v10 36-38, v11 side stories only (no mainline acts - MU's 'skips Vol 11' note), v12 39-41, v13 42-43 (+3 side stories), v14 44-46, v15 47-49, v16 50-52, v17 53-55, v18 56-60. STRUCTURE VERDICT: no per-episode chapter source exists for this show; the anime is a loose-parallel adaptation everywhere except the landmark beats anchored above, so chapter-level interpolation between checkpoints is unreliable mid-season (worst: S1 25-43, R 61-81, S 94-110, SuperS 129-163, Stars 174-192). The checkpoint lattice + annotations is the honest ceiling of precision; do not present interpolated per-episode chapter numbers as exact for this title.",
+    "order_only": []
+  },
+  "flags_for_sean": [
+    "volume_boundaries rows for manga_anilist_id 30092 are corrupt: v3 end=3 (should be 13), v4 start=4 (14), v6 end=6 (24), v7 start=7 (25), v10 end=11 (38), v11 missing (correct: side-story-only volume, no mainline range), v12 start=12 (39), v15 end=15 (49), v16 start=16 (50). Correct full list is in structure.notes (source: https://en.wikipedia.org/wiki/List_of_Sailor_Moon_chapters).",
+    "flag #706 (count_mismatch, MU vs AniList 61) resolution: the reading edition question is moot for numbering - every renewal-era release (shinsoban 12-vol, kanzenban, Eternal, Kodansha USA) uses the same Act 1-60 numbering our space already matches (ep200->60 v18 checks out); AniList's 61 likely counts one side story; MU 'muLatestChapter 12' is an artifact of MU listing the shinsoban 12-VOLUME packaging, not a chapter count.",
+    "AFL discredit instance: AFL types eps 167-172 'Manga Canon' but the Nehelenia-revival arc is anime-original (Wikipedia + manga Acts 50-52 content) - type_corrections filed as anime-only-canon.",
+    "Recommend surfacing this title as 'loose adaptation - checkpoint mapping' in the UI: interpolated chapter numbers between anchors would be fiction for the mid-season stretches listed in structure.notes."
+  ]
+}

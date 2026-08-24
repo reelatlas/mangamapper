@@ -1,0 +1,1024 @@
+{
+ "series_id": "hikaru-no-go",
+ "summary": "The 75-episode TV anime is a near-linear ~2-chapters/episode adaptation of Games 1-148 (volumes 1-17, end of the Sai arc); the Hokuto Cup arc (Games 149-189, vols 19-23) was never adapted by the TV series (only the 2004 New Year special covers its lead-in, loosely). The lattice is pinned by ~30 exact episode-title = chapter-title matches (ja.wikipedia episode titles vs the Game kanji titles on hikago.fandom/Wikipedia) plus explicit chapter fields on the wiki's Episode 1-4/75 and Game 27 pages. Two structural wrinkles: Game 51 ('A Place to Return') is adapted out of order as ep 27 (after the G55-57 material), and ep 50 is a Sai-backstory recap/expansion episode adapting no new mainline chapters. The stored ep75 anchor (END 166 v21) is wrong — every source puts the finale at Game 148, v17 (continue reading at Game 149 / vol 19). Filler/mixed typing (64/66 filler, 65/67 mixed) matches animefillerlist exactly.",
+ "anchors": [
+  {
+   "episode": 1,
+   "end_chapter": 2,
+   "start_chapter": 1,
+   "chapters_adapted": "1-2",
+   "volume": 1,
+   "confidence": "high",
+   "note": "Explicit wiki chapter field (Games 1-2); shed/first Akira game",
+   "sources": [
+    "https://hikago.fandom.com/wiki/Episode_01",
+    "https://hikago.fandom.com/wiki/List_of_Chapters"
+   ]
+  },
+  {
+   "episode": 2,
+   "end_chapter": 4,
+   "start_chapter": 3,
+   "chapters_adapted": "3-4",
+   "volume": 1,
+   "confidence": "high",
+   "note": "Explicit wiki field (Games 3-4); ch4 split across eps 2-3 (also listed on ep3)",
+   "sources": [
+    "https://hikago.fandom.com/wiki/Episode_02",
+    "https://hikago.fandom.com/wiki/List_of_Chapters"
+   ]
+  },
+  {
+   "episode": 3,
+   "end_chapter": 6,
+   "start_chapter": 4,
+   "chapters_adapted": "4-6",
+   "volume": 1,
+   "confidence": "high",
+   "note": "Explicit wiki field (Games 4-6); G5 'Akira Bares His Fangs' = ep title exact",
+   "sources": [
+    "https://hikago.fandom.com/wiki/Episode_03",
+    "https://hikago.fandom.com/wiki/List_of_Chapters"
+   ]
+  },
+  {
+   "episode": 4,
+   "end_chapter": 8,
+   "start_chapter": 7,
+   "chapters_adapted": "7-8",
+   "volume": 2,
+   "confidence": "high",
+   "note": "Explicit wiki field (Games 7-8); Kaga/festival match = G8 'Want Me to Lose?'",
+   "sources": [
+    "https://hikago.fandom.com/wiki/Episode_04",
+    "https://hikago.fandom.com/wiki/List_of_Chapters"
+   ]
+  },
+  {
+   "episode": 5,
+   "end_chapter": 11,
+   "start_chapter": 9,
+   "chapters_adapted": "9-11",
+   "volume": 2,
+   "confidence": "high",
+   "note": "G11 kanji 覚醒の予感 = ep5 ja title exact; picks up from ep4's explicit END 8",
+   "sources": [
+    "https://ja.wikipedia.org/wiki/%E3%83%92%E3%82%AB%E3%83%AB%E3%81%AE%E7%A2%81_(%E3%82%A2%E3%83%8B%E3%83%A1)",
+    "https://hikago.fandom.com/wiki/List_of_Chapters",
+    "https://hikago.fandom.com/wiki/Episode_05"
+   ]
+  },
+  {
+   "episode": 6,
+   "end_chapter": 12,
+   "start_chapter": 12,
+   "chapters_adapted": "12",
+   "volume": 2,
+   "confidence": "medium",
+   "note": "Single chapter between pinned neighbors (ep5 END 11, ep7 = G13); tournament finals/forfeit = G12",
+   "sources": [
+    "https://hikago.fandom.com/wiki/Episode_06",
+    "https://hikago.fandom.com/wiki/List_of_Chapters"
+   ]
+  },
+  {
+   "episode": 7,
+   "end_chapter": 14,
+   "start_chapter": 13,
+   "chapters_adapted": "13-14",
+   "volume": 2,
+   "confidence": "medium",
+   "note": "G13 おまえとは打たない = ep7 ja title exact; END 14 from linear rate to pinned ep8",
+   "sources": [
+    "https://ja.wikipedia.org/wiki/%E3%83%92%E3%82%AB%E3%83%AB%E3%81%AE%E7%A2%81_(%E3%82%A2%E3%83%8B%E3%83%A1)",
+    "https://hikago.fandom.com/wiki/List_of_Chapters"
+   ]
+  },
+  {
+   "episode": 8,
+   "end_chapter": 16,
+   "start_chapter": 15,
+   "chapters_adapted": "15-16",
+   "volume": 2,
+   "confidence": "high",
+   "note": "G15 'Mirror Go' (Okumura) + G16 'Conspiracy on a Rainy Day' ~ ep8 雨の中の策略; ep9 opens G17",
+   "sources": [
+    "https://ja.wikipedia.org/wiki/%E3%83%92%E3%82%AB%E3%83%AB%E3%81%AE%E7%A2%81_(%E3%82%A2%E3%83%8B%E3%83%A1)",
+    "https://hikago.fandom.com/wiki/List_of_Chapters",
+    "https://hikago.fandom.com/wiki/Episode_08"
+   ]
+  },
+  {
+   "episode": 9,
+   "end_chapter": 18,
+   "start_chapter": 17,
+   "chapters_adapted": "17-18",
+   "volume": 3,
+   "confidence": "medium",
+   "note": "Blindfold-go fallout = G17-18 ('Leave the Go Club!'/'If Only You Weren't Here' ~ 'Eyesore')",
+   "sources": [
+    "https://hikago.fandom.com/wiki/Episode_09",
+    "https://hikago.fandom.com/wiki/List_of_Chapters"
+   ]
+  },
+  {
+   "episode": 10,
+   "end_chapter": 20,
+   "start_chapter": 19,
+   "chapters_adapted": "19-20",
+   "volume": 3,
+   "confidence": "high",
+   "note": "G20 3人目のメンバー = ep10 ja title exact; Mitani intro G19-20",
+   "sources": [
+    "https://ja.wikipedia.org/wiki/%E3%83%92%E3%82%AB%E3%83%AB%E3%81%AE%E7%A2%81_(%E3%82%A2%E3%83%8B%E3%83%A1)",
+    "https://hikago.fandom.com/wiki/List_of_Chapters"
+   ]
+  },
+  {
+   "episode": 11,
+   "end_chapter": 21,
+   "start_chapter": 21,
+   "chapters_adapted": "21",
+   "volume": 3,
+   "confidence": "medium",
+   "note": "G21 最も卑劣な行為 = ep11 title exact (Dake sting); money returned opens ep12, possible tail of G22",
+   "sources": [
+    "https://ja.wikipedia.org/wiki/%E3%83%92%E3%82%AB%E3%83%AB%E3%81%AE%E7%A2%81_(%E3%82%A2%E3%83%8B%E3%83%A1)",
+    "https://hikago.fandom.com/wiki/List_of_Chapters"
+   ]
+  },
+  {
+   "episode": 12,
+   "end_chapter": 24,
+   "start_chapter": 22,
+   "chapters_adapted": "22-24",
+   "volume": 3,
+   "confidence": "medium",
+   "note": "Mitani joins through Kaio lineup = G22-24 ('Kaio's Third' = ep12 ja title 三将はお前だ)",
+   "sources": [
+    "https://ja.wikipedia.org/wiki/%E3%83%92%E3%82%AB%E3%83%AB%E3%81%AE%E7%A2%81_(%E3%82%A2%E3%83%8B%E3%83%A1)",
+    "https://hikago.fandom.com/wiki/List_of_Chapters"
+   ]
+  },
+  {
+   "episode": 13,
+   "end_chapter": 26,
+   "start_chapter": 25,
+   "chapters_adapted": "25-26",
+   "volume": 4,
+   "confidence": "medium",
+   "note": "G25 'Preliminary Scrimmage' + G26 'You Play Him' (Akira takes third board); arc-span between pinned 24 and 27",
+   "sources": [
+    "https://hikago.fandom.com/wiki/Episode_13",
+    "https://hikago.fandom.com/wiki/List_of_Chapters"
+   ]
+  },
+  {
+   "episode": 14,
+   "end_chapter": 28,
+   "start_chapter": 27,
+   "chapters_adapted": "27-28",
+   "volume": 4,
+   "confidence": "high",
+   "note": "G27 page explicitly links episode 14; 3度目の対局 = ep14 ja title exact; G28 'Divine Vision' = mid-match takeover",
+   "sources": [
+    "https://hikago.fandom.com/wiki/Game_27",
+    "https://ja.wikipedia.org/wiki/%E3%83%92%E3%82%AB%E3%83%AB%E3%81%AE%E7%A2%81_(%E3%82%A2%E3%83%8B%E3%83%A1)",
+    "https://hikago.fandom.com/wiki/List_of_Chapters"
+   ]
+  },
+  {
+   "episode": 15,
+   "end_chapter": 30,
+   "start_chapter": 29,
+   "chapters_adapted": "29-30",
+   "volume": 4,
+   "confidence": "medium",
+   "note": "Net-go debut = G29-30 (G30 'Sai' = the handle's debut); sandwiched by pinned 28 and G31=ep16",
+   "sources": [
+    "https://hikago.fandom.com/wiki/Episode_15",
+    "https://hikago.fandom.com/wiki/List_of_Chapters"
+   ]
+  },
+  {
+   "episode": 16,
+   "end_chapter": 32,
+   "start_chapter": 31,
+   "chapters_adapted": "31-32",
+   "volume": 4,
+   "confidence": "high",
+   "note": "G31 'Who is Sai?' = ep16 title exact (saiはだれだ); G32 'He Is Not Sai' = Waya's tournament hunt",
+   "sources": [
+    "https://ja.wikipedia.org/wiki/%E3%83%92%E3%82%AB%E3%83%AB%E3%81%AE%E7%A2%81_(%E3%82%A2%E3%83%8B%E3%83%A1)",
+    "https://hikago.fandom.com/wiki/List_of_Chapters"
+   ]
+  },
+  {
+   "episode": 17,
+   "end_chapter": 34,
+   "start_chapter": 33,
+   "chapters_adapted": "33-34",
+   "volume": 4,
+   "confidence": "high",
+   "note": "G34 追憶の一局 = ep17 ja title exact; G33 'Akira' leads in; ep18 = G35 pins END",
+   "sources": [
+    "https://ja.wikipedia.org/wiki/%E3%83%92%E3%82%AB%E3%83%AB%E3%81%AE%E7%A2%81_(%E3%82%A2%E3%83%8B%E3%83%A1)",
+    "https://hikago.fandom.com/wiki/List_of_Chapters"
+   ]
+  },
+  {
+   "episode": 18,
+   "end_chapter": 36,
+   "start_chapter": 35,
+   "chapters_adapted": "35-36",
+   "volume": 5,
+   "confidence": "high",
+   "note": "G35 'Sai vs. Akira' = ep18 title (アキラ対sai); G36 'Sai's True Identity' = interrogation",
+   "sources": [
+    "https://ja.wikipedia.org/wiki/%E3%83%92%E3%82%AB%E3%83%AB%E3%81%AE%E7%A2%81_(%E3%82%A2%E3%83%8B%E3%83%A1)",
+    "https://hikago.fandom.com/wiki/List_of_Chapters"
+   ]
+  },
+  {
+   "episode": 19,
+   "end_chapter": 38,
+   "start_chapter": 37,
+   "chapters_adapted": "37-38",
+   "volume": 5,
+   "confidence": "medium",
+   "note": "Goban purchase/head-to-head = G37 'Second Semester'-G38; linear between pinned 36 and lattice",
+   "sources": [
+    "https://hikago.fandom.com/wiki/Episode_19",
+    "https://hikago.fandom.com/wiki/List_of_Chapters"
+   ]
+  },
+  {
+   "episode": 20,
+   "end_chapter": 40,
+   "start_chapter": 39,
+   "chapters_adapted": "39-40",
+   "volume": 5,
+   "confidence": "medium",
+   "note": "Kishimoto match & pro resolve = G39 'I Want to Know How Strong You Are'-G40 'Start'",
+   "sources": [
+    "https://hikago.fandom.com/wiki/Episode_20",
+    "https://hikago.fandom.com/wiki/List_of_Chapters"
+   ]
+  },
+  {
+   "episode": 21,
+   "end_chapter": 43,
+   "start_chapter": 41,
+   "chapters_adapted": "41-43",
+   "volume": 5,
+   "confidence": "high",
+   "note": "Simultaneous farewell matches vs club = G41-43; END 43 = v5 boundary, pinned by ep22 = G44 exact",
+   "sources": [
+    "https://ja.wikipedia.org/wiki/%E3%83%92%E3%82%AB%E3%83%AB%E3%81%AE%E7%A2%81_(%E3%82%A2%E3%83%8B%E3%83%A1)",
+    "https://hikago.fandom.com/wiki/List_of_Chapters"
+   ]
+  },
+  {
+   "episode": 22,
+   "end_chapter": 46,
+   "start_chapter": 44,
+   "chapters_adapted": "44-46",
+   "volume": 6,
+   "confidence": "high",
+   "note": "G44 院生試験 = ep22 ja title exact; insei first-day losses G45-46; END pinned by ep23 = G47 exact",
+   "sources": [
+    "https://ja.wikipedia.org/wiki/%E3%83%92%E3%82%AB%E3%83%AB%E3%81%AE%E7%A2%81_(%E3%82%A2%E3%83%8B%E3%83%A1)",
+    "https://hikago.fandom.com/wiki/List_of_Chapters"
+   ]
+  },
+  {
+   "episode": 23,
+   "end_chapter": 47,
+   "start_chapter": 47,
+   "chapters_adapted": "47",
+   "volume": 6,
+   "confidence": "high",
+   "note": "G47 幽玄の間 = ep23 ja title exact; Oza match itself starts ep24 (any G48 head is a leading tail)",
+   "sources": [
+    "https://ja.wikipedia.org/wiki/%E3%83%92%E3%82%AB%E3%83%AB%E3%81%AE%E7%A2%81_(%E3%82%A2%E3%83%8B%E3%83%A1)",
+    "https://hikago.fandom.com/wiki/List_of_Chapters"
+   ]
+  },
+  {
+   "episode": 24,
+   "end_chapter": 50,
+   "start_chapter": 48,
+   "chapters_adapted": "48-50",
+   "volume": 6,
+   "confidence": "high",
+   "note": "Ep24 ja title 王座VSアキラ = G48-50 王座vsアキラ 1-3 exact; loss to Oza completes G50",
+   "sources": [
+    "https://ja.wikipedia.org/wiki/%E3%83%92%E3%82%AB%E3%83%AB%E3%81%AE%E7%A2%81_(%E3%82%A2%E3%83%8B%E3%83%A1)",
+    "https://hikago.fandom.com/wiki/List_of_Chapters"
+   ]
+  },
+  {
+   "episode": 25,
+   "end_chapter": 54,
+   "start_chapter": 52,
+   "chapters_adapted": "52-54",
+   "volume": 7,
+   "confidence": "medium",
+   "note": "Slump/fear arc = G52-54; G51 is skipped here (adapted later in ep27 — see rearranged annotation)",
+   "sources": [
+    "https://hikago.fandom.com/wiki/Episode_25",
+    "https://hikago.fandom.com/wiki/List_of_Chapters"
+   ]
+  },
+  {
+   "episode": 26,
+   "end_chapter": 57,
+   "start_chapter": 55,
+   "chapters_adapted": "55-57",
+   "volume": 7,
+   "confidence": "medium",
+   "note": "G55 ようこそ1組へ = ep26 ja title exact (A-League promotion); G56 'Sai's Student' = Waya net-go talk; G57 leads to Young Lions",
+   "sources": [
+    "https://ja.wikipedia.org/wiki/%E3%83%92%E3%82%AB%E3%83%AB%E3%81%AE%E7%A2%81_(%E3%82%A2%E3%83%8B%E3%83%A1)",
+    "https://hikago.fandom.com/wiki/List_of_Chapters"
+   ]
+  },
+  {
+   "episode": 27,
+   "end_chapter": 51,
+   "start_chapter": 51,
+   "chapters_adapted": "51",
+   "volume": 6,
+   "confidence": "high",
+   "note": "Ep27 ja title 時々戻りたい場所 = G51 時々もどりたい場所 exact — G51 adapted out of manga order (see annotation)",
+   "sources": [
+    "https://ja.wikipedia.org/wiki/%E3%83%92%E3%82%AB%E3%83%AB%E3%81%AE%E7%A2%81_(%E3%82%A2%E3%83%8B%E3%83%A1)",
+    "https://hikago.fandom.com/wiki/List_of_Chapters",
+    "https://hikago.fandom.com/wiki/Game_51"
+   ]
+  },
+  {
+   "episode": 28,
+   "end_chapter": 59,
+   "start_chapter": 58,
+   "chapters_adapted": "58-59",
+   "volume": 7,
+   "confidence": "medium",
+   "note": "G58 若獅子戦 = ep28 ja title exact; G59 'Toya Looks Back' tails the tournament day",
+   "sources": [
+    "https://ja.wikipedia.org/wiki/%E3%83%92%E3%82%AB%E3%83%AB%E3%81%AE%E7%A2%81_(%E3%82%A2%E3%83%8B%E3%83%A1)",
+    "https://hikago.fandom.com/wiki/List_of_Chapters"
+   ]
+  },
+  {
+   "episode": 29,
+   "end_chapter": 61,
+   "start_chapter": 60,
+   "chapters_adapted": "60-61",
+   "volume": 8,
+   "confidence": "high",
+   "note": "G61 桑原本因坊 = ep29 ja title exact; G60 'The Pro Test Approaches!'; ep30 opens with G62 Kadowaki game",
+   "sources": [
+    "https://ja.wikipedia.org/wiki/%E3%83%92%E3%82%AB%E3%83%AB%E3%81%AE%E7%A2%81_(%E3%82%A2%E3%83%8B%E3%83%A1)",
+    "https://hikago.fandom.com/wiki/List_of_Chapters"
+   ]
+  },
+  {
+   "episode": 30,
+   "end_chapter": 63,
+   "start_chapter": 62,
+   "chapters_adapted": "62-63",
+   "volume": 8,
+   "confidence": "medium",
+   "note": "Sai vs Kadowaki = G62 'A Chance to Play'; Ogata-Kuwabara series = G63",
+   "sources": [
+    "https://hikago.fandom.com/wiki/Episode_30",
+    "https://hikago.fandom.com/wiki/List_of_Chapters"
+   ]
+  },
+  {
+   "episode": 31,
+   "end_chapter": 65,
+   "start_chapter": 64,
+   "chapters_adapted": "64-65",
+   "volume": 8,
+   "confidence": "medium",
+   "note": "Pro-exam prelims day 1 vs Tsubaki = G64 'The Man with the Beard' + G65 'Aim for Three Wins'",
+   "sources": [
+    "https://hikago.fandom.com/wiki/Episode_31",
+    "https://hikago.fandom.com/wiki/List_of_Chapters"
+   ]
+  },
+  {
+   "episode": 32,
+   "end_chapter": 68,
+   "start_chapter": 66,
+   "chapters_adapted": "66-68",
+   "volume": 8,
+   "confidence": "high",
+   "note": "Prelims days 2-4 = G66-68 (titles match days exactly); END pinned by ep33 = G69 exact",
+   "sources": [
+    "https://ja.wikipedia.org/wiki/%E3%83%92%E3%82%AB%E3%83%AB%E3%81%AE%E7%A2%81_(%E3%82%A2%E3%83%8B%E3%83%A1)",
+    "https://hikago.fandom.com/wiki/List_of_Chapters"
+   ]
+  },
+  {
+   "episode": 33,
+   "end_chapter": 70,
+   "start_chapter": 69,
+   "chapters_adapted": "69-70",
+   "volume": 9,
+   "confidence": "high",
+   "note": "G69 'The Team' = ep33 ja title チーム結成! exact; salon battles = G70 'Training Is Fun!!'",
+   "sources": [
+    "https://ja.wikipedia.org/wiki/%E3%83%92%E3%82%AB%E3%83%AB%E3%81%AE%E7%A2%81_(%E3%82%A2%E3%83%8B%E3%83%A1)",
+    "https://hikago.fandom.com/wiki/List_of_Chapters"
+   ]
+  },
+  {
+   "episode": 34,
+   "end_chapter": 72,
+   "start_chapter": 71,
+   "chapters_adapted": "71-72",
+   "volume": 9,
+   "confidence": "high",
+   "note": "G71 勝ってはならない = ep34 ja title exact; four simultaneous draws = G72 'A Four-way Challenge'",
+   "sources": [
+    "https://ja.wikipedia.org/wiki/%E3%83%92%E3%82%AB%E3%83%AB%E3%81%AE%E7%A2%81_(%E3%82%A2%E3%83%8B%E3%83%A1)",
+    "https://hikago.fandom.com/wiki/List_of_Chapters"
+   ]
+  },
+  {
+   "episode": 35,
+   "end_chapter": 75,
+   "start_chapter": 73,
+   "chapters_adapted": "73-75",
+   "volume": 9,
+   "confidence": "high",
+   "note": "G75 勝者は1人 = ep35 ja title 勝者はひとり exact; Korean salon/Suyong = G73-74; ep36 = G76 pins END",
+   "sources": [
+    "https://ja.wikipedia.org/wiki/%E3%83%92%E3%82%AB%E3%83%AB%E3%81%AE%E7%A2%81_(%E3%82%A2%E3%83%8B%E3%83%A1)",
+    "https://hikago.fandom.com/wiki/List_of_Chapters"
+   ]
+  },
+  {
+   "episode": 36,
+   "end_chapter": 76,
+   "start_chapter": 76,
+   "chapters_adapted": "76",
+   "volume": 9,
+   "confidence": "high",
+   "note": "G76 オレの名は = ep36 ja title exact (single chapter: Suyong match resolution); ep37 = G77 exact",
+   "sources": [
+    "https://ja.wikipedia.org/wiki/%E3%83%92%E3%82%AB%E3%83%AB%E3%81%AE%E7%A2%81_(%E3%82%A2%E3%83%8B%E3%83%A1)",
+    "https://hikago.fandom.com/wiki/List_of_Chapters",
+    "https://en.wikipedia.org/wiki/List_of_Hikaru_no_Go_chapters"
+   ]
+  },
+  {
+   "episode": 37,
+   "end_chapter": 78,
+   "start_chapter": 77,
+   "chapters_adapted": "77-78",
+   "volume": 9,
+   "confidence": "high",
+   "note": "G77 本戦開始 = ep37 ja title exact; six-win streak = G78 'Winning Streak'; END 78 = v9 boundary, ep38 opens G79",
+   "sources": [
+    "https://ja.wikipedia.org/wiki/%E3%83%92%E3%82%AB%E3%83%AB%E3%81%AE%E7%A2%81_(%E3%82%A2%E3%83%8B%E3%83%A1)",
+    "https://hikago.fandom.com/wiki/List_of_Chapters"
+   ]
+  },
+  {
+   "episode": 38,
+   "end_chapter": 80,
+   "start_chapter": 79,
+   "chapters_adapted": "79-80",
+   "volume": 10,
+   "confidence": "medium",
+   "note": "G79 'Hikaru vs. Tsubaki' (lunch-break match) + G80 'A Stand-in'; linear to pinned ep39",
+   "sources": [
+    "https://hikago.fandom.com/wiki/Episode_38",
+    "https://hikago.fandom.com/wiki/List_of_Chapters"
+   ]
+  },
+  {
+   "episode": 39,
+   "end_chapter": 82,
+   "start_chapter": 81,
+   "chapters_adapted": "81-82",
+   "volume": 10,
+   "confidence": "high",
+   "note": "G82 魔の一瞬 = ep39 ja title exact (Isumi's illegal move cliffhanger ends the ep); G81 'An Important Game' sets it up",
+   "sources": [
+    "https://ja.wikipedia.org/wiki/%E3%83%92%E3%82%AB%E3%83%AB%E3%81%AE%E7%A2%81_(%E3%82%A2%E3%83%8B%E3%83%A1)",
+    "https://hikago.fandom.com/wiki/List_of_Chapters"
+   ]
+  },
+  {
+   "episode": 40,
+   "end_chapter": 84,
+   "start_chapter": 83,
+   "chapters_adapted": "83-84",
+   "volume": 10,
+   "confidence": "medium",
+   "note": "Isumi's resignation = G83 'The Elusive Win'; G84 covers the Waya/Ochi day; arc-span 2/ep",
+   "sources": [
+    "https://hikago.fandom.com/wiki/Episode_40",
+    "https://hikago.fandom.com/wiki/List_of_Chapters"
+   ]
+  },
+  {
+   "episode": 41,
+   "end_chapter": 86,
+   "start_chapter": 85,
+   "chapters_adapted": "85-86",
+   "volume": 10,
+   "confidence": "medium",
+   "note": "Isumi beats Ochi (G85 'Lifeline'); Akira replays Suyong game ~ G86-87 — boundary could sit one chapter later",
+   "sources": [
+    "https://hikago.fandom.com/wiki/Episode_41",
+    "https://hikago.fandom.com/wiki/List_of_Chapters"
+   ]
+  },
+  {
+   "episode": 42,
+   "end_chapter": 88,
+   "start_chapter": 87,
+   "chapters_adapted": "87-88",
+   "volume": 11,
+   "confidence": "high",
+   "note": "G88 1人目の合格者 = ep42 ja title 一人目の合格者 exact (Ochi passes); G87 'Who Played Black?' = Akira's replay reveal",
+   "sources": [
+    "https://ja.wikipedia.org/wiki/%E3%83%92%E3%82%AB%E3%83%AB%E3%81%AE%E7%A2%81_(%E3%82%A2%E3%83%8B%E3%83%A1)",
+    "https://hikago.fandom.com/wiki/List_of_Chapters",
+    "https://en.wikipedia.org/wiki/List_of_Hikaru_no_Go_chapters"
+   ]
+  },
+  {
+   "episode": 43,
+   "end_chapter": 90,
+   "start_chapter": 89,
+   "chapters_adapted": "89-90",
+   "volume": 11,
+   "confidence": "medium",
+   "note": "Day 26 Hikaru vs Waya = G89-90 ('Together Always'/'Become One of Us'); linear between pinned 88 and 92-content",
+   "sources": [
+    "https://hikago.fandom.com/wiki/Episode_43",
+    "https://hikago.fandom.com/wiki/List_of_Chapters"
+   ]
+  },
+  {
+   "episode": 44,
+   "end_chapter": 92,
+   "start_chapter": 91,
+   "chapters_adapted": "91-92",
+   "volume": 11,
+   "confidence": "high",
+   "note": "Waya's loss = G91 'I Resign'; Akira urging Ochi = G92 'Beat Shindo!' — both content-exact",
+   "sources": [
+    "https://hikago.fandom.com/wiki/Episode_44",
+    "https://hikago.fandom.com/wiki/List_of_Chapters"
+   ]
+  },
+  {
+   "episode": 45,
+   "end_chapter": 94,
+   "start_chapter": 93,
+   "chapters_adapted": "93-94",
+   "volume": 11,
+   "confidence": "medium",
+   "note": "Hikaru vs Ochi = G93 'The Final Match of the Pro Test' + G94 'A Fierce Battle'",
+   "sources": [
+    "https://hikago.fandom.com/wiki/Episode_45",
+    "https://hikago.fandom.com/wiki/List_of_Chapters"
+   ]
+  },
+  {
+   "episode": 46,
+   "end_chapter": 96,
+   "start_chapter": 95,
+   "chapters_adapted": "95-96",
+   "volume": 11,
+   "confidence": "high",
+   "note": "Both pass = G95 'The Second Player to Pass' + G96 'Finally!'; END 96 = v11 boundary; ep47 opens G97",
+   "sources": [
+    "https://hikago.fandom.com/wiki/Episode_46",
+    "https://hikago.fandom.com/wiki/List_of_Chapters",
+    "https://en.wikipedia.org/wiki/List_of_Hikaru_no_Go_chapters"
+   ]
+  },
+  {
+   "episode": 47,
+   "end_chapter": 98,
+   "start_chapter": 97,
+   "chapters_adapted": "97-98",
+   "volume": 12,
+   "confidence": "high",
+   "note": "Magazine feature = G97 'The Awaiting Pros'; G98 'The Shinshodan Series' names the ep's premise",
+   "sources": [
+    "https://hikago.fandom.com/wiki/Episode_47",
+    "https://hikago.fandom.com/wiki/List_of_Chapters"
+   ]
+  },
+  {
+   "episode": 48,
+   "end_chapter": 100,
+   "start_chapter": 99,
+   "chapters_adapted": "99-100",
+   "volume": 12,
+   "confidence": "medium",
+   "note": "Sai asks to play the Meijin = G99 'I'll Play'; handicap-style decision through G100",
+   "sources": [
+    "https://hikago.fandom.com/wiki/Episode_48",
+    "https://hikago.fandom.com/wiki/List_of_Chapters"
+   ]
+  },
+  {
+   "episode": 49,
+   "end_chapter": 102,
+   "start_chapter": 101,
+   "chapters_adapted": "101-102",
+   "volume": 12,
+   "confidence": "medium",
+   "note": "The shinshodan game = G101 'A Game Most Transparent'; Toya's future-rematch request = G102 'Rematch' (ep49 ja 捨て身の一局)",
+   "sources": [
+    "https://ja.wikipedia.org/wiki/%E3%83%92%E3%82%AB%E3%83%AB%E3%81%AE%E7%A2%81_(%E3%82%A2%E3%83%8B%E3%83%A1)",
+    "https://hikago.fandom.com/wiki/List_of_Chapters"
+   ]
+  },
+  {
+   "episode": 51,
+   "end_chapter": 104,
+   "start_chapter": 103,
+   "chapters_adapted": "103-104",
+   "volume": 12,
+   "confidence": "high",
+   "note": "Board-forgery event = G103 'Forgery'; G104 倉田六段 = ep51 ja title exact",
+   "sources": [
+    "https://ja.wikipedia.org/wiki/%E3%83%92%E3%82%AB%E3%83%AB%E3%81%AE%E7%A2%81_(%E3%82%A2%E3%83%8B%E3%83%A1)",
+    "https://hikago.fandom.com/wiki/List_of_Chapters"
+   ]
+  },
+  {
+   "episode": 52,
+   "end_chapter": 106,
+   "start_chapter": 105,
+   "chapters_adapted": "105-106",
+   "volume": 13,
+   "confidence": "medium",
+   "note": "First official pro pairing vs Akira = G105 'First Professional Match' + G106 'Pressure'",
+   "sources": [
+    "https://hikago.fandom.com/wiki/Episode_52",
+    "https://hikago.fandom.com/wiki/List_of_Chapters"
+   ]
+  },
+  {
+   "episode": 53,
+   "end_chapter": 109,
+   "start_chapter": 107,
+   "chapters_adapted": "107-109",
+   "volume": 13,
+   "confidence": "medium",
+   "note": "G107 'Confession' = ep53 ja title saiの告白; hospital + net-match arrangement = G108-109",
+   "sources": [
+    "https://ja.wikipedia.org/wiki/%E3%83%92%E3%82%AB%E3%83%AB%E3%81%AE%E7%A2%81_(%E3%82%A2%E3%83%8B%E3%83%A1)",
+    "https://hikago.fandom.com/wiki/List_of_Chapters"
+   ]
+  },
+  {
+   "episode": 54,
+   "end_chapter": 111,
+   "start_chapter": 110,
+   "chapters_adapted": "110-111",
+   "volume": 13,
+   "confidence": "high",
+   "note": "G110 'Mounting Excitement' = ep54 title exact (たかぶる心); sai's reappearance online = G111 'The Return of Sai'",
+   "sources": [
+    "https://ja.wikipedia.org/wiki/%E3%83%92%E3%82%AB%E3%83%AB%E3%81%AE%E7%A2%81_(%E3%82%A2%E3%83%8B%E3%83%A1)",
+    "https://hikago.fandom.com/wiki/List_of_Chapters"
+   ]
+  },
+  {
+   "episode": 55,
+   "end_chapter": 113,
+   "start_chapter": 112,
+   "chapters_adapted": "112-113",
+   "volume": 13,
+   "confidence": "high",
+   "note": "Sai vs Toya Koyo Parts I-II (G112-113); END 113 = v13 boundary; parts III-IV are ep56",
+   "sources": [
+    "https://ja.wikipedia.org/wiki/%E3%83%92%E3%82%AB%E3%83%AB%E3%81%AE%E7%A2%81_(%E3%82%A2%E3%83%8B%E3%83%A1)",
+    "https://hikago.fandom.com/wiki/List_of_Chapters",
+    "https://en.wikipedia.org/wiki/List_of_Hikaru_no_Go_chapters"
+   ]
+  },
+  {
+   "episode": 56,
+   "end_chapter": 116,
+   "start_chapter": 114,
+   "chapters_adapted": "114-116",
+   "volume": 14,
+   "confidence": "high",
+   "note": "Parts III-IV (G114-115) + G116 'One Thousand Years' = ep56 ja title 千年の答え; Toya resigns",
+   "sources": [
+    "https://ja.wikipedia.org/wiki/%E3%83%92%E3%82%AB%E3%83%AB%E3%81%AE%E7%A2%81_(%E3%82%A2%E3%83%8B%E3%83%A1)",
+    "https://hikago.fandom.com/wiki/List_of_Chapters"
+   ]
+  },
+  {
+   "episode": 57,
+   "end_chapter": 118,
+   "start_chapter": 117,
+   "chapters_adapted": "117-118",
+   "volume": 14,
+   "confidence": "medium",
+   "note": "Ogata's interrogation = G117 'Discovered' + G118 'Pursued'",
+   "sources": [
+    "https://hikago.fandom.com/wiki/Episode_57",
+    "https://hikago.fandom.com/wiki/List_of_Chapters"
+   ]
+  },
+  {
+   "episode": 58,
+   "end_chapter": 120,
+   "start_chapter": 119,
+   "chapters_adapted": "119-120",
+   "volume": 14,
+   "confidence": "high",
+   "note": "G119 'A Test of Strength' + G120 一色碁 = ep58 ja title exact (Kurata one-color go); ep59 = G121 pins END",
+   "sources": [
+    "https://ja.wikipedia.org/wiki/%E3%83%92%E3%82%AB%E3%83%AB%E3%81%AE%E7%A2%81_(%E3%82%A2%E3%83%8B%E3%83%A1)",
+    "https://hikago.fandom.com/wiki/List_of_Chapters"
+   ]
+  },
+  {
+   "episode": 59,
+   "end_chapter": 122,
+   "start_chapter": 121,
+   "chapters_adapted": "121-122",
+   "volume": 15,
+   "confidence": "medium",
+   "note": "G121 塔矢行洋引退! = ep59 ja title exact; Miyashima match/shed raid spill into G122 — 121/122 boundary soft vs ep60",
+   "sources": [
+    "https://ja.wikipedia.org/wiki/%E3%83%92%E3%82%AB%E3%83%AB%E3%81%AE%E7%A2%81_(%E3%82%A2%E3%83%8B%E3%83%A1)",
+    "https://hikago.fandom.com/wiki/List_of_Chapters",
+    "https://en.wikipedia.org/wiki/List_of_Hikaru_no_Go_chapters"
+   ]
+  },
+  {
+   "episode": 60,
+   "end_chapter": 124,
+   "start_chapter": 123,
+   "chapters_adapted": "123-124",
+   "volume": 15,
+   "confidence": "medium",
+   "note": "Sai's last game and farewell: ep60 ja さよならヒカル ~ G124 'Goodbye'; G123 'I Do Not Wish to Disappear!!!'",
+   "sources": [
+    "https://ja.wikipedia.org/wiki/%E3%83%92%E3%82%AB%E3%83%AB%E3%81%AE%E7%A2%81_(%E3%82%A2%E3%83%8B%E3%83%A1)",
+    "https://hikago.fandom.com/wiki/List_of_Chapters"
+   ]
+  },
+  {
+   "episode": 61,
+   "end_chapter": 126,
+   "start_chapter": 125,
+   "chapters_adapted": "125-126",
+   "volume": 15,
+   "confidence": "medium",
+   "note": "Ep61 ja 佐為が消えた? ~ G125 'Sai Disappears'; Innoshima search = G126 'Searching for Sai'",
+   "sources": [
+    "https://ja.wikipedia.org/wiki/%E3%83%92%E3%82%AB%E3%83%AB%E3%81%AE%E7%A2%81_(%E3%82%A2%E3%83%8B%E3%83%A1)",
+    "https://hikago.fandom.com/wiki/List_of_Chapters"
+   ]
+  },
+  {
+   "episode": 62,
+   "end_chapter": 128,
+   "start_chapter": 127,
+   "chapters_adapted": "127-128",
+   "volume": 15,
+   "confidence": "high",
+   "note": "G127 広島最強棋士 'Hiroshima's Top Go Player' = ep62 title exact; Tokyo memorial clue = G128 'The Last Clue'",
+   "sources": [
+    "https://ja.wikipedia.org/wiki/%E3%83%92%E3%82%AB%E3%83%AB%E3%81%AE%E7%A2%81_(%E3%82%A2%E3%83%8B%E3%83%A1)",
+    "https://hikago.fandom.com/wiki/List_of_Chapters"
+   ]
+  },
+  {
+   "episode": 63,
+   "end_chapter": 130,
+   "start_chapter": 129,
+   "chapters_adapted": "129-130",
+   "volume": 15,
+   "confidence": "high",
+   "note": "G129 'Come Back!' + G130 'I Will Stop Playing' = ep63 ja title もう打たない; END 130 = v15 boundary",
+   "sources": [
+    "https://ja.wikipedia.org/wiki/%E3%83%92%E3%82%AB%E3%83%AB%E3%81%AE%E7%A2%81_(%E3%82%A2%E3%83%8B%E3%83%A1)",
+    "https://hikago.fandom.com/wiki/List_of_Chapters",
+    "https://en.wikipedia.org/wiki/List_of_Hikaru_no_Go_chapters"
+   ]
+  },
+  {
+   "episode": 65,
+   "end_chapter": 132,
+   "start_chapter": 131,
+   "chapters_adapted": "131-132",
+   "volume": 16,
+   "confidence": "medium",
+   "note": "Mixed ep: canon core = G131 'Chinese Go Institute' + G132 'Le Ping' (Isumi in China), padded with anime-original training scenes",
+   "sources": [
+    "https://hikago.fandom.com/wiki/Episode_65",
+    "https://hikago.fandom.com/wiki/List_of_Chapters",
+    "https://www.animefillerlist.com/shows/hikaru-no-go"
+   ]
+  },
+  {
+   "episode": 67,
+   "end_chapter": 135,
+   "start_chapter": 133,
+   "chapters_adapted": "133-135",
+   "volume": 16,
+   "confidence": "high",
+   "note": "G133 試される伊角 'Isumi Tested' = ep67 ja title exact; G134 'Yang Hai's Advice' + G135 'Isumi vs. Le Ping'; mixed ep with anime-original padding",
+   "sources": [
+    "https://ja.wikipedia.org/wiki/%E3%83%92%E3%82%AB%E3%83%AB%E3%81%AE%E7%A2%81_(%E3%82%A2%E3%83%8B%E3%83%A1)",
+    "https://hikago.fandom.com/wiki/List_of_Chapters",
+    "https://www.animefillerlist.com/shows/hikaru-no-go"
+   ]
+  },
+  {
+   "episode": 68,
+   "end_chapter": 136,
+   "start_chapter": 136,
+   "chapters_adapted": "136",
+   "volume": 16,
+   "confidence": "high",
+   "note": "G136 'Forfeit, Forfeit...' = ep68 ja title 不戦敗 exact (single chapter, pinned both sides by ep67 END 135 and ep69 = G138)",
+   "sources": [
+    "https://ja.wikipedia.org/wiki/%E3%83%92%E3%82%AB%E3%83%AB%E3%81%AE%E7%A2%81_(%E3%82%A2%E3%83%8B%E3%83%A1)",
+    "https://hikago.fandom.com/wiki/List_of_Chapters"
+   ]
+  },
+  {
+   "episode": 69,
+   "end_chapter": 138,
+   "start_chapter": 137,
+   "chapters_adapted": "137-138",
+   "volume": 16,
+   "confidence": "high",
+   "note": "G138 決意の訪問者 'The Visitor' = ep69 ja title exact; Isumi's return rides G137 'The Final Tournament'",
+   "sources": [
+    "https://ja.wikipedia.org/wiki/%E3%83%92%E3%82%AB%E3%83%AB%E3%81%AE%E7%A2%81_(%E3%82%A2%E3%83%8B%E3%83%A1)",
+    "https://hikago.fandom.com/wiki/List_of_Chapters"
+   ]
+  },
+  {
+   "episode": 70,
+   "end_chapter": 140,
+   "start_chapter": 139,
+   "chapters_adapted": "139-140",
+   "volume": 17,
+   "confidence": "high",
+   "note": "Hikaru finds Sai in his own go = G139 'From This Game' + G140 'Resolution'; END pinned by ep71 = G141 exact; crosses v16/v17 boundary",
+   "sources": [
+    "https://ja.wikipedia.org/wiki/%E3%83%92%E3%82%AB%E3%83%AB%E3%81%AE%E7%A2%81_(%E3%82%A2%E3%83%8B%E3%83%A1)",
+    "https://hikago.fandom.com/wiki/List_of_Chapters"
+   ]
+  },
+  {
+   "episode": 71,
+   "end_chapter": 141,
+   "start_chapter": 141,
+   "chapters_adapted": "141",
+   "volume": 17,
+   "confidence": "high",
+   "note": "G141 復帰初戦 'First Return Game' = ep71 ja title exact (single chapter; ep72 = G142 pins END)",
+   "sources": [
+    "https://ja.wikipedia.org/wiki/%E3%83%92%E3%82%AB%E3%83%AB%E3%81%AE%E7%A2%81_(%E3%82%A2%E3%83%8B%E3%83%A1)",
+    "https://hikago.fandom.com/wiki/List_of_Chapters"
+   ]
+  },
+  {
+   "episode": 72,
+   "end_chapter": 143,
+   "start_chapter": 142,
+   "chapters_adapted": "142-143",
+   "volume": 17,
+   "confidence": "medium",
+   "note": "G142 走り出した二人 'The Sprinting Two' = ep72 ja title exact; G143 'Go World Rumblings' (Ogata's Gosei, new wave)",
+   "sources": [
+    "https://ja.wikipedia.org/wiki/%E3%83%92%E3%82%AB%E3%83%AB%E3%81%AE%E7%A2%81_(%E3%82%A2%E3%83%8B%E3%83%A1)",
+    "https://hikago.fandom.com/wiki/List_of_Chapters"
+   ]
+  },
+  {
+   "episode": 73,
+   "end_chapter": 145,
+   "start_chapter": 144,
+   "chapters_adapted": "144-145",
+   "volume": 17,
+   "confidence": "medium",
+   "note": "Match-day buildup = G144 'Finally This Day'; G145 'Hikaru vs. Akira' = ep73 進藤対塔矢",
+   "sources": [
+    "https://ja.wikipedia.org/wiki/%E3%83%92%E3%82%AB%E3%83%AB%E3%81%AE%E7%A2%81_(%E3%82%A2%E3%83%8B%E3%83%A1)",
+    "https://hikago.fandom.com/wiki/List_of_Chapters"
+   ]
+  },
+  {
+   "episode": 74,
+   "end_chapter": 147,
+   "start_chapter": 146,
+   "chapters_adapted": "146-147",
+   "volume": 17,
+   "confidence": "high",
+   "note": "G146 'Hikaru's Go' + G147 'Only I Know' (Akira senses Sai); pinned both sides (ep73 ≥145, ep75 = G148 exact)",
+   "sources": [
+    "https://ja.wikipedia.org/wiki/%E3%83%92%E3%82%AB%E3%83%AB%E3%81%AE%E7%A2%81_(%E3%82%A2%E3%83%8B%E3%83%A1)",
+    "https://hikago.fandom.com/wiki/List_of_Chapters"
+   ]
+  }
+ ],
+ "continue_points": [
+  {
+   "episode": 25,
+   "continue_chapter": 51,
+   "note": "G51 skipped here (anime adapts it later as ep27); earliest not-yet-adapted-but-will-be chapter is 51"
+  },
+  {
+   "episode": 26,
+   "continue_chapter": 51,
+   "note": "G51 still unadapted at this point (comes as ep27)"
+  },
+  {
+   "episode": 27,
+   "continue_chapter": 58,
+   "note": "ep27 backfills G51; G52-57 already adapted in eps 25-26, so honest resume is 58"
+  }
+ ],
+ "annotations": [
+  {
+   "episodes": [
+    27
+   ],
+   "kind": "rearranged",
+   "chapters": "51",
+   "note": "Game 51 (A Place to Return, 時々もどりたい場所) sits between the Oza match and G52 in the manga; the anime airs it as ep27 after the A-League promotion — exact ja title match confirms"
+  },
+  {
+   "episodes": [
+    50
+   ],
+   "kind": "side_story",
+   "chapters": "1 (flashback material)",
+   "note": "'Fujiwara-no-Sai' is a recap/expansion of Sai's Heian backstory (from Game 1 and earlier flashbacks) with anime-original material; no new mainline chapters — position instrument sits between G102 (ep49) and G103 (ep51). Typed canon by animefillerlist, so no type correction; no anchor issued"
+  },
+  {
+   "episodes": [
+    65,
+    67
+   ],
+   "kind": "partial",
+   "chapters": "131-135",
+   "note": "China/Isumi arc (G131-135) stretched across mixed eps 65+67 with anime-original training scenes (hence the 'mixed' typing); fillers 64/66 interleave"
+  }
+ ],
+ "type_corrections": [],
+ "repairs": [
+  {
+   "episode": 75,
+   "field": "end_chapter",
+   "old": 166,
+   "new": 148,
+   "why": "Finale adapts Game 148 'The Nostalgic Smile' (なつかしい笑顔) — exact title match with ep75, explicit chapter field on the wiki's Episode 75 page, and continue-reading sources all say resume at Game 149 / vol 19. END 166 would imply the TV series adapted the Hokuto Cup — it did not (that arc is vols 19-23, touched only by the 2004 special). Old value likely from the divergent MU edition numbering flagged in #673.",
+   "sources": [
+    "https://hikago.fandom.com/wiki/Episode_75",
+    "https://wheredoestheanimeleaveoff.com/where-does-the-hikaru-no-go-anime-end-in-the-manga/",
+    "https://en.wikipedia.org/wiki/List_of_Hikaru_no_Go_chapters",
+    "https://ja.wikipedia.org/wiki/%E3%83%92%E3%82%AB%E3%83%AB%E3%81%AE%E7%A2%81_(%E3%82%A2%E3%83%8B%E3%83%A1)"
+   ]
+  },
+  {
+   "episode": 75,
+   "field": "volume",
+   "old": 21,
+   "new": 17,
+   "why": "Game 148 is the last chapter of volume 17 (both hikago.fandom List_of_Chapters and Wikipedia's chapter list).",
+   "sources": [
+    "https://hikago.fandom.com/wiki/List_of_Chapters",
+    "https://en.wikipedia.org/wiki/List_of_Hikaru_no_Go_chapters"
+   ]
+  }
+ ],
+ "structure": {
+  "notes": "Single 75-ep season, linear adaptation at ~2 chapters/ep covering Games 1-148 = volumes 1-17 exactly (Sai arc). Chapter space = mainline 'Game' numbering 1-189; volume 18 is 6 unnumbered sidestories and volume 23 adds 2 extra chapters — 189+6+2 = 197 matches the AniList chapter count, resolving flag #673 (the reading/anchor edition is the Game 1-189 numbering; never convert sidestories into mainline numbers). Stored volume-boundary rows for v17/v18 are corrupted ('v17: 140-0, v18: 1-148'): true boundaries are v17 = Games 140-148, v18 = Sidestories 1-6 (no mainline chapters). The 2004 New Year special 'Journey to the North Star Cup' (77 min) sits order-only after ep75 and loosely covers the Hokuto Cup lead-in; a reader should still resume at Game 149 / vol 19. Only chapter 4 is split across episodes (eps 2-3, both wiki-listed).",
+  "order_only": [
+   "Hikaru no Go: New Year Special / Journey to the North Star Cup (2004-01-03) — after ep 75; loose partial cover of the Hokuto Cup lead-in, not a mapping instrument"
+  ]
+ },
+ "flags_for_sean": [
+  "Stored volume boundaries v17 ('140-0') and v18 ('1-148') are corrupted — should be v17: 140-148, v18: sidestories 1-6 (no mainline numbers); worth a data heal alongside the ep75 repair.",
+  "Flag #673 resolution: AniList 197 = 189 Games + 6 v18 sidestories + 2 v23 extras; anchors here use Game numbering (1-189). MU's '148' is v17's last game, not the series end.",
+  "Ep 50 given no anchor (recap/expansion, no new mainline chapters) though animefillerlist types it canon — annotation records it; say the word if a pass-through anchor (END 102) is preferred for interpolation continuity.",
+  "Soft boundaries (medium, ±1 chapter): ep41/42 (86|87), ep59/60/61 (121-126 distribution), ep72/73 (143|144). Endpoints of those stretches are pinned by exact title matches."
+ ]
+}

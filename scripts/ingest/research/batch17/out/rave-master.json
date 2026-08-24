@@ -1,0 +1,750 @@
+{
+ "series_id": "rave-master",
+ "summary": "Eps 1-50 adapt manga chs 1-94 at an almost perfectly uniform 2 chapters/episode; the fandom wiki carries per-episode 'Adopted' fields with page splits, and its chapter pages carry a matching reverse mapping (relepisode) for every chapter 1-95, with ch 96 unmapped \u2014 confirming the stored ep51->95 anchor and Wikipedia's 'first 12 volumes / first 95 chapters' statement plus animefillerguide's 'continue from ch 96'. Structure surprises: the anime skips the manga's Garage Island prologue (chs 1-4) and grafts it in as flashbacks across eps 1-5/16/35; eps 39-40 adapt the Knights of Kingdom and RAVE0065 omakes (side stories, no mainline progress); and ep 41, typed filler in our DB and on filler sites, actually adapts ch 74 in full plus padding (type correction to mixed proposed). Eight boundary/title-matched anchors are high confidence via Wikipedia episode-title = chapter-title correlations independent of fandom; the rest are medium (single-wiki forward+reverse agreement inside a gap-free, endpoint-corroborated lattice). Context file's volume boundaries for v9/v10 are corrupted ('65-14'/'15-79'): true boundaries are v9=65-73, v10=74-79 (Wikipedia chapter list + fandom chapter pages) \u2014 the corruption almost certainly comes from omake chapters numbered 0014/0015 in those volumes being parsed as mainline.",
+ "anchors": [
+  {
+   "episode": 1,
+   "end_chapter": 8,
+   "start_chapter": 5,
+   "chapters_adapted": "1 (partial graft: p6, 40-44 flashback), 5, 6, 7, 8 (p1-19)",
+   "volume": 2,
+   "confidence": "medium",
+   "note": "anime opens in medias res at Hip Hop Town (ch 5); ch 1 Garage Island material appears only as flashback slivers",
+   "sources": [
+    "https://ravemaster.fandom.com/wiki/Episode_1",
+    "https://ravemaster.fandom.com/wiki/Chapter_8"
+   ]
+  },
+  {
+   "episode": 2,
+   "end_chapter": 3,
+   "start_chapter": 3,
+   "chapters_adapted": "1 (partial graft: p66-73 flashback), 3 (p10-26), 8 (p20 sliver)",
+   "volume": 1,
+   "confidence": "medium",
+   "note": "mainline progress is ch 3 bulk (Shuda encounter); ch 1 flashback + 1-page ch 8 tail",
+   "sources": [
+    "https://ravemaster.fandom.com/wiki/Episode_2",
+    "https://ravemaster.fandom.com/wiki/Chapter_3"
+   ]
+  },
+  {
+   "episode": 3,
+   "end_chapter": 10,
+   "start_chapter": 9,
+   "chapters_adapted": "1 (partial graft: p10-14), 9, 10",
+   "volume": 2,
+   "confidence": "high",
+   "note": "ep title 'Legendary Blacksmith Musica' = ch 9 'The Legendary Blacksmith' (Wikipedia title match, independent of fandom)",
+   "sources": [
+    "https://ravemaster.fandom.com/wiki/Episode_3",
+    "https://ravemaster.fandom.com/wiki/Chapter_10",
+    "https://en.wikipedia.org/wiki/List_of_Rave_Master_chapters",
+    "https://en.wikipedia.org/wiki/List_of_Rave_Master_episodes"
+   ]
+  },
+  {
+   "episode": 4,
+   "end_chapter": 11,
+   "start_chapter": 11,
+   "chapters_adapted": "1 (graft: p25, 36, 44-65 \u2014 bulk of ch 1 backstory as flashback), 11",
+   "volume": 2,
+   "confidence": "medium",
+   "note": "single mainline chapter; carries the largest ch-1 flashback block",
+   "sources": [
+    "https://ravemaster.fandom.com/wiki/Episode_4",
+    "https://ravemaster.fandom.com/wiki/Chapter_11"
+   ]
+  },
+  {
+   "episode": 5,
+   "end_chapter": 13,
+   "start_chapter": 12,
+   "chapters_adapted": "2 (graft: full, flashback), 12, 13",
+   "volume": 2,
+   "confidence": "medium",
+   "note": "ch 2 (Garage Island) grafted in full as flashback",
+   "sources": [
+    "https://ravemaster.fandom.com/wiki/Episode_5",
+    "https://ravemaster.fandom.com/wiki/Chapter_13"
+   ]
+  },
+  {
+   "episode": 6,
+   "end_chapter": 15,
+   "start_chapter": 14,
+   "chapters_adapted": "14-15",
+   "volume": 3,
+   "confidence": "medium",
+   "note": "fandom fwd (episode page) + reverse (chapter pages) agree; lattice gap-free between independently corroborated boundaries",
+   "sources": [
+    "https://ravemaster.fandom.com/wiki/Episode_6",
+    "https://ravemaster.fandom.com/wiki/Chapter_15"
+   ]
+  },
+  {
+   "episode": 7,
+   "end_chapter": 17,
+   "start_chapter": 16,
+   "chapters_adapted": "15 (last pages), 16, 17 (p1-16)",
+   "volume": 3,
+   "confidence": "medium",
+   "note": "ends mid-ch 17 (p17-20 land in ep 8)",
+   "sources": [
+    "https://ravemaster.fandom.com/wiki/Episode_7",
+    "https://ravemaster.fandom.com/wiki/Chapter_17"
+   ]
+  },
+  {
+   "episode": 8,
+   "end_chapter": 18,
+   "start_chapter": 18,
+   "chapters_adapted": "17 (p17-20), 18 (p1-19)",
+   "volume": 3,
+   "confidence": "medium",
+   "note": "mixed ep: canon core is ch 17 tail + ch 18 bulk; only p20 of 18 remains after (1 page)",
+   "sources": [
+    "https://ravemaster.fandom.com/wiki/Episode_8",
+    "https://ravemaster.fandom.com/wiki/Chapter_18"
+   ]
+  },
+  {
+   "episode": 9,
+   "end_chapter": 19,
+   "start_chapter": 19,
+   "chapters_adapted": "18 (p20 sliver), 19",
+   "volume": 3,
+   "confidence": "high",
+   "note": "ep title 'Plue's Secret' matches ch 19 'Out of the Plue' (Wikipedia title correlation)",
+   "sources": [
+    "https://ravemaster.fandom.com/wiki/Episode_9",
+    "https://ravemaster.fandom.com/wiki/Chapter_19",
+    "https://en.wikipedia.org/wiki/List_of_Rave_Master_chapters",
+    "https://en.wikipedia.org/wiki/List_of_Rave_Master_episodes"
+   ]
+  },
+  {
+   "episode": 10,
+   "end_chapter": 21,
+   "start_chapter": 20,
+   "chapters_adapted": "20-21",
+   "volume": 3,
+   "confidence": "medium",
+   "note": "fandom fwd (episode page) + reverse (chapter pages) agree; lattice gap-free between independently corroborated boundaries",
+   "sources": [
+    "https://ravemaster.fandom.com/wiki/Episode_10",
+    "https://ravemaster.fandom.com/wiki/Chapter_21"
+   ]
+  },
+  {
+   "episode": 11,
+   "end_chapter": 23,
+   "start_chapter": 22,
+   "chapters_adapted": "22-23",
+   "volume": 4,
+   "confidence": "medium",
+   "note": "fandom fwd (episode page) + reverse (chapter pages) agree; lattice gap-free between independently corroborated boundaries",
+   "sources": [
+    "https://ravemaster.fandom.com/wiki/Episode_11",
+    "https://ravemaster.fandom.com/wiki/Chapter_23"
+   ]
+  },
+  {
+   "episode": 12,
+   "end_chapter": 25,
+   "start_chapter": 24,
+   "chapters_adapted": "24-25",
+   "volume": 4,
+   "confidence": "high",
+   "note": "JP ep title 'Last Scene' = ch 24 title 'Last Scene' (Wikipedia both sides) \u2014 Dancing Thunder arc close",
+   "sources": [
+    "https://ravemaster.fandom.com/wiki/Episode_12",
+    "https://ravemaster.fandom.com/wiki/Chapter_25",
+    "https://en.wikipedia.org/wiki/List_of_Rave_Master_chapters",
+    "https://en.wikipedia.org/wiki/List_of_Rave_Master_episodes"
+   ]
+  },
+  {
+   "episode": 13,
+   "end_chapter": 27,
+   "start_chapter": 26,
+   "chapters_adapted": "26-27",
+   "volume": 4,
+   "confidence": "medium",
+   "note": "Shuda arc start; fandom fwd (episode page) + reverse (chapter pages) agree; lattice gap-free between independently corroborated boundaries",
+   "sources": [
+    "https://ravemaster.fandom.com/wiki/Episode_13",
+    "https://ravemaster.fandom.com/wiki/Chapter_27"
+   ]
+  },
+  {
+   "episode": 14,
+   "end_chapter": 29,
+   "start_chapter": 28,
+   "chapters_adapted": "28-29",
+   "volume": 4,
+   "confidence": "medium",
+   "note": "fandom fwd (episode page) + reverse (chapter pages) agree; lattice gap-free between independently corroborated boundaries",
+   "sources": [
+    "https://ravemaster.fandom.com/wiki/Episode_14",
+    "https://ravemaster.fandom.com/wiki/Chapter_29"
+   ]
+  },
+  {
+   "episode": 15,
+   "end_chapter": 31,
+   "start_chapter": 30,
+   "chapters_adapted": "30-31",
+   "volume": 5,
+   "confidence": "medium",
+   "note": "fandom fwd (episode page) + reverse (chapter pages) agree; lattice gap-free between independently corroborated boundaries",
+   "sources": [
+    "https://ravemaster.fandom.com/wiki/Episode_15",
+    "https://ravemaster.fandom.com/wiki/Chapter_31"
+   ]
+  },
+  {
+   "episode": 16,
+   "end_chapter": 33,
+   "start_chapter": 32,
+   "chapters_adapted": "4 (graft: full, flashback), 32, 33",
+   "volume": 5,
+   "confidence": "medium",
+   "note": "ch 4 (Garage Island) grafted in full as flashback",
+   "sources": [
+    "https://ravemaster.fandom.com/wiki/Episode_16",
+    "https://ravemaster.fandom.com/wiki/Chapter_33"
+   ]
+  },
+  {
+   "episode": 17,
+   "end_chapter": 35,
+   "start_chapter": 34,
+   "chapters_adapted": "34-35",
+   "volume": 5,
+   "confidence": "medium",
+   "note": "fandom fwd (episode page) + reverse (chapter pages) agree; lattice gap-free between independently corroborated boundaries",
+   "sources": [
+    "https://ravemaster.fandom.com/wiki/Episode_17",
+    "https://ravemaster.fandom.com/wiki/Chapter_35"
+   ]
+  },
+  {
+   "episode": 18,
+   "end_chapter": 37,
+   "start_chapter": 36,
+   "chapters_adapted": "36-37",
+   "volume": 5,
+   "confidence": "medium",
+   "note": "Shuda arc close; fandom fwd (episode page) + reverse (chapter pages) agree; lattice gap-free between independently corroborated boundaries",
+   "sources": [
+    "https://ravemaster.fandom.com/wiki/Episode_18",
+    "https://ravemaster.fandom.com/wiki/Chapter_37"
+   ]
+  },
+  {
+   "episode": 19,
+   "end_chapter": 39,
+   "start_chapter": 38,
+   "chapters_adapted": "38-39",
+   "volume": 5,
+   "confidence": "medium",
+   "note": "Mystery of Elie arc start; fandom fwd (episode page) + reverse (chapter pages) agree; lattice gap-free between independently corroborated boundaries",
+   "sources": [
+    "https://ravemaster.fandom.com/wiki/Episode_19",
+    "https://ravemaster.fandom.com/wiki/Chapter_39"
+   ]
+  },
+  {
+   "episode": 20,
+   "end_chapter": 41,
+   "start_chapter": 40,
+   "chapters_adapted": "40, 41 (p1-12)",
+   "volume": 6,
+   "confidence": "medium",
+   "note": "ends mid-ch 41 (bulk done, p13-20 in ep 21)",
+   "sources": [
+    "https://ravemaster.fandom.com/wiki/Episode_20",
+    "https://ravemaster.fandom.com/wiki/Chapter_41"
+   ]
+  },
+  {
+   "episode": 21,
+   "end_chapter": 43,
+   "start_chapter": 42,
+   "chapters_adapted": "41 (p13-20), 42, 43 (p1-15)",
+   "volume": 6,
+   "confidence": "medium",
+   "note": "leading ch-41 tail is not the bulk -> START 42; ends mid-ch 43",
+   "sources": [
+    "https://ravemaster.fandom.com/wiki/Episode_21",
+    "https://ravemaster.fandom.com/wiki/Chapter_43"
+   ]
+  },
+  {
+   "episode": 22,
+   "end_chapter": 44,
+   "start_chapter": 44,
+   "chapters_adapted": "43 (p16-19), 44",
+   "volume": 6,
+   "confidence": "medium",
+   "note": "fandom fwd (episode page) + reverse (chapter pages) agree; lattice gap-free between independently corroborated boundaries",
+   "sources": [
+    "https://ravemaster.fandom.com/wiki/Episode_22",
+    "https://ravemaster.fandom.com/wiki/Chapter_44"
+   ]
+  },
+  {
+   "episode": 23,
+   "end_chapter": 46,
+   "start_chapter": 45,
+   "chapters_adapted": "45-46",
+   "volume": 6,
+   "confidence": "high",
+   "note": "ep title 'Etherion Awakens' matches ch 45 'The Trigger of Destruction' Etherion-trigger content (Wikipedia titles)",
+   "sources": [
+    "https://ravemaster.fandom.com/wiki/Episode_23",
+    "https://ravemaster.fandom.com/wiki/Chapter_46",
+    "https://en.wikipedia.org/wiki/List_of_Rave_Master_chapters",
+    "https://en.wikipedia.org/wiki/List_of_Rave_Master_episodes"
+   ]
+  },
+  {
+   "episode": 24,
+   "end_chapter": 47,
+   "start_chapter": 47,
+   "chapters_adapted": "47",
+   "volume": 6,
+   "confidence": "medium",
+   "note": "single chapter",
+   "sources": [
+    "https://ravemaster.fandom.com/wiki/Episode_24",
+    "https://ravemaster.fandom.com/wiki/Chapter_47"
+   ]
+  },
+  {
+   "episode": 25,
+   "end_chapter": 48,
+   "start_chapter": 48,
+   "chapters_adapted": "48",
+   "volume": 7,
+   "confidence": "medium",
+   "note": "single chapter; v7 start",
+   "sources": [
+    "https://ravemaster.fandom.com/wiki/Episode_25",
+    "https://ravemaster.fandom.com/wiki/Chapter_48"
+   ]
+  },
+  {
+   "episode": 26,
+   "end_chapter": 49,
+   "start_chapter": 49,
+   "chapters_adapted": "49",
+   "volume": 7,
+   "confidence": "high",
+   "note": "ep 'Bandits! The Ketsupuri Gang' = ch 49 'Go For It, Jiggle Butt Gang!' (Ketsupuri = Jiggle Butt; Wikipedia title match)",
+   "sources": [
+    "https://ravemaster.fandom.com/wiki/Episode_26",
+    "https://ravemaster.fandom.com/wiki/Chapter_49",
+    "https://en.wikipedia.org/wiki/List_of_Rave_Master_chapters",
+    "https://en.wikipedia.org/wiki/List_of_Rave_Master_episodes"
+   ]
+  },
+  {
+   "episode": 27,
+   "end_chapter": 51,
+   "start_chapter": 50,
+   "chapters_adapted": "50-51",
+   "volume": 7,
+   "confidence": "high",
+   "note": "ep 'The Barrier Capital Rabarrier' = ch 50 'City in the Holy Force Field' (Wikipedia title match) \u2014 Tower of Din arc start",
+   "sources": [
+    "https://ravemaster.fandom.com/wiki/Episode_27",
+    "https://ravemaster.fandom.com/wiki/Chapter_51",
+    "https://en.wikipedia.org/wiki/List_of_Rave_Master_chapters",
+    "https://en.wikipedia.org/wiki/List_of_Rave_Master_episodes"
+   ]
+  },
+  {
+   "episode": 28,
+   "end_chapter": 53,
+   "start_chapter": 52,
+   "chapters_adapted": "52-53",
+   "volume": 7,
+   "confidence": "medium",
+   "note": "fandom fwd (episode page) + reverse (chapter pages) agree; lattice gap-free between independently corroborated boundaries",
+   "sources": [
+    "https://ravemaster.fandom.com/wiki/Episode_28",
+    "https://ravemaster.fandom.com/wiki/Chapter_53"
+   ]
+  },
+  {
+   "episode": 29,
+   "end_chapter": 55,
+   "start_chapter": 54,
+   "chapters_adapted": "54-55",
+   "volume": 7,
+   "confidence": "medium",
+   "note": "ch 54 'Gale and Gale' matches Gale-centric ep; fandom fwd (episode page) + reverse (chapter pages) agree; lattice gap-free between independently corroborated boundaries",
+   "sources": [
+    "https://ravemaster.fandom.com/wiki/Episode_29",
+    "https://ravemaster.fandom.com/wiki/Chapter_55"
+   ]
+  },
+  {
+   "episode": 30,
+   "end_chapter": 57,
+   "start_chapter": 56,
+   "chapters_adapted": "56-57",
+   "volume": 8,
+   "confidence": "medium",
+   "note": "fandom fwd (episode page) + reverse (chapter pages) agree; lattice gap-free between independently corroborated boundaries",
+   "sources": [
+    "https://ravemaster.fandom.com/wiki/Episode_30",
+    "https://ravemaster.fandom.com/wiki/Chapter_57"
+   ]
+  },
+  {
+   "episode": 31,
+   "end_chapter": 59,
+   "start_chapter": 58,
+   "chapters_adapted": "58-59",
+   "volume": 8,
+   "confidence": "high",
+   "note": "ep title 'Final Countdown' = ch 58 'Final Countdown?!' (Wikipedia title match)",
+   "sources": [
+    "https://ravemaster.fandom.com/wiki/Episode_31",
+    "https://ravemaster.fandom.com/wiki/Chapter_59",
+    "https://en.wikipedia.org/wiki/List_of_Rave_Master_chapters",
+    "https://en.wikipedia.org/wiki/List_of_Rave_Master_episodes"
+   ]
+  },
+  {
+   "episode": 32,
+   "end_chapter": 61,
+   "start_chapter": 60,
+   "chapters_adapted": "60-61",
+   "volume": 8,
+   "confidence": "medium",
+   "note": "fandom fwd (episode page) + reverse (chapter pages) agree; lattice gap-free between independently corroborated boundaries",
+   "sources": [
+    "https://ravemaster.fandom.com/wiki/Episode_32",
+    "https://ravemaster.fandom.com/wiki/Chapter_61"
+   ]
+  },
+  {
+   "episode": 33,
+   "end_chapter": 63,
+   "start_chapter": 62,
+   "chapters_adapted": "62, 63 (p1-13)",
+   "volume": 8,
+   "confidence": "medium",
+   "note": "ends mid-ch 63 (bulk done, p14-19 in ep 34)",
+   "sources": [
+    "https://ravemaster.fandom.com/wiki/Episode_33",
+    "https://ravemaster.fandom.com/wiki/Chapter_63"
+   ]
+  },
+  {
+   "episode": 34,
+   "end_chapter": 65,
+   "start_chapter": 64,
+   "chapters_adapted": "63 (p14-19), 64, 65",
+   "volume": 9,
+   "confidence": "medium",
+   "note": "leading ch-63 tail not the bulk -> START 64",
+   "sources": [
+    "https://ravemaster.fandom.com/wiki/Episode_34",
+    "https://ravemaster.fandom.com/wiki/Chapter_65"
+   ]
+  },
+  {
+   "episode": 35,
+   "end_chapter": 67,
+   "start_chapter": 66,
+   "chapters_adapted": "1 (p20 sliver), 66, 67",
+   "volume": 9,
+   "confidence": "medium",
+   "note": "fandom fwd (episode page) + reverse (chapter pages) agree; lattice gap-free between independently corroborated boundaries",
+   "sources": [
+    "https://ravemaster.fandom.com/wiki/Episode_35",
+    "https://ravemaster.fandom.com/wiki/Chapter_67"
+   ]
+  },
+  {
+   "episode": 36,
+   "end_chapter": 69,
+   "start_chapter": 68,
+   "chapters_adapted": "68-69",
+   "volume": 9,
+   "confidence": "medium",
+   "note": "fandom fwd (episode page) + reverse (chapter pages) agree; lattice gap-free between independently corroborated boundaries",
+   "sources": [
+    "https://ravemaster.fandom.com/wiki/Episode_36",
+    "https://ravemaster.fandom.com/wiki/Chapter_69"
+   ]
+  },
+  {
+   "episode": 37,
+   "end_chapter": 71,
+   "start_chapter": 70,
+   "chapters_adapted": "70-71",
+   "volume": 9,
+   "confidence": "medium",
+   "note": "fandom fwd (episode page) + reverse (chapter pages) agree; lattice gap-free between independently corroborated boundaries",
+   "sources": [
+    "https://ravemaster.fandom.com/wiki/Episode_37",
+    "https://ravemaster.fandom.com/wiki/Chapter_71"
+   ]
+  },
+  {
+   "episode": 38,
+   "end_chapter": 73,
+   "start_chapter": 72,
+   "chapters_adapted": "72-73",
+   "volume": 9,
+   "confidence": "medium",
+   "note": "Tower of Din climax; v9 close",
+   "sources": [
+    "https://ravemaster.fandom.com/wiki/Episode_38",
+    "https://ravemaster.fandom.com/wiki/Chapter_73"
+   ]
+  },
+  {
+   "episode": 41,
+   "end_chapter": 74,
+   "start_chapter": 74,
+   "chapters_adapted": "74",
+   "volume": 10,
+   "confidence": "medium",
+   "note": "contingent on type correction filler->mixed: canon core of ep 41 is ch 74 'A Brand New Start!' (post-Tower-of-Din wrap-up), padded with filler performance material",
+   "sources": [
+    "https://ravemaster.fandom.com/wiki/Episode_41",
+    "https://ravemaster.fandom.com/wiki/Chapter_74"
+   ]
+  },
+  {
+   "episode": 42,
+   "end_chapter": 75,
+   "start_chapter": 75,
+   "chapters_adapted": "75",
+   "volume": 10,
+   "confidence": "medium",
+   "note": "Symphonia arc start (ch 75, v10); single chapter + padding",
+   "sources": [
+    "https://ravemaster.fandom.com/wiki/Episode_42",
+    "https://ravemaster.fandom.com/wiki/Chapter_75"
+   ]
+  },
+  {
+   "episode": 43,
+   "end_chapter": 78,
+   "start_chapter": 76,
+   "chapters_adapted": "76, 77, 78 (p1-15)",
+   "volume": 10,
+   "confidence": "medium",
+   "note": "ends mid-ch 78 (bulk done, p16-20 in ep 44)",
+   "sources": [
+    "https://ravemaster.fandom.com/wiki/Episode_43",
+    "https://ravemaster.fandom.com/wiki/Chapter_78"
+   ]
+  },
+  {
+   "episode": 44,
+   "end_chapter": 80,
+   "start_chapter": 79,
+   "chapters_adapted": "78 (p16-20), 79, 80",
+   "volume": 11,
+   "confidence": "medium",
+   "note": "leading ch-78 tail not the bulk -> START 79; ch 80 opens v11",
+   "sources": [
+    "https://ravemaster.fandom.com/wiki/Episode_44",
+    "https://ravemaster.fandom.com/wiki/Chapter_80"
+   ]
+  },
+  {
+   "episode": 45,
+   "end_chapter": 82,
+   "start_chapter": 81,
+   "chapters_adapted": "81, 82, 83 (p1-3 sliver cold-close)",
+   "volume": 11,
+   "confidence": "medium",
+   "note": "3-page ch-83 opener is a sliver; bulk of 83 in ep 46",
+   "sources": [
+    "https://ravemaster.fandom.com/wiki/Episode_45",
+    "https://ravemaster.fandom.com/wiki/Chapter_82"
+   ]
+  },
+  {
+   "episode": 46,
+   "end_chapter": 85,
+   "start_chapter": 83,
+   "chapters_adapted": "83 (p4-22), 84, 85",
+   "volume": 11,
+   "confidence": "medium",
+   "note": "leading ch-83 tail IS the bulk -> START 83",
+   "sources": [
+    "https://ravemaster.fandom.com/wiki/Episode_46",
+    "https://ravemaster.fandom.com/wiki/Chapter_85"
+   ]
+  },
+  {
+   "episode": 47,
+   "end_chapter": 87,
+   "start_chapter": 86,
+   "chapters_adapted": "86, 87 (p1-22)",
+   "volume": 11,
+   "confidence": "medium",
+   "note": "only ch 87's final page (p23) remains (1 page, in ep 48)",
+   "sources": [
+    "https://ravemaster.fandom.com/wiki/Episode_47",
+    "https://ravemaster.fandom.com/wiki/Chapter_87"
+   ]
+  },
+  {
+   "episode": 48,
+   "end_chapter": 89,
+   "start_chapter": 88,
+   "chapters_adapted": "87 (p23 sliver), 88, 89",
+   "volume": 12,
+   "confidence": "high",
+   "note": "ep 'The Sad Silver Claimer' = ch 88 'Silver Claimer's Reminiscence' (Wikipedia title match); ch 89 opens v12",
+   "sources": [
+    "https://ravemaster.fandom.com/wiki/Episode_48",
+    "https://ravemaster.fandom.com/wiki/Chapter_89",
+    "https://en.wikipedia.org/wiki/List_of_Rave_Master_chapters",
+    "https://en.wikipedia.org/wiki/List_of_Rave_Master_episodes"
+   ]
+  },
+  {
+   "episode": 49,
+   "end_chapter": 91,
+   "start_chapter": 90,
+   "chapters_adapted": "90-91",
+   "volume": 12,
+   "confidence": "medium",
+   "note": "fandom fwd (episode page) + reverse (chapter pages) agree; lattice gap-free between independently corroborated boundaries",
+   "sources": [
+    "https://ravemaster.fandom.com/wiki/Episode_49",
+    "https://ravemaster.fandom.com/wiki/Chapter_91"
+   ]
+  },
+  {
+   "episode": 50,
+   "end_chapter": 94,
+   "start_chapter": 92,
+   "chapters_adapted": "92, 93, 94 (p1-13)",
+   "volume": 12,
+   "confidence": "high",
+   "note": "ep 'The Door to the Memories' = ch 94 'Memory Door' (Wikipedia title match); ends mid-ch 94, remainder + 95 in ep 51",
+   "sources": [
+    "https://ravemaster.fandom.com/wiki/Episode_50",
+    "https://ravemaster.fandom.com/wiki/Chapter_94",
+    "https://en.wikipedia.org/wiki/List_of_Rave_Master_chapters",
+    "https://en.wikipedia.org/wiki/List_of_Rave_Master_episodes"
+   ]
+  }
+ ],
+ "continue_points": [
+  {
+   "episode": 1,
+   "continue_chapter": 1,
+   "note": "intro rearranged: chs 1-4 largely unadapted at this point (only flashback slivers); manga reader should start at ch 1"
+  },
+  {
+   "episode": 7,
+   "continue_chapter": 17,
+   "note": "ends at ch 17 p16 of 20"
+  },
+  {
+   "episode": 20,
+   "continue_chapter": 41,
+   "note": "ends at ch 41 p12 of 20"
+  },
+  {
+   "episode": 21,
+   "continue_chapter": 43,
+   "note": "ends at ch 43 p15 of 19"
+  },
+  {
+   "episode": 33,
+   "continue_chapter": 63,
+   "note": "ends at ch 63 p13 of 19"
+  },
+  {
+   "episode": 43,
+   "continue_chapter": 78,
+   "note": "ends at ch 78 p15 of 20"
+  },
+  {
+   "episode": 50,
+   "continue_chapter": 94,
+   "note": "ends at ch 94 p13 of 21"
+  }
+ ],
+ "annotations": [
+  {
+   "episodes": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    16,
+    35
+   ],
+   "kind": "rearranged",
+   "chapters": "1-4",
+   "note": "anime opens in medias res at ch 5 (Hip Hop Town); the Garage Island prologue (chs 1-4) is dispersed as flashback grafts: ch 1 pieces in eps 1/2/3/4/35, ch 2 in ep 5, ch 3 in ep 2, ch 4 in ep 16"
+  },
+  {
+   "episodes": [
+    39
+   ],
+   "kind": "side_story",
+   "chapters": "omake 'Knights of Kingdom'",
+   "note": "adapts Mashima's Knights of Kingdom omake (Shiba/Resha origin, 50 years prior); no mainline chapter progress \u2014 do not interpolate mainline chapters here"
+  },
+  {
+   "episodes": [
+    40
+   ],
+   "kind": "side_story",
+   "chapters": "omake 'RAVE0065 / The Plue Legend'",
+   "note": "adapts The Plue Legend omake (Plue & Griffon backstory); no mainline chapter progress \u2014 do not interpolate mainline chapters here"
+  },
+  {
+   "episodes": [
+    41
+   ],
+   "kind": "partial",
+   "chapters": "74",
+   "note": "one wrap-up chapter (74) stretched to a full episode with anime-original street-performance padding"
+  }
+ ],
+ "type_corrections": [
+  {
+   "episodes": [
+    41
+   ],
+   "type": "mixed",
+   "note": "listed filler on animefillerlist/animefillerguide, but its canon core is ch 74 'A Brand New Start!': Musica's discharge, Let joining the party, the Silver Knights airship, Sieg Hart at the Etherion Research Center, departure for Symphonia \u2014 all permanent manga developments; ch 74's relepisode field points back at this episode and ch 74 fits the otherwise gap-free lattice (ep38 ends 73, ep42 starts 75)",
+   "sources": [
+    "https://ravemaster.fandom.com/wiki/Episode_41",
+    "https://ravemaster.fandom.com/wiki/Chapter_74",
+    "https://en.wikipedia.org/wiki/List_of_Rave_Master_chapters"
+   ]
+  }
+ ],
+ "repairs": [],
+ "structure": {
+  "notes": "Single 51-ep season (TBS 2001-2002), cumulative numbering = AniList 246 1-51, no conversion needed. Adaptation is linear and dense (2 ch/ep) apart from the rearranged chs 1-4 prologue grafts. Anime ends mid-v12 at ch 95; manga continue point after the series = ch 96 (v12). Arcs: Intro (eps 1-2), Lance (3-8), Dancing Thunder (9-12, ends ch 25), Shuda (13-18, chs 26-37), Mystery of Elie (19-26, chs 38-49), Tower of Din (27-38+41, chs 50-74), Symphonia (42-51, chs 75-95). Eps 39-40 are omake side-story adaptations sitting between eps 38 and 41 in broadcast order. CORRECTION to context data: volume boundaries v9=65-73, v10=74-79 (context file shows corrupted '65-14'/'15-79', likely from RAVE0014/0015 omake chapters printed in v9/v10).",
+  "order_only": []
+ },
+ "flags_for_sean": [
+  "ep 41 type: animefillerlist + animefillerguide both say filler, but fandom (episode page AND chapter 74 page) maps it to ch 74, whose canon developments (Let joins, Silver Knights ship, Symphonia departure) are real manga content and ch 74 otherwise has no adaptation slot. Proposed filler->mixed; the ep-41 anchor (74/74) is contingent on accepting this.",
+  "eps 39-40 are typed canon and adapt real Mashima omakes (Knights of Kingdom, RAVE0065) but carry NO mainline chapters \u2014 left canon with side_story annotations; make sure interpolation doesn't smear chs 73-74 across them.",
+  "volume-boundary data heal needed: stored v9: '65-14' and v10: '15-79' are corrupted; correct is v9=65-73, v10=74-79 (Wikipedia List_of_Rave_Master_chapters + fandom chapter pages 65-80). Ep-anchor volumes in this file already use the corrected boundaries.",
+  "page-split editions differ slightly between sources (fandom says ep 51 = 94 p14-21 + 95; animefillerguide says 94 p12-19 + 95) \u2014 same chapters, different pagination; chapter-level anchors unaffected."
+ ]
+}
