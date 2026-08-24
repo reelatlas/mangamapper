@@ -848,6 +848,28 @@ Fixed weekly is correct.
    Audit rule: LOOSE series skip monotonicity entirely (borrow-maps
    render as stored). anchor_gap 66→58; mu_pin 78→72; loose 10;
    ok_full 235; ruling_violation 0.
+32. ✅ **START-SANITY + OSHI/BLACK-LAGOON FULL MAPS (2026-08-23, Sean's
+   Oshi 20-29 + ep-4 reports)**: deriveAnchors START guard (raw row min
+   ≠ start — stray low values poison it exactly as stray highs poisoned
+   ends pre-LNDS; start = lowest mainline ch on the LNDS trend, off-trend
+   values stay in chapters_adapted; Oshi ep 4 healed 10→17). All AFG
+   rederived; edges redeployed. New OUTCOME class anchor_start_offtrend
+   (audit select now fetches start_chapter — the missing-column trap,
+   round 2). Its first run caught GTO 13/14's unannotated interleave
+   (batch-13 annotations) and Black Lagoon's stale batch-10 arc-BLOCK
+   anchors coexisting with the pass-2 per-episode map → pass-3 replaced
+   all 7 blocks + mapped ep 21 + set S2-finale continue=44 (Greenback
+   Jane aired out of order); ep 7 = standalone 'Calm down, two men'
+   (9-10), NOT the Adler conclusion. BATCH 13: Oshi no Ko fully anchored
+   1-35 (11 interior anchors, 2 mid-chapter continue points). The
+   r/OshiNoKo ratio thread (= Google AI's instant answer) proved
+   SYSTEMATICALLY WRONG for eps 15-22 + all S3 (claimed an 82-87 skip
+   that doesn't exist; S3 is linear 81→92; ep 20 = 65-67 as we had it;
+   finale = mid-127 not 122) — fan threads are cross-check inputs,
+   never sole truth (§10). Sean's screenshot values matched NO version
+   of code+data → stale browser tab (hard-refresh); interp starts for
+   25/26/27 (81/85/89) matched research exactly. Census: all anchor
+   classes 0; ruling_violation 0; ok_full 236; gap 58.
 21. ✅ **Consolidation pass 2 (2026-08-23, post-Kenshin)**: every write path
    swept against the day's rules — filterEpisodeRows (caps + type
    overrides) now in ALL five episode writers (resolve, stitched-guard,
