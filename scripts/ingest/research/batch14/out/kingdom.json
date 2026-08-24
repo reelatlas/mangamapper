@@ -1,0 +1,1152 @@
+{
+ "series_id": "kingdom",
+ "summary": "S2 (eps 39-76) adapts 174-259 in order except for two knots: the Sei-childhood flashback (chs 74-82, skipped by S1) grafted into eps 44-48 while the mainline holds at 185, and the post-Sanyou threads (250-261) interleaved across eps 75-77; ep77 ends at 261 p.14 (existing anchor stands). S5 (eps 130-142) adapts 441 (p.12) through 489 - every episode has fandom page splits corroborated by an independent Japanese per-chapter table (programming-cafe) and by episode titles that equal chapter titles; ep142 ends exactly at 489 (title = ch489), so the flag-#814 value '~490' is the continue point, not the end. S6 (eps 143-155) adapts 490-540, ~4 chapters per episode, ending mid-540 with the Ryouyou (Yo Tan Wa/Heki) pages of 538-540 left for Part 2, which AniList lists as a separate entry (204688). Three fandom infobox lines are wrong or elliptical (ep39 '179', ep130 omitting 442-443, ep141 omitting 482-483) and were corrected via pcafe + title matches. 64 anchors, no type corrections, no repairs.",
+ "anchors": [
+  {
+   "episode": 39,
+   "end_chapter": 174,
+   "start_chapter": 174,
+   "chapters_adapted": "174",
+   "volume": 17,
+   "confidence": "medium",
+   "note": "S2 opener: Shin as 300-man commander, Shun Pei Kun kidnapping teaser (ch 174). Fandom infobox literally says 'Chapter 179' (error; 179 is ep41's banquet chapter) - deduced from ep40 = 175-177 (fandom + pcafe) and the S2 start at 174 in fandom Season_2 / pcafe / subculview.",
+   "sources": [
+    "https://kingdom.fandom.com/wiki/Episode_39",
+    "https://programming-cafe.com/amazon/primevideo/anime/anicomi-kingdom-list/",
+    "https://kingdom.fandom.com/wiki/Season_2",
+    "https://subculview.com/kingdom-manga-anime-guide"
+   ]
+  },
+  {
+   "episode": 40,
+   "end_chapter": 177,
+   "start_chapter": 175,
+   "chapters_adapted": "175-177",
+   "volume": 17,
+   "confidence": "high",
+   "note": "Ri Boku comes to Kanyou; alliance proposal and negotiation (175-177). Fandom infobox and pcafe agree.",
+   "sources": [
+    "https://kingdom.fandom.com/wiki/Episode_40",
+    "https://programming-cafe.com/amazon/primevideo/anime/anicomi-kingdom-list/"
+   ]
+  },
+  {
+   "episode": 41,
+   "end_chapter": 179,
+   "start_chapter": 178,
+   "chapters_adapted": "178-179",
+   "volume": 17,
+   "confidence": "high",
+   "note": "Qin-Zhao banquet (178) and Sei's 'five years' talk (179); ep title 嵐の祝宴 ~ ch178 祝宴.",
+   "sources": [
+    "https://kingdom.fandom.com/wiki/Episode_41",
+    "https://programming-cafe.com/amazon/primevideo/anime/anicomi-kingdom-list/",
+    "https://en.wikipedia.org/wiki/Kingdom_season_2",
+    "https://kingdom.fandom.com/wiki/Chapter_178"
+   ]
+  },
+  {
+   "episode": 42,
+   "end_chapter": 181,
+   "start_chapter": 180,
+   "chapters_adapted": "180-181",
+   "volume": 17,
+   "confidence": "high",
+   "note": "Wei front skirmishes, Ou Hon provokes Shin; ep title 王と蟻 ~ ch181 蟻.",
+   "sources": [
+    "https://kingdom.fandom.com/wiki/Episode_42",
+    "https://programming-cafe.com/amazon/primevideo/anime/anicomi-kingdom-list/",
+    "https://en.wikipedia.org/wiki/Kingdom_season_2",
+    "https://kingdom.fandom.com/wiki/Chapter_181"
+   ]
+  },
+  {
+   "episode": 43,
+   "end_chapter": 184,
+   "start_chapter": 182,
+   "chapters_adapted": "182-183, 184 (head)",
+   "volume": 17,
+   "confidence": "medium",
+   "note": "Fandom trivia 'covers 182-184'; pcafe assigns 184 to ep44, so only 184's opening (Queen Mother tease) is here. Ep title 第三勢力 = ch183.",
+   "sources": [
+    "https://kingdom.fandom.com/wiki/Episode_43",
+    "https://programming-cafe.com/amazon/primevideo/anime/anicomi-kingdom-list/",
+    "https://en.wikipedia.org/wiki/Kingdom_season_2",
+    "https://kingdom.fandom.com/wiki/Chapter_183"
+   ]
+  },
+  {
+   "episode": 44,
+   "end_chapter": 185,
+   "start_chapter": 184,
+   "chapters_adapted": "74, 184-185",
+   "volume": 18,
+   "confidence": "high",
+   "note": "Queen Mother / harem alliance (184-185) plus ch 74 (Sei asks Kou about his mother -> flashback intro). 185 finishes in ep48; eps 45-47 are the ch 75-81 flashback graft.",
+   "sources": [
+    "https://kingdom.fandom.com/wiki/Episode_44",
+    "https://programming-cafe.com/amazon/primevideo/anime/anicomi-kingdom-list/",
+    "https://kingdom.fandom.com/wiki/Season_2",
+    "https://subculview.com/kingdom-manga-anime-guide"
+   ]
+  },
+  {
+   "episode": 45,
+   "end_chapter": 76,
+   "start_chapter": 75,
+   "chapters_adapted": "75-76",
+   "volume": 8,
+   "confidence": "high",
+   "note": "Escape-from-Zhao flashback graft: Chouhei aftermath, Sei's birth in Kantan, the merchants' rescue plan (75-76). Mainline position unchanged at 185.",
+   "sources": [
+    "https://kingdom.fandom.com/wiki/Episode_45",
+    "https://programming-cafe.com/amazon/primevideo/anime/anicomi-kingdom-list/",
+    "https://kingdom.fandom.com/wiki/Season_2",
+    "https://subculview.com/kingdom-manga-anime-guide"
+   ]
+  },
+  {
+   "episode": 46,
+   "end_chapter": 79,
+   "start_chapter": 77,
+   "chapters_adapted": "77-79",
+   "volume": 8,
+   "confidence": "medium",
+   "note": "Flashback continues: checkpoints, Shi Ka and Sei (77-79). pcafe puts 80 here as well; fandom gives 80 to ep47 - end 79 per fandom.",
+   "sources": [
+    "https://kingdom.fandom.com/wiki/Episode_46",
+    "https://programming-cafe.com/amazon/primevideo/anime/anicomi-kingdom-list/",
+    "https://kingdom.fandom.com/wiki/Season_2",
+    "https://subculview.com/kingdom-manga-anime-guide"
+   ]
+  },
+  {
+   "episode": 47,
+   "end_chapter": 81,
+   "start_chapter": 80,
+   "chapters_adapted": "79 (tail), 80-81",
+   "volume": 8,
+   "confidence": "high",
+   "note": "Shi Ka's death, Sei reaches Qin (80-81); graft ends. Both sources put 81 here.",
+   "sources": [
+    "https://kingdom.fandom.com/wiki/Episode_47",
+    "https://programming-cafe.com/amazon/primevideo/anime/anicomi-kingdom-list/",
+    "https://kingdom.fandom.com/wiki/Season_2",
+    "https://subculview.com/kingdom-manga-anime-guide"
+   ]
+  },
+  {
+   "episode": 48,
+   "end_chapter": 187,
+   "start_chapter": 186,
+   "chapters_adapted": "82 (wrap), 185 (tail), 186-187",
+   "volume": 18,
+   "confidence": "medium",
+   "note": "Back to the mainline: Kou stays with Sei, Mou Gou's Sanyou campaign marches, harem allies with Ryo Fui (185-187). pcafe assigns only 186 here (187 -> ep49) and, oddly, 189 -> ep48 (armies-assemble opening); fandom's '82' = closing of Sei's story.",
+   "sources": [
+    "https://kingdom.fandom.com/wiki/Episode_48",
+    "https://programming-cafe.com/amazon/primevideo/anime/anicomi-kingdom-list/"
+   ]
+  },
+  {
+   "episode": 49,
+   "end_chapter": 190,
+   "start_chapter": 187,
+   "chapters_adapted": "187-189, 190 (head)",
+   "volume": 18,
+   "confidence": "medium",
+   "note": "Ep title 揃い踏み = ch189; Kou's fever / You (187-188 palace thread), the three young units held in reserve (189), siege opens (190 head - pcafe assigns 190 to ep50).",
+   "sources": [
+    "https://kingdom.fandom.com/wiki/Episode_49",
+    "https://programming-cafe.com/amazon/primevideo/anime/anicomi-kingdom-list/",
+    "https://en.wikipedia.org/wiki/Kingdom_season_2",
+    "https://kingdom.fandom.com/wiki/Chapter_189"
+   ]
+  },
+  {
+   "episode": 50,
+   "end_chapter": 191,
+   "start_chapter": 190,
+   "chapters_adapted": "188 (palace: Ryo Fui-Queen Mother exposed), 189 (tail), 190-191",
+   "volume": 18,
+   "confidence": "high",
+   "note": "Kourou siege, Ou Hon on the wall (190-191); 191 finishes in ep51. Fandom + pcafe agree on 191.",
+   "sources": [
+    "https://kingdom.fandom.com/wiki/Episode_50",
+    "https://programming-cafe.com/amazon/primevideo/anime/anicomi-kingdom-list/"
+   ]
+  },
+  {
+   "episode": 51,
+   "end_chapter": 193,
+   "start_chapter": 192,
+   "chapters_adapted": "191 (tail), 192-193",
+   "volume": 18,
+   "confidence": "high",
+   "note": "City sacked, Shin turns on the pillagers; ep title 俺の戦り方 = ch193.",
+   "sources": [
+    "https://kingdom.fandom.com/wiki/Episode_51",
+    "https://programming-cafe.com/amazon/primevideo/anime/anicomi-kingdom-list/",
+    "https://en.wikipedia.org/wiki/Kingdom_season_2",
+    "https://kingdom.fandom.com/wiki/Chapter_193"
+   ]
+  },
+  {
+   "episode": 52,
+   "end_chapter": 195,
+   "start_chapter": 194,
+   "chapters_adapted": "194-195",
+   "volume": 18,
+   "confidence": "high",
+   "note": "Ren Pa becomes Wei's commander-in-chief; Kaku Bi killed by Rin Ko; ep title その男、廉頗 = ch194.",
+   "sources": [
+    "https://kingdom.fandom.com/wiki/Episode_52",
+    "https://programming-cafe.com/amazon/primevideo/anime/anicomi-kingdom-list/",
+    "https://en.wikipedia.org/wiki/Kingdom_season_2",
+    "https://kingdom.fandom.com/wiki/Chapter_194"
+   ]
+  },
+  {
+   "episode": 53,
+   "end_chapter": 197,
+   "start_chapter": 196,
+   "chapters_adapted": "196-197",
+   "volume": 19,
+   "confidence": "high",
+   "note": "Rin Ko's commander-hunting; Shin vs Rin Ko first clash; ep title 武将の空気 = ch197.",
+   "sources": [
+    "https://kingdom.fandom.com/wiki/Episode_53",
+    "https://programming-cafe.com/amazon/primevideo/anime/anicomi-kingdom-list/",
+    "https://en.wikipedia.org/wiki/Kingdom_season_2",
+    "https://kingdom.fandom.com/wiki/Chapter_197"
+   ]
+  },
+  {
+   "episode": 54,
+   "end_chapter": 200,
+   "start_chapter": 198,
+   "chapters_adapted": "197 (tail), 198-200",
+   "volume": 19,
+   "confidence": "high",
+   "note": "Mou Bu revealed as Mou Ten's father, Mou Gou's night walk, provisional 1000-man promotions with conditions (198-200).",
+   "sources": [
+    "https://kingdom.fandom.com/wiki/Episode_54",
+    "https://programming-cafe.com/amazon/primevideo/anime/anicomi-kingdom-list/"
+   ]
+  },
+  {
+   "episode": 55,
+   "end_chapter": 202,
+   "start_chapter": 201,
+   "chapters_adapted": "201-202",
+   "volume": 19,
+   "confidence": "high",
+   "note": "Kaku Bi's 700 join Hi Shin; Kyou Kai's revenge announcement; two months into the invasion (201-202).",
+   "sources": [
+    "https://kingdom.fandom.com/wiki/Episode_55",
+    "https://programming-cafe.com/amazon/primevideo/anime/anicomi-kingdom-list/"
+   ]
+  },
+  {
+   "episode": 56,
+   "end_chapter": 204,
+   "start_chapter": 203,
+   "chapters_adapted": "203-204",
+   "volume": 19,
+   "confidence": "high",
+   "note": "Kan Ki and Ou Sen introduced at Mou Gou's HQ; Rin Ko charges Ou Hon (203-204).",
+   "sources": [
+    "https://kingdom.fandom.com/wiki/Episode_56",
+    "https://programming-cafe.com/amazon/primevideo/anime/anicomi-kingdom-list/"
+   ]
+  },
+  {
+   "episode": 57,
+   "end_chapter": 207,
+   "start_chapter": 205,
+   "chapters_adapted": "205-207",
+   "volume": 20,
+   "confidence": "high",
+   "note": "Rin Ko vs Ou Hon; Hi Shin enters; Gen Pou's smoke-screen tactics (205-207).",
+   "sources": [
+    "https://kingdom.fandom.com/wiki/Episode_57",
+    "https://programming-cafe.com/amazon/primevideo/anime/anicomi-kingdom-list/"
+   ]
+  },
+  {
+   "episode": 58,
+   "end_chapter": 210,
+   "start_chapter": 208,
+   "chapters_adapted": "208-210",
+   "volume": 20,
+   "confidence": "high",
+   "note": "Hi Shin's counterattack through Gen Pou's traps (208-210).",
+   "sources": [
+    "https://kingdom.fandom.com/wiki/Episode_58",
+    "https://programming-cafe.com/amazon/primevideo/anime/anicomi-kingdom-list/"
+   ]
+  },
+  {
+   "episode": 59,
+   "end_chapter": 213,
+   "start_chapter": 211,
+   "chapters_adapted": "211-213",
+   "volume": 20,
+   "confidence": "high",
+   "note": "Kyou En's mobile army; Kan Ki kills Gen Pou (211-213). 213 (Mou Ten's proposal) finishes in ep60 - ep60's title = ch213.",
+   "sources": [
+    "https://kingdom.fandom.com/wiki/Episode_59",
+    "https://programming-cafe.com/amazon/primevideo/anime/anicomi-kingdom-list/"
+   ]
+  },
+  {
+   "episode": 60,
+   "end_chapter": 215,
+   "start_chapter": 214,
+   "chapters_adapted": "213 (tail), 214, 215 (head)",
+   "volume": 20,
+   "confidence": "medium",
+   "note": "Three-unit plan; Gaku Ka charge begins (215 head). pcafe assigns 215 to ep61. Ep title 蒙恬の提案 = ch213.",
+   "sources": [
+    "https://kingdom.fandom.com/wiki/Episode_60",
+    "https://programming-cafe.com/amazon/primevideo/anime/anicomi-kingdom-list/",
+    "https://en.wikipedia.org/wiki/Kingdom_season_2",
+    "https://kingdom.fandom.com/wiki/Chapter_213"
+   ]
+  },
+  {
+   "episode": 61,
+   "end_chapter": 217,
+   "start_chapter": 215,
+   "chapters_adapted": "215-217",
+   "volume": 20,
+   "confidence": "high",
+   "note": "Gaku Ka/Hi Shin/Gyoku Hou assault on Rin Ko's HQ; Shin and Ou Hon vs Rin Ko begins (215-217).",
+   "sources": [
+    "https://kingdom.fandom.com/wiki/Episode_61",
+    "https://programming-cafe.com/amazon/primevideo/anime/anicomi-kingdom-list/"
+   ]
+  },
+  {
+   "episode": 62,
+   "end_chapter": 220,
+   "start_chapter": 218,
+   "chapters_adapted": "218-219, 220 (head)",
+   "volume": 21,
+   "confidence": "medium",
+   "note": "Ou Sen uses Heki as bait; Shin/Ou Hon wound Rin Ko and retreat. Ep title 越えるべき壁 ~ ch219 越える; pcafe gives 220 to ep63.",
+   "sources": [
+    "https://kingdom.fandom.com/wiki/Episode_62",
+    "https://programming-cafe.com/amazon/primevideo/anime/anicomi-kingdom-list/",
+    "https://en.wikipedia.org/wiki/Kingdom_season_2",
+    "https://kingdom.fandom.com/wiki/Chapter_219"
+   ]
+  },
+  {
+   "episode": 63,
+   "end_chapter": 222,
+   "start_chapter": 220,
+   "chapters_adapted": "220-221, 222 (head)",
+   "volume": 21,
+   "confidence": "medium",
+   "note": "Ou Sen's cliff trap; ep title 裏の裏 = ch221; pcafe gives 222 to ep64 (ep64's title 将の器 = ch222).",
+   "sources": [
+    "https://kingdom.fandom.com/wiki/Episode_63",
+    "https://programming-cafe.com/amazon/primevideo/anime/anicomi-kingdom-list/",
+    "https://en.wikipedia.org/wiki/Kingdom_season_2",
+    "https://kingdom.fandom.com/wiki/Chapter_221"
+   ]
+  },
+  {
+   "episode": 64,
+   "end_chapter": 224,
+   "start_chapter": 222,
+   "chapters_adapted": "222-224",
+   "volume": 21,
+   "confidence": "high",
+   "note": "Ren Pa chases Ou Sen into Mou Gou's fortress; Shin returns wounded; ep title 将の器 = ch222.",
+   "sources": [
+    "https://kingdom.fandom.com/wiki/Episode_64",
+    "https://programming-cafe.com/amazon/primevideo/anime/anicomi-kingdom-list/",
+    "https://en.wikipedia.org/wiki/Kingdom_season_2",
+    "https://kingdom.fandom.com/wiki/Chapter_222"
+   ]
+  },
+  {
+   "episode": 65,
+   "end_chapter": 226,
+   "start_chapter": 225,
+   "chapters_adapted": "224 (tail), 225, 226 (p.1-8)",
+   "volume": 21,
+   "confidence": "high",
+   "note": "Rindou whirl, Ei Bi killed, Shin vs Rin Ko rematch. Fandom: ends 226 p.8 (226 p.9-18 unlisted - likely trimmed or in ep66's opening).",
+   "sources": [
+    "https://kingdom.fandom.com/wiki/Episode_65",
+    "https://programming-cafe.com/amazon/primevideo/anime/anicomi-kingdom-list/"
+   ]
+  },
+  {
+   "episode": 66,
+   "end_chapter": 229,
+   "start_chapter": 227,
+   "chapters_adapted": "227-229",
+   "volume": 22,
+   "confidence": "high",
+   "note": "Mou Gou's fortress traps, Ren Pa sees through them, Shin stabbed in the thigh (227-229).",
+   "sources": [
+    "https://kingdom.fandom.com/wiki/Episode_66",
+    "https://programming-cafe.com/amazon/primevideo/anime/anicomi-kingdom-list/"
+   ]
+  },
+  {
+   "episode": 67,
+   "end_chapter": 231,
+   "start_chapter": 230,
+   "chapters_adapted": "230-231",
+   "volume": 22,
+   "confidence": "high",
+   "note": "Shin's first 'fatal' blow on Rin Ko; ep title 一瞬 ~ ch230 刹那.",
+   "sources": [
+    "https://kingdom.fandom.com/wiki/Episode_67",
+    "https://programming-cafe.com/amazon/primevideo/anime/anicomi-kingdom-list/",
+    "https://en.wikipedia.org/wiki/Kingdom_season_2",
+    "https://kingdom.fandom.com/wiki/Chapter_230"
+   ]
+  },
+  {
+   "episode": 68,
+   "end_chapter": 233,
+   "start_chapter": 232,
+   "chapters_adapted": "231 (tail), 232-233",
+   "volume": 22,
+   "confidence": "high",
+   "note": "Rin Ko dies; Kyou Kai found gravely wounded; ep title 大事な仲間 = ch233.",
+   "sources": [
+    "https://kingdom.fandom.com/wiki/Episode_68",
+    "https://programming-cafe.com/amazon/primevideo/anime/anicomi-kingdom-list/",
+    "https://en.wikipedia.org/wiki/Kingdom_season_2",
+    "https://kingdom.fandom.com/wiki/Chapter_233"
+   ]
+  },
+  {
+   "episode": 69,
+   "end_chapter": 236,
+   "start_chapter": 234,
+   "chapters_adapted": "233 (tail), 234-236",
+   "volume": 22,
+   "confidence": "high",
+   "note": "Ren Pa vs Mou Gou duel at the summit (234-236).",
+   "sources": [
+    "https://kingdom.fandom.com/wiki/Episode_69",
+    "https://programming-cafe.com/amazon/primevideo/anime/anicomi-kingdom-list/"
+   ]
+  },
+  {
+   "episode": 70,
+   "end_chapter": 240,
+   "start_chapter": 237,
+   "chapters_adapted": "236 (tail), 237-239, 240 (head)",
+   "volume": 23,
+   "confidence": "medium",
+   "note": "Kan Ki kills Haku Ki Sai; Ren Pa decides to end the war; ep title 色あせぬ時代 ~ ch237 あの時代. pcafe assigns 240 to ep71 -> only 240's opening here.",
+   "sources": [
+    "https://kingdom.fandom.com/wiki/Episode_70",
+    "https://programming-cafe.com/amazon/primevideo/anime/anicomi-kingdom-list/",
+    "https://en.wikipedia.org/wiki/Kingdom_season_2",
+    "https://kingdom.fandom.com/wiki/Chapter_237"
+   ]
+  },
+  {
+   "episode": 71,
+   "end_chapter": 242,
+   "start_chapter": 240,
+   "chapters_adapted": "240-242",
+   "volume": 23,
+   "confidence": "high",
+   "note": "Wei's retreat, rewards, Kyou Kai's farewell (240-242 見送り).",
+   "sources": [
+    "https://kingdom.fandom.com/wiki/Episode_71",
+    "https://programming-cafe.com/amazon/primevideo/anime/anicomi-kingdom-list/"
+   ]
+  },
+  {
+   "episode": 72,
+   "end_chapter": 245,
+   "start_chapter": 243,
+   "chapters_adapted": "243-245",
+   "volume": 23,
+   "confidence": "high",
+   "note": "Rewards at the palace; Hi Shin's losing streak; Ka Ryo Ten arrives as strategist; ep title 軍師の到着 = ch245.",
+   "sources": [
+    "https://kingdom.fandom.com/wiki/Episode_72",
+    "https://programming-cafe.com/amazon/primevideo/anime/anicomi-kingdom-list/",
+    "https://en.wikipedia.org/wiki/Kingdom_season_2",
+    "https://kingdom.fandom.com/wiki/Chapter_245"
+   ]
+  },
+  {
+   "episode": 73,
+   "end_chapter": 247,
+   "start_chapter": 246,
+   "chapters_adapted": "246-247",
+   "volume": 23,
+   "confidence": "high",
+   "note": "Ten's gender revealed to Shin; her first plan; ep title 試練と覚悟 ~ ch246 貂の覚悟.",
+   "sources": [
+    "https://kingdom.fandom.com/wiki/Episode_73",
+    "https://programming-cafe.com/amazon/primevideo/anime/anicomi-kingdom-list/",
+    "https://en.wikipedia.org/wiki/Kingdom_season_2",
+    "https://kingdom.fandom.com/wiki/Chapter_246"
+   ]
+  },
+  {
+   "episode": 74,
+   "end_chapter": 249,
+   "start_chapter": 248,
+   "chapters_adapted": "248-249",
+   "volume": 23,
+   "confidence": "high",
+   "note": "Dou Sei unit destroyed; Ten formally joins; ep title 上を行く = ch248.",
+   "sources": [
+    "https://kingdom.fandom.com/wiki/Episode_74",
+    "https://programming-cafe.com/amazon/primevideo/anime/anicomi-kingdom-list/",
+    "https://en.wikipedia.org/wiki/Kingdom_season_2",
+    "https://kingdom.fandom.com/wiki/Chapter_248"
+   ]
+  },
+  {
+   "episode": 75,
+   "end_chapter": 257,
+   "start_chapter": 250,
+   "chapters_adapted": "250-253, 255 (part), 257 (part)",
+   "volume": 24,
+   "confidence": "high",
+   "note": "Tougun renaming (250), Yan war / Geki Shin vs Hou Ken (251-253), Rou Ai smuggled into the harem (255), Jo under attack (257 opening). Fandom omits 252 and 254; pcafe places both here. End 257 agreed by both.",
+   "sources": [
+    "https://kingdom.fandom.com/wiki/Episode_75",
+    "https://programming-cafe.com/amazon/primevideo/anime/anicomi-kingdom-list/"
+   ]
+  },
+  {
+   "episode": 76,
+   "end_chapter": 259,
+   "start_chapter": 256,
+   "chapters_adapted": "255 (part), 256, 257 (part), 258-259",
+   "volume": 24,
+   "confidence": "high",
+   "note": "Sei Kyou freed, Ryo Fui chancellor of state, Shou Bun Kun chancellor of the left (255-256); Jo rescue (257-258); the unit stumbles on the Chu-Zhao meeting (259). 259 finishes in ep77.",
+   "sources": [
+    "https://kingdom.fandom.com/wiki/Episode_76",
+    "https://programming-cafe.com/amazon/primevideo/anime/anicomi-kingdom-list/"
+   ]
+  },
+  {
+   "episode": 130,
+   "end_chapter": 445,
+   "start_chapter": 442,
+   "chapters_adapted": "441 (p.12-19), 442-444, 445 (p.1-12)",
+   "volume": 41,
+   "confidence": "high",
+   "note": "Ep title 化物達の出陣 = ch443. Fandom infobox lists '441, 444, 445' but pcafe and the title confirm 442-443 are here; 441 p.1-11 was ep129 (S4 finale).",
+   "sources": [
+    "https://kingdom.fandom.com/wiki/Episode_130",
+    "https://programming-cafe.com/amazon/primevideo/anime/anicomi-kingdom-list/",
+    "https://kingdom.fandom.com/wiki/Season_5",
+    "https://kingdom.fandom.com/wiki/Chapter_443",
+    "https://en.wikipedia.org/wiki/Kingdom_season_5"
+   ]
+  },
+  {
+   "episode": 131,
+   "end_chapter": 449,
+   "start_chapter": 446,
+   "chapters_adapted": "445 (p.13-18), 446-448, 449 (p.1-11)",
+   "volume": 42,
+   "confidence": "high",
+   "note": "Kan Ki's cityless occupation, Kei Sha moves; ep title 戦場の匂い = ch448.",
+   "sources": [
+    "https://kingdom.fandom.com/wiki/Episode_131",
+    "https://programming-cafe.com/amazon/primevideo/anime/anicomi-kingdom-list/",
+    "https://kingdom.fandom.com/wiki/Chapter_448",
+    "https://en.wikipedia.org/wiki/Kingdom_season_5"
+   ]
+  },
+  {
+   "episode": 132,
+   "end_chapter": 453,
+   "start_chapter": 450,
+   "chapters_adapted": "449 (p.13-18), 450-452, 453 (p.1-2)",
+   "volume": 42,
+   "confidence": "high",
+   "note": "Night raid on Kokuyou; ep title 黒羊の夜 = ch451. pcafe: 450-452 (453 -> ep133) - consistent with the 2-page head.",
+   "sources": [
+    "https://kingdom.fandom.com/wiki/Episode_132",
+    "https://programming-cafe.com/amazon/primevideo/anime/anicomi-kingdom-list/",
+    "https://kingdom.fandom.com/wiki/Chapter_451",
+    "https://en.wikipedia.org/wiki/Kingdom_season_5"
+   ]
+  },
+  {
+   "episode": 133,
+   "end_chapter": 456,
+   "start_chapter": 453,
+   "chapters_adapted": "453 (p.3-18), 454-455, 456 (p.1-12)",
+   "volume": 42,
+   "confidence": "high",
+   "note": "Ten's counter-plan; ep title 副長の責任 = ch456.",
+   "sources": [
+    "https://kingdom.fandom.com/wiki/Episode_133",
+    "https://programming-cafe.com/amazon/primevideo/anime/anicomi-kingdom-list/",
+    "https://kingdom.fandom.com/wiki/Chapter_456",
+    "https://en.wikipedia.org/wiki/Kingdom_season_5"
+   ]
+  },
+  {
+   "episode": 134,
+   "end_chapter": 459,
+   "start_chapter": 457,
+   "chapters_adapted": "456 (p.13-18), 457-459",
+   "volume": 42,
+   "confidence": "high",
+   "note": "River crossing to Rigan; ep title 執念の渡河 = ch457.",
+   "sources": [
+    "https://kingdom.fandom.com/wiki/Episode_134",
+    "https://programming-cafe.com/amazon/primevideo/anime/anicomi-kingdom-list/",
+    "https://kingdom.fandom.com/wiki/Chapter_457",
+    "https://en.wikipedia.org/wiki/Kingdom_season_5"
+   ]
+  },
+  {
+   "episode": 135,
+   "end_chapter": 463,
+   "start_chapter": 460,
+   "chapters_adapted": "460-462, 463 (p.1-2)",
+   "volume": 43,
+   "confidence": "high",
+   "note": "Decisive clash at Kokuyou; ep title 黒羊の大一番 = ch461.",
+   "sources": [
+    "https://kingdom.fandom.com/wiki/Episode_135",
+    "https://programming-cafe.com/amazon/primevideo/anime/anicomi-kingdom-list/",
+    "https://kingdom.fandom.com/wiki/Chapter_461",
+    "https://en.wikipedia.org/wiki/Kingdom_season_5"
+   ]
+  },
+  {
+   "episode": 136,
+   "end_chapter": 465,
+   "start_chapter": 463,
+   "chapters_adapted": "463 (p.3-19), 464-465",
+   "volume": 43,
+   "confidence": "high",
+   "note": "Tragedy of Rigan; ep title 離眼の悲劇 = ch463.",
+   "sources": [
+    "https://kingdom.fandom.com/wiki/Episode_136",
+    "https://programming-cafe.com/amazon/primevideo/anime/anicomi-kingdom-list/",
+    "https://kingdom.fandom.com/wiki/Chapter_463",
+    "https://en.wikipedia.org/wiki/Kingdom_season_5"
+   ]
+  },
+  {
+   "episode": 137,
+   "end_chapter": 469,
+   "start_chapter": 466,
+   "chapters_adapted": "466-469",
+   "volume": 43,
+   "confidence": "high",
+   "note": "Kan Ki's trap closes on Kei Sha; ep title 一瞬の出来事 = ch469. pcafe 466-469 agrees.",
+   "sources": [
+    "https://kingdom.fandom.com/wiki/Episode_137",
+    "https://programming-cafe.com/amazon/primevideo/anime/anicomi-kingdom-list/",
+    "https://kingdom.fandom.com/wiki/Chapter_469",
+    "https://en.wikipedia.org/wiki/Kingdom_season_5"
+   ]
+  },
+  {
+   "episode": 138,
+   "end_chapter": 474,
+   "start_chapter": 470,
+   "chapters_adapted": "470-473, 474 (p.1-9)",
+   "volume": 44,
+   "confidence": "high",
+   "note": "Shin hunts down and kills Kei Sha (470-472), Zhao retreat (473). pcafe 470-474 agrees; ep title 凶 (pcafe lists ch472 as 凶).",
+   "sources": [
+    "https://kingdom.fandom.com/wiki/Episode_138",
+    "https://programming-cafe.com/amazon/primevideo/anime/anicomi-kingdom-list/",
+    "https://en.wikipedia.org/wiki/Kingdom_season_5",
+    "https://ja.wikipedia.org/wiki/%E3%82%AD%E3%83%B3%E3%82%B0%E3%83%80%E3%83%A0_(%E3%82%A2%E3%83%8B%E3%83%A1)"
+   ]
+  },
+  {
+   "episode": 139,
+   "end_chapter": 477,
+   "start_chapter": 475,
+   "chapters_adapted": "474 (p.10-19), 475-476, 477 (p.1-18)",
+   "volume": 44,
+   "confidence": "high",
+   "note": "Kan Ki's post-battle decision, smoke truth; ep title 誇りの咆哮 ~ ch477 矜持の咆哮. 477 p.19 spills into ep140 (1 page).",
+   "sources": [
+    "https://kingdom.fandom.com/wiki/Episode_139",
+    "https://programming-cafe.com/amazon/primevideo/anime/anicomi-kingdom-list/",
+    "https://kingdom.fandom.com/wiki/Chapter_477",
+    "https://en.wikipedia.org/wiki/Kingdom_season_5"
+   ]
+  },
+  {
+   "episode": 140,
+   "end_chapter": 480,
+   "start_chapter": 478,
+   "chapters_adapted": "477 (p.19), 478-479, 480 (p.1-18)",
+   "volume": 44,
+   "confidence": "high",
+   "note": "Bi Hei and the Hi Shin Unit; ep title 魏平と飛信軍 ~ ch480 尾平と飛信隊. 480 p.19 spills into ep141 (1 page).",
+   "sources": [
+    "https://kingdom.fandom.com/wiki/Episode_140",
+    "https://programming-cafe.com/amazon/primevideo/anime/anicomi-kingdom-list/",
+    "https://kingdom.fandom.com/wiki/Chapter_480",
+    "https://en.wikipedia.org/wiki/Kingdom_season_5"
+   ]
+  },
+  {
+   "episode": 141,
+   "end_chapter": 484,
+   "start_chapter": 481,
+   "chapters_adapted": "480 (p.19), 481-484",
+   "volume": 45,
+   "confidence": "high",
+   "note": "Kan Ki's corpse bridge (481), Rigan and Zhao (482), the night after (483 = ja ep title 勝敗の夜ふけ), departures / Na Ki joins Hi Shin (484). Fandom infobox lists '481, and 484' but its title and pcafe give 481-484.",
+   "sources": [
+    "https://kingdom.fandom.com/wiki/Episode_141",
+    "https://programming-cafe.com/amazon/primevideo/anime/anicomi-kingdom-list/",
+    "https://kingdom.fandom.com/wiki/Chapter_483",
+    "https://ja.wikipedia.org/wiki/%E3%82%AD%E3%83%B3%E3%82%B0%E3%83%80%E3%83%A0_(%E3%82%A2%E3%83%8B%E3%83%A1)"
+   ]
+  },
+  {
+   "episode": 142,
+   "end_chapter": 489,
+   "start_chapter": 486,
+   "chapters_adapted": "485 (p.14-17), 486-489",
+   "volume": 45,
+   "confidence": "high",
+   "note": "Sai Taku brings Ou Ken to Kanyou, the Qin-Qi summit, Sai Taku dies; ep title 蔡沢の矜持 = ch489. S5 = 441-489 per fandom Season_5, pcafe, kunyanblog, 296.fm; 'continue at 490' per penginkotsu/WDTALO. mangashed's '488' is an outlier. 485 p.1-13 (Mou Ten's visit) not listed by fandom.",
+   "sources": [
+    "https://kingdom.fandom.com/wiki/Episode_142",
+    "https://programming-cafe.com/amazon/primevideo/anime/anicomi-kingdom-list/",
+    "https://kingdom.fandom.com/wiki/Season_5",
+    "https://kingdom.fandom.com/wiki/Chapter_489",
+    "https://kunyanblog.com/kingudamuanime5kinanwamade/",
+    "https://penginkotsu.com/kingdom-anime"
+   ]
+  },
+  {
+   "episode": 143,
+   "end_chapter": 493,
+   "start_chapter": 490,
+   "chapters_adapted": "490-493",
+   "volume": 46,
+   "confidence": "high",
+   "note": "Ei Sei vs Ri Boku 'discussion of destiny' (490-491; ep title 秦の障壁 = ch491), Hi Shin recruitment tryouts (492-493). MAL viewer: 'adapted from chapters 490 to 493'.",
+   "sources": [
+    "https://kingdom.fandom.com/wiki/Episode_143",
+    "https://programming-cafe.com/amazon/primevideo/anime/anicomi-kingdom-list/",
+    "https://kingdom.fandom.com/wiki/Season_6",
+    "https://kingdom.fandom.com/wiki/Chapter_491",
+    "https://myanimelist.net/forum/?topicid=2235334"
+   ]
+  },
+  {
+   "episode": 144,
+   "end_chapter": 497,
+   "start_chapter": 494,
+   "chapters_adapted": "494-497",
+   "volume": 46,
+   "confidence": "high",
+   "note": "Ri Shi in the dungeon (494), Shou Hei Kun's Gyou plan (495); Western Zhao Invasion arc opens - ep title 激動の起こり = ch496.",
+   "sources": [
+    "https://kingdom.fandom.com/wiki/Episode_144",
+    "https://programming-cafe.com/amazon/primevideo/anime/anicomi-kingdom-list/",
+    "https://kingdom.fandom.com/wiki/Season_6",
+    "https://kingdom.fandom.com/wiki/Chapter_496"
+   ]
+  },
+  {
+   "episode": 145,
+   "end_chapter": 501,
+   "start_chapter": 498,
+   "chapters_adapted": "498-501",
+   "volume": 46,
+   "confidence": "high",
+   "note": "Qin army line-up and march (498-501).",
+   "sources": [
+    "https://kingdom.fandom.com/wiki/Episode_145",
+    "https://programming-cafe.com/amazon/primevideo/anime/anicomi-kingdom-list/"
+   ]
+  },
+  {
+   "episode": 146,
+   "end_chapter": 505,
+   "start_chapter": 502,
+   "chapters_adapted": "502-504, 505 (p.1-11)",
+   "volume": 47,
+   "confidence": "high",
+   "note": "Ri Boku reads Qin's plan; the mountain army reaches Retsubi; ep title 趙の国門 = ch504.",
+   "sources": [
+    "https://kingdom.fandom.com/wiki/Episode_146",
+    "https://programming-cafe.com/amazon/primevideo/anime/anicomi-kingdom-list/",
+    "https://kingdom.fandom.com/wiki/Chapter_504"
+   ]
+  },
+  {
+   "episode": 147,
+   "end_chapter": 509,
+   "start_chapter": 506,
+   "chapters_adapted": "505 (p.12-end), 506-509",
+   "volume": 47,
+   "confidence": "high",
+   "note": "Retsubi siege by the mountain tribes; Jin and Tan (507); ep title 列尾攻城戦 ~ ch506 山の民の攻城戦.",
+   "sources": [
+    "https://kingdom.fandom.com/wiki/Episode_147",
+    "https://programming-cafe.com/amazon/primevideo/anime/anicomi-kingdom-list/",
+    "https://kingdom.fandom.com/wiki/Chapter_506"
+   ]
+  },
+  {
+   "episode": 148,
+   "end_chapter": 513,
+   "start_chapter": 510,
+   "chapters_adapted": "510-513",
+   "volume": 47,
+   "confidence": "high",
+   "note": "Retsubi's trap, Gyou's true nature (511-513); ep title 列尾の罠 = ch511.",
+   "sources": [
+    "https://kingdom.fandom.com/wiki/Episode_148",
+    "https://programming-cafe.com/amazon/primevideo/anime/anicomi-kingdom-list/",
+    "https://kingdom.fandom.com/wiki/Chapter_511"
+   ]
+  },
+  {
+   "episode": 149,
+   "end_chapter": 517,
+   "start_chapter": 514,
+   "chapters_adapted": "514-517",
+   "volume": 48,
+   "confidence": "high",
+   "note": "Ou Sen's refugee strategy; ep title 陥落の武器 = ch516.",
+   "sources": [
+    "https://kingdom.fandom.com/wiki/Episode_149",
+    "https://programming-cafe.com/amazon/primevideo/anime/anicomi-kingdom-list/",
+    "https://kingdom.fandom.com/wiki/Chapter_516"
+   ]
+  },
+  {
+   "episode": 150,
+   "end_chapter": 522,
+   "start_chapter": 518,
+   "chapters_adapted": "518-521, 522 (p.1-2)",
+   "volume": 48,
+   "confidence": "high",
+   "note": "Ryouyou and Shukai plains open; Ma Kou's attack; ep title 火蓋を切る = ch520.",
+   "sources": [
+    "https://kingdom.fandom.com/wiki/Episode_150",
+    "https://programming-cafe.com/amazon/primevideo/anime/anicomi-kingdom-list/",
+    "https://kingdom.fandom.com/wiki/Chapter_520"
+   ]
+  },
+  {
+   "episode": 151,
+   "end_chapter": 525,
+   "start_chapter": 522,
+   "chapters_adapted": "522 (p.3-end), 523-524, 525 (p.1-9)",
+   "volume": 48,
+   "confidence": "high",
+   "note": "Left-wing despair, Ou Hon's right wing; ep title 覚悟の比重 = ch524.",
+   "sources": [
+    "https://kingdom.fandom.com/wiki/Episode_151",
+    "https://programming-cafe.com/amazon/primevideo/anime/anicomi-kingdom-list/",
+    "https://kingdom.fandom.com/wiki/Chapter_524"
+   ]
+  },
+  {
+   "episode": 152,
+   "end_chapter": 529,
+   "start_chapter": 526,
+   "chapters_adapted": "525 (p.10-end), 526-528, 529 (p.1-15)",
+   "volume": 49,
+   "confidence": "high",
+   "note": "Ryouyou: Rozo's Quanrong and Yo Tan Wa; ep title 犬戎の末裔 = ch528.",
+   "sources": [
+    "https://kingdom.fandom.com/wiki/Episode_152",
+    "https://programming-cafe.com/amazon/primevideo/anime/anicomi-kingdom-list/",
+    "https://kingdom.fandom.com/wiki/Chapter_528"
+   ]
+  },
+  {
+   "episode": 153,
+   "end_chapter": 533,
+   "start_chapter": 530,
+   "chapters_adapted": "529 (p.16-end), 530-532, 533 (p.1-7)",
+   "volume": 49,
+   "confidence": "high",
+   "note": "Shin's detached force; ep title 必殺の別働隊 ~ ch530 必殺の別動隊.",
+   "sources": [
+    "https://kingdom.fandom.com/wiki/Episode_153",
+    "https://programming-cafe.com/amazon/primevideo/anime/anicomi-kingdom-list/",
+    "https://kingdom.fandom.com/wiki/Chapter_530"
+   ]
+  },
+  {
+   "episode": 154,
+   "end_chapter": 536,
+   "start_chapter": 533,
+   "chapters_adapted": "533 (p.8-end), 534-536",
+   "volume": 49,
+   "confidence": "high",
+   "note": "Ma Kou dies, Mou Ten made acting general; ep title 格不足 = ch535. Fandom: through 536 p.20 (last page).",
+   "sources": [
+    "https://kingdom.fandom.com/wiki/Episode_154",
+    "https://programming-cafe.com/amazon/primevideo/anime/anicomi-kingdom-list/",
+    "https://kingdom.fandom.com/wiki/Chapter_535"
+   ]
+  },
+  {
+   "episode": 155,
+   "end_chapter": 540,
+   "start_chapter": 537,
+   "chapters_adapted": "536 (p.20), 537, 538 (p.1-12), 539 (p.1-13), 540 (p.11-19)",
+   "volume": 50,
+   "confidence": "high",
+   "note": "Part-1 finale: Ou Hon's day-2 charge / A Ka Kin (537-538; ep title 大将軍の景色 = ch537), end of day 2 and Hi Shin's frustration (539), day-3 opening on the Shukai plains (540 p.11-19). Skipped: 538 p.13-18, 539 p.14-18, 540 p.1-10 (Ryouyou front). S6 = 490-540 per fandom Season_6, newstisiki/manga-bang ('50巻540話(途中)まで'); pcafe stops at 539 with 540 unassigned; WDTALO: continue at 541.",
+   "sources": [
+    "https://kingdom.fandom.com/wiki/Episode_155",
+    "https://programming-cafe.com/amazon/primevideo/anime/anicomi-kingdom-list/",
+    "https://kingdom.fandom.com/wiki/Season_6",
+    "https://kingdom.fandom.com/wiki/Chapter_537",
+    "https://newstisiki.com/archives/119830",
+    "https://manga-bang.com/magazine/70042/",
+    "https://myanimelist.net/forum/?topicid=2246655",
+    "https://wheredoestheanimeleaveoff.com/where-does-the-kingdom-anime-leave-off-in-the-manga/"
+   ]
+  }
+ ],
+ "continue_points": [
+  {
+   "episode": 43,
+   "continue_chapter": 184,
+   "note": "only 184's opening is in ep43; the Queen Mother chapter is ep44"
+  },
+  {
+   "episode": 44,
+   "continue_chapter": 185,
+   "note": "185 finishes in ep48; eps 45-47 are the ch 75-81 flashback graft"
+  },
+  {
+   "episode": 45,
+   "continue_chapter": 185,
+   "note": "flashback graft (75-76); mainline position unchanged"
+  },
+  {
+   "episode": 46,
+   "continue_chapter": 185,
+   "note": "flashback graft (77-79); mainline position unchanged"
+  },
+  {
+   "episode": 47,
+   "continue_chapter": 185,
+   "note": "flashback graft ends (80-81); mainline resumes at 185 in ep48"
+  },
+  {
+   "episode": 49,
+   "continue_chapter": 190,
+   "note": "190 (siege) only opens here; bulk in ep50"
+  },
+  {
+   "episode": 50,
+   "continue_chapter": 191,
+   "note": "191 finishes in ep51"
+  },
+  {
+   "episode": 59,
+   "continue_chapter": 213,
+   "note": "213 tail (Mou Ten's proposal itself) is ep60"
+  },
+  {
+   "episode": 60,
+   "continue_chapter": 215,
+   "note": "215 only opens here; bulk in ep61"
+  },
+  {
+   "episode": 62,
+   "continue_chapter": 220,
+   "note": "220 only opens here; bulk in ep63"
+  },
+  {
+   "episode": 63,
+   "continue_chapter": 222,
+   "note": "222 only opens here; bulk in ep64"
+  },
+  {
+   "episode": 65,
+   "continue_chapter": 226,
+   "note": "ends 226 p.8"
+  },
+  {
+   "episode": 70,
+   "continue_chapter": 240,
+   "note": "240 only opens here; bulk in ep71"
+  },
+  {
+   "episode": 75,
+   "continue_chapter": 254,
+   "note": "254 (Chu's young generation) is absent from fandom's lists (pcafe puts it in ep75); 255 only partly used - honest resume 254"
+  },
+  {
+   "episode": 76,
+   "continue_chapter": 259,
+   "note": "259 finishes in ep77 (fandom); pcafe puts all of 259 in ep76"
+  },
+  {
+   "episode": 130,
+   "continue_chapter": 445,
+   "note": "ends 445 p.12"
+  },
+  {
+   "episode": 131,
+   "continue_chapter": 449,
+   "note": "ends 449 p.11"
+  },
+  {
+   "episode": 132,
+   "continue_chapter": 453,
+   "note": "ends 453 p.2"
+  },
+  {
+   "episode": 133,
+   "continue_chapter": 456,
+   "note": "ends 456 p.12"
+  },
+  {
+   "episode": 135,
+   "continue_chapter": 463,
+   "note": "ends 463 p.2"
+  },
+  {
+   "episode": 138,
+   "continue_chapter": 474,
+   "note": "ends 474 p.9"
+  },
+  {
+   "episode": 146,
+   "continue_chapter": 505,
+   "note": "ends 505 p.11"
+  },
+  {
+   "episode": 150,
+   "continue_chapter": 522,
+   "note": "ends 522 p.2"
+  },
+  {
+   "episode": 151,
+   "continue_chapter": 525,
+   "note": "ends 525 p.9"
+  },
+  {
+   "episode": 152,
+   "continue_chapter": 529,
+   "note": "ends 529 p.15"
+  },
+  {
+   "episode": 153,
+   "continue_chapter": 533,
+   "note": "ends 533 p.7"
+  },
+  {
+   "episode": 155,
+   "continue_chapter": 539,
+   "note": "honest resume: 539 p.14-18 + 540 p.1-10 (Ryouyou front: Heki's provisions burned, Rozo's tunnel, Heki's day-3 blunder) were not adapted; 538 p.13-18 also unlisted by fandom. If Part 2 is assumed to backfill them, 541 (WDTALO's answer)."
+  }
+ ],
+ "annotations": [
+  {
+   "episodes": [
+    44,
+    45,
+    46,
+    47,
+    48
+   ],
+   "kind": "graft",
+   "chapters": "74-82",
+   "note": "Sei's Kantan-childhood / Escape-from-Zhao flashback (vol 7-8), skipped by S1, is grafted into the Third Faction arc: 74 in ep44 (intro), 75-76 ep45, 77-79 ep46, 80-81 ep47, 82 wrap in ep48; mainline holds at ch 185 across eps 45-47 (subculview: 'Sei's Past 7巻74話〜8巻81話 -> S2 eps 7-9')."
+  },
+  {
+   "episodes": [
+    48,
+    49,
+    50
+   ],
+   "kind": "rearranged",
+   "chapters": "185-191",
+   "note": "palace thread (Kou/You, Queen Mother-Ryo Fui, 185-188) interleaved with the Sanyou opening (189-191): sources split 188/189 across eps 48-50 (fandom 48: 185-187, 49: 187-190, 50: 189-191; pcafe 186->48, 187->49, 188->50, 189->48 (sic), 190-191->50)."
+  },
+  {
+   "episodes": [
+    65,
+    66
+   ],
+   "kind": "partial",
+   "chapters": "226",
+   "note": "fandom lists 226 p.1-8 in ep65 and 227-229 in ep66; 226 p.9-18 (Ren Pa / Mou Gou banter) unaccounted - likely trimmed."
+  },
+  {
+   "episodes": [
+    75,
+    76,
+    77
+   ],
+   "kind": "rearranged",
+   "chapters": "250-261",
+   "note": "post-Sanyou threads interleaved: ep75 = 250-253 (Tougun, Yan war) + 255 (Rou Ai) + 257 (Jo, opening); ep76 = 255-256 (Sei Kyou freed, chancellors) + 257-258 (Jo) + 259 (Chu-Zhao meeting); ep77 = 256 (part), 259-261 (261 p.1-14; p.15-17 opens S3 ep78). ch 254 is absent from fandom's lists (pcafe: ep75)."
+  },
+  {
+   "episodes": [
+    129,
+    130
+   ],
+   "kind": "partial",
+   "chapters": "441",
+   "note": "441 p.1-11 closed S4 (ep129); 441 p.12-19 opens S5 (ep130) - S5 effectively starts at 442 (MAL: 'adapts 442-489')."
+  },
+  {
+   "episodes": [
+    141,
+    142
+   ],
+   "kind": "partial",
+   "chapters": "485",
+   "note": "485 p.1-13 (Mou Ten's visit; Hi Shin relieved by Gaku Ka) not listed by fandom for either episode; ep142 opens at 485 p.14 (news of the truce)."
+  },
+  {
+   "episodes": [
+    155
+   ],
+   "kind": "partial",
+   "chapters": "538-540",
+   "note": "Part-1 finale skips 538 p.13-18, 539 p.14-18 and 540 p.1-10 - the Ryouyou front (Heki's provisions burned, Rozo's escape tunnel, Heki's day-3 blunder). MAL manga readers: 'only thing anime skipped was some pages from Yo Tan Wa's fight'. Expect Part 2 (AniList 204688) to open there."
+  }
+ ],
+ "type_corrections": [],
+ "repairs": [],
+ "structure": {
+  "notes": "S5 = AniList 155227 (MAL 53223), TV, 13 eps, FINISHED, 2024-01-14 -> 2024-03-31 JST (NHK lists Sat 24:00 = Jan 13 - Mar 30; eps 12+13 aired back-to-back) -> our 130-142. S6 = AniList 190840 (MAL 61517), TV, 13 eps, FINISHED, 2025-10-05 -> 2025-12-28 JST (NHK Oct 4 - Dec 27) -> our 143-155. S6 'Part 2' is a SEPARATE AniList entry 204688 'Kingdom (Zoku-hen)' (TV, episodes null, NOT_YET_RELEASED, listed as SEQUEL of 190840) - when it airs it should become component 7 (our 156+), not an extension of 190840. Cumulative numbering verified: fandom uses overall numbers (Episode 39 = S2 ep1 ... Episode 155 = S6 ep13); pcafe season-local numbers convert as 2-n = 38+n, 5-n = 129+n, 6-n = 142+n (title checks: 2-14 = ep52 その男、廉頗, 5-13 = ep142 蔡沢の矜持, 6-13 = ep155 大将軍の景色). Season chapter spans: S2 = 174-261 plus the 74-82 graft (fandom Season_2; pcafe says 174-260 and files 261 under S3, but fandom's ep77/ep78 page splits put 261 p.1-14 in ep77 and 261 p.15-17 in ep78 -> existing ep77->261 anchor stands); S5 = 441(p.12)-489; S6 = 490-540 (540 partial). Flag #826: in eps 36-79 the stored titles line up with fandom/Wikipedia at the same numbers - no numbering offset in S2; only oddity found: stored air date for ep69 (2013-12-29) duplicates ep68's, Wikipedia/fandom give 2014-01-05. No filler / anime-original episodes in either range (animefillerlist: 'no reported filler'); all rows stay canon.",
+  "order_only": []
+ },
+ "flags_for_sean": [
+  "ep155 continue-point policy: set to 539 (539 p.14-18 + 540 p.1-10 Ryouyou pages unadapted; fandom also lists 538 p.13-18 unadapted). Season-level 'where to continue' sources disagree: WDTALO 541, newstisiki 540 (途中), pcafe leaves 540 unassigned (ep155 = 537-539). 541 is only right if Part 2 (AniList 204688) is assumed to backfill the skipped pages.",
+  "Flashback graft eps 45-47 (chs 75-81): anchors carry end_chapter 76/79/81 (the honest 'last chapter adapted') with continue points 185, which dips the end_chapter curve below ep44's 185. If the position instrument must be monotonic, use the continue points (185) as the mainline position for 45-47.",
+  "S2 head/tail splits marked medium: ep43 (184 head), ep46 (79 vs 80), ep48/49 (187/189/190), ep60 (215 head), ep62 (220 head), ep63 (222 head), ep70 (240 head) - fandom lists the trailing chapter, pcafe assigns it to the next episode; END follows fandom (last chapter touched) with continue points recorded.",
+  "ch 254 (Chu's young generation: Kou Yoku / Haku Rei banter) is absent from fandom's S2 lists; pcafe places it in ep75 - unresolved, minor.",
+  "mangashed.com claims S5 ends at 488 - contradicted by the ep142 title (蔡沢の矜持 = ch489), fandom, pcafe and four Japanese sources; ignored.",
+  "Flag #814 verified: ep142 -> 489 (not '~490'; 490 is the continue point) and ep155 -> 540 (partial).",
+  "Fandom chapter-page volume fields are unreliable for 458 (says v43), 475 and 481 (say v42); the context file's Wikipedia boundaries were used throughout (v42: 449-459, v44: 471-481)."
+ ]
+}

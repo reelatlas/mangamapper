@@ -1,0 +1,754 @@
+{
+ "series_id": "my-hero-academia",
+ "summary": "Range 139-170 = S7 (21 eps, chs 329-398, vols 34-39) + FINAL SEASON (11 eps, chs 399-430, vols 40-42); AniList confirms both entries FINISHED with 21 and 11 episodes, so our aired count of 170 is exact and the TV run ends on the manga's final numbered chapter 430. Every episode is manga canon and the adaptation is linear at chapter level (~3 chapters/episode; ep 157 packs six), so the only non-linear facts are mid-chapter splits (335, 338, 355, 359, 372, 375, 382, 385, 390, 410, 417, 429), three small page grafts (357 p.15 -> ep 150; 377 p.1 -> ep 160 cold open; 425/426 fragments replayed in ep 169) and the Final Season premiere spending its first half recapping the S7 finale under ch 398's title while adapting 399-400. Both existing anchors in range (159->398, 170->430) are confirmed; 30 new full records fill the gaps, all high: fandom episode pages + the reverse chapter->episode fields + animefillerguide agree on every episode, and a genuinely independent source pins each one (Sportskeeda's per-episode anime-vs-manga articles for 140-159, Wikipedia season leads/title matches, CBR/ScreenRant/FandomWire/Soap Central for 160-170). Post-finale, AniList carries two SPECIAL sequels not in the 170: 'No. 170+1: More' (ch 431, 2026-05-02) and the OVA 'I am a hero too' (ch 431.5 fan-book one-shot, 2026-08-03).",
+ "anchors": [
+  {
+   "episode": 139,
+   "end_chapter": 331,
+   "start_chapter": 329,
+   "chapters_adapted": "329-331",
+   "volume": 34,
+   "confidence": "high",
+   "note": "S7 premiere (S7 ep 1): Star and Stripe arrives; ch 329 title = episode title. Wikipedia's S7 lead starts the season at 329 and Sportskeeda's ep-2 piece begins at 332, pinning 331 as the end; Dexerto gives the Star and Stripe arc as 329-334.",
+   "sources": [
+    "https://myheroacademia.fandom.com/wiki/Episode_139",
+    "https://www.animefillerguide.com/my-hero-academia",
+    "https://en.wikipedia.org/wiki/My_Hero_Academia_season_7",
+    "https://www.sportskeeda.com/anime/my-hero-academia-season-7-episode-2-anime-vs-manga-comparison",
+    "https://www.dexerto.com/anime/my-hero-academia-season-7-what-manga-chapters-are-adapted-2688704/",
+    "https://en.wikipedia.org/wiki/List_of_My_Hero_Academia_chapters"
+   ]
+  },
+  {
+   "episode": 140,
+   "end_chapter": 335,
+   "start_chapter": 332,
+   "chapters_adapted": "332-334, 335 (p.1-10)",
+   "volume": 34,
+   "confidence": "high",
+   "note": "S7 ep 2: Star's New Order self-destruct; ends mid-335 (p.10, fandom). Sportskeeda lists 332-334 (ignores the partial); ch 333 'Specter' = episode title.",
+   "sources": [
+    "https://myheroacademia.fandom.com/wiki/Episode_140",
+    "https://www.animefillerguide.com/my-hero-academia",
+    "https://www.sportskeeda.com/anime/my-hero-academia-season-7-episode-2-anime-vs-manga-comparison",
+    "https://myheroacademia.fandom.com/wiki/Chapter_335",
+    "https://en.wikipedia.org/wiki/List_of_My_Hero_Academia_chapters"
+   ]
+  },
+  {
+   "episode": 141,
+   "end_chapter": 338,
+   "start_chapter": 336,
+   "chapters_adapted": "335 (p.11-15), 336-337, 338 (p.1-5)",
+   "volume": 34,
+   "confidence": "high",
+   "note": "S7 ep 3: Aoyama traitor reveal; Sportskeeda: '335-337 with the first few panels of chapter 338'. Opens on 335's 5-page tail -> start = 336 (ch 336 'Villain' = episode title).",
+   "sources": [
+    "https://myheroacademia.fandom.com/wiki/Episode_141",
+    "https://www.animefillerguide.com/my-hero-academia",
+    "https://www.sportskeeda.com/anime/my-hero-academia-season-7-episode-3-anime-vs-manga-comparison",
+    "https://en.wikipedia.org/wiki/List_of_My_Hero_Academia_chapters"
+   ]
+  },
+  {
+   "episode": 142,
+   "end_chapter": 340,
+   "start_chapter": 339,
+   "chapters_adapted": "338 (p.5-15), 339-340",
+   "volume": 35,
+   "confidence": "high",
+   "note": "S7 ep 4: Operation Troy; title = chs 338-340 ('How We All Became Heroes' pts 1-3). Sportskeeda: 'remaining part of chapter 338 and chapters 339 and 340'. 338's tail (11 pp) is not the bulk of the episode -> start 339; reader who stopped at ep 141 resumes at 338.",
+   "sources": [
+    "https://myheroacademia.fandom.com/wiki/Episode_142",
+    "https://www.animefillerguide.com/my-hero-academia",
+    "https://www.sportskeeda.com/anime/my-hero-academia-season-7-episode-4-anime-vs-manga-comparison",
+    "https://en.wikipedia.org/wiki/List_of_My_Hero_Academia_chapters"
+   ]
+  },
+  {
+   "episode": 143,
+   "end_chapter": 343,
+   "start_chapter": 341,
+   "chapters_adapted": "341-343",
+   "volume": 35,
+   "confidence": "high",
+   "note": "S7 ep 5: Toga gets Twice's blood; ch 343 'Let You Down' = episode title; Sportskeeda 341-343.",
+   "sources": [
+    "https://myheroacademia.fandom.com/wiki/Episode_143",
+    "https://www.animefillerguide.com/my-hero-academia",
+    "https://www.sportskeeda.com/anime/my-hero-academia-season-7-episode-5-anime-vs-manga-comparison",
+    "https://en.wikipedia.org/wiki/List_of_My_Hero_Academia_chapters"
+   ]
+  },
+  {
+   "episode": 144,
+   "end_chapter": 346,
+   "start_chapter": 344,
+   "chapters_adapted": "344-346",
+   "volume": 35,
+   "confidence": "high",
+   "note": "S7 ep 6: Operation Troy launches; ch 345 'Division' = episode title; Sportskeeda 344-346.",
+   "sources": [
+    "https://myheroacademia.fandom.com/wiki/Episode_144",
+    "https://www.animefillerguide.com/my-hero-academia",
+    "https://www.sportskeeda.com/anime/my-hero-academia-season-7-episode-6-anime-vs-manga-comparison",
+    "https://en.wikipedia.org/wiki/List_of_My_Hero_Academia_chapters"
+   ]
+  },
+  {
+   "episode": 145,
+   "end_chapter": 349,
+   "start_chapter": 347,
+   "chapters_adapted": "347-349",
+   "volume": 35,
+   "confidence": "high",
+   "note": "S7 ep 7: Shigaraki's finger mutation / Toga's confession; ch 347 'Inflation' = episode title; Sportskeeda 347-349.",
+   "sources": [
+    "https://myheroacademia.fandom.com/wiki/Episode_145",
+    "https://www.animefillerguide.com/my-hero-academia",
+    "https://www.sportskeeda.com/anime/my-hero-academia-season-7-episode-7-anime-vs-manga-comparison",
+    "https://en.wikipedia.org/wiki/List_of_My_Hero_Academia_chapters"
+   ]
+  },
+  {
+   "episode": 146,
+   "end_chapter": 352,
+   "start_chapter": 350,
+   "chapters_adapted": "350-352",
+   "volume": 36,
+   "confidence": "high",
+   "note": "S7 ep 8: Dabi's Sekoto Peak backstory, Phosphor; ch 351 'Two Flashfires' = episode title (vol 36 opens at 351); Sportskeeda 350-352.",
+   "sources": [
+    "https://myheroacademia.fandom.com/wiki/Episode_146",
+    "https://www.animefillerguide.com/my-hero-academia",
+    "https://www.sportskeeda.com/anime/my-hero-academia-season-7-episode-8-anime-vs-manga-comparison",
+    "https://en.wikipedia.org/wiki/List_of_My_Hero_Academia_chapters"
+   ]
+  },
+  {
+   "episode": 147,
+   "end_chapter": 355,
+   "start_chapter": 353,
+   "chapters_adapted": "353-354, 355 (p.1-9)",
+   "volume": 36,
+   "confidence": "high",
+   "note": "S7 ep 9: Garaki's Rewind reveal; ends mid-355 (p.9). ch 355 'Extras' = episode title. Sportskeeda: '353 and 354, and a part of 35[5]' (its '356' is a typo; its ep-10 piece opens with 'the remaining part of chapter 355').",
+   "sources": [
+    "https://myheroacademia.fandom.com/wiki/Episode_147",
+    "https://www.animefillerguide.com/my-hero-academia",
+    "https://www.sportskeeda.com/anime/my-hero-academia-season-7-episode-9-anime-vs-manga-comparison",
+    "https://en.wikipedia.org/wiki/List_of_My_Hero_Academia_chapters"
+   ]
+  },
+  {
+   "episode": 148,
+   "end_chapter": 359,
+   "start_chapter": 356,
+   "chapters_adapted": "355 (p.9-15), 356, 357 (p.1-14), 358, 359 (p.4-14)",
+   "volume": 36,
+   "confidence": "high",
+   "note": "S7 ep 10: Endeavor loses his arm, Bakugo's Strafe Panzer; ends mid-359 (p.14). 357 p.15 is deferred to ep 150 and 359 p.1-3 are not animated (fandom). Sportskeeda/Pinkvilla: 'remaining part of 355, chapters 356-358, and a part of chapter 359'. ch 357 = episode title.",
+   "sources": [
+    "https://myheroacademia.fandom.com/wiki/Episode_148",
+    "https://www.animefillerguide.com/my-hero-academia",
+    "https://www.sportskeeda.com/anime/my-hero-academia-season-7-episode-10-anime-vs-manga-comparison",
+    "https://www.pinkvilla.com/entertainment/anime/my-hero-academia-season-7-episode-10-anime-compared-to-manga-how-are-they-different-1328081",
+    "https://myheroacademia.fandom.com/wiki/Chapter_359"
+   ]
+  },
+  {
+   "episode": 149,
+   "end_chapter": 362,
+   "start_chapter": 360,
+   "chapters_adapted": "359 (p.15-18), 360-362",
+   "volume": 36,
+   "confidence": "high",
+   "note": "S7 ep 11: the Big 3 intervene, Bakugo struck down; ch 362 'Light Fades to Rain' = episode title and last chapter of vol 36 (Sportskeeda: 'until the end of volume 36').",
+   "sources": [
+    "https://myheroacademia.fandom.com/wiki/Episode_149",
+    "https://www.animefillerguide.com/my-hero-academia",
+    "https://www.sportskeeda.com/anime/my-hero-academia-season-7-episode-11-anime-vs-manga-comparison",
+    "https://en.wikipedia.org/wiki/List_of_My_Hero_Academia_chapters"
+   ]
+  },
+  {
+   "episode": 150,
+   "end_chapter": 366,
+   "start_chapter": 363,
+   "chapters_adapted": "357 (p.15), 363-366",
+   "volume": 37,
+   "confidence": "high",
+   "note": "S7 ep 12: Edgeshot saves Bakugo, Mirio's distraction, Dabi's awakening; opens vol 37 (ch 363 = episode title). One page of 357 grafted in (fandom); Sportskeeda 363-366.",
+   "sources": [
+    "https://myheroacademia.fandom.com/wiki/Episode_150",
+    "https://www.animefillerguide.com/my-hero-academia",
+    "https://www.sportskeeda.com/anime/my-hero-academia-season-7-episode-12-anime-vs-manga-comparison",
+    "https://en.wikipedia.org/wiki/List_of_My_Hero_Academia_chapters"
+   ]
+  },
+  {
+   "episode": 151,
+   "end_chapter": 369,
+   "start_chapter": 367,
+   "chapters_adapted": "367-369",
+   "volume": 37,
+   "confidence": "high",
+   "note": "S7 ep 13: Deku vs AFO, Gearshift; ch 369 'A Chain of Events, Across the Ages' = episode title; Sportskeeda 367-369.",
+   "sources": [
+    "https://myheroacademia.fandom.com/wiki/Episode_151",
+    "https://www.animefillerguide.com/my-hero-academia",
+    "https://www.sportskeeda.com/anime/my-hero-academia-season-7-episode-13-anime-vs-manga-comparison",
+    "https://en.wikipedia.org/wiki/List_of_My_Hero_Academia_chapters"
+   ]
+  },
+  {
+   "episode": 152,
+   "end_chapter": 372,
+   "start_chapter": 370,
+   "chapters_adapted": "370-371, 372 (p.1-10)",
+   "volume": 37,
+   "confidence": "high",
+   "note": "S7 ep 14: Spinner's heteromorph assault, Shoji; ends mid-372 (p.10). ch 371 'Together with Shoji' = episode title; Sportskeeda: '370-371 and a part of chapter 372'.",
+   "sources": [
+    "https://myheroacademia.fandom.com/wiki/Episode_152",
+    "https://www.animefillerguide.com/my-hero-academia",
+    "https://www.sportskeeda.com/anime/my-hero-academia-season-7-episode-14-anime-vs-manga-comparison",
+    "https://en.wikipedia.org/wiki/List_of_My_Hero_Academia_chapters"
+   ]
+  },
+  {
+   "episode": 153,
+   "end_chapter": 375,
+   "start_chapter": 373,
+   "chapters_adapted": "372 (p.11-15), 373-374, 375 (p.1-13)",
+   "volume": 38,
+   "confidence": "high",
+   "note": "S7 ep 15: Kurogiri awakens, Toga's Double swarm; ends mid-375 (p.13). ch 374 'Butterfly Effect' = episode title; Sportskeeda: 'remaining part of 372, chapters 373-74, and a part of chapter 375'.",
+   "sources": [
+    "https://myheroacademia.fandom.com/wiki/Episode_153",
+    "https://www.animefillerguide.com/my-hero-academia",
+    "https://www.sportskeeda.com/anime/my-hero-academia-season-7-episode-15-anime-vs-manga-comparison",
+    "https://en.wikipedia.org/wiki/List_of_My_Hero_Academia_chapters"
+   ]
+  },
+  {
+   "episode": 154,
+   "end_chapter": 378,
+   "start_chapter": 376,
+   "chapters_adapted": "375 (p.14-15), 376, 377 (p.2-11), 378",
+   "volume": 38,
+   "confidence": "high",
+   "note": "S7 ep 16: U.A. falling, La Brava/Skeptic, Nagant's shot; ch 377 'The Chain Thus Far' = episode title but its p.1 is held back for ep 160's cold open (fandom). Sportskeeda: 'remaining part of chapter 375 and chapters 376-378'.",
+   "sources": [
+    "https://myheroacademia.fandom.com/wiki/Episode_154",
+    "https://www.animefillerguide.com/my-hero-academia",
+    "https://www.sportskeeda.com/anime/my-hero-academia-season-7-episode-16-anime-vs-manga-comparison",
+    "https://myheroacademia.fandom.com/wiki/Chapter_377"
+   ]
+  },
+  {
+   "episode": 155,
+   "end_chapter": 382,
+   "start_chapter": 379,
+   "chapters_adapted": "379-381, 382 (p.1-7)",
+   "volume": 38,
+   "confidence": "high",
+   "note": "S7 ep 17: Shigaraki consumes the AFO vestige, Shiketsu reinforcements; ch 379 'Hopes' = episode title; ends mid-382 (p.7). Sportskeeda: '379-381 and the first part of chapter 382'.",
+   "sources": [
+    "https://myheroacademia.fandom.com/wiki/Episode_155",
+    "https://www.animefillerguide.com/my-hero-academia",
+    "https://www.sportskeeda.com/anime/my-hero-academia-season-7-episode-17-anime-vs-manga-comparison",
+    "https://en.wikipedia.org/wiki/List_of_My_Hero_Academia_chapters"
+   ]
+  },
+  {
+   "episode": 156,
+   "end_chapter": 385,
+   "start_chapter": 383,
+   "chapters_adapted": "382 (p.8-17), 383-384, 385 (p.1-11)",
+   "volume": 38,
+   "confidence": "high",
+   "note": "S7 ep 18: Gigantomachia turned, Hawks' Quirk stolen; ch 384 'It's a Small World' = episode title; ends mid-385 (p.11). Sportskeeda: 'remaining chapter 382, chapters [3]83-84, and nearly the entire chapter 385'.",
+   "sources": [
+    "https://myheroacademia.fandom.com/wiki/Episode_156",
+    "https://www.animefillerguide.com/my-hero-academia",
+    "https://www.sportskeeda.com/anime/my-hero-academia-season-7-episode-18-anime-vs-manga-comparison",
+    "https://en.wikipedia.org/wiki/List_of_My_Hero_Academia_chapters"
+   ]
+  },
+  {
+   "episode": 157,
+   "end_chapter": 390,
+   "start_chapter": 386,
+   "chapters_adapted": "385 (p.12-17), 386, 387 (p.4-17), 388-389, 390 (p.1-12)",
+   "volume": 39,
+   "confidence": "high",
+   "note": "S7 ep 19: Armored All Might, Shoto/Iida stop Dabi's blast; six chapters; ch 386 'I AM HERE' = episode title; ends just short of 390's last page (Sportskeeda: 'remaining chapter 385, chapters [3]86-89, and chapter 390 before the final panel'). 387 p.1-3 not animated (fandom).",
+   "sources": [
+    "https://myheroacademia.fandom.com/wiki/Episode_157",
+    "https://www.animefillerguide.com/my-hero-academia",
+    "https://www.sportskeeda.com/anime/my-hero-academia-season-7-episode-19-anime-vs-manga-comparison",
+    "https://en.wikipedia.org/wiki/List_of_My_Hero_Academia_chapters"
+   ]
+  },
+  {
+   "episode": 158,
+   "end_chapter": 394,
+   "start_chapter": 391,
+   "chapters_adapted": "390 (p.13), 391-394",
+   "volume": 39,
+   "confidence": "high",
+   "note": "S7 ep 20: Ochaco's Quirk awakening vs Toga; ch 393 'A Girl's Ego' = episode title; Sportskeeda: 'remaining chapter 390 and chapters 391-394'.",
+   "sources": [
+    "https://myheroacademia.fandom.com/wiki/Episode_158",
+    "https://www.animefillerguide.com/my-hero-academia",
+    "https://www.sportskeeda.com/anime/my-hero-academia-season-7-episode-20-anime-vs-manga-comparison",
+    "https://en.wikipedia.org/wiki/List_of_My_Hero_Academia_chapters"
+   ]
+  },
+  {
+   "episode": 159,
+   "end_chapter": 398,
+   "start_chapter": 395,
+   "chapters_adapted": "395-398",
+   "volume": 39,
+   "confidence": "high",
+   "note": "S7 finale (ep 21): Toga's transfusion, All Might's origin; existing anchor 398 CONFIRMED (Wikipedia: S7 adapts 329-398 / vols 34-39; Sportskeeda 395-98; ch 396 'Battle Without a Quirk' = episode title). Reader resumes at 399 for the Final Season.",
+   "sources": [
+    "https://myheroacademia.fandom.com/wiki/Episode_159",
+    "https://www.animefillerguide.com/my-hero-academia",
+    "https://www.sportskeeda.com/anime/my-hero-academia-season-7-episode-21-anime-vs-manga-comparison",
+    "https://en.wikipedia.org/wiki/My_Hero_Academia_season_7",
+    "https://myheroacademia.fandom.com/wiki/Chapter_398"
+   ]
+  },
+  {
+   "episode": 160,
+   "end_chapter": 400,
+   "start_chapter": 399,
+   "chapters_adapted": "377 (p.1), 399-400",
+   "volume": 40,
+   "confidence": "high",
+   "note": "Final Season ep 1: Kunieda defeated by Aoyama/Hagakure, Stain rescues All Might. Its title reuses ch 398's title, but the first half re-runs the S7 finale (chs 396-398 material; CBR) and the NEW material is 399-400 (Wikipedia: season adapts vols 40-42 = 399-430; plot summary matches 399-400). ch 377 p.1 opens the episode (fandom).",
+   "sources": [
+    "https://myheroacademia.fandom.com/wiki/Episode_160",
+    "https://www.animefillerguide.com/my-hero-academia",
+    "https://en.wikipedia.org/wiki/My_Hero_Academia_season_8",
+    "https://www.cbr.com/my-hero-academia-season-8-episode-1-review/",
+    "https://myheroacademia.fandom.com/wiki/Chapter_399"
+   ]
+  },
+  {
+   "episode": 161,
+   "end_chapter": 403,
+   "start_chapter": 401,
+   "chapters_adapted": "401, 402 (p.2-15), 403",
+   "volume": 40,
+   "confidence": "high",
+   "note": "FS ep 2: AFO kills Stain, Bakugo returns; ch 403 'The End of an Era, and...' = episode title. End pinned by CBR's ep-3 review (ep 3 adapts 404-406). 402 p.1 skipped (fandom).",
+   "sources": [
+    "https://myheroacademia.fandom.com/wiki/Episode_161",
+    "https://www.animefillerguide.com/my-hero-academia",
+    "https://www.cbr.com/my-hero-academia-season-8-episode-3-review/",
+    "https://en.wikipedia.org/wiki/My_Hero_Academia_season_8",
+    "https://en.wikipedia.org/wiki/List_of_My_Hero_Academia_chapters"
+   ]
+  },
+  {
+   "episode": 162,
+   "end_chapter": 406,
+   "start_chapter": 404,
+   "chapters_adapted": "404-406",
+   "volume": 40,
+   "confidence": "high",
+   "note": "FS ep 3: Bakugo defeats AFO's body, Edgeshot revives him; CBR: 'adapts manga chapters 404-406'; ch 405 'The Final Boss!!' = episode title.",
+   "sources": [
+    "https://myheroacademia.fandom.com/wiki/Episode_162",
+    "https://www.animefillerguide.com/my-hero-academia",
+    "https://www.cbr.com/my-hero-academia-season-8-episode-3-review/",
+    "https://en.wikipedia.org/wiki/List_of_My_Hero_Academia_chapters"
+   ]
+  },
+  {
+   "episode": 163,
+   "end_chapter": 410,
+   "start_chapter": 407,
+   "chapters_adapted": "407-409, 410 (p.1-8)",
+   "volume": 40,
+   "confidence": "high",
+   "note": "FS ep 4: AFO/Yoichi origin flashback, Bakugo erases AFO; ends mid-410 (p.8). CBR's ep-5 review has ep 164 opening inside 410 (its p.13 replicated) and covering 410-413; ch 409 'Quirk: Explosion!!' = episode title.",
+   "sources": [
+    "https://myheroacademia.fandom.com/wiki/Episode_163",
+    "https://www.animefillerguide.com/my-hero-academia",
+    "https://www.cbr.com/my-hero-academia-season-8-episode-5-review/",
+    "https://myheroacademia.fandom.com/wiki/Chapter_410",
+    "https://en.wikipedia.org/wiki/List_of_My_Hero_Academia_chapters"
+   ]
+  },
+  {
+   "episode": 164,
+   "end_chapter": 413,
+   "start_chapter": 411,
+   "chapters_adapted": "410 (p.9-15), 411-413",
+   "volume": 41,
+   "confidence": "high",
+   "note": "FS ep 5: Shigaraki steals Danger Sense, Mt. Fuji, Star's vestige; CBR: 'Adapting MHA manga chapters 410-413'; ch 411 'History's Greatest Villain' = episode title (vol 41 opens at 411).",
+   "sources": [
+    "https://myheroacademia.fandom.com/wiki/Episode_164",
+    "https://www.animefillerguide.com/my-hero-academia",
+    "https://www.cbr.com/my-hero-academia-season-8-episode-5-review/",
+    "https://en.wikipedia.org/wiki/List_of_My_Hero_Academia_chapters"
+   ]
+  },
+  {
+   "episode": 165,
+   "end_chapter": 417,
+   "start_chapter": 414,
+   "chapters_adapted": "414-416, 417 (p.1-10)",
+   "volume": 41,
+   "confidence": "high",
+   "note": "FS ep 6: Deku forces One For All's factors into Shigaraki, Eri, Aizawa's recruitment; ends midway through 417 (ScreenRant: 'Episode 6 ended midway adapting chapter 417'; CBR: 'covered manga chapters 414 to about halfway through 417'). Fandom notes a small internal reorder (Nana's rejection shown before Deku enters the vestige world). ch 416 = episode title.",
+   "sources": [
+    "https://myheroacademia.fandom.com/wiki/Episode_165",
+    "https://www.animefillerguide.com/my-hero-academia",
+    "https://screenrant.com/mha-final-season-ending-release-date-last-episode/",
+    "https://www.cbr.com/my-hero-academia-season-8-episode-7",
+    "https://en.wikipedia.org/wiki/List_of_My_Hero_Academia_chapters"
+   ]
+  },
+  {
+   "episode": 166,
+   "end_chapter": 420,
+   "start_chapter": 418,
+   "chapters_adapted": "417 (p.11-15), 418-420",
+   "volume": 41,
+   "confidence": "high",
+   "note": "FS ep 7: Nana and Tenko, AFO regains control, Eri restores Deku's arms; CBR: 'Episode 7 ended on manga Chapter 420'; ch 420 'From Aizawa' = episode title.",
+   "sources": [
+    "https://myheroacademia.fandom.com/wiki/Episode_166",
+    "https://www.animefillerguide.com/my-hero-academia",
+    "https://www.cbr.com/my-hero-academia-season-8-episode-8-release-date-time/",
+    "https://en.wikipedia.org/wiki/List_of_My_Hero_Academia_chapters"
+   ]
+  },
+  {
+   "episode": 167,
+   "end_chapter": 423,
+   "start_chapter": 421,
+   "chapters_adapted": "421-423",
+   "volume": 42,
+   "confidence": "high",
+   "note": "FS ep 8: Class 1-A supports Deku, Shigaraki's body decays; ch 422 'Izuku Midoriya Rising' = episode title; end pinned by CBR's ep-9 review (ep 9 covers 424-426) and CBR's ep-8 preview (421-423 expected). 423 is vol 42's first chapter.",
+   "sources": [
+    "https://myheroacademia.fandom.com/wiki/Episode_167",
+    "https://www.animefillerguide.com/my-hero-academia",
+    "https://www.cbr.com/my-hero-academia-season-8-episode-8-release-date-time/",
+    "https://www.cbr.com/my-hero-academia-season-8-episode-9-review-crunchyroll/",
+    "https://en.wikipedia.org/wiki/List_of_My_Hero_Academia_chapters"
+   ]
+  },
+  {
+   "episode": 168,
+   "end_chapter": 426,
+   "start_chapter": 424,
+   "chapters_adapted": "424-425, 426 (p.1-13, 15)",
+   "volume": 42,
+   "confidence": "high",
+   "note": "FS ep 9: Bakugo's rehab, graduation, Endeavor visits Toya; CBR and Soap Central: chapters 424-426; title = chs 424 'Epilogue' + 426 'The Hellish Todoroki Family: Final'. 426 p.14 (and 425 p.13-14) are replayed at ep 169's open (fandom).",
+   "sources": [
+    "https://myheroacademia.fandom.com/wiki/Episode_168",
+    "https://www.animefillerguide.com/my-hero-academia",
+    "https://www.cbr.com/my-hero-academia-season-8-episode-9-review-crunchyroll/",
+    "https://www.soapcentral.com/anime/my-hero-academia-final-season-episode-9-anime-vs-manga-explained",
+    "https://en.wikipedia.org/wiki/List_of_My_Hero_Academia_chapters"
+   ]
+  },
+  {
+   "episode": 169,
+   "end_chapter": 429,
+   "start_chapter": 427,
+   "chapters_adapted": "425 (p.13-14), 426 (p.13-14), 427-428, 429 (p.3, 5-14)",
+   "volume": 42,
+   "confidence": "high",
+   "note": "FS ep 10: Hawks as HPSC president, Spinner's book, Ochaco and Izuku at Troy; ch 428 'The Girl Who Loves Smiles' = episode title; ends mid-429 (FandomWire pre-finale: the finale adapts 'the rest of manga chapter 429 and the entirety of 430').",
+   "sources": [
+    "https://myheroacademia.fandom.com/wiki/Episode_169",
+    "https://www.animefillerguide.com/my-hero-academia",
+    "https://fandomwire.com/my-hero-academia-season-8-finale-will-disappoint-fans/",
+    "https://myheroacademia.fandom.com/wiki/Chapter_429",
+    "https://en.wikipedia.org/wiki/List_of_My_Hero_Academia_chapters"
+   ]
+  },
+  {
+   "episode": 170,
+   "end_chapter": 430,
+   "start_chapter": 430,
+   "chapters_adapted": "429 (p.3-4, 14-19), 430",
+   "volume": 42,
+   "confidence": "high",
+   "note": "Series finale (FS ep 11): eight-year timeskip, Izuku's suit; ch 430 'My Hero Academia' = episode title; existing anchor 430 CONFIRMED (ScreenRant: 'fully adapted chapter 430'; FandomWire: rest of 429 + all of 430). Bonus ch 431 'More' is adapted by the 2026 'No. 170+1' special, not by ep 170.",
+   "sources": [
+    "https://myheroacademia.fandom.com/wiki/Episode_170",
+    "https://www.animefillerguide.com/my-hero-academia",
+    "https://screenrant.com/mha-anime-ending-final-episode-difference-manga/",
+    "https://fandomwire.com/my-hero-academia-season-8-finale-will-disappoint-fans/",
+    "https://myheroacademia.fandom.com/wiki/Chapter_430",
+    "https://en.wikipedia.org/wiki/My_Hero_Academia_season_8"
+   ]
+  }
+ ],
+ "continue_points": [
+  {
+   "episode": 140,
+   "continue_chapter": 335,
+   "note": "ends at ch 335 p.10; ep 141 finishes 335 (p.11-15)"
+  },
+  {
+   "episode": 141,
+   "continue_chapter": 338,
+   "note": "ends at ch 338 p.5 ('first few panels of 338'); ep 142 finishes 338"
+  },
+  {
+   "episode": 147,
+   "continue_chapter": 355,
+   "note": "ends at ch 355 p.9"
+  },
+  {
+   "episode": 148,
+   "continue_chapter": 359,
+   "note": "ends at ch 359 p.14; ep 149 opens with 359 p.15-18"
+  },
+  {
+   "episode": 152,
+   "continue_chapter": 372,
+   "note": "ends at ch 372 p.10"
+  },
+  {
+   "episode": 153,
+   "continue_chapter": 375,
+   "note": "ends at ch 375 p.13"
+  },
+  {
+   "episode": 155,
+   "continue_chapter": 382,
+   "note": "ends at ch 382 p.7"
+  },
+  {
+   "episode": 156,
+   "continue_chapter": 385,
+   "note": "ends at ch 385 p.11 ('nearly the entire chapter')"
+  },
+  {
+   "episode": 157,
+   "continue_chapter": 390,
+   "note": "ends at ch 390 p.12, just before its final page"
+  },
+  {
+   "episode": 163,
+   "continue_chapter": 410,
+   "note": "ends at ch 410 p.8 (AFO's farewell); ep 164 opens with 410 p.9-15"
+  },
+  {
+   "episode": 165,
+   "continue_chapter": 417,
+   "note": "ends midway through ch 417 (p.10)"
+  },
+  {
+   "episode": 169,
+   "continue_chapter": 429,
+   "note": "ends inside ch 429 (p.3, 5-14 shown); ep 170 finishes 429 then 430"
+  },
+  {
+   "episode": 170,
+   "continue_chapter": 431,
+   "note": "equals end+1, listed for the stitch: ch 431 'More' (vol 42 bonus) is adapted by the 'No. 170+1: More' special (2026-05-02) and ch 431.5 (Ultra Age fan-book one-shot) by the 'I am a hero too' OVA (2026-08-03); after those nothing Horikoshi drew remains unadapted"
+  }
+ ],
+ "annotations": [
+  {
+   "episodes": [
+    140,
+    141
+   ],
+   "kind": "partial",
+   "chapters": "335",
+   "note": "ch 335 split p.1-10 | p.11-15 across the pair"
+  },
+  {
+   "episodes": [
+    141,
+    142
+   ],
+   "kind": "partial",
+   "chapters": "338",
+   "note": "ch 338 split p.1-5 | p.5-15; ep 142's title covers 338-340"
+  },
+  {
+   "episodes": [
+    147,
+    148
+   ],
+   "kind": "partial",
+   "chapters": "355",
+   "note": "ch 355 split p.1-9 | p.9-15"
+  },
+  {
+   "episodes": [
+    148,
+    149
+   ],
+   "kind": "partial",
+   "chapters": "359",
+   "note": "ch 359: p.1-3 not animated, p.4-14 in ep 148, p.15-18 opens ep 149"
+  },
+  {
+   "episodes": [
+    148,
+    150
+   ],
+   "kind": "rearranged",
+   "chapters": "357 (p.15)",
+   "note": "ch 357's last page held back from ep 148 and grafted into ep 150"
+  },
+  {
+   "episodes": [
+    152,
+    153
+   ],
+   "kind": "partial",
+   "chapters": "372",
+   "note": "ch 372 split p.1-10 | p.11-15"
+  },
+  {
+   "episodes": [
+    153,
+    154
+   ],
+   "kind": "partial",
+   "chapters": "375",
+   "note": "ch 375 split p.1-13 | p.14-15"
+  },
+  {
+   "episodes": [
+    154,
+    160
+   ],
+   "kind": "rearranged",
+   "chapters": "377 (p.1)",
+   "note": "ch 377 p.1 skipped in ep 154 and used as the cold open of ep 160 (Final Season premiere)"
+  },
+  {
+   "episodes": [
+    155,
+    156
+   ],
+   "kind": "partial",
+   "chapters": "382",
+   "note": "ch 382 split p.1-7 | p.8-17"
+  },
+  {
+   "episodes": [
+    156,
+    157
+   ],
+   "kind": "partial",
+   "chapters": "385",
+   "note": "ch 385 split p.1-11 | p.12-17"
+  },
+  {
+   "episodes": [
+    157,
+    158
+   ],
+   "kind": "partial",
+   "chapters": "390",
+   "note": "ch 390 split p.1-12 | p.13 (final page opens ep 158); 387 p.1-3 not animated in ep 157"
+  },
+  {
+   "episodes": [
+    160
+   ],
+   "kind": "abridged",
+   "chapters": "396-398 (recap) + 399-400",
+   "note": "first half of the Final Season premiere re-runs the S7 finale's All Might vs AFO material (CBR); title reuses ch 398's title although new content is 399-400 — do not title-match this episode to 398"
+  },
+  {
+   "episodes": [
+    163,
+    164
+   ],
+   "kind": "partial",
+   "chapters": "410",
+   "note": "ch 410 split p.1-8 | p.9-15"
+  },
+  {
+   "episodes": [
+    165,
+    166
+   ],
+   "kind": "partial",
+   "chapters": "417",
+   "note": "ch 417 split p.1-10 | p.11-15; ep 165 also swaps the order of Nana's rejection and Deku's vestige entry within 414-417"
+  },
+  {
+   "episodes": [
+    168,
+    169
+   ],
+   "kind": "rearranged",
+   "chapters": "425 (p.13-14), 426 (p.13-14)",
+   "note": "two-page fragments of 425/426 (426 p.14 absent from ep 168) replayed at ep 169's open to pair with 427-428; end/continue of ep 168 stays 426/427"
+  },
+  {
+   "episodes": [
+    169,
+    170
+   ],
+   "kind": "partial",
+   "chapters": "429",
+   "note": "ch 429 split: p.3, 5-14 in ep 169; p.3-4, 14-19 in ep 170 (p.3 and p.14 shown in both)"
+  }
+ ],
+ "type_corrections": [],
+ "repairs": [],
+ "structure": {
+  "notes": "AniList verified (2026-08-23): Boku no Hero Academia 7 (id 163139) = 21 TV episodes, 2024-05-04..2024-10-12, FINISHED = our 139-159; Boku no Hero Academia FINAL SEASON (id 182896) = 11 TV episodes, 2025-10-04..2025-12-13, FINISHED = our 160-170. 21+11 on top of 138 = 170, so our aired/total count of 170 is correct and cumulative numbering matches the fandom wiki's 'Episode N' pages one-to-one (S7 ep k = our 138+k; FS ep k = our 159+k). S7 adapts chs 329-398 (vols 34-39; Wikipedia); Final Season adapts 399-430 (vols 40-42; Wikipedia), i.e. the TV run ends exactly at the manga's last numbered chapter 430. Volume 42 = chs 423-430 plus bonus 'More' (431) per Wikipedia's chapter list, so our open boundary 'v42: 423-?' resolves to 423-431. No filler/mixed/recap inside 139-170 (animefillerlist: all Manga Canon). Two post-finale specials exist that AniList lists as SEQUELs (both SPECIAL format, not counted in the 170): 'No. 170+1: More' (id 204356, 2026-05-02) adapts ch 431, and the OVA 'I am a hero too' (id 211711, AX premiere 2026-07-03, streaming 2026-08-03) adapts ch 431.5, the Eri one-shot from the Ultra Age final fan book — if they are added as components, max_adapted becomes 431.5 and the series is fully adapted. Four 'Memories' recap specials aired 2024-04-06..04-27 before S7 (fandom Episode 138.1-138.4): recaps of S1-S6 with brief new framing footage (plus a ch 335 scene) — no chapter anchors; AniList has no separate entry for them (searches for 'Memories' return nothing and S7's relations list none). The anime-original movie You're Next (id 168013, 2024-08-02) is a SIDE_STORY of S7 and adapts nothing.",
+  "order_only": [
+   {
+    "anilist_id": null,
+    "title": "My Hero Academia: Memories (4 recap specials, 'Episode 138.1-138.4')",
+    "after_anilist_id": 139630,
+    "adapts": "nothing (recap of S1-S6 + brief anime-original framing; a ch 335 scene appears)",
+    "note": "aired 2024-04-06/13/20/27 ahead of S7; not on AniList as a separate entry (verify)"
+   },
+   {
+    "anilist_id": 168013,
+    "title": "My Hero Academia THE MOVIE: You're Next",
+    "after_anilist_id": 163139,
+    "adapts": "nothing (anime-original)",
+    "note": "AniList SIDE_STORY of S7; released 2024-08-02 mid-S7"
+   },
+   {
+    "anilist_id": 204356,
+    "title": "Boku no Hero Academia No. 170+1: More",
+    "after_anilist_id": 182896,
+    "adapts": "ch 431 (vol 42 bonus chapter 'More')",
+    "note": "SPECIAL, 1 ep, aired 2026-05-02; fandom Episode 171 'adapted from = Chapter 431'; Wikipedia season-8 page and anibase agree (bonus chapter from vol 42)"
+   },
+   {
+    "anilist_id": 211711,
+    "title": "Boku no Hero Academia: I am a hero too",
+    "after_anilist_id": 204356,
+    "adapts": "ch 431.5 (Eri one-shot from 'My Hero Academia: Ultra Age: The Final Fan Book', Dec 2024)",
+    "note": "SPECIAL/OVA ~6 min, Anime Expo 2026-07-03, streaming 2026-08-02/03; fandom + ScreenRant agree on the fan-book one-shot; AniList source=MANGA"
+   }
+  ]
+ },
+ "flags_for_sean": [
+  "Episode 160's title is ch 398's title ('Toshinori Yagi: Rising/Origin') but its first half is a recap of the S7 finale and its new material is chs 399-400 — any title-match heuristic must not pull 160 back to 398; anchor stays end 400 / start 399 (fandom, animefillerguide, Wikipedia vols 40-42, CBR review).",
+  "AniList lists two post-finale specials as SEQUELs (204356 'No. 170+1: More' -> ch 431; 211711 'I am a hero too' -> ch 431.5). Decide whether to add them as order-only components: with them the anime covers everything Horikoshi drew (431.5 is a fan-book one-shot, not a Jump chapter), without them continue_from_chapter=431 stands.",
+  "Page-level splits (e.g. 335 p.1-10 | 11-15) come only from the fandom episode/chapter pages; the independent sources (Sportskeeda per-episode for 140-159, CBR/ScreenRant/FandomWire/Soap Central for 160-170) confirm the chapter-level boundaries and 'ends mid-chapter' facts but not page numbers.",
+  "Sportskeeda's ep-9 article says 'part of 356' where it means 355 (its ep-10 article opens with 'the remaining part of chapter 355'), and its ep-18/19 articles write '283-84'/'286-89' for 383-384/386-389 — typos, not disagreements; recorded here so nobody re-opens them.",
+  "'Memories' recap specials (138.1-138.4) could not be found on AniList; if Sean wants them in the watch order they need a manual order-only entry (no chapters)."
+ ]
+}

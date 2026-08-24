@@ -1,0 +1,1232 @@
+{
+ "series_id": "that-time-i-got-reincarnated-as-a-slime",
+ "summary": "S2 (our 25-48) adapts manga 40-86 (LN vols 4-6): part 1 runs 40-71 ending on ch 71 'The Unleashed', part 2 runs 71-86 ending on ch 86 'The Octagram'. S3 (49-72) adapts 87-118 (LN 7-9) ending exactly on ch 118 'After the Festival' (matches the MU pin 118). S4 (73-96, 19 aired) adapts 119- (LN 10-11): ep 83 closes LN vol 10 at ch 130 and ep 91 sits at ~ch 142-143, only 2-3 chapters behind the monthly manga (ch 145, Aug 2026). Structure findings: the anime reorders freely - S2 opens with chs 40-43 that precede S1's Ingrassia chapters, the Falmuth-attack chapters 56-58 are shown before 54-55, ch 78 (Walpurgis entry) is deferred behind the battle chapters 79-81, ch 102 is split in reverse, and the Tengu chapter 105 follows the audiences 106. The three order-only entries (Visions of Coleus after S1, Scarlet Bond after S2P2, Tears of the Azure Sea after S3) are all Fuse-written originals with no manga chapters. Surprise: the context's volume boundaries are wrong (v1 is ch 1-6, not 1-4) - corrected map supplied.",
+ "anchors": [
+  {
+   "episode": 25,
+   "end_chapter": 40,
+   "start_chapter": 40,
+   "chapters_adapted": "40",
+   "volume": 9,
+   "confidence": "high",
+   "note": "S2P1 ep1 (LN vol 4 ch1 'Trade with the Beast Kingdom'). Opens at ch 40 = BEFORE S1's Ingrassia chapters 44-52 in manga order (rearranged; anime stages the Eurazania delegation after Rimuru's trip). Several anime-only additions (Ingrassia montage, outfit scene). Start 40 corroborated by MAL stack 'S2P1 adapts 40-71'.",
+   "sources": [
+    "https://tensura.fandom.com/wiki/Rimuru%27s_Busy_Life",
+    "https://tensura.fandom.com/wiki/Human-Monster_Interaction",
+    "https://myanimelist.net/stacks/38266",
+    "https://anilist.co/forum/thread/34193"
+   ]
+  },
+  {
+   "episode": 26,
+   "end_chapter": 41,
+   "start_chapter": 40,
+   "chapters_adapted": "40-41",
+   "volume": 9,
+   "confidence": "medium",
+   "note": "LN vol 4 ch1-2; fandom explicit manga list 40, 41 ('King Gazel's Invitation (Part One)'). Episode title = ch 40 title.",
+   "sources": [
+    "https://tensura.fandom.com/wiki/Trade_with_the_Animal_Kingdom_(episode)",
+    "https://tensura.fandom.com/wiki/Human-Monster_Interaction",
+    "https://tensura.fandom.com/wiki/Chapters"
+   ]
+  },
+  {
+   "episode": 27,
+   "end_chapter": 42,
+   "start_chapter": 41,
+   "chapters_adapted": "41-42",
+   "volume": 9,
+   "confidence": "medium",
+   "note": "LN vol 4 ch2 + LN vol 5 ch1 opening; fandom explicit manga list 41-42 (King Gazel's Invitation Part One/Two = LN ch2).",
+   "sources": [
+    "https://tensura.fandom.com/wiki/Paradise,_Once_More",
+    "https://tensura.fandom.com/wiki/Human-Monster_Interaction",
+    "https://tensura.fandom.com/wiki/A_Demon_Lord%27s_Awakening",
+    "https://tensura.fandom.com/wiki/Chapters"
+   ]
+  },
+  {
+   "episode": 28,
+   "end_chapter": 56,
+   "start_chapter": 44,
+   "chapters_adapted": "44-45 (partial), 53-54, 56",
+   "volume": 12,
+   "confidence": "medium",
+   "note": "LN vol 4 ch4 (partial)/ch7 + LN vol 5 ch1-2. Fandom explicit: 44-45 partially, 53 'Mjurran the Witch', 54 'Prelude to Calamity', 56 'Entangled Intentions' (Falmuth's scheming). Ch 55 is deferred to eps 30-31 (rearranged). Ends mid-56.",
+   "sources": [
+    "https://tensura.fandom.com/wiki/The_Scheming_Kingdom_of_Falmuth",
+    "https://tensura.fandom.com/wiki/A_Demon_Lord%27s_Awakening",
+    "https://tensura.fandom.com/wiki/Chapters"
+   ]
+  },
+  {
+   "episode": 29,
+   "end_chapter": 58,
+   "start_chapter": 56,
+   "chapters_adapted": "56-58",
+   "volume": 12,
+   "confidence": "medium",
+   "note": "LN vol 5 ch1-2; fandom explicit 56, 57 'Bringer of Misfortune', 58 'Disaster' (the Falmuth attack on Tempest).",
+   "sources": [
+    "https://tensura.fandom.com/wiki/Prelude_to_the_Disaster",
+    "https://tensura.fandom.com/wiki/A_Demon_Lord%27s_Awakening",
+    "https://tensura.fandom.com/wiki/Chapters"
+   ]
+  },
+  {
+   "episode": 30,
+   "end_chapter": 55,
+   "start_chapter": 54,
+   "chapters_adapted": "54 (part), 55",
+   "volume": 12,
+   "confidence": "medium",
+   "note": "LN vol 4 epilogue 'A Monster's Natural Enemy' (= ch 55 'Natural Enemy of Monsters') + LN vol 5 ch3. Fandom explicit 54, 55: Rimuru leaves Ingrassia / Hinata moves - chronologically BEFORE the 56-58 attack already shown in ep 29 (rearranged). The whole Tempest segment of this episode is anime-original (fandom). Reader resumes at 59.",
+   "sources": [
+    "https://tensura.fandom.com/wiki/The_Beauty_Makes_Her_Move",
+    "https://tensura.fandom.com/wiki/Human-Monster_Interaction",
+    "https://tensura.fandom.com/wiki/A_Demon_Lord%27s_Awakening",
+    "https://tensura.fandom.com/wiki/Chapters"
+   ]
+  },
+  {
+   "episode": 31,
+   "end_chapter": 59,
+   "start_chapter": 55,
+   "chapters_adapted": "55 (part), 59",
+   "volume": 13,
+   "confidence": "medium",
+   "note": "LN vol 5 ch3 'Despair and Hope'; fandom explicit 55 (Hinata vs Rimuru) + 59 'Despair and Hope' (return to ruined Tempest). Episode title pair 'Despair'/'Hope' (eps 31-32) = ch 59 title.",
+   "sources": [
+    "https://tensura.fandom.com/wiki/Despair",
+    "https://tensura.fandom.com/wiki/A_Demon_Lord%27s_Awakening",
+    "https://tensura.fandom.com/wiki/Chapters"
+   ]
+  },
+  {
+   "episode": 32,
+   "end_chapter": 62,
+   "start_chapter": 59,
+   "chapters_adapted": "59-62",
+   "volume": 13,
+   "confidence": "medium",
+   "note": "LN vol 5 ch3-4; fandom explicit 59, 60 'The Conditions for Hope', 61 'The Witch's Punishment', 62 'Whether Monster or Human'.",
+   "sources": [
+    "https://tensura.fandom.com/wiki/Hope",
+    "https://tensura.fandom.com/wiki/A_Demon_Lord%27s_Awakening",
+    "https://tensura.fandom.com/wiki/Chapters"
+   ]
+  },
+  {
+   "episode": 33,
+   "end_chapter": 63,
+   "start_chapter": 62,
+   "chapters_adapted": "62-63",
+   "volume": 13,
+   "confidence": "medium",
+   "note": "LN vol 5 ch4; fandom explicit 62, 63 'Moment of Counterattack' (Megiddo prep).",
+   "sources": [
+    "https://tensura.fandom.com/wiki/Putting_Everything_on_the_Line",
+    "https://tensura.fandom.com/wiki/A_Demon_Lord%27s_Awakening",
+    "https://tensura.fandom.com/wiki/Chapters"
+   ]
+  },
+  {
+   "episode": 34,
+   "end_chapter": 65,
+   "start_chapter": 63,
+   "chapters_adapted": "63-65",
+   "volume": 14,
+   "confidence": "high",
+   "note": "LN vol 5 ch4; fandom explicit 63, 64 'Difference in Class', 65 'Megiddo'. Episode title = ch 65 title exactly.",
+   "sources": [
+    "https://tensura.fandom.com/wiki/Megiddo_(episode)",
+    "https://tensura.fandom.com/wiki/A_Demon_Lord%27s_Awakening",
+    "https://tensura.fandom.com/wiki/Chapters",
+    "https://tensura.fandom.com/wiki/Megiddo_(chapter)"
+   ]
+  },
+  {
+   "episode": 35,
+   "end_chapter": 69,
+   "start_chapter": 65,
+   "chapters_adapted": "65-69",
+   "volume": 15,
+   "confidence": "medium",
+   "note": "LN vol 5 ch4-5; fandom explicit 65, 66 'Merciless', 67 'The Worshipping Demon' (Diablo), 68 'Birth of a Demon Lord' (= episode title), 69 'Tempest Revival Festival' (Harvest Festival / revival).",
+   "sources": [
+    "https://tensura.fandom.com/wiki/Birth_of_a_Demon_Lord_(episode)",
+    "https://tensura.fandom.com/wiki/A_Demon_Lord%27s_Awakening",
+    "https://tensura.fandom.com/wiki/Chapters"
+   ]
+  },
+  {
+   "episode": 36,
+   "end_chapter": 71,
+   "start_chapter": 69,
+   "chapters_adapted": "64 (partial flashback), 69-71",
+   "volume": 16,
+   "confidence": "high",
+   "note": "S2 PART 1 FINALE (LN vol 5 prologue+ch5 'The Unleashed One'). Fandom explicit 64 (partial), 69, 70 'The Day of Eurazania's Fall', 71 'The Unleashed' (= episode title). MAL stack: S2P1 adapts 40-71; AniList thread: part 1 ends at ~70-71, right before the Man-and-Monster Summit chapters (74-75).",
+   "sources": [
+    "https://tensura.fandom.com/wiki/The_One_Unleashed",
+    "https://tensura.fandom.com/wiki/A_Demon_Lord%27s_Awakening",
+    "https://myanimelist.net/stacks/38266",
+    "https://anilist.co/forum/thread/34193",
+    "https://tensura.fandom.com/wiki/The_Unleashed"
+   ]
+  },
+  {
+   "episode": 37,
+   "end_chapter": 74,
+   "start_chapter": 72,
+   "chapters_adapted": "71 (tail), 72, 74",
+   "volume": 16,
+   "confidence": "medium",
+   "note": "S2P2 ep1 (LN vol 5 ch5 end + LN vol 6 ch1). Fandom explicit 71, 72 'Swirling Plots', 74 'Monster-and-Man Summit I' (ch 73 Laplace/Kazalim is deferred to ep 38). MAL stack: S2P2 starts at 71.",
+   "sources": [
+    "https://tensura.fandom.com/wiki/The_Visitors",
+    "https://tensura.fandom.com/wiki/A_Demon_Lord%27s_Awakening",
+    "https://tensura.fandom.com/wiki/The_Octagram_Soars",
+    "https://myanimelist.net/stacks/38266",
+    "https://tensura.fandom.com/wiki/Chapters"
+   ]
+  },
+  {
+   "episode": 38,
+   "end_chapter": 75,
+   "start_chapter": 73,
+   "chapters_adapted": "73 (partial), 74-75",
+   "volume": 17,
+   "confidence": "medium",
+   "note": "LN vol 6 prologue 'A Majin's Schemes' (= ch 73 'A Conspiracy of Majin', partial) + ch1-2; fandom explicit 73 (partial), 74, 75 'Monster-and-Man Summit II'.",
+   "sources": [
+    "https://tensura.fandom.com/wiki/A_Meeting_of_Humans_and_Monsters",
+    "https://tensura.fandom.com/wiki/The_Octagram_Soars",
+    "https://tensura.fandom.com/wiki/Chapters"
+   ]
+  },
+  {
+   "episode": 39,
+   "end_chapter": 75,
+   "start_chapter": 74,
+   "chapters_adapted": "74-75 (continued)",
+   "volume": 17,
+   "confidence": "medium",
+   "note": "LN vol 6 ch1-2 ('Ramiris' News'); fandom explicit manga 74, 75 (summit continues; Ramiris arrives).",
+   "sources": [
+    "https://tensura.fandom.com/wiki/Ramiris%27s_Warning",
+    "https://tensura.fandom.com/wiki/The_Octagram_Soars",
+    "https://tensura.fandom.com/wiki/Chapters"
+   ]
+  },
+  {
+   "episode": 40,
+   "end_chapter": 76,
+   "start_chapter": 76,
+   "chapters_adapted": "76",
+   "volume": 17,
+   "confidence": "medium",
+   "note": "LN vol 6 ch2-3. Fandom episode page has no manga list; ch 76 'Demon Lord and True Dragon' (summit closes, Walpurgis explained, Rimuru resolves to attend, Youm backed as king) matches the episode summary. Interpolated from LN6 page (manga 73-86 <-> eps 38-48).",
+   "sources": [
+    "https://tensura.fandom.com/wiki/The_Congress_Dances",
+    "https://tensura.fandom.com/wiki/The_Octagram_Soars",
+    "https://tensura.fandom.com/wiki/Demon_Lord_and_True_Dragon",
+    "https://tensura.fandom.com/wiki/Chapters"
+   ]
+  },
+  {
+   "episode": 41,
+   "end_chapter": 77,
+   "start_chapter": 77,
+   "chapters_adapted": "77",
+   "volume": 17,
+   "confidence": "medium",
+   "note": "LN vol 6 ch3 'Eve of Battle' = ch 77 'Eve of Battle' (exact title identity, JP 会戦前夜). Caveat: the manga's ch 77 content (Walpurgis prep, Treyni's Dryas-doll body) is partly shown in ep 43, while this episode's Yamza/Dragon Faithful and army-teleport scenes may sit in 78-79; treat as +/-1.",
+   "sources": [
+    "https://tensura.fandom.com/wiki/The_Eve_of_Battle",
+    "https://tensura.fandom.com/wiki/The_Octagram_Soars",
+    "https://tensura.fandom.com/wiki/Eve_of_Battle",
+    "https://tensura.fandom.com/wiki/Chapters"
+   ]
+  },
+  {
+   "episode": 42,
+   "end_chapter": 78,
+   "start_chapter": 78,
+   "chapters_adapted": "78 (part), 84 (Frey/Milim flashback graft)",
+   "volume": 17,
+   "confidence": "medium",
+   "note": "LN vol 6 interlude 'The Demon Lords' (not a manga chapter of its own). Ch 78 'Walpurgis' opens with Clayman swallowing the Veldora rumour (this episode); the Frey/Milim Orb-of-Domination flashback shown here is manga ch 84 material moved forward. Ends mid-78.",
+   "sources": [
+    "https://tensura.fandom.com/wiki/The_Demon_Lords",
+    "https://tensura.fandom.com/wiki/The_Octagram_Soars",
+    "https://tensura.fandom.com/wiki/Walpurgis_(chapter)",
+    "https://tensura.fandom.com/wiki/The_Moderate_Harlequin_Alliance"
+   ]
+  },
+  {
+   "episode": 43,
+   "end_chapter": 79,
+   "start_chapter": 77,
+   "chapters_adapted": "77 (Treyni's doll body), 78 (part), 79",
+   "volume": 17,
+   "confidence": "medium",
+   "note": "LN vol 6 ch3-4. Treyni's Dryas-doll evolution (ch 77), Rimuru's final prep, then the Eurazania battle opens: Geld's trap, Albis vs Yamza, Phobio vs Footman & Tear = ch 79 'Battle'.",
+   "sources": [
+    "https://tensura.fandom.com/wiki/The_Signal_to_Begin_the_Banquet",
+    "https://tensura.fandom.com/wiki/The_Octagram_Soars",
+    "https://tensura.fandom.com/wiki/Battle",
+    "https://tensura.fandom.com/wiki/Chapters"
+   ]
+  },
+  {
+   "episode": 44,
+   "end_chapter": 81,
+   "start_chapter": 79,
+   "chapters_adapted": "79-80, 81 (first half)",
+   "volume": 18,
+   "confidence": "medium",
+   "note": "LN vol 6 ch4 'In the Land of Destiny'. Suphia vs Middray, Albis beats Yamza, Yamza->Charybdis, Benimaru's win, peace with the Dragon Faithful (ch 79 'Battle', 80 'Return of the Beast'), Footman & Tear withdraw (opening of ch 81 'Wight King'). Ends mid-81; Adalmann (rest of 81) is ep 45.",
+   "sources": [
+    "https://tensura.fandom.com/wiki/On_This_Land_Where_It_All_Happened",
+    "https://tensura.fandom.com/wiki/The_Octagram_Soars",
+    "https://tensura.fandom.com/wiki/Return_of_the_Beast",
+    "https://tensura.fandom.com/wiki/Wight_King_(chapter)"
+   ]
+  },
+  {
+   "episode": 45,
+   "end_chapter": 81,
+   "start_chapter": 81,
+   "chapters_adapted": "81 (second half), 78 (Rimuru arrives at Walpurgis)",
+   "volume": 18,
+   "confidence": "medium",
+   "note": "LN vol 6 ch4-5. Shuna/Hakurou/Souei vs Adalmann the Wight King = ch 81 'Wight King' (Adalmann is the Index Finger of the title). Rimuru's departure/arrival at the venue is manga ch 78 material, which the manga places BEFORE the battle chapters (rearranged).",
+   "sources": [
+    "https://tensura.fandom.com/wiki/Adalmann,_the_Index_Finger",
+    "https://tensura.fandom.com/wiki/The_Octagram_Soars",
+    "https://tensura.fandom.com/wiki/Wight_King_(chapter)",
+    "https://tensura.fandom.com/wiki/Walpurgis_(chapter)"
+   ]
+  },
+  {
+   "episode": 46,
+   "end_chapter": 83,
+   "start_chapter": 82,
+   "chapters_adapted": "78 (venue entry, part), 82, 83 (part)",
+   "volume": 18,
+   "confidence": "medium",
+   "note": "LN vol 6 ch5 'Walpurgis'. Demon lords assembled (ch 78), Clayman's accusation and Rimuru's rebuttal, Guy's 'fight it out', Milim set on Rimuru, Shion pummels Clayman, golem + Ninehead (ch 82 'A Demon's Loyalty'), Rimuru dodging Milim / Shion vs Clayman's Marionette Dance up to Veldora's arrival (mid ch 83 'The Crazed Clown').",
+   "sources": [
+    "https://tensura.fandom.com/wiki/Demon_Lords%27_Banquet_~Walpurgis~",
+    "https://tensura.fandom.com/wiki/The_Octagram_Soars",
+    "https://tensura.fandom.com/wiki/A_Demon%27s_Loyalty",
+    "https://tensura.fandom.com/wiki/The_Crazed_Clown"
+   ]
+  },
+  {
+   "episode": 47,
+   "end_chapter": 84,
+   "start_chapter": 83,
+   "chapters_adapted": "83 (rest), 84",
+   "volume": 19,
+   "confidence": "medium",
+   "note": "LN vol 6 ch5. Veldora vs Milim, Beretta vs the puppet, Ninehead freed (ch 83), Rimuru vs Clayman, recording device, Frey's flashback, Demon Marionette fails, Milim's 'I was faking it' and Carrion alive (ch 84 'The Moderate Harlequin Alliance').",
+   "sources": [
+    "https://tensura.fandom.com/wiki/Returning_from_the_Brink",
+    "https://tensura.fandom.com/wiki/The_Octagram_Soars",
+    "https://tensura.fandom.com/wiki/The_Crazed_Clown",
+    "https://tensura.fandom.com/wiki/The_Moderate_Harlequin_Alliance"
+   ]
+  },
+  {
+   "episode": 48,
+   "end_chapter": 86,
+   "start_chapter": 85,
+   "chapters_adapted": "85-86",
+   "volume": 19,
+   "confidence": "high",
+   "note": "SEASON 2 FINALE (LN vol 6 ch5-6 + epilogue 'In the Holy Lands'). Clayman's pseudo-awakening, devoured by Rimuru, Kazalim named (ch 85 'In a Holy Place'), Octagram formed, Frey & Carrion resign, Luminous reveal (ch 86 'The Octagram' = episode title). Fandom LN6 page ends S2's manga span at 86; MAL stack 'S2P2 adapts 71-86'; WDTALO 'continue at vol 19 ch 87'. Post-Walpurgis banquet + Hinata/Lubelius scene (ch 87) are re-adapted in S3 eps 49-50.",
+   "sources": [
+    "https://tensura.fandom.com/wiki/Octagram_(episode)",
+    "https://tensura.fandom.com/wiki/The_Octagram_Soars",
+    "https://myanimelist.net/stacks/38266",
+    "https://wheredoestheanimeleaveoff.com/where-does-the-that-time-i-got-reincarnated-as-a-slime-anime-leave-off-in-the-light-novel/",
+    "https://tensura.fandom.com/wiki/The_Octagram",
+    "https://anilist.co/forum/thread/34193"
+   ]
+  },
+  {
+   "episode": 49,
+   "end_chapter": 88,
+   "start_chapter": 87,
+   "chapters_adapted": "87 (pp.1-4, 41-43), 88",
+   "volume": 20,
+   "confidence": "high",
+   "note": "S3 ep1 (LN vol 7 ch1 'Daemons and Schemes'). Fandom explicit with pages: ch 87 'The Right Hand of God' pp.1-4 & 41-43, ch 88 'Demons and Machinations' (= episode title; Diablo's Falmuth report). MAL stack: S3 adapts 87-118.",
+   "sources": [
+    "https://tensura.fandom.com/wiki/Demons_and_Strategies",
+    "https://tensura.fandom.com/wiki/Conflict_Between_Saints_and_Monsters",
+    "https://myanimelist.net/stacks/38266",
+    "https://tensura.fandom.com/wiki/Demons_and_Machinations"
+   ]
+  },
+  {
+   "episode": 50,
+   "end_chapter": 89,
+   "start_chapter": 87,
+   "chapters_adapted": "87 (middle pages), 89 (part)",
+   "volume": 20,
+   "confidence": "medium",
+   "note": "LN vol 7 prologue 'The Majin's Memorial' + ch3 'The Saint's Intentions' part 1 (Hinata in Lubelius, Roy's death). Fandom explicit: ch 87 partly, ch 89 'Monster Federation and Holy Empire' partly. Ends mid-89.",
+   "sources": [
+    "https://tensura.fandom.com/wiki/The_Saint%27s_Intentions",
+    "https://tensura.fandom.com/wiki/Conflict_Between_Saints_and_Monsters",
+    "https://tensura.fandom.com/wiki/The_Right_Hand_of_God",
+    "https://tensura.fandom.com/wiki/Monster_Federation_and_Holy_Empire"
+   ]
+  },
+  {
+   "episode": 51,
+   "end_chapter": 89,
+   "start_chapter": 89,
+   "chapters_adapted": "89",
+   "volume": 20,
+   "confidence": "medium",
+   "note": "LN vol 7 ch2 'Respective Roles' 1st half; fandom explicit ch 89 (Edmaris and the Falmuth nobles weigh Tempest's peace terms).",
+   "sources": [
+    "https://tensura.fandom.com/wiki/Peaceful_Days",
+    "https://tensura.fandom.com/wiki/Conflict_Between_Saints_and_Monsters",
+    "https://tensura.fandom.com/wiki/Monster_Federation_and_Holy_Empire"
+   ]
+  },
+  {
+   "episode": 52,
+   "end_chapter": 89,
+   "start_chapter": 89,
+   "chapters_adapted": "89 (rest), 90 (opening page)",
+   "volume": 20,
+   "confidence": "medium",
+   "note": "LN vol 7 ch2 2nd half + ch3 p.136 only (fandom). Tempest-side slice-of-life (barriers, Veldora's aura, Milim's castle, Youm's schooling) = remainder of ch 89; touches the first page of ch 90 'The Saint's Idea'.",
+   "sources": [
+    "https://tensura.fandom.com/wiki/Each_Respective_Roles",
+    "https://tensura.fandom.com/wiki/Conflict_Between_Saints_and_Monsters",
+    "https://tensura.fandom.com/wiki/Monster_Federation_and_Holy_Empire",
+    "https://tensura.fandom.com/wiki/The_Saint%27s_Idea"
+   ]
+  },
+  {
+   "episode": 53,
+   "end_chapter": 91,
+   "start_chapter": 90,
+   "chapters_adapted": "90-91",
+   "volume": 20,
+   "confidence": "medium",
+   "note": "LN vol 7 ch3 2nd half + ch4 p.179-183 (fandom). Hinata's Seven Days trials / Ten Great Saints meeting (ch 90 'The Saint's Idea'); Reyhiem's tampered message and death, Nikolaus (ch 91 'Thinking of Home'). Fandom notes Reyhiem is killed in this episode.",
+   "sources": [
+    "https://tensura.fandom.com/wiki/Two_Sides_Meeting",
+    "https://tensura.fandom.com/wiki/Conflict_Between_Saints_and_Monsters",
+    "https://tensura.fandom.com/wiki/The_Saint%27s_Idea",
+    "https://tensura.fandom.com/wiki/Thinking_of_Home"
+   ]
+  },
+  {
+   "episode": 54,
+   "end_chapter": 92,
+   "start_chapter": 92,
+   "chapters_adapted": "92 (first half: Five Elders/Damrada interlude, Tempest's response)",
+   "volume": 20,
+   "confidence": "medium",
+   "note": "LN vol 7 interlude 'A Private Talk' (Five Elders, Damrada, Glenda = opening of ch 92 'The Second Confrontation') + ch4 p.183-207 (Rimuru learns of Reyhiem's death, Adalmann on the Church, Hinata approaches). Ends mid-92.",
+   "sources": [
+    "https://tensura.fandom.com/wiki/Those_Approaching",
+    "https://tensura.fandom.com/wiki/Conflict_Between_Saints_and_Monsters",
+    "https://tensura.fandom.com/wiki/The_Second_Confrontation"
+   ]
+  },
+  {
+   "episode": 55,
+   "end_chapter": 92,
+   "start_chapter": 92,
+   "chapters_adapted": "92 (rest)",
+   "volume": 20,
+   "confidence": "medium",
+   "note": "LN vol 7 ch4 p.208-238: Hinata's march via Blumund, the second Rimuru-vs-Hinata duel = ch 92 'The Second Confrontation'. The duel's tail may run into the opening of ch 93.",
+   "sources": [
+    "https://tensura.fandom.com/wiki/Saint_and_Demon_Clash",
+    "https://tensura.fandom.com/wiki/Conflict_Between_Saints_and_Monsters",
+    "https://tensura.fandom.com/wiki/The_Second_Confrontation",
+    "https://tensura.fandom.com/wiki/Clash_of_the_Holy_and_Monstrous"
+   ]
+  },
+  {
+   "episode": 56,
+   "end_chapter": 93,
+   "start_chapter": 93,
+   "chapters_adapted": "93",
+   "volume": 21,
+   "confidence": "medium",
+   "note": "LN vol 7 ch4 p.231-234 + ch5 'Holy-Demonic Clash' + ch6 p.277-279. Luminous and the Holy Ark, Louis reports; Shion vs Leonard & Garde inside the Holy Field = ch 93 'Clash of the Holy and Monstrous' (JP title identical to LN ch5).",
+   "sources": [
+    "https://tensura.fandom.com/wiki/Barking_Up_the_Wrong_Tree",
+    "https://tensura.fandom.com/wiki/Conflict_Between_Saints_and_Monsters",
+    "https://tensura.fandom.com/wiki/Clash_of_the_Holy_and_Monstrous"
+   ]
+  },
+  {
+   "episode": 57,
+   "end_chapter": 95,
+   "start_chapter": 94,
+   "chapters_adapted": "94-95",
+   "volume": 21,
+   "confidence": "medium",
+   "note": "LN vol 7 ch6 p.279-310. Damrada watches Falmuth's civil war, Edward and the Three Battlesages march (ch 94 'The Grin of the Ancient Demon'); Tempest reinforcements/Ranga vs Grigori, Diablo vs Glenda & Saara (ch 95 'The Wise Ones' Scheme' = the Seven Days Clergy's conspiracy of the episode title).",
+   "sources": [
+    "https://tensura.fandom.com/wiki/Seven_Days_Clergy%27s_Conspiracy",
+    "https://tensura.fandom.com/wiki/Conflict_Between_Saints_and_Monsters",
+    "https://tensura.fandom.com/wiki/The_Grin_of_the_Ancient_Demon",
+    "https://tensura.fandom.com/wiki/The_Wise_Ones%27_Scheme"
+   ]
+  },
+  {
+   "episode": 58,
+   "end_chapter": 97,
+   "start_chapter": 96,
+   "chapters_adapted": "96-97",
+   "volume": 22,
+   "confidence": "high",
+   "note": "LN vol 7 ch6 p.310-330 + epilogue 'A New Relationship'. Fandom explicit: ch 96 'God and Demon Lord' (= episode title exactly), ch 97 'A Blessing to the Dead' (Luminous revives Hinata; Hinata's past). Fandom LN7 page ends LN7's manga span at 98 (prologue of LN8).",
+   "sources": [
+    "https://tensura.fandom.com/wiki/God_and_Demon_Lord_(episode)",
+    "https://tensura.fandom.com/wiki/Conflict_Between_Saints_and_Monsters",
+    "https://tensura.fandom.com/wiki/God_and_Demon_Lord_(chapter)",
+    "https://tensura.fandom.com/wiki/A_Blessing_to_the_Dead"
+   ]
+  },
+  {
+   "episode": 59,
+   "end_chapter": 101,
+   "start_chapter": 98,
+   "chapters_adapted": "98-101",
+   "volume": 22,
+   "confidence": "high",
+   "note": "LN vol 8 prologue 'A Progress Report' (= ch 98 'Progress Report') + ch1 'Reconciliation and Agreement' (= chs 99, 100, 101 'Reconciliation and Agreement 1/2/2.5'; episode title identical). Lubelius group in Tempest, Roy's death explained, the informant, sukiyaki dinner; fandom notes the bath/peeping scene is skipped. LN8 page maps 98-107 to eps 59-65.",
+   "sources": [
+    "https://tensura.fandom.com/wiki/Reconciliation_and_Agreement_(episode)",
+    "https://tensura.fandom.com/wiki/Territory_Seizure",
+    "https://tensura.fandom.com/wiki/Progress_Report",
+    "https://tensura.fandom.com/wiki/Reconciliation_and_Agreement_2.5"
+   ]
+  },
+  {
+   "episode": 60,
+   "end_chapter": 102,
+   "start_chapter": 102,
+   "chapters_adapted": "102 (later part)",
+   "volume": 23,
+   "confidence": "medium",
+   "note": "LN vol 8 ch2 'Invitations to Countries' p.106-128 ONLY (fandom) - the festival decision, potions, Yoshida the chef, Cazac vs Mjollmile = ch 102 'Inviting the Other Nations'. Note the episode title 'Festival Preparations' is NOT ch 104's content (that is ep 62). Ep 61 goes back to p.82-105 (rearranged), so the reader resumes inside 102.",
+   "sources": [
+    "https://tensura.fandom.com/wiki/Festival_Preparations_(episode)",
+    "https://tensura.fandom.com/wiki/Territory_Seizure",
+    "https://tensura.fandom.com/wiki/Inviting_the_Other_Nations"
+   ]
+  },
+  {
+   "episode": 61,
+   "end_chapter": 103,
+   "start_chapter": 102,
+   "chapters_adapted": "102 (earlier part), 103",
+   "volume": 23,
+   "confidence": "medium",
+   "note": "LN vol 8 ch2 p.82-105 (Gazel's court receives the invitation) + ch3 p.149-165 (Ramiris, Beretta, Treyni move to Tempest; labyrinth under the arena) = ch 103 'Fairy of the Labyrinth'.",
+   "sources": [
+    "https://tensura.fandom.com/wiki/The_Nations_and_Invitations",
+    "https://tensura.fandom.com/wiki/Territory_Seizure",
+    "https://tensura.fandom.com/wiki/Inviting_the_Other_Nations",
+    "https://tensura.fandom.com/wiki/Fairy_of_the_Labyrinth"
+   ]
+  },
+  {
+   "episode": 62,
+   "end_chapter": 104,
+   "start_chapter": 103,
+   "chapters_adapted": "103 (part), 104",
+   "volume": 23,
+   "confidence": "medium",
+   "note": "LN vol 8 ch3 p.166-192: dungeon construction, Ramiris completes 100 floors, Veldora installed as final boss, Kurobe's weapons = ch 104 'Festival Preparations'.",
+   "sources": [
+    "https://tensura.fandom.com/wiki/Labyrinth_and_Storm_Dragon",
+    "https://tensura.fandom.com/wiki/Territory_Seizure",
+    "https://tensura.fandom.com/wiki/Festival_Preparations_(chapter)"
+   ]
+  },
+  {
+   "episode": 63,
+   "end_chapter": 106,
+   "start_chapter": 106,
+   "chapters_adapted": "106 (main), plus Milim/elemental-dragon and Mjollmile-attack beats",
+   "volume": 24,
+   "confidence": "medium",
+   "note": "LN vol 8 ch3 p.192-208 + ch4 'The Audience Ceremony' p.209-255: audiences with the Rabbitfolk/Framea, Abiru the lizardman etc. = ch 106 'Formal Audiences'. The manga places the Tengu chapter (105) BEFORE 106; the anime (following the LN) does the audiences first, so the reader resumes at 105.",
+   "sources": [
+    "https://tensura.fandom.com/wiki/Audience",
+    "https://tensura.fandom.com/wiki/Territory_Seizure",
+    "https://tensura.fandom.com/wiki/Formal_Audiences"
+   ]
+  },
+  {
+   "episode": 64,
+   "end_chapter": 106,
+   "start_chapter": 105,
+   "chapters_adapted": "105, 106 (Benimaru's ordeal)",
+   "volume": 24,
+   "confidence": "medium",
+   "note": "LN vol 8 ch4 p.256-280: the Tengu, Momiji and Kaede's history with Hakurou, Benimaru's double-marriage ordeal = ch 105 'The Tengu's Intimate Encounter' + the tail of ch 106.",
+   "sources": [
+    "https://tensura.fandom.com/wiki/Benimaru%27s_Ordeal",
+    "https://tensura.fandom.com/wiki/Territory_Seizure",
+    "https://tensura.fandom.com/wiki/The_Tengu%27s_Intimate_Encounter",
+    "https://tensura.fandom.com/wiki/Formal_Audiences"
+   ]
+  },
+  {
+   "episode": 65,
+   "end_chapter": 107,
+   "start_chapter": 107,
+   "chapters_adapted": "107",
+   "volume": 24,
+   "confidence": "high",
+   "note": "LN vol 8 epilogue 'The Debriefing' + LN vol 9 prologue 'The Light Speed Hero' + ch1 p.19-28. Mjollmile as finance chief, festival plans, Kumara named = ch 107 'The Lightspeed Hero' (episode title identical; both LN8 and LN9 fandom pages list 107 as the bridge chapter). Masayuki's backstory (ch 108 opening) may be touched.",
+   "sources": [
+    "https://tensura.fandom.com/wiki/The_Lightspeed_Hero_(episode)",
+    "https://tensura.fandom.com/wiki/Territory_Seizure",
+    "https://tensura.fandom.com/wiki/Opening_of_the_Monster_City",
+    "https://tensura.fandom.com/wiki/The_Lightspeed_Hero_(chapter)"
+   ]
+  },
+  {
+   "episode": 66,
+   "end_chapter": 109,
+   "start_chapter": 108,
+   "chapters_adapted": "108-109",
+   "volume": 24,
+   "confidence": "medium",
+   "note": "LN vol 9 ch1 p.28-67: Masayuki's party (ch 108 'The Eve of the Festival'), King Blumund, Gazel, Youm & Mjur, Grucius, reparations waived (ch 109 'Reunions and Encounters').",
+   "sources": [
+    "https://tensura.fandom.com/wiki/A_Throng_of_Visitors",
+    "https://tensura.fandom.com/wiki/Opening_of_the_Monster_City",
+    "https://tensura.fandom.com/wiki/The_Eve_of_the_Festival",
+    "https://tensura.fandom.com/wiki/Reunions_and_Encounters"
+   ]
+  },
+  {
+   "episode": 67,
+   "end_chapter": 110,
+   "start_chapter": 110,
+   "chapters_adapted": "110",
+   "volume": 25,
+   "confidence": "medium",
+   "note": "LN vol 9 ch1 p.67-94 + ch2 p.105-111: the festival-eve banquet, spear-toro sushi, Hinata & Yuuki, Elmesia's arrival = ch 110 'Culinary Achievements'.",
+   "sources": [
+    "https://tensura.fandom.com/wiki/Festival_Eve",
+    "https://tensura.fandom.com/wiki/Opening_of_the_Monster_City",
+    "https://tensura.fandom.com/wiki/Culinary_Achievements"
+   ]
+  },
+  {
+   "episode": 68,
+   "end_chapter": 112,
+   "start_chapter": 111,
+   "chapters_adapted": "111 (festival opening/concert part), 112",
+   "volume": 25,
+   "confidence": "medium",
+   "note": "LN vol 9 ch2 'The Founding Festival' p.111-146 + interlude 'A Problem Arises' (fandom) = ch 111 'The Founder's Festival' + ch 112 'A Problem Arises' (title identity with the LN interlude).",
+   "sources": [
+    "https://tensura.fandom.com/wiki/Nation%27s_Opening_Festival",
+    "https://tensura.fandom.com/wiki/Opening_of_the_Monster_City",
+    "https://tensura.fandom.com/wiki/The_Founder%27s_Festival",
+    "https://tensura.fandom.com/wiki/A_Problem_Arises"
+   ]
+  },
+  {
+   "episode": 69,
+   "end_chapter": 114,
+   "start_chapter": 111,
+   "chapters_adapted": "111 (tournament-planning meeting, cold open), 113, 114 (Gobta vs Lion Mask)",
+   "volume": 26,
+   "confidence": "medium",
+   "note": "LN vol 9 interlude 'A Late Night Meeting' + ch3 'The Martial Arts Tournament' (JP 武闘大会 = ch 113 'The Battle Tournament' = episode title). Big Four meeting is ch 111's planning scene; opening rounds ch 113; Gobta/Ranga vs 'Lion Mask' is ch 114. Ends mid-114.",
+   "sources": [
+    "https://tensura.fandom.com/wiki/The_Martial_Arts_Tournament",
+    "https://tensura.fandom.com/wiki/Opening_of_the_Monster_City",
+    "https://tensura.fandom.com/wiki/The_Battle_Tournament",
+    "https://tensura.fandom.com/wiki/Meeting_of_the_Minds"
+   ]
+  },
+  {
+   "episode": 70,
+   "end_chapter": 115,
+   "start_chapter": 114,
+   "chapters_adapted": "114 (midnight talks), 115",
+   "volume": 26,
+   "confidence": "medium",
+   "note": "LN vol 9 interlude 'Midnight Talks' + ch4 p.219-244: Gazel/Elmesia currency talks and pact (ch 114 'Meeting of the Minds'), Gobta's fusion and the final vs Masayuki (ch 115 'The Finals and the Talks').",
+   "sources": [
+    "https://tensura.fandom.com/wiki/Settling_the_Score_with_the_Hero",
+    "https://tensura.fandom.com/wiki/Opening_of_the_Monster_City",
+    "https://tensura.fandom.com/wiki/Meeting_of_the_Minds",
+    "https://tensura.fandom.com/wiki/The_Finals_and_the_Talks"
+   ]
+  },
+  {
+   "episode": 71,
+   "end_chapter": 117,
+   "start_chapter": 116,
+   "chapters_adapted": "116-117",
+   "volume": 26,
+   "confidence": "high",
+   "note": "LN vol 9 ch4 p.245-283 + ch5 p.286-288: dungeon unveiling (ch 116 'The Labyrinth's Grand Opening' = episode title) and the inaugural crawl by Great Lightning / Kaval's party / Lightspeed with Dryad observers (ch 117 'Exploring the Labyrinth' - content matches the episode summary). Bounded above by ep 72 = ch 118.",
+   "sources": [
+    "https://tensura.fandom.com/wiki/The_Labyrinth%27s_Grand_Opening_(episode)",
+    "https://tensura.fandom.com/wiki/Opening_of_the_Monster_City",
+    "https://tensura.fandom.com/wiki/The_Labyrinth%27s_Grand_Opening_(chapter)",
+    "https://tensura.fandom.com/wiki/Exploring_the_Labyrinth"
+   ]
+  },
+  {
+   "episode": 72,
+   "end_chapter": 118,
+   "start_chapter": 118,
+   "chapters_adapted": "118",
+   "volume": 27,
+   "confidence": "high",
+   "note": "SEASON 3 FINALE (LN vol 9 ch5 'After the Festival' p.288-355 + epilogue 'The Flames of Avarice'). Ch 118 'After the Festival' (episode title identical): Duke Muese's coin offer refused, the merchants paid, Magitrain deals, Rosso family. MAL stack: S3 adapts 87-118; mystiqora: S3 covers through ch 118, start at 119; WDTALO: continue at vol 27 ch 119; MU coverage pin 118 (open flag #728) agrees.",
+   "sources": [
+    "https://tensura.fandom.com/wiki/After_the_Festival_(episode)",
+    "https://tensura.fandom.com/wiki/Opening_of_the_Monster_City",
+    "https://tensura.fandom.com/wiki/After_the_Festival_(chapter)",
+    "https://myanimelist.net/stacks/38266",
+    "https://mystiqora.com/that-time-i-got-reincarnated-as-a-slime-season-4-manga-chapter-starting-point/",
+    "https://wheredoestheanimeleaveoff.com/where-does-the-that-time-i-got-reincarnated-as-a-slime-anime-leave-off-in-the-light-novel/"
+   ]
+  },
+  {
+   "episode": 73,
+   "end_chapter": 119,
+   "start_chapter": 119,
+   "chapters_adapted": "119 (first part)",
+   "volume": 27,
+   "confidence": "high",
+   "note": "S4 ep1 (LN vol 10 prologue/ch1 'Smooth Dungeon Management' = ch 119 'A Brisk Labyrinth Business', JP title identical). Ten days after the festival: Elmesia's inn, Hinata trains the kids, dungeon boom, Magitrain/elf-bar plans, Benimaru vs the complaining adventurer. MAL stack: S4 adapts 119-; WDTALO/mystiqora: continue at 119. Ch 119 is 50 pages and spans eps 73-74; ends mid-119.",
+   "sources": [
+    "https://tensura.fandom.com/wiki/New_Days",
+    "https://tensura.fandom.com/wiki/The_Majin_Behind_the_Scenes",
+    "https://tensura.fandom.com/wiki/A_Brisk_Labyrinth_Business",
+    "https://myanimelist.net/stacks/38266",
+    "https://mystiqora.com/that-time-i-got-reincarnated-as-a-slime-season-4-manga-chapter-starting-point/",
+    "https://wheredoestheanimeleaveoff.com/where-does-the-that-time-i-got-reincarnated-as-a-slime-anime-leave-off-in-the-light-novel/"
+   ]
+  },
+  {
+   "episode": 74,
+   "end_chapter": 119,
+   "start_chapter": 119,
+   "chapters_adapted": "119 (rest)",
+   "volume": 27,
+   "confidence": "medium",
+   "note": "Team Lightspeed clears floor 30, Green Fury's rule-bending progress, Ramiris & Veldora paid, research labs behind the final floor, Mjollmile's bad news (bosses 60-90 disabled by the Crusaders' run) = remainder of ch 119.",
+   "sources": [
+    "https://tensura.fandom.com/wiki/The_Dungeon_Evolves",
+    "https://tensura.fandom.com/wiki/The_Majin_Behind_the_Scenes",
+    "https://tensura.fandom.com/wiki/A_Brisk_Labyrinth_Business"
+   ]
+  },
+  {
+   "episode": 75,
+   "end_chapter": 120,
+   "start_chapter": 120,
+   "chapters_adapted": "120",
+   "volume": 27,
+   "confidence": "medium",
+   "note": "LN vol 10 ch1-2 + interlude 'Mariabell'. Adalmann's holy-magic contract, Pseudo-Soul avatars (Dungeon Dominators) and their training, Green Fury beaten on floor 49, Mariabell's past life and Muese's sniping = ch 120 'The Slime Threat' (chapter ends with Mariabell's backstory).",
+   "sources": [
+    "https://tensura.fandom.com/wiki/The_Avatar_Team_Is_Formed",
+    "https://tensura.fandom.com/wiki/The_Majin_Behind_the_Scenes",
+    "https://tensura.fandom.com/wiki/The_Slime_Threat"
+   ]
+  },
+  {
+   "episode": 76,
+   "end_chapter": 121,
+   "start_chapter": 121,
+   "chapters_adapted": "121",
+   "volume": 28,
+   "confidence": "medium",
+   "note": "LN vol 10 ch2 'Lively Days' + ch3 opening. Mariabell/Johann/Yuuki under Greed, avatar team vs adventurers, Frey collects Milim, Shuna's scolding, the Council of the West's letter (Green Fury were scouts) = ch 121 'Toward the Council'.",
+   "sources": [
+    "https://tensura.fandom.com/wiki/Invitation",
+    "https://tensura.fandom.com/wiki/The_Majin_Behind_the_Scenes",
+    "https://tensura.fandom.com/wiki/Toward_the_Council"
+   ]
+  },
+  {
+   "episode": 77,
+   "end_chapter": 122,
+   "start_chapter": 122,
+   "chapters_adapted": "122",
+   "volume": 28,
+   "confidence": "medium",
+   "note": "LN vol 10 ch3 'The Council'. The Council explained, Hinata rebuffs Elric & Reiner, Rimuru's group in Englassia (clothes, cafe meeting with Hinata, Muese's sniper death, guns, invasion routes) = ch 122 'Off to Englassia'.",
+   "sources": [
+    "https://tensura.fandom.com/wiki/The_First_Step",
+    "https://tensura.fandom.com/wiki/The_Majin_Behind_the_Scenes",
+    "https://tensura.fandom.com/wiki/Off_to_Englassia"
+   ]
+  },
+  {
+   "episode": 78,
+   "end_chapter": 124,
+   "start_chapter": 123,
+   "chapters_adapted": "123-124",
+   "volume": 28,
+   "confidence": "medium",
+   "note": "LN vol 10 ch3. The council session, the outrageous 'request', desk kick, mental interference dispelled, Elric/Reiner/Green Fury/Gaiye intrude (ch 123 'The Chaotic Council'); the vote fails, Gaban's bribery ledger, Hinata vs Reiner, Shuna vs Gaiye, Glenda's sniper shot caught, King Aegil, Tempest admitted (ch 124 'The Chaotic Council 2'). Ep 79 opens with Souei vs Glenda (ch 125 start), bounding this episode at 124.",
+   "sources": [
+    "https://tensura.fandom.com/wiki/The_Council_of_the_West",
+    "https://tensura.fandom.com/wiki/The_Majin_Behind_the_Scenes",
+    "https://tensura.fandom.com/wiki/The_Chaotic_Council",
+    "https://tensura.fandom.com/wiki/The_Chaotic_Council_2"
+   ]
+  },
+  {
+   "episode": 79,
+   "end_chapter": 125,
+   "start_chapter": 125,
+   "chapters_adapted": "125",
+   "volume": 29,
+   "confidence": "high",
+   "note": "LN vol 10 ch4 'The Mastermind's Identity' = ch 125 'The Mastermind's Identity' = episode title (all three identical, JP 黒幕の正体). Souei vs Glenda, capture, lunch, interrogation, Greed explained.",
+   "sources": [
+    "https://tensura.fandom.com/wiki/The_Mastermind%27s_Identity_(episode)",
+    "https://tensura.fandom.com/wiki/The_Majin_Behind_the_Scenes",
+    "https://tensura.fandom.com/wiki/The_Mastermind%27s_Identity"
+   ]
+  },
+  {
+   "episode": 80,
+   "end_chapter": 126,
+   "start_chapter": 126,
+   "chapters_adapted": "126",
+   "volume": 29,
+   "confidence": "medium",
+   "note": "LN vol 10 ch4-5. Glenda joins Kurayami, cafeteria intel on Mariabell, the Five Elders (Granbell, Johann, Gaban), Yuuki controlled = ch 126 'The Trap of Greed'; the Yuuki/Johann/Mariabell Amrita plan and Milim's keepsake close the chapter or open 127.",
+   "sources": [
+    "https://tensura.fandom.com/wiki/The_Groundwork_of_Greed",
+    "https://tensura.fandom.com/wiki/The_Majin_Behind_the_Scenes",
+    "https://tensura.fandom.com/wiki/The_Trap_of_Greed"
+   ]
+  },
+  {
+   "episode": 81,
+   "end_chapter": 127,
+   "start_chapter": 127,
+   "chapters_adapted": "127",
+   "volume": 29,
+   "confidence": "medium",
+   "note": "LN vol 10 ch5 'The Trap of Greed'. Dark elves guide the party under Clayman's castle, the sealed lower levels, Kagali's memories of the elven paradise, the city given to Milim = ch 127 'The Ancient City of Amrita'.",
+   "sources": [
+    "https://tensura.fandom.com/wiki/Investigating_the_Ruins",
+    "https://tensura.fandom.com/wiki/The_Majin_Behind_the_Scenes",
+    "https://tensura.fandom.com/wiki/The_Ancient_City_of_Amrita"
+   ]
+  },
+  {
+   "episode": 82,
+   "end_chapter": 129,
+   "start_chapter": 128,
+   "chapters_adapted": "128-129",
+   "volume": 30,
+   "confidence": "medium",
+   "note": "LN vol 10 ch5. Rimuru vs Mariabell: Gaiye disintegrated, Shion vs Yuuki, Gobta+Ranga vs the controlled knight, Holy Field broken, Greed fails (ch 128 'Mariabell of Greed'); her defeat = ch 129 'An End to the Humiliation' (title only - fandom has no synopsis for 129).",
+   "sources": [
+    "https://tensura.fandom.com/wiki/The_Master_of_Greed",
+    "https://tensura.fandom.com/wiki/The_Majin_Behind_the_Scenes",
+    "https://tensura.fandom.com/wiki/Mariabell_of_Greed",
+    "https://tensura.fandom.com/wiki/Chapters"
+   ]
+  },
+  {
+   "episode": 83,
+   "end_chapter": 130,
+   "start_chapter": 129,
+   "chapters_adapted": "129 (part), 130",
+   "volume": 30,
+   "confidence": "medium",
+   "note": "LN vol 10 ch5 end + epilogue 'The One Who Laughs Last' (= ch 130 title). True Dragons flashback, Milim's pet -> Chaos Dragon, Rimuru helps Milim. Fandom LN10 page closes LN10's manga span at 130 and its anime span at ep 83; ep 84 opens with LN11's prologue (ch 131). No synopses exist for 129-130, so the 129/130 split is by title.",
+   "sources": [
+    "https://tensura.fandom.com/wiki/Milim%27s_Friend",
+    "https://tensura.fandom.com/wiki/The_Majin_Behind_the_Scenes",
+    "https://tensura.fandom.com/wiki/Chapters",
+    "https://tensura.fandom.com/wiki/Awakening_of_the_Chosen_Hero"
+   ]
+  },
+  {
+   "episode": 84,
+   "end_chapter": 132,
+   "start_chapter": 131,
+   "chapters_adapted": "131-132",
+   "volume": 30,
+   "confidence": "medium",
+   "note": "LN vol 11 prologue 'A Golden Melancholy' (= ch 131, Granbell at Maria's grave) + ch1 'Observation and Research Results' (= ch 132; Tempest's post-Council upgrade, new laws, Diablo's assignment). Titles identical LN<->manga; fandom LN11 page maps manga 131-144 to eps 84-92.",
+   "sources": [
+    "https://tensura.fandom.com/wiki/Tempest_Evolves",
+    "https://tensura.fandom.com/wiki/Awakening_of_the_Chosen_Hero",
+    "https://tensura.fandom.com/wiki/Chapters"
+   ]
+  },
+  {
+   "episode": 85,
+   "end_chapter": 133,
+   "start_chapter": 132,
+   "chapters_adapted": "132 (rest), 133 (part)",
+   "volume": 31,
+   "confidence": "medium",
+   "note": "LN vol 11 ch2 'New Companions' opening (JP title identical to ch 134 'New Friends' and to the episode): Milim & Gaia in the dungeon, Frey, research lab, Diablo's call about 1000 subordinates, Ramiris's elemental-core vessels = tail of 132 / start of 133 'The Daemon's Whispers'. Ends mid-133.",
+   "sources": [
+    "https://tensura.fandom.com/wiki/New_Companions",
+    "https://tensura.fandom.com/wiki/Awakening_of_the_Chosen_Hero",
+    "https://tensura.fandom.com/wiki/Chapters"
+   ]
+  },
+  {
+   "episode": 86,
+   "end_chapter": 135,
+   "start_chapter": 133,
+   "chapters_adapted": "133 (rest), 134-135",
+   "volume": 31,
+   "confidence": "high",
+   "note": "LN vol 11 ch2. Diablo in the demon realm recruiting the primordials Jaune, Violet, Blanc (ch 133 'The Daemon's Whispers', 134 'New Friends'), the corps named 'The Black Numbers' (ch 135, episode title identical, JP 黒色軍団).",
+   "sources": [
+    "https://tensura.fandom.com/wiki/The_Black_Numbers_(episode)",
+    "https://tensura.fandom.com/wiki/Awakening_of_the_Chosen_Hero",
+    "https://tensura.fandom.com/wiki/Chapters",
+    "https://tensura.fandom.com/wiki/The_Black_Numbers"
+   ]
+  },
+  {
+   "episode": 87,
+   "end_chapter": 136,
+   "start_chapter": 136,
+   "chapters_adapted": "136 (plus LN11 prologue/ch3-pt2 beats)",
+   "volume": 31,
+   "confidence": "medium",
+   "note": "LN vol 11 prologue, ch1 part 1 and ch3 'Ominous Signs' part 2 (fandom; episode title = LN ch3 title 不穏な気配). Luminous & adult Chloe 300 years ago, Granbell's plot, Testarossa/Ultima/Carrera assigned, the new school, Kumara and Class S = ch 136 'The Children's Growth'.",
+   "sources": [
+    "https://tensura.fandom.com/wiki/An_Unsettling_Feeling",
+    "https://tensura.fandom.com/wiki/Awakening_of_the_Chosen_Hero",
+    "https://tensura.fandom.com/wiki/Chapters"
+   ]
+  },
+  {
+   "episode": 88,
+   "end_chapter": 137,
+   "start_chapter": 137,
+   "chapters_adapted": "137",
+   "volume": 32,
+   "confidence": "medium",
+   "note": "LN vol 11 ch3 parts 1 & 3 + ch4 part 1 (fandom). Luminous learns of Granbell & Yuuki, Granbell's old oath, Rimuru and the students in Lubelius, the Five Elders' final war council = ch 137 'Granbell Rosso' ('Gran' of the episode title).",
+   "sources": [
+    "https://tensura.fandom.com/wiki/Gran,_the_Hero_of_Dawn",
+    "https://tensura.fandom.com/wiki/Awakening_of_the_Chosen_Hero",
+    "https://tensura.fandom.com/wiki/Chapters",
+    "https://tensura.fandom.com/wiki/Granbell_Rosso_(chapter)"
+   ]
+  },
+  {
+   "episode": 89,
+   "end_chapter": 138,
+   "start_chapter": 138,
+   "chapters_adapted": "138",
+   "volume": 32,
+   "confidence": "medium",
+   "note": "LN vol 11 ch4 'Western Upheaval' p.198-218 & 239-241 (fandom; JP 西方動乱 = chs 138-140 'Upheaval in the West'). The Elders' offensive against Rimuru/Leon/Luminous begins, Leon consults Elmesia about Chloe, Jaune missing = ch 138.",
+   "sources": [
+    "https://tensura.fandom.com/wiki/Lubelius,_the_Point_of_Convergence",
+    "https://tensura.fandom.com/wiki/Awakening_of_the_Chosen_Hero",
+    "https://tensura.fandom.com/wiki/Chapters"
+   ]
+  },
+  {
+   "episode": 90,
+   "end_chapter": 141,
+   "start_chapter": 139,
+   "chapters_adapted": "139-141",
+   "volume": null,
+   "confidence": "medium",
+   "note": "LN vol 11 ch4. Diablo vs Rain's double and Guy, Guy's demons overwhelm the Saints, Leon to Englassia, Testarossa's forces expose Johann, barrier down, Green Fury confronts the Council, Johann confesses = chs 139-140 'Upheaval in the West 2-3' and ch 141 'Council in Turmoil' (JP 混迷する西方諸国評議会; released 2026-04-24, not yet in a volume). +/-1: no synopses exist for 139-141.",
+   "sources": [
+    "https://tensura.fandom.com/wiki/Turbulence_in_the_West",
+    "https://tensura.fandom.com/wiki/Awakening_of_the_Chosen_Hero",
+    "https://tensura.fandom.com/wiki/Chapters",
+    "https://tensura.fandom.com/wiki/Council_in_Turmoil"
+   ]
+  },
+  {
+   "episode": 91,
+   "end_chapter": 142,
+   "start_chapter": 142,
+   "chapters_adapted": "142, 143 (part?)",
+   "volume": null,
+   "confidence": "medium",
+   "note": "LN vol 11 ch4 end / ch5 'Awakening of the Chosen Hero'. Rimuru vs Leon, Hinata vs Granbell in his hero form (ch 142 'The Chosen Hero Granbell Rosso', released 2026-05-26), Louis routs Laplace, Luminous defeats Maria, adult Chloe vanishes (possibly ch 143 'The Origin of It All', 2026-06-25). Within 2-3 chapters of the manga frontier (ch 144 2026-07-24, ch 145 Aug 2026); provisional.",
+   "sources": [
+    "https://tensura.fandom.com/wiki/Death_and_Disappearance",
+    "https://tensura.fandom.com/wiki/Awakening_of_the_Chosen_Hero",
+    "https://tensura.fandom.com/wiki/Chapters",
+    "https://tensura.fandom.com/wiki/The_Chosen_Hero_Granbell_Rosso"
+   ]
+  }
+ ],
+ "continue_points": [
+  {
+   "episode": 28,
+   "continue_chapter": 56,
+   "note": "ends inside ch 56 (Falmuth's scheming); ep 29 finishes 56-58"
+  },
+  {
+   "episode": 30,
+   "continue_chapter": 59,
+   "note": "54-55 are earlier chapters shown after 56-58 (ep 29); reader resumes at 59"
+  },
+  {
+   "episode": 37,
+   "continue_chapter": 73,
+   "note": "ep 37 skips ch 73 (Laplace/Yuuki/Kazalim), which ep 38 adapts; resume at 73"
+  },
+  {
+   "episode": 42,
+   "continue_chapter": 78,
+   "note": "ends mid-78 (venue entry/demon lords continue in eps 45-46)"
+  },
+  {
+   "episode": 44,
+   "continue_chapter": 81,
+   "note": "ends in the first half of ch 81; Adalmann (rest of 81) is ep 45"
+  },
+  {
+   "episode": 46,
+   "continue_chapter": 83,
+   "note": "ends mid-83 at Veldora's arrival"
+  },
+  {
+   "episode": 50,
+   "continue_chapter": 89,
+   "note": "ends inside ch 89 (fandom: 89 'partly')"
+  },
+  {
+   "episode": 52,
+   "continue_chapter": 90,
+   "note": "only the first page of 90 is used; resume at 90"
+  },
+  {
+   "episode": 54,
+   "continue_chapter": 92,
+   "note": "ends mid-92 before Hinata's march/duel"
+  },
+  {
+   "episode": 60,
+   "continue_chapter": 102,
+   "note": "ep 60 uses the LATER part of ch 102 (LN p.106-128); ep 61 goes back to p.82-105 - resume inside 102"
+  },
+  {
+   "episode": 63,
+   "continue_chapter": 105,
+   "note": "audiences (106) shown before the Tengu chapter (105); resume at 105"
+  },
+  {
+   "episode": 69,
+   "continue_chapter": 114,
+   "note": "ends mid-114 (Gobta vs Lion Mask); the midnight talks half of 114 is ep 70"
+  },
+  {
+   "episode": 73,
+   "continue_chapter": 119,
+   "note": "ch 119 (50 pp.) spans eps 73-74; resume inside 119"
+  },
+  {
+   "episode": 85,
+   "continue_chapter": 133,
+   "note": "ends mid-133 as Diablo's recruiting begins"
+  }
+ ],
+ "annotations": [
+  {
+   "episodes": [
+    25,
+    26,
+    27
+   ],
+   "kind": "rearranged",
+   "chapters": "40-43",
+   "note": "S2 opens with chs 40-43 (Eurazania trade, Gazel's invitation), which in the manga come BEFORE S1's Ingrassia chapters 44-52; the anime also moves the Eurazania delegation to after Rimuru's Ingrassia trip (fandom ep 25 notes). Ch 43 'To the Human Kingdom' is not listed for any S2 episode (covered by S1's trip)."
+  },
+  {
+   "episodes": [
+    28,
+    29,
+    30,
+    31
+   ],
+   "kind": "rearranged",
+   "chapters": "53-59",
+   "note": "Anime shows the Tempest-side Falmuth attack (56-58) in eps 28-29 before Rimuru's Ingrassia farewell and Hinata's ambush (54-55) in eps 30-31; the manga runs 53-58 in order. Ep 28 also grafts the Blumund pages of 44-45."
+  },
+  {
+   "episodes": [
+    30
+   ],
+   "kind": "partial",
+   "chapters": "54-55",
+   "note": "Fandom: everything that happens in Tempest in this episode is anime-original (only mentioned later in LN/manga); the Rimuru/Hinata thread is manga 54-55."
+  },
+  {
+   "episodes": [
+    36
+   ],
+   "kind": "partial",
+   "chapters": "64",
+   "note": "Ch 64 'Difference in Class' is re-used partially (flashback) alongside 69-71."
+  },
+  {
+   "episodes": [
+    42
+   ],
+   "kind": "graft",
+   "chapters": "84",
+   "note": "Frey/Milim Orb-of-Domination flashback is manga ch 84 material shown early (LN vol 6 interlude 'The Demon Lords')."
+  },
+  {
+   "episodes": [
+    43,
+    44,
+    45,
+    46
+   ],
+   "kind": "rearranged",
+   "chapters": "78-81",
+   "note": "Manga ch 78 (Rimuru enters Walpurgis, demon lords introduced) precedes the Eurazania battle chs 79-81; the anime runs the battle first (43-45) and enters the venue at 45/46."
+  },
+  {
+   "episodes": [
+    49,
+    50
+   ],
+   "kind": "partial",
+   "chapters": "87",
+   "note": "Ch 87 'The Right Hand of God' is split: pp.1-4 & 41-43 in ep 49 (fandom, page-level), the Lubelius/Hinata middle in ep 50."
+  },
+  {
+   "episodes": [
+    60,
+    61
+   ],
+   "kind": "rearranged",
+   "chapters": "102",
+   "note": "LN vol 8 ch2 is shown out of order (p.106-128 in ep 60, p.82-105 in ep 61), so manga ch 102 is split across both episodes in reverse order."
+  },
+  {
+   "episodes": [
+    63,
+    64
+   ],
+   "kind": "rearranged",
+   "chapters": "105-106",
+   "note": "Manga puts the Tengu chapter 105 before the audiences 106; the anime follows the LN order (audiences ep 63, Tengu/Benimaru ep 64)."
+  },
+  {
+   "episodes": [
+    69
+   ],
+   "kind": "partial",
+   "chapters": "111",
+   "note": "Ch 111's tournament-planning (Big Four) meeting is used as ep 69's 'sometime earlier' cold open."
+  },
+  {
+   "episodes": [
+    84,
+    85,
+    86,
+    87,
+    88,
+    89,
+    90,
+    91
+   ],
+   "kind": "abridged",
+   "chapters": "131-143",
+   "note": "Anchors for LN vol 11 material rest on LN-chapter structure + chapter titles only (fandom chapter pages 129-145 have no synopses yet); expect +/-1 chapter. The anime is ~2-3 chapters behind the monthly manga (ch 144 2026-07-24, ch 145 Aug 2026)."
+  }
+ ],
+ "type_corrections": [
+  {
+   "episodes": [
+    30
+   ],
+   "type": "mixed",
+   "note": "Adapts manga 54-55 (Rimuru/Hinata thread) but the entire Tempest segment is anime-original per fandom's adaptation notes.",
+   "sources": [
+    "https://tensura.fandom.com/wiki/The_Beauty_Makes_Her_Move"
+   ]
+  }
+ ],
+ "repairs": [],
+ "structure": {
+  "notes": "Cumulative numbering confirmed against the fandom season episode tables (which use the same overall numbers) and Wikipedia: S1 101280 = 1-24; S2 108511 (12 eps, 2021-01-12..03-30) = 25-36; S2 Part 2 116742 (12 eps, 2021-07-06..09-21) = 37-48; S3 156822 (24 eps, 2024-04-05..09-27) = 49-72; S4 182205 = 73-96 (24 eps = cours 1-2 airing consecutively from 2026-04-03; 19 aired through ep 91 on 2026-08-21, ep 92 'Chronoa the Hero, Part 1' airs 2026-08-28, eps 93-96 TBA/September; S4 is announced as FIVE split cours, so cours 3-5 will need further entries later). Recap specials 24.9 'Digression: Hinata Sakaguchi', 36.5 'Veldora's Journal 2', 48.5 'Diablo's Diary', 65.5 'Luminous Memories' are separate AniList/MAL entries and are NOT counted in the season episode counts - keep them out of the numbering. Source spans (all corroborated by the MAL stack 38266 + fandom LN pages): S2P1 = manga 40-71 (LN 4-5), S2P2 = 71-86 (LN 5-6), S3 = 87-118 (LN 7-9), S4 so far = 119-~143 (LN 10-11). MU coverage pin 118 (flag #728) is exactly the S3 finale; it resolves once the seasons are stitched. VOLUME BOUNDARIES in the context file are wrong (v1: 1-4 ... v6: 26-?). Wikipedia's volume list and the fandom Chapters index agree on: v1 1-6, v2 7-11, v3 12-17, v4 18-22, v5 23-27, v6 28-31, v7 32-35, v8 36-39, v9 40-43, v10 44-47, v11 48-52, v12 53-58, v13 59-63, v14 64-67, v15 68-70 (+65.5), v16 71-74, v17 75-79, v18 80-83, v19 84-87 (+90.5 bonus), v20 88-92, v21 93-96, v22 97-101, v23 102-105, v24 106-109, v25 110-113, v26 114-117, v27 118-120, v28 121-124, v29 125-128, v30 129-132, v31 133-136, v32 137-140 (JP 2026-06-09); 141-145 uncollected (v33 due 2026-10-08). Manga is monthly (~25th, Shonen Sirius / Pocket Magazine); latest chapter 145 'Will of Destruction' (Aug 2026), so latest_known_chapters=106 is stale. Order-only placements: Visions of Coleus after S1 (before S2P1); Scarlet Bond after S2P2 (before S3); Tears of the Azure Sea after S3 (before S4). All three are Fuse-written originals with no mainline manga counterpart (Scarlet Bond has a theater-bonus 'Volume 0' side manga only).",
+  "order_only": [
+   {
+    "anilist_id": 161802,
+    "title": "Visions of Coleus (Coleus no Yume)",
+    "after_anilist_id": 101280,
+    "adapts": "none - original story by Fuse (Season 2 Blu-ray bonus novel, 4 parts) ; no manga chapters",
+    "note": "3 ONA eps released 2023-11-01. Set between S1 and S2 during Rimuru's Ingrassia teaching days (Yuuki's mission); fandom 'Visions of Coleus' page; MAL stack lists it as anime-original after the Attack of the Demon Lord arc. Type: anime-only-canon.",
+    "sources": [
+     "https://tensura.fandom.com/wiki/Visions_of_Coleus",
+     "https://myanimelist.net/stacks/38266"
+    ]
+   },
+   {
+    "anilist_id": 139498,
+    "title": "Scarlet Bond (Guren no Kizuna-hen)",
+    "after_anilist_id": 116742,
+    "adapts": "none - original film story (Hiiro / Kingdom of Raja); no manga chapters",
+    "note": "Film 2022-11-25. Fandom: takes place after the second season's conclusion and before/within the start of the third (Rimuru already Demon Lord, post-Walpurgis). MAL stack: 'non-canon sequel to Season 2 Part 2'. Type: anime-only-canon.",
+    "sources": [
+     "https://tensura.fandom.com/wiki/Scarlet_Bond",
+     "https://myanimelist.net/stacks/38266",
+     "https://wheredoestheanimeleaveoff.com/where-does-the-that-time-i-got-reincarnated-as-a-slime-anime-leave-off-in-the-light-novel/"
+    ]
+   },
+   {
+    "anilist_id": 182206,
+    "title": "Tears of the Azure Sea (Soukai no Namida-hen)",
+    "after_anilist_id": 156822,
+    "adapts": "none - original film story by Fuse (Kaien, Yura, the Aqua Dragon); no manga chapters",
+    "note": "Film JP 2026-02-27 / US 2026-05-01. Set immediately after the Founder's Festival (S3 finale) as a bridge to S4 - Rimuru's party vacation on Elmesia's resort island. Type: anime-only-canon.",
+    "sources": [
+     "https://tensura.fandom.com/wiki/Tears_of_the_Azure_Sea",
+     "https://en.wikipedia.org/wiki/That_Time_I_Got_Reincarnated_as_a_Slime_the_Movie:_Tears_of_the_Azure_Sea",
+     "https://wheredoestheanimeleaveoff.com/where-does-the-that-time-i-got-reincarnated-as-a-slime-anime-leave-off-in-the-light-novel/"
+    ]
+   }
+  ]
+ },
+ "flags_for_sean": [
+  "VOLUME BOUNDARIES: the context's Wikipedia-derived map (v1 1-4, v2 5-9, v3 10-14, v4 15-19, v5 20-25, v6 26-?) does not match Wikipedia's volume list or the fandom Chapters index (v1 1-6, v2 7-11, v3 12-17, v4 18-22, v5 23-27, v6 28-31 ...). Full corrected map in structure.notes; all 'volume' fields here use the corrected map. Sources: https://en.wikipedia.org/wiki/List_of_That_Time_I_Got_Reincarnated_as_a_Slime_volumes ; https://tensura.fandom.com/wiki/Chapters",
+  "S2 Part 2 (eps 40-47) and S4 (eps 74-91) interior anchors are NOT fandom-explicit: the fandom episode pages carry LN chapter/page ranges but no manga lists there, so chapters were assigned by matching fandom episode summaries to fandom chapter synopses/titles through the LN-volume->manga-chapter tables. Season boundaries (36=71, 48=86, 49=87, 72=118, 73=119) are externally corroborated (MAL stack 38266, AniList thread 34193, WDTALO, mystiqora, MU pin). The web-search budget was exhausted before per-episode community threads could be found and reddit is blocked to the crawler, so a second independent per-episode source is missing for those ranges.",
+  "S4 is at the manga frontier: ch 141 2026-04-24, 142 05-26, 143 06-25, 144 07-24, 145 Aug 2026; ep 91 (2026-08-21) is ~ch 142-143. Anchors 90-91 are provisional; ep 92 (airs 2026-08-28) and 93-96 are unaired and not anchored. Fandom chapter pages 129-145 have no synopses yet - re-verify 82-91 in a later batch.",
+  "Ep 41 anchor rests on an exact title identity (ch 77 'Eve of Battle' = LN vol 6 ch3 = episode) but the manga's ch 77 content is partly shown in ep 43 and the episode's Yamza/Dragon Faithful scene may be in 78-79; +/-1.",
+  "Outside range but relevant to the S1 rows: MAL stack says S1 adapts manga 1-54 and WDTALO says S1 ends at vol 12 ch 53, whereas fandom maps S1 ep 23 to ch 52 and ep 24 to side stories; S2 ep 28 re-adapts 53-54. Worth a look when S1 anchors are done."
+ ]
+}

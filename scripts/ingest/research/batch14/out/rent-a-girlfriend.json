@@ -1,0 +1,429 @@
+{
+ "series_id": "rent-a-girlfriend",
+ "summary": "Our eps 37-60 are S4 (AniList 179344, ONA/TV, 12 eps, 2025-07-01..09-16, FINISHED) and S5 (AniList 199029, 12 eps, 2026-04-08..06-24, FINISHED); cumulative numbering is confirmed by the fandom wiki's 'Episode 37-60' pages, Wikipedia's EpisodeNumber 37-48/49-60 and the Japanese 満足度37-60 titles, so no conversion was needed (MAL/doublesama 'Season 4 Episode k' = 36+k, 'Season 5 Episode k' = 48+k). S4 adapts chs 168-214 (vol 20 to mid-vol 25): the daily-life/Daikanyama/Determination chapters and the first half of the Hawaiians 'Paradise' arc, ending on Mami's ultimatum; S5 adapts 215-255 (vol 25 to the end of vol 29): Mami's backstory, the Paradise climax (kiss, ch 227) and its resolution (231), the return to Tokyo, and the Investigation/Bra/Childhood Home/Moving Out arcs, ending on Chizuru's one-month cohabitation offer. The S4/S5 seam is non-linear at page level: ep 47 previews 212 p.1-3, and the Mami-side pages 210 p.15-18 and 212 p.11-18 are held back into ep 49 (S5 premiere), which fronts 215-217; ch 187 is split across eps 41/42. Flag #839 is confirmed (S4 ends 214/vol 25: fandom, Wikipedia, WDTALO, MAL, originalworks.jp); S5 ends 255 with continue-from 256 (fandom, anisaki, WDTALO; one Japanese VOD blog says 257 and is outweighed). S6 (同棲編, cohabitation arc from ch 256) was announced 2026-06-27 and exists on AniList as 213581 (undated). All 24 episodes are straight canon adaptations; no type corrections and no repairs to stored data.",
+ "anchors": [
+  {
+   "episode": 37,
+   "end_chapter": 171,
+   "start_chapter": 168,
+   "chapters_adapted": "168-171",
+   "volume": 20,
+   "confidence": "medium",
+   "note": "S4 opener (S4E1). START 168 is multiply corroborated (Wikipedia S4 prose 'chapters 168-214'; coolbee1 '4期は20巻168話から'; animefillerguide 'start from ch 168'; tym vol 20 = eps 37-38; title 'Routine' = ch 168 'Kare to Nichijo'); END 171 rests on fandom alone.",
+   "sources": [
+    "https://kanokari.fandom.com/wiki/Episode_37",
+    "https://en.wikipedia.org/wiki/Rent-A-Girlfriend_season_4",
+    "https://coolbee1.com/kanokari-4thseason-dokomade",
+    "https://tym-animemanganovel.com/kanokari2025/",
+    "https://www.animefillerguide.com/anime/kanojo-okarishimasu/"
+   ]
+  },
+  {
+   "episode": 38,
+   "end_chapter": 175,
+   "start_chapter": 172,
+   "chapters_adapted": "172-175",
+   "volume": 20,
+   "confidence": "high",
+   "note": "S4E2. Episode title 'Sigh and Girlfriend' (Tameiki to Kanojo) = ch 175 'The Sigh and My Girlfriend' (Wikipedia chapter list), and tym maps vol 20 (167-175) to eps 37-38, so the episode ends on vol 20's last chapter; matches fandom 172-175.",
+   "sources": [
+    "https://kanokari.fandom.com/wiki/Episode_38",
+    "https://en.wikipedia.org/wiki/List_of_Rent-A-Girlfriend_chapters",
+    "https://tym-animemanganovel.com/kanokari2025/"
+   ]
+  },
+  {
+   "episode": 39,
+   "end_chapter": 179,
+   "start_chapter": 176,
+   "chapters_adapted": "176-179",
+   "volume": 21,
+   "confidence": "high",
+   "note": "S4E3 'Daikanyama and Girlfriend' = the Tiger's Den 1-4 block (chs 176-179, Wikipedia titles); ep 40 'Decision' opens on 'Determination 1' (180), so the 179/180 boundary is title-corroborated; tym vol 21 = eps 39-41a.",
+   "sources": [
+    "https://kanokari.fandom.com/wiki/Episode_39",
+    "https://en.wikipedia.org/wiki/List_of_Rent-A-Girlfriend_chapters",
+    "https://tym-animemanganovel.com/kanokari2025/"
+   ]
+  },
+  {
+   "episode": 40,
+   "end_chapter": 182,
+   "start_chapter": 180,
+   "chapters_adapted": "180-182",
+   "volume": 21,
+   "confidence": "medium",
+   "note": "S4E4. START 180 corroborated by title (Ketsui/'Determination' 180-181); END 182 ('My Friend and My Girlfriend 2') is fandom-only, bracketed by tym (vol 21 spans eps 39-41a).",
+   "sources": [
+    "https://kanokari.fandom.com/wiki/Episode_40",
+    "https://en.wikipedia.org/wiki/List_of_Rent-A-Girlfriend_chapters",
+    "https://tym-animemanganovel.com/kanokari2025/"
+   ]
+  },
+  {
+   "episode": 41,
+   "end_chapter": 187,
+   "start_chapter": 183,
+   "chapters_adapted": "183-186, 187 (p.1-12)",
+   "volume": 22,
+   "confidence": "medium",
+   "note": "S4E5 'Promised Time' (Sonotoki) = ch 184 'That Moment' (Sonotoki to Kanojo); tym has vol 21 ending mid-episode (184/185), consistent. The p.1-12 split of ch 187 is fandom-only; episode ends mid-chapter.",
+   "sources": [
+    "https://kanokari.fandom.com/wiki/Episode_41",
+    "https://en.wikipedia.org/wiki/List_of_Rent-A-Girlfriend_chapters",
+    "https://tym-animemanganovel.com/kanokari2025/"
+   ]
+  },
+  {
+   "episode": 42,
+   "end_chapter": 190,
+   "start_chapter": 188,
+   "chapters_adapted": "187 (p.13-19), 188-190",
+   "volume": 22,
+   "confidence": "medium",
+   "note": "S4E6 opens on the tail of ch 187 (p.13-19), so START is the first full chapter 188 = 'Paradise and My Girlfriend 1' (the Hawaiians family trip, matching the title); END 190 fandom-only, within tym's vol 22 = eps 41b-43.",
+   "sources": [
+    "https://kanokari.fandom.com/wiki/Episode_42",
+    "https://en.wikipedia.org/wiki/List_of_Rent-A-Girlfriend_chapters",
+    "https://tym-animemanganovel.com/kanokari2025/"
+   ]
+  },
+  {
+   "episode": 43,
+   "end_chapter": 194,
+   "start_chapter": 191,
+   "chapters_adapted": "191-194",
+   "volume": 23,
+   "confidence": "medium",
+   "note": "S4E7 'Hawaiians and Girlfriend' = Paradise 4-7. END 194 (first chapter of vol 23) is fandom-only; tym's volume map (vol 22 ends in ep 43, vol 23 = eps 44-45) is consistent at chapter granularity only approximately.",
+   "sources": [
+    "https://kanokari.fandom.com/wiki/Episode_43",
+    "https://tym-animemanganovel.com/kanokari2025/"
+   ]
+  },
+  {
+   "episode": 44,
+   "end_chapter": 198,
+   "start_chapter": 195,
+   "chapters_adapted": "195-198",
+   "volume": 23,
+   "confidence": "medium",
+   "note": "S4E8 'Strings' = Paradise 8-11. Fandom-only END; consistent with tym vol 23 = eps 44-45.",
+   "sources": [
+    "https://kanokari.fandom.com/wiki/Episode_44",
+    "https://tym-animemanganovel.com/kanokari2025/"
+   ]
+  },
+  {
+   "episode": 45,
+   "end_chapter": 202,
+   "start_chapter": 199,
+   "chapters_adapted": "199-201, 202 (p.6-21)",
+   "volume": 23,
+   "confidence": "high",
+   "note": "S4E9. Fandom 199-202 and tym's map (vol 23 = 194-202 ends with ep 45) agree the episode closes on vol 23's last chapter 202; fandom notes p.1-5 of 202 were not adapted.",
+   "sources": [
+    "https://kanokari.fandom.com/wiki/Episode_45",
+    "https://tym-animemanganovel.com/kanokari2025/",
+    "https://en.wikipedia.org/wiki/List_of_Rent-A-Girlfriend_chapters"
+   ]
+  },
+  {
+   "episode": 46,
+   "end_chapter": 206,
+   "start_chapter": 203,
+   "chapters_adapted": "203-206",
+   "volume": 24,
+   "confidence": "medium",
+   "note": "S4E10 'Ring Finger' = Paradise 16-19. START 203 = first chapter of vol 24 (tym vol 24 = eps 46-47); END 206 fandom-only.",
+   "sources": [
+    "https://kanokari.fandom.com/wiki/Episode_46",
+    "https://tym-animemanganovel.com/kanokari2025/"
+   ]
+  },
+  {
+   "episode": 47,
+   "end_chapter": 210,
+   "start_chapter": 207,
+   "chapters_adapted": "207-209, 210 (p.1-14 & 19-20), 212 (p.1-3)",
+   "volume": 24,
+   "confidence": "high",
+   "note": "S4E11 'Guilt'. Fandom 207-210 (+ a 3-page preview of 212); doublesama: 'this episode adapts parts 20-23, which are Chapters 207 through 210'; MAL thread: 'Anime is at chapter 210~'. END = last mainline chapter 210 (212 p.1-3 is a forward graft re-covered in ep 48).",
+   "sources": [
+    "https://kanokari.fandom.com/wiki/Episode_47",
+    "https://doublesama.com/rent-a-girlfriend-season-4-episode-11/",
+    "https://myanimelist.net/forum/?topicid=2232010"
+   ]
+  },
+  {
+   "episode": 48,
+   "end_chapter": 214,
+   "start_chapter": 211,
+   "chapters_adapted": "211, 212 (p.1-10 & 19), 213-214",
+   "volume": 25,
+   "confidence": "high",
+   "note": "S4 finale (S4E12) 'Paradise'. Fandom 211-214; Wikipedia S4: 'chapters 168-214'; WDTALO: after S4 'start the manga at Volume 25, Chapter 215'; MAL finale thread: 'this cour ends on Chapter 214'; originalworks.jp: '4期最終話＝原作25巻214話'. Confirms flag #839.",
+   "sources": [
+    "https://kanokari.fandom.com/wiki/Episode_48",
+    "https://en.wikipedia.org/wiki/Rent-A-Girlfriend_season_4",
+    "https://wheredoestheanimeleaveoff.com/where-does-the-rent-a-girlfriend-anime-leave-off-in-the-manga/",
+    "https://myanimelist.net/forum/?topicid=2232973",
+    "https://www.originalworks.jp/anime/771"
+   ]
+  },
+  {
+   "episode": 49,
+   "end_chapter": 217,
+   "start_chapter": 215,
+   "chapters_adapted": "210 (p.15-18), 212 (p.11-18), 215-217",
+   "volume": 25,
+   "confidence": "high",
+   "note": "S5 premiere (S5E1) 'Ex-Girlfriend, Nanami Mami' = ch 215 'My Ex, Mami Nanami 2' (Wikipedia chapter list). Opens with Mami-side pages held back from S4 (210 p.15-18, 212 p.11-18), then Mami's backstory 215-217. MAL ep-50 thread ('218 is here' / 'they finally animated infamous chapter 218') fixes the 217/218 boundary; WDTALO S4->215.",
+   "sources": [
+    "https://kanokari.fandom.com/wiki/Episode_49",
+    "https://en.wikipedia.org/wiki/List_of_Rent-A-Girlfriend_chapters",
+    "https://myanimelist.net/forum/?topicid=2260952",
+    "https://wheredoestheanimeleaveoff.com/where-does-the-rent-a-girlfriend-anime-leave-off-in-the-manga/"
+   ]
+  },
+  {
+   "episode": 50,
+   "end_chapter": 220,
+   "start_chapter": 218,
+   "chapters_adapted": "218-220",
+   "volume": 25,
+   "confidence": "high",
+   "note": "S5E2 'Rental Girlfriend'. Fandom 218-220; MAL thread: the infamous ch 218 animated here, and the same thread's chapter-by-chapter reviewer covers ch 220 here while covering 221-223 in the ep-51 thread.",
+   "sources": [
+    "https://kanokari.fandom.com/wiki/Episode_50",
+    "https://myanimelist.net/forum/?topicid=2260952",
+    "https://myanimelist.net/forum/?topicid=2261775"
+   ]
+  },
+  {
+   "episode": 51,
+   "end_chapter": 223,
+   "start_chapter": 221,
+   "chapters_adapted": "221-223",
+   "volume": 26,
+   "confidence": "high",
+   "note": "S5E3 'The End of the Girlfriend'. Fandom 221-223; MAL ep-51 thread reviews chs 221, 222, 223 as this episode's material; note.com writer states ep 52 opened on the tail of 223 (page-level only, chapter-level unchanged).",
+   "sources": [
+    "https://kanokari.fandom.com/wiki/Episode_51",
+    "https://myanimelist.net/forum/?topicid=2261775",
+    "https://note.com/timtam26/n/n59f84d6c9cd8"
+   ]
+  },
+  {
+   "episode": 52,
+   "end_chapter": 226,
+   "start_chapter": 224,
+   "chapters_adapted": "224-226",
+   "volume": 26,
+   "confidence": "high",
+   "note": "S5E4 'Climax' (the kiss). Fandom 224-226; MAL ep-52 thread reviews 224-226 and teases 'the next chapter 227'; note.com (written right after ep 52 aired): 'アニメ52話＝原作223話後半→226話', '次回は227話からスタート'.",
+   "sources": [
+    "https://kanokari.fandom.com/wiki/Episode_52",
+    "https://myanimelist.net/forum/?topicid=2262667",
+    "https://note.com/timtam26/n/n59f84d6c9cd8"
+   ]
+  },
+  {
+   "episode": 53,
+   "end_chapter": 231,
+   "start_chapter": 227,
+   "chapters_adapted": "227-231",
+   "volume": 27,
+   "confidence": "high",
+   "note": "S5E5 'Legitimate Girlfriend' = end of the Paradise/Hawaiians arc (231 'Paradise and My Girlfriend Final'). Fandom 227-231; MAL ep-53 thread reviews 227-231; doublesama: 'the final chapter of this arc comes in Chapter 231'; note.com: 満足度53 = 227→231.",
+   "sources": [
+    "https://kanokari.fandom.com/wiki/Episode_53",
+    "https://myanimelist.net/forum/?topicid=2263508",
+    "https://doublesama.com/rent-a-girlfriend-season-4-episode-11/",
+    "https://note.com/timtam26/n/n59f84d6c9cd8",
+    "https://en.wikipedia.org/wiki/List_of_Rent-A-Girlfriend_chapters"
+   ]
+  },
+  {
+   "episode": 54,
+   "end_chapter": 235,
+   "start_chapter": 232,
+   "chapters_adapted": "232-235",
+   "volume": 27,
+   "confidence": "medium",
+   "note": "S5E6 'Long Time No Girlfriend' (return to Tokyo; Kiss 1-4). START 232 corroborated by MAL ep-54 thread reviews of 232-234; END 235 fandom-only (the reviewer's 235 post not found).",
+   "sources": [
+    "https://kanokari.fandom.com/wiki/Episode_54",
+    "https://myanimelist.net/forum/?topicid=2264278",
+    "https://en.wikipedia.org/wiki/List_of_Rent-A-Girlfriend_chapters"
+   ]
+  },
+  {
+   "episode": 55,
+   "end_chapter": 239,
+   "start_chapter": 236,
+   "chapters_adapted": "236-237, 238 (p.3-19), 239",
+   "volume": 28,
+   "confidence": "high",
+   "note": "S5E7 'Valentine's' = Kiss 5-8. The 239/240 boundary is title-corroborated: ep 56 'Investigation' (Chosa) is exactly the 'Assessment/Chosa to Kanojo 1-3' block 240-242 (Wikipedia chapter list). Fandom notes p.1-2 of 238 skipped.",
+   "sources": [
+    "https://kanokari.fandom.com/wiki/Episode_55",
+    "https://en.wikipedia.org/wiki/List_of_Rent-A-Girlfriend_chapters",
+    "https://note.com/timtam26/n/n59f84d6c9cd8"
+   ]
+  },
+  {
+   "episode": 56,
+   "end_chapter": 242,
+   "start_chapter": 240,
+   "chapters_adapted": "240-242",
+   "volume": 28,
+   "confidence": "high",
+   "note": "S5E8 'Investigation and Girlfriend' (Chosa to Kanojo) = chs 240-242 'The Assessment and My Girlfriend 1-3' (Chosa to Kanojo 1-3) exactly; ep 57 'Bra' = ch 243 'The Bra and My Girlfriend'. Fandom agrees.",
+   "sources": [
+    "https://kanokari.fandom.com/wiki/Episode_56",
+    "https://en.wikipedia.org/wiki/List_of_Rent-A-Girlfriend_chapters"
+   ]
+  },
+  {
+   "episode": 57,
+   "end_chapter": 245,
+   "start_chapter": 243,
+   "chapters_adapted": "243-245",
+   "volume": 28,
+   "confidence": "medium",
+   "note": "S5E9 'Bra and Girlfriend' (Bura to Kanojo) = ch 243 'The Bra and My Girlfriend' (title match; MAL thread cites the washing-machine bra spread); END 245 ('Childhood Home 1') is fandom-only.",
+   "sources": [
+    "https://kanokari.fandom.com/wiki/Episode_57",
+    "https://en.wikipedia.org/wiki/List_of_Rent-A-Girlfriend_chapters",
+    "https://myanimelist.net/forum/?topicid=2266878"
+   ]
+  },
+  {
+   "episode": 58,
+   "end_chapter": 249,
+   "start_chapter": 246,
+   "chapters_adapted": "246-249",
+   "volume": 29,
+   "confidence": "high",
+   "note": "S5E10 'Childhood Home' = Childhood Home 2-4 + Moving Out 1. Fandom 246-249; MAL ep-58 thread: 'Adapts the story up to the end of Chapter 249. The Move Arc is set in motion.'",
+   "sources": [
+    "https://kanokari.fandom.com/wiki/Episode_58",
+    "https://myanimelist.net/forum/?topicid=2267874",
+    "https://en.wikipedia.org/wiki/List_of_Rent-A-Girlfriend_chapters"
+   ]
+  },
+  {
+   "episode": 59,
+   "end_chapter": 252,
+   "start_chapter": 250,
+   "chapters_adapted": "250-252",
+   "volume": 29,
+   "confidence": "medium",
+   "note": "S5E11 'Moving and Girlfriend' = Moving Out 2-4. START 250 follows MAL's 'up to the end of 249' for ep 58; END 252 fandom-only.",
+   "sources": [
+    "https://kanokari.fandom.com/wiki/Episode_59",
+    "https://myanimelist.net/forum/?topicid=2267874",
+    "https://en.wikipedia.org/wiki/List_of_Rent-A-Girlfriend_chapters"
+   ]
+  },
+  {
+   "episode": 60,
+   "end_chapter": 255,
+   "start_chapter": 253,
+   "chapters_adapted": "253-255",
+   "volume": 29,
+   "confidence": "high",
+   "note": "S5 finale (S5E12) 'Loneliness'. Fandom 253-255; anisaki: '第5期最終回は原作29巻255話まで' and the 'one month only' room-lending scene = 255 「引っ越しと彼女⑦」, 続きは30巻256話; WDTALO (updated 2026-06-24): after S5 'start at Volume 30, Chapter 256'; putirafa: S5 reached ~vol 29, continue from vol 30. Vol 30 opens the cohabitation arc (256 'Living Under the Same Roof 1'), the announced S6.",
+   "sources": [
+    "https://kanokari.fandom.com/wiki/Episode_60",
+    "https://anisaki.hatenadiary.com/entry/kanokari-season6",
+    "https://wheredoestheanimeleaveoff.com/where-does-the-rent-a-girlfriend-anime-leave-off-in-the-manga/",
+    "https://putirafa.com/rent-a-girlfriend-tsuzuki/",
+    "https://en.wikipedia.org/wiki/List_of_Rent-A-Girlfriend_chapters"
+   ]
+  }
+ ],
+ "continue_points": [
+  {
+   "episode": 41,
+   "continue_chapter": 187,
+   "note": "episode ends at p.12 of ch 187; p.13-19 open ep 42 (fandom page split)"
+  }
+ ],
+ "annotations": [
+  {
+   "episodes": [
+    41,
+    42
+   ],
+   "kind": "partial",
+   "chapters": "187",
+   "note": "ch 187 split across the episode boundary: p.1-12 close ep 41, p.13-19 open ep 42 (fandom page-level; chapter order still monotonic)"
+  },
+  {
+   "episodes": [
+    45
+   ],
+   "kind": "partial",
+   "chapters": "202",
+   "note": "only p.6-21 of ch 202 adapted; p.1-5 skipped (fandom)"
+  },
+  {
+   "episodes": [
+    47,
+    48
+   ],
+   "kind": "graft",
+   "chapters": "212",
+   "note": "ep 47 ends with a 3-page preview of ch 212 (p.1-3), re-adapted in ep 48 as 212 p.1-10 & 19; ep 47's END stays at mainline ch 210"
+  },
+  {
+   "episodes": [
+    47,
+    49
+   ],
+   "kind": "rearranged",
+   "chapters": "210",
+   "note": "ch 210 p.15-18 (Mami-side pages) held back from ep 47 and used in the S5 premiere (ep 49) ahead of 215-217"
+  },
+  {
+   "episodes": [
+    48,
+    49
+   ],
+   "kind": "rearranged",
+   "chapters": "212",
+   "note": "ch 212 p.11-18 held back from ep 48 (which adapts 212 p.1-10 & 19) and used in ep 49; ep 48's END 214 is the honest S4 stopping point (WDTALO: resume at 215)"
+  },
+  {
+   "episodes": [
+    49
+   ],
+   "kind": "rearranged",
+   "chapters": "210, 212, 215-217",
+   "note": "S5 premiere opens on relocated pages from 210 and 212 (both < S4's end 214) before Mami's backstory 215-217; chapter-level non-monotonic at the S4/S5 seam, START recorded as first full chapter 215"
+  },
+  {
+   "episodes": [
+    55
+   ],
+   "kind": "partial",
+   "chapters": "238",
+   "note": "ch 238 adapted from p.3; p.1-2 skipped (fandom)"
+  }
+ ],
+ "type_corrections": [],
+ "repairs": [],
+ "structure": {
+  "notes": "Stitch: S4 = AniList 179344 (MAL 59277), 'Kanojo, Okarishimasu 4th Season', format ONA on AniList (Prime Video worldwide early stream from 2025-07-01; TV Jul 5 - Sep 20, 2025), status FINISHED, 12 episodes -> our 37-48 [season], adapts chs 168-214 (Wikipedia S4 prose). S5 = AniList 199029 (MAL 62485), 'Kanojo, Okarishimasu 5th Season', ONA, FINISHED, 12 episodes, AniList 2026-04-08..2026-06-24 (TV Apr 11 - Jun 27, 2026) -> our 49-60 [season], adapts chs 215-255 (with relocated pages of 210/212 in ep 49). Some search snippets still say 'Season 5 has 8 episodes' - stale; Wikipedia S5 wikitext has num_episodes=12 with 12 episode rows, AniList says 12/FINISHED, fandom has Episodes 49-60. Total 60 episodes; no OVAs/specials/movies in the watch order. The two fandom domains kanokari.fandom.com and kanojo-okarishimasu.fandom.com are the same wiki (identical revids), not independent sources. S6 '同棲編' (cohabitation arc) announced as in production on 2026-06-27 (official site news 20260627_223); AniList 213581 exists with no date/episode count; it will start at ch 256 / vol 30 ('Living Under the Same Roof 1'). Implied entry-fact updates: aired_episodes/total_episodes 36 -> 60, max_adapted_chapter 255, continue_from_chapter 256; flag #839 can be closed (S4 end 214/v25 verified by 5 sources).",
+  "order_only": []
+ },
+ "flags_for_sean": [
+  "Disagreement (outweighed): anime-vod-mori.com/kanokari-ending/ tabulates S4 as chs 168-211 (continue 212) and S5 as 212-257 (continue 258, 'アニメは30巻まで進んでいる'). S4=214 is backed by fandom + Wikipedia S4 + WDTALO + MAL finale thread + originalworks.jp; S5=255/continue 256 by fandom + anisaki (explicit scene-to-255 match) + WDTALO (updated 2026-06-24) + putirafa (vol 29 -> 30). Treated as a low-quality volume-derived table. Links: https://anime-vod-mori.com/kanokari-ending/ vs https://anisaki.hatenadiary.com/entry/kanokari-season6 and https://wheredoestheanimeleaveoff.com/where-does-the-rent-a-girlfriend-anime-leave-off-in-the-manga/",
+  "Page-level details (187 p.1-12/13-19 split, 202 p.1-5 skip, 210 p.15-18 and 212 p.11-18 relocations, 212 p.1-3 preview, 238 p.1-2 skip) come from the fandom wiki only; chapter-level values are independently corroborated where marked high.",
+  "Medium anchors (eps 37, 40-44, 46, 54, 57, 59): the exact END chapter rests on fandom alone; tym-animemanganovel's volume->episode map (v20=37-38, v21=39-41a, v22=41b-43, v23=44-45, v24=46-47, v25=48+) and Wikipedia chapter titles bracket them but do not pin the last chapter. No per-episode second source exists for S4 interiors (doublesama only cites chapters for S4E11; MAL S4 threads have none; animefillerguide stops at S3; ja.wikipedia's table has staff columns only).",
+  "WDTALO's S3 line says 'start at Volume 20, Chapter 167' - an off-by-one under its inclusive convention; our stored ep36->167 is confirmed by fandom Episode_36 ('163, 164, 165 (p.1-18), 166 (p.5-19), 167'), animefillerguide (ep 36 = 164-167, start at 168) and coolbee1 ('3期は20巻167話まで'). No repair.",
+  "AniList lists S4 and S5 as format ONA (Prime Video early stream) although they are TV broadcasts; component kind should stay [season]."
+ ]
+}

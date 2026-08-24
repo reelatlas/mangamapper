@@ -89,6 +89,17 @@ async function main() {
         .eq('series_id', sid);
       const byEp = new Map((existing ?? []).map((a) => [a.episode, a]));
       const { data: comps } = await db.from('series_components').select('anilist_id, episode_end, season_order').eq('series_id', sid).order('season_order');
+      const { data: srow } = await db.from('series').select('manga_anilist_id').eq('id', sid).maybeSingle();
+      const { data: bounds } = srow?.manga_anilist_id
+        ? await db.from('volume_boundaries').select('volume, chapter_start, chapter_end').eq('manga_anilist_id', srow.manga_anilist_id).order('volume')
+        : { data: [] as { volume: number; chapter_start: number; chapter_end: number | null }[] };
+      const volOf = (ch: number): number | null => {
+        const b = (bounds ?? []).find((x) => ch >= x.chapter_start && (x.chapter_end == null || ch <= x.chapter_end));
+        return b ? b.volume : null;
+      };
+      const { data: annRows } = await db.from('episode_annotations').select('episode, kind').eq('series_id', sid);
+      const ruledEps = new Set<number>((annRows ?? []).filter((a) => a.kind === 'rearranged' || a.kind === 'graft').map((a) => a.episode));
+      for (const g of v.annotations ?? []) if (g.kind === 'rearranged' || g.kind === 'graft') for (const ep of g.episodes ?? []) ruledEps.add(Number(ep));
       const lines: string[] = [`== ${sid}: ${v.anchors?.length ?? 0} anchors, ${v.continue_points?.length ?? 0} continue, ${v.annotations?.length ?? 0} annotation groups, ${v.type_corrections?.length ?? 0} type corrections`];
       if (v.summary) lines.push(`   ${v.summary.slice(0, 400)}`);
 
@@ -96,15 +107,51 @@ async function main() {
       const seenEp = new Set<number>();
       for (const a of v.anchors ?? []) {
         const ep = Number(a.episode);
-        const end = Number(a.end_chapter);
-        const start = a.start_chapter == null ? null : Number(a.start_chapter);
+        let end = Number(a.end_chapter);
+        let start = a.start_chapter == null ? null : Number(a.start_chapter);
+        // SLIVER RULE (Sean 2026-08-23 s2, MHA ep 170): the episode's START is
+        // the first chapter animated — a leading PARTIAL chapter counts unless
+        // it is scraps that contribute basically nothing (≤ 5 pages, or the
+        // record calls it a sliver/teaser/cold-open fragment). Agents applied a
+        // stricter "first FULL chapter unless the tail is the bulk" reading;
+        // normalize here so every record obeys one rule.
+        {
+          const lead = String(a.chapters_adapted ?? '').split(/,(?![^()]*\))/)[0]?.trim() ?? '';
+          const leadNum = Number((lead.match(/^(\d+)(?!\.)/) ?? [])[1]);
+          // only a leading partial of the IMMEDIATELY preceding chapter is a
+          // tail continuation; a far-earlier chapter opening the episode is a
+          // relocated graft/flashback and never the position (AoT ep 87 ruling)
+          if (start != null && Number.isInteger(leadNum) && leadNum >= 1 && leadNum === start - 1) {
+            const pageSpans = [...lead.matchAll(/(\d+)\s*[-–]\s*(\d+)/g)].map((m) => Math.max(0, Number(m[2]) - Number(m[1]) + 1));
+            const singles = (lead.match(/(?:p\.?\s*|,\s*)(\d+)(?!\s*[-–]|\d)/g) ?? []).length;
+            const pages = pageSpans.reduce((x, y) => x + y, 0) + (pageSpans.length ? 0 : singles);
+            const wordy = /half|most|bulk|remainder|rest of|majority|through/i.test(lead);
+            const scrappy = /sliver|teaser|cold[- ]open|fragment|panel|scrap|recap|flashback|montage|preview|replay/i.test(lead);
+            const substantive = !scrappy && (wordy || pages >= 6);
+            if (substantive) {
+              lines.push(`   sliver rule: ep${ep} start ${start} → ${leadNum} (leading partial '${lead.slice(0, 48)}' ≈ ${pages || '?'} pages)`);
+              start = leadNum;
+            }
+          }
+        }
+        // running-order END convention (Dagashi S1's scrambled sampler: "58,
+        // 32, 15" reported end 15): our END is the POSITION instrument — the
+        // furthest mainline chapter the episode touches — so lift it to the
+        // highest chapter in the adapted list when the agent's end sits below
+        // the start; the full list keeps the real order
+        if (start != null && start > end) {
+          const nums = String(a.chapters_adapted ?? '').match(/\d+(?:\.\d+)?/g)?.map(Number).filter((n) => Number.isInteger(n)) ?? [];
+          const top = Math.max(start, end, ...nums);
+          lines.push(`   note: ep${ep} running-order end ${end} lifted to position ${top} (list: ${a.chapters_adapted})`);
+          end = top;
+        }
         if (!Number.isFinite(ep) || !Number.isFinite(end) || ep < 1 || end < 0) { lines.push(`   !! bad anchor ${JSON.stringify(a).slice(0, 120)}`); totals.skipped++; continue; }
         if (ep > (s.aired_episodes ?? 0)) { lines.push(`   !! ep${ep} > aired ${s.aired_episodes} — skipped`); totals.skipped++; continue; }
         if (start != null && start > end) { lines.push(`   !! ep${ep} start ${start} > end ${end} — skipped`); totals.skipped++; continue; }
         if (seenEp.has(ep)) { lines.push(`   !! ep${ep} duplicated in verdict — later entry skipped`); totals.skipped++; continue; }
         seenEp.add(ep);
         const prev = byEp.get(ep);
-        if (prev && prev.source !== 'mu' && (prev.chapter !== end || (prev.start_chapter != null && start != null && prev.start_chapter !== start))) {
+        if (prev && prev.source !== 'mu' && !String(prev.note ?? '').includes(B) && (prev.chapter !== end || (prev.start_chapter != null && start != null && prev.start_chapter !== start))) {
           lines.push(`   REPAIR ep${ep}: ${prev.source} ${prev.chapter}${prev.start_chapter != null ? ` [start ${prev.start_chapter}]` : ''} → ${end}${start != null ? ` [start ${start}]` : ''} — ${(a.note ?? '').slice(0, 140)}`);
           totals.repairs++;
         } else if (prev && prev.source === 'mu') {
@@ -121,6 +168,26 @@ async function main() {
           if (error) throw new Error(`${sid} ep${ep}: ${error.message}`);
         }
         totals.anchors++;
+      }
+
+      // ---- cross-checks (review aid; the rearranged-zone rule still anchors
+      // exact values): order against neighbors, and volume vs boundaries
+      const merged = new Map<number, { chapter: number; start: number | null }>();
+      for (const a of existing ?? []) if (a.source !== 'mu') merged.set(a.episode, { chapter: a.chapter, start: a.start_chapter });
+      for (const a of v.anchors ?? []) if (seenEp.has(Number(a.episode))) merged.set(Number(a.episode), { chapter: Number(a.end_chapter), start: a.start_chapter == null ? null : Number(a.start_chapter) });
+      const ordered = [...merged.entries()].sort((x, y) => x[0] - y[0]);
+      for (let i = 1; i < ordered.length; i++) {
+        const [ep, cur] = ordered[i];
+        const [pep, prev] = ordered[i - 1];
+        if (!seenEp.has(ep) && !seenEp.has(pep)) continue;
+        if ((cur.chapter < prev.chapter || (cur.start != null && cur.start < prev.chapter - 1)) && !ruledEps.has(ep)) {
+          lines.push(`   WARN order: ep${ep} → ${cur.chapter}${cur.start != null ? ` [start ${cur.start}]` : ''} sits below ep${pep} → ${prev.chapter} with no rearranged/graft ruling — verify or annotate`);
+        }
+      }
+      for (const a of v.anchors ?? []) {
+        if (a.volume == null || !seenEp.has(Number(a.episode))) continue;
+        const bv = volOf(Number(a.end_chapter));
+        if (bv != null && bv !== Number(a.volume)) lines.push(`   WARN volume: ep${a.episode} → ch ${a.end_chapter} is vol ${bv} by Wikipedia boundaries, verdict says vol ${a.volume}`);
       }
 
       // ---- continue points (anchor must exist)

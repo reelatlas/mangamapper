@@ -1,0 +1,3033 @@
+{
+ "series_id": "reborn",
+ "summary": "The 203-episode anime adapts manga chapters 1-282 (through the end of the Future arc, vol 30; continue at 283), but the Daily Life gag chapters (1-61) are shuffled and split into four blocks (eps 1-19, 27-33, 38-39, 66-73) with chapters 5-6, 17-18, 43-47 and 61 never adapted, while Kokuyo (62-81 = eps 20-26), Varia (82-135 = eps 34-65) and the Future arc (136-282 = eps 74-141, 155-177, 190-203) are linear at ~2 chapters per episode. Two anime-only arcs interrupt the Future arc - Arcobaleno Trials (142-153, plus recap 154) and Primo Family (178-189) - and ep 155 re-adapts 227-228 after the first one; ja.wikipedia, the fandom arc pages and vongola101 agree on every arc boundary. Per-episode chapter lists come from the fandom episode infoboxes (the only per-episode table online); 36 anchors are 'high' (END chapter corroborated by Wikipedia chapter-title matches, multi-source arc boundaries or AFG/mangashed), the rest 'medium'. Surprises: eps 111-112 are built around anime-only opponents (Cappuccino, Arachide Brothers) confirmed anime-original by ja.wikipedia (type correction to mixed); ep 93 and ep 177 look mostly anime-original/recap but have only one source (flagged); fandom is one chapter off for eps 91-92 and under-lists ep 102, corrected from the chapter synopses. The existing ep 203 -> 282 anchor is confirmed (AFG, mangashed, fandom).",
+ "anchors": [
+  {
+   "episode": 1,
+   "end_chapter": 1,
+   "start_chapter": 1,
+   "chapters_adapted": "1",
+   "volume": 1,
+   "confidence": "high",
+   "note": "Reborn arrives; fandom episode infobox = Chapter 1 and Chapter 1 page's anime field = Episode 1; first episode = first chapter (Wikipedia ch 1 'The Guy From Italy').",
+   "sources": [
+    "https://reborn.fandom.com/wiki/Episode_1",
+    "https://reborn.fandom.com/wiki/Chapter_1",
+    "https://en.wikipedia.org/wiki/List_of_Reborn!_chapters"
+   ]
+  },
+  {
+   "episode": 2,
+   "end_chapter": 3,
+   "start_chapter": 2,
+   "chapters_adapted": "2-3 (+ Yamamoto's intro grafted from 5)",
+   "volume": 1,
+   "confidence": "high",
+   "note": "Ends on Gokudera swearing loyalty = end of ch 3 'Hayato Gokudera' (Wikipedia title); fandom Daily Life Arc page notes Yamamoto's manga intro (ch 5) was folded into this episode.",
+   "sources": [
+    "https://reborn.fandom.com/wiki/Episode_2",
+    "https://reborn.fandom.com/wiki/Chapter_3",
+    "https://en.wikipedia.org/wiki/List_of_Reborn!_chapters",
+    "https://reborn.fandom.com/wiki/Daily_Life_Arc"
+   ]
+  },
+  {
+   "episode": 3,
+   "end_chapter": 10,
+   "start_chapter": 7,
+   "chapters_adapted": "7-10",
+   "volume": 2,
+   "confidence": "medium",
+   "note": "Lambo (7), Bianchi (9), Poison Cooking II / adult Lambo (10). Fandom episode infobox also lists 8 (Family Entrance Exam) but the Chapter 8 page does not point back to ep 3.",
+   "sources": [
+    "https://reborn.fandom.com/wiki/Episode_3",
+    "https://reborn.fandom.com/wiki/Chapter_7",
+    "https://reborn.fandom.com/wiki/Chapter_10",
+    "https://en.wikipedia.org/wiki/List_of_Reborn!_chapters"
+   ]
+  },
+  {
+   "episode": 4,
+   "end_chapter": 12,
+   "start_chapter": 11,
+   "chapters_adapted": "11-12",
+   "volume": 2,
+   "confidence": "medium",
+   "note": "Haru Miura intro (11) + 'Question 7' (12); fandom infobox only.",
+   "sources": [
+    "https://reborn.fandom.com/wiki/Episode_4",
+    "https://en.wikipedia.org/wiki/List_of_Reborn!_chapters"
+   ]
+  },
+  {
+   "episode": 5,
+   "end_chapter": 16,
+   "start_chapter": 16,
+   "chapters_adapted": "16",
+   "volume": 2,
+   "confidence": "high",
+   "note": "Hibari intro: Disciplinary Committee leader = ch 16 'Kyoya Hibari' (Wikipedia chapter title).",
+   "sources": [
+    "https://reborn.fandom.com/wiki/Episode_5",
+    "https://en.wikipedia.org/wiki/List_of_Reborn!_chapters"
+   ]
+  },
+  {
+   "episode": 6,
+   "end_chapter": 24,
+   "start_chapter": 23,
+   "chapters_adapted": "23-24",
+   "volume": 3,
+   "confidence": "medium",
+   "note": "I-Pin intro (23) and I-Pin vs Lambo (24); end at 24 rests on the fandom infobox.",
+   "sources": [
+    "https://reborn.fandom.com/wiki/Episode_6",
+    "https://en.wikipedia.org/wiki/List_of_Reborn!_chapters"
+   ]
+  },
+  {
+   "episode": 7,
+   "end_chapter": 14,
+   "start_chapter": 14,
+   "chapters_adapted": "14",
+   "volume": 2,
+   "confidence": "high",
+   "note": "Ryohei intro chapter 'Ryohei Sasagawa' (Wikipedia title) = 'Passionate Brother' episode.",
+   "sources": [
+    "https://reborn.fandom.com/wiki/Episode_7",
+    "https://en.wikipedia.org/wiki/List_of_Reborn!_chapters"
+   ]
+  },
+  {
+   "episode": 8,
+   "end_chapter": 28,
+   "start_chapter": 27,
+   "chapters_adapted": "27-28",
+   "volume": 4,
+   "confidence": "medium",
+   "note": "Dino's intro chapters 'Bronco Dino' / 'More Dino'. Fandom infobox also lists 29, but ch 29 'Hospitalized' is ep 17 (title match) and fandom ep-17 trivia says its Enzio scene was moved to ep 16.",
+   "sources": [
+    "https://reborn.fandom.com/wiki/Episode_8",
+    "https://en.wikipedia.org/wiki/List_of_Reborn!_chapters"
+   ]
+  },
+  {
+   "episode": 9,
+   "end_chapter": 15,
+   "start_chapter": 15,
+   "chapters_adapted": "15",
+   "volume": 2,
+   "confidence": "high",
+   "note": "Dr. Shamal intro chapter (skull disease) = ch 15 'Dr. Shamal' (Wikipedia title).",
+   "sources": [
+    "https://reborn.fandom.com/wiki/Episode_9",
+    "https://en.wikipedia.org/wiki/List_of_Reborn!_chapters"
+   ]
+  },
+  {
+   "episode": 10,
+   "end_chapter": 21,
+   "start_chapter": 21,
+   "chapters_adapted": "21 (+ anime-original)",
+   "volume": 3,
+   "confidence": "medium",
+   "note": "Mixed episode: fandom infobox 'Filler & Chapter 21 (Babysitter)'.",
+   "sources": [
+    "https://reborn.fandom.com/wiki/Episode_10",
+    "https://www.animefillerlist.com/shows/katekyo-hitman-reborn"
+   ]
+  },
+  {
+   "episode": 11,
+   "end_chapter": 25,
+   "start_chapter": 25,
+   "chapters_adapted": "25",
+   "volume": 3,
+   "confidence": "medium",
+   "note": "'Kyoko vs. Haru' cooking-rivalry chapter; fandom infobox only.",
+   "sources": [
+    "https://reborn.fandom.com/wiki/Episode_11",
+    "https://en.wikipedia.org/wiki/List_of_Reborn!_chapters"
+   ]
+  },
+  {
+   "episode": 12,
+   "end_chapter": 39,
+   "start_chapter": 32,
+   "chapters_adapted": "32, 39",
+   "volume": 5,
+   "confidence": "high",
+   "note": "Both 'Training Program' chapters: Hayato's (32) and Takeshi's (39) - Wikipedia titles match the episode title 'Strengthening Program'.",
+   "sources": [
+    "https://reborn.fandom.com/wiki/Episode_12",
+    "https://en.wikipedia.org/wiki/List_of_Reborn!_chapters"
+   ]
+  },
+  {
+   "episode": 13,
+   "end_chapter": 31,
+   "start_chapter": 31,
+   "chapters_adapted": "31",
+   "volume": 4,
+   "confidence": "high",
+   "note": "'New Year's' chapter = New Spring 100-million-yen contest.",
+   "sources": [
+    "https://reborn.fandom.com/wiki/Episode_13",
+    "https://en.wikipedia.org/wiki/List_of_Reborn!_chapters"
+   ]
+  },
+  {
+   "episode": 14,
+   "end_chapter": 42,
+   "start_chapter": 42,
+   "chapters_adapted": "42",
+   "volume": 5,
+   "confidence": "high",
+   "note": "'The Zoo' chapter.",
+   "sources": [
+    "https://reborn.fandom.com/wiki/Episode_14",
+    "https://en.wikipedia.org/wiki/List_of_Reborn!_chapters"
+   ]
+  },
+  {
+   "episode": 15,
+   "end_chapter": 38,
+   "start_chapter": 37,
+   "chapters_adapted": "37-38",
+   "volume": 5,
+   "confidence": "high",
+   "note": "Snowball fight two-parter (37 'The Snowball Fight Begins', 38 'Snow Fight Round 2') = 'Survival Snow Battle'.",
+   "sources": [
+    "https://reborn.fandom.com/wiki/Episode_15",
+    "https://en.wikipedia.org/wiki/List_of_Reborn!_chapters"
+   ]
+  },
+  {
+   "episode": 16,
+   "end_chapter": 30,
+   "start_chapter": 30,
+   "chapters_adapted": "30 (+ Enzio scene from 29)",
+   "volume": 4,
+   "confidence": "medium",
+   "note": "'Lost' chapter (Tsuna lost on Death Mountain); fandom trivia: Enzio crushing Tsuna was moved here from ch 29.",
+   "sources": [
+    "https://reborn.fandom.com/wiki/Episode_16",
+    "https://en.wikipedia.org/wiki/List_of_Reborn!_chapters"
+   ]
+  },
+  {
+   "episode": 17,
+   "end_chapter": 29,
+   "start_chapter": 29,
+   "chapters_adapted": "29",
+   "volume": 4,
+   "confidence": "high",
+   "note": "'Hospitalized' = 'Don't Make a Noise When You're Hospitalized' (title match). Fandom infobox also lists 30, which ep 16 already covers.",
+   "sources": [
+    "https://reborn.fandom.com/wiki/Episode_17",
+    "https://en.wikipedia.org/wiki/List_of_Reborn!_chapters"
+   ]
+  },
+  {
+   "episode": 18,
+   "end_chapter": 36,
+   "start_chapter": 36,
+   "chapters_adapted": "36",
+   "volume": 5,
+   "confidence": "high",
+   "note": "'Valentine's Day' chapter = poisoned chocolates.",
+   "sources": [
+    "https://reborn.fandom.com/wiki/Episode_18",
+    "https://en.wikipedia.org/wiki/List_of_Reborn!_chapters"
+   ]
+  },
+  {
+   "episode": 19,
+   "end_chapter": 35,
+   "start_chapter": 34,
+   "chapters_adapted": "34-35",
+   "volume": 5,
+   "confidence": "medium",
+   "note": "Futa intro ('Futa, the Planetary Prince' 34, 'Futa Redux' 35). Last episode of the first Daily Life block (ja.wikipedia on-air header 日常編 標的1-19; fandom/vongola101 arc pages).",
+   "sources": [
+    "https://reborn.fandom.com/wiki/Episode_19",
+    "https://en.wikipedia.org/wiki/List_of_Reborn!_chapters",
+    "https://ja.wikipedia.org/wiki/%E5%AE%B6%E5%BA%AD%E6%95%99%E5%B8%AB%E3%83%92%E3%83%83%E3%83%88%E3%83%9E%E3%83%B3REBORN!",
+    "https://vongola101.wordpress.com/series/",
+    "https://reborn.fandom.com/wiki/Daily_Life_Arc"
+   ]
+  },
+  {
+   "episode": 20,
+   "end_chapter": 64,
+   "start_chapter": 62,
+   "chapters_adapted": "62-64",
+   "volume": 8,
+   "confidence": "medium",
+   "note": "Kokuyo arc start: ch 62 'Raid' = 'Sudden Attack'; arc start at 62 per fandom Kokuyo Arc page, vongola101 (61/62-81 = eps 20-26) and ja.wikipedia block header vs黒曜中編 標的20-26. End 64 (Gokudera vs Chikusa) from fandom infobox.",
+   "sources": [
+    "https://reborn.fandom.com/wiki/Episode_20",
+    "https://en.wikipedia.org/wiki/List_of_Reborn!_chapters",
+    "https://reborn.fandom.com/wiki/Kokuyo_Arc",
+    "https://vongola101.wordpress.com/series/",
+    "https://ja.wikipedia.org/wiki/%E5%AE%B6%E5%BA%AD%E6%95%99%E5%B8%AB%E3%83%92%E3%83%83%E3%83%88%E3%83%9E%E3%83%B3REBORN!"
+   ]
+  },
+  {
+   "episode": 21,
+   "end_chapter": 67,
+   "start_chapter": 64,
+   "chapters_adapted": "64-67",
+   "volume": 8,
+   "confidence": "medium",
+   "note": "Prison Breakers / Departure / Yamamoto vs Ken (fandom infobox).",
+   "sources": [
+    "https://reborn.fandom.com/wiki/Episode_21",
+    "https://en.wikipedia.org/wiki/List_of_Reborn!_chapters"
+   ]
+  },
+  {
+   "episode": 22,
+   "end_chapter": 70,
+   "start_chapter": 67,
+   "chapters_adapted": "67-70",
+   "volume": 8,
+   "confidence": "medium",
+   "note": "Bianchi vs M.M., Birds and Twins, Contact (fandom infobox).",
+   "sources": [
+    "https://reborn.fandom.com/wiki/Episode_22",
+    "https://en.wikipedia.org/wiki/List_of_Reborn!_chapters"
+   ]
+  },
+  {
+   "episode": 23,
+   "end_chapter": 72,
+   "start_chapter": 70,
+   "chapters_adapted": "70-72",
+   "volume": 9,
+   "confidence": "medium",
+   "note": "Includes ch 71 'The Final Deathperation Shot' (exact title match); ends with Tsuna vs fake Mukuro (72).",
+   "sources": [
+    "https://reborn.fandom.com/wiki/Episode_23",
+    "https://en.wikipedia.org/wiki/List_of_Reborn!_chapters"
+   ]
+  },
+  {
+   "episode": 24,
+   "end_chapter": 75,
+   "start_chapter": 73,
+   "chapters_adapted": "73-75",
+   "volume": 9,
+   "confidence": "medium",
+   "note": "Charge!! / Mind Control / Skill (fandom infobox).",
+   "sources": [
+    "https://reborn.fandom.com/wiki/Episode_24",
+    "https://en.wikipedia.org/wiki/List_of_Reborn!_chapters"
+   ]
+  },
+  {
+   "episode": 25,
+   "end_chapter": 78,
+   "start_chapter": 75,
+   "chapters_adapted": "75-78",
+   "volume": 9,
+   "confidence": "medium",
+   "note": "Forbidden Shot / Pupils / New Item (fandom infobox).",
+   "sources": [
+    "https://reborn.fandom.com/wiki/Episode_25",
+    "https://en.wikipedia.org/wiki/List_of_Reborn!_chapters"
+   ]
+  },
+  {
+   "episode": 26,
+   "end_chapter": 81,
+   "start_chapter": 79,
+   "chapters_adapted": "79-81",
+   "volume": 10,
+   "confidence": "high",
+   "note": "'The End and From Then On' = ch 81 'The End and Afterwards' (title match); Kokuyo arc ends at 81 per fandom arc page and vongola101.",
+   "sources": [
+    "https://reborn.fandom.com/wiki/Episode_26",
+    "https://en.wikipedia.org/wiki/List_of_Reborn!_chapters",
+    "https://reborn.fandom.com/wiki/Kokuyo_Arc",
+    "https://vongola101.wordpress.com/series/"
+   ]
+  },
+  {
+   "episode": 27,
+   "end_chapter": 20,
+   "start_chapter": 20,
+   "chapters_adapted": "20 (+ anime-original grade-promotion framing)",
+   "volume": 3,
+   "confidence": "medium",
+   "note": "'Eat and Run' (sushi debt at Yamamoto's); the promotion/class-roster premise is anime framing - ch 61 'Promotion' (Gokudera/Dino story) is not adapted.",
+   "sources": [
+    "https://reborn.fandom.com/wiki/Episode_27",
+    "https://en.wikipedia.org/wiki/List_of_Reborn!_chapters",
+    "https://reborn.fandom.com/wiki/Chapter_61"
+   ]
+  },
+  {
+   "episode": 28,
+   "end_chapter": 19,
+   "start_chapter": 19,
+   "chapters_adapted": "19",
+   "volume": 3,
+   "confidence": "high",
+   "note": "'First Kill' = 'No Way! I Killed Him?'.",
+   "sources": [
+    "https://reborn.fandom.com/wiki/Episode_28",
+    "https://en.wikipedia.org/wiki/List_of_Reborn!_chapters"
+   ]
+  },
+  {
+   "episode": 29,
+   "end_chapter": 41,
+   "start_chapter": 41,
+   "chapters_adapted": "41 (loosely, per fandom 'possibly')",
+   "volume": 5,
+   "confidence": "medium",
+   "note": "Mixed episode; fandom infobox says 'Filler (possibly Chapter 41 Malfunction)'. Weak anchor - see flags.",
+   "sources": [
+    "https://reborn.fandom.com/wiki/Episode_29",
+    "https://www.animefillerlist.com/shows/katekyo-hitman-reborn"
+   ]
+  },
+  {
+   "episode": 30,
+   "end_chapter": 48,
+   "start_chapter": 48,
+   "chapters_adapted": "48",
+   "volume": 6,
+   "confidence": "medium",
+   "note": "'Resort' (cruise) chapter; fandom infobox only.",
+   "sources": [
+    "https://reborn.fandom.com/wiki/Episode_30",
+    "https://en.wikipedia.org/wiki/List_of_Reborn!_chapters"
+   ]
+  },
+  {
+   "episode": 31,
+   "end_chapter": 50,
+   "start_chapter": 49,
+   "chapters_adapted": "49-50",
+   "volume": 6,
+   "confidence": "medium",
+   "note": "Mafia Land / Colonnello: 'Pacifier Warriors' (49), 'Super Performance!!' (50).",
+   "sources": [
+    "https://reborn.fandom.com/wiki/Episode_31",
+    "https://en.wikipedia.org/wiki/List_of_Reborn!_chapters"
+   ]
+  },
+  {
+   "episode": 32,
+   "end_chapter": 54,
+   "start_chapter": 54,
+   "chapters_adapted": "54",
+   "volume": 7,
+   "confidence": "high",
+   "note": "'The Pool Opens' = shark in the public pool.",
+   "sources": [
+    "https://reborn.fandom.com/wiki/Episode_32",
+    "https://en.wikipedia.org/wiki/List_of_Reborn!_chapters"
+   ]
+  },
+  {
+   "episode": 33,
+   "end_chapter": 58,
+   "start_chapter": 57,
+   "chapters_adapted": "57-58",
+   "volume": 7,
+   "confidence": "medium",
+   "note": "Summer debt: 'Swimming in the Ocean' (57) + 'The Summer Festival' (58); Chapter 57/58 pages point back to ep 33. Last episode of the second Daily Life block.",
+   "sources": [
+    "https://reborn.fandom.com/wiki/Episode_33",
+    "https://reborn.fandom.com/wiki/Chapter_57",
+    "https://reborn.fandom.com/wiki/Chapter_58",
+    "https://en.wikipedia.org/wiki/List_of_Reborn!_chapters",
+    "https://vongola101.wordpress.com/series/"
+   ]
+  },
+  {
+   "episode": 34,
+   "end_chapter": 84,
+   "start_chapter": 82,
+   "chapters_adapted": "82-84",
+   "volume": 10,
+   "confidence": "medium",
+   "note": "Varia arc start: ch 82 corroborated by fandom Varia Arc page (82-135 = eps 34-65), vongola101 and ja.wikipedia on-air subtitle block vsヴァリアー編 標的34-65. End 84 'Vongola Half Rings' from fandom infobox.",
+   "sources": [
+    "https://reborn.fandom.com/wiki/Episode_34",
+    "https://en.wikipedia.org/wiki/List_of_Reborn!_chapters",
+    "https://reborn.fandom.com/wiki/Varia_Arc",
+    "https://vongola101.wordpress.com/series/",
+    "https://ja.wikipedia.org/wiki/%E5%AE%B6%E5%BA%AD%E6%95%99%E5%B8%AB%E3%83%92%E3%83%83%E3%83%88%E3%83%9E%E3%83%B3REBORN!"
+   ]
+  },
+  {
+   "episode": 35,
+   "end_chapter": 85,
+   "start_chapter": 84,
+   "chapters_adapted": "84-85",
+   "volume": 10,
+   "confidence": "medium",
+   "note": "'Iemitsu Sawada' (85).",
+   "sources": [
+    "https://reborn.fandom.com/wiki/Episode_35",
+    "https://en.wikipedia.org/wiki/List_of_Reborn!_chapters"
+   ]
+  },
+  {
+   "episode": 36,
+   "end_chapter": 87,
+   "start_chapter": 86,
+   "chapters_adapted": "86-87",
+   "volume": 10,
+   "confidence": "medium",
+   "note": "'Everyone Gets a Tutor' / 'Lessons Begin!' = 'Tutors on the Move'.",
+   "sources": [
+    "https://reborn.fandom.com/wiki/Episode_36",
+    "https://en.wikipedia.org/wiki/List_of_Reborn!_chapters"
+   ]
+  },
+  {
+   "episode": 37,
+   "end_chapter": 90,
+   "start_chapter": 88,
+   "chapters_adapted": "88-90",
+   "volume": 11,
+   "confidence": "medium",
+   "note": "What Wasn't Seen / Control of Deathperation / The Varia's Footsteps.",
+   "sources": [
+    "https://reborn.fandom.com/wiki/Episode_37",
+    "https://en.wikipedia.org/wiki/List_of_Reborn!_chapters"
+   ]
+  },
+  {
+   "episode": 38,
+   "end_chapter": 59,
+   "start_chapter": 56,
+   "chapters_adapted": "56, 59",
+   "volume": 7,
+   "confidence": "medium",
+   "note": "Daily Life chapters inserted mid-Varia: 'The Case of Lambo's Disappearance' (56) + 'Haru's Paranoia' (59).",
+   "sources": [
+    "https://reborn.fandom.com/wiki/Episode_38",
+    "https://en.wikipedia.org/wiki/List_of_Reborn!_chapters"
+   ]
+  },
+  {
+   "episode": 39,
+   "end_chapter": 53,
+   "start_chapter": 52,
+   "chapters_adapted": "52-53",
+   "volume": 7,
+   "confidence": "medium",
+   "note": "Daily Life chapters inserted mid-Varia: 'The Weapons Tuner' (52) + 'The Plot to Assassinate Tsuna' (53).",
+   "sources": [
+    "https://reborn.fandom.com/wiki/Episode_39",
+    "https://en.wikipedia.org/wiki/List_of_Reborn!_chapters"
+   ]
+  },
+  {
+   "episode": 40,
+   "end_chapter": 92,
+   "start_chapter": 91,
+   "chapters_adapted": "91-92",
+   "volume": 11,
+   "confidence": "medium",
+   "note": "Ring battles begin: 'The Guardian of Thunder' (91), 'Chance Encounter' (92).",
+   "sources": [
+    "https://reborn.fandom.com/wiki/Episode_40",
+    "https://en.wikipedia.org/wiki/List_of_Reborn!_chapters"
+   ]
+  },
+  {
+   "episode": 41,
+   "end_chapter": 94,
+   "start_chapter": 93,
+   "chapters_adapted": "93-94",
+   "volume": 11,
+   "confidence": "medium",
+   "note": "Sun battle: Ryohei vs Lussuria (94).",
+   "sources": [
+    "https://reborn.fandom.com/wiki/Episode_41",
+    "https://en.wikipedia.org/wiki/List_of_Reborn!_chapters"
+   ]
+  },
+  {
+   "episode": 42,
+   "end_chapter": 96,
+   "start_chapter": 95,
+   "chapters_adapted": "95-96",
+   "volume": 11,
+   "confidence": "medium",
+   "note": "'Ryohei's Right' / 'Whereabouts of the Ring of the Sun'.",
+   "sources": [
+    "https://reborn.fandom.com/wiki/Episode_42",
+    "https://en.wikipedia.org/wiki/List_of_Reborn!_chapters"
+   ]
+  },
+  {
+   "episode": 43,
+   "end_chapter": 98,
+   "start_chapter": 97,
+   "chapters_adapted": "97-98",
+   "volume": 11,
+   "confidence": "high",
+   "note": "Lightning battle; 'Lambo 20 Years Later' = ch 98 (title match with 'Thunder Strike from Twenty Years Later'); episode ends with Tsuna stopping the match = end of ch 98.",
+   "sources": [
+    "https://reborn.fandom.com/wiki/Episode_43",
+    "https://en.wikipedia.org/wiki/List_of_Reborn!_chapters"
+   ]
+  },
+  {
+   "episode": 44,
+   "end_chapter": 99,
+   "start_chapter": 99,
+   "chapters_adapted": "99 (opens on the tail of 98)",
+   "volume": 12,
+   "confidence": "medium",
+   "note": "'Xanxus' Smile': Tsuna's ring confiscated, Iemitsu leaves, Gokudera meets Shamal. Fandom infobox lists 97-99; 97-98 are recap of the previous episode.",
+   "sources": [
+    "https://reborn.fandom.com/wiki/Episode_44",
+    "https://en.wikipedia.org/wiki/List_of_Reborn!_chapters",
+    "https://reborn.fandom.com/wiki/Chapter_99"
+   ]
+  },
+  {
+   "episode": 45,
+   "end_chapter": 102,
+   "start_chapter": 100,
+   "chapters_adapted": "100-102",
+   "volume": 12,
+   "confidence": "medium",
+   "note": "Storm battle vs Belphegor ('Prince the Ripper' 100 ... 'Genius' Knife' 102).",
+   "sources": [
+    "https://reborn.fandom.com/wiki/Episode_45",
+    "https://en.wikipedia.org/wiki/List_of_Reborn!_chapters"
+   ]
+  },
+  {
+   "episode": 46,
+   "end_chapter": 104,
+   "start_chapter": 103,
+   "chapters_adapted": "103-104",
+   "volume": 12,
+   "confidence": "medium",
+   "note": "'Surging Waves Attack' / 'End'.",
+   "sources": [
+    "https://reborn.fandom.com/wiki/Episode_46",
+    "https://en.wikipedia.org/wiki/List_of_Reborn!_chapters"
+   ]
+  },
+  {
+   "episode": 47,
+   "end_chapter": 106,
+   "start_chapter": 105,
+   "chapters_adapted": "105-106",
+   "volume": 12,
+   "confidence": "medium",
+   "note": "'Hibari's Return' / 'Yamamoto's Choice'.",
+   "sources": [
+    "https://reborn.fandom.com/wiki/Episode_47",
+    "https://en.wikipedia.org/wiki/List_of_Reborn!_chapters"
+   ]
+  },
+  {
+   "episode": 48,
+   "end_chapter": 109,
+   "start_chapter": 107,
+   "chapters_adapted": "107-109",
+   "volume": 13,
+   "confidence": "medium",
+   "note": "Rain battle: Yamamoto vs Squalo, Shigure Souen style.",
+   "sources": [
+    "https://reborn.fandom.com/wiki/Episode_48",
+    "https://en.wikipedia.org/wiki/List_of_Reborn!_chapters"
+   ]
+  },
+  {
+   "episode": 49,
+   "end_chapter": 111,
+   "start_chapter": 109,
+   "chapters_adapted": "109-111",
+   "volume": 13,
+   "confidence": "medium",
+   "note": "Rain battle conclusion: ch 111 'Conclusion of the Rain's Victory' = 'Requiem Rain'.",
+   "sources": [
+    "https://reborn.fandom.com/wiki/Episode_49",
+    "https://en.wikipedia.org/wiki/List_of_Reborn!_chapters"
+   ]
+  },
+  {
+   "episode": 50,
+   "end_chapter": 113,
+   "start_chapter": 112,
+   "chapters_adapted": "112-113",
+   "volume": 13,
+   "confidence": "medium",
+   "note": "'The Guardian of the Mist' (112, title match) + 'Chrome's Attack' (113).",
+   "sources": [
+    "https://reborn.fandom.com/wiki/Episode_50",
+    "https://en.wikipedia.org/wiki/List_of_Reborn!_chapters"
+   ]
+  },
+  {
+   "episode": 51,
+   "end_chapter": 116,
+   "start_chapter": 114,
+   "chapters_adapted": "114-116",
+   "volume": 13,
+   "confidence": "medium",
+   "note": "Chrome vs Mammon (114), Nagi (115), Mukuro Arrives! (116).",
+   "sources": [
+    "https://reborn.fandom.com/wiki/Episode_51",
+    "https://en.wikipedia.org/wiki/List_of_Reborn!_chapters"
+   ]
+  },
+  {
+   "episode": 52,
+   "end_chapter": 117,
+   "start_chapter": 116,
+   "chapters_adapted": "116-117",
+   "volume": 14,
+   "confidence": "medium",
+   "note": "'3 Victories 3 Defeats' (117).",
+   "sources": [
+    "https://reborn.fandom.com/wiki/Episode_52",
+    "https://en.wikipedia.org/wiki/List_of_Reborn!_chapters"
+   ]
+  },
+  {
+   "episode": 53,
+   "end_chapter": 119,
+   "start_chapter": 117,
+   "chapters_adapted": "117-119",
+   "volume": 14,
+   "confidence": "medium",
+   "note": "'The Last Guardian's Fight' (118), Hibari vs Gola Moska (119).",
+   "sources": [
+    "https://reborn.fandom.com/wiki/Episode_53",
+    "https://en.wikipedia.org/wiki/List_of_Reborn!_chapters"
+   ]
+  },
+  {
+   "episode": 54,
+   "end_chapter": 121,
+   "start_chapter": 120,
+   "chapters_adapted": "120-121",
+   "volume": 14,
+   "confidence": "medium",
+   "note": "Hibari vs Xanxus (120), Gola Moska (121).",
+   "sources": [
+    "https://reborn.fandom.com/wiki/Episode_54",
+    "https://en.wikipedia.org/wiki/List_of_Reborn!_chapters"
+   ]
+  },
+  {
+   "episode": 55,
+   "end_chapter": 123,
+   "start_chapter": 121,
+   "chapters_adapted": "121-123",
+   "volume": 14,
+   "confidence": "high",
+   "note": "'Determination' = ch 123 'Tsuna's Determination' (title match on the end chapter).",
+   "sources": [
+    "https://reborn.fandom.com/wiki/Episode_55",
+    "https://en.wikipedia.org/wiki/List_of_Reborn!_chapters"
+   ]
+  },
+  {
+   "episode": 57,
+   "end_chapter": 126,
+   "start_chapter": 124,
+   "chapters_adapted": "124-126",
+   "volume": 15,
+   "confidence": "medium",
+   "note": "'Coming Together' (124), 'The Sky Battle' (125), Tsuna vs Xanxus begins (126).",
+   "sources": [
+    "https://reborn.fandom.com/wiki/Episode_57",
+    "https://en.wikipedia.org/wiki/List_of_Reborn!_chapters"
+   ]
+  },
+  {
+   "episode": 58,
+   "end_chapter": 128,
+   "start_chapter": 126,
+   "chapters_adapted": "126-128",
+   "volume": 15,
+   "confidence": "medium",
+   "note": "'The Guardian's Revival!' (127), 'Fierce Battle' (128).",
+   "sources": [
+    "https://reborn.fandom.com/wiki/Episode_58",
+    "https://en.wikipedia.org/wiki/List_of_Reborn!_chapters"
+   ]
+  },
+  {
+   "episode": 59,
+   "end_chapter": 129,
+   "start_chapter": 128,
+   "chapters_adapted": "128-129",
+   "volume": 15,
+   "confidence": "medium",
+   "note": "Guardians rally; Zero Point Breakthrough introduced (129).",
+   "sources": [
+    "https://reborn.fandom.com/wiki/Episode_59",
+    "https://en.wikipedia.org/wiki/List_of_Reborn!_chapters"
+   ]
+  },
+  {
+   "episode": 60,
+   "end_chapter": 130,
+   "start_chapter": 129,
+   "chapters_adapted": "129-130",
+   "volume": 15,
+   "confidence": "medium",
+   "note": "'Breaking the Zero Point of the Dying Will' (129) = episode title; runs into 'Revision' (130).",
+   "sources": [
+    "https://reborn.fandom.com/wiki/Episode_60",
+    "https://en.wikipedia.org/wiki/List_of_Reborn!_chapters"
+   ]
+  },
+  {
+   "episode": 61,
+   "end_chapter": 131,
+   "start_chapter": 130,
+   "chapters_adapted": "130-131",
+   "volume": 15,
+   "confidence": "medium",
+   "note": "'Revision' (130) = 'Zero Point Breakthrough Revised' (title match); 'Wrath' (131).",
+   "sources": [
+    "https://reborn.fandom.com/wiki/Episode_61",
+    "https://en.wikipedia.org/wiki/List_of_Reborn!_chapters"
+   ]
+  },
+  {
+   "episode": 62,
+   "end_chapter": 132,
+   "start_chapter": 131,
+   "chapters_adapted": "131-132",
+   "volume": 15,
+   "confidence": "medium",
+   "note": "'The First Generation's Zero Point Breakthrough' (132).",
+   "sources": [
+    "https://reborn.fandom.com/wiki/Episode_62",
+    "https://en.wikipedia.org/wiki/List_of_Reborn!_chapters"
+   ]
+  },
+  {
+   "episode": 63,
+   "end_chapter": 133,
+   "start_chapter": 132,
+   "chapters_adapted": "132-133",
+   "volume": 15,
+   "confidence": "medium",
+   "note": "Freezing flame = First Generation's ZPB (132); 'Blood of Vongola II' (133).",
+   "sources": [
+    "https://reborn.fandom.com/wiki/Episode_63",
+    "https://en.wikipedia.org/wiki/List_of_Reborn!_chapters"
+   ]
+  },
+  {
+   "episode": 64,
+   "end_chapter": 134,
+   "start_chapter": 133,
+   "chapters_adapted": "133-134",
+   "volume": 15,
+   "confidence": "medium",
+   "note": "Xanxus's truth (133); 'Variabile X' (134).",
+   "sources": [
+    "https://reborn.fandom.com/wiki/Episode_64",
+    "https://en.wikipedia.org/wiki/List_of_Reborn!_chapters"
+   ]
+  },
+  {
+   "episode": 65,
+   "end_chapter": 135,
+   "start_chapter": 134,
+   "chapters_adapted": "134-135",
+   "volume": 16,
+   "confidence": "high",
+   "note": "Varia arc ends at ch 135 'Party': fandom Varia Arc page (82-135 = eps 34-65), vongola101, ja.wikipedia subtitle block ends at ep 65.",
+   "sources": [
+    "https://reborn.fandom.com/wiki/Episode_65",
+    "https://en.wikipedia.org/wiki/List_of_Reborn!_chapters",
+    "https://reborn.fandom.com/wiki/Varia_Arc",
+    "https://vongola101.wordpress.com/series/",
+    "https://ja.wikipedia.org/wiki/%E5%AE%B6%E5%BA%AD%E6%95%99%E5%B8%AB%E3%83%92%E3%83%83%E3%83%88%E3%83%9E%E3%83%B3REBORN!"
+   ]
+  },
+  {
+   "episode": 66,
+   "end_chapter": 60,
+   "start_chapter": 60,
+   "chapters_adapted": "60",
+   "volume": 7,
+   "confidence": "high",
+   "note": "'The Kimodameshi' (test of courage) = 'Shivering Ghost'.",
+   "sources": [
+    "https://reborn.fandom.com/wiki/Episode_66",
+    "https://en.wikipedia.org/wiki/List_of_Reborn!_chapters"
+   ]
+  },
+  {
+   "episode": 67,
+   "end_chapter": 33,
+   "start_chapter": 33,
+   "chapters_adapted": "33",
+   "volume": 4,
+   "confidence": "high",
+   "note": "'Parent's Day' = 'Vongola-style Open House'.",
+   "sources": [
+    "https://reborn.fandom.com/wiki/Episode_67",
+    "https://en.wikipedia.org/wiki/List_of_Reborn!_chapters"
+   ]
+  },
+  {
+   "episode": 68,
+   "end_chapter": 51,
+   "start_chapter": 51,
+   "chapters_adapted": "51",
+   "volume": 6,
+   "confidence": "high",
+   "note": "'June Bride' = 'Happy? Wedding'.",
+   "sources": [
+    "https://reborn.fandom.com/wiki/Episode_68",
+    "https://en.wikipedia.org/wiki/List_of_Reborn!_chapters"
+   ]
+  },
+  {
+   "episode": 69,
+   "end_chapter": 26,
+   "start_chapter": 26,
+   "chapters_adapted": "26",
+   "volume": 4,
+   "confidence": "high",
+   "note": "'The Crime Brothers' = 'Crazy Criminal Brother Trio'.",
+   "sources": [
+    "https://reborn.fandom.com/wiki/Episode_69",
+    "https://en.wikipedia.org/wiki/List_of_Reborn!_chapters"
+   ]
+  },
+  {
+   "episode": 70,
+   "end_chapter": 13,
+   "start_chapter": 13,
+   "chapters_adapted": "13",
+   "volume": 2,
+   "confidence": "high",
+   "note": "'Shoichi Irie' = 'The Misfortune of Shoichi Irie' (title match).",
+   "sources": [
+    "https://reborn.fandom.com/wiki/Episode_70",
+    "https://en.wikipedia.org/wiki/List_of_Reborn!_chapters"
+   ]
+  },
+  {
+   "episode": 71,
+   "end_chapter": 40,
+   "start_chapter": 40,
+   "chapters_adapted": "40 (loosely)",
+   "volume": 5,
+   "confidence": "medium",
+   "note": "'Dojo Busters'; the 'Absolute Evil Fist' technique is anime-original per ja.wikipedia (アニメオリジナル, 標的71).",
+   "sources": [
+    "https://reborn.fandom.com/wiki/Episode_71",
+    "https://en.wikipedia.org/wiki/List_of_Reborn!_chapters",
+    "https://ja.wikipedia.org/wiki/%E5%AE%B6%E5%BA%AD%E6%95%99%E5%B8%AB%E3%83%92%E3%83%83%E3%83%88%E3%83%9E%E3%83%B3REBORN!"
+   ]
+  },
+  {
+   "episode": 72,
+   "end_chapter": 4,
+   "start_chapter": 4,
+   "chapters_adapted": "4",
+   "volume": 1,
+   "confidence": "high",
+   "note": "'Expulsion Crisis' exact title match (Wikipedia ch 4).",
+   "sources": [
+    "https://reborn.fandom.com/wiki/Episode_72",
+    "https://en.wikipedia.org/wiki/List_of_Reborn!_chapters"
+   ]
+  },
+  {
+   "episode": 73,
+   "end_chapter": 55,
+   "start_chapter": 22,
+   "chapters_adapted": "22, 55 (loosely)",
+   "volume": 7,
+   "confidence": "medium",
+   "note": "Mixed: fandom 'Manga & Anime Differences' says the episode combines 'Birthday Party' (22) and 'The Tanabata Contest' (55) with major changes; infobox itself says 'Filler (possibly Chapter 55)'.",
+   "sources": [
+    "https://reborn.fandom.com/wiki/Episode_73",
+    "https://en.wikipedia.org/wiki/List_of_Reborn!_chapters",
+    "https://www.animefillerlist.com/shows/katekyo-hitman-reborn"
+   ]
+  },
+  {
+   "episode": 74,
+   "end_chapter": 138,
+   "start_chapter": 136,
+   "chapters_adapted": "136-138",
+   "volume": 16,
+   "confidence": "medium",
+   "note": "Future arc start ch 136 'The Missing Reborn' (fandom Future Arc page 136-282 = eps 74-203; vongola101; ja.wikipedia 未来編 from 標的74); 'The World, 10 Years Later' = ch 137 title; end 138 'The Battle, 10 Years Later' from fandom infobox.",
+   "sources": [
+    "https://reborn.fandom.com/wiki/Episode_74",
+    "https://en.wikipedia.org/wiki/List_of_Reborn!_chapters",
+    "https://reborn.fandom.com/wiki/Future_Arc",
+    "https://vongola101.wordpress.com/series/",
+    "https://ja.wikipedia.org/wiki/%E5%AE%B6%E5%BA%AD%E6%95%99%E5%B8%AB%E3%83%92%E3%83%83%E3%83%88%E3%83%9E%E3%83%B3REBORN!"
+   ]
+  },
+  {
+   "episode": 75,
+   "end_chapter": 140,
+   "start_chapter": 138,
+   "chapters_adapted": "138-140",
+   "volume": 16,
+   "confidence": "high",
+   "note": "'Secret Base' = ch 140 'Hideout' (title match on end chapter); 'Camping' (139).",
+   "sources": [
+    "https://reborn.fandom.com/wiki/Episode_75",
+    "https://en.wikipedia.org/wiki/List_of_Reborn!_chapters"
+   ]
+  },
+  {
+   "episode": 76,
+   "end_chapter": 143,
+   "start_chapter": 141,
+   "chapters_adapted": "141-143",
+   "volume": 16,
+   "confidence": "medium",
+   "note": "Byakuran (141), Reunion (142), Resolution (143).",
+   "sources": [
+    "https://reborn.fandom.com/wiki/Episode_76",
+    "https://en.wikipedia.org/wiki/List_of_Reborn!_chapters"
+   ]
+  },
+  {
+   "episode": 77,
+   "end_chapter": 144,
+   "start_chapter": 143,
+   "chapters_adapted": "143-144",
+   "volume": 17,
+   "confidence": "medium",
+   "note": "'The Ring's Power' (144) = 'Flame of Resolve'.",
+   "sources": [
+    "https://reborn.fandom.com/wiki/Episode_77",
+    "https://en.wikipedia.org/wiki/List_of_Reborn!_chapters"
+   ]
+  },
+  {
+   "episode": 78,
+   "end_chapter": 146,
+   "start_chapter": 145,
+   "chapters_adapted": "145-146",
+   "volume": 17,
+   "confidence": "medium",
+   "note": "'Shoichi Irie 2' (145), 'Lal Mirch' (146).",
+   "sources": [
+    "https://reborn.fandom.com/wiki/Episode_78",
+    "https://en.wikipedia.org/wiki/List_of_Reborn!_chapters"
+   ]
+  },
+  {
+   "episode": 79,
+   "end_chapter": 148,
+   "start_chapter": 147,
+   "chapters_adapted": "147-148",
+   "volume": 17,
+   "confidence": "medium",
+   "note": "'The Red and Blue Flame' (147), 'Surge Ring Box' (148); Chapter 147/148 pages point back to ep 79.",
+   "sources": [
+    "https://reborn.fandom.com/wiki/Episode_79",
+    "https://reborn.fandom.com/wiki/Chapter_147",
+    "https://reborn.fandom.com/wiki/Chapter_148",
+    "https://en.wikipedia.org/wiki/List_of_Reborn!_chapters"
+   ]
+  },
+  {
+   "episode": 80,
+   "end_chapter": 150,
+   "start_chapter": 149,
+   "chapters_adapted": "149-150",
+   "volume": 17,
+   "confidence": "medium",
+   "note": "'Two Incidents' (149; chapter page -> ep 80), 'Those Awaiting' (150).",
+   "sources": [
+    "https://reborn.fandom.com/wiki/Episode_80",
+    "https://reborn.fandom.com/wiki/Chapter_149",
+    "https://en.wikipedia.org/wiki/List_of_Reborn!_chapters"
+   ]
+  },
+  {
+   "episode": 81,
+   "end_chapter": 152,
+   "start_chapter": 151,
+   "chapters_adapted": "151-152",
+   "volume": 17,
+   "confidence": "high",
+   "note": "'Combination' = ch 152 exact title match.",
+   "sources": [
+    "https://reborn.fandom.com/wiki/Episode_81",
+    "https://en.wikipedia.org/wiki/List_of_Reborn!_chapters"
+   ]
+  },
+  {
+   "episode": 82,
+   "end_chapter": 154,
+   "start_chapter": 153,
+   "chapters_adapted": "153-154",
+   "volume": 18,
+   "confidence": "medium",
+   "note": "'Torture' (153), Hibari vs Gamma (154) = 'The Strongest Guardian'.",
+   "sources": [
+    "https://reborn.fandom.com/wiki/Episode_82",
+    "https://en.wikipedia.org/wiki/List_of_Reborn!_chapters"
+   ]
+  },
+  {
+   "episode": 83,
+   "end_chapter": 156,
+   "start_chapter": 155,
+   "chapters_adapted": "155-156",
+   "volume": 18,
+   "confidence": "medium",
+   "note": "'Return' (155), 'Union' (156; chapter page -> ep 83).",
+   "sources": [
+    "https://reborn.fandom.com/wiki/Episode_83",
+    "https://reborn.fandom.com/wiki/Chapter_156",
+    "https://en.wikipedia.org/wiki/List_of_Reborn!_chapters"
+   ]
+  },
+  {
+   "episode": 86,
+   "end_chapter": 157,
+   "start_chapter": 157,
+   "chapters_adapted": "157",
+   "volume": 18,
+   "confidence": "medium",
+   "note": "'Trial' (157): Hibari becomes Tsuna's tutor.",
+   "sources": [
+    "https://reborn.fandom.com/wiki/Episode_86",
+    "https://en.wikipedia.org/wiki/List_of_Reborn!_chapters"
+   ]
+  },
+  {
+   "episode": 87,
+   "end_chapter": 159,
+   "start_chapter": 158,
+   "chapters_adapted": "158-159",
+   "volume": 18,
+   "confidence": "medium",
+   "note": "'Inheritance' (158) = 'Succession' (title match); 159 from fandom infobox.",
+   "sources": [
+    "https://reborn.fandom.com/wiki/Episode_87",
+    "https://en.wikipedia.org/wiki/List_of_Reborn!_chapters"
+   ]
+  },
+  {
+   "episode": 88,
+   "end_chapter": 161,
+   "start_chapter": 160,
+   "chapters_adapted": "160-161",
+   "volume": 18,
+   "confidence": "medium",
+   "note": "'The Boxes' Mysteries' (160), Tri-ni-sette (161; chapter page -> ep 88) = '7^3 Policy'.",
+   "sources": [
+    "https://reborn.fandom.com/wiki/Episode_88",
+    "https://reborn.fandom.com/wiki/Chapter_161",
+    "https://en.wikipedia.org/wiki/List_of_Reborn!_chapters"
+   ]
+  },
+  {
+   "episode": 89,
+   "end_chapter": 163,
+   "start_chapter": 162,
+   "chapters_adapted": "162-163",
+   "volume": 18,
+   "confidence": "medium",
+   "note": "'The Past' (162), Chrome vs Glo Xinia (163).",
+   "sources": [
+    "https://reborn.fandom.com/wiki/Episode_89",
+    "https://en.wikipedia.org/wiki/List_of_Reborn!_chapters"
+   ]
+  },
+  {
+   "episode": 90,
+   "end_chapter": 164,
+   "start_chapter": 163,
+   "chapters_adapted": "163-164",
+   "volume": 18,
+   "confidence": "medium",
+   "note": "Glo Xinia's Gufo di Pioggia; 'Mukuro and Chrome' (164).",
+   "sources": [
+    "https://reborn.fandom.com/wiki/Episode_90",
+    "https://en.wikipedia.org/wiki/List_of_Reborn!_chapters"
+   ]
+  },
+  {
+   "episode": 91,
+   "end_chapter": 166,
+   "start_chapter": 164,
+   "chapters_adapted": "164-166",
+   "volume": 19,
+   "confidence": "medium",
+   "note": "Chrome wins vs Glo Xinia (165 'Mukuro Rokudo vs. Glo Xinia'); 10-years-later Ryohei appears in the last scene (opening of 166). Fandom infobox lists '164, 166'.",
+   "sources": [
+    "https://reborn.fandom.com/wiki/Episode_91",
+    "https://en.wikipedia.org/wiki/List_of_Reborn!_chapters"
+   ]
+  },
+  {
+   "episode": 92,
+   "end_chapter": 167,
+   "start_chapter": 166,
+   "chapters_adapted": "166-167",
+   "volume": 19,
+   "confidence": "medium",
+   "note": "Ryohei brings Chrome back and news of the joint attack in five days, Tsuna's call = ch 167 'The Entrusted Decision' (episode title 'Your Choice'). Fandom infobox lists 165-166, one chapter behind the episode/chapter synopses.",
+   "sources": [
+    "https://reborn.fandom.com/wiki/Episode_92",
+    "https://reborn.fandom.com/wiki/Chapter_167",
+    "https://en.wikipedia.org/wiki/List_of_Reborn!_chapters"
+   ]
+  },
+  {
+   "episode": 93,
+   "end_chapter": 168,
+   "start_chapter": 167,
+   "chapters_adapted": "167-168 (mostly anime-original)",
+   "volume": 19,
+   "confidence": "medium",
+   "note": "Dellinger phenomenon / Lambo and I-Pin trapped in the power room is anime-original padding; Lal's Non-Tri-ni-sette sickness and the Leonardo Lippi thread are ch 167-168.",
+   "sources": [
+    "https://reborn.fandom.com/wiki/Episode_93",
+    "https://en.wikipedia.org/wiki/List_of_Reborn!_chapters"
+   ]
+  },
+  {
+   "episode": 94,
+   "end_chapter": 168,
+   "start_chapter": 168,
+   "chapters_adapted": "168 (+ opening of 169)",
+   "volume": 19,
+   "confidence": "medium",
+   "note": "Lal's condition, Tsuna snapping at Haru, Chrome's collapse = ch 168 'Leonardo Lippi'; Byakuran vs Mukuro starts (169).",
+   "sources": [
+    "https://reborn.fandom.com/wiki/Episode_94",
+    "https://reborn.fandom.com/wiki/Chapter_168",
+    "https://en.wikipedia.org/wiki/List_of_Reborn!_chapters"
+   ]
+  },
+  {
+   "episode": 95,
+   "end_chapter": 169,
+   "start_chapter": 169,
+   "chapters_adapted": "169",
+   "volume": 19,
+   "confidence": "medium",
+   "note": "'Mukuro Rokudo vs. Byakuran' (169); Hibari restores Chrome's organs.",
+   "sources": [
+    "https://reborn.fandom.com/wiki/Episode_95",
+    "https://reborn.fandom.com/wiki/Chapter_169",
+    "https://en.wikipedia.org/wiki/List_of_Reborn!_chapters"
+   ]
+  },
+  {
+   "episode": 96,
+   "end_chapter": 171,
+   "start_chapter": 170,
+   "chapters_adapted": "170-171",
+   "volume": 19,
+   "confidence": "medium",
+   "note": "'Weapon' (170), 'Dream' (171) - X-Burner.",
+   "sources": [
+    "https://reborn.fandom.com/wiki/Episode_96",
+    "https://en.wikipedia.org/wiki/List_of_Reborn!_chapters"
+   ]
+  },
+  {
+   "episode": 98,
+   "end_chapter": 173,
+   "start_chapter": 172,
+   "chapters_adapted": "172-173",
+   "volume": 19,
+   "confidence": "medium",
+   "note": "'Threat' (172), 'From the Second Sword Emperor' (173).",
+   "sources": [
+    "https://reborn.fandom.com/wiki/Episode_98",
+    "https://en.wikipedia.org/wiki/List_of_Reborn!_chapters"
+   ]
+  },
+  {
+   "episode": 99,
+   "end_chapter": 173,
+   "start_chapter": 173,
+   "chapters_adapted": "173 (second half, expanded)",
+   "volume": 19,
+   "confidence": "medium",
+   "note": "Yamamoto's rematch with Reborn / new Shigure Souen form = ch 173; training scenes expanded.",
+   "sources": [
+    "https://reborn.fandom.com/wiki/Episode_99",
+    "https://reborn.fandom.com/wiki/Chapter_173",
+    "https://en.wikipedia.org/wiki/List_of_Reborn!_chapters"
+   ]
+  },
+  {
+   "episode": 100,
+   "end_chapter": 174,
+   "start_chapter": 174,
+   "chapters_adapted": "174",
+   "volume": 19,
+   "confidence": "high",
+   "note": "'The Night Before the Raid' = ch 174 'The Day Before the Final Attack?' (title match).",
+   "sources": [
+    "https://reborn.fandom.com/wiki/Episode_100",
+    "https://reborn.fandom.com/wiki/Chapter_174",
+    "https://en.wikipedia.org/wiki/List_of_Reborn!_chapters"
+   ]
+  },
+  {
+   "episode": 101,
+   "end_chapter": 175,
+   "start_chapter": 175,
+   "chapters_adapted": "175",
+   "volume": 20,
+   "confidence": "high",
+   "note": "'Night Attack' = ch 175 'Night Assault' (title match).",
+   "sources": [
+    "https://reborn.fandom.com/wiki/Episode_101",
+    "https://reborn.fandom.com/wiki/Chapter_175",
+    "https://en.wikipedia.org/wiki/List_of_Reborn!_chapters"
+   ]
+  },
+  {
+   "episode": 102,
+   "end_chapter": 176,
+   "start_chapter": 175,
+   "chapters_adapted": "175-176",
+   "volume": 20,
+   "confidence": "medium",
+   "note": "Hibari's lure (end of 175) plus the shopping-mall duct entry and laser trap from ch 176 'Raid'. Fandom infobox lists only 175.",
+   "sources": [
+    "https://reborn.fandom.com/wiki/Episode_102",
+    "https://reborn.fandom.com/wiki/Chapter_176",
+    "https://en.wikipedia.org/wiki/List_of_Reborn!_chapters"
+   ]
+  },
+  {
+   "episode": 103,
+   "end_chapter": 177,
+   "start_chapter": 176,
+   "chapters_adapted": "176-177",
+   "volume": 20,
+   "confidence": "medium",
+   "note": "'Raid' (176), Tsuna vs Dendro Chilum (177) = 'The First Barrier'.",
+   "sources": [
+    "https://reborn.fandom.com/wiki/Episode_103",
+    "https://en.wikipedia.org/wiki/List_of_Reborn!_chapters"
+   ]
+  },
+  {
+   "episode": 104,
+   "end_chapter": 179,
+   "start_chapter": 178,
+   "chapters_adapted": "178-179",
+   "volume": 20,
+   "confidence": "medium",
+   "note": "'Fate' (178) = 'Magician of Fate'; Lal Mirch vs Ginger Bread (179).",
+   "sources": [
+    "https://reborn.fandom.com/wiki/Episode_104",
+    "https://en.wikipedia.org/wiki/List_of_Reborn!_chapters"
+   ]
+  },
+  {
+   "episode": 105,
+   "end_chapter": 180,
+   "start_chapter": 179,
+   "chapters_adapted": "179-180",
+   "volume": 20,
+   "confidence": "high",
+   "note": "'Regret' = ch 180 exact title match.",
+   "sources": [
+    "https://reborn.fandom.com/wiki/Episode_105",
+    "https://en.wikipedia.org/wiki/List_of_Reborn!_chapters"
+   ]
+  },
+  {
+   "episode": 106,
+   "end_chapter": 182,
+   "start_chapter": 181,
+   "chapters_adapted": "181-182",
+   "volume": 20,
+   "confidence": "medium",
+   "note": "'Decoy' (181), Tsuna vs Strau Moska S (182).",
+   "sources": [
+    "https://reborn.fandom.com/wiki/Episode_106",
+    "https://en.wikipedia.org/wiki/List_of_Reborn!_chapters"
+   ]
+  },
+  {
+   "episode": 107,
+   "end_chapter": 185,
+   "start_chapter": 182,
+   "chapters_adapted": "182-185",
+   "volume": 20,
+   "confidence": "medium",
+   "note": "'King' (183), 'Flight' (184), 'Conclusion' (185).",
+   "sources": [
+    "https://reborn.fandom.com/wiki/Episode_107",
+    "https://en.wikipedia.org/wiki/List_of_Reborn!_chapters"
+   ]
+  },
+  {
+   "episode": 108,
+   "end_chapter": 186,
+   "start_chapter": 185,
+   "chapters_adapted": "185-186",
+   "volume": 21,
+   "confidence": "medium",
+   "note": "'vs. Baishana' (186) = 'A Man's Box Weapon'.",
+   "sources": [
+    "https://reborn.fandom.com/wiki/Episode_108",
+    "https://en.wikipedia.org/wiki/List_of_Reborn!_chapters"
+   ]
+  },
+  {
+   "episode": 109,
+   "end_chapter": 188,
+   "start_chapter": 186,
+   "chapters_adapted": "186-188",
+   "volume": 21,
+   "confidence": "medium",
+   "note": "'Captive' (187) title match; Ryohei vs Baishana (188).",
+   "sources": [
+    "https://reborn.fandom.com/wiki/Episode_109",
+    "https://en.wikipedia.org/wiki/List_of_Reborn!_chapters"
+   ]
+  },
+  {
+   "episode": 110,
+   "end_chapter": 189,
+   "start_chapter": 188,
+   "chapters_adapted": "188-189",
+   "volume": 21,
+   "confidence": "medium",
+   "note": "Maximum Ingram finishes Baishana (188); the base starts moving = ch 189 'Melone Base'.",
+   "sources": [
+    "https://reborn.fandom.com/wiki/Episode_110",
+    "https://reborn.fandom.com/wiki/Chapter_188",
+    "https://reborn.fandom.com/wiki/Chapter_189",
+    "https://en.wikipedia.org/wiki/List_of_Reborn!_chapters"
+   ]
+  },
+  {
+   "episode": 111,
+   "end_chapter": 189,
+   "start_chapter": 189,
+   "chapters_adapted": "189 (+ anime-original Cappuccino / Octopus Head fight)",
+   "volume": 21,
+   "confidence": "medium",
+   "note": "Base rearranges and Yamamoto is separated (189); the Cappuccino fight is anime-original (ja.wikipedia: Octopus Head is an アニメオリジナル匣; fandom Future Arc page lists Cappuccino as filler).",
+   "sources": [
+    "https://reborn.fandom.com/wiki/Episode_111",
+    "https://reborn.fandom.com/wiki/Chapter_189",
+    "https://ja.wikipedia.org/wiki/%E5%AE%B6%E5%BA%AD%E6%95%99%E5%B8%AB%E3%83%92%E3%83%83%E3%83%88%E3%83%9E%E3%83%B3REBORN!",
+    "https://reborn.fandom.com/wiki/Future_Arc"
+   ]
+  },
+  {
+   "episode": 112,
+   "end_chapter": 190,
+   "start_chapter": 189,
+   "chapters_adapted": "189-190 (+ anime-original Arachide Brothers fight)",
+   "volume": 21,
+   "confidence": "medium",
+   "note": "Boomerang twins are anime-original (ja.wikipedia: Storm Boomerang アニメオリジナル匣; fandom Future Arc page: filler); ends with Gokudera and Ryohei running into Gamma (end of 189 / start of 190).",
+   "sources": [
+    "https://reborn.fandom.com/wiki/Episode_112",
+    "https://reborn.fandom.com/wiki/Chapter_190",
+    "https://ja.wikipedia.org/wiki/%E5%AE%B6%E5%BA%AD%E6%95%99%E5%B8%AB%E3%83%92%E3%83%83%E3%83%88%E3%83%9E%E3%83%B3REBORN!",
+    "https://reborn.fandom.com/wiki/Future_Arc"
+   ]
+  },
+  {
+   "episode": 113,
+   "end_chapter": 191,
+   "start_chapter": 190,
+   "chapters_adapted": "190-191",
+   "volume": 21,
+   "confidence": "medium",
+   "note": "Ryohei ties Gokudera up (190); Reborn's hologram tells Tsuna to master the X-Burner (191); Ryohei injured.",
+   "sources": [
+    "https://reborn.fandom.com/wiki/Episode_113",
+    "https://reborn.fandom.com/wiki/Chapter_191",
+    "https://en.wikipedia.org/wiki/List_of_Reborn!_chapters"
+   ]
+  },
+  {
+   "episode": 114,
+   "end_chapter": 192,
+   "start_chapter": 191,
+   "chapters_adapted": "191-192",
+   "volume": 21,
+   "confidence": "medium",
+   "note": "Ryohei heals then falls to Electric Tower (end of 191); Gokudera reveals Sistema C.A.I. (192). Fandom infobox lists 190-192.",
+   "sources": [
+    "https://reborn.fandom.com/wiki/Episode_114",
+    "https://reborn.fandom.com/wiki/Chapter_191",
+    "https://reborn.fandom.com/wiki/Chapter_192",
+    "https://en.wikipedia.org/wiki/List_of_Reborn!_chapters"
+   ]
+  },
+  {
+   "episode": 115,
+   "end_chapter": 193,
+   "start_chapter": 192,
+   "chapters_adapted": "192-193",
+   "volume": 21,
+   "confidence": "medium",
+   "note": "'Sistema C.A.I.' (192) title match; Gokudera vs Gamma (193).",
+   "sources": [
+    "https://reborn.fandom.com/wiki/Episode_115",
+    "https://en.wikipedia.org/wiki/List_of_Reborn!_chapters"
+   ]
+  },
+  {
+   "episode": 116,
+   "end_chapter": 194,
+   "start_chapter": 193,
+   "chapters_adapted": "193-194",
+   "volume": 21,
+   "confidence": "medium",
+   "note": "'Sistema C.A.I. 2' (194) = 'Difference in Resolve'.",
+   "sources": [
+    "https://reborn.fandom.com/wiki/Episode_116",
+    "https://en.wikipedia.org/wiki/List_of_Reborn!_chapters"
+   ]
+  },
+  {
+   "episode": 117,
+   "end_chapter": 196,
+   "start_chapter": 195,
+   "chapters_adapted": "195-196",
+   "volume": 22,
+   "confidence": "medium",
+   "note": "'Uri' (195), 'Uni and Gamma' (196).",
+   "sources": [
+    "https://reborn.fandom.com/wiki/Episode_117",
+    "https://en.wikipedia.org/wiki/List_of_Reborn!_chapters"
+   ]
+  },
+  {
+   "episode": 118,
+   "end_chapter": 197,
+   "start_chapter": 196,
+   "chapters_adapted": "196-197",
+   "volume": 22,
+   "confidence": "medium",
+   "note": "Uni's conviction; 'The Gesso and the Giglio Nero' (197).",
+   "sources": [
+    "https://reborn.fandom.com/wiki/Episode_118",
+    "https://en.wikipedia.org/wiki/List_of_Reborn!_chapters"
+   ]
+  },
+  {
+   "episode": 119,
+   "end_chapter": 197,
+   "start_chapter": 197,
+   "chapters_adapted": "197 (recap-heavy)",
+   "volume": 22,
+   "confidence": "medium",
+   "note": "Mixed: fandom '197 (mostly filler recap)'.",
+   "sources": [
+    "https://reborn.fandom.com/wiki/Episode_119",
+    "https://www.animefillerlist.com/shows/katekyo-hitman-reborn"
+   ]
+  },
+  {
+   "episode": 122,
+   "end_chapter": 198,
+   "start_chapter": 198,
+   "chapters_adapted": "198 (+ threads pulled forward from 199, 201)",
+   "volume": 22,
+   "confidence": "medium",
+   "note": "Yamamoto vs Genkishi begins; Genkishi admits the staged loss to Squalo (198). The Ginger Bread / Iris search for Spanner is pulled forward from ch 201. Fandom infobox lists 198, 199, 201.",
+   "sources": [
+    "https://reborn.fandom.com/wiki/Episode_122",
+    "https://reborn.fandom.com/wiki/Chapter_198",
+    "https://reborn.fandom.com/wiki/Chapter_201",
+    "https://en.wikipedia.org/wiki/List_of_Reborn!_chapters"
+   ]
+  },
+  {
+   "episode": 123,
+   "end_chapter": 200,
+   "start_chapter": 198,
+   "chapters_adapted": "198-200",
+   "volume": 22,
+   "confidence": "medium",
+   "note": "Cracked-sword illusion (199); Squalo's hint (200).",
+   "sources": [
+    "https://reborn.fandom.com/wiki/Episode_123",
+    "https://reborn.fandom.com/wiki/Chapter_199",
+    "https://reborn.fandom.com/wiki/Chapter_200",
+    "https://en.wikipedia.org/wiki/List_of_Reborn!_chapters"
+   ]
+  },
+  {
+   "episode": 124,
+   "end_chapter": 201,
+   "start_chapter": 200,
+   "chapters_adapted": "200-201",
+   "volume": 22,
+   "confidence": "medium",
+   "note": "'Mist' (200) = 'Obstructing Mist' (title match): Chrome's infiltration revealed; Yamamoto defeated (201).",
+   "sources": [
+    "https://reborn.fandom.com/wiki/Episode_124",
+    "https://en.wikipedia.org/wiki/List_of_Reborn!_chapters"
+   ]
+  },
+  {
+   "episode": 125,
+   "end_chapter": 202,
+   "start_chapter": 201,
+   "chapters_adapted": "201-202",
+   "volume": 22,
+   "confidence": "medium",
+   "note": "'Intruders' (201) = 'More Intruders' (title match); 'Round Device' (202).",
+   "sources": [
+    "https://reborn.fandom.com/wiki/Episode_125",
+    "https://en.wikipedia.org/wiki/List_of_Reborn!_chapters"
+   ]
+  },
+  {
+   "episode": 126,
+   "end_chapter": 204,
+   "start_chapter": 203,
+   "chapters_adapted": "203-204",
+   "volume": 22,
+   "confidence": "medium",
+   "note": "Hibari vs Genkishi (203; chapter page -> ep 126); 'The Reverse Globe of Needles' (204).",
+   "sources": [
+    "https://reborn.fandom.com/wiki/Episode_126",
+    "https://reborn.fandom.com/wiki/Chapter_203",
+    "https://en.wikipedia.org/wiki/List_of_Reborn!_chapters"
+   ]
+  },
+  {
+   "episode": 127,
+   "end_chapter": 205,
+   "start_chapter": 204,
+   "chapters_adapted": "204-205",
+   "volume": 22,
+   "confidence": "medium",
+   "note": "'Awakening' (205).",
+   "sources": [
+    "https://reborn.fandom.com/wiki/Episode_127",
+    "https://en.wikipedia.org/wiki/List_of_Reborn!_chapters"
+   ]
+  },
+  {
+   "episode": 128,
+   "end_chapter": 207,
+   "start_chapter": 206,
+   "chapters_adapted": "206-207",
+   "volume": 23,
+   "confidence": "medium",
+   "note": "'Discipline' (206) = the Head Prefect comes; 'Mechanic Spirit' (207).",
+   "sources": [
+    "https://reborn.fandom.com/wiki/Episode_128",
+    "https://en.wikipedia.org/wiki/List_of_Reborn!_chapters"
+   ]
+  },
+  {
+   "episode": 129,
+   "end_chapter": 208,
+   "start_chapter": 207,
+   "chapters_adapted": "207-208",
+   "volume": 23,
+   "confidence": "medium",
+   "note": "'The Completed X-Burner' (208) = 'Operation X'.",
+   "sources": [
+    "https://reborn.fandom.com/wiki/Episode_129",
+    "https://en.wikipedia.org/wiki/List_of_Reborn!_chapters"
+   ]
+  },
+  {
+   "episode": 130,
+   "end_chapter": 210,
+   "start_chapter": 208,
+   "chapters_adapted": "208-210",
+   "volume": 23,
+   "confidence": "medium",
+   "note": "'The Ring's Flame' (209), 'Recklessness' (210).",
+   "sources": [
+    "https://reborn.fandom.com/wiki/Episode_130",
+    "https://en.wikipedia.org/wiki/List_of_Reborn!_chapters"
+   ]
+  },
+  {
+   "episode": 131,
+   "end_chapter": 211,
+   "start_chapter": 210,
+   "chapters_adapted": "210-211",
+   "volume": 23,
+   "confidence": "medium",
+   "note": "'Rush' (211) = 'Rampage'.",
+   "sources": [
+    "https://reborn.fandom.com/wiki/Episode_131",
+    "https://en.wikipedia.org/wiki/List_of_Reborn!_chapters"
+   ]
+  },
+  {
+   "episode": 132,
+   "end_chapter": 212,
+   "start_chapter": 212,
+   "chapters_adapted": "212",
+   "volume": 23,
+   "confidence": "high",
+   "note": "'Last Defense Block' = 'Final Block of Defense' (exact title match).",
+   "sources": [
+    "https://reborn.fandom.com/wiki/Episode_132",
+    "https://en.wikipedia.org/wiki/List_of_Reborn!_chapters"
+   ]
+  },
+  {
+   "episode": 133,
+   "end_chapter": 214,
+   "start_chapter": 213,
+   "chapters_adapted": "213-214",
+   "volume": 23,
+   "confidence": "medium",
+   "note": "Tsuna vs Genkishi (213), 'Surprise' (214).",
+   "sources": [
+    "https://reborn.fandom.com/wiki/Episode_133",
+    "https://en.wikipedia.org/wiki/List_of_Reborn!_chapters"
+   ]
+  },
+  {
+   "episode": 134,
+   "end_chapter": 217,
+   "start_chapter": 215,
+   "chapters_adapted": "215-217",
+   "volume": 24,
+   "confidence": "medium",
+   "note": "'Loyalty' (215), 'Hell Ring' (216), 'Hyper Explosion' (217).",
+   "sources": [
+    "https://reborn.fandom.com/wiki/Episode_134",
+    "https://en.wikipedia.org/wiki/List_of_Reborn!_chapters"
+   ]
+  },
+  {
+   "episode": 135,
+   "end_chapter": 218,
+   "start_chapter": 217,
+   "chapters_adapted": "217-218",
+   "volume": 24,
+   "confidence": "high",
+   "note": "'Arrival' = ch 218 exact title match.",
+   "sources": [
+    "https://reborn.fandom.com/wiki/Episode_135",
+    "https://en.wikipedia.org/wiki/List_of_Reborn!_chapters"
+   ]
+  },
+  {
+   "episode": 136,
+   "end_chapter": 219,
+   "start_chapter": 218,
+   "chapters_adapted": "218-219",
+   "volume": 24,
+   "confidence": "high",
+   "note": "'The Truth' (219) = 'Revealed Truth' (title match on end chapter).",
+   "sources": [
+    "https://reborn.fandom.com/wiki/Episode_136",
+    "https://en.wikipedia.org/wiki/List_of_Reborn!_chapters"
+   ]
+  },
+  {
+   "episode": 137,
+   "end_chapter": 221,
+   "start_chapter": 220,
+   "chapters_adapted": "220-221",
+   "volume": 24,
+   "confidence": "medium",
+   "note": "'We are Varia!!' (220), 'Unbelievable Things' (221).",
+   "sources": [
+    "https://reborn.fandom.com/wiki/Episode_137",
+    "https://en.wikipedia.org/wiki/List_of_Reborn!_chapters"
+   ]
+  },
+  {
+   "episode": 138,
+   "end_chapter": 223,
+   "start_chapter": 222,
+   "chapters_adapted": "222-223",
+   "volume": 24,
+   "confidence": "medium",
+   "note": "'Belphegor and Rasiel' (222) = 'Twin Princes'; '4 Opened Boxes' (223).",
+   "sources": [
+    "https://reborn.fandom.com/wiki/Episode_138",
+    "https://en.wikipedia.org/wiki/List_of_Reborn!_chapters"
+   ]
+  },
+  {
+   "episode": 139,
+   "end_chapter": 225,
+   "start_chapter": 224,
+   "chapters_adapted": "224-225",
+   "volume": 24,
+   "confidence": "medium",
+   "note": "Xanxus vs Rasiel (224), 'Hybrid' (225).",
+   "sources": [
+    "https://reborn.fandom.com/wiki/Episode_139",
+    "https://en.wikipedia.org/wiki/List_of_Reborn!_chapters"
+   ]
+  },
+  {
+   "episode": 140,
+   "end_chapter": 228,
+   "start_chapter": 226,
+   "chapters_adapted": "226-228",
+   "volume": 25,
+   "confidence": "medium",
+   "note": "'Xanxus' Flames' (226); Real Six Funeral Wreaths reveal ('Real' 227, 'Real 6 Funeral Wreaths' 228); ends as the Vongola Box lands in Tsuna's hands. Last canon episode before the anime-only Arcobaleno Trials.",
+   "sources": [
+    "https://reborn.fandom.com/wiki/Episode_140",
+    "https://en.wikipedia.org/wiki/List_of_Reborn!_chapters",
+    "https://ja.wikipedia.org/wiki/%E5%AE%B6%E5%BA%AD%E6%95%99%E5%B8%AB%E3%83%92%E3%83%83%E3%83%88%E3%83%9E%E3%83%B3REBORN!"
+   ]
+  },
+  {
+   "episode": 141,
+   "end_chapter": 228,
+   "start_chapter": 227,
+   "chapters_adapted": "227-228 (mostly anime-original)",
+   "volume": 25,
+   "confidence": "medium",
+   "note": "Mixed: Reborn explains the box cannot be opened yet and sets up the anime-only Arcobaleno Seals premise; fandom '227-228 (mostly filler)'.",
+   "sources": [
+    "https://reborn.fandom.com/wiki/Episode_141",
+    "https://www.animefillerlist.com/shows/katekyo-hitman-reborn",
+    "https://reborn.fandom.com/wiki/Arcobaleno_Trials_Arc"
+   ]
+  },
+  {
+   "episode": 155,
+   "end_chapter": 229,
+   "start_chapter": 227,
+   "chapters_adapted": "227-229",
+   "volume": 25,
+   "confidence": "medium",
+   "note": "Re-adapts the Real Six Funeral Wreaths reveal after the filler arc, then the Vongola Box Weapons are handed out (229). Choice-block start per ja.wikipedia 未来チョイス編 標的154-177 and fandom Choice Arc page.",
+   "sources": [
+    "https://reborn.fandom.com/wiki/Episode_155",
+    "https://en.wikipedia.org/wiki/List_of_Reborn!_chapters",
+    "https://ja.wikipedia.org/wiki/%E5%AE%B6%E5%BA%AD%E6%95%99%E5%B8%AB%E3%83%92%E3%83%83%E3%83%88%E3%83%9E%E3%83%B3REBORN!",
+    "https://reborn.fandom.com/wiki/Choice_Arc"
+   ]
+  },
+  {
+   "episode": 156,
+   "end_chapter": 231,
+   "start_chapter": 229,
+   "chapters_adapted": "229-231",
+   "volume": 25,
+   "confidence": "medium",
+   "note": "Xanxus's call (229), 'Rest' (230), Basil arrives ('Charging' 231).",
+   "sources": [
+    "https://reborn.fandom.com/wiki/Episode_156",
+    "https://en.wikipedia.org/wiki/List_of_Reborn!_chapters"
+   ]
+  },
+  {
+   "episode": 157,
+   "end_chapter": 231,
+   "start_chapter": 231,
+   "chapters_adapted": "231",
+   "volume": 25,
+   "confidence": "medium",
+   "note": "Namimori Middle visit; Hibari meets future Dino (end of 231).",
+   "sources": [
+    "https://reborn.fandom.com/wiki/Episode_157",
+    "https://reborn.fandom.com/wiki/Chapter_231",
+    "https://en.wikipedia.org/wiki/List_of_Reborn!_chapters"
+   ]
+  },
+  {
+   "episode": 159,
+   "end_chapter": 232,
+   "start_chapter": 232,
+   "chapters_adapted": "232 (sliver; mostly anime-original baseball episode)",
+   "volume": 25,
+   "confidence": "medium",
+   "note": "Mixed: fandom '232 (mostly filler)'.",
+   "sources": [
+    "https://reborn.fandom.com/wiki/Episode_159",
+    "https://www.animefillerlist.com/shows/katekyo-hitman-reborn"
+   ]
+  },
+  {
+   "episode": 160,
+   "end_chapter": 232,
+   "start_chapter": 232,
+   "chapters_adapted": "232",
+   "volume": 25,
+   "confidence": "medium",
+   "note": "'Choice' (232): Shoichi explains the rules; Giannini's Dying-Will-Flame motorcycle (turned into an airbike in the anime per ja.wikipedia).",
+   "sources": [
+    "https://reborn.fandom.com/wiki/Episode_160",
+    "https://reborn.fandom.com/wiki/Chapter_232",
+    "https://en.wikipedia.org/wiki/List_of_Reborn!_chapters",
+    "https://ja.wikipedia.org/wiki/%E5%AE%B6%E5%BA%AD%E6%95%99%E5%B8%AB%E3%83%92%E3%83%83%E3%83%88%E3%83%9E%E3%83%B3REBORN!"
+   ]
+  },
+  {
+   "episode": 161,
+   "end_chapter": 233,
+   "start_chapter": 233,
+   "chapters_adapted": "233",
+   "volume": 25,
+   "confidence": "high",
+   "note": "'Bike' = 'Airbike' (title match; ja.wikipedia notes the bike-to-airbike change).",
+   "sources": [
+    "https://reborn.fandom.com/wiki/Episode_161",
+    "https://en.wikipedia.org/wiki/List_of_Reborn!_chapters",
+    "https://ja.wikipedia.org/wiki/%E5%AE%B6%E5%BA%AD%E6%95%99%E5%B8%AB%E3%83%92%E3%83%83%E3%83%88%E3%83%9E%E3%83%B3REBORN!"
+   ]
+  },
+  {
+   "episode": 162,
+   "end_chapter": 234,
+   "start_chapter": 233,
+   "chapters_adapted": "233-234",
+   "volume": 25,
+   "confidence": "medium",
+   "note": "'Monster' (234) = the Sky Vongola Box (Natsu).",
+   "sources": [
+    "https://reborn.fandom.com/wiki/Episode_162",
+    "https://en.wikipedia.org/wiki/List_of_Reborn!_chapters"
+   ]
+  },
+  {
+   "episode": 163,
+   "end_chapter": 235,
+   "start_chapter": 235,
+   "chapters_adapted": "235",
+   "volume": 25,
+   "confidence": "medium",
+   "note": "'Start Training' (235) = turmoil on base / Vongola Box training.",
+   "sources": [
+    "https://reborn.fandom.com/wiki/Episode_163",
+    "https://en.wikipedia.org/wiki/List_of_Reborn!_chapters"
+   ]
+  },
+  {
+   "episode": 164,
+   "end_chapter": 236,
+   "start_chapter": 235,
+   "chapters_adapted": "235-236",
+   "volume": 25,
+   "confidence": "medium",
+   "note": "'Vongola Box, Training Begins' = ch 235 'Start Training'; runs into 'Boycott' (236).",
+   "sources": [
+    "https://reborn.fandom.com/wiki/Episode_164",
+    "https://en.wikipedia.org/wiki/List_of_Reborn!_chapters"
+   ]
+  },
+  {
+   "episode": 165,
+   "end_chapter": 237,
+   "start_chapter": 236,
+   "chapters_adapted": "236-237",
+   "volume": 25,
+   "confidence": "medium",
+   "note": "'Boycott' (236) title match; 'Confession' (237).",
+   "sources": [
+    "https://reborn.fandom.com/wiki/Episode_165",
+    "https://en.wikipedia.org/wiki/List_of_Reborn!_chapters"
+   ]
+  },
+  {
+   "episode": 166,
+   "end_chapter": 238,
+   "start_chapter": 237,
+   "chapters_adapted": "237-238",
+   "volume": 26,
+   "confidence": "medium",
+   "note": "'Change' (238) = 'With the Same Heart'.",
+   "sources": [
+    "https://reborn.fandom.com/wiki/Episode_166",
+    "https://en.wikipedia.org/wiki/List_of_Reborn!_chapters"
+   ]
+  },
+  {
+   "episode": 167,
+   "end_chapter": 240,
+   "start_chapter": 239,
+   "chapters_adapted": "239-240",
+   "volume": 26,
+   "confidence": "medium",
+   "note": "'The Day of the Decisive Battle' (239) = 'Day of the Battle'; 'Ticket' (240).",
+   "sources": [
+    "https://reborn.fandom.com/wiki/Episode_167",
+    "https://en.wikipedia.org/wiki/List_of_Reborn!_chapters"
+   ]
+  },
+  {
+   "episode": 168,
+   "end_chapter": 242,
+   "start_chapter": 241,
+   "chapters_adapted": "241-242",
+   "volume": 26,
+   "confidence": "medium",
+   "note": "'Choice Begins!' (241) exact title match; 'Target Rule' (242).",
+   "sources": [
+    "https://reborn.fandom.com/wiki/Episode_168",
+    "https://en.wikipedia.org/wiki/List_of_Reborn!_chapters"
+   ]
+  },
+  {
+   "episode": 169,
+   "end_chapter": 244,
+   "start_chapter": 243,
+   "chapters_adapted": "243-244",
+   "volume": 26,
+   "confidence": "medium",
+   "note": "'Battle Start!!' (243), 'Tsuna's Box Weapon' (244) = Leone di Cieli.",
+   "sources": [
+    "https://reborn.fandom.com/wiki/Episode_169",
+    "https://en.wikipedia.org/wiki/List_of_Reborn!_chapters"
+   ]
+  },
+  {
+   "episode": 170,
+   "end_chapter": 246,
+   "start_chapter": 245,
+   "chapters_adapted": "245-246",
+   "volume": 26,
+   "confidence": "medium",
+   "note": "Yamamoto vs Saru (245), 'Yamamoto's Vongola Box' (246).",
+   "sources": [
+    "https://reborn.fandom.com/wiki/Episode_170",
+    "https://en.wikipedia.org/wiki/List_of_Reborn!_chapters"
+   ]
+  },
+  {
+   "episode": 171,
+   "end_chapter": 248,
+   "start_chapter": 246,
+   "chapters_adapted": "246-248",
+   "volume": 27,
+   "confidence": "medium",
+   "note": "'Revenge' (247) title match; 'The End of Genkishi' (248).",
+   "sources": [
+    "https://reborn.fandom.com/wiki/Episode_171",
+    "https://en.wikipedia.org/wiki/List_of_Reborn!_chapters"
+   ]
+  },
+  {
+   "episode": 172,
+   "end_chapter": 249,
+   "start_chapter": 248,
+   "chapters_adapted": "248-249",
+   "volume": 27,
+   "confidence": "medium",
+   "note": "'Dark Cloud' (249) = Kikyo's assault.",
+   "sources": [
+    "https://reborn.fandom.com/wiki/Episode_172",
+    "https://en.wikipedia.org/wiki/List_of_Reborn!_chapters"
+   ]
+  },
+  {
+   "episode": 173,
+   "end_chapter": 251,
+   "start_chapter": 250,
+   "chapters_adapted": "250-251",
+   "volume": 27,
+   "confidence": "high",
+   "note": "'Choice End' (251) = 'Choice Ends' (title match on end chapter).",
+   "sources": [
+    "https://reborn.fandom.com/wiki/Episode_173",
+    "https://en.wikipedia.org/wiki/List_of_Reborn!_chapters"
+   ]
+  },
+  {
+   "episode": 174,
+   "end_chapter": 253,
+   "start_chapter": 252,
+   "chapters_adapted": "252-253",
+   "volume": 27,
+   "confidence": "medium",
+   "note": "'Phalaenopsis Paradox' 1-2 = 'The Truth about the Future'.",
+   "sources": [
+    "https://reborn.fandom.com/wiki/Episode_174",
+    "https://en.wikipedia.org/wiki/List_of_Reborn!_chapters"
+   ]
+  },
+  {
+   "episode": 175,
+   "end_chapter": 254,
+   "start_chapter": 253,
+   "chapters_adapted": "253-254",
+   "volume": 27,
+   "confidence": "high",
+   "note": "'Uni Visits' (254) = 'Yuni Comes' (title match on end chapter).",
+   "sources": [
+    "https://reborn.fandom.com/wiki/Episode_175",
+    "https://en.wikipedia.org/wiki/List_of_Reborn!_chapters"
+   ]
+  },
+  {
+   "episode": 176,
+   "end_chapter": 256,
+   "start_chapter": 254,
+   "chapters_adapted": "254-256",
+   "volume": 27,
+   "confidence": "medium",
+   "note": "'Decision' (255), 'Desire' (256): the fake Mukuro holds Byakuran and the Vongola escape Choice. (ch 258 'Escape' is a different escape, adapted in eps 190-191.)",
+   "sources": [
+    "https://reborn.fandom.com/wiki/Episode_176",
+    "https://reborn.fandom.com/wiki/Chapter_255",
+    "https://reborn.fandom.com/wiki/Chapter_256",
+    "https://en.wikipedia.org/wiki/List_of_Reborn!_chapters"
+   ]
+  },
+  {
+   "episode": 177,
+   "end_chapter": 256,
+   "start_chapter": 256,
+   "chapters_adapted": "256 (recap-heavy; return to Namimori = opening of 257)",
+   "volume": 27,
+   "confidence": "medium",
+   "note": "Reborn recaps everything to Lal Mirch; the return to Namimori is the opening of ch 257.",
+   "sources": [
+    "https://reborn.fandom.com/wiki/Episode_177",
+    "https://reborn.fandom.com/wiki/Chapter_257",
+    "https://en.wikipedia.org/wiki/List_of_Reborn!_chapters"
+   ]
+  },
+  {
+   "episode": 178,
+   "end_chapter": 257,
+   "start_chapter": 257,
+   "chapters_adapted": "257 (sliver; anime-original premise)",
+   "volume": 27,
+   "confidence": "medium",
+   "note": "Mixed: fandom '257 (mostly filler)'; sets up the anime-only Primo Family arc (ja.wikipedia: アニメオリジナル 標的178-189).",
+   "sources": [
+    "https://reborn.fandom.com/wiki/Episode_178",
+    "https://www.animefillerlist.com/shows/katekyo-hitman-reborn",
+    "https://ja.wikipedia.org/wiki/%E5%AE%B6%E5%BA%AD%E6%95%99%E5%B8%AB%E3%83%92%E3%83%83%E3%83%88%E3%83%9E%E3%83%B3REBORN!",
+    "https://reborn.fandom.com/wiki/Primo_Family_Arc"
+   ]
+  },
+  {
+   "episode": 189,
+   "end_chapter": 257,
+   "start_chapter": 257,
+   "chapters_adapted": "257 (sliver; recap)",
+   "volume": 27,
+   "confidence": "medium",
+   "note": "Mixed: Reborn's recap to Lal Mirch; fandom '257 (mostly filler)' and 'bears no significance to the main storyline'.",
+   "sources": [
+    "https://reborn.fandom.com/wiki/Episode_189",
+    "https://www.animefillerlist.com/shows/katekyo-hitman-reborn",
+    "https://reborn.fandom.com/wiki/Primo_Family_Arc"
+   ]
+  },
+  {
+   "episode": 190,
+   "end_chapter": 258,
+   "start_chapter": 257,
+   "chapters_adapted": "257-258",
+   "volume": 27,
+   "confidence": "medium",
+   "note": "Squalo's call to Lussuria and Zakuro's break-in (257), Squalo holds Zakuro off, flight to Haru's hideout, Kawahira appears (end of 258). Future Final Battle block start per ja.wikipedia 未来決戦編 標的190-203.",
+   "sources": [
+    "https://reborn.fandom.com/wiki/Episode_190",
+    "https://reborn.fandom.com/wiki/Chapter_257",
+    "https://reborn.fandom.com/wiki/Chapter_258",
+    "https://en.wikipedia.org/wiki/List_of_Reborn!_chapters",
+    "https://ja.wikipedia.org/wiki/%E5%AE%B6%E5%BA%AD%E6%95%99%E5%B8%AB%E3%83%92%E3%83%83%E3%83%88%E3%83%9E%E3%83%B3REBORN!",
+    "https://reborn.fandom.com/wiki/Future_Final_Battle_Arc"
+   ]
+  },
+  {
+   "episode": 191,
+   "end_chapter": 260,
+   "start_chapter": 258,
+   "chapters_adapted": "258-260",
+   "volume": 28,
+   "confidence": "high",
+   "note": "'Carnage Box Release' (260) = 'Open Carnage Box' (title match on end chapter); 'Uncle Kawahira' (259).",
+   "sources": [
+    "https://reborn.fandom.com/wiki/Episode_191",
+    "https://en.wikipedia.org/wiki/List_of_Reborn!_chapters"
+   ]
+  },
+  {
+   "episode": 192,
+   "end_chapter": 262,
+   "start_chapter": 261,
+   "chapters_adapted": "261-262",
+   "volume": 28,
+   "confidence": "medium",
+   "note": "'Handcuffs' (261) = 'Alaude's Handcuffs' (title match); 'Reunion' (262).",
+   "sources": [
+    "https://reborn.fandom.com/wiki/Episode_192",
+    "https://en.wikipedia.org/wiki/List_of_Reborn!_chapters"
+   ]
+  },
+  {
+   "episode": 193,
+   "end_chapter": 264,
+   "start_chapter": 262,
+   "chapters_adapted": "262-264",
+   "volume": 28,
+   "confidence": "medium",
+   "note": "'Coordination' (263), 'Eve' (264).",
+   "sources": [
+    "https://reborn.fandom.com/wiki/Episode_193",
+    "https://en.wikipedia.org/wiki/List_of_Reborn!_chapters"
+   ]
+  },
+  {
+   "episode": 194,
+   "end_chapter": 265,
+   "start_chapter": 264,
+   "chapters_adapted": "264-265",
+   "volume": 28,
+   "confidence": "medium",
+   "note": "'Bright Night' (265) = the final battle begins.",
+   "sources": [
+    "https://reborn.fandom.com/wiki/Episode_194",
+    "https://en.wikipedia.org/wiki/List_of_Reborn!_chapters"
+   ]
+  },
+  {
+   "episode": 195,
+   "end_chapter": 267,
+   "start_chapter": 266,
+   "chapters_adapted": "266-267",
+   "volume": 28,
+   "confidence": "medium",
+   "note": "'Right Arm' (266), 'Crash' (267).",
+   "sources": [
+    "https://reborn.fandom.com/wiki/Episode_195",
+    "https://en.wikipedia.org/wiki/List_of_Reborn!_chapters"
+   ]
+  },
+  {
+   "episode": 196,
+   "end_chapter": 268,
+   "start_chapter": 267,
+   "chapters_adapted": "267-268",
+   "volume": 28,
+   "confidence": "medium",
+   "note": "'Single Strike' (268) = Lambo's shield.",
+   "sources": [
+    "https://reborn.fandom.com/wiki/Episode_196",
+    "https://en.wikipedia.org/wiki/List_of_Reborn!_chapters"
+   ]
+  },
+  {
+   "episode": 197,
+   "end_chapter": 270,
+   "start_chapter": 269,
+   "chapters_adapted": "269-270",
+   "volume": 29,
+   "confidence": "medium",
+   "note": "Lambo's true power / Knuckle's Maximum Break (269); Hibari vs Kikyo, Spinosaurus ambush ('Dilemma' 270).",
+   "sources": [
+    "https://reborn.fandom.com/wiki/Episode_197",
+    "https://reborn.fandom.com/wiki/Chapter_270",
+    "https://en.wikipedia.org/wiki/List_of_Reborn!_chapters"
+   ]
+  },
+  {
+   "episode": 198,
+   "end_chapter": 271,
+   "start_chapter": 270,
+   "chapters_adapted": "270-271 (+ flashback to 262)",
+   "volume": 29,
+   "confidence": "medium",
+   "note": "Hibari seemingly killed (end of 270); Varia battle and the Mukuro/Fran illusion reveal; Ghost arrives (end of 271). Fandom infobox lists 262, 270, 271.",
+   "sources": [
+    "https://reborn.fandom.com/wiki/Episode_198",
+    "https://reborn.fandom.com/wiki/Chapter_270",
+    "https://reborn.fandom.com/wiki/Chapter_271",
+    "https://en.wikipedia.org/wiki/List_of_Reborn!_chapters"
+   ]
+  },
+  {
+   "episode": 199,
+   "end_chapter": 273,
+   "start_chapter": 272,
+   "chapters_adapted": "272-273",
+   "volume": 29,
+   "confidence": "medium",
+   "note": "'Ghost' (272) = 'GHOST Awakens' (title match); 'Absorption' (273).",
+   "sources": [
+    "https://reborn.fandom.com/wiki/Episode_199",
+    "https://reborn.fandom.com/wiki/Chapter_272",
+    "https://en.wikipedia.org/wiki/List_of_Reborn!_chapters"
+   ]
+  },
+  {
+   "episode": 200,
+   "end_chapter": 276,
+   "start_chapter": 274,
+   "chapters_adapted": "274-276",
+   "volume": 29,
+   "confidence": "medium",
+   "note": "'The Way of the Flame' (274), Tsuna vs Byakuran (275), 'Resonance' (276).",
+   "sources": [
+    "https://reborn.fandom.com/wiki/Episode_200",
+    "https://en.wikipedia.org/wiki/List_of_Reborn!_chapters"
+   ]
+  },
+  {
+   "episode": 201,
+   "end_chapter": 277,
+   "start_chapter": 276,
+   "chapters_adapted": "276-277",
+   "volume": 29,
+   "confidence": "medium",
+   "note": "'Unlucky' (277) = 'Precious Moments in Time'.",
+   "sources": [
+    "https://reborn.fandom.com/wiki/Episode_201",
+    "https://en.wikipedia.org/wiki/List_of_Reborn!_chapters"
+   ]
+  },
+  {
+   "episode": 202,
+   "end_chapter": 280,
+   "start_chapter": 278,
+   "chapters_adapted": "278-280",
+   "volume": 30,
+   "confidence": "medium",
+   "note": "'Sea, Shellfish and Rainbow' (278) = 'Sea. Clam. Rainbow.' (title match); 'When the Rainbow Fades' (279); 'The Last Blow' (280).",
+   "sources": [
+    "https://reborn.fandom.com/wiki/Episode_202",
+    "https://en.wikipedia.org/wiki/List_of_Reborn!_chapters"
+   ]
+  },
+  {
+   "episode": 203,
+   "end_chapter": 282,
+   "start_chapter": 281,
+   "chapters_adapted": "281-282",
+   "volume": 30,
+   "confidence": "high",
+   "note": "Finale = ch 281 'What We Had to Leave Behind' + 282 'Goodbye Future'. animefillerguide: ep 203 corresponds to chapters 281-282, start reading at 283 (vol 30); mangashed: anime ends at the end of ch 282; Chapter 282 page -> Episode 203. Matches the existing ep203->282 anchor.",
+   "sources": [
+    "https://reborn.fandom.com/wiki/Episode_203",
+    "https://www.animefillerguide.com/anime/katekyo-hitman-reborn/",
+    "https://mangashed.com/where-does-the-katekyo-hitman-reborn-anime-end-in-the-manga/",
+    "https://reborn.fandom.com/wiki/Chapter_282",
+    "https://en.wikipedia.org/wiki/List_of_Reborn!_chapters"
+   ]
+  }
+ ],
+ "continue_points": [
+  {
+   "episode": 19,
+   "continue_chapter": 62,
+   "note": "End of the first Daily Life block; the plot resumes with the Kokuyo arc at ch 62 (ep 20). Remaining Daily Life chapters are standalone gags, most of them adapted later in eps 27-33, 38-39, 66-73; never adapted: 5 (merged into ep 2), 6, 17-18, 43-47, 61."
+  },
+  {
+   "episode": 20,
+   "continue_chapter": 64,
+   "note": "Ends mid-chapter; ep 21 continues ch 64."
+  },
+  {
+   "episode": 21,
+   "continue_chapter": 67,
+   "note": "Ends mid-chapter; ep 22 continues ch 67."
+  },
+  {
+   "episode": 22,
+   "continue_chapter": 70,
+   "note": "Ends mid-chapter; ep 23 continues ch 70."
+  },
+  {
+   "episode": 24,
+   "continue_chapter": 75,
+   "note": "Ends mid-chapter; ep 25 continues ch 75."
+  },
+  {
+   "episode": 27,
+   "continue_chapter": 82,
+   "note": "Daily Life gag chapter shown after the Kokuyo arc (already watched: 62-81); the plot resumes with the Varia arc at ch 82 (ep 34)."
+  },
+  {
+   "episode": 28,
+   "continue_chapter": 82,
+   "note": "Daily Life gag chapter shown after the Kokuyo arc (already watched: 62-81); the plot resumes with the Varia arc at ch 82 (ep 34)."
+  },
+  {
+   "episode": 29,
+   "continue_chapter": 82,
+   "note": "Daily Life gag chapter shown after the Kokuyo arc (already watched: 62-81); the plot resumes with the Varia arc at ch 82 (ep 34)."
+  },
+  {
+   "episode": 30,
+   "continue_chapter": 82,
+   "note": "Daily Life gag chapter shown after the Kokuyo arc (already watched: 62-81); the plot resumes with the Varia arc at ch 82 (ep 34)."
+  },
+  {
+   "episode": 31,
+   "continue_chapter": 82,
+   "note": "Daily Life gag chapter shown after the Kokuyo arc (already watched: 62-81); the plot resumes with the Varia arc at ch 82 (ep 34)."
+  },
+  {
+   "episode": 32,
+   "continue_chapter": 82,
+   "note": "Daily Life gag chapter shown after the Kokuyo arc (already watched: 62-81); the plot resumes with the Varia arc at ch 82 (ep 34)."
+  },
+  {
+   "episode": 33,
+   "continue_chapter": 82,
+   "note": "Daily Life gag chapter shown after the Kokuyo arc (already watched: 62-81); the plot resumes with the Varia arc at ch 82 (ep 34)."
+  },
+  {
+   "episode": 34,
+   "continue_chapter": 84,
+   "note": "Ends mid-chapter; ep 35 continues ch 84."
+  },
+  {
+   "episode": 38,
+   "continue_chapter": 91,
+   "note": "Daily Life gag chapters inserted inside the Varia arc; the ring battles resume at ch 91 (ep 40)."
+  },
+  {
+   "episode": 39,
+   "continue_chapter": 91,
+   "note": "Daily Life gag chapters inserted inside the Varia arc; the ring battles resume at ch 91 (ep 40)."
+  },
+  {
+   "episode": 48,
+   "continue_chapter": 109,
+   "note": "Ends mid-chapter; ep 49 continues ch 109."
+  },
+  {
+   "episode": 51,
+   "continue_chapter": 116,
+   "note": "Ends mid-chapter; ep 52 continues ch 116."
+  },
+  {
+   "episode": 52,
+   "continue_chapter": 117,
+   "note": "Ends mid-chapter; ep 53 continues ch 117."
+  },
+  {
+   "episode": 54,
+   "continue_chapter": 121,
+   "note": "Ends mid-chapter; ep 55 continues ch 121."
+  },
+  {
+   "episode": 57,
+   "continue_chapter": 126,
+   "note": "Ends mid-chapter; ep 58 continues ch 126."
+  },
+  {
+   "episode": 58,
+   "continue_chapter": 128,
+   "note": "Ends mid-chapter; ep 59 continues ch 128."
+  },
+  {
+   "episode": 59,
+   "continue_chapter": 129,
+   "note": "Ends mid-chapter; ep 60 continues ch 129."
+  },
+  {
+   "episode": 60,
+   "continue_chapter": 130,
+   "note": "Ends mid-chapter; ep 61 continues ch 130."
+  },
+  {
+   "episode": 61,
+   "continue_chapter": 131,
+   "note": "Ends mid-chapter; ep 62 continues ch 131."
+  },
+  {
+   "episode": 62,
+   "continue_chapter": 132,
+   "note": "Ends mid-chapter; ep 63 continues ch 132."
+  },
+  {
+   "episode": 63,
+   "continue_chapter": 133,
+   "note": "Ends mid-chapter; ep 64 continues ch 133."
+  },
+  {
+   "episode": 64,
+   "continue_chapter": 134,
+   "note": "Ends mid-chapter; ep 65 continues ch 134."
+  },
+  {
+   "episode": 66,
+   "continue_chapter": 136,
+   "note": "Daily Life gag chapter shown after the Varia arc (already watched: 82-135); the plot resumes with the Future arc at ch 136 (ep 74)."
+  },
+  {
+   "episode": 67,
+   "continue_chapter": 136,
+   "note": "Daily Life gag chapter shown after the Varia arc (already watched: 82-135); the plot resumes with the Future arc at ch 136 (ep 74)."
+  },
+  {
+   "episode": 68,
+   "continue_chapter": 136,
+   "note": "Daily Life gag chapter shown after the Varia arc (already watched: 82-135); the plot resumes with the Future arc at ch 136 (ep 74)."
+  },
+  {
+   "episode": 69,
+   "continue_chapter": 136,
+   "note": "Daily Life gag chapter shown after the Varia arc (already watched: 82-135); the plot resumes with the Future arc at ch 136 (ep 74)."
+  },
+  {
+   "episode": 70,
+   "continue_chapter": 136,
+   "note": "Daily Life gag chapter shown after the Varia arc (already watched: 82-135); the plot resumes with the Future arc at ch 136 (ep 74)."
+  },
+  {
+   "episode": 71,
+   "continue_chapter": 136,
+   "note": "Daily Life gag chapter shown after the Varia arc (already watched: 82-135); the plot resumes with the Future arc at ch 136 (ep 74)."
+  },
+  {
+   "episode": 72,
+   "continue_chapter": 136,
+   "note": "Daily Life gag chapter shown after the Varia arc (already watched: 82-135); the plot resumes with the Future arc at ch 136 (ep 74)."
+  },
+  {
+   "episode": 73,
+   "continue_chapter": 136,
+   "note": "Daily Life gag chapter shown after the Varia arc (already watched: 82-135); the plot resumes with the Future arc at ch 136 (ep 74)."
+  },
+  {
+   "episode": 74,
+   "continue_chapter": 138,
+   "note": "Ends mid-chapter; ep 75 continues ch 138."
+  },
+  {
+   "episode": 76,
+   "continue_chapter": 143,
+   "note": "Ends mid-chapter; ep 77 continues ch 143."
+  },
+  {
+   "episode": 89,
+   "continue_chapter": 163,
+   "note": "Ends mid-chapter; ep 90 continues ch 163."
+  },
+  {
+   "episode": 90,
+   "continue_chapter": 164,
+   "note": "Ends mid-chapter; ep 91 continues ch 164."
+  },
+  {
+   "episode": 91,
+   "continue_chapter": 166,
+   "note": "Ends mid-chapter; ep 92 continues ch 166."
+  },
+  {
+   "episode": 92,
+   "continue_chapter": 167,
+   "note": "Ends mid-chapter; ep 93 continues ch 167."
+  },
+  {
+   "episode": 93,
+   "continue_chapter": 168,
+   "note": "Ends mid-chapter; ep 94 continues ch 168."
+  },
+  {
+   "episode": 98,
+   "continue_chapter": 173,
+   "note": "Ends mid-chapter; ep 99 continues ch 173."
+  },
+  {
+   "episode": 101,
+   "continue_chapter": 175,
+   "note": "Ends mid-chapter; ep 102 continues ch 175."
+  },
+  {
+   "episode": 102,
+   "continue_chapter": 176,
+   "note": "Ends mid-chapter; ep 103 continues ch 176."
+  },
+  {
+   "episode": 104,
+   "continue_chapter": 179,
+   "note": "Ends mid-chapter; ep 105 continues ch 179."
+  },
+  {
+   "episode": 106,
+   "continue_chapter": 182,
+   "note": "Ends mid-chapter; ep 107 continues ch 182."
+  },
+  {
+   "episode": 107,
+   "continue_chapter": 185,
+   "note": "Ends mid-chapter; ep 108 continues ch 185."
+  },
+  {
+   "episode": 108,
+   "continue_chapter": 186,
+   "note": "Ends mid-chapter; ep 109 continues ch 186."
+  },
+  {
+   "episode": 109,
+   "continue_chapter": 188,
+   "note": "Ends mid-chapter; ep 110 continues ch 188."
+  },
+  {
+   "episode": 110,
+   "continue_chapter": 189,
+   "note": "Ends mid-chapter; ep 111 continues ch 189."
+  },
+  {
+   "episode": 111,
+   "continue_chapter": 189,
+   "note": "Ends mid-chapter; ep 112 continues ch 189."
+  },
+  {
+   "episode": 112,
+   "continue_chapter": 190,
+   "note": "Ends mid-chapter; ep 113 continues ch 190."
+  },
+  {
+   "episode": 113,
+   "continue_chapter": 191,
+   "note": "Ends mid-chapter; ep 114 continues ch 191."
+  },
+  {
+   "episode": 114,
+   "continue_chapter": 192,
+   "note": "Ends mid-chapter; ep 115 continues ch 192."
+  },
+  {
+   "episode": 115,
+   "continue_chapter": 193,
+   "note": "Ends mid-chapter; ep 116 continues ch 193."
+  },
+  {
+   "episode": 117,
+   "continue_chapter": 196,
+   "note": "Ends mid-chapter; ep 118 continues ch 196."
+  },
+  {
+   "episode": 118,
+   "continue_chapter": 197,
+   "note": "Ends mid-chapter; ep 119 continues ch 197."
+  },
+  {
+   "episode": 122,
+   "continue_chapter": 198,
+   "note": "Ends mid-chapter; ep 123 continues ch 198."
+  },
+  {
+   "episode": 123,
+   "continue_chapter": 200,
+   "note": "Ends mid-chapter; ep 124 continues ch 200."
+  },
+  {
+   "episode": 124,
+   "continue_chapter": 201,
+   "note": "Ends mid-chapter; ep 125 continues ch 201."
+  },
+  {
+   "episode": 126,
+   "continue_chapter": 204,
+   "note": "Ends mid-chapter; ep 127 continues ch 204."
+  },
+  {
+   "episode": 128,
+   "continue_chapter": 207,
+   "note": "Ends mid-chapter; ep 129 continues ch 207."
+  },
+  {
+   "episode": 129,
+   "continue_chapter": 208,
+   "note": "Ends mid-chapter; ep 130 continues ch 208."
+  },
+  {
+   "episode": 130,
+   "continue_chapter": 210,
+   "note": "Ends mid-chapter; ep 131 continues ch 210."
+  },
+  {
+   "episode": 134,
+   "continue_chapter": 217,
+   "note": "Ends mid-chapter; ep 135 continues ch 217."
+  },
+  {
+   "episode": 135,
+   "continue_chapter": 218,
+   "note": "Ends mid-chapter; ep 136 continues ch 218."
+  },
+  {
+   "episode": 140,
+   "continue_chapter": 229,
+   "note": "Ends as the Vongola Box arrives (end of 228/start of 229); the next 14 episodes are anime-only (141 mostly filler, 142-154 Arcobaleno Trials + recap) and ep 155 re-shows 227-228 before continuing at 229."
+  },
+  {
+   "episode": 141,
+   "continue_chapter": 229,
+   "note": "Mostly anime-original; the story resumes at ch 229 (Vongola Box Weapons), shown again in ep 155."
+  },
+  {
+   "episode": 155,
+   "continue_chapter": 229,
+   "note": "Ends mid-chapter; ep 156 continues ch 229."
+  },
+  {
+   "episode": 156,
+   "continue_chapter": 231,
+   "note": "Ends mid-chapter; ep 157 continues ch 231."
+  },
+  {
+   "episode": 159,
+   "continue_chapter": 232,
+   "note": "Ends mid-chapter; ep 160 continues ch 232."
+  },
+  {
+   "episode": 161,
+   "continue_chapter": 233,
+   "note": "Ends mid-chapter; ep 162 continues ch 233."
+  },
+  {
+   "episode": 163,
+   "continue_chapter": 235,
+   "note": "Ends mid-chapter; ep 164 continues ch 235."
+  },
+  {
+   "episode": 164,
+   "continue_chapter": 236,
+   "note": "Ends mid-chapter; ep 165 continues ch 236."
+  },
+  {
+   "episode": 165,
+   "continue_chapter": 237,
+   "note": "Ends mid-chapter; ep 166 continues ch 237."
+  },
+  {
+   "episode": 170,
+   "continue_chapter": 246,
+   "note": "Ends mid-chapter; ep 171 continues ch 246."
+  },
+  {
+   "episode": 171,
+   "continue_chapter": 248,
+   "note": "Ends mid-chapter; ep 172 continues ch 248."
+  },
+  {
+   "episode": 174,
+   "continue_chapter": 253,
+   "note": "Ends mid-chapter; ep 175 continues ch 253."
+  },
+  {
+   "episode": 175,
+   "continue_chapter": 254,
+   "note": "Ends mid-chapter; ep 176 continues ch 254."
+  },
+  {
+   "episode": 176,
+   "continue_chapter": 256,
+   "note": "Ends mid-chapter; ep 177 continues ch 256."
+  },
+  {
+   "episode": 178,
+   "continue_chapter": 257,
+   "note": "Ends mid-chapter; ep 189 continues ch 257."
+  },
+  {
+   "episode": 189,
+   "continue_chapter": 257,
+   "note": "Ends mid-chapter; ep 190 continues ch 257."
+  },
+  {
+   "episode": 190,
+   "continue_chapter": 258,
+   "note": "Ends mid-chapter; ep 191 continues ch 258."
+  },
+  {
+   "episode": 192,
+   "continue_chapter": 262,
+   "note": "Ends mid-chapter; ep 193 continues ch 262."
+  },
+  {
+   "episode": 193,
+   "continue_chapter": 264,
+   "note": "Ends mid-chapter; ep 194 continues ch 264."
+  },
+  {
+   "episode": 195,
+   "continue_chapter": 267,
+   "note": "Ends mid-chapter; ep 196 continues ch 267."
+  },
+  {
+   "episode": 197,
+   "continue_chapter": 270,
+   "note": "Ends mid-chapter; ep 198 continues ch 270."
+  },
+  {
+   "episode": 200,
+   "continue_chapter": 276,
+   "note": "Ends mid-chapter; ep 201 continues ch 276."
+  }
+ ],
+ "annotations": [
+  {
+   "episodes": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    27,
+    28,
+    29,
+    30,
+    31,
+    32,
+    33,
+    38,
+    39,
+    66,
+    67,
+    68,
+    69,
+    70,
+    71,
+    72,
+    73
+   ],
+   "kind": "rearranged",
+   "chapters": "1-61",
+   "note": "Daily Life gag chapters are adapted out of order and split into blocks: eps 1-19, then 27-33 (after Kokuyo), 38-39 (inside the Varia arc), 66-73 (after Varia). Anime order of chapters: 1 | 2-3(+5) | 7-10 | 11-12 | 16 | 23-24 | 14 | 27-28 | 15 | 21 | 25 | 32,39 | 31 | 42 | 37-38 | 30 | 29 | 36 | 34-35 || 20 | 19 | 41? | 48 | 49-50 | 54 | 57-58 || 56,59 | 52-53 || 60 | 33 | 51 | 26 | 13 | 40 | 4 | 22+55. Never adapted: 5 (merged into ep 2), 6, 17-18, 43-47 (Longchamp Naito / Tomaso Family chapters), 61 (fandom episode infoboxes; vongola101 and the ja.wikipedia episode-table headers agree the blocks are Daily Life material, including the note 38・39は日常編 for the two episodes inside the Varia block). Each episode pads a ~19-page gag chapter to 22 minutes with anime-original material."
+  },
+  {
+   "episodes": [
+    2
+   ],
+   "kind": "graft",
+   "chapters": "5",
+   "note": "Yamamoto's manga introduction (ch 5 'Takeshi Yamamoto') is folded into ep 2 alongside ch 2-3 (fandom Daily Life Arc page)."
+  },
+  {
+   "episodes": [
+    16,
+    17
+   ],
+   "kind": "rearranged",
+   "chapters": "29-30",
+   "note": "Ch 30 'Lost' is shown (ep 16) before ch 29 'Hospitalized' (ep 17); the Enzio-crushing scene from ch 29 is moved into ep 16 (fandom ep 16/17 trivia)."
+  },
+  {
+   "episodes": [
+    27
+   ],
+   "kind": "loose_parallel",
+   "chapters": "20",
+   "note": "Ch 20 'Eat and Run' wrapped in an anime-original grade-promotion / class-roster contest; ch 61 'Promotion' (Gokudera/Dino) is not adapted despite the episode title."
+  },
+  {
+   "episodes": [
+    29,
+    73
+   ],
+   "kind": "loose_parallel",
+   "chapters": "41; 22, 55",
+   "note": "Mixed episodes with only loose manga basis: ep 29 'possibly ch 41' (fandom), ep 73 combines ch 22 'Birthday Party' and ch 55 'The Tanabata Contest' with the party host, judge, winners and cast all changed (fandom Manga & Anime Differences)."
+  },
+  {
+   "episodes": [
+    71
+   ],
+   "kind": "divergence",
+   "chapters": "40",
+   "note": "The 'Absolute Evil Fist' technique is anime-original (ja.wikipedia: アニメオリジナル, 標的71); the dojo-buster premise is ch 40."
+  },
+  {
+   "episodes": [
+    43,
+    44
+   ],
+   "kind": "partial",
+   "chapters": "97-99",
+   "note": "Ep 44 opens on the tail of ch 98 (Tsuna's intervention) before covering 99; fandom lists 97-99 for ep 44 because of the recap."
+  },
+  {
+   "episodes": [
+    91,
+    92
+   ],
+   "kind": "partial",
+   "chapters": "164-167",
+   "note": "Ep 91 ends on the first appearance of 10-years-later Ryohei (opening of 166); ep 92 covers 166-167. Fandom infoboxes ('164, 166' / '165-166') run one chapter behind the episode and chapter synopses."
+  },
+  {
+   "episodes": [
+    93
+   ],
+   "kind": "divergence",
+   "chapters": "167-168",
+   "note": "Dellinger-phenomenon / Lambo-and-I-Pin-trapped plot is anime-original padding around the Lal Mirch sickness and Leonardo Lippi threads of ch 167-168 (single source: fandom synopses; typed canon in our rows)."
+  },
+  {
+   "episodes": [
+    99,
+    100,
+    101,
+    102
+   ],
+   "kind": "abridged",
+   "chapters": "173-176",
+   "note": "Training-completion material of ch 173 is stretched over eps 98-99; ep 102 straddles 175/176 (Hibari's lure, then the duct entry and laser trap of ch 176) although fandom lists only 175 for it."
+  },
+  {
+   "episodes": [
+    84,
+    85,
+    111,
+    112
+   ],
+   "kind": "divergence",
+   "chapters": "189-190",
+   "note": "Anime-original Millefiore opponents Ape (ep 84), Giaggiolo (ep 85), Cappuccino / Octopus Head (ep 111) and the Arachide Brothers / Storm Boomerang (ep 112): ja.wikipedia marks their box weapons アニメオリジナル匣 and the fandom Future Arc page lists all four as filler characters. Eps 111-112 keep only slivers of ch 189-190 (base rearrangement; Gokudera and Ryohei meet Gamma)."
+  },
+  {
+   "episodes": [
+    122
+   ],
+   "kind": "rearranged",
+   "chapters": "201",
+   "note": "The Ginger Bread / Iris search for Spanner (ch 201) is pulled forward into ep 122 alongside the start of Yamamoto vs Genkishi (198)."
+  },
+  {
+   "episodes": [
+    140,
+    141,
+    155
+   ],
+   "kind": "partial",
+   "chapters": "227-229",
+   "note": "The Real Six Funeral Wreaths reveal (227-228) is shown in ep 140, padded in ep 141, and re-adapted in ep 155 after the anime-only Arcobaleno Trials before the story continues at 229."
+  },
+  {
+   "episodes": [
+    142,
+    143,
+    144,
+    145,
+    146,
+    147,
+    148,
+    149,
+    150,
+    151,
+    152,
+    153,
+    154
+   ],
+   "kind": "side_story",
+   "chapters": "none",
+   "note": "Arcobaleno Trials arc (142-153) is anime-original (ja.wikipedia: アニメオリジナルのシリーズ 標的142-153, supervised by Amano; fandom Arcobaleno Trials Arc page; vongola101); ep 154 is a recap of the Merone Base battles."
+  },
+  {
+   "episodes": [
+    178,
+    179,
+    180,
+    181,
+    182,
+    183,
+    184,
+    185,
+    186,
+    187,
+    188,
+    189
+   ],
+   "kind": "side_story",
+   "chapters": "257 (bookends only)",
+   "note": "Primo Family arc (178-189) is anime-original (ja.wikipedia: アニメオリジナル 標的178-189; fandom Primo Family Arc page; vongola101 'Primo famiglia trials'); eps 178 and 189 are mixed bookends touching ch 257. It pre-empts manga material (Daemon Spade's betrayal, first revealed in ch 318; Giotto's pocket watches, ch 344)."
+  },
+  {
+   "episodes": [
+    119,
+    154,
+    177,
+    189
+   ],
+   "kind": "abridged",
+   "chapters": "197; 256-257",
+   "note": "Recap-heavy episodes: 119 (mixed), 154 (recap), 177 (Reborn recaps the Choice arc to Lal Mirch; typed canon in our rows), 189 (mixed recap)."
+  },
+  {
+   "episodes": [
+    198
+   ],
+   "kind": "rearranged",
+   "chapters": "262",
+   "note": "Ep 198 inserts a flashback to ch 262 (Uni / Torikabuto) while covering 270-271 (fandom infobox: 262, 270, 271)."
+  }
+ ],
+ "type_corrections": [
+  {
+   "episodes": [
+    111,
+    112
+   ],
+   "type": "mixed",
+   "note": "Typed canon in our rows, but the on-screen fights (Cappuccino's Octopus Head in 111, the Arachide Brothers' Storm Boomerang in 112) are against anime-only characters with anime-original box weapons; only slivers of ch 189-190 remain (base rearrangement, meeting Gamma).",
+   "sources": [
+    "https://ja.wikipedia.org/wiki/%E5%AE%B6%E5%BA%AD%E6%95%99%E5%B8%AB%E3%83%92%E3%83%83%E3%83%88%E3%83%9E%E3%83%B3REBORN!",
+    "https://reborn.fandom.com/wiki/Future_Arc",
+    "https://reborn.fandom.com/wiki/Episode_111",
+    "https://reborn.fandom.com/wiki/Episode_112"
+   ]
+  }
+ ],
+ "repairs": [],
+ "structure": {
+  "notes": "Single AniList entry 1604 covers all 203 TV episodes; our cumulative numbering equals the broadcast 標的 (Target) numbering, so no conversion was needed for any source (fandom 'Episode N', ja.wikipedia 標的N, animefillerlist, animefillerguide all use the same numbers). On-air arc blocks per ja.wikipedia episode-table headers (which also mark 142-153 and 178-189 アニメオリジナルストーリー and 38-39 as Daily Life) / subtitle cards: Daily Life 1-19; vs Kokuyo 20-26; Daily Life 27-33; vs Varia 34-65; Daily Life 66-73; Future 74-141; Arcobaleno (anime-only) 142-153; Future Choice 154-177; Primo Family (anime-only) 178-189; Future Final Battle 190-203. Manga arc spans (fandom arc pages, vongola101 agrees within one chapter): Daily Life 1-61, Kokuyo 62-81, Varia 82-135, Future 136-282; the anime ends at ch 282 (vol 30), continue at 283 = Inheritance Ceremony arc (animefillerguide, mangashed) - consistent with the entry's continue_from_chapter 283. Volume boundaries (Wikipedia 'List of Reborn! chapters', identical to the fandom volume list for vols 1-18): v1 1-7, v2 8-16, v3 17-25, v4 26-33, v5 34-42, v6 43-51, v7 52-60, v8 61-70, v9 71-79, v10 80-89, v11 90-98, v12 99-107, v13 108-116, v14 117-125, v15 126-134, v16 135-143, v17 144-153, v18 154-164, v19 165-174, v20 175-185, v21 186-195, v22 196-205, v23 206-215, v24 216-226, v25 227-237, v26 238-247, v27 248-258, v28 259-268, v29 269-278, v30 279-288 (v31 289-299 ... v42 402-409). Order-only extras: the 'Vongola Style School Trip, Arrives!' OVA and the 'Mr. Rebokku no Ciao Ciao Interview' specials are anime-original comedy pieces adapting no chapters (fandom episode list); AniList ids not verified here.",
+  "order_only": [
+   {
+    "anilist_id": null,
+    "title": "Katekyo Hitman Reborn!: Vongola Shiki Shuugaku Ryokou, Kuru! (OVA)",
+    "after_anilist_id": 1604,
+    "adapts": "none (anime-original)",
+    "note": "Comedy OVA; no manga chapters. AniList id not verified."
+   }
+  ]
+ },
+ "flags_for_sean": [
+  "Interior anchors rest on the English fandom episode infoboxes: no independent per-episode chapter table exists online for this show (animefillerguide has only the ep 203 -> ch 281-282 line, ja.wikipedia's episode table has no source-chapter column, fr/de fandom infoboxes carry no chapter field). 'high' is used only where the END chapter is independently corroborated (Wikipedia chapter-title match, multi-source arc boundary, AFG/mangashed finale); everything else is 'medium'.",
+  "ep 29 ('Her Lover is Broccoli?'): fandom says 'Filler (possibly Chapter 41)'; anchored 41 medium. Consider dropping the anchor / typing filler if you prefer no weak anchors.",
+  "ep 93: reads as mostly anime-original (Dellinger phenomenon, Lambo/I-Pin trapped) around ch 167-168 per the fandom synopsis; typed canon in our rows and by animefillerlist. Only one source, so no type correction filed - possible 'mixed'.",
+  "ep 177: recap episode (Reborn to Lal Mirch) per fandom; typed canon in our rows/animefillerlist. Possible 'mixed'; anchored 256 medium.",
+  "eps 91-92: fandom infoboxes ('164, 166' and '165-166') conflict with the episode and chapter synopses (ep 92 covers ch 167's joint-attack news); I anchored 91->166, 92->167. Links: https://reborn.fandom.com/wiki/Episode_92 vs https://reborn.fandom.com/wiki/Chapter_167",
+  "ep 102: fandom infobox lists only ch 175 but the synopsis covers the ch 176 duct entry and laser trap; anchored end 176.",
+  "ep 8: fandom lists 27-29; anchored 27-28 because ch 29 'Hospitalized' is ep 17 (title match) and its Enzio scene was moved to ep 16 (fandom trivia).",
+  "Continue-point policy for the shuffled Daily Life blocks (19->62, 27-33->82, 38-39->91, 66-73->136) is a judgement call: it sends the reader to the next plot chapter rather than into the standalone gag chapters. Confirm this is the behaviour you want.",
+  "Order-only OVA/specials: AniList ids for 'Vongola Shiki Shuugaku Ryokou, Kuru!' and the Ciao Ciao Interview specials were not verified (web-search budget exhausted); they adapt nothing."
+ ]
+}

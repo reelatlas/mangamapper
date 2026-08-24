@@ -1,0 +1,680 @@
+{
+ "series_id": "beastars",
+ "summary": "Final Season (our 25-48; two Netflix ONA batches, AniList 136880 = 25-36 released 2024-12-05, AniList 187267 = 37-48 released 2026-03-07) adapts the rest of the manga, chapters 100-196 / volumes 12-22, and ep 48 ends on ch 196 (v22) - flag #854 verified by the fandom Third_Season page, WDTALO and the ch-196 synopsis (police interrupting the proposal). The adaptation is a wholesale restructure rather than a linear one: Part 1 runs the Legoshi mainline 100-141 roughly in order but interleaves later material (119, 136-138, 143, 145, 147, 156, 157) and plays 113-114 before Gosha's 104-107; Part 1 ends mid-ch 141 (Legoshi thrown into the sea). Part 2 covers 141-196 in 12 episodes by relocating the Jack (152-154), B-Strike (123), Bill/chick (155), Gosha/Toki (189) and Melon-mother (162) chapters, keeping the quiz (167-168), turf war (172-179), Melon's self-shooting (191) and the 193-196 epilogue, while cutting Kyuu (159-161, 186), Ogma's death (165) and Melon's father (188) and adding anime-original threads (Dorin's murder, Zoolympics/artificial meat, Legoshi framed, ep 44 entirely original). 23 anchors produced (all canon/mixed episodes except 44); 6 high (25, 28, 29, 36, 37, 38, plus 48's endpoint), the rest medium; no repairs to stored data.",
+ "anchors": [
+  {
+   "episode": 25,
+   "end_chapter": 104,
+   "start_chapter": 101,
+   "chapters_adapted": "99 (part), 98 (part), 100 (part), 101, 104 (part), 119 (part), 73 (part), 156 (part)",
+   "volume": 12,
+   "confidence": "high",
+   "note": "Yahya cold open re-adapts his ch-99 intro; Seven's ch-100 train backstory cut (en fandom diffs); Beast Apartments/Seven = 101; Gosha's call to Jack + Legoshi's first job = 104; Louis/Ibuki hair + Ogma = 98 (hospital in manga); Haru/Ako/Eado cafe = 119 pulled forward; Meat-Loving Day gang intro = 156 pulled forward. es-fandom capitulos field: 073p, 098p, 099p, 101, 104p, 119p, 156p; en-fandom adapted_from 'Chapter 100 -'; debuts Seven ch100/ep25, Yahya ch99/ep25, Ako+Eado ch119/ep25, Dokugumi/Inarigumi ch156/ep25.",
+   "sources": [
+    "https://beastars.fandom.com/wiki/Episode_25",
+    "https://beastars.fandom.com/es/wiki/Episodio_25",
+    "https://beastars.fandom.com/wiki/Seven",
+    "https://beastars.fandom.com/wiki/Yahya",
+    "https://beastars.fandom.com/wiki/Ako",
+    "https://beastars.fandom.com/wiki/Dokugumi",
+    "https://beastars.fandom.com/wiki/Chapter_101_(Beastars)",
+    "https://beastars.fandom.com/wiki/Chapter_104_(Beastars)",
+    "https://animerants.net/2024/12/13/beastars-final-season-episodes-1-and-2-reviews/"
+   ]
+  },
+  {
+   "episode": 26,
+   "end_chapter": 113,
+   "start_chapter": 110,
+   "chapters_adapted": "101 (tail), 105 (part), 143 (part), 110, 138 (part), 113 (part)",
+   "volume": 13,
+   "confidence": "medium",
+   "note": "Opens finishing 101 (Seven decides to help); Louis vs meat-drunk lion = 143's cafeteria scene reworked with the KINES can; graduation kiss flashback = 105; shoe-store/Seven's coworkers + making up = 110 (en diffs confirm manga version: three colleagues, rooftop); 500 Cornered Rats origin + Yahya rescuing them = 138 pulled forward; KINES pushers corner Legoshi = end of 113. Chapter numbers from en-fandom chapter synopses/diffs only (no es capitulos field) -> medium.",
+   "sources": [
+    "https://beastars.fandom.com/wiki/Episode_26",
+    "https://beastars.fandom.com/wiki/Chapter_105_(Beastars)",
+    "https://beastars.fandom.com/wiki/Chapter_110_(Beastars)",
+    "https://beastars.fandom.com/wiki/Chapter_113_(Beastars)",
+    "https://beastars.fandom.com/wiki/Chapter_138_(Beastars)",
+    "https://beastars.fandom.com/wiki/Chapter_143_(Beastars)",
+    "https://animerants.net/2024/12/13/beastars-final-season-episodes-1-and-2-reviews/"
+   ]
+  },
+  {
+   "episode": 27,
+   "end_chapter": 114,
+   "start_chapter": 114,
+   "chapters_adapted": "114 (part), 125 (part), 102 (part), 103 (part), 104 (end), 106, 107 (start)",
+   "volume": 13,
+   "confidence": "medium",
+   "note": "Pusher fight (cheek cut, police) = 114 with Louis's police-station visit replaced by an imagined Louis; drama-club segregation debate + Pina quitting is anime-side; Haru's father at the bus stop = a reduced 125; Yahya at the dairy plant = 102 with his '10 degrees' musing (103/111); Gosha's venom greeting = end of 104 (immunity EV); Benny's restaurant seating + birds = 106; Gosha fights the birds = 106/107 boundary. Gosha official debut ch104/ep27 (character page). Anime plays 113-114 BEFORE Gosha's 104-107.",
+   "sources": [
+    "https://beastars.fandom.com/wiki/Episode_27",
+    "https://beastars.fandom.com/wiki/Gosha",
+    "https://beastars.fandom.com/wiki/Chapter_102_(Beastars)",
+    "https://beastars.fandom.com/wiki/Chapter_104_(Beastars)",
+    "https://beastars.fandom.com/wiki/Chapter_106_(Beastars)",
+    "https://beastars.fandom.com/wiki/Chapter_107_(Beastars)",
+    "https://beastars.fandom.com/wiki/Chapter_114_(Beastars)",
+    "https://beastars.fandom.com/wiki/Chapter_125_(Beastars)",
+    "https://animerants.net/2024/12/20/beastars-final-season-episodes-3-and-4-reviews/"
+   ]
+  },
+  {
+   "episode": 28,
+   "end_chapter": 109,
+   "start_chapter": 107,
+   "chapters_adapted": "107 (part), 136 (part), 143 (part), 111 (part), 103 (part), 108, 109, 115 (part)",
+   "volume": 13,
+   "confidence": "high",
+   "note": "es-fandom capitulos: 107p, 136p, 143p, 111p, 103p, 108, 109 (matches plot exactly). Gosha fight aftermath = 107; Louis/Azuki dinner + hotel = 136 (aftermath 143); Yahya vs the KINES bird + mayor call = 111; Gosha/Yahya motorcycle flashback and the pregnant she-wolf = 103; marine delivery + Sagwan = 108-109 (Sagwan debut ch108/ep28, Toki ch103/ep28, Azuki ch136/ep28, Sunaga ch104/ep28); Yahya's letter by mail = the only surviving piece of 115 (rice cakes cut, en diffs). END = 109 (Sagwan); 110/113-114 already done, so resume at 116.",
+   "sources": [
+    "https://beastars.fandom.com/wiki/Episode_28",
+    "https://beastars.fandom.com/es/wiki/Episodio_28",
+    "https://beastars.fandom.com/wiki/Sagwan",
+    "https://beastars.fandom.com/wiki/Azuki",
+    "https://beastars.fandom.com/wiki/Toki",
+    "https://beastars.fandom.com/wiki/Chapter_103_(Beastars)",
+    "https://beastars.fandom.com/wiki/Chapter_108_(Beastars)",
+    "https://beastars.fandom.com/wiki/Chapter_109_(Beastars)",
+    "https://beastars.fandom.com/wiki/Chapter_111_(Beastars)",
+    "https://beastars.fandom.com/wiki/Chapter_115_(Beastars)",
+    "https://beastars.fandom.com/wiki/Chapter_136_(Beastars)",
+    "https://animerants.net/2024/12/20/beastars-final-season-episodes-3-and-4-reviews/"
+   ]
+  },
+  {
+   "episode": 29,
+   "end_chapter": 117,
+   "start_chapter": 116,
+   "chapters_adapted": "124 (part), 158 (photo), 114 (part), 155 (part), 145 (part), 116, 117, 118 (start)",
+   "volume": 14,
+   "confidence": "high",
+   "note": "es-fandom capitulos: 124p, 114p, 145p, 116p, 117p. Yahya's briefing (Kyuu photo = ch158 debut 'image on TV'; ivory skulls = 124); Bill/Els drama club = Bill-as-president material (155-ish, loose); Louis-Legoshi talk outside the Black Market = 114's police-station visit relocated (en diffs); Shishigumi in Deshico's coffee maze/MELDA = 145 pulled forward (Deshico debut ch142/ep29 per character page); letter + dinner with Yahya + carrot fertilizer + pinned = 116-117; fang-pulling begins = 118.",
+   "sources": [
+    "https://beastars.fandom.com/wiki/Episode_29",
+    "https://beastars.fandom.com/es/wiki/Episodio_29",
+    "https://beastars.fandom.com/wiki/Kyuu",
+    "https://beastars.fandom.com/wiki/Deshico",
+    "https://beastars.fandom.com/wiki/Chapter_116_(Beastars)",
+    "https://beastars.fandom.com/wiki/Chapter_117_(Beastars)",
+    "https://beastars.fandom.com/wiki/Chapter_118_(Beastars)",
+    "https://beastars.fandom.com/wiki/Chapter_145_(Beastars)",
+    "https://animerants.net/2024/12/30/beastars-final-season-episodes-5-and-6-reviews/"
+   ]
+  },
+  {
+   "episode": 30,
+   "end_chapter": 124,
+   "start_chapter": 118,
+   "chapters_adapted": "118, 120 (part), 86 (part), 119 (part), 124, 120 (end)",
+   "volume": 14,
+   "confidence": "medium",
+   "note": "Punching Yahya + candle fire = 118 (en diffs: manga pulls all teeth); Gohin's clinic, deep clean, dentures = 120 (en diffs); Ai the fox = her ch-86 material relocated (Ai debut ch86/ep30); botany class anime-original; Haru calls out Ako/Eado + Ako mauled = 119/120 (en diffs say the callout moved from the 119 cafeteria to a campus walk); Yahya's therapist-office trap and Melon's reveal = 124 (en diffs list manga differences of this confrontation; Melon debut ch124); happy-birthday tag = end of 120. Fandom Third_Season: Revenge of the Love Failure arc begins ep 30 (ch 124).",
+   "sources": [
+    "https://beastars.fandom.com/wiki/Episode_30",
+    "https://beastars.fandom.com/wiki/Ai",
+    "https://beastars.fandom.com/wiki/Melon",
+    "https://beastars.fandom.com/wiki/Third_Season",
+    "https://beastars.fandom.com/wiki/Chapter_118_(Beastars)",
+    "https://beastars.fandom.com/wiki/Chapter_119_(Beastars)",
+    "https://beastars.fandom.com/wiki/Chapter_120_(Beastars)",
+    "https://beastars.fandom.com/wiki/Chapter_124_(Beastars)",
+    "https://animerants.net/2024/12/30/beastars-final-season-episodes-5-and-6-reviews/"
+   ]
+  },
+  {
+   "episode": 31,
+   "end_chapter": 122,
+   "start_chapter": 121,
+   "chapters_adapted": "121, 122, 136 (part), 137 (part)",
+   "volume": 14,
+   "confidence": "medium",
+   "note": "Udon shop confession + boardwalk/ferris-wheel date + Black Market rabbit-meat shop + 'how much am I worth' = 121-122 (ch121 EV: Haru asks to end the date in the Black Market); Louis/Chloe = anime-only (Chloe is anime-exclusive per her fandom page); Louis-Juno tea (straw bite) = 136; Juno crying to Legoshi + parrot vlogger = 137 (en diffs: manga at Beast Apartments + West Safari Live TV crew). Fandom Third_Season closes the Interspecies Relations arc (chs 100-123) at ep 31.",
+   "sources": [
+    "https://beastars.fandom.com/wiki/Episode_31",
+    "https://beastars.fandom.com/wiki/Chloe",
+    "https://beastars.fandom.com/wiki/Third_Season",
+    "https://beastars.fandom.com/wiki/Chapter_121_(Beastars)",
+    "https://beastars.fandom.com/wiki/Chapter_122_(Beastars)",
+    "https://beastars.fandom.com/wiki/Chapter_136_(Beastars)",
+    "https://beastars.fandom.com/wiki/Chapter_137_(Beastars)",
+    "https://animerants.net/2025/01/05/beastars-final-season-episodes-7-and-8-reviews/"
+   ]
+  },
+  {
+   "episode": 32,
+   "end_chapter": 126,
+   "start_chapter": 126,
+   "chapters_adapted": "126, 107 (part), 145 (part)",
+   "volume": 15,
+   "confidence": "medium",
+   "note": "'Yahya is dead' rumours, Yahya's leg injury, Corne, and the melon-in-the-apartment recruitment with the 10-million offer = 126 (EV: Yahya asks Legoshi's help in exchange for erasing his record); grave visit where Gosha overhears Legoshi is dating a rabbit = 107's confession relocated; Free/Agata collecting MELDA at Deshico's = 145 pulled forward; Yahya's Black Market hamster interrogation and the Horns report are anime-side.",
+   "sources": [
+    "https://beastars.fandom.com/wiki/Episode_32",
+    "https://beastars.fandom.com/wiki/Chapter_107_(Beastars)",
+    "https://beastars.fandom.com/wiki/Chapter_126_(Beastars)",
+    "https://beastars.fandom.com/wiki/Chapter_145_(Beastars)",
+    "https://animerants.net/2025/01/05/beastars-final-season-episodes-7-and-8-reviews/"
+   ]
+  },
+  {
+   "episode": 33,
+   "end_chapter": 129,
+   "start_chapter": 127,
+   "chapters_adapted": "127, 128, 129",
+   "volume": 15,
+   "confidence": "medium",
+   "note": "Jungle Theatre briefing, Cosmo the okapi, 'Haruo' disguise, three gazelle suspects, urinal scent, Melon unmasks and shoots Legoshi = 127-129 (ch127 EV: Yahya reveals the target is Melon; ch128 EV: three suspects; ch129 EV: Melon shoots Legoshi and escapes). Drama-club Kibi/Tao scene and the Mayor-Ogma blackmail meeting are anime placements (the Mayor's blackmail exists in the manga per his page but not at this point).",
+   "sources": [
+    "https://beastars.fandom.com/wiki/Episode_33",
+    "https://beastars.fandom.com/wiki/Chapter_127_(Beastars)",
+    "https://beastars.fandom.com/wiki/Chapter_128_(Beastars)",
+    "https://beastars.fandom.com/wiki/Chapter_129_(Beastars)",
+    "https://beastars.fandom.com/wiki/Mayor",
+    "https://api.tvmaze.com/shows/43426/episodes"
+   ]
+  },
+  {
+   "episode": 34,
+   "end_chapter": 135,
+   "start_chapter": 130,
+   "chapters_adapted": "130, 131, 132, 133, 134, 135 (part)",
+   "volume": 16,
+   "confidence": "medium",
+   "note": "Louis's phantom leg pain = 130; Free's gun, antler shed, hideout = 130-131; Melon's fork in Agata's hand and Miguel's antler bluff = 132; out-of-body Legoshi and Leano = 132-134 (en diffs: rooftop in manga, Miyagi/portrait cut); Gosha+Yahya at the hospital and Legoshi vanishing = 135 (en diffs: the Gosha-Yahya fight of 135 is cut). Louis's KINES analysis call is anime-only (Chloe).",
+   "sources": [
+    "https://beastars.fandom.com/wiki/Episode_34",
+    "https://beastars.fandom.com/wiki/Chapter_130_(Beastars)",
+    "https://beastars.fandom.com/wiki/Chapter_131_(Beastars)",
+    "https://beastars.fandom.com/wiki/Chapter_132_(Beastars)",
+    "https://beastars.fandom.com/wiki/Chapter_133_(Beastars)",
+    "https://beastars.fandom.com/wiki/Chapter_134_(Beastars)",
+    "https://beastars.fandom.com/wiki/Chapter_135_(Beastars)",
+    "https://animerants.net/2025/02/08/beastars-final-season-episodes-11-and-12-reviews/"
+   ]
+  },
+  {
+   "episode": 35,
+   "end_chapter": 139,
+   "start_chapter": 139,
+   "chapters_adapted": "145 (part), 147 (part), 138 (part), 141 (part), 139",
+   "volume": 16,
+   "confidence": "medium",
+   "note": "Louis alone at Kopi Luwak as 'Gamo' = the Legoshi+Louis+Shishigumi visit of 145/147 reworked (Deshico's hybrid lecture = 147 EV); Yahya hands over Melon's mask = 138 EV; bathhouse with Sagwan (the sea-language phrase) = 141's flashback shown live; Melon can't taste (octopus stand replaces the fast-food restaurant, en diffs), leopard spots, Holger's tattoo parlour = 139 (EV list). Jungle Theatre owner clue anime-side.",
+   "sources": [
+    "https://beastars.fandom.com/wiki/Episode_35",
+    "https://beastars.fandom.com/wiki/Holger",
+    "https://beastars.fandom.com/wiki/Chapter_138_(Beastars)",
+    "https://beastars.fandom.com/wiki/Chapter_139_(Beastars)",
+    "https://beastars.fandom.com/wiki/Chapter_141_(Beastars)",
+    "https://beastars.fandom.com/wiki/Chapter_145_(Beastars)",
+    "https://beastars.fandom.com/wiki/Chapter_147_(Beastars)",
+    "https://animerants.net/2025/02/08/beastars-final-season-episodes-11-and-12-reviews/"
+   ]
+  },
+  {
+   "episode": 36,
+   "end_chapter": 140,
+   "start_chapter": 140,
+   "chapters_adapted": "140, 157 (part), 141 (part), 145 (part)",
+   "volume": 16,
+   "confidence": "high",
+   "note": "es-fandom capitulos: 140, 157p, 141p, 145p. Holger's delayed conversation, Reaper's Drop, ear shot, ambushed by the Shishigumi = 140 (EV list); tied to the chair and thrown into the sea = start of 141; Ogma's '10 million yen' / 'not into women?' dinner = 157; Melon as Haru's lecturer = 145 EV. Louis's stair-climb, tiger cop and live-TV KINES expose are anime-original. Part 1 ends mid-ch 141.",
+   "sources": [
+    "https://beastars.fandom.com/wiki/Episode_36",
+    "https://beastars.fandom.com/es/wiki/Episodio_36",
+    "https://beastars.fandom.com/wiki/Chapter_140_(Beastars)",
+    "https://beastars.fandom.com/wiki/Chapter_141_(Beastars)",
+    "https://beastars.fandom.com/wiki/Chapter_145_(Beastars)",
+    "https://beastars.fandom.com/wiki/Chapter_157_(Beastars)",
+    "https://animerants.net/2025/02/08/beastars-final-season-episodes-11-and-12-reviews/",
+    "https://en.wikipedia.org/wiki/List_of_Beastars_episodes"
+   ]
+  },
+  {
+   "episode": 37,
+   "end_chapter": 141,
+   "start_chapter": 141,
+   "chapters_adapted": "141 (part) + anime-original",
+   "volume": 16,
+   "confidence": "high",
+   "note": "es-fandom capitulos: 'Material original' + 141p. Shark rescue via the sea language = 141 (EV: saved by a great white shark; manga: Shishigumi throw him in and he returns for Melon's weakness - the deal is dropped). Dorin's death/Haru's suspicion, Louis's award and the sickbed visit are anime-original. Chs 142-145 (Gosha's hybrid daycare, Kopi Luwak org, Louis's alliance) are skipped here.",
+   "sources": [
+    "https://beastars.fandom.com/wiki/Episode_37",
+    "https://beastars.fandom.com/es/wiki/Episodio_37",
+    "https://beastars.fandom.com/wiki/Chapter_141_(Beastars)",
+    "https://animerants.net/2026/04/25/beastars-final-season-episodes-13-to-15-reviews/",
+    "https://api.tvmaze.com/shows/43426/episodes"
+   ]
+  },
+  {
+   "episode": 38,
+   "end_chapter": 146,
+   "start_chapter": 146,
+   "chapters_adapted": "146 (part), 123, 153 (start)",
+   "volume": 17,
+   "confidence": "high",
+   "note": "es-fandom capitulos: 123, 146p. Haru consulting 'Professor' Melon in his office = 146 (EV: Melon and Haru chat at the university); B-Strike canine reunion (Jack, Collot, Voss, Durham, Miguno) = 123 relocated after 141; Jack drops the onion = lead-in to 153. Drama-club script approval + Juno/Pina anime-side. Title = the six wagging tails of 123.",
+   "sources": [
+    "https://beastars.fandom.com/wiki/Episode_38",
+    "https://beastars.fandom.com/es/wiki/Episodio_38",
+    "https://beastars.fandom.com/wiki/Chapter_123_(Beastars)",
+    "https://beastars.fandom.com/wiki/Chapter_146_(Beastars)",
+    "https://beastars.fandom.com/wiki/Chapter_153_(Beastars)",
+    "https://animerants.net/2026/04/25/beastars-final-season-episodes-13-to-15-reviews/"
+   ]
+  },
+  {
+   "episode": 39,
+   "end_chapter": 148,
+   "start_chapter": 146,
+   "chapters_adapted": "153, 154 (part), 150 (part), 146 (part), 147 (part), 148",
+   "volume": 17,
+   "confidence": "medium",
+   "note": "Jack's special-class despair, onions, swallowed onion = 153 (EV: onions to force crying) with the history lesson of 154 compressed; Melon's rooftop bullying flashback = backstory disclosed in 150 (EV: bullied, killed classmates at 9); Melon wants to eat Haru, grabs her, boxcutter = 146-147 (EVs: Haru awakens Melon's desire to eat meat; Melon holds Haru); Haru waits at the apartment and stays over = 148 (EV). Manga framing (Legoshi hiding at Cherryton, 152) removed.",
+   "sources": [
+    "https://beastars.fandom.com/wiki/Episode_39",
+    "https://beastars.fandom.com/wiki/Chapter_146_(Beastars)",
+    "https://beastars.fandom.com/wiki/Chapter_147_(Beastars)",
+    "https://beastars.fandom.com/wiki/Chapter_148_(Beastars)",
+    "https://beastars.fandom.com/wiki/Chapter_150_(Beastars)",
+    "https://beastars.fandom.com/wiki/Chapter_153_(Beastars)",
+    "https://beastars.fandom.com/wiki/Chapter_154_(Beastars)",
+    "https://animerants.net/2026/04/25/beastars-final-season-episodes-13-to-15-reviews/"
+   ]
+  },
+  {
+   "episode": 40,
+   "end_chapter": 149,
+   "start_chapter": 149,
+   "chapters_adapted": "149, 143 (part), 144 (part)",
+   "volume": 17,
+   "confidence": "medium",
+   "note": "Blood-stained blanket = tomato juice, marriage vow = 149 (EV: fur turns white - the anime skips the white fur; Legoshi kisses Haru's cheek / promises a family); Mayor's Zoolympics + artificial-meat pitch and Pina's role swap are anime-original; Legoshi held by the Shishigumi as bait for Louis, Louis declining the boss role, 'Sensei' hint = a reworking of the 143-144 alliance chapters (EVs: Legoshi tries to ally with the Shishigumi; Louis introduces the lions).",
+   "sources": [
+    "https://beastars.fandom.com/wiki/Episode_40",
+    "https://beastars.fandom.com/wiki/Chapter_143_(Beastars)",
+    "https://beastars.fandom.com/wiki/Chapter_144_(Beastars)",
+    "https://beastars.fandom.com/wiki/Chapter_149_(Beastars)",
+    "https://animerants.net/2026/05/10/beastars-final-season-episodes-16-to-18-reviews/",
+    "https://mystiqora.com/beastars-final-season-part-2-ending-explained-post-credit-surprises-and-manga-differences/"
+   ]
+  },
+  {
+   "episode": 41,
+   "end_chapter": 158,
+   "start_chapter": 158,
+   "chapters_adapted": "158 (part), 156 (part)",
+   "volume": 18,
+   "confidence": "medium",
+   "note": "Louis walking into the Black Market wearing a 100-million-yen 'for sale' tag = 158 (synopsis: price tag; manga continues into the basement with Kyuu 159-161, which the anime cuts - he naps in the lions' den instead); Ten's debut ep 41 per fandom (manga 156). Juno/Haru cafe, Azuki's drive, Legoshi finding 'Lemeron-sensei's' office and the interspecies-murder newscast are anime-side.",
+   "sources": [
+    "https://beastars.fandom.com/wiki/Episode_41",
+    "https://beastars.fandom.com/wiki/Ten",
+    "https://beastars.fandom.com/wiki/Chapter_156_(Beastars)",
+    "https://beastars.fandom.com/wiki/Chapter_158_(Beastars)",
+    "https://animerants.net/2026/05/10/beastars-final-season-episodes-16-to-18-reviews/",
+    "https://api.tvmaze.com/shows/43426/episodes"
+   ]
+  },
+  {
+   "episode": 42,
+   "end_chapter": 155,
+   "start_chapter": 155,
+   "chapters_adapted": "155",
+   "volume": 18,
+   "confidence": "medium",
+   "note": "Bill's soba, the fertilised 'shock egg', Pina, raising and burying the chick = 155 (EV: Bill, Pina and Aoba save a chick; title 'nest of dried noodles' = the soba nest). Seven hospitalised, Louis's radio interview, the Louis-Haru bus talk and Haru's pinky-swear to be Melon's birthday meal are anime-original (Melon's wish to eat Haru is manga, 151).",
+   "sources": [
+    "https://beastars.fandom.com/wiki/Episode_42",
+    "https://beastars.fandom.com/wiki/Chapter_155_(Beastars)",
+    "https://animerants.net/2026/05/10/beastars-final-season-episodes-16-to-18-reviews/",
+    "https://api.tvmaze.com/shows/43426/episodes"
+   ]
+  },
+  {
+   "episode": 43,
+   "end_chapter": 151,
+   "start_chapter": 150,
+   "chapters_adapted": "150 (part), 151 (part)",
+   "volume": 17,
+   "confidence": "medium",
+   "note": "Legoshi meets Melon in Haru's place, Melon's exposition (killed the bullies, the couple murders) = 150; Legoshi holds Melon, 'be gentle' escape = 151's escape trick (synopsis: 'kind and gentle to the weak'); Melon's jump, Louis kidnapping Haru, Haru+Ogma and the tattoo-parlour frame-up are anime-original. Legoshi being hunted by police is manga (151 EV: intercepted by police) but the murder framing is not. Resume at 156 (152-155 already adapted).",
+   "sources": [
+    "https://beastars.fandom.com/wiki/Episode_43",
+    "https://beastars.fandom.com/wiki/Chapter_150_(Beastars)",
+    "https://beastars.fandom.com/wiki/Chapter_151_(Beastars)",
+    "https://animerants.net/2026/05/24/beastars-final-season-episodes-19-to-21-reviews/",
+    "https://fugitives.com/beastars-season-3-final-part-ending-explained-2026/"
+   ]
+  },
+  {
+   "episode": 45,
+   "end_chapter": 163,
+   "start_chapter": 162,
+   "chapters_adapted": "189 (part), 162 (part), 163 (part)",
+   "volume": 19,
+   "confidence": "medium",
+   "note": "Haru bonds with Gosha; the Toki story (venom kiss) = 189 (EV: Gosha's past with Toki) pulled far forward; Melon murdered his mother = 162 (EV); Shishigumi about to replace him, Melon shoots Agata's hand, lions submit, 'Demon King of Beasts' = 163's failed coup/submission (EV: the Shishigumi give up and submit). Louis-Azuki 'business partner' talk and the Kyuu-fan rat are anime-side (Kyuu never appears).",
+   "sources": [
+    "https://beastars.fandom.com/wiki/Episode_45",
+    "https://beastars.fandom.com/wiki/Chapter_162_(Beastars)",
+    "https://beastars.fandom.com/wiki/Chapter_163_(Beastars)",
+    "https://beastars.fandom.com/wiki/Chapter_189_(Beastars)",
+    "https://animerants.net/2026/05/24/beastars-final-season-episodes-19-to-21-reviews/",
+    "https://fugitives.com/beastars-season-3-final-part-ending-explained-2026/"
+   ]
+  },
+  {
+   "episode": 46,
+   "end_chapter": 168,
+   "start_chapter": 164,
+   "chapters_adapted": "164 (part), 167, 168",
+   "volume": 19,
+   "confidence": "medium",
+   "note": "Legoshi registers for the Meat-Loving-Day turf war to face Melon = 164 (EV: Legoshi plans to capture Melon at the next turf war); the entry quiz vs Melon = 167-168 (titles 'Crazy Party Quiz Show' / 'The Final Answer for Both'; Dokugumi page cites 167 for the no-new-participants rule). Ogma alive and confronting Louis diverges (manga: Ogma dies in a car crash, Louis becomes head, 165). Deshico's hybrid-weakness discovery / Melon drowning him / Louis-Legoshi rooftop: chapter unverified (165-166, 183?) - no synopses exist for 165-185.",
+   "sources": [
+    "https://beastars.fandom.com/wiki/Episode_46",
+    "https://beastars.fandom.com/wiki/Dokugumi",
+    "https://beastars.fandom.com/wiki/Louis",
+    "https://beastars.fandom.com/wiki/Chapter_167_(Beastars)",
+    "https://beastars.fandom.com/wiki/Chapter_168_(Beastars)",
+    "https://beastars.fandom.com/wiki/Chapter_164_(Beastars)",
+    "https://animerants.net/2026/07/25/beastars-final-season-episodes-22-to-24-trainwreck-ending/",
+    "https://en.wikipedia.org/wiki/List_of_Beastars_chapters"
+   ]
+  },
+  {
+   "episode": 47,
+   "end_chapter": 176,
+   "start_chapter": 172,
+   "chapters_adapted": "181 (part), 156 (part), 172-176 (abridged)",
+   "volume": 20,
+   "confidence": "medium",
+   "note": "Melon's dream, spots spreading, carnivore body = 181 ('Leopard Spots Like Floating Oil Slicks'); blood-scent turf war at the pyres and Melon opening a throat to win = 156's Day of Depravity (Dolph in the manga; Agata in the anime); riot, Melon vs the Madaragumi leader, Legoshi vs Savon's tail-bomb = the Rexmas turf-war fight 172-176 (176 EV: Legoshi's fangs grow back thanks to Savon's venom; Savon quote cited to 178). Butler Yuta's reveal (Yuta named in 157) and Kuroe's anticoagulant are anime-side.",
+   "sources": [
+    "https://beastars.fandom.com/wiki/Episode_47",
+    "https://beastars.fandom.com/wiki/Chapter_156_(Beastars)",
+    "https://beastars.fandom.com/wiki/Chapter_176_(Beastars)",
+    "https://beastars.fandom.com/wiki/Chapter_181_(Beastars)",
+    "https://beastars.fandom.com/wiki/Savon",
+    "https://beastars.fandom.com/wiki/Yuta",
+    "https://animerants.net/2026/07/25/beastars-final-season-episodes-22-to-24-trainwreck-ending/",
+    "https://en.wikipedia.org/wiki/List_of_Beastars_chapters"
+   ]
+  },
+  {
+   "episode": 48,
+   "end_chapter": 196,
+   "start_chapter": 176,
+   "chapters_adapted": "176-179 (abridged), 187 (part), 190-196 (abridged)",
+   "volume": 22,
+   "confidence": "high",
+   "note": "Savon's tail (176), Ten (179 'Power Under the Heels'), live-streamed fight with the canines' howl (178 'Remote Battle'), Legoshi outmatched and fleeing (187), gang bosses standing over Melon and 'Beastars' plural (190), Melon shooting himself (191 EV), Yahya carrying him off / Melon survives (192-193), Louis-Juno parting (194 EV), proposal date + police 'put down the rabbit' (195-196 synopsis). Finale = ch 196/v22 per fandom Third_Season (chs 100-196 = eps 25-48) and WDTALO ('through Volume 22, Chapter 196'). Mayor's Melda rampage, Kuroe/rats' blood fumes, Haru's public kiss, Pina visiting Riz are anime-original; Melon's father (188) and Kyuu/Free's rescue run (186) omitted.",
+   "sources": [
+    "https://beastars.fandom.com/wiki/Episode_48",
+    "https://beastars.fandom.com/wiki/Third_Season",
+    "https://wheredoestheanimeleaveoff.com/where-does-the-beastars-anime-leave-off-in-the-manga/",
+    "https://beastars.fandom.com/wiki/Chapter_190_(Beastars)",
+    "https://beastars.fandom.com/wiki/Chapter_191_(Beastars)",
+    "https://beastars.fandom.com/wiki/Chapter_192_(Beastars)",
+    "https://beastars.fandom.com/wiki/Chapter_193_(Beastars)",
+    "https://beastars.fandom.com/wiki/Chapter_194_(Beastars)",
+    "https://beastars.fandom.com/wiki/Chapter_195_(Beastars)",
+    "https://beastars.fandom.com/wiki/Chapter_196_(Beastars)",
+    "https://animerants.net/2026/07/25/beastars-final-season-episodes-22-to-24-trainwreck-ending/",
+    "https://fugitives.com/beastars-season-3-final-part-ending-explained-2026/",
+    "https://mystiqora.com/beastars-final-season-part-2-ending-explained-post-credit-surprises-and-manga-differences/",
+    "https://en.wikipedia.org/wiki/List_of_Beastars_chapters"
+   ]
+  }
+ ],
+ "continue_points": [
+  {
+   "episode": 28,
+   "continue_chapter": 116,
+   "note": "110 and 113-114 were already adapted in eps 26-27; 111-112 partly used; 115 survives only as Yahya's letter - resume at 116."
+  },
+  {
+   "episode": 30,
+   "continue_chapter": 121,
+   "note": "Ends on 120's birthday tag; 124 (Yahya vs Melon) was pulled forward, so the honest resume is 121 (the date), not 125."
+  },
+  {
+   "episode": 36,
+   "continue_chapter": 141,
+   "note": "Part 1 ends mid-ch 141 (Legoshi thrown into the sea); ep 37 finishes 141 with the shark."
+  },
+  {
+   "episode": 41,
+   "continue_chapter": 159,
+   "note": "158 is only half-used (no basement); 159-161 (Kyuu) are never animated - read them anyway."
+  },
+  {
+   "episode": 43,
+   "continue_chapter": 156,
+   "note": "152-155 were already adapted (eps 38-39, 42); resume with the Day of Depravity."
+  }
+ ],
+ "annotations": [
+  {
+   "episodes": [
+    25
+   ],
+   "kind": "graft",
+   "chapters": "119, 156, 73",
+   "note": "Haru's college thread (119), Meat-Loving Day gang intro (156) and Gosha's silhouette (73) pulled forward into the S3 premiere."
+  },
+  {
+   "episodes": [
+    26
+   ],
+   "kind": "rearranged",
+   "chapters": "105, 143, 138, 110, 113",
+   "note": "Graduation kiss (105) and Louis's meat-drunk-lion scene (143) as flashback/graft; rats' origin (138) pulled forward; 110 plays before 104-109."
+  },
+  {
+   "episodes": [
+    27,
+    28
+   ],
+   "kind": "rearranged",
+   "chapters": "113-114 before 104-109; 103/111-112; 136",
+   "note": "KINES pusher fight (113-114) plays before Gosha's introduction (104-107) and Sagwan (108-109); Yahya-Gosha history (103, 111-112) told in ep 28; Louis/Azuki hotel night (136) pulled forward."
+  },
+  {
+   "episodes": [
+    29
+   ],
+   "kind": "graft",
+   "chapters": "124, 145, 158",
+   "note": "Yahya's ivory briefing (124) with Kyuu's photo (158), and the Shishigumi's Kopi Luwak maze visit (145), pulled forward ahead of the Yahya dinner (116-117)."
+  },
+  {
+   "episodes": [
+    30
+   ],
+   "kind": "rearranged",
+   "chapters": "86, 118-120, 124",
+   "note": "Ai's arc (86) relocated to Gohin's clinic; Yahya vs Melon (124) precedes Legoshi's 121-122 date."
+  },
+  {
+   "episodes": [
+    31
+   ],
+   "kind": "graft",
+   "chapters": "136-137",
+   "note": "Louis-Juno tea (136) and Juno's breakdown at Legoshi's (137) pulled forward; Chloe (anime-only) introduced."
+  },
+  {
+   "episodes": [
+    32
+   ],
+   "kind": "graft",
+   "chapters": "145, 107",
+   "note": "MELDA hand-off at Deshico's (145) pulled forward; Gosha overhearing the rabbit confession (107) relocated to the grave."
+  },
+  {
+   "episodes": [
+    34
+   ],
+   "kind": "partial",
+   "chapters": "130-135",
+   "note": "Gosha-Yahya hospital fight (135) cut; Leano's rooftop talk moved to the childhood dinner table."
+  },
+  {
+   "episodes": [
+    35
+   ],
+   "kind": "graft",
+   "chapters": "145, 147, 138, 141",
+   "note": "Louis's solo Kopi Luwak visit replaces the Legoshi+Louis+Shishigumi visit (144-147); bathhouse memory (141) shown live; Melon's mask (138)."
+  },
+  {
+   "episodes": [
+    36
+   ],
+   "kind": "graft",
+   "chapters": "157, 145",
+   "note": "Ogma's '10 million yen' dinner (157) pulled forward; Melon-as-lecturer reveal (145). Louis's live-TV KINES expose is anime-original."
+  },
+  {
+   "episodes": [
+    37
+   ],
+   "kind": "divergence",
+   "chapters": "141; 142-145 skipped",
+   "note": "Dorin's rooftop death and Haru's suspicion are anime-original (es-fandom: 'Material original'); Gosha's daycare/Kopi Luwak org (142), Louis's alliance (143-144) skipped."
+  },
+  {
+   "episodes": [
+    38
+   ],
+   "kind": "rearranged",
+   "chapters": "123",
+   "note": "B-Strike canine reunion (123) relocated after 141."
+  },
+  {
+   "episodes": [
+    39
+   ],
+   "kind": "rearranged",
+   "chapters": "152-154, 150",
+   "note": "Jack's depression chapters (152-154) moved here without the Cherryton-hideout framing; Melon's school flashback (150) told early."
+  },
+  {
+   "episodes": [
+    40
+   ],
+   "kind": "divergence",
+   "chapters": "149, 143-144",
+   "note": "White-fur transformation (149) skipped; Zoolympics/artificial-meat plot anime-original; Shishigumi bait scheme reworks 143-144."
+  },
+  {
+   "episodes": [
+    41
+   ],
+   "kind": "rearranged",
+   "chapters": "158, 156",
+   "note": "Louis's for-sale walk (158) without the basement; Kyuu (159-161) cut entirely; Ten (156) debuts."
+  },
+  {
+   "episodes": [
+    42
+   ],
+   "kind": "rearranged",
+   "chapters": "155",
+   "note": "Bill/chick chapter relocated; interspecies-murder plot and Haru's pinky-swear are anime-original."
+  },
+  {
+   "episodes": [
+    43
+   ],
+   "kind": "divergence",
+   "chapters": "150-151",
+   "note": "Capture/escape reworked at the Festival of Odd Souls; Melon's jump and the tattoo-parlour frame-up are anime-original."
+  },
+  {
+   "episodes": [
+    44
+   ],
+   "kind": "divergence",
+   "chapters": "",
+   "note": "Anime-original episode (self-defence gear, police interrogations, planted KINES, Live Together channel, rat base, Gosha guarding Haru); only a loose echo of 164."
+  },
+  {
+   "episodes": [
+    45
+   ],
+   "kind": "rearranged",
+   "chapters": "189, 162-163",
+   "note": "Gosha/Toki story (189) pulled far forward; Melon's mother (162) and the Shishigumi's submission (163, Agata's hand shot instead of Dolph's throat)."
+  },
+  {
+   "episodes": [
+    46
+   ],
+   "kind": "divergence",
+   "chapters": "164-168; 165",
+   "note": "Ogma survives (manga: dies in a car crash, 165, Louis becomes head); quiz (167-168) kept; Deshico's weakness subplot placement unverified."
+  },
+  {
+   "episodes": [
+    47,
+    48
+   ],
+   "kind": "abridged",
+   "chapters": "172-196",
+   "note": "Turf war compressed; Agata killed at the pyres (manga: Dolph's throat, 156, survives; Agata surrenders in 186); Melon's father (188), Kyuu/Free rescue (186), Black Market demolition detail (193) omitted; Mayor's Melda rampage and Haru's public kiss anime-original; Melon survives in both (193 / post-credits)."
+  },
+  {
+   "episodes": [
+    43
+   ],
+   "kind": "rearranged",
+   "chapters": "150-151",
+   "note": "re-covers 150-151 after ep 42 reached 155 (Final Season restructure) — added at batch-14 review so the back-step is ruled, not a formula hole"
+  }
+ ],
+ "type_corrections": [
+  {
+   "episodes": [
+    44
+   ],
+   "type": "anime-only-canon",
+   "note": "No manga chapter is adapted (reviewer recap vs every chapter synopsis 149-196): framing plot, Live Together channel, rat base, Kuroe/Ogma, Gosha guarding Haru. Suggested row type for the stitched row; medium confidence (single detailed recap).",
+   "sources": [
+    "https://animerants.net/2026/05/24/beastars-final-season-episodes-19-to-21-reviews/",
+    "https://fugitives.com/beastars-season-3-final-part-ending-explained-2026/",
+    "https://api.tvmaze.com/shows/43426/episodes"
+   ]
+  },
+  {
+   "episodes": [
+    37,
+    42
+   ],
+   "type": "mixed",
+   "note": "Ep 37 = 'Material original' + 141 (es-fandom); ep 42 = ch 155 plus anime-original murder/pinky-swear plot.",
+   "sources": [
+    "https://beastars.fandom.com/es/wiki/Episodio_37",
+    "https://beastars.fandom.com/wiki/Chapter_155_(Beastars)",
+    "https://animerants.net/2026/05/10/beastars-final-season-episodes-16-to-18-reviews/"
+   ]
+  }
+ ],
+ "repairs": [],
+ "structure": {
+  "notes": "Confirmed: Final Season is two Netflix ONA batches. Part 1 = AniList 136880 (MAL 49469), format ONA, 12 eps, all released 2024-12-05 -> our 25-36 (titles 'An Itchy Collar' ... 'Tragedy on the Waves'). Part 2 = AniList 187267 (MAL 61114), ONA, 12 eps, all released 2026-03-07 -> our 37-48 ('A Threefold Dilemma' ... 'Interspecies Exchange'). AniList relation chain 114194 -PREQUEL/SEQUEL-> 136880 -> 187267. Wikipedia numbers them 25-48 overall; fandom uses Episode_25..48; TVmaze S3E1-24 with the same 12+12 dates; ja.wikipedia lists 第25話-第36話 for 2024-12-05 (Part 2 not yet on the ja page). Total 48. Adaptation span: fandom Third_Season page = chapters 100-196 / volumes 12-22 / episodes 25-48; arc pages: Interspecies Relations chs 100-123 = eps 25-31, Revenge of the Love Failure chs 124-196 = eps 30-48; WDTALO: Season 3 'adapted through Volume 22, Chapter 196, the end of the manga'. AniList manga 98587 = 196 chapters / 22 volumes (finished); Wikipedia v22 = chs 188-196 (fills the 'v22: 188-?' gap). Flag #854 verified: ep 48 -> 196 / v22. No order-only OVAs or movies. Warning for the stitch: this season is a wholesale restructure (per-episode chapter lists jump between the 100s and 150s-180s); end_chapter values are the furthest MAINLINE chapter, not the max of chapters_adapted.",
+  "order_only": []
+ },
+ "flags_for_sean": [
+  "Restructure warning: every Final Season episode mixes chapters from different volumes (e.g. ep 25 = 98-104 + 119 + 156; ep 45 = 162-163 + 189). end/start ranges will mislead; the app should surface chapters_adapted for eps 25-48. Consider a season-level 'rearranged' bracket like the S2 one.",
+  "Ep 44 has no manga anchor (anime-original episode) - decide the stitched row's type (suggested anime-only-canon).",
+  "Chapters 165-185 have no synopses on either fandom wiki (stubs), reddit is unreachable from here and the WebSearch budget ran out, so the ep 46-48 chapter lists rest on chapter titles/EV bullets + reviewer recaps (Anime Rants, Film Fugitives) = medium. A manga-reader per-episode map for Part 2 would firm up 46-48 (quiz 167-168, Savon 176/178, Ten 179, Melon's suicide 191, epilogue 193-196 are the solid pins).",
+  "Confirmed divergences worth annotating in-app: Ogma survives in the anime (manga: dies ch 165); Chloe/Kuroe is anime-exclusive; Kyuu (159-161, 186) and Melon's father (188) cut; Agata apparently killed at the pyres (manga: Dolph's throat in 156, survives); Melon survives in both (193 / ep 48 credits).",
+  "Only eps 25, 28, 29, 36, 37, 38 carry an explicit chapter field on the Spanish fandom; those (plus ep 48's 196 endpoint) are the high-confidence anchors. The rest are correlations of the English fandom episode plots/diff sections against the chapter synopses - medium, but every cited chapter has a concrete scene match.",
+  "Existing ep 24 continue->100 stays consistent with ep 25 (Seven/Beast Apartments = 100-101); no repairs to eps 6-24."
+ ]
+}

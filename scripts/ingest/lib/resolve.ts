@@ -164,6 +164,28 @@ export const EPISODE_TYPE_OVERRIDES: Record<string, Record<number, string>> = {
   //   ending (research batch 12: WDTALO + mangashed + per-episode breakdown);
   //   canon resumes at manga ch 22.
   'ajin-demi-human': range(14, 26, 'anime-only-canon'),
+  //   hunter-x-hunter (1999) ep 7: AFL types it filler, but Hunterpedia's
+  //   page-level 'Adapted' field has it adapting ch 7 p.3-9,12-19 + ch 8
+  //   p.2-4 (Wikipedia's summary + AniB's phase ranges agree on the content)
+  //   — research batch 14 (2026-08-23 s2), anchored ep7→7
+  'hunter-x-hunter': { 7: 'mixed' },
+  // ---- research batch 14 (2026-08-23 s2) type corrections, 2+ sources each
+  //   beastars Final Season: ep 44 adapts no chapter (reviewer recap vs every
+  //   chapter synopsis 149-196); eps 37/42 mix anime-original plots with 141 / 155
+  beastars: { 37: 'mixed', 42: 'mixed', 44: 'anime-only-canon' },
+  //   cardcaptor-sakura: Wood/Rain (4) and Silent (7) are anime-only cards with
+  //   anime-original plots; 5 (ch-1 flashback video only) and 39 (Cloud, on the
+  //   premise of ch 33) are mixed; Clear Card 76, 83-87 anime-original, 82 mixed
+  'cardcaptor-sakura': { 4: 'filler', 5: 'mixed', 7: 'filler', 39: 'mixed', 76: 'anime-only-canon', 82: 'mixed', 83: 'anime-only-canon', 84: 'anime-only-canon', 85: 'anime-only-canon', 86: 'anime-only-canon', 87: 'anime-only-canon' },
+  //   dagashi-kashi ep 10 'That's Dagashi!': anime-original sick-Hotaru story
+  //   with gag fragments only (MAL reader posts, Inquisitr, WDTALO list, fandom)
+  'dagashi-kashi': { 10: 'mixed' },
+  //   reborn 111-112: fights against anime-only characters with anime-original
+  //   box weapons (ja.wikipedia アニメオリジナル匣 + fandom Future Arc page)
+  reborn: { 111: 'mixed', 112: 'mixed' },
+  //   slime ep 30 (S2E6): adapts 54-55 (Rimuru/Hinata) but the whole Tempest
+  //   segment is anime-original (fandom adaptation notes + batch-14 review)
+  'that-time-i-got-reincarnated-as-a-slime': { 30: 'mixed' },
 };
 
 // SOURCE NUMBERING TRANSLATION (Sean's ruling 2026-08-23, the Dr. Stone /

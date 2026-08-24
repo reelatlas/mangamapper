@@ -83,3 +83,27 @@ AFL page granularity agreed with community consensus in 17 of 18 franchises
 evaluated (JoJo contested, SAO the one true merge). The "one AFL page = one
 series" prior is strong — but the SAO case proves the evaluation step earns
 its keep.
+
+## Rulings / findings 2026-08-23 (session 2, batch 14)
+
+- **Cardcaptor Sakura: Clear Card adapts a SEPARATE manga** (AniList 87296,
+  80 ch) — our entry's manga is the original (30106, 50 ch). Eps 72-93
+  render honest-null until Sean rules: separate entry `cardcaptor-sakura-
+  clear-card` (the Naruto→Shippuden / Boruto pattern, different manga) is
+  the recommendation; the Clear Card per-episode map (16 anchors in Clear
+  Card numbering) is parked in research/batch14/out/cardcaptor-sakura.json
+  (`clear_card` block). Component 2 corrected to the Clear Card Prologue
+  OVA (98554, our ep 71 = chs 46-50).
+- **Golden Kamuy**: the Final Season (166521) ends on ch 302 (vol 30); the
+  announced *Saishuushou – Bousou Ressha-hen* (210073) adapts 303-314 and
+  joins the ruled chain when it airs. Sapporo Beer Koujou-hen films
+  (196115) = recut of eps 50-55, excluded.
+- **Kingdom**: S6 Part 2 is a separate AniList entry (204688, Zoku-hen) —
+  component 7 when it airs, not an extension of 190840.
+- **Arslan**: Fuujin Ranbu (21424) stitched as S2 (our 26-33, chs 72-107);
+  the 1991 OVA (1762) is a separate novel adaptation, excluded.
+- **My Hero Academia**: post-finale specials "No. 170+1: More" (204356, ch
+  431) and "I am a hero too" (211711, ch 431.5) exist as AniList SEQUELs —
+  pending Sean: components (then the series is fully adapted) or order-only.
+- **Rent-a-Girlfriend**: S6 (213581) announced, undated — joins when listed
+  with dates.

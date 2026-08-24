@@ -1,0 +1,553 @@
+{
+ "series_id": "to-love-ru-darkness",
+ "summary": "Darkness S1 (our 1-12) adapts main chs 1-17 plus two bonus chapters ('First Love' v3 in ep8, 'Room' v4 in ep12), roughly 1.5 chapters per episode, with one relocation: ch11 is skipped in ep8 and placed after ch13 at the end of ep9. Darkness 2nd (our 13-24) adapts chs 20-42 but opens with ch26 pulled forward (ep13), grafts ch27 into ep14, pulls the vol-12 bonus chapters 'Adhesion Panic' and 'Bath' forward into eps 17-18, uses only fragments of ch38 in ep23, and ends mid-Darkness-arc at ch42; the arc's finish (chs 43-47) exists only as the two specials (AniList 21852, counted as eps 25-26 by animefillerlist - our drop rule is right), after which the manga resumes at ch48. Chs 18-19 and 28 plus most bonus chapters are animated only in the 6 Darkness OVAs (AniList 13851); ch38, 49-50 and 54-55 only in the 2016 2nd OVAs (21853). The stored ep24->55 anchor is wrong (it is the last chapter animated anywhere, not the TV end) and is repaired to 42 (vol 11). All 24 TV episodes are manga canon; fandom's chapter pages give a complete chapter->episode reverse map that agrees with Wikipedia's episode titles (which equal chapter titles) and summaries, so every anchor is high confidence.",
+ "anchors": [
+  {
+   "episode": 1,
+   "end_chapter": 1,
+   "start_chapter": 1,
+   "chapters_adapted": "1",
+   "volume": 1,
+   "confidence": "high",
+   "note": "Title = ch1 'Continue'. Ch0 (Prologue: Momo's harem-plan idea) is only recalled in flashback here; ch0 itself is animated in Darkness OVA 1 (pilot).",
+   "sources": [
+    "https://toloveru.fandom.com/wiki/Continue",
+    "https://toloveru.fandom.com/wiki/Prologue_~_Project_Activation",
+    "https://en.wikipedia.org/wiki/To_Love_Ru_Darkness_(TV_series)",
+    "https://en.wikipedia.org/wiki/List_of_To_Love_Ru_chapters"
+   ]
+  },
+  {
+   "episode": 2,
+   "end_chapter": 3,
+   "start_chapter": 2,
+   "chapters_adapted": "2, 3 (first half)",
+   "volume": 1,
+   "confidence": "high",
+   "note": "Title = ch2. Fandom: ch2->ep2, ch3->ep2 and 3. Wikipedia ep2 summary already contains ch3 content (Yami enrolled and rejecting classmates/Momo, Mea asking Nana about Rito, Mea on the roof); ends mid-ch3.",
+   "sources": [
+    "https://toloveru.fandom.com/wiki/Doubt_and_Dish",
+    "https://toloveru.fandom.com/wiki/Each_Speculation",
+    "https://en.wikipedia.org/wiki/To_Love_Ru_Darkness_(TV_series)",
+    "https://en.wikipedia.org/wiki/List_of_To_Love_Ru_chapters"
+   ]
+  },
+  {
+   "episode": 3,
+   "end_chapter": 4,
+   "start_chapter": 3,
+   "chapters_adapted": "3 (second half: Psycho Dive dream, Mea learns of the harem plan), 4",
+   "volume": 1,
+   "confidence": "high",
+   "note": "Title = ch3 'Each Speculation'. Ch4 'Exciting Squall' = Momo's fake-rain trap with Rito and Yui (bulk of the episode).",
+   "sources": [
+    "https://toloveru.fandom.com/wiki/Each_Speculation",
+    "https://toloveru.fandom.com/wiki/Exciting_Squall",
+    "https://en.wikipedia.org/wiki/To_Love_Ru_Darkness_(TV_series)",
+    "https://en.wikipedia.org/wiki/List_of_To_Love_Ru_chapters"
+   ]
+  },
+  {
+   "episode": 4,
+   "end_chapter": 6,
+   "start_chapter": 5,
+   "chapters_adapted": "5-6",
+   "volume": 2,
+   "confidence": "high",
+   "note": "Title merges ch5 subtitle 'Peace and Anxiety' with ch6 'True Smile'; Azenda arc. Fandom notes the Yui-family scene of ch6 was cut.",
+   "sources": [
+    "https://toloveru.fandom.com/wiki/Uneasiness_~Peace_And_Anxiety~",
+    "https://toloveru.fandom.com/wiki/True_Smile_~The_Past,_Friend,_Smile_And~",
+    "https://en.wikipedia.org/wiki/To_Love_Ru_Darkness_(TV_series)",
+    "https://en.wikipedia.org/wiki/List_of_To_Love_Ru_chapters"
+   ]
+  },
+  {
+   "episode": 5,
+   "end_chapter": 8,
+   "start_chapter": 7,
+   "chapters_adapted": "7, 8 (most)",
+   "volume": 2,
+   "confidence": "high",
+   "note": "Title = ch8. Ch7 = Nana's riverside animal party for Mea; ch8 = Run/Ren explanation and Rito turned into Riko. Ends mid-ch8 (before Momo's 'lesson' to Riko).",
+   "sources": [
+    "https://toloveru.fandom.com/wiki/Worry_~Those_Feelings..._Blind~",
+    "https://toloveru.fandom.com/wiki/A_Man%3F_Woman%3F_~The_Changing_Ones~",
+    "https://en.wikipedia.org/wiki/To_Love_Ru_Darkness_(TV_series)",
+    "https://en.wikipedia.org/wiki/List_of_To_Love_Ru_chapters"
+   ]
+  },
+  {
+   "episode": 6,
+   "end_chapter": 9,
+   "start_chapter": 9,
+   "chapters_adapted": "8 (tail: Momo's lesson to Riko, Mea joins the harem plan), 9",
+   "volume": 3,
+   "confidence": "high",
+   "note": "Title = ch9 'Metamorphose'. Opens with the tail of ch8, then ch9 (Run's date with Rito; Run/Ren split). START=9 by majority rule.",
+   "sources": [
+    "https://toloveru.fandom.com/wiki/A_Man%3F_Woman%3F_~The_Changing_Ones~",
+    "https://toloveru.fandom.com/wiki/Metamorphose_~Time_For_A_Change~",
+    "https://en.wikipedia.org/wiki/To_Love_Ru_Darkness_(TV_series)",
+    "https://en.wikipedia.org/wiki/List_of_To_Love_Ru_chapters"
+   ]
+  },
+  {
+   "episode": 7,
+   "end_chapter": 10,
+   "start_chapter": 10,
+   "chapters_adapted": "10",
+   "volume": 3,
+   "confidence": "high",
+   "note": "Title = ch10 'Sisters ~Lala, the Invention of Happiness~'. One chapter, expanded.",
+   "sources": [
+    "https://toloveru.fandom.com/wiki/Sisters_~The_Invention_Of_Happiness:_Lala~",
+    "https://en.wikipedia.org/wiki/To_Love_Ru_Darkness_(TV_series)",
+    "https://en.wikipedia.org/wiki/List_of_To_Love_Ru_chapters"
+   ]
+  },
+  {
+   "episode": 8,
+   "end_chapter": 12,
+   "start_chapter": 12,
+   "chapters_adapted": "12, First Love (vol 3 bonus chapter)",
+   "volume": 3,
+   "confidence": "high",
+   "note": "Title = ch12 'Bad Mood'. Ch11 is SKIPPED here (moved to ep9). The Yui/Haruna/Risa cosplay-cafe segment is the vol-3 bonus chapter 'First Love ~Here Before You Know It~' (fandom bonus page: adapted in ep8).",
+   "sources": [
+    "https://toloveru.fandom.com/wiki/Bad_Mood_~Bonds_Of_Happiness~",
+    "https://toloveru.fandom.com/wiki/First_Love_~First_Love_Before_You_Know_It~",
+    "https://en.wikipedia.org/wiki/To_Love_Ru_Darkness_(TV_series)",
+    "https://en.wikipedia.org/wiki/List_of_To_Love_Ru_chapters"
+   ]
+  },
+  {
+   "episode": 9,
+   "end_chapter": 13,
+   "start_chapter": 13,
+   "chapters_adapted": "13, 11",
+   "volume": 4,
+   "confidence": "high",
+   "note": "Title = ch11 'True Self'. Body of the episode is ch13 'Adhesion' (Rito and Yami glued together, dinner, bath, bed); the closing segment (Oshizu dives into Mea's mind) is ch11, which the anime relocated after ch12-13 (fandom ch11 page: 'takes place after chapter 12 and in the middle of chapter 13'). END=13 = reading position.",
+   "sources": [
+    "https://toloveru.fandom.com/wiki/Adhesion_~Can't_Part%3F_Can't_Let_Go%3F~",
+    "https://toloveru.fandom.com/wiki/True_Self_~True_Face_In_Darkness~",
+    "https://en.wikipedia.org/wiki/To_Love_Ru_Darkness_(TV_series)",
+    "https://en.wikipedia.org/wiki/List_of_To_Love_Ru_chapters"
+   ]
+  },
+  {
+   "episode": 10,
+   "end_chapter": 15,
+   "start_chapter": 14,
+   "chapters_adapted": "14, 15 (most)",
+   "volume": 4,
+   "confidence": "high",
+   "note": "Title = ch14 'Past'. Yami's origin story (ch14) then ch15 'Refrain' (Tearju as student teacher, Mikado explains, chase, 'Eve'). Ends mid-ch15; ch15's final pages (Tearju's apology to Yami) open ep11.",
+   "sources": [
+    "https://toloveru.fandom.com/wiki/Past_~Memories_Leading_To_Tomorrow~",
+    "https://toloveru.fandom.com/wiki/Refrain_~Warmth~",
+    "https://en.wikipedia.org/wiki/To_Love_Ru_Darkness_(TV_series)",
+    "https://en.wikipedia.org/wiki/List_of_To_Love_Ru_chapters"
+   ]
+  },
+  {
+   "episode": 11,
+   "end_chapter": 16,
+   "start_chapter": 16,
+   "chapters_adapted": "15 (tail), 16 (with ch11's final pages at Mea's apartment grafted into the apartment-remodel scene)",
+   "volume": 4,
+   "confidence": "high",
+   "note": "Title = ch16 'The Right Thing'. Fandom ch16 page: episode adds anime-original Nana scenes merged with ch11's final pages at Mea's apartment; Mea's identity and Nemesis revealed. START=16 by majority rule (ch15 tail is a few pages).",
+   "sources": [
+    "https://toloveru.fandom.com/wiki/Refrain_~Warmth~",
+    "https://toloveru.fandom.com/wiki/The_Right_Thing_~What_is_a_Way_of_Life%3F~",
+    "https://toloveru.fandom.com/wiki/True_Self_~True_Face_In_Darkness~",
+    "https://en.wikipedia.org/wiki/To_Love_Ru_Darkness_(TV_series)",
+    "https://en.wikipedia.org/wiki/List_of_To_Love_Ru_chapters"
+   ]
+  },
+  {
+   "episode": 12,
+   "end_chapter": 17,
+   "start_chapter": 17,
+   "chapters_adapted": "Room (vol 4 bonus chapter), 17",
+   "volume": 5,
+   "confidence": "high",
+   "note": "Title = the vol-4 bonus chapter 'Room ~A Maiden's Thoughts~' (Momo's dating sims and feelings); the Venus Momo Club / storage-shed plot is ch17 'Trigger' (vol 5). Fandom: ch17->ep12 merged with the 4th bangaihen; anime-original extra scenes added and Momo's Celine-arc memories replaced by a fantasy. S1 ends at ch17; chs 18-19 are adapted only in Darkness OVA 3 and 2.",
+   "sources": [
+    "https://toloveru.fandom.com/wiki/Trigger_~Intensification_of_Love~",
+    "https://toloveru.fandom.com/wiki/Room_~A_Maiden's_Heart~",
+    "https://en.wikipedia.org/wiki/To_Love_Ru_Darkness_(TV_series)",
+    "https://en.wikipedia.org/wiki/List_of_To_Love_Ru_chapters"
+   ]
+  },
+  {
+   "episode": 13,
+   "end_chapter": 26,
+   "start_chapter": 26,
+   "chapters_adapted": "26",
+   "volume": 7,
+   "confidence": "high",
+   "note": "Title = ch26 'Unconsciously' (Haruna drunk on the Deviluke drink). Fandom ch26 page: adapted in 2nd ep1, pulled FORWARD to open the season before ch20. Reading position after S1 is still ch17/18.",
+   "sources": [
+    "https://toloveru.fandom.com/wiki/Uncounsciously_~Head_Hazy%3F_Heart_Pounding~",
+    "https://en.wikipedia.org/wiki/To_Love_Ru_Darkness_2nd",
+    "https://en.wikipedia.org/wiki/List_of_To_Love_Ru_chapters",
+    "https://ja.wikipedia.org/wiki/To_LOVE%E3%82%8B_-%E3%81%A8%E3%82%89%E3%81%B6%E3%82%8B-"
+   ]
+  },
+  {
+   "episode": 14,
+   "end_chapter": 20,
+   "start_chapter": 20,
+   "chapters_adapted": "20 (first half), 27, 20 (second half)",
+   "volume": 5,
+   "confidence": "high",
+   "note": "Title = ch20 'Uneasy'. Mea's anxiety about Nemesis's silence and the rooftop fight are ch20; the Rito-turned-mouse segment is ch27 'Adventure' (vol 7) grafted into the middle (fandom ch27 page: adapted in 2nd ep2, placed before ch20's events). Ends on ch20's last scene (Nana sees Mea's weapon form).",
+   "sources": [
+    "https://toloveru.fandom.com/wiki/Uneasy_~Hearts_bewilderment~",
+    "https://toloveru.fandom.com/wiki/Adventure_~Rito_Mouse's_Adventure~",
+    "https://en.wikipedia.org/wiki/To_Love_Ru_Darkness_2nd",
+    "https://en.wikipedia.org/wiki/List_of_To_Love_Ru_chapters"
+   ]
+  },
+  {
+   "episode": 15,
+   "end_chapter": 22,
+   "start_chapter": 21,
+   "chapters_adapted": "21-22",
+   "volume": 6,
+   "confidence": "high",
+   "note": "Title = ch22 'After a Storm Comes a Calm ~Friends~'. Ch21 'Rain' (Nana heartbroken, Rito in the Cyber Safari) then ch22 (Nana confronts Mea, reconciliation).",
+   "sources": [
+    "https://toloveru.fandom.com/wiki/Rain_~Again,_Just_Like_Until_Now~",
+    "https://toloveru.fandom.com/wiki/After_a_Storm_Comes_a_Calm_~Friend~",
+    "https://en.wikipedia.org/wiki/To_Love_Ru_Darkness_2nd",
+    "https://en.wikipedia.org/wiki/List_of_To_Love_Ru_chapters"
+   ]
+  },
+  {
+   "episode": 16,
+   "end_chapter": 24,
+   "start_chapter": 23,
+   "chapters_adapted": "23-24",
+   "volume": 6,
+   "confidence": "high",
+   "note": "Title = ch23 'Summer Festival'. Ch24 'The Door of Fate' = Nemesis reveals herself at the festival, fireworks talk about Darkness.",
+   "sources": [
+    "https://toloveru.fandom.com/wiki/Summer_Festival_~The_Beginning_of_The_Festival~",
+    "https://toloveru.fandom.com/wiki/The_Door_of_Fate_~And_From_Now_On~",
+    "https://en.wikipedia.org/wiki/To_Love_Ru_Darkness_2nd",
+    "https://en.wikipedia.org/wiki/List_of_To_Love_Ru_chapters"
+   ]
+  },
+  {
+   "episode": 17,
+   "end_chapter": 25,
+   "start_chapter": 25,
+   "chapters_adapted": "Adhesion Panic (vol 12 bonus chapter), 25",
+   "volume": 7,
+   "confidence": "high",
+   "note": "Title = ch25 'New Move ~Two of a Kind?~' (Mikan invites Mea to dinner; Mea cuts vegetables). The opening train segment with Yui (Celine's friend-summoning invention) is the vol-12 bonus chapter 'Adhesion Panic', pulled forward (fandom bonus page: adapted in 2nd ep5 merged with ch25).",
+   "sources": [
+    "https://toloveru.fandom.com/wiki/New_Move_~Birds_of_a_Feather~",
+    "https://toloveru.fandom.com/wiki/Adhesion_Panic_~I_Knew_It..._She's_Angry%3F~",
+    "https://en.wikipedia.org/wiki/To_Love_Ru_Darkness_2nd",
+    "https://en.wikipedia.org/wiki/List_of_To_Love_Ru_chapters"
+   ]
+  },
+  {
+   "episode": 18,
+   "end_chapter": 29,
+   "start_chapter": 29,
+   "chapters_adapted": "29, Bath (vol 12 bonus chapter)",
+   "volume": 8,
+   "confidence": "high",
+   "note": "Title = ch29 'Manservant' (Nemesis makes Rito her servant, bath with Nemesis). The next-day Mikan-in-the-bath segment is the vol-12 bonus chapter 'Bath ~It Sure is Nice... I Guess?~', pulled forward (fandom bonus page: adapted in 2nd ep6 merged with ch29).",
+   "sources": [
+    "https://toloveru.fandom.com/wiki/Manservant_~Competition~",
+    "https://toloveru.fandom.com/wiki/Bath_~Good_Bath..._I_Guess%3F~",
+    "https://en.wikipedia.org/wiki/To_Love_Ru_Darkness_2nd",
+    "https://en.wikipedia.org/wiki/List_of_To_Love_Ru_chapters"
+   ]
+  },
+  {
+   "episode": 19,
+   "end_chapter": 30,
+   "start_chapter": 30,
+   "chapters_adapted": "30",
+   "volume": 8,
+   "confidence": "high",
+   "note": "Title = ch30 'Resistance'. Tearju reassigned to Momo/Nana/Mea's class; Yami returns to school. One chapter, expanded.",
+   "sources": [
+    "https://toloveru.fandom.com/wiki/Resistance_~Even_Thought_I_Understand~",
+    "https://en.wikipedia.org/wiki/To_Love_Ru_Darkness_2nd",
+    "https://en.wikipedia.org/wiki/List_of_To_Love_Ru_chapters"
+   ]
+  },
+  {
+   "episode": 20,
+   "end_chapter": 33,
+   "start_chapter": 31,
+   "chapters_adapted": "31-32, 33 (most)",
+   "volume": 9,
+   "confidence": "high",
+   "note": "Title = ch32 'Danger'. Ch31 'Cleaning' = Zastin's cursed-sword story and Rito serving at the Tenjouin mansion (NOT the vacuum-robot chapter), ch32 = Rin possessed by Bladix, ch33 'Appreciation' = Rito enters Rin's mind via Psycho Dive and Bladix is destroyed (fandom: ch33 in 2nd ep8 and 9). Ends mid-ch33.",
+   "sources": [
+    "https://toloveru.fandom.com/wiki/Cleaning_~Magnificently_and_Beautiful~",
+    "https://toloveru.fandom.com/wiki/Danger_~Danger~",
+    "https://toloveru.fandom.com/wiki/Appreciation_~Progressing_Feelings~",
+    "https://en.wikipedia.org/wiki/To_Love_Ru_Darkness_2nd",
+    "https://en.wikipedia.org/wiki/List_of_To_Love_Ru_chapters"
+   ]
+  },
+  {
+   "episode": 21,
+   "end_chapter": 35,
+   "start_chapter": 34,
+   "chapters_adapted": "33 (tail: Rin thanks Rito), 34-35",
+   "volume": 9,
+   "confidence": "high",
+   "note": "Title = ch35 'Kiss'. Ch34 'When Talking ~Sisterly Love~' = Lala/Peke and Momo's coaching; ch35 = the kiss attempt and cheek kiss; ends with Momo revealing the harem plan to Nana (ch35 close). START=34 by majority rule.",
+   "sources": [
+    "https://toloveru.fandom.com/wiki/Appreciation_~Progressing_Feelings~",
+    "https://toloveru.fandom.com/wiki/When_Talking_~Sisters'_Love_Circumstances~",
+    "https://toloveru.fandom.com/wiki/Kiss_~What_Lies_Beyond_a_Kiss~",
+    "https://en.wikipedia.org/wiki/To_Love_Ru_Darkness_2nd",
+    "https://en.wikipedia.org/wiki/List_of_To_Love_Ru_chapters"
+   ]
+  },
+  {
+   "episode": 22,
+   "end_chapter": 37,
+   "start_chapter": 36,
+   "chapters_adapted": "36-37",
+   "volume": 10,
+   "confidence": "high",
+   "note": "Title = ch37 'True Character ~Identity Revealed!?~'. Ch36 'Real Intention' = Nana's reaction to the harem plan, Oshizu tailing Mea, the Go Go Vacuum-kun goes berserk; ch37 = the chase, black hole, Mea reveals her identity.",
+   "sources": [
+    "https://toloveru.fandom.com/wiki/Real_Intention_~Trouble_Girls~",
+    "https://toloveru.fandom.com/wiki/True_Character_~Identity_Revealed~",
+    "https://en.wikipedia.org/wiki/To_Love_Ru_Darkness_2nd",
+    "https://en.wikipedia.org/wiki/List_of_To_Love_Ru_chapters"
+   ]
+  },
+  {
+   "episode": 23,
+   "end_chapter": 40,
+   "start_chapter": 39,
+   "chapters_adapted": "39, 38 (fragments: school scene and the Mikado/Yami first-meeting dialogue, relocated to the nurse's office), 40 (first third)",
+   "volume": 10,
+   "confidence": "high",
+   "note": "Title = ch39 'The Beginning of Darkness ~That Time~'. Yami/Luna and Momo-in-bed open ch39; the pool transformation ends it; ep23 continues into ch40 through Nemesis's pool speech ('Mea never existed'). Ch38 'Clinic' itself is deferred to 2nd OVA 1 (2016); only its opening pieces are used here (fandom ch38/ch39 pages).",
+   "sources": [
+    "https://toloveru.fandom.com/wiki/The_Begining_of_Darkness_~That_Time~",
+    "https://toloveru.fandom.com/wiki/Clinic_~Can't_Become_Honest~",
+    "https://toloveru.fandom.com/wiki/Release_of_Darkness_~Release~",
+    "https://en.wikipedia.org/wiki/To_Love_Ru_Darkness_2nd",
+    "https://en.wikipedia.org/wiki/List_of_To_Love_Ru_chapters"
+   ]
+  },
+  {
+   "episode": 24,
+   "end_chapter": 42,
+   "start_chapter": 40,
+   "chapters_adapted": "40 (rest: Darkness's rampage at the pool, principal to Antarctica), 41-42",
+   "volume": 11,
+   "confidence": "high",
+   "note": "Title = ch41 'Prediction is Impossible ~Rampaging Darkness~'. Ch42 'Escape' = Momo/Nana sent to Mea's apartment, Mea vs Nemesis inside her mind, Oshizu's exorcism (episode's last scene). TV ends mid-arc; chs 43-47 are adapted by the two specials (AniList 21852 = '2nd' eps 13-14). Existing anchor 55 is wrong (see repairs).",
+   "sources": [
+    "https://toloveru.fandom.com/wiki/Release_of_Darkness_~Release~",
+    "https://toloveru.fandom.com/wiki/Prediction_is_Impossible_~Out_of_Control_Darkness~",
+    "https://toloveru.fandom.com/wiki/Escape_~What_you_Believe~",
+    "https://en.wikipedia.org/wiki/To_Love_Ru_Darkness_2nd",
+    "https://en.wikipedia.org/wiki/List_of_To_Love_Ru_chapters",
+    "https://www.animefillerlist.com/shows/love-ru-darkness"
+   ]
+  }
+ ],
+ "continue_points": [
+  {
+   "episode": 2,
+   "continue_chapter": 3,
+   "note": "ends mid-ch3 (Mea on the roof about to Psycho Dive Rito); ep3 finishes ch3"
+  },
+  {
+   "episode": 5,
+   "continue_chapter": 8,
+   "note": "ends mid-ch8 (Riko changing; Momo sneaks in); ch8's tail opens ep6"
+  },
+  {
+   "episode": 10,
+   "continue_chapter": 15,
+   "note": "ends mid-ch15 (Tearju calls Yami 'Eve'); ch15's final pages open ep11"
+  },
+  {
+   "episode": 13,
+   "continue_chapter": 18,
+   "note": "ch26 is grafted forward as the S2 opener; the linear reading position is still ch18 (chs 18-19 are only animated in Darkness OVA 3/2, AniList 13851; the TV timeline resumes at ch20 in ep14)"
+  },
+  {
+   "episode": 20,
+   "continue_chapter": 33,
+   "note": "ends mid-ch33 (Bladix destroyed); ch33's final pages (Rin's thanks) open ep21"
+  },
+  {
+   "episode": 23,
+   "continue_chapter": 40,
+   "note": "ends about a third into ch40 (Nemesis's pool speech; 'Nemesis greets Darkness'); the rest of ch40 opens ep24"
+  }
+ ],
+ "annotations": [
+  {
+   "episodes": [
+    8,
+    9
+   ],
+   "kind": "rearranged",
+   "chapters": "11",
+   "note": "ch11 'True Self' (Oshizu enters Mea's mind) is skipped in ep8 (ch12) and placed at the end of ep9 after ch13; ch11's final pages (Mea's apartment) are reused in ep11's remodel scene"
+  },
+  {
+   "episodes": [
+    8
+   ],
+   "kind": "graft",
+   "chapters": "First Love (vol 3 bonus)",
+   "note": "Yui/Haruna/Risa cosplay-cafe segment from the vol-3 bonus chapter"
+  },
+  {
+   "episodes": [
+    12
+   ],
+   "kind": "graft",
+   "chapters": "Room (vol 4 bonus), 17",
+   "note": "season finale merges the vol-4 bonus chapter 'Room' with ch17 'Trigger'"
+  },
+  {
+   "episodes": [
+    12
+   ],
+   "kind": "divergence",
+   "chapters": "Room (vol 4 bonus), 17",
+   "note": "anime-original bonus scenes between Rito and the girls; Momo's memories of Celine's arc replaced with a fantasy (that arc was never animated); ends with Rito waking to Momo in his bed"
+  },
+  {
+   "episodes": [
+    11
+   ],
+   "kind": "divergence",
+   "chapters": "16",
+   "note": "anime-original Nana scenes (Mea's apartment remodel) merged with ch11's final pages"
+  },
+  {
+   "episodes": [
+    12,
+    13
+   ],
+   "kind": "rearranged",
+   "chapters": "18-19, 26",
+   "note": "S1 ends at ch17; chs 18 'Exchange' and 19 'Nostalgia' are only animated in Darkness OVA 3 and OVA 2 (AniList 13851); S2 opens with ch26 pulled forward, then returns to ch20 in ep14"
+  },
+  {
+   "episodes": [
+    14
+   ],
+   "kind": "graft",
+   "chapters": "27",
+   "note": "ch27 'Adventure' (Rito as a mouse, vol 7) inserted mid-episode between the two halves of ch20"
+  },
+  {
+   "episodes": [
+    17
+   ],
+   "kind": "graft",
+   "chapters": "Adhesion Panic (vol 12 bonus)",
+   "note": "Yui train segment pulled forward from the vol-12 bonus chapter and merged with ch25"
+  },
+  {
+   "episodes": [
+    18
+   ],
+   "kind": "graft",
+   "chapters": "Bath (vol 12 bonus)",
+   "note": "Mikan-in-the-bath segment pulled forward from the vol-12 bonus chapter and merged with ch29"
+  },
+  {
+   "episodes": [
+    23
+   ],
+   "kind": "partial",
+   "chapters": "38",
+   "note": "only ch38's opening school scene and the Mikado/Yami first-meeting dialogue are used; the clinic story of ch38 is adapted in 2nd OVA 1 (2016, AniList 21853)"
+  },
+  {
+   "episodes": [
+    24
+   ],
+   "kind": "partial",
+   "chapters": "42",
+   "note": "TV finale ends mid-arc at ch42; the Darkness arc's conclusion (chs 43-47) is only in the two specials (AniList 21852); ch48 'Re-starting ~Harem Plan~' is never animated"
+  }
+ ],
+ "type_corrections": [],
+ "repairs": [
+  {
+   "episode": 24,
+   "field": "end_chapter",
+   "old": 55,
+   "new": 42,
+   "why": "ep24's title is ch41's title ('Prediction is Impossible ~Rampaging Darkness~'); fandom chapter pages map ch40-42 to 2nd ep12 and ch43-47 to specials 13-14; Wikipedia's ep24 summary ends with ch42's exorcism scene. Ch55 'Worry ~Progress~' is the LAST main-series chapter animated overall (2nd OVA 3, 2016) - the old value looks like a max-adapted figure, not ep24's end.",
+   "sources": [
+    "https://toloveru.fandom.com/wiki/Prediction_is_Impossible_~Out_of_Control_Darkness~",
+    "https://toloveru.fandom.com/wiki/Escape_~What_you_Believe~",
+    "https://toloveru.fandom.com/wiki/Worry_~A_Step_Forward~",
+    "https://en.wikipedia.org/wiki/To_Love_Ru_Darkness_2nd",
+    "https://en.wikipedia.org/wiki/List_of_To_Love_Ru_chapters"
+   ]
+  },
+  {
+   "episode": 24,
+   "field": "volume",
+   "old": 14,
+   "new": 11,
+   "why": "ch42 is in volume 11 (Wikipedia chapter list: vol 11 = chs 41-44).",
+   "sources": [
+    "https://en.wikipedia.org/wiki/List_of_To_Love_Ru_chapters"
+   ]
+  }
+ ],
+ "structure": {
+  "notes": "Our 24 = TV only: CONFIRMED. AniList 13663 = 12 TV eps (our 1-12, Oct-Dec 2012); AniList 20995 = 12 TV eps (our 13-24, Jul-Sep 2015). AniList 21852 'To LOVE-Ru Darkness 2nd Specials' (MAL 31711) = 2 eps described by AniList as 'Episodes 13 and 14 of Darkness 2nd' (Wikipedia and ja-wiki number them 13-14, dated 2015-10-28); animefillerlist counts them as eps 25-26 of a 26-episode 'To Love Ru: Darkness' (all manga canon), so SOURCE_NUMBERING_SHIFTS drop [25,26] is correct. Component 3 (21852) is null-null: recommend order_only after 20995 adapting chs 43-47 (special 1 = 43-45, special 2 = 46-47); a viewer who also watches the specials resumes the manga at ch48. Not in our components: AniList 13851 'To LOVE-Ru Darkness OVA' (6 eps, 2012-2015, bundled with manga vols 5,6,8,9,12,13) and AniList 21853 'To LOVE-Ru Darkness 2nd OVA' (3 eps, 2016) plus a 4th 2017 OVA 'Multiplication' (post-series omake). Chapter numbering: main chapters 1-77 (+ ch0 prologue) as on Wikipedia/fandom/MU; bonus chapters are unnumbered 'bangaihen' inside volumes (22 in tankobon) - AniList's 100 = 77 + prologue + 22 bonus. Anchors use MAIN numbering; bonus chapters are named with their volume.",
+  "order_only": [
+   {
+    "anilist_id": 21852,
+    "title": "To LOVE-Ru Darkness 2nd Specials (2nd eps 13-14)",
+    "after_anilist_id": 20995,
+    "adapts": "chs 43-47 (ep13: 43-45 'Whose Fiance?/Power and Power/Sister'; ep14: 46-47 'The End of Darkness/Bright Future')",
+    "note": "direct continuation of the ep24 cliffhanger; titles = ch44 and ch47 titles; resume manga at ch48 afterwards"
+   },
+   {
+    "anilist_id": 13851,
+    "title": "To LOVE-Ru Darkness OVA (6 eps)",
+    "after_anilist_id": 13663,
+    "adapts": "OVA1: ch0 + bonus 'Pollen Plan' (v2) + 'Body Touch?' (v4) [pilot, precedes ep1]; OVA2: ch19 + bonus 'The Changing Heart' + 'Flower' (v5); OVA3: ch18 + bonus 'It Feels' (v7); OVA4: bonus 'Magical Kyouko' (v7) + ch28 + bonus 'Adhesion ~no ill intent~' (v8); OVA5: bonus 'Suddenly' (v9) + 'Mobile Phone' (v8) + 'Moonlight' (v10); OVA6: bonus 'Photography' (v10) + 'Technique' + 'Holiday' (v11)",
+    "note": "side stories; Wikipedia: OVA1 is the pilot (before ep1), the rest sit between Darkness and Darkness 2nd (fandom places OVA2 between eps 8 and 9). Chs 18-19 are animated ONLY here."
+   },
+   {
+    "anilist_id": 21853,
+    "title": "To LOVE-Ru Darkness 2nd OVA (3 eps, 2016)",
+    "after_anilist_id": 21852,
+    "adapts": "OVA1: bonus 'Ghost Story' (v9) + ch38 'Clinic'; OVA2: chs 49-50; OVA3: chs 54-55",
+    "note": "set 2 days after the specials; ch55 is the last main-series chapter ever animated. A 4th OVA (2017-11-02, with 'To Love Ru Chronicle') adapts the post-series omake 'Multiplication' parts 1-2 (not on AniList 21853)."
+   }
+  ]
+ },
+ "flags_for_sean": [
+  "Flag #685 (MU 77 vs AniList 100) resolved: same edition. MU counts the 77 numbered main chapters; AniList counts 77 + prologue (ch0) + 22 in-volume bonus chapters = 100 (fandom counts 102 incl. two post-series 'Multiplication' bangaihen). Anchors use main numbering (max main = 77, max animated main = 55 via 2nd OVA 3). Suggest treating total_chapters as 77 for chapter math, or keep 100 but note bonus chapters are unnumbered.",
+  "Existing ep24->55 v14 anchor repaired to 42 v11 (see repairs); 55 matches the last main chapter animated anywhere (2016 OVA), not the TV finale.",
+  "Page-level splits (ch3, ch8, ch15, ch33, ch40 across episode boundaries) are inferred by correlating Wikipedia episode summaries with fandom chapter summaries and the fandom 'adapted in episodes X and Y' statements; no page numbers are cited by any source.",
+  "WebSearch budget was exhausted this session, so no reddit/CBR 'where to continue' threads were consulted; sources are the fandom chapter pages (full reverse map, via API), Wikipedia (episode summaries + chapter/volume list, title matches), ja-Wikipedia (episode/OVA segment titles = chapter titles), animefillerlist (26-count) and AniList (components)."
+ ]
+}

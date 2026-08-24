@@ -1,0 +1,2949 @@
+{
+ "series_id": "dragon-ball-z-kai",
+ "summary": "Dragon Ball Z Kai is a straight cut-down of the manga: our 1-98 adapt chs 195-420 (Saiyan through Cell, roughly 2.3 chapters per episode, with Kanzenshuu giving page-level splits for every episode) and our 99-167 adapt chs 421-519 (Buu arc). Three sources agree on essentially every boundary outside one zone: Kanzenshuu's Kai episode guide (\"Corresponding manga chapters\" with page ranges), the Dragon Universe wiki DBK pages, and the Dragon Ball fandom Kai episode infoboxes (chapter-title lists resolved against the fandom chapter list). The complication is that our rows are the 69-episode INTERNATIONAL \"Final Chapters\" cut: eight episodes (101, 102, 103, 106, 108, 111, 113, 165) never aired in Japan, the Japanese eps 100-106 were re-edited into our 100-113 around the extra DBZ footage, and every per-episode source for the Buu arc uses the 61-episode Japanese numbering, so their pages for our 100/107/110/112 actually describe different (longer) episodes; that zone was mapped from Wikipedia's DBZ-footage column plus Kanzenshuu's DBZ chapter pages and marked medium. From our 114 (= JP 107) onward the two cuts coincide and the numbering offset is a constant 7 (166-167 = JP 158-159). Surprises: the context file's volume boundaries are wrong for v17+; ch 425 is never adapted; Kanzenshuu has two small omissions (297, 495); our row 128 carries ep 139's title and date.",
+ "anchors": [
+  {
+   "episode": 1,
+   "end_chapter": 196,
+   "start_chapter": 195,
+   "chapters_adapted": "195-196",
+   "volume": 17,
+   "confidence": "high",
+   "note": "Kanzenshuu JP ep 001: 195-196; Dragon Universe wiki & fandom agree on END",
+   "sources": [
+    "https://www.kanzenshuu.com/episode/kai/eps-001/",
+    "https://dragonballuniverse.fandom.com/wiki/DBK001",
+    "https://dragonball.fandom.com/wiki/Prologue_to_Battle%21_The_Return_of_Goku%21"
+   ]
+  },
+  {
+   "episode": 2,
+   "end_chapter": 199,
+   "start_chapter": 197,
+   "chapters_adapted": "197-199",
+   "volume": 17,
+   "confidence": "high",
+   "note": "Kanzenshuu JP ep 002: 197-199; fandom agrees, DU lists 197-198 (omits 199)",
+   "sources": [
+    "https://www.kanzenshuu.com/episode/kai/eps-002/",
+    "https://dragonballuniverse.fandom.com/wiki/DBK002",
+    "https://dragonball.fandom.com/wiki/The_Enemy_is_Goku%27s_Brother%3F%21_The_Secret_of_the_Mighty_Saiyan_Warriors%21"
+   ]
+  },
+  {
+   "episode": 3,
+   "end_chapter": 204,
+   "start_chapter": 200,
+   "chapters_adapted": "200-203, 204 (p.1-13)",
+   "volume": 17,
+   "confidence": "high",
+   "note": "Kanzenshuu JP ep 003: 200-203, 204 (p.1-13); Dragon Universe wiki & fandom agree on END",
+   "sources": [
+    "https://www.kanzenshuu.com/episode/kai/eps-003/",
+    "https://dragonballuniverse.fandom.com/wiki/DBK003",
+    "https://dragonball.fandom.com/wiki/A_Life_or_Death_Battle%21_Goku_and_Piccolo%27s_Desperate_Attack%21"
+   ]
+  },
+  {
+   "episode": 4,
+   "end_chapter": 206,
+   "start_chapter": 205,
+   "chapters_adapted": "204 (p.14), 205-206",
+   "volume": 18,
+   "confidence": "high",
+   "note": "Kanzenshuu JP ep 004: 204 (p.14), 205-206; Dragon Universe wiki & fandom agree on END",
+   "sources": [
+    "https://www.kanzenshuu.com/episode/kai/eps-004/",
+    "https://dragonballuniverse.fandom.com/wiki/DBK004",
+    "https://dragonball.fandom.com/wiki/Run_in_the_Afterlife%2C_Goku%21_The_One_Million_Mile_Snake_Way%21"
+   ]
+  },
+  {
+   "episode": 5,
+   "end_chapter": 209,
+   "start_chapter": 207,
+   "chapters_adapted": "207-208, 209 (p.1-10)",
+   "volume": 18,
+   "confidence": "high",
+   "note": "Kanzenshuu JP ep 005: 207-208, 209 (p.1-10); Dragon Universe wiki & fandom agree on END",
+   "sources": [
+    "https://www.kanzenshuu.com/episode/kai/eps-005/",
+    "https://dragonballuniverse.fandom.com/wiki/DBK005",
+    "https://dragonball.fandom.com/wiki/Wilderness_Survival%21_A_Moonlit_Night_Awakens_Gohan%21"
+   ]
+  },
+  {
+   "episode": 6,
+   "end_chapter": 211,
+   "start_chapter": 210,
+   "chapters_adapted": "209 (p.10-end), 210, 211 (p.1-5)",
+   "volume": 18,
+   "confidence": "high",
+   "note": "Kanzenshuu JP ep 006: 209 (p.10-end), 210, 211 (p.1-5); Dragon Universe wiki & fandom agree on END",
+   "sources": [
+    "https://www.kanzenshuu.com/episode/kai/eps-006/",
+    "https://dragonballuniverse.fandom.com/wiki/DBK006",
+    "https://dragonball.fandom.com/wiki/The_End_of_Snake_Way%21_King_Kai%27s_Bizarre_Test%21"
+   ]
+  },
+  {
+   "episode": 7,
+   "end_chapter": 211,
+   "start_chapter": 211,
+   "chapters_adapted": "211 (p.6-end)",
+   "volume": 18,
+   "confidence": "high",
+   "note": "Kanzenshuu JP ep 007: 211 (p.6-end); Dragon Universe wiki & fandom agree on END",
+   "sources": [
+    "https://www.kanzenshuu.com/episode/kai/eps-007/",
+    "https://dragonballuniverse.fandom.com/wiki/DBK007",
+    "https://dragonball.fandom.com/wiki/The_Battle_with_Ten-Times_Gravity%21_Goku%27s_Race_Against_the_Clock%21"
+   ]
+  },
+  {
+   "episode": 8,
+   "end_chapter": 213,
+   "start_chapter": 212,
+   "chapters_adapted": "212, 213 (p.1-4)",
+   "volume": 18,
+   "confidence": "high",
+   "note": "Kanzenshuu JP ep 008: 212, 213 (p.1-4); Dragon Universe wiki & fandom agree on END",
+   "sources": [
+    "https://www.kanzenshuu.com/episode/kai/eps-008/",
+    "https://dragonballuniverse.fandom.com/wiki/DBK008",
+    "https://dragonball.fandom.com/wiki/Shenron_Appears%21_The_Saiyans_Arrive_Sooner_than_Expected%21"
+   ]
+  },
+  {
+   "episode": 9,
+   "end_chapter": 215,
+   "start_chapter": 214,
+   "chapters_adapted": "213 (p.5-end), 214-215",
+   "volume": 18,
+   "confidence": "high",
+   "note": "Kanzenshuu JP ep 009: 213 (p.5-end), 214-215; Dragon Universe wiki & fandom agree on END",
+   "sources": [
+    "https://www.kanzenshuu.com/episode/kai/eps-009/",
+    "https://dragonballuniverse.fandom.com/wiki/DBK009",
+    "https://dragonball.fandom.com/wiki/Yamcha%27s_Struggle%21_The_Terrible_Saibamen%21"
+   ]
+  },
+  {
+   "episode": 10,
+   "end_chapter": 219,
+   "start_chapter": 216,
+   "chapters_adapted": "216-218, 219 (p.1-12)",
+   "volume": 19,
+   "confidence": "high",
+   "note": "Kanzenshuu JP ep 010: 216-218, 219 (p.1-12); Dragon Universe wiki & fandom agree on END",
+   "sources": [
+    "https://www.kanzenshuu.com/episode/kai/eps-010/",
+    "https://dragonballuniverse.fandom.com/wiki/DBK010",
+    "https://dragonball.fandom.com/wiki/Sit_Tight%2C_Chiaotzu%21_Tien%27s_Screaming_Tri-Beam%21"
+   ]
+  },
+  {
+   "episode": 11,
+   "end_chapter": 222,
+   "start_chapter": 220,
+   "chapters_adapted": "219 (p.13-end), 220-222",
+   "volume": 19,
+   "confidence": "high",
+   "note": "Kanzenshuu JP ep 011: 219 (p.13-end), 220-222; Dragon Universe wiki & fandom agree on END",
+   "sources": [
+    "https://www.kanzenshuu.com/episode/kai/eps-011/",
+    "https://dragonballuniverse.fandom.com/wiki/DBK011",
+    "https://dragonball.fandom.com/wiki/Will_Goku_Make_it_in_Time%3F%21_Three_Hours_Until_the_Battle_Resumes%21"
+   ]
+  },
+  {
+   "episode": 12,
+   "end_chapter": 226,
+   "start_chapter": 223,
+   "chapters_adapted": "223-225, 226 (p.1-8)",
+   "volume": 19,
+   "confidence": "high",
+   "note": "Kanzenshuu JP ep 012: 223-225, 226 (p.1-8); Dragon Universe wiki & fandom agree on END",
+   "sources": [
+    "https://www.kanzenshuu.com/episode/kai/eps-012/",
+    "https://dragonballuniverse.fandom.com/wiki/DBK012",
+    "https://dragonball.fandom.com/wiki/Farewell%2C_Piccolo%21_Goku%27s_Furious_Counterattack%21"
+   ]
+  },
+  {
+   "episode": 13,
+   "end_chapter": 230,
+   "start_chapter": 227,
+   "chapters_adapted": "226 (p.9-end), 227-229, 230 (p.1-6)",
+   "volume": 20,
+   "confidence": "high",
+   "note": "Kanzenshuu JP ep 013: 226 (p.9-end), 227-229, 230 (p.1-6); Dragon Universe wiki & fandom agree on END",
+   "sources": [
+    "https://www.kanzenshuu.com/episode/kai/eps-013/",
+    "https://dragonballuniverse.fandom.com/wiki/DBK013",
+    "https://dragonball.fandom.com/wiki/The_Power_of_the_Kaio-Ken%21_Goku_vs._Vegeta%21"
+   ]
+  },
+  {
+   "episode": 14,
+   "end_chapter": 233,
+   "start_chapter": 231,
+   "chapters_adapted": "230 (p.7-end), 231-232, 233 (p.1-11)",
+   "volume": 20,
+   "confidence": "high",
+   "note": "Kanzenshuu JP ep 014: 230 (p.7-end), 231-232, 233 (p.1-11); Dragon Universe wiki & fandom agree on END",
+   "sources": [
+    "https://www.kanzenshuu.com/episode/kai/eps-014/",
+    "https://dragonballuniverse.fandom.com/wiki/DBK014",
+    "https://dragonball.fandom.com/wiki/An_All-Out_Kamehame-Ha%21_Vegeta%27s_Terrible_Transformation%21"
+   ]
+  },
+  {
+   "episode": 15,
+   "end_chapter": 237,
+   "start_chapter": 234,
+   "chapters_adapted": "233 (p.12-end), 234-236, 237 (p.1-4)",
+   "volume": 20,
+   "confidence": "high",
+   "note": "Kanzenshuu JP ep 015: 233 (p.12-end), 234-236, 237 (p.1-4); Dragon Universe wiki & fandom agree on END",
+   "sources": [
+    "https://www.kanzenshuu.com/episode/kai/eps-015/",
+    "https://dragonballuniverse.fandom.com/wiki/DBK015",
+    "https://dragonball.fandom.com/wiki/Goku_on_the_Ropes%21_Pin_Your_Hopes_on_the_Spirit_Bomb%21"
+   ]
+  },
+  {
+   "episode": 16,
+   "end_chapter": 241,
+   "start_chapter": 238,
+   "chapters_adapted": "237 (p.4-end), 238-240, 241 (p.1-7)",
+   "volume": 21,
+   "confidence": "high",
+   "note": "Kanzenshuu JP ep 016: 237 (p.4-end), 238-240, 241 (p.1-7); Dragon Universe wiki & fandom agree on END",
+   "sources": [
+    "https://www.kanzenshuu.com/episode/kai/eps-016/",
+    "https://dragonballuniverse.fandom.com/wiki/DBK016",
+    "https://dragonball.fandom.com/wiki/Defeat_the_Invincible_Vegeta%21_Work_a_Miracle%2C_Gohan%21"
+   ]
+  },
+  {
+   "episode": 17,
+   "end_chapter": 243,
+   "start_chapter": 242,
+   "chapters_adapted": "241 (p.8-end), 242, 243 (p.1-8)",
+   "volume": 21,
+   "confidence": "high",
+   "note": "Kanzenshuu JP ep 017: 241 (p.8-end), 242, 243 (p.1-8); Dragon Universe wiki & fandom agree on END",
+   "sources": [
+    "https://www.kanzenshuu.com/episode/kai/eps-017/",
+    "https://dragonballuniverse.fandom.com/wiki/DBK017",
+    "https://dragonball.fandom.com/wiki/Dawn_of_a_Fierce_Battle%21_The_Star_of_Hope_is_Piccolo%27s_Homeland%21"
+   ]
+  },
+  {
+   "episode": 18,
+   "end_chapter": 245,
+   "start_chapter": 244,
+   "chapters_adapted": "243 (p.9-end), 244-245",
+   "volume": 21,
+   "confidence": "high",
+   "note": "Kanzenshuu JP ep 018: 243 (p.9-end), 244-245; Dragon Universe wiki & fandom agree on END",
+   "sources": [
+    "https://www.kanzenshuu.com/episode/kai/eps-018/",
+    "https://dragonballuniverse.fandom.com/wiki/DBK018",
+    "https://dragonball.fandom.com/wiki/The_Ship_Resting_in_Yunzabit%21_Time_to_Blast_Off_for_Planet_Namek%21"
+   ]
+  },
+  {
+   "episode": 19,
+   "end_chapter": 247,
+   "start_chapter": 246,
+   "chapters_adapted": "246, 247 (p.1-14)",
+   "volume": 21,
+   "confidence": "high",
+   "note": "Kanzenshuu JP ep 019: 246, 247 (p.1-14); Dragon Universe wiki & fandom agree on END",
+   "sources": [
+    "https://www.kanzenshuu.com/episode/kai/eps-019/",
+    "https://dragonballuniverse.fandom.com/wiki/DBK019",
+    "https://dragonball.fandom.com/wiki/A_Powerful_New_Foe%21_Frieza%2C_Ruler_of_the_Universe%21"
+   ]
+  },
+  {
+   "episode": 20,
+   "end_chapter": 250,
+   "start_chapter": 248,
+   "chapters_adapted": "247 (p.15), 248-250",
+   "volume": 21,
+   "confidence": "high",
+   "note": "Kanzenshuu JP ep 020: 247 (p.15), 248-250; Dragon Universe wiki & fandom agree on END",
+   "sources": [
+    "https://www.kanzenshuu.com/episode/kai/eps-020/",
+    "https://dragonballuniverse.fandom.com/wiki/DBK020",
+    "https://dragonball.fandom.com/wiki/The_Rebellion_Against_Frieza%21_Vegeta%27s_Burning_Ambition%21"
+   ]
+  },
+  {
+   "episode": 21,
+   "end_chapter": 254,
+   "start_chapter": 251,
+   "chapters_adapted": "251-253, 254 (p.1-3)",
+   "volume": 22,
+   "confidence": "high",
+   "note": "Kanzenshuu JP ep 021: 251-253, 254 (p.1-3); Dragon Universe wiki & fandom agree on END",
+   "sources": [
+    "https://www.kanzenshuu.com/episode/kai/eps-021/",
+    "https://dragonballuniverse.fandom.com/wiki/DBK021",
+    "https://dragonball.fandom.com/wiki/Protect_the_Dragon_Balls%21_The_Namekians%27_All-Out_Attack%21"
+   ]
+  },
+  {
+   "episode": 22,
+   "end_chapter": 257,
+   "start_chapter": 254,
+   "chapters_adapted": "254 (p.4-end), 255-257",
+   "volume": 22,
+   "confidence": "high",
+   "note": "Kanzenshuu JP ep 022: 254 (p.4-end), 255-257; Dragon Universe wiki & fandom agree on END",
+   "sources": [
+    "https://www.kanzenshuu.com/episode/kai/eps-022/",
+    "https://dragonballuniverse.fandom.com/wiki/DBK022",
+    "https://dragonball.fandom.com/wiki/Dodoria%27s_Terrifying_Chase%21_A_Truth_Revealed_to_Vegeta%21"
+   ]
+  },
+  {
+   "episode": 23,
+   "end_chapter": 260,
+   "start_chapter": 258,
+   "chapters_adapted": "258-259, 260 (p.1-11)",
+   "volume": 22,
+   "confidence": "high",
+   "note": "Kanzenshuu JP ep 023: 258-259, 260 (p.1-11); Dragon Universe wiki & fandom agree on END",
+   "sources": [
+    "https://www.kanzenshuu.com/episode/kai/eps-023/",
+    "https://dragonballuniverse.fandom.com/wiki/DBK023",
+    "https://dragonball.fandom.com/wiki/Vegeta%27s_Covert_Maneuvers%21_A_Tragic_Assault_on_the_Namekians%21"
+   ]
+  },
+  {
+   "episode": 24,
+   "end_chapter": 263,
+   "start_chapter": 261,
+   "chapters_adapted": "260 (p.12-end), 261-263",
+   "volume": 22,
+   "confidence": "high",
+   "note": "Kanzenshuu JP ep 024: 260 (p.12-end), 261-263; Dragon Universe wiki & fandom agree on END",
+   "sources": [
+    "https://www.kanzenshuu.com/episode/kai/eps-024/",
+    "https://dragonballuniverse.fandom.com/wiki/DBK024",
+    "https://dragonball.fandom.com/wiki/Friends_Reborn%21_Zarbon%27s_Hideous_Transformation%21"
+   ]
+  },
+  {
+   "episode": 25,
+   "end_chapter": 265,
+   "start_chapter": 264,
+   "chapters_adapted": "264 (p.11-end), 265 (p.1-8), 264 (p.1-9), 265 (p.9-11)",
+   "volume": 23,
+   "confidence": "high",
+   "note": "Kanzenshuu JP ep 025: 264 (p.11-end), 265 (p.1-8), 264 (p.1-9), 265 (p.9-11); Dragon Universe wiki & fandom agree on END",
+   "sources": [
+    "https://www.kanzenshuu.com/episode/kai/eps-025/",
+    "https://dragonballuniverse.fandom.com/wiki/DBK025",
+    "https://dragonball.fandom.com/wiki/Power_Up%2C_Krillin%21_Frieza%27s_Mounting_Apprehension%21"
+   ]
+  },
+  {
+   "episode": 26,
+   "end_chapter": 268,
+   "start_chapter": 266,
+   "chapters_adapted": "265 (p.12-end), 266 (altered form), 267, 268 (p.1-12)",
+   "volume": 23,
+   "confidence": "high",
+   "note": "Kanzenshuu JP ep 026: 265 (p.12-end), 266 (altered form), 267, 268 (p.1-12); Dragon Universe wiki & fandom agree on END",
+   "sources": [
+    "https://www.kanzenshuu.com/episode/kai/eps-026/",
+    "https://dragonballuniverse.fandom.com/wiki/DBK026",
+    "https://dragonball.fandom.com/wiki/The_Scheme_is_Shattered%21_Vegeta_Strikes_Back_at_Zarbon%21"
+   ]
+  },
+  {
+   "episode": 27,
+   "end_chapter": 270,
+   "start_chapter": 269,
+   "chapters_adapted": "268 (p.13-end), 269, 270 (p.1-8)",
+   "volume": 23,
+   "confidence": "high",
+   "note": "Kanzenshuu JP ep 027: 268 (p.13-end), 269, 270 (p.1-8); Dragon Universe wiki & fandom agree on END",
+   "sources": [
+    "https://www.kanzenshuu.com/episode/kai/eps-027/",
+    "https://dragonballuniverse.fandom.com/wiki/DBK027",
+    "https://dragonball.fandom.com/wiki/A_Touch-and-Go_Situation%21_Gohan%2C_Protect_the_Four_Star_Ball%21"
+   ]
+  },
+  {
+   "episode": 28,
+   "end_chapter": 272,
+   "start_chapter": 271,
+   "chapters_adapted": "270 (p.9-end), 271, 272 (p.1-8)",
+   "volume": 23,
+   "confidence": "high",
+   "note": "Kanzenshuu JP ep 028: 270 (p.9-end), 271, 272 (p.1-8); Dragon Universe wiki & fandom agree on END",
+   "sources": [
+    "https://www.kanzenshuu.com/episode/kai/eps-028/",
+    "https://dragonballuniverse.fandom.com/wiki/DBK028",
+    "https://dragonball.fandom.com/wiki/The_Countdown_to_Battle_Begins%21_Enter%2C_the_Ginyu_Force%21"
+   ]
+  },
+  {
+   "episode": 29,
+   "end_chapter": 274,
+   "start_chapter": 273,
+   "chapters_adapted": "272 (p.9-end), 273-274",
+   "volume": 23,
+   "confidence": "high",
+   "note": "Kanzenshuu JP ep 029: 272 (p.9-end), 273-274; Dragon Universe wiki & fandom agree on END",
+   "sources": [
+    "https://www.kanzenshuu.com/episode/kai/eps-029/",
+    "https://dragonballuniverse.fandom.com/wiki/DBK029",
+    "https://dragonball.fandom.com/wiki/First_Up_for_the_Ginyu_Force%21_Guldo%27s_Time_Freeze%21"
+   ]
+  },
+  {
+   "episode": 30,
+   "end_chapter": 278,
+   "start_chapter": 275,
+   "chapters_adapted": "275-278",
+   "volume": 24,
+   "confidence": "high",
+   "note": "Kanzenshuu JP ep 030: 275-278; Dragon Universe wiki & fandom agree on END",
+   "sources": [
+    "https://www.kanzenshuu.com/episode/kai/eps-030/",
+    "https://dragonballuniverse.fandom.com/wiki/DBK030",
+    "https://dragonball.fandom.com/wiki/The_Nightmare_Recoome%21_Come_Out_and_Play%2C_Vegeta%21"
+   ]
+  },
+  {
+   "episode": 31,
+   "end_chapter": 282,
+   "start_chapter": 279,
+   "chapters_adapted": "279-281, 282 (p.1-9)",
+   "volume": 24,
+   "confidence": "high",
+   "note": "Kanzenshuu JP ep 031: 279-281, 282 (p.1-9); Dragon Universe wiki & fandom agree on END",
+   "sources": [
+    "https://www.kanzenshuu.com/episode/kai/eps-031/",
+    "https://dragonballuniverse.fandom.com/wiki/DBK031",
+    "https://dragonball.fandom.com/wiki/Goku_Arrives_at_Last%21_Take_Down_the_Ginyu_Force%21"
+   ]
+  },
+  {
+   "episode": 32,
+   "end_chapter": 284,
+   "start_chapter": 283,
+   "chapters_adapted": "282 (p.10-end), 283-284",
+   "volume": 24,
+   "confidence": "high",
+   "note": "Kanzenshuu JP ep 032: 282 (p.10-end), 283-284; Dragon Universe wiki & fandom agree on END",
+   "sources": [
+    "https://www.kanzenshuu.com/episode/kai/eps-032/",
+    "https://dragonballuniverse.fandom.com/wiki/DBK032",
+    "https://dragonball.fandom.com/wiki/The_Star_Player_Appears%21_Ginyu_vs._Goku%21"
+   ]
+  },
+  {
+   "episode": 33,
+   "end_chapter": 286,
+   "start_chapter": 285,
+   "chapters_adapted": "285, 286 (p.1-13)",
+   "volume": 24,
+   "confidence": "high",
+   "note": "Kanzenshuu JP ep 033: 285, 286 (p.1-13); Dragon Universe wiki & fandom agree on END",
+   "sources": [
+    "https://www.kanzenshuu.com/episode/kai/eps-033/",
+    "https://dragonballuniverse.fandom.com/wiki/DBK033",
+    "https://dragonball.fandom.com/wiki/Full_Power%2C_Goku%21_Captain_Ginyu%27s_Desperate_Attack%21"
+   ]
+  },
+  {
+   "episode": 34,
+   "end_chapter": 288,
+   "start_chapter": 287,
+   "chapters_adapted": "286 (p.14), 287, 288 (p.1-8)",
+   "volume": 24,
+   "confidence": "high",
+   "note": "Kanzenshuu JP ep 034: 286 (p.14), 287, 288 (p.1-8); Dragon Universe wiki agree on END; fandom lists 287-289 (title-only list, omits page tails)",
+   "sources": [
+    "https://www.kanzenshuu.com/episode/kai/eps-034/",
+    "https://dragonballuniverse.fandom.com/wiki/DBK034",
+    "https://dragonball.fandom.com/wiki/Surprise%21_Goku_is_Ginyu_and_Ginyu_is_Goku%3F%21"
+   ]
+  },
+  {
+   "episode": 35,
+   "end_chapter": 292,
+   "start_chapter": 289,
+   "chapters_adapted": "288 (p.9-end), 289-291, 292 (p.1-11)",
+   "volume": 25,
+   "confidence": "high",
+   "note": "Kanzenshuu JP ep 035: 288 (p.9-end), 289-291, 292 (p.1-11); Dragon Universe wiki & fandom agree on END",
+   "sources": [
+    "https://www.kanzenshuu.com/episode/kai/eps-035/",
+    "https://dragonballuniverse.fandom.com/wiki/DBK035",
+    "https://dragonball.fandom.com/wiki/Goku%27s_Comeback%21_Call_Forth_Porunga%21"
+   ]
+  },
+  {
+   "episode": 36,
+   "end_chapter": 294,
+   "start_chapter": 293,
+   "chapters_adapted": "292 (p.12-end), 293, 294 (p.1-11)",
+   "volume": 25,
+   "confidence": "high",
+   "note": "Kanzenshuu JP ep 036: 292 (p.12-end), 293, 294 (p.1-11); Dragon Universe wiki & fandom agree on END",
+   "sources": [
+    "https://www.kanzenshuu.com/episode/kai/eps-036/",
+    "https://dragonballuniverse.fandom.com/wiki/DBK036",
+    "https://dragonball.fandom.com/wiki/Frieza_Closes_In%21_Mighty_Porunga%2C_Grant_Our_Wish%21"
+   ]
+  },
+  {
+   "episode": 37,
+   "end_chapter": 296,
+   "start_chapter": 295,
+   "chapters_adapted": "294 (p.12-end), 295-296",
+   "volume": 25,
+   "confidence": "high",
+   "note": "Kanzenshuu JP ep 037: 294 (p.12-end), 295-296; Dragon Universe wiki & fandom agree on END",
+   "sources": [
+    "https://www.kanzenshuu.com/episode/kai/eps-037/",
+    "https://dragonballuniverse.fandom.com/wiki/DBK037",
+    "https://dragonball.fandom.com/wiki/A_Nightmare_Transformation%21_Frieza%27s_Power_Level%3A_One-Million%3F%21"
+   ]
+  },
+  {
+   "episode": 38,
+   "end_chapter": 300,
+   "start_chapter": 297,
+   "chapters_adapted": "297-299, 300 (p.1-5)",
+   "volume": 25,
+   "confidence": "high",
+   "note": "Kanzenshuu lists 298-300 (p.1-5) and omits 297 (Gohan Gyakujo / Freeza vs. Gohan), which DU and fandom both list for this episode; END 300 per Kanzenshuu + DU",
+   "sources": [
+    "https://www.kanzenshuu.com/episode/kai/eps-038/",
+    "https://dragonballuniverse.fandom.com/wiki/DBK038",
+    "https://dragonball.fandom.com/wiki/Frieza_Bares_His_Fangs%21_Gohan%27s_Overwhelming_Attack%21"
+   ]
+  },
+  {
+   "episode": 39,
+   "end_chapter": 302,
+   "start_chapter": 301,
+   "chapters_adapted": "300 (p.6-end), 301-302",
+   "volume": 26,
+   "confidence": "high",
+   "note": "Kanzenshuu JP ep 039: 300 (p.6-end), 301-302; Dragon Universe wiki & fandom agree on END",
+   "sources": [
+    "https://www.kanzenshuu.com/episode/kai/eps-039/",
+    "https://dragonballuniverse.fandom.com/wiki/DBK039",
+    "https://dragonball.fandom.com/wiki/Piccolo_Reborn%21_Frieza%27s_Second_Transformation%21"
+   ]
+  },
+  {
+   "episode": 40,
+   "end_chapter": 305,
+   "start_chapter": 303,
+   "chapters_adapted": "303-304, 305 (p.1-8)",
+   "volume": 26,
+   "confidence": "high",
+   "note": "Kanzenshuu JP ep 040: 303-304, 305 (p.1-8); Dragon Universe wiki & fandom agree on END",
+   "sources": [
+    "https://www.kanzenshuu.com/episode/kai/eps-040/",
+    "https://dragonballuniverse.fandom.com/wiki/DBK040",
+    "https://dragonball.fandom.com/wiki/Frieza%27s_Final_Transformation%21_The_Ultimate_Nightmare_Begins%21"
+   ]
+  },
+  {
+   "episode": 41,
+   "end_chapter": 306,
+   "start_chapter": 306,
+   "chapters_adapted": "305 (p.9-end), 306",
+   "volume": 26,
+   "confidence": "high",
+   "note": "Kanzenshuu JP ep 041: 305 (p.9-end), 306; Dragon Universe wiki & fandom agree on END",
+   "sources": [
+    "https://www.kanzenshuu.com/episode/kai/eps-041/",
+    "https://dragonballuniverse.fandom.com/wiki/DBK041",
+    "https://dragonball.fandom.com/wiki/The_Moment_of_Truth_Approaches%21_Goku_Back_in_Action%21"
+   ]
+  },
+  {
+   "episode": 42,
+   "end_chapter": 308,
+   "start_chapter": 307,
+   "chapters_adapted": "307, 308 (p.1-7)",
+   "volume": 26,
+   "confidence": "high",
+   "note": "Kanzenshuu JP ep 042: 307, 308 (p.1-7); Dragon Universe wiki & fandom agree on END",
+   "sources": [
+    "https://www.kanzenshuu.com/episode/kai/eps-042/",
+    "https://dragonballuniverse.fandom.com/wiki/DBK042",
+    "https://dragonball.fandom.com/wiki/Defeat_Frieza%2C_Goku%21_The_Tears_of_the_Proud_Saiyan_Prince%21"
+   ]
+  },
+  {
+   "episode": 43,
+   "end_chapter": 310,
+   "start_chapter": 309,
+   "chapters_adapted": "308 (p.8-end), 309-310",
+   "volume": 26,
+   "confidence": "high",
+   "note": "Kanzenshuu JP ep 043: 308 (p.8-end), 309-310; Dragon Universe wiki & fandom agree on END",
+   "sources": [
+    "https://www.kanzenshuu.com/episode/kai/eps-043/",
+    "https://dragonballuniverse.fandom.com/wiki/DBK043",
+    "https://dragonball.fandom.com/wiki/Goku_vs._Frieza%21_The_Super_Showdown_Begins%21"
+   ]
+  },
+  {
+   "episode": 44,
+   "end_chapter": 312,
+   "start_chapter": 311,
+   "chapters_adapted": "311-312",
+   "volume": 26,
+   "confidence": "high",
+   "note": "Kanzenshuu JP ep 044: 311-312; Dragon Universe wiki & fandom agree on END",
+   "sources": [
+    "https://www.kanzenshuu.com/episode/kai/eps-044/",
+    "https://dragonballuniverse.fandom.com/wiki/DBK044",
+    "https://dragonball.fandom.com/wiki/A_Boundary-Pushing_Brawl%21_Goku%2C_Frieza%2C_and_Ginyu_Again%3F%21"
+   ]
+  },
+  {
+   "episode": 45,
+   "end_chapter": 314,
+   "start_chapter": 313,
+   "chapters_adapted": "313, 314 (p.1-11)",
+   "volume": 27,
+   "confidence": "high",
+   "note": "Kanzenshuu JP ep 045: 313, 314 (p.1-11); Dragon Universe wiki & fandom agree on END",
+   "sources": [
+    "https://www.kanzenshuu.com/episode/kai/eps-045/",
+    "https://dragonballuniverse.fandom.com/wiki/DBK045",
+    "https://dragonball.fandom.com/wiki/Kaio-ken_Times_Twenty%21_An_All-Or-Nothing_Kamehame-Ha%21"
+   ]
+  },
+  {
+   "episode": 46,
+   "end_chapter": 316,
+   "start_chapter": 315,
+   "chapters_adapted": "314 (p.11-end), 315, 316 (p.1-2)",
+   "volume": 27,
+   "confidence": "high",
+   "note": "Kanzenshuu JP ep 046: 314 (p.11-end), 315, 316 (p.1-2); Dragon Universe wiki & fandom agree on END",
+   "sources": [
+    "https://www.kanzenshuu.com/episode/kai/eps-046/",
+    "https://dragonballuniverse.fandom.com/wiki/DBK046",
+    "https://dragonball.fandom.com/wiki/The_Final_Trump_Card%21_Goku%27s_Ultimate_Spirit_Bomb%21"
+   ]
+  },
+  {
+   "episode": 47,
+   "end_chapter": 317,
+   "start_chapter": 316,
+   "chapters_adapted": "316 (p.2-end), 317",
+   "volume": 27,
+   "confidence": "high",
+   "note": "Kanzenshuu JP ep 047: 316 (p.2-end), 317; Dragon Universe wiki & fandom agree on END",
+   "sources": [
+    "https://www.kanzenshuu.com/episode/kai/eps-047/",
+    "https://dragonballuniverse.fandom.com/wiki/DBK047",
+    "https://dragonball.fandom.com/wiki/Awaken%2C_Legendary_Warrior%21_Goku_the_Super_Saiyan%21"
+   ]
+  },
+  {
+   "episode": 48,
+   "end_chapter": 320,
+   "start_chapter": 318,
+   "chapters_adapted": "318-319, 320 (p.1)",
+   "volume": 27,
+   "confidence": "high",
+   "note": "Kanzenshuu JP ep 048: 318-319, 320 (p.1); Dragon Universe wiki & fandom agree on END",
+   "sources": [
+    "https://www.kanzenshuu.com/episode/kai/eps-048/",
+    "https://dragonballuniverse.fandom.com/wiki/DBK048",
+    "https://dragonball.fandom.com/wiki/The_Angry_Super_Saiyan%21_Goku_Throws_Down_the_Gauntlet%21"
+   ]
+  },
+  {
+   "episode": 49,
+   "end_chapter": 321,
+   "start_chapter": 320,
+   "chapters_adapted": "320 (p.2-end), 321 (p.1-8)",
+   "volume": 27,
+   "confidence": "high",
+   "note": "Kanzenshuu JP ep 049: 320 (p.2-end), 321 (p.1-8); Dragon Universe wiki & fandom agree on END",
+   "sources": [
+    "https://www.kanzenshuu.com/episode/kai/eps-049/",
+    "https://dragonballuniverse.fandom.com/wiki/DBK049",
+    "https://dragonball.fandom.com/wiki/Avenge_the_Fallen%2C_Goku%21_Countdown_to_the_Planet%27s_Destruction%21"
+   ]
+  },
+  {
+   "episode": 50,
+   "end_chapter": 322,
+   "start_chapter": 322,
+   "chapters_adapted": "321 (p.9-end), 322",
+   "volume": 27,
+   "confidence": "high",
+   "note": "Kanzenshuu JP ep 050: 321 (p.9-end), 322; Dragon Universe wiki & fandom agree on END",
+   "sources": [
+    "https://www.kanzenshuu.com/episode/kai/eps-050/",
+    "https://dragonballuniverse.fandom.com/wiki/DBK050",
+    "https://dragonball.fandom.com/wiki/Full-Power_Frieza%21_Shenron%2C_Grant_Our_Wish%21"
+   ]
+  },
+  {
+   "episode": 51,
+   "end_chapter": 324,
+   "start_chapter": 323,
+   "chapters_adapted": "323, 324 (p.1-11)",
+   "volume": 27,
+   "confidence": "high",
+   "note": "Kanzenshuu JP ep 051: 323, 324 (p.1-11); Dragon Universe wiki & fandom agree on END",
+   "sources": [
+    "https://www.kanzenshuu.com/episode/kai/eps-051/",
+    "https://dragonballuniverse.fandom.com/wiki/DBK051",
+    "https://dragonball.fandom.com/wiki/Goku%27s_Furious_Roar%21_A_Last-Minute_Resurrection_Wish%21"
+   ]
+  },
+  {
+   "episode": 52,
+   "end_chapter": 326,
+   "start_chapter": 325,
+   "chapters_adapted": "324 (p.12-end), 325, 326 (p.1-11)",
+   "volume": 28,
+   "confidence": "high",
+   "note": "Kanzenshuu JP ep 052: 324 (p.12-end), 325, 326 (p.1-11); Dragon Universe wiki & fandom agree on END",
+   "sources": [
+    "https://www.kanzenshuu.com/episode/kai/eps-052/",
+    "https://dragonballuniverse.fandom.com/wiki/DBK052",
+    "https://dragonball.fandom.com/wiki/Duel_on_a_Vanishing_Planet%21_The_Final_Showdown%21"
+   ]
+  },
+  {
+   "episode": 53,
+   "end_chapter": 328,
+   "start_chapter": 327,
+   "chapters_adapted": "326 (p.12-end), 327, 328 (p.1-10)",
+   "volume": 28,
+   "confidence": "high",
+   "note": "Kanzenshuu JP ep 053: 326 (p.12-end), 327, 328 (p.1-10); Dragon Universe wiki & fandom agree on END",
+   "sources": [
+    "https://www.kanzenshuu.com/episode/kai/eps-053/",
+    "https://dragonballuniverse.fandom.com/wiki/DBK053",
+    "https://dragonball.fandom.com/wiki/Goku%27s_Final_Attack%21_Countdown_to_Planet_Namek%27s_Destruction%21"
+   ]
+  },
+  {
+   "episode": 54,
+   "end_chapter": 329,
+   "start_chapter": 329,
+   "chapters_adapted": "328 (p.11-end), 329 (p.1-10)",
+   "volume": 28,
+   "confidence": "high",
+   "note": "Kanzenshuu JP ep 054: 328 (p.11-end), 329 (p.1-10); Dragon Universe wiki & fandom agree on END",
+   "sources": [
+    "https://www.kanzenshuu.com/episode/kai/eps-054/",
+    "https://dragonballuniverse.fandom.com/wiki/DBK054",
+    "https://dragonball.fandom.com/wiki/Goku_Vanishes_Into_Space%21_Welcome_Home%2C_Super_Warriors%21"
+   ]
+  },
+  {
+   "episode": 55,
+   "end_chapter": 331,
+   "start_chapter": 330,
+   "chapters_adapted": "329 (p.11-end), 330, 331 (p.1-2)",
+   "volume": 28,
+   "confidence": "high",
+   "note": "Kanzenshuu JP ep 055: 329 (p.11-end), 330, 331 (p.1-2); Dragon Universe wiki & fandom agree on END",
+   "sources": [
+    "https://www.kanzenshuu.com/episode/kai/eps-055/",
+    "https://dragonballuniverse.fandom.com/wiki/DBK055",
+    "https://dragonball.fandom.com/wiki/There_is_Planet_Earth%2C_Father%21_Frieza_and_King_Cold_Strike_Back%21"
+   ]
+  },
+  {
+   "episode": 56,
+   "end_chapter": 333,
+   "start_chapter": 331,
+   "chapters_adapted": "331 (p.3-end), 332, 333 (p.1-2)",
+   "volume": 28,
+   "confidence": "high",
+   "note": "Kanzenshuu JP ep 056: 331 (p.3-end), 332, 333 (p.1-2); Dragon Universe wiki & fandom agree on END",
+   "sources": [
+    "https://www.kanzenshuu.com/episode/kai/eps-056/",
+    "https://dragonballuniverse.fandom.com/wiki/DBK056",
+    "https://dragonball.fandom.com/wiki/I_Will_Defeat_Frieza%21_Another_Super_Saiyan%21"
+   ]
+  },
+  {
+   "episode": 57,
+   "end_chapter": 335,
+   "start_chapter": 333,
+   "chapters_adapted": "333 (p.3-end), 334-335",
+   "volume": 28,
+   "confidence": "high",
+   "note": "Kanzenshuu JP ep 057: 333 (p.3-end), 334-335; Dragon Universe wiki & fandom agree on END",
+   "sources": [
+    "https://www.kanzenshuu.com/episode/kai/eps-057/",
+    "https://dragonballuniverse.fandom.com/wiki/DBK057",
+    "https://dragonball.fandom.com/wiki/Welcome_Back%2C_Goku%21_Confessions_of_the_Mysterious_Youth%2C_Trunks%21"
+   ]
+  },
+  {
+   "episode": 58,
+   "end_chapter": 336,
+   "start_chapter": 336,
+   "chapters_adapted": "336",
+   "volume": 28,
+   "confidence": "high",
+   "note": "Kanzenshuu JP ep 058: 336; Dragon Universe wiki agree on END; fandom lists 336-337 (title-only list, omits page tails)",
+   "sources": [
+    "https://www.kanzenshuu.com/episode/kai/eps-058/",
+    "https://dragonballuniverse.fandom.com/wiki/DBK058",
+    "https://dragonball.fandom.com/wiki/Goku%27s_New_Move%2C_Instant_Transmission%21_The_Three-Year_Training_Session_Begins%21"
+   ]
+  },
+  {
+   "episode": 59,
+   "end_chapter": 340,
+   "start_chapter": 337,
+   "chapters_adapted": "337-339, 340 (p.1-2)",
+   "volume": 29,
+   "confidence": "high",
+   "note": "Kanzenshuu JP ep 059: 337-339, 340 (p.1-2); Dragon Universe wiki & fandom agree on END",
+   "sources": [
+    "https://www.kanzenshuu.com/episode/kai/eps-059/",
+    "https://dragonballuniverse.fandom.com/wiki/DBK059",
+    "https://dragonball.fandom.com/wiki/Undetectable_Monsters%21_The_Androids_Appear%21"
+   ]
+  },
+  {
+   "episode": 60,
+   "end_chapter": 342,
+   "start_chapter": 340,
+   "chapters_adapted": "340 (p.2-end), 341, 342 (p.1-13)",
+   "volume": 29,
+   "confidence": "high",
+   "note": "Kanzenshuu JP ep 060: 340 (p.2-end), 341, 342 (p.1-13); Dragon Universe wiki & fandom agree on END",
+   "sources": [
+    "https://www.kanzenshuu.com/episode/kai/eps-060/",
+    "https://dragonballuniverse.fandom.com/wiki/DBK060",
+    "https://dragonball.fandom.com/wiki/The_Unbeatable_Enemy_Within%21_Goku_vs._Android_19%21"
+   ]
+  },
+  {
+   "episode": 61,
+   "end_chapter": 345,
+   "start_chapter": 343,
+   "chapters_adapted": "342 (p.14), 343-344, 345 (p.1-7)",
+   "volume": 29,
+   "confidence": "high",
+   "note": "Kanzenshuu JP ep 061: 342 (p.14), 343-344, 345 (p.1-7); Dragon Universe wiki & fandom agree on END",
+   "sources": [
+    "https://www.kanzenshuu.com/episode/kai/eps-061/",
+    "https://dragonballuniverse.fandom.com/wiki/DBK061",
+    "https://dragonball.fandom.com/wiki/No_Victory_for_Android_19%21_Enter_Super_Vegeta%21"
+   ]
+  },
+  {
+   "episode": 62,
+   "end_chapter": 347,
+   "start_chapter": 346,
+   "chapters_adapted": "345 (p.8-end), 346, 347 (p.1-12)",
+   "volume": 29,
+   "confidence": "high",
+   "note": "Kanzenshuu JP ep 062: 345 (p.8-end), 346, 347 (p.1-12); Dragon Universe wiki & fandom agree on END",
+   "sources": [
+    "https://www.kanzenshuu.com/episode/kai/eps-062/",
+    "https://dragonballuniverse.fandom.com/wiki/DBK062",
+    "https://dragonball.fandom.com/wiki/Piccolo%27s_Assault%21_Android_20_and_the_Twisted_Future%21"
+   ]
+  },
+  {
+   "episode": 63,
+   "end_chapter": 349,
+   "start_chapter": 348,
+   "chapters_adapted": "347 (p.13-end), 348, 349 (p.1-6)",
+   "volume": 29,
+   "confidence": "high",
+   "note": "Kanzenshuu JP ep 063: 347 (p.13-end), 348, 349 (p.1-6); Dragon Universe wiki & fandom agree on END",
+   "sources": [
+    "https://www.kanzenshuu.com/episode/kai/eps-063/",
+    "https://dragonballuniverse.fandom.com/wiki/DBK063",
+    "https://dragonball.fandom.com/wiki/The_Hunt_for_Dr._Gero%21_Discover_the_Hidden_Laboratory%21"
+   ]
+  },
+  {
+   "episode": 64,
+   "end_chapter": 351,
+   "start_chapter": 350,
+   "chapters_adapted": "349 (p.7-end), 350-351",
+   "volume": 30,
+   "confidence": "high",
+   "note": "Kanzenshuu JP ep 064: 349 (p.7-end), 350-351; Dragon Universe wiki & fandom agree on END",
+   "sources": [
+    "https://www.kanzenshuu.com/episode/kai/eps-064/",
+    "https://dragonballuniverse.fandom.com/wiki/DBK064",
+    "https://dragonball.fandom.com/wiki/Number_17_and_Number_18%21_The_Androids_Awaken%21"
+   ]
+  },
+  {
+   "episode": 65,
+   "end_chapter": 355,
+   "start_chapter": 352,
+   "chapters_adapted": "352-354, 355 (p.1-5)",
+   "volume": 30,
+   "confidence": "high",
+   "note": "Kanzenshuu JP ep 065: 352-354, 355 (p.1-5); Dragon Universe wiki & fandom agree on END",
+   "sources": [
+    "https://www.kanzenshuu.com/episode/kai/eps-065/",
+    "https://dragonballuniverse.fandom.com/wiki/DBK065",
+    "https://dragonball.fandom.com/wiki/A_Sweet_Face_and_Super_Power%3F_Android_18_vs._Vegeta%21"
+   ]
+  },
+  {
+   "episode": 66,
+   "end_chapter": 356,
+   "start_chapter": 356,
+   "chapters_adapted": "355 (p.5-end), 356",
+   "volume": 30,
+   "confidence": "high",
+   "note": "Kanzenshuu JP ep 066: 355 (p.5-end), 356; Dragon Universe wiki & fandom agree on END",
+   "sources": [
+    "https://www.kanzenshuu.com/episode/kai/eps-066/",
+    "https://dragonballuniverse.fandom.com/wiki/DBK066",
+    "https://dragonball.fandom.com/wiki/The_Time_for_Reunification_has_Come%21_Piccolo%27s_Unshakeable_Resolve%21"
+   ]
+  },
+  {
+   "episode": 67,
+   "end_chapter": 358,
+   "start_chapter": 357,
+   "chapters_adapted": "357-358",
+   "volume": 30,
+   "confidence": "high",
+   "note": "Kanzenshuu JP ep 067: 357-358; Dragon Universe wiki & fandom agree on END",
+   "sources": [
+    "https://www.kanzenshuu.com/episode/kai/eps-067/",
+    "https://dragonballuniverse.fandom.com/wiki/DBK067",
+    "https://dragonball.fandom.com/wiki/Another_Time_Machine%3F_Bulma_Uncovers_a_Mystery%21"
+   ]
+  },
+  {
+   "episode": 68,
+   "end_chapter": 361,
+   "start_chapter": 359,
+   "chapters_adapted": "359-360, 361 (p.1-2)",
+   "volume": 30,
+   "confidence": "high",
+   "note": "Kanzenshuu JP ep 068: 359-360, 361 (p.1-2); Dragon Universe wiki & fandom agree on END",
+   "sources": [
+    "https://www.kanzenshuu.com/episode/kai/eps-068/",
+    "https://dragonballuniverse.fandom.com/wiki/DBK068",
+    "https://dragonball.fandom.com/wiki/The_Monster_Goes_Into_Motion%21_Strike_of_the_Super_Namekian%21"
+   ]
+  },
+  {
+   "episode": 69,
+   "end_chapter": 363,
+   "start_chapter": 361,
+   "chapters_adapted": "361 (p.3-end), 362, 363 (p.1-8)",
+   "volume": 31,
+   "confidence": "high",
+   "note": "Kanzenshuu JP ep 069: 361 (p.3-end), 362, 363 (p.1-8); Dragon Universe wiki & fandom agree on END",
+   "sources": [
+    "https://www.kanzenshuu.com/episode/kai/eps-069/",
+    "https://dragonballuniverse.fandom.com/wiki/DBK069",
+    "https://dragonball.fandom.com/wiki/I_Am_Your_Brother%21_The_Monster_with_Goku%27s_Energy%21"
+   ]
+  },
+  {
+   "episode": 70,
+   "end_chapter": 364,
+   "start_chapter": 364,
+   "chapters_adapted": "363 (p.8-end), 364",
+   "volume": 31,
+   "confidence": "high",
+   "note": "Kanzenshuu JP ep 070: 363 (p.8-end), 364; Dragon Universe wiki & fandom agree on END",
+   "sources": [
+    "https://www.kanzenshuu.com/episode/kai/eps-070/",
+    "https://dragonballuniverse.fandom.com/wiki/DBK070",
+    "https://dragonball.fandom.com/wiki/The_Dizzying_Deception_and_the_Daring_Escape%21_Defeat_the_Android_Cell%21"
+   ]
+  },
+  {
+   "episode": 71,
+   "end_chapter": 365,
+   "start_chapter": 365,
+   "chapters_adapted": "365",
+   "volume": 31,
+   "confidence": "high",
+   "note": "Kanzenshuu JP ep 071: 365; Dragon Universe wiki & fandom agree on END",
+   "sources": [
+    "https://www.kanzenshuu.com/episode/kai/eps-071/",
+    "https://dragonballuniverse.fandom.com/wiki/DBK071",
+    "https://dragonball.fandom.com/wiki/The_Hunt_for_Cell_is_On%21_Goku%2C_Back_in_Action%21"
+   ]
+  },
+  {
+   "episode": 72,
+   "end_chapter": 367,
+   "start_chapter": 366,
+   "chapters_adapted": "366, 367 (p.1-8)",
+   "volume": 31,
+   "confidence": "high",
+   "note": "Kanzenshuu JP ep 072: 366, 367 (p.1-8); Dragon Universe wiki & fandom agree on END",
+   "sources": [
+    "https://www.kanzenshuu.com/episode/kai/eps-072/",
+    "https://dragonballuniverse.fandom.com/wiki/DBK072",
+    "https://dragonball.fandom.com/wiki/Break_the_Super_Saiyan_Barrier%21_Into_the_Hyperbolic_Time_Chamber%21"
+   ]
+  },
+  {
+   "episode": 73,
+   "end_chapter": 368,
+   "start_chapter": 368,
+   "chapters_adapted": "367 (p.9-end), 368",
+   "volume": 31,
+   "confidence": "high",
+   "note": "Kanzenshuu JP ep 073: 367 (p.9-end), 368; Dragon Universe wiki & fandom agree on END",
+   "sources": [
+    "https://www.kanzenshuu.com/episode/kai/eps-073/",
+    "https://dragonballuniverse.fandom.com/wiki/DBK073",
+    "https://dragonball.fandom.com/wiki/The_Super_Namekian_Powers_Up%21_Piccolo_vs._Android_17%21"
+   ]
+  },
+  {
+   "episode": 74,
+   "end_chapter": 370,
+   "start_chapter": 369,
+   "chapters_adapted": "369, 370 (p.1-14)",
+   "volume": 31,
+   "confidence": "high",
+   "note": "Kanzenshuu JP ep 074: 369, 370 (p.1-14); Dragon Universe wiki & fandom agree on END",
+   "sources": [
+    "https://www.kanzenshuu.com/episode/kai/eps-074/",
+    "https://dragonballuniverse.fandom.com/wiki/DBK074",
+    "https://dragonball.fandom.com/wiki/Run%2C_Android_17%21_Piccolo%27s_All-Or-Nothing_Struggle%21"
+   ]
+  },
+  {
+   "episode": 75,
+   "end_chapter": 373,
+   "start_chapter": 371,
+   "chapters_adapted": "370 (p.14), 371-372, 373 (p.1-13)",
+   "volume": 31,
+   "confidence": "high",
+   "note": "Kanzenshuu JP ep 075: 370 (p.14), 371-372, 373 (p.1-13); Dragon Universe wiki & fandom agree on END",
+   "sources": [
+    "https://www.kanzenshuu.com/episode/kai/eps-075/",
+    "https://dragonballuniverse.fandom.com/wiki/DBK075",
+    "https://dragonball.fandom.com/wiki/Power_Unknown%21_Android_16_Breaks_His_Silence%21"
+   ]
+  },
+  {
+   "episode": 76,
+   "end_chapter": 376,
+   "start_chapter": 374,
+   "chapters_adapted": "373 (p.14), 374-375, 376 (p.1-4)",
+   "volume": 32,
+   "confidence": "high",
+   "note": "Kanzenshuu JP ep 076: 373 (p.14), 374-375, 376 (p.1-4); Dragon Universe wiki & fandom agree on END",
+   "sources": [
+    "https://www.kanzenshuu.com/episode/kai/eps-076/",
+    "https://dragonballuniverse.fandom.com/wiki/DBK076",
+    "https://dragonball.fandom.com/wiki/Tien%27s_Desperate_Attack%21_Save_Your_Friends%2C_Goku%21"
+   ]
+  },
+  {
+   "episode": 77,
+   "end_chapter": 378,
+   "start_chapter": 377,
+   "chapters_adapted": "376 (p.5-end), 377-378",
+   "volume": 32,
+   "confidence": "high",
+   "note": "Kanzenshuu JP ep 077: 376 (p.5-end), 377-378; Dragon Universe wiki & fandom agree on END",
+   "sources": [
+    "https://www.kanzenshuu.com/episode/kai/eps-077/",
+    "https://dragonballuniverse.fandom.com/wiki/DBK077",
+    "https://dragonball.fandom.com/wiki/Beyond_Super_Saiyan%21_Vegeta_Confronts_the_Monster_Cell%21"
+   ]
+  },
+  {
+   "episode": 78,
+   "end_chapter": 380,
+   "start_chapter": 379,
+   "chapters_adapted": "379, 380 (p.1-10)",
+   "volume": 32,
+   "confidence": "high",
+   "note": "Kanzenshuu JP ep 078: 379, 380 (p.1-10); Dragon Universe wiki & fandom agree on END",
+   "sources": [
+    "https://www.kanzenshuu.com/episode/kai/eps-078/",
+    "https://dragonballuniverse.fandom.com/wiki/DBK078",
+    "https://dragonball.fandom.com/wiki/Cell_on_the_Verge_of_Defeat%21_Krillin%2C_Destroy_Android_18%21"
+   ]
+  },
+  {
+   "episode": 79,
+   "end_chapter": 382,
+   "start_chapter": 381,
+   "chapters_adapted": "380 (p.11-end), 381, 382 (p.1-10)",
+   "volume": 32,
+   "confidence": "high",
+   "note": "Kanzenshuu JP ep 079: 380 (p.11-end), 381, 382 (p.1-10); Dragon Universe wiki & fandom agree on END",
+   "sources": [
+    "https://www.kanzenshuu.com/episode/kai/eps-079/",
+    "https://dragonballuniverse.fandom.com/wiki/DBK079",
+    "https://dragonball.fandom.com/wiki/The_Battle_Turns_for_the_Worst%21_Cell_Attacks_Android_18%21"
+   ]
+  },
+  {
+   "episode": 80,
+   "end_chapter": 383,
+   "start_chapter": 383,
+   "chapters_adapted": "382 (p.11-end), 383",
+   "volume": 32,
+   "confidence": "high",
+   "note": "Kanzenshuu JP ep 080: 382 (p.11-end), 383; Dragon Universe wiki & fandom agree on END",
+   "sources": [
+    "https://www.kanzenshuu.com/episode/kai/eps-080/",
+    "https://dragonballuniverse.fandom.com/wiki/DBK080",
+    "https://dragonball.fandom.com/wiki/The_Tables_are_Turned%21_Witness_the_Power_of_Perfection%21"
+   ]
+  },
+  {
+   "episode": 81,
+   "end_chapter": 386,
+   "start_chapter": 384,
+   "chapters_adapted": "384-386",
+   "volume": 33,
+   "confidence": "high",
+   "note": "Kanzenshuu JP ep 081: 384-386; Dragon Universe wiki & fandom agree on END",
+   "sources": [
+    "https://www.kanzenshuu.com/episode/kai/eps-081/",
+    "https://dragonballuniverse.fandom.com/wiki/DBK081",
+    "https://dragonball.fandom.com/wiki/Vegeta%27s_Final_Push%21_Defeat_the_Invincible_Cell%21"
+   ]
+  },
+  {
+   "episode": 82,
+   "end_chapter": 388,
+   "start_chapter": 387,
+   "chapters_adapted": "387, 388 (p.1-10)",
+   "volume": 33,
+   "confidence": "high",
+   "note": "Kanzenshuu JP ep 082: 387, 388 (p.1-10); Dragon Universe wiki & fandom agree on END",
+   "sources": [
+    "https://www.kanzenshuu.com/episode/kai/eps-082/",
+    "https://dragonballuniverse.fandom.com/wiki/DBK082",
+    "https://dragonball.fandom.com/wiki/The_Strongest_Super_Saiyan%21_Trunks%27_Power_Unleashed%21"
+   ]
+  },
+  {
+   "episode": 83,
+   "end_chapter": 389,
+   "start_chapter": 389,
+   "chapters_adapted": "388 (p.11-end), 389",
+   "volume": 33,
+   "confidence": "high",
+   "note": "Kanzenshuu JP ep 083: 388 (p.11-end), 389; Dragon Universe wiki & fandom agree on END",
+   "sources": [
+    "https://www.kanzenshuu.com/episode/kai/eps-083/",
+    "https://dragonballuniverse.fandom.com/wiki/DBK083",
+    "https://dragonball.fandom.com/wiki/Cell_Invades_the_Airwaves%21_Announcing%2C_%22The_Cell_Games%21%22"
+   ]
+  },
+  {
+   "episode": 84,
+   "end_chapter": 391,
+   "start_chapter": 390,
+   "chapters_adapted": "390-391",
+   "volume": 33,
+   "confidence": "high",
+   "note": "Kanzenshuu JP ep 084: 390-391; Dragon Universe wiki & fandom agree on END",
+   "sources": [
+    "https://www.kanzenshuu.com/episode/kai/eps-084/",
+    "https://dragonballuniverse.fandom.com/wiki/DBK084",
+    "https://dragonball.fandom.com/wiki/Training_Complete%21_Goku_Sizes_Up_the_Competition%21"
+   ]
+  },
+  {
+   "episode": 85,
+   "end_chapter": 393,
+   "start_chapter": 392,
+   "chapters_adapted": "392, 393 (p.1-4)",
+   "volume": 33,
+   "confidence": "high",
+   "note": "Kanzenshuu JP ep 085: 392, 393 (p.1-4); Dragon Universe wiki & fandom agree on END",
+   "sources": [
+    "https://www.kanzenshuu.com/episode/kai/eps-085/",
+    "https://dragonballuniverse.fandom.com/wiki/DBK085",
+    "https://dragonball.fandom.com/wiki/The_Truce_is_Broken%21_The_Defense_Force_Strikes_Back_at_Cell%21"
+   ]
+  },
+  {
+   "episode": 86,
+   "end_chapter": 394,
+   "start_chapter": 393,
+   "chapters_adapted": "393 (p.4-end), 394 (p.1-11)",
+   "volume": 33,
+   "confidence": "high",
+   "note": "Kanzenshuu JP ep 086: 393 (p.4-end), 394 (p.1-11); Dragon Universe wiki & fandom agree on END",
+   "sources": [
+    "https://www.kanzenshuu.com/episode/kai/eps-086/",
+    "https://dragonballuniverse.fandom.com/wiki/DBK086",
+    "https://dragonball.fandom.com/wiki/A_New_Guardian%21_The_Return_of_the_Dragon_Balls%21"
+   ]
+  },
+  {
+   "episode": 87,
+   "end_chapter": 396,
+   "start_chapter": 395,
+   "chapters_adapted": "394 (p.12-end), 395-396",
+   "volume": 33,
+   "confidence": "high",
+   "note": "Kanzenshuu JP ep 087: 394 (p.12-end), 395-396; Dragon Universe wiki & fandom agree on END",
+   "sources": [
+    "https://www.kanzenshuu.com/episode/kai/eps-087/",
+    "https://dragonballuniverse.fandom.com/wiki/DBK087",
+    "https://dragonball.fandom.com/wiki/Mr._Satan_Takes_the_Stage%21_The_Curtain_Rises_On_the_Cell_Games%21"
+   ]
+  },
+  {
+   "episode": 88,
+   "end_chapter": 399,
+   "start_chapter": 397,
+   "chapters_adapted": "397-399",
+   "volume": 34,
+   "confidence": "high",
+   "note": "Kanzenshuu JP ep 088: 397-399; Dragon Universe wiki & fandom agree on END",
+   "sources": [
+    "https://www.kanzenshuu.com/episode/kai/eps-088/",
+    "https://dragonballuniverse.fandom.com/wiki/DBK088",
+    "https://dragonball.fandom.com/wiki/Showdown%21_Cell_vs._Goku%21"
+   ]
+  },
+  {
+   "episode": 89,
+   "end_chapter": 402,
+   "start_chapter": 400,
+   "chapters_adapted": "400-401, 402 (p.1-3)",
+   "volume": 34,
+   "confidence": "high",
+   "note": "Kanzenshuu JP ep 089: 400-401, 402 (p.1-3); Dragon Universe wiki & fandom agree on END",
+   "sources": [
+    "https://www.kanzenshuu.com/episode/kai/eps-089/",
+    "https://dragonballuniverse.fandom.com/wiki/DBK089",
+    "https://dragonball.fandom.com/wiki/Battle_at_the_Highest_Level%21_Goku_Goes_All_Out%21"
+   ]
+  },
+  {
+   "episode": 90,
+   "end_chapter": 404,
+   "start_chapter": 402,
+   "chapters_adapted": "402 (p.4-end), 403, 404 (p.1-8)",
+   "volume": 34,
+   "confidence": "high",
+   "note": "Kanzenshuu JP ep 090: 402 (p.4-end), 403, 404 (p.1-8); Dragon Universe wiki & fandom agree on END",
+   "sources": [
+    "https://www.kanzenshuu.com/episode/kai/eps-090/",
+    "https://dragonballuniverse.fandom.com/wiki/DBK090",
+    "https://dragonball.fandom.com/wiki/The_Opening_Round_is_Concluded%21_Goku%27s_Moment_of_Decision%21"
+   ]
+  },
+  {
+   "episode": 91,
+   "end_chapter": 406,
+   "start_chapter": 405,
+   "chapters_adapted": "404 (p.8-end), 405, 406 (p.1-7)",
+   "volume": 34,
+   "confidence": "high",
+   "note": "Kanzenshuu JP ep 091: 404 (p.8-end), 405, 406 (p.1-7); Dragon Universe wiki & fandom agree on END",
+   "sources": [
+    "https://www.kanzenshuu.com/episode/kai/eps-091/",
+    "https://dragonballuniverse.fandom.com/wiki/DBK091",
+    "https://dragonball.fandom.com/wiki/Get_Angry%2C_Gohan%21_Release_Your_Hidden_Power%21"
+   ]
+  },
+  {
+   "episode": 92,
+   "end_chapter": 407,
+   "start_chapter": 407,
+   "chapters_adapted": "406 (p.8-end), 407",
+   "volume": 34,
+   "confidence": "high",
+   "note": "Kanzenshuu JP ep 092: 406 (p.8-end), 407; Dragon Universe wiki & fandom agree on END",
+   "sources": [
+    "https://www.kanzenshuu.com/episode/kai/eps-092/",
+    "https://dragonballuniverse.fandom.com/wiki/DBK092",
+    "https://dragonball.fandom.com/wiki/Tears_for_an_Android%21_Gohan%27s_Inner_Rage_Bursts_Forth%21"
+   ]
+  },
+  {
+   "episode": 93,
+   "end_chapter": 409,
+   "start_chapter": 408,
+   "chapters_adapted": "408, 409 (p.1-2)",
+   "volume": 35,
+   "confidence": "high",
+   "note": "Kanzenshuu JP ep 093: 408, 409 (p.1-2); Dragon Universe wiki & fandom agree on END",
+   "sources": [
+    "https://www.kanzenshuu.com/episode/kai/eps-093/",
+    "https://dragonballuniverse.fandom.com/wiki/DBK093",
+    "https://dragonball.fandom.com/wiki/Unleash_the_Warrior_Within%21_Gohan_Takes_the_Offensive%21"
+   ]
+  },
+  {
+   "episode": 94,
+   "end_chapter": 411,
+   "start_chapter": 409,
+   "chapters_adapted": "409 (p.3-end), 410-411",
+   "volume": 35,
+   "confidence": "high",
+   "note": "Kanzenshuu JP ep 094: 409 (p.3-end), 410-411; Dragon Universe wiki & fandom agree on END",
+   "sources": [
+    "https://www.kanzenshuu.com/episode/kai/eps-094/",
+    "https://dragonballuniverse.fandom.com/wiki/DBK094",
+    "https://dragonball.fandom.com/wiki/Perfection%27s_End%21_A_Fury_Beyond_Super_Saiyan%21"
+   ]
+  },
+  {
+   "episode": 95,
+   "end_chapter": 414,
+   "start_chapter": 412,
+   "chapters_adapted": "412-414",
+   "volume": 35,
+   "confidence": "high",
+   "note": "Kanzenshuu JP ep 095: 412-414; Dragon Universe wiki & fandom agree on END",
+   "sources": [
+    "https://www.kanzenshuu.com/episode/kai/eps-095/",
+    "https://dragonballuniverse.fandom.com/wiki/DBK095",
+    "https://dragonball.fandom.com/wiki/A_Hero%27s_Sacrifice%21_Last_Chance_to_Save_the_World%21"
+   ]
+  },
+  {
+   "episode": 96,
+   "end_chapter": 416,
+   "start_chapter": 415,
+   "chapters_adapted": "415-416",
+   "volume": 35,
+   "confidence": "high",
+   "note": "Kanzenshuu JP ep 096: 415-416; Dragon Universe wiki & fandom agree on END",
+   "sources": [
+    "https://www.kanzenshuu.com/episode/kai/eps-096/",
+    "https://dragonballuniverse.fandom.com/wiki/DBK096",
+    "https://dragonball.fandom.com/wiki/Combine_Your_Strength%21_The_Final_Kamehame-Ha%21"
+   ]
+  },
+  {
+   "episode": 97,
+   "end_chapter": 418,
+   "start_chapter": 417,
+   "chapters_adapted": "417-418",
+   "volume": 35,
+   "confidence": "high",
+   "note": "Kanzenshuu JP ep 097: 417-418; Dragon Universe wiki & fandom agree on END",
+   "sources": [
+    "https://www.kanzenshuu.com/episode/kai/eps-097/",
+    "https://dragonballuniverse.fandom.com/wiki/DBK097",
+    "https://dragonball.fandom.com/wiki/A_Bittersweet_Victory%21_Until_We_Meet_Again%21"
+   ]
+  },
+  {
+   "episode": 98,
+   "end_chapter": 420,
+   "start_chapter": 419,
+   "chapters_adapted": "419-420",
+   "volume": 35,
+   "confidence": "high",
+   "note": "Kanzenshuu JP ep 098 (unaired in Japan; the Blu-ray/DVD \"extra\" episode = our component 2 special): 419-420, end of the Cell arc; DU & fandom agree",
+   "sources": [
+    "https://www.kanzenshuu.com/episode/kai/eps-098/",
+    "https://dragonballuniverse.fandom.com/wiki/DBK098",
+    "https://dragonball.fandom.com/wiki/Peace_for_the_Future%21_The_Spirit_of_Goku_is_Forever%21"
+   ]
+  },
+  {
+   "episode": 99,
+   "end_chapter": 424,
+   "start_chapter": 421,
+   "chapters_adapted": "421-423, 424 (p.1-2)",
+   "volume": 36,
+   "confidence": "high",
+   "note": "Kanzenshuu JP ep 099: 421-423, 424 (p.1-2); Dragon Universe wiki & fandom agree on END",
+   "sources": [
+    "https://www.kanzenshuu.com/episode/kai/eps-099/",
+    "https://dragonballuniverse.fandom.com/wiki/DBK099",
+    "https://dragonball.fandom.com/wiki/Seven_Years_Later%21_Starting_Today%2C_Gohan_is_a_High_School_Student"
+   ]
+  },
+  {
+   "episode": 100,
+   "end_chapter": 424,
+   "start_chapter": 424,
+   "chapters_adapted": "424 (p.3-8)",
+   "volume": 36,
+   "confidence": "medium",
+   "note": "DBZ footage 201B-202 (Wikipedia) -> chapters via Kanzenshuu DBZ guide. International re-cut: only DBZ 201B-202 footage (ch 424 p.3-8 in altered form + the filler date ep 202); the fandom/Kanzenshuu pages for \"ep 100\" describe the JAPANESE ep 100 (424 p.3-8 + 426 p.1-8), whose ch 426 material moved to int ep 102",
+   "sources": [
+    "https://en.wikipedia.org/wiki/List_of_Dragon_Ball_Z_Kai_episodes",
+    "https://www.kanzenshuu.com/episode/dbz/eps-201/",
+    "https://www.kanzenshuu.com/episode/dbz/eps-202/",
+    "https://dragonball.fandom.com/wiki/A_New_Hero%2C_Great_Saiyaman%2C_is_Born%21",
+    "https://www.kanzenshuu.com/episode/kai/eps-100/"
+   ]
+  },
+  {
+   "episode": 102,
+   "end_chapter": 426,
+   "start_chapter": 426,
+   "chapters_adapted": "426 (p.1-8)",
+   "volume": 36,
+   "confidence": "medium",
+   "note": "DBZ footage 204-205A (Wikipedia) -> chapters via Kanzenshuu DBZ guide. International-only episode built from DBZ 204-205A: the robbery/Chobi filler (DBZ 204) plus the tournament announcement, ch 426 p.1-8. Videl unmasking Gohan is ch 425, which Kanzenshuu marks as never directly adapted (DBZ/Kai: none); fandom credits 425-426 here",
+   "sources": [
+    "https://en.wikipedia.org/wiki/List_of_Dragon_Ball_Z_Kai_episodes",
+    "https://www.kanzenshuu.com/episode/dbz/eps-204/",
+    "https://www.kanzenshuu.com/episode/dbz/eps-205/",
+    "https://dragonball.fandom.com/wiki/A_Monster_is_Taken_Away%21_The_Culprit_is_Great_Saiyaman%3F",
+    "https://www.kanzenshuu.com/manga/db/chp-425/"
+   ]
+  },
+  {
+   "episode": 103,
+   "end_chapter": 427,
+   "start_chapter": 427,
+   "chapters_adapted": "426 (p.8-end), 427",
+   "volume": 36,
+   "confidence": "high",
+   "note": "DBZ footage 205B-206 (Wikipedia) -> chapters via Kanzenshuu DBZ guide. International-only episode (DBZ 205B-206): rest of ch 426 (p.8-end) + ch 427 Goten training; fandom page agrees (426-427)",
+   "sources": [
+    "https://en.wikipedia.org/wiki/List_of_Dragon_Ball_Z_Kai_episodes",
+    "https://www.kanzenshuu.com/episode/dbz/eps-205/",
+    "https://www.kanzenshuu.com/episode/dbz/eps-206/",
+    "https://dragonball.fandom.com/wiki/Entering_the_World_Martial_Arts_Tournament%21_Goten_Shows_Off_His_Explosive_Power_During_Training%21"
+   ]
+  },
+  {
+   "episode": 104,
+   "end_chapter": 429,
+   "start_chapter": 428,
+   "chapters_adapted": "428, 429 (p.1-9)",
+   "volume": 36,
+   "confidence": "high",
+   "note": "DBZ footage 207 (Wikipedia) -> chapters via Kanzenshuu DBZ guide. International cut = DBZ 207 only (ch 428 + 429 p.1-9); END 429 (p.1-9) agrees with the Japanese ep 101 (Kanzenshuu) and fandom, only the START differs (JP ep 101 began at 426 p.8)",
+   "sources": [
+    "https://en.wikipedia.org/wiki/List_of_Dragon_Ball_Z_Kai_episodes",
+    "https://www.kanzenshuu.com/episode/dbz/eps-207/",
+    "https://dragonball.fandom.com/wiki/Gohan_the_Teacher%21_Videl%27s_Flying_Technique_Tutorial",
+    "https://www.kanzenshuu.com/episode/kai/eps-101/"
+   ]
+  },
+  {
+   "episode": 105,
+   "end_chapter": 431,
+   "start_chapter": 430,
+   "chapters_adapted": "429 (p.9-end), 430, 431 (first half, approx.)",
+   "volume": 36,
+   "confidence": "high",
+   "note": "DBZ footage 208-209A (Wikipedia) -> chapters via Kanzenshuu DBZ guide. DBZ 208-209A: 429 p.9-end, 430, first half of 431 (prelims); the punching-machine finale of 431 belongs to int ep 106. END chapter 431 agrees with JP ep 102/fandom; exact page split inside 431 is approximate",
+   "sources": [
+    "https://en.wikipedia.org/wiki/List_of_Dragon_Ball_Z_Kai_episodes",
+    "https://www.kanzenshuu.com/episode/dbz/eps-208/",
+    "https://www.kanzenshuu.com/episode/dbz/eps-209/",
+    "https://dragonball.fandom.com/wiki/The_Dragon_Team_Fully_Assembled%21_Goku_Has_Come_Back%21",
+    "https://www.kanzenshuu.com/episode/kai/eps-102/"
+   ]
+  },
+  {
+   "episode": 106,
+   "end_chapter": 432,
+   "start_chapter": 432,
+   "chapters_adapted": "431 (second half, approx.), 432",
+   "volume": 36,
+   "confidence": "high",
+   "note": "DBZ footage 209B-210 (Wikipedia) -> chapters via Kanzenshuu DBZ guide. International-only episode (DBZ 209B-210): end of 431 (Vegeta wrecks the machine) + ch 432 junior-division openers; fandom page agrees (431-432)",
+   "sources": [
+    "https://en.wikipedia.org/wiki/List_of_Dragon_Ball_Z_Kai_episodes",
+    "https://www.kanzenshuu.com/episode/dbz/eps-209/",
+    "https://www.kanzenshuu.com/episode/dbz/eps-210/",
+    "https://dragonball.fandom.com/wiki/Who_Is_the_World%27s_Greatest%3F_The_Tournament_Preliminaries_Begin%21"
+   ]
+  },
+  {
+   "episode": 107,
+   "end_chapter": 433,
+   "start_chapter": 433,
+   "chapters_adapted": "433",
+   "volume": 37,
+   "confidence": "medium",
+   "note": "DBZ footage 211 (Wikipedia) -> chapters via Kanzenshuu DBZ guide. International cut = DBZ 211 only = ch 433 (start of the Goten vs Trunks final); the fandom/Kanzenshuu \"ep 107\" pages describe JAPANESE ep 103 (432-435), whose 434-435 moved to int ep 108",
+   "sources": [
+    "https://en.wikipedia.org/wiki/List_of_Dragon_Ball_Z_Kai_episodes",
+    "https://www.kanzenshuu.com/episode/dbz/eps-211/",
+    "https://dragonball.fandom.com/wiki/Everyone_is_Surprised%21_Goten_and_Trunks%27_Super_Battle%21",
+    "https://www.kanzenshuu.com/episode/kai/eps-103/"
+   ]
+  },
+  {
+   "episode": 108,
+   "end_chapter": 437,
+   "start_chapter": 434,
+   "chapters_adapted": "434-436, 437 (p.1-2,7-end)",
+   "volume": 37,
+   "confidence": "high",
+   "note": "DBZ footage 212-213 (Wikipedia) -> chapters via Kanzenshuu DBZ guide. International-only episode (DBZ 212-213): 434-435 junior final, 436 Trunks vs Mr. Satan, 437 p.1-2 & 7-end (Mighty Mask; p.3-6 deferred to ep 109); fandom page agrees (434-437)",
+   "sources": [
+    "https://en.wikipedia.org/wiki/List_of_Dragon_Ball_Z_Kai_episodes",
+    "https://www.kanzenshuu.com/episode/dbz/eps-212/",
+    "https://www.kanzenshuu.com/episode/dbz/eps-213/",
+    "https://dragonball.fandom.com/wiki/The_Junior_Champ_is_Finally_Decided%21_Who_Will_Fight_Against_Mr._Satan%3F"
+   ]
+  },
+  {
+   "episode": 109,
+   "end_chapter": 438,
+   "start_chapter": 438,
+   "chapters_adapted": "438 (p.1-2), 437 (p.3-6), 438 (p.2-end)",
+   "volume": 37,
+   "confidence": "high",
+   "note": "DBZ footage 214 (Wikipedia) -> chapters via Kanzenshuu DBZ guide. International cut = DBZ 214: 438 p.1-2, 437 p.3-6 (Mighty Mask insert), 438 p.2-end (lunch with Shin/Kibito, the draw). END 438 agrees with JP ep 104 and fandom; START differs (JP ep 104 began at 436)",
+   "sources": [
+    "https://en.wikipedia.org/wiki/List_of_Dragon_Ball_Z_Kai_episodes",
+    "https://www.kanzenshuu.com/episode/dbz/eps-214/",
+    "https://dragonball.fandom.com/wiki/Restless_Foreboding_A_Mysterious_Warrior_Appears%21",
+    "https://www.kanzenshuu.com/episode/kai/eps-104/"
+   ]
+  },
+  {
+   "episode": 110,
+   "end_chapter": 439,
+   "start_chapter": 439,
+   "chapters_adapted": "439",
+   "volume": 37,
+   "confidence": "medium",
+   "note": "DBZ footage 215 (Wikipedia) -> chapters via Kanzenshuu DBZ guide. International cut = DBZ 215 only = ch 439 (Krillin vs Pintar, Piccolo forfeits to Shin); the fandom/Kanzenshuu \"ep 110\" pages describe JAPANESE ep 105 (438 p.10-441 p.13), whose 440-441 moved to int ep 111",
+   "sources": [
+    "https://en.wikipedia.org/wiki/List_of_Dragon_Ball_Z_Kai_episodes",
+    "https://www.kanzenshuu.com/episode/dbz/eps-215/",
+    "https://dragonball.fandom.com/wiki/What_Happened%2C_Piccolo%3F_An_Unexpected_Outcome_in_the_First_Round",
+    "https://www.kanzenshuu.com/episode/kai/eps-105/"
+   ]
+  },
+  {
+   "episode": 111,
+   "end_chapter": 441,
+   "start_chapter": 440,
+   "chapters_adapted": "440, 441 (p.1-8)",
+   "volume": 37,
+   "confidence": "high",
+   "note": "DBZ footage 216 (Wikipedia) -> chapters via Kanzenshuu DBZ guide. International-only episode (DBZ 216): 440 (Shin's identity) + 441 p.1-8 (Videl vs Spopovich); fandom page agrees (440-441)",
+   "sources": [
+    "https://en.wikipedia.org/wiki/List_of_Dragon_Ball_Z_Kai_episodes",
+    "https://www.kanzenshuu.com/episode/dbz/eps-216/",
+    "https://dragonball.fandom.com/wiki/An_Eerie_Entity_Who_Exactly_Is_Spopovitch%3F"
+   ]
+  },
+  {
+   "episode": 112,
+   "end_chapter": 442,
+   "start_chapter": 442,
+   "chapters_adapted": "441 (p.9-end), 442",
+   "volume": 37,
+   "confidence": "medium",
+   "note": "DBZ footage 217 (Wikipedia) -> chapters via Kanzenshuu DBZ guide. International cut = DBZ 217 only: 441 p.9-end + 442 (Gohan's rage, Videl loses); the fandom/Kanzenshuu \"ep 112\" pages describe JAPANESE ep 106 (441 p.13-445 p.2), whose 443-445 moved to int ep 113",
+   "sources": [
+    "https://en.wikipedia.org/wiki/List_of_Dragon_Ball_Z_Kai_episodes",
+    "https://www.kanzenshuu.com/episode/dbz/eps-217/",
+    "https://dragonball.fandom.com/wiki/Videl_Battered%21_Gohan%27s_Fury_Reaches_Its_Limit%21",
+    "https://www.kanzenshuu.com/episode/kai/eps-106/"
+   ]
+  },
+  {
+   "episode": 113,
+   "end_chapter": 445,
+   "start_chapter": 443,
+   "chapters_adapted": "443-444, 445 (p.1-2)",
+   "volume": 37,
+   "confidence": "medium",
+   "note": "DBZ footage 218-219 (Wikipedia) -> chapters via Kanzenshuu DBZ guide. International-only episode (DBZ 218-219): 443 (Senzu, classmates), 444 (SSJ2, energy theft), 445 p.1-2 (pursuit); ends at the same point as JP ep 106 so that ep 114 (= JP 107) resumes at 445 p.3; fandom lists 443-444",
+   "sources": [
+    "https://en.wikipedia.org/wiki/List_of_Dragon_Ball_Z_Kai_episodes",
+    "https://www.kanzenshuu.com/episode/dbz/eps-218/",
+    "https://www.kanzenshuu.com/episode/dbz/eps-219/",
+    "https://dragonball.fandom.com/wiki/A_Creeping_Conspiracy%21_The_Target_is_Gohan"
+   ]
+  },
+  {
+   "episode": 114,
+   "end_chapter": 446,
+   "start_chapter": 445,
+   "chapters_adapted": "445 (p.3-end), 446",
+   "volume": 38,
+   "confidence": "high",
+   "note": "Kanzenshuu JP ep 107: 445 (p.3-end), 446; Dragon Universe wiki & fandom agree on END [our ep 114 = Japanese broadcast ep 107; 8 international-only eps offset the numbering]",
+   "sources": [
+    "https://www.kanzenshuu.com/episode/kai/eps-107/",
+    "https://dragonballuniverse.fandom.com/wiki/DBK107",
+    "https://dragonball.fandom.com/wiki/The_Terrifying_Secret_of_the_Majin_The_Mastermind_Revealed%21"
+   ]
+  },
+  {
+   "episode": 115,
+   "end_chapter": 449,
+   "start_chapter": 447,
+   "chapters_adapted": "447-448, 449 (p.1-6)",
+   "volume": 38,
+   "confidence": "high",
+   "note": "Kanzenshuu JP ep 108: 447-448, 449 (p.1-6); Dragon Universe wiki & fandom agree on END [our ep 115 = Japanese broadcast ep 108; 8 international-only eps offset the numbering]",
+   "sources": [
+    "https://www.kanzenshuu.com/episode/kai/eps-108/",
+    "https://dragonballuniverse.fandom.com/wiki/DBK108",
+    "https://dragonball.fandom.com/wiki/The_Nefarious_Wizard_Babidi_And_Demon_King_Dabura%27s_Trap"
+   ]
+  },
+  {
+   "episode": 116,
+   "end_chapter": 451,
+   "start_chapter": 450,
+   "chapters_adapted": "449 (p.6-end), 450, 451 (p.1-10)",
+   "volume": 38,
+   "confidence": "high",
+   "note": "Kanzenshuu JP ep 109: 449 (p.6-end), 450, 451 (p.1-10); Dragon Universe wiki & fandom agree on END [our ep 116 = Japanese broadcast ep 109; 8 international-only eps offset the numbering]",
+   "sources": [
+    "https://www.kanzenshuu.com/episode/kai/eps-109/",
+    "https://dragonballuniverse.fandom.com/wiki/DBK109",
+    "https://dragonball.fandom.com/wiki/Don%27t_Sell_Super_Saiyans_Short%21_Vegeta_and_Goku%27s_Full-Bore_Power%21"
+   ]
+  },
+  {
+   "episode": 117,
+   "end_chapter": 453,
+   "start_chapter": 452,
+   "chapters_adapted": "451 (p.10-end), 452 (p.4-end), 453 (p.1-6)",
+   "volume": 38,
+   "confidence": "high",
+   "note": "Kanzenshuu JP ep 110: 451 (p.10-end), 452 (p.4-end), 453 (p.1-6); Dragon Universe wiki & fandom agree on END [our ep 117 = Japanese broadcast ep 110; 8 international-only eps offset the numbering]",
+   "sources": [
+    "https://www.kanzenshuu.com/episode/kai/eps-110/",
+    "https://dragonballuniverse.fandom.com/wiki/DBK110",
+    "https://dragonball.fandom.com/wiki/Whither_Victory%3F_A_Battle_Royal_Championship_Match%21"
+   ]
+  },
+  {
+   "episode": 118,
+   "end_chapter": 454,
+   "start_chapter": 453,
+   "chapters_adapted": "453 (p.6-end), 454 (p.1-2)",
+   "volume": 38,
+   "confidence": "high",
+   "note": "Kanzenshuu JP ep 111: 453 (p.6-end), 454 (p.1-2); Dragon Universe wiki & fandom agree on END [our ep 118 = Japanese broadcast ep 111; 8 international-only eps offset the numbering]",
+   "sources": [
+    "https://www.kanzenshuu.com/episode/kai/eps-111/",
+    "https://dragonballuniverse.fandom.com/wiki/DBK111",
+    "https://dragonball.fandom.com/wiki/Stunning_Youngsters%21_No._18%27s_Uphill_Battle"
+   ]
+  },
+  {
+   "episode": 119,
+   "end_chapter": 455,
+   "start_chapter": 454,
+   "chapters_adapted": "452 (p.1-3), 454 (p.3-end), 455 (p.1-5)",
+   "volume": 38,
+   "confidence": "high",
+   "note": "Kanzenshuu JP ep 112: 452 (p.1-3), 454 (p.3-end), 455 (p.1-5); Dragon Universe wiki & fandom agree on END [our ep 119 = Japanese broadcast ep 112; 8 international-only eps offset the numbering]",
+   "sources": [
+    "https://www.kanzenshuu.com/episode/kai/eps-112/",
+    "https://dragonballuniverse.fandom.com/wiki/DBK112",
+    "https://dragonball.fandom.com/wiki/Enter_the_Headliner%21_The_Looming_Demon_King%21"
+   ]
+  },
+  {
+   "episode": 120,
+   "end_chapter": 456,
+   "start_chapter": 455,
+   "chapters_adapted": "455 (p.6-7,10,8-end), 456 (p.1-8)",
+   "volume": 38,
+   "confidence": "high",
+   "note": "Kanzenshuu JP ep 113: 455 (p.6-7,10,8-end), 456 (p.1-8); Dragon Universe wiki & fandom agree on END [our ep 120 = Japanese broadcast ep 113; 8 international-only eps offset the numbering]",
+   "sources": [
+    "https://www.kanzenshuu.com/episode/kai/eps-113/",
+    "https://dragonballuniverse.fandom.com/wiki/DBK113",
+    "https://dragonball.fandom.com/wiki/A_Heart_of_Evil_Awakened_Vegeta%2C_Prince_of_Destruction"
+   ]
+  },
+  {
+   "episode": 121,
+   "end_chapter": 458,
+   "start_chapter": 457,
+   "chapters_adapted": "456 (p.9-end), 457, 458 (p.1-5,8-9)",
+   "volume": 38,
+   "confidence": "high",
+   "note": "Kanzenshuu JP ep 114: 456 (p.9-end), 457, 458 (p.1-5,8-9); Dragon Universe wiki & fandom agree on END [our ep 121 = Japanese broadcast ep 114; 8 international-only eps offset the numbering]",
+   "sources": [
+    "https://www.kanzenshuu.com/episode/kai/eps-114/",
+    "https://dragonballuniverse.fandom.com/wiki/DBK114",
+    "https://dragonball.fandom.com/wiki/I_am_the_Strongest%21_The_Clash_of_Goku_vs._Vegeta"
+   ]
+  },
+  {
+   "episode": 122,
+   "end_chapter": 459,
+   "start_chapter": 458,
+   "chapters_adapted": "458 (p.5-7,10-end), 459 (p.1-3,7-8,4-6)",
+   "volume": 38,
+   "confidence": "high",
+   "note": "Kanzenshuu JP ep 115: 458 (p.5-7,10-end), 459 (p.1-3,7-8,4-6); Dragon Universe wiki & fandom agree on END [our ep 122 = Japanese broadcast ep 115; 8 international-only eps offset the numbering]",
+   "sources": [
+    "https://www.kanzenshuu.com/episode/kai/eps-115/",
+    "https://dragonballuniverse.fandom.com/wiki/DBK115",
+    "https://dragonball.fandom.com/wiki/Countdown_to_Revival_Crush_Babidi%E2%80%99s_Ambitions%21"
+   ]
+  },
+  {
+   "episode": 123,
+   "end_chapter": 461,
+   "start_chapter": 460,
+   "chapters_adapted": "459 (p.9-end), 460, 461 (p.1-2)",
+   "volume": 39,
+   "confidence": "high",
+   "note": "Kanzenshuu JP ep 116: 459 (p.9-end), 460, 461 (p.1-2); Dragon Universe wiki & fandom agree on END [our ep 123 = Japanese broadcast ep 116; 8 international-only eps offset the numbering]",
+   "sources": [
+    "https://www.kanzenshuu.com/episode/kai/eps-116/",
+    "https://dragonballuniverse.fandom.com/wiki/DBK116",
+    "https://dragonball.fandom.com/wiki/The_Seal_is_Released%3F_Gohan%27s_Kamehame-Ha_of_Resistance"
+   ]
+  },
+  {
+   "episode": 124,
+   "end_chapter": 462,
+   "start_chapter": 461,
+   "chapters_adapted": "461 (p.2-end), 462",
+   "volume": 39,
+   "confidence": "high",
+   "note": "Kanzenshuu JP ep 117: 461 (p.2-end), 462; Dragon Universe wiki & fandom agree on END [our ep 124 = Japanese broadcast ep 117; 8 international-only eps offset the numbering]",
+   "sources": [
+    "https://www.kanzenshuu.com/episode/kai/eps-117/",
+    "https://dragonballuniverse.fandom.com/wiki/DBK117",
+    "https://dragonball.fandom.com/wiki/Straightaway_Into_Despair%3F_The_Terror_of_Majin_Buu"
+   ]
+  },
+  {
+   "episode": 125,
+   "end_chapter": 464,
+   "start_chapter": 463,
+   "chapters_adapted": "463, 464 (p.1-8)",
+   "volume": 39,
+   "confidence": "high",
+   "note": "Kanzenshuu JP ep 118: 463, 464 (p.1-8); Dragon Universe wiki & fandom agree on END [our ep 125 = Japanese broadcast ep 118; 8 international-only eps offset the numbering]",
+   "sources": [
+    "https://www.kanzenshuu.com/episode/kai/eps-118/",
+    "https://dragonballuniverse.fandom.com/wiki/DBK118",
+    "https://dragonball.fandom.com/wiki/Turn_Into_Candy%21_A_Hungry_Majin%27s_Bizarre_Power%21"
+   ]
+  },
+  {
+   "episode": 126,
+   "end_chapter": 466,
+   "start_chapter": 465,
+   "chapters_adapted": "464 (p.8-end), 465, 466 (p.1-2)",
+   "volume": 39,
+   "confidence": "high",
+   "note": "Kanzenshuu JP ep 119: 464 (p.8-end), 465, 466 (p.1-2); Dragon Universe wiki & fandom agree on END [our ep 126 = Japanese broadcast ep 119; 8 international-only eps offset the numbering]",
+   "sources": [
+    "https://www.kanzenshuu.com/episode/kai/eps-119/",
+    "https://dragonballuniverse.fandom.com/wiki/DBK119",
+    "https://dragonball.fandom.com/wiki/I_Will_Deal_With_The_Majin%21_Vegeta%27s_Final_Mortal_Combat%21"
+   ]
+  },
+  {
+   "episode": 127,
+   "end_chapter": 467,
+   "start_chapter": 466,
+   "chapters_adapted": "466 (p.2-end), 467",
+   "volume": 39,
+   "confidence": "high",
+   "note": "Kanzenshuu JP ep 120: 466 (p.2-end), 467; Dragon Universe wiki & fandom agree on END [our ep 127 = Japanese broadcast ep 120; 8 international-only eps offset the numbering]",
+   "sources": [
+    "https://www.kanzenshuu.com/episode/kai/eps-120/",
+    "https://dragonballuniverse.fandom.com/wiki/DBK120",
+    "https://dragonball.fandom.com/wiki/For_His_Beloved_Ones..._The_End_of_the_Proud_Warrior%21"
+   ]
+  },
+  {
+   "episode": 128,
+   "end_chapter": 469,
+   "start_chapter": 468,
+   "chapters_adapted": "468, 469 (p.1-2)",
+   "volume": 39,
+   "confidence": "high",
+   "note": "Kanzenshuu JP ep 121: 468, 469 (p.1-2); Dragon Universe wiki & fandom agree on END [our ep 128 = Japanese broadcast ep 121; 8 international-only eps offset the numbering]",
+   "sources": [
+    "https://www.kanzenshuu.com/episode/kai/eps-121/",
+    "https://dragonballuniverse.fandom.com/wiki/DBK121",
+    "https://dragonball.fandom.com/wiki/A_Nightmare_Revisited_The_Immortal_Monster_Majin_Buu%21"
+   ]
+  },
+  {
+   "episode": 129,
+   "end_chapter": 469,
+   "start_chapter": 469,
+   "chapters_adapted": "469 (p.2-8)",
+   "volume": 39,
+   "confidence": "high",
+   "note": "Kanzenshuu JP ep 122: 469 (p.2-8); Dragon Universe wiki & fandom agree on END [our ep 129 = Japanese broadcast ep 122; 8 international-only eps offset the numbering]",
+   "sources": [
+    "https://www.kanzenshuu.com/episode/kai/eps-122/",
+    "https://dragonballuniverse.fandom.com/wiki/DBK122",
+    "https://dragonball.fandom.com/wiki/A_Secret_Plan_to_Defeat_Buu%21_Its_Name_is_Fusion"
+   ]
+  },
+  {
+   "episode": 130,
+   "end_chapter": 470,
+   "start_chapter": 470,
+   "chapters_adapted": "469 (p.8-end), 470 (p.1-8)",
+   "volume": 39,
+   "confidence": "high",
+   "note": "Kanzenshuu JP ep 123: 469 (p.8-end), 470 (p.1-8); Dragon Universe wiki & fandom agree on END [our ep 130 = Japanese broadcast ep 123; 8 international-only eps offset the numbering]",
+   "sources": [
+    "https://www.kanzenshuu.com/episode/kai/eps-123/",
+    "https://dragonballuniverse.fandom.com/wiki/DBK123",
+    "https://dragonball.fandom.com/wiki/Found%21_A_Faint_Ray_of_Hope%21_Awaken%2C_Warriors%21"
+   ]
+  },
+  {
+   "episode": 131,
+   "end_chapter": 471,
+   "start_chapter": 471,
+   "chapters_adapted": "470 (p.9-end), 471",
+   "volume": 39,
+   "confidence": "high",
+   "note": "Kanzenshuu JP ep 124: 470 (p.9-end), 471; Dragon Universe wiki & fandom agree on END [our ep 131 = Japanese broadcast ep 124; 8 international-only eps offset the numbering]",
+   "sources": [
+    "https://www.kanzenshuu.com/episode/kai/eps-124/",
+    "https://dragonballuniverse.fandom.com/wiki/DBK124",
+    "https://dragonball.fandom.com/wiki/Find_The_Nuisances_Babidi%27s_Retaliation_Begins%21"
+   ]
+  },
+  {
+   "episode": 132,
+   "end_chapter": 473,
+   "start_chapter": 472,
+   "chapters_adapted": "472, 473 (p.1-4)",
+   "volume": 40,
+   "confidence": "high",
+   "note": "Kanzenshuu JP ep 125: 472, 473 (p.1-4); Dragon Universe wiki & fandom agree on END [our ep 132 = Japanese broadcast ep 125; 8 international-only eps offset the numbering]",
+   "sources": [
+    "https://www.kanzenshuu.com/episode/kai/eps-125/",
+    "https://dragonballuniverse.fandom.com/wiki/DBK125",
+    "https://dragonball.fandom.com/wiki/A_Time_of_Trials%21_Lay_Hold_of_Legendary_Powers%21"
+   ]
+  },
+  {
+   "episode": 133,
+   "end_chapter": 474,
+   "start_chapter": 473,
+   "chapters_adapted": "473 (p.5-end), 474 (p.1-9)",
+   "volume": 40,
+   "confidence": "high",
+   "note": "Kanzenshuu JP ep 126: 473 (p.5-end), 474 (p.1-9); Dragon Universe wiki & fandom agree on END [our ep 133 = Japanese broadcast ep 126; 8 international-only eps offset the numbering]",
+   "sources": [
+    "https://www.kanzenshuu.com/episode/kai/eps-126/",
+    "https://dragonballuniverse.fandom.com/wiki/DBK126",
+    "https://dragonball.fandom.com/wiki/Hold_Majin_Buu_in_Check%21_Limit_-_Super_Saiyan_3%21%21"
+   ]
+  },
+  {
+   "episode": 134,
+   "end_chapter": 475,
+   "start_chapter": 475,
+   "chapters_adapted": "474 (p.10-end), 475",
+   "volume": 40,
+   "confidence": "high",
+   "note": "Kanzenshuu JP ep 127: 474 (p.10-end), 475; Dragon Universe wiki & fandom agree on END [our ep 134 = Japanese broadcast ep 127; 8 international-only eps offset the numbering]",
+   "sources": [
+    "https://www.kanzenshuu.com/episode/kai/eps-127/",
+    "https://dragonballuniverse.fandom.com/wiki/DBK127",
+    "https://dragonball.fandom.com/wiki/True_Worth_Beginning_to_Show_The_Treacherous_Buu%21"
+   ]
+  },
+  {
+   "episode": 135,
+   "end_chapter": 477,
+   "start_chapter": 476,
+   "chapters_adapted": "476, 477 (p.1-5)",
+   "volume": 40,
+   "confidence": "high",
+   "note": "Kanzenshuu JP ep 128: 476, 477 (p.1-5); Dragon Universe wiki & fandom agree on END [our ep 135 = Japanese broadcast ep 128; 8 international-only eps offset the numbering]",
+   "sources": [
+    "https://www.kanzenshuu.com/episode/kai/eps-128/",
+    "https://dragonballuniverse.fandom.com/wiki/DBK128",
+    "https://dragonball.fandom.com/wiki/Silly_Looking%3F_Drilling_the_Fusion_Pose%21"
+   ]
+  },
+  {
+   "episode": 136,
+   "end_chapter": 478,
+   "start_chapter": 477,
+   "chapters_adapted": "477 (p.5-end), 478 (p.1-3)",
+   "volume": 40,
+   "confidence": "high",
+   "note": "Kanzenshuu JP ep 129: 477 (p.5-end), 478 (p.1-3); Dragon Universe wiki & fandom agree on END [our ep 136 = Japanese broadcast ep 129; 8 international-only eps offset the numbering]",
+   "sources": [
+    "https://www.kanzenshuu.com/episode/kai/eps-129/",
+    "https://dragonballuniverse.fandom.com/wiki/DBK129",
+    "https://dragonball.fandom.com/wiki/Bye-bye%2C_Everyone%21_Goku_Returns_to_the_Next_World"
+   ]
+  },
+  {
+   "episode": 137,
+   "end_chapter": 479,
+   "start_chapter": 478,
+   "chapters_adapted": "478 (p.3-end), 479 (p.1-6)",
+   "volume": 40,
+   "confidence": "high",
+   "note": "Kanzenshuu JP ep 130: 478 (p.3-end), 479 (p.1-6); Dragon Universe wiki & fandom agree on END [our ep 137 = Japanese broadcast ep 130; 8 international-only eps offset the numbering]",
+   "sources": [
+    "https://www.kanzenshuu.com/episode/kai/eps-130/",
+    "https://dragonballuniverse.fandom.com/wiki/DBK130",
+    "https://dragonball.fandom.com/wiki/Gohan_Located%21_Intensive_Training_in_the_World_of_the_Kais%21"
+   ]
+  },
+  {
+   "episode": 138,
+   "end_chapter": 480,
+   "start_chapter": 480,
+   "chapters_adapted": "479 (p.6-end), 480 (p.1-12)",
+   "volume": 40,
+   "confidence": "high",
+   "note": "Kanzenshuu JP ep 131: 479 (p.6-end), 480 (p.1-12); Dragon Universe wiki & fandom agree on END [our ep 138 = Japanese broadcast ep 131; 8 international-only eps offset the numbering]",
+   "sources": [
+    "https://www.kanzenshuu.com/episode/kai/eps-131/",
+    "https://dragonballuniverse.fandom.com/wiki/DBK131",
+    "https://dragonball.fandom.com/wiki/Birth_of_a_Merged_Superwarrior_His_Name_is_Gotenks%21"
+   ]
+  },
+  {
+   "episode": 139,
+   "end_chapter": 481,
+   "start_chapter": 481,
+   "chapters_adapted": "480 (p.12-end), 481",
+   "volume": 40,
+   "confidence": "high",
+   "note": "Kanzenshuu JP ep 132: 480 (p.12-end), 481; Dragon Universe wiki & fandom agree on END [our ep 139 = Japanese broadcast ep 132; 8 international-only eps offset the numbering]",
+   "sources": [
+    "https://www.kanzenshuu.com/episode/kai/eps-132/",
+    "https://dragonballuniverse.fandom.com/wiki/DBK132",
+    "https://dragonball.fandom.com/wiki/Who_Will_Defeat_Majin_Buu%3F_The_Mightiest_of_Men_Moves_Out%21"
+   ]
+  },
+  {
+   "episode": 140,
+   "end_chapter": 483,
+   "start_chapter": 482,
+   "chapters_adapted": "482-483",
+   "volume": 40,
+   "confidence": "high",
+   "note": "Kanzenshuu JP ep 133: 482-483; Dragon Universe wiki & fandom agree on END [our ep 140 = Japanese broadcast ep 133; 8 international-only eps offset the numbering]",
+   "sources": [
+    "https://www.kanzenshuu.com/episode/kai/eps-133/",
+    "https://dragonballuniverse.fandom.com/wiki/DBK133",
+    "https://dragonball.fandom.com/wiki/The_Powering_Up_Continues%3F_Super_Gotenks_is_Achieved%21"
+   ]
+  },
+  {
+   "episode": 141,
+   "end_chapter": 485,
+   "start_chapter": 484,
+   "chapters_adapted": "484, 485 (p.1-6)",
+   "volume": 40,
+   "confidence": "high",
+   "note": "Kanzenshuu JP ep 134: 484, 485 (p.1-6); Dragon Universe wiki & fandom agree on END [our ep 141 = Japanese broadcast ep 134; 8 international-only eps offset the numbering]",
+   "sources": [
+    "https://www.kanzenshuu.com/episode/kai/eps-134/",
+    "https://dragonballuniverse.fandom.com/wiki/DBK134",
+    "https://dragonball.fandom.com/wiki/What_Anger_Gives_Rise_To_Another_Majin%21"
+   ]
+  },
+  {
+   "episode": 142,
+   "end_chapter": 487,
+   "start_chapter": 486,
+   "chapters_adapted": "485 (p.6-end), 486, 487 (p.1-5)",
+   "volume": 41,
+   "confidence": "high",
+   "note": "Kanzenshuu JP ep 135: 485 (p.6-end), 486, 487 (p.1-5); Dragon Universe wiki & fandom agree on END [our ep 142 = Japanese broadcast ep 135; 8 international-only eps offset the numbering]",
+   "sources": [
+    "https://www.kanzenshuu.com/episode/kai/eps-135/",
+    "https://dragonballuniverse.fandom.com/wiki/DBK135",
+    "https://dragonball.fandom.com/wiki/Buu_Gobbles_Up_Buu%21_Onslaught_of_a_New_Majin%21"
+   ]
+  },
+  {
+   "episode": 143,
+   "end_chapter": 488,
+   "start_chapter": 488,
+   "chapters_adapted": "487 (p.6-end), 488",
+   "volume": 41,
+   "confidence": "high",
+   "note": "Kanzenshuu JP ep 136: 487 (p.6-end), 488; Dragon Universe wiki & fandom agree on END [our ep 143 = Japanese broadcast ep 136; 8 international-only eps offset the numbering]",
+   "sources": [
+    "https://www.kanzenshuu.com/episode/kai/eps-136/",
+    "https://dragonballuniverse.fandom.com/wiki/DBK136",
+    "https://dragonball.fandom.com/wiki/Headlong_Rush_Into_Catastrophe%21_A_One-Hour_Time_Limit%21"
+   ]
+  },
+  {
+   "episode": 144,
+   "end_chapter": 490,
+   "start_chapter": 489,
+   "chapters_adapted": "489, 490 (p.1-8)",
+   "volume": 41,
+   "confidence": "high",
+   "note": "Kanzenshuu JP ep 137: 489, 490 (p.1-8); Dragon Universe wiki & fandom agree on END [our ep 144 = Japanese broadcast ep 137; 8 international-only eps offset the numbering]",
+   "sources": [
+    "https://www.kanzenshuu.com/episode/kai/eps-137/",
+    "https://dragonballuniverse.fandom.com/wiki/DBK137",
+    "https://dragonball.fandom.com/wiki/Training_Complete%21_You%27re_Finished_Now%2C_Majin_Buu%21"
+   ]
+  },
+  {
+   "episode": 145,
+   "end_chapter": 492,
+   "start_chapter": 491,
+   "chapters_adapted": "490 (p.8-end), 491, 492 (p.1-10)",
+   "volume": 41,
+   "confidence": "high",
+   "note": "Kanzenshuu JP ep 138: 490 (p.8-end), 491, 492 (p.1-10); Dragon Universe wiki & fandom agree on END [our ep 145 = Japanese broadcast ep 138; 8 international-only eps offset the numbering]",
+   "sources": [
+    "https://www.kanzenshuu.com/episode/kai/eps-138/",
+    "https://dragonballuniverse.fandom.com/wiki/DBK138",
+    "https://dragonball.fandom.com/wiki/Eliminating_Buu_with_Ghosts%3A_A_Knockout_Kamikaze_Attack%21"
+   ]
+  },
+  {
+   "episode": 146,
+   "end_chapter": 493,
+   "start_chapter": 493,
+   "chapters_adapted": "492 (p.11-end), 493",
+   "volume": 41,
+   "confidence": "high",
+   "note": "Kanzenshuu JP ep 139: 492 (p.11-end), 493; Dragon Universe wiki & fandom agree on END [our ep 146 = Japanese broadcast ep 139; 8 international-only eps offset the numbering]",
+   "sources": [
+    "https://www.kanzenshuu.com/episode/kai/eps-139/",
+    "https://dragonballuniverse.fandom.com/wiki/DBK139",
+    "https://dragonball.fandom.com/wiki/Gotenks%27_Ace_in_the_Hole%21_Transformation%21_Super_Gotenks_3%21"
+   ]
+  },
+  {
+   "episode": 147,
+   "end_chapter": 495,
+   "start_chapter": 494,
+   "chapters_adapted": "494-495",
+   "volume": 41,
+   "confidence": "medium",
+   "note": "Kanzenshuu lists only 494 (its ep 141 entry then starts at 496, so 495 is a gap in their data); DU and fandom both list 494-495 (ch 495 = the Buu-Buu volleyball beat, the episode title) [our ep 147 = Japanese broadcast ep 140; 8 international-only eps offset the numbering]",
+   "sources": [
+    "https://www.kanzenshuu.com/episode/kai/eps-140/",
+    "https://dragonballuniverse.fandom.com/wiki/DBK140",
+    "https://dragonball.fandom.com/wiki/On_a_Roll%21_Buu-Buu-Volleyball%21"
+   ]
+  },
+  {
+   "episode": 148,
+   "end_chapter": 497,
+   "start_chapter": 496,
+   "chapters_adapted": "496, 497 (p.1-6)",
+   "volume": 41,
+   "confidence": "high",
+   "note": "Kanzenshuu JP ep 141: 496, 497 (p.1-6); Dragon Universe wiki & fandom agree on END [our ep 148 = Japanese broadcast ep 141; 8 international-only eps offset the numbering]",
+   "sources": [
+    "https://www.kanzenshuu.com/episode/kai/eps-141/",
+    "https://dragonballuniverse.fandom.com/wiki/DBK141",
+    "https://dragonball.fandom.com/wiki/Thanks_for_Waiting%2C_Everyone%21_A_Reborn_Gohan_Heads_for_Earth%21"
+   ]
+  },
+  {
+   "episode": 149,
+   "end_chapter": 498,
+   "start_chapter": 498,
+   "chapters_adapted": "497 (p.6-end), 498",
+   "volume": 41,
+   "confidence": "high",
+   "note": "Kanzenshuu JP ep 142: 497 (p.6-end), 498; Dragon Universe wiki & fandom agree on END [our ep 149 = Japanese broadcast ep 142; 8 international-only eps offset the numbering]",
+   "sources": [
+    "https://www.kanzenshuu.com/episode/kai/eps-142/",
+    "https://dragonballuniverse.fandom.com/wiki/DBK142",
+    "https://dragonball.fandom.com/wiki/Buu_Overwhelmed%21_Ultimate_Gohan%27s_Super_Power%21"
+   ]
+  },
+  {
+   "episode": 150,
+   "end_chapter": 500,
+   "start_chapter": 499,
+   "chapters_adapted": "499, 500 (p.1-7)",
+   "volume": 41,
+   "confidence": "high",
+   "note": "Kanzenshuu JP ep 143: 499, 500 (p.1-7); Dragon Universe wiki & fandom agree on END [our ep 150 = Japanese broadcast ep 143; 8 international-only eps offset the numbering]",
+   "sources": [
+    "https://www.kanzenshuu.com/episode/kai/eps-143/",
+    "https://dragonballuniverse.fandom.com/wiki/DBK143",
+    "https://dragonball.fandom.com/wiki/Buu%27s_Sinister_Scheme%3A_Gotenks_is_Absorbed"
+   ]
+  },
+  {
+   "episode": 151,
+   "end_chapter": 502,
+   "start_chapter": 501,
+   "chapters_adapted": "500 (p.7-end), 501, 502 (p.1-5)",
+   "volume": 41,
+   "confidence": "high",
+   "note": "Kanzenshuu JP ep 144: 500 (p.7-end), 501, 502 (p.1-5); Dragon Universe wiki & fandom agree on END [our ep 151 = Japanese broadcast ep 144; 8 international-only eps offset the numbering]",
+   "sources": [
+    "https://www.kanzenshuu.com/episode/kai/eps-144/",
+    "https://dragonballuniverse.fandom.com/wiki/DBK144",
+    "https://dragonball.fandom.com/wiki/The_Elder_Kai%27s_Brainstorm%21_Return_to_Life%2C_Goku%21"
+   ]
+  },
+  {
+   "episode": 152,
+   "end_chapter": 503,
+   "start_chapter": 503,
+   "chapters_adapted": "502 (p.5-end), 503",
+   "volume": 42,
+   "confidence": "high",
+   "note": "Kanzenshuu JP ep 145: 502 (p.5-end), 503; Dragon Universe wiki & fandom agree on END [our ep 152 = Japanese broadcast ep 145; 8 international-only eps offset the numbering]",
+   "sources": [
+    "https://www.kanzenshuu.com/episode/kai/eps-145/",
+    "https://dragonballuniverse.fandom.com/wiki/DBK145",
+    "https://dragonball.fandom.com/wiki/Miracles_Happen_Once..._Will_Goku_and_He_Make_the_Ultimate_Combination%3F"
+   ]
+  },
+  {
+   "episode": 153,
+   "end_chapter": 504,
+   "start_chapter": 504,
+   "chapters_adapted": "504 (p.1-11)",
+   "volume": 42,
+   "confidence": "high",
+   "note": "Kanzenshuu JP ep 146: 504 (p.1-11); Dragon Universe wiki & fandom agree on END [our ep 153 = Japanese broadcast ep 146; 8 international-only eps offset the numbering]",
+   "sources": [
+    "https://www.kanzenshuu.com/episode/kai/eps-146/",
+    "https://dragonballuniverse.fandom.com/wiki/DBK146",
+    "https://dragonball.fandom.com/wiki/Invincible%21_The_Ultimate_Warrior_Vegito"
+   ]
+  },
+  {
+   "episode": 154,
+   "end_chapter": 505,
+   "start_chapter": 505,
+   "chapters_adapted": "504 (p.12-end), 505",
+   "volume": 42,
+   "confidence": "high",
+   "note": "Kanzenshuu JP ep 147: 504 (p.12-end), 505; Dragon Universe wiki & fandom agree on END [our ep 154 = Japanese broadcast ep 147; 8 international-only eps offset the numbering]",
+   "sources": [
+    "https://www.kanzenshuu.com/episode/kai/eps-147/",
+    "https://dragonballuniverse.fandom.com/wiki/DBK147",
+    "https://dragonball.fandom.com/wiki/Buu%27s_Ace_in_the_Hole%21_The_Warriors_Are_Absorbed%21"
+   ]
+  },
+  {
+   "episode": 155,
+   "end_chapter": 507,
+   "start_chapter": 506,
+   "chapters_adapted": "506, 507 (p.1-6)",
+   "volume": 42,
+   "confidence": "high",
+   "note": "Kanzenshuu JP ep 148: 506, 507 (p.1-6); Dragon Universe wiki & fandom agree on END [our ep 155 = Japanese broadcast ep 148; 8 international-only eps offset the numbering]",
+   "sources": [
+    "https://www.kanzenshuu.com/episode/kai/eps-148/",
+    "https://dragonballuniverse.fandom.com/wiki/DBK148",
+    "https://dragonball.fandom.com/wiki/Rescue_Gohan_and_the_Others%21_Goku_and_Vegeta%27s_Infiltration_Mission%21"
+   ]
+  },
+  {
+   "episode": 156,
+   "end_chapter": 508,
+   "start_chapter": 507,
+   "chapters_adapted": "507 (p.6-end), 508 (p.1-3,5)",
+   "volume": 42,
+   "confidence": "high",
+   "note": "Kanzenshuu JP ep 149: 507 (p.6-end), 508 (p.1-3,5); Dragon Universe wiki & fandom agree on END [our ep 156 = Japanese broadcast ep 149; 8 international-only eps offset the numbering]",
+   "sources": [
+    "https://www.kanzenshuu.com/episode/kai/eps-149/",
+    "https://dragonballuniverse.fandom.com/wiki/DBK149",
+    "https://dragonball.fandom.com/wiki/Emergency_Escape_from_the_Body%21_Buu%27s_Retrogression_Into_Evil%21"
+   ]
+  },
+  {
+   "episode": 157,
+   "end_chapter": 509,
+   "start_chapter": 508,
+   "chapters_adapted": "508 (p.4,6-end), 509 (p.1-6)",
+   "volume": 42,
+   "confidence": "high",
+   "note": "Kanzenshuu JP ep 150: 508 (p.4,6-end), 509 (p.1-6); Dragon Universe wiki & fandom agree on END [our ep 157 = Japanese broadcast ep 150; 8 international-only eps offset the numbering]",
+   "sources": [
+    "https://www.kanzenshuu.com/episode/kai/eps-150/",
+    "https://dragonballuniverse.fandom.com/wiki/DBK150",
+    "https://dragonball.fandom.com/wiki/Earth_Destroyed%21_The_Initial_Buu%27s_Nefarious_Strike"
+   ]
+  },
+  {
+   "episode": 158,
+   "end_chapter": 509,
+   "start_chapter": 509,
+   "chapters_adapted": "509 (p.6-end)",
+   "volume": 42,
+   "confidence": "high",
+   "note": "Kanzenshuu JP ep 151: 509 (p.6-end); Dragon Universe wiki & fandom agree on END [our ep 158 = Japanese broadcast ep 151; 8 international-only eps offset the numbering]",
+   "sources": [
+    "https://www.kanzenshuu.com/episode/kai/eps-151/",
+    "https://dragonballuniverse.fandom.com/wiki/DBK151",
+    "https://dragonball.fandom.com/wiki/A_Final_Showdown_at_the_Summit%21_Face-Off_in_the_World_of_the_Kais%21"
+   ]
+  },
+  {
+   "episode": 159,
+   "end_chapter": 510,
+   "start_chapter": 510,
+   "chapters_adapted": "510 (p.1-4 alt), 510 (p.8-9,4-7,10-11)",
+   "volume": 42,
+   "confidence": "high",
+   "note": "Kanzenshuu JP ep 152: 510 (p.1-4 alt), 510 (p.8-9,4-7,10-11); Dragon Universe wiki & fandom agree on END [our ep 159 = Japanese broadcast ep 152; 8 international-only eps offset the numbering]",
+   "sources": [
+    "https://www.kanzenshuu.com/episode/kai/eps-152/",
+    "https://dragonballuniverse.fandom.com/wiki/DBK152",
+    "https://dragonball.fandom.com/wiki/Hang_In_There%2C_Kakarot%21_You_Are_No._1%21"
+   ]
+  },
+  {
+   "episode": 160,
+   "end_chapter": 511,
+   "start_chapter": 511,
+   "chapters_adapted": "510 (p.11-end), 511 (p.1-11)",
+   "volume": 42,
+   "confidence": "high",
+   "note": "Kanzenshuu JP ep 153: 510 (p.11-end), 511 (p.1-11); Dragon Universe wiki & fandom agree on END [our ep 160 = Japanese broadcast ep 153; 8 international-only eps offset the numbering]",
+   "sources": [
+    "https://www.kanzenshuu.com/episode/kai/eps-153/",
+    "https://dragonballuniverse.fandom.com/wiki/DBK153",
+    "https://dragonball.fandom.com/wiki/A_One-Minute_Match-Up%21_Vegeta%27s_Life-Threatening_Stall_for_Time%21"
+   ]
+  },
+  {
+   "episode": 161,
+   "end_chapter": 513,
+   "start_chapter": 512,
+   "chapters_adapted": "511 (p.12-end), 512, 513 (p.1-12)",
+   "volume": 42,
+   "confidence": "high",
+   "note": "Kanzenshuu JP ep 154: 511 (p.12-end), 512, 513 (p.1-12); Dragon Universe wiki & fandom agree on END [our ep 161 = Japanese broadcast ep 154; 8 international-only eps offset the numbering]",
+   "sources": [
+    "https://www.kanzenshuu.com/episode/kai/eps-154/",
+    "https://dragonballuniverse.fandom.com/wiki/DBK154",
+    "https://dragonball.fandom.com/wiki/An_Inspired_Strategy_Make_Two_Wishes_Come_True%21"
+   ]
+  },
+  {
+   "episode": 162,
+   "end_chapter": 515,
+   "start_chapter": 514,
+   "chapters_adapted": "513 (p.13), 514, 515 (p.1)",
+   "volume": 42,
+   "confidence": "high",
+   "note": "Kanzenshuu JP ep 155: 513 (p.13), 514, 515 (p.1); Dragon Universe wiki & fandom agree on END [our ep 162 = Japanese broadcast ep 155; 8 international-only eps offset the numbering]",
+   "sources": [
+    "https://www.kanzenshuu.com/episode/kai/eps-155/",
+    "https://dragonballuniverse.fandom.com/wiki/DBK155",
+    "https://dragonball.fandom.com/wiki/Share_Your_Spirit_Energy_with_Me%21_I%27m_Making_a_Huge_Spirit_Bomb%21"
+   ]
+  },
+  {
+   "episode": 163,
+   "end_chapter": 516,
+   "start_chapter": 515,
+   "chapters_adapted": "515 (p.2-end), 516 (p.1-7)",
+   "volume": 42,
+   "confidence": "high",
+   "note": "Kanzenshuu JP ep 156: 515 (p.2-end), 516 (p.1-7); Dragon Universe wiki & fandom agree on END [our ep 163 = Japanese broadcast ep 156; 8 international-only eps offset the numbering]",
+   "sources": [
+    "https://www.kanzenshuu.com/episode/kai/eps-156/",
+    "https://dragonballuniverse.fandom.com/wiki/DBK156",
+    "https://dragonball.fandom.com/wiki/You_Are_the_Savior_of_the_World%21_Everybody%27s_Spirit_Bomb_Completed%21"
+   ]
+  },
+  {
+   "episode": 164,
+   "end_chapter": 517,
+   "start_chapter": 517,
+   "chapters_adapted": "516 (p.7-end), 517 (p.1-10)",
+   "volume": 42,
+   "confidence": "high",
+   "note": "Kanzenshuu JP ep 157: 516 (p.7-end), 517 (p.1-10); Dragon Universe wiki & fandom agree on END [our ep 164 = Japanese broadcast ep 157; 8 international-only eps offset the numbering]",
+   "sources": [
+    "https://www.kanzenshuu.com/episode/kai/eps-157/",
+    "https://dragonballuniverse.fandom.com/wiki/DBK157",
+    "https://dragonball.fandom.com/wiki/You_Really_Are_the_Greatest%2C_Goku%21%21_The_Demise_of_Majin_Buu"
+   ]
+  },
+  {
+   "episode": 166,
+   "end_chapter": 519,
+   "start_chapter": 518,
+   "chapters_adapted": "517 (p.11-end), 518, 519 (p.1-3)",
+   "volume": 42,
+   "confidence": "high",
+   "note": "Kanzenshuu JP ep 158: 517 (p.11-end), 518, 519 (p.1-3); Dragon Universe wiki & fandom agree on END [our ep 166 = Japanese broadcast ep 158; 8 international-only eps offset the numbering]",
+   "sources": [
+    "https://www.kanzenshuu.com/episode/kai/eps-158/",
+    "https://dragonballuniverse.fandom.com/wiki/DBK158",
+    "https://dragonball.fandom.com/wiki/And_So%2C_Ten_Years_Later..._A_Long-Awaited_World_Martial_Arts_Tournament%21"
+   ]
+  },
+  {
+   "episode": 167,
+   "end_chapter": 519,
+   "start_chapter": 519,
+   "chapters_adapted": "519 (p.3-end)",
+   "volume": 42,
+   "confidence": "high",
+   "note": "Kanzenshuu JP ep 159: 519 (p.3-end); Dragon Universe wiki & fandom agree on END [our ep 167 = Japanese broadcast ep 159; 8 international-only eps offset the numbering]",
+   "sources": [
+    "https://www.kanzenshuu.com/episode/kai/eps-159/",
+    "https://dragonballuniverse.fandom.com/wiki/DBK159",
+    "https://dragonball.fandom.com/wiki/Even_Stronger%21_Goku%27s_Dream_is_Never-Ending%21"
+   ]
+  }
+ ],
+ "continue_points": [
+  {
+   "episode": 3,
+   "continue_chapter": 204,
+   "note": "ends mid-chapter: p.1-13 of ch 204 animated; 1 page(s) remain"
+  },
+  {
+   "episode": 5,
+   "continue_chapter": 209,
+   "note": "ends mid-chapter: p.1-10 of ch 209 animated; 4 page(s) remain"
+  },
+  {
+   "episode": 6,
+   "continue_chapter": 211,
+   "note": "ends mid-chapter: p.1-5 of ch 211 animated; 9 page(s) remain"
+  },
+  {
+   "episode": 8,
+   "continue_chapter": 213,
+   "note": "ends mid-chapter: p.1-4 of ch 213 animated; 10 page(s) remain"
+  },
+  {
+   "episode": 10,
+   "continue_chapter": 219,
+   "note": "ends mid-chapter: p.1-12 of ch 219 animated; 2 page(s) remain"
+  },
+  {
+   "episode": 12,
+   "continue_chapter": 226,
+   "note": "ends mid-chapter: p.1-8 of ch 226 animated; 6 page(s) remain"
+  },
+  {
+   "episode": 13,
+   "continue_chapter": 230,
+   "note": "ends mid-chapter: p.1-6 of ch 230 animated; 8 page(s) remain"
+  },
+  {
+   "episode": 14,
+   "continue_chapter": 233,
+   "note": "ends mid-chapter: p.1-11 of ch 233 animated; 3 page(s) remain"
+  },
+  {
+   "episode": 15,
+   "continue_chapter": 237,
+   "note": "ends mid-chapter: p.1-4 of ch 237 animated; 10 page(s) remain"
+  },
+  {
+   "episode": 16,
+   "continue_chapter": 241,
+   "note": "ends mid-chapter: p.1-7 of ch 241 animated; 7 page(s) remain"
+  },
+  {
+   "episode": 17,
+   "continue_chapter": 243,
+   "note": "ends mid-chapter: p.1-8 of ch 243 animated; 6 page(s) remain"
+  },
+  {
+   "episode": 19,
+   "continue_chapter": 247,
+   "note": "ends mid-chapter: p.1-14 of ch 247 animated; 1 page(s) remain"
+  },
+  {
+   "episode": 21,
+   "continue_chapter": 254,
+   "note": "ends mid-chapter: p.1-3 of ch 254 animated; 11 page(s) remain"
+  },
+  {
+   "episode": 23,
+   "continue_chapter": 260,
+   "note": "ends mid-chapter: p.1-11 of ch 260 animated; 3 page(s) remain"
+  },
+  {
+   "episode": 25,
+   "continue_chapter": 265,
+   "note": "ends mid-chapter: p.9-11 of ch 265 animated; 3 page(s) remain"
+  },
+  {
+   "episode": 26,
+   "continue_chapter": 268,
+   "note": "ends mid-chapter: p.1-12 of ch 268 animated; 2 page(s) remain"
+  },
+  {
+   "episode": 27,
+   "continue_chapter": 270,
+   "note": "ends mid-chapter: p.1-8 of ch 270 animated; 6 page(s) remain"
+  },
+  {
+   "episode": 28,
+   "continue_chapter": 272,
+   "note": "ends mid-chapter: p.1-8 of ch 272 animated; 6 page(s) remain"
+  },
+  {
+   "episode": 31,
+   "continue_chapter": 282,
+   "note": "ends mid-chapter: p.1-9 of ch 282 animated; 5 page(s) remain"
+  },
+  {
+   "episode": 33,
+   "continue_chapter": 286,
+   "note": "ends mid-chapter: p.1-13 of ch 286 animated; 1 page(s) remain"
+  },
+  {
+   "episode": 34,
+   "continue_chapter": 288,
+   "note": "ends mid-chapter: p.1-8 of ch 288 animated; 6 page(s) remain"
+  },
+  {
+   "episode": 35,
+   "continue_chapter": 292,
+   "note": "ends mid-chapter: p.1-11 of ch 292 animated; 3 page(s) remain"
+  },
+  {
+   "episode": 36,
+   "continue_chapter": 294,
+   "note": "ends mid-chapter: p.1-11 of ch 294 animated; 3 page(s) remain"
+  },
+  {
+   "episode": 38,
+   "continue_chapter": 300,
+   "note": "ends mid-chapter: p.1-5 of ch 300 animated; 9 page(s) remain"
+  },
+  {
+   "episode": 40,
+   "continue_chapter": 305,
+   "note": "ends mid-chapter: p.1-8 of ch 305 animated; 6 page(s) remain"
+  },
+  {
+   "episode": 42,
+   "continue_chapter": 308,
+   "note": "ends mid-chapter: p.1-7 of ch 308 animated; 7 page(s) remain"
+  },
+  {
+   "episode": 45,
+   "continue_chapter": 314,
+   "note": "ends mid-chapter: p.1-11 of ch 314 animated; 3 page(s) remain"
+  },
+  {
+   "episode": 46,
+   "continue_chapter": 316,
+   "note": "ends mid-chapter: p.1-2 of ch 316 animated; 12 page(s) remain"
+  },
+  {
+   "episode": 48,
+   "continue_chapter": 320,
+   "note": "ends mid-chapter: p.1 of ch 320 animated; 13 page(s) remain"
+  },
+  {
+   "episode": 49,
+   "continue_chapter": 321,
+   "note": "ends mid-chapter: p.1-8 of ch 321 animated; 6 page(s) remain"
+  },
+  {
+   "episode": 51,
+   "continue_chapter": 324,
+   "note": "ends mid-chapter: p.1-11 of ch 324 animated; 3 page(s) remain"
+  },
+  {
+   "episode": 52,
+   "continue_chapter": 326,
+   "note": "ends mid-chapter: p.1-11 of ch 326 animated; 3 page(s) remain"
+  },
+  {
+   "episode": 53,
+   "continue_chapter": 328,
+   "note": "ends mid-chapter: p.1-10 of ch 328 animated; 4 page(s) remain"
+  },
+  {
+   "episode": 54,
+   "continue_chapter": 329,
+   "note": "ends mid-chapter: p.1-10 of ch 329 animated; 4 page(s) remain"
+  },
+  {
+   "episode": 55,
+   "continue_chapter": 331,
+   "note": "ends mid-chapter: p.1-2 of ch 331 animated; 12 page(s) remain"
+  },
+  {
+   "episode": 56,
+   "continue_chapter": 333,
+   "note": "ends mid-chapter: p.1-2 of ch 333 animated; 12 page(s) remain"
+  },
+  {
+   "episode": 59,
+   "continue_chapter": 340,
+   "note": "ends mid-chapter: p.1-2 of ch 340 animated; 12 page(s) remain"
+  },
+  {
+   "episode": 60,
+   "continue_chapter": 342,
+   "note": "ends mid-chapter: p.1-13 of ch 342 animated; 1 page(s) remain"
+  },
+  {
+   "episode": 61,
+   "continue_chapter": 345,
+   "note": "ends mid-chapter: p.1-7 of ch 345 animated; 7 page(s) remain"
+  },
+  {
+   "episode": 62,
+   "continue_chapter": 347,
+   "note": "ends mid-chapter: p.1-12 of ch 347 animated; 2 page(s) remain"
+  },
+  {
+   "episode": 63,
+   "continue_chapter": 349,
+   "note": "ends mid-chapter: p.1-6 of ch 349 animated; 8 page(s) remain"
+  },
+  {
+   "episode": 65,
+   "continue_chapter": 355,
+   "note": "ends mid-chapter: p.1-5 of ch 355 animated; 9 page(s) remain"
+  },
+  {
+   "episode": 68,
+   "continue_chapter": 361,
+   "note": "ends mid-chapter: p.1-2 of ch 361 animated; 12 page(s) remain"
+  },
+  {
+   "episode": 69,
+   "continue_chapter": 363,
+   "note": "ends mid-chapter: p.1-8 of ch 363 animated; 6 page(s) remain"
+  },
+  {
+   "episode": 72,
+   "continue_chapter": 367,
+   "note": "ends mid-chapter: p.1-8 of ch 367 animated; 6 page(s) remain"
+  },
+  {
+   "episode": 75,
+   "continue_chapter": 373,
+   "note": "ends mid-chapter: p.1-13 of ch 373 animated; 1 page(s) remain"
+  },
+  {
+   "episode": 76,
+   "continue_chapter": 376,
+   "note": "ends mid-chapter: p.1-4 of ch 376 animated; 10 page(s) remain"
+  },
+  {
+   "episode": 78,
+   "continue_chapter": 380,
+   "note": "ends mid-chapter: p.1-10 of ch 380 animated; 4 page(s) remain"
+  },
+  {
+   "episode": 79,
+   "continue_chapter": 382,
+   "note": "ends mid-chapter: p.1-10 of ch 382 animated; 4 page(s) remain"
+  },
+  {
+   "episode": 82,
+   "continue_chapter": 388,
+   "note": "ends mid-chapter: p.1-10 of ch 388 animated; 4 page(s) remain"
+  },
+  {
+   "episode": 85,
+   "continue_chapter": 393,
+   "note": "ends mid-chapter: p.1-4 of ch 393 animated; 10 page(s) remain"
+  },
+  {
+   "episode": 86,
+   "continue_chapter": 394,
+   "note": "ends mid-chapter: p.1-11 of ch 394 animated; 3 page(s) remain"
+  },
+  {
+   "episode": 89,
+   "continue_chapter": 402,
+   "note": "ends mid-chapter: p.1-3 of ch 402 animated; 11 page(s) remain"
+  },
+  {
+   "episode": 90,
+   "continue_chapter": 404,
+   "note": "ends mid-chapter: p.1-8 of ch 404 animated; 6 page(s) remain"
+  },
+  {
+   "episode": 91,
+   "continue_chapter": 406,
+   "note": "ends mid-chapter: p.1-7 of ch 406 animated; 7 page(s) remain"
+  },
+  {
+   "episode": 93,
+   "continue_chapter": 409,
+   "note": "ends mid-chapter: p.1-2 of ch 409 animated; 12 page(s) remain"
+  },
+  {
+   "episode": 99,
+   "continue_chapter": 424,
+   "note": "ends mid-chapter: p.1-2 of ch 424 animated; 12 page(s) remain"
+  },
+  {
+   "episode": 100,
+   "continue_chapter": 425,
+   "note": "ch 424 p.9-end and all of ch 425 are never animated (Kanzenshuu: DBZ/Kai none); read 425 before ep 102 resumes at 426"
+  },
+  {
+   "episode": 102,
+   "continue_chapter": 426,
+   "note": "ends mid-chapter: p.1-8 of ch 426 animated; 6 page(s) remain"
+  },
+  {
+   "episode": 104,
+   "continue_chapter": 429,
+   "note": "ends mid-chapter: p.1-9 of ch 429 animated; 5 page(s) remain"
+  },
+  {
+   "episode": 105,
+   "continue_chapter": 431,
+   "note": "ends mid-chapter: p.1-7 of ch 431 animated; 7 page(s) remain"
+  },
+  {
+   "episode": 111,
+   "continue_chapter": 441,
+   "note": "ends mid-chapter: p.1-8 of ch 441 animated; 6 page(s) remain"
+  },
+  {
+   "episode": 113,
+   "continue_chapter": 445,
+   "note": "ends mid-chapter: p.1-2 of ch 445 animated; 12 page(s) remain"
+  },
+  {
+   "episode": 115,
+   "continue_chapter": 449,
+   "note": "ends mid-chapter: p.1-6 of ch 449 animated; 8 page(s) remain"
+  },
+  {
+   "episode": 116,
+   "continue_chapter": 451,
+   "note": "ends mid-chapter: p.1-10 of ch 451 animated; 4 page(s) remain"
+  },
+  {
+   "episode": 117,
+   "continue_chapter": 453,
+   "note": "ends mid-chapter: p.1-6 of ch 453 animated; 8 page(s) remain"
+  },
+  {
+   "episode": 118,
+   "continue_chapter": 454,
+   "note": "ends mid-chapter: p.1-2 of ch 454 animated; 12 page(s) remain"
+  },
+  {
+   "episode": 119,
+   "continue_chapter": 455,
+   "note": "ends mid-chapter: p.1-5 of ch 455 animated; 9 page(s) remain"
+  },
+  {
+   "episode": 120,
+   "continue_chapter": 456,
+   "note": "ends mid-chapter: p.1-8 of ch 456 animated; 6 page(s) remain"
+  },
+  {
+   "episode": 121,
+   "continue_chapter": 458,
+   "note": "ends mid-chapter: p.1-5,8-9 of ch 458 animated; 5 page(s) remain"
+  },
+  {
+   "episode": 122,
+   "continue_chapter": 459,
+   "note": "ends mid-chapter: p.1-3,7-8,4-6 of ch 459 animated; 6 page(s) remain"
+  },
+  {
+   "episode": 123,
+   "continue_chapter": 461,
+   "note": "ends mid-chapter: p.1-2 of ch 461 animated; 12 page(s) remain"
+  },
+  {
+   "episode": 125,
+   "continue_chapter": 464,
+   "note": "ends mid-chapter: p.1-8 of ch 464 animated; 6 page(s) remain"
+  },
+  {
+   "episode": 126,
+   "continue_chapter": 466,
+   "note": "ends mid-chapter: p.1-2 of ch 466 animated; 12 page(s) remain"
+  },
+  {
+   "episode": 128,
+   "continue_chapter": 469,
+   "note": "ends mid-chapter: p.1-2 of ch 469 animated; 12 page(s) remain"
+  },
+  {
+   "episode": 129,
+   "continue_chapter": 469,
+   "note": "ends mid-chapter: p.2-8 of ch 469 animated; 6 page(s) remain"
+  },
+  {
+   "episode": 130,
+   "continue_chapter": 470,
+   "note": "ends mid-chapter: p.1-8 of ch 470 animated; 6 page(s) remain"
+  },
+  {
+   "episode": 132,
+   "continue_chapter": 473,
+   "note": "ends mid-chapter: p.1-4 of ch 473 animated; 10 page(s) remain"
+  },
+  {
+   "episode": 133,
+   "continue_chapter": 474,
+   "note": "ends mid-chapter: p.1-9 of ch 474 animated; 5 page(s) remain"
+  },
+  {
+   "episode": 135,
+   "continue_chapter": 477,
+   "note": "ends mid-chapter: p.1-5 of ch 477 animated; 9 page(s) remain"
+  },
+  {
+   "episode": 136,
+   "continue_chapter": 478,
+   "note": "ends mid-chapter: p.1-3 of ch 478 animated; 11 page(s) remain"
+  },
+  {
+   "episode": 137,
+   "continue_chapter": 479,
+   "note": "ends mid-chapter: p.1-6 of ch 479 animated; 8 page(s) remain"
+  },
+  {
+   "episode": 138,
+   "continue_chapter": 480,
+   "note": "ends mid-chapter: p.1-12 of ch 480 animated; 2 page(s) remain"
+  },
+  {
+   "episode": 141,
+   "continue_chapter": 485,
+   "note": "ends mid-chapter: p.1-6 of ch 485 animated; 8 page(s) remain"
+  },
+  {
+   "episode": 142,
+   "continue_chapter": 487,
+   "note": "ends mid-chapter: p.1-5 of ch 487 animated; 9 page(s) remain"
+  },
+  {
+   "episode": 144,
+   "continue_chapter": 490,
+   "note": "ends mid-chapter: p.1-8 of ch 490 animated; 6 page(s) remain"
+  },
+  {
+   "episode": 145,
+   "continue_chapter": 492,
+   "note": "ends mid-chapter: p.1-10 of ch 492 animated; 4 page(s) remain"
+  },
+  {
+   "episode": 148,
+   "continue_chapter": 497,
+   "note": "ends mid-chapter: p.1-6 of ch 497 animated; 8 page(s) remain"
+  },
+  {
+   "episode": 150,
+   "continue_chapter": 500,
+   "note": "ends mid-chapter: p.1-7 of ch 500 animated; 7 page(s) remain"
+  },
+  {
+   "episode": 151,
+   "continue_chapter": 502,
+   "note": "ends mid-chapter: p.1-5 of ch 502 animated; 9 page(s) remain"
+  },
+  {
+   "episode": 153,
+   "continue_chapter": 504,
+   "note": "ends mid-chapter: p.1-11 of ch 504 animated; 3 page(s) remain"
+  },
+  {
+   "episode": 155,
+   "continue_chapter": 507,
+   "note": "ends mid-chapter: p.1-6 of ch 507 animated; 8 page(s) remain"
+  },
+  {
+   "episode": 156,
+   "continue_chapter": 508,
+   "note": "ends mid-chapter: p.1-3,5 of ch 508 animated; 9 page(s) remain"
+  },
+  {
+   "episode": 157,
+   "continue_chapter": 509,
+   "note": "ends mid-chapter: p.1-6 of ch 509 animated; 8 page(s) remain"
+  },
+  {
+   "episode": 159,
+   "continue_chapter": 510,
+   "note": "ends mid-chapter: p.8-9,4-7,10-11 of ch 510 animated; 3 page(s) remain"
+  },
+  {
+   "episode": 160,
+   "continue_chapter": 511,
+   "note": "ends mid-chapter: p.1-11 of ch 511 animated; 3 page(s) remain"
+  },
+  {
+   "episode": 161,
+   "continue_chapter": 513,
+   "note": "ends mid-chapter: p.1-12 of ch 513 animated; 2 page(s) remain"
+  },
+  {
+   "episode": 162,
+   "continue_chapter": 515,
+   "note": "ends mid-chapter: p.1 of ch 515 animated; 13 page(s) remain"
+  },
+  {
+   "episode": 163,
+   "continue_chapter": 516,
+   "note": "ends mid-chapter: p.1-7 of ch 516 animated; 7 page(s) remain"
+  },
+  {
+   "episode": 164,
+   "continue_chapter": 517,
+   "note": "ends mid-chapter: p.1-10 of ch 517 animated; 4 page(s) remain"
+  },
+  {
+   "episode": 166,
+   "continue_chapter": 519,
+   "note": "ends mid-chapter: p.1-3 of ch 519 animated; 11 page(s) remain"
+  }
+ ],
+ "annotations": [
+  {
+   "episodes": [
+    25
+   ],
+   "kind": "rearranged",
+   "chapters": "264-265",
+   "note": "Kanzenshuu page order: 264 p.11-end, 265 p.1-8, then 264 p.1-9, 265 p.9-11 - the Guru/Nail scenes are shown before the Krillin/Bulma scenes of the same chapters"
+  },
+  {
+   "episodes": [
+    26
+   ],
+   "kind": "divergence",
+   "chapters": "266",
+   "note": "Kanzenshuu marks ch 266 (Vegeta's Laughter, Freeza's Rage) as adapted only in altered form"
+  },
+  {
+   "episodes": [
+    100,
+    101,
+    102
+   ],
+   "kind": "graft",
+   "chapters": "424-426",
+   "note": "International cut only: DBZ 201B-205A footage re-inserted (Great Saiyaman bus rescue alt-form of 424 p.3-8, the filler date/Videl-kidnap/Chobi episodes 202-204, then 426 p.1-8). Ch 425 (Videl unmasks Gohan) has no direct counterpart - covered loosely by the DBZ 204 filler footage in ep 102"
+  },
+  {
+   "episodes": [
+    103,
+    106,
+    108,
+    111,
+    113
+   ],
+   "kind": "graft",
+   "chapters": "426-427, 431-432, 434-437, 440-441, 443-445",
+   "note": "International-only episodes (never broadcast in Japan) built from DBZ footage cut from the Japanese Kai edit; they carry manga material that the Japanese eps 100-106 had condensed, so the neighbouring \"JP-counterpart\" episodes (100, 104, 105, 107, 109, 110, 112) cover less than their Japanese namesakes"
+  },
+  {
+   "episodes": [
+    108,
+    109
+   ],
+   "kind": "rearranged",
+   "chapters": "437",
+   "note": "ch 437 p.3-6 (Trunks & Goten mug Mighty Mask) is held back from ep 108 and inserted in ep 109 after 438 p.1-2 (DBZ 214 structure)"
+  },
+  {
+   "episodes": [
+    117,
+    119
+   ],
+   "kind": "rearranged",
+   "chapters": "452",
+   "note": "ch 452 p.1-3 (Dabura enters) is skipped in ep 117 (which uses 452 p.4-end) and shown at the top of ep 119 before 454 p.3"
+  },
+  {
+   "episodes": [
+    120,
+    121,
+    122
+   ],
+   "kind": "rearranged",
+   "chapters": "455, 458-459",
+   "note": "page-level reshuffles inside the Vegeta/Babidi sequence: ep 120 = 455 p.6-7, 10, 8-end; ep 121 = 458 p.1-5, 8-9; ep 122 = 458 p.5-7, 10-end and 459 p.1-3, 7-8, 4-6 (Kanzenshuu page breakdown)"
+  },
+  {
+   "episodes": [
+    156,
+    157
+   ],
+   "kind": "rearranged",
+   "chapters": "508",
+   "note": "ch 508 split out of order: ep 156 = p.1-3, 5; ep 157 = p.4, 6-end"
+  },
+  {
+   "episodes": [
+    159
+   ],
+   "kind": "divergence",
+   "chapters": "510",
+   "note": "ch 510 p.1-4 adapted in altered form, then p.8-9, 4-7, 10-11 reordered; ep 160 resumes at 510 p.11"
+  },
+  {
+   "episodes": [
+    164,
+    165,
+    166
+   ],
+   "kind": "graft",
+   "chapters": "517",
+   "note": "ep 164 ends at 517 p.10; the international-only ep 165 is the DBZ 287B-288 filler (party at Satan's); ep 166 resumes at 517 p.11"
+  }
+ ],
+ "type_corrections": [],
+ "repairs": [],
+ "structure": {
+  "notes": "Components confirmed: AniList 6033 = 97 eps (our 1-97, chs 195-418); AniList 11359 = the Japanese ep 98 that Fuji TV pulled after the 2011 Tohoku quake and released as a Blu-ray/DVD \"extra\" (our 98, chs 419-420); AniList 20635 = 69 episodes = the INTERNATIONAL \"The Final Chapters\" cut (our 99-167, chs 421-519). Our rows are the international cut: eight episodes never aired in Japan and carry 2017/2018 US dates (101, 102, 103, 106, 108, 111, 113, 165). Kanzenshuu and the Dragon Universe wiki number the Buu arc by the 61-episode Japanese broadcast (099-159); conversion used: our 99-100 = JP 99-100; our 104,105,107,109,110,112 = JP 101,102,103,104,105,106; our 114-164 = JP 107-157 (JP = ours - 7); our 166-167 = JP 158-159. The international cut re-edited JP eps 100-106 into our 100-113 with the extra DBZ footage; from our 114 (= JP 107) onward the two cuts are the same episodes (Wikipedia footage column matches Kanzenshuu). Volume boundaries in the context file are wrong for v17+ (it has v17 = 192-202); the tankobon boundaries per Wikipedia's List of Dragon Ball Z chapters and the fandom chapter list are v17 195-204, v18 205-216, v19 217-228, v20 229-240, v21 241-252, v22 253-264, v23 265-276, v24 277-288, v25 289-300, v26 301-313, v27 314-325, v28 326-337, v29 338-349, v30 350-361, v31 362-373, v32 374-385, v33 386-396, v34 397-408, v35 409-420, v36 421-432, v37 433-445, v38 446-459, v39 460-472, v40 473-485, v41 486-502, v42 503-519; all volumes in this file use these. Saga boundaries (our numbering): Raditz 1-3, Saiyan 4-16, Namek 17-31, Ginyu 32-35, Freeza 36-54, Trunks 55-58, Androids 59-67, Imperfect Cell 68-75, Perfect Cell 76-82, Cell Games 83-98, Great Saiyaman 99-105, World Tournament 106-114, Babidi 115-122, Majin Buu 123-140, Fusion 141-155, Kid Buu 156-165, Peaceful World 166-167. Chapter numbering used everywhere = the original 519-chapter Dragon Ball numbering (Viz \"Dragon Ball Z\" chapter N = original N+194; Viz DBZ volume N = JP volume N+16).",
+  "order_only": []
+ },
+ "flags_for_sean": [
+  "Volume boundaries in the context file (v17: 192-202 ... v26: 309-?) do not match the tankobon; Wikipedia (List of Dragon Ball Z chapters) and the fandom chapter list agree exactly on v17 195-204 through v42 503-519 (full table in structure.notes). All volumes here use the verified boundaries - the stored boundary table for volumes 17-42 should be replaced.",
+  "International re-cut zone (eps 100-113): the fandom and Kanzenshuu/DU pages for the JP-counterpart episodes 100, 107, 110, 112 describe the JAPANESE episode content, so their END chapters differ from what the international episode actually contains (JP 100 ends 426, JP 103 ends 435, JP 105 ends 441, JP 106 ends 445). END chapters for those four are taken from Wikipedia's \"Corresponding DBZ ep.\" footage column + Kanzenshuu's DBZ chapter pages (100->424, 107->433, 110->439, 112->442), which is internally consistent with the fandom pages of the international-only episodes 102/103/106/108/111/113; marked medium. Sources: https://en.wikipedia.org/wiki/List_of_Dragon_Ball_Z_Kai_episodes , https://www.kanzenshuu.com/episode/dbz/eps-211/ , https://dragonball.fandom.com/wiki/A_Monster_is_Taken_Away!_The_Culprit_is_Great_Saiyaman%3F",
+  "Ch 425 (\"Revealed!!!\", Videl unmasks Gohan) is listed by Kanzenshuu as never adapted in DBZ or Kai (https://www.kanzenshuu.com/manga/db/chp-425/); the international ep 102 covers the beat via DBZ 204 filler footage. Continue point after ep 100 is therefore 425 (read it before ep 102 resumes at 426).",
+  "Ep 147: Kanzenshuu lists only ch 494 and its next entry starts at 496 (gap); DU and fandom list 494-495 - used 495 (the volleyball chapter matching the episode title), marked medium. https://www.kanzenshuu.com/episode/kai/eps-140/ vs https://dragonballuniverse.fandom.com/wiki/DBK140",
+  "Ep 38: Kanzenshuu omits ch 297 (its list is 298-300 p.1-5) while DU and fandom include 297; used start 297, END 300 (Kanzenshuu + DU).",
+  "Our row 128 has the wrong title and air date: it repeats ep 139's title (\"Who Will Defeat Majin Buu? The Mightiest of Men Moves Out!\") and date (2014-11-30). Ep 128 is \"A Nightmare Revisited: The Immortal Monster Majin Buu!\" (JP ep 121, aired 2014-09-14; chs 468-469 p.1-2). Data glitch only; anchors unaffected.",
+  "Open flag #692 (MU chapter count 149 vs AniList 520): the reading edition for these anchors is the original 519-chapter Japanese numbering (AniList 30042 counts 520 incl. a bonus). MU's 149 is not a chapter count of the same edition; the Viz \"Dragon Ball Z\" split renumbers chapter 195 as DBZ ch 1 (offset 194).",
+  "Start chapters follow the protocol majority rule (tail of the previous chapter -> first full chapter unless the tail is the bulk); chapters_adapted keeps the Kanzenshuu page splits, so the honest per-page truth is preserved even where start_chapter skips a short tail. Kanzenshuu page counts assume 14-page chapters where \"End\" is given."
+ ]
+}

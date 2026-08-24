@@ -1,0 +1,1225 @@
+{
+ "series_id": "cardcaptor-sakura",
+ "summary": "Eps 1-70 (1998 TV, AniList 232) adapt the 50-chapter original manga (AniList 30106): the Clow Card arc (eps 1-46) covers vol 1-6 / ch 1-26 with the anime interleaving 33 anime-original card episodes (already typed filler in our rows; animefillerlist agrees exactly) and freely reordering the 19 manga captures (Shadow/Thunder pulled into eps 2/8, Shield/Mirror/Mizuki shuffled across eps 11/25/26, Firey (ch 23) done at Christmas before the play/Light-Dark (ch 20-21) in eps 41-42); the Sakura Card arc (eps 47-70) covers vol 7-12 / ch 27-50 fairly linearly except ch 36 (ep 52) landing before ch 33-35 and ep 70's rewritten ending (Nameless card instead of the hand-sewn bear/epilogue). Ep 71 is NOT the Sealed Card movie our component says: it is the Clear Card Prologue OVA 'Sakura and the Two Bears' (AniList 98554), a faithful adaptation of original ch 46-50 that ends on Clear Card ch 1's opening - so the existing ep93->50 anchor belongs on ep 71. Clear Card begins at ep 72 (CC ep 1 = CC ch 1-3) and eps 72-93 loosely adapt Clear Card manga ch 1-24 (vol 1-5; AniList 87296, a separate 80-chapter manga) with six anime-original episodes (76, 83-87, Meiling/anime-only cards) and an anime-original finale that rewrites ch 24. 35 original-numbering anchors (eps 1-71, 31 canon episodes + the OVA) plus 16 Clear Card anchors are provided; 4 type corrections on the 1998 series and 7 on Clear Card.",
+ "anchors": [
+  {
+   "episode": 1,
+   "end_chapter": 2,
+   "start_chapter": 1,
+   "chapters_adapted": "1-2",
+   "volume": 1,
+   "confidence": "high",
+   "note": "Ch 1 opens in medias res (Sakura already has Windy/Wood/Jump; the Clow Book opening is a flashback); Fly is captured in ch 2 (manga uses Wood+Jump, anime uses Windy).",
+   "sources": [
+    "https://ccsakura.fandom.com/wiki/The_Fly",
+    "https://ccsakura.fandom.com/wiki/The_Windy",
+    "https://ccsakura.fandom.com/wiki/Chapter_2",
+    "https://ccsakura.fandom.com/wiki/Difference_between_the_Manga_and_the_Anime"
+   ]
+  },
+  {
+   "episode": 2,
+   "end_chapter": 2,
+   "start_chapter": 2,
+   "chapters_adapted": "2, 10",
+   "volume": 1,
+   "confidence": "medium",
+   "note": "Tomoyo's night-time filming at the school with her bodyguards/costume is ch 2's frame; the Shadow capture itself is ch 10 in the manga (captured there with Thunder) and was relocated here.",
+   "sources": [
+    "https://ccsakura.fandom.com/wiki/The_Shadow",
+    "https://ccsakura.fandom.com/wiki/Episode_2",
+    "https://ccsakura.fandom.com/wiki/Chapter_2"
+   ]
+  },
+  {
+   "episode": 3,
+   "end_chapter": 3,
+   "start_chapter": 3,
+   "chapters_adapted": "3",
+   "volume": 1,
+   "confidence": "high",
+   "note": "Watery; manga sets it in the school pool (Chiharu nearly drowns), anime at the aquarium.",
+   "sources": [
+    "https://ccsakura.fandom.com/wiki/The_Watery",
+    "https://ccsakura.fandom.com/wiki/Episode_3",
+    "https://ccsakura.fandom.com/wiki/Chapter_3"
+   ]
+  },
+  {
+   "episode": 5,
+   "end_chapter": 1,
+   "start_chapter": 1,
+   "chapters_adapted": "1",
+   "volume": 1,
+   "confidence": "medium",
+   "note": "Only the Jump capture is manga-derived (ch 1's opening video/dream: Jump caught at Tokyo Tower with Windy, before the story starts); the Twin Bells/Maki plot is anime-original.",
+   "sources": [
+    "https://ccsakura.fandom.com/wiki/The_Jump",
+    "https://ccsakura.fandom.com/wiki/Episode_5",
+    "https://ccsakura.fandom.com/wiki/Chapter_1"
+   ]
+  },
+  {
+   "episode": 6,
+   "end_chapter": 5,
+   "start_chapter": 4,
+   "chapters_adapted": "4-5",
+   "volume": 1,
+   "confidence": "high",
+   "note": "Naoko's ghost story and the presence in the water (ch 4) -> Sakura's mother's image / Illusion captured (ch 5).",
+   "sources": [
+    "https://ccsakura.fandom.com/wiki/The_Illusion",
+    "https://ccsakura.fandom.com/wiki/Episode_6",
+    "https://ccsakura.fandom.com/wiki/Chapter_4",
+    "https://ccsakura.fandom.com/wiki/Chapter_5"
+   ]
+  },
+  {
+   "episode": 8,
+   "end_chapter": 8,
+   "start_chapter": 8,
+   "chapters_adapted": "8, 10",
+   "volume": 2,
+   "confidence": "high",
+   "note": "Syaoran's transfer, compass, fight with Touya = ch 8; the Thunder capture is ch 10 (grafted in).",
+   "sources": [
+    "https://ccsakura.fandom.com/wiki/Chapter_8",
+    "https://ccsakura.fandom.com/wiki/The_Thunder",
+    "https://en.wikipedia.org/wiki/List_of_Cardcaptor_Sakura_chapters",
+    "https://ccsakura.fandom.com/wiki/Episode_8"
+   ]
+  },
+  {
+   "episode": 9,
+   "end_chapter": 9,
+   "start_chapter": 8,
+   "chapters_adapted": "8-9",
+   "volume": 2,
+   "confidence": "high",
+   "note": "Rika buys the sword brooch while shopping for Yukito's birthday gift (ch 8 tail); possessed Rika / Sword captured, Illusion used to distract her (ch 9).",
+   "sources": [
+    "https://ccsakura.fandom.com/wiki/The_Sword",
+    "https://ccsakura.fandom.com/wiki/The_Illusion",
+    "https://ccsakura.fandom.com/wiki/Chapter_8"
+   ]
+  },
+  {
+   "episode": 10,
+   "end_chapter": 7,
+   "start_chapter": 6,
+   "chapters_adapted": "6-7",
+   "volume": 2,
+   "confidence": "high",
+   "note": "Sports day, Sonomi vs Fujitaka race, Flower captured (ch 6-7); in the manga this precedes Syaoran's arrival and ends with him sensing the cards.",
+   "sources": [
+    "https://ccsakura.fandom.com/wiki/The_Flower",
+    "https://ccsakura.fandom.com/wiki/Episode_10",
+    "https://ccsakura.fandom.com/wiki/Chapter_6",
+    "https://ccsakura.fandom.com/wiki/Chapter_7"
+   ]
+  },
+  {
+   "episode": 11,
+   "end_chapter": 13,
+   "start_chapter": 13,
+   "chapters_adapted": "13",
+   "volume": 3,
+   "confidence": "high",
+   "note": "Tomoyo's mansion, Sonomi's memories of Nadeshiko, Shield captured (ch 13). Pulled forward: manga has Mizuki's intro (11) and Mirror (12) first.",
+   "sources": [
+    "https://ccsakura.fandom.com/wiki/The_Shield",
+    "https://ccsakura.fandom.com/wiki/Chapter_13",
+    "https://en.wikipedia.org/wiki/List_of_Cardcaptor_Sakura_chapters"
+   ]
+  },
+  {
+   "episode": 16,
+   "end_chapter": 19,
+   "start_chapter": 19,
+   "chapters_adapted": "19",
+   "volume": 5,
+   "confidence": "high",
+   "note": "Summer visit to great-grandfather Masaki Amamiya's house; rainbow made with Rain in the anime, Watery in the manga (ch 19).",
+   "sources": [
+    "https://ccsakura.fandom.com/wiki/Masaki_Amamiya",
+    "https://ccsakura.fandom.com/wiki/Episode_16",
+    "https://ccsakura.fandom.com/wiki/Chapter_19",
+    "https://en.wikipedia.org/wiki/List_of_Cardcaptor_Sakura_chapters"
+   ]
+  },
+  {
+   "episode": 17,
+   "end_chapter": 17,
+   "start_chapter": 17,
+   "chapters_adapted": "17",
+   "volume": 4,
+   "confidence": "high",
+   "note": "Class trip test of courage / cave, Erase captured (ch 17). Manga has Mizuki already introduced and Syaoran walking on water instead of Float.",
+   "sources": [
+    "https://ccsakura.fandom.com/wiki/The_Erase",
+    "https://ccsakura.fandom.com/wiki/Episode_17",
+    "https://en.wikipedia.org/wiki/List_of_Cardcaptor_Sakura_chapters"
+   ]
+  },
+  {
+   "episode": 18,
+   "end_chapter": 18,
+   "start_chapter": 18,
+   "chapters_adapted": "18",
+   "volume": 4,
+   "confidence": "high",
+   "note": "Tsukimine summer festival with Yukito, fireflies, Glow captured (ch 18); Touya and Syaoran compete to give Yukito plushies.",
+   "sources": [
+    "https://ccsakura.fandom.com/wiki/The_Glow",
+    "https://ccsakura.fandom.com/wiki/Chapter_18",
+    "https://en.wikipedia.org/wiki/List_of_Cardcaptor_Sakura_chapters"
+   ]
+  },
+  {
+   "episode": 25,
+   "end_chapter": 12,
+   "start_chapter": 12,
+   "chapters_adapted": "12",
+   "volume": 3,
+   "confidence": "high",
+   "note": "Doppelganger Sakura / Mirror captured (ch 12; the double first appears at the very end of ch 11). Manga places this right after Mizuki's introduction.",
+   "sources": [
+    "https://ccsakura.fandom.com/wiki/The_Mirror",
+    "https://ccsakura.fandom.com/wiki/Chapter_12",
+    "https://en.wikipedia.org/wiki/List_of_Cardcaptor_Sakura_chapters"
+   ]
+  },
+  {
+   "episode": 26,
+   "end_chapter": 15,
+   "start_chapter": 11,
+   "chapters_adapted": "11, 14-15",
+   "volume": 4,
+   "confidence": "high",
+   "note": "Kaho Mizuki introduced as the new teacher (ch 11) + the Maze (ch 14-15, Maze captured ch 15 with Mizuki's bell). Anime adds Meiling.",
+   "sources": [
+    "https://ccsakura.fandom.com/wiki/The_Maze",
+    "https://ccsakura.fandom.com/wiki/Episode_26",
+    "https://en.wikipedia.org/wiki/List_of_Cardcaptor_Sakura_chapters",
+    "https://ccsakura.fandom.com/wiki/Chapter_14"
+   ]
+  },
+  {
+   "episode": 35,
+   "end_chapter": 23,
+   "start_chapter": 23,
+   "chapters_adapted": "23",
+   "volume": 6,
+   "confidence": "high",
+   "note": "Christmas date / Firey captured (ch 23); in the manga Kero regains his true form right after Firey (anime waits for Earthy).",
+   "sources": [
+    "https://ccsakura.fandom.com/wiki/The_Firey",
+    "https://ccsakura.fandom.com/wiki/Difference_between_the_Manga_and_the_Anime",
+    "https://en.wikipedia.org/wiki/List_of_Cardcaptor_Sakura_chapters"
+   ]
+  },
+  {
+   "episode": 41,
+   "end_chapter": 20,
+   "start_chapter": 20,
+   "chapters_adapted": "20",
+   "volume": 5,
+   "confidence": "medium",
+   "note": "Card (Sand) is anime-only; the school-play casting (Sakura as prince, Syaoran as princess) is the manga's lead-in to the ch 21 blackout. Ch 20's cast list (whole class + Terada + Mizuki, no cards) fits, but ch 20 has no prose synopsis - inferred.",
+   "sources": [
+    "https://ccsakura.fandom.com/wiki/Chapter_20",
+    "https://ccsakura.fandom.com/wiki/The_Light",
+    "https://en.wikipedia.org/wiki/List_of_Cardcaptor_Sakura_episodes"
+   ]
+  },
+  {
+   "episode": 42,
+   "end_chapter": 21,
+   "start_chapter": 21,
+   "chapters_adapted": "21",
+   "volume": 5,
+   "confidence": "high",
+   "note": "School festival play blackout, Light and Dark captured (ch 21).",
+   "sources": [
+    "https://ccsakura.fandom.com/wiki/The_Light",
+    "https://ccsakura.fandom.com/wiki/The_Dark",
+    "https://en.wikipedia.org/wiki/List_of_Cardcaptor_Sakura_chapters"
+   ]
+  },
+  {
+   "episode": 44,
+   "end_chapter": 22,
+   "start_chapter": 22,
+   "chapters_adapted": "22",
+   "volume": 5,
+   "confidence": "medium",
+   "note": "Kero's private conversation with Mizuki (Kero suspects she is Yue) = ch 22 per Wikipedia's vol 5 summary; the archery tournament framing is anime-original.",
+   "sources": [
+    "https://en.wikipedia.org/wiki/List_of_Cardcaptor_Sakura_chapters",
+    "https://en.wikipedia.org/wiki/List_of_Cardcaptor_Sakura_episodes",
+    "https://ccsakura.fandom.com/wiki/Chapter_22"
+   ]
+  },
+  {
+   "episode": 45,
+   "end_chapter": 24,
+   "start_chapter": 24,
+   "chapters_adapted": "24",
+   "volume": 6,
+   "confidence": "high",
+   "note": "Earthy (appears end of ch 23, captured ch 24 with Wood); Yue revealed at the chapter's end.",
+   "sources": [
+    "https://ccsakura.fandom.com/wiki/The_Earthy",
+    "https://en.wikipedia.org/wiki/List_of_Cardcaptor_Sakura_chapters"
+   ]
+  },
+  {
+   "episode": 46,
+   "end_chapter": 26,
+   "start_chapter": 25,
+   "chapters_adapted": "25-26",
+   "volume": 6,
+   "confidence": "high",
+   "note": "Final Judgment vs Yue, Mizuki's Moon Bell, staff transformation, Clow Reed apparition, Mizuki departs (ch 25-26). Anime adds Syaoran to the judgment.",
+   "sources": [
+    "https://en.wikipedia.org/wiki/List_of_Cardcaptor_Sakura_chapters",
+    "https://ccsakura.fandom.com/wiki/Chapter_25",
+    "https://ccsakura.fandom.com/wiki/Chapter_26",
+    "https://ccsakura.fandom.com/wiki/Difference_between_the_Manga_and_the_Anime"
+   ]
+  },
+  {
+   "episode": 47,
+   "end_chapter": 27,
+   "start_chapter": 27,
+   "chapters_adapted": "27",
+   "volume": 7,
+   "confidence": "high",
+   "note": "Eriol and Nakuru transfer in; localized downpour, Sakura cannot use her cards (ch 27, Watery fails against the cyclone).",
+   "sources": [
+    "https://ccsakura.fandom.com/wiki/Eriol_Hiiragizawa",
+    "https://ccsakura.fandom.com/wiki/The_Watery",
+    "https://en.wikipedia.org/wiki/List_of_Cardcaptor_Sakura_chapters",
+    "https://en.wikipedia.org/wiki/List_of_Cardcaptor_Sakura_episodes"
+   ]
+  },
+  {
+   "episode": 48,
+   "end_chapter": 28,
+   "start_chapter": 28,
+   "chapters_adapted": "28",
+   "volume": 7,
+   "confidence": "medium",
+   "note": "Star-power incantation; Firey is the first card transformed (fandom infobox: ch 28; the same page's prose says ch 29 - flagged).",
+   "sources": [
+    "https://ccsakura.fandom.com/wiki/The_Firey",
+    "https://en.wikipedia.org/wiki/List_of_Cardcaptor_Sakura_chapters",
+    "https://ccsakura.fandom.com/wiki/Chapter_28"
+   ]
+  },
+  {
+   "episode": 49,
+   "end_chapter": 29,
+   "start_chapter": 29,
+   "chapters_adapted": "29",
+   "volume": 7,
+   "confidence": "medium",
+   "note": "Aftermath: Sakura collapses from the transformation, Kero explains the toll, cards named 'Sakura Cards' (ch 29 per cast/card gallery and Wikipedia vol 7). Piano/Song incident is anime-original.",
+   "sources": [
+    "https://ccsakura.fandom.com/wiki/Chapter_29",
+    "https://en.wikipedia.org/wiki/List_of_Cardcaptor_Sakura_chapters",
+    "https://en.wikipedia.org/wiki/List_of_Cardcaptor_Sakura_episodes"
+   ]
+  },
+  {
+   "episode": 50,
+   "end_chapter": 30,
+   "start_chapter": 30,
+   "chapters_adapted": "30",
+   "volume": 7,
+   "confidence": "high",
+   "note": "Invisible threads control Syaoran; Sword transformed (ch 30). Eriol/Spinel/Ruby Moon reveal to the viewer closes vol 7.",
+   "sources": [
+    "https://ccsakura.fandom.com/wiki/The_Sword",
+    "https://ccsakura.fandom.com/wiki/Chapter_30",
+    "https://en.wikipedia.org/wiki/List_of_Cardcaptor_Sakura_chapters"
+   ]
+  },
+  {
+   "episode": 51,
+   "end_chapter": 32,
+   "start_chapter": 31,
+   "chapters_adapted": "31-32",
+   "volume": 8,
+   "confidence": "high",
+   "note": "Teddy-bear legend (Yamazaki/Chiharu, ch 31) and the giant bear; Jump and Fly transformed, new winged form (ch 32).",
+   "sources": [
+    "https://ccsakura.fandom.com/wiki/The_Jump",
+    "https://ccsakura.fandom.com/wiki/The_Fly",
+    "https://ccsakura.fandom.com/wiki/Chapter_31",
+    "https://en.wikipedia.org/wiki/List_of_Cardcaptor_Sakura_episodes"
+   ]
+  },
+  {
+   "episode": 52,
+   "end_chapter": 36,
+   "start_chapter": 36,
+   "chapters_adapted": "36",
+   "volume": 9,
+   "confidence": "high",
+   "note": "Hole in the playground, sheep plushies, Yue's weakening; Erase transformed (ch 36; manga also transforms Earthy here). Anime placed this before ch 33-35.",
+   "sources": [
+    "https://ccsakura.fandom.com/wiki/The_Erase",
+    "https://ccsakura.fandom.com/wiki/The_Earthy",
+    "https://en.wikipedia.org/wiki/List_of_Cardcaptor_Sakura_chapters"
+   ]
+  },
+  {
+   "episode": 54,
+   "end_chapter": 35,
+   "start_chapter": 34,
+   "chapters_adapted": "34-35",
+   "volume": 9,
+   "confidence": "high",
+   "note": "Nadeshiko's calendar / Flower transformed (ch 34) and the reconciliation with great-grandfather Masaki (ch 35).",
+   "sources": [
+    "https://ccsakura.fandom.com/wiki/The_Flower",
+    "https://ccsakura.fandom.com/wiki/Chapter_35",
+    "https://en.wikipedia.org/wiki/List_of_Cardcaptor_Sakura_episodes"
+   ]
+  },
+  {
+   "episode": 59,
+   "end_chapter": 38,
+   "start_chapter": 37,
+   "chapters_adapted": "37-38",
+   "volume": 9,
+   "confidence": "high",
+   "note": "Yue confronts Eriol and has his memory erased; Syaoran's near-confession (ch 37); warped school, Shadow transformed (ch 38).",
+   "sources": [
+    "https://ccsakura.fandom.com/wiki/The_Shadow",
+    "https://en.wikipedia.org/wiki/List_of_Cardcaptor_Sakura_chapters",
+    "https://en.wikipedia.org/wiki/List_of_Cardcaptor_Sakura_episodes"
+   ]
+  },
+  {
+   "episode": 65,
+   "end_chapter": 38,
+   "start_chapter": 38,
+   "chapters_adapted": "38",
+   "volume": 9,
+   "confidence": "high",
+   "note": "Yukito fading, Touya gives his power to Yue - the end of ch 38 (ch 39 opens with Sakura having overheard them). Film-shoot framing is anime-original.",
+   "sources": [
+    "https://en.wikipedia.org/wiki/List_of_Cardcaptor_Sakura_chapters",
+    "https://ccsakura.fandom.com/wiki/Chapter_39",
+    "https://en.wikipedia.org/wiki/List_of_Cardcaptor_Sakura_episodes"
+   ]
+  },
+  {
+   "episode": 66,
+   "end_chapter": 40,
+   "start_chapter": 39,
+   "chapters_adapted": "39-40",
+   "volume": 10,
+   "confidence": "high",
+   "note": "Sakura confesses to Yukito at the school festival (ch 39); Maze+Illusion planetarium, Sakura finds Eriol and faints, vision of Clow's death (ch 40).",
+   "sources": [
+    "https://ccsakura.fandom.com/wiki/The_Maze",
+    "https://ccsakura.fandom.com/wiki/The_Illusion",
+    "https://ccsakura.fandom.com/wiki/Chapter_39",
+    "https://ccsakura.fandom.com/wiki/Chapter_40"
+   ]
+  },
+  {
+   "episode": 67,
+   "end_chapter": 42,
+   "start_chapter": 41,
+   "chapters_adapted": "41-42",
+   "volume": 10,
+   "confidence": "high",
+   "note": "Tsukimine shrine festival (yukata gift in manga, scarf in anime; ch 41); magical horse, Wood/Thunder/Glow transformed (ch 42).",
+   "sources": [
+    "https://ccsakura.fandom.com/wiki/The_Wood",
+    "https://ccsakura.fandom.com/wiki/The_Thunder",
+    "https://ccsakura.fandom.com/wiki/The_Glow",
+    "https://ccsakura.fandom.com/wiki/Chapter_41"
+   ]
+  },
+  {
+   "episode": 68,
+   "end_chapter": 43,
+   "start_chapter": 43,
+   "chapters_adapted": "43",
+   "volume": 11,
+   "confidence": "medium",
+   "note": "Return-card trip to Clow's past is anime-only; ch 43 covers the same beats (premonitory dream of Clow, Kero, Yue; Tokyo Tower plan; Eriol-Fujitaka resemblance; Mizuki's letter). Loose.",
+   "sources": [
+    "https://ccsakura.fandom.com/wiki/Chapter_43",
+    "https://en.wikipedia.org/wiki/List_of_Cardcaptor_Sakura_episodes"
+   ]
+  },
+  {
+   "episode": 69,
+   "end_chapter": 46,
+   "start_chapter": 44,
+   "chapters_adapted": "44-46",
+   "volume": 12,
+   "confidence": "high",
+   "note": "Tokyo Tower / eternal-night spell, Shield-Watery-Light-Dark transformed with Kero and Yue's power (ch 44); Fujitaka reveal and Eriol halving his power (ch 45, manga-only); Mizuki's role, Eriol's explanation, Syaoran's confession (ch 46).",
+   "sources": [
+    "https://ccsakura.fandom.com/wiki/The_Light",
+    "https://ccsakura.fandom.com/wiki/The_Shield",
+    "https://en.wikipedia.org/wiki/List_of_Cardcaptor_Sakura_chapters",
+    "https://ccsakura.fandom.com/wiki/Chapter_46"
+   ]
+  },
+  {
+   "episode": 70,
+   "end_chapter": 50,
+   "start_chapter": 47,
+   "chapters_adapted": "47-50",
+   "volume": 12,
+   "confidence": "medium",
+   "note": "Eriol leaves for England (ch 47); Syaoran's departure (ch 48-50) heavily rewritten: anime has the Nameless card and Syaoran giving Sakura his bear at the airport; manga has Sakura sewing him a bear and a two-years-later epilogue.",
+   "sources": [
+    "https://ccsakura.fandom.com/wiki/Episode_70",
+    "https://ccsakura.fandom.com/wiki/Difference_between_the_Manga_and_the_Anime",
+    "https://en.wikipedia.org/wiki/List_of_Cardcaptor_Sakura_chapters",
+    "https://en.wikipedia.org/wiki/List_of_Cardcaptor_Sakura_episodes"
+   ]
+  },
+  {
+   "episode": 71,
+   "end_chapter": 50,
+   "start_chapter": 46,
+   "chapters_adapted": "46-50",
+   "volume": 12,
+   "confidence": "high",
+   "note": "Prologue OVA 'Sakura and the Two Bears' (AniList 98554): a faithful adaptation of the manga's ending (Eriol's departure, Syaoran's confession, the hand-made bear, the bus, the two-years-later reunion) and it closes on the opening scene of Clear Card ch 1.",
+   "sources": [
+    "https://en.wikipedia.org/wiki/List_of_Cardcaptor_Sakura:_Clear_Card_episodes",
+    "https://myanimelist.net/anime/35320",
+    "https://ccsakura.fandom.com/wiki/Sakura_and_the_Two_Bears",
+    "https://anilist.co/anime/98554"
+   ]
+  }
+ ],
+ "continue_points": [
+  {
+   "episode": 5,
+   "continue_chapter": 4,
+   "note": "ep 5 only replays the pre-story Jump capture; ch 1-3 already covered"
+  },
+  {
+   "episode": 8,
+   "continue_chapter": 6,
+   "note": "ch 6-7 (sports day) not yet adapted (comes in ep 10); Thunder (ch 10) grafted early"
+  },
+  {
+   "episode": 9,
+   "continue_chapter": 6,
+   "note": "ch 6-7 still pending (ep 10)"
+  },
+  {
+   "episode": 10,
+   "continue_chapter": 11,
+   "note": "ch 1-10 now all covered"
+  },
+  {
+   "episode": 11,
+   "continue_chapter": 11,
+   "note": "ep 11 jumps to ch 13; ch 11 (Mizuki intro) and 12 (Mirror) are adapted later in eps 26 and 25"
+  },
+  {
+   "episode": 16,
+   "continue_chapter": 11,
+   "note": "ch 11-12 and 14-18 still unadapted at this point"
+  },
+  {
+   "episode": 17,
+   "continue_chapter": 11,
+   "note": "ch 11-12 still pending (eps 25-26)"
+  },
+  {
+   "episode": 18,
+   "continue_chapter": 11,
+   "note": "ch 11-12 still pending (eps 25-26)"
+  },
+  {
+   "episode": 25,
+   "continue_chapter": 11,
+   "note": "ch 11 (Mizuki) adapted next in ep 26"
+  },
+  {
+   "episode": 35,
+   "continue_chapter": 20,
+   "note": "anime does Firey (ch 23) before the play/Light-Dark (ch 20-21, eps 41-42) and Mizuki-Kero (ch 22, ep 44); ch 16 has no clear anime counterpart"
+  },
+  {
+   "episode": 44,
+   "continue_chapter": 24,
+   "note": "ch 23 was already adapted in ep 35"
+  },
+  {
+   "episode": 52,
+   "continue_chapter": 33,
+   "note": "ep 52 adapts ch 36 ahead of ch 33-35 (33 premise used in ep 39; 34-35 in ep 54)"
+  },
+  {
+   "episode": 54,
+   "continue_chapter": 37,
+   "note": "ch 36 already covered by ep 52"
+  },
+  {
+   "episode": 70,
+   "continue_chapter": 47,
+   "note": "anime ending diverges; read ch 47-50 as written (or watch the ep 71 OVA, which adapts them faithfully)"
+  }
+ ],
+ "annotations": [
+  {
+   "episodes": [
+    1,
+    2
+   ],
+   "kind": "rearranged",
+   "chapters": "1-2, 10",
+   "note": "manga opens in medias res with a flashback of the Clow Book; Tomoyo already knows. Shadow capture (ch 10) grafted into ep 2, replacing ch 2's Fly capture as the night-school scene"
+  },
+  {
+   "episodes": [
+    4
+   ],
+   "kind": "divergence",
+   "chapters": "-",
+   "note": "Wood is never shown being captured in the manga (pre-story) and Rain is anime-only; ep 4 has no manga counterpart"
+  },
+  {
+   "episodes": [
+    5
+   ],
+   "kind": "loose_parallel",
+   "chapters": "1",
+   "note": "Jump capture relocated from Tokyo Tower (ch 1 video) to Penguin Park; shop story anime-original"
+  },
+  {
+   "episodes": [
+    7,
+    10
+   ],
+   "kind": "rearranged",
+   "chapters": "7",
+   "note": "ch 7's closing page (Syaoran senses the cards) is used as ep 7's tag; the chapter's sports-day body is adapted in ep 10 after Syaoran's arrival"
+  },
+  {
+   "episodes": [
+    8
+   ],
+   "kind": "graft",
+   "chapters": "10",
+   "note": "Thunder capture (ch 10) grafted into Syaoran's arrival episode (ch 8)"
+  },
+  {
+   "episodes": [
+    11,
+    25,
+    26
+   ],
+   "kind": "rearranged",
+   "chapters": "11-15",
+   "note": "manga order Mizuki intro (11) -> Mirror (12) -> Shield (13) -> Maze (14-15); anime order Shield (ep 11) -> Mirror (ep 25) -> Mizuki + Maze (ep 26)"
+  },
+  {
+   "episodes": [
+    17,
+    26
+   ],
+   "kind": "rearranged",
+   "chapters": "11, 17",
+   "note": "in the manga Mizuki is introduced (ch 11) before the Erase field trip (ch 17); the anime shows the trip (ep 17) before Mizuki (ep 26)"
+  },
+  {
+   "episodes": [
+    16
+   ],
+   "kind": "divergence",
+   "chapters": "19",
+   "note": "rainbow made with the anime-only Rain card; manga uses Watery"
+  },
+  {
+   "episodes": [
+    27
+   ],
+   "kind": "loose_parallel",
+   "chapters": "15-16",
+   "note": "filler ep 27 (Return) reuses the manga's Touya/Mizuki past-romance beats (Wikipedia vol 4 summary, ch 15-16); ch 16 itself has no clear anime counterpart"
+  },
+  {
+   "episodes": [
+    35,
+    41,
+    42,
+    44
+   ],
+   "kind": "rearranged",
+   "chapters": "20-23",
+   "note": "manga: play + Light/Dark (20-21) -> Mizuki-Kero talk (22) -> Firey/Kero's true form (23); anime: Firey Christmas (ep 35) -> play (eps 41-42) -> Mizuki-Kero (ep 44)"
+  },
+  {
+   "episodes": [
+    39
+   ],
+   "kind": "graft",
+   "chapters": "33",
+   "note": "ch 33's premise (sick Sakura, Mirror substitutes, Touya plays along; Mirror and Windy transformed in Eriol's fog) reused in a Clow-arc episode with the anime-only Cloud card; the anime never shows Mirror's transformation"
+  },
+  {
+   "episodes": [
+    46
+   ],
+   "kind": "divergence",
+   "chapters": "25-26",
+   "note": "anime adds Syaoran (and Meiling) to the Final Judgment and has Mizuki appear mid-battle; manga: only Sakura is judged and Mizuki told her beforehand"
+  },
+  {
+   "episodes": [
+    48
+   ],
+   "kind": "partial",
+   "chapters": "28-29",
+   "note": "fandom sources disagree whether the Firey transformation lands in ch 28 or 29 (infobox 28, prose 29); ch 29 is the fainting aftermath used in ep 49"
+  },
+  {
+   "episodes": [
+    49
+   ],
+   "kind": "abridged",
+   "chapters": "29",
+   "note": "only the aftermath/'Sakura Cards' explanation is manga; the enchanted piano and Song card are anime-original"
+  },
+  {
+   "episodes": [
+    52,
+    54
+   ],
+   "kind": "rearranged",
+   "chapters": "34-36",
+   "note": "anime adapts ch 36 (sheep hole) in ep 52 before ch 34-35 (calendar/Masaki) in ep 54"
+  },
+  {
+   "episodes": [
+    53,
+    58,
+    63
+   ],
+   "kind": "divergence",
+   "chapters": "33, 36, 44",
+   "note": "anime transforms Windy (ep 53), Shield (ep 58) and Watery (ep 63) in filler episodes; manga transforms Windy in ch 33, Earthy in ch 36 (never shown in anime), Shield/Watery in ch 44"
+  },
+  {
+   "episodes": [
+    59,
+    65
+   ],
+   "kind": "partial",
+   "chapters": "37-38",
+   "note": "ch 38 is split: the Shadow half in ep 59, the Yukito-fading / Touya-gives-power half in ep 65, with fillers 60-64 between"
+  },
+  {
+   "episodes": [
+    68
+   ],
+   "kind": "loose_parallel",
+   "chapters": "43",
+   "note": "Return card and Clow Reed dialogue are anime-only; ch 43 delivers the same setup via a premonitory dream and the Tokyo Tower plan"
+  },
+  {
+   "episodes": [
+    69
+   ],
+   "kind": "divergence",
+   "chapters": "45",
+   "note": "manga-only: Fujitaka is Clow Reed's other reincarnated half and Eriol gives him half his power (ch 45); anime omits it"
+  },
+  {
+   "episodes": [
+    70
+   ],
+   "kind": "divergence",
+   "chapters": "48-50",
+   "note": "anime: Syaoran's phone call, Nameless card, bear given by Syaoran at the airport, no epilogue; manga: Sakura sews the bear, bus scene, reunion two years later"
+  },
+  {
+   "episodes": [
+    71
+   ],
+   "kind": "side_story",
+   "chapters": "46-50",
+   "note": "Prologue OVA re-adapts the manga's ending faithfully (bridging to Clear Card ch 1); the Clear Card TV anime nevertheless follows the 1998 anime/Sealed Card continuity, not this OVA"
+  },
+  {
+   "episodes": [
+    5
+   ],
+   "kind": "graft",
+   "chapters": "1 (flashback video)",
+   "note": "only the Jump capture is manga-derived (ch 1 flashback video); Twin Bells/Maki plot anime-original — batch-14 review ruling for the back-step"
+  },
+  {
+   "episodes": [
+    71
+   ],
+   "kind": "rearranged",
+   "chapters": "46-50",
+   "note": "Clear Card Prologue OVA re-adapts the Sakura-arc ending (chs 46-50) before Clear Card begins — batch-14 review ruling for the back-step"
+  }
+ ],
+ "type_corrections": [
+  {
+   "episodes": [
+    4
+   ],
+   "type": "filler",
+   "note": "Wood's capture is never depicted in the manga (pre-story) and Rain is an anime-only card; nothing in ep 4 adapts a chapter. animefillerlist lumps 1-11 as canon.",
+   "sources": [
+    "https://ccsakura.fandom.com/wiki/The_Wood",
+    "https://ccsakura.fandom.com/wiki/Difference_between_the_Manga_and_the_Anime",
+    "https://en.wikipedia.org/wiki/List_of_Cardcaptor_Sakura_episodes",
+    "https://en.wikipedia.org/wiki/List_of_Cardcaptor_Sakura_chapters"
+   ]
+  },
+  {
+   "episodes": [
+    5
+   ],
+   "type": "mixed",
+   "note": "only the Jump capture is manga-derived (ch 1 flashback video); the Twin Bells/Maki plot is anime-original",
+   "sources": [
+    "https://ccsakura.fandom.com/wiki/The_Jump",
+    "https://ccsakura.fandom.com/wiki/Episode_5",
+    "https://ccsakura.fandom.com/wiki/Chapter_1"
+   ]
+  },
+  {
+   "episodes": [
+    7
+   ],
+   "type": "filler",
+   "note": "Silent is an anime-only card (not among the manga's 19) and the museum plot is anime-original; only the last-scene Syaoran teaser (ch 7's final page) is manga-derived",
+   "sources": [
+    "https://ccsakura.fandom.com/wiki/Difference_between_the_Manga_and_the_Anime",
+    "https://ccsakura.fandom.com/wiki/Episode_10",
+    "https://en.wikipedia.org/wiki/List_of_Cardcaptor_Sakura_chapters",
+    "https://en.wikipedia.org/wiki/List_of_Cardcaptor_Sakura_episodes"
+   ]
+  },
+  {
+   "episodes": [
+    39
+   ],
+   "type": "mixed",
+   "note": "anime-only Cloud card episode built on the premise of manga ch 33 (sick Sakura, Mirror as substitute)",
+   "sources": [
+    "https://ccsakura.fandom.com/wiki/Episode_39",
+    "https://ccsakura.fandom.com/wiki/The_Mirror",
+    "https://ccsakura.fandom.com/wiki/The_Windy"
+   ]
+  },
+  {
+   "episodes": [
+    76,
+    83,
+    84,
+    85,
+    86,
+    87
+   ],
+   "type": "anime-only-canon",
+   "note": "Clear Card anime-original episodes: Gravitation (ep 76; manga cameo only in ch 62), Hail (ep 83; manga ch 39), Meiling (eps 84, 87; Meiling does not exist in the manga; Swing/Struggle have no manga counterpart), Mirage (ep 85; manga ch 46, different story), viewing party/earthquake (ep 86). Typed anime-only-canon because the Clear Card TV series is its own (1998-anime) continuity; use 'filler' if you prefer consistency with the 1998 rows.",
+   "sources": [
+    "https://ccsakura.fandom.com/wiki/Gravitation",
+    "https://ccsakura.fandom.com/wiki/Hail",
+    "https://ccsakura.fandom.com/wiki/Meiling_Li",
+    "https://ccsakura.fandom.com/wiki/Swing",
+    "https://ccsakura.fandom.com/wiki/Struggle",
+    "https://ccsakura.fandom.com/wiki/Mirage",
+    "https://en.wikipedia.org/wiki/List_of_Cardcaptor_Sakura_chapters",
+    "https://en.wikipedia.org/wiki/List_of_Cardcaptor_Sakura:_Clear_Card_episodes"
+   ]
+  },
+  {
+   "episodes": [
+    82
+   ],
+   "type": "mixed",
+   "note": "Reversal capture is anime-original here (card first appears in manga ch 39); Syaoran/Eriol's suspicion of Kaito and the English magician society is Clear Card ch 16",
+   "sources": [
+    "https://ccsakura.fandom.com/wiki/Reversal",
+    "https://ccsakura.fandom.com/wiki/Chapter_16_(Clear_Card)",
+    "https://en.wikipedia.org/wiki/List_of_Cardcaptor_Sakura:_Clear_Card_episodes"
+   ]
+  }
+ ],
+ "repairs": [
+  {
+   "episode": 93,
+   "field": "end_chapter",
+   "old": 50,
+   "new": null,
+   "why": "ep 93 is Clear Card ep 22, which loosely adapts Clear Card manga ch 24 (vol 5) - a different manga (AniList 87296). It does not adapt original ch 50; that chapter's adaptation is ep 71 (the Prologue OVA). Remove this anchor and re-anchor ep 93 under the Clear Card manga (see clear_card block).",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Cardcaptor_Sakura:_Clear_Card",
+    "https://ccsakura.fandom.com/wiki/Sakura%27s_Clear_Cards",
+    "https://en.wikipedia.org/wiki/List_of_Cardcaptor_Sakura:_Clear_Card_episodes",
+    "https://myanimelist.net/anime/35320"
+   ]
+  }
+ ],
+ "structure": {
+  "notes": "Confirmed: component 1 = AniList 232, 70 eps (S1 eps 1-35 'Clow Card' pt1, S2 36-46 pt2, S3 47-70 'Sakura Card'), adapts original manga 30106 (50 ch, 12 vols; Clow arc = vol 1-6/ch 1-26, Sakura arc = vol 7-12/ch 27-50). Component 3 = AniList 97881, 22 eps (2018-01-07..06-10) = our eps 72-93, adapts the SEPARATE Clear Card manga (AniList 87296, 80 ch/16 vols) loosely through ch 24 (vol 5) with an anime-original ending; Clear Card starts at our ep 72 (CC ch 1). COMPONENT 2 IS MISLABELED: it carries AniList 372 (Movie 2: The Sealed Card, 2000, anime-original) but row 71's title/date ('Sakura and the Two Bears', 2017-09-13) is the Clear Card Prologue OVA, AniList 98554 (MAL 35320), bundled with Clear Card manga vol 3 - it adapts original ch 46-50 (the manga's ending) and closes on Clear Card ch 1's opening scene. Fix component 2 to 98554 [ova] and treat 372 (and Movie 1, 371) as order-only anime-original films. Cumulative numbering 1-70 / 71 / 72-93 is otherwise consistent with animefillerlist's 93-ep list. The context file's volume boundaries are a corrupted merge of the two manga by volume number (v12: 46-59 = orig v12 46-50 + CC v12 55-59; v13-v16 are Clear Card volumes) - the CC chapters there are in CC numbering, not offset. AniList 163326 'Clear Card-hen (Zoku-hen)' (sequel adapting the rest of the manga, announced Sakura Fes 2023) is still NOT_YET_RELEASED, so 93 aired episodes is currently complete. Note also that Clear Card TV follows the 1998 anime / Sealed Card continuity (Meiling exists, Sakura got Syaoran's bear), not the manga/OVA - so the OVA is optional in an anime-continuity watch order.",
+  "order_only": [
+   {
+    "anilist_id": 371,
+    "title": "Cardcaptor Sakura: The Movie (1999)",
+    "after_anilist_id": 232,
+    "adapts": "none (anime-original, Hong Kong trip; set between eps 35 and 36)",
+    "note": "side story"
+   },
+   {
+    "anilist_id": 372,
+    "title": "Cardcaptor Sakura Movie 2: The Sealed Card (2000)",
+    "after_anilist_id": 232,
+    "adapts": "none (anime-original; the Nothing/Hope card; the 1998 anime's true finale after ep 70 and the continuity the Clear Card TV series follows)",
+    "note": "currently mislabeled as our component 2 / ep 71"
+   },
+   {
+    "anilist_id": 98554,
+    "title": "Cardcaptor Sakura: Clear Card Prologue - Sakura and the Two Bears (OVA, 2017-09-13)",
+    "after_anilist_id": 232,
+    "adapts": "original manga ch 46-50 (vol 12 ending) + opening of Clear Card ch 1",
+    "note": "this is what our ep 71 row actually is; manga-continuity bridge to Clear Card"
+   }
+  ]
+ },
+ "clear_card": {
+  "manga_anilist_id": 87296,
+  "manga_title": "Cardcaptor Sakura: Clear Card-hen (Kodansha/Nakayoshi, Jul 2016 - Jan 2024 issues; 80 numbered chapters + specials, 16 volumes)",
+  "numbering": "Clear Card chapter numbers 1-80 in their OWN numbering (Clear Card vol 1 = ch 1-4, v2 5-8, v3 9-13, v4 14-19, v5 20-24, v6 25-29). NOT original-manga numbering - do not apply these against manga 30106 unless the entry is split or the source is offset (+50 would give 51-130).",
+  "anchors": [
+   {
+    "episode": 72,
+    "end_chapter": 3,
+    "start_chapter": 1,
+    "chapters_adapted": "1-3",
+    "volume": 1,
+    "confidence": "high",
+    "note": "CC ep 1: middle school, blank Sakura Cards (ch 1-2), the dream key, Gale secured (ch 3).",
+    "sources": [
+     "https://ccsakura.fandom.com/wiki/Gale",
+     "https://ccsakura.fandom.com/wiki/Chapter_1_(Clear_Card)",
+     "https://ccsakura.fandom.com/wiki/Chapter_3_(Clear_Card)",
+     "https://en.wikipedia.org/wiki/List_of_Cardcaptor_Sakura_chapters"
+    ]
+   },
+   {
+    "episode": 73,
+    "end_chapter": 4,
+    "start_chapter": 4,
+    "chapters_adapted": "4",
+    "volume": 1,
+    "confidence": "high",
+    "note": "CC ep 2: sealed room, Siege secured (ch 4).",
+    "sources": [
+     "https://ccsakura.fandom.com/wiki/Siege",
+     "https://ccsakura.fandom.com/wiki/Chapter_5_(Clear_Card)",
+     "https://en.wikipedia.org/wiki/List_of_Cardcaptor_Sakura_chapters"
+    ]
+   },
+   {
+    "episode": 74,
+    "end_chapter": 6,
+    "start_chapter": 5,
+    "chapters_adapted": "5-6",
+    "volume": 2,
+    "confidence": "high",
+    "note": "CC ep 3: Aqua (ch 5) and Reflect during cheerleading (ch 6).",
+    "sources": [
+     "https://ccsakura.fandom.com/wiki/Aqua",
+     "https://ccsakura.fandom.com/wiki/Reflect",
+     "https://en.wikipedia.org/wiki/List_of_Cardcaptor_Sakura_chapters"
+    ]
+   },
+   {
+    "episode": 75,
+    "end_chapter": 8,
+    "start_chapter": 7,
+    "chapters_adapted": "7-8",
+    "volume": 2,
+    "confidence": "high",
+    "note": "CC ep 4: Akiho transfers in (ch 7); moving trees, Action secured with Siege (ch 8).",
+    "sources": [
+     "https://ccsakura.fandom.com/wiki/Akiho_Shinomoto",
+     "https://ccsakura.fandom.com/wiki/Action",
+     "https://ccsakura.fandom.com/wiki/Chapter_8_(Clear_Card)",
+     "https://en.wikipedia.org/wiki/List_of_Cardcaptor_Sakura:_Clear_Card_episodes"
+    ]
+   },
+   {
+    "episode": 77,
+    "end_chapter": 10,
+    "start_chapter": 9,
+    "chapters_adapted": "9-10",
+    "volume": 3,
+    "confidence": "high",
+    "note": "CC ep 6: cloaked-figure dream on the clock, Akiho/Tomoyo singing (ch 9 recollection), Record secured at Tomoyo's (ch 10).",
+    "sources": [
+     "https://ccsakura.fandom.com/wiki/Record",
+     "https://ccsakura.fandom.com/wiki/Chapter_9_(Clear_Card)",
+     "https://ccsakura.fandom.com/wiki/Chapter_10_(Clear_Card)",
+     "https://en.wikipedia.org/wiki/List_of_Cardcaptor_Sakura:_Clear_Card_episodes"
+    ]
+   },
+   {
+    "episode": 78,
+    "end_chapter": 10,
+    "start_chapter": 10,
+    "chapters_adapted": "10",
+    "volume": 3,
+    "confidence": "high",
+    "note": "CC ep 7: Flight befriended at Tomoyo's house - in the manga this happens in the same scene as Record (ch 10); the anime splits it off.",
+    "sources": [
+     "https://ccsakura.fandom.com/wiki/Flight",
+     "https://ccsakura.fandom.com/wiki/Chapter_10_(Clear_Card)",
+     "https://en.wikipedia.org/wiki/List_of_Cardcaptor_Sakura:_Clear_Card_episodes"
+    ]
+   },
+   {
+    "episode": 79,
+    "end_chapter": 12,
+    "start_chapter": 11,
+    "chapters_adapted": "11-12",
+    "volume": 3,
+    "confidence": "high",
+    "note": "CC ep 8: visit to Akiho's house (Eriol's old residence), Kaito and Momo introduced (ch 11); invisible books, Lucid secured, 'Alice in Clockland' (ch 12).",
+    "sources": [
+     "https://ccsakura.fandom.com/wiki/Yuna_D._Kaito",
+     "https://ccsakura.fandom.com/wiki/Lucid",
+     "https://ccsakura.fandom.com/wiki/Chapter_11_(Clear_Card)",
+     "https://ccsakura.fandom.com/wiki/Chapter_12_(Clear_Card)"
+    ]
+   },
+   {
+    "episode": 80,
+    "end_chapter": 13,
+    "start_chapter": 12,
+    "chapters_adapted": "12-13",
+    "volume": 3,
+    "confidence": "high",
+    "note": "CC ep 9: Sakura and Syaoran's date (aquarium setting is anime-original), wind trap, Spiral secured, Syaoran's hidden magic (ch 12 end - 13).",
+    "sources": [
+     "https://ccsakura.fandom.com/wiki/Spiral",
+     "https://ccsakura.fandom.com/wiki/Chapter_13_(Clear_Card)",
+     "https://en.wikipedia.org/wiki/List_of_Cardcaptor_Sakura_chapters"
+    ]
+   },
+   {
+    "episode": 81,
+    "end_chapter": 15,
+    "start_chapter": 13,
+    "chapters_adapted": "13-15",
+    "volume": 4,
+    "confidence": "high",
+    "note": "CC ep 10: Snooze (appears ch 13, secured ch 14), Kaito collects Akiho (ch 14), Labyrinth secured (ch 15; manga: in town with Yue, anime: at home with Snooze).",
+    "sources": [
+     "https://ccsakura.fandom.com/wiki/Snooze",
+     "https://ccsakura.fandom.com/wiki/Labyrinth",
+     "https://ccsakura.fandom.com/wiki/Chapter_14_(Clear_Card)",
+     "https://ccsakura.fandom.com/wiki/Chapter_15_(Clear_Card)",
+     "https://ccsakura.fandom.com/wiki/Difference_between_the_Manga_and_the_Anime"
+    ]
+   },
+   {
+    "episode": 82,
+    "end_chapter": 16,
+    "start_chapter": 16,
+    "chapters_adapted": "16",
+    "volume": 4,
+    "confidence": "medium",
+    "note": "CC ep 11: Syaoran senses Kaito's magic, Eriol suspects the English magician society (ch 16); Reversal capture is anime-original.",
+    "sources": [
+     "https://ccsakura.fandom.com/wiki/Chapter_16_(Clear_Card)",
+     "https://ccsakura.fandom.com/wiki/Reversal",
+     "https://en.wikipedia.org/wiki/List_of_Cardcaptor_Sakura:_Clear_Card_episodes"
+    ]
+   },
+   {
+    "episode": 88,
+    "end_chapter": 17,
+    "start_chapter": 17,
+    "chapters_adapted": "17",
+    "volume": 4,
+    "confidence": "high",
+    "note": "CC ep 17: home-economics sweets come alive, Appear secured (ch 17).",
+    "sources": [
+     "https://ccsakura.fandom.com/wiki/Appear",
+     "https://ccsakura.fandom.com/wiki/Chapter_17_(Clear_Card)",
+     "https://en.wikipedia.org/wiki/List_of_Cardcaptor_Sakura:_Clear_Card_episodes"
+    ]
+   },
+   {
+    "episode": 89,
+    "end_chapter": 19,
+    "start_chapter": 18,
+    "chapters_adapted": "18-19",
+    "volume": 4,
+    "confidence": "high",
+    "note": "CC ep 18: Akiho/Sakura shared dream (ch 18), fire bird, Blaze secured with Syaoran's help (ch 19).",
+    "sources": [
+     "https://ccsakura.fandom.com/wiki/Blaze",
+     "https://ccsakura.fandom.com/wiki/Chapter_19_(Clear_Card)",
+     "https://en.wikipedia.org/wiki/List_of_Cardcaptor_Sakura_chapters"
+    ]
+   },
+   {
+    "episode": 90,
+    "end_chapter": 20,
+    "start_chapter": 19,
+    "chapters_adapted": "19-20",
+    "volume": 5,
+    "confidence": "medium",
+    "note": "CC ep 19: loose - Sakura's power surge (manga: she sees her mother's spirit, ch 19 end / 20) and Kero-Yue resolving to reach Eriol (ch 20); the reading session and Record-of-the-past scene are anime framing.",
+    "sources": [
+     "https://ccsakura.fandom.com/wiki/Chapter_19_(Clear_Card)",
+     "https://ccsakura.fandom.com/wiki/Chapter_20_(Clear_Card)",
+     "https://en.wikipedia.org/wiki/List_of_Cardcaptor_Sakura:_Clear_Card_episodes"
+    ]
+   },
+   {
+    "episode": 91,
+    "end_chapter": 21,
+    "start_chapter": 20,
+    "chapters_adapted": "20-21",
+    "volume": 5,
+    "confidence": "high",
+    "note": "CC ep 20: Masaki's villa with Syaoran (ch 20), Record shows Nadeshiko's childhood, her spirit's warning, Sakura collapses (ch 21).",
+    "sources": [
+     "https://ccsakura.fandom.com/wiki/Sakura%2C_Rainbows%2C_and_Grandpa",
+     "https://ccsakura.fandom.com/wiki/Chapter_21_(Clear_Card)",
+     "https://en.wikipedia.org/wiki/List_of_Cardcaptor_Sakura_chapters",
+     "https://en.wikipedia.org/wiki/List_of_Cardcaptor_Sakura:_Clear_Card_episodes"
+    ]
+   },
+   {
+    "episode": 92,
+    "end_chapter": 23,
+    "start_chapter": 22,
+    "chapters_adapted": "22-23",
+    "volume": 5,
+    "confidence": "high",
+    "note": "CC ep 21: Masaki's keepsake (key in anime, watch pendant in manga; ch 22), Eriol reveals Kaito's expulsion and Kaito jams the call (ch 22-23), Mirror secured (ch 23).",
+    "sources": [
+     "https://ccsakura.fandom.com/wiki/Sakura%2C_the_Mirror_and_the_Key_of_Memories",
+     "https://ccsakura.fandom.com/wiki/Mirror_(Clear_Card)",
+     "https://en.wikipedia.org/wiki/List_of_Cardcaptor_Sakura_chapters"
+    ]
+   },
+   {
+    "episode": 93,
+    "end_chapter": 24,
+    "start_chapter": 24,
+    "chapters_adapted": "24",
+    "volume": 5,
+    "confidence": "high",
+    "note": "CC ep 22: anime-original finale loosely on ch 24 - the cloaked figure is shown as Akiho (manga ch 24: appears as Syaoran; the Akiho connection surfaces in vol 6) and Kaito rewinds time. Sources agree the anime covers ch 1-24 (vol 1-5).",
+    "sources": [
+     "https://en.wikipedia.org/wiki/Cardcaptor_Sakura:_Clear_Card",
+     "https://ccsakura.fandom.com/wiki/Sakura%27s_Clear_Cards",
+     "https://ccsakura.fandom.com/wiki/Cardcaptor_Sakura:_Clear_Card",
+     "https://en.wikipedia.org/wiki/List_of_Cardcaptor_Sakura_chapters"
+    ]
+   }
+  ],
+  "continue_points": [
+   {
+    "episode": 93,
+    "continue_chapter": 24,
+    "note": "anime rewrote ch 24's reveal and ended there; read ch 24 as written then continue into vol 6 (ch 25) - most 'where to start' guides say vol 6/ch 25"
+   }
+  ],
+  "annotations": [
+   {
+    "episodes": [
+     76
+    ],
+    "kind": "divergence",
+    "chapters": "9",
+    "note": "flower-viewing party with Gravitation is anime-original; the manga only recalls the hanami (Akiho sang with Tomoyo) in ch 9"
+   },
+   {
+    "episodes": [
+     77,
+     78
+    ],
+    "kind": "partial",
+    "chapters": "10",
+    "note": "Record and Flight are both secured in one scene at Tomoyo's house in ch 10; anime splits them across two episodes"
+   },
+   {
+    "episodes": [
+     81
+    ],
+    "kind": "divergence",
+    "chapters": "14-15",
+    "note": "Labyrinth captured in town with Yukito/Yue in the manga, outside Sakura's house together with Snooze in the anime"
+   },
+   {
+    "episodes": [
+     82,
+     83,
+     85
+    ],
+    "kind": "graft",
+    "chapters": "39, 46",
+    "note": "Reversal and Hail (manga ch 39) and Mirage (manga ch 46) are used in anime-original stories long before their manga debuts"
+   },
+   {
+    "episodes": [
+     84,
+     86,
+     87
+    ],
+    "kind": "divergence",
+    "chapters": "-",
+    "note": "Meiling episodes and the viewing-party/earthquake are anime-original; Meiling, Swing and Struggle do not exist in the manga; Kaito's time-rewind slip (ep 87) is an anime beat"
+   },
+   {
+    "episodes": [
+     92
+    ],
+    "kind": "divergence",
+    "chapters": "22",
+    "note": "Masaki's gift is a key in the anime, Nadeshiko's watch pendant in the manga"
+   },
+   {
+    "episodes": [
+     93
+    ],
+    "kind": "divergence",
+    "chapters": "24-29",
+    "note": "cloaked figure shown as Akiho and Kaito rewinds time (anime); manga ch 24 shows it as Syaoran and the Akiho link only emerges in vol 6 (ch 25-29) - hence Wikipedia's conflicting 'first 24' vs 'first 28 chapters' wording"
+   }
+  ]
+ },
+ "flags_for_sean": [
+  "STRUCTURE: component 2 (season_order 2) is AniList 372 (Sealed Card movie) but row 71 = Prologue OVA 'Sakura and the Two Bears' (AniList 98554, 2017-09-13). Recommend re-pointing component 2 to 98554 [ova]; 372/371 become order-only anime-original films.",
+  "NUMBERING: eps 72-93 adapt the Clear Card manga (AniList 87296, own numbering 1-80, 16 vols), not manga 30106. Their anchors are delivered in the separate 'clear_card' block in Clear Card numbering and must NOT be applied against original-manga numbering; the entry needs either a split (Clear Card as its own series/source) or an explicit second source. The stored anchor ep93->50 v12 is wrong and should be removed (see repairs); original ch 50 is adapted by ep 71.",
+  "DATA: the context file's Wikipedia volume boundaries (v12: 46-59, v13-16) are a merge of two different manga by volume number; original manga boundaries are v1 1-5, v2 6-10, v3 11-14, v4 15-18, v5 19-22, v6 23-26, v7 27-30, v8 31-34, v9 35-38, v10 39-42, v11 43-45, v12 46-50.",
+  "ep 48: fandom's Firey page gives the transformation as ch 28 in the infobox but ch 29 in prose; anchored 28 (ch 29 = the fainting aftermath used by ep 49). Medium.",
+  "ep 41 -> ch 20 and ep 44 -> ch 22 rest on cast lists / Wikipedia's vol 5 summary (fandom has no prose for ch 19-38); medium. Ch 16 has no identified anime counterpart (possibly the Touya/Mizuki backstory that filler ep 27 borrows).",
+  "Type downgrades for eps 4 and 7 (to filler) and 5/39 (to mixed) contradict animefillerlist's coarse '1-11 canon' grouping; evidence is the fandom card pages (Wood 'Not Shown', Silent/Rain/Cloud anime-only) plus Wikipedia's per-volume card lists.",
+  "Clear Card anime-original episodes (76, 83-87) typed 'anime-only-canon' because the CC TV series is its own continuity; switch to 'filler' if you want parity with the 1998 rows (which type all card-of-the-week originals as filler). ep 82 typed mixed (ch 16 content + anime-only Reversal).",
+  "Wikipedia's Clear Card article says both 'first 24' and 'first 28' chapters; fandom (ep 22 page) and TV Tropes say ch 24. Resolved as end=24 with the finale anticipating vol 6's Akiho reveal.",
+  "Web-search budget ran out mid-task; independent (non-fandom, non-Wikipedia) corroboration of individual 1998 episode->chapter pairs is thin beyond animefillerlist's type list, MAL's OVA page, and the per-volume card lists on Wikipedia. Fandom card infoboxes (captured/transformed ch+ep) and chapter card galleries cross-check each other and Wikipedia's volume summaries, so the high-confidence pairs are well supported."
+ ]
+}

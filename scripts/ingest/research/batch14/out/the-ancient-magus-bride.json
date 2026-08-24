@@ -1,0 +1,486 @@
+{
+  "series_id": "the-ancient-magus-bride",
+  "summary": "Season 2 (our 25-48; AniList 154364 = 25-36, 166452 = 37-48) adapts the College arc from ch 46 (vol 10) through ch 95 (end of vol 19) in near-linear order; the endpoint ch 95 and continue point ch 96 (vol 20) are confirmed by four sources, and cour 1 ends mid-ch 70 (vol 14). Episode titles mirror the manga chapter titles almost one-to-one, which made the fandom chapter pages (46-97, with volumes) a clean skeleton; per-episode coverage was cross-checked with Kvasir369's 24 per-episode 'Changes from Manga' sections and programming-cafe.com's bidirectional Japanese correspondence table. Non-linear spots: ep 25 pulls ch 48's Alexandra exam forward, ep 28 compresses the Cowl arc (50-52) and drops its church/Stella side threads, eps 29-30 split the interleaved Lucy/Zoe and Alice/Renfred threads of chs 54-57, and ep 43 skips most of ch 83 which ep 44 then adapts. The 2021-22 OVA 'The Boy from the West and the Knight of the Blue Storm' (130713, 3 parts) is anime-original (完全新作), set between ch 45 and ch 46, and belongs after S1 ep 24 / before S2 ep 1 as an order-only entry. No type corrections; existing S1 anchors were not contradicted by two sources (one single-source oddity at ep 12 flagged).",
+  "anchors": [
+    {
+      "episode": 25,
+      "end_chapter": 47,
+      "start_chapter": 46,
+      "chapters_adapted": "46-47, 48 (Alexandra examination scene pulled forward)",
+      "volume": 10,
+      "confidence": "high",
+      "note": "S2E1. Opens in medias res at the College then flashes back to Adolf's visit (= ch 46 per fandom ch 46 synopsis); Lucy roommate + Philomela fainting = ch 47's end. Ch 48's Alexandra exam is pulled forward (Kvasir; programming-cafe lists 46-48 for this reason). Fandom also lists ch 45 (S1-finale continuity; no ch 45 content beyond recap per Kvasir's recap). Ch 47's Narcisse-class/Alice-contract scene is held back to ep 26.",
+      "sources": [
+        "https://ancientmagusbride.fandom.com/wiki/Live_and_let_live._II",
+        "https://kvasir369.wordpress.com/2023/04/06/ancient-magus-bride-season-2-episode-1-review/",
+        "https://programming-cafe.com/amazon/primevideo/anime/anicomi-magusbride-list/",
+        "https://ancientmagusbride.fandom.com/wiki/Chapter_46",
+        "https://ancientmagusbride.fandom.com/wiki/Chapter_47"
+      ]
+    },
+    {
+      "episode": 26,
+      "end_chapter": 48,
+      "start_chapter": 47,
+      "chapters_adapted": "47 (tail: Alice's Will o' the Wisp contract, Narcisse's first class), 48",
+      "volume": 10,
+      "confidence": "high",
+      "note": "S2E2. Kvasir: 'finishes off Chapter 47-48'; Elias's first class as disguised instructor (Wikipedia summary) = ch 48 (fandom synopsis); ends on Rian asking Chise to teach him, which is ch 48's closing line (ch 49 repeats it and ep 27 opens on it). programming-cafe's episode table lists only ch 47 here (its reverse table puts ch 48 in S2E1/S2E3) — outvoted by content evidence.",
+      "sources": [
+        "https://kvasir369.wordpress.com/2023/04/13/ancient-magus-bride-season-2-episode-2-review/",
+        "https://kvasir369.wordpress.com/2023/04/21/ancient-magus-bride-season-2-episode-3-review/",
+        "https://ancientmagusbride.fandom.com/wiki/Chapter_48",
+        "https://ancientmagusbride.fandom.com/wiki/Chapter_49",
+        "https://en.wikipedia.org/wiki/List_of_The_Ancient_Magus%27_Bride_episodes",
+        "https://programming-cafe.com/amazon/primevideo/anime/anicomi-magusbride-list/"
+      ]
+    },
+    {
+      "episode": 27,
+      "end_chapter": 50,
+      "start_chapter": 49,
+      "chapters_adapted": "48 (repeated closing line only), 49, 50 (part: Chise's week at home, the fog)",
+      "volume": 10,
+      "confidence": "high",
+      "note": "S2E3. Kvasir: remaining ch 49 + a bit of ch 50; programming-cafe: 48-50; ends with the mysterious mist sweeping Chise away = ch 50's Chise thread (fandom ch 50 synopsis, Wikipedia summary). Ends mid-ch 50.",
+      "sources": [
+        "https://kvasir369.wordpress.com/2023/04/21/ancient-magus-bride-season-2-episode-3-review/",
+        "https://programming-cafe.com/amazon/primevideo/anime/anicomi-magusbride-list/",
+        "https://ancientmagusbride.fandom.com/wiki/Chapter_50",
+        "https://en.wikipedia.org/wiki/List_of_The_Ancient_Magus%27_Bride_episodes"
+      ]
+    },
+    {
+      "episode": 28,
+      "end_chapter": 53,
+      "start_chapter": 51,
+      "chapters_adapted": "50 (tail), 51-53",
+      "volume": 11,
+      "confidence": "high",
+      "note": "S2E4 'The cowl does not make the monk.' Kvasir: chs 50-53 (Cowl I through First impressions I); programming-cafe: 50, 51-53. Rahab's island = 51-52, the Hazel shortcut home<->College = ch 53 (fandom synopsis; Wikipedia 'mystical shortcut revealed'). Fandom infobox lists only ch 52 (incomplete). Cowl arc compressed to one episode; church-auditor (Simon/Gabriella/Alonza) and Stella/Ashen Eye threads omitted.",
+      "sources": [
+        "https://kvasir369.wordpress.com/2023/04/27/ancient-magus-bride-season-2-episode-4-review/",
+        "https://programming-cafe.com/amazon/primevideo/anime/anicomi-magusbride-list/",
+        "https://ancientmagusbride.fandom.com/wiki/The_cowl_does_not_make_the_monk.",
+        "https://ancientmagusbride.fandom.com/wiki/Chapter_53",
+        "https://en.wikipedia.org/wiki/List_of_The_Ancient_Magus%27_Bride_episodes"
+      ]
+    },
+    {
+      "episode": 29,
+      "end_chapter": 56,
+      "start_chapter": 54,
+      "chapters_adapted": "54-55, 56 (part: the pact to keep Zoe's secret)",
+      "volume": 12,
+      "confidence": "medium",
+      "note": "S2E5. programming-cafe: 54-55 + 56 (its reverse table splits ch 56 across S2E5/S2E6). Kvasir's recap ends with Zoe's backstory/identity talk (ch 55) and says the Alice/Renfred material was deferred to ep 6; he gives no exact range. Wikipedia 'Zoe's secret revealed to trusted students' matches ch 55/56 opening. End 56 rests on programming-cafe alone -> medium.",
+      "sources": [
+        "https://programming-cafe.com/amazon/primevideo/anime/anicomi-magusbride-list/",
+        "https://kvasir369.wordpress.com/2023/05/04/ancient-magus-bride-season-2-episode-5-review/",
+        "https://ancientmagusbride.fandom.com/wiki/Chapter_55",
+        "https://ancientmagusbride.fandom.com/wiki/Chapter_56",
+        "https://en.wikipedia.org/wiki/List_of_The_Ancient_Magus%27_Bride_episodes"
+      ]
+    },
+    {
+      "episode": 30,
+      "end_chapter": 57,
+      "start_chapter": 56,
+      "chapters_adapted": "54 (Elias-Renfred conversation about Alice, relocated), 56 (rest), 57",
+      "volume": 12,
+      "confidence": "high",
+      "note": "S2E6 'Better bend than break.' programming-cafe: 54, 56-57; Kvasir: the Alice/Renfred thread from chs 54-57 (Elias-Renfred talk, Alice's stay at the Ainsworth house, Simon). Ep 31 starts at ch 58, so 57 is the end.",
+      "sources": [
+        "https://programming-cafe.com/amazon/primevideo/anime/anicomi-magusbride-list/",
+        "https://kvasir369.wordpress.com/2023/05/14/ancient-magus-bride-season-2-episode-6-review/",
+        "https://kvasir369.wordpress.com/2023/05/19/ancient-magus-bride-season-2-episode-7-review/",
+        "https://ancientmagusbride.fandom.com/wiki/Chapter_57",
+        "https://en.wikipedia.org/wiki/List_of_The_Ancient_Magus%27_Bride_episodes"
+      ]
+    },
+    {
+      "episode": 31,
+      "end_chapter": 60,
+      "start_chapter": 58,
+      "chapters_adapted": "58-59, 60 (part: the bushcraft trip begins)",
+      "volume": 12,
+      "confidence": "high",
+      "note": "S2E7 'Slow and sure. I'. Kvasir: chs 58-60; programming-cafe: 58-60. Ends mid-ch 60 (trip underway; the attack is ep 32).",
+      "sources": [
+        "https://kvasir369.wordpress.com/2023/05/19/ancient-magus-bride-season-2-episode-7-review/",
+        "https://programming-cafe.com/amazon/primevideo/anime/anicomi-magusbride-list/",
+        "https://ancientmagusbride.fandom.com/wiki/Chapter_60",
+        "https://en.wikipedia.org/wiki/List_of_The_Ancient_Magus%27_Bride_episodes"
+      ]
+    },
+    {
+      "episode": 32,
+      "end_chapter": 61,
+      "start_chapter": 60,
+      "chapters_adapted": "60 (rest: Lucy attacked), 61",
+      "volume": 13,
+      "confidence": "high",
+      "note": "S2E8 'Slow and sure. II'. Kvasir: chs 60-61; programming-cafe: 60, 61 (vol 13 starts at 61). Nucklavee chase + Chise's cursed arm = ch 61 (fandom synopsis; Wikipedia 'dragon arm transforms'). Opens mid-ch 60.",
+      "sources": [
+        "https://kvasir369.wordpress.com/2023/05/25/ancient-magus-bride-season-2-episode-8-review/",
+        "https://programming-cafe.com/amazon/primevideo/anime/anicomi-magusbride-list/",
+        "https://ancientmagusbride.fandom.com/wiki/Chapter_61",
+        "https://en.wikipedia.org/wiki/List_of_The_Ancient_Magus%27_Bride_episodes"
+      ]
+    },
+    {
+      "episode": 33,
+      "end_chapter": 63,
+      "start_chapter": 62,
+      "chapters_adapted": "62-63",
+      "volume": 13,
+      "confidence": "high",
+      "note": "S2E9 'Conscience does make cowards of us all. I'. Kvasir 62-63; programming-cafe 62-63; Lucy's 10-day coma + missing Testament of Carnamagos = ch 62 (fandom synopsis).",
+      "sources": [
+        "https://kvasir369.wordpress.com/2023/06/01/ancient-magus-bride-season-2-episode-9-review/",
+        "https://programming-cafe.com/amazon/primevideo/anime/anicomi-magusbride-list/",
+        "https://ancientmagusbride.fandom.com/wiki/Chapter_62",
+        "https://en.wikipedia.org/wiki/List_of_The_Ancient_Magus%27_Bride_episodes"
+      ]
+    },
+    {
+      "episode": 34,
+      "end_chapter": 65,
+      "start_chapter": 64,
+      "chapters_adapted": "64-65",
+      "volume": 13,
+      "confidence": "high",
+      "note": "S2E10 'Conscience II'. Kvasir 64-65 ('also ends Volume 13'); programming-cafe 64-65; werewolf attack/Webster backstory = 64-65 (fandom synopses).",
+      "sources": [
+        "https://kvasir369.wordpress.com/2023/06/08/ancient-magus-bride-season-2-episode-10-review/",
+        "https://programming-cafe.com/amazon/primevideo/anime/anicomi-magusbride-list/",
+        "https://ancientmagusbride.fandom.com/wiki/Chapter_65",
+        "https://en.wikipedia.org/wiki/List_of_The_Ancient_Magus%27_Bride_episodes"
+      ]
+    },
+    {
+      "episode": 35,
+      "end_chapter": 68,
+      "start_chapter": 66,
+      "chapters_adapted": "66-67, 68 (part: Tower of Remnants)",
+      "volume": 14,
+      "confidence": "high",
+      "note": "S2E11 'A small leak will sink a great ship. I'. Kvasir: first two chapters of vol 14 + part of the third (66-68); programming-cafe 66-68. Ends mid-ch 68.",
+      "sources": [
+        "https://kvasir369.wordpress.com/2023/06/15/ancient-magus-bride-season-2-episode-11-review/",
+        "https://programming-cafe.com/amazon/primevideo/anime/anicomi-magusbride-list/",
+        "https://ancientmagusbride.fandom.com/wiki/Chapter_68",
+        "https://en.wikipedia.org/wiki/List_of_The_Ancient_Magus%27_Bride_episodes"
+      ]
+    },
+    {
+      "episode": 36,
+      "end_chapter": 70,
+      "start_chapter": 68,
+      "chapters_adapted": "68 (rest), 69, 70 (part)",
+      "volume": 14,
+      "confidence": "high",
+      "note": "S2E12, cour-1 finale. Kvasir: chs 68 to part of 70 (ep 13 covers 'the rest of 70'); programming-cafe 68-70 (reverse table: ch 70 -> S2E12 and S2E13); epicstream: cour ends in ch 70. Ends mid-ch 70.",
+      "sources": [
+        "https://kvasir369.wordpress.com/2023/06/22/ancient-magus-bride-season-2-episode-12-review/",
+        "https://kvasir369.wordpress.com/2023/10/05/ancient-magus-bride-season-2-episode-13-review/",
+        "https://programming-cafe.com/amazon/primevideo/anime/anicomi-magusbride-list/",
+        "https://epicstream.com/article/where-to-read-ancient-magus-bride-manga-after-season-2"
+      ]
+    },
+    {
+      "episode": 37,
+      "end_chapter": 71,
+      "start_chapter": 70,
+      "chapters_adapted": "70 (rest), 71",
+      "volume": 15,
+      "confidence": "high",
+      "note": "S2E13, Part 2 opener (AniList 166452 ep 1). Kvasir: rest of ch 70 + ch 71; programming-cafe: 70, 71 (vol 15 starts at 71). Ends with the combat-training class (ch 71). Kvasir's ep-14 phrase 'rest of 72' is loose; programming-cafe puts ch 72 wholly in S2E14.",
+      "sources": [
+        "https://kvasir369.wordpress.com/2023/10/05/ancient-magus-bride-season-2-episode-13-review/",
+        "https://programming-cafe.com/amazon/primevideo/anime/anicomi-magusbride-list/",
+        "https://en.wikipedia.org/wiki/List_of_The_Ancient_Magus%27_Bride_episodes"
+      ]
+    },
+    {
+      "episode": 38,
+      "end_chapter": 73,
+      "start_chapter": 72,
+      "chapters_adapted": "72-73",
+      "volume": 15,
+      "confidence": "high",
+      "note": "S2E14 'Nothing venture, nothing have. II'. Kvasir 72-73; programming-cafe 72-73.",
+      "sources": [
+        "https://kvasir369.wordpress.com/2023/10/12/ancient-magus-bride-season-2-episode-14-review/",
+        "https://programming-cafe.com/amazon/primevideo/anime/anicomi-magusbride-list/",
+        "https://en.wikipedia.org/wiki/List_of_The_Ancient_Magus%27_Bride_episodes"
+      ]
+    },
+    {
+      "episode": 39,
+      "end_chapter": 75,
+      "start_chapter": 74,
+      "chapters_adapted": "74, 75 (part)",
+      "volume": 15,
+      "confidence": "high",
+      "note": "S2E15 'Needs must when the devil drives. I'. Kvasir: 74 + part of 75; programming-cafe 74-75. Ends mid-ch 75.",
+      "sources": [
+        "https://kvasir369.wordpress.com/2023/10/19/ancient-magus-bride-season-2-episode-15-review/",
+        "https://programming-cafe.com/amazon/primevideo/anime/anicomi-magusbride-list/",
+        "https://en.wikipedia.org/wiki/List_of_The_Ancient_Magus%27_Bride_episodes"
+      ]
+    },
+    {
+      "episode": 40,
+      "end_chapter": 76,
+      "start_chapter": 75,
+      "chapters_adapted": "75 (rest), 76",
+      "volume": 16,
+      "confidence": "high",
+      "note": "S2E16 'Needs must II'. Kvasir: part of 75 + 76; programming-cafe: 75, 76 (vol 16 starts at 76). Opens mid-ch 75.",
+      "sources": [
+        "https://kvasir369.wordpress.com/2023/10/26/ancient-magus-bride-season-2-episode-16-review/",
+        "https://programming-cafe.com/amazon/primevideo/anime/anicomi-magusbride-list/",
+        "https://en.wikipedia.org/wiki/List_of_The_Ancient_Magus%27_Bride_episodes"
+      ]
+    },
+    {
+      "episode": 41,
+      "end_chapter": 79,
+      "start_chapter": 77,
+      "chapters_adapted": "77-78, 79 (part)",
+      "volume": 16,
+      "confidence": "high",
+      "note": "S2E17 'Gather ye rosebuds while ye may.' Kvasir: 77-78 + part of 79; programming-cafe 77-79. Ends mid-ch 79.",
+      "sources": [
+        "https://kvasir369.wordpress.com/2023/11/03/ancient-magus-bride-season-2-episode-17-review/",
+        "https://programming-cafe.com/amazon/primevideo/anime/anicomi-magusbride-list/",
+        "https://en.wikipedia.org/wiki/List_of_The_Ancient_Magus%27_Bride_episodes"
+      ]
+    },
+    {
+      "episode": 42,
+      "end_chapter": 80,
+      "start_chapter": 80,
+      "chapters_adapted": "79 (rest), 80",
+      "volume": 16,
+      "confidence": "high",
+      "note": "S2E18 'Coming events cast their shadows before.' Kvasir: remainder of 79 to 80; programming-cafe: 80 (reverse table: 81 -> S2E19 only). Kvasir's ep-19 review says 'remainder of 81', so the final scene may touch ch 81's opening; end recorded as 80.",
+      "sources": [
+        "https://kvasir369.wordpress.com/2023/11/09/ancient-magus-bride-season-2-episode-18-review/",
+        "https://kvasir369.wordpress.com/2023/11/16/ancient-magus-bride-season-2-episode-19-review/",
+        "https://programming-cafe.com/amazon/primevideo/anime/anicomi-magusbride-list/",
+        "https://en.wikipedia.org/wiki/List_of_The_Ancient_Magus%27_Bride_episodes"
+      ]
+    },
+    {
+      "episode": 43,
+      "end_chapter": 84,
+      "start_chapter": 81,
+      "chapters_adapted": "81-82, 83 (part), 84 (part)",
+      "volume": 17,
+      "confidence": "high",
+      "note": "S2E19 'Man's extremity is God's opportunity.' Kvasir: remainder of 81 to part of 84, skipping most of 83 (deferred to ep 20); programming-cafe: 81-84 (vol 17 starts at 81; reverse table puts 83 and 84 in both S2E19 and S2E20). Reader should resume at 83, not 85.",
+      "sources": [
+        "https://kvasir369.wordpress.com/2023/11/16/ancient-magus-bride-season-2-episode-19-review/",
+        "https://kvasir369.wordpress.com/2023/11/23/ancient-magus-bride-season-2-episode-20-review/",
+        "https://programming-cafe.com/amazon/primevideo/anime/anicomi-magusbride-list/",
+        "https://en.wikipedia.org/wiki/List_of_The_Ancient_Magus%27_Bride_episodes"
+      ]
+    },
+    {
+      "episode": 44,
+      "end_chapter": 84,
+      "start_chapter": 83,
+      "chapters_adapted": "83, 84 (rest)",
+      "volume": 17,
+      "confidence": "high",
+      "note": "S2E20 'Even a worm will turn.' Kvasir: ch 83 + the rest of 84 (Alcyone/Philomela backstory, Morrigan blocks Chise); programming-cafe 83-84.",
+      "sources": [
+        "https://kvasir369.wordpress.com/2023/11/23/ancient-magus-bride-season-2-episode-20-review/",
+        "https://programming-cafe.com/amazon/primevideo/anime/anicomi-magusbride-list/",
+        "https://ancientmagusbride.fandom.com/wiki/Even_a_worm_will_turn.",
+        "https://en.wikipedia.org/wiki/List_of_The_Ancient_Magus%27_Bride_episodes"
+      ]
+    },
+    {
+      "episode": 45,
+      "end_chapter": 87,
+      "start_chapter": 85,
+      "chapters_adapted": "85-86, 87 (part)",
+      "volume": 18,
+      "confidence": "high",
+      "note": "S2E21 'A burnt child dreads the fire.' Fandom infobox: 85, 86, 87; Kvasir: 85 to part of 87; programming-cafe: 85, 86-87 (vol 18 starts at 86). Ends mid-ch 87.",
+      "sources": [
+        "https://ancientmagusbride.fandom.com/wiki/A_burnt_child_dreads_the_fire.",
+        "https://kvasir369.wordpress.com/2023/11/30/ancient-magus-bride-season-2-episode-21-review/",
+        "https://programming-cafe.com/amazon/primevideo/anime/anicomi-magusbride-list/"
+      ]
+    },
+    {
+      "episode": 46,
+      "end_chapter": 88,
+      "start_chapter": 87,
+      "chapters_adapted": "87 (rest), 88",
+      "volume": 18,
+      "confidence": "high",
+      "note": "S2E22 'Give a thief enough rope...' Fandom infobox 87, 88; Kvasir 87-88; programming-cafe 87-88. Opens mid-ch 87.",
+      "sources": [
+        "https://ancientmagusbride.fandom.com/wiki/Give_a_thief_enough_rope_and_he%27ll_hang_himself.",
+        "https://kvasir369.wordpress.com/2023/12/07/ancient-magus-bride-season-2-episode-22-review/",
+        "https://programming-cafe.com/amazon/primevideo/anime/anicomi-magusbride-list/"
+      ]
+    },
+    {
+      "episode": 47,
+      "end_chapter": 91,
+      "start_chapter": 89,
+      "chapters_adapted": "85 (flashback material, per fandom only), 89-91",
+      "volume": 19,
+      "confidence": "high",
+      "note": "S2E23 'Of two evils choose the less.' Fandom infobox: 85, 89, 90, 91; programming-cafe: 89-90, 91 (vol 19 starts at 91; reverse table: 92 -> S2E24 only). Kvasir says 'from 89 to part of 92' — if so only the closing scene; 2 of 3 sources end at 91 and the resume point is 92 either way.",
+      "sources": [
+        "https://ancientmagusbride.fandom.com/wiki/Of_two_evils_choose_the_less.",
+        "https://programming-cafe.com/amazon/primevideo/anime/anicomi-magusbride-list/",
+        "https://kvasir369.wordpress.com/2023/12/15/ancient-magus-bride-season-2-episode-23-review/"
+      ]
+    },
+    {
+      "episode": 48,
+      "end_chapter": 95,
+      "start_chapter": 92,
+      "chapters_adapted": "92-95",
+      "volume": 19,
+      "confidence": "high",
+      "note": "S2E24 finale 'The show must go on. I' (= title of ch 95). Fandom infobox 92-95; Kvasir 'rest of 92 to 95, finishing the arc before the manga's hiatus'; programming-cafe 92-95; animefillerguide 92-95. Season/series endpoint = ch 95 = end of vol 19; continue at ch 96 (vol 20).",
+      "sources": [
+        "https://ancientmagusbride.fandom.com/wiki/The_show_must_go_on._I",
+        "https://kvasir369.wordpress.com/2023/12/22/ancient-magus-bride-season-2-episode-24-review-season-review/",
+        "https://programming-cafe.com/amazon/primevideo/anime/anicomi-magusbride-list/",
+        "https://www.animefillerguide.com/2024/02/mahoutsukai-no-yome.html",
+        "https://kvasir369.wordpress.com/2024/01/06/reading-the-ancient-magus-bride-mahou-tsukai-no-yome-after-season-two/"
+      ]
+    }
+  ],
+  "continue_points": [
+    {
+      "episode": 27,
+      "continue_chapter": 50,
+      "note": "ends mid-ch 50 (fog); ep 28 finishes 50 (and the omitted Simon/Stella threads of 50-52 are never animated)"
+    },
+    {
+      "episode": 29,
+      "continue_chapter": 56,
+      "note": "at most the secret-pact opening of ch 56 is shown; ep 30 covers the rest of 56 (programming-cafe splits 56 across S2E5/S2E6)"
+    },
+    {
+      "episode": 31,
+      "continue_chapter": 60,
+      "note": "ends mid-ch 60 (trip begins); ep 32 opens with the rest of 60"
+    },
+    {
+      "episode": 35,
+      "continue_chapter": 68,
+      "note": "ends partway into ch 68 (Kvasir: 'part of the third chapter')"
+    },
+    {
+      "episode": 36,
+      "continue_chapter": 70,
+      "note": "cour-1 finale ends mid-ch 70; ep 37 opens with 'the rest of 70' (Kvasir; programming-cafe reverse table). epicstream's coarse advice is 'start from 71'"
+    },
+    {
+      "episode": 39,
+      "continue_chapter": 75,
+      "note": "ends partway into ch 75; ep 40 opens mid-75"
+    },
+    {
+      "episode": 41,
+      "continue_chapter": 79,
+      "note": "ends partway into ch 79; ep 42 opens with the remainder"
+    },
+    {
+      "episode": 43,
+      "continue_chapter": 83,
+      "note": "ep 43 reaches into ch 84 but skips most of ch 83, which ep 44 adapts; honest resume is 83"
+    },
+    {
+      "episode": 45,
+      "continue_chapter": 87,
+      "note": "ends partway into ch 87; ep 46 opens with the rest"
+    },
+    {
+      "episode": 48,
+      "continue_chapter": 96,
+      "note": "series endpoint: ch 95 fully adapted (end of vol 19); resume at ch 96 = start of vol 20 (animefillerguide, programming-cafe, Kvasir)"
+    }
+  ],
+  "annotations": [
+    {
+      "episodes": [
+        25,
+        26
+      ],
+      "kind": "rearranged",
+      "chapters": "47-48",
+      "note": "ep 25 pulls ch 48's Alexandra examination scene forward and ends on ch 47's Philomela faint; ch 47's Alice-contract/Narcisse-class scene is held back to open ep 26 (Kvasir ep 1-2; programming-cafe reverse table 47 -> S2E1+S2E2, 48 -> S2E1)"
+    },
+    {
+      "episodes": [
+        28
+      ],
+      "kind": "abridged",
+      "chapters": "50-52",
+      "note": "'Cowl' arc compressed into one episode; the church-auditor thread (Simon/Gabriella/Alonza) and the Stella/Ashen Eye contract are omitted (fandom Differences-from-Manga note; Kvasir ep 4)"
+    },
+    {
+      "episodes": [
+        29,
+        30
+      ],
+      "kind": "rearranged",
+      "chapters": "54-57",
+      "note": "interleaved manga threads split by episode: ep 29 takes the Lucy/Zoe thread (54-55, opening of 56), ep 30 takes the Alice/Renfred thread incl. ch 54's Elias-Renfred conversation (Kvasir ep 5-6; programming-cafe lists ch 54 under both S2E5 and S2E6)"
+    },
+    {
+      "episodes": [
+        43,
+        44
+      ],
+      "kind": "rearranged",
+      "chapters": "83-84",
+      "note": "ep 43 skips most of ch 83 and runs into ch 84; ep 44 then adapts ch 83 (Alcyone/Philomela's childhood) before finishing 84 (Kvasir ep 19-20; programming-cafe puts 83 and 84 in both S2E19 and S2E20)"
+    },
+    {
+      "episodes": [
+        47
+      ],
+      "kind": "graft",
+      "chapters": "85",
+      "note": "fandom infobox lists ch 85 alongside 89-91 (flashback material); single source, not corroborated by Kvasir/programming-cafe"
+    }
+  ],
+  "type_corrections": [],
+  "repairs": [],
+  "structure": {
+    "notes": "Numbering: Wikipedia and the fandom 'List of Episodes' both number Season 2 as overall 25-48 (S2 in-season N = our 24+N); programming-cafe uses '2-N'; Kvasir uses 'Season 2 Episode N'. AniList (GraphQL, verified): 154364 'Mahoutsukai no Yome SEASON 2' TV 12 eps 2023-04-06..06-22 = our 25-36, adapts chs 46-70 (vols 10-14; newstisiki: 'vol 9's end through vol 14'); 166452 'SEASON 2 Part 2' TV 12 eps 2023-10-05..12-21 = our 37-48, adapts chs 70-95 (vols 14-19; newstisiki: 'latter half of vol 14 through vol 19'); relation 166452 -> PREQUEL 154364. Series endpoint ch 95 (end of vol 19; vol 19 = chs 91-95, vol 20 = 96-100 per fandom volume pages and programming-cafe); continue_from 96 confirmed (animefillerguide, programming-cafe, Kvasir). Volume boundaries used (fandom chapter/volume pages, 5 per volume): v10 46-50, v11 51-55, v12 56-60, v13 61-65, v14 66-70, v15 71-75, v16 76-80, v17 81-85, v18 86-90, v19 91-95, v20 96-100. OVA 130713 'Nishi no Shounen to Seiran no Kishi' (The Boy from the West and the Knight of the Blue Storm): OVA, 3 parts released 2021-09-10 / 2022-03-10 / 2022-09-09 bundled with special editions of manga vols 16/17/18; AniList relation: SEQUEL of 98436. It is an anime-original story ('完全新作アニメーション', eiga.com; WDTALO: 'the OVAs are original content not in the manga'; fandom OVA infobox has no chapter field) set 'during Cartaphilus' brief nap, just prior to Chise becoming a part-time student' (AniList description; eiga.com) — i.e. between ch 45 (S1 ep 24) and ch 46 (S2 ep 1). Watch order: after S1 ep 24 and before S2 ep 1 (fandom nav: OVA part 1 previous = Season 1, S2E1 previous = the OVA; Kvasir reviewed it 'before heading into Season 2'). Not researched here: 'Hoshi Matsu Hito' (Those Awaiting a Star, AniList 21688, OVA 3 eps, 2016-08-13, AniList SIDE_STORY of 98436) — a prequel OVA; adaptation status not verified in this batch. All 24 S2 episodes are manga canon (animefillerguide: 0 filler across 48 episodes); no type corrections.",
+    "order_only": [
+      {
+        "anilist_id": 130713,
+        "title": "Mahoutsukai no Yome: Nishi no Shounen to Seiran no Kishi (The Boy from the West and the Knight of the Blue Storm)",
+        "after_anilist_id": 98436,
+        "adapts": "none — anime-original story (Kore Yamazaki-supervised), set between ch 45 and ch 46",
+        "note": "3-part OAD (2021-09-10, 2022-03-10, 2022-09-09) bundled with manga vols 16-18 special editions; place after S1 ep 24 and before S2 ep 1 (AniList 154364). Sources: https://eiga.com/news/20210401/24/ ; https://anilist.co/anime/130713 ; https://ancientmagusbride.fandom.com/wiki/The_Boy_From_the_West_and_the_Knight_of_the_Blue_Storm:_Part_1 ; https://wheredoestheanimeleaveoff.com/where-does-the-ancient-magus-bride-anime-leave-off-in-the-manga/"
+      }
+    ]
+  },
+  "flags_for_sean": [
+    "Outlier: wheredoestheanimeleaveoff.com says to 'pick up the manga at Chapter 92' after season 2 — contradicted by fandom, Kvasir, programming-cafe and animefillerguide (ep 48 adapts 92-95). Treat as wrong; continue at 96. https://wheredoestheanimeleaveoff.com/where-does-the-ancient-magus-bride-anime-leave-off-in-the-manga/",
+    "ep 47 end: fandom + programming-cafe end at ch 91; Kvasir says 'to part of Chapter 92'. Recorded 91 (resume 92 either way). https://kvasir369.wordpress.com/2023/12/15/ancient-magus-bride-season-2-episode-23-review/",
+    "ep 26 end: programming-cafe's episode table lists only ch 47 for S2E2 (its reverse table splits ch 48 between S2E1 and S2E3); Kvasir ('finishes off Chapter 47-48') plus content (Elias's first class = ch 48; ep 27 opens on ch 49's repeated first line) support 48. Recorded 48. https://programming-cafe.com/amazon/primevideo/anime/anicomi-magusbride-list/",
+    "ep 29 end 56 (partial) rests on programming-cafe alone (medium); Kvasir's recap ends with ch 55 material and gives no range. If Sean prefers strict 2-source anchors, end 55 is the fallback.",
+    "ep 36 continue point: Kvasir + programming-cafe show ep 36 ends mid-ch 70 (ep 37 finishes it); epicstream's article says the cour 'ends in Chapter 70' and to start from 71. Recorded continue 70. https://epicstream.com/article/where-to-read-ancient-magus-bride-manga-after-season-2",
+    "Out of range, single source: programming-cafe's S1 table gives ep 12 = chs 18-19 and ep 13 = 19-20 (reverse table: ch 20 -> eps 13-14), vs our stored ep12 -> end 20 [18-20]. Not repaired (one source); worth a look if S1 is re-audited. https://programming-cafe.com/amazon/primevideo/anime/anicomi-magusbride-list/",
+    "Chapter-title discrepancy (no numbering impact): fandom titles chs 86-87 'Once bitten, twice shy. I/II' and ch 97 'The show must go on. III'; programming-cafe titles 86-87 'A burnt child dreads the fire. I/II' (matching anime ep 45's title) and 97 'He gives twice who gives quickly'. Chapter numbers and volume boundaries agree across sources.",
+    "Web search budget hit its session cap near the end; per-episode map rests on three independent per-episode sources (fandom infoboxes where filled, Kvasir's 24 per-episode 'Changes from Manga' sections, programming-cafe's bidirectional table) plus Wikipedia summaries/fandom chapter synopses for content alignment."
+  ]
+}

@@ -1,0 +1,652 @@
+{
+ "series_id": "dagashi-kashi",
+ "summary": "Both seasons are non-linear samplers of short standalone chapters. S1 (eps 1-12) draws from vols 1-4 in scrambled order - each half-episode is one dagashi chapter (e.g. ep 3 = 9,10,25,20; ep 8 = 58,32,15; ep 12 = 65,64,68,49) - reaching a running max of ch 68 while skipping ~30 chapters (14,17,19,22-23,30,33-38,41,44,46-47,57,59-63,66-67), and ep 10 is an anime-original sick-Hotaru story with only gag fragments (type -> mixed). S2 (eps 13-24, half-length) opens with back-fills (88+60, 89-90, 84), then runs the departure/Hajime arc almost linearly 106-126 with small reorders (121 pulled into ep 20, a ch-113 gag grafted into ep 17, 123 split across eps 22-23) and skips 69-83, 85-87, 91-105, 118, 122. Anchors are built from the fandom wiki (episode pages + chapter reverse-links, chs 1-38 only), a MAL manga-reader's per-episode posts (2016), Inquisitr, and a complete fan list in the WDTALO comments, cross-checked against the featured-dagashi-per-chapter list (caprico-log / ja-Wikipedia) that pins every title-named chapter. Surprises: the S2 finale is better supported at ch 126 than the stored 127 (repair proposed, resume 127 either way), and volume boundaries (none in the DB) are now fully sourced.",
+ "anchors": [
+  {
+   "episode": 1,
+   "end_chapter": 8,
+   "start_chapter": 1,
+   "chapters_adapted": "1-3, 7-8",
+   "volume": 1,
+   "confidence": "high",
+   "note": "Fandom ep page + chapter reverse-links (chs 1,2,3,7,8 -> Ep 1) + WDTALO fan list + featured-dagashi titles (Umaibo=ch2, Potato Fry=ch3, Coffee Milk Candy=ch7, Young Donuts=ch8 per caprico-log); ch 6 (Morocco Yogurt) skipped.",
+   "sources": [
+    "https://dagashi-kashi.fandom.com/wiki/Episode_1",
+    "https://dagashi-kashi.fandom.com/wiki/Chapter_2",
+    "https://wheredoestheanimeleaveoff.com/where-does-the-dagashi-kashi-anime-leave-off-in-the-manga/",
+    "https://caprico-log.com/entry/dagasikasi/"
+   ]
+  },
+  {
+   "episode": 2,
+   "end_chapter": 12,
+   "start_chapter": 4,
+   "chapters_adapted": "4-5, 11-12",
+   "volume": 1,
+   "confidence": "high",
+   "note": "Fandom ep page + reverse-links (4,5,11,12 -> Ep 2) + WDTALO list + titles (Kinako-bo=4, Namaiki Beer=5, Fue Ramune=11, Menko=12).",
+   "sources": [
+    "https://dagashi-kashi.fandom.com/wiki/Episode_2",
+    "https://dagashi-kashi.fandom.com/wiki/Chapter_11",
+    "https://wheredoestheanimeleaveoff.com/where-does-the-dagashi-kashi-anime-leave-off-in-the-manga/",
+    "https://caprico-log.com/entry/dagasikasi/"
+   ]
+  },
+  {
+   "episode": 3,
+   "end_chapter": 20,
+   "start_chapter": 9,
+   "chapters_adapted": "9-10, 25, 20",
+   "volume": 2,
+   "confidence": "high",
+   "note": "Fandom ep page + reverse-links (9,10,20,25 -> Ep 3) + WDTALO. Running order per Wikipedia synopsis and fandom chapter plots: butamen (9), jelly/pool (10), Bontan-ame fastball at To (25), then Hotaru-Saya cafe chat = Seven Neon (20) closes the episode.",
+   "sources": [
+    "https://dagashi-kashi.fandom.com/wiki/Episode_3",
+    "https://dagashi-kashi.fandom.com/wiki/Chapter_20",
+    "https://dagashi-kashi.fandom.com/wiki/Chapter_25",
+    "https://wheredoestheanimeleaveoff.com/where-does-the-dagashi-kashi-anime-leave-off-in-the-manga/",
+    "https://en.wikipedia.org/wiki/List_of_Dagashi_Kashi_episodes"
+   ]
+  },
+  {
+   "episode": 4,
+   "end_chapter": 48,
+   "start_chapter": 39,
+   "chapters_adapted": "39, 48",
+   "volume": 3,
+   "confidence": "high",
+   "note": "Fugashi = ch 39 and Glico = ch 48 (caprico-log first-appearance list; ja-Wikipedia vol 3 p6/p79); WDTALO list '39, 48 + original'; MAL manga-reader bastek66's final skipped list omits 39 and 48 (i.e. adapted). Cafe Endo doodle segment is anime-original per WDTALO list.",
+   "sources": [
+    "https://caprico-log.com/entry/dagasikasi/",
+    "https://ja.wikipedia.org/wiki/%E3%81%A0%E3%81%8C%E3%81%97%E3%81%8B%E3%81%97",
+    "https://wheredoestheanimeleaveoff.com/where-does-the-dagashi-kashi-anime-leave-off-in-the-manga/",
+    "https://myanimelist.net/forum/?topicid=1496613"
+   ]
+  },
+  {
+   "episode": 5,
+   "end_chapter": 29,
+   "start_chapter": 16,
+   "chapters_adapted": "16, 40, 24, 29",
+   "volume": 2,
+   "confidence": "high",
+   "note": "Bin Ramune=16 (fandom ch16 -> Ep 5), Baby-Star Ramen=40, Yatta! Men=24, Sour Grape=29 (fandom ch29 -> Ep 5); WDTALO list 16, 24, 29, 40; running order per title/Wikipedia synopsis. Ch 40 is disputed: MAL bastek66 lists 40 as unadapted (see flags).",
+   "sources": [
+    "https://dagashi-kashi.fandom.com/wiki/Chapter_16",
+    "https://dagashi-kashi.fandom.com/wiki/Chapter_29",
+    "https://dagashi-kashi.fandom.com/wiki/Chapter_24",
+    "https://wheredoestheanimeleaveoff.com/where-does-the-dagashi-kashi-anime-leave-off-in-the-manga/",
+    "https://caprico-log.com/entry/dagasikasi/",
+    "https://myanimelist.net/forum/?topicid=1496613"
+   ]
+  },
+  {
+   "episode": 6,
+   "end_chapter": 42,
+   "start_chapter": 27,
+   "chapters_adapted": "27, 43, 45, 42",
+   "volume": 3,
+   "confidence": "high",
+   "note": "Chou Himo Q=27 (fandom ch27 -> Ep 6), Maken Gumi=43 (gag inserted inside the Himo Q segment), Ohajiki=45, Yoguret=42 (childhood flashback closes the episode); WDTALO list 27, 42-43, 45; bastek66's skipped lists exclude 42/43/45.",
+   "sources": [
+    "https://dagashi-kashi.fandom.com/wiki/Chapter_27",
+    "https://wheredoestheanimeleaveoff.com/where-does-the-dagashi-kashi-anime-leave-off-in-the-manga/",
+    "https://caprico-log.com/entry/dagasikasi/",
+    "https://myanimelist.net/forum/?topicid=1485602",
+    "https://en.wikipedia.org/wiki/List_of_Dagashi_Kashi_episodes"
+   ]
+  },
+  {
+   "episode": 7,
+   "end_chapter": 55,
+   "start_chapter": 53,
+   "chapters_adapted": "53-55",
+   "volume": 3,
+   "confidence": "high",
+   "note": "Summer-festival arc: monjayaki (53), katanuki (54), cotton candy/goldfish (55); MAL bastek66: 'Festival chapters are 53-56 yet they didn't adapt chapter 56'; WDTALO list 53-55; caprico-log 53-56 = festival foods.",
+   "sources": [
+    "https://myanimelist.net/forum/?topicid=1485602",
+    "https://wheredoestheanimeleaveoff.com/where-does-the-dagashi-kashi-anime-leave-off-in-the-manga/",
+    "https://caprico-log.com/entry/dagasikasi/"
+   ]
+  },
+  {
+   "episode": 8,
+   "end_chapter": 15,
+   "start_chapter": 58,
+   "chapters_adapted": "58, 32, 15",
+   "volume": 1,
+   "confidence": "high",
+   "note": "MAL bastek66: 'This time they adapted chapters 58, 32 and 15' (that order = title order); fandom ch15 and ch32 reverse-link to Ep 8; WDTALO list 15, 32, 58. Ch 58 (Super Scary Story Gum/typhoon) pulled forward from vol 4.",
+   "sources": [
+    "https://myanimelist.net/forum/?topicid=1487795",
+    "https://dagashi-kashi.fandom.com/wiki/Chapter_15",
+    "https://dagashi-kashi.fandom.com/wiki/Chapter_32",
+    "https://wheredoestheanimeleaveoff.com/where-does-the-dagashi-kashi-anime-leave-off-in-the-manga/",
+    "https://caprico-log.com/entry/dagasikasi/"
+   ]
+  },
+  {
+   "episode": 9,
+   "end_chapter": 18,
+   "start_chapter": 28,
+   "chapters_adapted": "28, 51, 21, 18",
+   "volume": 1,
+   "confidence": "high",
+   "note": "MAL bastek66: 'Beginning was chapter 51 combined with 28 ... Second half was 21 and last part was 18'; fandom ch18/21/28 reverse-link to Ep 9; WDTALO list 18, 21, 28, 51.",
+   "sources": [
+    "https://myanimelist.net/forum/?topicid=1489890",
+    "https://dagashi-kashi.fandom.com/wiki/Chapter_28",
+    "https://dagashi-kashi.fandom.com/wiki/Chapter_21",
+    "https://dagashi-kashi.fandom.com/wiki/Chapter_18",
+    "https://wheredoestheanimeleaveoff.com/where-does-the-dagashi-kashi-anime-leave-off-in-the-manga/"
+   ]
+  },
+  {
+   "episode": 10,
+   "end_chapter": 26,
+   "start_chapter": 6,
+   "chapters_adapted": "6, 26, 31, 16 (gag fragments only; episode is otherwise anime-original)",
+   "volume": 2,
+   "confidence": "medium",
+   "note": "Anime-original 'sick Hotaru' episode extending ep 9's mouth-ulcer thread (fandom ch28 trivia: condition worsens 'until the end of Episode 10'). Fragments: American Cola mixed-flavor drink = ch 26 (fandom ch26 marks 'Episode 10*'; WDTALO); WDTALO also lists 6 and 31; bastek66 says only the drink-mixture bit (ch 16) is from the manga. Fragment order uncertain; END set to 26 (best-corroborated fragment).",
+   "sources": [
+    "https://myanimelist.net/forum/?topicid=1491962",
+    "https://dagashi-kashi.fandom.com/wiki/Chapter_26",
+    "https://dagashi-kashi.fandom.com/wiki/Chapter_28",
+    "https://wheredoestheanimeleaveoff.com/where-does-the-dagashi-kashi-anime-leave-off-in-the-manga/",
+    "https://www.inquisitr.com/dagashi-kashi-season-3-anime-dagashi-kashi-manga-ending-in-2018/"
+   ]
+  },
+  {
+   "episode": 11,
+   "end_chapter": 13,
+   "start_chapter": 50,
+   "chapters_adapted": "50, 52, 13, 56 (partial; 52 and 56 disputed)",
+   "volume": 1,
+   "confidence": "medium",
+   "note": "Cola Gum=50 (bastek66: first half 'mostly chapter 50' + anime-original Saya bits); station segment = Miyako Kombu (52) + Ramune origin/Perry bit (13; fandom ch13 -> Ep 11; bastek66 'small bit about Perry was from ch. 13'); WDTALO list 13, 50, 52, 56 (56 = festival stairs talk relocated into the farewell). bastek66 counts 52 and 56 as unadapted and calls the second half 'almost whole original'. END = 13 (last chapter whose material appears in running order).",
+   "sources": [
+    "https://myanimelist.net/forum/?topicid=1494204",
+    "https://dagashi-kashi.fandom.com/wiki/Chapter_13",
+    "https://wheredoestheanimeleaveoff.com/where-does-the-dagashi-kashi-anime-leave-off-in-the-manga/",
+    "https://caprico-log.com/entry/dagasikasi/",
+    "https://myanimelist.net/forum/?topicid=1485602"
+   ]
+  },
+  {
+   "episode": 12,
+   "end_chapter": 49,
+   "start_chapter": 65,
+   "chapters_adapted": "65, 64, 68, 49",
+   "volume": 3,
+   "confidence": "high",
+   "note": "MAL bastek66: 'adapted FOUR chapters (in order 65, 64, 68 and 49)'; WDTALO list 49, 64-65, 68; titles: Taberundesu Hi=64, Sakuranbo no Uta=65, Morinaga Milk Caramel=68, Sakuma Drops=49 (caprico-log).",
+   "sources": [
+    "https://myanimelist.net/forum/?topicid=1496613",
+    "https://wheredoestheanimeleaveoff.com/where-does-the-dagashi-kashi-anime-leave-off-in-the-manga/",
+    "https://caprico-log.com/entry/dagasikasi/"
+   ]
+  },
+  {
+   "episode": 13,
+   "end_chapter": 60,
+   "start_chapter": 88,
+   "chapters_adapted": "88, 60",
+   "volume": 4,
+   "confidence": "high",
+   "note": "S2E1. Big Katsu=88, Peperoncino=60 (caprico-log; ja-Wikipedia vol 5 p118 / vol 4 p30); WDTALO list 60, 88; running order per title and Wikipedia synopsis. Cold open (run-down shop, 'three months ago') frames S2 from the post-ch-108 present.",
+   "sources": [
+    "https://wheredoestheanimeleaveoff.com/where-does-the-dagashi-kashi-anime-leave-off-in-the-manga/",
+    "https://caprico-log.com/entry/dagasikasi/",
+    "https://ja.wikipedia.org/wiki/%E3%81%A0%E3%81%8C%E3%81%97%E3%81%8B%E3%81%97",
+    "https://en.wikipedia.org/wiki/List_of_Dagashi_Kashi_episodes"
+   ]
+  },
+  {
+   "episode": 14,
+   "end_chapter": 90,
+   "start_chapter": 89,
+   "chapters_adapted": "89-90",
+   "volume": 5,
+   "confidence": "high",
+   "note": "S2E2. Baseball Board Game Gum=89, Pop Pop Boat=90 (caprico-log; ja-Wikipedia vol 5 p128); WDTALO list 89-90.",
+   "sources": [
+    "https://wheredoestheanimeleaveoff.com/where-does-the-dagashi-kashi-anime-leave-off-in-the-manga/",
+    "https://caprico-log.com/entry/dagasikasi/",
+    "https://ja.wikipedia.org/wiki/%E3%81%A0%E3%81%8C%E3%81%97%E3%81%8B%E3%81%97"
+   ]
+  },
+  {
+   "episode": 15,
+   "end_chapter": 84,
+   "start_chapter": 84,
+   "chapters_adapted": "84",
+   "volume": 5,
+   "confidence": "high",
+   "note": "S2E3. Beigoma=84 (caprico-log); WDTALO list '84 + original' - the 'Reminiscence' segment (Hotaru's childhood dagashi shop) is anime-original per that list (single source).",
+   "sources": [
+    "https://wheredoestheanimeleaveoff.com/where-does-the-dagashi-kashi-anime-leave-off-in-the-manga/",
+    "https://caprico-log.com/entry/dagasikasi/"
+   ]
+  },
+  {
+   "episode": 16,
+   "end_chapter": 108,
+   "start_chapter": 106,
+   "chapters_adapted": "106-108",
+   "volume": 6,
+   "confidence": "medium",
+   "note": "S2E4. Homerun Bar=106 (caprico-log; ja-Wikipedia vol 6 p131); Inquisitr: episode 'derived from chapters 106 and 107'; MAL thread: 'this is covering chapter 107'; WDTALO list 106-108 (Hotaru's departure / Kokonotsu missing her = 108, end of vol 6). 108 rests on one explicit source.",
+   "sources": [
+    "https://www.inquisitr.com/dagashi-kashi-season-3-anime-dagashi-kashi-manga-ending-in-2018/",
+    "https://myanimelist.net/forum/?topicid=1703868",
+    "https://wheredoestheanimeleaveoff.com/where-does-the-dagashi-kashi-anime-leave-off-in-the-manga/",
+    "https://caprico-log.com/entry/dagasikasi/"
+   ]
+  },
+  {
+   "episode": 17,
+   "end_chapter": 110,
+   "start_chapter": 109,
+   "chapters_adapted": "109-110, 113 (Tara-tara gag grafted)",
+   "volume": 7,
+   "confidence": "medium",
+   "note": "S2E5. Shop decline / Yo's broken toe / ambulance = 109-110 (WDTALO list; opens vol 7); the 'Get a Move On, You Cod!' (Taratara shitenja neyo) dagashi first appears in ch 113 per caprico-log (ja-Wikipedia vol 7 p45), so that gag is a graft; WDTALO's list marks 113 as skipped. Episode ends on the convenience store opening (ch 110 tail / 111 start).",
+   "sources": [
+    "https://wheredoestheanimeleaveoff.com/where-does-the-dagashi-kashi-anime-leave-off-in-the-manga/",
+    "https://caprico-log.com/entry/dagasikasi/",
+    "https://ja.wikipedia.org/wiki/%E3%81%A0%E3%81%8C%E3%81%97%E3%81%8B%E3%81%97",
+    "https://en.wikipedia.org/wiki/List_of_Dagashi_Kashi_episodes"
+   ]
+  },
+  {
+   "episode": 18,
+   "end_chapter": 112,
+   "start_chapter": 111,
+   "chapters_adapted": "111-112",
+   "volume": 7,
+   "confidence": "medium",
+   "note": "S2E6. Convenience store (111) and job magazine / Beni's offer (112) per WDTALO list; consistent with sequence (109-110 in ep 17, Hajime = 114 in ep 19) and with caprico-log showing no featured dagashi for 107-112.",
+   "sources": [
+    "https://wheredoestheanimeleaveoff.com/where-does-the-dagashi-kashi-anime-leave-off-in-the-manga/",
+    "https://caprico-log.com/entry/dagasikasi/",
+    "https://en.wikipedia.org/wiki/List_of_Dagashi_Kashi_episodes"
+   ]
+  },
+  {
+   "episode": 19,
+   "end_chapter": 115,
+   "start_chapter": 114,
+   "chapters_adapted": "114-115",
+   "volume": 7,
+   "confidence": "high",
+   "note": "S2E7. Hajime Owari's introduction (114) and Chocoball (115, caprico-log; ja-Wikipedia vol 7 p65); WDTALO list 114-115.",
+   "sources": [
+    "https://wheredoestheanimeleaveoff.com/where-does-the-dagashi-kashi-anime-leave-off-in-the-manga/",
+    "https://caprico-log.com/entry/dagasikasi/",
+    "https://ja.wikipedia.org/wiki/%E3%81%A0%E3%81%8C%E3%81%97%E3%81%8B%E3%81%97"
+   ]
+  },
+  {
+   "episode": 20,
+   "end_chapter": 121,
+   "start_chapter": 116,
+   "chapters_adapted": "116, 121",
+   "volume": 7,
+   "confidence": "high",
+   "note": "S2E8. Roll Candy=116, High Eight Chocolate=121 (caprico-log); Inquisitr: 'the High Eight Chocolate story in Episode 8 came from Chapter 121'; WDTALO list 116, 121. Ch 121 pulled forward past 117-120.",
+   "sources": [
+    "https://www.inquisitr.com/dagashi-kashi-season-3-anime-dagashi-kashi-manga-ending-in-2018/",
+    "https://wheredoestheanimeleaveoff.com/where-does-the-dagashi-kashi-anime-leave-off-in-the-manga/",
+    "https://caprico-log.com/entry/dagasikasi/"
+   ]
+  },
+  {
+   "episode": 21,
+   "end_chapter": 119,
+   "start_chapter": 117,
+   "chapters_adapted": "117, 119",
+   "volume": 7,
+   "confidence": "high",
+   "note": "S2E9. Website segment = 117 (no featured dagashi; WDTALO list) and Super Ball = 119 (caprico-log; ja-Wikipedia vol 7); ch 118 (Nikki-gai) skipped.",
+   "sources": [
+    "https://wheredoestheanimeleaveoff.com/where-does-the-dagashi-kashi-anime-leave-off-in-the-manga/",
+    "https://caprico-log.com/entry/dagasikasi/",
+    "https://ja.wikipedia.org/wiki/%E3%81%A0%E3%81%8C%E3%81%97%E3%81%8B%E3%81%97"
+   ]
+  },
+  {
+   "episode": 22,
+   "end_chapter": 123,
+   "start_chapter": 120,
+   "chapters_adapted": "120, 123 (first part)",
+   "volume": 7,
+   "confidence": "medium",
+   "note": "S2E10. Monjiro Squid=120 (caprico-log; Inquisitr: 'first half of Episode 10 ... jumped to Chapter 120'); manga-manuscript second half = start of 123 per WDTALO list (which continues 123-124 in ep 23). Ch 122 (takosenbei) skipped.",
+   "sources": [
+    "https://www.inquisitr.com/dagashi-kashi-season-3-anime-dagashi-kashi-manga-ending-in-2018/",
+    "https://wheredoestheanimeleaveoff.com/where-does-the-dagashi-kashi-anime-leave-off-in-the-manga/",
+    "https://caprico-log.com/entry/dagasikasi/"
+   ]
+  },
+  {
+   "episode": 23,
+   "end_chapter": 124,
+   "start_chapter": 123,
+   "chapters_adapted": "123 (rest), 124",
+   "volume": 7,
+   "confidence": "high",
+   "note": "S2E11. Manuscript rejection + snowbound station = 123-124 (WDTALO list); Hotaru's reappearance at the station = ch 124 (MAL thread: 'She reappears around ch 124'); Wikipedia synopsis matches. 124 is the last chapter of vol 7.",
+   "sources": [
+    "https://wheredoestheanimeleaveoff.com/where-does-the-dagashi-kashi-anime-leave-off-in-the-manga/",
+    "https://myanimelist.net/forum/?topicid=1703868",
+    "https://en.wikipedia.org/wiki/List_of_Dagashi_Kashi_episodes",
+    "https://dagashi-kashi.fandom.com/wiki/List_of_Chapters_and_Volumes"
+   ]
+  },
+  {
+   "episode": 24,
+   "end_chapter": 126,
+   "start_chapter": 125,
+   "chapters_adapted": "125-126 (+ opening of 127 for the ending, per one source)",
+   "volume": 8,
+   "confidence": "medium",
+   "note": "S2E12 (outside target range; included because the stored anchor conflicts). Inquisitr: return of Hotaru 'took place in manga chapters 125 and 126'; WDTALO article: 'the second season of the anime stops at Chapter 126'; WDTALO fan list: '125-126, 127 (partially adapted for ending)'. Better-supported END = 126; resume is 127 either way.",
+   "sources": [
+    "https://www.inquisitr.com/dagashi-kashi-season-3-anime-dagashi-kashi-manga-ending-in-2018/",
+    "https://wheredoestheanimeleaveoff.com/where-does-the-dagashi-kashi-anime-leave-off-in-the-manga/",
+    "https://caprico-log.com/entry/dagasikasi/",
+    "https://dagashi-kashi.fandom.com/wiki/List_of_Chapters_and_Volumes"
+   ]
+  }
+ ],
+ "continue_points": [
+  {
+   "episode": 3,
+   "continue_chapter": 26,
+   "note": "Rearranged sampler: running max adapted so far is 25 (ep 3 closes on ch 20); 13-19, 21-24 unread (16,18,21,24 come later)."
+  },
+  {
+   "episode": 5,
+   "continue_chapter": 49,
+   "note": "Running max so far 48 (ep 4); ep 5 closes on ch 29."
+  },
+  {
+   "episode": 6,
+   "continue_chapter": 49,
+   "note": "Running max so far 48; ep 6 closes on ch 42."
+  },
+  {
+   "episode": 8,
+   "continue_chapter": 59,
+   "note": "Running max so far 58 (pulled forward in this ep); ep 8 closes on ch 15."
+  },
+  {
+   "episode": 9,
+   "continue_chapter": 59,
+   "note": "Running max so far 58; ep 9 closes on ch 18."
+  },
+  {
+   "episode": 10,
+   "continue_chapter": 59,
+   "note": "Anime-original episode with gag fragments; running max so far 58."
+  },
+  {
+   "episode": 11,
+   "continue_chapter": 59,
+   "note": "Running max so far 58; ep 11 closes on ch 13 material."
+  },
+  {
+   "episode": 12,
+   "continue_chapter": 69,
+   "note": "S1 end: running max 68. Never adapted below 69: 6(fragment only),14,17,19,22-23,30,33-38,41,44,46-47,57,59-63,66-67 (+56 disputed); S2 later back-fills 60 and 84 and skips 69-83."
+  },
+  {
+   "episode": 13,
+   "continue_chapter": 89,
+   "note": "S2E1 adapts 88 then back-fills 60; S2's linear run starts at 88-90."
+  },
+  {
+   "episode": 15,
+   "continue_chapter": 91,
+   "note": "Ep 15 back-fills 84; running max 90. S2 then jumps to 106 (91-105 never adapted)."
+  },
+  {
+   "episode": 20,
+   "continue_chapter": 117,
+   "note": "Ch 121 pulled forward; 117-120 still unread (117, 119, 120 are adapted in eps 21-22)."
+  },
+  {
+   "episode": 22,
+   "continue_chapter": 123,
+   "note": "Ends partway through ch 123 (manuscript); ep 23 finishes it."
+  },
+  {
+   "episode": 24,
+   "continue_chapter": 127,
+   "note": "Resume at 127 whether or not the ending touches 127's first pages (see repair)."
+  }
+ ],
+ "annotations": [
+  {
+   "episodes": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12
+   ],
+   "kind": "rearranged",
+   "chapters": "1-68 (sampled)",
+   "note": "S1 is a non-linear sampler of vols 1-4: each half-episode is a standalone dagashi chapter, taken out of order (e.g. ep 3 uses 9,10 then 25,20; ep 8 uses 58,32,15; ep 12 uses 65,64,68,49). Skipped within 1-68: 6(fragment),14,17,19,22-23,30,33-38,41,44,46-47,57,59-63,66-67 (+40, 52, 56 disputed). Sources: MAL bastek66 skipped lists, WDTALO fan list, fandom reverse-links."
+  },
+  {
+   "episodes": [
+    3
+   ],
+   "kind": "rearranged",
+   "chapters": "25, 20",
+   "note": "Second half plays ch 25 (Bontan-ame) before ch 20 (Seven Neon)."
+  },
+  {
+   "episodes": [
+    4
+   ],
+   "kind": "divergence",
+   "chapters": "39, 48",
+   "note": "Cafe Endo doodle / breast-size gag between the two chapters is anime-original (WDTALO list: '39, 48 + original')."
+  },
+  {
+   "episodes": [
+    5
+   ],
+   "kind": "rearranged",
+   "chapters": "16, 40, 24, 29",
+   "note": "Vol-1/2/3 chapters interleaved; ch 40 (Baby-Star vlog) disputed - bastek66 counts it unadapted."
+  },
+  {
+   "episodes": [
+    6
+   ],
+   "kind": "rearranged",
+   "chapters": "27, 43, 45, 42",
+   "note": "Maken Gumi (43) is a gag cut into the Chou Himo Q (27) segment; Yoguret (42) flashback closes the episode."
+  },
+  {
+   "episodes": [
+    7
+   ],
+   "kind": "abridged",
+   "chapters": "53-56",
+   "note": "Festival arc is 53-56; ch 56 (candy apple / stone-stairs talk, Hotaru says she will wait) was dropped here (bastek66); WDTALO list says its content resurfaces in ep 11's farewell (disputed)."
+  },
+  {
+   "episodes": [
+    8
+   ],
+   "kind": "rearranged",
+   "chapters": "58, 32, 15",
+   "note": "Ch 58 (vol 4) pulled forward; then 32 and 15."
+  },
+  {
+   "episodes": [
+    9
+   ],
+   "kind": "rearranged",
+   "chapters": "28, 51, 21, 18",
+   "note": "Ch 51 (Un-Choco) merged with 28 (Watapachi) with Saya substituted for Kokonotsu (bastek66); then 21, 18."
+  },
+  {
+   "episodes": [
+    10
+   ],
+   "kind": "partial",
+   "chapters": "6, 26, 31, 16",
+   "note": "Anime-original episode (sick Hotaru at the mansion) extending ep 9's ulcer; only gag fragments come from the manga (26 = American Cola mix per fandom '*' and WDTALO; 16 per bastek66; 6, 31 per WDTALO only)."
+  },
+  {
+   "episodes": [
+    11
+   ],
+   "kind": "partial",
+   "chapters": "50, 52, 13, 56",
+   "note": "First half = ch 50 with added Saya material; station farewell is largely anime-original framing carrying the Miyako Kombu (52) and Ramune/Perry (13) trivia and possibly ch 56's stairs talk (WDTALO list only). bastek66 treats 52 and 56 as unadapted."
+  },
+  {
+   "episodes": [
+    12
+   ],
+   "kind": "rearranged",
+   "chapters": "65, 64, 68, 49",
+   "note": "Running order 65, 64, 68, 49 (bastek66); ch 49 (Sakuma Drops) backfilled from vol 3 as the finale."
+  },
+  {
+   "episodes": [
+    13
+   ],
+   "kind": "rearranged",
+   "chapters": "88, 60",
+   "note": "S2E1 adapts ch 88 then back-fills ch 60 (vol 4); cold open shows the run-down shop of ch 109's situation as a 'three months later' frame (inferred from Wikipedia synopsis)."
+  },
+  {
+   "episodes": [
+    15
+   ],
+   "kind": "rearranged",
+   "chapters": "84",
+   "note": "Ch 84 (Beigoma) back-filled after 89-90; the 'Reminiscence' half is anime-original per WDTALO list (single source)."
+  },
+  {
+   "episodes": [
+    13,
+    14,
+    15,
+    16
+   ],
+   "kind": "abridged",
+   "chapters": "69-83, 85-87, 91-105",
+   "note": "S2 skips 69-83, 85-87 and 91-105 entirely, jumping from 90/84 to the Homerun Bar / departure arc at 106 (WDTALO skipped list; caprico-log dagashi chapters 69-105 absent from any episode title)."
+  },
+  {
+   "episodes": [
+    17
+   ],
+   "kind": "graft",
+   "chapters": "113",
+   "note": "'Taratara shitenja neyo' gag (first appears ch 113 per caprico-log) inserted into the 109-110 shop-cleanup story; WDTALO list counts 113 as skipped."
+  },
+  {
+   "episodes": [
+    20
+   ],
+   "kind": "rearranged",
+   "chapters": "121",
+   "note": "High Eight Chocolate (121) pulled forward ahead of 117-120 (Inquisitr, WDTALO)."
+  },
+  {
+   "episodes": [
+    21,
+    22
+   ],
+   "kind": "abridged",
+   "chapters": "118, 122",
+   "note": "Ch 118 (Nikki-gai) and 122 (takosenbei) skipped (WDTALO skipped list; both are dagashi chapters absent from titles)."
+  },
+  {
+   "episodes": [
+    22,
+    23
+   ],
+   "kind": "partial",
+   "chapters": "123",
+   "note": "Ch 123 (manga manuscript) split across ep 22's second half and ep 23's opening (WDTALO list lists 123 in both)."
+  },
+  {
+   "episodes": [
+    24
+   ],
+   "kind": "partial",
+   "chapters": "127",
+   "note": "WDTALO fan list says the ending partially adapts ch 127; Inquisitr and the WDTALO article body end the season at 126."
+  },
+  {
+   "episodes": [
+    21
+   ],
+   "kind": "rearranged",
+   "chapters": "117-119",
+   "note": "resumes at 117 after ep 20 pulled ch 121 forward — batch-14 review ruling for the back-step"
+  }
+ ],
+ "type_corrections": [
+  {
+   "episodes": [
+    10
+   ],
+   "type": "mixed",
+   "note": "Ep 10 'That's Dagashi!' is an anime-original sick-Hotaru story with only gag fragments from the manga: MAL manga-reader bastek66 ('whole awful anime original episode ... only one bit was taken from manga'), WDTALO fan list ('6, 26, 31 + original'), Inquisitr ('two episodes were largely anime original content'), fandom ch28 trivia (anime-only extension of the ulcer).",
+   "sources": [
+    "https://myanimelist.net/forum/?topicid=1491962",
+    "https://wheredoestheanimeleaveoff.com/where-does-the-dagashi-kashi-anime-leave-off-in-the-manga/",
+    "https://www.inquisitr.com/dagashi-kashi-season-3-anime-dagashi-kashi-manga-ending-in-2018/",
+    "https://dagashi-kashi.fandom.com/wiki/Chapter_28"
+   ]
+  }
+ ],
+ "repairs": [
+  {
+   "episode": 24,
+   "field": "end_chapter",
+   "old": 127,
+   "new": 126,
+   "why": "Two sources put the S2 finale's last chapter at 126 (Inquisitr: 'manga chapters 125 and 126'; WDTALO: 'stops at Chapter 126'); the only claim for 127 is 'partially adapted for ending' in a WDTALO reader comment. The stored 127 (source 'mu') looks like a 'read from 127' continue point stored as END. Resume stays 127 (continue_points). Medium confidence - see flags.",
+   "sources": [
+    "https://www.inquisitr.com/dagashi-kashi-season-3-anime-dagashi-kashi-manga-ending-in-2018/",
+    "https://wheredoestheanimeleaveoff.com/where-does-the-dagashi-kashi-anime-leave-off-in-the-manga/"
+   ]
+  }
+ ],
+ "structure": {
+  "notes": "Two TV seasons only, no OVAs/specials/movies. S1 (AniList 21365) = 12 x 24-min episodes, 2016-01-07..03-31; S2 'Dagashi Kashi 2' (AniList 99734) = 12 x ~12-min episodes (shared 15-min slot with Takunomi., per ja-Wikipedia), 2018-01-12..03-30. Our cumulative 1-24 = S1 1-12, S2 1-12 (offset +12); Wikipedia's EpisodeNumber2 and MAL thread titles confirm. animefillerlist types all 24 as Manga Canon (no filler flagged) - see type correction for ep 10. Volume boundaries (fandom List of Chapters and Volumes; corroborated by ja-Wikipedia per-volume dagashi lists and caprico-log first-appearance numbers): v1 1-18 (+18.5 omake), v2 19-38 (+38.5), v3 39-56, v4 57-74, v5 75-92, v6 93-108, v7 109-124, v8 125-139, v9 140-155, v10 156-170, v11 171-186 (fandom's v11 list omits ch 179 - a typo, 186 chapters total). max_adapted_chapter for the series is 126 (127 if the disputed partial ending counts); S1 max 68, S2 min 60.",
+  "order_only": []
+ },
+ "flags_for_sean": [
+  "END convention: per protocol END = last chapter animated in the episode's running order, so S1 anchors dip (ep 8 -> 15, ep 9 -> 18, ep 11 -> 13) because the season is a rearranged sampler; the monotone 'running max + 1' is supplied as continue_points. If the position instrument should instead use the highest chapter reached, use continue_chapter - 1 for eps 3,5,6,8,9,10,11,12,13,15.",
+  "Ep 5 ch 40 (Baby-Star Ramen vlog): title + caprico-log first-appearance + WDTALO list say adapted; MAL bastek66's final skipped list (2016-04-01) includes 40. Kept in chapters_adapted.",
+  "Ep 11 composition disputed: bastek66 (MAL, manga reader, 2016) calls the second half 'almost whole original' with only the Perry bit from ch 13, and counts 52 and 56 as unadapted; WDTALO fan list gives 13, 50, 52, 56. Not type-corrected (only one explicit source for 'original'); consider 'mixed'.",
+  "Ep 16 END 108 rests on the WDTALO fan list alone (106-107 are corroborated by Inquisitr and the MAL thread); Ep 18 (111-112) and ep 21's ch 117 likewise rest on that list plus sequence logic - no second explicit source found for the no-dagashi story chapters 107-112, 114, 117.",
+  "Ep 17: the 'Taratara shitenja neyo' dagashi first appears in ch 113 (caprico-log; ja-Wikipedia vol 7 p45), but the WDTALO list gives ep 17 = 109-110 and marks 113 skipped; recorded as a graft of 113.",
+  "Ep 24 (outside target range): stored END 127 vs sources 126 (Inquisitr, WDTALO article) / '125-126, 127 partial' (WDTALO comment). Repair to 126 proposed at medium confidence; continue point is 127 either way.",
+  "Source caveat: the complete per-episode list comes from a reader comment ('Phoenix', 2026-04-03) on the WDTALO page; it matches fandom (eps 1-3), bastek66 (eps 7-9, 12) and title/dagashi evidence everywhere checkable, so it is used as a corroborated fan list, never alone - but S2 eps 17-18, 21-22 depend on it plus title/sequence logic.",
+  "No chapter->volume boundaries were in the DB; the full boundary list is in structure.notes (fandom + ja-Wikipedia + caprico-log agree).",
+  "WebSearch budget for the session was exhausted mid-task; reddit is unreachable from this environment, so no r/anime thread was checked."
+ ]
+}

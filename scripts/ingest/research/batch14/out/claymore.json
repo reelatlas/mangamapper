@@ -1,0 +1,510 @@
+{
+  "series_id": "claymore",
+  "summary": "Episodes 1-20 adapt chapters 1-56 (volumes 1-10) in serialization order with only one skipped chapter (ch 2, apart from its Strah climax used as ep 2's cold open) and a handful of small grafts (ch 30's Galatea scene pulled into ep 10, ch 31's Miria-warning flashback played straight in ep 11, ch 50's cold open closing ep 17). Pacing is steady at ~2.8 chapters per episode: arc boundaries fall exactly on episode boundaries (ep 2 = ch 4, ep 4 = ch 11, ep 8 = ch 24, ep 11 = ch 30, ep 14 = ch 40, ep 17 = ch 49, ep 20 = ch 56), confirmed by two wikis' arc tables, Wikipedia title matches and a contemporaneous 2007 MAL post ('8 episodes makes 4 and a half volumes', next ep = ch 25). Six episodes end mid-chapter and are recorded with continue points. Divergence starts small in ep 19 (anime-only graveyard) and grows in ep 20 (Raki/Isley restaged, Flora-Clare duel cut, Isley marching on Pieta), consistent with the existing ep 21-23 loose_parallel and ep 24-26 anime-only rulings; the existing ep20->56 anchor is confirmed and no repairs or type corrections are needed.",
+  "anchors": [
+    {
+      "episode": 1,
+      "end_chapter": 3,
+      "start_chapter": 1,
+      "chapters_adapted": "1, 3",
+      "volume": 1,
+      "confidence": "high",
+      "note": "Doga village (ch 1) then straight to ch 3 (Raki's desert rescue, Egon inn, fake-Claymore Yoma, Clare's name); wiki states explicitly 'skips manga Scene 2 and segues into Scene 3'; Scene 3 page's reverse field 'Anime arc: Great Sword'.",
+      "sources": [
+        "https://claymorenew.fandom.com/wiki/Anime_Scene_1",
+        "https://claymorenew.fandom.com/wiki/Scene_3",
+        "https://claymore.fandom.com/wiki/Episode_1",
+        "https://en.wikipedia.org/wiki/List_of_Claymore_episodes"
+      ]
+    },
+    {
+      "episode": 2,
+      "end_chapter": 4,
+      "start_chapter": 4,
+      "chapters_adapted": "2 (Strah suppression climax only, as cold open), 4",
+      "volume": 1,
+      "confidence": "high",
+      "note": "Cold open = end of ch 2 (Strah Yoma suppression, winged Yoma, thrown sword), then ch 4 The Black Card (Rubel's new clothes + black card, Mount Shire, Elena) -- title match with Scene 4; Story Arcs: Introduction Arc ch 1-4 = eps 1-2. Shire village inn, Raki meeting Rubel and Elena-as-trainee flashbacks are anime additions.",
+      "sources": [
+        "https://claymorenew.fandom.com/wiki/Anime_Scene_2",
+        "https://claymorenew.fandom.com/wiki/Scene_4",
+        "https://claymore.fandom.com/wiki/Episode_2",
+        "https://claymore.fandom.com/wiki/Story_Arcs",
+        "https://en.wikipedia.org/wiki/List_of_Claymore_chapters"
+      ]
+    },
+    {
+      "episode": 3,
+      "end_chapter": 7,
+      "start_chapter": 5,
+      "chapters_adapted": "5-6, 7 (opening cathedral fight only)",
+      "volume": 2,
+      "confidence": "high",
+      "note": "Rabona infiltration (ch 5: Rubel's briefing, inn, Vincent, first Galk/Sid clash), ch 6 (morning interrogation, second rooftop fight, scream, Voracious Eater), and the first pages of ch 7 -- all three episode synopses end with Clare pierced by the claws while saving Galk, which is Scene 7's 'Clear path of attack'/Chapter 7 'The First Battle'. Ends mid-ch 7.",
+      "sources": [
+        "https://claymorenew.fandom.com/wiki/Anime_Scene_3",
+        "https://claymorenew.fandom.com/wiki/Scene_6",
+        "https://claymorenew.fandom.com/wiki/Scene_7",
+        "https://claymore.fandom.com/wiki/Episode_3",
+        "https://claymore.fandom.com/wiki/Chapter_7",
+        "https://en.wikipedia.org/wiki/List_of_Claymore_episodes"
+      ]
+    },
+    {
+      "episode": 4,
+      "end_chapter": 11,
+      "start_chapter": 7,
+      "chapters_adapted": "7-11",
+      "volume": 3,
+      "confidence": "high",
+      "note": "Ch 7 remainder (Yoma flees, Galk carries Clare, coma, Raki's vigil, request to Vincent), ch 8 staff meeting/Rodo, ch 9 coffin Yoma + goddess statue sword, ch 10 sword-fight + Galk's gambit, ch 11 Clare's near-awakening stopped by Raki and departure with Galk's sword. Story Arcs: Darkness in Paradise ch 5-11 = eps 3-4; Scene 11 reverse field points to this arc.",
+      "sources": [
+        "https://claymorenew.fandom.com/wiki/Anime_Scene_4",
+        "https://claymorenew.fandom.com/wiki/Scene_11",
+        "https://claymore.fandom.com/wiki/Chapter_11",
+        "https://claymore.fandom.com/wiki/Episode_4",
+        "https://claymore.fandom.com/wiki/Story_Arcs",
+        "https://en.wikipedia.org/wiki/List_of_Claymore_episodes"
+      ]
+    },
+    {
+      "episode": 5,
+      "end_chapter": 14,
+      "start_chapter": 12,
+      "chapters_adapted": "12-14",
+      "volume": 3,
+      "confidence": "high",
+      "note": "Teresa's introduction and Orsay (ch 12), the 'Teo' massacre and 7th Yoma behind mute Clare (ch 12), inn/departure/girl follows/bandits (ch 13), cliff jump and naming of Clare (ch 14 'New old name' = episode's final scene). Scenes 12-14 reverse fields all give Anime Scene 5. Title = Scene 12-17 arc title.",
+      "sources": [
+        "https://claymorenew.fandom.com/wiki/Anime_Scene_5",
+        "https://claymorenew.fandom.com/wiki/Scene_12",
+        "https://claymorenew.fandom.com/wiki/Scene_13",
+        "https://claymorenew.fandom.com/wiki/Scene_14",
+        "https://claymore.fandom.com/wiki/Chapter_14",
+        "https://claymore.fandom.com/wiki/Episode_5",
+        "https://en.wikipedia.org/wiki/List_of_Claymore_episodes"
+      ]
+    },
+    {
+      "episode": 6,
+      "end_chapter": 17,
+      "start_chapter": 15,
+      "chapters_adapted": "15-17",
+      "volume": 4,
+      "confidence": "high",
+      "note": "Rokut in sight + Rig/Lig night assault + Clare hugs Teresa's stigma (ch 15), dress shop/Yoma/adoption/bandit raid (ch 16), Teresa kills the bandits, Orsay witnesses, five-warrior execution party disabled, Orsay orders Nos. 2-5 sent (ch 17 'New Purge team' = episode's final beat; Wikipedia summary ends on Orsay dispatching the team). Cold open is a recap of ch 14's naming scene.",
+      "sources": [
+        "https://claymorenew.fandom.com/wiki/Anime_Scene_6",
+        "https://claymorenew.fandom.com/wiki/Scene_15",
+        "https://claymorenew.fandom.com/wiki/Scene_16",
+        "https://claymorenew.fandom.com/wiki/Scene_17",
+        "https://claymore.fandom.com/wiki/Episode_6",
+        "https://en.wikipedia.org/wiki/List_of_Claymore_episodes"
+      ]
+    },
+    {
+      "episode": 7,
+      "end_chapter": 21,
+      "start_chapter": 18,
+      "chapters_adapted": "18-20, 21 (through the four-on-one Yoki release)",
+      "volume": 4,
+      "confidence": "high",
+      "note": "Sophia/Noel Yoma nest, Ilena, Priscilla (ch 18), village rescue, inn, three diversions, trap (ch 19), Priscilla vs Teresa + Ilena's explanations (ch 20), then Ilena/Sophia/Noel surround Teresa and all release Yoki (ch 21 'Intervention'); all three episode synopses end exactly there. Ends mid-ch 21.",
+      "sources": [
+        "https://claymorenew.fandom.com/wiki/Anime_Scene_7",
+        "https://claymorenew.fandom.com/wiki/Scene_18",
+        "https://claymorenew.fandom.com/wiki/Scene_19",
+        "https://claymorenew.fandom.com/wiki/Scene_20",
+        "https://claymorenew.fandom.com/wiki/Scene_21",
+        "https://claymore.fandom.com/wiki/Episode_7",
+        "https://en.wikipedia.org/wiki/List_of_Claymore_episodes"
+      ]
+    },
+    {
+      "episode": 8,
+      "end_chapter": 24,
+      "start_chapter": 22,
+      "chapters_adapted": "21 (four-on-one fight, purge team defeated), 22-24 (to Clare cradling Teresa's head)",
+      "volume": 5,
+      "confidence": "high",
+      "note": "Teresa disables the team (ch 21), spares Priscilla and leaves, Priscilla's pursuit and warning (ch 22), plateau fight and Teresa's beheading (ch 23), Priscilla's full awakening, Sophia/Noel killed, Ilena maimed, Clare picks up the head (ch 24 first two sections). Contemporaneous MAL post (2007): 'next episode will be the first of The Slashers arc, chapter 25 in book 5 ... 8 episodes makes 4 and a half volumes'. Ch 24's closing Rubel scene is ep 9's cold open.",
+      "sources": [
+        "https://claymorenew.fandom.com/wiki/Anime_Scene_8",
+        "https://claymorenew.fandom.com/wiki/Scene_22",
+        "https://claymorenew.fandom.com/wiki/Scene_23",
+        "https://claymorenew.fandom.com/wiki/Scene_24",
+        "https://claymore.fandom.com/wiki/Episode_8",
+        "https://en.wikipedia.org/wiki/List_of_Claymore_episodes",
+        "https://myanimelist.net/forum/?topicid=1654"
+      ]
+    },
+    {
+      "episode": 9,
+      "end_chapter": 26,
+      "start_chapter": 25,
+      "chapters_adapted": "24 (closing scene: Clare brings Teresa's head to Rubel), 25-26",
+      "volume": 5,
+      "confidence": "high",
+      "note": "Cold open finishes ch 24 (Clare volunteers). Toriro hunt/Queenie, Rubel explains Voracious Eaters, Paburo hunt introductions with ranks 6/15/22/47 (ch 25), Raki left at inn, rain march, cave spar, Teresa dream, 'client from Lido' morphs into the Paburo awakened (ch 26's last page); ep 10 resumes with Deneve's arm severed (ch 27). ANN DVD2: eps 6-10 'finish out the backstory arc and cover most of Those Who Rend Asunder'.",
+      "sources": [
+        "https://claymorenew.fandom.com/wiki/Anime_Scene_9",
+        "https://claymorenew.fandom.com/wiki/Scene_24",
+        "https://claymorenew.fandom.com/wiki/Scene_25",
+        "https://claymorenew.fandom.com/wiki/Scene_26",
+        "https://claymore.fandom.com/wiki/Episode_9",
+        "https://en.wikipedia.org/wiki/List_of_Claymore_episodes",
+        "https://www.animenewsnetwork.com/review/claymore/dvd-2"
+      ]
+    },
+    {
+      "episode": 10,
+      "end_chapter": 29,
+      "start_chapter": 27,
+      "chapters_adapted": "27-29 (29 through the awakened's death), 30 (Galatea/Ermita observation scene grafted in as cold open)",
+      "volume": 6,
+      "confidence": "high",
+      "note": "Deneve severed and thrown into the river, Helen's arms, male-warrior secret (ch 27), Phantom Miria's counterattack and 'true despair' (ch 28), Clare's preemptive sensing, Miria's mode-switching advice, coup de grace with Miria (ch 29 'Switching modes'). Galatea's wide-area sensing (ch 30 'Unseen observer') is pulled forward to open ep 10 and threaded through the fight. Ch 29's closing confession scene opens ep 11.",
+      "sources": [
+        "https://claymorenew.fandom.com/wiki/Anime_Scene_10",
+        "https://claymorenew.fandom.com/wiki/Scene_27",
+        "https://claymorenew.fandom.com/wiki/Scene_28",
+        "https://claymorenew.fandom.com/wiki/Scene_29",
+        "https://claymorenew.fandom.com/wiki/Scene_30",
+        "https://claymore.fandom.com/wiki/Episode_10",
+        "https://en.wikipedia.org/wiki/List_of_Claymore_episodes"
+      ]
+    },
+    {
+      "episode": 11,
+      "end_chapter": 30,
+      "start_chapter": 30,
+      "chapters_adapted": "29 (closing scene: Helen/Clare/Deneve confess prior awakenings), 30, 31 (Miria's top-five warning + sword-touching oath, ch 31's opening flashback played as present action)",
+      "volume": 6,
+      "confidence": "high",
+      "note": "Galatea reports the kill, the confession (ch 29 end), Miria's Hilda flashback with Ophelia watching, 'half-awakened', Deneve heals herself by awakening (ch 30 'Deneve's wager' / Chapter 30 synopsis), then Miria names Alicia, Beth, Galatea, Ophelia, Rafaela and the four touch swords (ch 31 'Miria's Warning' flashback). Story Arcs: Awakened Being Hunt arc ch 25-30 = eps 9-11.",
+      "sources": [
+        "https://claymorenew.fandom.com/wiki/Anime_Scene_11",
+        "https://claymorenew.fandom.com/wiki/Scene_30",
+        "https://claymorenew.fandom.com/wiki/Scene_31",
+        "https://claymore.fandom.com/wiki/Chapter_30",
+        "https://claymore.fandom.com/wiki/Chapter_31",
+        "https://claymore.fandom.com/wiki/Episode_11",
+        "https://claymore.fandom.com/wiki/Story_Arcs",
+        "https://en.wikipedia.org/wiki/List_of_Claymore_episodes"
+      ]
+    },
+    {
+      "episode": 12,
+      "end_chapter": 34,
+      "start_chapter": 31,
+      "chapters_adapted": "31-34",
+      "volume": 7,
+      "confidence": "high",
+      "note": "Clare's improved Yoma kills + Rubel assigns the Gonahl hunt (ch 31), Ophelia's blood-taste, leg-cutting 'game' (ch 32), the girl awakens into the Former Single-digit, Clare snatches Raki and flees (ch 33), Ophelia's neck twisted and the Single-digit decapitated, Clare's shut-up kiss and separation from Raki (ch 34 'Separation' = episode's final scene). Ep 13 opens on ch 35's cold open (chase to the canyon edge).",
+      "sources": [
+        "https://claymorenew.fandom.com/wiki/Anime_Scene_12",
+        "https://claymorenew.fandom.com/wiki/Scene_31",
+        "https://claymorenew.fandom.com/wiki/Scene_32",
+        "https://claymorenew.fandom.com/wiki/Scene_33",
+        "https://claymorenew.fandom.com/wiki/Scene_34",
+        "https://claymore.fandom.com/wiki/Episode_12",
+        "https://en.wikipedia.org/wiki/List_of_Claymore_episodes"
+      ]
+    },
+    {
+      "episode": 13,
+      "end_chapter": 37,
+      "start_chapter": 35,
+      "chapters_adapted": "35-37",
+      "volume": 7,
+      "confidence": "high",
+      "note": "Rippling Sword, arm-in-mouth feint, personality types (ch 35), left hand lost, the cowled intruder is Ilena (ch 36), Ilena's cabin, hand reattached, Teresa talk, Ophelia crawling in the rain and awakening, first Quicksword lesson (ch 37 all sections; claymore.fandom ep 13 ends 'The next day, Irene trains Clare using the Quicksword').",
+      "sources": [
+        "https://claymorenew.fandom.com/wiki/Anime_Scene_13",
+        "https://claymorenew.fandom.com/wiki/Scene_35",
+        "https://claymorenew.fandom.com/wiki/Scene_36",
+        "https://claymorenew.fandom.com/wiki/Scene_37",
+        "https://claymore.fandom.com/wiki/Episode_13",
+        "https://en.wikipedia.org/wiki/List_of_Claymore_episodes"
+      ]
+    },
+    {
+      "episode": 14,
+      "end_chapter": 40,
+      "start_chapter": 38,
+      "chapters_adapted": "38-40",
+      "volume": 8,
+      "confidence": "high",
+      "note": "Training, lake bath in Ilena's old uniform, 'Teresa's death was your fault', parting-gift arm, Rafaela arrives to execute Ilena (ch 38), awakened Ophelia's lake fight and mirror revelation (ch 39), arm goes out of control, the cut-through-my-body contest, Ophelia's brother memory and death (ch 40 'Remembrance'). Title 闘う資格 = Scenes 37-40 'Fit for Battle'; Story Arcs: Ophelia's Madness arc ch 31-40 = eps 12-14.",
+      "sources": [
+        "https://claymorenew.fandom.com/wiki/Anime_Scene_14",
+        "https://claymorenew.fandom.com/wiki/Scene_38",
+        "https://claymorenew.fandom.com/wiki/Scene_39",
+        "https://claymorenew.fandom.com/wiki/Scene_40",
+        "https://claymore.fandom.com/wiki/Episode_14",
+        "https://claymore.fandom.com/wiki/Story_Arcs",
+        "https://en.wikipedia.org/wiki/List_of_Claymore_chapters",
+        "https://en.wikipedia.org/wiki/List_of_Claymore_episodes"
+      ]
+    },
+    {
+      "episode": 15,
+      "end_chapter": 42,
+      "start_chapter": 41,
+      "chapters_adapted": "41-42",
+      "volume": 8,
+      "confidence": "high",
+      "note": "HQ (Limt/Rubel, contact lost three months), Clare disguised searching Hamel, twin-goddess statue, dying survivor 'Raquel' (ch 41), Zakol mountain ambush with winged Yoma, Dauf torturing Jean, Katea awakens, Dauf senses Clare's approach (ch 42 'Unexpected caller' = episode's final beat). Story Arcs: Riful of the West arc ch 41-49 = eps 15-17.",
+      "sources": [
+        "https://claymorenew.fandom.com/wiki/Anime_Scene_15",
+        "https://claymorenew.fandom.com/wiki/Scene_41",
+        "https://claymorenew.fandom.com/wiki/Scene_42",
+        "https://claymore.fandom.com/wiki/Episode_15",
+        "https://claymore.fandom.com/wiki/Story_Arcs",
+        "https://en.wikipedia.org/wiki/List_of_Claymore_episodes"
+      ]
+    },
+    {
+      "episode": 16,
+      "end_chapter": 46,
+      "start_chapter": 43,
+      "chapters_adapted": "43-46 (46 through Clare finding awakened Jean)",
+      "volume": 9,
+      "confidence": "high",
+      "note": "Yoma-rod corridor and four Yoma, Round I with Dauf (ch 43), Galatea's arrival and Round II (ch 44), Riful coaches Dauf, Galatea speared, Clare's near-awakening realigned, Abyssal Ones/Isley-consort exposition (ch 45), Galatea sends Clare for Jean; Clare finds Jean in butterfly awakened form pleading for death (ch 46 'Jean awakened'). Ends mid-ch 46; the hug/Yoki-realignment that closes ch 46 opens ep 17.",
+      "sources": [
+        "https://claymorenew.fandom.com/wiki/Anime_Scene_16",
+        "https://claymorenew.fandom.com/wiki/Scene_43",
+        "https://claymorenew.fandom.com/wiki/Scene_44",
+        "https://claymorenew.fandom.com/wiki/Scene_45",
+        "https://claymorenew.fandom.com/wiki/Scene_46",
+        "https://claymore.fandom.com/wiki/Episode_16",
+        "https://en.wikipedia.org/wiki/List_of_Claymore_episodes"
+      ]
+    },
+    {
+      "episode": 17,
+      "end_chapter": 49,
+      "start_chapter": 47,
+      "chapters_adapted": "46 (closing scene: Clare pulls Jean back), 47-49, 50 (cold open of ch 50 -- Eva's Pieta hunt routed -- as closing teaser)",
+      "volume": 9,
+      "confidence": "high",
+      "note": "Jean restored, Rounds III-IV, Clare finally guides Quicksword with sensing (ch 47-48), Jean drills Dauf's throat, Riful partially awakens and saves 'her man', Clare's sword hit on Riful buys the name Isley, Galatea reports them dead and leaves (ch 49). Wikipedia/claymore.fandom/claymorenew agree on every beat. Episode closes on ch 50's first pages (Eva/Lucia/Kate in the Alfons blizzard), replayed as ep 18's cold open.",
+      "sources": [
+        "https://claymorenew.fandom.com/wiki/Anime_Scene_17",
+        "https://claymorenew.fandom.com/wiki/Scene_47",
+        "https://claymorenew.fandom.com/wiki/Scene_48",
+        "https://claymorenew.fandom.com/wiki/Scene_49",
+        "https://claymorenew.fandom.com/wiki/Scene_50",
+        "https://claymore.fandom.com/wiki/Episode_17",
+        "https://en.wikipedia.org/wiki/List_of_Claymore_episodes"
+      ]
+    },
+    {
+      "episode": 18,
+      "end_chapter": 52,
+      "start_chapter": 50,
+      "chapters_adapted": "50-52",
+      "volume": 10,
+      "confidence": "high",
+      "note": "Jean stalks Clare, Rubel + Rafaela in the forest, the northern assignment and news of Raki, Pieta plaza reunion with Helen/Deneve/Miria (ch 50), Miria's address, Undine's infighting quelled by Flora's Windcutter, five teams named, cavern oath, three scouts approach (ch 51), Dreadlock's tentacle assault, Team Flora paralysed by the hooded scout, Insectile awakens against Team Jean, Veronica aids Jean and Undine aids Flora (ch 52's final sections = claymore.fandom's stated episode ending). wheredoestheanimeleaveoff: Northern Campaign 'around Episode 18'.",
+      "sources": [
+        "https://claymorenew.fandom.com/wiki/Anime_Scene_18",
+        "https://claymorenew.fandom.com/wiki/Scene_50",
+        "https://claymorenew.fandom.com/wiki/Scene_51",
+        "https://claymorenew.fandom.com/wiki/Scene_52",
+        "https://claymore.fandom.com/wiki/Episode_18",
+        "https://en.wikipedia.org/wiki/List_of_Claymore_episodes",
+        "https://wheredoestheanimeleaveoff.com/where-does-the-claymore-anime-leave-off-in-the-manga/"
+      ]
+    },
+    {
+      "episode": 19,
+      "end_chapter": 54,
+      "start_chapter": 53,
+      "chapters_adapted": "53-54, 55 (closing scene: Raki saves child Priscilla, Isley appears)",
+      "volume": 10,
+      "confidence": "high",
+      "note": "Armadillo's quills fell six, Undine forced to cut herself, propeller Drill Sword vs Insectile (ch 53), Clare and Deneve deliberately over-release and stay human, Undine helps behead Armadillo, Flora + Clare destroy the fleeing head, Miria has already killed Dreadlock, Undine's dissent (ch 54 through 'Dissent'). Anime-original warrior-graveyard scene (wiki: 'the anime storyline begins to diverge') then ch 55's final scene. Ends mid-ch 54: Undine's true form and Flora's spar order follow in ep 20. ANN DVD5 (eps 19-22): last span that 'closely follows the manga ... and even then there are discrepancies'.",
+      "sources": [
+        "https://claymorenew.fandom.com/wiki/Anime_Scene_19",
+        "https://claymorenew.fandom.com/wiki/Scene_53",
+        "https://claymorenew.fandom.com/wiki/Scene_54",
+        "https://claymorenew.fandom.com/wiki/Scene_55",
+        "https://claymore.fandom.com/wiki/Episode_19",
+        "https://en.wikipedia.org/wiki/List_of_Claymore_episodes",
+        "https://www.animenewsnetwork.com/review/claymore/dvd-5"
+      ]
+    },
+    {
+      "episode": 20,
+      "end_chapter": 56,
+      "start_chapter": 55,
+      "chapters_adapted": "54 (closing scene: Deneve discovers Undine's true form), 55-56",
+      "volume": 10,
+      "confidence": "high",
+      "note": "Confirms existing manual anchor ep20->56 (no repair). Raki/Isley road meeting and sword lessons (restaged from ch 56 'Way of the sword'), Undine's storeroom (ch 54 'Discovery'), Deneve's sister confession (ch 55), Flora-Clare sword match interrupted by Jean (manga ch 55 plays it out to a draw), Rigaldo reports and Isley orders the 27 awakened into Pieta, warriors await (ch 56 'Into Pieta'/'Pieta'). animefillerguide: eps 1-20 canon = ch 1-56; continue at 57.",
+      "sources": [
+        "https://claymorenew.fandom.com/wiki/Anime_Scene_20",
+        "https://claymorenew.fandom.com/wiki/Scene_54",
+        "https://claymorenew.fandom.com/wiki/Scene_55",
+        "https://claymorenew.fandom.com/wiki/Scene_56",
+        "https://claymore.fandom.com/wiki/Episode_20",
+        "https://en.wikipedia.org/wiki/List_of_Claymore_episodes",
+        "https://www.animefillerguide.com/anime/claymore/"
+      ]
+    }
+  ],
+  "continue_points": [
+    {
+      "episode": 1,
+      "continue_chapter": 2,
+      "note": "ep 1 skips ch 2 entirely (goes ch 1 -> ch 3); only ch 2's Strah climax ever appears (as ep 2's cold open). Resume at 2 to read the skipped chapter."
+    },
+    {
+      "episode": 3,
+      "continue_chapter": 7,
+      "note": "ends inside ch 7's opening fight (Clare pierced by the claws); the rest of ch 7 (Yoma flees, coma, Raki's vigil) is ep 4."
+    },
+    {
+      "episode": 7,
+      "continue_chapter": 21,
+      "note": "ends inside ch 21 as the purge team surrounds Teresa and releases Yoki; the four-on-one fight and defeat are ep 8."
+    },
+    {
+      "episode": 8,
+      "continue_chapter": 24,
+      "note": "ends before ch 24's closing scene (Clare brings Teresa's head to Rubel and volunteers), which ep 9 shows as its cold open; resuming at 25 after ep 9 loses nothing."
+    },
+    {
+      "episode": 10,
+      "continue_chapter": 29,
+      "note": "ends at the Paburo awakened's death; ch 29's closing confession scene (all four have awakened before) is ep 11's main body."
+    },
+    {
+      "episode": 16,
+      "continue_chapter": 46,
+      "note": "ends with Clare finding awakened Jean; ch 46's final pages (Clare hugs Jean, Yoki realignment explodes) open ep 17."
+    },
+    {
+      "episode": 19,
+      "continue_chapter": 54,
+      "note": "ends mid-ch 54 after Undine's dissent (plus an anime-only graveyard scene and ch 55's Raki/Priscilla ending); Undine's true form and Flora's spar order (end of ch 54) are in ep 20."
+    }
+  ],
+  "annotations": [
+    {
+      "episodes": [
+        1
+      ],
+      "kind": "abridged",
+      "chapters": "2",
+      "note": "ch 2 'Claws in the Sky' (preemptive kill of the Yoma village chief, Rubel at the waterfall, Strah) is skipped; ep 1 segues from ch 1 directly into ch 3 per the claymorenew wiki."
+    },
+    {
+      "episodes": [
+        2
+      ],
+      "kind": "rearranged",
+      "chapters": "2",
+      "note": "cold open adapts only ch 2's Strah Yoma-suppression climax (winged Yoma, thrown sword) before ch 4; Shire village inn, Raki meeting Rubel and Elena-as-trainee flashbacks are anime additions (wiki: 'Shire village never appears, nor does Raki ever meet Rubel')."
+    },
+    {
+      "episodes": [
+        3,
+        4
+      ],
+      "kind": "partial",
+      "chapters": "7",
+      "note": "ch 7 is split: its opening fight (Clare pierced saving Galk) ends ep 3; ep 4's cold open replays it and continues."
+    },
+    {
+      "episodes": [
+        7,
+        8
+      ],
+      "kind": "partial",
+      "chapters": "21",
+      "note": "ch 21 is split at the purge team's Yoki release: the surround/release ends ep 7, the four-on-one fight and defeat open ep 8."
+    },
+    {
+      "episodes": [
+        8,
+        9
+      ],
+      "kind": "partial",
+      "chapters": "24",
+      "note": "ch 24's closing scene (Clare finds Rubel, demands Teresa's flesh and blood) is shown as ep 9's cold open rather than in ep 8."
+    },
+    {
+      "episodes": [
+        10
+      ],
+      "kind": "graft",
+      "chapters": "30",
+      "note": "Galatea/Ermita wide-area-sensing scene from ch 30 is pulled forward to open ep 10 and intercut through the ch 27-29 Paburo fight (Wikipedia: 'throughout the entirety of the battle, Galatea ... reads the Yoki')."
+    },
+    {
+      "episodes": [
+        10,
+        11
+      ],
+      "kind": "partial",
+      "chapters": "29",
+      "note": "ch 29 is split at the awakened's death; the confession scene that closes it is ep 11's opening body."
+    },
+    {
+      "episodes": [
+        11
+      ],
+      "kind": "graft",
+      "chapters": "31",
+      "note": "Miria's warning to avoid Nos. 1-5 (Alicia, Beth, Galatea, Ophelia, Rafaela) and the sword-touching oath are ch 31's opening flashback, played in ep 11 as present-time action; ch 31's present-day material (Clare's Yoma kills, Gonahl assignment) opens ep 12."
+    },
+    {
+      "episodes": [
+        16,
+        17
+      ],
+      "kind": "partial",
+      "chapters": "46",
+      "note": "ch 46 is split: Clare finding awakened Jean ends ep 16; the hug/Yoki-realignment explosion opens ep 17."
+    },
+    {
+      "episodes": [
+        17
+      ],
+      "kind": "graft",
+      "chapters": "50",
+      "note": "ep 17 closes with ch 50's cold open (Eva's Pieta hunt routed in the Alfons blizzard) as a teaser; ep 18 replays it before continuing ch 50."
+    },
+    {
+      "episodes": [
+        19
+      ],
+      "kind": "divergence",
+      "chapters": "54-55",
+      "note": "warrior-graveyard scene is anime-original (claymorenew: 'with the sequence in the graveyard, the anime storyline begins to diverge'; in the manga Clarice finds the graveyard after the 7-year timeskip); Raki meeting child Priscilla and Isley is ch 55's closing scene. Anime Raki travels north voluntarily; manga Raki is taken north by slave traders."
+    },
+    {
+      "episodes": [
+        20
+      ],
+      "kind": "rearranged",
+      "chapters": "54-56",
+      "note": "Raki/Isley meeting restaged on the road with horses (manga: Raki wakes at Isley's house, ch 56); Flora-Clare sword match is interrupted by Jean (manga ch 55 plays it to a draw; MAL 2007 viewers note the missing 'Windcutter vs Flashsword'); Clare tells Flora/Jean her life story (manga: only in ch 130); Isley's party heading to Pieta is anime-only (manga: heads south to Mucha after the battle) -- sets up the ep 21-26 divergence."
+    }
+  ],
+  "type_corrections": [],
+  "repairs": [],
+  "structure": {
+    "notes": "Single 26-episode season (AniList 1818); OUR cumulative numbering equals per-season numbering, so no conversions were applied: our ep N = claymorenew 'Anime Scene N' = claymore.fandom 'Episode N' = Wikipedia ep N (Wikipedia lists air dates one day later, e.g. Apr 4 vs our Apr 3 -- late-night NTV slot, not a numbering offset). No OVAs, movies or specials. Arc map confirmed by two wikis + title matches: eps 1-2 = ch 1-4 (Intro; ch 2 skipped), eps 3-4 = ch 5-11 (Darkness in Paradise), eps 5-8 = ch 12-24 (Teresa/Marked for Death), eps 9-11 = ch 25-30 (The Slashers/Those Who Rend Asunder, same Japanese title), eps 12-14 = ch 31-40 (Endless Gravestones + Fit for Battle/Qualified to Fight), eps 15-17 = ch 41-49 (Witch's Maw + Deep Abyss of Purgatory), eps 18-20 = ch 50-56 (Battle of the North/Carnage in the North), eps 21-23 loosely = ch 57-59 (Assault on Pieta), eps 24-26 anime-original. Wikipedia: 'adapt the first through eleventh volumes over 24 episodes; remaining 2 follow an original storyline'. Volume boundaries in the context file match Wikipedia's chapter list exactly. animefillerguide types 1-20 canon, 21-23 mixed, 24-26 filler (our override anime-only-canon) and gives continue-at-57, matching continue_from_chapter=57.",
+    "order_only": []
+  },
+  "flags_for_sean": [
+    "Intra-arc episode boundaries (eps 3, 5, 6, 7, 9, 10, 12, 13, 15, 16, 18, 19) are not stated as chapter numbers by any published guide; they were derived by correlating three independently written episode synopses (claymorenew, claymore.fandom, Wikipedia) against page-cited chapter synopses (claymorenew Scene pages, claymore.fandom Chapter pages). Every boundary event was unambiguous, so they are marked high, but they are derivations rather than quoted figures.",
+    "Six episodes end mid-chapter (3->7, 7->21, 8->24, 10->29, 16->46, 19->54): end_chapter is the chapter containing the episode's final mainline scene per the protocol, with continue_points set to the same chapter. If the app convention prefers the last COMPLETED chapter for those rows, subtract one (6, 20, 23, 28, 45, 53).",
+    "Out of range but noted: wheredoestheanimeleaveoff pins ep 23 at v11 ch 59, consistent with the stored ep24->59 anchor and the ep 21-23 loose_parallel annotations; no change proposed.",
+    "Web search budget was exhausted mid-task; MAL 2007 episode threads for eps 2, 4, 11, 14, 17, 20 were checked via WebFetch and carried no chapter remarks (only ep 8's thread did). ANN DVD reviews 2/4/5 corroborate arc-level coverage only."
+  ]
+}

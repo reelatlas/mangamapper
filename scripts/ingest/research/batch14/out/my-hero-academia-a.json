@@ -1,0 +1,959 @@
+{
+ "series_id": "my-hero-academia",
+ "summary": "Eps 100-138 adapt chs 216-328. Ep 100 closes the Joint Training tail (216-219); S5 then airs the Endeavor Agency arc (241-255) as eps 101-107 BEFORE the My Villain Academia arc (220-240) as eps 108-112, and the finale (113) stitches 240/246 fragments onto 256-257 with a 3-page 258 teaser, so S5 leaves off at 257. S6 (114-138) runs 258-328 linearly except for a two-episode page interleave (117/118 over 267-273), the ch 220 flashback grafted into ep 126, and the war-aftermath reorder 127-129 over 296-300; it ends at 328 (Star and Stripe/329 opens S7). Ep 107 = 253-255 exactly (Kurogiri/Oboro), confirming Sean's guess; ep 113 = start 256 / end 257 per the majority rule. All 38 canon/mixed episodes now have full records; fandom forward + reverse maps, animefillerguide, AnimeStoryGuide, Wikipedia title matches and third-party end-point articles agree at chapter level everywhere. Two stored-data errors: ep 111's volume (24 -> 25) and ep 100's continue point (241 -> 220, flagged as a semantics call).",
+ "anchors": [
+  {
+   "episode": 100,
+   "end_chapter": 219,
+   "start_chapter": 217,
+   "chapters_adapted": "216 (p.11-13), 217, 218 (p.1-3, 12-15), 219 (p.1-10)",
+   "volume": 23,
+   "confidence": "high",
+   "note": "CONFIRMS existing 219 [217]; refines fragments. Title = ch 217. 216 tail is 3 pp -> start 217. Ch 219 p.11+ is never adapted (reverse map shows only ep 100). Anime-original: Eri letters (vol 23 extra), licence party.",
+   "sources": [
+    "https://myheroacademia.fandom.com/wiki/Episode_100",
+    "https://myheroacademia.fandom.com/wiki/Chapter_217",
+    "https://myheroacademia.fandom.com/wiki/Chapter_219",
+    "https://www.animefillerguide.com/anime/my-hero-academia/",
+    "https://en.wikipedia.org/wiki/List_of_My_Hero_Academia_chapters",
+    "https://en.wikipedia.org/wiki/My_Hero_Academia_season_5",
+    "https://www.animestoryguide.com/guides/my-hero-academia/season/5"
+   ]
+  },
+  {
+   "episode": 101,
+   "end_chapter": 242,
+   "start_chapter": 241,
+   "chapters_adapted": "241-242",
+   "volume": 25,
+   "confidence": "high",
+   "note": "CONFIRMS existing 242 [241]. Title = ch 242. First episode of the S5 reorder (Endeavor Agency 241-255 aired before MVA 220-240). Anime-original prologue: Tomura in Deika ruins.",
+   "sources": [
+    "https://myheroacademia.fandom.com/wiki/Episode_101",
+    "https://myheroacademia.fandom.com/wiki/Chapter_241",
+    "https://myheroacademia.fandom.com/wiki/Chapter_242",
+    "https://www.animefillerguide.com/anime/my-hero-academia/",
+    "https://en.wikipedia.org/wiki/List_of_My_Hero_Academia_chapters",
+    "https://en.wikipedia.org/wiki/My_Hero_Academia_season_5",
+    "https://www.animestoryguide.com/guides/my-hero-academia/season/5"
+   ]
+  },
+  {
+   "episode": 102,
+   "end_chapter": 245,
+   "start_chapter": 243,
+   "chapters_adapted": "231 (p.2-6), 243-244, 245 (p.1-13)",
+   "volume": 25,
+   "confidence": "high",
+   "note": "Title = ch 243. Opens with a 5-page graft from MVA-era ch 231 (Hawks visits Best Jeanist) -> start 243 (first full chapter). Ends mid-245 (p.13 of 17).",
+   "sources": [
+    "https://myheroacademia.fandom.com/wiki/Episode_102",
+    "https://myheroacademia.fandom.com/wiki/Chapter_231",
+    "https://myheroacademia.fandom.com/wiki/Chapter_243",
+    "https://myheroacademia.fandom.com/wiki/Chapter_245",
+    "https://www.animefillerguide.com/anime/my-hero-academia/",
+    "https://en.wikipedia.org/wiki/List_of_My_Hero_Academia_chapters",
+    "https://en.wikipedia.org/wiki/My_Hero_Academia_season_5",
+    "https://www.animestoryguide.com/guides/my-hero-academia/season/5"
+   ]
+  },
+  {
+   "episode": 103,
+   "end_chapter": 248,
+   "start_chapter": 246,
+   "chapters_adapted": "245 (p.14-17), 246 (p.8-17), 247, 248 (p.1-12)",
+   "volume": 26,
+   "confidence": "high",
+   "note": "Title = ch 248. 245 tail is 4 pp -> skipped; 246 p.8-17 is the bulk of that chapter -> start 246 (246 p.4-8, Tomura's surgery prep, is held back to ep 113). Ends at 248 p.12 of 13 (p.13 opens ep 105).",
+   "sources": [
+    "https://myheroacademia.fandom.com/wiki/Episode_103",
+    "https://myheroacademia.fandom.com/wiki/Chapter_245",
+    "https://myheroacademia.fandom.com/wiki/Chapter_246",
+    "https://myheroacademia.fandom.com/wiki/Chapter_248",
+    "https://www.animefillerguide.com/anime/my-hero-academia/",
+    "https://en.wikipedia.org/wiki/List_of_My_Hero_Academia_chapters",
+    "https://en.wikipedia.org/wiki/My_Hero_Academia_season_5",
+    "https://www.animestoryguide.com/guides/my-hero-academia/season/5"
+   ]
+  },
+  {
+   "episode": 105,
+   "end_chapter": 249,
+   "start_chapter": 249,
+   "chapters_adapted": "248 (p.13), 249",
+   "volume": 26,
+   "confidence": "high",
+   "note": "Title = ch 249. Single chapter plus anime-original padding (Endeavor patrol montage, Endeavor/Fuyumi flashback, Ending shown early) -> row type 'mixed' stands (animefillerlist: Mixed Canon/Filler).",
+   "sources": [
+    "https://myheroacademia.fandom.com/wiki/Episode_105",
+    "https://myheroacademia.fandom.com/wiki/Chapter_248",
+    "https://myheroacademia.fandom.com/wiki/Chapter_249",
+    "https://www.animefillerguide.com/anime/my-hero-academia/",
+    "https://en.wikipedia.org/wiki/List_of_My_Hero_Academia_chapters",
+    "https://www.animefillerlist.com/shows/my-hero-academia",
+    "https://en.wikipedia.org/wiki/My_Hero_Academia_season_5",
+    "https://www.animestoryguide.com/guides/my-hero-academia/season/5"
+   ]
+  },
+  {
+   "episode": 106,
+   "end_chapter": 252,
+   "start_chapter": 250,
+   "chapters_adapted": "250-252",
+   "volume": 26,
+   "confidence": "high",
+   "note": "CONFIRMS existing 252 [250] v26. Title = ch 252 (Ending fight; Natsuo).",
+   "sources": [
+    "https://myheroacademia.fandom.com/wiki/Episode_106",
+    "https://myheroacademia.fandom.com/wiki/Chapter_250",
+    "https://myheroacademia.fandom.com/wiki/Chapter_252",
+    "https://www.animefillerguide.com/anime/my-hero-academia/",
+    "https://en.wikipedia.org/wiki/List_of_My_Hero_Academia_chapters",
+    "https://en.wikipedia.org/wiki/My_Hero_Academia_season_5",
+    "https://www.animestoryguide.com/guides/my-hero-academia/season/5"
+   ]
+  },
+  {
+   "episode": 107,
+   "end_chapter": 255,
+   "start_chapter": 253,
+   "chapters_adapted": "253-255",
+   "volume": 26,
+   "confidence": "high",
+   "note": "NEW (Sean's ep-107 ask). Title = ch 254; Kurogiri/Oboro Shirakumo reveal at Tartarus (253 'Shirakumo', 254, 255 'Hero Hopeful': brainwave 'hospital' tip -> HPSC -> Hawks, Ujiko watching Tomura's operation). Forward + reverse fandom, AFG, ASG, Wikipedia summary and Den of Geek review all agree; three full chapters, no fragments. Last Endeavor Agency episode; the anime then back-jumps to MVA (220-240).",
+   "sources": [
+    "https://myheroacademia.fandom.com/wiki/Episode_107",
+    "https://myheroacademia.fandom.com/wiki/Chapter_253",
+    "https://myheroacademia.fandom.com/wiki/Chapter_254",
+    "https://myheroacademia.fandom.com/wiki/Chapter_255",
+    "https://www.animefillerguide.com/anime/my-hero-academia/",
+    "https://www.animestoryguide.com/guides/my-hero-academia/season/5",
+    "https://en.wikipedia.org/wiki/List_of_My_Hero_Academia_chapters",
+    "https://en.wikipedia.org/wiki/My_Hero_Academia_season_5",
+    "https://www.denofgeek.com/tv/my-hero-academia-season-5-episode-19-review-more-of-a-hero-than-anyone/"
+   ]
+  },
+  {
+   "episode": 108,
+   "end_chapter": 224,
+   "start_chapter": 221,
+   "chapters_adapted": "220 (p.8, 12-15), 221-223, 224 (p.1-6)",
+   "volume": 23,
+   "confidence": "high",
+   "note": "CONFIRMS existing 224 [221] v23. Title = ch 220. 220 p.1-11 (League vs CRC, hideout) is cut here and adapted as a flashback in ep 126. Ends mid-224 (p.6).",
+   "sources": [
+    "https://myheroacademia.fandom.com/wiki/Episode_108",
+    "https://myheroacademia.fandom.com/wiki/Chapter_220",
+    "https://myheroacademia.fandom.com/wiki/Chapter_221",
+    "https://myheroacademia.fandom.com/wiki/Chapter_224",
+    "https://www.animefillerguide.com/anime/my-hero-academia/",
+    "https://en.wikipedia.org/wiki/List_of_My_Hero_Academia_chapters",
+    "https://en.wikipedia.org/wiki/My_Hero_Academia_season_5",
+    "https://www.animestoryguide.com/guides/my-hero-academia/season/5"
+   ]
+  },
+  {
+   "episode": 109,
+   "end_chapter": 228,
+   "start_chapter": 225,
+   "chapters_adapted": "218 (p.9-11), 224 (p.6-15), 225-226, 227 (p.2-3, 6-7, 9-15), 228",
+   "volume": 24,
+   "confidence": "high",
+   "note": "CONFIRMS existing 228 [225] v24. Title = ch 224. Opens with grafted 218 p.9-11 (Destro/MLA origin narration) then 224's tail (10 pp, not the bulk of the episode) -> start 225 per the first-full-chapter rule.",
+   "sources": [
+    "https://myheroacademia.fandom.com/wiki/Episode_109",
+    "https://myheroacademia.fandom.com/wiki/Chapter_218",
+    "https://myheroacademia.fandom.com/wiki/Chapter_224",
+    "https://myheroacademia.fandom.com/wiki/Chapter_228",
+    "https://www.animefillerguide.com/anime/my-hero-academia/",
+    "https://en.wikipedia.org/wiki/List_of_My_Hero_Academia_chapters",
+    "https://en.wikipedia.org/wiki/My_Hero_Academia_season_5",
+    "https://www.animestoryguide.com/guides/my-hero-academia/season/5"
+   ]
+  },
+  {
+   "episode": 110,
+   "end_chapter": 232,
+   "start_chapter": 229,
+   "chapters_adapted": "229-230, 231 (p.1, 6-15), 232",
+   "volume": 24,
+   "confidence": "high",
+   "note": "CONFIRMS existing 232 [229] v24. Title = ch 230. 231 p.2-6 aired earlier in ep 102.",
+   "sources": [
+    "https://myheroacademia.fandom.com/wiki/Episode_110",
+    "https://myheroacademia.fandom.com/wiki/Chapter_229",
+    "https://myheroacademia.fandom.com/wiki/Chapter_230",
+    "https://myheroacademia.fandom.com/wiki/Chapter_232",
+    "https://www.animefillerguide.com/anime/my-hero-academia/",
+    "https://en.wikipedia.org/wiki/List_of_My_Hero_Academia_chapters",
+    "https://en.wikipedia.org/wiki/My_Hero_Academia_season_5",
+    "https://www.animestoryguide.com/guides/my-hero-academia/season/5"
+   ]
+  },
+  {
+   "episode": 111,
+   "end_chapter": 236,
+   "start_chapter": 233,
+   "chapters_adapted": "233 (p.1-2, 4-15), 234-236",
+   "volume": 25,
+   "confidence": "high",
+   "note": "CONFIRMS existing 236 [233]; REPAIRS volume 24 -> 25 (ch 236 opens vol 25). Title = ch 235.",
+   "sources": [
+    "https://myheroacademia.fandom.com/wiki/Episode_111",
+    "https://myheroacademia.fandom.com/wiki/Chapter_233",
+    "https://myheroacademia.fandom.com/wiki/Chapter_235",
+    "https://myheroacademia.fandom.com/wiki/Chapter_236",
+    "https://www.animefillerguide.com/anime/my-hero-academia/",
+    "https://en.wikipedia.org/wiki/List_of_My_Hero_Academia_chapters",
+    "https://en.wikipedia.org/wiki/My_Hero_Academia_season_5",
+    "https://www.animestoryguide.com/guides/my-hero-academia/season/5"
+   ]
+  },
+  {
+   "episode": 112,
+   "end_chapter": 240,
+   "start_chapter": 237,
+   "chapters_adapted": "237-239, 240 (p.1-11, 14-15)",
+   "volume": 25,
+   "confidence": "high",
+   "note": "CONFIRMS existing 240 [237] v25, continue 256. Title = ch 237. DualShockers independently: S5 ep 24 adapted 237-240. 240 p.12-13,15 (Hawks/Dabi at the PLF founding) held to ep 113; a ch 220 flashback (League needs money) is included.",
+   "sources": [
+    "https://myheroacademia.fandom.com/wiki/Episode_112",
+    "https://myheroacademia.fandom.com/wiki/Chapter_237",
+    "https://myheroacademia.fandom.com/wiki/Chapter_240",
+    "https://www.animefillerguide.com/anime/my-hero-academia/",
+    "https://en.wikipedia.org/wiki/List_of_My_Hero_Academia_chapters",
+    "https://www.dualshockers.com/what-manga-chapter-does-my-hero-academia-season-5-finale-adapts/",
+    "https://en.wikipedia.org/wiki/My_Hero_Academia_season_5",
+    "https://www.animestoryguide.com/guides/my-hero-academia/season/5"
+   ]
+  },
+  {
+   "episode": 113,
+   "end_chapter": 257,
+   "start_chapter": 256,
+   "chapters_adapted": "240 (p.12-13, 15), 246 (p.4-8), 256-257, 258 (p.14, 16-17)",
+   "volume": 26,
+   "confidence": "high",
+   "note": "CONFIRMS existing 257; adds full record. Title = ch 256. Opening fragments are small (240: 3 pp Hawks/Dabi/Best Jeanist bag; 246: 5 pp Tomura-Ujiko surgery) -> start 256 per majority rule; 258 fragments are 3 epilogue pages, re-adapted in full by ep 114 -> end stays 257. DualShockers: 'adapts a panel from ch 246 then skips to 256-257; 257 is where S5 left off'; Epicstream/reddit: S5 ends at 257; Wikipedia S5: through end of vol 26.",
+   "sources": [
+    "https://myheroacademia.fandom.com/wiki/Episode_113",
+    "https://myheroacademia.fandom.com/wiki/Chapter_240",
+    "https://myheroacademia.fandom.com/wiki/Chapter_246",
+    "https://myheroacademia.fandom.com/wiki/Chapter_256",
+    "https://myheroacademia.fandom.com/wiki/Chapter_257",
+    "https://myheroacademia.fandom.com/wiki/Chapter_258",
+    "https://www.animefillerguide.com/anime/my-hero-academia/",
+    "https://www.dualshockers.com/what-manga-chapter-does-my-hero-academia-season-5-finale-adapts/",
+    "https://epicstream.com/article/what-chapter-does-my-hero-academia-anime-end-in-the-manga",
+    "https://www.reddit.com/r/BokuNoHeroAcademia/comments/psrvr3/what_chapter_do_i_start_on_after_season_5/",
+    "https://en.wikipedia.org/wiki/List_of_My_Hero_Academia_chapters",
+    "https://en.wikipedia.org/wiki/My_Hero_Academia_season_5",
+    "https://www.animestoryguide.com/guides/my-hero-academia/season/5"
+   ]
+  },
+  {
+   "episode": 114,
+   "end_chapter": 260,
+   "start_chapter": 258,
+   "chapters_adapted": "258-260",
+   "volume": 27,
+   "confidence": "high",
+   "note": "Title = ch 259. Ch 258 re-covered in full (ep 113 had only p.14,16-17); Wikipedia S6: starts from the final chapter of vol 26. Hawks' PLF regiment intel, raid planning.",
+   "sources": [
+    "https://myheroacademia.fandom.com/wiki/Episode_114",
+    "https://myheroacademia.fandom.com/wiki/Chapter_258",
+    "https://myheroacademia.fandom.com/wiki/Chapter_259",
+    "https://myheroacademia.fandom.com/wiki/Chapter_260",
+    "https://www.animefillerguide.com/anime/my-hero-academia/",
+    "https://en.wikipedia.org/wiki/List_of_My_Hero_Academia_chapters",
+    "https://en.wikipedia.org/wiki/My_Hero_Academia_season_6",
+    "https://www.animestoryguide.com/guides/my-hero-academia/season/6"
+   ]
+  },
+  {
+   "episode": 115,
+   "end_chapter": 263,
+   "start_chapter": 261,
+   "chapters_adapted": "261-262, 263 (p.1-17)",
+   "volume": 27,
+   "confidence": "high",
+   "note": "Title = ch 262. Ends at 263 p.17 of 19 (only 2 pp remain -> no continue point; resume 264).",
+   "sources": [
+    "https://myheroacademia.fandom.com/wiki/Episode_115",
+    "https://myheroacademia.fandom.com/wiki/Chapter_261",
+    "https://myheroacademia.fandom.com/wiki/Chapter_262",
+    "https://myheroacademia.fandom.com/wiki/Chapter_263",
+    "https://www.animefillerguide.com/anime/my-hero-academia/",
+    "https://en.wikipedia.org/wiki/List_of_My_Hero_Academia_chapters",
+    "https://en.wikipedia.org/wiki/My_Hero_Academia_season_6",
+    "https://www.animestoryguide.com/guides/my-hero-academia/season/6"
+   ]
+  },
+  {
+   "episode": 116,
+   "end_chapter": 266,
+   "start_chapter": 264,
+   "chapters_adapted": "263 (p.18-19), 264-266",
+   "volume": 27,
+   "confidence": "high",
+   "note": "Title = ch 264. 2-page 263 tail -> start 264. Twice's death (266 'Happy Life').",
+   "sources": [
+    "https://myheroacademia.fandom.com/wiki/Episode_116",
+    "https://myheroacademia.fandom.com/wiki/Chapter_263",
+    "https://myheroacademia.fandom.com/wiki/Chapter_264",
+    "https://myheroacademia.fandom.com/wiki/Chapter_266",
+    "https://www.animefillerguide.com/anime/my-hero-academia/",
+    "https://en.wikipedia.org/wiki/List_of_My_Hero_Academia_chapters",
+    "https://en.wikipedia.org/wiki/My_Hero_Academia_season_6",
+    "https://www.animestoryguide.com/guides/my-hero-academia/season/6"
+   ]
+  },
+  {
+   "episode": 117,
+   "end_chapter": 270,
+   "start_chapter": 267,
+   "chapters_adapted": "267 (p.1-18, 20), 268, 269 (p.1-14, 17), 270 (p.1-18)",
+   "volume": 28,
+   "confidence": "high",
+   "note": "Title = ch 270. Non-linear split with ep 118: leftover pages (267 p.19, 269 p.15-16, 270 p.2,19) are all <=2 pp -> end 270, resume 271.",
+   "sources": [
+    "https://myheroacademia.fandom.com/wiki/Episode_117",
+    "https://myheroacademia.fandom.com/wiki/Chapter_267",
+    "https://myheroacademia.fandom.com/wiki/Chapter_269",
+    "https://myheroacademia.fandom.com/wiki/Chapter_270",
+    "https://www.animefillerguide.com/anime/my-hero-academia/",
+    "https://en.wikipedia.org/wiki/List_of_My_Hero_Academia_chapters",
+    "https://en.wikipedia.org/wiki/My_Hero_Academia_season_6",
+    "https://www.animestoryguide.com/guides/my-hero-academia/season/6"
+   ]
+  },
+  {
+   "episode": 118,
+   "end_chapter": 273,
+   "start_chapter": 271,
+   "chapters_adapted": "267 (p.19), 269 (p.15-16), 270 (p.2, 19), 271-272, 273 (p.1-11)",
+   "volume": 28,
+   "confidence": "high",
+   "note": "Title = ch 273. Opens with 1-2 page leftovers from 267/269/270 -> start 271 (first full chapter). Ends mid-273 (p.11 of 19). ASG lists the literal first chapter animated (267).",
+   "sources": [
+    "https://myheroacademia.fandom.com/wiki/Episode_118",
+    "https://myheroacademia.fandom.com/wiki/Chapter_267",
+    "https://myheroacademia.fandom.com/wiki/Chapter_271",
+    "https://myheroacademia.fandom.com/wiki/Chapter_273",
+    "https://www.animefillerguide.com/anime/my-hero-academia/",
+    "https://en.wikipedia.org/wiki/List_of_My_Hero_Academia_chapters",
+    "https://en.wikipedia.org/wiki/My_Hero_Academia_season_6",
+    "https://www.animestoryguide.com/guides/my-hero-academia/season/6"
+   ]
+  },
+  {
+   "episode": 119,
+   "end_chapter": 276,
+   "start_chapter": 274,
+   "chapters_adapted": "273 (p.12-19), 274-275, 276 (p.4-13)",
+   "volume": 28,
+   "confidence": "high",
+   "note": "Title = ch 275. 273 tail (8 of 19 pp) is not the bulk -> start 274. Ends inside 276 (p.4-13); 276 p.1-3 and 14-21 air in ep 120.",
+   "sources": [
+    "https://myheroacademia.fandom.com/wiki/Episode_119",
+    "https://myheroacademia.fandom.com/wiki/Chapter_273",
+    "https://myheroacademia.fandom.com/wiki/Chapter_275",
+    "https://myheroacademia.fandom.com/wiki/Chapter_276",
+    "https://www.animefillerguide.com/anime/my-hero-academia/",
+    "https://en.wikipedia.org/wiki/List_of_My_Hero_Academia_chapters",
+    "https://en.wikipedia.org/wiki/My_Hero_Academia_season_6",
+    "https://www.animestoryguide.com/guides/my-hero-academia/season/6"
+   ]
+  },
+  {
+   "episode": 120,
+   "end_chapter": 278,
+   "start_chapter": 276,
+   "chapters_adapted": "276 (p.1-3, 14-21), 277-278",
+   "volume": 29,
+   "confidence": "high",
+   "note": "Title = ch 278. Adapts the majority of 276 (11 of 21 pp) -> start 276. Shigaraki vs Endeavor/Ryukyu; students vs Gigantomachia.",
+   "sources": [
+    "https://myheroacademia.fandom.com/wiki/Episode_120",
+    "https://myheroacademia.fandom.com/wiki/Chapter_276",
+    "https://myheroacademia.fandom.com/wiki/Chapter_277",
+    "https://myheroacademia.fandom.com/wiki/Chapter_278",
+    "https://www.animefillerguide.com/anime/my-hero-academia/",
+    "https://en.wikipedia.org/wiki/List_of_My_Hero_Academia_chapters",
+    "https://en.wikipedia.org/wiki/My_Hero_Academia_season_6",
+    "https://www.animestoryguide.com/guides/my-hero-academia/season/6"
+   ]
+  },
+  {
+   "episode": 121,
+   "end_chapter": 281,
+   "start_chapter": 279,
+   "chapters_adapted": "279-281, 282 (p.1-4)",
+   "volume": 29,
+   "confidence": "high",
+   "note": "Title = ch 279. 282 p.1-4 is a 4-page head fragment (listed, does not set END; AFG lists 282 without pages) -> end 281, resume 282.",
+   "sources": [
+    "https://myheroacademia.fandom.com/wiki/Episode_121",
+    "https://myheroacademia.fandom.com/wiki/Chapter_279",
+    "https://myheroacademia.fandom.com/wiki/Chapter_281",
+    "https://myheroacademia.fandom.com/wiki/Chapter_282",
+    "https://www.animefillerguide.com/anime/my-hero-academia/",
+    "https://en.wikipedia.org/wiki/List_of_My_Hero_Academia_chapters",
+    "https://en.wikipedia.org/wiki/My_Hero_Academia_season_6",
+    "https://www.animestoryguide.com/guides/my-hero-academia/season/6"
+   ]
+  },
+  {
+   "episode": 122,
+   "end_chapter": 285,
+   "start_chapter": 282,
+   "chapters_adapted": "282 (p.5-17), 283-285",
+   "volume": 29,
+   "confidence": "high",
+   "note": "CONFIRMS existing 285 v29. Title = ch 285. 282 p.5-17 is most of the chapter -> start 282.",
+   "sources": [
+    "https://myheroacademia.fandom.com/wiki/Episode_122",
+    "https://myheroacademia.fandom.com/wiki/Chapter_282",
+    "https://myheroacademia.fandom.com/wiki/Chapter_285",
+    "https://www.animefillerguide.com/anime/my-hero-academia/",
+    "https://en.wikipedia.org/wiki/List_of_My_Hero_Academia_chapters",
+    "https://en.wikipedia.org/wiki/My_Hero_Academia_season_6",
+    "https://www.animestoryguide.com/guides/my-hero-academia/season/6"
+   ]
+  },
+  {
+   "episode": 123,
+   "end_chapter": 288,
+   "start_chapter": 286,
+   "chapters_adapted": "286-287, 288 (p.2-17), 289 (p.1)",
+   "volume": 30,
+   "confidence": "high",
+   "note": "Title = ch 286. 289 p.1 is a single teaser page (listed only) -> end 288, resume 289.",
+   "sources": [
+    "https://myheroacademia.fandom.com/wiki/Episode_123",
+    "https://myheroacademia.fandom.com/wiki/Chapter_286",
+    "https://myheroacademia.fandom.com/wiki/Chapter_288",
+    "https://myheroacademia.fandom.com/wiki/Chapter_289",
+    "https://www.animefillerguide.com/anime/my-hero-academia/",
+    "https://en.wikipedia.org/wiki/List_of_My_Hero_Academia_chapters",
+    "https://en.wikipedia.org/wiki/My_Hero_Academia_season_6",
+    "https://www.animestoryguide.com/guides/my-hero-academia/season/6"
+   ]
+  },
+  {
+   "episode": 124,
+   "end_chapter": 291,
+   "start_chapter": 289,
+   "chapters_adapted": "288 (p.1), 289 (p.2-19), 290-291",
+   "volume": 30,
+   "confidence": "high",
+   "note": "CONFIRMS existing 291 v30. Title = ch 290 (Dabi's broadcast). 288 p.1 is a re-used single page -> start 289.",
+   "sources": [
+    "https://myheroacademia.fandom.com/wiki/Episode_124",
+    "https://myheroacademia.fandom.com/wiki/Chapter_289",
+    "https://myheroacademia.fandom.com/wiki/Chapter_290",
+    "https://myheroacademia.fandom.com/wiki/Chapter_291",
+    "https://www.animefillerguide.com/anime/my-hero-academia/",
+    "https://en.wikipedia.org/wiki/List_of_My_Hero_Academia_chapters",
+    "https://en.wikipedia.org/wiki/My_Hero_Academia_season_6",
+    "https://www.animestoryguide.com/guides/my-hero-academia/season/6"
+   ]
+  },
+  {
+   "episode": 125,
+   "end_chapter": 294,
+   "start_chapter": 292,
+   "chapters_adapted": "292-293, 294 (p.1-8)",
+   "volume": 30,
+   "confidence": "high",
+   "note": "Title = ch 292. Ends at 294 p.8 of 17 (Mr. Compress reveal begins); p.8-17 continue in ep 126 after a grafted flashback.",
+   "sources": [
+    "https://myheroacademia.fandom.com/wiki/Episode_125",
+    "https://myheroacademia.fandom.com/wiki/Chapter_292",
+    "https://myheroacademia.fandom.com/wiki/Chapter_294",
+    "https://www.animefillerguide.com/anime/my-hero-academia/",
+    "https://en.wikipedia.org/wiki/List_of_My_Hero_Academia_chapters",
+    "https://en.wikipedia.org/wiki/My_Hero_Academia_season_6",
+    "https://www.animestoryguide.com/guides/my-hero-academia/season/6"
+   ]
+  },
+  {
+   "episode": 126,
+   "end_chapter": 295,
+   "start_chapter": 294,
+   "chapters_adapted": "220 (p.1-11), 294 (p.8-17), 295",
+   "volume": 30,
+   "confidence": "high",
+   "note": "CONFIRMS existing 295 v30. Title = ch 294. Opens with the ch 220 p.1-11 flashback (League vs CRC, hideout; cut from ep 108) -> graft; 294 p.8-17 is most of that chapter -> start 294.",
+   "sources": [
+    "https://myheroacademia.fandom.com/wiki/Episode_126",
+    "https://myheroacademia.fandom.com/wiki/Chapter_220",
+    "https://myheroacademia.fandom.com/wiki/Chapter_294",
+    "https://myheroacademia.fandom.com/wiki/Chapter_295",
+    "https://www.animefillerguide.com/anime/my-hero-academia/",
+    "https://en.wikipedia.org/wiki/List_of_My_Hero_Academia_chapters",
+    "https://en.wikipedia.org/wiki/My_Hero_Academia_season_6",
+    "https://www.animestoryguide.com/guides/my-hero-academia/season/6"
+   ]
+  },
+  {
+   "episode": 127,
+   "end_chapter": 296,
+   "start_chapter": 296,
+   "chapters_adapted": "296, 298 (p.1-3), 300 (p.8)",
+   "volume": 31,
+   "confidence": "high",
+   "note": "Title = ch 296. Pulls 3 pp of 298 and 1 p of 300 forward; end stays 296 (resume 297, which ep 128 adapts). Heavy anime-original aftermath material (HPSC ambush/Madam President's death, Edgeshot & Cementoss vs Re-Destro/Geten, Izuku narrating the Commission report, Kyudai interrogation) -> row type 'mixed' stands (animefillerlist: Mixed).",
+   "sources": [
+    "https://myheroacademia.fandom.com/wiki/Episode_127",
+    "https://myheroacademia.fandom.com/wiki/Chapter_296",
+    "https://myheroacademia.fandom.com/wiki/Chapter_298",
+    "https://myheroacademia.fandom.com/wiki/Chapter_300",
+    "https://www.animefillerguide.com/anime/my-hero-academia/",
+    "https://en.wikipedia.org/wiki/List_of_My_Hero_Academia_chapters",
+    "https://www.animefillerlist.com/shows/my-hero-academia",
+    "https://en.wikipedia.org/wiki/My_Hero_Academia_season_6",
+    "https://www.animestoryguide.com/guides/my-hero-academia/season/6"
+   ]
+  },
+  {
+   "episode": 128,
+   "end_chapter": 298,
+   "start_chapter": 297,
+   "chapters_adapted": "297, 298 (p.4-19)",
+   "volume": 31,
+   "confidence": "high",
+   "note": "Title = ch 297 (Tartarus raid). Completes 298.",
+   "sources": [
+    "https://myheroacademia.fandom.com/wiki/Episode_128",
+    "https://myheroacademia.fandom.com/wiki/Chapter_297",
+    "https://myheroacademia.fandom.com/wiki/Chapter_298",
+    "https://www.animefillerguide.com/anime/my-hero-academia/",
+    "https://en.wikipedia.org/wiki/List_of_My_Hero_Academia_chapters",
+    "https://en.wikipedia.org/wiki/My_Hero_Academia_season_6",
+    "https://www.animestoryguide.com/guides/my-hero-academia/season/6"
+   ]
+  },
+  {
+   "episode": 129,
+   "end_chapter": 300,
+   "start_chapter": 299,
+   "chapters_adapted": "299-300",
+   "volume": 31,
+   "confidence": "high",
+   "note": "Title = ch 300. Hawks backstory (299) + Endeavor's breakdown; order 296-300 restored here.",
+   "sources": [
+    "https://myheroacademia.fandom.com/wiki/Episode_129",
+    "https://myheroacademia.fandom.com/wiki/Chapter_299",
+    "https://myheroacademia.fandom.com/wiki/Chapter_300",
+    "https://www.animefillerguide.com/anime/my-hero-academia/",
+    "https://en.wikipedia.org/wiki/List_of_My_Hero_Academia_chapters",
+    "https://en.wikipedia.org/wiki/My_Hero_Academia_season_6",
+    "https://www.animestoryguide.com/guides/my-hero-academia/season/6"
+   ]
+  },
+  {
+   "episode": 130,
+   "end_chapter": 303,
+   "start_chapter": 301,
+   "chapters_adapted": "301-303",
+   "volume": 31,
+   "confidence": "high",
+   "note": "Title = ch 301/302. Toya flashback (301-302) + Hawks/Best Jeanist team-up (303 'Top Three').",
+   "sources": [
+    "https://myheroacademia.fandom.com/wiki/Episode_130",
+    "https://myheroacademia.fandom.com/wiki/Chapter_301",
+    "https://myheroacademia.fandom.com/wiki/Chapter_303",
+    "https://www.animefillerguide.com/anime/my-hero-academia/",
+    "https://en.wikipedia.org/wiki/List_of_My_Hero_Academia_chapters",
+    "https://en.wikipedia.org/wiki/My_Hero_Academia_season_6",
+    "https://www.animestoryguide.com/guides/my-hero-academia/season/6"
+   ]
+  },
+  {
+   "episode": 131,
+   "end_chapter": 306,
+   "start_chapter": 304,
+   "chapters_adapted": "304-306",
+   "volume": 31,
+   "confidence": "high",
+   "note": "CONFIRMS existing 306 v31. Title = ch 305. Deku leaves U.A. (306 'The Final Act Begins'). End of Paranormal Liberation War arc.",
+   "sources": [
+    "https://myheroacademia.fandom.com/wiki/Episode_131",
+    "https://myheroacademia.fandom.com/wiki/Chapter_304",
+    "https://myheroacademia.fandom.com/wiki/Chapter_305",
+    "https://myheroacademia.fandom.com/wiki/Chapter_306",
+    "https://www.animefillerguide.com/anime/my-hero-academia/",
+    "https://en.wikipedia.org/wiki/List_of_My_Hero_Academia_chapters",
+    "https://en.wikipedia.org/wiki/My_Hero_Academia_season_6",
+    "https://www.animestoryguide.com/guides/my-hero-academia/season/6"
+   ]
+  },
+  {
+   "episode": 132,
+   "end_chapter": 309,
+   "start_chapter": 307,
+   "chapters_adapted": "307-309",
+   "volume": 32,
+   "confidence": "high",
+   "note": "Title = ch 308. Dark Hero arc start: Muscular rematch.",
+   "sources": [
+    "https://myheroacademia.fandom.com/wiki/Episode_132",
+    "https://myheroacademia.fandom.com/wiki/Chapter_307",
+    "https://myheroacademia.fandom.com/wiki/Chapter_308",
+    "https://myheroacademia.fandom.com/wiki/Chapter_309",
+    "https://www.animefillerguide.com/anime/my-hero-academia/",
+    "https://en.wikipedia.org/wiki/List_of_My_Hero_Academia_chapters",
+    "https://en.wikipedia.org/wiki/My_Hero_Academia_season_6",
+    "https://www.animestoryguide.com/guides/my-hero-academia/season/6"
+   ]
+  },
+  {
+   "episode": 133,
+   "end_chapter": 312,
+   "start_chapter": 310,
+   "chapters_adapted": "310-312",
+   "volume": 32,
+   "confidence": "high",
+   "note": "CONFIRMS existing 312 v32. Title = ch 312 (Lady Nagant ambush).",
+   "sources": [
+    "https://myheroacademia.fandom.com/wiki/Episode_133",
+    "https://myheroacademia.fandom.com/wiki/Chapter_310",
+    "https://myheroacademia.fandom.com/wiki/Chapter_312",
+    "https://www.animefillerguide.com/anime/my-hero-academia/",
+    "https://en.wikipedia.org/wiki/List_of_My_Hero_Academia_chapters",
+    "https://en.wikipedia.org/wiki/My_Hero_Academia_season_6",
+    "https://www.animestoryguide.com/guides/my-hero-academia/season/6"
+   ]
+  },
+  {
+   "episode": 134,
+   "end_chapter": 316,
+   "start_chapter": 313,
+   "chapters_adapted": "313-315, 316 (p.1-11)",
+   "volume": 32,
+   "confidence": "high",
+   "note": "Title = ch 314. Ends at 316 p.11 of 17 (Nagant's self-destruct / Overhaul); p.12-17 open ep 135.",
+   "sources": [
+    "https://myheroacademia.fandom.com/wiki/Episode_134",
+    "https://myheroacademia.fandom.com/wiki/Chapter_313",
+    "https://myheroacademia.fandom.com/wiki/Chapter_314",
+    "https://myheroacademia.fandom.com/wiki/Chapter_316",
+    "https://www.animefillerguide.com/anime/my-hero-academia/",
+    "https://en.wikipedia.org/wiki/List_of_My_Hero_Academia_chapters",
+    "https://en.wikipedia.org/wiki/My_Hero_Academia_season_6",
+    "https://www.animestoryguide.com/guides/my-hero-academia/season/6"
+   ]
+  },
+  {
+   "episode": 135,
+   "end_chapter": 319,
+   "start_chapter": 317,
+   "chapters_adapted": "316 (p.12-17), 317-319",
+   "volume": 33,
+   "confidence": "high",
+   "note": "Title = ch 319. 316 tail (6 of 17 pp) is not the bulk -> start 317. Class 1-A confronts Deku.",
+   "sources": [
+    "https://myheroacademia.fandom.com/wiki/Episode_135",
+    "https://myheroacademia.fandom.com/wiki/Chapter_316",
+    "https://myheroacademia.fandom.com/wiki/Chapter_317",
+    "https://myheroacademia.fandom.com/wiki/Chapter_319",
+    "https://www.animefillerguide.com/anime/my-hero-academia/",
+    "https://en.wikipedia.org/wiki/List_of_My_Hero_Academia_chapters",
+    "https://en.wikipedia.org/wiki/My_Hero_Academia_season_6",
+    "https://www.animestoryguide.com/guides/my-hero-academia/season/6"
+   ]
+  },
+  {
+   "episode": 136,
+   "end_chapter": 322,
+   "start_chapter": 320,
+   "chapters_adapted": "320-322",
+   "volume": 33,
+   "confidence": "high",
+   "note": "CONFIRMS existing 322 v33. Title = ch 320.",
+   "sources": [
+    "https://myheroacademia.fandom.com/wiki/Episode_136",
+    "https://myheroacademia.fandom.com/wiki/Chapter_320",
+    "https://myheroacademia.fandom.com/wiki/Chapter_322",
+    "https://www.animefillerguide.com/anime/my-hero-academia/",
+    "https://en.wikipedia.org/wiki/List_of_My_Hero_Academia_chapters",
+    "https://en.wikipedia.org/wiki/My_Hero_Academia_season_6",
+    "https://www.animestoryguide.com/guides/my-hero-academia/season/6"
+   ]
+  },
+  {
+   "episode": 137,
+   "end_chapter": 325,
+   "start_chapter": 323,
+   "chapters_adapted": "323-325, 326 (p.1)",
+   "volume": 33,
+   "confidence": "high",
+   "note": "Title = ch 324 (Ochaco's megaphone speech). 326 p.1 is a single cold-open page (listed only) -> end 325, resume 326.",
+   "sources": [
+    "https://myheroacademia.fandom.com/wiki/Episode_137",
+    "https://myheroacademia.fandom.com/wiki/Chapter_323",
+    "https://myheroacademia.fandom.com/wiki/Chapter_324",
+    "https://myheroacademia.fandom.com/wiki/Chapter_325",
+    "https://myheroacademia.fandom.com/wiki/Chapter_326",
+    "https://www.animefillerguide.com/anime/my-hero-academia/",
+    "https://en.wikipedia.org/wiki/List_of_My_Hero_Academia_chapters",
+    "https://en.wikipedia.org/wiki/My_Hero_Academia_season_6",
+    "https://www.animestoryguide.com/guides/my-hero-academia/season/6"
+   ]
+  },
+  {
+   "episode": 138,
+   "end_chapter": 328,
+   "start_chapter": 326,
+   "chapters_adapted": "326 (p.2-17), 327-328",
+   "volume": 33,
+   "confidence": "high",
+   "note": "CONFIRMS existing 328 (adds vol 33). Title = ch 328. S6 end at 328 corroborated by Epicstream ('ended with Chapter 328; start 329'), ResetEra and r/BokuNoHeroAcademia ('We ended on 328'); Wikipedia S6: through end of vol 33. Star and Stripe (329) opens S7.",
+   "sources": [
+    "https://myheroacademia.fandom.com/wiki/Episode_138",
+    "https://myheroacademia.fandom.com/wiki/Chapter_326",
+    "https://myheroacademia.fandom.com/wiki/Chapter_327",
+    "https://myheroacademia.fandom.com/wiki/Chapter_328",
+    "https://www.animefillerguide.com/anime/my-hero-academia/",
+    "https://en.wikipedia.org/wiki/List_of_My_Hero_Academia_chapters",
+    "https://epicstream.com/article/where-to-start-reading-my-hero-academia-after-anime",
+    "https://www.resetera.com/threads/my-hero-academia-mangas-ending-date-confirmed-5-chapters-left-42-volumes-in-total-final-chapter-releasing-on-august-5th.909480/",
+    "https://www.reddit.com/r/BokuNoHeroAcademia/comments/122aea2/in_what_chapter_of_the_manga_is_the_end_of_season/",
+    "https://en.wikipedia.org/wiki/My_Hero_Academia_season_6",
+    "https://www.animestoryguide.com/guides/my-hero-academia/season/6"
+   ]
+  }
+ ],
+ "continue_points": [
+  {
+   "episode": 102,
+   "continue_chapter": 245,
+   "note": "ends p.13 of ch 245; p.14-17 open ep 103"
+  },
+  {
+   "episode": 107,
+   "continue_chapter": 220,
+   "note": "Endeavor Agency arc ends (255); the anime back-jumps to MVA next. Reader's next unseen chapter is 220 (MVA 220-240, aired as eps 108-112); after 240 skip 241-255 (already watched) to 256"
+  },
+  {
+   "episode": 108,
+   "continue_chapter": 224,
+   "note": "ends p.6 of ch 224; p.6-15 continue in ep 109"
+  },
+  {
+   "episode": 112,
+   "continue_chapter": 256,
+   "note": "CONFIRMS existing: 240's leftover pages are 3 pp and 241-255 were already watched (eps 101-107); honest resume is 256"
+  },
+  {
+   "episode": 118,
+   "continue_chapter": 273,
+   "note": "ends p.11 of 19 of ch 273; p.12-19 open ep 119"
+  },
+  {
+   "episode": 119,
+   "continue_chapter": 276,
+   "note": "ends inside ch 276 (p.4-13); p.1-3 and 14-21 air in ep 120"
+  },
+  {
+   "episode": 125,
+   "continue_chapter": 294,
+   "note": "ends p.8 of 17 of ch 294; p.8-17 continue in ep 126 after the ch 220 flashback"
+  },
+  {
+   "episode": 134,
+   "continue_chapter": 316,
+   "note": "ends p.11 of 17 of ch 316; p.12-17 open ep 135"
+  }
+ ],
+ "annotations": [
+  {
+   "episodes": [
+    102
+   ],
+   "kind": "graft",
+   "chapters": "231 (p.2-6)",
+   "note": "Hawks' visit to Best Jeanist pulled forward from MVA-era ch 231 'Path' into the Agency arc; Hawks' message that the League hijacked the MLA is omitted"
+  },
+  {
+   "episodes": [
+    103,
+    113
+   ],
+   "kind": "partial",
+   "chapters": "246",
+   "note": "ch 246 split: p.8-17 in ep 103, p.4-8 (Tomura's surgery/Ujiko) deferred to ep 113"
+  },
+  {
+   "episodes": [
+    105
+   ],
+   "kind": "divergence",
+   "chapters": "248 (p.13), 249",
+   "note": "one manga chapter padded with anime-original scenes (Endeavor patrol montage, Endeavor/Fuyumi flashback, Ending released early); type mixed confirmed"
+  },
+  {
+   "episodes": [
+    108,
+    126
+   ],
+   "kind": "partial",
+   "chapters": "220",
+   "note": "ch 220 p.1-11 (League vs CRC, hideout) cut from ep 108; adapted as a flashback opening ep 126; ep 108 uses only p.8, 12-15"
+  },
+  {
+   "episodes": [
+    109
+   ],
+   "kind": "graft",
+   "chapters": "218 (p.9-11)",
+   "note": "Destro/MLA origin pages from ch 218 grafted as Izuku's narrated cold open; Detnerat commercial and Re-Destro/Miyashita scene (218 p.4-8) never adapted"
+  },
+  {
+   "episodes": [
+    112,
+    113
+   ],
+   "kind": "partial",
+   "chapters": "240",
+   "note": "ch 240 split: p.1-11, 14-15 in ep 112; p.12-13, 15 (Hawks/Dabi, Best Jeanist bag) open ep 113"
+  },
+  {
+   "episodes": [
+    113,
+    114
+   ],
+   "kind": "partial",
+   "chapters": "258",
+   "note": "ep 113 shows 258 p.14, 16-17 as epilogue teasers; ep 114 re-adapts ch 258 in full -> S6 begins at 258"
+  },
+  {
+   "episodes": [
+    117,
+    118
+   ],
+   "kind": "rearranged",
+   "chapters": "267-273",
+   "note": "exact interleave (supersedes 'no anchors inside the pair'): ep 117 = 267 (p.1-18, 20), 268, 269 (p.1-14, 17), 270 (p.1-18); ep 118 = 267 (p.19), 269 (p.15-16), 270 (p.2, 19), 271-272, 273 (p.1-11). Anchors 117->270, 118->273 are safe"
+  },
+  {
+   "episodes": [
+    119,
+    120
+   ],
+   "kind": "partial",
+   "chapters": "276",
+   "note": "ch 276 split non-linearly: ep 119 p.4-13; ep 120 p.1-3, 14-21"
+  },
+  {
+   "episodes": [
+    121,
+    122
+   ],
+   "kind": "partial",
+   "chapters": "282",
+   "note": "ch 282 split: ep 121 p.1-4 (head fragment, does not set END); ep 122 p.5-17"
+  },
+  {
+   "episodes": [
+    123,
+    124
+   ],
+   "kind": "partial",
+   "chapters": "288-289",
+   "note": "ep 123 = 288 (p.2-17) + 289 (p.1); ep 124 = 288 (p.1) + 289 (p.2-19); single-page swaps"
+  },
+  {
+   "episodes": [
+    125,
+    126
+   ],
+   "kind": "partial",
+   "chapters": "294",
+   "note": "ch 294 split: ep 125 p.1-8; ep 126 p.8-17 (after the ch 220 graft)"
+  },
+  {
+   "episodes": [
+    127,
+    128,
+    129
+   ],
+   "kind": "rearranged",
+   "chapters": "296-300",
+   "note": "exact map: ep 127 = 296 + 298 (p.1-3) + 300 (p.8); ep 128 = 297 + 298 (p.4-19); ep 129 = 299-300. Ends 296/298/300 are safe anchors"
+  },
+  {
+   "episodes": [
+    127
+   ],
+   "kind": "divergence",
+   "chapters": "296",
+   "note": "substantial anime-original war-aftermath material (HPSC ambush & Madam President's death, Edgeshot/Cementoss vs Re-Destro/Geten, Izuku narrating the Commission report, Kyudai interrogation); type mixed confirmed"
+  },
+  {
+   "episodes": [
+    134,
+    135
+   ],
+   "kind": "partial",
+   "chapters": "316",
+   "note": "ch 316 split: ep 134 p.1-11; ep 135 p.12-17"
+  },
+  {
+   "episodes": [
+    137,
+    138
+   ],
+   "kind": "partial",
+   "chapters": "326",
+   "note": "ch 326 p.1 is ep 137's last shot; ep 138 adapts p.2-17"
+  }
+ ],
+ "type_corrections": [],
+ "repairs": [
+  {
+   "episode": 111,
+   "field": "volume",
+   "old": 24,
+   "new": 25,
+   "why": "ch 236 (end chapter) is the first chapter of volume 25 (Wikipedia: v25 = 236-246; fandom Chapter 236 infobox: Volume 25)",
+   "sources": [
+    "https://en.wikipedia.org/wiki/List_of_My_Hero_Academia_chapters",
+    "https://myheroacademia.fandom.com/wiki/Chapter_236"
+   ]
+  },
+  {
+   "episode": 100,
+   "field": "continue_chapter",
+   "old": 241,
+   "new": 220,
+   "why": "241 is what the NEXT EPISODE adapts, not where a reader resumes: after ep 100 the viewer has seen 216-219 and nothing of MVA (220-240, aired later as eps 108-112); resuming at 241 would skip the whole MVA arc. Honest resume is 220 (= end+1), matching the semantics already used for ep 112 -> 256. Flagged for Sean in case the app uses continue points to project the next episode's start.",
+   "sources": [
+    "https://myheroacademia.fandom.com/wiki/Episode_100",
+    "https://myheroacademia.fandom.com/wiki/Episode_101",
+    "https://myheroacademia.fandom.com/wiki/Episode_108"
+   ]
+  }
+ ],
+ "structure": {
+  "notes": "Confirmed: S5 = AniList 117193, 25 eps = our 89-113 (Apr 3 - Sep 25 2021); S6 = AniList 139630, 25 eps = our 114-138 (Oct 1 2022 - Mar 25 2023). Fandom 'Episode N' pages use cumulative numbering identical to ours (Episode 100 = 'The New Power and All For One', Episode 113 = 'The High, Deep Blue Sky', Episode 138 = 'No Man Is an Island'), so no conversion was needed for fandom; per-season sources (Wikipedia, Den of Geek, DualShockers) were converted as S5 Ek -> our 88+k and S6 Ek -> our 113+k. Range adapts chs 216-328: S5 tail = 216-219, then the famous reorder (Endeavor Agency 241-255 as eps 101-107, MVA 220-240 as eps 108-112, stitch finale 113 = 256-257), S6 = 258-328 (Paranormal Liberation War 258-306, Dark Hero 307-328). Wikipedia S5: adapts vol 21 through end of vol 26; Wikipedia S6: final chapter of vol 26 through end of vol 33.",
+  "order_only": [
+   {
+    "anilist_id": null,
+    "title": "My Hero Academia: World Heroes' Mission (film, 2021-08-06)",
+    "after_anilist_id": 117193,
+    "adapts": "nothing (anime-original)",
+    "note": "our ep 104 'Long Time No See, Selkie' (filler) is the film's prologue; the film sits between eps 104 and 105 in watch order (S5 aired around it). AniList id not verified this session (WebSearch budget exhausted)."
+   }
+  ]
+ },
+ "flags_for_sean": [
+  "ep 100 continue point: stored 241 (= next episode's first chapter) replaced with 220 (= reader's next unseen chapter, consistent with ep 112 -> 256). Veto the repair if the app relies on continue points to project un-anchored following episodes (no longer needed: every canon/mixed ep 100-138 now has a full record).",
+  "Page-level splits (which pages of 245/246/263/267-270/273/276/282/288-289/294/298/300/316/326 fall in which episode) are documented only by the fandom wiki; animefillerguide and AnimeStoryGuide list chapters without pages and likely share lineage with fandom. Chapter SETS are corroborated everywhere (AFG identical for all 39 eps; every episode title = a Wikipedia chapter title inside its range; DualShockers/Epicstream/reddit fix 112/113 and the season ends). Starts for eps 118/119/120/135 and ends for 121/123/137 depend on those page splits under the majority rule and the 'tiny head fragment does not set END' convention (same convention as the stored ep 61 record).",
+  "No type corrections: 104 filler (entirely anime-original, film prologue), 105 and 127 mixed (fandom 'differences' sections list substantial anime-original scenes; animefillerlist agrees: filler 39,58,64,104; mixed 54-55,89,105,127).",
+  "Ch 219 p.11+ and ch 218 p.4-8 appear never adapted (fandom reverse map lists only ep 100 for 219 p.1-10 and eps 100/109 for 218) - informational, no reader impact.",
+  "Session note: WebSearch budget (200/200) was exhausted before this task; searches were run through Brave/Yahoo result pages via WebFetch and sources were then fetched directly; reddit/StackExchange pages could not be opened (cited from result snippets: RED5 'stopping point ... end of chapter 257', RED6 'We ended on 328')."
+ ]
+}

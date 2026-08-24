@@ -1,0 +1,613 @@
+{
+  "series_id": "world-trigger",
+  "summary": "S2 (our 74-85) adapts the Galopoula invasion (ch 121-136, vol 15-16) and B-Rank Wars Rounds 5-6 plus Hyuse's enlistment (ch 137-160, vol 16-18); S3 (our 86-99) adapts Round 7 vs Azuma/Kageura/Suzunari-1 (ch 160-175, vol 18-20), the Hyuse-rumour interlude (176-183) and the Round 8 final vs Ninomiya/Yuba/Ikoma (184-196 p.4, vol 21-22). Every episode is mapped at page level by the World Trigger fandom wiki (its chapter pages' reverse 'Episode' field is consistent for all of ch 118-198), mirrored verbatim by worldtriggerwiki.com and animefillerguide; 24 of 26 anchors are additionally pinned by lineage-independent sources (MAL manga-reader posts with exact chapters at eps 74/85/86/89/96, CBR, ANN, Sportskeeda/WDTALO at ep 99, and chapter-final cliffhangers such as Kakizaki's point-blank shot = last panel of ch 142). Structural surprise: the S2 premiere re-adapts what the S1 finale had pulled forward (ch 120 tail, 121 p.1-11, 123 p.9-19, 124) and skips ch 122 entirely, and the S1 finale had grafted three pages of ch 136; the stored ep 73 chapters_adapted is garbled and is repaired here. Sixteen episodes end mid-chapter, so 16 continue points are supplied; the series ends at ch 196 p.4, which means the entry's continue_from_chapter=197 is one chapter late (flagged). No type corrections; all 26 rows are canon and cumulative numbering 74-99 is confirmed by Wikipedia, fandom and worldtriggerwiki.",
+  "anchors": [
+    {
+      "episode": 74,
+      "end_chapter": 125,
+      "start_chapter": 121,
+      "chapters_adapted": "120 (p.17-19), 121 (p.1-11), 123 (p.9-19), 124-125",
+      "volume": 15,
+      "confidence": "high",
+      "note": "S2 premiere (S2E1). Re-adapts material S1 ep 73 had pulled forward: ch 120 tail, 121 p.1-11, 123 p.9-19 and all of 124, then advances through 125 (Galopoula raid on HQ). Ch 122 (Ai Kitora 5) is NOT in this episode - it was adapted only in ep 73. START=121: p.1-11 is the head of the chapter (the remainder was adapted in eps 72-73), so 121 is where an S2 reader begins; the 120 tail is 3 pages. Independent: MAL poster 'half chapter 121 and 123 and full chapter 124 125' + 'they decided to redo the parts they covered in ep 73'; CBR 'premiere starts from Chapter 121'.",
+      "sources": [
+        "https://worldtrigger.fandom.com/wiki/The_Attack",
+        "https://worldtrigger.fandom.com/wiki/Galopoula_4",
+        "https://worldtriggerwiki.com/wiki/The_Attack",
+        "https://www.animefillerguide.com/anime/world-trigger/",
+        "https://myanimelist.net/forum/?topicid=1887807",
+        "https://www.cbr.com/world-trigger-season-2-most-improved-anime/"
+      ]
+    },
+    {
+      "episode": 75,
+      "end_chapter": 129,
+      "start_chapter": 126,
+      "chapters_adapted": "126-128, 129 (p.1-9)",
+      "volume": 15,
+      "confidence": "medium",
+      "note": "S2E2. Border's counterattack on Galopoula; top attackers vs Gatlin/Ratarykov begins. Ends mid-129 (p.1-9). Fandom (page-level) + worldtriggerwiki + afg agree exactly; MAL thread only corroborates arc content (Jin's side effect, Yomi's trion-soldier controller), no end-pinning independent check - hence medium.",
+      "sources": [
+        "https://worldtrigger.fandom.com/wiki/Collision",
+        "https://worldtrigger.fandom.com/wiki/Galopoula_8",
+        "https://worldtriggerwiki.com/wiki/Collision",
+        "https://www.animefillerguide.com/anime/world-trigger/",
+        "https://myanimelist.net/forum/?topicid=1889467"
+      ]
+    },
+    {
+      "episode": 76,
+      "end_chapter": 132,
+      "start_chapter": 130,
+      "chapters_adapted": "129 (p.10-19), 130-132",
+      "volume": 15,
+      "confidence": "high",
+      "note": "S2E3. Nasu defeats Wen So (ch 130), Miwa/Yosuke/Jin defeat Koskero (ch 131), Reghindetz's feint and the Gatlin/Rata fight still unresolved at episode end (Gatlin falls in ch 133, next ep) - MAL thread describes exactly this state ('two enemies already captured', arc to conclude next episode). START=130 by majority rule (129 p.10-19 is a 10-page tail of a 66-page episode).",
+      "sources": [
+        "https://worldtrigger.fandom.com/wiki/Decisive_Battle",
+        "https://worldtrigger.fandom.com/wiki/Galopoula_11",
+        "https://worldtriggerwiki.com/wiki/Decisive_Battle",
+        "https://www.animefillerguide.com/anime/world-trigger/",
+        "https://myanimelist.net/forum/?topicid=1891350"
+      ]
+    },
+    {
+      "episode": 77,
+      "end_chapter": 136,
+      "start_chapter": 133,
+      "chapters_adapted": "133-135, 136 (p.1-12, 19)",
+      "volume": 16,
+      "confidence": "high",
+      "note": "S2E4. Gatlin/Rata defeated (133), Yotaro fake-death and Hyuse's bet with Jin (134-135, chapter titles 'Yotaro Rindo 2'/'Hyuse'), Galopoula retreats and Round 5 is about to begin (136). MAL thread: fake-death scheme, retreat, 'squad preparing for B-Rank Wars resumption' = 136. Ends mid-136: p.1-12 plus the final page 19; p.13-18 deferred to ep 78.",
+      "sources": [
+        "https://worldtrigger.fandom.com/wiki/Destiny",
+        "https://worldtrigger.fandom.com/wiki/Galopoula_13",
+        "https://worldtriggerwiki.com/wiki/Destiny",
+        "https://www.animefillerguide.com/anime/world-trigger/",
+        "https://myanimelist.net/forum/?topicid=1893260",
+        "https://en.wikipedia.org/wiki/List_of_World_Trigger_chapters"
+      ]
+    },
+    {
+      "episode": 78,
+      "end_chapter": 139,
+      "start_chapter": 137,
+      "chapters_adapted": "136 (p.12-19), 137-138, 139 (p.1-18)",
+      "volume": 16,
+      "confidence": "high",
+      "note": "S2E5. Round 5 (Tamakoma-2 vs Katori vs Kakizaki) begins, ch 137 'Katori Squad'; spider-wire strategy (138); ends with Chika switching to Ibis and firing at the building (139 p.18) - MAL thread: 'ending with Chika's strategic weapon switch'. Only p.19 of 139 remains for ep 79. START=137 (136 p.12-19 is an 8-page tail).",
+      "sources": [
+        "https://worldtrigger.fandom.com/wiki/New_Technique",
+        "https://worldtrigger.fandom.com/wiki/Tamakoma_Second_10",
+        "https://worldtriggerwiki.com/wiki/New_Technique",
+        "https://www.animefillerguide.com/anime/world-trigger/",
+        "https://myanimelist.net/forum/?topicid=1895322",
+        "https://en.wikipedia.org/wiki/List_of_World_Trigger_chapters"
+      ]
+    },
+    {
+      "episode": 79,
+      "end_chapter": 142,
+      "start_chapter": 140,
+      "chapters_adapted": "139 (p.19), 140-142",
+      "volume": 16,
+      "confidence": "high",
+      "note": "S2E6. Chika's bombardment (140-141), Kakizaki backstory (142 'Kuniharu Kakizaki'); cliffhanger = Kakizaki shoots Yuma point-blank, which is the final panel of ch 142 (fandom long summary) and the cliffhanger every MAL poster discusses. Exact end pinned independently. Aired 2021-02-21 after a one-week earthquake delay (Wikipedia).",
+      "sources": [
+        "https://worldtrigger.fandom.com/wiki/Strong_Will",
+        "https://worldtrigger.fandom.com/wiki/Kuniharu_Kakizaki_(chapter)",
+        "https://worldtriggerwiki.com/wiki/Strong_Will",
+        "https://www.animefillerguide.com/anime/world-trigger/",
+        "https://myanimelist.net/forum/?topicid=1899303",
+        "https://en.wikipedia.org/wiki/World_Trigger_season_2"
+      ]
+    },
+    {
+      "episode": 80,
+      "end_chapter": 145,
+      "start_chapter": 143,
+      "chapters_adapted": "143-145",
+      "volume": 17,
+      "confidence": "high",
+      "note": "S2E7. Round 5 conclusion: Osamu takes two points with wires (143), Katori/Somei flashback (144 'Yoko Katori'), Yuma finishes the wire-restrained Katori with Scorpion = last page of ch 145. MAL thread describes exactly these beats and the round ending. Clean chapter end.",
+      "sources": [
+        "https://worldtrigger.fandom.com/wiki/Showdown",
+        "https://worldtrigger.fandom.com/wiki/Tamakoma_Second_13",
+        "https://worldtriggerwiki.com/wiki/Showdown",
+        "https://www.animefillerguide.com/anime/world-trigger/",
+        "https://myanimelist.net/forum/?topicid=1901294",
+        "https://en.wikipedia.org/wiki/List_of_World_Trigger_chapters"
+      ]
+    },
+    {
+      "episode": 81,
+      "end_chapter": 148,
+      "start_chapter": 146,
+      "chapters_adapted": "146-147, 148 (p.1-7)",
+      "volume": 17,
+      "confidence": "high",
+      "note": "S2E8. Post-match review (146), Hyuse states he will join Tamakoma-2 if taken to Aftokrator (147 'Hyuse 2'); ends as Osamu goes to Border's upper echelons (147 end / 148 p.1-7). MAL thread: 'ending with the team preparing to present the proposal to higher-ups'. Ends mid-148.",
+      "sources": [
+        "https://worldtrigger.fandom.com/wiki/Negotiation",
+        "https://worldtrigger.fandom.com/wiki/Osamu_Mikumo_15",
+        "https://worldtriggerwiki.com/wiki/Negotiation",
+        "https://www.animefillerguide.com/anime/world-trigger/",
+        "https://myanimelist.net/forum/?topicid=1903319",
+        "https://en.wikipedia.org/wiki/List_of_World_Trigger_chapters"
+      ]
+    },
+    {
+      "episode": 82,
+      "end_chapter": 150,
+      "start_chapter": 149,
+      "chapters_adapted": "148 (p.7-19), 149, 150 (p.1-17)",
+      "volume": 17,
+      "confidence": "high",
+      "note": "S2E9. Kido meeting and Hyuse's enrollment conditions incl. Chika as engineer (148-149), then strategizing for Round 6 (150). MAL thread: 'higher ups not allowing... Hyuse joining conditions... upcoming rank wars'. START=149 by majority rule (148 p.7-19 is 13 of the episode's ~48 pages); ends mid-150 (p.1-17).",
+      "sources": [
+        "https://worldtrigger.fandom.com/wiki/Captain",
+        "https://worldtrigger.fandom.com/wiki/Tamakoma_Second_15",
+        "https://worldtriggerwiki.com/wiki/Captain",
+        "https://www.animefillerguide.com/anime/world-trigger/",
+        "https://myanimelist.net/forum/?topicid=1905311"
+      ]
+    },
+    {
+      "episode": 83,
+      "end_chapter": 153,
+      "start_chapter": 151,
+      "chapters_adapted": "150 (p.17-19), 151-152, 153 (p.1-13)",
+      "volume": 18,
+      "confidence": "high",
+      "note": "S2E10. Round 6 (Tamakoma-2 vs Oji vs Ikoma): Oji plans to target Osamu's wires (151), match begins (152), cliffhanger with Yuma engaging Oji Squad as Ikoma arrives (153 'Tatsuhito Ikoma' p.1-13). MAL thread: setup, Osamu's wires countered by Oji, Kuga engages the black team at the end. Ends mid-153.",
+      "sources": [
+        "https://worldtrigger.fandom.com/wiki/The_Upper_Ranks",
+        "https://worldtrigger.fandom.com/wiki/Tatsuhito_Ikoma_(chapter)",
+        "https://worldtriggerwiki.com/wiki/The_Upper_Ranks",
+        "https://www.animefillerguide.com/anime/world-trigger/",
+        "https://myanimelist.net/forum/?topicid=1907486",
+        "https://en.wikipedia.org/wiki/List_of_World_Trigger_chapters"
+      ]
+    },
+    {
+      "episode": 84,
+      "end_chapter": 157,
+      "start_chapter": 154,
+      "chapters_adapted": "153 (p.13-19), 154-156, 157 (p.1-10)",
+      "volume": 18,
+      "confidence": "high",
+      "note": "S2E11. Round 6 melee: Kurauchi/Kashio eliminated, Osamu taken by Oji, Chika blasts terrain to escape, Yuma's Grasshopper-debris trip on Oji (157 p.1-10). MAL thread lists these beats (grasshopper debris = ch 157) and the three-way standoff. Ends mid-157.",
+      "sources": [
+        "https://worldtrigger.fandom.com/wiki/The_Strong_Ones",
+        "https://worldtrigger.fandom.com/wiki/Tamakoma_Second_18",
+        "https://worldtriggerwiki.com/wiki/The_Strong_Ones",
+        "https://www.animefillerguide.com/anime/world-trigger/",
+        "https://myanimelist.net/forum/?topicid=1909346",
+        "https://en.wikipedia.org/wiki/List_of_World_Trigger_chapters"
+      ]
+    },
+    {
+      "episode": 85,
+      "end_chapter": 160,
+      "start_chapter": 158,
+      "chapters_adapted": "157 (p.10-19), 158-159, 160 (p.1-11, 14-16)",
+      "volume": 18,
+      "confidence": "high",
+      "note": "S2 finale (S2E12). Round 6 ends in Tamakoma-2's win (157-158), Hyuse's one-day rise to B-rank (159 'Hyuse 3'), joins as 4th combatant (160 'Hyuse 4'). ANN review: ends 'once Hyuse gets suited up in his Tamakoma 2 uniform'; MAL poster: 'doesn't adapt the entirety of chapter 160, the rest will be in S3'. Ends mid-160 (p.12-13, 17-19 deferred to ep 86). afg season line 'adapted from manga 120 to 160'.",
+      "sources": [
+        "https://worldtrigger.fandom.com/wiki/New_Face",
+        "https://worldtrigger.fandom.com/wiki/Hyuse_4",
+        "https://worldtriggerwiki.com/wiki/New_Face",
+        "https://www.animefillerguide.com/anime/world-trigger/",
+        "https://myanimelist.net/forum/?topicid=1911619",
+        "https://www.animenewsnetwork.com/review/world-trigger-season-2/episode-12/.171455"
+      ]
+    },
+    {
+      "episode": 86,
+      "end_chapter": 162,
+      "start_chapter": 161,
+      "chapters_adapted": "160 (p.12-19), 161-162",
+      "volume": 19,
+      "confidence": "high",
+      "note": "S3 premiere (S3E1). Finishes ch 160, then Yuri Rindo & Michael Cronin return and Border's founding history is told in Kido's old room (161-162 'Tamakoma Branch 4-5'). MAL S3E1 thread describes exactly these beats; MAL S3E4 poster: 'the adaptation of this season started in chapter 160'. Clean chapter end.",
+      "sources": [
+        "https://worldtrigger.fandom.com/wiki/New_Start",
+        "https://worldtrigger.fandom.com/wiki/Tamakoma_Branch_5",
+        "https://worldtriggerwiki.com/wiki/New_Start",
+        "https://www.animefillerguide.com/anime/world-trigger/",
+        "https://myanimelist.net/forum/?topicid=1963257",
+        "https://myanimelist.net/forum/?topicid=1968581"
+      ]
+    },
+    {
+      "episode": 87,
+      "end_chapter": 165,
+      "start_chapter": 163,
+      "chapters_adapted": "163-164, 165 (p.1-11)",
+      "volume": 19,
+      "confidence": "high",
+      "note": "S3E2. Ema at Kageura's family okonomiyaki shop with the rivals (163 'Yuzuru Ema 2'), Osamu/Usami trigger talk and anxiety (164), pre-match prep (165 p.1-11). MAL thread: training, Chika's struggle, okonomiyaki dinner with rivals, loadout decisions. Ends mid-165.",
+      "sources": [
+        "https://worldtrigger.fandom.com/wiki/Choice",
+        "https://worldtrigger.fandom.com/wiki/Osamu_Mikumo_16",
+        "https://worldtriggerwiki.com/wiki/Choice",
+        "https://www.animefillerguide.com/anime/world-trigger/",
+        "https://myanimelist.net/forum/?topicid=1965055",
+        "https://en.wikipedia.org/wiki/List_of_World_Trigger_chapters"
+      ]
+    },
+    {
+      "episode": 88,
+      "end_chapter": 168,
+      "start_chapter": 166,
+      "chapters_adapted": "165 (p.12-19), 166-167, 168 (p.1)",
+      "volume": 19,
+      "confidence": "high",
+      "note": "S3E3. Round 7 (Tamakoma-2 vs Azuma vs Kageura vs Suzunari-1) strategy phases (165-166), night-time mall map, Murakami reveals the Black Kogetsu (last page of ch 167); only p.1 of 168 is adapted. MAL thread: strategizing most of the runtime, black Kogetsu, combat begins at the very end. END=168 nominally; reader position is effectively the start of 168.",
+      "sources": [
+        "https://worldtrigger.fandom.com/wiki/Strategy",
+        "https://worldtrigger.fandom.com/wiki/Suzunari_First_3",
+        "https://worldtriggerwiki.com/wiki/Strategy",
+        "https://www.animefillerguide.com/anime/world-trigger/",
+        "https://myanimelist.net/forum/?topicid=1966845"
+      ]
+    },
+    {
+      "episode": 89,
+      "end_chapter": 171,
+      "start_chapter": 168,
+      "chapters_adapted": "168-170, 171 (p.1-10)",
+      "volume": 20,
+      "confidence": "high",
+      "note": "S3E4. Suzunari-1's fuse-box lights-out tactic (168), Yuma+Hyuse team up (169), Kageura cornered and bails out (170-171). MAL poster (manga reader): 'episode 4 ended at chapter 171' - exact independent pin. START=168 because ep 88 adapted only its first page. Ends mid-171 (p.1-10).",
+      "sources": [
+        "https://worldtrigger.fandom.com/wiki/Secret_Plan",
+        "https://worldtrigger.fandom.com/wiki/Hyuse_5",
+        "https://worldtriggerwiki.com/wiki/Secret_Plan",
+        "https://www.animefillerguide.com/anime/world-trigger/",
+        "https://myanimelist.net/forum/?topicid=1968581"
+      ]
+    },
+    {
+      "episode": 90,
+      "end_chapter": 173,
+      "start_chapter": 172,
+      "chapters_adapted": "171 (p.10-19), 172-173",
+      "volume": 20,
+      "confidence": "high",
+      "note": "S3E5. Yuma+Hyuse eliminate Murakami (171-172), Osamu bails out after Azuma's ambush (172 end/173), Chika's Meteor guts the mall (173 'Azuma Squad'); ends on the Azuma-vs-Tamakoma endgame setup (173 end: 3 points from No.2). MAL thread lists these beats. Clean chapter end.",
+      "sources": [
+        "https://worldtrigger.fandom.com/wiki/Unrivaled",
+        "https://worldtrigger.fandom.com/wiki/Azuma_Squad_(chapter)",
+        "https://worldtriggerwiki.com/wiki/Unrivaled",
+        "https://www.animefillerguide.com/anime/world-trigger/",
+        "https://myanimelist.net/forum/?topicid=1970310",
+        "https://en.wikipedia.org/wiki/List_of_World_Trigger_chapters"
+      ]
+    },
+    {
+      "episode": 91,
+      "end_chapter": 175,
+      "start_chapter": 174,
+      "chapters_adapted": "174-175",
+      "volume": 20,
+      "confidence": "high",
+      "note": "S3E6. Round 7 conclusion: Azuma's dummy beacons (174), Hyuse sniped and bails out, Chika's Meteor barrage forces Azuma Squad out, Tamakoma-2 tied 3rd; last page = Ninomiya/Tsuji/Izumi discussing Tamakoma-2 (175 end). MAL thread: round ends, Hyuse eliminated by Azuma, 3rd place, Ninomiya-Izumi discussion. Exact end pinned.",
+      "sources": [
+        "https://worldtrigger.fandom.com/wiki/Decision",
+        "https://worldtrigger.fandom.com/wiki/Hyuse_7",
+        "https://worldtriggerwiki.com/wiki/Decision",
+        "https://www.animefillerguide.com/anime/world-trigger/",
+        "https://myanimelist.net/forum/?topicid=1971978",
+        "https://en.wikipedia.org/wiki/List_of_World_Trigger_chapters"
+      ]
+    },
+    {
+      "episode": 92,
+      "end_chapter": 177,
+      "start_chapter": 176,
+      "chapters_adapted": "176-177",
+      "volume": 20,
+      "confidence": "high",
+      "note": "S3E7. 'Hyuse is a Neighbor' rumour and Netsuki's PR plan (176 'Eizo Netsuki'), Osamu's captaincy and Round 8 preview (177 'Osamu Mikumo 17'). MAL thread matches (rumours, memory-erasure talk, Round 8 matchups). Two full chapters.",
+      "sources": [
+        "https://worldtrigger.fandom.com/wiki/Premonition",
+        "https://worldtrigger.fandom.com/wiki/Osamu_Mikumo_17",
+        "https://worldtriggerwiki.com/wiki/Premonition",
+        "https://www.animefillerguide.com/anime/world-trigger/",
+        "https://myanimelist.net/forum/?topicid=1973626",
+        "https://en.wikipedia.org/wiki/List_of_World_Trigger_chapters"
+      ]
+    },
+    {
+      "episode": 93,
+      "end_chapter": 179,
+      "start_chapter": 178,
+      "chapters_adapted": "178, 179 (p.1-19)",
+      "volume": 21,
+      "confidence": "high",
+      "note": "S3E8. Yakiniku run-in with Ninomiya Squad / Hatohara talk (178 'Ninomiya Squad'), Chika confronts her inability to shoot people after Hyuse's challenge (179 'Chika Amatori 7'). MAL thread: character episode on exactly this. Ends mid-179 (p.20-21 in ep 94).",
+      "sources": [
+        "https://worldtrigger.fandom.com/wiki/Will",
+        "https://worldtrigger.fandom.com/wiki/Chika_Amatori_7",
+        "https://worldtriggerwiki.com/wiki/Will",
+        "https://www.animefillerguide.com/anime/world-trigger/",
+        "https://myanimelist.net/forum/?topicid=1975223",
+        "https://en.wikipedia.org/wiki/List_of_World_Trigger_chapters"
+      ]
+    },
+    {
+      "episode": 94,
+      "end_chapter": 181,
+      "start_chapter": 180,
+      "chapters_adapted": "179 (p.20-21), 180-181",
+      "volume": 21,
+      "confidence": "high",
+      "note": "S3E9. Midorikawa introduces Satomi (180 'Kazuma Satomi'); Yuma spars Obishima, then Yuba's quick-draw humbles him (181 'Takuma Yuba'). MAL thread: 'Kuga schools Yukari... then humiliated by her commander Yuba'. Clean chapter end.",
+      "sources": [
+        "https://worldtrigger.fandom.com/wiki/Formidable_Opponent",
+        "https://worldtrigger.fandom.com/wiki/Takuma_Yuba_(chapter)",
+        "https://worldtriggerwiki.com/wiki/Formidable_Opponent",
+        "https://www.animefillerguide.com/anime/world-trigger/",
+        "https://myanimelist.net/forum/?topicid=1976918",
+        "https://en.wikipedia.org/wiki/List_of_World_Trigger_chapters"
+      ]
+    },
+    {
+      "episode": 95,
+      "end_chapter": 184,
+      "start_chapter": 182,
+      "chapters_adapted": "182-183, 184 (p.1-9)",
+      "volume": 21,
+      "confidence": "medium",
+      "note": "S3E10. Report-back and strength comparisons at Tamakoma Branch (182-183), role shift and first half of the four-squad pre-match planning (184 p.1-9). MAL thread confirms a setup-only episode (final battle 'still one episode away'); no independent pin of the 183/184 seam - hence medium. Ends mid-184.",
+      "sources": [
+        "https://worldtrigger.fandom.com/wiki/Change_of_Plans",
+        "https://worldtrigger.fandom.com/wiki/Yuba_Squad_(chapter)",
+        "https://worldtriggerwiki.com/wiki/Change_of_Plans",
+        "https://www.animefillerguide.com/anime/world-trigger/",
+        "https://myanimelist.net/forum/?topicid=1978678"
+      ]
+    },
+    {
+      "episode": 96,
+      "end_chapter": 187,
+      "start_chapter": 185,
+      "chapters_adapted": "184 (p.9-23), 185-186, 187 (p.1-3)",
+      "volume": 21,
+      "confidence": "high",
+      "note": "S3E11. Round 8 (Tamakoma-2 vs Ninomiya vs Yuba vs Ikoma) begins (184 end/185 'Ninomiya Squad 2'), Hyuse isolated against the temporary alliance (186 'Hyuse 8'), cliffhanger at 187 p.1-3. MAL poster gives the continuation point as 'Chapter 187' - exact independent pin. START=185 by majority rule (184 p.9-23 is a 15-page tail).",
+      "sources": [
+        "https://worldtrigger.fandom.com/wiki/Final_Round",
+        "https://worldtrigger.fandom.com/wiki/Yuba_Squad_2",
+        "https://worldtriggerwiki.com/wiki/Final_Round",
+        "https://www.animefillerguide.com/anime/world-trigger/",
+        "https://myanimelist.net/forum/?topicid=1980339"
+      ]
+    },
+    {
+      "episode": 97,
+      "end_chapter": 189,
+      "start_chapter": 187,
+      "chapters_adapted": "187 (p.3-23), 188-189",
+      "volume": 22,
+      "confidence": "high",
+      "note": "S3E12. Hyuse's 1-v-6 stand (187-188), Chika's Meteor sniped by Tonooka (188 'Hyuse 9'), Hyuse takes out Ikoma with Viper and bails out (189 'Chika Amatori 8'). MAL thread: exactly these beats. START=187 because ep 96 adapted only p.1-3 of it. Clean chapter end.",
+      "sources": [
+        "https://worldtrigger.fandom.com/wiki/Melee",
+        "https://worldtrigger.fandom.com/wiki/Chika_Amatori_8",
+        "https://worldtriggerwiki.com/wiki/Melee",
+        "https://www.animefillerguide.com/anime/world-trigger/",
+        "https://myanimelist.net/forum/?topicid=1982058",
+        "https://en.wikipedia.org/wiki/List_of_World_Trigger_chapters"
+      ]
+    },
+    {
+      "episode": 98,
+      "end_chapter": 193,
+      "start_chapter": 190,
+      "chapters_adapted": "190-192, 193 (p.1)",
+      "volume": 22,
+      "confidence": "high",
+      "note": "S3E13. Free-for-all after Hyuse's exit (190), sniper hunt, Yuma's pinball combo vs Obishima (191-192 'Masataka Ninomiya 3'), Ninomiya vs Yuba resolved on the first page of 193. MAL thread: everyone fighting, sniper trap, Kuga's pinball technique, 'Yuba and Ninomiya short but sweet'. Only p.1 of 193 adapted.",
+      "sources": [
+        "https://worldtrigger.fandom.com/wiki/One-on-One",
+        "https://worldtrigger.fandom.com/wiki/Masataka_Ninomiya_4",
+        "https://worldtriggerwiki.com/wiki/One-on-One",
+        "https://www.animefillerguide.com/anime/world-trigger/",
+        "https://myanimelist.net/forum/?topicid=1985339",
+        "https://en.wikipedia.org/wiki/List_of_World_Trigger_chapters"
+      ]
+    },
+    {
+      "episode": 99,
+      "end_chapter": 196,
+      "start_chapter": 193,
+      "chapters_adapted": "193 (p.2-17), 194-195, 196 (p.1-4)",
+      "volume": 22,
+      "confidence": "high",
+      "note": "S3 finale (S3E14). Ninomiya's Hornet stalemate (193), final assault (194), Chika's killing shot on Tsuji and Tamakoma-2's win (195), first four pages of the post-match review (196). Sportskeeda: 'adapted chapters 193-196... only four pages of chapter 196'; WDTALO: ends vol 22 ch 196, first few pages. Confirms existing anchor 196. Aired 2022-01-23 after the Tonga-eruption delay.",
+      "sources": [
+        "https://worldtrigger.fandom.com/wiki/Resolution",
+        "https://worldtrigger.fandom.com/wiki/Tamakoma_Second_24",
+        "https://worldtriggerwiki.com/wiki/Resolution",
+        "https://www.animefillerguide.com/anime/world-trigger/",
+        "https://www.sportskeeda.com/anime/where-pick-world-trigger-manga-anime-explained",
+        "https://wheredoestheanimeleaveoff.com/where-does-the-world-trigger-anime-end-in-the-manga/",
+        "https://mangashed.com/where-does-the-world-trigger-anime-end-in-the-manga/"
+      ]
+    }
+  ],
+  "continue_points": [
+    {
+      "episode": 75,
+      "continue_chapter": 129,
+      "note": "ends at ch 129 p.9 of 19; ep 76 resumes at p.10"
+    },
+    {
+      "episode": 77,
+      "continue_chapter": 136,
+      "note": "ends mid-136 (p.1-12 shown plus final p.19); p.13-18 are in ep 78"
+    },
+    {
+      "episode": 78,
+      "continue_chapter": 139,
+      "note": "ends at ch 139 p.18 of 19 - only the last page remains (Chika's shot); resuming at 140 loses one page"
+    },
+    {
+      "episode": 81,
+      "continue_chapter": 148,
+      "note": "ends at ch 148 p.7 (Osamu's meeting with Kido has just started)"
+    },
+    {
+      "episode": 82,
+      "continue_chapter": 150,
+      "note": "ends at ch 150 p.17 of 19"
+    },
+    {
+      "episode": 83,
+      "continue_chapter": 153,
+      "note": "ends at ch 153 p.13"
+    },
+    {
+      "episode": 84,
+      "continue_chapter": 157,
+      "note": "ends at ch 157 p.10"
+    },
+    {
+      "episode": 85,
+      "continue_chapter": 160,
+      "note": "S2 finale ends mid-160 (p.1-11, 14-16 shown); p.12-19 are re-covered by S3 premiere ep 86"
+    },
+    {
+      "episode": 87,
+      "continue_chapter": 165,
+      "note": "ends at ch 165 p.11"
+    },
+    {
+      "episode": 88,
+      "continue_chapter": 168,
+      "note": "only p.1 of ch 168 adapted - reader effectively resumes at the start of 168"
+    },
+    {
+      "episode": 89,
+      "continue_chapter": 171,
+      "note": "ends at ch 171 p.10 of 20"
+    },
+    {
+      "episode": 93,
+      "continue_chapter": 179,
+      "note": "ends at ch 179 p.19; p.20-21 open ep 94"
+    },
+    {
+      "episode": 95,
+      "continue_chapter": 184,
+      "note": "ends at ch 184 p.9 (pre-match planning)"
+    },
+    {
+      "episode": 96,
+      "continue_chapter": 187,
+      "note": "ends at ch 187 p.3 - MAL manga reader gives 'Chapter 187' as the continuation point"
+    },
+    {
+      "episode": 98,
+      "continue_chapter": 193,
+      "note": "only p.1 of ch 193 adapted"
+    },
+    {
+      "episode": 99,
+      "continue_chapter": 196,
+      "note": "series ends at ch 196 p.4 of 23 (Sportskeeda, WDTALO, fandom page split); a reader should resume at 196, not 197 - entry continue_from_chapter=197 is one chapter late"
+    }
+  ],
+  "annotations": [
+    {
+      "episodes": [
+        73,
+        74
+      ],
+      "kind": "rearranged",
+      "chapters": "120-125",
+      "note": "S1 finale (ep 73) pulled forward ch 121 p.15-19, all of 122, 123 p.1-8/12-13/17-19 and 124 p.1-2/6-18 to close S1; S2 premiere (ep 74, five years later) re-adapts ch 120 p.17-19, 121 p.1-11, 123 p.9-19 and 124 in full before advancing to 125. Ch 122 appears only in ep 73."
+    },
+    {
+      "episodes": [
+        73
+      ],
+      "kind": "graft",
+      "chapters": "136",
+      "note": "S1 finale grafted ch 136 p.12 and 18-19 (post-invasion 'Round 5 begins' beat) twelve chapters ahead of its place; ep 78 later adapts 136 p.12-19 in sequence."
+    },
+    {
+      "episodes": [
+        77,
+        78
+      ],
+      "kind": "partial",
+      "chapters": "136",
+      "note": "ep 77 shows ch 136 p.1-12 and jumps to the final page 19; ep 78 opens by covering p.12-19 in order."
+    },
+    {
+      "episodes": [
+        85,
+        86
+      ],
+      "kind": "partial",
+      "chapters": "160",
+      "note": "S2 finale adapts ch 160 p.1-11 and 14-16 (skipping p.12-13, 17-19); S3 premiere re-covers p.12-19, so the 160 seam straddles the season break."
+    },
+    {
+      "episodes": [
+        88,
+        89
+      ],
+      "kind": "partial",
+      "chapters": "168",
+      "note": "ep 88 adapts only p.1 of ch 168 (the combat kickoff); ep 89 adapts 168 in full - START of ep 89 is 168."
+    },
+    {
+      "episodes": [
+        96,
+        97
+      ],
+      "kind": "partial",
+      "chapters": "187",
+      "note": "ep 96 ends on ch 187 p.1-3; ep 97 adapts 187 p.3-23 - START of ep 97 is 187."
+    },
+    {
+      "episodes": [
+        98,
+        99
+      ],
+      "kind": "partial",
+      "chapters": "193",
+      "note": "ep 98 adapts only p.1 of ch 193 (Yuba bails out); ep 99 adapts 193 p.2-17 - START of ep 99 is 193."
+    }
+  ],
+  "type_corrections": [],
+  "repairs": [
+    {
+      "episode": 73,
+      "field": "chapters_adapted",
+      "old": "121, 121, 123-124",
+      "new": "121 (p.15-19), 122, 123 (p.1-8, 12-13, 17-19), 124 (p.1-2, 6-18), 136 (p.12, 18-19)",
+      "why": "stored list is garbled (121 duplicated, 122 omitted, the ch 136 graft omitted). end_chapter 124 and start 121 stand. Adjacent to the target range and needed to explain ep 74's re-adaptation.",
+      "sources": [
+        "https://worldtrigger.fandom.com/wiki/To_The_Future",
+        "https://worldtriggerwiki.com/wiki/To_The_Future",
+        "https://worldtrigger.fandom.com/wiki/Ai_Kitora_5"
+      ]
+    }
+  ],
+  "structure": {
+    "notes": "Three season entries confirmed and cumulative numbering verified: 20729 = eps 1-73; 114087 (World Trigger 2nd Season, 12 eps, 2021-01-10..2021-04-04) = our 74-85; 127400 (World Trigger 3rd Season, 14 eps, 2021-10-10..2022-01-23) = our 86-99. Wikipedia's episode list numbers S2 as 74-85 and S3 as 86-99; fandom infobox '|Episode = 74 |Number = 1'; worldtriggerwiki '|Total = 85 |Episode = 12' - all identical to our numbering, so the only conversions applied were MAL/ANN per-season thread numbers (S2 ep N = our 73+N; S3 ep N = our 85+N). No OVAs, movies or specials exist for this franchise; no order-only entries. Coverage: S2 = ch 120 (3-page tail) .. 160 (vols 15-18), S3 = ch 160 .. 196 p.4 (vols 18-22); afg's season lines ('120 to 160', '160 to 196') match. S3 was extended from 12 to 14 episodes in Dec 2021; ep 79 aired a week late (2021 Fukushima earthquake coverage) and ep 99 a week late (2022 Tonga eruption coverage) - our air dates already reflect the TV Asahi dates. No filler in S2/S3 (all filler is S1 eps 49-63); all 26 rows correctly typed canon. Title variants seen: afg calls ep 85 'Rookie', ep 91 'Judgment', ep 99 'Resolve'; fandom calls ep 76 'Decisive Battle' - our Crunchyroll titles match Wikipedia.",
+    "order_only": []
+  },
+  "flags_for_sean": [
+    "continue_from_chapter: entry says 197, but ep 99 adapts only ch 196 p.1-4 of 23 (fandom page split; Sportskeeda 'only four pages of chapter 196'; WDTALO 'the anime only adapts the first few pages'). Recommend continue point 196 (mangashed's '197' skips the rest of the post-match review). Source: https://www.sportskeeda.com/anime/where-pick-world-trigger-manga-anime-explained , https://wheredoestheanimeleaveoff.com/where-does-the-world-trigger-anime-end-in-the-manga/ , https://worldtrigger.fandom.com/wiki/Resolution",
+    "Source independence: animefillerguide's 26 per-episode lists are identical to the fandom wiki's (including the odd '120,121,123,124,125' list for ep 74), and worldtriggerwiki.com is the same community post-fandom migration - treat the three as one lineage. Independent pins used instead: MAL manga-reader posts (ep 74 exact chapters; ep 85 '160 not fully adapted'; ep 86 'season started in ch 160'; ep 89 'ended at ch 171'; ep 96 'continue at ch 187'), CBR (S2 starts ch 121), ANN S2E12 review, Sportskeeda/WDTALO (ep 99), and chapter-final events matched against fandom chapter summaries elsewhere. Eps 75 and 95 have no end-pinning independent check and are marked medium.",
+    "START convention applied (Sean's majority rule): opening tails smaller than the bulk of the episode -> START = next full chapter (eps 76, 78, 79, 82, 83, 84, 85, 86, 88, 90, 94, 96). Exceptions noted in-line: ep 74 START=121 (p.1-11 is the chapter head; its remainder was already adapted in S1), eps 89/97/99 START = the chapter whose previous-episode share was 1-3 pages. Page splits are all preserved in chapters_adapted if you prefer a different convention.",
+    "Low priority, outside range: ep 72's stored end 121 rests on ch 121 p.1-2 and 12-15 only (bulk is 119-120 p.1-16); the honest resume point after ep 72 is ch 120 p.17. Consider a continue point of 120 for ep 72 if S1's tail is ever re-passed."
+  ]
+}

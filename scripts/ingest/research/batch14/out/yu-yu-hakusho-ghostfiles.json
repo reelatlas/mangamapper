@@ -1,0 +1,552 @@
+{
+  "series_id": "yu-yu-hakusho-ghostfiles",
+  "summary": "Episodes 1-24 adapt manga chapters 1-49 (vols 1-6) of the Spirit Detective saga. The fandom episode pages give a page-level map for eps 1-8 and a half-chapter map for eps 9-27, the fandom chapter pages reverse-confirm ch 1-24 page-for-page, en-WP chapter titles and season-1 summaries pin the chapter identity of almost every episode, and ja-WP independently confirms the cut structure (most of act.1-17 and act.45 never animated; Shizuru's debut moved from act.14 to ep 22). The surprise is the direction of the early distortion: the anime compresses, not pads - 10 of the first 17 chapters (4-6, 8-12, 15-16) are dropped so five episodes cover ch 1-18, while single chapters 7 and 38 are each stretched to a full episode; from ep 9 on the rhythm is a steady ~1.5 chapters per episode, so half the episodes end mid-chapter (continue points given for 10/12/14/18/20/22/23/24). Stored ep 25/26 data matches the fandom exactly (no repairs); a numbering caution is flagged for vol 8+ where en-WP runs +1 vs fandom/JP.",
+  "anchors": [
+    {
+      "episode": 1,
+      "end_chapter": 1,
+      "start_chapter": 1,
+      "chapters_adapted": "1, 2 (p.1-2)",
+      "volume": 1,
+      "confidence": "high",
+      "note": "Ch 1 in full (45 pp); the first two pages of ch 2 close the episode, so END stays 1. Fandom episode and chapter pages agree page-for-page; en-WP ch 1 'Goodbye, Material World!' = Yusuke's death.",
+      "sources": [
+        "https://yuyuhakusho.fandom.com/wiki/Episode_1",
+        "https://en.wikipedia.org/wiki/Yu_Yu_Hakusho_season_1",
+        "https://en.wikipedia.org/wiki/List_of_YuYu_Hakusho_chapters",
+        "https://yuyuhakusho.fandom.com/wiki/Chapter_1",
+        "https://yuyuhakusho.fandom.com/wiki/Chapter_2"
+      ]
+    },
+    {
+      "episode": 2,
+      "end_chapter": 3,
+      "start_chapter": 2,
+      "chapters_adapted": "2 (p.1-6, 12-23), 3 (p.7-20)",
+      "volume": 1,
+      "confidence": "high",
+      "note": "Koenma, the spirit egg and the possession of Kuwabara: ch 2 (p.7-11 dropped) and ch 3 (p.1-6 dropped). Ch 4-6 that follow are manga-only. Fandom ch 2/3 pages reverse-map identically.",
+      "sources": [
+        "https://yuyuhakusho.fandom.com/wiki/Episode_2",
+        "https://en.wikipedia.org/wiki/Yu_Yu_Hakusho_season_1",
+        "https://en.wikipedia.org/wiki/List_of_YuYu_Hakusho_chapters",
+        "https://yuyuhakusho.fandom.com/wiki/Chapter_2",
+        "https://yuyuhakusho.fandom.com/wiki/Chapter_3"
+      ]
+    },
+    {
+      "episode": 3,
+      "end_chapter": 7,
+      "start_chapter": 7,
+      "chapters_adapted": "7",
+      "volume": 1,
+      "confidence": "high",
+      "note": "One 21-page chapter ('The Promise!' = 'A Promise Between Men', title match) stretched to a full episode; ch 4-6 skipped. ja-WP notes an anime-original scene here (dead Yusuke possesses someone other than Kuwabara).",
+      "sources": [
+        "https://yuyuhakusho.fandom.com/wiki/Episode_3",
+        "https://en.wikipedia.org/wiki/Yu_Yu_Hakusho_season_1",
+        "https://en.wikipedia.org/wiki/List_of_YuYu_Hakusho_chapters",
+        "https://yuyuhakusho.fandom.com/wiki/Chapter_7",
+        "https://ja.wikipedia.org/wiki/%E5%B9%BD%E2%98%86%E9%81%8A%E2%98%86%E7%99%BD%E6%9B%B8_(%E3%83%86%E3%83%AC%E3%83%93%E3%82%A2%E3%83%8B%E3%83%A1)"
+      ]
+    },
+    {
+      "episode": 4,
+      "end_chapter": 14,
+      "start_chapter": 13,
+      "chapters_adapted": "13, 14 (p.1-11, 16-17), 17 (p.1-2)",
+      "volume": 2,
+      "confidence": "high",
+      "note": "'Qualifications for a Girlfriend!' (ch 13, title match) and the house fire (ch 14 'Into the Inferno'); ch 14 p.12-15 (Shizuru's manga debut) dropped - ja-WP confirms Shizuru was moved to ep 22; ch 17 p.1-2 close the episode, END stays 14. Ch 8-12 skipped.",
+      "sources": [
+        "https://yuyuhakusho.fandom.com/wiki/Episode_4",
+        "https://en.wikipedia.org/wiki/Yu_Yu_Hakusho_season_1",
+        "https://en.wikipedia.org/wiki/List_of_YuYu_Hakusho_chapters",
+        "https://yuyuhakusho.fandom.com/wiki/Chapter_13",
+        "https://yuyuhakusho.fandom.com/wiki/Chapter_14",
+        "https://yuyuhakusho.fandom.com/wiki/Chapter_17",
+        "https://ja.wikipedia.org/wiki/%E5%B9%BD%E2%98%86%E9%81%8A%E2%98%86%E7%99%BD%E6%9B%B8_(%E3%83%86%E3%83%AC%E3%83%93%E3%82%A2%E3%83%8B%E3%83%A1)"
+      ]
+    },
+    {
+      "episode": 5,
+      "end_chapter": 18,
+      "start_chapter": 17,
+      "chapters_adapted": "17 (p.3-19), 8 (p.11), 18",
+      "volume": 3,
+      "confidence": "high",
+      "note": "Keiko's kiss and the resurrection ('The Golden Awakening!!') then the new mission (ch 18 opens vol 3); a single page of ch 8 grafted; ch 15-16 skipped. Fandom ch 17/18 pages reverse-map identically.",
+      "sources": [
+        "https://yuyuhakusho.fandom.com/wiki/Episode_5",
+        "https://en.wikipedia.org/wiki/Yu_Yu_Hakusho_season_1",
+        "https://en.wikipedia.org/wiki/List_of_YuYu_Hakusho_chapters",
+        "https://yuyuhakusho.fandom.com/wiki/Chapter_17",
+        "https://yuyuhakusho.fandom.com/wiki/Chapter_18",
+        "https://yuyuhakusho.fandom.com/wiki/Chapter_8"
+      ]
+    },
+    {
+      "episode": 6,
+      "end_chapter": 20,
+      "start_chapter": 19,
+      "chapters_adapted": "19-20",
+      "volume": 3,
+      "confidence": "high",
+      "note": "'Action!' + 'The Deadly Trio!!' (= 'Three Monsters'); fandom ch 19/20 pages reverse-map to ep 6 in full.",
+      "sources": [
+        "https://yuyuhakusho.fandom.com/wiki/Episode_6",
+        "https://en.wikipedia.org/wiki/Yu_Yu_Hakusho_season_1",
+        "https://en.wikipedia.org/wiki/List_of_YuYu_Hakusho_chapters",
+        "https://yuyuhakusho.fandom.com/wiki/Chapter_19",
+        "https://yuyuhakusho.fandom.com/wiki/Chapter_20"
+      ]
+    },
+    {
+      "episode": 7,
+      "end_chapter": 22,
+      "start_chapter": 21,
+      "chapters_adapted": "21-22",
+      "volume": 3,
+      "confidence": "high",
+      "note": "'The Muncher of Souls!!' (Gouki) + 'What Binds a Mother and Son!!' (Kurama's mother); reverse-mapped in full.",
+      "sources": [
+        "https://yuyuhakusho.fandom.com/wiki/Episode_7",
+        "https://en.wikipedia.org/wiki/Yu_Yu_Hakusho_season_1",
+        "https://en.wikipedia.org/wiki/List_of_YuYu_Hakusho_chapters",
+        "https://yuyuhakusho.fandom.com/wiki/Chapter_21",
+        "https://yuyuhakusho.fandom.com/wiki/Chapter_22"
+      ]
+    },
+    {
+      "episode": 8,
+      "end_chapter": 24,
+      "start_chapter": 23,
+      "chapters_adapted": "23-24",
+      "volume": 3,
+      "confidence": "high",
+      "note": "'Hiei of the Evil Eye!!' + 'The Fearsome, Gruesome Binding Curse!!'; reverse-mapped in full. Vol 3 runs on to ch 26.",
+      "sources": [
+        "https://yuyuhakusho.fandom.com/wiki/Episode_8",
+        "https://en.wikipedia.org/wiki/Yu_Yu_Hakusho_season_1",
+        "https://en.wikipedia.org/wiki/List_of_YuYu_Hakusho_chapters",
+        "https://yuyuhakusho.fandom.com/wiki/Chapter_23",
+        "https://yuyuhakusho.fandom.com/wiki/Chapter_24"
+      ]
+    },
+    {
+      "episode": 9,
+      "end_chapter": 26,
+      "start_chapter": 25,
+      "chapters_adapted": "25-26",
+      "volume": 3,
+      "confidence": "high",
+      "note": "Genkai's tournament: infiltration and arcade tests (ch 25 'Operation: Infiltrate!!') and the forest trial (ch 26 'The Cursed Forest!!', end of vol 3). Fandom chapter pages from 25 on carry no reverse field; en-WP summary/titles, the fandom Genkai Tournament page and the sandbox arc page (ch 25-32 = eps 9-13) corroborate.",
+      "sources": [
+        "https://yuyuhakusho.fandom.com/wiki/Episode_9",
+        "https://en.wikipedia.org/wiki/Yu_Yu_Hakusho_season_1",
+        "https://en.wikipedia.org/wiki/List_of_YuYu_Hakusho_chapters",
+        "https://yuyuhakusho.fandom.com/wiki/Genkai_Tournament",
+        "https://yyh-sandbox.fandom.com/wiki/A_New_Apprentice"
+      ]
+    },
+    {
+      "episode": 10,
+      "end_chapter": 28,
+      "start_chapter": 27,
+      "chapters_adapted": "27, 28 (first half)",
+      "volume": 4,
+      "confidence": "high",
+      "note": "Dark-temple first round (ch 27 'Mortal Maneuvers in the Dark!!') and the start of the Kibano fight (ch 28, JP title 'Martial Artist Kibano'); ends mid-ch 28 before the cigarette trick.",
+      "sources": [
+        "https://yuyuhakusho.fandom.com/wiki/Episode_10",
+        "https://en.wikipedia.org/wiki/Yu_Yu_Hakusho_season_1",
+        "https://en.wikipedia.org/wiki/List_of_YuYu_Hakusho_chapters",
+        "https://yuyuhakusho.fandom.com/wiki/Chapter_28"
+      ]
+    },
+    {
+      "episode": 11,
+      "end_chapter": 29,
+      "start_chapter": 28,
+      "chapters_adapted": "28 (second half), 29",
+      "volume": 4,
+      "confidence": "high",
+      "note": "Kibano beaten via the lit cigarette (rest of ch 28) + the Kazemaru semifinal ('Kaze-Maru - Ninja!!'). Typed mixed (animefillerlist): padded fight choreography, no chapter displaced.",
+      "sources": [
+        "https://yuyuhakusho.fandom.com/wiki/Episode_11",
+        "https://en.wikipedia.org/wiki/Yu_Yu_Hakusho_season_1",
+        "https://en.wikipedia.org/wiki/List_of_YuYu_Hakusho_chapters",
+        "https://yuyuhakusho.fandom.com/wiki/Chapter_28",
+        "https://www.animefillerlist.com/shows/yuyu-hakusho"
+      ]
+    },
+    {
+      "episode": 12,
+      "end_chapter": 31,
+      "start_chapter": 30,
+      "chapters_adapted": "30, 31 (first half)",
+      "volume": 4,
+      "confidence": "high",
+      "note": "'Shaolin = Rando!?' (ch 30, = 'Rando Rises') and the opening of the Yusuke-Rando fight (ch 31 'The Raging Fist!!'); ends as Shorin transforms into Rando, mid-ch 31 (fandom ch 31 summary places the transformation mid-chapter).",
+      "sources": [
+        "https://yuyuhakusho.fandom.com/wiki/Episode_12",
+        "https://en.wikipedia.org/wiki/Yu_Yu_Hakusho_season_1",
+        "https://en.wikipedia.org/wiki/List_of_YuYu_Hakusho_chapters",
+        "https://yuyuhakusho.fandom.com/wiki/Chapter_31"
+      ]
+    },
+    {
+      "episode": 13,
+      "end_chapter": 32,
+      "start_chapter": 31,
+      "chapters_adapted": "31 (second half), 32",
+      "volume": 4,
+      "confidence": "high",
+      "note": "Rando's stolen techniques (rest of ch 31) and 'Genkai's Successor is Chosen!!' (ch 32). Typed mixed (animefillerlist): the '99 attacks' barrage is padded.",
+      "sources": [
+        "https://yuyuhakusho.fandom.com/wiki/Episode_13",
+        "https://en.wikipedia.org/wiki/Yu_Yu_Hakusho_season_1",
+        "https://en.wikipedia.org/wiki/List_of_YuYu_Hakusho_chapters",
+        "https://yuyuhakusho.fandom.com/wiki/Chapter_32",
+        "https://www.animefillerlist.com/shows/yuyu-hakusho"
+      ]
+    },
+    {
+      "episode": 14,
+      "end_chapter": 34,
+      "start_chapter": 33,
+      "chapters_adapted": "33, 34 (first half)",
+      "volume": 4,
+      "confidence": "high",
+      "note": "'Challenge from Demon City!!' + 'The Gate of Betrayal!!' (the collapsing-ceiling test named in en-WP's summary); ends under the ceiling, mid-ch 34.",
+      "sources": [
+        "https://yuyuhakusho.fandom.com/wiki/Episode_14",
+        "https://en.wikipedia.org/wiki/Yu_Yu_Hakusho_season_1",
+        "https://en.wikipedia.org/wiki/List_of_YuYu_Hakusho_chapters",
+        "https://yuyuhakusho.fandom.com/wiki/Chapter_34"
+      ]
+    },
+    {
+      "episode": 15,
+      "end_chapter": 35,
+      "start_chapter": 34,
+      "chapters_adapted": "34 (second half), 35",
+      "volume": 4,
+      "confidence": "high",
+      "note": "Hiei's lever and Genbu's entrance (rest of ch 34), then Kurama vs Genbu ('Genbu is... The Very Rock!!' = last chapter of vol 4).",
+      "sources": [
+        "https://yuyuhakusho.fandom.com/wiki/Episode_15",
+        "https://en.wikipedia.org/wiki/Yu_Yu_Hakusho_season_1",
+        "https://en.wikipedia.org/wiki/List_of_YuYu_Hakusho_chapters",
+        "https://yuyuhakusho.fandom.com/wiki/Chapter_34",
+        "https://yuyuhakusho.fandom.com/wiki/Chapter_35"
+      ]
+    },
+    {
+      "episode": 16,
+      "end_chapter": 37,
+      "start_chapter": 36,
+      "chapters_adapted": "36-37",
+      "volume": 5,
+      "confidence": "high",
+      "note": "'Byakko's Battle Roar!!' + 'A Double-Edged Sword!!' (Kuwabara vs Byakko, energy absorption). Vol 5 opens here.",
+      "sources": [
+        "https://yuyuhakusho.fandom.com/wiki/Episode_16",
+        "https://en.wikipedia.org/wiki/Yu_Yu_Hakusho_season_1",
+        "https://en.wikipedia.org/wiki/List_of_YuYu_Hakusho_chapters",
+        "https://yuyuhakusho.fandom.com/wiki/Chapter_36",
+        "https://yuyuhakusho.fandom.com/wiki/Chapter_37"
+      ]
+    },
+    {
+      "episode": 17,
+      "end_chapter": 38,
+      "start_chapter": 38,
+      "chapters_adapted": "38",
+      "volume": 5,
+      "confidence": "high",
+      "note": "One chapter ('The Tiger's Annihilation Roar!!' - Byakko's lava-room technique, named in en-WP's summary) stretched to a full episode.",
+      "sources": [
+        "https://yuyuhakusho.fandom.com/wiki/Episode_17",
+        "https://en.wikipedia.org/wiki/Yu_Yu_Hakusho_season_1",
+        "https://en.wikipedia.org/wiki/List_of_YuYu_Hakusho_chapters",
+        "https://yuyuhakusho.fandom.com/wiki/Chapter_38"
+      ]
+    },
+    {
+      "episode": 18,
+      "end_chapter": 40,
+      "start_chapter": 39,
+      "chapters_adapted": "39, 40 (first half)",
+      "volume": 5,
+      "confidence": "high",
+      "note": "Hiei vs Seiryu ('Hiei Joins the Fray!!') then Suzaku turns the possessed on Keiko (opening of ch 40 'Prelude to Carnage!!' per its summary); ends mid-ch 40 with Iwamoto chasing Keiko.",
+      "sources": [
+        "https://yuyuhakusho.fandom.com/wiki/Episode_18",
+        "https://en.wikipedia.org/wiki/Yu_Yu_Hakusho_season_1",
+        "https://en.wikipedia.org/wiki/List_of_YuYu_Hakusho_chapters",
+        "https://yuyuhakusho.fandom.com/wiki/Chapter_39",
+        "https://yuyuhakusho.fandom.com/wiki/Chapter_40"
+      ]
+    },
+    {
+      "episode": 19,
+      "end_chapter": 41,
+      "start_chapter": 40,
+      "chapters_adapted": "40 (second half), 41",
+      "volume": 5,
+      "confidence": "high",
+      "note": "Botan finds Keiko, the tower, meeting Suzaku (rest of ch 40) and 'Fist of Dark Lightning!!' (Suzaku's lightning, en-WP summary).",
+      "sources": [
+        "https://yuyuhakusho.fandom.com/wiki/Episode_19",
+        "https://en.wikipedia.org/wiki/Yu_Yu_Hakusho_season_1",
+        "https://en.wikipedia.org/wiki/List_of_YuYu_Hakusho_chapters",
+        "https://yuyuhakusho.fandom.com/wiki/Chapter_40",
+        "https://yuyuhakusho.fandom.com/wiki/Chapter_41"
+      ]
+    },
+    {
+      "episode": 20,
+      "end_chapter": 43,
+      "start_chapter": 42,
+      "chapters_adapted": "42, 43 (first half)",
+      "volume": 5,
+      "confidence": "high",
+      "note": "Suzaku's seven-way split ('Demonic Array of Darkness!!') and Yusuke's Genkai-training flashback (ch 43's cast lists the flashback); ends mid-ch 43.",
+      "sources": [
+        "https://yuyuhakusho.fandom.com/wiki/Episode_20",
+        "https://en.wikipedia.org/wiki/Yu_Yu_Hakusho_season_1",
+        "https://en.wikipedia.org/wiki/List_of_YuYu_Hakusho_chapters",
+        "https://yuyuhakusho.fandom.com/wiki/Chapter_42",
+        "https://yuyuhakusho.fandom.com/wiki/Chapter_43"
+      ]
+    },
+    {
+      "episode": 21,
+      "end_chapter": 44,
+      "start_chapter": 43,
+      "chapters_adapted": "43 (second half), 44",
+      "volume": 5,
+      "confidence": "high",
+      "note": "Spirit Shotgun, Suzaku's revival and the whistle destroyed at the cost of Yusuke's life energy ('The Last Measure!!' = 'Yusuke's Sacrifice'); Kuwabara's energy transfer. Ch 45 that follows was never animated.",
+      "sources": [
+        "https://yuyuhakusho.fandom.com/wiki/Episode_21",
+        "https://en.wikipedia.org/wiki/Yu_Yu_Hakusho_season_1",
+        "https://en.wikipedia.org/wiki/List_of_YuYu_Hakusho_chapters",
+        "https://yuyuhakusho.fandom.com/wiki/Chapter_43",
+        "https://yuyuhakusho.fandom.com/wiki/Chapter_44"
+      ]
+    },
+    {
+      "episode": 22,
+      "end_chapter": 47,
+      "start_chapter": 46,
+      "chapters_adapted": "46, 47 (first half)",
+      "volume": 6,
+      "confidence": "medium",
+      "note": "'Springtime for Kuwabara!!' (Yukina tape, Kuwabara smitten) then the start of ch 47 (Tarukane's torture of Yukina; the Hirue fight - Hirue is in ch 47's cast). The reach into ch 47 rests on the fandom episode page + chapter cast list only; en-WP corroborates ch 46. Ch 45 skipped.",
+      "sources": [
+        "https://yuyuhakusho.fandom.com/wiki/Episode_22",
+        "https://en.wikipedia.org/wiki/Yu_Yu_Hakusho_season_1",
+        "https://en.wikipedia.org/wiki/List_of_YuYu_Hakusho_chapters",
+        "https://yuyuhakusho.fandom.com/wiki/Chapter_46",
+        "https://yuyuhakusho.fandom.com/wiki/Chapter_47",
+        "https://yyh-sandbox.fandom.com/wiki/Rescue_Yukina"
+      ]
+    },
+    {
+      "episode": 23,
+      "end_chapter": 48,
+      "start_chapter": 47,
+      "chapters_adapted": "47 (second half), 48 (first half)",
+      "volume": 6,
+      "confidence": "medium",
+      "note": "Black Book Club betting (rest of ch 47 'The Black Book Club!!') and the Triad's introduction ('Next Up: The Ogre Triad!!'); ends as Miyuki is confronted. The half-split is fandom-only; en-WP's summaries put the Triad fights in ep 24.",
+      "sources": [
+        "https://yuyuhakusho.fandom.com/wiki/Episode_23",
+        "https://en.wikipedia.org/wiki/Yu_Yu_Hakusho_season_1",
+        "https://en.wikipedia.org/wiki/List_of_YuYu_Hakusho_chapters",
+        "https://yuyuhakusho.fandom.com/wiki/Chapter_47",
+        "https://yuyuhakusho.fandom.com/wiki/Chapter_48"
+      ]
+    },
+    {
+      "episode": 24,
+      "end_chapter": 49,
+      "start_chapter": 48,
+      "chapters_adapted": "48 (second half), 49 (first half)",
+      "volume": 6,
+      "confidence": "high",
+      "note": "Miyuki / Inmaki / Gokumonki fights (ch 48 running into ch 49 - Gokumonki opens ch 49 per its cast list) and Sakyo's escalating bets ('The Last Gamble!!'); the stored ep 25 anchor (49 second half -> 50) dovetails exactly.",
+      "sources": [
+        "https://yuyuhakusho.fandom.com/wiki/Episode_24",
+        "https://en.wikipedia.org/wiki/Yu_Yu_Hakusho_season_1",
+        "https://en.wikipedia.org/wiki/List_of_YuYu_Hakusho_chapters",
+        "https://yuyuhakusho.fandom.com/wiki/Chapter_48",
+        "https://yuyuhakusho.fandom.com/wiki/Chapter_49"
+      ]
+    }
+  ],
+  "continue_points": [
+    {
+      "episode": 10,
+      "continue_chapter": 28,
+      "note": "ends mid-ch 28 (Kibano dominating in the dark); the cigarette trick that closes ch 28 opens ep 11"
+    },
+    {
+      "episode": 12,
+      "continue_chapter": 31,
+      "note": "ends as Shorin transforms into Rando, mid-ch 31"
+    },
+    {
+      "episode": 14,
+      "continue_chapter": 34,
+      "note": "ends under the collapsing ceiling, mid-ch 34 (Hiei's lever and Genbu's entrance open ep 15)"
+    },
+    {
+      "episode": 18,
+      "continue_chapter": 40,
+      "note": "ends with Iwamoto chasing Keiko, mid-ch 40"
+    },
+    {
+      "episode": 20,
+      "continue_chapter": 43,
+      "note": "ends mid-ch 43 (seven Suzakus; Genkai-training flashback)"
+    },
+    {
+      "episode": 22,
+      "continue_chapter": 47,
+      "note": "ends after the Hirue fight, mid-ch 47"
+    },
+    {
+      "episode": 23,
+      "continue_chapter": 48,
+      "note": "ends as the Triad's Miyuki is confronted, mid-ch 48"
+    },
+    {
+      "episode": 24,
+      "continue_chapter": 49,
+      "note": "ends mid-ch 49 (Triad beaten); Sakyo's all-in gamble and the Toguro fight (49 second half, 50) are ep 25"
+    }
+  ],
+  "annotations": [
+    {
+      "episodes": [
+        1
+      ],
+      "kind": "partial",
+      "chapters": "2 (p.1-2)",
+      "note": "cold-close with the first two pages of ch 2; ep 2 re-covers ch 2 p.1-6, so END stays 1"
+    },
+    {
+      "episodes": [
+        2
+      ],
+      "kind": "partial",
+      "chapters": "2 (p.7-11), 3 (p.1-6)",
+      "note": "pages dropped inside the adapted chapters (fandom page splits)"
+    },
+    {
+      "episodes": [
+        3
+      ],
+      "kind": "abridged",
+      "chapters": "4-6",
+      "note": "manga-only ghost-era chapters skipped ('The Old Dog and the Boy', 'Her First Christmas!', 'The Lonely Journey'); ja-WP: most of act.1-17 was cut"
+    },
+    {
+      "episodes": [
+        3
+      ],
+      "kind": "divergence",
+      "chapters": "7",
+      "note": "single chapter padded to a full episode; ja-WP lists an anime-original scene of dead Yusuke possessing someone other than Kuwabara"
+    },
+    {
+      "episodes": [
+        4
+      ],
+      "kind": "abridged",
+      "chapters": "8-12",
+      "note": "skipped ('The Temporary Resurrection' pts 1-2, 'The Forbidden Games!!', 'The Fractured Friendship', 'The Hand of Evil'); only ch 8 p.11 survives, grafted into ep 5"
+    },
+    {
+      "episodes": [
+        4,
+        22
+      ],
+      "kind": "rearranged",
+      "chapters": "14 (p.12-15)",
+      "note": "Shizuru's manga debut (ch 14) dropped from ep 4 - the post-rescue scene became Keiko comforting Atsuko - and relocated to ep 22 (ja-WP 原作との相違点)"
+    },
+    {
+      "episodes": [
+        5
+      ],
+      "kind": "abridged",
+      "chapters": "15-16",
+      "note": "skipped ('Just One Win!!', 'Finding the Guts for Glory!!')"
+    },
+    {
+      "episodes": [
+        5
+      ],
+      "kind": "graft",
+      "chapters": "8 (p.11)",
+      "note": "one page of the otherwise-unadapted ch 8 spliced into the resurrection episode"
+    },
+    {
+      "episodes": [
+        11,
+        13
+      ],
+      "kind": "divergence",
+      "chapters": "28-32",
+      "note": "animefillerlist types both as Mixed Canon/Filler: anime-original fight padding inside otherwise faithful chapters; no manga content displaced"
+    },
+    {
+      "episodes": [
+        17
+      ],
+      "kind": "divergence",
+      "chapters": "38",
+      "note": "single chapter (Byakko's lair) padded to a full episode"
+    },
+    {
+      "episodes": [
+        21,
+        22
+      ],
+      "kind": "abridged",
+      "chapters": "45",
+      "note": "ch 45 'Battle at Hell Housing Development!!' (Yusuke's team vs half-breed demons; Okubo/Sawamura/Kirishima) never animated - fandom ch 45 has no episode, ja-WP lists act.45 among the cuts"
+    }
+  ],
+  "type_corrections": [],
+  "repairs": [],
+  "structure": {
+    "notes": "OUR numbering = fandom = en-WP = ja-WP for eps 1-25 (season 1 is cumulative eps 1-25); no conversion applied. Season 1 (25 eps) adapts vols 1-6 (en-WP) / ch 1-51 (fandom saga page; ch 51 opens season 2, matching the stored ep 26 annotation). Fandom sub-arcs: Yusuke's Ordeal ch 1-18 eps 1-5; Artifacts of Darkness ch 19-24 eps 6-8; Genkai's Tournament ch 25-32 eps 9-13; Beasts of Maze Castle ch 33-44 eps 14-21; Rescue Yukina ch 45(46)-51 eps 22-25; ja-WP's 巻名 column groups eps 1-8 霊界探偵編, 9-13 奥義継承編, 14-21 四聖獣編. The 'pads early' premise is inverted: the anime COMPRESSES the ghost era - 10 of the first 17 chapters (4-6, 8-12, 15-16) are never animated (ja-WP: 'most of act.1-17 cut'), while single chapters 7 and 38 are each stretched to a full episode. Volume boundaries (JP/fandom numbering, identical to en-WP through ch 63): v1 1-8, v2 9-17, v3 18-26, v4 27-35, v5 36-45, v6 46-55, v7 56-63 (+ 'Two Shots' extra). CAUTION for vols 8-19: en-WP counts the Two Shots extra as ch 64 (VIZ-print convention), so en-WP chapter numbers run +1 vs JP/fandom/VIZ-digital from ch 65 on (en-WP 171 'After The Party' = fandom 170; en-WP 176 'And So...' = fandom 175). The stored ep 112 anchor (175 = 'And So...', graft 170+172+175, continue 171) is in fandom/JP numbering - fandom ch 172 'Special Day' -> Episode 112, fandom ch 174 'Sink or Swim' -> 2018 OVA 'All or Nothing' (ja-WP: act.174). Any volume boundaries taken from en-WP for vol 8+ must be shifted by -1. VIZ digital (Shonen Jump app) lists 1-175 + 63.5 = JP numbering; en-WP also notes VIZ print mislabels ch 18 as a second '17' (print numbers one behind from 18 to 63).",
+    "order_only": [
+      {
+        "anilist_id": 6964,
+        "title": "Yuu Yuu Hakusho Picture Drama",
+        "after_anilist_id": 392,
+        "adapts": "none",
+        "note": "2009 picture drama; no manga counterpart"
+      },
+      {
+        "anilist_id": null,
+        "title": "Two Shots / All or Nothing (2018 OVA)",
+        "after_anilist_id": 392,
+        "adapts": "Two Shots extra (vol 7 / VIZ 63.5) + ch 174 'Sink or Swim' (JP/fandom numbering)",
+        "note": "ja-WP: 'TWO SHOTS' was never in the TV run; the 2018 25th-anniversary Blu-ray box animated it with act.174 のるか そるか. AniList id not verified this batch - keep the existing order-only ruling"
+      }
+    ]
+  },
+  "flags_for_sean": [
+    "Numbering caution (outside range, affects volume math for ch >= 65): en-WP's chapter list runs +1 vs fandom/JP/VIZ-digital from vol 8 on because it counts the Two Shots extra as ch 64 (en-WP 176 'And So...' = fandom 175). Stored YYH anchors are in fandom/JP numbering; if volume boundaries are ever imported from en-WP for vols 8-19, subtract 1. Links: https://en.wikipedia.org/wiki/List_of_YuYu_Hakusho_chapters ; https://yuyuhakusho.fandom.com/wiki/Chapter_172 ; https://www.viz.com/shonenjump/chapters/yuyu-hakusho",
+    "Eps 22 and 23 END chapters (47 first half / 48 first half) are marked medium: the half-splits come only from the fandom episode pages, cross-checked against fandom chapter cast lists (Hirue in ch 47, the Triad in ch 48); en-WP corroborates the chapter set but not the split. Eps 10/12/14/18/20/24 splits are also fandom-explicit but their END chapter is independently pinned by en-WP titles/summaries.",
+    "No genuinely independent per-episode chapter table exists for YYH: animefillerguide has no chapter column, the yyh-sandbox wiki's 'adapted from' fields are empty and it has no chapter pages, and the fandom chapter pages stop carrying the reverse 'episode' field after ch 24. The WebSearch budget hit 200/200 mid-task and reddit's JSON API is blocked, so no fan-thread cross-check was obtained; ja-WP's structural statement (act.1-17 mostly cut, act.45 cut) is the independent corroboration of the skip pattern.",
+    "Stored data verified, not contradicted: ep 25 anchor (49 second half -> 50, v6) and the ep 26 'rearranged 51-52 (first half)' annotation match the fandom ep 25/26 pages exactly; fandom ep 27 = '52 (second half)-54 (first page)' (ch 52 'The Dark Tournament Begins!!' = ep 27's title) if the next batch wants the join."
+  ]
+}

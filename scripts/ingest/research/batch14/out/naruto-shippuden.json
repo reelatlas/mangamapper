@@ -1,0 +1,529 @@
+{
+  "series_id": "naruto-shippuden",
+  "summary": "Eps 144-151 (Six-Tails Unleashed) and 170-171 are anime-original, confirmed by Wikipedia, animefillerlist and Narutopedia; the canon run 152-169 and 172-175 adapts chapters 403-450 (vols 44-48) and every one of those 22 episodes now has a full-record anchor. The re-entry is heavily re-interleaved: eps 142-143 had pulled the Taka-vs-Killer-B thread (408, 410-415) forward, so ep 152 replays Naruto's side of 403-405 (plus 416's B handover), ep 155 gathers the sage-training halves of 410-416 and pulls 419's fake-Eight-Tails reveal forward, and the invasion episodes shuffle 420/424/425/427 scenes between 157-160; from ep 161 on the map is nearly one-to-one with the manga (161->428, 162->429, 163->432, 164->434, 165->436, 166->437, 167->439, 168->442, 169->444, 172->445, 173->447, 174->449, 175->450). Twelve mid-chapter endings get explicit continue points. One repair: the manual ep-143 anchor (412) is actually 415 (the whole B fight), with an honest resume at 403. Existing ep-175 -> 450 is confirmed and enriched (only the celebration half of 450 is adapted). Surprises: ep 166 is a single chapter (437) stretched with anime-original Hinata material, and ep 175 recycles Ebisu's ch-426 monologue.",
+  "anchors": [
+    {
+      "episode": 143,
+      "end_chapter": 415,
+      "start_chapter": 411,
+      "chapters_adapted": "411-415 (Taka vs. Killer B thread only; the Naruto-training halves of 412, 414 and 415 are adapted in ep 155)",
+      "volume": 45,
+      "confidence": "high",
+      "note": "REPAIR of the manual 412: Narutopedia lists 411-415 and the episode ends on Amaterasu subduing B and the Kumo scouts running to the Raikage, which is the close of ch 415 'New Powers!!'. Adjacent to the target range; listed for continuity.",
+      "sources": [
+        "https://naruto.fandom.com/wiki/The_Eight-Tails_vs._Sasuke (infobox 'chapters' field, fetched via api.php)",
+        "https://naruto.fandom.com/wiki/New_Powers!!",
+        "https://naruto.fandom.com/wiki/Crumbling",
+        "https://en.wikipedia.org/wiki/Naruto:_Shippuden_season_8",
+        "https://www.animefillerguide.com/anime/naruto-shippuden/",
+        "https://en.wikipedia.org/wiki/Naruto:_Shippuden_season_6"
+      ]
+    },
+    {
+      "episode": 152,
+      "end_chapter": 405,
+      "start_chapter": 403,
+      "chapters_adapted": "403-404 (Naruto's halves: Itachi's crow; Fukasaku brings news of Jiraiya's death), 405 (first third: the code on Fukasaku's back, Naruto blames Tsunade and storms out), 416 (Taka hands Killer B to Tobi; the Raikage learns of B's capture; pulled forward); the cold open (Six-Tails sealed) is an anime bridge from the filler arc",
+      "volume": 44,
+      "confidence": "high",
+      "note": "Re-entry after the filler: replays Naruto's side of 403-404 (the Taka side was used in ep 142) and ends one third into 405. END held at 405; 416 is a pulled-forward Taka/Kumo scene, not the position.",
+      "sources": [
+        "https://naruto.fandom.com/wiki/Sombre_News (infobox 'chapters' field, fetched via api.php)",
+        "https://naruto.fandom.com/wiki/What_is_Left_Behind",
+        "https://naruto.fandom.com/wiki/Taka_and_Akatsuki",
+        "https://naruto.fandom.com/wiki/The_Tale_of_the_Utterly_Gutsy_Shinobi_(chapter)",
+        "https://en.wikipedia.org/wiki/Naruto:_Shippuden_season_8",
+        "https://www.animefillerguide.com/anime/naruto-shippuden/"
+      ]
+    },
+    {
+      "episode": 153,
+      "end_chapter": 406,
+      "start_chapter": 405,
+      "chapters_adapted": "405 (remainder: Iruka and the popsicle bench; Shikamaru tasked with the code), 406",
+      "volume": 44,
+      "confidence": "high",
+      "note": "Ends on Shikamaru's Kurenai visit and 'become the teachers our masters were', the close of ch 406 'The Key to the Future'. Starts in the remaining two thirds of 405.",
+      "sources": [
+        "https://naruto.fandom.com/wiki/Following_the_Master%27s_Shadow (infobox 'chapters' field, fetched via api.php)",
+        "https://naruto.fandom.com/wiki/What_is_Left_Behind",
+        "https://naruto.fandom.com/wiki/The_Key_to_the_Future",
+        "https://en.wikipedia.org/wiki/Naruto:_Shippuden_season_8",
+        "https://www.animefillerguide.com/anime/naruto-shippuden/"
+      ]
+    },
+    {
+      "episode": 154,
+      "end_chapter": 409,
+      "start_chapter": 407,
+      "chapters_adapted": "407 (the decryption), 408 (Naruto/Fukasaku half only; Taka's Kumo interrogation was adapted in ep 142), 409 (reverse-summoned to Mount Myoboku; 'you'd have to die first')",
+      "volume": 44,
+      "confidence": "high",
+      "note": "Ends on Gamakichi's 'die first' line, the close of ch 409. Title 'Decryption' = the 407 code scene.",
+      "sources": [
+        "https://naruto.fandom.com/wiki/Decryption (infobox 'chapters' field, fetched via api.php)",
+        "https://naruto.fandom.com/wiki/Addressed_to_Naruto",
+        "https://naruto.fandom.com/wiki/Fukasaku%27s_Proposal",
+        "https://naruto.fandom.com/wiki/Handing_Down_Senjutsu%E2%80%A6!!",
+        "https://en.wikipedia.org/wiki/Naruto:_Shippuden_season_8",
+        "https://www.animefillerguide.com/anime/naruto-shippuden/"
+      ]
+    },
+    {
+      "episode": 155,
+      "end_chapter": 416,
+      "start_chapter": 410,
+      "chapters_adapted": "410, 412, 414-416 (Naruto's training thread; the Taka halves of these chapters were adapted in eps 142-143), 407 (closing scene: Pain declares the Six Paths head for Konoha), 417 (opening instruction: train without the oil), 419 (Akatsuki discover the 'Eight-Tails' is a severed tentacle; pulled forward); the statue-lifting test and the Jiraiya memory are anime expansions",
+      "volume": 45,
+      "confidence": "medium",
+      "note": "Narutopedia lists 407,409,410,412,414-419 (fragments); END set at 416 = the last chapter whose mainline content is complete after this episode (the book, 'Tale of the Utterly Gutsy Shinobi'). 417-418 pieces are montage beats; 419 is pulled forward. Resume at 417.",
+      "sources": [
+        "https://naruto.fandom.com/wiki/The_First_Challenge (infobox 'chapters' field, fetched via api.php)",
+        "https://naruto.fandom.com/wiki/The_Tale_of_the_Utterly_Gutsy_Shinobi_(chapter)",
+        "https://naruto.fandom.com/wiki/New_Powers!!",
+        "https://naruto.fandom.com/wiki/Invasion!!",
+        "https://en.wikipedia.org/wiki/Naruto:_Shippuden_season_8",
+        "https://www.animefillerguide.com/anime/naruto-shippuden/"
+      ]
+    },
+    {
+      "episode": 156,
+      "end_chapter": 418,
+      "start_chapter": 417,
+      "chapters_adapted": "417 (training without oil; Taka kills the Kumo spy; the Raikage calls the Kage Summit and Team Samui), 418 (Sage Mode mastered; Frog Kata; secret Rasenshuriken practice), 419 (Team Samui dispatched; fragment), 420 (a training beat; fragment)",
+      "volume": 45,
+      "confidence": "high",
+      "note": "Naruto enters Sage Mode on his own = ch 418 'Sage Naruto!!'; Wikipedia synopsis matches 417-418. Narutopedia also lists 419-420 but only as side beats; the invasion (419) begins in ep 157.",
+      "sources": [
+        "https://naruto.fandom.com/wiki/Surpassing_the_Master (infobox 'chapters' field, fetched via api.php)",
+        "https://naruto.fandom.com/wiki/The_Raikage,_Moving!!",
+        "https://naruto.fandom.com/wiki/Sage_Naruto!!",
+        "https://en.wikipedia.org/wiki/Naruto:_Shippuden_season_8",
+        "https://www.animefillerguide.com/anime/naruto-shippuden/"
+      ]
+    },
+    {
+      "episode": 157,
+      "end_chapter": 420,
+      "start_chapter": 419,
+      "chapters_adapted": "418 (closing panels: the Six Paths arrive outside Konoha), 419, 420 (Fukasaku on fusing; Shizune finds the chakra receivers; Tsunade orders Naruto recalled; the Iruka/Kakashi scene is held for ep 158), 421 (opening beat: the village mobilises)",
+      "volume": 45,
+      "confidence": "high",
+      "note": "Ends on Tsunade ordering Naruto's recall, the close of ch 420 'The Battlefield, Konoha!!'; 420's Iruka/Kakashi scene is moved to ep 158's ending, so resume at 420.",
+      "sources": [
+        "https://naruto.fandom.com/wiki/Assault_on_the_Leaf_Village! (infobox 'chapters' field, fetched via api.php)",
+        "https://naruto.fandom.com/wiki/Invasion!!",
+        "https://naruto.fandom.com/wiki/The_Battlefield,_Konoha!!",
+        "https://en.wikipedia.org/wiki/Naruto:_Shippuden_season_8",
+        "https://www.animefillerguide.com/anime/naruto-shippuden/"
+      ]
+    },
+    {
+      "episode": 158,
+      "end_chapter": 422,
+      "start_chapter": 421,
+      "chapters_adapted": "420 (Deva Path interrogates Iruka, Kakashi intervenes; moved here as the episode's ending), 421 (council vs. Tsunade; Danzo kills Kosuke), 422 (Pain's interrogations; Tsunade deploys Katsuyu; the Kakashi fight continues in ep 159)",
+      "volume": 45,
+      "confidence": "high",
+      "note": "Council scene and Kosuke's death = 421 'Call Naruto Home!!'; Katsuyu's deployment = 422. Episode closes on 420's Iruka/Kakashi scene; resume at 422 (Kakashi vs. Deva/Asura, Choza's team).",
+      "sources": [
+        "https://naruto.fandom.com/wiki/Power_to_Believe (infobox 'chapters' field, fetched via api.php)",
+        "https://naruto.fandom.com/wiki/Call_Naruto_Home!!",
+        "https://naruto.fandom.com/wiki/Kakashi_vs._Pain!!",
+        "https://en.wikipedia.org/wiki/Naruto:_Shippuden_season_8",
+        "https://www.animefillerguide.com/anime/naruto-shippuden/"
+      ]
+    },
+    {
+      "episode": 159,
+      "end_chapter": 424,
+      "start_chapter": 421,
+      "chapters_adapted": "420-421 (Kakashi vs. Deva/Asura halves), 422 (Choza's team arrives), 423, 424 (second half: Choji sent to Tsunade; Kakashi's Kamui and death), 425 (opening: Kakashi meets Sakumo in the afterlife), 427 (Choji reaches Tsunade, Choza alive; pulled forward)",
+      "volume": 46,
+      "confidence": "high",
+      "note": "Kakashi dies after using Kamui = ch 424 'Decision!!'; title matches ch 422 'Kakashi vs. Pain!!'. Narutopedia also lists 425 (its opening panel) and 427 (pulled forward); END kept at 424 because 424's Danzo/Inoichi half and 425's substance are adapted in ep 160, so resume at 424.",
+      "sources": [
+        "https://naruto.fandom.com/wiki/Pain_vs._Kakashi (infobox 'chapters' field, fetched via api.php)",
+        "https://naruto.fandom.com/wiki/Kakashi_vs._Pain!!",
+        "https://naruto.fandom.com/wiki/Deva_Path%27s_Abilities!!",
+        "https://naruto.fandom.com/wiki/Decision!!",
+        "https://en.wikipedia.org/wiki/Naruto:_Shippuden_season_8",
+        "https://www.animefillerguide.com/anime/naruto-shippuden/"
+      ]
+    },
+    {
+      "episode": 160,
+      "end_chapter": 425,
+      "start_chapter": 424,
+      "chapters_adapted": "424 (first half: Danzo holds Root back; Inoichi's probe of Yudachi), 425 (fusion rejected by the Nine-Tails; receivers explained; the Animal Path attacks the T&I building), 426 (opening beat: Naruto refuses to give up); Ibiki's Iron Maiden fight is an anime expansion",
+      "volume": 46,
+      "confidence": "high",
+      "note": "Fusion rejected + Animal Path attack on Torture & Interrogation = ch 425 'Kakashi Hatake'; Narutopedia lists 424-426 (426 only its opening beat). Resume at 426.",
+      "sources": [
+        "https://naruto.fandom.com/wiki/Mystery_of_Pain (infobox 'chapters' field, fetched via api.php)",
+        "https://naruto.fandom.com/wiki/Decision!!",
+        "https://naruto.fandom.com/wiki/Kakashi_Hatake_(chapter)",
+        "https://naruto.fandom.com/wiki/Naruto_and_Konoha!!",
+        "https://en.wikipedia.org/wiki/Naruto:_Shippuden_season_8",
+        "https://www.animefillerguide.com/anime/naruto-shippuden/"
+      ]
+    },
+    {
+      "episode": 161,
+      "end_chapter": 428,
+      "start_chapter": 426,
+      "chapters_adapted": "425 (fragment), 426 (Naraka Path interrogates two chunin; Ebisu buys time), 427 (Konohamaru engages the Naraka Path), 428 (opening scene: Konohamaru's Rasengan); Naruto's 'look left and right at once' realisation at Myoboku",
+      "volume": 46,
+      "confidence": "high",
+      "note": "Konohamaru's Rasengan on the Naraka Path opens ch 428 'Discourse!!'; the Tsunade/Yahiko, Inoichi-Shizune and Human Path scenes of 428 follow in ep 162, so resume at 428.",
+      "sources": [
+        "https://naruto.fandom.com/wiki/Surname_is_Sarutobi,_Given_Name,_Konohamaru (infobox 'chapters' field, fetched via api.php)",
+        "https://naruto.fandom.com/wiki/Naruto_and_Konoha!!",
+        "https://naruto.fandom.com/wiki/Reunion",
+        "https://naruto.fandom.com/wiki/Discourse!!",
+        "https://en.wikipedia.org/wiki/Naruto:_Shippuden_season_8",
+        "https://www.animefillerguide.com/anime/naruto-shippuden/"
+      ]
+    },
+    {
+      "episode": 162,
+      "end_chapter": 429,
+      "start_chapter": 428,
+      "chapters_adapted": "427 (tail: the Deva Path confronts Tsunade; clan skirmishes expanded), 428 (remainder: Tsunade recognises Yahiko; Shizune captured by the Human Path), 429 (Shizune killed; Kosuke's death learned at Myoboku; Shinra Tensei levels Konoha), 430 (opening panels: Naruto and the toads arrive; re-covered in ep 163)",
+      "volume": 46,
+      "confidence": "high",
+      "note": "Village destroyed by Shinra Tensei = ch 429 'Know Pain' (title match: 'Pain to the World'); Narutopedia lists 427-430, the 430 part being the arrival cliffhanger that ep 163 replays. Resume at 430.",
+      "sources": [
+        "https://naruto.fandom.com/wiki/Pain_to_the_World (infobox 'chapters' field, fetched via api.php)",
+        "https://naruto.fandom.com/wiki/Discourse!!",
+        "https://naruto.fandom.com/wiki/%22Know_Pain%22",
+        "https://naruto.fandom.com/wiki/Naruto_Returns!!",
+        "https://en.wikipedia.org/wiki/Naruto:_Shippuden_season_8",
+        "https://www.animefillerguide.com/anime/naruto-shippuden/"
+      ]
+    },
+    {
+      "episode": 163,
+      "end_chapter": 432,
+      "start_chapter": 430,
+      "chapters_adapted": "430 (arrival; Tsunade; Asura Path destroyed), 431 (summons; Preta Path felled by Frog Kata; 'student siblings'), 432 (opening: the Rasenshuriken is formed and thrown)",
+      "volume": 46,
+      "confidence": "high",
+      "note": "Ends on the thrown Rasenshuriken, the opening of ch 432; title matches ch 431 'Naruto's Great Eruption!!'. Resume at 432.",
+      "sources": [
+        "https://naruto.fandom.com/wiki/Explode!_Sage_Mode (infobox 'chapters' field, fetched via api.php)",
+        "https://naruto.fandom.com/wiki/Naruto_Returns!!",
+        "https://naruto.fandom.com/wiki/Naruto%27s_Great_Eruption!!",
+        "https://naruto.fandom.com/wiki/The_Rasenshuriken_Once_Again!!",
+        "https://en.wikipedia.org/wiki/Naruto:_Shippuden_season_8",
+        "https://www.animefillerguide.com/anime/naruto-shippuden/"
+      ]
+    },
+    {
+      "episode": 164,
+      "end_chapter": 434,
+      "start_chapter": 432,
+      "chapters_adapted": "432 (remainder: Human Path destroyed; Animal Path destroyed inside Gamabunta), 433 (clone-stored natural energy; Naraka Path destroyed), 434 (first half: Shinra Tensei repels Naruto and the toads; the capture is ep 165)",
+      "volume": 47,
+      "confidence": "high",
+      "note": "Naraka Path destroyed = ch 433 'Senjutsu Failed...!?' (title match: 'Sage Mode Limit Reached'); toads repelled = start of 434. Resume at 434.",
+      "sources": [
+        "https://naruto.fandom.com/wiki/Danger!_Sage_Mode_Limit_Reached (infobox 'chapters' field, fetched via api.php)",
+        "https://naruto.fandom.com/wiki/Senjutsu_Failed%E2%80%A6!%3F",
+        "https://naruto.fandom.com/wiki/Naruto_vs._Deva_Path!!",
+        "https://en.wikipedia.org/wiki/Naruto:_Shippuden_season_8",
+        "https://www.animefillerguide.com/anime/naruto-shippuden/"
+      ]
+    },
+    {
+      "episode": 165,
+      "end_chapter": 436,
+      "start_chapter": 435,
+      "chapters_adapted": "434 (tail: Bansho Ten'in pulls Naruto into the Preta Path's grasp), 435 (Preta Path petrified; Fukasaku killed; Naruto pinned), 436 (Pain's speech on pain and peace; Konoha searches for the real Pain; Nagato revealed)",
+      "volume": 47,
+      "confidence": "high",
+      "note": "Ends on Pain's 'peace through fear' speech and Nagato in his tower = ch 436 'Peace'. Nine-Tails captured = 435 'Bansho Ten'in'.",
+      "sources": [
+        "https://naruto.fandom.com/wiki/Nine-Tails,_Captured! (infobox 'chapters' field, fetched via api.php)",
+        "https://naruto.fandom.com/wiki/Bansh%C5%8D_Ten%27in_(chapter)",
+        "https://naruto.fandom.com/wiki/Peace",
+        "https://en.wikipedia.org/wiki/Naruto:_Shippuden_season_8",
+        "https://www.animefillerguide.com/anime/naruto-shippuden/"
+      ]
+    },
+    {
+      "episode": 166,
+      "end_chapter": 437,
+      "start_chapter": 437,
+      "chapters_adapted": "437 (heavily expanded: Hinata's childhood flashback and an extended Hinata-vs-Deva Path fight are anime additions)",
+      "volume": 47,
+      "confidence": "high",
+      "note": "One chapter, one episode: title = ch 437 'Confession(s)'; ends on Naruto's Version 2 outburst, the close of 437. Three sources agree (Narutopedia, Wikipedia synopsis/title, animefillerguide).",
+      "sources": [
+        "https://naruto.fandom.com/wiki/Confession_(episode) (infobox 'chapters' field, fetched via api.php)",
+        "https://naruto.fandom.com/wiki/Confession",
+        "https://en.wikipedia.org/wiki/Naruto:_Shippuden_season_8",
+        "https://www.animefillerguide.com/anime/naruto-shippuden/"
+      ]
+    },
+    {
+      "episode": 167,
+      "end_chapter": 439,
+      "start_chapter": 438,
+      "chapters_adapted": "437 (tail: the transformation), 438 (four- to six-tails; the necklace destroyed; Yamato senses it; Pain retreats), 439 (Chibaku Tensei; eighth tail; the Fourth Hokage appears)",
+      "volume": 47,
+      "confidence": "high",
+      "note": "Ends on Minato stopping Naruto from tearing the seal, the close of ch 439 'Chibaku Tensei' (title match: 'Planetary Devastation').",
+      "sources": [
+        "https://naruto.fandom.com/wiki/Chibaku_Tensei_(episode) (infobox 'chapters' field, fetched via api.php)",
+        "https://naruto.fandom.com/wiki/The_Seal_Destroyed!!",
+        "https://naruto.fandom.com/wiki/Chibaku_Tensei_(chapter)",
+        "https://en.wikipedia.org/wiki/Naruto:_Shippuden_season_8",
+        "https://www.animefillerguide.com/anime/naruto-shippuden/"
+      ]
+    },
+    {
+      "episode": 168,
+      "end_chapter": 442,
+      "start_chapter": 440,
+      "chapters_adapted": "439 (tail: the Fourth appears), 440 (the conversation with the Fourth), 441 (Chibaku Tensei collapses; Naruto tracks Nagato with a receiver), 442 (two Rasenshuriken, the clone swarm, the Rasengan lands)",
+      "volume": 47,
+      "confidence": "high",
+      "note": "Title = ch 440 'A Conversation with the Fourth!!'; ends on the Rasengan striking the Deva Path, the close of ch 442 'The Final Gamble!!' (last chapter of vol. 47).",
+      "sources": [
+        "https://naruto.fandom.com/wiki/The_Fourth_Hokage_(episode) (infobox 'chapters' field, fetched via api.php)",
+        "https://naruto.fandom.com/wiki/A_Conversation_with_the_Fourth!!",
+        "https://naruto.fandom.com/wiki/The_Final_Gamble!!",
+        "https://en.wikipedia.org/wiki/Naruto:_Shippuden_season_8",
+        "https://www.animefillerguide.com/anime/naruto-shippuden/"
+      ]
+    },
+    {
+      "episode": 169,
+      "end_chapter": 444,
+      "start_chapter": 443,
+      "chapters_adapted": "442 (tail: the Deva Path falls), 443 (receivers removed; Katsuyu relays; Inoichi/Shikaku), 444 (first half: Naruto reaches Nagato and Konan and asks for their story)",
+      "volume": 48,
+      "confidence": "high",
+      "note": "Ends with Naruto asking Nagato for his story, mid-444 'The Answer'; the Nagato backstory half of 444 opens ep 172. Resume at 444.",
+      "sources": [
+        "https://naruto.fandom.com/wiki/The_Two_Students (infobox 'chapters' field, fetched via api.php)",
+        "https://naruto.fandom.com/wiki/Meeting!!",
+        "https://naruto.fandom.com/wiki/The_Answer",
+        "https://en.wikipedia.org/wiki/Naruto:_Shippuden_season_8",
+        "https://www.animefillerguide.com/anime/naruto-shippuden/"
+      ]
+    },
+    {
+      "episode": 172,
+      "end_chapter": 445,
+      "start_chapter": 444,
+      "chapters_adapted": "444 (second half: Nagato's parents killed; Rinnegan awakens), 445 (Chibi; Konan and Yahiko; Yahiko's dream; the Hanzo-vs-Sannin battle), 446 (opening panel: the orphans reach the Sannin; re-covered in ep 173)",
+      "volume": 48,
+      "confidence": "high",
+      "note": "Opens in the second half of 444 (the continue point of ep 169) and ends with the orphans setting out to find the Sannin = ch 445 'Top of the World'; Narutopedia also lists 446 for the final panel. Resume at 446.",
+      "sources": [
+        "https://naruto.fandom.com/wiki/Meeting_(episode_172) (infobox 'chapters' field, fetched via api.php)",
+        "https://naruto.fandom.com/wiki/The_Answer",
+        "https://naruto.fandom.com/wiki/Top_of_the_World",
+        "https://en.wikipedia.org/wiki/Naruto:_Shippuden_season_8",
+        "https://www.animefillerguide.com/anime/naruto-shippuden/"
+      ]
+    },
+    {
+      "episode": 173,
+      "end_chapter": 447,
+      "start_chapter": 446,
+      "chapters_adapted": "446 (Jiraiya trains the orphans; the Akatsuki founded; Hanzo and Danzo's trap; Yahiko's death), 447 (first half: the Demonic Statue; Nagato crippled; Nagato becomes Pain)",
+      "volume": 48,
+      "confidence": "high",
+      "note": "Yahiko's death = close of ch 446 'I Just Want to Protect Those Two'; the Demonic Statue and Hanzo's escape = ch 447 'Believing' (title match: 'Origin of Pain'). Naruto's answer (447's second half) is ep 174, so resume at 447.",
+      "sources": [
+        "https://naruto.fandom.com/wiki/Origin_of_Pain (infobox 'chapters' field, fetched via api.php)",
+        "https://naruto.fandom.com/wiki/I_Just_Want_to_Protect_Those_Two",
+        "https://naruto.fandom.com/wiki/Believing",
+        "https://en.wikipedia.org/wiki/Naruto:_Shippuden_season_8",
+        "https://www.animefillerguide.com/anime/naruto-shippuden/"
+      ]
+    },
+    {
+      "episode": 174,
+      "end_chapter": 449,
+      "start_chapter": 448,
+      "chapters_adapted": "447 (tail: Nagato closes his story and asks for the answer), 448 (Naruto's answer; the book; 'my life is the sequel'), 449 (opening: Nagato begins the Samsara of Heavenly Life Technique; Konan's shock); Gamamaru/Gamabunta coda is anime",
+      "volume": 48,
+      "confidence": "high",
+      "note": "The book/'named after the character' scene = ch 448 'Memento...!!' (title match: 'Tale of Naruto Uzumaki'); Nagato's decision and the technique's start = close of 448 / opening of 449. Resume at 449.",
+      "sources": [
+        "https://naruto.fandom.com/wiki/Tale_of_Naruto_Uzumaki (infobox 'chapters' field, fetched via api.php)",
+        "https://naruto.fandom.com/wiki/Believing",
+        "https://naruto.fandom.com/wiki/Memento%E2%80%A6!!",
+        "https://naruto.fandom.com/wiki/Flowers_of_Hope",
+        "https://en.wikipedia.org/wiki/Naruto:_Shippuden_season_8",
+        "https://www.animefillerguide.com/anime/naruto-shippuden/"
+      ]
+    },
+    {
+      "episode": 175,
+      "end_chapter": 450,
+      "start_chapter": 449,
+      "chapters_adapted": "449 (from the revival: Kakashi and Sakumo; Nagato's death; Konan deserts Akatsuki; the bouquet; Jiraiya's memorial), 450 (the hero's-welcome half only; the Zetsu/Team Samui/Tsunade-coma/Danzo-appointment half is deferred: Zetsu and Team Samui open ep 176, the Danzo appointment is adapted in the Five Kage Summit episodes), 426 (Ebisu's reflection on Naruto, reused)",
+      "volume": 48,
+      "confidence": "high",
+      "note": "Ends on the village hoisting Naruto = ch 450 'The Joyous Village!!' (title match: 'Hero of the Hidden Leaf'); confirms the existing manual 450 and adds the full record. Only half of 450 is adapted here, so resume at 450.",
+      "sources": [
+        "https://naruto.fandom.com/wiki/Hero_of_the_Hidden_Leaf (infobox 'chapters' field, fetched via api.php)",
+        "https://naruto.fandom.com/wiki/Flowers_of_Hope",
+        "https://naruto.fandom.com/wiki/The_Joyous_Village!!",
+        "https://naruto.fandom.com/wiki/Naruto_and_Konoha!!",
+        "https://en.wikipedia.org/wiki/Naruto:_Shippuden_season_8",
+        "https://www.animefillerguide.com/anime/naruto-shippuden/",
+        "https://naruto.fandom.com/wiki/Pain%27s_Assault_(Arc)"
+      ]
+    }
+  ],
+  "continue_points": [
+    {
+      "episode": 143,
+      "continue_chapter": 403,
+      "note": "Adjacent-range companion to the ep-143 repair: the anime pulled the Taka-vs-B thread (408, 410-415) forward; Naruto's side of 403-409 (Itachi's crow, Jiraiya's death, the code, the sage-training start) is first adapted in eps 152-154, so the honest resume after ep 143 is 403 (re-reading the B-fight halves)."
+    },
+    {
+      "episode": 152,
+      "continue_chapter": 405,
+      "note": "ends one third into 405 (after Naruto storms out); the Iruka/popsicle scene and Shikamaru's tasking follow in ep 153"
+    },
+    {
+      "episode": 157,
+      "continue_chapter": 420,
+      "note": "420's Deva-Path-interrogates-Iruka / Kakashi-intervenes scene is held back to close ep 158"
+    },
+    {
+      "episode": 158,
+      "continue_chapter": 422,
+      "note": "422 only opened (interrogations, Katsuyu); the Kakashi vs. Deva/Asura fight of 421-423 is ep 159"
+    },
+    {
+      "episode": 159,
+      "continue_chapter": 424,
+      "note": "424's Danzo/Root and Inoichi half, and the substance of 425, are adapted in ep 160 (the episode's own final beats are 424's Kamui death and a pulled-forward 427 scene)"
+    },
+    {
+      "episode": 161,
+      "continue_chapter": 428,
+      "note": "ends on 428's opening scene (Konohamaru's Rasengan); the rest of 428 is ep 162"
+    },
+    {
+      "episode": 163,
+      "continue_chapter": 432,
+      "note": "ends on the thrown Rasenshuriken, 432's opening pages"
+    },
+    {
+      "episode": 164,
+      "continue_chapter": 434,
+      "note": "ends mid-434 (toads repelled); the Bansho Ten'in capture opens ep 165"
+    },
+    {
+      "episode": 169,
+      "continue_chapter": 444,
+      "note": "ends mid-444 (Naruto asks for Nagato's story); the backstory half of 444 opens ep 172"
+    },
+    {
+      "episode": 173,
+      "continue_chapter": 447,
+      "note": "ends mid-447 (Nagato crippled, becomes Pain); Naruto's answer in 447's second half is ep 174"
+    },
+    {
+      "episode": 174,
+      "continue_chapter": 449,
+      "note": "ends on 449's opening (Nagato begins the revival technique)"
+    },
+    {
+      "episode": 175,
+      "continue_chapter": 450,
+      "note": "only the hero's-welcome half of 450 is adapted; the Zetsu/Team Samui/Tsunade-coma/Danzo-appointment half is deferred (ep 176 cold open; Five Kage Summit episodes)"
+    }
+  ],
+  "annotations": [
+    {
+      "episodes": [
+        143
+      ],
+      "kind": "rearranged",
+      "chapters": "411-415 (Taka halves); 408, 410 in ep 142",
+      "note": "Taka vs. Killer B pulled forward from the manga's interleaving (the Narutopedia arc page notes the anime moves this event to the end of Fated Battle Between Brothers); the Naruto-training halves of 412, 414-415 are adapted in ep 155"
+    },
+    {
+      "episodes": [
+        152,
+        155,
+        156
+      ],
+      "kind": "rearranged",
+      "chapters": "403-420 (Naruto / Taka / Kumo / Akatsuki threads re-interleaved)",
+      "note": "Post-filler re-entry: ep 152 replays Naruto's side of 403-404 and pulls 416 (B handed to Tobi; Raikage learns) forward, with an anime cold open sealing the Six-Tails; ep 155 collects the training halves of 410-416 and pulls 419's fake-Eight-Tails reveal forward; ep 156 pulls 419's Team Samui departure forward"
+    },
+    {
+      "episodes": [
+        157,
+        158,
+        159,
+        160
+      ],
+      "kind": "rearranged",
+      "chapters": "420, 421, 424, 425, 427",
+      "note": "Invasion threads re-interleaved: 420's Iruka/Kakashi scene closes ep 158; 427's Choji-reports-to-Tsunade scene closes ep 159; 424 is split (Kakashi's death in ep 159, Danzo/Inoichi in ep 160); 425's afterlife opening in ep 159, its substance in ep 160"
+    },
+    {
+      "episodes": [
+        160
+      ],
+      "kind": "partial",
+      "chapters": "424-425",
+      "note": "Ibiki's Iron Maiden fight against the Animal Path is an anime expansion (the manga leaves that fight to others)"
+    },
+    {
+      "episodes": [
+        166
+      ],
+      "kind": "partial",
+      "chapters": "437",
+      "note": "single chapter stretched to a full episode: Hinata's childhood flashback and an extended Hinata-vs-Deva Path fight are anime additions (Narutopedia trivia); mainline beats are faithful"
+    },
+    {
+      "episodes": [
+        175
+      ],
+      "kind": "rearranged",
+      "chapters": "426, 449-450",
+      "note": "Ebisu's ch-426 reflection on Naruto is reused in the hero's welcome; only the celebration half of 450 is adapted, the Zetsu/Team Samui beats open ep 176 and the Tsunade-coma/Danzo-appointment half is deferred to the Five Kage Summit episodes"
+    }
+  ],
+  "type_corrections": [],
+  "repairs": [
+    {
+      "episode": 143,
+      "field": "end_chapter",
+      "old": 412,
+      "new": 415,
+      "why": "Adjacent to the target range. The manual 412 sits at the vol-44 boundary, but the episode runs the whole Taka-vs-B fight: Narutopedia lists chapters 411-415 and the Wikipedia season-6 synopsis ends on Amaterasu subduing B and the Kumo scouts rushing to the Raikage, which is the close of ch 415 'New Powers!!'. Full record supplied in anchors (start 411, chapters 411-415 Taka halves, vol 45) with a continue point of 403.",
+      "sources": [
+        "https://naruto.fandom.com/wiki/The_Eight-Tails_vs._Sasuke",
+        "https://en.wikipedia.org/wiki/Naruto:_Shippuden_season_6",
+        "https://naruto.fandom.com/wiki/New_Powers!!",
+        "https://www.animefillerguide.com/anime/naruto-shippuden/"
+      ]
+    }
+  ],
+  "structure": {
+    "notes": "Single component (AniList 1735, eps 1-500); every source used (Narutopedia, Wikipedia seasons 6-8, animefillerguide, animefillerlist, listfist, CBR) numbers Shippuden cumulatively 1-500, so no conversions were applied. Wikipedia season 7 = eps 144-151 ('anime only season', Six-Tails Unleashed; Narutopedia files it as an anime-only arc) and season 8 = eps 152-175 (DVD title 'Two Saviours'); 152/153, 154/155 and 170/171 aired as same-day double episodes (numbering unaffected). Narutopedia's Pain's Assault arc = manga 413-453 <-> anime 152-169 + 172-175 (CBR repeats this), but the anime's re-entry eps 152-154 actually adapt 403-409, which the wiki files under the previous manga arc. Types confirmed: 144-151 filler (Wikipedia, animefillerlist, Narutopedia), 170-171 filler (Wikipedia 'anime-original', animefillerlist, Narutopedia no chapters), 152-169 and 172-175 canon (animefillerlist 'Manga Canon', Narutopedia chapters). Volumes used: v44 403-412, v45 413-422, v46 423-432, v47 433-442, v48 443-453 (context file / Wikipedia). No order-only OVAs or movies sit in this stretch (the 2009/2010 films are non-canon).",
+    "order_only": []
+  },
+  "flags_for_sean": [
+    "Ep 176 'Rookie Instructor Iruka' (outside range; our rows: filler) opens on two real ch-450 beats (Zetsu reports Pain's death to Tobi; Team Samui sets out) before the flashback filler; animefillerguide types it 'Mixed' (450) and Narutopedia lists chapters=450, while animefillerlist says Filler. Not corrected here (out of range, and the two 'mixed' sources share lineage); consider typing it mixed with END 450 when the Past Arc is researched.",
+    "Ep 143 repair (412 -> 415) is adjacent to, not inside, the 144-174 target; apply only if the batch is allowed to touch it. Its companion continue point (403) is deliberately lower than END because the anime pulled the Taka thread forward.",
+    "Source independence: animefillerguide and listfist reproduce Narutopedia's infobox lists verbatim (including the odd entries, e.g. ep 175 -> 426, ep 155 -> 407...419), so they are one lineage. The second, independent leg for every anchor is the Wikipedia season-8 synopsis plus chapter titles/contents (Wikipedia chapter list; Narutopedia chapter pages), not animefillerguide. A non-wiki per-episode source (reddit conversion threads, 2010 episode reviews) could not be obtained: the session's web-search budget ran out mid-task and reddit blocks unauthenticated fetches.",
+    "Ep 155 END is an interpretation (medium): Narutopedia lists fragments through 419; END was placed at 416 (last chapter whose mainline content is complete) with 417-418 montage beats and the pulled-forward 419 reveal recorded in chapters_adapted. If the verifier prefers 'highest chapter touched', it would read 419; the resume point (417) is unaffected.",
+    "Narutopedia's arc page contradicts itself on ch 450 (says the hero's welcome belongs to the Five Kage Summit in the manga while also spanning the arc to 453); irrelevant to the episode map, noted only because arc-range checks may trip on it."
+  ]
+}

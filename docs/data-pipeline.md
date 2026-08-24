@@ -287,6 +287,12 @@ in code (`scripts/ingest/`), and every violation flags rather than guesses:
 | **Ruled extensions (2026-08-23 s2)** | an override chain may be RULED to run beyond its AFL page (`ruledExtent` on stitch.ts OVERRIDE_CHAINS — the AFL-lag class: Kingdom S5/S6, Beastars Final, Black Butler Public School/Emerald Witch, Magus Bride S2, Golden Kamuy S3-Final, Rent-a-Girlfriend S4/S5, Slime S2-S4): standing candidates (every run re-asserts the ruled structure when it drifts, flag or no flag), finalize gate = the chain COVERS AFL's numbering (the ruling covers the excess), id/title stable, episode rows merge within AFL's translated range only (rows beyond — Wikipedia/AFG fills — survive), order-only extras hold null spans; `--dry-run` previews | stitch.ts ruledExtent / structureMatches |
 | **Wikipedia episode-list locks (2026-08-23 s2)** | a page set merges only when its offset into OUR numbering is PROVEN, in this order: date/title votes (margin lock) → season-label component lock ("season N" = every numbered component whose LABEL names season N — two-part seasons included; positional N-th fallback when labels are silent; an airing tail is capped at the known total) → continuity lock (a set whose integer rows begin exactly at merged-max+1, fit our count, dates monotonic — Kingdom S6 on the main page) → exact-name first-segment fallback ONLY when the page's earliest air date sits within a year of our start (namesake guard: "List of Kingdom episodes" is the 2007 British drama; Slime's main page carried the Tensura Nikki spin-off). Disambiguated list forms ("List of X (Japanese TV series) episodes") are tried first. Mid-run order-only alignment evidence = fractional separators OR page top == our count (a page that numbered an insert overshoots by the inserts — Magus Bride S2) | wiki-episodes-backfill.ts lockAndMerge / datesCompatible / countAligned |
 | **Frontend gate is `tsc -b` (2026-08-23 s2)** | the verifier proves assemble.ts + mapping.ts, never the browser wrapper (supabaseSource.ts) — the allBoundaries() helper vanished in a refactor and every card open threw while the verifier and the census stayed green. Before any save point: `npx tsc -b --noEmit` = 0 errors (regenerate src/integrations/supabase/types.ts after migrations so the gate stays real; `tsc -p .` on the solution tsconfig checks nothing) + `npx vite build` | consolidate skill §7 |
+| **Reorder regime — formulas never bridge a reorder (Sean's MHA 107/113 report, 2026-08-23 s2)** | every anchor point is on-trend (≥ the running maximum) or inside a jumped-back block. Interpolation, the prevEnd+1 start derivation and the successor cap only operate BETWEEN points of one regime; across a boundary they returned plausible-but-wrong numbers (MHA ep 107 → 221 via the cap, ep 113 → 241 via prevEnd+1 — both rows annotated rearranged, so the verifier's exemption let formula output pass). Now: an ESTIMATE inside a reorder crossing renders null (an honest hole), an exact end-only row shows its END, and the verifier lists such rows as `hole` lines — the exact-record work-list — never failures. The AoT rule fixed AFG-derived starts; this closes the mapping-layer derivations | anchorPoints.onTrend / bridgeable / regimeAt / inReorderCrossing (src/lib/mapping.ts); verify-series-display.ts |
+| **Section envelope (Sean 2026-08-23 s2)** | a section header's range is the TRUE envelope of its rows — lowest row start anywhere in the section to highest coverage end anywhere in it (MHA 106-126 = "vol 23-30 · ch 221-295", not the first→last "250-295" that hid the MVA block); volumes follow from those chapters. Supersedes the high-to-low header rendering: rows show the flow as stored, the header shows the span | buildEpisodeList sections (src/lib/mapping.ts) |
+| **Sliver rule (Sean 2026-08-23 s2, MHA ep 170)** | START = the first chapter animated. A leading PARTIAL of the immediately preceding chapter IS the start unless it is scraps (≤ 5 pages, or a sliver/teaser/cold-open fragment): 429 p.3-4,14-19 (8 pages) makes ep 170 start 429, not 430. A far-earlier chapter opening an episode is a relocated graft/flashback and never the position (AoT ep 87, MHA ep 126 → 220 graft). The apply script normalizes agent records mechanically from their page counts (33 starts corrected in batch 14) so one rule governs every record | apply-research-batch-14.ts sliver rule; research protocol |
+| **Running-order END normalization (2026-08-23 s2, Dagashi S1)** | an agent may report END as the last chapter in the episode's running order (a scrambled sampler: "58, 32, 15" → 15). Our END is the POSITION instrument — the furthest mainline chapter touched — so the apply script lifts it to the highest chapter in the adapted list when it sits below the start; the full list keeps the real order | apply-research-batch-14.ts |
+| **Volume-boundary identity + numbering space (2026-08-23 s2)** | TEN manga carried boundaries from OTHER series' Wikipedia pages (Slime ← Cells at Work!, Made in Abyss ← Claymore, Yona ← Noragami, Wind Breaker ← Ushio & Tora, Kamisama Kiss ← 20th Century Boys, Hikaru ← Rurouni Kenshin, Gangsta ← Black Lagoon, Drifters ← Vagabond, Ajin ← Arslan, Killing Bites ← Vampire Knight, +6 more: Boarding School Juliet, Pluto, Sanda, Fist of the Blue Sky, Detective School Q, Project ARMS) — pre-08-24 search matches never healed; Dragon Ball's came from the Z list in Viz's RESTARTED numbering (Z ch 1 = original 195), three families ran past their manga's end (Cardcaptor + Clear Card, Rosario Season II, Tokyo Ghoul). Rules: the manga's own title leads the page search; a page whose parse repeats/backs up volume numbers is a franchise page and is skipped; a manga whose family no longer qualifies loses its stale rows; a FINISHED manga's rows past its total are trimmed and the last kept row closed at the total; research-tier rows (source 'research') may carry volumes a page can't (Dragon Ball v17-42, Slime v1-32) and close the last wiki row before them. Outcome-side: audit classes boundaries_wrong_page / boundaries_beyond_total (both 0 after the heal) | volumes-backfill.ts [mangaIds]; audit-ui-truth |
+| **Research bookmarks: one per series (2026-08-23 s2)** | every batch agent's flags_for_sean land as ONE review bookmark per series (detail.kind_of_note = 'sean_review_bookmark', full text in the in-repo verdict JSON) — not one per note | apply-research-batch-14.ts |
 | Dispositions | active / excluded / duplicate / merged rulings are durable data; backfill skips non-active | source_map |
 
 **Hard-won learnings** (why some rules exist): AFL's Drupal is corrupt since
@@ -428,6 +434,9 @@ via `supabase projects api-keys`).
 - `scopes-apply.ts` — sync curated series_scopes into canonical + auto-flag unscoped shared-manga series.
 - `stitch.ts [--dry-run]` — multi-season chains; idempotent; override chains + ruled titles live at the top; entries with `ruledExtent` are ruled extensions beyond AFL (standing candidates, §10). Follow an extension with `wiki-episodes-backfill.ts <ids>` + `verify-series-display.ts <ids>`.
 - `wiki-episodes-backfill.ts [ids]` — Wikipedia episode titles/air dates, creating rows for numbers we lack (fill-only merge; evidence-locked offsets and the namesake guard, §10); also stages fractional watch-order entries into ingest_fractionals for disposition.
+- `verify-series-display.ts [--print] <ids> | --all` — the whole-series verifier (§10); `--all` sweeps every anchored series and lists reorder holes (the exact-record work-list); `--print` shows rows AND section headers (envelope rule).
+- `volumes-backfill.ts [mangaAnilistId ...]` — an explicit id list overrides the anchored-only default (heal a manga whose anchors are landing); identity, trim and research-aware rules in §10.
+- `apply-research-batch-14.ts [--dry-run] [ids]` — the batch-14 pattern for research application: verdict JSONs live in-repo (research/batch14/out), repairs detected programmatically, type corrections only through EPISODE_TYPE_OVERRIDES, order-only dedup, sliver + running-order normalization, one bookmark per series. Future batches copy this shape.
 - `merge.ts` — multi-AFL-page merges (config at top).
 - `relations.ts` — rebuilds series_relations (auto + RULED pairs).
 - `audit-titles.ts` — periodic corruption re-audit against a fresh index snapshot.
@@ -915,6 +924,49 @@ Fixed weekly is correct.
    rederive + edges redeployed. Sweep result: ALL OK, 218/218. Census
    unchanged-clean: all anchor classes 0, ruling_violation 0, ok_full
    236.
+34. ✅ **SESSION 2 (2026-08-23, secondary account): the regression hotfix,
+   the stitch queue, batch 14, and the reorder/boundary rule classes.**
+   (a) HOTFIX: d05e617's assemble.ts split dropped `allBoundaries()` from
+   supabaseSource.ts — every card open threw on localhost and production
+   while the verifier (assemble.ts only) and a vacuous `tsc -p .` stayed
+   green; restored, types regenerated, gate = `tsc -b --noEmit` (§10).
+   AoT ep 87 start 123→130 (majority/start-sanity: the relocated ch-123
+   cold open is not the position). (b) STITCH QUEUE via the ruled-extension
+   path (§10): Kingdom S5/S6 (155), Rent-a-Girlfriend S4/S5 (60), Black
+   Butler Public School + Emerald Witch (70, + Book of Murder/Atlantic
+   order-only), Beastars Final (48), Magus Bride S2 (48, + 2021 OVA
+   order-only), Golden Kamuy S3-Final (62, + 3 OVA entries order-only; ep 62
+   → 302, Bousou Ressha-hen 210073 pending for 303-314), Slime S2-S4 (91
+   aired/96, + Coleus/Scarlet Bond/Azure Sea order-only), Arslan S2 (33, +
+   OVA), Cardcaptor component 2 corrected (Clear Card Prologue OVA 98554,
+   not the Sealed Card film), TLR Darkness specials order-only. Wikipedia
+   rows created for every new season after four lock-rule fixes (season-
+   label grouping, page-top count alignment, namesake air-date guard,
+   continuity lock; §10). Fractionals: Book of Murder parts order_only,
+   five Slime Tales/Digression recaps excluded_recap. (c) BATCH 14 = item-4
+   batch 8: 24 series / 25 verdict files kept in-repo
+   (research/batch14/out) — 1032 full-record anchors, 430 continue points,
+   514 annotations, 19 type corrections (EPISODE_TYPE_OVERRIDES: hxh-1999
+   ep 7, beastars 37/42/44, cardcaptor 4/5/7/39/76/82-87, dagashi 10,
+   reborn 111-112, slime 30), 19 order-only records with spans, 25 review
+   bookmarks. REPAIRS: railgun ep 63 start 43→68, shippuden ep 143
+   412→415, world-trigger ep 73 adapted-list, tlr-darkness ep 24 55→42/v11,
+   arslan ep 25 107→71 (the 107 was the S2 endpoint), dagashi ep 24
+   127→126, cardcaptor ep 93 → removed (Clear Card adapts a SEPARATE manga
+   87296 — split ruling pending Sean; eps 72-93 honest-null until then),
+   kenshin ep 28 end 48→49. MHA 100-170 fully per-episode (ep 107 =
+   253-255, ep 113 = 256-257, S6/S7/Final exact; post-finale specials
+   204356/211711 pending). anchor_gap_research 62→48. (d) RULE CLASSES
+   from Sean's reports: reorder regime (formulas never bridge a reorder;
+   holes listed by the verifier — 5 catalog-wide: Cells at Work 4/12/13,
+   Kowloon 12, Cardcaptor 39), section envelope, sliver rule (33 starts
+   corrected mechanically), running-order END normalization, volume-
+   boundary identity/trim/research rows (16 poisoned families healed;
+   Dragon Ball 42-volume table rebuilt; audit classes 0). Verifier --all:
+   219/219 ok. Edges rebuilt + redeployed (type overrides live in the
+   refresh path). Remaining UI-phase gap: rearranged/graft rows carry
+   annotations but no visible mark, so a correct reorder reads as a bug —
+   Sean's call on a provisional glyph vs the full asterisk pass.
 21. ✅ **Consolidation pass 2 (2026-08-23, post-Kenshin)**: every write path
    swept against the day's rules — filterEpisodeRows (caps + type
    overrides) now in ALL five episode writers (resolve, stitched-guard,

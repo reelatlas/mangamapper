@@ -1,0 +1,433 @@
+{
+  "series_id": "a-certain-scientific-railgun",
+  "summary": "Eps 41-48 (Railgun S 17-24) are anime-original (S17 standalone + the Silent Party arc S18-24) per Wikipedia, animefillerlist, both Toaru fandoms and moegirl, with only three tiny grafts (ch 40 rat scene in ep 41, ch 43 Item pool scene in ep 46, ch 44 Aoki scene in ep 47) - our anime-only-canon typing stands and no anchors apply. Eps 49-62 (Railgun T 1-14) adapt the Daihasei Festival arc ch 43-69 nearly linearly at ~2 chapters/episode: T1=43, T2=44-45, T3=45-47, T4=47-49, T5=49-50, T6=51-52, T7=53-55, T8=55-57, T9=57-59(+61 cold close), T10=59-61, T11=61-64, T12=63-65, T13=65-67, T14=67+69; T15 (ep 63) then adapts 68+70. The EN fandom forward/reverse mapping and moegirl's independent 改编自原作 table agree on every episode's chapter set; the only differences are partial-chapter granularity at T11 (64) and T13 (67), marked medium. Surprises: the vol-7 intermission ch 40-42 is skipped by the TV anime (ch 42 only in the Railgun T Drama CD), so the existing ep 49 annotation {40-42} is wrong; ch 68 (Dolly) is deferred from T14 to T15 so T14 jumps 67->69; and the existing ep 63 arc-span anchor (start 43) needs its start refined to 68.",
+  "anchors": [
+    {
+      "episode": 49,
+      "end_chapter": 43,
+      "start_chapter": 43,
+      "chapters_adapted": "41 (Tokiwadai confrontation = redone ch 41 library scene), 43",
+      "volume": 7,
+      "confidence": "high",
+      "note": "T1 'Level 5' = ch 43 'Negotiation' (committee recruits Level 5s; Misaki+Gunha chosen closes both). Hospital scenes anime-original (inspired by ch 41 cover); Gunha intro/Watanabe meeting altered. Moegirl: vol-7 4-koma + ch 43 + original. Ch 40-42 NOT adapted (see annotations). Arc start ch 43 also per ja fandom/ja wikipedia.",
+      "sources": [
+        "https://toarumajutsunoindex.fandom.com/wiki/Toaru_Kagaku_no_Railgun_T_Episode_01",
+        "https://toarumajutsunoindex.fandom.com/wiki/Toaru_Kagaku_no_Railgun_Manga_Chapter_043",
+        "https://toarumajutsunoindex.fandom.com/wiki/Toaru_Kagaku_no_Railgun_Manga_Chapter_041",
+        "https://zh.moegirl.org.cn/%E6%9F%90%E7%A7%91%E5%AD%A6%E7%9A%84%E8%B6%85%E7%94%B5%E7%A3%81%E7%82%AE",
+        "https://acertainscientificrailgun.fandom.com/ja/wiki/%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AA%E3%83%BC",
+        "https://ja.wikipedia.org/wiki/%E3%81%A8%E3%81%82%E3%82%8B%E7%A7%91%E5%AD%A6%E3%81%AE%E8%B6%85%E9%9B%BB%E7%A3%81%E7%A0%B2"
+      ]
+    },
+    {
+      "episode": 50,
+      "end_chapter": 45,
+      "start_chapter": 44,
+      "chapters_adapted": "44, 45 (first half: Misuzu arrives, Kinuho/Maaya, 10032 substitutes)",
+      "volume": 8,
+      "confidence": "high",
+      "note": "T2 'Daihaseisai' = ch 44 'Commencement' (opening pledge, three-legged race, Xochitl, bag confiscated - Konori replaces Fukiyose) + ch 45 up to the Balloon Hunter start; ends mid-45 with Baba facing 10032. Moegirl: 7卷第44话/8卷第45话.",
+      "sources": [
+        "https://toarumajutsunoindex.fandom.com/wiki/Toaru_Kagaku_no_Railgun_T_Episode_02",
+        "https://toarumajutsunoindex.fandom.com/wiki/Toaru_Kagaku_no_Railgun_Manga_Chapter_045",
+        "https://toarumajutsunoindex.fandom.com/wiki/Toaru_Kagaku_no_Railgun_Manga_Chapter_044",
+        "https://zh.moegirl.org.cn/%E6%9F%90%E7%A7%91%E5%AD%A6%E7%9A%84%E8%B6%85%E7%94%B5%E7%A3%81%E7%82%AE"
+      ]
+    },
+    {
+      "episode": 51,
+      "end_chapter": 47,
+      "start_chapter": 45,
+      "chapters_adapted": "45 (Balloon Hunter half), 46, 47 (first half: Misuzu lunch, Touma drink line, Shadow Metal search)",
+      "volume": 8,
+      "confidence": "high",
+      "note": "T3 'Balloon Hunter' = rest of ch 45 + ch 46 (Tokiwadai loses; 10032 collapses before Misaki/Keitz = episode close) + first half of ch 47 placed before ch 46's ending. Index/Oriana cameos cut. Moegirl: 8卷第45~47话.",
+      "sources": [
+        "https://toarumajutsunoindex.fandom.com/wiki/Toaru_Kagaku_no_Railgun_T_Episode_03",
+        "https://toarumajutsunoindex.fandom.com/wiki/Toaru_Kagaku_no_Railgun_Manga_Chapter_047",
+        "https://toarumajutsunoindex.fandom.com/wiki/Toaru_Kagaku_no_Railgun_Manga_Chapter_045",
+        "https://toarumajutsunoindex.fandom.com/wiki/Toaru_Kagaku_no_Railgun_Manga_Chapter_046",
+        "https://zh.moegirl.org.cn/%E6%9F%90%E7%A7%91%E5%AD%A6%E7%9A%84%E8%B6%85%E7%94%B5%E7%A3%81%E7%82%AE"
+      ]
+    },
+    {
+      "episode": 52,
+      "end_chapter": 49,
+      "start_chapter": 47,
+      "chapters_adapted": "47 (second half: Uiharu finds DNA-computer article, 'File Deleted', night parade), 48, 49 (opening beat only)",
+      "volume": 8,
+      "confidence": "high",
+      "note": "T4 'Alteration/Tampering' = rest of ch 47 + ch 48 'Erosion' (ambulance trail, Watanabe, Misaki's clique, friends don't remember Mikoto) + only the first beat of ch 49 (Kuroko's offer / Mikoto's anger). Hotel-tradition scene and expanded Night Parade anime-original. Moegirl: 8卷第47~49话; fandom marks 49 'partially'.",
+      "sources": [
+        "https://toarumajutsunoindex.fandom.com/wiki/Toaru_Kagaku_no_Railgun_T_Episode_04",
+        "https://toarumajutsunoindex.fandom.com/wiki/Toaru_Kagaku_no_Railgun_Manga_Chapter_049",
+        "https://toarumajutsunoindex.fandom.com/wiki/Toaru_Kagaku_no_Railgun_Manga_Chapter_047",
+        "https://toarumajutsunoindex.fandom.com/wiki/Toaru_Kagaku_no_Railgun_Manga_Chapter_048",
+        "https://zh.moegirl.org.cn/%E6%9F%90%E7%A7%91%E5%AD%A6%E7%9A%84%E8%B6%85%E7%94%B5%E7%A3%81%E7%82%AE"
+      ]
+    },
+    {
+      "episode": 53,
+      "end_chapter": 50,
+      "start_chapter": 49,
+      "chapters_adapted": "49, 50",
+      "volume": 8,
+      "confidence": "high",
+      "note": "T5 'Trust' = ch 49 'Trust' (title match; Kongou meets Kuroko's group, Balloon Sandwich, Junko/Gekota) + ch 50 'Outbreak' (Kongou's solo investigation, Baba's dogs, Kongou beaten; Kinuho/Maaya vow to fight = both endings). Mikoto/Kongou balloon-race explanation skipped; crow replaces dogs. Moegirl: 8卷第49~50话.",
+      "sources": [
+        "https://toarumajutsunoindex.fandom.com/wiki/Toaru_Kagaku_no_Railgun_T_Episode_05",
+        "https://toarumajutsunoindex.fandom.com/wiki/Toaru_Kagaku_no_Railgun_Manga_Chapter_050",
+        "https://toarumajutsunoindex.fandom.com/wiki/Toaru_Kagaku_no_Railgun_Manga_Chapter_049",
+        "https://zh.moegirl.org.cn/%E6%9F%90%E7%A7%91%E5%AD%A6%E7%9A%84%E8%B6%85%E7%94%B5%E7%A3%81%E7%82%AE"
+      ]
+    },
+    {
+      "episode": 54,
+      "end_chapter": 52,
+      "start_chapter": 51,
+      "chapters_adapted": "51, 52",
+      "volume": 8,
+      "confidence": "high",
+      "note": "T6 'The Battle Begins' = ch 51 'Analysis' (Kinuho/Maaya vs Baba, Saten carries Kongou, Mikoto pulls the Mosquito off) + ch 52 'Darkness' (Kinuho's water runs out, Mikoto crushes Baba, Kouzaku/Xochitl decide to move = episode close). NB episode title equals ch 50's title 開戦 but content is 51-52. Moegirl: 8卷第51~52话.",
+      "sources": [
+        "https://toarumajutsunoindex.fandom.com/wiki/Toaru_Kagaku_no_Railgun_T_Episode_06",
+        "https://toarumajutsunoindex.fandom.com/wiki/Toaru_Kagaku_no_Railgun_Manga_Chapter_052",
+        "https://toarumajutsunoindex.fandom.com/wiki/Toaru_Kagaku_no_Railgun_Manga_Chapter_051",
+        "https://zh.moegirl.org.cn/%E6%9F%90%E7%A7%91%E5%AD%A6%E7%9A%84%E8%B6%85%E7%94%B5%E7%A3%81%E7%82%AE"
+      ]
+    },
+    {
+      "episode": 55,
+      "end_chapter": 55,
+      "start_chapter": 53,
+      "chapters_adapted": "53, 54, 55 (opening beat only: restored data reveals Misaki's photo)",
+      "volume": 9,
+      "confidence": "high",
+      "note": "T7 'Auribus oculi fideliores sunt.' = ch 53 'Defect' (Baba's truck, Kouzaku takes Uiharu hostage) + ch 54 'Cooperation' (hostage standoff, Psychometer, cat's memory, the urban-legend site named in the title) and closes on ch 55's first page (article with Misaki's photo). Misuzu phone scene anime-original. Moegirl: 9卷第53~55话; fandom marks 55 as 'end'.",
+      "sources": [
+        "https://toarumajutsunoindex.fandom.com/wiki/Toaru_Kagaku_no_Railgun_T_Episode_07",
+        "https://toarumajutsunoindex.fandom.com/wiki/Toaru_Kagaku_no_Railgun_Manga_Chapter_055",
+        "https://toarumajutsunoindex.fandom.com/wiki/Toaru_Kagaku_no_Railgun_Manga_Chapter_053",
+        "https://toarumajutsunoindex.fandom.com/wiki/Toaru_Kagaku_no_Railgun_Manga_Chapter_054",
+        "https://zh.moegirl.org.cn/%E6%9F%90%E7%A7%91%E5%AD%A6%E7%9A%84%E8%B6%85%E7%94%B5%E7%A3%81%E7%82%AE"
+      ]
+    },
+    {
+      "episode": 56,
+      "end_chapter": 57,
+      "start_chapter": 55,
+      "chapters_adapted": "55, 56, 57 (opening scene only: Uiharu wakes in the infirmary and is told the truth)",
+      "volume": 9,
+      "confidence": "high",
+      "note": "T8 'Railgun x Mental Out' = ch 55 'In the Same Boat' (District 2, Misaki explains Gensei/Level 6 Shift, memory tampering) + ch 56 'Dividing and Advancing' (jog to the conference hall, bickering, Kuroko's Bank list, Kouzaku reports to Gensei = episode close) + ch 57's opening Uiharu scene. Togawa profile/Amai mention/chibi gag cut. Moegirl: 9卷第55~57话.",
+      "sources": [
+        "https://toarumajutsunoindex.fandom.com/wiki/Toaru_Kagaku_no_Railgun_T_Episode_08",
+        "https://toarumajutsunoindex.fandom.com/wiki/Toaru_Kagaku_no_Railgun_Manga_Chapter_057",
+        "https://toarumajutsunoindex.fandom.com/wiki/Toaru_Kagaku_no_Railgun_Manga_Chapter_055",
+        "https://toarumajutsunoindex.fandom.com/wiki/Toaru_Kagaku_no_Railgun_Manga_Chapter_056",
+        "https://zh.moegirl.org.cn/%E6%9F%90%E7%A7%91%E5%AD%A6%E7%9A%84%E8%B6%85%E7%94%B5%E7%A3%81%E7%82%AE"
+      ]
+    },
+    {
+      "episode": 57,
+      "end_chapter": 59,
+      "start_chapter": 57,
+      "chapters_adapted": "56 (tail: Kuroko/Saten Bank list), 57, 58, 59 (first half: Xochitl vs Kouzaku's puppet), 61 (opening beat as cold close: Keitz/10032, alarm)",
+      "volume": 9,
+      "confidence": "high",
+      "note": "T9 'Kouzaku Mitori' = ch 57 'Search' (conference hall infiltration, Bank control centre, Saten meets Touma) + ch 58 'Doubt' (charm, Kouzaku 'died' record, fake Gensei, Saten caught/freed) + first half of ch 59 (Xochitl confronts Kouzaku, Kouzaku retreats); closes with ch 61's opening (breach at Keitz's facility) pulled forward. Ch 59's second half (Misaki's Clone Dolly flashback) is in ep 58. Moegirl: 9卷第57~59话.",
+      "sources": [
+        "https://toarumajutsunoindex.fandom.com/wiki/Toaru_Kagaku_no_Railgun_T_Episode_09",
+        "https://toarumajutsunoindex.fandom.com/wiki/Toaru_Kagaku_no_Railgun_Manga_Chapter_059",
+        "https://toarumajutsunoindex.fandom.com/wiki/Toaru_Kagaku_no_Railgun_Manga_Chapter_057",
+        "https://toarumajutsunoindex.fandom.com/wiki/Toaru_Kagaku_no_Railgun_Manga_Chapter_058",
+        "https://toarumajutsunoindex.fandom.com/wiki/Toaru_Kagaku_no_Railgun_Manga_Chapter_061",
+        "https://zh.moegirl.org.cn/%E6%9F%90%E7%A7%91%E5%AD%A6%E7%9A%84%E8%B6%85%E7%94%B5%E7%A3%81%E7%82%AE"
+      ]
+    },
+    {
+      "episode": 58,
+      "end_chapter": 61,
+      "start_chapter": 59,
+      "chapters_adapted": "59 (second half: Misaki/Dolly flashback), 60, 61",
+      "volume": 9,
+      "confidence": "high",
+      "note": "T10 'Clone Dolly' = rest of ch 59 + ch 60 'Friends' (Dolly, Exterior origin, Saten/Xochitl, Touma returns) + ch 61 'SYSTEM' (breach, Gensei uses Exterior, virus, Level 6 Shift declared = both endings). Accelerator/Last Order virus scenes anime-original; Panamera -> Fuga; some Dolly scenes trimmed. Moegirl: 9卷第59~61话.",
+      "sources": [
+        "https://toarumajutsunoindex.fandom.com/wiki/Toaru_Kagaku_no_Railgun_T_Episode_10",
+        "https://toarumajutsunoindex.fandom.com/wiki/Toaru_Kagaku_no_Railgun_Manga_Chapter_061",
+        "https://toarumajutsunoindex.fandom.com/wiki/Toaru_Kagaku_no_Railgun_Manga_Chapter_059",
+        "https://toarumajutsunoindex.fandom.com/wiki/Toaru_Kagaku_no_Railgun_Manga_Chapter_060",
+        "https://zh.moegirl.org.cn/%E6%9F%90%E7%A7%91%E5%AD%A6%E7%9A%84%E8%B6%85%E7%94%B5%E7%A3%81%E7%82%AE"
+      ]
+    },
+    {
+      "episode": 59,
+      "end_chapter": 64,
+      "start_chapter": 62,
+      "chapters_adapted": "61 (tail: Touma/Saten beats, expanded), 62, 63, 64 (first part: Touma's plan, Gunha throws him, partial negation; Misaki finds Gensei)",
+      "volume": 10,
+      "confidence": "medium",
+      "note": "T11 'Joining the Battle' = ch 62 'Joining the Battle' (title match; Windowless Building strike, Misaki's telepathy to Touma, Kuroko rescues Misaki) + ch 63 'Chaos' (cumulonimbus cover story, Gunha arrives, boys introduce themselves) + roughly the first third of ch 64 (episode closes on Touma touching Mikoto and Misaki finding Gensei). Fandom episode+chapter pages list 61-64; moegirl lists 62-63 only (coarser), hence medium on END; resume position 64 either way. Touma/Saten/Xochitl opening scene anime-original.",
+      "sources": [
+        "https://toarumajutsunoindex.fandom.com/wiki/Toaru_Kagaku_no_Railgun_T_Episode_11",
+        "https://toarumajutsunoindex.fandom.com/wiki/Toaru_Kagaku_no_Railgun_Manga_Chapter_064",
+        "https://toarumajutsunoindex.fandom.com/wiki/Toaru_Kagaku_no_Railgun_Manga_Chapter_062",
+        "https://toarumajutsunoindex.fandom.com/wiki/Toaru_Kagaku_no_Railgun_Manga_Chapter_063",
+        "https://zh.moegirl.org.cn/%E6%9F%90%E7%A7%91%E5%AD%A6%E7%9A%84%E8%B6%85%E7%94%B5%E7%A3%81%E7%82%AE"
+      ]
+    },
+    {
+      "episode": 60,
+      "end_chapter": 65,
+      "start_chapter": 64,
+      "chapters_adapted": "63 (Exterior-codes explanation, referenced only), 64 (second half), 65 (Parts 1-3 bulk: Gensei/Misaki traps, Kuroko blinds the puppet; Kuroko-thread tail deferred to ep 61)",
+      "volume": 10,
+      "confidence": "high",
+      "note": "T12 'Exterior' = rest of ch 64 'Resistance' (Touma can't fully negate, Gunha bleeds; Gensei's Level 6 = death explanation, pins Misaki) + ch 65 'Defeat' (triple-length tankobon chapter: graviton-panel traps, prosthetic arm, Misaki passes out, Gensei obtains the limiter code = episode close). Moegirl: 10卷第64~65话.",
+      "sources": [
+        "https://toarumajutsunoindex.fandom.com/wiki/Toaru_Kagaku_no_Railgun_T_Episode_12",
+        "https://toarumajutsunoindex.fandom.com/wiki/Toaru_Kagaku_no_Railgun_Manga_Chapter_065",
+        "https://toarumajutsunoindex.fandom.com/wiki/Toaru_Kagaku_no_Railgun_Manga_Chapter_064",
+        "https://zh.moegirl.org.cn/%E6%9F%90%E7%A7%91%E5%AD%A6%E7%9A%84%E8%B6%85%E7%94%B5%E7%A3%81%E7%82%AE"
+      ]
+    },
+    {
+      "episode": 61,
+      "end_chapter": 67,
+      "start_chapter": 65,
+      "chapters_adapted": "65 (tail: relay camera, dead-end corridor, vent/knife ambush; Gunha knocked out), 66, 67 (opening beat only: Mikoto's subconscious wakes)",
+      "volume": 10,
+      "confidence": "medium",
+      "note": "T13 'SYSTEM' = end of ch 65 (Kuroko vs Kouzaku thread) + ch 66 'Miscalculation' (sewer ambush, Kouzaku KO'd; Misaki's code-swap gamble destroys Exterior = both climaxes) and closes on ch 67's first page. Fandom lists 65-67; moegirl lists 65-66 (coarser), hence medium on END; resume position 67 either way. Gensei only thinks the code in the anime.",
+      "sources": [
+        "https://toarumajutsunoindex.fandom.com/wiki/Toaru_Kagaku_no_Railgun_T_Episode_13",
+        "https://toarumajutsunoindex.fandom.com/wiki/Toaru_Kagaku_no_Railgun_Manga_Chapter_067",
+        "https://toarumajutsunoindex.fandom.com/wiki/Toaru_Kagaku_no_Railgun_Manga_Chapter_065",
+        "https://toarumajutsunoindex.fandom.com/wiki/Toaru_Kagaku_no_Railgun_Manga_Chapter_066",
+        "https://zh.moegirl.org.cn/%E6%9F%90%E7%A7%91%E5%AD%A6%E7%9A%84%E8%B6%85%E7%94%B5%E7%A3%81%E7%82%AE"
+      ]
+    },
+    {
+      "episode": 62,
+      "end_chapter": 69,
+      "start_chapter": 67,
+      "chapters_adapted": "67, 68 (glimpsed only: Misaki reaches the restrained Kouzaku), 69",
+      "volume": 10,
+      "confidence": "high",
+      "note": "T14 'Dragon Strike' = ch 67 'Right Hand' (Gunha's path, Touma's arm torn off, dragons, Mikoto restored, arm regrows) + ch 69 'Festival's End' (memories restored with Misaki's humiliating cover story, Kongou hospital visit re-timed, folk dance, Kuroko's dropkick = both endings). Ch 68 'Dolly' is deferred to ep 63; opening Misaki/Gensei and handcuff scenes plus 10032 hospital visit and fireworks are anime-original. Moegirl: 10卷第67、69话.",
+      "sources": [
+        "https://toarumajutsunoindex.fandom.com/wiki/Toaru_Kagaku_no_Railgun_T_Episode_14",
+        "https://toarumajutsunoindex.fandom.com/wiki/Toaru_Kagaku_no_Railgun_Manga_Chapter_069",
+        "https://toarumajutsunoindex.fandom.com/wiki/Toaru_Kagaku_no_Railgun_Manga_Chapter_067",
+        "https://toarumajutsunoindex.fandom.com/wiki/Toaru_Kagaku_no_Railgun_Manga_Chapter_068",
+        "https://zh.moegirl.org.cn/%E6%9F%90%E7%A7%91%E5%AD%A6%E7%9A%84%E8%B6%85%E7%94%B5%E7%A3%81%E7%82%AE"
+      ]
+    },
+    {
+      "episode": 63,
+      "end_chapter": 70,
+      "start_chapter": 68,
+      "chapters_adapted": "68 (Kouzaku's Dolly backstory; Misaki frees Kouzaku), 70",
+      "volume": 10,
+      "confidence": "high",
+      "note": "T15 'Promise' = ch 68 'Dolly' + ch 70 'Promise' (title match やくそく/約束; Dolly reunion, 10032's beach promise = both endings). Judgment-office celebration, car scene and the Windowless Building attack are anime-original. Arc end ch 70 also per ja fandom (第10巻第70話「約束」) and ja wikipedia (3期1-15話 = 第7-10巻). Outside the target range but included to repair the existing arc-span anchor. Moegirl: 10卷第68、70话.",
+      "sources": [
+        "https://toarumajutsunoindex.fandom.com/wiki/Toaru_Kagaku_no_Railgun_T_Episode_15",
+        "https://toarumajutsunoindex.fandom.com/wiki/Toaru_Kagaku_no_Railgun_Manga_Chapter_070",
+        "https://toarumajutsunoindex.fandom.com/wiki/Toaru_Kagaku_no_Railgun_Manga_Chapter_068",
+        "https://zh.moegirl.org.cn/%E6%9F%90%E7%A7%91%E5%AD%A6%E7%9A%84%E8%B6%85%E7%94%B5%E7%A3%81%E7%82%AE",
+        "https://acertainscientificrailgun.fandom.com/ja/wiki/%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AA%E3%83%BC",
+        "https://ja.wikipedia.org/wiki/%E3%81%A8%E3%81%82%E3%82%8B%E7%A7%91%E5%AD%A6%E3%81%AE%E8%B6%85%E9%9B%BB%E7%A3%81%E7%A0%B2"
+      ]
+    }
+  ],
+  "continue_points": [
+    {
+      "episode": 50,
+      "continue_chapter": 45,
+      "note": "ends mid-ch 45 (Balloon Hunter about to begin); the competition half of 45 is in ep 51"
+    },
+    {
+      "episode": 51,
+      "continue_chapter": 47,
+      "note": "ends mid-ch 47 (Uiharu's search just started); ch 47's discovery/night-parade half is in ep 52"
+    },
+    {
+      "episode": 52,
+      "continue_chapter": 49,
+      "note": "only ch 49's opening beat is shown; the bulk of 49 is in ep 53"
+    },
+    {
+      "episode": 55,
+      "continue_chapter": 55,
+      "note": "closes on ch 55's first page (Misaki's photo); ch 55 proper is in ep 56"
+    },
+    {
+      "episode": 56,
+      "continue_chapter": 57,
+      "note": "only ch 57's opening infirmary scene is shown; conference hall/Bank/Touma material is in ep 57"
+    },
+    {
+      "episode": 57,
+      "continue_chapter": 59,
+      "note": "ends mid-ch 59 (Kouzaku retreats); Misaki's Clone Dolly flashback (second half of 59) is in ep 58. Ch 61's opening was shown as a cold close but resume at 59"
+    },
+    {
+      "episode": 59,
+      "continue_chapter": 64,
+      "note": "ends roughly a third into ch 64 (Touma's touch only partly works; Misaki finds Gensei)"
+    },
+    {
+      "episode": 60,
+      "continue_chapter": 65,
+      "note": "ends at ch 65's Gensei/Misaki climax, but ch 65's Kuroko-vs-Kouzaku tail and Gunha's KO are shown in ep 61"
+    },
+    {
+      "episode": 61,
+      "continue_chapter": 67,
+      "note": "closes on ch 67's first page (Mikoto's subconscious wakes); ch 67 proper is in ep 62"
+    },
+    {
+      "episode": 62,
+      "continue_chapter": 68,
+      "note": "ep 62 jumps from ch 67 to ch 69; ch 68 (Dolly) is adapted next in ep 63, so resume at 68 (69 already seen)"
+    }
+  ],
+  "annotations": [
+    {
+      "episodes": [
+        41
+      ],
+      "kind": "graft",
+      "chapters": "40",
+      "note": "S17 'Study Session' is anime-original; fandom ch 40 page: only the rat-buying scene is taken from ch 40 (altered). Moegirl lists vol-5 4-koma + vol-7 extra chapter + original. No arc assignment on either wiki."
+    },
+    {
+      "episodes": [
+        46
+      ],
+      "kind": "graft",
+      "chapters": "43",
+      "note": "S22 'STUDY' (Silent Party arc, anime-original) borrows only the Item pool scene from ch 43 (fandom ch 43 'Adapted To')."
+    },
+    {
+      "episodes": [
+        47
+      ],
+      "kind": "graft",
+      "chapters": "44",
+      "note": "S23 'Silent Party' (anime-original) borrows only the Aoki scene from ch 44 (fandom ch 44 'Adapted To')."
+    },
+    {
+      "episodes": [
+        49
+      ],
+      "kind": "abridged",
+      "chapters": "40-42",
+      "note": "TV anime skips the vol-7 intermission (40 'Faction 1', 41 'Faction 2', 42 'Rainbow's End'): ch 40's rat scene went to S17 (ep 41), ch 41's library scene to S1 (ep 25), ch 42 exists only as Railgun T Drama CD Part 1. Manga readers should read 40-42 before T1; the anime resumes at ch 43."
+    },
+    {
+      "episodes": [
+        49
+      ],
+      "kind": "graft",
+      "chapters": "41",
+      "note": "Mikoto/Misaki confrontation at Tokiwadai is a redone version of ch 41's library confrontation (already adapted in S1); hospital scenes anime-original but modelled on ch 41's cover."
+    },
+    {
+      "episodes": [
+        51
+      ],
+      "kind": "rearranged",
+      "chapters": "46-47",
+      "note": "ch 47's Misuzu lunch / Touma drink-line scene is placed before ch 46's ending (10032 collapses), which closes the episode."
+    },
+    {
+      "episodes": [
+        57
+      ],
+      "kind": "graft",
+      "chapters": "61",
+      "note": "ch 61's opening (Keitz with 10032, facility alarm) is pulled forward as the episode's cold close; the rest of 61 is in ep 58."
+    },
+    {
+      "episodes": [
+        60
+      ],
+      "kind": "rearranged",
+      "chapters": "63",
+      "note": "ch 63's explanation of Exterior's boost/limiter/self-destruct codes appears here (codes referenced, not shown), after ch 63 proper was adapted in ep 59."
+    },
+    {
+      "episodes": [
+        61
+      ],
+      "kind": "partial",
+      "chapters": "65, 67",
+      "note": "opens by finishing ch 65 (Kuroko's hunt: relay camera, corridor, vent/knife ambush; Gunha KO'd) and closes on ch 67's first page; core is ch 66."
+    },
+    {
+      "episodes": [
+        62,
+        63
+      ],
+      "kind": "rearranged",
+      "chapters": "67-70",
+      "note": "ep 62 adapts ch 67 then ch 69 (skipping 68 apart from a glimpse of Misaki reaching Kouzaku); ep 63 then adapts ch 68 (Kouzaku/Dolly backstory, Misaki frees her) followed by ch 70. Ep 62's Misaki-reads-Gensei, handcuff, 10032 hospital and fireworks scenes are anime-original (alluded to in ch 68/69); Kongou's hospital visit re-timed from ch 69's fireworks."
+    }
+  ],
+  "type_corrections": [],
+  "repairs": [
+    {
+      "episode": 63,
+      "field": "start_chapter",
+      "old": 43,
+      "new": 68,
+      "why": "Existing anchor is an arc-span (43-70). With per-episode anchors 49-62 now covering ch 43-69, ep 63 (T15) itself adapts only ch 68 and ch 70 (ch 69 was adapted in ep 62). Fandom T15 'Adapted From' = ch 68, 70; ch 68 page 'Adapted To' = T14, T15; ch 70 page = T15; moegirl #15 = 10卷（第68、70话）.",
+      "sources": [
+        "https://toarumajutsunoindex.fandom.com/wiki/Toaru_Kagaku_no_Railgun_T_Episode_15",
+        "https://toarumajutsunoindex.fandom.com/wiki/Toaru_Kagaku_no_Railgun_Manga_Chapter_068",
+        "https://toarumajutsunoindex.fandom.com/wiki/Toaru_Kagaku_no_Railgun_Manga_Chapter_070",
+        "https://zh.moegirl.org.cn/%E6%9F%90%E7%A7%91%E5%AD%A6%E7%9A%84%E8%B6%85%E7%94%B5%E7%A3%81%E7%82%AE"
+      ]
+    },
+    {
+      "episode": 63,
+      "field": "chapters_adapted",
+      "old": "43-70 (Daihasei proper)",
+      "new": "68, 70",
+      "why": "Same evidence as the start_chapter repair; end_chapter 70 and volume 10 stay as they are.",
+      "sources": [
+        "https://toarumajutsunoindex.fandom.com/wiki/Toaru_Kagaku_no_Railgun_T_Episode_15",
+        "https://toarumajutsunoindex.fandom.com/wiki/Toaru_Kagaku_no_Railgun_Manga_Chapter_070",
+        "https://zh.moegirl.org.cn/%E6%9F%90%E7%A7%91%E5%AD%A6%E7%9A%84%E8%B6%85%E7%94%B5%E7%A3%81%E7%82%AE",
+        "https://acertainscientificrailgun.fandom.com/ja/wiki/%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AA%E3%83%BC"
+      ]
+    },
+    {
+      "episode": 49,
+      "field": "annotation(partial).chapters",
+      "old": "40-42 (vol-7 intermission compressed into Daihasei setup)",
+      "new": "41 only (cover/confrontation redone); 40-42 are otherwise NOT adapted by the TV anime",
+      "why": "Fandom ch 40 'Adapted To' = S17 rat scene only; ch 41 = S1 library scene + T1 hospital scene inspired by its cover (anime-original); ch 42 = Railgun T Drama CD Part 1 (not the anime). T1 'Adapted From' = ch 41 (cover-only) + ch 43. Moegirl T1 = vol-7 4-koma + ch 43 + original. So the intermission is skipped, not compressed.",
+      "sources": [
+        "https://toarumajutsunoindex.fandom.com/wiki/Toaru_Kagaku_no_Railgun_T_Episode_01",
+        "https://toarumajutsunoindex.fandom.com/wiki/Toaru_Kagaku_no_Railgun_Manga_Chapter_040",
+        "https://toarumajutsunoindex.fandom.com/wiki/Toaru_Kagaku_no_Railgun_Manga_Chapter_041",
+        "https://toarumajutsunoindex.fandom.com/wiki/Toaru_Kagaku_no_Railgun_Manga_Chapter_042",
+        "https://zh.moegirl.org.cn/%E6%9F%90%E7%A7%91%E5%AD%A6%E7%9A%84%E8%B6%85%E7%94%B5%E7%A3%81%E7%82%AE"
+      ]
+    }
+  ],
+  "structure": {
+    "notes": "Components confirmed: S1 = AniList 6213, 24 eps (our 1-24); S2 'Railgun S' = 16049, 24 eps (our 25-48; S ep N = our 24+N); S3 'Railgun T' = 104462, 25 eps (our 49-73; T ep N = our 48+N); 4th season announced (our 74-). All chapter numbers are tankobon numbering (fandom/Wikipedia/moegirl agree; ch 65 merged three magazine chapters 65-67, so magazine numbering runs +2 from ch 66 onward). Arc structure per ja fandom + ja wikipedia + moegirl: Daihasei = ch 43-70 (vol 7-10) = T1-15; Dream Ranker = ch 71-96 (vol 11-13) = T16-25; Silent Party (S18-24) and S17 anime-original (Wikipedia, animefillerlist 'Filler', both fandoms, moegirl 动画原创) - consistent with our anime-only-canon overrides for eps 41-48, no type corrections. Order-only extras are all anime-original and adapt nothing: 2010 OVA 'Misaka-san wa Ima Chuumoku no Mato desu kara' (MAL 8023), S special 'Daijina Koto wa Zenbu Sentou ni Osowatta' (MAL 19697), Motto Marutto Railgun gag shorts I-VI. The Railgun T Drama CD (not an anime) is the only adaptation of ch 42. Existing arc-span anchor on ep 63 needs the start refined to 68 (repairs).",
+    "order_only": []
+  },
+  "flags_for_sean": [
+    "Existing ep 49 annotation {40-42 'compressed into Daihasei setup'} is contradicted by both wikis: ch 40-42 are skipped by the TV anime (ch 42 only exists as the Railgun T Drama CD). Filed as a repair + a new 'abridged' annotation; manga-first readers should read 40-42 before T1.",
+    "END granularity disagreement (resume positions unaffected): ep 59 (T11) fandom episode+chapter pages say ch 64 is partly adapted (synopsis confirms Touma's touch/Misaki finds Gensei), moegirl lists 62-63; ep 61 (T13) fandom says ch 67's first page closes the episode, moegirl lists 65-66. Both anchored to the fandom value and marked medium.",
+    "Per-episode lineage: EN fandom (episode 'Adapted From' + chapter 'Adapted To' reverse map + synopsis scene matching) and the independent moegirl 改编自原作 table agree on every T1-T15 chapter set; arc boundaries (43 start, 70 end) further corroborated by the separate Japanese Railgun fandom and ja.wikipedia; MAL episode-discussion threads (T1, T2, T9, T11, T13, T15) contained no chapter mentions and reddit is not reachable from this environment.",
+    "Ep 63 repair is outside the 41-62 target range but is a direct consequence of the per-episode anchors (its arc-span start of 43 would overlap all of them)."
+  ]
+}

@@ -125,7 +125,20 @@ const chToVol = (anime: AnimeSeries, r: Ratios, ch: number): number | null => {
 interface AnchorPoint {
   idx: number; // canon/mixed episode index
   ch: number; // chapter frontier reached at that episode
+  // REORDER REGIME (Sean's MHA 107/113 report, 2026-08-23): a point below the
+  // running maximum sits inside a jumped-back block (MHA's My Villain
+  // Academia arc aired after the Endeavor Agency arc: 218-240 after 241-252).
+  // Formulas — interpolation, prevEnd+1 starts, the successor cap — only
+  // hold BETWEEN points of the same regime; across a boundary they paint
+  // plausible-but-wrong numbers, so they return null there (honest unknown)
+  onTrend: boolean;
 }
+
+// two consecutive points can be bridged by a formula only when they share a
+// regime (both on the monotonic envelope, or both inside the same
+// jumped-back block and still advancing)
+const bridgeable = (a: AnchorPoint, b: AnchorPoint): boolean =>
+  (a.onTrend && b.onTrend) || (!a.onTrend && !b.onTrend && b.ch >= a.ch);
 
 const anchorPointsCache = new WeakMap<MappingSummary, AnchorPoint[]>();
 const anchorPoints = (anime: AnimeSeries, m: MappingSummary): AnchorPoint[] => {
@@ -135,11 +148,11 @@ const anchorPoints = (anime: AnimeSeries, m: MappingSummary): AnchorPoint[] => {
   for (const e of anime.episodes) {
     if (!e.mangaMapping) continue;
     const last = lastChapterNumber(e.mangaMapping.chapters);
-    if (last !== null) raw.push({ idx: epToCanonIdx(m, e.number), ch: last });
+    if (last !== null) raw.push({ idx: epToCanonIdx(m, e.number), ch: last, onTrend: true });
   }
   if (m.latestKnown?.chapters) {
     const covered = lastChapterNumber(m.latestKnown.chapters);
-    if (covered !== null) raw.push({ idx: epToCanonIdx(m, m.latestKnown.episode), ch: covered });
+    if (covered !== null) raw.push({ idx: epToCanonIdx(m, m.latestKnown.episode), ch: covered, onTrend: true });
   }
   raw.sort((a, b) => a.idx - b.idx || a.ch - b.ch);
   // same idx keeps the max. DECREASING chapters at later episodes are KEPT
@@ -153,9 +166,33 @@ const anchorPoints = (anime: AnimeSeries, m: MappingSummary): AnchorPoint[] => {
     if (prev && p.idx === prev.idx) prev.ch = Math.max(prev.ch, p.ch);
     else pts.push({ ...p });
   }
+  let envelope = -Infinity;
+  for (const p of pts) {
+    p.onTrend = p.ch >= envelope;
+    envelope = Math.max(envelope, p.ch);
+  }
   anchorPointsCache.set(m, pts);
   return pts;
 };
+
+// The regime an episode index belongs to: its own point's when exact, the
+// surrounding segment's when that segment is bridgeable, null when the index
+// falls inside a reorder crossing (no formula may speak for it)
+const regimeAt = (anime: AnimeSeries, m: MappingSummary, idx: number): boolean | null => {
+  const { startCh } = ratios(anime, m);
+  let prev: AnchorPoint = { idx: 0, ch: startCh - 1, onTrend: true };
+  for (const p of anchorPoints(anime, m)) {
+    if (p.idx === idx) return p.onTrend;
+    if (p.idx > idx) return bridgeable(prev, p) ? prev.onTrend : null;
+    prev = p;
+  }
+  return prev.onTrend;
+};
+
+// True when an episode sits inside a reorder crossing — the rows the
+// verifier and audits list as zone holes (they need their own exact record)
+export const inReorderCrossing = (anime: AnimeSeries, m: MappingSummary, ep: number): boolean =>
+  regimeAt(anime, m, epToCanonIdx(m, ep)) === null;
 
 // Estimated chapter for a canon/mixed episode — piecewise between confirmed
 // anchor points (falls back to the origin→frontier line when no interior
@@ -165,10 +202,14 @@ export const canonEpToCh = (anime: AnimeSeries, m: MappingSummary, ep: number): 
   const ct = canonTotal(m);
   if (!covered || !adapted || ct <= 0) return null;
   const idx = epToCanonIdx(m, ep);
-  let prev: AnchorPoint = { idx: 0, ch: startCh - 1 }; // synthetic origin
+  let prev: AnchorPoint = { idx: 0, ch: startCh - 1, onTrend: true }; // synthetic origin
   for (const p of anchorPoints(anime, m)) {
     if (p.idx >= idx) {
       if (p.idx === prev.idx) return Math.max(startCh, Math.min(covered, p.ch));
+      // an exact row always resolves to its own point; an ESTIMATE inside a
+      // reorder crossing has no honest value (MHA ep 107 between the
+      // Endeavor Agency block and the MVA back-jump)
+      if (p.idx !== idx && !bridgeable(prev, p)) return null;
       const frac = (idx - prev.idx) / (p.idx - prev.idx);
       const ch = Math.round(prev.ch + frac * (p.ch - prev.ch));
       return Math.max(startCh, Math.min(covered, ch));
@@ -195,22 +236,30 @@ export const canonEpStartCh = (anime: AnimeSeries, m: MappingSummary, ep: number
   const end = canonEpToCh(anime, m, ep);
   if (end === null) return null;
   const prev = prevCanonEp(m, ep);
+  const myRegime = regimeAt(anime, m, epToCanonIdx(m, ep));
   let start: number;
   if (prev === null) start = Math.min(end, ratios(anime, m).startCh);
   else {
     const prevEnd = canonEpToCh(anime, m, prev);
+    // prevEnd+1 presumes the previous episode shares this one's regime; across
+    // a reorder boundary (MHA ep 113 resuming at 256 after the MVA block ended
+    // at 240) the derivation is meaningless — no start (callers fall back to
+    // the row's own end value when one is known)
+    if (prevEnd !== null && (myRegime === null || regimeAt(anime, m, epToCanonIdx(m, prev)) !== myRegime || prevEnd > end)) return null;
     start = prevEnd === null ? end : Math.min(end, prevEnd + 1);
   }
   // Interpolated rows adjacent to an exact row can overshoot past that row's
   // REAL start by one (the end-curve doesn't know where the next episode
   // actually begins) — an episode can never start after its successor, so the
   // next exact row's span start caps every derived start before it
-  // (the one-chapter-dip class, Sean 2026-08-23).
+  // (the one-chapter-dip class, Sean 2026-08-23) — within ONE regime only: a
+  // successor that opens a jumped-back block says nothing about this row
   for (const e of anime.episodes) {
     if (e.number <= ep || !e.mangaMapping) continue;
     if (e.type !== 'canon' && e.type !== 'mixed') continue;
     const s = parseInt(e.mangaMapping.chapters.split(/[-,]/)[0], 10);
-    if (!Number.isNaN(s) && /[-,]/.test(e.mangaMapping.chapters) && s < start) start = s;
+    const nextRegime = regimeAt(anime, m, epToCanonIdx(m, e.number));
+    if (!Number.isNaN(s) && /[-,]/.test(e.mangaMapping.chapters) && s < start && nextRegime === myRegime) start = s;
     break; // only the nearest following exact row bounds this one
   }
   return start;
@@ -222,7 +271,7 @@ export const chToEp = (anime: AnimeSeries, m: MappingSummary, ch: number): numbe
   const { startCh, covered, adapted } = ratios(anime, m);
   const ct = canonTotal(m);
   if (!covered || !adapted || ct <= 0 || ch < startCh) return null;
-  let prev: AnchorPoint = { idx: 0, ch: startCh - 1 };
+  let prev: AnchorPoint = { idx: 0, ch: startCh - 1, onTrend: true };
   for (const p of anchorPoints(anime, m)) {
     if (ch <= p.ch) {
       if (p.ch === prev.ch || p.idx === prev.idx) return canonIdxToEp(m, Math.max(1, p.idx));
@@ -519,14 +568,25 @@ export const buildEpisodeList = (anime: AnimeSeries, m: MappingSummary): Episode
   // partial (Sean 2026-08-23): a section straddling the frontier keeps its
   // KNOWN start/end from the first/last valued rows and marks the tail
   // open-ended ("ch:48–?") — never a bare dash while values exist inside.
-  // chStart = first row's START; chEnd = last valued row's true COVERAGE end.
+  // ENVELOPE RULE (Sean 2026-08-23 s2, the MHA 106-126 header): a section's
+  // range is the true envelope of the rows inside it — chStart = the LOWEST
+  // row start anywhere in the section (a reorder block that dips below the
+  // first row counts), chEnd = the HIGHEST coverage end anywhere in it (a
+  // peak that isn't the last row counts). Never "first row → last row":
+  // that hid MHA's vol-23 MVA block inside a "ch:250-295" header. Supersedes
+  // the high-to-low header ruling: rows still show the flow as stored, the
+  // header shows what the section spans.
   const sections: EpisodeSection[] = m.spans.map((span, index) => {
     const valued = rows.slice(span.start - 1, span.end).filter((r) => r.ch != null);
-    const first = valued[0];
-    const last = valued[valued.length - 1];
-    const chStart = first?.ch != null ? parseInt(first.ch.split(/[-,]/)[0], 10) || null : null;
-    const lastIdx = last ? rows.indexOf(last) : -1;
-    const chEnd = lastIdx >= 0 ? (rowEnd[lastIdx] ?? lastChapterNumber(last!.ch!)) : null;
+    const starts = valued
+      .map((row) => parseInt(row.ch!.split(/[-,]/)[0], 10))
+      .filter((n) => Number.isFinite(n) && n > 0);
+    const ends = valued
+      .map((row) => rowEnd[rows.indexOf(row)] ?? lastChapterNumber(row.ch!))
+      .filter((n): n is number => n != null && Number.isFinite(n));
+    const chStart = starts.length ? Math.min(...starts) : null;
+    const chEnd = ends.length ? Math.max(...ends, ...(chStart !== null ? [chStart] : [])) : null;
+    const vols = valued.map((row) => row.vol).filter((v): v is number => v != null);
     const tailRow = rows[span.end - 1];
     return {
       index,
@@ -534,9 +594,9 @@ export const buildEpisodeList = (anime: AnimeSeries, m: MappingSummary): Episode
       end: span.end,
       type: span.type,
       count: span.end - span.start + 1,
-      volStart: first?.vol ?? null,
+      volStart: chStart !== null ? (chToVol(anime, r, chStart) ?? (vols.length ? Math.min(...vols) : null)) : null,
       // coverage end's volume, not the last row's start-volume
-      volEnd: chEnd !== null ? chToVol(anime, r, chEnd) : (last?.vol ?? null),
+      volEnd: chEnd !== null ? (chToVol(anime, r, chEnd) ?? (vols.length ? Math.max(...vols) : null)) : null,
       chStart,
       chEnd,
       // known values exist but the section's final row is unmapped —

@@ -1,0 +1,528 @@
+{
+ "series_id": "the-heroic-legend-of-arslan",
+ "summary": "Season 1 (25 eps, 2015) adapts Arakawa manga ch1-71 (vol 1 to the opening of vol 12), i.e. novels 1-4; it does NOT reach ch107. The manga only had ~19-24 chapters while S1 aired: eps 1-10 map to ch1-23 exactly (fandom forward/reverse fields, contemporaneous r/anime manga-reader comments, anime.stackexchange), but from ep11 the anime was scripted from the novels ahead of the manga (ja.wikipedia: '11話以降はアニメスタッフが荒川版をイメージして脚本・構成'), so eps 11-24 are retroactive, event-level correspondences built from chapter titles, Kodansha JP/US volume synopses and ja.wikipedia's novel-to-manga volume map (novel2=v4-6, novel3=v7-8, novel4=v9-12) - all marked medium. The S1 endpoint is ch71 (v12), fixed by WDTALO ('after Season 1: Volume 12, Chapter 71, adapted in part'), the Kodansha v12 synopsis (volume opens with the post-Saint-Emmanuel Etoile confrontation) and the fandom S2 ep1 summary (Andragoras seizing Guiscard = ch72 is S2). The stored ep25->107 v18 is the whole-anime/S2-finale endpoint (nextpage46: '18巻107話「王の出陣」までがアニメ化', WDTALO 'after Season 2: Volume 18, Chapter 107') misapplied to S1; repair filed. Surprises: the anime kills Bahman in ep13 whereas the manga/novel keep him alive into the Sindhura arc; ch29 is skipped outright; the secret-letter (ch55-56), Maryam/Irina (ch61-62) and earthquake threads are absent from S1.",
+ "anchors": [
+  {
+   "episode": 1,
+   "end_chapter": 1,
+   "start_chapter": 1,
+   "chapters_adapted": "1",
+   "volume": 1,
+   "confidence": "high",
+   "note": "Arakawa-original prologue chapter (Etoile hostage episode); fandom episode page and chapter page cross-reference each other (ch1 'episode' field = ep1).",
+   "sources": [
+    "https://arslansenki.fandom.com/wiki/The_Glory_of_Ecbatana",
+    "https://arslansenki.fandom.com/wiki/The_Splendor_of_Ecbatana",
+    "https://anime.stackexchange.com/questions/33703/how-much-of-the-manga-did-the-arslan-senki-anime-cover"
+   ]
+  },
+  {
+   "episode": 2,
+   "end_chapter": 2,
+   "start_chapter": 2,
+   "chapters_adapted": "2",
+   "volume": 1,
+   "confidence": "high",
+   "note": "Battle of Atropatene = ch2 'The Encounter at Atropatene'; fandom forward + reverse fields agree.",
+   "sources": [
+    "https://arslansenki.fandom.com/wiki/Age_Fourteen,_Maiden_Battle",
+    "https://arslansenki.fandom.com/wiki/The_Encounter_at_Atropatene"
+   ]
+  },
+  {
+   "episode": 3,
+   "end_chapter": 4,
+   "start_chapter": 3,
+   "chapters_adapted": "3-4",
+   "volume": 1,
+   "confidence": "high",
+   "note": "Ep title = ch3 title; Daryun's rescue (ch3) and the reunion with Narsus (ch4); ch3 and ch4 pages both point to ep3.",
+   "sources": [
+    "https://arslansenki.fandom.com/wiki/The_Knight_in_Black_(episode)",
+    "https://arslansenki.fandom.com/wiki/The_Knight_in_Black_(chapter)",
+    "https://arslansenki.fandom.com/wiki/A_Reunion_with_an_Old_Friend"
+   ]
+  },
+  {
+   "episode": 4,
+   "end_chapter": 5,
+   "start_chapter": 5,
+   "chapters_adapted": "5",
+   "volume": 2,
+   "confidence": "high",
+   "note": "Narsus recruited = ch5 'A Monarch's Generosity' (fandom ep page + ch5 page 'episode' field). r/anime manga readers: eps 1-6 = ch 1-8. Volume = 2 per Wikipedia boundaries (v2 = ch5-10); the fandom ch5 page misfiles it under vol 1.",
+   "sources": [
+    "https://arslansenki.fandom.com/wiki/The_World-weary_Strategist",
+    "https://arslansenki.fandom.com/wiki/A_Monarch%27s_Generosity",
+    "https://www.reddit.com/r/anime/comments/368xg5/"
+   ]
+  },
+  {
+   "episode": 5,
+   "end_chapter": 6,
+   "start_chapter": 6,
+   "chapters_adapted": "6",
+   "volume": 2,
+   "confidence": "high",
+   "note": "Siege begins, Shapur's torture and Gieve's arrow = ch6 'One Arrow of Salvation' (ch6 page 'episode' = ep5). The closing 'freedom for slaves' call is the opening beat of ch7 in the manga (anime pulled it forward).",
+   "sources": [
+    "https://arslansenki.fandom.com/wiki/The_Royal_Capital_Burns,_Part_One",
+    "https://arslansenki.fandom.com/wiki/One_Arrow_of_Salvation",
+    "https://www.reddit.com/r/anime/comments/368xg5/"
+   ]
+  },
+  {
+   "episode": 6,
+   "end_chapter": 8,
+   "start_chapter": 7,
+   "chapters_adapted": "7-8",
+   "volume": 2,
+   "confidence": "high",
+   "note": "Fall of Ecbatana: Gieve/fake queen and the tunnels (ch7), Sam and Garshasph killed, gates opened (ch8 'The Bloodstained Gates', whose page points to ep6). Contemporaneous manga reader: 'this episode covers Chapter 7-8'.",
+   "sources": [
+    "https://arslansenki.fandom.com/wiki/The_Royal_Capital_Burns,_Part_Two",
+    "https://arslansenki.fandom.com/wiki/The_Bloodstained_Gates",
+    "https://www.reddit.com/r/anime/comments/35h69j/"
+   ]
+  },
+  {
+   "episode": 7,
+   "end_chapter": 12,
+   "start_chapter": 9,
+   "chapters_adapted": "9-12",
+   "volume": 3,
+   "confidence": "high",
+   "note": "Plunder of the capital and Innocentis courting Tahamine (ch9-10), Kharlan sets out and Arslan decides to face him (ch11), Gieve meets Farangis (ch12, page 'episode' = ep7). Manga reader at airing: 'previous 6 episodes covered 8 chapters; this one episode covered 4'.",
+   "sources": [
+    "https://arslansenki.fandom.com/wiki/The_Beauties_and_the_Beasts",
+    "https://arslansenki.fandom.com/wiki/A_Peerless_Beauty",
+    "https://arslansenki.fandom.com/wiki/Kharlan_Goes_to_Battle",
+    "https://www.reddit.com/r/anime/comments/368xg5/"
+   ]
+  },
+  {
+   "episode": 8,
+   "end_chapter": 15,
+   "start_chapter": 13,
+   "chapters_adapted": "13-15",
+   "volume": 3,
+   "confidence": "medium",
+   "note": "Narsus' trap (ch13 'The Traitor Hero' = ep title), Kharlan's death and 'Andragoras lives' (ch14), Gieve/Farangis pledge (ch15). Ep8's closing dungeon scene (Silver Mask before Andragoras) is ch19/20 material pulled forward. Start/end bracketed by ep7=9-12 and ep9=16-19.",
+   "sources": [
+    "https://arslansenki.fandom.com/wiki/The_Treasonous_Hero",
+    "https://arslansenki.fandom.com/wiki/The_Traitor_Hero",
+    "https://arslansenki.fandom.com/wiki/The_King%27s_Whereabouts",
+    "https://arslansenki.fandom.com/wiki/The_Rightful_King",
+    "https://anime.stackexchange.com/questions/33703/how-much-of-the-manga-did-the-arslan-senki-anime-cover"
+   ]
+  },
+  {
+   "episode": 9,
+   "end_chapter": 19,
+   "start_chapter": 16,
+   "chapters_adapted": "16-19",
+   "volume": 3,
+   "confidence": "high",
+   "note": "Daryun/Narsus in occupied Ecbatana (ch16-17; ch17 = ep title 'Beneath the Mask'), Arslan meets Etoile again (ch18 'Reunion by the Shore'), ch19 'The Second Prince'. Stackexchange: 'episode 9 covers up to chapter 19' (end of vol 3 = end of novel 1).",
+   "sources": [
+    "https://arslansenki.fandom.com/wiki/Beneath_the_Mask_(episode)",
+    "https://arslansenki.fandom.com/wiki/Beneath_the_Mask_(chapter)",
+    "https://arslansenki.fandom.com/wiki/Reunion_by_the_Shore",
+    "https://anime.stackexchange.com/questions/33703/how-much-of-the-manga-did-the-arslan-senki-anime-cover",
+    "https://ja.wikipedia.org/wiki/%E3%82%A2%E3%83%AB%E3%82%B9%E3%83%A9%E3%83%BC%E3%83%B3%E6%88%A6%E8%A8%98"
+   ]
+  },
+  {
+   "episode": 10,
+   "end_chapter": 23,
+   "start_chapter": 21,
+   "chapters_adapted": "20 (Kashan arrival, tail), 21-23",
+   "volume": 4,
+   "confidence": "high",
+   "note": "Hodir/Kashan Fortress: fandom ep page lists ch21-23; ch21/22/23 pages all point to ep10; stackexchange 'episode 10 covers up to chapter 23'. Ch20's Kashan-arrival tail is adapted here (its opening dungeon scene was used in ep8); START = first full chapter 21.",
+   "sources": [
+    "https://arslansenki.fandom.com/wiki/The_Lord_and_Master_of_Kashan_Fortress",
+    "https://arslansenki.fandom.com/wiki/Hodir%27s_Plot",
+    "https://arslansenki.fandom.com/wiki/For_One%27s_Lord",
+    "https://arslansenki.fandom.com/wiki/The_Site_of_Justice",
+    "https://anime.stackexchange.com/questions/33703/how-much-of-the-manga-did-the-arslan-senki-anime-cover"
+   ]
+  },
+  {
+   "episode": 11,
+   "end_chapter": 27,
+   "start_chapter": 24,
+   "chapters_adapted": "24-27",
+   "volume": 4,
+   "confidence": "medium",
+   "note": "Road to Peshawar: ch25 = ep title; ch26 'Minstrel in the Moonlight' page points to ep11 (Gieve's gold-coin escape); ch27 'Son of Kharlan' = first Daryun vs Zandeh clash. Ch24-25's Ecbatana/Templar politics are condensed (anime overtook the manga here: ch24 appeared 2015-06-09, ep11 aired 06-14).",
+   "sources": [
+    "https://arslansenki.fandom.com/wiki/The_Road_to_Peshawar_(episode)",
+    "https://arslansenki.fandom.com/wiki/Minstrel_in_the_Moonlight",
+    "https://en.wikipedia.org/wiki/List_of_The_Heroic_Legend_of_Arslan_chapters",
+    "https://www.reddit.com/r/anime/comments/3czz1t/",
+    "https://www.reddit.com/r/anime/comments/38w2zj/"
+   ]
+  },
+  {
+   "episode": 12,
+   "end_chapter": 34,
+   "start_chapter": 28,
+   "chapters_adapted": "28, 30-32, 34",
+   "volume": 5,
+   "confidence": "medium",
+   "note": "Alfarid/Zot clan massacre (ch28), Narsus vs Silver Mask and the earth-travelling sorcerer (ch30 'Shadow of the Snake King'), Daryun+Farangis vs Zandeh; ends with Peshawar in sight = vol5/vol6 boundary (Kodansha v6 synopsis opens with Peshawar in view and Narsus still en route). Ch29 'A Village at Twilight' skipped entirely; ch33 'Sam's Submission' relocated (eps 11/19). Exact end +/-1 chapter.",
+   "sources": [
+    "https://arslansenki.fandom.com/wiki/A_Knight%27s_Loyalty",
+    "https://myanimelist.net/forum/?topicid=1545080",
+    "https://www.kodansha.co.jp/comic/products/0000019721",
+    "https://www.kodansha.co.jp/comic/products/0000019853",
+    "https://en.wikipedia.org/wiki/List_of_The_Heroic_Legend_of_Arslan_chapters"
+   ]
+  },
+  {
+   "episode": 13,
+   "end_chapter": 39,
+   "start_chapter": 35,
+   "chapters_adapted": "35-39",
+   "volume": 6,
+   "confidence": "medium",
+   "note": "Kishward's cavalry (ch35 'Twin-Blade's Falcon'), Peshawar (ch37 'Fortress of Sandstone'), Hilmes' infiltration (ch38 'Two Princes' = ep title) and Bahman's shouted truth (ch39 'Royal Blood'; MAL forum Sep-2016: 'latest chapter [39] is at the point of Bahman shouting shocking truth when Hilmes attacks Arslan at Peshawar'). Anime kills Bahman here; manga does not.",
+   "sources": [
+    "https://arslansenki.fandom.com/wiki/Two_Princes_(episode)",
+    "https://myanimelist.net/forum/?topicid=1545080",
+    "https://en.wikipedia.org/wiki/List_of_The_Heroic_Legend_of_Arslan_chapters",
+    "https://www.kodansha.co.jp/comic/products/0000019853",
+    "https://www.kodansha.co.jp/comic/products/0000019995"
+   ]
+  },
+  {
+   "episode": 14,
+   "end_chapter": 42,
+   "start_chapter": 40,
+   "chapters_adapted": "40-42",
+   "volume": 7,
+   "confidence": "medium",
+   "note": "Narsus' three principles of war (ch40 'The Three Principles'), frozen-lake rout and Rajendra's capture (ch41 'The Sindhuran Rake'), alliance (ch42 'A Foreign Sky'). Kodansha v7 synopsis: Rajendra invades with 50,000 right after the Hilmes encounter.",
+   "sources": [
+    "https://arslansenki.fandom.com/wiki/The_Foreign_Prince",
+    "https://en.wikipedia.org/wiki/List_of_The_Heroic_Legend_of_Arslan_chapters",
+    "https://www.kodansha.co.jp/comic/products/0000019995",
+    "https://kodansha.us/series/the-heroic-legend-of-arslan/volume-7/"
+   ]
+  },
+  {
+   "episode": 15,
+   "end_chapter": 46,
+   "start_chapter": 43,
+   "chapters_adapted": "43-46",
+   "volume": 7,
+   "confidence": "medium",
+   "note": "New Year ceremony (ch43), Jaswant the guide (ch44 'The Guide in the Dark Night'), Gujarat fortress (ch45), Jaswant freed / Daryun's renewed oath (ch46 'The Bond of Servant and Master'). Four consecutive title matches with the ep synopsis.",
+   "sources": [
+    "https://arslansenki.fandom.com/wiki/The_Black_Leopard_of_Shindra",
+    "https://en.wikipedia.org/wiki/List_of_The_Heroic_Legend_of_Arslan_chapters",
+    "https://www.kodansha.co.jp/comic/products/0000019995"
+   ]
+  },
+  {
+   "episode": 16,
+   "end_chapter": 49,
+   "start_chapter": 47,
+   "chapters_adapted": "47-49",
+   "volume": 8,
+   "confidence": "medium",
+   "note": "Chandigarh: decisive-battle day (ch47), war elephants (ch48 'The Thundering'), Karikala wakes and orders the duel before the gods (ch49 'King Karikala's Decision'). Kodansha v8: army of 150,000 + elephants, ends with the duel opening.",
+   "sources": [
+    "https://arslansenki.fandom.com/wiki/Elegy_of_the_Setting_Sun",
+    "https://en.wikipedia.org/wiki/List_of_The_Heroic_Legend_of_Arslan_chapters",
+    "https://www.kodansha.co.jp/comic/products/0000052173",
+    "https://kodansha.us/series/the-heroic-legend-of-arslan/volume-8/"
+   ]
+  },
+  {
+   "episode": 17,
+   "end_chapter": 52,
+   "start_chapter": 50,
+   "chapters_adapted": "50-52",
+   "volume": 8,
+   "confidence": "medium",
+   "note": "Daryun vs Bahadur (ch50 'The Beast in the Arena'), verdict (ch51 'The Gods' Judgment'), Gadevi's revolt and Mahendra's death (ch52 'The Sun Sets on the Capital'). Kodansha v9 recap: joy of the new king overturned by Gadevi's rebellion.",
+   "sources": [
+    "https://arslansenki.fandom.com/wiki/The_Duel_Before_the_Gods",
+    "https://en.wikipedia.org/wiki/List_of_The_Heroic_Legend_of_Arslan_chapters",
+    "https://www.kodansha.co.jp/comic/products/0000052173",
+    "https://www.kodansha.co.jp/comic/products/0000116156"
+   ]
+  },
+  {
+   "episode": 18,
+   "end_chapter": 54,
+   "start_chapter": 53,
+   "chapters_adapted": "53-54",
+   "volume": 9,
+   "confidence": "medium",
+   "note": "Gadevi's pre-execution banquet (ch53 'The Last Supper'), Rajendra's 3,000-man 'gift' and night ambush foiled, treaty, Jaswant's oath (ch54). Kodansha US v9: 'gifted 3,000 cavalrymen... ambush late in the night'. Ch55-56 (secret-letter subplot at Peshawar) have no S1 counterpart.",
+   "sources": [
+    "https://arslansenki.fandom.com/wiki/Once_Again_Across_the_River",
+    "https://en.wikipedia.org/wiki/List_of_The_Heroic_Legend_of_Arslan_chapters",
+    "https://kodansha.us/series/the-heroic-legend-of-arslan/volume-9/",
+    "https://www.kodansha.co.jp/comic/products/0000116156"
+   ]
+  },
+  {
+   "episode": 19,
+   "end_chapter": 60,
+   "start_chapter": 57,
+   "chapters_adapted": "57-60",
+   "volume": 10,
+   "confidence": "medium",
+   "note": "Sam recruits the wandering Kubard (ch57-58 'The Chance Encounter in Early Spring'/'The Unrivaled Traveler'), Arslan's two decrees (ch59 'Cornerstone of Subjugation'), Hilmes takes Zabul from Bodin's Templars (ch60 'Decisive Battle at Zabul Fortress'). Kodansha v10: decrees proclaimed, Hilmes tasked with Zabul. Start could be 58/59 if ch57 belongs to the return journey.",
+   "sources": [
+    "https://arslansenki.fandom.com/wiki/The_End_of_the_Winter",
+    "https://en.wikipedia.org/wiki/List_of_The_Heroic_Legend_of_Arslan_chapters",
+    "https://www.kodansha.co.jp/comic/products/0000314222",
+    "https://kodansha.us/series/the-heroic-legend-of-arslan/volume-10/"
+   ]
+  },
+  {
+   "episode": 20,
+   "end_chapter": 64,
+   "start_chapter": 63,
+   "chapters_adapted": "63-64",
+   "volume": 10,
+   "confidence": "medium",
+   "note": "Lords gather at Peshawar, Esfan arrives (ch64 'Shapur's Younger Brother'), Etoile infiltrates the feast and meets Alfarid (ch63 'The Job of a Bandit'), Narsus lays out Hilmes' claim (end of v10 per Kodansha US). Ch61-62 (Maryam messenger / Queen Irina) skipped in S1.",
+   "sources": [
+    "https://arslansenki.fandom.com/wiki/The_True_Face_of_a_Knight",
+    "https://en.wikipedia.org/wiki/List_of_The_Heroic_Legend_of_Arslan_chapters",
+    "https://kodansha.us/series/the-heroic-legend-of-arslan/volume-10/",
+    "https://www.kodansha.co.jp/comic/products/0000314222"
+   ]
+  },
+  {
+   "episode": 21,
+   "end_chapter": 67,
+   "start_chapter": 65,
+   "chapters_adapted": "65-67",
+   "volume": 11,
+   "confidence": "medium",
+   "note": "Esfan vs Gieve over Shapur's death (ch65 'The Wolf's Wrath'), Gieve's staged banishment (ch66 'A Poem of Parting' = ep title 'A Song of Farewell'), march west and the lords' ambush/rescue (ch67, possibly spilling into ch68). Kodansha v11: 'after Gieve leaves... victory in their first encounter thanks to Narsus's foresight'.",
+   "sources": [
+    "https://arslansenki.fandom.com/wiki/A_Song_of_Farewell",
+    "https://en.wikipedia.org/wiki/List_of_The_Heroic_Legend_of_Arslan_chapters",
+    "https://kodansha.us/series/the-heroic-legend-of-arslan/volume-11/",
+    "https://www.kodansha.co.jp/comic/products/0000321008"
+   ]
+  },
+  {
+   "episode": 22,
+   "end_chapter": 68,
+   "start_chapter": 68,
+   "chapters_adapted": "68",
+   "volume": 11,
+   "confidence": "medium",
+   "note": "Mostly anime-original connective material (drilling the freed-slave infantry, Elam/Alfarid spying in Ecbatana); its plot beats (Hilmes given 70,000 Lusitanians, Hilmes visits Andragoras, Etoile at the keep) parallel ch68 'The Harnak at Shahristan'/opening of ch69. Placement approximate.",
+   "sources": [
+    "https://arslansenki.fandom.com/wiki/The_Night_Before_the_Attack",
+    "https://en.wikipedia.org/wiki/List_of_The_Heroic_Legend_of_Arslan_chapters",
+    "https://kodansha.us/series/the-heroic-legend-of-arslan/volume-11/"
+   ]
+  },
+  {
+   "episode": 23,
+   "end_chapter": 69,
+   "start_chapter": 69,
+   "chapters_adapted": "69",
+   "volume": 11,
+   "confidence": "medium",
+   "note": "Assault on Saint Emmanuel, Kishward vs Sam in the aqueduct, Zandeh felled by Daryun, Etoile's raid on Arslan's tent = ch69 'The Girl of the Keep of Saint Emmanuel'.",
+   "sources": [
+    "https://arslansenki.fandom.com/wiki/The_Battle_for_the_Keep_of_Saint-Emmanuel",
+    "https://en.wikipedia.org/wiki/List_of_The_Heroic_Legend_of_Arslan_chapters",
+    "https://kodansha.us/series/the-heroic-legend-of-arslan/volume-11/"
+   ]
+  },
+  {
+   "episode": 24,
+   "end_chapter": 70,
+   "start_chapter": 70,
+   "chapters_adapted": "70",
+   "volume": 11,
+   "confidence": "medium",
+   "note": "Hidden passage, the keep falls, Hilmes vs Daryun duel, Barcacion's suicide and the mass suicides, Etoile unmasked = ch70 'Moment of Life or Death' (last chapter of v11). Kodansha v12 synopsis opens with Arslan, having captured Saint Emmanuel, confronting the defeated girl soldier.",
+   "sources": [
+    "https://arslansenki.fandom.com/wiki/The_Decisive_Battle",
+    "https://en.wikipedia.org/wiki/List_of_The_Heroic_Legend_of_Arslan_chapters",
+    "https://www.kodansha.co.jp/comic/products/0000325296",
+    "https://kodansha.us/series/the-heroic-legend-of-arslan/volume-11/"
+   ]
+  },
+  {
+   "episode": 25,
+   "end_chapter": 71,
+   "start_chapter": 71,
+   "chapters_adapted": "71 (part)",
+   "volume": 12,
+   "confidence": "high",
+   "note": "Etoile's attack and capture, the Lusitanian survivors taken along, Hilmes reveals himself to Guiscard = ch71 'Guiscard's Ambition' (v12), adapted only in part; Andragoras taking Guiscard hostage (end of novel 4 = ch72 'The Return of the King') is S2 ep1 material. WDTALO: after S1 'start the manga at Volume 12, Chapter 71 - the anime adapts some of that chapter, but not all of it'.",
+   "sources": [
+    "https://wheredoestheanimeleaveoff.com/where-does-the-heroic-legend-of-arslan-anime-leave-off-in-the-light-novel/",
+    "https://www.kodansha.co.jp/comic/products/0000325296",
+    "https://arslansenki.fandom.com/wiki/The_Highway_of_Blood_and_Sweat",
+    "https://arslansenki.fandom.com/wiki/The_Turanian_Army_Invades",
+    "https://ja.wikipedia.org/wiki/%E3%82%A2%E3%83%AB%E3%82%B9%E3%83%A9%E3%83%BC%E3%83%B3%E6%88%A6%E8%A8%98"
+   ]
+  }
+ ],
+ "continue_points": [
+  {
+   "episode": 25,
+   "continue_chapter": 71,
+   "note": "S1 ends partway through ch71 'Guiscard's Ambition' (v12); resume at ch71. Whole-anime (S1+S2) endpoint is ch107, resume ch108 (v18) - that belongs to the S2 entry, not to ep25."
+  }
+ ],
+ "annotations": [
+  {
+   "episodes": [
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25
+   ],
+   "kind": "divergence",
+   "chapters": "24-71",
+   "note": "Novel-sourced stretch: the manga had reached only ch24 when ep11 aired; the anime staff scripted eps 11-25 from novels 2-4 'imagining' the Arakawa version (ja.wikipedia, Newtype 2015-08 director interview; chiebukuro: overtaken 'around ep13'; stackexchange). The manga later covered the same novel material in v4-12 with more detail and some different events, so correspondences here are event-level, not page-level."
+  },
+  {
+   "episodes": [
+    8,
+    9,
+    10
+   ],
+   "kind": "rearranged",
+   "chapters": "19-20",
+   "note": "Silver Mask's confrontation with the imprisoned Andragoras (end of ep8) sits at the end of ch19 / opening of ch20 in the manga (novel 1's closing scene); ep10 then adapts only ch20's Kashan-arrival tail."
+  },
+  {
+   "episodes": [
+    11,
+    19
+   ],
+   "kind": "rearranged",
+   "chapters": "33",
+   "note": "Ch33 'Sam's Submission' (v5) is split: Hilmes revealing his identity to the captive Sam opens ep11; Sam's actual submission is shown as a flashback in ep19."
+  },
+  {
+   "episodes": [
+    11,
+    12
+   ],
+   "kind": "abridged",
+   "chapters": "24-25, 29",
+   "note": "Ch24-25's expanded Ecbatana/Templar politics (Hildigo's murder, Bodin's expulsion to Maryam) are compressed into one ep12 scene (manga reader at ep14: 'Arakawa is spending more time with the politics in Ecbatana, including more with the Templars, who in the anime were dismissed pretty quickly'); ch29 'A Village at Twilight' is skipped entirely (MAL forum)."
+  },
+  {
+   "episodes": [
+    13,
+    15,
+    16,
+    17,
+    18
+   ],
+   "kind": "divergence",
+   "chapters": "39, 44-53",
+   "note": "Anime kills Bahman at Peshawar in ep13; in the manga/novel he survives into the Sindhura campaign and dies after Gadevi's revolt (novel 3 synopsis, r/HeroicLegendofArslan 2023: 'Bahman is in the arc instead of dying prior to it'). The manga's Sindhura arc also gives Jaswant a subplot with the vizier's daughter."
+  },
+  {
+   "episodes": [
+    18,
+    19,
+    20
+   ],
+   "kind": "divergence",
+   "chapters": "55-56, 61-62",
+   "note": "Manga-only threads with no S1 counterpart: the secret-letter theft at Peshawar (ch55-56), the great earthquake opening v10, and the Maryam messenger / Queen Irina (ch61-62; Irina is introduced differently in S2 ep3)."
+  },
+  {
+   "episodes": [
+    22
+   ],
+   "kind": "loose_parallel",
+   "chapters": "68-69",
+   "note": "Ep22 is largely anime-original connective material (infantry drills, Elam/Alfarid in Ecbatana, Farangis on Gieve); only its Hilmes/Guiscard war-council and Etoile-at-the-keep beats parallel ch68-69."
+  },
+  {
+   "episodes": [
+    25
+   ],
+   "kind": "partial",
+   "chapters": "71",
+   "note": "Ep25 adapts only part of ch71; ch72 'The Return of the King' (Andragoras takes Guiscard hostage, end of novel 4) is adapted in S2 ep1-2."
+  }
+ ],
+ "type_corrections": [],
+ "repairs": [
+  {
+   "episode": 25,
+   "field": "end_chapter",
+   "old": 107,
+   "new": 71,
+   "why": "107 (v18 'The Shah Goes to War') is where the WHOLE anime ends - the S2 'Fuujin Ranbu' finale (nextpage46: '原作漫画ベースで18巻107話「王の出陣」までがアニメ化', continue at 108; WDTALO 'after Season 2: Volume 18, Chapter 107'). S1's 25th episode ends in ch71 (v12): WDTALO 'after Season 1: Volume 12, Chapter 71'; ja.wikipedia maps S1 = novels 1-4 and novel 4 = Arakawa vols 9-12; Kodansha's v12 synopsis opens with Arslan confronting Etoile after taking Saint Emmanuel (ep24/25); the fandom S2 ep1 summary shows Andragoras seizing Guiscard (novel 4's final scene = ch72) is S2 content.",
+   "sources": [
+    "https://wheredoestheanimeleaveoff.com/where-does-the-heroic-legend-of-arslan-anime-leave-off-in-the-light-novel/",
+    "https://www.nextpage46.com/arslan/",
+    "https://ja.wikipedia.org/wiki/%E3%82%A2%E3%83%AB%E3%82%B9%E3%83%A9%E3%83%BC%E3%83%B3%E6%88%A6%E8%A8%98",
+    "https://www.kodansha.co.jp/comic/products/0000325296",
+    "https://arslansenki.fandom.com/wiki/The_Turanian_Army_Invades"
+   ]
+  },
+  {
+   "episode": 25,
+   "field": "volume",
+   "old": 18,
+   "new": 12,
+   "why": "Follows from end_chapter 71 (v12 = ch71-76 per Wikipedia volume list).",
+   "sources": [
+    "https://en.wikipedia.org/wiki/List_of_The_Heroic_Legend_of_Arslan_chapters",
+    "https://wheredoestheanimeleaveoff.com/where-does-the-heroic-legend-of-arslan-anime-leave-off-in-the-light-novel/"
+   ]
+  }
+ ],
+ "structure": {
+  "notes": "AniList 20935 = S1, 25 episodes, cumulative 1-25 as stored (the 2015-07-05 recap '13.5' is not counted by AniList/MAL, matching our rows). The entry is MISSING season 2: AniList 21424 (MAL 31821) 'Arslan Senki: Fuujin Ranbu', 8 eps, 2016-07-03..08-21, which adapts novels 5-6 = Arakawa vols 12-18 (ch72-107; whole-anime endpoint ch107 v18, resume ch108 per nextpage46/WDTALO); it should be component 2 = cumulative eps 26-33 (fandom order: The Turanian Army Invades, The Monarch Versus the Conqueror, Journey Horse Sad and Solitary, A City of Land and a City of Water, Parting of Ways, Calamity of Kings, The Rainbow City, The Dance of Dust Clouds). Order-only extras: AniList 21817 (MAL 33254) 'Arslan Senki (TV) OVA', 2 anime-original side stories bundled with manga v5/v6 limited editions ('The Road of Blood and Love' 2016-05, set on the road with Gieve; 'Banquet of Friendship' 2016-11, set in Sindhura right after the duel, i.e. between eps 17-18) - no chapters adapted. AniList 21317 (8 x 4-koma shorts, 2015) and 110641 (4 x 4-koma shorts, 2016) are gag shorts, skippable. AniList 1762 (1991 OVA) is a separate adaptation of the novels, not of the Arakawa manga - keep it out of this entry. animefillerlist types all 25 S1 episodes Manga Canon (no filler), consistent with our rows.",
+  "order_only": [
+   {
+    "anilist_id": 21817,
+    "title": "Arslan Senki (TV) OVA (Road of Blood and Love / Banquet of Friendship)",
+    "after_anilist_id": 20935,
+    "adapts": "none (anime-original side stories)",
+    "note": "OVA1 is a travel vignette with Gieve; OVA2 is set in Sindhura after the duel (fits between eps 17 and 18). Watch after S1 or skip."
+   },
+   {
+    "anilist_id": 21424,
+    "title": "Arslan Senki: Fuujin Ranbu (Season 2, 8 eps)",
+    "after_anilist_id": 20935,
+    "adapts": "ch 72-107 (v12-18; novels 5-6)",
+    "note": "Not order-only - this is the missing season 2 component (cumulative 26-33); listed here so the stitch task sees it. Continue manga at ch108 after it."
+   }
+  ]
+ },
+ "flags_for_sean": [
+  "Stored anchor ep25->107 v18 is the S2-finale endpoint applied to S1; repair filed (ep25 -> 71, v12). The entry has no S2 component (AniList 21424) - add it before trusting any whole-series continue point.",
+  "Eps 11-24 are medium by construction: the manga did not exist for this material when it aired, so every anchor there is an event-level reconstruction from chapter titles + Kodansha JP/US volume synopses + ja.wikipedia's novel-to-volume map (novel2=v4-6, novel3=v7-8, novel4=v9-12). Expect +/-1 chapter error at ep12 (end 34 vs 32), ep19 (start 57 vs 58/59) and eps 21-22 (67/68 split). No second independent per-episode source exists for this stretch; reddit/MAL chapter threads only confirm the novel-vs-manga divergences.",
+  "Fandom ep10 page says ch21-23 while ch20's title equals the episode title and stackexchange says ep9 ends at ch19: resolved as chapters '20 (tail), 21-23' with start 21 (majority rule).",
+  "Fandom ch11 page's reverse field points to ep8, but contemporaneous r/anime readers counted ep7 as 4 chapters (9-12) and ch11's closing beat (Arslan resolves to face Kharlan) is in ep7; went with ep7 = 9-12, ep8 = 13-15."
+ ]
+}

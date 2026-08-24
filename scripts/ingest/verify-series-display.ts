@@ -9,11 +9,16 @@
 //
 //   npx tsx --env-file=.env.ingest scripts/ingest/verify-series-display.ts <series-id> [...ids]
 //   npx tsx --env-file=.env.ingest scripts/ingest/verify-series-display.ts --print <series-id>
+//   npx tsx --env-file=.env.ingest scripts/ingest/verify-series-display.ts --all   (every anchored series)
 //
 // Checks per canon/mixed row inside the frontier: ch present (no null/NaN
 // holes between mapped neighbors), start non-decreasing (except episodes
 // ruled by rearranged/graft annotations, or loose series — skipped whole).
-// Exit 1 on any failure.
+// REORDER HOLES (Sean's MHA 107/113 report, 2026-08-23): a canon row inside
+// a reorder crossing (src/lib/mapping.ts inReorderCrossing — between anchor
+// points of different regimes) renders null BY RULE: no formula may bridge a
+// reorder. Such rows are reported as `hole` lines (the exact-record
+// work-list), never as failures. Exit 1 on any failure.
 
 import { db } from './lib/db';
 import {
@@ -26,7 +31,7 @@ import {
   type EpisodeRow as DbEpisodeRow,
   type SeriesRow,
 } from '../../src/data/catalog/assemble';
-import { buildEpisodeList } from '../../src/lib/mapping';
+import { buildEpisodeList, inReorderCrossing } from '../../src/lib/mapping';
 
 async function pageAll<T>(table: string, select: string, seriesId: string, order: string): Promise<T[]> {
   const out: T[] = [];
@@ -56,6 +61,8 @@ async function continuationStart(row: SeriesRow): Promise<number | null> {
   return starts.length ? Math.min(...starts) : null;
 }
 
+export const holesFound: string[] = [];
+
 export async function verifySeries(id: string, print = false): Promise<string[]> {
   const { data: rowData, error } = await db.from('series').select(SERIES_COLS).eq('id', id).maybeSingle();
   if (error) throw error;
@@ -81,6 +88,11 @@ export async function verifySeries(id: string, print = false): Promise<string[]>
 
   if (print) {
     for (const r of list.rows) console.log(`  ep ${r.ep} [${r.type}] vol ${r.vol ?? '·'} ch ${r.ch ?? '·'}`);
+    for (const s of list.sections) {
+      const ch = s.chStart == null || s.chEnd == null ? '—' : s.chStart === s.chEnd ? `${s.chStart}` : `${s.chStart}-${s.chEnd}`;
+      const vol = s.volStart == null ? '—' : s.volEnd != null && s.volEnd !== s.volStart ? `${s.volStart}-${s.volEnd}` : `${s.volStart}`;
+      console.log(`  section ${s.start}-${s.end} [${s.type}] (${s.count}) vol ${vol} · ch ${ch}${s.openEnded ? '+' : ''}`);
+    }
   }
 
   const problems: string[] = [];
@@ -93,6 +105,10 @@ export async function verifySeries(id: string, print = false): Promise<string[]>
     if (r.type !== 'canon' && r.type !== 'mixed') continue;
     const start = r.ch != null ? parseInt(r.ch.split(/[-,]/)[0], 10) : NaN;
     if (r.ep <= frontier && (r.ch == null || Number.isNaN(start))) {
+      if (inReorderCrossing(anime, m, r.ep)) {
+        holesFound.push(`${id}: ep ${r.ep} is a reorder hole — inside a reorder crossing with no exact record (research: anchor it with its own start)`);
+        continue;
+      }
       problems.push(`${id}: ep ${r.ep} renders ch "${r.ch}" inside the mapped frontier (ep ${frontier})`);
       continue;
     }
@@ -111,19 +127,36 @@ if (isMain) {
   (async () => {
     const args = process.argv.slice(2);
     const print = args.includes('--print');
-    const ids = args.filter((a) => !a.startsWith('--'));
+    let ids = args.filter((a) => !a.startsWith('--'));
+    if (args.includes('--all')) {
+      // every series that carries at least one anchor
+      const seen = new Set<string>();
+      for (let from = 0; ; from += 1000) {
+        const { data } = await db.from('chapter_anchors').select('series_id').range(from, from + 999);
+        for (const r of data ?? []) seen.add(r.series_id as string);
+        if (!data || data.length < 1000) break;
+      }
+      ids = [...seen].sort();
+    }
     if (!ids.length) {
-      console.error('usage: verify-series-display.ts [--print] <series-id> [...ids]');
+      console.error('usage: verify-series-display.ts [--print] <series-id> [...ids] | --all');
       process.exit(2);
     }
     let bad = 0;
     for (const id of ids) {
+      const before = holesFound.length;
       const problems = await verifySeries(id, print);
+      const holes = holesFound.length - before;
       if (problems.length) {
         bad++;
         for (const p of problems) console.log('FAIL', p);
-      } else console.log('ok  ', id);
+      } else console.log(holes ? `ok   ${id} (${holes} reorder hole${holes === 1 ? '' : 's'})` : `ok   ${id}`);
     }
+    if (holesFound.length) {
+      console.log(`\n${holesFound.length} reorder hole(s) — the exact-record work-list:`);
+      for (const h of holesFound) console.log('  hole', h);
+    }
+    console.log(`\n${ids.length} series verified, ${bad} failing`);
     process.exit(bad ? 1 : 0);
   })();
 }

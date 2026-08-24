@@ -1,0 +1,574 @@
+{
+  "series_id": "black-butler",
+  "summary": "Public School Arc TV (AniList 166715, 11 eps, our 47-57) adapts chs 67-85 essentially in order at ~2 chapters per episode, with only two small scene relocations (ch68 office scene as ep47's cold open; a ch70 conversation shifted into ep49) and a standalone ch85 epilogue finale that ends on ch86's German werewolf-forest prologue as a teaser. Emerald Witch Arc TV (179054, 13 eps, our 58-70) adapts chs 86-107 in strict order with many mid-chapter episode breaks (fandom records page splits for every one), and the finale runs on through ch108 in full (Sieglinde's audience with the Queen, Sebastian sinking the SuLIN samples, Undertaker's night visit), so the old MU pin of 108 belongs at ep70 and the manga resumes at ch109 (vol 23, Blue Cult Arc). Flag #853 verified: PSA 67-85, EWA 86-107(+108). Book of Murder (20670) adapts chs 38-50 and Book of the Atlantic (21425) chs 51-65 (ch66's Easter egg hunt is unadapted); every source places them after Book of Circus and before Public School Arc, in that order. Fandom/Wikipedia overall numbering (47-57, 58-70) equals our cumulative numbering, so no episode-number conversion was needed for the wiki sources; 23 of 24 anchors are high confidence, ep67 is medium only because sources disagree on whether its C-part touches ch103.",
+  "anchors": [
+    {
+      "episode": 47,
+      "end_chapter": 68,
+      "start_chapter": 67,
+      "chapters_adapted": "67-68",
+      "volume": 15,
+      "confidence": "high",
+      "note": "PSA ep1 (S4E1 -> our 47). Fandom ep page 67-68; fandom ch67/68 pages map back to ep47; Sportskeeda recap 'covered chapters 67 and 68'; under-taker.com cites vol14 ch67 + vol15 ch68 (ch68 headmaster's-office scene used as cold open). Title = ch67 title.",
+      "sources": [
+        "https://kuroshitsuji.fandom.com/wiki/47._His_Butler,_at_School",
+        "https://kuroshitsuji.fandom.com/wiki/067._The_Butler,_At_School",
+        "https://www.sportskeeda.com/anime/black-butler-season-4-episode-1-phantomhive-joins-weston-college-p4-introduced",
+        "https://www.under-taker.com/entry/2024/04/14/212629",
+        "https://kuroshitsuji.wiki.gg/wiki/47._His_Butler,_at_School"
+      ]
+    },
+    {
+      "episode": 48,
+      "end_chapter": 70,
+      "start_chapter": 69,
+      "chapters_adapted": "69-70",
+      "volume": 15,
+      "confidence": "high",
+      "note": "S4E2 -> our 48. Fandom 69-70 (ch69/70 pages map to 48/48-49); Sportskeeda recap 'covered chapters 69 and 70'; under-taker cites vol15 ch69. One ch70 scene (Ciel-McMillan talk) is deferred to ep49's opening, so ch70 is essentially complete here; resume at 71. Title = ch69 title.",
+      "sources": [
+        "https://kuroshitsuji.fandom.com/wiki/48._His_Butler,_in_Disguise",
+        "https://kuroshitsuji.fandom.com/wiki/070._The_Butler,_Guiding",
+        "https://www.sportskeeda.com/anime/black-butler-season-4-episode-2-ciel-seeks-revenge-maurice-cole-indian-prince-arrives-weston",
+        "https://www.under-taker.com/entry/2024/04/21/182936",
+        "https://kuroshitsuji.wiki.gg/wiki/48._His_Butler,_in_Disguise"
+      ]
+    },
+    {
+      "episode": 49,
+      "end_chapter": 72,
+      "start_chapter": 71,
+      "chapters_adapted": "70 (one relocated scene), 71, 72 (p.1-5)",
+      "volume": 15,
+      "confidence": "high",
+      "note": "S4E3 -> our 49. Fandom 70-72; ch72 page maps to eps 49-50; Sportskeeda recap 'adapted chapter 71 and the first five pages of chapter 72'; under-taker cites vol15 ch70 and ch71 and notes the ch70 Ciel-McMillan conversation moved to this episode's opening. START 71 per majority rule (ch70 contribution is one scene). Title = ch71 title.",
+      "sources": [
+        "https://kuroshitsuji.fandom.com/wiki/49._His_Butler,_Plotting",
+        "https://kuroshitsuji.fandom.com/wiki/072._The_Butler,_Lauding",
+        "https://www.sportskeeda.com/anime/black-butler-season-4-episode-3-ciel-takes-revenge-maurice-cole-becomes-drudge",
+        "https://www.under-taker.com/entry/2024/04/28/053209",
+        "https://kuroshitsuji.wiki.gg/wiki/49._His_Butler,_Plotting"
+      ]
+    },
+    {
+      "episode": 50,
+      "end_chapter": 73,
+      "start_chapter": 72,
+      "chapters_adapted": "72 (p.6-end), 73",
+      "volume": 16,
+      "confidence": "high",
+      "note": "S4E4 -> our 50. Fandom 72-73; ch73 page maps to ep50; Sportskeeda recap 'covered chapters 72 and 73'. Ch72 is mostly here (all but its first 5 pages), so START 72. Title = ch73 title.",
+      "sources": [
+        "https://kuroshitsuji.fandom.com/wiki/50._His_Butler,_Colluding",
+        "https://kuroshitsuji.fandom.com/wiki/073._The_Butler,_Colluding",
+        "https://www.sportskeeda.com/anime/black-butler-season-4-episode-4-ciel-sebastian-dig-deeper-weston-college-s-mystery",
+        "https://kuroshitsuji.wiki.gg/wiki/50._His_Butler,_Colluding",
+        "https://www.under-taker.com/entry/2024/05/05/114726"
+      ]
+    },
+    {
+      "episode": 51,
+      "end_chapter": 75,
+      "start_chapter": 74,
+      "chapters_adapted": "74, 75 (p.1-16)",
+      "volume": 16,
+      "confidence": "high",
+      "note": "S4E5 -> our 51. Fandom 74-75; Sportskeeda recap 'covered chapter 74 and 16 pages of chapter 75'; under-taker cites vol16 ch74 as the episode's chapter. Fandom ch74/75 pages are stale ('N/A'), so Sportskeeda + wiki.gg are the corroboration. Title = ch74 title.",
+      "sources": [
+        "https://kuroshitsuji.fandom.com/wiki/51._His_Butler,_Gaining_Admittance",
+        "https://www.sportskeeda.com/anime/black-butler-season-4-episode-5-ciel-eyes-weston-college-s-cricket-tournament-vincent-phantomhive-introduced",
+        "https://www.under-taker.com/entry/2024/05/12/084651",
+        "https://kuroshitsuji.wiki.gg/wiki/51._His_Butler,_Gaining_Admittance"
+      ]
+    },
+    {
+      "episode": 52,
+      "end_chapter": 77,
+      "start_chapter": 76,
+      "chapters_adapted": "75 (p.17-end), 76-77",
+      "volume": 16,
+      "confidence": "high",
+      "note": "S4E6 -> our 52. Fandom 75-77; Sportskeeda recap 'covered chapters 75, 76 and 77'; under-taker cites vol16 ch75 and ch76 (notes dialogue/rule-explanation cuts). START 76 per majority rule (ch75 remainder is a tail). Title = ch76 title.",
+      "sources": [
+        "https://kuroshitsuji.fandom.com/wiki/52._His_Butler,_Scheming",
+        "https://www.sportskeeda.com/anime/black-butler-season-4-episode-6-the-cricket-tournament-begins-ciel-showcases-tricks",
+        "https://www.under-taker.com/entry/2024/05/19/065145",
+        "https://kuroshitsuji.wiki.gg/wiki/52._His_Butler,_Scheming"
+      ]
+    },
+    {
+      "episode": 53,
+      "end_chapter": 80,
+      "start_chapter": 78,
+      "chapters_adapted": "78-80 (ch80 all but its final pages)",
+      "volume": 17,
+      "confidence": "high",
+      "note": "S4E7 -> our 53. Fandom 78-80; Sportskeeda recap 'covered chapters 78 to 80'; next recap says ep8 opened with 'the final pages of chapter 80', so ch80 ends in ep54; under-taker cites vol17 ch78 and ch79. Title = ch79 title.",
+      "sources": [
+        "https://kuroshitsuji.fandom.com/wiki/53._His_Butler,_Final_Match",
+        "https://www.sportskeeda.com/anime/black-butler-season-4-episode-7-ciel-phantomhive-s-brilliance-repeats-history-sapphire-owl-green-lion",
+        "https://www.under-taker.com/entry/2024/05/26/094701",
+        "https://kuroshitsuji.wiki.gg/wiki/53._His_Butler,_Final_Match"
+      ]
+    },
+    {
+      "episode": 54,
+      "end_chapter": 81,
+      "start_chapter": 81,
+      "chapters_adapted": "80 (final pages), 81",
+      "volume": 17,
+      "confidence": "high",
+      "note": "S4E8 -> our 54. Fandom 80-81; Sportskeeda recap 'covered the final pages of chapter 80 and the entirety of chapter 81'; under-taker cites vol17 ch81 as the episode's chapter. START 81 per majority rule. Title = ch81 title (Under Lock and Key).",
+      "sources": [
+        "https://kuroshitsuji.fandom.com/wiki/54._His_Butler,_Locking_Up",
+        "https://www.sportskeeda.com/anime/black-butler-season-4-episode-8-ciel-phantomhive-inches-closer-unraveling-truth-derrick-arden",
+        "https://www.under-taker.com/entry/2024/06/02/073204",
+        "https://kuroshitsuji.wiki.gg/wiki/54._His_Butler,_Locking_Up"
+      ]
+    },
+    {
+      "episode": 55,
+      "end_chapter": 83,
+      "start_chapter": 82,
+      "chapters_adapted": "82, 83 (first half)",
+      "volume": 18,
+      "confidence": "high",
+      "note": "S4E9 -> our 55. Fandom 82-83; Sportskeeda recap 'adapted chapter 82 and half of chapter 83'; under-taker cites vol17 ch82 and vol18 ch83 (Undertaker dialogue). Title = ch82 title.",
+      "sources": [
+        "https://kuroshitsuji.fandom.com/wiki/55._His_Butler,_Having_a_Laugh",
+        "https://www.sportskeeda.com/anime/black-butler-season-4-episode-9-ciel-sebastian-learn-headmaster-s-actual-identity-uncover-weston-college-s-mystery",
+        "https://www.under-taker.com/entry/2024/06/09/090358",
+        "https://kuroshitsuji.wiki.gg/wiki/55._His_Butler,_Having_a_Laugh"
+      ]
+    },
+    {
+      "episode": 56,
+      "end_chapter": 84,
+      "start_chapter": 84,
+      "chapters_adapted": "83 (second half), 84",
+      "volume": 18,
+      "confidence": "high",
+      "note": "S4E10 -> our 56. Fandom 83-84; Sportskeeda recap 'covered chapters 83 and 84'; under-taker cites vol18 ch84 and states the Public School main story concludes with this episode, ch85 being the epilogue. START 84 per majority rule (ch83's second half opens the episode, roughly a third of it). Title = ch83 title (Giving Assent).",
+      "sources": [
+        "https://kuroshitsuji.fandom.com/wiki/56._His_Butler,_Assenting",
+        "https://www.sportskeeda.com/anime/black-butler-season-4-episode-10-ciel-phantomhive-completes-mission-weston-college-s-dark-history-revealed",
+        "https://www.under-taker.com/entry/2024/06/16/214728",
+        "https://kuroshitsuji.wiki.gg/wiki/56._His_Butler,_Assenting"
+      ]
+    },
+    {
+      "episode": 57,
+      "end_chapter": 86,
+      "start_chapter": 85,
+      "chapters_adapted": "85, 86 (opening pages: the German werewolf-forest prologue, as the closing/teaser scene)",
+      "volume": 18,
+      "confidence": "high",
+      "note": "S4E11 -> our 57. Fandom and wiki.gg 85-86 (fandom ch86 page maps to eps 57 and 58); Sportskeeda recap 'covered chapter 85 and the first half of chapter 86', its where-to-start piece 'up to the first few pages of chapter 86', its ending-explained 'the ending scene adapted chapter 86'; under-taker treats it as the ch85 one-shot with only a Germany tease. Ch85 is a standalone shopping-day epilogue; the ch86 portion is a teaser, so resume at 86 (Emerald Witch proper starts ep58, which re-covers 86). Title = ch85 title.",
+      "sources": [
+        "https://kuroshitsuji.fandom.com/wiki/57._His_Butler,_Taking_Off",
+        "https://kuroshitsuji.fandom.com/wiki/086._The_Butler,_On_Board",
+        "https://www.sportskeeda.com/anime/black-butler-season-4-episode-11-ciel-sebastian-enjoy-casual-day-new-threat-looms-large",
+        "https://www.sportskeeda.com/anime/where-start-black-butler-manga-season-4-explained",
+        "https://www.under-taker.com/entry/2024/06/25/031702",
+        "https://kuroshitsuji.wiki.gg/wiki/57._His_Butler,_Taking_Off"
+      ]
+    },
+    {
+      "episode": 58,
+      "end_chapter": 88,
+      "start_chapter": 86,
+      "chapters_adapted": "86-87, 88 (p.1-11)",
+      "volume": 19,
+      "confidence": "high",
+      "note": "EWA ep1 (S5E1 -> our 58). Fandom '86-87, 88 (p.1-11)'; ch86/87 pages map to ep58; Sportskeeda review 'covered Chapters 86, 87, and half of chapter 88'; under-taker cites vol18 ch86. Title (Doing Fieldwork/探訪) = ch87 title (Making Enquiries).",
+      "sources": [
+        "https://kuroshitsuji.fandom.com/wiki/58._His_Butler,_Doing_Fieldwork",
+        "https://kuroshitsuji.fandom.com/wiki/086._The_Butler,_On_Board",
+        "https://www.sportskeeda.com/anime/black-butler-season-5-episode-1-review-cloverworks-studio-s-strong-production-kicks-emerald-witch-arc-style",
+        "https://www.sportskeeda.com/anime/black-butler-season-5-episode-2-release-date-time-watch",
+        "https://www.under-taker.com/entry/2025/04/09/221745"
+      ]
+    },
+    {
+      "episode": 59,
+      "end_chapter": 89,
+      "start_chapter": 89,
+      "chapters_adapted": "88 (p.12-27), 89 (p.1-32)",
+      "volume": 19,
+      "confidence": "high",
+      "note": "S5E2 -> our 59. Fandom page split; ch88/89 pages map to 59 / 59-60; under-taker names ch89 as the episode's chapter (and its ep3 post says ep3 adapts ch90, so 59 ends inside 89); wiki.gg 88-89. START 89 per majority rule (ch88 remainder is about a third). Title = ch89 title.",
+      "sources": [
+        "https://kuroshitsuji.fandom.com/wiki/59._His_Butler,_Sounding_the_Alarm",
+        "https://kuroshitsuji.fandom.com/wiki/089._The_Butler,_Sounding_the_Alarm",
+        "https://www.under-taker.com/entry/2025/04/13/140222",
+        "https://www.under-taker.com/entry/2025/04/20/043402",
+        "https://kuroshitsuji.wiki.gg/wiki/59._His_Butler,_Sounding_the_Alarm"
+      ]
+    },
+    {
+      "episode": 60,
+      "end_chapter": 91,
+      "start_chapter": 90,
+      "chapters_adapted": "89 (p.33-37), 90, 91 (p.1-10)",
+      "volume": 19,
+      "confidence": "high",
+      "note": "S5E3 -> our 60. Fandom page split; ch90/91 pages map to 60 / 60-61; Sportskeeda ep4 preview 'will continue the adaptation from chapter 91' confirms 60 ends inside 91; under-taker cites vol19 ch90 (episode opens with a recap of eps 1-2). START 90 per majority rule. Title = ch90 title.",
+      "sources": [
+        "https://kuroshitsuji.fandom.com/wiki/60._His_Butler,_On_Loan",
+        "https://kuroshitsuji.fandom.com/wiki/091._The_Butler,_Switched",
+        "https://www.sportskeeda.com/anime/black-butler-season-5-episode-4-release-date-time-watch",
+        "https://www.under-taker.com/entry/2025/04/20/043402",
+        "https://kuroshitsuji.wiki.gg/wiki/60._His_Butler,_On_Loan"
+      ]
+    },
+    {
+      "episode": 61,
+      "end_chapter": 92,
+      "start_chapter": 91,
+      "chapters_adapted": "91 (p.11-28), 92 (p.1-22)",
+      "volume": 19,
+      "confidence": "high",
+      "note": "S5E4 -> our 61. Fandom page split; ch92 page maps to 61-62; Sportskeeda ep5 preview 'continue adapting the events from chapter 92' confirms 61 ends inside 92; under-taker cites vol19 ch91 and ch92. START 91 (its 18 pages are nearly half the episode). Title (Serving/奉公) = ch92 title (In Service).",
+      "sources": [
+        "https://kuroshitsuji.fandom.com/wiki/61._His_Butler,_Serving",
+        "https://kuroshitsuji.fandom.com/wiki/092._The_Butler,_In_Service",
+        "https://www.sportskeeda.com/anime/black-butler-season-5-episode-5-release-date-time-watch",
+        "https://www.under-taker.com/entry/2025/04/27/051152",
+        "https://kuroshitsuji.wiki.gg/wiki/61._His_Butler,_Serving"
+      ]
+    },
+    {
+      "episode": 62,
+      "end_chapter": 93,
+      "start_chapter": 93,
+      "chapters_adapted": "92 (p.22-35), 93",
+      "volume": 20,
+      "confidence": "high",
+      "note": "S5E5 -> our 62. Fandom page split; ch93 page maps to 62; Sportskeeda ep6 preview 'continue the adaptation from chapter 94' confirms 62 ends at 93; under-taker cites vol20 ch93 as the episode's chapter. START 93 per majority rule. Title = ch93 title.",
+      "sources": [
+        "https://kuroshitsuji.fandom.com/wiki/62._His_Butler,_Descending",
+        "https://kuroshitsuji.fandom.com/wiki/092._The_Butler,_In_Service",
+        "https://www.sportskeeda.com/anime/black-butler-season-5-episode-6-release-date-time-watch",
+        "https://www.under-taker.com/entry/2025/05/04/181718",
+        "https://kuroshitsuji.wiki.gg/wiki/62._His_Butler,_Descending"
+      ]
+    },
+    {
+      "episode": 63,
+      "end_chapter": 95,
+      "start_chapter": 94,
+      "chapters_adapted": "94-95",
+      "volume": 20,
+      "confidence": "high",
+      "note": "S5E6 -> our 63. Fandom 94-95; ch94/95 pages map to 63; Sportskeeda ep6 preview 'from chapter 94' and ep7 preview 'from chapter 96' bracket it; under-taker cites vol20 ch95. Title (Despairing/失望) = ch95 title.",
+      "sources": [
+        "https://kuroshitsuji.fandom.com/wiki/63._His_Butler,_Despairing",
+        "https://kuroshitsuji.fandom.com/wiki/095._The_Butler,_Dismayed",
+        "https://www.sportskeeda.com/anime/black-butler-season-5-episode-6-release-date-time-watch",
+        "https://www.sportskeeda.com/anime/black-butler-season-5-episode-7-release-date-time-watch",
+        "https://www.under-taker.com/entry/2025/05/11/041321"
+      ]
+    },
+    {
+      "episode": 64,
+      "end_chapter": 97,
+      "start_chapter": 96,
+      "chapters_adapted": "96-97",
+      "volume": 20,
+      "confidence": "high",
+      "note": "S5E7 -> our 64. Fandom 96-97; ch96/97 pages map to 64; Sportskeeda ep7 preview 'from chapter 96' and ep8 preview 'from chapter 98' bracket it; under-taker cites vol20 ch97. Title = ch96 title.",
+      "sources": [
+        "https://kuroshitsuji.fandom.com/wiki/64._His_Butler,_Encouraging",
+        "https://kuroshitsuji.fandom.com/wiki/097._The_Butler,_Fascinated",
+        "https://www.sportskeeda.com/anime/black-butler-season-5-episode-7-release-date-time-watch",
+        "https://www.sportskeeda.com/anime/black-butler-season-5-episode-8-release-date-time-watch",
+        "https://www.under-taker.com/entry/2025/05/18/032318"
+      ]
+    },
+    {
+      "episode": 65,
+      "end_chapter": 99,
+      "start_chapter": 98,
+      "chapters_adapted": "98-99",
+      "volume": 21,
+      "confidence": "high",
+      "note": "S5E8 -> our 65. Fandom 98-99; ch98/99 pages map to 65; Sportskeeda ep8 preview 'from chapter 98' and ep9 preview 'from chapter 100' bracket it. Title (Furious/狂暴) = ch99 title (In a Rage).",
+      "sources": [
+        "https://kuroshitsuji.fandom.com/wiki/65._His_Butler,_Furious",
+        "https://kuroshitsuji.fandom.com/wiki/099._The_Butler,_In_a_Rage",
+        "https://www.sportskeeda.com/anime/black-butler-season-5-episode-8-release-date-time-watch",
+        "https://www.sportskeeda.com/anime/black-butler-season-5-episode-9-release-date-time-watch",
+        "https://kuroshitsuji.wiki.gg/wiki/65._His_Butler,_Furious"
+      ]
+    },
+    {
+      "episode": 66,
+      "end_chapter": 101,
+      "start_chapter": 100,
+      "chapters_adapted": "100, 101 (p.1-15)",
+      "volume": 21,
+      "confidence": "high",
+      "note": "S5E9 -> our 66. Fandom page split; ch100/101 pages map to 66 / 66-67; Sportskeeda ep9 preview 'from chapter 100' fixes the start; wiki.gg 100-101; episode title = ch101 title (Crossing Paths). No explicit third-party statement of the mid-101 cut; it rests on fandom's page split plus the title match.",
+      "sources": [
+        "https://kuroshitsuji.fandom.com/wiki/66._His_Butler,_Crossing_Paths",
+        "https://kuroshitsuji.fandom.com/wiki/101._The_Butler,_Crossing_Paths",
+        "https://www.sportskeeda.com/anime/black-butler-season-5-episode-9-release-date-time-watch",
+        "https://kuroshitsuji.wiki.gg/wiki/66._His_Butler,_Crossing_Paths",
+        "https://en.wikipedia.org/wiki/List_of_Black_Butler_chapters"
+      ]
+    },
+    {
+      "episode": 67,
+      "end_chapter": 103,
+      "start_chapter": 102,
+      "chapters_adapted": "101 (p.15-26), 102, 103 (C-part only: opening page(s) before the reaper-genealogy reveal)",
+      "volume": 21,
+      "confidence": "medium",
+      "note": "S5E10 -> our 67. Fandom lists '101 (p.15-26), 102' only; wiki.gg lists 101-103; under-taker cites vol21 ch102 and says the C-part teased 'up to the page before' the reaper genealogy scene (which under-taker's ep11 post places in ch103); Sportskeeda ep11 preview 'continue from the 103rd chapter' fits either reading. Mainline content ends at 102; END recorded as 103 because the C-part opens it. Resume at 103 either way. Title (Mopping Up/掃討) = ch102 title (Exterminating). START 102 per majority rule.",
+      "sources": [
+        "https://kuroshitsuji.fandom.com/wiki/67._His_Butler,_Mopping_Up",
+        "https://kuroshitsuji.wiki.gg/wiki/67._His_Butler,_Mopping_Up",
+        "https://kuroshitsuji.fandom.com/wiki/102._The_Butler,_Exterminating",
+        "https://www.under-taker.com/entry/2025/06/08/032943",
+        "https://www.under-taker.com/entry/2025/06/15/045513",
+        "https://www.sportskeeda.com/anime/black-butler-season-5-episode-11-release-date-time-watch"
+      ]
+    },
+    {
+      "episode": 68,
+      "end_chapter": 104,
+      "start_chapter": 103,
+      "chapters_adapted": "103-104",
+      "volume": 22,
+      "confidence": "high",
+      "note": "S5E11 -> our 68. Fandom 103-104; ch103/104 pages map to 68; Sportskeeda ep11 preview 'from the 103rd chapter' and ep12 preview 'from chapter 105' bracket it; under-taker cites vol21 ch103 (genealogy scene) as the centrepiece. Title (Much Unknown/不詳) = ch103 title (Fate Unknown).",
+      "sources": [
+        "https://kuroshitsuji.fandom.com/wiki/68._His_Butler,_Much_Unknown",
+        "https://kuroshitsuji.fandom.com/wiki/104._The_Butler,_Disgraced",
+        "https://www.sportskeeda.com/anime/black-butler-season-5-episode-11-release-date-time-watch",
+        "https://www.sportskeeda.com/anime/black-butler-season-5-episode-12-release-date-time-watch",
+        "https://www.under-taker.com/entry/2025/06/15/045513"
+      ]
+    },
+    {
+      "episode": 69,
+      "end_chapter": 107,
+      "start_chapter": 105,
+      "chapters_adapted": "105-106, 107 (p.1-15)",
+      "volume": 22,
+      "confidence": "high",
+      "note": "S5E12 -> our 69. Fandom page split; ch105/106/107 pages map to 69 / 69 / 70; Sportskeeda ep12 preview 'from chapter 105' and ep13 preview 'will cover the remaining pages of chapter 107' bracket it; wiki.gg 105-107. Title (Calling/尋訪) = ch105's Japanese title per wiki.gg.",
+      "sources": [
+        "https://kuroshitsuji.fandom.com/wiki/69._His_Butler,_Calling",
+        "https://kuroshitsuji.fandom.com/wiki/107._The_Butler,_Compelling",
+        "https://www.sportskeeda.com/anime/black-butler-season-5-episode-12-release-date-time-watch",
+        "https://www.sportskeeda.com/anime/black-butler-season-5-episode-13-finale-release-date-time-watch",
+        "https://kuroshitsuji.wiki.gg/wiki/69._His_Butler,_Calling"
+      ]
+    },
+    {
+      "episode": 70,
+      "end_chapter": 108,
+      "start_chapter": 107,
+      "chapters_adapted": "107 (p.16-38), 108",
+      "volume": 22,
+      "confidence": "high",
+      "note": "S5E13 (finale) -> our 70. Fandom '107 (p.16-38), 108' with ch107/108 pages mapping to ep70; wiki.gg 107-108 (+ 'one page' of 109); Sportskeeda finale preview 'remaining pages of chapter 107' and finale recap headline (Sieglinde meets the Queen; Undertaker visits Ciel at night) are ch108 events per fandom's ch108 summary; ANN calls the Undertaker visit 'technically part of the next arc'; under-taker says the next arc starts cleanly from the start of vol 23 (= ch109). Title (Submerged/潜航) = ch108's Japanese title. Volume 22 per Wikipedia + fandom Volume 22 page + wiki.gg (fandom's ch108 infobox alone says v23). START 107 (its 23 remaining pages are ~40% of the episode).",
+      "sources": [
+        "https://kuroshitsuji.fandom.com/wiki/70._His_Butler,_Submerged",
+        "https://kuroshitsuji.fandom.com/wiki/108._The_Butler,_Underwater",
+        "https://kuroshitsuji.wiki.gg/wiki/70._His_Butler,_Submerged",
+        "https://www.sportskeeda.com/anime/black-butler-season-5-episode-13-finale-release-date-time-watch",
+        "https://www.sportskeeda.com/anime/black-butler-season-5-episode-13-finale-sieglinde-sullivan-meets-queen-undertaker-visits-ciel-night",
+        "https://www.animenewsnetwork.com/review/black-butler-emerald-witch-arc/episode-13/.226119",
+        "https://www.under-taker.com/entry/2025/06/29/123225",
+        "https://kuroshitsuji.fandom.com/wiki/Volume_22"
+      ]
+    }
+  ],
+  "continue_points": [
+    {
+      "episode": 49,
+      "continue_chapter": 72,
+      "note": "ends 5 pages into ch72 (Sportskeeda); ep50 finishes it"
+    },
+    {
+      "episode": 51,
+      "continue_chapter": 75,
+      "note": "ends 16 pages into ch75 (Sportskeeda); ep52 finishes it"
+    },
+    {
+      "episode": 53,
+      "continue_chapter": 80,
+      "note": "ch80's final pages open ep54 (Sportskeeda ep8 recap); resume at 80 to be safe"
+    },
+    {
+      "episode": 55,
+      "continue_chapter": 83,
+      "note": "ends halfway through ch83 (Sportskeeda); ep56 finishes it"
+    },
+    {
+      "episode": 57,
+      "continue_chapter": 86,
+      "note": "only ch86's opening werewolf-forest prologue is shown as the teaser; Emerald Witch reading starts at 86"
+    },
+    {
+      "episode": 58,
+      "continue_chapter": 88,
+      "note": "ends p.11 of ch88 (fandom); Sportskeeda 'half of chapter 88'"
+    },
+    {
+      "episode": 59,
+      "continue_chapter": 89,
+      "note": "ends p.32 of ch89 (fandom); ep60 opens with its last 5 pages"
+    },
+    {
+      "episode": 60,
+      "continue_chapter": 91,
+      "note": "ends p.10 of ch91 (fandom); Sportskeeda ep4 preview 'continues from ch91'"
+    },
+    {
+      "episode": 61,
+      "continue_chapter": 92,
+      "note": "ends p.22 of ch92 (fandom); Sportskeeda ep5 preview 'continues from ch92'"
+    },
+    {
+      "episode": 66,
+      "continue_chapter": 101,
+      "note": "ends p.15 of ch101 (fandom); ep67 finishes it"
+    },
+    {
+      "episode": 67,
+      "continue_chapter": 103,
+      "note": "C-part shows at most ch103's opening page(s); mainline ends at 102, so resume at 103"
+    },
+    {
+      "episode": 69,
+      "continue_chapter": 107,
+      "note": "ends p.15 of ch107 (fandom); Sportskeeda 'remaining pages of chapter 107' in ep70"
+    },
+    {
+      "episode": 70,
+      "continue_chapter": 109,
+      "note": "= end+1, stated explicitly: the finale adapts ch108 in full (the Queen's audience, SuLIN dumped at sea, Undertaker's night visit), so the manga resumes at ch109 (vol 23, Blue Cult Arc). Sites that say 'continue at 108' after the Emerald Witch Arc treat the finale as ending at 107 and are behind."
+    }
+  ],
+  "annotations": [
+    {
+      "episodes": [
+        47
+      ],
+      "kind": "rearranged",
+      "chapters": "67-68",
+      "note": "cold-opens with ch68's headmaster's-office scene, then plays ch67 from the start (under-taker.com ep1 commentary)"
+    },
+    {
+      "episodes": [
+        48,
+        49
+      ],
+      "kind": "rearranged",
+      "chapters": "70",
+      "note": "ch70's Ciel-McMillan conversation is moved from ep48's block to ep49's opening (under-taker.com ep3 commentary)"
+    },
+    {
+      "episodes": [
+        57
+      ],
+      "kind": "partial",
+      "chapters": "85, 86 (opening pages)",
+      "note": "ch85 standalone epilogue (shopping day in London) plus the ch86 werewolf-forest prologue as a season-ending teaser; ep58 restarts ch86 in full"
+    },
+    {
+      "episodes": [
+        67
+      ],
+      "kind": "partial",
+      "chapters": "103",
+      "note": "C-part tease stops one page short of ch103's reaper-genealogy reveal; fandom lists 101-102 only, wiki.gg 101-103"
+    },
+    {
+      "episodes": [
+        70
+      ],
+      "kind": "partial",
+      "chapters": "108 (+1 page of 109 per wiki.gg)",
+      "note": "finale runs past the Emerald Witch Arc proper (86-107) into ch108, which fandom files under the Blue Cult Arc; wiki.gg additionally claims a single page of ch109 was animated"
+    }
+  ],
+  "type_corrections": [],
+  "repairs": [],
+  "structure": {
+    "notes": "Numbering: kuroshitsuji.fandom.com and Wikipedia both number these seasons cumulatively as 47-57 and 58-70 (Book of Circus = 37-46), i.e. exactly our cumulative numbering with the Book of Murder OVAs and the Atlantic film NOT counted; only per-season sources (Sportskeeda, under-taker.com, ANN, MAL) needed conversion (S4 epN = our 46+N, S5 epN = our 57+N). Season entries verified on AniList: 166715 Kuroshitsuji: Kishuku Gakkou-hen, TV, 11 eps, 2024-04-13..06-22 (our 47-57); 179054 Kuroshitsuji: Midori no Majo-hen, TV, 13 eps, 2025-04-05..06-28 (our 58-70); 20670 Book of Murder, OVA, 2 eps (2014-10-25 / 2014-11-15); 21425 Book of the Atlantic, MOVIE, 1 (2017-01-21). All 24 new episodes are canon (fandom Episodes table marks every one 'Y'; ScreenRant/MAL guide: Public School and Emerald Witch fully canon) - no filler, no type corrections. Flag #853 verified: Public School Arc = chs 67-85 (fandom arc page vols 14-18; CBR; wheredoestheanimeleaveoff 'continue at 86'), with ep57 also teasing ch86's prologue; Emerald Witch Arc = chs 86-107 (fandom arc page vols 18-22; CBR), with the finale ep70 also adapting ch108 in full - so the old MU pin 108 belongs at ep70 (Emerald Witch end) and the series' continue point is ch109 (vol 23, Blue Cult Arc), max_adapted_chapter 108. Watch order (fandom previous/next chain, ScreenRant, MAL 'Black Butler Anime Guide' stack, wheredoestheanimeleaveoff all agree): Book of Circus (37-46) -> Book of Murder (OVA x2) -> Book of the Atlantic (film) -> Public School Arc (47-57) -> Emerald Witch Arc (58-70). Unadapted manga in the gaps: ch37 'Brand New' (Nina Hopkins intro; between Circus and Murder - existing ep46 continue->37 stands), ch66 'Frenzied' (Easter egg hunt; after the film, before Public School - fandom ch66 'episodes: N/A', ScreenRant lists it as optional reading after Atlantic, under-taker calls it 未アニメ化), bonus ch107.5 (vol 22 extra).",
+    "order_only": [
+      {
+        "anilist_id": 20670,
+        "title": "Book of Murder",
+        "after_anilist_id": 20606,
+        "adapts": "chs 38-50 (Phantomhive Manor Murders arc, vols 9-11); Part 1 = 38-45, Part 2 = 45-50 (ch45 split across the two OVAs)",
+        "note": "Two ~1-hour OVAs, fully canon. Fandom arc page start ch38/end ch50; every fandom chapter page 38-50 maps back to 'Book of Murder Part 1/2' and ch51 maps to the film; CBR arcs guide 'Volumes 9-11, Chapters 38-50'. Sits after Book of Circus (our 46) and before Book of the Atlantic. Continue reading at ch51 (wheredoestheanimeleaveoff's 'ch52' is loose: ch51's opening pages are the murder-case epilogue but the fandom maps ch51 to the film).",
+        "sources": [
+          "https://kuroshitsuji.fandom.com/wiki/Kuroshitsuji:_Book_of_Murder",
+          "https://kuroshitsuji.fandom.com/wiki/Phantomhive_Manor_Murders_Arc",
+          "https://kuroshitsuji.fandom.com/wiki/050._The_Butler,_Laid_to_Rest",
+          "https://www.cbr.com/black-butler-story-arcs-ranked/",
+          "https://screenrant.com/how-to-navigate-black-butler-anime-faithful-to-canon/",
+          "https://myanimelist.net/stacks/23438"
+        ]
+      },
+      {
+        "anilist_id": 21425,
+        "title": "Book of the Atlantic",
+        "after_anilist_id": 20670,
+        "adapts": "chs 51-65 (Luxury Liner / Campania arc, vols 11-14); the arc formally runs 51-66 but ch66 (Easter egg hunt) is not in the film",
+        "note": "Feature film, fully canon. Fandom arc page start ch51/end ch66, vols 11-14; fandom chapter pages 51-65 each map to 'Book of the Atlantic', ch66 'N/A'; Wikipedia film article 'volumes 11-14'; CBR 'Volumes 11-14, Chapters 51-66'; ScreenRant lists ch66 as optional reading between the film and Public School Arc. Sits after Book of Murder, before Public School Arc (our 47). Continue reading at ch66 (or 67 to skip the Easter one-shot).",
+        "sources": [
+          "https://kuroshitsuji.fandom.com/wiki/Kuroshitsuji:_Book_of_the_Atlantic",
+          "https://kuroshitsuji.fandom.com/wiki/Luxury_Liner_Arc",
+          "https://kuroshitsuji.fandom.com/wiki/066._The_Butler,_Frenzied",
+          "https://en.wikipedia.org/wiki/Black_Butler:_Book_of_the_Atlantic",
+          "https://www.cbr.com/black-butler-story-arcs-ranked/",
+          "https://screenrant.com/how-to-navigate-black-butler-anime-faithful-to-canon/",
+          "https://wheredoestheanimeleaveoff.com/where-does-the-black-butler-anime-leave-off-in-the-manga/"
+        ]
+      }
+    ],
+    "season_entries": [
+      {
+        "anilist_id": 166715,
+        "label": "Kuroshitsuji: Public School Arc",
+        "episodes": "47-57",
+        "count": 11,
+        "aired": "2024-04-13..2024-06-22",
+        "adapts": "chs 67-85 (+ ch86 prologue teaser in ep57)"
+      },
+      {
+        "anilist_id": 179054,
+        "label": "Kuroshitsuji: Emerald Witch Arc",
+        "episodes": "58-70",
+        "count": 13,
+        "aired": "2025-04-05..2025-06-28",
+        "adapts": "chs 86-108 (Emerald Witch arc 86-107 plus ch108)"
+      }
+    ],
+    "sources": [
+      "https://en.wikipedia.org/wiki/List_of_Black_Butler_episodes",
+      "https://en.wikipedia.org/wiki/List_of_Black_Butler_chapters",
+      "https://kuroshitsuji.fandom.com/wiki/Episodes",
+      "https://kuroshitsuji.fandom.com/wiki/Public_School_Arc",
+      "https://kuroshitsuji.fandom.com/wiki/Emerald_Witch_Arc",
+      "https://kuroshitsuji.wiki.gg/wiki/Kuroshitsuji:_Emerald_Witch_Arc",
+      "https://graphql.anilist.co (Media ids 166715, 179054, 20670, 21425, 20606)",
+      "https://wheredoestheanimeleaveoff.com/where-does-the-black-butler-anime-leave-off-in-the-manga/",
+      "https://screenrant.com/how-to-navigate-black-butler-anime-faithful-to-canon/",
+      "https://myanimelist.net/stacks/23438",
+      "https://www.cbr.com/black-butler-story-arcs-ranked/"
+    ]
+  },
+  "flags_for_sean": [
+    "ep67 END 102 vs 103: fandom lists '101 (p.15-26), 102'; wiki.gg lists 101-103; under-taker.com says the C-part teased up to the page before the reaper-genealogy reveal (a ch103 scene); Sportskeeda's ep11 preview 'continues from the 103rd chapter' fits both. Recorded END 103 (partial, medium) with resume at 103; if you prefer mainline-only END, set 102 (resume unchanged). Links: https://kuroshitsuji.fandom.com/wiki/67._His_Butler,_Mopping_Up | https://kuroshitsuji.wiki.gg/wiki/67._His_Butler,_Mopping_Up | https://www.under-taker.com/entry/2025/06/08/032943",
+    "ep70 extras: wiki.gg says 'one page' of ch109 was also animated in the finale (fandom, under-taker and Sportskeeda do not mention it); resume point is 109 regardless. Fandom's ch108 infobox says Volume 23, but fandom's own Volume 22 page, wiki.gg and Wikipedia all put ch108 in v22 - v22 used. Links: https://kuroshitsuji.wiki.gg/wiki/70._His_Butler,_Submerged | https://kuroshitsuji.fandom.com/wiki/Volume_22",
+    "ep57 ch86 portion is described inconsistently by Sportskeeda ('first half of chapter 86' in the recap, 'first few pages' in the where-to-start piece, 'the ending scene' in ending-explained) and under-taker says no direct transition (only an ED tease); recorded as ch86's opening prologue with END 86 / continue 86. If you want END 85 with continue->86 instead, it is a one-field change.",
+    "Coverage note: the session's WebSearch budget ran out mid-task; remaining corroboration was done via curl/WebFetch. Independent per-episode statements exist for all 11 Public School episodes (Sportskeeda recaps) and for Emerald Witch eps 58, 60-65, 68-70 (Sportskeeda previews/reviews); eps 59, 66, 67 rest on fandom page splits + under-taker/wiki.gg/title matches."
+  ]
+}

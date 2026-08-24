@@ -1,0 +1,801 @@
+{
+ "series_id": "golden-kamuy",
+ "summary": "Eps 25-62 stitch three seasons: S3 (110355, our 25-36) adapts vols 15-20, chs 140-200 (+a 2-page teaser of 201), but skips the Hokkaido-side Sekiya arc 171-175 and only skims 191-200 in its finale montage; S4 (142343, our 37-49) opens by backfilling those gaps (171-176 in eps 37-38, 191-200 in eps 39-40) and then runs linearly 204-243 (+244 excerpt); the Final Season (166521, our 50-62) runs linearly 244-302 at ~4-5 chapters per episode. Its finale stops on the last page of vol 30 (ch 302 'Mayhem on the Train') - the manga's last 12 chapters (303-314) are reserved for the announced 'Saishuushou - Bousou Ressha-hen' (AniList 210073, winter 2026/27), so the ASK's 'finishes the manga at 314' is wrong. Per-episode data for S3/S4 comes from the fandom wiki's page-level 'Adapted Chapters' lists, corroborated by programming-cafe's independent Japanese correspondence table, Wikipedia season spans/summaries and chapter-title matches; the Final Season (no fandom pages) rests on programming-cafe plus MAL manga-reader posts, episode titles that equal chapter titles, and multiple sources for the 244 start / 302 end. Five OVAs carry TV-skipped canon (55-59+32; 83-85+104; 63-69; 108-113; 102,104-107,228), and the 2025 'Sapporo Beer Koujou-hen' films are a duplicate of eps 50-55, not extra canon.",
+ "anchors": [
+  {
+   "episode": 25,
+   "end_chapter": 143,
+   "start_chapter": 140,
+   "chapters_adapted": "140-143",
+   "volume": 15,
+   "confidence": "high",
+   "note": "S3 opener (Karafuto arrival, Stenka = ch 143). Confirms the existing ep24 anchor (end 139, continue 140).",
+   "sources": [
+    "https://goldenkamuy.fandom.com/wiki/Episode_25",
+    "https://programming-cafe.com/amazon/primevideo/anime/anicomi-goldenkamuy-list/",
+    "https://en.wikipedia.org/wiki/Golden_Kamuy_season_3"
+   ]
+  },
+  {
+   "episode": 26,
+   "end_chapter": 147,
+   "start_chapter": 144,
+   "chapters_adapted": "144-147",
+   "volume": 15,
+   "confidence": "high",
+   "note": "Second Stenka bout/banya/sea lions = chs 144 'Clash! Wall Deathmatch'-147 'Don't Kill the Sea Lions' (Wikipedia summary + chapter titles). programming-cafe's S3 rows for eps 26-29 are shifted one episode late (it leaves 144-147 unassigned) - disregarded for these four episodes.",
+   "sources": [
+    "https://goldenkamuy.fandom.com/wiki/Episode_26",
+    "https://en.wikipedia.org/wiki/Golden_Kamuy_season_3",
+    "https://en.wikipedia.org/wiki/List_of_Golden_Kamuy_chapters",
+    "https://goldenkamuy.fandom.com/wiki/Journey_to_Karafuto_Arc"
+   ]
+  },
+  {
+   "episode": 27,
+   "end_chapter": 150,
+   "start_chapter": 148,
+   "chapters_adapted": "148-150",
+   "volume": 15,
+   "confidence": "high",
+   "note": "Title = ch 149 'Igogusa'; silver-fox farm village + Tsukishima backstory (148 'Roots'-150 'Remains').",
+   "sources": [
+    "https://goldenkamuy.fandom.com/wiki/Episode_27",
+    "https://en.wikipedia.org/wiki/Golden_Kamuy_season_3",
+    "https://en.wikipedia.org/wiki/List_of_Golden_Kamuy_chapters"
+   ]
+  },
+  {
+   "episode": 28,
+   "end_chapter": 158,
+   "start_chapter": 151,
+   "chapters_adapted": "151 (p.2-10), 154 (p.8-19), 155-158",
+   "volume": 16,
+   "confidence": "high",
+   "note": "Karafuto circus arc 155-158 (title = ch 156). Opens with the musk-deer hunt (151 p.2-10) and Toyohara (154 p.8-19). The Manslayer block in between - 151 (p.11-18), 152-153, 154 (p.1-7) - is held back and aired as ep32.",
+   "sources": [
+    "https://goldenkamuy.fandom.com/wiki/Episode_28",
+    "https://goldenkamuy.fandom.com/wiki/Karafuto_Circus_Arc",
+    "https://en.wikipedia.org/wiki/Golden_Kamuy_season_3",
+    "https://en.wikipedia.org/wiki/List_of_Golden_Kamuy_chapters"
+   ]
+  },
+  {
+   "episode": 29,
+   "end_chapter": 162,
+   "start_chapter": 159,
+   "chapters_adapted": "159-162",
+   "volume": 17,
+   "confidence": "high",
+   "note": "Uilta people, border crossing, Ogata vs the Russian sniper begins (title = ch 160 'National Borders').",
+   "sources": [
+    "https://goldenkamuy.fandom.com/wiki/Episode_29",
+    "https://goldenkamuy.fandom.com/wiki/Border_Crossing_Arc",
+    "https://en.wikipedia.org/wiki/Golden_Kamuy_season_3",
+    "https://en.wikipedia.org/wiki/List_of_Golden_Kamuy_chapters"
+   ]
+  },
+  {
+   "episode": 30,
+   "end_chapter": 166,
+   "start_chapter": 163,
+   "chapters_adapted": "163-166",
+   "volume": 17,
+   "confidence": "high",
+   "note": "Title = ch 164 'Bad Sign' (Yuusaku flashback). Ch 166 is split with ep31 (page split not stated by either source).",
+   "sources": [
+    "https://goldenkamuy.fandom.com/wiki/Episode_30",
+    "https://programming-cafe.com/amazon/primevideo/anime/anicomi-goldenkamuy-list/",
+    "https://en.wikipedia.org/wiki/Golden_Kamuy_season_3"
+   ]
+  },
+  {
+   "episode": 31,
+   "end_chapter": 170,
+   "start_chapter": 167,
+   "chapters_adapted": "166 (part), 167-170",
+   "volume": 17,
+   "confidence": "high",
+   "note": "Whiteout/lighthouse keepers, title = ch 169 'Meko Oyasi'; Kiroranke reaches Akou and contacts Sofia (170).",
+   "sources": [
+    "https://goldenkamuy.fandom.com/wiki/Episode_31",
+    "https://programming-cafe.com/amazon/primevideo/anime/anicomi-goldenkamuy-list/",
+    "https://en.wikipedia.org/wiki/Golden_Kamuy_season_3"
+   ]
+  },
+  {
+   "episode": 32,
+   "end_chapter": 170,
+   "start_chapter": 151,
+   "chapters_adapted": "151 (p.11-18), 152-153, 154 (p.1-7); frame: 170 (tail) [+171 (part) per programming-cafe]",
+   "volume": 17,
+   "confidence": "medium",
+   "note": "Relocated Manslayer block (vol 16, 'Youichirou the Manslayer' arc: fandom lists only 151 p.11-18, 152, 153, 154 p.1-7). programming-cafe additionally lists 170-171 and the Wikipedia summary includes Kiroranke revealing the mass prison-break plan (the ch-170 letter scene), so the mainline position instrument is kept at 170 (= ep31); the episode's bulk is 151-154. Non-monotonic backfill either way.",
+   "sources": [
+    "https://goldenkamuy.fandom.com/wiki/Episode_32",
+    "https://programming-cafe.com/amazon/primevideo/anime/anicomi-goldenkamuy-list/",
+    "https://en.wikipedia.org/wiki/Golden_Kamuy_season_3",
+    "https://goldenkamuy.fandom.com/wiki/Youichirou_the_Manslayer_Arc"
+   ]
+  },
+  {
+   "episode": 33,
+   "end_chapter": 179,
+   "start_chapter": 176,
+   "chapters_adapted": "176 (p.8-20), 177-179",
+   "volume": 18,
+   "confidence": "high",
+   "note": "Akou prison-break arc begins with the Hasegawa/Tsurumi flashback (title = ch 178 'Revolutionaries'). S3 skips 171-175 + 176 p.1-7 (Hokkaido-side Sekiya arc) - adapted later by S4 eps 37-38.",
+   "sources": [
+    "https://goldenkamuy.fandom.com/wiki/Episode_33",
+    "https://programming-cafe.com/amazon/primevideo/anime/anicomi-goldenkamuy-list/",
+    "https://goldenkamuy.fandom.com/wiki/Akou_Prison_Break_Arc",
+    "https://en.wikipedia.org/wiki/Golden_Kamuy_season_3"
+   ]
+  },
+  {
+   "episode": 34,
+   "end_chapter": 184,
+   "start_chapter": 180,
+   "chapters_adapted": "180-184",
+   "volume": 19,
+   "confidence": "high",
+   "note": "Prison break, Siberian tiger, 'To Catch Up to the Wolves' (title = ch 183). Ch 184 split with ep35.",
+   "sources": [
+    "https://goldenkamuy.fandom.com/wiki/Episode_34",
+    "https://programming-cafe.com/amazon/primevideo/anime/anicomi-goldenkamuy-list/",
+    "https://en.wikipedia.org/wiki/Golden_Kamuy_season_3"
+   ]
+  },
+  {
+   "episode": 35,
+   "end_chapter": 189,
+   "start_chapter": 185,
+   "chapters_adapted": "184 (part), 185-189",
+   "volume": 19,
+   "confidence": "high",
+   "note": "Ice-floe confrontations; Asirpa's arrow takes Ogata's eye (187 'Impurity and Sin' = title). Ch 189 split with ep36.",
+   "sources": [
+    "https://goldenkamuy.fandom.com/wiki/Episode_35",
+    "https://programming-cafe.com/amazon/primevideo/anime/anicomi-goldenkamuy-list/",
+    "https://en.wikipedia.org/wiki/Golden_Kamuy_season_3"
+   ]
+  },
+  {
+   "episode": 36,
+   "end_chapter": 200,
+   "start_chapter": 190,
+   "chapters_adapted": "189 (part), 190, 191 (p.1-12), 192 (p.8-18), 196 (p.1-8, 14-18), 197 (p.1-9), 200 (p.16-20), 201 (p.1-2)",
+   "volume": 20,
+   "confidence": "high",
+   "note": "S3 finale: Kiroranke's death and the return (189-190), then an epilogue montage that only skims 191-200 (page ranges per fandom; programming-cafe lists the same chapters) and ends on a 2-page teaser of 201. Wikipedia/WDTALO therefore count S3 as '140-201'; END is kept at 200 because 201 is a teaser that S4 ep37 opens with.",
+   "sources": [
+    "https://goldenkamuy.fandom.com/wiki/Episode_36",
+    "https://programming-cafe.com/amazon/primevideo/anime/anicomi-goldenkamuy-list/",
+    "https://en.wikipedia.org/wiki/Golden_Kamuy_season_3",
+    "https://wheredoestheanimeleaveoff.com/where-does-the-golden-kamuy-anime-leave-off-in-the-manga/"
+   ]
+  },
+  {
+   "episode": 37,
+   "end_chapter": 203,
+   "start_chapter": 201,
+   "chapters_adapted": "201-203, 171-172",
+   "volume": 21,
+   "confidence": "high",
+   "note": "S4 opener: title = ch 201 'Bye-Bye, Russia!'; Vasily's revenge (202), portrait (203). B-plot Kadokura/Kirawus vs Sekiya at Lake Akan = 171-172 (vol 18, skipped by S3). Sources list chapters numerically; START taken as 201 because the Wikipedia summary puts the Sugimoto thread first. programming-cafe also credits a piece of 176.",
+   "sources": [
+    "https://goldenkamuy.fandom.com/wiki/Episode_37",
+    "https://programming-cafe.com/amazon/primevideo/anime/anicomi-goldenkamuy-list/",
+    "https://en.wikipedia.org/wiki/Golden_Kamuy_season_4"
+   ]
+  },
+  {
+   "episode": 38,
+   "end_chapter": 176,
+   "start_chapter": 173,
+   "chapters_adapted": "173-175, 176 (p.1-7)",
+   "volume": 18,
+   "confidence": "high",
+   "note": "'Cocoon' (title = ch 175): Sekiya poison arc conclusion - backfill of S3's skip (fandom lists 176 here; ep33 had 176 p.8-20). Non-monotonic position instrument.",
+   "sources": [
+    "https://goldenkamuy.fandom.com/wiki/Episode_38",
+    "https://programming-cafe.com/amazon/primevideo/anime/anicomi-goldenkamuy-list/",
+    "https://en.wikipedia.org/wiki/Golden_Kamuy_season_4",
+    "https://goldenkamuy.fandom.com/wiki/Pet_Monster_Arc"
+   ]
+  },
+  {
+   "episode": 39,
+   "end_chapter": 196,
+   "start_chapter": 191,
+   "chapters_adapted": "191-196, 201 (part)",
+   "volume": 20,
+   "confidence": "high",
+   "note": "Noboribetsu hot springs / Anji Toni / Kikuta (title = ch 194) - the vol-20 chapters the S3 finale only skimmed, now adapted in full, plus a 201 scene (grandmother's chewed-rice dango). Non-monotonic backfill.",
+   "sources": [
+    "https://goldenkamuy.fandom.com/wiki/Episode_39",
+    "https://programming-cafe.com/amazon/primevideo/anime/anicomi-goldenkamuy-list/",
+    "https://en.wikipedia.org/wiki/Golden_Kamuy_season_4"
+   ]
+  },
+  {
+   "episode": 40,
+   "end_chapter": 200,
+   "start_chapter": 197,
+   "chapters_adapted": "197 (p.10-17), 198-200, 281 (graft)",
+   "volume": 20,
+   "confidence": "high",
+   "note": "Koito backstory (title = ch 197 'Pampered Brat'/'Spoiled Rich Kid'): tricycle (198), consulate kidnapping (199), Goryokaku rescue and Heiji's 'proud of you' (200). Fandom additionally lists a scene from ch 281 (Heiji Koito with Tsurumi at the Hakodate consulate, vol 29) pulled forward - fandom-only. 197-200 set agrees between fandom and programming-cafe (pcafe assigns 200 to ep36 only).",
+   "sources": [
+    "https://goldenkamuy.fandom.com/wiki/Episode_40",
+    "https://programming-cafe.com/amazon/primevideo/anime/anicomi-goldenkamuy-list/",
+    "https://en.wikipedia.org/wiki/Golden_Kamuy_season_4",
+    "https://goldenkamuy.fandom.com/wiki/Chapter_200",
+    "https://goldenkamuy.fandom.com/wiki/Chapter_281"
+   ]
+  },
+  {
+   "episode": 41,
+   "end_chapter": 206,
+   "start_chapter": 204,
+   "chapters_adapted": "204-206",
+   "volume": 21,
+   "confidence": "high",
+   "note": "Cinematograph episode (title = ch 205).",
+   "sources": [
+    "https://goldenkamuy.fandom.com/wiki/Episode_41",
+    "https://programming-cafe.com/amazon/primevideo/anime/anicomi-goldenkamuy-list/",
+    "https://en.wikipedia.org/wiki/Golden_Kamuy_season_4"
+   ]
+  },
+  {
+   "episode": 42,
+   "end_chapter": 210,
+   "start_chapter": 207,
+   "chapters_adapted": "207-210, 211 (p.1-5)",
+   "volume": 21,
+   "confidence": "high",
+   "note": "Title = ch 210 'Sweet Lies'; ends on the first 5 pages of 211 (teaser).",
+   "sources": [
+    "https://goldenkamuy.fandom.com/wiki/Episode_42",
+    "https://programming-cafe.com/amazon/primevideo/anime/anicomi-goldenkamuy-list/",
+    "https://en.wikipedia.org/wiki/Golden_Kamuy_season_4"
+   ]
+  },
+  {
+   "episode": 43,
+   "end_chapter": 215,
+   "start_chapter": 212,
+   "chapters_adapted": "211 (p.6-17), 212, 213 (p.2-17), 214 (p.1-15), 215 (p.3-15), 216 (p.15, 18), 217 (p.2-3)",
+   "volume": 22,
+   "confidence": "high",
+   "note": "Escape from Karafuto (title = ch 213), destroyer vs ferry (214), ice-floe angels (215). Ch 216 'Mysterious White Bear' is reduced to two pages and 217 is a 2-page teaser, so END = 215 (programming-cafe simply lists 211-216).",
+   "sources": [
+    "https://goldenkamuy.fandom.com/wiki/Episode_43",
+    "https://programming-cafe.com/amazon/primevideo/anime/anicomi-goldenkamuy-list/",
+    "https://en.wikipedia.org/wiki/Golden_Kamuy_season_4"
+   ]
+  },
+  {
+   "episode": 44,
+   "end_chapter": 221,
+   "start_chapter": 217,
+   "chapters_adapted": "217 (p.4, 9-17), 218-221",
+   "volume": 22,
+   "confidence": "high",
+   "note": "Landing in Hokkaido, gold panners, Heita the 'Bear Man' (title = ch 221).",
+   "sources": [
+    "https://goldenkamuy.fandom.com/wiki/Episode_44",
+    "https://programming-cafe.com/amazon/primevideo/anime/anicomi-goldenkamuy-list/",
+    "https://en.wikipedia.org/wiki/Golden_Kamuy_season_4",
+    "https://goldenkamuy.fandom.com/wiki/Bear_Man_Arc"
+   ]
+  },
+  {
+   "episode": 45,
+   "end_chapter": 227,
+   "start_chapter": 222,
+   "chapters_adapted": "222, 224 (p.5-18), 225, 226 (p.3-18), 227 (p.1-12)",
+   "volume": 23,
+   "confidence": "high",
+   "note": "Title = ch 227 'Partners in Crime'; ends mid-227. Ch 223 ('Nikaidou Cheers Up') skipped by both sources; ch 228 'Shima-enaga' skipped by TV and adapted in OVA 5.",
+   "sources": [
+    "https://goldenkamuy.fandom.com/wiki/Episode_45",
+    "https://programming-cafe.com/amazon/primevideo/anime/anicomi-goldenkamuy-list/",
+    "https://en.wikipedia.org/wiki/Golden_Kamuy_season_4"
+   ]
+  },
+  {
+   "episode": 46,
+   "end_chapter": 232,
+   "start_chapter": 229,
+   "chapters_adapted": "227 (p.13-17), 229-231, 232 (p.1-10)",
+   "volume": 24,
+   "confidence": "high",
+   "note": "Tanigaki/Inkarmat flight, Ienaga, the birth (title = ch 229 'Perfect Mother'); ends mid-232.",
+   "sources": [
+    "https://goldenkamuy.fandom.com/wiki/Episode_46",
+    "https://programming-cafe.com/amazon/primevideo/anime/anicomi-goldenkamuy-list/",
+    "https://en.wikipedia.org/wiki/Golden_Kamuy_season_4"
+   ]
+  },
+  {
+   "episode": 47,
+   "end_chapter": 236,
+   "start_chapter": 233,
+   "chapters_adapted": "232 (p.11-18), 233-236",
+   "volume": 24,
+   "confidence": "high",
+   "note": "Steamship / Boutarou the Pirate (title = ch 234).",
+   "sources": [
+    "https://goldenkamuy.fandom.com/wiki/Episode_47",
+    "https://programming-cafe.com/amazon/primevideo/anime/anicomi-goldenkamuy-list/",
+    "https://en.wikipedia.org/wiki/Golden_Kamuy_season_4",
+    "https://goldenkamuy.fandom.com/wiki/Boutarou_the_Pirate_Arc"
+   ]
+  },
+  {
+   "episode": 48,
+   "end_chapter": 240,
+   "start_chapter": 237,
+   "chapters_adapted": "237-240",
+   "volume": 24,
+   "confidence": "high",
+   "note": "Breath-holding contest, Kikuta recruits Ariko (title = ch 239 'Discharge').",
+   "sources": [
+    "https://goldenkamuy.fandom.com/wiki/Episode_48",
+    "https://programming-cafe.com/amazon/primevideo/anime/anicomi-goldenkamuy-list/",
+    "https://en.wikipedia.org/wiki/Golden_Kamuy_season_4"
+   ]
+  },
+  {
+   "episode": 49,
+   "end_chapter": 243,
+   "start_chapter": 241,
+   "chapters_adapted": "241-243, 244 (p.4-8)",
+   "volume": 25,
+   "confidence": "high",
+   "note": "S4 finale (title = ch 241 'The Missing Kamuy'). Only a 5-page excerpt of 244 is shown, so END = 243 (programming-cafe: 241-243; MAL readers: 'ended with 242 & 243 and the beginning of 244'); Wikipedia/WDTALO phrase it as 'through 244'. S5 ep50 restarts from 244.",
+   "sources": [
+    "https://goldenkamuy.fandom.com/wiki/Episode_49",
+    "https://programming-cafe.com/amazon/primevideo/anime/anicomi-goldenkamuy-list/",
+    "https://en.wikipedia.org/wiki/Golden_Kamuy_season_4",
+    "https://myanimelist.net/forum/?topicid=2247958",
+    "https://wheredoestheanimeleaveoff.com/where-does-the-golden-kamuy-anime-leave-off-in-the-manga/"
+   ]
+  },
+  {
+   "episode": 50,
+   "end_chapter": 248,
+   "start_chapter": 244,
+   "chapters_adapted": "244-248",
+   "volume": 25,
+   "confidence": "high",
+   "note": "Title = ch 245 'Town of Reunions'. programming-cafe: 244-248; MAL manga readers: 'last season ended in the middle of chapter 244, this season picked up from it ... this episode was 244-248'; rakeruma/abema/note: final season begins at vol 25 ch 244.",
+   "sources": [
+    "https://programming-cafe.com/amazon/primevideo/anime/anicomi-goldenkamuy-list/",
+    "https://myanimelist.net/forum/?topicid=2247958",
+    "https://rakeruma.com/goldenkamuy-anime-final-manga/",
+    "https://times.abema.tv/articles/-/10210237",
+    "https://en.wikipedia.org/wiki/List_of_Golden_Kamuy_episodes"
+   ]
+  },
+  {
+   "episode": 51,
+   "end_chapter": 253,
+   "start_chapter": 249,
+   "chapters_adapted": "249-253",
+   "volume": 26,
+   "confidence": "medium",
+   "note": "Title = ch 250 'Skyrocket/Fireworks' (打ち上げ花火); Sapporo brewery entry, 'Her Father's Sullied Name' (253). programming-cafe only; bounded by ep52's title (ch 256) and by MAL's ep53 statement that ep53 begins in the latter half of 258.",
+   "sources": [
+    "https://programming-cafe.com/amazon/primevideo/anime/anicomi-goldenkamuy-list/",
+    "https://en.wikipedia.org/wiki/List_of_Golden_Kamuy_episodes",
+    "https://en.wikipedia.org/wiki/List_of_Golden_Kamuy_chapters",
+    "https://myanimelist.net/forum/?topicid=2250577"
+   ]
+  },
+  {
+   "episode": 52,
+   "end_chapter": 258,
+   "start_chapter": 254,
+   "chapters_adapted": "254-258 (first half)",
+   "volume": 26,
+   "confidence": "high",
+   "note": "Title = ch 256 'Tokushirou's Number One'. programming-cafe: 254-258 (258 shared with ep53); MAL manga reader: ep53 'starting from the latter half of Chapter 258', so this episode ends inside 258.",
+   "sources": [
+    "https://programming-cafe.com/amazon/primevideo/anime/anicomi-goldenkamuy-list/",
+    "https://myanimelist.net/forum/?topicid=2250577",
+    "https://en.wikipedia.org/wiki/List_of_Golden_Kamuy_episodes"
+   ]
+  },
+  {
+   "episode": 53,
+   "end_chapter": 263,
+   "start_chapter": 259,
+   "chapters_adapted": "258 (latter half), 259-263",
+   "volume": 27,
+   "confidence": "high",
+   "note": "Title = ch 259 'Making a Homeland'; beer-car chase (262), Boutarou (263). MAL manga reader: 'starting from the latter half of Chapter 258 and ends in Chapter 263' = programming-cafe.",
+   "sources": [
+    "https://programming-cafe.com/amazon/primevideo/anime/anicomi-goldenkamuy-list/",
+    "https://myanimelist.net/forum/?topicid=2250577",
+    "https://en.wikipedia.org/wiki/List_of_Golden_Kamuy_episodes"
+   ]
+  },
+  {
+   "episode": 54,
+   "end_chapter": 267,
+   "start_chapter": 264,
+   "chapters_adapted": "264-267",
+   "volume": 27,
+   "confidence": "medium",
+   "note": "Title = ch 266 'Pinky Finger Bones'. programming-cafe only; bounded by ep53's end (263, two sources) and ep55's title (ch 270).",
+   "sources": [
+    "https://programming-cafe.com/amazon/primevideo/anime/anicomi-goldenkamuy-list/",
+    "https://en.wikipedia.org/wiki/List_of_Golden_Kamuy_episodes",
+    "https://en.wikipedia.org/wiki/List_of_Golden_Kamuy_chapters"
+   ]
+  },
+  {
+   "episode": 55,
+   "end_chapter": 271,
+   "start_chapter": 268,
+   "chapters_adapted": "268-271 (271 split with ep56)",
+   "volume": 27,
+   "confidence": "medium",
+   "note": "Title = ch 270 'The Cause of It All' (title-drop episode). programming-cafe only (271 shared with ep56); MAL readers estimate ~25 chapters after six episodes. Ends mid-271.",
+   "sources": [
+    "https://programming-cafe.com/amazon/primevideo/anime/anicomi-goldenkamuy-list/",
+    "https://myanimelist.net/forum/?topicid=2252397",
+    "https://en.wikipedia.org/wiki/List_of_Golden_Kamuy_episodes"
+   ]
+  },
+  {
+   "episode": 56,
+   "end_chapter": 274,
+   "start_chapter": 272,
+   "chapters_adapted": "271 (part), 272-274",
+   "volume": 28,
+   "confidence": "high",
+   "note": "Title = ch 272 'Ipopte'; Tsurumi Theater (273). programming-cafe: 271-274; MAL readers after ep7: 'first 7 eps have adapted 30 chapters' / '6 more episodes for 39 chapters' = through 274.",
+   "sources": [
+    "https://programming-cafe.com/amazon/primevideo/anime/anicomi-goldenkamuy-list/",
+    "https://myanimelist.net/forum/?topicid=2253249",
+    "https://en.wikipedia.org/wiki/List_of_Golden_Kamuy_episodes"
+   ]
+  },
+  {
+   "episode": 57,
+   "end_chapter": 277,
+   "start_chapter": 275,
+   "chapters_adapted": "275-277",
+   "volume": 28,
+   "confidence": "high",
+   "note": "Title = ch 275 'Tokyo Love Story'; Yuusaku chapters (276-277). programming-cafe: 275-277; MAL readers: 'today's ep adapting only 3 chapters', '36 chapters left' = through 277.",
+   "sources": [
+    "https://programming-cafe.com/amazon/primevideo/anime/anicomi-goldenkamuy-list/",
+    "https://myanimelist.net/forum/?topicid=2254201",
+    "https://en.wikipedia.org/wiki/List_of_Golden_Kamuy_episodes",
+    "https://goldenkamuy.fandom.com/wiki/Tokyo_Love_Story_Arc"
+   ]
+  },
+  {
+   "episode": 58,
+   "end_chapter": 282,
+   "start_chapter": 278,
+   "chapters_adapted": "278-282",
+   "volume": 29,
+   "confidence": "high",
+   "note": "Title = ch 280 'Signal Gun of Determination'; arrival in Hakodate (281-282). programming-cafe: 278-282; MAL manga reader: 'they adapted 5 chapters and the only notable cut was a 2-page scene where the crew eats some squid right before reaching the fort' (= the ch 281 opening), '4 episodes left for 31 chapters'.",
+   "sources": [
+    "https://programming-cafe.com/amazon/primevideo/anime/anicomi-goldenkamuy-list/",
+    "https://myanimelist.net/forum/?topicid=2255065",
+    "https://en.wikipedia.org/wiki/List_of_Golden_Kamuy_episodes",
+    "https://goldenkamuy.fandom.com/wiki/Chapter_281"
+   ]
+  },
+  {
+   "episode": 59,
+   "end_chapter": 287,
+   "start_chapter": 283,
+   "chapters_adapted": "283-287",
+   "volume": 29,
+   "confidence": "high",
+   "note": "Title = ch 284 'Our Kamuy'; Kadokura's horse (287). programming-cafe: 283-287; MAL manga reader: 'this episode only actually adapted 5 chapters from the manga (283-287)'.",
+   "sources": [
+    "https://programming-cafe.com/amazon/primevideo/anime/anicomi-goldenkamuy-list/",
+    "https://myanimelist.net/forum/?topicid=2256009",
+    "https://en.wikipedia.org/wiki/List_of_Golden_Kamuy_episodes"
+   ]
+  },
+  {
+   "episode": 60,
+   "end_chapter": 292,
+   "start_chapter": 288,
+   "chapters_adapted": "288-292",
+   "volume": 30,
+   "confidence": "high",
+   "note": "Title = ch 289 'The Siege of Goryokaku'; Hakodate Bay naval battle (292). programming-cafe: 288-292; MAL readers: 'We're at chapter 292 out of 314', '21 chapters left', cut detail from ch 291.",
+   "sources": [
+    "https://programming-cafe.com/amazon/primevideo/anime/anicomi-goldenkamuy-list/",
+    "https://myanimelist.net/forum/?topicid=2256919",
+    "https://en.wikipedia.org/wiki/List_of_Golden_Kamuy_episodes"
+   ]
+  },
+  {
+   "episode": 61,
+   "end_chapter": 298,
+   "start_chapter": 293,
+   "chapters_adapted": "293-298 (298 split with ep62)",
+   "volume": 30,
+   "confidence": "medium",
+   "note": "Title = ch 296 'Bushido'; Goryokaku escape (297). programming-cafe: 293-298 (298 shared with ep62); MAL readers: 'covered ~7 chapters', 'we are now at chapter 299', '15+ chapters remaining' - so the episode may reach the opening of 299, but the Sofia forgiveness beat (299) is in ep62 per Lost in Anime.",
+   "sources": [
+    "https://programming-cafe.com/amazon/primevideo/anime/anicomi-goldenkamuy-list/",
+    "https://myanimelist.net/forum/?topicid=2257786",
+    "https://lostinanime.com/2026/03/golden-kamuy-saishuushou-13-season-finale/",
+    "https://en.wikipedia.org/wiki/List_of_Golden_Kamuy_episodes"
+   ]
+  },
+  {
+   "episode": 62,
+   "end_chapter": 302,
+   "start_chapter": 298,
+   "chapters_adapted": "298-302",
+   "volume": 30,
+   "confidence": "high",
+   "note": "Season finale, title = ch 298 'Wilk's Daughter'. Ends on the last page of vol 30 (ch 302 'Mayhem on the Train'): MAL manga reader ('the final shot of Ogata calling it a runaway train headed to hell is literally the last page of Volume 30 which ends with Chapter 302'), animeexplained ('ends on Chapter 302'), ani-vista ('原作30巻（第302話）まで'), Lost in Anime beats (Sofia's death, Tanigaki/Inkarmat rescue, sniper duel, boarding the train). The manga's 303-314 are NOT adapted yet - 'Bousou Ressha-hen' (AniList 210073) announced 2026-03-30 for winter 2026/27.",
+   "sources": [
+    "https://programming-cafe.com/amazon/primevideo/anime/anicomi-goldenkamuy-list/",
+    "https://myanimelist.net/forum/?topicid=2258761",
+    "https://www.animeexplained.com/news/golden-kamuy-final-season-is-not-over-yet/",
+    "https://ani-vista.com/golden-kamuy_matome/",
+    "https://lostinanime.com/2026/03/golden-kamuy-saishuushou-13-season-finale/",
+    "https://www.animenewsnetwork.com/news/2026-03-30/golden-kamuy-anime-final-arc-continues-in-winter-with-runaway-train-climax/.235963",
+    "https://wheredoestheanimeleaveoff.com/where-does-the-golden-kamuy-anime-leave-off-in-the-manga/"
+   ]
+  }
+ ],
+ "continue_points": [
+  {
+   "episode": 28,
+   "continue_chapter": 151,
+   "note": "Earliest unseen material: the Manslayer block 151 (p.11-18), 152-153, 154 (p.1-7) is held back until ep32. Mainline next = 159."
+  },
+  {
+   "episode": 29,
+   "continue_chapter": 151,
+   "note": "Same skip (151 p.11-18 to 154 p.1-7 pending until ep32). Mainline next = 163."
+  },
+  {
+   "episode": 30,
+   "continue_chapter": 151,
+   "note": "Same skip; also ends inside ch 166 (split with ep31). Mainline next = 166."
+  },
+  {
+   "episode": 31,
+   "continue_chapter": 151,
+   "note": "Same skip, delivered next episode (ep32). Mainline next = 171."
+  },
+  {
+   "episode": 33,
+   "continue_chapter": 171,
+   "note": "S3 skipped 171-175 (+176 p.1-7), the Hokkaido-side Sekiya arc; the anime backfills it in S4 eps 37-38. Mainline next = 180."
+  },
+  {
+   "episode": 34,
+   "continue_chapter": 171,
+   "note": "Same skip (171-175); also ends inside ch 184. Mainline next = 184."
+  },
+  {
+   "episode": 35,
+   "continue_chapter": 171,
+   "note": "Same skip (171-175); also ends inside ch 189. Mainline next = 189."
+  },
+  {
+   "episode": 36,
+   "continue_chapter": 171,
+   "note": "After S3, unseen = 171-175 (Sekiya arc) and the bulk of 191-200 (only skimmed here; S4 eps 39-40 adapt them). WDTALO/Wikipedia say 'start at 201' - that skips both gaps. If continuing to watch S4, nothing is lost."
+  },
+  {
+   "episode": 37,
+   "continue_chapter": 173,
+   "note": "Sekiya arc continues at 173 (ep38); 191-200 bulk still unseen; mainline 204."
+  },
+  {
+   "episode": 38,
+   "continue_chapter": 191,
+   "note": "Backfill done for 171-176; remaining gap is 191-200 (ep39-40). Mainline next = 204."
+  },
+  {
+   "episode": 39,
+   "continue_chapter": 197,
+   "note": "197 p.10-17, 198-200 follow in ep40; 201-203 already seen in ep37; mainline next = 204."
+  },
+  {
+   "episode": 40,
+   "continue_chapter": 204,
+   "note": "Backfill complete; from here S4 runs linearly 204-243."
+  },
+  {
+   "episode": 42,
+   "continue_chapter": 211,
+   "note": "Ends on p.5 of ch 211; ep43 opens with 211 p.6-17."
+  },
+  {
+   "episode": 43,
+   "continue_chapter": 216,
+   "note": "Ch 216 'Mysterious White Bear' is essentially unadapted (two pages used); 217 only teased (p.2-3) before ep44."
+  },
+  {
+   "episode": 45,
+   "continue_chapter": 227,
+   "note": "Ends at p.12 of ch 227; ep46 opens with 227 p.13-17. (223 skipped; 228 is OVA-5 material.)"
+  },
+  {
+   "episode": 46,
+   "continue_chapter": 232,
+   "note": "Ends at p.10 of ch 232; ep47 opens with 232 p.11-18."
+  },
+  {
+   "episode": 49,
+   "continue_chapter": 244,
+   "note": "End of S4: only 244 p.4-8 shown; the Final Season (ep50) restarts from 244 'Landing in Otaru'."
+  },
+  {
+   "episode": 52,
+   "continue_chapter": 258,
+   "note": "Ends in the first half of ch 258; ep53 starts from its latter half (MAL manga reader)."
+  },
+  {
+   "episode": 55,
+   "continue_chapter": 271,
+   "note": "Ends inside ch 271 (split with ep56 per programming-cafe)."
+  },
+  {
+   "episode": 61,
+   "continue_chapter": 298,
+   "note": "Ends inside ch 298 (split with ep62; ep62 is titled after it)."
+  },
+  {
+   "episode": 62,
+   "continue_chapter": 303,
+   "note": "Final Season ends on the last page of vol 30 (ch 302). Read from ch 303 'Runaway Train' (vol 31) - the span the announced 'Bousou Ressha-hen' (AniList 210073) will adapt."
+  }
+ ],
+ "annotations": [
+  {
+   "episodes": [
+    28,
+    32
+   ],
+   "kind": "rearranged",
+   "chapters": "151 (p.11-18), 152-153, 154 (p.1-7)",
+   "note": "The Manslayer (Youichirou) block is lifted out of ep28's chapter run and aired as ep32 after the border-crossing arc; ep32's Karafuto-side frame is the tail of 170 (programming-cafe/Wikipedia summary)."
+  },
+  {
+   "episodes": [
+    33,
+    34,
+    35,
+    36
+   ],
+   "kind": "rearranged",
+   "chapters": "171-175, 176 (p.1-7)",
+   "note": "S3 skips the Hokkaido-side Sekiya ('Pet Monster') arc, vol 18; S4 eps 37-38 adapt it as a B-plot/backfill."
+  },
+  {
+   "episodes": [
+    36
+   ],
+   "kind": "partial",
+   "chapters": "191 (p.1-12), 192 (p.8-18), 196 (p.1-8, 14-18), 197 (p.1-9), 200 (p.16-20), 201 (p.1-2)",
+   "note": "S3-finale epilogue montage skims vol 20; S4 eps 39-40 adapt 191-200 in full and ep37 opens with 201."
+  },
+  {
+   "episodes": [
+    37
+   ],
+   "kind": "graft",
+   "chapters": "171-172",
+   "note": "Vol-18 Kadokura/Kirawus vs Sekiya chapters interleaved with the mainline 201-203 (Wikipedia S4: 'chapters 171-172; 201-244')."
+  },
+  {
+   "episodes": [
+    38
+   ],
+   "kind": "rearranged",
+   "chapters": "173-175, 176 (p.1-7)",
+   "note": "Backfill of the S3 skip; mainline position stays 203 (ep37)."
+  },
+  {
+   "episodes": [
+    39
+   ],
+   "kind": "rearranged",
+   "chapters": "191-196, 201 (part)",
+   "note": "Backfill of the vol-20 chapters skimmed in ep36; mainline position stays 203."
+  },
+  {
+   "episodes": [
+    40
+   ],
+   "kind": "graft",
+   "chapters": "281",
+   "note": "A scene from ch 281 'The Person From Hakodate' (Heiji Koito with Tsurumi at the Hakodate consulate, vol 29) pulled forward into the Koito flashback (fandom ep40 page only; consistent with the chapter's content)."
+  },
+  {
+   "episodes": [
+    43
+   ],
+   "kind": "abridged",
+   "chapters": "216",
+   "note": "Ch 216 'Mysterious White Bear' reduced to two pages (p.15, 18); 217 p.2-3 shown as a teaser."
+  },
+  {
+   "episodes": [
+    45
+   ],
+   "kind": "abridged",
+   "chapters": "223, 228",
+   "note": "Ch 223 'Nikaidou Cheers Up' skipped by TV; ch 228 'Shima-enaga' skipped by TV and adapted in OVA 5 (AniList 194872)."
+  },
+  {
+   "episodes": [
+    62
+   ],
+   "kind": "partial",
+   "chapters": "303-314",
+   "note": "Not a divergence: the Final Season stops at ch 302; chapters 303-314 are reserved for the announced 'Golden Kamuy: Saishuushou - Bousou Ressha-hen' (AniList 210073, winter 2026/27)."
+  }
+ ],
+ "type_corrections": [],
+ "repairs": [],
+ "structure": {
+  "notes": "Confirmed components (AniList GraphQL): S1 99699 (12 eps, 2018-04-09..06-25) = our 1-12; S2 102977 (12, 2018-10-08..12-24) = 13-24; S3 110355 'Golden Kamuy 3rd Season' (12 eps, 2020-10-05..12-21) = our 25-36; S4 142343 '4th Season' (13 eps, 2022-10-03..2023-06-26; eps 37-42 aired 2022-10-03..11-07, broadcast paused after a staff death, re-run from ep37 on 2023-04-03, eps 43-49 aired 2023-05-15..06-26) = our 37-49; Final Season 166521 'Golden Kamuy: Saishuushou' (13 eps, 2026-01-05..03-30) = our 50-62. Cumulative numbering 1-62 matches Wikipedia's overall numbering exactly (titles 'To Karafuto' ... 'Daughter of Wilk'). Chapter spans: S3 = 140-200 (+201 p.1-2 teaser; skips 171-175, skims 191-200), S4 = 171-176 backfill + 191-200 backfill + 201-243 (+244 p.4-8), S5 = 244-302. The Final Season does NOT finish the manga: it ends on the last page of vol 30 (ch 302); the remaining 303-314 (vol 31) are assigned to 'Golden Kamuy: Saishuushou - Bousou Ressha-hen' (AniList 210073, MAL 63850, NOT_YET_RELEASED, announced 2026-03-30 by the production for 'this winter' = winter 2026/27). So after the stitch: aired/total episodes 62 with a sequel pending, max_adapted_chapter 302, continue_from_chapter 303, anime status still not complete. Entry-level max_adapted must NOT be 314 (the ASK/flag #856 wording is wrong on this point). 196115 'Golden Kamuy: Sapporo Beer Koujou-hen' (MOVIE, 2 parts, 2025-10-10 and 2025-10-31, 66-68 min each) is the theatrical advance version of Final Season eps 50-55 ('第五十話～第五十五話までが上映 ... 内容は同じ' per a Yahoo Chiebukuro best answer; official site: '最終章の序章で構成された', '放送に先駆け') - an ALTERNATIVE/duplicate, not order-only canon; exclude from the watch order or mark as a duplicate of 50-55. 106506 'Golden Douga Gekijou' (ONA, 46 shorts) and 154125 (its specials) adapt omake gags only - exclude. Five OVAs carry TV-skipped canon (order_only below); all are bundled with manga volumes/the novel, and community watch order (ani-vista, animefreakjapan) is S1 -> OVA1 -> S2 -> OVA2 -> OVA3 -> (OVA4) -> S3 -> S4 -> (OVA5) -> Final Season.",
+  "order_only": [
+   {
+    "anilist_id": 101830,
+    "title": "Golden Kamuy OVA (OVA 1: The Bodyguard of Barato / Terror! The Mysterious Giant Bird)",
+    "after_anilist_id": 99699,
+    "adapts": "55 (part), 56-59; second segment ch 32",
+    "note": "1 ep, 2018-09-19, bundled with manga vol 15. Fandom OVA_1 lists chapters 55-59 (+32); programming-cafe 55-58 + 32; WDTALO 55-59. Ep12 shows the beginning and end of the Barato story (fandom note), so the existing ep12 'continue -> 56' stays right; the existing annotation's '56-59' could be extended to '55 (part), 56-59, 32'. Watch after S1 ep12."
+   },
+   {
+    "anilist_id": 124756,
+    "title": "Golden Kamuy 2nd Season OVA (OVA 2 'Love Made Me Escape From Prison / The Terrifying Battle of Deadly Poison!', OVA 3 'Monster', OVA 4 'Shiton Animal Record')",
+    "after_anilist_id": 102977,
+    "adapts": "OVA 2: 83 (p.15-16), 84, 85 (p.1-14), 104 (p.8-15); OVA 3: 63 (p.15-17), 64 (p.1-10, 15-17), 65 (p.3-18), 66 (p.3-15, 17-19), 67, 68 (p.1-14, 18-19), 69 (p.1-5, 7-18); OVA 4: 108 (p.11-15), 109 (p.5-8, 11-17), 110 (p.1-4, 6-18), 111 (p.1-2, 4-18), 112, 113 (p.1-10, 15)",
+    "note": "3 eps: OVA 2 2019-03-19 (vol 17 bundle), OVA 3 2019-09-19 (vol 19), OVA 4 2020-09-18 (vol 23). Page ranges from fandom OVA_2/3/4; programming-cafe agrees (83-85 + 104; 63-69 [it also credits 70]; 108-113 [it also credits 105-107, which fandom/WDTALO assign to OVA 5]); WDTALO agrees on 83-85, 104, 63-69, 108-113. Community placement: after S2 (AniList parent = S2). Chronologically OVA 3 (63-69) sits right after S1 ep12, OVA 2 after S2 ep15 (83-85)/ep19 (104), OVA 4 after S2 ep19 (108-113 are the Shiton arc that ep19 only touched)."
+   },
+   {
+    "anilist_id": 194872,
+    "title": "Golden Kamuy: Inazuma Goutou to Mamushi no Ogin / Shimaenaga (OVA 5: The Lightning Thief and Viper O-Gin / Long-Tailed Tit)",
+    "after_anilist_id": 142343,
+    "adapts": "102, 104-107, 228",
+    "note": "1 ep (two segments), 2025-10-17, bundled with the Blu-ray edition of the novel 'Golden Kamuy: Tsurumi Tokushirou no Shukugan'. Fandom OVA_5: 'covers chapters 102, 104-107 and 228'; WDTALO: 'adapts skipped chapters 102, 104-107 and 228'. AniList parent = S4 (release order: after S4, before the Final Season). Chronologically the O-Gin segment expands S2 eps 18-19 (Lightning and O-Gin arc 102-107) and 'Shimaenaga' (228) sits between S4 eps 45 and 46."
+   },
+   {
+    "anilist_id": 196115,
+    "title": "Golden Kamuy: Sapporo Beer Koujou-hen (theatrical, 2 parts)",
+    "after_anilist_id": 142343,
+    "adapts": "244-~271 (duplicate of Final Season eps 50-55)",
+    "note": "2025-10-10 (前編) / 2025-10-31 (後編). Advance theatrical cut of the Final Season's opening episodes; same content as TV eps 50-55 (Chiebukuro best answer; official site calls it the prologue of the final chapter, shown ahead of broadcast; abema/anizoku: the Sapporo beer-factory battle of vols 25-27). Not order-only canon - carries no TV-skipped chapters."
+   }
+  ]
+ },
+ "flags_for_sean": [
+  "ASK/flag #856 correction: the Final Season (166521, our 50-62) does NOT finish the manga - it ends on ch 302 (last page of vol 30); chs 303-314 go to 'Golden Kamuy: Saishuushou - Bousou Ressha-hen' (AniList 210073, NOT_YET_RELEASED, announced 2026-03-30 for winter 2026/27). Set max_adapted 302 / continue_from 303, and keep the anime status open. Also S4 is not '~201-273': it is 171-176 + 191-200 backfill plus 201-243 (+244 excerpt); S5 = 244-302.",
+  "Discredited 'where to continue' sources - do not ingest: mangashed.com and afteranime.net ('S4 ends at ch 269, start at 270'), goldenkamuy.wiki ('after S3 start at 187; S4 ended around 250'), otakumania.jp ('S5 = 248-290, Bousou Ressha = 291-314'). All contradicted by fandom page-level data, programming-cafe, Wikipedia S3/S4, MAL manga readers, animeexplained and ani-vista.",
+  "programming-cafe's S3 rows for eps 26-29 are shifted one episode late (its chapter table leaves 144-147 unassigned and puts 148-150 on ep26); Wikipedia summaries + chapter titles + fandom arc pages resolve it in fandom's favour. Elsewhere (eps 25, 30-49, 50-62) the two tables agree.",
+  "Non-monotonic anchors by design: ep32 (END kept at 170 = ep31; bulk is relocated 151-154), ep38 (END 176), ep39 (END 196), ep40 (END 200) are backfills of S3 skips while the mainline position stays 203 (ep37). If the pipeline needs monotonic END values, use mainline positions ep32->170, ep38->203, ep39->203, ep40->203 (continue points already encode the honest reader resume).",
+  "ep32 frame chapters: fandom lists only 151 (p.11-18)-154 (p.1-7); programming-cafe adds 170-171 and the Wikipedia summary includes Kiroranke's prison-break-plan scene (the ch-170 letter). END=170 is therefore medium; if fandom is right, END would be 154 (v16).",
+  "ep40's ch-281 graft (Heiji Koito/Tsurumi consulate scene pulled forward) is fandom-only; ANN/Cinemaholic reviews do not mention it. Kept as an annotation, not part of END.",
+  "Final Season eps 51, 54, 55, 61 rest on programming-cafe alone (title<->chapter-title matches bound them: 51 in [250,255], 54 in [266,269], 55 in [270,271], 61 in [296,299]) - medium. Eps 50, 52, 53, 56-60, 62 are corroborated by MAL manga-reader posts (chapter counts/explicit ranges) - high. ep61 may reach the opening of 299 (one MAL reader: 'we are now at chapter 299', '~7 chapters').",
+  "OVA 1 span: fandom (55-59 + 32), programming-cafe (55-58 + 32) and WDTALO (55-59) all include ch 55 and the ch-32 'Giant Bird' segment; the existing ep12 annotation says '56-59' - consider extending to '55 (part), 56-59, 32'. OVA 3: fandom/WDTALO/existing record 63-69; programming-cafe alone credits 70 (ch 70's Osoma seypirakka scene is a Golden Douga Gekijou short, so 63-69 stands). OVA 4: programming-cafe alone credits 105-107 (fandom/WDTALO give those to OVA 5).",
+  "Episode-row air dates for S4 eps 43-49 should be 2023-05-15, 05-22, 05-29, 06-05, 06-12, 06-19, 06-26 (post-hiatus), not continuations of the 2022 run; S4 eps 37-42 = 2022-10-03..11-07.",
+  "S3-end reader guidance disagreement: Wikipedia/WDTALO say S3 = 140-201 / 'start at 201'; programming-cafe says 140-200 with S4 starting at 171. Our ep36 END=200 + continue 171 follows the honest-resume rule (171-175 skipped, 191-200 skimmed) - flagging in case the app prefers the mainstream '201'."
+ ]
+}

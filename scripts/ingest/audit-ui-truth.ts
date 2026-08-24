@@ -78,6 +78,7 @@ async function main() {
   };
 
   const classes: Record<string, string[]> = {
+    boundaries_wrong_page: [], boundaries_beyond_total: [],
     integrity_eps_beyond_total: [], integrity_total_beyond_eps: [], integrity_double_claimed: [],
     integrity_degenerate_span: degenerateSpans,
     special_numbered_unreviewed: [], anchor_gap_research: [], frontier_tail_null: [],
@@ -440,6 +441,50 @@ async function main() {
     else if (row.status !== 'finished') classes.pending_airing_no_anchor.push(row.id);
     else if (!row.total_chapters) classes.pending_finished_no_totals.push(`${row.id} (manga ${row.manga_status}, latest_known=${row.latest_known_chapters})`);
     else classes.pending_other.push(row.id);
+  }
+
+  // VOLUME-BOUNDARY IDENTITY (2026-08-23 s2, the Slime ← Cells at Work! /
+  // Made in Abyss ← Claymore class): a manga's Wikipedia boundary rows must
+  // come from a page that names THAT manga (title-token overlap with any
+  // series/synonym on the manga) and, for a finished manga with a known
+  // total, must not run past the total (shared pages list sequels)
+  {
+    const brows: { manga_anilist_id: number; volume: number; chapter_start: number; chapter_end: number | null; source_page: string | null; source: string }[] = [];
+    for (let f = 0; ; f += 1000) {
+      const { data } = await db.from('volume_boundaries').select('manga_anilist_id, volume, chapter_start, chapter_end, source_page, source').range(f, f + 999);
+      brows.push(...((data ?? []) as typeof brows));
+      if (!data || data.length < 1000) break;
+    }
+    const { data: srows } = await db.from('series').select('id, title, title_english, synonyms, manga_anilist_id, total_chapters, manga_status');
+    const byManga = new Map<number, typeof srows>();
+    for (const sr of srows ?? []) if (sr.manga_anilist_id) byManga.set(sr.manga_anilist_id, [...(byManga.get(sr.manga_anilist_id) ?? []), sr]);
+    const STOP = new Set(['the', 'of', 'a', 'an', 'and', 'list', 'chapters', 'chapter', 'manga', 'volumes', 'volume', 'no', 'wa', 'to', 'ni', 'in', 'on', 'x', 'i']);
+    const toks = (x: string) => new Set(x.toLowerCase().normalize('NFKD').replace(/[^a-z0-9]+/g, ' ').split(' ').filter((w) => w && !STOP.has(w)));
+    const byPage = new Map<string, typeof brows>();
+    for (const b of brows) {
+      if (b.source !== 'wikipedia' || !b.source_page) continue;
+      const k = `${b.manga_anilist_id}|${b.source_page}`;
+      byPage.set(k, [...(byPage.get(k) ?? []), b]);
+    }
+    for (const [k, rs] of byPage) {
+      const [mid, page] = k.split('|');
+      const ss = byManga.get(Number(mid)) ?? [];
+      if (!ss.length) continue;
+      const pageT = toks(page);
+      let best = 0;
+      for (const n of ss.flatMap((x) => [x.title, x.title_english, ...((x.synonyms as string[] | null) ?? [])].filter(Boolean) as string[])) {
+        const t = toks(n);
+        let c = 0;
+        for (const w of t) if (pageT.has(w)) c++;
+        best = Math.max(best, t.size ? c / t.size : 0);
+      }
+      if (best < 0.5) classes.boundaries_wrong_page.push(`manga ${mid} (${ss.map((x) => x.id).join(', ')}) ← "${page}" (${rs.length} vols, overlap ${best.toFixed(2)})`);
+      const total = Math.max(...ss.map((x) => x.total_chapters ?? 0));
+      if (total && ss.some((x) => x.manga_status === 'finished')) {
+        const bad = rs.filter((b) => b.chapter_start > total);
+        if (bad.length) classes.boundaries_beyond_total.push(`manga ${mid} (${ss.map((x) => x.id).join(', ')}) total ${total}: ${bad.map((b) => `v${b.volume}:${b.chapter_start}-${b.chapter_end ?? '?'}`).join(' ')}`);
+      }
+    }
   }
 
   for (const [k, v] of Object.entries(classes)) {
