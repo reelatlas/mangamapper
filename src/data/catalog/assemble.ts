@@ -181,8 +181,13 @@ export const toAnimeSeries = (
   mangaStatus: (row.manga_status ?? 'anime_only') as MangaStatus,
   hasManga: row.manga_status !== null && row.manga_status !== 'anime_only',
   // ongoing manga: AniList totals are null — published volume count (from
-  // real boundaries) stands in as the latest-known denominator
-  totalVolumes: row.total_volumes ?? (publishedVolumes || null),
+  // real boundaries) stands in as the latest-known denominator. ONLY when the
+  // boundary table is complete from the manga's start: a lone research row
+  // (Ippo's v61 552-561) must not masquerade as "1 volume total" and clamp
+  // every volume readout to v1 (2026-08-24).
+  totalVolumes:
+    row.total_volumes ??
+    (publishedVolumes && boundaries.some((b) => b.chapter_start <= (row.manga_start_chapter ?? 1)) ? publishedVolumes : null),
   // ongoing manga: AniList nulls chapter totals until completion — the
   // MangaUpdates-sourced latest published chapter stands in (semantically
   // LATEST KNOWN, not total; cross-check tier via the MangaDex id bridge)
@@ -253,6 +258,14 @@ export const buildMapping = (
   const total = counts.canon + counts.mixed + counts.filler + counts['anime-only-canon'];
 
   const latestAnchor = anchors.length ? anchors[anchors.length - 1] : null;
+  // COVERAGE ≠ run-end (Sean's ruling 2026-08-24, the Ippo finale lesson): an
+  // anime may END on a relocated earlier block (Ippo 124-127 = the Post-War
+  // arc, chs 400-414, aired last). The run-end anchor is the frontier
+  // EPISODE; coverage — and therefore continue-reading = coverage+1 — is the
+  // FURTHEST mainline chapter adapted anywhere in the run (Ippo: ch 557 via
+  // ep 123 → continue 558). Keying coverage off the last-episode anchor
+  // flattened eps 105-123 to the finale's low value through the clamp.
+  const coverageAnchor = anchors.reduce<AnchorRow | null>((m, a) => (m === null || a.chapter > m.chapter ? a : m), null);
   // canon-tier series (Sean 2026-08-23) carry NO episode rows — their spans
   // default to canon (buildSpans fallback), so the last canon episode IS the
   // last aired one; without this the finished-series latestKnown fallback
@@ -265,11 +278,11 @@ export const buildMapping = (
 
   const loose = row.mapping_mode === 'loose';
   let latestKnown =
-    hasSource && !loose && latestAnchor
+    hasSource && !loose && latestAnchor && coverageAnchor
       ? {
           episode: latestAnchor.episode,
-          volume: latestAnchor.volume ?? volumeFor(row, latestAnchor.chapter, boundaries),
-          chapters: String(latestAnchor.chapter),
+          volume: coverageAnchor.volume ?? volumeFor(row, coverageAnchor.chapter, boundaries),
+          chapters: String(coverageAnchor.chapter),
         }
       : null;
   // No anchors (most of the catalog): a FINISHED entry's coverage IS its

@@ -388,8 +388,32 @@ anchor a research batch delivers carries the FULL shape, not just the end:
   relocation stays leading in chapters_adapted + the graft annotation.
   Run-end endpoints are equally load-bearing: replacing ippo's mu 558 pin
   with the honest ep-127 record flattened eps 105-123 via the coverage
-  clamp — endpoint-encoding changes go through Sean first
-  (batch15/DECISIONS-FOR-SEAN.md §A).
+  clamp — RESOLVED by Sean's A4 ruling (below).
+- **Coverage = furthest adapted, finale = honest record (Sean's A4 ruling,
+  2026-08-24)**: an anime may END on a relocated earlier block (Ippo 124-127
+  = Post-War 400-414 aired last). The finale anchors to what it ADAPTS
+  (display start per the sliver rule); COVERAGE — and continue-read =
+  coverage+1 — is the max-chapter anchor across the run, never the run-end
+  anchor (assemble.ts coverageAnchor; the run-end anchor stays the frontier
+  EPISODE). Anchors NEVER encode resume positions (the old mu-558-as-anchor
+  shape is retired); resume lives in continue_chapter. Cameo/sliver
+  borrowings (Clear Card 12/14 ch-39/46, Ippo 76's 2-page ch-383 gag) are
+  never anchors or position data — annotation + verdict JSON only.
+- **CONTINUE-READ = ANIME PARITY (Sean's C2 ruling, 2026-08-24; migration
+  20260825200000)**: where the next canon/mixed episode's start is KNOWN,
+  continue_chapter = that start — the reader stays in step with the anime
+  even across skips and back-jumps — with the chronological next-unseen
+  value and skip facts preserved in continue_note; continue_kind ∈ parity |
+  unseen (frontier/unknown future) | post_series (finale: coverage+1).
+  Mid-chapter ends keep C1: continue = the straddled chapter (re-reading a
+  few pages is fine; no page-level hunting). Converted catalog-wide
+  (batch15/apply-parity-continues.ts: 1838/317/20); NOTHING is UI-surfaced
+  yet — data-first until the continue-read design pass.
+- **Partial boundary tables never stand in as totals (the Ippo v61 lesson,
+  2026-08-24)**: publishedVolumes (boundaries.length) substitutes for a null
+  total_volumes ONLY when the boundary table is complete from the manga's
+  start — a lone research row must not clamp every volume readout to v1
+  (assemble.ts toAnimeSeries).
 - **Post-batch**: audits re-run; batch-cleared series may surface their
   NEXT-worst stretch (>12) — that is the rolling work-list by design, not
   a failure. Every batch that adds interior anchors near a run end relies
@@ -1032,6 +1056,23 @@ Fixed weekly is correct.
    + 42 batch-15 bookmarks. Decisions queue:
    **batch15/DECISIONS-FOR-SEAN.md** (encoding rulings A1-A4, held repair
    B, conventions C1-C4, bookmark dispositions D, structure items E).
+37. ✅ **SEAN'S BATCH-15 RULINGS APPLIED (2026-08-24, same day)**: A2/A3
+   rejected-as-anchors (annotation-only, rules in §10); A4 coverage=max +
+   honest-finale rule (§10; ippo 127 = 410-414/continue 558 post_series,
+   coverage 557 via ep 123); B dragon-maid 25 = 40+48+E6 → 48 [40] v5;
+   C1/C3/C4 ratified; C2 ANIME-PARITY continue rule (§10; migration
+   20260825200000 continue_kind/continue_note; catalog conversion
+   1838/317/20 via batch15/apply-parity-continues.ts); D 16 old bookmarks
+   closed, hxh ep7 → mixed+anchored, TLR chapter math = 77 (scope row
+   documents the 100 = +prologue+bonus); E1 shounan + E2 cardcaptor
+   REVIEWED entries (prologue OVA = ep 71; Sealed Card order-only @70.1
+   noted DIRECT FINALE; Movie 1 → @35.1; dup 70.3 fractional deleted).
+   Same-day fixes from Sean's live reports: ippo volume collapse
+   (coverage-anchor volume + the partial-boundary stand-in guard, §10);
+   cardcaptor 65-70 / hxh 4-7 / dragon-maid 25 verified correct at source.
+   STILL OPEN: A1 (MHA 104 anchor-on-filler — rec: reject + stop counting
+   filler rows in rearranged_zone_unanchored) + beastars ep 44 type
+   (flag 887). Verify 220/220 clean end-state.
 21. ✅ **Consolidation pass 2 (2026-08-23, post-Kenshin)**: every write path
    swept against the day's rules — filterEpisodeRows (caps + type
    overrides) now in ALL five episode writers (resolve, stitched-guard,

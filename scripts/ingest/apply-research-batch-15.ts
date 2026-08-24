@@ -78,7 +78,10 @@ const EXCLUDED_ANCHORS = new Map<string, string>([
   ['cardcaptor-sakura-clear-card#12', 'ep typed anime-only-canon; the ch-39 "graft" is a cards-circling cameo — anchoring END 39 would poison the position curve (mainline ~12-13); annotation carries the fact — encoding decision for Sean'],
   ['cardcaptor-sakura-clear-card#14', 'same class: anime-only-canon ep; ch 46 = Mirage debut graft, not the mainline position — annotation carries it'],
   ['hajime-no-ippo-the-fighting#76', 'Boxer\'s Fist DVD special adapts only ch 383 p.4-5 (2-page gag) — anchoring END 383 at run position ~270 breaks the curve (sliver-rule spirit: scraps never set position); annotation carries the sliver — encoding decision for Sean'],
-  ['hajime-no-ippo-the-fighting#127', 'the agent\'s bonus ep-127 record (414) replaced the stored mu endpoint 558, which is LOAD-BEARING: coverage clamp `min(covered, ch)` flattened eps 105-123 to 414 (verify FAIL ×3). Restored to the mu pin; the exact record lives in the verdict JSON pending Sean\'s run-end-reorder encoding ruling'],
+  // ippo#127 UNHELD (Sean's A4 ruling 2026-08-24): the finale anchors to what
+  // it adapts (410-414, display start per sliver rule), continue→558 =
+  // coverage+1; assemble.ts now derives coverage from the MAX-chapter anchor
+  // so the honest record no longer flattens the run.
 ]);
 // Entry-level updates ratified by this batch's research (bookmark-triage
 // conditions met):

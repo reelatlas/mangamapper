@@ -116,7 +116,11 @@ async function main() {
     'when-they-cry:3652', // A: Rei 51-55 counted as the third entry
     'kenichi-the-mightiest-disciple:11813', // A: OVA 51-61 direct continuation
     'steins-gate:10863', // A: Egg OVA 25 epilogue, near-universally counted
-    'cardcaptor-sakura:372', // A: Sealed Card 71 = the true finale
+    // Sean 2026-08-24: Sealed Card is the direct FINALE but stays order-only
+    // (@70.2); the Clear Card Prologue OVA is the bridge to the sequel and
+    // acts as ep 71 (community identity)
+    'cardcaptor-sakura:98554', // A: Clear Card Prologue OVA = ep 71 (Sean 2026-08-24)
+    'shounan-junai-gumi:1913', // A: the series IS the 5-ep OVA run — numbering 1-5 is its identity (Sean 2026-08-24)
     'the-future-diary:16762', // A: Redial 27 epilogue
     'heavens-lost-property:9790', // A: Clockwork Angeloid film 26, canon continuation
     'heavens-lost-property:12783', // A: Final film 27, canon conclusion
