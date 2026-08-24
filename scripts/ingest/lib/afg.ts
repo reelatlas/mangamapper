@@ -201,13 +201,17 @@ export function deriveAnchors(
   // poisoned by stray low values — grafts/backfills a chart lists alongside
   // the mainline (Oshi ep 4 listed a stray 10 beside 17-19 → start read 10).
   // The start must sit on the same trend the LNDS kept: recompute it as the
-  // lowest chapter ≥ the previous kept row's end - 1 (split tolerance).
-  // Off-trend values stay recorded in chapters_adapted — data, not position.
+  // lowest chapter ≥ the previous kept row's end (a split chapter is SHARED —
+  // equal is legal; charts double-list the boundary chapter, so a derived
+  // start one BELOW the previous end is chart noise, not data — the Fairy
+  // Tail 277 / One Piece 510 dip class). Off-trend values stay recorded in
+  // chapters_adapted — data, not position. Research-tier starts are exempt
+  // (page-cited splits are exact).
   let prevEnd = 0;
   const eps = new Map(episodes.map((e) => [e.number, e]));
   for (const k of kept) {
     const mainline = (eps.get(k.episode)?.chapters ?? []).filter((c) => Number.isInteger(c));
-    const onTrend = mainline.filter((c) => c >= prevEnd - 1 && c <= k.chapter);
+    const onTrend = mainline.filter((c) => c >= prevEnd && c <= k.chapter);
     k.startChapter = onTrend.length ? Math.min(...onTrend) : k.chapter;
     prevEnd = k.chapter;
   }

@@ -195,9 +195,25 @@ export const canonEpStartCh = (anime: AnimeSeries, m: MappingSummary, ep: number
   const end = canonEpToCh(anime, m, ep);
   if (end === null) return null;
   const prev = prevCanonEp(m, ep);
-  if (prev === null) return Math.min(end, ratios(anime, m).startCh);
-  const prevEnd = canonEpToCh(anime, m, prev);
-  return prevEnd === null ? end : Math.min(end, prevEnd + 1);
+  let start: number;
+  if (prev === null) start = Math.min(end, ratios(anime, m).startCh);
+  else {
+    const prevEnd = canonEpToCh(anime, m, prev);
+    start = prevEnd === null ? end : Math.min(end, prevEnd + 1);
+  }
+  // Interpolated rows adjacent to an exact row can overshoot past that row's
+  // REAL start by one (the end-curve doesn't know where the next episode
+  // actually begins) — an episode can never start after its successor, so the
+  // next exact row's span start caps every derived start before it
+  // (the one-chapter-dip class, Sean 2026-08-23).
+  for (const e of anime.episodes) {
+    if (e.number <= ep || !e.mangaMapping) continue;
+    if (e.type !== 'canon' && e.type !== 'mixed') continue;
+    const s = parseInt(e.mangaMapping.chapters.split(/[-,]/)[0], 10);
+    if (!Number.isNaN(s) && /[-,]/.test(e.mangaMapping.chapters) && s < start) start = s;
+    break; // only the nearest following exact row bounds this one
+  }
+  return start;
 };
 
 // The canon/mixed episode covering a chapter — piecewise inverse of the same

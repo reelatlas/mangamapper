@@ -376,6 +376,25 @@ anchor a research batch delivers carries the FULL shape, not just the end:
   pass-2's per-episode map had superseded — block-end aggregate anchors
   spanning several episodes are a deprecated shape; per-episode records
   replace them, never coexist with them.
+- **Post-adjustment whole-series verification (Sean's ruling 2026-08-23:
+  "data keeps getting broken every time we make adjustments")**: after ANY
+  anchor/episode change to a series, run
+  `npx tsx --env-file=.env.ingest scripts/ingest/verify-series-display.ts <id>`
+  BEFORE reporting the change done — it renders the series through the
+  app's EXACT code path (src/data/catalog/assemble.ts, the pure assembly
+  split out of supabaseSource precisely so scripts can import it, + real
+  buildEpisodeList) and checks every canon/mixed row: no null/NaN inside
+  the frontier, starts non-decreasing except ruled rearranged/graft
+  episodes. Never verify with a re-implementation — it drifts (the Oshi
+  stale-harness lesson). Catalog-wide sweeps use the same verifySeries
+  export. Two display rules born from its first sweep: (1) a derived
+  start can never sit BELOW the previous row's end — charts double-list
+  split-boundary chapters, so the derive guard requires start ≥ prevEnd
+  (shared chapter = equal, legal; research-tier page-cited splits exempt);
+  (2) interpolated rows adjacent to an exact row must not overshoot past
+  that row's real start — canonEpStartCh caps every derived start at the
+  next exact row's span start (an episode can never start after its
+  successor; the one-chapter-dip class).
 - **Fan mapping threads are a first-class verification source**: the
   r/OshiNoKo-style episode↔chapter threads that power "instant" AI-search
   answers are the SAME sources our research agents cite — use them for
@@ -870,6 +889,28 @@ Fixed weekly is correct.
    of code+data → stale browser tab (hard-refresh); interp starts for
    25/26/27 (81/85/89) matched research exactly. Census: all anchor
    classes 0; ruling_violation 0; ok_full 236; gap 58.
+33. ✅ **AoT FINALE+S4P2 + THE VERIFIER (2026-08-23 end, Sean's ep 89 →
+   85/86/87 reports + "check ALL episodes after every adjustment")**:
+   (a) AoT ep 88 anchored (131-134, was MISSING), ep 89 promoted from
+   unverified MU pin to full record (135-139 + vol-34 extended-ending
+   pages, graft annotation; chapter-space 140-141 = unadapted omake,
+   honest frontier). (b) Eps 76-87 fully per-episode anchored (fandom +
+   animefillerguide + doublesama): mostly 1-2 ch/ep; ONE true reorder —
+   ch 123 'Island Devils' second half in ep 80, first half relocated to
+   the finale's cold open (ep 87 = '123 (first half) + 130 (remainder)',
+   both eps rearranged-annotated). (c) THE VERIFIER built (§10 rule):
+   assemble.ts split out of supabaseSource (pure row→model, no client
+   import) so verify-series-display.ts renders series through the app's
+   EXACT path; whole-catalog sweep (218 anchored series) surfaced two
+   systematic display classes, both fixed centrally: canonEpStartCh now
+   caps derived starts at the next exact row's span start (25-series
+   one-chapter-dip class), and the derive start guard tightened to
+   ≥ prevEnd (chart double-listed split boundaries; Fairy Tail 277 /
+   One Piece 510). black-lagoon manga_start_chapter → 0 (kanzenban ch-0
+   opener; scope-start floor had forced ep 1 to display ch 1). Full
+   rederive + edges redeployed. Sweep result: ALL OK, 218/218. Census
+   unchanged-clean: all anchor classes 0, ruling_violation 0, ok_full
+   236.
 21. ✅ **Consolidation pass 2 (2026-08-23, post-Kenshin)**: every write path
    swept against the day's rules — filterEpisodeRows (caps + type
    overrides) now in ALL five episode writers (resolve, stitched-guard,
