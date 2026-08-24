@@ -409,6 +409,22 @@ anchor a research batch delivers carries the FULL shape, not just the end:
   few pages is fine; no page-level hunting). Converted catalog-wide
   (batch15/apply-parity-continues.ts: 1838/317/20); NOTHING is UI-surfaced
   yet — data-first until the continue-read design pass.
+- **Count-space vs number-space: one display, one space (Sean's Tokyo Ghoul
+  144/143 report, 2026-08-24)**: for a finished manga, AniList's total is a
+  COUNT (mid-run specials/oneshots included) while MU's latest is the last
+  chapter NUMBER; the position row's denominator deliberately shows the
+  NUMBER when the two sit within the same-edition band (assemble.ts
+  totalChapters). Every position instrument must live in that same space: a
+  MU frontier pin landing between latest_known and total_chapters inside the
+  band is a count-space value and is CONVERTED to latest_known at the writer
+  (lib/mu-frontier.ts applyMuFrontier, conversion recorded in the note);
+  outcome-side, audit class `anchor_beyond_display_total` flags ANY anchor
+  above the band-rule display total, whatever writer produced it. Healed on
+  day one: tokyo-ghoul 144→143, fire-force 305→304, prisma-illya 14→13.
+  Distinct from this bug: an entry whose coverage honestly stops SHORT of
+  its segment (Berserk 1997 adapts through ch 87 of its 1-94 segment;
+  2016 starts at 95) is CORRECT data — the coverage-vs-segment display
+  treatment is the parked segment-model pass.
 - **Partial boundary tables never stand in as totals (the Ippo v61 lesson,
   2026-08-24)**: publishedVolumes (boundaries.length) substitutes for a null
   total_volumes ONLY when the boundary table is complete from the manga's

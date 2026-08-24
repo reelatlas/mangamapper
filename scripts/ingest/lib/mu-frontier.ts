@@ -66,6 +66,23 @@ export async function applyMuFrontier(
     .eq('id', s.id)
     .maybeSingle();
   const spaceMax = Math.max(s.total_chapters ?? 0, srow?.latest_known_chapters ?? 0);
+  // COUNT-SPACE → NUMBER-SPACE conversion (Sean's Tokyo Ghoul 144/143 report,
+  // 2026-08-24): for a finished manga where AniList's total is a COUNT and
+  // MU's latest is the last chapter NUMBER (same-edition band — the display
+  // total shows the NUMBER), a pin that lands between them is count-space
+  // (mid-run specials/oneshot padding) and must be converted, or the
+  // position row renders coverage ABOVE its own denominator (144/143).
+  // Mirrors the display rule in assemble.ts totalChapters exactly.
+  let converted: number | null = null;
+  const latest = srow?.latest_known_chapters ?? null;
+  if (
+    s.total_chapters != null && latest != null &&
+    latest < s.total_chapters && latest >= s.total_chapters * 0.8 &&
+    coverage.chapter > latest && coverage.chapter <= s.total_chapters
+  ) {
+    converted = coverage.chapter;
+    coverage.chapter = latest;
+  }
   if (spaceMax > 0 && coverage.chapter > spaceMax + 10) {
     await fileFlagOnce(runId, s.id, 'mangaupdates', 'count_mismatch', {
       muCoverageChapter: coverage.chapter,
@@ -114,7 +131,7 @@ export async function applyMuFrontier(
     volume: coverage.volume,
     chapter: coverage.chapter,
     source: 'mu',
-    note: `MU curated anime-coverage: "${muEnd}"`,
+    note: `MU curated anime-coverage: "${muEnd}"${converted != null ? ` [count-space ${converted} → chapter-number ${coverage.chapter} per the same-edition band rule]` : ''}`,
   });
   return error ? 'no_coverage' : 'applied';
 }

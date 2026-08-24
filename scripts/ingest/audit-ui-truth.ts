@@ -82,7 +82,7 @@ async function main() {
     integrity_eps_beyond_total: [], integrity_total_beyond_eps: [], integrity_double_claimed: [],
     integrity_degenerate_span: degenerateSpans,
     special_numbered_unreviewed: [], anchor_gap_research: [], frontier_tail_null: [],
-    anchor_nonmonotonic: [], anchor_start_offtrend: [], anchor_beyond_chapter_space: [], anchor_fractional_chapter: [], ruling_violation: [],
+    anchor_nonmonotonic: [], anchor_start_offtrend: [], anchor_beyond_chapter_space: [], anchor_beyond_display_total: [], anchor_fractional_chapter: [], ruling_violation: [],
     mu_pin_unverified: [],
     rearranged_zone_unanchored: [], rearranged_zone_acknowledged: [],
     title_incomplete: [], airdate_incomplete: [], asterisk_unreviewed: [],
@@ -337,6 +337,14 @@ async function main() {
       }
     }
     const spaceOf = new Map(series.map((s: any) => [s.id, Math.max(s.total_chapters ?? 0, s.latest_known_chapters ?? 0)]));
+    // DISPLAY total per the same-edition band rule (assemble.ts totalChapters,
+    // mirrored by applyMuFrontier's count→number conversion): for finished
+    // manga the position row's denominator is MU's last chapter NUMBER when
+    // AniList's COUNT sits just above it. Coverage must live in that space.
+    const displayTotalOf = new Map(series.map((s: any) => {
+      const t = s.total_chapters, l = s.latest_known_chapters;
+      return [s.id, t != null && l != null && l < t && l >= t * 0.8 ? l : t] as const;
+    }));
     const looseAll = new Set(series.filter((s: any) => s.mapping_mode === 'loose').map((s: any) => s.id));
     for (const [sid, list] of bySeries) {
       // LOOSE series are ruled non-linear — their anchors are borrow-maps
@@ -367,6 +375,14 @@ async function main() {
       for (const a of list) {
         if (space > 0 && a.chapter > space + 10) {
           classes.anchor_beyond_chapter_space.push(`${sid}: ep ${a.episode}→ch${a.chapter} exceeds manga space (${space})`);
+        }
+        // count-space pin crossing the number-space display total (Sean's
+        // Tokyo Ghoul 144/143 report, 2026-08-24): the position row would
+        // render coverage ABOVE its own denominator. Writer-side fix lives
+        // in applyMuFrontier; this outcome check catches any writer.
+        const dTotal = displayTotalOf.get(sid);
+        if (dTotal != null && a.chapter > dTotal) {
+          classes.anchor_beyond_display_total.push(`${sid}: ep ${a.episode}→ch${a.chapter} (${a.source}) exceeds the DISPLAY total ${dTotal} (same-edition band) — count-space value in a number-space instrument`);
         }
         // a DERIVED fractional-chapter anchor is a bonus/Memoire chapter
         // mis-scraped from a source chart (the Vanitas ep-5 → ch-15.5 case,

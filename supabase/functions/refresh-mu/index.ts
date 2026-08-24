@@ -20337,6 +20337,12 @@ async function applyMuFrontier(runId, s, muEnd, nonMuMaxEp, nonMuMaxCh) {
   const coverage = inScope.reduce((a, b) => b.chapter > a.chapter ? b : a);
   const { data: srow } = await db.from("series").select("latest_known_chapters").eq("id", s.id).maybeSingle();
   const spaceMax = Math.max(s.total_chapters ?? 0, srow?.latest_known_chapters ?? 0);
+  let converted = null;
+  const latest = srow?.latest_known_chapters ?? null;
+  if (s.total_chapters != null && latest != null && latest < s.total_chapters && latest >= s.total_chapters * 0.8 && coverage.chapter > latest && coverage.chapter <= s.total_chapters) {
+    converted = coverage.chapter;
+    coverage.chapter = latest;
+  }
   if (spaceMax > 0 && coverage.chapter > spaceMax + 10) {
     await fileFlagOnce(runId, s.id, "mangaupdates", "count_mismatch", {
       muCoverageChapter: coverage.chapter,
@@ -20358,7 +20364,7 @@ async function applyMuFrontier(runId, s, muEnd, nonMuMaxEp, nonMuMaxCh) {
     volume: coverage.volume,
     chapter: coverage.chapter,
     source: "mu",
-    note: `MU curated anime-coverage: "${muEnd}"`
+    note: `MU curated anime-coverage: "${muEnd}"${converted != null ? ` [count-space ${converted} \u2192 chapter-number ${coverage.chapter} per the same-edition band rule]` : ""}`
   });
   return error ? "no_coverage" : "applied";
 }
