@@ -1258,6 +1258,21 @@ Fixed weekly is correct.
    pins had masked them from anchor_gap_research all along; both diverge
    heavily from their manga, hence the filler-typed run-ends). Add both to
    the batch-17 second pass alongside the 21-series RESUME list.
+   **A1-TRIAGE LANE (Sean 2026-08-24: the 49 must not wait for luck)** —
+   the anchor_on_noncanon_row hits sit on 15 series, and only
+   fist-of-the-north-star overlaps any existing queue: the gap/tail/mu-pin
+   queues select for MISSING data, so well-anchored series (one-piece 19,
+   dbz 7, ranma 6, black-clover, fairy-tail, inuyasha, hxh-1999, dbz-kai,
+   cardcaptor, slam-dunk, noragami, mashle, railgun, TPN) would never
+   surface. They join the batch-17 second pass as a SEPARATE LIGHTWEIGHT
+   lane — per-EPISODE triage ("is the row really filler, or is the anchor
+   junk?"; filler lists + content sources, 2+ citations), NOT full-series
+   mapping. Outcomes use the existing machinery: retype via
+   EPISODE_TYPE_OVERRIDES or delete via the curated map; TPN ep23's
+   afg-continua row is the known ajin-class continue-value-as-anchor.
+   The census class is the live work-list (re-derives every audit run);
+   its triage verdict distribution DECIDES D4 (afg hits mostly junk →
+   gate the AFG writers; mostly mistyped rows → audit-only stands).
 42. 📍 **BATCH 17 — GAP TIER, PARTIALLY APPLIED (2026-08-24; RESUME MARKER)**.
    Roadmap item (2). Targets: the anchor_gap_research class (46) + the
    frontier_tail_null class (7) = 53 series, research/batch17/
