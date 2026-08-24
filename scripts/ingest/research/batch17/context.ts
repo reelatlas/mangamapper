@@ -58,6 +58,10 @@ const TARGETS: [string, string, 'gap' | 'tail', string][] = [
   ['magic-knight-rayearth', '1-48', 'gap', '28 unanchored (2 seasons ≈ 2 manga series — mind the numbering: Rayearth II is its own 3 vols). rayearth.fandom.com + Wikipedia.'],
   ['detective-conan', '1-1204', 'gap', 'THE GIANT (636 unanchored canon eps). Detective Conan World (detectiveconanworld.com/wiki) has AUTHORITATIVE per-episode manga-file mappings ("files" = chapters) — use its API/tables; AFL types are in our rows. Checkpoint lattice: every ~20 canon eps + season/arc boundaries; do not attempt all 636 exhaustively. State the file→chapter numbering identity.'],
   ['d-gray-man', '52-102', 'gap', 'Back half + Hallow (chs ~90-218). dgrayman.fandom.com episode pages carry chapter fields.'],
+  // second-pass additions (2026-08-24, D1 aftermath): both were invisible to the
+  // gap class because their SOLE anchor was a refused A1 pin — now anchorless.
+  ['hellsing', '1-13', 'gap', 'NEWLY EXPOSED: sole anchor was a refused A1 pin (ep13 filler → ch12). 2001 Gonzo TV — faithful early volumes, then anime-original back half (the 2012 Ultimate OVA is the faithful adaptation; our entry is the TV series). Deliverable: structure verdict (faithful front / divergence point), anchors on the faithful front, honest divergence annotations + type corrections for the anime-original stretch. hellsing.fandom.com + Wikipedia.'],
+  ['trigun', '1-26', 'gap', 'NEWLY EXPOSED: sole anchor was a refused nonsense pin (ep19 filler → ch6). 1998 TV — manga (Trigun 3 vols + Trigun Maximum 14 vols) was ONGOING; anime reaches its own ending. CHAPTER SPACE FIRST: state which numbering our entry space uses (check the context header totals) and map honestly — structure verdict + faithful-front anchors + divergence bound. trigun.fandom.com + Wikipedia.'],
   ['space-adventure-cobra', '1-30', 'gap', '1982 series; adaptation order may be loose — honest structure verdict + checkpoint anchors. cobra fandom thin; ja sources.'],
   ['sket-dance', '1-76', 'gap', 'Chs 1-~200; sketdance.fandom.com + Wikipedia; checkpoint lattice.'],
   // ---- frontier_tail_null (canon eps past the last anchor render null)

@@ -1,0 +1,31 @@
+{
+  "series_id": "inuyasha",
+  "summary": "A1 triage of ep 79 (filler, afg ch-219). The body is wholly anime-original Jaken comedy (No-man demon, fake-sharpener ruse, hot-spring Tessaiga theft), the tail of AFL's contiguous 75-79 filler run - the type is right. But the afg 219 is not pure position either: the fandom episode infobox lists Chapter 219 qualified 'end of the episode', and ch 219 'Kidnapped' maps back to eps 79 AND 80 - the closing tag adapts ch 219's opening beat (Kagura kidnaps Rin in front of Jaken, re-staged in a melon field), and ep 80 does NOT re-show it (it resumes at Jaken's report and covers 219-221). A tag-sized partial on a filler row is exactly the shape Sean ruled on with the CCS ep-7 override: type stays filler, fact goes to an annotation, anchor goes. Position is fully carried by ep 80 (219-221). AFG-tier row: per the 2026-08-24 apply contract the applied repair must flip the anchor source to manual, or the next AFG re-derive restores the deleted value (the class D4's writer-side gate would close for good).",
+  "anchors": [],
+  "type_corrections": [],
+  "repairs": [
+    {
+      "episode": 79,
+      "field": "end_chapter",
+      "old": 219,
+      "new": null,
+      "why": "A1 on a correctly-typed filler row (AFL: Filler, inside the 75-79 run; body = anime-original Jaken hijinks). The 219 value describes only the closing tag - ch 219 'Kidnapped's opening beat, one scene - which per the sliver/tag precedent (CCS ep 7 override) is annotation-fact material, not an anchor; chs 219-221 are anchored at ep 80, which resumes right after the kidnap. AFG-tier row: applying this repair must flip the anchor source to manual so the next AFG re-derive does not restore it.",
+      "sources": [
+        "https://inuyasha.fandom.com/wiki/Episode_79",
+        "https://www.animefillerlist.com/shows/inuyasha",
+        "https://inuyasha.fandom.com/wiki/Chapter_219"
+      ]
+    }
+  ],
+  "annotations": [
+    {
+      "episodes": [
+        79
+      ],
+      "kind": "partial",
+      "chapters": "219 (opening beat)",
+      "note": "closing tag only: Kagura kidnaps Rin in front of Jaken = ch 219 'Kidnapped' opening, re-staged in a melon field after the anime-original Jaken plot. Ep 80 resumes from Jaken's report and covers 219-221 - the kidnap itself airs only here. (Replaces the facts held by the removed afg anchor.)"
+    }
+  ],
+  "flags_for_sean": []
+}

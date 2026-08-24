@@ -1219,6 +1219,36 @@ Fixed weekly is correct.
    (2) gap tier 46 → (3) mu_pin sweep 65 → (4) automation pass →
    (5) arcs table → (6) parked design pass → (7) continue-read UI →
    (8) segment model (Sean's go).
+44. ⏸️ **CHUNK 1 INTERRUPTED — monthly spend limit (2026-08-24; RESUME
+   MARKER, full record: `scripts/ingest/research/batch17/CHUNK1-RECOVERY.md`)**.
+   The batch-17 second pass was split into two weight-balanced chunks for
+   usage control (§12.43 note); chunk 1 launched 19 agents and a monthly
+   model spend limit killed 17 mid-flight. **Nothing is half-applied**: no
+   apply script ran, DB verified unchanged (7085 anchors / 66 MU pins =
+   the post-D1 state), repo clean through 07ed513.
+   SURVIVED (6 verdict files, committed): hellsing (7 anchors + 2 type
+   corrections + 3 continues), gintama's last 3 reorder holes (eps 111 →
+   L172, 120 → L187 — both were MISSED SECOND INFOBOXES on two-part
+   episodes, a trap that generalizes — and 227 → 360 v41, the Sket Dance
+   crossover special), and 5 A1 verdicts (hxh 2/18, cardcaptor 7,
+   inuyasha 79, slam-dunk 92). The four A1 files came from an agent that
+   died before its closing self-check — give them extra review before
+   curating.
+   **EARLY D4 SIGNAL: 5 of 5 adjudicated A1 hits are JUNK ANCHORS, zero
+   mistyped rows** — including cardcaptor ep 7, the case D4 had singled
+   out as most likely mistyped. If the remaining 43 hold this ratio the
+   answer leans toward gating the AFG writers; do not decide on 5 of 49.
+   Counter-signal already visible: the one-piece agent found several
+   filler-typed rows DO carry sliver adaptations (expect `mixed` there).
+   TO REDO (16 tasks): 12 gap series (kinnikuman, eyeshield-21,
+   zatch-bell, bobobo, sket-dance, saint-seiya, project-arms, d-gray-man,
+   angel-heart, fist-of-the-north-star + its A1 ep-109 item, hayate,
+   trigun), 3 A1-triage tasks (43 hits), rurouni 95-98 + eps 63-70.
+   The recovery file carries the paid-for source traps and leads (the
+   eyeshield-21 numbering-shift parse trap, saint-seiya's arc-not-filler
+   row colors, project-arms' Kinokuniya TOC, the near-finished rurouni and
+   fist-of-north-star skeletons) — read it before relaunching, and use a
+   smaller concurrent fleet so one limit event can't cost 17 agents.
 43. ✅ **D1 RULED + BUILT: the MU franchise-conflation gates (2026-08-24,
    post-compact — Sean: "lets follow your recommendation for D1 and build
    the gate")**. Three writer gates in applyMuFrontier (sibling-scope

@@ -1,0 +1,31 @@
+{
+  "series_id": "cardcaptor-sakura",
+  "summary": "A1 triage of ep 7 (filler, manual ch-7 anchor). D4's working assumption ('typed filler while adapting ch 7 by exact match') is wrong: The Silent's infobox re-confirms batch15 - captured ep = Episode 7 but captured ch = N/A, and the card is one of the 'fifty-three Clow Cards in the anime' (the manga captures nineteen) - so the museum/Silent capture body is wholly anime-original. The episode's only manga content is its closing tag: Syaoran's debut cameo atop the museum sensing a Clow Card = ch 7's final page, while ch 7's sports-day body is adapted in ep 10. The filler type is Sean's own batch15 override and stands; what violates A1 is batch15's 1-page sliver anchor, which the 2026-08-24 sliver ruling (<=~5 pages -> annotation facts only) now forbids. Repair nulls it; the annotation below preserves the cameo fact so it survives the anchor's removal. AFL is no counter-evidence: it coarsely lumps eps 1-11 as canon and was already discredited on eps 4-5 in batch14.",
+  "anchors": [],
+  "type_corrections": [],
+  "repairs": [
+    {
+      "episode": 7,
+      "field": "end_chapter",
+      "old": 7,
+      "new": null,
+      "why": "A1: anchor stands on a filler row whose type Sean personally locked (batch15 override). Re-verified: the Silent capture is anime-only (infobox captured ch = N/A; anime-only card) and the sole manga content is ch 7's final page - Syaoran's closing-tag cameo - a 1-page sliver, annotation-fact material under the 2026-08-24 ruling, never an anchor. Manual-source anchor, no re-derive risk.",
+      "sources": [
+        "https://ccsakura.fandom.com/wiki/The_Silent",
+        "https://ccsakura.fandom.com/wiki/Sakura%27s_First_Attempt_as_a_Thief%3F!",
+        "https://ccsakura.fandom.com/wiki/Difference_between_the_Manga_and_the_Anime"
+      ]
+    }
+  ],
+  "annotations": [
+    {
+      "episodes": [
+        7
+      ],
+      "kind": "graft",
+      "chapters": "7 (final page)",
+      "note": "anime-original Silent/museum episode; closing tag = Syaoran's debut cameo atop the museum sensing a Clow Card, ch 7's final page. Ch 7's sports-day body is adapted in ep 10. (Replaces the facts held by the removed sliver anchor.)"
+    }
+  ],
+  "flags_for_sean": []
+}

@@ -1,0 +1,32 @@
+{
+  "series_id": "slam-dunk",
+  "summary": "A1 triage of ep 92 (filler, afg ch-194). The body is pure anime-original comedy - the Sakuragi gang's beachside part-time-jobs/typhoon story plus the setup for the anime-only Jousei friendship match; AFL types it Filler (an isolated filler island: 85-86, 92, 95, 97-101) and the slamdunk.fandom episode page's chapter field is blank. AFG's own chart qualifies its 194 value: 'Mixed, in this episode we only watch from minute 19:14 to the end' - only the final ~3 minutes (Sakuragi told he stays behind at Anzai's request) touch ch 194 'Gasshuku/Training' (vol 22, 21pp), whose bulk - the 20,000-shot camp with the gang present - is ep 93 (AFG: 93 = 194-195). Same shape as CCS ep 7 / InuYasha ep 79: a tag-sized partial on a filler row, so per Sean's sliver precedent the type stands and the anchor goes; the annotation preserves the tail fact and position is carried by ep 93. AFG-tier row: per the 2026-08-24 apply contract the applied repair must flip the anchor source to manual, or the next AFG re-derive restores the deleted value.",
+  "anchors": [],
+  "type_corrections": [],
+  "repairs": [
+    {
+      "episode": 92,
+      "field": "end_chapter",
+      "old": 194,
+      "new": null,
+      "why": "A1 on a correctly-typed filler row (AFL: Filler; anime-original beach-jobs body; fandom chapter field blank). AFG's chart itself marks the 194 value tail-only ('only watch from minute 19:14 to the end') - a ~3-minute closing tag adapting ch 194's opening (Anzai keeps Sakuragi back), with the chapter's bulk in ep 93 (AFG: 194-195). A tag-sized partial is annotation-fact material under the sliver ruling, not an anchor. AFG-tier row: applying this repair must flip the anchor source to manual so the next AFG re-derive does not restore it.",
+      "sources": [
+        "https://slamdunk.fandom.com/wiki/Episode_92",
+        "https://www.animefillerlist.com/shows/slam-dunk-0",
+        "https://www.animefillerguide.com/anime/slam-dunk/",
+        "https://slamdunk.fandom.com/wiki/Chapter_194"
+      ]
+    }
+  ],
+  "annotations": [
+    {
+      "episodes": [
+        92
+      ],
+      "kind": "partial",
+      "chapters": "194 (opening)",
+      "note": "closing tag only (from ~19:14 per AFG's timestamped row): Sakuragi is told he stays behind at Anzai's request = ch 194 'Gasshuku' opening; the chapter's bulk (20,000-shot camp, gang present) is ep 93. The beach-jobs body and the Jousei match are anime-only. (Replaces the facts held by the removed afg anchor.)"
+    }
+  ],
+  "flags_for_sean": []
+}

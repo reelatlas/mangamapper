@@ -1,0 +1,59 @@
+{
+ "series_id": "gintama",
+ "summary": "Second pass on the 3 reorder holes (eps 111, 120, 227). Eps 111 and 120 are two-part episodes whose fandom pages carry TWO Episode Box infoboxes; the first harvest read only the first box (chapters=N/A, the anime-original Part A) and missed the Part B boxes, which map 111B to Lesson 172 and 120B to Lesson 187 — both full 19-page chapters (not slivers), confirmed by fandom Lesson-page reverse mappings (172→111B v20, 187→120B v22), exact ja-title matches in Wikipedia's List of Gintama chapters (v20=L167-175, v22=L185-193), and Syoboi Calendar's as-aired two-part subtitles (TID 853 #111/#120). This also falsifies the first pass's never-adapted list on exactly 172 and 187. Ep 227 adapts the Gintama×Sket Dance crossover special (fandom \"Lesson 360.1\"; Wikipedia: unnumbered \"Special Lesson\" コラボにはエイリアンVSプレデターがあるのも覚えておけ closing volume 41 after L360, tankobon released 2011-09-02) — the whole episode, exact title match with the as-aired #227 subtitle (Syoboi/official bn-pictures story page; anime censors エイリ○ンVSプ×デター). It is anchored at the special's collected slot, 360/360 v41 in ruled integer Lesson space; mainline L360 (Renho Arc, serialized 2011-07-11) belongs to ep 236 as already stored. All three anchors are deliberately non-monotonic against their neighbors (111: L172 between eps at L193-194/L183; 120: L187 between L202/L189-190; 227: special@360.1 between L342/L347) — reorder regime handles the rendering.",
+ "anchors": [
+  {
+   "episode": 111,
+   "start_chapter": 172,
+   "end_chapter": 172,
+   "chapters_adapted": "172 (Part B; Part A anime-original)",
+   "volume": 20,
+   "confidence": "high",
+   "note": "Two-part ep: Part A (host-club/Azumi story) is anime-original (first infobox chapters=N/A, Anime Exclusive category — matches mixed type); Part B ほぼ100%の確率でビニール傘を置き忘れてくる自分が嫌い adapts the full 19-page Lesson 172 (Kagura umbrella story). Second infobox chapters=Lesson 172; Lesson 172 page reverse-maps to 111B with vol=20; Wikipedia v20 chapter list (L167-175) carries L172 with the identical ja title; Syoboi as-aired subtitle #111 = NH物は絶対彼女に見つかるな／ほぼ100%の確率でビニール傘を置き忘れてくる自分が嫌い (B-half title = chapter title exactly). Non-monotonic by regime: sits between ep110 (L193-194) and ep112 (L183).",
+   "sources": [
+    "https://gintama.fandom.com/wiki/Episode_111",
+    "https://gintama.fandom.com/wiki/Lesson_172",
+    "https://en.wikipedia.org/wiki/List_of_Gintama_chapters",
+    "https://cal.syoboi.jp/tid/853"
+   ]
+  },
+  {
+   "episode": 120,
+   "start_chapter": 187,
+   "end_chapter": 187,
+   "chapters_adapted": "187 (Part B; Part A anime-original)",
+   "volume": 22,
+   "confidence": "high",
+   "note": "Two-part ep: Part A (Katsura/Prince Hata seafood-restaurant infiltration) is anime-original (first infobox chapters=N/A, Anime Exclusive category — matches mixed type); Part B 一度取った皿は戻さない adapts the full 19-page Lesson 187 (Hasegawa sushi restaurant). Second infobox chapters=Lesson 187; Lesson 187 page reverse-maps to 120B with vol=22; Wikipedia v22 chapter list (L185-193) carries L187 with the identical ja title; Syoboi as-aired subtitle #120 = 海外の日本料理店の味はだいたい学食レベル／一度取った皿は戻さない (B-half title = chapter title exactly). Non-monotonic by regime: sits between ep119 (L202) and ep121 (L189-190).",
+   "sources": [
+    "https://gintama.fandom.com/wiki/Episode_120",
+    "https://gintama.fandom.com/wiki/Lesson_187",
+    "https://en.wikipedia.org/wiki/List_of_Gintama_chapters",
+    "https://cal.syoboi.jp/tid/853"
+   ]
+  },
+  {
+   "episode": 227,
+   "start_chapter": 360,
+   "end_chapter": 360,
+   "chapters_adapted": "special 360.1 (Gintama×Sket Dance crossover chapter; whole episode; no mainline Lesson adapted)",
+   "volume": 41,
+   "confidence": "high",
+   "note": "Whole episode adapts the Gintama-side crossover special with Sket Dance, fandom \"Lesson 360.1\": Wikipedia lists it as an unnumbered Special Lesson コラボにはエイリアンVSプレデターがあるのも覚えておけ closing volume 41 immediately after L360 (v41 = L353-360 + special, released 2011-09-02, 24 days before air); fandom Episode 227 infobox chapters=Lesson 360.1; as-aired #227 subtitle (Syoboi TID 2172 and official bn-pictures story page) = the censored same title コラボにはエイリ○ンVSプ×デターがあるのも覚えておけ; MANTANWEB documents the WSJ mutual-crossover chapters (April 2011) and Natalie the paired anime airings (Gintama 2011-09-26 / Sket Dance 2011-09-29). Anchor value = the special's collected slot floored to ruled integer Lesson space (360/360 v41); it does NOT claim mainline L360 (さよなライオンなんか言わせない, Renho Arc, serialized 2011-07-11), which stays with ep 236 (359(1/2)+360) per the existing verdict and the Lesson 360 page.",
+   "sources": [
+    "https://gintama.fandom.com/wiki/Episode_227",
+    "https://en.wikipedia.org/wiki/List_of_Gintama_chapters",
+    "https://cal.syoboi.jp/tid/2172",
+    "https://www.bn-pictures.co.jp/gintama/story/227.php",
+    "https://mantan-web.jp/article/20110410dog00m200007000c.html",
+    "https://natalie.mu/comic/news/56014"
+   ]
+  }
+ ],
+ "flags_for_sean": [
+  "ep227 representation call: the episode adapts ONLY the crossover special (fandom 360.1; Wikipedia unnumbered Special Lesson at the end of v41). Anchor pins it at 360/360 v41 — the special's tankobon slot floored to the ruled integer Lesson space — so the reorder crossing renders; mainline L360 remains ep 236's content (existing verdict ep236 = 359(1/2)+360). The machinery must tolerate the duplicated 360 position, and the existing side_story annotation on ep 227 (chapters \"special 360.1\") stays true and should be kept alongside the anchor. If a duplicate-360 position is unacceptable, the fallback is reverting 227 to annotation-only — Sean's call.",
+  "structure correction to the merged verdict: strike 172 and 187 from the \"Lessons never adapted\" list — they ARE adapted (full chapters) by eps 111B and 120B; the first harvest read only the first of the two Episode Box infoboxes on two-part episode pages (chapters=N/A belongs to the anime-original Part A only).",
+  "stale flag correction: \"mixed eps 82, 111, 120 cannot be anchored\" now applies to ep 82 only (its fandom page carries no Part-B chapter mapping; sliver borrowings only). Eps 111/120 are anchored by this pass.",
+  "ep227 serialization footnote: the crossover special ran in WSJ in April 2011 (MANTANWEB, both series' sides mutually), BEFORE mainline L360's 2011-07-11 serialization — the \"360.1\"/after-L360 position is Shueisha's volume-41 collection placement, which is what the anchor uses (chapter space is tankobon Lesson order, ruled flag #678)."
+ ]
+}

@@ -1,0 +1,31 @@
+{
+  "series_id": "hunter-x-hunter",
+  "summary": "A1 triage of the two manual anchors on filler rows (eps 2, 18). Both are genuine filler bodies with 2-3 page grafts, NOT mistyped rows: Hunterpedia's infobox reads Adapted=Filler / Adapted 2=Chapter 1 (p. 31-32) for ep 2 (port-town fake-Hunter plot; the wiki's prose adds 'the events of this episode did not occur in the manga' - only Gon and Leorio boarding the Kaijinmaru is manga) and Adapted=Filler / Adapted 2=Chapter 7 (p. 9-11) for ep 18 (island-hotel treasure plot; the graft is Kurapika's Phantom Troupe/Scarlet-Eyes reveal relocated from the Phase 1 tunnel run). AFL independently types both pure Filler (its pure-filler set: 2, 7, 18-20) while deliberately using its Mixed label elsewhere (4-6, 11-12, 26-27, 32-34, 46), so the filler typing is intentional in both source families. These anchors are batch15's 'sliver anchors', explicitly flagged then as a sliver-vs-annotation call; Sean's 2026-08-24 sliver ruling (<=~5 pages -> annotation facts only) settles it: null both. The stored batch14/15 graft annotations already carry the exact page facts, so no new annotations are needed. If ep 18 still carries batch15's continue point (-> ch 23), remove it with the anchor.",
+  "anchors": [],
+  "type_corrections": [],
+  "repairs": [
+    {
+      "episode": 2,
+      "field": "end_chapter",
+      "old": 1,
+      "new": null,
+      "why": "A1 + sliver ruling: correctly-typed filler row (Hunterpedia Adapted=Filler; AFL Filler; 'events of this episode did not occur in the manga') carrying a 2-page sliver anchor - ch 1 p.31-32, Gon/Leorio boarding the Kaijinmaru. A <=5-page graft is annotation-fact material only; the stored graft annotation already records it. Manual-source anchor, no re-derive risk.",
+      "sources": [
+        "https://hunterxhunter.fandom.com/wiki/Episode_2_(1999)",
+        "https://www.animefillerlist.com/shows/hunter-x-hunter-1999"
+      ]
+    },
+    {
+      "episode": 18,
+      "field": "end_chapter",
+      "old": 7,
+      "new": null,
+      "why": "A1 + sliver ruling: correctly-typed filler row (Hunterpedia Adapted=Filler; AFL pure filler, the 18-20 island-hotel arc) carrying a 3-page sliver anchor - ch 7 p.9-11, Kurapika's Scarlet-Eyes reveal grafted out of the Phase 1 tunnel run. Non-monotonic by design (ep 17 ends ch 22); position is carried by the ep 17 and ep 21 anchors, and the stored graft annotation keeps the page facts. Remove batch15's continue point (-> 23) with it if stored. Manual-source anchor, no re-derive risk.",
+      "sources": [
+        "https://hunterxhunter.fandom.com/wiki/Episode_18_(1999)",
+        "https://www.animefillerlist.com/shows/hunter-x-hunter-1999"
+      ]
+    }
+  ],
+  "flags_for_sean": []
+}
