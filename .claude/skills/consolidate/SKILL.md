@@ -41,6 +41,7 @@ parse wouldn't produce. AFG: re-parse `ingest_afg_pages.raw_html` into
 - `npx tsx --env-file=.env.ingest scripts/ingest/afg-continua-apply.ts`
 - `npx tsx --env-file=.env.ingest scripts/ingest/audit-manga-coverage.ts`
 - `npx tsx --env-file=.env.ingest scripts/ingest/cleanup-flags.ts`
+- `npx tsx --env-file=.env.ingest scripts/ingest/heal-volume-boundaries.ts` — enforces the MONOTONIC-START rule (Sean's Sailor Moon "v3: chs 10-3", 2026-08-24) over stored rows: drops parse artifacts, re-closes neighbours, wipes wholesale-garbage tables. Idempotent; pairs with the `boundaries_degenerate` audit class.
 - `npx tsx --env-file=.env.ingest scripts/ingest/research/batch15/apply-parity-continues.ts` — re-stamps ANIME-PARITY continue points (Sean's C2 rule 2026-08-24); idempotent, converts any fresh anchors (new MU run-end pins, new research rows) that arrived without continue metadata.
 - If numbering/type rulings changed: re-run `resolveSeries` for affected series (stale-zone healing removes stranded rows).
 

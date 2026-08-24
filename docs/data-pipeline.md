@@ -425,6 +425,40 @@ anchor a research batch delivers carries the FULL shape, not just the end:
   its segment (Berserk 1997 adapts through ch 87 of its 1-94 segment;
   2016 starts at 95) is CORRECT data — the coverage-vs-segment display
   treatment is the parked segment-model pass.
+- **Volume boundaries: monotonic starts, or the row is not data (Sean's
+  Sailor Moon "v3: chs 10-3" report, 2026-08-24)**: every boundary's
+  chapter_end is DERIVED from the next volume's chapter_start, so a single
+  mis-parsed start writes an impossible row (end before start) AND mislabels
+  the volume of every chapter after it. Chapter starts must strictly increase
+  with volume number. Enforced in three places: parse-time gate
+  (`lib/wikipedia.ts boundariesWithDrops` drops offending volumes and reports
+  them; volumes-backfill flags the manga), stored-row healer
+  (`heal-volume-boundaries.ts` — a max-weight increasing subsequence picks
+  which row is the artifact rather than a greedy scan that evicts the good
+  neighbour; research rows are never dropped; a degenerate FINAL volume can
+  only be nulled; and a table whose coherent run is a minority is WIPED
+  wholesale, per the Ippo v61 principle, so ratio fallback takes over
+  honestly), and outcome-side audit class `boundaries_degenerate`. Healed on
+  landing: 29 rows across 11 manga; Urusei Yatsura's table (12 volumes all
+  claiming to start at ch 2) was wiped and flagged for research.
+- **An exact record outranks any derivation (Sean's Gintama ep-35 report,
+  2026-08-24)**: `MangaMapping.chapters` was ambiguous — a bare `"86"` meant
+  BOTH "this episode is exactly chapter 86" and "only the end is known,
+  derive the start" — so display derived where it should have obeyed, and
+  inside a reorder regime the derivation walked backwards into a jumped
+  block (ep 35's researched ch-86 record rendered as ch 48). MangaMapping now
+  carries `start` explicitly (assemble.ts sets it from the anchor;
+  null/absent = genuinely unknown). Every display site takes the record's own
+  start first, a span's first number second, derivation only last.
+- **A backwards-jumping successor never sets its predecessor's position
+  (the AoT-87 rule, extended 2026-08-24)**: the successor-span cap exists so
+  an interpolated row cannot overshoot past the next exact row's real start,
+  but a successor that reaches back PAST the predecessor's own start is a
+  reorder, and reorders never position their neighbours (Sailor Moon ep 73
+  re-treads chs 15-17 after ep 71 reached 16, and the cap dragged the
+  interpolated ep 72 down to "starts at 15" — before its predecessor).
+  mapping.ts canonEpStartCh now floors the cap at the predecessor's own
+  stated start; the regime check remains as the coarser first line.
 - **Partial boundary tables never stand in as totals (the Ippo v61 lesson,
   2026-08-24)**: publishedVolumes (boundaries.length) substitutes for a null
   total_volumes ONLY when the boundary table is complete from the manga's
@@ -1181,6 +1215,56 @@ Fixed weekly is correct.
    (2) gap tier 46 → (3) mu_pin sweep 65 → (4) automation pass →
    (5) arcs table → (6) parked design pass → (7) continue-read UI →
    (8) segment model (Sean's go).
+42. 📍 **BATCH 17 — GAP TIER, PARTIALLY APPLIED (2026-08-24; RESUME MARKER)**.
+   Roadmap item (2). Targets: the anchor_gap_research class (46) + the
+   frontier_tail_null class (7) = 53 series, research/batch17/
+   (PROTOCOL.md = batch-14 checkpoint-density lineage carrying the
+   2026-08-24 rulings; context.ts = the TARGETS table; out/*.json = the
+   cited record). **32 of 53 researched and APPLIED; 21 series still need
+   research** (see the RESUME list below) — apply-research-batch-17.ts is
+   re-runnable, so the rest slot in as a second pass.
+   APPLIED: 1114 anchors, 261 continue points, 310 annotations, 73 type
+   corrections (7 new EPISODE_TYPE_OVERRIDES entries: chrono-crusade,
+   kenichi 51, rave-master 41, kenshin-2023 34/44, sailor-moon 167-172,
+   twin-star 20 + 21-50, world-trigger 48 + 49-63), 6 curated repairs,
+   4 anchor DELETIONS, 6 boundary seeds, 8 curated zone acknowledgements.
+   Classes: anchor_gap_research 46→26, frontier_tail_null 7→3,
+   mu_pin_unverified 65→47, rearranged_zone_unanchored 0, ok_full 235,
+   ruling_violation 0, verify 220/220 0 failing.
+   NEW APPLY-SCRIPT CAPABILITIES (batch-16 lineage + these):
+   anchor DELETIONS via a curated map (the curated decision drives them,
+   NOT the agent's field shape — Toriko proposed 263→253 but the row is
+   filler, so A1 answers with removal); BOUNDARY_SEEDS (research-tier
+   volume rows); REORDER_REGIMES (documented out-of-order series derive
+   their per-episode `rearranged` annotations from the anchors that
+   ACTUALLY jump — never a blanket claim over a season; it also exposed
+   the shape trap that agents write regime spans as `episodes: [3, 201]`
+   meaning 3 THROUGH 201 while the contract is a LIST); CURATED_ZONE_ACK.
+   THREE RULE FIXES this batch forced, all in §10: monotonic volume-start
+   boundaries (+ heal-volume-boundaries.ts, boundaries_degenerate audit
+   class — 29 rows healed across 11 manga), exact-records-outrank-
+   derivation (MangaMapping.start), and the AoT-87 extension.
+   OPEN FOR SEAN: the MU FRANCHISE-CONFLATION pattern — 5 cases where a MU
+   coverage pin wrote a LATER entry's endpoint onto a scoped entry
+   (ace-ii ep52 = Season 2's ch 259; yowamushi ep38 = the season-5
+   franchise end 544 on an S1-only entry; gantz ep26 = the Gantz:O movie;
+   toriko ep147 = a volume past the frontier; prisma-illya ep42 = a
+   different manga entirely) — recommend a scope-aware gate in
+   applyMuFrontier; plus prisma-illya's Clear-Card-style split
+   recommendation and 30 informational bookmarks
+   (research/batch17/DECISIONS-FOR-SEAN.md).
+   RESUME — 21 series still to research (regenerate contexts with
+   `npx tsx --env-file=.env.ingest scripts/ingest/research/batch17/context.ts <outdir>`,
+   then one agent per series against batch17/PROTOCOL.md, writing
+   out/<id>.json; `ls batch17/out/` vs context.ts TARGETS is the live
+   diff): angel-heart, arms-alchemy, blade-of-the-immortal-ona,
+   bobobo-bo-bo-bobo, d-gray-man, detective-conan, detective-school-q,
+   emma-a-victorian-romance, eyeshield-21, fist-of-the-blue-sky,
+   fist-of-the-north-star, hayate-the-combat-butler, kinnikuman,
+   magic-knight-rayearth, project-arms, saint-seiya-knights-of-the-zodiac,
+   sket-dance, space-adventure-cobra, tokyo-mew-mew, x, zatch-bell.
+   Also open: 3 gintama reorder holes (eps 111, 120, 227) — its regime is
+   heavy enough that three episodes still lack exact records.
 41. ✅ **Consolidation pass (2026-08-24, post-batch-16 + count-space rule)**:
    Sean's Tokyo Ghoul 144/143 report became a catalog-wide rule (§10
    count-space vs number-space): applyMuFrontier converts band-crossing
