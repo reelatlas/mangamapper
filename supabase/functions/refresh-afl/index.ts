@@ -35129,7 +35129,8 @@ var COMMUNITY_COUNT_OVERRIDES = {
   "psycho-pass": { cap: 41, note: "First Inspector + films are watch-order events, not numbered episodes (Sean 2026-08-24)" },
   "monogatari-series": { cap: 100, note: "community numbering excludes the 3 Second Season recaps (Sean 2026-08-24)" },
   "high-school-dxd": { cap: 48, note: "HERO's Episode 0 is a mid-run special the community's continuous numbering excludes \u2014 order-only (Sean 2026-08-24)" },
-  "urusei-yatsura": { cap: 194, note: "MAL/AniList count the farewell RECAP special (rebroadcast of ep 44 + countdown) as #194; Wikipedia holds it at 193.5 unnumbered \u2014 recap rule (Monogatari precedent): excluded, finale = 194 (research-verified 2026-08-23)" }
+  "urusei-yatsura": { cap: 194, note: "MAL/AniList count the farewell RECAP special (rebroadcast of ep 44 + countdown) as #194; Wikipedia holds it at 193.5 unnumbered \u2014 recap rule (Monogatari precedent): excluded, finale = 194 (research-verified 2026-08-23)" },
+  "yu-yu-hakusho-ghostfiles": { cap: 112, note: "TV run = 112; trailing extras (2009 Picture Drama, 2018 OVAs Two Shot/All or Nothing) are order-only \u2014 AFL renumbers them after drops, so the CAP is the durable instrument (the drop[113] alone let All or Nothing re-enter as 113; research batch 11, 2026-08-23)" }
 };
 function applyCommunityCap(seriesId, row) {
   const o = COMMUNITY_COUNT_OVERRIDES[seriesId];
@@ -35159,6 +35160,23 @@ var EPISODE_TYPE_OVERRIDES = {
     ...range(136, 141, "anime-only-canon"),
     ...range(142, 149, "filler"),
     ...range(150, 157, "anime-only-canon")
+  },
+  //   boruto 221-286: five ANIME-CANON arcs between the Kawaki arc end
+  //   (ep 220 → ch 55) and Code's Assault (287-293 = chs 56-67) — Chunin
+  //   Re-Exam, Kirigakure war, Kawaki Academy, Labyrinth, Sasuke Retsuden.
+  //   TRAP: animefillerlist marks 282-293 'Manga Canon' crediting the
+  //   Sasuke Retsuden SPIN-OFF manga — trusting it would falsely advance
+  //   Boruto chapter progress (research batch 11, 2026-08-23:
+  //   narutopedia arc pages + animefillerguide + cbr).
+  "boruto-naruto-next-generations": range(221, 286, "anime-only-canon"),
+  //   gto: anime-original mid-series block + the original ending (caught
+  //   up to the manga) — fandom infoboxes list Manga Chapter(s) = N/A;
+  //   mangashed + wheredoestheanimeleaveoff call 42-43 non-canon
+  //   (research batch 11, 2026-08-23).
+  "gto-great-teacher-onizuka": {
+    ...range(22, 28, "anime-only-canon"),
+    ...range(34, 34, "anime-only-canon"),
+    ...range(42, 43, "anime-only-canon")
   }
 };
 var SOURCE_NUMBERING_SHIFTS = {

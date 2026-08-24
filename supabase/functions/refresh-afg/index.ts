@@ -35223,6 +35223,23 @@ var EPISODE_TYPE_OVERRIDES = {
     ...range(136, 141, "anime-only-canon"),
     ...range(142, 149, "filler"),
     ...range(150, 157, "anime-only-canon")
+  },
+  //   boruto 221-286: five ANIME-CANON arcs between the Kawaki arc end
+  //   (ep 220 → ch 55) and Code's Assault (287-293 = chs 56-67) — Chunin
+  //   Re-Exam, Kirigakure war, Kawaki Academy, Labyrinth, Sasuke Retsuden.
+  //   TRAP: animefillerlist marks 282-293 'Manga Canon' crediting the
+  //   Sasuke Retsuden SPIN-OFF manga — trusting it would falsely advance
+  //   Boruto chapter progress (research batch 11, 2026-08-23:
+  //   narutopedia arc pages + animefillerguide + cbr).
+  "boruto-naruto-next-generations": range(221, 286, "anime-only-canon"),
+  //   gto: anime-original mid-series block + the original ending (caught
+  //   up to the manga) — fandom infoboxes list Manga Chapter(s) = N/A;
+  //   mangashed + wheredoestheanimeleaveoff call 42-43 non-canon
+  //   (research batch 11, 2026-08-23).
+  "gto-great-teacher-onizuka": {
+    ...range(22, 28, "anime-only-canon"),
+    ...range(34, 34, "anime-only-canon"),
+    ...range(42, 43, "anime-only-canon")
   }
 };
 var SOURCE_NUMBERING_SHIFTS = {

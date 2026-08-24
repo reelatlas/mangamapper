@@ -777,6 +777,29 @@ Fixed weekly is correct.
    asterisk pending 49; stitch queue now Kingdom + RAG + Black Butler +
    Beastars + Magus Bride (all AniList-gated). ruling_violation 0;
    ok_full 238; tails hold at 7.
+30. ✅ **ITEM-4 BATCH 6 = research batch 11 (2026-08-23) + MU-pin rule**:
+   mu_pin_unverified audit class created (5-of-10 wrong-pin rate made
+   unverified solo pins a standing work-list; 84 at creation → 78 after
+   this batch; short series below the gap threshold now stay visible).
+   16 series, 95 full-record anchors, 15 continue points, 55 annotation
+   groups (apply-research-batch-11.ts). PIN VERDICTS: WRONG ×3 —
+   cells-at-work 30→25/v5 (MU counted the Special), gto pin sat on the
+   anime-original ep 42 (true end 41→105; eps 22-28/34/42-43 typed
+   anime-only-canon), yyh pin on a phantom row. VERIFIED+promoted ×7 —
+   summer-time-rendering 25→139 (complete adaptation), blood-blockade
+   24→30 (+ LOOSE ruling — anime-original White/Black thread),
+   inuyasha 193→558 (+9 Final Act interiors), ranking-of-kings 23→155
+   (single numbering proven), kamisama-kiss 30→149 (finale OVA really
+   adapts the ending; unadapted gaps 65-79 + 102-145 recorded),
+   shangri-la 50→126 (S3 Jan 2027), tybw part-3 interiors. YYH deep
+   finding: AFL renumbered trailing extras after our drop — the 2018
+   OVA re-entered as ep 113 → COMMUNITY cap 112 is the durable
+   instrument (cap added; OVAs recorded order-only WITH their real
+   adaptation data: Two Shot = vol-7 bonus, All or Nothing = 173-174).
+   Boruto 221-286 typed anime-only-canon (Sasuke Retsuden spin-off trap
+   documented) + Code's Assault 287-293 full records. Berserk ep-1-4
+   scheme fix (unnumbered prologue chapters — old annotation
+   superseded). anchor_gap 76→66; asterisk 61; ruling_violation 0.
 21. ✅ **Consolidation pass 2 (2026-08-23, post-Kenshin)**: every write path
    swept against the day's rules — filterEpisodeRows (caps + type
    overrides) now in ALL five episode writers (resolve, stitched-guard,
