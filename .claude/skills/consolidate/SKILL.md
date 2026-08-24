@@ -59,7 +59,7 @@ parse wouldn't produce. AFG: re-parse `ingest_afg_pages.raw_html` into
 ## 7. Frontend contract check
 - Episode-level display data comes ONLY from the hydrated series (getById); the shallow list item renders identity fields only.
 - Incomplete data degrades gracefully (pending / hidden / "48-60+"), never NaN or junk.
-- `npx tsc --noEmit -p .` and `npm run build` must pass.
+- `npx tsc -b --noEmit` (0 errors — `-p .` on the solution tsconfig checks NOTHING; the 2026-08-23 allBoundaries regression slipped through a vacuous pass) and `npm run build` must pass. Regenerate `src/integrations/supabase/types.ts` (`npx supabase gen types typescript --project-id ysjnqbnbtftjdepovpkt --schema public`) after any migration so the gate stays real.
 
 ## 8. Save point
 - Update the memory file (`mangamapper-data-sources.md`) as a REFRESH POINT: current census, new rules, open queues, next steps.

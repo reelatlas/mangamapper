@@ -3,7 +3,16 @@
 // SEQUEL edges forward (TV-ish formats only), and AUTO-FINALIZES only when
 // the chain's episode sum matches AFL's continuous numbering (±2) — anything
 // else flags for Sean. Aggregation rules: docs/data-pipeline.md §8.
-//   npx tsx --env-file=.env.ingest scripts/ingest/stitch.ts
+//
+// RULED EXTENSIONS (2026-08-23, the Kingdom/Beastars/Black Butler class):
+// AFL pages lag newer seasons, so an override chain may be RULED to run
+// beyond its AFL page (`ruledExtent` = the ruling's reasoning). Such chains
+// are standing candidates — every run re-asserts the ruled structure when it
+// drifts, flag or no flag — and their finalize gate only requires the chain
+// to COVER AFL's numbering (the ruling covers the excess). Episode rows
+// MERGE (AFL's range rewritten, rows beyond it — Wikipedia/AFG fills —
+// survive; §10 AFL-range merge rule), id/title stay stable (structure only).
+//   npx tsx --env-file=.env.ingest scripts/ingest/stitch.ts [--dry-run]
 
 import { db, startRun, finishRun, fileFlagOnce } from './lib/db';
 import { type AniListMedia } from './lib/anilist';
@@ -22,7 +31,7 @@ const HOLD = new Set<string>([]);
 // (Sean's ruling: Kizumonogatari movies belong inside Monogatari).
 const OVERRIDE_CHAINS: Record<
   string,
-  { ids: number[]; extras?: { id: number; after: number }[]; title?: string }
+  { ids: number[]; extras?: { id: number; after: number }[]; title?: string; ruledExtent?: string }
 > = {
   'jojos-bizarre-adventure-tv': { ids: [14719, 20474, 20799, 21450, 102883, 131942, 146722] },
   // Off & Monster Season (173533) intentionally absent: AFL's page (100 rows)
@@ -53,8 +62,66 @@ const OVERRIDE_CHAINS: Record<
   'berserk-2016': { ids: [21560, 97643] }, // 2016+2017 (Memorial is its PREQUEL edge — separate entry by ruling)
   'blade-immortal-2019': { ids: [109616] }, // 2019 ONA (match had landed on the 2008 TV)
   'hokuto-no-ken': { ids: [967, 1356] },
-  'black-butler': { ids: [4898, 6707, 20606] },
+  // RULED EXTENSIONS (2026-08-23; AniList back up after the 08-23 outage):
+  // the stitch queue's AFL-lag class — every id verified against AniList's
+  // SEQUEL graph this session; extras are order-only watch-order entries
+  // (movies count only when numbered, §10).
+  'black-butler': {
+    ids: [4898, 6707, 20606, 166715, 179054],
+    extras: [
+      { id: 20670, after: 20606 }, // Book of Murder OVAs — order-only (flag #853)
+      { id: 21425, after: 20606 }, // Book of the Atlantic film — order-only (flag #853)
+    ],
+    ruledExtent: 'AFL page = S1+S2+Circus (46); Public School Arc TV (2024, our 47-57) + Emerald Witch Arc TV (2025, our 58-70) aired — flag #853',
+  },
+  kingdom: {
+    ids: [12031, 17389, 113108, 140350, 155227, 190840],
+    ruledExtent: 'AFL page stops at S3 (104 rows); S5 (2024, our 130-142) + S6 (Oct-Dec 2025, our 143-155) aired — flag #814. Zoku-hen (204688) joins when it airs',
+  },
+  'rent-girlfriend': {
+    ids: [113813, 124410, 154745, 179344],
+    ruledExtent: 'AFL page = S1-S3 (36); S4 (ONA, Jul 2025, our 37-48) aired — flag #839. S5 joins when AniList lists it',
+  },
+  beastars: {
+    ids: [107660, 114194, 136880, 187267],
+    ruledExtent: 'AFL page = S1+S2 (24); FINAL SEASON Part 1 (Dec 2024, our 25-36) + Part 2 (Mar 2026, our 37-48) complete the manga — flag #854',
+  },
+  'ancient-magus-bride': {
+    ids: [98436, 154364, 166452],
+    extras: [{ id: 130713, after: 98436 }], // 2021 OVA 'Nishi no Shounen to Seiran no Kishi' — order-only between S1 and S2
+    ruledExtent: 'AFL page = S1 (24); SEASON 2 (2023, two cours, our 25-48) aired — batch-10 stitch flag',
+  },
+  'golden-kamuy': {
+    ids: [99699, 102977, 110355, 142343, 166521],
+    ruledExtent: 'AFL page = S1+S2 (24); S3 (2020, our 25-36) + S4 (2022, our 37-49) + Final Season (Jan-Mar 2026, our 50-62, finishes the manga) aired — flag #856. OVAs wired order-only once batch-14 research places them',
+  },
+  'time-i-got-reincarnated-slime': {
+    ids: [101280, 108511, 116742, 156822, 182205],
+    ruledExtent: 'AFL page = S1 (24); S2 (2021, two parts, our 25-48) + S3 (2024, our 49-72) + S4 (airing 2026, our 73-96) — docs §12.19e structure gap, MU out-of-space flag #728. OVA/films wired order-only once batch-14 research places them',
+  },
 };
+
+const DRY_RUN = process.argv.includes('--dry-run');
+
+// A ruled extension is "unchanged" when the series already carries exactly
+// the ruled component sequence (seasons + extras in order) — aired-count
+// drift on an airing tail is refreshStitchedVolatile's job, not a re-stitch.
+async function structureMatches(slug: string, ids: number[], extras?: { id: number; after: number }[]): Promise<boolean> {
+  const { data: s } = await db.from('series').select('id').eq('afl_slug', slug).maybeSingle();
+  if (!s) return false;
+  const { data: comps } = await db
+    .from('series_components')
+    .select('anilist_id, season_order')
+    .eq('series_id', s.id)
+    .order('season_order');
+  const want: number[] = [];
+  for (const id of ids) {
+    want.push(id);
+    for (const x of extras?.filter((e) => e.after === id) ?? []) want.push(x.id);
+  }
+  const have = (comps ?? []).map((c) => c.anilist_id as number);
+  return have.length === want.length && have.every((h, i) => h === want[i]);
+}
 
 async function main() {
   const runId = await startRun('resolve');
@@ -71,15 +138,27 @@ async function main() {
       .select('id, series_key, detail')
       .eq('kind', 'count_mismatch')
       .eq('status', 'open');
-    const candidates = (flags ?? [])
+    type Cand = { id: number | null; slug: string; afl: number; anilist: number };
+    const candidates: Cand[] = (flags ?? [])
       .map((f) => ({
-        id: f.id,
-        slug: f.series_key,
+        id: f.id as number,
+        slug: f.series_key as string,
         afl: (f.detail as { aflClassified?: number }).aflClassified ?? 0,
         anilist: (f.detail as { anilistAired?: number }).anilistAired ?? 0,
       }))
       .filter((c) => c.afl > c.anilist + 2 && !HOLD.has(c.slug));
-    console.log(`[stitch] ${candidates.length} candidates`);
+    // ruled extensions: standing candidates whenever the stored structure
+    // differs from the ruled chain (self-healing, no flag required)
+    const flagged = new Set(candidates.map((c) => c.slug));
+    for (const [slug, o] of Object.entries(OVERRIDE_CHAINS)) {
+      if (!o.ruledExtent || flagged.has(slug) || HOLD.has(slug)) continue;
+      if (await structureMatches(slug, o.ids, o.extras)) {
+        counters.unchanged++;
+        continue;
+      }
+      candidates.push({ id: null, slug, afl: 0, anilist: 0 });
+    }
+    console.log(`[stitch] ${candidates.length} candidates${DRY_RUN ? ' (dry run)' : ''}`);
 
     for (const cand of candidates) {
       try {
@@ -95,6 +174,7 @@ async function main() {
       const aflMax = page.episodes.reduce((m, e) => Math.max(m, e.number), 0);
 
       const override = OVERRIDE_CHAINS[cand.slug];
+      const ruled = !!override?.ruledExtent;
       let chain: AniListMedia[];
       let ambiguity: string | null = null;
       if (override) {
@@ -114,9 +194,13 @@ async function main() {
       const lagOk =
         chainAired > aflMax && chain.length > 0 && chainAired - aflMax <= aired(chain[chain.length - 1]);
 
-      if (ambiguity || (Math.abs(chainAired - aflMax) > 2 && !lagOk)) {
+      // a ruled extension only needs the chain to COVER AFL's numbering —
+      // the excess is exactly what the ruling asserts exists
+      const gateFails = ruled ? chainAired < aflMax - 2 : Math.abs(chainAired - aflMax) > 2 && !lagOk;
+      if (ambiguity || gateFails) {
         await fileFlagOnce(runId, cand.slug, 'resolve', 'count_mismatch', {
           stage: 'stitch',
+          ruledExtent: override?.ruledExtent ?? null,
           aflClassified: aflMax,
           chainAired,
           chain: chain.map((m) => ({ id: m.id, title: m.title.romaji, eps: m.episodes, aired: aired(m) })),
@@ -134,6 +218,21 @@ async function main() {
         series.title = override.title;
         series.id = slugify(override.title);
       }
+      const { data: old } = await db.from('series').select('id, title').eq('afl_slug', cand.slug).maybeSingle();
+      // a ruled extension is structure only: the canonical id/title an
+      // existing series already carries are stable (afg-extend's rule)
+      if (ruled && old) {
+        series.id = old.id;
+        series.title = old.title;
+      }
+      const { data: topRow } = await db.from('episodes').select('number').eq('series_id', old?.id ?? series.id).order('number', { ascending: false }).limit(1);
+      const ourMax = Math.max(aflMax, topRow?.[0]?.number ?? 0);
+      if (DRY_RUN) {
+        actions.push(
+          `DRY ${ruled ? 'EXTEND' : 'STITCH'} ${cand.slug} → ${series.id}: ${chain.length} seasons, ${chainAired} eps vs afl ${aflMax} (${chain.map((m) => m.id).join(' → ')})${override?.extras?.length ? ` + ${override.extras.length} order-only` : ''}`,
+        );
+        continue;
+      }
       Object.assign(
         series,
         await applyScope(cand.slug, {
@@ -143,15 +242,13 @@ async function main() {
           manga_start_chapter: series.manga_start_chapter,
         }),
       );
-      applyEpisodeFloor(series.id, series, aflMax);
+      applyEpisodeFloor(series.id, series, ourMax);
 
-      const { data: old } = await db.from('series').select('id').eq('afl_slug', cand.slug).maybeSingle();
       if (old && old.id !== series.id) await db.from('series').delete().eq('id', old.id);
       const { error: e1 } = await db.from('series').upsert(series);
       if (e1) throw new Error(`series (${cand.slug}): ${e1.message}`);
       await registerIds(series.id, { anilist: series.anilist_id, mal: series.mal_id, afl: cand.slug });
 
-      await db.from('episodes').delete().eq('series_id', series.id);
       // every episode writer goes through the per-series rulings (community
       // caps + type overrides) — a re-stitch must never resurrect rows or
       // types a ruling removed
@@ -162,6 +259,11 @@ async function main() {
         type: e.type,
         air_date: e.airDate,
       })));
+      // AFL-range merge (§10): rewrite only AFL's own (translated) numbering
+      // range — rows beyond it (AFG/Wikipedia fills on a ruled extension)
+      // survive the re-stitch
+      const aflTop = epRows.reduce((m, r) => Math.max(m, r.number), 0);
+      await db.from('episodes').delete().eq('series_id', series.id).lte('number', aflTop);
       for (let i = 0; i < epRows.length; i += 500) {
         const { error } = await db.from('episodes').insert(epRows.slice(i, i + 500));
         if (error) throw new Error(`episodes (${cand.slug}): ${error.message}`);
@@ -169,13 +271,15 @@ async function main() {
 
       await writeComponents(series.id, chain, cand.slug, override?.extras);
 
-      await db
-        .from('ingest_flags')
-        .update({ status: 'dismissed', resolved_at: new Date().toISOString() })
-        .eq('id', cand.id);
+      if (cand.id != null) {
+        await db
+          .from('ingest_flags')
+          .update({ status: 'dismissed', resolved_at: new Date().toISOString() })
+          .eq('id', cand.id);
+      }
       counters.changed++;
       actions.push(
-        `STITCHED ${cand.slug} → ${series.id}: ${chain.length} seasons, ${chainAired} eps (${chain.map((m) => m.id).join(' → ')})`,
+        `${ruled ? 'EXTENDED' : 'STITCHED'} ${cand.slug} → ${series.id}: ${chain.length} seasons, ${chainAired} eps (${chain.map((m) => m.id).join(' → ')})${override?.extras?.length ? ` + ${override.extras.length} order-only` : ''}`,
       );
       } catch (err) {
         // one candidate's failure (e.g. AniList outage on a cache miss) must
