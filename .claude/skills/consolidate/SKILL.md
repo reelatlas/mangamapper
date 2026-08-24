@@ -48,6 +48,7 @@ parse wouldn't produce. AFG: re-parse `ingest_afg_pages.raw_html` into
 `npx tsx --env-file=.env.ingest scripts/ingest/audit-ui-truth.ts`
 - **ruling_violation MUST be 0** — anything else means a writer bypassed a gate; fix the writer, never the data alone.
 - anchor_nonmonotonic / anchor_beyond_chapter_space: each hit is triaged (real reorder → annotate; junk → gate + delete; ruled → suppression), never left unexplained.
+- anchor_beyond_display_total (Sean's Tokyo Ghoul 144/143 rule, 2026-08-24): any END/START/CONTINUE above the same-edition-band display total is a count-space value in a number-space instrument — convert to the chapter number (applyMuFrontier does this for MU pins at the writer; other sources: fix the value + note the conversion), never leave one standing.
 - Compare every class count to the previous census; explain each delta.
 - Review-queue classes (special_numbered_unreviewed, fractional_unmodeled, asterisk_unreviewed) are Sean's — list them, RESEARCH each item first (web, 2+ sources, citations), present verdicts with context, never raw numbers.
 

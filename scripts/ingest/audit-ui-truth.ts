@@ -25,7 +25,7 @@ async function pageAll(table: string, select: string): Promise<any[]> {
 async function main() {
   const series = await pageAll('series', 'id, source_type, manga_status, status, aired_episodes, total_episodes, total_chapters, total_volumes, latest_known_chapters, manga_anilist_id, manga_start_chapter, mapping_mode, asterisk_review');
   const episodes = await pageAll('episodes', 'series_id, number, type, title, air_date');
-  const anchors = await pageAll('chapter_anchors', 'series_id, episode, chapter, start_chapter, volume, source');
+  const anchors = await pageAll('chapter_anchors', 'series_id, episode, chapter, start_chapter, continue_chapter, volume, source');
   const comps = await pageAll('series_components', 'series_id, episode_end, episode_start, anilist_id, kind, label');
   const bounds = await pageAll('volume_boundaries', 'manga_anilist_id, volume, chapter_start, chapter_end');
 
@@ -383,6 +383,16 @@ async function main() {
         const dTotal = displayTotalOf.get(sid);
         if (dTotal != null && a.chapter > dTotal) {
           classes.anchor_beyond_display_total.push(`${sid}: ep ${a.episode}→ch${a.chapter} (${a.source}) exceeds the DISPLAY total ${dTotal} (same-edition band) — count-space value in a number-space instrument`);
+        }
+        // same guard for the OTHER position instruments on the row: START
+        // lives strictly inside the run (≤ display total); CONTINUE may sit
+        // exactly one past it (post_series = coverage+1, "you're done"), but
+        // never further — a bigger value is the same count-space poison.
+        if (dTotal != null && a.start_chapter != null && a.start_chapter > dTotal) {
+          classes.anchor_beyond_display_total.push(`${sid}: ep ${a.episode} START ch${a.start_chapter} (${a.source}) exceeds the DISPLAY total ${dTotal} (same-edition band)`);
+        }
+        if (dTotal != null && a.continue_chapter != null && a.continue_chapter > dTotal + 1) {
+          classes.anchor_beyond_display_total.push(`${sid}: ep ${a.episode} CONTINUE ch${a.continue_chapter} (${a.source}) exceeds the DISPLAY total ${dTotal}+1 (same-edition band)`);
         }
         // a DERIVED fractional-chapter anchor is a bonus/Memoire chapter
         // mis-scraped from a source chart (the Vanitas ep-5 → ch-15.5 case,
