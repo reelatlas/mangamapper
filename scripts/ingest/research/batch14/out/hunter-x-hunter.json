@@ -1,0 +1,599 @@
+{
+  "series_id": "hunter-x-hunter",
+  "summary": "Eps 1-30 of the 1999 series adapt manga chs 1-37 (vols 1-5): the whole Hunter Exam up to Killua's disqualification, with ep 31 picking up ch 38 exactly as the stored anchor says. Hunterpedia's 1999 episode pages carry a page-level 'Adapted' field for every episode, which gives exact start/end pages; every anchor also matches the reverse mapping on the Hunterpedia chapter pages, the Wikipedia episode summaries against Wikipedia's chapter titles, and AniB Productions' independent per-phase episode ranges. Padding is heavy but mostly intra-episode: original Whale Island port episode (2), Matthew/bus (4), Kiriko extension (5), Tonpa sap trap (6-7), Anita (11-12), a wholly original island-hotel arc (18-20) that displaces the lot drawing to ep 21, Gon's recovery days (24), the written test (26), and an extended, reordered Final Phase where Kurapika fights Hisoka before Gon fights Hanzo (27-29). Surprises: ep 7 (typed filler) actually adapts most of ch 7 plus the ch 8 impostor cliffhanger per Hunterpedia (type correction proposed, flagged); Kurapika's Kurta backstory is grafted from ch 7 into filler ep 18. 26 anchors (eps 1, 3-17, 21-30; filler 2, 18-20 skipped), 24 high / 2 medium (7, 8); no repairs.",
+  "anchors": [
+    {
+      "episode": 1,
+      "end_chapter": 1,
+      "start_chapter": 1,
+      "chapters_adapted": "1 (p.4-22, 25-30)",
+      "volume": 1,
+      "confidence": "high",
+      "note": "Whale Island: Kite/foxbear flashback + Master of the Swamp (ch 1 'The Day of Departure'); manga order of catch vs flashback swapped, farewell moved to a river; ch 1 p.31-32 (boarding) shown in filler ep 2, p.23-24 cut.",
+      "sources": [
+        "https://hunterxhunter.fandom.com/wiki/Episode_1_(1999)",
+        "https://hunterxhunter.fandom.com/wiki/Chapter_1",
+        "https://en.wikipedia.org/wiki/List_of_Hunter_%C3%97_Hunter_(1999_TV_series)_episodes",
+        "https://en.wikipedia.org/wiki/List_of_Hunter_%C3%97_Hunter_chapters",
+        "https://everythingbeginswithyourheart.blogspot.com/2020/08/hunter-x-hunter-anime-1999-2011.html",
+        "https://anibproductions.wordpress.com/2017/03/24/hunter-x-hunter-1999-vs-2011-part-1-the-hunter-exam-pt-1/"
+      ]
+    },
+    {
+      "episode": 3,
+      "end_chapter": 2,
+      "start_chapter": 2,
+      "chapters_adapted": "2 (p.2-23)",
+      "volume": 1,
+      "confidence": "high",
+      "note": "Ship storm, Kurapika/Leorio/Gon and the Captain's question = ch 2 'An Encounter in the Storm' (title match). Ep 2 between is filler (port-town Leorio meeting).",
+      "sources": [
+        "https://hunterxhunter.fandom.com/wiki/Episode_3_(1999)",
+        "https://hunterxhunter.fandom.com/wiki/Chapter_2",
+        "https://en.wikipedia.org/wiki/List_of_Hunter_%C3%97_Hunter_(1999_TV_series)_episodes",
+        "https://en.wikipedia.org/wiki/List_of_Hunter_%C3%97_Hunter_chapters",
+        "https://everythingbeginswithyourheart.blogspot.com/2020/08/hunter-x-hunter-anime-1999-2011.html",
+        "https://anibproductions.wordpress.com/2017/03/24/hunter-x-hunter-1999-vs-2011-part-1-the-hunter-exam-pt-1/"
+      ]
+    },
+    {
+      "episode": 4,
+      "end_chapter": 3,
+      "start_chapter": 3,
+      "chapters_adapted": "3 (p.2-19)",
+      "volume": 1,
+      "confidence": "high",
+      "note": "Dolle Harbor, lone cedar detour, riddle = ch 3 'The Ultimate Choice'; Matthew and Leorio's bus laps are anime-original (mixed).",
+      "sources": [
+        "https://hunterxhunter.fandom.com/wiki/Episode_4_(1999)",
+        "https://hunterxhunter.fandom.com/wiki/Chapter_3",
+        "https://en.wikipedia.org/wiki/List_of_Hunter_%C3%97_Hunter_(1999_TV_series)_episodes",
+        "https://en.wikipedia.org/wiki/List_of_Hunter_%C3%97_Hunter_chapters",
+        "https://everythingbeginswithyourheart.blogspot.com/2020/08/hunter-x-hunter-anime-1999-2011.html",
+        "https://anibproductions.wordpress.com/2017/03/24/hunter-x-hunter-1999-vs-2011-part-1-the-hunter-exam-pt-1/"
+      ]
+    },
+    {
+      "episode": 5,
+      "end_chapter": 4,
+      "start_chapter": 4,
+      "chapters_adapted": "4 (p.1-21)",
+      "volume": 1,
+      "confidence": "high",
+      "note": "Kiriko family navigators = ch 4 'Kiriko' (title match); fandom lists an original 'Filler' segment after ch 4 (mixed). EBWYH independently maps 1999 eps 1-5 = manga chs 1-4.",
+      "sources": [
+        "https://hunterxhunter.fandom.com/wiki/Episode_5_(1999)",
+        "https://hunterxhunter.fandom.com/wiki/Chapter_4",
+        "https://en.wikipedia.org/wiki/List_of_Hunter_%C3%97_Hunter_(1999_TV_series)_episodes",
+        "https://en.wikipedia.org/wiki/List_of_Hunter_%C3%97_Hunter_chapters",
+        "https://everythingbeginswithyourheart.blogspot.com/2020/08/hunter-x-hunter-anime-1999-2011.html",
+        "https://anibproductions.wordpress.com/2017/03/24/hunter-x-hunter-1999-vs-2011-part-1-the-hunter-exam-pt-1/"
+      ]
+    },
+    {
+      "episode": 6,
+      "end_chapter": 6,
+      "start_chapter": 5,
+      "chapters_adapted": "5 (p.2-17), 6 (p.4, 7-19), 7 (p.1-2)",
+      "volume": 1,
+      "confidence": "high",
+      "note": "Zaban City entrance, Tonpa, Satotz's tunnel run, Killua = chs 5-6 'The First Phase Begins 1-2'; ends on the first 2 pages of ch 7 (fork/Leorio flagging). Tonpa's laxative-juice gag replaced by the original sap-trap twist (mixed).",
+      "sources": [
+        "https://hunterxhunter.fandom.com/wiki/Episode_6_(1999)",
+        "https://hunterxhunter.fandom.com/wiki/Chapter_6",
+        "https://en.wikipedia.org/wiki/List_of_Hunter_%C3%97_Hunter_(1999_TV_series)_episodes",
+        "https://en.wikipedia.org/wiki/List_of_Hunter_%C3%97_Hunter_chapters",
+        "https://anibproductions.wordpress.com/2017/03/24/hunter-x-hunter-1999-vs-2011-part-1-the-hunter-exam-pt-1/"
+      ]
+    },
+    {
+      "episode": 7,
+      "end_chapter": 7,
+      "start_chapter": 7,
+      "chapters_adapted": "7 (p.3-9, 12-19), 8 (p.2-4)",
+      "volume": 1,
+      "confidence": "medium",
+      "note": "Typed filler in our rows/AFL, but Hunterpedia's page-level field has it adapting most of ch 7 'Respective Reasons' (Leorio's doctor motive, catching up) plus ch 8 p.2-4 (the impostor examiner cliffhanger); the hallucination framing is original. Ch 7 p.10-11 (Kurapika's Kurta backstory) relocated to ep 18. See type_corrections/flags.",
+      "sources": [
+        "https://hunterxhunter.fandom.com/wiki/Episode_7_(1999)",
+        "https://hunterxhunter.fandom.com/wiki/Chapter_7",
+        "https://en.wikipedia.org/wiki/List_of_Hunter_%C3%97_Hunter_(1999_TV_series)_episodes",
+        "https://en.wikipedia.org/wiki/List_of_Hunter_%C3%97_Hunter_chapters",
+        "https://anibproductions.wordpress.com/2017/03/24/hunter-x-hunter-1999-vs-2011-part-1-the-hunter-exam-pt-1/",
+        "https://www.animefillerlist.com/shows/hunter-x-hunter-1999"
+      ]
+    },
+    {
+      "episode": 8,
+      "end_chapter": 10,
+      "start_chapter": 8,
+      "chapters_adapted": "8 (p.5-19), 9, 10 (p.1-10)",
+      "volume": 2,
+      "confidence": "medium",
+      "note": "Hisoka's card test of the examiners (ch 8), Milsy Wetlands + Hisoka playing examiner (ch 9 'A Struggle in the Mist'), and the end of Phase 1 / arrival at Visca Forest Preserve (ch 10 p.1-10). END=10 rests on Hunterpedia's page split (Wikipedia summary confirms chs 8-9); Pokkle replaces Cherry (original).",
+      "sources": [
+        "https://hunterxhunter.fandom.com/wiki/Episode_8_(1999)",
+        "https://hunterxhunter.fandom.com/wiki/Chapter_10",
+        "https://en.wikipedia.org/wiki/List_of_Hunter_%C3%97_Hunter_(1999_TV_series)_episodes",
+        "https://en.wikipedia.org/wiki/List_of_Hunter_%C3%97_Hunter_chapters",
+        "https://anibproductions.wordpress.com/2017/03/24/hunter-x-hunter-1999-vs-2011-part-1-the-hunter-exam-pt-1/"
+      ]
+    },
+    {
+      "episode": 9,
+      "end_chapter": 11,
+      "start_chapter": 11,
+      "chapters_adapted": "10 (p.11-19), 11",
+      "volume": 2,
+      "confidence": "high",
+      "note": "Phase 2: Buhara's pork, Menchi's sushi, everyone fails = ch 10 'An Unexpected Task' second half + ch 11 'The Inevitable Outcome'. START=11 by majority rule (ch 10 tail is 9 pages).",
+      "sources": [
+        "https://hunterxhunter.fandom.com/wiki/Episode_9_(1999)",
+        "https://hunterxhunter.fandom.com/wiki/Chapter_11",
+        "https://en.wikipedia.org/wiki/List_of_Hunter_%C3%97_Hunter_(1999_TV_series)_episodes",
+        "https://en.wikipedia.org/wiki/List_of_Hunter_%C3%97_Hunter_chapters",
+        "https://anibproductions.wordpress.com/2017/03/31/hunter-x-hunter-1999-vs-2011-part-2-the-hunter-exam-pt-2/"
+      ]
+    },
+    {
+      "episode": 10,
+      "end_chapter": 12,
+      "start_chapter": 12,
+      "chapters_adapted": "12 (p.2-19)",
+      "volume": 2,
+      "confidence": "high",
+      "note": "Netero arrives, Split Mountain spider-eagle eggs = ch 12 'The Chairman Awaits' (title match). Todo jumping and the spider-eagle attack are original additions.",
+      "sources": [
+        "https://hunterxhunter.fandom.com/wiki/Episode_10_(1999)",
+        "https://hunterxhunter.fandom.com/wiki/Chapter_12",
+        "https://en.wikipedia.org/wiki/List_of_Hunter_%C3%97_Hunter_(1999_TV_series)_episodes",
+        "https://en.wikipedia.org/wiki/List_of_Hunter_%C3%97_Hunter_chapters",
+        "https://anibproductions.wordpress.com/2017/03/31/hunter-x-hunter-1999-vs-2011-part-2-the-hunter-exam-pt-2/"
+      ]
+    },
+    {
+      "episode": 11,
+      "end_chapter": 13,
+      "start_chapter": 13,
+      "chapters_adapted": "13 (p.2-18)",
+      "volume": 2,
+      "confidence": "high",
+      "note": "Airship; Netero's ball game begins = ch 13 'A Game at Midnight, Part 1'. Anita stowaway subplot is anime-original (mixed).",
+      "sources": [
+        "https://hunterxhunter.fandom.com/wiki/Episode_11_(1999)",
+        "https://hunterxhunter.fandom.com/wiki/Chapter_13",
+        "https://en.wikipedia.org/wiki/List_of_Hunter_%C3%97_Hunter_(1999_TV_series)_episodes",
+        "https://en.wikipedia.org/wiki/List_of_Hunter_%C3%97_Hunter_chapters",
+        "https://anibproductions.wordpress.com/2017/03/31/hunter-x-hunter-1999-vs-2011-part-2-the-hunter-exam-pt-2/"
+      ]
+    },
+    {
+      "episode": 12,
+      "end_chapter": 14,
+      "start_chapter": 14,
+      "chapters_adapted": "13 (p.18-19), 14",
+      "volume": 2,
+      "confidence": "high",
+      "note": "Ball game continues: Killua quits, Gon satisfied = ch 14 'A Game at Midnight, Part 2'. Anita resolution original (mixed); game moved outdoors.",
+      "sources": [
+        "https://hunterxhunter.fandom.com/wiki/Episode_12_(1999)",
+        "https://hunterxhunter.fandom.com/wiki/Chapter_14",
+        "https://en.wikipedia.org/wiki/List_of_Hunter_%C3%97_Hunter_(1999_TV_series)_episodes",
+        "https://en.wikipedia.org/wiki/List_of_Hunter_%C3%97_Hunter_chapters",
+        "https://anibproductions.wordpress.com/2017/03/31/hunter-x-hunter-1999-vs-2011-part-2-the-hunter-exam-pt-2/"
+      ]
+    },
+    {
+      "episode": 13,
+      "end_chapter": 16,
+      "start_chapter": 15,
+      "chapters_adapted": "15 (p.2-19), 16, 17 (p.1-3)",
+      "volume": 2,
+      "confidence": "high",
+      "note": "Trick Tower descent, majority-rule path, team of five, Tonpa vs Bendot surrender = ch 15 'The Path of Majority Rules' + ch 16 'Enter the Taskmasters', ending on the first 3 pages of ch 17.",
+      "sources": [
+        "https://hunterxhunter.fandom.com/wiki/Episode_13_(1999)",
+        "https://hunterxhunter.fandom.com/wiki/Chapter_16",
+        "https://en.wikipedia.org/wiki/List_of_Hunter_%C3%97_Hunter_(1999_TV_series)_episodes",
+        "https://en.wikipedia.org/wiki/List_of_Hunter_%C3%97_Hunter_chapters",
+        "https://anibproductions.wordpress.com/2017/03/31/hunter-x-hunter-1999-vs-2011-part-2-the-hunter-exam-pt-2/"
+      ]
+    },
+    {
+      "episode": 14,
+      "end_chapter": 19,
+      "start_chapter": 17,
+      "chapters_adapted": "17 (p.4-19), 18 (p.1, 3-19), 19 (p.1, 3-10)",
+      "volume": 3,
+      "confidence": "high",
+      "note": "Gon vs Sedokan candles (ch 18 'The Two Aces in the Hole') and Kurapika vs Majtani KO (ch 19 first half). Ends mid-ch 19.",
+      "sources": [
+        "https://hunterxhunter.fandom.com/wiki/Episode_14_(1999)",
+        "https://hunterxhunter.fandom.com/wiki/Chapter_19",
+        "https://en.wikipedia.org/wiki/List_of_Hunter_%C3%97_Hunter_(1999_TV_series)_episodes",
+        "https://en.wikipedia.org/wiki/List_of_Hunter_%C3%97_Hunter_chapters",
+        "https://anibproductions.wordpress.com/2017/03/31/hunter-x-hunter-1999-vs-2011-part-2-the-hunter-exam-pt-2/"
+      ]
+    },
+    {
+      "episode": 15,
+      "end_chapter": 20,
+      "start_chapter": 20,
+      "chapters_adapted": "19 (p.11-19), 20 (p.2-14)",
+      "volume": 3,
+      "confidence": "high",
+      "note": "Majtani plays dead; Leorio's bets with the prisoners = ch 19 tail + ch 20 'Gambling Time'. START=20 by majority rule; ends mid-ch 20 before Leroute's rock-paper-scissors.",
+      "sources": [
+        "https://hunterxhunter.fandom.com/wiki/Episode_15_(1999)",
+        "https://hunterxhunter.fandom.com/wiki/Chapter_20",
+        "https://en.wikipedia.org/wiki/List_of_Hunter_%C3%97_Hunter_(1999_TV_series)_episodes",
+        "https://en.wikipedia.org/wiki/List_of_Hunter_%C3%97_Hunter_chapters",
+        "https://anibproductions.wordpress.com/2017/03/31/hunter-x-hunter-1999-vs-2011-part-2-the-hunter-exam-pt-2/"
+      ]
+    },
+    {
+      "episode": 16,
+      "end_chapter": 21,
+      "start_chapter": 21,
+      "chapters_adapted": "20 (p.15-19), 21 (p.1-18)",
+      "volume": 3,
+      "confidence": "high",
+      "note": "Leorio vs Leroute RPS (ch 20 end) and Killua rips out Johness's heart = ch 21 'Resolution' (title 'Rock x Scissors x Heart').",
+      "sources": [
+        "https://hunterxhunter.fandom.com/wiki/Episode_16_(1999)",
+        "https://hunterxhunter.fandom.com/wiki/Chapter_21",
+        "https://en.wikipedia.org/wiki/List_of_Hunter_%C3%97_Hunter_(1999_TV_series)_episodes",
+        "https://en.wikipedia.org/wiki/List_of_Hunter_%C3%97_Hunter_chapters",
+        "https://anibproductions.wordpress.com/2017/03/31/hunter-x-hunter-1999-vs-2011-part-2-the-hunter-exam-pt-2/"
+      ]
+    },
+    {
+      "episode": 17,
+      "end_chapter": 22,
+      "start_chapter": 22,
+      "chapters_adapted": "21 (p.19), 22 (p.2-18)",
+      "volume": 3,
+      "confidence": "high",
+      "note": "Long path vs short path, axes through the wall = ch 22 'The Last Question'. Ch 22 p.18-19 (lot drawing) is reprised in ep 21 after the filler island arc (eps 18-20).",
+      "sources": [
+        "https://hunterxhunter.fandom.com/wiki/Episode_17_(1999)",
+        "https://hunterxhunter.fandom.com/wiki/Chapter_22",
+        "https://en.wikipedia.org/wiki/List_of_Hunter_%C3%97_Hunter_(1999_TV_series)_episodes",
+        "https://en.wikipedia.org/wiki/List_of_Hunter_%C3%97_Hunter_chapters",
+        "https://anibproductions.wordpress.com/2017/03/31/hunter-x-hunter-1999-vs-2011-part-2-the-hunter-exam-pt-2/"
+      ]
+    },
+    {
+      "episode": 21,
+      "end_chapter": 24,
+      "start_chapter": 23,
+      "chapters_adapted": "22 (p.18-19), 23 (p.1, 4-19), 24 (p.1, 3-19), 25 (p.10)",
+      "volume": 3,
+      "confidence": "high",
+      "note": "Fourth Phase rules, Zevil Island landing, Gon's target is Hisoka, fishing-rod bird training = ch 23 'Two Enemies' + ch 24 'Crash Course'; lots drawn aboard the ship instead of outside Trick Tower.",
+      "sources": [
+        "https://hunterxhunter.fandom.com/wiki/Episode_21_(1999)",
+        "https://hunterxhunter.fandom.com/wiki/Chapter_24",
+        "https://en.wikipedia.org/wiki/List_of_Hunter_%C3%97_Hunter_(1999_TV_series)_episodes",
+        "https://en.wikipedia.org/wiki/List_of_Hunter_%C3%97_Hunter_chapters",
+        "https://anibproductions.wordpress.com/2017/03/31/hunter-x-hunter-1999-vs-2011-part-2-the-hunter-exam-pt-2/"
+      ]
+    },
+    {
+      "episode": 22,
+      "end_chapter": 26,
+      "start_chapter": 25,
+      "chapters_adapted": "25 (p.1-9, 11-19), 26 (p.2-3, 6-19)",
+      "volume": 3,
+      "confidence": "high",
+      "note": "Hemotropic butterflies, Tonpa/Sommy captured, Gittarackur's true face, Hisoka sets out to hunt = ch 25 'The Second Day' + ch 26 'The Night Before the Showdown'. Ch 26 p.4-5 relocated to ep 24.",
+      "sources": [
+        "https://hunterxhunter.fandom.com/wiki/Episode_22_(1999)",
+        "https://hunterxhunter.fandom.com/wiki/Chapter_26",
+        "https://en.wikipedia.org/wiki/List_of_Hunter_%C3%97_Hunter_(1999_TV_series)_episodes",
+        "https://en.wikipedia.org/wiki/List_of_Hunter_%C3%97_Hunter_chapters",
+        "https://anibproductions.wordpress.com/2017/03/31/hunter-x-hunter-1999-vs-2011-part-2-the-hunter-exam-pt-2/"
+      ]
+    },
+    {
+      "episode": 23,
+      "end_chapter": 28,
+      "start_chapter": 27,
+      "chapters_adapted": "27 (p.1, 3-19), 28 (p.1-18)",
+      "volume": 4,
+      "confidence": "high",
+      "note": "Gon takes Hisoka's badge, Geretta's dart, Hisoka returns both badges and punches Gon = ch 27 'A Volatile Situation' + ch 28 'A Huge Favor'.",
+      "sources": [
+        "https://hunterxhunter.fandom.com/wiki/Episode_23_(1999)",
+        "https://hunterxhunter.fandom.com/wiki/Chapter_28",
+        "https://en.wikipedia.org/wiki/List_of_Hunter_%C3%97_Hunter_(1999_TV_series)_episodes",
+        "https://en.wikipedia.org/wiki/List_of_Hunter_%C3%97_Hunter_chapters",
+        "https://anibproductions.wordpress.com/2017/03/31/hunter-x-hunter-1999-vs-2011-part-2-the-hunter-exam-pt-2/"
+      ]
+    },
+    {
+      "episode": 24,
+      "end_chapter": 30,
+      "start_chapter": 29,
+      "chapters_adapted": "26 (p.4-5), 28 (p.19), 29 (p.2-19), 30 (p.2-16)",
+      "volume": 4,
+      "confidence": "high",
+      "note": "Killua vs the Amori brothers = ch 29 'Killua's Case'; Leorio enters Ponzu's snake cave = ch 30 'The Slithering Trap' (title match). Gon's multi-day recovery (dreams, rabbit, abandoning the badges) is original padding; ends mid-ch 30.",
+      "sources": [
+        "https://hunterxhunter.fandom.com/wiki/Episode_24_(1999)",
+        "https://hunterxhunter.fandom.com/wiki/Chapter_30",
+        "https://en.wikipedia.org/wiki/List_of_Hunter_%C3%97_Hunter_(1999_TV_series)_episodes",
+        "https://en.wikipedia.org/wiki/List_of_Hunter_%C3%97_Hunter_chapters",
+        "https://anibproductions.wordpress.com/2017/03/31/hunter-x-hunter-1999-vs-2011-part-2-the-hunter-exam-pt-2/"
+      ]
+    },
+    {
+      "episode": 25,
+      "end_chapter": 31,
+      "start_chapter": 31,
+      "chapters_adapted": "30 (p.16-19), 31 (p.2-19), 32 (p.1-2)",
+      "volume": 4,
+      "confidence": "high",
+      "note": "Cave escape with the antidote and sleeping gas, Fourth Phase ends = ch 31 'By the Skin of Their Teeth'; ch 32 p.1-2 tail. Gon retrieving his abandoned badges is original.",
+      "sources": [
+        "https://hunterxhunter.fandom.com/wiki/Episode_25_(1999)",
+        "https://hunterxhunter.fandom.com/wiki/Chapter_31",
+        "https://en.wikipedia.org/wiki/List_of_Hunter_%C3%97_Hunter_(1999_TV_series)_episodes",
+        "https://en.wikipedia.org/wiki/List_of_Hunter_%C3%97_Hunter_chapters",
+        "https://anibproductions.wordpress.com/2017/03/31/hunter-x-hunter-1999-vs-2011-part-2-the-hunter-exam-pt-2/"
+      ]
+    },
+    {
+      "episode": 26,
+      "end_chapter": 32,
+      "start_chapter": 32,
+      "chapters_adapted": "32 (p.3-19), 33 (p.1-3)",
+      "volume": 4,
+      "confidence": "high",
+      "note": "Netero's interviews and bracket reveal = ch 32 'And the Final Test...?' + ch 33 p.1-3; the written 'paper test' and Killua's interview lie are original (mixed).",
+      "sources": [
+        "https://hunterxhunter.fandom.com/wiki/Episode_26_(1999)",
+        "https://hunterxhunter.fandom.com/wiki/Chapter_32",
+        "https://en.wikipedia.org/wiki/List_of_Hunter_%C3%97_Hunter_(1999_TV_series)_episodes",
+        "https://en.wikipedia.org/wiki/List_of_Hunter_%C3%97_Hunter_chapters",
+        "https://anibproductions.wordpress.com/2017/03/31/hunter-x-hunter-1999-vs-2011-part-2-the-hunter-exam-pt-2/"
+      ]
+    },
+    {
+      "episode": 27,
+      "end_chapter": 33,
+      "start_chapter": 33,
+      "chapters_adapted": "33 (p.4-8), 35 (p.13, 16)",
+      "volume": 4,
+      "confidence": "high",
+      "note": "Kurapika vs Hisoka fought first and greatly extended (manga shows only its declaration ch 33 p.4-8 and its end in Satotz's recap ch 35); Kurapika becomes the first to pass. Ends mid-ch 33 before Gon vs Hanzo. AniB confirms the swap.",
+      "sources": [
+        "https://hunterxhunter.fandom.com/wiki/Episode_27_(1999)",
+        "https://hunterxhunter.fandom.com/wiki/Chapter_33",
+        "https://en.wikipedia.org/wiki/List_of_Hunter_%C3%97_Hunter_(1999_TV_series)_episodes",
+        "https://en.wikipedia.org/wiki/List_of_Hunter_%C3%97_Hunter_chapters",
+        "https://anibproductions.wordpress.com/2017/03/31/hunter-x-hunter-1999-vs-2011-part-2-the-hunter-exam-pt-2/"
+      ]
+    },
+    {
+      "episode": 28,
+      "end_chapter": 34,
+      "start_chapter": 34,
+      "chapters_adapted": "33 (p.9-19), 34 (p.1-15)",
+      "volume": 4,
+      "confidence": "high",
+      "note": "Gon vs Hanzo: broken arm, refusal to concede = ch 33 'The Final Test Begins!' tail + ch 34 first 15 pages; ends with Hanzo's blade at Gon's forehead (mid-ch 34). START=34 by majority rule.",
+      "sources": [
+        "https://hunterxhunter.fandom.com/wiki/Episode_28_(1999)",
+        "https://hunterxhunter.fandom.com/wiki/Chapter_34",
+        "https://en.wikipedia.org/wiki/List_of_Hunter_%C3%97_Hunter_(1999_TV_series)_episodes",
+        "https://en.wikipedia.org/wiki/List_of_Hunter_%C3%97_Hunter_chapters",
+        "https://anibproductions.wordpress.com/2017/03/31/hunter-x-hunter-1999-vs-2011-part-2-the-hunter-exam-pt-2/"
+      ]
+    },
+    {
+      "episode": 29,
+      "end_chapter": 35,
+      "start_chapter": 35,
+      "chapters_adapted": "34 (p.15-19), 35 (p.2-13, 17-19)",
+      "volume": 4,
+      "confidence": "high",
+      "note": "Hanzo forfeits (ch 34 'The First Candidate Accepted!?'), Gon wakes, Satotz recaps the other matches = ch 35 'Light and Darkness, Part 1'; recap order changed and Hisoka vs Bodoro extended.",
+      "sources": [
+        "https://hunterxhunter.fandom.com/wiki/Episode_29_(1999)",
+        "https://hunterxhunter.fandom.com/wiki/Chapter_35",
+        "https://en.wikipedia.org/wiki/List_of_Hunter_%C3%97_Hunter_(1999_TV_series)_episodes",
+        "https://en.wikipedia.org/wiki/List_of_Hunter_%C3%97_Hunter_chapters",
+        "https://anibproductions.wordpress.com/2017/03/31/hunter-x-hunter-1999-vs-2011-part-2-the-hunter-exam-pt-2/"
+      ]
+    },
+    {
+      "episode": 30,
+      "end_chapter": 37,
+      "start_chapter": 36,
+      "chapters_adapted": "35 (p.14-15), 36 (p.2-19), 37 (p.2-15, 18-19)",
+      "volume": 5,
+      "confidence": "high",
+      "note": "Killua vs Illumi, Bodoro killed, Killua disqualified, Gon breaks Illumi's arm = chs 36-37 'Light and Darkness 2-3'; ep 31 continues with ch 38 'Ging Freecss' (matches stored ep31 anchor).",
+      "sources": [
+        "https://hunterxhunter.fandom.com/wiki/Episode_30_(1999)",
+        "https://hunterxhunter.fandom.com/wiki/Chapter_37",
+        "https://en.wikipedia.org/wiki/List_of_Hunter_%C3%97_Hunter_(1999_TV_series)_episodes",
+        "https://en.wikipedia.org/wiki/List_of_Hunter_%C3%97_Hunter_chapters",
+        "https://anibproductions.wordpress.com/2017/03/31/hunter-x-hunter-1999-vs-2011-part-2-the-hunter-exam-pt-2/"
+      ]
+    }
+  ],
+  "continue_points": [
+    {
+      "episode": 8,
+      "continue_chapter": 10,
+      "note": "ends p.10 of ch 10 (arrival at the Phase 2 site); Menchi/Buhara reveal p.11+ opens ep 9"
+    },
+    {
+      "episode": 14,
+      "continue_chapter": 19,
+      "note": "ends p.10 of ch 19 (Majtani knocked out); the fake-unconscious bet p.11-19 opens ep 15"
+    },
+    {
+      "episode": 15,
+      "continue_chapter": 20,
+      "note": "ends p.14 of ch 20; Leroute's rock-paper-scissors p.15-19 opens ep 16"
+    },
+    {
+      "episode": 24,
+      "continue_chapter": 30,
+      "note": "ends p.16 of ch 30 as Gon and Kurapika enter the snake cave; p.16-19 open ep 25"
+    },
+    {
+      "episode": 27,
+      "continue_chapter": 33,
+      "note": "ends p.8 of ch 33 after Kurapika's win; Gon vs Hanzo (ch 33 p.9-19) opens ep 28"
+    },
+    {
+      "episode": 28,
+      "continue_chapter": 34,
+      "note": "ends p.15 of ch 34 with Hanzo's blade at Gon's forehead; p.15-19 open ep 29"
+    }
+  ],
+  "annotations": [
+    {
+      "episodes": [
+        2
+      ],
+      "kind": "graft",
+      "chapters": "1 (p.31-32)",
+      "note": "filler episode (port town, fake Hunter, animal show); only Gon boarding the Kaijinmaru is manga material — Leorio (and Kurapika) meet Gon on Whale Island instead of aboard ship"
+    },
+    {
+      "episodes": [
+        4
+      ],
+      "kind": "divergence",
+      "chapters": "3",
+      "note": "Matthew (named only in 1999) and Leorio's bus laps are anime-original; manga Leorio overhears that the bus is a trap"
+    },
+    {
+      "episodes": [
+        5
+      ],
+      "kind": "divergence",
+      "chapters": "4",
+      "note": "Kiriko-family segment padded with an original second half (Hunterpedia lists Filler after ch 4)"
+    },
+    {
+      "episodes": [
+        6,
+        7
+      ],
+      "kind": "divergence",
+      "chapters": "5-8",
+      "note": "Phase 1 padded: Tonpa's laxative gag replaced by an original hallucinogenic-sap trap on Leorio; the manga's tunnel run (chs 5-8) stretched over two episodes"
+    },
+    {
+      "episodes": [
+        7,
+        18
+      ],
+      "kind": "graft",
+      "chapters": "7 (p.9-11)",
+      "note": "Kurapika telling Leorio about the Phantom Troupe and the Scarlet Eyes moved from the Phase 1 tunnel run (ch 7) to filler ep 18 (island shipwrecks)"
+    },
+    {
+      "episodes": [
+        10
+      ],
+      "kind": "divergence",
+      "chapters": "12",
+      "note": "Todo jumping into Split Mountain and spider eagles attacking the examinees are original additions; Todo/Buhara scuffle changed"
+    },
+    {
+      "episodes": [
+        11,
+        12
+      ],
+      "kind": "divergence",
+      "chapters": "13-14",
+      "note": "Anita stowaway revenge subplot is anime-original; Killua's Rhythm Echo replaced; ball game moved to the outer deck"
+    },
+    {
+      "episodes": [
+        17,
+        21
+      ],
+      "kind": "rearranged",
+      "chapters": "22 (p.18-19)",
+      "note": "Fourth Phase lot drawing moved from outside Trick Tower (end of ch 22) to the ship en route to Zevil Island, after the wholly original island-hotel/storm arc (filler eps 18-20)"
+    },
+    {
+      "episodes": [
+        22,
+        24
+      ],
+      "kind": "graft",
+      "chapters": "26 (p.4-5)",
+      "note": "two pages of ch 26 relocated into ep 24 (Hunterpedia page-level field)"
+    },
+    {
+      "episodes": [
+        24
+      ],
+      "kind": "divergence",
+      "chapters": "29-30",
+      "note": "Gon's multi-day recovery from Geretta's dart (Mito dreams, Hisoka nightmares, the rabbit, abandoning both badges) is original padding"
+    },
+    {
+      "episodes": [
+        26
+      ],
+      "kind": "divergence",
+      "chapters": "32-33",
+      "note": "written 'paper test' and Killua lying in his Netero interview are original"
+    },
+    {
+      "episodes": [
+        27,
+        28,
+        29
+      ],
+      "kind": "rearranged",
+      "chapters": "33-35",
+      "note": "Final Phase order changed: Kurapika vs Hisoka (manga: declared ch 33 p.4-8, resolved only in Satotz's recap ch 35) fought first and extended, so Kurapika is the first to pass and Gon watches it; recap match order altered; Hisoka vs Bodoro extended"
+    }
+  ],
+  "type_corrections": [
+    {
+      "episodes": [
+        7
+      ],
+      "type": "mixed",
+      "note": "Our row and AFL type ep 7 filler, but Hunterpedia's page-level field has it adapting ch 7 p.3-9, 12-19 (Leorio's reason for becoming a Hunter, catching up with the pack) and ch 8 p.2-4 (the impostor examiner), with the Wikipedia summary describing exactly those manga beats and AniB treating eps 6-8 as the Phase 1 adaptation; only the hallucination framing is original. Recommend mixed; anchor supplied (end ch 7). Marked medium — see flags.",
+      "sources": [
+        "https://hunterxhunter.fandom.com/wiki/Episode_7_(1999)",
+        "https://hunterxhunter.fandom.com/wiki/Chapter_7",
+        "https://en.wikipedia.org/wiki/List_of_Hunter_%C3%97_Hunter_(1999_TV_series)_episodes",
+        "https://anibproductions.wordpress.com/2017/03/24/hunter-x-hunter-1999-vs-2011-part-1-the-hunter-exam-pt-1/",
+        "https://www.animefillerlist.com/shows/hunter-x-hunter-1999"
+      ]
+    }
+  ],
+  "repairs": [],
+  "structure": {
+    "notes": "AniList confirms the four components and cumulative numbering: 136 TV 62 eps (1999-10-16 to 2001-03-31) = our 1-62; 137 OVA 8 eps (2002) = 63-70; 138 Greed Island OVA 8 eps (2003) = 71-78; 139 Greed Island Final OVA 14 eps (2004) = 79-92; total 92. Hunter Exam arc = eps 1-31 (chs 1-38), Zoldyck = eps 32-36 (chs 39-43), Heavens Arena from ep 37 (ch 44), per Hunterpedia chapter pages, AniB part 3 and the stored ep36 anchor. Filler in range per AFL/Hunterpedia/AniB: ep 2, ep 7 (disputed, see type_corrections), eps 18-20 (island-hotel 'bonus third stage'). animefillerguide's 1999 page has no per-episode chapter table; it only states the anime ends at ch 183-185 (p.1-10) and to continue from ch 185 p.11 (vol 18).",
+    "order_only": [
+      {
+        "anilist_id": 10189,
+        "title": "HUNTER×HUNTER Pilot-ban (1998 Jump Super Anime Tour pilot)",
+        "after_anilist_id": null,
+        "adapts": "chs 1-2",
+        "note": "one-shot pilot shown 1998-07-26, before the TV series (AniList relation PARENT 136; MAL 10189); retells Whale Island and the storm at sea, fully redundant with eps 1-3 — order-only/skippable, not a component"
+      }
+    ]
+  },
+  "flags_for_sean": [
+    "ep 7 type: our row/AFL say filler; Hunterpedia's page-level field says it adapts ch 7 p.3-9,12-19 + ch 8 p.2-4 (Wikipedia's summary and AniB's phase ranges agree on the content). Proposed mixed with an anchor (end ch 7); if the filler typing is kept, drop that anchor. Sources: https://hunterxhunter.fandom.com/wiki/Episode_7_(1999) ; https://www.animefillerlist.com/shows/hunter-x-hunter-1999",
+    "END convention used: END = last chapter with any pages adapted, with a continue point back to that chapter when the episode ends mid-chapter (ep 8→10, 14→19, 15→20, 24→30, 27→33, 28→34); 1-3 page cliffhanger slivers (ep 6: ch 7 p.1-2; ep 13: ch 17 p.1-3; ep 21: ch 25 p.10; ep 25: ch 32 p.1-2; ep 26: ch 33 p.1-3) are listed in chapters_adapted but do not advance END. Ep 8 is marked medium because END=10 (vs 9) rests on Hunterpedia's page split alone.",
+    "Independence caveat: Hunterpedia is the only page-level per-episode source for the 1999 series (animefillerguide has no chapter table for it; Japanese Wikipedia has no manga column). Exact chapters were corroborated by Wikipedia episode summaries vs Wikipedia chapter titles, AniB Productions' per-phase episode ranges (eps 1-5, 6-8, 9-10, 13-17, 18-20 filler, 21-25, 26-30) and EBWYH (eps 1-5 = chs 1-4); the Hunterpedia chapter pages' reverse 'anime' field matches every anchor.",
+    "Open flag #763 (ep 92 continua 185 vs mu 339): animefillerguide independently states the last canon episode (92, 14th G.I. Final OVA) = ch 183, 184, 185 p.1-10 and to continue from ch 185 p.11 (vol 18) — supports the stored ep92 anchor (end 185, continue 185) over the mu value. https://www.animefillerguide.com/anime/hunter-x-hunter-1999/"
+  ]
+}

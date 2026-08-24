@@ -49,7 +49,7 @@ async function main() {
     // targets: series with missing titles/dates (or no rows at all)
     const { data: series } = await db
       .from('series')
-      .select('id, title, title_native, aired_episodes, source_type, manga_status, popularity')
+      .select('id, title, title_native, aired_episodes, total_episodes, start_date, source_type, manga_status, popularity')
       .order('popularity', { ascending: false });
     const eps: any[] = [];
     for (let f = 0; ; f += 1000) {
@@ -104,10 +104,27 @@ async function main() {
         // the mid-run order-only guard after the merge list is built
         const { data: comps } = await db
           .from('series_components')
-          .select('season_order, episode_start, episode_end')
+          .select('season_order, episode_start, episode_end, label')
           .eq('series_id', t.id)
           .order('season_order');
         const cl = comps ?? [];
+        // which season a component LABEL names ("Kingdom 2nd Season",
+        // "Mahoutsukai no Yome SEASON 2 Part 2" → 2); null when silent
+        // ("Saishuushou", the head season) — callers fall back to position
+        const seasonOfLabel = (label: string | null): number | null => {
+          const m = String(label ?? '').match(/\b(\d+)(?:st|nd|rd|th)\s+season\b|\bseason\s+(\d+)\b/i);
+          return m ? Number(m[1] ?? m[2]) : null;
+        };
+        // namesake guard for name-only page locks (the Kingdom lesson: the
+        // 2007 British drama's list page is "List of Kingdom episodes"): a
+        // page whose earliest air date sits years away from our start date
+        // is another show, whatever its name says
+        const datesCompatible = (rows: WikiEpisode[]): boolean => {
+          const ours = t.start_date ? Number(String(t.start_date).slice(0, 4)) : null;
+          const theirs = rows.map((w) => (w.airDate ? Number(String(w.airDate).slice(0, 4)) : NaN)).filter((y) => !Number.isNaN(y));
+          if (ours == null || !theirs.length) return true;
+          return Math.abs(Math.min(...theirs) - ours) <= 1;
+        };
         // EVIDENCE-LOCKED per-page offsets (Sean's When They Cry case,
         // 2026-08-23): a page's offset into OUR numbering must be PROVEN
         // before its rows merge — votes come from exact air-date matches
@@ -145,6 +162,7 @@ async function main() {
           return simTokens(inner, pageNames) >= 0.99 || norm2(inner) === norm2(t.title);
         };
         let wiki: WikiEpisode[] = [];
+        const skipped: { name: string; eps: WikiEpisode[]; isOwnArticle?: boolean }[] = [];
         const lockAndMerge = (sets: { name: string; eps: WikiEpisode[]; isOwnArticle?: boolean }[]) => {
         for (const ps of sets) {
           const ints = ps.eps.filter((w) => Number.isInteger(w.number));
@@ -170,18 +188,29 @@ async function main() {
           if (offset === null) {
             const sm = ps.name.match(/season (\d+)/i);
             if (sm) {
+              const sn = Number(sm[1]);
               const ourSeasons = cl.filter((c) => c.episode_start !== null);
-              const comp = ourSeasons[Number(sm[1]) - 1];
-              if (comp?.episode_start != null) {
-                const len = comp.episode_end != null ? comp.episode_end - comp.episode_start + 1 : null;
+              // season N = every numbered component whose LABEL names season N
+              // (two-part seasons: "2nd Season" + "2nd Season Part 2" — the
+              // Slime lesson); positional N-th component when labels are silent
+              const byLabel = ourSeasons.filter((c) => seasonOfLabel(c.label) === sn);
+              const group = byLabel.length ? byLabel : ourSeasons[sn - 1] ? [ourSeasons[sn - 1]] : [];
+              if (group.length) {
+                const gStart = Math.min(...group.map((c) => c.episode_start as number));
+                const gEnd = group.every((c) => c.episode_end != null) ? Math.max(...group.map((c) => c.episode_end as number)) : null;
+                // an airing tail's episode_end is "aired so far" — the page
+                // lists the planned season, so cap at the known total
+                const isTail = group.includes(ourSeasons[ourSeasons.length - 1]);
+                const gCap = gEnd != null ? Math.max(gEnd, isTail ? t.total_episodes ?? 0 : 0) : null;
+                const len = gCap != null ? gCap - gStart + 1 : null;
                 const pmax = Math.max(...ints.map((w) => w.number));
                 const pmin = Math.min(...ints.map((w) => w.number));
-                if (pmin >= comp.episode_start && comp.episode_end != null && pmax <= comp.episode_end + 2) {
+                if (pmin >= gStart && gCap != null && pmax <= gCap + 2) {
                   // season page already numbered in OVERALL space
                   offset = 0;
                   console.log(`  ${t.id}: page "${ps.name}" component-locked (overall numbering)`);
                 } else if (pmin <= 2 && (len === null || pmax <= len + 2)) {
-                  offset = comp.episode_start - 1;
+                  offset = gStart - 1;
                   console.log(`  ${t.id}: page "${ps.name}" component-locked at +${offset}`);
                 }
               }
@@ -196,15 +225,50 @@ async function main() {
             (ps.isOwnArticle || pageNameMatches(ps.name)) &&
             Math.min(...ints.map((w) => w.number)) === 1
           ) {
+            if (!datesCompatible(ps.eps)) {
+              console.log(`  ${t.id}: page "${ps.name}" REJECTED — air dates belong to another show (namesake)`);
+              continue;
+            }
             offset = 0;
           }
           if (offset === null) {
-            console.log(`  ${t.id}: page "${ps.name}" offset unprovable (votes ${JSON.stringify([...tally.entries()].slice(0, 3))}) — skipped`);
+            skipped.push(ps);
             continue;
           }
           wiki = wiki.concat(ps.eps.map((w) => ({ ...w, number: w.number + offset })));
           if (offset !== 0) console.log(`  ${t.id}: page "${ps.name}" locked at offset ${offset > 0 ? '+' : ''}${offset}`);
         }
+        // CONTINUITY lock (the Kingdom S6 lesson: a list page's own rows run
+        // 143-155 while its season sub-pages carry 1-142): a skipped set
+        // whose integer rows begin exactly where the merged/stored rows end,
+        // fit inside our count, and whose air dates continue monotonically
+        // from the last known row is numbered in OUR overall space.
+        const ourTopForLock = Math.max(t.aired_episodes ?? 0, t.total_episodes ?? 0);
+        for (let pass = 0; pass < 3 && skipped.length; pass++) {
+          const mergedNums = [...wiki.filter((w) => Number.isInteger(w.number)).map((w) => w.number), ...storedRows.map((r) => r.number)];
+          const top = mergedNums.length ? Math.max(...mergedNums) : 0;
+          const lastDate = [...wiki, ...storedRows.map((r) => ({ number: r.number, airDate: r.air_date ? String(r.air_date) : null }))]
+            .filter((r) => r.number <= top && r.airDate)
+            .map((r) => String(r.airDate))
+            .sort()
+            .pop();
+          const idx = skipped.findIndex((ps) => {
+            const ints = ps.eps.filter((w) => Number.isInteger(w.number));
+            if (!ints.length) return false;
+            const pmin = Math.min(...ints.map((w) => w.number));
+            const pmax = Math.max(...ints.map((w) => w.number));
+            const firstDate = ints.map((w) => w.airDate).filter(Boolean).sort()[0];
+            return pmin === top + 1 && pmax <= ourTopForLock + 2 && (!lastDate || !firstDate || firstDate >= lastDate);
+          });
+          if (idx < 0) break;
+          const ps = skipped.splice(idx, 1)[0];
+          wiki = wiki.concat(ps.eps);
+          console.log(`  ${t.id}: page "${ps.name}" continuity-locked (rows continue our numbering from ${top + 1})`);
+        }
+        for (const ps of skipped) {
+          console.log(`  ${t.id}: page "${ps.name}" offset unprovable — skipped`);
+        }
+        skipped.length = 0;
         };
         lockAndMerge(pageSets);
         // MAIN-ARTICLE fallback (the SHY / Kenshin-2023 class): newer or
@@ -213,7 +277,18 @@ async function main() {
         // four "Rurouni Kenshin" list pages belong to the 1996 series). The
         // article fetched by OUR exact title is identity-proven by name.
         if (!wiki.length) {
-          for (const cand of [t.title, `${t.title} (TV series)`, `${t.title} (Japanese TV series)`, `${t.title} (manga)`]) {
+          // namesake disambiguation forms first (Kingdom: the plain list page
+          // is the 2007 British drama; ours is "List of Kingdom (Japanese TV
+          // series) episodes")
+          for (const cand of [
+            `List of ${t.title} (Japanese TV series) episodes`,
+            `List of ${t.title} (TV series) episodes`,
+            `List of ${t.title} (anime) episodes`,
+            t.title,
+            `${t.title} (TV series)`,
+            `${t.title} (Japanese TV series)`,
+            `${t.title} (manga)`,
+          ]) {
             const wt = await fetchWikitext(cand);
             await sleep(500);
             if (!wt) continue;
@@ -254,7 +329,19 @@ async function main() {
         // entries the way we do — the numbering spaces align. Without them,
         // a mid-run order-only series stays unverified: withhold + flag.
         const fractionals = wiki.filter((w) => !Number.isInteger(w.number));
-        const wikiAligned = fractionals.length > 0;
+        // alignment evidence, two kinds: fractional separators, OR the page's
+        // top number equals our count — a page that had numbered an
+        // order-only insert as an integer would overshoot by exactly the
+        // inserts (the Magus Bride S2 case: overall-numbered page, un-numbered
+        // OVA). Exact match when the total is known; ≤ aired while airing.
+        const pageTop = Math.max(0, ...wiki.filter((w) => Number.isInteger(w.number)).map((w) => w.number));
+        const countAligned =
+          pageTop > 0 &&
+          (t.total_episodes != null ? pageTop === Math.max(t.total_episodes, t.aired_episodes ?? 0) : pageTop <= (t.aired_episodes ?? 0));
+        const wikiAligned = fractionals.length > 0 || countAligned;
+        if (midRunOrderOnly && countAligned && !fractionals.length) {
+          console.log(`  ${t.id}: page top ${pageTop} = our count — numbering aligned without fractional separators`);
+        }
         if (midRunOrderOnly && !wikiAligned && !WIKI_NUMBERING_SHIFTS[t.id]) {
           await fileFlagOnce(runId, t.id, 'wikipedia', 'count_mismatch', {
             note: 'mid-run order-only component and the wiki page shows no fractional separators — numbering space unverified; fills past the insert withheld until a shift is declared or alignment verified',

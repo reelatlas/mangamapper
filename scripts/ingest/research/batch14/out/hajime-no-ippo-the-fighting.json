@@ -1,0 +1,349 @@
+{
+  "series_id": "hajime-no-ippo-the-fighting",
+  "summary": "Our eps 89-101 (= New Challenger S2 eps 13-25; Wikipedia's own episode list numbers them 77-102 exactly as we do) adapt the whole Battle of Hawk Arc, chapters 355-398 (vols 40-44: beach camp, Itagaki's debut, Takamura's weight cut, Takamura vs Bryan Hawk), at a steady 3-5 chapters per episode, and then ep 101 jumps from 398 straight to 415 (Submarine Wars Arc opener, vol 46). Chapter 399 is never animated and the Post-War Arc 400-414 is deferred to eps 124-127, so the stored ep 102 anchor (416-420, continue 421) and the existing rearranged annotations stand. Every anchor has the fandom episode page (with page splits), the fandom chapter pages (reverse mapping, identical splits), animefillerguide's table (identical chapter sets), and an independent contemporaneous blog recap whose opening/ending matches the chapter content at each boundary; all 13 are high confidence and no repairs were needed (ep 88 and ep 102 stored anchors match the wiki exactly). Six episodes end mid-chapter (365, 368, 377, 384, 392 splits), which the continue points record. Beware animefillerguide's summary line 'New Challenger adapted from 315 to 389' (echoed in search snippets as 'chapters 315-389, vols 36-43'): it contradicts its own table and the wiki; NC actually runs through 398 then 415-420.",
+  "anchors": [
+    {
+      "episode": 89,
+      "end_chapter": 357,
+      "start_chapter": 355,
+      "chapters_adapted": "355, 356 (p.2-18), 357 (p.1-17)",
+      "volume": 40,
+      "confidence": "high",
+      "note": "S2 ep13. Beach training camp (Wanpo, Nekota/Hachi, fireworks, okonomiyaki prank) = 355-357; ep title <-> ch 355/356 'Encounter/Exclamation at the Beach'. Ends p.17 of 357; the 2-page tail (Aoki eats the okonomiyaki) opens ep 90, so resume 358.",
+      "sources": [
+        "https://ippo.fandom.com/wiki/Episode_13_(Season_2)",
+        "https://ippo.fandom.com/wiki/Chapter_357",
+        "https://www.animefillerguide.com/anime/hajime-no-ippo/",
+        "https://ippo.fandom.com/wiki/Chapter_355",
+        "https://thestateofhappiness.wordpress.com/2009/04/03/hajime-no-ippo-new-challenger-ep-13/",
+        "https://en.wikipedia.org/wiki/List_of_Hajime_no_Ippo_volumes_(21%E2%80%9340)"
+      ]
+    },
+    {
+      "episode": 90,
+      "end_chapter": 361,
+      "start_chapter": 358,
+      "chapters_adapted": "357 (p.18-19), 358, 359 (p.1-13, 15-19), 360 (p.1-16), 361 (p.1-15)",
+      "volume": 40,
+      "confidence": "high",
+      "note": "S2 ep14. Ippo-Itagaki spar (358), Imai sparring visit (359-360), Itagaki's Imai backstory at the riverbank (361 'Bloodlust'). 357's 2-page tail is a sliver -> START 358. 360 p.17-19 and 361 p.16-19 not animated.",
+      "sources": [
+        "https://ippo.fandom.com/wiki/Episode_14_(Season_2)",
+        "https://ippo.fandom.com/wiki/Chapter_361",
+        "https://www.animefillerguide.com/anime/hajime-no-ippo/",
+        "https://ippo.fandom.com/wiki/Chapter_358",
+        "https://thestateofhappiness.wordpress.com/2009/04/10/hajime-no-ippo-new-challenger-ep-14/",
+        "https://en.wikipedia.org/wiki/List_of_Hajime_no_Ippo_volumes_(21%E2%80%9340)"
+      ]
+    },
+    {
+      "episode": 91,
+      "end_chapter": 365,
+      "start_chapter": 362,
+      "chapters_adapted": "362-364, 365 (p.1-6)",
+      "volume": 41,
+      "confidence": "high",
+      "note": "S2 ep15. Kokugikan card announced (362 'Their Ring'), Kimura vs Arman Alegria, Itagaki's debut/foul (363-364); ends as a drained Takamura enters vs Morris West (365 p.1-6). v41 starts at 362.",
+      "sources": [
+        "https://ippo.fandom.com/wiki/Episode_15_(Season_2)",
+        "https://ippo.fandom.com/wiki/Chapter_365",
+        "https://www.animefillerguide.com/anime/hajime-no-ippo/",
+        "https://ippo.fandom.com/wiki/Chapter_362",
+        "https://ippo.fandom.com/wiki/Chapter_365",
+        "https://thestateofhappiness.wordpress.com/2009/04/24/hajime-no-ippo-new-challenger-ep-15/",
+        "https://en.wikipedia.org/wiki/List_of_Hajime_no_Ippo_volumes_(41%E2%80%9360)"
+      ]
+    },
+    {
+      "episode": 92,
+      "end_chapter": 368,
+      "start_chapter": 365,
+      "chapters_adapted": "365 (p.7-19), 366-367, 368 (p.2-11)",
+      "volume": 41,
+      "confidence": "high",
+      "note": "S2 ep16. Holds 13/19 pages of 365 (crowd's shock, Takamura vs West) -> START 365 (majority rule, same as stored ep88 precedent). Hawk shows up ringside and in the changing room; ends mid-368 ('Fury') at Hawk's mock handshake.",
+      "sources": [
+        "https://ippo.fandom.com/wiki/Episode_16_(Season_2)",
+        "https://ippo.fandom.com/wiki/Chapter_368",
+        "https://www.animefillerguide.com/anime/hajime-no-ippo/",
+        "https://ippo.fandom.com/wiki/Chapter_365",
+        "https://ippo.fandom.com/wiki/Chapter_368",
+        "https://thestateofhappiness.wordpress.com/2009/04/24/hajime-no-ippo-new-challenger-ep-16/",
+        "https://en.wikipedia.org/wiki/List_of_Hajime_no_Ippo_volumes_(41%E2%80%9360)"
+      ]
+    },
+    {
+      "episode": 93,
+      "end_chapter": 370,
+      "start_chapter": 369,
+      "chapters_adapted": "368 (p.11-19), 369-370",
+      "volume": 41,
+      "confidence": "high",
+      "note": "S2 ep17. Opens on the remaining 9 pages of 368 (minority share; ep 92 held p.2-11) -> START 369. Hawk tapes (369 'The Two Wild Ones'), Takamura family Kyoka/Wataru/Suguru; ends with 'my place is the ring' (370 'Where I Belong').",
+      "sources": [
+        "https://ippo.fandom.com/wiki/Episode_17_(Season_2)",
+        "https://ippo.fandom.com/wiki/Chapter_370",
+        "https://www.animefillerguide.com/anime/hajime-no-ippo/",
+        "https://ippo.fandom.com/wiki/Chapter_369",
+        "https://ippo.fandom.com/wiki/Chapter_370",
+        "https://thestateofhappiness.wordpress.com/2009/05/01/hajime-no-ippo-new-challenger-ep-17/",
+        "https://en.wikipedia.org/wiki/List_of_Hajime_no_Ippo_volumes_(41%E2%80%9360)"
+      ]
+    },
+    {
+      "episode": 94,
+      "end_chapter": 373,
+      "start_chapter": 371,
+      "chapters_adapted": "371 (p.2-4, 6-19), 372-373",
+      "volume": 42,
+      "confidence": "high",
+      "note": "S2 ep18. Fight poster / Yi Yon-su (371), eyebrow gag, weight cut to '5 kg to go', shiitake/no-saliva hallucination (373 'Will to Fight'). Ticket-sale crowd (371 p.1, 5) cut. v42 starts at 371.",
+      "sources": [
+        "https://ippo.fandom.com/wiki/Episode_18_(Season_2)",
+        "https://ippo.fandom.com/wiki/Chapter_373",
+        "https://www.animefillerguide.com/anime/hajime-no-ippo/",
+        "https://ippo.fandom.com/wiki/Chapter_371",
+        "https://thestateofhappiness.wordpress.com/2009/05/12/hajime-no-ippo-new-challenger-ep-18/",
+        "https://en.wikipedia.org/wiki/List_of_Hajime_no_Ippo_volumes_(41%E2%80%9360)"
+      ]
+    },
+    {
+      "episode": 95,
+      "end_chapter": 377,
+      "start_chapter": 374,
+      "chapters_adapted": "374-375, 376 (p.1-13, 16-19), 377 (p.1-9)",
+      "volume": 42,
+      "confidence": "high",
+      "note": "S2 ep19. Hawk's public spar + weigh-in 'mummy' (374 'The End to Weight Management'), Hawk's DNA (375), Ippo vs Yi 1R Dempsey Roll KO = 377 p.1-9; ends mid-377.",
+      "sources": [
+        "https://ippo.fandom.com/wiki/Episode_19_(Season_2)",
+        "https://ippo.fandom.com/wiki/Chapter_377",
+        "https://www.animefillerguide.com/anime/hajime-no-ippo/",
+        "https://ippo.fandom.com/wiki/Chapter_374",
+        "https://ippo.fandom.com/wiki/Chapter_377",
+        "https://thestateofhappiness.wordpress.com/2009/05/16/hajime-no-ippo-new-challenger-ep-19/",
+        "https://en.wikipedia.org/wiki/List_of_Hajime_no_Ippo_volumes_(41%E2%80%9360)"
+      ]
+    },
+    {
+      "episode": 96,
+      "end_chapter": 379,
+      "start_chapter": 377,
+      "chapters_adapted": "377 (p.10-21), 378 (p.5-19), 379",
+      "volume": 42,
+      "confidence": "high",
+      "note": "S2 ep20. Holds 12/21 pages of 377 (post-KO, waiting room full of champions) -> START 377. Kamogawa's 'those who succeeded worked hard' (378), entrances and opening gong (379 'Entrance of the Greats'). 378 p.1-4 ('dry out' talk) cut.",
+      "sources": [
+        "https://ippo.fandom.com/wiki/Episode_20_(Season_2)",
+        "https://ippo.fandom.com/wiki/Chapter_379",
+        "https://www.animefillerguide.com/anime/hajime-no-ippo/",
+        "https://ippo.fandom.com/wiki/Chapter_377",
+        "https://ippo.fandom.com/wiki/Chapter_379",
+        "https://thestateofhappiness.wordpress.com/2009/05/24/hajime-no-ippo-new-challenger-ep-20/",
+        "https://en.wikipedia.org/wiki/List_of_Hajime_no_Ippo_volumes_(41%E2%80%9360)"
+      ]
+    },
+    {
+      "episode": 97,
+      "end_chapter": 384,
+      "start_chapter": 380,
+      "chapters_adapted": "380-383, 384 (p.1-4)",
+      "volume": 43,
+      "confidence": "high",
+      "note": "S2 ep21. Takamura vs Hawk R1-R2 (380 'Flawless Hawk' = fight start, confirmed by blog recap opening); ends at Takamura's first down (384 p.1-4). v43 starts at 380.",
+      "sources": [
+        "https://ippo.fandom.com/wiki/Episode_21_(Season_2)",
+        "https://ippo.fandom.com/wiki/Chapter_384",
+        "https://www.animefillerguide.com/anime/hajime-no-ippo/",
+        "https://ippo.fandom.com/wiki/Chapter_380",
+        "https://ippo.fandom.com/wiki/Chapter_384",
+        "https://thestateofhappiness.wordpress.com/2009/05/28/hajime-no-ippo-new-challenger-ep-21/",
+        "https://en.wikipedia.org/wiki/List_of_Hajime_no_Ippo_volumes_(41%E2%80%9360)"
+      ]
+    },
+    {
+      "episode": 98,
+      "end_chapter": 388,
+      "start_chapter": 384,
+      "chapters_adapted": "384 (p.5-19), 385-388",
+      "volume": 43,
+      "confidence": "high",
+      "note": "S2 ep22. Holds 15/19 pages of 384 -> START 384. Second down, Takamura's step-in-jab down on Hawk (385 'My Left'), street-fight rhythm R3-R4 (387-388). No blog recap exists for this ep; boundary fixed by ep 23's recap opening on the KO prediction (= 389 p.1).",
+      "sources": [
+        "https://ippo.fandom.com/wiki/Episode_22_(Season_2)",
+        "https://ippo.fandom.com/wiki/Chapter_388",
+        "https://www.animefillerguide.com/anime/hajime-no-ippo/",
+        "https://ippo.fandom.com/wiki/Chapter_384",
+        "https://ippo.fandom.com/wiki/Chapter_388",
+        "https://thestateofhappiness.wordpress.com/2009/06/12/hajime-no-ippo-new-challenger-ep-23/",
+        "https://en.wikipedia.org/wiki/List_of_Hajime_no_Ippo_volumes_(41%E2%80%9360)"
+      ]
+    },
+    {
+      "episode": 99,
+      "end_chapter": 392,
+      "start_chapter": 389,
+      "chapters_adapted": "389-390, 391 (p.1-24), 392 (p.1-10)",
+      "volume": 44,
+      "confidence": "high",
+      "note": "S2 ep23. KO prediction and R5 (389), Takamura's eye/exhaustion (390-391 'Soul Brace' <-> ep title 'Supporting Hand'), 'greatest second' and start of R7 (392 p.1-10); ends mid-392. v44 starts at 389.",
+      "sources": [
+        "https://ippo.fandom.com/wiki/Episode_23_(Season_2)",
+        "https://ippo.fandom.com/wiki/Chapter_392",
+        "https://www.animefillerguide.com/anime/hajime-no-ippo/",
+        "https://ippo.fandom.com/wiki/Chapter_389",
+        "https://ippo.fandom.com/wiki/Chapter_392",
+        "https://thestateofhappiness.wordpress.com/2009/06/12/hajime-no-ippo-new-challenger-ep-23/",
+        "https://en.wikipedia.org/wiki/List_of_Hajime_no_Ippo_volumes_(41%E2%80%9360)"
+      ]
+    },
+    {
+      "episode": 100,
+      "end_chapter": 396,
+      "start_chapter": 392,
+      "chapters_adapted": "392 (p.10-19), 393-394, 395 (p.1-10), 396",
+      "volume": 44,
+      "confidence": "high",
+      "note": "S2 ep24. Holds 10/19 pages of 392 (R7 beating -> the snap counter) -> START 392. 'License to Kill' (393) through the 10 count (396); blog recap ends on the count of ten and says the coronation is next. 395 p.11-19 not animated.",
+      "sources": [
+        "https://ippo.fandom.com/wiki/Episode_24_(Season_2)",
+        "https://ippo.fandom.com/wiki/Chapter_396",
+        "https://www.animefillerguide.com/anime/hajime-no-ippo/",
+        "https://ippo.fandom.com/wiki/Chapter_392",
+        "https://ippo.fandom.com/wiki/Chapter_396",
+        "https://thestateofhappiness.wordpress.com/2009/06/22/hajime-no-ippo-new-challenger-ep-24/",
+        "https://en.wikipedia.org/wiki/List_of_Hajime_no_Ippo_volumes_(41%E2%80%9360)"
+      ]
+    },
+    {
+      "episode": 101,
+      "end_chapter": 415,
+      "start_chapter": 397,
+      "chapters_adapted": "397-398, 415 (p.1-2, 4-19)",
+      "volume": 46,
+      "confidence": "high",
+      "note": "S2 ep25. Coronation + sperm speech (397 'My Coronation'), bronze statue arrives (398 'Champion Commemoration Sale'), then JUMPS to 415 'The Itagaki Household' (Itagaki's KO of Baraki Haseo, family pun dinner, 'glo-bu' gag). Ch 399 dropped; 400-414 (Post-War Arc) deferred to eps 124-127. END = 415 (Submarine Wars Arc opener), volume 46 (407-415).",
+      "sources": [
+        "https://ippo.fandom.com/wiki/Episode_25_(Season_2)",
+        "https://ippo.fandom.com/wiki/Chapter_415",
+        "https://www.animefillerguide.com/anime/hajime-no-ippo/",
+        "https://ippo.fandom.com/wiki/Chapter_397",
+        "https://ippo.fandom.com/wiki/Chapter_398",
+        "https://ippo.fandom.com/wiki/Chapter_415",
+        "https://ippo.fandom.com/wiki/Battle_of_Hawk_Arc",
+        "https://ippo.fandom.com/wiki/Submarine_Wars_Arc",
+        "https://thestateofhappiness.wordpress.com/2009/06/25/hajime-no-ippo-new-challenger-ep-25/",
+        "https://en.wikipedia.org/wiki/List_of_Hajime_no_Ippo_volumes_(41%E2%80%9360)"
+      ]
+    }
+  ],
+  "continue_points": [
+    {
+      "episode": 91,
+      "continue_chapter": 365,
+      "note": "ends p.6 of 19 of ch 365 (Takamura enters vs West, weight-drained); ep 92 resumes at p.7"
+    },
+    {
+      "episode": 92,
+      "continue_chapter": 368,
+      "note": "ends p.11 of ch 368 (Hawk's mock handshake in the changing room); ep 93 resumes at p.11"
+    },
+    {
+      "episode": 95,
+      "continue_chapter": 377,
+      "note": "ends p.9 of 21 of ch 377 (Ippo's 1R KO of Yi); ep 96 resumes at p.10"
+    },
+    {
+      "episode": 97,
+      "continue_chapter": 384,
+      "note": "ends p.4 of ch 384 (Takamura's first down); ep 98 resumes at p.5"
+    },
+    {
+      "episode": 99,
+      "continue_chapter": 392,
+      "note": "ends p.10 of ch 392 (round 7 opens); ep 100 resumes at p.10"
+    },
+    {
+      "episode": 101,
+      "continue_chapter": 416,
+      "note": "= end+1 (ep 102 starts at 416) but recorded explicitly because of the jump: ch 399 (unadapted epilogue) and 400-414 (Post-War Arc, animated as eps 124-127) sit between 398 and 415"
+    }
+  ],
+  "annotations": [
+    {
+      "episodes": [
+        101
+      ],
+      "kind": "graft",
+      "chapters": "415",
+      "note": "Submarine Wars Arc opener (ch 415) grafted onto the Battle of Hawk finale: episode goes 397-398 -> 415; existing 'rearranged 400-414' annotation on eps 101/102/124-127 stands"
+    },
+    {
+      "episodes": [
+        101
+      ],
+      "kind": "abridged",
+      "chapters": "399",
+      "note": "ch 399 'Delicious Moment' (Hawk retired / Takamura's eye epilogue) is not adapted in any episode: fandom chapter page has no anime field and afg lists 397, 398, 415 for ep 101"
+    },
+    {
+      "episodes": [
+        100
+      ],
+      "kind": "partial",
+      "chapters": "395",
+      "note": "only p.1-10 of 395 'Unknown Animal' animated; p.11-19 dropped (fandom forward + reverse mapping)"
+    },
+    {
+      "episodes": [
+        96
+      ],
+      "kind": "partial",
+      "chapters": "378",
+      "note": "378 p.1-4 (the champions' 'dry out' conversation) dropped; fandom differences list confirms the scene removal"
+    },
+    {
+      "episodes": [
+        90
+      ],
+      "kind": "partial",
+      "chapters": "359-361",
+      "note": "359 p.14, 360 p.17-19, 361 p.16-19 not animated (typhoon/Nekota-shop article, Hamada mention, etc. per fandom differences)"
+    },
+    {
+      "episodes": [
+        93
+      ],
+      "kind": "rearranged",
+      "chapters": "370",
+      "note": "intra-chapter only: the Takamura-Suguru conversation is split and interleaved with the Kyoka/Wataru scene; no effect on chapter position"
+    }
+  ],
+  "type_corrections": [],
+  "repairs": [],
+  "structure": {
+    "notes": "New Challenger = AniList 5258 = our 77-102 = S2 eps 1-26; Wikipedia's episode list numbers the season 77-102 itself, so conversion is S2 ep N = our N+76 (applied to all 13 anchors). Fandom Anime Guide cumulative column: #76 = S1 ep 76 'Boxer's Fist' (= our 76), #77 = S2 ep 1 'A New Step' (= our 77) - i.e. the wiki's cumulative space for NC matches ours (no WIKI_NUMBERING_SHIFT for NC; relevant to open flag #802). Arc map (fandom arc pages): Proof of Power 341-354 = our 85-88; Battle of Hawk 355-399 = our 89-101; Submarine Wars 415-440 = our 101-105; Post-War 400-414 = our 124-127. Order-only specials sit between S1 and NC in release order: Boxer's Fist (our 76, gag only) -> Champion Road (TV special 2003-04-18) -> Mashiba vs. Kimura - Execution (OVA 2003-09-05) -> NC ep 1 'A New Step' (wiki 'next' link). Note the two specials are in reverse MANGA order: the OVA adapts the Execution Arc (270-289) which precedes Champion Road's First Step Arc (291-314) in the manga; ch 290 is adapted nowhere. NC ep 1 then picks up at 315.",
+    "order_only": [
+      {
+        "anilist_id": 264,
+        "title": "Hajime no Ippo: Champion Road",
+        "after_anilist_id": 12069,
+        "adapts": "270 (p.1-2), 291-314 (First Step Arc; heavy page-splitting, ch 290 not adapted)",
+        "note": "TV special; fandom infobox previous=Boxer's Fist, next=Mashiba vs. Kimura. Manga-order it belongs AFTER the OVA. Source: https://ippo.fandom.com/wiki/Hajime_no_Ippo:_Champion_Road"
+      },
+      {
+        "anilist_id": 265,
+        "title": "Hajime no Ippo: Mashiba vs. Kimura - Execution",
+        "after_anilist_id": 264,
+        "adapts": "270-289 (Execution Arc; heavily page-split, e.g. 270 p.9-10/16-17/19 ... 289 p.4-14/17-19)",
+        "note": "OVA; fandom infobox previous=Champion Road, next=NC ep 1 'A New Step'. Source: https://ippo.fandom.com/wiki/Hajime_no_Ippo:_Mashiba_vs._Kimura_-_Execution"
+      }
+    ]
+  },
+  "flags_for_sean": [
+    "Source hygiene: animefillerguide's header line 'New Challenger ~ adapted from manga 315 to 389' (and the search-snippet claim 'chapters 315-389, volumes 36-43') is wrong; afg's own table and the fandom forward/reverse maps put NC through 398 then 415-420 (ends mid-vol 47). Do not let a series-level auto-fill use 389.",
+    "START-chapter rule as applied: partial opening chapter counts as START when this episode holds the majority of that chapter's pages (matches stored ep88 precedent: start 351 with p.8-19). Hence eps 92/96/98/100 start on 365/377/384/392 and ep 93 starts at 369 (368 minority share). Under a literal 'first full chapter' reading they would be 366/378/385/393 and 369 - flip if you prefer that convention.",
+    "Ep 101 continue point recorded as 416 (= end+1) for explicitness; ch 399 is unadapted anywhere and 400-414 are the eps 124-127 block. No source disagreements found in 89-101.",
+    "Perception check: some viewer comments call NC eps 25-26 'filler'; they are manga canon (397-398, 415-420). Our rows already say canon; no type correction needed."
+  ]
+}
