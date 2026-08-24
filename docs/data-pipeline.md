@@ -1252,6 +1252,12 @@ Fixed weekly is correct.
    A1 type gate to the AFG writers? (would delete ~40 chart anchors on
    filler rows and thin interpolation on one-piece/dbz/ranma until
    research replaces them; audit class holds the line meanwhile).
+   VERIFY-POOL DELTA 220→217, 0 failing: hellsing, trigun, zatch-bell each
+   held ONLY the refused pin and left the anchor-bearing pool —
+   **hellsing + trigun are NEWLY EXPOSED research targets** (their bad
+   pins had masked them from anchor_gap_research all along; both diverge
+   heavily from their manga, hence the filler-typed run-ends). Add both to
+   the batch-17 second pass alongside the 21-series RESUME list.
 42. 📍 **BATCH 17 — GAP TIER, PARTIALLY APPLIED (2026-08-24; RESUME MARKER)**.
    Roadmap item (2). Targets: the anchor_gap_research class (46) + the
    frontier_tail_null class (7) = 53 series, research/batch17/
