@@ -30,6 +30,7 @@ import {
   type Boundary,
   type EpisodeRow as DbEpisodeRow,
   type SeriesRow,
+  type WatchOrderRow,
 } from '../../src/data/catalog/assemble';
 import { buildEpisodeList, inReorderCrossing } from '../../src/lib/mapping';
 
@@ -82,12 +83,18 @@ export async function verifySeries(id: string, print = false): Promise<string[]>
     boundaries = (b ?? []) as Boundary[];
   }
 
+  const { data: wo } = await db
+    .from('watch_order_entries')
+    .select('position, title, air_date, kind, display_label, chapter, volume, chapters_adapted')
+    .eq('series_id', id)
+    .order('position');
   const m = buildMapping(row, eps, anchors, boundaries, await continuationStart(row));
-  const anime = toAnimeSeries(row, 1, toEpisodes(row, eps, anchors, boundaries), boundaries.length, boundaries);
+  const anime = toAnimeSeries(row, 1, toEpisodes(row, eps, anchors, boundaries), boundaries.length, boundaries, (wo ?? []) as WatchOrderRow[]);
   const list = buildEpisodeList(anime, m);
 
   if (print) {
     for (const r of list.rows) console.log(`  ep ${r.ep} [${r.type}] vol ${r.vol ?? '·'} ch ${r.ch ?? '·'}`);
+    for (const w of anime.watchOrderEntries ?? []) console.log(`  #${w.label} [entry @${w.position}] ${w.title} — vol ${w.volume ?? '·'} ch ${w.chapter ?? '·'}`);
     for (const s of list.sections) {
       const ch = s.chStart == null || s.chEnd == null ? '—' : s.chStart === s.chEnd ? `${s.chStart}` : `${s.chStart}-${s.chEnd}`;
       const vol = s.volStart == null ? '—' : s.volEnd != null && s.volEnd !== s.volStart ? `${s.volStart}-${s.volEnd}` : `${s.volStart}`;

@@ -35275,7 +35275,10 @@ var EPISODE_TYPE_OVERRIDES = {
   //   cardcaptor-sakura: Wood/Rain (4) and Silent (7) are anime-only cards with
   //   anime-original plots; 5 (ch-1 flashback video only) and 39 (Cloud, on the
   //   premise of ch 33) are mixed; Clear Card 76, 83-87 anime-original, 82 mixed
-  "cardcaptor-sakura": { 4: "filler", 5: "mixed", 7: "filler", 39: "mixed", 76: "anime-only-canon", 82: "mixed", 83: "anime-only-canon", 84: "anime-only-canon", 85: "anime-only-canon", 86: "anime-only-canon", 87: "anime-only-canon" },
+  "cardcaptor-sakura": { 4: "filler", 5: "mixed", 7: "filler", 39: "mixed" },
+  //   Clear Card (separate series, Sean 2026-08-24): our old 76/82-87 in the
+  //   split entry's own numbering (−71)
+  "cardcaptor-sakura-clear-card": { 5: "anime-only-canon", 11: "mixed", 12: "anime-only-canon", 13: "anime-only-canon", 14: "anime-only-canon", 15: "anime-only-canon", 16: "anime-only-canon" },
   //   dagashi-kashi ep 10 'That's Dagashi!': anime-original sick-Hotaru story
   //   with gag fragments only (MAL reader posts, Inquisitr, WDTALO list, fandom)
   "dagashi-kashi": { 10: "mixed" },

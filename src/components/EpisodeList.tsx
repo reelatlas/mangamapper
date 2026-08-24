@@ -6,7 +6,7 @@ import {
 } from '@tanstack/react-virtual';
 import { ChevronRightIcon, ListIcon } from '@/components/icons';
 import { cn } from '@/lib/utils';
-import type { EpisodeType } from '@/types/anime';
+import type { EpisodeType, WatchOrderEntry } from '@/types/anime';
 import type { EpisodeRow, EpisodeSection } from '@/lib/mapping';
 
 // ─────────────────────────────────────────────────────────────────────────────
@@ -85,7 +85,8 @@ const SECTION_BAND: Record<string, string> = {
 
 type ListItem =
   | { kind: 'header'; section: EpisodeSection }
-  | { kind: 'row'; row: EpisodeRow; sectionIndex: number };
+  | { kind: 'row'; row: EpisodeRow; sectionIndex: number }
+  | { kind: 'entry'; entry: WatchOrderEntry; sectionIndex: number };
 
 // section coverage label: whole volumes, no partial marking; — is the null.
 // Numbers are ALWAYS the normal text color, collapsed or open (CONFIRMED
@@ -127,6 +128,10 @@ const coverageLabel = (s: EpisodeSection) => {
 interface EpisodeListProps {
   rows: EpisodeRow[];
   sections: EpisodeSection[];
+  // SURFACED watch-order entries (Sean 2026-08-24): order-only specials with
+  // a ruled display label ("170+1") render as non-interactive rows in the
+  // flow; tagging/visual differentiation comes at the UI design pass
+  entries?: WatchOrderEntry[];
   selectedEp: number | null; // from the lookup result (hatch → last aired ep)
   // strip→list keyboard handoff: the lookup bumps this ONLY on a strip click
   // (never on field typing/stepping — those must keep the input's focus);
@@ -143,6 +148,7 @@ interface EpisodeListProps {
 export const EpisodeList = ({
   rows,
   sections,
+  entries = [],
   selectedEp,
   jumpSerial,
   restEp,
@@ -165,7 +171,33 @@ export const EpisodeList = ({
 
   // rows' #ep gutter — editor-gutter sizing (see the alignment contract):
   // hash + the series' max episode digits (ep numbers are 1..rows.length)
-  const enoStyle = { width: `${String(Math.max(rows.length, 1)).length + 1}ch` };
+  const maxEntryLabel = entries.reduce((m, e) => Math.max(m, e.label.length), 0);
+  const enoStyle = {
+    width: `${Math.max(String(Math.max(rows.length, 1)).length, maxEntryLabel) + 1}ch`,
+  };
+
+  // watch-order entries slot in AFTER their position's episode — an integer
+  // position means "after ep N-1" ("170+1" @171 follows ep 170), a fractional
+  // one follows its floor (46.25 after ep 46); anything past the run trails
+  // the last section. Geometry (headerOffset / anchoring / expansion) counts
+  // them like rows so the fixed math stays exact.
+  const entryPlan = useMemo(() => {
+    const bySec = new Map<number, number>();
+    const byEp = new Map<number, WatchOrderEntry[]>();
+    if (entries.length && sections.length) {
+      const last = sections[sections.length - 1];
+      const sorted = [...entries].sort((a, b) => a.position - b.position);
+      for (const e of sorted) {
+        const key = Number.isInteger(e.position) ? e.position - 0.5 : e.position;
+        const ep = Math.min(Math.max(Math.floor(key), sections[0].start), last.end);
+        byEp.set(ep, [...(byEp.get(ep) ?? []), e]);
+        const sec = sections.find((x) => ep >= x.start && ep <= x.end) ?? last;
+        bySec.set(sec.index, (bySec.get(sec.index) ?? 0) + 1);
+      }
+    }
+    return { bySec, byEp };
+  }, [entries, sections]);
+  const extraOf = (index: number) => entryPlan.bySec.get(index) ?? 0;
 
   const items = useMemo<ListItem[]>(() => {
     const out: ListItem[] = [];
@@ -174,11 +206,14 @@ export const EpisodeList = ({
       if (open.has(s.index)) {
         for (let ep = s.start; ep <= s.end; ep++) {
           out.push({ kind: 'row', row: rows[ep - 1], sectionIndex: s.index });
+          for (const e of entryPlan.byEp.get(ep) ?? []) {
+            out.push({ kind: 'entry', entry: e, sectionIndex: s.index });
+          }
         }
       }
     }
     return out;
-  }, [sections, rows, open]);
+  }, [sections, rows, open, entryPlan]);
 
   const headerIndexes = useMemo(
     () => items.reduce<number[]>((acc, it, i) => (it.kind === 'header' ? (acc.push(i), acc) : acc), []),
@@ -224,7 +259,7 @@ export const EpisodeList = ({
     let y = 0;
     for (const s of sections) {
       if (s.index === index) break;
-      y += HEADER_H + (open.has(s.index) ? s.count * ROW_H : 0);
+      y += HEADER_H + (open.has(s.index) ? (s.count + extraOf(s.index)) * ROW_H : 0);
     }
     return y;
   };
@@ -280,9 +315,9 @@ export const EpisodeList = ({
     for (const s of sections) {
       if (open.has(s.index) && !prev.has(s.index)) {
         if (req?.index === s.index) delta += req.rows * ROW_H;
-        else if (y + HEADER_H <= el.scrollTop) delta += s.count * ROW_H;
+        else if (y + HEADER_H <= el.scrollTop) delta += (s.count + extraOf(s.index)) * ROW_H;
       }
-      y += HEADER_H + (prev.has(s.index) ? s.count * ROW_H : 0);
+      y += HEADER_H + (prev.has(s.index) ? (s.count + extraOf(s.index)) * ROW_H : 0);
     }
     if (delta > 0) el.scrollTop += delta;
   }, [open, sections]);
@@ -338,7 +373,7 @@ export const EpisodeList = ({
       //   below the fold ('end' align) was tried and rejected — it teleports
       //   the view when crossing mid-frame.
       if (ia?.kind === 'key' && ia.dir === -1) {
-        expandCompRef.current = { index: section.index, rows: section.count };
+        expandCompRef.current = { index: section.index, rows: section.count + extraOf(section.index) };
       }
       setOpen((prev) => new Set(prev).add(section.index));
     } else if (pendingScrollRef.current) {
@@ -403,8 +438,12 @@ export const EpisodeList = ({
       if (!it) continue; // stale virtual index during a structural change
       if (it.kind === 'header') {
         include(it.section.start, open.has(it.section.index) ? it.section.start : it.section.end);
-      } else {
+      } else if (it.kind === 'row') {
         include(it.row.ep, it.row.ep);
+      } else {
+        // a watch-order entry stands for the position after its anchor ep
+        const ep = Math.min(Math.floor(it.entry.position), Math.max(rows.length, 1));
+        include(ep, ep);
       }
     }
     // the pinned header itself is real visible info; when its section is
@@ -590,6 +629,41 @@ export const EpisodeList = ({
                     {coverageLabel(s)}
                   </span>
                 </button>
+              );
+            }
+
+            if (it.kind === 'entry') {
+              const { entry } = it;
+              return (
+                <div
+                  key={vi.key}
+                  className={cn('flex items-center gap-[0.6rem] pr-[0.3rem] text-sm', ROW_INDENT)}
+                  style={{
+                    position: 'absolute',
+                    top: 0,
+                    left: 0,
+                    right: 0,
+                    height: ROW_H,
+                    transform: `translateY(${vi.start}px)`,
+                  }}
+                  role="option"
+                  aria-selected={false}
+                >
+                  <span className={cn('shrink-0', HASH_COLOR.canon)} style={enoStyle}>
+                    #<span className={NUM_COLOR.canon}>{entry.label}</span>
+                  </span>
+                  <span className="min-w-0 flex-1 truncate">{entry.title}</span>
+                  {entry.chapter !== null ? (
+                    <span className="shrink-0">
+                      <span className="text-muted-foreground">vol:</span>
+                      {entry.volume ?? '—'}
+                      <span className="text-muted-foreground"> · ch:</span>
+                      {entry.chapter}
+                    </span>
+                  ) : (
+                    <span className="shrink-0 text-muted-foreground/60">—</span>
+                  )}
+                </div>
               );
             }
 

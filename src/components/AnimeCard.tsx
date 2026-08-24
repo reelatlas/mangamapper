@@ -253,6 +253,7 @@ export const AnimeCard = ({ anime: listItem, onClose }: AnimeCardProps) => {
                         <EpisodeList
                           rows={episodeList.rows}
                           sections={visibleSections}
+                          entries={anime.watchOrderEntries ?? []}
                           selectedEp={selectedEp}
                           jumpSerial={lookup.jumpSerial}
                           restEp={lookup.restEp}

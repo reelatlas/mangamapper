@@ -293,6 +293,7 @@ in code (`scripts/ingest/`), and every violation flags rather than guesses:
 | **Running-order END normalization (2026-08-23 s2, Dagashi S1)** | an agent may report END as the last chapter in the episode's running order (a scrambled sampler: "58, 32, 15" → 15). Our END is the POSITION instrument — the furthest mainline chapter touched — so the apply script lifts it to the highest chapter in the adapted list when it sits below the start; the full list keeps the real order | apply-research-batch-14.ts |
 | **Volume-boundary identity + numbering space (2026-08-23 s2)** | TEN manga carried boundaries from OTHER series' Wikipedia pages (Slime ← Cells at Work!, Made in Abyss ← Claymore, Yona ← Noragami, Wind Breaker ← Ushio & Tora, Kamisama Kiss ← 20th Century Boys, Hikaru ← Rurouni Kenshin, Gangsta ← Black Lagoon, Drifters ← Vagabond, Ajin ← Arslan, Killing Bites ← Vampire Knight, +6 more: Boarding School Juliet, Pluto, Sanda, Fist of the Blue Sky, Detective School Q, Project ARMS) — pre-08-24 search matches never healed; Dragon Ball's came from the Z list in Viz's RESTARTED numbering (Z ch 1 = original 195), three families ran past their manga's end (Cardcaptor + Clear Card, Rosario Season II, Tokyo Ghoul). Rules: the manga's own title leads the page search; a page whose parse repeats/backs up volume numbers is a franchise page and is skipped; a manga whose family no longer qualifies loses its stale rows; a FINISHED manga's rows past its total are trimmed and the last kept row closed at the total; research-tier rows (source 'research') may carry volumes a page can't (Dragon Ball v17-42, Slime v1-32) and close the last wiki row before them. Outcome-side: audit classes boundaries_wrong_page / boundaries_beyond_total (both 0 after the heal) | volumes-backfill.ts [mangaIds]; audit-ui-truth |
 | **Research bookmarks: one per series (2026-08-23 s2)** | every batch agent's flags_for_sean land as ONE review bookmark per series (detail.kind_of_note = 'sean_review_bookmark', full text in the in-repo verdict JSON) — not one per note | apply-research-batch-14.ts |
+| **Watch-order entries: canonical + surfaced-by-ruling (Sean 2026-08-24)** | order-only specials/OVAs/movies live as app-readable rows in `watch_order_entries` (position numeric, title, air date, kind, chapter/volume/chapters_adapted full record, note) mirrored from ingest_fractionals by sync-watch-order.ts. An entry RENDERS in the episode table only when a per-series ruling sets `display_label` (RULED_LABELS in the sync script). SURFACING IS PARKED (Sean 2026-08-24, after a brief live trial): it returns with the specials/OVAs/movies STATUS design pass. **Sean's intended v2 logic — THE REFERENCE POINT**: entries render as episode rows in the +N format (#170+1 'More', #170+1.5 'I am a hero too' for MHA) and COUNT AS UNITS — the section header envelope includes their chapters (…-431.5) and volume, section counts include them, they appear on the manga strip, are selectable/steppable like episodes, and the series episode total reads "170+1.5"; the +N format is a PER-SERIES ruling (community-derived for MHA), not a global convention. The render path (EpisodeList entries prop, geometry-exact insertion after ep N−1 / floor(position)) is built and dormant; the deeper unit integration (spans/strip/lookup) is the design-pass work. Until then every entry stays data-ready with display_label null | watch_order_entries + sync-watch-order.ts / EpisodeList entries / toAnimeSeries watchOrder |
 | Dispositions | active / excluded / duplicate / merged rulings are durable data; backfill skips non-active | source_map |
 
 **Hard-won learnings** (why some rules exist): AFL's Drupal is corrupt since
@@ -436,6 +437,7 @@ via `supabase projects api-keys`).
 - `wiki-episodes-backfill.ts [ids]` — Wikipedia episode titles/air dates, creating rows for numbers we lack (fill-only merge; evidence-locked offsets and the namesake guard, §10); also stages fractional watch-order entries into ingest_fractionals for disposition.
 - `verify-series-display.ts [--print] <ids> | --all` — the whole-series verifier (§10); `--all` sweeps every anchored series and lists reorder holes (the exact-record work-list); `--print` shows rows AND section headers (envelope rule).
 - `volumes-backfill.ts [mangaAnilistId ...]` — an explicit id list overrides the anchored-only default (heal a manga whose anchors are landing); identity, trim and research-aware rules in §10.
+- `sync-watch-order.ts` — mirrors order-only fractionals into the canonical watch_order_entries table (labels = per-series surface rulings, fill-only); run after any fractional disposition change.
 - `apply-research-batch-14.ts [--dry-run] [ids]` — the batch-14 pattern for research application: verdict JSONs live in-repo (research/batch14/out), repairs detected programmatically, type corrections only through EPISODE_TYPE_OVERRIDES, order-only dedup, sliver + running-order normalization, one bookmark per series. Future batches copy this shape.
 - `merge.ts` — multi-AFL-page merges (config at top).
 - `relations.ts` — rebuilds series_relations (auto + RULED pairs).
@@ -978,7 +980,16 @@ Fixed weekly is correct.
    special) — ingest_fractionals 171/171.5 + OVERRIDE_CHAINS extras;
    counts stay 170. Standing principle (Sean, verbatim intent): every
    classification lands as REAL DATA VALUES keyed to series ids — the UI
-   passes choose what to surface, never re-research.
+   passes choose what to surface, never re-research. (c) Surfacing v1
+   (2026-08-24): `watch_order_entries` (migration 20260825190000,
+   anon-readable) + sync-watch-order.ts; MHA's two specials briefly
+   rendered as list rows #170+1 / #170+1.5, then Sean PARKED surfacing
+   for the specials/OVAs/movies status design pass — labels cleared, the
+   render path stays built and dormant, and his intended unit-level logic
+   (envelope, counts, strip, selectability, total reads "170+1.5") is
+   recorded in §10 as the reference point. All 40 order-only entries are
+   data-ready with display_label null; titles corrected ('More' / 'I am
+   a hero too').
 21. ✅ **Consolidation pass 2 (2026-08-23, post-Kenshin)**: every write path
    swept against the day's rules — filterEpisodeRows (caps + type
    overrides) now in ALL five episode writers (resolve, stitched-guard,

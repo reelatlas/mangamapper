@@ -110,7 +110,11 @@ its keep.
   convention (no settled community number; the .5 matches the manga's
   bonus-chapter format and the special's length). Stored at
   ingest_fractionals positions 171/171.5 + OVERRIDE_CHAINS extras. The +N
-  surface format is a PER-SERIES ruling recorded in data, not a global
-  format — other series get their own rulings at the UI pass.
+  surface format is a PER-SERIES ruling recorded in data, not a global format; titles 'More' / 'I am a hero too'. SURFACING PARKED
+  (Sean 2026-08-24) until the specials/OVAs/movies status design pass —
+  the intended unit-level rendering (rows in the +N format, section
+  envelope to 431.5, counts, strip presence, selectable, series total
+  reads "170+1.5") is recorded in data-pipeline §10 as the reference
+  point.
 - **Rent-a-Girlfriend**: S6 (213581) announced, undated — joins when listed
   with dates.

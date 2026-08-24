@@ -61,6 +61,17 @@ export interface MangaMapping {
   chapters: string; // e.g., "1-3" or "45"
 }
 
+export interface WatchOrderEntry {
+  position: number;       // fractional sort position in the episode flow (171, 171.5)
+  label: string;          // the ruled surface label ("170+1", "170+1.5")
+  title: string;
+  airDate: string | null;
+  kind: string | null;    // special / ova / movie …
+  chapter: number | null; // what it adapts (end position)
+  volume: number | null;
+  chaptersAdapted: string | null;
+}
+
 export interface Episode {
   number: number;
   title: string;
@@ -100,6 +111,10 @@ export interface AnimeSeries {
   // readout prefers these; the ratio estimate is only the boundary-less
   // fallback (estimated rows must never contradict curated neighbors)
   volumeBoundaries?: { volume: number; chapterStart: number; chapterEnd: number | null }[];
+  // SURFACED order-only watch-order entries (Sean 2026-08-24): rows only
+  // exist here when a per-series ruling set a display_label ("170+1") —
+  // unlabeled entries stay data-side until their UI ruling
+  watchOrderEntries?: WatchOrderEntry[];
   mangaStartVolume: number | null;
   mangaStartChapter: number | null;
   episodes: Episode[];

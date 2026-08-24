@@ -856,6 +856,56 @@ export type Database = {
         }
         Relationships: []
       }
+      watch_order_entries: {
+        Row: {
+          air_date: string | null
+          chapter: number | null
+          chapters_adapted: string | null
+          created_at: string
+          display_label: string | null
+          kind: string | null
+          note: string | null
+          position: number
+          series_id: string
+          title: string
+          volume: number | null
+        }
+        Insert: {
+          air_date?: string | null
+          chapter?: number | null
+          chapters_adapted?: string | null
+          created_at?: string
+          display_label?: string | null
+          kind?: string | null
+          note?: string | null
+          position: number
+          series_id: string
+          title: string
+          volume?: number | null
+        }
+        Update: {
+          air_date?: string | null
+          chapter?: number | null
+          chapters_adapted?: string | null
+          created_at?: string
+          display_label?: string | null
+          kind?: string | null
+          note?: string | null
+          position?: number
+          series_id?: string
+          title?: string
+          volume?: number | null
+        }
+        Relationships: [
+          {
+            foreignKeyName: "watch_order_entries_series_id_fkey"
+            columns: ["series_id"]
+            isOneToOne: false
+            referencedRelation: "series"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
     }
     Views: {
       [_ in never]: never

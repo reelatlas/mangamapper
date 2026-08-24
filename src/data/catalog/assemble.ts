@@ -108,13 +108,38 @@ export const toEpisodes = (row: SeriesRow, eps: EpisodeRow[], anchors: AnchorRow
   });
 };
 
+export type WatchOrderRow = {
+  position: number;
+  title: string;
+  air_date: string | null;
+  kind: string | null;
+  display_label: string | null;
+  chapter: number | null;
+  volume: number | null;
+  chapters_adapted: string | null;
+};
+
 export const toAnimeSeries = (
   row: SeriesRow,
   rank: number,
   episodes: Episode[],
   publishedVolumes = 0,
   boundaries: Boundary[] = [],
+  watchOrder: WatchOrderRow[] = [],
 ): AnimeSeries => ({
+  // only RULED (labeled) entries surface; the rest stay data-side
+  watchOrderEntries: watchOrder
+    .filter((w) => w.display_label != null)
+    .map((w) => ({
+      position: Number(w.position),
+      label: w.display_label as string,
+      title: w.title,
+      airDate: w.air_date,
+      kind: w.kind,
+      chapter: w.chapter == null ? null : Number(w.chapter),
+      volume: w.volume,
+      chaptersAdapted: w.chapters_adapted,
+    })),
   // real print boundaries ride along so EVERY chapter→volume readout
   // (including interpolated episode rows) uses them — the ratio estimate
   // must never contradict a curated neighbor (Sean 2026-08-23)

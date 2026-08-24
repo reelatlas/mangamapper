@@ -20374,7 +20374,12 @@ var COMMUNITY_COUNT_OVERRIDES = {
   "monogatari-series": { cap: 100, note: "community numbering excludes the 3 Second Season recaps (Sean 2026-08-24)" },
   "high-school-dxd": { cap: 48, note: "HERO's Episode 0 is a mid-run special the community's continuous numbering excludes \u2014 order-only (Sean 2026-08-24)" },
   "urusei-yatsura": { cap: 194, note: "MAL/AniList count the farewell RECAP special (rebroadcast of ep 44 + countdown) as #194; Wikipedia holds it at 193.5 unnumbered \u2014 recap rule (Monogatari precedent): excluded, finale = 194 (research-verified 2026-08-23)" },
-  "yu-yu-hakusho-ghostfiles": { cap: 112, note: "TV run = 112; trailing extras (2009 Picture Drama, 2018 OVAs Two Shot/All or Nothing) are order-only \u2014 AFL renumbers them after drops, so the CAP is the durable instrument (the drop[113] alone let All or Nothing re-enter as 113; research batch 11, 2026-08-23)" }
+  "yu-yu-hakusho-ghostfiles": { cap: 112, note: "TV run = 112; trailing extras (2009 Picture Drama, 2018 OVAs Two Shot/All or Nothing) are order-only \u2014 AFL renumbers them after drops, so the CAP is the durable instrument (the drop[113] alone let All or Nothing re-enter as 113; research batch 11, 2026-08-23)" },
+  //   Clear Card = SEPARATE series (Sean 2026-08-24, the Naruto→Shippuden
+  //   pattern: different manga, 87296). The shared AFL page numbers through
+  //   93 — rows beyond 71 (1998 TV 1-70 + Prologue OVA 71) belong to
+  //   cardcaptor-sakura-clear-card in its own 1-22 numbering
+  "cardcaptor-sakura": { cap: 71, note: "Clear Card split (Sean 2026-08-24); AFL page spans both series" }
 };
 function applyCommunityCap(seriesId, row) {
   const o = COMMUNITY_COUNT_OVERRIDES[seriesId];
@@ -20447,7 +20452,10 @@ var EPISODE_TYPE_OVERRIDES = {
   //   cardcaptor-sakura: Wood/Rain (4) and Silent (7) are anime-only cards with
   //   anime-original plots; 5 (ch-1 flashback video only) and 39 (Cloud, on the
   //   premise of ch 33) are mixed; Clear Card 76, 83-87 anime-original, 82 mixed
-  "cardcaptor-sakura": { 4: "filler", 5: "mixed", 7: "filler", 39: "mixed", 76: "anime-only-canon", 82: "mixed", 83: "anime-only-canon", 84: "anime-only-canon", 85: "anime-only-canon", 86: "anime-only-canon", 87: "anime-only-canon" },
+  "cardcaptor-sakura": { 4: "filler", 5: "mixed", 7: "filler", 39: "mixed" },
+  //   Clear Card (separate series, Sean 2026-08-24): our old 76/82-87 in the
+  //   split entry's own numbering (−71)
+  "cardcaptor-sakura-clear-card": { 5: "anime-only-canon", 11: "mixed", 12: "anime-only-canon", 13: "anime-only-canon", 14: "anime-only-canon", 15: "anime-only-canon", 16: "anime-only-canon" },
   //   dagashi-kashi ep 10 'That's Dagashi!': anime-original sick-Hotaru story
   //   with gag fragments only (MAL reader posts, Inquisitr, WDTALO list, fandom)
   "dagashi-kashi": { 10: "mixed" },

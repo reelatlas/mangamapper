@@ -20,6 +20,7 @@ import {
   type Boundary,
   type EpisodeRow,
   type SeriesRow,
+  type WatchOrderRow,
   buildMapping,
   buildSpans,
 } from './assemble';
@@ -83,6 +84,18 @@ async function allBoundaries(mangaId: number | null): Promise<Boundary[]> {
   return (data ?? []) as Boundary[];
 }
 
+// Surfaced watch-order entries (Sean 2026-08-24): order-only specials with a
+// ruled display_label render inside the episode table ("170+1")
+async function allWatchOrder(seriesId: string): Promise<WatchOrderRow[]> {
+  const { data, error } = await supabase
+    .from('watch_order_entries')
+    .select('position, title, air_date, kind, display_label, chapter, volume, chapters_adapted')
+    .eq('series_id', seriesId)
+    .order('position');
+  if (error) throw error;
+  return (data ?? []) as WatchOrderRow[];
+}
+
 // Same-manga continuation (segment model, Sean 2026-08-24): a sibling entry
 // whose scope starts at/inside this entry's scope end continues the story
 // (Naruto→Shippuden, Berserk 1997→2016) — the residue between our frontier
@@ -135,16 +148,17 @@ export const supabaseCatalogSource: CatalogSource = {
   async getById(id: string) {
     const row = await fetchSeriesRow(id);
     if (!row) return null;
-    const [eps, anchors, boundaries] = await Promise.all([
+    const [eps, anchors, boundaries, watchOrder] = await Promise.all([
       allEpisodes(id),
       allAnchors(id),
       allBoundaries(row.manga_anilist_id),
+      allWatchOrder(id),
     ]);
     const { count } = await supabase
       .from('series')
       .select('*', { count: 'exact', head: true })
       .gt('popularity', row.popularity);
-    return toAnimeSeries(row, (count ?? 0) + 1, toEpisodes(row, eps, anchors, boundaries), boundaries.length, boundaries);
+    return toAnimeSeries(row, (count ?? 0) + 1, toEpisodes(row, eps, anchors, boundaries), boundaries.length, boundaries, watchOrder);
   },
 
   async getMapping(id: string) {
