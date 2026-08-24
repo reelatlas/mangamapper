@@ -1,0 +1,49 @@
+{
+  "series_id": "tokyo-revengers",
+  "summary": "Both targets promoted to full exact records. Ep 6 'Regret' opens with the bonus 'Extra: Zero' (Draken backstory, printed in volume 2 between chs 12 and 13, outside main numbering) then adapts chs 13-14; end=14, vol 2 — confirmed by the fandom episode infobox, the Extra: Zero chapter page's reverse 'anime episode' field, a CBR episode piece (event-level: ep 6 = young Mikey/Draken past), and the Wikipedia chapter list title match (ch 13 = 'Regret' = episode title). Ep 22 'One for all' adapts ch 63 (Toman-founding flashback), the first part of ch 64 (Bloody Halloween aftermath: sirens, Kazutora's arrest — ch 64 spans eps 22-23 per the chapter's reverse field), and ends on ch 67 'Man-crush' pulled forward (Chifuyu/Baji backstory, grave visit) — honest non-monotonic end=67, vol 8; ep 23 then covers the rest of 64, 65-66, and 68, matching its stored anchor (68). Sources: fandom episode infoboxes + chapter-side reverse maps (chs 63-68 walked individually), angryanimebitches episode 22-23 review (independent event-level: founding + battle end + all Chifuyu/Baji history in ep 22), Wikipedia title matches (ch 63 'One For All', ch 64 'End Of War'). Existing anchors (ep5→12, ep21→62, ep23→68) all consistent; both zone annotations verified accurate as stored — no repairs, no annotation changes.",
+  "anchors": [
+    {
+      "episode": 6,
+      "end_chapter": 14,
+      "start_chapter": 13,
+      "chapters_adapted": "Extra: Zero, 13-14",
+      "volume": 2,
+      "confidence": "high",
+      "note": "Opens with bonus chapter 'Extra: Zero' (Draken backstory, vol 2 extra between chs 12/13, outside main numbering — labeled, not numbered), then chs 13-14 (present-day Osanai investigation). Title match: ch 13 = 'Regret' = episode title. Continue = 15 (end+1).",
+      "sources": [
+        "https://tokyo-revengers.fandom.com/wiki/Episode_6",
+        "https://tokyo-revengers.fandom.com/wiki/Chapter_Extra:_Zero",
+        "https://www.cbr.com/tokyo-revengers-episode-6-mikey-draken-past/",
+        "https://en.wikipedia.org/wiki/List_of_Tokyo_Revengers_chapters"
+      ]
+    },
+    {
+      "episode": 22,
+      "end_chapter": 67,
+      "start_chapter": 63,
+      "chapters_adapted": "63-64, 67",
+      "volume": 8,
+      "confidence": "high",
+      "note": "In-episode order: ch 63 (founding flashback) → first part of ch 64 (sirens/arrest; ch 64 spans eps 22-23 per its reverse field) → ch 67 'Man-crush' pulled forward (Chifuyu/Baji backstory) closes the episode. Honest non-monotonic end=67; ep 23 covers rest of 64, 65-66, 68. Title match: ch 63 = 'One for all' = episode title.",
+      "sources": [
+        "https://tokyo-revengers.fandom.com/wiki/Episode_22",
+        "https://tokyo-revengers.fandom.com/wiki/Chapter_67",
+        "https://tokyo-revengers.fandom.com/wiki/Chapter_64",
+        "https://www.angryanimebitches.com/2021/09/tokyo-revengers-episodes-22-23/",
+        "https://en.wikipedia.org/wiki/List_of_Tokyo_Revengers_chapters"
+      ]
+    }
+  ],
+  "zone_level_only": [],
+  "continue_points": [
+    {
+      "episode": 22,
+      "continue_chapter": 64,
+      "note": "Mainline coverage stops partway through ch 64 (ep 23 finishes it: rest of 64 + 65-66 + 68); ch 67 at episode's end is a forward graft. Honest resume = 64, not 68."
+    }
+  ],
+  "annotation_updates": [],
+  "type_corrections": [],
+  "repairs": [],
+  "flags_for_sean": []
+}

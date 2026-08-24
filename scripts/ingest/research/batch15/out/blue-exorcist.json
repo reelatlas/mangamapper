@@ -1,0 +1,23 @@
+{
+  "series_id": "blue-exorcist",
+  "summary": "Target ep 26 (Kyoto Saga ep 1, 'Small Beginnings') promoted to an exact page-level record. The aonoexorcist.fandom Episode 26 infobox states the split precisely: Ch 14 (pages 21-24), Ch 15 (page 10), Ch 16 (pages 1-40, complete), Ch 17 (pages 1-2, 6-23, 33-37, 39-40); the chapter pages' reverse 'relepisode' fields independently agree (ch 14 -> eps 16+26 partial; ch 16 -> ep 26; ch 17 -> eps 17/18 partial + ep 26). ANN's Kyoto Saga preview corroborates the structure ('picking up right where the anime split from the manga - in other words, at chapter 16', with the ch-14 shock about Rin re-fresh). Surprise vs the stored annotation: the episode actually cold-opens on ch 16 (left-eye theft/Todo incident) and adapts most of ch 17, with the skipped ch-14 reaction scenes re-adapted later in the episode - not 'ch 14 before 16'; annotation update filed. Ep 27 opens at ch 17 pages 41-44, so the continue point is ch 17 (mid-chapter), not end+1.",
+  "anchors": [
+    {"episode": 26, "end_chapter": 17, "start_chapter": 16, "chapters_adapted": "16, 14 (p.21-24), 15 (p.10), 17 (p.1-2, 6-23, 33-37, 39-40)", "volume": 5,
+     "confidence": "high",
+     "note": "Cold-opens on ch 16 (all 40 pages: left-eye theft / Todo miasma incident), re-adapts the ch-14 reaction scenes S1's ep 16 changed or skipped (Ryuji and Shiemi learning Rin is Satan's son, pp.21-24) plus one page of ch 15 (p.10) as the ExWires' still-fresh shock, then runs ch 17's Kyoto departure (candle-training pp.1-2 are staged early in the episode; train scenes late; pp.3-5, 24-32, 38 skipped and pp.41-44 deferred to ep 27). START 16 = first chapter animated; the ch 14/15 re-adaptations are interior fragments, not the opener. END 17, vol 5. Page splits are single-wiki (fandom fwd infobox + reverse chapter-page fields, mutually agreeing); ANN independently confirms the ch-16 resume structure.",
+     "sources": ["https://aonoexorcist.fandom.com/wiki/Episode_26", "https://aonoexorcist.fandom.com/wiki/Chapter_14", "https://aonoexorcist.fandom.com/wiki/Chapter_16", "https://aonoexorcist.fandom.com/wiki/Chapter_17", "https://www.animenewsnetwork.com/preview-guide/2017/winter/blue-exorcist-kyoto-saga/.110706"]}
+  ],
+  "zone_level_only": [],
+  "continue_points": [
+    {"episode": 26, "continue_chapter": 17, "note": "Mid-chapter ending: ep 26 covers ch 17 only through p.40 with gaps (pp.3-5, 24-32, 38 unadapted); ep 27 opens at ch 17 pp.41-44 per its infobox - a reader resumes at ch 17, not 18."}
+  ],
+  "annotation_updates": [
+    {"episodes": [26], "kind": "rearranged", "chapters": "14-17",
+     "note": "Corrected zone facts: stored zone {ch 14 + 16} understates the episode. Ep 26 = ch 16 complete + ch 14 pp.21-24 + ch 15 p.10 + most of ch 17 (pp.1-2, 6-23, 33-37, 39-40). Also the ordering claim 'grabs skipped ch 14 before resuming from 16' is wrong: the episode cold-opens on ch 16's left-eye theft; the re-adapted ch-14/15 reaction scenes are interior/late fragments (aftermath and train sequence)."}
+  ],
+  "type_corrections": [],
+  "repairs": [],
+  "flags_for_sean": [
+    "Minor internal wiki inconsistency: the Chapter 15 page's 'relepisode' field lists only Ep. 17, while the Episode 26 infobox claims ch 15 page 10 - a one-page fragment; kept it in chapters_adapted since the episode-side infobox is the more detailed/page-level record. Also the Chapter 17 page says 'pages 5-23' for ep 26 where the episode page says pp.1-2, 6-23, 33-37, 39-40; the episode-side list was used."
+  ]
+}

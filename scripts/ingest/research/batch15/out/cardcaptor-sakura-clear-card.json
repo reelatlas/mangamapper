@@ -1,0 +1,42 @@
+{
+ "series_id": "cardcaptor-sakura-clear-card",
+ "summary": "Both targets promoted to exact graft records in CLEAR CARD numbering. Ep 12 (Ice Ball Sports Tournament): the story is entirely anime-original; the secured card, Hail, is an anime-EXCLUSIVE card whose only manga presence is a background cameo in CC ch 39 (vol 8) among the Clear Cards circling Sakura — fandom flags that cameo as possibly a CLAMP error, and ch 39 itself is the Momo/Lilie-flashback chapter where Break debuts and is sealed (nothing of it is in ep 12). Anchored 39/39 v8 as a card-graft-only record. Ep 14 (Shrine and the Zoo): story likewise anime-original (Mirage shows Sakura her friends as animals; Syaoran stops time), but unlike Hail, Mirage later gets a GENUINE manga debut and capture in CC ch 46 (vol 10, released 2020-08-31, over two years after the episode): it manifests from Sakura's fear of her dream showing Syaoran as the cloaked figure and is sealed together with Dreaming — a completely different story. Anchored 46/46 v10. Both continue points stay at ch 17 (eps 12-16 are the anime-original block; the mainline resumes with ep 17 = ch 17). Refined the lumped eps-11/12/14 graft {39, 46} annotation into per-episode facts, and recovered the full Clear Card volume boundaries from Wikipedia (the context file had none).",
+ "anchors": [
+  {"episode": 12, "end_chapter": 39, "start_chapter": 39, "chapters_adapted": "39 (Hail cameo only; story anime-original)", "volume": 8,
+   "confidence": "high",
+   "note": "Card-graft record, not story adaptation: Hail is anime-exclusive ('first manga: Chapter 39' = a cameo among the Clear Cards circling Sakura, which fandom notes may be a CLAMP error); CC ch 39 (vol 8) itself — Momo, Lilie flashback, Break debut/sealed, Shadow/Flight — has no counterpart in ep 12. Episode secures Hail via Syaoran's covert Firey summon; Wikipedia's episode list confirms Hail as ep 12's card. Type anime-only-canon stands.",
+   "sources": [
+    "https://ccsakura.fandom.com/wiki/Hail",
+    "https://ccsakura.fandom.com/wiki/Chapter_39_(Clear_Card)",
+    "https://ccsakura.fandom.com/wiki/Sakura_and_the_Ice_Ball_Sports_Tournament",
+    "https://en.wikipedia.org/wiki/List_of_Cardcaptor_Sakura:_Clear_Card_episodes",
+    "https://en.wikipedia.org/wiki/List_of_Cardcaptor_Sakura_chapters"
+   ]},
+  {"episode": 14, "end_chapter": 46, "start_chapter": 46, "chapters_adapted": "46 (Mirage graft; manga story entirely different)", "volume": 10,
+   "confidence": "high",
+   "note": "Card-graft record: Mirage 'prior to Chapter 46 was an anime-exclusive card' — its true manga debut/capture is CC ch 46 (vol 10, 2020-08-31), where it manifests from Sakura's dream-fear of Syaoran as the cloaked figure and is sealed with Dreaming (Reflect/Record used). Ep 14's shrine/zoo animal-illusion story and Syaoran's time-stop are anime-original; only the card is shared. Wikipedia's episode list confirms Mirage as ep 14's card. Type anime-only-canon stands.",
+   "sources": [
+    "https://ccsakura.fandom.com/wiki/Mirage",
+    "https://ccsakura.fandom.com/wiki/Chapter_46_(Clear_Card)",
+    "https://ccsakura.fandom.com/wiki/Sakura,_the_Shrine_and_the_Zoo",
+    "https://en.wikipedia.org/wiki/List_of_Cardcaptor_Sakura:_Clear_Card_episodes",
+    "https://en.wikipedia.org/wiki/List_of_Cardcaptor_Sakura_chapters"
+   ]}
+ ],
+ "zone_level_only": [],
+ "continue_points": [
+  {"episode": 12, "continue_chapter": 17, "note": "eps 12-16 are the anime-original block after ep 11 (ch 16); honest mainline resume is ch 17 (adapted by ep 17) — the ch-39 graft is card-only"},
+  {"episode": 14, "continue_chapter": 17, "note": "same block; the ch-46 graft is card-only, mainline resume stays ch 17"}
+ ],
+ "annotation_updates": [
+  {"episodes": [11, 12], "kind": "graft", "chapters": "39", "note": "Refines the lumped {39, 46} note: Reversal (ep 11) and Hail (ep 12) are anime-exclusive cards; their ONLY manga appearance is a background cameo among the Clear Cards circling Sakura in CC ch 39 (fandom: 'unknown if this was an error or intentional') — not a capture or story debut. Ch 39's actual content (Break's debut/sealing, Momo, Lilie flashback) is unadapted by these episodes."},
+  {"episodes": [14], "kind": "graft", "chapters": "46", "note": "Refines the lumped {39, 46} note: Mirage genuinely debuts and is captured in CC ch 46 (vol 10, Aug 2020) — manifesting from Sakura's fear of the dream showing Syaoran as the cloaked figure, sealed together with Dreaming — a wholly different story from ep 14's zoo illusion, animated two years earlier."}
+ ],
+ "type_corrections": [],
+ "repairs": [],
+ "flags_for_sean": [
+  "Graft nuance: for eps 11/12 the 'manga debut in ch 39' of Reversal/Hail is only a background cameo (cards circling Sakura, possibly a CLAMP art error per fandom) — if the surfaced-by-ruling render implies 'read ch 39 to see this card's story', that overstates it for Reversal/Hail; Mirage's ch 46 debut (ep 14) IS a real capture chapter.",
+  "Clear Card volume boundaries (context file had none) from Wikipedia's chapter list: v1 1-4, v2 5-8, v3 9-13, v4 14-19, v5 20-24, v6 25-29, v7 30-34, v8 35-39, v9 40-44, v10 45-49, v11 50-54, v12 55-59, v13 60-65, v14 66-70, v15 71-75, v16 76-80.",
+  "Entry facts say total_chapters=88, but the manga has 80 numbered chapters across 16 volumes (Wikipedia; fandom chapter pages agree, e.g. ch 39 = vol 8, ch 46 = vol 10) — the 88 presumably counts specials/x.5 extras; worth reconciling when the frontier work (flag #897) happens."
+ ]
+}

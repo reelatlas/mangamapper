@@ -84,7 +84,7 @@ async function main() {
     special_numbered_unreviewed: [], anchor_gap_research: [], frontier_tail_null: [],
     anchor_nonmonotonic: [], anchor_start_offtrend: [], anchor_beyond_chapter_space: [], anchor_fractional_chapter: [], ruling_violation: [],
     mu_pin_unverified: [],
-    rearranged_zone_unanchored: [],
+    rearranged_zone_unanchored: [], rearranged_zone_acknowledged: [],
     title_incomplete: [], airdate_incomplete: [], asterisk_unreviewed: [],
     fractional_unmodeled: [],
     no_source: [], ok_full: [], ok_no_volume: [], ok_loose: [],
@@ -281,7 +281,7 @@ async function main() {
       bySeries.get(a.series_id)!.push(a);
     }
     // ruled reorders carry rearranged/graft annotations — settled, stop asking
-    const annos = await pageAll('episode_annotations', 'series_id, episode, kind, chapters');
+    const annos = await pageAll('episode_annotations', 'series_id, episode, kind, chapters, note');
     const ruled = new Set(
       annos
         .filter((a: any) => a.kind === 'rearranged' || a.kind === 'graft')
@@ -300,18 +300,28 @@ async function main() {
       for (const a of anchors) anchorCount.set(a.series_id, (anchorCount.get(a.series_id) ?? 0) + 1);
       const looseIds = new Set(series.filter((s: any) => s.mapping_mode === 'loose').map((s: any) => s.id));
       const hits = new Map<string, number[]>();
+      const acked = new Map<string, number[]>();
       for (const a of annos as any[]) {
         if (a.kind !== 'rearranged' && a.kind !== 'graft') continue;
         if (!a.chapters) continue;
         if (looseIds.has(a.series_id)) continue;
         if ((anchorCount.get(a.series_id) ?? 0) < 2) continue; // no interpolation happening
         if (anchoredEps.has(`${a.series_id}#${a.episode}`)) continue;
-        if (!hits.has(a.series_id)) hits.set(a.series_id, []);
-        hits.get(a.series_id)!.push(a.episode);
+        // zone-acknowledged rows (batch-15 rule): research established that
+        // only zone-level knowledge exists — an acknowledged-approximate
+        // review item, not an open research target
+        const bucket = String(a.note ?? '').includes('zone-acknowledged') ? acked : hits;
+        if (!bucket.has(a.series_id)) bucket.set(a.series_id, []);
+        bucket.get(a.series_id)!.push(a.episode);
       }
       for (const [sid, eps] of hits) {
         classes.rearranged_zone_unanchored.push(
           `${sid}: ${eps.length} annotated ep(s) with chapter data but no anchor (${[...new Set(eps)].sort((x, y) => x - y).slice(0, 12).join(', ')}${eps.length > 12 ? ', …' : ''}) — interpolation may misplace them`,
+        );
+      }
+      for (const [sid, eps] of acked) {
+        classes.rearranged_zone_acknowledged.push(
+          `${sid}: ${eps.length} ep(s) research-acknowledged as zone-level-only (${[...new Set(eps)].sort((x, y) => x - y).slice(0, 12).join(', ')}${eps.length > 12 ? ', …' : ''}) — approximate render accepted`,
         );
       }
     }

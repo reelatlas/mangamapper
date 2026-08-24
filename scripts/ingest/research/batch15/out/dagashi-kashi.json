@@ -1,0 +1,143 @@
+{
+ "series_id": "dagashi-kashi",
+ "summary": "All five batch-14 open items settled. Ep 11: composition resolved as 50, 52, 13 — the caprico-log dagashi numbers (Cola Gum=50, Miyako Kombu=52, Ramune=13) match all three title-named snacks and the en-Wikipedia synopsis confirms Hotaru tells BOTH origin stories (52+13 trivia) inside an anime-original station-farewell frame; ch 56 is excluded (Phoenix-only; bastek66's final skipped list counts it unadapted, no candy-apple/festival content appears — only an echoed 'I'll wait' beat) and the episode is type-corrected to mixed per the ask. Eps 16/18/21 promoted medium→high: MAL manga-readers corroborate the no-dagashi chapters (TheOutlawZero 'covering chapter 107'; Laionidas confirms the search-for-Hotaru scene is manga content and that the suit-guy manager is 'properly introduced' one chapter ahead of E5 → ch 111), and caprico-log's debut list shows 117 is the ONLY snack-less chapter between 116-121, forcing ep 21's website story to 117. Ep 17's ch-113 question resolved as a TRUE GRAFT, not a skip: a ja chapter review (rf-zwei) shows ch 113's manga scene is Saya+Kokonotsu with the Taratara snack during the shop reopening — exactly the scene in ep 17 — so Phoenix's '113 skipped' is chapter-unit accounting only. Ep 24: END 126 confirmed (stored anchor already repaired in batch 14, no new repair to END); the '127 partially adapted' claim is rejected — ja-Wikipedia identifies ch 127 as the potato-fry 'stacked eating' correction gag chapter, content absent from the finale's ending, so the 127 parenthetical and the partial{127} annotation are retracted.",
+ "anchors": [
+  {
+   "episode": 11,
+   "end_chapter": 13,
+   "start_chapter": 50,
+   "chapters_adapted": "50, 52, 13",
+   "volume": 1,
+   "confidence": "high",
+   "note": "First half = ch 50 (Cola Gum box scene; Saya added, manga has only Hotaru+Kokonotsu per bastek66). Station half is anime-original framing carrying ch 52 (Miyako Kombu origin story) and ch 13 (Ramune/Perry origin) trivia — en-WP synopsis: 'tells the stories of both of their origins'; all three snacks title-named with caprico-log numbers 50/52/13. Ch 56 EXCLUDED (see repairs). END stays 13 (Ramune bit is the last chapter material in running order).",
+   "sources": [
+    "https://myanimelist.net/forum/?topicid=1494204",
+    "https://en.wikipedia.org/wiki/List_of_Dagashi_Kashi_episodes",
+    "https://caprico-log.com/entry/dagasikasi/",
+    "https://wheredoestheanimeleaveoff.com/where-does-the-dagashi-kashi-anime-leave-off-in-the-manga/"
+   ]
+  },
+  {
+   "episode": 16,
+   "end_chapter": 108,
+   "start_chapter": 106,
+   "chapters_adapted": "106-108",
+   "volume": 6,
+   "confidence": "high",
+   "note": "Promoted medium→high. 106 = Homerun Bar (caprico-log, title). 107 = fireworks festival: MAL TheOutlawZero 'this is covering chapter 107' + Inquisitr. 108 = Hotaru gone / Kokonotsu searching: WDTALO list 106-108, and MAL manga-reader Laionidas confirms the search-locations scene is manga content ('one location from the manga was notably omitted: Hotaru's gang's den'); 108 is v6's last chapter and ep 17 opens on the 3-months-later ch 109, so the departure/search can only be 108.",
+   "sources": [
+    "https://myanimelist.net/forum/?topicid=1703868",
+    "https://wheredoestheanimeleaveoff.com/where-does-the-dagashi-kashi-anime-leave-off-in-the-manga/",
+    "https://caprico-log.com/entry/dagasikasi/",
+    "https://dagashi-kashi.fandom.com/wiki/List_of_Chapters_and_Volumes"
+   ]
+  },
+  {
+   "episode": 17,
+   "end_chapter": 110,
+   "start_chapter": 109,
+   "chapters_adapted": "109-110, 113 (Taratara scene grafted)",
+   "volume": 7,
+   "confidence": "high",
+   "note": "Promoted medium→high; graft-vs-skip RESOLVED as graft. Ch 113's manga scene (rf-zwei review: Saya helps reopen the shop, Kokonotsu introduces タラタラしてんじゃね〜よ, warning-label gag, Saya blushing) is exactly the scene in ep 17 (title names the snack; MAL viewer asks about 'the get a move on you cod scene'). Phoenix's '113 skipped' is chapter-unit accounting — its scene IS adapted here, pulled from after 111-112 into the 109-110 cleanup story. 109-110 corroborated by Laionidas (E5 thread): translation one chapter ahead of anime, manager 'properly introduced' in that next chapter (=111), so E5 ends at 110.",
+   "sources": [
+    "https://rf-zwei.hatenablog.com/entry/2016/10/04/210000",
+    "https://caprico-log.com/entry/dagasikasi/",
+    "https://myanimelist.net/forum/?topicid=1705553",
+    "https://wheredoestheanimeleaveoff.com/where-does-the-dagashi-kashi-anime-leave-off-in-the-manga/",
+    "https://ja.wikipedia.org/wiki/%E3%81%A0%E3%81%8C%E3%81%97%E3%81%8B%E3%81%97"
+   ]
+  },
+  {
+   "episode": 18,
+   "end_chapter": 112,
+   "start_chapter": 111,
+   "chapters_adapted": "111-112",
+   "volume": 7,
+   "confidence": "high",
+   "note": "Promoted medium→high. Second source found: MAL Laionidas (E5 thread) places the suit-guy manager's proper introduction in the chapter right after E5's endpoint → Beni Yutaka intro = ch 111 (en-WP E6 synopsis: 'A well-dressed man named Beni Yutaka welcomes...'); MomoSinX (E6 thread) 'the manga is only a chapter ahead of season 2 atm' keeps the same position after E6 covers 111-112. Interval is also forced: eps 17 (109-110+113) and 19 (114-115) are high anchors and 111-112 are the only remaining chapters (both snack-less per caprico-log, matching the non-dagashi episode title).",
+   "sources": [
+    "https://myanimelist.net/forum/?topicid=1705553",
+    "https://myanimelist.net/forum/?topicid=1707134",
+    "https://en.wikipedia.org/wiki/List_of_Dagashi_Kashi_episodes",
+    "https://wheredoestheanimeleaveoff.com/where-does-the-dagashi-kashi-anime-leave-off-in-the-manga/",
+    "https://caprico-log.com/entry/dagasikasi/"
+   ]
+  },
+  {
+   "episode": 21,
+   "end_chapter": 119,
+   "start_chapter": 117,
+   "chapters_adapted": "117, 119",
+   "volume": 7,
+   "confidence": "high",
+   "note": "Ch 117 no longer rests on the WDTALO list alone: caprico-log's complete debut list shows 116=Roll Candy, 118=Nikki-gai, 119=Super Ball, 120=Monjiro, 121=High Eight — 117 is the ONLY snack-less chapter between 116 and 121, so the website story (episode title 'Internets'; MAL/en-WP synopsis: Kokonotsu makes a website after Beni's boast) can only be 117. 119 = Super Ball (caprico-log + title). 118 (Nikki-gai) skipped, per WDTALO and its snack's absence from any episode title.",
+   "sources": [
+    "https://caprico-log.com/entry/dagasikasi/",
+    "https://wheredoestheanimeleaveoff.com/where-does-the-dagashi-kashi-anime-leave-off-in-the-manga/",
+    "https://en.wikipedia.org/wiki/List_of_Dagashi_Kashi_episodes",
+    "https://myanimelist.net/forum/?topicid=1712184"
+   ]
+  },
+  {
+   "episode": 24,
+   "end_chapter": 126,
+   "start_chapter": 125,
+   "chapters_adapted": "125-126",
+   "volume": 8,
+   "confidence": "high",
+   "note": "END 126 confirmed (stored anchor already 126 after the batch-14 repair — no END change). The '+ opening of 127' parenthetical is retracted: ja-Wikipedia identifies ch 127 as the potato-fry 'stacked eating' correction gag (in-manga correction of the S1E1 scene that flooded Toho Seika with inquiries), content absent from the finale's ending (en-WP: season ends with the group arguing over Kokonotsu's future as he runs off). 125-126 = station reunion → 'I'm back / welcome back' return to the shop (Inquisitr 'chapters 125 and 126'; WDTALO article 'stops at Chapter 126'; booklive v8 review: vol 8 opens with the reunion on the way back from the editor visit). Resume 127 unchanged.",
+   "sources": [
+    "https://ja.wikipedia.org/wiki/%E3%81%A0%E3%81%8C%E3%81%97%E3%81%8B%E3%81%97",
+    "https://wheredoestheanimeleaveoff.com/where-does-the-dagashi-kashi-anime-leave-off-in-the-manga/",
+    "https://en.wikipedia.org/wiki/List_of_Dagashi_Kashi_episodes",
+    "https://booklive.jp/review/list/title_id/291227/vol_no/008",
+    "https://www.inquisitr.com/dagashi-kashi-season-3-anime-dagashi-kashi-manga-ending-in-2018/"
+   ]
+  }
+ ],
+ "zone_level_only": [],
+ "continue_points": [
+  {"episode": 17, "continue_chapter": 111, "note": "Default end+1 stands; the grafted ch 113 is re-encountered in sequence at its native slot after 112 (a re-read of one scene, not a skip)."},
+  {"episode": 24, "continue_chapter": 127, "note": "Unchanged; ch 127 (potato-fry correction gag) is fresh content for the reader."}
+ ],
+ "annotation_updates": [
+  {"episodes": [11], "kind": "partial", "chapters": "50, 52, 13", "note": "Corrected zone facts: ch 56 removed from the chapter set. First half = ch 50 with Saya added to the box scene (manga: Hotaru+Kokonotsu only, per bastek66). Station half is anime-original framing (waiting for the train / farewell / missed train) carrying ch 52's Miyako Kombu origin story and ch 13's Ramune/Perry origin story as in-scene trivia (en-WP synopsis confirms both origin stories are told). Hotaru's 'won't force you, I'll wait' line echoes the dropped ch 56 stairs-talk beat but no ch-56 scene/snack (candy apple) is adapted — Phoenix's '56' was the lone source and bastek66's final skipped list counts 56 unadapted."},
+  {"episodes": [17], "kind": "graft", "chapters": "113", "note": "Confirmed genuine graft (was graft-vs-skip dispute): rf-zwei's ch-113 review shows the manga scene is Saya+Kokonotsu during the shop reopening with タラタラしてんじゃね〜よ (warning-label gag) — the same scene ep 17 plays inside the 109-110 cleanup story; the anime pulled it forward from its native post-112 slot. WDTALO's '113 skipped' counts the chapter as a unit; its scene is adapted here."},
+  {"episodes": [24], "kind": "partial", "chapters": "127", "note": "RETRACT this annotation: the '127 partially adapted for ending' claim (WDTALO reader comment only) is contradicted by content — ja-Wikipedia identifies ch 127 as the potato-fry 'stacked eating' correction gag chapter, and no such material is in the finale's ending per the en-WP synopsis. Season ends cleanly at ch 126; resume 127."}
+ ],
+ "type_corrections": [
+  {"episodes": [11], "type": "mixed", "note": "Second half is anime-original framing (station farewell / missed train plot exists in no chapter — chs 52 and 13 are shop trivia-gag chapters) carrying manga trivia bits; first half adds original Saya material to ch 50. MAL manga-reader bastek66: 'Another episode full of anime original shit... Second half was almost whole original (small bit about Perry was from ch. 13)'. Ruled per the batch-15 ask (batch 14 had flagged 'consider mixed').",
+   "sources": [
+    "https://myanimelist.net/forum/?topicid=1494204",
+    "https://en.wikipedia.org/wiki/List_of_Dagashi_Kashi_episodes",
+    "https://caprico-log.com/entry/dagasikasi/"
+   ]
+  }
+ ],
+ "repairs": [
+  {"episode": 11, "field": "chapters_adapted", "old": "50, 52, 13, 56 (partial; 52 and 56 disputed)", "new": "50, 52, 13", "why": "52 is now settled ADAPTED (episode title names 都こんぶ; caprico-log 52 = Miyako Kombu; en-WP synopsis has Hotaru telling the kombu origin story; Phoenix lists it — bastek66's 'unadapted' reflects the trivia being re-framed, not absent). 56 is settled NOT adapted: only Phoenix lists it, bastek66's final skipped list counts it unadapted, no candy-apple/festival-stairs scene exists in the episode — only a one-line 'I'll wait' echo inside original framing. END stays 13.",
+   "sources": [
+    "https://myanimelist.net/forum/?topicid=1494204",
+    "https://caprico-log.com/entry/dagasikasi/",
+    "https://en.wikipedia.org/wiki/List_of_Dagashi_Kashi_episodes",
+    "https://wheredoestheanimeleaveoff.com/where-does-the-dagashi-kashi-anime-leave-off-in-the-manga/"
+   ]
+  },
+  {"episode": 24, "field": "chapters_adapted", "old": "125-126 (+ opening of 127 for the ending, per one source)", "new": "125-126", "why": "The single-source 127-partial claim is now content-contradicted: ch 127 is the potato-fry correction gag chapter (ja-Wikipedia: 「本作中でも第127話で訂正された」), and the finale's ending (group argues over Kokonotsu's future) contains no such material. END was already repaired to 126 in batch 14; this cleans the parenthetical and retracts the partial{127} annotation.",
+   "sources": [
+    "https://ja.wikipedia.org/wiki/%E3%81%A0%E3%81%8C%E3%81%97%E3%81%8B%E3%81%97",
+    "https://en.wikipedia.org/wiki/List_of_Dagashi_Kashi_episodes",
+    "https://wheredoestheanimeleaveoff.com/where-does-the-dagashi-kashi-anime-leave-off-in-the-manga/"
+   ]
+  }
+ ],
+ "flags_for_sean": [
+  "Eps 16/18 promotions rest partly on event-level MAL corroboration (Laionidas's manga comparisons + the 'translation one chapter ahead' position statements) combined with forced intervals between high anchors — marked high because multiple independent lines agree on the exact chapters, but no second source states '108' or '111-112' as bare numbers.",
+  "Ep 11 ch 52: bastek66 counts it unadapted while title + caprico-log + en-WP synopsis + Phoenix support the kombu origin trivia being on screen; kept in chapters_adapted as a trivia-level fragment. If you prefer bastek66's stricter reading, the list becomes '50, 13' and END stays 13 either way.",
+  "Ep 11 ch 56: excluded, but the 'I'll wait' farewell line does echo the dropped festival chapter's beat — recorded in the annotation text so the ep-7 'resurfaces in ep 11' note stays explainable. Ep 7's abridged annotation can keep its '(disputed)' wording or drop it, your call.",
+  "Ep 24: no END repair needed (stored anchor already 126 from batch 14); this batch only retracts the 127-partial parenthetical/annotation. The partial{127} episode_annotations row for ep 24 should be deleted or reworded per annotation_updates.",
+  "Inquisitr now returns HTTP 403 (and web.archive.org is unreachable from this environment); its quotes are carried from the batch-14 capture. Its 'two episodes were largely anime original' line could not be re-read to check whether ep 11 was the second episode meant.",
+  "Reddit remains unreachable from this environment; no r/anime thread was checked. MAL threads for S2 eps 6/9/12 contain no explicit per-episode chapter statements (E9/E12 checked post-by-post)."
+ ]
+}

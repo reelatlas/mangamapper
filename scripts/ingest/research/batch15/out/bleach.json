@@ -1,0 +1,38 @@
+{
+  "series_id": "bleach",
+  "summary": "All three zones resolved to exact records. Ep 138 reopens the ch-229 straddle after the 128-137 filler and runs to ch 231 partial (p.1-10 & 19; ep 139 finishes 231) — continue mid-231. The Forest of Menos graft sits INSIDE ch 247, not between 247/248: ep 146 stops at 247 p.15, eps 147-148 adapt zero manga pages, and ep 149's closing minutes (from ~20:36) adapt 247 p.16-end, so 149 is mixed (type correction) and 146 needs a mid-247 continue point (repair for the page split). Ep 364 promoted to a full record: 468 (p.5-19), 469, 470 (p.1-5 & 17-19), 471, 472 — i.e. ch 470's frame pages already appear in 364 while its Ginjo-backstory bulk is deferred to ep 365's stored out-of-order re-use; continue is the natural 473. Note: bleach.fandom chapter pages carry only a volume/arc-level 'episodes' field (e.g. ch 470 and 472 both say 'Episodes 351-366'), so the per-episode splits rest on the episode pages plus animefillerguide and listfist.",
+  "anchors": [
+    {"episode": 138, "end_chapter": 231, "start_chapter": 229, "chapters_adapted": "229-230, 231 (p.1-10, 19)", "volume": 26,
+     "confidence": "high", "note": "Reopens ch 229 (straddled by the 128-137 filler; ep 127 ended on it) and advances through 230 into 231 partial; ep 139 finishes 231 (AFG/ListFist list 231 for both 138 and 139). Vol 26 = chs 224-233.",
+     "sources": ["https://bleach.fandom.com/wiki/Episode_138", "https://www.animefillerguide.com/anime/bleach/", "https://listfist.com/list-of-bleach-episode-to-chapter-conversion", "https://en.wikipedia.org/wiki/List_of_Bleach_chapters_(188%E2%80%93423)"]},
+    {"episode": 149, "end_chapter": 247, "start_chapter": 247, "chapters_adapted": "247 (p.16-end)", "volume": 28,
+     "confidence": "high", "note": "Mostly anime-original (Forest of Menos escape); only the closing minutes (~20:36 to end per animefillerguide) adapt ch 247 p.16-end. Ch 248 opens ep 150. Vol 28 = chs 243-251.",
+     "sources": ["https://bleach.fandom.com/wiki/Episode_149", "https://www.animefillerguide.com/anime/bleach/", "https://bleach.fandom.com/wiki/Episode_150", "https://en.wikipedia.org/wiki/List_of_Bleach_chapters_(188%E2%80%93423)"]},
+    {"episode": 364, "end_chapter": 472, "start_chapter": 468, "chapters_adapted": "468 (p.5-19), 469, 470 (p.1-5, 17-19), 471, 472", "volume": 54,
+     "confidence": "high", "note": "HOLE promoted. Ch 468's head (p.1-4) closed ep 363 (AFG/ListFist list 468 in both 363 and 364); ch 470 contributes only its frame pages here — the Ginjo-backstory bulk (p.6-16) is the out-of-order re-use in ep 365's stored {470, 473-476}. Vol 54 = chs 470-479.",
+     "sources": ["https://bleach.fandom.com/wiki/Episode_364", "https://www.animefillerguide.com/anime/bleach/", "https://listfist.com/list-of-bleach-episode-to-chapter-conversion", "https://en.wikipedia.org/wiki/List_of_Bleach_chapters_(424%E2%80%93686)"]}
+  ],
+  "zone_level_only": [
+    {"episode": 147, "zone": "graft inside ch 247 (after p.15), before 248", "best_bound": "Adapts ZERO manga pages — pure anime-original (fandom infobox 'Chapters: None'; animefillerguide and listfist: filler). This is an exact finding, not uncertainty: there is no chapter record to promote. Reader position holds at ch 247 p.15 (continue 247).", "tried": "Fandom episode page (Chapters: None), animefillerguide (Filler, N/A), listfist (Filler), ch 247 chapter-page reverse map (lists eps 144-146, 150-151 — skips 147-149).", "sources": ["https://bleach.fandom.com/wiki/Episode_147", "https://www.animefillerguide.com/anime/bleach/", "https://listfist.com/list-of-bleach-episode-to-chapter-conversion"]},
+    {"episode": 148, "zone": "graft inside ch 247 (after p.15), before 248", "best_bound": "Adapts ZERO manga pages — pure anime-original (fandom infobox 'Chapters: None'; animefillerguide and listfist: filler). Exact finding, not uncertainty. Reader position holds at ch 247 p.15 (continue 247).", "tried": "Fandom episode page (Chapters: None), animefillerguide (Filler, N/A), listfist (Filler), ch 247 chapter-page reverse map (skips 147-149).", "sources": ["https://bleach.fandom.com/wiki/Episode_148", "https://www.animefillerguide.com/anime/bleach/", "https://listfist.com/list-of-bleach-episode-to-chapter-conversion"]}
+  ],
+  "continue_points": [
+    {"episode": 138, "continue_chapter": 231, "note": "Ends inside ch 231 (only p.1-10 & 19 adapted); ep 139 finishes 231."},
+    {"episode": 146, "continue_chapter": 247, "note": "Ends at ch 247 p.15; p.16-end is not adapted until the tail of ep 149. Stored anchor implied continue 248."}
+  ],
+  "annotation_updates": [
+    {"episodes": [147, 148], "kind": "graft", "chapters": "within 247 (after p.15)", "note": "Zone boundary corrected: the Forest of Menos anime-original arc sits INSIDE ch 247, not between 247 and 248 — ep 146 stops at 247 p.15 and ch 248 does not start until ep 150."},
+    {"episodes": [149], "kind": "partial", "chapters": "247", "note": "Ep 149 is the mixed tail of the graft: mostly anime-original, but its closing minutes adapt ch 247 p.16-end (Ashido farewell / forest escape), closing the chapter the graft interrupted."},
+    {"episodes": [364, 365], "kind": "rearranged", "chapters": "468-476", "note": "Refined: ch 470 is SPLIT, not merely re-used — ep 364 animates its frame pages (p.1-5, 17-19) in order, and ep 365 goes back for the Ginjo-backstory bulk (p.6-16) out of order."}
+  ],
+  "type_corrections": [
+    {"episodes": [149], "type": "mixed", "note": "Our row types 149 as filler, but it adapts ch 247 p.16-end in its closing minutes (fandom: 'Chapter 247 (from page 16)'; animefillerguide: Mixed, 'only watch from minute 20:36 until the end'). animefillerlist/listfist keep it filler, but the page-level evidence is explicit.", "sources": ["https://bleach.fandom.com/wiki/Episode_149", "https://www.animefillerguide.com/anime/bleach/"]}
+  ],
+  "repairs": [
+    {"episode": 146, "field": "chapters_adapted", "old": "246-247", "new": "246, 247 (p.1-15)", "why": "Ep 146 does not adapt all of ch 247 — it stops at p.15; p.16-end is adapted at the end of ep 149 after the Forest of Menos graft. Stored end_chapter 247 stays correct (majority of the chapter), but the record must not imply the chapter is finished (see continue point 247).", "sources": ["https://bleach.fandom.com/wiki/Episode_146", "https://www.animefillerguide.com/anime/bleach/"]}
+  ],
+  "flags_for_sean": [
+    "bleach.fandom chapter pages are NOT a per-episode reverse map: their 'episodes' infobox field is volume/arc-level (chs 229 and 230 both say 'Episodes 126-127, 138-139'; chs 470 and 472 both say 'Episodes 351-366', the whole Lost Agent arc). Per-episode splits for Bleach must come from the episode pages. Also, ch 247's field (eps 144-146, 150-151) skips ep 149 entirely, contradicted by the ep-149 page's explicit 'Chapter 247 (from page 16)' + animefillerguide's minute marks — resolved in favor of the page-level sources.",
+    "Type disagreement on ep 149: animefillerlist-lineage sources (listfist) call it pure filler; fandom + animefillerguide document the ch 247 p.16-end tail. Verdict: mixed."
+  ]
+}

@@ -1,0 +1,62 @@
+{
+  "series_id": "to-your-eternity",
+  "summary": "Both targets promoted to full records. Ep 23 'The Awaited' = chapters 62-63 + 65 with 64 deferred to ep 24: stated identically by the To Your Eternity fandom wiki episode infobox and by animefillerguide's season-2 table (which also gives ep 24 = 64, 66, matching the stored ep-24 anchor), and backed by the title lattice (ep 23 title = ch 62 'The Awaited One'; ep 24 title = ch 64 'The Young Man Who Can See'); episode plays 62 -> 63 -> 65 (arrival/welcome at Uralis last), so end=65, continue=64. Ep 48 'Trouble' = chapter 135 plus the grafted ch-132 opening (Mizuha heading to the beach to see Fushi, cut from ep 46 and used as ep 48's cold open — wiki trivia states this explicitly): the wiki ep-48 infobox says '135 & 136', but its own ep-49 infobox says 137-138 while the ep-49 plot clearly adapts ch 136 content (Mimori's essay, her backstory), the ch-135.4 part summary ends exactly where ep 48's synopsis ends (Hirotoshi's naked plea to save his sister), and Wikipedia's chapter list shows ch 135 = 'Trouble' (= ep 48's title) and ch 136 = 'Rejected Life' (= ep 49's title). Recorded end=135, flagged the infobox discrepancy. The surrounding lattice (ep 46 = 130-132 'Proof of Peace' = ch 130; ep 47 = 133-134, ch 133 'Record: Hirotoshi' backstory + ch 134 'Attack' = ep title 'The Attack'; stored ep 49 end=138 v15) all locks consistently. No repairs.",
+  "anchors": [
+    {
+      "episode": 23,
+      "end_chapter": 65,
+      "start_chapter": 62,
+      "chapters_adapted": "62-63, 65",
+      "volume": 8,
+      "confidence": "high",
+      "note": "Order shuffled around the Uralis arrival: 62 (Bon appears; ch title = ep title 'The Awaited') -> 63 (Bon introduces himself) -> 65 (journey to and welcome at Uralis), with ch 64 (Bon's POV chapter, = ep 24's title) deferred to ep 24 {64, 66}. Fandom wiki infobox and animefillerguide agree exactly; ch 65 opens v8.",
+      "sources": [
+        "https://toyoureternity.fandom.com/wiki/Episode_23",
+        "https://www.animefillerguide.com/anime/fumetsu-no-anata-e/",
+        "https://toyoureternity.fandom.com/wiki/Chapter_62",
+        "https://toyoureternity.fandom.com/wiki/Chapter_64",
+        "https://toyoureternity.fandom.com/wiki/Chapter_65",
+        "https://toyoureternity.fandom.com/wiki/Episode_24"
+      ]
+    },
+    {
+      "episode": 48,
+      "end_chapter": 135,
+      "start_chapter": 135,
+      "chapters_adapted": "132 (opening pages, cold-open flashback), 135",
+      "volume": 15,
+      "confidence": "medium",
+      "note": "Cold open = ch 132's cut opening (Mizuha going to see Fushi; wiki trivia: 'the scene in the last chapter of volume 14... is shown as a flashback in this episode, right before... she asks him on a date'), then ch 135 'Trouble' (title match, Wikipedia) through its final scene (Hirotoshi's plea, = end of part 135.4). Wiki ep-48 infobox claims '135 & 136' but ch 136 'Rejected Life' content (essay/backstory) is adapted in ep 49 (whose title = ch 136's title), so end=135; ep 49 re-plays the last beats of 135.4 before continuing. Ch 135 is in v15 (133-138).",
+      "sources": [
+        "https://toyoureternity.fandom.com/wiki/Episode_48",
+        "https://toyoureternity.fandom.com/wiki/Episode_49",
+        "https://toyoureternity.fandom.com/wiki/Chapter_135.4",
+        "https://toyoureternity.fandom.com/wiki/Chapter_136",
+        "https://en.wikipedia.org/wiki/List_of_To_Your_Eternity_chapters",
+        "https://www.animenewsnetwork.com/review/to-your-eternity-season-3/episode-8/.231327"
+      ]
+    }
+  ],
+  "zone_level_only": [],
+  "continue_points": [
+    {
+      "episode": 23,
+      "continue_chapter": 64,
+      "note": "Ch 64 is skipped by ep 23 (adapted at ep 24's start as Bon's POV flashback); honest resume after ep 23 is 64, not end+1 (66)."
+    }
+  ],
+  "annotation_updates": [
+    {
+      "episodes": [46, 48],
+      "kind": "rearranged",
+      "chapters": "132",
+      "note": "Confirmed and sharpened: ch 132's opening scene (Mizuha heading to the beach), cut from ep 46 (wiki ep-46 differences section notes the omission), is ep 48's cold-open flashback placed right before the date-ask. Rest of ep 48 is ch 135 only."
+    }
+  ],
+  "type_corrections": [],
+  "repairs": [],
+  "flags_for_sean": [
+    "ep 48 boundary disagreement: toyoureternity.fandom ep-48 infobox says 'Chapter 135 & 136', but the same wiki's ep-49 infobox (137-138 despite its plot adapting 136) is self-contradictory; content correlation (135.4 part summary = ep 48's ending scene; 136.1 essay content in ep 49's plot) and the Wikipedia title lattice (ch 136 'Rejected Life' = ep 49's title) both put 136 in ep 49. Recorded ep 48 end=135, medium. If a page-exact source surfaces (e.g. a manga-reader post for S3E8, aired 2025-11-22 — MAL topicid 2242050 was chapter-silent), re-check whether ep 48's final seconds dip into 136's first pages.",
+    "Note: fumetsunoanatae.fandom.com and toyoureternity.fandom.com are the same wiki (identical pageids) — they count as one source, not two."
+  ]
+}

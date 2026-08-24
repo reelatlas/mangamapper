@@ -1,0 +1,28 @@
+{
+  "series_id": "naruto",
+  "summary": "Single target ep 107 promoted to a full exact record. Three sources agree on the chapter set 173, 174, 175, 184: naruto.fandom episode infobox, animefillerguide's Naruto conversion table, and listfist's conversion table. The ch 184 ('Oto vs. Konoha!!', vol 21) trivia section states explicitly that the Tsunade–Lee surgery-conversation portion of that chapter 'was moved to episode 107 in the anime' — so the 184 graft is a mid-episode fragment, and the episode ends on ch 175's exact cliffhanger (Rasengan vs Chidori charge, Sakura screaming — the fandom ch 175 summary matches the episode ending beat for beat). Honest end=175, vol 20. This is non-monotonic vs eps 98-100 (which rushed ahead to ~180 before the filler block); eps 107-110 rewind and re-adapt 173-183 properly (listfist: ep 108 = 176-177, ep 109 = 178/179/181, ep 110 = 182-183, consistent with our stored ep 110 anchor). Continue = 176 = end+1, so no separate continue point needed. Stored zone annotation on ep 107 verified accurate; no repairs.",
+  "anchors": [
+    {
+      "episode": 107,
+      "end_chapter": 175,
+      "start_chapter": 173,
+      "chapters_adapted": "173-175, 184",
+      "volume": 20,
+      "confidence": "high",
+      "note": "Hospital-rooftop episode: re-adapts 173-174 (also touched pre-filler by ep 98), grafts the Tsunade–Lee surgery conversation from ch 184 mid-episode (per ch 184 trivia: scene 'moved to episode 107'), and ends on ch 175's cliffhanger (Rasengan vs Chidori charge). Honest non-monotonic end=175 (vol 20) despite eps 98-100 having reached ~180; resume = 176 (end+1).",
+      "sources": [
+        "https://naruto.fandom.com/wiki/The_Battle_Begins:_Naruto_vs._Sasuke",
+        "https://naruto.fandom.com/wiki/Oto_vs._Konoha!!",
+        "https://naruto.fandom.com/wiki/Naruto_vs._Sasuke!!",
+        "https://www.animefillerguide.com/anime/naruto/",
+        "https://listfist.com/list-of-naruto-episode-to-chapter-conversion"
+      ]
+    }
+  ],
+  "zone_level_only": [],
+  "continue_points": [],
+  "annotation_updates": [],
+  "type_corrections": [],
+  "repairs": [],
+  "flags_for_sean": []
+}

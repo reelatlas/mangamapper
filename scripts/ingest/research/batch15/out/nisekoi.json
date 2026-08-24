@@ -1,0 +1,37 @@
+{
+  "series_id": "nisekoi",
+  "summary": "All four targets (eps 21, 23, 25, 28 = S2E1/E3/E5/E8) promoted to exact full records at high confidence. Every episode-half maps 1:1 to a chapter whose title equals the episode sub-title, so the fandom episode-page trivia lines are independently corroborated by Wikipedia's chapter list (title + volume match): ep21 = 51+57 (57 pulled forward; 52 'Measurements' and 53 'Horoscope' never adapted anywhere), ep23 = 59+60 (58 'Loss' went to the Loss/Shrine Maiden OVA, not Bath House/Service), ep25 = 56 (deferred) + anachronistic ch 104 graft (fandom trivia explicitly calls Raku-sama anachronistic — it is Second Year Arc, v12), ep28 = Magical Patissiere Kosaki-chan spinoff v1 side stories 107.5 + 116.5 + 125.5 then ch 77 'Work!' (ch-77 fandom chapter page reverse-maps to S2E8). One surprise vs the stored annotation: the wiki lists THREE spinoff side stories (adds 125.5), not two. No repairs to existing anchors — neighbors ep22 (54-55), ep24 (61-63), ep27 (75-76) all re-verified consistent.",
+  "anchors": [
+    {"episode": 21, "end_chapter": 57, "start_chapter": 51, "chapters_adapted": "51, 57", "volume": 7,
+     "confidence": "high",
+     "note": "Two one-chapter halves: 'From Now On' = ch 51 Korekara (v6), 'Please Notice' = ch 57 Kidzuite (v7, pulled forward past 52-56). Fandom trivia states exactly 51+57; Wikipedia chapter list title-matches both halves. 52-53 never adapted in any episode/OVA.",
+     "sources": ["https://nisekoi.fandom.com/wiki/From_Now_On/Please_Notice_(episode)", "https://nisekoi.fandom.com/wiki/From_Here_on_Out", "https://nisekoi.fandom.com/wiki/Notice", "https://en.wikipedia.org/wiki/List_of_Nisekoi_chapters"]},
+    {"episode": 23, "end_chapter": 60, "start_chapter": 59, "chapters_adapted": "59-60", "volume": 7,
+     "confidence": "high",
+     "note": "'Need' (Hitsuyou) = ch 60 'Necessity' (Hitsuyou) title match; adapts 59 'It's Been a While' + 60. Aired before deferred 56 (ep 25); intervening 58 'Loss' was adapted in the Loss/Shrine Maiden OVA instead. Continue = 61 = end+1 (ep 24 adapts 61-63), so no continue override.",
+     "sources": ["https://nisekoi.fandom.com/wiki/Need_(episode)", "https://nisekoi.fandom.com/wiki/It%27s_Been_a_While_(chapter)", "https://nisekoi.fandom.com/wiki/Necessity", "https://en.wikipedia.org/wiki/List_of_Nisekoi_chapters"]},
+    {"episode": 25, "end_chapter": 56, "start_chapter": 56, "chapters_adapted": "56, 104", "volume": 7,
+     "confidence": "high",
+     "note": "'Teach Me' = ch 56 Oshiete (deferred from its mainline slot before 57), 'Master Raku' = ch 104 Raku-sama (v12) — fandom trivia explicitly flags 104 as anachronistic (Second Year Arc summer break; Haru appears pre-introduction). Non-monotonic list recorded as aired. END = 56, the honest mainline position instrument; 104 is a graft.",
+     "sources": ["https://nisekoi.fandom.com/wiki/Teach_Me/Master_Raku_(episode)", "https://nisekoi.fandom.com/wiki/Teach_Me", "https://nisekoi.fandom.com/wiki/Raku-sama", "https://en.wikipedia.org/wiki/List_of_Nisekoi_chapters"]},
+    {"episode": 28, "end_chapter": 77, "start_chapter": 107.5, "chapters_adapted": "107.5, 116.5, 125.5, 77", "volume": 9,
+     "confidence": "high",
+     "note": "First half = Magical Patissiere Kosaki-chan!! spinoff v1 via Nisekoi side stories 107.5/116.5/125.5 (fandom names all three 'Side Story Part 1/2/3'); second half 'Work' = ch 77 'Work!' Hatarake (v9) — ch-77 chapter page reverse-maps to S2E8 and Wikipedia title-matches (ch 38 'Work'/Hataraku is a different chapter). END = 77, the mainline advance from ep 27's 76; continue = 78 = end+1 (78-81 are then never adapted — ep 29 jumps to 82).",
+     "sources": ["https://nisekoi.fandom.com/wiki/Magical_P%C3%A2tissi%C3%A8re_Kosaki/Work_(episode)", "https://nisekoi.fandom.com/wiki/Work_(chapter)", "https://en.wikipedia.org/wiki/List_of_Nisekoi_chapters"]}
+  ],
+  "zone_level_only": [],
+  "continue_points": [
+    {"episode": 21, "continue_chapter": 52, "note": "end+1 would be 58, but 57 was grafted forward: mainline resume is 52 — chapters 52 'Measurements' and 53 'Horoscope' are never adapted anywhere, and ep 22 picks up at 54. Reading 52-53 then watching on is seamless."},
+    {"episode": 25, "continue_chapter": 63, "note": "end+1 = 57, already aired in ep 21. Ep 25 only backfills deferred 56 (plus the 104 graft), so the reader's honest mainline position is unchanged from after ep 24: ch 63 (ep 24 adapted 63 only partially). Still unadapted behind them: 52-53 and 58 (58 = Loss/Shrine Maiden OVA)."}
+  ],
+  "annotation_updates": [
+    {"episodes": [28], "kind": "graft", "chapters": "107.5, 116.5, 125.5 + spinoff v1 + 77", "note": "Stored annotation lists only 107.5/116.5; the fandom episode page names THREE side stories: 107.5 (Part 1), 116.5 (Part 2), AND 125.5 (Part 3), plus Magical Patissiere Kosaki-chan!! Volume 1. Add 125.5."},
+    {"episodes": [23], "kind": "rearranged", "chapters": "59-60", "note": "Refinement only: '58 -> OVA' is correct, but the specific OVA is Loss/Shrine Maiden (ch 58 'Loss' + ch 64 'Shrine Maiden' per the ch-58 chapter page reverse-map), NOT the pre-S2 Bath House/Service OVA."}
+  ],
+  "type_corrections": [],
+  "repairs": [],
+  "flags_for_sean": [
+    "Side-story numbering 107.5/116.5/125.5 is fandom-wiki numbering (Wikipedia's chapter list does not carry the x.5 side stories); the spinoff half can only be labeled, not mainline-numbered — kept the x.5 numbers as the least-bad handles, START recorded as 107.5.",
+    "Fandom's ep-28 trivia is ambiguous on whether 'spinoff Volume 1' contains material beyond the three x.5 side stories; the episode's spinoff half may draw MPK-v1-only content not present in any Nisekoi-numbered chapter."
+  ]
+}

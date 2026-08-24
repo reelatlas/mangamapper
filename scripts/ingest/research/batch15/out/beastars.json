@@ -1,0 +1,66 @@
+{
+  "series_id": "beastars",
+  "summary": "Target ep 10 promoted to a full exact record, high confidence: the stored play order 37, 39, 40, 38 is verified — and refined one step further: ch 38 (Haru's farewell-letter backstory) is interleaved INSIDE ch 40, played after ch 40's mansion fight and right before ch 40's closing rescue scene, so the honest list is '37, 39, 40 (part), 38, 40 (end)'. en-fandom's adapted_from field states the non-numeric order explicitly, es-fandom lists 037-040, every chapter-side synopsis matches its episode scene, the fandom Anime/Manga Differences section documents the ch-38 relocation, and eps 9 (33-36) and 11 (41-43 + first half of 44) bracket it cleanly. END 40 = last mainline chapter; resume 41 = end+1, so no continue point needed. No page-level splits are documented anywhere — the ch-40 split is scene-level (fight / rescue), recorded as such. Bookmark follow-up on Final Season Part 2 (eps 46-48): the hunt for a manga-reader per-episode map came up empty — fandom eps 44-48 are still 'adapted_from = TBA' stubs, es-fandom pages don't exist, chapters 165-185 remain one-line stubs, MAL's Part 2 episode threads carry a single chapter-numbered post, reddit is blocked, and the Japanese/English review blogs cite no chapter numbers. Eps 46-47 therefore stay at batch 14's medium (reported as zone_level_only for the record — do NOT demote the stored anchors); ep 48 stays high and gained one independent manga-reader pin (Savon's Komodo tail-bomb = ch 178, in the finale).",
+  "anchors": [
+    {
+      "episode": 10,
+      "end_chapter": 40,
+      "start_chapter": 37,
+      "chapters_adapted": "37, 39, 40 (part), 38, 40 (end)",
+      "volume": 5,
+      "confidence": "high",
+      "note": "Play order verified: ch 37 (Black Market search, Gohin intro, Juno/Louis in the rain) → ch 39 (Legoshi discovered at the hideout, ear blown off, Gohin's arrow) → ch 40 (storming the mansion, headbutt, Gohin holds the lions) → ch 38 (Haru's farewell-letter backstory, relocated to just before the rescue) → ch 40's closing scene (boss beaten with his own staff, shirt handed over, 'stupid') — that final scene is ch 40 content per the ch-40 synopsis, and ep 11 starts at ch 41. en-fandom adapted_from: 'Chapter 37, Chapter 39, Chapter 40, Chapter 38'; es-fandom capítulos 037-040; fandom Anime/Manga Differences: the farewell letter 'happens way after they are discovered and right before Legoshi finds Haru'. No source gives page numbers — split is scene-level. END 40 (last mainline), all of 37-40 read after the episode, resume 41 = end+1.",
+      "sources": [
+        "https://beastars.fandom.com/wiki/Episode_10",
+        "https://beastars.fandom.com/es/wiki/Episodio_10",
+        "https://beastars.fandom.com/wiki/Chapter_037_(Beastars)",
+        "https://beastars.fandom.com/wiki/Chapter_038_(Beastars)",
+        "https://beastars.fandom.com/wiki/Chapter_039_(Beastars)",
+        "https://beastars.fandom.com/wiki/Chapter_040_(Beastars)",
+        "https://beastars.fandom.com/wiki/Episode_09",
+        "https://beastars.fandom.com/wiki/Episode_11"
+      ]
+    }
+  ],
+  "zone_level_only": [
+    {
+      "episode": 46,
+      "zone": "chs 164-168 (with 165's Ogma death diverged)",
+      "best_bound": "Stored batch-14 medium anchor stands as the best per-episode record: 164 (part), 167-168 (quiz — 'Crazy Party Quiz Show' / 'The Final Answer for Both' title pins are solid); Ogma-survives divergence vs manga 165 confirmed. Nothing found that raises it to high; the Deshico-drowning placement stays unverified (chs 165-166/183 have no synopses).",
+      "tried": "fandom Episode_46 still 'adapted_from = TBA' (checked 2026-08-24); es-fandom Episodio_46 does not exist; chapter pages 165-166/183 still one-line stubs; MAL Part 2 ep-10 discussion (topic 2255730) has zero chapter-numbered posts; reddit blocked; Lesley's Anime Corner Part 2 spotlight, note.com ooizumi2021 essays, and WDTALO carry no per-episode chapter numbers. Would settle it: fandom filling in adapted_from / an es-fandom capítulos field when Episodio 44-48 get written.",
+      "sources": [
+        "https://beastars.fandom.com/wiki/Episode_46",
+        "https://myanimelist.net/forum/?topicid=2255730",
+        "https://beastars.fandom.com/wiki/Chapter_167_(Beastars)",
+        "https://beastars.fandom.com/wiki/Chapter_168_(Beastars)"
+      ]
+    },
+    {
+      "episode": 47,
+      "zone": "chs 172-176 abridged + 156/181 grafts",
+      "best_bound": "Stored batch-14 medium anchor stands: 181 (part, Melon's spots), 156 (part, Day-of-Depravity pyres with Agata substituted for Dolph), 172-176 (Rexmas turf-war fight, abridged). No source raises it to high; the exact 47/48 boundary inside the Savon fight (176 vs 178) remains scene-correlated only — MAL's finale thread places the Komodo tail-bomb (ch 178) in ep 48, consistent with the stored split.",
+      "tried": "fandom Episode_47 'adapted_from = TBA'; es page absent; chapters 172-178 pages still stubs (title + one line); MAL Part 2 ep-11 discussion (topic 2255735) has no chapter-numbered posts; reddit blocked; review blogs (Lesley, note.com, fugitives, mystiqora) cite no chapter numbers. Would settle it: fandom adapted_from fill-in or a JP 原作対応 blog for the Netflix batch (none found).",
+      "sources": [
+        "https://beastars.fandom.com/wiki/Episode_47",
+        "https://myanimelist.net/forum/?topicid=2255735",
+        "https://myanimelist.net/forum/?topicid=2255738"
+      ]
+    }
+  ],
+  "continue_points": [],
+  "annotation_updates": [
+    {
+      "episodes": [10],
+      "kind": "rearranged",
+      "chapters": "38 after 39-40",
+      "note": "Refined zone facts: ch 38 (Haru's farewell-letter backstory) is not simply appended after 40 — it is interleaved inside ch 40, between the mansion fight and ch 40's closing rescue scene (fandom Anime/Manga Differences: in the manga the letter precedes the discovery; in the anime it plays right before Legoshi finds Haru). Chapters otherwise adapted whole; no page-level splits documented."
+    }
+  ],
+  "type_corrections": [],
+  "repairs": [],
+  "flags_for_sean": [
+    "Part 2 bookmark outcome: could NOT firm eps 46-47 to high — no public per-episode manga-reader map for Final Season Part 2 exists yet (fandom eps 44-48 stubs with 'adapted_from = TBA', es-fandom pages absent, chapters 165-185 still synopsis-less stubs, MAL threads chapter-silent except one finale post, reddit unreachable). The zone_level_only entries above record the failed hunt; they must NOT demote the stored batch-14 medium anchors for 46-47, which remain the best per-episode records.",
+    "Ep 48 corroboration gained: MAL finale thread (topic 2255738) post #28 by poemofdevil — 'The Komodo-bomb thing is chapter 178 and the manga has a total of 196 chapters so that's close to 20 chapters or two volumes covered in this episode' — an independent manga-reader pin placing Savon's tail-bomb (ch 178) inside ep 48 and confirming the ~176-196 finale span. Stored ep-48 anchor (END 196, '176-179 (abridged), 187 (part), 190-196 (abridged)') unchanged, stays high.",
+    "Ep 10 chapters_adapted refined from the stored annotation's '37, 39, 40, 38' to '37, 39, 40 (part), 38, 40 (end)' — same facts, one step more precise (ch 40's rescue ending plays after the ch-38 flashback). If you prefer the coarser four-item list for display, the stored order is not wrong, just less exact."
+  ]
+}

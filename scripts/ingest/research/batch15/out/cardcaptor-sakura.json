@@ -1,0 +1,64 @@
+{
+ "series_id": "cardcaptor-sakura",
+ "summary": "Both targets promoted to full records. Ep 7 (Silent, museum): confirmed pure filler body — the Silent card is anime-only (fandom infobox 'captured ch: N/A', Category:Anime only Cards) and the episode's only manga content is its closing tag, Syaoran's debut cameo atop the museum sensing a Clow Card = ch 7's final page; sliver anchor 7/7 {7 (final page)} v2 with continue->6. HOLE ep 39 (Dizzy Fever): full anchor 33/33 v8 — the fandom episode page's trivia explicitly equates the plot with manga ch 33 (sick Sakura, Mirror substitute, Touya sees through it, magical fever cure), The Mirror's page carries the same correspondence in prose (Mirror transformed in ch 33 'under circumstances similar to those of Episode 39', Eriol's fog), and Chapter 33's reverse card list (vol 8; Mirror+Windy transformed) matches; the Cloud capture itself is anime-only (captured ch N/A). Bookmark follow-ups both resolved: ep 48 = ch 28 settled by the chapter-side reverse map (Chapter 28 lists 'Cards Transformed: The Firey' and 'Cards Used: Shield, Firey' — the cyclone episode — while Chapter 29 lists 'Cards Transformed: N/A' with Firey only as an existing Sakura Card; the Firey page's prose 'ch 29' is that page's internal error, its own infobox says 28); eps 41->20 and 44->22 corroborated to high by complete vol-5 elimination (Wikipedia's vol 5 summary explicitly places the Kero–Mizuki 'are you Yue' talk in chs 19-22 and Wikipedia's ep 41/44 summaries match the play-casting and Kero-glares-at-Mizuki beats; with ch 19 = Masaki visit (ep 16) and ch 21 = Dark/Light at the play (ep 42) both already high, and fandom cast lists showing ch 20 = whole class + Terada + Mizuki / no cards and ch 22 = Sakura, Kero, Mizuki, Touya, Yukito / no cards, ch 20 = play casting and ch 22 = Mizuki–Kero talk are the only possible assignments).",
+ "anchors": [
+  {"episode": 7, "end_chapter": 7, "start_chapter": 7, "chapters_adapted": "7 (final page only)", "volume": 2,
+   "confidence": "high",
+   "note": "Sliver record: the Silent/museum plot is anime-original (Silent captured ch N/A, anime-only card); the sole manga content is the closing tag — Syaoran's debut cameo on the museum tower muttering he senses a Clow Card, i.e. ch 7's closing page. Ch 7's sports-day body is adapted in ep 10. Type stays filler per Sean's override.",
+   "sources": [
+    "https://ccsakura.fandom.com/wiki/Sakura%27s_First_Attempt_as_a_Thief%3F!",
+    "https://ccsakura.fandom.com/wiki/The_Silent",
+    "https://ccsakura.fandom.com/wiki/Difference_between_the_Manga_and_the_Anime",
+    "https://en.wikipedia.org/wiki/List_of_Cardcaptor_Sakura_episodes"
+   ]},
+  {"episode": 39, "end_chapter": 33, "start_chapter": 33, "chapters_adapted": "33 (premise graft; Cloud capture anime-only)", "volume": 8,
+   "confidence": "high",
+   "note": "HOLE promoted: ep page trivia states the basic plot IS manga ch 33 (sick Sakura, Mirror substitutes, Touya knows and asks Mirror to keep it secret, fever cured magically — Nadeshiko in the anime); The Mirror page prose confirms ('In Chapter 33 Mirror is converted under circumstances similar to those of Episode 39', Eriol's fog); Chapter 33 page: vol 8, Mirror+Windy transformed, Fly used. Cloud itself is anime-only (captured ch N/A). Non-monotonic on purpose — Clow-arc episode grafting a Sakura-arc chapter's premise.",
+   "sources": [
+    "https://ccsakura.fandom.com/wiki/Sakura%27s_Dizzy_Fever_Day",
+    "https://ccsakura.fandom.com/wiki/The_Mirror",
+    "https://ccsakura.fandom.com/wiki/Chapter_33",
+    "https://ccsakura.fandom.com/wiki/The_Cloud"
+   ]},
+  {"episode": 41, "end_chapter": 20, "start_chapter": 20, "chapters_adapted": "20", "volume": 5,
+   "confidence": "high",
+   "note": "Bookmark follow-up — CONFIRMS stored anchor, upgraded medium->high by vol-5 elimination: Wikipedia ep 41 summary has Mizuki announcing the Sleeping Beauty play; ch 19 = Masaki (ep 16, high), ch 21 = Dark/Light captured at the play (ep 42, high; Wikipedia vol 5 'Cards captured: Dark and Light'), ch 22 = Kero–Mizuki talk (see ep 44), leaving ch 20 (no cards; cast = whole class + Terada + Mizuki, with a play-themed extra illustration in the Nakayoshi issue) as the play-casting chapter. Sand card is anime-only.",
+   "sources": [
+    "https://en.wikipedia.org/wiki/List_of_Cardcaptor_Sakura_episodes",
+    "https://en.wikipedia.org/wiki/List_of_Cardcaptor_Sakura_chapters",
+    "https://ccsakura.fandom.com/wiki/Chapter_20"
+   ]},
+  {"episode": 44, "end_chapter": 22, "start_chapter": 22, "chapters_adapted": "22", "volume": 5,
+   "confidence": "high",
+   "note": "Bookmark follow-up — CONFIRMS stored anchor, upgraded medium->high: Wikipedia's vol 5 summary explicitly narrates the talk ('Kaho Mizuki seeks Kero out... Kero believes Mizuki is his lunar counterpart, Yue... Mizuki says she has a different role to play'), so it lies in chs 19-22; chs 19/20/21 are all otherwise pinned, leaving ch 22 — whose fandom cast list (Sakura, Tomoyo, Terada, Syaoran, Mizuki, Yukito, Touya, Kero; no cards) matches. Wikipedia ep 44 summary: Kero glares at Mizuki sensing her power. Archery-tournament framing anime-original.",
+   "sources": [
+    "https://en.wikipedia.org/wiki/List_of_Cardcaptor_Sakura_chapters",
+    "https://en.wikipedia.org/wiki/List_of_Cardcaptor_Sakura_episodes",
+    "https://ccsakura.fandom.com/wiki/Chapter_22"
+   ]},
+  {"episode": 48, "end_chapter": 28, "start_chapter": 28, "chapters_adapted": "28", "volume": 7,
+   "confidence": "high",
+   "note": "Bookmark follow-up — 28-vs-29 RESOLVED as 28, CONFIRMS stored anchor: chapter-side reverse map settles it — Chapter 28's page lists 'Cards Transformed: The Firey' (and Shield + Firey used, matching the cyclone/downpour), while Chapter 29's lists 'Cards Transformed: N/A' with Firey present only as an already-transformed Sakura Card (the fainting aftermath, used by ep 49). Firey infobox: transformed ch 28; its prose 'ch 29' is that page's internal error. Wikipedia vol 7: 'Cards transformed: Firey and Sword'.",
+   "sources": [
+    "https://ccsakura.fandom.com/wiki/Chapter_28",
+    "https://ccsakura.fandom.com/wiki/Chapter_29",
+    "https://ccsakura.fandom.com/wiki/The_Firey",
+    "https://en.wikipedia.org/wiki/List_of_Cardcaptor_Sakura_chapters"
+   ]}
+ ],
+ "zone_level_only": [],
+ "continue_points": [
+  {"episode": 7, "continue_chapter": 6, "note": "only ch 7's final page shown; the ch 6-7 sports-day body arrives in ep 10 — reader resumes at ch 6"},
+  {"episode": 39, "continue_chapter": 20, "note": "graft of ch 33's premise inside the Clow arc; honest mainline position is still ch 20 (play/Light-Dark/Mizuki-Kero pending in eps 41-44), matching ep 35's continue"}
+ ],
+ "annotation_updates": [
+  {"episodes": [48], "kind": "partial", "chapters": "28", "note": "RESOLVED (was 'fandom sources disagree 28 vs 29'): the Firey transformation is in ch 28 — Chapter 28's reverse card list has Firey transformed, Chapter 29's has none (Firey only as existing Sakura Card; ch 29 = fainting aftermath used by ep 49). The Firey page's prose 'ch 29' contradicts its own infobox and both chapter pages."}
+ ],
+ "type_corrections": [],
+ "repairs": [],
+ "flags_for_sean": [
+  "ep 48 28-vs-29 RESOLVED as ch 28 via the chapter-side reverse map (Chapter_28: Cards Transformed = Firey; Chapter_29: Cards Transformed = N/A); stored anchor stands, confidence now high. The ep-48 'partial {28-29}' annotation should tighten to {28} (annotation_updates).",
+  "eps 41->20 and 44->22 upgraded medium->high: not by a single page stating the pair, but by complete vol-5 elimination — Wikipedia's vol 5 summary explicitly contains the Kero–Mizuki/Yue conversation and 'Cards captured: Dark and Light', chs 19 and 21 are independently pinned to eps 16/42, and the fandom cast lists for chs 20/22 match the two remaining episodes exactly. Downgrade back to medium if you want 'high' reserved for directly-stated pairs.",
+  "ep 39 = ch 33 rests on three ccsakura.fandom pages that cross-check each other (episode-page trivia stating the plots are the same, The Mirror's prose, Chapter 33's transformed-cards list) — single wiki lineage; no non-fandom source states the pair outright (Wikipedia's ep-39 summary describes the same sick-Sakura/Mirror plot but names no chapter). Kept high on the strength of the three-way internal cross-check; the graft annotation already renders it as approximate."
+ ]
+}

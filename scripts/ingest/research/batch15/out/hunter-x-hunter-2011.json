@@ -1,0 +1,38 @@
+{
+  "series_id": "hunter-x-hunter-2011",
+  "summary": "Ep 83 promoted from graft-annotation to an exact record. Hunterpedia's page-level infobox gives 194 p.6-7, 10-15 + 195 + 196 + 288 p.9-10, and animefillerguide's chapter table independently lists 194, 195, 196, 288 for the episode; chapter reverse maps agree (194 -> eps 82+83; 195, 196 -> ep 83 only). The ch 288 fragment is the flash-forward: Netero's phone call with the world leaders ordering the Ants' extermination, which in the manga appears only as a flashback during the palace invasion (ch 288, adapted linearly in eps 121-122) — both Hunterpedia's and Wikipedia's episode summaries open with that scene, so it leads the in-order list. END=196 (the 288 sliver does not advance END), start=195 by majority rule (the 194 fragments are an 8-page tail), volume 19, continue = 197 = end+1 so no continue point needed.",
+  "anchors": [
+    {
+      "episode": 83,
+      "end_chapter": 196,
+      "start_chapter": 195,
+      "chapters_adapted": "288 (p.9-10), 194 (p.6-7, 10-15), 195-196",
+      "volume": 19,
+      "confidence": "high",
+      "note": "Opens with the ch 288 p.9-10 flash-forward (Netero ordered by the world leaders to exterminate the Ants; in the manga this is a flashback during Netero vs Meruem), then linear material: ch 194 tail fragments (Chimera Ant hierarchy exposition, Hagya's squadron closing in), ch 195 (Rammot/Colt Nen discovery; Frog's one-on-one terms; Gon vs Baro) and ch 196 (Killua vs Rhino, Kite's Crazy Slots scythe massacre). START=195 by majority rule; END=196 with the 288 sliver recorded but not advancing END. MAL thread manga-readers confirm fight-scene fidelity (Killua's fight expanded from near-offscreen manga treatment) without disputing the chapter set.",
+      "sources": [
+        "https://hunterxhunter.fandom.com/wiki/Episode_83_(2011)",
+        "https://www.animefillerguide.com/anime/hunter-x-hunter-2011/",
+        "https://hunterxhunter.fandom.com/wiki/Chapter_195",
+        "https://hunterxhunter.fandom.com/wiki/Chapter_196",
+        "https://hunterxhunter.fandom.com/wiki/Chapter_288",
+        "https://en.wikipedia.org/wiki/List_of_Hunter_%C3%97_Hunter_(2011_TV_series)_episodes"
+      ]
+    }
+  ],
+  "zone_level_only": [],
+  "continue_points": [],
+  "annotation_updates": [
+    {
+      "episodes": [83],
+      "kind": "graft",
+      "chapters": "288 (p.9-10)",
+      "note": "page-level refinement of the stored {288} graft annotation: exactly ch 288 p.9-10 (Netero's phone call with the world leaders), a flash-forward of material whose linear adaptation is eps 121-122; ch 288's reverse map accordingly lists only eps 121-122"
+    }
+  ],
+  "type_corrections": [],
+  "repairs": [],
+  "flags_for_sean": [
+    "independence caveat (mild): animefillerguide's row matches Hunterpedia's chapter set exactly and may share lineage; the genuinely independent checks are Wikipedia's episode summary (leads with the Hunter Association / extermination-order scene and matches the 194-196 fight content) and the chapter-side reverse maps. No source disputes any value."
+  ]
+}

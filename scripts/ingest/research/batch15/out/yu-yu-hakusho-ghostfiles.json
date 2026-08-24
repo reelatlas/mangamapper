@@ -1,0 +1,36 @@
+{
+  "series_id": "yu-yu-hakusho-ghostfiles",
+  "summary": "Target ep 26 promoted to a full exact record: it adapts ch 51 (saga-final 'I Must Get Stronger!!', last Spirit Detective Saga chapter) plus the first half of ch 52 ('The Dark Tournament Begins!!'), both vol 6, ending mid-ch 52 as Team Urameshi boards the ship; the shipboard preliminary (ch 52 second half) opens ep 27, whose title equals ch 52's title. The fandom ch 51 page carries an explicit reverse 'episode = Toguro Returns' field and the en-WP season 2 summaries split the content across eps 26/27 exactly as stored, so the batch-11 'rearranged 51-52 (first half)' annotation is confirmed unchanged. Bookmark follow-up on eps 22-23: medium STANDS - ja-WP's episode table carries no per-episode act numbers (it does re-confirm the Shizuru ch-14 relocation to ep 22), the MAL ep 22 discussion thread forbids and contains no source-material chapter talk, and the yyh-sandbox wiki's 'adapted from' fields are empty; sandbox plot details do corroborate the ch-47 split at scene level (Hirue already dead when ep 23 opens; the Black Book Club wager inside ep 23) but that wiki is fandom-family, not a genuinely independent chapter table. No repairs; en-WP +1 numbering trap (vol 8+) not triggered - all chapters here are below 64.",
+  "anchors": [
+    {
+      "episode": 26,
+      "end_chapter": 52,
+      "start_chapter": 51,
+      "chapters_adapted": "51, 52 (first half)",
+      "volume": 6,
+      "confidence": "high",
+      "note": "Fandom ep 26 infobox: 'Chapters 51-52 (first half)'; ch 51 page reverse-maps (episode = Toguro Returns) and is the final Spirit Detective Saga chapter, ch 52 opens the Dark Tournament Saga - both vol 6. en-WP s2 summary matches ch 51 content (Toguro's staged-defeat reveal, 60% demo, two-month training) then the boarding of the ship (ch 52 first half); ep 27 = shipboard preliminary = ch 52 second half, and ep 27's title equals ch 52's title. Ch numbers < 64, so the en-WP +1 trap does not apply.",
+      "sources": [
+        "https://yuyuhakusho.fandom.com/wiki/Episode_26",
+        "https://yuyuhakusho.fandom.com/wiki/Chapter_51",
+        "https://yuyuhakusho.fandom.com/wiki/Chapter_52",
+        "https://en.wikipedia.org/wiki/Yu_Yu_Hakusho_season_2"
+      ]
+    }
+  ],
+  "zone_level_only": [],
+  "continue_points": [
+    {
+      "episode": 26,
+      "continue_chapter": 52,
+      "note": "ends mid-ch 52 (boarding the ship to the tournament island); the shipboard preliminary that closes ch 52 opens ep 27"
+    }
+  ],
+  "annotation_updates": [],
+  "type_corrections": [],
+  "repairs": [],
+  "flags_for_sean": [
+    "Bookmark follow-up (batch-14 note 2) resolved as MEDIUM STANDS for eps 22-23: no genuinely independent corroboration of the ch 47/48 half-splits was found. ja-WP's episode table has no per-episode act numbers for eps 22-26 (its 相違点 section only re-confirms Botan's anime-added role in the Yukina arc and Shizuru's debut moved to ep 22); the MAL ep 22 episode-discussion thread (https://myanimelist.net/forum/?topicid=124682) explicitly forbids source-material discussion and contains no chapter posts; yyh-sandbox 'adapted from' fields remain empty. Partial support: sandbox Episode 22/23 plot details independently place the Hirue kill BEFORE ep 23 opens (ep 23: 'Younger Toguro is surprised that Hirue has been killed') and the Black Book Club wager inside ep 23 - matching the stored ep 22 reach into ch 47 (Hirue is in ch 47's cast) and ep 23 = ch 47 second half + ch 48 first half - but sandbox is a fandom-family wiki, so this is scene-level corroboration, not a second independent chapter table. Links: https://yyh-sandbox.fandom.com/wiki/Episode_22 ; https://yyh-sandbox.fandom.com/wiki/Episode_23 ; https://ja.wikipedia.org/wiki/%E5%B9%BD%E2%98%86%E9%81%8A%E2%98%86%E7%99%BD%E6%9B%B8_(%E3%83%86%E3%83%AC%E3%83%93%E3%82%A2%E3%83%8B%E3%83%A1)",
+    "Stored ep 26 'rearranged 51-52 (first half)' annotation verified exactly (ch 51 arc = Spirit Detective Saga per its fandom infobox while ep 26 is season 2 / Dark Tournament Saga's first episode) - no annotation change needed; the new anchor simply promotes the zone to an exact record."
+  ]
+}

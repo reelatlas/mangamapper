@@ -1,0 +1,125 @@
+{
+  "series_id": "hunter-x-hunter",
+  "summary": "All five targets promoted to exact per-episode records from Hunterpedia's page-level Adapted fields, cross-checked against the chapter pages' reverse anime fields, Wikipedia's 1999 episode summaries, and EBWYH's Heavens Arena comparison. Filler eps 2 and 18 get honest sliver anchors for their grafts (ch 1 p.31-32 and ch 7 p.9-11 respectively) — both page ranges confirmed exactly as stored in the annotations. The Arena climax reorder resolves cleanly: ep 41 = Kastro finish + Machi + two-month training + fight start (53-55, 56 part, 60-61, 62 p.1-6), ep 42 = fight conclusion (62, 55 ability-explanation flashback, 63 part), with the manga's intervening extortion-trio chapters 56(tail)-59 backtracked into eps 43-44 exactly as the stored ep43/ep44 anchors already say. Ep 45 is confirmed as ch 83 p.4-11, 16-18 (Izunavi flashback: Water Divination, Nen-type percentages, chain conditions) grafted ~20 chapters forward, wrapped in original training/Melody-train content. No repairs; the stored 53-63 zone annotation is refined with the per-episode split.",
+  "anchors": [
+    {
+      "episode": 2,
+      "end_chapter": 1,
+      "start_chapter": 1,
+      "chapters_adapted": "1 (p.31-32)",
+      "volume": 1,
+      "confidence": "high",
+      "note": "Filler (port town, fake Hunter, animal show); only Gon and Leorio boarding the Kaijinmaru = ch 1 p.31-32. Hunterpedia infobox: Adapted=Filler, Adapted 2=Chapter 1 (p. 31-32) — matches stored annotation exactly. Sliver anchor: END stays 1 (same as ep 1), keeping position honest; see flags for the sliver-vs-annotation call.",
+      "sources": [
+        "https://hunterxhunter.fandom.com/wiki/Episode_2_(1999)",
+        "https://en.wikipedia.org/wiki/List_of_Hunter_%C3%97_Hunter_(1999_TV_series)_episodes",
+        "https://www.animefillerlist.com/shows/hunter-x-hunter-1999"
+      ]
+    },
+    {
+      "episode": 18,
+      "end_chapter": 7,
+      "start_chapter": 7,
+      "chapters_adapted": "7 (p.9-11)",
+      "volume": 1,
+      "confidence": "high",
+      "note": "Filler (island hotel, sunken-ship treasure); the graft is Kurapika telling Leorio about the Phantom Troupe and the Scarlet Eyes = ch 7 p.9-11, moved from the Phase 1 tunnel run. Hunterpedia infobox: Adapted=Filler, Adapted 2=Chapter 7 (p. 9-11); Wikipedia's ep 18 summary describes exactly that clan-massacre reveal. Non-monotonic by design (ep 17 ends at ch 22) — continue point 23 carries the reader's real position.",
+      "sources": [
+        "https://hunterxhunter.fandom.com/wiki/Episode_18_(1999)",
+        "https://en.wikipedia.org/wiki/List_of_Hunter_%C3%97_Hunter_(1999_TV_series)_episodes",
+        "https://hunterxhunter.fandom.com/wiki/Chapter_7"
+      ]
+    },
+    {
+      "episode": 41,
+      "end_chapter": 62,
+      "start_chapter": 53,
+      "chapters_adapted": "53-54, 55 (part), 56 (part), 60-61, 62 (p.1-6)",
+      "volume": 7,
+      "confidence": "high",
+      "note": "Hunterpedia infobox lists chs 53, 54, 55, 56, 60, 61, 62 (pg.1-6). Content walk: Hisoka finishes Kastro (53-54), Machi reattaches his arms (55 first half), two-month reunion / Ten / In+Gyo intro (56 first part), training + Hisoka's phone challenge and the match date (60-61), match begins through Gon returning the badge (62 p.1-6). Reverse maps: chs 53, 54, 60, 61, 62 all list Episode 41 (1999). The manga's extortion-trio chapters 56(tail)-59 are skipped here and backtracked into eps 43-44 (stored anchors already correct).",
+      "sources": [
+        "https://hunterxhunter.fandom.com/wiki/Episode_41_(1999)",
+        "https://hunterxhunter.fandom.com/wiki/Chapter_60",
+        "https://hunterxhunter.fandom.com/wiki/Chapter_62",
+        "https://en.wikipedia.org/wiki/List_of_Hunter_%C3%97_Hunter_(1999_TV_series)_episodes",
+        "https://everythingbeginswithyourheart.blogspot.com/2020/12/hunter-x-hunter-anime-1999-2011.html"
+      ]
+    },
+    {
+      "episode": 42,
+      "end_chapter": 63,
+      "start_chapter": 62,
+      "chapters_adapted": "62 (p.7-), 55 (part), 63 (part)",
+      "volume": 7,
+      "confidence": "high",
+      "note": "Hunterpedia infobox lists chs 55, 62, 63. Fight continuation (62 from p.7, after ep 41's p.1-6), mid-episode flashback re-using ch 55's Bungee Gum / Texture Surprise ability explanation (incl. the childhood gum-brand origin, given to the Togashi cameo), then the quiz, Gon's defeat and Machi's Yorknew-meeting message (63). Reverse maps: ch 55 and ch 63 both list Episode 42 (1999); ch 63 is shared with ep 44 ({59 + 63}, stored anchor stands). END=63; continue=56 because the manga backtracks to the trio chapters next (eps 43-44).",
+      "sources": [
+        "https://hunterxhunter.fandom.com/wiki/Episode_42_(1999)",
+        "https://hunterxhunter.fandom.com/wiki/Chapter_55",
+        "https://hunterxhunter.fandom.com/wiki/Chapter_63",
+        "https://en.wikipedia.org/wiki/List_of_Hunter_%C3%97_Hunter_(1999_TV_series)_episodes",
+        "https://everythingbeginswithyourheart.blogspot.com/2020/12/hunter-x-hunter-anime-1999-2011.html"
+      ]
+    },
+    {
+      "episode": 45,
+      "end_chapter": 83,
+      "start_chapter": 83,
+      "chapters_adapted": "83 (p.4-11, 16-18)",
+      "volume": 9,
+      "confidence": "high",
+      "note": "Kurapika's Izunavi flashback (Water Divination → Conjurer, Nen-type compatibility percentages, chain training, life-wager conditions) = ch 83 p.4-11, 16-18, grafted ~20 chapters forward out of the manga's Uvogin fight; the Melody train meeting and much of the training detail are anime-original. Hunterpedia infobox: Adapted = Chapter 83 P.4-11, 16-18 (matches stored annotation exactly); ch 83's reverse map lists Episode 45 (1999); EBWYH independently notes ep 45 pulls next-arc Kurapika material forward. Continue=64 (honest mainline resume after ep 44).",
+      "sources": [
+        "https://hunterxhunter.fandom.com/wiki/Episode_45_(1999)",
+        "https://hunterxhunter.fandom.com/wiki/Chapter_83",
+        "https://en.wikipedia.org/wiki/List_of_Hunter_%C3%97_Hunter_(1999_TV_series)_episodes",
+        "https://everythingbeginswithyourheart.blogspot.com/2020/12/hunter-x-hunter-anime-1999-2011.html"
+      ]
+    }
+  ],
+  "zone_level_only": [],
+  "continue_points": [
+    {
+      "episode": 18,
+      "continue_chapter": 23,
+      "note": "graft-only filler; reader's mainline position is unchanged from ep 17 (ch 22 read through p.18; the p.18-19 lot drawing is shown in ep 21) — resume at ch 23"
+    },
+    {
+      "episode": 41,
+      "continue_chapter": 62,
+      "note": "ends at ch 62 p.6, mid Gon vs Hisoka; the fight continues in ep 42"
+    },
+    {
+      "episode": 42,
+      "continue_chapter": 56,
+      "note": "reorder: fight arc done through ch 63, but the manga's chs 56(tail)-59 (extortion trio) are still unread and follow in eps 43-44; resume at ch 56 to match ep 43's start"
+    },
+    {
+      "episode": 45,
+      "continue_chapter": 64,
+      "note": "forward graft of ch 83 fragments only; honest mainline resume stays ch 64 (Yorknew) per ep 44's continue point"
+    }
+  ],
+  "annotation_updates": [
+    {
+      "episodes": [41, 42, 43, 44],
+      "kind": "rearranged",
+      "chapters": "53-63",
+      "note": "refined split: Gon vs Hisoka moved ahead of the manga's extortion-trio chapters — ep 41 = 53-55(part) + 56(part) + 60-61 + 62 p.1-6, ep 42 = 62(rest) + 55 ability-flashback + 63(part), then eps 43-44 backtrack to 56(tail)-58 and 59 + 63(rest). Zone boundaries {53-63} confirmed correct."
+    },
+    {
+      "episodes": [45],
+      "kind": "graft",
+      "chapters": "83 (p.4-11, 16-18)",
+      "note": "confirmed exactly: Hunterpedia's page-level field and ch 83's reverse map both give ch 83 p.4-11, 16-18 grafted into ep 45 with original training and the anime-original Melody train meeting; stored annotation stands unchanged"
+    }
+  ],
+  "type_corrections": [],
+  "repairs": [],
+  "flags_for_sean": [
+    "ep 2 sliver-vs-annotation call: the manga content is a 2-page sliver (ch 1 p.31-32) inside a filler episode. I supplied a sliver anchor (end=1, same as ep 1, so position stays honest and monotonic); if the sliver rule prefers annotation-only for <=2-page grafts in filler episodes, drop the ep 2 anchor — the existing graft annotation already carries the facts. Ep 18's sliver (3 pages, non-monotonic end=7 + continue=23) is the same call but with more positional value since it records the graft's source position.",
+    "ch 56 split evidence is one-sided: Hunterpedia's ep 41 infobox lists Chapter 56, but Chapter 56's reverse anime field lists only Episode 43 (1999). Ch 56's synopsis content (two-month reunion, Ten string, In/Gyo, tape permission) unambiguously matches ep 41's scenes, so I treated 56 as split across eps 41/43 (stored ep43 anchor {56-58} untouched). No page-level split for ch 56 exists in any source found.",
+    "ep 42's ch 55 listing is ability-explanation re-use (Bungee Gum / Texture Surprise panels incl. the gum-brand origin) shown as a video/flashback mid-fight, not new scene adaptation; recorded as '55 (part)' in chapters_adapted."
+  ]
+}

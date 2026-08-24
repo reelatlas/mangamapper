@@ -35146,6 +35146,24 @@ function applyCommunityCap(seriesId, row) {
 var range = (from, to, type) => Object.fromEntries(Array.from({ length: to - from + 1 }, (_, i) => [from + i, type]));
 var EPISODE_TYPE_OVERRIDES = {
   x: { 21: "anime-only-canon", 22: "anime-only-canon", 23: "anime-only-canon", 24: "anime-only-canon" },
+  //   RESEARCH BATCH 15 (2026-08-24, exact-record promotion — 2+ sources each,
+  //   verdict JSONs in research/batch15/out):
+  //   black-butler ep 3: Grelle subplot anime-original (ScreenRant explicit +
+  //   fandom differences; AFL dissents — 2-of-3). bleach ep 149: adapts ch 247
+  //   p.16-end in its closing minutes (fandom page-level + AFG 'Mixed'; AFL
+  //   dissents). dagashi ep 11: second half anime-original framing around chs
+  //   50/52/13. kamisama ep 10: ch-25 beats reworked into anime-only Christmas
+  //   mixer + past-arc graft. dragon-maid 19-21/23: one segment per ep
+  //   anime-original (fandom + Rory Muses per-episode reviews).
+  //   naruto-shippuden 452-454/456-457: Itachi Shinden novel adaptation, zero
+  //   manga pages (Narutopedia + AFG + Wikipedia S20) — licensed canon side
+  //   story = anime-only-canon per the Boruto/Black Clover precedent (ep 455
+  //   stays mixed: disputed ch-678 frame).
+  "black-butler": { 3: "mixed" },
+  bleach: { 149: "mixed" },
+  "kamisama-kiss": { 10: "mixed" },
+  "miss-kobayashis-dragon-maid": { 19: "mixed", 20: "mixed", 21: "mixed", 23: "mixed" },
+  "naruto-shippuden": { 452: "anime-only-canon", 453: "anime-only-canon", 454: "anime-only-canon", 456: "anime-only-canon", 457: "anime-only-canon" },
   //   claymore 24-26: fully anime-original ending (Madhouse outran the
   //   manga) — research verdict 2026-08-23 (AFG + wheredoestheanimeleaveoff
   //   + sportskeeda), Sean sign-off
@@ -35213,8 +35231,10 @@ var EPISODE_TYPE_OVERRIDES = {
   //   split entry's own numbering (−71)
   "cardcaptor-sakura-clear-card": { 5: "anime-only-canon", 11: "mixed", 12: "anime-only-canon", 13: "anime-only-canon", 14: "anime-only-canon", 15: "anime-only-canon", 16: "anime-only-canon" },
   //   dagashi-kashi ep 10 'That's Dagashi!': anime-original sick-Hotaru story
-  //   with gag fragments only (MAL reader posts, Inquisitr, WDTALO list, fandom)
-  "dagashi-kashi": { 10: "mixed" },
+  //   with gag fragments only (MAL reader posts, Inquisitr, WDTALO list, fandom);
+  //   ep 11 second half anime-original station-farewell framing around chs
+  //   50/52/13 (research batch 15, 2026-08-24)
+  "dagashi-kashi": { 10: "mixed", 11: "mixed" },
   //   reborn 111-112: fights against anime-only characters with anime-original
   //   box weapons (ja.wikipedia アニメオリジナル匣 + fandom Future Arc page)
   reborn: { 111: "mixed", 112: "mixed" },

@@ -1,0 +1,20 @@
+{
+  "series_id": "relife",
+  "summary": "Ep 1 promoted to an exact full record. The relife.fandom.com Episode 1 page carries an explicit ORDERED webcomic cross-reference: Reports 2, 1, 3, 4, 5, 6, 7, 8, 9, 10, 11, 16, 12, 13, 19 — fifteen very short webtoon chapters, so the volume is plausible (MAL manga readers complained '20 chapters in a single episode'). The stored annotation's list '2,1,3-13,16,12,13' was garbled: 12-13 appear once, AFTER the grafted 16, i.e. 3-11 then 16 then 12-13 then 19. Skips 14-15 and 17-18 belong to episode 2's material, not to a permanent skip: ep 2's title 'Communication Skills: Zero' equals Report 17's title 'Communication Stat: 0' and its plot covers Reports 17/18/20/21 content, so the continue point stays the natural end+1 = 14. One MAL commenter claims 12-15/17-19 were skipped, contradicting the wiki on 12-13/19 — the wiki's curated ordered list plus the ep-2 title/content match is better supported, but the exact list is effectively single-source, so confidence is medium and the disagreement is flagged.",
+  "anchors": [
+    {"episode": 1, "end_chapter": 13, "start_chapter": 2, "chapters_adapted": "2, 1, 3-11, 16, 12-13, 19", "volume": 1,
+     "confidence": "medium",
+     "note": "Fandom Episode 1 'Webcomic Coverage' lists the exact aired order (opens with Report 2, then 1, then 3-11, grafts 16 forward, returns to 12-13, ends on grafted 19); all listed reports are volume 1 per their report infoboxes. END = 13, the last mainline report (16/19 are pulled-forward grafts, matching the ep-13 anchor's graft convention). Skipped 14-15 and 17-18 are ep-2 material, not series-skips. MAL thread corroborates scope (~20 short chapters in one episode) but disagrees on exact skips — see flag.",
+     "sources": ["https://relife.fandom.com/wiki/Episode_1", "https://myanimelist.net/forum/?topicid=1526286", "https://relife.fandom.com/wiki/Episode_2", "https://relife.fandom.com/wiki/Report_17"]}
+  ],
+  "zone_level_only": [],
+  "continue_points": [],
+  "annotation_updates": [
+    {"episodes": [1], "kind": "rearranged", "chapters": "2, 1, 3-11, 16, 12-13, 19", "note": "Stored list '2,1,3-13,16,12,13,19' double-counted 12-13 and put them before 16. Correct aired order per the wiki cross-reference: 2, 1, 3-11, 16, 12, 13, 19. Skips 14-15/17-18 are deferred to ep 2 (ep 2 title = Report 17's title; its plot covers R17/18/20/21), so continue after ep 1 is simply 14 = end+1 — no override needed."}
+  ],
+  "type_corrections": [],
+  "repairs": [],
+  "flags_for_sean": [
+    "Disagreement on ep 1's exact list: MAL ep-1 discussion poster ya_hallo ('20 chapters in a single episode... chapters 12-15 and 17-19 completely out of the picture with nearly all of chapter 20 missing', https://myanimelist.net/forum/?topicid=1526286) contradicts the wiki's inclusion of 12-13 and 19. The wiki's ordered curated list is better supported (ep 1's plot includes the Ryo-explains-ReLIFE scene = R12 'The Support Division's Job'; ep 2 title/content = R17-18/20-21), so the wiki list is recorded at medium confidence. A page-level source that would settle it (per-episode Blu-ray booklet or Japanese comparison blog) was not found."
+  ]
+}

@@ -1,0 +1,68 @@
+{
+  "series_id": "world-trigger",
+  "summary": "All three batch-14 follow-ups are settled. A genuinely independent Japanese correspondence table (programming-cafe.com, a per-episode AND per-chapter reverse map covering all 99 episodes, distinct from the fandom/worldtriggerwiki/afg lineage) pins both medium anchors exactly: its episode rows give S2E2 (our 75) = ch 126-129 and S3E10 (our 95) = ch 182-184, and its chapter-side reverse map shows ch 126-128 in S2E2 only with ch 129 straddling S2E2+S2E3, and ch 182-183 in S3E10 only with ch 184 straddling S3E10+S3E11 - exactly the stored page splits - so both are promoted to high with unchanged values. The ep 99 continue point is re-verified at 196: fandom's page split (193 p.2-17, 194, 195, 196 p.1-4) re-fetched via the MediaWiki API, Sportskeeda ('covered only four pages of chapter 196... can start from chapter 196'), WDTALO ('start at Volume 22, Chapter 196. The anime only adapts the first few pages'), and programming-cafe marks ch 196 itself with 'from here on unaired' and lists a hypothetical season 4 as starting at vol 22 ch 196. The coarse '197' claims (mangashed, coolbee1) remain the minority reading that skips 19 of 196's 23 pages.",
+  "anchors": [
+    {
+      "episode": 75,
+      "end_chapter": 129,
+      "start_chapter": 126,
+      "chapters_adapted": "126-128, 129 (p.1-9)",
+      "volume": 15,
+      "confidence": "high",
+      "note": "Promoted medium->high, values unchanged. New end-pinning independent check: programming-cafe's table gives S2E2 = 126-129, and its chapter-side reverse map has ch 126/127/128 -> S2E2 only and ch 129 -> S2E2 + S2E3 (i.e. 129 straddles eps 75/76, matching the stored p.1-9/p.10-19 split). Second lineage now agrees with fandom/worldtriggerwiki/afg on the exact end; MAL thread corroborates the mid-129 cliffhanger (Jin's new future vision).",
+      "sources": [
+        "https://programming-cafe.com/amazon/primevideo/anime/anicomi-worldtrigger-list/",
+        "https://worldtrigger.fandom.com/wiki/Collision",
+        "https://worldtriggerwiki.com/wiki/Collision",
+        "https://www.animefillerguide.com/anime/world-trigger/",
+        "https://myanimelist.net/forum/?topicid=1889467"
+      ]
+    },
+    {
+      "episode": 95,
+      "end_chapter": 184,
+      "start_chapter": 182,
+      "chapters_adapted": "182-183, 184 (p.1-9)",
+      "volume": 21,
+      "confidence": "high",
+      "note": "Promoted medium->high, values unchanged. New independent pin of the 183/184 seam: programming-cafe gives S3E10 = 182-184, with reverse map ch 182 -> S3E10, ch 183 -> S3E10, ch 184 -> S3E10 + S3E11 (184 straddles eps 95/96, matching the stored p.1-9/p.9-23 split) and ch 185 -> S3E11 only. Second lineage agrees with fandom/worldtriggerwiki/afg on the exact end.",
+      "sources": [
+        "https://programming-cafe.com/amazon/primevideo/anime/anicomi-worldtrigger-list/",
+        "https://worldtrigger.fandom.com/wiki/Change_of_Plans",
+        "https://worldtriggerwiki.com/wiki/Change_of_Plans",
+        "https://www.animefillerguide.com/anime/world-trigger/",
+        "https://myanimelist.net/forum/?topicid=1978678"
+      ]
+    },
+    {
+      "episode": 99,
+      "end_chapter": 196,
+      "start_chapter": 193,
+      "chapters_adapted": "193 (p.2-17), 194-195, 196 (p.1-4)",
+      "volume": 22,
+      "confidence": "high",
+      "note": "Re-verified, values unchanged (target only for the continue point). Fandom 'Resolution' wikitext re-fetched via MediaWiki API: Adapted Chapters = 193 (Page 2-17), 194, 195, 196 (Page 1-4). Sportskeeda: 'adapted the manga chapters 193-196... covered only four pages of chapter 196'. programming-cafe: ch 193/194/195/196 -> S3E14, with the ch-196 row annotated 'from here on unaired' (ここから先はアニメ未放送).",
+      "sources": [
+        "https://worldtrigger.fandom.com/api.php?action=parse&page=Resolution&prop=wikitext&format=json",
+        "https://www.sportskeeda.com/anime/where-pick-world-trigger-manga-anime-explained",
+        "https://wheredoestheanimeleaveoff.com/where-does-the-world-trigger-anime-end-in-the-manga/",
+        "https://programming-cafe.com/amazon/primevideo/anime/anicomi-worldtrigger-list/"
+      ]
+    }
+  ],
+  "zone_level_only": [],
+  "continue_points": [
+    {
+      "episode": 99,
+      "continue_chapter": 196,
+      "note": "Re-verified per the batch-14 recommendation: ep 99 adapts only ch 196 p.1-4 of 23, so the honest resume point is 196, not the entry's continue_from_chapter=197. Sportskeeda: 'fans... can start from chapter 196'; WDTALO: 'you can start at Volume 22, Chapter 196. The anime only adapts the first few pages of the chapter'; programming-cafe lists the unaired continuation (hypothetical season 4) as starting at vol 22 ch 196. The apply step decides the entry-level continue_from."
+    }
+  ],
+  "annotation_updates": [],
+  "type_corrections": [],
+  "repairs": [],
+  "flags_for_sean": [
+    "Entry-level continue_from_chapter is still 197 in the DB; three page-level sources (fandom p.1-4 split, Sportskeeda 'only four pages', WDTALO 'first few pages') plus programming-cafe's 'S4 starts at 196' all support 196. mangashed and coolbee1 say 197 but at chapter granularity only. Recommend flipping the entry to 196 at apply time.",
+    "New source lineage: programming-cafe.com's World Trigger correspondence table is independent of the fandom/worldtriggerwiki/animefillerguide lineage (Japanese site, own titles/format, includes a full chapter-side reverse map for all 263 chapters). It agrees with the stored maps everywhere checked (eps 74-76, 94-96, 99 and chapters 126-130, 182-185, 193-196), so it is a usable second lineage for any future World Trigger re-checks."
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "series_id": "record-of-ragnarok",
+  "summary": "Target ep 13 (S2E1 'Good vs. Evil') promoted to an exact page-level record: 20 (pp.17-31), 21, 22 (pp.1-13), 24 (pp.1-26), END 22, START 21, volume 6, continue at 22. The fandom wiki's Episode 12/13/14 pages carry complementary page splits (ep12: 19 pp.19-69 + 20 pp.1-16 & 32-52; ep14: 22 pp.14-34 + 23 + 24 pp.27-54 + 25 pp.1-3), independently corroborated by mangashed (S1 ends exactly at end of ch 19; resume ch 20, vol 5), ScreenRant (the Jack/Heracles fight sits in chs 21-22), and an exact title match (ep 13 JP title 正義VS悪! = ch 20 'Justice VS Evil'). Surprise: ch 20 is split THREE ways, and ep12 already aired pp.32-52 of it (not just the pp.1-16 cold open) — so ep13's share of ch 20 is only pp.17-31; the stored ep12/ep13 annotation gloss is refined accordingly. The ch-24 (The 12 Labors) backstory is split pp.1-26 (ep13) / pp.27-54 (ep14), with the wiki's own Differences section noting the Heracles-flashback scene shuffle between eps 13-14.",
+  "anchors": [
+    {"episode": 13, "end_chapter": 22, "start_chapter": 21, "chapters_adapted": "20 (pp.17-31), 21, 22 (pp.1-13), 24 (pp.1-26)", "volume": 6,
+     "confidence": "high", "note": "Opens completing ch 20 (ep12 cold-opened pp.1-16 and pp.32-52) — START 21 by majority rule (the 20-tail is ~15 pages of an ~84-page episode). END 22 as the honest mainline position: the ch-24 material (Shakespeare debut, fight-audience scenes from 'The 12 Labors', pp.1-26) is pulled forward out of order and excluded from END per house convention (cf. stored ep12 end=19, Bleach ep30 end=620). Volume 6 per fandom ch-22 page (chs 22-25 = v6; 20-21 = v5).",
+     "sources": ["https://record-of-ragnarok.fandom.com/wiki/Episode_13", "https://record-of-ragnarok.fandom.com/wiki/Episode_14", "https://record-of-ragnarok.fandom.com/wiki/Episode_12", "https://mangashed.com/where-does-the-record-of-ragnarok-anime-leave-off-in-the-manga/", "https://screenrant.com/record-of-ragnarok-season-2-jack-heracles-craziest-fight/"]}
+  ],
+  "zone_level_only": [],
+  "continue_points": [
+    {"episode": 13, "continue_chapter": 22, "note": "ends mid-chapter at 22 p.13 (ep14 resumes 22 p.14); end+1 would be 23, so record 22. The 24 pp.1-26 fragment is ahead-of-position backstory, not a resume point."}
+  ],
+  "annotation_updates": [
+    {"episodes": [12, 13], "kind": "rearranged", "chapters": "20, 24",
+     "note": "Refined zone facts: ch 20 is split THREE ways — pp.1-16 + pp.32-52 in ep12 (the S1 finale aired more of ch 20 than just the cold open), pp.17-31 in ep13. Ch 24 ('The 12 Labors') is split pp.1-26 (ep13) / pp.27-54 (ep14); per the wiki's Differences section the Heracles flashback proper, Ares' 12-Labors explanation, and Loki's scene were moved into ep14 while William Shakespeare's debut (ch-24 material) was pulled into ep13. Ch 22 also splits pp.1-13 / pp.14-34 across eps 13/14 (ordinary mid-chapter break, not rearrangement)."}
+  ],
+  "type_corrections": [],
+  "repairs": [],
+  "flags_for_sean": []
+}

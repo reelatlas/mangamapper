@@ -1,0 +1,90 @@
+{
+  "series_id": "miss-kobayashis-dragon-maid",
+  "summary": "12 of 13 targets promoted to exact per-episode records; ep 11 confirmed as no-direct-adaptation (zone_level_only). The batch-9 ambiguous S1 zone lists are now resolved: ep3={8,11,22,40-elements}, ep11={none — '48,K3' is setting inspiration only per the wiki's own trivia}, ep12={12,28,32}. The full S2 interleave (our 14, 16-24) is now exact, with in-episode segment order, via two independent per-episode sources: the maid-dragon fandom wiki (episode infoboxes + chapter-page reverse maps + trivia, fetched via MediaWiki API) and Rory Muses' per-episode adaptation reviews (chapter-by-chapter, with volume numbers); MAL and ja-blog spot-checks agree. Spinoff grafts pinned down: Kanna ch 12 genuinely adapted in ep16; Elma OL ch 1 only referenced in ep18; Kanna chs 19/67 only inspiration for ep23's mostly anime-original half; Elma ch 6 is in the finale. Surprise: the finale (ep25) actually adapts chs 40+48+Elma ch 6 — ch 64 is exactly adapted in ep22 — so the stored manual ep25→64 endpoint anchor now double-claims ch 64 with my ep22 record (repair filed, continue→65 preserved and validated by frontier logic). Numbering conversions applied: wiki counts the S1 OVA as 'Episode 14', so wiki N = our N-1 for N≥15; MAL/Rory S2 ep N = our N+13.",
+  "anchors": [
+    {"episode": 3, "end_chapter": 8, "start_chapter": 11, "chapters_adapted": "11, 22, 8, 40 (elements)", "volume": 1,
+     "confidence": "medium", "note": "In-episode order: ch 11 (cleaning, expanded with the move), ch 22 (noisy neighbors; Sasakibe/Yana/Sone debut in both), closing party = ch 8's Christmas party de-Christmased, with ch 40 (flower viewing) used only as elements/excuse framing — ch 40 proper is adapted in ep25. Reverse maps on all four chapter pages cite Episode 3. Exact list is single-wiki (fandom); content corroborated by chapter titles + Crunchyroll synopsis.",
+     "sources": ["https://maid-dragon.fandom.com/wiki/Episode_3", "https://maid-dragon.fandom.com/wiki/Chapter_22", "https://maid-dragon.fandom.com/wiki/Chapter_40", "https://maid-dragon.fandom.com/wiki/Chapter_8"]},
+    {"episode": 12, "end_chapter": 32, "start_chapter": 12, "chapters_adapted": "12, 28, 32", "volume": 4,
+     "confidence": "medium", "note": "Ch 12 (omurice) frames the episode; chs 28 (bandit girl / Tales of the Past 1) + 32 (Encounter II, the sword-pull first meeting) adapted as Kobayashi's commute dream (wiki trivia explicit); episode closes back on ch 12's dinner. Reverse maps on chapter pages 12/28/32 all cite Episode 12. Exact list single-wiki; event-level corroboration from multiple 2017 episode reviews (omurice + bandit girl + drunk sword-pull all present).",
+     "sources": ["https://maid-dragon.fandom.com/wiki/Episode_12", "https://maid-dragon.fandom.com/wiki/Chapter_28", "https://maid-dragon.fandom.com/wiki/Chapter_32", "https://chikorita157.com/2017/03/29/kobayashi-san-chi-no-maid-dragon-episode-12/"]},
+    {"episode": 14, "end_chapter": 36, "start_chapter": 47, "chapters_adapted": "47, 30-31, 36", "volume": 4,
+     "confidence": "high", "note": "S2 premiere (wiki 'Episode 15', MAL S2 ep1). Opens with ch 47 (maid café, vol 5) then backfills chs 30-31 (Ilulu debut, skipped by S1) and ends on ch 36 (Ilulu & Kobayashi). Order confirmed segment-by-segment by Rory Muses; ja sources confirm 47+30/31. Non-monotonic vs ep13 by design; continue = 37 = end+1 (ep15 adapts 37-39 next).",
+     "sources": ["https://maid-dragon.fandom.com/wiki/Episode_15", "https://rorymuses.wordpress.com/2021/07/07/miss-kobayashis-dragon-maid-s-episode-1-tohru-ilulu/", "https://subcalist-manga-anime.com/kobayashisan-chi-maid-dragon-anime-dokomade/", "https://newstisiki.com/archives/59172"]},
+    {"episode": 16, "end_chapter": 60, "start_chapter": 45, "chapters_adapted": "45, 53, Kanna ch 12, 60", "volume": 7,
+     "confidence": "high", "note": "Wiki 'Episode 17' / MAL S2 ep3. Order per Rory: 45 (Ilulu & Saikawa, v5) → 53 (maid-outfit gathering, v6) → 60 (Tohru and Hobbies/neighbors, v7). Board-game scene inside the gathering = Kanna's Daily Life ch 12 adapted with changes (Monopoly for Game of Life, Elma absent) per wiki trivia; MAL commenter Vogel100 independently lists 45/53/60.",
+     "sources": ["https://maid-dragon.fandom.com/wiki/Episode_17", "https://rorymuses.wordpress.com/2021/07/21/miss-kobayashis-dragon-maid-s-episode-3-ilulu-saikawa/", "https://myanimelist.net/forum/?topicid=1941509"]},
+    {"episode": 17, "end_chapter": 50, "start_chapter": 35, "chapters_adapted": "35, 43, 50", "volume": 6,
+     "confidence": "high", "note": "Wiki 'Episode 18' / MAL S2 ep4. Order per Rory: 35 (Elma & the Company, v4) → 43 (Tohru & Patrolling, v5) → 50 (Amusement Park, v6).",
+     "sources": ["https://maid-dragon.fandom.com/wiki/Episode_18", "https://rorymuses.wordpress.com/2021/07/28/miss-kobayashis-dragon-maid-s-episode-4-elma-the-company/"]},
+    {"episode": 18, "end_chapter": 52, "start_chapter": 44, "chapters_adapted": "44, 51-52", "volume": 6,
+     "confidence": "high", "note": "Wiki 'Episode 19' / MAL S2 ep5. Order per Rory: 44 (Tohru & Elma II first-meeting flashback, v5) → 51-52 (Ilulu & Part-Time Job 1-2, v6; Taketo debut). Fandom infobox also lists Elma OL Diary ch 1, but its own trivia clarifies that is an added anime-only scene referencing E1's last panel, not an adaptation — excluded from the list.",
+     "sources": ["https://maid-dragon.fandom.com/wiki/Episode_19", "https://rorymuses.wordpress.com/2021/08/05/miss-kobayashis-dragon-maid-s-episode-5-tohru-elma-ii/"]},
+    {"episode": 19, "end_chapter": 54, "start_chapter": 46, "chapters_adapted": "46, 54", "volume": 6,
+     "confidence": "high", "note": "Wiki 'Episode 20' / MAL S2 ep6. Order per Rory: 46 (Lucoa & Shouta, v5) → 54 (Takiya & Fafnir, v6); third Kanna/Saikawa segment is anime-original (both sources).",
+     "sources": ["https://maid-dragon.fandom.com/wiki/Episode_20", "https://rorymuses.wordpress.com/2021/08/11/miss-kobayashis-dragon-maid-s-episode-6-takiya-fafnir/"]},
+    {"episode": 20, "end_chapter": 41, "start_chapter": 61, "chapters_adapted": "61, 41", "volume": 5,
+     "confidence": "high", "note": "Wiki 'Episode 21' / MAL S2 ep7. Order per Rory: 61 (Fafnir and Lucoa, v7) → 41 (Tohru & Sleep, v5); closing ghost-hunt school segment is anime-original (both sources). Honest non-monotonic END = 41.",
+     "sources": ["https://maid-dragon.fandom.com/wiki/Episode_21", "https://rorymuses.wordpress.com/2021/08/18/miss-kobayashis-dragon-maid-s-episode-7-tohru-sleep/"]},
+    {"episode": 21, "end_chapter": 63, "start_chapter": 42, "chapters_adapted": "42, 63", "volume": 7,
+     "confidence": "high", "note": "Wiki 'Episode 22' / MAL S2 ep8. Opening Father's Day (Shouta/Lucoa) segment is anime-original (both sources); then 42 (Tohru & Nursing, v5) → 63 (Ilulu and the Doll, v7).",
+     "sources": ["https://maid-dragon.fandom.com/wiki/Episode_22", "https://rorymuses.wordpress.com/2021/08/25/miss-kobayashis-dragon-maid-s-episode-8-tohru-nursing/"]},
+    {"episode": 22, "end_chapter": 64, "start_chapter": 55, "chapters_adapted": "55, 59, 64", "volume": 7,
+     "confidence": "high", "note": "Wiki 'Episode 23' / MAL S2 ep9. Order per Rory: 55 (Elma & the Freedom Movement, v6) → 59 (Elma and Picnic, v7) → 64 (Elma and Tohru, v7). NOTE: ch 64 = the stored ep25 endpoint anchor's chapter — see repairs/flags.",
+     "sources": ["https://maid-dragon.fandom.com/wiki/Episode_23", "https://rorymuses.wordpress.com/2021/09/02/miss-kobayashis-dragon-maid-s-episode-9-elma-and-tohru/"]},
+    {"episode": 23, "end_chapter": 62, "start_chapter": 62, "chapters_adapted": "62", "volume": 7,
+     "confidence": "high", "note": "Wiki 'Episode 24' / MAL S2 ep10. First half = ch 62 (Kanna in New York, v7; Chloe debut). Second half is mostly anime-original, drawing inspiration from Kanna's Daily Life chs 19 and 67 with Kobayashi substituted for Saikawa/Ilulu (wiki trivia); Rory independently confirms it matches no published chapter. K19/K67 deliberately NOT listed as adapted.",
+     "sources": ["https://maid-dragon.fandom.com/wiki/Episode_24", "https://rorymuses.wordpress.com/2021/09/08/miss-kobayashis-dragon-maid-s-episode-10-kanna-in-new-york/"]},
+    {"episode": 24, "end_chapter": 58, "start_chapter": 49, "chapters_adapted": "49, 56 (partial), 57-58", "volume": 6,
+     "confidence": "high", "note": "Wiki 'Episode 25' / MAL S2 ep11. Order per Rory: 49 (Tohru & Relaxation, v6) → a minuscule part of 56 (Tohru & Magic) → 57-58 (Tohru & Legend / the Past 1-2, v6; Emperor of Demise tale).",
+     "sources": ["https://maid-dragon.fandom.com/wiki/Episode_25", "https://rorymuses.wordpress.com/2021/09/15/miss-kobayashis-dragon-maid-s-episode-11-tohru-the-past/"]}
+  ],
+  "zone_level_only": [
+    {"episode": 11, "zone": "anime-original year-end/new-year episode (thematic sources: ch 48 festival setting, Kanna's Daily Life ch 3 NYE shrine visit)",
+     "best_bound": "No mainline chapters directly adapted. The wiki's own trivia is explicit: 'This episode does not directly adapt any existing manga chapters, but does share the festival setting in Chapter 48 of the main manga series and the New Year's Eve setting in Chapter 3 of Kanna's Daily Life.' The infobox's '48, K3' (and the batch-9 zone list) is setting inspiration, not adaptation — ch 48 (Tohru and the Festival, a summer festival) is properly adapted in ep25. Our existing [filler] type is correct.",
+     "tried": "Fandom ep page + trivia via MediaWiki API; Chapter 48 page's Anime Episodes section does not credit this episode; MAL S1 ep11 discussion (topic 1601137) has no chapter posts; ja season-level sources give no ep-11 chapters. Nothing left to settle — this is a definitive no-adaptation verdict, not an unresolved bound.",
+     "sources": ["https://maid-dragon.fandom.com/wiki/Episode_11", "https://maid-dragon.fandom.com/wiki/Chapter_48", "https://myanimelist.net/forum/?topicid=1601137"]}
+  ],
+  "continue_points": [
+    {"episode": 3, "continue_chapter": 12, "note": "End=8 but chs 9 (ep2) and 11 (this ep) already covered; ch 10 (Tohru & Valentines) is adapted only by the unnumbered S1 OVA (component 2) so it is parked, matching the ruled convention that lets ep25 continue at 65 past OVA-only chs 10/33. Next unadapted mainline = 12."},
+    {"episode": 12, "continue_chapter": 19, "note": "Dream segments jump ahead to 28/32; honest mainline frontier after ep12 = 19 (chs 1-18, 21-29, 32, 34 covered; 10 parked to OVA) — exactly what ep13 adapts next (19-20)."},
+    {"episode": 16, "continue_chapter": 40, "note": "Earliest zone chapter not yet adapted (40-44, 46-52, 54-59 still unaired at this point; ch 40 full adaptation only lands in ep25). Frontier convention consistent with the manual ep25→65 ruling."},
+    {"episode": 17, "continue_chapter": 40, "note": "Same frontier: 40 remains the earliest unadapted mainline chapter."},
+    {"episode": 18, "continue_chapter": 40, "note": "Same frontier."},
+    {"episode": 19, "continue_chapter": 40, "note": "Same frontier."},
+    {"episode": 20, "continue_chapter": 40, "note": "Same frontier (41 now covered by this ep, 40 still not)."},
+    {"episode": 21, "continue_chapter": 40, "note": "Same frontier."},
+    {"episode": 22, "continue_chapter": 40, "note": "Same frontier."},
+    {"episode": 23, "continue_chapter": 40, "note": "Same frontier."},
+    {"episode": 24, "continue_chapter": 40, "note": "Same frontier; after this ep only 40 and 48 remain unadapted below 65, and the finale covers both."},
+    {"episode": 25, "continue_chapter": 65, "note": "Preserve the existing manual continue→65 — it is exactly the frontier once the finale adapts 40+48 (everything 1-64 covered except OVA-only 10/33). Must survive the ep25 repair if applied."}
+  ],
+  "annotation_updates": [
+    {"episodes": [3], "kind": "rearranged", "chapters": "8, 11, 22, 40 (elements)", "note": "Batch-9 ambiguous three-list zone resolved: this list belongs to ep3. In-episode order 11 → 22 → 8(party) with ch-40 elements woven in; ch 40 proper is finale material."},
+    {"episodes": [11], "kind": "divergence", "chapters": "", "note": "Was rearranged {48, K3}. Corrected: no direct adaptation — wiki trivia states the episode shares only the ch 48 festival setting and Kanna ch 3 NYE setting. Effectively anime-original; matches existing filler type."},
+    {"episodes": [12], "kind": "rearranged", "chapters": "12, 28, 32", "note": "Batch-9 ambiguous zone resolved: this list belongs to ep12 (28/32 as commute-dream flashback)."},
+    {"episodes": [16, 17, 18, 19, 20, 21, 22, 23, 24], "kind": "rearranged", "chapters": "vols 4-7 interleave + spinoff grafts", "note": "'Only season endpoints reliable' is superseded: per-episode exact records now exist (see anchors), each 2-sourced with in-episode segment order. Spinoff involvement: Kanna ch 12 adapted (ep16); Elma OL ch 1 referenced only (ep18); Kanna chs 19/67 inspiration only (ep23); Elma OL ch 6 in the finale. Anime-original segments in eps 19, 20, 21, 23."}
+  ],
+  "type_corrections": [
+    {"episodes": [19], "type": "mixed", "note": "Third segment (Kanna/Saikawa) is anime-original; rest adapts chs 46, 54.", "sources": ["https://maid-dragon.fandom.com/wiki/Episode_20", "https://rorymuses.wordpress.com/2021/08/11/miss-kobayashis-dragon-maid-s-episode-6-takiya-fafnir/"]},
+    {"episodes": [20], "type": "mixed", "note": "Closing school/ghost-hunt segment entirely anime-original; rest adapts chs 61, 41.", "sources": ["https://maid-dragon.fandom.com/wiki/Episode_21", "https://rorymuses.wordpress.com/2021/08/18/miss-kobayashis-dragon-maid-s-episode-7-tohru-sleep/"]},
+    {"episodes": [21], "type": "mixed", "note": "Opening Father's Day segment entirely anime-original; rest adapts chs 42, 63.", "sources": ["https://maid-dragon.fandom.com/wiki/Episode_22", "https://rorymuses.wordpress.com/2021/08/25/miss-kobayashis-dragon-maid-s-episode-8-tohru-nursing/"]},
+    {"episodes": [23], "type": "mixed", "note": "Second half mostly anime-original (K19/K67 inspiration only); first half adapts ch 62.", "sources": ["https://maid-dragon.fandom.com/wiki/Episode_24", "https://rorymuses.wordpress.com/2021/09/08/miss-kobayashis-dragon-maid-s-episode-10-kanna-in-new-york/"]}
+  ],
+  "repairs": [
+    {"episode": 25, "field": "end_chapter", "old": 64, "new": 48,
+     "why": "MANUAL ENDPOINT ANCHOR — confirm with Sean before applying. The finale actually adapts chs 40 (flower viewing) + 48 (summer festival) + Elma OL ch 6 (festival food); ch 64 is exactly adapted in ep22 (now anchored, 2 sources), so keeping end=64 here double-claims 64 across two rows. Honest finale values: chapters_adapted '40, 48, Elma ch 6', end=48. Continue→65 stays correct under frontier logic (explicit continue_points entry included). Ch 40 page's reverse map lists Episodes 3 AND 26; finale trivia details both chapters' adaptation changes; ja sources confirm finale = ch 48 base.",
+     "sources": ["https://maid-dragon.fandom.com/wiki/Episode_26", "https://maid-dragon.fandom.com/wiki/Chapter_40", "https://subcalist-manga-anime.com/kobayashisan-chi-maid-dragon-anime-dokomade/"]},
+    {"episode": 25, "field": "volume", "old": 7, "new": 5,
+     "why": "Follows from end_chapter 64→48: ch 48 is in vol 5 (fandom volume boundaries: v5 = 40-48). Apply only together with the end_chapter repair; if Sean keeps the endpoint convention (end=64), keep v7.",
+     "sources": ["https://maid-dragon.fandom.com/wiki/Chapter_48", "https://maid-dragon.fandom.com/wiki/Episode_26"]}
+  ],
+  "flags_for_sean": [
+    "ep25 repair is filed against a MANUAL ruling: stored ep25→64/v7/continue→65 is a season-endpoint convention ('only season endpoints reliable', batch 9), but ep22 now carries the exact ch-64 record, so both rows claim 64. Recommend converting ep25 to honest values (end 48, v5, chapters '40, 48, Elma ch 6', explicit continue→65) — or reject both repair entries to keep the endpoint convention; continue→65 is correct either way.",
+    "ep13 (not a target) has the same endpoint pattern: stored end=34/v4 but the wiki maps ep13 to chs 19-20 only (ch 34 'Kanna and Parents' Day' belongs to ep9's sports festival, heavily altered; single source). No repair filed — Sean to decide whether S1's finale also converts to honest values (end 20, v2/3 boundary) with an explicit continue.",
+    "ep1 (not a target): wiki lists chs 1-4 (ep2 then starts at 5); stored ep1→1 v1 undercounts unless it is an intentional start-marker. Single source; no repair filed.",
+    "ep9 is typed [filler] in our rows (per animefillerlist) but fandom maps it to ch 34 'Kanna and Parents' Day' adapted-with-changes (parents' day → sports festival). Sources disagree; left as filler, surfacing for the record.",
+    "Chs 10 ('Tohru & Valentines') and 33 ('Tohru and Hot Springs') are adapted ONLY by the unnumbered S1 OVA (our component 2, AniList 98580) per fandom chapter pages — continue points here treat them as parked/covered by the OVA, which is what makes the ruled ep25 continue→65 consistent. If the sliver rule wants these parked explicitly, that's where they go.",
+    "Single-source spinoff elements, kept but labeled: Kanna ch 12 in ep16's chapters_adapted (fandom trivia describes concrete adaptation changes, so included; Rory/MAL list only mainline 45/53/60); Elma OL ch 1 in ep18 excluded from chapters_adapted because the fandom's own trivia downgrades it to a referenced last panel."
+  ]
+}

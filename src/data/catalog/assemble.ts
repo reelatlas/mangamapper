@@ -80,7 +80,7 @@ export const volumeFor = (row: SeriesRow, chapter: number, boundaries: Boundary[
 
 export const toEpisodes = (row: SeriesRow, eps: EpisodeRow[], anchors: AnchorRow[], boundaries: Boundary[]): Episode[] => {
   const anchorByEp = new Map(anchors.map((a) => [a.episode, a]));
-  return eps.map((e) => {
+  const out: Episode[] = eps.map((e) => {
     const anchor = anchorByEp.get(e.number);
     const type = e.type as EpisodeType;
     const mappable = type === 'canon' || type === 'mixed';
@@ -106,6 +106,29 @@ export const toEpisodes = (row: SeriesRow, eps: EpisodeRow[], anchors: AnchorRow
       airDate: e.air_date ?? '',
     };
   });
+  // ANCHORED ROW-LESS EPISODES (cells-at-work 12/13, 2026-08-24): an exact
+  // record proves the episode exists — AFL/wiki row sparseness must not hide
+  // it from the mapping layer (anchor points read episodes[].mangaMapping),
+  // or a fully-researched row inside a reorder crossing regresses to a
+  // "no exact record" hole. Synthesize a canon title-pending row so every
+  // consumer sees the record; real rows always win (only missing numbers).
+  const have = new Set(eps.map((e) => e.number));
+  for (const a of anchors) {
+    if (have.has(a.episode) || !Number.isInteger(a.episode)) continue;
+    if (a.episode < 1 || a.episode > (row.aired_episodes ?? 0)) continue;
+    out.push({
+      number: a.episode,
+      title: null,
+      type: 'canon',
+      mangaMapping: {
+        volume: a.volume ?? volumeFor(row, a.chapter, boundaries),
+        chapters: a.start_chapter != null && a.start_chapter !== a.chapter ? `${a.start_chapter}-${a.chapter}` : String(a.chapter),
+      },
+      airDate: '',
+    });
+  }
+  out.sort((x, y) => x.number - y.number);
+  return out;
 };
 
 export type WatchOrderRow = {

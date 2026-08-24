@@ -1,0 +1,37 @@
+{
+ "series_id": "fire-force",
+ "summary": "Target ep 59 (S3 part 1 ep 11, 'The Great Kaiju Battlefront' = ch 214's title) promoted to an exact record, and the batch-8 zone note needed a correction: the episode does not stop at 214 — it ends with the Titanic Infernal DESTROYED, which is ch 215's event (Kurono destroys it, 'Set Alight'), with Shō arriving at the ruins as the cliffhanger. ANN and CBR's episode reviews independently confirm the kaiju is put down at the episode's end, and CBR confirms Shinra is captured by Faerie within the episode. So ep 59 = 211-212 plus the Titanic Infernal thread of 213-215 (the Shō/Arrow-vs-Faerie pages interleaved in 213-215 are deferred), and ep 60 = the Faerie-duel thread of 213-215 plus 216 — the re-tread is a thread split, not a plain 213-214 repeat. Ep 60's stored END 216 is confirmed (per-episode tracker d0nut2x: ends at the end of ch 216; sportskeeda: part 1 = chs 175-216, continue at 217) — no repair needed, and a full ep-60 record is supplied.",
+ "anchors": [
+  {"episode": 59, "end_chapter": 215, "start_chapter": 211, "chapters_adapted": "211-212, 213-215 (Titanic Infernal thread; the Shō/Arrow vs Faerie pages of 213-215 are deferred to ep 60)", "volume": 25,
+   "confidence": "high",
+   "note": "S3E11 = our 59. Opens at ch 211 (ep 10 ended at 210 per multiple recaps), title = ch 214's title, and ends with the kaiju destroyed (ch 215 event: 'Kurono destroys the Titanic Infernal') + Shō looking at its ruins; Shinra's capture by Faerie also lands here. Page-level split of the two interleaved threads in 213-215 is documented nowhere — chapter-level with thread qualifiers is the honest exact record.",
+   "sources": [
+    "https://www.animenewsnetwork.com/review/fire-force-season-3/episode-11/.225571",
+    "https://www.cbr.com/fire-force-season-3-episode-11-review-crunchyroll/",
+    "https://fire-force.fandom.com/wiki/Chapter_215",
+    "https://fire-force.fandom.com/wiki/Chapter_214",
+    "https://www.sportskeeda.com/anime/fire-force-season-3-episode-11-the-firefighters-face-kaiju-great-cataclysm-set-motion"
+   ]},
+  {"episode": 60, "end_chapter": 216, "start_chapter": 213, "chapters_adapted": "213-215 (Shō/Arrow vs Faerie thread — re-tread of chapters already partially shown in ep 59), 216", "volume": 25,
+   "confidence": "medium",
+   "note": "Finale: Shō vs Faerie (the 213-215 duel thread teased by the ep-12 preview and set up by ep 59's closing shot) then ch 216 'Ancient Madness' to its end (d0nut2x: 'ends at the end of Chapter 216'; sportskeeda: continue reading at 217). END 216 is high (2+ sources); start 213 is the thread-split derivation, hence medium overall. Stored END 216 anchor confirmed — this row adds the missing start/chapters.",
+   "sources": [
+    "https://x.com/d0nut2x/status/1934577050020389228",
+    "https://www.sportskeeda.com/anime/where-fire-force-season-3-part-1-leave-manga-explained",
+    "https://www.sportskeeda.com/anime/fire-force-season-3-episode-12-preview-teases-faerie-vs-sho"
+   ]}
+ ],
+ "zone_level_only": [],
+ "continue_points": [
+  {"episode": 59, "continue_chapter": 213, "note": "reader resumes at 213 to get the unseen Shō/Arrow vs Faerie pages of 213-215 (accepting overlap with the kaiju material already watched); after ep 60 the resume point is 217"}
+ ],
+ "annotation_updates": [
+  {"episodes": [59, 60], "kind": "rearranged", "chapters": "211-216", "note": "Corrects batch-8 zone facts ('ep 59 = 211-214, ep 60 = 213-216'): the split is by THREAD, and ep 59 runs into 215 — ep 59 = 211-212 + the Titanic Infernal thread of 213-215 (kaiju destroyed at episode end, ch 215 event; Shinra captured by Faerie; Shō arrives as cliffhanger), ep 60 = the Shō/Arrow vs Faerie thread of 213-215 + 216. ANN + CBR both place the kaiju's destruction inside ep 59."}
+ ],
+ "type_corrections": [],
+ "repairs": [],
+ "flags_for_sean": [
+  "Batch-8's 'ep 59 = 211-214' understates ep 59: three independent episode reviews/recaps (ANN, CBR, sportskeeda) agree the Titanic Infernal is destroyed by the END of ep 59, and that destruction is ch 215 per the Fire Force wiki chapter page. The annotation update above records the corrected thread-split shape; no stored ANCHOR was wrong (59 had none, 60's END 216 stands).",
+  "No per-episode page-split source exists for the 213-215 interleave (fire-force.fandom chapter pages carry no anime-episode fields, and the per-episode tracker d0nut2x's tweet for S3P1 #11 could not be located — only #12's). If his #11 tweet surfaces it would settle the exact page split between eps 59 and 60."
+ ]
+}

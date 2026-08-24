@@ -1,0 +1,57 @@
+{
+  "series_id": "ranking-of-kings",
+  "summary": "Both targets promoted to full records. Ep 3 'The New King' ends at chapter 17 with start 14: MAL episode-3 discussion states the anime was 'approximately 17 chapters in 3 episodes' and, explicitly, that the post-ep-3 continue point is 'chapter 18, where Bojji starts his journey' (= ep 4 'His First Journey'); the episode opens by finishing the linearized succession block (chs 9-10 announcement/vote + ch 13 tail: Bebin relaying Kage's 'long journey' message), verified against fandom chapter summaries for chs 8-13. Ep 19 'The Last Bastion' = chapters 118-130 (all of volume 10): bracketed by the batch-11 verified exact anchors ep18 end=117 (= v9's last chapter, fandom Volume 9 page) and ep20 start=131 (= v11's first), and independently matched by Volume 10's blurb ('Bojji struggles alone against immortal Ouken... Kage tries to lend a hand... the kingdom finally unites') which is precisely ep 19's content; the episode ends with the Daida/Bosse revival teeing up ep 20 ('Can We Trust King Bosse?'). Zone bounds firmed: ep 18's flashback material is its own mainline ~110-117 (v9 blurb: 'the sinful past of Bosse and Miranjo is revealed'), while ep 19 grafts early-v11 beats (~131-134: adventurer Bosse finds and raises the destroyed young Miranjo, per Volume 11 blurb + In Asian Spaces ep-19 screenshots), and the devil-deal backstory beat surfaces in ep 20 (sportskeeda ep-20 recap). No repairs; stored anchors all held.",
+  "anchors": [
+    {
+      "episode": 3,
+      "end_chapter": 17,
+      "start_chapter": 14,
+      "chapters_adapted": "9-10, 13 (tail), 14-17",
+      "volume": 2,
+      "confidence": "high",
+      "note": "Opens by finishing the linearized deathbed/succession block: Daida announced king (ch 9), vote reveal (ch 10, referenced when Daida orders Bebin to kill Apeas/Sorii for not voting for him), and Bebin's 'long journey' message to Bojji (ch 13's final scene); bulk is new mainline 14-17 (Apeas vs Bebin, dungeon/Mitsumata, Hilling permits the journey), so start=14 by majority rule. End=17 from MAL thread ('~17 chapters in 3 episodes'; 'scanlation only up to ch 17 and the anime is already ahead'; continue point 'chapter 18, where Bojji starts his journey'), consistent with ep2 end=13 and ep4 'His First Journey'. Ch 17 is in v2 (chs 14-27).",
+      "sources": [
+        "https://myanimelist.net/forum/?topicid=1968031",
+        "https://myanimelist.net/forum/?topicid=1968031&show=50",
+        "https://ousamaranking.fandom.com/wiki/Episode_3",
+        "https://ousamaranking.fandom.com/wiki/Chapter_9",
+        "https://ousamaranking.fandom.com/wiki/Chapter_10",
+        "https://ousamaranking.fandom.com/wiki/Chapter_13",
+        "https://ousamaranking.fandom.com/wiki/Volume_2"
+      ]
+    },
+    {
+      "episode": 19,
+      "end_chapter": 130,
+      "start_chapter": 118,
+      "chapters_adapted": "118-130, 131-134 (young-Miranjo/Bosse backstory fragments grafted into the flashback block; sub-bounds approximate)",
+      "volume": 10,
+      "confidence": "medium",
+      "note": "HOLE promoted. Mainline = exactly volume 10 (118-130): bracketed by verified ep18 end=117 (v9 ends at 117) and ep20 start=131 (v11 starts at 131), and Volume 10's own blurb (Bojji alone vs immortal Ouken, Kage lending a hand, 'the kingdom finally unites' = Four Knights joining the bastion fight) is a direct content match for this episode; ep ends with the Daida/Bosse revival (next-ep teaser 'Can We Trust King Bosse?'). Grafted flashback beats (Bosse finds the destroyed Miranjo after Houma, raises her, they adventure) belong to early v11 per its blurb. No source states the 118/130 boundary per-episode in so many words, hence medium.",
+      "sources": [
+        "https://ousamaranking.fandom.com/wiki/Volume_9",
+        "https://ousamaranking.fandom.com/wiki/Volume_10",
+        "https://ousamaranking.fandom.com/wiki/Volume_11",
+        "https://inasianspaces.com/2022/04/13/ousama-ranking-episode-19-review/",
+        "https://inasianspaces.com/2022/04/13/ousama-ranking-episode-18-review/",
+        "https://www.sportskeeda.com/anime/ousama-ranking-episode-20-bosse-returns-fight-ouken-miranjo-s-deal-devil-exposed"
+      ]
+    }
+  ],
+  "zone_level_only": [],
+  "continue_points": [],
+  "annotation_updates": [
+    {
+      "episodes": [18, 19],
+      "kind": "rearranged",
+      "chapters": "110-117 + ~131-138",
+      "note": "Zone firmed: ep 18's Miranjo/Bosse backstory is its own mainline ~110-117 (v9, 'sinful past revealed': Houma/Gyakuza, Miranjo's mother, the old gods); ep 19 grafts the early-v11 continuation (~131-134: adventurer Bosse finds/raises young Miranjo, they set off adventuring) into the same continuous flashback; the devil-deal beats (~135-138) surface in ep 20, so the interleave block actually tails into ep 20 even though eps 18-19 carry the annotation."
+    }
+  ],
+  "type_corrections": [],
+  "repairs": [],
+  "flags_for_sean": [
+    "ep 19: no source states the per-episode chapter boundary directly; the 118-130 record is bracket-derived (both neighbors are batch-11 agent-verified exact anchors) + volume-10-blurb content match. MAL ep-19 thread (topicid 1997024) and r/anime were chapter-silent; fandom chapter pages for this series stop at ch 14.",
+    "ep 19 graft sub-bounds (~131-134) are inferred from the Volume 11 blurb and In Asian Spaces ep-19 screenshots (Bosse finds Miranjo / they adventure); page-level attribution nowhere documented. Ep 20's stored {~131-143} therefore partially re-covers backstory beats already glimpsed in ep 19 — consistent with the reorder regime, no repair needed."
+  ]
+}

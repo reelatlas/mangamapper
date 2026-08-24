@@ -1,0 +1,53 @@
+{
+  "series_id": "haikyu",
+  "summary": "All 9 targets promoted to exact records; nothing left zone-level. Three independent per-episode maps (haikyuu.fandom episode infoboxes via MediaWiki API, animefillerguide's cumulative table, and the wiki's separately-maintained PrueShy Anime-to-Chapter blog) agree on every chapter set, corroborated by Wikipedia season summaries and episode-title=chapter-title matches (ep27=ch74, ep28=ch75, ep29=ch79, ep30=ch80 'Yoku', ep56=ch149, ep64=ch211, ep66=ch217, ep67=ch219). Two stored-annotation corrections: (1) the S2E1 pull-forward of chs 76-77 is the Ushijima/Shiratorizawa street encounter (ch 76 ending + ch 77), not a 'Nekoma cold open' — ep26 actually cold-opens on the Seijoh-loss flashback (ch 71); (2) the claimed ch 196 graft in ep64 does not hold up — only PrueShy's blog lists 196, while the fandom episode article (full plot has zero Nekoma/Fukurodani content), Wikipedia's summary, and animefillerguide all give 210-212 only. Ep56's ch-149 re-adapt confirmed as the episode's cold-open flashback (Daichi/Suga/Asahi origin dream). The ep66/67 '216/217 swap' confirmed and sharpened: ch 217 is adapted in full in ep66 while ch 216's Karasuno thread (Date Tech scheduling) and the Atsumu goody-two-shoes resolution are deferred into ep67.",
+  "anchors": [
+    {"episode": 26, "end_chapter": 72, "start_chapter": 71, "chapters_adapted": "71-72, 76-77", "volume": 9,
+     "confidence": "high", "note": "Cold-opens re-covering ch 71 (ep25's endpoint) + 3-on-3 practice; Yachi intro (72); mid/late episode grafts the pulled-forward Ushijima encounter (76 end + 77); closes on 72's exam announcement, so mainline position = 72. All 3 maps: 71,72,76,77.",
+     "sources": ["https://haikyuu.fandom.com/wiki/Let%27s_Go_To_Tokyo!!_(Episode)", "https://www.animefillerguide.com/anime/haikyuu/", "https://haikyuu.fandom.com/wiki/User_blog:PrueShy/Anime-to-Chapter_List", "https://en.wikipedia.org/wiki/Haikyu!!_season_2"]},
+    {"episode": 27, "end_chapter": 74, "start_chapter": 72, "chapters_adapted": "72-74", "volume": 9,
+     "confidence": "high", "note": "Finishes ch 72's remainder (study/exam prep), then 73-74; title = ch 74. House-style overlapping start (72 shared with ep26); first full chapter is 73.",
+     "sources": ["https://haikyuu.fandom.com/wiki/Direct_Sunlight_(Episode)", "https://www.animefillerguide.com/anime/haikyuu/", "https://haikyuu.fandom.com/wiki/User_blog:PrueShy/Anime-to-Chapter_List"]},
+    {"episode": 28, "end_chapter": 76, "start_chapter": 75, "chapters_adapted": "75-76", "volume": 9,
+     "confidence": "high", "note": "Title = ch 75. Ch 76 partial: its Ushijima-announcement portion aired in ep26; ep28 adapts the Yachi/mother resolution. Ch 77 was fully consumed by ep26's pull-forward, so the reader resumes at 78.",
+     "sources": ["https://haikyuu.fandom.com/wiki/%22Townsperson_B%22_(Episode)", "https://www.animefillerguide.com/anime/haikyuu/", "https://haikyuu.fandom.com/wiki/User_blog:PrueShy/Anime-to-Chapter_List"]},
+    {"episode": 29, "end_chapter": 81, "start_chapter": 78, "chapters_adapted": "78-79, 81", "volume": 10,
+     "confidence": "high", "note": "Ch 80 'Desire' deferred to ep30 (stored zone fact confirmed by all 3 maps); episode reaches into 81 'Room to Grow' (new-quick argument begins). Title = ch 79. No source states page splits for the 81 division.",
+     "sources": ["https://haikyuu.fandom.com/wiki/Center_Ace_(Episode)", "https://www.animefillerguide.com/anime/haikyuu/", "https://haikyuu.fandom.com/wiki/User_blog:PrueShy/Anime-to-Chapter_List"]},
+    {"episode": 30, "end_chapter": 82, "start_chapter": 80, "chapters_adapted": "80-82", "volume": 10,
+     "confidence": "high", "note": "Opens on the deferred ch 80 (Nekoma set, Lev blocks Hinata), finishes 81, into 82 'Rupture' (the fight). Title 'Greed'(Yoku) = ch 80's title word. Ends mid-82: ep31 'Tempo' re-covers 82 (both maps list 82-84 for ep31).",
+     "sources": ["https://haikyuu.fandom.com/wiki/Greed_(Episode)", "https://www.animefillerguide.com/anime/haikyuu/", "https://haikyuu.fandom.com/wiki/User_blog:PrueShy/Anime-to-Chapter_List", "https://en.wikipedia.org/wiki/Haikyu!!_season_2"]},
+    {"episode": 56, "end_chapter": 174, "start_chapter": 171, "chapters_adapted": "149, 171-174", "volume": 20,
+     "confidence": "high", "note": "Cold-opens with a partial re-adapt of ch 149 (Daichi/Suga/Asahi origin dream — episode title = ch 149's title); then finishes 171 (ep55 covered 164-171) and runs 172-174. Ends mid-174: ep57 lists 174-178. ep50->149 stays the S2 endpoint.",
+     "sources": ["https://haikyuu.fandom.com/wiki/The_Chemical_Change_of_Encounters_(Episode)", "https://www.animefillerguide.com/anime/haikyuu/", "https://haikyuu.fandom.com/wiki/User_blog:PrueShy/Anime-to-Chapter_List"]},
+    {"episode": 64, "end_chapter": 212, "start_chapter": 210, "chapters_adapted": "210-212", "volume": 24,
+     "confidence": "high", "note": "HOLE promoted. 210 split with ep63 (ep63 ends at Hinata's ball-boy announcement; ep64 adapts 210's bulk: ball-boy day 1 + youth-camp intros), 211 (Ukai lecture, day 2 — title = ch 211), ends mid-212 at Hinata's 'change my perspective' realization (ch 212's beat); ep65 starts at 212 (stored anchor consistent). NO ch 196 content — see annotation_updates/flags.",
+     "sources": ["https://haikyuu.fandom.com/wiki/Lost_(Episode)", "https://www.animefillerguide.com/anime/haikyuu/", "https://en.wikipedia.org/wiki/Haikyu!!_season_4"]},
+    {"episode": 66, "end_chapter": 217, "start_chapter": 215, "chapters_adapted": "215-217", "volume": 25,
+     "confidence": "high", "note": "Opens on ch 215's closing scene (Tsukishima's invitation; 215 shared with ep65, stored anchor consistent); adapts 216's free-practice/youth-camp material and ALL of 217 (Hyakuzawa arc — title chapter); 216 left unfinished (cliffhanger: Kageyama's goody-two-shoes funk), remainder deferred to ep67 — hence 217 completes before 216 does.",
+     "sources": ["https://haikyuu.fandom.com/wiki/Take_It_Easy_(Episode)", "https://www.animefillerguide.com/anime/haikyuu/", "https://haikyuu.fandom.com/wiki/User_blog:PrueShy/Anime-to-Chapter_List"]},
+    {"episode": 67, "end_chapter": 220, "start_chapter": 216, "chapters_adapted": "216, 218-220", "volume": 25,
+     "confidence": "high", "note": "Opens continuing ch 216 (Kageyama funk resolution; 216's Karasuno Date-Tech-scheduling scene lands mid-episode), then 218-220 (camps end, reunion race = 220 'Back Together'; title = ch 219). Ends mid-220: ep68 starts at 220 (stored anchor consistent). Non-monotonic start (216 < ep66's end 217) is the honest reorder value.",
+     "sources": ["https://haikyuu.fandom.com/wiki/Hunger_(Episode)", "https://www.animefillerguide.com/anime/haikyuu/", "https://haikyuu.fandom.com/wiki/User_blog:PrueShy/Anime-to-Chapter_List"]}
+  ],
+  "zone_level_only": [],
+  "continue_points": [
+    {"episode": 28, "continue_chapter": 78, "note": "end+1 would be 77, but ch 77 was fully adapted in ep26's pull-forward; reader resumes at 78"},
+    {"episode": 29, "continue_chapter": 80, "note": "ch 80 deferred to ep30 and ch 81 unfinished; honest resume is 80"},
+    {"episode": 30, "continue_chapter": 82, "note": "ends mid-ch 82 (the fight); ep31 re-covers 82"},
+    {"episode": 56, "continue_chapter": 174, "note": "ends mid-ch 174 (deuce battle continues); ep57 re-covers 174"},
+    {"episode": 64, "continue_chapter": 212, "note": "ends mid-ch 212 at the perspective realization; ep65 starts at 212"},
+    {"episode": 66, "continue_chapter": 216, "note": "ch 216 unfinished (Karasuno thread + goody-two-shoes resolution land in ep67); resume at 216 even though 217 is done"},
+    {"episode": 67, "continue_chapter": 220, "note": "ends mid-ch 220; ep68 starts at 220"}
+  ],
+  "annotation_updates": [
+    {"episodes": [26, 27, 28], "kind": "rearranged", "chapters": "71-77", "note": "Zone chapters confirmed, but the stored reason is wrong: the 76-77 pull-forward in S2E1 is the Ushijima/Shiratorizawa street encounter (ch 76's ending + ch 77), placed in the episode's second half — not a Nekoma cold open. Ep26 cold-opens on the Seijoh-loss flashback (ch 71). Do-not-interpolate guidance stands."},
+    {"episodes": [64], "kind": "partial", "chapters": "210-212", "note": "Withdraw the ch 196 graft claim: only the PrueShy wiki blog lists 196 for S4E2; the fandom episode article (full plot contains no Nekoma/Fukurodani/Kenma content), Wikipedia's episode summary, and animefillerguide all give 210-212 only. Remaining zone fact: 210 split with ep63, 212 split with ep65."},
+    {"episodes": [66, 67], "kind": "rearranged", "chapters": "215-220", "note": "Confirmed and sharpened: ch 216 is split across both episodes; ch 217 is adapted in full in ep66 while 216's remainder (Karasuno Date-Tech scheduling, Atsumu goody-two-shoes resolution) airs in ep67 — that deferral is the '216/217 swap'. 215 shared with ep65; 220 shared with ep68."}
+  ],
+  "type_corrections": [],
+  "repairs": [],
+  "flags_for_sean": [
+    "ep64 ch-196 disagreement resolved 3-vs-1 against the stored batch-9 graft annotation: PrueShy's Anime-to-Chapter blog (https://haikyuu.fandom.com/wiki/User_blog:PrueShy/Anime-to-Chapter_List) lists ch 196 for S4E2 'Lost', but the fandom episode article's full plot has zero Nekoma/Fukurodani content, Wikipedia's season-4 summary mentions none, and animefillerguide lists 210-212 only. Annotation updated to drop 196. A rewatch of S4E2's opening minutes would give absolute certainty if wanted."
+  ]
+}

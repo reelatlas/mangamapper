@@ -1,0 +1,45 @@
+{
+  "series_id": "jujutsu-kaisen",
+  "summary": "All 6 targets (30, 36-39, 44) promoted to exact per-episode records with page-level splits, all high confidence. jujutsu-kaisen.fandom.com episode pages ('adapted from' field) and the chapter-side reverse map ('anime episode' field) agree page-for-page on every splice; animefillerguide lists the identical chapter sets in the same non-monotonic airing order (ep38: 102, 106, 107, 111, 108, 109; ep44: 126, 133, 127, 128), and hiptoro/sportskeeda/bamsmackpow corroborate at range/event level (Projection Sorcery — ch 111 p.12-13 content — debuts in ep 38; the trio flashback — ch 133 p.1-3 — opens ep 44's post-cold-open). Non-monotonic continue points are recorded honestly: ep 36 resumes at 100 (its p.17-21 airs only in ep 37) and ep 37 resumes at 102 (only p.2-4 aired; ep 38 opens at 102 p.5). One repair: ep 29's stored end 78 understates — fandom + animefillerguide both show ep 29 adapting ch 79 p.2-8, so end=79 (mid) under this batch's END convention; flagged as convention-sensitive since the overhang is only 7 pages.",
+  "anchors": [
+    {"episode": 30, "end_chapter": 80, "start_chapter": 64, "chapters_adapted": "64, 79 (p.8-21), 80 (p.1-13)", "volume": 10,
+     "confidence": "high", "note": "Opens with the skipped S1-era ch 64 graft (Yuko side story), then resumes the mainline at 79 p.8; ends mid-80 (p.13). Matches stored zone annotation exactly.",
+     "sources": ["https://jujutsu-kaisen.fandom.com/wiki/Episode_30", "https://jujutsu-kaisen.fandom.com/wiki/Chapter_79", "https://jujutsu-kaisen.fandom.com/wiki/Chapter_80", "https://www.animefillerguide.com/anime/jujutsu-kaisen/", "https://www.sportskeeda.com/anime/jujutsu-kaisen-season-2-episode-6-every-difference-anime-manga"]},
+    {"episode": 36, "end_chapter": 101, "start_chapter": 98, "chapters_adapted": "98-99, 100 (p.2-17), 101 (p.1-13)", "volume": 12,
+     "confidence": "high", "note": "Ends mid-101 (p.13); ch 100 p.17-21 is withheld and airs in ep 37, so the honest resume point is 100, not 101 (see continue_points). hiptoro's coarse '98-100' rounds this page-split boundary.",
+     "sources": ["https://jujutsu-kaisen.fandom.com/wiki/Episode_36", "https://jujutsu-kaisen.fandom.com/wiki/Chapter_100", "https://jujutsu-kaisen.fandom.com/wiki/Chapter_101", "https://www.animefillerguide.com/anime/jujutsu-kaisen/", "https://www.hiptoro.com/p/jujutsu-kaisen-season-2-chapters-adapted/"]},
+    {"episode": 37, "end_chapter": 106, "start_chapter": 100, "chapters_adapted": "100 (p.17-21), 101 (p.9-19), 102 (p.2-4), 103-105, 106 (p.1-7)", "volume": 12,
+     "confidence": "high", "note": "Opens at ch 100 p.17 — first-run content, not a recap tail (ep 36 stopped at p.17), so start=100 despite the fragment structure. 101 p.9-13 is re-shown from another perspective (overlap with ep 36). 102 is a 3-page forward-graft (p.2-4); its bulk (p.5-21) airs in ep 38. Ends mid-106 (p.7).",
+     "sources": ["https://jujutsu-kaisen.fandom.com/wiki/Episode_37", "https://jujutsu-kaisen.fandom.com/wiki/Chapter_100", "https://jujutsu-kaisen.fandom.com/wiki/Chapter_102", "https://jujutsu-kaisen.fandom.com/wiki/Chapter_106", "https://www.animefillerguide.com/anime/jujutsu-kaisen/", "https://www.hiptoro.com/p/jujutsu-kaisen-season-2-chapters-adapted/"]},
+    {"episode": 38, "end_chapter": 109, "start_chapter": 102, "chapters_adapted": "102 (p.5-21), 106 (p.8-19), 107, 111 (p.12-13), 108-109", "volume": 13,
+     "confidence": "high", "note": "Airing order as listed: 102 bulk, 106 back half, 107, then ch 111 p.12-13 (Naobito's Projection Sorcery explanation) spliced before 108-109 — confirmed by fandom both directions AND animefillerguide's identical out-of-order list; sportskeeda confirms Projection Sorcery debuts this episode. Ends mid-109 (~p.12; p.13-19 airs in ep 39).",
+     "sources": ["https://jujutsu-kaisen.fandom.com/wiki/Episode_38", "https://jujutsu-kaisen.fandom.com/wiki/Chapter_111", "https://jujutsu-kaisen.fandom.com/wiki/Chapter_109", "https://www.animefillerguide.com/anime/jujutsu-kaisen/", "https://www.sportskeeda.com/anime/countdown-jujutsu-kaisen-season-2-episode-14"]},
+    {"episode": 39, "end_chapter": 112, "start_chapter": 109, "chapters_adapted": "109 (p.13-19), 110, 111 (p.2-12, 14-21), 112", "volume": 13,
+     "confidence": "high", "note": "Opens with first-run 109 p.13-19, then 110, the remainder of 111 (p.12-13 already aired in ep 38), and all of 112. Only clean-ending episode of the interleave zone: continue = 113 = end+1, zone closed.",
+     "sources": ["https://jujutsu-kaisen.fandom.com/wiki/Episode_39", "https://jujutsu-kaisen.fandom.com/wiki/Chapter_111", "https://jujutsu-kaisen.fandom.com/wiki/Chapter_112", "https://www.animefillerguide.com/anime/jujutsu-kaisen/", "https://www.hiptoro.com/p/jujutsu-kaisen-season-2-chapters-adapted/"]},
+    {"episode": 44, "end_chapter": 128, "start_chapter": 126, "chapters_adapted": "126, 133 (p.1-3), 127-128", "volume": 15,
+     "confidence": "high", "note": "Ch 133 p.1-3 (Yuji/Megumi/Nobara flashback) grafted between 126's ending and 127; the rest of 133 (p.3-19) airs in ep 46. Ends clean at 128; continue = 129 = end+1. bamsmackpow confirms the trio-flashback placement at event level.",
+     "sources": ["https://jujutsu-kaisen.fandom.com/wiki/Episode_44", "https://jujutsu-kaisen.fandom.com/wiki/Chapter_133", "https://www.animefillerguide.com/anime/jujutsu-kaisen/", "https://bamsmackpow.com/2023/12/10/jujutsu-kaisen-s2-episode-20-review-right-and-wrong-part-3/", "https://www.hiptoro.com/p/jujutsu-kaisen-season-2-chapters-adapted/"]}
+  ],
+  "zone_level_only": [],
+  "continue_points": [
+    {"episode": 30, "continue_chapter": 80, "note": "ends p.13 of ch 80 (p.4-19 re-covered/continued in ep 31)"},
+    {"episode": 36, "continue_chapter": 100, "note": "non-monotonic vs end=101: ch 100 p.17-21 has not aired yet (it airs in ep 37), so the honest mainline frontier is mid-100 (p.17)"},
+    {"episode": 37, "continue_chapter": 102, "note": "non-monotonic vs end=106: only 102 p.2-4 has aired; ep 38 opens exactly at 102 p.5, so the honest resume is 102"},
+    {"episode": 38, "continue_chapter": 109, "note": "ends mid-109 (~p.12); p.13-19 airs in ep 39. Ch 111 p.12-13 already seen but frontier is 109"},
+    {"episode": 29, "continue_chapter": 79, "note": "pairs with the ep 29 repair (end 78 -> 79): episode ends at ch 79 p.8, so resume mid-79"}
+  ],
+  "annotation_updates": [],
+  "type_corrections": [],
+  "repairs": [
+    {"episode": 29, "field": "end_chapter", "old": 78, "new": 79,
+     "why": "Fandom episode page lists ep 29 'adapted from' = 76 (p.6-19), 77, 78, 79 (p.2-8), and the ch 79 page's reverse map confirms 'Episode 29 (p.2-8)'; animefillerguide also lists 76-79 for ep 29. Under this batch's END convention (last chapter the episode adapts, partials included — same convention that gives ep 30 end=80 at p.13), ep 29's end is 79 mid-chapter, with continue=79. Stored 78 understates by the 7-page overhang.",
+     "sources": ["https://jujutsu-kaisen.fandom.com/wiki/Episode_29", "https://jujutsu-kaisen.fandom.com/wiki/Chapter_79", "https://www.animefillerguide.com/anime/jujutsu-kaisen/"]}
+  ],
+  "flags_for_sean": [
+    "ep 29 repair (end 78 -> 79) is convention-sensitive: the overhang into 79 is only p.2-8 (7 pages), and the stored manual 78 with implicit continue=79 lands the reader in the same place. Applied for consistency with the batch-15 END definition (ep 30 gets end=80 at p.13 under the same rule) — veto if the stored majority-style END was deliberate.",
+    "ep 36/37 boundary: hiptoro's coarse list says ep 12 (our 36) = 98-100 and ep 13 (our 37) = 101-105; fandom (both directions) and animefillerguide agree on the page-split truth (ep 36 ends at 101 p.13; ep 37 re-covers 100 p.17-21 and 101 p.9-19). Coarse sources round splits — the page-level values are the ones recorded.",
+    "ch 101 p.9-13 appears in BOTH ep 36 and ep 37 per fandom (perspective retelling of Yuji entering Shibuya Station) — chapters_adapted keeps both honestly; not an error.",
+    "Scratchpad batch15-ctx is shared across concurrent batch-15 agents: a parallel agent's My Hero Academia fetch overwrote generic ep<N>.json files mid-run. All JJK values in this verdict were re-fetched into a namespaced subdir (jjk-b15/) and re-verified after the collision — worth warning other batch agents to namespace their temp files."
+  ]
+}

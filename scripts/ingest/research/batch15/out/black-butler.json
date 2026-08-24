@@ -1,0 +1,98 @@
+{
+  "series_id": "black-butler",
+  "summary": "All three S1 opener targets promoted to full exact records, all high confidence. The shuffle is now precise: ep 1 = chapter 1 in place plus an anime-original frame (1886 summoning prologue, parents flashback), ep 2 = chapters 3-4 (the Azzurro Vanel kidnapping, skipping ch 2), ep 3 = chapter 2 (Elizabeth's visit/dance party) with an anime-original Grelle-training subplot woven through it — i.e. manga order 2,3,4 plays as 3,4,2. Fandom episode infoboxes, the fandom chapter-side reverse map (ch1→ep1, ch2→ep3, ch3→ep2, ch4→ep2), wiki.gg, and content correlation with the ch3/ch4 synopses all agree; ScreenRant independently confirms ep 1 (partial ch 1) and ep 3 (ch 2, 'Grell does not appear in the manga chapter') but erroneously marks ep 2 as filler — flagged. Caveat: wiki.gg's eps 1-3 pages are textually identical to fandom's (a fork at these pages), so the genuinely independent corroboration here is ScreenRant + animefillerlist + chapter-synopsis correlation. Proposed type correction: ep 3 canon → mixed (substantial anime-original Grelle material; animefillerlist dissents with 'canon' — flagged for Sean).",
+  "anchors": [
+    {
+      "episode": 1,
+      "end_chapter": 1,
+      "start_chapter": 1,
+      "chapters_adapted": "1",
+      "volume": 1,
+      "confidence": "high",
+      "note": "Ch 1 (Damiano's visit, tablecloth trick, board-game punishment, oven) plus anime-original framing: the 1886 summoning prologue, the Phantomhive-parents flashback/painting coda. Fandom + wiki.gg infobox 'Chapter 1 and filler'; fandom ch1 page maps back to ep 1; ScreenRant 'Only minutes 00:00-14:36 are canon'; animefillerlist types it mixed canon/filler. No reorder in this episode.",
+      "sources": [
+        "https://kuroshitsuji.fandom.com/wiki/01._His_Butler,_Able",
+        "https://kuroshitsuji.fandom.com/wiki/001._The_Butler,_Skilled",
+        "https://kuroshitsuji.wiki.gg/wiki/01._His_Butler,_Able",
+        "https://screenrant.com/how-to-navigate-black-butler-anime-faithful-to-canon/",
+        "https://www.animefillerlist.com/shows/black-butler"
+      ]
+    },
+    {
+      "episode": 2,
+      "end_chapter": 4,
+      "start_chapter": 3,
+      "chapters_adapted": "3-4",
+      "volume": 1,
+      "confidence": "high",
+      "note": "Azzurro Vanel kidnapping, skipping ch 2. Fandom infobox 'Chapter 3 and 4'; fandom ch3 AND ch4 pages both map back to ep 2; wiki.gg '3-4'; content correlation is exact (ch3 synopsis = rat problem/pool-room nobles/Ciel grabbed; ch4 synopsis = silverware assault, fake ransom, bullets coughed out). ScreenRant's table wrongly calls this episode 'N/A - optional filler' — see flags. Grelle appears only as a background cameo (anime-original insertion), so the canon type stands.",
+      "sources": [
+        "https://kuroshitsuji.fandom.com/wiki/02._His_Butler,_Strongest",
+        "https://kuroshitsuji.fandom.com/wiki/003._The_Butler,_Omnipotent",
+        "https://kuroshitsuji.fandom.com/wiki/004._The_Butler,_Most_Evil",
+        "https://kuroshitsuji.wiki.gg/wiki/02._His_Butler,_Strongest",
+        "https://www.animefillerlist.com/shows/black-butler"
+      ]
+    },
+    {
+      "episode": 3,
+      "end_chapter": 2,
+      "start_chapter": 2,
+      "chapters_adapted": "2",
+      "volume": 1,
+      "confidence": "high",
+      "note": "Ch 2 (Elizabeth's surprise makeover of the manor, the broken ring, the dance) played AFTER chs 3-4 — non-monotonic END recorded honestly. Fandom infobox 'Chapter 2'; fandom ch2 page maps back to ep 3; wiki.gg '2'; ScreenRant confirms ep 3 = manga ch 2 and notes 'Grell does not appear in the manga chapter' — the Grelle training/suicide-gag subplot threaded through the episode is anime-original.",
+      "sources": [
+        "https://kuroshitsuji.fandom.com/wiki/03._His_Butler,_Omnipotent",
+        "https://kuroshitsuji.fandom.com/wiki/002._The_Butler,_Very_Skilled",
+        "https://kuroshitsuji.wiki.gg/wiki/03._His_Butler,_Omnipotent",
+        "https://screenrant.com/how-to-navigate-black-butler-anime-faithful-to-canon/"
+      ]
+    }
+  ],
+  "zone_level_only": [],
+  "continue_points": [
+    {
+      "episode": 2,
+      "continue_chapter": 2,
+      "note": "Reorder: ep 2 ends at ch 4 but ch 2 is still unread (the anime plays it next, as ep 3); the reader's honest mainline position is ch 2, not 5."
+    },
+    {
+      "episode": 3,
+      "continue_chapter": 5,
+      "note": "END is 2 but after ep 3 the reader has all of chs 1-4; resume at ch 5 (end+1 = 3 would mislead)."
+    }
+  ],
+  "annotation_updates": [
+    {
+      "episodes": [1],
+      "kind": "partial",
+      "chapters": "1",
+      "note": "Corrected zone facts: ep 1 is NOT part of the shuffle — it adapts ch 1 in place, padded with an anime-original frame (1886 summoning prologue, parents flashback; ScreenRant: only 00:00-14:36 canon). The reorder is confined to eps 2-3."
+    },
+    {
+      "episodes": [2, 3],
+      "kind": "rearranged",
+      "chapters": "2-4",
+      "note": "Exact shuffle resolved: ep 2 = chs 3-4 (Azzurro kidnapping), ep 3 = ch 2 (Elizabeth's visit) with the anime-original Grelle subplot interwoven; manga order 2,3,4 plays as 3,4,2. Chapters adapted whole — no source documents any page-level split in this zone."
+    }
+  ],
+  "type_corrections": [
+    {
+      "episodes": [3],
+      "type": "mixed",
+      "note": "Currently typed canon. The Grelle training/suicide-gag subplot running through the whole episode is anime-original — Grelle does not appear in manga ch 2 (ScreenRant states this explicitly; fandom's ep-3 summary features Grelle throughout while its ch2 synopsis has none; Grelle's manga debut is in the Jack the Ripper arc). animefillerlist dissents (types ep 3 plain canon) — see flags.",
+      "sources": [
+        "https://screenrant.com/how-to-navigate-black-butler-anime-faithful-to-canon/",
+        "https://kuroshitsuji.fandom.com/wiki/03._His_Butler,_Omnipotent",
+        "https://kuroshitsuji.fandom.com/wiki/002._The_Butler,_Very_Skilled"
+      ]
+    }
+  ],
+  "repairs": [],
+  "flags_for_sean": [
+    "ScreenRant's navigation table marks S1 ep 2 'N/A - optional filler', contradicting fandom + wiki.gg ('Chapters 3-4'), animefillerlist (canon), and the exact content match with the ch3/ch4 synopses (rats/pool room, Azzurro, silverware assault). Treated as a ScreenRant error; ep 2 recorded as chs 3-4, canon. Links: https://screenrant.com/how-to-navigate-black-butler-anime-faithful-to-canon/ | https://kuroshitsuji.fandom.com/wiki/02._His_Butler,_Strongest",
+    "ep 3 type: proposed canon → mixed (Grelle subplot anime-original per ScreenRant + fandom cross-read), but animefillerlist keeps it plain 'canon' (only eps 1 and 37 are 'mixed' there). Your call whether the retype sticks or ep 3 stays canon with the annotation carrying the nuance.",
+    "Lineage note: kuroshitsuji.wiki.gg's eps 1-3 pages are word-for-word identical to fandom's (fork, not independent) — unlike the Public School/Emerald Witch pages batch 14 used. For these three records the genuinely independent corroboration is ScreenRant + animefillerlist + fandom's own chapter-side reverse map."
+  ]
+}

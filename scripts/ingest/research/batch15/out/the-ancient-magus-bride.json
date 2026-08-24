@@ -1,0 +1,65 @@
+{
+  "series_id": "the-ancient-magus-bride",
+  "summary": "Both targets promoted to exact records with two independent sources in full agreement. Fandom (episode infoboxes + the chapter-side reverse map on Chapter_38-45 pages) and programming-cafe's bidirectional Japanese table give identical splits: ep 22 = chs 41-43 and ep 23 = chs 41, 43-44, with chs 41 and 43 each divided by narrative THREAD across the two episodes (ep 22 takes ch 41's Chise/Joseph hideout half, all of ch 42, and ch 43's first half; ep 23 opens on ch 41's Elias/Titania/Marielle half — a relocation back below ep 22's end — then finishes ch 43 with Joseph's gravedigger/Cartaphilus backstory and runs into ch 44 up to Chise cornering Joseph). Episode-title = chapter-title matches lock the frame (ep 21 = ch 39's title, ep 22 = ch 41's, ep 23 = ch 44's, ep 24 = ch 45's), and fandom episode summaries align scene-by-scene with fandom chapter synopses. programming-cafe's S1 one-episode lag seen at eps 12-13 in batch 14 does NOT affect this zone — its rows here (#21 38-40, #22 41-43, #23 41,43-44, #24 44-45) match fandom exactly. Ep 23's start_chapter is honestly non-monotonic (41 < ep 22's end 43). Stored neighbors (ep 24 = 44-45) confirmed; no repairs.",
+  "anchors": [
+    {
+      "episode": 22,
+      "end_chapter": 43,
+      "start_chapter": 41,
+      "chapters_adapted": "41 (part: the Chise/Joseph hideout thread — the left-eye exchange and the dream's start; ch 41's Elias/Titania/Marielle thread is held back to ep 23), 42, 43 (part: Chise confronts her mother's memory, accepts the curse fragment, wakes and turns Joseph's own spell on him)",
+      "volume": 9,
+      "confidence": "high",
+      "note": "Fandom infobox: Chapters 41, 42, 43; reverse map 41 -> eps 22+23, 42 -> ep 22 only, 43 -> eps 22+23; programming-cafe #22 = 41-43 (第9巻). Episode title = ch 41's title. Ep 22's summary (eye exchange, family flashback, mother's suicide, waking to turn the tables) = ch 41 second half + ch 42 whole + ch 43 first half per fandom chapter synopses. Ends mid-ch 43.",
+      "sources": [
+        "https://ancientmagusbride.fandom.com/wiki/As_you_sow,_so_shall_you_reap.",
+        "https://programming-cafe.com/amazon/primevideo/anime/anicomi-magusbride-list/",
+        "https://ancientmagusbride.fandom.com/wiki/Chapter_41",
+        "https://ancientmagusbride.fandom.com/wiki/Chapter_42",
+        "https://ancientmagusbride.fandom.com/wiki/Chapter_43"
+      ]
+    },
+    {
+      "episode": 23,
+      "end_chapter": 44,
+      "start_chapter": 41,
+      "chapters_adapted": "41 (the Elias/Titania/Marielle thread, relocated: Spriggan pins Elias, Titania/Oberon lend aid, the tracking spell across England, Phyllis and Marielle), 43 (rest: Chise's counter-spell reveals Joseph's gravedigger past and his merge with Cartaphilus), 44 (part: Joseph wakes and attacks, the allies' chimera battle, the chase until Chise corners him)",
+      "volume": 9,
+      "confidence": "high",
+      "note": "HOLE promoted with its own start: START 41 is honestly non-monotonic (below ep 22's end 43) — the episode opens on ch 41's other narrative thread. Fandom infobox: Chapters 41, 43, 44 (exactly batch 10's 41/43/44); programming-cafe #23 = 41、43-44; reverse maps agree (41 -> 22+23, 43 -> 22+23, 44 -> 23+24). Episode title = ch 44's title. Ends mid-ch 44 (ep 24 = 44 rest + 45, per stored anchor and both sources).",
+      "sources": [
+        "https://ancientmagusbride.fandom.com/wiki/Nothing_seek,_nothing_find.",
+        "https://programming-cafe.com/amazon/primevideo/anime/anicomi-magusbride-list/",
+        "https://ancientmagusbride.fandom.com/wiki/Chapter_41",
+        "https://ancientmagusbride.fandom.com/wiki/Chapter_43",
+        "https://ancientmagusbride.fandom.com/wiki/Chapter_44"
+      ]
+    }
+  ],
+  "zone_level_only": [],
+  "continue_points": [
+    {
+      "episode": 22,
+      "continue_chapter": 43,
+      "note": "ends mid-ch 43 (Chise wakes and reverses the spell); ep 23 finishes 43's Joseph-backstory tail after first backfilling ch 41's Elias thread"
+    },
+    {
+      "episode": 23,
+      "continue_chapter": 44,
+      "note": "ends mid-ch 44 (Chise catches up to Joseph); ep 24 opens with the rest of 44 (stored ep 24 start = 44)"
+    }
+  ],
+  "annotation_updates": [
+    {
+      "episodes": [22, 23],
+      "kind": "rearranged",
+      "chapters": "41-44",
+      "note": "refined zone facts: chs 41 and 43 are each split by narrative thread (not by pages-in-order) across eps 22/23 — ep 22 = 41's Chise/Joseph half + 42 + 43's first half; ep 23 = 41's Elias/Titania/Marielle half (relocated below ep 22's end), 43's tail (Joseph/Cartaphilus backstory), then into 44. Ch 42 wholly in ep 22. Both fandom reverse maps and programming-cafe list 41 and 43 under both episodes."
+    }
+  ],
+  "type_corrections": [],
+  "repairs": [],
+  "flags_for_sean": [
+    "programming-cafe's S1 one-episode lag (flagged in batch 14 at eps 12-13) is absent in this zone: its rows #21 = 38-40, #22 = 41-43, #23 = 41,43-44, #24 = 44-45 match fandom exactly, so the eps 22-23 records rest on two genuinely agreeing sources. An earlier automated summarization of the programming-cafe page misread ep 22 as 38-40; the raw table was re-fetched and verified directly (第22話 row: 第9巻 41～43).",
+    "Title variant, no numbering impact: our episode row titles ep 23 as 'Nothing to seek, nothing to find.' — fandom and programming-cafe both use 'Nothing seek, nothing find.' (= ch 44's title)."
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "series_id": "seraph-of-the-end-vampire-reign",
+  "summary": "All 5 targets promoted to exact records. The owarinoseraph.fandom episode infoboxes carry explicit 'manga chapter' lists and every chapter page in the zones carries the reverse 'anime episode' field; the two page families agree with each other, with the Wikipedia chapter-title/number identities (episode-title = chapter-title matches at eps 6/13/15/21), and with the manual sandwich anchors ep12->15 and ep16->26. Ep 6 = 6-7 plus a pulled-forward ch-21 Kiseki-o fragment (END 7). The early-S2 reorder resolves to per-episode lists: ep 13 = 16-18 plus vampire-side 22-23 fragments (END 18), ep 14 = 19-21 plus the ch-22 Progenitor Council (END 22, council animated between chs 20 and 21), ep 15 = ch-23 spine with ch-22 Krul/Mika, a ch-18 Mahiru fragment, and the pulled-forward ch-37 Mirai-experiment graft (END 23). Ep 21 = 34-35 with the ch-12 livestock-flashback re-use (END 35). All continue points equal end+1, so none are recorded. No repairs; stored zone annotations confirmed as-is.",
+  "anchors": [
+    {"episode": 6, "end_chapter": 7, "start_chapter": 6, "chapters_adapted": "6, 21, 7", "volume": 2,
+     "confidence": "high",
+     "note": "Opens finishing ch 6 (Black Asura; ch 6 is split across eps 5-6 per its chapter page), interleaves a pulled-forward ch-21 (Kiseki-o's Box) fragment - Kimizuki vs Kiseki-o mental warfare 'not revealed until chapter 21 in the manga' per the wiki's differences table - and closes with ch 7 (New Family, title match). END stays 7; the ch-21 graft does not advance position.",
+     "sources": ["https://owarinoseraph.fandom.com/wiki/New_Family_(Episode)", "https://owarinoseraph.fandom.com/wiki/Black_Asura", "https://owarinoseraph.fandom.com/wiki/New_Family", "https://en.wikipedia.org/wiki/List_of_Seraph_of_the_End_chapters"]},
+    {"episode": 13, "end_chapter": 18, "start_chapter": 16, "chapters_adapted": "16-18, 22-23", "volume": 5,
+     "confidence": "high",
+     "note": "Yu-side spine 16-18 (ep title = ch 16 title 'Human World'; ch 17 Kureto interrogation; ch 18 rooftop/Guren scenes per the wiki differences table). Episode closes with vampire-side Mika/Ferid Sanguinem scenes pulled forward from chs 22-23 ('the scenes with Mika and Ferid are in chapters 22 and 23'). END 18 = honest mainline position; the 22-23 fragments are grafts. Reverse map: ch 16 -> ep 13, ch 17 -> ep 13, ch 18 -> eps 13+15.",
+     "sources": ["https://owarinoseraph.fandom.com/wiki/Human_World_(Episode)", "https://owarinoseraph.fandom.com/wiki/Human_World", "https://owarinoseraph.fandom.com/wiki/Cursed_Guinea_Pig", "https://owarinoseraph.fandom.com/wiki/Possessed_by_Mahiru", "https://en.wikipedia.org/wiki/List_of_Seraph_of_the_End_chapters"]},
+    {"episode": 14, "end_chapter": 22, "start_chapter": 19, "chapters_adapted": "19-20, 22, 21", "volume": 6,
+     "confidence": "high",
+     "note": "In-episode order per the wiki plot: ch 19 (Yoichi/horsemen), ch 20 (Yu vs Asuramaru), ch 22 Progenitor Council (Krul strikes Ferid) animated BEFORE ch 21 (Kimizuki vs Kiseki-o) - honest non-monotonic list. Ch 22 is split with ep 15 (Krul/Mika continuation). END 22 = furthest mainline reach; bounded by ep 13 (ends 18) and ep 15 (ch 23 title episode). Note: the episode borrows ch 15's TITLE ('Complicated Connections') but adapts none of ch 15, which was already adapted in ep 12.",
+     "sources": ["https://owarinoseraph.fandom.com/wiki/Complicated_Connections_(Episode)", "https://owarinoseraph.fandom.com/wiki/Cause_for_Madness", "https://owarinoseraph.fandom.com/wiki/The_Demon%27s_Nightmare", "https://owarinoseraph.fandom.com/wiki/Kiseki-o%27s_Box", "https://owarinoseraph.fandom.com/wiki/Taboo_Krul"]},
+    {"episode": 15, "end_chapter": 23, "start_chapter": 23, "chapters_adapted": "23, 22, 18, 37", "volume": 6,
+     "confidence": "high",
+     "note": "Cold-opens on the ch-23 spine (messenger pigeon -> Kureto's Nagoya plan; ep title = ch 23 title 'Ambition in the Demon Army'), then interleaves: ch-22 fragment (Mika attacks Krul for blood, split with ep 14), ch-18 Mahiru/Guren fragment ('Possessed by Mahiru', ch 18 -> eps 13+15 per reverse map), and closes with the pulled-forward ch-37 (Monsters & Family) Mirai-experiment graft (ch 37 -> eps 15+22 per reverse map). END 23 = honest mainline position; the ch-37 graft does not advance it. In-episode order of the 22/18 fragments is from the wiki plot summary and approximate. Continue = 24 (end+1; ep 16 anchor ends at 26).",
+     "sources": ["https://owarinoseraph.fandom.com/wiki/Ambition_in_the_Demon_Army_(Episode)", "https://owarinoseraph.fandom.com/wiki/Ambition_in_the_Demon_Army", "https://owarinoseraph.fandom.com/wiki/Monsters_%26_Family", "https://owarinoseraph.fandom.com/wiki/Taboo_Krul", "https://en.wikipedia.org/wiki/List_of_Seraph_of_the_End_chapters"]},
+    {"episode": 21, "end_chapter": 35, "start_chapter": 34, "chapters_adapted": "34-35, 12", "volume": 10,
+     "confidence": "high",
+     "note": "Ch 34 (Asura's Power: Yu revival, Crowley fight, Kiseki-o Box capture) then ch 35 (Traitorous Allies: Mika rescue, Shinoa turns on Shinya; ep title = ch 35 title). The ch-12 flashback (Mika asking Yu about escaping as livestock, in 'A Very Safe Supplement') is a re-used fragment inserted within the Mika rescue sequence - ch 12's primary adaptation was eps 9-10 per its chapter page, so this is a graft that does not move position. END 35; continue = 36 (end+1, matches ep 22-24 divergence zone {36-41}).",
+     "sources": ["https://owarinoseraph.fandom.com/wiki/Traitorous_Allies_(Episode)", "https://owarinoseraph.fandom.com/wiki/Asura%27s_Power", "https://owarinoseraph.fandom.com/wiki/Traitorous_Allies", "https://owarinoseraph.fandom.com/wiki/A_Very_Safe_Supplement", "https://en.wikipedia.org/wiki/List_of_Seraph_of_the_End_chapters"]}
+  ],
+  "zone_level_only": [],
+  "continue_points": [],
+  "annotation_updates": [],
+  "type_corrections": [],
+  "repairs": [],
+  "flags_for_sean": [
+    "Independence caveat: per-episode splits inside the S2 reorder zone rest on owarinoseraph.fandom forward (episode infobox 'manga chapter') + reverse (chapter-page 'anime episode') maps, which agree with each other, with Wikipedia's chapter-number/title identities (episode-title = chapter-title at eps 6/13/15/21), and with the manual sandwich anchors ep12->15 / ep16->26. No fully independent per-episode third source exists: MAL ep-1 discussion (topicid 1437361) has no chapter numbers, ANN's ep-13 review names no chapters, Random Curiosity is bot-blocked, afteranime.net confirms only the zone (S2 = chs 16-41) - https://afteranime.net/anime/seraph-of-the-end-battle-in-nagoya.",
+    "Informational, outside targets: afteranime.net says to continue reading from ch 41 after the S2 finale (because the ending is anime-original) while our manual ep24 anchor stores continue->42; the stored ep22-24 divergence annotation already covers this - no change proposed."
+  ]
+}

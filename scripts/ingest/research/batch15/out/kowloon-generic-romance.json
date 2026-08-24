@@ -1,0 +1,37 @@
+{
+  "series_id": "kowloon-generic-romance",
+  "summary": "Reorder hole ep 12 promoted to a full anchor: chapters_adapted '81', start=end=81, vol 10 — but marked medium because animefillerguide is the only per-episode chapter source; ANN's episode review, the MAL episode-12 discussion (manga readers), and Lost in Anime all independently confirm the episode is a heavy anime-original reworking that preserves the vol-10 character beats (Yulong's Generic Terra exposition, the Miyuki resolution — the dementia plotline is explicitly NOT in the manga per manga readers), which is consistent with a single ch-81 base under an original overlay and with the stored divergence annotation {ch 81}. AFG's chapter walk is internally airtight: chs 70-82 are each assigned exactly once across eps 10-13 (ep10 70-76, ep11 77-78+80+82, ep12 81, ep13 79). Ja sources (ja.wikipedia episode table, hatena episode blogs, ciatr) carry no per-episode chapter columns — checked and empty. Side finding: the stored Wikipedia volume boundary v10:80-87 looks wrong — the fandom volume pages give v9=71-78 and v10=79-87 (JP ISBN 978-4-08-893267-5), so ch 79 (ep 13) is vol 10 material.",
+  "anchors": [
+    {
+      "episode": 12,
+      "end_chapter": 81,
+      "start_chapter": 81,
+      "chapters_adapted": "81",
+      "volume": 10,
+      "confidence": "medium",
+      "note": "AFG's episode-to-chapter table maps ep 12 to ch 81 alone (the only vol-10 chapter ≤82 not used by eps 10, 11, or 13 — every ch 70-82 appears exactly once in its walk). Reviews and manga readers agree the episode is largely anime-original ('a great deal of anime-original detail'; Miyuki-father dementia beat 'not covered in the manga at all at this point' per MAL manga readers), preserving character beats over a thin ch-81 base — matching the stored divergence annotation {ch 81}. Volume: ch 81 is in vol 10 under both the stored boundary (80-87) and the fandom boundary (79-87). No second per-episode chapter source exists; ja.wikipedia's episode table, hatena episode blogs, and ciatr were checked and carry no chapter correspondence.",
+      "sources": [
+        "https://www.animefillerguide.com/2025/04/kowloon-generic-romance.html",
+        "https://www.animenewsnetwork.com/review/kowloon-generic-romance/episode-12/.225898",
+        "https://myanimelist.net/forum/?topicid=2219707",
+        "https://lostinanime.com/2025/06/kowloon-generic-romance-12/"
+      ]
+    }
+  ],
+  "zone_level_only": [],
+  "continue_points": [
+    {
+      "episode": 12,
+      "continue_chapter": 79,
+      "note": "Reorder zone: end+1 (82) was already adapted in ep 11. After ep 12 the lowest unread mainline chapter is 79, which ep 13 then covers (with anime-original framing). A reader abandoning the anime here for the real story: AFG recommends ch 83 (vol 10) as the post-anime continue, or backing up to ch 77 where the anime's changes begin — matches the stored series-level continue_from_chapter=83."
+    }
+  ],
+  "annotation_updates": [],
+  "type_corrections": [],
+  "repairs": [],
+  "flags_for_sean": [
+    "Ep 12 anchor is medium: animefillerguide is the only source stating ch 81 per-episode; everything else (ANN review, MAL ep-12 thread, Lost in Anime, ja blogs) confirms divergence/anime-original overlay but never names a chapter. A page-level source that would settle it does not appear to exist — the kowloon fandom wiki has no Chapter 79-82 or Episode pages (checked via MediaWiki API, all missingtitle).",
+    "Stored volume boundary v10: 80-87 (Wikipedia) conflicts with the fandom volume pages: Volume 9 lists chs 71-78 and Volume 10 lists chs 79-87 (JP release 2024-10-18, ISBN 978-4-08-893267-5). If fandom is right, ch 79 (ep 13's chapter) is vol 10, not vol 9. Sources: https://kowloon-generic-romance.fandom.com/wiki/Volume_9 , https://kowloon-generic-romance.fandom.com/wiki/Volume_10",
+    "Ep 12 arguably borrows elements of then-unreleased chapters beyond 81 (per the stored ANN-based ep-12/13 divergence notes and MAL readers' 'the manga will also reveal that soon' comments), but no source enumerates them; chapters_adapted kept at the sourced '81'."
+  ]
+}

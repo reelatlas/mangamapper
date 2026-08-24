@@ -1,0 +1,46 @@
+{
+  "series_id": "welcome-to-demon-school-iruma-kun",
+  "summary": "All five targets (35, 38, 39, 43, 50) promoted to exact full records; nothing stayed zone-level. The fandom wiki (mairimashita-irumakun.fandom.com) carries per-episode manga fields with page splits, corroborated by animefillerguide's chapter table on every chapter set, with TV Tropes independently confirming the S2 finale 92-93 <-> 94 swap. Two surprises: (1) the stored ep 44 anchor end=94 is wrong — ep 44 adapts 92, 93 (p.1-19), 95 (p.1-4, 8-13) and never touches 94 (ep 43 does); repair included. (2) the ep 50 ch-90 graft is a mid-episode flashback inserted during the Iruma/Lied eating scene, not a cold open before 106-108 as the stored annotation says; annotation refined. AFG's 'Volume 6 (chapters 143-151)' continua label is a mislabeled v17, which likely resolves flag #756 in Wikipedia's favor.",
+  "anchors": [
+    {"episode": 35, "end_chapter": 69, "start_chapter": 68, "chapters_adapted": "68, 69 (p.2, 4, 6-8, 10, 11), Kalego Gaiden 1", "volume": 8,
+     "confidence": "high", "note": "Fandom ep page lists 68 + scattered pages of 69 + Kalego Gaiden 1 woven in; AFG confirms 68-69 (omits the gaiden). Ch 69 is split page-interleaved with ep 36 (which takes 69 p.1, 12-20 — matches stored ep36 anchor). END=69 partial.",
+     "sources": ["https://mairimashita-irumakun.fandom.com/api.php?action=parse&page=Kalego-sensei%27s_Home_Visit&prop=wikitext&format=json", "https://mairimashita-irumakun.fandom.com/api.php?action=parse&page=Chapter_69&prop=wikitext&format=json", "https://www.animefillerguide.com/anime/mairimashita-iruma-kun/"]},
+    {"episode": 38, "end_chapter": 78, "start_chapter": 75, "chapters_adapted": "75, 76 (p.1-11), 77 (p.1-10, 20), 78", "volume": 9,
+     "confidence": "high", "note": "Battle interleave: ep 38 takes 75 full, front halves of 76 and 77 (+77 p.20), and 78 full; fandom ep page gives the page splits, AFG confirms the set {75,76,77,78}; fandom chapter pages 75/76/78 credit ep 38 only, 77 credits 38+39. Non-monotonic by design (78 complete while 76/77 partial).",
+     "sources": ["https://mairimashita-irumakun.fandom.com/api.php?action=parse&page=Magical_Beasts_Attack&prop=wikitext&format=json", "https://mairimashita-irumakun.fandom.com/api.php?action=parse&page=Chapter_77&prop=wikitext&format=json", "https://www.animefillerguide.com/anime/mairimashita-iruma-kun/"]},
+    {"episode": 39, "end_chapter": 82, "start_chapter": 79, "chapters_adapted": "76 (p.12-20), 77 (p.11-19), 79-81, 82 (p.1-2)", "volume": 10,
+     "confidence": "high", "note": "Opens by finishing the 76/77 tails from ep 38, then runs 79-81 and the first 2 pages of 82; start=79 per majority rule (first full chapter; tails are not the bulk). AFG confirms set {76,77,79,80,81,82}; fandom ch 79-82 pages all credit ep 39. Stored ep40 anchor (82 p.3-20 + 83-85) dovetails exactly.",
+     "sources": ["https://mairimashita-irumakun.fandom.com/api.php?action=parse&page=The_Name_of_This_Feeling&prop=wikitext&format=json", "https://mairimashita-irumakun.fandom.com/api.php?action=parse&page=Chapter_82&prop=wikitext&format=json", "https://www.animefillerguide.com/anime/mairimashita-iruma-kun/"]},
+    {"episode": 43, "end_chapter": 94, "start_chapter": 94, "chapters_adapted": "94", "volume": 11,
+     "confidence": "high", "note": "Verified: ep 43 = ch 94 only (Ameri/Iruma Aqua Case date), pulled ahead of 92-93 so Magical Street could close the season. Fandom ep page + ch 94 reverse map + AFG + TV Tropes reorder statement all agree.",
+     "sources": ["https://mairimashita-irumakun.fandom.com/api.php?action=parse&page=Dream_Date&prop=wikitext&format=json", "https://mairimashita-irumakun.fandom.com/api.php?action=parse&page=Chapter_94&prop=wikitext&format=json", "https://www.animefillerguide.com/anime/mairimashita-iruma-kun/", "https://tvtropes.org/pmwiki/pmwiki.php/Manga/WelcomeToDemonSchoolIrumaKun"]},
+    {"episode": 44, "end_chapter": 95, "start_chapter": 92, "chapters_adapted": "92, 93 (p.1-19), 95 (p.1-4, 8-13)", "volume": 11,
+     "confidence": "high", "note": "Repair companion (see repairs): stored end=94 was wrong — ep 44 adapts 92 + 93 (p.1-19) + parts of 95; ch 94 belongs to ep 43. Rest of 95 (p.5-22) opens ep 45 per its page. Fandom ch 92/93 pages credit ep 44.",
+     "sources": ["https://mairimashita-irumakun.fandom.com/api.php?action=parse&page=The_One_Who_Rules_Over_the_Netherworld&prop=wikitext&format=json", "https://www.animefillerguide.com/anime/mairimashita-iruma-kun/", "https://tvtropes.org/pmwiki/pmwiki.php/Manga/WelcomeToDemonSchoolIrumaKun"]},
+    {"episode": 50, "end_chapter": 108, "start_chapter": 107, "chapters_adapted": "106 (p.18-19), 107, 90, 108", "volume": 13,
+     "confidence": "high", "note": "Set {90, 106 p.18-19, 107, 108} confirmed by fandom ep page + AFG + fandom ch 106 reverse map (eps 49+50). Ch 90 ('Sabbath', skipped in S2) is grafted as a mid-episode flashback during the Iruma/Lied eating scene, so it sits inside the 107/108 material — exact insertion page unstated, ordering of '90' in the list is approximate. Start=107 per majority rule (opens finishing the 106 tail).",
+     "sources": ["https://mairimashita-irumakun.fandom.com/api.php?action=parse&page=Devilishly_Pure&prop=wikitext&format=json", "https://mairimashita-irumakun.fandom.com/api.php?action=parse&page=Chapter_106&prop=wikitext&format=json", "https://www.animefillerguide.com/anime/mairimashita-iruma-kun/"]}
+  ],
+  "zone_level_only": [],
+  "continue_points": [
+    {"episode": 35, "continue_chapter": 69, "note": "ep 35 takes only scattered pages of 69 (p.2, 4, 6-8, 10, 11); ep 36 finishes it (p.1, 12-20) — resume mid-chapter at 69"},
+    {"episode": 38, "continue_chapter": 76, "note": "76 and 77 are only half-adapted (76 p.1-11, 77 p.1-10+20) even though 78 is complete — honest mainline resume is 76"},
+    {"episode": 39, "continue_chapter": 82, "note": "ends 2 pages into 82; ep 40 picks up 82 p.3-20"},
+    {"episode": 43, "continue_chapter": 92, "note": "reorder: ep 43 jumps ahead to 94; next unread mainline content is 92-93 (adapted by ep 44). Chs 90-91 remain the ep-42 divergence (90 grafted into ep 50, 91 unadapted)"},
+    {"episode": 44, "continue_chapter": 95, "note": "repair companion: ep 44 covers only 95 p.1-4, 8-13; ep 45 adapts 95 p.5-22 — resume mid-chapter at 95"}
+  ],
+  "annotation_updates": [
+    {"episodes": [50], "kind": "graft", "chapters": "90", "note": "refined: ch 90 (skipped in S2) is woven in as a MID-EPISODE flashback during the Iruma/Lied eating scene (fandom Differences note: 'When Iruma and Lied are eating, there is a scene added of when Lied threw a sabbath party... flashback to what was originally the events of Chapter 90'), not a cold open before 106-108 as previously stored"}
+  ],
+  "type_corrections": [],
+  "repairs": [
+    {"episode": 44, "field": "end_chapter", "old": 94, "new": 95,
+     "why": "Stored ep 44 anchor says end=94, but ep 44 never adapts 94 — ch 94 is ep 43 (Dream Date). Ep 44 adapts 92, 93 (p.1-19), 95 (p.1-4, 8-13): fandom ep page manga field, fandom ch 92/93 reverse maps (ep 44), AFG row 44 = '92, 93, 95', TV Tropes confirms the 92-93/94 order swap. Full corrected record supplied in anchors (start 92, vol 11, continue 95).",
+     "sources": ["https://mairimashita-irumakun.fandom.com/api.php?action=parse&page=The_One_Who_Rules_Over_the_Netherworld&prop=wikitext&format=json", "https://www.animefillerguide.com/anime/mairimashita-iruma-kun/", "https://tvtropes.org/pmwiki/pmwiki.php/Manga/WelcomeToDemonSchoolIrumaKun"]}
+  ],
+  "flags_for_sean": [
+    "ch 95 split discrepancy: ep 44 page claims 95 (p.1-4, 8-13) while ep 45 page claims 95 (p.5-22) — overlap on p.8-13, and the fandom Chapter 95 page credits only ep 45. Recorded ep 44 per its episode page; the overlap is likely re-shown finale material. Ep 45 (not a target) = 95 (p.5-22), 96, 97 (p.4-8) if you want it later.",
+    "flag #756 (AFG vs Wikipedia volume boundary): AFG's continua line says 'start from Chapter 147, Volume 6 (collecting chapters 143 to 151)' — the 143-151 span is exactly Wikipedia's v17; AFG's volume LABEL is garbage, its chapter span agrees with the staged Wikipedia boundaries. Staged boundaries look correct.",
+    "fandom Chapter 107 reverse map field reads '{{Ep|3.6}}' — a malformed template for S3E6 (= our ep 50); harmless but explains why the 107 reverse map looks odd."
+  ]
+}

@@ -1,0 +1,72 @@
+{
+  "series_id": "attack-on-titan",
+  "summary": "All three targets (eps 61-63, S4E2-4) promoted to exact records with high confidence. The anime splits chapters 93-98 by timeline, not by chapter: ep 61 takes ch 93 plus the PRESENT-DAY halves of 94-95 (arrival/dinner/HQ festival briefing), ep 62 takes the FLASHBACK halves of 94-95 plus ch 96 and essentially all of ch 97 (through 97's final scene, Falco meeting 'Kruger' at the hospital), ep 63 opens on leftover 97/95 slivers then adapts ch 98 in full. Episode-side fandom infoboxes, the chapter-side reverse map (chs 92-98 walked individually), animefillerguide, and per-episode reviews (Review Monster, Hana's Blog, doublesama) all agree exactly. One zone fact was wrong: ch 92 belongs entirely to ep 60 (fandom ep-60 infobox + AFG '60: 91, 92'), so the 61-63 rearranged zone is chs 93-98, not 92-98. Ep 64's stored anchor (end 100, start 99) is confirmed by AFG's '64: 99, 100' — no repairs anywhere; nothing outside 61-63 touched.",
+  "anchors": [
+    {
+      "episode": 61,
+      "end_chapter": 95,
+      "start_chapter": 93,
+      "chapters_adapted": "93, 94 (present-day part: Liberio arrival, family reunions, Braun dinner), 95 (present-day part: internment-zone walk, Zeke's HQ briefing on the festival/Tybur plan)",
+      "volume": 24,
+      "confidence": "high",
+      "note": "Ch 93 in full, then only the present-day framing scenes of 94-95; Reiner's flashback halves of 94-95 are deferred to ep 62. Fandom infobox (93/94/95), chapter reverse map, AFG '61: 93, 94, 95', Review Monster ('starts adapting 93... then a merged adaptation of parts of 94 and 95, skipping Reiner's flashback').",
+      "sources": [
+        "https://attackontitan.fandom.com/wiki/Midnight_Train_(Episode)",
+        "https://attackontitan.fandom.com/wiki/The_Boy_Inside_the_Walls",
+        "https://attackontitan.fandom.com/wiki/Liar",
+        "https://animefillerguide.com/2020/02/shingeki-no-kyojin-filler-list.html",
+        "https://thereviewmonster.blog/2020/12/17/attack-on-titan-season-four-episode-two-midnight-train-review-marley-arc-gets-uprising-arc-restyle/"
+      ]
+    },
+    {
+      "episode": 62,
+      "end_chapter": 97,
+      "start_chapter": 94,
+      "chapters_adapted": "94 (flashback part: Reiner's childhood, Warrior-candidate years), 95 (flashback part: selection, parade, father, journey to the Wall, Marcel's death), 96, 97 (Annie/104th flashbacks, present-day suicide-attempt frame, Falco meets 'Kruger' — through ch 97's final scene)",
+      "volume": 24,
+      "confidence": "high",
+      "note": "Non-monotonic vs ep 61 (starts back at 94) — honest reorder values. Ep 62 reaches ch 97's last scene (hospital talk), so the reader's resume is 98 = end+1. Fandom infobox lists 94/95/96/97; AFG '62: 94, 95, 96, 97'; Hana's Blog review confirms 95-97 material with 96 partially trimmed (Wall Maria assault sequence cut).",
+      "sources": [
+        "https://attackontitan.fandom.com/wiki/The_Door_of_Hope_(Episode)",
+        "https://attackontitan.fandom.com/wiki/The_Door_of_Hope_(Chapter)",
+        "https://attackontitan.fandom.com/wiki/From_One_Hand_to_Another",
+        "https://animefillerguide.com/2020/02/shingeki-no-kyojin-filler-list.html",
+        "https://hanasblog.beverlyclaire.com/attack-on-titan-anime-review-season-4-episode-3-62/"
+      ]
+    },
+    {
+      "episode": 63,
+      "end_chapter": 98,
+      "start_chapter": 98,
+      "chapters_adapted": "97 (leftover sliver: Falco's letter-errand frame for Kruger), 95 (fragment: Warrior HQ discussion beats, likely relocated from ch 95's meeting), 98",
+      "volume": 24,
+      "confidence": "high",
+      "note": "Bulk of the episode is ch 98 in full (military meeting, Falco beats Gabi, festival stage, Magath-Willy, Falco/Kruger + 'Dr. Yeager' at the hospital); opens on 97/95 slivers, so start = first full chapter 98 per majority rule (AFG in-episode order '97, 95, 98'; fandom infobox Liar/97/Good to See). Continue = 99 = end+1, matching stored ep 64 (start 99).",
+      "sources": [
+        "https://attackontitan.fandom.com/wiki/From_One_Hand_to_Another_(Episode)",
+        "https://attackontitan.fandom.com/wiki/Good_to_See",
+        "https://animefillerguide.com/2020/02/shingeki-no-kyojin-filler-list.html",
+        "https://doublesama.com/attack-on-titan-episode-63/"
+      ]
+    }
+  ],
+  "zone_level_only": [],
+  "continue_points": [
+    {
+      "episode": 61,
+      "continue_chapter": 94,
+      "note": "Ep 61 adapts only the present-day halves of 94-95; the reader resumes at ch 94 to get Reiner's flashback (differs from end+1 = 96)."
+    }
+  ],
+  "annotation_updates": [
+    {
+      "episodes": [61, 62, 63],
+      "kind": "rearranged",
+      "chapters": "93-98",
+      "note": "Zone chapter set corrected from 92-98 to 93-98: ch 92 (Marley's Soldiers) is adapted entirely by ep 60 per its fandom infobox (91+92) and AFG ('60: 91, 92'). The interleave is timeline-based: present-day halves of 94-95 in ep 61, flashback halves of 94-95 + 96-97 in ep 62, 97/95 slivers + 98 in ep 63; per-episode exact records now exist for all three."
+    }
+  ],
+  "type_corrections": [],
+  "repairs": [],
+  "flags_for_sean": []
+}

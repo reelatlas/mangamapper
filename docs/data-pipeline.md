@@ -367,6 +367,29 @@ anchor a research batch delivers carries the FULL shape, not just the end:
   numbers across the zone (GTO ep 20 showed ~68 while the annotation knew
   73-74). Zone-level-only knowledge stays annotation + acknowledged
   approximation, surfaced by rearranged_zone_unanchored until researched.
+  AMENDED batch 15 (2026-08-24): once research PROVES only zone-level
+  knowledge exists, the annotation gains a `zone-acknowledged (batch N)`
+  marker and moves to the rearranged_zone_acknowledged census class —
+  an accepted approximate render, no longer an open research target
+  (apply-research-batch-15.ts writes the marker AFTER annotation upserts;
+  audit-ui-truth splits on it).
+- **Anchored row-less episodes (the cells-at-work 12/13 lesson, 2026-08-24)**:
+  an exact record proves the episode exists — AFL/wiki row sparseness must
+  not hide it from the mapping layer (anchor points read
+  episodes[].mangaMapping, so an anchor without an episode row was invisible
+  and its crossing re-flagged as a hole DESPITE full research).
+  assemble.ts toEpisodes synthesizes a canon title-pending model row for any
+  integer-numbered anchor ≤ aired with no DB row; real rows always win.
+- **Relocated openers are never the START (AoT ep-87 rule, re-enforced batch
+  15)**: a research record whose start_chapter is a far-earlier
+  relocation/graft (jjk ep 30 ch 64, shippuden ep 204 ch 419) poisons the
+  PREVIOUS row's derived start through the successor-span cap
+  (mapping.ts canonEpStartCh). START = first on-trend chapter; the
+  relocation stays leading in chapters_adapted + the graft annotation.
+  Run-end endpoints are equally load-bearing: replacing ippo's mu 558 pin
+  with the honest ep-127 record flattened eps 105-123 via the coverage
+  clamp — endpoint-encoding changes go through Sean first
+  (batch15/DECISIONS-FOR-SEAN.md §A).
 - **Post-batch**: audits re-run; batch-cleared series may surface their
   NEXT-worst stretch (>12) — that is the rolling work-list by design, not
   a failure. Every batch that adds interior anchors near a run end relies
@@ -990,6 +1013,25 @@ Fixed weekly is correct.
    recorded in §10 as the reference point. All 40 order-only entries are
    data-ready with display_label null; titles corrected ('More' / 'I am
    a hero too').
+36. ✅ **RESEARCH BATCH 15 (2026-08-24): the exact-record promotion batch** —
+   Sean's post-compact queue (5 reorder holes + 225 rearranged-zone rows /
+   42 series + open-bookmark follow-ups) as one batch: 33 research-agent
+   tasks over 48 series (protocol batch15/PROTOCOL.md — full record OR
+   evidenced zone_level_only per target; verdicts in batch15/out = the
+   cited record). Applied via apply-research-batch-15.ts: 233 anchors
+   (4 in-verdict repairs), 17 zone-acks, 149 continues, 127 annotations,
+   13 retypes, 10 curated repairs (2 held: ippo 127, dragon-maid 25),
+   4 anchors EXCLUDED pending Sean's encoding rulings (= the whole
+   remaining rearranged_zone_unanchored class), world-trigger
+   continue_from 196, boundary seeds (TGR:re + Clear Card research
+   tables; Kuroko re-pull; Kowloon stale row cleared). Rule closes: zone-
+   acknowledged split, anchored-row-less synthesis, relocated-opener
+   re-enforcement (all §10). End state: verify 220/220 clean; census
+   ruling_violation 0, nonmonotonic 0, rearranged_zone 42→3(+5 ack),
+   ok_full 235; NEW work-list = 35 next-tier reorder holes (verify --all)
+   + 42 batch-15 bookmarks. Decisions queue:
+   **batch15/DECISIONS-FOR-SEAN.md** (encoding rulings A1-A4, held repair
+   B, conventions C1-C4, bookmark dispositions D, structure items E).
 21. ✅ **Consolidation pass 2 (2026-08-23, post-Kenshin)**: every write path
    swept against the day's rules — filterEpisodeRows (caps + type
    overrides) now in ALL five episode writers (resolve, stitched-guard,

@@ -1,0 +1,63 @@
+{
+ "series_id": "golden-kamuy",
+ "summary": "All 7 targets (eps 13-19, S2 front) promoted to exact per-episode records from the fandom wiki's page-level 'Adapted Chapters' lists, corroborated by programming-cafe's independent Japanese table and Wikipedia's season-2 page (states S2 adapts vols 8-14, chs 70-139; episode summaries match the assignments). The zone is compression-heavy rather than deeply reordered: eps 13-17 run essentially linearly 70-100 with page-level cuts, then ep18 ('Ani Nekko' = ch 75's Japanese title) backfills the kane-mochi/203-Hill flashback bulk of 75-76 (whose present-day frames ep13 carried) behind a ch 102 (p.2-5) frame, and ep19 stitches Shiton-arc fragments (108, 113, 114) with backfill of 101 and 103 (Koito/anglerfish nabe). The skipped bulk goes to the OVAs already on record (OVA 2: 83 p.15-16, 84, 85 p.1-14; OVA 4: 108-113; OVA 5: 102, 104-107), while chs 88-89 and 96 (and most of 114 and 119) are adapted nowhere at all. Bonus: fandom's ep21 page refines the stored '~120-124' to include the 118 tail and 119 fragments (filed as a repair).",
+ "anchors": [
+  {"episode": 13, "end_chapter": 76, "start_chapter": 70, "chapters_adapted": "70-74, 75-76 (present-day frames)", "volume": 8,
+   "confidence": "high",
+   "note": "S2 opener 'Edogai-kun' (ch 72 'Edogai'): fandom lists 70-76; pcafe rounds to 71-74 (its ch-70-to-OVA-3 claim was already rejected in batch 14 - OVA 3 = 63-69 - and Wikipedia says S2 starts at ch 70). Ep13 carries only the present-day frames of 75-76 (Inkarmat's arrival/betrayal prophecy, Tanigaki's departure, the Tsurumi-Inkarmat reveal = ch 76's end, confirmed by Wikipedia's 'secretly working for Tsurumi'); the kane-mochi/203-Hill flashback bulk is held for ep18.",
+   "sources": ["https://goldenkamuy.fandom.com/wiki/Episode_13", "https://programming-cafe.com/amazon/primevideo/anime/anicomi-goldenkamuy-list/", "https://en.wikipedia.org/wiki/Golden_Kamuy_season_2"]},
+  {"episode": 14, "end_chapter": 81, "start_chapter": 77, "chapters_adapted": "77 (p.2-3, 16-18), 78-80, 81 (p.2-13)", "volume": 9,
+   "confidence": "high",
+   "note": "'Fakes' (ch 77 'Imitation'): Yubari mine chase, Edogai's death in the explosions = ch 81 'Destroying Evidence' p.2-13 (Wikipedia summary agrees the explosion is in ep14). pcafe rounds the seam (77-80 / 80-81); fandom's page split wins. Ends mid-81.",
+   "sources": ["https://goldenkamuy.fandom.com/wiki/Episode_14", "https://programming-cafe.com/amazon/primevideo/anime/anicomi-goldenkamuy-list/", "https://en.wikipedia.org/wiki/Golden_Kamuy_season_2"]},
+  {"episode": 15, "end_chapter": 90, "start_chapter": 82, "chapters_adapted": "81 (p.16-19), 82, 83 (p.1-10), 85 (p.17-18), 86 (p.1-11), 87 (p.3-6), 90 (p.3-6, 17-22)", "volume": 9,
+   "confidence": "high",
+   "note": "Title = ch 86 'Let's Talk About the Old Days'. Heavy compression: 83 p.11-18 / 84 / 85 p.1-16 skipped by TV (OVA 2 carries 83 p.15-16, 84, 85 p.1-14), chs 88-89 skipped entirely and adapted nowhere, 90 only partial. pcafe agrees (81-83, 86-87, 90, skipping 84-85 and 88-89).",
+   "sources": ["https://goldenkamuy.fandom.com/wiki/Episode_15", "https://programming-cafe.com/amazon/primevideo/anime/anicomi-goldenkamuy-list/", "https://en.wikipedia.org/wiki/Golden_Kamuy_season_2"]},
+  {"episode": 16, "end_chapter": 95, "start_chapter": 91, "chapters_adapted": "91 (p.17-21), 92 (p.2-6, 8, 11-18), 93 (p.1-6, 10-18), 94, 95 (p.9-14), 97 (p.5-12)", "volume": 10,
+   "confidence": "high",
+   "note": "Episode title = ch 97's title, but ep16 shows only 97 p.5-12 as the infiltration-plan setup/look-ahead and ep17 adapts 97 in full, so END = 95 (pcafe: 91-95; ep36/201-teaser precedent). Ch 96 'Clairvoyance' is skipped entirely (adapted nowhere); 91 p.1-16 also unadapted.",
+   "sources": ["https://goldenkamuy.fandom.com/wiki/Episode_16", "https://programming-cafe.com/amazon/primevideo/anime/anicomi-goldenkamuy-list/", "https://en.wikipedia.org/wiki/Golden_Kamuy_season_2"]},
+  {"episode": 17, "end_chapter": 100, "start_chapter": 97, "chapters_adapted": "97-100", "volume": 10,
+   "confidence": "high",
+   "note": "'Inside the Belly': Koito kills Suzukawa (98 'Satsuma Hayato'), hydrogen airship escape (99 'Airship'), Daisetsuzan pursuit (100). Fandom lists 97 unqualified here (full adaptation despite ep16's p.5-12 preview); pcafe: 97-100.",
+   "sources": ["https://goldenkamuy.fandom.com/wiki/Episode_17", "https://programming-cafe.com/amazon/primevideo/anime/anicomi-goldenkamuy-list/", "https://en.wikipedia.org/wiki/Golden_Kamuy_season_2"]},
+  {"episode": 18, "end_chapter": 102, "start_chapter": 102, "chapters_adapted": "102 (p.2-5), 75-76 (flashback bulk)", "volume": 11,
+   "confidence": "high",
+   "note": "'Ani Nekko' = ch 75's Japanese title (阿仁根っ子). Opens on a ch 102 frame (p.2-5, group sets out for Abashiri), then backfills the Tanigaki Matagi flashback that is the bulk of 75-76 (kane mochi, Aoyama, 203 Hill - matches ch 75/76 synopses and Wikipedia's summary). Both sources agree on the set {75, 76, 102}. END = 102 as the frame/position instrument (ep32 precedent); the Lightning Bandit/O-Gin bulk of 102 + 104-107 goes to OVA 5. Non-monotonic by design (101 still unseen).",
+   "sources": ["https://goldenkamuy.fandom.com/wiki/Episode_18", "https://programming-cafe.com/amazon/primevideo/anime/anicomi-goldenkamuy-list/", "https://goldenkamuy.fandom.com/wiki/Chapter_75", "https://en.wikipedia.org/wiki/Golden_Kamuy_season_2"]},
+  {"episode": 19, "end_chapter": 114, "start_chapter": 113, "chapters_adapted": "108 (p.11-12), 113 (p.11-19), 114 (p.4-6), 101 (p.10-18), 103 (p.5-15)", "volume": 12,
+   "confidence": "high",
+   "note": "'Kamuy Hopunire' ceremony episode: Shiton-arc fragments (Ryu joins = 108 p.11-12, fandom-only 2-page fragment; kotan/ceremony = 113 p.11-19, 114 p.4-6 - the arc's bulk 108-113 is OVA 4 material) then non-monotonic backfill of Koito being scolded (101 p.10-18) and the anglerfish-nabe Ogata reveal (103 p.5-15, matches Wikipedia's summary). pcafe agrees on 101, 103, 113-114. END = 114 (furthest mainline, both sources); START = 113 (first corroborated substantial block; the 108 fragment is fandom-only).",
+   "sources": ["https://goldenkamuy.fandom.com/wiki/Episode_19", "https://programming-cafe.com/amazon/primevideo/anime/anicomi-goldenkamuy-list/", "https://en.wikipedia.org/wiki/Golden_Kamuy_season_2"]}
+ ],
+ "zone_level_only": [],
+ "continue_points": [
+  {"episode": 13, "continue_chapter": 75, "note": "Ep13 shows only the present-day frames of 75-76; the flashback bulk (kane mochi/203 Hill) is held until ep18. Mainline next = 77."},
+  {"episode": 14, "continue_chapter": 75, "note": "Same pending 75-76 flashback; also ends mid-81 (p.2-13; ep15 finishes p.16-19)."},
+  {"episode": 15, "continue_chapter": 75, "note": "Same pending flashback; additionally 83 p.11-18 / 84-85 skipped (OVA 2) and 88-89 adapted nowhere. Mainline next = 91."},
+  {"episode": 16, "continue_chapter": 75, "note": "Same pending flashback; 96 adapted nowhere; ep17 resumes at 97 (ep16 previewed p.5-12)."},
+  {"episode": 17, "continue_chapter": 75, "note": "Same pending flashback (delivered next episode). Mainline next = 101 (only partially adapted, in ep19)."},
+  {"episode": 18, "continue_chapter": 83, "note": "75-76 now delivered; earliest unseen = 83 p.11-18 / 84 / 85 p.1-16, carried by OVA 2 (aired post-S2). Mainline next = 101."},
+  {"episode": 19, "continue_chapter": 83, "note": "OVA-2 block still earliest unseen; also 101 p.1-9, 102 + 104-107 (OVA 5), 108-113 bulk (OVA 4), and most of 114. Mainline next = 115 (ep20 = 115-118)."}
+ ],
+ "annotation_updates": [
+  {"episodes": [13, 18], "kind": "rearranged", "chapters": "75-76", "note": "Chs 75-76 are split: present-day frames (Inkarmat's arrival/prophecy, Tanigaki's departure) in ep13, the Tanigaki Matagi flashback bulk in ep18 behind a ch 102 (p.2-5) frame. Page split undocumented (fandom lists 75-76 unqualified on both pages). Replaces the generic {70-114} zone marker."},
+  {"episodes": [15], "kind": "partial", "chapters": "83 (p.11-18), 84-85, 88-89", "note": "TV compression: OVA 2 carries 83 p.15-16, 84, 85 p.1-14; chs 88-89 are adapted nowhere (TV or OVA)."},
+  {"episodes": [16], "kind": "partial", "chapters": "96, 97 (p.5-12)", "note": "Ch 96 'Clairvoyance' adapted nowhere; 97 p.5-12 shown as a look-ahead (episode is titled after ch 97) with ep17 adapting 97 in full - END kept at 95."},
+  {"episodes": [18], "kind": "graft", "chapters": "102 (p.2-5)", "note": "Present-day frame only; the Lightning Bandit/O-Gin bulk (102, 104-107) is OVA 5 material."},
+  {"episodes": [19], "kind": "rearranged", "chapters": "101 (p.10-18), 103 (p.5-15), 108 (p.11-12), 113 (p.11-19), 114 (p.4-6)", "note": "Stitches Shiton-arc fragments (bulk 108-113 -> OVA 4) with non-monotonic backfill of 101/103 (Koito thread); 102 + 104-107 -> OVA 5. Everything page-level; nothing adapted in full."}
+ ],
+ "type_corrections": [],
+ "repairs": [
+  {"episode": 21, "field": "chapters_adapted", "old": "~120-124", "new": "118 (p.16-18), 119 (p.1-3, 9), 120-124", "why": "Fandom's Episode_21 page-level list refines the stored approximate range: the episode opens by finishing 118 (p.16-18) and uses 4 pages of 119 before running 120-124. start_chapter 120 (first full chapter), end 124, vol 13 all unchanged - precision repair only. 119 p.4-8/10-18 is otherwise unadapted.", "sources": ["https://goldenkamuy.fandom.com/wiki/Episode_21"]}
+ ],
+ "flags_for_sean": [
+  "Ch 70 edge: fandom (ep13 = 70-76) + Wikipedia ('S2 adapts vols 8-14, chapters 70-139') put ch 70 in ep13; programming-cafe credits 70 to OVA 3 instead (a claim batch 14 already rejected - OVA 3 = 63-69). Kept start=70 for ep13.",
+  "Eps 13-19's generic 'rearranged {70-114} anchor at 21' zone annotations can be retired in favor of these per-episode records; eps 14 and 17 turned out plainly linear (no annotation needed), the rest carry the specific annotations above.",
+  "Never-adapted material inside the zone (no TV, no OVA): chs 88-89, ch 96, plus page gaps (90 p.7-16, 91 p.1-16, most of 114, 119 p.4-18 outside p.1-3/9). No source contradicts - the S2 front is compression, not just reorder.",
+  "ep18 END=102 follows the ep32 frame-as-position-instrument precedent; if the pipeline prefers the episode's bulk, END would be 76 (v8). Both sources agree on the chapter set either way.",
+  "ep19's opening 108 (p.11-12) fragment is fandom-only (programming-cafe lists 101, 103, 113-114); kept in chapters_adapted with START at the corroborated 113.",
+  "ep21 repair rests on fandom alone (programming-cafe's ep21 row not re-checked this pass), but it only sharpens an explicitly approximate stored value ('~120-124'); start/end/volume untouched."
+ ]
+}

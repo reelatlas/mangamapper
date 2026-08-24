@@ -1,0 +1,42 @@
+{
+  "series_id": "ayakashi-triangle",
+  "summary": "Target ep 9 promoted to an exact page-level record with high confidence. The fandom wiki's episode infobox is page-precise: ep 9 adapts ch 17 pages 2-7 as its mainline opening, then plays chapters 26-27 IN FULL, pulled forward from volume 4 (ch 26 'An Encounter With \"Him\"?' is the episode's namesake — a strong title match). AFG independently confirms '09: 17, 26, 27'. The reorder is genuine: the wiki's differences section notes a ch-25 flashback inside ch 27 had to be cut 'since this does not happen in the anime yet'. Continue point is ch 17 (reader resumes at 17 p.8); stored ep 10 (start 17, {17-20}) is confirmed by fandom's 'ch 17 pages 1, 8-19' for ep 10 — no repairs.",
+  "anchors": [
+    {
+      "episode": 9,
+      "end_chapter": 27,
+      "start_chapter": 17,
+      "chapters_adapted": "17 (p.2-7), 26-27",
+      "volume": 4,
+      "confidence": "high",
+      "note": "Opens on ch 17 pp.2-7 (its only mainline advance), then adapts chs 26 (Shirogane-as-male-Matsuri / Lucy UFO plot) and 27 ('Exorcising Incense') in full, played ~9 chapters early; chs 26-27 are Volume 4 per their fandom chapter boxes. Fandom infobox (page-exact) + AFG agree; ch 26's title equals the episode title.",
+      "sources": [
+        "https://ayakashitriangle.fandom.com/wiki/Episode_9",
+        "https://ayakashi-triangle.fandom.com/wiki/Chapter_26",
+        "https://ayakashi-triangle.fandom.com/wiki/Chapter_27",
+        "https://www.animefillerguide.com/anime/ayakashi-triangle/"
+      ]
+    }
+  ],
+  "zone_level_only": [],
+  "continue_points": [
+    {
+      "episode": 9,
+      "continue_chapter": 17,
+      "note": "Ends the mainline at ch 17 p.7; reader resumes at ch 17 (p.8) — ep 10 adapts 17 (pp.1, 8-19) through 20 (p.1). Differs from end+1 = 28, which the season never reaches."
+    }
+  ],
+  "annotation_updates": [
+    {
+      "episodes": [9],
+      "kind": "rearranged",
+      "chapters": "17 (p.2-7) + 26-27",
+      "note": "Refined zone facts: besides the early-played chs 26-27 (both full, vol 4), ep 9 also carries the mainline's ch 17 pp.2-7. Reorder confirmed genuine — a ch-25 flashback within ch 27 was cut because those events haven't happened yet in the anime (fandom differences section)."
+    }
+  ],
+  "type_corrections": [],
+  "repairs": [],
+  "flags_for_sean": [
+    "Note (not a contradiction): ayakashitriangle.fandom.com and ayakashi-triangle.fandom.com are content mirrors (identical wikitext), so they count as ONE source; the independent second source for ep 9 is animefillerguide plus the ch26/ep9 title match."
+  ]
+}

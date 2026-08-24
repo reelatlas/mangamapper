@@ -1,0 +1,56 @@
+{
+  "series_id": "hajime-no-ippo-the-fighting",
+  "summary": "All 5 targets promoted to exact page-level records. Ep 76 (Boxer's Fist) is confirmed as a sliver: only Round 383 p.4-5 (the Takamura pre-debut gag frame) is manga-sourced, the rest anime-original — exact sliver anchor given, continue stays 270. Ep 103 (Rising opener) stitch confirmed and page-resolved: recap slivers 418 (p.7-8) + 419 (p.11-14), restart 425 (p.5-11) + 426 (p.3, 10-19) + 427-430 full, flash-forward 503 (p.16-19) + 504 (p.2-16); END 430 (vol 48), continue 431; chapters 421-424 are never adapted anywhere (fandom chapter pages: 'Not Adapted into the Anime'). Post-War block: ep 124 = 400 (p.4-19)-402 (p.2-15), ep 125 = 402 (p.16-19)-406 (p.2-5), ep 126 = 406 (p.6-19)-410 (p.1-12) — honest resume after 126 is ch 410 (mid-chapter, p.13, picked up by ep 127). Ep 127 (non-target) fully resolved as 410 (p.13-16)-414 in the process; its stored anchor end=558/v61 looks like a continue-point encoding, repair filed (end 414, vol 46, continue→558). Fandom forward map, fandom chapter-side reverse map, and animefillerguide all agree on every boundary.",
+  "anchors": [
+    {"episode": 76, "end_chapter": 383, "start_chapter": 383, "chapters_adapted": "383 (p.4-5)", "volume": 43,
+     "confidence": "high",
+     "note": "Boxer's Fist DVD special: only Round 383 p.4-5 (Takamura pre-debut gag) is manga-sourced; the rest of the episode expands it as anime-original backstory. Sliver anchor, out-of-order (383 sits in New Challenger's coverage); reader position unchanged — continue 270. Fandom Chapter 383 reverse map omits the special (lists only S2 ep 21 p.1-19) but the episode-page forward map is explicit; afg lists 383 for ep 76.",
+     "sources": ["https://ippo.fandom.com/wiki/Episode_76_(Season_1)", "https://www.animefillerguide.com/anime/hajime-no-ippo/", "https://ippo.fandom.com/wiki/Chapter_383"]},
+    {"episode": 103, "end_chapter": 430, "start_chapter": 425, "chapters_adapted": "418 (p.7-8), 419 (p.11-14), 425 (p.5-11), 426 (p.3, 10-19), 427-430, 503 (p.16-19), 504 (p.2-16)", "volume": 48,
+     "confidence": "high",
+     "note": "Rising opener stitch confirmed at page level: recap slivers of 418-419 (already adapted in ep 102), restart mid-ch 425 (p.1-4 never adapted), 427-430 full (Ippo vs Kojima), flash-forward 503-504 (adapted again in ep 115 zone). END = 430 (last mainline; vol 48 = 425-433), continue = 431 = ep 104 start. Chapters 421-424 skipped entirely (see annotation_updates). Fandom forward + reverse maps and afg (418-419, 425-430, 503-504) agree.",
+     "sources": ["https://ippo.fandom.com/wiki/Episode_1_(Season_3)", "https://www.animefillerguide.com/anime/hajime-no-ippo/", "https://ippo.fandom.com/wiki/Chapter_425", "https://ippo.fandom.com/wiki/Chapter_430", "https://ippo.fandom.com/wiki/Chapter_503"]},
+    {"episode": 124, "end_chapter": 402, "start_chapter": 400, "chapters_adapted": "400 (p.4-19), 401, 402 (p.2-15)", "volume": 45,
+     "confidence": "high",
+     "note": "Post-War Arc block start (Rising ep 22 'Flower of Hope'); non-monotonic by design (arc 400-414 skipped at ep 101, adapted as series finale). Fandom ep page p.4-19 for ch 400 (chapter page says p.5-19 — 1-page internal discrepancy, forward map used); afg: 400-402. Vol 45 = 398-406. Ends mid-ch 402 (p.15) — continue 402.",
+     "sources": ["https://ippo.fandom.com/wiki/Episode_22_(Season_3)", "https://www.animefillerguide.com/anime/hajime-no-ippo/", "https://ippo.fandom.com/wiki/Chapter_400", "https://ippo.fandom.com/wiki/Chapter_402", "https://ippo.fandom.com/wiki/Post-War_Arc"]},
+    {"episode": 125, "end_chapter": 406, "start_chapter": 403, "chapters_adapted": "402 (p.16-19), 403-404, 405 (p.1, 3, 5-19), 406 (p.2-5)", "volume": 45,
+     "confidence": "high",
+     "note": "Rising ep 23 'The Courage to Live'. Opens on the 4-page tail of 402 (majority rule → start 403). Ends 4 pages into 406 — continue 406. Fandom forward + reverse (402 p.16-19 → ep 23; 406 p.2-5 → ep 23) agree; afg lists 402-405 (rounds to whole chapters, misses the 406 sliver — fandom page-level split used). Vol 45 = 398-406.",
+     "sources": ["https://ippo.fandom.com/wiki/Episode_23_(Season_3)", "https://www.animefillerguide.com/anime/hajime-no-ippo/", "https://ippo.fandom.com/wiki/Chapter_402", "https://ippo.fandom.com/wiki/Chapter_406"]},
+    {"episode": 126, "end_chapter": 410, "start_chapter": 406, "chapters_adapted": "406 (p.6-19), 407 (p.2-19), 408 (p.2-9, 11-19), 409 (p.1-16), 410 (p.1-12)", "volume": 46,
+     "confidence": "high",
+     "note": "Rising ep 24 'Iron Fist' (Kamogawa vs Anderson). Opens mid-406 with the bulk (p.6-19) → start 406. Ends p.12 of 410 — honest resume after 126 is ch 410 (p.13 onward opens ep 127). Fandom forward + reverse (406 p.6-19 / 410 p.1-12 both → ep 24) and afg (406-410) agree. Vol 46 = 407-415.",
+     "sources": ["https://ippo.fandom.com/wiki/Episode_24_(Season_3)", "https://www.animefillerguide.com/anime/hajime-no-ippo/", "https://ippo.fandom.com/wiki/Chapter_406", "https://ippo.fandom.com/wiki/Chapter_410"]},
+    {"episode": 127, "end_chapter": 414, "start_chapter": 411, "chapters_adapted": "410 (p.13-16), 411, 412 (p.1-17), 413-414", "volume": 46,
+     "confidence": "high",
+     "note": "Not a batch-15 target; full record supplied to back the ep-127 repair. Rising ep 25 'Vow' closes the Post-War Arc: opens on the 4-page tail of 410 (majority rule → start 411), ends at 414 = arc/series end. Honest mainline resume = 558 (stored continue_from_chapter and afg agree: 'continue at Chapter 558, Volume 61'). Fandom forward + reverse and afg (410-414) agree. Vol 46 = 407-415. (Ep 25 page has a wikitext link typo [[Chapter 406|Round 410]] — content is clearly ch 410.)",
+     "sources": ["https://ippo.fandom.com/wiki/Episode_25_(Season_3)", "https://www.animefillerguide.com/anime/hajime-no-ippo/", "https://ippo.fandom.com/wiki/Chapter_410", "https://ippo.fandom.com/wiki/Chapter_414", "https://ippo.fandom.com/wiki/Post-War_Arc"]}
+  ],
+  "zone_level_only": [],
+  "continue_points": [
+    {"episode": 76, "continue_chapter": 270, "note": "special adapts only an out-of-order 2-page gag from 383; reader's honest mainline position after S1 (ep 75 end 269) is unchanged — resume 270"},
+    {"episode": 124, "continue_chapter": 402, "note": "ends p.15 of 402; ep 125 resumes at 402 p.16"},
+    {"episode": 125, "continue_chapter": 406, "note": "ends p.5 of 406; ep 126 resumes at 406 p.6"},
+    {"episode": 126, "continue_chapter": 410, "note": "ends p.12 of 410; ep 127 resumes at 410 p.13 — this is the honest resume point after 126 the ask requested (mainline resume 558 applies only after 127)"},
+    {"episode": 127, "continue_chapter": 558, "note": "Post-War flashback block done at 414; honest mainline resume after the series = 558 (v61), matching stored continue_from_chapter and afg"}
+  ],
+  "annotation_updates": [
+    {"episodes": [76], "kind": "graft", "chapters": "383 (p.4-5)", "note": "zone facts confirmed and page-resolved: exactly p.4-5 of Round 383; annotation's 'no anchor' clause superseded — episode now carries an exact sliver anchor (end 383, continue 270). Fandom Chapter 383 reverse map omits the special; forward map on Episode 76 (Season 1) is explicit."},
+    {"episodes": [103], "kind": "abridged", "chapters": "421-424", "note": "new fact from the reverse-map walk: chapters 421-424 (vol 47) are 'Not Adapted into the Anime' per their fandom chapter pages — the Rising opener jumps from ep 102's end (420) to 425 p.5. Reader following ep 102's stored continue→421 reads 421-424 before ep 103's new content."}
+  ],
+  "type_corrections": [],
+  "repairs": [
+    {"episode": 127, "field": "end_chapter", "old": 558, "new": 414,
+     "why": "stored anchor ep127→558 encodes the post-series continue point, not what the episode adapts: ep 127 adapts 410 (p.13-16) + 411-414 (Post-War Arc close), so honest END = 414 with continue→558 (filed in continue_points). If the 558 'mu' anchor is an intentional position-instrument convention for series finales, keep it and drop this repair — flagged for Sean.",
+     "sources": ["https://ippo.fandom.com/wiki/Episode_25_(Season_3)", "https://www.animefillerguide.com/anime/hajime-no-ippo/", "https://ippo.fandom.com/wiki/Chapter_414"]},
+    {"episode": 127, "field": "volume", "old": 61, "new": 46,
+     "why": "follows the end_chapter repair: END 414 sits in vol 46 (407-415, fandom Volume 46 chapter list); v61 belongs to the continue point 558, not the adapted content.",
+     "sources": ["https://ippo.fandom.com/wiki/Volume_46", "https://ippo.fandom.com/wiki/Episode_25_(Season_3)"]}
+  ],
+  "flags_for_sean": [
+    "ep 127 stored anchor (558, v61, source 'mu') contradicts adapted content (410 p.13-16 + 411-414): repairs to end 414/v46 with continue→558 filed — but if 'mu' anchors deliberately encode the post-series resume position, reject the repairs and keep 558; the continue_points entry preserves 558 either way.",
+    "minor fandom-internal discrepancy on ch 400's ep-124 pages: episode page says p.4-19, chapter page says p.5-19 — forward map (p.4-19) recorded; 1 page, no effect on chapter values.",
+    "afg lists Rising ep 23 as 402-405 (no 406) — fandom's page-level forward+reverse maps both put 406 p.2-5 in ep 23 and p.6-19 in ep 24; fandom's split recorded (afg rounds slivers away)."
+  ]
+}

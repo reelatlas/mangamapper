@@ -1,0 +1,75 @@
+{
+  "series_id": "cells-at-work",
+  "summary": "All three reorder holes promoted to full anchors with their own start_chapters. Ep 4 'Food Poisoning' adapts chapter 5 (vol 2) — non-monotonic against ep 3 (ch 3) and ep 5 (ch 2), exactly as the S1 reorder zone predicts. Eps 12-13 'Hemorrhagic Shock (Part I/II)' adapt chapters 17 and 18 (vol 4, manga titles 'Hypovolemic Shock' Part I/II, identical Japanese titles 出血性ショック 前編/後編); the stored ep 13 anchor is confirmed correct including its continue→11 (ch 11 'The Common Cold' was only adapted as OVA episode 13.5, so it is the lowest unread chapter after the S1 finale). One repair: stored ep 10 volume is 3 but chapter 15 is in volume 4 (fandom chapter page and Wikipedia volume list v3=10-14, v4=15-19 agree). Full S1 chapter walk via the fandom reverse map (every chapter page carries an |anime= field) also confirms the existing ep 6 {7,8} and ep 11 {6} anchors.",
+  "anchors": [
+    {
+      "episode": 4,
+      "end_chapter": 5,
+      "start_chapter": 5,
+      "chapters_adapted": "5",
+      "volume": 2,
+      "confidence": "high",
+      "note": "Ep 4 'Food Poisoning' = manga ch 5 (same title, vol 2); single-chapter episode inside the S1 reorder crossing (ep3=ch3, ep4=ch5, ep5=ch2). Fandom episode page ('based on the fifth chapter'), fandom Chapter 5 reverse map (|anime=Episode 4, |volume=2), Wikipedia chapter list (Food Poisoning = ch 5, vol 2 = chs 5-9).",
+      "sources": [
+        "https://cellsatwork.fandom.com/wiki/Episode_4",
+        "https://cellsatwork.fandom.com/wiki/Food_Poisoning_(Manga)",
+        "https://en.wikipedia.org/wiki/List_of_Cells_at_Work!_chapters"
+      ]
+    },
+    {
+      "episode": 12,
+      "end_chapter": 17,
+      "start_chapter": 17,
+      "chapters_adapted": "17",
+      "volume": 4,
+      "confidence": "high",
+      "note": "Ep 12 'Hemorrhagic Shock (Part I)' = manga ch 17 'Hypovolemic Shock (Part I)' (identical JP title 出血性ショック（前編）), vol 4. Fandom episode page ('based on the seventeenth chapter'), fandom Chapter 17 reverse map (|anime=Episode 12, |volume=4), Wikipedia chapter list (ch 17 in vol 4 = chs 15-19). Continue is the natural end+1=18 (Part II), so no continue point needed.",
+      "sources": [
+        "https://cellsatwork.fandom.com/wiki/Episode_12",
+        "https://cellsatwork.fandom.com/wiki/Chapter_17",
+        "https://en.wikipedia.org/wiki/List_of_Cells_at_Work!_chapters"
+      ]
+    },
+    {
+      "episode": 13,
+      "end_chapter": 18,
+      "start_chapter": 18,
+      "chapters_adapted": "18",
+      "volume": 4,
+      "confidence": "high",
+      "note": "Confirms the stored anchor. Ep 13 'Hemorrhagic Shock (Part II)' = manga ch 18 'Hypovolemic Shock (Part II)', vol 4. Fandom episode page ('based on the eighteenth chapter'), fandom Chapter 18 reverse map (|anime=Episode 13, |volume=4), Wikipedia chapter list. Stored continue→11 is right: after the S1 finale the lowest unread chapter is 11 'The Common Cold' (adapted only as OVA ep 13.5, not in our components); chs 1-10, 12, 15, 17-18 are all covered by S1 TV episodes.",
+      "sources": [
+        "https://cellsatwork.fandom.com/wiki/Episode_13",
+        "https://cellsatwork.fandom.com/wiki/Chapter_18",
+        "https://en.wikipedia.org/wiki/List_of_Cells_at_Work!_chapters"
+      ]
+    }
+  ],
+  "zone_level_only": [],
+  "continue_points": [
+    {
+      "episode": 4,
+      "continue_chapter": 2,
+      "note": "Reorder zone: after ep 4 a reader has read chs 1, 3, 4, 5 (eps 1-4 air 1, 4, 3, 5); honest resume is ch 2 'Cedar Pollen Allergy', which ep 5 adapts. Differs from end+1 (6, which airs as ep 11)."
+    }
+  ],
+  "annotation_updates": [],
+  "type_corrections": [],
+  "repairs": [
+    {
+      "episode": 10,
+      "field": "volume",
+      "old": 3,
+      "new": 4,
+      "why": "Chapter 15 'Staphylococcus Aureus' is in volume 4, not 3. Fandom Chapter 15 page (|volume = 4, |anime = Episode 10) and Wikipedia chapter list (vol 3 = chs 10-14, vol 4 = chs 15-19) agree. All other stored volumes check out against these boundaries.",
+      "sources": [
+        "https://cellsatwork.fandom.com/wiki/Chapter_15",
+        "https://en.wikipedia.org/wiki/List_of_Cells_at_Work!_chapters"
+      ]
+    }
+  ],
+  "flags_for_sean": [
+    "Ch 11 'The Common Cold' maps to OVA episode 13.5 (fandom Chapter_11 |anime=Episode 13.5), which is not in our components (S1 1-13, S2 14-21). No action needed for the anchors, but if the OVA is ever added it slots between eps 13 and 14 and would change ep 13's continue point.",
+    "Open flag #768 (MU says 19 chapters vs AniList 30): Wikipedia's chapter list gives 29 numbered chapters + a special across 6 volumes, matching AniList's ~30; MU's 19 is not the tankobon edition numbering. The stored anchors' chapter numbers match the Wikipedia/fandom tankobon numbering."
+  ]
+}

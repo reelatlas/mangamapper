@@ -1,0 +1,72 @@
+{
+  "series_id": "ajin-demi-human",
+  "summary": "Target ep 12 promoted to a full exact record: it adapts chs 20-21 (vol 5) nearly one-for-one - the SAT's kill-loop suppression of Sato (ch 20 'Sucker Punch'), then Gen/Takahashi's sniping, Tanaka's IBM counter-sniping, Sato's revival, the massacre and his exhausted walk-off plus Okuyama's drone downing the helicopter (ch 21 'Battlefield Bad Company') - with the episode title 'Whew, I'm beat' being Sato's line that closes ch 21. The closer (villager Kita recognizing Kei from the news reward) is a graft of ch 22's opening beat, played out differently (manga Kita hunts Kei himself with a shotgun; anime Kita phones it in), and a mid-episode village cutaway pulls Kita's bankruptcy motivation forward from later in the manga; the mid-arc Ko Nakano scenes (captivity, mini-TV) are anime-original, not adapted 22-24 material. The dedicated allyouranime comparison series (archived) independently states ep 11 = chs 19-20, ep 12 = chs 20-21, ep 13 = chs 22-22.5, which both confirms ep 12 and shows the stored ep 13 anchor's '13-21 compressed' framing (start 13) is stale - chs 13-19 live in eps 7-11, and ep 13 animates ch 22/22.5 material (heavily altered) plus ch 23's opening second-wave broadcast. The batch-12 S2-typed continue point (ep 13 continue→22) is verified consistent: ep 12 grafts only ch 22's first beat and ep 13's ch-22 events diverge so heavily that the honest resume is still ch 22.",
+  "anchors": [
+    {
+      "episode": 12,
+      "end_chapter": 21,
+      "start_chapter": 20,
+      "chapters_adapted": "20-21, 22 (opening beat, grafted)",
+      "volume": 5,
+      "confidence": "high",
+      "note": "allyouranime comparison: 'Episode 12/Chapters 20-21', 'majority of content is lifted from the manga, mostly one for one'; 'the manga ends Chapter 20 here' mid-episode (SAT stretcher/suppression success) and ch 21 runs to Tosaki's 'That didn't work'. Ep title = Sato's exhausted line closing ch 21 (fandom ch 21: 'commenting on how exhausted he was'). Ch 20 straddles eps 11/12 but its bulk (Tosaki's plan Q&A, SAT assault, suppression) is in ep 12, so START = 20. Kita's recognition of Kei that ends the episode 'is in the next chapter of the manga [22], although plays out differently'. Vol 5 = chs 20-24 per fandom Chapters and Volumes.",
+      "sources": [
+        "http://web.archive.org/web/20200927194832/http://www.allyouranime.net/ajin-animemanga-comparison-episode-12/",
+        "https://ajin.fandom.com/wiki/Episode_12",
+        "https://ajin.fandom.com/wiki/Chapter_20",
+        "https://ajin.fandom.com/wiki/Chapter_21",
+        "https://ajin.fandom.com/wiki/Chapter_22",
+        "https://ajin.fandom.com/wiki/Chapters_and_Volumes"
+      ]
+    }
+  ],
+  "zone_level_only": [],
+  "continue_points": [
+    {
+      "episode": 12,
+      "continue_chapter": 22,
+      "note": "ch 21 completed in full; the ch-22 content in ep 12 is only the opening recognition beat (and it plays out differently in the manga), so the reader resumes at 22"
+    }
+  ],
+  "annotation_updates": [
+    {
+      "episodes": [12],
+      "kind": "graft",
+      "chapters": "22 (opening beat)",
+      "note": "narrowed from '22-24 + later-manga material': ep 12's only manga graft is ch 22's opening beat (Kita recognizing Kei via the news; Kita's bankruptcy motivation also pulled forward from its later manga reveal). The village-arc 22-24 compression belongs to ep 13; the early Ko Nakano scenes in eps 10-12 (captivity, mini-TV) are anime-original, not adapted chapters - manga Nakano is still a stranger watching the news in ch 20 and only joins Kei around chs 22.5-23"
+    }
+  ],
+  "type_corrections": [],
+  "repairs": [
+    {
+      "episode": 13,
+      "field": "start_chapter",
+      "old": 13,
+      "new": 22,
+      "why": "Ep 13 animates no chs 13-21 content: allyouranime's per-episode series places chs 13-19 in eps 7-11 (part 11 header 'Episode 11/Chapters 19-20') and chs 20-21 in ep 12, and its part 13 header is 'Episode 13/Chapters 22-22.5'. Ep 13 opens with Kita reporting Kei (ch 22 material, altered) and runs the escape (22/22.5, heavily altered: police manhunt replaces manga Kita's shotgun chase; Tosaki/Shimomura play no role in the manga version) plus ch 23's opening beat (Sato's second/third-wave broadcast; anime 15 targets vs manga 11). Stored end_chapter 21 and continue→22 are batch-12 ruled values and are left untouched - see flags.",
+      "sources": [
+        "http://web.archive.org/web/2020/http://www.allyouranime.net/ajin-animemanga-comparison-episode-13/",
+        "http://web.archive.org/web/20200927191521/http://www.allyouranime.net/ajin-animemanga-comparison-episode-11/",
+        "https://ajin.fandom.com/wiki/Episode_13",
+        "https://ajin.fandom.com/wiki/Chapter_23"
+      ]
+    },
+    {
+      "episode": 13,
+      "field": "chapters_adapted",
+      "old": "≈13-21 compressed + village beats (22-24) + Kō Nakano grafted early",
+      "new": "22, 22.5 (escape heavily altered), 23 (opening beat: second/third-wave broadcast)",
+      "why": "Same evidence as the start_chapter repair: with eps 7-12 now carrying their own records through ch 21, the '13-21 compressed' framing is stale, and ch 24 (Kei-Tosaki alliance at the hospital) is nowhere in ep 13 - S1 ends before it and S2 goes anime-original instead. The 22-24 zone annotation on ep 13 can stand as arc-level context, but the anchor's adapted list should name what the episode actually animates.",
+      "sources": [
+        "http://web.archive.org/web/2020/http://www.allyouranime.net/ajin-animemanga-comparison-episode-13/",
+        "https://ajin.fandom.com/wiki/Episode_13",
+        "https://ajin.fandom.com/wiki/Chapter_24"
+      ]
+    }
+  ],
+  "flags_for_sean": [
+    "Ep 13 END chapter judgment call, left for you: stored end_chapter=21 (batch-12, with the S2-typed continue→22) now duplicates ep 12's END 21. That is legal and defensible ('mainline faithfully complete through 21, resume at 22' - ep 13's chs 22/22.5 events are so altered that they are arguably divergence, not adaptation), but the honest-values alternative is end=22 with continue→22 (re-read: anime version diverges), since allyouranime maps ep 13 to chs 22-22.5. I repaired only start_chapter and chapters_adapted, which are factually wrong under either reading; the continue point 22 is verified consistent under both.",
+    "Independent-source landscape: ajin.fandom episode pages carry NO manga-counterpart fields and chapter pages no reverse episode fields - the load-bearing independent source is the allyouranime.net 13-part comparison series (site dead since ~2021; used via Wayback snapshots). The pleasesavetanaka tumblr breakdown covers only eps 1-6 (and matches stored ep 1/3/5/6 anchors exactly, good lineage confirmation); MAL ep 12 discussion (https://myanimelist.net/forum/?topicid=1496997) has no chapter posts.",
+    "Open flag #705 context (not resolved here): fandom/Kodansha numbering runs ch 0-85 plus .5 halves across 17 vols (v1:1-5, v2:6-9+0, v3:10-14, v4:15-19, v5:20-24+22.5, v6:25-28+27.5, v7:29-33+31.5, v8:34-38+35.5 per https://ajin.fandom.com/wiki/Chapters_and_Volumes); stored anchors (ep5→9 v2, ep6→12 v3, ep13 zone v5) are already in this numbering, consistent with MU's ~40-at-the-time count style rather than AniList's 99."
+  ]
+}

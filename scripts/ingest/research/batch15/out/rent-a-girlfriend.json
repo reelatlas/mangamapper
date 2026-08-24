@@ -1,0 +1,39 @@
+{
+  "series_id": "rent-a-girlfriend",
+  "summary": "Ep 35 promoted to an exact record — and it turns out the stored zone was misplaced: ep 35 adapts chs 158-162 (the 'Kanojo to Kareshi' cheer-up-date block) and never touches chs 165-166. Fandom Episode_35 gives '158 (p.5-19), 159, 160, 161, 162'; the episode-title match is exact (ep 35 彼女と彼氏 'Girlfriend and Boyfriend' = the Kanojo to Kareshi chapter block per Wikipedia's chapter list), and the ending is content-locked: MAL's ep-35 thread describes the episode ending on Chizuru's breakdown when the sparkler reminds her of her grandmother, which is precisely ch 162's final page (ch 163 opens with her wiping the tears and Kazuya's 'my perfect girlfriend is..' — ep 36's title beat). The batch-9 'page-level interleaving at the climax' zone {165-166} belongs to ep 36 alone: fandom Episode_36 = 163, 164, 165 (p.1-18), 166 (p.5-19), 167, i.e. the trims/interleave sit inside the S3 finale (chs 165-166 = 'My Girlfriend and Tears 1/2'), chapter-level monotonic throughout. START recorded as 158, not 159: ep 34 only grazes 158 (p.2-5) and ep 35 carries the bulk of the 20-page chapter (p.5-19). No repairs to stored anchors (ep 36 -> 167 v20 unchanged).",
+  "anchors": [
+    {
+      "episode": 35,
+      "end_chapter": 162,
+      "start_chapter": 158,
+      "chapters_adapted": "158 (p.5-19), 159-162",
+      "volume": 19,
+      "confidence": "high",
+      "note": "S3E11. Fandom infobox: 158 (p. 5-19), 159, 160, 161, 162. START = 158 because ep 35 adapts the bulk of the 20-page chapter (ep 34 ends at 158 p.2-5). END 162 content-locked: MAL thread has the episode ending on the sparkler/grandmother breakdown = ch 162's closing page; ch 162 fully adapted, ep 36 opens at 163. Title match: ep title = the Kanojo to Kareshi block (chs ~157-164). Vol 19 = chs 158-166 (Wikipedia; fandom chapter pages agree).",
+      "sources": [
+        "https://kanokari.fandom.com/wiki/Episode_35",
+        "https://myanimelist.net/forum/?topicid=2118661",
+        "https://en.wikipedia.org/wiki/List_of_Rent-A-Girlfriend_chapters",
+        "https://kanokari.fandom.com/wiki/Chapter_162",
+        "https://kanokari.fandom.com/wiki/Episode_34"
+      ]
+    }
+  ],
+  "zone_level_only": [],
+  "continue_points": [],
+  "annotation_updates": [
+    {
+      "episodes": [36],
+      "kind": "rearranged",
+      "chapters": "165-166",
+      "note": "corrected zone facts: the page-level trims at the S3 climax sit entirely inside ep 36, which adapts 163, 164, 165 (p.1-18), 166 (p.5-19), 167 — 165 p.19-20 and 166 p.1-4 unadapted; chapter-level monotonic. Ep 35 should be DETACHED from this annotation: it adapts 158-162 and never touches 165-166 (fandom Episode_35/Episode_36; batch 9 had conservatively tagged both boundary episodes)."
+    }
+  ],
+  "type_corrections": [],
+  "repairs": [],
+  "flags_for_sean": [
+    "Stored annotation correction: batch 9's 'ep35 rearranged {165-166}' row is misplaced — ep 35 = chs 158-162 per fandom Episode_35, MAL-thread content match, and the exact episode-title = chapter-block match. The {165-166} interleave annotation should live on ep 36 only (see annotation_updates).",
+    "Coarse outlier (outweighed): animefillerguide's season-end line says the S3 finale (ep 36) 'corresponds to Chapter 164, 165, 166 and 167' (vs fandom's 163-167) — its page has no per-episode chapter table for this series and its own vol-20 note is internally sloppy ('start from 168 ... Volume 20 (compiles chapters 167 to 175)'). Ch 163's content ('my perfect girlfriend is..' realization) is unambiguously ep 36's opening/title beat, and either way ep 35's END 162 is unaffected. https://www.animefillerguide.com/anime/kanojo-okarishimasu/",
+    "Page-level detail (158 p.5-19; ep-34 boundary at 158 p.2-5 — note fandom's two splits share p.5, i.e. the boundary is ON p.5) is fandom-only, consistent with the batch-14 caveat that all kanokari page splits come from the fandom wiki; the discredited anime-vod-mori table was not consulted."
+  ]
+}

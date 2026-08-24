@@ -1,0 +1,22 @@
+{
+  "series_id": "kurokos-basketball",
+  "summary": "Single target ep 14 promoted to an exact full record: it adapts chapters 36, 38, 39 (volume 5), skipping ch 37. The skip is confirmed on both sides of the fandom reverse map (chs 36/38/39 each credit Episode 14; ch 37's infobox says anime episode = None) and independently by Wikipedia's chapter list, where ch 37 is titled exactly 'Idiots Can't Win!' (Baka ja Katenai no yo!) — the same title as the BD OVA — and ep 14's END is title-matched (ep 14 'You Look Just Like Him' / Sokkuridane vs ch 39 'They're So Alike'). The OVA sits order-only: fandom treats it as episode 13.5 (between eps 13 and 14, where ch 37 falls), but it is not part of the 75-episode TV run — it was bundled with manga volume 25, released 2013-12-04 (AniList 19669, MAL 19669), long after S1 aired. Continue point set to 37 to acknowledge the skip.",
+  "anchors": [
+    {"episode": 14, "end_chapter": 39, "start_chapter": 36, "chapters_adapted": "36, 38-39", "volume": 5,
+     "confidence": "high", "note": "Fandom ep page 'manga chapters = 36, 38 and 39'; chapter reverse maps agree (36/38/39 -> Ep 14, ch 37 -> None); Wikipedia chapter list puts 36-39 in v5 (35-43) and title-matches END (ch 39 'They're So Alike' = ep 14 'Sokkuridane'); brackets consistent with stored ep13->35 and ep15 = 40-42.",
+     "sources": ["https://kurokonobasuke.fandom.com/api.php?action=parse&page=You_Look_Just_Like_Him&prop=wikitext&format=json", "https://kurokonobasuke.fandom.com/api.php?action=parse&page=They%27re_So_Alike&prop=wikitext&format=json", "https://en.wikipedia.org/wiki/List_of_Kuroko%27s_Basketball_chapters"]}
+  ],
+  "zone_level_only": [],
+  "continue_points": [
+    {"episode": 14, "continue_chapter": 37, "note": "ep 14 skips ch 37 ('Idiots Can't Win!'), which the TV run never adapts — honest resume is 37 to catch the skipped chapter (then skip ahead to 40, since 38-39 were watched). Viewers who watched the 'Idiots Can't Win!' BD OVA can resume at 40 (= end+1)."}
+  ],
+  "annotation_updates": [
+    {"episodes": [14], "kind": "rearranged", "chapters": "37", "note": "refined with OVA placement: ch 37 skipped by TV; adapted in full as the 'Idiots Can't Win!' (Baka ja Katenai no yo!) OVA, bundled with manga volume 25, released 2013-12-04 (AniList/MAL 19669). Fandom labels it episode 13.5 — story-wise it slots between eps 13 and 14; ORDER-ONLY insert, not part of the 75-episode components, no separate chapter coverage beyond ch 37."}
+  ],
+  "type_corrections": [],
+  "repairs": [],
+  "flags_for_sean": [
+    "OVA watch-order entry, if you want one: 'Idiots Can't Win!' (13.5) between eps 13 and 14 — adapts exactly ch 37, order-only; sources: https://kurokonobasuke.fandom.com/api.php?action=parse&page=Idiots_Can%27t_Win!_(OVA)&prop=wikitext&format=json , https://myanimelist.net/anime/19669/Kuroko_no_Basket__Baka_ja_Katenai_no_yo ('based on the Baka Ja Katenai no yo story that was featured in the manga's fifth volume'), https://anilist.co/anime/19669 , https://anidb.net/anime/9991",
+    "volume-boundary seed (context had none): Wikipedia chapter list gives v4 = 26-34, v5 = 35-43, v6 = 44-52 — consistent with stored ep13->35 v5; useful if Kuroko volume boundaries get staged later (flag #770: Wikipedia sides with the AniList 276-chapter edition, chs 1-275 + extra)."
+  ]
+}

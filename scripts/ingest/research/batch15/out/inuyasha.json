@@ -1,0 +1,44 @@
+{
+  "series_id": "inuyasha",
+  "summary": "All 7 targets promoted to exact records. Final Act opening (168-171) per-episode chapter lists recovered from inuyasha.fandom episode infoboxes, cross-checked scene-by-scene against the wiki's chapter-page reverse maps and animefillerguide's identical FA table, with genuinely independent corroboration from Wikipedia chapter lists (title matches: ch 410 'Meido Zangetsuha' = ep170 title, ch 374 'The Wind' = Kagura's death in ep169, chs 387-390 Dakki chapters = ep171 'Dragon-Scaled Tessaiga', ch 520 'The Day of Days' = ep185 title) and the InuSEC/luxken27 note that FA ep 1 skips chs 357-358 and opens at 359. ENDs are set to the furthest substantially-adapted mainline chapter; the read-along chain is carried by continue points (376, 383, 386, 425) which leapfrog so every chapter 357-448 is either watched or read, and the chain lands exactly on the stored ep172 start (425) and ep173 start (439). 184-186 grafts confirmed exactly as annotated (494/512 + 513-518, 494/512 + 519-520, 392 + 521-525); Kuroi Tessaiga special = chs 499-504 = FA ep 15 (our 182) independently pins the surrounding chain. Volumes re-verified against Wikipedia volume boundaries (v37=359-368, v38=369-378, v41=399-408, v42=409-418, v44=429-438, v52=509-518, v53=519-528). No repairs needed - stored ep167/172/173/187 anchors all corroborated.",
+  "anchors": [
+    {"episode": 168, "end_chapter": 375, "start_chapter": 359, "chapters_adapted": "361-362, 392, 411, 378, 359-361, 367-373, 375, 417 (p.5)", "volume": 38,
+     "confidence": "high", "note": "FA opener; cold-open uses 361-362, then mainline 359-375 with forward fragments (378, 392, 411, 417 p.5). Skips 357-358 (medicine-seller material, never animated). END=375 = furthest substantially-adapted mainline chapter; v38 per Wikipedia (369-378).",
+     "sources": ["https://inuyasha.fandom.com/wiki/Episode_168", "https://www.animefillerguide.com/anime/inuyasha/", "https://inuyasha.fandom.com/wiki/Chapter_375", "https://en.wikipedia.org/wiki/List_of_Inuyasha_chapters_(199%E2%80%93398)", "https://inusec.info/inuyasha/capsule/fa_1_narakus_heart"]},
+    {"episode": 169, "end_chapter": 407, "start_chapter": 376, "chapters_adapted": "375-377, 380-382, 400, 403, 371-372, 374, 404, 365-366, 405-407", "volume": 41,
+     "confidence": "high", "note": "Kagura's death episode - ch 374 'The Wind' + 371 'Kagura's Heart' (Wikipedia title match); opens finishing 375's tail so start=376 (majority rule); ends on the 405-407 Moryomaru run, END=407, v41; backfills 365-366/371-372/374 skipped by ep168.",
+     "sources": ["https://inuyasha.fandom.com/wiki/Episode_169", "https://www.animefillerguide.com/anime/inuyasha/", "https://inuyasha.fandom.com/wiki/Chapter_407", "https://en.wikipedia.org/wiki/List_of_Inuyasha_chapters_(199%E2%80%93398)"]},
+    {"episode": 170, "end_chapter": 411, "start_chapter": 383, "chapters_adapted": "409, 411, 380, 512, 505-506, 383-385, 410", "volume": 42,
+     "confidence": "high", "note": "Episode title = ch 410 'Meido Zangetsuha' (Wikipedia title match). New mainline = 383-385 (Mujina) + 409-411 (Shishinki/meido); 505-506 and 512 are far-forward grafts (re-adapted around eps 183-185). END=411 (furthest local mainline), v42.",
+     "sources": ["https://inuyasha.fandom.com/wiki/Episode_170", "https://www.animefillerguide.com/anime/inuyasha/", "https://inuyasha.fandom.com/wiki/Chapter_410", "https://en.wikipedia.org/wiki/List_of_Inuyasha_chapters_(399%E2%80%93558)"]},
+    {"episode": 171, "end_chapter": 436, "start_chapter": 386, "chapters_adapted": "422, 410, 386-391, 432-436, 403, 406-408, 397-399", "volume": 44,
+     "confidence": "high", "note": "Dragon-scale arc 386-391 (chs 387 'Ryujin's Shield', 388 'The Wielder of Dakki' - Wikipedia title/content match) plus forward bulk 432-436 (Moryomaru fight); END=436, v44. Fragments 397-399/403/406-410/422 interleave with eps 169-172.",
+     "sources": ["https://inuyasha.fandom.com/wiki/Episode_171", "https://www.animefillerguide.com/anime/inuyasha/", "https://inuyasha.fandom.com/wiki/Chapter_436", "https://en.wikipedia.org/wiki/List_of_Inuyasha_chapters_(199%E2%80%93398)"]},
+    {"episode": 184, "end_chapter": 518, "start_chapter": 513, "chapters_adapted": "494, 512, 513-518", "volume": 52,
+     "confidence": "high", "note": "Magatsuhi released (513 'The Jewel's Will') through Sesshomaru's Bakusaiga (518 'Bakusaiga' - Wikipedia title match); 494/512 are graft re-inserts of deferred material. v52 (509-518). Chain pinned by Kuroi Tessaiga special = chs 499-504 = FA ep 15 (our 182).",
+     "sources": ["https://inuyasha.fandom.com/wiki/Episode_184", "https://www.animefillerguide.com/anime/inuyasha/", "https://inuyasha.fandom.com/wiki/Chapter_518", "https://en.wikipedia.org/wiki/List_of_Inuyasha_chapters_(399%E2%80%93558)"]},
+    {"episode": 185, "end_chapter": 520, "start_chapter": 519, "chapters_adapted": "494, 512, 519-520", "volume": 53,
+     "confidence": "high", "note": "Episode title = ch 520 'The Day of Days' (Wikipedia title match); 519 'Magatsuhi's Shade'; 494/512 graft re-inserts conclude here. v53 (519-528).",
+     "sources": ["https://inuyasha.fandom.com/wiki/Episode_185", "https://www.animefillerguide.com/anime/inuyasha/", "https://inuyasha.fandom.com/wiki/Chapter_520", "https://en.wikipedia.org/wiki/List_of_Inuyasha_chapters_(399%E2%80%93558)"]},
+    {"episode": 186, "end_chapter": 525, "start_chapter": 521, "chapters_adapted": "392, 521-525", "volume": 53,
+     "confidence": "high", "note": "Kohaku flashback uses ch 392 'A Peaceful Meal' (v40); mainline 521-524 fully here (chapter pages 521-524 all map to ep 186); ch 525 'Release' straddles into ep 187 (its chapter page maps it to 187 only; stored ep187 anchor starts at 525) - END=525 with mid-chapter continue at 525.",
+     "sources": ["https://inuyasha.fandom.com/wiki/Episode_186", "https://www.animefillerguide.com/anime/inuyasha/", "https://inuyasha.fandom.com/wiki/Chapter_524", "https://inuyasha.fandom.com/wiki/Chapter_525", "https://en.wikipedia.org/wiki/List_of_Inuyasha_chapters_(399%E2%80%93558)"]}
+  ],
+  "zone_level_only": [],
+  "continue_points": [
+    {"episode": 169, "continue_chapter": 383, "note": "END=407 is a forward run; honest read-along resumes at 383 (ep170's new mainline). Reader reads 376-382 between eps 168 and 169's continue anyway via the leapfrog chain."},
+    {"episode": 170, "continue_chapter": 386, "note": "END=411 is forward material; ep171's new mainline begins 386 - resume there."},
+    {"episode": 171, "continue_chapter": 425, "note": "Resume 425 (matches stored ep172 start). Reading 386-424 after ep170's continue covers the never-animated 392-396, 412-415, 421, 423-424; ep172 re-shows 416/418-420 fragments."},
+    {"episode": 186, "continue_chapter": 525, "note": "Ends inside ch 525 'Release'; ep187 finishes it (stored ep187 = 525-529). Resume at 525."}
+  ],
+  "annotation_updates": [],
+  "type_corrections": [],
+  "repairs": [],
+  "flags_for_sean": [
+    "ch 378 'Orochi Nest/The Snake's Lair': Episode 168's infobox + animefillerguide place it in ep 168, but Chapter 378's own page maps it to ep 169. Kept in ep 168 (2 sources vs 1); it is a single-scene fragment either way.",
+    "ch 494 'Two Worlds': both Episode 184 and Episode 185 infoboxes (and afg) list it, but Chapter 494's page maps it only to ep 185. Kept in both chapters_adapted lists as a split graft; harmless overlap.",
+    "ch 525 'Release': Episode 186 page + afg include it in ep 186, but Chapter 525's page maps it only to ep 187 and the stored ep187 anchor starts at 525. Recorded ep186 END=525 with continue=525 (mid-chapter straddle) so both the stored ep187 anchor and the wiki lists render consistently.",
+    "animefillerguide's Final Act table is character-for-character identical to the fandom episode infoboxes (shared lineage, per protocol warning). Independent corroboration used instead: Wikipedia chapter titles/volume boundaries (410, 374, 387-390, 513, 518, 520 title/content matches), InuSEC/luxken27 (FA ep 1 skips 357-358, opens at 359), and the Kuroi Tessaiga special = chs 499-504 = FA ep 15 chain pin.",
+    "Never-animated chapters inside the 356-448 zone per all sources: 357-358, 363-364, 379, 393-396, 412-415, 421, 423-424. The leapfrog continue chain (357 -> 376 -> 383 -> 386 -> 425 -> 439) has the reader read all of them between episodes; nothing in the zone is orphaned."
+  ]
+}

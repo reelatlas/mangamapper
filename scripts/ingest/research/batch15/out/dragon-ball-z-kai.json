@@ -1,0 +1,72 @@
+{
+ "series_id": "dragon-ball-z-kai",
+ "summary": "Both targets resolved as exact records: they are the two international-only episodes that adapt NO manga chapters. Ep 101 is built from DBZ 202B-203 footage (Kanzenshuu marks both DBZ 202 and 203 'Filler Episode'), so it carries the reader position at 424 with continue point 425. Ep 165 is built from DBZ 287B-288 (287's manga half is 517 p.1-10, already in our ep 164; 287B is its filler half; 288 is a full filler episode) — the hypothesised ch 517 tail is NOT in ep 165: Kanzenshuu maps 517 p.11-end to DBZ 289, whose footage Wikipedia places in our ep 166, so the stored 164 (ends 517 p.10) and 166 (starts 517 p.11) anchors stand unchanged. Bookmark follow-up: the four medium JP-counterpart anchors (100/107/110/112) are upgraded to high — the dragonball.fandom international episode list carries the Funimation synopses of the INTERNATIONAL episodes, and each synopsis pins the episode's content exactly to the footage-derived chapters (100: bus rescue only = 424 p.3-8; 107: Trunks and Goten's first junior matches = ch 433; 110: Krillin vs Pintar + Piccolo forfeits to Shin = ch 439; 112: Videl beaten, Yamu stops Spopovich = 441 p.9-end + 442), independently of Wikipedia's footage column.",
+ "anchors": [
+  {"episode": 101, "end_chapter": 424, "start_chapter": 424, "chapters_adapted": "", "volume": 36,
+   "confidence": "high",
+   "note": "International-only, pure filler — adapts no manga chapters. Footage = DBZ 202B-203 (Wikipedia Aux2; fandom uncut counterparts 'Gohan's First Date' + 'Rescue Videl'), and Kanzenshuu marks both DBZ 202 and 203 as 'Filler Episode'. END mirrors the reader position after ep 100 (424); continue point 425 (never adapted; ep 102 resumes at 426).",
+   "sources": [
+    "https://en.wikipedia.org/wiki/List_of_Dragon_Ball_Z_Kai_episodes",
+    "https://dragonball.fandom.com/wiki/Videl%27s_Crisis%3F_Gohan%27s_Urgent_Call-out%21",
+    "https://www.kanzenshuu.com/episode/dbz/eps-202/",
+    "https://www.kanzenshuu.com/episode/dbz/eps-203/"
+   ]},
+  {"episode": 165, "end_chapter": 517, "start_chapter": 517, "chapters_adapted": "", "volume": 42,
+   "confidence": "high",
+   "note": "International-only, pure filler — adapts no manga chapters (Capsule Corp party + Goku egg-sitting). Footage = DBZ 287B-288 (Wikipedia Aux2; fandom uncut counterparts 'Celebrations with Majin Buu' + 'He's Always Late'). Kanzenshuu: DBZ 287's manga content is only 517 p.1-10 (already in our ep 164, footage 286-287) and its party half is filler; DBZ 288 is a full filler episode. The ch 517 TAIL (p.11-end) is NOT here — Kanzenshuu maps it to DBZ 289, whose footage is in our ep 166 (Aux2 289-290). Continue point 517 (resume mid-chapter at p.11).",
+   "sources": [
+    "https://en.wikipedia.org/wiki/List_of_Dragon_Ball_Z_Kai_episodes",
+    "https://dragonball.fandom.com/wiki/Peace_Returns%21_A_Time_of_Rest_for_the_Warriors%21",
+    "https://www.kanzenshuu.com/episode/dbz/eps-287/",
+    "https://www.kanzenshuu.com/episode/dbz/eps-288/",
+    "https://www.kanzenshuu.com/episode/dbz/eps-289/"
+   ]},
+  {"episode": 100, "end_chapter": 424, "start_chapter": 424, "chapters_adapted": "424 (p.3-8)", "volume": 36,
+   "confidence": "high",
+   "note": "Bookmark upgrade (was medium): values unchanged. Funimation's synopsis of the INTERNATIONAL ep 100 on the fandom episode list (bus hijack -> Saiyaman saves the bus, dashing exit — nothing after) matches the Wikipedia footage column (DBZ 201B-202) exactly; Kanzenshuu DBZ 201 = ch 423 + 424 p.1-8 alt-form, of which 201B is the bus rescue (p.3-8; p.1-2 already in ep 99). DBZ 202 is filler.",
+   "sources": [
+    "https://en.wikipedia.org/wiki/List_of_Dragon_Ball_Z_Kai_episodes",
+    "https://dragonball.fandom.com/wiki/List_of_Dragon_Ball_Z_Kai_episodes",
+    "https://www.kanzenshuu.com/episode/dbz/eps-201/",
+    "https://www.kanzenshuu.com/episode/dbz/eps-202/"
+   ]},
+  {"episode": 107, "end_chapter": 433, "start_chapter": 433, "chapters_adapted": "433", "volume": 37,
+   "confidence": "high",
+   "note": "Bookmark upgrade (was medium): values unchanged. Funimation's international-ep-107 synopsis (junior division: Trunks wins his first match, then Goten wins his — nothing further) matches Wikipedia's footage column (DBZ 211 only), and Kanzenshuu DBZ 211 = ch 433 'Trunks vs Son Goten' exactly. The fandom episode PAGE still describes JP ep 103 (432-435) — do not use it for this row.",
+   "sources": [
+    "https://en.wikipedia.org/wiki/List_of_Dragon_Ball_Z_Kai_episodes",
+    "https://dragonball.fandom.com/wiki/List_of_Dragon_Ball_Z_Kai_episodes",
+    "https://www.kanzenshuu.com/episode/dbz/eps-211/"
+   ]},
+  {"episode": 110, "end_chapter": 439, "start_chapter": 439, "chapters_adapted": "439", "volume": 37,
+   "confidence": "high",
+   "note": "Bookmark upgrade (was medium): values unchanged. Funimation's international-ep-110 synopsis (Krillin defeats Pintar, then Piccolo confronts Shin and forfeits — nothing further) matches Wikipedia's footage column (DBZ 215 only), and Kanzenshuu DBZ 215 = ch 439 'Kuririn and Piccolo's Fights' (partial filler otherwise). The fandom episode PAGE still describes JP ep 105 (438-442) — do not use it for this row.",
+   "sources": [
+    "https://en.wikipedia.org/wiki/List_of_Dragon_Ball_Z_Kai_episodes",
+    "https://dragonball.fandom.com/wiki/List_of_Dragon_Ball_Z_Kai_episodes",
+    "https://www.kanzenshuu.com/episode/dbz/eps-215/"
+   ]},
+  {"episode": 112, "end_chapter": 442, "start_chapter": 442, "chapters_adapted": "441 (p.9-end), 442", "volume": 37,
+   "confidence": "high",
+   "note": "Bookmark upgrade (was medium): values unchanged. Funimation's international-ep-112 synopsis (Videl beaten, Gohan's anger explodes, Yamu stops Spopovich, Videl loses — nothing further) matches Wikipedia's footage column (DBZ 217 only), and Kanzenshuu DBZ 217 = ch 441 p.9-end + ch 442 'Gohan Gets Angry!!'. The fandom episode PAGE still describes JP ep 106 (441-445) — do not use it for this row.",
+   "sources": [
+    "https://en.wikipedia.org/wiki/List_of_Dragon_Ball_Z_Kai_episodes",
+    "https://dragonball.fandom.com/wiki/List_of_Dragon_Ball_Z_Kai_episodes",
+    "https://www.kanzenshuu.com/episode/dbz/eps-217/"
+   ]}
+ ],
+ "zone_level_only": [],
+ "continue_points": [
+  {"episode": 101, "continue_chapter": 425, "note": "filler episode; position unchanged from ep 100 — read ch 425 (never adapted anywhere per Kanzenshuu chp-425) before ep 102 resumes at 426"},
+  {"episode": 165, "continue_chapter": 517, "note": "filler episode; position unchanged from ep 164 — resume mid-chapter at 517 p.11 (adapted in ep 166)"}
+ ],
+ "annotation_updates": [],
+ "type_corrections": [],
+ "repairs": [],
+ "flags_for_sean": [
+  "Ep 165 hypothesis REFUTED: the ch 517 tail (p.11-end) is not in ep 165. Kanzenshuu maps DBZ 287 to 517 p.1-10 + filler, DBZ 288 to pure filler, and DBZ 289 to 517 p.11-end + 518 p.1-8; Wikipedia's footage column puts 287B-288 in ep 165 and 289-290 in ep 166. Stored anchors for 164 (ends 517 p.10) and 166 (starts at 517 p.11) stand unchanged.",
+  "Eps 101 and 165 are the only two of the 8 international-only episodes with zero manga content; their anchors here use chapters_adapted \"\" with END mirroring the carried reader position (101->424, 165->517). If the apply script cannot represent a no-chapter anchor, keep them as typed-filler rows with the continue points above instead.",
+  "Bookmark follow-up closed: 100/107/110/112 upgraded medium->high. The new corroborating source is the international episode list on dragonball.fandom (Funimation's official synopses of the international episodes, textually independent of Wikipedia's fan summaries); each synopsis pins the episode boundary to exactly the chapters derived from Wikipedia's DBZ-footage column + Kanzenshuu's DBZ chapter mappings. Lineage caution noted (both are wiki communities), but the synopses are Funimation copy, not copies of Wikipedia's summaries.",
+  "Reminder from batch 14 (still true): the fandom episode PAGES for 100/107/110/112 describe the Japanese namesake episodes (their Manga fields list JP content, e.g. our-110's page lists chs 438-442) — they are the trap that caused the original medium rating; only the fandom episode LIST's synopses describe the international cut."
+ ]
+}

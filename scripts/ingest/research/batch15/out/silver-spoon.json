@@ -1,0 +1,74 @@
+{
+  "series_id": "silver-spoon",
+  "summary": "Fresh-budget retry of the batch-14 bot-walled sources: RandomC is now reachable (via Wayback for article pages) but its nine S2 posts plus comments contain zero chapter numbers; NamuWiki, TVTropes, reddit (direct, old.reddit and pullpush - which now explicitly refuses agents) and anime.stackexchange are still walled; every previously unchecked MAL per-episode thread (eps 2, 7, 9, 10, 13, 14, 15, 17, 19 via S1/S2 forum indexes) was fetched and none states a chapter number. So no boundary could be promoted to high, and medium stands for eps 2/3, 6/7, 8/9/10, 13/14, 15, 17/18 and ep 20's END 68 (still a single MAL post). One substantive change: the ep 19/20 seam. Ep 19's final scene is now double-confirmed (MAL S2E8 + ameblo review) as the arm-grab declaration 「放り出せるかバカ野郎！！巻き添え上等だ！！」, and that scene sits in vol 8 at ~p.59-64, i.e. in ch 64 (Winter 1), not ch 63 - consistent with LiA's 'autumn arc ended in ch 63 with the folks finding out Komaba farm went bankrupt' (the discovery, which the episode continues past). Ep 19 END moves 63->64 and ep 20 becomes 65-68, both still medium; full caveats in flags. Season-level cross-checks landed on the right side: ebook-house independently confirms S1-continue=32 and S2-continue=76.",
+  "anchors": [
+    {
+      "episode": 19,
+      "end_chapter": 64,
+      "start_chapter": 62,
+      "chapters_adapted": "62-64",
+      "volume": 8,
+      "confidence": "medium",
+      "note": "Changed END 63->64. Final scene = Hachiken grabbing Aki's arm ('Just friggin drag me in!' / 巻き添え上等) per MAL S2E8 (Azalonozul, Barion-Zara) and ameblo's scene-by-scene review (the titular 'roar', after the principal's words). That scene is past ch 63's arc-ending event (LiA: autumn arc ends IN ch 63 WITH the bankruptcy discovery) and quote-collection citations place it at vol 8 p.~59-64; with ~19-21pp weekly chapters and v8 = chs 62-70, p.59-64 falls in ch 64 (ch 62 ~p.3-22, 63 ~p.23-42, 64 ~p.43-62+). Medium: the page citation traces to a deleted note.com article (snippet-only, read as p.64 and p.59 in different snippets - both inside ch 64).",
+      "sources": [
+        "https://myanimelist.net/forum/?topicid=1094033",
+        "https://ameblo.jp/177wind/entry-11790180968.html",
+        "https://lostinanime.com/2014/03/gin-no-saji-second-season-10/",
+        "https://note.com/dcomic_labo/n/ncf932bfb0a02",
+        "https://bontoku.com/meigen-ginnosaji"
+      ]
+    },
+    {
+      "episode": 20,
+      "end_chapter": 68,
+      "start_chapter": 65,
+      "chapters_adapted": "65-68",
+      "volume": 8,
+      "confidence": "medium",
+      "note": "START moves 64->65 as the consequence of ep 19 ending at 64 (window 62-75 across eps 19-22 is fixed by the ep-18=61 and ep-21=69-71 pins; 62-64/65-68/69-71/72-75 = 3/4/3/4 chapters). END 68 unchanged and still rests on the single precise MAL S2E9 post ('This episode ended at chapter 68') - retried MAL, RandomC, reddit, NamuWiki, TVTropes and Japanese per-episode blogs for a second statement; none found.",
+      "sources": [
+        "https://myanimelist.net/forum/?topicid=1107599",
+        "https://myanimelist.net/forum/?topicid=1114297",
+        "https://myanimelist.net/forum/?topicid=1094033"
+      ]
+    }
+  ],
+  "zone_level_only": [],
+  "continue_points": [],
+  "annotation_updates": [],
+  "type_corrections": [],
+  "repairs": [
+    {
+      "episode": 19,
+      "field": "end_chapter",
+      "old": 63,
+      "new": 64,
+      "why": "Stored 63 assumed the episode ends where the autumn arc ends. But the episode's confirmed final scene (arm-grab / 'drag me in', MAL S2E8 + ameblo) comes AFTER the bankruptcy discovery that LiA places as ch 63's ending, and the quote's vol-8 page placement (~p.59-64) lands in ch 64 (Winter 1). chapters_adapted becomes '62-64'. Still medium - see anchor note for the caveat.",
+      "sources": [
+        "https://myanimelist.net/forum/?topicid=1094033",
+        "https://ameblo.jp/177wind/entry-11790180968.html",
+        "https://lostinanime.com/2014/03/gin-no-saji-second-season-10/",
+        "https://note.com/dcomic_labo/n/ncf932bfb0a02"
+      ]
+    },
+    {
+      "episode": 20,
+      "field": "start_chapter",
+      "old": 64,
+      "new": 65,
+      "why": "Consequence of the ep 19 END 63->64 repair; chapters_adapted becomes '65-68'. END 68 (MAL S2E9) unchanged.",
+      "sources": [
+        "https://myanimelist.net/forum/?topicid=1094033",
+        "https://myanimelist.net/forum/?topicid=1107599"
+      ]
+    }
+  ],
+  "flags_for_sean": [
+    "MEDIUM STANDS for eps 2/3 (END 4 vs 5), 6/7 (END 14 vs 15), 8/9/10, 13/14 (36-40/41-44 vs 36-39/40-44), 15, 17/18: with fresh WebSearch budget I re-checked every missing MAL per-episode thread (S1 forum index eps 2/7/9/10 = topics 633431/652583/658665/661695; S2 index eps 13/14/15/17/19 = 731261/739991/761677/913763/1094033) - none states a chapter number; RandomC's nine S2 posts + comment sections (fetched via Wayback after Cloudflare blocked the live pages) contain no chapter numbers at all; no Japanese per-episode correspondence table exists for this series (searched; only season-level 'dokomade' articles). The batch-14 interpolations inside the character-debut/volume-blurb bounds remain the best obtainable records.",
+    "Bot-wall retry results: RandomC now reachable (search page live, articles via web.archive.org) but chapter-silent; NamuWiki still 403; TVTropes still 403; reddit unreachable by policy (WebSearch cannot serve reddit.com domains, old.reddit blocked, pullpush.io now refuses automated clients with a paid-service notice); anime.stackexchange 403 to both WebFetch and curl. Per-episode chapter tables from these sources remain unverifiable.",
+    "Ep 19/20 seam changed on medium evidence - review welcome: the decisive datum (arm-grab quote at vol 8 p.59/p.64) comes from search-index snippets of a DELETED note.com article, and the two snippets disagreed on the page (59 vs 64; both are inside ch 64 under any plausible 19-21pp chapter layout, and 63 would require two consecutive ~28pp chapters). If the arm-grab actually closes ch 63, the old 62-63/64-68 split stands. A page-level look at tankobon vol 8 settles it definitively.",
+    "Ep 20 END 68 still single-source (MAL S2E9 'This episode ended at chapter 68'); it remains consistent with the high pins around it (ep 21 = 69-71 from two MAL posters, ep 22 = 72-75).",
+    "SEO noise note: several Japanese 'dokomade' articles (subcalist, tokubi) claim S2 ended at '8巻の途中（第68話）' - that is season-level copy-noise contradicted by the five-source ch-75 pin on ep 22 (MAL x2, LiA, anime.stackexchange, 知恵袋) and by ebook-house ('続きは9巻の76話から'), which this session re-confirmed. No action needed; just don't let a future wiki-fill pass ingest the 68 claim.",
+    "Incidental corroboration gained this session: ebook-house independently states S1's continuation is '4巻の32話から' (matches ep 11 continue->32 with the ch 30-31 pull-forward into ep 5) and S2's is '9巻の76話から' (matches ep 22 continue->76)."
+  ]
+}

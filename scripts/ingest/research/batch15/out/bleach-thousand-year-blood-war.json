@@ -1,0 +1,35 @@
+{
+  "series_id": "bleach-thousand-year-blood-war",
+  "summary": "All four targets (33, 35, 36, 38) promoted to exact page-level records. The Bleach wiki's TYBW episode template carries page-precise chapter fields, and the eps 32-39 chain is perfectly complementary (629 pp.1-2 in ep32 -> pp.4-17 in ep33; 635 pp.6-12 in ep33 -> pp.13-17 in ep34; 644 pp.10-17 in ep35 -> pp.1-9 in ep36; 649 pp.1-15 in ep35 -> pp.15-17 in ep37; 630 split three ways across eps 33/36/38), which itself verifies no gaps or double-counting. Independent corroboration: animeexplained states ep38 covers 630-634 verbatim; sportskeeda's ep-6 and ep-11 comparisons pin the flanking boundaries (ep32 ends 628; ep37 = 649-654); Blackjack Rants confirms ep33's second half is anime-original, ep35 is the first part of Kyoraku/Lille (645+), and the Pernida-escape scene (644) was split across eps 35/36. Surprise vs the stored zone description: the tail of 644 (pp.10-17) airs in ep35 BEFORE ep36 goes back for 640-644a, and 630a is itself split between ep33 (pp.1-5) and ep36 (pp.6-9) — the annotation is refined accordingly. Also noteworthy: 654 pp.6-15 are never animated (ep37 stops at p.5, ep39 resumes at pp.16-17).",
+  "anchors": [
+    {"episode": 33, "end_chapter": 635, "start_chapter": 629, "chapters_adapted": "629 (pp.4-17), 630 (pp.1-5), 635 (pp.6-12)", "volume": 70,
+     "confidence": "high", "note": "Title = ch 629 'Gate of the Sun'. Opens completing 629 (ep32 had pp.1-2), 630 pp.1-5 (Bazz-B/Haschwalth setup), ends entering Mayuri/Pernida (635 pp.6-12, chained by stored ep34 start 635 p.13). Second half (Renji vs Uryu) is anime-original per Blackjack/CBR. Page splits are wiki-precision; chapter set corroborated by boundary chain (sportskeeda ep6: ep32 = 625-628).",
+     "sources": ["https://bleach.fandom.com/wiki/GATE_OF_THE_SUN_(episode)", "http://blackjackrants.blogspot.com/2024/12/bleach-tybw-e33-review-twin-kings-vs.html", "https://www.cbr.com/bleach-tybw-part-3-episode-7-review/", "https://sportskeeda.com/anime/bleach-tybw-part-3-episode-6-anime-vs-manga-comparison"]},
+    {"episode": 35, "end_chapter": 649, "start_chapter": 645, "chapters_adapted": "644 (pp.10-17), 645-646, 647 (pp.1-7, 14-17), 648 (pp.4-17), 649 (pp.1-15)", "volume": 71,
+     "confidence": "high", "note": "Title = ch 645 'Don't Chase a Shadow'. Opens with the 644 tail (Shunsui/Lille lead-in) pulled ahead of the 640-644a block that ep36 covers — majority rule puts START at 645, split recorded. Blackjack: 'first part of the Kyoraku/Lille fight' + reordering of Wahrwelt sequences; sportskeeda ep11 (= our ep37) at 649-654 complements the 649 p.15 split. 647 pp.8-13 deferred (ep39 carries 647 pp.7-14).",
+     "sources": ["https://bleach.fandom.com/wiki/DON%E2%80%99T_CHASE_A_SHADOW_(episode)", "http://blackjackrants.blogspot.com/2025/01/bleach-tybw-e35-review-kami-sama-no.html", "https://sportskeeda.com/anime/bleach-tybw-part-3-episode-11-anime-vs-manga-comparison", "https://www.cbr.com/bleach-thousand-year-blood-war-part-3-episode-9-review/"]},
+    {"episode": 36, "end_chapter": 644, "start_chapter": 640, "chapters_adapted": "630 (pp.6-9), 640-643, 644 (pp.1-9)", "volume": 71,
+     "confidence": "high", "note": "Title = ch 644 'BABY, HOLD YOUR HAND 7 [Never Ending My Dream]'. Resumes Mayuri vs Pernida (640-643, 644 pp.1-9 — ep35 already aired the 644 tail) plus 630 pp.6-9 Bazz-B/Haschwalth fragment. Blackjack E36 confirms the Pernida-escape scene was partially shown in ep35 then expanded here (= the 644 split); sportskeeda preview confirms the episode resumes Mayuri/Pernida. START 640 (630 fragment is 4 pages).",
+     "sources": ["https://bleach.fandom.com/wiki/BABY,_HOLD_YOUR_HAND_2_(Never_Ending_My_Dream)_(episode)", "https://blackjackrants.blogspot.com/2025/01/bleach-tybw-e36-review-death-of-dream.html", "https://sportskeeda.com/anime/bleach-tybw-episode-36-preview-teases-nemu-joining-mayuri-pernida"]},
+    {"episode": 38, "end_chapter": 634, "start_chapter": 631, "chapters_adapted": "630 (pp.10-17), 631-634", "volume": 70,
+     "confidence": "high", "note": "The deferred Friend block. Title = chs 631-634 ('friend' 1-4). Opens completing 630 (pp.10-17, present-day Bazz-B/Haschwalth frame; pp.1-5 aired in ep33, pp.6-9 in ep36), then the flashback chapters in order. animeexplained independently states the episode covers ch 630 'Twinned Twilight' to ch 634 'Friend 3'. START 631 by majority rule (630 tail is 8 pages).",
+     "sources": ["https://bleach.fandom.com/wiki/Friend_(episode)", "https://www.animeexplained.com/explained/a-thousand-year-friendship-ends-bleach-thousand-year-blood-war-episode-38-review/", "https://sportskeeda.com/anime/bleach-tybw-episode-38-bazz-b-succumbs-death-jugram-keeps-loyalty-yhwach"]}
+  ],
+  "zone_level_only": [],
+  "continue_points": [
+    {"episode": 33, "continue_chapter": 630, "note": "end+1 would be 636, but the reader's honest mainline position is 630 p.6 (630b-634 Friend block deferred to ep38; 631-634 unread). Matches batch-11 convention for eps 34/37."},
+    {"episode": 35, "continue_chapter": 630, "note": "earliest unread mainline is still 630 (pp.6-17 unread; 640-643 also unread until ep36). Consistent with ep34/ep37 stored continue->630."},
+    {"episode": 36, "continue_chapter": 630, "note": "630 now read through p.9; pp.10-17 + 631-634 still unread until ep38, so honest resume remains 630."},
+    {"episode": 38, "continue_chapter": 654, "note": "zone 630-654 complete except the 654 cliffhanger left at p.5 by ep37 — resume at 654. Note the anime never animates 654 pp.6-15 (ep39 resumes at pp.16-17), so the reader picking up 654 reads skipped material. Sliver 647 pp.8-13 also still unseen (ep39 covers 647 pp.7-14)."}
+  ],
+  "annotation_updates": [
+    {"episodes": [33, 34, 35, 36, 37, 38], "kind": "rearranged", "chapters": "630-654",
+     "note": "Page-precise interleave (refines the stored block description): ep33 = 629 pp.4-17 + 630 pp.1-5 + 635 pp.6-12 (+anime-original Renji/Uryu); ep34 = 635 pp.13-17 + 636-639 (+640 p.4 single-page fragment); ep35 = 644 pp.10-17 + 645-646 + 647 pp.1-7,14-17 + 648 pp.4-17 + 649 pp.1-15; ep36 = 630 pp.6-9 + 640-643 + 644 pp.1-9; ep37 = 649 pp.15-17 + 650-653 + 654 pp.1-5; ep38 = 630 pp.10-17 + 631-634. Corrections to the stored gloss: the 644 tail airs in ep35 BEFORE ep36's 640-644a block, and '630a' is itself split (ep33 pp.1-5, ep36 pp.6-9, ep38 pp.10-17)."}
+  ],
+  "type_corrections": [],
+  "repairs": [],
+  "flags_for_sean": [
+    "FYI (not a target): ep39's stored partial annotation {655-659} undercounts its fragments — the wiki lists 615 p.1, 647 pp.7-14, 654 pp.16-17, 655, 656 pp.2-17, 657, 658 pp.1-8, 659 pp.10-12 & 14-17 (https://bleach.fandom.com/wiki/The_Visible_Answer_(episode)). Chapter 654 pp.6-15 are never animated anywhere.",
+    "Exact page splits rest on the Bleach wiki's episode template (single origin for page precision); chapter-level content is independently corroborated per anchor (animeexplained for ep38, sportskeeda ep6/ep11 boundaries, Blackjack Rants structure notes) and the eps 32-39 pages chain with zero gaps/overlaps, which is strong internal validation."
+  ]
+}
