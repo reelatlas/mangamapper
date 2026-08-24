@@ -12,31 +12,6 @@ export type Database = {
   __InternalSupabase: {
     PostgrestVersion: "14.1"
   }
-  graphql_public: {
-    Tables: {
-      [_ in never]: never
-    }
-    Views: {
-      [_ in never]: never
-    }
-    Functions: {
-      graphql: {
-        Args: {
-          extensions?: Json
-          operationName?: string
-          query?: string
-          variables?: Json
-        }
-        Returns: Json
-      }
-    }
-    Enums: {
-      [_ in never]: never
-    }
-    CompositeTypes: {
-      [_ in never]: never
-    }
-  }
   public: {
     Tables: {
       anime_progress: {
@@ -78,34 +53,78 @@ export type Database = {
       chapter_anchors: {
         Row: {
           chapter: number
+          chapters_adapted: string | null
+          continue_chapter: number | null
           created_at: string
           episode: number
           note: string | null
           series_id: string
           source: string
+          start_chapter: number | null
           volume: number | null
         }
         Insert: {
           chapter: number
+          chapters_adapted?: string | null
+          continue_chapter?: number | null
           created_at?: string
           episode: number
           note?: string | null
           series_id: string
           source: string
+          start_chapter?: number | null
           volume?: number | null
         }
         Update: {
           chapter?: number
+          chapters_adapted?: string | null
+          continue_chapter?: number | null
           created_at?: string
           episode?: number
           note?: string | null
           series_id?: string
           source?: string
+          start_chapter?: number | null
           volume?: number | null
         }
         Relationships: [
           {
             foreignKeyName: "chapter_anchors_series_id_fkey"
+            columns: ["series_id"]
+            isOneToOne: false
+            referencedRelation: "series"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      episode_annotations: {
+        Row: {
+          chapters: string | null
+          created_at: string
+          episode: number
+          kind: string
+          note: string | null
+          series_id: string
+        }
+        Insert: {
+          chapters?: string | null
+          created_at?: string
+          episode: number
+          kind: string
+          note?: string | null
+          series_id: string
+        }
+        Update: {
+          chapters?: string | null
+          created_at?: string
+          episode?: number
+          kind?: string
+          note?: string | null
+          series_id?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "episode_annotations_series_id_fkey"
             columns: ["series_id"]
             isOneToOne: false
             referencedRelation: "series"
@@ -153,6 +172,7 @@ export type Database = {
           fetched_at: string
           last_modified: string | null
           raw: Json
+          raw_html: string | null
           slug: string
         }
         Insert: {
@@ -162,6 +182,7 @@ export type Database = {
           fetched_at?: string
           last_modified?: string | null
           raw: Json
+          raw_html?: string | null
           slug: string
         }
         Update: {
@@ -171,6 +192,7 @@ export type Database = {
           fetched_at?: string
           last_modified?: string | null
           raw?: Json
+          raw_html?: string | null
           slug?: string
         }
         Relationships: []
@@ -269,6 +291,47 @@ export type Database = {
             columns: ["run_id"]
             isOneToOne: false
             referencedRelation: "ingest_runs"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      ingest_fractionals: {
+        Row: {
+          air_date: string | null
+          disposition: string | null
+          fetched_at: string
+          note: string | null
+          position: number
+          series_id: string
+          source: string
+          title: string | null
+        }
+        Insert: {
+          air_date?: string | null
+          disposition?: string | null
+          fetched_at?: string
+          note?: string | null
+          position: number
+          series_id: string
+          source?: string
+          title?: string | null
+        }
+        Update: {
+          air_date?: string | null
+          disposition?: string | null
+          fetched_at?: string
+          note?: string | null
+          position?: number
+          series_id?: string
+          source?: string
+          title?: string | null
+        }
+        Relationships: [
+          {
+            foreignKeyName: "ingest_wiki_fractionals_series_id_fkey"
+            columns: ["series_id"]
+            isOneToOne: false
+            referencedRelation: "series"
             referencedColumns: ["id"]
           },
         ]
@@ -437,8 +500,10 @@ export type Database = {
           afl_slug: string | null
           aired_episodes: number
           anilist_id: number | null
+          asterisk_review: string | null
           average_score: number | null
           banner_url: string | null
+          continue_from_chapter: number | null
           cover_color: string | null
           cover_url: string | null
           duration_min: number | null
@@ -455,6 +520,8 @@ export type Database = {
           manga_start_chapter: number | null
           manga_start_volume: number | null
           manga_status: string | null
+          mapping_mode: string
+          max_adapted_chapter: number | null
           mean_score: number | null
           next_airing_at: string | null
           popularity: number
@@ -481,8 +548,10 @@ export type Database = {
           afl_slug?: string | null
           aired_episodes?: number
           anilist_id?: number | null
+          asterisk_review?: string | null
           average_score?: number | null
           banner_url?: string | null
+          continue_from_chapter?: number | null
           cover_color?: string | null
           cover_url?: string | null
           duration_min?: number | null
@@ -499,6 +568,8 @@ export type Database = {
           manga_start_chapter?: number | null
           manga_start_volume?: number | null
           manga_status?: string | null
+          mapping_mode?: string
+          max_adapted_chapter?: number | null
           mean_score?: number | null
           next_airing_at?: string | null
           popularity?: number
@@ -525,8 +596,10 @@ export type Database = {
           afl_slug?: string | null
           aired_episodes?: number
           anilist_id?: number | null
+          asterisk_review?: string | null
           average_score?: number | null
           banner_url?: string | null
+          continue_from_chapter?: number | null
           cover_color?: string | null
           cover_url?: string | null
           duration_min?: number | null
@@ -543,6 +616,8 @@ export type Database = {
           manga_start_chapter?: number | null
           manga_start_volume?: number | null
           manga_status?: string | null
+          mapping_mode?: string
+          max_adapted_chapter?: number | null
           mean_score?: number | null
           next_airing_at?: string | null
           popularity?: number
@@ -571,6 +646,7 @@ export type Database = {
         Row: {
           afl_offset: number
           afl_slug: string | null
+          air_date: string | null
           anilist_id: number
           episode_end: number | null
           episode_start: number | null
@@ -578,10 +654,12 @@ export type Database = {
           label: string | null
           season_order: number
           series_id: string
+          watch_position: number | null
         }
         Insert: {
           afl_offset?: number
           afl_slug?: string | null
+          air_date?: string | null
           anilist_id: number
           episode_end?: number | null
           episode_start?: number | null
@@ -589,10 +667,12 @@ export type Database = {
           label?: string | null
           season_order: number
           series_id: string
+          watch_position?: number | null
         }
         Update: {
           afl_offset?: number
           afl_slug?: string | null
+          air_date?: string | null
           anilist_id?: number
           episode_end?: number | null
           episode_start?: number | null
@@ -600,6 +680,7 @@ export type Database = {
           label?: string | null
           season_order?: number
           series_id?: string
+          watch_position?: number | null
         }
         Relationships: [
           {
@@ -913,9 +994,6 @@ export type CompositeTypes<
     : never
 
 export const Constants = {
-  graphql_public: {
-    Enums: {},
-  },
   public: {
     Enums: {},
   },

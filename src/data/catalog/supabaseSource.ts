@@ -68,6 +68,21 @@ async function fetchSeriesRow(id: string): Promise<SeriesRow | null> {
   return (data as SeriesRow | null) ?? null;
 }
 
+// Volume boundaries ride into the card so every chapter->volume readout
+// prefers real print boundaries (docs/data-pipeline.md §10). Lost in the
+// 2026-08-23 assemble.ts split (the verifier imports assemble.ts, so the
+// browser wrapper was never exercised) — restored 2026-08-23.
+async function allBoundaries(mangaId: number | null): Promise<Boundary[]> {
+  if (!mangaId) return [];
+  const { data, error } = await supabase
+    .from('volume_boundaries')
+    .select('volume, chapter_start, chapter_end')
+    .eq('manga_anilist_id', mangaId)
+    .order('volume');
+  if (error) throw error;
+  return (data ?? []) as Boundary[];
+}
+
 // Same-manga continuation (segment model, Sean 2026-08-24): a sibling entry
 // whose scope starts at/inside this entry's scope end continues the story
 // (Naruto→Shippuden, Berserk 1997→2016) — the residue between our frontier
