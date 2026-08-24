@@ -1273,6 +1273,21 @@ Fixed weekly is correct.
    The census class is the live work-list (re-derives every audit run);
    its triage verdict distribution DECIDES D4 (afg hits mostly junk →
    gate the AFG writers; mostly mistyped rows → audit-only stands).
+   **SECOND PASS RUNS AS TWO CHUNKS (Sean 2026-08-24, usage control)** —
+   balanced by research WEIGHT (unanchored-ep load), not series count,
+   because detective-conan alone is ~1/3 of the pass; chunk 1 is the
+   slightly heavier half so its cost upper-bounds chunk 2's. Each chunk
+   ends apply-17 (idempotent) → parity healer → verify → census →
+   committed save point, so the boundary is a safe indefinite stop.
+   CHUNK 1 (~55%): kinnikuman, eyeshield-21, zatch-bell, bobobo,
+   sket-dance, saint-seiya, project-arms, d-gray-man, angel-heart,
+   fist-of-the-north-star, hayate, hellsing, trigun + ALL narrow lanes
+   (A1-triage 49 → decides D4; rurouni 95-98; gintama 111/120/227).
+   CHUNK 2 (~45%): detective-conan (split across ~2 agents by era),
+   detective-school-q, tokyo-mew-mew, space-adventure-cobra,
+   magic-knight-rayearth, fist-of-the-blue-sky, arms-alchemy,
+   blade-of-the-immortal-ona, emma-a-victorian-romance, x + the
+   batch-17 completion record.
 42. 📍 **BATCH 17 — GAP TIER, PARTIALLY APPLIED (2026-08-24; RESUME MARKER)**.
    Roadmap item (2). Targets: the anchor_gap_research class (46) + the
    frontier_tail_null class (7) = 53 series, research/batch17/
