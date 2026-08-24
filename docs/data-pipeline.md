@@ -1073,6 +1073,34 @@ Fixed weekly is correct.
    STILL OPEN: A1 (MHA 104 anchor-on-filler — rec: reject + stop counting
    filler rows in rearranged_zone_unanchored) + beastars ep 44 type
    (flag 887). Verify 220/220 clean end-state.
+38. ✅ **CONSOLIDATE DEEP (2026-08-24, post-rulings)**: writer sweep clean
+   (parity/seed scripts = curated tier; live writers on gates); CRON
+   REVIEW (Sean's ask): anilist/afl/mu unaffected by new rules (partial
+   upserts merge — continue fields safe); refresh-afg's delete+reinsert
+   WOULD have eroded parity continues hourly → PRESERVATION added to
+   syncAnchors + applyContinua (lib/anchors.ts), all four edges
+   redeployed; apply-parity-continues added to the consolidate healer
+   roster (idempotent re-stamp for fresh pins; re-run confirmed 0-change).
+   A1 RULED: filler/anime-only rows never anchor targets —
+   rearranged_zone_unanchored skips them (audit) and MHA-104's proposed
+   anchor is permanently rejected; ippo 76 zone-acknowledged (A3 trail).
+   Cardcaptor 65-70 re-verified at source (chapter infoboxes confirm all
+   volumes; serialization dates prove the finale ANTICIPATED chs 47-50 —
+   Ohkawa wrote both; divergence annotations already carry it).
+   Discredited-source additions: animeoshi.com (Beastars ep-44 "77-80" =
+   S2 chapters, content-farm class) + Google-AI instant answer
+   ("141-145") — both contradict two-source records; beastars ep 44
+   under focused re-research (was "anime-original" from stub-era
+   sources; Festival of Odd Souls = ch 166 evidence surfaced). ARC DATA
+   noted as a designed-next modeling pass (arcs table: name ↔ chapter
+   span ↔ episode span; AFG chart arc column = structured backfill
+   source; pairs with the segment-model UI phase). CENSUS:
+   ruling_violation 0, rearranged_zone_unanchored 0 (class CLOSED),
+   acknowledged 2 (berserk 1-4 scheme, ippo 76 sliver),
+   special_numbered 0, nonmonotonic 0, ok_full 235; verify 220/220;
+   types regenerated post-migration; npm build green. Deep rescan:
+   suppressions/overrides/REVIEWED sets re-validated, 2 dup flags
+   cleaned, locked set still empty pending asterisk sign-offs (84).
 21. ✅ **Consolidation pass 2 (2026-08-23, post-Kenshin)**: every write path
    swept against the day's rules — filterEpisodeRows (caps + type
    overrides) now in ALL five episode writers (resolve, stitched-guard,

@@ -35380,6 +35380,7 @@ async function applyContinua(runId, seriesId, continua, afgPageMax) {
   if (!continua || continua.endChapter === null) return "no_data";
   const { data: s } = await db.from("series").select("id, title, title_native, aired_episodes, total_chapters, latest_known_chapters, manga_anilist_id, search_text").eq("id", seriesId).maybeSingle();
   if (!s) return "no_data";
+  const { data: prevContinua } = await db.from("chapter_anchors").select("episode, continue_chapter, continue_kind, continue_note").eq("series_id", s.id).eq("source", "afg-continua").not("continue_chapter", "is", null).maybeSingle();
   await db.from("chapter_anchors").delete().eq("series_id", s.id).eq("source", "afg-continua");
   const heading = continua.heading ? norm(continua.heading) : null;
   const names = norm(`${s.title} ${s.title_native ?? ""} ${s.search_text ?? ""} ${s.id.replace(/-/g, " ")}`);
@@ -35449,7 +35450,8 @@ async function applyContinua(runId, seriesId, continua, afgPageMax) {
     volume: null,
     chapter: continua.endChapter,
     source: "afg-continua",
-    note: `AFG continua table: "${continua.text.slice(0, 180)}"`
+    note: `AFG continua table: "${continua.text.slice(0, 180)}"`,
+    ...prevContinua && prevContinua.episode === ep ? { continue_chapter: prevContinua.continue_chapter, continue_kind: prevContinua.continue_kind, continue_note: prevContinua.continue_note } : {}
   });
   if (error) throw new Error(`applyContinua(${s.id}): ${error.message}`);
   if (continua.continueChapter !== null) {
@@ -35503,6 +35505,8 @@ async function syncAnchors(runId, seriesId, afgSlug, page) {
     });
     return { anchors: 0, withheld: true };
   }
+  const { data: prevCont } = await db.from("chapter_anchors").select("episode, continue_chapter, continue_kind, continue_note").eq("series_id", seriesId).eq("source", "afg").not("continue_chapter", "is", null);
+  const contByEp = new Map((prevCont ?? []).map((c) => [c.episode, c]));
   await db.from("chapter_anchors").delete().eq("series_id", seriesId).eq("source", "afg");
   const { data: curated } = await db.from("chapter_anchors").select("episode, chapter").eq("series_id", seriesId).in("source", ["manual", "wiki"]);
   const protectedEps = new Set((curated ?? []).map((c) => c.episode));
@@ -35519,7 +35523,10 @@ async function syncAnchors(runId, seriesId, afgSlug, page) {
     start_chapter: a.startChapter,
     chapters_adapted: a.chaptersAdapted,
     source: "afg",
-    note: a.arc
+    note: a.arc,
+    continue_chapter: contByEp.get(a.episode)?.continue_chapter ?? null,
+    continue_kind: contByEp.get(a.episode)?.continue_kind ?? null,
+    continue_note: contByEp.get(a.episode)?.continue_note ?? null
   }));
   for (let i = 0; i < rows.length; i += 500) {
     const { error } = await db.from("chapter_anchors").upsert(rows.slice(i, i + 500));

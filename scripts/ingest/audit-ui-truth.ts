@@ -305,12 +305,19 @@ async function main() {
       const looseIds = new Set(series.filter((s: any) => s.mapping_mode === 'loose').map((s: any) => s.id));
       const hits = new Map<string, number[]>();
       const acked = new Map<string, number[]>();
+      // filler/anime-only rows can NEVER take anchors (Sean's A1 ruling
+      // 2026-08-24, MHA ep 104): a zone annotation on such a row is context,
+      // not an open anchor target — the class must not ask for records the
+      // rules forbid
+      const epType = new Map(episodes.map((e: any) => [`${e.series_id}#${e.number}`, e.type]));
       for (const a of annos as any[]) {
         if (a.kind !== 'rearranged' && a.kind !== 'graft') continue;
         if (!a.chapters) continue;
         if (looseIds.has(a.series_id)) continue;
         if ((anchorCount.get(a.series_id) ?? 0) < 2) continue; // no interpolation happening
         if (anchoredEps.has(`${a.series_id}#${a.episode}`)) continue;
+        const t = epType.get(`${a.series_id}#${a.episode}`);
+        if (t === 'filler' || t === 'anime-only-canon') continue;
         // zone-acknowledged rows (batch-15 rule): research established that
         // only zone-level knowledge exists — an acknowledged-approximate
         // review item, not an open research target

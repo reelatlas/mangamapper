@@ -55,6 +55,8 @@ export type Database = {
           chapter: number
           chapters_adapted: string | null
           continue_chapter: number | null
+          continue_kind: string | null
+          continue_note: string | null
           created_at: string
           episode: number
           note: string | null
@@ -67,6 +69,8 @@ export type Database = {
           chapter: number
           chapters_adapted?: string | null
           continue_chapter?: number | null
+          continue_kind?: string | null
+          continue_note?: string | null
           created_at?: string
           episode: number
           note?: string | null
@@ -79,6 +83,8 @@ export type Database = {
           chapter?: number
           chapters_adapted?: string | null
           continue_chapter?: number | null
+          continue_kind?: string | null
+          continue_note?: string | null
           created_at?: string
           episode?: number
           note?: string | null

@@ -52,6 +52,16 @@ export async function applyContinua(
     .maybeSingle();
   if (!s) return 'no_data';
 
+  // parity-continue preservation (Sean's C2 rule 2026-08-24): snapshot the
+  // old continua row's continue fields; restored below when the fresh pin
+  // lands on the same episode
+  const { data: prevContinua } = await db
+    .from('chapter_anchors')
+    .select('episode, continue_chapter, continue_kind, continue_note')
+    .eq('series_id', s.id)
+    .eq('source', 'afg-continua')
+    .not('continue_chapter', 'is', null)
+    .maybeSingle();
   await db.from('chapter_anchors').delete().eq('series_id', s.id).eq('source', 'afg-continua');
 
   const heading = continua.heading ? norm(continua.heading) : null;
@@ -150,6 +160,9 @@ export async function applyContinua(
     chapter: continua.endChapter,
     source: 'afg-continua',
     note: `AFG continua table: "${continua.text.slice(0, 180)}"`,
+    ...(prevContinua && prevContinua.episode === ep
+      ? { continue_chapter: prevContinua.continue_chapter, continue_kind: prevContinua.continue_kind, continue_note: prevContinua.continue_note }
+      : {}),
   });
   if (error) throw new Error(`applyContinua(${s.id}): ${error.message}`);
   // three-numbers model (2026-08-23): the explicit continue-from is data of
@@ -244,6 +257,17 @@ export async function syncAnchors(
     return { anchors: 0, withheld: true };
   }
 
+  // PARITY-CONTINUE PRESERVATION (Sean's C2 rule 2026-08-24): continue
+  // fields are CURATED data that may live on derived rows — the
+  // delete+reinsert rebuild must carry them over by episode, or the hourly
+  // cron erodes the catalog-wide parity conversion one series at a time.
+  const { data: prevCont } = await db
+    .from('chapter_anchors')
+    .select('episode, continue_chapter, continue_kind, continue_note')
+    .eq('series_id', seriesId)
+    .eq('source', 'afg')
+    .not('continue_chapter', 'is', null);
+  const contByEp = new Map((prevCont ?? []).map((c) => [c.episode, c]));
   await db.from('chapter_anchors').delete().eq('series_id', seriesId).eq('source', 'afg');
   // PRECEDENCE (completed 2026-08-23, the HxH ep-140 lesson): the PK allows
   // one anchor per episode, so a derived chart row at an episode holding a
@@ -282,6 +306,9 @@ export async function syncAnchors(
       chapters_adapted: a.chaptersAdapted,
       source: 'afg',
       note: a.arc,
+      continue_chapter: contByEp.get(a.episode)?.continue_chapter ?? null,
+      continue_kind: contByEp.get(a.episode)?.continue_kind ?? null,
+      continue_note: contByEp.get(a.episode)?.continue_note ?? null,
     }));
   for (let i = 0; i < rows.length; i += 500) {
     const { error } = await db.from('chapter_anchors').upsert(rows.slice(i, i + 500));

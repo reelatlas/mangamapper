@@ -74,7 +74,7 @@ const REPAIRS_APPROVED = new Map<string, string>([
 ]);
 // Anchors excluded from apply pending Sean's ruling (key `${sid}#${episode}`):
 const EXCLUDED_ANCHORS = new Map<string, string>([
-  ['my-hero-academia#104', 'ep 104 is pure anime-original (film prologue) — the agent proposed a position-carry anchor (end 248, adapts nothing) to anchor the S5 reorder crossing; anchoring a filler row is a new encoding pattern — Sean decides'],
+  ['my-hero-academia#104', 'RULED (Sean 2026-08-24): rejected permanently — filler rows never take anchors; the audit now skips filler/anime-only rows in rearranged_zone_unanchored instead'],
   ['cardcaptor-sakura-clear-card#12', 'ep typed anime-only-canon; the ch-39 "graft" is a cards-circling cameo — anchoring END 39 would poison the position curve (mainline ~12-13); annotation carries the fact — encoding decision for Sean'],
   ['cardcaptor-sakura-clear-card#14', 'same class: anime-only-canon ep; ch 46 = Mirage debut graft, not the mainline position — annotation carries it'],
   ['hajime-no-ippo-the-fighting#76', 'Boxer\'s Fist DVD special adapts only ch 383 p.4-5 (2-page gag) — anchoring END 383 at run position ~270 breaks the curve (sliver-rule spirit: scraps never set position); annotation carries the sliver — encoding decision for Sean'],
