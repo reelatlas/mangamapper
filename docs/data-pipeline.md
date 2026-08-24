@@ -807,6 +807,25 @@ Fixed weekly is correct.
    documented) + Code's Assault 287-293 full records. Berserk ep-1-4
    scheme fix (unnumbered prologue chapters — old annotation
    superseded). anchor_gap 76→66; asterisk 61; ruling_violation 0.
+31. ✅ **ITEM-4 BATCH 7 = research batch 12 (2026-08-23)**: 15 series,
+   124 full-record anchors, 24 continue points, 39 annotation groups.
+   PIN VERDICTS: WRONG ×3 — golden-kamuy 302→139/v14 (a SEASON-FIVE
+   pin; S3-S5 = 38 eps finishing the manga → stitch flag #7), rosario
+   ep26 ch-19 REJECTED (new failure mode: Wikipedia's series-summary
+   line stamped onto the last episode — ch 19 aired as ep 7; loose),
+   ajin ch-22 = continue-point misread (S2 anime-original → typed;
+   honest end ep13→21/v5). VERIFIED+promoted ×5: to-love-ru 44→162
+   (manga end; 2008 series loose; full Motto segment maps + never-
+   adapted sweep), bokuben 26→69 (loose), platinum-end 24→58,
+   hxh-1999 92→185 + railgun 73→96 (full records). Railgun typed
+   (S1 back half + Silent Party anime-only; ep-14 ch-17 graft
+   excepted); manga CONCLUDED 2026-03 (stale-ongoing flag). Shippuden
+   endgame = 20-anchor per-episode map (chs 663-699). Ippo: comps
+   verified (NC 77-102, Rising 103-127); Champion Road (291-313) +
+   Mashiba/Kimura OVA (270-289) get order-only records WITH spans.
+   Audit rule: LOOSE series skip monotonicity entirely (borrow-maps
+   render as stored). anchor_gap 66→58; mu_pin 78→72; loose 10;
+   ok_full 235; ruling_violation 0.
 21. ✅ **Consolidation pass 2 (2026-08-23, post-Kenshin)**: every write path
    swept against the day's rules — filterEpisodeRows (caps + type
    overrides) now in ALL five episode writers (resolve, stitched-guard,

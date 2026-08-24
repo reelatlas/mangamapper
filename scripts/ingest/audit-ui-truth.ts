@@ -315,7 +315,11 @@ async function main() {
       }
     }
     const spaceOf = new Map(series.map((s: any) => [s.id, Math.max(s.total_chapters ?? 0, s.latest_known_chapters ?? 0)]));
+    const looseAll = new Set(series.filter((s: any) => s.mapping_mode === 'loose').map((s: any) => s.id));
     for (const [sid, list] of bySeries) {
+      // LOOSE series are ruled non-linear — their anchors are borrow-maps
+      // rendered as stored; monotonicity is not a claim they make
+      if (looseAll.has(sid)) continue;
       list.sort((x, y) => x.episode - y.episode);
       for (let i = 1; i < list.length; i++) {
         if (list[i].chapter < list[i - 1].chapter) {

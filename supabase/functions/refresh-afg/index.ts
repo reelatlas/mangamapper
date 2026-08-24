@@ -35240,7 +35240,20 @@ var EPISODE_TYPE_OVERRIDES = {
     ...range(22, 28, "anime-only-canon"),
     ...range(34, 34, "anime-only-canon"),
     ...range(42, 43, "anime-only-canon")
-  }
+  },
+  //   railgun: S1 back half (Big Spider/Poltergeist) + S's Silent Party are
+  //   anime-original (director-confirmed); ep 14 EXCEPTED — it grafts manga
+  //   ch 17 (research batch 12, 2026-08-23: animefillerlist + fandom arc
+  //   pages + Wikipedia).
+  "a-certain-scientific-railgun": {
+    ...range(13, 13, "anime-only-canon"),
+    ...range(15, 24, "anime-only-canon"),
+    ...range(41, 48, "anime-only-canon")
+  },
+  //   ajin S2 (14-26) is anime-original from the start with a non-canon
+  //   ending (research batch 12: WDTALO + mangashed + per-episode breakdown);
+  //   canon resumes at manga ch 22.
+  "ajin-demi-human": range(14, 26, "anime-only-canon")
 };
 var SOURCE_NUMBERING_SHIFTS = {
   "dr-stone": { drop: [36], shifts: [{ from: 37, offset: -1 }] },
