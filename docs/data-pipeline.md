@@ -1108,15 +1108,11 @@ Fixed weekly is correct.
    235; verify 220/220; all 21 pre-batch bookmarks dispositioned; parity
    continue-reads live + cron-safe; edges deployed; Vercel current.
    ROADMAP (Sean-agreed order):
-   (1) **BATCH 16 — the 35 next-tier reorder holes** ← NEXT SESSION'S
-       TASK (Sean approved). `verify-series-display --all` prints the
-       list (kamisama S2 14-24, shippuden 121-125/130-132, dragon-maid
-       4-7, tgre 19-22, black-butler 4-5, food-wars 17/57, naruto
-       108-109, tybw 39, nisekoi 26). Batch-15 playbook: context files
-       (batch15/context.ts pattern), research agents (PROTOCOL.md exact-
-       record-or-zone-verdict), apply script lineage, verify + census.
-       Alongside: Sean's light sweep of the 42 batch-15 bookmarks.
-   (2) Gap tier (anchor_gap_research 46, by popularity: sailor-moon-
+   (1) ✅ DONE (§12.40, same day): BATCH 16 — all 38 reorder holes
+       closed, hole list EMPTY. Still alongside: Sean's light sweep of
+       the 42 batch-15 bookmarks + the 9 batch-16 bookmarks (D1 =
+       kamisama ep10 END question in batch16/DECISIONS-FOR-SEAN.md).
+   (2) ← NEXT: Gap tier (anchor_gap_research 46, by popularity: sailor-moon-
        crystal, skip-beat, gantz, ace-of-diamond-act-ii, kingdom 1-37,
        world-trigger 48-63, shippuden 262-298…).
    (3) mu_pin_unverified 65 (drains passively per batch; dedicated
@@ -1137,6 +1133,38 @@ Fixed weekly is correct.
    2026/27), TYBW Part 4 finale anchor (Sep 2026), Arslan S2 titles,
    9 cleared-boundary manga (main-article fallback gap), title/airdate
    classes (29/22) via wiki backfill.
+40. ✅ **BATCH 16 (2026-08-24, same day post-compact): the reorder-hole
+   work-list CLOSED — 38/38 holes promoted to full anchors, zero
+   zone-level**. The list had grown 35→38 (cells-at-work S2 18-20
+   surfaced); 10 series, 10 parallel agents, batch-15 playbook
+   (research/batch16/: context.ts, PROTOCOL.md with the 2026-08-24
+   rulings baked in as binding rules, out/*.json = the cited record,
+   apply-research-batch-16.ts). All 38 anchors high confidence. Key
+   findings: several "zones" dissolved on research (black-butler
+   reorder ends at ep 3; cells S2 reorder confined to 14-16; shippuden
+   121-125/130-132 are clean monotonic runs; tgre 19-22 decompose
+   per-episode — batch-9 skip set confirmed exactly); genuine reorders
+   now exact (dragon-maid ep6 29-before-27, kamisama ep24 ch-64 graft
+   before 61, TYBW ep39 resumes 655 after deferred-Friend 634,
+   shippuden 122/123 mid-chapter share of 356-357). Kamisama-kiss S2
+   fully solved per-episode via NEW source classes (EN fandom is stubs
+   there): completed-manga-review.blog chapter-by-chapter, UA sister
+   wiki per-chapter character lists, first-appearance infobox pairs.
+   4 curated repairs applied: kamisama ep25 envelope→own record (A4
+   finale rule; END 64→63, start 31→62 — ep24's lifted END keeps
+   coverage 64) + ep10 chapters_adapted (batch-15's "Kohiruimaki is
+   anime-only" was WRONG — he's a named ch-50 character; goukon = ch 50
+   pulled forward). Curated annotation: food-wars eps 17-18 added to
+   the batch-9 arc-swap zone (displaced Karaage side was untagged).
+   Parity healer: 14 converted/7 stamped (TYBW ep38 continue 654→655).
+   OPEN for Sean: D1 kamisama ep10 END 25-vs-50 segment-order question
+   + 9 informational bookmarks (research/batch16/DECISIONS-FOR-SEAN.md).
+   END STATE: verify 220/220 with EMPTY hole list; census
+   ruling_violation 0, rearranged_zone_unanchored 0, acknowledged 2,
+   nonmonotonic 0, ok_full 235; tsc clean. NEXT (roadmap §12.39):
+   (2) gap tier 46 → (3) mu_pin sweep 65 → (4) automation pass →
+   (5) arcs table → (6) parked design pass → (7) continue-read UI →
+   (8) segment model (Sean's go).
 21. ✅ **Consolidation pass 2 (2026-08-23, post-Kenshin)**: every write path
    swept against the day's rules — filterEpisodeRows (caps + type
    overrides) now in ALL five episode writers (resolve, stitched-guard,

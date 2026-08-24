@@ -1,0 +1,65 @@
+{
+  "series_id": "cells-at-work",
+  "summary": "All three S2 reorder holes promoted to full anchors with their own start_chapters; no zone-level fallbacks needed. Eps 18-20 turn out to air chapters IN book order (chs 21-24, vol 5) — the S2 reorder crossing is confined to eps 14-16 (26, 13+19, 16+14), and eps 17-21 run monotonically through chs 20-25. Ep 18 'Cytokines' is the one split: fandom's ch-21 reverse map reads 'Episodes 17-18', matching the stored ep 17 anchor's '{20, 21 (start)}' — ep 17's Antigenic Shift segment ends at NK Cell's arrival, and ep 18 opens with the substantial back half of ch 21 (influenza outbreak, antigenic-shift mutation, Dendritic Cell setup) before adapting all of ch 22, so its own start is 21, not 22. Eps 19 and 20 are clean single-chapter title-match episodes (ch 23 'Harmful Bacteria', ch 24 'Cancer Cell II (Part I)'). One consequence for stored data: ep 17 ends mid-ch 21 but has no stored continue point, so the derived end+1=22 skips the unread back half of 21 — added continue_points entry ep17→21. Chapter-side reverse maps also re-confirm the stored ep 21 anchor (ch 25 → Episode 21) and its continue→27 (chs 27-29 + vol-6 Special 'Psoriasis' carry no |anime= field, i.e. never adapted; ch 26 was ep 14).",
+  "anchors": [
+    {
+      "episode": 18,
+      "end_chapter": 22,
+      "start_chapter": 21,
+      "chapters_adapted": "21 (cont. from ep 17), 22",
+      "volume": 5,
+      "confidence": "high",
+      "note": "Ep 18 (S2 ep 5) 'Cytokines' = ch 22 by identical title (サイトカイン, vol 5); opens by finishing the back half of ch 21 'Antigenic Shift' — fandom Chapter 21 infobox maps it to 'Episodes 17-18', and ep 17's plot ends the Antigenic Shift segment exactly at NK Cell's arrival, leaving the influenza outbreak/mutation and Dendritic Cell setup (a substantial share, not tail pages) to ep 18. Fandom Chapter 22 reverse map |anime=Episode 18; Wikipedia vol 5 = chs 20-25 with matching titles. No page splits stated anywhere.",
+      "sources": [
+        "https://cellsatwork.fandom.com/wiki/Chapter_22",
+        "https://cellsatwork.fandom.com/wiki/Chapter_21",
+        "https://cellsatwork.fandom.com/wiki/Episode_18",
+        "https://en.wikipedia.org/wiki/List_of_Cells_at_Work!_chapters"
+      ]
+    },
+    {
+      "episode": 19,
+      "end_chapter": 23,
+      "start_chapter": 23,
+      "chapters_adapted": "23",
+      "volume": 5,
+      "confidence": "high",
+      "note": "Ep 19 (S2 ep 6) 'Harmful Bacteria' = ch 23 by identical title (悪玉菌, vol 5); single-chapter episode. Fandom Chapter 23 reverse map |anime=Episode 19; Wikipedia chapter list vol 5. The closing cliffhanger (real Cancer Cell wins, high-heels sound = Regulatory T's arrival) may borrow ch 24's opening page or two as a sliver — both reverse maps keep 23→19 and 24→20, so it stays out of the chapter numbers.",
+      "sources": [
+        "https://cellsatwork.fandom.com/wiki/Chapter_23",
+        "https://cellsatwork.fandom.com/wiki/Episode_19",
+        "https://en.wikipedia.org/wiki/List_of_Cells_at_Work!_chapters"
+      ]
+    },
+    {
+      "episode": 20,
+      "end_chapter": 24,
+      "start_chapter": 24,
+      "chapters_adapted": "24",
+      "volume": 5,
+      "confidence": "high",
+      "note": "Ep 20 (S2 ep 7) 'Cancer Cell II (Part I)' = ch 24 by identical title (がん細胞２（前編）, vol 5); single-chapter episode, plot beats match (Regulatory T defends Cancer Cell, Normal Cell cornered, U-1146 podded). Fandom Chapter 24 reverse map |anime=Episode 20; Wikipedia chapter list vol 5. Continue is natural end+1=25 (ep 21).",
+      "sources": [
+        "https://cellsatwork.fandom.com/wiki/Chapter_24",
+        "https://cellsatwork.fandom.com/wiki/Episode_20",
+        "https://en.wikipedia.org/wiki/List_of_Cells_at_Work!_chapters"
+      ]
+    }
+  ],
+  "zone_level_only": [],
+  "continue_points": [
+    {
+      "episode": 17,
+      "continue_chapter": 21,
+      "note": "NOT a target ep, but its stored anchor (end 21, {20, 21 (start)}) has no continue point, so end+1=22 is derived — dishonest here: ep 17 ends mid-ch 21 (at NK Cell's arrival; fandom Chapter 21 maps to Episodes 17-18), so the honest resume is ch 21 itself."
+    }
+  ],
+  "annotation_updates": [],
+  "type_corrections": [],
+  "repairs": [],
+  "flags_for_sean": [
+    "Eps 17-21 air chs 20-25 in straight book order — the S2 reorder is only eps 14-16. If the reorder-crossing detector flagged 18-20 because of the 14-16 crossing plus missing rows, these anchors close it; no rearranged annotation is warranted for 18-20.",
+    "Ep 20 has NO episode row in our data (rows stop at 19 'Harmful Bacteria' 2021-02-13) — like S1 eps 12/13, the anchor alone must drive the synthesized row (assemble.ts).",
+    "Fandom Episode 18 infobox says air date February 2, 2021, but our row (2021-02-06) and the weekly cadence (Jan 30 → Feb 6 → Feb 13) show Feb 6 is correct — fandom typo, no action."
+  ]
+}

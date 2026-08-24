@@ -1,0 +1,51 @@
+{
+  "series_id": "black-butler",
+  "summary": "Both holes promoted to full exact records at high confidence, and the reorder turns out to END at ep 3: eps 4-5 are clean, monotonic Jack the Ripper (Red Butler Arc) blocks. Ep 4 = chs 6-8 (townhouse/Undertaker, Viscount Druitt's party, auction rescue + next-morning murder), ep 5 = chs 9-11 (stakeout/Grelle reveal, Madam Red unmasked, her cinematic-record backstory and death), dovetailing exactly with the existing ep 6 anchor (12-14). Fandom episode infoboxes and the fandom chapter-side reverse map (ch6/7/8 -> ep4, ch9/10/11 -> ep5, ch5 -> 'N/A') agree; wiki.gg agrees but its eps 4-5 pages are word-for-word fandom forks again, so the genuinely independent corroboration is Wikipedia's chapter list via exact Japanese title equality (ep 4 = Suikyo 酔狂 = ch 7's title; ep 5 = Kaiko 邂逅 = ch 9's title), ScreenRant's arc-level row (eps 4-6 = Red Butler Arc ending ch 14), and animefillerlist (both Manga Canon). Notable: ch 5 ('The Butler, Busy', the servants' day-in-the-life chapter) was never animated — fandom marks it N/A — so the ch-5 gap between ep 3's continue point and ep 4's start is a permanent skip, not a pending graft.",
+  "anchors": [
+    {
+      "episode": 4,
+      "end_chapter": 8,
+      "start_chapter": 6,
+      "chapters_adapted": "6-8",
+      "volume": 2,
+      "confidence": "high",
+      "note": "JTR arc opening block: ch 6 (London townhouse, tea with Madam Red/Lau/Grelle, Undertaker visit), ch 7 (Viscount Druitt's party, Ciel in disguise, magic-show diversion), ch 8 (auction, Sebastian's rescue, morning paper shows a new murder). Fandom infobox 'Chapters 6-8'; fandom ch6/ch7/ch8 pages all reverse-map to Episode 4; ep 4's Japanese title Sono Shitsuji, Suikyo (酔狂) is exactly ch 7's title per Wikipedia's chapter list; animefillerlist Manga Canon. No ch-5 content — that chapter was never animated (fandom: episodes = N/A). Monotonic; the eps 2-3 shuffle does not extend here.",
+      "sources": [
+        "https://kuroshitsuji.fandom.com/wiki/04._His_Butler,_Capricious",
+        "https://kuroshitsuji.fandom.com/wiki/006._The_Butler,_Activated",
+        "https://kuroshitsuji.fandom.com/wiki/007._The_Butler,_Capricious",
+        "https://kuroshitsuji.fandom.com/wiki/008._The_Butler,_Commendable",
+        "https://kuroshitsuji.wiki.gg/wiki/04._His_Butler,_Capricious",
+        "https://en.wikipedia.org/wiki/List_of_Black_Butler_chapters",
+        "https://www.animefillerlist.com/shows/black-butler"
+      ]
+    },
+    {
+      "episode": 5,
+      "end_chapter": 11,
+      "start_chapter": 9,
+      "chapters_adapted": "9-11",
+      "volume": 3,
+      "confidence": "high",
+      "note": "Jack the Ripper reveal block: ch 9 (stakeout, Grelle unmasked as a reaper), ch 10 (Madam Red revealed as accomplice, fight begins), ch 11 (Madam Red's cinematic-record backstory, her death by Grelle's scythe). Fandom infobox 'Chapters 9-11'; fandom ch9/ch10/ch11 pages all reverse-map to Episode 5; ep 5's Japanese title Sono Shitsuji, Kaiko (邂逅) is exactly ch 9's title per Wikipedia's chapter list; dovetails with the verified ep 6 anchor (12-14: the Sebastian-Grelle fight, funeral, hunt). Volume 3 per both Wikipedia (v3 = chs 10-14) and stored boundaries.",
+      "sources": [
+        "https://kuroshitsuji.fandom.com/wiki/05._His_Butler,_Chance_Encounter",
+        "https://kuroshitsuji.fandom.com/wiki/009._The_Butler,_Encounters",
+        "https://kuroshitsuji.fandom.com/wiki/010._The_Butler,_Reflective",
+        "https://kuroshitsuji.fandom.com/wiki/011._The_Butler,_Retrospective",
+        "https://kuroshitsuji.wiki.gg/wiki/05._His_Butler,_Chance_Encounter",
+        "https://en.wikipedia.org/wiki/List_of_Black_Butler_chapters",
+        "https://www.animefillerlist.com/shows/black-butler"
+      ]
+    }
+  ],
+  "zone_level_only": [],
+  "continue_points": [],
+  "annotation_updates": [],
+  "type_corrections": [],
+  "repairs": [],
+  "flags_for_sean": [
+    "Ch 5 ('The Butler, Busy' — the servants' day-in-the-life chapter, vol 2) was never animated: fandom's chapter page marks episodes = N/A and wiki.gg leaves the field empty. So the gap between ep 3's continue point (ch 5) and ep 4's start (ch 6) is a PERMANENT skip, not a future graft — a viewer following continue points reads ch 5 after ep 3 and loses nothing. If the zone logic treats unadapted chapters inside an arc as pending, this one should be marked skipped-forever.",
+    "Lineage note (same as batch 15): kuroshitsuji.wiki.gg's eps 4-5 pages are word-for-word identical to fandom's (fork, not independent). The genuinely independent corroboration for these two anchors is Wikipedia's chapter list (exact Japanese title equality: ep 4 = ch 7's 酔狂/Suikyo, ep 5 = ch 9's 邂逅/Kaiko), ScreenRant's arc-level row (eps 4-6 = Red Butler Arc, arc ends ch 14 — consistent with 6-8/9-11/12-14), and animefillerlist (both Manga Canon). ScreenRant gives no per-episode split for 4-6, so the split itself rests on fandom's two mutually consistent maps (episode infobox + chapter-side reverse map) plus the title-equality pins at ch 7 and ch 9."
+  ]
+}

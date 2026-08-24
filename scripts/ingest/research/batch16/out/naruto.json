@@ -1,0 +1,47 @@
+{
+  "series_id": "naruto",
+  "summary": "Both reorder holes promoted to full exact records, closing the Sasuke-retrieval lead-in crossing between the batch-15 ep 107 anchor (173-175 + 184 graft) and the stored ep 110 anchor (182-183). Ep 108 = chs 176-177 (Kakashi separates the rooftop clash into the water towers, then ties Sasuke down for the talk that ends with the Sound Four's arrival); ep 109 = chs 178, 179, 181 with ch 180 deliberately skipped — ch 180 ('It's a Promise!!', the Lee-Guy surgery-resolve scene) was already adapted pre-filler in ep 100 (our stored ep 100 anchor ends at 180), so the anime omits it here and ep 109 jumps from 179 to 181, crossing the v20/v21 boundary to end on Sasuke leaving Konoha (ch 181's exact final beat: Sakura knocked out, Sound Four greet Sasuke). Three sources agree on both chapter sets (naruto.fandom episode infobox 'chapters' fields, listfist conversion table, animefillerguide table), and the fandom chapter summaries for 176-181 match the episode synopses beat for beat; MAL's ep 109 synopsis corroborates the content. Both continue points equal end+1 (178 and 182 respectively — 180 already read), so no separate continue_points needed; ep 109's end seams exactly into ep 110's stored start of 182. No repairs, no annotation changes.",
+  "anchors": [
+    {
+      "episode": 108,
+      "end_chapter": 177,
+      "start_chapter": 176,
+      "chapters_adapted": "176-177",
+      "volume": 20,
+      "confidence": "high",
+      "note": "Water-tower aftermath + Kakashi's revenge talk with Sasuke ending on the Sound Four's first attack (ch 177's last beat). Ch 177 is a re-adaptation — ep 99 touched it pre-filler — legal in this rewind zone. Resume = 178 (end+1).",
+      "sources": [
+        "https://naruto.fandom.com/wiki/Bitter_Rivals_and_Broken_Bonds",
+        "https://naruto.fandom.com/wiki/They_Who_are_Called_Rivals",
+        "https://naruto.fandom.com/wiki/The_Oto_Four",
+        "https://listfist.com/list-of-naruto-episode-to-chapter-conversion",
+        "https://www.animefillerguide.com/anime/naruto/"
+      ]
+    },
+    {
+      "episode": 109,
+      "end_chapter": 181,
+      "start_chapter": 178,
+      "chapters_adapted": "178-179, 181",
+      "volume": 21,
+      "confidence": "high",
+      "note": "Sound Four defeat Sasuke and extend Orochimaru's invitation (178-179), then Sasuke's departure/Sakura confession (181, ending on the Sound Four greeting him outside the village — ch 181's exact final beat). Ch 180 (Lee-Guy 'It's a Promise!!') skipped: already adapted pre-filler in ep 100 (stored anchor ends at 180). Crosses v20/v21 boundary; resume = 182 (end+1), seaming into ep 110's stored start 182.",
+      "sources": [
+        "https://naruto.fandom.com/wiki/Oto%27s_Invitation",
+        "https://naruto.fandom.com/wiki/Oto%27s_Invitation%E2%80%A6!!",
+        "https://naruto.fandom.com/wiki/Don%27t_Forget%E2%80%A6!!",
+        "https://naruto.fandom.com/wiki/The_Beginning_of_the_Battle%E2%80%A6!!",
+        "https://naruto.fandom.com/wiki/It%27s_a_Promise!!",
+        "https://listfist.com/list-of-naruto-episode-to-chapter-conversion",
+        "https://www.animefillerguide.com/anime/naruto/",
+        "https://myanimelist.net/anime/20/Naruto/episode/109"
+      ]
+    }
+  ],
+  "zone_level_only": [],
+  "continue_points": [],
+  "annotation_updates": [],
+  "type_corrections": [],
+  "repairs": [],
+  "flags_for_sean": []
+}

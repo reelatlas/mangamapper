@@ -1,0 +1,23 @@
+{
+  "series_id": "bleach-thousand-year-blood-war",
+  "summary": "Target ep 39 (Part 3 finale, 'THE VISIBLE ANSWER') promoted to a full exact record: END 659, own START 655, volume 72. The Bleach wiki episode template gives the page-precise set — 615 p.1 (flashback sliver), 647 pp.7-14 (completes the sliver ep35 deferred), 654 pp.16-17 (tail of ep37's cliffhanger), 655 full, 656 pp.2-17, 657 full, 658 pp.1-8, 659 pp.10-12 & 14-17 — and animefillerguide independently lists ep39 as 654-659 at chapter level. Despite the title, nothing from ch 660 ('The Visible Answer') airs in ep39; sportskeeda's finale comparison places ch-660 material in ep40 (stored end 661), and the batch-11 partial annotation {655-659} is confirmed and refined rather than contradicted. Non-monotonic values are honest: START 655 follows ep38's END 634 because ep38 was the deferred Friend block. Continue point is 658 (read through p.8 only; ep40 finishes 658-659 before 660-661). Standing caveat: 654 pp.6-15 are never animated anywhere.",
+  "anchors": [
+    {"episode": 39, "end_chapter": 659, "start_chapter": 655, "chapters_adapted": "647 (pp.7-14), 654 (pp.16-17), 655, 656 (pp.2-17), 657, 658 (pp.1-8), 659 (pp.10-12, 14-17)", "volume": 72,
+     "confidence": "high", "note": "P3 finale. Opens on zone leftovers — 647 pp.7-14 (union with ep35's pp.1-7,14-17 closes 647) and 654 pp.16-17 (ep37 stopped at p.5; pp.6-15 never animated) — then 655-659 with page-partial 656/658/659 (remainder in ep40). START 655 by majority rule (opening fragments are 10 pages, not the bulk). END 659, NOT 660: the title chapter is entirely deferred to ep40 per wiki trivia + sportskeeda finale comparison. A 1-page 615 flashback sliver (Mimihagi recall) is annotation-fact only per sliver rule. Volume 72 confirmed two ways (Wikipedia v72 = 653-663; fandom Chapter-655..659 redirects all target the MY LAST WORDS volume page). Fragment running order within the episode follows the wiki's listing (numeric); not independently documented.",
+     "sources": ["https://bleach.fandom.com/api.php?action=parse&page=The_Visible_Answer_(episode)&prop=wikitext&format=json", "https://www.animefillerguide.com/anime/bleach/", "https://sportskeeda.com/anime/bleach-tybw-part-3-finale-anime-vs-manga-explained", "https://en.wikipedia.org/wiki/List_of_Bleach_chapters_(424%E2%80%93686)", "http://blackjackrants.blogspot.com/2025/01/bleach-tybw-e39-review-tobiume-vs.html"]}
+  ],
+  "zone_level_only": [],
+  "continue_points": [
+    {"episode": 39, "continue_chapter": 658, "note": "end+1 would be 660, but honest resume is 658: contiguous full coverage runs 655-657 (656 p.1 splash only gap) and stops at 658 p.8; 658 pp.9-17 and 659 pp.1-9,13 air in ep40 before 660-661. Reader picking up 658 also note: 654 pp.6-15 were skipped by the anime permanently."}
+  ],
+  "annotation_updates": [
+    {"episodes": [39], "kind": "partial", "chapters": "655-659",
+     "note": "Refines the stored batch-11 gloss (titled after 660 but stops at 659; 660-661 open ep40 — confirmed): ep39 also carries the zone-closing fragments 647 pp.7-14 (completing ep35's deferral) and 654 pp.16-17 (ep37's cliffhanger tail; 654 pp.6-15 never animated), plus a 1-page 615 flashback sliver (Mimihagi recall — sliver, not a chapter credit). Page-partial coverage inside the block: 656 pp.2-17, 658 pp.1-8, 659 pp.10-12 & 14-17; the remainders air in ep40. Second half of the Gerard material is heavily rearranged/merged from short manga scenes with anime-original Visored/Renji-survival and Momo/Shinji choreography (Blackjack Rants E39)."}
+  ],
+  "type_corrections": [],
+  "repairs": [],
+  "flags_for_sean": [
+    "Running order of ep39's three opening fragments (615 p.1 / 647 pp.7-14 / 654 pp.16-17) is taken from the wiki's numeric listing; no source states their exact air order within the episode — harmless for anchor math (START/END unaffected) but noted.",
+    "animefillerguide agrees at chapter level (654-659) but may share lineage with fandom; the load-bearing boundary (END 659, ch 660 wholly deferred to ep40) is independently held up by sportskeeda's Part-3-finale comparison (660 content in ep40) and the stored agent-verified ep40 anchor (660-661 open ep40)."
+  ]
+}

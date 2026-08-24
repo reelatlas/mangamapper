@@ -1,0 +1,26 @@
+{
+  "series_id": "food-wars",
+  "summary": "Both reorder holes promoted to exact full records; nothing left zone-level. Ep 17 = chs 35-37 (Karaage Wars, aired after the swapped-forward father-son cookoff 40-44): fandom episode field lists 35-37 and the chapter-side reverse map agrees (ch 35 ep 17, ch 36 ep 17, ch 37 eps 17+18), title identity is exact (MAL ep title 'Kannou no Karaage' = chs 35-37 'Kannō no Karaage (1)-(3)' per Wikipedia's chapter list, Viz 'Fantastic Fried Chicken'), and the applied brackets close the arithmetic (ep 16 continue 35; ep 18 = 37 tail + 38-39 per fandom, stored end 39). Ep 57 = 201 (tail) + 202-205: fandom episode field lists 201-205, reverse map splits the edges exactly (ch 201 eps 56+57, chs 202-204 ep 57 only, ch 205 eps 57+58), ep title 'Erina no Kensan' = ch 202 'Erina no Kensan' exactly, and the batch-15 exact 56/58 records leave precisely this set by exclusion. MAL discussion threads for both episodes were checked and are silent on chapters, so the second leg of each anchor is the independent title-identity + bracket evidence rather than a reader post. One annotation update: the rearranged {195-199} zone should include ep 57 (it sits inside the lift - its 200-205 content airs before the 195-199 backstory), matching how the prelims zone tags every member episode.",
+  "anchors": [
+    {"episode": 17, "end_chapter": 37, "start_chapter": 35, "chapters_adapted": "35-37", "volume": 5,
+     "confidence": "high", "note": "Karaage Wars opener; fandom two-sided map (ep field 35-37; chs 35/36 ep-17 only, ch 37 eps 17+18 - ends mid-37) + exact title identity (ep 'Kannou no Karaage' = chs 35-37 'Kannō no Karaage (1)-(3)', Viz 'Fantastic Fried Chicken') + bracket closure (ep 16 continue 35, ep 18 = 37 tail + 38-39); ANN ep-17 review independently confirms the arc's repositioned place in the timeline",
+     "sources": ["https://shokugekinosoma.fandom.com/wiki/Episode_17:_Sensual_Karaage", "https://shokugekinosoma.fandom.com/wiki/Chapter_37:_Sensual_Karaage_(3)", "https://en.wikipedia.org/wiki/List_of_Food_Wars!:_Shokugeki_no_Soma_chapters", "https://www.animenewsnetwork.com/review/food-wars-shokugeki-no-soma/episode-17/.91160", "https://myanimelist.net/anime/28171/Shokugeki_no_Souma/episode/17"]},
+    {"episode": 57, "end_chapter": 205, "start_chapter": 202, "chapters_adapted": "201 (tail), 202-205", "volume": 24,
+     "confidence": "high", "note": "Opens finishing ch 201 (ch 201 field: eps 56+57; majority rule START = 202), runs 202-205 with ep 58 taking 205's present-day tail (ch 205 field: eps 57+58); exact title identity ep 'Erina no Kensan' = ch 202 'Erina no Kensan' (Viz 'Erina's Training'); batch-15 exact ep 56 (end 201) and ep 58 (195-199 + 205 tail, continue 206) leave exactly this set",
+     "sources": ["https://shokugekinosoma.fandom.com/wiki/Episode_57:_Erina%27s_Diligent_Studies", "https://shokugekinosoma.fandom.com/wiki/Chapter_202:_Erina%27s_True_Studies", "https://shokugekinosoma.fandom.com/wiki/Chapter_205:_The_Creator_of_Happiness", "https://en.wikipedia.org/wiki/List_of_Food_Wars!:_Shokugeki_no_Soma_chapters", "https://myanimelist.net/anime/36949/Shokugeki_no_Souma__San_no_Sara_-_Tootsuki_Ressha-hen/episode/8"]}
+  ],
+  "zone_level_only": [],
+  "continue_points": [
+    {"episode": 17, "continue_chapter": 37, "note": "ends mid-ch 37 (ch 37 field lists eps 17+18; ep 18 finishes it); note reader has already consumed 40-44 via the eps 15-16 arc swap"},
+    {"episode": 57, "continue_chapter": 195, "note": "chs 195-199 (Joichiro/Gin backstory) still unseen - the anime airs them next as ep 58; honest resume is 195, not 206 (matches applied ep-56 continue 195 and ep-58 continue 206 semantics)"}
+  ],
+  "annotation_updates": [
+    {"episodes": [56, 57, 58], "kind": "rearranged", "chapters": "195-199", "note": "Zone membership: ep 57 sits inside the Joichiro-backstory lift (its 200-205 content airs BEFORE the 195-199 chapters, which follow as ep 58) - stored annotation tagged only eps 56 and 58; include 57 like the prelims zone tags every member episode. Zone facts otherwise unchanged."}
+  ],
+  "type_corrections": [],
+  "repairs": [],
+  "flags_for_sean": [
+    "MAL discussion threads for both target episodes (topicid 1411896 for ep 17, topicid 1732030 for S3-Ressha ep 8 = our 57) contain no chapter-mapping posts; the second evidence leg for each anchor is exact Japanese title identity (MAL episode romaji = Wikipedia/fandom chapter romaji) plus bracket arithmetic from applied exact anchors, not a reader post. Both anchors still rest on 3+ agreeing citations.",
+    "Numbering conversions applied: our ep 57 = MAL 'San no Sara - Tootsuki Ressha-hen' episode 8 = S3 episode 20 overall (fandom pages use our cumulative numbering directly)."
+  ]
+}

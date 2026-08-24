@@ -1,0 +1,19 @@
+{
+  "series_id": "nisekoi",
+  "summary": "Target ep 26 (S2E6 'Delicious') promoted to an exact full record at high confidence: chapters 67-69, NOT the ~61-63 the context guessed. The fandom episode page states it adapts 'Delicious' + 'That Is' + 'Almost'; the fandom chapter pages number them 067/068/069 (all First Year Arc, volume 'Almost' = v8) and all three reverse-map to the episode; Wikipedia's chapter list independently confirms 67='Delicious', 68='That Is', 69='Almost' in v8, and the episode title exactly equals ch 67's title (Oishii, per MAL and Wikipedia episode lists) — the same title-match pattern batch 15 rated high. Despite sitting after the ch-104 graft and the Haru trivia scare, this is NOT another anachronistic graft: the Haru note just means her cameo in ch 67 (instructing Kosaki) was cut since she wasn't introduced yet. The episode is monotonic relative to ep 24 (61-63): it skips 63's remainder/65/66 (66 'Changing Seats' explicitly 'passed over' per fandom; 64 'Shrine Maiden' went to the Loss/Shrine Maiden OVA) and condenses ch 67's first half to a 45-second cold open. Continue = 70 = end+1, so no override; 70-74 are then never adapted (ep 27 jumps to 75-76). No repairs.",
+  "anchors": [
+    {"episode": 26, "end_chapter": 69, "start_chapter": 67, "chapters_adapted": "67 (first half condensed to 45s cold open), 68-69", "volume": 8,
+     "confidence": "high",
+     "note": "Ep title = ch 67 title exactly (Oishii). Fandom trivia: adapts Delicious(67)+That Is(68)+Almost(69); all three chapter pages reverse-map to this episode; Wikipedia chapter list confirms numbers/titles/v8. Valentine's arc events (Marika's statue=68, Chitoge's salt chocolate=69) match MAL thread content. Skipped en route: rest of 63, 65, 66 (64 = Shrine Maiden OVA); 66 explicitly 'passed over' per fandom.",
+     "sources": ["https://nisekoi.fandom.com/wiki/Delicious_(episode)", "https://nisekoi.fandom.com/wiki/Delicious", "https://nisekoi.fandom.com/wiki/That_Is", "https://nisekoi.fandom.com/wiki/Almost_(chapter)", "https://en.wikipedia.org/wiki/List_of_Nisekoi_chapters", "https://myanimelist.net/anime/27787/Nisekoi_/episode/6", "https://mangakatana.com/manga/nisekoi.553/c67"]}
+  ],
+  "zone_level_only": [],
+  "continue_points": [],
+  "annotation_updates": [],
+  "type_corrections": [],
+  "repairs": [],
+  "flags_for_sean": [
+    "Continue for ep 26 is plain end+1 = 70 (no override entry): chs 70-74 are never TV-adapted (ep 27 jumps to 75-76), but a reader resuming at 70 reads forward seamlessly.",
+    "Minor note-only discrepancy in the applied batch-15 ep-28 record: its note calls the 'Work' near-namesake 'ch 38 (Hataraku)', but Wikipedia's chapter list has ch 71 'Work' (v8). No stored field is affected — ep 28's end=77 'Work!' was verified via chapter-page reverse-map — but the note text cites the wrong namesake number."
+  ]
+}

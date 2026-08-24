@@ -1,0 +1,30 @@
+{
+  "series_id": "tokyo-ghoul-re",
+  "summary": "All 4 reorder holes (eps 19-22) promoted to full exact records with own starts, page splits, and non-contiguous skips — no zone_level_only verdicts needed. Unlike the eps 14-18 interleave, the back half turns out to be a clean per-episode decomposition of the 121-164 zone: heavily abridged (whole-chapter skips 127, 140-142, 145, 147, 154, 161 — exactly batch 9's stored skip set, confirmed) but monotonic BETWEEN episodes: ep 19 = 121-132 (many page fragments), ep 20 = 133-144 (fragments at 135/138/139/143/144), ep 21 = 146-156 (147, 154 skipped), ep 22 = 157-164 (161 skipped). Fandom episode pages and animefillerguide agree chapter-for-chapter on all four; independent corroboration from Wikipedia episode summaries (event-level, every END's final scene matches the END chapter's fandom summary content exactly: Dragon emergence = 144, Mutsuki/Quinx tears = 156, Kaneki-Hide rooftop resolve = 164) and a MAL episode-7 discussion thread (manga readers pin ch 125 inside ep 19). Volume fields on fandom chapter infoboxes (132→v12, 144→v13, 156/164→v15) match the seeded boundary table. Ep 18's batch-15 continue point (121, 'ep 19 starts 121 p.7-11') is confirmed by ep 19's list.",
+  "anchors": [
+    {"episode": 19, "end_chapter": 132, "start_chapter": 121, "chapters_adapted": "121 (p.7-11, 18), 122-125, 126 (p.1-5, 17-19), 128 (p.16-19), 129 (p.4-6, 18), 130 (p.2-10), 131 (p.16-18), 132", "volume": 12,
+     "confidence": "high", "note": "HOLE resolved: opens on the 121 fragment (121 p.1-6 adapted nowhere; ep 18's stored continue→121 confirmed), full run 122-125 (Touka/Kaneki, ch 125 pinned by MAL manga readers), then abridged fragments of 126-131 (127 skipped: Takeomi-Yoriko wedding aftermath compressed) and 132 full — marriage decision + underground ghoul wedding = the episode's culminating content. Closing Furuta/Clowns prep stinger not clearly attributable to a listed chapter (fandom: scenes merged/added for anime).",
+     "sources": ["https://tokyoghoul.fandom.com/wiki/Re:_Episode_19", "https://animefillerguide.com/2020/05/tokyo-ghoul-filler-list.html", "https://en.wikipedia.org/wiki/Tokyo_Ghoul:re_(TV_series)", "https://myanimelist.net/forum/?topicid=1752393", "https://tokyoghoul.fandom.com/wiki/Re:_Chapter_132"]},
+    {"episode": 20, "end_chapter": 144, "start_chapter": 133, "chapters_adapted": "133-134, 135 (p.8-11), 136-137, 138 (p.18-19), 139 (p.11-16), 143 (p.5-11), 144 (p.6, 13-19)", "volume": 13,
+     "confidence": "high", "note": "HOLE resolved: wedding-banquet invasion (133) through the Goat Wipeout Op; 140-142 fully skipped (Roma/Shikorae past, Urie hallucination cut per fandom differences list). Final scene = Kaneki devouring the Oggai and Dragon erupting across Tokyo = ch 144 'A' p.13-19 exactly (fandom ch-144 summary ends on it). END=144 is running-order-true.",
+     "sources": ["https://tokyoghoul.fandom.com/wiki/Re:_Episode_20", "https://animefillerguide.com/2020/05/tokyo-ghoul-filler-list.html", "https://en.wikipedia.org/wiki/Tokyo_Ghoul:re_(TV_series)", "https://tokyoghoul.fandom.com/wiki/Re:_Chapter_144"]},
+    {"episode": 21, "end_chapter": 156, "start_chapter": 146, "chapters_adapted": "146, 148-153, 155-156", "volume": 15,
+     "confidence": "high", "note": "HOLE resolved: opens on rampaging Dragon (146; 145 skipped everywhere), alliance + metal-detector search (148-153, 147 skipped), ends with Mutsuki vs Urie/Saiko resolving in tears ('part of our family') = ch 156 'Interior'... final scene content matches ch 156's fandom summary exactly (Saiko knocks the knife away, Mutsuki bursts into tears). 154 skipped everywhere.",
+     "sources": ["https://tokyoghoul.fandom.com/wiki/Re:_Episode_21", "https://animefillerguide.com/2020/05/tokyo-ghoul-filler-list.html", "https://en.wikipedia.org/wiki/Tokyo_Ghoul:re_(TV_series)", "https://tokyoghoul.fandom.com/wiki/Re:_Chapter_156"]},
+    {"episode": 22, "end_chapter": 164, "start_chapter": 157, "chapters_adapted": "157-160, 162-164", "volume": 15,
+     "confidence": "high", "note": "HOLE resolved: Kaneki/Rize mind-realm (157 'Sign') through extraction and Furuta's ROS broadcast (162-164; 161 skipped everywhere). Final scene = Kaneki-Hide rooftop reveal + resolve to fight = ch 164 'The White One' ending exactly per fandom ch-164 summary. Clean monotonic run; continue = 165 = end+1 (ep 23 anchor end=172, v16 starts at 165).",
+     "sources": ["https://tokyoghoul.fandom.com/wiki/Re:_Episode_22", "https://animefillerguide.com/2020/05/tokyo-ghoul-filler-list.html", "https://en.wikipedia.org/wiki/Tokyo_Ghoul:re_(TV_series)", "https://tokyoghoul.fandom.com/wiki/Re:_Chapter_164"]}
+  ],
+  "zone_level_only": [],
+  "continue_points": [
+    {"episode": 20, "continue_chapter": 146, "note": "END=144 but 145 is adapted in no episode (permanent skip, per batch-9 cut list + both chapter tables); the anime's next material is 146 (ep 21 start). A strict no-gap reader resumes at 145."}
+  ],
+  "annotation_updates": [],
+  "type_corrections": [],
+  "repairs": [],
+  "flags_for_sean": [
+    "Batch-9 zone annotation for eps 19-22 (abridged {121-164}, cuts 127, 140-142, 145, 147, 154, 161) is CONFIRMED exactly — no boundary or skip-set change needed; the zone is now fully decomposed into per-episode anchors, and unlike eps 14-18 there is no between-episode interleaving here (purely abridged, monotonic). The 'reorder hole' framing dissolves for this stretch: reordering is only intra-episode scene shuffling (fandom: 'some scenes are rearranged and merged, and some are added').",
+    "Ep 19's closing scene (Furuta and the Clowns prepping the 'final secret weapon') is not clearly attributable to any chapter in the fandom list — likely an anime-original/merged stinger setting up ep 20; recorded in the anchor note, no chapter number invented for it.",
+    "Ch 121 pages 1-6 are adapted in no episode (ep 19 uses only p.7-11, 18; eps 17-18 never reach 121) — a page-level micro-gap at the zone seam, consistent with batch 15's ep-18 continue point of 121."
+  ]
+}
