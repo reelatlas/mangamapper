@@ -1,0 +1,26 @@
+{
+  "series_id": "twin-star-exorcists",
+  "summary": "Episodes 21-50 adapt NOTHING: every consulted source agrees the anime follows the manga only through ep 20 (manga ch 15, the pre-timeskip material) and from ep 21 onward tells a wholly anime-original story through its own finale — there are no periodic returns to manga material anywhere in 21-50, so the correct deliverable is type corrections plus a divergence annotation, not anchors. The anime performs its own version of the manga's 2-year timeskip at ep 21 (fandom ep-21 synopsis opens 'Two years have passed'), then runs an episodic original stretch (~21-31) followed by a serialized original arc built around the anime-only character Sae and final antagonist Abe no Seimei (~32-50), ending with an original Yuto battle that contradicts the manga (anime kills Yuto; in the manga he survives well past this point and dies much later under different circumstances). Ep 20 itself is mixed: only the first half (to ~14:05) adapts ch 14-15; the back half (Benio losing her legs, Kamui's Kegare limbs) is anime-original — animefillerguide types it Mixed. Because the anime stops exactly at the timeskip boundary, the continue point is a clean ch 16 (= END+1 of the ep-20 anchor), matching the DB's continue_from_chapter=16. Filler-list sites label 21-50 'filler'; typed here as anime-only-canon since it is the anime's serialized canonical continuation and finale, not throwaway episodic filler.",
+  "anchors": [],
+  "continue_points": [
+    {"episode": 50, "continue_chapter": 16, "note": "After finishing the series, resume at ch 16 (first post-timeskip chapter); nothing after ch 15 was ever adapted — eps 21-50 are anime-original"},
+    {"episode": 20, "continue_chapter": 16, "note": "Equals END+1 (ep 20 END=15) but stated for clarity: ep 20's second half is anime-original, no manga content is skipped by stopping here"}
+  ],
+  "annotations": [
+    {"episodes": [21, 50], "kind": "divergence", "chapters": "16+", "note": "Full anime-original continuation: the anime replaces the manga's post-timeskip story (ch 16+) with its own — episodic stretch ~21-31, then serialized Sae / Abe no Seimei arc ~32-50 with an original ending (Yuto killed; he survives in the manga). Never returns to manga material."},
+    {"episodes": [21, 50], "kind": "loose_parallel", "chapters": "16+", "note": "Shares only skeleton elements with later manga (2-year timeskip, Mayura's growth as an exorcist, Twelve Guardians, a Yuto rematch) — all executed with different events, order, and outcomes; no episode adapts any specific chapter."},
+    {"episodes": [20, 20], "kind": "partial", "chapters": "14-15", "note": "Canon only to ~14:05 (ch 14-15); back half (Benio's legs lost, Kamui's Kegare limbs, timeskip setup) is anime-original — animefillerguide types the episode Mixed."}
+  ],
+  "type_corrections": [
+    {"episodes": [20], "type": "mixed", "note": "Currently typed canon; first half adapts ch 14-15, second half is anime-original (episode row note in DB already says content past 14:05 does not follow the manga).", "sources": ["https://www.animefillerguide.com/anime/twin-star-exorcists/", "https://wheredoestheanimeleaveoff.com/where-does-the-twin-star-exorcists-anime-leave-off-in-the-manga/"]},
+    {"episodes": [21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50], "type": "anime-only-canon", "note": "Entire tail is anime-original with no manga returns: Wikipedia — 'The first twenty episodes are adapted from the manga's storyline, but beginning with episode 21, the series diverges into an original story'; animefillerguide types all of 21-50 non-manga ('filler', ch N/A); wheredoestheanimeleaveoff confirms full divergence at ~ep 20 and continue point ch 16. Typed anime-only-canon (not filler) because 21-50 is the anime's serialized canonical continuation and finale (Sae / Abe no Seimei arc), though filler-list sites label it 'filler'.", "sources": ["https://en.wikipedia.org/wiki/List_of_Twin_Star_Exorcists_episodes", "https://www.animefillerguide.com/anime/twin-star-exorcists/", "https://wheredoestheanimeleaveoff.com/where-does-the-twin-star-exorcists-anime-leave-off-in-the-manga/"]}
+  ],
+  "repairs": [],
+  "structure": {
+    "notes": "Single 50-episode season (AniList 21499), our numbering = broadcast numbering, no conversion needed. Canon frontier is ep 20 / ch 15 — existing anchors ep 1-20 agree with animefillerguide and stand; the anime stops exactly at the manga's 2-year timeskip (ch 15|16 boundary, vol 4|5), making continue_from_chapter=16 exact. Out-of-range observation (no action taken): animefillerguide's table also lists ep 5 and eps 10-16 as filler and ep 7 as canon adapting ch 4 (out of running order between ep 6 [ch 6] and ep 8 [ch 6-7]) — our anchor set already skips those episodes, consistent. animefillerlist.com has no page for this series (both URL slugs 404).",
+    "order_only": []
+  },
+  "flags_for_sean": [
+    "Vocabulary call: eps 21-50 typed anime-only-canon rather than filler — filler-list sources label the whole tail 'filler', but it is the anime's serialized original continuation and finale (Sae/Abe no Seimei arc). Flip to filler if the catalog convention prefers the filler-list labeling for never-adapted original endings."
+  ]
+}

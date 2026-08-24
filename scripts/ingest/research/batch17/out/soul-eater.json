@@ -1,0 +1,19 @@
+{
+  "series_id": "soul-eater",
+  "summary": "Eps 37-38 are the anime's last real contact with the manga before the fully anime-original ending (eps 39-51, already typed anime-only-canon). Fandom's per-episode pages are explicit: ep 37 'does not have any corresponding chapters' (it follows up manga Brew events and features Joe Buttataki's arrival, a chapter-38 element, but adapts nothing directly), so it gets no anchor — only a loose_parallel annotation. Ep 38 is the true final manga anchor: fandom's episode infobox gives 'anime correspondent = Chapter 38 and Chapter 39', cross-checked by the reverse fields on the Chapter 38 page (anime correspondent = Episode 38) and Chapter 39 prose (Black☆Star vs Kid duel adapted as Episode 38); the adaptation is partial and heavily altered (Joe's role changed, ch 39's Joe death and Maka's Medusa discovery never adapted). Typing of ep 37 is disputed between sources (fandom: no chapters; animefillerlist: Manga Canon through 38) — flagged rather than corrected.",
+  "anchors": [
+    {"episode": 38, "end_chapter": 39, "start_chapter": 38, "chapters_adapted": "38-39 (partial: Black☆Star vs Kid duel from ch 39; Joe's arrival/mole setup from ch 38; heavily altered)", "volume": 10,
+     "confidence": "medium", "note": "Final manga-contact episode; fandom episode infobox 'anime correspondent = Chapter 38 and Chapter 39', reverse-confirmed on both chapter pages; AFL corroborates ep 38 as the last Manga Canon episode. Marked medium because the adaptation is loose and no independent source names the exact chapters.", "sources": ["https://souleater.fandom.com/api.php?action=parse&page=Episode_38&prop=wikitext&format=json", "https://souleater.fandom.com/api.php?action=parse&page=Chapter_38&prop=wikitext&format=json", "https://souleater.fandom.com/api.php?action=parse&page=Chapter_39&prop=wikitext&format=json", "https://www.animefillerlist.com/shows/soul-eater"]}
+  ],
+  "continue_points": [
+    {"episode": 38, "continue_chapter": 38, "note": "Chapters 38-39 only partially/loosely adapted (ch 38's Marie reunion + mole investigation and ch 39's Joe death / Maka's Medusa discovery never happen in the anime), so the honest resume is ch 38 itself, not END+1; divergence guides commonly suggest backing up to ch 36 for full context."}
+  ],
+  "annotations": [
+    {"episodes": [37], "kind": "loose_parallel", "chapters": "38", "note": "Follows up manga Brew-arc events and features Joe Buttataki's arrival to Death City (a ch-38 event), but fandom states the episode 'does not have any corresponding chapters' — no anchor issued."},
+    {"episodes": [38], "kind": "divergence", "chapters": "38-39", "note": "Partial/altered adaptation: Joe arrives as a demon-tool engineer instead of an internal investigator; ch 39's fatal outcome and Maka's discovery are dropped. After this episode the anime is entirely original."}
+  ],
+  "type_corrections": [],
+  "repairs": [],
+  "structure": {"notes": "Divergence sequence confirmed: ep 36 = ch 36-37 (existing anchor holds), ep 37 = no corresponding chapters, ep 38 = loose partial of ch 38-39, eps 39-51 = anime-original ending (already typed anime-only-canon). Sources disagree on where the clean break is: animefillerlist keeps Manga Canon through ep 38; syou-getsu.biz claims anime-original from ep 36 onward; fandom (most granular) is the basis used.", "order_only": []},
+  "flags_for_sean": ["ep 37 typing unresolved: currently [canon]; souleater.fandom Episode 37 page says it has NO corresponding chapters (would suggest anime-only-canon like eps 39-41), but animefillerlist classes 18-38 as Manga Canon and syou-getsu classes it canon while calling eps 36+ anime-original. Only one source supports a correction, so none issued — links: https://souleater.fandom.com/wiki/Episode_37 , https://www.animefillerlist.com/shows/soul-eater , https://www.syou-getsu.biz/anime/en/filler-lists/soul-eater/"]
+}

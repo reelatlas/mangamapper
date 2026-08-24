@@ -1,0 +1,801 @@
+{
+ "series_id": "ace-of-the-diamond-act-ii",
+ "summary": "Eps 1-52 adapt Act II chapters 1-169 (its own numbering; vols 1-19) strictly linearly and contiguously at ~3.3 ch/ep: Spring Koshien opening, the new first-years, spring inter-squad/Kanto play, and the summer qualifiers through the Yura match and into the next round. The fandom wiki states an exact chapter range on every episode page, the chain is perfectly contiguous, and ja.wikipedia's episode titles are chapter-title namesakes falling inside the claimed range for 48 of 51 mapped episodes — independent structural corroboration. Ep 29 is a recap (filler, confirmed by animefillerlist); eps 1 and 4 are the only mixed episodes, matching stored types, so no type corrections. The stored ep52 anchor (ch259 v30, 'mu') is wrong for THIS season: it matches Act II Season 2 Part 1's 2026 endpoint (continue at vol 29 ch 260 per wheredoestheanimeleaveoff) and is repaired to ch169 v19 on three sources. MangaShed reports the finale's last scene teases ch189; END kept at 169 per the no-inflation rule.",
+ "anchors": [
+  {
+   "episode": 1,
+   "end_chapter": 2,
+   "start_chapter": 1,
+   "chapters_adapted": "1-2 (first half of 2)",
+   "volume": 1,
+   "confidence": "high",
+   "note": "fandom ep page: Act II ch 1-2 (first half of 2); ep title = ch 1 title (ja.wiki ep list vs Act II ch list) — independent in-range corroboration; ch1 + first half of ch2; also recap/graft from Act I (ep typed mixed)",
+   "sources": [
+    "https://diamondnoace.fandom.com/wiki/Beyond_the_Dream",
+    "https://ja.wikipedia.org/wiki/%E3%83%80%E3%82%A4%E3%83%A4%E3%81%AEA",
+    "https://www.animefillerlist.com/shows/ace-diamond-act-ii"
+   ]
+  },
+  {
+   "episode": 2,
+   "end_chapter": 4,
+   "start_chapter": 3,
+   "chapters_adapted": "2 (second half), 3-4",
+   "volume": 1,
+   "confidence": "high",
+   "note": "fandom ep page: Act II ch 2 (second half), 3-4; ep title = ch 4 title (ja.wiki ep list vs Act II ch list) — independent in-range corroboration; leading tail = 2nd half of ch2 (not bulk) -> start 3",
+   "sources": [
+    "https://diamondnoace.fandom.com/wiki/Wanna_Take_The_Mound",
+    "https://ja.wikipedia.org/wiki/%E3%83%80%E3%82%A4%E3%83%A4%E3%81%AEA"
+   ]
+  },
+  {
+   "episode": 3,
+   "end_chapter": 7,
+   "start_chapter": 5,
+   "chapters_adapted": "5-7",
+   "volume": 1,
+   "confidence": "medium",
+   "note": "fandom ep page: Act II ch 5-7; ep title = ch 5 title (ja.wiki ep list vs Act II ch list) — independent in-range corroboration",
+   "sources": [
+    "https://diamondnoace.fandom.com/wiki/Blessed_by_the_Baseball_Gods",
+    "https://ja.wikipedia.org/wiki/%E3%83%80%E3%82%A4%E3%83%A4%E3%81%AEA"
+   ]
+  },
+  {
+   "episode": 4,
+   "end_chapter": 9,
+   "start_chapter": 8,
+   "chapters_adapted": "8-9 (9 partial)",
+   "volume": 1,
+   "confidence": "high",
+   "note": "fandom ep page: Act II ch 8-9 (9 partial); ep title = ch 9 title (ja.wiki ep list vs Act II ch list) — independent in-range corroboration; ch9 (ep namesake) split across eps 4/5",
+   "sources": [
+    "https://diamondnoace.fandom.com/wiki/The_Day_It_Began",
+    "https://ja.wikipedia.org/wiki/%E3%83%80%E3%82%A4%E3%83%A4%E3%81%AEA"
+   ]
+  },
+  {
+   "episode": 5,
+   "end_chapter": 12,
+   "start_chapter": 9,
+   "chapters_adapted": "9 (remainder), 10-12",
+   "volume": 2,
+   "confidence": "high",
+   "note": "fandom ep page: Act II ch 9 (remainder), 10-12; ep title = ch 12 title (ja.wiki ep list vs Act II ch list) — independent in-range corroboration; resumes in ch9 (unknown proportion); split noted",
+   "sources": [
+    "https://diamondnoace.fandom.com/wiki/Joining",
+    "https://ja.wikipedia.org/wiki/%E3%83%80%E3%82%A4%E3%83%A4%E3%81%AEA"
+   ]
+  },
+  {
+   "episode": 6,
+   "end_chapter": 15,
+   "start_chapter": 13,
+   "chapters_adapted": "13-15",
+   "volume": 2,
+   "confidence": "medium",
+   "note": "fandom ep page: Act II ch 13-15; ep title = ch 14 title (ja.wiki ep list vs Act II ch list) — independent in-range corroboration",
+   "sources": [
+    "https://diamondnoace.fandom.com/wiki/Go_Straight",
+    "https://ja.wikipedia.org/wiki/%E3%83%80%E3%82%A4%E3%83%A4%E3%81%AEA"
+   ]
+  },
+  {
+   "episode": 7,
+   "end_chapter": 19,
+   "start_chapter": 16,
+   "chapters_adapted": "16-19",
+   "volume": 3,
+   "confidence": "medium",
+   "note": "fandom ep page: Act II ch 16-19; ep title = ch 16 title (ja.wiki ep list vs Act II ch list) — independent in-range corroboration",
+   "sources": [
+    "https://diamondnoace.fandom.com/wiki/KING",
+    "https://ja.wikipedia.org/wiki/%E3%83%80%E3%82%A4%E3%83%A4%E3%81%AEA"
+   ]
+  },
+  {
+   "episode": 8,
+   "end_chapter": 22,
+   "start_chapter": 20,
+   "chapters_adapted": "20-22",
+   "volume": 3,
+   "confidence": "high",
+   "note": "fandom ep page: Act II ch 20-22; ep title = ch 22 title (ja.wiki ep list vs Act II ch list) — independent in-range corroboration",
+   "sources": [
+    "https://diamondnoace.fandom.com/wiki/Camphor",
+    "https://ja.wikipedia.org/wiki/%E3%83%80%E3%82%A4%E3%83%A4%E3%81%AEA"
+   ]
+  },
+  {
+   "episode": 9,
+   "end_chapter": 25,
+   "start_chapter": 23,
+   "chapters_adapted": "23-25",
+   "volume": 3,
+   "confidence": "high",
+   "note": "fandom ep page: Act II ch 23-25; ep title = ch 25 title (ja.wiki ep list vs Act II ch list) — independent in-range corroboration",
+   "sources": [
+    "https://diamondnoace.fandom.com/wiki/Battle,_Battle",
+    "https://ja.wikipedia.org/wiki/%E3%83%80%E3%82%A4%E3%83%A4%E3%81%AEA"
+   ]
+  },
+  {
+   "episode": 10,
+   "end_chapter": 28,
+   "start_chapter": 26,
+   "chapters_adapted": "26-28",
+   "volume": 4,
+   "confidence": "medium",
+   "note": "fandom ep page: Act II ch 26-28; ep title = ch 27 title (ja.wiki ep list vs Act II ch list) — independent in-range corroboration",
+   "sources": [
+    "https://diamondnoace.fandom.com/wiki/Debut",
+    "https://ja.wikipedia.org/wiki/%E3%83%80%E3%82%A4%E3%83%A4%E3%81%AEA"
+   ]
+  },
+  {
+   "episode": 11,
+   "end_chapter": 32,
+   "start_chapter": 29,
+   "chapters_adapted": "29-32 (first half of 32)",
+   "volume": 4,
+   "confidence": "medium",
+   "note": "fandom ep page: Act II ch 29-32 (first half of 32); ep title = ch 30 title (ja.wiki ep list vs Act II ch list) — independent in-range corroboration; ends first half of ch32",
+   "sources": [
+    "https://diamondnoace.fandom.com/wiki/Where_You_Look",
+    "https://ja.wikipedia.org/wiki/%E3%83%80%E3%82%A4%E3%83%A4%E3%81%AEA"
+   ]
+  },
+  {
+   "episode": 12,
+   "end_chapter": 35,
+   "start_chapter": 33,
+   "chapters_adapted": "32 (second half), 33-35 (first half of 35)",
+   "volume": 4,
+   "confidence": "medium",
+   "note": "fandom ep page: Act II ch 32 (second half), 33-35 (first half of 35); ep title = ch 33 title (ja.wiki ep list vs Act II ch list) — independent in-range corroboration; tail of 32 not bulk -> start 33; ends first half of 35",
+   "sources": [
+    "https://diamondnoace.fandom.com/wiki/Selfish",
+    "https://ja.wikipedia.org/wiki/%E3%83%80%E3%82%A4%E3%83%A4%E3%81%AEA"
+   ]
+  },
+  {
+   "episode": 13,
+   "end_chapter": 37,
+   "start_chapter": 36,
+   "chapters_adapted": "35 (second half), 36-37",
+   "volume": 4,
+   "confidence": "high",
+   "note": "fandom ep page: Act II ch 35 (second half), 36-37; ep title = ch 37 title (ja.wiki ep list vs Act II ch list) — independent in-range corroboration; tail of 35 not bulk -> start 36",
+   "sources": [
+    "https://diamondnoace.fandom.com/wiki/Batting_First",
+    "https://ja.wikipedia.org/wiki/%E3%83%80%E3%82%A4%E3%83%A4%E3%81%AEA"
+   ]
+  },
+  {
+   "episode": 14,
+   "end_chapter": 40,
+   "start_chapter": 38,
+   "chapters_adapted": "38-40",
+   "volume": 5,
+   "confidence": "medium",
+   "note": "fandom ep page: Act II ch 38-40; ep title = ch 39 title (ja.wiki ep list vs Act II ch list) — independent in-range corroboration",
+   "sources": [
+    "https://diamondnoace.fandom.com/wiki/Presence",
+    "https://ja.wikipedia.org/wiki/%E3%83%80%E3%82%A4%E3%83%A4%E3%81%AEA"
+   ]
+  },
+  {
+   "episode": 15,
+   "end_chapter": 43,
+   "start_chapter": 41,
+   "chapters_adapted": "41-43",
+   "volume": 5,
+   "confidence": "medium",
+   "note": "fandom ep page: Act II ch 41-43",
+   "sources": [
+    "https://diamondnoace.fandom.com/wiki/My_Role",
+    "https://ja.wikipedia.org/wiki/%E3%83%80%E3%82%A4%E3%83%A4%E3%81%AEA"
+   ]
+  },
+  {
+   "episode": 16,
+   "end_chapter": 46,
+   "start_chapter": 44,
+   "chapters_adapted": "44-46",
+   "volume": 5,
+   "confidence": "high",
+   "note": "fandom ep page: Act II ch 44-46; ep title = ch 46 title (ja.wiki ep list vs Act II ch list) — independent in-range corroboration",
+   "sources": [
+    "https://diamondnoace.fandom.com/wiki/Only_After_You%27ve_Won",
+    "https://ja.wikipedia.org/wiki/%E3%83%80%E3%82%A4%E3%83%A4%E3%81%AEA"
+   ]
+  },
+  {
+   "episode": 17,
+   "end_chapter": 49,
+   "start_chapter": 47,
+   "chapters_adapted": "47-49 (to penultimate page of 49)",
+   "volume": 6,
+   "confidence": "high",
+   "note": "fandom ep page: Act II ch 47-49 (to penultimate page of 49); ep title = ch 49 title (ja.wiki ep list vs Act II ch list) — independent in-range corroboration; only last page of 49 remains -> resume 50 (no continue entry)",
+   "sources": [
+    "https://diamondnoace.fandom.com/wiki/Three_Months",
+    "https://ja.wikipedia.org/wiki/%E3%83%80%E3%82%A4%E3%83%A4%E3%81%AEA"
+   ]
+  },
+  {
+   "episode": 18,
+   "end_chapter": 52,
+   "start_chapter": 50,
+   "chapters_adapted": "49 (last page), 50-52 (to penultimate page of 52)",
+   "volume": 6,
+   "confidence": "high",
+   "note": "fandom ep page: Act II ch 49 (last page), 50-52 (to penultimate page of 52); ep title = ch 52 title (ja.wiki ep list vs Act II ch list) — independent in-range corroboration; leading 1-page tail of 49 -> start 50; only last page of 52 remains",
+   "sources": [
+    "https://diamondnoace.fandom.com/wiki/Something_to_Find_Out",
+    "https://ja.wikipedia.org/wiki/%E3%83%80%E3%82%A4%E3%83%A4%E3%81%AEA"
+   ]
+  },
+  {
+   "episode": 19,
+   "end_chapter": 55,
+   "start_chapter": 53,
+   "chapters_adapted": "52 (last page), 53-55 (to 5th-to-last page)",
+   "volume": 6,
+   "confidence": "high",
+   "note": "fandom ep page: Act II ch 52 (last page), 53-55 (to 5th-to-last page); ep title = ch 55 title (ja.wiki ep list vs Act II ch list) — independent in-range corroboration; tail of 52 not bulk -> start 53",
+   "sources": [
+    "https://diamondnoace.fandom.com/wiki/Competitive_Streak",
+    "https://ja.wikipedia.org/wiki/%E3%83%80%E3%82%A4%E3%83%A4%E3%81%AEA"
+   ]
+  },
+  {
+   "episode": 20,
+   "end_chapter": 58,
+   "start_chapter": 56,
+   "chapters_adapted": "55 (last 4 pages), 56-58 (to 6th-to-last page)",
+   "volume": 7,
+   "confidence": "medium",
+   "note": "fandom ep page: Act II ch 55 (last 4 pages), 56-58 (to 6th-to-last page); ep title = ch 56 title (ja.wiki ep list vs Act II ch list) — independent in-range corroboration; tail of 55 not bulk -> start 56",
+   "sources": [
+    "https://diamondnoace.fandom.com/wiki/Self-Assertive",
+    "https://ja.wikipedia.org/wiki/%E3%83%80%E3%82%A4%E3%83%A4%E3%81%AEA"
+   ]
+  },
+  {
+   "episode": 21,
+   "end_chapter": 60,
+   "start_chapter": 59,
+   "chapters_adapted": "58 (last 5 pages), 59-60",
+   "volume": 7,
+   "confidence": "medium",
+   "note": "fandom ep page: Act II ch 58 (last 5 pages), 59-60; ep title = ch 59 title (ja.wiki ep list vs Act II ch list) — independent in-range corroboration; tail of 58 not bulk -> start 59",
+   "sources": [
+    "https://diamondnoace.fandom.com/wiki/Out_of_Time",
+    "https://ja.wikipedia.org/wiki/%E3%83%80%E3%82%A4%E3%83%A4%E3%81%AEA"
+   ]
+  },
+  {
+   "episode": 22,
+   "end_chapter": 63,
+   "start_chapter": 61,
+   "chapters_adapted": "61-63 (to 4th-to-last page of 63)",
+   "volume": 7,
+   "confidence": "high",
+   "note": "fandom ep page: Act II ch 61-63 (to 4th-to-last page of 63); ep title = ch 63 title (ja.wiki ep list vs Act II ch list) — independent in-range corroboration; 3 pages of 63 remain",
+   "sources": [
+    "https://diamondnoace.fandom.com/wiki/Chosen",
+    "https://ja.wikipedia.org/wiki/%E3%83%80%E3%82%A4%E3%83%A4%E3%81%AEA"
+   ]
+  },
+  {
+   "episode": 23,
+   "end_chapter": 66,
+   "start_chapter": 64,
+   "chapters_adapted": "63 (last 3 pages), 64-66",
+   "volume": 8,
+   "confidence": "high",
+   "note": "fandom ep page: Act II ch 63 (last 3 pages), 64-66; ep title = ch 66 title (ja.wiki ep list vs Act II ch list) — independent in-range corroboration; tail of 63 not bulk -> start 64",
+   "sources": [
+    "https://diamondnoace.fandom.com/wiki/One_Pitch,_One_Second",
+    "https://ja.wikipedia.org/wiki/%E3%83%80%E3%82%A4%E3%83%A4%E3%81%AEA"
+   ]
+  },
+  {
+   "episode": 24,
+   "end_chapter": 70,
+   "start_chapter": 67,
+   "chapters_adapted": "67-70 (to mid 6th-to-last page of 70)",
+   "volume": 8,
+   "confidence": "high",
+   "note": "fandom ep page: Act II ch 67-70 (to mid 6th-to-last page of 70); ep title = ch 70 title (ja.wiki ep list vs Act II ch list) — independent in-range corroboration; ~5 pages of 70 remain",
+   "sources": [
+    "https://diamondnoace.fandom.com/wiki/Incomplete",
+    "https://ja.wikipedia.org/wiki/%E3%83%80%E3%82%A4%E3%83%A4%E3%81%AEA"
+   ]
+  },
+  {
+   "episode": 25,
+   "end_chapter": 73,
+   "start_chapter": 71,
+   "chapters_adapted": "70 (last ~5 pages), 71-73",
+   "volume": 8,
+   "confidence": "medium",
+   "note": "fandom ep page: Act II ch 70 (last ~5 pages), 71-73; ep title = ch 72 title (ja.wiki ep list vs Act II ch list) — independent in-range corroboration; tail of 70 not bulk -> start 71",
+   "sources": [
+    "https://diamondnoace.fandom.com/wiki/Unleashed",
+    "https://ja.wikipedia.org/wiki/%E3%83%80%E3%82%A4%E3%83%A4%E3%81%AEA"
+   ]
+  },
+  {
+   "episode": 26,
+   "end_chapter": 76,
+   "start_chapter": 74,
+   "chapters_adapted": "74-76",
+   "volume": 9,
+   "confidence": "medium",
+   "note": "fandom ep page: Act II ch 74-76; ep title = ch 75 title (ja.wiki ep list vs Act II ch list) — independent in-range corroboration",
+   "sources": [
+    "https://diamondnoace.fandom.com/wiki/Beneath_the_Same_Banner",
+    "https://ja.wikipedia.org/wiki/%E3%83%80%E3%82%A4%E3%83%A4%E3%81%AEA"
+   ]
+  },
+  {
+   "episode": 27,
+   "end_chapter": 79,
+   "start_chapter": 77,
+   "chapters_adapted": "77-79",
+   "volume": 9,
+   "confidence": "medium",
+   "note": "fandom ep page: Act II ch 77-79; ep title = ch 78 title (ja.wiki ep list vs Act II ch list) — independent in-range corroboration",
+   "sources": [
+    "https://diamondnoace.fandom.com/wiki/The_Note",
+    "https://ja.wikipedia.org/wiki/%E3%83%80%E3%82%A4%E3%83%A4%E3%81%AEA"
+   ]
+  },
+  {
+   "episode": 28,
+   "end_chapter": 82,
+   "start_chapter": 80,
+   "chapters_adapted": "80-82",
+   "volume": 9,
+   "confidence": "high",
+   "note": "fandom ep page: Act II ch 80-82; ep title = ch 82 title (ja.wiki ep list vs Act II ch list) — independent in-range corroboration",
+   "sources": [
+    "https://diamondnoace.fandom.com/wiki/I%27m_Not_Stopping",
+    "https://ja.wikipedia.org/wiki/%E3%83%80%E3%82%A4%E3%83%A4%E3%81%AEA"
+   ]
+  },
+  {
+   "episode": 30,
+   "end_chapter": 85,
+   "start_chapter": 83,
+   "chapters_adapted": "83-85",
+   "volume": 10,
+   "confidence": "medium",
+   "note": "fandom ep page: Act II ch 83-85; ep title = ch 83 title (ja.wiki ep list vs Act II ch list) — independent in-range corroboration; ep 29 is a recap (filler); canon resumes here seamlessly",
+   "sources": [
+    "https://diamondnoace.fandom.com/wiki/BLOOM_OF_YOUTH_(episode)",
+    "https://ja.wikipedia.org/wiki/%E3%83%80%E3%82%A4%E3%83%A4%E3%81%AEA"
+   ]
+  },
+  {
+   "episode": 31,
+   "end_chapter": 88,
+   "start_chapter": 86,
+   "chapters_adapted": "86-88",
+   "volume": 10,
+   "confidence": "medium",
+   "note": "fandom ep page: Act II ch 86-88; ep title = ch 87 title (ja.wiki ep list vs Act II ch list) — independent in-range corroboration",
+   "sources": [
+    "https://diamondnoace.fandom.com/wiki/Kind_of_Like_a_Promise",
+    "https://ja.wikipedia.org/wiki/%E3%83%80%E3%82%A4%E3%83%A4%E3%81%AEA"
+   ]
+  },
+  {
+   "episode": 32,
+   "end_chapter": 92,
+   "start_chapter": 89,
+   "chapters_adapted": "89-92 (to 3rd-to-last page of 92)",
+   "volume": 10,
+   "confidence": "high",
+   "note": "fandom ep page: Act II ch 89-92 (to 3rd-to-last page of 92); ep title = ch 92 title (ja.wiki ep list vs Act II ch list) — independent in-range corroboration; 2 pages of 92 remain -> resume 93 (no continue entry)",
+   "sources": [
+    "https://diamondnoace.fandom.com/wiki/Hunger",
+    "https://ja.wikipedia.org/wiki/%E3%83%80%E3%82%A4%E3%83%A4%E3%81%AEA"
+   ]
+  },
+  {
+   "episode": 33,
+   "end_chapter": 97,
+   "start_chapter": 93,
+   "chapters_adapted": "92 (last 2 pages), 93-97",
+   "volume": 11,
+   "confidence": "medium",
+   "note": "fandom ep page: Act II ch 92 (last 2 pages), 93-97; ep title = ch 96 title (ja.wiki ep list vs Act II ch list) — independent in-range corroboration; tail of 92 not bulk -> start 93",
+   "sources": [
+    "https://diamondnoace.fandom.com/wiki/Heat_Transfer",
+    "https://ja.wikipedia.org/wiki/%E3%83%80%E3%82%A4%E3%83%A4%E3%81%AEA"
+   ]
+  },
+  {
+   "episode": 34,
+   "end_chapter": 100,
+   "start_chapter": 98,
+   "chapters_adapted": "98-100 (to p.13 of 100)",
+   "volume": 11,
+   "confidence": "medium",
+   "note": "fandom ep page: Act II ch 98-100 (to p.13 of 100); ep title = ch 99 title (ja.wiki ep list vs Act II ch list) — independent in-range corroboration; substantial remainder of 100",
+   "sources": [
+    "https://diamondnoace.fandom.com/wiki/Competition",
+    "https://ja.wikipedia.org/wiki/%E3%83%80%E3%82%A4%E3%83%A4%E3%81%AEA"
+   ]
+  },
+  {
+   "episode": 35,
+   "end_chapter": 105,
+   "start_chapter": 101,
+   "chapters_adapted": "100 (from p.14), 101-105 (to p.7 of 105)",
+   "volume": 12,
+   "confidence": "high",
+   "note": "fandom ep page: Act II ch 100 (from p.14), 101-105 (to p.7 of 105); ep title = ch 105 title (ja.wiki ep list vs Act II ch list) — independent in-range corroboration; tail of 100 not bulk -> start 101; ends early in 105",
+   "sources": [
+    "https://diamondnoace.fandom.com/wiki/Because_He%27s_Awesome",
+    "https://ja.wikipedia.org/wiki/%E3%83%80%E3%82%A4%E3%83%A4%E3%81%AEA"
+   ]
+  },
+  {
+   "episode": 36,
+   "end_chapter": 110,
+   "start_chapter": 105,
+   "chapters_adapted": "105 (from p.8), 106-110 (to p.17 of 110)",
+   "volume": 12,
+   "confidence": "high",
+   "note": "fandom ep page: Act II ch 105 (from p.8), 106-110 (to p.17 of 110); ep title = ch 110 title (ja.wiki ep list vs Act II ch list) — independent in-range corroboration; p.8-on = bulk of 105 -> start 105",
+   "sources": [
+    "https://diamondnoace.fandom.com/wiki/As_a_Catcher",
+    "https://ja.wikipedia.org/wiki/%E3%83%80%E3%82%A4%E3%83%A4%E3%81%AEA"
+   ]
+  },
+  {
+   "episode": 37,
+   "end_chapter": 113,
+   "start_chapter": 111,
+   "chapters_adapted": "110 (from p.18), 111-113 (to p.14 of 113)",
+   "volume": 13,
+   "confidence": "high",
+   "note": "fandom ep page: Act II ch 110 (from p.18), 111-113 (to p.14 of 113); ep title = ch 113 title (ja.wiki ep list vs Act II ch list) — independent in-range corroboration; tail of 110 not bulk -> start 111",
+   "sources": [
+    "https://diamondnoace.fandom.com/wiki/Invincible_Mentality",
+    "https://ja.wikipedia.org/wiki/%E3%83%80%E3%82%A4%E3%83%A4%E3%81%AEA"
+   ]
+  },
+  {
+   "episode": 38,
+   "end_chapter": 117,
+   "start_chapter": 114,
+   "chapters_adapted": "113 (from p.14), 114-117 (to p.15 of 117)",
+   "volume": 13,
+   "confidence": "high",
+   "note": "fandom ep page: Act II ch 113 (from p.14), 114-117 (to p.15 of 117); ep title = ch 117 title (ja.wiki ep list vs Act II ch list) — independent in-range corroboration; tail of 113 not bulk -> start 114",
+   "sources": [
+    "https://diamondnoace.fandom.com/wiki/Fragile",
+    "https://ja.wikipedia.org/wiki/%E3%83%80%E3%82%A4%E3%83%A4%E3%81%AEA"
+   ]
+  },
+  {
+   "episode": 39,
+   "end_chapter": 121,
+   "start_chapter": 118,
+   "chapters_adapted": "117 (from p.15), 118-121",
+   "volume": 14,
+   "confidence": "medium",
+   "note": "fandom ep page: Act II ch 117 (from p.15), 118-121; ep title = ch 120 title (ja.wiki ep list vs Act II ch list) — independent in-range corroboration; tail of 117 not bulk -> start 118",
+   "sources": [
+    "https://diamondnoace.fandom.com/wiki/I%27m_Counting_on_You",
+    "https://ja.wikipedia.org/wiki/%E3%83%80%E3%82%A4%E3%83%A4%E3%81%AEA"
+   ]
+  },
+  {
+   "episode": 40,
+   "end_chapter": 125,
+   "start_chapter": 122,
+   "chapters_adapted": "122-125",
+   "volume": 14,
+   "confidence": "medium",
+   "note": "fandom ep page: Act II ch 122-125; ep title = ch 124 title (ja.wiki ep list vs Act II ch list) — independent in-range corroboration",
+   "sources": [
+    "https://diamondnoace.fandom.com/wiki/Expression",
+    "https://ja.wikipedia.org/wiki/%E3%83%80%E3%82%A4%E3%83%A4%E3%81%AEA"
+   ]
+  },
+  {
+   "episode": 41,
+   "end_chapter": 129,
+   "start_chapter": 126,
+   "chapters_adapted": "126-129",
+   "volume": 14,
+   "confidence": "medium",
+   "note": "fandom ep page: Act II ch 126-129; ep title = ch 127 title (ja.wiki ep list vs Act II ch list) — independent in-range corroboration",
+   "sources": [
+    "https://diamondnoace.fandom.com/wiki/Shared_Fate",
+    "https://ja.wikipedia.org/wiki/%E3%83%80%E3%82%A4%E3%83%A4%E3%81%AEA"
+   ]
+  },
+  {
+   "episode": 42,
+   "end_chapter": 133,
+   "start_chapter": 130,
+   "chapters_adapted": "130-133",
+   "volume": 15,
+   "confidence": "high",
+   "note": "fandom ep page: Act II ch 130-133; ep title = ch 133 title (ja.wiki ep list vs Act II ch list) — independent in-range corroboration",
+   "sources": [
+    "https://diamondnoace.fandom.com/wiki/20_Players",
+    "https://ja.wikipedia.org/wiki/%E3%83%80%E3%82%A4%E3%83%A4%E3%81%AEA"
+   ]
+  },
+  {
+   "episode": 43,
+   "end_chapter": 136,
+   "start_chapter": 134,
+   "chapters_adapted": "134-136",
+   "volume": 15,
+   "confidence": "medium",
+   "note": "fandom ep page: Act II ch 134-136; ep title = ch 134 title (ja.wiki ep list vs Act II ch list) — independent in-range corroboration",
+   "sources": [
+    "https://diamondnoace.fandom.com/wiki/Summer_Training_Camp",
+    "https://ja.wikipedia.org/wiki/%E3%83%80%E3%82%A4%E3%83%A4%E3%81%AEA"
+   ]
+  },
+  {
+   "episode": 44,
+   "end_chapter": 139,
+   "start_chapter": 137,
+   "chapters_adapted": "137-139",
+   "volume": 16,
+   "confidence": "medium",
+   "note": "fandom ep page: Act II ch 137-139; ep title = ch 138 title (ja.wiki ep list vs Act II ch list) — independent in-range corroboration",
+   "sources": [
+    "https://diamondnoace.fandom.com/wiki/Setting_Sail",
+    "https://ja.wikipedia.org/wiki/%E3%83%80%E3%82%A4%E3%83%A4%E3%81%AEA"
+   ]
+  },
+  {
+   "episode": 45,
+   "end_chapter": 142,
+   "start_chapter": 140,
+   "chapters_adapted": "140-142",
+   "volume": 16,
+   "confidence": "medium",
+   "note": "fandom ep page: Act II ch 140-142",
+   "sources": [
+    "https://diamondnoace.fandom.com/wiki/Go_EXCEED!!_(episode)",
+    "https://ja.wikipedia.org/wiki/%E3%83%80%E3%82%A4%E3%83%A4%E3%81%AEA"
+   ]
+  },
+  {
+   "episode": 46,
+   "end_chapter": 145,
+   "start_chapter": 143,
+   "chapters_adapted": "143-145",
+   "volume": 16,
+   "confidence": "high",
+   "note": "fandom ep page: Act II ch 143-145; ep title = ch 145 title (ja.wiki ep list vs Act II ch list) — independent in-range corroboration",
+   "sources": [
+    "https://diamondnoace.fandom.com/wiki/Encouragement",
+    "https://ja.wikipedia.org/wiki/%E3%83%80%E3%82%A4%E3%83%A4%E3%81%AEA"
+   ]
+  },
+  {
+   "episode": 47,
+   "end_chapter": 149,
+   "start_chapter": 146,
+   "chapters_adapted": "146-149 (149 partial)",
+   "volume": 17,
+   "confidence": "medium",
+   "note": "fandom ep page: Act II ch 146-149 (149 partial); ep title = ch 148 title (ja.wiki ep list vs Act II ch list) — independent in-range corroboration; ch149 split across eps 47/48",
+   "sources": [
+    "https://diamondnoace.fandom.com/wiki/Under_the_Feet",
+    "https://ja.wikipedia.org/wiki/%E3%83%80%E3%82%A4%E3%83%A4%E3%81%AEA"
+   ]
+  },
+  {
+   "episode": 48,
+   "end_chapter": 153,
+   "start_chapter": 149,
+   "chapters_adapted": "149 (remainder), 150-153",
+   "volume": 17,
+   "confidence": "medium",
+   "note": "fandom ep page: Act II ch 149 (remainder), 150-153; ep title = ch 149 title (ja.wiki ep list vs Act II ch list) — independent in-range corroboration; resumes in ch149 ('Get Back' = ch149 namesake, ja.wiki); split noted",
+   "sources": [
+    "https://diamondnoace.fandom.com/wiki/Get_Back",
+    "https://ja.wikipedia.org/wiki/%E3%83%80%E3%82%A4%E3%83%A4%E3%81%AEA"
+   ]
+  },
+  {
+   "episode": 49,
+   "end_chapter": 158,
+   "start_chapter": 154,
+   "chapters_adapted": "154-158 (158 partial)",
+   "volume": 18,
+   "confidence": "medium",
+   "note": "fandom ep page: Act II ch 154-158 (158 partial); ep title = ch 155 title (ja.wiki ep list vs Act II ch list) — independent in-range corroboration; ch158 split across eps 49/50",
+   "sources": [
+    "https://diamondnoace.fandom.com/wiki/Seido_Goes_All_Out",
+    "https://ja.wikipedia.org/wiki/%E3%83%80%E3%82%A4%E3%83%A4%E3%81%AEA"
+   ]
+  },
+  {
+   "episode": 50,
+   "end_chapter": 161,
+   "start_chapter": 158,
+   "chapters_adapted": "158 (remainder), 159-161",
+   "volume": 18,
+   "confidence": "medium",
+   "note": "fandom ep page: Act II ch 158 (remainder), 159-161; ep title = ch 160 title (ja.wiki ep list vs Act II ch list) — independent in-range corroboration; resumes in ch158; split noted",
+   "sources": [
+    "https://diamondnoace.fandom.com/wiki/FIRE_AGE",
+    "https://ja.wikipedia.org/wiki/%E3%83%80%E3%82%A4%E3%83%A4%E3%81%AEA"
+   ]
+  },
+  {
+   "episode": 51,
+   "end_chapter": 165,
+   "start_chapter": 162,
+   "chapters_adapted": "162-165",
+   "volume": 18,
+   "confidence": "high",
+   "note": "fandom ep page: Act II ch 162-165; ep title = ch 165 title (ja.wiki ep list vs Act II ch list) — independent in-range corroboration",
+   "sources": [
+    "https://diamondnoace.fandom.com/wiki/That%27s_The_Reason_Why",
+    "https://ja.wikipedia.org/wiki/%E3%83%80%E3%82%A4%E3%83%A4%E3%81%AEA"
+   ]
+  },
+  {
+   "episode": 52,
+   "end_chapter": 169,
+   "start_chapter": 166,
+   "chapters_adapted": "166-169",
+   "volume": 19,
+   "confidence": "high",
+   "note": "fandom ep page: Act II ch 166-169; MangaShed: 'adapts manga events up to Chapter 169'; wheredoestheanimeleaveoff: continue at vol 19 ch 170; season finale; adapts through ch169 (vol 19); final-scene teaser from ch189 per MangaShed (uncorroborated) - END not inflated",
+   "sources": [
+    "https://diamondnoace.fandom.com/wiki/Ace_Of_Diamond",
+    "https://ja.wikipedia.org/wiki/%E3%83%80%E3%82%A4%E3%83%A4%E3%81%AEA",
+    "https://mangashed.com/where-does-the-ace-of-diamond-anime-end-in-the-manga/",
+    "https://wheredoestheanimeleaveoff.com/where-does-the-ace-of-diamond-anime-end-in-the-manga/"
+   ]
+  }
+ ],
+ "continue_points": [
+  {
+   "episode": 1,
+   "continue_chapter": 2,
+   "note": "ends mid-ch 2 (first half adapted)"
+  },
+  {
+   "episode": 4,
+   "continue_chapter": 9,
+   "note": "ends mid-ch 9 (split with ep 5)"
+  },
+  {
+   "episode": 11,
+   "continue_chapter": 32,
+   "note": "ends mid-ch 32 (first half adapted)"
+  },
+  {
+   "episode": 12,
+   "continue_chapter": 35,
+   "note": "ends mid-ch 35 (first half adapted)"
+  },
+  {
+   "episode": 19,
+   "continue_chapter": 55,
+   "note": "ends 5th-to-last page of ch 55"
+  },
+  {
+   "episode": 20,
+   "continue_chapter": 58,
+   "note": "ends 6th-to-last page of ch 58"
+  },
+  {
+   "episode": 22,
+   "continue_chapter": 63,
+   "note": "ends 4th-to-last page of ch 63"
+  },
+  {
+   "episode": 24,
+   "continue_chapter": 70,
+   "note": "ends ~6th-to-last page of ch 70"
+  },
+  {
+   "episode": 34,
+   "continue_chapter": 100,
+   "note": "ends p.13 of ch 100"
+  },
+  {
+   "episode": 35,
+   "continue_chapter": 105,
+   "note": "ends p.7 of ch 105 (bulk remains)"
+  },
+  {
+   "episode": 36,
+   "continue_chapter": 110,
+   "note": "ends p.17 of ch 110"
+  },
+  {
+   "episode": 37,
+   "continue_chapter": 113,
+   "note": "ends p.14 of ch 113"
+  },
+  {
+   "episode": 38,
+   "continue_chapter": 117,
+   "note": "ends p.15 of ch 117"
+  },
+  {
+   "episode": 47,
+   "continue_chapter": 149,
+   "note": "ends mid-ch 149 (split with ep 48)"
+  },
+  {
+   "episode": 49,
+   "continue_chapter": 158,
+   "note": "ends mid-ch 158 (split with ep 50)"
+  }
+ ],
+ "annotations": [
+  {
+   "episodes": [
+    1
+   ],
+   "kind": "graft",
+   "chapters": "Act I recap material (separate Act I chapter space, not converted)",
+   "note": "premiere opens with recap/scenes 'from the original manga' per fandom ep page; ep typed mixed"
+  },
+  {
+   "episodes": [
+    52
+   ],
+   "kind": "graft",
+   "chapters": "189",
+   "note": "final scene reportedly a teaser from Act II ch 189 (MangaShed) — single source, not on fandom ep page; anchor not inflated"
+  }
+ ],
+ "type_corrections": [],
+ "repairs": [
+  {
+   "episode": 52,
+   "field": "end_chapter",
+   "old": 259,
+   "new": 169,
+   "why": "Old value matches Act II SEASON 2 Part 1 (2026 anime, separate entry: continue at vol 29 ch 260 per wheredoestheanimeleaveoff) — misattributed to this 2019-20 season. Fandom finale page: 'chapter 166 up to chapter 169'; MangaShed: 'adapts manga events up to Chapter 169'; continue guides say vol 19 ch 170.",
+   "sources": [
+    "https://diamondnoace.fandom.com/wiki/Ace_Of_Diamond",
+    "https://mangashed.com/where-does-the-ace-of-diamond-anime-end-in-the-manga/",
+    "https://wheredoestheanimeleaveoff.com/where-does-the-ace-of-diamond-anime-end-in-the-manga/"
+   ]
+  },
+  {
+   "episode": 52,
+   "field": "volume",
+   "old": 30,
+   "new": 19,
+   "why": "ch169 sits in vol 19 (166-174) per fandom Volumes/Act II; Wikipedia's Act II volume list matches the same 8-9-chapter pattern (vols 1-5 verified identical).",
+   "sources": [
+    "https://diamondnoace.fandom.com/wiki/Volumes/Act_II",
+    "https://en.wikipedia.org/wiki/List_of_Ace_of_Diamond_chapters"
+   ]
+  }
+ ],
+ "structure": {
+  "notes": "Single 52-episode season (AniList 105749), our eps 1-52 = broadcast 1-52, no numbering conversion needed. Adaptation is linear and contiguous in Act II's OWN chapter space (ch1-169, vols 1-19); no Act I chapter numbers used anywhere (ep1's Act I recap noted as annotation only). Mid-chapter episode boundaries are common from ep17 onward (page-level splits recorded in chapters_adapted). Volume boundaries: v1:1-9 v2:10-18 v3:19-27 v4:28-37 v5:38-46 v6:47-55 v7:56-64 v8:65-74 v9:75-83 v10:84-93 v11:94-102 v12:103-111 v13:112-120 v14:121-129 v15:130-138 v16:139-147 v17:148-156 v18:157-165 v19:166-174 (fandom Volumes/Act II; Wikipedia agrees). Act II Season 2 (April 2026, OLM, separate entry) continues from ch170 and its Part 1 reportedly ends at ch259 (vol 29/30) — the source of the old misattributed ep52 anchor. Side story 'Teito vs Ugumori' chapters exist at the end of the volume list — never mainline numbers.",
+  "order_only": []
+ },
+ "flags_for_sean": [
+  "ep52 ch189 finale teaser is single-source (MangaShed); fandom finale page doesn't mention it — annotation recorded, anchor kept at 169.",
+  "old ep52 anchor (259/v30, source 'mu') matches Act II Season 2 Part 1's endpoint — check whether the MU-derived pipeline is writing Season-2 progress onto this finished 52-ep entry."
+ ]
+}

@@ -1,0 +1,14 @@
+{
+  "series_id": "one-piece",
+  "summary": "Ep 1175 ('Elbaph in Flames! Jinbe's Shoulder Throw Explodes!', aired 2026-08-23) adapts chapter 1145 ('Wildfire in Forest Sector 2, Branch Route 8'). The onepiece.fandom episode page is still a stub with the chapter field unfilled, so the anchor was derived from the wiki's own reverse mapping instead: the Elbaph Arc page's qref citations give a strict 1:1 chapter→episode lattice (ch 1126→ep 1156 through ch 1144→ep 1174, always ep = ch + 30), putting ep 1175 on ch 1145; the Chapter 1145 page's content (Jinbe extinguishing the Adam Tree fire with Fish-Man Jujutsu to save the children, the Zoro/Sanji/Goldberg Groggysaurus hunt, Loki's Rocks D. Xebec reveal, Gunko appearing to target Colon) matches the ep 1175 stub's title, techDebut (Umigumo Ipponzeoi) and character list exactly, and independent episode recaps describe the same three beats. Only this one anchor delivered, per the ASK.",
+  "anchors": [
+    {"episode": 1175, "end_chapter": 1145, "start_chapter": 1145, "chapters_adapted": "1145", "volume": 113,
+     "confidence": "high", "note": "Episode-page chapter field not yet filled (aired the day before research); derived from the Elbaph Arc page's exact 1:1 qref lattice (ch1144→ep1174, unbroken since ch1126→ep1156) + Chapter 1145 content matching the ep 1175 stub's title/techniques/cast, corroborated by independent recap/preview coverage naming ch 1145 events.", "sources": ["https://onepiece.fandom.com/api.php?action=parse&page=Elbaph_Arc&prop=wikitext&format=json", "https://onepiece.fandom.com/api.php?action=parse&page=Chapter_1145&prop=wikitext&format=json", "https://onepiece.fandom.com/api.php?action=parse&page=Episode_1175&prop=wikitext&format=json", "https://www.msn.com/en-in/entertainment/tv/one-piece-episode-1175-recap-jinbe-s-huge-rescue-saves-elbaph-s-children-as-loki-opens-up-about-rocks-d-xebec-and-gunko-strikes-again-in-elbaph/ar-AA2aLQVh", "https://fandomwire.com/one-piece-episode-1175-release-date-time-what-to-expect-how-to-watch/"]}
+  ],
+  "continue_points": [],
+  "annotations": [],
+  "type_corrections": [],
+  "repairs": [],
+  "structure": {"notes": "Elbaph adaptation is pacing at exactly one chapter per episode (ep = ch + 30) from ep 1156 (ch 1126) through ep 1175 (ch 1145), per the Elbaph Arc page's qref chapter/episode citations. Nothing else touched per the ASK.", "order_only": []},
+  "flags_for_sean": ["ASK asked for the episode page's chapter fields, but Episode 1175 is still a stub without them (aired 2026-08-23); anchor derived from the wiki's arc-page qref reverse mapping + chapter-content match instead — worth a one-line re-verify once the wiki fills the field."]
+}

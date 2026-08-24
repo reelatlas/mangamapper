@@ -1,0 +1,19 @@
+{
+  "series_id": "elfen-lied",
+  "summary": "Ep 13 (finale, typed mixed — correct) is a largely anime-original ending that loosely re-stages the Lucy-vs-Mariko confrontation beats from volume 7 of the manga. The fandom finale page lists eight chapter counterparts by title; resolved via the wiki's own chapter pages they are chs 64 (Blaze of Glory), 67 (Backup Measure), 69 (Isolation), 71 (Wish Upon Tomorrow) — the vol-7 mainline beats — plus isolated grafts from much later chapters: 72 (Anna), 84 (Broken Angel), 98 (The Ocean to the Past), 99 (Memories That Can't Be Killed). External guides confirm the anime covers roughly the first seven volumes with an original conclusion and advise resuming around ch 62 or rereading from the start, so the anchor is kept to the vol-7 material it actually parallels, never inflated to ch 99.",
+  "anchors": [
+    {"episode": 13, "end_chapter": 71, "start_chapter": 64, "chapters_adapted": "64, 67, 69, 71 (loose, non-contiguous beats of the Mariko confrontation) + grafts: 72, 84, 98, 99", "volume": 7,
+     "confidence": "medium", "note": "Finale anchored to what it adapts: scattered vol-7 beats staged inside an anime-original ending; chapter counterparts from the fandom episode infobox resolved to numbers via the wiki's chapter pages (chapter pages reverse-link the episode). Medium because the adaptation is loose parallel rather than direct.", "sources": ["https://elfen-lied.fandom.com/api.php?action=parse&page=No_Return_~_Erleuchtung&prop=wikitext&format=json", "https://elfen-lied.fandom.com/api.php?action=parse&page=Blaze_of_Glory&prop=wikitext&format=json", "https://elfen-lied.fandom.com/api.php?action=parse&page=Wish_Upon_Tomorrow&prop=wikitext&format=json", "https://wheredoestheanimeleaveoff.com/where-does-the-elfen-lied-anime-leave-off-in-the-manga/"]}
+  ],
+  "continue_points": [
+    {"episode": 13, "continue_chapter": 63, "note": "END+1 (72) would be dishonest: the finale is largely original and chs 63-71 play out very differently in the manga (Mariko's and Kurama's fates diverge). Ep 12 ended at ch 62; honest resume is ch 63 — external guide says 'begin at chapter 62' or restart from the beginning."}
+  ],
+  "annotations": [
+    {"episodes": [13], "kind": "divergence", "chapters": "64-71", "note": "Anime-original ending loosely re-staging vol-7 Mariko-arc beats; director Kanbe condensed the story knowing no continuation was planned. Manga continues to ch 107(+bonus) with a different back half."},
+    {"episodes": [13], "kind": "graft", "chapters": "72, 84, 98-99", "note": "Isolated elements pulled forward from much later manga chapters (Anna; Broken Angel; The Ocean to the Past; Memories That Can't Be Killed) per the fandom finale page's counterpart list — not positional adaptation."}
+  ],
+  "type_corrections": [],
+  "repairs": [],
+  "structure": {"notes": "13-episode single season; anime tracks the manga (with alterations) through roughly vol 7 then ends originally. Existing ep12→62 (v7) anchor is consistent with the external continue-at-62 guidance and stands unchanged.", "order_only": []},
+  "flags_for_sean": ["continue point for ep 13 is a judgment call: set to 63 (resume after ep 12's END=62) because the finale's vol-7 coverage is loose parallel, not adaptation; wheredoestheanimeleaveoff.com says 'begin at Chapter 62' and recommends a full restart. If we prefer treating the finale's 64-71 beats as consumed, continue would be 72 — sources do not support that."]
+}

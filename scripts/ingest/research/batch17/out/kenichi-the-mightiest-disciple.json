@@ -1,0 +1,69 @@
+{
+  "series_id": "kenichi-the-mightiest-disciple",
+  "summary": "Rows 51-61 are the 11 Brain's Base OADs (AniList 11813, bundled with manga volumes 46-56, 2012-2014), adopted as episodes 51-61. They adapt the Yami/YOMI saga (Battles 144-195) OUT OF MANGA ORDER with gaps: airing order is Eclair-opening (144-145) -> Spark (158-166) -> Eclair (145-150) -> YOMI-intro Sho (167-172) -> Apachai-flashback backfill (106-109, content the 2006 TV run skipped between our eps 39-40) -> Boris (175-180a) -> Takeda/Shiba (173-174) -> Bankruptcy arena (193-195) -> Snow Summit (181-188 + first half of 196 as epilogue). Never adapted: 151-157 (Shigure's Childhood arc + Spark opening), 168-169 (unmarked on wiki chapter pages), 180 second half, 189-192, 196 second half. OAD 1 is largely an author-original scenario per ja.wikipedia (uses elements of 144-145) -> typed mixed. Chapter-exact mapping comes from kenichi.fandom's three mutually-agreeing page families (OVA pages, arc pages with battle ranges, Battle chapter infoboxes with 'Corresponding episode' fields); English Wikipedia independently corroborates every OVA's content at arc level; wiki volume fields match our volume boundaries (same chapter space).",
+  "anchors": [
+    {"episode": 51, "end_chapter": 145, "start_chapter": 144, "chapters_adapted": "144, 145 (elements only; bulk of 145 in ep 53)", "volume": 17,
+     "confidence": "medium", "note": "OAD 1 'The New Assassins': largely author-original framing (ja.wiki) around the Yami-declares-war opening; OVA page states 'Chapters 144 and 145 are used', Battle 144 infobox says 'OVA 1 (partially)'",
+     "sources": ["https://kenichi.fandom.com/api.php?action=parse&page=OVA%201%20-%20%22The%20New%20Assassins%21%22&prop=wikitext&format=json", "https://kenichi.fandom.com/api.php?action=parse&page=Battle_144&prop=wikitext&format=json", "https://ja.wikipedia.org/wiki/%E5%8F%B2%E4%B8%8A%E6%9C%80%E5%BC%B7%E3%81%AE%E5%BC%9F%E5%AD%90%E3%82%B1%E3%83%B3%E3%82%A4%E3%83%81"]},
+    {"episode": 52, "end_chapter": 166, "start_chapter": 158, "chapters_adapted": "158-166 (Spark arc; wiki marks 157, the arc opening, as unadapted — OVA page says 'most of the Spark arc')", "volume": 19,
+     "confidence": "high", "note": "OAD 2 'The girl who came from China' = Raichi Li / Spark arc (Battles 157-166 per arc page; chapter infoboxes assign 158-166 to OVA 2); en-wiki confirms Raichi/Spark content",
+     "sources": ["https://kenichi.fandom.com/api.php?action=parse&page=Spark_Arc&prop=wikitext&format=json", "https://kenichi.fandom.com/api.php?action=parse&page=Battle_158&prop=wikitext&format=json", "https://en.wikipedia.org/wiki/List_of_Kenichi:_The_Mightiest_Disciple_episodes"]},
+    {"episode": 53, "end_chapter": 150, "start_chapter": 145, "chapters_adapted": "145-146, 148-150 (147 unmarked on wiki chapter page but inside the Eclair arc 144-150 — presumed covered)", "volume": 17,
+     "confidence": "high", "note": "OAD 3 'The Gorgeous Assassin' = Christopher Eclair arc conclusion; aired AFTER the Spark-arc OAD despite adapting earlier chapters",
+     "sources": ["https://kenichi.fandom.com/api.php?action=parse&page=Christopher_Eclair_Arc&prop=wikitext&format=json", "https://kenichi.fandom.com/api.php?action=parse&page=Battle_150&prop=wikitext&format=json", "https://en.wikipedia.org/wiki/List_of_Kenichi:_The_Mightiest_Disciple_episodes"]},
+    {"episode": 54, "end_chapter": 172, "start_chapter": 167, "chapters_adapted": "167, 170-172 (168-169 unmarked on wiki chapter pages — possibly compressed or skipped)", "volume": 20,
+     "confidence": "medium", "note": "OAD 4 'Beautiful Wings' = YOMI Introduction arc opening: Sho Kano introduced, grave visit, botanical-garden temptation",
+     "sources": ["https://kenichi.fandom.com/api.php?action=parse&page=YOMI_Introduction_Arc&prop=wikitext&format=json", "https://kenichi.fandom.com/api.php?action=parse&page=Battle_170&prop=wikitext&format=json", "https://en.wikipedia.org/wiki/List_of_Kenichi:_The_Mightiest_Disciple_episodes"]},
+    {"episode": 55, "end_chapter": 109, "start_chapter": 106, "chapters_adapted": "106-109 (Apachai Flashback arc — the exact chapters the 2006 TV series skipped between our eps 39-40)", "volume": 13,
+     "confidence": "high", "note": "OAD 5 'Reaper vs. Devil' backfills how Apachai joined Ryozanpaku; arc page 106-109, chapter infoboxes 106-109 -> OVA 5, en-wiki confirms the backstory content, and our own TV anchors show 106-109 unadapted (ep 39 continue->110)",
+     "sources": ["https://kenichi.fandom.com/api.php?action=parse&page=Apachai_Flashback_Arc&prop=wikitext&format=json", "https://kenichi.fandom.com/api.php?action=parse&page=Battle_106&prop=wikitext&format=json", "https://en.wikipedia.org/wiki/List_of_Kenichi:_The_Mightiest_Disciple_episodes"]},
+    {"episode": 56, "end_chapter": 177, "start_chapter": 175, "chapters_adapted": "175-177", "volume": 20,
+     "confidence": "medium", "note": "OAD 6 'The Soldier from Russia': Boris Ivanov arrives, dojo-crushing spree, assault on Ryozanpaku (173-174 deferred to ep 58)",
+     "sources": ["https://kenichi.fandom.com/api.php?action=parse&page=Battle_175&prop=wikitext&format=json", "https://kenichi.fandom.com/api.php?action=parse&page=Battle_177&prop=wikitext&format=json", "https://en.wikipedia.org/wiki/List_of_Kenichi:_The_Mightiest_Disciple_episodes"]},
+    {"episode": 57, "end_chapter": 180, "start_chapter": 178, "chapters_adapted": "178-179, 180 (first half only per Battle 180 infobox)", "volume": 21,
+     "confidence": "medium", "note": "OAD 7 'Conviction concentrated in one's Fist': Boris vs Miu/Kenichi, Sho's recall order; 180's second half never adapted",
+     "sources": ["https://kenichi.fandom.com/api.php?action=parse&page=Battle_180&prop=wikitext&format=json", "https://kenichi.fandom.com/api.php?action=parse&page=Battle_178&prop=wikitext&format=json", "https://en.wikipedia.org/wiki/List_of_Kenichi:_The_Mightiest_Disciple_episodes"]},
+    {"episode": 58, "end_chapter": 174, "start_chapter": 173, "chapters_adapted": "173-174 (Takeda finds James Shiba — deferred from earlier in the YOMI Introduction arc)", "volume": 20,
+     "confidence": "medium", "note": "OAD 8 'The God of Destruction Under the Tracks' adapts chapters that precede eps 56-57's material in the manga",
+     "sources": ["https://kenichi.fandom.com/api.php?action=parse&page=Battle_173&prop=wikitext&format=json", "https://kenichi.fandom.com/api.php?action=parse&page=Battle_174&prop=wikitext&format=json", "https://en.wikipedia.org/wiki/List_of_Kenichi:_The_Mightiest_Disciple_episodes"]},
+    {"episode": 59, "end_chapter": 195, "start_chapter": 193, "chapters_adapted": "193-195 (Bankruptcy-arc underground-arena core; arc opening 189-192 skipped)", "volume": 22,
+     "confidence": "high", "note": "OAD 9 'Anonymous (18 years)': Shiba/Akisame rivalry, underground arena, Rachel Stanley challenge — aired BEFORE the Snow Summit chapters (181-188) it follows in the manga",
+     "sources": ["https://kenichi.fandom.com/api.php?action=parse&page=Bankruptcy_Arc&prop=wikitext&format=json", "https://kenichi.fandom.com/api.php?action=parse&page=Battle_193&prop=wikitext&format=json", "https://en.wikipedia.org/wiki/List_of_Kenichi:_The_Mightiest_Disciple_episodes"]},
+    {"episode": 60, "end_chapter": 184, "start_chapter": 181, "chapters_adapted": "181-184 (184 concludes in ep 61)", "volume": 21,
+     "confidence": "medium", "note": "OAD 10 'The King of Tidat (1)' = Snow Summit arc opening: field trip, Radin Tidat Jihan's trap, Miu's fever; Battle 184 infobox lists both OVA 10 and OVA 11",
+     "sources": ["https://kenichi.fandom.com/api.php?action=parse&page=Snow_Summit_Arc&prop=wikitext&format=json", "https://kenichi.fandom.com/api.php?action=parse&page=Battle_184&prop=wikitext&format=json", "https://en.wikipedia.org/wiki/List_of_Kenichi:_The_Mightiest_Disciple_episodes"]},
+    {"episode": 61, "end_chapter": 188, "start_chapter": 184, "chapters_adapted": "184 (conclusion), 185-188, 196 (first half — epilogue graft: the DofD invitation)", "volume": 21,
+     "confidence": "high", "note": "OAD 11 finale: Jihan fight, Jenazad's avalanche, DofD invitation accepted; anchored to the Snow Summit arc it adapts (188), with the 196 half-chapter recorded as a graft, not the END",
+     "sources": ["https://kenichi.fandom.com/api.php?action=parse&page=Snow_Summit_Arc&prop=wikitext&format=json", "https://kenichi.fandom.com/api.php?action=parse&page=Battle_196&prop=wikitext&format=json", "https://en.wikipedia.org/wiki/List_of_Kenichi:_The_Mightiest_Disciple_episodes"]}
+  ],
+  "continue_points": [
+    {"episode": 51, "continue_chapter": 145, "note": "only elements of 145 shown; its bulk arrives in ep 53"},
+    {"episode": 53, "continue_chapter": 151, "note": "Shigure's Childhood arc (151-156) and Spark opening (157) are never adapted by any OAD"},
+    {"episode": 55, "continue_chapter": 173, "note": "backfill episode (106-109 already positioned before TV ep 40); story frontier resumes at 173"},
+    {"episode": 57, "continue_chapter": 180, "note": "ends inside 180 (first half only); 180's second half is never adapted"},
+    {"episode": 58, "continue_chapter": 180, "note": "adapts earlier chapters 173-174; the frontier is still mid-180"},
+    {"episode": 59, "continue_chapter": 181, "note": "airing order inversion: 181-188 are still unseen here (they follow in eps 60-61); manga readers resume at 181"},
+    {"episode": 61, "continue_chapter": 189, "note": "series end: 189-192 and 196 (second half) unadapted; 189 is the frontier resume past the finale (151-157 gap noted separately)"}
+  ],
+  "annotations": [
+    {"episodes": [52, 53], "kind": "rearranged", "chapters": "145-150, 158-166", "note": "airing order swaps the arcs: ep 52 adapts Spark (158-166) before ep 53 returns to finish the Christopher Eclair arc (145-150)"},
+    {"episodes": [55], "kind": "rearranged", "chapters": "106-109", "note": "backfills the Apachai Flashback arc the 2006 TV series skipped (our ep 39 continue->110); sits mid-Yami-saga in the OAD run"},
+    {"episodes": [58], "kind": "rearranged", "chapters": "173-174", "note": "Takeda/Shiba chapters precede eps 56-57's Boris material (175-180) in the manga but air after it"},
+    {"episodes": [59], "kind": "rearranged", "chapters": "193-195", "note": "Bankruptcy-arc material aired before the Snow Summit chapters (181-188, eps 60-61) that precede it in the manga; arc opening 189-192 skipped"},
+    {"episodes": [61], "kind": "graft", "chapters": "196 (first half)", "note": "finale epilogue grafts the first half of Battle 196 (DofD invitation) onto the Snow Summit conclusion"}
+  ],
+  "type_corrections": [
+    {"episodes": [51], "type": "mixed", "note": "ja.wikipedia: OAD 1 is an author-original written scenario (原作者オリジナルの書き下ろし); fandom Battle 144 infobox says 'OVA 1 (partially)' and the OVA page says elements of 144-145 are used — canon chapter material inside an original frame",
+     "sources": ["https://ja.wikipedia.org/wiki/%E5%8F%B2%E4%B8%8A%E6%9C%80%E5%BC%B7%E3%81%AE%E5%BC%9F%E5%AD%90%E3%82%B1%E3%83%B3%E3%82%A4%E3%83%81", "https://kenichi.fandom.com/api.php?action=parse&page=Battle_144&prop=wikitext&format=json"]}
+  ],
+  "repairs": [],
+  "structure": {
+    "notes": "Rows 51-61 = the 11 Brain's Base OADs ('OVA' component, AniList 11813), each bundled with a manga volume (46, 47, 49, 53, 53, 54, 54, 55, 55, 56, 56) 2012-2014, later broadcast on TV Apr-Jun 2014. They resume after the TV finale (ch 143) and adapt the Yami/YOMI saga to ch 195 plus half of 196, non-linearly. Never adapted anywhere: 151-157 (Shigure's Childhood arc + Spark opening), 168-169 (unmarked; possibly compressed into ep 54), 180 second half, 189-192, 196 second half. OAD 5 is a backfill of TV-skipped 106-109. Wiki chapter numbering ('Battle N') and volume fields match our chapter space and volume boundaries exactly (e.g. Battle 180 -> v21, Battle 189 -> v22). Max adapted mainline chapter after the OADs: 195 (plus 196 first half).",
+    "order_only": []
+  },
+  "flags_for_sean": [
+    "Continue-point policy: Shigure's Childhood arc 151-157 is a permanent mid-run adaptation gap (no OAD covers it) — ep 53's continue->151 encodes it, but the series-final continue (ep 61 -> 189) skips past it; decide which gap the reader-facing resume should surface.",
+    "Battles 168-169 have no 'Corresponding episode' on the wiki and sit inside ep 54's arc slice (167, 170-172) — unresolved whether they were compressed into OAD 4 or genuinely skipped; anchored ep 54 as 167-172 span with the gap noted.",
+    "Battle 147 similarly unmarked inside ep 53's 145-150 slice — presumed covered (arc page assigns the whole Eclair arc to OVAs 1+3)."
+  ]
+}

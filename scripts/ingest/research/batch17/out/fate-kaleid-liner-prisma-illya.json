@@ -1,0 +1,57 @@
+{
+  "series_id": "fate-kaleid-liner-prisma-illya",
+  "summary": "Structure confirmed by four independent sources: each broadcast block adapts a DIFFERENT manga. S1 (our eps 1-10) is a complete adaptation of the 1st manga (13 chapters + epilogue, 2 volumes — exactly our 14-chapter space); 2wei! TV (our 11-19) + 2wei Herz! (our 20-29) together adapt the 2wei! manga (5 vols, 27 numbered chapters on MangaDex; AniList manga 85136); 3rei!! TV (our 30-41) adapts the early 3rei!! manga (AniList 66131); and our ep 42 is the 2017 movie Sekka no Chikai / Oath Under Snow, which adapts 3rei!! chapters 29-39 (= 3rei vols 7-8), a Shirou/Miyu flashback that follows the S4 finale. S1 is now fully anchored 1:1 in our space via near-verbatim episode-title = chapter-title matches (8 of 10 episodes title-locked; the other 2 forced by pigeonhole under the attested complete adaptation). The existing ep-42 pin (ch 13, MU-derived) is a wrong-chapter-space heal artifact and is repaired to removal: the movie touches zero 1st-series chapters. Volume boundary confirmed twice: v1 = ch 1-5, v2 = ch 6-13 + epilogue.",
+  "anchors": [
+    {"episode": 1, "end_chapter": 1, "start_chapter": 1, "chapters_adapted": "1", "volume": 1,
+     "confidence": "high", "note": "Premiere adapts ch 1 (Ruby tricks Illya into the contract); bounded by ep2=ch2 title lock, ch 1 is the only chapter before it",
+     "sources": ["https://mangadex.org/title/c0587ebd-7e89-43b7-a877-b28b20ad8261", "https://en.wikipedia.org/wiki/List_of_Fate/kaleid_liner_Prisma_Illya_episodes", "https://typemoon.fandom.com/wiki/Fate/kaleid_liner_PRISMA%E2%98%86ILLYA_(anime)"]},
+    {"episode": 2, "end_chapter": 2, "start_chapter": 2, "chapters_adapted": "2", "volume": 1,
+     "confidence": "high", "note": "Title lock: ep 'Who?' (誰?) = ch 2 'Who?'",
+     "sources": ["https://mangadex.org/title/c0587ebd-7e89-43b7-a877-b28b20ad8261", "https://en.wikipedia.org/wiki/List_of_Fate/kaleid_liner_Prisma_Illya_episodes"]},
+    {"episode": 3, "end_chapter": 3, "start_chapter": 3, "chapters_adapted": "3", "volume": 1,
+     "confidence": "high", "note": "Title lock: 'Girl Meets Girl' = ch 3 'Girl Meets Girl' (Miyu debut)",
+     "sources": ["https://mangadex.org/title/c0587ebd-7e89-43b7-a877-b28b20ad8261", "https://en.wikipedia.org/wiki/List_of_Fate/kaleid_liner_Prisma_Illya_episodes"]},
+    {"episode": 4, "end_chapter": 4, "start_chapter": 4, "chapters_adapted": "4", "volume": 1,
+     "confidence": "high", "note": "Title lock: 'We Lost' (負けました) = ch 4 'Defeated' (loss to Saber)",
+     "sources": ["https://mangadex.org/title/c0587ebd-7e89-43b7-a877-b28b20ad8261", "https://en.wikipedia.org/wiki/List_of_Fate/kaleid_liner_Prisma_Illya_episodes"]},
+    {"episode": 5, "end_chapter": 6, "start_chapter": 5, "chapters_adapted": "5-6", "volume": 2,
+     "confidence": "high", "note": "Title lock: 'There are two options?' (選択肢は2つ…?) = ch 6 'There Are Two Choices...?'; ch 5 'Rematch, And' pigeonholed between ep4=ch4 and this END. Crosses the v1/v2 boundary (ch 5 = v1, ch 6 = v2)",
+     "sources": ["https://mangadex.org/title/c0587ebd-7e89-43b7-a877-b28b20ad8261", "https://en.wikipedia.org/wiki/List_of_Fate/kaleid_liner_Prisma_Illya_episodes", "https://api.mangaupdates.com/v1/series/16677431220"]},
+    {"episode": 6, "end_chapter": 8, "start_chapter": 7, "chapters_adapted": "7-8", "volume": 2,
+     "confidence": "high", "note": "Title lock: 'A Blank, and the End of Night' (空白 夜の終わり) = ch 8 'Void, End of Night' (Archer-install berserk night battle); ch 7 'True Power, Hidden Power' pigeonholed",
+     "sources": ["https://mangadex.org/title/c0587ebd-7e89-43b7-a877-b28b20ad8261", "https://en.wikipedia.org/wiki/List_of_Fate/kaleid_liner_Prisma_Illya_episodes"]},
+    {"episode": 7, "end_chapter": 10, "start_chapter": 9, "chapters_adapted": "9-10", "volume": 2,
+     "confidence": "medium", "note": "Derived (no exact title lock): forced between ep6=ch8 and ep8=ch11 with complete adaptation attested by 2 independent sources; content consistent (Saber defeated, aftermath/escape; ch 9 'A One Time Break', ch 10 'Violence and Desertion' vs ep 'Triumph and Escape' 勝利と逃走)",
+     "sources": ["https://mangadex.org/title/c0587ebd-7e89-43b7-a877-b28b20ad8261", "https://wheredoestheanimeleaveoff.com/where-does-the-fate-kaleid-liner-prisma-illya-anime-end-in-the-manga/", "https://ja.wikipedia.org/wiki/Fate/kaleid_liner_%E3%83%97%E3%83%AA%E3%82%BA%E3%83%9E%E2%98%86%E3%82%A4%E3%83%AA%E3%83%A4"]},
+    {"episode": 8, "end_chapter": 11, "start_chapter": 11, "chapters_adapted": "11", "volume": 2,
+     "confidence": "high", "note": "Title lock: 'I'll Be a Normal Girl Again' (普通の女の子に戻ります) = ch 11 'Become a Normal Girl Again'; single-chapter episode stretched with anime-original daily-life material (consistent with existing [mixed] type)",
+     "sources": ["https://mangadex.org/title/c0587ebd-7e89-43b7-a877-b28b20ad8261", "https://en.wikipedia.org/wiki/List_of_Fate/kaleid_liner_Prisma_Illya_episodes"]},
+    {"episode": 9, "end_chapter": 12, "start_chapter": 12, "chapters_adapted": "12", "volume": 2,
+     "confidence": "high", "note": "Title lock: 'I'll End This Right Here' (ここで終わらせる) = ch 12 'I Will End This Fight Here!' (Berserker battle)",
+     "sources": ["https://mangadex.org/title/c0587ebd-7e89-43b7-a877-b28b20ad8261", "https://en.wikipedia.org/wiki/List_of_Fate/kaleid_liner_Prisma_Illya_episodes"]},
+    {"episode": 10, "end_chapter": 13, "start_chapter": 13, "chapters_adapted": "13, Epilogue (13.5; counted as AniList's 14th chapter)", "volume": 2,
+     "confidence": "high", "note": "Title lock: finale 'Kaleidoscope' = ch 13 'Kaleidoscope'; also covers the volume-2 epilogue — 1st manga fully adapted (END stays 13 = last mainline chapter)",
+     "sources": ["https://mangadex.org/title/c0587ebd-7e89-43b7-a877-b28b20ad8261", "https://wheredoestheanimeleaveoff.com/where-does-the-fate-kaleid-liner-prisma-illya-anime-end-in-the-manga/", "https://ja.wikipedia.org/wiki/Fate/kaleid_liner_%E3%83%97%E3%83%AA%E3%82%BA%E3%83%9E%E2%98%86%E3%82%A4%E3%83%AA%E3%83%A4"]}
+  ],
+  "continue_points": [],
+  "annotations": [
+    {"episodes": [8], "kind": "partial", "chapters": "11", "note": "Canon spine is ch 11 only; the rest of the episode is anime-original padding (episode already typed mixed) — 10 episodes vs 13 chapters means the back half decompresses"}
+  ],
+  "type_corrections": [],
+  "repairs": [
+    {"episode": 42, "field": "end_chapter", "old": 13, "new": null,
+     "why": "Ep 42 is the 2017 movie Sekka no Chikai (Oath Under Snow), which adapts Fate/kaleid liner PRISMA ILLYA 3rei!! chapters 29-39 (TYPE-MOON wiki) = 3rei volumes 7-8 'almost faithfully' (ja.wikipedia: 原作コミック（『ドライ!!』）の7巻、8巻をほぼ忠実に映像化), a Shirou/Miyu flashback following the S4 finale. It adapts ZERO chapters of the 1st-series manga; the ch-13 pin was an MU final-episode heal applied in the wrong chapter space (MU latest_chapter 13 belongs to the 1st series). Remove the anchor; treat ep 42 as order-only until a 3rei-scoped chapter space exists.",
+     "sources": ["https://typemoon.fandom.com/wiki/Fate/kaleid_liner_PRISMA%E2%98%86ILLYA:_Vow_in_the_Snow", "https://ja.wikipedia.org/wiki/Fate/kaleid_liner_%E3%83%97%E3%83%AA%E3%82%BA%E3%83%9E%E2%98%86%E3%82%A4%E3%83%AA%E3%83%A4", "https://api.mangaupdates.com/v1/series/16677431220"]}
+  ],
+  "structure": {
+    "notes": "Franchise = three successive manga by Hiroshi Hiroyama, each with its own chapter space: (1) 1st series, Comp Ace 2007-2008, 13 chapters + epilogue in 2 volumes (TYPE-MOON wiki '13 + Epilogue (Complete)'; MU latest ch 13; AniList 33526 counts 14 = incl. epilogue) — OUR current chapter space, v1 = ch 1-5, v2 = ch 6-13+epilogue (MangaDex + MU release listings agree). (2) 2wei!, 2009-2012, 5 vols, 27 numbered chapters on MangaDex (AniList 85136 lists 34 incl. specials). (3) 3rei!!, 2012-, long-running (AniList 66131, RELEASING). Season->manga: S1 (our 1-10) = complete adaptation of the 1st series (en+ja Wikipedia, TYPE-MOON wiki, WDTALO all agree); 2wei! TV = first half of the 2wei! manga and Herz! = the remainder (Wikipedia; WDTALO: 'two-season anime, complete adaptation'); 3rei!! TV (our 30-41) = early 3rei; ep 42 = movie Oath Under Snow = 3rei ch 29-39 / vols 7-8 (flashback prequel-in-content, sequel-in-airing). Numbering: our rows drop 2wei TV ep 1 'Illya Grow Up!?' (ja.wikipedia table confirms it exists; our ep 11 'Illya x Illya' = 2wei source ep 2), consistent with the SOURCE_NUMBERING_SHIFTS ruling {drop 11, -1 from 12}; so 2wei src 2-10 = our 11-19, Herz 1-10 = our 20-29, 3rei 1-12 = our 30-41, movie = 42. Component metadata ranges (11-20/21-30/31-42) reflect pre-shift numbering, rows are authoritative. Undoukai DE Dance OVA (AniList 18851) is unnumbered order-only between S1 and 2wei.",
+    "order_only": [42]
+  },
+  "flags_for_sean": [
+    "SCOPING RECOMMENDATION (the ask): keep this entry's chapter space = 1st-series manga only; eps 1-10 are now fully anchored in it and the manga is 100% adapted. Eps 11-42 adapt DIFFERENT manga and must not be interpolated in this 14-chapter space. Recommend a Clear-Card-style split: a 2wei-scoped entry (our eps 11-29 -> 2wei! manga, AniList 85136, 5 vols / 27 numbered chapters) and a 3rei-scoped entry (our eps 30-41 + ep 42 movie -> 3rei!! manga, AniList 66131). Until split, eps 11-42 should render as out-of-space/order-only rather than pending-interpolation.",
+    "ep-42 pin repaired to removal (was ch 13, MU heal in wrong space). If/when a 3rei-scoped space exists, the movie pins there as START 29 / END 39 (TYPE-MOON wiki 'Chapter 29 to 39'; ja.wikipedia '3rei vols 7-8 almost faithfully') — sources already in the repair entry.",
+    "Continue point after ep 10 is 2wei! ch 1 (a different manga), so no in-space continue_chapter exists; the honest reader guidance is 'start 2wei!'.",
+    "For future 3rei scoping: WDTALO states the post-anime/post-movies resume point is 3rei ch 53.4 (single source, unverified — re-verify when that entry is built).",
+    "2wei Herz! coverage detail: WDTALO also notes 'the ending of the 2wei manga is much different compared to the anime and many events in 3rei are changed' — expect divergence annotations when the 2wei space is researched, not a clean 1:1 tail."
+  ]
+}

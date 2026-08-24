@@ -1,0 +1,1791 @@
+{
+ "series_id": "toriko",
+ "summary": "Full per-episode coverage recovered for eps 2-146: toriko.fandom episode pages carry an infobox chapter field for every canon episode, cross-checked against the wiki's chapter pages (reverse Episodes field, spot-verified at ~30 chapters \u2014 zero contradictions), chapter-title/episode-title equivalences (chs 100, 173, 211, 215, 216, 218, 220-222, 226, 231 etc. match our episode titles), and animefillerguide's endpoint statement. The adaptation is near-linear at ~1.7 chapters/ep with two disruptions: the ch-173 Christmas chapter pulled forward to ep 87, and the IGO-vs-Bishokukai war (chs 218-232) regrouped per-fighter across eps 133-140. The finale compresses hard: eps 142-144 cover chs 237-253 (ch 245 skipped) and eps 143-146 diverge into an anime-original ending; the true frontier is ch 253 = end of v28, contradicting the stored ep147->263 anchor (repair filed). Volume space confirmed consistent with our Wikipedia boundaries at every probe (chs 11, 45, 90, 125, 148, 161, 172, 194, 210, 216, 218, 230, 236, 245, 253, 254).",
+ "anchors": [
+  {
+   "episode": 2,
+   "end_chapter": 2,
+   "start_chapter": 1,
+   "chapters_adapted": "1-2",
+   "volume": 1,
+   "confidence": "high",
+   "note": "adapts manga chs 1-2 exactly (ep 1 is anime-original prologue)",
+   "sources": [
+    "https://toriko.fandom.com/wiki/Episode_2",
+    "https://toriko.fandom.com/wiki/Gourmet_1",
+    "https://toriko.fandom.com/wiki/Gourmet_2"
+   ]
+  },
+  {
+   "episode": 3,
+   "end_chapter": 7,
+   "start_chapter": 3,
+   "chapters_adapted": "3-7",
+   "volume": 1,
+   "confidence": "medium",
+   "note": "Rainbow Fruit; densest early compression (5 chs)",
+   "sources": [
+    "https://toriko.fandom.com/wiki/Episode_3",
+    "https://toriko.fandom.com/wiki/Gourmet_7"
+   ]
+  },
+  {
+   "episode": 4,
+   "end_chapter": 11,
+   "start_chapter": 8,
+   "chapters_adapted": "8-11",
+   "volume": 2,
+   "confidence": "medium",
+   "note": "Puffer Whale arc start",
+   "sources": [
+    "https://toriko.fandom.com/wiki/Episode_4",
+    "https://toriko.fandom.com/wiki/Gourmet_11"
+   ]
+  },
+  {
+   "episode": 5,
+   "end_chapter": 13,
+   "start_chapter": 12,
+   "chapters_adapted": "12-13",
+   "volume": 2,
+   "confidence": "medium",
+   "note": "per-episode chapter field on toriko.fandom episode page",
+   "sources": [
+    "https://toriko.fandom.com/wiki/Episode_5"
+   ]
+  },
+  {
+   "episode": 6,
+   "end_chapter": 18,
+   "start_chapter": 14,
+   "chapters_adapted": "14-18",
+   "volume": 3,
+   "confidence": "medium",
+   "note": "Puffer Whale arc end",
+   "sources": [
+    "https://toriko.fandom.com/wiki/Episode_6"
+   ]
+  },
+  {
+   "episode": 7,
+   "end_chapter": 22,
+   "start_chapter": 19,
+   "chapters_adapted": "19-22",
+   "volume": 3,
+   "confidence": "medium",
+   "note": "Regal Mammoth arc start; ch 22 'Battle Wolf' reverse-maps to ep 7",
+   "sources": [
+    "https://toriko.fandom.com/wiki/Episode_7",
+    "https://toriko.fandom.com/wiki/Gourmet_22"
+   ]
+  },
+  {
+   "episode": 8,
+   "end_chapter": 25,
+   "start_chapter": 23,
+   "chapters_adapted": "23-25",
+   "volume": 3,
+   "confidence": "medium",
+   "note": "per-episode chapter field on toriko.fandom episode page",
+   "sources": [
+    "https://toriko.fandom.com/wiki/Episode_8",
+    "https://toriko.fandom.com/wiki/Gourmet_25"
+   ]
+  },
+  {
+   "episode": 9,
+   "end_chapter": 29,
+   "start_chapter": 26,
+   "chapters_adapted": "26-29",
+   "volume": 4,
+   "confidence": "medium",
+   "note": "per-episode chapter field on toriko.fandom episode page",
+   "sources": [
+    "https://toriko.fandom.com/wiki/Episode_9"
+   ]
+  },
+  {
+   "episode": 10,
+   "end_chapter": 33,
+   "start_chapter": 30,
+   "chapters_adapted": "30-33",
+   "volume": 4,
+   "confidence": "medium",
+   "note": "per-episode chapter field on toriko.fandom episode page",
+   "sources": [
+    "https://toriko.fandom.com/wiki/Episode_10"
+   ]
+  },
+  {
+   "episode": 11,
+   "end_chapter": 37,
+   "start_chapter": 34,
+   "chapters_adapted": "34-37",
+   "volume": 5,
+   "confidence": "medium",
+   "note": "per-episode chapter field on toriko.fandom episode page",
+   "sources": [
+    "https://toriko.fandom.com/wiki/Episode_11"
+   ]
+  },
+  {
+   "episode": 12,
+   "end_chapter": 39,
+   "start_chapter": 38,
+   "chapters_adapted": "38-39",
+   "volume": 5,
+   "confidence": "medium",
+   "note": "per-episode chapter field on toriko.fandom episode page",
+   "sources": [
+    "https://toriko.fandom.com/wiki/Episode_12"
+   ]
+  },
+  {
+   "episode": 13,
+   "end_chapter": 42,
+   "start_chapter": 40,
+   "chapters_adapted": "40-42",
+   "volume": 5,
+   "confidence": "medium",
+   "note": "per-episode chapter field on toriko.fandom episode page",
+   "sources": [
+    "https://toriko.fandom.com/wiki/Episode_13"
+   ]
+  },
+  {
+   "episode": 14,
+   "end_chapter": 45,
+   "start_chapter": 43,
+   "chapters_adapted": "43-45",
+   "volume": 6,
+   "confidence": "medium",
+   "note": "per-episode chapter field on toriko.fandom episode page",
+   "sources": [
+    "https://toriko.fandom.com/wiki/Episode_14",
+    "https://toriko.fandom.com/wiki/Gourmet_45"
+   ]
+  },
+  {
+   "episode": 15,
+   "end_chapter": 48,
+   "start_chapter": 46,
+   "chapters_adapted": "46-48",
+   "volume": 6,
+   "confidence": "medium",
+   "note": "per-episode chapter field on toriko.fandom episode page",
+   "sources": [
+    "https://toriko.fandom.com/wiki/Episode_15"
+   ]
+  },
+  {
+   "episode": 16,
+   "end_chapter": 51,
+   "start_chapter": 49,
+   "chapters_adapted": "49-51",
+   "volume": 6,
+   "confidence": "medium",
+   "note": "per-episode chapter field on toriko.fandom episode page",
+   "sources": [
+    "https://toriko.fandom.com/wiki/Episode_16"
+   ]
+  },
+  {
+   "episode": 17,
+   "end_chapter": 54,
+   "start_chapter": 52,
+   "chapters_adapted": "52-54",
+   "volume": 7,
+   "confidence": "medium",
+   "note": "Regal Mammoth arc end",
+   "sources": [
+    "https://toriko.fandom.com/wiki/Episode_17"
+   ]
+  },
+  {
+   "episode": 18,
+   "end_chapter": 55,
+   "start_chapter": 55,
+   "chapters_adapted": "55",
+   "volume": 7,
+   "confidence": "medium",
+   "note": "BB Corn arc start; single chapter",
+   "sources": [
+    "https://toriko.fandom.com/wiki/Episode_18",
+    "https://toriko.fandom.com/wiki/Gourmet_55"
+   ]
+  },
+  {
+   "episode": 19,
+   "end_chapter": 57,
+   "start_chapter": 56,
+   "chapters_adapted": "56-57",
+   "volume": 7,
+   "confidence": "medium",
+   "note": "per-episode chapter field on toriko.fandom episode page",
+   "sources": [
+    "https://toriko.fandom.com/wiki/Episode_19"
+   ]
+  },
+  {
+   "episode": 20,
+   "end_chapter": 59,
+   "start_chapter": 58,
+   "chapters_adapted": "58-59",
+   "volume": 7,
+   "confidence": "medium",
+   "note": "per-episode chapter field on toriko.fandom episode page",
+   "sources": [
+    "https://toriko.fandom.com/wiki/Episode_20"
+   ]
+  },
+  {
+   "episode": 21,
+   "end_chapter": 61,
+   "start_chapter": 60,
+   "chapters_adapted": "60-61",
+   "volume": 7,
+   "confidence": "medium",
+   "note": "BB Corn arc end; ch 61 reverse-maps to ep 21",
+   "sources": [
+    "https://toriko.fandom.com/wiki/Episode_21",
+    "https://toriko.fandom.com/wiki/Gourmet_61"
+   ]
+  },
+  {
+   "episode": 22,
+   "end_chapter": 63,
+   "start_chapter": 62,
+   "chapters_adapted": "62-63",
+   "volume": 8,
+   "confidence": "medium",
+   "note": "ends mid-ch 63 (ch 63 split with ep 23 per its chapter page)",
+   "sources": [
+    "https://toriko.fandom.com/wiki/Episode_22",
+    "https://toriko.fandom.com/wiki/Gourmet_63"
+   ]
+  },
+  {
+   "episode": 23,
+   "end_chapter": 65,
+   "start_chapter": 63,
+   "chapters_adapted": "63(cont)-65",
+   "volume": 8,
+   "confidence": "medium",
+   "note": "finishes ch 63, ends mid-ch 65; Century Soup arc start at ch 64/65",
+   "sources": [
+    "https://toriko.fandom.com/wiki/Episode_23",
+    "https://toriko.fandom.com/wiki/Gourmet_63",
+    "https://toriko.fandom.com/wiki/Gourmet_65"
+   ]
+  },
+  {
+   "episode": 24,
+   "end_chapter": 67,
+   "start_chapter": 65,
+   "chapters_adapted": "65(cont)-67",
+   "volume": 8,
+   "confidence": "high",
+   "note": "ep title matches ch 65 'Gourmet Living National Treasure Setsuno'",
+   "sources": [
+    "https://toriko.fandom.com/wiki/Episode_24",
+    "https://toriko.fandom.com/wiki/Gourmet_65"
+   ]
+  },
+  {
+   "episode": 25,
+   "end_chapter": 69,
+   "start_chapter": 68,
+   "chapters_adapted": "68-69",
+   "volume": 8,
+   "confidence": "medium",
+   "note": "ch 69 'The Voyage to Ice Hell' reverse-maps to ep 25",
+   "sources": [
+    "https://toriko.fandom.com/wiki/Episode_25",
+    "https://toriko.fandom.com/wiki/Gourmet_69"
+   ]
+  },
+  {
+   "episode": 26,
+   "end_chapter": 71,
+   "start_chapter": 70,
+   "chapters_adapted": "70-71",
+   "volume": 9,
+   "confidence": "medium",
+   "note": "per-episode chapter field on toriko.fandom episode page",
+   "sources": [
+    "https://toriko.fandom.com/wiki/Episode_26"
+   ]
+  },
+  {
+   "episode": 27,
+   "end_chapter": 73,
+   "start_chapter": 72,
+   "chapters_adapted": "72-73",
+   "volume": 9,
+   "confidence": "medium",
+   "note": "per-episode chapter field on toriko.fandom episode page",
+   "sources": [
+    "https://toriko.fandom.com/wiki/Episode_27"
+   ]
+  },
+  {
+   "episode": 28,
+   "end_chapter": 75,
+   "start_chapter": 74,
+   "chapters_adapted": "74-75",
+   "volume": 9,
+   "confidence": "medium",
+   "note": "per-episode chapter field on toriko.fandom episode page",
+   "sources": [
+    "https://toriko.fandom.com/wiki/Episode_28"
+   ]
+  },
+  {
+   "episode": 29,
+   "end_chapter": 77,
+   "start_chapter": 76,
+   "chapters_adapted": "76-77",
+   "volume": 9,
+   "confidence": "medium",
+   "note": "per-episode chapter field on toriko.fandom episode page",
+   "sources": [
+    "https://toriko.fandom.com/wiki/Episode_29"
+   ]
+  },
+  {
+   "episode": 30,
+   "end_chapter": 80,
+   "start_chapter": 78,
+   "chapters_adapted": "78-80",
+   "volume": 10,
+   "confidence": "medium",
+   "note": "ends mid-ch 80; ch 79 reverse-maps to ep 30",
+   "sources": [
+    "https://toriko.fandom.com/wiki/Episode_30",
+    "https://toriko.fandom.com/wiki/Gourmet_79"
+   ]
+  },
+  {
+   "episode": 31,
+   "end_chapter": 82,
+   "start_chapter": 80,
+   "chapters_adapted": "80(cont)-82",
+   "volume": 10,
+   "confidence": "medium",
+   "note": "per-episode chapter field on toriko.fandom episode page",
+   "sources": [
+    "https://toriko.fandom.com/wiki/Episode_31"
+   ]
+  },
+  {
+   "episode": 32,
+   "end_chapter": 84,
+   "start_chapter": 83,
+   "chapters_adapted": "83-84",
+   "volume": 10,
+   "confidence": "medium",
+   "note": "per-episode chapter field on toriko.fandom episode page",
+   "sources": [
+    "https://toriko.fandom.com/wiki/Episode_32"
+   ]
+  },
+  {
+   "episode": 33,
+   "end_chapter": 86,
+   "start_chapter": 85,
+   "chapters_adapted": "85-86",
+   "volume": 10,
+   "confidence": "medium",
+   "note": "per-episode chapter field on toriko.fandom episode page",
+   "sources": [
+    "https://toriko.fandom.com/wiki/Episode_33"
+   ]
+  },
+  {
+   "episode": 34,
+   "end_chapter": 88,
+   "start_chapter": 87,
+   "chapters_adapted": "87-88",
+   "volume": 10,
+   "confidence": "medium",
+   "note": "per-episode chapter field on toriko.fandom episode page",
+   "sources": [
+    "https://toriko.fandom.com/wiki/Episode_34"
+   ]
+  },
+  {
+   "episode": 35,
+   "end_chapter": 90,
+   "start_chapter": 89,
+   "chapters_adapted": "89-90",
+   "volume": 11,
+   "confidence": "medium",
+   "note": "ch 90 'Time of Revival' reverse-maps to ep 35",
+   "sources": [
+    "https://toriko.fandom.com/wiki/Episode_35",
+    "https://toriko.fandom.com/wiki/Gourmet_90"
+   ]
+  },
+  {
+   "episode": 36,
+   "end_chapter": 92,
+   "start_chapter": 91,
+   "chapters_adapted": "91-92",
+   "volume": 11,
+   "confidence": "medium",
+   "note": "per-episode chapter field on toriko.fandom episode page",
+   "sources": [
+    "https://toriko.fandom.com/wiki/Episode_36"
+   ]
+  },
+  {
+   "episode": 37,
+   "end_chapter": 94,
+   "start_chapter": 93,
+   "chapters_adapted": "93-94",
+   "volume": 11,
+   "confidence": "medium",
+   "note": "ends mid-ch 94",
+   "sources": [
+    "https://toriko.fandom.com/wiki/Episode_37"
+   ]
+  },
+  {
+   "episode": 38,
+   "end_chapter": 95,
+   "start_chapter": 94,
+   "chapters_adapted": "94(cont)-95",
+   "volume": 11,
+   "confidence": "medium",
+   "note": "per-episode chapter field on toriko.fandom episode page",
+   "sources": [
+    "https://toriko.fandom.com/wiki/Episode_38"
+   ]
+  },
+  {
+   "episode": 39,
+   "end_chapter": 97,
+   "start_chapter": 96,
+   "chapters_adapted": "96-97",
+   "volume": 11,
+   "confidence": "medium",
+   "note": "per-episode chapter field on toriko.fandom episode page",
+   "sources": [
+    "https://toriko.fandom.com/wiki/Episode_39"
+   ]
+  },
+  {
+   "episode": 40,
+   "end_chapter": 99,
+   "start_chapter": 98,
+   "chapters_adapted": "98-99",
+   "volume": 12,
+   "confidence": "medium",
+   "note": "per-episode chapter field on toriko.fandom episode page",
+   "sources": [
+    "https://toriko.fandom.com/wiki/Episode_40"
+   ]
+  },
+  {
+   "episode": 41,
+   "end_chapter": 100,
+   "start_chapter": 100,
+   "chapters_adapted": "100",
+   "volume": 12,
+   "confidence": "high",
+   "note": "Century Soup arc end; ep = ch 100 'New Sweets House' (title match, reverse-map)",
+   "sources": [
+    "https://toriko.fandom.com/wiki/Episode_41",
+    "https://toriko.fandom.com/wiki/Gourmet_100"
+   ]
+  },
+  {
+   "episode": 44,
+   "end_chapter": 102,
+   "start_chapter": 101,
+   "chapters_adapted": "101-102",
+   "volume": 12,
+   "confidence": "high",
+   "note": "canon resumes after 2 filler; ch 101 reverse-maps to ep 44",
+   "sources": [
+    "https://toriko.fandom.com/wiki/Episode_44",
+    "https://toriko.fandom.com/wiki/Gourmet_101"
+   ]
+  },
+  {
+   "episode": 45,
+   "end_chapter": 104,
+   "start_chapter": 103,
+   "chapters_adapted": "103-104",
+   "volume": 12,
+   "confidence": "medium",
+   "note": "Vegetable Sky",
+   "sources": [
+    "https://toriko.fandom.com/wiki/Episode_45"
+   ]
+  },
+  {
+   "episode": 46,
+   "end_chapter": 106,
+   "start_chapter": 105,
+   "chapters_adapted": "105-106",
+   "volume": 12,
+   "confidence": "medium",
+   "note": "per-episode chapter field on toriko.fandom episode page",
+   "sources": [
+    "https://toriko.fandom.com/wiki/Episode_46"
+   ]
+  },
+  {
+   "episode": 47,
+   "end_chapter": 108,
+   "start_chapter": 107,
+   "chapters_adapted": "107-108",
+   "volume": 13,
+   "confidence": "medium",
+   "note": "per-episode chapter field on toriko.fandom episode page",
+   "sources": [
+    "https://toriko.fandom.com/wiki/Episode_47"
+   ]
+  },
+  {
+   "episode": 48,
+   "end_chapter": 109,
+   "start_chapter": 109,
+   "chapters_adapted": "109",
+   "volume": 13,
+   "confidence": "medium",
+   "note": "Ozone Herb arc end; ch 109 reverse-maps to ep 48",
+   "sources": [
+    "https://toriko.fandom.com/wiki/Episode_48",
+    "https://toriko.fandom.com/wiki/Gourmet_109"
+   ]
+  },
+  {
+   "episode": 49,
+   "end_chapter": 111,
+   "start_chapter": 110,
+   "chapters_adapted": "110-111",
+   "volume": 13,
+   "confidence": "medium",
+   "note": "Gourmet World reality arc",
+   "sources": [
+    "https://toriko.fandom.com/wiki/Episode_49"
+   ]
+  },
+  {
+   "episode": 50,
+   "end_chapter": 113,
+   "start_chapter": 112,
+   "chapters_adapted": "112-113",
+   "volume": 13,
+   "confidence": "medium",
+   "note": "ch 113 reverse-maps to ep 50",
+   "sources": [
+    "https://toriko.fandom.com/wiki/Episode_50",
+    "https://toriko.fandom.com/wiki/Gourmet_113"
+   ]
+  },
+  {
+   "episode": 52,
+   "end_chapter": 115,
+   "start_chapter": 114,
+   "chapters_adapted": "114-115",
+   "volume": 13,
+   "confidence": "high",
+   "note": "canon resumes after crossover filler ep 51; ch 115 reverse-maps to ep 52",
+   "sources": [
+    "https://toriko.fandom.com/wiki/Episode_52",
+    "https://toriko.fandom.com/wiki/Gourmet_115"
+   ]
+  },
+  {
+   "episode": 53,
+   "end_chapter": 117,
+   "start_chapter": 116,
+   "chapters_adapted": "116-117",
+   "volume": 14,
+   "confidence": "medium",
+   "note": "per-episode chapter field on toriko.fandom episode page",
+   "sources": [
+    "https://toriko.fandom.com/wiki/Episode_53"
+   ]
+  },
+  {
+   "episode": 54,
+   "end_chapter": 119,
+   "start_chapter": 118,
+   "chapters_adapted": "118-119",
+   "volume": 14,
+   "confidence": "medium",
+   "note": "per-episode chapter field on toriko.fandom episode page",
+   "sources": [
+    "https://toriko.fandom.com/wiki/Episode_54"
+   ]
+  },
+  {
+   "episode": 55,
+   "end_chapter": 121,
+   "start_chapter": 120,
+   "chapters_adapted": "120-121",
+   "volume": 14,
+   "confidence": "medium",
+   "note": "per-episode chapter field on toriko.fandom episode page",
+   "sources": [
+    "https://toriko.fandom.com/wiki/Episode_55"
+   ]
+  },
+  {
+   "episode": 56,
+   "end_chapter": 123,
+   "start_chapter": 122,
+   "chapters_adapted": "122-123",
+   "volume": 14,
+   "confidence": "medium",
+   "note": "per-episode chapter field on toriko.fandom episode page",
+   "sources": [
+    "https://toriko.fandom.com/wiki/Episode_56"
+   ]
+  },
+  {
+   "episode": 57,
+   "end_chapter": 124,
+   "start_chapter": 124,
+   "chapters_adapted": "124",
+   "volume": 14,
+   "confidence": "high",
+   "note": "Melk arc end = v14 end; ch 124 'Knife Complete' reverse-maps to ep 57",
+   "sources": [
+    "https://toriko.fandom.com/wiki/Episode_57",
+    "https://toriko.fandom.com/wiki/Gourmet_124"
+   ]
+  },
+  {
+   "episode": 58,
+   "end_chapter": 125,
+   "start_chapter": 125,
+   "chapters_adapted": "125",
+   "volume": 15,
+   "confidence": "high",
+   "note": "Mellow Cola arc start = v15 start; ch 125 reverse-maps to ep 58",
+   "sources": [
+    "https://toriko.fandom.com/wiki/Episode_58",
+    "https://toriko.fandom.com/wiki/Gourmet_125"
+   ]
+  },
+  {
+   "episode": 59,
+   "end_chapter": 127,
+   "start_chapter": 126,
+   "chapters_adapted": "126-127",
+   "volume": 15,
+   "confidence": "medium",
+   "note": "Zebra introduced",
+   "sources": [
+    "https://toriko.fandom.com/wiki/Episode_59"
+   ]
+  },
+  {
+   "episode": 60,
+   "end_chapter": 129,
+   "start_chapter": 128,
+   "chapters_adapted": "128-129",
+   "volume": 15,
+   "confidence": "medium",
+   "note": "ends mid-ch 129",
+   "sources": [
+    "https://toriko.fandom.com/wiki/Episode_60"
+   ]
+  },
+  {
+   "episode": 61,
+   "end_chapter": 129,
+   "start_chapter": 129,
+   "chapters_adapted": "129(cont)",
+   "volume": 15,
+   "confidence": "medium",
+   "note": "whole ep inside latter part of ch 129",
+   "sources": [
+    "https://toriko.fandom.com/wiki/Episode_61"
+   ]
+  },
+  {
+   "episode": 62,
+   "end_chapter": 131,
+   "start_chapter": 130,
+   "chapters_adapted": "130-131",
+   "volume": 15,
+   "confidence": "medium",
+   "note": "per-episode chapter field on toriko.fandom episode page",
+   "sources": [
+    "https://toriko.fandom.com/wiki/Episode_62"
+   ]
+  },
+  {
+   "episode": 63,
+   "end_chapter": 133,
+   "start_chapter": 132,
+   "chapters_adapted": "132-133",
+   "volume": 15,
+   "confidence": "medium",
+   "note": "per-episode chapter field on toriko.fandom episode page",
+   "sources": [
+    "https://toriko.fandom.com/wiki/Episode_63"
+   ]
+  },
+  {
+   "episode": 64,
+   "end_chapter": 135,
+   "start_chapter": 134,
+   "chapters_adapted": "134-135",
+   "volume": 16,
+   "confidence": "medium",
+   "note": "per-episode chapter field on toriko.fandom episode page",
+   "sources": [
+    "https://toriko.fandom.com/wiki/Episode_64"
+   ]
+  },
+  {
+   "episode": 65,
+   "end_chapter": 137,
+   "start_chapter": 136,
+   "chapters_adapted": "136-137",
+   "volume": 16,
+   "confidence": "medium",
+   "note": "per-episode chapter field on toriko.fandom episode page",
+   "sources": [
+    "https://toriko.fandom.com/wiki/Episode_65"
+   ]
+  },
+  {
+   "episode": 66,
+   "end_chapter": 139,
+   "start_chapter": 138,
+   "chapters_adapted": "138-139",
+   "volume": 16,
+   "confidence": "medium",
+   "note": "per-episode chapter field on toriko.fandom episode page",
+   "sources": [
+    "https://toriko.fandom.com/wiki/Episode_66"
+   ]
+  },
+  {
+   "episode": 67,
+   "end_chapter": 141,
+   "start_chapter": 140,
+   "chapters_adapted": "140-141",
+   "volume": 16,
+   "confidence": "medium",
+   "note": "per-episode chapter field on toriko.fandom episode page",
+   "sources": [
+    "https://toriko.fandom.com/wiki/Episode_67"
+   ]
+  },
+  {
+   "episode": 68,
+   "end_chapter": 143,
+   "start_chapter": 142,
+   "chapters_adapted": "142-143",
+   "volume": 16,
+   "confidence": "medium",
+   "note": "Mellow Cola arc end; ch 143 reverse-maps to ep 68",
+   "sources": [
+    "https://toriko.fandom.com/wiki/Episode_68",
+    "https://toriko.fandom.com/wiki/Gourmet_143"
+   ]
+  },
+  {
+   "episode": 71,
+   "end_chapter": 144,
+   "start_chapter": 144,
+   "chapters_adapted": "144",
+   "volume": 16,
+   "confidence": "high",
+   "note": "canon resumes after 2 filler; ch 144 reverse-maps to ep 71",
+   "sources": [
+    "https://toriko.fandom.com/wiki/Episode_71",
+    "https://toriko.fandom.com/wiki/Gourmet_144"
+   ]
+  },
+  {
+   "episode": 72,
+   "end_chapter": 145,
+   "start_chapter": 145,
+   "chapters_adapted": "145",
+   "volume": 17,
+   "confidence": "medium",
+   "note": "one-chapter episodes through the breather stretch",
+   "sources": [
+    "https://toriko.fandom.com/wiki/Episode_72"
+   ]
+  },
+  {
+   "episode": 73,
+   "end_chapter": 146,
+   "start_chapter": 146,
+   "chapters_adapted": "146",
+   "volume": 17,
+   "confidence": "medium",
+   "note": "per-episode chapter field on toriko.fandom episode page",
+   "sources": [
+    "https://toriko.fandom.com/wiki/Episode_73"
+   ]
+  },
+  {
+   "episode": 74,
+   "end_chapter": 147,
+   "start_chapter": 147,
+   "chapters_adapted": "147",
+   "volume": 17,
+   "confidence": "medium",
+   "note": "ch 147 reverse-maps to ep 74",
+   "sources": [
+    "https://toriko.fandom.com/wiki/Episode_74",
+    "https://toriko.fandom.com/wiki/Gourmet_147"
+   ]
+  },
+  {
+   "episode": 75,
+   "end_chapter": 149,
+   "start_chapter": 148,
+   "chapters_adapted": "148-149",
+   "volume": 17,
+   "confidence": "high",
+   "note": "Shining Gourami arc start; ch 148 reverse-maps to ep 75; ends mid-ch 149",
+   "sources": [
+    "https://toriko.fandom.com/wiki/Episode_75",
+    "https://toriko.fandom.com/wiki/Gourmet_148"
+   ]
+  },
+  {
+   "episode": 76,
+   "end_chapter": 150,
+   "start_chapter": 149,
+   "chapters_adapted": "149(cont)-150",
+   "volume": 17,
+   "confidence": "medium",
+   "note": "per-episode chapter field on toriko.fandom episode page",
+   "sources": [
+    "https://toriko.fandom.com/wiki/Episode_76"
+   ]
+  },
+  {
+   "episode": 77,
+   "end_chapter": 152,
+   "start_chapter": 151,
+   "chapters_adapted": "151-152",
+   "volume": 17,
+   "confidence": "medium",
+   "note": "per-episode chapter field on toriko.fandom episode page",
+   "sources": [
+    "https://toriko.fandom.com/wiki/Episode_77"
+   ]
+  },
+  {
+   "episode": 78,
+   "end_chapter": 154,
+   "start_chapter": 153,
+   "chapters_adapted": "153-154",
+   "volume": 18,
+   "confidence": "medium",
+   "note": "ends mid-ch 154",
+   "sources": [
+    "https://toriko.fandom.com/wiki/Episode_78"
+   ]
+  },
+  {
+   "episode": 79,
+   "end_chapter": 155,
+   "start_chapter": 154,
+   "chapters_adapted": "154(cont)-155",
+   "volume": 18,
+   "confidence": "medium",
+   "note": "Gourami arc end; ch 155 reverse-maps to ep 79",
+   "sources": [
+    "https://toriko.fandom.com/wiki/Episode_79",
+    "https://toriko.fandom.com/wiki/Gourmet_155"
+   ]
+  },
+  {
+   "episode": 83,
+   "end_chapter": 157,
+   "start_chapter": 156,
+   "chapters_adapted": "156-157",
+   "volume": 18,
+   "confidence": "medium",
+   "note": "canon resumes after 3 filler; ends mid-ch 157",
+   "sources": [
+    "https://toriko.fandom.com/wiki/Episode_83"
+   ]
+  },
+  {
+   "episode": 84,
+   "end_chapter": 158,
+   "start_chapter": 157,
+   "chapters_adapted": "157(cont)-158",
+   "volume": 18,
+   "confidence": "medium",
+   "note": "per-episode chapter field on toriko.fandom episode page",
+   "sources": [
+    "https://toriko.fandom.com/wiki/Episode_84"
+   ]
+  },
+  {
+   "episode": 85,
+   "end_chapter": 159,
+   "start_chapter": 159,
+   "chapters_adapted": "159",
+   "volume": 18,
+   "confidence": "medium",
+   "note": "per-episode chapter field on toriko.fandom episode page",
+   "sources": [
+    "https://toriko.fandom.com/wiki/Episode_85"
+   ]
+  },
+  {
+   "episode": 87,
+   "end_chapter": 173,
+   "start_chapter": 173,
+   "chapters_adapted": "173",
+   "volume": 20,
+   "confidence": "high",
+   "note": "Christmas ep adapts ch 173 'Gourmet Santa' (title match) pulled ~13 chapters forward; see rearranged annotation",
+   "sources": [
+    "https://toriko.fandom.com/wiki/Episode_87",
+    "https://toriko.fandom.com/wiki/Gourmet_173"
+   ]
+  },
+  {
+   "episode": 88,
+   "end_chapter": 161,
+   "start_chapter": 160,
+   "chapters_adapted": "160-161",
+   "volume": 18,
+   "confidence": "medium",
+   "note": "manga order resumes at ch 160; Gourmet Casino; ch 161 reverse-maps to ep 88",
+   "sources": [
+    "https://toriko.fandom.com/wiki/Episode_88",
+    "https://toriko.fandom.com/wiki/Gourmet_161"
+   ]
+  },
+  {
+   "episode": 89,
+   "end_chapter": 162,
+   "start_chapter": 161,
+   "chapters_adapted": "161(cont)-162",
+   "volume": 18,
+   "confidence": "medium",
+   "note": "per-episode chapter field on toriko.fandom episode page",
+   "sources": [
+    "https://toriko.fandom.com/wiki/Episode_89"
+   ]
+  },
+  {
+   "episode": 90,
+   "end_chapter": 164,
+   "start_chapter": 163,
+   "chapters_adapted": "163-164",
+   "volume": 19,
+   "confidence": "medium",
+   "note": "per-episode chapter field on toriko.fandom episode page",
+   "sources": [
+    "https://toriko.fandom.com/wiki/Episode_90"
+   ]
+  },
+  {
+   "episode": 91,
+   "end_chapter": 165,
+   "start_chapter": 165,
+   "chapters_adapted": "165",
+   "volume": 19,
+   "confidence": "medium",
+   "note": "per-episode chapter field on toriko.fandom episode page",
+   "sources": [
+    "https://toriko.fandom.com/wiki/Episode_91"
+   ]
+  },
+  {
+   "episode": 92,
+   "end_chapter": 166,
+   "start_chapter": 166,
+   "chapters_adapted": "166",
+   "volume": 19,
+   "confidence": "medium",
+   "note": "per-episode chapter field on toriko.fandom episode page",
+   "sources": [
+    "https://toriko.fandom.com/wiki/Episode_92"
+   ]
+  },
+  {
+   "episode": 93,
+   "end_chapter": 167,
+   "start_chapter": 167,
+   "chapters_adapted": "167",
+   "volume": 19,
+   "confidence": "medium",
+   "note": "per-episode chapter field on toriko.fandom episode page",
+   "sources": [
+    "https://toriko.fandom.com/wiki/Episode_93"
+   ]
+  },
+  {
+   "episode": 94,
+   "end_chapter": 168,
+   "start_chapter": 168,
+   "chapters_adapted": "168",
+   "volume": 19,
+   "confidence": "medium",
+   "note": "ends mid-ch 168",
+   "sources": [
+    "https://toriko.fandom.com/wiki/Episode_94"
+   ]
+  },
+  {
+   "episode": 95,
+   "end_chapter": 169,
+   "start_chapter": 168,
+   "chapters_adapted": "168(cont)-169",
+   "volume": 19,
+   "confidence": "medium",
+   "note": "per-episode chapter field on toriko.fandom episode page",
+   "sources": [
+    "https://toriko.fandom.com/wiki/Episode_95"
+   ]
+  },
+  {
+   "episode": 96,
+   "end_chapter": 171,
+   "start_chapter": 169,
+   "chapters_adapted": "169(cont)-171",
+   "volume": 19,
+   "confidence": "medium",
+   "note": "per-episode chapter field on toriko.fandom episode page",
+   "sources": [
+    "https://toriko.fandom.com/wiki/Episode_96"
+   ]
+  },
+  {
+   "episode": 97,
+   "end_chapter": 172,
+   "start_chapter": 171,
+   "chapters_adapted": "171(cont)-172",
+   "volume": 20,
+   "confidence": "high",
+   "note": "ep title 'Ichiryuu vs Midora' matches ch 172 'Ichiryu and Midora'; next canon ep starts at 174 (173 already used by ep 87)",
+   "sources": [
+    "https://toriko.fandom.com/wiki/Episode_97",
+    "https://toriko.fandom.com/wiki/Gourmet_172"
+   ]
+  },
+  {
+   "episode": 98,
+   "end_chapter": 174,
+   "start_chapter": 174,
+   "chapters_adapted": "174",
+   "volume": 20,
+   "confidence": "medium",
+   "note": "Bubble Fruit arc start; ends mid-ch 174",
+   "sources": [
+    "https://toriko.fandom.com/wiki/Episode_98"
+   ]
+  },
+  {
+   "episode": 100,
+   "end_chapter": 175,
+   "start_chapter": 174,
+   "chapters_adapted": "174(cont)-175",
+   "volume": 20,
+   "confidence": "medium",
+   "note": "finishes ch 174 after filler ep 99",
+   "sources": [
+    "https://toriko.fandom.com/wiki/Episode_100"
+   ]
+  },
+  {
+   "episode": 101,
+   "end_chapter": 177,
+   "start_chapter": 176,
+   "chapters_adapted": "176-177",
+   "volume": 20,
+   "confidence": "medium",
+   "note": "per-episode chapter field on toriko.fandom episode page",
+   "sources": [
+    "https://toriko.fandom.com/wiki/Episode_101"
+   ]
+  },
+  {
+   "episode": 102,
+   "end_chapter": 179,
+   "start_chapter": 178,
+   "chapters_adapted": "178-179",
+   "volume": 20,
+   "confidence": "medium",
+   "note": "ends mid-ch 179",
+   "sources": [
+    "https://toriko.fandom.com/wiki/Episode_102"
+   ]
+  },
+  {
+   "episode": 103,
+   "end_chapter": 180,
+   "start_chapter": 179,
+   "chapters_adapted": "179(cont)-180",
+   "volume": 20,
+   "confidence": "medium",
+   "note": "per-episode chapter field on toriko.fandom episode page",
+   "sources": [
+    "https://toriko.fandom.com/wiki/Episode_103"
+   ]
+  },
+  {
+   "episode": 104,
+   "end_chapter": 182,
+   "start_chapter": 181,
+   "chapters_adapted": "181-182",
+   "volume": 21,
+   "confidence": "medium",
+   "note": "ends mid-ch 182",
+   "sources": [
+    "https://toriko.fandom.com/wiki/Episode_104"
+   ]
+  },
+  {
+   "episode": 105,
+   "end_chapter": 183,
+   "start_chapter": 182,
+   "chapters_adapted": "182(cont)-183",
+   "volume": 21,
+   "confidence": "medium",
+   "note": "per-episode chapter field on toriko.fandom episode page",
+   "sources": [
+    "https://toriko.fandom.com/wiki/Episode_105"
+   ]
+  },
+  {
+   "episode": 106,
+   "end_chapter": 184,
+   "start_chapter": 184,
+   "chapters_adapted": "184",
+   "volume": 21,
+   "confidence": "medium",
+   "note": "per-episode chapter field on toriko.fandom episode page",
+   "sources": [
+    "https://toriko.fandom.com/wiki/Episode_106"
+   ]
+  },
+  {
+   "episode": 107,
+   "end_chapter": 186,
+   "start_chapter": 185,
+   "chapters_adapted": "185-186",
+   "volume": 21,
+   "confidence": "medium",
+   "note": "ends mid-ch 186",
+   "sources": [
+    "https://toriko.fandom.com/wiki/Episode_107"
+   ]
+  },
+  {
+   "episode": 108,
+   "end_chapter": 188,
+   "start_chapter": 186,
+   "chapters_adapted": "186(cont)-188",
+   "volume": 21,
+   "confidence": "medium",
+   "note": "ends mid-ch 188",
+   "sources": [
+    "https://toriko.fandom.com/wiki/Episode_108"
+   ]
+  },
+  {
+   "episode": 109,
+   "end_chapter": 190,
+   "start_chapter": 188,
+   "chapters_adapted": "188(cont)-190",
+   "volume": 22,
+   "confidence": "medium",
+   "note": "ends mid-ch 190",
+   "sources": [
+    "https://toriko.fandom.com/wiki/Episode_109"
+   ]
+  },
+  {
+   "episode": 110,
+   "end_chapter": 191,
+   "start_chapter": 190,
+   "chapters_adapted": "190(cont)-191",
+   "volume": 22,
+   "confidence": "medium",
+   "note": "per-episode chapter field on toriko.fandom episode page",
+   "sources": [
+    "https://toriko.fandom.com/wiki/Episode_110"
+   ]
+  },
+  {
+   "episode": 111,
+   "end_chapter": 193,
+   "start_chapter": 192,
+   "chapters_adapted": "192-193",
+   "volume": 22,
+   "confidence": "medium",
+   "note": "Bubble Fruit arc end",
+   "sources": [
+    "https://toriko.fandom.com/wiki/Episode_111"
+   ]
+  },
+  {
+   "episode": 114,
+   "end_chapter": 195,
+   "start_chapter": 194,
+   "chapters_adapted": "194-195",
+   "volume": 22,
+   "confidence": "high",
+   "note": "Four Beast arc start after 2 filler; ch 194 titled 'The Four Beasts'",
+   "sources": [
+    "https://toriko.fandom.com/wiki/Episode_114",
+    "https://toriko.fandom.com/wiki/Gourmet_194"
+   ]
+  },
+  {
+   "episode": 115,
+   "end_chapter": 197,
+   "start_chapter": 196,
+   "chapters_adapted": "196-197",
+   "volume": 22,
+   "confidence": "medium",
+   "note": "per-episode chapter field on toriko.fandom episode page",
+   "sources": [
+    "https://toriko.fandom.com/wiki/Episode_115"
+   ]
+  },
+  {
+   "episode": 116,
+   "end_chapter": 198,
+   "start_chapter": 198,
+   "chapters_adapted": "198",
+   "volume": 22,
+   "confidence": "medium",
+   "note": "per-episode chapter field on toriko.fandom episode page",
+   "sources": [
+    "https://toriko.fandom.com/wiki/Episode_116"
+   ]
+  },
+  {
+   "episode": 117,
+   "end_chapter": 200,
+   "start_chapter": 199,
+   "chapters_adapted": "199-200",
+   "volume": 23,
+   "confidence": "medium",
+   "note": "per-episode chapter field on toriko.fandom episode page",
+   "sources": [
+    "https://toriko.fandom.com/wiki/Episode_117"
+   ]
+  },
+  {
+   "episode": 118,
+   "end_chapter": 202,
+   "start_chapter": 201,
+   "chapters_adapted": "201-202",
+   "volume": 23,
+   "confidence": "medium",
+   "note": "per-episode chapter field on toriko.fandom episode page",
+   "sources": [
+    "https://toriko.fandom.com/wiki/Episode_118"
+   ]
+  },
+  {
+   "episode": 119,
+   "end_chapter": 203,
+   "start_chapter": 203,
+   "chapters_adapted": "203",
+   "volume": 23,
+   "confidence": "medium",
+   "note": "ch 203 'Antidote Cooking'",
+   "sources": [
+    "https://toriko.fandom.com/wiki/Episode_119",
+    "https://toriko.fandom.com/wiki/Gourmet_203"
+   ]
+  },
+  {
+   "episode": 120,
+   "end_chapter": 204,
+   "start_chapter": 204,
+   "chapters_adapted": "204",
+   "volume": 23,
+   "confidence": "medium",
+   "note": "per-episode chapter field on toriko.fandom episode page",
+   "sources": [
+    "https://toriko.fandom.com/wiki/Episode_120"
+   ]
+  },
+  {
+   "episode": 121,
+   "end_chapter": 206,
+   "start_chapter": 205,
+   "chapters_adapted": "205-206",
+   "volume": 23,
+   "confidence": "medium",
+   "note": "per-episode chapter field on toriko.fandom episode page",
+   "sources": [
+    "https://toriko.fandom.com/wiki/Episode_121"
+   ]
+  },
+  {
+   "episode": 122,
+   "end_chapter": 208,
+   "start_chapter": 207,
+   "chapters_adapted": "207-208",
+   "volume": 24,
+   "confidence": "medium",
+   "note": "per-episode chapter field on toriko.fandom episode page",
+   "sources": [
+    "https://toriko.fandom.com/wiki/Episode_122"
+   ]
+  },
+  {
+   "episode": 123,
+   "end_chapter": 210,
+   "start_chapter": 209,
+   "chapters_adapted": "209-210",
+   "volume": 24,
+   "confidence": "medium",
+   "note": "Four Beast arc end",
+   "sources": [
+    "https://toriko.fandom.com/wiki/Episode_123",
+    "https://toriko.fandom.com/wiki/Gourmet_210"
+   ]
+  },
+  {
+   "episode": 126,
+   "end_chapter": 212,
+   "start_chapter": 211,
+   "chapters_adapted": "211-212",
+   "volume": 24,
+   "confidence": "high",
+   "note": "Cooking Fest arc start after 2 filler; ep title matches ch 211 \"'Cooking Festival' Opens!!\"",
+   "sources": [
+    "https://toriko.fandom.com/wiki/Episode_126",
+    "https://toriko.fandom.com/wiki/Gourmet_211"
+   ]
+  },
+  {
+   "episode": 127,
+   "end_chapter": 214,
+   "start_chapter": 213,
+   "chapters_adapted": "213-214",
+   "volume": 24,
+   "confidence": "medium",
+   "note": "per-episode chapter field on toriko.fandom episode page",
+   "sources": [
+    "https://toriko.fandom.com/wiki/Episode_127"
+   ]
+  },
+  {
+   "episode": 128,
+   "end_chapter": 215,
+   "start_chapter": 215,
+   "chapters_adapted": "215",
+   "volume": 24,
+   "confidence": "high",
+   "note": "ep title matches ch 215 'Meet Buranchi!!'",
+   "sources": [
+    "https://toriko.fandom.com/wiki/Episode_128",
+    "https://toriko.fandom.com/wiki/Gourmet_215"
+   ]
+  },
+  {
+   "episode": 129,
+   "end_chapter": 216,
+   "start_chapter": 216,
+   "chapters_adapted": "216",
+   "volume": 24,
+   "confidence": "high",
+   "note": "ep title matches ch 216 'Pulling Ahead!!'; ends mid-ch 216 (tail re-covered in ep 132)",
+   "sources": [
+    "https://toriko.fandom.com/wiki/Episode_129",
+    "https://toriko.fandom.com/wiki/Gourmet_216"
+   ]
+  },
+  {
+   "episode": 132,
+   "end_chapter": 218,
+   "start_chapter": 217,
+   "chapters_adapted": "216(tail)-218",
+   "volume": 25,
+   "confidence": "high",
+   "note": "fandom lists 216-218; bulk is 217-218 (ch 218 'The Gourmet Corp. Invades' = ep title), 216 portion is the pre-filler cliffhanger tail \u2014 majority rule puts START at 217",
+   "sources": [
+    "https://toriko.fandom.com/wiki/Episode_132",
+    "https://toriko.fandom.com/wiki/Gourmet_218"
+   ]
+  },
+  {
+   "episode": 133,
+   "end_chapter": 220,
+   "start_chapter": 218,
+   "chapters_adapted": "218(cont)-220",
+   "volume": 25,
+   "confidence": "medium",
+   "note": "ends mid-ch 220",
+   "sources": [
+    "https://toriko.fandom.com/wiki/Episode_133"
+   ]
+  },
+  {
+   "episode": 134,
+   "end_chapter": 221,
+   "start_chapter": 220,
+   "chapters_adapted": "220(cont)-221",
+   "volume": 25,
+   "confidence": "high",
+   "note": "ep title matches ch 220 'Wild Battle!!'; ends mid-ch 221",
+   "sources": [
+    "https://toriko.fandom.com/wiki/Episode_134",
+    "https://toriko.fandom.com/wiki/Gourmet_220"
+   ]
+  },
+  {
+   "episode": 135,
+   "end_chapter": 221,
+   "start_chapter": 221,
+   "chapters_adapted": "221(cont)",
+   "volume": 25,
+   "confidence": "high",
+   "note": "ep title matches ch 221 'IGO VS Bishokukai!!'; whole ep inside ch 221",
+   "sources": [
+    "https://toriko.fandom.com/wiki/Episode_135",
+    "https://toriko.fandom.com/wiki/Gourmet_221"
+   ]
+  },
+  {
+   "episode": 136,
+   "end_chapter": 223,
+   "start_chapter": 222,
+   "chapters_adapted": "222-223",
+   "volume": 25,
+   "confidence": "high",
+   "note": "ep title matches ch 222 'A Catastrophic Joker Card!!'; ends mid-ch 223",
+   "sources": [
+    "https://toriko.fandom.com/wiki/Episode_136",
+    "https://toriko.fandom.com/wiki/Gourmet_222"
+   ]
+  },
+  {
+   "episode": 137,
+   "end_chapter": 224,
+   "start_chapter": 223,
+   "chapters_adapted": "223(cont)-224",
+   "volume": 25,
+   "confidence": "medium",
+   "note": "Coco vs Grinpatch",
+   "sources": [
+    "https://toriko.fandom.com/wiki/Episode_137"
+   ]
+  },
+  {
+   "episode": 138,
+   "end_chapter": 226,
+   "start_chapter": 225,
+   "chapters_adapted": "225-226",
+   "volume": 26,
+   "confidence": "high",
+   "note": "ch 226 'Vs. Tommyrod' matches ep title",
+   "sources": [
+    "https://toriko.fandom.com/wiki/Episode_138",
+    "https://toriko.fandom.com/wiki/Gourmet_226"
+   ]
+  },
+  {
+   "episode": 139,
+   "end_chapter": 229,
+   "start_chapter": 227,
+   "chapters_adapted": "227-229",
+   "volume": 26,
+   "confidence": "medium",
+   "note": "Sunny's final ability",
+   "sources": [
+    "https://toriko.fandom.com/wiki/Episode_139"
+   ]
+  },
+  {
+   "episode": 140,
+   "end_chapter": 232,
+   "start_chapter": 230,
+   "chapters_adapted": "230-232 (+parts of 221-222)",
+   "volume": 26,
+   "confidence": "high",
+   "note": "ch 231 'Zebra Counterattacks!!' matches ep title; also grafts Zebra's war beats from chs 221-222 \u2014 see annotation",
+   "sources": [
+    "https://toriko.fandom.com/wiki/Episode_140",
+    "https://toriko.fandom.com/wiki/Gourmet_231"
+   ]
+  },
+  {
+   "episode": 141,
+   "end_chapter": 236,
+   "start_chapter": 233,
+   "chapters_adapted": "233-236",
+   "volume": 27,
+   "confidence": "medium",
+   "note": "per-episode chapter field on toriko.fandom episode page",
+   "sources": [
+    "https://toriko.fandom.com/wiki/Episode_141"
+   ]
+  },
+  {
+   "episode": 142,
+   "end_chapter": 242,
+   "start_chapter": 237,
+   "chapters_adapted": "237-242",
+   "volume": 27,
+   "confidence": "medium",
+   "note": "compression begins; several manga beats altered per fandom differences list",
+   "sources": [
+    "https://toriko.fandom.com/wiki/Episode_142"
+   ]
+  },
+  {
+   "episode": 143,
+   "end_chapter": 247,
+   "start_chapter": 243,
+   "chapters_adapted": "243-244, 246-247",
+   "volume": 28,
+   "confidence": "medium",
+   "note": "ch 245 not listed as adapted; everything after Joie's Satan Mince is heavily altered per fandom",
+   "sources": [
+    "https://toriko.fandom.com/wiki/Episode_143"
+   ]
+  },
+  {
+   "episode": 144,
+   "end_chapter": 253,
+   "start_chapter": 248,
+   "chapters_adapted": "248-253 (loose)",
+   "volume": 28,
+   "confidence": "medium",
+   "note": "loose/compressed adaptation amid anime-original ending material",
+   "sources": [
+    "https://toriko.fandom.com/wiki/Episode_144"
+   ]
+  },
+  {
+   "episode": 145,
+   "end_chapter": 253,
+   "start_chapter": 253,
+   "chapters_adapted": "253 (partial)",
+   "volume": 28,
+   "confidence": "medium",
+   "note": "mostly anime-original finale battle; canon beats from ch 253 only",
+   "sources": [
+    "https://toriko.fandom.com/wiki/Episode_145"
+   ]
+  },
+  {
+   "episode": 146,
+   "end_chapter": 253,
+   "start_chapter": 253,
+   "chapters_adapted": "253 (partial)",
+   "volume": 28,
+   "confidence": "high",
+   "note": "mixed ep; final canon beats of ch 253 ('The Tiger's Tears') + original content; adaptation frontier = ch 253 (end of v28) per fandom and animefillerguide",
+   "sources": [
+    "https://toriko.fandom.com/wiki/Episode_146",
+    "https://toriko.fandom.com/wiki/Gourmet_253",
+    "https://www.animefillerguide.com/anime/toriko/"
+   ]
+  }
+ ],
+ "continue_points": [
+  {
+   "episode": 22,
+   "continue_chapter": 63,
+   "note": "ends mid-ch 63 (ch 63 page: Episodes 22-23)"
+  },
+  {
+   "episode": 23,
+   "continue_chapter": 65,
+   "note": "ends mid-ch 65 (ch 65 page: Episodes 23-24)"
+  },
+  {
+   "episode": 30,
+   "continue_chapter": 80,
+   "note": "ends mid-ch 80"
+  },
+  {
+   "episode": 37,
+   "continue_chapter": 94,
+   "note": "ends mid-ch 94"
+  },
+  {
+   "episode": 60,
+   "continue_chapter": 129,
+   "note": "ends mid-ch 129; ep 61 stays inside 129"
+  },
+  {
+   "episode": 75,
+   "continue_chapter": 149,
+   "note": "ends mid-ch 149"
+  },
+  {
+   "episode": 78,
+   "continue_chapter": 154,
+   "note": "ends mid-ch 154"
+  },
+  {
+   "episode": 83,
+   "continue_chapter": 157,
+   "note": "ends mid-ch 157"
+  },
+  {
+   "episode": 88,
+   "continue_chapter": 161,
+   "note": "ends mid-ch 161"
+  },
+  {
+   "episode": 94,
+   "continue_chapter": 168,
+   "note": "ends mid-ch 168"
+  },
+  {
+   "episode": 95,
+   "continue_chapter": 169,
+   "note": "ends mid-ch 169"
+  },
+  {
+   "episode": 96,
+   "continue_chapter": 171,
+   "note": "ends mid-ch 171"
+  },
+  {
+   "episode": 97,
+   "continue_chapter": 174,
+   "note": "END+1 would be 173, but ch 173 was already adapted at ep 87 \u2014 honest resume is 174"
+  },
+  {
+   "episode": 98,
+   "continue_chapter": 174,
+   "note": "ends mid-ch 174; ep 100 finishes it (ep 99 is filler)"
+  },
+  {
+   "episode": 102,
+   "continue_chapter": 179,
+   "note": "ends mid-ch 179"
+  },
+  {
+   "episode": 104,
+   "continue_chapter": 182,
+   "note": "ends mid-ch 182"
+  },
+  {
+   "episode": 107,
+   "continue_chapter": 186,
+   "note": "ends mid-ch 186"
+  },
+  {
+   "episode": 108,
+   "continue_chapter": 188,
+   "note": "ends mid-ch 188"
+  },
+  {
+   "episode": 109,
+   "continue_chapter": 190,
+   "note": "ends mid-ch 190"
+  },
+  {
+   "episode": 129,
+   "continue_chapter": 216,
+   "note": "ends mid-ch 216 (cliffhanger); ep 132 re-covers the tail after 2 filler eps"
+  },
+  {
+   "episode": 133,
+   "continue_chapter": 220,
+   "note": "ends mid-ch 220"
+  },
+  {
+   "episode": 134,
+   "continue_chapter": 221,
+   "note": "ends mid-ch 221"
+  },
+  {
+   "episode": 136,
+   "continue_chapter": 223,
+   "note": "ends mid-ch 223"
+  },
+  {
+   "episode": 144,
+   "continue_chapter": 253,
+   "note": "ends mid-ch 253"
+  },
+  {
+   "episode": 145,
+   "continue_chapter": 253,
+   "note": "still inside ch 253"
+  },
+  {
+   "episode": 146,
+   "continue_chapter": 254,
+   "note": "= END+1, stated for the record: continue the manga at ch 254 / v29 per animefillerguide; note the anime finale (eps 143-146) heavily alters chs 243-253, so a divergence-sensitive reader may prefer backing up to ~ch 243"
+  }
+ ],
+ "annotations": [
+  {
+   "episodes": [
+    87
+   ],
+   "kind": "rearranged",
+   "chapters": "173",
+   "note": "Christmas special canon: ch 173 'Gourmet Santa' (title match) pulled forward between chs 159 and 160; manga order resumes at ep 88, and eps 97->98 skip 173 accordingly. NOTE: non-monotonic anchor \u2014 needs reorder-regime handling"
+  },
+  {
+   "episodes": [
+    140
+   ],
+   "kind": "graft",
+   "chapters": "221-222",
+   "note": "Zebra's war beats from chs 221-222 grafted into ep 140 alongside its main 230-232 content (anime groups the war per-fighter; manga interleaves)"
+  },
+  {
+   "episodes": [
+    143
+   ],
+   "kind": "partial",
+   "chapters": "245",
+   "note": "ch 245 'The Moment of Closure' not listed as adapted by fandom for any episode; skipped/folded amid the finale compression"
+  },
+  {
+   "episodes": [
+    142,
+    146
+   ],
+   "kind": "divergence",
+   "chapters": "243-253",
+   "note": "fandom: 'all the events after Joie uses Satan Mince are heavily altered and are not based on the manga'; eps 144-146 are loose/partial over chs 248-253 with an anime-original ending (ep 147 keeps Ichiryu alive; manga does not); manga chs 254-263 (v29) unadapted"
+  }
+ ],
+ "type_corrections": [],
+ "repairs": [
+  {
+   "episode": 147,
+   "field": "end_chapter",
+   "old": 263,
+   "new": 253,
+   "why": "stored MU-derived anchor overshoots the adaptation frontier by a full volume: fandom episode fields top out at ch 253 (eps 144-146) and ch 254 'A Sad End' (v29 start) has no episode; animefillerguide states 'the last episode ... corresponding to Chapter 253 ... start reading from Chapter 254 (Volume 29)'. Also volume should be 28, not 29 (v28 = 244-253). Separately: ep 147 is filler (fandom: no chapter field; our row: filler) \u2014 consider moving the terminal anchor to ep 146 instead",
+   "sources": [
+    "https://www.animefillerguide.com/anime/toriko/",
+    "https://toriko.fandom.com/wiki/Episode_146",
+    "https://toriko.fandom.com/wiki/Gourmet_254"
+   ]
+  }
+ ],
+ "structure": {
+  "notes": "147 eps, one continuous season, no numbering conversion needed (fandom Episode_N = our ep N; titles match our rows 1:1). Filler set per fandom ('None, Original Episode') exactly matches our stored types: 1, 42-43, 51, 69-70, 80-82, 86, 99, 112-113, 124-125, 130-131, 147 \u2014 no type corrections. Chapter space: fandom 'Gourmet N' numbering = AniList/Wikipedia 396-chapter space; fandom per-chapter vol fields matched our volume boundaries at every probe, so flag #695's MU divergence is an MU artifact (muLatestChapter=2 is junk), not an edition problem. Convention used: where fandom shows a chapter straddling consecutive eps, START keeps the straddled chapter marked '(cont)' in chapters_adapted and the previous ep gets a mid-chapter continue point; exception ep 132 where the majority rule demonstrably applies (title evidence puts ch 216's bulk in ep 129). Anchors: 129 eps (2-146), fandom URL cited per-episode; wiki fetched via MediaWiki API (action=parse).",
+  "order_only": []
+ },
+ "flags_for_sean": [
+  "ep147 stored anchor 263/v29 vs evidenced frontier 253/v28 (repair filed): if the anchor was a deliberate 'continue at v30' ruling, note animefillerguide says resume = 254 (v29 start), and mangashed (content-farm, cross-check only) even argues 230 because of the ending divergence \u2014 pick the continue policy; also ep 147 is filler, so the terminal anchor arguably belongs on ep 146",
+  "ep 87 anchor (ch 173) is deliberately non-monotonic (rearranged Christmas chapter) \u2014 confirm the reorder-regime render path handles it rather than breaking interpolation between eps 85 (159) and 88 (160-161)",
+  "ch 245 has no adapting episode per fandom \u2014 treated as skipped in the ep-143 compression; no second source found for that single chapter",
+  "flag #695: evidence here says the reading edition = the 396-chapter Gourmet-N space (fandom = Wikipedia volumes = AniList count); MU's chapter numbering can be ignored for this series"
+ ]
+}

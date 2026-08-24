@@ -1,0 +1,4643 @@
+{
+ "series_id": "gintama",
+ "summary": "Full per-episode harvest of the Gintama fandom wiki 'Chapters' infobox field (MediaWiki API) across eps 1-369, cross-matched against Wikipedia's List of Gintama chapters Lesson titles (695/704 titles) and spot-verified via fandom Lesson-page reverse mappings and arc pages. 341 canon/mixed episodes anchored; the adaptation is a heavy reorder regime: season 1 (eps 3-201) shuffles vol 1-34 gag chapters out of publication order, Gintama' opens on post-timeskip L324-326 before rewinding, Gintama° interleaves skipped backlog (L384-465), and Porori-hen (329-341) is entirely backlog (L419-501) slotted between Rakuyou (ends L595) and Silver Soul (starts L596). The stored ep369→704 anchor is wrong: THE SEMI-FINAL adapts L687-698 (ep368: 687-690, 692, 697-698; ep369: 693-696), while L699-704 were published in Jump GIGA and adapted only by the Gintama THE FINAL movie — repair included. Chapter space confirmed as Lesson numbering 1-704 (resolves flag #678; MU's 496 is stale/different edition).",
+ "anchors": [
+  {
+   "episode": 3,
+   "end_chapter": 1,
+   "start_chapter": 1,
+   "chapters_adapted": "1",
+   "volume": 1,
+   "confidence": "high",
+   "note": "ep title = Lesson title (Wikipedia cross-match)",
+   "sources": [
+    "https://gintama.fandom.com/wiki/Episode_3",
+    "https://en.wikipedia.org/wiki/List_of_Gintama_chapters"
+   ]
+  },
+  {
+   "episode": 4,
+   "end_chapter": 4,
+   "start_chapter": 2,
+   "chapters_adapted": "2(beginning part only), 3, 4(beginning part only)",
+   "volume": 1,
+   "confidence": "high",
+   "note": "ep title = Lesson title (Wikipedia cross-match)",
+   "sources": [
+    "https://gintama.fandom.com/wiki/Episode_4",
+    "https://en.wikipedia.org/wiki/List_of_Gintama_chapters"
+   ]
+  },
+  {
+   "episode": 5,
+   "end_chapter": 6,
+   "start_chapter": 5,
+   "chapters_adapted": "5, 6",
+   "volume": 1,
+   "confidence": "high",
+   "note": "ep title = Lesson title (Wikipedia cross-match)",
+   "sources": [
+    "https://gintama.fandom.com/wiki/Episode_5",
+    "https://en.wikipedia.org/wiki/List_of_Gintama_chapters"
+   ]
+  },
+  {
+   "episode": 6,
+   "end_chapter": 7,
+   "start_chapter": 7,
+   "chapters_adapted": "7",
+   "volume": 2,
+   "confidence": "high",
+   "note": "ep title = Lesson title (Wikipedia cross-match)",
+   "sources": [
+    "https://gintama.fandom.com/wiki/Episode_6",
+    "https://en.wikipedia.org/wiki/List_of_Gintama_chapters"
+   ]
+  },
+  {
+   "episode": 7,
+   "end_chapter": 2,
+   "start_chapter": 2,
+   "chapters_adapted": "2(3/4)",
+   "volume": 1,
+   "confidence": "high",
+   "note": "ep title = Lesson title (Wikipedia cross-match)",
+   "sources": [
+    "https://gintama.fandom.com/wiki/Episode_7",
+    "https://en.wikipedia.org/wiki/List_of_Gintama_chapters"
+   ]
+  },
+  {
+   "episode": 8,
+   "end_chapter": 8,
+   "start_chapter": 8,
+   "chapters_adapted": "8",
+   "volume": 2,
+   "confidence": "high",
+   "note": "ep title = Lesson title (Wikipedia cross-match)",
+   "sources": [
+    "https://gintama.fandom.com/wiki/Episode_8",
+    "https://en.wikipedia.org/wiki/List_of_Gintama_chapters"
+   ]
+  },
+  {
+   "episode": 9,
+   "end_chapter": 9,
+   "start_chapter": 9,
+   "chapters_adapted": "9",
+   "volume": 2,
+   "confidence": "high",
+   "note": "ep title = Lesson title (Wikipedia cross-match)",
+   "sources": [
+    "https://gintama.fandom.com/wiki/Episode_9",
+    "https://en.wikipedia.org/wiki/List_of_Gintama_chapters"
+   ]
+  },
+  {
+   "episode": 10,
+   "end_chapter": 10,
+   "start_chapter": 10,
+   "chapters_adapted": "10",
+   "volume": 2,
+   "confidence": "high",
+   "note": "ep title = Lesson title (Wikipedia cross-match)",
+   "sources": [
+    "https://gintama.fandom.com/wiki/Episode_10",
+    "https://en.wikipedia.org/wiki/List_of_Gintama_chapters"
+   ]
+  },
+  {
+   "episode": 11,
+   "end_chapter": 11,
+   "start_chapter": 11,
+   "chapters_adapted": "11",
+   "volume": 2,
+   "confidence": "high",
+   "note": "ep title = Lesson title (Wikipedia cross-match)",
+   "sources": [
+    "https://gintama.fandom.com/wiki/Episode_11",
+    "https://en.wikipedia.org/wiki/List_of_Gintama_chapters"
+   ]
+  },
+  {
+   "episode": 12,
+   "end_chapter": 4,
+   "start_chapter": 4,
+   "chapters_adapted": "4(3/4)",
+   "volume": 1,
+   "confidence": "high",
+   "note": "ep title = Lesson title (Wikipedia cross-match)",
+   "sources": [
+    "https://gintama.fandom.com/wiki/Episode_12",
+    "https://en.wikipedia.org/wiki/List_of_Gintama_chapters"
+   ]
+  },
+  {
+   "episode": 13,
+   "end_chapter": 14,
+   "start_chapter": 12,
+   "chapters_adapted": "12-14",
+   "volume": 3,
+   "confidence": "high",
+   "note": "Harusame Arc; ep title = Lesson title (Wikipedia cross-match)",
+   "sources": [
+    "https://gintama.fandom.com/wiki/Episode_13",
+    "https://en.wikipedia.org/wiki/List_of_Gintama_chapters"
+   ]
+  },
+  {
+   "episode": 14,
+   "end_chapter": 23,
+   "start_chapter": 15,
+   "chapters_adapted": "15, 23(part B, graft)",
+   "volume": 4,
+   "confidence": "high",
+   "note": "ep title = Lesson title (Wikipedia cross-match)",
+   "sources": [
+    "https://gintama.fandom.com/wiki/Episode_14",
+    "https://en.wikipedia.org/wiki/List_of_Gintama_chapters",
+    "https://gintama.fandom.com/wiki/Lesson_23"
+   ]
+  },
+  {
+   "episode": 15,
+   "end_chapter": 20,
+   "start_chapter": 20,
+   "chapters_adapted": "20",
+   "volume": 3,
+   "confidence": "high",
+   "note": "ep title = Lesson title (Wikipedia cross-match)",
+   "sources": [
+    "https://gintama.fandom.com/wiki/Episode_15",
+    "https://en.wikipedia.org/wiki/List_of_Gintama_chapters"
+   ]
+  },
+  {
+   "episode": 16,
+   "end_chapter": 16,
+   "start_chapter": 16,
+   "chapters_adapted": "16",
+   "volume": 3,
+   "confidence": "high",
+   "note": "ep title = Lesson title (Wikipedia cross-match)",
+   "sources": [
+    "https://gintama.fandom.com/wiki/Episode_16",
+    "https://en.wikipedia.org/wiki/List_of_Gintama_chapters"
+   ]
+  },
+  {
+   "episode": 17,
+   "end_chapter": 31,
+   "start_chapter": 29,
+   "chapters_adapted": "29-31",
+   "volume": 4,
+   "confidence": "high",
+   "note": "Gengai Arc; ep title = Lesson title (Wikipedia cross-match)",
+   "sources": [
+    "https://gintama.fandom.com/wiki/Episode_17",
+    "https://en.wikipedia.org/wiki/List_of_Gintama_chapters"
+   ]
+  },
+  {
+   "episode": 18,
+   "end_chapter": 28,
+   "start_chapter": 28,
+   "chapters_adapted": "28",
+   "volume": 4,
+   "confidence": "high",
+   "note": "ep title = Lesson title (Wikipedia cross-match)",
+   "sources": [
+    "https://gintama.fandom.com/wiki/Episode_18",
+    "https://en.wikipedia.org/wiki/List_of_Gintama_chapters"
+   ]
+  },
+  {
+   "episode": 19,
+   "end_chapter": 32,
+   "start_chapter": 32,
+   "chapters_adapted": "32",
+   "volume": 5,
+   "confidence": "high",
+   "note": "ep title = Lesson title (Wikipedia cross-match)",
+   "sources": [
+    "https://gintama.fandom.com/wiki/Episode_19",
+    "https://en.wikipedia.org/wiki/List_of_Gintama_chapters"
+   ]
+  },
+  {
+   "episode": 20,
+   "end_chapter": 34,
+   "start_chapter": 33,
+   "chapters_adapted": "33, 34",
+   "volume": 5,
+   "confidence": "high",
+   "note": "ep title = Lesson title (Wikipedia cross-match)",
+   "sources": [
+    "https://gintama.fandom.com/wiki/Episode_20",
+    "https://en.wikipedia.org/wiki/List_of_Gintama_chapters"
+   ]
+  },
+  {
+   "episode": 21,
+   "end_chapter": 18,
+   "start_chapter": 18,
+   "chapters_adapted": "18",
+   "volume": 3,
+   "confidence": "high",
+   "note": "ep title = Lesson title (Wikipedia cross-match)",
+   "sources": [
+    "https://gintama.fandom.com/wiki/Episode_21",
+    "https://en.wikipedia.org/wiki/List_of_Gintama_chapters"
+   ]
+  },
+  {
+   "episode": 22,
+   "end_chapter": 40,
+   "start_chapter": 40,
+   "chapters_adapted": "40",
+   "volume": 5,
+   "confidence": "high",
+   "note": "ep title = Lesson title (Wikipedia cross-match)",
+   "sources": [
+    "https://gintama.fandom.com/wiki/Episode_22",
+    "https://en.wikipedia.org/wiki/List_of_Gintama_chapters"
+   ]
+  },
+  {
+   "episode": 23,
+   "end_chapter": 27,
+   "start_chapter": 26,
+   "chapters_adapted": "26, 27",
+   "volume": 4,
+   "confidence": "high",
+   "note": "ep title = Lesson title (Wikipedia cross-match)",
+   "sources": [
+    "https://gintama.fandom.com/wiki/Episode_23",
+    "https://en.wikipedia.org/wiki/List_of_Gintama_chapters"
+   ]
+  },
+  {
+   "episode": 24,
+   "end_chapter": 39,
+   "start_chapter": 38,
+   "chapters_adapted": "38, 39",
+   "volume": 5,
+   "confidence": "high",
+   "note": "ep title = Lesson title (Wikipedia cross-match)",
+   "sources": [
+    "https://gintama.fandom.com/wiki/Episode_24",
+    "https://en.wikipedia.org/wiki/List_of_Gintama_chapters"
+   ]
+  },
+  {
+   "episode": 25,
+   "end_chapter": 100,
+   "start_chapter": 100,
+   "chapters_adapted": "100",
+   "volume": 12,
+   "confidence": "high",
+   "note": "ep title = Lesson title (Wikipedia cross-match)",
+   "sources": [
+    "https://gintama.fandom.com/wiki/Episode_25",
+    "https://en.wikipedia.org/wiki/List_of_Gintama_chapters",
+    "https://gintama.fandom.com/wiki/Lesson_100"
+   ]
+  },
+  {
+   "episode": 26,
+   "end_chapter": 37,
+   "start_chapter": 36,
+   "chapters_adapted": "36, 37",
+   "volume": 5,
+   "confidence": "high",
+   "note": "ep title = Lesson title (Wikipedia cross-match)",
+   "sources": [
+    "https://gintama.fandom.com/wiki/Episode_26",
+    "https://en.wikipedia.org/wiki/List_of_Gintama_chapters"
+   ]
+  },
+  {
+   "episode": 27,
+   "end_chapter": 44,
+   "start_chapter": 42,
+   "chapters_adapted": "42-44",
+   "volume": 6,
+   "confidence": "high",
+   "note": "Rengokukan Arc; ep title = Lesson title (Wikipedia cross-match)",
+   "sources": [
+    "https://gintama.fandom.com/wiki/Episode_27",
+    "https://en.wikipedia.org/wiki/List_of_Gintama_chapters"
+   ]
+  },
+  {
+   "episode": 28,
+   "end_chapter": 45,
+   "start_chapter": 45,
+   "chapters_adapted": "45",
+   "volume": 6,
+   "confidence": "high",
+   "note": "Rengokukan Arc; ep title = Lesson title (Wikipedia cross-match)",
+   "sources": [
+    "https://gintama.fandom.com/wiki/Episode_28",
+    "https://en.wikipedia.org/wiki/List_of_Gintama_chapters"
+   ]
+  },
+  {
+   "episode": 29,
+   "end_chapter": 35,
+   "start_chapter": 35,
+   "chapters_adapted": "35",
+   "volume": 5,
+   "confidence": "high",
+   "note": "ep title = Lesson title (Wikipedia cross-match)",
+   "sources": [
+    "https://gintama.fandom.com/wiki/Episode_29",
+    "https://en.wikipedia.org/wiki/List_of_Gintama_chapters"
+   ]
+  },
+  {
+   "episode": 30,
+   "end_chapter": 19,
+   "start_chapter": 19,
+   "chapters_adapted": "19",
+   "volume": 3,
+   "confidence": "high",
+   "note": "ep title = Lesson title (Wikipedia cross-match)",
+   "sources": [
+    "https://gintama.fandom.com/wiki/Episode_30",
+    "https://en.wikipedia.org/wiki/List_of_Gintama_chapters"
+   ]
+  },
+  {
+   "episode": 31,
+   "end_chapter": 50,
+   "start_chapter": 50,
+   "chapters_adapted": "50",
+   "volume": 7,
+   "confidence": "high",
+   "note": "Memory Loss Arc; ep title = Lesson title (Wikipedia cross-match)",
+   "sources": [
+    "https://gintama.fandom.com/wiki/Episode_31",
+    "https://en.wikipedia.org/wiki/List_of_Gintama_chapters"
+   ]
+  },
+  {
+   "episode": 32,
+   "end_chapter": 52,
+   "start_chapter": 51,
+   "chapters_adapted": "51, 52",
+   "volume": 7,
+   "confidence": "high",
+   "note": "Memory Loss Arc; ep title = Lesson title (Wikipedia cross-match)",
+   "sources": [
+    "https://gintama.fandom.com/wiki/Episode_32",
+    "https://en.wikipedia.org/wiki/List_of_Gintama_chapters"
+   ]
+  },
+  {
+   "episode": 33,
+   "end_chapter": 54,
+   "start_chapter": 54,
+   "chapters_adapted": "54",
+   "volume": 7,
+   "confidence": "high",
+   "note": "Memory Loss Arc; ep title = Lesson title (Wikipedia cross-match)",
+   "sources": [
+    "https://gintama.fandom.com/wiki/Episode_33",
+    "https://en.wikipedia.org/wiki/List_of_Gintama_chapters"
+   ]
+  },
+  {
+   "episode": 34,
+   "end_chapter": 86,
+   "start_chapter": 85,
+   "chapters_adapted": "85, 86(1/2)",
+   "volume": 11,
+   "confidence": "high",
+   "note": "ep title = Lesson title (Wikipedia cross-match)",
+   "sources": [
+    "https://gintama.fandom.com/wiki/Episode_34",
+    "https://en.wikipedia.org/wiki/List_of_Gintama_chapters"
+   ]
+  },
+  {
+   "episode": 35,
+   "end_chapter": 86,
+   "start_chapter": 86,
+   "chapters_adapted": "86(1/2)",
+   "volume": 11,
+   "confidence": "high",
+   "note": "ep title = Lesson title (Wikipedia cross-match)",
+   "sources": [
+    "https://gintama.fandom.com/wiki/Episode_35",
+    "https://en.wikipedia.org/wiki/List_of_Gintama_chapters"
+   ]
+  },
+  {
+   "episode": 36,
+   "end_chapter": 49,
+   "start_chapter": 48,
+   "chapters_adapted": "48, 49",
+   "volume": 6,
+   "confidence": "high",
+   "note": "ep title = Lesson title (Wikipedia cross-match)",
+   "sources": [
+    "https://gintama.fandom.com/wiki/Episode_36",
+    "https://en.wikipedia.org/wiki/List_of_Gintama_chapters"
+   ]
+  },
+  {
+   "episode": 37,
+   "end_chapter": 99,
+   "start_chapter": 99,
+   "chapters_adapted": "99",
+   "volume": 12,
+   "confidence": "high",
+   "note": "ep title = Lesson title (Wikipedia cross-match)",
+   "sources": [
+    "https://gintama.fandom.com/wiki/Episode_37",
+    "https://en.wikipedia.org/wiki/List_of_Gintama_chapters"
+   ]
+  },
+  {
+   "episode": 38,
+   "end_chapter": 103,
+   "start_chapter": 103,
+   "chapters_adapted": "103",
+   "volume": 12,
+   "confidence": "high",
+   "note": "ep title = Lesson title (Wikipedia cross-match)",
+   "sources": [
+    "https://gintama.fandom.com/wiki/Episode_38",
+    "https://en.wikipedia.org/wiki/List_of_Gintama_chapters"
+   ]
+  },
+  {
+   "episode": 39,
+   "end_chapter": 55,
+   "start_chapter": 55,
+   "chapters_adapted": "55",
+   "volume": 7,
+   "confidence": "high",
+   "note": "ep title = Lesson title (Wikipedia cross-match)",
+   "sources": [
+    "https://gintama.fandom.com/wiki/Episode_39",
+    "https://en.wikipedia.org/wiki/List_of_Gintama_chapters"
+   ]
+  },
+  {
+   "episode": 40,
+   "end_chapter": 58,
+   "start_chapter": 57,
+   "chapters_adapted": "57, 58",
+   "volume": 7,
+   "confidence": "high",
+   "note": "Umibozu Arc; ep title = Lesson title (Wikipedia cross-match)",
+   "sources": [
+    "https://gintama.fandom.com/wiki/Episode_40",
+    "https://en.wikipedia.org/wiki/List_of_Gintama_chapters"
+   ]
+  },
+  {
+   "episode": 41,
+   "end_chapter": 61,
+   "start_chapter": 59,
+   "chapters_adapted": "59, 60, 61(1/2)",
+   "volume": 8,
+   "confidence": "high",
+   "note": "Umibozu Arc; ep title = Lesson title (Wikipedia cross-match)",
+   "sources": [
+    "https://gintama.fandom.com/wiki/Episode_41",
+    "https://en.wikipedia.org/wiki/List_of_Gintama_chapters"
+   ]
+  },
+  {
+   "episode": 42,
+   "end_chapter": 63,
+   "start_chapter": 61,
+   "chapters_adapted": "61(1/2), 62, 63",
+   "volume": 8,
+   "confidence": "high",
+   "note": "Umibozu Arc; ep title = Lesson title (Wikipedia cross-match)",
+   "sources": [
+    "https://gintama.fandom.com/wiki/Episode_42",
+    "https://en.wikipedia.org/wiki/List_of_Gintama_chapters"
+   ]
+  },
+  {
+   "episode": 43,
+   "end_chapter": 64,
+   "start_chapter": 64,
+   "chapters_adapted": "64",
+   "volume": 8,
+   "confidence": "high",
+   "note": "Umibozu Arc; ep title = Lesson title (Wikipedia cross-match)",
+   "sources": [
+    "https://gintama.fandom.com/wiki/Episode_43",
+    "https://en.wikipedia.org/wiki/List_of_Gintama_chapters"
+   ]
+  },
+  {
+   "episode": 44,
+   "end_chapter": 69,
+   "start_chapter": 67,
+   "chapters_adapted": "67(1/2), 68, 69",
+   "volume": 9,
+   "confidence": "high",
+   "note": "Go-Ninja Arc; ep title = Lesson title (Wikipedia cross-match)",
+   "sources": [
+    "https://gintama.fandom.com/wiki/Episode_44",
+    "https://en.wikipedia.org/wiki/List_of_Gintama_chapters"
+   ]
+  },
+  {
+   "episode": 45,
+   "end_chapter": 73,
+   "start_chapter": 71,
+   "chapters_adapted": "71-73",
+   "volume": 9,
+   "confidence": "high",
+   "note": "Inugami Arc; ep title = Lesson title (Wikipedia cross-match)",
+   "sources": [
+    "https://gintama.fandom.com/wiki/Episode_45",
+    "https://en.wikipedia.org/wiki/List_of_Gintama_chapters"
+   ]
+  },
+  {
+   "episode": 46,
+   "end_chapter": 74,
+   "start_chapter": 74,
+   "chapters_adapted": "74",
+   "volume": 9,
+   "confidence": "high",
+   "note": "Inugami Arc; ep title = Lesson title (Wikipedia cross-match)",
+   "sources": [
+    "https://gintama.fandom.com/wiki/Episode_46",
+    "https://en.wikipedia.org/wiki/List_of_Gintama_chapters"
+   ]
+  },
+  {
+   "episode": 47,
+   "end_chapter": 66,
+   "start_chapter": 66,
+   "chapters_adapted": "66",
+   "volume": 8,
+   "confidence": "high",
+   "note": "ep title = Lesson title (Wikipedia cross-match)",
+   "sources": [
+    "https://gintama.fandom.com/wiki/Episode_47",
+    "https://en.wikipedia.org/wiki/List_of_Gintama_chapters"
+   ]
+  },
+  {
+   "episode": 48,
+   "end_chapter": 75,
+   "start_chapter": 75,
+   "chapters_adapted": "75",
+   "volume": 9,
+   "confidence": "high",
+   "note": "ep title = Lesson title (Wikipedia cross-match)",
+   "sources": [
+    "https://gintama.fandom.com/wiki/Episode_48",
+    "https://en.wikipedia.org/wiki/List_of_Gintama_chapters"
+   ]
+  },
+  {
+   "episode": 49,
+   "end_chapter": 70,
+   "start_chapter": 70,
+   "chapters_adapted": "70",
+   "volume": 9,
+   "confidence": "high",
+   "note": "ep title = Lesson title (Wikipedia cross-match)",
+   "sources": [
+    "https://gintama.fandom.com/wiki/Episode_49",
+    "https://en.wikipedia.org/wiki/List_of_Gintama_chapters"
+   ]
+  },
+  {
+   "episode": 51,
+   "end_chapter": 78,
+   "start_chapter": 77,
+   "chapters_adapted": "77, 78",
+   "volume": 10,
+   "confidence": "high",
+   "note": "Infant Strife Arc; ep title = Lesson title (Wikipedia cross-match)",
+   "sources": [
+    "https://gintama.fandom.com/wiki/Episode_51",
+    "https://en.wikipedia.org/wiki/List_of_Gintama_chapters"
+   ]
+  },
+  {
+   "episode": 52,
+   "end_chapter": 80,
+   "start_chapter": 79,
+   "chapters_adapted": "79, 80",
+   "volume": 10,
+   "confidence": "high",
+   "note": "Infant Strife Arc; ep title = Lesson title (Wikipedia cross-match)",
+   "sources": [
+    "https://gintama.fandom.com/wiki/Episode_52",
+    "https://en.wikipedia.org/wiki/List_of_Gintama_chapters"
+   ]
+  },
+  {
+   "episode": 53,
+   "end_chapter": 22,
+   "start_chapter": 21,
+   "chapters_adapted": "21, 22",
+   "volume": 3,
+   "confidence": "high",
+   "note": "ep title = Lesson title (Wikipedia cross-match)",
+   "sources": [
+    "https://gintama.fandom.com/wiki/Episode_53",
+    "https://en.wikipedia.org/wiki/List_of_Gintama_chapters"
+   ]
+  },
+  {
+   "episode": 54,
+   "end_chapter": 105,
+   "start_chapter": 104,
+   "chapters_adapted": "104, 105",
+   "volume": 13,
+   "confidence": "medium",
+   "note": "Mother Arc",
+   "sources": [
+    "https://gintama.fandom.com/wiki/Episode_54"
+   ]
+  },
+  {
+   "episode": 55,
+   "end_chapter": 106,
+   "start_chapter": 105,
+   "chapters_adapted": "105, 106",
+   "volume": 13,
+   "confidence": "high",
+   "note": "Mother Arc; ep title = Lesson title (Wikipedia cross-match)",
+   "sources": [
+    "https://gintama.fandom.com/wiki/Episode_55",
+    "https://en.wikipedia.org/wiki/List_of_Gintama_chapters"
+   ]
+  },
+  {
+   "episode": 56,
+   "end_chapter": 102,
+   "start_chapter": 101,
+   "chapters_adapted": "101, 102",
+   "volume": 12,
+   "confidence": "high",
+   "note": "ep title = Lesson title (Wikipedia cross-match)",
+   "sources": [
+    "https://gintama.fandom.com/wiki/Episode_56",
+    "https://en.wikipedia.org/wiki/List_of_Gintama_chapters"
+   ]
+  },
+  {
+   "episode": 58,
+   "end_chapter": 90,
+   "start_chapter": 89,
+   "chapters_adapted": "89, 90",
+   "volume": 11,
+   "confidence": "high",
+   "note": "Benizakura Arc; ep title = Lesson title (Wikipedia cross-match)",
+   "sources": [
+    "https://gintama.fandom.com/wiki/Episode_58",
+    "https://en.wikipedia.org/wiki/List_of_Gintama_chapters"
+   ]
+  },
+  {
+   "episode": 59,
+   "end_chapter": 92,
+   "start_chapter": 91,
+   "chapters_adapted": "91, 92",
+   "volume": 11,
+   "confidence": "medium",
+   "note": "Benizakura Arc",
+   "sources": [
+    "https://gintama.fandom.com/wiki/Episode_59"
+   ]
+  },
+  {
+   "episode": 60,
+   "end_chapter": 94,
+   "start_chapter": 93,
+   "chapters_adapted": "93, 94",
+   "volume": 11,
+   "confidence": "medium",
+   "note": "Benizakura Arc",
+   "sources": [
+    "https://gintama.fandom.com/wiki/Episode_60"
+   ]
+  },
+  {
+   "episode": 61,
+   "end_chapter": 97,
+   "start_chapter": 95,
+   "chapters_adapted": "95-97",
+   "volume": 12,
+   "confidence": "high",
+   "note": "Benizakura Arc; ep title = Lesson title (Wikipedia cross-match)",
+   "sources": [
+    "https://gintama.fandom.com/wiki/Episode_61",
+    "https://en.wikipedia.org/wiki/List_of_Gintama_chapters"
+   ]
+  },
+  {
+   "episode": 62,
+   "end_chapter": 98,
+   "start_chapter": 98,
+   "chapters_adapted": "98",
+   "volume": 12,
+   "confidence": "high",
+   "note": "ep title = Lesson title (Wikipedia cross-match)",
+   "sources": [
+    "https://gintama.fandom.com/wiki/Episode_62",
+    "https://en.wikipedia.org/wiki/List_of_Gintama_chapters"
+   ]
+  },
+  {
+   "episode": 63,
+   "end_chapter": 124,
+   "start_chapter": 124,
+   "chapters_adapted": "124",
+   "volume": 15,
+   "confidence": "medium",
+   "note": "per-episode Lessons field, Gintama fandom episode infobox",
+   "sources": [
+    "https://gintama.fandom.com/wiki/Episode_63"
+   ]
+  },
+  {
+   "episode": 64,
+   "end_chapter": 108,
+   "start_chapter": 108,
+   "chapters_adapted": "108",
+   "volume": 13,
+   "confidence": "medium",
+   "note": "per-episode Lessons field, Gintama fandom episode infobox",
+   "sources": [
+    "https://gintama.fandom.com/wiki/Episode_64"
+   ]
+  },
+  {
+   "episode": 65,
+   "end_chapter": 84,
+   "start_chapter": 83,
+   "chapters_adapted": "83, 84",
+   "volume": 10,
+   "confidence": "high",
+   "note": "ep title = Lesson title (Wikipedia cross-match)",
+   "sources": [
+    "https://gintama.fandom.com/wiki/Episode_65",
+    "https://en.wikipedia.org/wiki/List_of_Gintama_chapters"
+   ]
+  },
+  {
+   "episode": 66,
+   "end_chapter": 109,
+   "start_chapter": 109,
+   "chapters_adapted": "109",
+   "volume": 13,
+   "confidence": "medium",
+   "note": "per-episode Lessons field, Gintama fandom episode infobox",
+   "sources": [
+    "https://gintama.fandom.com/wiki/Episode_66"
+   ]
+  },
+  {
+   "episode": 67,
+   "end_chapter": 87,
+   "start_chapter": 87,
+   "chapters_adapted": "87",
+   "volume": 11,
+   "confidence": "high",
+   "note": "ep title = Lesson title (Wikipedia cross-match)",
+   "sources": [
+    "https://gintama.fandom.com/wiki/Episode_67",
+    "https://en.wikipedia.org/wiki/List_of_Gintama_chapters"
+   ]
+  },
+  {
+   "episode": 68,
+   "end_chapter": 82,
+   "start_chapter": 82,
+   "chapters_adapted": "82",
+   "volume": 10,
+   "confidence": "high",
+   "note": "ep title = Lesson title (Wikipedia cross-match)",
+   "sources": [
+    "https://gintama.fandom.com/wiki/Episode_68",
+    "https://en.wikipedia.org/wiki/List_of_Gintama_chapters"
+   ]
+  },
+  {
+   "episode": 69,
+   "end_chapter": 141,
+   "start_chapter": 140,
+   "chapters_adapted": "140, 141",
+   "volume": 17,
+   "confidence": "high",
+   "note": "Fuyo Arc; ep title = Lesson title (Wikipedia cross-match)",
+   "sources": [
+    "https://gintama.fandom.com/wiki/Episode_69",
+    "https://en.wikipedia.org/wiki/List_of_Gintama_chapters"
+   ]
+  },
+  {
+   "episode": 70,
+   "end_chapter": 144,
+   "start_chapter": 142,
+   "chapters_adapted": "142-144",
+   "volume": 17,
+   "confidence": "medium",
+   "note": "Fuyo Arc",
+   "sources": [
+    "https://gintama.fandom.com/wiki/Episode_70"
+   ]
+  },
+  {
+   "episode": 71,
+   "end_chapter": 146,
+   "start_chapter": 144,
+   "chapters_adapted": "144-146",
+   "volume": 17,
+   "confidence": "high",
+   "note": "Fuyo Arc; ep title = Lesson title (Wikipedia cross-match)",
+   "sources": [
+    "https://gintama.fandom.com/wiki/Episode_71",
+    "https://en.wikipedia.org/wiki/List_of_Gintama_chapters"
+   ]
+  },
+  {
+   "episode": 72,
+   "end_chapter": 126,
+   "start_chapter": 126,
+   "chapters_adapted": "126",
+   "volume": 15,
+   "confidence": "medium",
+   "note": "per-episode Lessons field, Gintama fandom episode infobox",
+   "sources": [
+    "https://gintama.fandom.com/wiki/Episode_72"
+   ]
+  },
+  {
+   "episode": 73,
+   "end_chapter": 41,
+   "start_chapter": 41,
+   "chapters_adapted": "41",
+   "volume": 6,
+   "confidence": "high",
+   "note": "ep title = Lesson title (Wikipedia cross-match)",
+   "sources": [
+    "https://gintama.fandom.com/wiki/Episode_73",
+    "https://en.wikipedia.org/wiki/List_of_Gintama_chapters"
+   ]
+  },
+  {
+   "episode": 74,
+   "end_chapter": 134,
+   "start_chapter": 133,
+   "chapters_adapted": "133, 134",
+   "volume": 16,
+   "confidence": "medium",
+   "note": "per-episode Lessons field, Gintama fandom episode infobox",
+   "sources": [
+    "https://gintama.fandom.com/wiki/Episode_74"
+   ]
+  },
+  {
+   "episode": 76,
+   "end_chapter": 111,
+   "start_chapter": 110,
+   "chapters_adapted": "110, 111",
+   "volume": 13,
+   "confidence": "medium",
+   "note": "Yagyu Arc",
+   "sources": [
+    "https://gintama.fandom.com/wiki/Episode_76"
+   ]
+  },
+  {
+   "episode": 77,
+   "end_chapter": 114,
+   "start_chapter": 112,
+   "chapters_adapted": "112-114",
+   "volume": 14,
+   "confidence": "high",
+   "note": "Yagyu Arc; ep title = Lesson title (Wikipedia cross-match)",
+   "sources": [
+    "https://gintama.fandom.com/wiki/Episode_77",
+    "https://en.wikipedia.org/wiki/List_of_Gintama_chapters"
+   ]
+  },
+  {
+   "episode": 78,
+   "end_chapter": 116,
+   "start_chapter": 115,
+   "chapters_adapted": "115, 116",
+   "volume": 14,
+   "confidence": "high",
+   "note": "Yagyu Arc; ep title = Lesson title (Wikipedia cross-match)",
+   "sources": [
+    "https://gintama.fandom.com/wiki/Episode_78",
+    "https://en.wikipedia.org/wiki/List_of_Gintama_chapters"
+   ]
+  },
+  {
+   "episode": 79,
+   "end_chapter": 118,
+   "start_chapter": 117,
+   "chapters_adapted": "117, 118",
+   "volume": 14,
+   "confidence": "high",
+   "note": "Yagyu Arc; ep title = Lesson title (Wikipedia cross-match)",
+   "sources": [
+    "https://gintama.fandom.com/wiki/Episode_79",
+    "https://en.wikipedia.org/wiki/List_of_Gintama_chapters"
+   ]
+  },
+  {
+   "episode": 80,
+   "end_chapter": 121,
+   "start_chapter": 119,
+   "chapters_adapted": "119-121",
+   "volume": 14,
+   "confidence": "high",
+   "note": "Yagyu Arc; ep title = Lesson title (Wikipedia cross-match)",
+   "sources": [
+    "https://gintama.fandom.com/wiki/Episode_80",
+    "https://en.wikipedia.org/wiki/List_of_Gintama_chapters"
+   ]
+  },
+  {
+   "episode": 81,
+   "end_chapter": 123,
+   "start_chapter": 122,
+   "chapters_adapted": "122, 123",
+   "volume": 15,
+   "confidence": "medium",
+   "note": "Yagyu Arc",
+   "sources": [
+    "https://gintama.fandom.com/wiki/Episode_81"
+   ]
+  },
+  {
+   "episode": 83,
+   "end_chapter": 128,
+   "start_chapter": 127,
+   "chapters_adapted": "127, 128",
+   "volume": 15,
+   "confidence": "medium",
+   "note": "per-episode Lessons field, Gintama fandom episode infobox",
+   "sources": [
+    "https://gintama.fandom.com/wiki/Episode_83"
+   ]
+  },
+  {
+   "episode": 84,
+   "end_chapter": 135,
+   "start_chapter": 135,
+   "chapters_adapted": "135",
+   "volume": 16,
+   "confidence": "high",
+   "note": "Hardboiled Detective Arc; ep title = Lesson title (Wikipedia cross-match)",
+   "sources": [
+    "https://gintama.fandom.com/wiki/Episode_84",
+    "https://en.wikipedia.org/wiki/List_of_Gintama_chapters"
+   ]
+  },
+  {
+   "episode": 85,
+   "end_chapter": 137,
+   "start_chapter": 136,
+   "chapters_adapted": "136, 137",
+   "volume": 16,
+   "confidence": "medium",
+   "note": "Hardboiled Detective Arc",
+   "sources": [
+    "https://gintama.fandom.com/wiki/Episode_85"
+   ]
+  },
+  {
+   "episode": 86,
+   "end_chapter": 130,
+   "start_chapter": 129,
+   "chapters_adapted": "129, 130",
+   "volume": 15,
+   "confidence": "medium",
+   "note": "Okita Mitsuba Arc",
+   "sources": [
+    "https://gintama.fandom.com/wiki/Episode_86"
+   ]
+  },
+  {
+   "episode": 87,
+   "end_chapter": 132,
+   "start_chapter": 131,
+   "chapters_adapted": "131, 132",
+   "volume": 16,
+   "confidence": "high",
+   "note": "Okita Mitsuba Arc; ep title = Lesson title (Wikipedia cross-match)",
+   "sources": [
+    "https://gintama.fandom.com/wiki/Episode_87",
+    "https://en.wikipedia.org/wiki/List_of_Gintama_chapters"
+   ]
+  },
+  {
+   "episode": 88,
+   "end_chapter": 139,
+   "start_chapter": 138,
+   "chapters_adapted": "138, 139",
+   "volume": 16,
+   "confidence": "medium",
+   "note": "per-episode Lessons field, Gintama fandom episode infobox",
+   "sources": [
+    "https://gintama.fandom.com/wiki/Episode_88"
+   ]
+  },
+  {
+   "episode": 89,
+   "end_chapter": 150,
+   "start_chapter": 150,
+   "chapters_adapted": "150",
+   "volume": 18,
+   "confidence": "medium",
+   "note": "per-episode Lessons field, Gintama fandom episode infobox",
+   "sources": [
+    "https://gintama.fandom.com/wiki/Episode_89"
+   ]
+  },
+  {
+   "episode": 90,
+   "end_chapter": 46,
+   "start_chapter": 46,
+   "chapters_adapted": "46",
+   "volume": 6,
+   "confidence": "high",
+   "note": "ep title = Lesson title (Wikipedia cross-match)",
+   "sources": [
+    "https://gintama.fandom.com/wiki/Episode_90",
+    "https://en.wikipedia.org/wiki/List_of_Gintama_chapters"
+   ]
+  },
+  {
+   "episode": 91,
+   "end_chapter": 157,
+   "start_chapter": 156,
+   "chapters_adapted": "156, 157",
+   "volume": 18,
+   "confidence": "medium",
+   "note": "per-episode Lessons field, Gintama fandom episode infobox",
+   "sources": [
+    "https://gintama.fandom.com/wiki/Episode_91"
+   ]
+  },
+  {
+   "episode": 92,
+   "end_chapter": 152,
+   "start_chapter": 152,
+   "chapters_adapted": "152",
+   "volume": 18,
+   "confidence": "medium",
+   "note": "per-episode Lessons field, Gintama fandom episode infobox",
+   "sources": [
+    "https://gintama.fandom.com/wiki/Episode_92"
+   ]
+  },
+  {
+   "episode": 93,
+   "end_chapter": 151,
+   "start_chapter": 151,
+   "chapters_adapted": "151",
+   "volume": 18,
+   "confidence": "medium",
+   "note": "per-episode Lessons field, Gintama fandom episode infobox",
+   "sources": [
+    "https://gintama.fandom.com/wiki/Episode_93"
+   ]
+  },
+  {
+   "episode": 94,
+   "end_chapter": 153,
+   "start_chapter": 153,
+   "chapters_adapted": "153",
+   "volume": 18,
+   "confidence": "medium",
+   "note": "Hasegawa Prosecution Arc",
+   "sources": [
+    "https://gintama.fandom.com/wiki/Episode_94"
+   ]
+  },
+  {
+   "episode": 95,
+   "end_chapter": 155,
+   "start_chapter": 154,
+   "chapters_adapted": "154, 155",
+   "volume": 18,
+   "confidence": "medium",
+   "note": "Hasegawa Prosecution Arc",
+   "sources": [
+    "https://gintama.fandom.com/wiki/Episode_95"
+   ]
+  },
+  {
+   "episode": 96,
+   "end_chapter": 171,
+   "start_chapter": 170,
+   "chapters_adapted": "170, 171",
+   "volume": 20,
+   "confidence": "medium",
+   "note": "per-episode Lessons field, Gintama fandom episode infobox",
+   "sources": [
+    "https://gintama.fandom.com/wiki/Episode_96"
+   ]
+  },
+  {
+   "episode": 97,
+   "end_chapter": 24,
+   "start_chapter": 24,
+   "chapters_adapted": "24",
+   "volume": 4,
+   "confidence": "high",
+   "note": "ep title = Lesson title (Wikipedia cross-match)",
+   "sources": [
+    "https://gintama.fandom.com/wiki/Episode_97",
+    "https://en.wikipedia.org/wiki/List_of_Gintama_chapters"
+   ]
+  },
+  {
+   "episode": 98,
+   "end_chapter": 147,
+   "start_chapter": 147,
+   "chapters_adapted": "147",
+   "volume": 17,
+   "confidence": "high",
+   "note": "Owee Arc; ep title = Lesson title (Wikipedia cross-match)",
+   "sources": [
+    "https://gintama.fandom.com/wiki/Episode_98",
+    "https://en.wikipedia.org/wiki/List_of_Gintama_chapters"
+   ]
+  },
+  {
+   "episode": 99,
+   "end_chapter": 149,
+   "start_chapter": 148,
+   "chapters_adapted": "148, 149",
+   "volume": 18,
+   "confidence": "high",
+   "note": "Owee Arc; ep title = Lesson title (Wikipedia cross-match)",
+   "sources": [
+    "https://gintama.fandom.com/wiki/Episode_99",
+    "https://en.wikipedia.org/wiki/List_of_Gintama_chapters"
+   ]
+  },
+  {
+   "episode": 100,
+   "end_chapter": 169,
+   "start_chapter": 169,
+   "chapters_adapted": "169",
+   "volume": 20,
+   "confidence": "medium",
+   "note": "per-episode Lessons field, Gintama fandom episode infobox",
+   "sources": [
+    "https://gintama.fandom.com/wiki/Episode_100"
+   ]
+  },
+  {
+   "episode": 101,
+   "end_chapter": 159,
+   "start_chapter": 158,
+   "chapters_adapted": "158, 159",
+   "volume": 19,
+   "confidence": "high",
+   "note": "Shinsengumi Crisis Arc; ep title = Lesson title (Wikipedia cross-match)",
+   "sources": [
+    "https://gintama.fandom.com/wiki/Episode_101",
+    "https://en.wikipedia.org/wiki/List_of_Gintama_chapters"
+   ]
+  },
+  {
+   "episode": 102,
+   "end_chapter": 161,
+   "start_chapter": 160,
+   "chapters_adapted": "160, 161",
+   "volume": 19,
+   "confidence": "high",
+   "note": "Shinsengumi Crisis Arc; ep title = Lesson title (Wikipedia cross-match)",
+   "sources": [
+    "https://gintama.fandom.com/wiki/Episode_102",
+    "https://en.wikipedia.org/wiki/List_of_Gintama_chapters"
+   ]
+  },
+  {
+   "episode": 103,
+   "end_chapter": 163,
+   "start_chapter": 162,
+   "chapters_adapted": "162, 163",
+   "volume": 19,
+   "confidence": "medium",
+   "note": "Shinsengumi Crisis Arc",
+   "sources": [
+    "https://gintama.fandom.com/wiki/Episode_103"
+   ]
+  },
+  {
+   "episode": 104,
+   "end_chapter": 166,
+   "start_chapter": 164,
+   "chapters_adapted": "164-166",
+   "volume": 19,
+   "confidence": "high",
+   "note": "Shinsengumi Crisis Arc; ep title = Lesson title (Wikipedia cross-match)",
+   "sources": [
+    "https://gintama.fandom.com/wiki/Episode_104",
+    "https://en.wikipedia.org/wiki/List_of_Gintama_chapters"
+   ]
+  },
+  {
+   "episode": 105,
+   "end_chapter": 168,
+   "start_chapter": 167,
+   "chapters_adapted": "167, 168",
+   "volume": 20,
+   "confidence": "medium",
+   "note": "Shinsengumi Crisis Arc",
+   "sources": [
+    "https://gintama.fandom.com/wiki/Episode_105"
+   ]
+  },
+  {
+   "episode": 107,
+   "end_chapter": 185,
+   "start_chapter": 184,
+   "chapters_adapted": "184, 185(1/2)",
+   "volume": 22,
+   "confidence": "high",
+   "note": "Guardian Dog Arc; ep title = Lesson title (Wikipedia cross-match)",
+   "sources": [
+    "https://gintama.fandom.com/wiki/Episode_107",
+    "https://en.wikipedia.org/wiki/List_of_Gintama_chapters"
+   ]
+  },
+  {
+   "episode": 108,
+   "end_chapter": 186,
+   "start_chapter": 185,
+   "chapters_adapted": "185, 186",
+   "volume": 22,
+   "confidence": "high",
+   "note": "Guardian Dog Arc; ep title = Lesson title (Wikipedia cross-match)",
+   "sources": [
+    "https://gintama.fandom.com/wiki/Episode_108",
+    "https://en.wikipedia.org/wiki/List_of_Gintama_chapters"
+   ]
+  },
+  {
+   "episode": 109,
+   "end_chapter": 173,
+   "start_chapter": 173,
+   "chapters_adapted": "173",
+   "volume": 20,
+   "confidence": "high",
+   "note": "N/A}}; ep title = Lesson title (Wikipedia cross-match)",
+   "sources": [
+    "https://gintama.fandom.com/wiki/Episode_109",
+    "https://en.wikipedia.org/wiki/List_of_Gintama_chapters"
+   ]
+  },
+  {
+   "episode": 110,
+   "end_chapter": 194,
+   "start_chapter": 193,
+   "chapters_adapted": "193, 194",
+   "volume": 23,
+   "confidence": "medium",
+   "note": "N/A}}",
+   "sources": [
+    "https://gintama.fandom.com/wiki/Episode_110"
+   ]
+  },
+  {
+   "episode": 112,
+   "end_chapter": 183,
+   "start_chapter": 183,
+   "chapters_adapted": "183",
+   "volume": 21,
+   "confidence": "medium",
+   "note": "per-episode Lessons field, Gintama fandom episode infobox",
+   "sources": [
+    "https://gintama.fandom.com/wiki/Episode_112"
+   ]
+  },
+  {
+   "episode": 113,
+   "end_chapter": 188,
+   "start_chapter": 188,
+   "chapters_adapted": "188",
+   "volume": 22,
+   "confidence": "medium",
+   "note": "per-episode Lessons field, Gintama fandom episode infobox",
+   "sources": [
+    "https://gintama.fandom.com/wiki/Episode_113"
+   ]
+  },
+  {
+   "episode": 115,
+   "end_chapter": 175,
+   "start_chapter": 174,
+   "chapters_adapted": "174, 175",
+   "volume": 20,
+   "confidence": "medium",
+   "note": "Ryugujo Arc",
+   "sources": [
+    "https://gintama.fandom.com/wiki/Episode_115"
+   ]
+  },
+  {
+   "episode": 116,
+   "end_chapter": 177,
+   "start_chapter": 176,
+   "chapters_adapted": "176, 177",
+   "volume": 21,
+   "confidence": "medium",
+   "note": "Ryugujo Arc",
+   "sources": [
+    "https://gintama.fandom.com/wiki/Episode_116"
+   ]
+  },
+  {
+   "episode": 117,
+   "end_chapter": 179,
+   "start_chapter": 178,
+   "chapters_adapted": "178, 179",
+   "volume": 21,
+   "confidence": "high",
+   "note": "Ryugujo Arc; ep title = Lesson title (Wikipedia cross-match)",
+   "sources": [
+    "https://gintama.fandom.com/wiki/Episode_117",
+    "https://en.wikipedia.org/wiki/List_of_Gintama_chapters"
+   ]
+  },
+  {
+   "episode": 118,
+   "end_chapter": 182,
+   "start_chapter": 180,
+   "chapters_adapted": "180-182",
+   "volume": 21,
+   "confidence": "high",
+   "note": "Ryugujo Arc; ep title = Lesson title (Wikipedia cross-match)",
+   "sources": [
+    "https://gintama.fandom.com/wiki/Episode_118",
+    "https://en.wikipedia.org/wiki/List_of_Gintama_chapters"
+   ]
+  },
+  {
+   "episode": 119,
+   "end_chapter": 202,
+   "start_chapter": 202,
+   "chapters_adapted": "202",
+   "volume": 23,
+   "confidence": "medium",
+   "note": "N/A}}",
+   "sources": [
+    "https://gintama.fandom.com/wiki/Episode_119"
+   ]
+  },
+  {
+   "episode": 121,
+   "end_chapter": 190,
+   "start_chapter": 189,
+   "chapters_adapted": "189, 190(2/5)",
+   "volume": 22,
+   "confidence": "medium",
+   "note": "Monkey Hunter Arc",
+   "sources": [
+    "https://gintama.fandom.com/wiki/Episode_121"
+   ]
+  },
+  {
+   "episode": 122,
+   "end_chapter": 191,
+   "start_chapter": 190,
+   "chapters_adapted": "190(3/5), 191",
+   "volume": 22,
+   "confidence": "medium",
+   "note": "Monkey Hunter Arc",
+   "sources": [
+    "https://gintama.fandom.com/wiki/Episode_122"
+   ]
+  },
+  {
+   "episode": 123,
+   "end_chapter": 192,
+   "start_chapter": 192,
+   "chapters_adapted": "192",
+   "volume": 22,
+   "confidence": "high",
+   "note": "Monkey Hunter Arc; ep title = Lesson title (Wikipedia cross-match)",
+   "sources": [
+    "https://gintama.fandom.com/wiki/Episode_123",
+    "https://en.wikipedia.org/wiki/List_of_Gintama_chapters"
+   ]
+  },
+  {
+   "episode": 126,
+   "end_chapter": 203,
+   "start_chapter": 203,
+   "chapters_adapted": "203",
+   "volume": 24,
+   "confidence": "medium",
+   "note": "Correspondence Arc",
+   "sources": [
+    "https://gintama.fandom.com/wiki/Episode_126"
+   ]
+  },
+  {
+   "episode": 127,
+   "end_chapter": 205,
+   "start_chapter": 204,
+   "chapters_adapted": "204, 205(1/2)",
+   "volume": 24,
+   "confidence": "medium",
+   "note": "Correspondence Arc",
+   "sources": [
+    "https://gintama.fandom.com/wiki/Episode_127"
+   ]
+  },
+  {
+   "episode": 128,
+   "end_chapter": 206,
+   "start_chapter": 205,
+   "chapters_adapted": "205(1/2), 206",
+   "volume": 24,
+   "confidence": "medium",
+   "note": "Correspondence Arc",
+   "sources": [
+    "https://gintama.fandom.com/wiki/Episode_128"
+   ]
+  },
+  {
+   "episode": 129,
+   "end_chapter": 208,
+   "start_chapter": 207,
+   "chapters_adapted": "207, 208(1/2)",
+   "volume": 24,
+   "confidence": "medium",
+   "note": "Kintaro Arc",
+   "sources": [
+    "https://gintama.fandom.com/wiki/Episode_129"
+   ]
+  },
+  {
+   "episode": 130,
+   "end_chapter": 209,
+   "start_chapter": 208,
+   "chapters_adapted": "208, 209",
+   "volume": 24,
+   "confidence": "medium",
+   "note": "Kintaro Arc",
+   "sources": [
+    "https://gintama.fandom.com/wiki/Episode_130"
+   ]
+  },
+  {
+   "episode": 131,
+   "end_chapter": 197,
+   "start_chapter": 196,
+   "chapters_adapted": "196, 197(1/2)",
+   "volume": 23,
+   "confidence": "medium",
+   "note": "Ghost Ryokan Arc",
+   "sources": [
+    "https://gintama.fandom.com/wiki/Episode_131"
+   ]
+  },
+  {
+   "episode": 132,
+   "end_chapter": 198,
+   "start_chapter": 197,
+   "chapters_adapted": "197(1/2), 198",
+   "volume": 23,
+   "confidence": "medium",
+   "note": "Ghost Ryokan Arc",
+   "sources": [
+    "https://gintama.fandom.com/wiki/Episode_132"
+   ]
+  },
+  {
+   "episode": 133,
+   "end_chapter": 200,
+   "start_chapter": 199,
+   "chapters_adapted": "199, 200(1/2)",
+   "volume": 23,
+   "confidence": "medium",
+   "note": "Ghost Ryokan Arc",
+   "sources": [
+    "https://gintama.fandom.com/wiki/Episode_133"
+   ]
+  },
+  {
+   "episode": 134,
+   "end_chapter": 201,
+   "start_chapter": 200,
+   "chapters_adapted": "200(1/2), 201",
+   "volume": 23,
+   "confidence": "medium",
+   "note": "Ghost Ryokan Arc",
+   "sources": [
+    "https://gintama.fandom.com/wiki/Episode_134"
+   ]
+  },
+  {
+   "episode": 136,
+   "end_chapter": 230,
+   "start_chapter": 230,
+   "chapters_adapted": "230",
+   "volume": 27,
+   "confidence": "medium",
+   "note": "per-episode Lessons field, Gintama fandom episode infobox",
+   "sources": [
+    "https://gintama.fandom.com/wiki/Episode_136"
+   ]
+  },
+  {
+   "episode": 138,
+   "end_chapter": 195,
+   "start_chapter": 195,
+   "chapters_adapted": "195",
+   "volume": 23,
+   "confidence": "medium",
+   "note": "per-episode Lessons field, Gintama fandom episode infobox",
+   "sources": [
+    "https://gintama.fandom.com/wiki/Episode_138"
+   ]
+  },
+  {
+   "episode": 139,
+   "end_chapter": 211,
+   "start_chapter": 210,
+   "chapters_adapted": "210, 211",
+   "volume": 25,
+   "confidence": "high",
+   "note": "Yoshiwara in Flames Arc; ep title = Lesson title (Wikipedia cross-match)",
+   "sources": [
+    "https://gintama.fandom.com/wiki/Episode_139",
+    "https://en.wikipedia.org/wiki/List_of_Gintama_chapters"
+   ]
+  },
+  {
+   "episode": 140,
+   "end_chapter": 213,
+   "start_chapter": 212,
+   "chapters_adapted": "212, 213",
+   "volume": 25,
+   "confidence": "medium",
+   "note": "Yoshiwara in Flames Arc",
+   "sources": [
+    "https://gintama.fandom.com/wiki/Episode_140"
+   ]
+  },
+  {
+   "episode": 141,
+   "end_chapter": 216,
+   "start_chapter": 214,
+   "chapters_adapted": "214-216",
+   "volume": 25,
+   "confidence": "medium",
+   "note": "Yoshiwara in Flames Arc",
+   "sources": [
+    "https://gintama.fandom.com/wiki/Episode_141"
+   ]
+  },
+  {
+   "episode": 142,
+   "end_chapter": 219,
+   "start_chapter": 217,
+   "chapters_adapted": "217-219",
+   "volume": 26,
+   "confidence": "medium",
+   "note": "Yoshiwara in Flames Arc",
+   "sources": [
+    "https://gintama.fandom.com/wiki/Episode_142"
+   ]
+  },
+  {
+   "episode": 143,
+   "end_chapter": 222,
+   "start_chapter": 220,
+   "chapters_adapted": "220-222",
+   "volume": 26,
+   "confidence": "medium",
+   "note": "Yoshiwara in Flames Arc",
+   "sources": [
+    "https://gintama.fandom.com/wiki/Episode_143"
+   ]
+  },
+  {
+   "episode": 144,
+   "end_chapter": 224,
+   "start_chapter": 223,
+   "chapters_adapted": "223, 224",
+   "volume": 26,
+   "confidence": "medium",
+   "note": "Yoshiwara in Flames Arc",
+   "sources": [
+    "https://gintama.fandom.com/wiki/Episode_144"
+   ]
+  },
+  {
+   "episode": 145,
+   "end_chapter": 227,
+   "start_chapter": 225,
+   "chapters_adapted": "225, 226, 227(2/4)",
+   "volume": 26,
+   "confidence": "medium",
+   "note": "Yoshiwara in Flames Arc",
+   "sources": [
+    "https://gintama.fandom.com/wiki/Episode_145"
+   ]
+  },
+  {
+   "episode": 146,
+   "end_chapter": 228,
+   "start_chapter": 227,
+   "chapters_adapted": "227(2/4), 228",
+   "volume": 26,
+   "confidence": "medium",
+   "note": "Yoshiwara in Flames Arc",
+   "sources": [
+    "https://gintama.fandom.com/wiki/Episode_146"
+   ]
+  },
+  {
+   "episode": 147,
+   "end_chapter": 229,
+   "start_chapter": 229,
+   "chapters_adapted": "229",
+   "volume": 27,
+   "confidence": "high",
+   "note": "Yoshiwara in Flames Arc; ep title = Lesson title (Wikipedia cross-match)",
+   "sources": [
+    "https://gintama.fandom.com/wiki/Episode_147",
+    "https://en.wikipedia.org/wiki/List_of_Gintama_chapters"
+   ]
+  },
+  {
+   "episode": 148,
+   "end_chapter": 234,
+   "start_chapter": 233,
+   "chapters_adapted": "233, 234(2/3)",
+   "volume": 27,
+   "confidence": "medium",
+   "note": "Shinsengumi Death Game Arc",
+   "sources": [
+    "https://gintama.fandom.com/wiki/Episode_148"
+   ]
+  },
+  {
+   "episode": 149,
+   "end_chapter": 235,
+   "start_chapter": 234,
+   "chapters_adapted": "234(1/3), 235",
+   "volume": 27,
+   "confidence": "medium",
+   "note": "Shinsengumi Death Game Arc",
+   "sources": [
+    "https://gintama.fandom.com/wiki/Episode_149"
+   ]
+  },
+  {
+   "episode": 151,
+   "end_chapter": 231,
+   "start_chapter": 231,
+   "chapters_adapted": "231",
+   "volume": 27,
+   "confidence": "medium",
+   "note": "Barber Arc",
+   "sources": [
+    "https://gintama.fandom.com/wiki/Episode_151"
+   ]
+  },
+  {
+   "episode": 152,
+   "end_chapter": 232,
+   "start_chapter": 232,
+   "chapters_adapted": "232",
+   "volume": 27,
+   "confidence": "medium",
+   "note": "Barber Arc",
+   "sources": [
+    "https://gintama.fandom.com/wiki/Episode_152"
+   ]
+  },
+  {
+   "episode": 153,
+   "end_chapter": 237,
+   "start_chapter": 237,
+   "chapters_adapted": "237",
+   "volume": 27,
+   "confidence": "medium",
+   "note": "per-episode Lessons field, Gintama fandom episode infobox",
+   "sources": [
+    "https://gintama.fandom.com/wiki/Episode_153"
+   ]
+  },
+  {
+   "episode": 154,
+   "end_chapter": 236,
+   "start_chapter": 236,
+   "chapters_adapted": "236",
+   "volume": 27,
+   "confidence": "medium",
+   "note": "per-episode Lessons field, Gintama fandom episode infobox",
+   "sources": [
+    "https://gintama.fandom.com/wiki/Episode_154"
+   ]
+  },
+  {
+   "episode": 156,
+   "end_chapter": 238,
+   "start_chapter": 238,
+   "chapters_adapted": "238",
+   "volume": 28,
+   "confidence": "medium",
+   "note": "per-episode Lessons field, Gintama fandom episode infobox",
+   "sources": [
+    "https://gintama.fandom.com/wiki/Episode_156"
+   ]
+  },
+  {
+   "episode": 157,
+   "end_chapter": 239,
+   "start_chapter": 239,
+   "chapters_adapted": "239",
+   "volume": 28,
+   "confidence": "medium",
+   "note": "Otsu Arc",
+   "sources": [
+    "https://gintama.fandom.com/wiki/Episode_157"
+   ]
+  },
+  {
+   "episode": 158,
+   "end_chapter": 240,
+   "start_chapter": 240,
+   "chapters_adapted": "240",
+   "volume": 28,
+   "confidence": "medium",
+   "note": "Otsu Arc",
+   "sources": [
+    "https://gintama.fandom.com/wiki/Episode_158"
+   ]
+  },
+  {
+   "episode": 159,
+   "end_chapter": 241,
+   "start_chapter": 241,
+   "chapters_adapted": "241",
+   "volume": 28,
+   "confidence": "medium",
+   "note": "Otsu Arc",
+   "sources": [
+    "https://gintama.fandom.com/wiki/Episode_159"
+   ]
+  },
+  {
+   "episode": 160,
+   "end_chapter": 242,
+   "start_chapter": 242,
+   "chapters_adapted": "242",
+   "volume": 28,
+   "confidence": "medium",
+   "note": "Otsu Arc",
+   "sources": [
+    "https://gintama.fandom.com/wiki/Episode_160"
+   ]
+  },
+  {
+   "episode": 161,
+   "end_chapter": 243,
+   "start_chapter": 243,
+   "chapters_adapted": "243",
+   "volume": 28,
+   "confidence": "high",
+   "note": "Otsu Arc; ep title = Lesson title (Wikipedia cross-match)",
+   "sources": [
+    "https://gintama.fandom.com/wiki/Episode_161",
+    "https://en.wikipedia.org/wiki/List_of_Gintama_chapters"
+   ]
+  },
+  {
+   "episode": 162,
+   "end_chapter": 244,
+   "start_chapter": 244,
+   "chapters_adapted": "244",
+   "volume": 28,
+   "confidence": "medium",
+   "note": "Otsu Arc",
+   "sources": [
+    "https://gintama.fandom.com/wiki/Episode_162"
+   ]
+  },
+  {
+   "episode": 163,
+   "end_chapter": 245,
+   "start_chapter": 245,
+   "chapters_adapted": "245",
+   "volume": 28,
+   "confidence": "medium",
+   "note": "Otsu Arc",
+   "sources": [
+    "https://gintama.fandom.com/wiki/Episode_163"
+   ]
+  },
+  {
+   "episode": 165,
+   "end_chapter": 246,
+   "start_chapter": 246,
+   "chapters_adapted": "246",
+   "volume": 28,
+   "confidence": "medium",
+   "note": "per-episode Lessons field, Gintama fandom episode infobox",
+   "sources": [
+    "https://gintama.fandom.com/wiki/Episode_165"
+   ]
+  },
+  {
+   "episode": 167,
+   "end_chapter": 247,
+   "start_chapter": 247,
+   "chapters_adapted": "247",
+   "volume": 29,
+   "confidence": "medium",
+   "note": "Tama Quest Arc",
+   "sources": [
+    "https://gintama.fandom.com/wiki/Episode_167"
+   ]
+  },
+  {
+   "episode": 168,
+   "end_chapter": 248,
+   "start_chapter": 248,
+   "chapters_adapted": "248",
+   "volume": 29,
+   "confidence": "medium",
+   "note": "Tama Quest Arc",
+   "sources": [
+    "https://gintama.fandom.com/wiki/Episode_168"
+   ]
+  },
+  {
+   "episode": 169,
+   "end_chapter": 250,
+   "start_chapter": 249,
+   "chapters_adapted": "249, 250(1/2)",
+   "volume": 29,
+   "confidence": "medium",
+   "note": "Tama Quest Arc",
+   "sources": [
+    "https://gintama.fandom.com/wiki/Episode_169"
+   ]
+  },
+  {
+   "episode": 170,
+   "end_chapter": 251,
+   "start_chapter": 250,
+   "chapters_adapted": "250(1/2), 251",
+   "volume": 29,
+   "confidence": "medium",
+   "note": "Tama Quest Arc",
+   "sources": [
+    "https://gintama.fandom.com/wiki/Episode_170"
+   ]
+  },
+  {
+   "episode": 172,
+   "end_chapter": 252,
+   "start_chapter": 252,
+   "chapters_adapted": "252",
+   "volume": 29,
+   "confidence": "medium",
+   "note": "per-episode Lessons field, Gintama fandom episode infobox",
+   "sources": [
+    "https://gintama.fandom.com/wiki/Episode_172"
+   ]
+  },
+  {
+   "episode": 175,
+   "end_chapter": 264,
+   "start_chapter": 263,
+   "chapters_adapted": "263, 264",
+   "volume": 30,
+   "confidence": "medium",
+   "note": "per-episode Lessons field, Gintama fandom episode infobox",
+   "sources": [
+    "https://gintama.fandom.com/wiki/Episode_175"
+   ]
+  },
+  {
+   "episode": 177,
+   "end_chapter": 255,
+   "start_chapter": 254,
+   "chapters_adapted": "254, 255(1/2)",
+   "volume": 29,
+   "confidence": "medium",
+   "note": "Red Spider Arc",
+   "sources": [
+    "https://gintama.fandom.com/wiki/Episode_177"
+   ]
+  },
+  {
+   "episode": 178,
+   "end_chapter": 257,
+   "start_chapter": 255,
+   "chapters_adapted": "255(1/2), 256, 257(1/2)",
+   "volume": 30,
+   "confidence": "medium",
+   "note": "Red Spider Arc",
+   "sources": [
+    "https://gintama.fandom.com/wiki/Episode_178"
+   ]
+  },
+  {
+   "episode": 179,
+   "end_chapter": 258,
+   "start_chapter": 257,
+   "chapters_adapted": "257(1/2), 258",
+   "volume": 30,
+   "confidence": "medium",
+   "note": "Red Spider Arc",
+   "sources": [
+    "https://gintama.fandom.com/wiki/Episode_179"
+   ]
+  },
+  {
+   "episode": 180,
+   "end_chapter": 261,
+   "start_chapter": 259,
+   "chapters_adapted": "259, 260, 261(3/4)",
+   "volume": 30,
+   "confidence": "medium",
+   "note": "Red Spider Arc",
+   "sources": [
+    "https://gintama.fandom.com/wiki/Episode_180"
+   ]
+  },
+  {
+   "episode": 181,
+   "end_chapter": 262,
+   "start_chapter": 261,
+   "chapters_adapted": "261(1/4), 262",
+   "volume": 30,
+   "confidence": "medium",
+   "note": "Red Spider Arc",
+   "sources": [
+    "https://gintama.fandom.com/wiki/Episode_181"
+   ]
+  },
+  {
+   "episode": 182,
+   "end_chapter": 265,
+   "start_chapter": 265,
+   "chapters_adapted": "265",
+   "volume": 31,
+   "confidence": "medium",
+   "note": "Character Poll Arc",
+   "sources": [
+    "https://gintama.fandom.com/wiki/Episode_182"
+   ]
+  },
+  {
+   "episode": 183,
+   "end_chapter": 266,
+   "start_chapter": 266,
+   "chapters_adapted": "266",
+   "volume": 31,
+   "confidence": "medium",
+   "note": "Character Poll Arc",
+   "sources": [
+    "https://gintama.fandom.com/wiki/Episode_183"
+   ]
+  },
+  {
+   "episode": 184,
+   "end_chapter": 268,
+   "start_chapter": 267,
+   "chapters_adapted": "267, 268",
+   "volume": 31,
+   "confidence": "medium",
+   "note": "Character Poll Arc",
+   "sources": [
+    "https://gintama.fandom.com/wiki/Episode_184"
+   ]
+  },
+  {
+   "episode": 186,
+   "end_chapter": 271,
+   "start_chapter": 270,
+   "chapters_adapted": "270, 271(1/2)",
+   "volume": 31,
+   "confidence": "medium",
+   "note": "Rokkaku Arc",
+   "sources": [
+    "https://gintama.fandom.com/wiki/Episode_186"
+   ]
+  },
+  {
+   "episode": 187,
+   "end_chapter": 272,
+   "start_chapter": 271,
+   "chapters_adapted": "271(1/2), 272",
+   "volume": 31,
+   "confidence": "medium",
+   "note": "Rokkaku Arc",
+   "sources": [
+    "https://gintama.fandom.com/wiki/Episode_187"
+   ]
+  },
+  {
+   "episode": 188,
+   "end_chapter": 274,
+   "start_chapter": 274,
+   "chapters_adapted": "274",
+   "volume": 32,
+   "confidence": "medium",
+   "note": "per-episode Lessons field, Gintama fandom episode infobox",
+   "sources": [
+    "https://gintama.fandom.com/wiki/Episode_188"
+   ]
+  },
+  {
+   "episode": 190,
+   "end_chapter": 276,
+   "start_chapter": 275,
+   "chapters_adapted": "275, 276",
+   "volume": 32,
+   "confidence": "medium",
+   "note": "Kabukicho Stray Cat Arc",
+   "sources": [
+    "https://gintama.fandom.com/wiki/Episode_190"
+   ]
+  },
+  {
+   "episode": 191,
+   "end_chapter": 277,
+   "start_chapter": 277,
+   "chapters_adapted": "277",
+   "volume": 32,
+   "confidence": "medium",
+   "note": "Kabukicho Stray Cat Arc",
+   "sources": [
+    "https://gintama.fandom.com/wiki/Episode_191"
+   ]
+  },
+  {
+   "episode": 192,
+   "end_chapter": 279,
+   "start_chapter": 278,
+   "chapters_adapted": "278, 279",
+   "volume": 32,
+   "confidence": "high",
+   "note": "Kabukicho Stray Cat Arc; ep title = Lesson title (Wikipedia cross-match)",
+   "sources": [
+    "https://gintama.fandom.com/wiki/Episode_192",
+    "https://en.wikipedia.org/wiki/List_of_Gintama_chapters"
+   ]
+  },
+  {
+   "episode": 193,
+   "end_chapter": 280,
+   "start_chapter": 280,
+   "chapters_adapted": "280",
+   "volume": 32,
+   "confidence": "medium",
+   "note": "per-episode Lessons field, Gintama fandom episode infobox",
+   "sources": [
+    "https://gintama.fandom.com/wiki/Episode_193"
+   ]
+  },
+  {
+   "episode": 194,
+   "end_chapter": 281,
+   "start_chapter": 281,
+   "chapters_adapted": "281",
+   "volume": 32,
+   "confidence": "high",
+   "note": "ep title = Lesson title (Wikipedia cross-match)",
+   "sources": [
+    "https://gintama.fandom.com/wiki/Episode_194",
+    "https://en.wikipedia.org/wiki/List_of_Gintama_chapters"
+   ]
+  },
+  {
+   "episode": 195,
+   "end_chapter": 283,
+   "start_chapter": 282,
+   "chapters_adapted": "282, 283(1/2)",
+   "volume": 33,
+   "confidence": "medium",
+   "note": "Diviner Arc",
+   "sources": [
+    "https://gintama.fandom.com/wiki/Episode_195"
+   ]
+  },
+  {
+   "episode": 196,
+   "end_chapter": 284,
+   "start_chapter": 283,
+   "chapters_adapted": "283(1/2), 284",
+   "volume": 33,
+   "confidence": "medium",
+   "note": "Diviner Arc",
+   "sources": [
+    "https://gintama.fandom.com/wiki/Episode_196"
+   ]
+  },
+  {
+   "episode": 197,
+   "end_chapter": 286,
+   "start_chapter": 285,
+   "chapters_adapted": "285, 286",
+   "volume": 33,
+   "confidence": "medium",
+   "note": "Diviner Arc",
+   "sources": [
+    "https://gintama.fandom.com/wiki/Episode_197"
+   ]
+  },
+  {
+   "episode": 198,
+   "end_chapter": 288,
+   "start_chapter": 287,
+   "chapters_adapted": "287, 288(1/2)",
+   "volume": 33,
+   "confidence": "medium",
+   "note": "Diviner Arc",
+   "sources": [
+    "https://gintama.fandom.com/wiki/Episode_198"
+   ]
+  },
+  {
+   "episode": 199,
+   "end_chapter": 289,
+   "start_chapter": 288,
+   "chapters_adapted": "288(1/2), 289",
+   "volume": 33,
+   "confidence": "medium",
+   "note": "Diviner Arc",
+   "sources": [
+    "https://gintama.fandom.com/wiki/Episode_199"
+   ]
+  },
+  {
+   "episode": 200,
+   "end_chapter": 290,
+   "start_chapter": 290,
+   "chapters_adapted": "290",
+   "volume": 33,
+   "confidence": "high",
+   "note": "Santa Arc; ep title = Lesson title (Wikipedia cross-match)",
+   "sources": [
+    "https://gintama.fandom.com/wiki/Episode_200",
+    "https://en.wikipedia.org/wiki/List_of_Gintama_chapters"
+   ]
+  },
+  {
+   "episode": 201,
+   "end_chapter": 292,
+   "start_chapter": 291,
+   "chapters_adapted": "291, 292",
+   "volume": 34,
+   "confidence": "high",
+   "note": "Santa Arc",
+   "sources": [
+    "https://gintama.fandom.com/wiki/Episode_201",
+    "https://gintama.fandom.com/wiki/Lesson_292"
+   ]
+  },
+  {
+   "episode": 202,
+   "end_chapter": 325,
+   "start_chapter": 324,
+   "chapters_adapted": "324, 325(1/2)",
+   "volume": 37,
+   "confidence": "high",
+   "note": "Timeskip Arc",
+   "sources": [
+    "https://gintama.fandom.com/wiki/Episode_202",
+    "https://gintama.fandom.com/wiki/Lesson_324"
+   ]
+  },
+  {
+   "episode": 203,
+   "end_chapter": 326,
+   "start_chapter": 325,
+   "chapters_adapted": "325(1/2), 326",
+   "volume": 37,
+   "confidence": "medium",
+   "note": "Timeskip Arc",
+   "sources": [
+    "https://gintama.fandom.com/wiki/Episode_203"
+   ]
+  },
+  {
+   "episode": 204,
+   "end_chapter": 294,
+   "start_chapter": 294,
+   "chapters_adapted": "294",
+   "volume": 34,
+   "confidence": "medium",
+   "note": "per-episode Lessons field, Gintama fandom episode infobox",
+   "sources": [
+    "https://gintama.fandom.com/wiki/Episode_204"
+   ]
+  },
+  {
+   "episode": 205,
+   "end_chapter": 293,
+   "start_chapter": 293,
+   "chapters_adapted": "293",
+   "volume": 34,
+   "confidence": "medium",
+   "note": "per-episode Lessons field, Gintama fandom episode infobox",
+   "sources": [
+    "https://gintama.fandom.com/wiki/Episode_205"
+   ]
+  },
+  {
+   "episode": 206,
+   "end_chapter": 296,
+   "start_chapter": 296,
+   "chapters_adapted": "296",
+   "volume": 34,
+   "confidence": "medium",
+   "note": "per-episode Lessons field, Gintama fandom episode infobox",
+   "sources": [
+    "https://gintama.fandom.com/wiki/Episode_206"
+   ]
+  },
+  {
+   "episode": 207,
+   "end_chapter": 319,
+   "start_chapter": 318,
+   "chapters_adapted": "318, 319",
+   "volume": 37,
+   "confidence": "high",
+   "note": "Glasses Arc; ep title = Lesson title (Wikipedia cross-match)",
+   "sources": [
+    "https://gintama.fandom.com/wiki/Episode_207",
+    "https://en.wikipedia.org/wiki/List_of_Gintama_chapters"
+   ]
+  },
+  {
+   "episode": 208,
+   "end_chapter": 321,
+   "start_chapter": 320,
+   "chapters_adapted": "320, 321",
+   "volume": 37,
+   "confidence": "medium",
+   "note": "Glasses Arc",
+   "sources": [
+    "https://gintama.fandom.com/wiki/Episode_208"
+   ]
+  },
+  {
+   "episode": 210,
+   "end_chapter": 298,
+   "start_chapter": 297,
+   "chapters_adapted": "297, 298",
+   "volume": 34,
+   "confidence": "medium",
+   "note": "Kabukicho Four Devas Arc",
+   "sources": [
+    "https://gintama.fandom.com/wiki/Episode_210"
+   ]
+  },
+  {
+   "episode": 211,
+   "end_chapter": 300,
+   "start_chapter": 299,
+   "chapters_adapted": "299, 300",
+   "volume": 34,
+   "confidence": "high",
+   "note": "Kabukicho Four Devas Arc; ep title = Lesson title (Wikipedia cross-match)",
+   "sources": [
+    "https://gintama.fandom.com/wiki/Episode_211",
+    "https://en.wikipedia.org/wiki/List_of_Gintama_chapters"
+   ]
+  },
+  {
+   "episode": 212,
+   "end_chapter": 302,
+   "start_chapter": 301,
+   "chapters_adapted": "301, 302",
+   "volume": 35,
+   "confidence": "medium",
+   "note": "Kabukicho Four Devas Arc",
+   "sources": [
+    "https://gintama.fandom.com/wiki/Episode_212"
+   ]
+  },
+  {
+   "episode": 213,
+   "end_chapter": 305,
+   "start_chapter": 303,
+   "chapters_adapted": "303-305",
+   "volume": 35,
+   "confidence": "high",
+   "note": "Kabukicho Four Devas Arc; ep title = Lesson title (Wikipedia cross-match)",
+   "sources": [
+    "https://gintama.fandom.com/wiki/Episode_213",
+    "https://en.wikipedia.org/wiki/List_of_Gintama_chapters"
+   ]
+  },
+  {
+   "episode": 214,
+   "end_chapter": 309,
+   "start_chapter": 306,
+   "chapters_adapted": "306-309",
+   "volume": 35,
+   "confidence": "medium",
+   "note": "Kabukicho Four Devas Arc",
+   "sources": [
+    "https://gintama.fandom.com/wiki/Episode_214"
+   ]
+  },
+  {
+   "episode": 215,
+   "end_chapter": 311,
+   "start_chapter": 310,
+   "chapters_adapted": "310, 311",
+   "volume": 36,
+   "confidence": "medium",
+   "note": "Kabukicho Four Devas Arc",
+   "sources": [
+    "https://gintama.fandom.com/wiki/Episode_215"
+   ]
+  },
+  {
+   "episode": 216,
+   "end_chapter": 332,
+   "start_chapter": 331,
+   "chapters_adapted": "331, 332",
+   "volume": 38,
+   "confidence": "medium",
+   "note": "per-episode Lessons field, Gintama fandom episode infobox",
+   "sources": [
+    "https://gintama.fandom.com/wiki/Episode_216"
+   ]
+  },
+  {
+   "episode": 217,
+   "end_chapter": 323,
+   "start_chapter": 322,
+   "chapters_adapted": "322, 323",
+   "volume": 37,
+   "confidence": "medium",
+   "note": "per-episode Lessons field, Gintama fandom episode infobox",
+   "sources": [
+    "https://gintama.fandom.com/wiki/Episode_217"
+   ]
+  },
+  {
+   "episode": 218,
+   "end_chapter": 328,
+   "start_chapter": 327,
+   "chapters_adapted": "327, 328",
+   "volume": 37,
+   "confidence": "medium",
+   "note": "per-episode Lessons field, Gintama fandom episode infobox",
+   "sources": [
+    "https://gintama.fandom.com/wiki/Episode_218"
+   ]
+  },
+  {
+   "episode": 219,
+   "end_chapter": 333,
+   "start_chapter": 333,
+   "chapters_adapted": "333",
+   "volume": 38,
+   "confidence": "medium",
+   "note": "per-episode Lessons field, Gintama fandom episode infobox",
+   "sources": [
+    "https://gintama.fandom.com/wiki/Episode_219"
+   ]
+  },
+  {
+   "episode": 220,
+   "end_chapter": 335,
+   "start_chapter": 334,
+   "chapters_adapted": "334(1/2), 335",
+   "volume": 39,
+   "confidence": "medium",
+   "note": "per-episode Lessons field, Gintama fandom episode infobox",
+   "sources": [
+    "https://gintama.fandom.com/wiki/Episode_220"
+   ]
+  },
+  {
+   "episode": 221,
+   "end_chapter": 314,
+   "start_chapter": 314,
+   "chapters_adapted": "314",
+   "volume": 36,
+   "confidence": "high",
+   "note": "Jugem Arc; ep title = Lesson title (Wikipedia cross-match)",
+   "sources": [
+    "https://gintama.fandom.com/wiki/Episode_221",
+    "https://en.wikipedia.org/wiki/List_of_Gintama_chapters"
+   ]
+  },
+  {
+   "episode": 222,
+   "end_chapter": 315,
+   "start_chapter": 315,
+   "chapters_adapted": "315",
+   "volume": 36,
+   "confidence": "medium",
+   "note": "Jugem Arc",
+   "sources": [
+    "https://gintama.fandom.com/wiki/Episode_222"
+   ]
+  },
+  {
+   "episode": 223,
+   "end_chapter": 330,
+   "start_chapter": 329,
+   "chapters_adapted": "329, 330",
+   "volume": 38,
+   "confidence": "medium",
+   "note": "per-episode Lessons field, Gintama fandom episode infobox",
+   "sources": [
+    "https://gintama.fandom.com/wiki/Episode_223"
+   ]
+  },
+  {
+   "episode": 224,
+   "end_chapter": 343,
+   "start_chapter": 343,
+   "chapters_adapted": "343",
+   "volume": 39,
+   "confidence": "high",
+   "note": "ep title = Lesson title (Wikipedia cross-match)",
+   "sources": [
+    "https://gintama.fandom.com/wiki/Episode_224",
+    "https://en.wikipedia.org/wiki/List_of_Gintama_chapters"
+   ]
+  },
+  {
+   "episode": 225,
+   "end_chapter": 341,
+   "start_chapter": 340,
+   "chapters_adapted": "340, 341(3/4)",
+   "volume": 39,
+   "confidence": "medium",
+   "note": "Jail Arc",
+   "sources": [
+    "https://gintama.fandom.com/wiki/Episode_225"
+   ]
+  },
+  {
+   "episode": 226,
+   "end_chapter": 342,
+   "start_chapter": 341,
+   "chapters_adapted": "341(1/4), 342",
+   "volume": 39,
+   "confidence": "medium",
+   "note": "Jail Arc",
+   "sources": [
+    "https://gintama.fandom.com/wiki/Episode_226"
+   ]
+  },
+  {
+   "episode": 228,
+   "end_chapter": 348,
+   "start_chapter": 347,
+   "chapters_adapted": "347, 348",
+   "volume": 40,
+   "confidence": "medium",
+   "note": "Love Choriss Arc",
+   "sources": [
+    "https://gintama.fandom.com/wiki/Episode_228"
+   ]
+  },
+  {
+   "episode": 229,
+   "end_chapter": 350,
+   "start_chapter": 349,
+   "chapters_adapted": "349, 350",
+   "volume": 40,
+   "confidence": "medium",
+   "note": "Love Choriss Arc",
+   "sources": [
+    "https://gintama.fandom.com/wiki/Episode_229"
+   ]
+  },
+  {
+   "episode": 230,
+   "end_chapter": 352,
+   "start_chapter": 351,
+   "chapters_adapted": "351, 352",
+   "volume": 40,
+   "confidence": "medium",
+   "note": "per-episode Lessons field, Gintama fandom episode infobox",
+   "sources": [
+    "https://gintama.fandom.com/wiki/Episode_230"
+   ]
+  },
+  {
+   "episode": 231,
+   "end_chapter": 317,
+   "start_chapter": 316,
+   "chapters_adapted": "316, 317",
+   "volume": 36,
+   "confidence": "medium",
+   "note": "per-episode Lessons field, Gintama fandom episode infobox",
+   "sources": [
+    "https://gintama.fandom.com/wiki/Episode_231"
+   ]
+  },
+  {
+   "episode": 232,
+   "end_chapter": 354,
+   "start_chapter": 353,
+   "chapters_adapted": "353, 354(3/4)",
+   "volume": 41,
+   "confidence": "medium",
+   "note": "Renho Arc",
+   "sources": [
+    "https://gintama.fandom.com/wiki/Episode_232"
+   ]
+  },
+  {
+   "episode": 233,
+   "end_chapter": 356,
+   "start_chapter": 354,
+   "chapters_adapted": "354(1/4), 355, 356(1/4)",
+   "volume": 41,
+   "confidence": "medium",
+   "note": "Renho Arc",
+   "sources": [
+    "https://gintama.fandom.com/wiki/Episode_233"
+   ]
+  },
+  {
+   "episode": 234,
+   "end_chapter": 357,
+   "start_chapter": 356,
+   "chapters_adapted": "356(3/4), 357(1/2)",
+   "volume": 41,
+   "confidence": "medium",
+   "note": "Renho Arc",
+   "sources": [
+    "https://gintama.fandom.com/wiki/Episode_234"
+   ]
+  },
+  {
+   "episode": 235,
+   "end_chapter": 359,
+   "start_chapter": 357,
+   "chapters_adapted": "357(1/2), 358, 359(1/2)",
+   "volume": 41,
+   "confidence": "medium",
+   "note": "Renho Arc",
+   "sources": [
+    "https://gintama.fandom.com/wiki/Episode_235"
+   ]
+  },
+  {
+   "episode": 236,
+   "end_chapter": 360,
+   "start_chapter": 359,
+   "chapters_adapted": "359(1/2), 360",
+   "volume": 41,
+   "confidence": "medium",
+   "note": "Renho Arc",
+   "sources": [
+    "https://gintama.fandom.com/wiki/Episode_236"
+   ]
+  },
+  {
+   "episode": 237,
+   "end_chapter": 345,
+   "start_chapter": 344,
+   "chapters_adapted": "344, 345(1/2)",
+   "volume": 40,
+   "confidence": "medium",
+   "note": "Vacation Arc",
+   "sources": [
+    "https://gintama.fandom.com/wiki/Episode_237"
+   ]
+  },
+  {
+   "episode": 238,
+   "end_chapter": 346,
+   "start_chapter": 345,
+   "chapters_adapted": "345(1/2), 346",
+   "volume": 40,
+   "confidence": "medium",
+   "note": "Vacation Arc",
+   "sources": [
+    "https://gintama.fandom.com/wiki/Episode_238"
+   ]
+  },
+  {
+   "episode": 239,
+   "end_chapter": 337,
+   "start_chapter": 336,
+   "chapters_adapted": "336, 337",
+   "volume": 39,
+   "confidence": "medium",
+   "note": "Scandal Arc",
+   "sources": [
+    "https://gintama.fandom.com/wiki/Episode_239"
+   ]
+  },
+  {
+   "episode": 240,
+   "end_chapter": 339,
+   "start_chapter": 338,
+   "chapters_adapted": "338, 339",
+   "volume": 39,
+   "confidence": "medium",
+   "note": "Scandal Arc",
+   "sources": [
+    "https://gintama.fandom.com/wiki/Episode_240"
+   ]
+  },
+  {
+   "episode": 241,
+   "end_chapter": 363,
+   "start_chapter": 362,
+   "chapters_adapted": "362, 363(1/2)",
+   "volume": 42,
+   "confidence": "medium",
+   "note": "Host Club Arc",
+   "sources": [
+    "https://gintama.fandom.com/wiki/Episode_241"
+   ]
+  },
+  {
+   "episode": 242,
+   "end_chapter": 364,
+   "start_chapter": 363,
+   "chapters_adapted": "363(1/2), 364",
+   "volume": 42,
+   "confidence": "high",
+   "note": "Host Club Arc; ep title = Lesson title (Wikipedia cross-match)",
+   "sources": [
+    "https://gintama.fandom.com/wiki/Episode_242",
+    "https://en.wikipedia.org/wiki/List_of_Gintama_chapters"
+   ]
+  },
+  {
+   "episode": 243,
+   "end_chapter": 361,
+   "start_chapter": 361,
+   "chapters_adapted": "361",
+   "volume": 42,
+   "confidence": "medium",
+   "note": "per-episode Lessons field, Gintama fandom episode infobox",
+   "sources": [
+    "https://gintama.fandom.com/wiki/Episode_243"
+   ]
+  },
+  {
+   "episode": 244,
+   "end_chapter": 366,
+   "start_chapter": 365,
+   "chapters_adapted": "365, 366(2/4)",
+   "volume": 42,
+   "confidence": "high",
+   "note": "Baragaki Arc; ep title = Lesson title (Wikipedia cross-match)",
+   "sources": [
+    "https://gintama.fandom.com/wiki/Episode_244",
+    "https://en.wikipedia.org/wiki/List_of_Gintama_chapters"
+   ]
+  },
+  {
+   "episode": 245,
+   "end_chapter": 367,
+   "start_chapter": 366,
+   "chapters_adapted": "366(2/4), 367",
+   "volume": 42,
+   "confidence": "medium",
+   "note": "Baragaki Arc",
+   "sources": [
+    "https://gintama.fandom.com/wiki/Episode_245"
+   ]
+  },
+  {
+   "episode": 246,
+   "end_chapter": 369,
+   "start_chapter": 368,
+   "chapters_adapted": "368, 369(3/4)",
+   "volume": 42,
+   "confidence": "medium",
+   "note": "Baragaki Arc",
+   "sources": [
+    "https://gintama.fandom.com/wiki/Episode_246"
+   ]
+  },
+  {
+   "episode": 247,
+   "end_chapter": 370,
+   "start_chapter": 369,
+   "chapters_adapted": "369(1/4), 370",
+   "volume": 42,
+   "confidence": "high",
+   "note": "Baragaki Arc; ep title = Lesson title (Wikipedia cross-match)",
+   "sources": [
+    "https://gintama.fandom.com/wiki/Episode_247",
+    "https://en.wikipedia.org/wiki/List_of_Gintama_chapters"
+   ]
+  },
+  {
+   "episode": 248,
+   "end_chapter": 371,
+   "start_chapter": 371,
+   "chapters_adapted": "371",
+   "volume": 43,
+   "confidence": "medium",
+   "note": "per-episode Lessons field, Gintama fandom episode infobox",
+   "sources": [
+    "https://gintama.fandom.com/wiki/Episode_248"
+   ]
+  },
+  {
+   "episode": 249,
+   "end_chapter": 381,
+   "start_chapter": 381,
+   "chapters_adapted": "381",
+   "volume": 44,
+   "confidence": "medium",
+   "note": "per-episode Lessons field, Gintama fandom episode infobox",
+   "sources": [
+    "https://gintama.fandom.com/wiki/Episode_249"
+   ]
+  },
+  {
+   "episode": 250,
+   "end_chapter": 382,
+   "start_chapter": 382,
+   "chapters_adapted": "382",
+   "volume": 44,
+   "confidence": "medium",
+   "note": "per-episode Lessons field, Gintama fandom episode infobox",
+   "sources": [
+    "https://gintama.fandom.com/wiki/Episode_250"
+   ]
+  },
+  {
+   "episode": 251,
+   "end_chapter": 383,
+   "start_chapter": 383,
+   "chapters_adapted": "383",
+   "volume": 44,
+   "confidence": "medium",
+   "note": "per-episode Lessons field, Gintama fandom episode infobox",
+   "sources": [
+    "https://gintama.fandom.com/wiki/Episode_251"
+   ]
+  },
+  {
+   "episode": 253,
+   "end_chapter": 373,
+   "start_chapter": 372,
+   "chapters_adapted": "372, 373",
+   "volume": 43,
+   "confidence": "high",
+   "note": "Kintama Arc",
+   "sources": [
+    "https://gintama.fandom.com/wiki/Episode_253",
+    "https://gintama.fandom.com/wiki/Lesson_372"
+   ]
+  },
+  {
+   "episode": 254,
+   "end_chapter": 375,
+   "start_chapter": 374,
+   "chapters_adapted": "374, 375(1/2)",
+   "volume": 43,
+   "confidence": "medium",
+   "note": "Kintama Arc",
+   "sources": [
+    "https://gintama.fandom.com/wiki/Episode_254"
+   ]
+  },
+  {
+   "episode": 255,
+   "end_chapter": 377,
+   "start_chapter": 375,
+   "chapters_adapted": "375(1/2), 376, 377",
+   "volume": 43,
+   "confidence": "medium",
+   "note": "Kintama Arc",
+   "sources": [
+    "https://gintama.fandom.com/wiki/Episode_255"
+   ]
+  },
+  {
+   "episode": 256,
+   "end_chapter": 380,
+   "start_chapter": 378,
+   "chapters_adapted": "378-380",
+   "volume": 43,
+   "confidence": "medium",
+   "note": "Kintama Arc",
+   "sources": [
+    "https://gintama.fandom.com/wiki/Episode_256"
+   ]
+  },
+  {
+   "episode": 257,
+   "end_chapter": 387,
+   "start_chapter": 386,
+   "chapters_adapted": "386, 387",
+   "volume": 44,
+   "confidence": "high",
+   "note": "Courtesan of a Nation Arc; ep title = Lesson title (Wikipedia cross-match)",
+   "sources": [
+    "https://gintama.fandom.com/wiki/Episode_257",
+    "https://en.wikipedia.org/wiki/List_of_Gintama_chapters"
+   ]
+  },
+  {
+   "episode": 258,
+   "end_chapter": 389,
+   "start_chapter": 388,
+   "chapters_adapted": "388, 389",
+   "volume": 44,
+   "confidence": "medium",
+   "note": "Courtesan of a Nation Arc",
+   "sources": [
+    "https://gintama.fandom.com/wiki/Episode_258"
+   ]
+  },
+  {
+   "episode": 259,
+   "end_chapter": 393,
+   "start_chapter": 390,
+   "chapters_adapted": "390-393",
+   "volume": 45,
+   "confidence": "medium",
+   "note": "Courtesan of a Nation Arc",
+   "sources": [
+    "https://gintama.fandom.com/wiki/Episode_259"
+   ]
+  },
+  {
+   "episode": 260,
+   "end_chapter": 397,
+   "start_chapter": 394,
+   "chapters_adapted": "394-396, 397(1/2)",
+   "volume": 45,
+   "confidence": "medium",
+   "note": "Courtesan of a Nation Arc",
+   "sources": [
+    "https://gintama.fandom.com/wiki/Episode_260"
+   ]
+  },
+  {
+   "episode": 261,
+   "end_chapter": 399,
+   "start_chapter": 397,
+   "chapters_adapted": "397(1/2), 398, 399",
+   "volume": 45,
+   "confidence": "medium",
+   "note": "Courtesan of a Nation Arc",
+   "sources": [
+    "https://gintama.fandom.com/wiki/Episode_261"
+   ]
+  },
+  {
+   "episode": 262,
+   "end_chapter": 404,
+   "start_chapter": 403,
+   "chapters_adapted": "403, 404",
+   "volume": 46,
+   "confidence": "medium",
+   "note": "Beam Sword Style Arc",
+   "sources": [
+    "https://gintama.fandom.com/wiki/Episode_262"
+   ]
+  },
+  {
+   "episode": 263,
+   "end_chapter": 407,
+   "start_chapter": 405,
+   "chapters_adapted": "405-407",
+   "volume": 46,
+   "confidence": "medium",
+   "note": "Beam Sword Style Arc; fandom maps L404 to ep262 although ep263 bears L404’s title; both fandom directions agree on 405-407",
+   "sources": [
+    "https://gintama.fandom.com/wiki/Episode_263",
+    "https://gintama.fandom.com/wiki/Lesson_405"
+   ]
+  },
+  {
+   "episode": 264,
+   "end_chapter": 410,
+   "start_chapter": 408,
+   "chapters_adapted": "408-410",
+   "volume": 47,
+   "confidence": "medium",
+   "note": "Beam Sword Style Arc",
+   "sources": [
+    "https://gintama.fandom.com/wiki/Episode_264"
+   ]
+  },
+  {
+   "episode": 265,
+   "end_chapter": 402,
+   "start_chapter": 401,
+   "chapters_adapted": "401, 402",
+   "volume": 46,
+   "confidence": "medium",
+   "note": "per-episode Lessons field, Gintama fandom episode infobox",
+   "sources": [
+    "https://gintama.fandom.com/wiki/Episode_265"
+   ]
+  },
+  {
+   "episode": 266,
+   "end_chapter": 484,
+   "start_chapter": 484,
+   "chapters_adapted": "484",
+   "volume": 54,
+   "confidence": "medium",
+   "note": "Frozen Time Arc",
+   "sources": [
+    "https://gintama.fandom.com/wiki/Episode_266"
+   ]
+  },
+  {
+   "episode": 267,
+   "end_chapter": 485,
+   "start_chapter": 485,
+   "chapters_adapted": "485",
+   "volume": 54,
+   "confidence": "medium",
+   "note": "Frozen Time Arc",
+   "sources": [
+    "https://gintama.fandom.com/wiki/Episode_267"
+   ]
+  },
+  {
+   "episode": 268,
+   "end_chapter": 385,
+   "start_chapter": 384,
+   "chapters_adapted": "384, 385",
+   "volume": 44,
+   "confidence": "high",
+   "note": "ep title = Lesson title (Wikipedia cross-match)",
+   "sources": [
+    "https://gintama.fandom.com/wiki/Episode_268",
+    "https://en.wikipedia.org/wiki/List_of_Gintama_chapters"
+   ]
+  },
+  {
+   "episode": 269,
+   "end_chapter": 417,
+   "start_chapter": 417,
+   "chapters_adapted": "417",
+   "volume": 47,
+   "confidence": "medium",
+   "note": "per-episode Lessons field, Gintama fandom episode infobox",
+   "sources": [
+    "https://gintama.fandom.com/wiki/Episode_269"
+   ]
+  },
+  {
+   "episode": 270,
+   "end_chapter": 418,
+   "start_chapter": 418,
+   "chapters_adapted": "418",
+   "volume": 47,
+   "confidence": "medium",
+   "note": "per-episode Lessons field, Gintama fandom episode infobox",
+   "sources": [
+    "https://gintama.fandom.com/wiki/Episode_270"
+   ]
+  },
+  {
+   "episode": 271,
+   "end_chapter": 453,
+   "start_chapter": 452,
+   "chapters_adapted": "452, 453(1/2)",
+   "volume": 51,
+   "confidence": "medium",
+   "note": "Patriot Reunion Party Arc",
+   "sources": [
+    "https://gintama.fandom.com/wiki/Episode_271"
+   ]
+  },
+  {
+   "episode": 272,
+   "end_chapter": 454,
+   "start_chapter": 453,
+   "chapters_adapted": "453(1/2), 454",
+   "volume": 51,
+   "confidence": "medium",
+   "note": "Patriot Reunion Party Arc",
+   "sources": [
+    "https://gintama.fandom.com/wiki/Episode_272"
+   ]
+  },
+  {
+   "episode": 273,
+   "end_chapter": 451,
+   "start_chapter": 450,
+   "chapters_adapted": "450, 451",
+   "volume": 51,
+   "confidence": "medium",
+   "note": "per-episode Lessons field, Gintama fandom episode infobox",
+   "sources": [
+    "https://gintama.fandom.com/wiki/Episode_273"
+   ]
+  },
+  {
+   "episode": 274,
+   "end_chapter": 416,
+   "start_chapter": 416,
+   "chapters_adapted": "416",
+   "volume": 47,
+   "confidence": "medium",
+   "note": "per-episode Lessons field, Gintama fandom episode infobox",
+   "sources": [
+    "https://gintama.fandom.com/wiki/Episode_274"
+   ]
+  },
+  {
+   "episode": 275,
+   "end_chapter": 438,
+   "start_chapter": 437,
+   "chapters_adapted": "437, 438",
+   "volume": 50,
+   "confidence": "high",
+   "note": "Dekoboko Arc; ep title = Lesson title (Wikipedia cross-match)",
+   "sources": [
+    "https://gintama.fandom.com/wiki/Episode_275",
+    "https://en.wikipedia.org/wiki/List_of_Gintama_chapters"
+   ]
+  },
+  {
+   "episode": 276,
+   "end_chapter": 440,
+   "start_chapter": 439,
+   "chapters_adapted": "439, 440(1/2)",
+   "volume": 50,
+   "confidence": "medium",
+   "note": "Dekoboko Arc",
+   "sources": [
+    "https://gintama.fandom.com/wiki/Episode_276"
+   ]
+  },
+  {
+   "episode": 277,
+   "end_chapter": 441,
+   "start_chapter": 440,
+   "chapters_adapted": "440(1/2), 441",
+   "volume": 50,
+   "confidence": "high",
+   "note": "Dekoboko Arc; ep title = Lesson title (Wikipedia cross-match)",
+   "sources": [
+    "https://gintama.fandom.com/wiki/Episode_277",
+    "https://en.wikipedia.org/wiki/List_of_Gintama_chapters"
+   ]
+  },
+  {
+   "episode": 278,
+   "end_chapter": 443,
+   "start_chapter": 443,
+   "chapters_adapted": "443",
+   "volume": 50,
+   "confidence": "medium",
+   "note": "per-episode Lessons field, Gintama fandom episode infobox",
+   "sources": [
+    "https://gintama.fandom.com/wiki/Episode_278"
+   ]
+  },
+  {
+   "episode": 279,
+   "end_chapter": 464,
+   "start_chapter": 463,
+   "chapters_adapted": "463, 464",
+   "volume": 52,
+   "confidence": "medium",
+   "note": "Shinigami Arc",
+   "sources": [
+    "https://gintama.fandom.com/wiki/Episode_279"
+   ]
+  },
+  {
+   "episode": 280,
+   "end_chapter": 467,
+   "start_chapter": 465,
+   "chapters_adapted": "465, 466, 467(1/4)",
+   "volume": 53,
+   "confidence": "high",
+   "note": "Shinigami Arc; ep title = Lesson title (Wikipedia cross-match)",
+   "sources": [
+    "https://gintama.fandom.com/wiki/Episode_280",
+    "https://en.wikipedia.org/wiki/List_of_Gintama_chapters"
+   ]
+  },
+  {
+   "episode": 281,
+   "end_chapter": 469,
+   "start_chapter": 467,
+   "chapters_adapted": "467(3/4), 468, 469",
+   "volume": 53,
+   "confidence": "medium",
+   "note": "Shinigami Arc",
+   "sources": [
+    "https://gintama.fandom.com/wiki/Episode_281"
+   ]
+  },
+  {
+   "episode": 282,
+   "end_chapter": 456,
+   "start_chapter": 456,
+   "chapters_adapted": "456",
+   "volume": 52,
+   "confidence": "medium",
+   "note": "per-episode Lessons field, Gintama fandom episode infobox",
+   "sources": [
+    "https://gintama.fandom.com/wiki/Episode_282"
+   ]
+  },
+  {
+   "episode": 283,
+   "end_chapter": 413,
+   "start_chapter": 412,
+   "chapters_adapted": "412, 413",
+   "volume": 47,
+   "confidence": "high",
+   "note": "Confessional Arc; ep title = Lesson title (Wikipedia cross-match)",
+   "sources": [
+    "https://gintama.fandom.com/wiki/Episode_283",
+    "https://en.wikipedia.org/wiki/List_of_Gintama_chapters"
+   ]
+  },
+  {
+   "episode": 284,
+   "end_chapter": 415,
+   "start_chapter": 414,
+   "chapters_adapted": "414, 415",
+   "volume": 47,
+   "confidence": "high",
+   "note": "Confessional Arc; ep title = Lesson title (Wikipedia cross-match)",
+   "sources": [
+    "https://gintama.fandom.com/wiki/Episode_284",
+    "https://en.wikipedia.org/wiki/List_of_Gintama_chapters"
+   ]
+  },
+  {
+   "episode": 285,
+   "end_chapter": 461,
+   "start_chapter": 460,
+   "chapters_adapted": "460, 461",
+   "volume": 52,
+   "confidence": "medium",
+   "note": "per-episode Lessons field, Gintama fandom episode infobox",
+   "sources": [
+    "https://gintama.fandom.com/wiki/Episode_285"
+   ]
+  },
+  {
+   "episode": 286,
+   "end_chapter": 411,
+   "start_chapter": 411,
+   "chapters_adapted": "411",
+   "volume": 47,
+   "confidence": "medium",
+   "note": "per-episode Lessons field, Gintama fandom episode infobox",
+   "sources": [
+    "https://gintama.fandom.com/wiki/Episode_286"
+   ]
+  },
+  {
+   "episode": 287,
+   "end_chapter": 472,
+   "start_chapter": 470,
+   "chapters_adapted": "470, 471, 472(1/3)",
+   "volume": 53,
+   "confidence": "high",
+   "note": "Soul Switch Arc; ep title = Lesson title (Wikipedia cross-match)",
+   "sources": [
+    "https://gintama.fandom.com/wiki/Episode_287",
+    "https://en.wikipedia.org/wiki/List_of_Gintama_chapters"
+   ]
+  },
+  {
+   "episode": 288,
+   "end_chapter": 474,
+   "start_chapter": 472,
+   "chapters_adapted": "472(2/3), 473, 474(1/2)",
+   "volume": 53,
+   "confidence": "high",
+   "note": "Soul Switch Arc; ep title = Lesson title (Wikipedia cross-match)",
+   "sources": [
+    "https://gintama.fandom.com/wiki/Episode_288",
+    "https://en.wikipedia.org/wiki/List_of_Gintama_chapters"
+   ]
+  },
+  {
+   "episode": 289,
+   "end_chapter": 476,
+   "start_chapter": 474,
+   "chapters_adapted": "474(1/2), 475, 476",
+   "volume": 53,
+   "confidence": "high",
+   "note": "Soul Switch Arc; ep title = Lesson title (Wikipedia cross-match)",
+   "sources": [
+    "https://gintama.fandom.com/wiki/Episode_289",
+    "https://en.wikipedia.org/wiki/List_of_Gintama_chapters"
+   ]
+  },
+  {
+   "episode": 290,
+   "end_chapter": 478,
+   "start_chapter": 477,
+   "chapters_adapted": "477, 478",
+   "volume": 54,
+   "confidence": "medium",
+   "note": "Kaientai Arc",
+   "sources": [
+    "https://gintama.fandom.com/wiki/Episode_290"
+   ]
+  },
+  {
+   "episode": 291,
+   "end_chapter": 480,
+   "start_chapter": 479,
+   "chapters_adapted": "479, 480",
+   "volume": 54,
+   "confidence": "medium",
+   "note": "Kaientai Arc",
+   "sources": [
+    "https://gintama.fandom.com/wiki/Episode_291"
+   ]
+  },
+  {
+   "episode": 292,
+   "end_chapter": 434,
+   "start_chapter": 434,
+   "chapters_adapted": "434",
+   "volume": 49,
+   "confidence": "medium",
+   "note": "per-episode Lessons field, Gintama fandom episode infobox",
+   "sources": [
+    "https://gintama.fandom.com/wiki/Episode_292"
+   ]
+  },
+  {
+   "episode": 293,
+   "end_chapter": 483,
+   "start_chapter": 482,
+   "chapters_adapted": "482, 483",
+   "volume": 54,
+   "confidence": "medium",
+   "note": "per-episode Lessons field, Gintama fandom episode infobox",
+   "sources": [
+    "https://gintama.fandom.com/wiki/Episode_293"
+   ]
+  },
+  {
+   "episode": 294,
+   "end_chapter": 489,
+   "start_chapter": 488,
+   "chapters_adapted": "488, 489",
+   "volume": 55,
+   "confidence": "high",
+   "note": "Afro Arc; ep title = Lesson title (Wikipedia cross-match)",
+   "sources": [
+    "https://gintama.fandom.com/wiki/Episode_294",
+    "https://en.wikipedia.org/wiki/List_of_Gintama_chapters"
+   ]
+  },
+  {
+   "episode": 295,
+   "end_chapter": 491,
+   "start_chapter": 490,
+   "chapters_adapted": "490, 491",
+   "volume": 55,
+   "confidence": "medium",
+   "note": "Afro Arc",
+   "sources": [
+    "https://gintama.fandom.com/wiki/Episode_295"
+   ]
+  },
+  {
+   "episode": 296,
+   "end_chapter": 458,
+   "start_chapter": 457,
+   "chapters_adapted": "457, 458(1/2)",
+   "volume": 52,
+   "confidence": "medium",
+   "note": "Feigned Illness Arc",
+   "sources": [
+    "https://gintama.fandom.com/wiki/Episode_296"
+   ]
+  },
+  {
+   "episode": 297,
+   "end_chapter": 459,
+   "start_chapter": 458,
+   "chapters_adapted": "458(1/2), 459",
+   "volume": 52,
+   "confidence": "medium",
+   "note": "Feigned Illness Arc",
+   "sources": [
+    "https://gintama.fandom.com/wiki/Episode_297"
+   ]
+  },
+  {
+   "episode": 298,
+   "end_chapter": 400,
+   "start_chapter": 400,
+   "chapters_adapted": "400",
+   "volume": 46,
+   "confidence": "medium",
+   "note": "per-episode Lessons field, Gintama fandom episode infobox",
+   "sources": [
+    "https://gintama.fandom.com/wiki/Episode_298"
+   ]
+  },
+  {
+   "episode": 299,
+   "end_chapter": 497,
+   "start_chapter": 497,
+   "chapters_adapted": "497",
+   "volume": 56,
+   "confidence": "medium",
+   "note": "per-episode Lessons field, Gintama fandom episode infobox",
+   "sources": [
+    "https://gintama.fandom.com/wiki/Episode_299"
+   ]
+  },
+  {
+   "episode": 300,
+   "end_chapter": 503,
+   "start_chapter": 502,
+   "chapters_adapted": "502, 503",
+   "volume": 56,
+   "confidence": "medium",
+   "note": "Shogun Assassination Arc",
+   "sources": [
+    "https://gintama.fandom.com/wiki/Episode_300"
+   ]
+  },
+  {
+   "episode": 301,
+   "end_chapter": 506,
+   "start_chapter": 504,
+   "chapters_adapted": "504-506",
+   "volume": 56,
+   "confidence": "medium",
+   "note": "Shogun Assassination Arc",
+   "sources": [
+    "https://gintama.fandom.com/wiki/Episode_301"
+   ]
+  },
+  {
+   "episode": 302,
+   "end_chapter": 509,
+   "start_chapter": 507,
+   "chapters_adapted": "507-509",
+   "volume": 57,
+   "confidence": "medium",
+   "note": "Shogun Assassination Arc",
+   "sources": [
+    "https://gintama.fandom.com/wiki/Episode_302"
+   ]
+  },
+  {
+   "episode": 303,
+   "end_chapter": 513,
+   "start_chapter": 510,
+   "chapters_adapted": "510-513",
+   "volume": 57,
+   "confidence": "medium",
+   "note": "Shogun Assassination Arc",
+   "sources": [
+    "https://gintama.fandom.com/wiki/Episode_303"
+   ]
+  },
+  {
+   "episode": 304,
+   "end_chapter": 517,
+   "start_chapter": 514,
+   "chapters_adapted": "514-517",
+   "volume": 58,
+   "confidence": "medium",
+   "note": "Shogun Assassination Arc",
+   "sources": [
+    "https://gintama.fandom.com/wiki/Episode_304"
+   ]
+  },
+  {
+   "episode": 305,
+   "end_chapter": 521,
+   "start_chapter": 518,
+   "chapters_adapted": "518-520, 521(1/6)",
+   "volume": 58,
+   "confidence": "medium",
+   "note": "Shogun Assassination Arc",
+   "sources": [
+    "https://gintama.fandom.com/wiki/Episode_305"
+   ]
+  },
+  {
+   "episode": 306,
+   "end_chapter": 523,
+   "start_chapter": 521,
+   "chapters_adapted": "521(5/6), 522, 523(1/3)",
+   "volume": 58,
+   "confidence": "medium",
+   "note": "Shogun Assassination Arc",
+   "sources": [
+    "https://gintama.fandom.com/wiki/Episode_306"
+   ]
+  },
+  {
+   "episode": 307,
+   "end_chapter": 524,
+   "start_chapter": 523,
+   "chapters_adapted": "523(2/3), 524",
+   "volume": 58,
+   "confidence": "medium",
+   "note": "Shogun Assassination Arc",
+   "sources": [
+    "https://gintama.fandom.com/wiki/Episode_307"
+   ]
+  },
+  {
+   "episode": 308,
+   "end_chapter": 526,
+   "start_chapter": 525,
+   "chapters_adapted": "525, 526",
+   "volume": 59,
+   "confidence": "medium",
+   "note": "Farewell, Shinsengumi Arc",
+   "sources": [
+    "https://gintama.fandom.com/wiki/Episode_308"
+   ]
+  },
+  {
+   "episode": 309,
+   "end_chapter": 528,
+   "start_chapter": 527,
+   "chapters_adapted": "527, 528",
+   "volume": 59,
+   "confidence": "medium",
+   "note": "Farewell, Shinsengumi Arc",
+   "sources": [
+    "https://gintama.fandom.com/wiki/Episode_309"
+   ]
+  },
+  {
+   "episode": 310,
+   "end_chapter": 531,
+   "start_chapter": 529,
+   "chapters_adapted": "529, 530, 531(1/3)",
+   "volume": 59,
+   "confidence": "medium",
+   "note": "Farewell, Shinsengumi Arc",
+   "sources": [
+    "https://gintama.fandom.com/wiki/Episode_310"
+   ]
+  },
+  {
+   "episode": 311,
+   "end_chapter": 532,
+   "start_chapter": 531,
+   "chapters_adapted": "531(2/3), 532",
+   "volume": 59,
+   "confidence": "medium",
+   "note": "Farewell, Shinsengumi Arc",
+   "sources": [
+    "https://gintama.fandom.com/wiki/Episode_311"
+   ]
+  },
+  {
+   "episode": 312,
+   "end_chapter": 536,
+   "start_chapter": 533,
+   "chapters_adapted": "533-536",
+   "volume": 60,
+   "confidence": "medium",
+   "note": "Farewell, Shinsengumi Arc",
+   "sources": [
+    "https://gintama.fandom.com/wiki/Episode_312"
+   ]
+  },
+  {
+   "episode": 313,
+   "end_chapter": 540,
+   "start_chapter": 537,
+   "chapters_adapted": "537-540",
+   "volume": 60,
+   "confidence": "medium",
+   "note": "Farewell, Shinsengumi Arc",
+   "sources": [
+    "https://gintama.fandom.com/wiki/Episode_313"
+   ]
+  },
+  {
+   "episode": 314,
+   "end_chapter": 545,
+   "start_chapter": 541,
+   "chapters_adapted": "541-544, 545(1/2)",
+   "volume": 61,
+   "confidence": "medium",
+   "note": "Farewell, Shinsengumi Arc",
+   "sources": [
+    "https://gintama.fandom.com/wiki/Episode_314"
+   ]
+  },
+  {
+   "episode": 315,
+   "end_chapter": 549,
+   "start_chapter": 545,
+   "chapters_adapted": "545(1/2), 546-549",
+   "volume": 61,
+   "confidence": "medium",
+   "note": "Farewell, Shinsengumi Arc",
+   "sources": [
+    "https://gintama.fandom.com/wiki/Episode_315"
+   ]
+  },
+  {
+   "episode": 316,
+   "end_chapter": 551,
+   "start_chapter": 550,
+   "chapters_adapted": "550, 551",
+   "volume": 61,
+   "confidence": "high",
+   "note": "Farewell, Shinsengumi Arc; ep title = Lesson title (Wikipedia cross-match)",
+   "sources": [
+    "https://gintama.fandom.com/wiki/Episode_316",
+    "https://en.wikipedia.org/wiki/List_of_Gintama_chapters",
+    "https://gintama.fandom.com/wiki/Farewell,_Shinsengumi_Arc",
+    "http://theanimangaeffect.blogspot.com/2017/04/gintama-farewell-shinsengumi-arc.html"
+   ]
+  },
+  {
+   "episode": 317,
+   "end_chapter": 554,
+   "start_chapter": 552,
+   "chapters_adapted": "552-554",
+   "volume": 62,
+   "confidence": "high",
+   "note": "Rakuyou Arc; ep title = Lesson title (Wikipedia cross-match)",
+   "sources": [
+    "https://gintama.fandom.com/wiki/Episode_317",
+    "https://en.wikipedia.org/wiki/List_of_Gintama_chapters",
+    "https://gintama.fandom.com/wiki/Rakuyou_Arc"
+   ]
+  },
+  {
+   "episode": 318,
+   "end_chapter": 558,
+   "start_chapter": 555,
+   "chapters_adapted": "555-558",
+   "volume": 62,
+   "confidence": "medium",
+   "note": "Rakuyou Arc",
+   "sources": [
+    "https://gintama.fandom.com/wiki/Episode_318"
+   ]
+  },
+  {
+   "episode": 319,
+   "end_chapter": 562,
+   "start_chapter": 559,
+   "chapters_adapted": "559-561, 562(1/3)",
+   "volume": 63,
+   "confidence": "medium",
+   "note": "Rakuyou Decisive Battle Arc",
+   "sources": [
+    "https://gintama.fandom.com/wiki/Episode_319"
+   ]
+  },
+  {
+   "episode": 320,
+   "end_chapter": 565,
+   "start_chapter": 562,
+   "chapters_adapted": "562(2/3), 563-565",
+   "volume": 63,
+   "confidence": "high",
+   "note": "Rakuyou Decisive Battle Arc; ep title = Lesson title (Wikipedia cross-match)",
+   "sources": [
+    "https://gintama.fandom.com/wiki/Episode_320",
+    "https://en.wikipedia.org/wiki/List_of_Gintama_chapters"
+   ]
+  },
+  {
+   "episode": 321,
+   "end_chapter": 569,
+   "start_chapter": 566,
+   "chapters_adapted": "566-569",
+   "volume": 63,
+   "confidence": "high",
+   "note": "Rakuyou Decisive Battle Arc; ep title = Lesson title (Wikipedia cross-match)",
+   "sources": [
+    "https://gintama.fandom.com/wiki/Episode_321",
+    "https://en.wikipedia.org/wiki/List_of_Gintama_chapters"
+   ]
+  },
+  {
+   "episode": 322,
+   "end_chapter": 573,
+   "start_chapter": 570,
+   "chapters_adapted": "570-573",
+   "volume": 64,
+   "confidence": "medium",
+   "note": "Rakuyou Decisive Battle Arc",
+   "sources": [
+    "https://gintama.fandom.com/wiki/Episode_322"
+   ]
+  },
+  {
+   "episode": 323,
+   "end_chapter": 577,
+   "start_chapter": 574,
+   "chapters_adapted": "574-577",
+   "volume": 64,
+   "confidence": "medium",
+   "note": "Rakuyou Decisive Battle Arc",
+   "sources": [
+    "https://gintama.fandom.com/wiki/Episode_323"
+   ]
+  },
+  {
+   "episode": 324,
+   "end_chapter": 580,
+   "start_chapter": 578,
+   "chapters_adapted": "578, 579, 580(1/2)",
+   "volume": 64,
+   "confidence": "high",
+   "note": "Rakuyou Decisive Battle Arc; ep title = Lesson title (Wikipedia cross-match)",
+   "sources": [
+    "https://gintama.fandom.com/wiki/Episode_324",
+    "https://en.wikipedia.org/wiki/List_of_Gintama_chapters"
+   ]
+  },
+  {
+   "episode": 325,
+   "end_chapter": 584,
+   "start_chapter": 580,
+   "chapters_adapted": "580(1/2), 581-584",
+   "volume": 65,
+   "confidence": "high",
+   "note": "Rakuyou Decisive Battle Arc; ep title = Lesson title (Wikipedia cross-match)",
+   "sources": [
+    "https://gintama.fandom.com/wiki/Episode_325",
+    "https://en.wikipedia.org/wiki/List_of_Gintama_chapters"
+   ]
+  },
+  {
+   "episode": 326,
+   "end_chapter": 589,
+   "start_chapter": 585,
+   "chapters_adapted": "585-589",
+   "volume": 65,
+   "confidence": "high",
+   "note": "Rakuyou Decisive Battle Arc; ep title = Lesson title (Wikipedia cross-match)",
+   "sources": [
+    "https://gintama.fandom.com/wiki/Episode_326",
+    "https://en.wikipedia.org/wiki/List_of_Gintama_chapters"
+   ]
+  },
+  {
+   "episode": 327,
+   "end_chapter": 593,
+   "start_chapter": 590,
+   "chapters_adapted": "590-592, 593(1/6)",
+   "volume": 66,
+   "confidence": "medium",
+   "note": "Rakuyou Decisive Battle Arc",
+   "sources": [
+    "https://gintama.fandom.com/wiki/Episode_327"
+   ]
+  },
+  {
+   "episode": 328,
+   "end_chapter": 595,
+   "start_chapter": 593,
+   "chapters_adapted": "593(5/6), 594, 595",
+   "volume": 66,
+   "confidence": "high",
+   "note": "Rakuyou Decisive Battle Arc; ep title = Lesson title (Wikipedia cross-match)",
+   "sources": [
+    "https://gintama.fandom.com/wiki/Episode_328",
+    "https://en.wikipedia.org/wiki/List_of_Gintama_chapters"
+   ]
+  },
+  {
+   "episode": 329,
+   "end_chapter": 420,
+   "start_chapter": 419,
+   "chapters_adapted": "419, 420(3/4)",
+   "volume": 48,
+   "confidence": "medium",
+   "note": "Kagura's Boyfriend Arc",
+   "sources": [
+    "https://gintama.fandom.com/wiki/Episode_329"
+   ]
+  },
+  {
+   "episode": 330,
+   "end_chapter": 422,
+   "start_chapter": 420,
+   "chapters_adapted": "420(1/4), 421, 422",
+   "volume": 48,
+   "confidence": "high",
+   "note": "Kagura's Boyfriend Arc; ep title = Lesson title (Wikipedia cross-match)",
+   "sources": [
+    "https://gintama.fandom.com/wiki/Episode_330",
+    "https://en.wikipedia.org/wiki/List_of_Gintama_chapters"
+   ]
+  },
+  {
+   "episode": 331,
+   "end_chapter": 432,
+   "start_chapter": 431,
+   "chapters_adapted": "431, 432(1/2)",
+   "volume": 49,
+   "confidence": "high",
+   "note": "Homeless Arc; ep title = Lesson title (Wikipedia cross-match)",
+   "sources": [
+    "https://gintama.fandom.com/wiki/Episode_331",
+    "https://en.wikipedia.org/wiki/List_of_Gintama_chapters"
+   ]
+  },
+  {
+   "episode": 332,
+   "end_chapter": 433,
+   "start_chapter": 432,
+   "chapters_adapted": "432(1/2), 433",
+   "volume": 49,
+   "confidence": "high",
+   "note": "Homeless Arc; ep title = Lesson title (Wikipedia cross-match)",
+   "sources": [
+    "https://gintama.fandom.com/wiki/Episode_332",
+    "https://en.wikipedia.org/wiki/List_of_Gintama_chapters"
+   ]
+  },
+  {
+   "episode": 333,
+   "end_chapter": 444,
+   "start_chapter": 444,
+   "chapters_adapted": "444",
+   "volume": 50,
+   "confidence": "medium",
+   "note": "per-episode Lessons field, Gintama fandom episode infobox",
+   "sources": [
+    "https://gintama.fandom.com/wiki/Episode_333"
+   ]
+  },
+  {
+   "episode": 334,
+   "end_chapter": 425,
+   "start_chapter": 424,
+   "chapters_adapted": "424, 425",
+   "volume": 48,
+   "confidence": "high",
+   "note": "Excalibur Arc; ep title = Lesson title (Wikipedia cross-match)",
+   "sources": [
+    "https://gintama.fandom.com/wiki/Episode_334",
+    "https://en.wikipedia.org/wiki/List_of_Gintama_chapters"
+   ]
+  },
+  {
+   "episode": 335,
+   "end_chapter": 427,
+   "start_chapter": 426,
+   "chapters_adapted": "426, 427",
+   "volume": 48,
+   "confidence": "medium",
+   "note": "Excalibur Arc",
+   "sources": [
+    "https://gintama.fandom.com/wiki/Episode_335"
+   ]
+  },
+  {
+   "episode": 336,
+   "end_chapter": 429,
+   "start_chapter": 428,
+   "chapters_adapted": "428, 429",
+   "volume": 49,
+   "confidence": "medium",
+   "note": "Excalibur Arc",
+   "sources": [
+    "https://gintama.fandom.com/wiki/Episode_336"
+   ]
+  },
+  {
+   "episode": 337,
+   "end_chapter": 446,
+   "start_chapter": 445,
+   "chapters_adapted": "445, 446(1/2)",
+   "volume": 51,
+   "confidence": "medium",
+   "note": "HDZ48 Arc",
+   "sources": [
+    "https://gintama.fandom.com/wiki/Episode_337"
+   ]
+  },
+  {
+   "episode": 338,
+   "end_chapter": 448,
+   "start_chapter": 446,
+   "chapters_adapted": "446(1/2), 447, 448(1/3)",
+   "volume": 51,
+   "confidence": "medium",
+   "note": "HDZ48 Arc",
+   "sources": [
+    "https://gintama.fandom.com/wiki/Episode_338"
+   ]
+  },
+  {
+   "episode": 339,
+   "end_chapter": 449,
+   "start_chapter": 448,
+   "chapters_adapted": "448(2/3), 449",
+   "volume": 51,
+   "confidence": "medium",
+   "note": "HDZ48 Arc",
+   "sources": [
+    "https://gintama.fandom.com/wiki/Episode_339"
+   ]
+  },
+  {
+   "episode": 340,
+   "end_chapter": 430,
+   "start_chapter": 430,
+   "chapters_adapted": "430",
+   "volume": 49,
+   "confidence": "medium",
+   "note": "per-episode Lessons field, Gintama fandom episode infobox",
+   "sources": [
+    "https://gintama.fandom.com/wiki/Episode_340"
+   ]
+  },
+  {
+   "episode": 341,
+   "end_chapter": 501,
+   "start_chapter": 500,
+   "chapters_adapted": "500, 501",
+   "volume": 56,
+   "confidence": "medium",
+   "note": "Guardian Spirits Arc",
+   "sources": [
+    "https://gintama.fandom.com/wiki/Episode_341"
+   ]
+  },
+  {
+   "episode": 342,
+   "end_chapter": 598,
+   "start_chapter": 596,
+   "chapters_adapted": "596-598",
+   "volume": 66,
+   "confidence": "medium",
+   "note": "Silver Soul Arc",
+   "sources": [
+    "https://gintama.fandom.com/wiki/Episode_342"
+   ]
+  },
+  {
+   "episode": 343,
+   "end_chapter": 600,
+   "start_chapter": 599,
+   "chapters_adapted": "599, 600",
+   "volume": 67,
+   "confidence": "medium",
+   "note": "Silver Soul Arc",
+   "sources": [
+    "https://gintama.fandom.com/wiki/Episode_343"
+   ]
+  },
+  {
+   "episode": 344,
+   "end_chapter": 603,
+   "start_chapter": 601,
+   "chapters_adapted": "601-603",
+   "volume": 67,
+   "confidence": "medium",
+   "note": "Silver Soul Arc",
+   "sources": [
+    "https://gintama.fandom.com/wiki/Episode_344"
+   ]
+  },
+  {
+   "episode": 345,
+   "end_chapter": 606,
+   "start_chapter": 604,
+   "chapters_adapted": "604-606",
+   "volume": 67,
+   "confidence": "high",
+   "note": "Silver Soul Arc; ep title = Lesson title (Wikipedia cross-match)",
+   "sources": [
+    "https://gintama.fandom.com/wiki/Episode_345",
+    "https://en.wikipedia.org/wiki/List_of_Gintama_chapters"
+   ]
+  },
+  {
+   "episode": 346,
+   "end_chapter": 610,
+   "start_chapter": 607,
+   "chapters_adapted": "607-609, 610(1/3)",
+   "volume": 68,
+   "confidence": "high",
+   "note": "Silver Soul Arc; ep title = Lesson title (Wikipedia cross-match)",
+   "sources": [
+    "https://gintama.fandom.com/wiki/Episode_346",
+    "https://en.wikipedia.org/wiki/List_of_Gintama_chapters"
+   ]
+  },
+  {
+   "episode": 347,
+   "end_chapter": 612,
+   "start_chapter": 610,
+   "chapters_adapted": "610(2/3), 611, 612",
+   "volume": 68,
+   "confidence": "medium",
+   "note": "Silver Soul Arc",
+   "sources": [
+    "https://gintama.fandom.com/wiki/Episode_347"
+   ]
+  },
+  {
+   "episode": 348,
+   "end_chapter": 615,
+   "start_chapter": 613,
+   "chapters_adapted": "613, 614, 615(1/3)",
+   "volume": 68,
+   "confidence": "high",
+   "note": "Silver Soul Arc; ep title = Lesson title (Wikipedia cross-match)",
+   "sources": [
+    "https://gintama.fandom.com/wiki/Episode_348",
+    "https://en.wikipedia.org/wiki/List_of_Gintama_chapters"
+   ]
+  },
+  {
+   "episode": 349,
+   "end_chapter": 619,
+   "start_chapter": 615,
+   "chapters_adapted": "615(1/3), 616-619",
+   "volume": 69,
+   "confidence": "medium",
+   "note": "Silver Soul Arc",
+   "sources": [
+    "https://gintama.fandom.com/wiki/Episode_349"
+   ]
+  },
+  {
+   "episode": 350,
+   "end_chapter": 623,
+   "start_chapter": 620,
+   "chapters_adapted": "620-623",
+   "volume": 69,
+   "confidence": "medium",
+   "note": "Silver Soul Arc",
+   "sources": [
+    "https://gintama.fandom.com/wiki/Episode_350"
+   ]
+  },
+  {
+   "episode": 351,
+   "end_chapter": 626,
+   "start_chapter": 624,
+   "chapters_adapted": "624-626",
+   "volume": 69,
+   "confidence": "medium",
+   "note": "Silver Soul Arc",
+   "sources": [
+    "https://gintama.fandom.com/wiki/Episode_351"
+   ]
+  },
+  {
+   "episode": 352,
+   "end_chapter": 629,
+   "start_chapter": 627,
+   "chapters_adapted": "627, 628, 629(Partly)",
+   "volume": 70,
+   "confidence": "high",
+   "note": "Silver Soul Arc; ep title = Lesson title (Wikipedia cross-match)",
+   "sources": [
+    "https://gintama.fandom.com/wiki/Episode_352",
+    "https://en.wikipedia.org/wiki/List_of_Gintama_chapters"
+   ]
+  },
+  {
+   "episode": 353,
+   "end_chapter": 631,
+   "start_chapter": 629,
+   "chapters_adapted": "629(1/2), 630, 631",
+   "volume": 70,
+   "confidence": "medium",
+   "note": "Silver Soul Arc",
+   "sources": [
+    "https://gintama.fandom.com/wiki/Episode_353"
+   ]
+  },
+  {
+   "episode": 354,
+   "end_chapter": 633,
+   "start_chapter": 632,
+   "chapters_adapted": "632, 633",
+   "volume": 70,
+   "confidence": "medium",
+   "note": "Silver Soul Arc",
+   "sources": [
+    "https://gintama.fandom.com/wiki/Episode_354"
+   ]
+  },
+  {
+   "episode": 355,
+   "end_chapter": 637,
+   "start_chapter": 634,
+   "chapters_adapted": "634-637",
+   "volume": 71,
+   "confidence": "medium",
+   "note": "Silver Soul Arc",
+   "sources": [
+    "https://gintama.fandom.com/wiki/Episode_355"
+   ]
+  },
+  {
+   "episode": 356,
+   "end_chapter": 643,
+   "start_chapter": 638,
+   "chapters_adapted": "638-642, 643(1/2)",
+   "volume": 71,
+   "confidence": "medium",
+   "note": "Silver Soul Arc",
+   "sources": [
+    "https://gintama.fandom.com/wiki/Episode_356"
+   ]
+  },
+  {
+   "episode": 357,
+   "end_chapter": 648,
+   "start_chapter": 643,
+   "chapters_adapted": "643(1/2), 644-647, 648(beginning)",
+   "volume": 72,
+   "confidence": "medium",
+   "note": "Silver Soul Arc",
+   "sources": [
+    "https://gintama.fandom.com/wiki/Episode_357"
+   ]
+  },
+  {
+   "episode": 358,
+   "end_chapter": 652,
+   "start_chapter": 648,
+   "chapters_adapted": "648-651, 652(1/2)",
+   "volume": 72,
+   "confidence": "medium",
+   "note": "Silver Soul Arc",
+   "sources": [
+    "https://gintama.fandom.com/wiki/Episode_358"
+   ]
+  },
+  {
+   "episode": 359,
+   "end_chapter": 656,
+   "start_chapter": 652,
+   "chapters_adapted": "652(1/2), 653-656",
+   "volume": 73,
+   "confidence": "high",
+   "note": "Silver Soul Arc; ep title = Lesson title (Wikipedia cross-match)",
+   "sources": [
+    "https://gintama.fandom.com/wiki/Episode_359",
+    "https://en.wikipedia.org/wiki/List_of_Gintama_chapters"
+   ]
+  },
+  {
+   "episode": 360,
+   "end_chapter": 663,
+   "start_chapter": 657,
+   "chapters_adapted": "657-663",
+   "volume": 73,
+   "confidence": "high",
+   "note": "Silver Soul Arc; ep title = Lesson title (Wikipedia cross-match)",
+   "sources": [
+    "https://gintama.fandom.com/wiki/Episode_360",
+    "https://en.wikipedia.org/wiki/List_of_Gintama_chapters"
+   ]
+  },
+  {
+   "episode": 361,
+   "end_chapter": 669,
+   "start_chapter": 664,
+   "chapters_adapted": "664-668, 669(1/2)",
+   "volume": 74,
+   "confidence": "medium",
+   "note": "Silver Soul Arc",
+   "sources": [
+    "https://gintama.fandom.com/wiki/Episode_361"
+   ]
+  },
+  {
+   "episode": 362,
+   "end_chapter": 671,
+   "start_chapter": 669,
+   "chapters_adapted": "669(1/2), 670, 671",
+   "volume": 74,
+   "confidence": "medium",
+   "note": "Silver Soul Arc",
+   "sources": [
+    "https://gintama.fandom.com/wiki/Episode_362"
+   ]
+  },
+  {
+   "episode": 363,
+   "end_chapter": 675,
+   "start_chapter": 672,
+   "chapters_adapted": "672-674, 675(beginning)",
+   "volume": 74,
+   "confidence": "medium",
+   "note": "Silver Soul Arc",
+   "sources": [
+    "https://gintama.fandom.com/wiki/Episode_363"
+   ]
+  },
+  {
+   "episode": 364,
+   "end_chapter": 678,
+   "start_chapter": 675,
+   "chapters_adapted": "675(remaining), 676-678",
+   "volume": 75,
+   "confidence": "medium",
+   "note": "Silver Soul Arc",
+   "sources": [
+    "https://gintama.fandom.com/wiki/Episode_364"
+   ]
+  },
+  {
+   "episode": 365,
+   "end_chapter": 682,
+   "start_chapter": 679,
+   "chapters_adapted": "679-682",
+   "volume": 75,
+   "confidence": "medium",
+   "note": "Silver Soul Arc",
+   "sources": [
+    "https://gintama.fandom.com/wiki/Episode_365"
+   ]
+  },
+  {
+   "episode": 366,
+   "end_chapter": 685,
+   "start_chapter": 683,
+   "chapters_adapted": "683-685",
+   "volume": 75,
+   "confidence": "medium",
+   "note": "Silver Soul Arc",
+   "sources": [
+    "https://gintama.fandom.com/wiki/Episode_366"
+   ]
+  },
+  {
+   "episode": 367,
+   "end_chapter": 686,
+   "start_chapter": 686,
+   "chapters_adapted": "686",
+   "volume": 76,
+   "confidence": "medium",
+   "note": "Silver Soul Arc",
+   "sources": [
+    "https://gintama.fandom.com/wiki/Episode_367"
+   ]
+  },
+  {
+   "episode": 368,
+   "end_chapter": 698,
+   "start_chapter": 687,
+   "chapters_adapted": "687-690, 692, 697, 698",
+   "volume": 77,
+   "confidence": "high",
+   "note": "Silver Soul Arc; adapts 692 out of order; 691 skipped; 697-698 (finale side) shown here before ep369’s 693-696",
+   "sources": [
+    "https://gintama.fandom.com/wiki/Episode_368",
+    "https://gintama.fandom.com/wiki/Lesson_698",
+    "https://en.wikipedia.org/wiki/List_of_Gintama_chapters"
+   ]
+  },
+  {
+   "episode": 369,
+   "end_chapter": 696,
+   "start_chapter": 693,
+   "chapters_adapted": "693-696",
+   "volume": 77,
+   "confidence": "high",
+   "note": "Silver Soul Arc; parallel half of Semi-Final; 697-698 already adapted in ep368; 699-704 are Jump GIGA chapters adapted only by THE FINAL movie",
+   "sources": [
+    "https://gintama.fandom.com/wiki/Episode_369",
+    "https://gintama.fandom.com/wiki/Lesson_696",
+    "https://gintama.fandom.com/wiki/Lesson_699",
+    "https://en.wikipedia.org/wiki/List_of_Gintama_chapters"
+   ]
+  }
+ ],
+ "continue_points": [
+  {
+   "episode": 4,
+   "continue_chapter": 4,
+   "note": "episode ends beginning part only into Lesson 4"
+  },
+  {
+   "episode": 7,
+   "continue_chapter": 2,
+   "note": "episode ends 3/4 into Lesson 2"
+  },
+  {
+   "episode": 12,
+   "continue_chapter": 4,
+   "note": "episode ends 3/4 into Lesson 4"
+  },
+  {
+   "episode": 34,
+   "continue_chapter": 86,
+   "note": "episode ends 1/2 into Lesson 86"
+  },
+  {
+   "episode": 35,
+   "continue_chapter": 86,
+   "note": "episode ends 1/2 into Lesson 86"
+  },
+  {
+   "episode": 41,
+   "continue_chapter": 61,
+   "note": "episode ends 1/2 into Lesson 61"
+  },
+  {
+   "episode": 107,
+   "continue_chapter": 185,
+   "note": "episode ends 1/2 into Lesson 185"
+  },
+  {
+   "episode": 121,
+   "continue_chapter": 190,
+   "note": "episode ends 2/5 into Lesson 190"
+  },
+  {
+   "episode": 127,
+   "continue_chapter": 205,
+   "note": "episode ends 1/2 into Lesson 205"
+  },
+  {
+   "episode": 129,
+   "continue_chapter": 208,
+   "note": "episode ends 1/2 into Lesson 208"
+  },
+  {
+   "episode": 131,
+   "continue_chapter": 197,
+   "note": "episode ends 1/2 into Lesson 197"
+  },
+  {
+   "episode": 133,
+   "continue_chapter": 200,
+   "note": "episode ends 1/2 into Lesson 200"
+  },
+  {
+   "episode": 145,
+   "continue_chapter": 227,
+   "note": "episode ends 2/4 into Lesson 227"
+  },
+  {
+   "episode": 148,
+   "continue_chapter": 234,
+   "note": "episode ends 2/3 into Lesson 234"
+  },
+  {
+   "episode": 169,
+   "continue_chapter": 250,
+   "note": "episode ends 1/2 into Lesson 250"
+  },
+  {
+   "episode": 177,
+   "continue_chapter": 255,
+   "note": "episode ends 1/2 into Lesson 255"
+  },
+  {
+   "episode": 178,
+   "continue_chapter": 257,
+   "note": "episode ends 1/2 into Lesson 257"
+  },
+  {
+   "episode": 180,
+   "continue_chapter": 261,
+   "note": "episode ends 3/4 into Lesson 261"
+  },
+  {
+   "episode": 186,
+   "continue_chapter": 271,
+   "note": "episode ends 1/2 into Lesson 271"
+  },
+  {
+   "episode": 195,
+   "continue_chapter": 283,
+   "note": "episode ends 1/2 into Lesson 283"
+  },
+  {
+   "episode": 198,
+   "continue_chapter": 288,
+   "note": "episode ends 1/2 into Lesson 288"
+  },
+  {
+   "episode": 202,
+   "continue_chapter": 325,
+   "note": "episode ends 1/2 into Lesson 325"
+  },
+  {
+   "episode": 225,
+   "continue_chapter": 341,
+   "note": "episode ends 3/4 into Lesson 341"
+  },
+  {
+   "episode": 232,
+   "continue_chapter": 354,
+   "note": "episode ends 3/4 into Lesson 354"
+  },
+  {
+   "episode": 233,
+   "continue_chapter": 356,
+   "note": "episode ends 1/4 into Lesson 356"
+  },
+  {
+   "episode": 234,
+   "continue_chapter": 357,
+   "note": "episode ends 1/2 into Lesson 357"
+  },
+  {
+   "episode": 235,
+   "continue_chapter": 359,
+   "note": "episode ends 1/2 into Lesson 359"
+  },
+  {
+   "episode": 237,
+   "continue_chapter": 345,
+   "note": "episode ends 1/2 into Lesson 345"
+  },
+  {
+   "episode": 241,
+   "continue_chapter": 363,
+   "note": "episode ends 1/2 into Lesson 363"
+  },
+  {
+   "episode": 244,
+   "continue_chapter": 366,
+   "note": "episode ends 2/4 into Lesson 366"
+  },
+  {
+   "episode": 246,
+   "continue_chapter": 369,
+   "note": "episode ends 3/4 into Lesson 369"
+  },
+  {
+   "episode": 254,
+   "continue_chapter": 375,
+   "note": "episode ends 1/2 into Lesson 375"
+  },
+  {
+   "episode": 260,
+   "continue_chapter": 397,
+   "note": "episode ends 1/2 into Lesson 397"
+  },
+  {
+   "episode": 271,
+   "continue_chapter": 453,
+   "note": "episode ends 1/2 into Lesson 453"
+  },
+  {
+   "episode": 276,
+   "continue_chapter": 440,
+   "note": "episode ends 1/2 into Lesson 440"
+  },
+  {
+   "episode": 280,
+   "continue_chapter": 467,
+   "note": "episode ends 1/4 into Lesson 467"
+  },
+  {
+   "episode": 287,
+   "continue_chapter": 472,
+   "note": "episode ends 1/3 into Lesson 472"
+  },
+  {
+   "episode": 288,
+   "continue_chapter": 474,
+   "note": "episode ends 1/2 into Lesson 474"
+  },
+  {
+   "episode": 296,
+   "continue_chapter": 458,
+   "note": "episode ends 1/2 into Lesson 458"
+  },
+  {
+   "episode": 305,
+   "continue_chapter": 521,
+   "note": "episode ends 1/6 into Lesson 521"
+  },
+  {
+   "episode": 306,
+   "continue_chapter": 523,
+   "note": "episode ends 1/3 into Lesson 523"
+  },
+  {
+   "episode": 310,
+   "continue_chapter": 531,
+   "note": "episode ends 1/3 into Lesson 531"
+  },
+  {
+   "episode": 314,
+   "continue_chapter": 545,
+   "note": "episode ends 1/2 into Lesson 545"
+  },
+  {
+   "episode": 319,
+   "continue_chapter": 562,
+   "note": "episode ends 1/3 into Lesson 562"
+  },
+  {
+   "episode": 324,
+   "continue_chapter": 580,
+   "note": "episode ends 1/2 into Lesson 580"
+  },
+  {
+   "episode": 327,
+   "continue_chapter": 593,
+   "note": "episode ends 1/6 into Lesson 593"
+  },
+  {
+   "episode": 329,
+   "continue_chapter": 420,
+   "note": "episode ends 3/4 into Lesson 420"
+  },
+  {
+   "episode": 331,
+   "continue_chapter": 432,
+   "note": "episode ends 1/2 into Lesson 432"
+  },
+  {
+   "episode": 337,
+   "continue_chapter": 446,
+   "note": "episode ends 1/2 into Lesson 446"
+  },
+  {
+   "episode": 338,
+   "continue_chapter": 448,
+   "note": "episode ends 1/3 into Lesson 448"
+  },
+  {
+   "episode": 346,
+   "continue_chapter": 610,
+   "note": "episode ends 1/3 into Lesson 610"
+  },
+  {
+   "episode": 348,
+   "continue_chapter": 615,
+   "note": "episode ends 1/3 into Lesson 615"
+  },
+  {
+   "episode": 352,
+   "continue_chapter": 629,
+   "note": "episode ends Partly into Lesson 629"
+  },
+  {
+   "episode": 356,
+   "continue_chapter": 643,
+   "note": "episode ends 1/2 into Lesson 643"
+  },
+  {
+   "episode": 357,
+   "continue_chapter": 648,
+   "note": "episode ends beginning into Lesson 648"
+  },
+  {
+   "episode": 358,
+   "continue_chapter": 652,
+   "note": "episode ends 1/2 into Lesson 652"
+  },
+  {
+   "episode": 361,
+   "continue_chapter": 669,
+   "note": "episode ends 1/2 into Lesson 669"
+  },
+  {
+   "episode": 363,
+   "continue_chapter": 675,
+   "note": "episode ends beginning into Lesson 675"
+  },
+  {
+   "episode": 369,
+   "continue_chapter": 699,
+   "note": "series end: 697-698 already adapted in ep368, L691 skipped entirely; resume at L699 (Jump GIGA finale, adapted only by THE FINAL movie)"
+  }
+ ],
+ "annotations": [
+  {
+   "episodes": [
+    3,
+    201
+   ],
+   "kind": "rearranged",
+   "chapters": "1-292",
+   "note": "Season 1 regime: adapts vol 1-34 heavily out of publication order (e.g. ep25=L100, ep30=L19, ep53=L21-22, ep73=L41, ep90=L46, ep97=L24); per-episode chapters_adapted carries the exact order"
+  },
+  {
+   "episodes": [
+    14
+   ],
+   "kind": "graft",
+   "chapters": "23",
+   "note": "Part B adapts L23 pulled forward from v3; fandom episode infobox lists only L15 — L23 confirmed by Lesson 23 page reverse mapping and exact title match"
+  },
+  {
+   "episodes": [
+    25
+   ],
+   "kind": "graft",
+   "chapters": "100",
+   "note": "whole episode adapts L100 (v12) pulled ~60 chapters forward"
+  },
+  {
+   "episodes": [
+    202,
+    203
+   ],
+   "kind": "graft",
+   "chapters": "324-326",
+   "note": "Gintama' opens with post-timeskip gag chapters L324-325(+326), then rewinds to L293+ from ep204"
+  },
+  {
+   "episodes": [
+    227
+   ],
+   "kind": "side_story",
+   "chapters": "special 360.1",
+   "note": "Sket Dance crossover special chapter (fandom “Lesson 360.1”); no mainline chapter adapted — left unanchored"
+  },
+  {
+   "episodes": [
+    266,
+    299
+   ],
+   "kind": "rearranged",
+   "chapters": "384-523",
+   "note": "Gintama° eps 266-299 interleave previously skipped backlog chapters (L384-465) among current-arc material (L466-523)"
+  },
+  {
+   "episodes": [
+    329,
+    341
+   ],
+   "kind": "rearranged",
+   "chapters": "419-501",
+   "note": "Porori-hen (eps 329-341) adapts previously skipped backlog chapters (L419-501 range) between Rakuyou (ep328 ends L595) and Silver Soul (ep342 starts L596)"
+  },
+  {
+   "episodes": [
+    368,
+    369
+   ],
+   "kind": "rearranged",
+   "chapters": "687-698",
+   "note": "THE SEMI-FINAL: ep368 adapts 687-690, 692 plus finale-side 697-698; ep369 covers the parallel 693-696; L691 skipped; L699-704 (Jump GIGA) adapted only by THE FINAL movie"
+  }
+ ],
+ "type_corrections": [],
+ "repairs": [
+  {
+   "episode": 369,
+   "field": "end_chapter",
+   "old": 704,
+   "new": 696,
+   "why": "Semi-Final ep369 adapts L693-696 only (Lesson 693/696 pages map to Episode 369); L697-698 are in ep368; L699-704 were published in Jump GIGA and adapted by the Gintama THE FINAL movie, not by any episode",
+   "sources": [
+    "https://gintama.fandom.com/wiki/Episode_369",
+    "https://gintama.fandom.com/wiki/Lesson_696",
+    "https://gintama.fandom.com/wiki/Lesson_698",
+    "https://gintama.fandom.com/wiki/Lesson_699",
+    "https://gintama.fandom.com/wiki/Lesson_704",
+    "https://en.wikipedia.org/wiki/List_of_Gintama_chapters"
+   ]
+  }
+ ],
+ "structure": {
+  "notes": "Fandom continuous episode numbering matches OUR cumulative numbering exactly (premiere special = Episode 1-2 counted as eps 1-2; TV run ends ep367; THE SEMI-FINAL = eps 368-369). Season starts confirmed: Gintama'=202 (L324), Enchousen=253 (L372, Kintama arc), Gintama°=266 (L484, Frozen Time arc), Gintama.=317 (L552, Rakuyou — exact v62 boundary), Porori-hen=329 (backlog L419+), Shirogane=342 (L596, Silver Soul), Kouhan-sen=354 (L632), Semi-Final=368. Chapter space = Lesson numbering 1-704 (fandom and Wikipedia titles agree chapter-for-chapter through 704; L1-698 in Weekly Shonen Jump, L699-704 in Jump GIGA); resolves flag #678 — AniList 709 counts extras, MU 496 is stale. Lessons never adapted by the series: 17, 25, 47, 53, 56, 65, 76, 81, 88, 107, 125, 172, 187, 253, 269, 273, 295, 312-313, 423, 435-436, 442, 455, 462, 481, 486-487, 492-496, 498-499, 691, and 699-704 (movie only). Mixed eps 82/111/120 have chapters=N/A on fandom (anime-original with canon slivers) — left unanchored; ep367 (mixed) anchors to L686. DB canon/filler types agree with animefillerlist throughout. Gintama THE FINAL movie (L699-704) is not a DB component; it belongs after ep369 in any order-only chain.",
+  "order_only": []
+ },
+ "flags_for_sean": [
+  "ep263 bears the title of L404 (\"Two Brothers\") but fandom maps L404→ep262 and ep263→L405-407 (episode page and chapter pages agree); kept 405-407, medium confidence",
+  "flag #678 resolution: reading edition should be Lesson space to 704 (fandom+Wikipedia agree); MU latest 496 is a stale/different edition",
+  "mixed eps 82, 111, 120 cannot be anchored (fandom chapters=N/A, sliver borrowings only)",
+  "existing ep369→704 (mu) anchor repaired to 696: L699-704 are movie-only (Jump GIGA finale)"
+ ]
+}

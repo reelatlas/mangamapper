@@ -536,8 +536,8 @@ async function main() {
 
   for (const [k, v] of Object.entries(classes)) {
     console.log(`\n${k}: ${v.length}`);
-    for (const id of v.slice(0, 40)) console.log('   ' + id);
-    if (v.length > 40) console.log(`   …+${v.length - 40} more`);
+    for (const id of v.slice(0, 60)) console.log('   ' + id);
+    if (v.length > 60) console.log(`   …+${v.length - 60} more`);
   }
   console.log('\nlight_novel-source series:', lightNovel.length, '→', lightNovel.slice(0, 25).join(', '));
   const eightySix = series.find((s: any) => s.id.includes('86') || s.id.includes('eighty'));

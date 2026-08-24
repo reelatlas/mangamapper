@@ -1,0 +1,20 @@
+{
+  "series_id": "mashle-magic-and-muscles",
+  "summary": "OUR ep 25 ('Mash Burnedead and His Good Friends', 2024-03-30) is the Season 2 finale, which mashle.fandom numbers Episode 24 (S2E12) — our numbering runs one ahead of the wiki in late S2 (verified by title+air-date on wiki E22/E23/E24 vs our rows 23/24/25). The wiki's adapted_from field gives Chapters 73, 74 and 81: chs 73-74 close the Divine Visionary Selection Exam arc (Innocent Zero fight aftermath), while ch 81 ('Mash Burnedead and the Excellent Friends' — the episode's exact Japanese title, and its page reverse-links the episode) is a scene grafted forward from the next arc (the mob discovering Mash can't use magic). External guides confirm S2 covers through ch 74 with the Tri-Magic-Athalon arc (75-102) next, so END=74 with ch 81 as a graft and continue at 75. The stored ep24→74 anchor is wrong per the wiki (our ep24 = wiki E23 = chs 71-72) — repair included.",
+  "anchors": [
+    {"episode": 25, "end_chapter": 74, "start_chapter": 73, "chapters_adapted": "73-74 + graft: 81 (mob-reveal epilogue pulled forward from the Tri-Magic-Athalon arc; episode title = ch 81's title)", "volume": 9,
+     "confidence": "high", "note": "= mashle.fandom Episode 24 (S2E12, our numbering +1); adapted_from field + Chapter 81 reverse link + external S2-ends-at-ch-74 corroboration. END kept at 74 per finale rule — ch 81 is out-of-order graft, not position.", "sources": ["https://mashle.fandom.com/api.php?action=parse&page=Episode_24&prop=wikitext&format=json", "https://mashle.fandom.com/api.php?action=parse&page=Chapter_81&prop=wikitext&format=json", "https://www.playbite.com/q/what-chapter-does-mashle-season-2-end", "https://mangashed.com/where-does-the-mashle-anime-end-in-the-manga/"]}
+  ],
+  "continue_points": [
+    {"episode": 25, "continue_chapter": 75, "note": "Ch 81 grafted ahead of order; earliest not-yet-adapted-but-will-be chapter is 75 (Tri-Magic-Athalon arc, chs 75-102, the announced S3 material). Matches entry continue_from_chapter=75."}
+  ],
+  "annotations": [
+    {"episodes": [25], "kind": "graft", "chapters": "81", "note": "Season-finale closer adapts ch 81's reveal scene (mob learns Mash has no magic) well ahead of manga order; wiki's differences section notes the scene 'appears earlier than it does in the Manga'."}
+  ],
+  "type_corrections": [],
+  "repairs": [
+    {"episode": 24, "field": "end_chapter", "old": 74, "new": 72, "why": "Our ep 24 ('Mash Burnedead and the Origin of the Greatest Magic User', 2024-03-23) = mashle.fandom Episode 23 (S2E11), whose adapted_from = Chapters 71-72; start should be 71, chapters_adapted 71-72. Old value 74 came from afg-continua derivation and collides with ep 25 starting at 73. Single strong source (wiki, internally consistent with E24=73-74+81) — treat as medium.", "sources": ["https://mashle.fandom.com/api.php?action=parse&page=Episode_23&prop=wikitext&format=json"]}
+  ],
+  "structure": {"notes": "Numbering offset: mashle.fandom counts S2 as Episodes 13-24 (12 eps, Jan 6 - Mar 30 2024, i.e. one broadcast-break week), while our DB reaches ep 25 by 2024-03-30 and parks it in a third component (AniList 177704, labeled as S3). Verified our epN = wiki ep N-1 for eps 23/24/25 by title+date; wiki E13 = Jan 6 presumably = our ep 13, so the +1 arises somewhere inside eps 14-22 (likely a recap/special counted as an episode on AniList). Wiki E13 adapted_from starts at ch 39 p.3 — consistent with our ep12→39 S1 anchor.", "order_only": []},
+  "flags_for_sean": ["Component alignment: our ep 25 is the S2 finale (aired 2024-03-30), yet it sits in component 3 (AniList 177704, 25-null, labeled S3 'Saishuu Shiken-hen'); when actual S3 airs its E1 will collide with this row — component boundaries for S2/S3 need a look (relates to open flag #851).", "Any future anchor fill for our eps 14-24 must re-verify the +1 wiki-numbering offset per episode (offset origin inside S2 not pinned down).", "ep 24 repair rests on the wiki alone (internally cross-consistent, but single-site) — marked medium."]
+}

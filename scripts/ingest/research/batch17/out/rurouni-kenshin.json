@@ -1,0 +1,16 @@
+{
+  "series_id": "rurouni-kenshin",
+  "summary": "The tail premise ('8 canon eps past anchor ep 62') is wrong: episodes 63-70 are anime-original filler, and our episode rows ALREADY type them [filler] — no type corrections and no anchors are warranted. Two independent sources confirm: animefillerlist classifies 63-78 (and onward to 94) as filler, and Wikipedia's season-3 page states outright that these episodes 'were not adapted from the manga' (produced while the Jinchu arc was still being written). The target range sits in the season-3 anime-original block: standalone fillers 63-66, then the lead-in to the Shimabara/Christian arc (Shogo Amakusa, eps 67-76). The manga frontier therefore correctly ends at ep 62 (end ch 151); the reader's manga continue past the 1996 anime remains ch 152 (Jinchu arc, never animated in this series).",
+  "anchors": [],
+  "continue_points": [],
+  "annotations": [],
+  "type_corrections": [],
+  "repairs": [],
+  "structure": {
+    "notes": "Eps 1-62 = manga-adapted through the Kyoto arc (ep 62 ends at ch 151, v18). Eps 63-95 = season 3, anime-original (Wikipedia: 'Unlike previous episodes, these were not adapted from the manga'): standalone fillers 63-66, Shimabara/Christian arc 67-76, Kaishu-Katsu 79-82, Divine Elixir 83-88, Feng Shui 90-94, plus the home-video epilogue 95. AFL types the whole block filler. Our stored types for 63-70 already say filler — stored data is correct; flag #727's 'canon eps past anchor 62' framing was a false positive from the frontier heuristic, not a data gap. Eps 95-98 are already annotated as side stories (pilot one-shots). Nothing in 63-70 can carry an anchor under the rulings (filler never gets anchors).",
+    "order_only": []
+  },
+  "flags_for_sean": [
+    "Flag #727 (count_mismatch, maxAnchorEpisode 62 vs 100 aired) can be resolved for the 63-70 stretch: the anchor frontier at 62 is the true end of manga adaptation, not stale coverage — everything from 63 to 94 is anime-original per AFL + Wikipedia season 3 (sources: https://www.animefillerlist.com/shows/rurouni-kenshin , https://en.wikipedia.org/wiki/Rurouni_Kenshin_(season_3) )."
+  ]
+}

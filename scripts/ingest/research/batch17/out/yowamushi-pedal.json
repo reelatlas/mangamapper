@@ -1,0 +1,674 @@
+{
+ "series_id": "yowamushi-pedal",
+ "summary": "Season 1 (38 eps, AniList 18179) adapts chapters 1-140 (v1-17), not ~1-100 as estimated: eps 1-11 cover the club intro and welcome race (chs 1-37), eps 11-18 the qualifier and training camp (38-62), eps 19-21 Manami/interim (63-70), and eps 22-38 Inter-High day 1 through mid-day-2 (71-140). The fandom wiki (yowamushipedal.fandom.com, NOT yowapeda) carries per-episode Chapters fields with page-level detail, forming a seamless chain 1->140 that a dozen exact Wikipedia chapter-title == episode-title matches independently pin. Adaptation is essentially linear with three flashback grafts from later chapters (135 into ep13, 149 into ep21, 174-175 into ep30) and one interleaved pair (eps 27-28 over chs 88-96). The stored ep38->544/v63 anchor was the season-5 whole-franchise endpoint misapplied to this S1-only entry; repaired to 140/v17. Ch140 is split across the season boundary (Grande Road ep1 opens 140-145).",
+ "anchors": [
+  {
+   "episode": 1,
+   "end_chapter": 3,
+   "start_chapter": 1,
+   "chapters_adapted": "1 (p.6-53), 2 (p.1-30), 3 (p.1-5)",
+   "volume": 1,
+   "confidence": "high",
+   "note": "Series opening; fandom gives page-level detail; ch3 only p.1-5 (lead-in, bulk in ep2)",
+   "sources": [
+    "https://yowamushipedal.fandom.com/wiki/Episode_1",
+    "https://en.wikipedia.org/wiki/List_of_Yowamushi_Pedal_chapters",
+    "https://en.wikipedia.org/wiki/List_of_Yowamushi_Pedal_episodes"
+   ]
+  },
+  {
+   "episode": 2,
+   "end_chapter": 6,
+   "start_chapter": 3,
+   "chapters_adapted": "3 (from p.6), 4, 5, 6 (p.1-8)",
+   "volume": 1,
+   "confidence": "medium",
+   "note": "Fandom page-level; ch6 p.1-8 only, bulk in ep3",
+   "sources": [
+    "https://yowamushipedal.fandom.com/wiki/Episode_2",
+    "https://en.wikipedia.org/wiki/List_of_Yowamushi_Pedal_episodes"
+   ]
+  },
+  {
+   "episode": 3,
+   "end_chapter": 9,
+   "start_chapter": 6,
+   "chapters_adapted": "6 (p.4-20), 7, 8 (p.4-20), 9 (p.9-20)",
+   "volume": 2,
+   "confidence": "medium",
+   "note": "Fandom page-level; Special Chapter 1 p.4-5 sliver (annotation); START=6 by majority rule (ep2 had only p.1-8)",
+   "sources": [
+    "https://yowamushipedal.fandom.com/wiki/Episode_3",
+    "https://en.wikipedia.org/wiki/List_of_Yowamushi_Pedal_episodes"
+   ]
+  },
+  {
+   "episode": 4,
+   "end_chapter": 13,
+   "start_chapter": 10,
+   "chapters_adapted": "9 (p.18 sliver), 10, 11, 12, 13",
+   "volume": 2,
+   "confidence": "medium",
+   "note": "Fandom page-level; ch9 tail is a 1-page sliver so START=10",
+   "sources": [
+    "https://yowamushipedal.fandom.com/wiki/Episode_4",
+    "https://en.wikipedia.org/wiki/List_of_Yowamushi_Pedal_episodes"
+   ]
+  },
+  {
+   "episode": 5,
+   "end_chapter": 16,
+   "start_chapter": 14,
+   "chapters_adapted": "14, 15, 16 (p.1-19)",
+   "volume": 2,
+   "confidence": "high",
+   "note": "Ep title = ch14 title 'The Sohoku High School Bicycle Racing Club' (Wikipedia)",
+   "sources": [
+    "https://yowamushipedal.fandom.com/wiki/Episode_5",
+    "https://en.wikipedia.org/wiki/List_of_Yowamushi_Pedal_chapters",
+    "https://en.wikipedia.org/wiki/List_of_Yowamushi_Pedal_episodes"
+   ]
+  },
+  {
+   "episode": 6,
+   "end_chapter": 20,
+   "start_chapter": 17,
+   "chapters_adapted": "17-20",
+   "volume": 3,
+   "confidence": "high",
+   "note": "Ep title 'Welcoming Race' = ch17 'The Welcome Race Begins' (Wikipedia); ch20 concludes in ep7",
+   "sources": [
+    "https://yowamushipedal.fandom.com/wiki/Episode_6",
+    "https://en.wikipedia.org/wiki/List_of_Yowamushi_Pedal_chapters",
+    "https://en.wikipedia.org/wiki/List_of_Yowamushi_Pedal_episodes"
+   ]
+  },
+  {
+   "episode": 7,
+   "end_chapter": 24,
+   "start_chapter": 21,
+   "chapters_adapted": "20 (conclusion), 21, 22, 23, 24 (lead-in)",
+   "volume": 3,
+   "confidence": "medium",
+   "note": "Ch20 tail + 21-24; ch24 bulk in ep8 (ep8 title 'Sprint Climb!!' matches ch24 'Climb')",
+   "sources": [
+    "https://yowamushipedal.fandom.com/wiki/Episode_7",
+    "https://en.wikipedia.org/wiki/List_of_Yowamushi_Pedal_chapters",
+    "https://en.wikipedia.org/wiki/List_of_Yowamushi_Pedal_episodes"
+   ]
+  },
+  {
+   "episode": 8,
+   "end_chapter": 30,
+   "start_chapter": 24,
+   "chapters_adapted": "24-30",
+   "volume": 4,
+   "confidence": "medium",
+   "note": "START=24: ep title 'Sprint Climb!!' matches ch24 'Climb'/ch25 'Reaching the Summit' (Wikipedia)",
+   "sources": [
+    "https://yowamushipedal.fandom.com/wiki/Episode_8",
+    "https://en.wikipedia.org/wiki/List_of_Yowamushi_Pedal_chapters",
+    "https://en.wikipedia.org/wiki/List_of_Yowamushi_Pedal_episodes"
+   ]
+  },
+  {
+   "episode": 9,
+   "end_chapter": 35,
+   "start_chapter": 31,
+   "chapters_adapted": "31-35 (34-35 partial, concluded in ep10)",
+   "volume": 5,
+   "confidence": "medium",
+   "note": "Fandom; chs 34-35 shared with ep10",
+   "sources": [
+    "https://yowamushipedal.fandom.com/wiki/Episode_9",
+    "https://en.wikipedia.org/wiki/List_of_Yowamushi_Pedal_episodes"
+   ]
+  },
+  {
+   "episode": 10,
+   "end_chapter": 37,
+   "start_chapter": 34,
+   "chapters_adapted": "34 (conclusion), 35 (conclusion), 36, 37",
+   "volume": 5,
+   "confidence": "medium",
+   "note": "Two-chapter overlap with ep9 (substantial re-coverage), then 36-37",
+   "sources": [
+    "https://yowamushipedal.fandom.com/wiki/Episode_10",
+    "https://en.wikipedia.org/wiki/List_of_Yowamushi_Pedal_episodes"
+   ]
+  },
+  {
+   "episode": 11,
+   "end_chapter": 40,
+   "start_chapter": 38,
+   "chapters_adapted": "38, 39, 40 (partial)",
+   "volume": 5,
+   "confidence": "medium",
+   "note": "Ch38 'Inter-High Qualifiers' opens qualifier arc (Wikipedia volume list); ch40 concludes in ep12",
+   "sources": [
+    "https://yowamushipedal.fandom.com/wiki/Episode_11",
+    "https://en.wikipedia.org/wiki/List_of_Yowamushi_Pedal_chapters",
+    "https://en.wikipedia.org/wiki/List_of_Yowamushi_Pedal_episodes"
+   ]
+  },
+  {
+   "episode": 12,
+   "end_chapter": 43,
+   "start_chapter": 41,
+   "chapters_adapted": "40 (conclusion), 41, 42, 43",
+   "volume": 5,
+   "confidence": "medium",
+   "note": "Camp arc start; ch40 conclusion assumed minor (no page data)",
+   "sources": [
+    "https://yowamushipedal.fandom.com/wiki/Episode_12",
+    "https://en.wikipedia.org/wiki/List_of_Yowamushi_Pedal_episodes"
+   ]
+  },
+  {
+   "episode": 13,
+   "end_chapter": 45,
+   "start_chapter": 44,
+   "chapters_adapted": "44, 45 [+ ch135 graft]",
+   "volume": 6,
+   "confidence": "high",
+   "note": "Ep title = ch44 title 'Imaizumi and Naruko's 1000km' (Wikipedia); ch135 flashback grafted (see annotation)",
+   "sources": [
+    "https://yowamushipedal.fandom.com/wiki/Episode_13",
+    "https://en.wikipedia.org/wiki/List_of_Yowamushi_Pedal_chapters",
+    "https://en.wikipedia.org/wiki/List_of_Yowamushi_Pedal_episodes"
+   ]
+  },
+  {
+   "episode": 14,
+   "end_chapter": 47,
+   "start_chapter": 46,
+   "chapters_adapted": "46, 47",
+   "volume": 6,
+   "confidence": "high",
+   "note": "Ep title 'Reunion at Dawn' = ch46 'Second Meeting at Dawn'/'Misty Morning Reunion' (Wikipedia)",
+   "sources": [
+    "https://yowamushipedal.fandom.com/wiki/Episode_14",
+    "https://en.wikipedia.org/wiki/List_of_Yowamushi_Pedal_chapters",
+    "https://en.wikipedia.org/wiki/List_of_Yowamushi_Pedal_episodes"
+   ]
+  },
+  {
+   "episode": 15,
+   "end_chapter": 50,
+   "start_chapter": 48,
+   "chapters_adapted": "48, 49, 50",
+   "volume": 6,
+   "confidence": "medium",
+   "note": "Fandom; between title-pinned eps 14 and 16-17 chain",
+   "sources": [
+    "https://yowamushipedal.fandom.com/wiki/Episode_15",
+    "https://en.wikipedia.org/wiki/List_of_Yowamushi_Pedal_episodes"
+   ]
+  },
+  {
+   "episode": 16,
+   "end_chapter": 54,
+   "start_chapter": 51,
+   "chapters_adapted": "51-54 (53-54 partial, concluded in ep17)",
+   "volume": 7,
+   "confidence": "medium",
+   "note": "Fandom; chs 53-54 shared with ep17",
+   "sources": [
+    "https://yowamushipedal.fandom.com/wiki/Episode_16",
+    "https://en.wikipedia.org/wiki/List_of_Yowamushi_Pedal_episodes"
+   ]
+  },
+  {
+   "episode": 17,
+   "end_chapter": 57,
+   "start_chapter": 53,
+   "chapters_adapted": "53 (conclusion), 54 (conclusion), 55, 56, 57",
+   "volume": 7,
+   "confidence": "medium",
+   "note": "Two-chapter overlap with ep16, then 55-57",
+   "sources": [
+    "https://yowamushipedal.fandom.com/wiki/Episode_17",
+    "https://en.wikipedia.org/wiki/List_of_Yowamushi_Pedal_episodes"
+   ]
+  },
+  {
+   "episode": 18,
+   "end_chapter": 62,
+   "start_chapter": 58,
+   "chapters_adapted": "58-62",
+   "volume": 8,
+   "confidence": "medium",
+   "note": "Fandom; camp finale",
+   "sources": [
+    "https://yowamushipedal.fandom.com/wiki/Episode_18",
+    "https://en.wikipedia.org/wiki/List_of_Yowamushi_Pedal_episodes"
+   ]
+  },
+  {
+   "episode": 19,
+   "end_chapter": 64,
+   "start_chapter": 63,
+   "chapters_adapted": "63, 64",
+   "volume": 8,
+   "confidence": "high",
+   "note": "Ep title = ch63 title 'A New Start' (Wikipedia)",
+   "sources": [
+    "https://yowamushipedal.fandom.com/wiki/Episode_19",
+    "https://en.wikipedia.org/wiki/List_of_Yowamushi_Pedal_chapters",
+    "https://en.wikipedia.org/wiki/List_of_Yowamushi_Pedal_episodes"
+   ]
+  },
+  {
+   "episode": 20,
+   "end_chapter": 66,
+   "start_chapter": 65,
+   "chapters_adapted": "65, 66",
+   "volume": 8,
+   "confidence": "high",
+   "note": "Ep title = ch65 title 'Manami Sangaku' (Wikipedia)",
+   "sources": [
+    "https://yowamushipedal.fandom.com/wiki/Episode_20",
+    "https://en.wikipedia.org/wiki/List_of_Yowamushi_Pedal_chapters",
+    "https://en.wikipedia.org/wiki/List_of_Yowamushi_Pedal_episodes"
+   ]
+  },
+  {
+   "episode": 21,
+   "end_chapter": 70,
+   "start_chapter": 67,
+   "chapters_adapted": "67-70 [+ ch149 graft]",
+   "volume": 9,
+   "confidence": "high",
+   "note": "Ep title = ch67 title 'Snake of the Stone Path' (Wikipedia); ch149 flashback grafted (see annotation)",
+   "sources": [
+    "https://yowamushipedal.fandom.com/wiki/Episode_21",
+    "https://en.wikipedia.org/wiki/List_of_Yowamushi_Pedal_chapters",
+    "https://en.wikipedia.org/wiki/List_of_Yowamushi_Pedal_episodes"
+   ]
+  },
+  {
+   "episode": 22,
+   "end_chapter": 74,
+   "start_chapter": 71,
+   "chapters_adapted": "71-74",
+   "volume": 9,
+   "confidence": "high",
+   "note": "Ep title = ch71 title 'The Inter-High Begins'/'Inter-High Opening' (Wikipedia)",
+   "sources": [
+    "https://yowamushipedal.fandom.com/wiki/Episode_22",
+    "https://en.wikipedia.org/wiki/List_of_Yowamushi_Pedal_chapters",
+    "https://en.wikipedia.org/wiki/List_of_Yowamushi_Pedal_episodes"
+   ]
+  },
+  {
+   "episode": 23,
+   "end_chapter": 78,
+   "start_chapter": 75,
+   "chapters_adapted": "75-78",
+   "volume": 9,
+   "confidence": "medium",
+   "note": "Fandom; IH day 1 sprint battle",
+   "sources": [
+    "https://yowamushipedal.fandom.com/wiki/Episode_23",
+    "https://en.wikipedia.org/wiki/List_of_Yowamushi_Pedal_episodes"
+   ]
+  },
+  {
+   "episode": 24,
+   "end_chapter": 81,
+   "start_chapter": 79,
+   "chapters_adapted": "79, 80, 81",
+   "volume": 10,
+   "confidence": "medium",
+   "note": "Fandom; v10 starts at ch79 (Wikipedia volume list agrees)",
+   "sources": [
+    "https://yowamushipedal.fandom.com/wiki/Episode_24",
+    "https://en.wikipedia.org/wiki/List_of_Yowamushi_Pedal_chapters",
+    "https://en.wikipedia.org/wiki/List_of_Yowamushi_Pedal_episodes"
+   ]
+  },
+  {
+   "episode": 25,
+   "end_chapter": 86,
+   "start_chapter": 82,
+   "chapters_adapted": "82-86 (85-86 partial, concluded in ep26)",
+   "volume": 10,
+   "confidence": "medium",
+   "note": "Fandom; chs 85-86 shared with ep26",
+   "sources": [
+    "https://yowamushipedal.fandom.com/wiki/Episode_25",
+    "https://en.wikipedia.org/wiki/List_of_Yowamushi_Pedal_episodes"
+   ]
+  },
+  {
+   "episode": 26,
+   "end_chapter": 88,
+   "start_chapter": 85,
+   "chapters_adapted": "85 (conclusion), 86 (conclusion), 87, 88 (partial)",
+   "volume": 11,
+   "confidence": "medium",
+   "note": "Two-chapter overlap with ep25; ch87 'Hakone' (Wikipedia); ch88 shared with ep27",
+   "sources": [
+    "https://yowamushipedal.fandom.com/wiki/Episode_26",
+    "https://en.wikipedia.org/wiki/List_of_Yowamushi_Pedal_chapters",
+    "https://en.wikipedia.org/wiki/List_of_Yowamushi_Pedal_episodes"
+   ]
+  },
+  {
+   "episode": 27,
+   "end_chapter": 93,
+   "start_chapter": 88,
+   "chapters_adapted": "88 (conclusion), 89, 91, 92, 93",
+   "volume": 11,
+   "confidence": "high",
+   "note": "Ep title 'Toudou, God of the Mountains' = ch91 title (Wikipedia); interleaved with ep28 (see annotation)",
+   "sources": [
+    "https://yowamushipedal.fandom.com/wiki/Episode_27",
+    "https://en.wikipedia.org/wiki/List_of_Yowamushi_Pedal_chapters",
+    "https://en.wikipedia.org/wiki/List_of_Yowamushi_Pedal_episodes"
+   ]
+  },
+  {
+   "episode": 28,
+   "end_chapter": 96,
+   "start_chapter": 89,
+   "chapters_adapted": "89, 90, 91, 93, 94, 95, 96",
+   "volume": 12,
+   "confidence": "medium",
+   "note": "Interleaved with ep27 (re-covers 89/91/93, adds 90); see annotation",
+   "sources": [
+    "https://yowamushipedal.fandom.com/wiki/Episode_28",
+    "https://en.wikipedia.org/wiki/List_of_Yowamushi_Pedal_episodes"
+   ]
+  },
+  {
+   "episode": 29,
+   "end_chapter": 101,
+   "start_chapter": 97,
+   "chapters_adapted": "97-101 (101 concluded in ep30)",
+   "volume": 12,
+   "confidence": "high",
+   "note": "Ep title 'The Summit' = ch100 title (fandom chapter page + Wikipedia chain); ch101 shared with ep30",
+   "sources": [
+    "https://yowamushipedal.fandom.com/wiki/Episode_29",
+    "https://en.wikipedia.org/wiki/List_of_Yowamushi_Pedal_chapters",
+    "https://en.wikipedia.org/wiki/List_of_Yowamushi_Pedal_episodes"
+   ]
+  },
+  {
+   "episode": 30,
+   "end_chapter": 105,
+   "start_chapter": 102,
+   "chapters_adapted": "101 (conclusion), 102, 103, 104, 105 [+ chs 174-175 graft]",
+   "volume": 13,
+   "confidence": "medium",
+   "note": "Ch101 conclusion then 102-105; Arakita backstory grafted from chs 174-175 (see annotation)",
+   "sources": [
+    "https://yowamushipedal.fandom.com/wiki/Episode_30",
+    "https://en.wikipedia.org/wiki/List_of_Yowamushi_Pedal_episodes"
+   ]
+  },
+  {
+   "episode": 31,
+   "end_chapter": 110,
+   "start_chapter": 106,
+   "chapters_adapted": "106-110 (110 concluded in ep32)",
+   "volume": 13,
+   "confidence": "medium",
+   "note": "Ch106 'Kyoto #91: Midousuji' opens v13 (Wikipedia); ch110 shared with ep32",
+   "sources": [
+    "https://yowamushipedal.fandom.com/wiki/Episode_31",
+    "https://en.wikipedia.org/wiki/List_of_Yowamushi_Pedal_chapters",
+    "https://en.wikipedia.org/wiki/List_of_Yowamushi_Pedal_episodes"
+   ]
+  },
+  {
+   "episode": 32,
+   "end_chapter": 113,
+   "start_chapter": 111,
+   "chapters_adapted": "110 (conclusion), 111, 112, 113 (partial)",
+   "volume": 14,
+   "confidence": "high",
+   "note": "Ep title = ch111 title 'Night of Hope' (Wikipedia); ch113 concludes in ep33",
+   "sources": [
+    "https://yowamushipedal.fandom.com/wiki/Episode_32",
+    "https://en.wikipedia.org/wiki/List_of_Yowamushi_Pedal_chapters",
+    "https://en.wikipedia.org/wiki/List_of_Yowamushi_Pedal_episodes"
+   ]
+  },
+  {
+   "episode": 33,
+   "end_chapter": 119,
+   "start_chapter": 114,
+   "chapters_adapted": "113 (conclusion), 114-119",
+   "volume": 14,
+   "confidence": "medium",
+   "note": "Ch113 'Dark Clouds' conclusion then 114-119 to end of v14",
+   "sources": [
+    "https://yowamushipedal.fandom.com/wiki/Episode_33",
+    "https://en.wikipedia.org/wiki/List_of_Yowamushi_Pedal_chapters",
+    "https://en.wikipedia.org/wiki/List_of_Yowamushi_Pedal_episodes"
+   ]
+  },
+  {
+   "episode": 34,
+   "end_chapter": 123,
+   "start_chapter": 120,
+   "chapters_adapted": "120-123",
+   "volume": 15,
+   "confidence": "medium",
+   "note": "Fandom; v15 starts ch120 (Wikipedia volume list agrees)",
+   "sources": [
+    "https://yowamushipedal.fandom.com/wiki/Episode_34",
+    "https://en.wikipedia.org/wiki/List_of_Yowamushi_Pedal_chapters",
+    "https://en.wikipedia.org/wiki/List_of_Yowamushi_Pedal_episodes"
+   ]
+  },
+  {
+   "episode": 35,
+   "end_chapter": 128,
+   "start_chapter": 124,
+   "chapters_adapted": "124-128",
+   "volume": 15,
+   "confidence": "medium",
+   "note": "Fandom; day-2 sprint finish",
+   "sources": [
+    "https://yowamushipedal.fandom.com/wiki/Episode_35",
+    "https://en.wikipedia.org/wiki/List_of_Yowamushi_Pedal_episodes"
+   ]
+  },
+  {
+   "episode": 36,
+   "end_chapter": 132,
+   "start_chapter": 129,
+   "chapters_adapted": "129-132",
+   "volume": 16,
+   "confidence": "high",
+   "note": "Ep title = ch129 title 'Strongest and Fastest' (Wikipedia; opens v16)",
+   "sources": [
+    "https://yowamushipedal.fandom.com/wiki/Episode_36",
+    "https://en.wikipedia.org/wiki/List_of_Yowamushi_Pedal_chapters",
+    "https://en.wikipedia.org/wiki/List_of_Yowamushi_Pedal_episodes"
+   ]
+  },
+  {
+   "episode": 37,
+   "end_chapter": 136,
+   "start_chapter": 133,
+   "chapters_adapted": "133-136 (ch135 partly pre-shown in ep13)",
+   "volume": 16,
+   "confidence": "high",
+   "note": "Ep title 'Passing the Crown' matches ch135 'Transfer of the Crown'/ch136 'The Last of the Kings' (Wikipedia)",
+   "sources": [
+    "https://yowamushipedal.fandom.com/wiki/Episode_37",
+    "https://en.wikipedia.org/wiki/List_of_Yowamushi_Pedal_chapters",
+    "https://en.wikipedia.org/wiki/List_of_Yowamushi_Pedal_episodes"
+   ]
+  },
+  {
+   "episode": 38,
+   "end_chapter": 140,
+   "start_chapter": 137,
+   "chapters_adapted": "137-140 (140 concluded in Grande Road ep1)",
+   "volume": 17,
+   "confidence": "high",
+   "note": "Ep title = ch139 title 'The Soul of Sohoku' (Wikipedia); GR ep1 opens with chs 140-145 — season boundary confirmed",
+   "sources": [
+    "https://yowamushipedal.fandom.com/wiki/Episode_38",
+    "https://en.wikipedia.org/wiki/List_of_Yowamushi_Pedal_chapters",
+    "https://yowamushipedal.fandom.com/wiki/Grande_Road_Episode_1",
+    "https://en.wikipedia.org/wiki/List_of_Yowamushi_Pedal_episodes"
+   ]
+  }
+ ],
+ "continue_points": [
+  {
+   "episode": 1,
+   "continue_chapter": 3,
+   "note": "ends with ch3 p.1-5 only; ch3 bulk in ep2"
+  },
+  {
+   "episode": 2,
+   "continue_chapter": 6,
+   "note": "ends with ch6 p.1-8; bulk in ep3"
+  },
+  {
+   "episode": 6,
+   "continue_chapter": 20,
+   "note": "ch20 concludes in ep7"
+  },
+  {
+   "episode": 7,
+   "continue_chapter": 24,
+   "note": "ch24 lead-in only; bulk ('Climb') in ep8"
+  },
+  {
+   "episode": 9,
+   "continue_chapter": 34,
+   "note": "chs 34-35 partially adapted, concluded in ep10"
+  },
+  {
+   "episode": 11,
+   "continue_chapter": 40,
+   "note": "ch40 concludes in ep12"
+  },
+  {
+   "episode": 16,
+   "continue_chapter": 53,
+   "note": "chs 53-54 partially adapted, concluded in ep17"
+  },
+  {
+   "episode": 25,
+   "continue_chapter": 85,
+   "note": "chs 85-86 partially adapted, concluded in ep26"
+  },
+  {
+   "episode": 26,
+   "continue_chapter": 88,
+   "note": "ch88 concludes in ep27"
+  },
+  {
+   "episode": 27,
+   "continue_chapter": 89,
+   "note": "chs 89/91/93 re-covered and ch90 first shown in ep28 (interleave)"
+  },
+  {
+   "episode": 29,
+   "continue_chapter": 101,
+   "note": "ch101 concludes in ep30"
+  },
+  {
+   "episode": 31,
+   "continue_chapter": 110,
+   "note": "ch110 concludes in ep32"
+  },
+  {
+   "episode": 32,
+   "continue_chapter": 113,
+   "note": "ch113 concludes in ep33"
+  },
+  {
+   "episode": 38,
+   "continue_chapter": 140,
+   "note": "ch140 split across the season boundary; Grande Road ep1 re-covers/concludes ch140 then 141-145"
+  }
+ ],
+ "annotations": [
+  {
+   "episodes": [
+    3
+   ],
+   "kind": "side_story",
+   "chapters": "Special 1",
+   "note": "Special Chapter 1 p.4-5 borrowed (sliver, <=5 pages) alongside chs 6-9; kept out of mainline chapters"
+  },
+  {
+   "episodes": [
+    13
+   ],
+   "kind": "graft",
+   "chapters": "135",
+   "note": "Flashback to previous Inter-High (ch135 'Transfer of the Crown') grafted into the 1000km-ride episode; ch135 adapted properly in ep37"
+  },
+  {
+   "episodes": [
+    21
+   ],
+   "kind": "graft",
+   "chapters": "149",
+   "note": "Ch149 'The Two Aces' flashback material grafted in; chapter belongs to the Grande Road range"
+  },
+  {
+   "episodes": [
+    27,
+    28
+   ],
+   "kind": "rearranged",
+   "chapters": "88-96",
+   "note": "Interleaved adaptation: ep27 runs 88-89, 91-93 skipping 90; ep28 re-covers 89/91/93 and adds 90, 94-96"
+  },
+  {
+   "episodes": [
+    30
+   ],
+   "kind": "graft",
+   "chapters": "174-175",
+   "note": "Arakita backstory grafted from chs 174-175 (Grande Road range) into the ep 'Arakita and Imaizumi'"
+  }
+ ],
+ "type_corrections": [],
+ "repairs": [
+  {
+   "episode": 38,
+   "field": "end_chapter",
+   "old": 544,
+   "new": 140,
+   "why": "Existing mu-derived anchor recorded the WHOLE-FRANCHISE endpoint (continue at ch544/v63 after season 5 Limit Break) on this S1-only entry (AniList 18179, 38 eps). S1 finale adapts chs 137-140: fandom Episode 38 page lists 137-140; Wikipedia ch139 title 'The Soul of Sohoku' equals the ep38 title; Grande Road ep1 opens with chs 140-145.",
+   "sources": [
+    "https://yowamushipedal.fandom.com/wiki/Episode_38",
+    "https://en.wikipedia.org/wiki/List_of_Yowamushi_Pedal_chapters",
+    "https://yowamushipedal.fandom.com/wiki/Grande_Road_Episode_1",
+    "https://wheredoestheanimeleaveoff.com/where-does-the-yowamushi-pedal-anime-end-in-the-manga/"
+   ]
+  },
+  {
+   "episode": 38,
+   "field": "volume",
+   "old": 63,
+   "new": 17,
+   "why": "Ch140 sits in v17 (v17 = chs 138-146 per context boundaries and Wikipedia: v17 opens RIDE.138 'Kings'); v63 was the season-5 franchise endpoint volume.",
+   "sources": [
+    "https://yowamushipedal.fandom.com/wiki/Episode_38",
+    "https://en.wikipedia.org/wiki/List_of_Yowamushi_Pedal_chapters"
+   ]
+  }
+ ],
+ "structure": {
+  "notes": "Component = S1 only (38 eps); OUR numbering = per-season = source numbering, no conversion needed. Chapter space: mainline RIDE numbering; fandom and Wikipedia volume boundaries match the context table exactly (v16 opens RIDE.129, v17 opens RIDE.138). Season boundary: ep38 ends inside ch140; Grande Road ep1 adapts 140-145 (continue at 140). Content-farm guides discredited here: MangaShed claims S1 ends at ch73 (provably wrong: ep22 alone adapts 71-74); wheredoestheanimeleaveoff only gives the franchise-wide endpoint ch544/v63 (the likely origin of the bad stored anchor). Flag #194 (aflClassified=14 vs 38 aired): AFL under-classifies this series; all 38 eps are canon/mixed per fandom chapter fields, no filler found - existing types (13-14 mixed, rest canon) are consistent, no corrections needed.",
+  "order_only": []
+ },
+ "flags_for_sean": [
+  "Shared-chapter splits at eps 6/7 (ch20), 7/8 (ch24), 9/10 (chs 34-35), 11/12 (ch40), 30 (ch101), 33 (ch113): fandom lists the chapter in both episodes without page data; START/END assigned by title evidence or shared+1 default, noted per anchor. Interpolation impact is nil since every episode is anchored.",
+  "ep38 ch140 boundary split: END=140 kept (last chapter in running order) with continue point 140; Grande Road ep1 re-covers ch140 - if the GR entry gets anchored later its ep1 START should be 140 or 141 depending on page-split evidence."
+ ]
+}

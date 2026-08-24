@@ -1,0 +1,71 @@
+{
+  "series_id": "yu-yu-hakusho-ghostfiles",
+  "summary": "Eps 45-65 are the Dark Tournament semifinals/finals (NOT Chapter Black as the task label said — Chapter Black is eps 67-94, already recorded). The range adapts fandom/JP chapters 79-111 continuously at ~1.5 ch/ep with the same half-chapter cadence as the surrounding stored anchors; no chapters are skipped and nothing is reordered. Fandom episode infoboxes give a complete per-episode split, independently corroborated by en-Wikipedia's chapter list once the known +1 shift is applied (en-WP chapter N+1 = fandom/JP chapter N — proven at volume-boundary level for vols 9-13 and at title level, e.g. fandom ch 90 'The Dreadful 80% Power!!' = en-WP ch 091). Both brackets confirm: ep44→77-78 and ep66→112. Volume boundaries in fandom numbering: v9 ends 81, v10=82-91, v11=92-100, v12=101-109, v13 starts 110.",
+  "anchors": [
+    {"episode": 45, "end_chapter": 80, "start_chapter": 79, "chapters_adapted": "79, 80 (first half)", "volume": 9,
+     "confidence": "high", "note": "Hiei vs Makintaro/Kuro Momotaro; fandom ep field 79-80(1st half); en-WP ch 80 'Hiei Fights Again!!' (=fandom 79) namesakes the episode title", "sources": ["https://yuyuhakusho.fandom.com/wiki/Episode_45", "https://en.wikipedia.org/wiki/List_of_YuYu_Hakusho_chapters"]},
+    {"episode": 46, "end_chapter": 81, "start_chapter": 80, "chapters_adapted": "80 (second half), 81", "volume": 9,
+     "confidence": "high", "note": "Kuro Momotaro finish + Kurama vs Ura Urashima; ends on the tamatebako opening — en-WP ch 82 'When the Magic Box Opens!!' = fandom 81", "sources": ["https://yuyuhakusho.fandom.com/wiki/Episode_46", "https://en.wikipedia.org/wiki/List_of_YuYu_Hakusho_chapters"]},
+    {"episode": 47, "end_chapter": 83, "start_chapter": 82, "chapters_adapted": "82, 83 (first half)", "volume": 10,
+     "confidence": "high", "note": "Yoko Kurama awakens — en-WP ch 83 'The Fox Demon Awakens!!' = fandom 82; spans v9/v10 boundary (82 = first ch of v10)", "sources": ["https://yuyuhakusho.fandom.com/wiki/Episode_47", "https://en.wikipedia.org/wiki/List_of_YuYu_Hakusho_chapters"]},
+    {"episode": 48, "end_chapter": 84, "start_chapter": 83, "chapters_adapted": "83 (second half), 84", "volume": 10,
+     "confidence": "high", "note": "Kuwabara vs Shishiwakamaru — en-WP ch 85 'Shishiwakamaru's Skill!!' = fandom 84", "sources": ["https://yuyuhakusho.fandom.com/wiki/Episode_48", "https://en.wikipedia.org/wiki/List_of_YuYu_Hakusho_chapters"]},
+    {"episode": 49, "end_chapter": 86, "start_chapter": 85, "chapters_adapted": "85, 86 (first half)", "volume": 10,
+     "confidence": "high", "note": "Masked fighter unmasked as Genkai — en-WP ch 86 'Identity Revealed!!' = fandom 85; matches ep title 'Genkai's Strength'", "sources": ["https://yuyuhakusho.fandom.com/wiki/Episode_49", "https://en.wikipedia.org/wiki/List_of_YuYu_Hakusho_chapters"]},
+    {"episode": 50, "end_chapter": 87, "start_chapter": 86, "chapters_adapted": "86 (second half), 87", "volume": 10,
+     "confidence": "high", "note": "Onji revealed as Suzuka — en-WP ch 88 'The Man with a Thousand Faces!!' = fandom 87; namesakes ep title 'Suzuka's Challenge'", "sources": ["https://yuyuhakusho.fandom.com/wiki/Episode_50", "https://en.wikipedia.org/wiki/List_of_YuYu_Hakusho_chapters"]},
+    {"episode": 51, "end_chapter": 89, "start_chapter": 88, "chapters_adapted": "88-89", "volume": 10,
+     "confidence": "high", "note": "Genkai-Toguro backstory — en-WP ch 90 'A 50-Year Reunion!!' = fandom 89; matches ep title 'Arch-Rivals'; ep 52 re-covers ch 89's ending", "sources": ["https://yuyuhakusho.fandom.com/wiki/Episode_51", "https://en.wikipedia.org/wiki/List_of_YuYu_Hakusho_chapters"]},
+    {"episode": 52, "end_chapter": 91, "start_chapter": 90, "chapters_adapted": "89 (end only), 90-91", "volume": 10,
+     "confidence": "high", "note": "Genkai's death at Toguro's 80% — fandom ch 90 'The Dreadful 80% Power!!' (= en-WP 091) summary matches; leading tail of 89 not counted as start per majority rule", "sources": ["https://yuyuhakusho.fandom.com/wiki/Episode_52", "https://yuyuhakusho.fandom.com/wiki/Chapter_90", "https://en.wikipedia.org/wiki/List_of_YuYu_Hakusho_chapters"]},
+    {"episode": 53, "end_chapter": 93, "start_chapter": 92, "chapters_adapted": "92, 93 (first half)", "volume": 11,
+     "confidence": "medium", "note": "grief/training before the finals; fandom ep field 92-93(1st half); en-WP ch 93-94 'The Day Before the Storm!!'/'Leveling Up!' (=fandom 92-93) content-consistent but not a namesake lock", "sources": ["https://yuyuhakusho.fandom.com/wiki/Episode_53", "https://en.wikipedia.org/wiki/List_of_YuYu_Hakusho_chapters"]},
+    {"episode": 54, "end_chapter": 94, "start_chapter": 93, "chapters_adapted": "93 (second half), 94", "volume": 11,
+     "confidence": "medium", "note": "finals open with the rules dispute; fandom ep field; en-WP ch 95 'The Rules Rule!!' = fandom 94 content-consistent", "sources": ["https://yuyuhakusho.fandom.com/wiki/Episode_54", "https://en.wikipedia.org/wiki/List_of_YuYu_Hakusho_chapters"]},
+    {"episode": 55, "end_chapter": 96, "start_chapter": 95, "chapters_adapted": "95, 96 (first half)", "volume": 11,
+     "confidence": "medium", "note": "Kurama vs Karasu opens; fandom ep field 95-96(1st half); en-WP ch 96 'The Invisible Feat!!' = fandom 95 (Karasu's invisible bombs) content-consistent", "sources": ["https://yuyuhakusho.fandom.com/wiki/Episode_55", "https://en.wikipedia.org/wiki/List_of_YuYu_Hakusho_chapters"]},
+    {"episode": 56, "end_chapter": 97, "start_chapter": 96, "chapters_adapted": "96 (second half), 97", "volume": 11,
+     "confidence": "high", "note": "Yoko transformation and the sacrificial finish vs Karasu — en-WP ch 98 'Sacrifice...!!' = fandom 97", "sources": ["https://yuyuhakusho.fandom.com/wiki/Episode_56", "https://en.wikipedia.org/wiki/List_of_YuYu_Hakusho_chapters"]},
+    {"episode": 57, "end_chapter": 98, "start_chapter": 98, "chapters_adapted": "98", "volume": 11,
+     "confidence": "high", "note": "single chapter padded to a full episode; en-WP ch 99 'The Reason Behind the Armor!!' = fandom 98 namesakes ep title 'Beneath Bui's Armor'", "sources": ["https://yuyuhakusho.fandom.com/wiki/Episode_57", "https://en.wikipedia.org/wiki/List_of_YuYu_Hakusho_chapters"]},
+    {"episode": 58, "end_chapter": 99, "start_chapter": 99, "chapters_adapted": "99", "volume": 11,
+     "confidence": "high", "note": "Hiei devours the Dragon of the Darkness Flame — en-WP ch 100 'Eat or be Eaten!!' = fandom 99; single chapter, full episode", "sources": ["https://yuyuhakusho.fandom.com/wiki/Episode_58", "https://en.wikipedia.org/wiki/List_of_YuYu_Hakusho_chapters"]},
+    {"episode": 59, "end_chapter": 101, "start_chapter": 100, "chapters_adapted": "100, 101 (first half)", "volume": 12,
+     "confidence": "high", "note": "Kuwabara vs Elder Toguro — en-WP ch 101 'Kuwabara Snaps!!' = fandom 100; END 101 = first ch of v12 (fandom numbering)", "sources": ["https://yuyuhakusho.fandom.com/wiki/Episode_59", "https://en.wikipedia.org/wiki/List_of_YuYu_Hakusho_chapters"]},
+    {"episode": 60, "end_chapter": 102, "start_chapter": 101, "chapters_adapted": "101 (second half), 102", "volume": 12,
+     "confidence": "high", "note": "en-WP ch 103 'Sakyō's Proposal!!' = fandom 102 namesakes ep title 'Sakyo's Proposal'; Elder Toguro finished", "sources": ["https://yuyuhakusho.fandom.com/wiki/Episode_60", "https://en.wikipedia.org/wiki/List_of_YuYu_Hakusho_chapters"]},
+    {"episode": 61, "end_chapter": 104, "start_chapter": 103, "chapters_adapted": "103-104", "volume": 12,
+     "confidence": "high", "note": "championship match begins — en-WP ch 104 'The Championship Match Begins!!' = fandom 103; matches ep title 'Yusuke vs. Toguro'", "sources": ["https://yuyuhakusho.fandom.com/wiki/Episode_61", "https://en.wikipedia.org/wiki/List_of_YuYu_Hakusho_chapters"]},
+    {"episode": 62, "end_chapter": 106, "start_chapter": 105, "chapters_adapted": "105-106", "volume": 12,
+     "confidence": "high", "note": "Toguro unseals 100% — en-WP ch 106 'Undo the Seal!!' = fandom 105; matches ep title 'Toguro's Full Power'", "sources": ["https://yuyuhakusho.fandom.com/wiki/Episode_62", "https://en.wikipedia.org/wiki/List_of_YuYu_Hakusho_chapters"]},
+    {"episode": 63, "end_chapter": 108, "start_chapter": 107, "chapters_adapted": "107-108", "volume": 12,
+     "confidence": "high", "note": "Toguro kills Kuwabara to draw out Yusuke's rage — en-WP ch 108/109 'Insufficient Fury!!'/'Testing the Limits!!' = fandom 107/108; matches ep title 'Yusuke's Despair'", "sources": ["https://yuyuhakusho.fandom.com/wiki/Episode_63", "https://en.wikipedia.org/wiki/List_of_YuYu_Hakusho_chapters"]},
+    {"episode": 64, "end_chapter": 110, "start_chapter": 109, "chapters_adapted": "109-110", "volume": 13,
+     "confidence": "high", "note": "en-WP ch 110/111 'The Crucial Difference!!'/'Full Power One Last Time!!' = fandom 109/110; spans v12/v13 boundary (fandom 110 = first ch of v13, per fandom Chapter 110 page and en-WP shifted list)", "sources": ["https://yuyuhakusho.fandom.com/wiki/Episode_64", "https://en.wikipedia.org/wiki/List_of_YuYu_Hakusho_chapters"]},
+    {"episode": 65, "end_chapter": 111, "start_chapter": 111, "chapters_adapted": "111", "volume": 13,
+     "confidence": "high", "note": "the final full-power exchange — en-WP ch 112 'The Most Fervent Wish!!' = fandom 111; single chapter, full episode; hands off cleanly to stored ep66→112", "sources": ["https://yuyuhakusho.fandom.com/wiki/Episode_65", "https://en.wikipedia.org/wiki/List_of_YuYu_Hakusho_chapters"]}
+  ],
+  "continue_points": [
+    {"episode": 45, "continue_chapter": 80, "note": "ends mid-ch 80 (first half adapted)"},
+    {"episode": 47, "continue_chapter": 83, "note": "ends mid-ch 83 (first half adapted)"},
+    {"episode": 49, "continue_chapter": 86, "note": "ends mid-ch 86 (first half adapted)"},
+    {"episode": 53, "continue_chapter": 93, "note": "ends mid-ch 93 (first half adapted)"},
+    {"episode": 55, "continue_chapter": 96, "note": "ends mid-ch 96 (first half adapted)"},
+    {"episode": 59, "continue_chapter": 101, "note": "ends mid-ch 101 (first half adapted)"}
+  ],
+  "annotations": [
+    {"episodes": [52], "kind": "partial", "chapters": "89 (end only)", "note": "cold-open re-covers only the ending of ch 89 (already anchored to ep 51); start counted at 90 per majority rule"},
+    {"episodes": [52], "kind": "divergence", "chapters": "89-91", "note": "minor: manga's Dark Tournament invitation flashback shows the Demon Triad; anime substitutes two generic emissaries (fandom ep 52 trivia)"},
+    {"episodes": [57], "kind": "divergence", "chapters": "98", "note": "single chapter (Hiei vs Bui) padded to a full episode"},
+    {"episodes": [58], "kind": "divergence", "chapters": "99", "note": "single chapter padded to a full episode; Bui's manga cameo at the Yusuke-Toguro fight is cut in the anime (fandom ep 58 trivia)"}
+  ],
+  "type_corrections": [],
+  "repairs": [],
+  "structure": {
+    "notes": "Task label said 'Chapter Black saga, chs ~113-152' but eps 45-65 are the Dark Tournament semifinals/finals adapting fandom/JP chs 79-111 (Chapter Black = eps 67-94, already recorded from batch 12). Numbering caution CONFIRMED and quantified: en-Wikipedia's chapter list runs exactly +1 vs fandom/JP in this range (en-WP N+1 = fandom N), proven by matched volume blocks (fandom v10=82-91 vs en-WP v10=83-92, etc.) and by title identity (fandom ch 90 'The Dreadful 80% Power!!' = en-WP ch 091). All anchors above are in fandom/JP numbering, matching stored data. Volume boundaries in fandom numbering: v9 ends at 81, v10=82-91, v11=92-100, v12=101-109, v13=110-118 (fandom chapter-page volume fields and en-WP list agree after the shift). Continuous adaptation, no skipped chapters 79-112, ~1.5 ch/ep with alternating half-chapter splits — same cadence batch 12 verified for eps 67-94. Season 2 = eps 26-66 (41 eps) adapting vols 6-13 (en-WP season 2 article).",
+    "order_only": []
+  },
+  "flags_for_sean": [
+    "Task-prompt label mismatch (cosmetic, no data impact): eps 45-65 were labeled 'Chapter Black saga chs ~113-152' but are the Dark Tournament finals, chs 79-111 fandom numbering; researched the actual range, both brackets (ep44→77-78, ep66→112) reconfirmed."
+  ]
+}

@@ -1,0 +1,57 @@
+{
+  "series_id": "bleach",
+  "summary": "Eps 111-126 (Arrancar arrival, season 6) adapt chs 186-226 nearly linearly at ~2-3 chapters/episode, closing the gap between the existing ep110 (end 186) and ep127 (227-229) anchors exactly. bleach.fandom.com episode infoboxes carry page-precise chapter fields for every episode; animefillerguide's chapter table agrees on every episode's chapter span, and Wikipedia's Bleach season 6 article independently confirms the block (eps 110-131 adapt 'the rest of the 21st volume to the 26th volume (chapters 183-229)' minus filler 128-131). Only structural wrinkles: several episodes end mid-chapter (page splits recorded), ep 119 stretches ch 206 p.1-16 into a full episode (already annotated batch 10), and ep 124 touches ch 221 only via a single-page sliver (p.3) with the bulk of 221 in ep 125. No contradictions with stored anchors or annotations; no repairs.",
+  "anchors": [
+    {"episode": 111, "end_chapter": 187, "start_chapter": 186, "chapters_adapted": "186 (p.4-21), 187", "volume": 21,
+     "confidence": "high", "note": "picks up mid-186 where ep 110 stopped (bulk of 186 is here, so START=186); mixed ep but chapter content per both sources", "sources": ["https://bleach.fandom.com/wiki/Episode_111", "https://www.animefillerguide.com/anime/bleach/"]},
+    {"episode": 112, "end_chapter": 190, "start_chapter": 188, "chapters_adapted": "188-189, 190 (p.1-5)", "volume": 22,
+     "confidence": "high", "note": "ends 5 pages into 190", "sources": ["https://bleach.fandom.com/wiki/Episode_112", "https://www.animefillerguide.com/anime/bleach/"]},
+    {"episode": 113, "end_chapter": 192, "start_chapter": 190, "chapters_adapted": "190 (p.7-19), 191, 192 (p.1-17)", "volume": 22,
+     "confidence": "high", "note": "190 tail is the bulk of the chapter -> START=190; ends p.17 of 192 (fandom skips p.6 of 190 between eps 112/113)", "sources": ["https://bleach.fandom.com/wiki/Episode_113", "https://www.animefillerguide.com/anime/bleach/"]},
+    {"episode": 114, "end_chapter": 195, "start_chapter": 193, "chapters_adapted": "192 (p.18-19), 193-195", "volume": 22,
+     "confidence": "high", "note": "2-page leading tail of 192 is not the bulk -> START=193", "sources": ["https://bleach.fandom.com/wiki/Episode_114", "https://www.animefillerguide.com/anime/bleach/"]},
+    {"episode": 115, "end_chapter": 197, "start_chapter": 196, "chapters_adapted": "196-197", "volume": 22,
+     "confidence": "high", "note": "clean two-chapter episode, closes vol 22", "sources": ["https://bleach.fandom.com/wiki/Episode_115", "https://www.animefillerguide.com/anime/bleach/"]},
+    {"episode": 116, "end_chapter": 200, "start_chapter": 198, "chapters_adapted": "198-199, 200 (p.1-6)", "volume": 23,
+     "confidence": "high", "note": "mixed ep (padding); ends 6 pages into 200", "sources": ["https://bleach.fandom.com/wiki/Episode_116", "https://www.animefillerguide.com/anime/bleach/"]},
+    {"episode": 117, "end_chapter": 202, "start_chapter": 200, "chapters_adapted": "200 (p.7-19), 201-202", "volume": 23,
+     "confidence": "high", "note": "200 tail is the bulk -> START=200", "sources": ["https://bleach.fandom.com/wiki/Episode_117", "https://www.animefillerguide.com/anime/bleach/"]},
+    {"episode": 118, "end_chapter": 205, "start_chapter": 203, "chapters_adapted": "203-205", "volume": 23,
+     "confidence": "high", "note": "Ikkaku bankai block; closes vol 23's mainline chapters", "sources": ["https://bleach.fandom.com/wiki/Episode_118", "https://www.animefillerguide.com/anime/bleach/"]},
+    {"episode": 119, "end_chapter": 206, "start_chapter": 206, "chapters_adapted": "206 (p.1-16)", "volume": 24,
+     "confidence": "high", "note": "single stretched chapter with heavy padding (matches existing batch-10 annotation {206-209} on 119/120)", "sources": ["https://bleach.fandom.com/wiki/Episode_119", "https://www.animefillerguide.com/anime/bleach/"]},
+    {"episode": 120, "end_chapter": 209, "start_chapter": 207, "chapters_adapted": "206 (p.17-19), 207-209", "volume": 24,
+     "confidence": "high", "note": "3-page tail of 206 not the bulk -> START=207", "sources": ["https://bleach.fandom.com/wiki/Episode_120", "https://www.animefillerguide.com/anime/bleach/"]},
+    {"episode": 121, "end_chapter": 213, "start_chapter": 210, "chapters_adapted": "210-212, 213 (p.1-9)", "volume": 24,
+     "confidence": "high", "note": "ends p.9 of 213", "sources": ["https://bleach.fandom.com/wiki/Episode_121", "https://www.animefillerguide.com/anime/bleach/"]},
+    {"episode": 122, "end_chapter": 216, "start_chapter": 213, "chapters_adapted": "213 (p.10-end), 214-215, 216 (p.1-4)", "volume": 25,
+     "confidence": "high", "note": "fandom lists 213 without pages here; remainder after ep 121's p.1-9 is the bulk -> START=213; ends 4 pages into 216", "sources": ["https://bleach.fandom.com/wiki/Episode_122", "https://www.animefillerguide.com/anime/bleach/"]},
+    {"episode": 123, "end_chapter": 218, "start_chapter": 216, "chapters_adapted": "216 (p.5-19), 217-218", "volume": 25,
+     "confidence": "high", "note": "216 tail is the bulk -> START=216", "sources": ["https://bleach.fandom.com/wiki/Episode_123", "https://www.animefillerguide.com/anime/bleach/"]},
+    {"episode": 124, "end_chapter": 220, "start_chapter": 219, "chapters_adapted": "219-220, 221 (p.3 sliver)", "volume": 25,
+     "confidence": "high", "note": "mixed ep (both sources); touches only a single page of 221 (fandom: 'Chapter 221 (page 3)') so END held at 220 per sliver rule — bulk of 221 is ep 125", "sources": ["https://bleach.fandom.com/wiki/Episode_124", "https://www.animefillerguide.com/anime/bleach/"]},
+    {"episode": 125, "end_chapter": 223, "start_chapter": 221, "chapters_adapted": "221 (p.4-19), 222-223", "volume": 25,
+     "confidence": "high", "note": "221 tail is the bulk -> START=221; closes vol 25", "sources": ["https://bleach.fandom.com/wiki/Episode_125", "https://www.animefillerguide.com/anime/bleach/"]},
+    {"episode": 126, "end_chapter": 226, "start_chapter": 224, "chapters_adapted": "224-226", "volume": 26,
+     "confidence": "high", "note": "hands off cleanly to existing ep127 anchor (start 227); season-range endpoint also per Wikipedia season 6 (chs 183-229)", "sources": ["https://bleach.fandom.com/wiki/Episode_126", "https://www.animefillerguide.com/anime/bleach/", "https://en.wikipedia.org/wiki/Bleach_season_6"]}
+  ],
+  "continue_points": [
+    {"episode": 112, "continue_chapter": 190, "note": "ends p.5 of ch 190"},
+    {"episode": 113, "continue_chapter": 192, "note": "ends p.17 of ch 192"},
+    {"episode": 116, "continue_chapter": 200, "note": "ends p.6 of ch 200"},
+    {"episode": 119, "continue_chapter": 206, "note": "ends p.16 of ch 206"},
+    {"episode": 121, "continue_chapter": 213, "note": "ends p.9 of ch 213"},
+    {"episode": 122, "continue_chapter": 216, "note": "ends p.4 of ch 216"}
+  ],
+  "annotations": [
+    {"episodes": [124], "kind": "partial", "chapters": "221", "note": "only p.3 of ch 221 appears (single-page sliver/flash-forward); the chapter proper is adapted in ep 125 — END held at 220"},
+    {"episodes": [113], "kind": "partial", "chapters": "190", "note": "fandom page fields skip ch 190 p.6 entirely (ep 112 takes p.1-5, ep 113 takes p.7-19) — likely a spread counted once"}
+  ],
+  "type_corrections": [],
+  "repairs": [],
+  "structure": {
+    "notes": "Eps 110-131 = season 6 'Arrancar: The Arrival'; Wikipedia states it adapts chs 183-229 (rest of vol 21 through vol 26), filler at 128-131 — endpoints match the existing ep110/ep127 anchors exactly. Adaptation is linear with mid-chapter episode splits throughout; page splits taken from fandom infobox chapter fields, corroborated chapter-for-chapter by animefillerguide. Volume boundaries from Wikipedia chapter lists: v21 ends 187, v22=188-197, v23=198-205 (+2 '0.side' bonus chapters, not counted), v24=206-214, v25=215-223, v26=224-233. Chapter space is the standard 1-479 mainline numbering (Wikipedia/fandom); no conversion needed. Stored mixed types on 111/116/119/120/124 are compatible (afg marks 124 Mixed, rest Canon — no 2-source basis to change ours).",
+    "order_only": []
+  },
+  "flags_for_sean": []
+}
