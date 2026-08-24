@@ -466,7 +466,13 @@ async function main() {
           if (!DRY) {
             const prev = byEp.get(ep)!;
             const note = `${String(prev.note ?? '')} | REPAIR (${B}): ${r.why ?? why}`.slice(0, 1200);
-            const { error } = await db.from('chapter_anchors').update({ [col]: r.new as never, note }).eq('series_id', sid).eq('episode', ep);
+            // a repaired value is a RESEARCHED value — it must live at the
+            // manual tier. Derivation-tier rows (mu/afg/afg-continua) are
+            // wipe-and-re-derive by contract: hikaru ep75's 166→148 repair
+            // sat on a mu row and the next frontier pass wiped it back to
+            // 166 (2026-08-24). Research-tier sources keep their provenance.
+            const src = ['mu', 'afg', 'afg-continua'].includes(prev.source) ? 'manual' : prev.source;
+            const { error } = await db.from('chapter_anchors').update({ [col]: r.new as never, note, source: src }).eq('series_id', sid).eq('episode', ep);
             if (error) throw new Error(`repair ${sid} ep${ep}: ${error.message}`);
           }
           totals.appliedRepairs++;

@@ -20327,15 +20327,50 @@ function parseCoverageAll(text) {
   const ep = pairs.length === 1 ? text.match(/EP\.?\s*(\d+)/i) : null;
   return { pairs, explicitEp: ep ? Number(ep[1]) : null };
 }
+var MU_FRONTIER_SUPPRESSED = {
+  // The entry's seasons adapt THREE different manga (S1 eps 1-10 = the 1st
+  // series' 14-chapter space, 2wei!/Herz!, 3rei!!) but the entry holds ONE
+  // chapter space. MU's "Vol 2, Chap 14" states S1's completion of the
+  // FIRST manga; the run-end assumption would land it on ep 42 — the movie,
+  // which adapts 3rei!! 29-39. The scope-consumed check misses it by one
+  // chapter (research ENDs stop at 13; 14 is the unadapted epilogue).
+  // Retire when the D2 split (Clear-Card-style scoped entries) lands.
+  "fate-kaleid-liner-prisma-illya": "multi-manga entry pending the D2 split \u2014 the MU pin conflates S1's first-manga completion onto the 3rei!!-adapting movie episode"
+};
 async function applyMuFrontier(runId, s, muEnd, nonMuMaxEp, nonMuMaxCh) {
   await db.from("chapter_anchors").delete().eq("series_id", s.id).eq("source", "mu");
+  if (MU_FRONTIER_SUPPRESSED[s.id]) return "suppressed";
   const { pairs, explicitEp } = parseCoverageAll(muEnd);
   const scopeStart = s.manga_start_chapter ?? 1;
   const scopeEnd = s.total_chapters ?? Number.POSITIVE_INFINITY;
-  const inScope = pairs.filter((p) => p.chapter >= scopeStart && p.chapter <= scopeEnd);
-  if (!inScope.length) return "no_coverage";
+  const { data: srow } = await db.from("series").select("latest_known_chapters, manga_anilist_id").eq("id", s.id).maybeSingle();
+  let ceiling = Number.POSITIVE_INFINITY;
+  let ceilingSib = null;
+  if (srow?.manga_anilist_id != null) {
+    const { data: sibs } = await db.from("series").select("id, manga_start_chapter").eq("manga_anilist_id", srow.manga_anilist_id).neq("id", s.id);
+    for (const sib of sibs ?? []) {
+      const sibStart = sib.manga_start_chapter ?? 1;
+      if (sibStart > scopeStart && sibStart < ceiling) {
+        ceiling = sibStart;
+        ceilingSib = sib.id;
+      }
+    }
+  }
+  const inBand = pairs.filter((p) => p.chapter >= scopeStart && p.chapter <= scopeEnd);
+  const inScope = inBand.filter((p) => p.chapter < ceiling);
+  if (!inScope.length) {
+    if (inBand.length) {
+      await fileFlagOnce(runId, s.id, "mangaupdates", "count_mismatch", {
+        muPairs: inBand,
+        siblingCeiling: ceiling,
+        siblingId: ceilingSib,
+        note: `MU coverage pairs all sit at/past sibling entry '${ceilingSib}' scope start ${ceiling} \u2014 successor-entry endpoints, not this entry's frontier; withheld (D1 sibling-scope ceiling)`
+      });
+      return "refused_sibling_scope";
+    }
+    return "no_coverage";
+  }
   const coverage = inScope.reduce((a, b) => b.chapter > a.chapter ? b : a);
-  const { data: srow } = await db.from("series").select("latest_known_chapters").eq("id", s.id).maybeSingle();
   const spaceMax = Math.max(s.total_chapters ?? 0, srow?.latest_known_chapters ?? 0);
   let converted = null;
   const latest = srow?.latest_known_chapters ?? null;
@@ -20358,6 +20393,27 @@ async function applyMuFrontier(runId, s, muEnd, nonMuMaxEp, nonMuMaxCh) {
   if (nonMuMaxEp !== void 0 && nonMuMaxEp >= episode) return "skipped_fresh";
   const { data: holder } = await db.from("chapter_anchors").select("source").eq("series_id", s.id).eq("episode", episode).maybeSingle();
   if (holder && holder.source !== "mu") return "skipped_fresh";
+  const scopeCap = Math.min(scopeEnd, ceiling - 1);
+  if (nonMuMaxCh !== void 0 && Number.isFinite(scopeCap) && nonMuMaxCh >= scopeCap) {
+    await fileFlagOnce(runId, s.id, "mangaupdates", "count_mismatch", {
+      pinEpisode: episode,
+      muCoverageChapter: coverage.chapter,
+      nonMuMaxCh,
+      scopeCap,
+      note: "non-MU anchors already consume this entry's whole chapter scope but the MU pin episode extends beyond them \u2014 the trailing episodes cannot adapt this scope; frontier withheld (D1 scope-consumed)"
+    });
+    return "refused_scope_consumed";
+  }
+  const { data: epRow } = await db.from("episodes").select("type").eq("series_id", s.id).eq("number", episode).maybeSingle();
+  if (epRow && epRow.type !== "canon" && epRow.type !== "mixed") {
+    await fileFlagOnce(runId, s.id, "mangaupdates", "count_mismatch", {
+      pinEpisode: episode,
+      episodeType: epRow.type,
+      muCoverageChapter: coverage.chapter,
+      note: `MU frontier pin lands on a ${epRow.type} episode \u2014 A1 forbids the anchor; withheld for research to place the honest terminal on the last canon/mixed episode (D1 episode-type refusal)`
+    });
+    return "refused_episode_type";
+  }
   const { error } = await db.from("chapter_anchors").upsert({
     series_id: s.id,
     episode,

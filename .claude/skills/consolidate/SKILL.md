@@ -24,7 +24,7 @@ Two modes:
 Grep every write site and confirm it goes through the shared gates:
 - `grep -rn "from('episodes')" scripts/ supabase/functions/_src/ | grep -v "select\|delete"` — every insert must pass **filterEpisodeRows** (source-numbering translation → community caps → type overrides).
 - `latest_known_chapters:` writers must use **bestLatestKnown** (same-edition band + chapter-floor + status-string fallback).
-- `from('chapter_anchors')` writers: AFG chart via **syncAnchors** (chapter-space gate + curated-precedence skip), MU via **applyMuFrontier** (scope parse, chapter-space, airing-pin rule, curated precedence), continua via **applyContinua** (identity guard, sanity band, numbering conversion, precedence, suppressions). Manual/research anchors are the trusted tier.
+- `from('chapter_anchors')` writers: AFG chart via **syncAnchors** (chapter-space gate + curated-precedence skip), MU via **applyMuFrontier** (scope parse, sibling-scope ceiling, chapter-space, airing-pin rule, scope-consumed, A1 episode-type, MU_FRONTIER_SUPPRESSED, pin-episode redundancy, curated precedence — the D1 gate stack, 2026-08-24), continua via **applyContinua** (identity guard, sanity band, numbering conversion, precedence, suppressions). Manual/research anchors are the trusted tier — and REPAIRS to derivation-tier rows must flip the source to manual (the hikaru ep-75 wipe): a repaired value on a mu/afg/afg-continua row is deleted by that source's next re-derive.
 - Any NEW writer found without gates: wire it through the lib, never inline.
 
 ## 2. Lib → edges
@@ -50,6 +50,7 @@ parse wouldn't produce. AFG: re-parse `ingest_afg_pages.raw_html` into
 - **ruling_violation MUST be 0** — anything else means a writer bypassed a gate; fix the writer, never the data alone.
 - anchor_nonmonotonic / anchor_beyond_chapter_space: each hit is triaged (real reorder → annotate; junk → gate + delete; ruled → suppression), never left unexplained.
 - anchor_beyond_display_total (Sean's Tokyo Ghoul 144/143 rule, 2026-08-24): any END/START/CONTINUE above the same-edition-band display total is a count-space value in a number-space instrument — convert to the chapter number (applyMuFrontier does this for MU pins at the writer; other sources: fix the value + note the conversion), never leave one standing.
+- anchor_on_noncanon_row (A1 outcome check, 2026-08-24): an anchor from ANY source on a filler/anime-only row. Each hit is a triage FORK — junk anchor (delete via research, honest terminal on the last canon/mixed ep) or WRONG ROW TYPE (research anchored it deliberately — retype) — never auto-delete. The MU writer refuses these at the source (D1); extending the gate to AFG writers is Sean's open D4.
 - Compare every class count to the previous census; explain each delta.
 - Review-queue classes (special_numbered_unreviewed, fractional_unmodeled, asterisk_unreviewed) are Sean's — list them, RESEARCH each item first (web, 2+ sources, citations), present verdicts with context, never raw numbers.
 

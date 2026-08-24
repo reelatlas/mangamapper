@@ -5,10 +5,12 @@
 // MU's anime field is MULTI-SEGMENT prose (MHA lists every season's endpoint;
 // Naruto's covers three series with an EP number belonging to the Boruto
 // clause): parse ALL Vol/Chap pairs, pick the largest inside THIS series'
-// scope segment, require chapter progress beyond existing non-MU anchors
-// (else it's the same stale frontier), and trust an EP pin only when the
-// text holds exactly one pair. 'mu' anchors are derivations — refreshing a
-// series deletes and re-derives its row so rule fixes heal everything.
+// scope segment, and trust an EP pin only when the text holds exactly one
+// pair. The write is behind five gates — sibling-scope ceiling, chapter-space,
+// airing-pin, scope-consumed, A1 episode-type — plus the pin-episode
+// redundancy skip and curated precedence. 'mu' anchors are derivations —
+// refreshing a series deletes and re-derives its row so rule fixes heal
+// everything.
 
 import { db, fileFlagOnce } from './db';
 
@@ -35,7 +37,33 @@ export interface FrontierSeries {
   status?: string | null;
 }
 
-export type FrontierResult = 'applied' | 'skipped_fresh' | 'no_progress' | 'no_coverage' | 'out_of_space';
+export type FrontierResult =
+  | 'applied'
+  | 'skipped_fresh'
+  | 'no_progress'
+  | 'no_coverage'
+  | 'out_of_space'
+  | 'refused_sibling_scope'
+  | 'refused_scope_consumed'
+  | 'refused_episode_type'
+  | 'suppressed';
+
+// Curated MU-frontier suppressions (declarative records, Sean's D1 ruling
+// 2026-08-24): entries whose MU pin is WRONG for a reason NO structural gate
+// can derive from held data. Each entry states its reasoning and the
+// condition that retires it. The delete-at-entry still runs, so a standing
+// bad pin heals on the next pass; the suppression only blocks the rewrite.
+export const MU_FRONTIER_SUPPRESSED: Record<string, string> = {
+  // The entry's seasons adapt THREE different manga (S1 eps 1-10 = the 1st
+  // series' 14-chapter space, 2wei!/Herz!, 3rei!!) but the entry holds ONE
+  // chapter space. MU's "Vol 2, Chap 14" states S1's completion of the
+  // FIRST manga; the run-end assumption would land it on ep 42 — the movie,
+  // which adapts 3rei!! 29-39. The scope-consumed check misses it by one
+  // chapter (research ENDs stop at 13; 14 is the unadapted epilogue).
+  // Retire when the D2 split (Clear-Card-style scoped entries) lands.
+  'fate-kaleid-liner-prisma-illya':
+    'multi-manga entry pending the D2 split — the MU pin conflates S1\'s first-manga completion onto the 3rei!!-adapting movie episode',
+};
 
 // nonMuMaxEp/nonMuMaxCh: the series' anchor maxima EXCLUDING source 'mu'
 // (undefined when the series has no non-MU anchors at all).
@@ -47,12 +75,61 @@ export async function applyMuFrontier(
   nonMuMaxCh: number | undefined,
 ): Promise<FrontierResult> {
   await db.from('chapter_anchors').delete().eq('series_id', s.id).eq('source', 'mu');
+  if (MU_FRONTIER_SUPPRESSED[s.id]) return 'suppressed';
 
   const { pairs, explicitEp } = parseCoverageAll(muEnd);
   const scopeStart = s.manga_start_chapter ?? 1;
   const scopeEnd = s.total_chapters ?? Number.POSITIVE_INFINITY;
-  const inScope = pairs.filter((p) => p.chapter >= scopeStart && p.chapter <= scopeEnd);
-  if (!inScope.length) return 'no_coverage';
+
+  const { data: srow } = await db
+    .from('series')
+    .select('latest_known_chapters, manga_anilist_id')
+    .eq('id', s.id)
+    .maybeSingle();
+
+  // SIBLING-SCOPE CEILING (Sean's D1 ruling, 2026-08-24, the batch-17
+  // franchise-conflation class — ace-ii ep52→259, yowamushi ep38→544): a
+  // sequel's endpoint sits INSIDE the manga's chapter space, so the
+  // chapter-space gate can't tell it from this entry's own frontier. When
+  // sibling entries share the manga, the successors' scope starts bound this
+  // entry from above: Naruto's pin can never claim Shippuden's chapters.
+  // Pairs at/past the ceiling are OUT OF SCOPE for this entry — filtering
+  // them (rather than refusing outright) lets the multi-segment parse pick
+  // this entry's OWN labeled endpoint, exactly as scopeStart already does
+  // for later entries.
+  let ceiling = Number.POSITIVE_INFINITY;
+  let ceilingSib: string | null = null;
+  if (srow?.manga_anilist_id != null) {
+    const { data: sibs } = await db
+      .from('series')
+      .select('id, manga_start_chapter')
+      .eq('manga_anilist_id', srow.manga_anilist_id)
+      .neq('id', s.id);
+    for (const sib of sibs ?? []) {
+      const sibStart = sib.manga_start_chapter ?? 1;
+      if (sibStart > scopeStart && sibStart < ceiling) {
+        ceiling = sibStart;
+        ceilingSib = sib.id;
+      }
+    }
+  }
+
+  const inBand = pairs.filter((p) => p.chapter >= scopeStart && p.chapter <= scopeEnd);
+  const inScope = inBand.filter((p) => p.chapter < ceiling);
+  if (!inScope.length) {
+    if (inBand.length) {
+      // every candidate belongs to a successor entry's scope — MU's text
+      // holds nothing for THIS entry; withhold + flag, never write
+      await fileFlagOnce(runId, s.id, 'mangaupdates', 'count_mismatch', {
+        muPairs: inBand,
+        siblingCeiling: ceiling,
+        siblingId: ceilingSib,
+        note: `MU coverage pairs all sit at/past sibling entry '${ceilingSib}' scope start ${ceiling} — successor-entry endpoints, not this entry's frontier; withheld (D1 sibling-scope ceiling)`,
+      });
+      return 'refused_sibling_scope';
+    }
+    return 'no_coverage';
+  }
   const coverage = inScope.reduce((a, b) => (b.chapter > a.chapter ? b : a));
 
   // CHAPTER-SPACE gate on MU pins (Sean 2026-08-23, the Slime/4KOTA class):
@@ -60,11 +137,6 @@ export async function applyMuFrontier(
   // entry (Slime held only S1's 24 eps) the largest pair lands a chapter the
   // entry's own space can't contain. A pin past max(total, latest_known)+10
   // is a structure/edition mismatch: withhold + flag, never write.
-  const { data: srow } = await db
-    .from('series')
-    .select('latest_known_chapters')
-    .eq('id', s.id)
-    .maybeSingle();
   const spaceMax = Math.max(s.total_chapters ?? 0, srow?.latest_known_chapters ?? 0);
   // COUNT-SPACE → NUMBER-SPACE conversion (Sean's Tokyo Ghoul 144/143 report,
   // 2026-08-24): for a finished manga where AniList's total is a COUNT and
@@ -125,6 +197,51 @@ export async function applyMuFrontier(
     .eq('episode', episode)
     .maybeSingle();
   if (holder && holder.source !== 'mu') return 'skipped_fresh';
+
+  // SCOPE-CONSUMED refusal (Sean's D1 ruling, 2026-08-24, the prisma-illya
+  // case): research anchors already reach the END of this entry's scope
+  // (its total, or the last chapter below the sibling ceiling), yet the pin
+  // episode extends BEYOND all research — the pin would claim later episodes
+  // still sit inside a space that is fully adapted. Those episodes adapt
+  // something else (a different manga, a sequel scope) or nothing; a
+  // frontier pin there can only be conflation. Placed after the redundancy
+  // skips so a fully-researched series (research to the run end AND the
+  // scope end) stays a silent skipped_fresh, never a flag.
+  const scopeCap = Math.min(scopeEnd, ceiling - 1);
+  if (nonMuMaxCh !== undefined && Number.isFinite(scopeCap) && nonMuMaxCh >= scopeCap) {
+    await fileFlagOnce(runId, s.id, 'mangaupdates', 'count_mismatch', {
+      pinEpisode: episode,
+      muCoverageChapter: coverage.chapter,
+      nonMuMaxCh,
+      scopeCap,
+      note: 'non-MU anchors already consume this entry\'s whole chapter scope but the MU pin episode extends beyond them — the trailing episodes cannot adapt this scope; frontier withheld (D1 scope-consumed)',
+    });
+    return 'refused_scope_consumed';
+  }
+
+  // A1 at the writer (Sean's D1 ruling, 2026-08-24, the gantz/toriko case):
+  // filler and anime-only rows NEVER take anchors (A1, MHA ep 104) — a
+  // run-end pin landing on one states adaptation for an episode that adapts
+  // nothing. Refuse + flag; research records the honest terminal on the
+  // last canon/mixed episode instead (toriko ep146→253). Allow-list, so an
+  // unknown future type fails closed. A row-less episode can't be typed —
+  // the pin stands (synthesized-row entries keep their frontier).
+  const { data: epRow } = await db
+    .from('episodes')
+    .select('type')
+    .eq('series_id', s.id)
+    .eq('number', episode)
+    .maybeSingle();
+  if (epRow && epRow.type !== 'canon' && epRow.type !== 'mixed') {
+    await fileFlagOnce(runId, s.id, 'mangaupdates', 'count_mismatch', {
+      pinEpisode: episode,
+      episodeType: epRow.type,
+      muCoverageChapter: coverage.chapter,
+      note: `MU frontier pin lands on a ${epRow.type} episode — A1 forbids the anchor; withheld for research to place the honest terminal on the last canon/mixed episode (D1 episode-type refusal)`,
+    });
+    return 'refused_episode_type';
+  }
+
   const { error } = await db.from('chapter_anchors').upsert({
     series_id: s.id,
     episode,

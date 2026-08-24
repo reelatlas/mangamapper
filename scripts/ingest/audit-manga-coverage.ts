@@ -23,6 +23,13 @@ async function main() {
     active_anchored: [],
     active_synthesized: [],
     mu_frontier_applied: [],
+    // D1 refusals (Sean 2026-08-24): the gate already filed the flag inside
+    // the lib — surfaced as their own classes so a refused frontier never
+    // masquerades as "no MU coverage, needs research"
+    mu_refused_sibling_scope: [],
+    mu_refused_scope_consumed: [],
+    mu_refused_episode_type: [],
+    mu_suppressed: [],
     stale_anchor_no_frontier: [],
     pending_airing_no_frontier: [],
     pending_finished_unknown_coverage: [],
@@ -108,6 +115,14 @@ async function main() {
       }
       if (result === 'skipped_fresh') {
         classes.active_anchored.push(s.id);
+        continue;
+      }
+      if (result === 'refused_sibling_scope' || result === 'refused_scope_consumed' || result === 'refused_episode_type') {
+        classes[`mu_${result}`].push(s.id);
+        continue;
+      }
+      if (result === 'suppressed') {
+        classes.mu_suppressed.push(s.id);
         continue;
       }
       if (maxAnchor !== undefined) {

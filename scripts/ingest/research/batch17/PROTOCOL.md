@@ -50,7 +50,7 @@ necessarily every episode:
   continue point where ≠ END+1.
 - annotations for non-linear facts: kind ∈ rearranged | graft | partial | divergence | side_story | loose_parallel | abridged, with chapters + one-line why.
 - type corrections: mis-typed episodes per ≥2 sources.
-- repairs: if an EXISTING anchor in the context file is wrong, say so with evidence (old vs new). Never silently contradict stored data.
+- repairs: if an EXISTING anchor in the context file is wrong, say so with evidence (old vs new). Never silently contradict stored data. (Apply-script contract, 2026-08-24 hikaru lesson: an applied repair on a derivation-tier row — mu/afg/afg-continua — must flip the row's source to `manual`, or the source's next wipe-and-re-derive erases the repair.)
 
 ## Sources (≥2 independent sources per anchor, with URLs)
 - Fandom wikis via the MediaWiki API, NOT HTML (Cloudflare): `https://<wiki>.fandom.com/api.php?action=parse&page=<Page_Title>&prop=wikitext&format=json`. Episode pages carry "Manga counterpart"/"Chapters" fields; chapter pages carry the REVERSE mapping — a strong cross-check, and for some series the only per-episode source (walk the chapter pages).

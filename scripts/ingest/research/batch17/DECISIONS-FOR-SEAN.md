@@ -9,9 +9,29 @@ verify 220/220 with 0 failures.
 
 ---
 
-## D1. The MU franchise-conflation pattern — a gate is warranted (YOUR CALL)
+## D1. The MU franchise-conflation pattern — RULED & BUILT (Sean 2026-08-24: "build the gate")
 
-**This is the one real decision in the batch.** Five separate series had a
+**Status: DONE.** Three writer gates now live in `applyMuFrontier` (docs
+§10 + §12.43): the sibling-scope ceiling (a pin stays below the next
+sibling entry's scope start — implemented as a scope FILTER so the
+multi-segment parse still picks this entry's own labeled pair), the
+scope-consumed refusal (research already reaches the scope end but the pin
+episode extends beyond it), and the A1 episode-type refusal (no pin on
+filler/anime-only rows; allow-list canon/mixed). Prisma-illya, which no
+structural gate can decide (its ONE chapter space spans three manga), is
+held by the `MU_FRONTIER_SUPPRESSED` declarative record until the D2
+split. First catalog run: mu pins 80→66, 11 standing A1 violations healed,
+gantz/toriko/prisma re-poisoning blocked (all three were LIVE risks — MU's
+text still holds the bad pairs), TPN's divergent-ending ep 23 prevented as
+a bonus catch. Companion fixes: repairs now always land at the manual tier
+(hikaru ep75's repair had been wiped because it sat on a wipe-and-re-derive
+mu row — restored ch148/v17; mashle ep24 re-sourced), and the audit gained
+`anchor_on_noncanon_row` (A1 outcome verification for ANY source) — which
+found 49 pre-existing non-MU violations and produced D4 below.
+
+The original write-up, kept for the record:
+
+Five separate series had a
 MangaUpdates coverage pin that stated a *different, later* entry's endpoint and
 landed on a scoped entry as if it were that entry's frontier:
 
@@ -43,6 +63,34 @@ doesn't catch it.
 I'd go with the gate — this is the fourth distinct MU-pin failure mode we've
 found (after chapter-space, airing-pin, and count-space), and each one we
 gated has stayed fixed.
+
+## D4. Extend the A1 type gate to the AFG writers? (NEW — YOUR CALL, not urgent)
+
+Building D1's audit class surfaced **49 pre-existing anchors on
+filler/anime-only rows from NON-MU sources** (census class
+`anchor_on_noncanon_row`): 40 are AFG chart values (one-piece 19, dbz 7,
+ranma 6, black-clover, fairy-tail, inuyasha, slam-dunk, mashle, TPN's
+afg-continua row…) and 9 are manual research anchors (hunter-x-hunter
+1999, cardcaptor ep7, noragami ep12, dbz-kai…).
+
+Two different things are hiding in there, which is why it's a decision and
+not a rule application:
+
+- The **afg chart values** are position statements ("by this filler ep
+  you're at ch X") that A1 forbids as anchors. Gating the AFG writers the
+  way MU is now gated would delete ~40 of them — and until research
+  replaces them, interpolation on one-piece/dbz/ranma gets thinner.
+- The **manual anchors** were placed deliberately by research agents,
+  which usually means the ROW TYPE is wrong (cardcaptor ep 7 typed
+  "filler" while adapting ch 7 by exact match), not the anchor. Deleting
+  those would be destroying good data.
+
+**Recommendation**: do NOT extend the writer gate yet. Keep
+`anchor_on_noncanon_row` as a review queue (it holds the line — no NEW MU
+violations can occur, and the audit names every standing one), and let
+research batches triage each hit into "junk anchor → delete" vs "mistyped
+row → retype". Revisit the writer gate once the queue shows the afg hits
+are overwhelmingly junk.
 
 ## D2. prisma-illya should be split, Clear-Card style (recommendation)
 

@@ -82,7 +82,7 @@ async function main() {
     integrity_eps_beyond_total: [], integrity_total_beyond_eps: [], integrity_double_claimed: [],
     integrity_degenerate_span: degenerateSpans,
     special_numbered_unreviewed: [], anchor_gap_research: [], frontier_tail_null: [],
-    anchor_nonmonotonic: [], anchor_start_offtrend: [], anchor_beyond_chapter_space: [], anchor_beyond_display_total: [], anchor_fractional_chapter: [], boundaries_degenerate: [], ruling_violation: [],
+    anchor_nonmonotonic: [], anchor_start_offtrend: [], anchor_beyond_chapter_space: [], anchor_beyond_display_total: [], anchor_fractional_chapter: [], anchor_on_noncanon_row: [], boundaries_degenerate: [], ruling_violation: [],
     mu_pin_unverified: [],
     rearranged_zone_unanchored: [], rearranged_zone_acknowledged: [],
     title_incomplete: [], airdate_incomplete: [], asterisk_unreviewed: [],
@@ -346,6 +346,13 @@ async function main() {
       return [s.id, t != null && l != null && l < t && l >= t * 0.8 ? l : t] as const;
     }));
     const looseAll = new Set(series.filter((s: any) => s.mapping_mode === 'loose').map((s: any) => s.id));
+    // A1 outcome check (Sean's A1 ruling, MHA ep 104; writer-side D1 gate
+    // 2026-08-24): filler/anime-only rows never take anchors. applyMuFrontier
+    // refuses MU pins at the writer; this catches ANY source's violation
+    // standing in data. A hit means either the anchor is junk (delete via
+    // research, honest terminal on the last canon/mixed ep) or the row's
+    // TYPE is wrong — triage, never auto-delete.
+    const typeByEp = new Map(episodes.map((e: any) => [`${e.series_id}#${e.number}`, e.type]));
     for (const [sid, list] of bySeries) {
       // LOOSE series are ruled non-linear — their anchors are borrow-maps
       // rendered as stored; monotonicity is not a claim they make
@@ -401,6 +408,10 @@ async function main() {
         // episode adapts (Sean's amendment 2026-08-23).
         if (!Number.isInteger(a.chapter) && a.source !== 'manual' && a.source !== 'wiki') {
           classes.anchor_fractional_chapter.push(`${sid}: ep ${a.episode}→ch${a.chapter} (${a.source}) — bonus-chapter scrape? research the true value (bonus association belongs in episode_annotations)`);
+        }
+        const rowType = typeByEp.get(`${sid}#${a.episode}`);
+        if (rowType && rowType !== 'canon' && rowType !== 'mixed') {
+          classes.anchor_on_noncanon_row.push(`${sid}: ep ${a.episode}→ch${a.chapter} (${a.source}) anchored on a ${rowType} row — A1 forbids; junk anchor (delete, honest terminal on last canon/mixed ep) or wrong row type?`);
         }
       }
     }
