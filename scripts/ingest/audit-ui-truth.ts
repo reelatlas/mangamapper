@@ -82,7 +82,7 @@ async function main() {
     integrity_eps_beyond_total: [], integrity_total_beyond_eps: [], integrity_double_claimed: [],
     integrity_degenerate_span: degenerateSpans,
     special_numbered_unreviewed: [], anchor_gap_research: [], frontier_tail_null: [],
-    anchor_nonmonotonic: [], anchor_start_offtrend: [], anchor_beyond_chapter_space: [], anchor_beyond_display_total: [], anchor_fractional_chapter: [], ruling_violation: [],
+    anchor_nonmonotonic: [], anchor_start_offtrend: [], anchor_beyond_chapter_space: [], anchor_beyond_display_total: [], anchor_fractional_chapter: [], boundaries_degenerate: [], ruling_violation: [],
     mu_pin_unverified: [],
     rearranged_zone_unanchored: [], rearranged_zone_acknowledged: [],
     title_incomplete: [], airdate_incomplete: [], asterisk_unreviewed: [],
@@ -531,6 +531,20 @@ async function main() {
         const bad = rs.filter((b) => b.chapter_start > total);
         if (bad.length) classes.boundaries_beyond_total.push(`manga ${mid} (${ss.map((x) => x.id).join(', ')}) total ${total}: ${bad.map((b) => `v${b.volume}:${b.chapter_start}-${b.chapter_end ?? '?'}`).join(' ')}`);
       }
+      // IMPOSSIBLE rows (Sean's Sailor Moon "v3: chs 10-3" report, 2026-08-24):
+      // a boundary whose end precedes its start, or whose start does not exceed
+      // the previous volume's, is a parse artifact — each one silently
+      // mis-labels the volume of every chapter after it. Gated at parse time
+      // (lib/wikipedia boundariesWithDrops) and healed by
+      // heal-volume-boundaries.ts; this is the outcome check.
+      const ordered = [...rs].sort((a, b) => a.volume - b.volume);
+      const impossible: string[] = [];
+      for (let i = 0; i < ordered.length; i++) {
+        const b = ordered[i];
+        if (b.chapter_end != null && b.chapter_end < b.chapter_start) impossible.push(`v${b.volume}:${b.chapter_start}-${b.chapter_end} (end<start)`);
+        else if (i > 0 && b.chapter_start <= ordered[i - 1].chapter_start) impossible.push(`v${b.volume}:${b.chapter_start} (start ≤ v${ordered[i - 1].volume}'s ${ordered[i - 1].chapter_start})`);
+      }
+      if (impossible.length) classes.boundaries_degenerate.push(`manga ${mid} (${ss.map((x) => x.id).join(', ')}): ${impossible.slice(0, 6).join(' ')}${impossible.length > 6 ? ` …+${impossible.length - 6}` : ''} — run heal-volume-boundaries.ts`);
     }
   }
 

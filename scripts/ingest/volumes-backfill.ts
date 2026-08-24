@@ -14,7 +14,7 @@
 // Season II) instead of poisoning the readout; audit-ui-truth's
 // boundaries_wrong_page / boundaries_beyond_total classes verify outcome-side.
 
-import { findChapterPages, fetchWikitext, parseVolumes, toBoundaries, type WikiVolume } from './lib/wikipedia';
+import { findChapterPages, fetchWikitext, parseVolumes, boundariesWithDrops, type WikiVolume } from './lib/wikipedia';
 import { contentHash } from './lib/hash';
 import { db, startRun, finishRun, fileFlagOnce } from './lib/db';
 
@@ -120,7 +120,25 @@ async function main() {
           allVolumes.push(...parsed);
         }
 
-        let bounds = toBoundaries(allVolumes).filter((b) => b.chapterStart < 5000);
+        // MONOTONIC-START GATE (Sean 2026-08-24): boundariesWithDrops discards
+        // parsed volumes whose chapter_start does not exceed the previous
+        // one's — each such row would otherwise be written with an impossible
+        // end (derived as next-start − 1) and mis-label every later chapter's
+        // volume. Dropped volumes are flagged: the table ships self-consistent
+        // but thinner, and research can restore the true starts.
+        const parsedBounds = boundariesWithDrops(allVolumes);
+        if (parsedBounds.dropped.length) {
+          await fileFlagOnce(runId, `manga:${mangaId}`, 'wikipedia', 'parse_integrity', {
+            title: t.title,
+            pages,
+            kind_of_note: 'boundary_parse_artifact',
+            dropped: parsedBounds.dropped.slice(0, 20),
+            note: `${parsedBounds.dropped.length} volume row(s) had a chapter_start that does not exceed the previous volume's — parse artifacts, dropped rather than written as impossible rows`,
+          });
+          counters.flagged++;
+          actions.push(`${t.title}: ${parsedBounds.dropped.length} non-increasing volume start(s) dropped — flagged`);
+        }
+        let bounds = parsedBounds.boundaries.filter((b) => b.chapterStart < 5000);
         // finished manga with a known total: rows past the total belong to a
         // sequel/other series sharing the page — trim, clamp the last end
         let trimmed = 0;

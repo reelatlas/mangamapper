@@ -101,6 +101,7 @@ export const toEpisodes = (row: SeriesRow, eps: EpisodeRow[], anchors: AnchorRow
                 anchor.start_chapter != null && anchor.start_chapter !== anchor.chapter
                   ? `${anchor.start_chapter}-${anchor.chapter}`
                   : String(anchor.chapter),
+              start: anchor.start_chapter,
             }
           : null,
       airDate: e.air_date ?? '',
@@ -123,6 +124,7 @@ export const toEpisodes = (row: SeriesRow, eps: EpisodeRow[], anchors: AnchorRow
       mangaMapping: {
         volume: a.volume ?? volumeFor(row, a.chapter, boundaries),
         chapters: a.start_chapter != null && a.start_chapter !== a.chapter ? `${a.start_chapter}-${a.chapter}` : String(a.chapter),
+        start: a.start_chapter,
       },
       airDate: '',
     });

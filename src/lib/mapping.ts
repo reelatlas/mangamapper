@@ -238,6 +238,7 @@ export const canonEpStartCh = (anime: AnimeSeries, m: MappingSummary, ep: number
   const prev = prevCanonEp(m, ep);
   const myRegime = regimeAt(anime, m, epToCanonIdx(m, ep));
   let start: number;
+  let floor = Number.NEGATIVE_INFINITY; // no successor may pull the start below this
   if (prev === null) start = Math.min(end, ratios(anime, m).startCh);
   else {
     const prevEnd = canonEpToCh(anime, m, prev);
@@ -247,19 +248,34 @@ export const canonEpStartCh = (anime: AnimeSeries, m: MappingSummary, ep: number
     // the row's own end value when one is known)
     if (prevEnd !== null && (myRegime === null || regimeAt(anime, m, epToCanonIdx(m, prev)) !== myRegime || prevEnd > end)) return null;
     start = prevEnd === null ? end : Math.min(end, prevEnd + 1);
+    // the predecessor's OWN stated start (when it has an exact record) is the
+    // floor: this row may share or re-tread its chapters, but can never
+    // render as beginning before it did
+    const prevRow = anime.episodes.find((e) => e.number === prev);
+    const prevOwn = prevRow?.mangaMapping
+      ? prevRow.mangaMapping.start ?? parseInt(prevRow.mangaMapping.chapters.split(/[-,]/)[0], 10)
+      : null;
+    if (prevOwn != null && !Number.isNaN(prevOwn)) floor = prevOwn;
   }
   // Interpolated rows adjacent to an exact row can overshoot past that row's
   // REAL start by one (the end-curve doesn't know where the next episode
   // actually begins) — an episode can never start after its successor, so the
   // next exact row's span start caps every derived start before it
   // (the one-chapter-dip class, Sean 2026-08-23) — within ONE regime only: a
-  // successor that opens a jumped-back block says nothing about this row
+  // successor that opens a jumped-back block says nothing about this row.
+  // The `floor` guard is the same rule the regime check aims at, enforced
+  // locally so it also holds where regime detection is too coarse (Sean's
+  // Sailor Moon ep-72 report, 2026-08-24: ep 73 re-treads chs 15-17 after ep
+  // 71 reached 16, and the cap dragged ep 72's derived start back to 15 —
+  // rendering an episode as starting BEFORE its predecessor). A successor
+  // that reaches back past the predecessor's end is a reorder, and reorders
+  // never set a neighbour's position (the AoT-87 rule).
   for (const e of anime.episodes) {
     if (e.number <= ep || !e.mangaMapping) continue;
     if (e.type !== 'canon' && e.type !== 'mixed') continue;
     const s = parseInt(e.mangaMapping.chapters.split(/[-,]/)[0], 10);
     const nextRegime = regimeAt(anime, m, epToCanonIdx(m, e.number));
-    if (!Number.isNaN(s) && /[-,]/.test(e.mangaMapping.chapters) && s < start && nextRegime === myRegime) start = s;
+    if (!Number.isNaN(s) && /[-,]/.test(e.mangaMapping.chapters) && s < start && s >= floor && nextRegime === myRegime) start = s;
     break; // only the nearest following exact row bounds this one
   }
   return start;
@@ -419,11 +435,13 @@ export const solvePosition = (
         return base({ state: 'run', driver: 'ep', ep, type, unit: ep, noManga: true });
       }
       if (exact?.mangaMapping) {
-        // position readout mirrors the episode list: START chapter (span's
-        // first number when the real span is known, derivation otherwise)
+        // position readout mirrors the episode list: START chapter — the
+        // record's OWN start whenever it states one (a single-chapter episode
+        // states it too), the span's first number otherwise, derivation only
+        // when the start is genuinely unknown
         const first = parseInt(exact.mangaMapping.chapters.split(/[-,]/)[0], 10);
         const hasSpan = /[-,]/.test(exact.mangaMapping.chapters);
-        const startNum = hasSpan && !Number.isNaN(first) ? first : canonEpStartCh(anime, mapping, ep);
+        const startNum = exact.mangaMapping.start ?? (hasSpan && !Number.isNaN(first) ? first : canonEpStartCh(anime, mapping, ep));
         return base({
           state: 'run', driver: 'ep', ep, type, unit: ep,
           vol: startNum !== null ? (chToVol(anime, r, startNum) ?? exact.mangaMapping.volume) : exact.mangaMapping.volume,
@@ -545,12 +563,12 @@ export const buildEpisodeList = (anime: AnimeSeries, m: MappingSummary): Episode
     if (type !== 'filler' && type !== 'anime-only-canon') {
       if (exact?.mangaMapping) {
         end = lastChapterNumber(exact.mangaMapping.chapters);
-        // display the episode's START (Sean's first-chapter ruling): a span
-        // ("119-127") carries the real start as data; a bare end value
-        // falls back to the derivation
+        // display the episode's START (Sean's first-chapter ruling): the
+        // record's OWN start wins whenever it states one, then a span's first
+        // number ("119-127"), and only a genuinely unknown start derives
         const first = parseInt(exact.mangaMapping.chapters.split(/[-,]/)[0], 10);
         const hasSpan = /[-,]/.test(exact.mangaMapping.chapters);
-        const startNum = hasSpan && !Number.isNaN(first) ? first : canonEpStartCh(anime, m, ep);
+        const startNum = exact.mangaMapping.start ?? (hasSpan && !Number.isNaN(first) ? first : canonEpStartCh(anime, m, ep));
         ch = startNum !== null ? String(startNum) : exact.mangaMapping.chapters;
         vol = startNum !== null ? (chToVol(anime, r, startNum) ?? exact.mangaMapping.volume) : exact.mangaMapping.volume;
       } else {

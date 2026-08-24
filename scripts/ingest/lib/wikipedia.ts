@@ -44,15 +44,45 @@ export interface VolumeBoundary {
 }
 
 // Combine volumes from all part-pages into contiguous boundaries.
+// MONOTONIC-START GATE (Sean's Sailor Moon 10-to-3 report, 2026-08-24): each
+// end is derived from the NEXT volume's start, so a single mis-parsed start
+// produces an IMPOSSIBLE row (v3 "chs 10-3") and silently corrupts every
+// volume readout downstream — 24 such rows across 11 manga were live when the
+// rule landed. Chapter starts must strictly increase with volume number; a row
+// that violates that is a parse artifact, not data, so it is DROPPED and the
+// remaining rows re-close around the gap (a slightly coarser table that is
+// self-consistent beats a precise-looking contradictory one — the same
+// principle as the Ippo v61 partial-boundary rule). `dropped` lets callers
+// flag the manga for research instead of silently shipping a thinner table.
 export function toBoundaries(volumes: WikiVolume[]): VolumeBoundary[] {
+  return boundariesWithDrops(volumes).boundaries;
+}
+
+export function boundariesWithDrops(volumes: WikiVolume[]): {
+  boundaries: VolumeBoundary[];
+  dropped: { volume: number; chapterStart: number; after: number }[];
+} {
   const dedup = new Map<number, number>();
   for (const v of volumes) if (!dedup.has(v.volume)) dedup.set(v.volume, v.chapterStart);
   const sorted = [...dedup.entries()].sort(([a], [b]) => a - b);
-  return sorted.map(([volume, chapterStart], i) => ({
-    volume,
-    chapterStart,
-    chapterEnd: i + 1 < sorted.length ? sorted[i + 1][1] - 1 : null,
-  }));
+  const kept: [number, number][] = [];
+  const dropped: { volume: number; chapterStart: number; after: number }[] = [];
+  for (const [volume, chapterStart] of sorted) {
+    const prev = kept[kept.length - 1];
+    if (prev && chapterStart <= prev[1]) {
+      dropped.push({ volume, chapterStart, after: prev[1] });
+      continue;
+    }
+    kept.push([volume, chapterStart]);
+  }
+  return {
+    boundaries: kept.map(([volume, chapterStart], i) => ({
+      volume,
+      chapterStart,
+      chapterEnd: i + 1 < kept.length ? kept[i + 1][1] - 1 : null,
+    })),
+    dropped,
+  };
 }
 
 async function wikiGet(params: Record<string, string>): Promise<unknown> {

@@ -59,6 +59,14 @@ export interface MangaMapping {
   // display sites render the vol: segment conditionally.
   volume: number | null;
   chapters: string; // e.g., "1-3" or "45"
+  // The episode's OWN first chapter when the record states it. `chapters`
+  // alone is ambiguous — a bare "86" means either "single-chapter episode,
+  // exactly ch 86" or "only the end is known, derive the start" — and guessing
+  // wrong is visible inside a reorder regime, where derivation from neighbours
+  // is meaningless (Sean's Gintama ep-35 report, 2026-08-24: an exact ch-86
+  // record rendered as ch 48 because the derivation walked backwards into a
+  // jumped block). null/absent = genuinely unknown, derive.
+  start?: number | null;
 }
 
 export interface WatchOrderEntry {
