@@ -84,6 +84,7 @@ export const COMMUNITY_COUNT_OVERRIDES: Record<string, { cap: number; note: stri
   //   93 — rows beyond 71 (1998 TV 1-70 + Prologue OVA 71) belong to
   //   cardcaptor-sakura-clear-card in its own 1-22 numbering
   'cardcaptor-sakura': { cap: 71, note: 'Clear Card split (Sean 2026-08-24); AFL page spans both series' },
+  'project-arms': { cap: 52, note: 'AFL row 53 "PS2 Video Game" is a Bandai PS2 game absorbed as an episode row (air date 2002-03-28 sits BEFORE ep 52\'s — verifier-confirmed 2026-08-25); the anime is 52 eps (26+26). Cap keeps the phantom from re-entering on any AFL refresh' },
 };
 
 export function applyCommunityCap(
@@ -211,6 +212,23 @@ export const EPISODE_TYPE_OVERRIDES: Record<string, Record<number, string>> = {
     13: 'filler', 108: 'filler', 118: 'filler', 119: 'filler', 123: 'filler',
     51: 'mixed', 57: 'mixed', 103: 'mixed', 117: 'mixed', 122: 'mixed',
   },
+  //   BATCH 17 WAVE 2 (Sean's rulings 2026-08-25, verifier-confirmed where
+  //   weight-bearing; verdicts in research/batch17/out):
+  //   kinnikuman 120-137: the two anime-original arcs — author-COMMISSIONED
+  //   but never author-declared canon; the 1991 sequel continuity-overwrites
+  //   their timeline slot (ja-WP verbatim) and the canon-signal hunt came up
+  //   empty → filler (were anime-only-canon).
+  //   trigun 6: adapts ch 0 prologue + ch 4's opening inside original
+  //   framing; 16: adapts ch 16 + ch 20's Angel Arm climax (episode title =
+  //   chapter title) inside the divergence zone → mixed.
+  //   hayate 10: anime-only per Wikipedia outright + only S1 canon-numbered
+  //   fandom page with no Adapted From → filler; 19: canon + original mix.
+  //   saint-seiya 64: JP title = ch 39's title (Sagittarius trials are
+  //   Toei's) → mixed.
+  kinnikuman: { ...range(120, 137, 'filler') },
+  trigun: { 6: 'mixed', 16: 'mixed' },
+  'hayate-the-combat-butler': { 10: 'filler', 19: 'mixed' },
+  'saint-seiya-knights-of-the-zodiac': { 64: 'mixed' },
   'fist-of-the-north-star': {
     61: 'filler', 78: 'filler', 83: 'filler',
     58: 'mixed', 75: 'mixed', 84: 'mixed', 86: 'mixed', 91: 'mixed',

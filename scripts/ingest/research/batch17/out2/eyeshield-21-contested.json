@@ -1,0 +1,174 @@
+{
+  "series_id": "eyeshield-21",
+  "summary": "Narrow follow-up settling the 7 contested Eyeshield 21 episodes (39, 51, 52, 66, 88, 109, 110), all currently stored canon. The decisive find is a source the base verdict did not have: ja.wikipedia's per-episode table carries a 備考 (remarks) column that explicitly labels アニメオリジナルストーリー and 総集編, and it agrees episode-for-episode with the eyeshield21 fandom wiki's own Category:Anime-Original Episodes (both mark 15,16,22,27,28,45,46,51,66,74,78,88,89-95,96,97-105,108,109,110,126,128; neither marks 39, 52, 101, 106, 107, 120 or 124 - independently confirming that animefillerguide is wrong on this series). Cross-checked against the official broadcast synopses (TV Guide Web / Bandai Channel), that yields: ep 51 = filler (zero canon), eps 109 + 110 = filler (both are anime-original PRE-GAME inventions - ep 109 stages a Monta/Ikkyu meeting at a pro-baseball OB game where Monta LOSES, whereas ch 188's aerial duel has Monta WIN and is adapted at ep 115; ep 110 has Yukimitsu scouting Shinryuji, while ch 185's Agon/Unsui material is adapted in-game at eps 114-115 - so the base verdict's 'relocated canon' suspicion is REFUTED, not confirmed), ep 52 = canon on ch 110 (confirmed, not changed), and eps 39, 66 and 88 = mixed. The mixed calls rest on a clean structural signature: in the whole series only eps 66 and 88 sit in the fandom Anime-Original category AND carry a non-empty chapters field (133rd Down / 100th Down) - every other anime-original episode has that field blank. Ep 88 is explicitly documented on its own wiki page as 'the plot outline is original in the anime, the intervals are adapted from the 100th Down', i.e. real ch-100 4-koma content inside original framing; the ch-100 anchor is delivered but it is a BACKWARD backfill (ep 87 already reached ch 167) and must not be read as a forward frontier.",
+  "anchors": [
+    {
+      "episode": 52,
+      "end_chapter": 110,
+      "start_chapter": 110,
+      "chapters_adapted": "110",
+      "volume": 13,
+      "confidence": "high",
+      "note": "CONFIRMS the base verdict's medium anchor and raises it to high. Zokugaku Chameleons vs Kyoshin Poseidon = ch 110 'Ruled by Fear' (恐怖政治). Four agreeing sources: fandom ep-52 infobox chapters=[[110th Down]] and arc=Kyoshin Poseidons Arc; the official TV Guide synopsis ('アイシールド21との再戦を誓う賊学カメレオンズと…巨深ポセイドンが激突…ポセイドンは徐々にゲームを支配する'); Wikipedia's vol-13 summary ('In the eighth-finals, the Zokugaku Chameleons give up in the middle of their match against Kyoshin'); ja.wikipedia does NOT mark ep 52 anime-original and the fandom Anime-Original category does not contain it. AFG's filler flag on ep 52 is refuted a third time.",
+      "sources": [
+        "https://eyeshield21.fandom.com/api.php?action=parse&page=Episode%2052&prop=wikitext&format=json",
+        "https://www.tvguide.or.jp/db/anime/eyeshield21/season1/episode52/",
+        "https://en.wikipedia.org/wiki/List_of_Eyeshield_21_chapters",
+        "https://ja.wikipedia.org/wiki/%E3%82%A2%E3%82%A4%E3%82%B7%E3%83%BC%E3%83%AB%E3%83%8921"
+      ]
+    },
+    {
+      "episode": 88,
+      "end_chapter": 100,
+      "start_chapter": 100,
+      "chapters_adapted": "100 (partial - selected 4-koma strips only)",
+      "volume": 12,
+      "confidence": "high",
+      "note": "OUT-OF-ORDER BACKFILL, NOT A FRONTIER. ch 100 'The Comic Strip Halftime Show' (ハーフタイム4コマショー) was skipped when the anime ran ch 98-103 across eps 42-47 and is animated here, 45 episodes later, as ep 88 '泥門ハーフタイムショー'. The chapter identity is high-confidence (fandom ep-88 infobox chapters=[[100th Down]]; the fandom page's own Differences-from-the-Manga section names the individual 4-koma adapted; Wikipedia's chapter list puts ch 100 = ハーフタイム4コマショー in vol 12; Wikipedia's ep-88 summary is 'a halftime show of short player-centric stories, interspersed with chibi shorts'). BUT ep 87 already reached ch 167, so 100 is a hole being filled BELOW the frontier: if the pipeline reads end_chapter as the reader's position this row will display a false position ~67 chapters low. See flags_for_sean - the identical case earlier in this series (ep 43 backfilling ch 54-57) was recorded annotation-only with no anchor.",
+      "sources": [
+        "https://eyeshield21.fandom.com/api.php?action=parse&page=Episode%2088&prop=wikitext&format=json",
+        "https://en.wikipedia.org/wiki/List_of_Eyeshield_21_episodes_(73%E2%80%93145)",
+        "https://en.wikipedia.org/wiki/List_of_Eyeshield_21_chapters",
+        "https://www.tvguide.or.jp/db/anime/eyeshield21/season1/episode88/"
+      ]
+    }
+  ],
+  "continue_points": [
+    {
+      "episode": 52,
+      "continue_chapter": 109,
+      "note": "PARITY regime (C2): ep 52 adapts ch 110 but the anime has not yet shown ch 109 ('Sting', the Dokubari Scorpions game), which it animates immediately afterwards at eps 53-54. The reader who stays in step with the anime resumes at 109 and will find ch 110 already seen."
+    },
+    {
+      "episode": 88,
+      "continue_chapter": 168,
+      "note": "ep 88's ch-100 backfill fills a hole below the frontier and does not move the reader: furthest first-time mainline coverage is still ch 167 (ep 87), and ep 101 resumes at 168. Consistent with the base verdict's ep-87 continue point."
+    }
+  ],
+  "annotations": [
+    {
+      "episodes": [39],
+      "kind": "partial",
+      "chapters": "89",
+      "note": "Clip-show recap with a NEW canon-sourced frame. The official broadcast synopsis opens on Suzuna being appointed the Devil Bats' 盛り上げ隊長 (morale/cheer squad captain) by Hiruma - a ch-89 beat ('As they return, Suzuna becomes the captain of the cheerleader team', Wikipedia vol-11 summary) that ep 38 did not show (ep 38 is the roster final test/announcement only). The 月刊アメフト 'Eyeshield 21 is secretly a hunk' article and the TV-crew chase are original framing, and the body of the episode is, per Wikipedia, 'a quick review of the previous 38 episodes'. Canon share is a sliver and regressive (ep 37/38 already at ch 89-91), so no anchor."
+    },
+    {
+      "episodes": [51],
+      "kind": "divergence",
+      "chapters": "none",
+      "note": "Zero chapter content. Official synopsis: Zokugaku's clubroom is trashed and its players attacked by someone in a red #21 jersey and eyeshield helmet, so Zokugaku storms Deimon; the Scorpions turn out to be the impersonators. No manga counterpart - it is an anime-invented dramatisation of the Dokubari Scorpions' manga REPUTATION (ch 109 'Sting'; the official ep-53 synopsis describes them as a team that has driven opponents into suspension and forfeit by underhanded means). Dramatising a premise is not adapting a chapter."
+    },
+    {
+      "episodes": [52, 54],
+      "kind": "rearranged",
+      "chapters": "109-110",
+      "note": "Confirms the base verdict: the anime plays ch 110 (Zokugaku forfeiting to Kyoshin, ep 52) BEFORE ch 109 ('Sting', the Dokubari Scorpions game, eps 53-54), inverting the manga order given in Wikipedia's vol-13 summary and on the fandom 109th-Down page (reverse mapping 109th Down -> Episode 54)."
+    },
+    {
+      "episodes": [66],
+      "kind": "partial",
+      "chapters": "132-133",
+      "note": "Anime-original main story (Ishimaru cannot practise because of his track club's final meet; Sena runs the relay in his place and the club takes first) opening on a canon Seibu-prep beat: the official synopsis has Hiruma flatly declaring their chances of winning as they stand are near zero, which is the manga's 'the Devil Bats realise again the importance of a kicker' turn that sets up Musashi's return (Wikipedia vol-15 summary, ch 132 'Devil Bat Genesis' / 133 'Hope for a Miracle'). Fandom tags the episode chapters=[[133rd Down]] and arc=Seibu Wild Gunmen Arc while also filing it as anime-original. Canon share is a sliver, and ch 132 is separately mapped by fandom to ep 76 - so no anchor is issued here."
+    },
+    {
+      "episodes": [88],
+      "kind": "rearranged",
+      "chapters": "100",
+      "note": "First-time coverage of a chapter the anime had skipped, 45 episodes out of order and only partially: the fandom page states 'While the plot outline is original in the anime, the intervals are adapted from the 100th Down with some of the 4-koma adapted into the following' and then itemises them (1st Down adapted with Sakuraba's hair changed, 2nd Down original, 3rd Down bread swapped for fruit). So: real ch-100 material inside original school-day framing - mixed, not a faithful adaptation, and position-neutral."
+    },
+    {
+      "episodes": [109, 110],
+      "kind": "loose_parallel",
+      "chapters": "185, 188",
+      "note": "REFUTES the base verdict's 'relocated canon' suspicion. Both episodes are pre-kickoff anime inventions that only ECHO later in-game chapters, and the anime adapts those chapters properly afterwards. ep 109: Monta and Ikkyu meet by chance at a pro-baseball OB game (both are fans of the same player) and Monta LOSES the catching contest, vowing to win next time - whereas ch 188 '刹那空中決戦' (Duel in the Air) is an in-game aerial duel that Monta WINS, adapted at ep 115. ep 110: Yukimitsu spots Unsui training, goes with Sena, Monta and Suzuna to scout Shinryuji and sees Unsui apologising for Agon's misconduct - whereas ch 185 '阿含と雲水' is in-game characterisation adapted at eps 114-115. Nothing is lost by typing these filler."
+    }
+  ],
+  "type_corrections": [
+    {
+      "episodes": [39],
+      "type": "mixed",
+      "note": "Recap + canon frame. Wikipedia: 'While hiding from a group of television interviewers, Suzuna questions why Sena does not tell Mamori who he is. This leads to a quick review of the previous 38 episodes.' The official TV Guide / Bandai Channel synopsis shows the frame is not empty: Suzuna is appointed the Devil Bats' morale-squad captain by Hiruma, which is ch-89 material per Wikipedia's vol-11 summary and is not in ep 38. Crucially, BOTH sources that systematically flag non-canon episodes on this series decline to flag ep 39 while flagging the true recap ep 96 (ja.wikipedia's 備考 column marks ep 96 総集編; the fandom wiki puts ep 96 in Category:Anime-Original Episodes and ep 39 in no category but Episodes), and animefillerguide does not flag it either. Not filler (non-zero canon), not canon (the bulk is recycled footage) -> mixed. Judgment call; see flags_for_sean for the filler alternative.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/List_of_Eyeshield_21_episodes_(1%E2%80%9372)",
+        "https://www.tvguide.or.jp/db/anime/eyeshield21/season1/episode39/",
+        "https://www.b-ch.com/titles/8777/039",
+        "https://en.wikipedia.org/wiki/List_of_Eyeshield_21_chapters",
+        "https://ja.wikipedia.org/wiki/%E3%82%A2%E3%82%A4%E3%82%B7%E3%83%BC%E3%83%AB%E3%83%8921",
+        "https://eyeshield21.fandom.com/api.php?action=query&prop=categories&titles=Episode%2039&cllimit=500&format=json"
+      ]
+    },
+    {
+      "episodes": [51],
+      "type": "filler",
+      "note": "Zero canon content. Three independent sources: ja.wikipedia's 各話リスト 備考 column marks ep 51 (and ep 51 alone in that block, not ep 52) アニメオリジナルストーリー; the fandom episode page carries [[Category:Anime-Original Episodes]], an EMPTY chapters field and no arc; animefillerguide flags it. The official broadcast synopsis (uniform-slashing / impersonation incident, Zokugaku storming Deimon) has no counterpart anywhere in Wikipedia's vol-13 chapter summary, which runs Kakei's 'real Eyeshield 21' claim (107-108) straight into the Scorpions game (109) and Zokugaku's forfeit to Kyoshin (110). Currently stored as canon.",
+      "sources": [
+        "https://ja.wikipedia.org/wiki/%E3%82%A2%E3%82%A4%E3%82%B7%E3%83%BC%E3%83%AB%E3%83%8921",
+        "https://eyeshield21.fandom.com/api.php?action=parse&page=Episode%2051&prop=wikitext&format=json",
+        "https://eyeshield21.fandom.com/api.php?action=query&list=categorymembers&cmtitle=Category:Anime-Original%20Episodes&cmlimit=500&format=json",
+        "https://www.tvguide.or.jp/db/anime/eyeshield21/season1/episode51/",
+        "https://en.wikipedia.org/wiki/List_of_Eyeshield_21_chapters"
+      ]
+    },
+    {
+      "episodes": [66],
+      "type": "mixed",
+      "note": "Anime-original story with a canon opening beat. ja.wikipedia's 備考 marks ep 66 アニメオリジナルストーリー and the fandom page carries Category:Anime-Original Episodes - but the same fandom page also sets chapters=[[133rd Down]] and arc=[[Seibu Wild Gunmen Arc]], and across the entire series only eps 66 and 88 combine the anime-original category with a NON-EMPTY chapters field (checked mechanically against eps 15,16,22,27,28,45,46,53,74,78,96,97,108,126,128, all of which have it blank). The official synopsis supports a canon opening: 'Sena and the others feel their intense Seibu preparation paying off, but Hiruma declares that at this rate they have virtually no chance of winning' = the vol-15 'they realise again the importance of a kicker' turn (ch 132-133). Not zero-canon, so not filler; the body is original, so not canon -> mixed. Judgment call; see flags_for_sean.",
+      "sources": [
+        "https://eyeshield21.fandom.com/api.php?action=parse&page=Episode%2066&prop=wikitext&format=json",
+        "https://www.tvguide.or.jp/db/anime/eyeshield21/season1/episode66/",
+        "https://www.b-ch.com/titles/8777/066",
+        "https://en.wikipedia.org/wiki/List_of_Eyeshield_21_chapters",
+        "https://ja.wikipedia.org/wiki/%E3%82%A2%E3%82%A4%E3%82%B7%E3%83%BC%E3%83%AB%E3%83%8921"
+      ]
+    },
+    {
+      "episodes": [88],
+      "type": "mixed",
+      "note": "Settles the base verdict's open flag. The episode is NOT a faithful ch-100 adaptation and NOT zero-canon: its own fandom page states 'While the plot outline is original in the anime, the intervals are adapted from the [[100th Down]] with some of the 4-koma adapted into the following', then lists which strips were kept, altered or invented. Original framing (a peaceful pre-Kanto school day, bentos from fans, dozing in class - official synopsis) + genuine ch-100 4-koma content = mixed. ja.wikipedia marks it アニメオリジナルストーリー and the fandom category includes it, which is why 'canon' is wrong; the explicit chapter field and the matching titles (ep 88 泥門ハーフタイムショー / ch 100 ハーフタイム4コマショー) are why 'filler' is wrong. The Google-AI claim that ep 88 is filler is refuted on content.",
+      "sources": [
+        "https://eyeshield21.fandom.com/api.php?action=parse&page=Episode%2088&prop=wikitext&format=json",
+        "https://en.wikipedia.org/wiki/List_of_Eyeshield_21_episodes_(73%E2%80%93145)",
+        "https://en.wikipedia.org/wiki/List_of_Eyeshield_21_chapters",
+        "https://ja.wikipedia.org/wiki/%E3%82%A2%E3%82%A4%E3%82%B7%E3%83%BC%E3%83%AB%E3%83%8921",
+        "https://www.tvguide.or.jp/db/anime/eyeshield21/season1/episode88/"
+      ]
+    },
+    {
+      "episodes": [109],
+      "type": "filler",
+      "note": "Zero canon content; the 'relocated ch 188' hypothesis is refuted on content. ja.wikipedia's 備考 marks eps 108-110 together as アニメオリジナルストーリー (one rowspan across all three); the fandom episode page has NO chapters field at all and carries Category:Anime-Original Episodes; animefillerguide flags it; and the fandom 188th-Down chapter page carries no reverse episode mapping. Decisively, the content differs from ch 188: the official synopsis has Monta and Sena go to a pro-baseball OB game, run into Ikkyu (a fan of the same player) and Monta LOSE the impromptu catching contest, vowing to beat him next time - whereas ch 188 '刹那空中決戦' is the in-game aerial duel Monta WINS, which the anime adapts at ep 115 (official ep-115 synopsis; Wikipedia vol-22 summary 'Monta overcomes Ikkyu and scores a touchdown'). Currently stored as canon.",
+      "sources": [
+        "https://ja.wikipedia.org/wiki/%E3%82%A2%E3%82%A4%E3%82%B7%E3%83%BC%E3%83%AB%E3%83%8921",
+        "https://eyeshield21.fandom.com/api.php?action=parse&page=Episode%20109&prop=wikitext&format=json",
+        "https://www.tvguide.or.jp/db/anime/eyeshield21/season1/episode109/",
+        "https://en.wikipedia.org/wiki/List_of_Eyeshield_21_chapters",
+        "https://en.wikipedia.org/wiki/List_of_Eyeshield_21_episodes_(73%E2%80%93145)"
+      ]
+    },
+    {
+      "episodes": [110],
+      "type": "filler",
+      "note": "Zero canon content; the 'relocated ch 185' hypothesis is refuted on content. Same three sources as ep 109 (ja.wikipedia 備考 rowspan over 108-110, fandom Anime-Original category with an empty chapters field, animefillerguide), and the fandom 185th-Down page carries no reverse episode mapping. Content: Yukimitsu spots Unsui training at dawn, then scouts Shinryuji with Sena, Monta and Suzuna and sees Unsui apologising for his brother Agon's misconduct (official synopsis, Bandai Channel long form) - an invented scouting-trip scenario. The manga's Agon/Unsui material (ch 185 '阿含と雲水') is in-game and the anime adapts it at eps 114-115. An original scene that re-dramatises established backstory is not an adaptation of a chapter. Currently stored as canon.",
+      "sources": [
+        "https://ja.wikipedia.org/wiki/%E3%82%A2%E3%82%A4%E3%82%B7%E3%83%BC%E3%83%AB%E3%83%8921",
+        "https://eyeshield21.fandom.com/api.php?action=parse&page=Episode%20110&prop=wikitext&format=json",
+        "https://www.tvguide.or.jp/db/anime/eyeshield21/season1/episode110/",
+        "https://www.b-ch.com/titles/8777/110",
+        "https://en.wikipedia.org/wiki/List_of_Eyeshield_21_chapters"
+      ]
+    }
+  ],
+  "repairs": [],
+  "structure": {
+    "notes": "NEW SOURCE for this series, worth recording for any future pass: ja.wikipedia's アイシールド21 article has a 各話リスト with a 備考 (remarks) column that explicitly labels non-canon episodes - アニメオリジナルストーリー for one-offs, named arc labels for the blocks (アニメオリジナル・シュークリームカップ編 at eps 89-95 with シュークリームカップ編終了 at 95; アニメオリジナル・デスゲーム編 at eps 97-105 with デスゲーム編終了 at 105), and 総集編 for the recap ep 96. It is genuinely independent of the fandom wiki and of animefillerguide, and it agrees exactly with the fandom wiki's own Category:Anime-Original Episodes membership: eps 15, 16, 22, 27, 28, 45, 46, 51, 66, 74, 78, 88, 89-95, 96, 97-100, 102-105, 108, 109, 110, 126, 128. Both sources EXCLUDE eps 52, 54, 101, 106, 107, 120 and 124 - the seven animefillerguide gets wrong - so AFG's unreliability on this series is now confirmed by two independent sources rather than inferred. One caveat: fandom's category has at least one false positive (ep 53, which ja.wikipedia does not flag and whose official synopsis is the Dokubari Scorpions declaring war = ch 109 'Sting'); ja.wikipedia is the more conservative of the two. Ep 97's 備考 also carries the note 原作の関東大会編も同時進行 ('the manga's Kanto Tournament arc runs concurrently'), which independently explains why ep 101 is canon (ch 168-169) inside the Death Game filler block - a direct corroboration of the base verdict. MIXED-EPISODE SIGNATURE: across all 34 members of the fandom Anime-Original category, exactly two episodes also carry a non-empty chapters field - ep 66 ([[133rd Down]]) and ep 88 ([[100th Down]]). Every other anime-original episode has it blank. That is the wiki distinguishing 'wholly original' from 'original story that still animates chapter material', and it is the backbone of the two mixed calls here. Official Japanese broadcast synopses (TV Guide Web /db/anime/eyeshield21/season1/episodeN/ and Bandai Channel /titles/8777/NNN) exist for every episode and are far more detailed than the English Wikipedia summaries for the disputed ones - they should be the first stop on any future Eyeshield 21 question. OUR numbering = broadcast numbering 1-145 throughout, as the base verdict established; nothing here needed conversion.",
+    "order_only": []
+  },
+  "flags_for_sean": [
+    "ep 88 ANCHOR HAZARD - read before applying. The ch-100 anchor above is a BACKWARD backfill: ep 87 already reached ch 167, so if end_chapter is used as the reader's position this row will show a position ~67 chapters low and violate the 'a position shown is TRUE' promise. The identical case earlier in this same series - ep 43 backfilling ch 54-57, skipped during the NASA arc - was recorded by the base verdict as an annotation with NO anchor. My recommendation is annotation-only here too (the rearranged annotation above already carries the full fact); I delivered the anchor because the task asked for it under the first-time-out-of-order precedent. If that precedent has a non-regressive representation (e.g. chapters_adapted recorded without moving end_chapter), use it; if not, drop the anchor and keep the annotation. Nothing else in this file depends on it.",
+    "ep 39 is a JUDGMENT CALL, typed mixed. The defensible alternative is filler: if a clip-show is treated as zero-canon regardless of its framing, ep 39 is filler and the ch-89 Suzuna beat becomes an annotation fact. The pivot is whether Suzuna's appointment as the Devil Bats' 盛り上げ隊長 is first shown here (it is not in ep 38's synopsis or Wikipedia summary, both of which are the roster test/announcement only) and whether it counts as adapting ch 89 when eps 37-38 already covered ch 89-91. No anchor either way, so the only consequence is the row's type and whether it can carry anchors later.",
+    "ep 66 is a JUDGMENT CALL, typed mixed, and it is the weakest verdict in this file. Three sources call the episode anime-original (ja.wikipedia 備考, fandom category, AFG) and the English summary is 100% the Ishimaru track-meet story; the mixed call rests on fandom's deliberate chapters=[[133rd Down]] tag plus one line of the official synopsis (Hiruma declaring they have virtually no chance against Seibu) matching the manga's kicker-necessity turn. Note that fandom maps the neighbouring ch 132 to ep 76 ('Come Back! Musashi!'), so the ch 132-133 block is split across episodes and the ep-66 link is single-source and one-directional (the 133rd-Down chapter page carries no reverse mapping). If you want one-source-plus-inference to fail closed, ep 66 should be filler.",
+    "OUT OF SCOPE but directly contradicts a base-verdict anchor: ep 74 is marked アニメオリジナルストーリー by ja.wikipedia (74話はアニメオリジナルストーリー) AND sits in the fandom Anime-Original category, yet the base verdict anchors ep 74 -> ch 149-150 at HIGH confidence as the Seibu arc boundary. The official ep-74 synopsis resolves it in favour of MIXED, not filler: it opens with Deimon learning there is a losers'-bracket game for third place in Tokyo - which is exactly ch 150 'Premature Down' (Wikipedia vol-17: 'Hiruma revealing third place also qualifies') - and then goes into an original Sena/Riku exchange. So the anchor content is genuinely there, but the row is not pure canon. Worth a follow-up rather than a silent keep.",
+    "OUT OF SCOPE, cheap corroboration for a later pass: ja.wikipedia's 備考 and the fandom category BOTH mark eps 78, 126 and 128 as anime-original (the base verdict left 78 alone and treated 126/128 as 'partial mixed'), and ep 96 as 総集編 / anime-original (the base verdict already corrects it to filler). Conversely both sources EXCLUDE eps 106, 107, 120 and 124, confirming those stay canon. Also: fandom's category wrongly includes ep 53 (ja.wikipedia does not, and the official synopsis is the Dokubari Scorpions' declaration of war = ch 109), so the category must not be used alone.",
+    "Google-AI cross-check leads, resolved: ep 39 'Ch 131 segment' - REFUTED, ch 131 is '東京最強の戦士たち' (the Tokyo All-Star roll-call, relocated to ep 87 per the base verdict), nothing to do with ep 39; the recap+canon-frame direction was right but the number was wrong. ep 51 'pure filler' - CONFIRMED. ep 52 'Ch 109 elements woven into the Scorpion backstory' - REFUTED, ch 109 'Sting' IS the Scorpions game and it is animated at eps 53-54, after ep 52; ep 52 is ch 110 only. ep 66 'Ch 156' - REFUTED, ch 156 '最強のキックチーム' is ep 80 by exact Japanese title identity; the real candidate is ch 132-133. ep 88 'filler' - REFUTED on content (fandom's own page documents which ch-100 4-koma were adapted). eps 109/110 'filler, massive anime-original arc' - CONFIRMED as filler, but by episode-level content, not by the block-level framing the source used. Its numbers were wrong in 3 of 4 cases where it gave one, so the warning about its chapter space is borne out."
+  ]
+}

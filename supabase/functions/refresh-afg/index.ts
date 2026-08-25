@@ -35361,6 +35361,23 @@ var EPISODE_TYPE_OVERRIDES = {
     117: "mixed",
     122: "mixed"
   },
+  //   BATCH 17 WAVE 2 (Sean's rulings 2026-08-25, verifier-confirmed where
+  //   weight-bearing; verdicts in research/batch17/out):
+  //   kinnikuman 120-137: the two anime-original arcs — author-COMMISSIONED
+  //   but never author-declared canon; the 1991 sequel continuity-overwrites
+  //   their timeline slot (ja-WP verbatim) and the canon-signal hunt came up
+  //   empty → filler (were anime-only-canon).
+  //   trigun 6: adapts ch 0 prologue + ch 4's opening inside original
+  //   framing; 16: adapts ch 16 + ch 20's Angel Arm climax (episode title =
+  //   chapter title) inside the divergence zone → mixed.
+  //   hayate 10: anime-only per Wikipedia outright + only S1 canon-numbered
+  //   fandom page with no Adapted From → filler; 19: canon + original mix.
+  //   saint-seiya 64: JP title = ch 39's title (Sagittarius trials are
+  //   Toei's) → mixed.
+  kinnikuman: { ...range(120, 137, "filler") },
+  trigun: { 6: "mixed", 16: "mixed" },
+  "hayate-the-combat-butler": { 10: "filler", 19: "mixed" },
+  "saint-seiya-knights-of-the-zodiac": { 64: "mixed" },
   "fist-of-the-north-star": {
     61: "filler",
     78: "filler",

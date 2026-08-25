@@ -79,6 +79,8 @@ const REPAIRS_APPROVED = new Map<string, string>([
   // ---- zatch contested re-research (2026-08-25) resolves the base verdict's own SOFT SPLIT flag:
   ['zatch-bell#120#end_chapter', 'konjikinogash.fandom per-episode fields: ep 120 ends at ch 184, not 185 (ch 185 opens ep 121) — repairs the base verdict\'s soft split (out2/zatch-bell-contested.json)'],
   ['zatch-bell#121#end_chapter', 'paired with ep 120: ep 121 = chs 185-186 ending at 186, not 187 (ch 187 lands at ep 124, anchored by the contested verdict)'],
+  // ---- wave 2 (Sean 2026-08-25):
+  ['d-gray-man#116#end_chapter', 'Hallow finale adapts chs 206-208 ending 20 pages into 208 (Episode 13 (Hallow) infobox + Chapter 207/208 pages + AFG "resume at 208 p.21"); stored 206 was a floor — ch 206 is the bonus-chapter opening flashback. Row already manual'],
   // ---- batch-12 "as-stored" sweep (2026-08-25, out2/rosario-vampire-asstored.json):
   ['rosario-vampire#11#end_chapter', 'ep 11 is the Keito/newspaper episode = ch 8 "Wish Upon the Moon" (fandom + Wikipedia vol-2 summary); stored 9 came from the wiki\'s episode-page off-by-one from ep 11 onward, inherited by batch 12\'s as-stored blessing'],
   ['rosario-vampire#11#volume', 'paired: ch 8 sits in vol 2, not vol 3'],
@@ -99,9 +101,16 @@ const REPAIRS_APPROVED = new Map<string, string>([
 // its decisions are ruled and mapped. A held file is loudly skipped, never
 // silently applied.
 const HELD_FILES = new Set<string>([
-  // (all four narrow-task files curated + released 2026-08-25 — see the
-  // zatch-bell overrides, the ranma REORDER_REGIMES entry, and the
-  // rosario-vampire REPAIRS_APPROVED entries)
+  // eyeshield-21: Sean is eyeballing the wave-2 proposal and 7 contested
+  // episodes are under narrow re-research — the whole series waits.
+  'eyeshield-21.json',
+  'eyeshield-21-contested.json',
+  // mashle: fully applied, then the §9 fractional renumber shifted rows —
+  // these files' episode numbers are the OLD numbering; re-running them
+  // would re-create rows/annotations at stale keys (caught 2026-08-25:
+  // a re-run resurrected an annotation on nonexistent row 25).
+  'mashle-magic-and-muscles.json',
+  'mashle-magic-and-muscles-a1.json',
 ]);
 // Stored anchors DELETED by this batch (key `${sid}#${episode}`). Gap research
 // proved each one is not a position instrument for THIS entry at all.
@@ -141,6 +150,8 @@ const DELETIONS_APPROVED = new Map<string, string>([
   ['cardcaptor-sakura#7', 'A1 junk anchor (out/cardcaptor-sakura.json): D4\'s "likeliest mistyped row" hypothesis was WRONG — genuine filler; anchor was junk'],
   ['inuyasha#79', 'A1 junk anchor (out/inuyasha.json): wholly anime-original Jaken comedy episode'],
   ['slam-dunk#92', 'A1 junk anchor (out/slam-dunk.json): pure anime-original beachside comedy episode'],
+  // ---- wave 2 (Sean 2026-08-25, verifier-confirmed):
+  ['project-arms#53', '"episode 53" is a PS2 VIDEO GAME animefillerlist absorbed as a row (air date 2002-03-28 sits BEFORE ep 52\'s 03-30 — the giveaway); its ch-205/v19 mu anchor is MangaUpdates\' series-level anime.end, not an episode record. The row itself is deleted by apply-rulings-20260825b (durability: the row is typed mixed, so the anchor alone would be re-derived); ch 205 lands on ep 50 by content evidence'],
 ]);
 // Curated anchors this batch AUTHORS (not proposed as a verdict anchors row —
 // the evidence lives in the named verdict, the decision is Sean's). Applied
@@ -157,6 +168,11 @@ const CURATED_ANCHORS: { sid: string; anchor: Anchor; why: string }[] = [
     why: 'evidence in out2/zatch-bell-contested.json (withheld there pending Sean; ruled 2026-08-25: anchor + partial annotation, continue 164)',
   },
   {
+    sid: 'trigun',
+    anchor: { episode: 9, end_chapter: 18, start_chapter: 18, chapters_adapted: '18-19 (bus sequence only)', volume: 3, confidence: 'high', note: "Sean's ruling 2026-08-25 (the zatch-51 first-time-adaptation precedent): Wolfwood's manga introduction (ch 18 into ch 19's opening) is pulled ~9 chapters forward to ep 9 — the row anchors truthfully at what it adapts; the rearranged annotation + parity continue carry the reorder. Both wikis agree on the mapping (the verdict withheld on position-honesty grounds A4 already covers).", sources: ['https://trigun.fandom.com', 'https://en.wikipedia.org/wiki/Trigun'] },
+    why: 'evidence in out/trigun.json (flag: withheld by judgement, not lack of evidence; alternative form spelled out there — Sean ruled to anchor)',
+  },
+  {
     sid: 'noragami',
     anchor: { episode: 10, end_chapter: 12, start_chapter: 9, chapters_adapted: '9 (part), 12 (part)', volume: null, confidence: 'high', note: 'honest S1 terminal (Sean 2026-08-25): ep 10 is the last episode with manga content (parts of chs 9 and 12) before the anime-only Rabou arc closes the season; replaces the deleted junk ep-12 anchor per A4 (anchor = what the episode adapts; coverage carries continue-read)', sources: ['https://noragami.fandom.com/wiki/Rabou_Arc'] },
     why: 'evidence in out2/noragami-a1.json flags; DB pre-check confirmed ep 10 typed mixed and previously anchorless',
@@ -168,6 +184,10 @@ const CURATED_ANCHORS: { sid: string; anchor: Anchor; why: string }[] = [
 // chapter to skip on arrival; when not known, continue = furthest-covered+1
 // with the skip range annotated. Applied after the anchor pass.
 const CURATED_CONTINUES: { sid: string; episode: number; continue_chapter: number; kind: string; note: string }[] = [
+  {
+    sid: 'trigun', episode: 9, continue_chapter: 13, kind: 'parity',
+    note: "Sean's C3 ruling: ep 9's ch 18-19 is a forward graft; the anime covers chs 10-15 at eps 12/14 — continue in step with the anime, and skip the already-seen bus sequence when you reach ch 18.",
+  },
   {
     sid: 'welcome-to-demon-school-iruma-kun', episode: 63, continue_chapter: 143, kind: 'parity',
     note: "Sean's C3 ruling 2026-08-25: ep 63 adapts 142 + 145 (forward graft); the anime covers 143-144 next (ep 64), so continue from 143 — and skip ch 145 when you reach it (already covered by this episode) unless re-reading.",
@@ -219,6 +239,31 @@ const BOUNDARY_SEEDS: { sid: string; why: string; full?: boolean; rows: { volume
     ],
   },
 ];
+// wave-2 additions (Sean 2026-08-25):
+BOUNDARY_SEEDS.push(
+  {
+    sid: 'project-arms', full: true,
+    why: 'stored table was EMPTY; rebuilt from Shogakukan per-volume TOCs (Kinokuniya 出版社内容情報) for 19/22 volumes + MangaDex chapter feed for all 22, zero mismatches (verifier-confirmed; v7=12 chapters is the load-bearing count)',
+    rows: [
+      { volume: 1, chapter_start: 1, chapter_end: 10 }, { volume: 2, chapter_start: 11, chapter_end: 21 }, { volume: 3, chapter_start: 22, chapter_end: 32 },
+      { volume: 4, chapter_start: 33, chapter_end: 43 }, { volume: 5, chapter_start: 44, chapter_end: 54 }, { volume: 6, chapter_start: 55, chapter_end: 65 },
+      { volume: 7, chapter_start: 66, chapter_end: 77 }, { volume: 8, chapter_start: 78, chapter_end: 88 }, { volume: 9, chapter_start: 89, chapter_end: 99 },
+      { volume: 10, chapter_start: 100, chapter_end: 110 }, { volume: 11, chapter_start: 111, chapter_end: 121 }, { volume: 12, chapter_start: 122, chapter_end: 132 },
+      { volume: 13, chapter_start: 133, chapter_end: 143 }, { volume: 14, chapter_start: 144, chapter_end: 154 }, { volume: 15, chapter_start: 155, chapter_end: 165 },
+      { volume: 16, chapter_start: 166, chapter_end: 176 }, { volume: 17, chapter_start: 177, chapter_end: 187 }, { volume: 18, chapter_start: 188, chapter_end: 198 },
+      { volume: 19, chapter_start: 199, chapter_end: 209 }, { volume: 20, chapter_start: 210, chapter_end: 220 }, { volume: 21, chapter_start: 221, chapter_end: 231 },
+      { volume: 22, chapter_start: 232, chapter_end: 242 },
+    ],
+  },
+  {
+    sid: 'angel-heart',
+    why: 'stored v6 "56-77" merges v6+v7 (v7 row missing); Coamix MangaHot + en-WP + fr-WP chapter lists all agree v6 = 56-66, v7 = 67-77 (out/angel-heart.json)',
+    rows: [
+      { volume: 6, chapter_start: 56, chapter_end: 66 },
+      { volume: 7, chapter_start: 67, chapter_end: 77 },
+    ],
+  },
+);
 // Anchors excluded from apply pending Sean's ruling (key `${sid}#${episode}`):
 const EXCLUDED_ANCHORS = new Map<string, string>([]);
 // Curated zone acknowledgements: annotated episodes that legitimately carry NO
@@ -238,7 +283,10 @@ const CURATED_ZONE_ACK: { sid: string; episode: number; bound: string }[] = [
   { sid: 'shugo-chara', episode: 93, bound: 'Nagihiko\'s Beat Jumper debut (ch 34) grafted early; ch 34 is properly covered by its own later episode' },
 ];
 // Entry-level updates ratified by this batch's research:
-const SERIES_UPDATES: { sid: string; patch: Record<string, unknown>; why: string }[] = [];
+const SERIES_UPDATES: { sid: string; patch: Record<string, unknown>; why: string }[] = [
+  { sid: 'd-gray-man', patch: { continue_from_chapter: 208 }, why: 'follows the ep-116 repair: Hallow ends 20 pages into ch 208 (AFG: resume at 208 p.21) — 206 was the bonus-chapter floor' },
+  { sid: 'project-arms', patch: { total_chapters: 242, total_episodes: 52, aired_episodes: 52 }, why: 'verifier-confirmed: 242 chapters (AniList\'s 241 = the dropped-v10-chapter parse error) and 52 episodes (row 53 is a PS2 game, deleted by apply-rulings-20260825b)' },
+];
 // Curated annotations (applied like verdict annotation groups; feed the
 // order-check ruledEps): zone facts the verdicts evidence but did not file.
 const CURATED_ANNOTATIONS: { sid: string; episodes: number[]; kind: string; chapters?: string; note: string }[] = [
@@ -265,6 +313,8 @@ const REORDER_REGIMES: Record<string, string> = {
   'hunter-x-hunter': 'reorder regime (batch 17): the Yorknew stretch pre-grafts and re-treads chapters (ch 72 p.1-3 into ep 50, the Uvogin fight stretched with overlapping page splits across eps 53-56, ch 83 mainline in ep 56 after its ep-45 pre-graft)',
   'that-time-i-got-reincarnated-as-a-slime': 'reorder regime (batch 17): S1 skips chs 40-42 and 44-45 and jumps to ch 43 + 46-52 for its final four episodes, leaving the skipped block to S2',
   kingdom: 'reorder regime (batch 17): ep 16 grafts the Ryo Fui introduction (chs 96-100) ahead of the campaign arc, and ep 22 skips 74-81 (adapted later in S2)',
+  'hayate-the-combat-butler': 'reorder regime (batch 17 wave 2): season 1 adapts out of publication order throughout — ep 4 = ch 36 then ep 5 = ch 16, ep 22 = 85 then ep 23 = 70, ep 42 = 129 then ep 43 = 51 (out/hayate-the-combat-butler.json, per-episode evidence)',
+  kinnikuman: 'reorder regime (batch 17 wave 2, verifier-confirmed both directions): the Kaiju arc is scrambled (1A=ch3, 1B=ch7, 2A=ch5, 2B=ch4, 3A=ch1, 3B=ch6) with later grafts (9A carries ch 23, 14A carries ch 9); END non-monotone by design in eps 1-3',
   'ranma-1-2': 'reorder regime (batch 17 re-anchor 2026-08-25, out2/ranma-1-2-reanchor.json, title-keyed): the aired order genuinely deviates from manga order in the re-anchored zones — eps 22 (59-62), 26 (43-45), 28 (70-73), 125 (179) legitimately sit below their predecessors; every jump is documented per-episode in the verdict',
   'sket-dance': 'reorder regime (batch 17, Sean\'s END=max ruling 2026-08-25, verifier-confirmed): the adaptation is deliberately NON-LINEAR — near-exhaustive as a set through ch 157 (only 68/106/139/151 skipped) then cherry-picking, with episodes freely pairing early and late chapters (ep 28 = ch 102 alone, ep 74 = 182+196) — verified by fandom forward+reverse links, ja-WP subtitle splices, and en-WP summaries',
   'zatch-bell': 'reorder regime (batch 17): S1 is heavily resequenced (ep 12 → ch 54-55, ep 14/16/19 back-jumps, ep 17 picks up skipped ch 21, ep 39 → 80-82 before eps 42-43 return to 75-79) and S3 resequences again (Ted arc 169-172 at eps 101-102, Koral Q 164-167 backfilled at 105-107) — per the zatchbell.fandom Story_Arcs table + en-WP season summaries',
