@@ -72,6 +72,24 @@ the skipped step is where the drift enters.
 | 6 | **Consolidate** | `/consolidate` (`deep` when a rule change invalidates prior per-series decisions) |
 | 7 | **Capture** | fold new learnings back in — see below |
 
+**How steps 3–4 run in practice.** The main session is typically Fable while
+`research-agent` subagents are Opus — so the session model reviewing agent
+output ALREADY satisfies the cross-model property. Sean works through
+validation and decisions with the session model; that is the normal path, not
+a compromise.
+
+`verdict-verifier` is not a replacement for that. It is a systematic
+adversarial sweep for when a wave produced many verdicts and a mechanical
+contradiction hunt should run BEFORE human attention is spent. The two are
+complementary: the verifier finds what is broken at scale, the session decides
+what to do about it.
+
+The one residual blind spot the session cannot cover itself: if the SPEC was
+subtly wrong (agents pointed at the wrong chapter space, a mis-scoped target),
+the model that wrote the spec may not see its own bad framing. That risk is
+covered mechanically — the contradiction scan, the census deltas, and the
+verifier — not by model choice.
+
 Step 4 is not a formality. A verdict can be sound and still be answered with
 something other than what it proposed: Toriko's honest `263 → 253` repair was
 answered with a DELETION because A1 forbids an anchor on a filler row. A
