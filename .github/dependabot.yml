@@ -1,0 +1,30 @@
+version: 2
+updates:
+  - package-ecosystem: npm
+    directory: "/"
+    schedule:
+      interval: weekly
+    open-pull-requests-limit: 5
+    # Grouped so routine upkeep arrives as two reviewable PRs rather than a
+    # dozen. Majors stay ungrouped and separate -- they need real review, and
+    # letting them accumulate silently is how this repo ended up 20 versions
+    # behind with a high-severity advisory outstanding.
+    groups:
+      production-minor-patch:
+        dependency-type: production
+        update-types: [minor, patch]
+      dev-minor-patch:
+        dependency-type: development
+        update-types: [minor, patch]
+    ignore:
+      # Pinned deliberately -- see docs. TypeScript 7 breaks typescript-eslint
+      # (peer range is <6.1.0), and tailwind-merge v3 requires Tailwind v4.
+      - dependency-name: typescript
+        versions: [">=7.0.0"]
+      - dependency-name: tailwind-merge
+        versions: [">=3.0.0"]
+
+  - package-ecosystem: github-actions
+    directory: "/"
+    schedule:
+      interval: weekly

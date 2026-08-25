@@ -164,7 +164,6 @@ export const MappingStrip = ({
     for (const r of rects) {
       if (px >= r.x && px <= r.x + r.w) {
         best = r;
-        bestD = 0;
         break;
       }
       const d = px < r.x ? r.x - px : px - (r.x + r.w);

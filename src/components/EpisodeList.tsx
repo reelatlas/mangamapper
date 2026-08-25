@@ -501,7 +501,7 @@ export const EpisodeList = ({
     if (!interactive || !onSelectEpisode) return;
     const onKey = (e: KeyboardEvent) => {
       if (e.metaKey || e.ctrlKey || e.altKey) return;
-      let dir = 0;
+      let dir: number;
       if (e.key === 'j' || e.key === 'ArrowDown') dir = 1;
       else if (e.key === 'k' || e.key === 'ArrowUp') dir = -1;
       else return;

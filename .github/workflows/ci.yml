@@ -1,0 +1,45 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+# Cancel superseded runs on the same branch.
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      # Reads .nvmrc, so CI, local and Vercel all track the same Node major.
+      - uses: actions/setup-node@v4
+        with:
+          node-version-file: .nvmrc
+          cache: npm
+
+      - run: npm ci
+
+      # Same four gates used while modernizing the toolchain, in the order
+      # that fails fastest and most informatively.
+      - name: Typecheck
+        run: npx tsc -b --noEmit
+
+      - name: Lint
+        run: npm run lint
+
+      - name: Test
+        run: npm test
+
+      - name: Build
+        run: npm run build
+
+      # Reported, not enforced: a new advisory in a transitive dep should not
+      # block an unrelated PR, but it should be visible in the run summary.
+      - name: Audit (advisory)
+        run: npm audit --audit-level=high
+        continue-on-error: true

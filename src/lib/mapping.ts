@@ -644,8 +644,8 @@ export const seedStepValue = (
 ): number | null => {
   const r = ratios(anime, mapping);
   const aired = mapping.airedEpisodes;
-  let baseEp: number | null = null;
-  let baseCh: number | null = null;
+  let baseEp: number | null;
+  let baseCh: number | null;
 
   // DIRECTIONAL INTEGRITY: seeding only ever moves in the pressed direction.
   // If no valid value exists that way, return null (the caller no-ops) —
