@@ -5,6 +5,12 @@ description: mangaMapper consolidation pass — verify every rule is enforced th
 
 # Consolidation pass (Sean's standing directive, systematized)
 
+> **Rework pending.** This skill predates the data cycle in CLAUDE.md and
+> shows it — step 10 was appended rather than designed in, the `deep` trigger
+> is judgment-heavy, and the healer roster is hardcoded. Planned changes are
+> in `docs/system-evolution.md` §5, to be done after batch 17. Follow it as
+> written until then; do not improvise around it.
+
 Work through EVERY step in order. The principle: rules live in shared lib
 code consumed identically by scripts and edge functions; rulings are
 declarative records; audits verify OUTCOMES so a misbehaving writer
