@@ -49,10 +49,10 @@ const MARKER_COLOR: Record<EpisodeType, string> = {
 
 // # symbol = disabled tone OF the section's color; the number = full color
 const HASH_COLOR: Record<EpisodeType, string> = {
-  canon: 'text-type-canon/[0.45]',
-  mixed: 'text-type-mixed/[0.45]',
-  filler: 'text-type-filler/[0.45]',
-  'anime-only-canon': 'text-type-anime/[0.45]',
+  canon: 'text-type-canon/45',
+  mixed: 'text-type-mixed/45',
+  filler: 'text-type-filler/45',
+  'anime-only-canon': 'text-type-anime/45',
 };
 const NUM_COLOR: Record<EpisodeType, string> = MARKER_COLOR;
 
@@ -568,7 +568,7 @@ export const EpisodeList = ({
         ref={scrollRef}
         tabIndex={0}
         onScroll={computeRange}
-        className="relative max-h-80 overflow-y-auto tabular-nums outline-none focus-visible:outline focus-visible:outline-1 focus-visible:outline-dashed focus-visible:outline-foreground/25 focus-visible:outline-offset-[-1px]"
+        className="relative max-h-80 overflow-y-auto tabular-nums outline-hidden focus-visible:outline-solid focus-visible:outline-1 focus-visible:outline-dashed focus-visible:outline-foreground/25 focus-visible:-outline-offset-1"
         role="listbox"
         aria-label="episode list"
       >

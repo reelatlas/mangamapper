@@ -68,7 +68,7 @@ export const Kbd = ({ glyph, tier = 'md', className }: KbdProps) => {
     <kbd
       className={cn(
         'grid select-none place-items-center rounded-[4px] px-1 pt-px font-medium',
-        'bg-muted-foreground/[0.16] text-muted-foreground',
+        'bg-muted-foreground/16 text-muted-foreground',
         t.cap,
         g,
         className,

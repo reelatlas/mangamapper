@@ -119,7 +119,7 @@ const Index = () => {
                 type="button"
                 aria-label="activate search"
                 onClick={() => searchRef.current?.focus()}
-                className="absolute -left-[2ch] top-[calc(50%-2px)] -translate-y-1/2 cursor-pointer text-muted-foreground/60 transition-colors hover:text-foreground group-focus-within/search:text-primary"
+                className="absolute left-[-2ch] top-[calc(50%-2px)] -translate-y-1/2 cursor-pointer text-muted-foreground/60 transition-colors hover:text-foreground group-focus-within/search:text-primary"
               >
                 <Search className="h-3.5 w-3.5" />
               </button>
@@ -166,7 +166,7 @@ const Index = () => {
                   }}
                   autoComplete="off"
                   spellCheck={false}
-                  className="w-full border-0 bg-transparent p-0 pr-[2ch] font-mono text-sm text-foreground [caret-color:currentColor] focus:outline-none"
+                  className="w-full border-0 bg-transparent p-0 pr-[2ch] font-mono text-sm text-foreground caret-[currentColor] focus:outline-hidden"
                 />
                 {input && (
                   <button

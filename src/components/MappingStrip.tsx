@@ -213,7 +213,7 @@ export const MappingStrip = ({
   return (
     <div
       ref={wrapRef}
-      className={cn('relative', onUnitClick && 'cursor-pointer py-[5px] -my-[5px]')}
+      className={cn('relative', onUnitClick && 'cursor-pointer py-[5px] my-[-5px]')}
       onClick={
         onUnitClick
           ? (e) => {
@@ -272,7 +272,7 @@ export const MappingStrip = ({
             // the original 18% vanished against forest_v1's bright fills and a
             // muted mid-grey read as dimming, so the band went brighter instead
             // (alpha is the dial if it ever fights the fills)
-            className="absolute -top-[3px] -bottom-[3px] bg-foreground/[0.45] pointer-events-none"
+            className="absolute top-[-3px] bottom-[-3px] bg-foreground/45 pointer-events-none"
             style={{
               left: xAt(viewband.start - 1),
               width: Math.max(2, xAt(viewband.end) - xAt(viewband.start - 1)),

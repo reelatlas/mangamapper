@@ -602,7 +602,7 @@ export const CatalogField = ({ series, query, loading, onOpenChange }: CatalogFi
       end();
       window.removeEventListener('keydown', onKey);
       window.removeEventListener('keyup', onUp);
-      window.removeEventListener('blur', end);
+      window.removeEventListener('blur-sm', end);
     };
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [vis]);
@@ -654,7 +654,7 @@ export const CatalogField = ({ series, query, loading, onOpenChange }: CatalogFi
 
       <div
         ref={scrollerRef}
-        className="absolute inset-0 overflow-y-auto overscroll-contain [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
+        className="absolute inset-0 overflow-y-auto overscroll-contain scrollbar-none [&::-webkit-scrollbar]:hidden"
         style={{ overflowY: open ? 'hidden' : 'auto' }}
       >
         <div
@@ -972,7 +972,7 @@ const TakeoverOverlay = ({
       role="dialog"
       aria-modal="true"
       aria-label={`${anime.title} — series map`}
-      className="absolute z-20 overflow-hidden outline-none"
+      className="absolute z-20 overflow-hidden outline-hidden"
       onClick={(e) => e.stopPropagation()}
       onKeyDown={trapTab}
     >

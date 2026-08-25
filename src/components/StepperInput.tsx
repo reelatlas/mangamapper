@@ -146,7 +146,7 @@ export const StepperInput = ({
       }}
       style={inline && widthCh ? { width: `${widthCh}ch` } : undefined}
       className={cn(
-        'no-spinner font-mono [caret-color:currentColor]',
+        'no-spinner font-mono caret-[currentColor]',
         inline
           ? // reads as data at rest; dashed underline on hover/focus only
             'h-auto rounded-none border-0 border-b border-dashed border-transparent bg-transparent p-0 text-sm leading-normal group-hover/step:border-muted-foreground focus:border-muted-foreground focus-visible:ring-0 focus-visible:ring-offset-0'

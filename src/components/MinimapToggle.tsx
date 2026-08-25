@@ -56,7 +56,7 @@ export const MinimapToggle = ({ on, onToggle, className }: MinimapToggleProps) =
     <span
       className={cn(
         'relative block h-1.5 w-7 rounded-[1px]',
-        on ? 'bg-foreground/20' : 'bg-foreground/[0.12]',
+        on ? 'bg-foreground/20' : 'bg-foreground/12',
       )}
     >
       {on && <span className="absolute inset-y-0 left-[26%] w-[38%] rounded-[1px] bg-foreground/70" />}

@@ -15,7 +15,7 @@ export const Header = () => {
   const logoText = "mangaMapper";
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b border-dashed bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+    <header className="sticky top-0 z-50 w-full border-b border-dashed bg-background/95 backdrop-blur-sm supports-backdrop-filter:bg-background/60">
       <div className="container flex h-14 items-center justify-between">
         <Link to="/" className="group flex items-center gap-1.5">
           <Terminal className="w-4 h-4 text-muted-foreground group-hover:text-accent transition-colors" />

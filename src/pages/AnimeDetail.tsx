@@ -93,13 +93,13 @@ const AnimeDetail = () => {
               <div className="terminal-header">
                 <span className="text-muted-foreground">cover</span>
               </div>
-              <div className="relative aspect-[3/4]">
+              <div className="relative aspect-3/4">
                 <img
                   src={anime.coverImage}
                   alt={anime.title}
                   className="w-full h-full object-cover opacity-90"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-transparent" />
+                <div className="absolute inset-0 bg-linear-to-t from-background/80 via-transparent to-transparent" />
                 {/* StatusChip is THE airing-status render (drift fix
                     2026-08-21) — the wrapper pill only grounds it on art */}
                 <div className="absolute bottom-3 left-3 right-3">

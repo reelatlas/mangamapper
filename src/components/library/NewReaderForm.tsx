@@ -141,7 +141,7 @@ export const NewReaderForm = ({ userId, readerSites, onSuccess, onCancel, preSel
             <Input id="siteNotes" placeholder="top-tier fan subs" value={newSiteNotes} onChange={e => setNewSiteNotes(e.target.value)} className="font-mono text-sm border-dashed bg-muted/30" />
           </div>
           
-          <div className="!mt-8">
+          <div className="mt-8!">
                     <p className="text-xs text-muted-foreground mb-3">assign_to <span className="text-muted-foreground/60">// optional</span></p>
                     <div className="space-y-6 sm:space-y-3">
               {seriesAssignments.map((assignment, index) => (
@@ -160,7 +160,7 @@ export const NewReaderForm = ({ userId, readerSites, onSuccess, onCancel, preSel
                       <div className="flex items-center gap-2">
                         <Input type="text" placeholder="manga.line.me/title/..." value={assignment.seriesUrl} onChange={e => updateSeriesAssignment(index, 'seriesUrl', e.target.value)} className="font-mono text-sm border-dashed bg-muted/30 flex-1 min-w-0" />
                         {(seriesAssignments.length > 1 || assignment.userModified) && (
-                          <Button type="button" variant="ghost" size="icon" onClick={() => removeSeriesRow(index)} className="text-muted-foreground hover:text-destructive hover:bg-destructive/10 flex-shrink-0">
+                          <Button type="button" variant="ghost" size="icon" onClick={() => removeSeriesRow(index)} className="text-muted-foreground hover:text-destructive hover:bg-destructive/10 shrink-0">
                             <Trash2 className="w-4 h-4" />
                           </Button>
                         )}
@@ -175,7 +175,7 @@ export const NewReaderForm = ({ userId, readerSites, onSuccess, onCancel, preSel
                     </div>
                     </div>
           
-          <div className="flex gap-2 !mt-8">
+          <div className="flex gap-2 mt-8!">
             <Button type="submit" className="font-mono text-xs border-dashed">
               <Plus className="w-3.5 h-3.5 mr-1" />add_reader()
             </Button>

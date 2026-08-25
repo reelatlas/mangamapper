@@ -1,8 +1,314 @@
-@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&display=swap");
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&display=swap')
+layer(base);
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&display=swap')
+layer(base);
+@import 'tailwindcss';
+
+@import 'tw-animate-css';
+
+@custom-variant dark (&:is(.dark *));
+
+@utility container {
+  margin-inline: auto;
+  padding-inline: 2rem;
+  @media (width >= --theme(--breakpoint-sm)) {
+    max-width: none;
+  }
+  @media (width >= 1400px) {
+    max-width: 1400px;
+  }
+}
+
+@theme {
+  --color-border: hsl(var(--border));
+  --color-border-strong: hsl(var(--border-strong));
+  --color-input: hsl(var(--input));
+  --color-ring: hsl(var(--ring));
+  --color-background: hsl(var(--background));
+  --color-foreground: hsl(var(--foreground));
+
+  --color-primary: hsl(var(--primary));
+  --color-primary-foreground: hsl(var(--primary-foreground));
+
+  --color-secondary: hsl(var(--secondary));
+  --color-secondary-foreground: hsl(var(--secondary-foreground));
+
+  --color-destructive: hsl(var(--destructive));
+  --color-destructive-foreground: hsl(var(--destructive-foreground));
+
+  --color-muted: hsl(var(--muted));
+  --color-muted-foreground: hsl(var(--muted-foreground));
+
+  --color-accent: hsl(var(--accent));
+  --color-accent-foreground: hsl(var(--accent-foreground));
+
+  --color-popover: hsl(var(--popover));
+  --color-popover-foreground: hsl(var(--popover-foreground));
+
+  --color-card: hsl(var(--card));
+  --color-card-foreground: hsl(var(--card-foreground));
+
+  --color-sidebar: hsl(var(--sidebar-background));
+  --color-sidebar-foreground: hsl(var(--sidebar-foreground));
+  --color-sidebar-primary: hsl(var(--sidebar-primary));
+  --color-sidebar-primary-foreground: hsl(var(--sidebar-primary-foreground));
+  --color-sidebar-accent: hsl(var(--sidebar-accent));
+  --color-sidebar-accent-foreground: hsl(var(--sidebar-accent-foreground));
+  --color-sidebar-border: hsl(var(--sidebar-border));
+  --color-sidebar-ring: hsl(var(--sidebar-ring));
+
+  --color-type-canon: hsl(var(--type-canon));
+  --color-type-mixed: hsl(var(--type-mixed));
+  --color-type-filler: hsl(var(--type-filler));
+  --color-type-anime: hsl(var(--type-anime));
+  --color-type-manga: hsl(var(--type-manga));
+
+  --color-syntax-purple: hsl(var(--syntax-purple));
+  --color-syntax-amber: hsl(var(--syntax-amber));
+  --color-syntax-cyan: hsl(var(--syntax-cyan));
+  --color-syntax-green: hsl(var(--syntax-green));
+  --color-syntax-pink: hsl(var(--syntax-pink));
+
+  --spacing-loose: var(--space-loose);
+  --spacing-region: var(--space-region);
+  --spacing-tight: var(--space-tight);
+  --spacing-label: var(--space-label);
+  --spacing-label-block: var(--space-label-block);
+
+  --radius-lg: var(--radius);
+  --radius-md: calc(var(--radius) - 1px);
+  --radius-sm: calc(var(--radius) - 2px);
+
+  --shadow-2xs: var(--shadow-2xs);
+  --shadow-xs: var(--shadow-xs);
+  --shadow-sm: var(--shadow-sm);
+  --shadow-md: var(--shadow-md);
+  --shadow-lg: var(--shadow-lg);
+  --shadow-xl: var(--shadow-xl);
+  --shadow-2xl: var(--shadow-2xl);
+
+  --font-sans:
+    IBM Plex Mono, JetBrains Mono, ui-monospace, SFMono-Regular, Menlo, Monaco,
+    Consolas, monospace;
+  --font-serif: IBM Plex Mono, ui-monospace, monospace;
+  --font-mono:
+    IBM Plex Mono, JetBrains Mono, ui-monospace, SFMono-Regular, Menlo, Monaco,
+    Consolas, Liberation Mono, Courier New, monospace;
+}
+
+/*
+  The default border color has changed to `currentcolor` in Tailwind CSS v4,
+  so we've added these compatibility styles to make sure everything still
+  looks the same as it did with Tailwind CSS v3.
+
+  If we ever want to remove these styles, we need to add an explicit border
+  color utility to any element that depends on these defaults.
+*/
+@layer base {
+  *,
+  ::after,
+  ::before,
+  ::backdrop,
+  ::file-selector-button {
+    border-color: var(--color-gray-200, currentcolor);
+  }
+}
+
+@utility terminal-header {
+  @apply border-b border-dashed border-border px-3 py-2 text-xs text-muted-foreground font-mono;
+}
+
+@utility meta-row {
+  /* The meta-row contract (see DESIGN_SYSTEM.md): any line mixing tags,
+     values, and actions aligns text on the BASELINE — never box-centered,
+     which floats smaller tags above larger values. align-content centers
+     the whole line in the row's height; spacing is gap-only. */
+  @apply flex flex-wrap items-baseline content-center gap-x-2 gap-y-1 tabular-nums;
+  & > * {
+    @apply leading-none m-0;
+  }
+  /* The baseline strut: block layout gives every text line an invisible
+     reference glyph at the parent's font size; flex rows lose it, so a line
+     of only-small text (e.g. a lone tag + clear()) floats higher than a line
+     containing full-size values. This zero-width strut restores the
+     reference, so every meta-row line shares one baseline regardless of its
+     content mix. (margin cancels the flex gap the strut would introduce.) */
+  &::before {
+    content: '\200B';
+    line-height: 1;
+    margin-right: -0.5rem; /* = gap-x-2 */
+  }
+}
+
+@utility card-print {
+  /* instrument_v1 (Card Skin Lab a3222c3b, locked 2026-08-20) — the focused
+     card's entrance: regions PRINT like terminal output (no easing, stepped
+     delays), starting mid-way through the takeover grow. Title glow = the
+     one phosphor accent (title only, tglow 0.2 → 2px @ 18%). */
+  & [data-line] {
+    opacity: 0;
+  }
+  &.card-in [data-line] {
+    opacity: 1;
+    transition: opacity 0ms steps(1, end);
+    transition-delay: calc(200ms + var(--line-i, 0) * 35ms);
+  }
+  @media (prefers-reduced-motion: reduce) {
+    & [data-line] {
+      opacity: 1;
+      transition: none;
+    }
+  }
+}
+
+@utility card-in {
+  &.card-print [data-line] {
+    opacity: 1;
+    transition: opacity 0ms steps(1, end);
+    transition-delay: calc(200ms + var(--line-i, 0) * 35ms);
+  }
+}
+
+@utility title-glow {
+  text-shadow: 0 0 2px hsl(var(--syntax-green) / 0.18);
+}
+
+@utility no-spinner {
+  /* Inputs whose steppers are component-owned (StepperInput) — native
+     spinners off so stepping always routes through the seeding logic. */
+  -moz-appearance: textfield;
+  appearance: textfield;
+  &::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+    display: none;
+  }
+  &::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+    display: none;
+  }
+}
+
+@utility animate-row-pulse {
+  /* EpisodeList row highlight after a lookup/strip-driven jump.
+     Opacity-only overlay (compositor-friendly) — never animate
+     background-color for this. Ruling 2026-08-21: the flash wears the row's
+     OWN TYPE color (--pulse-color set inline per row — cohesion with the
+     strip/tags/rail); amber remains only as the no-context fallback. */
+  &::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background: var(--pulse-color, hsl(var(--syntax-amber) / 0.18));
+    animation: row-pulse-fade 0.9s ease-out forwards;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    &::after {
+      animation: none;
+      opacity: 0;
+    }
+  }
+}
+
+@utility section-band-canon {
+  /* interior_v1 banded section headers — the section's own type color washed
+     over the OPAQUE card surface (sticky headers must occlude the rows
+     scrolling beneath them, so the tint is composited, never transparent).
+     manga_only wears its own purple (2026-08-21, reverses shares-canon). */
+  background:
+    linear-gradient(
+      hsl(var(--type-canon) / 0.07),
+      hsl(var(--type-canon) / 0.07)
+    ),
+    hsl(var(--card));
+  &:hover {
+    background:
+      linear-gradient(
+        hsl(var(--type-canon) / 0.12),
+        hsl(var(--type-canon) / 0.12)
+      ),
+      hsl(var(--card));
+  }
+}
+
+@utility section-band-manga {
+  background:
+    linear-gradient(
+      hsl(var(--type-manga) / 0.07),
+      hsl(var(--type-manga) / 0.07)
+    ),
+    hsl(var(--card));
+  &:hover {
+    background:
+      linear-gradient(
+        hsl(var(--type-manga) / 0.12),
+        hsl(var(--type-manga) / 0.12)
+      ),
+      hsl(var(--card));
+  }
+}
+
+@utility section-band-mixed {
+  background:
+    linear-gradient(
+      hsl(var(--type-mixed) / 0.07),
+      hsl(var(--type-mixed) / 0.07)
+    ),
+    hsl(var(--card));
+  &:hover {
+    background:
+      linear-gradient(
+        hsl(var(--type-mixed) / 0.12),
+        hsl(var(--type-mixed) / 0.12)
+      ),
+      hsl(var(--card));
+  }
+}
+
+@utility section-band-filler {
+  background:
+    linear-gradient(
+      hsl(var(--type-filler) / 0.07),
+      hsl(var(--type-filler) / 0.07)
+    ),
+    hsl(var(--card));
+  &:hover {
+    background:
+      linear-gradient(
+        hsl(var(--type-filler) / 0.12),
+        hsl(var(--type-filler) / 0.12)
+      ),
+      hsl(var(--card));
+  }
+}
+
+@utility section-band-anime {
+  background:
+    linear-gradient(
+      hsl(var(--type-anime) / 0.07),
+      hsl(var(--type-anime) / 0.07)
+    ),
+    hsl(var(--card));
+  &:hover {
+    background:
+      linear-gradient(
+        hsl(var(--type-anime) / 0.12),
+        hsl(var(--type-anime) / 0.12)
+      ),
+      hsl(var(--card));
+  }
+}
+
+@utility animate-glyph-push {
+  /* CatalogField watermark letter — retriggered by the wayfinding pass on
+     letter change. Opacity target matches the glyph's resting opacity-5. */
+  animation: glyph-push 260ms ease-out;
+  @media (prefers-reduced-motion: reduce) {
+    animation: none;
+  }
+}
 
 /* Terminal/Code-inspired Design System
    All colors in HSL format for consistency
@@ -195,137 +501,6 @@
 
   ::-webkit-scrollbar-thumb:hover {
     @apply bg-muted-foreground;
-  }
-}
-
-@layer utilities {
-  .terminal-header {
-    @apply border-b border-dashed border-border px-3 py-2 text-xs text-muted-foreground font-mono;
-  }
-
-  /* The meta-row contract (see DESIGN_SYSTEM.md): any line mixing tags,
-     values, and actions aligns text on the BASELINE — never box-centered,
-     which floats smaller tags above larger values. align-content centers
-     the whole line in the row's height; spacing is gap-only. */
-  .meta-row {
-    @apply flex flex-wrap items-baseline content-center gap-x-2 gap-y-1 tabular-nums;
-  }
-  .meta-row > * {
-    @apply leading-none m-0;
-  }
-  /* The baseline strut: block layout gives every text line an invisible
-     reference glyph at the parent's font size; flex rows lose it, so a line
-     of only-small text (e.g. a lone tag + clear()) floats higher than a line
-     containing full-size values. This zero-width strut restores the
-     reference, so every meta-row line shares one baseline regardless of its
-     content mix. (margin cancels the flex gap the strut would introduce.) */
-  .meta-row::before {
-    content: '\200B';
-    line-height: 1;
-    margin-right: -0.5rem; /* = gap-x-2 */
-  }
-
-  /* instrument_v1 (Card Skin Lab a3222c3b, locked 2026-08-20) — the focused
-     card's entrance: regions PRINT like terminal output (no easing, stepped
-     delays), starting mid-way through the takeover grow. Title glow = the
-     one phosphor accent (title only, tglow 0.2 → 2px @ 18%). */
-  .card-print [data-line] {
-    opacity: 0;
-  }
-  .card-print.card-in [data-line] {
-    opacity: 1;
-    transition: opacity 0ms steps(1, end);
-    transition-delay: calc(200ms + var(--line-i, 0) * 35ms);
-  }
-  @media (prefers-reduced-motion: reduce) {
-    .card-print [data-line] {
-      opacity: 1;
-      transition: none;
-    }
-  }
-  .title-glow {
-    text-shadow: 0 0 2px hsl(var(--syntax-green) / 0.18);
-  }
-
-  /* Inputs whose steppers are component-owned (StepperInput) — native
-     spinners off so stepping always routes through the seeding logic. */
-  .no-spinner {
-    -moz-appearance: textfield;
-    appearance: textfield;
-  }
-  .no-spinner::-webkit-inner-spin-button,
-  .no-spinner::-webkit-outer-spin-button {
-    -webkit-appearance: none;
-    margin: 0;
-    display: none;
-  }
-
-  /* EpisodeList row highlight after a lookup/strip-driven jump.
-     Opacity-only overlay (compositor-friendly) — never animate
-     background-color for this. Ruling 2026-08-21: the flash wears the row's
-     OWN TYPE color (--pulse-color set inline per row — cohesion with the
-     strip/tags/rail); amber remains only as the no-context fallback. */
-  .animate-row-pulse::after {
-    content: '';
-    position: absolute;
-    inset: 0;
-    pointer-events: none;
-    background: var(--pulse-color, hsl(var(--syntax-amber) / 0.18));
-    animation: row-pulse-fade 0.9s ease-out forwards;
-  }
-
-  /* interior_v1 banded section headers — the section's own type color washed
-     over the OPAQUE card surface (sticky headers must occlude the rows
-     scrolling beneath them, so the tint is composited, never transparent).
-     manga_only wears its own purple (2026-08-21, reverses shares-canon). */
-  .section-band-canon {
-    background: linear-gradient(hsl(var(--type-canon) / 0.07), hsl(var(--type-canon) / 0.07)), hsl(var(--card));
-  }
-  .section-band-canon:hover {
-    background: linear-gradient(hsl(var(--type-canon) / 0.12), hsl(var(--type-canon) / 0.12)), hsl(var(--card));
-  }
-  .section-band-manga {
-    background: linear-gradient(hsl(var(--type-manga) / 0.07), hsl(var(--type-manga) / 0.07)), hsl(var(--card));
-  }
-  .section-band-manga:hover {
-    background: linear-gradient(hsl(var(--type-manga) / 0.12), hsl(var(--type-manga) / 0.12)), hsl(var(--card));
-  }
-  .section-band-mixed {
-    background: linear-gradient(hsl(var(--type-mixed) / 0.07), hsl(var(--type-mixed) / 0.07)), hsl(var(--card));
-  }
-  .section-band-mixed:hover {
-    background: linear-gradient(hsl(var(--type-mixed) / 0.12), hsl(var(--type-mixed) / 0.12)), hsl(var(--card));
-  }
-  .section-band-filler {
-    background: linear-gradient(hsl(var(--type-filler) / 0.07), hsl(var(--type-filler) / 0.07)), hsl(var(--card));
-  }
-  .section-band-filler:hover {
-    background: linear-gradient(hsl(var(--type-filler) / 0.12), hsl(var(--type-filler) / 0.12)), hsl(var(--card));
-  }
-  .section-band-anime {
-    background: linear-gradient(hsl(var(--type-anime) / 0.07), hsl(var(--type-anime) / 0.07)), hsl(var(--card));
-  }
-  .section-band-anime:hover {
-    background: linear-gradient(hsl(var(--type-anime) / 0.12), hsl(var(--type-anime) / 0.12)), hsl(var(--card));
-  }
-  @media (prefers-reduced-motion: reduce) {
-    .animate-row-pulse::after {
-      animation: none;
-      opacity: 0;
-    }
-  }
-}
-
-@layer utilities {
-  /* CatalogField watermark letter — retriggered by the wayfinding pass on
-     letter change. Opacity target matches the glyph's resting opacity-5. */
-  .animate-glyph-push {
-    animation: glyph-push 260ms ease-out;
-  }
-  @media (prefers-reduced-motion: reduce) {
-    .animate-glyph-push {
-      animation: none;
-    }
   }
 }
 

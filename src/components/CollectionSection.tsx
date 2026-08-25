@@ -338,13 +338,13 @@ export const CollectionSection = ({ anime }: CollectionSectionProps) => {
                         <div className="min-w-0">
                           {index === 0 && <Label className="text-xs hidden sm:block mb-1.5"><span className="text-syntax-cyan">reader</span></Label>}
                           <Select value={currentKey} onValueChange={val => handleReaderSelect(index, val)}>
-                            <SelectTrigger className="font-mono text-sm border-dashed bg-muted/30 data-[placeholder]:text-muted-foreground">
+                            <SelectTrigger className="font-mono text-sm border-dashed bg-muted/30 data-placeholder:text-muted-foreground">
                               <SelectValue placeholder="select reader" />
                             </SelectTrigger>
                             <SelectPrimitive.Portal>
-                              <SelectPrimitive.Content className="font-mono border-dashed relative z-50 w-[var(--radix-select-trigger-width)] overflow-hidden rounded-md border bg-popover text-popover-foreground shadow-md data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 data-[side=bottom]:slide-in-from-top-2 data-[side=bottom]:translate-y-1" position="popper">
+                              <SelectPrimitive.Content className="font-mono border-dashed relative z-50 w-(--radix-select-trigger-width) overflow-hidden rounded-md border bg-popover text-popover-foreground shadow-md data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 data-[side=bottom]:slide-in-from-top-2 data-[side=bottom]:translate-y-1" position="popper">
                                 <SelectScrollUpButton />
-                                <SelectPrimitive.Viewport className="max-h-[200px] overflow-y-auto p-1 w-full min-w-[var(--radix-select-trigger-width)]">
+                                <SelectPrimitive.Viewport className="max-h-[200px] overflow-y-auto p-1 w-full min-w-(--radix-select-trigger-width)">
                                   {availableOptions.map(option => (
                                     <SelectItem key={option.key} value={option.key} className="text-sm">{option.name}</SelectItem>
                                   ))}
@@ -363,7 +363,7 @@ export const CollectionSection = ({ anime }: CollectionSectionProps) => {
                           <div className="flex items-center gap-2">
                             <Input type="text" placeholder="manga.line.me/title/..." value={assignment.seriesUrl} onChange={e => handleSeriesUrlChange(index, e.target.value)} className="font-mono text-sm border-dashed bg-muted/30 flex-1 min-w-0" />
                             {(editReaderAssignments.length > 1 || assignment.readerName) && (
-                              <Button type="button" variant="ghost" size="icon" onClick={() => removeReaderRow(index)} className="text-muted-foreground hover:text-destructive hover:bg-destructive/10 flex-shrink-0">
+                              <Button type="button" variant="ghost" size="icon" onClick={() => removeReaderRow(index)} className="text-muted-foreground hover:text-destructive hover:bg-destructive/10 shrink-0">
                                 <Trash2 className="w-4 h-4" />
                               </Button>
                             )}
@@ -385,7 +385,7 @@ export const CollectionSection = ({ anime }: CollectionSectionProps) => {
             </div>
 
             {/* Actions */}
-            <div className="!mt-8 flex flex-wrap items-center gap-3">
+            <div className="mt-8! flex flex-wrap items-center gap-3">
               <Button onClick={saveChanges} disabled={saving} className="font-mono text-xs border-dashed">
                 <Check className="w-3.5 h-3.5 mr-1" />{saving ? 'saving...' : 'save_readers()'}
               </Button>

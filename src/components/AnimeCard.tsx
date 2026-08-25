@@ -152,7 +152,7 @@ export const AnimeCard = ({ anime: listItem, onClose }: AnimeCardProps) => {
                   BELOW the band. */}
               <div className="flex items-start justify-between gap-4 min-w-0" {...line(1)}>
                 <div className="flex min-w-0 items-start gap-4">
-                  <div className="relative aspect-[2/3] w-[104px] shrink-0 overflow-hidden border border-border-strong">
+                  <div className="relative aspect-2/3 w-[104px] shrink-0 overflow-hidden border border-border-strong">
                     <img
                       src={anime.coverImage}
                       alt={anime.title}
@@ -165,10 +165,10 @@ export const AnimeCard = ({ anime: listItem, onClose }: AnimeCardProps) => {
                         SIZE; the hue change stays semantic — cyan =
                         transient focus (field), green glow = string-value
                         content at rest (instrument_v1's one phosphor) */}
-                    <div className="title-glow text-[18px] font-semibold text-syntax-green leading-tight break-words">
+                    <div className="title-glow text-[18px] font-semibold text-syntax-green leading-tight wrap-break-word">
                       {anime.title}
                     </div>
-                    <div className="text-xs text-muted-foreground mt-0.5 break-words">
+                    <div className="text-xs text-muted-foreground mt-0.5 wrap-break-word">
                       {anime.japaneseTitle}
                       {years && <span className="whitespace-nowrap"> · {years}</span>}
                     </div>

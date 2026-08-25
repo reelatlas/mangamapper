@@ -20,11 +20,11 @@ import { cn } from '@/lib/utils';
 export type TypeBadgeKind = 'canon' | 'mixed' | 'filler' | 'manga_only' | 'anime_only';
 
 const STYLES: Record<TypeBadgeKind, string> = {
-  canon: 'text-type-canon bg-type-canon/[0.12]',
-  mixed: 'text-type-mixed bg-type-mixed/[0.12]',
-  filler: 'text-type-filler bg-type-filler/[0.12]',
-  manga_only: 'text-type-manga bg-type-manga/[0.12]',
-  anime_only: 'text-type-anime bg-type-anime/[0.12]',
+  canon: 'text-type-canon bg-type-canon/12',
+  mixed: 'text-type-mixed bg-type-mixed/12',
+  filler: 'text-type-filler bg-type-filler/12',
+  manga_only: 'text-type-manga bg-type-manga/12',
+  anime_only: 'text-type-anime bg-type-anime/12',
 };
 
 interface TypeBadgeProps {

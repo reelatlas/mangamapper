@@ -316,7 +316,7 @@ export const LibraryGroupedView = ({ userId, readerSites, progress, fetchReaderS
                       </Label>
                       <Input placeholder="top-tier fan subs" value={editSiteNotes} onChange={e => setEditSiteNotes(e.target.value)} className="font-mono text-sm border-dashed bg-muted/30" />
                     </div>
-                    <div className="!mt-8">
+                    <div className="mt-8!">
                       <p className="text-xs text-muted-foreground mb-3">assign_to <span className="text-muted-foreground/60">// optional</span></p>
                       <div className="space-y-6 sm:space-y-3">
                         {editSeriesAssignments.map((assignment, index) => (
@@ -335,7 +335,7 @@ export const LibraryGroupedView = ({ userId, readerSites, progress, fetchReaderS
                                 <div className="flex items-center gap-2">
                                   <Input type="text" placeholder="manga.line.me/title/..." value={assignment.seriesUrl} onChange={e => updateEditSeriesAssignment(index, 'seriesUrl', e.target.value)} className="font-mono text-sm border-dashed bg-muted/30 flex-1 min-w-0" />
                                   {(editSeriesAssignments.length > 1 || assignment.userModified) && (
-                                    <Button type="button" variant="ghost" size="icon" onClick={() => removeEditSeriesRow(index)} className="text-muted-foreground hover:text-destructive hover:bg-destructive/10 flex-shrink-0">
+                                    <Button type="button" variant="ghost" size="icon" onClick={() => removeEditSeriesRow(index)} className="text-muted-foreground hover:text-destructive hover:bg-destructive/10 shrink-0">
                                       <Trash2 className="w-4 h-4" />
                                     </Button>
                                   )}
@@ -349,7 +349,7 @@ export const LibraryGroupedView = ({ userId, readerSites, progress, fetchReaderS
                         </Button>
                       </div>
                     </div>
-                    <div className="!mt-8 flex flex-wrap items-center justify-between gap-3">
+                    <div className="mt-8! flex flex-wrap items-center justify-between gap-3">
                       <div className="flex items-center gap-2">
                         <Button onClick={() => saveReaderEdit(group.entries)} className="font-mono text-xs border-dashed">
                           <Check className="w-3.5 h-3.5 mr-1" />save_changes()
@@ -391,7 +391,7 @@ export const LibraryGroupedView = ({ userId, readerSites, progress, fetchReaderS
                     <div className="overflow-hidden min-w-0 text-sm flex items-center gap-1.5">
                       <span className="text-syntax-green break-all">{group.name}</span>
                     </div>
-                    <div className="flex items-center gap-2 flex-shrink-0">
+                    <div className="flex items-center gap-2 shrink-0">
                       <span className="text-muted-foreground text-sm">({seriesEntries.length})</span>
                       <TripleArrow collapsed={collapsedGroups.has(group.name.toLowerCase())} />
                     </div>
@@ -489,7 +489,7 @@ export const LibraryGroupedView = ({ userId, readerSites, progress, fetchReaderS
                   <span className="text-muted-foreground/60">// </span>
                   <span className="text-syntax-green">unassigned_series</span>
                 </div>
-                <div className="flex items-center gap-2 flex-shrink-0">
+                <div className="flex items-center gap-2 shrink-0">
                   <span className="text-muted-foreground text-sm">({unassignedProgress.length})</span>
                   <TripleArrow collapsed={collapsedGroups.has('unassigned')} />
                 </div>
