@@ -123,6 +123,23 @@ async function main() {
   } else {
     console.log('  eyeshield row 155: already absent');
   }
+  // ---- 5. blade-of-the-immortal boundary mislabel (verifier-confirmed
+  // 2026-08-25): stored table has v31: 198-? and NO v30 — Dark Horse's
+  // 31-volume count leaked into the JP 30-volume table. True JP v30 =
+  // acts 198-206 (Wikipedia).
+  const { data: bser } = await db.from('series').select('manga_anilist_id').eq('id', 'blade-of-the-immortal-ona').maybeSingle();
+  if (bser?.manga_anilist_id) {
+    const { data: v31 } = await db.from('volume_boundaries').select('volume').eq('manga_anilist_id', bser.manga_anilist_id).eq('volume', 31).maybeSingle();
+    if (v31) {
+      console.log('  blade: v31 → v30 (198-206), Dark Horse count leak fixed');
+      if (!DRY) {
+        await db.from('volume_boundaries').delete().eq('manga_anilist_id', bser.manga_anilist_id).eq('volume', 31);
+        await db.from('volume_boundaries').upsert({ manga_anilist_id: bser.manga_anilist_id, volume: 30, chapter_start: 198, chapter_end: 206, source: 'research', source_page: 'JP v30 = acts 198-206 (Wikipedia chapter list; verifier 2026-08-25) — stored v31 was Dark Horse volume-count leakage' }, { onConflict: 'manga_anilist_id,volume' });
+      }
+    } else {
+      console.log('  blade v31: already fixed');
+    }
+  }
   console.log('[rulings-20260825b] done');
 }
 main().then(() => process.exit(0));

@@ -166,3 +166,40 @@ principle series-side: source_type extends by value, never by overloading.
   37-39). When D2 (scoped/segmented entries, Clear-Card pattern) is
   designed, rosario's Capu2 grafts get real vol/ch display; until then the
   honest dash stands and annotation surfacing (UI pass) will explain it.
+
+## Episode-type taxonomy v2 — Sean's reference notes (2026-08-25, rule at the restructuring phase)
+
+Sean's ruling for NOW: X eps 21-24 and detective-school-q 44-45 both classify
+**filler** with rich annotations, re-evaluated when the rule lands. His
+distinctions to encode later:
+
+- **The "only ending" class (X)**: technically filler (studio-original), but
+  the community accepts it BECAUSE no true ending exists (manga on indefinite
+  hiatus) and prefers it over the movie's alternative ending. Needs an
+  ASTERISK class so every show like this is re-evaluated once data is
+  complete. Not canon, not anime-only-canon — filler + annotation + asterisk.
+- **The "caught up, padded out" class (DSQ)**: anime outran the manga, studio
+  padded a finale — pure filler, no canon standing anywhere; annotate WHY the
+  original canon was never animated (surfaced later in UI).
+- **The "contested canonical ending" class (Evangelion)**: ALL episodes canon,
+  but End of Evangelion is ALSO canon and can replace/follow the last two —
+  annotation on those two explaining the controversy. Different from both
+  above.
+- **The real anime-only-canon (Madoka class)**: the ANIME IS the source —
+  story canon with no manga origin. This is what the tag SHOULD mean. Most
+  sources say "anime only" meaning FILLER, which is where the confusion
+  enters; a possible tag RENAME is on the table for the restructuring phase
+  (candidate directions, from a cross-check-only AI reference Sean supplied:
+  separate SOURCE ORIGIN from CANONICITY — e.g. anime-original vs
+  manga-derived × canon vs non-canon; or intent tags like
+  studio-original-ending; two-column source_type + is_canon shape). Decide
+  the exact rule + naming at the restructuring phase; NOTHING renamed yet.
+- **Canon-source typing beyond manga/anime-original (Sean, 2026-08-25)**: the
+  taxonomy must also type the CANON SOURCE when it is neither manga nor
+  anime-original — light novel, web novel, game, or any other root form.
+  series.source_type already holds manga/original/light_novel; the v2 rule
+  should make the canon-source dimension first-class and extensible (the LN
+  instrument ruling §10 is the sibling: LN-sourced series get a volume-space
+  instrument), so "canon" always answers "canon TO WHAT source".
+- Standing sub-rule effective now: ANY debate about a series' final episodes
+  gets annotated in the data so the UI can represent it.

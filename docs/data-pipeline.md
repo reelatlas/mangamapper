@@ -1258,6 +1258,27 @@ Fixed weekly is correct.
    durable guard. Lesson for the floor rule: a >2 overshoot sourced from a
    SINGLE chart row with no corroborating content anywhere is a typo
    candidate, not an adoption candidate.
+50. ✅ **CHUNK 2 WAVE 1 VERIFIED + RULED + APPLIED (2026-08-25)**. 7 verdicts,
+   7/7 formal verify (Sean-requested, ~424k; §recovery-17): zero value-level
+   refutations; the DC Jp/Int column-label inversion caught and captured as
+   an agent trap before it could poison a re-derive. Sean's rulings: x ep-20
+   → 94/v18; tmm total 33→27 + bonus-story annotation; emma 19-23 mixed
+   (span corrected 38-46); **X 21-24 AND dsq 44-45 both re-ruled FILLER**
+   with rich annotations — the "only ending" (X, asterisked) and "caught up,
+   padded out" (DSQ) classes, distinct from the Evangelion contested-ending
+   class and the Madoka true-anime-original class; the full taxonomy-v2
+   reference (incl. possible tag rename + first-class canon-source typing
+   for LN/other roots) lives in system-evolution.md for the restructuring
+   phase. arms finale 83 + ep-18 stays 61 with the 63-64 touch annotated.
+   APPLIED: 329 anchors (dc 132 lattice under a new reorder regime + dsq
+   regime), 17 boundary rows seeded (emma 7 full, arms 10 full, blade
+   v31→v30 leak fix), dsq ep-45 MU deletion (self-contradictory record),
+   tmm ep-52 repair, 11 retypes; assert-type-overrides asserted 6 standing
+   rows (X 21-24, dsq 44-45); parity healer stamped 80 more C3 skip-notes
+   (dc's back-jump lattice). Census: all rule classes 0, display 220/0,
+   gap 19→12, mu_pin_unverified 39→33. REMAINING: final wave — fist-of-
+   the-blue-sky, magic-knight-rayearth, space-adventure-cobra — then batch
+   17 research is COMPLETE and the restructuring phase begins.
 48. ✅ **AFG TITLE-MARKER CLEANUP (2026-08-25, Sean's eyeshield report)**.
    99 stored episode titles across 5 series (eyeshield 43, twin-star 38,
    world-trigger 16, kakegurui 1, tougen-anki 1) carried AFG's "* Filler"

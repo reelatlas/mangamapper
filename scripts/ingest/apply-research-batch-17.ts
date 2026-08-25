@@ -82,6 +82,10 @@ const REPAIRS_APPROVED = new Map<string, string>([
   // ---- wave 2 (Sean 2026-08-25):
   ['eyeshield-21#37#end_chapter', 'ep 37 cannot end at ch 79: the Death March arc is chs 72-88 ending at ep 36 (ch-88 page reverse-maps to ep 36); anchors the left edge of the wave-2 range (out/eyeshield-21.json)'],
   ['d-gray-man#116#end_chapter', 'Hallow finale adapts chs 206-208 ending 20 pages into 208 (Episode 13 (Hallow) infobox + Chapter 207/208 pages + AFG "resume at 208 p.21"); stored 206 was a floor — ch 206 is the bonus-chapter opening flashback. Row already manual'],
+  // ---- chunk 2 wave 1 (Sean's rulings 2026-08-25, verifier-confirmed):
+  ['x#20#end_chapter', 'Sean ruled 94 (best-supported estimate): ep 20\'s closing beat (Arashi losing her powers) is vol-18 material per Wikipedia\'s volume summary; 95 would overshoot a beat the prose places later; the exact digit inside 88-95 is an honest boundary-locked estimate like every X anchor'],
+  ['x#20#volume', 'paired: the Arashi beat is vol 18 (verifier-confirmed); stored v17 ends before it'],
+  ['tokyo-mew-mew#52#end_chapter', 'stored 32 is MangaDex/AniList padded count-space (5 bonus stories); the 27-chapter mainline is the space our stored volume boundaries use, and ep 52 adapts ch 27 "A Transfer of Power" beat-for-beat (verifier-confirmed via live APIs)'],
   // ---- batch-12 "as-stored" sweep (2026-08-25, out2/rosario-vampire-asstored.json):
   ['rosario-vampire#11#end_chapter', 'ep 11 is the Keito/newspaper episode = ch 8 "Wish Upon the Moon" (fandom + Wikipedia vol-2 summary); stored 9 came from the wiki\'s episode-page off-by-one from ep 11 onward, inherited by batch 12\'s as-stored blessing'],
   ['rosario-vampire#11#volume', 'paired: ch 8 sits in vol 2, not vol 3'],
@@ -150,6 +154,7 @@ const DELETIONS_APPROVED = new Map<string, string>([
   ['inuyasha#79', 'A1 junk anchor (out/inuyasha.json): wholly anime-original Jaken comedy episode'],
   ['slam-dunk#92', 'A1 junk anchor (out/slam-dunk.json): pure anime-original beachside comedy episode'],
   // ---- wave 2 (Sean 2026-08-25, verifier-confirmed):
+  ['detective-school-q#45', 'MU\'s record is SELF-contradictory (vol 13 cannot contain ch 69 — vol 13 = chs 96-103; verifier-confirmed against MU\'s live API + MangaDex); ep 45 is the anime-original padded finale (ja-WP verbatim) where A1 forbids anchors; coverage lives on the ep-40 anchor (95-96, v13)'],
   ['project-arms#53', '"episode 53" is a PS2 VIDEO GAME animefillerlist absorbed as a row (air date 2002-03-28 sits BEFORE ep 52\'s 03-30 — the giveaway); its ch-205/v19 mu anchor is MangaUpdates\' series-level anime.end, not an episode record. The row itself is deleted by apply-rulings-20260825b (durability: the row is typed mixed, so the anchor alone would be re-derived); ch 205 lands on ep 50 by content evidence'],
 ]);
 // Curated anchors this batch AUTHORS (not proposed as a verdict anchors row —
@@ -263,6 +268,27 @@ BOUNDARY_SEEDS.push(
     ],
   },
 );
+BOUNDARY_SEEDS.push(
+  {
+    sid: 'emma-a-victorian-romance', full: true,
+    why: 'no boundaries stored; mainline 52-chapter space over 7 volumes, agreed exactly by en-WP, ja-WP 目次 and fandom (verifier-confirmed; both final chapters are UNNUMBERED — casual counts read 51, the true count is 52)',
+    rows: [
+      { volume: 1, chapter_start: 1, chapter_end: 7 }, { volume: 2, chapter_start: 8, chapter_end: 14 }, { volume: 3, chapter_start: 15, chapter_end: 21 },
+      { volume: 4, chapter_start: 22, chapter_end: 29 }, { volume: 5, chapter_start: 30, chapter_end: 36 }, { volume: 6, chapter_start: 37, chapter_end: 43 },
+      { volume: 7, chapter_start: 44, chapter_end: 52 },
+    ],
+  },
+  {
+    sid: 'arms-alchemy', full: true,
+    why: 'no boundaries stored; 83-unit space (chs 1-79 WSJ + Finale 80 + Period 81 + Embalming one-shot 82 + After 83) per MangaDex aggregate + en-WP + fandom (verifier-confirmed; flag #699). v10 starts at 81 (80.5 is a bonus, boundaries stay integer)',
+    rows: [
+      { volume: 1, chapter_start: 1, chapter_end: 7 }, { volume: 2, chapter_start: 8, chapter_end: 17 }, { volume: 3, chapter_start: 18, chapter_end: 26 },
+      { volume: 4, chapter_start: 27, chapter_end: 36 }, { volume: 5, chapter_start: 37, chapter_end: 45 }, { volume: 6, chapter_start: 46, chapter_end: 54 },
+      { volume: 7, chapter_start: 55, chapter_end: 63 }, { volume: 8, chapter_start: 64, chapter_end: 73 }, { volume: 9, chapter_start: 74, chapter_end: 80 },
+      { volume: 10, chapter_start: 81, chapter_end: 83 },
+    ],
+  },
+);
 // Anchors excluded from apply pending Sean's ruling (key `${sid}#${episode}`):
 const EXCLUDED_ANCHORS = new Map<string, string>([]);
 // Curated zone acknowledgements: annotated episodes that legitimately carry NO
@@ -284,11 +310,36 @@ const CURATED_ZONE_ACK: { sid: string; episode: number; bound: string }[] = [
 // Entry-level updates ratified by this batch's research:
 const SERIES_UPDATES: { sid: string; patch: Record<string, unknown>; why: string }[] = [
   { sid: 'd-gray-man', patch: { continue_from_chapter: 208 }, why: 'follows the ep-116 repair: Hallow ends 20 pages into ch 208 (AFG: resume at 208 p.21) — 206 was the bonus-chapter floor' },
+  { sid: 'tokyo-mew-mew', patch: { total_chapters: 27 }, why: 'Sean 2026-08-25: the mainline space (our boundaries\' space) runs 1-27; AniList\'s 33 counts the 5 bonus stories — annotated on ep 52 so the UI can surface why' },
   { sid: 'project-arms', patch: { total_chapters: 242, total_episodes: 52, aired_episodes: 52 }, why: 'verifier-confirmed: 242 chapters (AniList\'s 241 = the dropped-v10-chapter parse error) and 52 episodes (row 53 is a PS2 game, deleted by apply-rulings-20260825b)' },
 ];
 // Curated annotations (applied like verdict annotation groups; feed the
 // order-check ruledEps): zone facts the verdicts evidence but did not file.
 const CURATED_ANNOTATIONS: { sid: string; episodes: number[]; kind: string; chapters?: string; note: string }[] = [
+  {
+    sid: 'x', episodes: [21, 22, 23, 24], kind: 'divergence',
+    note: "Sean's ruling 2026-08-25 (the \"only ending\" class): studio-original ending, technically filler — but the manga went on indefinite hiatus so no true ending exists; the community accepts this as the series' only ending and prefers it over the 1996 movie's alternative ending. Asterisked for re-evaluation under the taxonomy-v2 rule (system-evolution.md).",
+  },
+  {
+    sid: 'detective-school-q', episodes: [44, 45], kind: 'divergence',
+    note: "Sean's ruling 2026-08-25 (the \"caught up, padded out\" class): the anime outran the still-running manga (ja-WP: 最終回はアニメオリジナルの結末で終了した), so the studio padded an original two-part finale — pure filler, no canon standing. The real continuation (chs 97+, incl. the never-animated 77-83/90-94 blocks) was never adapted; resume reading at ch 97.",
+  },
+  {
+    sid: 'tokyo-mew-mew', episodes: [52], kind: 'side_story',
+    note: "Sean 2026-08-25: the manga volumes include 5 bonus stories outside the 27-chapter mainline — Bonus Comic + Afterward (v3), Tokyo Black Cat Girl (v4), Petite Mew Mew (v5, v7), Sleeping Beauty of Berry Forest (v6). AniList/MangaDex count them (33/32); our chapter space and total (27) deliberately exclude them.",
+  },
+  {
+    sid: 'tokyo-mew-mew', episodes: [46, 47], kind: 'divergence',
+    note: 'curated correction of the verdict annotation (verifier 2026-08-25): eps 46-47 are the anime-original finale build-up with no continuous chapter counterpart; note ja-WP DOES bold ep 46 as manga-based — the divergence claim rests on en-WP content comparison, and ep 46 may carry a canon beat (unresolved, low stakes).',
+  },
+  {
+    sid: 'arms-alchemy', episodes: [18], kind: 'partial', chapters: '63-64',
+    note: "Sean 2026-08-25: ep 18 ends on a graveyard-ambush cliffhanger that plausibly touches ch 63-64's opening (en-WP's final beat; unproven) — END stays 61 under the majority rule; recorded so the fact survives without overclaiming.",
+  },
+  {
+    sid: 'emma-a-victorian-romance', episodes: [19, 20, 21, 22, 23], kind: 'divergence', chapters: '38-46',
+    note: "curated span correction (verifier 2026-08-25 — evidence supports 38-46, not 37-46): the O'Donnell kidnapping (chs 38-43, all of vol 6 after ch 37) and the American rescue (chs 44-46) are cut entirely and replaced by an invented Viscount-Campbell railway-financing conspiracy (ja-WP verbatim); interpolating these five episodes would place readers inside the unadapted block.",
+  },
   {
     sid: 'sailor-moon', episodes: [73], kind: 'rearranged', chapters: '15-17',
     note: 'curated batch 17: ep 73 condenses the Rubeus abduction motif from chs 15-17 AFTER ep 71 already adapted ch 16 — a genuine step back in the loose R-season adaptation, rendered as stored (the derived-start rule keeps ep 72 at 17 rather than following the jump).',
@@ -312,6 +363,8 @@ const REORDER_REGIMES: Record<string, string> = {
   'hunter-x-hunter': 'reorder regime (batch 17): the Yorknew stretch pre-grafts and re-treads chapters (ch 72 p.1-3 into ep 50, the Uvogin fight stretched with overlapping page splits across eps 53-56, ch 83 mainline in ep 56 after its ep-45 pre-graft)',
   'that-time-i-got-reincarnated-as-a-slime': 'reorder regime (batch 17): S1 skips chs 40-42 and 44-45 and jumps to ch 43 + 46-52 for its final four episodes, leaving the skipped block to S2',
   kingdom: 'reorder regime (batch 17): ep 16 grafts the Ryo Fui introduction (chs 96-100) ahead of the campaign arc, and ep 22 skips 74-81 (adapted later in S2)',
+  'detective-school-q': 'reorder regime (chunk 2, verifier-confirmed against fandom Story_Arcs + ja-WP case table): ch 34-37 airs before ch 14-30, the Q-vs-A duel block (38-44) is dismantled across eps 5/16/22/24-25, vol 8 is scrambled (62-63→ep 23, 64→ep 32, 60-61→eps 33-34), and ch 95-96 airs at ep 40 before 84-89 at eps 41-43',
+  'detective-conan': 'reorder regime (chunk 2, verifier-confirmed): 201 of 631 manga episodes start below the running-max chapter — the adaptation freely interleaves backlog cases; every continue point carries both the parity value and the monotonic alternative (out/detective-conan.json)',
   'eyeshield-21': 'reorder regime (batch 17 wave 2, Sean sign-off): documented relocations — Musashi\'s return (chs 141-142) moved from ep 70 to eps 82-83, ch 131 into ep 87, the 109/110 and 120/121 swaps, ch 99 backfilled at ep 49, ch 100 backfilled at ep 88 (first-time adaptation, anchored per the zatch-51 precedent) — every jump per-episode evidenced in the verdicts',
   'hayate-the-combat-butler': 'reorder regime (batch 17 wave 2): season 1 adapts out of publication order throughout — ep 4 = ch 36 then ep 5 = ch 16, ep 22 = 85 then ep 23 = 70, ep 42 = 129 then ep 43 = 51 (out/hayate-the-combat-butler.json, per-episode evidence)',
   kinnikuman: 'reorder regime (batch 17 wave 2, verifier-confirmed both directions): the Kaiju arc is scrambled (1A=ch3, 1B=ch7, 2A=ch5, 2B=ch4, 3A=ch1, 3B=ch6) with later grafts (9A carries ch 23, 14A carries ch 9); END non-monotone by design in eps 1-3',

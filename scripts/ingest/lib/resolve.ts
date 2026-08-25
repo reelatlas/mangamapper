@@ -123,7 +123,13 @@ const range = (from: number, to: number, type: string) =>
   Object.fromEntries(Array.from({ length: to - from + 1 }, (_, i) => [from + i, type]));
 
 export const EPISODE_TYPE_OVERRIDES: Record<string, Record<number, string>> = {
-  x: { 21: 'anime-only-canon', 22: 'anime-only-canon', 23: 'anime-only-canon', 24: 'anime-only-canon' },
+  //   x 21-24 RE-RULED filler (Sean 2026-08-25, superseding the 2026-08-23
+  //   anime-only-canon ruling): the studio ending is technically filler; the
+  //   community accepts it only because no true ending exists (manga on
+  //   indefinite hiatus) and prefers it over the movie's alternative — the
+  //   "only ending" class, annotated + asterisked for re-evaluation when the
+  //   taxonomy-v2 rule lands (system-evolution.md).
+  x: { 21: 'filler', 22: 'filler', 23: 'filler', 24: 'filler' },
   //   RESEARCH BATCH 15 (2026-08-24, exact-record promotion — 2+ sources each,
   //   verdict JSONs in research/batch15/out):
   //   black-butler ep 3: Grelle subplot anime-original (ScreenRant explicit +
@@ -248,6 +254,16 @@ export const EPISODE_TYPE_OVERRIDES: Record<string, Record<number, string>> = {
   trigun: { 6: 'mixed', 16: 'mixed' },
   'hayate-the-combat-butler': { 10: 'filler', 19: 'mixed' },
   'saint-seiya-knights-of-the-zodiac': { 64: 'mixed' },
+  //   CHUNK 2 WAVE 1 (Sean's rulings 2026-08-25, all verifier-confirmed):
+  //   dsq 35 zero canon; 44-45 = the "caught up, padded out" class — anime
+  //   outran the manga, studio padded a finale: pure filler (Sean overruled
+  //   the verdict's anime-only-canon), annotated with why the real canon was
+  //   never animated. emma 19-23: the O'Donnell arc (chs 38-46) replaced by
+  //   an invented conspiracy → mixed. dc 128/1000/1001: chapter re-runs —
+  //   re-staged canon content, never position → mixed.
+  'detective-school-q': { 35: 'filler', 44: 'filler', 45: 'filler' },
+  'emma-a-victorian-romance': { 19: 'mixed', 20: 'mixed', 21: 'mixed', 22: 'mixed', 23: 'mixed' },
+  'detective-conan': { 128: 'mixed', 1000: 'mixed', 1001: 'mixed' },
   'fist-of-the-north-star': {
     61: 'filler', 78: 'filler', 83: 'filler',
     58: 'mixed', 75: 'mixed', 84: 'mixed', 86: 'mixed', 91: 'mixed',
