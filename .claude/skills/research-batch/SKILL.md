@@ -75,3 +75,19 @@ If a question can be settled by a script — an audit class, a census delta, a
 verifier run — settle it that way. Model tokens spent re-deriving what
 `audit-ui-truth.ts` already asserts are wasted permanently. Research is for
 what only sources can answer.
+
+## Next step — offer it, don't assume it
+
+When a wave has landed and been checkpointed, report and ASK before moving on:
+
+- Weight-bearing verdicts in this wave (whole-series structure claims, reorder
+  regimes, repairs contradicting stored data)? → offer **step 3, Verify**:
+  `verdict-verifier` over those specific files, on a different model than
+  authored them.
+- Otherwise → offer **step 4, Rule**: present the decisions Sean needs to make,
+  each with the evidence and a recommendation, then `/apply-batch`.
+- More targets outstanding? → offer the next wave, WITH the usage report, and
+  wait for a decision. Never roll into it automatically.
+
+State which of the three you are recommending and why. The user should be able
+to say "yes" rather than reconstruct the plan.

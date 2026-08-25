@@ -67,3 +67,21 @@ applied.
 Every rule applied here should end up enforced by a writer gate and verified
 by an audit class. When that happens, the rule stops costing model attention
 forever. That is the direction of travel: from judgment, to gate, to audit.
+
+## Next step — offer it, don't assume it
+
+After the save point, report and ASK:
+
+- Did this batch change a RULE (a writer gate, a lib behaviour, a typing
+  ruling)? → offer **`/consolidate deep`**, not plain consolidate. A rule
+  change plausibly invalidates prior per-series decisions, and deep mode is
+  what re-checks them. Say so explicitly rather than defaulting to the cheap
+  pass.
+- Otherwise → offer **`/consolidate`**.
+- Then **step 7, Capture**: name every learning this batch produced and where
+  each was routed (§10 rule + gate + audit / research-agent trap /
+  apply-batch trap / curated map / skill). If nothing was learned, say that —
+  it is a legitimate outcome and better than inventing one.
+
+Anything still awaiting Sean goes in the report as an explicit open decision,
+never as a silent TODO.

@@ -56,6 +56,46 @@ These are not preferences. Breaking one is a bug even if everything is green.
 
 Read the ledger before proposing a rule — most questions are already ruled on.
 
+## The data cycle — the standard process for all data work
+
+Run these in order. Each step ends by naming the next, so the sequence does
+not have to be remembered. Never skip a step because the work "seems small" —
+the skipped step is where the drift enters.
+
+| # | step | who / how |
+|---|---|---|
+| 1 | **Plan** | main session. Work-list recomputed FROM DISK, wave sized 6–8 |
+| 2 | **Research** | `/research-batch` → `research-agent` subagents (Opus) |
+| 3 | **Verify** | `verdict-verifier` — a DIFFERENT model than authored it |
+| 4 | **Rule** | **Sean decides.** Curated maps encode his rulings, not a model's |
+| 5 | **Apply** | `/apply-batch` — dry-run, apply, re-resolve, heal, verify, census |
+| 6 | **Consolidate** | `/consolidate` (`deep` when a rule change invalidates prior per-series decisions) |
+| 7 | **Capture** | fold new learnings back in — see below |
+
+Step 4 is not a formality. A verdict can be sound and still be answered with
+something other than what it proposed: Toriko's honest `263 → 253` repair was
+answered with a DELETION because A1 forbids an anchor on a filler row. A
+model that both verifies and rules has nobody checking it.
+
+## Capture — where a new learning goes
+
+The cycle only compounds if learnings land somewhere durable. When something
+is learned, route it — and say which route was taken:
+
+- **A rule** → `docs/data-pipeline.md` §10 with its enforcement site, then a
+  **writer gate** in `lib/`, then an **audit class** verifying the outcome.
+  A rule that reaches an audit stops costing model attention forever. This is
+  the direction of travel: judgment → gate → audit.
+- **A source trap** (a wiki that lies, a parse that shifts numbering) → the
+  `research-agent` definition, so every future agent starts knowing it.
+- **A pipeline trap** (a shape that laundered bad data) → the `apply-batch`
+  skill.
+- **A ruling from Sean** → the curated map, with reasoning inline, AND §10 if
+  it generalises beyond one series.
+- **A process fix** → the relevant skill, plus a `§12` log entry.
+
+If a learning has no durable home, it will be re-learned at full price.
+
 ## Workflows (skills — invoke, don't reconstruct)
 
 - `/consolidate` — systematic pass: writer sweep, healers, census, docs, save

@@ -98,3 +98,19 @@ ahead of stale data instead of waiting for it to surface as a bug.
   that is the goal state.
 - End with the same census gate as step 5 (ruling_violation = 0) and
   fold results into the step-8 save point.
+
+## 10. Close the loop (every pass)
+
+A consolidation that changes nothing durable was a wasted pass. Before
+reporting done:
+
+- **Capture.** For each finding this pass produced, name where it was routed
+  per CLAUDE.md's capture table — §10 rule + writer gate + audit class, an
+  agent/skill trap, a curated map, or a §12 entry. A finding with no durable
+  home will be re-found at full price.
+- **Check the gates are real.** Every rule cited in §10 should have an
+  enforcement site AND an outcome check. Where a rule exists with no audit
+  class behind it, say so — that rule is still costing model attention on
+  every pass and is a candidate for automation.
+- **Report cycle position.** Say plainly where the project now sits in the
+  data cycle and what step is next, so the user is never reconstructing it.
