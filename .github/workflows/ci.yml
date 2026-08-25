@@ -17,7 +17,7 @@ jobs:
       - uses: actions/checkout@v4
 
       # Reads .nvmrc, so CI, local and Vercel all track the same Node major.
-      - uses: actions/setup-node@v4
+      - uses: actions/setup-node@v7
         with:
           node-version-file: .nvmrc
           cache: npm
