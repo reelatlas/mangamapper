@@ -105,6 +105,24 @@ async function main() {
   } else {
     console.log('  trigun MU association: already fixed');
   }
+  // ---- 4. eyeshield phantom row 155 (added same day, Sean's pending-rows
+  // report): AFG's chart numbers its 145th row "155." — the extend path
+  // materialized it as a duplicate finale (no air date) and the mu anime-end
+  // pin landed on it; totals floored to 155 and the UI synthesized 146-154
+  // as pending. Real finale = row 145 (manual anchor ch 240 already
+  // stands). Durable guards: COMMUNITY_COUNT_OVERRIDES cap 145 +
+  // EXTRAS_ADOPTED entry removed (its premise was this typo).
+  const { data: es155 } = await db.from('episodes').select('title').eq('series_id', 'eyeshield-21').eq('number', 155).maybeSingle();
+  if (es155) {
+    console.log('  eyeshield: deleting phantom row 155 (AFG finale-number typo) + its mu anchor; totals 155 → 145');
+    if (!DRY) {
+      await db.from('chapter_anchors').delete().eq('series_id', 'eyeshield-21').eq('episode', 155);
+      await db.from('episodes').delete().eq('series_id', 'eyeshield-21').eq('number', 155);
+      await db.from('series').update({ aired_episodes: 145, total_episodes: 145, updated_at: new Date().toISOString() }).eq('id', 'eyeshield-21');
+    }
+  } else {
+    console.log('  eyeshield row 155: already absent');
+  }
   console.log('[rulings-20260825b] done');
 }
 main().then(() => process.exit(0));

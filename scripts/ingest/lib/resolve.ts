@@ -60,7 +60,10 @@ export async function applyScope(
 export const EXTRAS_ADOPTED = new Set<string>([
   'angel-beats', // OVA specials 14-16 (broadcast content, ruled 2026-08-24)
   'rurouni-kenshin', // 1996 broadcast tail 95-100
-  'eyeshield-21', // 10 specials beyond AniList's 145
+  // eyeshield-21 REMOVED (Sean's report 2026-08-25, §12.49): the "10
+  // specials beyond 145" premise was an AFG PAGE TYPO — its chart has 145
+  // rows with the finale mis-numbered "155."; no source names any content
+  // for 146-154. The adopted floor rationalized a parse artifact.
 ]);
 
 // Community-count rulings (Sean 2026-08-24: the community-consensus episode
@@ -84,6 +87,7 @@ export const COMMUNITY_COUNT_OVERRIDES: Record<string, { cap: number; note: stri
   //   93 — rows beyond 71 (1998 TV 1-70 + Prologue OVA 71) belong to
   //   cardcaptor-sakura-clear-card in its own 1-22 numbering
   'cardcaptor-sakura': { cap: 71, note: 'Clear Card split (Sean 2026-08-24); AFL page spans both series' },
+  'eyeshield-21': { cap: 145, note: 'AFG\'s chart typos its finale row as "155." (the page has 145 rows) — the cap keeps the phantom from re-entering via extend/expansion (Sean 2026-08-25, §12.49); the anime is 145 episodes on every real source' },
   'project-arms': { cap: 52, note: 'AFL row 53 "PS2 Video Game" is a Bandai PS2 game absorbed as an episode row (air date 2002-03-28 sits BEFORE ep 52\'s — verifier-confirmed 2026-08-25); the anime is 52 eps (26+26). Cap keeps the phantom from re-entering on any AFL refresh' },
 };
 

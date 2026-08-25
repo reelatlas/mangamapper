@@ -1242,6 +1242,22 @@ Fixed weekly is correct.
    (2) gap tier 46 → (3) mu_pin sweep 65 → (4) automation pass →
    (5) arcs table → (6) parked design pass → (7) continue-read UI →
    (8) segment model (Sean's go).
+49. ✅ **EYESHIELD PHANTOM TAIL (2026-08-25, Sean's pending-rows report —
+   SUPERSEDES an EXTRAS_ADOPTED ruling)**. Rows 146-154 rendered "pending"
+   because totals said 155 — traced to a single AFG PAGE TYPO: its chart
+   holds exactly 145 rows with the finale mis-numbered "155.". The extend
+   path materialized a duplicate-finale row 155 (no air date), the MU
+   anime-end pin landed on it, the episode floor adopted 155, and the
+   EXTRAS_ADOPTED entry ("10 specials beyond 145") was a rationalization
+   of the artifact — no source names ANY content for 146-154 (AniList/
+   Wikipedia/fandom all 145; AFL absent). FIX: phantom row 155 + its mu
+   anchor deleted (real finale row 145 already holds the manual ch-240
+   anchor — the "ep155 mu artifact" flag from §12.47 is hereby resolved);
+   totals 155 → 145; EXTRAS_ADOPTED eyeshield entry REMOVED with the
+   supersession documented; COMMUNITY_COUNT_OVERRIDES cap 145 is the
+   durable guard. Lesson for the floor rule: a >2 overshoot sourced from a
+   SINGLE chart row with no corroborating content anywhere is a typo
+   candidate, not an adoption candidate.
 48. ✅ **AFG TITLE-MARKER CLEANUP (2026-08-25, Sean's eyeshield report)**.
    99 stored episode titles across 5 series (eyeshield 43, twin-star 38,
    world-trigger 16, kakegurui 1, tougen-anki 1) carried AFG's "* Filler"
