@@ -1,0 +1,68 @@
+{
+  "series_id": "black-clover",
+  "summary": "A1 triage of three anchors on noncanon-typed Black Clover rows (eps 3, 68, 157). All three fall as JUNK ANCHOR - the stored typing is correct in every case and animefillerlist independently agrees (it uses a separate 'Mixed Canon/Filler' bucket for eps 2, 8, 12, 30, 69, so its 'Anime Canon' for 3 and 157 and 'Filler' for 68 are deliberate, not defaults). Eps 3 and 68 are anime-original bodies with page-level slivers: the Black Clover wiki's own reference tags give ep 3 exactly ch 1 p.1 (the First Wizard King prologue) plus ch 2 p.4-5 (Drouot/Orsi discussing the exam), and ep 68 exactly ch 103 p.14-15 (Asta spotting Charlotte in the closing seconds) with the entire Yami-vs-Jack stall contest anime-original - both are inside Sean's <=~5-page sliver ruling, so annotation facts only. Ep 157 is the harder call because its anchor is research-tier (batch 5): the wiki's episode infobox leaves the chapter field EMPTY for every episode 130-157, and the reverse mapping on Chapter 228 lists Episode 129 and nothing else, so ch 228 was never adapted in ep 157 - batch 5 correctly identified eps 130-157 as an anime-canon stretch but then parked ch 228 (which is ep 129's END) on the stretch's LAST episode as a frontier hold, which is exactly what A1 forbids. Ep 129 = ch 227-228 and ep 158 = ch 229-231, so the position is fully carried by the canon rows on either side.",
+  "anchors": [],
+  "continue_points": [],
+  "annotations": [
+    {
+      "episodes": [3],
+      "kind": "partial",
+      "chapters": "1 (p.1), 2 (p.4-5)",
+      "note": "Anime-original episode; only the First Wizard King demon prologue (ch 1 p.1) and the Drouot/Orsi exam conversation (ch 2 p.4-5) are manga - ~3 pages total, sliver."
+    },
+    {
+      "episodes": [68],
+      "kind": "partial",
+      "chapters": "103 (p.14-15)",
+      "note": "Whole Yami-vs-Jack food-stall/duel plot is anime-original; only the closing beat (Asta noticing Charlotte at the festival, ch 103 p.14-15) is manga - 2 pages, sliver."
+    }
+  ],
+  "type_corrections": [],
+  "repairs": [
+    {
+      "episode": 3,
+      "field": "end_chapter",
+      "old": 2,
+      "new": null,
+      "why": "A1 + sliver ruling: row is correctly typed anime-only-canon (AFL 'Anime Canon', and the AFL Mixed bucket is used elsewhere in the same show, so this is a deliberate label). The Black Clover wiki's inline refs show only ch 1 p.1 and ch 2 p.4-5 in the episode (~3 pages); everything else - Nash, Sister Lily's flashback, the journey to the capital - is anime-original padding of ch 1's slow-burn adaptation. Ch 2 is properly anchored on ep 4. Drop start_chapter, chapters_adapted (1-2) and the continue point (->2) with it; the sliver is preserved as an annotation. Anchor source is afg (derivation tier) - the row must be flipped to manual if the null is to survive the next AFG re-derive.",
+      "sources": [
+        "https://blackclover.fandom.com/api.php?action=parse&page=Episode_3&prop=wikitext&format=json",
+        "https://blackclover.fandom.com/api.php?action=parse&page=Chapter_2&prop=wikitext&format=json",
+        "https://www.animefillerlist.com/shows/black-clover"
+      ]
+    },
+    {
+      "episode": 68,
+      "field": "end_chapter",
+      "old": 103,
+      "new": null,
+      "why": "A1 + sliver ruling: row is correctly typed filler (AFL 'Filler'; the wiki's episode summary is wall-to-wall anime-original - Yami and Jack's grilled-squid vs meat-stall sales contest, Dead or Alive, arm wrestling, Julius freezing them with Chrono Stasis). The single manga ref in the whole page is ch 103 p.14-15, the two-page tag where Asta glimpses Charlotte. Ch 103 is properly anchored on ep 67 ('A Fun Festival Double Date' = ch 103's own title). Drop start_chapter, chapters_adapted (103) and the continue point (->103) with it. AFG-tier anchor - flip the row to manual so the null survives re-derive.",
+      "sources": [
+        "https://blackclover.fandom.com/api.php?action=parse&page=Episode_68&prop=wikitext&format=json",
+        "https://blackclover.fandom.com/api.php?action=parse&page=Chapter_103&prop=wikitext&format=json",
+        "https://www.animefillerlist.com/shows/black-clover"
+      ]
+    },
+    {
+      "episode": 157,
+      "field": "end_chapter",
+      "old": 228,
+      "new": null,
+      "why": "A1: research-tier anchor on an anime-only row, and the earlier verdict was wrong on placement, not on typing. Ep 157 'Five-Leaf Clover' is a clip-show recap (Asta retelling the grimoire/Anti-Magic/ki history before the Gadjah rematch, plus Noelle's Heart Kingdom training) and its wiki infobox chapter field is EMPTY - as it is for every episode 130-157. The reverse mapping is decisive: Chapter 228 'Arcane Stage Mages' lists Episode 129 as its only adaptation, and ep 129's infobox reads ch 227 + 228. Batch 5 read the stretch correctly (eps 130-157 anime-canon, Tabata-supervised) but then pinned ch 228 to the stretch's last episode as a frontier hold; A1 forbids that, and it is unnecessary - ep 129 (ch 227-228) and ep 158 (ch 229-231) bracket the whole stretch. Manual-source anchor, no re-derive risk. Drop any continue point with it.",
+      "sources": [
+        "https://blackclover.fandom.com/api.php?action=parse&page=Episode_157&prop=wikitext&format=json",
+        "https://blackclover.fandom.com/api.php?action=parse&page=Chapter_228&prop=wikitext&format=json",
+        "https://blackclover.fandom.com/api.php?action=parse&page=Episode_129&prop=wikitext&format=json",
+        "https://www.animefillerlist.com/shows/black-clover"
+      ]
+    }
+  ],
+  "structure": {
+    "notes": "Verified while triaging, for the curator's benefit only (no repairs proposed outside the three target rows): ep 128 = ch 224-226, ep 129 = ch 227-228, eps 130-157 carry an empty chapter field on every wiki episode page (the anime-canon stretch), ep 158 = ch 229-231, ep 159 = ch 232-233. So after nulling ep 157 the stretch is bracketed exactly by ep 129 (END 228) and ep 158 (START 229) - PROVIDED ep 129 actually stores END 228. Worth a mechanical check before applying; if ep 129 has no anchor, add one there rather than keeping ep 157's.",
+    "order_only": []
+  },
+  "flags_for_sean": [
+    "Precondition on the ep 157 deletion: it is only lossless if ep 129 stores end_chapter 228 (wiki-verified as ch 227-228). If ep 129 is anchorless, the anchor should move to ep 129, not simply vanish.",
+    "Eps 130-157 are a 28-episode anime-canon stretch with zero manga content per the wiki. If any other row in 130-157 carries an anchor it is the same batch-5 frontier-hold defect and should be swept the same way."
+  ]
+}

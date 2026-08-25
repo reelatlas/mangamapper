@@ -1,0 +1,1205 @@
+{
+  "series_id": "bobobo-bo-bo-bobo",
+  "summary": "The 76-episode Bobobo-bo Bo-bobo TV series adapts manga chapters (奥義) 1-178 of 230, i.e. volumes 1 through the front of volume 17, stopping partway into the Reverse-Maruhage / Dark-Emperor (闇皇帝編) arc - ja.wikipedia states flatly that the anime covers 原作の「闇皇帝編」途中まで. No source anywhere publishes a per-episode chapter map for this series (the fandom episode pages carry no 'manga counterpart' field and there are no per-chapter pages), so this lattice is a derivation built by cross-matching four independent layers: en.wikipedia's full per-episode synopses, en.wikipedia's chapter list (Japanese titles + volume boundaries), bobobo.fandom's per-episode 'Major Events' and 'Changes from the manga' sections, and bobobo.fandom's character/location infobox debut pairs (Debut (Manga) = Chapter N / Debut (Anime) = Episode M) - with the ja.wikipedia and Toei-official Japanese subtitles as a fifth check, since many episode subtitles quote chapter titles verbatim. The structural find that makes the back half reliable: from ep 52 the show switched to a two-segment A/B-part format, and from ep 52 to ep 71 the adaptation runs at a strict, unbroken 2 chapters per episode (A-part = one chapter, B-part = the next), landing exactly on the volume boundaries at eps 54 (130), 60 (142) and 71 (164); eps 72-75 then accelerate to 3-4 chapters each. Pacing before that is looser (1-4 chapters per episode) and eps 2-3 are played out of manga order. The finale question is resolved in favour of the stored value: ep 76 does adapt ch 178, so END 178 / continue 179.",
+  "anchors": [
+    {
+      "episode": 1,
+      "end_chapter": 1,
+      "start_chapter": 1,
+      "chapters_adapted": "1",
+      "volume": 1,
+      "confidence": "medium",
+      "note": "ch 1 'Hair' (the long debut chapter): Baldy-Bald IV's hair hunt, Bo-bobo rescuing Beauty, and the G-Block/Hagen takedown. Ch 2's opening block-leaders' conference is grafted in as a cold beat (fandom A-Block infobox: base debut = Chapter 2 / Episode 1); the rest of ch 2 is deferred to ep 3.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/List_of_Bobobo-bo_Bo-bobo_episodes",
+        "https://en.wikipedia.org/wiki/List_of_Bobobo-bo_Bo-bobo_chapters",
+        "https://bobobo.fandom.com/wiki/The_Bo-nafide_Soulful_Bo-tector_of_Hair",
+        "https://bobobo.fandom.com/wiki/A-Block",
+        "https://bobobo.fandom.com/wiki/Beauty"
+      ]
+    },
+    {
+      "episode": 2,
+      "end_chapter": 5,
+      "start_chapter": 4,
+      "chapters_adapted": "4-5",
+      "volume": 1,
+      "confidence": "medium",
+      "note": "Christmas-themed Don Patch duel (ch 4 'Christmas') then the wig-wearing H-Block platoon and Maitel's defeat (ch 5 'Myth'; fandom H-Block debut = Chapter 5 / Episode 2). Out of manga order - see the eps 2-3 rearrangement annotation.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/List_of_Bobobo-bo_Bo-bobo_episodes",
+        "https://en.wikipedia.org/wiki/List_of_Bobobo-bo_Bo-bobo_chapters",
+        "https://bobobo.fandom.com/wiki/Let's_Get_Wiggy_With_It",
+        "https://bobobo.fandom.com/wiki/H-Block"
+      ]
+    },
+    {
+      "episode": 4,
+      "end_chapter": 8,
+      "start_chapter": 6,
+      "chapters_adapted": "6-8",
+      "volume": 1,
+      "confidence": "medium",
+      "note": "'Wiggin' School' graduation and the mind-reading water Hair Hunter (ch 6-7), closing on the revival and instant abandonment of King Nosehair (fandom King Nosehair debut = Chapter 8 / Episode 4).",
+      "sources": [
+        "https://en.wikipedia.org/wiki/List_of_Bobobo-bo_Bo-bobo_episodes",
+        "https://en.wikipedia.org/wiki/List_of_Bobobo-bo_Bo-bobo_chapters",
+        "https://bobobo.fandom.com/wiki/Bababa-ba_Ba-baba!_The_Honorable_King_Nosehair",
+        "https://bobobo.fandom.com/wiki/King_Nosehair"
+      ]
+    },
+    {
+      "episode": 5,
+      "end_chapter": 10,
+      "start_chapter": 9,
+      "chapters_adapted": "9-10",
+      "volume": 1,
+      "confidence": "high",
+      "note": "The woodland play is ch 9 'Love Labyrinth' (named on the fandom episode page's manga-differences list) and the underwater finish against the ochazuke alien is ch 10 'Lakeside Death Match' - the end of volume 1.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/List_of_Bobobo-bo_Bo-bobo_episodes",
+        "https://en.wikipedia.org/wiki/List_of_Bobobo-bo_Bo-bobo_chapters",
+        "https://bobobo.fandom.com/wiki/To_Be_or_Snot_to_Be"
+      ]
+    },
+    {
+      "episode": 6,
+      "end_chapter": 12,
+      "start_chapter": 11,
+      "chapters_adapted": "11-12",
+      "volume": 2,
+      "confidence": "high",
+      "note": "Journey to the next city and the pasta-fist training (ch 11 'I Won't Lose!'; fandom De Mode City debut = Chapter 11 / Episode 6) plus Gechappi's hair-loss beam sending the party off to C-Block (ch 12 'Unexpected Stopover Journey').",
+      "sources": [
+        "https://en.wikipedia.org/wiki/List_of_Bobobo-bo_Bo-bobo_episodes",
+        "https://en.wikipedia.org/wiki/List_of_Bobobo-bo_Bo-bobo_chapters",
+        "https://bobobo.fandom.com/wiki/Pasta...the_Perfect_Food!",
+        "https://bobobo.fandom.com/wiki/De_Mode_City"
+      ]
+    },
+    {
+      "episode": 7,
+      "end_chapter": 14,
+      "start_chapter": 13,
+      "chapters_adapted": "13-14",
+      "volume": 2,
+      "confidence": "medium",
+      "note": "Crash landing into C-Block Tower = ch 13 'Assault!! Aitsuhage Tower'; the episode ends on the headgear-fancying guardian, Softon (fandom Softon debut = Chapter 13 / Episode 7), whose poop gag is ch 14.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/List_of_Bobobo-bo_Bo-bobo_episodes",
+        "https://en.wikipedia.org/wiki/List_of_Bobobo-bo_Bo-bobo_chapters",
+        "https://bobobo.fandom.com/wiki/Queen_Chicken_Level_and_the_Video_Store_of_Dumb",
+        "https://bobobo.fandom.com/wiki/Softon"
+      ]
+    },
+    {
+      "episode": 8,
+      "end_chapter": 16,
+      "start_chapter": 15,
+      "chapters_adapted": "15-16",
+      "volume": 2,
+      "confidence": "high",
+      "note": "The full Softon fight and Bo-bobo World's first use (fandom Bo-bobo World debut = Chapter 16 / Episode 8); ch 15-16 close the fight and Beauty's cure.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/List_of_Bobobo-bo_Bo-bobo_episodes",
+        "https://en.wikipedia.org/wiki/List_of_Bobobo-bo_Bo-bobo_chapters",
+        "https://bobobo.fandom.com/wiki/We_All_Scream_for_Ice_Cream!",
+        "https://bobobo.fandom.com/wiki/Bo-bobo_World"
+      ]
+    },
+    {
+      "episode": 9,
+      "end_chapter": 18,
+      "start_chapter": 17,
+      "chapters_adapted": "17-18",
+      "volume": 2,
+      "confidence": "high",
+      "note": "Geha the Gale at the tower top (ch 17 'A New Assassin') and Gasser's reveal as the Fist of the Backwind boy (ch 18 'A Fart's Feeling is Whimsical').",
+      "sources": [
+        "https://en.wikipedia.org/wiki/List_of_Bobobo-bo_Bo-bobo_episodes",
+        "https://en.wikipedia.org/wiki/List_of_Bobobo-bo_Bo-bobo_chapters",
+        "https://bobobo.fandom.com/wiki/Gasser_Up!_I'm_Ready_to_Drive!"
+      ]
+    },
+    {
+      "episode": 10,
+      "end_chapter": 20,
+      "start_chapter": 19,
+      "chapters_adapted": "19-20",
+      "volume": 2,
+      "confidence": "high",
+      "note": "Wall monster hunting Gasser and the tower's destruction (ch 19 'Goodbye Aitsuhage Tenaka Tower') then Gasser formally joining (ch 20 'Welcome Gas-can to Bo-bobo Class') - end of volume 2.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/List_of_Bobobo-bo_Bo-bobo_episodes",
+        "https://en.wikipedia.org/wiki/List_of_Bobobo-bo_Bo-bobo_chapters",
+        "https://bobobo.fandom.com/wiki/Protect_the_Environment...Something_Stinks_in_Here!"
+      ]
+    },
+    {
+      "episode": 11,
+      "end_chapter": 21,
+      "start_chapter": 21,
+      "chapters_adapted": "21",
+      "volume": 3,
+      "confidence": "medium",
+      "note": "The slowest point of the adaptation: a single chapter (ch 21 'That's Not The Reason') stretched to a full episode - the fighting lesson and the Nosehair Dojo (fandom Nosehair Dojo debut = Chapter 21 / Episode 11).",
+      "sources": [
+        "https://en.wikipedia.org/wiki/List_of_Bobobo-bo_Bo-bobo_episodes",
+        "https://en.wikipedia.org/wiki/List_of_Bobobo-bo_Bo-bobo_chapters",
+        "https://bobobo.fandom.com/wiki/A_Bird_in_the_Hand_Can_Play_Chicken_But_Still_Smell_Fowl!",
+        "https://bobobo.fandom.com/wiki/Nosehair_Dojo"
+      ]
+    },
+    {
+      "episode": 12,
+      "end_chapter": 24,
+      "start_chapter": 22,
+      "chapters_adapted": "22-24",
+      "volume": 3,
+      "confidence": "medium",
+      "note": "Jelly Jiggler's A-Block amusement park appears (fandom A-Block current base = Chapter 22 / Episode 12): ch 22 'Homecoming', ch 23 'A Gift from Jelly Jiggler', ch 24 'Amusement Parks are Wonderful!!'.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/List_of_Bobobo-bo_Bo-bobo_episodes",
+        "https://en.wikipedia.org/wiki/List_of_Bobobo-bo_Bo-bobo_chapters",
+        "https://bobobo.fandom.com/wiki/The_Weally_Wobbly_World_of_Bo-bobo's_Foe:_General_Jelly_Jiggler!",
+        "https://bobobo.fandom.com/wiki/A-Block"
+      ]
+    },
+    {
+      "episode": 13,
+      "end_chapter": 26,
+      "start_chapter": 25,
+      "chapters_adapted": "25-26",
+      "volume": 3,
+      "confidence": "high",
+      "note": "Don Patch's by-the-numbers ex is ch 25 'I Love Math, 1-2-3!!' and the roller-coaster turtle rap is ch 26 'Turtle Rap' (fandom Katsu debut = Chapter 26 / Episode 13).",
+      "sources": [
+        "https://en.wikipedia.org/wiki/List_of_Bobobo-bo_Bo-bobo_episodes",
+        "https://en.wikipedia.org/wiki/List_of_Bobobo-bo_Bo-bobo_chapters",
+        "https://bobobo.fandom.com/wiki/Bo-bobo's_Rappin'_Roller_Coaster_Ride",
+        "https://bobobo.fandom.com/wiki/Katsu"
+      ]
+    },
+    {
+      "episode": 14,
+      "end_chapter": 28,
+      "start_chapter": 27,
+      "chapters_adapted": "27-28",
+      "volume": 3,
+      "confidence": "medium",
+      "note": "Haunted-house wedding = ch 27 'A Haunted House, Farts and a Wedding' (title-for-title); Don Patch's former lover is ch 28 'Rose'. Gasser's collar comes off for the first time here.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/List_of_Bobobo-bo_Bo-bobo_episodes",
+        "https://en.wikipedia.org/wiki/List_of_Bobobo-bo_Bo-bobo_chapters",
+        "https://bobobo.fandom.com/wiki/Haunted_HollowBo-bobo"
+      ]
+    },
+    {
+      "episode": 15,
+      "end_chapter": 30,
+      "start_chapter": 29,
+      "chapters_adapted": "29-30",
+      "volume": 3,
+      "confidence": "high",
+      "note": "Gasser's released power against Katsu is ch 29 'The Released Farts...' and the Jelly Jiggler showdown is ch 30 'Bo-bobo vs. Jelly Jiggler'.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/List_of_Bobobo-bo_Bo-bobo_episodes",
+        "https://en.wikipedia.org/wiki/List_of_Bobobo-bo_Bo-bobo_chapters",
+        "https://bobobo.fandom.com/wiki/General_Jelly_Jiggler:_Supreme_Hair_Enemy_or_Dastardly_Dessert?"
+      ]
+    },
+    {
+      "episode": 16,
+      "end_chapter": 34,
+      "start_chapter": 31,
+      "chapters_adapted": "31-34",
+      "volume": 4,
+      "confidence": "medium",
+      "note": "Bobopatch's first fusion ends Jelly Jiggler (ch 31 'Jihad'; fandom Bobopatch debut = Chapter 31 / Episode 16); the pair then apply to the Hair Hunters, which is ch 34 'Interview Expert', with Gunkan watching (fandom Gunkan debut = Chapter 34 / Episode 16). Ch 32-33 sit in between.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/List_of_Bobobo-bo_Bo-bobo_episodes",
+        "https://en.wikipedia.org/wiki/List_of_Bobobo-bo_Bo-bobo_chapters",
+        "https://bobobo.fandom.com/wiki/Snot_in_My_Neighborhood!",
+        "https://bobobo.fandom.com/wiki/Bobopatch",
+        "https://bobobo.fandom.com/wiki/Gunkan"
+      ]
+    },
+    {
+      "episode": 17,
+      "end_chapter": 37,
+      "start_chapter": 35,
+      "chapters_adapted": "35-37",
+      "volume": 4,
+      "confidence": "medium",
+      "note": "Gunkan revealed as Bo-bobo's rival (ch 35 'Destiny Intertwined by Nosehairs'), Puppuu City and Suzu (fandom debuts = Chapter 36 / Episode 17), and the recruitment of Softon and Jelly Jiggler = ch 37 'Meeting of the 5 Warriors'. Boundary is +/-1 chapter against ep 18.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/List_of_Bobobo-bo_Bo-bobo_episodes",
+        "https://en.wikipedia.org/wiki/List_of_Bobobo-bo_Bo-bobo_chapters",
+        "https://bobobo.fandom.com/wiki/The_Ducktail_Versus_Afro_Showdown",
+        "https://bobobo.fandom.com/wiki/Puppuu_City",
+        "https://bobobo.fandom.com/wiki/Suzu"
+      ]
+    },
+    {
+      "episode": 18,
+      "end_chapter": 40,
+      "start_chapter": 38,
+      "chapters_adapted": "38-40",
+      "volume": 4,
+      "confidence": "medium",
+      "note": "The Pomade Ring invasion (fandom Pomade Ring debut = Chapter 38 / Episode 18, Serviceman = Chapter 39 / Episode 18) through ch 40 'It's 5 on 5! Everyone Come Together', which sets up ep 19's one-on-ones.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/List_of_Bobobo-bo_Bo-bobo_episodes",
+        "https://en.wikipedia.org/wiki/List_of_Bobobo-bo_Bo-bobo_chapters",
+        "https://bobobo.fandom.com/wiki/Beauty_is_in_the_Eye_of_Her_Beholder",
+        "https://bobobo.fandom.com/wiki/Pomade_Ring",
+        "https://bobobo.fandom.com/wiki/Serviceman"
+      ]
+    },
+    {
+      "episode": 19,
+      "end_chapter": 42,
+      "start_chapter": 41,
+      "chapters_adapted": "41-42",
+      "volume": 4,
+      "confidence": "high",
+      "note": "Gasser's masked-school bout = ch 41 'Gasser's Embarrassing Past'; the calendar enemy = ch 42 'Hiding Away That Body' - end of volume 4.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/List_of_Bobobo-bo_Bo-bobo_episodes",
+        "https://en.wikipedia.org/wiki/List_of_Bobobo-bo_Bo-bobo_chapters",
+        "https://bobobo.fandom.com/wiki/The_Entangled_Nose_Hair_of_Destiny:_Who_Will_Pass_the_Test?"
+      ]
+    },
+    {
+      "episode": 20,
+      "end_chapter": 46,
+      "start_chapter": 43,
+      "chapters_adapted": "43-46",
+      "volume": 5,
+      "confidence": "high",
+      "note": "Bo-bobo World battle (ch 43), the Babylon training trip (ch 44 'Bo-bobo: Go to Babylon'; fandom World of Babylon debut = Chapter 44 / Episode 20), the chicken-headed guides (ch 45 'The Terrible Babylon Guides') and the new technique that finishes the last masked warrior (ch 46 'New Ultimate Technique').",
+      "sources": [
+        "https://en.wikipedia.org/wiki/List_of_Bobobo-bo_Bo-bobo_episodes",
+        "https://en.wikipedia.org/wiki/List_of_Bobobo-bo_Bo-bobo_chapters",
+        "https://bobobo.fandom.com/wiki/World_of_Blabs-a-Lot:_The_Sappiest_Place_on_Earth",
+        "https://bobobo.fandom.com/wiki/World_of_Babylon"
+      ]
+    },
+    {
+      "episode": 21,
+      "end_chapter": 49,
+      "start_chapter": 47,
+      "chapters_adapted": "47-49",
+      "volume": 5,
+      "confidence": "high",
+      "note": "The Gunkan showdown: ch 47 'Fate X Nosehair X Decisive Battle', ch 48 'It's Gunkan' (his past), ch 49 'It's Bo-bobo' - and Hatenko arrives at the tag (fandom Hatenko debut = Chapter 49 / Episode 21).",
+      "sources": [
+        "https://en.wikipedia.org/wiki/List_of_Bobobo-bo_Bo-bobo_episodes",
+        "https://en.wikipedia.org/wiki/List_of_Bobobo-bo_Bo-bobo_chapters",
+        "https://bobobo.fandom.com/wiki/Good-bye_Bo-bobo!_The_Final_Showdown?",
+        "https://bobobo.fandom.com/wiki/Hatenko"
+      ]
+    },
+    {
+      "episode": 22,
+      "end_chapter": 52,
+      "start_chapter": 50,
+      "chapters_adapted": "50-52",
+      "volume": 5,
+      "confidence": "medium",
+      "note": "Hatenko's devotion to his 'sun' Don Patch (ch 50-51 'The Day the Sun Fell') and Purupu's one-attack defeat (fandom Purupu debut = Chapter 51 / Episode 22), closing on ch 52.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/List_of_Bobobo-bo_Bo-bobo_episodes",
+        "https://en.wikipedia.org/wiki/List_of_Bobobo-bo_Bo-bobo_chapters",
+        "https://bobobo.fandom.com/wiki/Hatenko_the_Hunk_Has_the_Key_to_Your_Heart",
+        "https://bobobo.fandom.com/wiki/Purupu"
+      ]
+    },
+    {
+      "episode": 23,
+      "end_chapter": 56,
+      "start_chapter": 53,
+      "chapters_adapted": "53-56",
+      "volume": 6,
+      "confidence": "medium",
+      "note": "The Evil House of Blood detour: the anniversary chapter (ch 53, end of volume 5) into the brainwashing arc, ch 55 'Famicom Generation's Counterattack' and ch 56 'End of the Ugly Quarrel'.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/List_of_Bobobo-bo_Bo-bobo_episodes",
+        "https://en.wikipedia.org/wiki/List_of_Bobobo-bo_Bo-bobo_chapters",
+        "https://bobobo.fandom.com/wiki/Weddings,_Wiggins_and_Water_Torture"
+      ]
+    },
+    {
+      "episode": 24,
+      "end_chapter": 60,
+      "start_chapter": 57,
+      "chapters_adapted": "57-60",
+      "volume": 6,
+      "confidence": "medium",
+      "note": "Beachfront robot team = ch 57 'Summer! The Sea! Splitting Watermelon!!', the game show = ch 59 'A Quiz, Boing!...I'm Not a Frog I'm Dengaku!', arrival inside = ch 60 'Secret of Z-Block Base' (fandom Z-Block debut = Chapter 59 / Episode 24).",
+      "sources": [
+        "https://en.wikipedia.org/wiki/List_of_Bobobo-bo_Bo-bobo_episodes",
+        "https://en.wikipedia.org/wiki/List_of_Bobobo-bo_Bo-bobo_chapters",
+        "https://bobobo.fandom.com/wiki/The_Terrifying_Z-Block_Is_Here!",
+        "https://bobobo.fandom.com/wiki/Z-Block"
+      ]
+    },
+    {
+      "episode": 25,
+      "end_chapter": 63,
+      "start_chapter": 61,
+      "chapters_adapted": "61-63",
+      "volume": 6,
+      "confidence": "medium",
+      "note": "Giant-TV trial and the fishcake/dragon black Bo-bobo = ch 62 'Plan to Become a Dragon'; ch 63 'Heart' releases the next Z-Block warrior.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/List_of_Bobobo-bo_Bo-bobo_episodes",
+        "https://en.wikipedia.org/wiki/List_of_Bobobo-bo_Bo-bobo_chapters",
+        "https://bobobo.fandom.com/wiki/The_New_Bo-bobo_with_the_Old_Bo-bobody"
+      ]
+    },
+    {
+      "episode": 26,
+      "end_chapter": 66,
+      "start_chapter": 64,
+      "chapters_adapted": "64-66",
+      "volume": 7,
+      "confidence": "high",
+      "note": "Dengakuman emerges (ch 64 'DedededeDengakuman') and the fight ends on his loneliness - ch 66 'Can I Make 100 Friends?', which the Japanese subtitle quotes almost verbatim (友だち何人できるかな?).",
+      "sources": [
+        "https://en.wikipedia.org/wiki/List_of_Bobobo-bo_Bo-bobo_episodes",
+        "https://en.wikipedia.org/wiki/List_of_Bobobo-bo_Bo-bobo_chapters",
+        "https://bobobo.fandom.com/wiki/Dengaku_Man,_Pixie_or_Pit_Bull--He'll_Love_You_or_Hate_You!"
+      ]
+    },
+    {
+      "episode": 27,
+      "end_chapter": 69,
+      "start_chapter": 67,
+      "chapters_adapted": "67-69",
+      "volume": 7,
+      "confidence": "medium",
+      "note": "Hajike Block reopened (ch 67 'Fierce Battle Curtain Raising!!'; fandom Hajike Block debut = Chapter 68 / Episode 27) through the tea-ceremony gauntlet, ch 69 'Tea Ceremony Panic!!' (fandom Rice debut = Chapter 69 / Episode 27).",
+      "sources": [
+        "https://en.wikipedia.org/wiki/List_of_Bobobo-bo_Bo-bobo_episodes",
+        "https://en.wikipedia.org/wiki/List_of_Bobobo-bo_Bo-bobo_chapters",
+        "https://bobobo.fandom.com/wiki/Luck_Let_a_Wiggin_See...How_Nice_a_Hanky_Can_Be!",
+        "https://bobobo.fandom.com/wiki/Hajike_Block",
+        "https://bobobo.fandom.com/wiki/Rice"
+      ]
+    },
+    {
+      "episode": 28,
+      "end_chapter": 72,
+      "start_chapter": 70,
+      "chapters_adapted": "70-72",
+      "volume": 7,
+      "confidence": "medium",
+      "note": "Mouse-samurai chase (ch 70 'Here's Bo-bobo!!'), Rice introduced (ch 71 'Rice') and the shield gag, ch 72 'Let's Go Three-Idiot Trio'.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/List_of_Bobobo-bo_Bo-bobo_episodes",
+        "https://en.wikipedia.org/wiki/List_of_Bobobo-bo_Bo-bobo_chapters",
+        "https://bobobo.fandom.com/wiki/Mortal_Match!_Fist_of_Nose_Hair_vs._Fist_of_Rice!"
+      ]
+    },
+    {
+      "episode": 29,
+      "end_chapter": 75,
+      "start_chapter": 73,
+      "chapters_adapted": "73-75",
+      "volume": 7,
+      "confidence": "high",
+      "note": "Rice's full power as King of Hajikelists: ch 73 'Summit', ch 74 'The Hajikelists' Party', ch 75 'Final Battle for the Top', where Bo-bobo takes the title.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/List_of_Bobobo-bo_Bo-bobo_episodes",
+        "https://en.wikipedia.org/wiki/List_of_Bobobo-bo_Bo-bobo_chapters",
+        "https://bobobo.fandom.com/wiki/Instant_Rice_-_Ready_in_Half_an_Hour?"
+      ]
+    },
+    {
+      "episode": 30,
+      "end_chapter": 78,
+      "start_chapter": 76,
+      "chapters_adapted": "76-78",
+      "volume": 8,
+      "confidence": "high",
+      "note": "Title fight ends (ch 76 'Look at the Frog'), the ninja assassin points them at OVER (ch 77; fandom OVER's Castle debut = Chapter 77 / Episode 30) and the first Ultimate Five assassin is ch 78 'Introducing Ruby-chan!!'.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/List_of_Bobobo-bo_Bo-bobo_episodes",
+        "https://en.wikipedia.org/wiki/List_of_Bobobo-bo_Bo-bobo_chapters",
+        "https://bobobo.fandom.com/wiki/Revenge_is_a_Dish_Best_Served_Cold_with_Shiitake_Mushroom_Sauce",
+        "https://bobobo.fandom.com/wiki/OVER's_Castle"
+      ]
+    },
+    {
+      "episode": 31,
+      "end_chapter": 81,
+      "start_chapter": 79,
+      "chapters_adapted": "79-81",
+      "volume": 8,
+      "confidence": "high",
+      "note": "Soccer villain = ch 79 'Number 10's Pressure', trap master = ch 80 'The Trembler's Trap', last-three-assassins showdown = ch 81 'Bo-bobo All-Stars' Great Fray' (the Japanese subtitle quotes it).",
+      "sources": [
+        "https://en.wikipedia.org/wiki/List_of_Bobobo-bo_Bo-bobo_episodes",
+        "https://en.wikipedia.org/wiki/List_of_Bobobo-bo_Bo-bobo_chapters",
+        "https://bobobo.fandom.com/wiki/The_Ultimate_Five_Assassins_vs._Bo-bobo_All-Stars!"
+      ]
+    },
+    {
+      "episode": 32,
+      "end_chapter": 84,
+      "start_chapter": 82,
+      "chapters_adapted": "82-84",
+      "volume": 8,
+      "confidence": "high",
+      "note": "Ancient-cultures team fight into the triple fusion Bobopatchiggler (fandom Bobopatchnosuke debut = Chapter 83 / Episode 32) and Majide Time = ch 84 'M-T'.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/List_of_Bobobo-bo_Bo-bobo_episodes",
+        "https://en.wikipedia.org/wiki/List_of_Bobobo-bo_Bo-bobo_chapters",
+        "https://bobobo.fandom.com/wiki/Enter_BoboPatchiggler!_Is_That_How_It's_Spelled?",
+        "https://bobobo.fandom.com/wiki/Bobopatchnosuke"
+      ]
+    },
+    {
+      "episode": 33,
+      "end_chapter": 87,
+      "start_chapter": 85,
+      "chapters_adapted": "85-87",
+      "volume": 8,
+      "confidence": "high",
+      "note": "OVER at the castle top (ch 85), the cannon-flying aerial duel (ch 86) and angering him into Torpedo Girl - ch 87 'Game Over' (fandom Torpedo Girl debut = Chapter 87 / Episode 33). End of volume 8.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/List_of_Bobobo-bo_Bo-bobo_episodes",
+        "https://en.wikipedia.org/wiki/List_of_Bobobo-bo_Bo-bobo_chapters",
+        "https://bobobo.fandom.com/wiki/It_Ain't_OVER_'Til_the_Fat_Lady_Sings",
+        "https://bobobo.fandom.com/wiki/OVER_and_Torpedo_Girl"
+      ]
+    },
+    {
+      "episode": 34,
+      "end_chapter": 89,
+      "start_chapter": 88,
+      "chapters_adapted": "88-89",
+      "volume": 9,
+      "confidence": "high",
+      "note": "Torpedo Girl revealed and the trio's futile all-out attack: ch 88 'Invincible', ch 89 'Three Idiots vs. The Torpedo'.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/List_of_Bobobo-bo_Bo-bobo_episodes",
+        "https://en.wikipedia.org/wiki/List_of_Bobobo-bo_Bo-bobo_chapters",
+        "https://bobobo.fandom.com/wiki/Torpedo_Girl:_Man_or_Myth?_Or_Mythes?"
+      ]
+    },
+    {
+      "episode": 35,
+      "end_chapter": 92,
+      "start_chapter": 90,
+      "chapters_adapted": "90-92",
+      "volume": 9,
+      "confidence": "high",
+      "note": "Bo-bobo World trip (ch 90 'It's Here: Bo-bobo World'), the nine-planet judgement (ch 91 'Engulfed in Space...') and OVER's defeat (ch 92), after which Suzu points them at Halekulani (fandom Halekulani debut = Chapter 92 / Episode 35).",
+      "sources": [
+        "https://en.wikipedia.org/wiki/List_of_Bobobo-bo_Bo-bobo_episodes",
+        "https://en.wikipedia.org/wiki/List_of_Bobobo-bo_Bo-bobo_chapters",
+        "https://bobobo.fandom.com/wiki/King_Nose_Hair_Presents:_%22The_Follicle_Follies_of_the_Future",
+        "https://bobobo.fandom.com/wiki/Halekulani"
+      ]
+    },
+    {
+      "episode": 36,
+      "end_chapter": 94,
+      "start_chapter": 93,
+      "chapters_adapted": "93-94",
+      "volume": 9,
+      "confidence": "high",
+      "note": "The tickets gag (ch 93 'Challenger') and the all-night boxcar battle on the way to Hallelujah Land = ch 94 'It's CHUGA CHUGA Time!!' (fandom Hallelujah Land debut = Chapter 94 / Episode 36).",
+      "sources": [
+        "https://en.wikipedia.org/wiki/List_of_Bobobo-bo_Bo-bobo_episodes",
+        "https://en.wikipedia.org/wiki/List_of_Bobobo-bo_Bo-bobo_chapters",
+        "https://bobobo.fandom.com/wiki/Next_Stop...Holy_Guacamole_Land!",
+        "https://bobobo.fandom.com/wiki/Hallelujah_Land"
+      ]
+    },
+    {
+      "episode": 37,
+      "end_chapter": 96,
+      "start_chapter": 95,
+      "chapters_adapted": "95-96",
+      "volume": 9,
+      "confidence": "medium",
+      "note": "The Kids Area regression is ch 95 'Boyhood' and the nightmare villain is ch 96 'Nightmare Nightmare Nightmare'; the Three Murderous Fiends (ch 97) are held over to ep 38.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/List_of_Bobobo-bo_Bo-bobo_episodes",
+        "https://en.wikipedia.org/wiki/List_of_Bobobo-bo_Bo-bobo_chapters",
+        "https://bobobo.fandom.com/wiki/Holy_Guacamole_Land_Isn't_Just_For_Breakfast_Anymore"
+      ]
+    },
+    {
+      "episode": 38,
+      "end_chapter": 99,
+      "start_chapter": 97,
+      "chapters_adapted": "97-99",
+      "volume": 10,
+      "confidence": "medium",
+      "note": "Split-up in the park with the Three Murderous Fiends lurking (ch 97), Don Patch's hero show = ch 98 'I am the Main Character!!!' (end of volume 9), and Softon's return making ch 99 'The Four Strongest People Have Gathered'.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/List_of_Bobobo-bo_Bo-bobo_episodes",
+        "https://en.wikipedia.org/wiki/List_of_Bobobo-bo_Bo-bobo_chapters",
+        "https://bobobo.fandom.com/wiki/Money_Castle!_Cash_Only_Please._Credit_Cards_Not_Accepted"
+      ]
+    },
+    {
+      "episode": 39,
+      "end_chapter": 101,
+      "start_chapter": 100,
+      "chapters_adapted": "100-101",
+      "volume": 10,
+      "confidence": "medium",
+      "note": "The Terrible Triplets brawl = ch 100 'We're All Here!! A Big Battle With Kicking And Punching!!' and ch 101 'Crash'.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/List_of_Bobobo-bo_Bo-bobo_episodes",
+        "https://en.wikipedia.org/wiki/List_of_Bobobo-bo_Bo-bobo_chapters",
+        "https://bobobo.fandom.com/wiki/The_Terrible_Triplets_Versus_the_Wiggin'_Trio!"
+      ]
+    },
+    {
+      "episode": 40,
+      "end_chapter": 103,
+      "start_chapter": 102,
+      "chapters_adapted": "102-103",
+      "volume": 10,
+      "confidence": "medium",
+      "note": "Haou powered up and the roulette counterattack (ch 102 'They Are Underestimating Us!!') into Halekulani's money field - ch 103 'Money or the Nose Hair'.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/List_of_Bobobo-bo_Bo-bobo_episodes",
+        "https://en.wikipedia.org/wiki/List_of_Bobobo-bo_Bo-bobo_chapters",
+        "https://bobobo.fandom.com/wiki/The_Fall_of_Halekulani!_And_the_Winter_of_Discontent!"
+      ]
+    },
+    {
+      "episode": 41,
+      "end_chapter": 104,
+      "start_chapter": 104,
+      "chapters_adapted": "104",
+      "volume": 10,
+      "confidence": "medium",
+      "note": "A single chapter: Halekulani's Fist of Gorgeousness pulls the team into ch 104 'Scary Board Game Battle'. The thinnest anchor in the run - the ep 40/41/42 split is the least certain stretch of the Hallelujah Land arc.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/List_of_Bobobo-bo_Bo-bobo_episodes",
+        "https://en.wikipedia.org/wiki/List_of_Bobobo-bo_Bo-bobo_chapters",
+        "https://bobobo.fandom.com/wiki/The_Magical_Battle_Against_Halekulani!"
+      ]
+    },
+    {
+      "episode": 42,
+      "end_chapter": 106,
+      "start_chapter": 105,
+      "chapters_adapted": "105-106",
+      "volume": 10,
+      "confidence": "high",
+      "note": "Bo-bobo hijacks the board game = ch 105 'Alone On The Platform', then Halekulani's trillion-dollar power = ch 106 'One Trillion Dollar Bo-BoBo'.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/List_of_Bobobo-bo_Bo-bobo_episodes",
+        "https://en.wikipedia.org/wiki/List_of_Bobobo-bo_Bo-bobo_chapters",
+        "https://bobobo.fandom.com/wiki/Bo-bobo_Braves_the_Board_Game_that's_Berry,_Berry_Bothersome"
+      ]
+    },
+    {
+      "episode": 43,
+      "end_chapter": 108,
+      "start_chapter": 107,
+      "chapters_adapted": "107-108",
+      "volume": 10,
+      "confidence": "high",
+      "note": "What matters more than money = ch 107 'What's Important!!' (Halekulani's defeat) and Gasser's abduction = ch 108 'Challenge from Cyber City' (fandom Cyber City and Giga debuts = Chapter 108 / Episode 43).",
+      "sources": [
+        "https://en.wikipedia.org/wiki/List_of_Bobobo-bo_Bo-bobo_episodes",
+        "https://en.wikipedia.org/wiki/List_of_Bobobo-bo_Bo-bobo_chapters",
+        "https://bobobo.fandom.com/wiki/Ha-le_Oo-pu_Ah-ah!",
+        "https://bobobo.fandom.com/wiki/Cyber_City",
+        "https://bobobo.fandom.com/wiki/Giga"
+      ]
+    },
+    {
+      "episode": 44,
+      "end_chapter": 110,
+      "start_chapter": 109,
+      "chapters_adapted": "109-110",
+      "volume": 11,
+      "confidence": "medium",
+      "note": "Arrival at Cyber City and the wheel-headed assassin: ch 109 'Sphere-Prison Execution Stand' into ch 110 'Bet On Bo-bobo'.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/List_of_Bobobo-bo_Bo-bobo_episodes",
+        "https://en.wikipedia.org/wiki/List_of_Bobobo-bo_Bo-bobo_chapters",
+        "https://bobobo.fandom.com/wiki/The_Seriously_Circular_Skirmish_in_Cyber_City"
+      ]
+    },
+    {
+      "episode": 45,
+      "end_chapter": 112,
+      "start_chapter": 111,
+      "chapters_adapted": "111-112",
+      "volume": 11,
+      "confidence": "medium",
+      "note": "The bungee fight = ch 111 'The Fun Bungee Fair' (fandom Despair-kun debut = Chapter 111 / Episode 45) and the bottomless-pit Mystery Box = ch 112 'Crisscross'.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/List_of_Bobobo-bo_Bo-bobo_episodes",
+        "https://en.wikipedia.org/wiki/List_of_Bobobo-bo_Bo-bobo_chapters",
+        "https://bobobo.fandom.com/wiki/Begin_the_Bungie_Battle!_Last_One_Down_is_a_Rotten_Egg!",
+        "https://bobobo.fandom.com/wiki/Despair-kun"
+      ]
+    },
+    {
+      "episode": 46,
+      "end_chapter": 114,
+      "start_chapter": 113,
+      "chapters_adapted": "113-114",
+      "volume": 11,
+      "confidence": "high",
+      "note": "Gasser turned into Giga's artwork enrages Bo-bobo = ch 113 'Bo-bobo get mad about it'; the team splitting toward two Knights = ch 114 'Double Deathmatch' (fandom Shibito debut = Chapter 113 / Episode 46).",
+      "sources": [
+        "https://en.wikipedia.org/wiki/List_of_Bobobo-bo_Bo-bobo_episodes",
+        "https://en.wikipedia.org/wiki/List_of_Bobobo-bo_Bo-bobo_chapters",
+        "https://bobobo.fandom.com/wiki/Libraries_and_Driving_Tests!",
+        "https://bobobo.fandom.com/wiki/Shibito"
+      ]
+    },
+    {
+      "episode": 47,
+      "end_chapter": 116,
+      "start_chapter": 115,
+      "chapters_adapted": "115-116",
+      "volume": 11,
+      "confidence": "high",
+      "note": "Memory-wipe enemy and Bo-bobo's rage = ch 115 'Anger Explosion X2'; J arrives with the Black Sun = ch 116 'The Emissary of the Black Sun' (fandom J debut = Chapter 116 / Episode 47).",
+      "sources": [
+        "https://en.wikipedia.org/wiki/List_of_Bobobo-bo_Bo-bobo_episodes",
+        "https://en.wikipedia.org/wiki/List_of_Bobobo-bo_Bo-bobo_chapters",
+        "https://bobobo.fandom.com/wiki/A_Battle_of_Skills_and_Wills_with_One_Green_Onion._Or_Is_It_Garlic?",
+        "https://bobobo.fandom.com/wiki/J"
+      ]
+    },
+    {
+      "episode": 48,
+      "end_chapter": 118,
+      "start_chapter": 117,
+      "chapters_adapted": "117-118",
+      "volume": 11,
+      "confidence": "high",
+      "note": "Denbo's first fusion = ch 117 'Pure Miscalculation' (fandom Denbo debut = Chapter 117 / Episode 48) and the sing-along that finishes J = ch 118 'A song that touches the heart'.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/List_of_Bobobo-bo_Bo-bobo_episodes",
+        "https://en.wikipedia.org/wiki/List_of_Bobobo-bo_Bo-bobo_chapters",
+        "https://bobobo.fandom.com/wiki/Silly_Singing_Saves_the_Show_from_a_Sinister_Scoundrel",
+        "https://bobobo.fandom.com/wiki/Denbo"
+      ]
+    },
+    {
+      "episode": 49,
+      "end_chapter": 120,
+      "start_chapter": 119,
+      "chapters_adapted": "119-120",
+      "volume": 11,
+      "confidence": "high",
+      "note": "Giga invites the team in = ch 119 'Giga! I'll never forgive you!!' and the brain battle = ch 120 'Get on with it, you idiot!' - end of volume 11.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/List_of_Bobobo-bo_Bo-bobo_episodes",
+        "https://en.wikipedia.org/wiki/List_of_Bobobo-bo_Bo-bobo_chapters",
+        "https://bobobo.fandom.com/wiki/The_Battle_of_Brains_Begins!"
+      ]
+    },
+    {
+      "episode": 50,
+      "end_chapter": 122,
+      "start_chapter": 121,
+      "chapters_adapted": "121-122",
+      "volume": 12,
+      "confidence": "high",
+      "note": "Obuje de Art's full power = ch 121 'Giving it their all!' and the deadly staircase = ch 122 'Climb up! The stairway battle!!'.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/List_of_Bobobo-bo_Bo-bobo_episodes",
+        "https://en.wikipedia.org/wiki/List_of_Bobobo-bo_Bo-bobo_chapters",
+        "https://bobobo.fandom.com/wiki/Giga_Goes_Gaga!_Alarming_Attacks_With_Impressive_Art"
+      ]
+    },
+    {
+      "episode": 51,
+      "end_chapter": 124,
+      "start_chapter": 123,
+      "chapters_adapted": "123-124",
+      "volume": 12,
+      "confidence": "high",
+      "note": "Super-form Giga beaten by the art of the everyday = ch 123 'Go, art!!' and Bo-bobo's unsealed Nosehair Soul / manliness = ch 124 'Macho Men'.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/List_of_Bobobo-bo_Bo-bobo_episodes",
+        "https://en.wikipedia.org/wiki/List_of_Bobobo-bo_Bo-bobo_chapters",
+        "https://bobobo.fandom.com/wiki/The_Art_of_Art_and_the_Fist_of_All_Fists!"
+      ]
+    },
+    {
+      "episode": 52,
+      "end_chapter": 126,
+      "start_chapter": 125,
+      "chapters_adapted": "125-126",
+      "volume": 12,
+      "confidence": "high",
+      "note": "First two-segment episode. A-part: the hundred-year-old Hair Hunter platoon = ch 125 '100 Years Ago'; B-part: the bridge-top melee = ch 126 'It's Five Against Five!!'.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/List_of_Bobobo-bo_Bo-bobo_episodes",
+        "https://en.wikipedia.org/wiki/List_of_Bobobo-bo_Bo-bobo_chapters",
+        "https://bobobo.fandom.com/wiki/Gasser's_Back!_A_Whole_New_Season,_Same_Old_Stench!",
+        "https://ja.wikipedia.org/wiki/%E3%83%9C%E3%83%9C%E3%83%9C%E3%83%BC%E3%83%9C%E3%83%BB%E3%83%9C%E3%83%BC%E3%83%9C%E3%83%9C"
+      ]
+    },
+    {
+      "episode": 53,
+      "end_chapter": 128,
+      "start_chapter": 127,
+      "chapters_adapted": "127-128",
+      "volume": 12,
+      "confidence": "high",
+      "note": "A-part: the shopping-mall training ground = ch 127 'I'm Gonna Power Up!'; B-part: the flower-throwing ancestor = ch 128 'As The Flowers Bloom The Idiot Thrives' (fandom Rose-Lily Kikunojo and Eternal debuts = Chapter 127 / Episode 53).",
+      "sources": [
+        "https://en.wikipedia.org/wiki/List_of_Bobobo-bo_Bo-bobo_episodes",
+        "https://en.wikipedia.org/wiki/List_of_Bobobo-bo_Bo-bobo_chapters",
+        "https://bobobo.fandom.com/wiki/Dancin'_and_Trainin'_for_Quickly_Obtainin'_the_Enemy's_Painin",
+        "https://bobobo.fandom.com/wiki/Rose-Lily_Kikunojo",
+        "https://ja.wikipedia.org/wiki/%E3%83%9C%E3%83%9C%E3%83%9C%E3%83%BC%E3%83%9C%E3%83%BB%E3%83%9C%E3%83%BC%E3%83%9C%E3%83%9C"
+      ]
+    },
+    {
+      "episode": 54,
+      "end_chapter": 130,
+      "start_chapter": 129,
+      "chapters_adapted": "129-130",
+      "volume": 12,
+      "confidence": "high",
+      "note": "A-part: the Super Jacket unleashed = ch 129 'A Super Kind of Guy'; B-part: the flower-garden duel = ch 130 'Nose Vs. Flower' - end of volume 12.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/List_of_Bobobo-bo_Bo-bobo_episodes",
+        "https://en.wikipedia.org/wiki/List_of_Bobobo-bo_Bo-bobo_chapters",
+        "https://bobobo.fandom.com/wiki/The_War_of_the_Roses...or_Lilacs...or_Daffodils",
+        "https://ja.wikipedia.org/wiki/%E3%83%9C%E3%83%9C%E3%83%9C%E3%83%BC%E3%83%9C%E3%83%BB%E3%83%9C%E3%83%BC%E3%83%9C%E3%83%9C"
+      ]
+    },
+    {
+      "episode": 55,
+      "end_chapter": 132,
+      "start_chapter": 131,
+      "chapters_adapted": "131-132",
+      "volume": 13,
+      "confidence": "high",
+      "note": "A-part: Hatenko joins and the Sangaria matches open = ch 131 'Battle of Sangaria Begins!' (fandom Combat Blues / Hanpen / Lambada / Jeda / Ujikin TOKIO / Neo Hair-Hunt Land MAX all debut Chapter 131 / Episode 55); B-part: the ice-cream leader's team = ch 132 'This is It? New Trio'.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/List_of_Bobobo-bo_Bo-bobo_episodes",
+        "https://en.wikipedia.org/wiki/List_of_Bobobo-bo_Bo-bobo_chapters",
+        "https://bobobo.fandom.com/wiki/The_Gang's_All_Here!_And_Boy,_Are_They_Weird!",
+        "https://bobobo.fandom.com/wiki/Hanpen",
+        "https://bobobo.fandom.com/wiki/Neo_Hair-Hunt_Land_MAX",
+        "https://ja.wikipedia.org/wiki/%E3%83%9C%E3%83%9C%E3%83%9C%E3%83%BC%E3%83%9C%E3%83%BB%E3%83%9C%E3%83%BC%E3%83%9C%E3%83%9C"
+      ]
+    },
+    {
+      "episode": 56,
+      "end_chapter": 134,
+      "start_chapter": 133,
+      "chapters_adapted": "133-134",
+      "volume": 13,
+      "confidence": "high",
+      "note": "A-part: the SF-power fight = ch 133 'Captured...SF World'; B-part: the world tour = ch 134 '7-Mystery'.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/List_of_Bobobo-bo_Bo-bobo_episodes",
+        "https://en.wikipedia.org/wiki/List_of_Bobobo-bo_Bo-bobo_chapters",
+        "https://bobobo.fandom.com/wiki/The_Ultimate_SF_Battle!_Supreme_Fisticuffs_or_Certain_Free-for-All!",
+        "https://ja.wikipedia.org/wiki/%E3%83%9C%E3%83%9C%E3%83%9C%E3%83%BC%E3%83%9C%E3%83%BB%E3%83%9C%E3%83%BC%E3%83%9C%E3%83%9C"
+      ]
+    },
+    {
+      "episode": 57,
+      "end_chapter": 136,
+      "start_chapter": 135,
+      "chapters_adapted": "135-136",
+      "volume": 13,
+      "confidence": "high",
+      "note": "A-part: the water-slide soldier = ch 135 'Battlefield Blues' (Combat Blues); B-part: Torpedo Girl turned on her summoner = ch 136 'The Torpedo and Combat'.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/List_of_Bobobo-bo_Bo-bobo_episodes",
+        "https://en.wikipedia.org/wiki/List_of_Bobobo-bo_Bo-bobo_chapters",
+        "https://bobobo.fandom.com/wiki/The_Water_Slide_That's_Bona_Fide_to_Leave_You_Terrified!",
+        "https://ja.wikipedia.org/wiki/%E3%83%9C%E3%83%9C%E3%83%9C%E3%83%BC%E3%83%9C%E3%83%BB%E3%83%9C%E3%83%BC%E3%83%9C%E3%83%9C"
+      ]
+    },
+    {
+      "episode": 58,
+      "end_chapter": 138,
+      "start_chapter": 137,
+      "chapters_adapted": "137-138",
+      "volume": 13,
+      "confidence": "high",
+      "note": "A-part: the ice-rink mech showdown = ch 137 'The Big Wheels in Motion'; B-part: the forced re-fusion = ch 138 'He's Here! The Amazing Guy Who Wins By a Mile!!' (fandom Patchbobo debut = Chapter 138 / Episode 58).",
+      "sources": [
+        "https://en.wikipedia.org/wiki/List_of_Bobobo-bo_Bo-bobo_episodes",
+        "https://en.wikipedia.org/wiki/List_of_Bobobo-bo_Bo-bobo_chapters",
+        "https://bobobo.fandom.com/wiki/Face_the_Cold_Hard_Facts!_It's_Freezing_in_Here!",
+        "https://bobobo.fandom.com/wiki/Patchbobo",
+        "https://ja.wikipedia.org/wiki/%E3%83%9C%E3%83%9C%E3%83%9C%E3%83%BC%E3%83%9C%E3%83%BB%E3%83%9C%E3%83%BC%E3%83%9C%E3%83%9C"
+      ]
+    },
+    {
+      "episode": 59,
+      "end_chapter": 140,
+      "start_chapter": 139,
+      "chapters_adapted": "139-140",
+      "volume": 13,
+      "confidence": "high",
+      "note": "A-part: Patchbobo beats Jeda = ch 139 'PatchBobo's Depression'; B-part: the merry-go-round three-way = ch 140 'Forbidden Strong Triangle Attack'.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/List_of_Bobobo-bo_Bo-bobo_episodes",
+        "https://en.wikipedia.org/wiki/List_of_Bobobo-bo_Bo-bobo_chapters",
+        "https://bobobo.fandom.com/wiki/Enemy_Crusin'_for_a_Brusin?_Then_Just_Try_Fusion",
+        "https://ja.wikipedia.org/wiki/%E3%83%9C%E3%83%9C%E3%83%9C%E3%83%BC%E3%83%9C%E3%83%BB%E3%83%9C%E3%83%BC%E3%83%9C%E3%83%9C"
+      ]
+    },
+    {
+      "episode": 60,
+      "end_chapter": 142,
+      "start_chapter": 141,
+      "chapters_adapted": "141-142",
+      "volume": 13,
+      "confidence": "high",
+      "note": "A-part: the coin-machine six-on-six and the call for backup = ch 141 'Extremely Strong Helper? The Great Free-for-All!'; B-part: Rice answers = ch 142 'The Three Hajikelists' - end of volume 13.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/List_of_Bobobo-bo_Bo-bobo_episodes",
+        "https://en.wikipedia.org/wiki/List_of_Bobobo-bo_Bo-bobo_chapters",
+        "https://bobobo.fandom.com/wiki/Blowing_Your_Savings_on_Bubbles,_Is_It_Worth_It?",
+        "https://ja.wikipedia.org/wiki/%E3%83%9C%E3%83%9C%E3%83%9C%E3%83%BC%E3%83%9C%E3%83%BB%E3%83%9C%E3%83%BC%E3%83%9C%E3%83%9C"
+      ]
+    },
+    {
+      "episode": 61,
+      "end_chapter": 144,
+      "start_chapter": 143,
+      "chapters_adapted": "143-144",
+      "volume": 14,
+      "confidence": "high",
+      "note": "A-part: Serviceman showing off / the escape play = ch 143 'Full-Throttle Service! The Great Escape Play!!'; B-part: the monster-summoning samurai = ch 144 'Who's That Guy!? Goemon Surprise' (fandom Kancho-kun debut = Chapter 144 / Episode 61).",
+      "sources": [
+        "https://en.wikipedia.org/wiki/List_of_Bobobo-bo_Bo-bobo_episodes",
+        "https://en.wikipedia.org/wiki/List_of_Bobobo-bo_Bo-bobo_chapters",
+        "https://bobobo.fandom.com/wiki/United_We_Stand,_Divided_We_Also_Stand,_Just_Further_Apart!",
+        "https://bobobo.fandom.com/wiki/Kancho-kun",
+        "https://ja.wikipedia.org/wiki/%E3%83%9C%E3%83%9C%E3%83%9C%E3%83%BC%E3%83%9C%E3%83%BB%E3%83%9C%E3%83%BC%E3%83%9C%E3%83%9C"
+      ]
+    },
+    {
+      "episode": 62,
+      "end_chapter": 146,
+      "start_chapter": 145,
+      "chapters_adapted": "145-146",
+      "volume": 14,
+      "confidence": "high",
+      "note": "A-part: Rem's sleep world = ch 145 'Rem Rem Re-m Rem'; B-part: the dream battle = ch 146 'Great Sleep Battle!!'.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/List_of_Bobobo-bo_Bo-bobo_episodes",
+        "https://en.wikipedia.org/wiki/List_of_Bobobo-bo_Bo-bobo_chapters",
+        "https://bobobo.fandom.com/wiki/Good_Night!_Sleep_Tight!_And_Don't_Let_the_Bedbugs_Bug_Ya!",
+        "https://ja.wikipedia.org/wiki/%E3%83%9C%E3%83%9C%E3%83%9C%E3%83%BC%E3%83%9C%E3%83%BB%E3%83%9C%E3%83%BC%E3%83%9C%E3%83%9C"
+      ]
+    },
+    {
+      "episode": 63,
+      "end_chapter": 148,
+      "start_chapter": 147,
+      "chapters_adapted": "147-148",
+      "volume": 14,
+      "confidence": "high",
+      "note": "A-part: the nightmarish Bo-bobo World used on Rem = ch 147 'Bo-bobo World Nightmare'; B-part: Lambada crashes in = ch 148 'Enter Lambada of the Three Strengths'.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/List_of_Bobobo-bo_Bo-bobo_episodes",
+        "https://en.wikipedia.org/wiki/List_of_Bobobo-bo_Bo-bobo_chapters",
+        "https://bobobo.fandom.com/wiki/Our_Dream_Team_Turns_Bad_Dreams_to_Bad_Guys'_Screams!",
+        "https://ja.wikipedia.org/wiki/%E3%83%9C%E3%83%9C%E3%83%9C%E3%83%BC%E3%83%9C%E3%83%BB%E3%83%9C%E3%83%BC%E3%83%9C%E3%83%9C"
+      ]
+    },
+    {
+      "episode": 64,
+      "end_chapter": 150,
+      "start_chapter": 149,
+      "chapters_adapted": "149-150",
+      "volume": 14,
+      "confidence": "high",
+      "note": "A-part: the polygon aura = ch 149 'Nosehair Valley's Polygon'; B-part: the retro video-game counter = ch 150 'Go Retro!'.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/List_of_Bobobo-bo_Bo-bobo_episodes",
+        "https://en.wikipedia.org/wiki/List_of_Bobobo-bo_Bo-bobo_chapters",
+        "https://bobobo.fandom.com/wiki/Geometry_101:_Painful,_Perplexing_and_Pungent_Polygons",
+        "https://ja.wikipedia.org/wiki/%E3%83%9C%E3%83%9C%E3%83%9C%E3%83%BC%E3%83%9C%E3%83%BB%E3%83%9C%E3%83%BC%E3%83%9C%E3%83%9C"
+      ]
+    },
+    {
+      "episode": 65,
+      "end_chapter": 152,
+      "start_chapter": 151,
+      "chapters_adapted": "151-152",
+      "volume": 14,
+      "confidence": "medium",
+      "note": "A-part: the fishcake soup battleground = ch 151 'Bo-bobo vs. Hanpen'; B-part continues into ch 152 'Ascending, Shortening Duo'. Volume 14 closes one chapter later, inside ep 66.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/List_of_Bobobo-bo_Bo-bobo_episodes",
+        "https://en.wikipedia.org/wiki/List_of_Bobobo-bo_Bo-bobo_chapters",
+        "https://bobobo.fandom.com/wiki/The_Unreal_Meal_That's_a_Major_Ordeal_For_Real",
+        "https://ja.wikipedia.org/wiki/%E3%83%9C%E3%83%9C%E3%83%9C%E3%83%BC%E3%83%9C%E3%83%BB%E3%83%9C%E3%83%BC%E3%83%9C%E3%83%9C"
+      ]
+    },
+    {
+      "episode": 66,
+      "end_chapter": 154,
+      "start_chapter": 153,
+      "chapters_adapted": "153-154",
+      "volume": 15,
+      "confidence": "high",
+      "note": "A-part: the bouillabaisse free-for-all = ch 153 'Great Free-For-All! Nonsense 9/Strong Oden 3 Sangaria'; B-part: the Bo-bobo + Jelly Jiggler fusion (Tenbobo / Mr. Bojiggler) = ch 154 'Awakening Boy Soldier' (fandom Tenbobo debut = Chapter 154 / Episode 66).",
+      "sources": [
+        "https://en.wikipedia.org/wiki/List_of_Bobobo-bo_Bo-bobo_episodes",
+        "https://en.wikipedia.org/wiki/List_of_Bobobo-bo_Bo-bobo_chapters",
+        "https://bobobo.fandom.com/wiki/The_Fishcake_Frenzy:_Freezed_Dried,_French_Fried,_Freaked_Out_Fracas",
+        "https://bobobo.fandom.com/wiki/Tenbobo",
+        "https://ja.wikipedia.org/wiki/%E3%83%9C%E3%83%9C%E3%83%9C%E3%83%BC%E3%83%9C%E3%83%BB%E3%83%9C%E3%83%BC%E3%83%9C%E3%83%9C"
+      ]
+    },
+    {
+      "episode": 67,
+      "end_chapter": 156,
+      "start_chapter": 155,
+      "chapters_adapted": "155-156",
+      "volume": 15,
+      "confidence": "high",
+      "note": "A-part: Tenbobo finishes Hanpen = ch 155 'Tenbobo vs. Hanpen'; B-part: Baldy Bald III's revival = ch 156 'Emperor Baldy Bald the III' (the Japanese subtitle's 闇の皇帝 is the III, not Hydrate).",
+      "sources": [
+        "https://en.wikipedia.org/wiki/List_of_Bobobo-bo_Bo-bobo_episodes",
+        "https://en.wikipedia.org/wiki/List_of_Bobobo-bo_Bo-bobo_chapters",
+        "https://bobobo.fandom.com/wiki/The_Pacifist_That_Packs_a_Pinch_Like_a_Pugilist",
+        "https://ja.wikipedia.org/wiki/%E3%83%9C%E3%83%9C%E3%83%9C%E3%83%BC%E3%83%9C%E3%83%BB%E3%83%9C%E3%83%BC%E3%83%9C%E3%83%9C"
+      ]
+    },
+    {
+      "episode": 68,
+      "end_chapter": 158,
+      "start_chapter": 157,
+      "chapters_adapted": "157-158",
+      "volume": 15,
+      "confidence": "medium",
+      "note": "A-part: III's awakened power and the Hair Ball hunt = ch 157 'The Ones that Move History'; B-part: Torpedo Girl reverting to OVER for a three-way = ch 158 'Worst Case Scenario'.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/List_of_Bobobo-bo_Bo-bobo_episodes",
+        "https://en.wikipedia.org/wiki/List_of_Bobobo-bo_Bo-bobo_chapters",
+        "https://bobobo.fandom.com/wiki/The_Battle_of_Baldy_Bald:_Buckle_Up_and_Brace_Yourself",
+        "https://ja.wikipedia.org/wiki/%E3%83%9C%E3%83%9C%E3%83%9C%E3%83%BC%E3%83%9C%E3%83%BB%E3%83%9C%E3%83%BC%E3%83%9C%E3%83%9C"
+      ]
+    },
+    {
+      "episode": 69,
+      "end_chapter": 160,
+      "start_chapter": 159,
+      "chapters_adapted": "159-160",
+      "volume": 15,
+      "confidence": "medium",
+      "note": "A-part: the Fist of Blue Magic universe = ch 159 'Rapid Development! Red and Blue'; B-part: III swallowing Bo-bobo and Don Patch = ch 160 'Humans are La La La'. The 159/160/161 split against ep 70 rests on the unbroken 2-chapters-per-episode cadence of eps 52-71.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/List_of_Bobobo-bo_Bo-bobo_episodes",
+        "https://en.wikipedia.org/wiki/List_of_Bobobo-bo_Bo-bobo_chapters",
+        "https://bobobo.fandom.com/wiki/Yummy,_Yummy,_Yummy!_Bo-bobo's_in_My_Tummy!",
+        "https://ja.wikipedia.org/wiki/%E3%83%9C%E3%83%9C%E3%83%9C%E3%83%BC%E3%83%9C%E3%83%BB%E3%83%9C%E3%83%BC%E3%83%9C%E3%83%9C"
+      ]
+    },
+    {
+      "episode": 70,
+      "end_chapter": 162,
+      "start_chapter": 161,
+      "chapters_adapted": "161-162",
+      "volume": 15,
+      "confidence": "high",
+      "note": "A-part: III pacified by an abridged human life = ch 161 'Look, Look, Look at Our Lives~!!'; B-part: the New Emperor Playoff announced = ch 162 'Convention Opening! Listen to the Screaming Mole!'.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/List_of_Bobobo-bo_Bo-bobo_episodes",
+        "https://en.wikipedia.org/wiki/List_of_Bobobo-bo_Bo-bobo_chapters",
+        "https://bobobo.fandom.com/wiki/Baldy_Bald_Bottoms_Out!_Best_of_Luck,_Be_Well_and_Bye-Bye!",
+        "https://ja.wikipedia.org/wiki/%E3%83%9C%E3%83%9C%E3%83%9C%E3%83%BC%E3%83%9C%E3%83%BB%E3%83%9C%E3%83%BC%E3%83%9C%E3%83%9C"
+      ]
+    },
+    {
+      "episode": 71,
+      "end_chapter": 164,
+      "start_chapter": 163,
+      "chapters_adapted": "163-164",
+      "volume": 15,
+      "confidence": "high",
+      "note": "A-part: Beauty's solo stand = ch 163 'Beauty's Close Call!' (title-for-title with the Japanese subtitle ビュティ危機一髪!!); B-part: the ramen contest = ch 164 'Furious! The Great Chinese War!!' - end of volume 15.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/List_of_Bobobo-bo_Bo-bobo_episodes",
+        "https://en.wikipedia.org/wiki/List_of_Bobobo-bo_Bo-bobo_chapters",
+        "https://bobobo.fandom.com/wiki/Funneled_into_a_Tunnel_and_Bamboozled_By_Noodles",
+        "https://bobobo.fandom.com/wiki/Fifth_Maruhage_New_Emperor_Playoffs_Site",
+        "https://ja.wikipedia.org/wiki/%E3%83%9C%E3%83%9C%E3%83%9C%E3%83%BC%E3%83%9C%E3%83%BB%E3%83%9C%E3%83%BC%E3%83%9C%E3%83%9C"
+      ]
+    },
+    {
+      "episode": 72,
+      "end_chapter": 167,
+      "start_chapter": 165,
+      "chapters_adapted": "165-167",
+      "volume": 16,
+      "confidence": "high",
+      "note": "Three chapters: entry by force = ch 165 'Opening of the New Emperor Playoff!', the duct-tape assassin captain = ch 166 'Bo-bobo vs. Nenchaku', and the B-part title-for-title = ch 167 'Swiftly! Bo-bobo TV Channel!'.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/List_of_Bobobo-bo_Bo-bobo_episodes",
+        "https://en.wikipedia.org/wiki/List_of_Bobobo-bo_Bo-bobo_chapters",
+        "https://bobobo.fandom.com/wiki/Si_Se%C3%B1or,_It's_No_Bore!_It's_Hair_Hunters_Galore!",
+        "https://ja.wikipedia.org/wiki/%E3%83%9C%E3%83%9C%E3%83%9C%E3%83%BC%E3%83%9C%E3%83%BB%E3%83%9C%E3%83%BC%E3%83%9C%E3%83%9C"
+      ]
+    },
+    {
+      "episode": 73,
+      "end_chapter": 170,
+      "start_chapter": 168,
+      "chapters_adapted": "168-170",
+      "volume": 16,
+      "confidence": "high",
+      "note": "A-part: the Game Boy Advance re-import dream match = ch 168 'The Man Reimported from the Game Boy Advance!' (fandom Halon Oni debut = Chapter 168 / Episode 73); B-part: the yamamba then samba forms = ch 169 'Yamamba Warning Proclemation!!' and ch 170 'Samba-Rhumba-Mambo: Uh!'.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/List_of_Bobobo-bo_Bo-bobo_episodes",
+        "https://en.wikipedia.org/wiki/List_of_Bobobo-bo_Bo-bobo_chapters",
+        "https://bobobo.fandom.com/wiki/Take_a_Stance_Against_the_Dance,_Mr._Smarty_Pants!",
+        "https://bobobo.fandom.com/wiki/Halon_Oni",
+        "https://bobobo.fandom.com/wiki/Dark_Yasha_and_Sambaman",
+        "https://ja.wikipedia.org/wiki/%E3%83%9C%E3%83%9C%E3%83%9C%E3%83%BC%E3%83%9C%E3%83%BB%E3%83%9C%E3%83%BC%E3%83%9C%E3%83%9C"
+      ]
+    },
+    {
+      "episode": 74,
+      "end_chapter": 174,
+      "start_chapter": 171,
+      "chapters_adapted": "171-174",
+      "volume": 16,
+      "confidence": "high",
+      "note": "Four chapters: Gasser turned into the arena = ch 171 'Rapid Development! BIG' and ch 172, Hanpen's sacrifice = ch 173 'Angry!', and Don Patch's first Ikarin Patch transformation = ch 174 'Horrible Don Patch' (the B-part subtitle quotes it).",
+      "sources": [
+        "https://en.wikipedia.org/wiki/List_of_Bobobo-bo_Bo-bobo_episodes",
+        "https://en.wikipedia.org/wiki/List_of_Bobobo-bo_Bo-bobo_chapters",
+        "https://bobobo.fandom.com/wiki/The_Bigger_the_Gasser_---_The_Smellier_the_Gas!",
+        "https://ja.wikipedia.org/wiki/%E3%83%9C%E3%83%9C%E3%83%9C%E3%83%BC%E3%83%9C%E3%83%BB%E3%83%9C%E3%83%BC%E3%83%9C%E3%83%9C"
+      ]
+    },
+    {
+      "episode": 75,
+      "end_chapter": 176,
+      "start_chapter": 175,
+      "chapters_adapted": "175-176",
+      "volume": 17,
+      "confidence": "high",
+      "note": "A-part: the Reverse Maruhage Empire and the sacrifice clock = ch 175 'Reverse Maruhage Empire and Serviceman' (fandom gives Chapter 175 / Episode 75 debuts for The Three Sacks, Crimson, LOVE, Byakkyo and Bebebe-be Be-bebe) - end of volume 16; B-part: Super Bo-bobo's counterattack with the bears = ch 176 'Revival! Bo-bobo'.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/List_of_Bobobo-bo_Bo-bobo_episodes",
+        "https://en.wikipedia.org/wiki/List_of_Bobobo-bo_Bo-bobo_chapters",
+        "https://bobobo.fandom.com/wiki/Finally!_The_Final_Fight_of_Finality!_Except_the_Final_One!",
+        "https://bobobo.fandom.com/wiki/The_Three_Sacks",
+        "https://bobobo.fandom.com/wiki/Crimson",
+        "https://ja.wikipedia.org/wiki/%E3%83%9C%E3%83%9C%E3%83%9C%E3%83%BC%E3%83%9C%E3%83%BB%E3%83%9C%E3%83%BC%E3%83%9C%E3%83%9C"
+      ]
+    }
+  ],
+  "continue_points": [],
+  "annotations": [
+    {
+      "episodes": [
+        1,
+        3
+      ],
+      "kind": "rearranged",
+      "chapters": "2",
+      "note": "Ch 2 is split: its opening Maruhage block-leaders' conference cold-opens ep 1 (fandom A-Block infobox: former base Chapter 2 / Episode 1), while the rest of ch 2 (Killalino and Takashi) is deferred to ep 3.",
+      "sources": [
+        "https://bobobo.fandom.com/wiki/A-Block",
+        "https://bobobo.fandom.com/wiki/Kilalino_and_Takashi",
+        "https://bobobo.fandom.com/wiki/Wacky_Quacker_Cooks_His_Own_Goose"
+      ]
+    },
+    {
+      "episodes": [
+        2,
+        3
+      ],
+      "kind": "rearranged",
+      "chapters": "2-5",
+      "note": "The anime swaps the pair: ep 2 plays ch 4-5 (Christmas duel with Don Patch, then the wig-wearing H-Block platoon and Maitel) and ep 3 goes BACK to ch 2-3 (Killalino, then the Hajike Festival). bobobo.fandom's ep-2 page states it outright - 'A major difference from the manga is that this happened after the events of episode 3' - and the ep-3 page adds 'In the manga, Bo-bobo and Beauty meet Killalino before approaching Hajike Village and after taking down G-Block'. Ep 3 is therefore left unanchored rather than carrying a backwards END.",
+      "sources": [
+        "https://bobobo.fandom.com/wiki/Let's_Get_Wiggy_With_It",
+        "https://bobobo.fandom.com/wiki/Wacky_Quacker_Cooks_His_Own_Goose",
+        "https://en.wikipedia.org/wiki/List_of_Bobobo-bo_Bo-bobo_episodes"
+      ]
+    },
+    {
+      "episodes": [
+        16
+      ],
+      "kind": "graft",
+      "chapters": "59",
+      "note": "Dengakuman is introduced on the tag of ep 16, immediately after Jelly Jiggler's defeat. bobobo.fandom's ep-16 'Changes from the manga': 'Dengakuman is introduced almost immediately after Tennosuke's defeat, whereas the manga does not reveal him until the Z-Block invasion' - his manga debut is ch 59 (fandom Dengakuman infobox: Chapter 59 / Episode 16). The ep 16 anchor (END 34) is NOT inflated to 59.",
+      "sources": [
+        "https://bobobo.fandom.com/wiki/Snot_in_My_Neighborhood!",
+        "https://bobobo.fandom.com/wiki/Dengakuman"
+      ]
+    },
+    {
+      "episodes": [
+        24
+      ],
+      "kind": "abridged",
+      "chapters": "57",
+      "note": "bobobo.fandom's ep-24 'Changes from the manga': 'In the manga, Robo-Block and their beach resort was its own section of the Empire; the anime condenses it and makes it Z-Block's entrance area.' A compression, not a cut - ch 57's beach material is still animated.",
+      "sources": [
+        "https://bobobo.fandom.com/wiki/The_Terrifying_Z-Block_Is_Here!",
+        "https://en.wikipedia.org/wiki/List_of_Bobobo-bo_Bo-bobo_episodes"
+      ]
+    },
+    {
+      "episodes": [
+        60
+      ],
+      "kind": "graft",
+      "chapters": "141-142",
+      "note": "bobobo.fandom's ep-60 'Changes from the manga' notes 'Rice appears earlier in the anime than in the manga' - the backup call that in the manga lands in ch 141-142 is brought forward slightly inside the episode. Does not move the END.",
+      "sources": [
+        "https://bobobo.fandom.com/wiki/Blowing_Your_Savings_on_Bubbles,_Is_It_Worth_It%3F",
+        "https://en.wikipedia.org/wiki/List_of_Bobobo-bo_Bo-bobo_episodes"
+      ]
+    },
+    {
+      "episodes": [
+        76
+      ],
+      "kind": "divergence",
+      "chapters": "178",
+      "note": "The finale stops inside the castle-raising beat rather than at an arc end: en.wikipedia's ep-76 synopsis covers Denbo's 'picture activity book' (ch 177 'Picture Book Paradise'), Hydrate's floating castle emerging, and the allies-and-enemies charge upward (ch 178 'Let's Go Everyone Showdown! Dark vs. Us'), then has the cast 'realize that this is the last episode'. bobobo.fandom's ep-76 Major Events additionally records Tsuru Tsurulina IV abdicating 'never to return', an anime-side send-off appended to that stopping point. Manga continues from ch 179.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/List_of_Bobobo-bo_Bo-bobo_episodes",
+        "https://bobobo.fandom.com/wiki/Finally!_The_Final_Fight_of_Finality!_This_Time_We_Mean_It!",
+        "https://bobobo.fandom.com/wiki/Yamiking"
+      ]
+    }
+  ],
+  "type_corrections": [],
+  "repairs": [],
+  "structure": {
+    "notes": "One cumulative season of 76 TV episodes (TV Asahi, 2003-11-08 to 2005-10-29); our numbering already matches ja.wikipedia, Toei's official episode list, bobobo.fandom's episode list and animefillerlist one-for-one (verified title-by-title; the only differences are alternate English titles at eps 53, 56, 57 and 72, same Japanese subtitles). Chapter space: the mainline 奥義 numbering 1-230 across 21 tankobon - ja.wikipedia gives 第1部：全230話 and en.wikipedia's chapter list enumerates exactly 230 chapters with volume boundaries identical to the ones already stored (v1 1-10 ... v17 176-186). The stored anchor ep76 -> 178 is in that space and is CORRECT. Format change: eps 1-51 carry a single subtitle; from ep 52 each episode carries separate A-part and B-part subtitles (ja.wikipedia: 第52話からはAパートとBパートそれぞれにサブタイトルが付けられ2本立て形態に変更された). Adaptation cadence: ~1-4 chapters/episode through ep 51 (slowest at ep 11, a single chapter; fastest at eps 16, 20, 21, 23, 24, 27-30), then an unbroken exactly-2-chapters-per-episode run from ep 52 (ch 125-126) to ep 71 (ch 163-164), then 3, 3, 4, 2, 2 for eps 72-76. AFL types all 76 episodes Manga Canon, matching the stored typing - no filler, no anime-only rows, so A1 is not in play anywhere in this series.",
+    "order_only": [
+      "総集編 (recap special, aired 2004-10-23 between eps 32 and 33; a clip show in which the cast holds a meeting about the programme). It is outside the 76-episode count, carries no manga content, and was moved to a DVD bonus on VOL.12 - correctly absent from our 76 rows."
+    ]
+  },
+  "flags_for_sean": [
+    "FINALE 177 vs 178 - RESOLVED in favour of 178 (no repair needed; the stored ep76 -> 178 is right). The '177' claim is a single sentence on bobobo.fandom's chapter-list page ('The last chapter adapted in the anime is Chapter 177, so after watching the anime, start at Chapter 178'), and it is contradicted by three independent lines of evidence: (1) en.wikipedia's ep-76 synopsis describes ch 177 content (Denbo forcing the enemy through a 'picture activity book' = 絵本パラダイス) AND ch 178 content (Hydrate's floating castle emerging, then 'Bo-bobo and his allies ally with friends and enemies as they race upwards towards their enemy' = 行くぜ全面対決!闇VSオレら); (2) the same fandom wiki's own Yamiking page gives Debut (Manga) = Chapter 178 / Debut (Anime) = Episode 76, and the ep-76 page lists 'The Yamiking rises from the Dark Realm with Hydrate' as a major event; (3) ja.wikipedia states the anime adapted 原作の「闇皇帝編」途中まで (partway INTO the Dark Emperor arc), which begins with that castle-raising. The Yahoo Chiebukuro answer cited in the prior pass ('up to okugi 178') agrees, and wheredoestheanimeleaveoff.com - content-farm, cross-check only - says to resume at vol 17 ch 179, which is END 178 + 1. Verdict: ep 76 END = 178, continue = 179, so no continue_point row is needed. Sources: https://en.wikipedia.org/wiki/List_of_Bobobo-bo_Bo-bobo_episodes | https://bobobo.fandom.com/wiki/Yamiking | https://bobobo.fandom.com/wiki/Finally!_The_Final_Fight_of_Finality!_This_Time_We_Mean_It! | https://ja.wikipedia.org/wiki/ボボボーボ・ボーボボ | (contra) https://bobobo.fandom.com/wiki/List_of_Bobobo-bo_Bo-bobo_manga_chapters",
+    "Open flag #709 (count_mismatch, MU latestChapter 40 vs AniList 230) - answerable: the reading edition is the 21-volume / 230-chapter Japanese tankobon numbering (奥義 1-230). ja.wikipedia gives 全303話 split as 第1部：全230話 / 第2部：全73話 (the sequel Shinsetsu restarts its own chapter and volume count at 1 and must never be folded in), and en.wikipedia's chapter list enumerates exactly 230 chapters with volume boundaries identical to the stored ones. MU's 40 is not the reading edition and should not be trusted for this title.",
+    "Tier caveat (hikaru lesson): the existing ep-76 anchor is source 'mu'. I am proposing no change to it, but if the apply step writes anything to that row it must flip the row to 'manual' or the next mu re-derive will erase it.",
+    "Honesty note on method: no published per-episode chapter map exists for this series. bobobo.fandom's episode pages have no manga-counterpart field, there are no per-chapter wiki pages (only one, 'Hajike Festival (Chapter)'), animefillerguide has no Bobobo entry, and searches in both English and Japanese turned up nothing beyond arc-level statements. Every anchor here is a cross-source derivation, not a quoted mapping. The high-confidence ones rest on an episode-title-to-chapter-title identity or two independent content matches; the medium ones rest on cadence plus one content match. Eps 40-42 are the weakest stretch (ep 41 is the only single-chapter anchor after ep 11 and the 40/41/42 split could shift by one chapter), and eps 17/18 could shift by one chapter at their shared boundary.",
+    "Ep 3 is deliberately left without an anchor. Its true content is ch 2-3, which is BEHIND ep 2's ch 4-5; anchoring it would put a backwards END into the series. The rearrangement is recorded as an annotation instead, and a reader who has finished ep 3 has in fact seen everything through ch 5."
+  ]
+}

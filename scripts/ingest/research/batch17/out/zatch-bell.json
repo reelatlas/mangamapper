@@ -1,0 +1,1860 @@
+{
+  "series_id": "zatch-bell",
+  "summary": "Zatch Bell! (150 eps) adapts Konjiki no Gash!! chapters 1-211 of 323 and then invents its own ending. The three seasons are clean chapter blocks - S1 (eps 1-50) = ch 1-99, S2 (eps 51-100) = ch 100-163, S3 (eps 101-150) = ch 164-211 - and en.wikipedia's chapter list, the zatchbell.fandom chapter pages and the context file's volume table all agree on the same 323-chapter space, so no conversion is needed. The big structural finding is that SEASON 1 IS HEAVILY RESEQUENCED: ep 12 jumps to ch 54-55 (Sherry/Koko), eps 14-16 backfill 35-38 then 29-31, ep 17 picks up the skipped ch 21, ep 18 pulls ch 52-53 forward, ep 23 pulls a cold open off ch 83, ep 26 backfills 32-33, ep 36 backfills the skipped ch 63, ep 39 jumps to 80-82 before eps 42-43 return to 75-79, and ep 47 jumps to ch 99 before eps 48-50 return to 83-84 and 95-98 - so linear interpolation across eps 10-50 is simply wrong and the per-episode anchors are load-bearing. Season 3 resequences once more: it opens on the Ted arc (ch 169-172, eps 101-102), plays ch 168 at ep 104, then backfills the Koral Q arc (ch 164-167, eps 105-107). Season 2 (eps 58-88) is the one long linear stretch. Chapters 34, 58 and 163 are never animated inside the canon run (34 and 163 surface only in AFL-filler eps 90 and 99). Ep 138 is the last adapted episode: ch 209-211, reader resumes at ch 212 - which resolves open flag #942 (the MU frontier pinned ch 212 on filler ep 139; the honest terminal is ep 138). The prior agent's open ep-123/ch-191 question is settled: ch 191 \"Bari's Rival\" is Keith introducing himself as Bari's archrival during the Faudo assault (ep 127), not ep 123's anime-original Bari vs Ted duel.",
+  "anchors": [
+    {
+      "episode": 1,
+      "end_chapter": 1,
+      "start_chapter": 1,
+      "chapters_adapted": "1",
+      "volume": 1,
+      "confidence": "high",
+      "note": "Ch 1 \"Operation 'Hero of Justice'\" adapted whole: Zatch delivered to Kiyo, first Zaker.",
+      "sources": [
+        "https://zatchbell.fandom.com/wiki/The_Lightning_Boy_From_Another_World",
+        "https://en.wikipedia.org/wiki/List_of_Zatch_Bell!_chapters",
+        "https://en.wikipedia.org/wiki/Zatch_Bell!_season_1"
+      ]
+    },
+    {
+      "episode": 2,
+      "end_chapter": 3,
+      "start_chapter": 2,
+      "chapters_adapted": "2-3",
+      "volume": 1,
+      "confidence": "high",
+      "note": "Ch 2 \"The Unreadable Book\" + ch 3 \"A Shock to the Heart\": Reycom/Hosokawa bank robbery, first successful spell.",
+      "sources": [
+        "https://zatchbell.fandom.com/wiki/A_Freezing_Spell",
+        "https://en.wikipedia.org/wiki/List_of_Zatch_Bell!_chapters",
+        "https://en.wikipedia.org/wiki/Zatch_Bell!_season_1"
+      ]
+    },
+    {
+      "episode": 3,
+      "end_chapter": 6,
+      "start_chapter": 4,
+      "chapters_adapted": "4-6",
+      "volume": 1,
+      "confidence": "high",
+      "note": "Ch 4-6 \"Kiyo, Mr. Popular\" / \"A Tool or a Person!?\" / \"Kiyo's Trump Card\": Hosokawa rematch, Rashield.",
+      "sources": [
+        "https://zatchbell.fandom.com/wiki/The_Second_Spell%21",
+        "https://en.wikipedia.org/wiki/List_of_Zatch_Bell!_chapters",
+        "https://en.wikipedia.org/wiki/Zatch_Bell!_season_1"
+      ]
+    },
+    {
+      "episode": 4,
+      "end_chapter": 8,
+      "start_chapter": 7,
+      "chapters_adapted": "7-8",
+      "volume": 1,
+      "confidence": "high",
+      "note": "Ch 7 \"The First Fight\" + ch 8 \"The Qualifications to be King\": Sherry/Brago explain the tournament.",
+      "sources": [
+        "https://zatchbell.fandom.com/wiki/The_Great_Mamodo_Battle",
+        "https://en.wikipedia.org/wiki/List_of_Zatch_Bell!_chapters",
+        "https://en.wikipedia.org/wiki/Zatch_Bell!_season_1"
+      ]
+    },
+    {
+      "episode": 5,
+      "end_chapter": 10,
+      "start_chapter": 9,
+      "chapters_adapted": "9-10",
+      "volume": 2,
+      "confidence": "high",
+      "note": "Ch 9 \"My Turn\" + ch 10 \"The Battle with Destiny\": Gofure burned, Brago duel.",
+      "sources": [
+        "https://zatchbell.fandom.com/wiki/The_Dark_Mamodo",
+        "https://en.wikipedia.org/wiki/List_of_Zatch_Bell!_chapters",
+        "https://en.wikipedia.org/wiki/Zatch_Bell!_season_1"
+      ]
+    },
+    {
+      "episode": 6,
+      "end_chapter": 12,
+      "start_chapter": 11,
+      "chapters_adapted": "11-12",
+      "volume": 2,
+      "confidence": "high",
+      "note": "Ch 11 \"Kiyo in the Hospital\" + ch 12 \"Where is the Book?!\": Yuuta hides the spellbook.",
+      "sources": [
+        "https://zatchbell.fandom.com/wiki/The_Mystery_of_the_Missing_Red_Book",
+        "https://en.wikipedia.org/wiki/List_of_Zatch_Bell!_chapters",
+        "https://en.wikipedia.org/wiki/Zatch_Bell!_season_1"
+      ]
+    },
+    {
+      "episode": 7,
+      "end_chapter": 15,
+      "start_chapter": 13,
+      "chapters_adapted": "13-15",
+      "volume": 2,
+      "confidence": "high",
+      "note": "Ch 13-15 \"A Moving Target\"/\"A Heroic Heart\"/\"The Limit of Strength\": Sugino at the botanical garden.",
+      "sources": [
+        "https://zatchbell.fandom.com/wiki/Botanical_Madness",
+        "https://en.wikipedia.org/wiki/List_of_Zatch_Bell!_chapters",
+        "https://en.wikipedia.org/wiki/Zatch_Bell!_season_1"
+      ]
+    },
+    {
+      "episode": 8,
+      "end_chapter": 18,
+      "start_chapter": 16,
+      "chapters_adapted": "16-18",
+      "volume": 2,
+      "confidence": "high",
+      "note": "Ch 16-18 \"A Real Family\"/\"A Mamodo's Tears\"/\"A Gentle King\": the Kolulu chapter, complete.",
+      "sources": [
+        "https://zatchbell.fandom.com/wiki/A_Kind_Mamodo%2C_Kolulu",
+        "https://en.wikipedia.org/wiki/List_of_Zatch_Bell!_chapters",
+        "https://en.wikipedia.org/wiki/Zatch_Bell!_season_1"
+      ]
+    },
+    {
+      "episode": 9,
+      "end_chapter": 20,
+      "start_chapter": 19,
+      "chapters_adapted": "19-20",
+      "volume": 3,
+      "confidence": "high",
+      "note": "Ch 19 \"The Third Spell\" (= episode title) + ch 20 \"An Incalculable Hope\": Fein, Jikerdor.",
+      "sources": [
+        "https://zatchbell.fandom.com/wiki/The_Third_Spell%21",
+        "https://en.wikipedia.org/wiki/List_of_Zatch_Bell!_chapters",
+        "https://en.wikipedia.org/wiki/Zatch_Bell!_season_1"
+      ]
+    },
+    {
+      "episode": 10,
+      "end_chapter": 25,
+      "start_chapter": 22,
+      "chapters_adapted": "22-25",
+      "volume": 3,
+      "confidence": "high",
+      "note": "Ch 22-25 (Eshros/Shin). Ch 21 \"The Curry of Friendship\" is SKIPPED here and animated later in ep 17.",
+      "sources": [
+        "https://zatchbell.fandom.com/wiki/The_Elite_Mamodo",
+        "https://en.wikipedia.org/wiki/List_of_Zatch_Bell!_chapters",
+        "https://en.wikipedia.org/wiki/Zatch_Bell!_season_1"
+      ]
+    },
+    {
+      "episode": 11,
+      "end_chapter": 28,
+      "start_chapter": 26,
+      "chapters_adapted": "26-28",
+      "volume": 3,
+      "confidence": "high",
+      "note": "Ch 26-28 \"Kind Kiyo\"/\"The Invincible Hero\"/\"A Conquerable Foe\": Kanchome + Folgore debut.",
+      "sources": [
+        "https://zatchbell.fandom.com/wiki/The_Invincible_Folgore",
+        "https://en.wikipedia.org/wiki/List_of_Zatch_Bell!_chapters",
+        "https://en.wikipedia.org/wiki/Zatch_Bell!_season_1"
+      ]
+    },
+    {
+      "episode": 12,
+      "end_chapter": 55,
+      "start_chapter": 54,
+      "chapters_adapted": "54-55",
+      "volume": 6,
+      "confidence": "high",
+      "note": "JUMP AHEAD: ch 54 \"An Irreplaceable Friend\" + ch 55 \"The Dark Tunnel\" - Sherry/Koko backstory in the Amazon, pulled ~25 chapters forward.",
+      "sources": [
+        "https://zatchbell.fandom.com/wiki/Sherry%27s_Rhapsody_of_Life",
+        "https://en.wikipedia.org/wiki/List_of_Zatch_Bell!_chapters",
+        "https://en.wikipedia.org/wiki/Zatch_Bell!_season_1"
+      ]
+    },
+    {
+      "episode": 14,
+      "end_chapter": 36,
+      "start_chapter": 35,
+      "chapters_adapted": "35-36",
+      "volume": 4,
+      "confidence": "high",
+      "note": "Ch 35 \"A World of Enemies\" + ch 36 \"A Solitary Soldier\": Megumi concert, Tia/Maruss flashback. Ch 34 skipped (animated in ep 90).",
+      "sources": [
+        "https://zatchbell.fandom.com/wiki/The_Tomboy_and_the_Pop_Star",
+        "https://en.wikipedia.org/wiki/List_of_Zatch_Bell!_chapters",
+        "https://en.wikipedia.org/wiki/Zatch_Bell!_season_1"
+      ]
+    },
+    {
+      "episode": 15,
+      "end_chapter": 38,
+      "start_chapter": 37,
+      "chapters_adapted": "37-38",
+      "volume": 4,
+      "confidence": "high",
+      "note": "Ch 37 \"The Culmination of Battle\" + ch 38 \"A Trustworthy Friend\": Maruss eliminated, Tia allies.",
+      "sources": [
+        "https://zatchbell.fandom.com/wiki/A_New_Pledge_Between_Zatch_and_Tia",
+        "https://en.wikipedia.org/wiki/List_of_Zatch_Bell!_chapters",
+        "https://en.wikipedia.org/wiki/Zatch_Bell!_season_1"
+      ]
+    },
+    {
+      "episode": 16,
+      "end_chapter": 31,
+      "start_chapter": 29,
+      "chapters_adapted": "29-31",
+      "volume": 4,
+      "confidence": "high",
+      "note": "BACKFILL: ch 29-31 \"The Fighting Sculptor\"/\"The Riddle of Invulnerability\"/\"A Final Message\" - Robnos.",
+      "sources": [
+        "https://zatchbell.fandom.com/wiki/The_Invulnerable_Robnos",
+        "https://en.wikipedia.org/wiki/List_of_Zatch_Bell!_chapters",
+        "https://en.wikipedia.org/wiki/Zatch_Bell!_season_1"
+      ]
+    },
+    {
+      "episode": 17,
+      "end_chapter": 39,
+      "start_chapter": 21,
+      "chapters_adapted": "21, 39",
+      "volume": 5,
+      "confidence": "high",
+      "note": "Ch 21 \"The Curry of Friendship\" (skipped at ep 10) opens; ch 39 \"Kiyo's Summer Break\" closes. END = 39.",
+      "sources": [
+        "https://zatchbell.fandom.com/wiki/Kiyo%27s_Curry_Camping_Trip",
+        "https://en.wikipedia.org/wiki/List_of_Zatch_Bell!_chapters",
+        "https://en.wikipedia.org/wiki/Zatch_Bell!_season_1"
+      ]
+    },
+    {
+      "episode": 18,
+      "end_chapter": 53,
+      "start_chapter": 40,
+      "chapters_adapted": "40, 52-53",
+      "volume": 6,
+      "confidence": "high",
+      "note": "Ch 40 \"A Country of Gentlemen\" (arrival in England) then ch 52 \"The Unwanted Reunion\" + ch 53 \"An Important Matter\" pulled forward for the Folgore-in-London reunion. END = 53 in running order.",
+      "sources": [
+        "https://zatchbell.fandom.com/wiki/London_Calling",
+        "https://en.wikipedia.org/wiki/List_of_Zatch_Bell!_chapters",
+        "https://en.wikipedia.org/wiki/Zatch_Bell!_season_1"
+      ]
+    },
+    {
+      "episode": 19,
+      "end_chapter": 43,
+      "start_chapter": 40,
+      "chapters_adapted": "40-43",
+      "volume": 5,
+      "confidence": "high",
+      "note": "Returns to ch 40 and runs 41-43 \"The Monster in the Old Castle\"/\"The Indomitable Warrior\"/\"The Biggest Mamodo\": Steng/Baltro castle.",
+      "sources": [
+        "https://zatchbell.fandom.com/wiki/The_Dark_Lord_of_the_Cursed_Castle",
+        "https://en.wikipedia.org/wiki/List_of_Zatch_Bell!_chapters",
+        "https://en.wikipedia.org/wiki/Zatch_Bell!_season_1"
+      ]
+    },
+    {
+      "episode": 20,
+      "end_chapter": 46,
+      "start_chapter": 43,
+      "chapters_adapted": "43-46",
+      "volume": 5,
+      "confidence": "high",
+      "note": "Ch 43-46, ends \"The Puppet Master\" (Zofis's first shadow).",
+      "sources": [
+        "https://zatchbell.fandom.com/wiki/The_Flowers_of_Evil",
+        "https://en.wikipedia.org/wiki/List_of_Zatch_Bell!_chapters",
+        "https://en.wikipedia.org/wiki/Zatch_Bell!_season_1"
+      ]
+    },
+    {
+      "episode": 21,
+      "end_chapter": 48,
+      "start_chapter": 47,
+      "chapters_adapted": "47-48",
+      "volume": 5,
+      "confidence": "high",
+      "note": "Ch 47 \"The Forest of Spirits\" + ch 48 \"The Stolen Memory\": Zatch's memory, Zeno reveal.",
+      "sources": [
+        "https://zatchbell.fandom.com/wiki/Another_Zatch",
+        "https://en.wikipedia.org/wiki/List_of_Zatch_Bell!_chapters",
+        "https://en.wikipedia.org/wiki/Zatch_Bell!_season_1"
+      ]
+    },
+    {
+      "episode": 22,
+      "end_chapter": 51,
+      "start_chapter": 49,
+      "chapters_adapted": "49-51",
+      "volume": 6,
+      "confidence": "high",
+      "note": "Ch 49-51 \"The Mysterious Dance\"/\"A Battle Without a Spell\"/\"A Warrior's Commitment\": Yopopo/Kikuropu. Ch 52-53 already used in ep 18.",
+      "sources": [
+        "https://zatchbell.fandom.com/wiki/The_Dancing_Mamodo",
+        "https://en.wikipedia.org/wiki/List_of_Zatch_Bell!_chapters",
+        "https://en.wikipedia.org/wiki/Zatch_Bell!_season_1"
+      ]
+    },
+    {
+      "episode": 23,
+      "end_chapter": 57,
+      "start_chapter": 56,
+      "chapters_adapted": "56-57",
+      "volume": 6,
+      "confidence": "high",
+      "note": "Ch 56 \"Meru-Meru-Me~\" + ch 57 \"Until Then\": Ponygon joins. The cold open (Seitaro handing over the first stone tablet) is a graft off ch 83, which is properly adapted at ep 48 - so END = 57, not 83.",
+      "sources": [
+        "https://zatchbell.fandom.com/wiki/Go_For_It%2C_Ponygon%21",
+        "https://en.wikipedia.org/wiki/List_of_Zatch_Bell!_chapters",
+        "https://en.wikipedia.org/wiki/Zatch_Bell!_season_1"
+      ]
+    },
+    {
+      "episode": 24,
+      "end_chapter": 60,
+      "start_chapter": 59,
+      "chapters_adapted": "59-60",
+      "volume": 7,
+      "confidence": "high",
+      "note": "Ch 59 \"The Man of Freedom\" + ch 60 \"Unlimited Power\": Apollo/Rops. Ch 58 is skipped by the anime.",
+      "sources": [
+        "https://zatchbell.fandom.com/wiki/Apollo%2C_the_Free_Traveler",
+        "https://en.wikipedia.org/wiki/List_of_Zatch_Bell!_chapters",
+        "https://en.wikipedia.org/wiki/Zatch_Bell!_season_1"
+      ]
+    },
+    {
+      "episode": 25,
+      "end_chapter": 62,
+      "start_chapter": 61,
+      "chapters_adapted": "61-62",
+      "volume": 7,
+      "confidence": "high",
+      "note": "Ch 61 \"Kiyo's Strength\" + ch 62 \"The Most Powerful Spell\": Apollo part 2, Bao Zakerga.",
+      "sources": [
+        "https://zatchbell.fandom.com/wiki/Apollo%2C_The_Free_Traveler%3A_Part_2",
+        "https://en.wikipedia.org/wiki/List_of_Zatch_Bell!_chapters",
+        "https://en.wikipedia.org/wiki/Zatch_Bell!_season_1"
+      ]
+    },
+    {
+      "episode": 26,
+      "end_chapter": 33,
+      "start_chapter": 32,
+      "chapters_adapted": "32-33",
+      "volume": 4,
+      "confidence": "high",
+      "note": "BACKFILL: ch 32 \"Zatch's Secrets\" + ch 33 \"A Mother's Love\" - Nana Baba.",
+      "sources": [
+        "https://zatchbell.fandom.com/wiki/A_Day_With_Zatch",
+        "https://en.wikipedia.org/wiki/List_of_Zatch_Bell!_chapters",
+        "https://en.wikipedia.org/wiki/Zatch_Bell!_season_1"
+      ]
+    },
+    {
+      "episode": 27,
+      "end_chapter": 66,
+      "start_chapter": 64,
+      "chapters_adapted": "64-66",
+      "volume": 7,
+      "confidence": "high",
+      "note": "Ch 64-66 \"The Masterpiece\"/\"Danny's Power\"/\"Mission Accomplished\". Ch 63 skipped here, animated at ep 36.",
+      "sources": [
+        "https://zatchbell.fandom.com/wiki/Danny_Boy",
+        "https://en.wikipedia.org/wiki/List_of_Zatch_Bell!_chapters",
+        "https://en.wikipedia.org/wiki/Zatch_Bell!_season_1"
+      ]
+    },
+    {
+      "episode": 29,
+      "end_chapter": 68,
+      "start_chapter": 67,
+      "chapters_adapted": "67-68",
+      "volume": 8,
+      "confidence": "high",
+      "note": "Ch 67 \"The Best Team Ever\" + ch 68 \"The Lightning Spell Shot Toward the Sky\": Purio/Zoboron at the amusement park.",
+      "sources": [
+        "https://zatchbell.fandom.com/wiki/The_Amusement_Park_Battle",
+        "https://en.wikipedia.org/wiki/List_of_Zatch_Bell!_chapters",
+        "https://en.wikipedia.org/wiki/Zatch_Bell!_season_1"
+      ]
+    },
+    {
+      "episode": 30,
+      "end_chapter": 70,
+      "start_chapter": 69,
+      "chapters_adapted": "69-70",
+      "volume": 8,
+      "confidence": "high",
+      "note": "Ch 69 \"The Violent Woman\" + ch 70 \"A Home-Cooked Meal with Love\".",
+      "sources": [
+        "https://zatchbell.fandom.com/wiki/Zatch_and_Tia%3A_A_Fierce_Combination",
+        "https://en.wikipedia.org/wiki/List_of_Zatch_Bell!_chapters",
+        "https://en.wikipedia.org/wiki/Zatch_Bell!_season_1"
+      ]
+    },
+    {
+      "episode": 36,
+      "end_chapter": 63,
+      "start_chapter": 63,
+      "chapters_adapted": "63",
+      "volume": 7,
+      "confidence": "high",
+      "note": "BACKFILL: ch 63 \"The Battle in the Park\" - the Zatch vs Naomi contest skipped at ep 27.",
+      "sources": [
+        "https://zatchbell.fandom.com/wiki/Collision%3A_Zatch_vs._Naomi",
+        "https://en.wikipedia.org/wiki/List_of_Zatch_Bell!_chapters",
+        "https://en.wikipedia.org/wiki/Zatch_Bell!_season_1"
+      ]
+    },
+    {
+      "episode": 37,
+      "end_chapter": 72,
+      "start_chapter": 71,
+      "chapters_adapted": "71-72",
+      "volume": 8,
+      "confidence": "high",
+      "note": "Ch 71 \"An Important Person\" + ch 72 \"The Dangerous Island\": Li-en/Wonrei, Hong Kong.",
+      "sources": [
+        "https://zatchbell.fandom.com/wiki/Battle_in_Hong_Kong",
+        "https://en.wikipedia.org/wiki/List_of_Zatch_Bell!_chapters",
+        "https://en.wikipedia.org/wiki/Zatch_Bell!_season_1"
+      ]
+    },
+    {
+      "episode": 38,
+      "end_chapter": 74,
+      "start_chapter": 73,
+      "chapters_adapted": "73-74",
+      "volume": 8,
+      "confidence": "high",
+      "note": "Ch 73 \"The Courage to Fight\" + ch 74 \"The Fifth Spell\" (Zakerga).",
+      "sources": [
+        "https://zatchbell.fandom.com/wiki/Battle_in_Hong_Kong%3A_Part_2",
+        "https://en.wikipedia.org/wiki/List_of_Zatch_Bell!_chapters",
+        "https://en.wikipedia.org/wiki/Zatch_Bell!_season_1"
+      ]
+    },
+    {
+      "episode": 39,
+      "end_chapter": 82,
+      "start_chapter": 80,
+      "chapters_adapted": "80-82",
+      "volume": 9,
+      "confidence": "high",
+      "note": "JUMP: ch 80-82 \"The Invisible Hunter\" (= episode title)/\"Hunter Vs Prey\"/\"The Prey\" - Baransha/Garza, pulled ahead of 75-79.",
+      "sources": [
+        "https://zatchbell.fandom.com/wiki/The_Invisible_Hunter_%28Episode_39%29",
+        "https://en.wikipedia.org/wiki/List_of_Zatch_Bell!_chapters",
+        "https://en.wikipedia.org/wiki/Zatch_Bell!_season_1"
+      ]
+    },
+    {
+      "episode": 40,
+      "end_chapter": 86,
+      "start_chapter": 85,
+      "chapters_adapted": "85-86",
+      "volume": 10,
+      "confidence": "high",
+      "note": "Ch 85 \"A Reliable Brother\" + ch 86 \"The Brother's Battle\": Kanchome, Rushka, the circus.",
+      "sources": [
+        "https://zatchbell.fandom.com/wiki/Big_Brother_Kanchom%C3%A9",
+        "https://en.wikipedia.org/wiki/List_of_Zatch_Bell!_chapters",
+        "https://en.wikipedia.org/wiki/Zatch_Bell!_season_1"
+      ]
+    },
+    {
+      "episode": 41,
+      "end_chapter": 88,
+      "start_chapter": 87,
+      "chapters_adapted": "87-88",
+      "volume": 10,
+      "confidence": "high",
+      "note": "Ch 87 \"The Last Hope\" + ch 88 \"The Reason Behind Invincibility\": Diga Poruk.",
+      "sources": [
+        "https://zatchbell.fandom.com/wiki/Invincible_Kanchom%C3%A9",
+        "https://en.wikipedia.org/wiki/List_of_Zatch_Bell!_chapters",
+        "https://en.wikipedia.org/wiki/Zatch_Bell!_season_1"
+      ]
+    },
+    {
+      "episode": 42,
+      "end_chapter": 77,
+      "start_chapter": 75,
+      "chapters_adapted": "75-77",
+      "volume": 9,
+      "confidence": "high",
+      "note": "BACKFILL: ch 75 \"Zatch's Cold\"/76 \"A Measure of Strength\"/77 \"Fearless Heart\" - Zeno revealed to Apollo.",
+      "sources": [
+        "https://zatchbell.fandom.com/wiki/Coldhearted_Foes",
+        "https://en.wikipedia.org/wiki/List_of_Zatch_Bell!_chapters",
+        "https://en.wikipedia.org/wiki/Zatch_Bell!_season_1"
+      ]
+    },
+    {
+      "episode": 43,
+      "end_chapter": 79,
+      "start_chapter": 78,
+      "chapters_adapted": "78-79",
+      "volume": 9,
+      "confidence": "high",
+      "note": "Ch 78 \"A Happy Day\" + ch 79 \"The True Hero\": Praying Mantis Joe.",
+      "sources": [
+        "https://zatchbell.fandom.com/wiki/Praying_Mantis_Joe%3A_The_Hero_of_Justice",
+        "https://en.wikipedia.org/wiki/List_of_Zatch_Bell!_chapters",
+        "https://en.wikipedia.org/wiki/Zatch_Bell!_season_1"
+      ]
+    },
+    {
+      "episode": 44,
+      "end_chapter": 90,
+      "start_chapter": 89,
+      "chapters_adapted": "89-90",
+      "volume": 10,
+      "confidence": "high",
+      "note": "Ch 89 \"Facing Forward\" + ch 90 \"Not Strong Enough\": Bari challenges Zatch.",
+      "sources": [
+        "https://zatchbell.fandom.com/wiki/Invitation_to_a_Duel",
+        "https://en.wikipedia.org/wiki/List_of_Zatch_Bell!_chapters",
+        "https://en.wikipedia.org/wiki/Zatch_Bell!_season_1"
+      ]
+    },
+    {
+      "episode": 45,
+      "end_chapter": 92,
+      "start_chapter": 91,
+      "chapters_adapted": "91-92",
+      "volume": 10,
+      "confidence": "high",
+      "note": "Ch 91 \"The Missing\" + ch 92 \"The Difficult Path\": Zatch vs Bari concluded.",
+      "sources": [
+        "https://zatchbell.fandom.com/wiki/Zatch_vs._Bari",
+        "https://en.wikipedia.org/wiki/List_of_Zatch_Bell!_chapters",
+        "https://en.wikipedia.org/wiki/Zatch_Bell!_season_1"
+      ]
+    },
+    {
+      "episode": 46,
+      "end_chapter": 94,
+      "start_chapter": 93,
+      "chapters_adapted": "93-94",
+      "volume": 10,
+      "confidence": "high",
+      "note": "Ch 93 \"Who's the Owner?\" + ch 94 \"An Important Role\": Ponygon and Doronma.",
+      "sources": [
+        "https://zatchbell.fandom.com/wiki/Ponygon%27s_Close_Call",
+        "https://en.wikipedia.org/wiki/List_of_Zatch_Bell!_chapters",
+        "https://en.wikipedia.org/wiki/Zatch_Bell!_season_1"
+      ]
+    },
+    {
+      "episode": 47,
+      "end_chapter": 99,
+      "start_chapter": 99,
+      "chapters_adapted": "99",
+      "volume": 11,
+      "confidence": "high",
+      "note": "JUMP: ch 99 \"The King's Appearance\" - the Brago/Sherry snowfield interlude, pulled ahead of 83-98. This is the highest chapter season 1 reaches, matching AFG's \"season 1 adapted manga 1 to 99\".",
+      "sources": [
+        "https://zatchbell.fandom.com/wiki/Rumble_in_the_Snow",
+        "https://en.wikipedia.org/wiki/List_of_Zatch_Bell!_chapters",
+        "https://en.wikipedia.org/wiki/Zatch_Bell!_season_1"
+      ]
+    },
+    {
+      "episode": 48,
+      "end_chapter": 84,
+      "start_chapter": 83,
+      "chapters_adapted": "83-84",
+      "volume": 9,
+      "confidence": "high",
+      "note": "BACKFILL: ch 83 \"An Unidentified Object\" + ch 84 \"The Mystery of the Stone Tablet\" (ch 83's opening beat was grafted into ep 23).",
+      "sources": [
+        "https://zatchbell.fandom.com/wiki/The_Mystery_of_the_Stone_Tablets",
+        "https://en.wikipedia.org/wiki/List_of_Zatch_Bell!_chapters",
+        "https://en.wikipedia.org/wiki/Zatch_Bell!_season_1"
+      ]
+    },
+    {
+      "episode": 49,
+      "end_chapter": 96,
+      "start_chapter": 95,
+      "chapters_adapted": "95-96",
+      "volume": 11,
+      "confidence": "high",
+      "note": "Ch 95 \"The Majestic 12\" + ch 96 \"The Secret of the Book\": Dr. Riddles and Kido.",
+      "sources": [
+        "https://zatchbell.fandom.com/wiki/Dr._Riddles_and_the_Majestic_Twelve",
+        "https://en.wikipedia.org/wiki/List_of_Zatch_Bell!_chapters",
+        "https://en.wikipedia.org/wiki/Zatch_Bell!_season_1"
+      ]
+    },
+    {
+      "episode": 50,
+      "end_chapter": 98,
+      "start_chapter": 97,
+      "chapters_adapted": "97-98",
+      "volume": 11,
+      "confidence": "high",
+      "note": "Ch 97 \"The Sixth Spell\" (= episode title) + ch 98 \"The Chances of Winning in 30 Seconds\". Season 1 END.",
+      "sources": [
+        "https://zatchbell.fandom.com/wiki/The_Sixth_Spell_%28Episode_50%29",
+        "https://en.wikipedia.org/wiki/List_of_Zatch_Bell!_chapters",
+        "https://en.wikipedia.org/wiki/Zatch_Bell!_season_1",
+        "https://www.animefillerguide.com/anime/konjiki-no-gash-bell/"
+      ]
+    },
+    {
+      "episode": 52,
+      "end_chapter": 101,
+      "start_chapter": 100,
+      "chapters_adapted": "100-101",
+      "volume": 11,
+      "confidence": "high",
+      "note": "Season 2 opens on ch 100 \"Feelings From the Bottom of the Heart\" + ch 101 \"The Worst Match\": Penny/Uri.",
+      "sources": [
+        "https://zatchbell.fandom.com/wiki/My_Beloved_Zatch",
+        "https://en.wikipedia.org/wiki/List_of_Zatch_Bell!_chapters",
+        "https://en.wikipedia.org/wiki/Zatch_Bell!_season_2",
+        "https://www.animefillerguide.com/anime/konjiki-no-gash-bell/"
+      ]
+    },
+    {
+      "episode": 53,
+      "end_chapter": 103,
+      "start_chapter": 102,
+      "chapters_adapted": "102-103",
+      "volume": 11,
+      "confidence": "high",
+      "note": "Ch 102 \"Expression of Anger\" + ch 103 \"The Evil Power\": So Giaku.",
+      "sources": [
+        "https://zatchbell.fandom.com/wiki/So_Giaku%2C_The_Water_Dragon_of_Rage%21",
+        "https://en.wikipedia.org/wiki/List_of_Zatch_Bell!_chapters",
+        "https://en.wikipedia.org/wiki/Zatch_Bell!_season_2"
+      ]
+    },
+    {
+      "episode": 54,
+      "end_chapter": 104,
+      "start_chapter": 104,
+      "chapters_adapted": "104",
+      "volume": 12,
+      "confidence": "medium",
+      "note": "Ch 104 \"The Rematch\" - the park kick-the-can day; single-chapter episode per the wiki infobox.",
+      "sources": [
+        "https://zatchbell.fandom.com/wiki/Battle_at_the_Park%21_Zatch_vs._Kiyo%21%3F",
+        "https://en.wikipedia.org/wiki/List_of_Zatch_Bell!_chapters",
+        "https://en.wikipedia.org/wiki/Zatch_Bell!_season_2"
+      ]
+    },
+    {
+      "episode": 55,
+      "end_chapter": 106,
+      "start_chapter": 105,
+      "chapters_adapted": "105-106",
+      "volume": 12,
+      "confidence": "high",
+      "note": "Ch 105 \"The Mamodo From a Thousand Years Ago\" + ch 106 \"The Emotionless Enemy\": Goren backstory.",
+      "sources": [
+        "https://zatchbell.fandom.com/wiki/Penny%27s_Revenge%21_Assassins_on_the_Loose%21",
+        "https://en.wikipedia.org/wiki/List_of_Zatch_Bell!_chapters",
+        "https://en.wikipedia.org/wiki/Zatch_Bell!_season_2"
+      ]
+    },
+    {
+      "episode": 56,
+      "end_chapter": 109,
+      "start_chapter": 107,
+      "chapters_adapted": "107-109",
+      "volume": 12,
+      "confidence": "high",
+      "note": "DERIVED, then corroborated: the Patti arc is bounded ch 100-109 <-> ep 52-56, and the episode is exactly ch 107 \"You Get What You Deserve\", ch 108 \"The Light\" (= Saifogeo, the episode title) and ch 109 \"The Identity of Milordo-Z\" (the tile that leads to Milordo-Z, the episode's closing beat).",
+      "sources": [
+        "https://zatchbell.fandom.com/wiki/Story_Arcs",
+        "https://en.wikipedia.org/wiki/List_of_Zatch_Bell!_chapters",
+        "https://en.wikipedia.org/wiki/Zatch_Bell!_season_2"
+      ]
+    },
+    {
+      "episode": 58,
+      "end_chapter": 110,
+      "start_chapter": 110,
+      "chapters_adapted": "110",
+      "volume": 12,
+      "confidence": "medium",
+      "note": "Ch 110 \"The Letter\": Sunbeam picks up Ponygon's book; the team resolves to hit the Devolo ruins.",
+      "sources": [
+        "https://zatchbell.fandom.com/wiki/Defeat_Milordo-Z%21_Each_Person%27s_Resolve%21",
+        "https://en.wikipedia.org/wiki/List_of_Zatch_Bell!_chapters",
+        "https://en.wikipedia.org/wiki/Zatch_Bell!_season_2"
+      ]
+    },
+    {
+      "episode": 59,
+      "end_chapter": 112,
+      "start_chapter": 111,
+      "chapters_adapted": "111-112",
+      "volume": 12,
+      "confidence": "high",
+      "note": "Ch 111 \"The Crybaby\" + ch 112 \"Kanchome's Power\": the ruins infiltration decoy.",
+      "sources": [
+        "https://zatchbell.fandom.com/wiki/Charge_into_the_Ruins%21_Kanchom%C3%A9%27s_Strategy%21",
+        "https://en.wikipedia.org/wiki/List_of_Zatch_Bell!_chapters",
+        "https://en.wikipedia.org/wiki/Zatch_Bell!_season_2"
+      ]
+    },
+    {
+      "episode": 60,
+      "end_chapter": 114,
+      "start_chapter": 113,
+      "chapters_adapted": "113-114",
+      "volume": 13,
+      "confidence": "medium",
+      "note": "DERIVED from the gap between ep 59 (ends 112) and ep 61 (starts 115): ch 113 \"The Battery\" + ch 114 \"Choosing the Way to Fight\" - the Alm/Gelios flooded chamber.",
+      "sources": [
+        "https://zatchbell.fandom.com/wiki/Story_Arcs",
+        "https://en.wikipedia.org/wiki/List_of_Zatch_Bell!_chapters",
+        "https://en.wikipedia.org/wiki/Zatch_Bell!_season_2"
+      ]
+    },
+    {
+      "episode": 61,
+      "end_chapter": 116,
+      "start_chapter": 115,
+      "chapters_adapted": "115-116",
+      "volume": 13,
+      "confidence": "high",
+      "note": "Ch 115 \"The Maximum Multiplied by the Maximum\" + ch 116 \"The Promise\".",
+      "sources": [
+        "https://zatchbell.fandom.com/wiki/Spell_of_Sorrow",
+        "https://en.wikipedia.org/wiki/List_of_Zatch_Bell!_chapters",
+        "https://en.wikipedia.org/wiki/Zatch_Bell!_season_2"
+      ]
+    },
+    {
+      "episode": 62,
+      "end_chapter": 117,
+      "start_chapter": 117,
+      "chapters_adapted": "117",
+      "volume": 13,
+      "confidence": "high",
+      "note": "DERIVED and confirmed by title: ch 117 \"The Arrival of 'V'\" is Victoream's entrance, i.e. this episode (\"Impact of the V! Very Melon!\"). Fills the gap between ep 61 (116) and ep 63 (118).",
+      "sources": [
+        "https://zatchbell.fandom.com/wiki/Story_Arcs",
+        "https://en.wikipedia.org/wiki/List_of_Zatch_Bell!_chapters",
+        "https://en.wikipedia.org/wiki/Zatch_Bell!_season_2"
+      ]
+    },
+    {
+      "episode": 63,
+      "end_chapter": 119,
+      "start_chapter": 118,
+      "chapters_adapted": "118-119",
+      "volume": 13,
+      "confidence": "high",
+      "note": "Ch 118 \"The Glowing Ball\" + ch 119 \"The Combination Strategy!\": Victoream beaten.",
+      "sources": [
+        "https://zatchbell.fandom.com/wiki/Burrah%21%21_Victoream%E2%80%99s_Anger%21",
+        "https://en.wikipedia.org/wiki/List_of_Zatch_Bell!_chapters",
+        "https://en.wikipedia.org/wiki/Zatch_Bell!_season_2"
+      ]
+    },
+    {
+      "episode": 64,
+      "end_chapter": 121,
+      "start_chapter": 120,
+      "chapters_adapted": "120-121",
+      "volume": 13,
+      "confidence": "high",
+      "note": "Ch 120 \"The Partner\" + ch 121 \"The Reason for Not Getting Along\": Laila/Dalmos.",
+      "sources": [
+        "https://zatchbell.fandom.com/wiki/The_Fierce_Attack_of_Dalmos%21_The_Battle_on_Top_of_the_Sand%21",
+        "https://en.wikipedia.org/wiki/List_of_Zatch_Bell!_chapters",
+        "https://en.wikipedia.org/wiki/Zatch_Bell!_season_2"
+      ]
+    },
+    {
+      "episode": 65,
+      "end_chapter": 123,
+      "start_chapter": 122,
+      "chapters_adapted": "122-123",
+      "volume": 13,
+      "confidence": "high",
+      "note": "Ch 122 \"The Strong Eye\" + ch 123 \"Strong and Deep\": Sunbeam revealed as Ponygon's bookowner.",
+      "sources": [
+        "https://zatchbell.fandom.com/wiki/Ponygon%27s_Lightning_Speed%21",
+        "https://en.wikipedia.org/wiki/List_of_Zatch_Bell!_chapters",
+        "https://en.wikipedia.org/wiki/Zatch_Bell!_season_2"
+      ]
+    },
+    {
+      "episode": 69,
+      "end_chapter": 128,
+      "start_chapter": 128,
+      "chapters_adapted": "128",
+      "volume": 14,
+      "confidence": "medium",
+      "note": "DERIVED: eps 66-69 cover ch 124-127 with no per-episode split available, but ch 128 \"A Single Path\" is unmistakably this episode's single narrow stairway over the magma chamber, and ep 70 starts at 129. See the eps 66-68 annotation.",
+      "sources": [
+        "https://zatchbell.fandom.com/wiki/Story_Arcs",
+        "https://en.wikipedia.org/wiki/List_of_Zatch_Bell!_chapters",
+        "https://en.wikipedia.org/wiki/Zatch_Bell!_season_2"
+      ]
+    },
+    {
+      "episode": 70,
+      "end_chapter": 130,
+      "start_chapter": 129,
+      "chapters_adapted": "129-130",
+      "volume": 14,
+      "confidence": "high",
+      "note": "Ch 129 \"Emergency\" + ch 130 \"The Perfect Martial Art\": the party is split, the four Supreme Mamodo deployed.",
+      "sources": [
+        "https://zatchbell.fandom.com/wiki/The_Four_Supreme_Mamodo%21",
+        "https://en.wikipedia.org/wiki/List_of_Zatch_Bell!_chapters",
+        "https://en.wikipedia.org/wiki/Zatch_Bell!_season_2"
+      ]
+    },
+    {
+      "episode": 71,
+      "end_chapter": 133,
+      "start_chapter": 131,
+      "chapters_adapted": "131-133",
+      "volume": 14,
+      "confidence": "high",
+      "note": "Ch 131-133 \"Seeking Strength\"/\"What Remains\"/\"The King Who Protects\": Wonrei vs Tsao-Lon, Rao Diboren.",
+      "sources": [
+        "https://zatchbell.fandom.com/wiki/The_Roar_of_Rao_Diboren%21",
+        "https://en.wikipedia.org/wiki/List_of_Zatch_Bell!_chapters",
+        "https://en.wikipedia.org/wiki/Zatch_Bell!_season_2"
+      ]
+    },
+    {
+      "episode": 72,
+      "end_chapter": 134,
+      "start_chapter": 134,
+      "chapters_adapted": "134",
+      "volume": 15,
+      "confidence": "high",
+      "note": "Ch 134 \"Let's Sing Together\": Belgim E.O. demands a performance.",
+      "sources": [
+        "https://zatchbell.fandom.com/wiki/Sing_for_Your_Lives%21_The_Terrible_Belgim_E.O.",
+        "https://en.wikipedia.org/wiki/List_of_Zatch_Bell!_chapters",
+        "https://en.wikipedia.org/wiki/Zatch_Bell!_season_2"
+      ]
+    },
+    {
+      "episode": 73,
+      "end_chapter": 136,
+      "start_chapter": 135,
+      "chapters_adapted": "135-136",
+      "volume": 15,
+      "confidence": "high",
+      "note": "Ch 135 \"The Person that Knows Nothing\" + ch 136 \"My King\": Dr. Riddles/Kido backstory.",
+      "sources": [
+        "https://zatchbell.fandom.com/wiki/Dr._Riddles%2C_You%27ll_Always_Be_My_King%21",
+        "https://en.wikipedia.org/wiki/List_of_Zatch_Bell!_chapters",
+        "https://en.wikipedia.org/wiki/Zatch_Bell!_season_2"
+      ]
+    },
+    {
+      "episode": 74,
+      "end_chapter": 138,
+      "start_chapter": 137,
+      "chapters_adapted": "137-138",
+      "volume": 15,
+      "confidence": "high",
+      "note": "Ch 137 \"12 Comrades\" + ch 138 \"The Secret of Strength\": Pamoon revealed.",
+      "sources": [
+        "https://zatchbell.fandom.com/wiki/Pamoon%2C_the_Celestial_Warrior",
+        "https://en.wikipedia.org/wiki/List_of_Zatch_Bell!_chapters",
+        "https://en.wikipedia.org/wiki/Zatch_Bell!_season_2"
+      ]
+    },
+    {
+      "episode": 75,
+      "end_chapter": 140,
+      "start_chapter": 139,
+      "chapters_adapted": "139-140",
+      "volume": 15,
+      "confidence": "high",
+      "note": "Ch 139 \"The Fear of the Lithograph\" + ch 140 \"The Light pointing towards Darkness\": Pamoon freed.",
+      "sources": [
+        "https://zatchbell.fandom.com/wiki/Free_Yourself_from_a_Thousand_Years_of_Pain%21",
+        "https://en.wikipedia.org/wiki/List_of_Zatch_Bell!_chapters",
+        "https://en.wikipedia.org/wiki/Zatch_Bell!_season_2"
+      ]
+    },
+    {
+      "episode": 76,
+      "end_chapter": 142,
+      "start_chapter": 140,
+      "chapters_adapted": "140-142",
+      "volume": 15,
+      "confidence": "high",
+      "note": "Continues inside ch 140, then ch 141 \"One More Face\" + ch 142 \"The Unforgiven One\": Zofis burns Pamoon's book.",
+      "sources": [
+        "https://zatchbell.fandom.com/wiki/No_Escape%21_The_Wicked_Zofis_Returns%21",
+        "https://en.wikipedia.org/wiki/List_of_Zatch_Bell!_chapters",
+        "https://en.wikipedia.org/wiki/Zatch_Bell!_season_2"
+      ]
+    },
+    {
+      "episode": 77,
+      "end_chapter": 144,
+      "start_chapter": 143,
+      "chapters_adapted": "143-144",
+      "volume": 16,
+      "confidence": "high",
+      "note": "DERIVED and confirmed by title: ch 143 \"Sherry's Line\" is literally this episode (Sherry draws a line and tells the party to stay behind it), then ch 144 \"To the Battlefield...\". Fills the gap between ep 76 (142) and ep 78 (145).",
+      "sources": [
+        "https://zatchbell.fandom.com/wiki/Story_Arcs",
+        "https://en.wikipedia.org/wiki/List_of_Zatch_Bell!_chapters",
+        "https://en.wikipedia.org/wiki/Zatch_Bell!_season_2"
+      ]
+    },
+    {
+      "episode": 78,
+      "end_chapter": 146,
+      "start_chapter": 145,
+      "chapters_adapted": "145-146",
+      "volume": 16,
+      "confidence": "high",
+      "note": "Ch 145 \"Auto Control\" + ch 146 \"The Curse of the Stone\": Laila and the moonstone.",
+      "sources": [
+        "https://zatchbell.fandom.com/wiki/I_Won%27t_Go_Back%21_Laila%27s_Dark_Solitude",
+        "https://en.wikipedia.org/wiki/List_of_Zatch_Bell!_chapters",
+        "https://en.wikipedia.org/wiki/Zatch_Bell!_season_2"
+      ]
+    },
+    {
+      "episode": 79,
+      "end_chapter": 147,
+      "start_chapter": 147,
+      "chapters_adapted": "147",
+      "volume": 16,
+      "confidence": "high",
+      "note": "DERIVED and confirmed by title: ch 147 \"Guardian of the Stone\" (lit. \"the keeper of the Moon Stone\") is this episode's moonstone-room approach. Sits exactly between ep 78 (146) and ep 80 (148).",
+      "sources": [
+        "https://zatchbell.fandom.com/wiki/Story_Arcs",
+        "https://en.wikipedia.org/wiki/List_of_Zatch_Bell!_chapters",
+        "https://en.wikipedia.org/wiki/Zatch_Bell!_season_2"
+      ]
+    },
+    {
+      "episode": 80,
+      "end_chapter": 149,
+      "start_chapter": 148,
+      "chapters_adapted": "148-149",
+      "volume": 16,
+      "confidence": "high",
+      "note": "Ch 148 \"The Horrifying Scream\" + ch 149 \"The Worst Two\": Demolt.",
+      "sources": [
+        "https://zatchbell.fandom.com/wiki/The_Crazed_Warrior%3A_Berzerker%21",
+        "https://en.wikipedia.org/wiki/List_of_Zatch_Bell!_chapters",
+        "https://en.wikipedia.org/wiki/Zatch_Bell!_season_2"
+      ]
+    },
+    {
+      "episode": 81,
+      "end_chapter": 151,
+      "start_chapter": 150,
+      "chapters_adapted": "150-151",
+      "volume": 16,
+      "confidence": "medium",
+      "note": "DERIVED: ch 150 \"The Slight Ray of Light\" + ch 151 \"The Unexpected Light\" fill the gap between ep 80 (149) and ep 82.",
+      "sources": [
+        "https://zatchbell.fandom.com/wiki/Story_Arcs",
+        "https://en.wikipedia.org/wiki/List_of_Zatch_Bell!_chapters",
+        "https://en.wikipedia.org/wiki/Zatch_Bell!_season_2"
+      ]
+    },
+    {
+      "episode": 82,
+      "end_chapter": 153,
+      "start_chapter": 152,
+      "chapters_adapted": "152-153",
+      "volume": 16,
+      "confidence": "medium",
+      "note": "DERIVED, title-corroborated: ch 152 \"The Final Favor\" (lit. \"the last selfishness\") matches \"Selfish Penny's Goodbye\"; ch 153 \"Holding Hands...\".",
+      "sources": [
+        "https://zatchbell.fandom.com/wiki/Story_Arcs",
+        "https://en.wikipedia.org/wiki/List_of_Zatch_Bell!_chapters",
+        "https://en.wikipedia.org/wiki/Zatch_Bell!_season_2"
+      ]
+    },
+    {
+      "episode": 83,
+      "end_chapter": 155,
+      "start_chapter": 154,
+      "chapters_adapted": "154-155",
+      "volume": 17,
+      "confidence": "high",
+      "note": "DERIVED and confirmed by title: ch 154 \"The Forbidden Spell\" + ch 155 \"The Seventh Spell\" - the episode is \"Zagurzem, the 7th Spell!\". Sits between ep 82 and ep 84 (156).",
+      "sources": [
+        "https://zatchbell.fandom.com/wiki/Story_Arcs",
+        "https://en.wikipedia.org/wiki/List_of_Zatch_Bell!_chapters",
+        "https://en.wikipedia.org/wiki/Zatch_Bell!_season_2"
+      ]
+    },
+    {
+      "episode": 84,
+      "end_chapter": 157,
+      "start_chapter": 156,
+      "chapters_adapted": "156-157",
+      "volume": 17,
+      "confidence": "high",
+      "note": "Ch 156 \"Come On, Zatch\" + ch 157 \"Not Over Yet\": Demolt finished.",
+      "sources": [
+        "https://zatchbell.fandom.com/wiki/The_Final_Battle_with_Demolt%21",
+        "https://en.wikipedia.org/wiki/List_of_Zatch_Bell!_chapters",
+        "https://en.wikipedia.org/wiki/Zatch_Bell!_season_2"
+      ]
+    },
+    {
+      "episode": 85,
+      "end_chapter": 159,
+      "start_chapter": 158,
+      "chapters_adapted": "158-159",
+      "volume": 17,
+      "confidence": "medium",
+      "note": "DERIVED: ch 158 \"My True Self\" (Koko's confession) + ch 159 \"The Sun and The Moon\" (the Sherry/Koko metaphor). Bounded by ep 84 (157) and ep 87 (160); ep 86 is anime expansion inside the same material.",
+      "sources": [
+        "https://zatchbell.fandom.com/wiki/Story_Arcs",
+        "https://en.wikipedia.org/wiki/List_of_Zatch_Bell!_chapters",
+        "https://en.wikipedia.org/wiki/Zatch_Bell!_season_2"
+      ]
+    },
+    {
+      "episode": 87,
+      "end_chapter": 160,
+      "start_chapter": 160,
+      "chapters_adapted": "160",
+      "volume": 17,
+      "confidence": "high",
+      "note": "Ch 160 \"To Prepare For This Moment\": Sherry and Brago take Zofis for themselves.",
+      "sources": [
+        "https://zatchbell.fandom.com/wiki/Save_Koko%21_Sherry%27s_Dioga_Gravidon%21",
+        "https://en.wikipedia.org/wiki/List_of_Zatch_Bell!_chapters",
+        "https://en.wikipedia.org/wiki/Zatch_Bell!_season_2"
+      ]
+    },
+    {
+      "episode": 88,
+      "end_chapter": 162,
+      "start_chapter": 161,
+      "chapters_adapted": "161-162",
+      "volume": 17,
+      "confidence": "high",
+      "note": "Ch 161 \"The Final Revenge\" + ch 162 \"Promise To Become The King\" - end of volume 17 and of the season-2 manga run (AFG: \"season 2 adapted manga 100 to 163\").",
+      "sources": [
+        "https://zatchbell.fandom.com/wiki/A_New_Departure%21",
+        "https://en.wikipedia.org/wiki/List_of_Zatch_Bell!_chapters",
+        "https://en.wikipedia.org/wiki/Zatch_Bell!_season_2",
+        "https://www.animefillerguide.com/anime/konjiki-no-gash-bell/"
+      ]
+    },
+    {
+      "episode": 101,
+      "end_chapter": 170,
+      "start_chapter": 169,
+      "chapters_adapted": "169-170",
+      "volume": 18,
+      "confidence": "high",
+      "note": "Season 3 opens OUT OF ORDER on the Ted arc: ch 169 \"The Boy Who Speaks To The Wind\" (= episode title) + ch 170 \"Ted and Jido\". Chapters 164-168 are animated later, at eps 104-107.",
+      "sources": [
+        "https://zatchbell.fandom.com/wiki/A_New_Menace%3A_The_Boy_that_Speaks_to_the_Wind%21",
+        "https://en.wikipedia.org/wiki/List_of_Zatch_Bell!_chapters",
+        "https://en.wikipedia.org/wiki/Zatch_Bell!_season_3",
+        "https://www.animefillerguide.com/anime/konjiki-no-gash-bell/"
+      ]
+    },
+    {
+      "episode": 102,
+      "end_chapter": 172,
+      "start_chapter": 171,
+      "chapters_adapted": "171-172",
+      "volume": 18,
+      "confidence": "medium",
+      "note": "Ch 171 \"My Friend\" + ch 172 \"The Power of Bao\": Ted vs Arth. The wiki infobox also credits ch 167 here (shared with ep 107); END is 172.",
+      "sources": [
+        "https://zatchbell.fandom.com/wiki/The_Beginning_of_a_Friendship%2C_and_the_End_of_a_Spell%3F",
+        "https://en.wikipedia.org/wiki/List_of_Zatch_Bell!_chapters",
+        "https://en.wikipedia.org/wiki/Zatch_Bell!_season_3"
+      ]
+    },
+    {
+      "episode": 104,
+      "end_chapter": 168,
+      "start_chapter": 168,
+      "chapters_adapted": "168",
+      "volume": 18,
+      "confidence": "high",
+      "note": "Ch 168 \"Find the Gift!\" - the department-store gift hunt for Sunbeam. The anime plays 168 BEFORE 164-167.",
+      "sources": [
+        "https://zatchbell.fandom.com/wiki/The_Idol_vs._the_Schoolgirl%21",
+        "https://en.wikipedia.org/wiki/List_of_Zatch_Bell!_chapters",
+        "https://en.wikipedia.org/wiki/Zatch_Bell!_season_3"
+      ]
+    },
+    {
+      "episode": 105,
+      "end_chapter": 164,
+      "start_chapter": 164,
+      "chapters_adapted": "164",
+      "volume": 18,
+      "confidence": "medium",
+      "note": "Ch 164 \"An Uncomfortable Stare\": Grubb and Koral Q surveil Zatch. Backfill of the Koral Q arc (ch 164-168 <-> eps 104-107).",
+      "sources": [
+        "https://zatchbell.fandom.com/wiki/Q_Attack%21_Q_Ultimate_Transformation%3F_My_Name_is_Koral_Q",
+        "https://en.wikipedia.org/wiki/List_of_Zatch_Bell!_chapters",
+        "https://en.wikipedia.org/wiki/Zatch_Bell!_season_3"
+      ]
+    },
+    {
+      "episode": 106,
+      "end_chapter": 166,
+      "start_chapter": 165,
+      "chapters_adapted": "165-166",
+      "volume": 18,
+      "confidence": "medium",
+      "note": "Ch 165 \"Q's Almighty Transformations!\" + ch 166 \"Superior Data\".",
+      "sources": [
+        "https://zatchbell.fandom.com/wiki/Put_Into_a_Pinch%2C_Q%27s_Counterattack%21_The_Suppression_of_Every_Spell%21%3F",
+        "https://en.wikipedia.org/wiki/List_of_Zatch_Bell!_chapters",
+        "https://en.wikipedia.org/wiki/Zatch_Bell!_season_3"
+      ]
+    },
+    {
+      "episode": 107,
+      "end_chapter": 167,
+      "start_chapter": 166,
+      "chapters_adapted": "166-167",
+      "volume": 18,
+      "confidence": "medium",
+      "note": "Continues inside ch 166, then ch 167 \"Something Impossible\": Zagurzem + Bao Zakerga combination ends Koral Q.",
+      "sources": [
+        "https://zatchbell.fandom.com/wiki/Lightning_Chain%21_Ultimate_Evolution%21%3F_Renewed_Baou%21%21",
+        "https://en.wikipedia.org/wiki/List_of_Zatch_Bell!_chapters",
+        "https://en.wikipedia.org/wiki/Zatch_Bell!_season_3"
+      ]
+    },
+    {
+      "episode": 109,
+      "end_chapter": 173,
+      "start_chapter": 173,
+      "chapters_adapted": "173",
+      "volume": 19,
+      "confidence": "medium",
+      "note": "Cardio arc: the wiki bounds it ch 173-175 <-> eps 109-110. Ch 173 \"I'm Not A Coward\" is the Ponygon/Kardio first clash.",
+      "sources": [
+        "https://zatchbell.fandom.com/wiki/Story_Arcs",
+        "https://en.wikipedia.org/wiki/List_of_Zatch_Bell!_chapters",
+        "https://en.wikipedia.org/wiki/Zatch_Bell!_season_3"
+      ]
+    },
+    {
+      "episode": 110,
+      "end_chapter": 175,
+      "start_chapter": 174,
+      "chapters_adapted": "174-175",
+      "volume": 19,
+      "confidence": "high",
+      "note": "Ch 174 \"Come Back Safe\" (the promise the episode explicitly turns on) + ch 175 \"Ignite Your Fighting Spirit!\" (Ponygon's fire spell).",
+      "sources": [
+        "https://zatchbell.fandom.com/wiki/Story_Arcs",
+        "https://en.wikipedia.org/wiki/List_of_Zatch_Bell!_chapters",
+        "https://en.wikipedia.org/wiki/Zatch_Bell!_season_3"
+      ]
+    },
+    {
+      "episode": 111,
+      "end_chapter": 176,
+      "start_chapter": 176,
+      "chapters_adapted": "176",
+      "volume": 19,
+      "confidence": "high",
+      "note": "Ch 176 \"Something Other Than A Structure\" - Dr. Riddles presents his findings on the tower. Arc bound: ch 176-177 <-> eps 111-112.",
+      "sources": [
+        "https://zatchbell.fandom.com/wiki/Story_Arcs",
+        "https://en.wikipedia.org/wiki/List_of_Zatch_Bell!_chapters",
+        "https://en.wikipedia.org/wiki/Zatch_Bell!_season_3"
+      ]
+    },
+    {
+      "episode": 112,
+      "end_chapter": 177,
+      "start_chapter": 177,
+      "chapters_adapted": "177",
+      "volume": 19,
+      "confidence": "high",
+      "note": "Ch 177 \"My Classmates\" - the ice-skating outing with Kiyo's classmates.",
+      "sources": [
+        "https://zatchbell.fandom.com/wiki/Story_Arcs",
+        "https://en.wikipedia.org/wiki/List_of_Zatch_Bell!_chapters",
+        "https://en.wikipedia.org/wiki/Zatch_Bell!_season_3"
+      ]
+    },
+    {
+      "episode": 113,
+      "end_chapter": 178,
+      "start_chapter": 178,
+      "chapters_adapted": "178",
+      "volume": 19,
+      "confidence": "high",
+      "note": "Ch 178 \"The Letter For Zatch\" - Rein's letter and the trip to Jill's estate. Kyle arc bound: ch 178-183 <-> eps 113-116.",
+      "sources": [
+        "https://zatchbell.fandom.com/wiki/Story_Arcs",
+        "https://en.wikipedia.org/wiki/List_of_Zatch_Bell!_chapters",
+        "https://en.wikipedia.org/wiki/Zatch_Bell!_season_3"
+      ]
+    },
+    {
+      "episode": 114,
+      "end_chapter": 179,
+      "start_chapter": 179,
+      "chapters_adapted": "179",
+      "volume": 19,
+      "confidence": "high",
+      "note": "Ch 179 \"That Person...\" - Rodeux tries to recruit Rein for \"that person\" (Rioh); Kyle abducted by Purio.",
+      "sources": [
+        "https://zatchbell.fandom.com/wiki/Story_Arcs",
+        "https://en.wikipedia.org/wiki/List_of_Zatch_Bell!_chapters",
+        "https://en.wikipedia.org/wiki/Zatch_Bell!_season_3"
+      ]
+    },
+    {
+      "episode": 115,
+      "end_chapter": 181,
+      "start_chapter": 180,
+      "chapters_adapted": "180-181",
+      "volume": 19,
+      "confidence": "high",
+      "note": "Ch 180 \"Meeting in The Mamodo World\" (Rein/Zatch flashback) + ch 181 \"A Scary Appearance\" (Rein's true form).",
+      "sources": [
+        "https://zatchbell.fandom.com/wiki/Story_Arcs",
+        "https://en.wikipedia.org/wiki/List_of_Zatch_Bell!_chapters",
+        "https://en.wikipedia.org/wiki/Zatch_Bell!_season_3"
+      ]
+    },
+    {
+      "episode": 116,
+      "end_chapter": 183,
+      "start_chapter": 182,
+      "chapters_adapted": "182-183",
+      "volume": 20,
+      "confidence": "high",
+      "note": "Ch 182 \"It's Okay Now\" + ch 183 \"Kyle's Shout\" - Kyle stands up to Jill. Closes the Kyle arc.",
+      "sources": [
+        "https://zatchbell.fandom.com/wiki/Story_Arcs",
+        "https://en.wikipedia.org/wiki/List_of_Zatch_Bell!_chapters",
+        "https://en.wikipedia.org/wiki/Zatch_Bell!_season_3"
+      ]
+    },
+    {
+      "episode": 120,
+      "end_chapter": 185,
+      "start_chapter": 184,
+      "chapters_adapted": "184-185",
+      "volume": 20,
+      "confidence": "medium",
+      "note": "Momon arc, bounded ch 184-187 <-> eps 120-121. Ch 184 \"Oh My\" is Momon's catchphrase (oyoyo) and his introduction; the 184-187 split across the two episodes is an even-split derivation, not a stated fact.",
+      "sources": [
+        "https://zatchbell.fandom.com/wiki/Story_Arcs",
+        "https://en.wikipedia.org/wiki/List_of_Zatch_Bell!_chapters",
+        "https://en.wikipedia.org/wiki/Zatch_Bell!_season_3"
+      ]
+    },
+    {
+      "episode": 121,
+      "end_chapter": 187,
+      "start_chapter": 186,
+      "chapters_adapted": "186-187",
+      "volume": 20,
+      "confidence": "medium",
+      "note": "Ch 186 \"A Frightening Spell\" is Chajiru Saifodon (the episode title); ch 187 \"Kiyo's Mood\" closes the arc. See flag: ch 187's Suzy beat may instead sit in ep 123/124.",
+      "sources": [
+        "https://zatchbell.fandom.com/wiki/Story_Arcs",
+        "https://en.wikipedia.org/wiki/List_of_Zatch_Bell!_chapters",
+        "https://en.wikipedia.org/wiki/Zatch_Bell!_season_3"
+      ]
+    },
+    {
+      "episode": 125,
+      "end_chapter": 188,
+      "start_chapter": 188,
+      "chapters_adapted": "188",
+      "volume": 20,
+      "confidence": "high",
+      "note": "Ch 188 \"The Power of Riou\" - the specter reveals Rioh, Faudo and the four-day curse. Start of the manga Faudo arc.",
+      "sources": [
+        "https://zatchbell.fandom.com/wiki/Story_Arcs",
+        "https://en.wikipedia.org/wiki/List_of_Zatch_Bell!_chapters",
+        "https://en.wikipedia.org/wiki/Zatch_Bell!_season_3"
+      ]
+    },
+    {
+      "episode": 126,
+      "end_chapter": 189,
+      "start_chapter": 189,
+      "chapters_adapted": "189",
+      "volume": 20,
+      "confidence": "high",
+      "note": "Ch 189 \"Faudo's True Form\" - literally this episode's title; Kanchome describes the sealed giant.",
+      "sources": [
+        "https://zatchbell.fandom.com/wiki/Story_Arcs",
+        "https://en.wikipedia.org/wiki/List_of_Zatch_Bell!_chapters",
+        "https://en.wikipedia.org/wiki/Zatch_Bell!_season_3"
+      ]
+    },
+    {
+      "episode": 127,
+      "end_chapter": 191,
+      "start_chapter": 190,
+      "chapters_adapted": "190-191",
+      "volume": 20,
+      "confidence": "high",
+      "note": "Ch 190 \"The Sealed Mamodo\" + ch 191 \"Bari's Rival\" - the latter is Keith introducing himself as Bari's archrival, which the episode summary states explicitly. (This settles the open ep-123/ch-191 question: ch 191 is here, not in ep 123's anime-original Bari vs Ted duel.)",
+      "sources": [
+        "https://zatchbell.fandom.com/wiki/Story_Arcs",
+        "https://en.wikipedia.org/wiki/List_of_Zatch_Bell!_chapters",
+        "https://en.wikipedia.org/wiki/Zatch_Bell!_season_3"
+      ]
+    },
+    {
+      "episode": 128,
+      "end_chapter": 193,
+      "start_chapter": 192,
+      "chapters_adapted": "192-193",
+      "volume": 21,
+      "confidence": "high",
+      "note": "Ch 192 \"A Bad Feeling\" + ch 193 \"Kanchome's Courage\" (lit. Kanchome's resolve) - he returns to the fight and unlocks Dima Buruk.",
+      "sources": [
+        "https://zatchbell.fandom.com/wiki/Story_Arcs",
+        "https://en.wikipedia.org/wiki/List_of_Zatch_Bell!_chapters",
+        "https://en.wikipedia.org/wiki/Zatch_Bell!_season_3"
+      ]
+    },
+    {
+      "episode": 129,
+      "end_chapter": 194,
+      "start_chapter": 194,
+      "chapters_adapted": "194",
+      "volume": 21,
+      "confidence": "medium",
+      "note": "Ch 194 \"A Strong Desire\" - the clones answer Kanchome's subconscious; Cherish and Nicole appear at the close.",
+      "sources": [
+        "https://zatchbell.fandom.com/wiki/Story_Arcs",
+        "https://en.wikipedia.org/wiki/List_of_Zatch_Bell!_chapters",
+        "https://en.wikipedia.org/wiki/Zatch_Bell!_season_3"
+      ]
+    },
+    {
+      "episode": 130,
+      "end_chapter": 196,
+      "start_chapter": 195,
+      "chapters_adapted": "195-196",
+      "volume": 21,
+      "confidence": "high",
+      "note": "Ch 195 \"The Last Spell\" (Buzarai's strongest) + ch 196 \"A New Encounter\". Stated by the wiki infobox and consistent with both neighbours.",
+      "sources": [
+        "https://zatchbell.fandom.com/wiki/Buzarai%27s_Fierce_Attack._Dioga_vs._Baou._The_Reversal_Chain",
+        "https://en.wikipedia.org/wiki/List_of_Zatch_Bell!_chapters",
+        "https://en.wikipedia.org/wiki/Zatch_Bell!_season_3"
+      ]
+    },
+    {
+      "episode": 131,
+      "end_chapter": 198,
+      "start_chapter": 197,
+      "chapters_adapted": "197-198",
+      "volume": 21,
+      "confidence": "high",
+      "note": "Ch 197 \"Prepared\" + ch 198 \"What It Takes To Be King\" - Aleshie tests Zatch; the episode title is \"Determination of the King\".",
+      "sources": [
+        "https://zatchbell.fandom.com/wiki/Story_Arcs",
+        "https://en.wikipedia.org/wiki/List_of_Zatch_Bell!_chapters",
+        "https://en.wikipedia.org/wiki/Zatch_Bell!_season_3"
+      ]
+    },
+    {
+      "episode": 132,
+      "end_chapter": 200,
+      "start_chapter": 199,
+      "chapters_adapted": "199-200",
+      "volume": 21,
+      "confidence": "high",
+      "note": "Ch 199 \"The First Test\" (Unko Tintin's riddles) + ch 200 \"Meru-Meru-Me~!\" (Ponygon's riddle).",
+      "sources": [
+        "https://zatchbell.fandom.com/wiki/Story_Arcs",
+        "https://en.wikipedia.org/wiki/List_of_Zatch_Bell!_chapters",
+        "https://en.wikipedia.org/wiki/Zatch_Bell!_season_3"
+      ]
+    },
+    {
+      "episode": 133,
+      "end_chapter": 202,
+      "start_chapter": 201,
+      "chapters_adapted": "201-202",
+      "volume": 21,
+      "confidence": "high",
+      "note": "Ch 201 \"The Exit\" (the holes into the liver) + ch 202 \"The True Heart\" (Aleshie's curse revealed). Stated by the wiki infobox.",
+      "sources": [
+        "https://zatchbell.fandom.com/wiki/Cool-Headed_Zaruchim._The_Truth_of_the_Curse._Stand_Up%21_Alishie",
+        "https://en.wikipedia.org/wiki/List_of_Zatch_Bell!_chapters",
+        "https://en.wikipedia.org/wiki/Zatch_Bell!_season_3"
+      ]
+    },
+    {
+      "episode": 134,
+      "end_chapter": 203,
+      "start_chapter": 203,
+      "chapters_adapted": "203",
+      "volume": 22,
+      "confidence": "medium",
+      "note": "Ch 203 \"Things I Must Protect\" - Wonrei fighting for Li-en, Aleshie for his village.",
+      "sources": [
+        "https://zatchbell.fandom.com/wiki/Story_Arcs",
+        "https://en.wikipedia.org/wiki/List_of_Zatch_Bell!_chapters",
+        "https://en.wikipedia.org/wiki/Zatch_Bell!_season_3"
+      ]
+    },
+    {
+      "episode": 135,
+      "end_chapter": 205,
+      "start_chapter": 204,
+      "chapters_adapted": "204-205",
+      "volume": 22,
+      "confidence": "medium",
+      "note": "Ch 204 \"The End Of The Maze\" (the blood-vessel labyrinth) + ch 205 \"I'm Scared, But...\" (Momon's tears).",
+      "sources": [
+        "https://zatchbell.fandom.com/wiki/Story_Arcs",
+        "https://en.wikipedia.org/wiki/List_of_Zatch_Bell!_chapters",
+        "https://en.wikipedia.org/wiki/Zatch_Bell!_season_3"
+      ]
+    },
+    {
+      "episode": 136,
+      "end_chapter": 206,
+      "start_chapter": 206,
+      "chapters_adapted": "206",
+      "volume": 22,
+      "confidence": "high",
+      "note": "Ch 206 \"Arth's Intentions\" - Arth, Kardio and Souza at the return device.",
+      "sources": [
+        "https://zatchbell.fandom.com/wiki/Story_Arcs",
+        "https://en.wikipedia.org/wiki/List_of_Zatch_Bell!_chapters",
+        "https://en.wikipedia.org/wiki/Zatch_Bell!_season_3"
+      ]
+    },
+    {
+      "episode": 137,
+      "end_chapter": 208,
+      "start_chapter": 207,
+      "chapters_adapted": "207-208",
+      "volume": 22,
+      "confidence": "high",
+      "note": "Ch 207 \"Offense and Defense\" + ch 208 \"The Light of Hope\" - the seal is broken and the curse lifts.",
+      "sources": [
+        "https://zatchbell.fandom.com/wiki/Story_Arcs",
+        "https://en.wikipedia.org/wiki/List_of_Zatch_Bell!_chapters",
+        "https://en.wikipedia.org/wiki/Zatch_Bell!_season_3"
+      ]
+    },
+    {
+      "episode": 138,
+      "end_chapter": 211,
+      "start_chapter": 209,
+      "chapters_adapted": "209-211",
+      "volume": 22,
+      "confidence": "high",
+      "note": "LAST ADAPTED EPISODE. Ch 209 \"The Resurrection of Faudo\" + ch 210 \"In Order To Live\" + ch 211 \"The Brain Strategy\" (= Kiyomaro's secret plan in the episode title). AFG states this explicitly and puts the reader's resume at ch 212.",
+      "sources": [
+        "https://zatchbell.fandom.com/wiki/Story_Arcs",
+        "https://en.wikipedia.org/wiki/List_of_Zatch_Bell!_chapters",
+        "https://en.wikipedia.org/wiki/Zatch_Bell!_season_3",
+        "https://www.animefillerguide.com/anime/konjiki-no-gash-bell/"
+      ]
+    }
+  ],
+  "continue_points": [
+    {
+      "episode": 10,
+      "continue_chapter": 21,
+      "note": "ch 21 \"The Curry of Friendship\" was skipped at ep 10 and is not animated until ep 17"
+    },
+    {
+      "episode": 11,
+      "continue_chapter": 21,
+      "note": "ch 21 \"The Curry of Friendship\" was skipped at ep 10 and is not animated until ep 17"
+    },
+    {
+      "episode": 12,
+      "continue_chapter": 21,
+      "note": "ch 21 \"The Curry of Friendship\" was skipped at ep 10 and is not animated until ep 17"
+    },
+    {
+      "episode": 14,
+      "continue_chapter": 21,
+      "note": "ch 21 \"The Curry of Friendship\" was skipped at ep 10 and is not animated until ep 17"
+    },
+    {
+      "episode": 15,
+      "continue_chapter": 21,
+      "note": "ch 21 \"The Curry of Friendship\" was skipped at ep 10 and is not animated until ep 17"
+    },
+    {
+      "episode": 16,
+      "continue_chapter": 21,
+      "note": "ch 21 \"The Curry of Friendship\" was skipped at ep 10 and is not animated until ep 17"
+    },
+    {
+      "episode": 17,
+      "continue_chapter": 32,
+      "note": "ch 32-33 (Nana Baba) were skipped and are not animated until ep 26"
+    },
+    {
+      "episode": 18,
+      "continue_chapter": 32,
+      "note": "ch 32-33 (Nana Baba) were skipped and are not animated until ep 26"
+    },
+    {
+      "episode": 19,
+      "continue_chapter": 32,
+      "note": "ch 32-33 (Nana Baba) were skipped and are not animated until ep 26"
+    },
+    {
+      "episode": 20,
+      "continue_chapter": 32,
+      "note": "ch 32-33 (Nana Baba) were skipped and are not animated until ep 26"
+    },
+    {
+      "episode": 21,
+      "continue_chapter": 32,
+      "note": "ch 32-33 (Nana Baba) were skipped and are not animated until ep 26"
+    },
+    {
+      "episode": 22,
+      "continue_chapter": 32,
+      "note": "ch 32-33 (Nana Baba) were skipped and are not animated until ep 26"
+    },
+    {
+      "episode": 23,
+      "continue_chapter": 32,
+      "note": "ch 32-33 (Nana Baba) were skipped and are not animated until ep 26"
+    },
+    {
+      "episode": 24,
+      "continue_chapter": 32,
+      "note": "ch 32-33 (Nana Baba) were skipped and are not animated until ep 26"
+    },
+    {
+      "episode": 25,
+      "continue_chapter": 32,
+      "note": "ch 32-33 (Nana Baba) were skipped and are not animated until ep 26"
+    },
+    {
+      "episode": 26,
+      "continue_chapter": 63,
+      "note": "ch 63 \"The Battle in the Park\" was skipped at ep 27 and is not animated until ep 36; ch 34 and 58 are never animated in the canon run"
+    },
+    {
+      "episode": 27,
+      "continue_chapter": 63,
+      "note": "ch 63 \"The Battle in the Park\" was skipped at ep 27 and is not animated until ep 36; ch 34 and 58 are never animated in the canon run"
+    },
+    {
+      "episode": 29,
+      "continue_chapter": 63,
+      "note": "ch 63 \"The Battle in the Park\" was skipped at ep 27 and is not animated until ep 36; ch 34 and 58 are never animated in the canon run"
+    },
+    {
+      "episode": 30,
+      "continue_chapter": 63,
+      "note": "ch 63 \"The Battle in the Park\" was skipped at ep 27 and is not animated until ep 36; ch 34 and 58 are never animated in the canon run"
+    },
+    {
+      "episode": 36,
+      "continue_chapter": 71,
+      "note": "ch 63 now consumed; next unread is 71 (67-70 already animated at eps 29-30)"
+    },
+    {
+      "episode": 39,
+      "continue_chapter": 75,
+      "note": "ep 39 jumped ahead to ch 80-82; ch 75-79 are not animated until eps 42-43"
+    },
+    {
+      "episode": 40,
+      "continue_chapter": 75,
+      "note": "ep 39 jumped ahead to ch 80-82; ch 75-79 are not animated until eps 42-43"
+    },
+    {
+      "episode": 41,
+      "continue_chapter": 75,
+      "note": "ep 39 jumped ahead to ch 80-82; ch 75-79 are not animated until eps 42-43"
+    },
+    {
+      "episode": 43,
+      "continue_chapter": 83,
+      "note": "ch 83-84 (stone tablets) are not animated until ep 48"
+    },
+    {
+      "episode": 44,
+      "continue_chapter": 83,
+      "note": "ch 83-84 (stone tablets) are not animated until ep 48"
+    },
+    {
+      "episode": 45,
+      "continue_chapter": 83,
+      "note": "ch 83-84 (stone tablets) are not animated until ep 48"
+    },
+    {
+      "episode": 46,
+      "continue_chapter": 83,
+      "note": "ch 83-84 (stone tablets) are not animated until ep 48"
+    },
+    {
+      "episode": 47,
+      "continue_chapter": 83,
+      "note": "ch 83-84 (stone tablets) are not animated until ep 48"
+    },
+    {
+      "episode": 48,
+      "continue_chapter": 95,
+      "note": "ch 95-96 are next; ch 99 was already animated out of order at ep 47"
+    },
+    {
+      "episode": 50,
+      "continue_chapter": 100,
+      "note": "ch 99 already animated at ep 47, so the season-1 reader resumes at ch 100"
+    },
+    {
+      "episode": 101,
+      "continue_chapter": 164,
+      "note": "season 3 opens on the Ted arc (ch 169-172); ch 164-167 are not animated until eps 105-107"
+    },
+    {
+      "episode": 102,
+      "continue_chapter": 164,
+      "note": "season 3 opens on the Ted arc (ch 169-172); ch 164-167 are not animated until eps 105-107"
+    },
+    {
+      "episode": 104,
+      "continue_chapter": 164,
+      "note": "season 3 opens on the Ted arc (ch 169-172); ch 164-167 are not animated until eps 105-107"
+    },
+    {
+      "episode": 107,
+      "continue_chapter": 173,
+      "note": "ch 168-172 already animated at eps 101/102/104, so the resume is ch 173"
+    }
+  ],
+  "annotations": [
+    {
+      "episodes": [
+        10,
+        17
+      ],
+      "kind": "rearranged",
+      "chapters": "21",
+      "note": "Ch 21 \"The Curry of Friendship\" is skipped when ep 10 animates 22-25 and is finally animated as the first half of ep 17."
+    },
+    {
+      "episodes": [
+        12
+      ],
+      "kind": "rearranged",
+      "chapters": "54-55",
+      "note": "Ep 12 jumps ~26 chapters ahead for the Sherry/Koko backstory (ch 54 \"An Irreplaceable Friend\", ch 55 \"The Dark Tunnel\"); the run returns to ch 29 at ep 16."
+    },
+    {
+      "episodes": [
+        18,
+        22
+      ],
+      "kind": "rearranged",
+      "chapters": "52-53",
+      "note": "Ep 18 opens on ch 40 then pulls ch 52-53 (the Folgore-in-London reunion) forward; eps 19-22 then run 40-51 in order, so ep 18 END (53) is ahead of ep 22 END (51)."
+    },
+    {
+      "episodes": [
+        23,
+        48
+      ],
+      "kind": "graft",
+      "chapters": "83",
+      "note": "Ep 23's cold open (Seitaro handing Kiyo the first 1,000-year stone tablet) is lifted out of ch 83 \"An Unidentified Object\"; ch 83 is properly adapted at ep 48. The wiki infobox lists 83 under ep 23, but END in running order is ch 57."
+    },
+    {
+      "episodes": [
+        26,
+        36
+      ],
+      "kind": "rearranged",
+      "chapters": "32-33, 63",
+      "note": "Ep 26 backfills ch 32-33 (Nana Baba) skipped at ep 11-12; ep 36 backfills ch 63 \"The Battle in the Park\" skipped at ep 27."
+    },
+    {
+      "episodes": [
+        39,
+        42,
+        43
+      ],
+      "kind": "rearranged",
+      "chapters": "75-82",
+      "note": "Ep 39 animates ch 80-82 (Baransha the hunter) before eps 42-43 go back for ch 75-79."
+    },
+    {
+      "episodes": [
+        47,
+        48,
+        49,
+        50
+      ],
+      "kind": "rearranged",
+      "chapters": "83-99",
+      "note": "Ep 47 animates ch 99 \"The King's Appearance\" (Brago/Sherry snowfield) out of order; eps 48-50 then run 83-84 and 95-98. Ch 99 is therefore the highest chapter season 1 reaches, matching AFG's \"season 1 adapted manga 1 to 99\"."
+    },
+    {
+      "episodes": [
+        14,
+        90
+      ],
+      "kind": "partial",
+      "chapters": "34",
+      "note": "Ch 34 is skipped when ep 14 animates 35-36. The zatchbell wiki places it in AFL-filler ep 90 (\"The Hurricane Test Battle!\"); A1 forbids an anchor there, so ch 34 is recorded as a permanent hole in the canon run."
+    },
+    {
+      "episodes": [
+        24
+      ],
+      "kind": "partial",
+      "chapters": "58",
+      "note": "Ch 58 is never animated: ep 23 ends at ch 57 and ep 24 starts at ch 59."
+    },
+    {
+      "episodes": [
+        28
+      ],
+      "kind": "side_story",
+      "chapters": "Vol. 8 bonus section",
+      "note": "Ep 28 \"Tia and Megumi's Excellent Adventure\" adapts the volume 8 bonus side story (Princess Marie), not a mainline chapter - no mainline END exists, so no anchor."
+    },
+    {
+      "episodes": [
+        66,
+        67,
+        68
+      ],
+      "kind": "partial",
+      "chapters": "124-127",
+      "note": "Eps 66-68 cover ch 124-127 (bounded by ep 65 = ch 123 and ep 69 = ch 128) but no source gives the per-episode split, and the title evidence is contradictory: ch 128 \"A Single Path\" is clearly ep 69's magma stairway and ch 126 \"Fighting Together\" fits ep 67, yet ch 124 \"Conversations of the Heart\" reads like ep 68's wordless Tia/Zatch thank-you. Left unanchored rather than guessed; interpolation between eps 65 and 69 lands within one chapter."
+    },
+    {
+      "episodes": [
+        86
+      ],
+      "kind": "partial",
+      "chapters": "159-160",
+      "note": "Eps 85-86 share ch 158-159 and ep 87 starts at 160, so ep 86 is anime expansion inside the same material; no separate anchor."
+    },
+    {
+      "episodes": [
+        92
+      ],
+      "kind": "side_story",
+      "chapters": "Vol. 17 bonus side story",
+      "note": "AFL-filler ep 92 \"Dr. Riddles' Renewed Vow\" adapts the volume 17 bonus side story per the wiki infobox. A1: no anchor on a filler row; recorded as a fact only."
+    },
+    {
+      "episodes": [
+        88,
+        99
+      ],
+      "kind": "graft",
+      "chapters": "163",
+      "note": "Ch 163 \"We're Home\" is the only chapter of volume 18 animated in season 2, and the wiki places it in AFL-filler ep 99 \"Miss Wriggle's Class is Now in Session\". AFG's own text (\"season 2 adapted from manga 100 to 163\") requires it to land somewhere in eps 89-100. A1 forbids the anchor; a reader stopping at ep 88 resumes at ch 163."
+    },
+    {
+      "episodes": [
+        101,
+        102,
+        104,
+        105,
+        106,
+        107
+      ],
+      "kind": "rearranged",
+      "chapters": "164-172",
+      "note": "Season 3 opens OUT OF ORDER: eps 101-102 animate the Ted arc (ch 169-172), ep 104 animates ch 168 \"Find the Gift!\", and eps 105-107 then backfill the Koral Q arc (ch 164-167). Interpolating across eps 101-107 in chapter order is wrong."
+    },
+    {
+      "episodes": [
+        139,
+        150
+      ],
+      "kind": "divergence",
+      "chapters": "212-323",
+      "note": "Eps 139-150 are an anime-original ending (AFL, AFG): the anime stops adapting at ch 211 and never covers ch 212-323 (Faudo conclusion, Gorm/Mir arc, Clear Note arc). AFG: \"start reading from chapter 212\"."
+    }
+  ],
+  "type_corrections": [
+    {
+      "episodes": [
+        13,
+        51,
+        57,
+        103,
+        108,
+        117,
+        118,
+        119,
+        122,
+        123
+      ],
+      "type": "filler",
+      "note": "CONTESTED - Sean's call. Our rows follow AFL, which types every one of these Manga Canon. The zatchbell wiki types all ten anime-original in TWO independent places (each episode's infobox reads chaps=N/A or Filler, and the Story Arcs manga-vs-anime table lists them under \"Season 1/2/3 Filler and Bonus\"). Independent corroboration: exhaustive chapter accounting. Working purely from en.wikipedia's chapter list plus en.wikipedia's episode summaries, every chapter from 1 to 211 except 34, 58, 163 and 124-127 is already claimed by another episode - these ten have nothing left to adapt. Content check agrees: ep 13 Hyde rematch/silo hostages, ep 51 Milordo-Z's party invitation, ep 57 Brago on the sands, ep 103 Ted's blues, ep 108 a declared parody of 3000 Leagues in Search of Mother, ep 117 the Wonrei/Li-en street-fight, ep 118 Dartagnan's cruise, ep 119 a flashback recap of the already-animated ch 34-38 Tia origin, ep 122 the Princess Kaguya night, ep 123 the Bari vs Ted duel. Under A1 none of them carries an anchor either way, so the correction is about honest typing, not about position.",
+      "sources": [
+        "https://zatchbell.fandom.com/wiki/Story_Arcs",
+        "https://en.wikipedia.org/wiki/List_of_Zatch_Bell!_chapters",
+        "https://en.wikipedia.org/wiki/Zatch_Bell!_season_1",
+        "https://en.wikipedia.org/wiki/Zatch_Bell!_season_2",
+        "https://en.wikipedia.org/wiki/Zatch_Bell!_season_3",
+        "https://www.animefillerlist.com/shows/zatch-bell"
+      ]
+    }
+  ],
+  "repairs": [],
+  "structure": {
+    "notes": "One AniList component (id 250), 150 episodes, and the zatchbell wiki numbers episodes cumulatively 1-150 exactly as our rows do - verified against all 150 episode pages, no duplicates and no gaps, so no numbering conversion was needed. Chapter space: 323 chapters / 33 volumes; en.wikipedia's chapter list reproduces the context file's volume table boundary-for-boundary (v1 1-8 ... v33 314-323) and 307 of the 316 fandom chapter pages carry the identical English title at the identical number, so fandom numbering = enwiki numbering = our chapter space. Season blocks (AFG, corroborated by the anchors): S1 eps 1-50 = ch 1-99, S2 eps 51-100 = ch 100-163, S3 eps 101-150 = ch 164-211. AFL filler blocks: 31-35, 89-100, 139-150. The anime's last adapted episode is 138 (ch 209-211) and the reader's resume is ch 212 (volume 22) - eps 139-150 are an original ending. Order-only extras are NOT in our rows; AFG places them at: OVA 1 (00F ~Ogon no Chichi wo Motsu Otoko~) after ep 50, Movie 1 (Unlisted Demon No. 101) after ep 67, OVA 2 (Hashire Gash!! Ubawareta Umagon) after ep 94, Movie 2 (Attack of the Mechavulcan) after ep 117. Two English-only clip specials also exist (after eps 26 and 52 in content terms).",
+    "order_only": [
+      {
+        "label": "OVA 1: Konjiki no Gash Bell!! 00F ~Ogon no Chichi wo Motsu Otoko~",
+        "after_episode": 50
+      },
+      {
+        "label": "Movie 1: Unlisted Demon No. 101",
+        "after_episode": 67
+      },
+      {
+        "label": "OVA 2: Konjiki no Gash Bell!! Hashire Gash!! Ubawareta Umagon",
+        "after_episode": 94
+      },
+      {
+        "label": "Movie 2: Attack of the Mechavulcan",
+        "after_episode": 117
+      }
+    ]
+  },
+  "flags_for_sean": [
+    "RESOLVES open flag #942: the MU frontier pinned ch 212 on filler ep 139. The honest terminal is ep 138 -> END ch 211, continue ch 212 - stated outright by AFG (\"the last episode that was adapted from the manga was the 138, which corresponds to Chapters 209, 210 and 211\" / \"start reading from Chapter 212\") and corroborated by chapter titles (209 \"The Resurrection of Faudo\", 211 \"The Brain Strategy\" = the episode's \"Kiyomaro's secret plan\").",
+    "SETTLED (prior agent's open question): ep 123 / ch 191. Ch 191 \"Bari's Rival\" belongs to ep 127, not ep 123. en.wikipedia's ep 127 summary says explicitly \"with Keith prating about being Bari's archrival in the Mamodo world\", which is what the chapter title names; ep 123's Bari vs Ted duel has no chapter behind it and the zatchbell wiki lists ep 123 under Season 3 Filler and Bonus.",
+    "TYPE DISAGREEMENT (needs a ruling): eps 13, 51, 57, 103, 108, 117, 118, 119, 122, 123 are Manga Canon in AFL (our row source) but anime-original in the zatchbell wiki in two places, and exhaustive chapter accounting leaves them with nothing to adapt. See type_corrections. Under A1 they carry no anchors either way.",
+    "A1 WITHHELD ANCHORS (filler rows that do adapt manga): ep 90 -> ch 34, ep 92 -> volume 17 bonus side story, ep 99 -> ch 163. Each is a whole chapter, not a <=5-page sliver, so the sliver ruling does not obviously cover them; if any of these rows should be re-typed mixed they would become anchorable. Recorded as annotations only for now.",
+    "UNRESOLVED SPLIT: eps 66-68 cover ch 124-127 with no per-episode split available from any source (see annotation). Eps 65 and 69 are anchored either side, so interpolation error is at most one chapter.",
+    "SOFT SPLIT: the Momon arc is bounded ch 184-187 <-> eps 120-121 by the wiki's Story Arcs table, but the internal split is my even-split derivation (120 = 184-185, 121 = 186-187), both marked medium. Ch 187 \"Kiyo's Mood\" could instead be ep 123's or ep 124's Kiyo scene; ep 124 is left unanchored for that reason.",
+    "SOFT SPLIT: eps 125-129 cover ch 188-194 and eps 134-137 cover ch 203-208; the fixed points (ep 130 = 195-196 and ep 133 = 201-202 from the wiki infobox, ep 138 = 209-211 from AFG) are firm, but the 1-vs-2 chapter distribution inside those two runs is derived from chapter-title-to-summary matching. Eps 129, 134, 135 are marked medium for that reason.",
+    "ep 102: the wiki infobox credits ch 167 to BOTH ep 102 and ep 107. I took 171-172 as ep 102's body (END 172) and left 167 with ep 107, since ch 167 \"Something Impossible\" is the Koral Q finish. Marked medium."
+  ]
+}

@@ -1,0 +1,69 @@
+{
+  "series_id": "the-promised-neverland",
+  "summary": "A1 triage of ep 23 (S2 ep 11, the finale), typed anime-only-canon and carrying an afg-continua anchor at ch 174. The fork lands on WRONG ROW TYPE, with a caveat. Ep 23 is not anime-original: the Promised Neverland wiki's infobox reads adaptation_of = Chapters 172-178, and the episode's plot tracks those chapters scene by scene - Emma refusing to kill Peter Ratri and offering a deal (ch 172 'Free'), Peter's past with James/William Minerva and his decision to die (ch 173 'Prisoners'), his suicide and the children persuading Isabella and the Mamas (ch 174 'A New World Pt 1'), the farewell to Mujika and Sonju and the crossing into the human world (ch 178 'To the Human World'). What is anime-original is the ending's shape: ch 177 (Isabella's death) is replaced - she survives and leaves with the children - and the closing montage relocates Emma's new promise at the Seven Walls to AFTER the escape and drops the manga's price entirely (ch 179-181, Emma's lost memories), so Phil's reunion is a rewritten epilogue rather than an adaptation of ch 180-181. The stored ch 174 was never an END claim: it is animefillerguide's 'where to continue' number laundered into an anchor by the afg-continua writer. Honest END is 178.",
+  "anchors": [
+    {
+      "episode": 23,
+      "end_chapter": 178,
+      "start_chapter": 172,
+      "chapters_adapted": "172-176, 178 (compressed; 177 not adapted - Isabella survives in the anime)",
+      "volume": 20,
+      "confidence": "medium",
+      "note": "Finale adapts the manga's last volume in compressed form and stops at ch 178 (crossing to the human world). Everything after that in the episode is a rewritten epilogue, not ch 179-181. Depends on the type correction below; under A1 the anchor cannot stand on an anime-only-canon row. Medium: the per-chapter mapping rests on the TPN wiki plus chapter-by-chapter synopsis matching - no second per-episode chapter source exists for TPN S2.",
+      "sources": [
+        "https://yakusokunoneverland.fandom.com/api.php?action=parse&page=Episode_23&prop=wikitext&format=json",
+        "https://yakusokunoneverland.fandom.com/api.php?action=parse&page=Chapter_172&prop=wikitext&format=json",
+        "https://yakusokunoneverland.fandom.com/api.php?action=parse&page=Chapter_178&prop=wikitext&format=json"
+      ]
+    }
+  ],
+  "continue_points": [],
+  "annotations": [
+    {
+      "episodes": [23],
+      "kind": "divergence",
+      "chapters": "177, 179-181",
+      "note": "Ch 177 (Isabella impaled and dying) is replaced - she is talked into leaving for the human world. The manga's epilogue (ch 179-181: Emma's memory loss as the price of the new promise, then the long search) is not adapted; the anime substitutes a montage in which Emma keeps her memories and Phil finds her years later."
+    },
+    {
+      "episodes": [23],
+      "kind": "rearranged",
+      "chapters": "Seven Walls arc",
+      "note": "The new promise at the Seven Walls, made before the return to Grace Field in the manga, is relocated into the finale's closing montage after the escape."
+    }
+  ],
+  "type_corrections": [
+    {
+      "episodes": [23],
+      "type": "mixed",
+      "note": "Not pure anime-original: roughly the first two thirds is a direct adaptation of ch 172-175 (Peter Ratri confrontation, the James Ratri/Minerva flashback, his suicide, convincing Isabella and the Mamas) with ch 178 closing it. Large anime-original restructuring around it (Isabella survives, epilogue rewritten). AFL types it 'Anime Canon' - see flags.",
+      "sources": [
+        "https://yakusokunoneverland.fandom.com/api.php?action=parse&page=Episode_23&prop=wikitext&format=json",
+        "https://yakusokunoneverland.fandom.com/api.php?action=parse&page=Chapter_173&prop=wikitext&format=json",
+        "https://yakusokunoneverland.fandom.com/api.php?action=parse&page=Chapter_174&prop=wikitext&format=json"
+      ]
+    }
+  ],
+  "repairs": [
+    {
+      "episode": 23,
+      "field": "end_chapter",
+      "old": 174,
+      "new": 178,
+      "why": "The stored 174 came from the afg-continua writer, which converted animefillerguide's 'where does the anime end / where to start the manga' prose into an episode anchor - it is a reader-resume hint, not an END. The TPN wiki records the episode adapting ch 172-178, and ch 178 'To the Human World' is the last manga beat shown (farewell to Mujika and Sonju, entering the human world). Pairs with the type correction to mixed; if Sean instead upholds anime-only-canon, this must become new: null under A1. afg-continua is derivation tier, so applying either outcome requires flipping the row to manual.",
+      "sources": [
+        "https://yakusokunoneverland.fandom.com/api.php?action=parse&page=Episode_23&prop=wikitext&format=json",
+        "https://yakusokunoneverland.fandom.com/api.php?action=parse&page=Chapter_178&prop=wikitext&format=json"
+      ]
+    }
+  ],
+  "structure": {
+    "notes": "Our cumulative numbering = S1 eps 1-12 + S2 eps 1-11 -> 13-23, matching the TPN wiki's own continuous numbering (its Episode 23 = S2 ep 11), so no conversion. Wiki per-episode chapter fields for the surrounding rows: ep 18 = ch 119-126, ep 19 = ch 127-130, ep 20 = ch 145-153, ep 21 = ch 153, 154, 159, ep 22 = ch 165-170, ep 23 = ch 172-178. Season 2 is a compression, not an original story: it skips ch 53-118 (Goldy Pond) almost entirely and jumps 130 -> 145 and 159 -> 165.",
+    "order_only": []
+  },
+  "flags_for_sean": [
+    "Source disagreement on TYPE: animefillerlist calls eps 20-23 'Anime Canon'; the TPN wiki gives all four of them explicit chapter mappings (145-153, 153/154/159, 165-170, 172-178). I only had ep 23 in scope, but eps 20-22 are presumably stored with the same anime-only-canon typing - a consistent ruling should cover 20-23 as a block rather than correcting 23 alone.",
+    "Series-level continue_from is a separate question from this anchor. Even with ep 23 ending at ch 178, a viewer who finished S2 has NOT read ch 53-118 or the Seven Walls arc; the standard reader advice is to resume from ch 38 (after S1) rather than 179. Do not let a repaired ep-23 END drive continue_from.",
+    "Ch 179-181 are not adapted anywhere in the anime (the anime removes Emma's memory-loss price), so the series' max_adapted_chapter should stay at 178, not 181."
+  ]
+}

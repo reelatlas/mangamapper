@@ -1,0 +1,401 @@
+{
+  "series_id": "one-piece",
+  "summary": "A1 triage of the nineteen AFG-sourced anchors sitting on filler / anime-only-canon One Piece rows. Eighteen are JUNK ANCHORS and one (ep 737) is a WRONG ROW TYPE. The systematic cause is visible in the source itself: AFG's chapter column is a reading-position conversion, so on a noncanon row it simply plateaus at the last adapted chapter - eps 214 and 216 both print 313 while AFG marks them *Filler in the same row, eps 50/51 both print 98, eps 497/498 both print 585. Ten of the eighteen do carry a real sliver, and onepiece.fandom pins most of them to the page: ep 203 = ch 303 p.16-18, ep 326 = ch 442 p.2-3, ep 418 = ch 523 p.14-17, ep 419 = ch 523 p.18-19 + ch 524 p.8-9, 13-14, ep 626 = ch 699 p.14-15, ep 747 = ch 802 p.3-5, plus ep 55's grafted Calm Belt scene from ch 101 (Apis substituted for Usopp), ep 98's cactus-juice hallucination from ch 162, ep 93's provisioning beat from ch 158 and ep 50/51's single ch 98 shopping panel - all at or near the <=~5-page line, so they become annotation facts, not anchors. Ep 455 is the worst of the nineteen: it animates only the Straw Hat's Separation Serial COVER pages of chapters 545/546/550/551 while the mainline sits at ch 549, so its stored END of 551 pushed a reader two chapters past what they had seen. Eps 50 and 51 turn out to adapt the 2000 Loguetown light novel (Acts 3 and 4) rather than the manga at all. Ep 737 is the genuine mistype: chapter 794 'Sabo's Adventure' is precisely this episode plus ep 738, the wiki cites ch 794 as ep=737|ep2=738, AFG lists it as unmarked canon, and Oda co-wrote the script - anime-only-canon -> mixed, anchor unchanged.",
+  "anchors": [
+    {
+      "episode": 737,
+      "end_chapter": 794,
+      "start_chapter": 794,
+      "chapters_adapted": "794 (first half)",
+      "volume": 79,
+      "confidence": "high",
+      "note": "Valid only once the type_correction below lands (anime-only-canon -> mixed). Values match what is already stored (end/start 794, continue 794); this entry adds the volume and moves the row off the AFG derivation tier. Ch 794 'Sabo's Adventure' is exactly this episode plus ep 738 - onepiece.fandom's Dressrosa Arc cites it as ep=737|ep2=738 and ch 794's own summary reads 'The Straw Hat Pirates recover at Kyros' house. Sabo recounts his past and his encounter with Luffy at the Corrida Colosseum, before leaving Dressrosa.' Ep 737 takes the first half (Kyros' house, Sabo's reveal, CP0, the childhood-to-Dragon-rescue backstory); ep 738 takes the memory return, the Colosseum reunion and the Vivre Card, and already anchors 794-795.",
+      "sources": [
+        "https://onepiece.fandom.com/wiki/Dressrosa_Arc",
+        "https://onepiece.fandom.com/wiki/Chapter_794",
+        "https://onepiece.fandom.com/wiki/Episode_737",
+        "https://onepiece.fandom.com/wiki/Episode_738",
+        "https://www.animefillerguide.com/anime/one-piece/"
+      ]
+    }
+  ],
+  "continue_points": [
+    {
+      "episode": 737,
+      "continue_chapter": 794,
+      "note": "ends mid-chapter inside ch 794; ep 738 resumes in the same chapter - matches the stored value, restated so it survives the tier flip"
+    }
+  ],
+  "annotations": [
+    {
+      "episodes": [
+        50,
+        51
+      ],
+      "kind": "graft",
+      "chapters": "98",
+      "note": "Both episodes are anime-original bodies drawn from the Loguetown light novel (Hamazaki, 2000): ep 50 = Act 3 'Daddy Masterson: A Sniper's Pride', ep 51 = Act 4 'To the All-Holding Sea: A Cook's Dream'. The only manga seed is the single shopping panel of ch 98 (Usopp's goggles, Sanji's tuna, Nami's clothes); the wiki cites ch 98 to eps 51-52 and ep 52 takes 98 p.3-19. Both were skipped in the remastered edition."
+    },
+    {
+      "episodes": [
+        55
+      ],
+      "kind": "graft",
+      "chapters": "101",
+      "note": "Inside the Warship Island filler arc, the Calm Belt / Sea King scene of ch 101 is grafted in with Apis replacing Usopp as the crewmate who falls overboard (onepiece.fandom Warship Island Arc, Continuity Notes; AFG window 2:50-7:30). The remainder of ch 101 (Reverse Mountain) is adapted at ep 61, which anchors 101."
+    },
+    {
+      "episodes": [
+        93
+      ],
+      "kind": "partial",
+      "chapters": "158",
+      "note": "Anime-original Nanohana detour (Kamonegi and the Dance Powder, Chopper's truck ride, the Matsuge meeting - Matsuge debuts in ch 162 in the manga) wrapped around the crew's provisioning/disguise beat from the opening of ch 158. The wiki cites ch 158 as ep 93-94 but gives its only page-level ch 158 citation (p.18-19) to ep 94, which walks the whole chapter."
+    },
+    {
+      "episodes": [
+        98
+      ],
+      "kind": "graft",
+      "chapters": "162",
+      "note": "Anime-only desert episode (one of eps 98, 99, 101, 102 per the Arabasta Arc page) containing one manga gag: 'the part where Luffy hallucinates after drinking cactus juice is found in the manga' (ch 162). Ch 162 is anchored at ep 97."
+    },
+    {
+      "episodes": [
+        203
+      ],
+      "kind": "graft",
+      "chapters": "303",
+      "note": "Inside the anime-original G-8 arc (196-206): ch 303 p.16-18, the Straw Hats deciding to spend the Skypiea gold on repairing the Going Merry and to recruit a shipwright, is relocated here (onepiece.fandom Long Ring Long Land Arc, page-level citation; AFG window 13:35-19:58). Ch 303 is anchored at eps 195 and 207."
+    },
+    {
+      "episodes": [
+        214,
+        216
+      ],
+      "kind": "divergence",
+      "chapters": "313",
+      "note": "The anime inserted three extra Davy Back games (Roller Race, Pirate Dodgeball, Red Light/Green Light) after the Groggy Ring 'to lengthen the storyline', and in doing so diverged from the manga - the anime crew never recovers Chopper here and loses Robin to Foxy. Ch 313 is split page-exactly across the neighbours instead: p.2-7 -> ep 212, p.8-9 -> ep 215, p.11-19 -> ep 217. Eps 214 and 216 adapt nothing."
+    },
+    {
+      "episodes": [
+        326
+      ],
+      "kind": "graft",
+      "chapters": "442",
+      "note": "First episode of the anime-original Ice Hunter arc, opening on ch 442 p.2-3 (the crew relaxing on the new ship) before departing into original material. The rest of ch 442 is adapted at ep 337, which anchors 442."
+    },
+    {
+      "episodes": [
+        418,
+        419,
+        420
+      ],
+      "kind": "partial",
+      "chapters": "523-524",
+      "note": "The 'Straw Hats' Whereabouts' block (418-421) expands the one-page-per-crewmate landing panels into four episodes: ep 418 = ch 523 p.14-17 (Nami, Franky), ep 419 = ch 523 p.18-19 + ch 524 p.8-9, 13-14 (Chopper, Sanji), ep 420 = unattributed ch 524 pages (Robin, Usopp). Every page-level ch 524 citation on the wiki (p.10-12, p.16, p.18-19) belongs to ep 421, which anchors 524; ch 523 is anchored at ep 417."
+    },
+    {
+      "episodes": [
+        455
+      ],
+      "kind": "side_story",
+      "chapters": "545, 546, 550, 551 (cover pages only)",
+      "note": "Animates the Straw Hat's Separation Serial cover story - Robin's and Usopp's instalments, one page each on the covers of chapters 545, 546, 550 and 551 - not the mainline chapters. Mainline position at this point is ch 549 (ep 452); ch 550-551 are adapted at eps 459-461."
+    },
+    {
+      "episodes": [
+        497,
+        498
+      ],
+      "kind": "divergence",
+      "chapters": "585",
+      "note": "Anime-original episodes filling the manga's one-panel ellipsis in ch 585 ('the trio spend many happy days together') - the treehouse build, the tiger hunt, and Naguri, an anime-only ex-pirate who tells Luffy that Ace is Roger's son (the manga never explains how Luffy learned this). Ch 585 is anchored at eps 496 (p.2-14) and 500."
+    },
+    {
+      "episodes": [
+        626
+      ],
+      "kind": "graft",
+      "chapters": "699",
+      "note": "First episode of the anime-original Caesar Retrieval arc, carrying ch 699 p.14-15 before Breed and the Sea Lapahns take over. Ch 699 is anchored at eps 625 and 628."
+    },
+    {
+      "episodes": [
+        747
+      ],
+      "kind": "graft",
+      "chapters": "802",
+      "note": "First episode of the anime-original Silver Mine arc, opening on ch 802 p.3-5 (the Barto Club's hail voyage, extended with an invented Luffy scene) before the Sweet Pirates abduction. Ch 802 is anchored at ep 751."
+    }
+  ],
+  "type_corrections": [
+    {
+      "episodes": [
+        737
+      ],
+      "type": "mixed",
+      "note": "WRONG ROW TYPE, the one of the nineteen. Stored anime-only-canon (AFL's anime_canon), but the episode genuinely adapts chapter 794: onepiece.fandom's Dressrosa Arc narrative cites ch 794 as ep=737|ep2=738, ch 794's page summary is this episode's plot, and the Episode 737 page's Anime Notes are an explicit anime-vs-manga differences list ('In the manga, Law first revealed that he took Bellamy with them...; the manga never showed who chained Cavendish; The anime adds the following...') plus the note that 'although a large portion of the episode contains filler material, Eiichiro Oda worked with the anime studio on the episode's script'. AFG lists ch 794 for ep 737 with no *Filler or *Mixed marker, i.e. fully watchable canon, while marking eps 748-750 of the same stretch *Filler. Manga base plus heavy Oda-supervised expansion = mixed. This type must be pinned at the manual tier or an AFL-derived re-type will restore anime-only-canon.",
+      "sources": [
+        "https://onepiece.fandom.com/wiki/Dressrosa_Arc",
+        "https://onepiece.fandom.com/wiki/Chapter_794",
+        "https://onepiece.fandom.com/wiki/Episode_737",
+        "https://www.animefillerguide.com/anime/one-piece/"
+      ]
+    }
+  ],
+  "repairs": [
+    {
+      "episode": 50,
+      "field": "end_chapter",
+      "old": 98,
+      "new": null,
+      "why": "A1 + junk anchor. Correctly typed anime-only-canon: onepiece.fandom's Episode 50 Anime Notes state outright 'This episode is an adaptation from events seen in the Loguetown novel' (Tatsuya Hamazaki's One Piece: Loguetown Arc, Shueisha 2000-07-17, whose Act 3 is titled 'Daddy Masterson: A Sniper's Pride') and 'This episode was skipped in the remastered edition'. The Loguetown Arc page lists the Daddy Masterson duel in Anime and Manga Differences. The wiki's chapter-to-episode citation for ch 98 is ep=51|ep2=52, i.e. ch 98 does not begin until ep 51; ep 48 already carries ch 96-98 and ep 52 carries ch 98 p.3-19. AFG's 98 here is its reading-position column, not an adaptation claim. Null end_chapter, start_chapter, chapters_adapted and the stored continue point. AFG derivation tier: when this repair is applied the row's source must be flipped to manual, or the next AFG re-derive restores the plateau value.",
+      "sources": [
+        "https://onepiece.fandom.com/wiki/Episode_50",
+        "https://onepiece.fandom.com/wiki/Loguetown_Arc",
+        "https://onepiece.fandom.com/wiki/Loguetown_Arc_(Novel)",
+        "https://www.animefillerlist.com/shows/one-piece",
+        "https://www.animefillerguide.com/anime/one-piece/"
+      ]
+    },
+    {
+      "episode": 51,
+      "field": "end_chapter",
+      "old": 98,
+      "new": null,
+      "why": "A1 + sliver ruling. Anime-original cooking contest against Carmen, an anime-only character, taken from Act 4 of the Loguetown novel ('To the All-Holding Sea: A Cook's Dream'); the wiki notes the episode was skipped in the remastered edition. The Loguetown Arc page's Anime and Manga Differences reads 'In the manga, Sanji merely buys the tuna at a regular stand. In the anime... Sanji then joins the contest' - i.e. the episode balloons one shopping panel of ch 98 into 20 minutes. That single panel is annotation material, not an anchor; ch 98 is carried by ep 48 and ep 52 (52 = ch 98 p.3-19). Null end_chapter, start_chapter, chapters_adapted and the stored continue point. AFG derivation tier: when this repair is applied the row's source must be flipped to manual, or the next AFG re-derive restores the plateau value.",
+      "sources": [
+        "https://onepiece.fandom.com/wiki/Episode_51",
+        "https://onepiece.fandom.com/wiki/Loguetown_Arc",
+        "https://onepiece.fandom.com/wiki/Loguetown_Arc_(Novel)",
+        "https://www.animefillerlist.com/shows/one-piece",
+        "https://www.animefillerguide.com/anime/one-piece/"
+      ]
+    },
+    {
+      "episode": 55,
+      "field": "end_chapter",
+      "old": 101,
+      "new": null,
+      "why": "A1 + sliver ruling. Warship Island (Apis) is the anime's first full filler arc - onepiece.fandom's arc box types it Filler and the lead says it is 'built on an original storyline not found in the manga'. Its Continuity Notes admit the arc 'briefly adapts the beginning of the Reverse Mountain Arc, where the Straw Hats accidentally sail into the Calm Belt... This scene is slightly changed to have Apis (rather than Usopp) briefly falling overboard' - that graft is ep 55, and AFG independently marks ep 55 Mixed with the exact window (2:50-7:30) and the note that the Calm Belt scene 'happens in the manga, but Apis, an anime-exclusive character, does not appear'. A few grafted pages of ch 101 are annotation facts; the rest of ch 101 (Reverse Mountain) is adapted at ep 61, which already anchors 101. Null end_chapter, start_chapter, chapters_adapted and the stored continue point. AFG derivation tier: when this repair is applied the row's source must be flipped to manual, or the next AFG re-derive restores the plateau value.",
+      "sources": [
+        "https://onepiece.fandom.com/wiki/Episode_55",
+        "https://onepiece.fandom.com/wiki/Warship_Island_Arc",
+        "https://onepiece.fandom.com/wiki/Reverse_Mountain_Arc",
+        "https://www.animefillerlist.com/shows/one-piece",
+        "https://www.animefillerguide.com/anime/one-piece/"
+      ]
+    },
+    {
+      "episode": 93,
+      "field": "end_chapter",
+      "old": 158,
+      "new": null,
+      "why": "A1 + sliver ruling. onepiece.fandom's Arabasta Arc lists ep 93 under Anime and Manga Differences ('Upon their arrival to Nanohana, some filler scenes were added in Episode 93. In particular, Chopper makes the acquaintance of Matsuge'); the episode's body - Luffy burning Kamonegi's Dance Powder, Chopper's truck ride to Koza, the Matsuge meeting - is anime-original (Kamonegi is an anime-only character; Matsuge debuts in ch 162 in the manga). The wiki's ch 158 citation is ep=93|ep2=94 and its only page-level ch 158 citation is p.18-19 -> ep 94; ep 94's summary walks the whole chapter. What ep 93 carries of ch 158 is the crew's provisioning/disguise beat, a panel or two - annotation, not an anchor. Ep 94 already ends at 158. Null end_chapter, start_chapter, chapters_adapted and the stored continue point. AFG derivation tier: when this repair is applied the row's source must be flipped to manual, or the next AFG re-derive restores the plateau value.",
+      "sources": [
+        "https://onepiece.fandom.com/wiki/Episode_93",
+        "https://onepiece.fandom.com/wiki/Episode_94",
+        "https://onepiece.fandom.com/wiki/Arabasta_Arc",
+        "https://onepiece.fandom.com/wiki/Chapter_158",
+        "https://www.animefillerlist.com/shows/one-piece"
+      ]
+    },
+    {
+      "episode": 98,
+      "field": "end_chapter",
+      "old": 162,
+      "new": null,
+      "why": "A1 + sliver ruling. onepiece.fandom's Arabasta Arc: 'There are four anime-only episodes (episodes 98, 99, 101, and 102) based around the crew's journey in the desert', and the Episode 98 page itself says 'While this episode is mostly filler, the part where Luffy hallucinates after drinking cactus juice is found in the manga.' AFL types it filler and AFG marks it *Filler while still printing 162 in its position column. One hallucination gag out of ch 162 is annotation material; ch 162 is already carried by ep 97. Null end_chapter, start_chapter, chapters_adapted and the stored continue point. AFG derivation tier: when this repair is applied the row's source must be flipped to manual, or the next AFG re-derive restores the plateau value.",
+      "sources": [
+        "https://onepiece.fandom.com/wiki/Episode_98",
+        "https://onepiece.fandom.com/wiki/Arabasta_Arc",
+        "https://www.animefillerlist.com/shows/one-piece",
+        "https://www.animefillerguide.com/anime/one-piece/"
+      ]
+    },
+    {
+      "episode": 203,
+      "field": "end_chapter",
+      "old": 303,
+      "new": null,
+      "why": "A1 + sliver ruling. G-8 is an anime-original arc (eps 196-206). The Episode 203 infobox reads chapter = Chapter 303 (p. 16-18) and onepiece.fandom's Long Ring Long Land Arc carries the matching page-level citation {{Qref|chap=303|page=16-18|ep=203}} with the gloss 'The Straw Hats decide to recruit a shipwright and to spend their treasure to repair the Going Merry'. AFG independently marks the episode *Mixed with the window 13:35-19:58. Three pages is annotation material; ch 303 is already carried by ep 195 (302-303) and ep 207 (303-305). Null end_chapter, start_chapter, chapters_adapted and the stored continue point. AFG derivation tier: when this repair is applied the row's source must be flipped to manual, or the next AFG re-derive restores the plateau value.",
+      "sources": [
+        "https://onepiece.fandom.com/wiki/Episode_203",
+        "https://onepiece.fandom.com/wiki/Long_Ring_Long_Land_Arc",
+        "https://www.animefillerlist.com/shows/one-piece",
+        "https://www.animefillerguide.com/anime/one-piece/"
+      ]
+    },
+    {
+      "episode": 214,
+      "field": "end_chapter",
+      "old": 313,
+      "new": null,
+      "why": "A1 + junk anchor - nothing of ch 313 is in this episode. The Episode 214 infobox reads chapter = Filler outright, and onepiece.fandom's Long Ring Long Land Arc Anime Filler section says 'Three more games, A Roller Race, Pirate Dodgeball and Red Light/Green Light, were added after the Groggy Ring event to lengthen the storyline.' The arc page splits ch 313 page-exactly across the surrounding episodes - p.2-7 -> ep 212, p.8-9 -> ep 215, p.11-19 -> ep 217 - and gives ep 214 nothing. AFG also marks it *Filler. Ch 313 is already carried by ep 212 and ep 217. Null end_chapter, start_chapter, chapters_adapted and the stored continue point. AFG derivation tier: when this repair is applied the row's source must be flipped to manual, or the next AFG re-derive restores the plateau value.",
+      "sources": [
+        "https://onepiece.fandom.com/wiki/Episode_214",
+        "https://onepiece.fandom.com/wiki/Long_Ring_Long_Land_Arc",
+        "https://www.animefillerguide.com/anime/one-piece/",
+        "https://www.animefillerlist.com/shows/one-piece"
+      ]
+    },
+    {
+      "episode": 216,
+      "field": "end_chapter",
+      "old": 313,
+      "new": null,
+      "why": "A1 + junk anchor, same block as ep 214. 'Red Light, Green Light' is one of the three games the anime invented after the Groggy Ring; onepiece.fandom's Long Ring Long Land Arc lists it under Anime Filler and its page-level ch 313 citations (p.2-7 -> ep 212, p.8-9 -> ep 215, p.11-19 -> ep 217) give ep 216 nothing. AFG marks it *Filler. Ch 313 is already carried by ep 212 and ep 217. Null end_chapter, start_chapter, chapters_adapted and the stored continue point. AFG derivation tier: when this repair is applied the row's source must be flipped to manual, or the next AFG re-derive restores the plateau value.",
+      "sources": [
+        "https://onepiece.fandom.com/wiki/Episode_216",
+        "https://onepiece.fandom.com/wiki/Long_Ring_Long_Land_Arc",
+        "https://www.animefillerguide.com/anime/one-piece/",
+        "https://www.animefillerlist.com/shows/one-piece"
+      ]
+    },
+    {
+      "episode": 319,
+      "field": "end_chapter",
+      "old": 435,
+      "new": null,
+      "why": "A1 + junk anchor. onepiece.fandom's Post-Enies Lobby Arc Anime Filler section names this episode explicitly - 'There are a few fillers added before the crew depart the island. This includes Luffy and Chopper helping a girl look for her lost yagara bull, Zoro helping a foster family against some debt collectors, and Sanji meeting a friend of Zeff's' - ep 319 being the Sanji/Banban one, with Banban an anime-only character. The Episode 319 chapter field is empty and no page of ch 435 is cited to it; the arc page's ch 435 citation is a span (ep 316 to ep 320) over an intervening filler block. Ch 435 is already carried by ep 316 and ep 320. AFL filler, AFG *Filler. Null end_chapter, start_chapter, chapters_adapted and the stored continue point. AFG derivation tier: when this repair is applied the row's source must be flipped to manual, or the next AFG re-derive restores the plateau value.",
+      "sources": [
+        "https://onepiece.fandom.com/wiki/Episode_319",
+        "https://onepiece.fandom.com/wiki/Post-Enies_Lobby_Arc",
+        "https://www.animefillerlist.com/shows/one-piece",
+        "https://www.animefillerguide.com/anime/one-piece/"
+      ]
+    },
+    {
+      "episode": 326,
+      "field": "end_chapter",
+      "old": 442,
+      "new": null,
+      "why": "A1 + sliver ruling. First episode of the anime-original Ice Hunter arc (326-336). The Episode 326 infobox reads chapter = Chapter 442 (p. 2-3) and onepiece.fandom's Thriller Bark Arc carries the matching page-level citation {{Qref|chap=442|page=2-3|ep=326}} for the Straw Hats relaxing on the new ship. Two pages is annotation material; the rest of ch 442 is adapted at ep 337, which already anchors 442. AFL filler, AFG *Filler. Null end_chapter, start_chapter, chapters_adapted and the stored continue point. AFG derivation tier: when this repair is applied the row's source must be flipped to manual, or the next AFG re-derive restores the plateau value.",
+      "sources": [
+        "https://onepiece.fandom.com/wiki/Episode_326",
+        "https://onepiece.fandom.com/wiki/Thriller_Bark_Arc",
+        "https://www.animefillerlist.com/shows/one-piece",
+        "https://www.animefillerguide.com/anime/one-piece/"
+      ]
+    },
+    {
+      "episode": 418,
+      "field": "end_chapter",
+      "old": 523,
+      "new": null,
+      "why": "A1 + sliver ruling. Part 1 of the anime's four-episode 'Straw Hats' Whereabouts' expansion (418-421) of the one-page-per-crewmate landing panels. The Episode 418 infobox reads chapter = Chapter 523 p.14-17 - four pages (Nami on Weatheria, Franky on Karakuri Island) stretched to a full episode; the Straw Hat's Separation Serial page notes Franky's cover story was later 'covered with filler content from Episode 418'. Four pages is annotation material. Ch 523 is already carried by ep 417 (522 p.15-19 + 523 p.2-13). Null end_chapter, start_chapter, chapters_adapted and the stored continue point. AFG derivation tier: when this repair is applied the row's source must be flipped to manual, or the next AFG re-derive restores the plateau value.",
+      "sources": [
+        "https://onepiece.fandom.com/wiki/Episode_418",
+        "https://onepiece.fandom.com/wiki/Episode_417",
+        "https://onepiece.fandom.com/wiki/Straw_Hat%27s_Separation_Serial",
+        "https://onepiece.fandom.com/wiki/Chapter_523",
+        "https://www.animefillerlist.com/shows/one-piece"
+      ]
+    },
+    {
+      "episode": 419,
+      "field": "end_chapter",
+      "old": 524,
+      "new": null,
+      "why": "A1 + sliver ruling. Part 2 of the same expansion. The Episode 419 infobox reads chapter = Chapter 523 p.18-19 and Chapter 524 p.8-9, 13-14 - six scattered pages (Chopper on Torino, Sanji on Momoiro) in a 20-minute anime-original episode. The Amazon Lily Arc page cites ch 524 as ep=419|ep2=421, a span, and every page-level ch 524 citation it carries (p.10-12, p.16, p.18-19) points at ep 421. Marginally over the ~5-page sliver line but the same shape - annotation facts, not a position instrument; ep 421 already anchors 524. Null end_chapter, start_chapter, chapters_adapted and the stored continue point. AFG derivation tier: when this repair is applied the row's source must be flipped to manual, or the next AFG re-derive restores the plateau value.",
+      "sources": [
+        "https://onepiece.fandom.com/wiki/Episode_419",
+        "https://onepiece.fandom.com/wiki/Amazon_Lily_Arc",
+        "https://onepiece.fandom.com/wiki/Chapter_524",
+        "https://www.animefillerlist.com/shows/one-piece",
+        "https://www.animefillerguide.com/anime/one-piece/"
+      ]
+    },
+    {
+      "episode": 420,
+      "field": "end_chapter",
+      "old": 524,
+      "new": null,
+      "why": "A1 + sliver ruling. Part 3 of the same expansion (Robin on Tequila Wolf, Usopp meets Heracles). The Episode 420 infobox carries no chapter field at all and no page of ch 524 is cited to it anywhere on the wiki; its Anime Notes are a pure additions list ('The anime adds the following: Boa Hancock fantasizes...; Before Robin is apprehended by the Tequila Wolf guards, she befriends a slave named Soran'), and the Separation Serial page says Robin's cover story was later 'changed with content from Episode 420 added'. Whatever it takes from ch 524's opening pages is sliver-sized; ep 421 already anchors 524. Null end_chapter, start_chapter, chapters_adapted and the stored continue point. AFG derivation tier: when this repair is applied the row's source must be flipped to manual, or the next AFG re-derive restores the plateau value.",
+      "sources": [
+        "https://onepiece.fandom.com/wiki/Episode_420",
+        "https://onepiece.fandom.com/wiki/Straw_Hat%27s_Separation_Serial",
+        "https://onepiece.fandom.com/wiki/Amazon_Lily_Arc",
+        "https://onepiece.fandom.com/wiki/Chapter_524",
+        "https://www.animefillerlist.com/shows/one-piece"
+      ]
+    },
+    {
+      "episode": 455,
+      "field": "end_chapter",
+      "old": 551,
+      "new": null,
+      "why": "A1 + sliver ruling, and the stored value over-advances the reader. Ep 455 does not adapt mainline 545-551 at all: the Episode 455 infobox reads chapter = Chapter 545 p.1, 546 p.1, 550 p.1, 551 p.1 (Cover Pages), i.e. four one-page instalments of the Straw Hat's Separation Serial cover story (Robin, Usopp), which onepiece.fandom's Separation Serial page confirms with {{Qref|ep=455|the coverstories of Robin and Usopp are animated}}. AFG lists the same four chapters. The mainline meanwhile sits at ch 549 (ep 452); ch 550-551 are adapted at eps 459-461 per the Marineford Arc citations, so END 551 here would jump a reader two chapters ahead of what they have seen. Cover-story pages are annotation facts. Null end_chapter, start_chapter, chapters_adapted and the stored continue point. AFG derivation tier: when this repair is applied the row's source must be flipped to manual, or the next AFG re-derive restores the plateau value.",
+      "sources": [
+        "https://onepiece.fandom.com/wiki/Episode_455",
+        "https://onepiece.fandom.com/wiki/Straw_Hat%27s_Separation_Serial",
+        "https://onepiece.fandom.com/wiki/Marineford_Arc",
+        "https://www.animefillerlist.com/shows/one-piece",
+        "https://www.animefillerguide.com/anime/one-piece/"
+      ]
+    },
+    {
+      "episode": 497,
+      "field": "end_chapter",
+      "old": 585,
+      "new": null,
+      "why": "A1 + junk anchor. Anime-original expansion inside the Ace/Sabo/Luffy flashback: the Episode 497 page has no chapter field and no Long Summary, and every one of its Anime Notes describes invented material (Dadan's dream, why the brothers built the hideout, Makino and Woop Slap's visit). The wiki gives page-exact chapter fields to every canon neighbour - ep 493 = 582 p.16-19 + 583 p.2-11, ep 494 = 583 p.12-17 + 584 p.2-8, ep 495 = 584 p.8-16, ep 496 = 585 p.2-14, ep 501 = 586 p.13-19 + 587 p.2-9 - and none to ep 497; the Post-War Arc narrative jumps from ch 584 (eps 494-495) straight to ch 586 (eps 500-501). Ch 585 is already carried by ep 496 and ep 500. Null end_chapter, start_chapter, chapters_adapted and the stored continue point. AFG derivation tier: when this repair is applied the row's source must be flipped to manual, or the next AFG re-derive restores the plateau value.",
+      "sources": [
+        "https://onepiece.fandom.com/wiki/Episode_497",
+        "https://onepiece.fandom.com/wiki/Episode_496",
+        "https://onepiece.fandom.com/wiki/Post-War_Arc",
+        "https://www.animefillerlist.com/shows/one-piece"
+      ]
+    },
+    {
+      "episode": 498,
+      "field": "end_chapter",
+      "old": 585,
+      "new": null,
+      "why": "A1 + junk anchor, same block. The Episode 498 page calls it 'this filler episode' in its own Anime Notes ('In the manga, it was never explained how Luffy found out that Ace was Roger's son... however this filler episode shows...') and introduces Naguri, 'an anime-only character'. No chapter field, no page of ch 584 or 585 cited to it, and the Post-War Arc narrative skips eps 497-499 entirely. Ch 584 is carried by eps 494-495 and ch 585 by eps 496 and 500. Null end_chapter, start_chapter, chapters_adapted and the stored continue point. AFG derivation tier: when this repair is applied the row's source must be flipped to manual, or the next AFG re-derive restores the plateau value.",
+      "sources": [
+        "https://onepiece.fandom.com/wiki/Episode_498",
+        "https://onepiece.fandom.com/wiki/Post-War_Arc",
+        "https://www.animefillerlist.com/shows/one-piece"
+      ]
+    },
+    {
+      "episode": 626,
+      "field": "end_chapter",
+      "old": 699,
+      "new": null,
+      "why": "A1 + sliver ruling. First episode of the anime-original Caesar Retrieval arc (626-628); Breed, the Sea Lapahns and the Sea Animal Pirates are all anime-only. The Episode 626 infobox reads chapter = Chapter 699 (p. 14-15) and onepiece.fandom's Punk Hazard Arc cites ch 699 as ep=625|ep2=626 with its page-level citations going elsewhere (p.12 -> ep 625, p.15-19 and p.17 -> ep 628). Two pages is annotation material; ch 699 is already carried by ep 625 and ep 628. AFL filler, AFG *Filler. Null end_chapter, start_chapter, chapters_adapted and the stored continue point. AFG derivation tier: when this repair is applied the row's source must be flipped to manual, or the next AFG re-derive restores the plateau value.",
+      "sources": [
+        "https://onepiece.fandom.com/wiki/Episode_626",
+        "https://onepiece.fandom.com/wiki/Punk_Hazard_Arc",
+        "https://www.animefillerlist.com/shows/one-piece",
+        "https://www.animefillerguide.com/anime/one-piece/"
+      ]
+    },
+    {
+      "episode": 747,
+      "field": "end_chapter",
+      "old": 802,
+      "new": null,
+      "why": "A1 + sliver ruling. First episode of the anime-original Silver Mine arc (747-750). onepiece.fandom's Zou Arc carries the page-level citation {{Qref|chap=802|page=3-5|ep=747}} for the Barto Club hail voyage, and the episode's own Anime Notes treat everything after it as additions ('The voyage through the hailstorm is extended... an added scene of Luffy blocking some of the hail'); AFG independently marks it *Mixed with the window 03:29-06:15. Three pages is annotation material; ch 802 is already carried by ep 751 (the Zou Arc's other ch 802 citation is ep 751-752). Null end_chapter, start_chapter, chapters_adapted and the stored continue point. AFG derivation tier: when this repair is applied the row's source must be flipped to manual, or the next AFG re-derive restores the plateau value.",
+      "sources": [
+        "https://onepiece.fandom.com/wiki/Episode_747",
+        "https://onepiece.fandom.com/wiki/Zou_Arc",
+        "https://www.animefillerlist.com/shows/one-piece",
+        "https://www.animefillerguide.com/anime/one-piece/"
+      ]
+    }
+  ],
+  "structure": {
+    "notes": "Systematic finding: all nineteen anchors came from animefillerguide, whose 'Chapters' column is a reading-position conversion ('One Piece Filler List & Episode to Chapter Conversion Guide'), not an adaptation claim. On a filler or anime-only row it plateaus at the last adapted chapter, which is exactly the shape seen here - ep 214 and ep 216 both print 313 while AFG simultaneously marks them *Filler, eps 50/51 both print 98, eps 497/498 both print 585. Every one of these nineteen rows is bracketed by real anchors on canon neighbours, so nulling opens no coverage hole: 48/52 around 50-51, 53/61 around 55, 92/94 around 93, 97/100 around 98, 195/207 around 203, 212/217 around 214-216, 316/320 around 319, 325/337 around 326, 417/421 around 418-420, 452/459 around 455, 496/500 around 497-498, 625/628 around 626, 746/751 around 747. Numbering identity is not in doubt: our episode numbers, titles and air dates match onepiece.fandom's Episode Box '#' field and AFL's list one-for-one on all nineteen rows (the series has a single continuous 1-1175 numbering with no season restarts), so the context file's open flag #818 about title drift does not affect this set. Chapter space is mainline One Piece numbering throughout; ep 455's four citations are cover pages of mainline chapters, labelled as such rather than converted. Useful source discovery for future One Piece work: onepiece.fandom's ARC pages carry {{Qref|chap=N|page=X-Y|ep=Z}} citations inline in the narrative - a page-level chapter-to-episode map maintained separately from the episode infoboxes, and the only source that resolved eps 214/216 (ch 313 p.2-7 -> 212, p.8-9 -> 215, p.11-19 -> 217) and ep 203.",
+    "order_only": []
+  },
+  "flags_for_sean": [
+    "Sibling inconsistency in the 'Straw Hats' Whereabouts' block: eps 418-420 are typed anime-only-canon (this task) but ep 421 is typed mixed and keeps its ch 524 anchor. All four are the same thing - anime-original expansions of the ch 523-524 landing panels - and the split comes straight from AFL, which types 418-420 anime_canon and 421 mixed. Ep 421 is out of this task's scope; it is also the one the wiki page-cites most (ch 524 p.10-12, p.16, p.18-19), so keeping its anchor is defensible, but the four should be ruled on as a block.",
+    "Proposed but NOT issued (two of four episodes are out of scope): eps 213-216 are typed anime-only-canon from AFL, yet onepiece.fandom types them filler (Episode 214's infobox chapter field literally reads 'Filler'; the Long Ring Long Land Arc's Anime Filler section describes the three added games) and AFG marks all four *Filler. The anime version also diverges from the manga - Chopper is not recovered and Robin is lost to Foxy - which reads as filler rather than anime-only-canon. Recommend retyping 213-216 as a block if Sean agrees, rather than 214/216 alone.",
+    "Ep 215 (anime-only-canon, no anchor) genuinely carries ch 313 p.8-9 per the Long Ring Long Land Arc page, and eps 453/454/456 (anime-only-canon, no anchors) animate the Separation Serial cover stories. Nothing to fix under A1 - noted so the block is not re-researched later.",
+    "Out of scope, possible under-count: ep 746 is stored as ch 800 only, but onepiece.fandom's Dressrosa Arc cites ch 801 to ep 746 (ch800 -> ep745, ch801 -> ep746). If that holds, ep 746 should end at 801, which would also explain its stored continue point of 802. Worth a look in a later pass.",
+    "Ep 737's type change is the only anchor-preserving verdict here; both the type and the anchor must be pinned at the manual tier or the AFL/AFG re-derives will undo them."
+  ]
+}

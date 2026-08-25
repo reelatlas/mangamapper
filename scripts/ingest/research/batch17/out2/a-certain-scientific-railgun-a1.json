@@ -1,0 +1,32 @@
+{
+  "series_id": "a-certain-scientific-railgun",
+  "summary": "A1 triage of ep 14 'Special Workshop', typed filler and carrying a research-tier (batch 12) anchor at ch 17, vol 3. JUNK ANCHOR - and here the earlier verdict was not merely mis-placed, it was factually wrong. The batch-12 note asserts that ch 17 is titled 'Special Workshop' and was grafted into the anime-original stretch. It is not: Railgun manga chapter 17 is titled 'July 25' (七月二十五日), sits in vol 3's Level Upper Arc, and its own wiki page's Adapted To field lists Toaru Kagaku no Railgun Episode 02 - the anime pulled it FORWARD to episode 2, nowhere near episode 14. There is no manga chapter titled 特別講習 anywhere in the franchise (a wiki-wide search for the kanji returns only the Episode 14 page and the episode list). The episode page states it directly under Adapted From: 'This is an anime-original episode, thus it is not adapted from any other media.' Two independent sources agree: animefillerlist types ep 14 Filler, and ja.wikipedia's anime article says season 1's second cour is an anime-original story depicting the aftermath of the Level Upper incident, made under Kamachi's supervision. The nearest manga material - chapter '016 special', 'A Certain Student's Epilogue', the Level Upper aftermath side chapter - has an explicitly EMPTY Adapted To field, so it is not the source either.",
+  "anchors": [],
+  "continue_points": [],
+  "annotations": [],
+  "type_corrections": [],
+  "repairs": [
+    {
+      "episode": 14,
+      "field": "end_chapter",
+      "old": 17,
+      "new": null,
+      "why": "A1 + the underlying claim is false. The Toaru wiki's Episode 14 page reads 'This is an anime-original episode, thus it is not adapted from any other media', and Railgun manga ch 17 ('July 25', vol 3) records its adaptation as Episode 02, not 14 - batch 12's 'ch 17 Special Workshop' does not exist; ch 17's title is 七月二十五日 and the episode's title 特別講習 matches no chapter in the franchise. AFL types ep 14 Filler; ja.wikipedia describes the whole second cour of season 1 as an anime-original sequel story to the Level Upper arc. The Level Upper epilogue side chapter (ch '016 special') has an empty Adapted To field, so no sliver survives either. Drop start_chapter (17), chapters_adapted (17), volume (3) and any continue point with it. Manual-source anchor, no re-derive risk.",
+      "sources": [
+        "https://toarumajutsunoindex.fandom.com/api.php?action=parse&page=Toaru_Kagaku_no_Railgun_Episode_14&prop=wikitext&format=json",
+        "https://toarumajutsunoindex.fandom.com/api.php?action=parse&page=Toaru_Kagaku_no_Railgun_Manga_Chapter_017&prop=wikitext&format=json",
+        "https://toarumajutsunoindex.fandom.com/api.php?action=parse&page=Toaru_Kagaku_no_Railgun_Manga_Chapter_016_special&prop=wikitext&format=json",
+        "https://www.animefillerlist.com/shows/a-certain-scientific-railgun",
+        "https://ja.wikipedia.org/wiki/とある科学の超電磁砲_(アニメ)"
+      ]
+    }
+  ],
+  "structure": {
+    "notes": "Season 1 shape, verified while triaging: 24 episodes, cour 1 (eps 1-12) adapts the Level Upper arc, cour 2 (eps 13-24) is an anime-original aftermath story supervised by Kamachi - ja.wikipedia names its sub-arcs as Skill-Out (eps 15-16) and Poltergeist (eps 20-24), with 13, 14, 17, 18, 19 as standalone originals (AFL: Filler). Ch 16 is ep 12's chapter (Chapter 016 Adapted To = Episode 12), so after nulling ep 14 the position across the whole anime-original cour is carried by ep 12 at one end and by the Railgun S canon rows (our eps 26-30, 32-40) at the other. The chapter space used here is the Toaru wiki's mainline Railgun numbering, which excludes the mid-run '016 special' / '017 special 1-2' / '017.5' side chapters - same space as the batch-14/15 verdicts.",
+    "order_only": []
+  },
+  "flags_for_sean": [
+    "This is a research-tier verdict being overturned, not an AFG artifact: batch 12 recorded 'agent-verified 2+ sources, full-record' for a chapter title that does not exist. Worth a spot-check of the other batch-12 railgun anchors from the same pass, in case the same title-matching error produced others.",
+    "Precondition on the deletion: it is lossless only if ep 12 stores END 16 (Chapter 016 Adapted To = Episode 12). If eps 1-12 are anchorless, ep 14's anchor was the series' only S1 position and an anchor should be added at ep 12 instead."
+  ]
+}

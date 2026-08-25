@@ -1,0 +1,99 @@
+{
+  "series_id": "ranma-1-2",
+  "summary": "All six AFG-sourced anchors on filler-typed Ranma rows are JUNK ANCHORS, and they share one mechanical cause that reaches far beyond these six rows. The Ranma wiki's Episode Infobox carries an explicit per-episode 'manga' field, and for every one of the six it reads 'None'; AFL types all six pure filler; and animefillerguide - the very source our values came from - marks five of the six '*Filler / N/A' in its own table. The stored chapter numbers are AFG's, but they were read off the WRONG ROW: AFG's Ranma table is ordered by the Digital-Remaster/production sequence in several zones while our rows are in aired order, so an index-based match silently slides the chapters onto a neighbour. Every stored value is exactly some nearby canon episode's chapter list - ep 90 holds ep 89's 156-157, ep 123 holds ep 122's 184-188, ep 131 holds ep 128's 194-196, ep 134 holds ep 133's 200, ep 156 holds ep 155's 221-224, and ep 14 holds 23-24, which the wiki's chapter pages assign to 'The Abduction of P-Chan' (our ep 15). The reverse cross-check on the wiki's CHAPTER pages is unanimous and independent of the episode pages: ch 23/24 -> The Abduction of P-Chan, ch 157 -> When a Guy's Pride and Joy is Gone, ch 188 -> The Demon from Jusenkyo Part II, ch 196 -> Ukyo's Secret Sauce Part 1, ch 224 -> Bring It On! Love as a Cheerleader Part 2. No episode here has even a sliver: no source attributes any manga page to any of the six, and two of them are built entirely around characters the wiki files under 'Anime-only characters' (Kin Ono in ep 14, Ling-Ling & Lung-Lung in ep 90). The 'Movie 1'/'Movie 2' text sitting in three of our note fields is AFG's own inter-row section banner, further confirming an index-based scrape.",
+  "anchors": [],
+  "continue_points": [],
+  "annotations": [],
+  "type_corrections": [],
+  "repairs": [
+    {
+      "episode": 14,
+      "field": "end_chapter",
+      "old": 24,
+      "new": null,
+      "why": "A1: correctly-typed filler row carrying an anchor that belongs to a DIFFERENT episode. The Ranma wiki's Episode Infobox for 'Pelvic Fortune-Telling? Ranma is the No. One Bride in Japan' reads manga = None (an explicit editorial value on this wiki - canon episodes carry chapter links there, e.g. 'The Abduction of P-Chan' = ch 23-24, and unfilled pages leave the field blank rather than 'None'), and the page states outright that this is 'a completely original storyline exclusive to the anime'; its whole premise, Dr. Tofu's mother Kin Ono, is categorised on the wiki as an Anime-only character. AFL types the episode pure filler. Reverse cross-check: the wiki's chapter pages for BOTH ch 23 and ch 24 name 'The Abduction of P-Chan' (Episode 25 in the wiki's aired numbering) as their anime counterpart, not this episode. animefillerguide is the outlier and the source of the bad value: at its row 14 it does not mark the episode filler and assigns 23-24, yet at its own row 25 it gives 'The Abduction of P-Chan' 46-47 - AFG's early-season chapter column is internally inconsistent and disagrees with the wiki throughout eps 15-30, where AFG's row order is also a permutation of ours (AFG 25/26/27 = our 15/16/17). Null end_chapter, start_chapter and chapters_adapted (23-24); no stored continue point. AFG derivation tier - the row's source must be flipped to manual on apply or the next AFG re-derive restores it.",
+      "sources": [
+        "https://ranma.fandom.com/wiki/Pelvic_Fortune-Telling%3F_Ranma_is_the_No._One_Bride_in_Japan",
+        "https://www.animefillerlist.com/shows/ranma-%C2%BD",
+        "https://www.animefillerguide.com/anime/ranma-%c2%bd/",
+        "https://ranma.fandom.com/wiki/Chapter_24"
+      ]
+    },
+    {
+      "episode": 90,
+      "field": "end_chapter",
+      "old": 157,
+      "new": null,
+      "why": "A1: correctly-typed filler row carrying an anchor that belongs to a DIFFERENT episode. The Ranma wiki's Episode Infobox for 'Ling-Ling & Lung-Lung Strike Back!' reads manga = None (an explicit editorial value on this wiki - canon episodes carry chapter links there, e.g. 'When a Guy's Pride and Joy is Gone' = 156-157, and unfilled pages leave the field blank rather than 'None'). AFL types the episode pure filler. animefillerguide - the source of the stored value - lists this episode as '*Filler / N/A' at ITS row 88; our row picked up the chapters of a different AFG row because AFG's table is not in our episode order (see structure). Reverse cross-check clinches it: the Ranma wiki's chapter page for ch 157 names 'When a Guy's Pride and Joy is Gone (our ep 89)' as its anime counterpart, not this episode. Ling-Ling & Lung-Lung are themselves categorised on the wiki as Anime-only characters, and the episode's own summary describes it as flashbacks to their previous anime-only appearance. Null end_chapter, start_chapter and chapters_adapted (156-157); no stored continue point. AFG derivation tier - the row's source must be flipped to manual on apply or the next AFG re-derive restores it.",
+      "sources": [
+        "https://ranma.fandom.com/wiki/Ling-Ling_%26_Lung-Lung_Strike_Back!",
+        "https://www.animefillerlist.com/shows/ranma-%C2%BD",
+        "https://www.animefillerguide.com/anime/ranma-%c2%bd/",
+        "https://ranma.fandom.com/wiki/Chapter_157"
+      ]
+    },
+    {
+      "episode": 123,
+      "field": "end_chapter",
+      "old": 188,
+      "new": null,
+      "why": "A1: correctly-typed filler row carrying an anchor that belongs to a DIFFERENT episode. The Ranma wiki's Episode Infobox for 'A Xmas Without Ranma' reads manga = None (an explicit editorial value on this wiki - canon episodes carry chapter links there, e.g. 'The Demon from Jusenkyo, Part II' = 184-188, and unfilled pages leave the field blank rather than 'None'). AFL types the episode pure filler. animefillerguide - the source of the stored value - lists this episode as '*Filler / N/A' at ITS row 125; our row picked up the chapters of a different AFG row because AFG's table is not in our episode order (see structure). Reverse cross-check clinches it: the Ranma wiki's chapter page for ch 188 names 'The Demon from Jusenkyo, Part II (our ep 122)' as its anime counterpart, not this episode. The stored note field 'Movie 1: Ranma 1/2 - The Battle of Nekonron...' is AFG's section banner, not an episode fact. Null end_chapter, start_chapter and chapters_adapted (184-188); no stored continue point. AFG derivation tier - the row's source must be flipped to manual on apply or the next AFG re-derive restores it.",
+      "sources": [
+        "https://ranma.fandom.com/wiki/A_Xmas_Without_Ranma",
+        "https://www.animefillerlist.com/shows/ranma-%C2%BD",
+        "https://www.animefillerguide.com/anime/ranma-%c2%bd/",
+        "https://ranma.fandom.com/wiki/Chapter_188"
+      ]
+    },
+    {
+      "episode": 131,
+      "field": "end_chapter",
+      "old": 196,
+      "new": null,
+      "why": "A1: correctly-typed filler row carrying an anchor that belongs to a DIFFERENT episode. The Ranma wiki's Episode Infobox for 'Akane Goes to the Hospital!' reads manga = None (an explicit editorial value on this wiki - canon episodes carry chapter links there, e.g. 'Ukyo's Secret Sauce, Part 1' = 194-196, and unfilled pages leave the field blank rather than 'None'). AFL types the episode pure filler. animefillerguide - the source of the stored value - lists this episode as '*Filler / N/A' at ITS row 127; our row picked up the chapters of a different AFG row because AFG's table is not in our episode order (see structure). Reverse cross-check clinches it: the Ranma wiki's chapter page for ch 196 names 'Ukyo's Secret Sauce, Part 1 (our ep 128)' as its anime counterpart, not this episode. The stored note field 'Movie 1: ...' is AFG's section banner, not an episode fact. Null end_chapter, start_chapter and chapters_adapted (194-196); no stored continue point. AFG derivation tier - the row's source must be flipped to manual on apply or the next AFG re-derive restores it.",
+      "sources": [
+        "https://ranma.fandom.com/wiki/Akane_Goes_to_the_Hospital!",
+        "https://www.animefillerlist.com/shows/ranma-%C2%BD",
+        "https://www.animefillerguide.com/anime/ranma-%c2%bd/",
+        "https://ranma.fandom.com/wiki/Chapter_196"
+      ]
+    },
+    {
+      "episode": 134,
+      "field": "end_chapter",
+      "old": 200,
+      "new": null,
+      "why": "A1: correctly-typed filler row carrying an anchor that belongs to a DIFFERENT episode. The Ranma wiki's Episode Infobox for 'Akane's Unfathomable Heart' reads manga = None (an explicit editorial value on this wiki - canon episodes carry chapter links there, e.g. 'Gosunkugi's Paper Dolls of Love' = 200, and unfilled pages leave the field blank rather than 'None'). AFL types the episode pure filler. animefillerguide - the source of the stored value - lists this episode as '*Filler / N/A' at ITS row 135; our row picked up the chapters of a different AFG row because AFG's table is not in our episode order (see structure). Reverse cross-check clinches it: the Ranma wiki's chapter page for ch 200 names 'a Gosunkugi episode - the wiki's ch 200 page names 'Gosunkugi's Summer Affair!' while its 'Gosunkugi's Paper Dolls of Love' episode page claims ch 200; either way not this episode' as its anime counterpart, not this episode. The episode is the anime-original Satori (telepathic boy) story. The stored note field 'Movie 1: ...' is AFG's section banner, not an episode fact. Null end_chapter, start_chapter and chapters_adapted (200); no stored continue point. AFG derivation tier - the row's source must be flipped to manual on apply or the next AFG re-derive restores it.",
+      "sources": [
+        "https://ranma.fandom.com/wiki/Akane%27s_Unfathomable_Heart",
+        "https://www.animefillerlist.com/shows/ranma-%C2%BD",
+        "https://www.animefillerguide.com/anime/ranma-%c2%bd/",
+        "https://ranma.fandom.com/wiki/Chapter_200"
+      ]
+    },
+    {
+      "episode": 156,
+      "field": "end_chapter",
+      "old": 224,
+      "new": null,
+      "why": "A1: correctly-typed filler row carrying an anchor that belongs to a DIFFERENT episode. The Ranma wiki's Episode Infobox for 'The Battle for Miss Beachside' reads manga = None (an explicit editorial value on this wiki - canon episodes carry chapter links there, e.g. 'Bring It On! Love as a Cheerleader - Part 2' = 221-224, and unfilled pages leave the field blank rather than 'None'). AFL types the episode pure filler. animefillerguide - the source of the stored value - lists this episode as '*Filler / N/A' at ITS row 154; our row picked up the chapters of a different AFG row because AFG's table is not in our episode order (see structure). Reverse cross-check clinches it: the Ranma wiki's chapter page for ch 224 names 'Bring It On! Love as a Cheerleader - Part 2 (our ep 155)' as its anime counterpart, not this episode. The stored note field 'Movie 2: ...' is AFG's section banner, not an episode fact. Null end_chapter, start_chapter and chapters_adapted (221-224); no stored continue point. AFG derivation tier - the row's source must be flipped to manual on apply or the next AFG re-derive restores it.",
+      "sources": [
+        "https://ranma.fandom.com/wiki/The_Battle_for_Miss_Beachside",
+        "https://www.animefillerlist.com/shows/ranma-%C2%BD",
+        "https://www.animefillerguide.com/anime/ranma-%c2%bd/",
+        "https://ranma.fandom.com/wiki/Chapter_224"
+      ]
+    }
+  ],
+  "structure": {
+    "notes": "NUMBERING. Our rows are in AIRED order: for all six targets our episode number, title and air date match both AFL's list and the Ranma wiki's own 'aired order' number and airdate (ep 14 = aired 14 / 1989-08-19, ep 90 = aired 90 / 1991-04-19, ep 123 = aired 123 / 1991-12-20, ep 131 = aired 131 / 1992-02-28, ep 134 = aired 134 / 1992-03-20, ep 156 = aired 156 / 1992-08-21). The wiki lists three numbers per episode - production order, aired order and Nettohen order - because the 1989 run was cancelled at 18 episodes and revived as Ranma 1/2 Nettohen with fourteen episodes re-ordered, and the Digital Remaster / Blu-ray / Viz releases re-sort into PRODUCTION order. The wiki's own episode-list page and its previous/next infobox chain both follow production order; only the 'aired order' number and the airdate are safe to key on.\n\nTHE DEFECT. animefillerguide's Ranma table is NOT in our aired order. Aligning AFG's 161 rows to ours by title shows AFG's row index equals our episode number everywhere except four zones, where it is a permutation: eps 15-30, eps 88-90, eps 121-135, and eps 154-156 (37 episodes). Concrete pairs: AFG row 88 = our ep 90, AFG row 89 = our ep 88, AFG row 90 = our ep 89; AFG 121 = our 126, AFG 122 = our 121, AFG 123 = our 122, AFG 124 = our 130, AFG 125 = our 123, AFG 126 = our 124, AFG 127 = our 131, AFG 128 = our 125, AFG 129 = our 127, AFG 130 = our 132, AFG 131 = our 128, AFG 132 = our 129, AFG 133 = our 135, AFG 134 = our 133, AFG 135 = our 134; AFG 154 = our 156, AFG 155 = our 154, AFG 156 = our 155; and across 15-30, AFG 15/16/17 = our 18/19/20, AFG 25/26/27 = our 15/16/17. Because AFG's filler rows carry 'N/A' rather than a chapter, an index-based ingest lands a real chapter list on a filler row and, symmetrically, lands the wrong chapters on canon rows in the same zones.\n\nSCOPE. My task was these six episodes only, so I have proposed nothing outside them - but the same misalignment means the AFG-sourced anchors on the CANON rows inside those four zones are likely off by one or more episodes too. That is a series-level re-anchor, flagged below, not something to patch row by row.",
+    "order_only": []
+  },
+  "flags_for_sean": [
+    "SERIES-LEVEL: ranma-1-2's AFG-derived anchors are index-misaligned across ~37 episodes (15-30, 88-90, 121-135, 154-156) because AFG's table is in production/Digital-Remaster order while our rows are in aired order. The six A1 hits are just the subset where the misalignment happened to land on a filler row and therefore tripped the audit. The canon rows in those zones are silently wrong in the same way and will not trip anything. Recommend a full ranma re-anchor from the Ranma wiki's per-episode 'manga' field (it is populated for essentially every canon episode) keyed on the wiki's AIRED number, with the chapter pages' 'anime' field as the reverse check.",
+    "TIER: all six null repairs are on afg-source rows. Per rule 7 the apply must flip each row's source to manual or the next AFG re-derive restores the same wrong chapters.",
+    "SOURCE TRAP worth capturing in the research-agent definition: animefillerguide orders some series by production/Blu-ray order rather than broadcast order, and marks filler rows 'N/A'. Any index-based join to an aired-order episode table will silently shift chapters onto neighbours. The tell is exactly what we saw here - a filler row holding its neighbour's chapter list, and AFG section banners ('Movie 1: ...', 'OVA 3: ...') leaking into episode note fields.",
+    "MINOR SOURCE CONFLICT, out of scope: the Ranma wiki's ch 200 page names 'Gosunkugi's Summer Affair!' (our ep 153) as the anime counterpart while its 'Gosunkugi's Paper Dolls of Love' episode page (our ep 133) claims ch 200. Both are outside my six; whoever re-anchors the series should resolve it. It does not affect the ep 134 verdict - neither candidate is ep 134.",
+    "AFG vs the wiki disagree on the actual chapter numbers throughout eps 15-30, independently of the ordering problem (e.g. AFG gives 'The Abduction of P-Chan' 46-47 where the wiki's ch 23 and ch 24 pages both name that episode). Do not trust AFG's early-season chapter column even after re-indexing."
+  ]
+}

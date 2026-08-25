@@ -1,0 +1,202 @@
+{
+  "series_id": "rurouni-kenshin",
+  "summary": "Two findings. (1) Rows 95-98 are the Trust & Betrayal (Tsuiokuhen) OVAs adopted as episodes, and they are a genuine manga adaptation: the Remembrance arc, Acts 165-179 (kenshin.fandom's Remembrances Arc infobox 'Volumes 19-21 (Acts 165-179)', the fandom Trust & Betrayal page 'based on the Remembrance Arc (chapters 165 to 179)', AFL types all four Manga Canon, and en-Wikipedia's chapter list independently places 165-167 in v19, 168-177 in v20, 178-179 in v21 - matching our stored volume boundaries). All four seams scene-lock cleanly against the Act synopses: 95 = 165-167 (ends on Act 167's closing panel, Tomoe in the rain of blood - which is also the last page of volume 19), 96 = 168-170, 97 = 172-174 (Act 171 'Brief Intermission' is a present-day Jinchu-arc interlude the OVA has no frame story for, so it is skipped), 98 = 175-179. The four stored side_story annotations claiming these rows 'adapt the pre-serialization pilot one-shots' are WRONG and are proposed for deletion. (2) Eps 63-70 need no change: our rows already type them filler, and three independent sources agree - AFL (Filler), AFG (chapters column 'N/A *Filler' for the whole 63-95 block, and its 'anime ends at ep 62 = ch 151, start reading at ch 152' box), and en-Wikipedia season 3 ('Unlike previous episodes, these were not adapted from the manga'). No anchors are possible there under A1; the tail verdict in out/rurouni-kenshin.json remains correct for 63-70 and is only superseded on rows 95-98. Note the honest continue point across the OVA rows is ch 152, not END+1: the 1996 series never animated Acts 152-164 (the Jinchu arc's opening), so the OVA anchors are a deliberate forward jump, not a monotonic continuation of ep 62.",
+  "anchors": [
+    {
+      "episode": 95,
+      "end_chapter": 167,
+      "start_chapter": 165,
+      "chapters_adapted": "165-167",
+      "volume": 19,
+      "confidence": "high",
+      "note": "T&B act 1 'The Man of the Slashing Sword' (斬る男): Shigekura/Kiyosato assassination and the first scar (Act 165), Katsura's Kiheitai recollection and the sake-house meeting (Act 166), the bakufu-spy kill with Tomoe stepping out of the blood rain (Act 167). The episode's final shot IS Act 167's final panel ('it is he who causes bloody rain'), and Act 167 is the last chapter of volume 19 - the seam is a volume boundary. Opening prologue (Shinta/Hiko/the graves) is a re-adaptation of the Kyoto-arc training flashbacks, not new mainline progress - see annotation.",
+      "sources": [
+        "https://kenshin.fandom.com/wiki/Episode_1_(Trust_%26_Betrayal)",
+        "https://kenshin.fandom.com/wiki/Act_167",
+        "https://kenshin.fandom.com/wiki/Remembrances_Arc",
+        "https://en.wikipedia.org/wiki/List_of_Rurouni_Kenshin_chapters",
+        "https://www.animefillerlist.com/shows/rurouni-kenshin"
+      ]
+    },
+    {
+      "episode": 96,
+      "end_chapter": 170,
+      "start_chapter": 168,
+      "chapters_adapted": "168-170",
+      "volume": 20,
+      "confidence": "medium",
+      "note": "T&B act 2 'The Lost Cat' (迷い猫 - I'izuka's line calling Tomoe a stray cat is Act 169): Tomoe faints and is taken to the Kohagi-ya and stays on (Act 168), the two weeks of 'evening errands', Katsura's talk with Tomoe and the 'sheath' idea (Act 169), the Gion Festival / Ikeda-ya raid, Katsura's order to hide in the country as a married couple, closing on the Kinmon Incident (Act 170). Act 168 opens on the exact shot ep 96 opens on (the woman fainting into Battousai's arms); Act 170 closes on 'a new couple had begun living their new lives', the episode's closing narration. Medium: the seam rests on the fandom episode plot cross-read against the fandom Act synopses - no non-wiki source states per-episode chapters.",
+      "sources": [
+        "https://kenshin.fandom.com/wiki/Episode_2_(Trust_%26_Betrayal)",
+        "https://kenshin.fandom.com/wiki/Act_168",
+        "https://kenshin.fandom.com/wiki/Act_170",
+        "https://en.wikipedia.org/wiki/List_of_Rurouni_Kenshin_chapters",
+        "https://www.animefillerlist.com/shows/rurouni-kenshin"
+      ]
+    },
+    {
+      "episode": 97,
+      "end_chapter": 174,
+      "start_chapter": 172,
+      "chapters_adapted": "172-174 (171 skipped - present-day interlude)",
+      "volume": 20,
+      "confidence": "medium",
+      "note": "T&B act 3 'The Previous Night at the Mountain Home' (宵里山): the Otsu farm life and the medicine-seller months, Katagai tailing I'izuka and being killed (Act 172), Enishi's visit (Act 173), Tomoe's confession about Kiyosato, the snow night and her leaving at dawn (Act 174). Act 174 ends exactly where the episode ends - Tomoe closing the door on the sleeping Kenshin. Act 171 is skipped: it is the present-day Jinchu-arc 'Brief Intermission' (Kenshin pausing his storytelling for the Kamiya dojo group) and the OVA carries no frame story. The episode's tail beat (I'izuka telling Kenshin that Tomoe is the traitor) is an OVA relocation - see annotation. Medium for the same reason as ep 96.",
+      "sources": [
+        "https://kenshin.fandom.com/wiki/Episode_3_(Trust_%26_Betrayal)",
+        "https://kenshin.fandom.com/wiki/Act_172",
+        "https://kenshin.fandom.com/wiki/Act_174",
+        "https://en.wikipedia.org/wiki/List_of_Rurouni_Kenshin_chapters",
+        "https://www.animefillerlist.com/shows/rurouni-kenshin"
+      ]
+    },
+    {
+      "episode": 98,
+      "end_chapter": 179,
+      "start_chapter": 175,
+      "chapters_adapted": "175-179",
+      "volume": 21,
+      "confidence": "high",
+      "note": "T&B act 4 'The Cross-Shaped Wound' (十字傷 - the exact Japanese title of Act 178, 追憶ノ十三-十字傷-): Tomoe at the Yaminobu shrine and the Binding Forest (Act 175), Sumita/Yatsume/Nakajo (Acts 176-177), Tatsumi's kempo beating, Tomoe's death and the completed cross scar (Act 178), Katsura's visit, I'izuka's assassination by Shishio, Kenshin's vow and the return to Kyoto (Act 179). 179 is the last chapter of the flashback (Act 180 resumes the present day) and the OVA ends on the same beat; the whole-OVA bound 'chapters 165 to 179' is stated by both the fandom T&B page and en-Wikipedia's v21 volume summary ('Some weeks later, Kenshin returns to be a hitokiri until the Bakumatsu ends. After Kenshin's flashback ends...').",
+      "sources": [
+        "https://kenshin.fandom.com/wiki/Episode_4_(Trust_%26_Betrayal)",
+        "https://kenshin.fandom.com/wiki/Act_178",
+        "https://kenshin.fandom.com/wiki/Act_179",
+        "https://kenshin.fandom.com/wiki/Trust_%26_Betrayal",
+        "https://en.wikipedia.org/wiki/List_of_Rurouni_Kenshin_chapters"
+      ]
+    }
+  ],
+  "continue_points": [
+    {
+      "episode": 95,
+      "continue_chapter": 152,
+      "note": "not END+1: the 1996 series stopped at Act 151 (ep 62) and never animated Acts 152-164, so a viewer who has reached the OVAs still resumes the manga at Act 152 (start of the Jinchu arc). AFG states the same reading start for this series."
+    },
+    {
+      "episode": 96,
+      "continue_chapter": 152,
+      "note": "same as ep 95 - Acts 152-164 remain unadapted by this series; the OVA rows are a forward jump into the Remembrance flashback."
+    },
+    {
+      "episode": 97,
+      "continue_chapter": 152,
+      "note": "same as ep 95; additionally Act 171 (present-day interlude) is skipped inside the OVA's own range."
+    },
+    {
+      "episode": 98,
+      "continue_chapter": 152,
+      "note": "after the full OVA the reader's honest resume is still Act 152 - the Jinchu arc's opening (152-164) plus Act 171 were never animated; 180+ follows on from the flashback the OVA just told."
+    }
+  ],
+  "annotations": [
+    {
+      "episodes": [95],
+      "kind": "graft",
+      "chapters": "95",
+      "note": "the opening prologue (bandit raid, the three girls' graves, Hiko taking Shinta in, the waterfall training) re-adapts the Kyoto-arc training flashbacks of Acts 94-96 - chiefly Act 95 - which the TV series already animated in ep 43; it is not new mainline progress, so START stays 165 (fandom T&B page: 'The opening prelude is an adaptation of flashbacks that appear during Kenshin's training with Hiko Seijuro in Kyoto Arc... also takes great influence from the same flashbacks appearing in the 1996 anime')."
+    },
+    {
+      "episodes": [95],
+      "kind": "divergence",
+      "chapters": "165-167",
+      "note": "impressionistic retelling: non-linear past/present cutting (much of it original), and the first Tomoe meeting is restructured - in the manga Kenshin first helps her at a pub and is ambushed outside (Acts 166-167); in the OVA he only glimpses her in daylight and meets her after the kill. I'izuka's recurring 'the scar bleeds until the grudge is avenged' line is lifted from Act 152."
+    },
+    {
+      "episodes": [96],
+      "kind": "divergence",
+      "chapters": "170",
+      "note": "the Ikeda-ya raid is dramatised in full with Kenshin and Tomoe inside the chaos; the manga (Act 170) shows only the aftermath, and Katsura's meeting with them happens after the Kinmon Incident rather than immediately after Ikeda-ya. Katsura also asks Tomoe outright to be Kenshin's 'sheath' (implicit in the manga)."
+    },
+    {
+      "episodes": [96, 97],
+      "kind": "partial",
+      "chapters": "171",
+      "note": "Act 171 'Brief Intermission' is skipped: it is a present-day Jinchu-arc pause (Kenshin's listeners at the Kamiya dojo, Enishi's ten-day ultimatum) and the OVA has no frame story. The flashback runs 170 -> 172 without it."
+    },
+    {
+      "episodes": [97],
+      "kind": "rearranged",
+      "chapters": "179",
+      "note": "the episode ends with I'izuka telling Kenshin that Tomoe is the spy and that Kiyosato was her fiance; in the manga Kenshin only learns this after her death, from Tomoe's diary in Act 179. The reveal is pulled forward so that ep 98's Kenshin fights in a state of shock."
+    },
+    {
+      "episodes": [98],
+      "kind": "divergence",
+      "chapters": "178",
+      "note": "Tomoe deliberately cuts the second half of the cross scar with her tanto; in Act 178 the cut is accidental as she falls. Director Furuhashi says this was Watsuki's own original intent, told to him by phone during the TV series' production (Blu-ray booklet interview, cited on both the fandom episode page and en-Wikipedia). The Binding Forest is also recontextualised (shock rather than corrupted magnetic fields) and the Yaminobu fights are shortened."
+    }
+  ],
+  "type_corrections": [],
+  "repairs": [
+    {
+      "episode": 95,
+      "field": "annotation",
+      "old": "side_story {pilot one-shots}: adapts the pre-serialization pilot one-shots - real content outside mainline chapter numbering (2026-08-24)",
+      "new": null,
+      "why": "misidentification. Row 95 is Trust & Betrayal act 1 (斬る男, JP air 1999-02-20; AFL numbers it 95 with the same title), which adapts Acts 165-167 of the mainline manga - not a pilot one-shot. The pilot one-shots are not adapted anywhere in rows 95-98. Delete the annotation; the anchor + graft/divergence annotations above replace it.",
+      "sources": [
+        "https://kenshin.fandom.com/wiki/Episode_1_(Trust_%26_Betrayal)",
+        "https://kenshin.fandom.com/wiki/Trust_%26_Betrayal",
+        "https://www.animefillerlist.com/shows/rurouni-kenshin",
+        "https://en.wikipedia.org/wiki/List_of_Rurouni_Kenshin_(1996_TV_series)_episodes"
+      ]
+    },
+    {
+      "episode": 96,
+      "field": "annotation",
+      "old": "side_story {pilot one-shots}: adapts the pre-serialization pilot one-shots - real content outside mainline chapter numbering (2026-08-24)",
+      "new": null,
+      "why": "same misidentification: row 96 is T&B act 2 (迷い猫, 1999-04-21), adapting Acts 168-170.",
+      "sources": [
+        "https://kenshin.fandom.com/wiki/Episode_2_(Trust_%26_Betrayal)",
+        "https://www.animefillerlist.com/shows/rurouni-kenshin"
+      ]
+    },
+    {
+      "episode": 97,
+      "field": "annotation",
+      "old": "side_story {pilot one-shots}: adapts the pre-serialization pilot one-shots - real content outside mainline chapter numbering (2026-08-24)",
+      "new": null,
+      "why": "same misidentification: row 97 is T&B act 3 (宵里山, 1999-06-19/21), adapting Acts 172-174.",
+      "sources": [
+        "https://kenshin.fandom.com/wiki/Episode_3_(Trust_%26_Betrayal)",
+        "https://www.animefillerlist.com/shows/rurouni-kenshin"
+      ]
+    },
+    {
+      "episode": 98,
+      "field": "annotation",
+      "old": "side_story {pilot one-shots}: adapts the pre-serialization pilot one-shots - real content outside mainline chapter numbering (2026-08-24)",
+      "new": null,
+      "why": "same misidentification: row 98 is T&B act 4 (十字傷, 1999-09-22), adapting Acts 175-179 - its title is Act 178's own title.",
+      "sources": [
+        "https://kenshin.fandom.com/wiki/Episode_4_(Trust_%26_Betrayal)",
+        "https://www.animefillerlist.com/shows/rurouni-kenshin"
+      ]
+    }
+  ],
+  "structure": {
+    "notes": "Our 100 rows equal AFL's numbering exactly: 1-94 = the aired 1996 TV series, 95-98 = Trust & Betrayal OVA acts 1-4 (titles and air dates match AFL and en-Wikipedia's OVA table), 99-100 = Reflection parts 1-2. Wikipedia and AFG instead count the TV series as 95 episodes, because episode 95 'End of Wanderings' was never broadcast - it was a bonus episode on the VHS/DVD release (WP season 3: 'Episode 95 did not air in Japan either, as it was a bonus episode'). AFG's list therefore shifts by one from ep 95 onward (its 95 = 'End of Wanderings', ours = T&B act 1); any future AFG-derived ingest must not be applied past row 94. That unaired episode is anime-original filler in every source, so its absence costs no anchor. Season shape (WP): S1 1-27, S2 28-62 (Kyoto arc, ends at Act 151), S3 63-95 wholly anime-original. Manga side: v19 = 159-167, v20 = 168-177, v21 = 178-186 (WP chapter list) - identical to the context file's boundaries. Remembrance arc = Acts 165-179 with Act 171 an inline present-day interlude.",
+    "order_only": []
+  },
+  "flags_for_sean": [
+    "Rows 95-98 carry four stale side_story annotations ('adapts the pre-serialization pilot one-shots'). They must be DELETED, not merely superseded - the new anchors would otherwise sit alongside an annotation that contradicts them. Repairs above use field 'annotation' with new=null.",
+    "Out of scope but adjacent: rows 99-100 are the Reflection (Seisouhen) OVA. AFL types both Filler and ja-Wikipedia describes it as depicting life after the manga's final chapter but 'not everything as in the original' - i.e. anime-only, and widely held to contradict the manga ending. If they are currently typed canon/mixed they will keep the frontier flag alive after these anchors land; worth a one-line type ruling (filler vs anime-only-canon).",
+    "No non-wiki source anywhere states per-episode chapter ranges for Trust & Betrayal (checked: en-WP OVA article and episode list - summaries are blank; ja-WP anime article - staff/release only; the archived Sony Music VHS pages - no synopsis; the archived AnimeOnDVD volume review - impressionistic). Eps 96 and 97 are therefore marked medium: their seams are scene-locks of the fandom episode plots against the fandom Act synopses, corroborated only structurally (Act 171 being a present-day interlude, and the OVA's stated 165-179 bound). Eps 95 and 98 are high because their seams coincide with the volume-19 break and the arc end respectively.",
+    "Flag #727 can now be closed on both halves: 63-94 is anime-original (WP season 3 + AFL + AFG), and the missing tail anchors were rows 95-98, delivered here. The frontier for this series is Act 179 (via the OVAs), with the reader's continue point at Act 152."
+  ],
+  "citations": [
+    "https://kenshin.fandom.com/wiki/Trust_%26_Betrayal - 'The OVA is based on the Remembrance Arc (chapters 165 to 179) of the manga'; episode guide with the four acts; trivia on the Kyoto-arc flashback prologue",
+    "https://kenshin.fandom.com/wiki/Remembrances_Arc - Story Arc infobox: 'manga = Volumes 19 - 21 (Acts 165 - 179)', 'anime = Trust & Betrayal'",
+    "https://kenshin.fandom.com/wiki/Act_165 through /Act_179 - per-chapter synopses used to scene-lock the four seams (Act boxes also carry volume fields 19/20/21)",
+    "https://kenshin.fandom.com/wiki/Episode_1_(Trust_%26_Betrayal) .. /Episode_4_(Trust_%26_Betrayal) - per-episode Plot and 'Anime Notes' (explicit manga-vs-OVA differences)",
+    "https://en.wikipedia.org/wiki/List_of_Rurouni_Kenshin_chapters - volume/chapter boundaries and chapter titles for Acts 159-186 (v19 159-167, v20 168-177, v21 178-186; Act 171 = 'Brief Intermission'); v20 and v21 volume summaries",
+    "https://en.wikipedia.org/wiki/List_of_Rurouni_Kenshin_(1996_TV_series)_episodes - OVA episode table (titles, kanji, air dates) confirming rows 95-98 = T&B acts 1-4",
+    "https://en.wikipedia.org/wiki/Rurouni_Kenshin_season_3 - 'Unlike previous episodes, these were not adapted from the manga'; 'Episode 95 did not air in Japan either, as it was a bonus episode for the VHS and DVD releases'",
+    "https://en.wikipedia.org/wiki/Rurouni_Kenshin:_Trust_%26_Betrayal - OVA is 'based on the Rurouni Kenshin manga series... and a prequel to its 1996-1998 anime adaptation'; Furuhashi/Watsuki phone-call account of the scar change",
+    "https://www.animefillerlist.com/shows/rurouni-kenshin - 100-row list matching ours: 63-94 Filler, 95-98 Manga Canon (T&B titles), 99-100 Filler (Reflection)",
+    "https://www.animefillerguide.com/anime/rurouni-kenshin-1996/ - chapter table (ep 62 = 149,150,151; 63-95 = 'N/A *Filler') and the 'anime ends at ep 62 / start reading at Chapter 152' box",
+    "https://ja.wikipedia.org/wiki/るろうに剣心_-明治剣客浪漫譚-_(アニメ) - OVA section: 追憶編 is 全四幕 covering 剣心が人斬り抜刀斎になるまでの経緯 / 雪代巴との出会いから別れ; per-act table (斬る男 / 迷い猫 / 宵里山 / 十字傷); 星霜編 described as post-final-chapter and not faithful to the original"
+  ]
+}

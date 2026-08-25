@@ -1,0 +1,48 @@
+{
+  "series_id": "dragon-ball-z-kai",
+  "summary": "A1 triage of the two manual, batch-15-authored anchors on filler rows (eps 101 and 165, both international-only 'The Final Chapters' episodes that never aired in Japan). Batch 15's FACTS re-verify perfectly and I found nothing wrong with them: Wikipedia's footage column gives ep 101 = DBZ 202B-203 and ep 165 = DBZ 287B-288, and Kanzenshuu marks DBZ 202, 203 and 288 as 'Filler Episode' outright while DBZ 287's only manga content is ch 517 p.1-10, which our ep 164 already carries; DBZ 289 (= our ep 166) holds ch 517 p.11-End. So both episodes adapt ZERO manga pages - batch 15 itself wrote chapters_adapted as the empty string. What was wrong was the INSTRUMENT, not the research: batch 15 used an anchor to carry a reader position forward across a filler episode ('END mirrors the reader position after ep 100'), and Sean's 2026-08-24 A1 ruling says a filler row never carries an anchor at all - an anchor is a claim about what an episode ADAPTS, and 424 / 517 are not that here. Batch 15 flagged this fork itself at the time ('if the apply script cannot represent a no-chapter anchor, keep them as typed-filler rows with the continue points instead'); A1 answers it. Both are JUNK ANCHORS by A1's definition, on rows whose filler typing is correct. There is no sliver to record - zero pages, not a few - and the structural facts already live in the batch-14 graft annotations on [100,101,102] and [164,165,166], so no new annotations are needed.",
+  "anchors": [],
+  "continue_points": [],
+  "annotations": [],
+  "type_corrections": [],
+  "repairs": [
+    {
+      "episode": 101,
+      "field": "end_chapter",
+      "old": 424,
+      "new": null,
+      "why": "A1: correctly-typed filler row carrying a positional-carry anchor, not an adaptation claim. Ep 101 is international-only (Wikipedia: no Japanese air date, AltDate 2017-01-22, footage column 'Corresponding DBZ ep.' = 202B-203) and Kanzenshuu's Corresponding block for BOTH DBZ 202 and DBZ 203 is the single line 'Filler Episode' - zero manga pages. Batch 15 stored end=start=424 with chapters_adapted '' purely to hold the position from ep 100; A1 forbids that. Null end_chapter, start_chapter and the stored continue point (426). The honest facts survive elsewhere: ep 100 ends at ch 424 p.3-8 and ch 425 is never adapted in DBZ or Kai (Kanzenshuu chp-425 lists 'None' for both broadcasts), so the reader's resume after ep 100 is 425 - that belongs on ep 100's row, not here. Manual-tier row, no re-derive risk.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/List_of_Dragon_Ball_Z_Kai_episodes",
+        "https://www.kanzenshuu.com/episode/dbz/eps-202/",
+        "https://www.kanzenshuu.com/episode/dbz/eps-203/",
+        "https://www.kanzenshuu.com/manga/db/chp-425/",
+        "https://dragonball.fandom.com/wiki/Videl%27s_Crisis%3F_Gohan%27s_Urgent_Call-out%21"
+      ]
+    },
+    {
+      "episode": 165,
+      "field": "end_chapter",
+      "old": 517,
+      "new": null,
+      "why": "A1: same shape. Ep 165 is international-only (Wikipedia: no Japanese air date, AltDate 2018-06-09, footage column = 287B-288) and its content is the Capsule Corp party plus Goku egg-sitting. Kanzenshuu: DBZ 287 = 'Chapter 517 (Pages 1-10)' + 'Half Filler' - and the manga half (517 p.1-10) is in our ep 164, not here; DBZ 288 = 'Filler Episode'; DBZ 289 = 'Chapter 517 (Pages 11-End)' + 'Chapter 518 (Pages 1-8)', which Wikipedia places in our ep 166. Zero manga pages in ep 165. Null end_chapter, start_chapter and the stored continue point (518). The mid-chapter resume at 517 p.11 belongs on ep 164's row. Manual-tier row, no re-derive risk.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/List_of_Dragon_Ball_Z_Kai_episodes",
+        "https://www.kanzenshuu.com/episode/dbz/eps-287/",
+        "https://www.kanzenshuu.com/episode/dbz/eps-288/",
+        "https://www.kanzenshuu.com/episode/dbz/eps-289/",
+        "https://dragonball.fandom.com/wiki/Peace_Returns%21_A_Time_of_Rest_for_the_Warriors%21"
+      ]
+    }
+  ],
+  "structure": {
+    "notes": "Row identity re-confirmed against Wikipedia's Kai episode list: our ep 101 = 'Videl's Crisis? Gohan's Urgent Call-out!' (EpisodeNumber 101, marked {{efn|name=Int}}, OriginalAirDate '-', AltDate January 22 2017 - our row carries 2017-01-21, the Toonami late-Saturday slot) and our ep 165 = 'Peace Returns! A Time of Rest for the Warriors!' (EpisodeNumber 165, Int, AltDate June 9 2018 - our row 2018-06-09). Both are among the eight international-only episodes of the 69-episode 'The Final Chapters' cut identified in batch 14. Kanzenshuu and the Dragon Universe wiki number the Buu arc by the 61-episode JAPANESE broadcast, so per-episode Kai pages for this zone describe different episodes - the only safe route is Wikipedia's DBZ footage column into Kanzenshuu's DBZ chapter mappings, which is what batch 14/15 used and what I re-ran. Verified DBZ side: 201 = ch 423 + 424 p.1-8 (alt form) + Partial Filler; 202 = Filler Episode; 203 = Filler Episode; 204 = Filler Episode; 286 = ch 516 + 517 p.1; 287 = ch 517 p.1-10 + Half Filler; 288 = Filler Episode; 289 = ch 517 p.11-End + ch 518 p.1-8. Ch 425 has no adaptation at all (Kanzenshuu chp-425: DBZ 'None', Kai 'None').",
+    "order_only": []
+  },
+  "flags_for_sean": [
+    "Batch 15 was not wrong about the world - it was wrong about the instrument, and it said so at the time. Its own flag read: 'if the apply script cannot represent a no-chapter anchor, keep them as typed-filler rows with the continue points above instead.' A1 (2026-08-24, after batch 15 shipped) is that decision. If you want the batch-15 note text preserved on the row, keep it as a row note; only the numeric anchor fields need to go.",
+    "Position cost of nulling: after ep 100 the honest resume is ch 425 (never adapted anywhere), and after ep 164 it is ch 517 p.11. Both of those rows are OUTSIDE my 15-episode scope so I have not proposed repairs to them - but if eps 100 and 164 do not already carry those continue points, nulling 101/165 loses the fact. Worth a two-row follow-up.",
+    "The two stored continue points I am asking to remove (426 on ep 101, 518 on ep 165) are NOT the values batch 15 proposed (425 and 517). Something between the verdict and the row normalised them to END+1, which is exactly the fabricated-position shape A1 exists to stop - worth a look at the apply path independently of this verdict.",
+    "No new annotations proposed: the batch-14 graft annotations on episodes [100,101,102] (chapters 424-426) and [164,165,166] (chapter 517) already carry the international-recut structure, including the fact that ch 425 has no direct counterpart."
+  ]
+}

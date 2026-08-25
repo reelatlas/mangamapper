@@ -153,3 +153,60 @@ part that was actually expensive to learn.
    → commit + push. That is the chunk-1 save point.
 4. Chunk 2 (detective-conan + 9 lighter targets) is unchanged and still
    waits behind Sean's usage check.
+
+---
+
+## 7. WAVE 1 LANDED (2026-08-24, resumed session) — 8 of the 16 tasks done
+
+All 8 agents completed; 15 new verdict files, every one parsed + mechanically
+scanned (series_id present, no dupes, A1-consistent with own type
+corrections, END monotonicity checked):
+
+| task | files | headline |
+|---|---|---|
+| rurouni T&B | `out2/rurouni-kenshin-tb.json` | eps 95-98 → Acts 165-179; 4 stale side_story annotations to DELETE; eps 63-70 confirmed filler, no change; AFG shifts by one from row 95 (95-ep vs our 100-row count) |
+| fist-of-north-star | `out/fist-of-the-north-star.json` | 42 anchors 58-108; A1 ep109 = junk (terminal moved to ep108→136); 8 eps retyped; structure eps1-109=ch1-136 |
+| sket-dance | `out/sket-dance.json` | 75 anchors; NON-LINEAR adaptation ruling (END non-monotonic by design); eps 26/32 retype→canon with anchors pre-staged in notes; ep77 repair 200→167 |
+| bobobo | `out/bobobo-bo-bo-bobo.json` | 74 anchors; finale tiebreak RESOLVED for 178 (stored ep76→178 correct, no repair); no per-episode map exists anywhere — cross-derivation method documented |
+| zatch-bell | `out/zatch-bell.json` | 105 anchors ch1-211; flag #942 resolved (ep138→211, cont 212); ch191=ep127 settled; 10-ep contested-typing block for Sean |
+| A1 one-piece | `out2/one-piece-a1.json` | 18 junk + ep737 retype; AFG chapter column proven to be a reading-position conversion (plateaus on noncanon rows) |
+| A1 dbz/kai/ranma | `out2/dragon-ball-z-a1.json`, `out2/dragon-ball-z-kai-a1.json`, `out2/ranma-1-2-a1.json` | 14 junk + dbz ep100 retype→mixed; RANMA: AFG table is PRODUCTION-ORDER — ~37 eps of stored anchors slid onto neighbours (needs verifier + series re-anchor) |
+| A1 misc | `out2/{black-clover,fairy-tail,the-promised-neverland,mashle-magic-and-muscles,noragami,a-certain-scientific-railgun}-a1.json` | 7 junk + fairy-tail ep256 & tpn ep23 retype→mixed; railgun batch-12 claim factually false; MASHLE off-by-one (recap stored as ep7 → AFG anchors eps 8-12 one row early) |
+
+**A1 / D4 IS NOW FULLY ADJUDICATED: 49/49 hits — 45 junk anchors, 4 mistyped
+rows** (dbz 100, fairy-tail 256, tpn 23, one-piece 737). Evidence strongly
+favors extending the A1 gate to the AFG writers (D1-style), with retype as a
+research-tier action. Sean rules.
+
+**Pre-checks already run against the DB** (lossless-deletion conditions):
+black-clover ep129 holds ch228 ✓; railgun ep12 holds ch16 ✓; noragami ep10
+has NO anchor → nulling ep12 requires a new ep10 anchor END 12 (evidence in
+the noragami verdict's flags).
+
+**New source traps this wave (route to research-agent definition at capture):**
+- AFG tables can be in PRODUCTION order (ranma) — never index-join against
+  aired-order rows; verify episode identity per row.
+- AFG's chapter column is a reading-position conversion, not an adaptation
+  claim — it plateaus on noncanon rows (one-piece duplicates prove it).
+- onepiece.fandom ARC pages carry inline `{{Qref|chap|page|ep}}` page-level
+  citations — better than episode infoboxes, which are inconsistently filled.
+- hokuto.fandom has no per-episode pages; character-page `appearances`
+  fields are the usable reverse index.
+- AFL tables can be TRUNCATED (sket-dance stops at ep 54) — untyped tail
+  defaults are not typing claims.
+- sket-dance en-WP chapter list: English cells unreliable (empty/shifted);
+  parse the Japanese cells.
+- Row-count identity first: mashle rows count the recap as ep 7 (wiki calls
+  it 6.5) → every AFG anchor eps 8-12 is one row early; rurouni AFG counts
+  95 eps vs our 100 rows (shift from row 95).
+
+**Verifier candidates (weight-bearing, run before apply):** ranma
+production-order claim; sket-dance non-linear structure ruling; mashle
+off-by-one; railgun batch-12-falsity claim.
+
+## 8. REMAINING — wave 2 (8 tasks)
+
+kinnikuman, eyeshield-21, saint-seiya-knights-of-the-zodiac, project-arms,
+d-gray-man, angel-heart, hayate-the-combat-butler, trigun. Traps for these
+are in §5 above. Contexts regenerated 2026-08-24 in the session scratchpad
+(`ctx17/`); regenerate again if resuming in a new session.

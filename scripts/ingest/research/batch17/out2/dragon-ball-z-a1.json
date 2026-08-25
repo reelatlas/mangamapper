@@ -1,0 +1,171 @@
+{
+  "series_id": "dragon-ball-z",
+  "summary": "A1 triage of the seven AFG-sourced anchors sitting on filler-typed DBZ rows. Six of the seven are JUNK ANCHORS on correctly-typed filler and one (ep 100) is a WRONG ROW TYPE. Kanzenshuu's DBZ episode guide gives page-level 'Corresponding' data for every one of them and dragonball.fandom's chapter pages carry the reverse mapping, and the two agree exactly: ch 246 -> eps 39/40/42/43, ch 323 -> eps 100/101, ch 336 -> eps 123/125, ch 506 -> eps 272/273/274/275. Numbering identity is confirmed three ways (Kanzenshuu ep number, AFL title+date, dragonball.fandom infobox Number+Airdate all match our rows). The 39-43 block is the Fake-Namek filler arc: Kanzenshuu shows ch 246 ('Vegeta Revived!!', the healing-tank cutaways) trickled across it in slivers - p.1-4 in ep 39, p.5-8 in ep 40, p.9 in ep 42, p.10-End in ep 43, with ep 41 a 'Filler Episode' carrying none - which is why the whole block parked on the same value 246. Under Sean's <=~5-page sliver ruling all four are annotation facts, not anchors. Eps 125 and 274 are the same shape with even thinner slivers (336 p.14 and 506 p.8-9; both fandom pages say 'with the exception of the final scene ... the entire events of this episode were exclusive to the anime'). Ep 100 'Gohan Returns' is the odd one out: Kanzenshuu gives it ch 323 p.1-11 in altered form plus a 'Half Filler' segment, the Dragon Universe wiki's manga field reads Chapter #323, and dragonball.fandom carries no filler statement at all - only a 'Differences from the manga' list. That is a mixed episode mistyped as filler; AFL is the lone dissenter.",
+  "anchors": [
+    {
+      "episode": 100,
+      "end_chapter": 323,
+      "start_chapter": 323,
+      "chapters_adapted": "323 (p.1-11, altered form)",
+      "volume": 27,
+      "confidence": "high",
+      "note": "Only valid once the type_correction below lands (filler -> mixed). Kanzenshuu: 'Chapter 323, “Two Wishes” (Pages 1-11 ~ Altered Form)' + one Half Filler segment; the fandom chapter page for ch 323 lists eps 100 and 101 and Kanzenshuu's ep 101 picks up at 323 p.11. Values match what is already stored (end/start 323, continue 323); this entry adds the page split and the volume and moves the row off the afg derivation tier.",
+      "sources": [
+        "https://www.kanzenshuu.com/episode/dbz/eps-100/",
+        "https://www.kanzenshuu.com/manga/db/chp-323/",
+        "https://dragonball.fandom.com/wiki/The_Two_Wishes",
+        "https://dragonballuniverse.fandom.com/wiki/DBZ100"
+      ]
+    }
+  ],
+  "continue_points": [
+    {
+      "episode": 100,
+      "continue_chapter": 323,
+      "note": "ends mid-chapter at 323 p.11 (altered form); ep 101 resumes at 323 p.11 - matches the stored value, restated so it survives the tier flip"
+    }
+  ],
+  "annotations": [
+    {
+      "episodes": [
+        39,
+        40,
+        42,
+        43
+      ],
+      "kind": "graft",
+      "chapters": "246",
+      "note": "Fake-Namek filler block: ch 246 ('Vegeta Revived!!') is trickled through it as healing-tank cutaways - Kanzenshuu gives p.1-4 to ep 39, p.5-8 to ep 40, p.9 to ep 42, p.10 and p.11-End to ep 43; ep 41 is a pure 'Filler Episode'. Ep 38 ends at ch 245 and ep 44 starts at ch 247, so ch 246 is honestly pending across the block rather than anchored to any one episode."
+    },
+    {
+      "episodes": [
+        125
+      ],
+      "kind": "graft",
+      "chapters": "336",
+      "note": "Driving-licence filler; only the closing shot is manga - Kanzenshuu 'Mostly Filler' + ch 336 p.14, fandom: 'With the exception of the final scene where Goku, Gohan and Piccolo take off, the entire events of this episode were exclusive to the anime.' Ch 336 p.1-13 is in ep 123, so END 336 is already carried there."
+    },
+    {
+      "episodes": [
+        274
+      ],
+      "kind": "graft",
+      "chapters": "506",
+      "note": "Buu's-innards filler; only the closing moments are manga - Kanzenshuu 'Mostly Filler' + ch 506 p.8-9, fandom: 'With the exception of the final moments where Goku and Vegeta find their friends trapped in pods, the entire events of this episode were exclusive to the anime.' Ep 273 covers 506 p.2-8 and ep 275 resumes at 506 p.9, so position is intact without an anchor here."
+    },
+    {
+      "episodes": [
+        100
+      ],
+      "kind": "divergence",
+      "chapters": "323",
+      "note": "Kanzenshuu marks ch 323 p.1-11 as adapted in ALTERED FORM: in the manga Frieza's Nova Strike drives Goku into the sea, in the anime it drives him underground, which is what sends Gohan back to the battlefield for the anime-original Gohan-vs-Frieza fight that fills the episode's second half."
+    }
+  ],
+  "type_corrections": [
+    {
+      "episodes": [
+        100
+      ],
+      "type": "mixed",
+      "note": "Mistyped as filler. Kanzenshuu's Corresponding block is 'Chapter 323 (Pages 1-11 ~ Altered Form)' + 'Half Filler', i.e. roughly half the episode is manga - eleven pages, far past the <=~5-page sliver line. The Dragon Universe wiki infobox reads manga = Chapter #323 (its field is blank for the genuinely chapterless eps 39/40/42/43/274). dragonball.fandom's page has no filler statement, its summary is straight manga plot (Kamehameha struggle, Mr. Popo's wish, Shenron's revival, Guru's death) and it lists only 'Differences from the manga'. AFL alone types it pure filler - see flags.",
+      "sources": [
+        "https://www.kanzenshuu.com/episode/dbz/eps-100/",
+        "https://dragonballuniverse.fandom.com/wiki/DBZ100",
+        "https://dragonball.fandom.com/wiki/Gohan_Returns",
+        "https://www.kanzenshuu.com/manga/db/chp-323/"
+      ]
+    }
+  ],
+  "repairs": [
+    {
+      "episode": 39,
+      "field": "end_chapter",
+      "old": 246,
+      "new": null,
+      "why": "A1 + sliver ruling. Correctly-typed filler (AFL pure filler; Dragon Universe wiki manga field empty; fandom 'Differences from the manga' says the mental-image training, Goku's hospital training and the Mirror Spaceship encounter are all anime-exclusive). Kanzenshuu's Corresponding block is 'Chapter 246 (Pages 1-4)' + 'Mostly Filler' - a 4-page cutaway of Vegeta in the medical machine. Null end_chapter, start_chapter, chapters_adapted and the continue point (246); the graft annotation keeps the page fact. AFG derivation tier: the row's source must be flipped to manual when this is applied or the next AFG re-derive restores it.",
+      "sources": [
+        "https://www.kanzenshuu.com/episode/dbz/eps-039/",
+        "https://www.animefillerlist.com/shows/dragon-ball-z",
+        "https://dragonball.fandom.com/wiki/Friends_or_Foes%3F_(uncut)",
+        "https://www.kanzenshuu.com/manga/db/chp-246/"
+      ]
+    },
+    {
+      "episode": 40,
+      "field": "end_chapter",
+      "old": 246,
+      "new": null,
+      "why": "A1 + sliver ruling. Kanzenshuu: 'Mostly Filler' + 'Chapter 246 (Pages 5-8)' - 4 pages. AFL pure filler; Dragon Universe manga field empty; fandom trivia: 'Though this episode is almost entirely filler, it serves as a de facto introduction of Frieza to the series, even though he did not appear until much later in the original manga.' Null anchor + continue point (246). AFG tier - flip source to manual on apply.",
+      "sources": [
+        "https://www.kanzenshuu.com/episode/dbz/eps-040/",
+        "https://www.animefillerlist.com/shows/dragon-ball-z",
+        "https://dragonball.fandom.com/wiki/Held_Captive",
+        "https://dragonballuniverse.fandom.com/wiki/DBZ040"
+      ]
+    },
+    {
+      "episode": 42,
+      "field": "end_chapter",
+      "old": 246,
+      "new": null,
+      "why": "A1 + sliver ruling. Kanzenshuu: 'Mostly Filler' + 'Chapter 246 (Page 9)' - ONE page. fandom: 'With the exception of the final scene where Vegeta leaves the Medical Machine, the entire events of this episode were exclusive to the anime.' AFL pure filler; Dragon Universe manga field empty. Null anchor + continue point (246). AFG tier - flip source to manual on apply.",
+      "sources": [
+        "https://www.kanzenshuu.com/episode/dbz/eps-042/",
+        "https://www.animefillerlist.com/shows/dragon-ball-z",
+        "https://dragonball.fandom.com/wiki/The_Search_Continues",
+        "https://dragonballuniverse.fandom.com/wiki/DBZ042"
+      ]
+    },
+    {
+      "episode": 43,
+      "field": "end_chapter",
+      "old": 246,
+      "new": null,
+      "why": "A1 + sliver ruling, borderline case - see flags. Kanzenshuu: 'Partial Filler' + 'Chapter 246 (Page 10)' then 'Half Filler' + 'Chapter 246 (Pages 11-End)', i.e. about 5 pages of a 14-page chapter split across two placements; Kanzenshuu's own synopsis for the episode is 100% Fake-Namek filler. AFL pure filler; Dragon Universe manga field empty; fandom: 'Bulma, Gohan and Krillin's adventure on Fake Namek is exclusive to the anime.' Null anchor (there is no stored continue point). AFG tier - flip source to manual on apply.",
+      "sources": [
+        "https://www.kanzenshuu.com/episode/dbz/eps-043/",
+        "https://www.animefillerlist.com/shows/dragon-ball-z",
+        "https://dragonball.fandom.com/wiki/A_Friendly_Surprise",
+        "https://dragonballuniverse.fandom.com/wiki/DBZ043"
+      ]
+    },
+    {
+      "episode": 125,
+      "field": "end_chapter",
+      "old": 336,
+      "new": null,
+      "why": "A1 + sliver ruling. Kanzenshuu: 'Mostly Filler' + 'Chapter 336 (Page 14)' - ONE page, the closing take-off. fandom states it outright twice: 'With the exception of the final scene where Goku, Gohan and Piccolo take off, the entire events of this episode were exclusive to the anime' and 'This is a filler episode that seems to be based on the cover to the title page to chapters 255 and 256'. AFL pure filler. Ch 336 p.1-13 is adapted in ep 123, so END 336 is already carried there and ep 126 starts at 337. Null anchor (no stored continue point). AFG tier - flip source to manual on apply.",
+      "sources": [
+        "https://www.kanzenshuu.com/episode/dbz/eps-125/",
+        "https://www.animefillerlist.com/shows/dragon-ball-z",
+        "https://dragonball.fandom.com/wiki/Goku%27s_Ordeal",
+        "https://www.kanzenshuu.com/manga/db/chp-336/"
+      ]
+    },
+    {
+      "episode": 274,
+      "field": "end_chapter",
+      "old": 506,
+      "new": null,
+      "why": "A1 + sliver ruling. Kanzenshuu: 'Mostly Filler' + 'Chapter 506 (Pages 8-9)' - 2 pages. fandom: 'With the exception of the final moments where Goku and Vegeta find their friends trapped in pods, the entire events of this episode were exclusive to the anime.' AFL pure filler; Dragon Universe manga field empty. Ep 273 covers 506 p.2-8 and ep 275 resumes at 506 p.9, so nulling costs no position. Null anchor + continue point (506). AFG tier - flip source to manual on apply.",
+      "sources": [
+        "https://www.kanzenshuu.com/episode/dbz/eps-274/",
+        "https://www.animefillerlist.com/shows/dragon-ball-z",
+        "https://dragonball.fandom.com/wiki/Mind_Trap",
+        "https://www.kanzenshuu.com/manga/db/chp-506/"
+      ]
+    }
+  ],
+  "structure": {
+    "notes": "Numbering identity confirmed for all seven target rows: our episode number, title and air date match Kanzenshuu's DBZ episode guide number, AFL's list and dragonball.fandom's infobox Number/Airdate exactly (ep 39 = 'Friends or Foes?' 1990-03-07 = fandom page 'Friends or Foes? (uncut)' Number 39 - note fandom also hosts 'Friends or Foes? (edited)', Number 29, which is the Ocean/Saban edited-dub numbering and must not be used). Chapter space is the original 519-chapter Dragon Ball numbering, matching the context DBZ chapter space; the fandom chapter pages give both (ch 246 = 'DBZ 52', ch 506 = 'DBZ 312') and Viz DBZ chapter N = original N+194. Volumes taken from the fandom chapter pages, which agree with the batch-14 verified tankobon table: ch 246 -> v21, ch 323 -> v27, ch 336 -> v28, ch 506 -> v42. Reverse cross-check (Kanzenshuu chapter pages and dragonball.fandom chapter pages independently) returned identical episode sets for all four chapters: 246 -> 39/40/42/43, 323 -> 100/101, 336 -> 123/125, 506 -> 272/273/274/275. Neighbouring anchors that carry the position after the nulls: ep 38 ends ch 245, ep 44 starts ch 247 (p.1-14), ep 123 covers ch 336 p.1-13, ep 126 starts ch 337, ep 273 covers ch 506 p.2-8, ep 275 resumes ch 506 p.9.",
+    "order_only": []
+  },
+  "flags_for_sean": [
+    "TIER: all six null repairs are on afg-source rows. Per rule 7 / the hikaru lesson, the apply must flip each row's source to manual (or the D1 MU_FRONTIER/AFG suppression must cover them) or the next AFG re-derive puts ch 246/336/506 straight back.",
+    "Ep 43 is the one borderline sliver: ch 246 p.10 plus p.11-End is about 5 pages of a 14-page chapter, and Kanzenshuu labels the second segment 'Half Filler' rather than 'Mostly Filler'. I ruled it a sliver (null) because AFL, the Dragon Universe wiki and dragonball.fandom all treat the episode as filler and Kanzenshuu's own synopsis for it is entirely Fake-Namek material. The alternative reading is a type correction to mixed with END 246. If you take that fork, ep 43 becomes the row that carries ch 246 and the graft annotation should be trimmed to eps 39/40/42.",
+    "Ep 100 type correction contradicts animefillerlist, which types it pure filler. Three sources say otherwise (Kanzenshuu 11 adapted pages + 'Half Filler'; Dragon Universe manga = Chapter #323; dragonball.fandom has no filler statement and a manga-plot summary). I went with the 3-1 majority, but the anchor must not be applied unless the type flips to mixed - an anchor on a filler row is exactly what A1 forbids.",
+    "The 39-43 'parked value' smell was real but benign in origin: it is not a copied value, it is genuinely the same chapter (246) sliced into five pieces across a filler arc. The defect was A1, not the chapter number.",
+    "Ch 246 becomes uncovered after the nulls - ep 38 ends 245, ep 44 starts 247. That is an honest pending gap across the Fake-Namek block, recorded in the graft annotation. Nothing to repair, but it will show as a hole in a coverage census."
+  ]
+}

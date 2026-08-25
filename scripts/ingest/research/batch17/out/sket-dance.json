@@ -1,0 +1,1356 @@
+{
+ "series_id": "sket-dance",
+ "summary": "The 77-episode TV run (2011-04-07 to 2012-09-27, one AniList entry) adapts SKET DANCE chapters 1-196 but NOT in reading order: it is an episodic gag adaptation that pairs an in-sequence chapter with a far-forward one on a regular basis (ep 28 = ch 102 alone, ep 35 = 53+121, ep 41 = 113+144, ep 60 = 126+169, ep 74 = 182+196). Measured as a set rather than a line, the run is near-exhaustive through ch 157 - every chapter 1-157 is animated except 68, 106, 139 and 151 (68 and 164 are character-popularity-poll results chapters, not story) - and from 158 onward it cherry-picks only 163, 167, 169, 174-180, 182 and 196. Fandom's per-episode 'manga' field and its reverse 'episodes' field on the chapter pages agree on 279 of 287 numbered chapters, and the whole chapter-number space was re-verified against en.wikipedia's chapter list by Japanese title (174 exact matches, 4 transliteration variants, zero off-by-one). Two rows typed filler in our DB (eps 26 and 32) demonstrably adapt numbered mainline chapters (180; 18 and 45), and the stored ep-77 anchor of ch 200 belongs to the 2013 OVA, not to the finale, which adapts ch 167.",
+ "anchors": [
+  {
+   "episode": 1,
+   "end_chapter": 1,
+   "start_chapter": 1,
+   "chapters_adapted": "1",
+   "volume": 1,
+   "confidence": "high",
+   "note": "adapts ch 1 in full (Teppei / 'Paint-Mask')",
+   "sources": [
+    "https://sketdance.fandom.com/wiki/The_Academy_SKETs",
+    "https://sketdance.fandom.com/wiki/Paint-Mask_%28chapter%29",
+    "https://en.wikipedia.org/wiki/List_of_Sket_Dance_episodes",
+    "https://en.wikipedia.org/wiki/List_of_Sket_Dance_chapters"
+   ]
+  },
+  {
+   "episode": 2,
+   "end_chapter": 4,
+   "start_chapter": 2,
+   "chapters_adapted": "2, 4",
+   "volume": 1,
+   "confidence": "high",
+   "note": "two segments: ch 4 (A-part, Peppermint Samurai) then ch 2 (B-part 'Ape Escape', billed on air as ep 2.5); END is ch 4 in running order",
+   "sources": [
+    "https://sketdance.fandom.com/wiki/Peppermint_Samurai_%28episode%29",
+    "https://sketdance.fandom.com/wiki/Peppermint_Samurai_%28chapter%29",
+    "https://ja.wikipedia.org/wiki/SKET_DANCE",
+    "https://en.wikipedia.org/wiki/List_of_Sket_Dance_chapters"
+   ]
+  },
+  {
+   "episode": 3,
+   "end_chapter": 6,
+   "start_chapter": 5,
+   "chapters_adapted": "5-6",
+   "volume": 1,
+   "confidence": "high",
+   "note": "Onihime two-parter, complete",
+   "sources": [
+    "https://sketdance.fandom.com/wiki/The_Legendary_Onihime_%28episode%29",
+    "https://sketdance.fandom.com/wiki/Onihime_and_the_Crowbar",
+    "https://en.wikipedia.org/wiki/List_of_Sket_Dance_episodes",
+    "https://en.wikipedia.org/wiki/List_of_Sket_Dance_chapters"
+   ]
+  },
+  {
+   "episode": 4,
+   "end_chapter": 13,
+   "start_chapter": 7,
+   "chapters_adapted": "7, 13",
+   "volume": 2,
+   "confidence": "high",
+   "note": "ch 7 (Prince of the Hill) + ch 13 (Finding Pelorin); episode title is a splice of both chapter titles",
+   "sources": [
+    "https://sketdance.fandom.com/wiki/Romantic%21_Finding_the_Hilltop_Pelolin%21",
+    "https://sketdance.fandom.com/wiki/Finding_Pelorin",
+    "https://ja.wikipedia.org/wiki/SKET_DANCE",
+    "https://en.wikipedia.org/wiki/List_of_Sket_Dance_chapters"
+   ]
+  },
+  {
+   "episode": 5,
+   "end_chapter": 23,
+   "start_chapter": 3,
+   "chapters_adapted": "3, 10 (p.1-2, 6-7), 23",
+   "volume": 3,
+   "confidence": "medium",
+   "note": "ch 3 A-part; a 4-page sliver of ch 10 used as connective tissue; ch 23 (Spider's Association) B-part. END = 23 in running order",
+   "sources": [
+    "https://sketdance.fandom.com/wiki/The_Ghost_of_the_Incinerator_%28episode%29",
+    "https://sketdance.fandom.com/wiki/The_Spider%27s_Association",
+    "https://en.wikipedia.org/wiki/List_of_Sket_Dance_chapters"
+   ]
+  },
+  {
+   "episode": 6,
+   "end_chapter": 12,
+   "start_chapter": 10,
+   "chapters_adapted": "10 (p.3-5, 8-19), 11-12",
+   "volume": 2,
+   "confidence": "high",
+   "note": "picks up the bulk of ch 10 (Student Council Executive) then 11-12; START = 10 by majority rule",
+   "sources": [
+    "https://sketdance.fandom.com/wiki/Even_Onihime_Has_Tears_in_Her_Eyes",
+    "https://sketdance.fandom.com/wiki/Tears_Even_in_the_Onihime%27s_Eyes_%28chapter%29",
+    "https://ja.wikipedia.org/wiki/SKET_DANCE",
+    "https://en.wikipedia.org/wiki/List_of_Sket_Dance_chapters"
+   ]
+  },
+  {
+   "episode": 7,
+   "end_chapter": 9,
+   "start_chapter": 8,
+   "chapters_adapted": "8-9",
+   "volume": 2,
+   "confidence": "high",
+   "note": "Misaki/Kotaro + Summer Sakura",
+   "sources": [
+    "https://sketdance.fandom.com/wiki/Summer_Sakura_%28episode%29",
+    "https://sketdance.fandom.com/wiki/Summer_Sakura_%28chapter%29",
+    "https://ja.wikipedia.org/wiki/SKET_DANCE",
+    "https://en.wikipedia.org/wiki/List_of_Sket_Dance_chapters"
+   ]
+  },
+  {
+   "episode": 8,
+   "end_chapter": 20,
+   "start_chapter": 19,
+   "chapters_adapted": "19-20",
+   "volume": 3,
+   "confidence": "high",
+   "note": "ch 19 Genesis Generation + ch 20 Momoka's seiyu aspirations",
+   "sources": [
+    "https://sketdance.fandom.com/wiki/Nervous_%26_Genesis",
+    "https://sketdance.fandom.com/wiki/Momoka%27s_Seiy%C5%AB_Aspirations",
+    "https://en.wikipedia.org/wiki/List_of_Sket_Dance_episodes",
+    "https://en.wikipedia.org/wiki/List_of_Sket_Dance_chapters"
+   ]
+  },
+  {
+   "episode": 9,
+   "end_chapter": 24,
+   "start_chapter": 14,
+   "chapters_adapted": "14, 24",
+   "volume": 3,
+   "confidence": "high",
+   "note": "ch 14 (Little Boss) + ch 24 (Sket Dan Manga Project / mangaka Enta)",
+   "sources": [
+    "https://sketdance.fandom.com/wiki/Enta%27ll_do_it%21",
+    "https://sketdance.fandom.com/wiki/The_Sket_Dan_Manga_Project",
+    "https://en.wikipedia.org/wiki/List_of_Sket_Dance_episodes",
+    "https://en.wikipedia.org/wiki/List_of_Sket_Dance_chapters"
+   ]
+  },
+  {
+   "episode": 10,
+   "end_chapter": 17,
+   "start_chapter": 15,
+   "chapters_adapted": "15-17",
+   "volume": 2,
+   "confidence": "high",
+   "note": "cursed-DVD three-parter, complete",
+   "sources": [
+    "https://sketdance.fandom.com/wiki/You_Mustn%27t_Watch_It_%28episode%29",
+    "https://sketdance.fandom.com/wiki/Don%27t_Watch_It",
+    "https://en.wikipedia.org/wiki/List_of_Sket_Dance_episodes",
+    "https://en.wikipedia.org/wiki/List_of_Sket_Dance_chapters"
+   ]
+  },
+  {
+   "episode": 11,
+   "end_chapter": 28,
+   "start_chapter": 25,
+   "chapters_adapted": "25-27, 28 (p.1-8)",
+   "volume": 4,
+   "confidence": "high",
+   "note": "Gachinko Vivage Battle arc opening; ends mid-ch 28",
+   "sources": [
+    "https://sketdance.fandom.com/wiki/Real-deal_Bibage_Battle",
+    "https://sketdance.fandom.com/wiki/Round_2_-_Spirit_Fighter",
+    "https://en.wikipedia.org/wiki/List_of_Sket_Dance_episodes",
+    "https://en.wikipedia.org/wiki/List_of_Sket_Dance_chapters"
+   ]
+  },
+  {
+   "episode": 12,
+   "end_chapter": 31,
+   "start_chapter": 28,
+   "chapters_adapted": "28 (p.9-19), 29-31",
+   "volume": 4,
+   "confidence": "high",
+   "note": "resumes ch 28 at p.9 (the bulk) so START = 28",
+   "sources": [
+    "https://sketdance.fandom.com/wiki/Shooting_Gang_Star_Etc...",
+    "https://sketdance.fandom.com/wiki/SCM",
+    "https://en.wikipedia.org/wiki/List_of_Sket_Dance_episodes",
+    "https://en.wikipedia.org/wiki/List_of_Sket_Dance_chapters"
+   ]
+  },
+  {
+   "episode": 13,
+   "end_chapter": 35,
+   "start_chapter": 32,
+   "chapters_adapted": "32-35",
+   "volume": 4,
+   "confidence": "high",
+   "note": "Vivage Battle arc finale (en.wp calls it 'the first Arc finale')",
+   "sources": [
+    "https://sketdance.fandom.com/wiki/Pixie_Garden_%28episode%29",
+    "https://sketdance.fandom.com/wiki/The_Curtain_Falls%21%21",
+    "https://en.wikipedia.org/wiki/List_of_Sket_Dance_episodes",
+    "https://en.wikipedia.org/wiki/List_of_Sket_Dance_chapters"
+   ]
+  },
+  {
+   "episode": 14,
+   "end_chapter": 22,
+   "start_chapter": 21,
+   "chapters_adapted": "21-22",
+   "volume": 3,
+   "confidence": "high",
+   "note": "Producing Uchida two-parter",
+   "sources": [
+    "https://sketdance.fandom.com/wiki/Producing_Uchida_%28episode%29",
+    "https://sketdance.fandom.com/wiki/So_Many_Friends_%28chapter%29",
+    "https://en.wikipedia.org/wiki/List_of_Sket_Dance_episodes",
+    "https://en.wikipedia.org/wiki/List_of_Sket_Dance_chapters"
+   ]
+  },
+  {
+   "episode": 15,
+   "end_chapter": 48,
+   "start_chapter": 36,
+   "chapters_adapted": "36, 48",
+   "volume": 6,
+   "confidence": "high",
+   "note": "ch 36 (Mistaken Angel) + far-forward graft of ch 48 (marriage-interview)",
+   "sources": [
+    "https://sketdance.fandom.com/wiki/Confounded_Angel_the_13th",
+    "https://sketdance.fandom.com/wiki/The_Great_Marriage_Interview_Opera-son",
+    "https://en.wikipedia.org/wiki/List_of_Sket_Dance_episodes",
+    "https://en.wikipedia.org/wiki/List_of_Sket_Dance_chapters"
+   ]
+  },
+  {
+   "episode": 16,
+   "end_chapter": 50,
+   "start_chapter": 49,
+   "chapters_adapted": "49, 50 (p.1-2)",
+   "volume": 6,
+   "confidence": "high",
+   "note": "Kaimei Rock Festival; ends 2 pages into ch 50",
+   "sources": [
+    "https://sketdance.fandom.com/wiki/Kaimei_Rock_Festival_%28episode%29",
+    "https://sketdance.fandom.com/wiki/Sketchbook_%28chapter%29",
+    "https://ja.wikipedia.org/wiki/SKET_DANCE",
+    "https://en.wikipedia.org/wiki/List_of_Sket_Dance_chapters"
+   ]
+  },
+  {
+   "episode": 17,
+   "end_chapter": 51,
+   "start_chapter": 50,
+   "chapters_adapted": "50 (p.3-19), 51",
+   "volume": 6,
+   "confidence": "high",
+   "note": "resumes ch 50 at p.3 (the bulk) so START = 50",
+   "sources": [
+    "https://sketdance.fandom.com/wiki/Sketchbook_%28episode%29",
+    "https://sketdance.fandom.com/wiki/Funny_Bunny_%28chapter%29",
+    "https://en.wikipedia.org/wiki/List_of_Sket_Dance_episodes",
+    "https://en.wikipedia.org/wiki/List_of_Sket_Dance_chapters"
+   ]
+  },
+  {
+   "episode": 18,
+   "end_chapter": 54,
+   "start_chapter": 54,
+   "chapters_adapted": "54; vol-3 omake",
+   "volume": 7,
+   "confidence": "high",
+   "note": "ch 54 (Hyperion) plus an unnumbered volume-3 omake segment (fandom links 'Volume 3 Omake'; the only vol-3 special on Wikipedia is 'Melancholic Rendezvous')",
+   "sources": [
+    "https://sketdance.fandom.com/wiki/This_is_a_Man%27s_Hyperion_%28episode%29",
+    "https://sketdance.fandom.com/wiki/This_is_a_Man%27s_Hyperion_%28chapter%29",
+    "https://ja.wikipedia.org/wiki/SKET_DANCE",
+    "https://en.wikipedia.org/wiki/List_of_Sket_Dance_chapters"
+   ]
+  },
+  {
+   "episode": 19,
+   "end_chapter": 64,
+   "start_chapter": 46,
+   "chapters_adapted": "46, 64",
+   "volume": 8,
+   "confidence": "high",
+   "note": "ch 46 (100 Hairstyles) + ch 64 (Panic at the Principal's Office); episode title splices both chapter titles",
+   "sources": [
+    "https://sketdance.fandom.com/wiki/Panic_and_100_Haircuts_in_the_Principal%27s_Office_and_Clubroom",
+    "https://sketdance.fandom.com/wiki/Panic_in_the_Principal%27s_Office",
+    "https://ja.wikipedia.org/wiki/SKET_DANCE",
+    "https://en.wikipedia.org/wiki/List_of_Sket_Dance_chapters"
+   ]
+  },
+  {
+   "episode": 20,
+   "end_chapter": 66,
+   "start_chapter": 66,
+   "chapters_adapted": "66",
+   "volume": 8,
+   "confidence": "high",
+   "note": "single chapter",
+   "sources": [
+    "https://sketdance.fandom.com/wiki/Group_Blind_Date_Tsukkomi_%28episode%29",
+    "https://sketdance.fandom.com/wiki/Group_Blind_Date_Tsukkomi_%28chapter%29",
+    "https://ja.wikipedia.org/wiki/SKET_DANCE",
+    "https://en.wikipedia.org/wiki/List_of_Sket_Dance_chapters"
+   ]
+  },
+  {
+   "episode": 21,
+   "end_chapter": 39,
+   "start_chapter": 39,
+   "chapters_adapted": "39; vol-5 special 'Resort Dance'",
+   "volume": 5,
+   "confidence": "high",
+   "note": "ch 39 (Otaku and Occult) plus the unnumbered vol-5 special 'Resort Dance'",
+   "sources": [
+    "https://sketdance.fandom.com/wiki/Otaku_and_Occult_%28episode%29",
+    "https://sketdance.fandom.com/wiki/Otaku_and_Occult_%28chapter%29",
+    "https://ja.wikipedia.org/wiki/SKET_DANCE",
+    "https://en.wikipedia.org/wiki/List_of_Sket_Dance_chapters"
+   ]
+  },
+  {
+   "episode": 22,
+   "end_chapter": 40,
+   "start_chapter": 38,
+   "chapters_adapted": "38, 40",
+   "volume": 5,
+   "confidence": "high",
+   "note": "ch 38 (A New Take on Momotaro) + ch 40 (Running Home Run)",
+   "sources": [
+    "https://sketdance.fandom.com/wiki/Running_Home_Run_%28Revised%29",
+    "https://sketdance.fandom.com/wiki/Running_Home_Run",
+    "https://ja.wikipedia.org/wiki/SKET_DANCE",
+    "https://en.wikipedia.org/wiki/List_of_Sket_Dance_chapters"
+   ]
+  },
+  {
+   "episode": 23,
+   "end_chapter": 37,
+   "start_chapter": 37,
+   "chapters_adapted": "37",
+   "volume": 5,
+   "confidence": "high",
+   "note": "single chapter",
+   "sources": [
+    "https://sketdance.fandom.com/wiki/The_Little_Princess_in_High_Spirits_%28episode%29",
+    "https://sketdance.fandom.com/wiki/The_Little_Princess_in_High_Spirits_%28chapter%29",
+    "https://ja.wikipedia.org/wiki/SKET_DANCE",
+    "https://en.wikipedia.org/wiki/List_of_Sket_Dance_chapters"
+   ]
+  },
+  {
+   "episode": 24,
+   "end_chapter": 42,
+   "start_chapter": 41,
+   "chapters_adapted": "41, 42 (opening portion)",
+   "volume": 5,
+   "confidence": "high",
+   "note": "ch 41 (Younger Brother, Older Brother) then opens the Switch Off flashback (ch 42); ends mid-42",
+   "sources": [
+    "https://sketdance.fandom.com/wiki/Brothers_%28episode%29",
+    "https://sketdance.fandom.com/wiki/Switch_Off%2C_Part_1",
+    "https://en.wikipedia.org/wiki/List_of_Sket_Dance_episodes",
+    "https://en.wikipedia.org/wiki/List_of_Sket_Dance_chapters"
+   ]
+  },
+  {
+   "episode": 25,
+   "end_chapter": 44,
+   "start_chapter": 42,
+   "chapters_adapted": "42-44",
+   "volume": 5,
+   "confidence": "high",
+   "note": "Switch Off three-parter completed; START = 42 (re-entered, bulk here). en.wp: 'the second Arc finale'",
+   "sources": [
+    "https://sketdance.fandom.com/wiki/Switch_Off_%28episode%29",
+    "https://sketdance.fandom.com/wiki/Switch_Off%2C_Part_3",
+    "https://ja.wikipedia.org/wiki/SKET_DANCE",
+    "https://en.wikipedia.org/wiki/List_of_Sket_Dance_chapters"
+   ]
+  },
+  {
+   "episode": 27,
+   "end_chapter": 65,
+   "start_chapter": 63,
+   "chapters_adapted": "63, 65",
+   "volume": 8,
+   "confidence": "high",
+   "note": "ch 63 (Bad Scientist) + ch 65 (Oneesan Sensei); ch 64 was taken by ep 19",
+   "sources": [
+    "https://sketdance.fandom.com/wiki/Together_with_Oneesan_and_a_Bad_Scientist",
+    "https://sketdance.fandom.com/wiki/Oneesan_Sensei",
+    "https://ja.wikipedia.org/wiki/SKET_DANCE",
+    "https://en.wikipedia.org/wiki/List_of_Sket_Dance_chapters"
+   ]
+  },
+  {
+   "episode": 28,
+   "end_chapter": 102,
+   "start_chapter": 102,
+   "chapters_adapted": "102",
+   "volume": 12,
+   "confidence": "high",
+   "note": "single far-forward chapter (Shinba Michiru's Elegant Cooking) pulled ~57 chapters ahead of neighbouring episodes",
+   "sources": [
+    "https://sketdance.fandom.com/wiki/Shinba_Michiru%27s_Elegant_Cooking_%28episode%29",
+    "https://sketdance.fandom.com/wiki/Shinba_Michiru%27s_Elegant_Cooking",
+    "https://ja.wikipedia.org/wiki/SKET_DANCE",
+    "https://en.wikipedia.org/wiki/List_of_Sket_Dance_chapters"
+   ]
+  },
+  {
+   "episode": 29,
+   "end_chapter": 75,
+   "start_chapter": 47,
+   "chapters_adapted": "47, 75",
+   "volume": 9,
+   "confidence": "high",
+   "note": "ch 47 (Mistaken Angel's Second Coming) + far-forward ch 75 (Food Fighter Captain)",
+   "sources": [
+    "https://sketdance.fandom.com/wiki/The_Confounded_Angel%27s_Second_Coming_%28episode%29",
+    "https://sketdance.fandom.com/wiki/Food_Fighter_Captain",
+    "https://en.wikipedia.org/wiki/List_of_Sket_Dance_episodes",
+    "https://en.wikipedia.org/wiki/List_of_Sket_Dance_chapters"
+   ]
+  },
+  {
+   "episode": 30,
+   "end_chapter": 67,
+   "start_chapter": 52,
+   "chapters_adapted": "52, 67",
+   "volume": 8,
+   "confidence": "high",
+   "note": "ch 52 + ch 67 (Gatcha Gatcha Trader)",
+   "sources": [
+    "https://sketdance.fandom.com/wiki/Turned_the_Crank-nyora%E2%98%86",
+    "https://sketdance.fandom.com/wiki/Gatcha_Gatcha_Trader",
+    "https://ja.wikipedia.org/wiki/SKET_DANCE",
+    "https://en.wikipedia.org/wiki/List_of_Sket_Dance_chapters"
+   ]
+  },
+  {
+   "episode": 31,
+   "end_chapter": 96,
+   "start_chapter": 72,
+   "chapters_adapted": "72, 96",
+   "volume": 11,
+   "confidence": "high",
+   "note": "ch 72 (Fashionable Samurai) + far-forward ch 96 (Exciting Exercise)",
+   "sources": [
+    "https://sketdance.fandom.com/wiki/Samurai_and_Clothing",
+    "https://sketdance.fandom.com/wiki/Exciting_Exercise",
+    "https://en.wikipedia.org/wiki/List_of_Sket_Dance_episodes",
+    "https://en.wikipedia.org/wiki/List_of_Sket_Dance_chapters"
+   ]
+  },
+  {
+   "episode": 33,
+   "end_chapter": 71,
+   "start_chapter": 69,
+   "chapters_adapted": "69-71",
+   "volume": 8,
+   "confidence": "high",
+   "note": "Glass Man three-parter, complete",
+   "sources": [
+    "https://sketdance.fandom.com/wiki/The_Glass_Man_%28episode%29",
+    "https://sketdance.fandom.com/wiki/The_Glass_Maiden",
+    "https://en.wikipedia.org/wiki/List_of_Sket_Dance_episodes",
+    "https://en.wikipedia.org/wiki/List_of_Sket_Dance_chapters"
+   ]
+  },
+  {
+   "episode": 34,
+   "end_chapter": 73,
+   "start_chapter": 55,
+   "chapters_adapted": "55, 73",
+   "volume": 9,
+   "confidence": "high",
+   "note": "ch 55 (Hetappi Manga Kenkyujo R) + ch 73 (Do Your Best, Oneesan!)",
+   "sources": [
+    "https://sketdance.fandom.com/wiki/Oneesan%2C_Kenky%C5%ABjo_R%2C_Do_Your_Best%21",
+    "https://sketdance.fandom.com/wiki/Do_Your_Best%2C_Oneesan%21",
+    "https://ja.wikipedia.org/wiki/SKET_DANCE",
+    "https://en.wikipedia.org/wiki/List_of_Sket_Dance_chapters"
+   ]
+  },
+  {
+   "episode": 35,
+   "end_chapter": 121,
+   "start_chapter": 53,
+   "chapters_adapted": "53, 121",
+   "volume": 14,
+   "confidence": "high",
+   "note": "ch 53 (Quiz Warrior Enigman) + a large forward graft of ch 121 (Masked Love, vol 14)",
+   "sources": [
+    "https://sketdance.fandom.com/wiki/Quiz_Warrior_Enigman_%28episode%29",
+    "https://sketdance.fandom.com/wiki/Masked_Love",
+    "https://en.wikipedia.org/wiki/List_of_Sket_Dance_episodes",
+    "https://en.wikipedia.org/wiki/List_of_Sket_Dance_chapters"
+   ]
+  },
+  {
+   "episode": 36,
+   "end_chapter": 59,
+   "start_chapter": 56,
+   "chapters_adapted": "56-58, 59 (p.1-3)",
+   "volume": 7,
+   "confidence": "high",
+   "note": "OGRESS arc part 1; ends 3 pages into ch 59",
+   "sources": [
+    "https://sketdance.fandom.com/wiki/OGRESS_%28episode%29",
+    "https://sketdance.fandom.com/wiki/OGRESS_%283%29",
+    "https://ja.wikipedia.org/wiki/SKET_DANCE",
+    "https://en.wikipedia.org/wiki/List_of_Sket_Dance_chapters"
+   ]
+  },
+  {
+   "episode": 37,
+   "end_chapter": 62,
+   "start_chapter": 59,
+   "chapters_adapted": "59 (p.4-19), 60-62",
+   "volume": 7,
+   "confidence": "high",
+   "note": "OGRESS arc finale; START = 59 (bulk). en.wp: 'the third Arc finale'",
+   "sources": [
+    "https://sketdance.fandom.com/wiki/Summer_Breeze",
+    "https://sketdance.fandom.com/wiki/OGRESS_%286%29",
+    "https://en.wikipedia.org/wiki/List_of_Sket_Dance_episodes",
+    "https://en.wikipedia.org/wiki/List_of_Sket_Dance_chapters"
+   ]
+  },
+  {
+   "episode": 38,
+   "end_chapter": 77,
+   "start_chapter": 76,
+   "chapters_adapted": "76-77",
+   "volume": 9,
+   "confidence": "high",
+   "note": "Kigurumi Break two-parter",
+   "sources": [
+    "https://sketdance.fandom.com/wiki/Kigurumi_Break",
+    "https://sketdance.fandom.com/wiki/Kigurumi_Break%2C_Part_2",
+    "https://ja.wikipedia.org/wiki/SKET_DANCE",
+    "https://en.wikipedia.org/wiki/List_of_Sket_Dance_chapters"
+   ]
+  },
+  {
+   "episode": 39,
+   "end_chapter": 91,
+   "start_chapter": 91,
+   "chapters_adapted": "91",
+   "volume": 11,
+   "confidence": "high",
+   "note": "single chapter (Special Broken...); New Year framing added by the anime",
+   "sources": [
+    "https://sketdance.fandom.com/wiki/Special_Broken..._New_Year",
+    "https://sketdance.fandom.com/wiki/Special_Broken...",
+    "https://ja.wikipedia.org/wiki/SKET_DANCE",
+    "https://en.wikipedia.org/wiki/List_of_Sket_Dance_chapters"
+   ]
+  },
+  {
+   "episode": 40,
+   "end_chapter": 74,
+   "start_chapter": 74,
+   "chapters_adapted": "74; Biscuit Dance omake",
+   "volume": 9,
+   "confidence": "high",
+   "note": "ch 74 (Stakeout Blues) plus a Biscuit Dance chibi omake segment ('Sensei's Favorite'), an unnumbered volume special - NOT numbered ch 127 (see flags)",
+   "sources": [
+    "https://sketdance.fandom.com/wiki/Stakeout_Blues_%28episode%29",
+    "https://sketdance.fandom.com/wiki/Stakeout_Blues_%28chapter%29",
+    "https://ja.wikipedia.org/wiki/SKET_DANCE",
+    "https://en.wikipedia.org/wiki/List_of_Sket_Dance_chapters"
+   ]
+  },
+  {
+   "episode": 41,
+   "end_chapter": 144,
+   "start_chapter": 113,
+   "chapters_adapted": "113, 144",
+   "volume": 16,
+   "confidence": "high",
+   "note": "ch 113 (VS Student Council! Battle Q) + ch 144; episode title splices both chapter titles",
+   "sources": [
+    "https://sketdance.fandom.com/wiki/VS_the_Student_Council%21_A_Rare_Guy_Who_is_Anxious_About_a_Battle_Q",
+    "https://sketdance.fandom.com/wiki/A_Rare_Guy_Who_is_Anxious_About_a_Date",
+    "https://ja.wikipedia.org/wiki/SKET_DANCE",
+    "https://en.wikipedia.org/wiki/List_of_Sket_Dance_chapters"
+   ]
+  },
+  {
+   "episode": 42,
+   "end_chapter": 99,
+   "start_chapter": 78,
+   "chapters_adapted": "78, 99",
+   "volume": 11,
+   "confidence": "high",
+   "note": "ch 78 (Sudden Temptation) + ch 99 (Momoka's Road to Being a Stage Actress)",
+   "sources": [
+    "https://sketdance.fandom.com/wiki/Suddenly%2C_Momoka%27s_Road_to_Being_a_Stage_Actress",
+    "https://sketdance.fandom.com/wiki/Momoka%27s_Road_to_Being_a_Stage_Actress",
+    "https://ja.wikipedia.org/wiki/SKET_DANCE",
+    "https://en.wikipedia.org/wiki/List_of_Sket_Dance_chapters"
+   ]
+  },
+  {
+   "episode": 43,
+   "end_chapter": 80,
+   "start_chapter": 79,
+   "chapters_adapted": "79-80",
+   "volume": 9,
+   "confidence": "high",
+   "note": "Embarrassed Girl two-parter",
+   "sources": [
+    "https://sketdance.fandom.com/wiki/Embarrassed_Girl_%28episode%29",
+    "https://sketdance.fandom.com/wiki/Embarrassed_Girl%2C_Part_2",
+    "https://ja.wikipedia.org/wiki/SKET_DANCE",
+    "https://en.wikipedia.org/wiki/List_of_Sket_Dance_chapters"
+   ]
+  },
+  {
+   "episode": 44,
+   "end_chapter": 105,
+   "start_chapter": 105,
+   "chapters_adapted": "105",
+   "volume": 12,
+   "confidence": "high",
+   "note": "single chapter (Drop)",
+   "sources": [
+    "https://sketdance.fandom.com/wiki/Drop_%28episode%29",
+    "https://sketdance.fandom.com/wiki/Drop_%28chapter%29",
+    "https://ja.wikipedia.org/wiki/SKET_DANCE",
+    "https://en.wikipedia.org/wiki/List_of_Sket_Dance_chapters"
+   ]
+  },
+  {
+   "episode": 45,
+   "end_chapter": 108,
+   "start_chapter": 93,
+   "chapters_adapted": "93, 108",
+   "volume": 12,
+   "confidence": "high",
+   "note": "ch 93 (Oneesan is Popular?) + ch 108 (Whispered Instructions). NOTE fandom's ch-93 page misattributes it to ep 31; the ep-45 page, the episode title and both plot summaries put it here",
+   "sources": [
+    "https://sketdance.fandom.com/wiki/Whispered_Oneesan_Instruct-son",
+    "https://sketdance.fandom.com/wiki/Whispered_Instructions",
+    "https://ja.wikipedia.org/wiki/SKET_DANCE",
+    "https://en.wikipedia.org/wiki/List_of_Sket_Dance_chapters"
+   ]
+  },
+  {
+   "episode": 46,
+   "end_chapter": 83,
+   "start_chapter": 81,
+   "chapters_adapted": "81-83",
+   "volume": 10,
+   "confidence": "high",
+   "note": "Happy Birthday part 1 (ch 81 cold open + 82-83)",
+   "sources": [
+    "https://sketdance.fandom.com/wiki/Happy_Birthday%2C_Part_1",
+    "https://sketdance.fandom.com/wiki/Happy_Birthday_%282%29",
+    "https://ja.wikipedia.org/wiki/SKET_DANCE",
+    "https://en.wikipedia.org/wiki/List_of_Sket_Dance_chapters"
+   ]
+  },
+  {
+   "episode": 47,
+   "end_chapter": 86,
+   "start_chapter": 84,
+   "chapters_adapted": "84-86",
+   "volume": 10,
+   "confidence": "high",
+   "note": "Happy Birthday part 2",
+   "sources": [
+    "https://sketdance.fandom.com/wiki/Happy_Birthday%2C_Part_2",
+    "https://sketdance.fandom.com/wiki/Happy_Birthday_%285%29",
+    "https://ja.wikipedia.org/wiki/SKET_DANCE",
+    "https://en.wikipedia.org/wiki/List_of_Sket_Dance_chapters"
+   ]
+  },
+  {
+   "episode": 48,
+   "end_chapter": 90,
+   "start_chapter": 87,
+   "chapters_adapted": "87-90",
+   "volume": 10,
+   "confidence": "high",
+   "note": "Happy Rebirthday four-parter, complete",
+   "sources": [
+    "https://sketdance.fandom.com/wiki/Happy_Rebirthday",
+    "https://sketdance.fandom.com/wiki/Happy_Rebirthday_%284%29",
+    "https://ja.wikipedia.org/wiki/SKET_DANCE",
+    "https://en.wikipedia.org/wiki/List_of_Sket_Dance_chapters"
+   ]
+  },
+  {
+   "episode": 49,
+   "end_chapter": 123,
+   "start_chapter": 122,
+   "chapters_adapted": "122-123",
+   "volume": 14,
+   "confidence": "high",
+   "note": "Genesis World Grand Prix two-parter (forward graft from vol 14)",
+   "sources": [
+    "https://sketdance.fandom.com/wiki/Genesis_World_Grand_Prix",
+    "https://sketdance.fandom.com/wiki/Genesis_World_Grand_Prix%2C_Part_2",
+    "https://ja.wikipedia.org/wiki/SKET_DANCE",
+    "https://en.wikipedia.org/wiki/List_of_Sket_Dance_chapters"
+   ]
+  },
+  {
+   "episode": 50,
+   "end_chapter": 101,
+   "start_chapter": 94,
+   "chapters_adapted": "94, 101",
+   "volume": 12,
+   "confidence": "high",
+   "note": "ch 94 (Your Wish is My Command, Master) + ch 101 (Look Over Here for a Moment)",
+   "sources": [
+    "https://sketdance.fandom.com/wiki/Your_Wish_is_My_Command%2C_Master_%28episode%29",
+    "https://sketdance.fandom.com/wiki/Look_Over_Here_for_a_Moment",
+    "https://en.wikipedia.org/wiki/List_of_Sket_Dance_episodes",
+    "https://en.wikipedia.org/wiki/List_of_Sket_Dance_chapters"
+   ]
+  },
+  {
+   "episode": 51,
+   "end_chapter": 97,
+   "start_chapter": 92,
+   "chapters_adapted": "92, 97",
+   "volume": 11,
+   "confidence": "high",
+   "note": "ch 92 + ch 97 (Happy to Meet You). en.wp calls this 'the SKET Dance Season 1 finale' - internal season boundary, single AniList entry",
+   "sources": [
+    "https://sketdance.fandom.com/wiki/Happy_to_Meet_You_%28episode%29",
+    "https://sketdance.fandom.com/wiki/Happy_to_Meet_You_%28chapter%29",
+    "https://ja.wikipedia.org/wiki/SKET_DANCE",
+    "https://en.wikipedia.org/wiki/List_of_Sket_Dance_chapters"
+   ]
+  },
+  {
+   "episode": 52,
+   "end_chapter": 129,
+   "start_chapter": 128,
+   "chapters_adapted": "128-129",
+   "volume": 15,
+   "confidence": "high",
+   "note": "en.wp: 'the Season 2 premiere'; OP/ED change here. ch 128 (Twin-tail Tsundere Girl) + 129 (Fly! Hosuke)",
+   "sources": [
+    "https://sketdance.fandom.com/wiki/The_Twin-tail_Tsundere_Girl_%28episode%29",
+    "https://sketdance.fandom.com/wiki/Fly%21_H%C5%8Dsuke",
+    "https://en.wikipedia.org/wiki/List_of_Sket_Dance_episodes",
+    "https://en.wikipedia.org/wiki/List_of_Sket_Dance_chapters"
+   ]
+  },
+  {
+   "episode": 53,
+   "end_chapter": 146,
+   "start_chapter": 95,
+   "chapters_adapted": "95, 146",
+   "volume": 17,
+   "confidence": "high",
+   "note": "ch 95 (Koma-chan's Problem) + a forward graft of ch 146 (The Archangel's Ballad, vol 17)",
+   "sources": [
+    "https://sketdance.fandom.com/wiki/A_Graceful_Melody_for_Koma-chan_%28episode%29",
+    "https://sketdance.fandom.com/wiki/The_Archangel%27s_Ballad",
+    "https://en.wikipedia.org/wiki/List_of_Sket_Dance_episodes",
+    "https://en.wikipedia.org/wiki/List_of_Sket_Dance_chapters"
+   ]
+  },
+  {
+   "episode": 54,
+   "end_chapter": 104,
+   "start_chapter": 103,
+   "chapters_adapted": "103-104",
+   "volume": 12,
+   "confidence": "high",
+   "note": "Defeat The Fortune Teller two-parter",
+   "sources": [
+    "https://sketdance.fandom.com/wiki/Defeat_The_Fortune_Teller_%28episode%29",
+    "https://sketdance.fandom.com/wiki/Defeat_The_Fortune_Teller%2C_Part_2",
+    "https://ja.wikipedia.org/wiki/SKET_DANCE",
+    "https://en.wikipedia.org/wiki/List_of_Sket_Dance_chapters"
+   ]
+  },
+  {
+   "episode": 55,
+   "end_chapter": 107,
+   "start_chapter": 98,
+   "chapters_adapted": "98, 107",
+   "volume": 12,
+   "confidence": "high",
+   "note": "ch 98 + ch 107; episode title splices both chapter titles",
+   "sources": [
+    "https://sketdance.fandom.com/wiki/The_Man_Who_was_Called_Laughing_on_the_Outside%2C_but_the_Origami_God_on_the_Inside",
+    "https://sketdance.fandom.com/wiki/The_Man_Known_as_the_Origami_God",
+    "https://ja.wikipedia.org/wiki/SKET_DANCE",
+    "https://en.wikipedia.org/wiki/List_of_Sket_Dance_chapters"
+   ]
+  },
+  {
+   "episode": 56,
+   "end_chapter": 127,
+   "start_chapter": 124,
+   "chapters_adapted": "124, 127",
+   "volume": 15,
+   "confidence": "high",
+   "note": "ch 124 (May I Come Backstage?) + ch 127 (Biscuit Dance, a Fun Playtime Chapter) - en.wp notes 'about 6 minutes of Biscuit Dance'",
+   "sources": [
+    "https://sketdance.fandom.com/wiki/May_I_Come_Backstage%3F_%28episode%29",
+    "https://sketdance.fandom.com/wiki/Biscuit_Dance%2C_a_Fun_Playtime_Chapter",
+    "https://en.wikipedia.org/wiki/List_of_Sket_Dance_episodes",
+    "https://en.wikipedia.org/wiki/List_of_Sket_Dance_chapters"
+   ]
+  },
+  {
+   "episode": 57,
+   "end_chapter": 112,
+   "start_chapter": 110,
+   "chapters_adapted": "110-112",
+   "volume": 13,
+   "confidence": "high",
+   "note": "You've Got Mail! three-parter",
+   "sources": [
+    "https://sketdance.fandom.com/wiki/You%27ve_Got_Mail%21_%28episode%29",
+    "https://sketdance.fandom.com/wiki/You%27ve_Got_Mail%21_Part_3",
+    "https://ja.wikipedia.org/wiki/SKET_DANCE",
+    "https://en.wikipedia.org/wiki/List_of_Sket_Dance_chapters"
+   ]
+  },
+  {
+   "episode": 58,
+   "end_chapter": 120,
+   "start_chapter": 114,
+   "chapters_adapted": "114, 120",
+   "volume": 14,
+   "confidence": "high",
+   "note": "ch 114 (Invisible Man Exposed!) + ch 120 (Stop! Jubanni)",
+   "sources": [
+    "https://sketdance.fandom.com/wiki/Stop%21_Invisible_Man-kun",
+    "https://sketdance.fandom.com/wiki/Stop%21_Jubanni",
+    "https://ja.wikipedia.org/wiki/SKET_DANCE",
+    "https://en.wikipedia.org/wiki/List_of_Sket_Dance_chapters"
+   ]
+  },
+  {
+   "episode": 59,
+   "end_chapter": 119,
+   "start_chapter": 116,
+   "chapters_adapted": "116-119",
+   "volume": 14,
+   "confidence": "high",
+   "note": "Tsubaki and Daisy four-parter, complete",
+   "sources": [
+    "https://sketdance.fandom.com/wiki/Tsubaki_and_Daisy_%28episode%29",
+    "https://sketdance.fandom.com/wiki/Tsubaki_and_Daisy_%284%29",
+    "https://ja.wikipedia.org/wiki/SKET_DANCE",
+    "https://en.wikipedia.org/wiki/List_of_Sket_Dance_chapters"
+   ]
+  },
+  {
+   "episode": 60,
+   "end_chapter": 169,
+   "start_chapter": 126,
+   "chapters_adapted": "126, 169",
+   "volume": 19,
+   "confidence": "high",
+   "note": "ch 126 (Go Forth! Pelocan Girl) + a large forward graft of ch 169 (vol 19); episode title splices both chapter titles",
+   "sources": [
+    "https://sketdance.fandom.com/wiki/Go_Forth%21_The_Let%27s_Increase_Our_Powers_of_Concentration_Pelocan_Girl_Study_Meeting",
+    "https://sketdance.fandom.com/wiki/The_Let%27s_Work_Together_to_Increase_Our_Powers_of_Concentration_Study_Meeting",
+    "https://ja.wikipedia.org/wiki/SKET_DANCE",
+    "https://en.wikipedia.org/wiki/List_of_Sket_Dance_chapters"
+   ]
+  },
+  {
+   "episode": 61,
+   "end_chapter": 125,
+   "start_chapter": 115,
+   "chapters_adapted": "115, 125",
+   "volume": 14,
+   "confidence": "high",
+   "note": "ch 115 (The Manga Girl Goes Wild) + ch 125",
+   "sources": [
+    "https://sketdance.fandom.com/wiki/The_Manga_Girl_Goes_Wild_and_Holds_a_Meeting",
+    "https://sketdance.fandom.com/wiki/Fast_Reactions%2C_Doubts%2C_Meetings",
+    "https://en.wikipedia.org/wiki/List_of_Sket_Dance_episodes",
+    "https://en.wikipedia.org/wiki/List_of_Sket_Dance_chapters"
+   ]
+  },
+  {
+   "episode": 62,
+   "end_chapter": 132,
+   "start_chapter": 131,
+   "chapters_adapted": "131, 132",
+   "volume": 15,
+   "confidence": "high",
+   "note": "ch 131 (Skip!) + ch 132, opening the School Trip Rhapsody arc",
+   "sources": [
+    "https://sketdance.fandom.com/wiki/Skip%21_%28episode%29",
+    "https://sketdance.fandom.com/wiki/School_Trip_Rhapsody_%281%29",
+    "https://en.wikipedia.org/wiki/List_of_Sket_Dance_episodes",
+    "https://en.wikipedia.org/wiki/List_of_Sket_Dance_chapters"
+   ]
+  },
+  {
+   "episode": 63,
+   "end_chapter": 136,
+   "start_chapter": 133,
+   "chapters_adapted": "133-135, 136 (p.1-9)",
+   "volume": 16,
+   "confidence": "high",
+   "note": "School Trip Rhapsody part 1; ends 9 pages into ch 136",
+   "sources": [
+    "https://sketdance.fandom.com/wiki/School_Trip_Rhapsody%2C_Part_1",
+    "https://sketdance.fandom.com/wiki/School_Trip_Rhapsody_%285%29",
+    "https://ja.wikipedia.org/wiki/SKET_DANCE",
+    "https://en.wikipedia.org/wiki/List_of_Sket_Dance_chapters"
+   ]
+  },
+  {
+   "episode": 64,
+   "end_chapter": 145,
+   "start_chapter": 136,
+   "chapters_adapted": "136 (p.10-21), 137-138, 145",
+   "volume": 17,
+   "confidence": "medium",
+   "note": "School Trip arc conclusion (START = 136, bulk) plus the QUEST DANCE gag chapter (ch 145) as the tail segment",
+   "sources": [
+    "https://sketdance.fandom.com/wiki/School_Trip_Rhapsody%2C_Part_2",
+    "https://sketdance.fandom.com/wiki/QUEST_DANCE",
+    "https://en.wikipedia.org/wiki/List_of_Sket_Dance_chapters"
+   ]
+  },
+  {
+   "episode": 65,
+   "end_chapter": 174,
+   "start_chapter": 142,
+   "chapters_adapted": "142, 174",
+   "volume": 20,
+   "confidence": "high",
+   "note": "ch 142 + a forward graft of ch 174 (vol 20)",
+   "sources": [
+    "https://sketdance.fandom.com/wiki/The_Guy_Little_Sister_is_Interested_in_Interests_Her_Brother_%28episode%29",
+    "https://sketdance.fandom.com/wiki/Little_Sister%27s_Worries_Worry_Her_Brother",
+    "https://en.wikipedia.org/wiki/List_of_Sket_Dance_episodes",
+    "https://en.wikipedia.org/wiki/List_of_Sket_Dance_chapters"
+   ]
+  },
+  {
+   "episode": 66,
+   "end_chapter": 155,
+   "start_chapter": 143,
+   "chapters_adapted": "143, 155",
+   "volume": 18,
+   "confidence": "high",
+   "note": "screen order is ch 155 (Braviera mind-reader) then ch 143 (tsukkomi battle); END = 155 in running order",
+   "sources": [
+    "https://sketdance.fandom.com/wiki/Seeking_Out_Tsukkomi",
+    "https://sketdance.fandom.com/wiki/Figuring_Out_Each_Other%27s_Motives",
+    "https://ja.wikipedia.org/wiki/SKET_DANCE",
+    "https://en.wikipedia.org/wiki/List_of_Sket_Dance_chapters"
+   ]
+  },
+  {
+   "episode": 67,
+   "end_chapter": 140,
+   "start_chapter": 130,
+   "chapters_adapted": "130, 140",
+   "volume": 16,
+   "confidence": "high",
+   "note": "ch 130 (Tsubaki's Lame T-shirt Collection) + ch 140 (A Profound Offline Meeting); episode title splices both",
+   "sources": [
+    "https://sketdance.fandom.com/wiki/Tsubaki%27s_Lame_Deep_Meaning_T-Shirt",
+    "https://sketdance.fandom.com/wiki/A_Profound_Offline_Meeting",
+    "https://ja.wikipedia.org/wiki/SKET_DANCE",
+    "https://en.wikipedia.org/wiki/List_of_Sket_Dance_chapters"
+   ]
+  },
+  {
+   "episode": 68,
+   "end_chapter": 150,
+   "start_chapter": 149,
+   "chapters_adapted": "149-150",
+   "volume": 17,
+   "confidence": "high",
+   "note": "Operation Love Potion two-parter",
+   "sources": [
+    "https://sketdance.fandom.com/wiki/Operation_Love_Potion",
+    "https://sketdance.fandom.com/wiki/Operation_Love_Potion%2C_Part_2",
+    "https://ja.wikipedia.org/wiki/SKET_DANCE",
+    "https://en.wikipedia.org/wiki/List_of_Sket_Dance_chapters"
+   ]
+  },
+  {
+   "episode": 69,
+   "end_chapter": 141,
+   "start_chapter": 109,
+   "chapters_adapted": "109, 141",
+   "volume": 16,
+   "confidence": "high",
+   "note": "ch 109 (You Can't Change Fate) + ch 141 (Student Council recruitment manga)",
+   "sources": [
+    "https://sketdance.fandom.com/wiki/Poop_is_in_Heaven%2C_So_The_Student_Council_Come",
+    "https://sketdance.fandom.com/wiki/A_Record_of_the_Student_Council_Executives%27_Recruitment_Manga",
+    "https://en.wikipedia.org/wiki/List_of_Sket_Dance_episodes",
+    "https://en.wikipedia.org/wiki/List_of_Sket_Dance_chapters"
+   ]
+  },
+  {
+   "episode": 70,
+   "end_chapter": 148,
+   "start_chapter": 147,
+   "chapters_adapted": "147-148",
+   "volume": 17,
+   "confidence": "high",
+   "note": "ch 147 (For the Sake of Creating a Superior Campus) + ch 148 (The last day of president)",
+   "sources": [
+    "https://sketdance.fandom.com/wiki/The_Last_Day_of_President_%28episode%29",
+    "https://sketdance.fandom.com/wiki/The_last_day_of_president_%28chapter%29",
+    "https://ja.wikipedia.org/wiki/SKET_DANCE",
+    "https://en.wikipedia.org/wiki/List_of_Sket_Dance_chapters"
+   ]
+  },
+  {
+   "episode": 71,
+   "end_chapter": 175,
+   "start_chapter": 100,
+   "chapters_adapted": "100, 175",
+   "volume": 20,
+   "confidence": "high",
+   "note": "ch 100 (COMBAT DANCE, crab-and-monkey parody) + a forward graft of ch 175 (Visual Yearning)",
+   "sources": [
+    "https://sketdance.fandom.com/wiki/Genius_Poopman_Yearning",
+    "https://sketdance.fandom.com/wiki/Visual_Yearning",
+    "https://en.wikipedia.org/wiki/List_of_Sket_Dance_episodes",
+    "https://en.wikipedia.org/wiki/List_of_Sket_Dance_chapters"
+   ]
+  },
+  {
+   "episode": 72,
+   "end_chapter": 153,
+   "start_chapter": 152,
+   "chapters_adapted": "152, 153",
+   "volume": 17,
+   "confidence": "medium",
+   "note": "ch 152 (Chase Kagero!) + ch 153 (Treasurer Usami Hani)",
+   "sources": [
+    "https://sketdance.fandom.com/wiki/Chase_Kager%C5%8D%21_%28episode%29",
+    "https://sketdance.fandom.com/wiki/Treasurer_Usami_Hani",
+    "https://en.wikipedia.org/wiki/List_of_Sket_Dance_chapters"
+   ]
+  },
+  {
+   "episode": 73,
+   "end_chapter": 156,
+   "start_chapter": 154,
+   "chapters_adapted": "154, 156",
+   "volume": 18,
+   "confidence": "high",
+   "note": "ch 154 (peeping tom) + ch 156 (manga-club battle); ch 155 was used in ep 66",
+   "sources": [
+    "https://sketdance.fandom.com/wiki/The_Time_I_Fully_Came_to_Know_Peeping...",
+    "https://sketdance.fandom.com/wiki/The_Road_Roman_Takes",
+    "https://en.wikipedia.org/wiki/List_of_Sket_Dance_episodes",
+    "https://en.wikipedia.org/wiki/List_of_Sket_Dance_chapters"
+   ]
+  },
+  {
+   "episode": 74,
+   "end_chapter": 196,
+   "start_chapter": 182,
+   "chapters_adapted": "182, 196",
+   "volume": 22,
+   "confidence": "high",
+   "note": "ch 182 (The Food Fighter's Distress) + ch 196 (Paying a Visit to the Unyu Household!); episode title splices both chapter titles. Deepest reach of the TV run",
+   "sources": [
+    "https://sketdance.fandom.com/wiki/Food_Fighter_Home_Visit",
+    "https://sketdance.fandom.com/wiki/Paying_a_Visit_to_the_Uny%C5%AB_Household%21",
+    "https://ja.wikipedia.org/wiki/SKET_DANCE",
+    "https://en.wikipedia.org/wiki/List_of_Sket_Dance_chapters"
+   ]
+  },
+  {
+   "episode": 75,
+   "end_chapter": 178,
+   "start_chapter": 157,
+   "chapters_adapted": "157, 176-178",
+   "volume": 20,
+   "confidence": "high",
+   "note": "ch 157 (The Ninja, the Demon, and the Red Horns) + the SOLITUDE three-parter (176-178)",
+   "sources": [
+    "https://sketdance.fandom.com/wiki/SOLITUDE_%28episode%29",
+    "https://sketdance.fandom.com/wiki/SOLITUDE_%283%29",
+    "https://ja.wikipedia.org/wiki/SKET_DANCE",
+    "https://en.wikipedia.org/wiki/List_of_Sket_Dance_chapters"
+   ]
+  },
+  {
+   "episode": 76,
+   "end_chapter": 179,
+   "start_chapter": 163,
+   "chapters_adapted": "163, 179",
+   "volume": 20,
+   "confidence": "high",
+   "note": "screen order ch 179 (General Affairs Manager Kato Kiri) then ch 163 (Lovely Bunny Girl); END = 179. The episode's Japanese title reuses ch 147's title but the content is 179+163",
+   "sources": [
+    "https://sketdance.fandom.com/wiki/For_the_Sake_of_Creating_a_Superior_Campus%21%21",
+    "https://sketdance.fandom.com/wiki/General_Affairs_Manager_Kat%C5%8D_Kiri",
+    "https://en.wikipedia.org/wiki/List_of_Sket_Dance_episodes",
+    "https://en.wikipedia.org/wiki/List_of_Sket_Dance_chapters"
+   ]
+  },
+  {
+   "episode": 77,
+   "end_chapter": 167,
+   "start_chapter": 167,
+   "chapters_adapted": "167",
+   "volume": 19,
+   "confidence": "high",
+   "note": "final episode: adapts ch 167 (Saaya's confession). The Teppei/basketball framing that bookends ep 1 has no chapter counterpart - see type_corrections",
+   "sources": [
+    "https://sketdance.fandom.com/wiki/The_Campus_SKET_%28Then%29",
+    "https://sketdance.fandom.com/wiki/Makes_My_Heart_Pound",
+    "https://en.wikipedia.org/wiki/List_of_Sket_Dance_episodes",
+    "https://en.wikipedia.org/wiki/List_of_Sket_Dance_chapters"
+   ]
+  }
+ ],
+ "continue_points": [
+  {
+   "episode": 11,
+   "continue_chapter": 28,
+   "note": "ends 8 pages into ch 28 (Round 2 - Spirit Fighter); ep 12 resumes at p.9"
+  },
+  {
+   "episode": 16,
+   "continue_chapter": 50,
+   "note": "ends 2 pages into ch 50 (Sketchbook); ep 17 resumes at p.3"
+  },
+  {
+   "episode": 24,
+   "continue_chapter": 42,
+   "note": "opens ch 42 (Switch Off, Part 1) but ep 25 carries the bulk"
+  },
+  {
+   "episode": 36,
+   "continue_chapter": 59,
+   "note": "ends 3 pages into ch 59 (OGRESS (3)); ep 37 resumes at p.4"
+  },
+  {
+   "episode": 63,
+   "continue_chapter": 136,
+   "note": "ends 9 pages into ch 136 (School Trip Rhapsody (5)); ep 64 resumes at p.10"
+  },
+  {
+   "episode": 77,
+   "continue_chapter": 158,
+   "note": "honest resume after the whole TV run. Ch 158 ('Lonely Boy') begins the first sustained never-adapted stretch. Caveats a reader should be told: chs 68, 106, 139 and 151 were skipped earlier, and chs 163, 167, 169, 174-180, 182 and 196 will already be familiar from eps 26/60/65/71/74/75/76/77."
+  }
+ ],
+ "annotations": [
+  {
+   "episodes": [
+    1,
+    77
+   ],
+   "kind": "rearranged",
+   "chapters": "1-196",
+   "note": "the adaptation order is not the manga order: episode END chapters do not increase monotonically (ep 28=102 sits between ep 27=65 and ep 29=75; ep 74=196 precedes ep 75=178, ep 76=179 and ep 77=167). chapters_adapted on each anchor carries the exact set."
+  },
+  {
+   "episodes": [
+    15,
+    19,
+    28,
+    29,
+    31,
+    35,
+    41,
+    45,
+    49,
+    53,
+    60,
+    65,
+    69,
+    71,
+    74
+   ],
+   "kind": "graft",
+   "chapters": "48, 64, 102, 75, 96, 121, 144, 108, 122-123, 146, 169, 174, 141, 175, 182+196",
+   "note": "each of these episodes grafts a chapter (or pair) from well ahead of its neighbours onto an in-sequence A-part; the grafted chapter is usually the B-segment."
+  },
+  {
+   "episodes": [
+    26
+   ],
+   "kind": "side_story",
+   "chapters": "180",
+   "note": "SKET Dance x Gintama crossover. The A-half aired 2011-09-26 in Gintama's slot as a Gintama episode (adapting Gintama ch 349.5) and is NOT part of our 77-episode numbering; our ep 26 is the B-half and adapts SKET DANCE ch 180 ('SPIRIT DANCE', vol 20) in full."
+  },
+  {
+   "episodes": [
+    32
+   ],
+   "kind": "side_story",
+   "chapters": "18, 45",
+   "note": "adapts the two in-manga alternate-universe gag chapters 'Nusutto Dance - Chapter of the Falcon' (ch 18, vol 3) and 'Rocket Dance ~Encounter~' (ch 45, vol 6). Both are numbered mainline chapters even though the wiki marks their stories as in-universe non-canon."
+  },
+  {
+   "episodes": [
+    18,
+    21,
+    40
+   ],
+   "kind": "side_story",
+   "chapters": "unnumbered volume specials",
+   "note": "B-segments drawn from unnumbered volume omake, which en.wikipedia lists as 'Special' bullets outside the chapter numbering: ep 18 = a vol-3 omake, ep 21 = vol-5 special 'Resort Dance', ep 40 = a 'Biscuit Dance' chibi omake. Never convert these to mainline numbers."
+  },
+  {
+   "episodes": [
+    1,
+    77
+   ],
+   "kind": "abridged",
+   "chapters": "68, 106, 139, 151",
+   "note": "the only chapters below 158 the TV run never animates. Ch 68 is 'The First Ever Character Popularity Contest Results Announcement' (poll results, not story); 106 'Deka-Dance in a Circle', 139 'A Confusing Group of Friends', 151 'The Secret Story of the Creation of Kaimei High School's New Anthem'."
+  },
+  {
+   "episodes": [
+    77
+   ],
+   "kind": "partial",
+   "chapters": "167",
+   "note": "the finale adapts ch 167 (Saaya's confession) and wraps it in an anime-original bookend that brings back Teppei, the ch-1 client, for a basketball request. A search of all 297 chapter pages on the wiki finds no chapter besides ch 1 featuring Teppei and basketball."
+  }
+ ],
+ "type_corrections": [
+  {
+   "episodes": [
+    26
+   ],
+   "type": "canon",
+   "note": "currently filler (from animefillerlist, which classifies only eps 1-54 and calls this one Filler). It adapts numbered mainline chapter 180 'SPIRIT DANCE' (vol 20) in full: the fandom episode page's manga field says so, the fandom ch-180 page names ep 26 in reverse, en.wikipedia's chapter list carries ch 180 as SPIRIT DANCE in vol 20, and ja.wikipedia's episode table gives ep 26 the subtitle 'SPIRIT DANCE'. If accepted, the available anchor is end 180 / start 180 / vol 20 - deliberately withheld from anchors under A1 while the row is typed filler.",
+   "sources": [
+    "https://sketdance.fandom.com/wiki/SPIRIT_DANCE_%28episode%29",
+    "https://sketdance.fandom.com/wiki/SPIRIT_DANCE_%28chapter%29",
+    "https://en.wikipedia.org/wiki/List_of_Sket_Dance_chapters",
+    "https://ja.wikipedia.org/wiki/SKET_DANCE",
+    "https://www.animefillerlist.com/shows/sket-dance"
+   ]
+  },
+  {
+   "episodes": [
+    32
+   ],
+   "type": "canon",
+   "note": "currently filler (animefillerlist). It adapts numbered mainline chapters 18 and 45: fandom's ep-32 page lists both, the ch-18 and ch-45 pages name ep 32 in reverse, the ja.wikipedia subtitle is 'ヌスット・ダンス他' (= ch 18's title + 'etc.'), and en.wikipedia's episode summary describes both segments ('The Ninja squad Thief-dan ... Then Rocket Dance blasts off into outer-space'). AFL most likely typed it filler because the two chapters are in-universe AU gag stories - but they are collected, numbered chapters. If accepted, the available anchor is end 45 / start 18 / chapters '18, 45' / vol 6.",
+   "sources": [
+    "https://sketdance.fandom.com/wiki/Nusutto_Dance%2C_etc.",
+    "https://sketdance.fandom.com/wiki/Nusutto_Dance_-_Chapter_of_the_Falcon",
+    "https://en.wikipedia.org/wiki/List_of_Sket_Dance_episodes",
+    "https://en.wikipedia.org/wiki/List_of_Sket_Dance_chapters",
+    "https://www.animefillerlist.com/shows/sket-dance"
+   ]
+  },
+  {
+   "episodes": [
+    77
+   ],
+   "type": "mixed",
+   "note": "currently canon. It does adapt ch 167, but roughly half the runtime is an anime-original epilogue: Teppei (the ch-1 client) returns with a basketball request that exists in no chapter. Evidence is one positive (fandom's ep-77 infobox lists ch 167 and nothing else for a full episode) plus one exhaustive negative (no chapter page among 297 mentions Teppei and basketball except ch 1). Weaker than the other two corrections - flagged.",
+   "sources": [
+    "https://sketdance.fandom.com/wiki/The_Campus_SKET_%28Then%29",
+    "https://sketdance.fandom.com/wiki/Makes_My_Heart_Pound",
+    "https://en.wikipedia.org/wiki/List_of_Sket_Dance_episodes"
+   ]
+  }
+ ],
+ "repairs": [
+  {
+   "episode": 77,
+   "field": "end_chapter",
+   "old": 200,
+   "new": 167,
+   "why": "chs 198-200 are what the 2013 OVA adapts ('The Sister Who is Worried About Her Brother...' Parts 1-3, released 2013-02-04), not the TV finale. The OVA is not a row in our 77-episode numbering, so ch 200 has bled onto ep 77. The finale adapts ch 167 'Makes My Heart Pound' / ドキドキする (vol 19): fandom's ep-77 infobox says so and fandom's ch-167 page names ep 77 in reverse; en.wikipedia's ep-77 summary (Saaya's confession) matches ch 167's content. Existing row is source=mu, so per the hikaru contract the applied repair must flip the row to source=manual or the next mu re-derive will erase it.",
+   "sources": [
+    "https://sketdance.fandom.com/wiki/The_Campus_SKET_%28Then%29",
+    "https://sketdance.fandom.com/wiki/Makes_My_Heart_Pound",
+    "https://sketdance.fandom.com/wiki/Sket_Dance_OVA",
+    "https://en.wikipedia.org/wiki/List_of_Sket_Dance_chapters"
+   ]
+  },
+  {
+   "episode": 77,
+   "field": "volume",
+   "old": 23,
+   "new": 19,
+   "why": "follows from end_chapter 200 -> 167; en.wikipedia's chapter list puts ch 167 in vol 19 (163-171) and ch 200 in vol 23 (199-207). Same source/manual-tier caveat as above.",
+   "sources": [
+    "https://en.wikipedia.org/wiki/List_of_Sket_Dance_chapters",
+    "https://sketdance.fandom.com/wiki/Makes_My_Heart_Pound"
+   ]
+  }
+ ],
+ "structure": {
+  "notes": "One AniList entry, 77 episodes, TV Tokyo 2011-04-07 to 2012-09-27; our cumulative numbering already equals both en.wikipedia's and ja.wikipedia's episode numbering (both list 1-77 with ep 26 = SPIRIT DANCE), so no conversion was needed. There IS an internal season break the DB does not model: en.wikipedia calls ep 51 'the SKET Dance Season 1 finale' and ep 52 'the Season 2 premiere', and the OP/ED change at exactly that seam (Message/Party! Hallelujah! -> Reboot/Colors); ja.wikipedia's web-radio section likewise splits 1期/2期. Boundary anchors: ep 51 END 97 (vol 11), ep 52 START 128 END 129 (vol 15). En.wikipedia also marks internal arc finales at eps 13, 25, 37 and 64. Two order-only items sit outside the 77 rows: (a) the Gintama-side half of the crossover, 'Remember, Alien vs. Predator is Also a Collaboration', aired 2011-09-26 as a Gintama episode adapting Gintama ch 349.5 - Gintama chapter space, never to be mixed into SKET DANCE numbering; (b) the OVA of 2013-02-04, which adapts SKET DANCE chs 198-200 and sits after ep 77. Open flag #179 (anilistAired 77 vs aflClassified 54) is explained: animefillerlist's table simply stops at ep 54; eps 55-77 have no AFL classification at all, and every one of them is chapter-backed here. Chapter-number space verified: en.wikipedia's chapter list yields exactly 288 numbered chapters in 32 volumes with volume boundaries identical to the context file, and unnumbered volume omake ('Special' bullets: Melancholic Rendezvous, Biscuit Dance, Puppet Dance, Resort Dance, Biscuit Dance Part 2, SILENT DANCE) are excluded from that numbering, matching fandom's chapter='Extra'.",
+  "order_only": [
+   {
+    "item": "Remember, Alien vs. Predator is Also a Collaboration",
+    "aired": "2011-09-26",
+    "position": "immediately before ep 26",
+    "note": "Gintama-side crossover episode; adapts Gintama ch 349.5. Not a SKET DANCE row and carries no SKET DANCE chapter."
+   },
+   {
+    "item": "Sket Dance OVA",
+    "aired": "2013-02-04",
+    "position": "after ep 77",
+    "note": "adapts SKET DANCE chs 198-200 (vol 22-23). Not a row in our numbering; source of the bad ch-200 value now sitting on ep 77."
+   }
+  ]
+ },
+ "flags_for_sean": [
+  "MONOTONICITY - the load-bearing decision. SKET DANCE cannot be described by a rising anchor line. Applying these anchors as authored gives a non-monotonic sequence (ep 27=65, ep 28=102, ep 29=75; ep 74=196, ep 75=178, ep 76=179, ep 77=167). Every one of those values is sourced and correct for 'what this episode adapts'. If mapping.ts or the audits assume monotonic anchors, the alternative is a sparse frontier set instead: the run covers 1-157 completely except 68/106/139/151, so a defensible frontier reading is ep 77 -> 157 with the scattered 158+ pulls recorded only as annotations. I did not author that second set because it is a modelling ruling, not a research finding.",
+  "A1 / D4 - eps 26 and 32 are typed filler but demonstrably adapt numbered chapters (180; 18 and 45). Anchors deliberately withheld per A1. If you accept the type_corrections to canon, the anchors are ep 26 -> end 180 start 180 vol 20, and ep 32 -> end 45 start 18 chapters '18, 45' vol 6. Note ep 26's anchor is a 180-value sitting between ep 25=44 and ep 27=65, so it interacts directly with the monotonicity question above.",
+  "ep 40 / ch 127 - the prior agent's lead was that ch 127's B-segments split across eps 40 AND 56. Verified half-true. Fandom's ch-127 page does assert 'Episodes 40, 56 (second halves of both)'. But ch 127's three segments are Sing-Along / Playing House / Let's Decide On a Play, and ep 56's plot opens with the Sing-Along scene while ep 40's Biscuit Dance segment is titled 'Sensei's Favorite' (Lego plane, Moe's birthday, dream ending) - none of ch 127's three. Ep 40's own infobox instead links the unnumbered vol-4 special 'BISCUIT DANCE', whose page names ep 40 in reverse. I have therefore anchored ep 40 at ch 74 with the omake noted, and given ch 127 wholly to ep 56. Unresolved residue: ep 40's chibi segment may actually be the vol-8 special 'BISCUIT DANCE, Part 2', whose fandom page has an empty summary - neither vol-4 nor vol-8 special is a numbered chapter, so no anchor turns on it.",
+  "fandom ch-93 page is wrong and I have contradicted it deliberately: it lists ep 31, but ch 93 is 'Oneesan is Popular?' (おねえさんもお気に入り?) and ep 45's title is ひそひそおねえさんインストラクソン = ch 93 + ch 108. Ep 31 is 武士と服装 = ch 72 (Fashionable Samurai) + ch 96 (Exciting Exercise), and en.wikipedia's ep-31 summary confirms the makeover and the exercise video. Anchored accordingly.",
+  "ep 77 -> mixed is the weakest of the three type_corrections: it rests on a positive (fandom lists only ch 167 for a full episode) plus an exhaustive negative (no chapter among 297 pairs Teppei with basketball). If you would rather not act on a negative, leave ep 77 canon - the anchor at ch 167 is unaffected either way.",
+  "three anchors are medium because their END chapter has no non-fandom corroboration: ep 5 (ch 23 - the Spider's Association B-part; supported by fandom's ep page, fandom's ch-23 page and ep 5's own plot text describing the bookstore blackmail hook, but absent from en.wikipedia's summary), ep 64 (ch 145 QUEST DANCE - confirmed in ep 64's plot narrative and ch 145's reverse link, absent from en.wikipedia's summary), ep 72 (ch 153 Treasurer Usami Hani - same situation).",
+  "airdate typos worth knowing if any downstream job trusts fandom dates: fandom gives ep 43 as March 2 2012 and ep 62 as July 14 2012; our DB (2012-02-05, 2012-06-14) agrees with ja.wikipedia (2月5日, 6月14日). Episode numbering is unaffected."
+ ],
+ "citations": [
+  {
+   "url": "https://sketdance.fandom.com/api.php?action=query&prop=revisions&rvprop=content&rvslots=main&titles=<80 episode pages>",
+   "what": "all 79 episode pages pulled via the MediaWiki API; each carries a single {{Episode}} infobox with number/airdate/manga fields. Checked explicitly for the two-infobox trap: no SKET DANCE episode page carries a second infobox, and multi-segment episodes list every segment in one 'manga' field."
+  },
+  {
+   "url": "https://sketdance.fandom.com/api.php?action=query&list=categorymembers&cmtitle=Category:Chapters&cmlimit=500",
+   "what": "all 297 chapter pages; 287 numbered, 9 unnumbered 'Extra' specials, 1 Gintama crossover chapter. Their reverse 'episodes' field agrees with the episode-page forward mapping on 279 of 287 numbered chapters; all 8 discrepancies were adjudicated individually (ch 3/59/60/93/127/136/137/145)."
+  },
+  {
+   "url": "https://en.wikipedia.org/wiki/List_of_Sket_Dance_chapters",
+   "what": "en.wikipedia chapter list; parsed line-wise (the plain-string-title trap is real here - ch 180's English cell is empty and ch 168's English cell holds ch 169's title, while the Japanese cells are correct). Yields 288 numbered chapters and volume boundaries identical to the context file."
+  },
+  {
+   "url": "https://en.wikipedia.org/wiki/List_of_Sket_Dance_episodes",
+   "what": "en.wikipedia episode list; 77 episodes with per-episode summaries used as the independent content check on ~28 episodes whose chapter set the title-matching method could not confirm. Also the source for the internal Season 1/Season 2 seam at eps 51/52 and the arc finales."
+  },
+  {
+   "url": "https://ja.wikipedia.org/wiki/SKET_DANCE",
+   "what": "ja.wikipedia 各話リスト; episode subtitles used against en.wikipedia's Japanese chapter titles as a fandom-independent episode->chapter derivation. SKET DANCE episode titles are frequently a literal splice of the two chapter titles the episode adapts (eps 19, 41, 55, 60, 67, 74), which makes this check unusually strong; it landed inside the fandom-declared chapter set for every episode where it fired."
+  },
+  {
+   "url": "https://www.animefillerlist.com/shows/sket-dance",
+   "what": "animefillerlist; classifies only eps 1-54 (explains open flag #179) and is the apparent origin of the filler typing on eps 26 and 32."
+  }
+ ]
+}

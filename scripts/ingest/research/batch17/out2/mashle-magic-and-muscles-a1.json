@@ -1,0 +1,39 @@
+{
+  "series_id": "mashle-magic-and-muscles",
+  "summary": "A1 triage of ep 7, typed filler and carrying an AFG anchor at ch 17-20. JUNK ANCHOR, and it exposes a systematic numbering defect. Our ep 7 'Mash Burnedead and the Mysterious Letter' (2023-05-19/20) is the season-1 recap special - Wikipedia files it in a separate 'Recap special' section ('Mash sends a letter home to his father narrating his experiences at the academy so far, serving as a recap of the first six episodes') and the Mashle wiki numbers it Episode 6.5 with adapted_from = Chapters 1-16, i.e. it re-narrates already-adapted material. animefillerlist independently types it Filler, and it is the ONLY filler episode in the entire show. So the stored typing is right and the anchor is junk. The reason the anchor exists is that both the Mashle wiki and Wikipedia EXCLUDE the recap from episode numbering while our DB includes it: the AFG chart's 'episode 7 = ch 17-20' is the wiki's Episode 7 'Mash Burnedead and the Puppet Master', which is our ep 8. Every AFG anchor from our ep 7 through ep 12 is therefore one row early. Only ep 7 is in scope here; the corrected table for the rest is in structure.notes and flagged, not applied.",
+  "anchors": [],
+  "continue_points": [],
+  "annotations": [
+    {
+      "episodes": [7],
+      "kind": "abridged",
+      "chapters": "1-16",
+      "note": "Recap special: Regro and Brad read Mash's letter re-telling eps 1-6 (ch 1-16). No new manga content - Mashle wiki gives adapted_from = Chapters 1-16 for this episode."
+    }
+  ],
+  "type_corrections": [],
+  "repairs": [
+    {
+      "episode": 7,
+      "field": "end_chapter",
+      "old": 20,
+      "new": null,
+      "why": "A1: row is correctly typed filler - it is the S1 recap special (Wikipedia lists it under 'Recap special', outside the numbered 1-12; the Mashle wiki calls it Episode 6.5 and gives adapted_from = Chapters 1-16; AFL types it Filler and it is the show's only filler). Its ch 17-20 anchor belongs to our ep 8 'Mash Burnedead and the Puppet Master', which the Mashle wiki records as Chapters 17, 18, 19, 20 (p.4-23). Drop start_chapter (17), chapters_adapted (17-20) and the continue point (->20) with it. AFG-tier anchor - flip the row to manual so the null survives re-derive.",
+      "sources": [
+        "https://mashle.fandom.com/api.php?action=parse&page=Episode_6.5&prop=wikitext&format=json",
+        "https://mashle.fandom.com/api.php?action=parse&page=Episode_7&prop=wikitext&format=json",
+        "https://en.wikipedia.org/wiki/List_of_Mashle_episodes",
+        "https://www.animefillerlist.com/shows/mashle-magic-and-muscles"
+      ]
+    }
+  ],
+  "structure": {
+    "notes": "NUMBERING: our rows include the S1 recap special as ep 7, so our numbering runs +1 against Wikipedia and the Mashle wiki from ep 8 onward (confirmed at both ends: our ep 7 = the 2023-05-19 recap; our ep 22 'Wahlberg Baigan and the Magic of Darkness' 2024-03-09 = Wikipedia ep 21; our ep 25 'His Good Friends' 2024-03-30 = Wikipedia ep 24, the S2 finale). Consequences, NOT applied (out of scope, listed for the curator): (a) the AFG anchors on our eps 7-12 are all one row early - the Mashle wiki's per-episode chapter fields map to OUR numbering as ep 8 = ch 17-20 (p.4-23), ep 9 = ch 20 (p.1-3) + 21-23, ep 10 = ch 24-28, ep 11 = ch 24 (p.1) + 29-31, ep 12 = ch 32-35, ep 13 = ch 36-39 (p.1-2); our eps 1-6 (= ch 1-4, 2-4?, ..., 13-16) are unaffected because the shift starts after the recap. (b) our ep 13 'Mash Burnedead and the Magic Mirror' is currently anchorless because the shift consumed it, which is very likely the real cause of the ep-13..23 anchor gap. (c) the stored season components (S1 = 1-12, S2 = 13-24, S3 = 25) are off by one against the rows: S1 = our 1-13, S2 = our 14-25; the third component (AniList 177704) holding only our ep 25 is an artifact of that off-by-one, since our ep 25 IS the S2 finale (2024-03-30).",
+    "order_only": []
+  },
+  "flags_for_sean": [
+    "SYSTEMATIC OFF-BY-ONE beyond my scope: the AFG anchors on Mashle eps 8-12 are each one row early (they are the Mashle wiki's eps 7-11, which are our 8-12). Corrected table is in structure.notes. This wants a targeted re-apply, not a spot fix.",
+    "The stored season component ranges (1-12 / 13-24 / 25) contradict the rows; our ep 25 is the season-2 finale, not a season-3 episode. The batch-17 ep-24/ep-25 manual anchors themselves look content-correct - it is the season attribution that is wrong.",
+    "Source trap worth capturing: mashle.fandom.com hides the recap at 'Episode 6.5' and Wikipedia files it in a separate section, so both sources' episode numbers run one BELOW ours from ep 8. Any chart scraped from either (AFG included) needs a +1 conversion after the recap."
+  ]
+}

@@ -1,0 +1,70 @@
+{
+  "series_id": "fairy-tail",
+  "summary": "A1 triage of the two anchors on Fairy Tail's only two anime-only-canon rows (eps 246 and 256, the two Tartaros-arc inserts; animefillerlist's 'Anime Canon' set for the entire 277-episode run is exactly {246, 256}). The two forks land differently. Ep 246 'Underworld King' is a JUNK ANCHOR: the Fairy Tail wiki's own Manga & Anime Differences section states 'With the exception of Mard Geer appearing towards the end of the episode, all the scenes taken place in the episode were anime-only' - the body is a Crime Sorciere / Oracion Seis / Rustyrose side-story invented for the anime, and the only manga content is ch 380's final throne-room page (infobox: 'Chapter 380 (from page 22)', where ep 245 already took ch 379 + ch 380 to page 21). That is a 1-2 page sliver -> annotation, not an anchor. Ep 256 'Final Duels' is the opposite: it is a WRONG ROW TYPE. Its infobox reads 'Chapter 398 (from page 12)', and the last act of the episode is a straight adaptation of ch 398's back half (Erza/Minerva/Franmalth reach the control room, Seilah's Macro, Mirajane's intervention, Kyoka absorbing Seilah's power, Erza requipping into Armadura Fairy) - roughly nine pages, well past the sliver line. What is anime-original is the substitution in the middle: the wiki notes Laxus' entire fight against Tempester is anime-exclusive, replacing ch 398 p.6-11 where Gray one-shots Tempester with Ice Devil's Zeroth Long Sword. That is textbook mixed, so ep 256 keeps an anchor at ch 398 and gets a type correction; ep 246 loses its anchor.",
+  "anchors": [
+    {
+      "episode": 256,
+      "end_chapter": 398,
+      "start_chapter": 398,
+      "chapters_adapted": "398 (from p.12 to the end; ch 398 p.6-11 replaced by the anime-original Laxus vs Tempester fight)",
+      "volume": 47,
+      "confidence": "medium",
+      "note": "Closing act adapts ch 398's control-room half beat for beat (Erza/Minerva/Franmalth vs Seilah and Kyoka, Mirajane breaks the Macro, Kyoka takes Seilah's power, Erza requips Armadura Fairy). Depends on the type correction below - if Sean keeps the row anime-only-canon under A1, this anchor must be nulled instead. Confidence medium: the page split (from p.12) rests on the Fairy Tail wiki alone; AFG corroborates the chapter but not the page.",
+      "sources": [
+        "https://fairytail.fandom.com/api.php?action=parse&page=Episode_256&prop=wikitext&format=json",
+        "https://fairytail.fandom.com/api.php?action=parse&page=Chapter_398&prop=wikitext&format=json",
+        "https://www.animefillerguide.com/fairy-tail/"
+      ]
+    }
+  ],
+  "continue_points": [],
+  "annotations": [
+    {
+      "episodes": [246],
+      "kind": "partial",
+      "chapters": "380 (from p.22)",
+      "note": "Wiki's Differences section: everything except Mard Geer's closing appearance is anime-only. Ch 380's last page (Mard Geer on the throne with E.N.D.'s book) is the sole manga content; ep 245 already covers ch 379 + ch 380 to p.21."
+    },
+    {
+      "episodes": [256],
+      "kind": "divergence",
+      "chapters": "398 (p.6-11)",
+      "note": "Anime replaces Gray's single-strike kill on Tempester (ch 398 p.6-11) with a full-episode Laxus vs Tempester fight; Gray's role is reduced to freezing the Magical Barrier Particles. Those manga pages are not adapted anywhere."
+    }
+  ],
+  "type_corrections": [
+    {
+      "episodes": [256],
+      "type": "mixed",
+      "note": "Not pure anime-original: the last third is a direct adaptation of ch 398 p.12-end (Fairy Tail wiki infobox 'Adapted = Chapter 398 (from page 12)'; the reverse mapping on Chapter 398 lists Episode 255 and Episode 256; animefillerguide's chapter chart assigns ch 398 to ep 256). The anime-original portion is the Laxus vs Tempester substitution for ch 398 p.6-11. AFL's coarse 'Anime Canon' tag is the dissenting source - see flags.",
+      "sources": [
+        "https://fairytail.fandom.com/api.php?action=parse&page=Episode_256&prop=wikitext&format=json",
+        "https://fairytail.fandom.com/api.php?action=parse&page=Chapter_398&prop=wikitext&format=json",
+        "https://www.animefillerguide.com/fairy-tail/"
+      ]
+    }
+  ],
+  "repairs": [
+    {
+      "episode": 246,
+      "field": "end_chapter",
+      "old": 380,
+      "new": null,
+      "why": "A1 + sliver ruling: row is correctly typed anime-only-canon (AFL 'Anime Canon'; the episode is the Crime Sorciere / Rustyrose side story, an anime-original insert Mashima signed off on). Fairy Tail wiki, Manga & Anime Differences: 'With the exception of Mard Geer appearing towards the end of the episode, all the scenes taken place in the episode were anime-only.' The infobox's 'Chapter 380 (from page 22)' is that single closing page. Ep 245 already ends at ch 380 (ch 379 + ch 380 to p.21) so nothing is lost. Drop start_chapter and chapters_adapted (380) with it; the sliver survives as an annotation. AFG-tier anchor - flip the row to manual so the null is not re-derived away.",
+      "sources": [
+        "https://fairytail.fandom.com/api.php?action=parse&page=Episode_246&prop=wikitext&format=json",
+        "https://fairytail.fandom.com/api.php?action=parse&page=Episode_245&prop=wikitext&format=json",
+        "https://fairytail.fandom.com/api.php?action=parse&page=Chapter_380&prop=wikitext&format=json",
+        "https://www.animefillerlist.com/shows/fairy-tail"
+      ]
+    }
+  ],
+  "structure": {
+    "notes": "Our cumulative numbering matches the Fairy Tail wiki's continuous episode numbering (2009 series 1-175, 2014 series 176-277 = wiki 'Episode 246' etc.), so no conversion was needed. Local chapter frame verified: ep 245 = ch 379 + 380(to p.21), ep 246 = ch 380(from p.22), ep 247 = ch 381-382; ep 254 = ch 395-396, ep 255 = ch 397 + 398(to p.5), ep 256 = ch 398(from p.12), ep 257 = ch 399-400. Note ch 398 p.6-11 is adapted nowhere. AFG's coarser chart reads ep 255 = 397, ep 256 = 398, ep 257 = 399-400.",
+    "order_only": []
+  },
+  "flags_for_sean": [
+    "Source disagreement on ep 256's TYPE: animefillerlist calls it 'Anime Canon' (one of only two in the whole series), the Fairy Tail wiki and animefillerguide both record it adapting ch 398. I ruled mixed because ~9 pages of ch 398 are adapted, which is past the <=~5-page sliver line - but this is the one place in this batch where a defensible A1 reading would instead null the anchor and leave the row anime-only-canon. Sean's call.",
+    "If ep 255 stores END 398 (rather than AFG's 397), ep 256's END 398 is a flat repeat rather than an advance; the wiki's page split (255 -> p.5, 256 -> from p.12) is the only thing distinguishing them."
+  ]
+}

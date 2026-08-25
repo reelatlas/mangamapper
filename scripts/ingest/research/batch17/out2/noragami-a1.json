@@ -1,0 +1,31 @@
+{
+  "series_id": "noragami",
+  "summary": "A1 triage of ep 12 'A Scrap of a Memory' (S1 finale), typed anime-only-canon and carrying a research-tier (batch 6) anchor at ch 11. JUNK ANCHOR, and the batch-6 verdict was right about the series and wrong about the row. The Noragami wiki's Rabou Arc page states outright that it 'is an anime-only arc' spanning eps 10-12 and files it under Category:Anime Only; ep 11 and ep 12 are the only S1 episodes whose infobox has no 'adapted from' field at all, and animefillerlist independently types eps 11-12 'Anime Canon' (it uses Manga Canon for 1-9 and Mixed for 10, so the label is deliberate). Rabo himself was created for the anime - the wiki notes he was 'initially an anime-only character' and his listed manga debut, 'Awase Kagami', is a Stray Stories spinoff volume, not a mainline chapter. Where ch 11 actually belongs is ep 9, whose infobox reads adapted from = Chapter 11; batch 6 correctly derived that S1's manga content tops out around vol 3 and then parked that number on the season's LAST episode as a frontier hold, which is exactly the pattern A1 forbids.",
+  "anchors": [],
+  "continue_points": [],
+  "annotations": [],
+  "type_corrections": [],
+  "repairs": [
+    {
+      "episode": 12,
+      "field": "end_chapter",
+      "old": 11,
+      "new": null,
+      "why": "A1: research-tier anchor on a correctly-typed anime-only row. The Noragami wiki's Rabou Arc article says the arc (eps 10-12) 'is an anime-only arc' and categorises it Anime Only; ep 12's episode page carries no 'adapted from' field, unlike every episode 1-10; AFL types eps 11-12 Anime Canon. Nothing from the mainline manga is in the episode - Rabo's only manga appearance is the Stray Stories spinoff chapter 'Awase Kagami', published after the anime. Ch 11 is ep 9's chapter (ep 9 infobox: adapted from = Chapter 11). Drop any stored continue point with the anchor. Manual-source anchor, no re-derive risk.",
+      "sources": [
+        "https://noragami.fandom.com/api.php?action=parse&page=Rabou_Arc&prop=wikitext&format=json",
+        "https://noragami.fandom.com/api.php?action=parse&page=Episode_12&prop=wikitext&format=json",
+        "https://noragami.fandom.com/api.php?action=parse&page=Episode_9&prop=wikitext&format=json",
+        "https://www.animefillerlist.com/shows/noragami"
+      ]
+    }
+  ],
+  "structure": {
+    "notes": "S1's per-episode chapter fields (Noragami wiki), gathered while triaging and NOT applied: ep 1 = ch 1-2, ep 2 = ch 3, ep 3 = ch 4, ep 4 = ch 6 + 8 + Stray Stories ch 2, ep 5 = ch 5-6, ep 6 = ch 5-7, ep 7 = ch 8-9, ep 8 = ch 9, 10, 13, ep 9 = ch 11, ep 10 = ch 9 + 12, eps 11-12 = none (Rabou Arc). The adaptation is heavily rearranged - ch 13 is pulled forward into ep 8 and ch 12 lands in ep 10 - so S1's END in running order is ch 12 (ep 10), the furthest chapter TOUCHED is 13, and the honest resume after S1 is ch 14. Ep 10 is the last row that should carry an S1 anchor.",
+    "order_only": []
+  },
+  "flags_for_sean": [
+    "Precondition on the deletion: after nulling ep 12, S1's tail position is carried by ep 10 (ch 9 + 12). If ep 10 has no anchor, the right fix is an anchor on ep 10 at END 12, not keeping ep 12's.",
+    "Ep 11 'Abandoned God' is the other half of the anime-only Rabou Arc; if it stores an anchor it is the same defect. It did not appear in the A1 scan, so presumably it does not."
+  ]
+}
