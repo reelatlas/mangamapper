@@ -1,0 +1,561 @@
+{
+  "series_id": "space-adventure-cobra",
+  "summary": "The 1982-83 TV series adapts the Weekly Shonen Jump serialisation of Cobra from installment 1 through the 「シドの女神」(Salamander) arc — i.e. chapters 1-76 of the 156-installment Jump run, Jump Comics volumes 1-8. ja.wikipedia states it directly (原作の連載第1話から「シドの女神」編までが描かれている) and en.wikipedia's episode list says 'loosely based in the first eight volumes'. CHAPTER SPACE: the entry's 156 chapters / 18 volumes is the original Jump Comics serialisation space and that is what these anchors use; MangaUpdates' latest_chapter=28 is a STORY count (the 28 discrete Cobra stories, matching fr.wikipedia's 'Histoires' list), not a chapter numbering — which is exactly open flag #676, and the reason the stored ep31 anchor reads 'chapter 14' (= story 14, 「シドの女神」). The adaptation is genuinely REORDERED, not linear: ja.wikipedia's character article says so twice in as many words (the Sword-people story was lifted out of the middle of the tattoo storyline and aired as eps 20-21 with its planet renamed Zados→Bakoosa; 「死の商人」編にあたる第25話 airs before 「二人の軍曹」 at ep26). Six blocks are out of running order. The 31 episodes nonetheless partition chapters 1-76 exactly once each with no gaps and no overlaps, which is the strongest single check available here.",
+  "anchors": [
+    {
+      "episode": 1,
+      "end_chapter": 1,
+      "start_chapter": 1,
+      "chapters_adapted": "1",
+      "volume": 1,
+      "confidence": "high",
+      "note": "ja.wikipedia states the TV series is drawn '原作の連載第1話から' — from serialized installment 1. ch1 「復活!コブラの巻」 (WSJ 1978 #45) is the Johnson / Trip-Movie / Vaiken opening that ep1 dramatises.",
+      "sources": [
+        "https://ja.wikipedia.org/wiki/%E3%82%B3%E3%83%96%E3%83%A9_(%E3%82%A2%E3%83%8B%E3%83%A1)",
+        "https://www.jajanken.net/sakuhins/mDknqXXw9M",
+        "https://en.wikipedia.org/wiki/List_of_Space_Cobra_episodes"
+      ]
+    },
+    {
+      "episode": 2,
+      "end_chapter": 32,
+      "start_chapter": 32,
+      "chapters_adapted": "32",
+      "volume": null,
+      "confidence": "medium",
+      "note": "ep2's Vivi / Zygoba story is the 「サイコガンの秘密」 arc (ja.wikipedia character article: ビビ 「サイコガンの秘密」編で登場…姉と共にジゴバに誘拐され). That story is one of the two 1977 one-shots remade inside the weekly run; by the character article's own ordering it sits between 「黄金の男」 and 「雷電の惑星」, i.e. ch32 「サイコ・ガンは心で撃ての巻」 — the punchline being that a copied Psychogun is useless because it is fired by will. Pulled forward to episode 2. See flags: ch20 「見えざる敵」 is the runner-up candidate.",
+      "sources": [
+        "https://ja.wikipedia.org/wiki/%E3%82%B3%E3%83%96%E3%83%A9%E3%81%AE%E7%99%BB%E5%A0%B4%E4%BA%BA%E7%89%A9",
+        "https://www.jajanken.net/sakuhins/mDknqXXw9M",
+        "https://ja.wikipedia.org/wiki/%E3%82%B3%E3%83%96%E3%83%A9_(%E6%BC%AB%E7%94%BB)"
+      ]
+    },
+    {
+      "episode": 3,
+      "end_chapter": 3,
+      "start_chapter": 2,
+      "chapters_adapted": "2-3",
+      "volume": null,
+      "confidence": "medium",
+      "note": "Bar on Tugsard, bounty hunter Jane Royal, Crystal Boy's Killer Section captures them = ch2 「イレズミの女の巻」 + ch3 「クリスタル・ボーイ登場の巻」.",
+      "sources": [
+        "https://www.jajanken.net/sakuhins/mDknqXXw9M",
+        "https://en.wikipedia.org/wiki/List_of_Space_Cobra_episodes",
+        "https://ja.wikipedia.org/wiki/%E3%82%B3%E3%83%96%E3%83%A9%E3%81%AE%E7%99%BB%E5%A0%B4%E4%BA%BA%E7%89%A9"
+      ]
+    },
+    {
+      "episode": 4,
+      "end_chapter": 6,
+      "start_chapter": 4,
+      "chapters_adapted": "4-6",
+      "volume": null,
+      "confidence": "medium",
+      "note": "Sid Penitentiary: Cobra deliberately arrested, escapes, rescues Catherine = ch4 「捕らわれたコブラ」 / ch5 「脱出!!」 / ch6 「救出作戦」.",
+      "sources": [
+        "https://www.jajanken.net/sakuhins/mDknqXXw9M",
+        "https://en.wikipedia.org/wiki/List_of_Space_Cobra_episodes",
+        "https://ja.wikipedia.org/wiki/%E3%82%B3%E3%83%96%E3%83%A9%E3%81%AE%E7%99%BB%E5%A0%B4%E4%BA%BA%E7%89%A9"
+      ]
+    },
+    {
+      "episode": 5,
+      "end_chapter": 7,
+      "start_chapter": 7,
+      "chapters_adapted": "7",
+      "volume": null,
+      "confidence": "medium",
+      "note": "The masked sniper remotely puppeted by Tarvage = ch7 「姿なき狙撃手【スナイパー】の巻」.",
+      "sources": [
+        "https://www.jajanken.net/sakuhins/mDknqXXw9M",
+        "https://en.wikipedia.org/wiki/List_of_Space_Cobra_episodes",
+        "https://ja.wikipedia.org/wiki/%E3%82%B3%E3%83%96%E3%83%A9%E3%81%AE%E7%99%BB%E5%A0%B4%E4%BA%BA%E7%89%A9"
+      ]
+    },
+    {
+      "episode": 6,
+      "end_chapter": 9,
+      "start_chapter": 8,
+      "chapters_adapted": "8-9",
+      "volume": null,
+      "confidence": "medium",
+      "note": "Cobra's counter-attack and the magician's identity = ch8 「コブラの大逆襲」 / ch9 「魔術師ターベージ」 (Tarvage named in both the episode synopsis and the chapter title).",
+      "sources": [
+        "https://www.jajanken.net/sakuhins/mDknqXXw9M",
+        "https://en.wikipedia.org/wiki/List_of_Space_Cobra_episodes",
+        "https://ja.wikipedia.org/wiki/%E3%82%B3%E3%83%96%E3%83%A9%E3%81%AE%E7%99%BB%E5%A0%B4%E4%BA%BA%E7%89%A9"
+      ]
+    },
+    {
+      "episode": 7,
+      "end_chapter": 11,
+      "start_chapter": 10,
+      "chapters_adapted": "10-11",
+      "volume": null,
+      "confidence": "medium",
+      "note": "Catherine's funeral, Cobra's rage, then the plant-man Tarvage duel = ch10 「コブラのいかり」 / ch11 「コブラ対植物人間」.",
+      "sources": [
+        "https://www.jajanken.net/sakuhins/mDknqXXw9M",
+        "https://en.wikipedia.org/wiki/List_of_Space_Cobra_episodes",
+        "https://ja.wikipedia.org/wiki/%E3%82%B3%E3%83%96%E3%83%A9%E3%81%AE%E7%99%BB%E5%A0%B4%E4%BA%BA%E7%89%A9"
+      ]
+    },
+    {
+      "episode": 8,
+      "end_chapter": 15,
+      "start_chapter": 12,
+      "chapters_adapted": "12-15",
+      "volume": null,
+      "confidence": "medium",
+      "note": "Break-out, spaceport battle, Crystal Boy cornered, final duel = ch12-15 (「コブラとびだす」「宇宙港の戦い」「ボーイを追いつめた!」「最後の戦い」). Closes the first Crystal Boy block.",
+      "sources": [
+        "https://www.jajanken.net/sakuhins/mDknqXXw9M",
+        "https://en.wikipedia.org/wiki/List_of_Space_Cobra_episodes",
+        "https://ja.wikipedia.org/wiki/%E3%82%B3%E3%83%96%E3%83%A9%E3%81%AE%E7%99%BB%E5%A0%B4%E4%BA%BA%E7%89%A9"
+      ]
+    },
+    {
+      "episode": 9,
+      "end_chapter": 17,
+      "start_chapter": 16,
+      "chapters_adapted": "16-17",
+      "volume": null,
+      "confidence": "medium",
+      "note": "Snow Gorillas / the third sister on Lourouge = ch16 「第三の女」 / ch17 「鉄の戒律」.",
+      "sources": [
+        "https://www.jajanken.net/sakuhins/mDknqXXw9M",
+        "https://en.wikipedia.org/wiki/List_of_Space_Cobra_episodes",
+        "https://ja.wikipedia.org/wiki/%E3%82%B3%E3%83%96%E3%83%A9%E3%81%AE%E7%99%BB%E5%A0%B4%E4%BA%BA%E7%89%A9"
+      ]
+    },
+    {
+      "episode": 10,
+      "end_chapter": 19,
+      "start_chapter": 18,
+      "chapters_adapted": "18-19",
+      "volume": null,
+      "confidence": "medium",
+      "note": "Ski escape then the tattoo composite revealing planet Zados = ch18 「雪上の大追跡」 / ch19 「イレズミの秘密」 — the episode title 「イレズミの秘密」 is character-identical to ch19's.",
+      "sources": [
+        "https://www.jajanken.net/sakuhins/mDknqXXw9M",
+        "https://en.wikipedia.org/wiki/List_of_Space_Cobra_episodes",
+        "https://ja.wikipedia.org/wiki/%E3%82%B3%E3%83%96%E3%83%A9%E3%81%AE%E7%99%BB%E5%A0%B4%E4%BA%BA%E7%89%A9"
+      ]
+    },
+    {
+      "episode": 11,
+      "end_chapter": 25,
+      "start_chapter": 24,
+      "chapters_adapted": "24-25",
+      "volume": null,
+      "confidence": "medium",
+      "note": "Zados pyramid, Sandra beats Cobra inside, the weapon is found = ch24 「サンドラふたたび」 / ch25 「最終兵器発見」. The manga reaches these AFTER the Sword-people chapters (ch20-23) which the TV series relocated to eps 20-21.",
+      "sources": [
+        "https://www.jajanken.net/sakuhins/mDknqXXw9M",
+        "https://en.wikipedia.org/wiki/List_of_Space_Cobra_episodes",
+        "https://ja.wikipedia.org/wiki/%E3%82%B3%E3%83%96%E3%83%A9%E3%81%AE%E7%99%BB%E5%A0%B4%E4%BA%BA%E7%89%A9"
+      ]
+    },
+    {
+      "episode": 12,
+      "end_chapter": 27,
+      "start_chapter": 26,
+      "chapters_adapted": "26-27",
+      "volume": null,
+      "confidence": "medium",
+      "note": "Ultimate Weapon transforms, golden-giant Sandra, Mars Ancient History vol.3 on the pyramid roof = ch26 「最終兵器の秘密」 / ch27 「進化を阻止せよ」. ch26 is the chapter Jump Comics vol.3 is named after.",
+      "sources": [
+        "https://www.jajanken.net/sakuhins/mDknqXXw9M",
+        "https://en.wikipedia.org/wiki/List_of_Space_Cobra_episodes",
+        "https://ja.wikipedia.org/wiki/%E3%82%B3%E3%83%96%E3%83%A9%E3%81%AE%E7%99%BB%E5%A0%B4%E4%BA%BA%E7%89%A9"
+      ]
+    },
+    {
+      "episode": 13,
+      "end_chapter": 31,
+      "start_chapter": 30,
+      "chapters_adapted": "30-31",
+      "volume": null,
+      "confidence": "medium",
+      "note": "Las Vegas Station casino, Hammer Volt Joe, the missing Venus gold ship = the 「黄金の男」 arc (ja.wikipedia character article describes exactly this cast), ch30 「カジノ・ステーション」 / ch31 「かけ・・・!」.",
+      "sources": [
+        "https://ja.wikipedia.org/wiki/%E3%82%B3%E3%83%96%E3%83%A9%E3%81%AE%E7%99%BB%E5%A0%B4%E4%BA%BA%E7%89%A9",
+        "https://www.jajanken.net/sakuhins/mDknqXXw9M",
+        "https://en.wikipedia.org/wiki/List_of_Space_Cobra_episodes"
+      ]
+    },
+    {
+      "episode": 14,
+      "end_chapter": 29,
+      "start_chapter": 28,
+      "chapters_adapted": "28-29",
+      "volume": null,
+      "confidence": "medium",
+      "note": "ja.wikipedia character article: ガルタン 「宇宙の大魔王」編で登場、TV版では14話で登場する. ch28 「大魔王ガルタン」 (title identical to the episode's) / ch29 「魔王を倒せ」. Aired AFTER ep13 although it precedes it in the manga.",
+      "sources": [
+        "https://ja.wikipedia.org/wiki/%E3%82%B3%E3%83%96%E3%83%A9%E3%81%AE%E7%99%BB%E5%A0%B4%E4%BA%BA%E7%89%A9",
+        "https://www.jajanken.net/sakuhins/mDknqXXw9M",
+        "https://en.wikipedia.org/wiki/List_of_Space_Cobra_episodes"
+      ]
+    },
+    {
+      "episode": 15,
+      "end_chapter": 37,
+      "start_chapter": 35,
+      "chapters_adapted": "35-37",
+      "volume": null,
+      "confidence": "medium",
+      "note": "ja.wikipedia character article: ベガ 「雷電の惑星」編で登場…TV版では15話で登場し、大幅な設定の追加がなされた. ch35 「雷電の惑星」 / ch36 「翼・・・!!」 (Vega's winged moult) / ch37 「コブラの帰還」. ch35 is the chapter JC vol.4 is named after.",
+      "sources": [
+        "https://ja.wikipedia.org/wiki/%E3%82%B3%E3%83%96%E3%83%A9%E3%81%AE%E7%99%BB%E5%A0%B4%E4%BA%BA%E7%89%A9",
+        "https://www.jajanken.net/sakuhins/mDknqXXw9M",
+        "https://en.wikipedia.org/wiki/List_of_Space_Cobra_episodes"
+      ]
+    },
+    {
+      "episode": 16,
+      "end_chapter": 42,
+      "start_chapter": 41,
+      "chapters_adapted": "41-42",
+      "volume": null,
+      "confidence": "medium",
+      "note": "Rug-Ball arc opens: Cobra goes undercover as Joe Gillian with the Red Saxons = ch41 「ラグ・ボール」 / ch42 「秘密指令は殺しの匂い」. Arc START anchor.",
+      "sources": [
+        "https://www.jajanken.net/sakuhins/mDknqXXw9M",
+        "https://en.wikipedia.org/wiki/List_of_Space_Cobra_episodes",
+        "https://ja.wikipedia.org/wiki/%E3%82%B3%E3%83%96%E3%83%A9%E3%81%AE%E7%99%BB%E5%A0%B4%E4%BA%BA%E7%89%A9"
+      ]
+    },
+    {
+      "episode": 17,
+      "end_chapter": 44,
+      "start_chapter": 43,
+      "chapters_adapted": "43-44",
+      "volume": null,
+      "confidence": "medium",
+      "note": "Team Z assembled, the murder-game framing = ch43 「殺人ゲーム」 / ch44 「プレイ・ザ・ゲーム」.",
+      "sources": [
+        "https://www.jajanken.net/sakuhins/mDknqXXw9M",
+        "https://en.wikipedia.org/wiki/List_of_Space_Cobra_episodes",
+        "https://ja.wikipedia.org/wiki/%E3%82%B3%E3%83%96%E3%83%A9%E3%81%AE%E7%99%BB%E5%A0%B4%E4%BA%BA%E7%89%A9"
+      ]
+    },
+    {
+      "episode": 18,
+      "end_chapter": 47,
+      "start_chapter": 45,
+      "chapters_adapted": "45-47",
+      "volume": null,
+      "confidence": "medium",
+      "note": "First half of the match, Geck killed, Cobra's home run = ch45 「ブロックくずし」 / ch46 「先取点は死をかけて!」 / ch47 「死神のウインク」.",
+      "sources": [
+        "https://www.jajanken.net/sakuhins/mDknqXXw9M",
+        "https://en.wikipedia.org/wiki/List_of_Space_Cobra_episodes",
+        "https://ja.wikipedia.org/wiki/%E3%82%B3%E3%83%96%E3%83%A9%E3%81%AE%E7%99%BB%E5%A0%B4%E4%BA%BA%E7%89%A9"
+      ]
+    },
+    {
+      "episode": 19,
+      "end_chapter": 50,
+      "start_chapter": 48,
+      "chapters_adapted": "48-50",
+      "volume": null,
+      "confidence": "medium",
+      "note": "Round two, the bribe, the drug shipment data, the sign-off note = ch48 「美女のキスは逆転の味」 / ch49 「ウイニングボール」 / ch50 「おき手紙は領収書!!」. Arc END anchor: ch50 is the last Rug-Ball installment (WSJ 1979 #45) before a seven-issue hiatus.",
+      "sources": [
+        "https://www.jajanken.net/sakuhins/mDknqXXw9M",
+        "https://en.wikipedia.org/wiki/List_of_Space_Cobra_episodes",
+        "https://ja.wikipedia.org/wiki/%E3%82%B3%E3%83%96%E3%83%A9%E3%81%AE%E7%99%BB%E5%A0%B4%E4%BA%BA%E7%89%A9"
+      ]
+    },
+    {
+      "episode": 20,
+      "end_chapter": 21,
+      "start_chapter": 20,
+      "chapters_adapted": "20-21",
+      "volume": null,
+      "confidence": "medium",
+      "note": "ja.wikipedia character article, Babel: TV版では20話と21話で登場。エピソード順が変更されたことに伴い、舞台となる惑星が「最終兵器」の眠る惑星ザドスから「バクーサ」という惑星に変更されている. ch20 「見えざる敵」 / ch21 「ソード人の秘密」. In the manga this sits INSIDE the tattoo storyline, before the Ultimate Weapon.",
+      "sources": [
+        "https://ja.wikipedia.org/wiki/%E3%82%B3%E3%83%96%E3%83%A9%E3%81%AE%E7%99%BB%E5%A0%B4%E4%BA%BA%E7%89%A9",
+        "https://www.jajanken.net/sakuhins/mDknqXXw9M",
+        "https://en.wikipedia.org/wiki/List_of_Space_Cobra_episodes"
+      ]
+    },
+    {
+      "episode": 21,
+      "end_chapter": 23,
+      "start_chapter": 22,
+      "chapters_adapted": "22-23",
+      "volume": null,
+      "confidence": "medium",
+      "note": "King Jeek freed, duel with Babel = ch22 「ソード王ジーク」 / ch23 「ソードの真の王」 (episode title 「二人のソード王」). Second half of the relocated Sword-people arc.",
+      "sources": [
+        "https://ja.wikipedia.org/wiki/%E3%82%B3%E3%83%96%E3%83%A9%E3%81%AE%E7%99%BB%E5%A0%B4%E4%BA%BA%E7%89%A9",
+        "https://www.jajanken.net/sakuhins/mDknqXXw9M",
+        "https://en.wikipedia.org/wiki/List_of_Space_Cobra_episodes"
+      ]
+    },
+    {
+      "episode": 22,
+      "end_chapter": 40,
+      "start_chapter": 38,
+      "chapters_adapted": "38-40",
+      "volume": null,
+      "confidence": "medium",
+      "note": "ja.wikipedia character article: ジンガロ 「地底の客」編で登場…ライフル星…孫のユーコをさらわれ — exactly ep22's plot. ch38 「モビルライダーの襲撃」 / ch39 「無敵のモグラ作戦」 / ch40 「地下基地爆破」. Held back to air after the Rug-Ball block.",
+      "sources": [
+        "https://ja.wikipedia.org/wiki/%E3%82%B3%E3%83%96%E3%83%A9%E3%81%AE%E7%99%BB%E5%A0%B4%E4%BA%BA%E7%89%A9",
+        "https://www.jajanken.net/sakuhins/mDknqXXw9M",
+        "https://en.wikipedia.org/wiki/List_of_Space_Cobra_episodes"
+      ]
+    },
+    {
+      "episode": 23,
+      "end_chapter": 58,
+      "start_chapter": 55,
+      "chapters_adapted": "55-58",
+      "volume": null,
+      "confidence": "medium",
+      "note": "Ironhead, the sunken Queen Carady, the undersea vault = ch55 「異常なる島」 / ch56 「アイアンヘッド登場」 / ch57 「妖女の殺し文句」 / ch58 「海底の墓標」. The episode title 「海底の墓標」 is character-identical to ch58's, which is also the chapter JC vol.6 is named after.",
+      "sources": [
+        "https://www.jajanken.net/sakuhins/mDknqXXw9M",
+        "https://en.wikipedia.org/wiki/List_of_Space_Cobra_episodes",
+        "https://ja.wikipedia.org/wiki/%E3%82%B3%E3%83%96%E3%83%A9%E3%81%AE%E7%99%BB%E5%A0%B4%E4%BA%BA%E7%89%A9"
+      ]
+    },
+    {
+      "episode": 24,
+      "end_chapter": 34,
+      "start_chapter": 33,
+      "chapters_adapted": "33-34",
+      "volume": null,
+      "confidence": "medium",
+      "note": "Episode title 「ロボットはいかが?」 is character-identical to ch33 「ロボットはいかが?の巻」; ch34 「反乱・・・!!」 is the robot uprising the episode ends on. Held back roughly ten episodes from its manga slot.",
+      "sources": [
+        "https://www.jajanken.net/sakuhins/mDknqXXw9M",
+        "https://en.wikipedia.org/wiki/List_of_Space_Cobra_episodes",
+        "https://ja.wikipedia.org/wiki/%E3%82%B3%E3%83%96%E3%83%A9%E3%81%AE%E7%99%BB%E5%A0%B4%E4%BA%BA%E7%89%A9"
+      ]
+    },
+    {
+      "episode": 25,
+      "end_chapter": 54,
+      "start_chapter": 53,
+      "chapters_adapted": "53-54",
+      "volume": null,
+      "confidence": "medium",
+      "note": "ja.wikipedia character article states plainly: 「死の商人」編にあたる第25話. Arms-dealer Brian Reed holds Lady hostage = ch53 「レディーを救え!!」 / ch54 「ジョイントをうて!!」.",
+      "sources": [
+        "https://ja.wikipedia.org/wiki/%E3%82%B3%E3%83%96%E3%83%A9%E3%81%AE%E7%99%BB%E5%A0%B4%E4%BA%BA%E7%89%A9",
+        "https://www.jajanken.net/sakuhins/mDknqXXw9M",
+        "https://en.wikipedia.org/wiki/List_of_Space_Cobra_episodes"
+      ]
+    },
+    {
+      "episode": 26,
+      "end_chapter": 52,
+      "start_chapter": 51,
+      "chapters_adapted": "51-52",
+      "volume": null,
+      "confidence": "medium",
+      "note": "ja.wikipedia character article: シエラ少尉 is 「二人の軍曹」編のヒロイン and the Royal Ruby split — ep26's Lieutenant Shella and the National Royal Rubies. ch51 「スパイはだれだ!?」 (she is the Domel spy) / ch52 「死の配当」 (the ruby cut). Aired AFTER ep25 although it precedes it in the manga.",
+      "sources": [
+        "https://ja.wikipedia.org/wiki/%E3%82%B3%E3%83%96%E3%83%A9%E3%81%AE%E7%99%BB%E5%A0%B4%E4%BA%BA%E7%89%A9",
+        "https://www.jajanken.net/sakuhins/mDknqXXw9M",
+        "https://en.wikipedia.org/wiki/List_of_Space_Cobra_episodes"
+      ]
+    },
+    {
+      "episode": 27,
+      "end_chapter": 61,
+      "start_chapter": 59,
+      "chapters_adapted": "59-61",
+      "volume": null,
+      "confidence": "medium",
+      "note": "Final arc 「シドの女神」 opens: Salamander appears, Dominique flayed, Lady bombed = ch59 「サラマンダー登場」 / ch60 「タートル号大爆発」 / ch61 「ダーティショット」. Arc START anchor (WSJ 1980 #10-#12).",
+      "sources": [
+        "https://www.jajanken.net/sakuhins/mDknqXXw9M",
+        "https://en.wikipedia.org/wiki/List_of_Space_Cobra_episodes",
+        "https://ja.wikipedia.org/wiki/%E3%82%B3%E3%83%96%E3%83%A9%E3%81%AE%E7%99%BB%E5%A0%B4%E4%BA%BA%E7%89%A9"
+      ]
+    },
+    {
+      "episode": 28,
+      "end_chapter": 65,
+      "start_chapter": 62,
+      "chapters_adapted": "62-65",
+      "volume": null,
+      "confidence": "medium",
+      "note": "Recruiting Fast-Fire Doug and springing Pumpkin = ch62 「0.1秒の男」 / ch63 「賞金首の仲」 / ch64 「鬼の笑う星」 / ch65 「トリックゲーム」.",
+      "sources": [
+        "https://www.jajanken.net/sakuhins/mDknqXXw9M",
+        "https://en.wikipedia.org/wiki/List_of_Space_Cobra_episodes",
+        "https://ja.wikipedia.org/wiki/%E3%82%B3%E3%83%96%E3%83%A9%E3%81%AE%E7%99%BB%E5%A0%B4%E4%BA%BA%E7%89%A9"
+      ]
+    },
+    {
+      "episode": 29,
+      "end_chapter": 68,
+      "start_chapter": 66,
+      "chapters_adapted": "66-68",
+      "volume": null,
+      "confidence": "medium",
+      "note": "Bud's polar laboratory = ch66 「バッド登場」 / ch67 「雪上の決戦」 / ch68 「クレージーショット」.",
+      "sources": [
+        "https://www.jajanken.net/sakuhins/mDknqXXw9M",
+        "https://en.wikipedia.org/wiki/List_of_Space_Cobra_episodes",
+        "https://ja.wikipedia.org/wiki/%E3%82%B3%E3%83%96%E3%83%A9%E3%81%AE%E7%99%BB%E5%A0%B4%E4%BA%BA%E7%89%A9"
+      ]
+    },
+    {
+      "episode": 30,
+      "end_chapter": 71,
+      "start_chapter": 69,
+      "chapters_adapted": "69-71",
+      "volume": null,
+      "confidence": "medium",
+      "note": "El Rodes raid, Doug's body-double infiltration of the Guild reunion = ch69 「かえ玉作戦」 / ch70 「血ぬられた出会い」 / ch71 「地獄のデス・マッチ」.",
+      "sources": [
+        "https://www.jajanken.net/sakuhins/mDknqXXw9M",
+        "https://en.wikipedia.org/wiki/List_of_Space_Cobra_episodes",
+        "https://ja.wikipedia.org/wiki/%E3%82%B3%E3%83%96%E3%83%A9%E3%81%AE%E7%99%BB%E5%A0%B4%E4%BA%BA%E7%89%A9"
+      ]
+    },
+    {
+      "episode": 31,
+      "end_chapter": 76,
+      "start_chapter": 72,
+      "chapters_adapted": "72-76",
+      "volume": 8,
+      "confidence": "high",
+      "note": "Finale. The team is killed, Miral Judd / the Elrado sect, the Shido Goddess launch = ch72 「友よやすらかに!」 / ch73 「熱い女は死の臭い」 / ch74 「死の宗教」 / ch75 「女神の秘密」 / ch76 「亡霊よ やすらかに」. ch76 (WSJ 1980 #29) is the last installment of Part 1: ja.wikipedia's 沿革 puts 第1部 at 連載開始〜「サラマンダー（シドの女神）」編 (1978-1980) and 第2部「黒竜王」編 at 1981, and the next installment ch77 is WSJ 1981 #2-3. en.wikipedia: 'Loosely based in the first eight volumes of the manga'; JC vol.8 is 「シドの女神の巻」.",
+      "sources": [
+        "https://ja.wikipedia.org/wiki/%E3%82%B3%E3%83%96%E3%83%A9_(%E6%BC%AB%E7%94%BB)",
+        "https://www.jajanken.net/sakuhins/mDknqXXw9M",
+        "https://ja.wikipedia.org/wiki/%E3%82%B3%E3%83%96%E3%83%A9_(%E3%82%A2%E3%83%8B%E3%83%A1)",
+        "https://en.wikipedia.org/wiki/List_of_Space_Cobra_episodes"
+      ]
+    }
+  ],
+  "continue_points": [
+    {
+      "episode": 10,
+      "continue_chapter": 24,
+      "note": "PARITY: ep11 resumes at ch24. ch20-23 (「ソード人の秘密」) are skipped here and animated later as eps 20-21, so a reader staying in step with the anime should leave them for then."
+    },
+    {
+      "episode": 12,
+      "continue_chapter": 30,
+      "note": "PARITY: ep13 resumes at ch30 (「黄金の男」). ch28-29 (「宇宙の大魔王」) are skipped here and animated next episode (ep14)."
+    },
+    {
+      "episode": 14,
+      "continue_chapter": 35,
+      "note": "PARITY: ep15 resumes at ch35 (「雷電の惑星」). ch33-34 (「ロボットはいかが?」) are skipped here and animated at ep24."
+    },
+    {
+      "episode": 15,
+      "continue_chapter": 41,
+      "note": "PARITY: ep16 resumes at ch41 (Rug-Ball). ch38-40 (「地底の客」) are skipped here and animated at ep22."
+    },
+    {
+      "episode": 31,
+      "continue_chapter": 77,
+      "note": "Series end. Everything through ch76 (Jump Comics vol.8) has been animated; the reader continues at ch77, the first installment of Part 2 「黒竜王」 (WSJ 1981 #2-3), JC vol.9."
+    }
+  ],
+  "annotations": [
+    {
+      "episodes": [
+        11,
+        12,
+        20,
+        21
+      ],
+      "kind": "rearranged",
+      "chapters": "20-23",
+      "note": "「ソード人の秘密」 is embedded inside the tattoo/Ultimate-Weapon storyline in the manga; the TV series lifted it out and aired it as eps 20-21, after Rug-Ball, and moved the setting from Zados to a new planet 'Bakoosa' (ja.wikipedia character article, Babel entry). Dominique, who is present for it in the manga, is absent from the TV version for the same reason."
+    },
+    {
+      "episodes": [
+        2
+      ],
+      "kind": "rearranged",
+      "chapters": "32",
+      "note": "The 「サイコガンの秘密」 story (Vivi / Zygoba) sits at ch32 in the Jump run — it is one of the two 1977 one-shots remade inside the weekly serialisation — but was pulled all the way forward to episode 2."
+    },
+    {
+      "episodes": [
+        13,
+        14
+      ],
+      "kind": "rearranged",
+      "chapters": "28-31",
+      "note": "Swapped pair: ep13 adapts 「黄金の男」 (ch30-31) and airs BEFORE ep14's 「宇宙の大魔王」 (ch28-29)."
+    },
+    {
+      "episodes": [
+        24
+      ],
+      "kind": "rearranged",
+      "chapters": "33-34",
+      "note": "「ロボットはいかが?」 (ch33-34) held back roughly ten episodes, to ep24."
+    },
+    {
+      "episodes": [
+        22
+      ],
+      "kind": "rearranged",
+      "chapters": "38-40",
+      "note": "「地底の客」 (ch38-40) held back past the whole Rug-Ball block, to ep22."
+    },
+    {
+      "episodes": [
+        25,
+        26
+      ],
+      "kind": "rearranged",
+      "chapters": "51-54",
+      "note": "Swapped pair: ep25 adapts 「死の商人」 (ch53-54) and airs BEFORE ep26's 「二人の軍曹」 (ch51-52)."
+    },
+    {
+      "episodes": [
+        2,
+        4,
+        15,
+        25
+      ],
+      "kind": "divergence",
+      "chapters": "32, 4-6, 35-37, 53-54",
+      "note": "ja.wikipedia records that the TV version applies 大幅な脚色 to characters and plot: Dominique is promoted from youngest to eldest sister, Vega gets an invented Wing-planet backstory and a six-hour lifespan (ep15), and ep25 adds an anime-original doctor character who revives the frozen Cobra (in the manga Lady simply drops him in a tank). Story skeletons still follow the manga."
+    }
+  ],
+  "type_corrections": [],
+  "repairs": [
+    {
+      "episode": 31,
+      "field": "end_chapter",
+      "old": 14,
+      "new": 76,
+      "why": "The stored value is in MangaUpdates' STORY space (MU latest_chapter=28 = the 28 discrete Cobra stories; story 14 is 「シドの女神」/'La Deesse de Cid', which is indeed what ep31 finishes). The entry's chapter space is AniList's 156 chapters / 18 volumes = the Weekly Shonen Jump serialisation, in which the last installment of the 「シドの女神」 arc is ch76 (WSJ 1980 #29). volume=8 is CORRECT and should be left alone. Apply-script contract: this row is source='mu', so the repair must flip the row to source='manual' or the next MU re-derive will erase it.",
+      "sources": [
+        "https://www.mangaupdates.com/series/l1zk8pa/cobra",
+        "https://fr.wikipedia.org/wiki/Cobra_(manga)",
+        "https://www.jajanken.net/sakuhins/mDknqXXw9M",
+        "https://ja.wikipedia.org/wiki/%E3%82%B3%E3%83%96%E3%83%A9_(%E6%BC%AB%E7%94%BB)"
+      ]
+    }
+  ],
+  "structure": {
+    "notes": "One season, 31 broadcast episodes, our cumulative numbering == broadcast numbering; no OVAs/specials inside the range. CHAPTER SPACE: ja.wikipedia's manga infobox says 157話 while jajanken's issue-by-issue table of the Jump run and AniList both say 156 — a one-installment discrepancy somewhere in the 1981-84 stretch. Chapters 1-76 (our whole range) are a continuous, unambiguous run in the jajanken table, so the discrepancy does not move these anchors; a future anchor beyond ch~80 should re-check. VOLUMES: no source I could reach publishes the Jump Comics 18-volume chapter contents, so I have left volume null except where it is independently attested (ep1 -> v1; ep31 -> v8, per ja.wikipedia's JC volume list where v8 is 「シドの女神の巻」 and v9 「黒竜王の巻」 begins Part 2, plus en.wikipedia's 'first eight volumes'). A PROPOSED (derived, unverified) boundary set consistent with the volume titles, the ~9-11 month tankobon lag and an even ~9.5 chapters/volume is: v1 1-9, v2 10-19, v3 20-28, v4 29-38, v5 39-48, v6 49-58, v7 59-67, v8 68-76 — it puts each volume's title chapter inside that volume (v3 ch26 最終兵器の秘密, v4 ch35 雷電の惑星, v5 ch41 ラグ・ボール, v6 ch58 海底の墓標) and v7 「暗黒街の友」 over the Doug/Pumpkin/Bud recruitment stretch. Do NOT apply it without Sean's ruling. RELATED WORKS not in scope: the 1982 theatrical film コブラ SPACE ADVENTURE is a separate-continuity retelling of the tattoo-sisters story, and COBRA THE ANIMATION (2008 OVAs / 2010 TV) adapts LATER arcs (ザ・サイコガン, ギャラクシーナイツ, タイムドライブ and the 1982 mid-length stories) — none of those belong in this entry's episode space.",
+    "order_only": []
+  },
+  "flags_for_sean": [
+    "OPEN FLAG #676 ANSWERED: MU's latest_chapter=28 is not a chapter count — it is the count of discrete Cobra STORIES (fr.wikipedia lists exactly 28 'Histoires'). The reading edition / chapter space for this entry should be the Weekly Shonen Jump serialisation: 156 installments, Jump Comics 18 volumes, which is what AniList already stores. Recommend suppressing MU as a chapter-number source for this series.",
+    "REPAIR ep31 end_chapter 14 -> 76 (see repairs[]). The row is source='mu' and must be flipped to 'manual' on apply, per the hikaru lesson.",
+    "CONFIDENCE POSTURE: only eps 1 and 31 are 'high'. Every other anchor is 'medium' by construction — no source anywhere states a chapter NUMBER for any episode. What I have is (a) a complete, issue-by-issue Jump installment list with subtitles, (b) ja.wikipedia's character article giving explicit episode<->arc statements for eps 2, 13, 14, 15, 20, 21, 22, 25, 26, and (c) en.wikipedia's per-episode synopses. Cross-matching those three yields a partition of ch1-76 that covers all 31 episodes exactly once with no gaps or overlaps. That is strong, but it IS a derivation, not a citation of a number.",
+    "WEAKEST LINK: ep2. Its story (Vivi / Zygoba) is 「サイコガンの秘密」 per ja.wikipedia's character article, one of the two 1977 one-shots remade inside the weekly run, but no source places that remake at a specific installment. I put it at ch32 「サイコ・ガンは心で撃ての巻」 because (i) the character article orders 黄金の男 -> サイコガンの秘密 -> 雷電の惑星, which brackets it to ch32-34, (ii) ch33-34 are 「ロボットはいかが?/反乱」 (ep24, exact title match), leaving only ch32, and (iii) the story's punchline is that a duplicated Psychogun is useless because it fires by will — 'shoot the Psychogun with your heart'. Runner-up candidate is ch20 「見えざる敵」 (Zygoba phases through solids); if ch20 is ep2, then eps 20-21 shift to ch21-23 and ep13 takes ch30-32. Happy to drop ep2's anchor entirely if you would rather not carry it.",
+    "MINOR, not repaired: ja.wikipedia dates ep29 to 1983-05-05 while en.wikipedia and our stored row both say 1983-04-28 (there is a real preemption gap after ep27 on 1983-04-07). Two sources back the stored date, so I left it; noting it only so it is not rediscovered later."
+  ]
+}

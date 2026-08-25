@@ -1,0 +1,116 @@
+{
+  "series_id": "magic-knight-rayearth",
+  "summary": "This is a two-chapter-space entry. Our manga side (AniList 30119 / MAL 119, 3 volumes) is Magic Knight Rayearth I ONLY, serialised in Nakayoshi Nov-1993 to Feb-1995. Anime season 1 (our eps 1-20) adapts it; anime season 2 (our eps 21-49) adapts Magic Knight Rayearth II, which is a SEPARATE manga entry (AniList 30697 / MAL 697, MU 7kvei0p, its own 3 volumes and its own chapter numbering starting again at 1) — so no episode from 21 onward can carry an honest anchor in this entry's chapter space. The stored anchor ep49 -> chapter 15 is therefore wrong twice over: wrong chapter space (it points at MKR I's numbering for an episode that adapts MKR II), and wrong number (Kodansha's own digital edition shows MKR I's last chapter NUMBER is 14, with volume 1 carrying an extra unit labelled '5b'; AniList's '15' is a unit COUNT, not a last-chapter number). Chapter-level per-episode mapping for season 1 is not published anywhere: fandom episode pages carry no manga field, no chapter list exists on en/ja/es/it/fr Wikipedia, MangaDex has no chapters, and every licensed platform sells by volume. What IS sourceable is the volume->chapter split (Kodansha/Omoi: v1 = ch 1-5(+5b), v2 = ch 6-10, v3 = ch 11-14) crossed with the volume->episode split (fandom Volume pages) and content-matched against Wikipedia episode summaries — which yields three defensible boundary anchors (eps 3, 10, 20) and nothing more. Season 1 also condenses hard (the 3 volumes fit into ~11 non-filler episodes) while padding with 6 filler episodes and an anime-original antagonist (Inouva); season 2 diverges far further, inventing Nova and Lady Debonair outright.",
+  "anchors": [
+    {
+      "episode": 3,
+      "end_chapter": 6,
+      "start_chapter": 6,
+      "chapters_adapted": "5 (closing pages) - 6 (partial)",
+      "volume": 2,
+      "confidence": "medium",
+      "note": "Volume 1/2 boundary falls inside this episode: vol 1 ends with Ferio saving the girls from a monster in the Forest of Silence (ep 3 cold open), vol 2 opens with Hikaru thanking him and Fuu negotiating him as their escort (ep 3 body). Kodansha's own digital edition puts vol 1 at ch 1-5(+5b) and vol 2 at ch 6-10, so the episode closes part-way into ch 6. The rock/monster sequence that ends the episode is anime-original.",
+      "sources": [
+        "https://www.omoi.com/series/magic-knight-rayearth/volumes",
+        "https://magicknightrayearth.fandom.com/api.php?action=parse&page=Volume_1&prop=wikitext&format=json",
+        "https://magicknightrayearth.fandom.com/api.php?action=parse&page=Volume_2&prop=wikitext&format=json",
+        "https://en.wikipedia.org/wiki/List_of_Magic_Knight_Rayearth_episodes"
+      ]
+    },
+    {
+      "episode": 10,
+      "end_chapter": 11,
+      "start_chapter": 10,
+      "chapters_adapted": "10 - 11 (partial)",
+      "volume": 3,
+      "confidence": "medium",
+      "note": "Volume 2/3 boundary falls inside this episode: vol 2 ends with Ascot appearing to kill the Magic Knights at the sea shrine, vol 3 opens with Ascot attacking Hikaru and Fuu while Umi faces Selece — both are in ep 10 (Wikipedia summary: girls reach the lake, Umi is cut off before the blue dragon, 'Ascot then arrives with another one of his monsters'). Kodansha's digital edition puts vol 2 at ch 6-10 and vol 3 at ch 11-14, so the episode closes part-way into ch 11.",
+      "sources": [
+        "https://www.omoi.com/series/magic-knight-rayearth/volumes",
+        "https://magicknightrayearth.fandom.com/api.php?action=parse&page=Volume_2&prop=wikitext&format=json",
+        "https://magicknightrayearth.fandom.com/api.php?action=parse&page=Volume_3&prop=wikitext&format=json",
+        "https://en.wikipedia.org/wiki/List_of_Magic_Knight_Rayearth_episodes"
+      ]
+    },
+    {
+      "episode": 20,
+      "end_chapter": 14,
+      "start_chapter": null,
+      "chapters_adapted": null,
+      "volume": 3,
+      "confidence": "high",
+      "note": "Season 1 finale adapts the END of Magic Knight Rayearth I: Emeraude's truth, her death at the combined Rune God's hands, and the girls back at Tokyo Tower — exactly how manga volume 3 closes. Volume 3 = chapters 11-14 (Kodansha digital), so the last chapter NUMBER reached is 14 and the manga is exhausted here. start_chapter deliberately left null: no source splits vol 3's four chapters across eps 10-20, and guessing which of ch 13/14 the episode opens in would be fabrication.",
+      "sources": [
+        "https://www.omoi.com/series/magic-knight-rayearth/volumes",
+        "https://magicknightrayearth.fandom.com/api.php?action=parse&page=Volume_3&prop=wikitext&format=json",
+        "https://en.wikipedia.org/wiki/List_of_Magic_Knight_Rayearth_episodes",
+        "https://ja.wikipedia.org/wiki/%E9%AD%94%E6%B3%95%E9%A8%8E%E5%A3%AB%E3%83%AC%E3%82%A4%E3%82%A2%E3%83%BC%E3%82%B9"
+      ]
+    }
+  ],
+  "continue_points": [
+    {
+      "episode": 3,
+      "continue_chapter": 6,
+      "note": "C1: ends part-way through ch 6 (Ferio has been taken on as guide; the forest-exit Alcyone fight that closes ch 6 is animated in ep 4)."
+    },
+    {
+      "episode": 10,
+      "continue_chapter": 11,
+      "note": "C1: ends part-way through ch 11 (Ascot fight / Umi's trial before Selece)."
+    }
+  ],
+  "annotations": [
+    {
+      "episodes": [21, 49],
+      "kind": "divergence",
+      "chapters": null,
+      "note": "Eps 21-49 adapt Magic Knight Rayearth II — a SEPARATE manga (AniList 30697, MU 7kvei0p, Nakayoshi Mar-1995 to Apr-1996, its own 3 volumes, its own chapter numbering restarting at 1). Nothing in this range is expressible in this entry's chapter space (MKR I, ch 1-14); no anchors are possible without lying."
+    },
+    {
+      "episodes": [21, 49],
+      "kind": "divergence",
+      "chapters": null,
+      "note": "Season 2 departs from its own source far more than season 1 did: the antagonists Nova and Lady Debonair (and the Rune God Regalia) are anime-original inventions with no manga counterpart, which is why 15 of the 29 episodes are filler-typed."
+    },
+    {
+      "episodes": [6],
+      "kind": "divergence",
+      "chapters": null,
+      "note": "Presea DIES in the anime immediately after forging the Escudo weapons; in the manga she only collapses from exhaustion and survives. This anime-only death is what forces the anime-original twin sister Sierra into season 2 — a divergence that begins inside a canon-typed episode."
+    },
+    {
+      "episodes": [1, 20],
+      "kind": "abridged",
+      "chapters": "1-14",
+      "note": "Season 1 compresses all three MKR I volumes into ~11 adapting episodes and pads with 6 filler episodes (7, 8, 9, 11, 14, 17) plus the anime-original antagonist Inouva; Ferio recurs throughout the anime but vanishes from the manga after the Forest of Silence until part 2."
+    }
+  ],
+  "type_corrections": [],
+  "repairs": [
+    {
+      "episode": 49,
+      "field": "end_chapter",
+      "old": 15,
+      "new": null,
+      "why": "DELETE this anchor. Ep 49 is the finale of season 2, which adapts Magic Knight Rayearth II — a different manga with its own chapter numbering — so it cannot carry any chapter number in this entry's space (MKR I). The value 15 is additionally not a valid MKR I chapter number: Kodansha's digital edition shows vol 3 = chapters 11-14, i.e. the last chapter NUMBER is 14; AniList's '15' counts an extra unit labelled '5b' in volume 1. Keeping ep49 -> 15 also breaks every interpolated position between eps 21 and 48, because chapter 14/15 is in fact already reached at episode 20. Apply-script contract: the stored row's source is `mu` (derivation tier), so this deletion must also flip/clear at the manual tier or the next mu re-derive will restore it.",
+      "sources": [
+        "https://www.omoi.com/series/magic-knight-rayearth/volumes",
+        "https://anilist.co/manga/30697",
+        "https://www.mangaupdates.com/series/7kvei0p/mahou-kishi-rayearth-2",
+        "https://magicknightrayearth.fandom.com/api.php?action=parse&page=Magic_Knight_Rayearth_(Manga)&prop=wikitext&format=json"
+      ]
+    }
+  ],
+  "structure": {
+    "notes": "CHAPTER SPACE. Our manga side is Magic Knight Rayearth I only: AniList 30119 / MAL 119, Nakayoshi Nov-1993 to Feb-1995, 3 volumes. MangaUpdates catalogues 'Mahou Kishi Rayearth' (3hg5qxz) and 'Mahou Kishi Rayearth 2' (7kvei0p) as two separate series; ja.wikipedia carries two separate Infobox animanga/Manga blocks (魔法騎士レイアース, 全3巻; 魔法騎士レイアース2, 全3巻); CLAMP's own site and openBD likewise list them as distinct titles. The only thing that ever merged them is Tokyopop's original English numbering, which printed MKR II vols 1-3 as 'volumes 4-6' — the fandom wiki still uses that merged 1-6 volume numbering on its Volume pages, which is the trap here: fandom 'Volume 4/5/6' are MKR II volumes 1/2/3 and belong to a DIFFERENT chapter space.\n\nVOLUME -> CHAPTER (MKR I), from Kodansha's own licensed digital edition (Omoi/Azuki): vol 1 = ch 1-5 plus a unit labelled '5b'; vol 2 = ch 6-10; vol 3 = ch 11-14. So MKR I's last chapter NUMBER is 14 and the total unit count is 15 — which is exactly where AniList's total_chapters=15 comes from. Under the batch rule (chapter-NUMBER space, never a count that includes extras) our space should be 1-14. Same source for the sequel: MKR II vol 1 = ch 1-5, vol 2 = ch 6-10, vol 3 = ch 11-15, i.e. 15 chapters — note AniList records 14 for MKR II, the mirror image of the same off-by-one.\n\nVOLUME -> EPISODE (fandom Volume 1/2/3 'Anime Adaption' sections, content-matched against Wikipedia episode summaries): vol 1 -> eps 1-3, vol 2 -> eps 3-10, vol 3 -> eps 10-20. Both interior boundaries fall INSIDE an episode (3 and 10), which is why those two anchors are straddle anchors with C1 continue points.\n\nWHAT COULD NOT BE ESTABLISHED. There is no published chapter-level list for MKR I anywhere I could reach: the fandom wiki's 53 episode pages carry no 'manga counterpart' field (checked all of them via the API); en/ja/es/it/fr/pt Wikipedia have volume tables but no chapter tables; MangaDex holds zero uploaded chapters (and its metadata 'lastChapter 9' contradicts every other source); animefillerguide has no entry for this show at all; INKR, Coolmic, BookWalker and Kodansha all sell by volume; the Japanese phone-manga re-splits (mechacomic: 全34話) are digital re-cuts, not the tankoubon chapter breaks. So per-episode chapter anchors inside eps 1-19 are not sourceable and were not invented.\n\nEPISODE TYPING. The 49 stored types match animefillerlist row-for-row (18 Manga Canon, 10 Mixed, 21 Filler); no correction is warranted on that basis. But note the semantic wrinkle: the 14 canon/mixed rows in eps 21-48 are 'canon' with respect to MKR II, not with respect to the manga this entry points at, so they will never legitimately hold an anchor while the entry's manga side is MKR I alone.",
+    "order_only": []
+  },
+  "flags_for_sean": [
+    "SERIES-LEVEL REPAIR CANDIDATE: total_chapters 15 -> 14. Kodansha's licensed digital edition lists MKR I as vol 1 = ch 1-5(+5b), vol 2 = ch 6-10, vol 3 = ch 11-14, so 14 is the last chapter NUMBER and 15 is a unit count including the '5b' extra. Left as a flag rather than a repairs[] row because the batch repair shape is episode-level. If 15 is kept, ep 20's anchor of 14 will read as '1 chapter left' after a season that in fact finishes the manga. Sources: https://www.omoi.com/series/magic-knight-rayearth/volumes ; https://anilist.co/manga/30119",
+    "SCOPE DECISION (D2 class, prisma/rosario pattern): eps 21-49 are 29 of 49 episodes and adapt Magic Knight Rayearth II (AniList 30697 / MU 7kvei0p). Three options: (a) leave them permanently unanchored and let the entry cap honestly at ep 20 / ch 14; (b) add MKR II as a second manga component with its own chapter space (15 chapters per Kodansha digital, 14 per AniList — use 15); (c) keep as-is with the divergence annotation only. Nothing in this verdict presumes which.",
+    "COVERAGE GAP, STATED HONESTLY: the ask was 28 unanchored canon/mixed episodes (14 in S1, 14 in S2). S2's 14 are structurally unanchorable (wrong chapter space). Of S1's 14, only the 3 volume-boundary episodes are sourceable; eps 1, 2, 4, 5, 6, 12, 13, 15, 16, 18, 19 have no chapter-level source in existence as far as I could establish. An even 5/5/5 read of the 15 units would be a tempting fabrication and is contradicted by the actual 5(+1)/5/4 split — do not let a later pass regenerate one.",
+    "SEQUEL CHAPTER-COUNT DISAGREEMENT (only matters if option (b) above is taken): AniList 30697 says MKR II has 14 chapters; Kodansha digital shows vol 3 = ch 11-15, i.e. 15. Better-supported value is 15 (publisher primary).",
+    "MU-TIER HYGIENE: the ep49 -> 15 anchor is source `mu`. Per the hikaru lesson, deleting it must land at the manual tier (or the row's source flipped), otherwise the next mu re-derive re-creates the same wrong terminal anchor — and this particular derivation ('last episode = last chapter') will reproduce it every time for any entry whose anime outruns its mapped manga into a sequel series."
+  ]
+}

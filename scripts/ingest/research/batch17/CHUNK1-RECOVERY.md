@@ -422,3 +422,15 @@ All seven verdicts survived; zero value-level refutations. ~424k tokens.
 | x | CONFIRMED / ep-20 PARTIAL | vol-18 half solid; 94 = best-supported estimate (95 overshoots); timeline sentence overstated (ch 94 postdated airdate); verifier's own sub-fetch hallucinated (raw wikitext refuted it) |
 | blade-of-the-immortal-ona | CONFIRMED | ep-22 END bounded 189-191 (stored volume safe either way); total_chapters 219 vs 206-act space = pre-existing count-space item |
 | arms-alchemy | CONFIRMED | ep-18 END fork surfaced (61 vs 63/64 graveyard cliffhanger); finale evidence edge 83 over 81; SCHEMA FIND: unadapted ch 82 sits inside ep-26's start/end range — exclusions live only in free text (restructuring-phase item) |
+
+## 18. FINAL WAVE LANDED (2026-08-25) — BATCH 17 RESEARCH COMPLETE (26/26 targets + narrow tasks)
+
+| series | anchors | headline |
+|---|---|---|
+| magic-knight-rayearth | 3 | D2 SPECIMEN #3: manga side = MKR I only; eps 21-49 adapt MKR II (separate numbering) — honest 3-anchor delivery, no fabricated 5/5/5 split possible (no chapter source exists); ep-49 deletion repair (wrong space AND count-space 15 in a 14-space); Tokyopop merged-volume trap on the wiki; SCOPE RULING for Sean (cap manga side at ep 20 vs add MKR II component) |
+| fist-of-the-blue-sky | 26 | full coverage; MU pin ep26→88 CONFIRMED (3 legs); 22 volume boundaries recovered; component finding: "DVD episodes" (stored eps 23-26, kind ova) are really withheld TV eps (production 16/17/18/21) |
+| space-adventure-cobra | 31 | chapter space resolved (flag #676): Jump serialisation 156 installments; MU's 28 is a STORY count (fr-WP's 28 "Histoires") — mechanism for the stored ep31→"14" pin; repair 14→76; 6 reorder blocks annotated; ep2 weakest (ch32 by elimination); derived volume table proposed not applied |
+
+Final wave usage ~439k. Verify pass (standing practice) dispatched over the
+three weight-bearing sets: cobra's count-vs-number repair mechanism, rayearth's
+D2 space claims + deletion, fotbs's confirmation legs + component finding.
