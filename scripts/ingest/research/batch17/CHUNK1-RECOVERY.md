@@ -367,3 +367,13 @@ blade-of-the-immortal-ona, arms-alchemy, x, emma-a-victorian-romance,
 detective-school-q, fist-of-the-blue-sky, magic-knight-rayearth,
 space-adventure-cobra) — waits on Sean's usage check. Then the pre-18
 restructuring phase.
+
+## 14. WAVE-2 VERIFY PASS RESULTS (2026-08-25) — 4 verifiers + 1 script check
+
+| claim | verdict | what changed |
+|---|---|---|
+| eyeshield 19-ep filler | CONFIRMED (all 19, per-episode) | typing-source identified: the import took AFG titles (typos + "* Filler" suffix verbatim) but never mapped the filler flag → defaulted canon; AFL has NO eyeshield page. AFG final row "155." confirmed in raw HTML → strengthens the ep-155 mu-artifact suspicion. NEW SWEEP CANDIDATE: other AFG-expansion series typed the same way. |
+| project-arms 242 + ep-53 | CONFIRMED (both) | 242 triple-locked (v7=12 is the load-bearing count; AniList's 241 = the dropped-v10-chapter error; ja-WP 243 unreconstructable). Ep-53 PS2 game proven 5 ways incl. air-date inversion. DURABILITY: deleting the anchor alone gets resurrected (row typed mixed, mu re-derives) — must delete row 53 + counts 53→52. NEW AUDIT CANDIDATE: AFL trailing non-episode rows = air-date inversion, mechanically detectable. Minor: ch-44 gap needs one sentence. |
+| kinnikuman ch 68-89 + 120-137 filler | CONFIRMED (both) | boundary title-verified both sides (ch68 = first excluded, ch90 ↔ ep 27B); special = "cut from broadcast" per ja-WP. 120-137: author-commissioned ≠ author-canon; sequel continuity-OVERWRITES their slot; no canon signal found. Eps 1-3 scrambled mappings verified both directions. |
+| saint-seiya phantom chapters | PARTIALLY CONFIRMED — corrections matter | Phantom ch 30 PROVEN (smoking gun: en-WP preserved the anime ruby gloss "Batoru"). Phantom ch 53 REFUTED by Shueisha's own vol-15 TOC (4 chapters incl. 黄金色の鎖). TRUE COUNT = 109, ONE phantom, offset = UNIFORM −1 for stored ≥31 (the "+2 from 50" leg was back-derived from the nonexistent phantom). The verdict's correction advice ep114→65 is WRONG — true 66; ruling on it as written would have shipped an off-by-one across vols 15-28. Also: ep-31 row defect (start 25 vs adapted "24-25") — fix at curation. The 55 delivered anchors are sound in stored space (all ≤46, where only the −1 applies). |
+| trigun MU cross-contamination | SCRIPT-CONFIRMED | ingest_mangaupdates maps our AniList 30703 (Trigun) to mu_series 30005048940 titled "Trigun Maximum" (latest 102) — wrong auto-association; fix the staging association, latest_known heals via the normal pass. |
