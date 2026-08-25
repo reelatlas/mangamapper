@@ -310,3 +310,17 @@ HELD: wave 2 dispatch — until the open questions above are worked through
 with Sean (his instruction). Follow-up tasks pending his go: ranma
 title-keyed re-anchor; batch-12 as-stored spot-check (7 rows); zatch-bell
 10-ep re-research (new).
+
+## 12. APPLIED (2026-08-25) — wave 1 + narrow tasks are IN THE DATABASE
+
+Everything above through §11 is applied (§12.45 is the ruling record):
+anchor_on_noncanon_row 49 → 0, ruling_violation 0, nonmonotonic 0,
+display verify 219/0. D4 gate live in all four edges. Mashle renumbered
+(apply-rulings-20260825-mashle.ts). The four narrow-task files are
+curated and released from HELD_FILES.
+
+**REMAINING in chunk 1: wave 2 only** — kinnikuman, eyeshield-21,
+saint-seiya-knights-of-the-zodiac, project-arms, d-gray-man, angel-heart,
+hayate-the-combat-butler, trigun (traps in §5). Then chunk 2
+(detective-conan + 9 lighter), then the system-evolution rework before 18.
+Open Sean items listed in §12.45.

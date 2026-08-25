@@ -36,7 +36,7 @@ export async function applyContinua(
   // the AFG page's own highest charted episode — tells us which numbering
   // space the page lives in (see the conversion note below)
   afgPageMax?: number,
-): Promise<'applied' | 'withheld' | 'kept_curated' | 'no_data' | 'suppressed'> {
+): Promise<'applied' | 'withheld' | 'kept_curated' | 'no_data' | 'suppressed' | 'refused_episode_type'> {
   // research-ruled suppression (Claymore/Kimi lesson): a source value proven
   // WRONG for a series must not re-enter on any refresh — same-episode
   // precedence can't stop it landing on a different episode
@@ -126,6 +126,35 @@ export async function applyContinua(
   }
   ep ??= s.aired_episodes;
   if (!ep) return 'no_data';
+
+  // A1 at the writer (Sean's D4 ruling, 2026-08-25 — extending D1 to the AFG
+  // writers after 49/49 audit hits adjudicated 45 junk / 4 mistyped): filler
+  // and anime-only rows NEVER take anchors. A continua end-frontier landing
+  // on one states adaptation for an episode that adapts nothing — refuse the
+  // ANCHOR; the continue-from is READING GUIDANCE, not a position, so it
+  // still applies. Allow-list (canon/mixed) so unknown types fail closed; a
+  // row-less episode can't be typed — the pin stands (D1 parity).
+  const { data: epRow } = await db
+    .from('episodes')
+    .select('type')
+    .eq('series_id', s.id)
+    .eq('number', ep)
+    .maybeSingle();
+  if (epRow && epRow.type !== 'canon' && epRow.type !== 'mixed') {
+    await fileFlagOnce(runId, s.id, 'afg', 'count_mismatch', {
+      pinEpisode: ep,
+      episodeType: epRow.type,
+      continuaEndChapter: continua.endChapter,
+      note: `AFG continua frontier lands on a ${epRow.type} episode — A1 forbids the anchor; withheld for research to place the honest terminal on the last canon/mixed episode (D4 episode-type refusal)`,
+    });
+    if (continua.continueChapter !== null) {
+      await db
+        .from('series')
+        .update({ continue_from_chapter: continua.continueChapter, updated_at: new Date().toISOString() })
+        .eq('id', s.id);
+    }
+    return 'refused_episode_type';
+  }
 
   const { data: holder } = await db
     .from('chapter_anchors')
@@ -283,9 +312,27 @@ export async function syncAnchors(
   // source's space — shift-ruled series translate exactly like episode rows
   // (dropped order-only entries never anchor)
   const translated = anchors
-    .map((a) => ({ ...a, episode: translateEpisodeNumber(seriesId, a.episode) }))
+    .map((a) => ({ ...a, episode: translateEpisodeNumber(seriesId, a.episode, 'afg') }))
     .filter((a): a is typeof anchors[number] => a.episode !== null);
+  // A1 at the writer (Sean's D4 ruling, 2026-08-25, extending D1 to the AFG
+  // chart writer): filler and anime-only rows NEVER take anchors. AFG's
+  // chapter column is a READING-POSITION CONVERSION that plateaus across
+  // noncanon rows (proven by its own duplicate values — one-piece eps
+  // 214/216 both print 313 on rows AFG itself marks *Filler), so a chart
+  // value on a noncanon row is a conversion artifact, not an adaptation
+  // claim. Allow-list (canon/mixed) so unknown types fail closed; row-less
+  // episodes pass (can't be typed — D1 parity). Outcome-checked by the
+  // anchor_on_noncanon_row audit class.
+  const { data: typeRows } = await db
+    .from('episodes')
+    .select('number, type')
+    .eq('series_id', seriesId);
+  const typeByEp = new Map((typeRows ?? []).map((e) => [e.number, e.type]));
   const rows = translated
+    .filter((a) => {
+      const t = typeByEp.get(a.episode);
+      return t === undefined || t === 'canon' || t === 'mixed';
+    })
     .filter((a) => !protectedEps.has(a.episode))
     // curated-CONSISTENCY (2026-08-23, the Boruto ep-219 lesson): a derived
     // row that contradicts the ordering around a research-tier anchor
@@ -319,7 +366,7 @@ export async function syncAnchors(
   // what content makes up an episode; research-tier annotations at the same
   // episode+kind are never clobbered, and the pending review flags it)
   const bonus = deriveBonusChapters(page.episodes)
-    .map((b) => ({ ...b, episode: translateEpisodeNumber(seriesId, b.episode) }))
+    .map((b) => ({ ...b, episode: translateEpisodeNumber(seriesId, b.episode, 'afg') }))
     .filter((b): b is { episode: number; chapters: number[] } => b.episode !== null);
   for (const b of bonus) {
     await db.from('episode_annotations').upsert(

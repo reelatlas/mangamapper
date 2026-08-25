@@ -6,7 +6,11 @@ var __getOwnPropNames = Object.getOwnPropertyNames;
 var __getProtoOf = Object.getPrototypeOf;
 var __hasOwnProp = Object.prototype.hasOwnProperty;
 var __commonJS = (cb, mod) => function __require() {
-  return mod || (0, cb[__getOwnPropNames(cb)[0]])((mod = { exports: {} }).exports, mod), mod.exports;
+  try {
+    return mod || (0, cb[__getOwnPropNames(cb)[0]])((mod = { exports: {} }).exports, mod), mod.exports;
+  } catch (e) {
+    throw mod = 0, e;
+  }
 };
 var __export = (target, all) => {
   for (var name in all)
@@ -44,7 +48,7 @@ var require_boolbase = __commonJS({
 });
 
 // node_modules/@supabase/supabase-js/dist/tracingRegistry.mjs
-var EXTRACTOR_KEY = Symbol.for("@supabase/supabase-js.traceContextExtractor");
+var EXTRACTOR_KEY = /* @__PURE__ */ Symbol.for("@supabase/supabase-js.traceContextExtractor");
 function getTraceContextExtractor() {
   return globalThis[EXTRACTOR_KEY];
 }
@@ -4307,7 +4311,7 @@ Suggested solution: ${env2.workaround}`;
 var websocket_factory_default = WebSocketFactory;
 
 // node_modules/@supabase/realtime-js/dist/module/lib/version.js
-var version = "2.112.3";
+var version = "2.112.4";
 
 // node_modules/@supabase/realtime-js/dist/module/lib/constants.js
 var DEFAULT_VERSION = `realtime-js/${version}`;
@@ -4554,17 +4558,24 @@ var convertCell = (type, value) => {
       return toJson(value);
     case PostgresTypes.timestamp:
       return toTimestampString(value);
+    // Format to be consistent with PostgREST
     case PostgresTypes.abstime:
+    // To allow users to cast it based on Timezone
     case PostgresTypes.date:
+    // To allow users to cast it based on Timezone
     case PostgresTypes.daterange:
     case PostgresTypes.int4range:
     case PostgresTypes.int8range:
     case PostgresTypes.money:
     case PostgresTypes.reltime:
+    // To allow users to cast it based on Timezone
     case PostgresTypes.text:
     case PostgresTypes.time:
+    // To allow users to cast it based on Timezone
     case PostgresTypes.timestamptz:
+    // To allow users to cast it based on Timezone
     case PostgresTypes.timetz:
+    // To allow users to cast it based on Timezone
     case PostgresTypes.tsrange:
     case PostgresTypes.tstzrange:
       return noop(value);
@@ -7315,7 +7326,12 @@ var RealtimeChannel = class _RealtimeChannel {
   async send(args, opts = {}) {
     var _a5, _b;
     if (!this.channelAdapter.canPush() && args.type === "broadcast") {
-      console.warn("Realtime send() is automatically falling back to REST API. This behavior will be deprecated in the future. Please use httpSend() explicitly for REST delivery.");
+      const fallbackWarning = "Realtime send() is automatically falling back to REST API. This behavior will be deprecated in the future. Please use httpSend() explicitly for REST delivery.";
+      if (this.socket.hasLogger()) {
+        this.socket.log("channel", fallbackWarning);
+      } else {
+        console.warn(fallbackWarning);
+      }
       const { event, payload: endpoint_payload } = args;
       const headers = {
         apikey: this.socket.apiKey ? this.socket.apiKey : "",
@@ -7615,6 +7631,9 @@ var SocketAdapter = class {
   }
   log(kind, msg, data2) {
     this.socket.log(kind, msg, data2);
+  }
+  hasLogger() {
+    return this.socket.hasLogger();
   }
   makeRef() {
     return this.socket.makeRef();
@@ -7921,6 +7940,14 @@ var RealtimeClient = class {
    */
   log(kind, msg, data2) {
     this.socketAdapter.log(kind, msg, data2);
+  }
+  /**
+   * Returns true if a custom `logger` has been configured on this client.
+   *
+   * @category Realtime
+   */
+  hasLogger() {
+    return this.socketAdapter.hasLogger();
   }
   /**
    * Returns the current state of the socket.
@@ -8263,9 +8290,9 @@ var RealtimeClient = class {
     result.logger = options === null || options === void 0 ? void 0 : options.logger;
     result.heartbeatCallback = this._wrapHeartbeatCallback(options === null || options === void 0 ? void 0 : options.heartbeatCallback);
     result.sessionStorage = (_h = options === null || options === void 0 ? void 0 : options.sessionStorage) !== null && _h !== void 0 ? _h : resolveSessionStorage();
-    result.reconnectAfterMs = (_j = options === null || options === void 0 ? void 0 : options.reconnectAfterMs) !== null && _j !== void 0 ? _j : (tries) => {
+    result.reconnectAfterMs = (_j = options === null || options === void 0 ? void 0 : options.reconnectAfterMs) !== null && _j !== void 0 ? _j : ((tries) => {
       return RECONNECT_INTERVALS[tries - 1] || DEFAULT_RECONNECT_FALLBACK;
-    };
+    });
     let defaultEncode;
     let defaultDecode;
     const vsn = (_k = options === null || options === void 0 ? void 0 : options.vsn) !== null && _k !== void 0 ? _k : DEFAULT_VSN;
@@ -10236,7 +10263,7 @@ var StorageFileApi = class extends BaseApiClient {
     return query;
   }
 };
-var version2 = "2.112.3";
+var version2 = "2.112.4";
 var DEFAULT_HEADERS = { "X-Client-Info": `storage-js/${version2}` };
 var StorageBucketApi = class extends BaseApiClient {
   constructor(url2, headers = {}, fetch$1, opts) {
@@ -11638,7 +11665,7 @@ var StorageClient = class extends StorageBucketApi {
 };
 
 // node_modules/@supabase/auth-js/dist/module/lib/version.js
-var version3 = "2.112.3";
+var version3 = "2.112.4";
 
 // node_modules/@supabase/auth-js/dist/module/lib/constants.js
 var AUTO_REFRESH_TICK_DURATION_MS = 30 * 1e3;
@@ -11951,7 +11978,7 @@ function expiresAt(expiresIn) {
   return timeNow + expiresIn;
 }
 function generateCallbackId() {
-  return Symbol("auth-callback");
+  return /* @__PURE__ */ Symbol("auth-callback");
 }
 var isBrowser = () => typeof window !== "undefined" && typeof document !== "undefined";
 var localStorageWriteTests = {
@@ -14398,6 +14425,7 @@ var DEFAULT_OPTIONS = {
   experimental: {}
 };
 var GLOBAL_JWKS = {};
+var deprecatedLockWarned = false;
 var GoTrueClient = class _GoTrueClient {
   /**
    * The JWKS used for verifying asymmetric JWTs
@@ -14493,6 +14521,10 @@ var GoTrueClient = class _GoTrueClient {
     this.lockAcquireTimeout = settings.lockAcquireTimeout;
     if (settings.lock != null) {
       this.lock = settings.lock;
+      if (!deprecatedLockWarned) {
+        deprecatedLockWarned = true;
+        console.warn(`${this._logPrefix()} The "lock" option is deprecated and will be removed in v3. The client now coordinates session refreshes without a lock, so most apps can drop the option. See https://github.com/supabase/supabase-js/blob/master/packages/core/auth-js/migrations/lockless-coordination.md`);
+      }
     }
     if (!this.jwks) {
       this.jwks = { keys: [] };
@@ -18218,6 +18250,8 @@ var GoTrueClient = class _GoTrueClient {
     this._debug(debugName, "begin");
     try {
       this.refreshingDeferred = new Deferred();
+      this.refreshingDeferred.promise.then(void 0, () => {
+      });
       const storedAtStart = await getItemAsync(this.storage, this.storageKey);
       const { data: data2, error } = await this._refreshAccessToken(refreshToken);
       if (error)
@@ -19574,7 +19608,7 @@ var AuthClient = GoTrueClient_default;
 var AuthClient_default = AuthClient;
 
 // node_modules/@supabase/supabase-js/dist/index.mjs
-var version4 = "2.112.3";
+var version4 = "2.112.4";
 var JS_ENV = "";
 var JS_RUNTIME_VERSION;
 if (typeof Deno !== "undefined") {
@@ -21175,6 +21209,7 @@ var EntityDecoder = class {
       case EntityDecoderState.NamedEntity: {
         return this.result !== 0 && (this.decodeMode !== DecodingMode.Attribute || this.result === this.treeIndex) ? this.emitNotTerminatedNamedEntity() : 0;
       }
+      // Otherwise, emit a numeric entity if we have one.
       case EntityDecoderState.NumericDecimal: {
         return this.emitNumericEntity(0, 2);
       }
@@ -21498,6 +21533,7 @@ function renderNode(node, options) {
   switch (node.type) {
     case Root:
       return render(node.children, options);
+    // @ts-expect-error We don't use `Doctype` yet
     case Doctype:
     case Directive:
       return renderDirective(node);
@@ -22290,7 +22326,7 @@ var decodeMap2 = /* @__PURE__ */ new Map([
 ]);
 var fromCodePoint2 = (
   // eslint-disable-next-line @typescript-eslint/no-unnecessary-condition, n/no-unsupported-features/es-builtins
-  (_a2 = String.fromCodePoint) !== null && _a2 !== void 0 ? _a2 : (codePoint) => {
+  (_a2 = String.fromCodePoint) !== null && _a2 !== void 0 ? _a2 : ((codePoint) => {
     let output = "";
     if (codePoint > 65535) {
       codePoint -= 65536;
@@ -22299,7 +22335,7 @@ var fromCodePoint2 = (
     }
     output += String.fromCharCode(codePoint);
     return output;
-  }
+  })
 );
 function replaceCodePoint2(codePoint) {
   var _a5;
@@ -22673,6 +22709,7 @@ var EntityDecoder2 = class {
       case EntityDecoderState2.NamedEntity: {
         return this.result !== 0 && (this.decodeMode !== DecodingMode2.Attribute || this.result === this.treeIndex) ? this.emitNotTerminatedNamedEntity() : 0;
       }
+      // Otherwise, emit a numeric entity if we have one.
       case EntityDecoderState2.NumericDecimal: {
         return this.emitNumericEntity(0, 2);
       }
@@ -23882,7 +23919,7 @@ function parseDocument(data2, options) {
 var _a3;
 var hasOwn = (
   // @ts-expect-error `hasOwn` is a standard object method
-  (_a3 = Object.hasOwn) !== null && _a3 !== void 0 ? _a3 : (object, prop2) => Object.prototype.hasOwnProperty.call(object, prop2)
+  (_a3 = Object.hasOwn) !== null && _a3 !== void 0 ? _a3 : ((object, prop2) => Object.prototype.hasOwnProperty.call(object, prop2))
 );
 var rspace = /\s+/;
 var dataAttrPrefix = "data-";
@@ -24472,6 +24509,7 @@ function parseSelector(subselects2, selector, selectorIndex) {
   loop: while (selectorIndex < selector.length) {
     const firstChar = selector.charCodeAt(selectorIndex);
     switch (firstChar) {
+      // Whitespace
       case 32:
       case 9:
       case 10:
@@ -24484,6 +24522,7 @@ function parseSelector(subselects2, selector, selectorIndex) {
         stripWhitespace(1);
         break;
       }
+      // Traversals
       case 62: {
         addTraversal(SelectorType.Child);
         stripWhitespace(1);
@@ -24504,6 +24543,7 @@ function parseSelector(subselects2, selector, selectorIndex) {
         stripWhitespace(1);
         break;
       }
+      // Special attribute selectors: .class, #id
       case 46: {
         addSpecialAttribute("class", AttributeAction.Element);
         break;
@@ -25368,6 +25408,7 @@ function compileGeneralSelector(next2, selector, options, context, compileToken2
     case SelectorType.Pseudo: {
       return compilePseudoSelector(next2, selector, options, context, compileToken2);
     }
+    // Tags
     case SelectorType.Tag: {
       if (selector.namespace != null) {
         throw new Error("Namespaced tag names are not yet supported by css-select");
@@ -25380,6 +25421,7 @@ function compileGeneralSelector(next2, selector, options, context, compileToken2
         return adapter2.getName(elem) === name && next2(elem);
       };
     }
+    // Traversal
     case SelectorType.Descendant: {
       if (options.cacheResults === false || typeof WeakSet === "undefined") {
         return function descendant(elem) {
@@ -27467,6 +27509,7 @@ var EntityDecoder3 = class {
       case EntityDecoderState3.NamedEntity: {
         return this.result !== 0 && (this.decodeMode !== DecodingMode3.Attribute || this.result === this.treeIndex) ? this.emitNotTerminatedNamedEntity() : 0;
       }
+      // Otherwise, emit a numeric entity if we have one.
       case EntityDecoderState3.NumericDecimal: {
         return this.emitNumericEntity(0, 2);
       }
@@ -34376,6 +34419,7 @@ function endTagInSelectInTable(p, token) {
 }
 function startTagInTemplate(p, token) {
   switch (token.tagID) {
+    // First, handle tags that can start without a mode change
     case TAG_ID.BASE:
     case TAG_ID.BASEFONT:
     case TAG_ID.BGSOUND:
@@ -34389,6 +34433,7 @@ function startTagInTemplate(p, token) {
       startTagInHead(p, token);
       break;
     }
+    // Re-process the token in the appropriate mode
     case TAG_ID.CAPTION:
     case TAG_ID.COLGROUP:
     case TAG_ID.TBODY:
@@ -35271,6 +35316,66 @@ var EPISODE_TYPE_OVERRIDES = {
   "sailor-moon": { ...range(167, 172, "anime-only-canon") },
   "twin-star-exorcists": { 20: "mixed", ...range(21, 50, "anime-only-canon") },
   "world-trigger": { 48: "anime-only-canon", ...range(49, 63, "filler") },
+  //   BATCH 17 CHUNK 1 WAVE 1 (Sean's rulings 2026-08-25; verdict JSONs in
+  //   research/batch17/out + out2, each 2+ sources, cross-model verified
+  //   where weight-bearing). Type semantics per Sean's 2026-08-25 ruling:
+  //   mixed = canon AND non-canon in one episode; AFL/AFG advisory only.
+  //   hellsing 7/10: ep 7 closes with ch 11-12 material inside an
+  //   increasingly-original stretch; ep 10 adapts ch 2 as a rearranged
+  //   flashback inside the original back half — both mixed.
+  //   fist-of-the-north-star: 61/78/83 zero canon (Bugal filler, recap-block
+  //   opener, filler — hokuto.fandom + Finn Clark part-3/4 reviews; AFL
+  //   dissents, ruled fandom+accounting-beats-AFL); 58/75/84/86/91 carry
+  //   canon alongside original material — mixed.
+  //   sket-dance 26/32: AFL's table STOPS at ep 54 so its filler labels
+  //   there are not typings — ep 26 adapts ch 180 in full (ja-WP subtitle =
+  //   the chapter title), ep 32 adapts chs 18+45 → canon. ep 77: finale
+  //   adapts ch 167 with an anime-original bookend → mixed.
+  //   dragon-ball-z 100: Kanzenshuu ch 323 p.1-11 "Half Filler" + Dragon
+  //   Universe manga field — 3 sources vs AFL alone → mixed.
+  //   fairy-tail 256: closing act adapts ch 398 p.12-end (~9 pages, past
+  //   the sliver line); Laxus/Tempester substitution is original → mixed.
+  //   the-promised-neverland 23: adapts chs 172-178 beat-for-beat with
+  //   ruled substitutions (Isabella lives, Emma keeps memories) → mixed.
+  //   one-piece 737: the Sabo special adapts ch 794 (wiki fwd+reverse) —
+  //   AFL's anime-canon label loses to the explicit chapter mapping → mixed.
+  hellsing: { 7: "mixed", 10: "mixed" },
+  //   zatch-bell contested block (Sean's overlap-rule re-research 2026-08-25,
+  //   out2/zatch-bell-contested.json — konjikinogash.fandom per-episode
+  //   manga_chapter fields + en-WP; the prior "all 10 filler" proposal rested
+  //   on exhaustive accounting, ruled insufficient): 13/108/118/119/123 zero
+  //   canon (119 = a re-staged REHASH of the ch 35-36 flashback already
+  //   animated at eps 14-15 — the overlap rule's discount case); 51 (ch 22
+  //   Germany half, held back 41 eps), 57 (chs 109-110 reworked), 103
+  //   (ch 173 opening), 117 (ch 183 closing scene), 122 (ch 186 tail) all
+  //   carry real canon → mixed.
+  "zatch-bell": {
+    13: "filler",
+    108: "filler",
+    118: "filler",
+    119: "filler",
+    123: "filler",
+    51: "mixed",
+    57: "mixed",
+    103: "mixed",
+    117: "mixed",
+    122: "mixed"
+  },
+  "fist-of-the-north-star": {
+    61: "filler",
+    78: "filler",
+    83: "filler",
+    58: "mixed",
+    75: "mixed",
+    84: "mixed",
+    86: "mixed",
+    91: "mixed"
+  },
+  "sket-dance": { 26: "canon", 32: "canon", 77: "mixed" },
+  "dragon-ball-z": { 100: "mixed" },
+  "fairy-tail": { 256: "mixed" },
+  "the-promised-neverland": { 23: "mixed" },
+  "one-piece": { 737: "mixed" },
   //   claymore 24-26: fully anime-original ending (Madhouse outran the
   //   manga) — research verdict 2026-08-23 (AFG + wheredoestheanimeleaveoff
   //   + sportskeeda), Sean sign-off
@@ -35367,6 +35472,13 @@ var SOURCE_NUMBERING_SHIFTS = {
   // Valentine/Onsen bonus OVA
   "fate-kaleid-liner-prisma-illya": { drop: [11], shifts: [{ from: 12, offset: -1 }] },
   // Undoukai DE Dance bonus
+  // mashle (Sean's fractional ruling 2026-08-25, CHUNK1-RECOVERY.md §9): the
+  // S1 recap is integer ep 7 in AFL's numbering only — AFG/fandom/Wikipedia/
+  // AniList all exclude it (fandom calls it "Episode 6.5"). Our rows follow
+  // the community convention: recap = watch-order entry at 6.5, main rows
+  // 1-24. AFL-space rows translate; AFG chart numbers are ALREADY in our
+  // space and must not shift.
+  "mashle-magic-and-muscles": { drop: [7], shifts: [{ from: 8, offset: -1 }], spaces: ["afl"] },
   "prison-school": { drop: [13], shifts: [] },
   // Mad Wax bonus OVA
   "to-love-ru-darkness": { drop: [25, 26], shifts: [] },
@@ -35391,9 +35503,9 @@ var SOURCE_NUMBERING_SHIFTS = {
   //   exist (research batch 10, 2026-08-23). Recap rule: excluded.
   "kimi-ni-todoke-from-me-to-you": { drop: [44], shifts: [] }
 };
-var translateEpisodeNumber = (seriesId, n) => {
+var translateEpisodeNumber = (seriesId, n, space) => {
   const t = SOURCE_NUMBERING_SHIFTS[seriesId];
-  if (!t) return n;
+  if (!t || t.spaces && !t.spaces.includes(space)) return n;
   if (t.drop.includes(n)) return null;
   return n + t.shifts.reduce((s, x) => n >= x.from ? s + x.offset : s, 0);
 };
@@ -35469,6 +35581,19 @@ async function applyContinua(runId, seriesId, continua, afgPageMax) {
   }
   ep ??= s.aired_episodes;
   if (!ep) return "no_data";
+  const { data: epRow } = await db.from("episodes").select("type").eq("series_id", s.id).eq("number", ep).maybeSingle();
+  if (epRow && epRow.type !== "canon" && epRow.type !== "mixed") {
+    await fileFlagOnce(runId, s.id, "afg", "count_mismatch", {
+      pinEpisode: ep,
+      episodeType: epRow.type,
+      continuaEndChapter: continua.endChapter,
+      note: `AFG continua frontier lands on a ${epRow.type} episode \u2014 A1 forbids the anchor; withheld for research to place the honest terminal on the last canon/mixed episode (D4 episode-type refusal)`
+    });
+    if (continua.continueChapter !== null) {
+      await db.from("series").update({ continue_from_chapter: continua.continueChapter, updated_at: (/* @__PURE__ */ new Date()).toISOString() }).eq("id", s.id);
+    }
+    return "refused_episode_type";
+  }
   const { data: holder } = await db.from("chapter_anchors").select("source, chapter").eq("series_id", s.id).eq("episode", ep).maybeSingle();
   const diff = holder ? Math.abs(Number(holder.chapter) - continua.endChapter) : 0;
   if (holder && (holder.source === "manual" || holder.source === "wiki")) {
@@ -35556,8 +35681,13 @@ async function syncAnchors(runId, seriesId, afgSlug, page) {
   await db.from("chapter_anchors").delete().eq("series_id", seriesId).eq("source", "afg");
   const { data: curated } = await db.from("chapter_anchors").select("episode, chapter").eq("series_id", seriesId).in("source", ["manual", "wiki"]);
   const protectedEps = new Set((curated ?? []).map((c) => c.episode));
-  const translated = anchors.map((a) => ({ ...a, episode: translateEpisodeNumber(seriesId, a.episode) })).filter((a) => a.episode !== null);
-  const rows = translated.filter((a) => !protectedEps.has(a.episode)).filter(
+  const translated = anchors.map((a) => ({ ...a, episode: translateEpisodeNumber(seriesId, a.episode, "afg") })).filter((a) => a.episode !== null);
+  const { data: typeRows } = await db.from("episodes").select("number, type").eq("series_id", seriesId);
+  const typeByEp = new Map((typeRows ?? []).map((e) => [e.number, e.type]));
+  const rows = translated.filter((a) => {
+    const t = typeByEp.get(a.episode);
+    return t === void 0 || t === "canon" || t === "mixed";
+  }).filter((a) => !protectedEps.has(a.episode)).filter(
     (a) => (curated ?? []).every(
       (c) => a.episode < c.episode ? a.chapter <= c.chapter : a.episode > c.episode ? a.chapter >= c.chapter : true
     )
@@ -35578,7 +35708,7 @@ async function syncAnchors(runId, seriesId, afgSlug, page) {
     const { error } = await db.from("chapter_anchors").upsert(rows.slice(i, i + 500));
     if (error) throw new Error(`anchors (${seriesId}): ${error.message}`);
   }
-  const bonus = deriveBonusChapters(page.episodes).map((b) => ({ ...b, episode: translateEpisodeNumber(seriesId, b.episode) })).filter((b) => b.episode !== null);
+  const bonus = deriveBonusChapters(page.episodes).map((b) => ({ ...b, episode: translateEpisodeNumber(seriesId, b.episode, "afg") })).filter((b) => b.episode !== null);
   for (const b of bonus) {
     await db.from("episode_annotations").upsert(
       {

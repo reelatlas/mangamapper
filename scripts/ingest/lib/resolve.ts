@@ -174,6 +174,52 @@ export const EPISODE_TYPE_OVERRIDES: Record<string, Record<number, string>> = {
   'sailor-moon': { ...range(167, 172, 'anime-only-canon') },
   'twin-star-exorcists': { 20: 'mixed', ...range(21, 50, 'anime-only-canon') },
   'world-trigger': { 48: 'anime-only-canon', ...range(49, 63, 'filler') },
+  //   BATCH 17 CHUNK 1 WAVE 1 (Sean's rulings 2026-08-25; verdict JSONs in
+  //   research/batch17/out + out2, each 2+ sources, cross-model verified
+  //   where weight-bearing). Type semantics per Sean's 2026-08-25 ruling:
+  //   mixed = canon AND non-canon in one episode; AFL/AFG advisory only.
+  //   hellsing 7/10: ep 7 closes with ch 11-12 material inside an
+  //   increasingly-original stretch; ep 10 adapts ch 2 as a rearranged
+  //   flashback inside the original back half — both mixed.
+  //   fist-of-the-north-star: 61/78/83 zero canon (Bugal filler, recap-block
+  //   opener, filler — hokuto.fandom + Finn Clark part-3/4 reviews; AFL
+  //   dissents, ruled fandom+accounting-beats-AFL); 58/75/84/86/91 carry
+  //   canon alongside original material — mixed.
+  //   sket-dance 26/32: AFL's table STOPS at ep 54 so its filler labels
+  //   there are not typings — ep 26 adapts ch 180 in full (ja-WP subtitle =
+  //   the chapter title), ep 32 adapts chs 18+45 → canon. ep 77: finale
+  //   adapts ch 167 with an anime-original bookend → mixed.
+  //   dragon-ball-z 100: Kanzenshuu ch 323 p.1-11 "Half Filler" + Dragon
+  //   Universe manga field — 3 sources vs AFL alone → mixed.
+  //   fairy-tail 256: closing act adapts ch 398 p.12-end (~9 pages, past
+  //   the sliver line); Laxus/Tempester substitution is original → mixed.
+  //   the-promised-neverland 23: adapts chs 172-178 beat-for-beat with
+  //   ruled substitutions (Isabella lives, Emma keeps memories) → mixed.
+  //   one-piece 737: the Sabo special adapts ch 794 (wiki fwd+reverse) —
+  //   AFL's anime-canon label loses to the explicit chapter mapping → mixed.
+  hellsing: { 7: 'mixed', 10: 'mixed' },
+  //   zatch-bell contested block (Sean's overlap-rule re-research 2026-08-25,
+  //   out2/zatch-bell-contested.json — konjikinogash.fandom per-episode
+  //   manga_chapter fields + en-WP; the prior "all 10 filler" proposal rested
+  //   on exhaustive accounting, ruled insufficient): 13/108/118/119/123 zero
+  //   canon (119 = a re-staged REHASH of the ch 35-36 flashback already
+  //   animated at eps 14-15 — the overlap rule's discount case); 51 (ch 22
+  //   Germany half, held back 41 eps), 57 (chs 109-110 reworked), 103
+  //   (ch 173 opening), 117 (ch 183 closing scene), 122 (ch 186 tail) all
+  //   carry real canon → mixed.
+  'zatch-bell': {
+    13: 'filler', 108: 'filler', 118: 'filler', 119: 'filler', 123: 'filler',
+    51: 'mixed', 57: 'mixed', 103: 'mixed', 117: 'mixed', 122: 'mixed',
+  },
+  'fist-of-the-north-star': {
+    61: 'filler', 78: 'filler', 83: 'filler',
+    58: 'mixed', 75: 'mixed', 84: 'mixed', 86: 'mixed', 91: 'mixed',
+  },
+  'sket-dance': { 26: 'canon', 32: 'canon', 77: 'mixed' },
+  'dragon-ball-z': { 100: 'mixed' },
+  'fairy-tail': { 256: 'mixed' },
+  'the-promised-neverland': { 23: 'mixed' },
+  'one-piece': { 737: 'mixed' },
   //   claymore 24-26: fully anime-original ending (Madhouse outran the
   //   manga) — research verdict 2026-08-23 (AFG + wheredoestheanimeleaveoff
   //   + sportskeeda), Sean sign-off
@@ -267,7 +313,14 @@ export const EPISODE_TYPE_OVERRIDES: Record<string, Record<number, string>> = {
 // types downstream of the insert are silently off by the insert's length.
 //   drop: source-space numbers whose rows are the order-only entry itself
 //   shifts: source number n ≥ from maps to our number n + offset
-export const SOURCE_NUMBERING_SHIFTS: Record<string, { drop: number[]; shifts: { from: number; offset: number }[] }> = {
+//   spaces (optional, 2026-08-25 the mashle lesson): the SOURCE SPACES the
+//   shift applies to ('afl' | 'afg' | 'wiki'). Absent = every space (the
+//   historical entries: AFL and AFG both number the dropped entry). Sources
+//   can genuinely disagree about one series' numbering — mashle's recap is
+//   integer ep 7 on AFL but "6.5" (excluded) on AFG/fandom/Wikipedia — so a
+//   blanket shift would corrupt the already-aligned source. Every caller
+//   states its space; the shift skips spaces it does not name.
+export const SOURCE_NUMBERING_SHIFTS: Record<string, { drop: number[]; shifts: { from: number; offset: number }[]; spaces?: string[] }> = {
   'dr-stone': { drop: [36], shifts: [{ from: 37, offset: -1 }] }, // AFL numbers the Ryuusui special as ep 36; our ruling holds it order-only at position 36
   // Queue-2 Group C demotions (Sean sign-off 2026-08-23): standalone
   // bonuses/films the community does not number — order-only by ruling;
@@ -275,6 +328,13 @@ export const SOURCE_NUMBERING_SHIFTS: Record<string, { drop: number[]; shifts: {
   'yu-yu-hakusho-ghostfiles': { drop: [113], shifts: [] }, // Picture Drama bonus
   'miss-kobayashis-dragon-maid': { drop: [14], shifts: [{ from: 15, offset: -1 }] }, // Valentine/Onsen bonus OVA
   'fate-kaleid-liner-prisma-illya': { drop: [11], shifts: [{ from: 12, offset: -1 }] }, // Undoukai DE Dance bonus
+  // mashle (Sean's fractional ruling 2026-08-25, CHUNK1-RECOVERY.md §9): the
+  // S1 recap is integer ep 7 in AFL's numbering only — AFG/fandom/Wikipedia/
+  // AniList all exclude it (fandom calls it "Episode 6.5"). Our rows follow
+  // the community convention: recap = watch-order entry at 6.5, main rows
+  // 1-24. AFL-space rows translate; AFG chart numbers are ALREADY in our
+  // space and must not shift.
+  'mashle-magic-and-muscles': { drop: [7], shifts: [{ from: 8, offset: -1 }], spaces: ['afl'] },
   'prison-school': { drop: [13], shifts: [] }, // Mad Wax bonus OVA
   'to-love-ru-darkness': { drop: [25, 26], shifts: [] }, // 2nd Specials bonuses
   'ghost-in-the-shell-stand-alone-complex': { drop: [53], shifts: [] }, // Solid State Society is a FILM (movies order-only unless community-numbered)
@@ -302,9 +362,9 @@ export const SOURCE_NUMBERING_SHIFTS: Record<string, { drop: number[]; shifts: {
 // receive per-episode data at untranslated numbers — the same rule
 // filterEpisodeRows applies to episode rows (gap closed 2026-08-23,
 // Sean's bake-into-sources directive).
-export const translateEpisodeNumber = (seriesId: string, n: number): number | null => {
+export const translateEpisodeNumber = (seriesId: string, n: number, space: string): number | null => {
   const t = SOURCE_NUMBERING_SHIFTS[seriesId];
-  if (!t) return n;
+  if (!t || (t.spaces && !t.spaces.includes(space))) return n;
   if (t.drop.includes(n)) return null;
   return n + t.shifts.reduce((s, x) => (n >= x.from ? s + x.offset : s), 0);
 };
@@ -312,8 +372,9 @@ export const translateEpisodeNumber = (seriesId: string, n: number): number | nu
 // Per-series episode-row rulings, applied by EVERY episode writer:
 // source-numbering translation first, then community caps, then type
 // overrides.
-export const filterEpisodeRows = <T extends { number: number; type?: string }>(seriesId: string, rows: T[]): T[] => {
-  const t = SOURCE_NUMBERING_SHIFTS[seriesId];
+export const filterEpisodeRows = <T extends { number: number; type?: string }>(seriesId: string, rows: T[], space: string): T[] => {
+  const t0 = SOURCE_NUMBERING_SHIFTS[seriesId];
+  const t = t0 && (!t0.spaces || t0.spaces.includes(space)) ? t0 : undefined;
   let translated = rows;
   if (t) {
     translated = rows
@@ -639,6 +700,7 @@ export async function resolveSeries(runId: number, slug: string): Promise<{ epis
           type: e.type,
           air_date: e.airDate,
         })),
+        'afl',
       );
       const ourPageMax = stitchedRows.reduce((m, e) => Math.max(m, e.number), 0);
       await db.from('episodes').delete().eq('series_id', existing.id).lte('number', ourPageMax);
@@ -775,7 +837,7 @@ export async function resolveSeries(runId: number, slug: string): Promise<{ epis
     title: e.title,
     type: e.type,
     air_date: e.airDate,
-  })));
+  })), 'afl');
   // translated-max boundary (see the stitched-guard note): never delete past
   // what the translated rows refill
   const ourMax = rows.reduce((m, e) => Math.max(m, e.number), 0) || aflMax;

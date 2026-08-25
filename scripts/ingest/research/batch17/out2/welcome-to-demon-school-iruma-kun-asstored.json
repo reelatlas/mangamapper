@@ -1,0 +1,76 @@
+{
+  "series_id": "welcome-to-demon-school-iruma-kun",
+  "summary": "Re-derived from scratch the two batch-12 'as-stored' anchors (eps 63, 64). BOTH CONFIRMED - they are not railgun-style confirmation-laundering; every chapter claimed exists, is correctly numbered, and is corroborated by three surfaces. Ep 63 'The Instructors' Banquet' (S3 ep 19) adapts ch 145 'Teachers' Bash' + ch 142 'Exposure': the episode's Japanese title is character-for-character ch 145's title (教師陣の宴 / Kyoshi-jin no Utage), and Wikipedia's episode summary contains BOTH the bar party (145) and the Ocho-shot/Baal-recording/Kiriwo reveal (142). Ep 64 is a two-part episode ('Bad Company / Heartfelt Cooking Class') whose two segment titles are again character-for-character ch 144 (悪友 Akuyu) and ch 143 (真心クッキング教室 Magokoro Kukkingu Kyoshitsu) - note the episode airs them in REVERSE manga order, 144 then 143. Both fandom chapter pages carry the reverse pin (142 -> Ep 63; 143 -> Ep 64; 144 -> Ep 64) and both episode infoboxes carry the forward pin; forward and reverse agree, which is exactly the check railgun ep 14 failed. Volumes independently confirmed on Wikipedia: vol 16 = chs 134-142, vol 17 = chs 143-151, so stored vol 16 (ep 63, keyed to end 142) and vol 17 (ep 64) are both right. The wider finding is that the whole post-Harvest-Festival block 141-147 is shuffled across eps 62-65: ep 62 = 138-140, ep 63 = 145+142, ep 64 = 144+143, ep 65 = 146+141+147 (ch 141 'Between Friends' = ep 65's title 'Words for My Friends' / トモダチへの言葉, and ch 147 is split between ep 65 and S4 ep 1 per its infobox). No repairs; the only open item is a continue-point convention question inherited from ep 62.",
+  "anchors": [
+    {
+      "episode": 63,
+      "end_chapter": 142,
+      "start_chapter": 142,
+      "chapters_adapted": "142, 145 (out of order; 145 aired first)",
+      "volume": 16,
+      "confidence": "high",
+      "note": "CONFIRMED as-stored (promotable off the caveat). Episode title 教師陣の宴 = ch 145's title exactly (the bar party is the bulk of the episode); the Ocho/Baal/Kiriwo half is ch 142 'Exposure', whose chapter page pins back to Ep 63. END kept at 142 (position ladder 140 -> 142 -> 144 -> 147); ch 145 recorded as the out-of-order graft rather than inflating END.",
+      "sources": [
+        "https://mairimashita-irumakun.fandom.com/api.php?action=parse&page=The%20Instructors%27%20Banquet&prop=wikitext&format=json",
+        "https://mairimashita-irumakun.fandom.com/api.php?action=parse&page=Chapter%20142&prop=wikitext&format=json",
+        "https://mairimashita-irumakun.fandom.com/api.php?action=parse&page=Chapter%20145&prop=wikitext&format=json",
+        "https://en.wikipedia.org/wiki/List_of_Welcome_to_Demon_School!_Iruma-kun_episodes",
+        "https://en.wikipedia.org/wiki/List_of_Welcome_to_Demon_School!_Iruma-kun_chapters"
+      ]
+    },
+    {
+      "episode": 64,
+      "end_chapter": 144,
+      "start_chapter": 143,
+      "chapters_adapted": "143, 144",
+      "volume": 17,
+      "confidence": "high",
+      "note": "CONFIRMED as-stored (promotable off the caveat). Two-part episode, BOTH infobox halves checked: segment 1 'Bad Company' 悪友 = ch 144 'A Bad Influence' 悪友, segment 2 'Heartfelt Cooking Class' 真心クッキング教室 = ch 143 'Learning to Bake from the Heart!!' 真心クッキング教室. Chapters 143 and 144 both pin back to Ep 64. Broadcast order is 144 then 143 (reverse of manga order); chapters_adapted left in manga order, ordering recorded in the annotation. Both chapters are vol 17.",
+      "sources": [
+        "https://mairimashita-irumakun.fandom.com/api.php?action=parse&page=Bad%20Company%20%2F%20Heartfelt%20Cooking%20Class&prop=wikitext&format=json",
+        "https://mairimashita-irumakun.fandom.com/api.php?action=parse&page=Chapter%20143&prop=wikitext&format=json",
+        "https://mairimashita-irumakun.fandom.com/api.php?action=parse&page=Chapter%20144&prop=wikitext&format=json",
+        "https://en.wikipedia.org/wiki/List_of_Welcome_to_Demon_School!_Iruma-kun_episodes",
+        "https://en.wikipedia.org/wiki/List_of_Welcome_to_Demon_School!_Iruma-kun_chapters"
+      ]
+    }
+  ],
+  "continue_points": [
+    {
+      "episode": 64,
+      "continue_chapter": 146,
+      "note": "After ep 64 the reader has seen 142, 143, 144 and 145 (145 came early in ep 63); ch 141 is deferred to ep 65. Following the convention batch 12 already set at ep 62 (continue 142, skipping the deferred 141), the honest resume is 146, not END+1 = 145. See flags_for_sean if the opposite convention is preferred."
+    }
+  ],
+  "annotations": [
+    {
+      "episodes": [62, 63, 64, 65],
+      "kind": "rearranged",
+      "chapters": "141-147",
+      "note": "S3's post-Harvest-Festival tail is shuffled: ep 62 = 138(p.14-22)-140, ep 63 = 145 then 142, ep 64 = 144 then 143, ep 65 = 146, 141, 147(part). Ch 141 'Between Friends' is held back to ep 65, whose title is that chapter's title; ch 147 continues into S4 ep 1 per its chapter infobox."
+    },
+    {
+      "episodes": [63],
+      "kind": "rearranged",
+      "chapters": "145, 142",
+      "note": "Ep 63 leads with ch 145 (teachers' bash, the episode's title chapter) and folds ch 142 in as the mid-episode Ocho flashback plus the Baal/Kiriwo coda; the wiki's own trivia says the episode's events originally take place AFTER ep 64's."
+    },
+    {
+      "episodes": [64],
+      "kind": "rearranged",
+      "chapters": "144, 143",
+      "note": "Two-part episode airs its segments in reverse manga order: 'Bad Company' = ch 144 first, 'Heartfelt Cooking Class' = ch 143 second. Wiki trivia: 'The events of this episode originally take place before The Instructors' Banquet.'"
+    }
+  ],
+  "type_corrections": [],
+  "repairs": [],
+  "structure": {
+    "notes": "OUR numbering = fandom's 'overall ep' exactly (S1 23 + S2 21 + S3 21; fandom Season Three table lists ep 19 = overall 63, ep 20 = overall 64, ep 21 = overall 65) - no conversion needed. Chapter space matches Wikipedia's chapter list (vol 16 = 134-142, vol 17 = 143-151). animefillerguide.com and animefillerlist.com have NO page for this series (both 404 on every slug tried), so batch 12's 'fandom + animefillerguide' citation could not be reproduced on the AFG side; the independent corroboration used here is Wikipedia's episode summaries + Wikipedia's chapter titles, which is stronger (exact JP title identity for 3 of the 4 chapters). Eps 63 and 64 are pure canon - every scene in both Wikipedia summaries maps to a manga chapter - so the stored [canon] types are correct and A1 is not engaged.",
+    "order_only": []
+  },
+  "flags_for_sean": [
+    "Continue-point convention, not a data error: ch 141 is skipped at ep 62 and animated at ep 65. Batch 12 encoded this as ep 62 continue = 142 (jump PAST the deferred chapter). I followed that convention for ep 64 (continue 146). The batch-17 protocol's literal wording ('skips -> the earliest not-yet-adapted-but-will-be chapter') would instead give continue = 141 at eps 62, 63 and 64. One convention should win catalog-wide; if it is the protocol's literal one, ep 62's stored continue 142 needs repairing too and my ep-64 value should be 141.",
+    "END convention on a rearranged episode: ep 63 adapts 142 and 145, so a literal reading of 'END = last mainline chapter in RUNNING ORDER' would give END 145 (with continue 141/143). I kept the stored END 142 because inflating to 145 would claim a reader is past 143-144 that ep 64 has not shown yet, and because the protocol's own rearranged-annotation example records a relocated chapter as an annotation rather than as an END. Flagging so the choice is explicit rather than inherited.",
+    "Out of scope but adjacent: ep 65's stored anchor carries only end_chapter 147 with no start/chapters_adapted/volume. The full record is start 141, adapted '146, 141, 147 (partial - 147 restarts in S4 ep 1)', vol 17, per Wikipedia's ep 65 summary and ch 141/146/147 chapter pages. Offered as an enrichment, not researched to anchor depth."
+  ]
+}

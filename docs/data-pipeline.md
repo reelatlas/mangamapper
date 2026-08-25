@@ -1221,6 +1221,58 @@ Fixed weekly is correct.
    (2) gap tier 46 → (3) mu_pin sweep 65 → (4) automation pass →
    (5) arcs table → (6) parked design pass → (7) continue-read UI →
    (8) segment model (Sean's go).
+45. ✅ **CHUNK 1 WAVE 1 + D4 GATE + A1 CLASS CLOSED (2026-08-25, resumed
+   session; full record: CHUNK1-RECOVERY.md §7-§11)**. Wave 1 (8 Opus
+   agents, ~1.46M tokens) landed 15 verdict files; a 4-verifier cross-model
+   pass (Fable over Opus, ~207k) confirmed 3 claims and PARTIALLY confirmed
+   ranma — catching that the recommended aired-number re-anchor would have
+   corrupted eps 15-30/153 (the amended rule: never index-join any chart;
+   join on TITLE). Three follow-up narrow agents (zatch contested re-research
+   under the new overlap rule, ranma title-keyed re-anchor, batch-12
+   as-stored spot-check) landed same-day and were curated in.
+   APPLIED: 1466 anchors (fotns 42, sket 75, zatch 105+3, bobobo 74,
+   rurouni T&B 4, ranma 27 title-keyed, hellsing 7, gintama holes 3,
+   noragami curated terminal, +first-pass re-asserts), 44 A1 junk-anchor
+   deletions + 4 annotation deletions, 100 retypes (all via
+   EPISODE_TYPE_OVERRIDES), 9 curated repairs, 8 boundary seeds.
+   **D4 RULED + BUILT (Sean): the A1 gate extends to the AFG writers** —
+   syncAnchors drops chart anchors on noncanon rows (allow-list canon/mixed,
+   unknown fails closed, row-less passes), applyContinua refuses the
+   frontier pin on a noncanon row ('refused_episode_type', continue-from
+   still applies as reading guidance); evidence: 49/49 audit hits
+   adjudicated 45 junk / 4 mistyped, with AFG's chapter column PROVEN a
+   reading-position conversion (its own duplicate values plateau across
+   one-piece filler runs). All four edges redeployed (×3 as lib evolved).
+   **anchor_on_noncanon_row 49 → 0**; ruling_violation 0;
+   anchor_nonmonotonic 0 (sket/zatch/ranma reorder regimes ruled);
+   verify-series-display 219/0.
+   **NEW RULES (Sean 2026-08-25, all in §10)**: episode-type semantics
+   (anime-only-canon = consensus-canon; filler = zero canon; mixed = both;
+   AFL/AFG advisory only) · chapter overlap never proves filler (the
+   zatch-bell lesson — 10 contested eps re-researched into 5 filler / 5
+   mixed via konjikinogash.fandom) · in-between entries live at FRACTIONAL
+   watch-order positions, never absorbed as integer rows (the mashle
+   ruling: recap → watch_order_entries 6.5/excluded_recap, rows 8-25
+   renumbered 7-24 via apply-rulings-20260825-mashle.ts, AFG anchors became
+   correct IN PLACE, SOURCE_NUMBERING_SHIFTS gained per-SOURCE spaces —
+   'afl'-only for mashle since AFG/fandom/Wikipedia already exclude the
+   recap; every filterEpisodeRows/translateEpisodeNumber caller now states
+   its space).
+   Batch-12 as-stored sweep: railgun ep 14 was confirmation-laundering
+   (verifier found the smoking gun in apply-research-batch-12.ts line 110
+   "as-stored"); 6 of 7 remaining confirmed, rosario ep 11 repaired 9→8/v2
+   (wiki off-by-one from ep 11 — new trap); rosario eps 12/13 medium-
+   confidence repairs HELD for Sean. esbuild reinstalled as a direct dev
+   dependency (the Vite-8/Rolldown modernization had silently broken
+   build-functions.ts).
+   OPEN FOR SEAN: iruma ep-63 END convention (142 stored vs 145 = max
+   adapted); rosario 12/13 held repairs; zatch withheld anchors (51 backfill,
+   103 reorder hole, 122 sliver); ranma ep-130 ch-58 re-use (graft only);
+   air-date metadata backlog (fotns ×6, ranma ep 153, railgun ep 14 — small,
+   mechanical). NEXT: wave 2 (8 gap series: kinnikuman, eyeshield-21,
+   saint-seiya, project-arms, d-gray-man, angel-heart, hayate, trigun) on
+   Sean's go, then chunk 2, then the §12.39 roadmap + system-evolution
+   skill rework before batch 18.
 44. ⏸️ **CHUNK 1 INTERRUPTED — monthly spend limit (2026-08-24; RESUME
    MARKER, full record: `scripts/ingest/research/batch17/CHUNK1-RECOVERY.md`)**.
    The batch-17 second pass was split into two weight-balanced chunks for

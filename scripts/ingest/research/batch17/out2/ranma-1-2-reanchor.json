@@ -1,0 +1,794 @@
+{
+  "series_id": "ranma-1-2",
+  "summary": "Re-anchor of the four misaligned Ranma zones (our rows 15-30, 88-90, 121-135, 153-156), joined on normalised episode TITLE and air date only - never on row index. 27 anchors are delivered across eps 15-155, all at high confidence: 12 brand new (17, 22, 26, 28, 88, 121, 125, 126, 128, 129, 133, 154), 6 repairs of stored values that were a neighbour's chapters (15, 16, 89, 122, 132, 155) and 9 explicit confirmations that the stored value was already right (18, 19, 20, 23, 24, 25, 27, 29, 30). The root cause is now pinned precisely: animefillerguide's CHAPTER column is production-indexed throughout the series while its TITLE column is aired-ordered across rows 14-30, and our own rows are a hybrid (production order for 18-161 except the aired-ordered pockets 88-90 / 121-135 / 154-156 and a 4-row rotation at 14-17). That is why the index join was accidentally CORRECT for our eps 18-30 and wrong everywhere else in the zones. Every anchor is backed by three-plus artefacts: the ranma.fandom episode infobox 'manga' field, the chapter pages' reverse 'anime' field, the per-arc 'Chapters Covered' tables (plus the site-wide Story Arcs table for ch 1-124), and AFG read by production index; volumes come from the chapter pages and are independently confirmed against Wikipedia's 38-volume tankobon list on all 28 end-chapters. The ep 15/16 continue point is re-derived: ep 15 now ends on a clean chapter boundary so its stored continue point (27) is deleted, and new mid-chapter continue points land on eps 16 (ch 27) and 17 (ch 30); ep 24's stored continue point (46) is repaired to 43, which was skipping two chapters that ARE adapted. Two things are deliberately NOT anchored: ep 130 (mixed) re-uses ch 58 forty episodes after ep 93 already adapted it, so it gets a 'graft' annotation instead of a position-wrecking backwards anchor; and the six A1 filler nulls stay null - their chapters are now correctly re-homed on eps 15, 89, 122, 128, 133 and 155. The A1 verdict's open ch-200 conflict is resolved in favour of ep 133.",
+  "anchors": [
+    {
+      "episode": 15,
+      "end_chapter": 24,
+      "start_chapter": 23,
+      "chapters_adapted": "23-24",
+      "volume": 3,
+      "confidence": "high",
+      "note": "REPAIR of stored value - Wiki episode infobox for this page reads manga = ch 23-24; ch 23 and ch 24 pages both name this episode (as its aired number, 'Episode 25'); the Martial Arts Figure Skating Arc table lists 23-24 against it. Stored 25-27 was AFG's production-slot-15 value, which belongs to our ep 16.",
+      "sources": [
+        "https://ranma.fandom.com/wiki/The_Abduction_of_P-Chan",
+        "https://ranma.fandom.com/wiki/Chapter_23",
+        "https://ranma.fandom.com/wiki/Chapter_24",
+        "https://ranma.fandom.com/wiki/Martial_Arts_Figure_Skating_Arc",
+        "https://www.animefillerguide.com/anime/ranma-%c2%bd/",
+        "https://en.wikipedia.org/wiki/List_of_Ranma_%C2%BD_chapters"
+      ]
+    },
+    {
+      "episode": 16,
+      "end_chapter": 27,
+      "start_chapter": 25,
+      "chapters_adapted": "25-27 (ch 27 continues into ep 17)",
+      "volume": 4,
+      "confidence": "high",
+      "note": "REPAIR of stored value - Episode infobox reads 25-26-27; ch 25 and ch 26 pages name this episode, ch 27's page names BOTH this episode and ep 17 (an explicit split). Stored 27-30 was AFG's production-slot-16 value, which belongs to our ep 17.",
+      "sources": [
+        "https://ranma.fandom.com/wiki/Close_Call!_The_Dance_of_Death..._On_Ice!",
+        "https://ranma.fandom.com/wiki/Chapter_25",
+        "https://ranma.fandom.com/wiki/Chapter_26",
+        "https://ranma.fandom.com/wiki/Chapter_27",
+        "https://ranma.fandom.com/wiki/Martial_Arts_Figure_Skating_Arc",
+        "https://www.animefillerguide.com/anime/ranma-%c2%bd/",
+        "https://en.wikipedia.org/wiki/List_of_Ranma_%C2%BD_chapters"
+      ]
+    },
+    {
+      "episode": 17,
+      "end_chapter": 30,
+      "start_chapter": 27,
+      "chapters_adapted": "27-30 (ch 27 shared with ep 16; ch 30 continues into ep 18)",
+      "volume": 4,
+      "confidence": "high",
+      "note": "NEW anchor - Episode infobox reads 27-28-29-30; ch 28, 29, 30 pages name this episode, ch 27's page names it jointly with ep 16. Ch 30 'The Waters of Love' is the final chapter of the Figure Skating arc and its arc row names both this episode and ep 18. Row previously had no anchor because AFG's slot-17 value (production 17 = the filler 'Pelvic Fortune-Telling') is N/A.",
+      "sources": [
+        "https://ranma.fandom.com/wiki/P-Chan_Explodes!_The_Icy_Fountain_of_Love!",
+        "https://ranma.fandom.com/wiki/Chapter_27",
+        "https://ranma.fandom.com/wiki/Chapter_28",
+        "https://ranma.fandom.com/wiki/Chapter_29",
+        "https://ranma.fandom.com/wiki/Martial_Arts_Figure_Skating_Arc",
+        "https://www.animefillerguide.com/anime/ranma-%c2%bd/",
+        "https://en.wikipedia.org/wiki/List_of_Ranma_%C2%BD_chapters"
+      ]
+    },
+    {
+      "episode": 18,
+      "end_chapter": 32,
+      "start_chapter": 30,
+      "chapters_adapted": "30-32 (ch 30 tail carried over from ep 17)",
+      "volume": 4,
+      "confidence": "high",
+      "note": "CONFIRMED (unchanged) - CONFIRMS the stored value. Episode infobox reads 30-31-32 and the Story Arcs table gives this episode (aired 15) chapters 30, 31, 32. Ch 31 and ch 32 pages name this episode; the Figure Skating arc table lists ch 30 against BOTH ep 17 and this episode. (Ch 33's own page is an outlier that also names this episode - the arc table and the episode infoboxes both put ch 33 in ep 19, so it is not counted here.)",
+      "sources": [
+        "https://ranma.fandom.com/wiki/Enter_Shampoo,_the_Gung-Ho_Girl!_I_Put_My_Life_in_Your_Hands",
+        "https://ranma.fandom.com/wiki/Chapter_30",
+        "https://ranma.fandom.com/wiki/Chapter_31",
+        "https://ranma.fandom.com/wiki/Chapter_32",
+        "https://ranma.fandom.com/wiki/Shampoo_Intro_Arc",
+        "https://www.animefillerguide.com/anime/ranma-%c2%bd/",
+        "https://en.wikipedia.org/wiki/List_of_Ranma_%C2%BD_chapters"
+      ]
+    },
+    {
+      "episode": 19,
+      "end_chapter": 34,
+      "start_chapter": 33,
+      "chapters_adapted": "33-34",
+      "volume": 4,
+      "confidence": "high",
+      "note": "CONFIRMED (unchanged) - CONFIRMS the stored value. Episode infobox reads 33-34; the Shampoo Intro Arc table and the Story Arcs table both give ch 33 and ch 34 to this episode (aired 16). Ch 34's page names this episode directly; ch 33's page names ep 18 instead - the single outlier, overruled 2-1.",
+      "sources": [
+        "https://ranma.fandom.com/wiki/Shampoo's_Revenge!_The_Shiatsu_Technique_That_Steals_Heart_and_Soul",
+        "https://ranma.fandom.com/wiki/Chapter_33",
+        "https://ranma.fandom.com/wiki/Chapter_34",
+        "https://ranma.fandom.com/wiki/Shampoo_Intro_Arc",
+        "https://www.animefillerguide.com/anime/ranma-%c2%bd/",
+        "https://en.wikipedia.org/wiki/List_of_Ranma_%C2%BD_chapters"
+      ]
+    },
+    {
+      "episode": 20,
+      "end_chapter": 36,
+      "start_chapter": 35,
+      "chapters_adapted": "35-36",
+      "volume": 4,
+      "confidence": "high",
+      "note": "CONFIRMED (unchanged) - CONFIRMS the stored value. Episode infobox 35-36; ch 35 and ch 36 pages both name this episode (aired 17); Shampoo Intro Arc and Story Arcs tables agree.",
+      "sources": [
+        "https://ranma.fandom.com/wiki/I_Love_You,_Ranma!_Please_Don't_Say_Goodbye",
+        "https://ranma.fandom.com/wiki/Chapter_35",
+        "https://ranma.fandom.com/wiki/Chapter_36",
+        "https://ranma.fandom.com/wiki/Shampoo_Intro_Arc",
+        "https://www.animefillerguide.com/anime/ranma-%c2%bd/",
+        "https://en.wikipedia.org/wiki/List_of_Ranma_%C2%BD_chapters"
+      ]
+    },
+    {
+      "episode": 22,
+      "end_chapter": 62,
+      "start_chapter": 59,
+      "chapters_adapted": "59-62",
+      "volume": 7,
+      "confidence": "high",
+      "note": "NEW anchor - Episode infobox reads 59-60-61-62; the Martial Arts Takeout Arc table gives all four chapters to this episode (aired 19); Story Arcs agrees. Out of manga order - see the 'rearranged' annotation. Row previously had no anchor.",
+      "sources": [
+        "https://ranma.fandom.com/wiki/Clash_of_the_Delivery_Girls!_The_Martial_Arts_Takeout_Race",
+        "https://ranma.fandom.com/wiki/Chapter_59",
+        "https://ranma.fandom.com/wiki/Chapter_60",
+        "https://ranma.fandom.com/wiki/Chapter_61",
+        "https://ranma.fandom.com/wiki/Martial_Arts_Takeout_Arc",
+        "https://www.animefillerguide.com/anime/ranma-%c2%bd/",
+        "https://en.wikipedia.org/wiki/List_of_Ranma_%C2%BD_chapters"
+      ]
+    },
+    {
+      "episode": 23,
+      "end_chapter": 40,
+      "start_chapter": 37,
+      "chapters_adapted": "37-40",
+      "volume": 5,
+      "confidence": "high",
+      "note": "CONFIRMED (unchanged) - CONFIRMS the stored value. Episode infobox 37-40; ch 37-40 pages all name this episode (aired 20); Neko-Ken Arc table agrees.",
+      "sources": [
+        "https://ranma.fandom.com/wiki/You_Really_Do_Hate_Cats!",
+        "https://ranma.fandom.com/wiki/Chapter_37",
+        "https://ranma.fandom.com/wiki/Chapter_38",
+        "https://ranma.fandom.com/wiki/Chapter_39",
+        "https://ranma.fandom.com/wiki/Neko-Ken_Arc",
+        "https://www.animefillerguide.com/anime/ranma-%c2%bd/",
+        "https://en.wikipedia.org/wiki/List_of_Ranma_%C2%BD_chapters"
+      ]
+    },
+    {
+      "episode": 24,
+      "end_chapter": 43,
+      "start_chapter": 41,
+      "chapters_adapted": "41-43 (ch 43 continues into ep 26)",
+      "volume": 5,
+      "confidence": "high",
+      "note": "CONFIRMED (unchanged) - CONFIRMS the stored chapter span. Episode infobox 41-42-43; ch 41 and 42 pages name this episode, ch 43's page names BOTH this episode and ep 26 (explicit split); Neko-Ken / Full Body Cat's Tongue arc tables agree. The stored CONTINUE POINT (46) is wrong - see repairs.",
+      "sources": [
+        "https://ranma.fandom.com/wiki/This_Ol'_Gal's_the_Leader_of_the_Amazon_Tribe!",
+        "https://ranma.fandom.com/wiki/Chapter_41",
+        "https://ranma.fandom.com/wiki/Chapter_42",
+        "https://ranma.fandom.com/wiki/Chapter_43",
+        "https://ranma.fandom.com/wiki/Full_Body_Cat's_Tongue_Arc",
+        "https://www.animefillerguide.com/anime/ranma-%c2%bd/",
+        "https://en.wikipedia.org/wiki/List_of_Ranma_%C2%BD_chapters"
+      ]
+    },
+    {
+      "episode": 25,
+      "end_chapter": 47,
+      "start_chapter": 46,
+      "chapters_adapted": "46-47",
+      "volume": 5,
+      "confidence": "high",
+      "note": "CONFIRMED (unchanged) - CONFIRMS the stored value. Episode infobox 46-47; ch 46 and ch 47 pages name this episode (aired 22); Full Body Cat's Tongue arc table agrees. Adapted ahead of ep 26's 43-45 - see the 'rearranged' annotation.",
+      "sources": [
+        "https://ranma.fandom.com/wiki/Behold!_The_%22Chestnuts_Roasting_on_an_Open_Fire%22_Technique",
+        "https://ranma.fandom.com/wiki/Chapter_46",
+        "https://ranma.fandom.com/wiki/Chapter_47",
+        "https://ranma.fandom.com/wiki/Full_Body_Cat's_Tongue_Arc",
+        "https://www.animefillerguide.com/anime/ranma-%c2%bd/",
+        "https://en.wikipedia.org/wiki/List_of_Ranma_%C2%BD_chapters"
+      ]
+    },
+    {
+      "episode": 26,
+      "end_chapter": 45,
+      "start_chapter": 43,
+      "chapters_adapted": "43-45 (ch 43 shared with ep 24)",
+      "volume": 5,
+      "confidence": "high",
+      "note": "NEW anchor - Episode infobox 43-44-45; ch 44 and ch 45 pages name this episode (aired 23), ch 43's page names it jointly with ep 24; Full Body Cat's Tongue arc table agrees. Row previously had no anchor - the value is lower than ep 25's, which a monotonic ingest would have rejected.",
+      "sources": [
+        "https://ranma.fandom.com/wiki/Enter_Mousse!_The_Fist_of_the_White_Swan",
+        "https://ranma.fandom.com/wiki/Chapter_43",
+        "https://ranma.fandom.com/wiki/Chapter_44",
+        "https://ranma.fandom.com/wiki/Chapter_45",
+        "https://ranma.fandom.com/wiki/Full_Body_Cat's_Tongue_Arc",
+        "https://www.animefillerguide.com/anime/ranma-%c2%bd/",
+        "https://en.wikipedia.org/wiki/List_of_Ranma_%C2%BD_chapters"
+      ]
+    },
+    {
+      "episode": 27,
+      "end_chapter": 50,
+      "start_chapter": 48,
+      "chapters_adapted": "48-50",
+      "volume": 6,
+      "confidence": "high",
+      "note": "CONFIRMED (unchanged) - CONFIRMS the stored value. Episode infobox 48-49-50; ch 48-50 pages name this episode (aired 24); Full Body Cat's Tongue arc table agrees.",
+      "sources": [
+        "https://ranma.fandom.com/wiki/Cool_Runnings!_The_Race_of_the_Snowmen",
+        "https://ranma.fandom.com/wiki/Chapter_48",
+        "https://ranma.fandom.com/wiki/Chapter_49",
+        "https://ranma.fandom.com/wiki/Chapter_50",
+        "https://ranma.fandom.com/wiki/Full_Body_Cat's_Tongue_Arc",
+        "https://www.animefillerguide.com/anime/ranma-%c2%bd/",
+        "https://en.wikipedia.org/wiki/List_of_Ranma_%C2%BD_chapters"
+      ]
+    },
+    {
+      "episode": 28,
+      "end_chapter": 73,
+      "start_chapter": 70,
+      "chapters_adapted": "70-73",
+      "volume": 8,
+      "confidence": "high",
+      "note": "NEW anchor - Episode infobox 70-71-72-73; all four chapter pages name this episode; the Dojo Destroyer Arc table gives the whole arc to it (aired 30). Row previously had no anchor - 70-73 sits far ahead of its neighbours, which a monotonic ingest would have rejected.",
+      "sources": [
+        "https://ranma.fandom.com/wiki/Danger_at_the_Tendo_Dojo!",
+        "https://ranma.fandom.com/wiki/Chapter_70",
+        "https://ranma.fandom.com/wiki/Chapter_71",
+        "https://ranma.fandom.com/wiki/Chapter_72",
+        "https://ranma.fandom.com/wiki/Dojo_Destroyer_Arc",
+        "https://www.animefillerguide.com/anime/ranma-%c2%bd/",
+        "https://en.wikipedia.org/wiki/List_of_Ranma_%C2%BD_chapters"
+      ]
+    },
+    {
+      "episode": 29,
+      "end_chapter": 52,
+      "start_chapter": 51,
+      "chapters_adapted": "51-52",
+      "volume": 6,
+      "confidence": "high",
+      "note": "CONFIRMED (unchanged) - CONFIRMS the stored value. Episode infobox 51-52; ch 51 and 52 pages name this episode (aired 28); Breaking Point Arc table agrees.",
+      "sources": [
+        "https://ranma.fandom.com/wiki/Ranma_Trains_on_Mt._Terror",
+        "https://ranma.fandom.com/wiki/Chapter_51",
+        "https://ranma.fandom.com/wiki/Chapter_52",
+        "https://ranma.fandom.com/wiki/Breaking_Point_Arc",
+        "https://www.animefillerguide.com/anime/ranma-%c2%bd/",
+        "https://en.wikipedia.org/wiki/List_of_Ranma_%C2%BD_chapters"
+      ]
+    },
+    {
+      "episode": 30,
+      "end_chapter": 55,
+      "start_chapter": 53,
+      "chapters_adapted": "53-55",
+      "volume": 6,
+      "confidence": "high",
+      "note": "CONFIRMED (unchanged) - CONFIRMS the stored value. Episode infobox 53-54-55; ch 53-55 pages name this episode (aired 29); Breaking Point Arc table agrees.",
+      "sources": [
+        "https://ranma.fandom.com/wiki/The_Breaking_Point!?_Ryoga's_Great_Revenge",
+        "https://ranma.fandom.com/wiki/Chapter_53",
+        "https://ranma.fandom.com/wiki/Chapter_54",
+        "https://ranma.fandom.com/wiki/Chapter_55",
+        "https://ranma.fandom.com/wiki/Breaking_Point_Arc",
+        "https://www.animefillerguide.com/anime/ranma-%c2%bd/",
+        "https://en.wikipedia.org/wiki/List_of_Ranma_%C2%BD_chapters"
+      ]
+    },
+    {
+      "episode": 88,
+      "end_chapter": 155,
+      "start_chapter": 154,
+      "chapters_adapted": "154-155",
+      "volume": 15,
+      "confidence": "high",
+      "note": "NEW anchor - Episode infobox reads 154-155; ch 154 and ch 155 pages both name 'Gimme That Pigtail'; the Dragon's Whisker Arc table agrees; AFG carries 154, 155 at ITS row 89 - this episode's PRODUCTION number. Row previously had no anchor; its chapters were sitting on ep 89.",
+      "sources": [
+        "https://ranma.fandom.com/wiki/Gimme_That_Pigtail",
+        "https://ranma.fandom.com/wiki/Chapter_154",
+        "https://ranma.fandom.com/wiki/Chapter_155",
+        "https://ranma.fandom.com/wiki/Dragon's_Whisker_Arc",
+        "https://www.animefillerguide.com/anime/ranma-%c2%bd/",
+        "https://en.wikipedia.org/wiki/List_of_Ranma_%C2%BD_chapters"
+      ]
+    },
+    {
+      "episode": 89,
+      "end_chapter": 157,
+      "start_chapter": 156,
+      "chapters_adapted": "156-157",
+      "volume": 15,
+      "confidence": "high",
+      "note": "REPAIR of stored value - Episode infobox reads 156-157; ch 156 and ch 157 pages both name this episode; Dragon's Whisker Arc table agrees; AFG carries 156, 157 at ITS row 90 = this episode's production number. Stored 154-155 belongs to ep 88.",
+      "sources": [
+        "https://ranma.fandom.com/wiki/When_a_Guy's_Pride_and_Joy_is_Gone",
+        "https://ranma.fandom.com/wiki/Chapter_156",
+        "https://ranma.fandom.com/wiki/Chapter_157",
+        "https://ranma.fandom.com/wiki/Dragon's_Whisker_Arc",
+        "https://www.animefillerguide.com/anime/ranma-%c2%bd/",
+        "https://en.wikipedia.org/wiki/List_of_Ranma_%C2%BD_chapters"
+      ]
+    },
+    {
+      "episode": 121,
+      "end_chapter": 183,
+      "start_chapter": 180,
+      "chapters_adapted": "180-183",
+      "volume": 18,
+      "confidence": "high",
+      "note": "NEW anchor - Episode infobox reads 180-181-182-183; all four chapter pages name 'The Demon from Jusenkyo, Part I'; the Pantyhose Taro Intro Arc table agrees; AFG carries 180-183 at ITS row 122 = this episode's production number. Row previously had no anchor; its chapters were sitting on ep 122.",
+      "sources": [
+        "https://ranma.fandom.com/wiki/The_Demon_from_Jusenkyo,_Part_I",
+        "https://ranma.fandom.com/wiki/Chapter_180",
+        "https://ranma.fandom.com/wiki/Chapter_181",
+        "https://ranma.fandom.com/wiki/Chapter_182",
+        "https://ranma.fandom.com/wiki/Pantyhose_Taro_Intro_Arc",
+        "https://www.animefillerguide.com/anime/ranma-%c2%bd/",
+        "https://en.wikipedia.org/wiki/List_of_Ranma_%C2%BD_chapters"
+      ]
+    },
+    {
+      "episode": 122,
+      "end_chapter": 188,
+      "start_chapter": 184,
+      "chapters_adapted": "184-188",
+      "volume": 18,
+      "confidence": "high",
+      "note": "REPAIR of stored value - Episode infobox reads 184-185-186-187-188; all five chapter pages name 'The Demon from Jusenkyo, Part II'; AFG carries 184-188 at ITS row 123 = this episode's production number. Stored 180-183 belongs to ep 121. (The arc page's table also fills ch 189-190 down into this episode; ch 189/190 are the separate Happosai time-travel two-parter, their own pages carry an EMPTY anime field, and neither the episode infobox nor AFG includes them - END stays 188.)",
+      "sources": [
+        "https://ranma.fandom.com/wiki/The_Demon_from_Jusenkyo,_Part_II",
+        "https://ranma.fandom.com/wiki/Chapter_184",
+        "https://ranma.fandom.com/wiki/Chapter_185",
+        "https://ranma.fandom.com/wiki/Chapter_186",
+        "https://ranma.fandom.com/wiki/Pantyhose_Taro_Intro_Arc",
+        "https://www.animefillerguide.com/anime/ranma-%c2%bd/",
+        "https://en.wikipedia.org/wiki/List_of_Ranma_%C2%BD_chapters"
+      ]
+    },
+    {
+      "episode": 125,
+      "end_chapter": 179,
+      "start_chapter": 179,
+      "chapters_adapted": "179",
+      "volume": 17,
+      "confidence": "high",
+      "note": "NEW anchor - Episode infobox reads ch 179; ch 179's page ('The Curse of the Scroll!') names this episode; it is the only chapter of the Cursed Scroll Arc; AFG carries 179 at ITS row 128 = this episode's production number. Row previously had no anchor. Note this is BEHIND eps 121-122 (180-188) in our order - see the 'rearranged' annotation.",
+      "sources": [
+        "https://ranma.fandom.com/wiki/Curse_of_the_Scribbled_Panda",
+        "https://ranma.fandom.com/wiki/Chapter_179",
+        "https://ranma.fandom.com/wiki/Cursed_Scroll_Arc",
+        "https://www.animefillerguide.com/anime/ranma-%c2%bd/",
+        "https://en.wikipedia.org/wiki/List_of_Ranma_%C2%BD_chapters"
+      ]
+    },
+    {
+      "episode": 126,
+      "end_chapter": 193,
+      "start_chapter": 191,
+      "chapters_adapted": "191-193",
+      "volume": 19,
+      "confidence": "high",
+      "note": "NEW anchor - Episode infobox reads 191-192-193; all three chapter pages name 'The Date-Monster of Watermelon Island'; the Watermelon Island Arc table agrees; AFG carries 191-193 at ITS row 121 = this episode's production number. Row previously had no anchor.",
+      "sources": [
+        "https://ranma.fandom.com/wiki/The_Date-Monster_of_Watermelon_Island",
+        "https://ranma.fandom.com/wiki/Chapter_191",
+        "https://ranma.fandom.com/wiki/Chapter_192",
+        "https://ranma.fandom.com/wiki/Chapter_193",
+        "https://ranma.fandom.com/wiki/Watermelon_Island_Arc",
+        "https://www.animefillerguide.com/anime/ranma-%c2%bd/",
+        "https://en.wikipedia.org/wiki/List_of_Ranma_%C2%BD_chapters"
+      ]
+    },
+    {
+      "episode": 128,
+      "end_chapter": 196,
+      "start_chapter": 194,
+      "chapters_adapted": "194-196",
+      "volume": 19,
+      "confidence": "high",
+      "note": "NEW anchor - Episode infobox reads 194-195-196; all three chapter pages name 'Ukyo's Secret Sauce, Part 1'; the Sauce of Ten Years Arc table agrees; AFG carries 194-196 at ITS row 131 = this episode's production number. Row previously had no anchor; its chapters were sitting on the filler ep 131 (nulled by the A1 verdict).",
+      "sources": [
+        "https://ranma.fandom.com/wiki/Ukyo's_Secret_Sauce,_Part_1",
+        "https://ranma.fandom.com/wiki/Chapter_194",
+        "https://ranma.fandom.com/wiki/Chapter_195",
+        "https://ranma.fandom.com/wiki/Chapter_196",
+        "https://ranma.fandom.com/wiki/Sauce_of_Ten_Years_Arc",
+        "https://www.animefillerguide.com/anime/ranma-%c2%bd/",
+        "https://en.wikipedia.org/wiki/List_of_Ranma_%C2%BD_chapters"
+      ]
+    },
+    {
+      "episode": 129,
+      "end_chapter": 198,
+      "start_chapter": 197,
+      "chapters_adapted": "197-198",
+      "volume": 19,
+      "confidence": "high",
+      "note": "NEW anchor - Episode infobox reads 197-198; ch 197 and 198 pages both name 'Ukyo's Secret Sauce, Part 2'; Sauce of Ten Years Arc table agrees; AFG carries 197-198 at ITS row 132 = this episode's production number. Row previously had no anchor; its chapters were sitting on ep 132.",
+      "sources": [
+        "https://ranma.fandom.com/wiki/Ukyo's_Secret_Sauce,_Part_2",
+        "https://ranma.fandom.com/wiki/Chapter_197",
+        "https://ranma.fandom.com/wiki/Chapter_198",
+        "https://ranma.fandom.com/wiki/Sauce_of_Ten_Years_Arc",
+        "https://www.animefillerguide.com/anime/ranma-%c2%bd/",
+        "https://en.wikipedia.org/wiki/List_of_Ranma_%C2%BD_chapters"
+      ]
+    },
+    {
+      "episode": 132,
+      "end_chapter": 199,
+      "start_chapter": 199,
+      "chapters_adapted": "199",
+      "volume": 19,
+      "confidence": "high",
+      "note": "REPAIR of stored value - Episode infobox reads ch 199; ch 199's page ('Nightmare on Hot Spring Street') names this episode and it is the only chapter of the Octopus Trap Arc; AFG carries 199 at ITS row 130 = this episode's production number. Stored 197-198 belongs to ep 129.",
+      "sources": [
+        "https://ranma.fandom.com/wiki/Mystery_of_the_Marauding_Octopus_Pot!",
+        "https://ranma.fandom.com/wiki/Chapter_199",
+        "https://ranma.fandom.com/wiki/Octopus_Trap_Arc",
+        "https://www.animefillerguide.com/anime/ranma-%c2%bd/",
+        "https://en.wikipedia.org/wiki/List_of_Ranma_%C2%BD_chapters"
+      ]
+    },
+    {
+      "episode": 133,
+      "end_chapter": 200,
+      "start_chapter": 200,
+      "chapters_adapted": "200",
+      "volume": 19,
+      "confidence": "high",
+      "note": "NEW anchor - Episode infobox reads ch 200; ch 200 is 'Paper Dolls of Love' (恋の紙人形) and this episode is 'Gosunkugi! Ah Koi no Kaminingyo' (五寸釘!あぁ恋の紙人形) - a direct title match; the Paper Dolls Arc table names this episode; AFG carries 200 at ITS row 134 = this episode's production number. Row previously had no anchor; ch 200 was sitting on the filler ep 134 (nulled by the A1 verdict). Resolves the A1 flag: ch 200's own page names the filler ep 153 'Gosunkugi's Summer Affair!', which the arc table, the episode infobox, AFG and the Japanese title all contradict.",
+      "sources": [
+        "https://ranma.fandom.com/wiki/Gosunkugi's_Paper_Dolls_of_Love",
+        "https://ranma.fandom.com/wiki/Chapter_200",
+        "https://ranma.fandom.com/wiki/Paper_Dolls_Arc",
+        "https://www.animefillerguide.com/anime/ranma-%c2%bd/",
+        "https://en.wikipedia.org/wiki/List_of_Ranma_%C2%BD_chapters"
+      ]
+    },
+    {
+      "episode": 154,
+      "end_chapter": 220,
+      "start_chapter": 219,
+      "chapters_adapted": "219-220",
+      "volume": 21,
+      "confidence": "high",
+      "note": "NEW anchor - Episode infobox reads 219-220 (this page carries the field twice, once as 'chapters' and once as 'manga'); ch 219 and ch 220 pages both name 'Bring It On! Love as a Cheerleader - Part 1'; the Martial Arts Cheerleading Arc table agrees; AFG carries 219-220 at ITS row 155 = this episode's production number. Row previously had no anchor; its chapters were sitting on ep 155.",
+      "sources": [
+        "https://ranma.fandom.com/wiki/Bring_It_On!_Love_as_a_Cheerleader_-_Part_1",
+        "https://ranma.fandom.com/wiki/Chapter_219",
+        "https://ranma.fandom.com/wiki/Chapter_220",
+        "https://ranma.fandom.com/wiki/Martial_Arts_Cheerleading_Arc",
+        "https://www.animefillerguide.com/anime/ranma-%c2%bd/",
+        "https://en.wikipedia.org/wiki/List_of_Ranma_%C2%BD_chapters"
+      ]
+    },
+    {
+      "episode": 155,
+      "end_chapter": 224,
+      "start_chapter": 221,
+      "chapters_adapted": "221-224",
+      "volume": 22,
+      "confidence": "high",
+      "note": "REPAIR of stored value - Episode infobox reads 221-222-223-224; all four chapter pages name 'Bring It On! Love as a Cheerleader - Part 2'; the Martial Arts Cheerleading Arc table agrees; AFG carries 221-224 at ITS row 156 = this episode's production number. Stored 219-220 belongs to ep 154.",
+      "sources": [
+        "https://ranma.fandom.com/wiki/Bring_It_On!_Love_as_a_Cheerleader_-_Part_2",
+        "https://ranma.fandom.com/wiki/Chapter_221",
+        "https://ranma.fandom.com/wiki/Chapter_222",
+        "https://ranma.fandom.com/wiki/Chapter_223",
+        "https://ranma.fandom.com/wiki/Martial_Arts_Cheerleading_Arc",
+        "https://www.animefillerguide.com/anime/ranma-%c2%bd/",
+        "https://en.wikipedia.org/wiki/List_of_Ranma_%C2%BD_chapters"
+      ]
+    }
+  ],
+  "continue_points": [
+    {
+      "episode": 16,
+      "continue_chapter": 27,
+      "note": "Ends inside ch 27 ('I'll Never Let Go'); the ch 27 page names ep 16 AND ep 17, and ep 17 re-opens on it."
+    },
+    {
+      "episode": 17,
+      "continue_chapter": 30,
+      "note": "Ends inside ch 30 ('The Waters of Love'); the Figure Skating arc table lists ch 30 against ep 17 and ep 18, and ep 18's infobox opens on 30."
+    },
+    {
+      "episode": 24,
+      "continue_chapter": 43,
+      "note": "Ends inside ch 43 ('Attack of the Wild Mousse'), which ep 26 finishes. Replaces the stored 46, which skipped ch 44-45 (both adapted, in ep 26)."
+    }
+  ],
+  "annotations": [
+    {
+      "episodes": [
+        22,
+        25,
+        26,
+        28
+      ],
+      "kind": "rearranged",
+      "chapters": "43-50, 59-62, 70-73",
+      "note": "The 1989 anime adapted this stretch out of manga order in EVERY numbering (aired, production and ours): ep 22 = 59-62 (Takeout Race) lands before ep 23-24 = 37-43, ep 25 = 46-47 lands before ep 26 = 43-45, and ep 28 = 70-73 (Dojo Destroyer) lands before ep 29-30 = 51-55. Anchors here are non-monotonic by fact, not by defect."
+    },
+    {
+      "episodes": [
+        15,
+        16,
+        17
+      ],
+      "kind": "rearranged",
+      "chapters": "23-30",
+      "note": "These three (production 14-16) were produced in the cancelled 1989 run but held back and broadcast on 1989-12-08/15/22, i.e. AFTER eps 18-27. Our row order follows production here while our air dates are the true broadcast dates - which is why an aired-order source lists them at 25/26/27."
+    },
+    {
+      "episodes": [
+        16,
+        17,
+        18
+      ],
+      "kind": "partial",
+      "chapters": "27, 30",
+      "note": "Two explicit page splits: ch 27 runs across eps 16-17 and ch 30 runs across eps 17-18. Both are marked as joint on the chapter pages / arc table, so they are recorded in chapters_adapted and as continue points rather than being assigned to one side."
+    },
+    {
+      "episodes": [
+        24,
+        26
+      ],
+      "kind": "partial",
+      "chapters": "43",
+      "note": "Ch 43 ('Attack of the Wild Mousse') is split between ep 24 and ep 26 - the ch 43 page and the arc table both name the two episodes."
+    },
+    {
+      "episodes": [
+        121,
+        122,
+        125
+      ],
+      "kind": "rearranged",
+      "chapters": "179-188",
+      "note": "The anime adapted the Pantyhose Taro arc (ch 180-188, eps 121-122) BEFORE the single-chapter Cursed Scroll story (ch 179, ep 125), so ep 125's anchor is lower than eps 121-122's. True in production order too (122/123 vs 128)."
+    },
+    {
+      "episodes": [
+        122
+      ],
+      "kind": "abridged",
+      "chapters": "189-190",
+      "note": "The Pantyhose Taro Intro Arc page's table fills ch 189-190 down into 'The Demon from Jusenkyo, Part II'. Ch 189/190 are the separate Happosai time-travel two-parter ('Toki o kakeru jijii' 1-2); their own chapter pages carry an EMPTY anime field, the episode infobox stops at 188, and AFG stops at 188. END stays 188; 189-190 were never adapted."
+    },
+    {
+      "episodes": [
+        130
+      ],
+      "kind": "graft",
+      "chapters": "58",
+      "note": "'The Missing Matriarch of Martial Arts Tea!' (typed mixed) re-uses ch 58 ('Proposal Accepted', the final chapter of the Martial Arts Tea Ceremony Arc) - the ch 58 page names BOTH this episode and ep 93 'The Gentle Art of Martial Tea Ceremony'. NO anchor is proposed: ch 58 was already adapted ~37 episodes earlier and an anchor here would throw a reader's position back from ch 198 to ch 58. Recorded as a graft instead. (ep 93 is also unanchored today.)"
+    },
+    {
+      "episodes": [
+        133,
+        153
+      ],
+      "kind": "divergence",
+      "chapters": "200",
+      "note": "Source error worth recording: the ch 200 page's anime field names the FILLER ep 153 'Gosunkugi's Summer Affair!'. Ch 200 is 'Koi no Kami Ningyo' (恋の紙人形) and ep 133 is 'Gosunkugi! Aa Koi no Kaminingyo' (五寸釘!あぁ恋の紙人形) - the Paper Dolls Arc table, ep 133's infobox and AFG all put ch 200 in ep 133. This closes the minor conflict the A1 verdict flagged as unresolved."
+    }
+  ],
+  "type_corrections": [],
+  "repairs": [
+    {
+      "episode": 15,
+      "field": "end_chapter",
+      "old": 27,
+      "new": 24,
+      "why": "Whole-record repair: end_chapter 27->24, start_chapter 25->23, chapters_adapted '25-27'->'23-24', volume -> 3 (tankobon). The stored value is AFG's chapter-column slot 15, which belongs to the wiki's PRODUCTION episode 15 ('Close Call! The Dance of Death... On Ice!' = our ep 16), not to this episode (production 14). Three independent artefacts put 23-24 here: this episode's own infobox manga field, the ch 23 and ch 24 pages (both name 'The Abduction of P-Chan'), and the Martial Arts Figure Skating Arc chapter table. AFG derivation tier - flip the row's source to manual on apply.",
+      "sources": [
+        "https://ranma.fandom.com/wiki/The_Abduction_of_P-Chan",
+        "https://ranma.fandom.com/wiki/Chapter_23",
+        "https://ranma.fandom.com/wiki/Chapter_24",
+        "https://ranma.fandom.com/wiki/Martial_Arts_Figure_Skating_Arc",
+        "https://www.animefillerguide.com/anime/ranma-%c2%bd/"
+      ]
+    },
+    {
+      "episode": 15,
+      "field": "continue_chapter",
+      "old": 27,
+      "new": null,
+      "why": "The stored continue point ('ep 16 starts ch 27') was derived from the bad 25-27 anchor. With the corrected anchors ep 15 ends at a clean chapter boundary (24) and ep 16 starts at 25, so continue == END+1 and no continue point should be stored.",
+      "sources": [
+        "https://ranma.fandom.com/wiki/The_Abduction_of_P-Chan",
+        "https://ranma.fandom.com/wiki/Close_Call!_The_Dance_of_Death..._On_Ice!",
+        "https://ranma.fandom.com/wiki/Chapter_24",
+        "https://ranma.fandom.com/wiki/Chapter_25"
+      ]
+    },
+    {
+      "episode": 16,
+      "field": "end_chapter",
+      "old": 30,
+      "new": 27,
+      "why": "Whole-record repair: end_chapter 30->27, start_chapter 27->25, chapters_adapted '27-30'->'25-27', volume -> 4. The stored value is AFG's chapter-column slot 16 = production episode 16 ('P-Chan Explodes!' = our ep 17). This episode's infobox reads 25-26-27; ch 25 and ch 26 name it outright and ch 27 names it jointly with our ep 17; the Figure Skating arc table agrees. AFG derivation tier - flip the row's source to manual on apply.",
+      "sources": [
+        "https://ranma.fandom.com/wiki/Close_Call!_The_Dance_of_Death..._On_Ice!",
+        "https://ranma.fandom.com/wiki/Chapter_25",
+        "https://ranma.fandom.com/wiki/Chapter_26",
+        "https://ranma.fandom.com/wiki/Chapter_27",
+        "https://ranma.fandom.com/wiki/Martial_Arts_Figure_Skating_Arc",
+        "https://www.animefillerguide.com/anime/ranma-%c2%bd/"
+      ]
+    },
+    {
+      "episode": 24,
+      "field": "continue_chapter",
+      "old": 46,
+      "new": 43,
+      "why": "Ch 43 ('Attack of the Wild Mousse') is explicitly split between this episode and our ep 26 - both the ch 43 page and the Full Body Cat's Tongue arc table name the two episodes. A reader stopping after ep 24 is mid-ch-43, so the honest resume is 43. The stored 46 was the next stored anchor's start_chapter and would have made the reader skip ch 44-45 entirely, even though both ARE adapted (in ep 26).",
+      "sources": [
+        "https://ranma.fandom.com/wiki/Chapter_43",
+        "https://ranma.fandom.com/wiki/Full_Body_Cat's_Tongue_Arc",
+        "https://ranma.fandom.com/wiki/This_Ol'_Gal's_the_Leader_of_the_Amazon_Tribe!",
+        "https://ranma.fandom.com/wiki/Enter_Mousse!_The_Fist_of_the_White_Swan"
+      ]
+    },
+    {
+      "episode": 89,
+      "field": "end_chapter",
+      "old": 155,
+      "new": 157,
+      "why": "Whole-record repair: end_chapter 155->157, start_chapter 154->156, chapters_adapted '154-155'->'156-157', volume -> 15. Stored value is ep 88's ('Gimme That Pigtail'). This episode's infobox reads 156-157, the ch 156 and ch 157 pages both name it, and the Dragon's Whisker Arc table agrees. AFG carries 156-157 at its row 90, which is this episode's PRODUCTION number (aired 89 / production 90). AFG derivation tier - flip the row's source to manual on apply.",
+      "sources": [
+        "https://ranma.fandom.com/wiki/When_a_Guy's_Pride_and_Joy_is_Gone",
+        "https://ranma.fandom.com/wiki/Chapter_156",
+        "https://ranma.fandom.com/wiki/Chapter_157",
+        "https://ranma.fandom.com/wiki/Dragon's_Whisker_Arc",
+        "https://www.animefillerguide.com/anime/ranma-%c2%bd/"
+      ]
+    },
+    {
+      "episode": 122,
+      "field": "end_chapter",
+      "old": 183,
+      "new": 188,
+      "why": "Whole-record repair: end_chapter 183->188, start_chapter 180->184, chapters_adapted '180-183'->'184-188', volume -> 18. Stored value is ep 121's (Part I). This episode's infobox reads 184-188 and all five chapter pages name 'The Demon from Jusenkyo, Part II'. AFG carries 184-188 at its row 123 = this episode's production number (aired 122 / production 123). Also drop the stored note text 'Movie 1: Ranma 1/2 - The Battle of Nekonron...' - that is AFG's inter-row section banner, not an episode fact. AFG derivation tier - flip the row's source to manual on apply.",
+      "sources": [
+        "https://ranma.fandom.com/wiki/The_Demon_from_Jusenkyo,_Part_II",
+        "https://ranma.fandom.com/wiki/Chapter_184",
+        "https://ranma.fandom.com/wiki/Chapter_188",
+        "https://ranma.fandom.com/wiki/Pantyhose_Taro_Intro_Arc",
+        "https://www.animefillerguide.com/anime/ranma-%c2%bd/"
+      ]
+    },
+    {
+      "episode": 132,
+      "field": "end_chapter",
+      "old": 198,
+      "new": 199,
+      "why": "Whole-record repair: end_chapter 198->199, start_chapter 197->199, chapters_adapted '197-198'->'199', volume -> 19. Stored value is ep 129's ('Ukyo's Secret Sauce, Part 2'). This episode's infobox reads ch 199; ch 199's page names it; it is the only chapter of the Octopus Trap Arc; AFG carries 199 at its row 130 = this episode's production number (aired 132 / production 130). Also drop the AFG 'Movie 1' banner text from the note. AFG derivation tier - flip the row's source to manual on apply.",
+      "sources": [
+        "https://ranma.fandom.com/wiki/Mystery_of_the_Marauding_Octopus_Pot!",
+        "https://ranma.fandom.com/wiki/Chapter_199",
+        "https://ranma.fandom.com/wiki/Octopus_Trap_Arc",
+        "https://www.animefillerguide.com/anime/ranma-%c2%bd/"
+      ]
+    },
+    {
+      "episode": 155,
+      "field": "end_chapter",
+      "old": 220,
+      "new": 224,
+      "why": "Whole-record repair: end_chapter 220->224, start_chapter 219->221, chapters_adapted '219-220'->'221-224', volume -> 22. Stored value is ep 154's (Part 1). This episode's infobox reads 221-224 and all four chapter pages name 'Bring It On! Love as a Cheerleader - Part 2'; the Martial Arts Cheerleading Arc table agrees; AFG carries 221-224 at its row 156 = this episode's production number (aired 155 / production 156). Also drop the AFG 'Movie 2' banner text from the note. AFG derivation tier - flip the row's source to manual on apply.",
+      "sources": [
+        "https://ranma.fandom.com/wiki/Bring_It_On!_Love_as_a_Cheerleader_-_Part_2",
+        "https://ranma.fandom.com/wiki/Chapter_221",
+        "https://ranma.fandom.com/wiki/Chapter_224",
+        "https://ranma.fandom.com/wiki/Martial_Arts_Cheerleading_Arc",
+        "https://www.animefillerguide.com/anime/ranma-%c2%bd/"
+      ]
+    }
+  ],
+  "confirmations": [
+    {
+      "episode": 18,
+      "stored": "30/30-32",
+      "verdict": "correct as stored",
+      "why": "Our ep 18 = production 18, and AFG's chapter column is production-indexed, so the index join happened to land right. Independently verified: episode infobox 30-31-32, Story Arcs table gives aired-15 chapters 30/31/32, ch 31+32 pages name the episode, and the Figure Skating arc table lists ch 30 against BOTH ep 17 and ep 18 (a genuine split, not an error)."
+    },
+    {
+      "episode": 19,
+      "stored": "34/33-34",
+      "verdict": "correct as stored",
+      "why": "Episode infobox 33-34; Story Arcs gives aired-16 chapters 33, 34; ch 34 page names the episode. Only ch 33's own page dissents (names ep 18); overruled 2-1."
+    },
+    {
+      "episode": 20,
+      "stored": "36/35-36",
+      "verdict": "correct as stored",
+      "why": "Episode infobox, ch 35 + ch 36 pages, Shampoo Intro Arc table and Story Arcs all agree."
+    },
+    {
+      "episode": 23,
+      "stored": "40/37-40",
+      "verdict": "correct as stored",
+      "why": "Episode infobox, ch 37-40 pages, Neko-Ken Arc table and Story Arcs all agree."
+    },
+    {
+      "episode": 24,
+      "stored": "43/41-43",
+      "verdict": "chapters correct as stored; CONTINUE POINT wrong (see repairs)",
+      "why": "Episode infobox 41-43; ch 41/42 pages name the episode; ch 43 is split with ep 26."
+    },
+    {
+      "episode": 25,
+      "stored": "47/46-47",
+      "verdict": "correct as stored",
+      "why": "Episode infobox, ch 46 + ch 47 pages, Full Body Cat's Tongue arc table and Story Arcs all agree."
+    },
+    {
+      "episode": 27,
+      "stored": "50/48-50",
+      "verdict": "correct as stored",
+      "why": "Episode infobox, ch 48-50 pages, arc table and Story Arcs all agree."
+    },
+    {
+      "episode": 29,
+      "stored": "52/51-52",
+      "verdict": "correct as stored",
+      "why": "Episode infobox, ch 51 + ch 52 pages, Breaking Point Arc table and Story Arcs all agree."
+    },
+    {
+      "episode": 30,
+      "stored": "55/53-55",
+      "verdict": "correct as stored",
+      "why": "Episode infobox, ch 53-55 pages, Breaking Point Arc table and Story Arcs all agree."
+    },
+    {
+      "episode": 90,
+      "stored": "nulled by the A1 verdict",
+      "verdict": "A1 null upheld",
+      "why": "Filler; its 156-157 belong to ep 89, which now carries them."
+    },
+    {
+      "episode": 123,
+      "stored": "nulled by the A1 verdict",
+      "verdict": "A1 null upheld",
+      "why": "Filler; its 184-188 belong to ep 122, which now carries them."
+    },
+    {
+      "episode": 131,
+      "stored": "nulled by the A1 verdict",
+      "verdict": "A1 null upheld",
+      "why": "Filler; its 194-196 belong to ep 128, which now carries them."
+    },
+    {
+      "episode": 134,
+      "stored": "nulled by the A1 verdict",
+      "verdict": "A1 null upheld",
+      "why": "Filler; its ch 200 belongs to ep 133, which now carries it."
+    },
+    {
+      "episode": 156,
+      "stored": "nulled by the A1 verdict",
+      "verdict": "A1 null upheld",
+      "why": "Filler; its 221-224 belong to ep 155, which now carries them."
+    },
+    {
+      "episode": 14,
+      "stored": "nulled by the A1 verdict",
+      "verdict": "A1 null upheld",
+      "why": "Filler ('manga = None'); its 23-24 belong to ep 15, which now carries them."
+    },
+    {
+      "episode": 153,
+      "stored": "no anchor",
+      "verdict": "correct - stays unanchored",
+      "why": "Filler ('manga = None'; AFG marks it *Filler / N/A at its row 153). Ch 200's page names this episode, but that is a wiki error - see annotations."
+    }
+  ],
+  "structure": {
+    "notes": "THREE NUMBERINGS. Ranma's 1989 run was cancelled after 18 aired episodes and revived as 'Ranma 1/2 Nettohen'; episodes produced for the first run were held back, so AIRED order != PRODUCTION order in exactly four pockets. The ranma.fandom episode pages state both numbers explicitly in the infobox 'episode' field, e.g. 'Enter Shampoo' = 18 (production) / 15 (aired), 'Gimme That Pigtail' = 89 (production) with airdate 1991-04-05 at aired position 88. OUR rows are a HYBRID: production order for eps 18-161 EXCEPT that eps 88-90, 121-135 and 154-156 are in AIRED order, and eps 14-17 are a 4-row rotation (our 14 = production 17, our 15/16/17 = production 14/15/16). Verified row by row by title + airdate against the wiki's episode list and each episode page.\n\nTHE AFG DEFECT, EXACTLY. animefillerguide's Ranma table has a TITLE column and a CHAPTER column that do not always agree with each other. The CHAPTER column is PRODUCTION-indexed throughout the series - AFG row N carries production-episode N's chapters, with no exception found anywhere in the four zones. The TITLE column is production-ordered in the 88-90 / 121-135 / 154-156 pockets but AIRED-ordered across rows 14-30. That single fact explains every stored value: our eps 18-30 are production-numbered, so the index join accidentally produced the RIGHT chapters for all nine of them; our eps 14-17 are rotated, so 15 and 16 got production 15's and 16's chapters; and our eps 88-90 / 121-135 / 154-156 are aired-numbered, so the join slid the chapters onto neighbours by 1-5 rows.\n\nSOURCE RANKING USED. Primary = the episode page's infobox 'manga' field. Independent cross-check 1 = the chapter pages' reverse 'anime' field (these carry AIRED numbers in their link labels, e.g. ch 23 -> 'The Abduction of P-Chan|Episode 25', so only the LINK TARGET is safe to read). Independent cross-check 2 = the per-arc 'Chapters Covered' tables and the site-wide 'Story Arcs' table (the latter numbers 1989 episodes in AIRED order and only covers ch 1-124). Fourth = AFG read by production index. Volumes were taken from the chapter pages' Tankobon/Shinsoban number and independently verified against Wikipedia's tankobon volume/chapter list (407 chapters / 38 volumes - identical on all 28 end-chapters checked), matching our stored series totals. Chapter-number space = the fandom/MU mainline 1-407; no conversion needed.\n\nKNOWN WIKI INCONSISTENCIES (all resolved above, none left open): (a) the episode-list page's season-5 second number column disagrees with the season-5 episode pages' own production numbers - the episode pages and AFG agree, so the list column was not used; (b) ch 33's page assigns itself to ep 18 while the arc table and both episode infoboxes assign it to ep 19; (c) ch 200's page names filler ep 153; (d) the Pantyhose Taro arc table fills ch 189-190 into ep 122.",
+    "order_only": []
+  },
+  "flags_for_sean": [
+    "MONOTONICITY: this re-anchor is deliberately non-monotonic in our episode order, because the adaptation is. Zone A: 22 -> 59-62, 23 -> 37-40, 25 -> 46-47, 26 -> 43-45, 28 -> 70-73, 29 -> 51-52. Zone C: 122 -> 188 then 125 -> 179. Eps 22, 26 and 28 almost certainly had no stored anchor because a monotonic ingest filter dropped them; if that filter is still live, these three (and ep 125) will be silently dropped again. Please confirm the apply path accepts descending anchors before running.",
+    "TIER: every repair here lands on an afg-source row, and so do the nine CONFIRMED rows (18, 19, 20, 23, 24, 25, 27, 29, 30). Per rule 7 the repaired rows must flip to manual. Recommendation: flip the CONFIRMED rows too - AFG's chapter column is production-indexed and our rows are not, so the next AFG re-derive will re-corrupt every row in these four zones unless the whole zone is pinned at manual tier. Alternatively fix the AFG joiner to key on the wiki's production number.",
+    "EP 130 ('The Missing Matriarch of Martial Arts Tea!', typed mixed): sources are unanimous that it re-uses ch 58, but ch 58 was already adapted in ep 93 and an anchor would drag the reader's position back from 198 to 58. I have deliberately delivered a 'graft' annotation and NO anchor. Sean's call: leave unanchored (my recommendation, consistent with ep 93 which is also unanchored), or accept a backwards anchor.",
+    "EP 153 AIR DATE: our stored air date for ep 153 'Gosunkugi's Summer Affair!' is 1992-09-04, which is also ep 158's date. The wiki's episode list and the episode page both give 1992-07-31, which fits the weekly run exactly (152 = 07-24, 153 = 07-31, 154 = 08-07). The apparent 'ep 153 deviates from aired order' fact in the task brief is an artefact of that bad date - ep 153 is in sequence and needs no re-anchor (it is filler). Recommend an air_date repair outside this verdict's scope.",
+    "OUT OF SCOPE BUT ADJACENT: eps 31 (95-96) and 32 (97-99) have no stored anchor and sit immediately after zone A; the same wiki fields cover them cleanly. Also ep 93 ('The Gentle Art of Martial Tea Ceremony' = ch 56-58) is unanchored. Not touched here.",
+    "NOT RE-LITIGATED, but recorded: I could not construct a defensible forward continue point for eps 22, 25, 26 and 28 - after each of them the earliest not-yet-adapted-but-will-be chapter is BEHIND the episode's own end chapter (e.g. after ep 22's 59-62 the reader's true resume is ch 37). Rather than store backwards continue points I have described the pocket in a 'rearranged' annotation."
+  ]
+}

@@ -69,7 +69,7 @@ async function main() {
     if (oldEps?.length) {
       const rows = filterEpisodeRows(NEW_ID, oldEps.map((e) => ({
         series_id: NEW_ID, number: e.number - OFFSET, title: e.title, type: e.type, air_date: e.air_date,
-      })));
+      })), 'afl');
       await db.from('episodes').delete().eq('series_id', NEW_ID);
       const { error } = await db.from('episodes').insert(rows);
       if (error) throw new Error(`episodes: ${error.message}`);

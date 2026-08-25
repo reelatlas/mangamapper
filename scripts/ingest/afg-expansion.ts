@@ -201,7 +201,7 @@ async function main() {
         }));
         // per-series rulings (community caps + type overrides) apply to
         // every episode writer, expansion included
-        const ruledRows = filterEpisodeRows(id!, epRows);
+        const ruledRows = filterEpisodeRows(id!, epRows, 'afg');
         for (let i = 0; i < ruledRows.length; i += 500) {
           const { error } = await db.from('episodes').insert(ruledRows.slice(i, i + 500));
           if (error) throw new Error(error.message);

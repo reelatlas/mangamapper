@@ -32,6 +32,11 @@ import { EPISODE_TYPE_OVERRIDES } from './lib/resolve';
 const DRY = process.argv.includes('--dry-run');
 const ONLY = process.argv.slice(2).filter((a) => !a.startsWith('--'));
 const DIR = join(dirname(fileURLToPath(import.meta.url)), 'research/batch17/out');
+// chunk-1 second pass (2026-08-25): supplemental verdicts — A1 triage lanes,
+// narrow tasks, and re-research files — live in out2/ as their own cited
+// records (multiple verdicts per series are expected; the apply is idempotent
+// and per-verdict, so they compose instead of merging by hand)
+const DIR2 = join(dirname(fileURLToPath(import.meta.url)), 'research/batch17/out2');
 const B = 'research-tier batch 17 (2026-08-24, agent-verified 2+ sources, gap tier)';
 const ZMARK = 'zone-acknowledged (batch 17)';
 const now = () => new Date().toISOString();
@@ -71,10 +76,25 @@ const REPAIRS_APPROVED = new Map<string, string>([
   ['hikaru-no-go#75#end_chapter', 'finale adapts Game 148 (exact episode/chapter title match なつかしい笑顔 + explicit wiki chapter field); stored 166 unsupported'],
   ['hikaru-no-go#75#volume', 'paired: Game 148 closes vol 17 (fandom chapter list + Wikipedia)'],
   ['mashle-magic-and-muscles#24#end_chapter', 'resolves a double-claim: our ep 25 = chs 73-74, so ep 24 cannot also end at 74; wiki E23 = chs 71-72 (numbering offset verified by title+date)'],
+  // ---- zatch contested re-research (2026-08-25) resolves the base verdict's own SOFT SPLIT flag:
+  ['zatch-bell#120#end_chapter', 'konjikinogash.fandom per-episode fields: ep 120 ends at ch 184, not 185 (ch 185 opens ep 121) — repairs the base verdict\'s soft split (out2/zatch-bell-contested.json)'],
+  ['zatch-bell#121#end_chapter', 'paired with ep 120: ep 121 = chs 185-186 ending at 186, not 187 (ch 187 lands at ep 124, anchored by the contested verdict)'],
+  // ---- batch-12 "as-stored" sweep (2026-08-25, out2/rosario-vampire-asstored.json):
+  ['rosario-vampire#11#end_chapter', 'ep 11 is the Keito/newspaper episode = ch 8 "Wish Upon the Moon" (fandom + Wikipedia vol-2 summary); stored 9 came from the wiki\'s episode-page off-by-one from ep 11 onward, inherited by batch 12\'s as-stored blessing'],
+  ['rosario-vampire#11#volume', 'paired: ch 8 sits in vol 2, not vol 3'],
   // HELD (not applied — see DECISIONS-FOR-SEAN batch 17):
   //   toriko#147 → handled as a DELETION instead (filler row, A1)
   //   shugo-chara#127 → agent kept the stored value deliberately (scene-level
   //   sliver only; AFL disagrees with fandom on the typing)
+]);
+// Verdict files present on disk but NOT YET CURATED into these maps — the
+// in-flight narrow tasks land here mid-apply; each is released by name once
+// its decisions are ruled and mapped. A held file is loudly skipped, never
+// silently applied.
+const HELD_FILES = new Set<string>([
+  // (all four narrow-task files curated + released 2026-08-25 — see the
+  // zatch-bell overrides, the ranma REORDER_REGIMES entry, and the
+  // rosario-vampire REPAIRS_APPROVED entries)
 ]);
 // Stored anchors DELETED by this batch (key `${sid}#${episode}`). Gap research
 // proved each one is not a position instrument for THIS entry at all.
@@ -83,6 +103,55 @@ const DELETIONS_APPROVED = new Map<string, string>([
   ['chrono-crusade#24', 'ep 24 is the anime-original ending (typed anime-only-canon this batch); the stored ch-30 value is MU\'s SERIES-level bound ("ends at Vol 5 Chap 30, diverges") misplaced onto it — the real ch-30 bound now sits on ep 20'],
   ['fate-kaleid-liner-prisma-illya#42', 'ep 42 is the Oath Under Snow movie adapting 3rei!! chs 29-39 — a DIFFERENT manga; the stored ch-13 pin is a wrong-chapter-space value in the 1st-series numbering (order-only until the entry is split)'],
   ['toriko#147', 'ep 147 is filler (A1) AND the stored ch-263 value overshoots the adaptation frontier by a full volume; the honest terminal anchor is ep 146 → ch 253, which this batch writes'],
+  // ---- A1 TRIAGE (Sean's D4 rulings 2026-08-25): all 49 anchor_on_noncanon_row
+  // audit hits adjudicated — 45 junk anchors, 4 mistyped rows (those four keep
+  // corrected anchors via retype + the verdicts' own anchor upserts: dbz 100,
+  // fairy-tail 256, tpn 23, one-piece 737). The junk class below deletes.
+  // Root cause (one-piece lane, cross-model verified): AFG's chapter column is
+  // a READING-POSITION CONVERSION that plateaus across noncanon rows — the D4
+  // writer gate now refuses these at the source; these deletions clear the
+  // stored residue. mashle ep 7 is NOT here: the §9 fractional renumber makes
+  // its anchor correct in place (see CHUNK1-RECOVERY.md §9).
+  // one-piece: 12 slivers preserved as annotations by the verdict; every
+  // nulled row bracketed by real canon-neighbour anchors (verified).
+  ...(['50', '51', '55', '93', '98', '203', '214', '216', '319', '326', '418', '419', '420', '455', '497', '498', '626', '747'] as const)
+    .map((ep) => [`one-piece#${ep}`, 'A1 junk anchor (D4 triage, out2/one-piece-a1.json): AFG reading-position plateau on a noncanon row; slivers recorded as annotations, canon neighbours carry position'] as [string, string]),
+  ...(['39', '40', '42', '43', '125', '274'] as const)
+    .map((ep) => [`dragon-ball-z#${ep}`, 'A1 junk anchor (D4 triage, out2/dragon-ball-z-a1.json): Kanzenshuu page-level splits prove a sliver graft (ch sliced across the filler block), not an adaptation'] as [string, string]),
+  ['dragon-ball-z-kai#101', 'A1 junk anchor (D4 triage, out2/dragon-ball-z-kai-a1.json): batch 15 used an anchor to carry a reader position across a filler episode — the facts re-verified, the instrument was wrong; A1 answers the fork batch 15 itself flagged'],
+  ['dragon-ball-z-kai#165', 'A1 junk anchor (D4 triage, out2/dragon-ball-z-kai-a1.json): same batch-15 instrument error as ep 101 — ch 517 adapts to episodes already anchored; filler finale carries no anchor'],
+  ...(['14', '90', '123', '131', '134', '156'] as const)
+    .map((ep) => [`ranma-1-2#${ep}`, 'A1 junk anchor (D4 triage, out2/ranma-1-2-a1.json, verifier-confirmed 6/6): wiki manga=None + AFL Filler + anime-only categories; stored values are chart-misalignment artifacts (production-vs-aired order zones)'] as [string, string]),
+  ['black-clover#3', 'A1 junk anchor (D4 triage, out2/black-clover-a1.json): ch 1 p.1 + ch 2 p.4-5 slivers per the wiki\'s own inline refs — annotation, not position'],
+  ['black-clover#68', 'A1 junk anchor (D4 triage, out2/black-clover-a1.json): ch 103 p.14-15 sliver — annotation, not position'],
+  ['black-clover#157', 'A1 junk anchor (D4 triage, out2/black-clover-a1.json): batch-5 parked ep 129\'s END on the anime-canon stretch\'s last row as a frontier hold; ch 228\'s reverse mapping lists ep 129 only, which still holds ch 228 (afg) — lossless deletion, pre-checked'],
+  ['fairy-tail#246', 'A1 junk anchor (D4 triage, out2/fairy-tail-a1.json): wiki — all scenes anime-only except Mard Geer\'s appearance = ch 380\'s last page; sliver, not position'],
+  ['noragami#12', 'A1 junk anchor (D4 triage, out2/noragami-a1.json): the Rabou arc (eps 10-12) is anime-only; ch 11 belongs to ep 9; the honest S1 terminal moves to ep 10 (mixed) END 12 via CURATED_ANCHORS'],
+  ['a-certain-scientific-railgun#14', 'A1 junk anchor (D4 triage, out2/a-certain-scientific-railgun-a1.json, verifier-confirmed): batch-12 "as-stored" confirmation-laundering — no chapter titled 特別講習 exists in any edition; ch 17 = "July 25", adapted by ep 2; ep 14 is anime-original by its own wiki page'],
+  ['fist-of-the-north-star#109', 'A1 junk anchor (Sean\'s ruling 2026-08-25, out/fist-of-the-north-star.json): ep 109 is a clip show by 3 independent sources; the stored manual 136 was terminal inflation — the honest terminal ep 108 → 136 lands via this verdict\'s anchors with a partial annotation for ch 136\'s closing pages'],
+  ['hunter-x-hunter#2', 'A1 junk anchor (chunk-1 first-pass A1 verdict, out2/hunter-x-hunter-a1.json): genuine filler body with a 2-3 page ch-1 graft (Hunterpedia Adapted=Filler + AFL pure-filler set); sliver ruling → annotation only'],
+  ['hunter-x-hunter#18', 'A1 junk anchor (out2/hunter-x-hunter-a1.json): filler body with the relocated Kurapika reveal graft (ch 7 p.9-11); sliver ruling → annotation only'],
+  ['cardcaptor-sakura#7', 'A1 junk anchor (out/cardcaptor-sakura.json): D4\'s "likeliest mistyped row" hypothesis was WRONG — genuine filler; anchor was junk'],
+  ['inuyasha#79', 'A1 junk anchor (out/inuyasha.json): wholly anime-original Jaken comedy episode'],
+  ['slam-dunk#92', 'A1 junk anchor (out/slam-dunk.json): pure anime-original beachside comedy episode'],
+]);
+// Curated anchors this batch AUTHORS (not proposed as a verdict anchors row —
+// the evidence lives in the named verdict, the decision is Sean's). Applied
+// exactly like verdict anchors (source manual, batch note).
+const CURATED_ANCHORS: { sid: string; anchor: Anchor; why: string }[] = [
+  {
+    sid: 'noragami',
+    anchor: { episode: 10, end_chapter: 12, start_chapter: 9, chapters_adapted: '9 (part), 12 (part)', volume: null, confidence: 'high', note: 'honest S1 terminal (Sean 2026-08-25): ep 10 is the last episode with manga content (parts of chs 9 and 12) before the anime-only Rabou arc closes the season; replaces the deleted junk ep-12 anchor per A4 (anchor = what the episode adapts; coverage carries continue-read)', sources: ['https://noragami.fandom.com/wiki/Rabou_Arc'] },
+    why: 'evidence in out2/noragami-a1.json flags; DB pre-check confirmed ep 10 typed mixed and previously anchorless',
+  },
+];
+// Stored episode_annotations DELETED by this batch (key `${sid}#${episode}#${kind}`):
+// a verdict proved the annotation itself misidentifies the content.
+const ANNOTATION_DELETIONS = new Map<string, string>([
+  ['rurouni-kenshin#95#side_story', 'rows 95-98 are the Trust & Betrayal OVA acts adapting mainline Acts 165-179 (titles/kanji/air dates match AFL + en-WP OVA table) — the "pilot one-shots" side_story annotation was a misidentification, deleted not superseded (out2/rurouni-kenshin-tb.json)'],
+  ['rurouni-kenshin#96#side_story', 'same misidentification as ep 95 — T&B act 2 adapts Acts 168-170'],
+  ['rurouni-kenshin#97#side_story', 'same misidentification as ep 95 — T&B act 3 adapts Acts 172-174'],
+  ['rurouni-kenshin#98#side_story', 'same misidentification as ep 95 — T&B act 4 adapts Acts 175-179'],
 ]);
 // Research-tier volume_boundaries recovered/healed by the agents. full = the
 // rows replace every stored row for that manga; else upsert by volume.
@@ -160,6 +229,9 @@ const REORDER_REGIMES: Record<string, string> = {
   'hunter-x-hunter': 'reorder regime (batch 17): the Yorknew stretch pre-grafts and re-treads chapters (ch 72 p.1-3 into ep 50, the Uvogin fight stretched with overlapping page splits across eps 53-56, ch 83 mainline in ep 56 after its ep-45 pre-graft)',
   'that-time-i-got-reincarnated-as-a-slime': 'reorder regime (batch 17): S1 skips chs 40-42 and 44-45 and jumps to ch 43 + 46-52 for its final four episodes, leaving the skipped block to S2',
   kingdom: 'reorder regime (batch 17): ep 16 grafts the Ryo Fui introduction (chs 96-100) ahead of the campaign arc, and ep 22 skips 74-81 (adapted later in S2)',
+  'ranma-1-2': 'reorder regime (batch 17 re-anchor 2026-08-25, out2/ranma-1-2-reanchor.json, title-keyed): the aired order genuinely deviates from manga order in the re-anchored zones — eps 22 (59-62), 26 (43-45), 28 (70-73), 125 (179) legitimately sit below their predecessors; every jump is documented per-episode in the verdict',
+  'sket-dance': 'reorder regime (batch 17, Sean\'s END=max ruling 2026-08-25, verifier-confirmed): the adaptation is deliberately NON-LINEAR — near-exhaustive as a set through ch 157 (only 68/106/139/151 skipped) then cherry-picking, with episodes freely pairing early and late chapters (ep 28 = ch 102 alone, ep 74 = 182+196) — verified by fandom forward+reverse links, ja-WP subtitle splices, and en-WP summaries',
+  'zatch-bell': 'reorder regime (batch 17): S1 is heavily resequenced (ep 12 → ch 54-55, ep 14/16/19 back-jumps, ep 17 picks up skipped ch 21, ep 39 → 80-82 before eps 42-43 return to 75-79) and S3 resequences again (Ted arc 169-172 at eps 101-102, Koral Q 164-167 backfilled at 105-107) — per the zatchbell.fandom Story_Arcs table + en-WP season summaries',
   // sailor-moon-crystal REMOVED (Sean's post-switch review, 2026-08-24): it
   // never belonged here — a shared-chapter split (Act 27 over eps 27-28) is
   // not a below-predecessor jump — and its presence LAUNDERED a corrupted
@@ -177,14 +249,17 @@ const REPAIR_FIELDS: Record<string, string> = {
 const KINDS = new Set(['divergence', 'partial', 'graft', 'rearranged', 'side_story', 'loose_parallel', 'abridged']);
 const TYPES = new Set(['canon', 'mixed', 'filler', 'anime-only-canon']);
 
-function loadVerdicts(): Verdict[] {
-  const files = readdirSync(DIR).filter((f) => f.endsWith('.json')).sort();
-  const out: Verdict[] = [];
-  for (const f of files) {
-    const v = JSON.parse(readFileSync(join(DIR, f), 'utf8')) as Verdict;
-    if (!v.series_id) throw new Error(`${f}: missing series_id`);
-    if (ONLY.length && !ONLY.includes(v.series_id)) continue;
-    out.push(v);
+function loadVerdicts(): (Verdict & { __file: string })[] {
+  const out: (Verdict & { __file: string })[] = [];
+  for (const [dir, label] of [[DIR, 'out'], [DIR2, 'out2']] as const) {
+    const files = readdirSync(dir).filter((f) => f.endsWith('.json')).sort();
+    for (const f of files) {
+      if (HELD_FILES.has(f)) { console.log(`[batch-17] HELD (uncurated — awaiting Sean/curation): ${label}/${f}`); continue; }
+      const v = JSON.parse(readFileSync(join(dir, f), 'utf8')) as Verdict;
+      if (!v.series_id) throw new Error(`${label}/${f}: missing series_id`);
+      if (ONLY.length && !ONLY.includes(v.series_id)) continue;
+      out.push({ ...v, __file: `${label}/${f}` });
+    }
   }
   return out;
 }
@@ -227,8 +302,12 @@ async function main() {
       if (v.summary) lines.push(`   ${v.summary.slice(0, 400)}`);
 
       // ---- anchors (batch-14 lineage: sliver rule + running-order END)
+      // CURATED_ANCHORS for this series ride the same path (source manual,
+      // same gates) — the curation entry is the ruling record.
+      const curatedHere = CURATED_ANCHORS.filter((c) => c.sid === sid);
+      for (const c of curatedHere) lines.push(`   CURATED anchor ep${c.anchor.episode}: ${c.why.slice(0, 160)}`);
       const seenEp = new Set<number>();
-      for (const a of v.anchors ?? []) {
+      for (const a of [...(v.anchors ?? []), ...curatedHere.map((c) => c.anchor)]) {
         const ep = Number(a.episode);
         const excl = EXCLUDED_ANCHORS.get(`${sid}#${ep}`);
         if (excl) { lines.push(`   EXCLUDED ep${ep} (Sean decision pending): ${excl.slice(0, 160)}`); totals.skipped++; continue; }
@@ -449,6 +528,23 @@ async function main() {
         totals.deletions++;
       }
 
+      // ---- annotation DELETIONS: a verdict proved the stored annotation
+      // misidentifies the content (rurouni T&B "pilot one-shots" class) —
+      // deleted, never superseded, so the wrong claim cannot resurface.
+      for (const [key, why] of ANNOTATION_DELETIONS) {
+        const [dsid, deps, dkind] = key.split('#');
+        if (dsid !== sid) continue;
+        const ep = Number(deps);
+        const hit = (annRows ?? []).find((a) => a.episode === ep && a.kind === dkind);
+        if (!hit) { lines.push(`   DELETE annotation ep${ep} [${dkind}]: already absent (idempotent re-run)`); continue; }
+        lines.push(`   DELETE annotation ep${ep} [${dkind}]: ${why.slice(0, 150)}`);
+        if (!DRY) {
+          const { error } = await db.from('episode_annotations').delete().eq('series_id', sid).eq('episode', ep).eq('kind', dkind);
+          if (error) throw new Error(`ann-delete ${sid} ep${ep}: ${error.message}`);
+        }
+        totals.deletions++;
+      }
+
       // ---- agent repairs: curated application (REPAIRS_APPROVED), else report
       for (const r of v.repairs ?? []) {
         if (r.new === null) continue; // proposed removals: the deletion pass above rules on them
@@ -488,7 +584,7 @@ async function main() {
         if (!DRY) {
           await fileFlagOnce(runId, sid, 'research', 'count_mismatch', {
             kind_of_note: 'sean_review_bookmark',
-            note: `batch 17 research notes (${notes.length}; full text: scripts/ingest/research/batch17/out/${sid}.json): ${notes.map((f, i) => `(${i + 1}) ${f}`).join(' ')}`.slice(0, 1800),
+            note: `batch 17 research notes (${notes.length}; full text: scripts/ingest/research/batch17/${v.__file}): ${notes.map((f, i) => `(${i + 1}) ${f}`).join(' ')}`.slice(0, 1800),
           });
         }
         totals.bookmarks++;

@@ -292,7 +292,7 @@ async function main() {
         title: e.title,
         type: e.type,
         air_date: e.airDate,
-      })));
+      })), 'afl');
       // AFL-range merge (§10): rewrite only AFL's own (translated) numbering
       // range — rows beyond it (AFG/Wikipedia fills on a ruled extension)
       // survive the re-stitch

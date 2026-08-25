@@ -1,0 +1,256 @@
+{
+  "series_id": "zatch-bell",
+  "summary": "Narrow re-research of the 10 contested Zatch Bell! episodes (13, 51, 57, 103, 108, 117, 118, 119, 122, 123), judged on episode CONTENT rather than on the prior verdict's exhaustive-chapter-accounting argument. The decisive new source is konjikinogash.fandom.com, a SECOND Zatch wiki the prior pass never touched: it carries a per-episode `manga_chapter` infobox field for all 150 episodes with explicit '(Partially)' markers, and its ledes make a consistent three-way distinction between 'entirely filler', 'mostly filler' and unmarked (canon). On that source, corroborated episode-by-episode against en.wikipedia episode summaries, zatchbell.fandom chapter pages, and zatchbell.fandom CHARACTER pages (which carry debut/burn episode AND chapter fields - a genuinely different evidence type), the 10 split 5/5. FILLER (zero manga content): 13, 108, 118, 119, 123. MIXED (real adapted manga content, in every case shared with a neighbouring episode): 51 (the Brago vs Furigaro battle from ch 22, held back ~29 chapters - Furigaro's ONLY anime appearance is ep 51), 57 (ch 109-110: the Brago/Sherry desert battle and the Milordo-Z = Zofis reveal, with the manga's Isojin/Zakson/unnamed trio swapped for the anime-original Silent Rulers), 103 (the opening breakfast-and-departure beat of ch 173), 117 (the closing Riou/Rodeux 'break the seal' scene - Riou's manga debut is ch 183 and his anime debut is ep 117, stated on his character page), 122 (the ch 186 tail: Kiyo still researching the Demon World structure). Only 2 of the 5 mixed rows can carry an honest anchor (57 and 117); the other three are backfills or slivers whose END would misstate the reader's position, so they are delivered as annotations plus a flag. Two further findings: AFL and AFG both mark Zatch Bell filler only in three contiguous blocks (31-35, 89-100, 139-150) and use no Mixed label at all for this series, so our canon typing on these 10 was never per-episode analysis; and konjikinogash's per-episode table also resolves the prior verdict's own open eps-66-68 split and contradicts its eps 120/121 even-split derivation.",
+  "anchors": [
+    {
+      "episode": 57,
+      "end_chapter": 110,
+      "start_chapter": 109,
+      "chapters_adapted": "109-110 (both partial; 109 shared with ep 56, 110 shared with ep 58)",
+      "volume": 12,
+      "confidence": "medium",
+      "note": "MIXED row. Ep 57 adapts ch 109 'The Identity of Milordo-Z' - Brago and Sherry ambushed by Byonko's ancient-mamodo squad in Africa, ending with the deduction that Milordo-Z is Zofis (the episode's closing beat per en.wikipedia) - with the manga's trio (Isojin, Zakson, one unnamed) replaced by the anime-original Silent Rulers; the Kiyo/tile-research and Ponygon B-plot is the front of ch 110 'The Letter'. Isojin's and Zakson's character pages read chapter burn = 109 / episode burn = N/A, which is exactly the substitution. END 110 is non-decreasing against ep 56 (109) and ep 58 (110).",
+      "sources": [
+        "https://konjikinogash.fandom.com/wiki/Episode_57",
+        "https://zatchbell.fandom.com/wiki/Battle_on_the_Sands:_Brago_vs._The_Silent_Rulers!",
+        "https://zatchbell.fandom.com/wiki/Isojin_and_Karamanris",
+        "https://zatchbell.fandom.com/wiki/Zakson_and_Carter",
+        "https://en.wikipedia.org/wiki/Zatch_Bell!_season_2",
+        "https://en.wikipedia.org/wiki/List_of_Zatch_Bell!_chapters"
+      ]
+    },
+    {
+      "episode": 117,
+      "end_chapter": 183,
+      "start_chapter": 183,
+      "chapters_adapted": "183 (closing scene only; ch 183 is otherwise adapted at ep 116)",
+      "volume": 20,
+      "confidence": "high",
+      "note": "MIXED row. The Wonrei/Li-en street-fight body is anime-original ('in the anime, all events that transpire from Gash, Kiyomaro, Wonrei and Lien's perspective is entirely filler'), but the final scene - Riou telling Rodeux his plan to break the tower's seal is in motion - is ch 183. Independently pinned by zatchbell.fandom's Riou character page: mamodo debut episode = 117, mamodo debut chapter = 183. END equals ep 116's END, which is correct: the episode makes no forward progress.",
+      "sources": [
+        "https://konjikinogash.fandom.com/wiki/Episode_117",
+        "https://zatchbell.fandom.com/wiki/Riou_and_Banikis_Gigo",
+        "https://en.wikipedia.org/wiki/Zatch_Bell!_season_3",
+        "https://zatchbell.fandom.com/wiki/Story_Arcs"
+      ]
+    },
+    {
+      "episode": 124,
+      "end_chapter": 187,
+      "start_chapter": 187,
+      "chapters_adapted": "187",
+      "volume": 20,
+      "confidence": "medium",
+      "note": "OUT OF THE 10, BUT IN SCOPE BY IMPLICATION - it is where ch 187 actually lands, which is what rules eps 122/123 out of it. Ch 187 'Kiyo's Mood' is ep 124: Kiyo joins the class hike on the eve of the quest and Suzy 'senses his mood as morose' (en.wikipedia), a direct title match. konjikinogash lists ep 124 = Chapter 187 and ep 121 = Chapter 185 + 186. This resolves the prior verdict's own SOFT SPLIT flag ('ch 187 could instead sit in ep 123 or 124') - it is ep 124, and ep 123 is filler.",
+      "sources": [
+        "https://konjikinogash.fandom.com/wiki/Episode_124",
+        "https://en.wikipedia.org/wiki/Zatch_Bell!_season_3",
+        "https://en.wikipedia.org/wiki/List_of_Zatch_Bell!_chapters"
+      ]
+    }
+  ],
+  "continue_points": [
+    {
+      "episode": 57,
+      "continue_chapter": 110,
+      "note": "Ch 110 is only partially covered here (the Kiyo/Ponygon B-plot); ep 58 completes it, so the honest resume after ep 57 is ch 110 itself, not 111."
+    }
+  ],
+  "type_corrections": [
+    {
+      "episodes": [13],
+      "type": "filler",
+      "note": "PURE FILLER. konjikinogash: 'This episode is entirely filler and is not based off any chapters'; zatchbell.fandom infobox chaps = N/A and the episode is listed under Season 1 Filler and Bonus. The reason is structural, not inferential: Hyde and Eido are ANIME-ORIGINAL. en.wikipedia states outright 'The only reference to Hyde in the manga is during the battle between Zatch and Clear Note (Ch. 319)', and zatchbell.fandom's Hyde and Eido Kubozuka page reads mamodo debut episode = 1 / mamodo debut chapter = 319. A rematch between two anime-original characters cannot be adapting anything. Content (whirlwind bandit, silo hostages, Jikiruga unlocked) has no manga counterpart anywhere in ch 33-38.",
+      "sources": [
+        "https://konjikinogash.fandom.com/wiki/Episode_13",
+        "https://en.wikipedia.org/wiki/List_of_Zatch_Bell!_characters",
+        "https://zatchbell.fandom.com/wiki/Hyde_and_Eido_Kubozuka",
+        "https://zatchbell.fandom.com/wiki/Story_Arcs"
+      ]
+    },
+    {
+      "episodes": [51],
+      "type": "mixed",
+      "note": "MIXED, NOT FILLER - and the prior verdict's 'nothing left to adapt' reasoning fails here in the most concrete way. The Milordo-Z party plot is anime-original, but the Brago vs Furigaro B-plot is a real adaptation of ch 22 'A Pointless Fight' (the ice battle in a German town by the Rhine). konjikinogash ep 51: manga_chapter = Chapter 22 (Partially), lede 'While this episode features some moments originally adapted from the manga, this episode is mostly filler'. zatchbell.fandom's Furigaro and Gerhart page reads mamodo debut episode = 51, mamodo debut chapter = 22, episode burn = 51, chapter burn = 22 - ep 51 is Furigaro's ONLY anime appearance, so this is a first adaptation, not a rehash. zatchbell.fandom's ep 51 page carries a manga-vs-anime differences list for that exact fight (frozen town omitted, Brago's severed arm downgraded to a scratch, June 8th moved to April 4th). Ch 22 is genuinely SHARED: ep 10 animated the chapter's Japan half (Shin/Eshros), ep 51 the Brago half, ~29 chapters and 41 episodes later. See annotation; no anchor (see flags).",
+      "sources": [
+        "https://konjikinogash.fandom.com/wiki/Episode_51",
+        "https://zatchbell.fandom.com/wiki/The_Masked_Mamodo",
+        "https://zatchbell.fandom.com/wiki/Furigaro_and_Gerhart",
+        "https://zatchbell.fandom.com/wiki/A_Pointless_Fight",
+        "https://en.wikipedia.org/wiki/Zatch_Bell!_season_2"
+      ]
+    },
+    {
+      "episodes": [57],
+      "type": "mixed",
+      "note": "MIXED. konjikinogash ep 57: manga_chapter = Chapter 109 (Partially) + Chapter 110 (Partially), lede 'mostly filler'. zatchbell.fandom's differences section states it directly: 'The Silent Rulers and their bookkeepers were anime exclusive characters that were never involved or introduced in the original manga chapters THAT THIS PARTICULAR EPISODE WAS BASED ON. Instead of facing the Silent Rulers, Brago and Sherie face off against a different trio of ancient demons: Isojin, Zakuson, and another unnamed ancient demon.' Those two teams' pages give chapter burn = 109 and episode burn = N/A. The episode's closing beat - Milordo-Z is Zofis - is literally ch 109's title ('The Identity of Milordo-Z'). This is a character-substituted adaptation, not an invention. Anchored.",
+      "sources": [
+        "https://konjikinogash.fandom.com/wiki/Episode_57",
+        "https://zatchbell.fandom.com/wiki/Battle_on_the_Sands:_Brago_vs._The_Silent_Rulers!",
+        "https://zatchbell.fandom.com/wiki/Isojin_and_Karamanris",
+        "https://zatchbell.fandom.com/wiki/Zakson_and_Carter",
+        "https://en.wikipedia.org/wiki/Zatch_Bell!_season_2"
+      ]
+    },
+    {
+      "episodes": [103],
+      "type": "mixed",
+      "note": "MIXED, but only just. konjikinogash ep 103: manga_chapter = Chapter 173 (Partially), lede 'mostly filler', and its differences note is precise about the boundary: 'In the manga, Ted and Gide leave town as planned after having breakfast with Kiyomaro and Gash. In the anime, their bike breaks down just as they first try to leave. ALL EVENTS THAT TRANSPIRE AFTER THIS MOMENT IN THE ANIME IS ENTIRELY FILLER.' So the canon content is the opening beat of ch 173 only; the Cherish-lookalike chase is invented. en.wikipedia's summary corroborates the frame ('Ted and Jido's departure from Mochinoki is hampered when their motorcycle breaks down'). Note the cross-check lead's guess (~ch 172, 'the Kiyo/Ted conversation conclusion') is off by one: ch 171-172 are fully consumed by ep 102. No anchor - see annotation and flags.",
+      "sources": [
+        "https://konjikinogash.fandom.com/wiki/Episode_103",
+        "https://zatchbell.fandom.com/wiki/Ted%27s_Blues:_The_Girl_in_the_Wind",
+        "https://en.wikipedia.org/wiki/Zatch_Bell!_season_3",
+        "https://zatchbell.fandom.com/wiki/Story_Arcs"
+      ]
+    },
+    {
+      "episodes": [108],
+      "type": "filler",
+      "note": "PURE FILLER. konjikinogash: 'This episode is entirely filler and is not based on any chapters from the manga'; zatchbell.fandom infobox chaps = Filler and the episode sits in the Season 3 Filler and Bonus list; en.wikipedia adds that the episode is 'a parodic dedication' to the real anime 3000 Leagues in Search of Mother, which is the episode's actual premise. Nothing in ch 172-176 corresponds. Confirms the cross-check lead and the prior verdict.",
+      "sources": [
+        "https://konjikinogash.fandom.com/wiki/Episode_108",
+        "https://zatchbell.fandom.com/wiki/Homesick!%3F_Hana_and_Mother._Wanderlust_Gash",
+        "https://en.wikipedia.org/wiki/Zatch_Bell!_season_3",
+        "https://zatchbell.fandom.com/wiki/Story_Arcs"
+      ]
+    },
+    {
+      "episodes": [117],
+      "type": "mixed",
+      "note": "MIXED. The cross-check lead had this inverted: it is not a canon frame around a filler subplot, it is a filler BODY with a canon TAIL. konjikinogash ep 117: manga_chapter = Chapter 183 (Partially), lede 'mostly filler', differences 'in the anime, all events that transpire from Gash, Kiyomaro, Wonrei and Lien's perspective is entirely filler' - i.e. the Li-en/street-fight/shoes plot is invented. What remains is the closing scene, Riou telling Rodeux the seal-breaking plan is in motion (en.wikipedia, final sentence of its summary), which is ch 183 - independently confirmed by Riou's own page: mamodo debut episode = 117, mamodo debut chapter = 183. Anchored at 183.",
+      "sources": [
+        "https://konjikinogash.fandom.com/wiki/Episode_117",
+        "https://zatchbell.fandom.com/wiki/Riou_and_Banikis_Gigo",
+        "https://en.wikipedia.org/wiki/Zatch_Bell!_season_3"
+      ]
+    },
+    {
+      "episodes": [118],
+      "type": "filler",
+      "note": "PURE FILLER. konjikinogash and zatchbell.fandom both state 'entirely filler / not based on any chapters'. The one beat that looks canon - the cold open with Zaruchim recruiting Keith into Riou's cause - is an anime ADVANCE introduction, not an adaptation: zatchbell.fandom's Zaruchim page reads mamodo debut episode = 118 / mamodo debut chapter = 190, and Keith's reads mamodo debut episode = 127 / mamodo debut chapter = 190; ch 190 is animated at ep 127, 72 chapters and 9 episodes later. Prof. D'artagnan is a manga character (en.wikipedia cites ch 40 and 47-48) but the cruise-ship kidnapping plot has no chapter behind it. Refutes the cross-check lead's 'ch 179-183' claim for this episode - ch 178-183 are fully consumed by eps 113-117.",
+      "sources": [
+        "https://konjikinogash.fandom.com/wiki/Episode_118",
+        "https://zatchbell.fandom.com/wiki/Zaruchim_and_Raushin_Mo",
+        "https://zatchbell.fandom.com/wiki/Keith_and_Berun",
+        "https://en.wikipedia.org/wiki/Zatch_Bell!_season_3",
+        "https://en.wikipedia.org/wiki/List_of_Zatch_Bell!_characters"
+      ]
+    },
+    {
+      "episodes": [119],
+      "type": "filler",
+      "note": "PURE FILLER, and this is the one that turns on Sean's rehash test rather than on chapter accounting. Both wikis say 'entirely filler / not based on any chapters'. The episode is a bedtime retelling of Tia's Maruss betrayal and her meeting with Megumi - material the manga presents as a flashback inside ch 35-36, which the anime already animated at eps 14-15 (zatchbell.fandom's ch 36 'A Solitary Soldier' page carries episode = 14 and its summary is that flashback). Everything ep 119 adds beyond the animated flashback is anime-original expansion, and even diverges from the manga staging (zatchbell.fandom's Tia and Megumi page notes the first Maruss encounter is at a church in the manga but 'on a cruise ship in the anime'). Later episode, same chapters, nothing new adapted = rehash = filler.",
+      "sources": [
+        "https://konjikinogash.fandom.com/wiki/Episode_119",
+        "https://zatchbell.fandom.com/wiki/A_Solitary_Soldier",
+        "https://zatchbell.fandom.com/wiki/Tia_and_Megumi_Oumi",
+        "https://en.wikipedia.org/wiki/Zatch_Bell!_season_3"
+      ]
+    },
+    {
+      "episodes": [122],
+      "type": "mixed",
+      "note": "MIXED - the weakest of the five, flagged. konjikinogash ep 122: manga_chapter = Chapter 186 (Partially) and the lede is 'mostly filler' rather than its standard 'entirely filler', a distinction that wiki applies deliberately and consistently across all 150 episodes (and gets demonstrably right at ep 117). The Kaguya/Natsuko festival plot is anime-original throughout; the only manga-derived beat is the opening, Kiyo shut in his room 'too engrossed in his research into the mysterious Demon World structure', which is the tail of ch 186 - the thread en.wikipedia's ep 121 summary establishes ('Kiyo rejects Megumi's plea to eliminate Momon, believing that he is paramount to uncovering more about the mystery tower'). Refutes the cross-check lead's 'Momon at the convent through the Faudo reveal (ch 184-187)' - that content is eps 120-121 and 124-125. No anchor: the fragment is a continuity sliver and END would be 186, i.e. no forward progress past ep 121.",
+      "sources": [
+        "https://konjikinogash.fandom.com/wiki/Episode_122",
+        "https://konjikinogash.fandom.com/wiki/Episode_121",
+        "https://en.wikipedia.org/wiki/Zatch_Bell!_season_3",
+        "https://zatchbell.fandom.com/wiki/Story_Arcs"
+      ]
+    },
+    {
+      "episodes": [123],
+      "type": "filler",
+      "note": "PURE FILLER. Both wikis: 'entirely filler / not based on any chapters'; konjikinogash manga_chapter = N/A (Filler). The Ted vs Bari duel has no manga counterpart - ch 191 'Bari's Rival' is Keith introducing himself as Bari's archrival during the Faudo assault, and konjikinogash puts ch 190 + 191 at ep 127, which independently re-confirms the prior verdict's settlement of the old ep-123/ch-191 question. The closing Kiyo/Megumi/Tia tower conference is anime-original bridging, not ch 187: ch 187 'Kiyo's Mood' is ep 124 (see the ep 124 anchor). Refutes the cross-check lead's ch 184-187 claim for this episode.",
+      "sources": [
+        "https://konjikinogash.fandom.com/wiki/Episode_123",
+        "https://konjikinogash.fandom.com/wiki/Episode_127",
+        "https://en.wikipedia.org/wiki/Zatch_Bell!_season_3",
+        "https://zatchbell.fandom.com/wiki/Story_Arcs"
+      ]
+    }
+  ],
+  "annotations": [
+    {
+      "episodes": [10, 51],
+      "kind": "graft",
+      "chapters": "22",
+      "note": "Ch 22 'A Pointless Fight' is split across two episodes 41 apart: ep 10 animates its Japan half (Naomi, Shin Akiyama, Eshros), ep 51 animates its Germany half (Brago and Sherry vs Furigaro and Gerhart by the Rhine). Furigaro's only anime appearance is ep 51. Legitimate sharing, not a rehash - each episode animates material the other does not."
+    },
+    {
+      "episodes": [51],
+      "kind": "divergence",
+      "chapters": "22",
+      "note": "Ep 51's ch 22 material is a BACKFILL, ~77 chapters behind the running order (ep 50 ends at ch 98). No END anchor is issued: a reader at ep 51 has seen through ch 98/99, so END = 22 would misstate position. Recorded as fact only."
+    },
+    {
+      "episodes": [102, 103, 109],
+      "kind": "graft",
+      "chapters": "173",
+      "note": "Ep 103's only manga content is the opening of ch 173 - Ted and Gide's breakfast with Kiyo and Zatch and their departure from Mochinoki; everything after the motorcycle breakdown is anime-original. Ch 173 is properly adapted at ep 109. No END anchor on ep 103: eps 104-107 then backfill ch 164-168, so after ep 103 the reader's honest resume is ch 164, not 174."
+    },
+    {
+      "episodes": [116, 117],
+      "kind": "partial",
+      "chapters": "183",
+      "note": "Ch 183 'Kyle's Shout' is split: ep 116 takes the Kyle/Jill resolution, ep 117 takes the chapter's closing Riou/Rodeux scene (Riou's manga and anime debut). Ep 117 makes no forward progress, so its END equals ep 116's."
+    },
+    {
+      "episodes": [121, 122],
+      "kind": "partial",
+      "chapters": "186",
+      "note": "Ep 122's only manga-derived beat is the tail of ch 186 - Kiyo still shut in his room researching the Demon World structure, the thread ep 121 set up. Sliver; no anchor."
+    },
+    {
+      "episodes": [14, 15, 119],
+      "kind": "abridged",
+      "chapters": "35-36",
+      "note": "Ep 119 re-tells Tia's Maruss betrayal / Megumi rescue backstory, which the manga carries as a flashback in ch 35-36 and the anime already animated at eps 14-15. Ep 119 adds only anime-original expansion (and re-stages the first Maruss encounter from a church to a cruise ship), so it is a rehash with nothing newly adapted - filler, no anchor."
+    },
+    {
+      "episodes": [118],
+      "kind": "divergence",
+      "chapters": "190",
+      "note": "Ep 118's cold open introduces Zaruchim (and Keith) ~72 chapters early: their manga debut is ch 190, animated at ep 127. Anime advance-introduction, not an adaptation - it does not make ep 118 mixed."
+    }
+  ],
+  "repairs": [
+    {
+      "episode": 120,
+      "field": "end_chapter",
+      "old": 185,
+      "new": 184,
+      "why": "TARGETS THE PENDING BATCH-17 VERDICT (scripts/ingest/research/batch17/out/zatch-bell.json), not stored DB data - the context file shows no stored anchors for this series yet. The prior verdict split the Momon arc 184-185 / 186-187 across eps 120-121 by even-split derivation and flagged it itself as a SOFT SPLIT. konjikinogash's per-episode table states ep 120 = Chapter 184, ep 121 = Chapter 185 + 186, ep 124 = Chapter 187. Ch 187 'Kiyo's Mood' matches ep 124's Suzy-senses-his-mood beat by title, which the even split cannot explain.",
+      "sources": [
+        "https://konjikinogash.fandom.com/wiki/Episode_120",
+        "https://konjikinogash.fandom.com/wiki/Episode_124",
+        "https://en.wikipedia.org/wiki/Zatch_Bell!_season_3"
+      ]
+    },
+    {
+      "episode": 121,
+      "field": "end_chapter",
+      "old": 187,
+      "new": 186,
+      "why": "Same evidence as the ep 120 repair: konjikinogash gives ep 121 = Chapter 185 + 186 (start_chapter therefore 186 -> 185, chapters_adapted '186-187' -> '185-186'). Ch 187 moves to ep 124, where it is anchored in this file. Also targets the pending verdict, not the DB.",
+      "sources": [
+        "https://konjikinogash.fandom.com/wiki/Episode_121",
+        "https://konjikinogash.fandom.com/wiki/Episode_124",
+        "https://en.wikipedia.org/wiki/Zatch_Bell!_season_3"
+      ]
+    }
+  ],
+  "structure": {
+    "notes": "No numbering conversion needed: both wikis, en.wikipedia's chapter list and the context file share the same 323-chapter space and the same 150-episode cumulative numbering. NEW SOURCE FOR THIS SERIES: konjikinogash.fandom.com carries a per-episode `manga_chapter` infobox field for all 150 episodes with '(Partially)' markers, plus a consistent three-way lede vocabulary ('entirely filler' / 'mostly filler' / unmarked). It is a different wiki from zatchbell.fandom but the two share prose lineage on the episode ledes, so it was corroborated throughout against en.wikipedia summaries and against zatchbell.fandom CHARACTER pages (debut/burn episode AND chapter fields), which are an independent evidence type. Sanity check against the prior verdict's 100+ anchors: the two agree on END for all but ~8 episodes, and where they differ konjikinogash adds a partial chapter the prior pass could not see. TYPING-SOURCE CAVEAT: animefillerlist and animefillerguide both mark Zatch Bell filler only in three contiguous blocks (31-35, 89-100, 139-150), and AFL uses no Mixed label anywhere in this series - so our AFL-derived 'canon' typing on all ten contested rows was block-level, never per-episode, and carries no evidential weight against the wikis.",
+    "order_only": []
+  },
+  "flags_for_sean": [
+    "RULING NEEDED - ep 51 anchor. Ep 51 is genuinely mixed and its manga content is substantial (a whole battle, the Germany half of ch 22), but ch 22 is ~77 chapters BEHIND the running order at that point (ep 50 ends at ch 98). An END of 22 would tell a reader at ep 51 they are 76 chapters earlier than they are. I withheld the anchor and recorded a graft annotation instead. If you want mixed rows to always carry their chapters_adapted regardless of monotonicity, this is the row to say so on.",
+    "RULING NEEDED - ep 103 anchor. Same shape, milder: the canon beat is the opening of ch 173, which is forward of ep 102 (172), but eps 104-107 immediately backfill ch 164-168, so END = 173 at ep 103 would claim progress the reader has not made. Withheld; annotation instead. The honest resume after ep 103 is ch 164.",
+    "WEAKEST CALL - ep 122 mixed. Single-source: konjikinogash's manga_chapter = Chapter 186 (Partially) plus its 'mostly filler' lede. zatchbell.fandom lists ep 122 flatly under Season 3 Filler and Bonus with no 'mostly filler' qualifier (though that wiki's chaps field is coarse and says 'Filler' for eps 51/57/103/117 too, all of which ARE mixed). The only content I can point at is Kiyo's tower research in the opening scene. If you want a higher bar than one wiki field for a type flip, ep 122 is the one to leave as-is or send back.",
+    "CROSS-CHECK LEADS SCORED: ep 103 mixed CONFIRMED but wrong chapter (173, not 172). Ep 117 mixed CONFIRMED but inverted (filler body, canon tail - ch 183, not 'a canon frame around a filler subplot'). Eps 118, 119, 123 mixed REFUTED - all three are 'entirely filler' on both wikis and their supposed canon chapters (179-183, 184-187) are fully consumed by eps 113-117 and 120-121/124. Ep 122 mixed CONFIRMED but for a different reason (ch 186 tail, not 184-187). Eps 13, 51, 57 'pure filler' - 13 CONFIRMED, 51 and 57 REFUTED, both are mixed. Net: the instant-answer source was wrong or misattributed on 6 of 10.",
+    "PRIOR VERDICT, OUT OF SCOPE BUT NOW ANSWERABLE: konjikinogash's per-episode table resolves the prior verdict's UNRESOLVED SPLIT for eps 66-68 (ep 66 = ch 124 + 125, ep 67 = ch 126 partially, ep 68 = ch 127 partially), and it also adds partial chapters at eps 1 (ch 1-2), 23 (ch 53 partial), 55 (ch 107), 60 (ch 112 + a ch 127 partial), 70 (ch 131 partial), 79 (ch 149 partial), 102 (ch 167, matching the prior verdict's own open question), 109 (ch 174 partial), 114 (ch 180 partial) and 136 (ch 207 partial). None of these were re-verified here; they are listed so a future pass knows the source exists.",
+    "OPEN FLAG #942 NUANCE: konjikinogash gives ep 139 = Chapter 212 (Partially) and its lede reads 'This is the last episode of the anime's Faudo arc that refers to the manga, and all events in the remaining episodes are entirely anime exclusive.' Our row 139 is typed filler, so A1 forbids an anchor there and the prior verdict's terminal (ep 138 -> ch 211, resume 212) still stands - but the MU frontier's ch 212 pin on ep 139 was not baseless. Worth a line in the annotation rather than treating it as pure noise.",
+    "MINOR SOURCE DEFECT NOTED, NOT ACTED ON: zatchbell.fandom's ch 99 'The King's Appearance' stub page carries episode = 44, contradicting both the prior verdict and konjikinogash (both ep 47). The stub is almost certainly wrong; ep 44 is anchored 89-90. Flagged only so nobody 'fixes' ep 47 off that page later."
+  ]
+}

@@ -59,6 +59,30 @@ Read both, fully:
 - Episode-table row colors are usually **arc groupings, not filler flags**.
 - Sequel entries have their own chapter space. Never mix a predecessor's
   numbering into a successor's scope.
+- **Never index-join any per-episode chart.** AFG's row order is
+  inconsistent (production order in some zones, aired in others — ranma), and
+  OUR rows are not always aired order either. Join on normalized TITLE (or
+  air date), and expect zones where two errors cancel (a "correct" stored
+  value can be two wrongs).
+- **AFG's chapter column is a reading-position conversion, not an adaptation
+  claim** — it plateaus across noncanon rows (one-piece prints the same
+  chapter on consecutive filler rows). Never read it as "this episode adapts
+  chapter N" without a second source.
+- **Row-count identity FIRST**: before trusting any per-episode source,
+  check whether it counts recaps/specials the way our rows do (mashle's
+  recap is AFL's integer ep 7 but fandom's "6.5" — a one-row shift poisons
+  every later join). AFL tables can also be TRUNCATED (sket-dance stops at
+  ep 54) — an absent tail is not a typing claim.
+- Fandom episode-page fields can go **off by one mid-series**
+  (rosario-vampire's "Adapted From" is right for eps 1-10, one off from ep
+  11 on). Cross-check a mid-series row before trusting the rest of a page's
+  lineage.
+- **Look for a second wiki.** Franchises often have two fandom wikis with
+  different data quality (zatch-bell: konjikinogash.fandom carries
+  per-episode manga_chapter fields the main wiki lacks; one-piece ARC pages
+  carry page-level {{Qref|chap|page|ep}} citations better than episode
+  infoboxes; hokuto.fandom has no episode pages but character-page
+  `appearances` fields form a reverse index).
 
 ## Output
 

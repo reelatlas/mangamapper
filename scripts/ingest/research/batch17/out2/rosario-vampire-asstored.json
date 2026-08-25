@@ -1,0 +1,194 @@
+{
+  "series_id": "rosario-vampire",
+  "summary": "Re-derived the five batch-12 'as-stored' anchors (eps 3, 5, 7, 8, 11) from scratch. FOUR CONFIRMED, ONE BROKEN. Eps 3 (ch 5 'Love is a Witch', Yukari's debut), 5 (ch 3 'Going Clubbing', swim club/Tamao), 7 (chs 18-19, Mizore's debut and thaw) and 8 (ch 12 'Teach Me!', Ririko the lamia) are all corroborated three ways: the fandom episode page's 'Adapted From' line, the fandom chapter page's own synopsis, and Wikipedia's per-volume summaries - plus character-page debut fields (Yukari: Manga Chapter 005 / Anime Episode 03; Mizore: Manga Chapter 018 / Anime Episode 07). The reorders they encode are real, not artifacts. Ep 11 is NOT: it is stored at ch 9 'The Secret', but ch 9 is the chapter where Ishigami convinces Kuyo that Tsukune is human and Kuyo ARRESTS Tsukune and Moka - none of which happens in ep 11. Ep 11 'New Term and a Vampire' is the newspaper-distribution episode in which Keito the jorogumo attacks the club and Inner Moka beats her, which is ch 8 'Wish Upon the Moon' (vol 2), confirmed by the fandom ch 8 synopsis and independently by Wikipedia's vol-2 summary ('When the News Club distributes their first paper, the Security Committee confiscates the batch, leading Tsukune and the gang to a conflict with committee member Keito, who is a spider-woman'). The stored ch 9 came from this wiki's 'Adapted From' field, which is off by one from ep 11 onward - the same failure class as railgun ep 14, and batch 12's own note for ep 12 gives it away by describing 'Keito' while pinning ch 10, a chapter with no Keito in it. The off-by-one propagates: eps 12 and 13 (outside my brief) are pinned one chapter high for the same reason.",
+  "anchors": [
+    {
+      "episode": 3,
+      "end_chapter": 5,
+      "start_chapter": 5,
+      "chapters_adapted": "5",
+      "volume": 2,
+      "confidence": "high",
+      "note": "CONFIRMED as-stored (promotable off the caveat). Ch 5 'Love is a Witch' = Yukari's crush on Moka, the prank campaign and the lizardmen; the fandom chapter synopsis and the ep 3 synopsis are the same events, ep 3's 'Adapted From' names ch 5, and Yukari's character page carries Manga = Chapter 005 / Anime = Episode 03. Genuine pull-forward past chs 3-4 (which land at eps 5 and 6). Ch 5 opens vol 2 per Wikipedia.",
+      "sources": [
+        "https://rosariovampire.fandom.com/api.php?action=parse&page=Rosario%20%2B%20Vampire%20Episode%2003&prop=wikitext&format=json",
+        "https://rosariovampire.fandom.com/api.php?action=parse&page=Rosario%20%2B%20Vampire%20Chapter%20005&prop=wikitext&format=json",
+        "https://rosariovampire.fandom.com/api.php?action=parse&page=Yukari_Sendo&prop=wikitext&format=json",
+        "https://en.wikipedia.org/wiki/List_of_Rosario_%2B_Vampire_chapters"
+      ]
+    },
+    {
+      "episode": 5,
+      "end_chapter": 3,
+      "start_chapter": 3,
+      "chapters_adapted": "3",
+      "volume": 1,
+      "confidence": "high",
+      "note": "CONFIRMED as-stored (promotable off the caveat). Ch 3 'Going Clubbing' = club recruitment, the swim club and Tamao Ichinose's mermaids; ep 5's 'Adapted From' names ch 3 and the two synopses are the same events. Wikipedia's vol-1 summary independently places the swim-club/mermaid episode in vol 1 ('When the clubs recruit members, Tsukune tries out the swim club, only to discover that its team members are deadly mermaids'). Genuine hold-back behind ch 5 (ep 3) and the ep 4 filler.",
+      "sources": [
+        "https://rosariovampire.fandom.com/api.php?action=parse&page=Rosario%20%2B%20Vampire%20Episode%2005&prop=wikitext&format=json",
+        "https://rosariovampire.fandom.com/api.php?action=parse&page=Rosario%20%2B%20Vampire%20Chapter%20003&prop=wikitext&format=json",
+        "https://en.wikipedia.org/wiki/List_of_Rosario_%2B_Vampire_chapters"
+      ]
+    },
+    {
+      "episode": 7,
+      "end_chapter": 19,
+      "start_chapter": 18,
+      "chapters_adapted": "18-19",
+      "volume": 5,
+      "confidence": "high",
+      "note": "CONFIRMED as-stored (promotable off the caveat). Ch 18 'A New Semester' is Mizore's debut and its fandom synopsis is verbatim ep 7's; ch 19 'Girl of the Thaw' supplies the freezing incident, the dorm visit and the Kotsubo resolution. Ep 7's 'Adapted From' names both chapters, Mizore's character page gives Manga = Chapter 018 / Anime = Episode 07, and Wikipedia's vol-5 summary covers the same two beats. Both chapters are vol 5 (17-20). Genuine ~11-chapter pull-forward - the anime moved Mizore's whole introduction up.",
+      "sources": [
+        "https://rosariovampire.fandom.com/api.php?action=parse&page=Rosario%20%2B%20Vampire%20Episode%2007&prop=wikitext&format=json",
+        "https://rosariovampire.fandom.com/api.php?action=parse&page=Rosario%20%2B%20Vampire%20Chapter%20018&prop=wikitext&format=json",
+        "https://rosariovampire.fandom.com/api.php?action=parse&page=Rosario%20%2B%20Vampire%20Chapter%20019&prop=wikitext&format=json",
+        "https://rosariovampire.fandom.com/api.php?action=parse&page=Mizore_Shirayuki&prop=wikitext&format=json",
+        "https://en.wikipedia.org/wiki/List_of_Rosario_%2B_Vampire_chapters"
+      ]
+    },
+    {
+      "episode": 8,
+      "end_chapter": 12,
+      "start_chapter": 12,
+      "chapters_adapted": "12",
+      "volume": 3,
+      "confidence": "high",
+      "note": "CONFIRMED as-stored (promotable off the caveat). Ch 12 'Teach Me!' = Ririko Kagome the lamia injecting formulae into Tsukune, Inner Moka's defeat of her, and the knowledge vanishing so Tsukune barely passes - identical to ep 8. Ep 8's 'Adapted From' names ch 12 and Wikipedia's vol-3 summary ends on 'Tsukune gets tutored by a seductive math teacher who is intent on separating him from Moka, but he begins to lose his emotions'. Ch 12 closes vol 3 (9-12).",
+      "sources": [
+        "https://rosariovampire.fandom.com/api.php?action=parse&page=Rosario%20%2B%20Vampire%20Episode%2008&prop=wikitext&format=json",
+        "https://rosariovampire.fandom.com/api.php?action=parse&page=Rosario%20%2B%20Vampire%20Chapter%20012&prop=wikitext&format=json",
+        "https://en.wikipedia.org/wiki/List_of_Rosario_%2B_Vampire_chapters"
+      ]
+    },
+    {
+      "episode": 11,
+      "end_chapter": 8,
+      "start_chapter": 8,
+      "chapters_adapted": "8",
+      "volume": 2,
+      "confidence": "high",
+      "note": "REPAIRED (was ch 9 / vol 3). Ep 11 is the newspaper-distribution episode: the Security Committee's rival 'Super Newspaper Club', Keito revealing herself as a jorogumo, Inner Moka beating her, and Kuyo learning of the defeat. That is ch 8 'Wish Upon the Moon', the last chapter of vol 2. The anime adds a large original block (Yokai Square, the maid-outfit and bikini sales war), which is why the row is typed mixed. Still a genuine jump BACK - from ch 16 at ep 10 to ch 8 here.",
+      "sources": [
+        "https://rosariovampire.fandom.com/api.php?action=parse&page=Rosario%20%2B%20Vampire%20Chapter%20008&prop=wikitext&format=json",
+        "https://rosariovampire.fandom.com/api.php?action=parse&page=Rosario%20%2B%20Vampire%20Chapter%20009&prop=wikitext&format=json",
+        "https://rosariovampire.fandom.com/api.php?action=parse&page=Rosario%20%2B%20Vampire%20Episode%2011&prop=wikitext&format=json",
+        "https://en.wikipedia.org/wiki/List_of_Rosario_%2B_Vampire_chapters"
+      ]
+    }
+  ],
+  "continue_points": [],
+  "annotations": [
+    {
+      "episodes": [3, 4, 5, 6],
+      "kind": "rearranged",
+      "chapters": "3-5",
+      "note": "The anime front-loads Yukari: ep 3 = ch 5, ep 4 = anime-original, ep 5 = ch 3, ep 6 = ch 4. Chs 6 ('The Art of the Birthday', Ishigami) and 7 ('Deadline!', Nagare Kano) are skipped entirely in S1 - the Ishigami material resurfaces only in Capu2."
+    },
+    {
+      "episodes": [7, 8, 9, 10, 11, 12, 13],
+      "kind": "rearranged",
+      "chapters": "8-19",
+      "note": "S1's back half runs out of manga order: ep 7 = 18-19 (Mizore moved up), ep 8 = 12, eps 9-10 = 13-16 (Witch's Knoll), then eps 11-13 drop back to the Security Committee arc, chs 8-10. Ch 11 'Blood' (Tsukune's memory loss and the troll) is not adapted in S1 at all."
+    },
+    {
+      "episodes": [11],
+      "kind": "partial",
+      "chapters": "8",
+      "note": "Roughly half of ep 11 is anime-original: the rival 'Super Newspaper Club' / Yokai Square circulation war has no manga counterpart. The Keito confrontation and Kuyo's closing scene are the ch 8 content. Correctly typed mixed by AFL and by us."
+    }
+  ],
+  "type_corrections": [],
+  "repairs": [
+    {
+      "episode": 11,
+      "field": "end_chapter",
+      "old": 9,
+      "new": 8,
+      "why": "Ch 9 'The Secret' is Ishigami convincing Kuyo that Tsukune is human, Kuyo arresting Tsukune and Moka at the club room, Kurumu's illusion and Gin's attack - none of it in ep 11, all of it in ep 12. Ep 11's actual content (newspaper distribution, the Security Committee's counter-paper, Keito the jorogumo webbing Tsukune, Inner Moka's win, Kuyo burning the club's files) is ch 8 'Wish Upon the Moon'. Wikipedia's vol-2 summary places the Keito/spider-woman confrontation inside chs 5-8; the fandom ch 8 synopsis is a beat-for-beat match. The stored 9 came from the fandom episode page's 'Adapted From' line, which is off by one from ep 11 onward - a rationale-without-a-chapter, the railgun ep 14 failure mode.",
+      "sources": [
+        "https://rosariovampire.fandom.com/api.php?action=parse&page=Rosario%20%2B%20Vampire%20Chapter%20008&prop=wikitext&format=json",
+        "https://rosariovampire.fandom.com/api.php?action=parse&page=Rosario%20%2B%20Vampire%20Chapter%20009&prop=wikitext&format=json",
+        "https://en.wikipedia.org/wiki/List_of_Rosario_%2B_Vampire_chapters"
+      ]
+    },
+    {
+      "episode": 11,
+      "field": "start_chapter",
+      "old": 9,
+      "new": 8,
+      "why": "Single-chapter episode; moves with end_chapter. See the end_chapter repair.",
+      "sources": [
+        "https://rosariovampire.fandom.com/api.php?action=parse&page=Rosario%20%2B%20Vampire%20Chapter%20008&prop=wikitext&format=json",
+        "https://en.wikipedia.org/wiki/List_of_Rosario_%2B_Vampire_chapters"
+      ]
+    },
+    {
+      "episode": 11,
+      "field": "volume",
+      "old": 3,
+      "new": 2,
+      "why": "Ch 8 'Wish Upon the Moon' is the final chapter of volume 2 ('Witches', chs 5-8) per Wikipedia's chapter list and the fandom ch 8 infobox (volume = Rosario + Vampire Volume 02). The stored note 'jumps BACK to v3' should read 'jumps BACK to v2'.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/List_of_Rosario_%2B_Vampire_chapters",
+        "https://rosariovampire.fandom.com/api.php?action=parse&page=Rosario%20%2B%20Vampire%20Chapter%20008&prop=wikitext&format=json"
+      ]
+    },
+    {
+      "episode": 12,
+      "field": "end_chapter",
+      "old": 10,
+      "new": 9,
+      "why": "OUT OF MY BRIEF but implicated by the same defective source field - flagged rather than left to rot. Ep 12 'Security Committee and a Vampire' is the arrest, the interrogation of Kurumu/Mizore/Moka, the water torture and Tsukune's confession that he is human, ending on the death sentence. That is ch 9 'The Secret' (Kuyo arrests Tsukune amid allegations that he is human; the club learns he is human), heavily expanded with anime-original evidence-gathering. Ch 10 'The Gamble' is Kuyo's four-tailed yoko form and the fight that kills and revives Tsukune - that is ep 13. Batch 12's own note on this row reads 'Keito, roles reversed', but there is no Keito in ch 10; the note describes ep 11's content, which is the off-by-one showing through. Confidence medium: the ch 9/ch 10 seam falls inside ep 13's cold open, so the split is arc-level rather than page-level.",
+      "sources": [
+        "https://rosariovampire.fandom.com/api.php?action=parse&page=Rosario%20%2B%20Vampire%20Chapter%20009&prop=wikitext&format=json",
+        "https://rosariovampire.fandom.com/api.php?action=parse&page=Rosario%20%2B%20Vampire%20Episode%2012&prop=wikitext&format=json",
+        "https://en.wikipedia.org/wiki/List_of_Rosario_%2B_Vampire_chapters"
+      ]
+    },
+    {
+      "episode": 12,
+      "field": "start_chapter",
+      "old": 10,
+      "new": 9,
+      "why": "OUT OF MY BRIEF. Moves with end_chapter; volume is unchanged (ch 9 and ch 10 are both vol 3). Medium confidence.",
+      "sources": [
+        "https://rosariovampire.fandom.com/api.php?action=parse&page=Rosario%20%2B%20Vampire%20Chapter%20009&prop=wikitext&format=json",
+        "https://en.wikipedia.org/wiki/List_of_Rosario_%2B_Vampire_chapters"
+      ]
+    },
+    {
+      "episode": 13,
+      "field": "end_chapter",
+      "old": 11,
+      "new": 10,
+      "why": "OUT OF MY BRIEF but same chain. Ep 13 runs the rescue (Ruby's return, the girls freeing Tsukune) and the Kuyo fight to its end: fire arrow through Tsukune, Moka's blood, Moka weakened, Tsukune reviving to save her, Gin pinning Kuyo, the finishing kick, then a hospital epilogue and an anime-original five-way kiss gag. That closes ch 10 'The Gamble'. Ch 11 'Blood' - Tsukune waking with no memory of the transformation, pushing Moka away, and the troll attack - is NOT in S1; only ep 13's one-line voiceover that 'Kurumu informed him about what happened after he lost consciousness' rhymes with ch 11's premise, which is a sliver, not an adaptation. Stored END 11 is therefore inflated past what the finale adapts. Medium confidence.",
+      "sources": [
+        "https://rosariovampire.fandom.com/api.php?action=parse&page=Rosario%20%2B%20Vampire%20Episode%2013&prop=wikitext&format=json",
+        "https://rosariovampire.fandom.com/api.php?action=parse&page=Rosario%20%2B%20Vampire%20Chapter%20010&prop=wikitext&format=json",
+        "https://rosariovampire.fandom.com/api.php?action=parse&page=Rosario%20%2B%20Vampire%20Chapter%20011&prop=wikitext&format=json",
+        "https://en.wikipedia.org/wiki/List_of_Rosario_%2B_Vampire_chapters"
+      ]
+    },
+    {
+      "episode": 13,
+      "field": "start_chapter",
+      "old": 10,
+      "new": 9,
+      "why": "OUT OF MY BRIEF. Ep 13 opens on the rescue attempt, which is ch 9's second movement (Kurumu and Yukari deciding to rescue Tsukune despite knowing he is human, Kurumu's illusion, Gin's attack), then runs through ch 10. chapters_adapted would read '9 (2nd half)-10 (heavily altered)'. Medium confidence.",
+      "sources": [
+        "https://rosariovampire.fandom.com/api.php?action=parse&page=Rosario%20%2B%20Vampire%20Chapter%20009&prop=wikitext&format=json",
+        "https://rosariovampire.fandom.com/api.php?action=parse&page=Rosario%20%2B%20Vampire%20Episode%2013&prop=wikitext&format=json"
+      ]
+    }
+  ],
+  "structure": {
+    "notes": "Chapter space = Rosario + Vampire Season I only, 40 chapters / 10 volumes, matching the stored series row; the fandom wiki keeps Season II in a separate 'Rosario + Vampire II Chapter NNN' namespace and none of it was mixed in. Volume boundaries (Wikipedia, corroborated by the fandom chapter infoboxes): v1 = 1-4, v2 = 5-8, v3 = 9-12, v4 = 13-16, v5 = 17-20, v10 = 37-40. OUR ep numbering = the wiki's 'Rosario + Vampire Episode NN' (S1 = 1-13); Capu2 continues at our ep 14. SOURCE TRAP worth capturing: this wiki's episode-page 'Adapted From' bullet is reliable for eps 1-10 and then goes off by one at eps 11-12 (ep 13's is a stub). It must be cross-checked against the chapter page's own synopsis before use - the chapter synopses and Wikipedia's volume summaries were correct throughout. animefillerguide.com has no page for this series (404 on every slug); animefillerlist.com does, and its types match our stored types exactly for all 13 S1 rows (1 Mixed, 2-3 Manga Canon, 4 Filler, 5-6 Manga Canon, 7 Mixed, 8-10 Manga Canon, 11-13 Mixed), so no type corrections are needed and ep 4 correctly carries no anchor under A1.",
+    "order_only": []
+  },
+  "flags_for_sean": [
+    "Eps 12 and 13 are outside the five rows I was given but sit on the same broken 'Adapted From' chain as ep 11; I have proposed medium-confidence repairs (12: 10 -> 9; 13: end 11 -> 10, start 10 -> 9) rather than leave a known off-by-one in place. If you would rather have them researched to anchor depth first, drop those four repair entries and keep only the ep 11 ones, which are high confidence.",
+    "Once ep 11 moves to ch 8 the S1 ladder reads 1, 2, 5, -, 3, 4, 18-19, 12, 13, 14-16, 8, 9, 9-10. That is heavily non-monotonic by design; nothing in it is now a chapter that does not exist, but interpolation between these anchors is meaningless and the row-level anchors are doing all the work.",
+    "Chs 6, 7 and 11 of Season I are never adapted in S1. If the reader-position model wants a continue point after ep 13, the honest answer is ch 6 (earliest unread), not ch 11 - I did not emit one because the Capu2 rows (eps 20, 24) already reach back into chs 37-39 and the convention for this series should be set once, by you."
+  ]
+}
