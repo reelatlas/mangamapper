@@ -377,3 +377,11 @@ restructuring phase.
 | kinnikuman ch 68-89 + 120-137 filler | CONFIRMED (both) | boundary title-verified both sides (ch68 = first excluded, ch90 ↔ ep 27B); special = "cut from broadcast" per ja-WP. 120-137: author-commissioned ≠ author-canon; sequel continuity-OVERWRITES their slot; no canon signal found. Eps 1-3 scrambled mappings verified both directions. |
 | saint-seiya phantom chapters | PARTIALLY CONFIRMED — corrections matter | Phantom ch 30 PROVEN (smoking gun: en-WP preserved the anime ruby gloss "Batoru"). Phantom ch 53 REFUTED by Shueisha's own vol-15 TOC (4 chapters incl. 黄金色の鎖). TRUE COUNT = 109, ONE phantom, offset = UNIFORM −1 for stored ≥31 (the "+2 from 50" leg was back-derived from the nonexistent phantom). The verdict's correction advice ep114→65 is WRONG — true 66; ruling on it as written would have shipped an off-by-one across vols 15-28. Also: ep-31 row defect (start 25 vs adapted "24-25") — fix at curation. The 55 delivered anchors are sound in stored space (all ≤46, where only the −1 applies). |
 | trigun MU cross-contamination | SCRIPT-CONFIRMED | ingest_mangaupdates maps our AniList 30703 (Trigun) to mu_series 30005048940 titled "Trigun Maximum" (latest 102) — wrong auto-association; fix the staging association, latest_known heals via the normal pass. |
+
+## 15. CHUNK 1 CLOSED (2026-08-25)
+
+Wave 2 verified, ruled by Sean, applied (eyeshield last after the contested
+re-research + per-episode eyeball). All rule classes 0; §12.47 is the
+record. THIS FILE IS NOW HISTORICAL — chunk 2's work-list lives in the gap
+census + context.ts TARGETS; the pre-18 restructuring scope lives in
+system-evolution.md.

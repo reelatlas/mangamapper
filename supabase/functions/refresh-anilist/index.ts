@@ -20538,6 +20538,30 @@ var EPISODE_TYPE_OVERRIDES = {
   //   saint-seiya 64: JP title = ch 39's title (Sagittarius trials are
   //   Toei's) → mixed.
   kinnikuman: { ...range(120, 137, "filler") },
+  //   eyeshield-21 (Sean's sign-off 2026-08-25; base verdict + contested
+  //   re-research out2/eyeshield-21-contested.json; the 19-block verified
+  //   per-episode AND double-sourced via ja-WP's 備考 column): import took
+  //   AFG titles but never mapped its filler flag → all defaulted canon.
+  //   45/46 exhibition, 89-95 Cream Puff Cup, 96 recap, 97-105 Death Game
+  //   (101 EXCLUDED — canon island chs 168-169), 108 whodunnit, 51 fake-
+  //   Eyeshield, 109/110 (relocation hypothesis REFUTED on content) → filler.
+  //   39 recap + canon scene, 66 ch-133 tag, 88 ch-100 4-koma intervals in
+  //   original framing (wiki states mixed outright), 74 ch-150 content in
+  //   flagged-original episode → mixed.
+  "eyeshield-21": {
+    45: "filler",
+    46: "filler",
+    ...range(89, 100, "filler"),
+    ...range(102, 105, "filler"),
+    108: "filler",
+    51: "filler",
+    109: "filler",
+    110: "filler",
+    39: "mixed",
+    66: "mixed",
+    88: "mixed",
+    74: "mixed"
+  },
   trigun: { 6: "mixed", 16: "mixed" },
   "hayate-the-combat-butler": { 10: "filler", 19: "mixed" },
   "saint-seiya-knights-of-the-zodiac": { 64: "mixed" },

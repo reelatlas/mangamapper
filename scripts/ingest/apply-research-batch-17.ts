@@ -80,6 +80,7 @@ const REPAIRS_APPROVED = new Map<string, string>([
   ['zatch-bell#120#end_chapter', 'konjikinogash.fandom per-episode fields: ep 120 ends at ch 184, not 185 (ch 185 opens ep 121) — repairs the base verdict\'s soft split (out2/zatch-bell-contested.json)'],
   ['zatch-bell#121#end_chapter', 'paired with ep 120: ep 121 = chs 185-186 ending at 186, not 187 (ch 187 lands at ep 124, anchored by the contested verdict)'],
   // ---- wave 2 (Sean 2026-08-25):
+  ['eyeshield-21#37#end_chapter', 'ep 37 cannot end at ch 79: the Death March arc is chs 72-88 ending at ep 36 (ch-88 page reverse-maps to ep 36); anchors the left edge of the wave-2 range (out/eyeshield-21.json)'],
   ['d-gray-man#116#end_chapter', 'Hallow finale adapts chs 206-208 ending 20 pages into 208 (Episode 13 (Hallow) infobox + Chapter 207/208 pages + AFG "resume at 208 p.21"); stored 206 was a floor — ch 206 is the bonus-chapter opening flashback. Row already manual'],
   // ---- batch-12 "as-stored" sweep (2026-08-25, out2/rosario-vampire-asstored.json):
   ['rosario-vampire#11#end_chapter', 'ep 11 is the Keito/newspaper episode = ch 8 "Wish Upon the Moon" (fandom + Wikipedia vol-2 summary); stored 9 came from the wiki\'s episode-page off-by-one from ep 11 onward, inherited by batch 12\'s as-stored blessing'],
@@ -101,10 +102,8 @@ const REPAIRS_APPROVED = new Map<string, string>([
 // its decisions are ruled and mapped. A held file is loudly skipped, never
 // silently applied.
 const HELD_FILES = new Set<string>([
-  // eyeshield-21: Sean is eyeballing the wave-2 proposal and 7 contested
-  // episodes are under narrow re-research — the whole series waits.
-  'eyeshield-21.json',
-  'eyeshield-21-contested.json',
+  // (eyeshield released 2026-08-25 — Sean's sign-off: 26 retypes via
+  // overrides, ep-88 anchored per the first-time-adaptation precedent)
   // mashle: fully applied, then the §9 fractional renumber shifted rows —
   // these files' episode numbers are the OLD numbering; re-running them
   // would re-create rows/annotations at stale keys (caught 2026-08-25:
@@ -313,6 +312,7 @@ const REORDER_REGIMES: Record<string, string> = {
   'hunter-x-hunter': 'reorder regime (batch 17): the Yorknew stretch pre-grafts and re-treads chapters (ch 72 p.1-3 into ep 50, the Uvogin fight stretched with overlapping page splits across eps 53-56, ch 83 mainline in ep 56 after its ep-45 pre-graft)',
   'that-time-i-got-reincarnated-as-a-slime': 'reorder regime (batch 17): S1 skips chs 40-42 and 44-45 and jumps to ch 43 + 46-52 for its final four episodes, leaving the skipped block to S2',
   kingdom: 'reorder regime (batch 17): ep 16 grafts the Ryo Fui introduction (chs 96-100) ahead of the campaign arc, and ep 22 skips 74-81 (adapted later in S2)',
+  'eyeshield-21': 'reorder regime (batch 17 wave 2, Sean sign-off): documented relocations — Musashi\'s return (chs 141-142) moved from ep 70 to eps 82-83, ch 131 into ep 87, the 109/110 and 120/121 swaps, ch 99 backfilled at ep 49, ch 100 backfilled at ep 88 (first-time adaptation, anchored per the zatch-51 precedent) — every jump per-episode evidenced in the verdicts',
   'hayate-the-combat-butler': 'reorder regime (batch 17 wave 2): season 1 adapts out of publication order throughout — ep 4 = ch 36 then ep 5 = ch 16, ep 22 = 85 then ep 23 = 70, ep 42 = 129 then ep 43 = 51 (out/hayate-the-combat-butler.json, per-episode evidence)',
   kinnikuman: 'reorder regime (batch 17 wave 2, verifier-confirmed both directions): the Kaiju arc is scrambled (1A=ch3, 1B=ch7, 2A=ch5, 2B=ch4, 3A=ch1, 3B=ch6) with later grafts (9A carries ch 23, 14A carries ch 9); END non-monotone by design in eps 1-3',
   'ranma-1-2': 'reorder regime (batch 17 re-anchor 2026-08-25, out2/ranma-1-2-reanchor.json, title-keyed): the aired order genuinely deviates from manga order in the re-anchored zones — eps 22 (59-62), 26 (43-45), 28 (70-73), 125 (179) legitimately sit below their predecessors; every jump is documented per-episode in the verdict',

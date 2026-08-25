@@ -260,7 +260,7 @@ in code (`scripts/ingest/`), and every violation flags rather than guesses:
 | **Same-edition band (MU latest)** | MU's latest_chapter is release-record-derived: reliable for currently publishing manga, GARBAGE for old completed ones (Dragon Ball came back "149" of 519). Every latest_known writer accepts it only within 80% of AniList's count; failures write NULL (heal prior bad writes) + flag. Scope rows are the ruling lever for consensus ends (DBZ/Kai end_chapter=519 completed 2026-08-24 — the seed notes always said 195-519) | sameEditionLatest (lib/mu-frontier) / all MU writers |
 | **Continuation handoff** | a same-manga sibling whose scope adjoins this entry's scope end continues the story — the residue between frontier and scope end is franchise flow (Shippuden adapted Naruto's ch 239-244), NOT a manga-only tail; suppressed in buildMapping (Naruto→Shippuden, Berserk 1997→2016). Inter-segment reading gaps (Berserk ch 88-94) surface in the universe view later | continuationStart/buildMapping (supabaseSource) |
 | **Anchor numbering conversion (Sean 2026-08-23)** | research anchors arrive in EXTERNAL numbering (MAL/Wikipedia season counts) but our community-count numbering can differ — a mid-run numbered OVA/special SHIFTS every later episode (Haikyu's Riku vs Kuu OVA = our eps 61-62, so "S4 end = MAL ep 85" is OUR ep 87; recorded unconverted, eps 86-87 nulled). Convert at application time and say so in the anchor note; the frontier_tail_null audit class catches misses | apply-research scripts + audit-ui-truth |
-| **Episode-type overrides** | research-ruled type corrections where a source misclasses episodes against community consensus (X eps 21-24: AFL says manga-canon, research says anime-original ending → anime-only-canon renders them truthfully, no chapter counterpart BY DESIGN). Lives in EPISODE_TYPE_OVERRIDES, re-applied inside filterEpisodeRows at EVERY episode write — a bare DB update would be clobbered by the next AFL refresh | EPISODE_TYPE_OVERRIDES / filterEpisodeRows (lib/resolve.ts) |
+| **Episode-type overrides** | research-ruled type corrections where a source misclasses episodes against community consensus (X eps 21-24: AFL says manga-canon, research says anime-original ending → anime-only-canon renders them truthfully, no chapter counterpart BY DESIGN). Lives in EPISODE_TYPE_OVERRIDES, re-applied inside filterEpisodeRows at EVERY episode write — a bare DB update would be clobbered by the next AFL refresh. STANDING rows are asserted by assert-type-overrides.ts (2026-08-25, the eyeshield ep-74 lesson: a ruling entering the map after a row's last write left the row stale until the audit flagged it) — run after any override addition; ruling_violation is the outcome check | EPISODE_TYPE_OVERRIDES / filterEpisodeRows (lib/resolve.ts) / assert-type-overrides.ts / audit ruling_violation |
 | **Episode-type semantics (Sean 2026-08-25, ratified during batch-17 wave 1)** | `canon` = adapts manga canon. `anime-only-canon` = anime-original but CANON to the series (author/producer/community consensus). `filler` = ZERO canon content. `mixed` = canon AND non-canon in one episode (single-scene canon share = judgment call, facts presented). AFL/AFG typings are advisory starting points — the tag is determined by OUR research of the episode's actual canon correspondence, recorded via EPISODE_TYPE_OVERRIDES | research-agent definition / EPISODE_TYPE_OVERRIDES / verdict curation |
 | **Continue-read regimes + re-use is true data (Sean's C3 clarification, 2026-08-25 — completes A4/C2)** | the continue point is governed by COVERAGE and KNOWN FUTURE anime coverage, never by which episode a chapter appears in. (1) Skipped/out-of-order material WILL be covered by known later episodes → PARITY: continue points at the skip, and the continue_note names any already-covered later chapter to skip on arrival (iruma ep 63: END 142, continue 143, "skip 145 when you reach it"). (2) Not known / never covered → continue = furthest-covered + 1, with the skip range annotated for reader context. (3) A chapter appearing in many episodes is listed as TRUE in every row (chapters_adapted/annotations); re-use NEVER moves position — only furthest first-time coverage does. (4) A first-time out-of-order adaptation anchors truthfully at what it adapts (zatch ep 51 → ch 22) with the reorder annotated; a RE-USE never anchors (ranma ep 130, shugo-chara ep 59). Every jump records its why so the UI pass can surface it | lib/c3.ts (single predicate) / apply-parity-continues.ts C3 pass (stamps notes, paginated) / audit continue_skip_unnoted (outcome check, 351 healed 2026-08-25) / apply-batch CURATED_CONTINUES / A4 coverageAnchor |
 | **Chapter overlap never proves filler (Sean 2026-08-25, the zatch-bell lesson)** | episodes may legitimately share chapters (two episodes can both adapt key parts of ch 40); "every chapter is claimed elsewhere" is an anchoring aid, NEVER a typing proof. Overlap is discounted only when the later episode merely rehashes with nothing new. Each episode is typed on its own content: any real canon → not filler. First application: zatch-bell's 10-ep contested block re-research (the exhaustive-accounting argument alone was ruled insufficient) | research-agent definition / verdict curation |
@@ -1242,6 +1242,38 @@ Fixed weekly is correct.
    (2) gap tier 46 → (3) mu_pin sweep 65 → (4) automation pass →
    (5) arcs table → (6) parked design pass → (7) continue-read UI →
    (8) segment model (Sean's go).
+47. ✅ **CHUNK 1 CLOSED — wave 2 verified, ruled, applied (2026-08-25)**.
+   Wave-2 verify pass (4 verifiers + 1 script check, ~297k): eyeshield /
+   project-arms / kinnikuman CONFIRMED; saint-seiya PARTIALLY — phantom
+   ch 30 proven (en-WP preserved the anime ruby gloss "Batoru") but
+   phantom 53 REFUTED and the "+2 from 50" offset corrected to UNIFORM −1
+   (true space 109; the verdict's ep114→65 advice would have shipped an
+   off-by-one). Sean ruled everything as recommended, eyeshield after a
+   per-episode eyeball + a 7-episode contested re-research (ja-WP's 備考
+   column found — second independent typing source; eps 109/110 relocation
+   hypothesis REFUTED on content; ep 74 canon→mixed surfaced late).
+   APPLIED: 406 wave-2 anchors (incl. eyeshield 61 released last, trigun
+   ep-9 per the first-time-adaptation precedent, curated C3 continues),
+   49 retypes via overrides, project-arms 22-volume boundary rebuild +
+   angel-heart v6/v7 split, d-gray-man ep-116 repair + continue-from 208.
+   MIGRATIONS (apply-rulings-20260825b): saint-seiya → true 109 space
+   (boundaries + all anchors −1 ≥ stored 30; series total 249 is AniList
+   count-space, untouched); project-arms phantom "ep 53" (a PS2 game AFL
+   absorbed) deleted with COMMUNITY_COUNT_OVERRIDES cap 52 as the durable
+   guard, counts 53→52, total_chapters 242; trigun's wrong MU association
+   (→ "Trigun Maximum", the flag-#943 root cause) deleted, latest_known
+   nulled. Mashle verdict files HELD (stale pre-renumber numbering — a
+   re-run resurrected an annotation on nonexistent row 25; cleaned).
+   NEW HEALER: assert-type-overrides.ts (the eyeshield ep-74 lesson —
+   ruling_violation tripped once, the gap class closed forever; 328 ruled
+   rows verified). Census: ALL rule classes 0, display verify 220/0,
+   ok_full 234. Chunk-1 final tally: 16/16 research tasks + 3 narrow
+   re-research + 9 verifier passes; ~3.2M research + ~0.6M verify tokens.
+   REMAINING IN BATCH 17: chunk 2 (detective-conan + 9 lighter). Then the
+   pre-18 restructuring phase (scope in system-evolution.md + recovery
+   §13-14: skills rework, air-date overrides ~40 rows, hayate row-ingest,
+   iruma ep-65, konjikinogash sweep, AFG-expansion typing sweep, AFL
+   non-episode-row audit class, permanence locks, D2 registry).
 46. ✅ **DEEP CONSOLIDATION post wave-1 + C3 catalog heal (2026-08-25)**.
    Writer sweep: no ungated writers (mashle migration = declared one-time,
    durably guarded by its SOURCE_NUMBERING_SHIFTS entry). Edges current
