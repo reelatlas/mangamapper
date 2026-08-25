@@ -154,3 +154,15 @@ principle series-side: source_type extends by value, never by overloading.
   its per-episode table resolves the base verdict's eps 66-68 split and
   adds partials at eps 1/23/55/60/70/79/102/109/114/136 — none re-verified
   yet; a future zatch pass should consume it.
+
+## D2 case registry addition (Sean's find, 2026-08-25)
+
+- **rosario-vampire ep 14** joins prisma-illya as a D2 case (one entry,
+  multiple manga numbering spaces): Capu2's opener is mixed via a Season II
+  chs 1-4 graft (Kokoa's intro), but our entry's chapter space is the
+  Season I manga — an S2-space anchor cannot be written without lying, so
+  the row deliberately shows no vol/ch and the batch-12 graft annotation
+  holds the fact. Eps 20/24 display normally (their content is S1 chs
+  37-39). When D2 (scoped/segmented entries, Clear-Card pattern) is
+  designed, rosario's Capu2 grafts get real vol/ch display; until then the
+  honest dash stands and annotation surfacing (UI pass) will explain it.
