@@ -40,7 +40,7 @@ const Auth = () => {
   const authenticateUser = async (userEmail: string, userPassword: string, isLoginAttempt: boolean) => {
     const validation = authSchema.safeParse({ email: userEmail, password: userPassword });
     if (!validation.success) {
-      toast.error(validation.error.errors[0].message);
+      toast.error(validation.error.issues[0].message);
       return;
     }
 
