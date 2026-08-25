@@ -16,6 +16,7 @@
 // Re-runnable. --dry-run prints every change without writing.
 //   npx tsx --env-file=.env.ingest scripts/ingest/research/batch15/apply-parity-continues.ts [--dry-run] [seriesId ...]
 import { db } from '/Users/sean/Projects/mangamapper/scripts/ingest/lib/db';
+import { c3Ahead, hasSkipLanguage, c3Note } from '/Users/sean/Projects/mangamapper/scripts/ingest/lib/c3';
 
 const DRY = process.argv.includes('--dry-run');
 const ONLY = process.argv.slice(2).filter((a) => !a.startsWith('--'));
@@ -105,6 +106,41 @@ async function main() {
     }
     if (lines.length) console.log(`== ${s.id}\n${lines.join('\n')}`);
   }
-  console.log(`\n[parity] converted ${converted}, stamped ${stamped}, post-series ${postSeries}${DRY ? ' — DRY RUN, nothing written' : ''}`);
+
+  // C3 SKIP-NOTE PASS (Sean's C3 ruling, 2026-08-25): when a continue point
+  // legitimately sits BELOW chapters the same episode already covered (a
+  // forward graft with parity-back-jump), the note must name the covered
+  // chapters so the reader knows to skip them on arrival. Derived entirely
+  // from stored chapters_adapted (parenthesized page facts stripped first);
+  // idempotent — a note already carrying skip language is left alone.
+  let c3 = 0;
+  {
+    // paginate — the catalog holds >1000 continue-bearing anchors and the
+    // client caps unpaged selects at 1000 (the audit caught exactly this:
+    // 351 hits vs the 16 an unpaged first run saw)
+    const all: { series_id: string; episode: number; chapter: number | null; chapters_adapted: string | null; continue_chapter: number | null; continue_note: string | null }[] = [];
+    for (let off = 0; ; off += 1000) {
+      const { data: page } = await db.from('chapter_anchors')
+        .select('series_id,episode,chapter,chapters_adapted,continue_chapter,continue_note')
+        .not('continue_chapter', 'is', null)
+        .order('series_id').order('episode')
+        .range(off, off + 999);
+      all.push(...(page ?? []));
+      if (!page || page.length < 1000) break;
+    }
+    for (const a of all ?? []) {
+      if (ONLY.length && !ONLY.includes(a.series_id)) continue;
+      const ahead = c3Ahead(a.chapters_adapted, a.continue_chapter);
+      if (!ahead.length || hasSkipLanguage(a.continue_note)) continue;
+      const note = c3Note(a.continue_note, ahead);
+      console.log(`  C3 skip-note ${a.series_id} ep${a.episode}: continue ${a.continue_chapter}, covered-ahead ${ahead.join(',')}`);
+      if (!DRY) {
+        const { error } = await db.from('chapter_anchors').update({ continue_note: note }).eq('series_id', a.series_id).eq('episode', a.episode);
+        if (error) throw new Error(`c3 ${a.series_id} ep${a.episode}: ${error.message}`);
+      }
+      c3++;
+    }
+  }
+  console.log(`\n[parity] converted ${converted}, stamped ${stamped}, post-series ${postSeries}, c3-skip-notes ${c3}${DRY ? ' — DRY RUN, nothing written' : ''}`);
 }
 main().then(() => process.exit(0)).catch((e) => { console.error(e); process.exit(1); });

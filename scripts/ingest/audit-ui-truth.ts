@@ -9,6 +9,7 @@
 //   npx tsx --env-file=.env.ingest scripts/ingest/audit-ui-truth.ts
 
 import { db } from './lib/db';
+import { c3Ahead, hasSkipLanguage } from './lib/c3';
 import { COMMUNITY_COUNT_OVERRIDES, CONTINUA_SUPPRESSED, EPISODE_TYPE_OVERRIDES, SOURCE_NUMBERING_SHIFTS } from './lib/resolve';
 
 async function pageAll(table: string, select: string): Promise<any[]> {
@@ -25,7 +26,7 @@ async function pageAll(table: string, select: string): Promise<any[]> {
 async function main() {
   const series = await pageAll('series', 'id, source_type, manga_status, status, aired_episodes, total_episodes, total_chapters, total_volumes, latest_known_chapters, manga_anilist_id, manga_start_chapter, mapping_mode, asterisk_review');
   const episodes = await pageAll('episodes', 'series_id, number, type, title, air_date');
-  const anchors = await pageAll('chapter_anchors', 'series_id, episode, chapter, start_chapter, continue_chapter, volume, source');
+  const anchors = await pageAll('chapter_anchors', 'series_id, episode, chapter, start_chapter, chapters_adapted, continue_chapter, continue_note, volume, source');
   const comps = await pageAll('series_components', 'series_id, episode_end, episode_start, anilist_id, kind, label');
   const bounds = await pageAll('volume_boundaries', 'manga_anilist_id, volume, chapter_start, chapter_end');
 
@@ -82,7 +83,7 @@ async function main() {
     integrity_eps_beyond_total: [], integrity_total_beyond_eps: [], integrity_double_claimed: [],
     integrity_degenerate_span: degenerateSpans,
     special_numbered_unreviewed: [], anchor_gap_research: [], frontier_tail_null: [],
-    anchor_nonmonotonic: [], anchor_start_offtrend: [], anchor_beyond_chapter_space: [], anchor_beyond_display_total: [], anchor_fractional_chapter: [], anchor_on_noncanon_row: [], boundaries_degenerate: [], ruling_violation: [],
+    anchor_nonmonotonic: [], anchor_start_offtrend: [], anchor_beyond_chapter_space: [], anchor_beyond_display_total: [], anchor_fractional_chapter: [], anchor_on_noncanon_row: [], continue_skip_unnoted: [], boundaries_degenerate: [], ruling_violation: [],
     mu_pin_unverified: [],
     rearranged_zone_unanchored: [], rearranged_zone_acknowledged: [],
     title_incomplete: [], airdate_incomplete: [], asterisk_unreviewed: [],
@@ -412,6 +413,18 @@ async function main() {
         const rowType = typeByEp.get(`${sid}#${a.episode}`);
         if (rowType && rowType !== 'canon' && rowType !== 'mixed') {
           classes.anchor_on_noncanon_row.push(`${sid}: ep ${a.episode}→ch${a.chapter} (${a.source}) anchored on a ${rowType} row — A1 forbids; junk anchor (delete, honest terminal on last canon/mixed ep) or wrong row type?`);
+        }
+        // C3 outcome check (Sean 2026-08-25): a continue point sitting below
+        // chapters this same episode already covered (forward graft +
+        // parity-back-jump) must tell the reader which chapters to skip on
+        // arrival. Strictly greater — continue == an adapted chapter is C1
+        // (mid-chapter straddle, re-reading intended). Healed by
+        // apply-parity-continues.ts's C3 pass.
+        {
+          const ahead = c3Ahead(a.chapters_adapted ?? null, a.continue_chapter ?? null);
+          if (ahead.length && !hasSkipLanguage(a.continue_note ?? null)) {
+            classes.continue_skip_unnoted.push(`${sid}: ep ${a.episode} continue ${a.continue_chapter} but this episode covered ch ${ahead.join(', ')} ahead — C3 requires a skip-on-arrival note (run the parity healer)`);
+          }
         }
       }
     }

@@ -262,7 +262,7 @@ in code (`scripts/ingest/`), and every violation flags rather than guesses:
 | **Anchor numbering conversion (Sean 2026-08-23)** | research anchors arrive in EXTERNAL numbering (MAL/Wikipedia season counts) but our community-count numbering can differ — a mid-run numbered OVA/special SHIFTS every later episode (Haikyu's Riku vs Kuu OVA = our eps 61-62, so "S4 end = MAL ep 85" is OUR ep 87; recorded unconverted, eps 86-87 nulled). Convert at application time and say so in the anchor note; the frontier_tail_null audit class catches misses | apply-research scripts + audit-ui-truth |
 | **Episode-type overrides** | research-ruled type corrections where a source misclasses episodes against community consensus (X eps 21-24: AFL says manga-canon, research says anime-original ending → anime-only-canon renders them truthfully, no chapter counterpart BY DESIGN). Lives in EPISODE_TYPE_OVERRIDES, re-applied inside filterEpisodeRows at EVERY episode write — a bare DB update would be clobbered by the next AFL refresh | EPISODE_TYPE_OVERRIDES / filterEpisodeRows (lib/resolve.ts) |
 | **Episode-type semantics (Sean 2026-08-25, ratified during batch-17 wave 1)** | `canon` = adapts manga canon. `anime-only-canon` = anime-original but CANON to the series (author/producer/community consensus). `filler` = ZERO canon content. `mixed` = canon AND non-canon in one episode (single-scene canon share = judgment call, facts presented). AFL/AFG typings are advisory starting points — the tag is determined by OUR research of the episode's actual canon correspondence, recorded via EPISODE_TYPE_OVERRIDES | research-agent definition / EPISODE_TYPE_OVERRIDES / verdict curation |
-| **Continue-read regimes + re-use is true data (Sean's C3 clarification, 2026-08-25 — completes A4/C2)** | the continue point is governed by COVERAGE and KNOWN FUTURE anime coverage, never by which episode a chapter appears in. (1) Skipped/out-of-order material WILL be covered by known later episodes → PARITY: continue points at the skip, and the continue_note names any already-covered later chapter to skip on arrival (iruma ep 63: END 142, continue 143, "skip 145 when you reach it"). (2) Not known / never covered → continue = furthest-covered + 1, with the skip range annotated for reader context. (3) A chapter appearing in many episodes is listed as TRUE in every row (chapters_adapted/annotations); re-use NEVER moves position — only furthest first-time coverage does. (4) A first-time out-of-order adaptation anchors truthfully at what it adapts (zatch ep 51 → ch 22) with the reorder annotated; a RE-USE never anchors (ranma ep 130, shugo-chara ep 59). Every jump records its why so the UI pass can surface it | apply-batch CURATED_CONTINUES / apply-parity-continues.ts / A4 coverageAnchor / annotation records |
+| **Continue-read regimes + re-use is true data (Sean's C3 clarification, 2026-08-25 — completes A4/C2)** | the continue point is governed by COVERAGE and KNOWN FUTURE anime coverage, never by which episode a chapter appears in. (1) Skipped/out-of-order material WILL be covered by known later episodes → PARITY: continue points at the skip, and the continue_note names any already-covered later chapter to skip on arrival (iruma ep 63: END 142, continue 143, "skip 145 when you reach it"). (2) Not known / never covered → continue = furthest-covered + 1, with the skip range annotated for reader context. (3) A chapter appearing in many episodes is listed as TRUE in every row (chapters_adapted/annotations); re-use NEVER moves position — only furthest first-time coverage does. (4) A first-time out-of-order adaptation anchors truthfully at what it adapts (zatch ep 51 → ch 22) with the reorder annotated; a RE-USE never anchors (ranma ep 130, shugo-chara ep 59). Every jump records its why so the UI pass can surface it | lib/c3.ts (single predicate) / apply-parity-continues.ts C3 pass (stamps notes, paginated) / audit continue_skip_unnoted (outcome check, 351 healed 2026-08-25) / apply-batch CURATED_CONTINUES / A4 coverageAnchor |
 | **Chapter overlap never proves filler (Sean 2026-08-25, the zatch-bell lesson)** | episodes may legitimately share chapters (two episodes can both adapt key parts of ch 40); "every chapter is claimed elsewhere" is an anchoring aid, NEVER a typing proof. Overlap is discounted only when the later episode merely rehashes with nothing new. Each episode is typed on its own content: any real canon → not filler. First application: zatch-bell's 10-ep contested block re-research (the exhaustive-accounting argument alone was ruled insufficient) | research-agent definition / verdict curation |
 | **Frontier-tail triage (audit class frontier_tail_null)** | canon eps past the last anchor render null ch (beyond-frontier honesty). Every hit is exactly one of: (a) mis-numbered anchor → convert numbering (Haikyu), (b) mistyped episodes → type override (X), (c) real side-story/continuation content → research or side-story notation (Kenshin 95-98, S2-aired-since-anchor series). Never auto-fix — each needs a ruling | audit-ui-truth.ts |
 | **Non-monotonic display ruling (Sean 2026-08-23)** | adaptation order may legitimately jump BACK — a later episode can adapt an earlier chapter. Confirmed anchors render AS STORED in every display (the curve keeps decreasing points; section headers render high-to-low ranges, never collapsed). Junk protection moved to WRITE time (chapter-space gates) + audits (anchor_nonmonotonic asks Sean per hit; anchor_beyond_chapter_space = junk by definition) — never silent display-side drops (the old monotonic filter hid Boruto's Naruto-space ch-710 anchors instead of surfacing them) | anchorPoints (src/lib/mapping.ts) + coverageLabel (EpisodeList) + audit-ui-truth |
@@ -317,7 +317,7 @@ AniList `chapters/volumes` are null while publishing.
 |---|---|---|---|---|
 | **AFL** | `backfill.ts` (full sweep / new sources via checklist) | `refresh-afl` hourly :40, ≤20 stalest, 6d window | episode rows + types via `resolveSeries` (episode floor applied) | alias-corruption defenses, count gates, sparse guard, dispositions, per-series rulings via filterEpisodeRows (community caps + type overrides — EVERY episode writer: resolve, stitched-guard, stitch, expansion, extend) |
 | **AniList** | staged inline by every chain walk / match | `refresh-anilist` daily 08:10, full batched sweep | series metadata + totals (floored), volatile fields; stitched series via `refreshStitchedVolatile` (floored) | naming authority, derivative-manga rule, ownership guard, scope application |
-| **AFG** | `afg-backfill` (`--force` after parser changes); `afg-expansion` / `afg-extend` for structure; `afg-continua-backfill` (campaign) | `refresh-afg` daily 09:20, ≤25 stalest, 13d window | anchors via shared `syncAnchors` (registry-first); **continua frontiers + volume boundaries via shared `applyContinua` (inline per refresh)**; expansion/extension structures (floored) | monotonicity, alignment ±12, **chapter-space gate** (franchise-continuous numbering withheld whole-page), **continua gates** (identity guard, self-consistency, precedence: manual/wiki kept + cross-checked), chain-confirm ±2, ruled-split skips, registry tiers |
+| **AFG** | `afg-backfill` (`--force` after parser changes); `afg-expansion` / `afg-extend` for structure; `afg-continua-backfill` (campaign) | `refresh-afg` daily 09:20, ≤25 stalest, 13d window | anchors via shared `syncAnchors` (registry-first); **continua frontiers + volume boundaries via shared `applyContinua` (inline per refresh)**; expansion/extension structures (floored) | monotonicity, alignment ±12, **chapter-space gate** (franchise-continuous numbering withheld whole-page), **A1/D4 gate (2026-08-25): chart anchors on filler/anime-only rows dropped at the writer; continua frontier pins on them refused (`refused_episode_type`, continue-from still applies as guidance) — outcome-checked by anchor_on_noncanon_row**, **continua gates** (identity guard, self-consistency, precedence: manual/wiki kept + cross-checked), chain-confirm ±2, ruled-split skips, registry tiers, per-source numbering spaces (translateEpisodeNumber 'afg') |
 | **MangaUpdates** | `mu-backfill` (universal — every manga behind a canonical series) | `refresh-mu` daily 09:50, ≤20 stalest, 7d window | `latest_known_chapters` via `bestLatestKnown` (release number → status-string chapter count, band + chapter-floor guarded), frontier anchors, status-conflict + edition-divergence + out-of-space flags — all via `lib/mu-frontier` | MangaDex-bridge-only identity, scope-segment multi-pair parse, **sibling-scope ceiling**, **chapter-space gate on pins**, **airing-pin rule**, **scope-consumed refusal**, **A1 episode-type refusal**, MU_FRONTIER_SUPPRESSED, pin-episode redundancy, curated precedence, **chapter-floor invariant on latest_known** |
 | **Wikipedia** | `volumes-backfill` (event: volumes-staleness flag from syncAnchors) | none — boundaries static once printed | `volume_boundaries` | title-token overlap, 3 wikitext dialects, exceed-totals flag |
 
@@ -406,6 +406,26 @@ anchor a research batch delivers carries the FULL shape, not just the end:
   shape is retired); resume lives in continue_chapter. Cameo/sliver
   borrowings (Clear Card 12/14 ch-39/46, Ippo 76's 2-page ch-383 gag) are
   never anchors or position data — annotation + verdict JSON only.
+- **THE POSITION & CONTINUE-READ LOGIC, AS ONE UNIT (consolidated 2026-08-25
+  at Sean's direction — the four rulings below compose; read them together):**
+  1. **Anchor = honest record** (A4): every anchor states what ITS episode
+     adapts — first-time out-of-order adaptations anchor truthfully
+     (zatch ep 51 → ch 22); RE-USE of an already-adapted chapter never
+     anchors (ranma ep 130, shugo-chara ep 59) but is always LISTED as true
+     data (chapters_adapted/annotations). Episodes may share chapters;
+     sharing never moves position.
+  2. **Series position = coverage** (A4): the furthest first-time-adapted
+     chapter across the run (max anchor), never the run-end anchor — a late
+     flashback or backfill never drags position down.
+  3. **Continue-read = a regime choice** (C1/C2/C3): mid-chapter end → the
+     straddled chapter itself (C1, re-read a few pages); skipped material
+     the anime WILL cover in known later episodes → parity with the anime
+     (C2), and the note names any already-covered later chapter to skip on
+     arrival (C3); skips never covered / future unknown → coverage+1 with
+     the skip range noted for context (C3).
+  4. **Every jump explains itself**: reorder/graft/skip facts live as
+     annotations + continue_notes so the UI pass surfaces WHY, never just
+     the number.
 - **CONTINUE-READ = ANIME PARITY (Sean's C2 ruling, 2026-08-24; migration
   20260825200000)**: where the next canon/mixed episode's start is KNOWN,
   continue_chapter = that start — the reader stays in step with the anime
@@ -1222,6 +1242,33 @@ Fixed weekly is correct.
    (2) gap tier 46 → (3) mu_pin sweep 65 → (4) automation pass →
    (5) arcs table → (6) parked design pass → (7) continue-read UI →
    (8) segment model (Sean's go).
+46. ✅ **DEEP CONSOLIDATION post wave-1 + C3 catalog heal (2026-08-25)**.
+   Writer sweep: no ungated writers (mashle migration = declared one-time,
+   durably guarded by its SOURCE_NUMBERING_SHIFTS entry). Edges current
+   (3 deploys this session). C3 rulings session closed every open fork:
+   zatch 51/103 anchored per the first-time-adaptation rule (regime-
+   annotated, parity continues 100/164), zatch 122 kept mixed, iruma 63
+   kept END 142 + parity continue 143 with the skip-145 note (Sean's
+   correction of the session's own END=max misread), rosario 12/13
+   repairs VERIFIER-CONFIRMED then applied (ch 11 "Blood" proven never
+   adapted in S1), ranma 130 stays graft-only.
+   **C3 CATALOG HEAL — the deep-rescan find**: the new continue_skip_unnoted
+   audit class surfaced 351 continue points catalog-wide sitting below
+   chapters their own episode covered, with no skip-on-arrival note. The
+   predicate now lives ONCE in lib/c3.ts (healer + audit both consume it —
+   the first unpaged healer run stamped only 16 of them and 7 of those
+   were wrong (C1 straddles); the audit caught both defects, proving the
+   outcome-check pattern on its own author). All 351 healed; healer
+   idempotent at 0; class at 0. Also: mashle recap corroborated by
+   en-Wikipedia filing it as a SPECIAL (Sean's find, noted in the
+   watch-order entry). §10 gains the consolidated POSITION & CONTINUE-READ
+   LOGIC unit (A4 + C1/C2/C3 + re-use rule composed, at Sean's direction).
+   Census: ruling_violation 0, anchor_on_noncanon_row 0, nonmonotonic 0,
+   continue_skip_unnoted 0, rearranged_zone_unanchored 2 (bobobo 3 +
+   ranma 130, both ruled). Permanence-tier candidates (finished, researched,
+   verified, Sean-ruled this batch): sket-dance, bobobo, rurouni-kenshin,
+   hellsing, noragami, rosario-vampire S1 — lock mechanism lands with the
+   pre-18 skill rework. NEXT: wave 2 on Sean's go.
 45. ✅ **CHUNK 1 WAVE 1 + D4 GATE + A1 CLASS CLOSED (2026-08-25, resumed
    session; full record: CHUNK1-RECOVERY.md §7-§11)**. Wave 1 (8 Opus
    agents, ~1.46M tokens) landed 15 verdict files; a 4-verifier cross-model
