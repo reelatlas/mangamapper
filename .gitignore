@@ -35,3 +35,4 @@ supabase/.temp/
 # Claude Code session artifacts (worktrees, local settings)
 .claude/*
 !.claude/skills/
+!.claude/agents/
