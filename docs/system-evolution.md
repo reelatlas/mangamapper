@@ -111,3 +111,27 @@ must be found and read.
 system, motion and component conventions worth codifying. Designing that skill
 now would be guessing at conventions not yet set. Wait until one page is done
 and the repeating parts are visible.
+
+## Type taxonomy — target state (Sean, 2026-08-25)
+
+`episodes.type` is a FILTER dimension. Verified current DB state:
+- `episodes.type`: exactly the 4 surfaced values — canon / mixed / filler /
+  anime-only-canon ("manga only" is a render concept for beyond-anime rows,
+  not a stored episode type). Text column; extensible.
+- `series.source_type`: manga (256) / original (53) / light_novel (34) —
+  the canon-source dimension already exists; manhwa/manhua/etc are just new
+  values when they arrive.
+- `watch_order_entries.kind` + `series_components.kind`: format labels
+  (ova/special/movie/season) exist for non-main entries and components —
+  but `watch_order_entries.kind` is under-populated (38 null / 2 special):
+  BACKFILL TASK.
+
+Design decision for the UI pass (do not improvise before it): format
+(ova / special / movie / recap / tv) is ORTHOGONAL to canon standing — the
+rurouni Trust & Betrayal rows are both `canon` AND OVAs; kenichi rows 51-61
+likewise. Overloading `episodes.type` with format values would destroy the
+canon-standing filter. Plan: a separate per-episode format dimension
+(column or first-class annotation kind, chosen at the design pass), with
+today's interim being annotations that record the format facts as research
+lands (rurouni 95-98 OVA facts are already in the batch-17 verdict). Same
+principle series-side: source_type extends by value, never by overloading.
