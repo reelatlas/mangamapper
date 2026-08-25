@@ -210,3 +210,28 @@ kinnikuman, eyeshield-21, saint-seiya-knights-of-the-zodiac, project-arms,
 d-gray-man, angel-heart, hayate-the-combat-butler, trigun. Traps for these
 are in §5 above. Contexts regenerated 2026-08-24 in the session scratchpad
 (`ctx17/`); regenerate again if resuming in a new session.
+
+## 9. SEAN'S RULING — mashle recap (2026-08-25)
+
+In-between entries (specials/OVAs/recaps/movies) belong at FRACTIONAL
+positions (6.5-style, the Crunchyroll/community convention), never absorbed
+as integer rows — with the right flags/tags/annotations. This is the
+existing §10 architecture (watch_order_entries + ingest_fractionals
+disposition + SOURCE_NUMBERING_SHIFTS), applied.
+
+Mashle apply plan (supersedes the verdict's shift-the-anchors reading):
+1. Integer row 7 (recap) → watch_order_entries position 6.5,
+   disposition excluded_recap, reasoning in note.
+2. Rows 8-25 renumber to 7-24 THROUGH THE SHARED LIB (resolveSeries with
+   the shift declared), never a hand UPDATE.
+3. Stored AFG anchors become correct IN PLACE after renumbering (they were
+   authored in the 6.5 convention) — zero anchor edits needed; verify by
+   spot-check after re-resolve.
+4. AFL numbers the recap as integer 7 → SOURCE_NUMBERING_SHIFTS entry for
+   mashle so AFL-derived typing translates (and note the mashle verdict's
+   trap flag needs rewording: AFL matches the OLD numbering, so post-fix
+   it is AFL that shifts, not fandom/Wikipedia/AFG).
+5. Season components: S1=1-12, S2=13-24, S3=25+.
+6. Generalisation for §10 at capture: when OUR rows have absorbed an
+   in-between entry that the community convention holds fractional,
+   renumber to the convention — never keep the absorption.
