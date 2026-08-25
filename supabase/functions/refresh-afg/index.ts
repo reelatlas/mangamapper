@@ -35078,7 +35078,8 @@ function parseAfgPage(html3) {
       if (number <= 0) return;
       const hasStart = /^\(?[\d:]+\)?$/.test(cells[1] ?? "");
       const rawTitle = hasStart ? cells[2] : cells[1];
-      const titleCell = rawTitle && /^\(?\d{1,4}\)?\.?$/.test(rawTitle.trim()) ? "" : rawTitle;
+      const rawClean = rawTitle?.replace(/\s*\*\s*Filler\s*$/i, "");
+      const titleCell = rawClean && /^\(?\d{1,4}\)?\.?$/.test(rawClean.trim()) ? "" : rawClean;
       const chaptersCell = hasStart ? cells[3] : cells[2];
       const numberClass = $2(tr).find("td").first().attr("class") ?? "";
       episodes.push({

@@ -429,6 +429,14 @@ async function main() {
       }
     }
   }
+  // AFG title-marker gate (Sean's eyeshield report 2026-08-25): "* Filler"
+  // in a stored title is AFG table annotation that leaked past the parser
+  // strip — a reappearance means an episode writer bypassed the gate.
+  for (const e of episodes) {
+    if (/\*\s*Filler\s*$/i.test(e.title ?? '')) {
+      classes.ruling_violation.push(`${e.series_id}: ep ${e.number} title carries AFG's "* Filler" marker — parser gate bypassed (lib/afg.ts strips it since 2026-08-25)`);
+    }
+  }
   const lightNovel: string[] = [];
 
   for (const row of series) {

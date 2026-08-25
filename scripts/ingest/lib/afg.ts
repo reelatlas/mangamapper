@@ -93,7 +93,13 @@ export function parseAfgPage(html: string): AfgPage {
         // no real title exists — junk stored as a title renders as a WRONG
         // title (Sean's Dorohedoro report 2026-08-23); normalize to pending
         const rawTitle = hasStart ? cells[2] : cells[1];
-        const titleCell = rawTitle && /^\(?\d{1,4}\)?\.?$/.test(rawTitle.trim()) ? '' : rawTitle;
+        // AFG appends its own "* Filler" marker INSIDE the title cell on
+        // some pages — it is table annotation, not the episode's name
+        // (Sean's eyeshield report 2026-08-25: 99 stored titles carried it
+        // verbatim while the flag itself was never mapped). Strip it; the
+        // type signal comes from the row class below.
+        const rawClean = rawTitle?.replace(/\s*\*\s*Filler\s*$/i, '');
+        const titleCell = rawClean && /^\(?\d{1,4}\)?\.?$/.test(rawClean.trim()) ? '' : rawClean;
         const chaptersCell = hasStart ? cells[3] : cells[2];
         const numberClass = $(tr).find('td').first().attr('class') ?? '';
         episodes.push({

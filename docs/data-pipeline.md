@@ -1242,6 +1242,19 @@ Fixed weekly is correct.
    (2) gap tier 46 → (3) mu_pin sweep 65 → (4) automation pass →
    (5) arcs table → (6) parked design pass → (7) continue-read UI →
    (8) segment model (Sean's go).
+48. ✅ **AFG TITLE-MARKER CLEANUP (2026-08-25, Sean's eyeshield report)**.
+   99 stored episode titles across 5 series (eyeshield 43, twin-star 38,
+   world-trigger 16, kakegurui 1, tougen-anki 1) carried AFG's "* Filler"
+   table annotation verbatim — the import took AFG's title cells raw (while,
+   ironically, never mapping the filler flag itself — the same defect behind
+   eyeshield's 19 wrong canon typings, §12.47). Fixed at the rule tier:
+   (1) lib/afg.ts strips the marker at parse (all four edges redeployed);
+   (2) NEW TOOL afg-restage.ts — the consolidate step-3 "re-parse staging
+   from stored raw_html, no refetch" contract is now an actual script; ran
+   it: all 266 staged pages brought current with today's parser;
+   (3) the 99 stored titles healed (0 remaining); (4) outcome check added
+   to ruling_violation (a reappearing marker = writer bypassed the parser
+   gate). Census clean.
 47. ✅ **CHUNK 1 CLOSED — wave 2 verified, ruled, applied (2026-08-25)**.
    Wave-2 verify pass (4 verifiers + 1 script check, ~297k): eyeshield /
    project-arms / kinnikuman CONFIRMED; saint-seiya PARTIALLY — phantom
