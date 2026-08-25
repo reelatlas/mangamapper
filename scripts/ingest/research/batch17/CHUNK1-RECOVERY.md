@@ -385,3 +385,26 @@ re-research + per-episode eyeball). All rule classes 0; §12.47 is the
 record. THIS FILE IS NOW HISTORICAL — chunk 2's work-list lives in the gap
 census + context.ts TARGETS; the pre-18 restructuring scope lives in
 system-evolution.md.
+
+## 16. CHUNK 2 WAVE 1 LANDED (2026-08-25) — 7 of 10 chunk-2 tasks
+
+All validated (parse, series_id, dupes, A1-vs-own-corrections, monotonicity):
+
+| series | anchors | headline |
+|---|---|---|
+| detective-conan | 132 (1-1205) | all 31 season boundaries both ends; file→chapter identity proven 3 ways; row identity verified across 1207 rows (flag #668 resolved); AFL 0 mis-typings; needs REORDER_REGIMES (26 ruled nonmono pairs); 11 air dates off a week (backlog) |
+| x | 9 | boundary-locked only (no source maps eps→chs anywhere); divergence = ep 15 not 21; ep-20 repair 84→94/v18 (chapter INSIDE 88-95 is an estimate — Sean's ruling); trap: both X fandoms are ONE wiki and its "chapter" pages are VOLUMES |
+| tokyo-mew-mew | 17 | ep-52 repair 32→27 (AniList padded-space value on a mu row); ch 11 never adapted; backfills as annotations (promotable under C3) |
+| detective-school-q | 36 | MU pin REFUTED with mechanism (Chap "69" = transposed 96; vol right); ep 45 anime-original finale → A1 deletion repairs; eps 44-45 → anime-only-canon, 35 → filler |
+| emma | 16 | chapter space = 52 mainline (flag #710: AniList 72 mixes Further Tales' separate numbering); eps 19-23 divergence honestly unanchored + → mixed; FULL 7-volume boundary table recovered (none stored) |
+| blade-of-the-immortal-ona | 24 | full coverage in JP Act space; ep-24 mu confirmed; boundary defect: stored "v31: 198-?" is Dark Horse count leaking into the JP table → v30 198-206 |
+| arms-alchemy | 26 | full coverage chs 1-83; space resolved (flag #699; MU "39" bad record); volume table recovered (none stored); ep-26 mu confirmed; no divergence (vol 10 predates finale) |
+
+Wave usage: ~1.17M tokens (136k-189k per agent). Curation queue: 3 boundary
+seeds (emma full, arms-alchemy full, blade v30 fix), REORDER_REGIMES
+detective-conan, mu-tier confirmations → manual flips, repairs (x ep-20,
+tmm ep-52, dsq ep-45 deletions), retypes (dsq 35/44/45, emma 19-23, dc
+128/1000/1001 mixed). Sean rulings pending: x ep-20 chapter estimate,
+tmm chapter-space display (27 vs stored total), emma 13-24-vs-19-23 mixed
+scope, dc ep-510 split. REMAINING: wave 2 = fist-of-the-blue-sky,
+magic-knight-rayearth, space-adventure-cobra.

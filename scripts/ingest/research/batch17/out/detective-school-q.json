@@ -1,0 +1,736 @@
+{
+  "series_id": "detective-school-q",
+  "summary": "The 45-episode anime adapts roughly chapters 1-96 of the 172-chapter manga, but out of order and with large holes, so linear interpolation across this range would be wrong almost everywhere. Sourced case boundaries: ch 1-3 (eps 2-3), ch 4-13 (eps 8-11, relocated from being the manga's final entrance exam to a post-enrolment field trip), ch 34-37 (eps 12-14) aired BEFORE ch 14-30 (eps 16-21), the ch 38-44 Q-vs-A block dismantled across eps 5/16/22/24-25, ch 33 alone at ep 26, ch 47-50 (eps 27-28), ch 51-59 (eps 29-31), volume 8 then scrambled as ch 62-63 (ep 23) / ch 64 (ep 32) / ch 60-61 (eps 33-34), ch 65-76 (eps 36-39), and finally ch 95-96 at ep 40 BEFORE ch 84-89 at eps 41-43. Nine episodes adapt nothing (1, 4-7, 15, 35, 44-45) and the last two are an anime-original ending written because the manga was still running. The furthest chapter reached is 96, at episode 40 — not at the finale — and ch 31-32, 45-46, 77-83, 87.5 and 90-94 are never animated, so the honest post-series resume is chapter 97. The stored MangaUpdates pin (ep 45 -> ch 69, vol 13) is refuted: its volume is right, its chapter is a transposition of 96, and its episode is anime-original.",
+  "anchors": [
+    {
+      "episode": 2,
+      "end_chapter": 2,
+      "start_chapter": 1,
+      "chapters_adapted": "1-2",
+      "volume": 1,
+      "confidence": "medium",
+      "note": "Entrance-exam chapters 1-3 ('Detective School Entrance Exam' 1-3) are adapted across eps 2-3; ep 2 = photo deduction + chase to the 2nd exam site, Kazuma joins. Split within the 3-chapter block is derived, block edges are sourced.",
+      "sources": [
+        "https://tanteigakuenq.fandom.com/api.php?action=parse&page=Story_Arcs&prop=wikitext&format=json",
+        "https://mangadex.org/title/c97f01d8-c0a0-43df-ac2c-ac80fc872350",
+        "https://en.wikipedia.org/wiki/List_of_Detective_School_Q_episodes"
+      ]
+    },
+    {
+      "episode": 3,
+      "end_chapter": 3,
+      "start_chapter": 3,
+      "chapters_adapted": "3",
+      "volume": 1,
+      "confidence": "medium",
+      "note": "Ep 3 closes the written exam and (anime-original change) admits the cast to DDS; the manga's third exam is the Kirisaki Island case, relocated to eps 8-11. END 3 = end of the exam block.",
+      "sources": [
+        "https://tanteigakuenq.fandom.com/api.php?action=parse&page=Story_Arcs&prop=wikitext&format=json",
+        "https://mangadex.org/title/c97f01d8-c0a0-43df-ac2c-ac80fc872350",
+        "https://en.wikipedia.org/wiki/List_of_Detective_School_Q_episodes"
+      ]
+    },
+    {
+      "episode": 8,
+      "end_chapter": 6,
+      "start_chapter": 4,
+      "chapters_adapted": "4-6",
+      "volume": 2,
+      "confidence": "medium",
+      "note": "Kirisaki Island case = ch 4-13 ('The Tragedy of Kirisaki Island' 1-10; ja.wp 切り裂き島の惨劇, KC1-2, 全10話) adapted over eps 8-11. START 4 exact (case opening); intra-case split derived evenly.",
+      "sources": [
+        "https://tanteigakuenq.fandom.com/api.php?action=parse&page=Story_Arcs&prop=wikitext&format=json",
+        "https://mangadex.org/title/c97f01d8-c0a0-43df-ac2c-ac80fc872350",
+        "https://ja.wikipedia.org/wiki/%E6%8E%A2%E5%81%B5%E5%AD%A6%E5%9C%92Q"
+      ]
+    },
+    {
+      "episode": 9,
+      "end_chapter": 8,
+      "start_chapter": 7,
+      "chapters_adapted": "7-8",
+      "volume": 2,
+      "confidence": "medium",
+      "note": "Double-locked-room + Shishido murder. Intra-case split within the sourced ch 4-13 / eps 8-11 block; derived, not stated.",
+      "sources": [
+        "https://tanteigakuenq.fandom.com/api.php?action=parse&page=Story_Arcs&prop=wikitext&format=json",
+        "https://mangadex.org/title/c97f01d8-c0a0-43df-ac2c-ac80fc872350",
+        "https://en.wikipedia.org/wiki/List_of_Detective_School_Q_episodes"
+      ]
+    },
+    {
+      "episode": 10,
+      "end_chapter": 11,
+      "start_chapter": 9,
+      "chapters_adapted": "9-11",
+      "volume": 2,
+      "confidence": "medium",
+      "note": "Gouda murder + Ryu solves the locked room. Intra-case split derived within ch 4-13 / eps 8-11.",
+      "sources": [
+        "https://tanteigakuenq.fandom.com/api.php?action=parse&page=Story_Arcs&prop=wikitext&format=json",
+        "https://mangadex.org/title/c97f01d8-c0a0-43df-ac2c-ac80fc872350",
+        "https://en.wikipedia.org/wiki/List_of_Detective_School_Q_episodes"
+      ]
+    },
+    {
+      "episode": 11,
+      "end_chapter": 13,
+      "start_chapter": 12,
+      "chapters_adapted": "12-13",
+      "volume": 2,
+      "confidence": "medium",
+      "note": "Full deduction + the reveal that Dan staged the 'murders' and the meaning of Q Class = the case's closing chapters. END 13 exact (case/arc end, 2 sources).",
+      "sources": [
+        "https://tanteigakuenq.fandom.com/api.php?action=parse&page=Story_Arcs&prop=wikitext&format=json",
+        "https://mangadex.org/title/c97f01d8-c0a0-43df-ac2c-ac80fc872350",
+        "https://ja.wikipedia.org/wiki/%E6%8E%A2%E5%81%B5%E5%AD%A6%E5%9C%92Q"
+      ]
+    },
+    {
+      "episode": 12,
+      "end_chapter": 35,
+      "start_chapter": 34,
+      "chapters_adapted": "34-35",
+      "volume": 5,
+      "confidence": "medium",
+      "note": "Séance Murder case = ch 34-37 ('Murder In Spirit Summoning' 1-4; ja.wp 降霊術殺人事件, KC5, 全4話) over eps 12-14. START 34 exact; ep 12 runs to Asakura's murder.",
+      "sources": [
+        "https://tanteigakuenq.fandom.com/api.php?action=parse&page=Story_Arcs&prop=wikitext&format=json",
+        "https://mangadex.org/title/c97f01d8-c0a0-43df-ac2c-ac80fc872350",
+        "https://ja.wikipedia.org/wiki/%E6%8E%A2%E5%81%B5%E5%AD%A6%E5%9C%92Q"
+      ]
+    },
+    {
+      "episode": 13,
+      "end_chapter": 36,
+      "start_chapter": 36,
+      "chapters_adapted": "36",
+      "volume": 5,
+      "confidence": "medium",
+      "note": "Second murder + Kaoru accused; middle chapter of the sourced 4-chapter case. Split derived.",
+      "sources": [
+        "https://tanteigakuenq.fandom.com/api.php?action=parse&page=Story_Arcs&prop=wikitext&format=json",
+        "https://mangadex.org/title/c97f01d8-c0a0-43df-ac2c-ac80fc872350",
+        "https://en.wikipedia.org/wiki/List_of_Detective_School_Q_episodes"
+      ]
+    },
+    {
+      "episode": 14,
+      "end_chapter": 37,
+      "start_chapter": 37,
+      "chapters_adapted": "37",
+      "volume": 5,
+      "confidence": "medium",
+      "note": "Deduction, the brothers, the Asakura-was-their-mother reveal, the will. END 37 exact (case end, 2 sources).",
+      "sources": [
+        "https://tanteigakuenq.fandom.com/api.php?action=parse&page=Story_Arcs&prop=wikitext&format=json",
+        "https://mangadex.org/title/c97f01d8-c0a0-43df-ac2c-ac80fc872350",
+        "https://ja.wikipedia.org/wiki/%E6%8E%A2%E5%81%B5%E5%AD%A6%E5%9C%92Q"
+      ]
+    },
+    {
+      "episode": 16,
+      "end_chapter": 16,
+      "start_chapter": 14,
+      "chapters_adapted": "14-16 (+ grafted material from 38-39)",
+      "volume": 3,
+      "confidence": "medium",
+      "note": "Ep 16 = ch 14-16 'Class Begins At Detective School' (1-3): class placement and the Kamikakushi assignment. The Q-vs-A deduction battle staged in it is grafted forward from ch 38-39 and restaged on the Kamikakushi diorama — see annotation.",
+      "sources": [
+        "https://tanteigakuenq.fandom.com/api.php?action=parse&page=Story_Arcs&prop=wikitext&format=json",
+        "https://mangadex.org/title/c97f01d8-c0a0-43df-ac2c-ac80fc872350",
+        "https://en.wikipedia.org/wiki/List_of_Detective_School_Q_episodes"
+      ]
+    },
+    {
+      "episode": 17,
+      "end_chapter": 19,
+      "start_chapter": 17,
+      "chapters_adapted": "17-19",
+      "volume": 3,
+      "confidence": "medium",
+      "note": "Kamikakushi Village case = ch 17-29 ('The Kamikakushi Village Murders' 1-13; ja.wp 神隠し村殺人事件, KC3-4, 全13話) over eps 17-21. START 17 exact; intra-case split derived from beat order.",
+      "sources": [
+        "https://tanteigakuenq.fandom.com/api.php?action=parse&page=Story_Arcs&prop=wikitext&format=json",
+        "https://mangadex.org/title/c97f01d8-c0a0-43df-ac2c-ac80fc872350",
+        "https://ja.wikipedia.org/wiki/%E6%8E%A2%E5%81%B5%E5%AD%A6%E5%9C%92Q"
+      ]
+    },
+    {
+      "episode": 18,
+      "end_chapter": 22,
+      "start_chapter": 20,
+      "chapters_adapted": "20-22",
+      "volume": 4,
+      "confidence": "medium",
+      "note": "Crew member found buried, the infinity-sign clue, the second crew murder (body lifted skyward). Split derived within the sourced case.",
+      "sources": [
+        "https://tanteigakuenq.fandom.com/api.php?action=parse&page=Story_Arcs&prop=wikitext&format=json",
+        "https://mangadex.org/title/c97f01d8-c0a0-43df-ac2c-ac80fc872350",
+        "https://en.wikipedia.org/wiki/List_of_Detective_School_Q_episodes"
+      ]
+    },
+    {
+      "episode": 19,
+      "end_chapter": 25,
+      "start_chapter": 23,
+      "chapters_adapted": "23-25",
+      "volume": 4,
+      "confidence": "medium",
+      "note": "The lifting trap explained, the masked priest, the crew leader murdered in his sleep. Split derived within the sourced case.",
+      "sources": [
+        "https://tanteigakuenq.fandom.com/api.php?action=parse&page=Story_Arcs&prop=wikitext&format=json",
+        "https://mangadex.org/title/c97f01d8-c0a0-43df-ac2c-ac80fc872350",
+        "https://en.wikipedia.org/wiki/List_of_Detective_School_Q_episodes"
+      ]
+    },
+    {
+      "episode": 20,
+      "end_chapter": 27,
+      "start_chapter": 26,
+      "chapters_adapted": "26-27",
+      "volume": 4,
+      "confidence": "medium",
+      "note": "Kazuma decodes the smallpox document; Mio named as priest/murderer; the wall is broken open. Split derived.",
+      "sources": [
+        "https://tanteigakuenq.fandom.com/api.php?action=parse&page=Story_Arcs&prop=wikitext&format=json",
+        "https://mangadex.org/title/c97f01d8-c0a0-43df-ac2c-ac80fc872350",
+        "https://en.wikipedia.org/wiki/List_of_Detective_School_Q_episodes"
+      ]
+    },
+    {
+      "episode": 21,
+      "end_chapter": 30,
+      "start_chapter": 28,
+      "chapters_adapted": "28-30",
+      "volume": 4,
+      "confidence": "medium",
+      "note": "Resolution (one gourd-shaped village split in two), tunnel chase, epilogue. Fandom's arc range runs to ch 30 ('Hard Warning', the arc's closing chapter); ja.wikipedia counts the murder case proper as ending at ch 29 — END 30 is the arc edge, see flags.",
+      "sources": [
+        "https://tanteigakuenq.fandom.com/api.php?action=parse&page=Story_Arcs&prop=wikitext&format=json",
+        "https://mangadex.org/title/c97f01d8-c0a0-43df-ac2c-ac80fc872350",
+        "https://ja.wikipedia.org/wiki/%E6%8E%A2%E5%81%B5%E5%AD%A6%E5%9C%92Q"
+      ]
+    },
+    {
+      "episode": 22,
+      "end_chapter": 39,
+      "start_chapter": 38,
+      "chapters_adapted": "38-39 (one of the five Q-vs-A duel cases, restaged in the present)",
+      "volume": 5,
+      "confidence": "medium",
+      "note": "Ep 22's chef-at-the-dinner-table case is one of the deduction duels the manga tells inside ch 38-39 'Q vs. A' (1-2), lifted out of the duel frame into a present-day case; AFL independently types the episode Mixed Canon/Filler, consistent with a partial borrowing. END 39 marks the furthest first-time coverage of that block.",
+      "sources": [
+        "https://tanteigakuenq.fandom.com/api.php?action=parse&page=Story_Arcs&prop=wikitext&format=json",
+        "https://www.animefillerlist.com/shows/detective-school-q",
+        "https://en.wikipedia.org/wiki/List_of_Detective_School_Q_episodes"
+      ]
+    },
+    {
+      "episode": 23,
+      "end_chapter": 63,
+      "start_chapter": 62,
+      "chapters_adapted": "62-63",
+      "volume": 8,
+      "confidence": "high",
+      "note": "Exact title match: ch 62-63 \"Let's Board The Alibi Train!\" (1-2) = ep 23 アリバイ列車 / 'Train Alibi'; fandom's Alibi Train Arc maps ch 62-63 to ep 23 alone.",
+      "sources": [
+        "https://tanteigakuenq.fandom.com/api.php?action=parse&page=Story_Arcs&prop=wikitext&format=json",
+        "https://mangadex.org/title/c97f01d8-c0a0-43df-ac2c-ac80fc872350"
+      ]
+    },
+    {
+      "episode": 24,
+      "end_chapter": 41,
+      "start_chapter": 40,
+      "chapters_adapted": "40-41",
+      "volume": 6,
+      "confidence": "medium",
+      "note": "Karuizawa companion/idol case = ch 40-43 'Q vs. A Overtime' (1-4) (ja.wp 軽井沢コンパニオン殺人事件, KC6, 全4話, 作品タイトルは「Q対A 延長戦」) over eps 24-25. START 40 exact; ep 24 runs to Yukihira's abduction. Split derived.",
+      "sources": [
+        "https://tanteigakuenq.fandom.com/api.php?action=parse&page=Story_Arcs&prop=wikitext&format=json",
+        "https://mangadex.org/title/c97f01d8-c0a0-43df-ac2c-ac80fc872350",
+        "https://ja.wikipedia.org/wiki/%E6%8E%A2%E5%81%B5%E5%AD%A6%E5%9C%92Q"
+      ]
+    },
+    {
+      "episode": 25,
+      "end_chapter": 44,
+      "start_chapter": 42,
+      "chapters_adapted": "42-44",
+      "volume": 6,
+      "confidence": "medium",
+      "note": "Rescue, deduction (the promotional balloon), then the Pluto agent reveal = ch 44 'Shadow Of Pluto', which closes the arc and matches the episode title 宿敵！冥王星. END 44 exact; START derived.",
+      "sources": [
+        "https://tanteigakuenq.fandom.com/api.php?action=parse&page=Story_Arcs&prop=wikitext&format=json",
+        "https://mangadex.org/title/c97f01d8-c0a0-43df-ac2c-ac80fc872350",
+        "https://ja.wikipedia.org/wiki/%E6%8E%A2%E5%81%B5%E5%AD%A6%E5%9C%92Q"
+      ]
+    },
+    {
+      "episode": 26,
+      "end_chapter": 33,
+      "start_chapter": 33,
+      "chapters_adapted": "33",
+      "volume": 5,
+      "confidence": "medium",
+      "note": "Fandom: the First Homework arc (ch 31-33) is adapted 'only [for] the problem at Megu's house' in ep 26 — that is ch 33 'After School Danger'. Ch 31-32 (the First Class Determination Exam) are never animated.",
+      "sources": [
+        "https://tanteigakuenq.fandom.com/api.php?action=parse&page=Story_Arcs&prop=wikitext&format=json",
+        "https://mangadex.org/title/c97f01d8-c0a0-43df-ac2c-ac80fc872350",
+        "https://en.wikipedia.org/wiki/List_of_Detective_School_Q_episodes"
+      ]
+    },
+    {
+      "episode": 27,
+      "end_chapter": 48,
+      "start_chapter": 47,
+      "chapters_adapted": "47-48",
+      "volume": 6,
+      "confidence": "medium",
+      "note": "Old school building / secret dungeon case = ch 47-50 'The Secret Of The Old School Building' (1-4) (ja.wp 旧校舎の秘密, KC6-7, 全4話) over eps 27-28. START 47 exact; split derived.",
+      "sources": [
+        "https://tanteigakuenq.fandom.com/api.php?action=parse&page=Story_Arcs&prop=wikitext&format=json",
+        "https://mangadex.org/title/c97f01d8-c0a0-43df-ac2c-ac80fc872350",
+        "https://ja.wikipedia.org/wiki/%E6%8E%A2%E5%81%B5%E5%AD%A6%E5%9C%92Q"
+      ]
+    },
+    {
+      "episode": 28,
+      "end_chapter": 50,
+      "start_chapter": 49,
+      "chapters_adapted": "49-50",
+      "volume": 7,
+      "confidence": "medium",
+      "note": "Search-and-rescue conclusion of the same 4-chapter case. END 50 exact (case/arc end).",
+      "sources": [
+        "https://tanteigakuenq.fandom.com/api.php?action=parse&page=Story_Arcs&prop=wikitext&format=json",
+        "https://mangadex.org/title/c97f01d8-c0a0-43df-ac2c-ac80fc872350",
+        "https://ja.wikipedia.org/wiki/%E6%8E%A2%E5%81%B5%E5%AD%A6%E5%9C%92Q"
+      ]
+    },
+    {
+      "episode": 29,
+      "end_chapter": 53,
+      "start_chapter": 51,
+      "chapters_adapted": "51-53",
+      "volume": 7,
+      "confidence": "medium",
+      "note": "Murder Collector case = ch 51-59 ('Murder Collector' 1-9; ja.wp 殺人コレクター, KC7-8, 全9話) over eps 29-31, exactly 3 chapters/episode. START 51 exact; even split derived.",
+      "sources": [
+        "https://tanteigakuenq.fandom.com/api.php?action=parse&page=Story_Arcs&prop=wikitext&format=json",
+        "https://mangadex.org/title/c97f01d8-c0a0-43df-ac2c-ac80fc872350",
+        "https://ja.wikipedia.org/wiki/%E6%8E%A2%E5%81%B5%E5%AD%A6%E5%9C%92Q"
+      ]
+    },
+    {
+      "episode": 30,
+      "end_chapter": 56,
+      "start_chapter": 54,
+      "chapters_adapted": "54-56",
+      "volume": 7,
+      "confidence": "medium",
+      "note": "Megu abducted, the killing broadcast online — middle third of the sourced 9-chapter/3-episode case.",
+      "sources": [
+        "https://tanteigakuenq.fandom.com/api.php?action=parse&page=Story_Arcs&prop=wikitext&format=json",
+        "https://mangadex.org/title/c97f01d8-c0a0-43df-ac2c-ac80fc872350",
+        "https://en.wikipedia.org/wiki/List_of_Detective_School_Q_episodes"
+      ]
+    },
+    {
+      "episode": 31,
+      "end_chapter": 59,
+      "start_chapter": 57,
+      "chapters_adapted": "57-59",
+      "volume": 8,
+      "confidence": "medium",
+      "note": "Deduction, the 'Anime' online-identity twist, epilogue. END 59 exact (case/arc end).",
+      "sources": [
+        "https://tanteigakuenq.fandom.com/api.php?action=parse&page=Story_Arcs&prop=wikitext&format=json",
+        "https://mangadex.org/title/c97f01d8-c0a0-43df-ac2c-ac80fc872350",
+        "https://ja.wikipedia.org/wiki/%E6%8E%A2%E5%81%B5%E5%AD%A6%E5%9C%92Q"
+      ]
+    },
+    {
+      "episode": 32,
+      "end_chapter": 64,
+      "start_chapter": 64,
+      "chapters_adapted": "64",
+      "volume": 8,
+      "confidence": "high",
+      "note": "Single-chapter case: ch 64 'The Beauty Trio, Crisis!' = ep 32 美少女探偵団 / 'The Beauties Detective Squad' (Megu + Yukihira + Kuniko on the train). Fandom maps this one chapter to this one episode.",
+      "sources": [
+        "https://tanteigakuenq.fandom.com/api.php?action=parse&page=Story_Arcs&prop=wikitext&format=json",
+        "https://mangadex.org/title/c97f01d8-c0a0-43df-ac2c-ac80fc872350"
+      ]
+    },
+    {
+      "episode": 33,
+      "end_chapter": 60,
+      "start_chapter": 60,
+      "chapters_adapted": "60",
+      "volume": 8,
+      "confidence": "high",
+      "note": "Exact title match: ch 60 'Mystery Of The Home Economics Classroom (1)' = ep 33 家庭科室の謎; fandom's Poison Dart Arc (ch 60-61) maps to eps 33-34.",
+      "sources": [
+        "https://tanteigakuenq.fandom.com/api.php?action=parse&page=Story_Arcs&prop=wikitext&format=json",
+        "https://mangadex.org/title/c97f01d8-c0a0-43df-ac2c-ac80fc872350"
+      ]
+    },
+    {
+      "episode": 34,
+      "end_chapter": 61,
+      "start_chapter": 61,
+      "chapters_adapted": "61",
+      "volume": 8,
+      "confidence": "high",
+      "note": "Ch 61 'Mystery Of The Home Economics Classroom (2)' — the teacher-as-victim-and-culprit resolution — closes the 2-chapter case in ep 34.",
+      "sources": [
+        "https://tanteigakuenq.fandom.com/api.php?action=parse&page=Story_Arcs&prop=wikitext&format=json",
+        "https://mangadex.org/title/c97f01d8-c0a0-43df-ac2c-ac80fc872350"
+      ]
+    },
+    {
+      "episode": 36,
+      "end_chapter": 67,
+      "start_chapter": 65,
+      "chapters_adapted": "65-67",
+      "volume": 9,
+      "confidence": "medium",
+      "note": "Genso-kan case = ch 65-76 'The Murder In Fantasy Music Hall' (1-12) (ja.wp 幻奏館殺人事件, KC9-10, 全12話) over eps 36-39, exactly 3 chapters/episode. Episode title 幻奏館殺人事件 matches the case title. START 65 exact; even split derived.",
+      "sources": [
+        "https://tanteigakuenq.fandom.com/api.php?action=parse&page=Story_Arcs&prop=wikitext&format=json",
+        "https://mangadex.org/title/c97f01d8-c0a0-43df-ac2c-ac80fc872350",
+        "https://ja.wikipedia.org/wiki/%E6%8E%A2%E5%81%B5%E5%AD%A6%E5%9C%92Q"
+      ]
+    },
+    {
+      "episode": 37,
+      "end_chapter": 70,
+      "start_chapter": 68,
+      "chapters_adapted": "68-70",
+      "volume": 9,
+      "confidence": "medium",
+      "note": "Second murder, Ryu suspected — second third of the sourced 12-chapter/4-episode case.",
+      "sources": [
+        "https://tanteigakuenq.fandom.com/api.php?action=parse&page=Story_Arcs&prop=wikitext&format=json",
+        "https://mangadex.org/title/c97f01d8-c0a0-43df-ac2c-ac80fc872350",
+        "https://en.wikipedia.org/wiki/List_of_Detective_School_Q_episodes"
+      ]
+    },
+    {
+      "episode": 38,
+      "end_chapter": 73,
+      "start_chapter": 71,
+      "chapters_adapted": "71-73",
+      "volume": 10,
+      "confidence": "medium",
+      "note": "Culprit revealed and the night's last tragedy — third block of the same case.",
+      "sources": [
+        "https://tanteigakuenq.fandom.com/api.php?action=parse&page=Story_Arcs&prop=wikitext&format=json",
+        "https://mangadex.org/title/c97f01d8-c0a0-43df-ac2c-ac80fc872350",
+        "https://en.wikipedia.org/wiki/List_of_Detective_School_Q_episodes"
+      ]
+    },
+    {
+      "episode": 39,
+      "end_chapter": 76,
+      "start_chapter": 74,
+      "chapters_adapted": "74-76",
+      "volume": 10,
+      "confidence": "medium",
+      "note": "Case closes; Pluto's attempt on Kyu and Ryu's hospitalisation. END 76 exact (case/arc end). The manga's next arc (ch 77-82, Shi'Un Ryu) is never animated.",
+      "sources": [
+        "https://tanteigakuenq.fandom.com/api.php?action=parse&page=Story_Arcs&prop=wikitext&format=json",
+        "https://mangadex.org/title/c97f01d8-c0a0-43df-ac2c-ac80fc872350",
+        "https://ja.wikipedia.org/wiki/%E6%8E%A2%E5%81%B5%E5%AD%A6%E5%9C%92Q"
+      ]
+    },
+    {
+      "episode": 40,
+      "end_chapter": 96,
+      "start_chapter": 95,
+      "chapters_adapted": "95-96",
+      "volume": 13,
+      "confidence": "high",
+      "note": "The Headless Woman case = ch 95-96 'The Headless Woman In The Labyrinth' (1-2), adapted whole in ep 40 (対決！首なし女). This is the furthest chapter the anime ever reaches, and the only way the adaptation touches volume 13 — exactly what MangaUpdates' own coverage field records ('Vol 13').",
+      "sources": [
+        "https://tanteigakuenq.fandom.com/api.php?action=parse&page=Story_Arcs&prop=wikitext&format=json",
+        "https://mangadex.org/title/c97f01d8-c0a0-43df-ac2c-ac80fc872350",
+        "https://www.mangaupdates.com/series/vddwuee/tantei-gakuen-q"
+      ]
+    },
+    {
+      "episode": 41,
+      "end_chapter": 85,
+      "start_chapter": 84,
+      "chapters_adapted": "84-85",
+      "volume": 11,
+      "confidence": "medium",
+      "note": "Mayahime case = ch 84-89 'The Mayahime Legend Murder Case' (1-6) (ja.wp 魔矢姫伝説殺人事件, KC11-12, 全6話) over eps 41-43; episode title 魔矢姫殺人事件 matches. Ch 83 ('Kuzuryuu Takumi's Secret Code') belongs to the unadapted Shi'Un Ryu thread and is skipped. Even split derived.",
+      "sources": [
+        "https://tanteigakuenq.fandom.com/api.php?action=parse&page=Story_Arcs&prop=wikitext&format=json",
+        "https://mangadex.org/title/c97f01d8-c0a0-43df-ac2c-ac80fc872350",
+        "https://ja.wikipedia.org/wiki/%E6%8E%A2%E5%81%B5%E5%AD%A6%E5%9C%92Q"
+      ]
+    },
+    {
+      "episode": 42,
+      "end_chapter": 87,
+      "start_chapter": 86,
+      "chapters_adapted": "86-87",
+      "volume": 11,
+      "confidence": "medium",
+      "note": "Hisashi bludgeoned and sealed in the fireplace; the dying message. Ch 87.5 ('Three Rings', the Megu's Ring side story) sits between ch 87 and 88 and is not adapted.",
+      "sources": [
+        "https://tanteigakuenq.fandom.com/api.php?action=parse&page=Story_Arcs&prop=wikitext&format=json",
+        "https://mangadex.org/title/c97f01d8-c0a0-43df-ac2c-ac80fc872350",
+        "https://en.wikipedia.org/wiki/List_of_Detective_School_Q_episodes"
+      ]
+    },
+    {
+      "episode": 43,
+      "end_chapter": 89,
+      "start_chapter": 88,
+      "chapters_adapted": "88-89",
+      "volume": 12,
+      "confidence": "medium",
+      "note": "Deduction, Hitsuki's confession, Ryu breaking with Pluto. END 89 exact (case/arc end, 2 sources). Everything after this in the anime is anime-original.",
+      "sources": [
+        "https://tanteigakuenq.fandom.com/api.php?action=parse&page=Story_Arcs&prop=wikitext&format=json",
+        "https://mangadex.org/title/c97f01d8-c0a0-43df-ac2c-ac80fc872350",
+        "https://ja.wikipedia.org/wiki/%E6%8E%A2%E5%81%B5%E5%AD%A6%E5%9C%92Q"
+      ]
+    }
+  ],
+  "continue_points": [
+    {
+      "episode": 11,
+      "continue_chapter": 34,
+      "note": "PARITY: the anime jumps from ch 13 to the Séance case (ch 34) at ep 12; the skipped ch 14-30 are animated later at eps 16-21 and ch 33 at ep 26, so stay in step with the anime and read 34 next."
+    },
+    {
+      "episode": 14,
+      "continue_chapter": 14,
+      "note": "PARITY back-jump: ep 16 restarts the manga at ch 14; ch 34-37 were already read at eps 12-14 and are skipped again on arrival."
+    },
+    {
+      "episode": 21,
+      "continue_chapter": 38,
+      "note": "PARITY: ep 22 borrows from ch 38-39. Ch 31-32 (First Class Determination Exam) are never animated; ch 33 arrives at ep 26."
+    },
+    {
+      "episode": 22,
+      "continue_chapter": 62,
+      "note": "PARITY: ep 23 is ch 62-63. Ch 40-44 and 47-61 all arrive later (eps 24-25, 27-34); ch 45-46 are never animated."
+    },
+    {
+      "episode": 23,
+      "continue_chapter": 40,
+      "note": "PARITY back-jump: ep 24 resumes at ch 40."
+    },
+    {
+      "episode": 25,
+      "continue_chapter": 33,
+      "note": "PARITY back-jump: ep 26 adapts ch 33 only."
+    },
+    {
+      "episode": 26,
+      "continue_chapter": 47,
+      "note": "Ch 45-46 ('The Case Of Kinta Himself') are never adapted — ep 1 is only a loose restaging of that case. Ep 27 opens at ch 47."
+    },
+    {
+      "episode": 31,
+      "continue_chapter": 64,
+      "note": "PARITY: ep 32 is ch 64; ch 60-61 follow at eps 33-34 and ch 62-63 were already seen at ep 23."
+    },
+    {
+      "episode": 32,
+      "continue_chapter": 60,
+      "note": "PARITY back-jump: eps 33-34 adapt ch 60-61."
+    },
+    {
+      "episode": 34,
+      "continue_chapter": 65,
+      "note": "Ch 62-64 were already covered (eps 23 and 32); ep 35 is anime-original; ep 36 opens the Genso-kan case at ch 65."
+    },
+    {
+      "episode": 39,
+      "continue_chapter": 95,
+      "note": "PARITY: ep 40 is ch 95-96. Ch 77-83 (Shi'Un Ryu thread), 87.5 and 90-94 are never animated; ch 84-89 arrive at eps 41-43."
+    },
+    {
+      "episode": 40,
+      "continue_chapter": 84,
+      "note": "PARITY back-jump: eps 41-43 adapt ch 84-89."
+    },
+    {
+      "episode": 43,
+      "continue_chapter": 97,
+      "note": "Furthest-covered + 1. Eps 44-45 are an anime-original ending, so the honest post-anime resume is ch 97 ('From UFO, With Love'); ch 31-32, 45-46, 77-83, 87.5 and 90-94 are never adapted."
+    }
+  ],
+  "annotations": [
+    {
+      "episodes": [
+        3,
+        8,
+        9,
+        10,
+        11
+      ],
+      "kind": "rearranged",
+      "chapters": "4-13",
+      "note": "In the manga the Kirisaki Island case IS the third and final entrance exam; the anime admits the cast to DDS at the end of ep 3 and restages ch 4-13 as a post-enrolment Q/A class field trip in eps 8-11, with four filler episodes (4-7) in between."
+    },
+    {
+      "episodes": [
+        12,
+        13,
+        14,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21
+      ],
+      "kind": "rearranged",
+      "chapters": "14-37",
+      "note": "Order inverted vs the manga: the anime airs the Séance Murder case (ch 34-37) at eps 12-14 and only then goes back to ch 14-30 (class placement + Kamikakushi Village) at eps 16-21."
+    },
+    {
+      "episodes": [
+        5,
+        16,
+        22
+      ],
+      "kind": "graft",
+      "chapters": "38-39",
+      "note": "The manga's Q-vs-A duel block (ch 38-39, five deduction duels) is dismantled: ep 16 keeps a single duel and restages it on the Kamikakushi diorama, ep 22 replays one duel case as a present-day murder, and ep 5 is a heavily rewritten version of another (ep 5 is typed filler)."
+    },
+    {
+      "episodes": [
+        26
+      ],
+      "kind": "partial",
+      "chapters": "31-33",
+      "note": "Only ch 33 ('After School Danger', the break-in at Megu's flat) is animated; ch 31-32, the First Class Determination Exam, are never adapted."
+    },
+    {
+      "episodes": [
+        23,
+        32,
+        33,
+        34
+      ],
+      "kind": "rearranged",
+      "chapters": "60-64",
+      "note": "Volume-8 order is scrambled: ch 62-63 air first (ep 23), then ch 64 (ep 32), then ch 60-61 (eps 33-34)."
+    },
+    {
+      "episodes": [
+        40,
+        41,
+        42,
+        43
+      ],
+      "kind": "rearranged",
+      "chapters": "84-96",
+      "note": "The anime airs the Headless Woman case (ch 95-96) at ep 40 BEFORE the Mayahime case (ch 84-89) at eps 41-43 — so the anime's furthest chapter, 96, is reached three episodes before the end of its adapted material, not at the finale."
+    },
+    {
+      "episodes": [
+        1
+      ],
+      "kind": "loose_parallel",
+      "chapters": "45-46",
+      "note": "Ep 1's construction-site 'suicide' is a heavily changed, pre-DDS restaging of ch 45-46 ('The Case Of Kinta Himself'); fandom counts ep 1 as filler and AFL as Mixed Canon/Filler. No anchor taken — ch 45-46 are treated as never adapted for position purposes."
+    },
+    {
+      "episodes": [
+        44,
+        45
+      ],
+      "kind": "divergence",
+      "chapters": null,
+      "note": "Anime-original ending: ja.wikipedia states that because the manga was still running, Pluto and Ryu's past were never revealed and 最終回はアニメオリジナルの結末で終了した ('the final episode ended with an anime-original conclusion'). Dan's kidnapping and the DDS-vs-Pluto final battle have no manga counterpart."
+    },
+    {
+      "episodes": [
+        39,
+        40
+      ],
+      "kind": "abridged",
+      "chapters": "77-83, 87.5, 90-94",
+      "note": "Never animated: the Shi'Un Ryu thread (ch 77-82) and Kuzuryuu's code (ch 83), the Megu's Ring side chapter (87.5), and ch 90-94 (Freemason code, DDS research room, ghost photo)."
+    }
+  ],
+  "type_corrections": [
+    {
+      "episodes": [
+        35
+      ],
+      "type": "filler",
+      "note": "Ep 35 'Bomb of the Terrifying Gem' adapts nothing. Fandom's arc index assigns all 172 chapters to arcs and lists ep 35 among the nine non-adapting episodes; the complete chapter-title list (MangaDex, corroborated volume-by-volume by ja.wikipedia's 主な事件 table) contains no gem/bomb case anywhere in the manga. The chapters on either side (60-61, 62-63, 64, 65-76) are all accounted for by eps 33-34, 23, 32 and 36-39, leaving no manga material for ep 35. Stored type 'canon' would wrongly admit an anchor here.",
+      "sources": [
+        "https://tanteigakuenq.fandom.com/api.php?action=parse&page=Story_Arcs&prop=wikitext&format=json",
+        "https://mangadex.org/title/c97f01d8-c0a0-43df-ac2c-ac80fc872350",
+        "https://ja.wikipedia.org/wiki/%E6%8E%A2%E5%81%B5%E5%AD%A6%E5%9C%92Q"
+      ]
+    },
+    {
+      "episodes": [
+        44,
+        45
+      ],
+      "type": "anime-only-canon",
+      "note": "The anime's original two-part conclusion (Dan kidnapped; DDS vs Pluto final battle; Ryu's fate). ja.wikipedia states the finale is an anime-original ending written because the manga was still serialising; fandom lists eps 44-45 as non-adapting. Typed anime-only-canon rather than filler because it is the anime's own deliberate ending, not a disposable insert — either way A1 forbids an anchor. AFL has no data past ep 26.",
+      "sources": [
+        "https://ja.wikipedia.org/wiki/%E6%8E%A2%E5%81%B5%E5%AD%A6%E5%9C%92Q",
+        "https://tanteigakuenq.fandom.com/api.php?action=parse&page=Story_Arcs&prop=wikitext&format=json"
+      ]
+    }
+  ],
+  "repairs": [
+    {
+      "episode": 45,
+      "field": "end_chapter",
+      "old": 69,
+      "new": null,
+      "why": "REFUTED — recommend DELETION of the whole ep-45 anchor row (source 'mu'), not a re-valuation. Two independent problems. (1) A1: ep 45 'The Future Detective' is the anime-original series finale (ja.wikipedia: 最終回はアニメオリジナルの結末で終了した; fandom lists ep 45 among the non-adapting episodes), so it can carry no anchor at all. (2) The value is wrong on its own terms: ch 69 is 'The Murder In Fantasy Music Hall (5)', the middle of the ch 65-76 case the anime adapts at eps 36-39, and it sits in VOLUME 9 — not the volume 13 stored beside it. The pin comes from MangaUpdates' coverage field, which reads 'Vol 13, Chap 69 (Skips chapters and out of order)'. The VOLUME is right and the CHAPTER is not: volume 13 is ch 96-103, and the only chapter of it the anime ever touches is ch 96, the second half of the Headless Woman case, adapted in EPISODE 40. 96 -> 69 is a digit transposition. The correct home for this coverage fact is the ep-40 anchor in this verdict (end 96, start 95, vol 13, high).",
+      "sources": [
+        "https://api.mangaupdates.com/v1/series/68289680102",
+        "https://www.mangaupdates.com/series/vddwuee/tantei-gakuen-q",
+        "https://tanteigakuenq.fandom.com/api.php?action=parse&page=Story_Arcs&prop=wikitext&format=json",
+        "https://mangadex.org/title/c97f01d8-c0a0-43df-ac2c-ac80fc872350",
+        "https://ja.wikipedia.org/wiki/%E6%8E%A2%E5%81%B5%E5%AD%A6%E5%9C%92Q"
+      ]
+    },
+    {
+      "episode": 45,
+      "field": "volume",
+      "old": 13,
+      "new": null,
+      "why": "Paired with the above: the stored volume 13 is the volume of ch 96 (ep 40), not of ch 69 (volume 9). The row should be deleted rather than re-valued, because ep 45 is anime-original.",
+      "sources": [
+        "https://api.mangaupdates.com/v1/series/68289680102",
+        "https://mangadex.org/title/c97f01d8-c0a0-43df-ac2c-ac80fc872350",
+        "https://ja.wikipedia.org/wiki/%E6%8E%A2%E5%81%B5%E5%AD%A6%E5%9C%92Q"
+      ]
+    }
+  ],
+  "structure": {
+    "notes": "Single 45-episode TBS season (AniList/MAL 407); no OVAs, movies or specials, so our cumulative numbering is 1:1 with every source used and no conversion was needed anywhere in this verdict. Manga chapter space: 172 chapters / 22 volumes, confirmed independently by MangaUpdates (latest_chapter 172, '22 Volumes (Complete)') and MangaDex (lastChapter 172, lastVolume 22); the 8-chapter 'Tantei Gakuen Q Premium' is a SEPARATE sequel entry and its chapters are never mixed into this numbering. Volume boundaries taken from the MangaDex chapter list and cross-checked against ja.wikipedia's 主な事件 table, which gives volumes AND chapter counts for 13 major cases — twelve of thirteen match to the chapter: v1 1-5, v2 6-13, v3 14-21, v4 22-30, v5 31-39, v6 40-48, v7 49-56, v8 57-64, v9 65-72, v10 73-80, v11 81-87.5, v12 88-95, v13 96-103 (the single mismatch, case 10 at ch 118-121, lies outside the anime's range). Open flag #131 (anilistAired 45 vs aflClassified 26) is explained: animefillerlist's table for this show simply stops after episode 26 (and omits ep 19) — it is not a numbering problem.",
+    "order_only": []
+  },
+  "flags_for_sean": [
+    "MU PIN VERDICT (the extra task): ep 45 -> ch 69 is REFUTED, not repaired. Recommend DELETING the row rather than moving it. The underlying MangaUpdates string is 'Vol 13, Chap 69 (Skips chapters and out of order)'; the VOLUME is correct and the CHAPTER is a transposition of 96. Ch 96 (Headless Woman pt 2, vol 13) is the anime's furthest chapter and it is adapted in EPISODE 40, which this verdict anchors at high confidence. Ep 45 is anime-original, so A1 forbids any anchor there — this is the Toriko pattern.",
+    "Ep 1 typing is contested and left ALONE: animefillerlist says Mixed Canon/Filler (matching our stored 'mixed'), fandom's arc index counts it as filler. I took no anchor either way and recorded the ch 45-46 relationship as loose_parallel only, since fandom explicitly says ep 1 changes that case 'a lot' and moves it before the entrance exam. If Sean prefers, ep 1 -> filler is defensible on the fandom reading.",
+    "Eps 44-45 typed anime-only-canon (the anime's deliberate original ending) rather than filler — a judgment call. Both bar anchors under A1, so nothing downstream changes except display.",
+    "Ep 21 END: fandom's Kamikakushi arc runs ch 14-30 and maps it to eps 16-21, so I used END 30 ('Hard Warning'). ja.wikipedia counts the murder case proper as ch 17-29 (全13話). If ch 30 was actually dropped, ep 21's END is 29; the continue point (38) is unaffected either way.",
+    "Ep 22: fandom calls the borrowed duel the 'Mangaka Case' while en.wikipedia's synopsis describes a murdered CHEF. Fandom's own wording is 'with some other changes in the plot', and AFL independently types the episode Mixed Canon/Filler, so I anchored it at ch 38-39 with medium confidence rather than dropping it. Worth revisiting if a chapter-level source turns up.",
+    "Intra-case splits are honest derivations, not stated facts. Every CASE boundary here is sourced twice (fandom arc index + MangaDex chapter titles, most also by ja.wikipedia's volume/count table), but where one case spans several episodes I split it evenly / by beat order and marked those anchors medium. Evenly-split blocks: eps 8-11 (ch 4-13), 12-14 (34-37), 17-21 (17-30), 29-31 (51-59), 36-39 (65-76), 41-43 (84-89).",
+    "No per-episode chapter source exists for this series: the fandom wiki has 45 episode pages but none carry a 'manga counterpart' field, and there are no chapter pages at all. The lattice here is arc-level by necessity, which is what the task allowed."
+  ]
+}

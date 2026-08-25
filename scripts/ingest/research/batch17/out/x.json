@@ -1,0 +1,243 @@
+{
+  "series_id": "x",
+  "summary": "X (TV, Madhouse 2001-02) adapts CLAMP's X at roughly one tankobon per episode, and it does so in two distinct regimes. Episodes 1-14 track the manga in order, condensing volumes 1-10 (mainline chapters 1-38) with only local reshuffling; episodes 15-20 stop being linear and remix volumes 11-18, so per-episode END chapters regress (ep 16 reaches vol 16 for Seishiro's death, then ep 18-19 fall back to vols 13/15). Three episodes (7, 9, 10) are built mostly out of the per-volume 'X/1999 - <character>' bonus chapters (the .5 numbers), pulled 15-30 chapters forward, and therefore advance no mainline position. Episode 20 is the last manga-derived episode and reaches into volume 18 (Arashi losing her powers after sleeping with Sorata), which is why the stored ep20 anchor of 84 / vol 17 looks understated. Critically, NO source anywhere states an episode-to-chapter mapping for this series: every anchor below is my own derivation from Wikipedia's per-episode summaries against Wikipedia's per-volume summaries, with chapter numbers supplied by the MangaDex/MangaUpdates volume->chapter index, so nothing here is 'high' confidence and I anchored only where an episode's closing beat lands on or beside a VOLUME boundary. Episodes 5, 7, 9, 10 and 15-19 are deliberately left unanchored with annotations instead of guessed numbers.",
+  "anchors": [
+    {
+      "episode": 2,
+      "end_chapter": 8,
+      "start_chapter": 1,
+      "chapters_adapted": "1-8",
+      "volume": 2,
+      "confidence": "medium",
+      "note": "Eps 1-2 together cover volume 1 (ch 1-7) and close on the vol-2 opening beat, Fuma stumbling into Sorata's barrier (ch 8); the ep1/ep2 internal split is not stated by any source, so only ep2 is anchored.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/List_of_X_episodes",
+        "https://en.wikipedia.org/wiki/List_of_X_chapters",
+        "https://api.mangadex.org/manga/19121da9-452e-4f98-8eb4-4ef63cf7186f/aggregate"
+      ]
+    },
+    {
+      "episode": 3,
+      "end_chapter": 10,
+      "start_chapter": 8,
+      "chapters_adapted": "8-10",
+      "volume": 2,
+      "confidence": "medium",
+      "note": "Ep 3 (Sorata explaining Mount Koya, Kyogo recalling Saya and the sword, Nataku's theft, Kamui's failed pursuit) is exactly volume 2, whose closing beat is the dying Kyogo telling Kamui to recover the sword; ch 8 is re-used from ep 2's tail.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/List_of_X_episodes",
+        "https://en.wikipedia.org/wiki/List_of_X_chapters",
+        "https://api.mangadex.org/manga/19121da9-452e-4f98-8eb4-4ef63cf7186f/aggregate"
+      ]
+    },
+    {
+      "episode": 4,
+      "end_chapter": 14,
+      "start_chapter": 11,
+      "chapters_adapted": "11-14",
+      "volume": 4,
+      "confidence": "medium",
+      "note": "Ep 4 covers volume 3 whole (Hinoto's two-Kamui dream, Kanoe and Satsuki, Tokiko on Toru's sacrifice, Arashi's shikigami fight with Aoki) and ends on the vol-4 opening beat, Sorata persuading Arashi to take them to Hinoto (ch 14).",
+      "sources": [
+        "https://en.wikipedia.org/wiki/List_of_X_episodes",
+        "https://en.wikipedia.org/wiki/List_of_X_chapters",
+        "https://api.mangadex.org/manga/19121da9-452e-4f98-8eb4-4ef63cf7186f/aggregate"
+      ]
+    },
+    {
+      "episode": 6,
+      "end_chapter": 21,
+      "start_chapter": 15,
+      "chapters_adapted": "15-21",
+      "volume": 5,
+      "confidence": "medium",
+      "note": "Eps 5-6 together cover the rest of volume 4 (Hinoto's hideout, Yuzuriha's arrival, the Sakurazukamori illusion) and volume 5 (Kamui and Kotori, Sorata's vow to Arashi); ep 6 closes on the vol-5 block, so only ep 6 is anchored. Vol 5's last beat (Karen's message about Tokiko) is deferred to ep 8 - see annotations.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/List_of_X_episodes",
+        "https://en.wikipedia.org/wiki/List_of_X_chapters",
+        "https://api.mangadex.org/manga/19121da9-452e-4f98-8eb4-4ef63cf7186f/aggregate"
+      ]
+    },
+    {
+      "episode": 8,
+      "end_chapter": 23,
+      "start_chapter": 22,
+      "chapters_adapted": "10, 21, 22-23",
+      "volume": 6,
+      "confidence": "medium",
+      "note": "Ep 8 finally pays off Kyogo's death (deferred from ch 10) and Karen's message (ch 21), then adapts the volume-6 opening: Seishiro ambushing Kamui and Kotori, Fuma breaking the illusion, Kanoe telling Hinoto the second Kamui has yet to awaken. END 23 is fixed by adjacency - ep 11 takes ch 24, the last chapter of vol 6.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/List_of_X_episodes",
+        "https://en.wikipedia.org/wiki/List_of_X_chapters",
+        "https://api.mangadex.org/manga/19121da9-452e-4f98-8eb4-4ef63cf7186f/aggregate"
+      ]
+    },
+    {
+      "episode": 11,
+      "end_chapter": 24,
+      "start_chapter": 24,
+      "chapters_adapted": "24",
+      "volume": 6,
+      "confidence": "medium",
+      "note": "Ep 11 ends on the unmistakable close of volume 6: the wounded Tokiko dies at the Monou house and her body is lacerated as the second Sacred Sword appears. Kamui's Okinawa backstory told to Fuma is the anime front-loading material the manga reveals later via Hinoto (vol 10).",
+      "sources": [
+        "https://en.wikipedia.org/wiki/List_of_X_episodes",
+        "https://en.wikipedia.org/wiki/List_of_X_chapters",
+        "https://api.mangadex.org/manga/19121da9-452e-4f98-8eb4-4ef63cf7186f/aggregate"
+      ]
+    },
+    {
+      "episode": 12,
+      "end_chapter": 32,
+      "start_chapter": 25,
+      "chapters_adapted": "25, 29-32",
+      "volume": 9,
+      "confidence": "medium",
+      "note": "Ep 12 opens on vol 7's first beat (Kotori's shock at Tokiko's blood, Kakyo reaching her in a dream, ch 25), skips the rest of vol 7, then takes vol 8's Tokiko testament, Fuma's awakening and Kotori's murder, and closes on vol 9's opening chapter (Kakyo possessing Kotori's corpse, Fuma fleeing as the other Dragons arrive, ch 32).",
+      "sources": [
+        "https://en.wikipedia.org/wiki/List_of_X_episodes",
+        "https://en.wikipedia.org/wiki/List_of_X_chapters",
+        "https://api.mangadex.org/manga/19121da9-452e-4f98-8eb4-4ef63cf7186f/aggregate"
+      ]
+    },
+    {
+      "episode": 13,
+      "end_chapter": 34,
+      "start_chapter": 32,
+      "chapters_adapted": "32-34",
+      "volume": 9,
+      "confidence": "medium",
+      "note": "Ep 13 is volume 9: Kamui catatonic, Subaru's Sumeragi spell entering his mind, the Hokuto flashback, Kamui waking, and vol 9's closing beat of Fuma finding the comatose Kakyo and buying him with the promise of death. The hand-off to Kanoe's hideout bleeds a page or two into ch 35.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/List_of_X_episodes",
+        "https://en.wikipedia.org/wiki/List_of_X_chapters",
+        "https://api.mangadex.org/manga/19121da9-452e-4f98-8eb4-4ef63cf7186f/aggregate"
+      ]
+    },
+    {
+      "episode": 14,
+      "end_chapter": 38,
+      "start_chapter": 35,
+      "chapters_adapted": "35-38",
+      "volume": 10,
+      "confidence": "medium",
+      "note": "The cleanest correspondence in the range: ep 14 is volume 10 whole - Kamui sealing Tokiko's sword under Clamp Campus, Nataku taking Saya's sword and leaving his creators, Fuma bringing Kakyo to Kanoe followed by Nataku, Kusanagi and Seishiro, and Hinoto showing Kamui the truth about Toru, Saya and Fuma's alter ego. This is the last episode of the linear front.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/List_of_X_episodes",
+        "https://en.wikipedia.org/wiki/List_of_X_chapters",
+        "https://api.mangadex.org/manga/19121da9-452e-4f98-8eb4-4ef63cf7186f/aggregate"
+      ]
+    }
+  ],
+  "continue_points": [],
+  "annotations": [
+    {
+      "episodes": [1],
+      "kind": "divergence",
+      "chapters": "1",
+      "note": "Anime-original cold open - Kamui assaults Kyogo at the Togakushi shrine for the Sacred Sword. No such scene in the manga; there the sword is taken by Nataku in vol 2 (ch 8-10)."
+    },
+    {
+      "episodes": [4, 8],
+      "kind": "rearranged",
+      "chapters": "10",
+      "note": "Kyogo dies at the close of vol 2 (ch 10). The anime keeps him alive and unconscious in hospital through eps 4-7 and relocates his death, last words to Fuma ('you are Kamui's twin star') and funeral to ep 8."
+    },
+    {
+      "episodes": [6],
+      "kind": "divergence",
+      "chapters": "14-17",
+      "note": "The Beast attack that wounds Sorata while he shields Arashi is an anime recombination: in vol 4 Beast attacks Kotori and is driven off by Kusanagi."
+    },
+    {
+      "episodes": [6, 8],
+      "kind": "partial",
+      "chapters": "21",
+      "note": "Vol 5's closing beat - Karen contacting the group with Tokiko's message about the second Sacred Sword - is deferred out of ep 6 and delivered at Kyogo's funeral in ep 8."
+    },
+    {
+      "episodes": [7],
+      "kind": "side_story",
+      "chapters": "28.5",
+      "note": "Ep 7 'Cyber' is built almost entirely from the vol-7 bonus chapter 'X/1999 - Satsuki Yatoji' (ch 28.5), pulled ~7 volumes forward, plus anime connective tissue with Yuto. It advances no mainline chapter and is intentionally left unanchored."
+    },
+    {
+      "episodes": [9],
+      "kind": "rearranged",
+      "chapters": "29-30, 41.5",
+      "note": "Subaru's introduction (vol 8: the onmyoji job, the Seishiro illusion, Sorata and Arashi finding him) is relocated ahead of the vols 6-7 material and fused with the vol-11 bonus chapter 'X/1999 - Subaru Sumeragi' (ch 41.5). Anchoring it would push position past ep 11's ch 24, so it is left unanchored."
+    },
+    {
+      "episodes": [10],
+      "kind": "rearranged",
+      "chapters": "29, 24.5, 34.5",
+      "note": "Saiki taking Yuzuriha to recruit Aoki (vol 8) is relocated before Tokiko's death and fused with two bonus chapters: 'X/1999 - Yuzuriha Nekoi' (ch 24.5, vol 6) and 'X/1999 - Kusanagi Shiyu' (ch 34.5, vol 9). Same non-monotonicity as ep 9; left unanchored."
+    },
+    {
+      "episodes": [12],
+      "kind": "abridged",
+      "chapters": "26-28",
+      "note": "Most of volume 7 is skipped - Kotori's dream meeting with Saya, Seishiro destroying the Nakano Sun Plaza barrier and the first earthquake, Fuma reverting to normal. Ep 12 jumps from ch 25 straight to the vol-8 testament and awakening block."
+    },
+    {
+      "episodes": [15, 16, 17, 18, 19, 20],
+      "kind": "rearranged",
+      "chapters": "39-95",
+      "note": "From ep 15 the adaptation stops being linear and remixes vols 11-18: ep 15 = Sunshine 60 / Tojo Pharmaceuticals attack and Subaru's rescue (vol 11, ch 39-41) + the barrier lesson (vol 12) + Saiki's death pulled forward from vol 13 (~ch 50); ep 16 = Subaru losing his right eye (vol 12, ch 42-43) + the Rainbow Bridge duel and Seishiro's death (vol 16, ch 71-78); ep 17 = Kakyo material (vol 14-15 plus bonus ch 70.5) and a recap; ep 18 = Inuki's death (vol 13, ch 49) + Yuzuriha, Kusanagi and the second inugami (vol 15, ch 63-70); ep 19 = the Yamanote Line fight (vol 13, ch 51-53) + bonus ch 53.5 (Karen's mother); ep 20 = Inokashira Park and Sorata's gohoudouji (vol 17, ch 79-85) + Arashi's departure (vol 18). Per-episode END values therefore regress, so eps 15-19 carry no anchor - a monotone value for any of them would be false."
+    },
+    {
+      "episodes": [17],
+      "kind": "divergence",
+      "chapters": "",
+      "note": "Ep 17 is largely a clip-show recap framed by Kakyo entering Kamui's dream. Kotori's dream reunion with Kamui has no manga counterpart (x1999 fandom, Kotori Monou page: 'This scene did not take place in the manga')."
+    },
+    {
+      "episodes": [20],
+      "kind": "abridged",
+      "chapters": "86-93",
+      "note": "The anime never adapts ch 86-93 - the close of vol 17 (Fuma offering Subaru Seishiro's left eye) and most of vol 18 (Ginza, Karen and Aoki against Nataku, Nataku's death protecting Karen). Nataku instead dies in the anime-original ep 24. Because eps 21-24 are anime-only-canon, this material is never covered."
+    }
+  ],
+  "type_corrections": [],
+  "repairs": [
+    {
+      "episode": 20,
+      "field": "end_chapter",
+      "old": 84,
+      "new": 94,
+      "why": "Ep 20 does not stop inside vol 17. Its closing beat - Sorata and Arashi sleeping together, after which Arashi walks alone to Fuma's hideout - is the volume-18 beat 'Arashi realizes she lost her powers as a Dragon of Heaven after consummating her relationship with Sorata, and leaves the group'. Volume 18 is ch 88-95 (MangaDex/MangaUpdates numbering); Arashi's departure is the second-to-last of the volume's six narrative beats, hence 94. The volume correction (17 -> 18) is well evidenced; the exact chapter inside 88-95 is an estimate - see flags. Timeline supports it: vol 17 shipped 2001-11-17 and vol 18's chapters were running in Monthly Asuka during the broadcast (ep 20 aired 2002-02-27; vol 18 collected 2002-09-17).",
+      "sources": [
+        "https://en.wikipedia.org/wiki/List_of_X_episodes",
+        "https://en.wikipedia.org/wiki/List_of_X_chapters",
+        "https://ja.wikipedia.org/wiki/X_(%E6%BC%AB%E7%94%BB)",
+        "https://api.mangadex.org/manga/19121da9-452e-4f98-8eb4-4ef63cf7186f/aggregate"
+      ]
+    },
+    {
+      "episode": 20,
+      "field": "volume",
+      "old": 17,
+      "new": 18,
+      "why": "Follows from the end_chapter repair: ch 94 sits in volume 18 (ch 88-95). Ep 20's body is vol 17 (Inokashira Park, the gohoudouji, Arashi's confession, ch 79-85) but its last chapter in running order is in vol 18.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/List_of_X_episodes",
+        "https://en.wikipedia.org/wiki/List_of_X_chapters",
+        "https://api.mangadex.org/manga/19121da9-452e-4f98-8eb4-4ef63cf7186f/aggregate"
+      ]
+    }
+  ],
+  "structure": {
+    "notes": "CHAPTER SPACE. X has 95 mainline chapters collected in 18 tankobon, plus a 19th 'volume 18.5' (2023-11-04) reprinting the previously uncollected 'Shumatsu III' block; MangaUpdates records the series as '18.5 Volumes' with latest_chapter 99, so the anchors above (1-95) sit inside the same numbering the DB already uses (the stored ep20 value 84 falls in vol 17 under this scheme, which is how I know the spaces agree). Volume boundaries, from the MangaDex aggregate and cross-validated against Wikipedia's chapter list: v1 1-7, v2 8-10, v3 11-13, v4 14-17, v5 18-21, v6 22-24, v7 25-28, v8 29-31, v9 32-34, v10 35-38, v11 39-41, v12 42-48, v13 49-53, v14 54-62, v15 63-70, v16 71-78, v17 79-87, v18 88-95. Each volume from 5 to 17 also carries one 'X/1999 - <character>' bonus chapter numbered .5 (21.5, 24.5, 28.5, 31.5, 34.5, 38.5, 41.5, 48.5, 53.5, 62.5, 70.5, 78.5, 87.5); these match Wikipedia's second ChapterList entry per volume one-for-one, which is the strongest available proof the MangaDex numbering is correct. The .5 chapters are never converted to mainline numbers here. SHAPE OF THE ADAPTATION. Eps 1-14 are a faithful, heavily condensed, essentially in-order pass over vols 1-10 (~2.7 chapters per episode) with three out-of-order character-introduction episodes (7, 9, 10) built from the .5 bonus chapters. Divergence begins at ep 15, not at ep 21: eps 15-20 remix vols 11-18 out of order, and ep 20 is the last manga-derived episode, reaching vol 18. Eps 21-24 are the anime-original ending (already ruled anime-only-canon; not relitigated). SOURCE TRAPS worth recording. (1) x1999.fandom.com and xtvclamp.fandom.com are the SAME wiki - identical 162-page allpages listing - so they are one source, not two. (2) That wiki's pages titled '<Name> (chapter)' are VOLUMES: they use Infobox Volume, show 'Volume N.jpg', carry tankobon release dates, and say e.g. 'Prelude ... is the 1st chapter'. Read literally they yield chapter numbers about 5x too low. Its episode pages carry no manga-counterpart field at all, and its volume pages have empty Summary sections. (3) Wikipedia's 'List of X chapters' likewise lists ONE ChapterList entry per volume (the tankobon-level title, e.g. 'Koshi I', 'Shichiyo I'), so it cannot be used to count or number chapters either - only the volume summaries there are usable. (4) animefillerlist types all 24 episodes 'Manga Canon', which contradicts the stored anime-only-canon ruling on 21-24; it is too coarse to act on. (5) animefillerguide has no X page.",
+    "order_only": [
+      "OVA 'An Omen' / 'Yocho' (dai-zero-wa, released 2001-08-25, never broadcast) - a Kakyo-narrated prophecy montage and primer for non-readers. It is outside our 24-episode numbering and adapts no chapter; if it is ever ingested it sits before ep 1 as order-only."
+    ]
+  },
+  "flags_for_sean": [
+    "METHOD DISCLOSURE, please read before curating: no source in existence maps X episodes to manga chapters. The fandom wiki has no manga-counterpart fields, animefillerguide has no page, and animefillerlist gives types only. Every anchor above is my own beat-by-beat derivation of Wikipedia's per-episode summaries against Wikipedia's per-volume summaries, with chapter numbers supplied by the MangaDex/MangaUpdates volume index. By the protocol's definition of 'high' (2+ independent sources agreeing on the exact chapter) nothing here can be high, so all nine anchors are marked medium. I anchored only where an episode's closing beat lands on or immediately beside a VOLUME boundary, so the number is fixed by the boundary rather than guessed inside a volume.",
+    "ep 20 repair 84 -> 94 is the one number I would most like a second opinion on. The volume half of the repair (17 -> 18) is solidly evidenced - ep 20 ends on Arashi losing her powers after sleeping with Sorata, which Wikipedia places in vol 18. The chapter half is an estimate inside ch 88-95. If you prefer strict volume-boundary discipline the alternative is 95 (vol-18 close); if you prefer to anchor ep 20 to the body of the episode rather than its last beat, 85 or 87 (vol 17) would be the choice and the vol-18 beat becomes a graft annotation instead.",
+    "eps 15-19 are deliberately unanchored. The adaptation regresses there: ep 16 reaches vol 16 (Seishiro's death) while ep 18 falls back to vol 15 and ep 19 to vol 13. Any monotone anchor on 15-19 would be false, and a non-monotone one would move reader position backwards, which the re-use rule forbids. Volume-level detail for each is in the ep 15-20 'rearranged' annotation if you would rather encode a plateau (e.g. hold position at ep 14's 38 through ep 15, then a single step at ep 16) - that is a ruling, not something I should decide.",
+    "eps 5, 7, 9, 10 are also unanchored on purpose. 5 has no boundary-determined END (it is covered by the ep 4 / ep 6 pair). 7, 9 and 10 are built from bonus .5 chapters plus out-of-order vol-8 material, so anchoring them would push position ahead of ep 11's ch 24.",
+    "Entry-fact gap: AniList manga 30027 reports chapters/volumes null and status RELEASING. MangaUpdates gives '18.5 Volumes (Hiatus / Discontinued)' with latest_chapter 99. Consider setting latest_known_chapters and a hiatus flag from MU rather than leaving them null - the mapping currently has no ceiling.",
+    "Open flag #845 (anchors stale, maxAnchorEpisode 20) is explained rather than closed: ep 20 genuinely IS the last anchorable episode because 21-24 are anime-only-canon under A1. The count_mismatch should be reclassified, not filled."
+  ]
+}

@@ -1,0 +1,336 @@
+{
+  "series_id": "emma-a-victorian-romance",
+  "summary": "Emma's mainline manga is 52 chapters in volumes 1-7; volumes 8-10 are a separately-numbered side-story run (Emma: Further Tales / エマ 番外編, 20 chapters, ch 1-20). AniList's total_chapters=72 is 52+20 and is NOT a mainline chapter space — MU's 52 is right, so open flag #710 resolves in MU's favour. Season 1 (eps 1-12) is a close, lightly-reordered adaptation of volumes 1-2 (chs 1-14) and ends exactly where ch 14 ends, with Emma's train pulling out of King's Cross; ja.wikipedia states this outright and marks the same point '(〜第十四話)' in its synopsis. Season 2 (eps 13-24) squeezes volumes 3-7 (chs 15-52) into 12 episodes and ja.wikipedia describes the result as an ORIGINAL STORY with reworked chronology and character relationships: eps 13-18 still track chs 15-31 chapter-for-chapter-ish, but eps 19-23 are predominantly anime-original — the O'Donnell gang, Emma's kidnapping and the whole American rescue (the 'Worst State of Affairs' arc, chs 37-46) are cut entirely and replaced by an invented Viscount-Campbell conspiracy against the Jones company's railway financing, Hans's courtship of Emma is greatly expanded, and the vol-5 Haworth fire is relocated to the London residence in ep 23. Ep 24 lands on the manga's closing beats (chs 51-52) but stages the proposal at the Crystal Palace and appends an anime-original married-with-four-children epilogue that also grafts in Further Tales material (Eleanor at Brighton, Ernest). Consequently eps 19-23 are deliberately left unanchored: linear interpolation between ep 18 and ep 24 would place them in chs 38-46, which the anime never adapts at all.",
+  "anchors": [
+    {
+      "episode": 1,
+      "end_chapter": 1,
+      "start_chapter": 1,
+      "chapters_adapted": "1",
+      "volume": 1,
+      "confidence": "high",
+      "note": "Ch 1 'The Visitor' — the fandom chapter page states outright that it was adapted into 'The Gift', and the ep-1 summary (William visits Kelly Stownar, is smitten, leaves gloves behind as a pretext) is ch 1's content.",
+      "sources": [
+        "https://emmaavictorianromance.fandom.com/api.php?action=parse&page=The%20Visitor&prop=wikitext&format=json",
+        "https://en.wikipedia.org/wiki/List_of_Emma_episodes",
+        "https://ja.wikipedia.org/wiki/%E3%82%A8%E3%83%9E_(%E6%BC%AB%E7%94%BB)"
+      ]
+    },
+    {
+      "episode": 3,
+      "end_chapter": 3,
+      "start_chapter": 3,
+      "chapters_adapted": "3",
+      "volume": 1,
+      "confidence": "medium",
+      "note": "Hakim's arrival: ch 3 南からの訪問者 / 'The Visitor from the South' is Hakim Atawari's debut chapter, and ep 3 is his arrival in London (elephant ride, William laid up at Kelly's). Whether ep 3 also takes ch 4 ラブレター is unverified, so END is held at 3.",
+      "sources": [
+        "https://emmaavictorianromance.fandom.com/api.php?action=parse&page=The%20Visitor%20from%20the%20South&prop=wikitext&format=json",
+        "https://en.wikipedia.org/wiki/List_of_Emma_episodes",
+        "https://ja.wikipedia.org/wiki/%E3%82%A8%E3%83%9E_(%E6%BC%AB%E7%94%BB)"
+      ]
+    },
+    {
+      "episode": 6,
+      "end_chapter": 7,
+      "start_chapter": 7,
+      "chapters_adapted": "7",
+      "volume": 1,
+      "confidence": "medium",
+      "note": "Ch 7 父、リチャード・ジョーンズ / 'The Father, Richard Jones' is Richard Jones's debut chapter and closes vol 1; ep 6 訪問 is Richard taking William along to pay Mrs Stownar an appreciation visit. Note the anime pulled Eleanor's introduction (also a ch-7 debut) forward to ep 2.",
+      "sources": [
+        "https://emmaavictorianromance.fandom.com/api.php?action=parse&page=The%20Father,%20Richard%20Jones&prop=wikitext&format=json",
+        "https://en.wikipedia.org/wiki/List_of_Emma_episodes",
+        "https://ja.wikipedia.org/wiki/%E3%82%A8%E3%83%9E_(%E6%BC%AB%E7%94%BB)"
+      ]
+    },
+    {
+      "episode": 7,
+      "end_chapter": 8,
+      "start_chapter": 8,
+      "chapters_adapted": "8",
+      "volume": 2,
+      "confidence": "high",
+      "note": "Title and content both identical: ch 8 クリスタルパレスにて / 'At the Crystal Palace' (vol 2 opener) = ep 7 水晶宮, Emma and William at the Crystal Palace, locked in overnight.",
+      "sources": [
+        "https://ja.wikipedia.org/wiki/%E3%82%A8%E3%83%9E_(%E6%BC%AB%E7%94%BB)",
+        "https://en.wikipedia.org/wiki/List_of_Emma_episodes",
+        "https://emmaavictorianromance.fandom.com/api.php?action=parse&page=Chapters%20and%20Volumes&prop=wikitext&format=json"
+      ]
+    },
+    {
+      "episode": 8,
+      "end_chapter": 9,
+      "start_chapter": 9,
+      "chapters_adapted": "6, 9",
+      "volume": 2,
+      "confidence": "medium",
+      "note": "Bracketed derivation between ep 7 (ch 8) and ep 9 (chs 10-11): ep 8 carries ch 9 家族 / 'Family' (William tells his father about Emma, meets flat opposition) plus Kelly's death. The pocketwatch strand is ch 6 ふたつの時計 / 'The Two Watches' held over from vol 1 — see the rearranged annotation.",
+      "sources": [
+        "https://ja.wikipedia.org/wiki/%E3%82%A8%E3%83%9E_(%E6%BC%AB%E7%94%BB)",
+        "https://en.wikipedia.org/wiki/List_of_Emma_episodes",
+        "https://emmaavictorianromance.fandom.com/api.php?action=parse&page=Chapters%20and%20Volumes&prop=wikitext&format=json"
+      ]
+    },
+    {
+      "episode": 9,
+      "end_chapter": 11,
+      "start_chapter": 10,
+      "chapters_adapted": "10-11",
+      "volume": 2,
+      "confidence": "high",
+      "note": "Ep 9's two strands are two consecutive chapters by title and content: ch 10 ひとり / 'Alone' (Emma alone after Kelly's funeral) and ch 11 晩餐会のエレノア / 'Eleanor at the Banquet' (William at a dinner party with Eleanor). The episode is itself titled ひとり.",
+      "sources": [
+        "https://ja.wikipedia.org/wiki/%E3%82%A8%E3%83%9E_(%E6%BC%AB%E7%94%BB)",
+        "https://en.wikipedia.org/wiki/List_of_Emma_episodes",
+        "https://emmaavictorianromance.fandom.com/api.php?action=parse&page=Chapters%20and%20Volumes&prop=wikitext&format=json"
+      ]
+    },
+    {
+      "episode": 10,
+      "end_chapter": 12,
+      "start_chapter": 12,
+      "chapters_adapted": "12",
+      "volume": 2,
+      "confidence": "medium",
+      "note": "The three-part vol-2 finale さよならエマ / 'Farewell, Emma' (chs 12-14) is spread one part per episode across eps 10-12; ep 10 すれ違い is Emma calling at the Jones house and the resulting scandal = Part 1.",
+      "sources": [
+        "https://ja.wikipedia.org/wiki/%E3%82%A8%E3%83%9E_(%E6%BC%AB%E7%94%BB)",
+        "https://en.wikipedia.org/wiki/List_of_Emma_episodes",
+        "https://emmaavictorianromance.fandom.com/api.php?action=parse&page=Chapters%20and%20Volumes&prop=wikitext&format=json"
+      ]
+    },
+    {
+      "episode": 11,
+      "end_chapter": 13,
+      "start_chapter": 13,
+      "chapters_adapted": "13",
+      "volume": 2,
+      "confidence": "medium",
+      "note": "'Farewell, Emma' Part 2 (ch 13): ep 11 過去 is William hearing Emma's childhood from Al while Richard schemes with Mrs Campbell. Derived from the eps 10/12 bracket, not from an explicit source.",
+      "sources": [
+        "https://ja.wikipedia.org/wiki/%E3%82%A8%E3%83%9E_(%E6%BC%AB%E7%94%BB)",
+        "https://en.wikipedia.org/wiki/List_of_Emma_episodes"
+      ]
+    },
+    {
+      "episode": 12,
+      "end_chapter": 14,
+      "start_chapter": 14,
+      "chapters_adapted": "14",
+      "volume": 2,
+      "confidence": "high",
+      "note": "SEASON 1 BOUNDARY. ja.wikipedia: S1 is built on vols 1-2 and 'エマがキングス・クロス駅を発つところで終わっている', and its synopsis marks that same beat '(〜第十四話)'. Ch 14 = 'Farewell, Emma (Final)', last chapter of vol 2. Ep 12 ends with William reaching the platform too late.",
+      "sources": [
+        "https://ja.wikipedia.org/wiki/%E3%82%A8%E3%83%9E_(%E6%BC%AB%E7%94%BB)",
+        "https://en.wikipedia.org/wiki/List_of_Emma_episodes",
+        "https://emmaavictorianromance.fandom.com/api.php?action=parse&page=Chapters%20and%20Volumes&prop=wikitext&format=json"
+      ]
+    },
+    {
+      "episode": 13,
+      "end_chapter": 18,
+      "start_chapter": 15,
+      "chapters_adapted": "15-18",
+      "volume": 3,
+      "confidence": "medium",
+      "note": "SEASON 2 START. ja.wikipedia states S2 covers vols 3-7; the vol-3 opening block is ch 15 風 (the train north, Tasha's recommendation) through ch 18 新しい生活 'A New Life' — the episode's own title 新しい家. The false accusation of theft in ep 13 is anime-original (Nanette).",
+      "sources": [
+        "https://ja.wikipedia.org/wiki/%E3%82%A8%E3%83%9E_(%E6%BC%AB%E7%94%BB)",
+        "https://en.wikipedia.org/wiki/List_of_Emma_episodes",
+        "https://emmaavictorianromance.fandom.com/api.php?action=parse&page=Chapters%20and%20Volumes&prop=wikitext&format=json"
+      ]
+    },
+    {
+      "episode": 14,
+      "end_chapter": 19,
+      "start_chapter": 19,
+      "chapters_adapted": "19",
+      "volume": 3,
+      "confidence": "medium",
+      "note": "Ep 14 月光 'Moonlight' = ch 19 満月の夜 / 'Night of the Full Moon': Ilse's birthday and the servants' own private feast that evening (a set piece the spqr Victorian-history blog notes the anime rushed relative to the manga).",
+      "sources": [
+        "https://ja.wikipedia.org/wiki/%E3%82%A8%E3%83%9E_(%E6%BC%AB%E7%94%BB)",
+        "https://en.wikipedia.org/wiki/List_of_Emma_episodes",
+        "https://spqr.hatenablog.com/entry/20070708/p1"
+      ]
+    },
+    {
+      "episode": 15,
+      "end_chapter": 21,
+      "start_chapter": 21,
+      "chapters_adapted": "21",
+      "volume": 3,
+      "confidence": "medium",
+      "note": "VOLUME 3 BOUNDARY. Ch 21 ミセス・トロロープ closes vol 3 and ep 15 is Dorothea calling on Mrs Trollope with Emma. The anime reorders within the Haworth block: ch 20 エマとメルダース家 (the move to London) is played out in ep 16 instead — see continue_points.",
+      "sources": [
+        "https://ja.wikipedia.org/wiki/%E3%82%A8%E3%83%9E_(%E6%BC%AB%E7%94%BB)",
+        "https://en.wikipedia.org/wiki/List_of_Emma_episodes",
+        "https://emmaavictorianromance.fandom.com/api.php?action=parse&page=Chapters%20and%20Volumes&prop=wikitext&format=json"
+      ]
+    },
+    {
+      "episode": 16,
+      "end_chapter": 25,
+      "start_chapter": 20,
+      "chapters_adapted": "20, 22-25",
+      "volume": 4,
+      "confidence": "medium",
+      "note": "Ep 16 求婚 picks up ch 20 (the Mölders decide to take Emma to London) then runs the vol-4 opening: ch 22 ウィリアムは今, ch 23 愛の響き, ch 24 雨のロットン・ロウ, ch 25 モニカ、怒る — Monica arriving in London is ch 25's title beat.",
+      "sources": [
+        "https://ja.wikipedia.org/wiki/%E3%82%A8%E3%83%9E_(%E6%BC%AB%E7%94%BB)",
+        "https://en.wikipedia.org/wiki/List_of_Emma_episodes",
+        "https://emmaavictorianromance.fandom.com/api.php?action=parse&page=Chapters%20and%20Volumes&prop=wikitext&format=json"
+      ]
+    },
+    {
+      "episode": 17,
+      "end_chapter": 28,
+      "start_chapter": 26,
+      "chapters_adapted": "26-28",
+      "volume": 4,
+      "confidence": "medium",
+      "note": "Ep 17 抱擁 is the engagement-party reunion: ch 26 エマは今, ch 27 波瀾の鐘が鳴る 'The Bell Tolls', ch 28 再会 'Reunion'. An independent volume review confirms vol 4 climaxes on that reunion, Emma attending as Mrs Trollope's companion.",
+      "sources": [
+        "http://familiardiversions.blogspot.com/2008/12/emma-manga-vol-4-by-kaoru-mori.html",
+        "https://en.wikipedia.org/wiki/List_of_Emma_episodes",
+        "https://ja.wikipedia.org/wiki/%E3%82%A8%E3%83%9E_(%E6%BC%AB%E7%94%BB)"
+      ]
+    },
+    {
+      "episode": 18,
+      "end_chapter": 31,
+      "start_chapter": 29,
+      "chapters_adapted": "29-31",
+      "volume": 5,
+      "confidence": "medium",
+      "note": "LAST CLOSELY-TRACKING S2 EPISODE. Ch 29 エマとウィリアム (the night together, Emma's flight at dawn) plus chs 30-31 伝統と血統 'Tradition and Lineage' — Aurelia and Richard's past, which a volume review independently confirms opens vol 5, and which en.wikipedia's ep-18 summary says is shown here.",
+      "sources": [
+        "http://familiardiversions.blogspot.com/2009/02/emma-manga-vol-5-by-kaoru-mori.html",
+        "https://en.wikipedia.org/wiki/List_of_Emma_episodes",
+        "https://ja.wikipedia.org/wiki/%E3%82%A8%E3%83%9E_(%E6%BC%AB%E7%94%BB)"
+      ]
+    },
+    {
+      "episode": 24,
+      "end_chapter": 52,
+      "start_chapter": 51,
+      "chapters_adapted": "51-52 (+ anime-original epilogue; Further Tales chs 3-4 'Brighton by the Sea' material and Ernest appear in the ending montage)",
+      "volume": 7,
+      "confidence": "high",
+      "note": "SERIES FINALE. Ep 24 花 lands the manga's closing beats — ch 51 ふたりの想い and ch 52 (最終話) しあわせの花 'The Blessed Flowers', last chapter of vol 7. ja.wikipedia and the spqr blog both state S2 completes the story through vol 7. The proposal is relocated to the Crystal Palace and the married-with-four-children epilogue goes beyond vol 7, so the anchor is the endpoint it adapts, not what it invents. Agrees with the stored mu anchor (52, v7).",
+      "sources": [
+        "https://ja.wikipedia.org/wiki/%E3%82%A8%E3%83%9E_(%E6%BC%AB%E7%94%BB)",
+        "https://en.wikipedia.org/wiki/List_of_Emma_episodes",
+        "https://spqr.hatenablog.com/entry/20070708/p1",
+        "https://emmaavictorianromance.fandom.com/api.php?action=parse&page=Chapters%20and%20Volumes&prop=wikitext&format=json"
+      ]
+    }
+  ],
+  "continue_points": [
+    {
+      "episode": 15,
+      "continue_chapter": 20,
+      "note": "PARITY: ep 15 ends on ch 21 but ch 20 (the Mölders' move to London) has not been shown yet and is played out in ep 16. A reader staying in step with the anime resumes at ch 20 and will re-read ch 21 when they reach it."
+    }
+  ],
+  "annotations": [
+    {
+      "episodes": [
+        2
+      ],
+      "kind": "rearranged",
+      "chapters": "7",
+      "note": "Eleanor Campbell, whose manga debut is ch 7 父、リチャード・ジョーンズ, is pulled forward to ep 2 for her society debut; the parasol subplot around it has no manga counterpart (the spqr blog reviewing the episode on air called it '今回は原作に無いシナリオ構成')."
+    },
+    {
+      "episodes": [
+        8
+      ],
+      "kind": "graft",
+      "chapters": "6",
+      "note": "The pocketwatch strand — ch 6 ふたつの時計 'The Two Watches', a vol-1 chapter — appears to be held over and grafted onto ep 8 時計 next to Kelly's death, so it is not covered in running order during eps 5-7. Inferred from title/content correspondence, not from an explicit source."
+    },
+    {
+      "episodes": [
+        15,
+        16
+      ],
+      "kind": "rearranged",
+      "chapters": "23",
+      "note": "ja.wikipedia's differences list states Eleanor's confession to William is not staged at the opera house as in the manga (ch 23 愛の響き 'The Sound of Love'); the anime moves it to a charity Romeo & Juliet performance in ep 15, with Hakim as Romeo and Vivi as Juliet."
+    },
+    {
+      "episodes": [
+        13,
+        19,
+        20,
+        22,
+        23
+      ],
+      "kind": "divergence",
+      "chapters": "32-50",
+      "note": "Nanette (the maid whose theft frames Emma in ep 13) is an anime-original character, and Hans's courtship of Emma — the spine of eps 19-22 — is far larger than in the manga. ja.wikipedia: the second season, having to fit vols 3-7 into 12 episodes, became '原作での時系列や人物関係が変更されたオリジナルストーリー'."
+    },
+    {
+      "episodes": [
+        19,
+        20,
+        21,
+        22,
+        23,
+        24
+      ],
+      "kind": "divergence",
+      "chapters": "37-46",
+      "note": "The entire 'Worst State of Affairs' arc is cut: ja.wikipedia states the O'Donnell gang never appears, hence no kidnapping of Emma and no American scenes — that is chs 38-43 (vol 6) plus chs 44-46 (曙光 / 新大陸 / 手に手を). In its place the anime invents Viscount Campbell sabotaging the Jones company's railway-construction financing, which drives eps 22-24."
+    },
+    {
+      "episodes": [
+        23
+      ],
+      "kind": "loose_parallel",
+      "chapters": "35-36",
+      "note": "The fire is manga vol-5 material relocated: ja.wikipedia notes the small fire at the Mölders' Haworth main house becomes a fire at the London residence, with Emma out at the time and the fire brigade called. A volume-5 review independently places an accidental household fire in that volume. Too changed to carry an anchor."
+    },
+    {
+      "episodes": [
+        24
+      ],
+      "kind": "side_story",
+      "chapters": "Further Tales ch 3-4 ('Brighton by the Sea', vol 8)",
+      "note": "ja.wikipedia states the ending incorporates vol-8 (Further Tales) content — Eleanor's stay at the Brighton health resort and Ernest — into the epilogue. Labelled as Further Tales chapters, never converted to mainline numbers. The married-with-four-children epilogue itself has no manga source: vol 7 ends with William only declaring his intent to marry."
+    }
+  ],
+  "type_corrections": [
+    {
+      "episodes": [
+        19,
+        20,
+        21,
+        22,
+        23
+      ],
+      "type": "mixed",
+      "note": "Currently typed canon. This stretch has no continuous manga counterpart: the chapters it would occupy (37-46) are explicitly not adapted, and its actual content — Hans pursuing Emma to her birthplace, Hans's proposal, the Campbell railway-financing conspiracy, the relocated fire — is anime-original around scattered vol-5/vol-7 echoes. ja.wikipedia characterises the whole second season as an original story, so Sean may prefer to type all of eps 13-24 as mixed instead; eps 13-18 still track chs 15-31 closely enough to anchor either way. Flagged rather than forced.",
+      "sources": [
+        "https://ja.wikipedia.org/wiki/%E3%82%A8%E3%83%9E_(%E6%BC%AB%E7%94%BB)",
+        "https://en.wikipedia.org/wiki/List_of_Emma_episodes",
+        "https://spqr.hatenablog.com/entry/20070708/p1"
+      ]
+    }
+  ],
+  "repairs": [],
+  "structure": {
+    "notes": "CHAPTER SPACE (resolves open flag #710): the mainline manga is 52 chapters in 7 tankōbon (v1 1-7, v2 8-14, v3 15-21, v4 22-29, v5 30-36, v6 37-43, v7 44-52). en.wikipedia states 'Enterbrain collected its 52 chapters in seven tankōbon volumes'; ja.wikipedia's table runs 第一話…最終話 across those seven volumes; the fandom wiki's 'Chapters and Volumes' page gives the identical 1-52 numbering with identical volume splits. Volumes 8-10 are 'Emma: Further Tales' (エマ 番外編, Comic Beam Sept 2006 - Mar 2008), a SEPARATELY NUMBERED run of 20 chapters that restarts at 第一話 — ja.wikipedia even footnotes that the volumes themselves never say so, only the afterword does. AniList's total_chapters=72 is 52+20 and mixes the two spaces; MU's 52 is the correct mainline last-chapter NUMBER and is the space all anchors here use. EPISODE NUMBERING: our cumulative 1-24 matches the fandom wiki's Episode 1-24 pages exactly (S1 eps 1-12 = 2005 Studio Pierrot; S2 eps 13-24 = 2007 Ajia-do, '第二幕' / Molders-hen). There is one unaired recap, 'Intermission' (幕間), bundled with the manga vol-8 special edition; en.wikipedia lists it as S2 episode 0. It is a recap, is not in our 24 rows, and should stay out. VOLUME BOUNDARIES are currently empty in the context file and can be populated from the two independent chapter lists above.",
+    "order_only": []
+  },
+  "flags_for_sean": [
+    "Flag #710 resolution: AniList 72 = 52 mainline chapters + 20 separately-numbered 'Further Tales' chapters (vols 8-10). MU's 52 is the reading edition's mainline chapter number. Recommend correcting total_chapters to 52 (or recording 52 mainline + 20 side) so position math stops assuming 20 unread mainline chapters after ep 24. Sources: en.wikipedia Emma (manga); ja.wikipedia エマ (漫画); emmaavictorianromance.fandom.com 'Chapters and Volumes'.",
+    "Eps 19-23 deliberately left UNANCHORED. Interpolating between ep 18 (ch 31) and ep 24 (ch 52) would place them in chs 38-46 — the exact block (O'Donnell kidnapping + America) that ja.wikipedia states the anime never adapts. If a pin is needed to stop blind interpolation, the honest conservative pin is ch 36 (end of vol 5) for eps 19-23, but I could not source that to 2+ independent sources and did not want to fabricate it. Recommend either leaving them unanchored or ruling the ch-36 pin explicitly.",
+    "Reader-truth gap after the finale: a viewer who has finished ep 24 has NOT read roughly chs 32-51 in any faithful form, yet ep 24's END is legitimately 52. 'Continue at 53' is therefore technically correct and practically misleading. This may warrant a series-level note in the UI rather than an anchor change.",
+    "Existing stored anchor ep 24 -> 52 v7 (source mu) is CORRECT per my research — no repair proposed. It remains a derivation-tier row, so if it is ever re-derived differently the value above is the corroborated one.",
+    "S1 eps 2, 4, 5 left unanchored on purpose: ep 2 is largely anime-original (parasol) and I could not source ep 4 (Mudie's) or ep 5 (Dinner Party) to specific chapters. Interpolation between ep 1 (ch 1), ep 3 (ch 3) and ep 6 (ch 7) puts them at chs 2, 4-5, 6, which is plausible but unverified.",
+    "The Emma fandom wiki (emmaavictorianromance.fandom.com) has full Chapter 1-52 and Episode 1-24 page sets, but only Chapter 1 carries a 'was adapted into' trivia line — every other chapter/episode body is a 'Coming soon...' stub. Worth recording as a source trap: the page inventory looks rich and yields almost no mapping."
+  ]
+}

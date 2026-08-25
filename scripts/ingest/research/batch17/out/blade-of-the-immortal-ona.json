@@ -1,0 +1,458 @@
+{
+  "series_id": "blade-of-the-immortal-ona",
+  "summary": "The 2019 Amazon ONA is a whole-run adaptation: 24 episodes for the manga's 207 installments (Antelude 'Criminal' = ch 0 plus Acts 1-205 plus the Final Act = ch 206, i.e. the chapter-number space the entry already uses, ending at 206 / JP tankobon 30). No published per-episode chapter map exists, so the lattice here is built by triangulating three keys: episode titles that are verbatim manga act titles (ja.wikipedia episode table vs the Wikipedia act list), fandom character infoboxes that state a manga debut Act together with a 2019 anime debut episode (Araya/Renzo Act 14 -> ep 6; Habaki, Hyakurin, Giichi Act 21 -> ep 7), and Dark Horse's per-volume publisher synopses mapped onto act numbers via the English volume list. The one real structural surprise is early: the anime rearranges. Ep 2 adapts acts 2-3 (Sori, then the Magatsu blacksmith duel), ep 3 jumps ahead to 'Dreamsong' (7-11, Makie) and ep 4 to 'Rin's Bane' (12-13), and only then does ep 5 go back and animate 'Cry of the Worm' (4-6, Eiku Shizuma) — the 2008 anime's act-titled eps 6-7 independently pin that arc's content. From ep 8 the show is linear but ferociously abridged: 'The Gathering' (32-45) becomes one episode with Manji's whole parallel fight cut, six Dark Horse volumes of prison material (99-134) become four episodes, and the last three episodes carry acts 175-206. Every anchor from ep 8 on is an arc-span derivation, marked medium; boundaries inside an arc may be off by a chapter or two, and I have flagged the two weakest joins (ep 18's internal reordering and ep 22's end). The stored ep-24 anchor (206, vol 30) is confirmed; no repair is proposed.",
+  "anchors": [
+    {
+      "episode": 1,
+      "end_chapter": 1,
+      "start_chapter": 0,
+      "chapters_adapted": "0-1",
+      "volume": 1,
+      "confidence": "high",
+      "note": "Antelude 'Criminal' (Machi/Yaobikuni) + Act 1 'Conquest' (Asano massacre, Rin hires Manji, Sabato Kuroi slain); Kuroi's manga debut is Act 1 per fandom infobox.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Blade_of_the_Immortal_(2019_TV_series)",
+        "https://en.wikipedia.org/wiki/List_of_Blade_of_the_Immortal_chapters",
+        "https://boti.fandom.com/api.php?action=parse&page=Sabato_Kuroi&prop=wikitext&format=json",
+        "https://boti.fandom.com/api.php?action=parse&page=Blade_of_the_Immortal:_Episode_1_(2019)&prop=wikitext&format=json"
+      ]
+    },
+    {
+      "episode": 2,
+      "end_chapter": 3,
+      "start_chapter": 2,
+      "chapters_adapted": "2-3",
+      "volume": 1,
+      "confidence": "medium",
+      "note": "Act 2 'Genius' = Master Sori (fandom gives Sori manga debut Act 2 / 2019 ep 2) + Act 3 'Fanatic' = Rin's father's sword at the blacksmith and the Manji-Magatsu draw (Dark Horse vol 2 blurb).",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Blade_of_the_Immortal_(2019_TV_series)",
+        "https://boti.fandom.com/api.php?action=parse&page=Sori&prop=wikitext&format=json",
+        "https://www.darkhorse.com/Books/47-525/Blade-of-the-Immortal-Volume-2-Cry-of-the-Worm-TPB",
+        "https://en.wikipedia.org/wiki/List_of_Blade_of_the_Immortal_chapters"
+      ]
+    },
+    {
+      "episode": 3,
+      "end_chapter": 11,
+      "start_chapter": 7,
+      "chapters_adapted": "7-11",
+      "volume": 3,
+      "confidence": "high",
+      "note": "'Dreamsong' (夢弾) = the Makie Otono-Tachibana arc per Dark Horse vol 3 blurb and Makie's Act 7 debut; anime jumps ahead of acts 4-6.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Blade_of_the_Immortal_(2019_TV_series)",
+        "https://www.darkhorse.com/Books/48-223/Blade-of-the-Immortal-Volume-3-Dreamsong-TPB",
+        "https://en.wikipedia.org/wiki/List_of_Blade_of_the_Immortal_chapters",
+        "https://boti.fandom.com/api.php?action=parse&page=Makie_Otono-Tachibana&prop=wikitext&format=json"
+      ]
+    },
+    {
+      "episode": 4,
+      "end_chapter": 13,
+      "start_chapter": 12,
+      "chapters_adapted": "12-13",
+      "volume": 3,
+      "confidence": "high",
+      "note": "Episode title 斜凜 is the act title of 'Rin's Bane' (acts 12-13); same content as the 2008 anime's act-titled ep 12 斜凜 (Rin meets Anotsu training).",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Blade_of_the_Immortal_(2019_TV_series)",
+        "https://ja.wikipedia.org/wiki/%E7%84%A1%E9%99%90%E3%81%AE%E4%BD%8F%E4%BA%BA",
+        "https://en.wikipedia.org/wiki/List_of_Blade_of_the_Immortal_chapters",
+        "https://boti.fandom.com/api.php?action=parse&page=Blade_of_the_Immortal:_Episode_12&prop=wikitext&format=json"
+      ]
+    },
+    {
+      "episode": 5,
+      "end_chapter": 6,
+      "start_chapter": 4,
+      "chapters_adapted": "4-6",
+      "volume": 2,
+      "confidence": "high",
+      "note": "Episode title 蟲の唄 = acts 4-6 'Cry of the Worm'; the 2008 anime's act-titled eps 6 (蟲の唄) and 7 (三途, the arc's three sub-titles) carry the same Eiku Shizuma story — animated here out of order.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Blade_of_the_Immortal_(2019_TV_series)",
+        "https://en.wikipedia.org/wiki/List_of_Blade_of_the_Immortal_chapters",
+        "https://boti.fandom.com/api.php?action=parse&page=Blade_of_the_Immortal:_Episode_6&prop=wikitext&format=json",
+        "https://boti.fandom.com/api.php?action=parse&page=Blade_of_the_Immortal:_Episode_7&prop=wikitext&format=json"
+      ]
+    },
+    {
+      "episode": 6,
+      "end_chapter": 20,
+      "start_chapter": 14,
+      "chapters_adapted": "14-20",
+      "volume": 5,
+      "confidence": "high",
+      "note": "'On Silent Wings' (羽根は静かに) = the Araya/Renzo Kawakami arc; fandom lists Araya and Renzo manga debut Act 14 with 2019 anime debut episode 6; Dark Horse vol 5 blurb matches (boy, mask maker).",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Blade_of_the_Immortal_(2019_TV_series)",
+        "https://boti.fandom.com/api.php?action=parse&page=Araya_Kawakami&prop=wikitext&format=json",
+        "https://www.darkhorse.com/Books/49-201/Blade-of-the-Immortal-Volume-5-On-Silent-Wings-II-TPB",
+        "https://en.wikipedia.org/wiki/List_of_Blade_of_the_Immortal_chapters"
+      ]
+    },
+    {
+      "episode": 7,
+      "end_chapter": 24,
+      "start_chapter": 21,
+      "chapters_adapted": "21-24",
+      "volume": 5,
+      "confidence": "high",
+      "note": "Habaki, Hyakurin and Giichi all list manga debut Act 21 with 2019 anime debut episode 7 (Shira Act 22); episode closes on Act 24 'Food' (Shira feeding Rin her dog).",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Blade_of_the_Immortal_(2019_TV_series)",
+        "https://boti.fandom.com/api.php?action=parse&page=Kagimura_Habaki&prop=wikitext&format=json",
+        "https://boti.fandom.com/api.php?action=parse&page=Hyakurin&prop=wikitext&format=json",
+        "https://www.darkhorse.com/Books/49-303/Blade-of-the-Immortal-Volume-6-Dark-Shadows-TPB"
+      ]
+    },
+    {
+      "episode": 8,
+      "end_chapter": 31,
+      "start_chapter": 25,
+      "chapters_adapted": "25-31",
+      "volume": 6,
+      "confidence": "medium",
+      "note": "'Heart of Darkness' (25-31): Dark Horse vol 7 blurb = Rin and Manji visit the Mugai-ryu/Akagi HQ under Hyakurin and join forces; episode ends at the Kobotoke trap where Manji takes Shira's hand, the close of JP vol 6.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Blade_of_the_Immortal_(2019_TV_series)",
+        "https://www.darkhorse.com/Books/40-365/Blade-of-the-Immortal-Volume-7-Heart-of-Darkness-TPB",
+        "https://en.wikipedia.org/wiki/List_of_Blade_of_the_Immortal_chapters"
+      ]
+    },
+    {
+      "episode": 9,
+      "end_chapter": 45,
+      "start_chapter": 32,
+      "chapters_adapted": "32-45 (Rin thread only)",
+      "volume": 8,
+      "confidence": "medium",
+      "note": "'The Gathering' compressed to one episode: DH vol 8 = alliance collapses and Rin must pass the checkpoint without Manji, DH vol 9 = the checkpoint interrogation; Manji's parallel fight with the Itto-ryu trio is dropped.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Blade_of_the_Immortal_(2019_TV_series)",
+        "https://www.darkhorse.com/Books/11-166/Blade-of-the-Immortal-Volume-8-The-Gathering-TPB",
+        "https://www.darkhorse.com/Books/11-250/Blade-of-the-Immortal-Volume-9-The-Gathering-II-TPB",
+        "https://en.wikipedia.org/wiki/List_of_Blade_of_the_Immortal_chapters"
+      ]
+    },
+    {
+      "episode": 10,
+      "end_chapter": 57,
+      "start_chapter": 46,
+      "chapters_adapted": "46-57",
+      "volume": 10,
+      "confidence": "medium",
+      "note": "'Secrets'/'Beasts': DH vol 10 (Manji reassembling, seeking a pass) and DH vol 11 (Hyakurin captured and tortured, Giichi's rescue) — episode ends on Hyakurin cutting her hair for Shinriji's grave, the close of 'Beasts' (57).",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Blade_of_the_Immortal_(2019_TV_series)",
+        "https://www.darkhorse.com/Books/11-753/Blade-of-the-Immortal-Volume-10-Secrets-TPB",
+        "https://www.darkhorse.com/Books/11-737/Blade-of-the-Immortal-Volume-11-Beasts-TPB",
+        "https://en.wikipedia.org/wiki/List_of_Blade_of_the_Immortal_chapters"
+      ]
+    },
+    {
+      "episode": 11,
+      "end_chapter": 65,
+      "start_chapter": 58,
+      "chapters_adapted": "58-65",
+      "volume": 11,
+      "confidence": "medium",
+      "note": "Episode title 秋霜 = 'Autumn Frost' (58-63); DH vol 12 = Manji and Magatsu hunting Shira with his hired swordsmen; ends as Rin collapses and is found by Anotsu (64-65).",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Blade_of_the_Immortal_(2019_TV_series)",
+        "https://www.darkhorse.com/Books/12-572/Blade-of-the-Immortal-Volume-12-Autumn-Frost-TPB",
+        "https://en.wikipedia.org/wiki/List_of_Blade_of_the_Immortal_chapters",
+        "https://ja.wikipedia.org/wiki/%E7%84%A1%E9%99%90%E3%81%AE%E4%BD%8F%E4%BA%BA"
+      ]
+    },
+    {
+      "episode": 12,
+      "end_chapter": 79,
+      "start_chapter": 66,
+      "chapters_adapted": "66-79",
+      "volume": 13,
+      "confidence": "medium",
+      "note": "Rin travelling with the tetanus-stricken Anotsu and the Shingyoto-ryu (DH vol 13), climaxing in the Makie/Magatsu/Manji rescue that DH vol 14 'Last Blood' (75-83) describes; episode title 終血 is that arc's act title.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Blade_of_the_Immortal_(2019_TV_series)",
+        "https://www.darkhorse.com/Books/13-319/Blade-of-the-Immortal-Volume-13-Mirror-of-the-Soul-TPB",
+        "https://www.darkhorse.com/Books/10-482/Blade-of-the-Immortal-Volume-14-Last-Blood-TPB",
+        "https://en.wikipedia.org/wiki/List_of_Blade_of_the_Immortal_chapters"
+      ]
+    },
+    {
+      "episode": 13,
+      "end_chapter": 92,
+      "start_chapter": 80,
+      "chapters_adapted": "80-92",
+      "volume": 15,
+      "confidence": "medium",
+      "note": "Banquet massacre and Manji's capture, ending exactly where DH vol 16 opens (Doa Yoshino and Isaku arriving at Rin's hut, act 92); the 'Trickster' kidnapping (84-91, DH vol 15) is not animated.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Blade_of_the_Immortal_(2019_TV_series)",
+        "https://www.darkhorse.com/Books/13-387/Blade-of-the-Immortal-Volume-15-Trickster-TPB",
+        "https://www.darkhorse.com/Books/14-389/Blade-of-the-Immortal-Volume-16-Shortcut",
+        "https://en.wikipedia.org/wiki/List_of_Blade_of_the_Immortal_chapters"
+      ]
+    },
+    {
+      "episode": 14,
+      "end_chapter": 104,
+      "start_chapter": 93,
+      "chapters_adapted": "93-104",
+      "volume": 16,
+      "confidence": "medium",
+      "note": "Prison arc opens: DH vol 16 (Rin searching Habaki's stronghold while the examiners begin testing Manji) into DH vol 17 'On the Perfection of Anatomy' (99-104, Burando/Dewanosuke experiments).",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Blade_of_the_Immortal_(2019_TV_series)",
+        "https://www.darkhorse.com/Books/14-389/Blade-of-the-Immortal-Volume-16-Shortcut",
+        "https://www.darkhorse.com/Books/14-641/Blade-of-the-Immortal-Volume-17-On-the-Perfection-of-Anatomy",
+        "https://en.wikipedia.org/wiki/List_of_Blade_of_the_Immortal_chapters"
+      ]
+    },
+    {
+      "episode": 15,
+      "end_chapter": 113,
+      "start_chapter": 105,
+      "chapters_adapted": "105-113",
+      "volume": 17,
+      "confidence": "medium",
+      "note": "DH vol 18 'The Sparrow Net' (105-113): experiments continue with Asaemon, Burando goes half-mad, Rin hunted by Edo police while travelling with Doa and Isaku.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Blade_of_the_Immortal_(2019_TV_series)",
+        "https://www.darkhorse.com/Books/15-025/Blade-of-the-Immortal-Volume-18-The-Sparrow-Net",
+        "https://en.wikipedia.org/wiki/List_of_Blade_of_the_Immortal_chapters"
+      ]
+    },
+    {
+      "episode": 16,
+      "end_chapter": 127,
+      "start_chapter": 114,
+      "chapters_adapted": "114-127",
+      "volume": 19,
+      "confidence": "medium",
+      "note": "'Badger Hole' (114-118, DH vol 19: Rin and Doa penetrate Edo Castle, Ozuhan the new Itto-ryu warrior) plus 'Otter Holt'/'Demon Lair' opening (119-127, DH vol 20: Doa's past, Isaku's severed body).",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Blade_of_the_Immortal_(2019_TV_series)",
+        "https://www.darkhorse.com/Books/15-255/Blade-of-the-Immortal-Volume-19-Badger-Hole",
+        "https://www.darkhorse.com/Books/15-578/Blade-of-the-Immortal-Volume-20-Demon-Lair",
+        "https://en.wikipedia.org/wiki/List_of_Blade_of_the_Immortal_chapters"
+      ]
+    },
+    {
+      "episode": 17,
+      "end_chapter": 134,
+      "start_chapter": 128,
+      "chapters_adapted": "128-134",
+      "volume": 20,
+      "confidence": "medium",
+      "note": "DH vol 21 'Demon Lair II' matches the episode beat for beat (Asaemon vs Manji and Doa, reborn Isaku, flooding tunnels, Burando destroying his notes); ends on act 134, the 'Perfection of Anatomy' conclusion and the close of JP vol 20.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Blade_of_the_Immortal_(2019_TV_series)",
+        "https://www.darkhorse.com/Books/16-045/Blade-of-the-Immortal-Volume-21-Demon-Lair-II",
+        "https://en.wikipedia.org/wiki/List_of_Blade_of_the_Immortal_chapters"
+      ]
+    },
+    {
+      "episode": 18,
+      "end_chapter": 148,
+      "start_chapter": 135,
+      "chapters_adapted": "135-148",
+      "volume": 22,
+      "confidence": "medium",
+      "note": "DH vol 22 'Footsteps' (Habaki's death sentence, the Rokki-dan formed, the Kagimura family suicide) plus the booby-trapped dojo pursuit that DH vol 23 (142-148) describes; the anime ends the episode on the vol-22 material, so internal order differs from the manga.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Blade_of_the_Immortal_(2019_TV_series)",
+        "https://www.darkhorse.com/Books/16-623/Blade-of-the-Immortal-Volume-22-Footsteps",
+        "https://www.darkhorse.com/Books/16-625/Blade-of-the-Immortal-Volume-23-Scarlet-Swords",
+        "https://en.wikipedia.org/wiki/List_of_Blade_of_the_Immortal_chapters"
+      ]
+    },
+    {
+      "episode": 19,
+      "end_chapter": 155,
+      "start_chapter": 149,
+      "chapters_adapted": "149-155",
+      "volume": 23,
+      "confidence": "medium",
+      "note": "DH vol 24 'Massacre' (149-155) matches exactly: Anotsu's feint to Satsuma, the decoy Itto-ryu Rin and Manji follow, and the raid on Edo Castle; episode title 鏖 is the act title of 'Massacre' (151-154).",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Blade_of_the_Immortal_(2019_TV_series)",
+        "https://www.darkhorse.com/Books/17-290/Blade-of-the-Immortal-Volume-24-Massacre-TPB",
+        "https://en.wikipedia.org/wiki/List_of_Blade_of_the_Immortal_chapters"
+      ]
+    },
+    {
+      "episode": 20,
+      "end_chapter": 169,
+      "start_chapter": 156,
+      "chapters_adapted": "156-169",
+      "volume": 25,
+      "confidence": "medium",
+      "note": "DH vols 25-26: Manji vs Shira and Rin in the lake, through Shira's death — act 168 is literally 'Food (Part 2)', the dogs devouring him, and 169 'Wings, Without Wind' the Renzo coda.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Blade_of_the_Immortal_(2019_TV_series)",
+        "https://www.darkhorse.com/Books/17-291/Blade-of-the-Immortal-Volume-25-Snowfall-at-Dawn-trade-paperback-collection",
+        "https://www.darkhorse.com/Books/17-292/Blade-of-the-Immortal-Vol-26-Blizzard-TPB",
+        "https://en.wikipedia.org/wiki/List_of_Blade_of_the_Immortal_chapters"
+      ]
+    },
+    {
+      "episode": 21,
+      "end_chapter": 174,
+      "start_chapter": 170,
+      "chapters_adapted": "170-174",
+      "volume": 26,
+      "confidence": "medium",
+      "note": "DH vol 27 opening: 'Mist on the Spider's Web' (170) plus 'The Pots' (171-174) — Koji's carbonic-acid jars that kill Ban and nearly kill Ryo are the arc's title objects.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Blade_of_the_Immortal_(2019_TV_series)",
+        "https://www.darkhorse.com/Books/23-534/Blade-of-the-Immortal-Volume-27-Mist-on-the-Spiders-Web-TPB",
+        "https://en.wikipedia.org/wiki/List_of_Blade_of_the_Immortal_chapters"
+      ]
+    },
+    {
+      "episode": 22,
+      "end_chapter": 190,
+      "start_chapter": 175,
+      "chapters_adapted": "175-190",
+      "volume": 28,
+      "confidence": "medium",
+      "note": "Episode title 十掉尾 = 'The Last Ten' (175-177); then DH vol 28 (three Rokki-dan catch the fleeing Itto-ryu, Abayama vs Giichi) and DH vol 29 (the harbour turned into a port of death, Makie found on the last boat); END rests on act 190 天乱発 being the shipboard volley.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Blade_of_the_Immortal_(2019_TV_series)",
+        "https://www.darkhorse.com/Books/23-535/Blade-of-the-Immortal-Volume-28-Raining-Chaos-TPB",
+        "https://www.darkhorse.com/Books/23-536/Blade-of-the-Immortal-Volume-29-Beyond-Good-and-Evil-TPB",
+        "https://en.wikipedia.org/wiki/List_of_Blade_of_the_Immortal_chapters"
+      ]
+    },
+    {
+      "episode": 23,
+      "end_chapter": 198,
+      "start_chapter": 191,
+      "chapters_adapted": "191-198",
+      "volume": 30,
+      "confidence": "medium",
+      "note": "DH vol 30 'Vigilance' matches (Habaki vs Anotsu, Manji and Rin against Arashino, Makie fending off Edo henchmen); episode title 焉舞百景 = 'One Hundred Dances' (196-198) and it ends as Makie is shot, immediately before act 199 'Glorious Death in Winter Thunder'.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Blade_of_the_Immortal_(2019_TV_series)",
+        "https://www.darkhorse.com/Books/24-211/Blade-of-the-Immortal-Volume-30-Vigilance-TPB",
+        "https://en.wikipedia.org/wiki/List_of_Blade_of_the_Immortal_chapters",
+        "https://ja.wikipedia.org/wiki/%E7%84%A1%E9%99%90%E3%81%AE%E4%BD%8F%E4%BA%BA"
+      ]
+    },
+    {
+      "episode": 24,
+      "end_chapter": 206,
+      "start_chapter": 199,
+      "chapters_adapted": "199-206",
+      "volume": 30,
+      "confidence": "high",
+      "note": "Final Act (206, 最終幕 卍と凜): Makie's death (199-200 'Glorious Death in Winter Thunder'), Hanabusa and Kagimura killed, Manji vs Anotsu, Rin's kill and the 1948 coda — DH vol 31 'Final Curtain' (198-206); confirms the stored ep-24 anchor of 206 / vol 30.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Blade_of_the_Immortal_(2019_TV_series)",
+        "https://www.darkhorse.com/Books/24-212/Blade-of-the-Immortal-Volume-31-Final-Curtain-TPB",
+        "https://en.wikipedia.org/wiki/List_of_Blade_of_the_Immortal_chapters"
+      ]
+    }
+  ],
+  "continue_points": [
+    {
+      "episode": 3,
+      "continue_chapter": 12,
+      "note": "Ep 3 adapted 7-11 but 4-6 are still unanimated; the anime covers them in ep 5, so a viewer staying in step reads on at 12 and back-fills 4-6 after ep 5."
+    },
+    {
+      "episode": 4,
+      "continue_chapter": 4,
+      "note": "After ep 4 the only gap left below the frontier is 4-6, which ep 5 animates next — reader in parity picks up the skipped 'Cry of the Worm' here."
+    },
+    {
+      "episode": 5,
+      "continue_chapter": 14,
+      "note": "Ep 5 backfills 4-6, so END+1 would be wrong; furthest first-time coverage is act 13, resume at 14."
+    }
+  ],
+  "annotations": [
+    {
+      "episodes": [
+        3,
+        4,
+        5
+      ],
+      "kind": "rearranged",
+      "chapters": "4-6",
+      "note": "'Cry of the Worm' (Eiku Shizuma) is held back and animated in ep 5, after Dreamsong (7-11) and Rin's Bane (12-13)."
+    },
+    {
+      "episodes": [
+        1
+      ],
+      "kind": "abridged",
+      "chapters": "0-1",
+      "note": "Ep 1 telescopes the prologue and Act 1 (Machi, the Asano massacre, hiring Manji, Sabato Kuroi) into a single episode."
+    },
+    {
+      "episodes": [
+        9,
+        10
+      ],
+      "kind": "abridged",
+      "chapters": "32-57",
+      "note": "Four Dark Horse volumes (The Gathering I-II, Secrets, Beasts) in two episodes; Manji's dismemberment by the Itto-ryu trio is dropped entirely."
+    },
+    {
+      "episodes": [
+        12,
+        13
+      ],
+      "kind": "abridged",
+      "chapters": "66-92",
+      "note": "Anotsu's Shingyoto-ryu marriage arc and the whole 'Trickster' kidnapping (84-91) are compressed away; only the Giichi confrontation and Manji's capture survive."
+    },
+    {
+      "episodes": [
+        14,
+        15,
+        16,
+        17
+      ],
+      "kind": "abridged",
+      "chapters": "93-134",
+      "note": "The prison/immortality-experiment block — six Dark Horse volumes (Shortcut, Perfection of Anatomy, Sparrow Net, Badger Hole, Demon Lair I-II) — is delivered in four episodes."
+    },
+    {
+      "episodes": [
+        18,
+        19
+      ],
+      "kind": "abridged",
+      "chapters": "135-155",
+      "note": "Rokki-dan formation, the trap-laden pursuit (142-148) and the Edo Castle raid in two episodes; ep 18 also plays its vol-22 material after vol-23 material."
+    },
+    {
+      "episodes": [
+        22,
+        23,
+        24
+      ],
+      "kind": "abridged",
+      "chapters": "175-206",
+      "note": "The entire Nakaminato endgame (four Dark Horse volumes) in three episodes; reviewers flag the closing stretch as the most compressed in the show."
+    }
+  ],
+  "type_corrections": [],
+  "repairs": [],
+  "structure": {
+    "notes": "Single component, one season, eps 1-24 = OUR numbering with no OVAs/specials, so no conversion was needed. Chapter space used is the Japanese 'Act' numbering: Antelude 'Criminal' = 0, Acts 1-205, Final Act = 206 (207 installments), which is the space the entry's stored max (206) and the Wikipedia/fandom act lists share. Volumes quoted are the JAPANESE tankobon (30 vols), matching the context file's boundaries and the stored ep-24 vol 30; Dark Horse's English edition splits the same acts across 31 volumes (DH vol 1 = acts 0-2, DH vol 31 = 198-206) and was used only as a content key, never as the volume number. Note the context file's boundary list jumps from 'v29: 192-197' to 'v31: 198-?': JP vol 30 is acts 198-206, and '31' looks like a leak of the Dark Horse volume count. Sequel warning respected: 'Blade of the Immortal: Bakumatsu Arc' (10 vols, 2019-2024) has its own chapter space and contributes nothing here.",
+    "order_only": []
+  },
+  "flags_for_sean": [
+    "No public per-episode chapter map exists for this ONA (checked reddit/CBR-style 'where to continue' articles, ANN, MAL, fandom episode pages whose 'chapters=' fields are all empty). Anchors from ep 8 onward are arc-span derivations from Dark Horse volume synopses + episode summaries; treat within-arc boundaries as +/- a chapter or two.",
+    "Ep 22 END=190 is the weakest link: it rests on act 190 天乱発 ('Heavenly Fire') being the volley fired from the ships that ends ep 22 and opens ep 23. If that reading is wrong the true END is somewhere in 185-191.",
+    "Ep 18 plays material out of manga order (booby-trapped dojo from DH vol 23 / acts 142-148 before the Kagimura family suicide from DH vol 22 / ~act 141). END recorded as 148 = furthest covered, per the running-order rule; happy to drop it back to 141 if you prefer the conservative read.",
+    "Context volume table: 'v31: 198-?' should read 'v30: 198-206' (JP tankobon numbering). Not an anchor field, so no repair entry filed — flagging for whoever maintains the boundary source.",
+    "Stored anchor ep 24 -> 206 / vol 30 (source mu) is independently confirmed; it is restated here as a high-confidence anchor with START=199 so the finale gets a real span instead of a bare endpoint."
+  ]
+}

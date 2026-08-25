@@ -1,0 +1,2417 @@
+{
+ "series_id": "detective-conan",
+ "summary": "A 132-anchor checkpoint lattice over episodes 1-1205, built from Detective Conan World's per-episode 'manga-source' field (V<vol> F<file>, plus absolute file numbers) converted to global chapter numbers with en-Wikipedia's volume lists (vols 1-108 = chapters 1-1154, continuous) and cross-checked episode-by-episode against ja-Wikipedia's 原作 column. DCW's own Manga Legend states File = chapter, and the identity was verified numerically at 627 of 631 manga episodes (the 4 residuals are case-span vs episode-span rows, not numbering errors), plus a 10/10 reverse check against DCW's Volume pages. Our episode numbering matches DCW's INTERNATIONAL column exactly across all 1207 rows (the Japanese broadcast count runs ~57 higher by ep 521 and was NOT used); air dates agree on 1196/1207 and every exception is a same-title row. The dominant structural fact is that Detective Conan adapts cases out of publication order - 201 of 631 manga episodes start below the running-maximum chapter - so END+1 is not a safe resume; continue_points are supplied for 80 anchors. Coverage through ep 1205 is chapters 1-1128 complete except chapter 594, which the TV series never animated. Our stored AFL types agree with DCW's manga-source on all 1207 rows (631 canon = manga, 569 filler = TV Original); the only residuals are 6 spinoff-adapting rows and Episode ZERO, all annotated rather than anchored.",
+ "anchors": [
+  {
+   "episode": 1,
+   "end_chapter": 1,
+   "start_chapter": 1,
+   "chapters_adapted": "1",
+   "volume": 1,
+   "confidence": "high",
+   "note": "DCW manga-source V1 F1 = ch 1 (en-WP: vol 1 starts at ch 1). END = last file of the case, attested by both DCW (per-episode) and ja.WP (per-case).",
+   "sources": [
+    "https://www.detectiveconanworld.com/wiki/Season_1",
+    "https://en.wikipedia.org/wiki/List_of_Case_Closed_volumes_(1%E2%80%9320)",
+    "https://ja.wikipedia.org/wiki/%E5%90%8D%E6%8E%A2%E5%81%B5%E3%82%B3%E3%83%8A%E3%83%B3%E3%81%AE%E3%82%A2%E3%83%8B%E3%83%A1%E3%82%A8%E3%83%94%E3%82%BD%E3%83%BC%E3%83%89%E4%B8%80%E8%A6%A7"
+   ]
+  },
+  {
+   "episode": 5,
+   "end_chapter": 35,
+   "start_chapter": 33,
+   "chapters_adapted": "33-35",
+   "volume": 4,
+   "confidence": "high",
+   "note": "DCW manga-source V4 F4-V4 F6 = ch 33-35 (en-WP: vol 4 starts at ch 30). END = last file of the case, attested by both DCW (per-episode) and ja.WP (per-case).",
+   "sources": [
+    "https://www.detectiveconanworld.com/wiki/Season_1",
+    "https://en.wikipedia.org/wiki/List_of_Case_Closed_volumes_(1%E2%80%9320)",
+    "https://ja.wikipedia.org/wiki/%E5%90%8D%E6%8E%A2%E5%81%B5%E3%82%B3%E3%83%8A%E3%83%B3%E3%81%AE%E3%82%A2%E3%83%8B%E3%83%A1%E3%82%A8%E3%83%94%E3%82%BD%E3%83%BC%E3%83%89%E4%B8%80%E8%A6%A7"
+   ]
+  },
+  {
+   "episode": 10,
+   "end_chapter": 71,
+   "start_chapter": 68,
+   "chapters_adapted": "68-71",
+   "volume": 8,
+   "confidence": "high",
+   "note": "DCW manga-source V7 F8-V8 F1 = ch 68-71 (en-WP: vol 8 starts at ch 71). END = last file of the case, attested by both DCW (per-episode) and ja.WP (per-case).",
+   "sources": [
+    "https://www.detectiveconanworld.com/wiki/Season_1",
+    "https://en.wikipedia.org/wiki/List_of_Case_Closed_volumes_(1%E2%80%9320)",
+    "https://ja.wikipedia.org/wiki/%E5%90%8D%E6%8E%A2%E5%81%B5%E3%82%B3%E3%83%8A%E3%83%B3%E3%81%AE%E3%82%A2%E3%83%8B%E3%83%A1%E3%82%A8%E3%83%94%E3%82%BD%E3%83%BC%E3%83%89%E4%B8%80%E8%A6%A7"
+   ]
+  },
+  {
+   "episode": 15,
+   "end_chapter": 58,
+   "start_chapter": 56,
+   "chapters_adapted": "56-58",
+   "volume": 6,
+   "confidence": "high",
+   "note": "DCW manga-source V6 F6-V6 F8 = ch 56-58 (en-WP: vol 6 starts at ch 51). END = last file of the case, attested by both DCW (per-episode) and ja.WP (per-case).",
+   "sources": [
+    "https://www.detectiveconanworld.com/wiki/Season_1",
+    "https://en.wikipedia.org/wiki/List_of_Case_Closed_volumes_(1%E2%80%9320)",
+    "https://ja.wikipedia.org/wiki/%E5%90%8D%E6%8E%A2%E5%81%B5%E3%82%B3%E3%83%8A%E3%83%B3%E3%81%AE%E3%82%A2%E3%83%8B%E3%83%A1%E3%82%A8%E3%83%94%E3%82%BD%E3%83%BC%E3%83%89%E4%B8%80%E8%A6%A7"
+   ]
+  },
+  {
+   "episode": 20,
+   "end_chapter": 19,
+   "start_chapter": 17,
+   "chapters_adapted": "17-19",
+   "volume": 2,
+   "confidence": "high",
+   "note": "DCW manga-source V2 F8-V2 F10 = ch 17-19 (en-WP: vol 2 starts at ch 10). END = last file of the case, attested by both DCW (per-episode) and ja.WP (per-case).",
+   "sources": [
+    "https://www.detectiveconanworld.com/wiki/Season_1",
+    "https://en.wikipedia.org/wiki/List_of_Case_Closed_volumes_(1%E2%80%9320)",
+    "https://ja.wikipedia.org/wiki/%E5%90%8D%E6%8E%A2%E5%81%B5%E3%82%B3%E3%83%8A%E3%83%B3%E3%81%AE%E3%82%A2%E3%83%8B%E3%83%A1%E3%82%A8%E3%83%94%E3%82%BD%E3%83%BC%E3%83%89%E4%B8%80%E8%A6%A7"
+   ]
+  },
+  {
+   "episode": 28,
+   "end_chapter": 86,
+   "start_chapter": 84,
+   "chapters_adapted": "84-86",
+   "volume": 9,
+   "confidence": "high",
+   "note": "DCW manga-source V9 F4-V9 F6 = ch 84-86 (en-WP: vol 9 starts at ch 81). END = last file of the case, attested by both DCW (per-episode) and ja.WP (per-case).",
+   "sources": [
+    "https://www.detectiveconanworld.com/wiki/Season_1",
+    "https://en.wikipedia.org/wiki/List_of_Case_Closed_volumes_(1%E2%80%9320)",
+    "https://ja.wikipedia.org/wiki/%E5%90%8D%E6%8E%A2%E5%81%B5%E3%82%B3%E3%83%8A%E3%83%B3%E3%81%AE%E3%82%A2%E3%83%8B%E3%83%A1%E3%82%A8%E3%83%94%E3%82%BD%E3%83%BC%E3%83%89%E4%B8%80%E8%A6%A7"
+   ]
+  },
+  {
+   "episode": 32,
+   "end_chapter": 107,
+   "start_chapter": 105,
+   "chapters_adapted": "105-107",
+   "volume": 11,
+   "confidence": "high",
+   "note": "DCW manga-source V11 F5-V11 F7 = ch 105-107 (en-WP: vol 11 starts at ch 101). END = last file of the case, attested by both DCW (per-episode) and ja.WP (per-case).",
+   "sources": [
+    "https://www.detectiveconanworld.com/wiki/Season_1",
+    "https://en.wikipedia.org/wiki/List_of_Case_Closed_volumes_(1%E2%80%9320)",
+    "https://ja.wikipedia.org/wiki/%E5%90%8D%E6%8E%A2%E5%81%B5%E3%82%B3%E3%83%8A%E3%83%B3%E3%81%AE%E3%82%A2%E3%83%8B%E3%83%A1%E3%82%A8%E3%83%94%E3%82%BD%E3%83%BC%E3%83%89%E4%B8%80%E8%A6%A7"
+   ]
+  },
+  {
+   "episode": 39,
+   "end_chapter": 91,
+   "start_chapter": 87,
+   "chapters_adapted": "87-91",
+   "volume": 10,
+   "confidence": "high",
+   "note": "DCW manga-source V9 F7-V10 F1 = ch 87-91 (en-WP: vol 10 starts at ch 91). END = last file of the case, attested by both DCW (per-episode) and ja.WP (per-case).",
+   "sources": [
+    "https://www.detectiveconanworld.com/wiki/Season_1",
+    "https://en.wikipedia.org/wiki/List_of_Case_Closed_volumes_(1%E2%80%9320)",
+    "https://ja.wikipedia.org/wiki/%E5%90%8D%E6%8E%A2%E5%81%B5%E3%82%B3%E3%83%8A%E3%83%B3%E3%81%AE%E3%82%A2%E3%83%8B%E3%83%A1%E3%82%A8%E3%83%94%E3%82%BD%E3%83%BC%E3%83%89%E4%B8%80%E8%A6%A7"
+   ]
+  },
+  {
+   "episode": 42,
+   "end_chapter": 48,
+   "start_chapter": 45,
+   "chapters_adapted": "45-48",
+   "volume": 5,
+   "confidence": "high",
+   "note": "DCW manga-source V5 F6-V5 F9 = ch 45-48 (en-WP: vol 5 starts at ch 40). END = last file of the case, attested by both DCW (per-episode) and ja.WP (per-case).",
+   "sources": [
+    "https://www.detectiveconanworld.com/wiki/Season_1",
+    "https://en.wikipedia.org/wiki/List_of_Case_Closed_volumes_(1%E2%80%9320)",
+    "https://ja.wikipedia.org/wiki/%E5%90%8D%E6%8E%A2%E5%81%B5%E3%82%B3%E3%83%8A%E3%83%B3%E3%81%AE%E3%82%A2%E3%83%8B%E3%83%A1%E3%82%A8%E3%83%94%E3%82%BD%E3%83%BC%E3%83%89%E4%B8%80%E8%A6%A7"
+   ]
+  },
+  {
+   "episode": 43,
+   "end_chapter": 51,
+   "start_chapter": 49,
+   "chapters_adapted": "49-51",
+   "volume": 6,
+   "confidence": "high",
+   "note": "DCW manga-source V5 F10-V6 F1 = ch 49-51 (en-WP: vol 6 starts at ch 51). END = last file of the case, attested by both DCW (per-episode) and ja.WP (per-case).",
+   "sources": [
+    "https://www.detectiveconanworld.com/wiki/Season_2",
+    "https://en.wikipedia.org/wiki/List_of_Case_Closed_volumes_(1%E2%80%9320)",
+    "https://ja.wikipedia.org/wiki/%E5%90%8D%E6%8E%A2%E5%81%B5%E3%82%B3%E3%83%8A%E3%83%B3%E3%81%AE%E3%82%A2%E3%83%8B%E3%83%A1%E3%82%A8%E3%83%94%E3%82%BD%E3%83%BC%E3%83%89%E4%B8%80%E8%A6%A7"
+   ]
+  },
+  {
+   "episode": 49,
+   "end_chapter": 96,
+   "start_chapter": 92,
+   "chapters_adapted": "92-96",
+   "volume": 10,
+   "confidence": "high",
+   "note": "DCW manga-source V10 F2-V10 F6 = ch 92-96 (en-WP: vol 10 starts at ch 91). END = last file of the case, attested by both DCW (per-episode) and ja.WP (per-case).",
+   "sources": [
+    "https://www.detectiveconanworld.com/wiki/Season_2",
+    "https://en.wikipedia.org/wiki/List_of_Case_Closed_volumes_(1%E2%80%9320)",
+    "https://ja.wikipedia.org/wiki/%E5%90%8D%E6%8E%A2%E5%81%B5%E3%82%B3%E3%83%8A%E3%83%B3%E3%81%AE%E3%82%A2%E3%83%8B%E3%83%A1%E3%82%A8%E3%83%94%E3%82%BD%E3%83%BC%E3%83%89%E4%B8%80%E8%A6%A7"
+   ]
+  },
+  {
+   "episode": 57,
+   "end_chapter": 121,
+   "start_chapter": 117,
+   "chapters_adapted": "117-121",
+   "volume": 13,
+   "confidence": "high",
+   "note": "DCW manga-source V12 F7-V13 F1 = ch 117-121 (en-WP: vol 13 starts at ch 121). END = last file of the case, attested by both DCW (per-episode) and ja.WP (per-case).",
+   "sources": [
+    "https://www.detectiveconanworld.com/wiki/Season_2",
+    "https://en.wikipedia.org/wiki/List_of_Case_Closed_volumes_(1%E2%80%9320)",
+    "https://ja.wikipedia.org/wiki/%E5%90%8D%E6%8E%A2%E5%81%B5%E3%82%B3%E3%83%8A%E3%83%B3%E3%81%AE%E3%82%A2%E3%83%8B%E3%83%A1%E3%82%A8%E3%83%94%E3%82%BD%E3%83%BC%E3%83%89%E4%B8%80%E8%A6%A7"
+   ]
+  },
+  {
+   "episode": 63,
+   "end_chapter": 130,
+   "start_chapter": 128,
+   "chapters_adapted": "128-130",
+   "volume": 13,
+   "confidence": "high",
+   "note": "DCW manga-source V13 F8-V13 F10 = ch 128-130 (en-WP: vol 13 starts at ch 121). END = last file of the case, attested by both DCW (per-episode) and ja.WP (per-case).",
+   "sources": [
+    "https://www.detectiveconanworld.com/wiki/Season_2",
+    "https://en.wikipedia.org/wiki/List_of_Case_Closed_volumes_(1%E2%80%9320)",
+    "https://ja.wikipedia.org/wiki/%E5%90%8D%E6%8E%A2%E5%81%B5%E3%82%B3%E3%83%8A%E3%83%B3%E3%81%AE%E3%82%A2%E3%83%8B%E3%83%A1%E3%82%A8%E3%83%94%E3%82%BD%E3%83%BC%E3%83%89%E4%B8%80%E8%A6%A7"
+   ]
+  },
+  {
+   "episode": 72,
+   "end_chapter": 124,
+   "start_chapter": 122,
+   "chapters_adapted": "122-124",
+   "volume": 13,
+   "confidence": "high",
+   "note": "DCW manga-source V13 F2-V13 F4 = ch 122-124 (en-WP: vol 13 starts at ch 121). END = last file of the case, attested by both DCW (per-episode) and ja.WP (per-case).",
+   "sources": [
+    "https://www.detectiveconanworld.com/wiki/Season_2",
+    "https://en.wikipedia.org/wiki/List_of_Case_Closed_volumes_(1%E2%80%9320)",
+    "https://ja.wikipedia.org/wiki/%E5%90%8D%E6%8E%A2%E5%81%B5%E3%82%B3%E3%83%8A%E3%83%B3%E3%81%AE%E3%82%A2%E3%83%8B%E3%83%A1%E3%82%A8%E3%83%94%E3%82%BD%E3%83%BC%E3%83%89%E4%B8%80%E8%A6%A7"
+   ]
+  },
+  {
+   "episode": 78,
+   "end_chapter": 153,
+   "start_chapter": 152,
+   "chapters_adapted": "152-153",
+   "volume": 16,
+   "confidence": "high",
+   "note": "DCW manga-source V16 F2-V16 F3 = ch 152-153 (en-WP: vol 16 starts at ch 151). END = last file of the case, attested by both DCW (per-episode) and ja.WP (per-case).",
+   "sources": [
+    "https://www.detectiveconanworld.com/wiki/Season_2",
+    "https://en.wikipedia.org/wiki/List_of_Case_Closed_volumes_(1%E2%80%9320)",
+    "https://ja.wikipedia.org/wiki/%E5%90%8D%E6%8E%A2%E5%81%B5%E3%82%B3%E3%83%8A%E3%83%B3%E3%81%AE%E3%82%A2%E3%83%8B%E3%83%A1%E3%82%A8%E3%83%94%E3%82%BD%E3%83%BC%E3%83%89%E4%B8%80%E8%A6%A7"
+   ]
+  },
+  {
+   "episode": 85,
+   "end_chapter": 143,
+   "start_chapter": 139,
+   "chapters_adapted": "139-143",
+   "volume": 15,
+   "confidence": "high",
+   "note": "DCW manga-source V14 F9-V15 F3 = ch 139-143 (en-WP: vol 15 starts at ch 141). END = last file of the case, attested by both DCW (per-episode) and ja.WP (per-case).",
+   "sources": [
+    "https://www.detectiveconanworld.com/wiki/Season_2",
+    "https://en.wikipedia.org/wiki/List_of_Case_Closed_volumes_(1%E2%80%9320)",
+    "https://ja.wikipedia.org/wiki/%E5%90%8D%E6%8E%A2%E5%81%B5%E3%82%B3%E3%83%8A%E3%83%B3%E3%81%AE%E3%82%A2%E3%83%8B%E3%83%A1%E3%82%A8%E3%83%94%E3%82%BD%E3%83%BC%E3%83%89%E4%B8%80%E8%A6%A7"
+   ]
+  },
+  {
+   "episode": 91,
+   "end_chapter": 166,
+   "start_chapter": 166,
+   "chapters_adapted": "166",
+   "volume": 17,
+   "confidence": "high",
+   "note": "DCW manga-source V17 F6 = ch 166 (en-WP: vol 17 starts at ch 161). END = last file of the case, attested by both DCW (per-episode) and ja.WP (per-case).",
+   "sources": [
+    "https://www.detectiveconanworld.com/wiki/Season_3",
+    "https://en.wikipedia.org/wiki/List_of_Case_Closed_volumes_(1%E2%80%9320)",
+    "https://ja.wikipedia.org/wiki/%E5%90%8D%E6%8E%A2%E5%81%B5%E3%82%B3%E3%83%8A%E3%83%B3%E3%81%AE%E3%82%A2%E3%83%8B%E3%83%A1%E3%82%A8%E3%83%94%E3%82%BD%E3%83%BC%E3%83%89%E4%B8%80%E8%A6%A7"
+   ]
+  },
+  {
+   "episode": 100,
+   "end_chapter": 175,
+   "start_chapter": 173,
+   "chapters_adapted": "173-175",
+   "volume": 18,
+   "confidence": "high",
+   "note": "DCW manga-source V18 F3-V18 F5 = ch 173-175 (en-WP: vol 18 starts at ch 171). END = last file of the case, attested by both DCW (per-episode) and ja.WP (per-case).",
+   "sources": [
+    "https://www.detectiveconanworld.com/wiki/Season_3",
+    "https://en.wikipedia.org/wiki/List_of_Case_Closed_volumes_(1%E2%80%9320)",
+    "https://ja.wikipedia.org/wiki/%E5%90%8D%E6%8E%A2%E5%81%B5%E3%82%B3%E3%83%8A%E3%83%B3%E3%81%AE%E3%82%A2%E3%83%8B%E3%83%A1%E3%82%A8%E3%83%94%E3%82%BD%E3%83%BC%E3%83%89%E4%B8%80%E8%A6%A7"
+   ]
+  },
+  {
+   "episode": 104,
+   "end_chapter": 169,
+   "start_chapter": 167,
+   "chapters_adapted": "167-169",
+   "volume": 17,
+   "confidence": "high",
+   "note": "DCW manga-source V17 F7-V17 F9 = ch 167-169 (en-WP: vol 17 starts at ch 161). END = last file of the case, attested by both DCW (per-episode) and ja.WP (per-case).",
+   "sources": [
+    "https://www.detectiveconanworld.com/wiki/Season_3",
+    "https://en.wikipedia.org/wiki/List_of_Case_Closed_volumes_(1%E2%80%9320)",
+    "https://ja.wikipedia.org/wiki/%E5%90%8D%E6%8E%A2%E5%81%B5%E3%82%B3%E3%83%8A%E3%83%B3%E3%81%AE%E3%82%A2%E3%83%8B%E3%83%A1%E3%82%A8%E3%83%94%E3%82%BD%E3%83%BC%E3%83%89%E4%B8%80%E8%A6%A7"
+   ]
+  },
+  {
+   "episode": 115,
+   "end_chapter": 165,
+   "start_chapter": 163,
+   "chapters_adapted": "163-165",
+   "volume": 17,
+   "confidence": "high",
+   "note": "DCW manga-source V17 F3-V17 F5 = ch 163-165 (en-WP: vol 17 starts at ch 161). END = last file of the case, attested by both DCW (per-episode) and ja.WP (per-case).",
+   "sources": [
+    "https://www.detectiveconanworld.com/wiki/Season_3",
+    "https://en.wikipedia.org/wiki/List_of_Case_Closed_volumes_(1%E2%80%9320)",
+    "https://ja.wikipedia.org/wiki/%E5%90%8D%E6%8E%A2%E5%81%B5%E3%82%B3%E3%83%8A%E3%83%B3%E3%81%AE%E3%82%A2%E3%83%8B%E3%83%A1%E3%82%A8%E3%83%94%E3%82%BD%E3%83%BC%E3%83%89%E4%B8%80%E8%A6%A7"
+   ]
+  },
+  {
+   "episode": 122,
+   "end_chapter": 199,
+   "start_chapter": 197,
+   "chapters_adapted": "197-199",
+   "volume": 20,
+   "confidence": "high",
+   "note": "DCW manga-source V20 F7-V20 F9 = ch 197-199 (en-WP: vol 20 starts at ch 191). END = last file of the case, attested by both DCW (per-episode) and ja.WP (per-case).",
+   "sources": [
+    "https://www.detectiveconanworld.com/wiki/Season_3",
+    "https://en.wikipedia.org/wiki/List_of_Case_Closed_volumes_(1%E2%80%9320)",
+    "https://ja.wikipedia.org/wiki/%E5%90%8D%E6%8E%A2%E5%81%B5%E3%82%B3%E3%83%8A%E3%83%B3%E3%81%AE%E3%82%A2%E3%83%8B%E3%83%A1%E3%82%A8%E3%83%94%E3%82%BD%E3%83%BC%E3%83%89%E4%B8%80%E8%A6%A7"
+   ]
+  },
+  {
+   "episode": 129,
+   "end_chapter": 181,
+   "start_chapter": 176,
+   "chapters_adapted": "176-181",
+   "volume": 19,
+   "confidence": "high",
+   "note": "DCW manga-source V18 F6-V19 F1 = ch 176-181 (en-WP: vol 19 starts at ch 181). END = last file of the case, attested by both DCW (per-episode) and ja.WP (per-case).",
+   "sources": [
+    "https://www.detectiveconanworld.com/wiki/Season_4",
+    "https://en.wikipedia.org/wiki/List_of_Case_Closed_volumes_(1%E2%80%9320)",
+    "https://ja.wikipedia.org/wiki/%E5%90%8D%E6%8E%A2%E5%81%B5%E3%82%B3%E3%83%8A%E3%83%B3%E3%81%AE%E3%82%A2%E3%83%8B%E3%83%A1%E3%82%A8%E3%83%94%E3%82%BD%E3%83%BC%E3%83%89%E4%B8%80%E8%A6%A7"
+   ]
+  },
+  {
+   "episode": 133,
+   "end_chapter": 196,
+   "start_chapter": 192,
+   "chapters_adapted": "192-196",
+   "volume": 20,
+   "confidence": "high",
+   "note": "DCW manga-source V20 F2-V20 F6 = ch 192-196 (en-WP: vol 20 starts at ch 191). END = last file of the case, attested by both DCW (per-episode) and ja.WP (per-case).",
+   "sources": [
+    "https://www.detectiveconanworld.com/wiki/Season_4",
+    "https://en.wikipedia.org/wiki/List_of_Case_Closed_volumes_(1%E2%80%9320)",
+    "https://ja.wikipedia.org/wiki/%E5%90%8D%E6%8E%A2%E5%81%B5%E3%82%B3%E3%83%8A%E3%83%B3%E3%81%AE%E3%82%A2%E3%83%8B%E3%83%A1%E3%82%A8%E3%83%94%E3%82%BD%E3%83%BC%E3%83%89%E4%B8%80%E8%A6%A7"
+   ]
+  },
+  {
+   "episode": 142,
+   "end_chapter": 214,
+   "start_chapter": 213,
+   "chapters_adapted": "213-214",
+   "volume": 22,
+   "confidence": "high",
+   "note": "DCW manga-source V22 F2-V22 F3 = ch 213-214 (en-WP: vol 22 starts at ch 212). END = last file of the case, attested by both DCW (per-episode) and ja.WP (per-case).",
+   "sources": [
+    "https://www.detectiveconanworld.com/wiki/Season_4",
+    "https://en.wikipedia.org/wiki/List_of_Case_Closed_volumes_(21%E2%80%9340)",
+    "https://ja.wikipedia.org/wiki/%E5%90%8D%E6%8E%A2%E5%81%B5%E3%82%B3%E3%83%8A%E3%83%B3%E3%81%AE%E3%82%A2%E3%83%8B%E3%83%A1%E3%82%A8%E3%83%94%E3%82%BD%E3%83%BC%E3%83%89%E4%B8%80%E8%A6%A7"
+   ]
+  },
+  {
+   "episode": 157,
+   "end_chapter": 233,
+   "start_chapter": 231,
+   "chapters_adapted": "231-233",
+   "volume": 24,
+   "confidence": "high",
+   "note": "DCW manga-source V23 F10-V24 F2 = ch 231-233 (en-WP: vol 24 starts at ch 232). END = last file of the case, attested by both DCW (per-episode) and ja.WP (per-case).",
+   "sources": [
+    "https://www.detectiveconanworld.com/wiki/Season_4",
+    "https://en.wikipedia.org/wiki/List_of_Case_Closed_volumes_(21%E2%80%9340)",
+    "https://ja.wikipedia.org/wiki/%E5%90%8D%E6%8E%A2%E5%81%B5%E3%82%B3%E3%83%8A%E3%83%B3%E3%81%AE%E3%82%A2%E3%83%8B%E3%83%A1%E3%82%A8%E3%83%94%E3%82%BD%E3%83%BC%E3%83%89%E4%B8%80%E8%A6%A7"
+   ]
+  },
+  {
+   "episode": 171,
+   "end_chapter": 237,
+   "start_chapter": 236,
+   "chapters_adapted": "236-237",
+   "volume": 24,
+   "confidence": "high",
+   "note": "DCW manga-source V24 F5-V24 F6 = ch 236-237 (en-WP: vol 24 starts at ch 232). END = last file of the case, attested by both DCW (per-episode) and ja.WP (per-case).",
+   "sources": [
+    "https://www.detectiveconanworld.com/wiki/Season_4",
+    "https://en.wikipedia.org/wiki/List_of_Case_Closed_volumes_(21%E2%80%9340)",
+    "https://ja.wikipedia.org/wiki/%E5%90%8D%E6%8E%A2%E5%81%B5%E3%82%B3%E3%83%8A%E3%83%B3%E3%81%AE%E3%82%A2%E3%83%8B%E3%83%A1%E3%82%A8%E3%83%94%E3%82%BD%E3%83%BC%E3%83%89%E4%B8%80%E8%A6%A7"
+   ]
+  },
+  {
+   "episode": 173,
+   "end_chapter": 245,
+   "start_chapter": 243,
+   "chapters_adapted": "243-245",
+   "volume": 25,
+   "confidence": "high",
+   "note": "DCW manga-source V25 F1-V25 F3 = ch 243-245 (en-WP: vol 25 starts at ch 243). END = last file of the case, attested by both DCW (per-episode) and ja.WP (per-case).",
+   "sources": [
+    "https://www.detectiveconanworld.com/wiki/Season_4",
+    "https://en.wikipedia.org/wiki/List_of_Case_Closed_volumes_(21%E2%80%9340)",
+    "https://ja.wikipedia.org/wiki/%E5%90%8D%E6%8E%A2%E5%81%B5%E3%82%B3%E3%83%8A%E3%83%B3%E3%81%AE%E3%82%A2%E3%83%8B%E3%83%A1%E3%82%A8%E3%83%94%E3%82%BD%E3%83%BC%E3%83%89%E4%B8%80%E8%A6%A7"
+   ]
+  },
+  {
+   "episode": 174,
+   "end_chapter": 230,
+   "start_chapter": 225,
+   "chapters_adapted": "225-230",
+   "volume": 23,
+   "confidence": "high",
+   "note": "DCW manga-source V23 F4-V23 F9 = ch 225-230 (en-WP: vol 23 starts at ch 222). END = last file of the case, attested by both DCW (per-episode) and ja.WP (per-case).",
+   "sources": [
+    "https://www.detectiveconanworld.com/wiki/Season_5",
+    "https://en.wikipedia.org/wiki/List_of_Case_Closed_volumes_(21%E2%80%9340)",
+    "https://ja.wikipedia.org/wiki/%E5%90%8D%E6%8E%A2%E5%81%B5%E3%82%B3%E3%83%8A%E3%83%B3%E3%81%AE%E3%82%A2%E3%83%8B%E3%83%A1%E3%82%A8%E3%83%94%E3%82%BD%E3%83%BC%E3%83%89%E4%B8%80%E8%A6%A7"
+   ]
+  },
+  {
+   "episode": 192,
+   "end_chapter": 260,
+   "start_chapter": 258,
+   "chapters_adapted": "258-260",
+   "volume": 26,
+   "confidence": "high",
+   "note": "DCW manga-source V26 F5-V26 F7 = ch 258-260 (en-WP: vol 26 starts at ch 254). END = last file of the case, attested by both DCW (per-episode) and ja.WP (per-case).",
+   "sources": [
+    "https://www.detectiveconanworld.com/wiki/Season_5",
+    "https://en.wikipedia.org/wiki/List_of_Case_Closed_volumes_(21%E2%80%9340)",
+    "https://ja.wikipedia.org/wiki/%E5%90%8D%E6%8E%A2%E5%81%B5%E3%82%B3%E3%83%8A%E3%83%B3%E3%81%AE%E3%82%A2%E3%83%8B%E3%83%A1%E3%82%A8%E3%83%94%E3%82%BD%E3%83%BC%E3%83%89%E4%B8%80%E8%A6%A7"
+   ]
+  },
+  {
+   "episode": 212,
+   "end_chapter": 275,
+   "start_chapter": 273,
+   "chapters_adapted": "273-275",
+   "volume": 28,
+   "confidence": "high",
+   "note": "DCW manga-source V27 F10-V28 F2 = ch 273-275 (en-WP: vol 28 starts at ch 274). END = last file of the case, attested by both DCW (per-episode) and ja.WP (per-case).",
+   "sources": [
+    "https://www.detectiveconanworld.com/wiki/Season_5",
+    "https://en.wikipedia.org/wiki/List_of_Case_Closed_volumes_(21%E2%80%9340)",
+    "https://ja.wikipedia.org/wiki/%E5%90%8D%E6%8E%A2%E5%81%B5%E3%82%B3%E3%83%8A%E3%83%B3%E3%81%AE%E3%82%A2%E3%83%8B%E3%83%A1%E3%82%A8%E3%83%94%E3%82%BD%E3%83%BC%E3%83%89%E4%B8%80%E8%A6%A7"
+   ]
+  },
+  {
+   "episode": 218,
+   "end_chapter": 286,
+   "start_chapter": 284,
+   "chapters_adapted": "284-286",
+   "volume": 29,
+   "confidence": "high",
+   "note": "DCW manga-source V28 F11-V29 F2 = ch 284-286 (en-WP: vol 29 starts at ch 285). END = last file of the case, attested by both DCW (per-episode) and ja.WP (per-case).",
+   "sources": [
+    "https://www.detectiveconanworld.com/wiki/Season_5",
+    "https://en.wikipedia.org/wiki/List_of_Case_Closed_volumes_(21%E2%80%9340)",
+    "https://ja.wikipedia.org/wiki/%E5%90%8D%E6%8E%A2%E5%81%B5%E3%82%B3%E3%83%8A%E3%83%B3%E3%81%AE%E3%82%A2%E3%83%8B%E3%83%A1%E3%82%A8%E3%83%94%E3%82%BD%E3%83%BC%E3%83%89%E4%B8%80%E8%A6%A7"
+   ]
+  },
+  {
+   "episode": 219,
+   "end_chapter": 302,
+   "start_chapter": 299,
+   "chapters_adapted": "299-302",
+   "volume": 30,
+   "confidence": "high",
+   "note": "DCW manga-source V30 F4-V30 F7 = ch 299-302 (en-WP: vol 30 starts at ch 296). END from DCW per-episode split inside a multi-episode case (ja.WP gives only the case span 156-156).",
+   "sources": [
+    "https://www.detectiveconanworld.com/wiki/Season_6",
+    "https://en.wikipedia.org/wiki/List_of_Case_Closed_volumes_(21%E2%80%9340)",
+    "https://ja.wikipedia.org/wiki/%E5%90%8D%E6%8E%A2%E5%81%B5%E3%82%B3%E3%83%8A%E3%83%B3%E3%81%AE%E3%82%A2%E3%83%8B%E3%83%A1%E3%82%A8%E3%83%94%E3%82%BD%E3%83%BC%E3%83%89%E4%B8%80%E8%A6%A7"
+   ]
+  },
+  {
+   "episode": 228,
+   "end_chapter": 307,
+   "start_chapter": 305,
+   "chapters_adapted": "305-307",
+   "volume": 31,
+   "confidence": "high",
+   "note": "DCW manga-source V30 F10-V31 F1 = ch 305-307 (en-WP: vol 31 starts at ch 307). END = last file of the case, attested by both DCW (per-episode) and ja.WP (per-case).",
+   "sources": [
+    "https://www.detectiveconanworld.com/wiki/Season_6",
+    "https://en.wikipedia.org/wiki/List_of_Case_Closed_volumes_(21%E2%80%9340)",
+    "https://ja.wikipedia.org/wiki/%E5%90%8D%E6%8E%A2%E5%81%B5%E3%82%B3%E3%83%8A%E3%83%B3%E3%81%AE%E3%82%A2%E3%83%8B%E3%83%A1%E3%82%A8%E3%83%94%E3%82%BD%E3%83%BC%E3%83%89%E4%B8%80%E8%A6%A7"
+   ]
+  },
+  {
+   "episode": 240,
+   "end_chapter": 298,
+   "start_chapter": 296,
+   "chapters_adapted": "296-298",
+   "volume": 30,
+   "confidence": "high",
+   "note": "DCW manga-source V30 F1-V30 F3 = ch 296-298 (en-WP: vol 30 starts at ch 296). END = last file of the case, attested by both DCW (per-episode) and ja.WP (per-case).",
+   "sources": [
+    "https://www.detectiveconanworld.com/wiki/Season_6",
+    "https://en.wikipedia.org/wiki/List_of_Case_Closed_volumes_(21%E2%80%9340)",
+    "https://ja.wikipedia.org/wiki/%E5%90%8D%E6%8E%A2%E5%81%B5%E3%82%B3%E3%83%8A%E3%83%B3%E3%81%AE%E3%82%A2%E3%83%8B%E3%83%A1%E3%82%A8%E3%83%94%E3%82%BD%E3%83%BC%E3%83%89%E4%B8%80%E8%A6%A7"
+   ]
+  },
+  {
+   "episode": 250,
+   "end_chapter": 324,
+   "start_chapter": 322,
+   "chapters_adapted": "322-324",
+   "volume": 32,
+   "confidence": "high",
+   "note": "DCW manga-source V32 F5-V32 F7 = ch 322-324 (en-WP: vol 32 starts at ch 318). END = last file of the case, attested by both DCW (per-episode) and ja.WP (per-case).",
+   "sources": [
+    "https://www.detectiveconanworld.com/wiki/Season_6",
+    "https://en.wikipedia.org/wiki/List_of_Case_Closed_volumes_(21%E2%80%9340)",
+    "https://ja.wikipedia.org/wiki/%E5%90%8D%E6%8E%A2%E5%81%B5%E3%82%B3%E3%83%8A%E3%83%B3%E3%81%AE%E3%82%A2%E3%83%8B%E3%83%A1%E3%82%A8%E3%83%94%E3%82%BD%E3%83%BC%E3%83%89%E4%B8%80%E8%A6%A7"
+   ]
+  },
+  {
+   "episode": 259,
+   "end_chapter": 327,
+   "start_chapter": 325,
+   "chapters_adapted": "325-327",
+   "volume": 32,
+   "confidence": "high",
+   "note": "DCW manga-source V32 F8-V32 F10 = ch 325-327 (en-WP: vol 32 starts at ch 318). END = last file of the case, attested by both DCW (per-episode) and ja.WP (per-case).",
+   "sources": [
+    "https://www.detectiveconanworld.com/wiki/Season_6",
+    "https://en.wikipedia.org/wiki/List_of_Case_Closed_volumes_(21%E2%80%9340)",
+    "https://ja.wikipedia.org/wiki/%E5%90%8D%E6%8E%A2%E5%81%B5%E3%82%B3%E3%83%8A%E3%83%B3%E3%81%AE%E3%82%A2%E3%83%8B%E3%83%A1%E3%82%A8%E3%83%94%E3%82%BD%E3%83%BC%E3%83%89%E4%B8%80%E8%A6%A7"
+   ]
+  },
+  {
+   "episode": 263,
+   "end_chapter": 321,
+   "start_chapter": 314,
+   "chapters_adapted": "314-321",
+   "volume": 32,
+   "confidence": "high",
+   "note": "DCW manga-source V31 F8-V32 F4 = ch 314-321 (en-WP: vol 32 starts at ch 318). END = last file of the case, attested by both DCW (per-episode) and ja.WP (per-case).",
+   "sources": [
+    "https://www.detectiveconanworld.com/wiki/Season_7",
+    "https://en.wikipedia.org/wiki/List_of_Case_Closed_volumes_(21%E2%80%9340)",
+    "https://ja.wikipedia.org/wiki/%E5%90%8D%E6%8E%A2%E5%81%B5%E3%82%B3%E3%83%8A%E3%83%B3%E3%81%AE%E3%82%A2%E3%83%8B%E3%83%A1%E3%82%A8%E3%83%94%E3%82%BD%E3%83%BC%E3%83%89%E4%B8%80%E8%A6%A7"
+   ]
+  },
+  {
+   "episode": 274,
+   "end_chapter": 357,
+   "start_chapter": 355,
+   "chapters_adapted": "355-357",
+   "volume": 35,
+   "confidence": "high",
+   "note": "DCW manga-source V35 F5-V35 F7 = ch 355-357 (en-WP: vol 35 starts at ch 351). END = last file of the case, attested by both DCW (per-episode) and ja.WP (per-case).",
+   "sources": [
+    "https://www.detectiveconanworld.com/wiki/Season_7",
+    "https://en.wikipedia.org/wiki/List_of_Case_Closed_volumes_(21%E2%80%9340)",
+    "https://ja.wikipedia.org/wiki/%E5%90%8D%E6%8E%A2%E5%81%B5%E3%82%B3%E3%83%8A%E3%83%B3%E3%81%AE%E3%82%A2%E3%83%8B%E3%83%A1%E3%82%A8%E3%83%94%E3%82%BD%E3%83%BC%E3%83%89%E4%B8%80%E8%A6%A7"
+   ]
+  },
+  {
+   "episode": 286,
+   "end_chapter": 354,
+   "start_chapter": 350,
+   "chapters_adapted": "350-354",
+   "volume": 35,
+   "confidence": "high",
+   "note": "DCW manga-source V34 F11-V35 F4 = ch 350-354 (en-WP: vol 35 starts at ch 351). END = last file of the case, attested by both DCW (per-episode) and ja.WP (per-case).",
+   "sources": [
+    "https://www.detectiveconanworld.com/wiki/Season_7",
+    "https://en.wikipedia.org/wiki/List_of_Case_Closed_volumes_(21%E2%80%9340)",
+    "https://ja.wikipedia.org/wiki/%E5%90%8D%E6%8E%A2%E5%81%B5%E3%82%B3%E3%83%8A%E3%83%B3%E3%81%AE%E3%82%A2%E3%83%8B%E3%83%A1%E3%82%A8%E3%83%94%E3%82%BD%E3%83%BC%E3%83%89%E4%B8%80%E8%A6%A7"
+   ]
+  },
+  {
+   "episode": 302,
+   "end_chapter": 368,
+   "start_chapter": 366,
+   "chapters_adapted": "366-368",
+   "volume": 36,
+   "confidence": "high",
+   "note": "DCW manga-source V36 F5-V36 F7 = ch 366-368 (en-WP: vol 36 starts at ch 362). END = last file of the case, attested by both DCW (per-episode) and ja.WP (per-case).",
+   "sources": [
+    "https://www.detectiveconanworld.com/wiki/Season_7",
+    "https://en.wikipedia.org/wiki/List_of_Case_Closed_volumes_(21%E2%80%9340)",
+    "https://ja.wikipedia.org/wiki/%E5%90%8D%E6%8E%A2%E5%81%B5%E3%82%B3%E3%83%8A%E3%83%B3%E3%81%AE%E3%82%A2%E3%83%8B%E3%83%A1%E3%82%A8%E3%83%94%E3%82%BD%E3%83%BC%E3%83%89%E4%B8%80%E8%A6%A7"
+   ]
+  },
+  {
+   "episode": 304,
+   "end_chapter": 373,
+   "start_chapter": 369,
+   "chapters_adapted": "369-373",
+   "volume": 37,
+   "confidence": "high",
+   "note": "DCW manga-source V36 F8-V37 F1 = ch 369-373 (en-WP: vol 37 starts at ch 373). END = last file of the case, attested by both DCW (per-episode) and ja.WP (per-case).",
+   "sources": [
+    "https://www.detectiveconanworld.com/wiki/Season_8",
+    "https://en.wikipedia.org/wiki/List_of_Case_Closed_volumes_(21%E2%80%9340)",
+    "https://ja.wikipedia.org/wiki/%E5%90%8D%E6%8E%A2%E5%81%B5%E3%82%B3%E3%83%8A%E3%83%B3%E3%81%AE%E3%82%A2%E3%83%8B%E3%83%A1%E3%82%A8%E3%83%94%E3%82%BD%E3%83%BC%E3%83%89%E4%B8%80%E8%A6%A7"
+   ]
+  },
+  {
+   "episode": 312,
+   "end_chapter": 386,
+   "start_chapter": 384,
+   "chapters_adapted": "384-386",
+   "volume": 38,
+   "confidence": "high",
+   "note": "DCW manga-source V38 F2-V38 F4 = ch 384-386 (en-WP: vol 38 starts at ch 383). END = last file of the case, attested by both DCW (per-episode) and ja.WP (per-case).",
+   "sources": [
+    "https://www.detectiveconanworld.com/wiki/Season_8",
+    "https://en.wikipedia.org/wiki/List_of_Case_Closed_volumes_(21%E2%80%9340)",
+    "https://ja.wikipedia.org/wiki/%E5%90%8D%E6%8E%A2%E5%81%B5%E3%82%B3%E3%83%8A%E3%83%B3%E3%81%AE%E3%82%A2%E3%83%8B%E3%83%A1%E3%82%A8%E3%83%94%E3%82%BD%E3%83%BC%E3%83%89%E4%B8%80%E8%A6%A7"
+   ]
+  },
+  {
+   "episode": 327,
+   "end_chapter": 397,
+   "start_chapter": 393,
+   "chapters_adapted": "393-397",
+   "volume": 39,
+   "confidence": "high",
+   "note": "DCW manga-source V39 F1-V39 F5 = ch 393-397 (en-WP: vol 39 starts at ch 393). END = last file of the case, attested by both DCW (per-episode) and ja.WP (per-case).",
+   "sources": [
+    "https://www.detectiveconanworld.com/wiki/Season_8",
+    "https://en.wikipedia.org/wiki/List_of_Case_Closed_volumes_(21%E2%80%9340)",
+    "https://ja.wikipedia.org/wiki/%E5%90%8D%E6%8E%A2%E5%81%B5%E3%82%B3%E3%83%8A%E3%83%B3%E3%81%AE%E3%82%A2%E3%83%8B%E3%83%A1%E3%82%A8%E3%83%94%E3%82%BD%E3%83%BC%E3%83%89%E4%B8%80%E8%A6%A7"
+   ]
+  },
+  {
+   "episode": 336,
+   "end_chapter": 419,
+   "start_chapter": 417,
+   "chapters_adapted": "417-419",
+   "volume": 41,
+   "confidence": "high",
+   "note": "DCW manga-source V41 F4-V41 F6 = ch 417-419 (en-WP: vol 41 starts at ch 414). END = last file of the case, attested by both DCW (per-episode) and ja.WP (per-case).",
+   "sources": [
+    "https://www.detectiveconanworld.com/wiki/Season_8",
+    "https://en.wikipedia.org/wiki/List_of_Case_Closed_volumes_(41%E2%80%9360)",
+    "https://ja.wikipedia.org/wiki/%E5%90%8D%E6%8E%A2%E5%81%B5%E3%82%B3%E3%83%8A%E3%83%B3%E3%81%AE%E3%82%A2%E3%83%8B%E3%83%A1%E3%82%A8%E3%83%94%E3%82%BD%E3%83%BC%E3%83%89%E4%B8%80%E8%A6%A7"
+   ]
+  },
+  {
+   "episode": 344,
+   "end_chapter": 428,
+   "start_chapter": 426,
+   "chapters_adapted": "426-428",
+   "volume": 42,
+   "confidence": "high",
+   "note": "DCW manga-source V42 F2-V42 F4 = ch 426-428 (en-WP: vol 42 starts at ch 425). END = last file of the case, attested by both DCW (per-episode) and ja.WP (per-case).",
+   "sources": [
+    "https://www.detectiveconanworld.com/wiki/Season_8",
+    "https://en.wikipedia.org/wiki/List_of_Case_Closed_volumes_(41%E2%80%9360)",
+    "https://ja.wikipedia.org/wiki/%E5%90%8D%E6%8E%A2%E5%81%B5%E3%82%B3%E3%83%8A%E3%83%B3%E3%81%AE%E3%82%A2%E3%83%8B%E3%83%A1%E3%82%A8%E3%83%94%E3%82%BD%E3%83%BC%E3%83%89%E4%B8%80%E8%A6%A7"
+   ]
+  },
+  {
+   "episode": 345,
+   "end_chapter": 434,
+   "start_chapter": 429,
+   "chapters_adapted": "429-434",
+   "volume": 42,
+   "confidence": "high",
+   "note": "DCW manga-source V42 F5-V42 F10 = ch 429-434 (en-WP: vol 42 starts at ch 425). END = last file of the case, attested by both DCW (per-episode) and ja.WP (per-case).",
+   "sources": [
+    "https://www.detectiveconanworld.com/wiki/Season_9",
+    "https://en.wikipedia.org/wiki/List_of_Case_Closed_volumes_(41%E2%80%9360)",
+    "https://ja.wikipedia.org/wiki/%E5%90%8D%E6%8E%A2%E5%81%B5%E3%82%B3%E3%83%8A%E3%83%B3%E3%81%AE%E3%82%A2%E3%83%8B%E3%83%A1%E3%82%A8%E3%83%94%E3%82%BD%E3%83%BC%E3%83%89%E4%B8%80%E8%A6%A7"
+   ]
+  },
+  {
+   "episode": 358,
+   "end_chapter": 406,
+   "start_chapter": 404,
+   "chapters_adapted": "404-406",
+   "volume": 40,
+   "confidence": "high",
+   "note": "DCW manga-source V40 F1-V40 F3 = ch 404-406 (en-WP: vol 40 starts at ch 404). END = last file of the case, attested by both DCW (per-episode) and ja.WP (per-case).",
+   "sources": [
+    "https://www.detectiveconanworld.com/wiki/Season_9",
+    "https://en.wikipedia.org/wiki/List_of_Case_Closed_volumes_(21%E2%80%9340)",
+    "https://ja.wikipedia.org/wiki/%E5%90%8D%E6%8E%A2%E5%81%B5%E3%82%B3%E3%83%8A%E3%83%B3%E3%81%AE%E3%82%A2%E3%83%8B%E3%83%A1%E3%82%A8%E3%83%94%E3%82%BD%E3%83%BC%E3%83%89%E4%B8%80%E8%A6%A7"
+   ]
+  },
+  {
+   "episode": 372,
+   "end_chapter": 465,
+   "start_chapter": 463,
+   "chapters_adapted": "463-465",
+   "volume": 45,
+   "confidence": "high",
+   "note": "DCW manga-source V45 F6-V45 F8 = ch 463-465 (en-WP: vol 45 starts at ch 458). END = last file of the case, attested by both DCW (per-episode) and ja.WP (per-case).",
+   "sources": [
+    "https://www.detectiveconanworld.com/wiki/Season_9",
+    "https://en.wikipedia.org/wiki/List_of_Case_Closed_volumes_(41%E2%80%9360)",
+    "https://ja.wikipedia.org/wiki/%E5%90%8D%E6%8E%A2%E5%81%B5%E3%82%B3%E3%83%8A%E3%83%B3%E3%81%AE%E3%82%A2%E3%83%8B%E3%83%A1%E3%82%A8%E3%83%94%E3%82%BD%E3%83%BC%E3%83%89%E4%B8%80%E8%A6%A7"
+   ]
+  },
+  {
+   "episode": 383,
+   "end_chapter": 449,
+   "start_chapter": 445,
+   "chapters_adapted": "445-449",
+   "volume": 44,
+   "confidence": "high",
+   "note": "DCW manga-source V43 F10-V44 F3 = ch 445-449 (en-WP: vol 44 starts at ch 447). END = last file of the case, attested by both DCW (per-episode) and ja.WP (per-case).",
+   "sources": [
+    "https://www.detectiveconanworld.com/wiki/Season_9",
+    "https://en.wikipedia.org/wiki/List_of_Case_Closed_volumes_(41%E2%80%9360)",
+    "https://ja.wikipedia.org/wiki/%E5%90%8D%E6%8E%A2%E5%81%B5%E3%82%B3%E3%83%8A%E3%83%B3%E3%81%AE%E3%82%A2%E3%83%8B%E3%83%A1%E3%82%A8%E3%83%94%E3%82%BD%E3%83%BC%E3%83%89%E4%B8%80%E8%A6%A7"
+   ]
+  },
+  {
+   "episode": 385,
+   "end_chapter": 474,
+   "start_chapter": 470,
+   "chapters_adapted": "470-474",
+   "volume": 46,
+   "confidence": "high",
+   "note": "DCW manga-source V46 F2-V46 F6 = ch 470-474 (en-WP: vol 46 starts at ch 469). END = last file of the case, attested by both DCW (per-episode) and ja.WP (per-case).",
+   "sources": [
+    "https://www.detectiveconanworld.com/wiki/Season_10",
+    "https://en.wikipedia.org/wiki/List_of_Case_Closed_volumes_(41%E2%80%9360)",
+    "https://ja.wikipedia.org/wiki/%E5%90%8D%E6%8E%A2%E5%81%B5%E3%82%B3%E3%83%8A%E3%83%B3%E3%81%AE%E3%82%A2%E3%83%8B%E3%83%A1%E3%82%A8%E3%83%94%E3%82%BD%E3%83%BC%E3%83%89%E4%B8%80%E8%A6%A7"
+   ]
+  },
+  {
+   "episode": 396,
+   "end_chapter": 478,
+   "start_chapter": 475,
+   "chapters_adapted": "475-478",
+   "volume": 46,
+   "confidence": "high",
+   "note": "DCW manga-source V46 F7-V46 F10 = ch 475-478 (en-WP: vol 46 starts at ch 469). END = last file of the case, attested by both DCW (per-episode) and ja.WP (per-case).",
+   "sources": [
+    "https://www.detectiveconanworld.com/wiki/Season_10",
+    "https://en.wikipedia.org/wiki/List_of_Case_Closed_volumes_(41%E2%80%9360)",
+    "https://ja.wikipedia.org/wiki/%E5%90%8D%E6%8E%A2%E5%81%B5%E3%82%B3%E3%83%8A%E3%83%B3%E3%81%AE%E3%82%A2%E3%83%8B%E3%83%A1%E3%82%A8%E3%83%94%E3%82%BD%E3%83%BC%E3%83%89%E4%B8%80%E8%A6%A7"
+   ]
+  },
+  {
+   "episode": 408,
+   "end_chapter": 490,
+   "start_chapter": 487,
+   "chapters_adapted": "487-490",
+   "volume": 47,
+   "confidence": "high",
+   "note": "DCW manga-source V47 F8-V47 F11 = ch 487-490 (en-WP: vol 47 starts at ch 480). END = last file of the case, attested by both DCW (per-episode) and ja.WP (per-case).",
+   "sources": [
+    "https://www.detectiveconanworld.com/wiki/Season_10",
+    "https://en.wikipedia.org/wiki/List_of_Case_Closed_volumes_(41%E2%80%9360)",
+    "https://ja.wikipedia.org/wiki/%E5%90%8D%E6%8E%A2%E5%81%B5%E3%82%B3%E3%83%8A%E3%83%B3%E3%81%AE%E3%82%A2%E3%83%8B%E3%83%A1%E3%82%A8%E3%83%94%E3%82%BD%E3%83%BC%E3%83%89%E4%B8%80%E8%A6%A7"
+   ]
+  },
+  {
+   "episode": 422,
+   "end_chapter": 412,
+   "start_chapter": 410,
+   "chapters_adapted": "410-412",
+   "volume": 40,
+   "confidence": "high",
+   "note": "DCW manga-source V40 F7-V40 F9 = ch 410-412 (en-WP: vol 40 starts at ch 404). END = last file of the case, attested by both DCW (per-episode) and ja.WP (per-case).",
+   "sources": [
+    "https://www.detectiveconanworld.com/wiki/Season_10",
+    "https://en.wikipedia.org/wiki/List_of_Case_Closed_volumes_(21%E2%80%9340)",
+    "https://ja.wikipedia.org/wiki/%E5%90%8D%E6%8E%A2%E5%81%B5%E3%82%B3%E3%83%8A%E3%83%B3%E3%81%AE%E3%82%A2%E3%83%8B%E3%83%A1%E3%82%A8%E3%83%94%E3%82%BD%E3%83%BC%E3%83%89%E4%B8%80%E8%A6%A7"
+   ]
+  },
+  {
+   "episode": 425,
+   "end_chapter": 504,
+   "start_chapter": 499,
+   "chapters_adapted": "499-504",
+   "volume": 49,
+   "confidence": "high",
+   "note": "DCW manga-source V48 F9-V49 F4 = ch 499-504 (en-WP: vol 49 starts at ch 501). END = last file of the case, attested by both DCW (per-episode) and ja.WP (per-case).",
+   "sources": [
+    "https://www.detectiveconanworld.com/wiki/Season_11",
+    "https://en.wikipedia.org/wiki/List_of_Case_Closed_volumes_(41%E2%80%9360)",
+    "https://ja.wikipedia.org/wiki/%E5%90%8D%E6%8E%A2%E5%81%B5%E3%82%B3%E3%83%8A%E3%83%B3%E3%81%AE%E3%82%A2%E3%83%8B%E3%83%A1%E3%82%A8%E3%83%94%E3%82%BD%E3%83%BC%E3%83%89%E4%B8%80%E8%A6%A7"
+   ]
+  },
+  {
+   "episode": 436,
+   "end_chapter": 517,
+   "start_chapter": 515,
+   "chapters_adapted": "515-517",
+   "volume": 50,
+   "confidence": "high",
+   "note": "DCW manga-source V50 F5-V50 F7 = ch 515-517 (en-WP: vol 50 starts at ch 511). END = last file of the case, attested by both DCW (per-episode) and ja.WP (per-case).",
+   "sources": [
+    "https://www.detectiveconanworld.com/wiki/Season_11",
+    "https://en.wikipedia.org/wiki/List_of_Case_Closed_volumes_(41%E2%80%9360)",
+    "https://ja.wikipedia.org/wiki/%E5%90%8D%E6%8E%A2%E5%81%B5%E3%82%B3%E3%83%8A%E3%83%B3%E3%81%AE%E3%82%A2%E3%83%8B%E3%83%A1%E3%82%A8%E3%83%94%E3%82%BD%E3%83%BC%E3%83%89%E4%B8%80%E8%A6%A7"
+   ]
+  },
+  {
+   "episode": 453,
+   "end_chapter": 534,
+   "start_chapter": 533,
+   "chapters_adapted": "533-534",
+   "volume": 52,
+   "confidence": "high",
+   "note": "DCW manga-source V52 F1-V52 F2 = ch 533-534 (en-WP: vol 52 starts at ch 533). END = last file of the case, attested by both DCW (per-episode) and ja.WP (per-case).",
+   "sources": [
+    "https://www.detectiveconanworld.com/wiki/Season_11",
+    "https://en.wikipedia.org/wiki/List_of_Case_Closed_volumes_(41%E2%80%9360)",
+    "https://ja.wikipedia.org/wiki/%E5%90%8D%E6%8E%A2%E5%81%B5%E3%82%B3%E3%83%8A%E3%83%B3%E3%81%AE%E3%82%A2%E3%83%8B%E3%83%A1%E3%82%A8%E3%83%94%E3%82%BD%E3%83%BC%E3%83%89%E4%B8%80%E8%A6%A7"
+   ]
+  },
+  {
+   "episode": 458,
+   "end_chapter": 543,
+   "start_chapter": 541,
+   "chapters_adapted": "541-543",
+   "volume": 52,
+   "confidence": "high",
+   "note": "DCW manga-source V52 F9-V52 F11 = ch 541-543 (en-WP: vol 52 starts at ch 533). END = last file of the case, attested by both DCW (per-episode) and ja.WP (per-case).",
+   "sources": [
+    "https://www.detectiveconanworld.com/wiki/Season_11",
+    "https://en.wikipedia.org/wiki/List_of_Case_Closed_volumes_(41%E2%80%9360)",
+    "https://ja.wikipedia.org/wiki/%E5%90%8D%E6%8E%A2%E5%81%B5%E3%82%B3%E3%83%8A%E3%83%B3%E3%81%AE%E3%82%A2%E3%83%8B%E3%83%A1%E3%82%A8%E3%83%94%E3%82%BD%E3%83%BC%E3%83%89%E4%B8%80%E8%A6%A7"
+   ]
+  },
+  {
+   "episode": 460,
+   "end_chapter": 549,
+   "start_chapter": 548,
+   "chapters_adapted": "548-549",
+   "volume": 53,
+   "confidence": "high",
+   "note": "DCW manga-source V53 F5-V53 F6 = ch 548-549 (en-WP: vol 53 starts at ch 544). END = last file of the case, attested by both DCW (per-episode) and ja.WP (per-case).",
+   "sources": [
+    "https://www.detectiveconanworld.com/wiki/Season_12",
+    "https://en.wikipedia.org/wiki/List_of_Case_Closed_volumes_(41%E2%80%9360)",
+    "https://ja.wikipedia.org/wiki/%E5%90%8D%E6%8E%A2%E5%81%B5%E3%82%B3%E3%83%8A%E3%83%B3%E3%81%AE%E3%82%A2%E3%83%8B%E3%83%A1%E3%82%A8%E3%83%94%E3%82%BD%E3%83%BC%E3%83%89%E4%B8%80%E8%A6%A7"
+   ]
+  },
+  {
+   "episode": 470,
+   "end_chapter": 547,
+   "start_chapter": 546,
+   "chapters_adapted": "546-547",
+   "volume": 53,
+   "confidence": "high",
+   "note": "DCW manga-source V53 F3-V53 F4 = ch 546-547 (en-WP: vol 53 starts at ch 544). END = last file of the case, attested by both DCW (per-episode) and ja.WP (per-case).",
+   "sources": [
+    "https://www.detectiveconanworld.com/wiki/Season_12",
+    "https://en.wikipedia.org/wiki/List_of_Case_Closed_volumes_(41%E2%80%9360)",
+    "https://ja.wikipedia.org/wiki/%E5%90%8D%E6%8E%A2%E5%81%B5%E3%82%B3%E3%83%8A%E3%83%B3%E3%81%AE%E3%82%A2%E3%83%8B%E3%83%A1%E3%82%A8%E3%83%94%E3%82%BD%E3%83%BC%E3%83%89%E4%B8%80%E8%A6%A7"
+   ]
+  },
+  {
+   "episode": 482,
+   "end_chapter": 581,
+   "start_chapter": 579,
+   "chapters_adapted": "579-581",
+   "volume": 56,
+   "confidence": "high",
+   "note": "DCW manga-source V56 F4-V56 F6 = ch 579-581 (en-WP: vol 56 starts at ch 576). END = last file of the case, attested by both DCW (per-episode) and ja.WP (per-case).",
+   "sources": [
+    "https://www.detectiveconanworld.com/wiki/Season_12",
+    "https://en.wikipedia.org/wiki/List_of_Case_Closed_volumes_(41%E2%80%9360)",
+    "https://ja.wikipedia.org/wiki/%E5%90%8D%E6%8E%A2%E5%81%B5%E3%82%B3%E3%83%8A%E3%83%B3%E3%81%AE%E3%82%A2%E3%83%8B%E3%83%A1%E3%82%A8%E3%83%94%E3%82%BD%E3%83%BC%E3%83%89%E4%B8%80%E8%A6%A7"
+   ]
+  },
+  {
+   "episode": 490,
+   "end_chapter": 522,
+   "start_chapter": 518,
+   "chapters_adapted": "518-522",
+   "volume": 51,
+   "confidence": "high",
+   "note": "DCW manga-source V50 F8-V51 F1 = ch 518-522 (en-WP: vol 51 starts at ch 522). END = last file of the case, attested by both DCW (per-episode) and ja.WP (per-case).",
+   "sources": [
+    "https://www.detectiveconanworld.com/wiki/Season_12",
+    "https://en.wikipedia.org/wiki/List_of_Case_Closed_volumes_(41%E2%80%9360)",
+    "https://ja.wikipedia.org/wiki/%E5%90%8D%E6%8E%A2%E5%81%B5%E3%82%B3%E3%83%8A%E3%83%B3%E3%81%AE%E3%82%A2%E3%83%8B%E3%83%A1%E3%82%A8%E3%83%94%E3%82%BD%E3%83%BC%E3%83%89%E4%B8%80%E8%A6%A7"
+   ]
+  },
+  {
+   "episode": 491,
+   "end_chapter": 586,
+   "start_chapter": 585,
+   "chapters_adapted": "585-586",
+   "volume": 56,
+   "confidence": "high",
+   "note": "DCW manga-source V56 F10-V56 F11 = ch 585-586 (en-WP: vol 56 starts at ch 576). END = last file of the case, attested by both DCW (per-episode) and ja.WP (per-case).",
+   "sources": [
+    "https://www.detectiveconanworld.com/wiki/Season_13",
+    "https://en.wikipedia.org/wiki/List_of_Case_Closed_volumes_(41%E2%80%9360)",
+    "https://ja.wikipedia.org/wiki/%E5%90%8D%E6%8E%A2%E5%81%B5%E3%82%B3%E3%83%8A%E3%83%B3%E3%81%AE%E3%82%A2%E3%83%8B%E3%83%A1%E3%82%A8%E3%83%94%E3%82%BD%E3%83%BC%E3%83%89%E4%B8%80%E8%A6%A7"
+   ]
+  },
+  {
+   "episode": 496,
+   "end_chapter": 598,
+   "start_chapter": 597,
+   "chapters_adapted": "597-598",
+   "volume": 58,
+   "confidence": "high",
+   "note": "DCW manga-source V57 F11-V58 F1 = ch 597-598 (en-WP: vol 58 starts at ch 598). END = last file of the case, attested by both DCW (per-episode) and ja.WP (per-case).",
+   "sources": [
+    "https://www.detectiveconanworld.com/wiki/Season_13",
+    "https://en.wikipedia.org/wiki/List_of_Case_Closed_volumes_(41%E2%80%9360)",
+    "https://ja.wikipedia.org/wiki/%E5%90%8D%E6%8E%A2%E5%81%B5%E3%82%B3%E3%83%8A%E3%83%B3%E3%81%AE%E3%82%A2%E3%83%8B%E3%83%A1%E3%82%A8%E3%83%94%E3%82%BD%E3%83%BC%E3%83%89%E4%B8%80%E8%A6%A7"
+   ]
+  },
+  {
+   "episode": 504,
+   "end_chapter": 609,
+   "start_chapter": 608,
+   "chapters_adapted": "608-609",
+   "volume": 59,
+   "confidence": "high",
+   "note": "DCW manga-source V58 F11-V59 F1 = ch 608-609 (en-WP: vol 59 starts at ch 609). END = last file of the case, attested by both DCW (per-episode) and ja.WP (per-case).",
+   "sources": [
+    "https://www.detectiveconanworld.com/wiki/Season_13",
+    "https://en.wikipedia.org/wiki/List_of_Case_Closed_volumes_(41%E2%80%9360)",
+    "https://ja.wikipedia.org/wiki/%E5%90%8D%E6%8E%A2%E5%81%B5%E3%82%B3%E3%83%8A%E3%83%B3%E3%81%AE%E3%82%A2%E3%83%8B%E3%83%A1%E3%82%A8%E3%83%94%E3%82%BD%E3%83%BC%E3%83%89%E4%B8%80%E8%A6%A7"
+   ]
+  },
+  {
+   "episode": 513,
+   "end_chapter": 630,
+   "start_chapter": 628,
+   "chapters_adapted": "628-630",
+   "volume": 60,
+   "confidence": "high",
+   "note": "DCW manga-source V60 F9-V60 F11 = ch 628-630 (en-WP: vol 60 starts at ch 620). END = last file of the case, attested by both DCW (per-episode) and ja.WP (per-case).",
+   "sources": [
+    "https://www.detectiveconanworld.com/wiki/Season_13",
+    "https://en.wikipedia.org/wiki/List_of_Case_Closed_volumes_(41%E2%80%9360)",
+    "https://ja.wikipedia.org/wiki/%E5%90%8D%E6%8E%A2%E5%81%B5%E3%82%B3%E3%83%8A%E3%83%B3%E3%81%AE%E3%82%A2%E3%83%8B%E3%83%A1%E3%82%A8%E3%83%94%E3%82%BD%E3%83%BC%E3%83%89%E4%B8%80%E8%A6%A7"
+   ]
+  },
+  {
+   "episode": 517,
+   "end_chapter": 618,
+   "start_chapter": 617,
+   "chapters_adapted": "617-618",
+   "volume": 59,
+   "confidence": "high",
+   "note": "DCW manga-source V59 F9-V59 F10 = ch 617-618 (en-WP: vol 59 starts at ch 609). END = last file of the case, attested by both DCW (per-episode) and ja.WP (per-case).",
+   "sources": [
+    "https://www.detectiveconanworld.com/wiki/Season_13",
+    "https://en.wikipedia.org/wiki/List_of_Case_Closed_volumes_(41%E2%80%9360)",
+    "https://ja.wikipedia.org/wiki/%E5%90%8D%E6%8E%A2%E5%81%B5%E3%82%B3%E3%83%8A%E3%83%B3%E3%81%AE%E3%82%A2%E3%83%8B%E3%83%A1%E3%82%A8%E3%83%94%E3%82%BD%E3%83%BC%E3%83%89%E4%B8%80%E8%A6%A7"
+   ]
+  },
+  {
+   "episode": 521,
+   "end_chapter": 649,
+   "start_chapter": 646,
+   "chapters_adapted": "646-649",
+   "volume": 62,
+   "confidence": "medium",
+   "note": "DCW manga-source V62 F5-V62 F8 = ch 646-649 (en-WP: vol 62 starts at ch 642). END from DCW per-episode split inside a multi-episode case (ja.WP gives only the case span 646-652).",
+   "sources": [
+    "https://www.detectiveconanworld.com/wiki/Season_14",
+    "https://en.wikipedia.org/wiki/List_of_Case_Closed_volumes_(61%E2%80%9380)",
+    "https://ja.wikipedia.org/wiki/%E5%90%8D%E6%8E%A2%E5%81%B5%E3%82%B3%E3%83%8A%E3%83%B3%E3%81%AE%E3%82%A2%E3%83%8B%E3%83%A1%E3%82%A8%E3%83%94%E3%82%BD%E3%83%BC%E3%83%89%E4%B8%80%E8%A6%A7"
+   ]
+  },
+  {
+   "episode": 530,
+   "end_chapter": 627,
+   "start_chapter": 625,
+   "chapters_adapted": "625-627",
+   "volume": 60,
+   "confidence": "high",
+   "note": "DCW manga-source V60 F6-V60 F8 = ch 625-627 (en-WP: vol 60 starts at ch 620). END = last file of the case, attested by both DCW (per-episode) and ja.WP (per-case).",
+   "sources": [
+    "https://www.detectiveconanworld.com/wiki/Season_14",
+    "https://en.wikipedia.org/wiki/List_of_Case_Closed_volumes_(41%E2%80%9360)",
+    "https://ja.wikipedia.org/wiki/%E5%90%8D%E6%8E%A2%E5%81%B5%E3%82%B3%E3%83%8A%E3%83%B3%E3%81%AE%E3%82%A2%E3%83%8B%E3%83%A1%E3%82%A8%E3%83%94%E3%82%BD%E3%83%BC%E3%83%89%E4%B8%80%E8%A6%A7"
+   ]
+  },
+  {
+   "episode": 542,
+   "end_chapter": 666,
+   "start_chapter": 664,
+   "chapters_adapted": "664-666",
+   "volume": 64,
+   "confidence": "high",
+   "note": "DCW manga-source V64 F1-V64 F3 = ch 664-666 (en-WP: vol 64 starts at ch 664). END = last file of the case, attested by both DCW (per-episode) and ja.WP (per-case).",
+   "sources": [
+    "https://www.detectiveconanworld.com/wiki/Season_14",
+    "https://en.wikipedia.org/wiki/List_of_Case_Closed_volumes_(61%E2%80%9380)",
+    "https://ja.wikipedia.org/wiki/%E5%90%8D%E6%8E%A2%E5%81%B5%E3%82%B3%E3%83%8A%E3%83%B3%E3%81%AE%E3%82%A2%E3%83%8B%E3%83%A1%E3%82%A8%E3%83%94%E3%82%BD%E3%83%BC%E3%83%89%E4%B8%80%E8%A6%A7"
+   ]
+  },
+  {
+   "episode": 557,
+   "end_chapter": 681,
+   "start_chapter": 680,
+   "chapters_adapted": "680-681",
+   "volume": 65,
+   "confidence": "high",
+   "note": "DCW manga-source V65 F6-V65 F7 = ch 680-681 (en-WP: vol 65 starts at ch 675). END = last file of the case, attested by both DCW (per-episode) and ja.WP (per-case).",
+   "sources": [
+    "https://www.detectiveconanworld.com/wiki/Season_14",
+    "https://en.wikipedia.org/wiki/List_of_Case_Closed_volumes_(61%E2%80%9380)",
+    "https://ja.wikipedia.org/wiki/%E5%90%8D%E6%8E%A2%E5%81%B5%E3%82%B3%E3%83%8A%E3%83%B3%E3%81%AE%E3%82%A2%E3%83%8B%E3%83%A1%E3%82%A8%E3%83%94%E3%82%BD%E3%83%BC%E3%83%89%E4%B8%80%E8%A6%A7"
+   ]
+  },
+  {
+   "episode": 561,
+   "end_chapter": 686,
+   "start_chapter": 682,
+   "chapters_adapted": "682-686",
+   "volume": 66,
+   "confidence": "high",
+   "note": "DCW manga-source V65 F8-V66 F1 = ch 682-686 (en-WP: vol 66 starts at ch 686). END = last file of the case, attested by both DCW (per-episode) and ja.WP (per-case).",
+   "sources": [
+    "https://www.detectiveconanworld.com/wiki/Season_14",
+    "https://en.wikipedia.org/wiki/List_of_Case_Closed_volumes_(61%E2%80%9380)",
+    "https://ja.wikipedia.org/wiki/%E5%90%8D%E6%8E%A2%E5%81%B5%E3%82%B3%E3%83%8A%E3%83%B3%E3%81%AE%E3%82%A2%E3%83%8B%E3%83%A1%E3%82%A8%E3%83%94%E3%82%BD%E3%83%BC%E3%83%89%E4%B8%80%E8%A6%A7"
+   ]
+  },
+  {
+   "episode": 563,
+   "end_chapter": 679,
+   "start_chapter": 677,
+   "chapters_adapted": "677-679",
+   "volume": 65,
+   "confidence": "high",
+   "note": "DCW manga-source V65 F3-V65 F5 = ch 677-679 (en-WP: vol 65 starts at ch 675). END = last file of the case, attested by both DCW (per-episode) and ja.WP (per-case).",
+   "sources": [
+    "https://www.detectiveconanworld.com/wiki/Season_15",
+    "https://en.wikipedia.org/wiki/List_of_Case_Closed_volumes_(61%E2%80%9380)",
+    "https://ja.wikipedia.org/wiki/%E5%90%8D%E6%8E%A2%E5%81%B5%E3%82%B3%E3%83%8A%E3%83%B3%E3%81%AE%E3%82%A2%E3%83%8B%E3%83%A1%E3%82%A8%E3%83%94%E3%82%BD%E3%83%BC%E3%83%89%E4%B8%80%E8%A6%A7"
+   ]
+  },
+  {
+   "episode": 575,
+   "end_chapter": 698,
+   "start_chapter": 696,
+   "chapters_adapted": "696-698",
+   "volume": 67,
+   "confidence": "high",
+   "note": "DCW manga-source V66 F11-V67 F2 = ch 696-698 (en-WP: vol 67 starts at ch 697). END = last file of the case, attested by both DCW (per-episode) and ja.WP (per-case).",
+   "sources": [
+    "https://www.detectiveconanworld.com/wiki/Season_15",
+    "https://en.wikipedia.org/wiki/List_of_Case_Closed_volumes_(61%E2%80%9380)",
+    "https://ja.wikipedia.org/wiki/%E5%90%8D%E6%8E%A2%E5%81%B5%E3%82%B3%E3%83%8A%E3%83%B3%E3%81%AE%E3%82%A2%E3%83%8B%E3%83%A1%E3%82%A8%E3%83%94%E3%82%BD%E3%83%BC%E3%83%89%E4%B8%80%E8%A6%A7"
+   ]
+  },
+  {
+   "episode": 584,
+   "end_chapter": 708,
+   "start_chapter": 705,
+   "chapters_adapted": "705-708",
+   "volume": 68,
+   "confidence": "high",
+   "note": "DCW manga-source V67 F9-V68 F1 = ch 705-708 (en-WP: vol 68 starts at ch 708). END = last file of the case, attested by both DCW (per-episode) and ja.WP (per-case).",
+   "sources": [
+    "https://www.detectiveconanworld.com/wiki/Season_15",
+    "https://en.wikipedia.org/wiki/List_of_Case_Closed_volumes_(61%E2%80%9380)",
+    "https://ja.wikipedia.org/wiki/%E5%90%8D%E6%8E%A2%E5%81%B5%E3%82%B3%E3%83%8A%E3%83%B3%E3%81%AE%E3%82%A2%E3%83%8B%E3%83%A1%E3%82%A8%E3%83%94%E3%82%BD%E3%83%BC%E3%83%89%E4%B8%80%E8%A6%A7"
+   ]
+  },
+  {
+   "episode": 597,
+   "end_chapter": 724,
+   "start_chapter": 722,
+   "chapters_adapted": "722-724",
+   "volume": 69,
+   "confidence": "high",
+   "note": "DCW manga-source V69 F4-V69 F6 = ch 722-724 (en-WP: vol 69 starts at ch 719). END = last file of the case, attested by both DCW (per-episode) and ja.WP (per-case).",
+   "sources": [
+    "https://www.detectiveconanworld.com/wiki/Season_15",
+    "https://en.wikipedia.org/wiki/List_of_Case_Closed_volumes_(61%E2%80%9380)",
+    "https://ja.wikipedia.org/wiki/%E5%90%8D%E6%8E%A2%E5%81%B5%E3%82%B3%E3%83%8A%E3%83%B3%E3%81%AE%E3%82%A2%E3%83%8B%E3%83%A1%E3%82%A8%E3%83%94%E3%82%BD%E3%83%BC%E3%83%89%E4%B8%80%E8%A6%A7"
+   ]
+  },
+  {
+   "episode": 601,
+   "end_chapter": 721,
+   "start_chapter": 719,
+   "chapters_adapted": "719-721",
+   "volume": 69,
+   "confidence": "high",
+   "note": "DCW manga-source V69 F1-V69 F3 = ch 719-721 (en-WP: vol 69 starts at ch 719). END = last file of the case, attested by both DCW (per-episode) and ja.WP (per-case).",
+   "sources": [
+    "https://www.detectiveconanworld.com/wiki/Season_15",
+    "https://en.wikipedia.org/wiki/List_of_Case_Closed_volumes_(61%E2%80%9380)",
+    "https://ja.wikipedia.org/wiki/%E5%90%8D%E6%8E%A2%E5%81%B5%E3%82%B3%E3%83%8A%E3%83%B3%E3%81%AE%E3%82%A2%E3%83%8B%E3%83%A1%E3%82%A8%E3%83%94%E3%82%BD%E3%83%BC%E3%83%89%E4%B8%80%E8%A6%A7"
+   ]
+  },
+  {
+   "episode": 608,
+   "end_chapter": 727,
+   "start_chapter": 725,
+   "chapters_adapted": "725-727",
+   "volume": 69,
+   "confidence": "high",
+   "note": "DCW manga-source V69 F7-V69 F9 = ch 725-727 (en-WP: vol 69 starts at ch 719). END = last file of the case, attested by both DCW (per-episode) and ja.WP (per-case).",
+   "sources": [
+    "https://www.detectiveconanworld.com/wiki/Season_16",
+    "https://en.wikipedia.org/wiki/List_of_Case_Closed_volumes_(61%E2%80%9380)",
+    "https://ja.wikipedia.org/wiki/%E5%90%8D%E6%8E%A2%E5%81%B5%E3%82%B3%E3%83%8A%E3%83%B3%E3%81%AE%E3%82%A2%E3%83%8B%E3%83%A1%E3%82%A8%E3%83%94%E3%82%BD%E3%83%BC%E3%83%89%E4%B8%80%E8%A6%A7"
+   ]
+  },
+  {
+   "episode": 615,
+   "end_chapter": 730,
+   "start_chapter": 728,
+   "chapters_adapted": "728-730",
+   "volume": 70,
+   "confidence": "high",
+   "note": "DCW manga-source V69 F10-V70 F1 = ch 728-730 (en-WP: vol 70 starts at ch 730). END = last file of the case, attested by both DCW (per-episode) and ja.WP (per-case).",
+   "sources": [
+    "https://www.detectiveconanworld.com/wiki/Season_16",
+    "https://en.wikipedia.org/wiki/List_of_Case_Closed_volumes_(61%E2%80%9380)",
+    "https://ja.wikipedia.org/wiki/%E5%90%8D%E6%8E%A2%E5%81%B5%E3%82%B3%E3%83%8A%E3%83%B3%E3%81%AE%E3%82%A2%E3%83%8B%E3%83%A1%E3%82%A8%E3%83%94%E3%82%BD%E3%83%BC%E3%83%89%E4%B8%80%E8%A6%A7"
+   ]
+  },
+  {
+   "episode": 623,
+   "end_chapter": 755,
+   "start_chapter": 753,
+   "chapters_adapted": "753-755",
+   "volume": 72,
+   "confidence": "high",
+   "note": "DCW manga-source V72 F2-V72 F4 = ch 753-755 (en-WP: vol 72 starts at ch 752). END = last file of the case, attested by both DCW (per-episode) and ja.WP (per-case).",
+   "sources": [
+    "https://www.detectiveconanworld.com/wiki/Season_16",
+    "https://en.wikipedia.org/wiki/List_of_Case_Closed_volumes_(61%E2%80%9380)",
+    "https://ja.wikipedia.org/wiki/%E5%90%8D%E6%8E%A2%E5%81%B5%E3%82%B3%E3%83%8A%E3%83%B3%E3%81%AE%E3%82%A2%E3%83%8B%E3%83%A1%E3%82%A8%E3%83%94%E3%82%BD%E3%83%BC%E3%83%89%E4%B8%80%E8%A6%A7"
+   ]
+  },
+  {
+   "episode": 633,
+   "end_chapter": 764,
+   "start_chapter": 762,
+   "chapters_adapted": "762-764",
+   "volume": 73,
+   "confidence": "high",
+   "note": "DCW manga-source V72 F11-V73 F2 = ch 762-764 (en-WP: vol 73 starts at ch 763). END = last file of the case, attested by both DCW (per-episode) and ja.WP (per-case).",
+   "sources": [
+    "https://www.detectiveconanworld.com/wiki/Season_16",
+    "https://en.wikipedia.org/wiki/List_of_Case_Closed_volumes_(61%E2%80%9380)",
+    "https://ja.wikipedia.org/wiki/%E5%90%8D%E6%8E%A2%E5%81%B5%E3%82%B3%E3%83%8A%E3%83%B3%E3%81%AE%E3%82%A2%E3%83%8B%E3%83%A1%E3%82%A8%E3%83%94%E3%82%BD%E3%83%BC%E3%83%89%E4%B8%80%E8%A6%A7"
+   ]
+  },
+  {
+   "episode": 642,
+   "end_chapter": 761,
+   "start_chapter": 759,
+   "chapters_adapted": "759-761",
+   "volume": 72,
+   "confidence": "high",
+   "note": "DCW manga-source V72 F8-V72 F10 = ch 759-761 (en-WP: vol 72 starts at ch 752). END = last file of the case, attested by both DCW (per-episode) and ja.WP (per-case).",
+   "sources": [
+    "https://www.detectiveconanworld.com/wiki/Season_17",
+    "https://en.wikipedia.org/wiki/List_of_Case_Closed_volumes_(61%E2%80%9380)",
+    "https://ja.wikipedia.org/wiki/%E5%90%8D%E6%8E%A2%E5%81%B5%E3%82%B3%E3%83%8A%E3%83%B3%E3%81%AE%E3%82%A2%E3%83%8B%E3%83%A1%E3%82%A8%E3%83%94%E3%82%BD%E3%83%BC%E3%83%89%E4%B8%80%E8%A6%A7"
+   ]
+  },
+  {
+   "episode": 650,
+   "end_chapter": 774,
+   "start_chapter": 771,
+   "chapters_adapted": "771-774",
+   "volume": 74,
+   "confidence": "high",
+   "note": "DCW manga-source V73 F9-V74 F1 = ch 771-774 (en-WP: vol 74 starts at ch 774). END = last file of the case, attested by both DCW (per-episode) and ja.WP (per-case).",
+   "sources": [
+    "https://www.detectiveconanworld.com/wiki/Season_17",
+    "https://en.wikipedia.org/wiki/List_of_Case_Closed_volumes_(61%E2%80%9380)",
+    "https://ja.wikipedia.org/wiki/%E5%90%8D%E6%8E%A2%E5%81%B5%E3%82%B3%E3%83%8A%E3%83%B3%E3%81%AE%E3%82%A2%E3%83%8B%E3%83%A1%E3%82%A8%E3%83%94%E3%82%BD%E3%83%BC%E3%83%89%E4%B8%80%E8%A6%A7"
+   ]
+  },
+  {
+   "episode": 659,
+   "end_chapter": 792,
+   "start_chapter": 790,
+   "chapters_adapted": "790-792",
+   "volume": 75,
+   "confidence": "high",
+   "note": "DCW manga-source V75 F6-V75 F8 = ch 790-792 (en-WP: vol 75 starts at ch 785). END = last file of the case, attested by both DCW (per-episode) and ja.WP (per-case).",
+   "sources": [
+    "https://www.detectiveconanworld.com/wiki/Season_17",
+    "https://en.wikipedia.org/wiki/List_of_Case_Closed_volumes_(61%E2%80%9380)",
+    "https://ja.wikipedia.org/wiki/%E5%90%8D%E6%8E%A2%E5%81%B5%E3%82%B3%E3%83%8A%E3%83%B3%E3%81%AE%E3%82%A2%E3%83%8B%E3%83%A1%E3%82%A8%E3%83%94%E3%82%BD%E3%83%BC%E3%83%89%E4%B8%80%E8%A6%A7"
+   ]
+  },
+  {
+   "episode": 673,
+   "end_chapter": 800,
+   "start_chapter": 796,
+   "chapters_adapted": "796-800",
+   "volume": 76,
+   "confidence": "high",
+   "note": "DCW manga-source V76 F1-V76 F5 = ch 796-800 (en-WP: vol 76 starts at ch 796). END = last file of the case, attested by both DCW (per-episode) and ja.WP (per-case).",
+   "sources": [
+    "https://www.detectiveconanworld.com/wiki/Season_17",
+    "https://en.wikipedia.org/wiki/List_of_Case_Closed_volumes_(61%E2%80%9380)",
+    "https://ja.wikipedia.org/wiki/%E5%90%8D%E6%8E%A2%E5%81%B5%E3%82%B3%E3%83%8A%E3%83%B3%E3%81%AE%E3%82%A2%E3%83%8B%E3%83%A1%E3%82%A8%E3%83%94%E3%82%BD%E3%83%BC%E3%83%89%E4%B8%80%E8%A6%A7"
+   ]
+  },
+  {
+   "episode": 676,
+   "end_chapter": 803,
+   "start_chapter": 801,
+   "chapters_adapted": "801-803",
+   "volume": 76,
+   "confidence": "high",
+   "note": "DCW manga-source V76 F6-V76 F8 = ch 801-803 (en-WP: vol 76 starts at ch 796). END = last file of the case, attested by both DCW (per-episode) and ja.WP (per-case).",
+   "sources": [
+    "https://www.detectiveconanworld.com/wiki/Season_17",
+    "https://en.wikipedia.org/wiki/List_of_Case_Closed_volumes_(61%E2%80%9380)",
+    "https://ja.wikipedia.org/wiki/%E5%90%8D%E6%8E%A2%E5%81%B5%E3%82%B3%E3%83%8A%E3%83%B3%E3%81%AE%E3%82%A2%E3%83%8B%E3%83%A1%E3%82%A8%E3%83%94%E3%82%BD%E3%83%BC%E3%83%89%E4%B8%80%E8%A6%A7"
+   ]
+  },
+  {
+   "episode": 681,
+   "end_chapter": 808,
+   "start_chapter": 804,
+   "chapters_adapted": "804-808",
+   "volume": 77,
+   "confidence": "high",
+   "note": "DCW manga-source V76 F9-V77 F2 = ch 804-808 (en-WP: vol 77 starts at ch 807). END = last file of the case, attested by both DCW (per-episode) and ja.WP (per-case).",
+   "sources": [
+    "https://www.detectiveconanworld.com/wiki/Season_18",
+    "https://en.wikipedia.org/wiki/List_of_Case_Closed_volumes_(61%E2%80%9380)",
+    "https://ja.wikipedia.org/wiki/%E5%90%8D%E6%8E%A2%E5%81%B5%E3%82%B3%E3%83%8A%E3%83%B3%E3%81%AE%E3%82%A2%E3%83%8B%E3%83%A1%E3%82%A8%E3%83%94%E3%82%BD%E3%83%BC%E3%83%89%E4%B8%80%E8%A6%A7"
+   ]
+  },
+  {
+   "episode": 700,
+   "end_chapter": 817,
+   "start_chapter": 815,
+   "chapters_adapted": "815-817",
+   "volume": 77,
+   "confidence": "high",
+   "note": "DCW manga-source V77 F9-V77 F11 = ch 815-817 (en-WP: vol 77 starts at ch 807). END = last file of the case, attested by both DCW (per-episode) and ja.WP (per-case).",
+   "sources": [
+    "https://www.detectiveconanworld.com/wiki/Season_18",
+    "https://en.wikipedia.org/wiki/List_of_Case_Closed_volumes_(61%E2%80%9380)",
+    "https://ja.wikipedia.org/wiki/%E5%90%8D%E6%8E%A2%E5%81%B5%E3%82%B3%E3%83%8A%E3%83%B3%E3%81%AE%E3%82%A2%E3%83%8B%E3%83%A1%E3%82%A8%E3%83%94%E3%82%BD%E3%83%BC%E3%83%89%E4%B8%80%E8%A6%A7"
+   ]
+  },
+  {
+   "episode": 711,
+   "end_chapter": 833,
+   "start_chapter": 831,
+   "chapters_adapted": "831-833",
+   "volume": 79,
+   "confidence": "high",
+   "note": "DCW manga-source V79 F3-V79 F5 = ch 831-833 (en-WP: vol 79 starts at ch 829). END = last file of the case, attested by both DCW (per-episode) and ja.WP (per-case).",
+   "sources": [
+    "https://www.detectiveconanworld.com/wiki/Season_18",
+    "https://en.wikipedia.org/wiki/List_of_Case_Closed_volumes_(61%E2%80%9380)",
+    "https://ja.wikipedia.org/wiki/%E5%90%8D%E6%8E%A2%E5%81%B5%E3%82%B3%E3%83%8A%E3%83%B3%E3%81%AE%E3%82%A2%E3%83%8B%E3%83%A1%E3%82%A8%E3%83%94%E3%82%BD%E3%83%BC%E3%83%89%E4%B8%80%E8%A6%A7"
+   ]
+  },
+  {
+   "episode": 723,
+   "end_chapter": 843,
+   "start_chapter": 841,
+   "chapters_adapted": "841-843",
+   "volume": 80,
+   "confidence": "high",
+   "note": "DCW manga-source V80 F2-V80 F4 = ch 841-843 (en-WP: vol 80 starts at ch 840). END = last file of the case, attested by both DCW (per-episode) and ja.WP (per-case).",
+   "sources": [
+    "https://www.detectiveconanworld.com/wiki/Season_18",
+    "https://en.wikipedia.org/wiki/List_of_Case_Closed_volumes_(61%E2%80%9380)",
+    "https://ja.wikipedia.org/wiki/%E5%90%8D%E6%8E%A2%E5%81%B5%E3%82%B3%E3%83%8A%E3%83%B3%E3%81%AE%E3%82%A2%E3%83%8B%E3%83%A1%E3%82%A8%E3%83%94%E3%82%BD%E3%83%BC%E3%83%89%E4%B8%80%E8%A6%A7"
+   ]
+  },
+  {
+   "episode": 724,
+   "end_chapter": 830,
+   "start_chapter": 828,
+   "chapters_adapted": "828-830",
+   "volume": 79,
+   "confidence": "high",
+   "note": "DCW manga-source V78 F11-V79 F2 = ch 828-830 (en-WP: vol 79 starts at ch 829). END = last file of the case, attested by both DCW (per-episode) and ja.WP (per-case).",
+   "sources": [
+    "https://www.detectiveconanworld.com/wiki/Season_19",
+    "https://en.wikipedia.org/wiki/List_of_Case_Closed_volumes_(61%E2%80%9380)",
+    "https://ja.wikipedia.org/wiki/%E5%90%8D%E6%8E%A2%E5%81%B5%E3%82%B3%E3%83%8A%E3%83%B3%E3%81%AE%E3%82%A2%E3%83%8B%E3%83%A1%E3%82%A8%E3%83%94%E3%82%BD%E3%83%BC%E3%83%89%E4%B8%80%E8%A6%A7"
+   ]
+  },
+  {
+   "episode": 739,
+   "end_chapter": 855,
+   "start_chapter": 853,
+   "chapters_adapted": "853-855",
+   "volume": 81,
+   "confidence": "high",
+   "note": "DCW manga-source V81 F3-V81 F5 = ch 853-855 (en-WP: vol 81 starts at ch 851). END = last file of the case, attested by both DCW (per-episode) and ja.WP (per-case).",
+   "sources": [
+    "https://www.detectiveconanworld.com/wiki/Season_19",
+    "https://en.wikipedia.org/wiki/List_of_Case_Closed_volumes_(81%E2%80%93100)",
+    "https://ja.wikipedia.org/wiki/%E5%90%8D%E6%8E%A2%E5%81%B5%E3%82%B3%E3%83%8A%E3%83%B3%E3%81%AE%E3%82%A2%E3%83%8B%E3%83%A1%E3%82%A8%E3%83%94%E3%82%BD%E3%83%BC%E3%83%89%E4%B8%80%E8%A6%A7"
+   ]
+  },
+  {
+   "episode": 749,
+   "end_chapter": 871,
+   "start_chapter": 869,
+   "chapters_adapted": "869-871",
+   "volume": 82,
+   "confidence": "high",
+   "note": "DCW manga-source V82 F8-V82 F10 = ch 869-871 (en-WP: vol 82 starts at ch 862). END = last file of the case, attested by both DCW (per-episode) and ja.WP (per-case).",
+   "sources": [
+    "https://www.detectiveconanworld.com/wiki/Season_19",
+    "https://en.wikipedia.org/wiki/List_of_Case_Closed_volumes_(81%E2%80%93100)",
+    "https://ja.wikipedia.org/wiki/%E5%90%8D%E6%8E%A2%E5%81%B5%E3%82%B3%E3%83%8A%E3%83%B3%E3%81%AE%E3%82%A2%E3%83%8B%E3%83%A1%E3%82%A8%E3%83%94%E3%82%BD%E3%83%BC%E3%83%89%E4%B8%80%E8%A6%A7"
+   ]
+  },
+  {
+   "episode": 760,
+   "end_chapter": 878,
+   "start_chapter": 876,
+   "chapters_adapted": "876-878",
+   "volume": 83,
+   "confidence": "high",
+   "note": "DCW manga-source V83 F4-V83 F6 = ch 876-878 (en-WP: vol 83 starts at ch 873). END = last file of the case, attested by both DCW (per-episode) and ja.WP (per-case).",
+   "sources": [
+    "https://www.detectiveconanworld.com/wiki/Season_19",
+    "https://en.wikipedia.org/wiki/List_of_Case_Closed_volumes_(81%E2%80%93100)",
+    "https://ja.wikipedia.org/wiki/%E5%90%8D%E6%8E%A2%E5%81%B5%E3%82%B3%E3%83%8A%E3%83%B3%E3%81%AE%E3%82%A2%E3%83%8B%E3%83%A1%E3%82%A8%E3%83%94%E3%82%BD%E3%83%BC%E3%83%89%E4%B8%80%E8%A6%A7"
+   ]
+  },
+  {
+   "episode": 763,
+   "end_chapter": 881,
+   "start_chapter": 879,
+   "chapters_adapted": "879-881",
+   "volume": 83,
+   "confidence": "high",
+   "note": "DCW manga-source V83 F7-V83 F9 = ch 879-881 (en-WP: vol 83 starts at ch 873). END = last file of the case, attested by both DCW (per-episode) and ja.WP (per-case).",
+   "sources": [
+    "https://www.detectiveconanworld.com/wiki/Season_20",
+    "https://en.wikipedia.org/wiki/List_of_Case_Closed_volumes_(81%E2%80%93100)",
+    "https://ja.wikipedia.org/wiki/%E5%90%8D%E6%8E%A2%E5%81%B5%E3%82%B3%E3%83%8A%E3%83%B3%E3%81%AE%E3%82%A2%E3%83%8B%E3%83%A1%E3%82%A8%E3%83%94%E3%82%BD%E3%83%BC%E3%83%89%E4%B8%80%E8%A6%A7"
+   ]
+  },
+  {
+   "episode": 773,
+   "end_chapter": 884,
+   "start_chapter": 882,
+   "chapters_adapted": "882-884",
+   "volume": 84,
+   "confidence": "high",
+   "note": "DCW manga-source V83 F10-V84 F2 = ch 882-884 (en-WP: vol 84 starts at ch 883). END = last file of the case, attested by both DCW (per-episode) and ja.WP (per-case).",
+   "sources": [
+    "https://www.detectiveconanworld.com/wiki/Season_20",
+    "https://en.wikipedia.org/wiki/List_of_Case_Closed_volumes_(81%E2%80%93100)",
+    "https://ja.wikipedia.org/wiki/%E5%90%8D%E6%8E%A2%E5%81%B5%E3%82%B3%E3%83%8A%E3%83%B3%E3%81%AE%E3%82%A2%E3%83%8B%E3%83%A1%E3%82%A8%E3%83%94%E3%82%BD%E3%83%BC%E3%83%89%E4%B8%80%E8%A6%A7"
+   ]
+  },
+  {
+   "episode": 787,
+   "end_chapter": 905,
+   "start_chapter": 903,
+   "chapters_adapted": "903-905",
+   "volume": 86,
+   "confidence": "high",
+   "note": "DCW manga-source V85 F10-V86 F1 = ch 903-905 (en-WP: vol 86 starts at ch 905). END = last file of the case, attested by both DCW (per-episode) and ja.WP (per-case).",
+   "sources": [
+    "https://www.detectiveconanworld.com/wiki/Season_20",
+    "https://en.wikipedia.org/wiki/List_of_Case_Closed_volumes_(81%E2%80%93100)",
+    "https://ja.wikipedia.org/wiki/%E5%90%8D%E6%8E%A2%E5%81%B5%E3%82%B3%E3%83%8A%E3%83%B3%E3%81%AE%E3%82%A2%E3%83%8B%E3%83%A1%E3%82%A8%E3%83%94%E3%82%BD%E3%83%BC%E3%83%89%E4%B8%80%E8%A6%A7"
+   ]
+  },
+  {
+   "episode": 793,
+   "end_chapter": 908,
+   "start_chapter": 906,
+   "chapters_adapted": "906-908",
+   "volume": 86,
+   "confidence": "high",
+   "note": "DCW manga-source V86 F2-V86 F4 = ch 906-908 (en-WP: vol 86 starts at ch 905). END = last file of the case, attested by both DCW (per-episode) and ja.WP (per-case).",
+   "sources": [
+    "https://www.detectiveconanworld.com/wiki/Season_20",
+    "https://en.wikipedia.org/wiki/List_of_Case_Closed_volumes_(81%E2%80%93100)",
+    "https://ja.wikipedia.org/wiki/%E5%90%8D%E6%8E%A2%E5%81%B5%E3%82%B3%E3%83%8A%E3%83%B3%E3%81%AE%E3%82%A2%E3%83%8B%E3%83%A1%E3%82%A8%E3%83%94%E3%82%BD%E3%83%BC%E3%83%89%E4%B8%80%E8%A6%A7"
+   ]
+  },
+  {
+   "episode": 808,
+   "end_chapter": 910,
+   "start_chapter": 909,
+   "chapters_adapted": "909-910",
+   "volume": 86,
+   "confidence": "medium",
+   "note": "DCW manga-source V86 F5-V86 F6 = ch 909-910 (en-WP: vol 86 starts at ch 905). END from DCW per-episode split inside a multi-episode case (ja.WP gives only the case span 909-912).",
+   "sources": [
+    "https://www.detectiveconanworld.com/wiki/Season_21",
+    "https://en.wikipedia.org/wiki/List_of_Case_Closed_volumes_(81%E2%80%93100)",
+    "https://ja.wikipedia.org/wiki/%E5%90%8D%E6%8E%A2%E5%81%B5%E3%82%B3%E3%83%8A%E3%83%B3%E3%81%AE%E3%82%A2%E3%83%8B%E3%83%A1%E3%82%A8%E3%83%94%E3%82%BD%E3%83%BC%E3%83%89%E4%B8%80%E8%A6%A7"
+   ]
+  },
+  {
+   "episode": 823,
+   "end_chapter": 927,
+   "start_chapter": 925,
+   "chapters_adapted": "925-927",
+   "volume": 88,
+   "confidence": "high",
+   "note": "DCW manga-source V87 F10-V88 F1 = ch 925-927 (en-WP: vol 88 starts at ch 927). END = last file of the case, attested by both DCW (per-episode) and ja.WP (per-case).",
+   "sources": [
+    "https://www.detectiveconanworld.com/wiki/Season_21",
+    "https://en.wikipedia.org/wiki/List_of_Case_Closed_volumes_(81%E2%80%93100)",
+    "https://ja.wikipedia.org/wiki/%E5%90%8D%E6%8E%A2%E5%81%B5%E3%82%B3%E3%83%8A%E3%83%B3%E3%81%AE%E3%82%A2%E3%83%8B%E3%83%A1%E3%82%A8%E3%83%94%E3%82%BD%E3%83%BC%E3%83%89%E4%B8%80%E8%A6%A7"
+   ]
+  },
+  {
+   "episode": 844,
+   "end_chapter": 941,
+   "start_chapter": 939,
+   "chapters_adapted": "939-941",
+   "volume": 89,
+   "confidence": "high",
+   "note": "DCW manga-source V89 F2-V89 F4 = ch 939-941 (en-WP: vol 89 starts at ch 938). END = last file of the case, attested by both DCW (per-episode) and ja.WP (per-case).",
+   "sources": [
+    "https://www.detectiveconanworld.com/wiki/Season_21",
+    "https://en.wikipedia.org/wiki/List_of_Case_Closed_volumes_(81%E2%80%93100)",
+    "https://ja.wikipedia.org/wiki/%E5%90%8D%E6%8E%A2%E5%81%B5%E3%82%B3%E3%83%8A%E3%83%B3%E3%81%AE%E3%82%A2%E3%83%8B%E3%83%A1%E3%82%A8%E3%83%94%E3%82%BD%E3%83%BC%E3%83%89%E4%B8%80%E8%A6%A7"
+   ]
+  },
+  {
+   "episode": 847,
+   "end_chapter": 944,
+   "start_chapter": 942,
+   "chapters_adapted": "942-944",
+   "volume": 89,
+   "confidence": "high",
+   "note": "DCW manga-source V89 F5-V89 F7 = ch 942-944 (en-WP: vol 89 starts at ch 938). END = last file of the case, attested by both DCW (per-episode) and ja.WP (per-case).",
+   "sources": [
+    "https://www.detectiveconanworld.com/wiki/Season_22",
+    "https://en.wikipedia.org/wiki/List_of_Case_Closed_volumes_(81%E2%80%93100)",
+    "https://ja.wikipedia.org/wiki/%E5%90%8D%E6%8E%A2%E5%81%B5%E3%82%B3%E3%83%8A%E3%83%B3%E3%81%AE%E3%82%A2%E3%83%8B%E3%83%A1%E3%82%A8%E3%83%94%E3%82%BD%E3%83%BC%E3%83%89%E4%B8%80%E8%A6%A7"
+   ]
+  },
+  {
+   "episode": 863,
+   "end_chapter": 953,
+   "start_chapter": 951,
+   "chapters_adapted": "951-953",
+   "volume": 90,
+   "confidence": "high",
+   "note": "DCW manga-source V90 F3-V90 F5 = ch 951-953 (en-WP: vol 90 starts at ch 949). END = last file of the case, attested by both DCW (per-episode) and ja.WP (per-case).",
+   "sources": [
+    "https://www.detectiveconanworld.com/wiki/Season_22",
+    "https://en.wikipedia.org/wiki/List_of_Case_Closed_volumes_(81%E2%80%93100)",
+    "https://ja.wikipedia.org/wiki/%E5%90%8D%E6%8E%A2%E5%81%B5%E3%82%B3%E3%83%8A%E3%83%B3%E3%81%AE%E3%82%A2%E3%83%8B%E3%83%A1%E3%82%A8%E3%83%94%E3%82%BD%E3%83%BC%E3%83%89%E4%B8%80%E8%A6%A7"
+   ]
+  },
+  {
+   "episode": 879,
+   "end_chapter": 971,
+   "start_chapter": 969,
+   "chapters_adapted": "969-971",
+   "volume": 92,
+   "confidence": "high",
+   "note": "DCW manga-source V91 F10-V92 F1 = ch 969-971 (en-WP: vol 92 starts at ch 971). END = last file of the case, attested by both DCW (per-episode) and ja.WP (per-case).",
+   "sources": [
+    "https://www.detectiveconanworld.com/wiki/Season_22",
+    "https://en.wikipedia.org/wiki/List_of_Case_Closed_volumes_(81%E2%80%93100)",
+    "https://ja.wikipedia.org/wiki/%E5%90%8D%E6%8E%A2%E5%81%B5%E3%82%B3%E3%83%8A%E3%83%B3%E3%81%AE%E3%82%A2%E3%83%8B%E3%83%A1%E3%82%A8%E3%83%94%E3%82%BD%E3%83%BC%E3%83%89%E4%B8%80%E8%A6%A7"
+   ]
+  },
+  {
+   "episode": 886,
+   "end_chapter": 983,
+   "start_chapter": 981,
+   "chapters_adapted": "981-983",
+   "volume": 93,
+   "confidence": "high",
+   "note": "DCW manga-source V92 F11-V93 F2 = ch 981-983 (en-WP: vol 93 starts at ch 982). END = last file of the case, attested by both DCW (per-episode) and ja.WP (per-case).",
+   "sources": [
+    "https://www.detectiveconanworld.com/wiki/Season_22",
+    "https://en.wikipedia.org/wiki/List_of_Case_Closed_volumes_(81%E2%80%93100)",
+    "https://ja.wikipedia.org/wiki/%E5%90%8D%E6%8E%A2%E5%81%B5%E3%82%B3%E3%83%8A%E3%83%B3%E3%81%AE%E3%82%A2%E3%83%8B%E3%83%A1%E3%82%A8%E3%83%94%E3%82%BD%E3%83%BC%E3%83%89%E4%B8%80%E8%A6%A7"
+   ]
+  },
+  {
+   "episode": 887,
+   "end_chapter": 965,
+   "start_chapter": 963,
+   "chapters_adapted": "963-965",
+   "volume": 91,
+   "confidence": "high",
+   "note": "DCW manga-source V91 F4-V91 F6 = ch 963-965 (en-WP: vol 91 starts at ch 960). END = last file of the case, attested by both DCW (per-episode) and ja.WP (per-case).",
+   "sources": [
+    "https://www.detectiveconanworld.com/wiki/Season_23",
+    "https://en.wikipedia.org/wiki/List_of_Case_Closed_volumes_(81%E2%80%93100)",
+    "https://ja.wikipedia.org/wiki/%E5%90%8D%E6%8E%A2%E5%81%B5%E3%82%B3%E3%83%8A%E3%83%B3%E3%81%AE%E3%82%A2%E3%83%8B%E3%83%A1%E3%82%A8%E3%83%94%E3%82%BD%E3%83%BC%E3%83%89%E4%B8%80%E8%A6%A7"
+   ]
+  },
+  {
+   "episode": 901,
+   "end_chapter": 986,
+   "start_chapter": 984,
+   "chapters_adapted": "984-986",
+   "volume": 93,
+   "confidence": "high",
+   "note": "DCW manga-source V93 F3-V93 F5 = ch 984-986 (en-WP: vol 93 starts at ch 982). END = last file of the case, attested by both DCW (per-episode) and ja.WP (per-case).",
+   "sources": [
+    "https://www.detectiveconanworld.com/wiki/Season_23",
+    "https://en.wikipedia.org/wiki/List_of_Case_Closed_volumes_(81%E2%80%93100)",
+    "https://ja.wikipedia.org/wiki/%E5%90%8D%E6%8E%A2%E5%81%B5%E3%82%B3%E3%83%8A%E3%83%B3%E3%81%AE%E3%82%A2%E3%83%8B%E3%83%A1%E3%82%A8%E3%83%94%E3%82%BD%E3%83%BC%E3%83%89%E4%B8%80%E8%A6%A7"
+   ]
+  },
+  {
+   "episode": 926,
+   "end_chapter": 999,
+   "start_chapter": 997,
+   "chapters_adapted": "997-999",
+   "volume": 94,
+   "confidence": "high",
+   "note": "DCW manga-source V94 F5-V94 F7 = ch 997-999 (en-WP: vol 94 starts at ch 993). END = last file of the case, attested by both DCW (per-episode) and ja.WP (per-case).",
+   "sources": [
+    "https://www.detectiveconanworld.com/wiki/Season_23",
+    "https://en.wikipedia.org/wiki/List_of_Case_Closed_volumes_(81%E2%80%93100)",
+    "https://ja.wikipedia.org/wiki/%E5%90%8D%E6%8E%A2%E5%81%B5%E3%82%B3%E3%83%8A%E3%83%B3%E3%81%AE%E3%82%A2%E3%83%8B%E3%83%A1%E3%82%A8%E3%83%94%E3%82%BD%E3%83%BC%E3%83%89%E4%B8%80%E8%A6%A7"
+   ]
+  },
+  {
+   "episode": 927,
+   "end_chapter": 1002,
+   "start_chapter": 1000,
+   "chapters_adapted": "1000-1002",
+   "volume": 94,
+   "confidence": "medium",
+   "note": "DCW manga-source V94 F8-V94 F10 = ch 1000-1002 (en-WP: vol 94 starts at ch 993). END from DCW per-episode split inside a multi-episode case (ja.WP gives only the case span 1000-1005).",
+   "sources": [
+    "https://www.detectiveconanworld.com/wiki/Season_24",
+    "https://en.wikipedia.org/wiki/List_of_Case_Closed_volumes_(81%E2%80%93100)",
+    "https://ja.wikipedia.org/wiki/%E5%90%8D%E6%8E%A2%E5%81%B5%E3%82%B3%E3%83%8A%E3%83%B3%E3%81%AE%E3%82%A2%E3%83%8B%E3%83%A1%E3%82%A8%E3%83%94%E3%82%BD%E3%83%BC%E3%83%89%E4%B8%80%E8%A6%A7"
+   ]
+  },
+  {
+   "episode": 954,
+   "end_chapter": 1012,
+   "start_chapter": 1009,
+   "chapters_adapted": "1009-1012",
+   "volume": 95,
+   "confidence": "high",
+   "note": "DCW manga-source V95 F6-V95 F9 = ch 1009-1012 (en-WP: vol 95 starts at ch 1004). END = last file of the case, attested by both DCW (per-episode) and ja.WP (per-case).",
+   "sources": [
+    "https://www.detectiveconanworld.com/wiki/Season_24",
+    "https://en.wikipedia.org/wiki/List_of_Case_Closed_volumes_(81%E2%80%93100)",
+    "https://ja.wikipedia.org/wiki/%E5%90%8D%E6%8E%A2%E5%81%B5%E3%82%B3%E3%83%8A%E3%83%B3%E3%81%AE%E3%82%A2%E3%83%8B%E3%83%A1%E3%82%A8%E3%83%94%E3%82%BD%E3%83%BC%E3%83%89%E4%B8%80%E8%A6%A7"
+   ]
+  },
+  {
+   "episode": 971,
+   "end_chapter": 1017,
+   "start_chapter": 1013,
+   "chapters_adapted": "1013-1017",
+   "volume": 96,
+   "confidence": "high",
+   "note": "DCW manga-source V95 F10-V96 F3 = ch 1013-1017 (en-WP: vol 96 starts at ch 1015). END = last file of the case, attested by both DCW (per-episode) and ja.WP (per-case).",
+   "sources": [
+    "https://www.detectiveconanworld.com/wiki/Season_25",
+    "https://en.wikipedia.org/wiki/List_of_Case_Closed_volumes_(81%E2%80%93100)",
+    "https://ja.wikipedia.org/wiki/%E5%90%8D%E6%8E%A2%E5%81%B5%E3%82%B3%E3%83%8A%E3%83%B3%E3%81%AE%E3%82%A2%E3%83%8B%E3%83%A1%E3%82%A8%E3%83%94%E3%82%BD%E3%83%BC%E3%83%89%E4%B8%80%E8%A6%A7"
+   ]
+  },
+  {
+   "episode": 984,
+   "end_chapter": 1021,
+   "start_chapter": 1020,
+   "chapters_adapted": "1020-1021",
+   "volume": 96,
+   "confidence": "high",
+   "note": "DCW manga-source V96 F6-V96 F7 = ch 1020-1021 (en-WP: vol 96 starts at ch 1015). END = last file of the case, attested by both DCW (per-episode) and ja.WP (per-case).",
+   "sources": [
+    "https://www.detectiveconanworld.com/wiki/Season_25",
+    "https://en.wikipedia.org/wiki/List_of_Case_Closed_volumes_(81%E2%80%93100)",
+    "https://ja.wikipedia.org/wiki/%E5%90%8D%E6%8E%A2%E5%81%B5%E3%82%B3%E3%83%8A%E3%83%B3%E3%81%AE%E3%82%A2%E3%83%8B%E3%83%A1%E3%82%A8%E3%83%94%E3%82%BD%E3%83%BC%E3%83%89%E4%B8%80%E8%A6%A7"
+   ]
+  },
+  {
+   "episode": 993,
+   "end_chapter": 1026,
+   "start_chapter": 1022,
+   "chapters_adapted": "1022-1026",
+   "volume": 97,
+   "confidence": "high",
+   "note": "DCW manga-source V96 F8-V97 F1 = ch 1022-1026 (en-WP: vol 97 starts at ch 1026). END = last file of the case, attested by both DCW (per-episode) and ja.WP (per-case).",
+   "sources": [
+    "https://www.detectiveconanworld.com/wiki/Season_26",
+    "https://en.wikipedia.org/wiki/List_of_Case_Closed_volumes_(81%E2%80%93100)",
+    "https://ja.wikipedia.org/wiki/%E5%90%8D%E6%8E%A2%E5%81%B5%E3%82%B3%E3%83%8A%E3%83%B3%E3%81%AE%E3%82%A2%E3%83%8B%E3%83%A1%E3%82%A8%E3%83%94%E3%82%BD%E3%83%BC%E3%83%89%E4%B8%80%E8%A6%A7"
+   ]
+  },
+  {
+   "episode": 1018,
+   "end_chapter": 1038,
+   "start_chapter": 1035,
+   "chapters_adapted": "1035-1038",
+   "volume": 98,
+   "confidence": "high",
+   "note": "DCW manga-source V97 F10-V98 F2 = ch 1035-1038 (en-WP: vol 98 starts at ch 1037). END = last file of the case, attested by both DCW (per-episode) and ja.WP (per-case).",
+   "sources": [
+    "https://www.detectiveconanworld.com/wiki/Season_26",
+    "https://en.wikipedia.org/wiki/List_of_Case_Closed_volumes_(81%E2%80%93100)",
+    "https://ja.wikipedia.org/wiki/%E5%90%8D%E6%8E%A2%E5%81%B5%E3%82%B3%E3%83%8A%E3%83%B3%E3%81%AE%E3%82%A2%E3%83%8B%E3%83%A1%E3%82%A8%E3%83%94%E3%82%BD%E3%83%BC%E3%83%89%E4%B8%80%E8%A6%A7"
+   ]
+  },
+  {
+   "episode": 1025,
+   "end_chapter": 1042,
+   "start_chapter": 1041,
+   "chapters_adapted": "1041-1042",
+   "volume": 98,
+   "confidence": "high",
+   "note": "DCW manga-source V98 F5-V98 F6 = ch 1041-1042 (en-WP: vol 98 starts at ch 1037). END = last file of the case, attested by both DCW (per-episode) and ja.WP (per-case).",
+   "sources": [
+    "https://www.detectiveconanworld.com/wiki/Season_26",
+    "https://en.wikipedia.org/wiki/List_of_Case_Closed_volumes_(81%E2%80%93100)",
+    "https://ja.wikipedia.org/wiki/%E5%90%8D%E6%8E%A2%E5%81%B5%E3%82%B3%E3%83%8A%E3%83%B3%E3%81%AE%E3%82%A2%E3%83%8B%E3%83%A1%E3%82%A8%E3%83%94%E3%82%BD%E3%83%BC%E3%83%89%E4%B8%80%E8%A6%A7"
+   ]
+  },
+  {
+   "episode": 1033,
+   "end_chapter": 1046,
+   "start_chapter": 1043,
+   "chapters_adapted": "1043-1046",
+   "volume": 98,
+   "confidence": "high",
+   "note": "DCW manga-source V98 F7-V98 F10 = ch 1043-1046 (en-WP: vol 98 starts at ch 1037). END = last file of the case, attested by both DCW (per-episode) and ja.WP (per-case).",
+   "sources": [
+    "https://www.detectiveconanworld.com/wiki/Season_27",
+    "https://en.wikipedia.org/wiki/List_of_Case_Closed_volumes_(81%E2%80%93100)",
+    "https://ja.wikipedia.org/wiki/%E5%90%8D%E6%8E%A2%E5%81%B5%E3%82%B3%E3%83%8A%E3%83%B3%E3%81%AE%E3%82%A2%E3%83%8B%E3%83%A1%E3%82%A8%E3%83%94%E3%82%BD%E3%83%BC%E3%83%89%E4%B8%80%E8%A6%A7"
+   ]
+  },
+  {
+   "episode": 1060,
+   "end_chapter": 1057,
+   "start_chapter": 1055,
+   "chapters_adapted": "1055-1057",
+   "volume": 99,
+   "confidence": "high",
+   "note": "DCW manga-source V99 F8-V99 F10 = ch 1055-1057 (en-WP: vol 99 starts at ch 1048). END = last file of the case, attested by both DCW (per-episode) and ja.WP (per-case).",
+   "sources": [
+    "https://www.detectiveconanworld.com/wiki/Season_27",
+    "https://en.wikipedia.org/wiki/List_of_Case_Closed_volumes_(81%E2%80%93100)",
+    "https://ja.wikipedia.org/wiki/%E5%90%8D%E6%8E%A2%E5%81%B5%E3%82%B3%E3%83%8A%E3%83%B3%E3%81%AE%E3%82%A2%E3%83%8B%E3%83%A1%E3%82%A8%E3%83%94%E3%82%BD%E3%83%BC%E3%83%89%E4%B8%80%E8%A6%A7"
+   ]
+  },
+  {
+   "episode": 1071,
+   "end_chapter": 1060,
+   "start_chapter": 1058,
+   "chapters_adapted": "1058-1060",
+   "volume": 100,
+   "confidence": "high",
+   "note": "DCW manga-source V99 F11-V100 F2 = ch 1058-1060 (en-WP: vol 100 starts at ch 1059). END = last file of the case, attested by both DCW (per-episode) and ja.WP (per-case).",
+   "sources": [
+    "https://www.detectiveconanworld.com/wiki/Season_28",
+    "https://en.wikipedia.org/wiki/List_of_Case_Closed_volumes_(81%E2%80%93100)",
+    "https://ja.wikipedia.org/wiki/%E5%90%8D%E6%8E%A2%E5%81%B5%E3%82%B3%E3%83%8A%E3%83%B3%E3%81%AE%E3%82%A2%E3%83%8B%E3%83%A1%E3%82%A8%E3%83%94%E3%82%BD%E3%83%BC%E3%83%89%E4%B8%80%E8%A6%A7"
+   ]
+  },
+  {
+   "episode": 1094,
+   "end_chapter": 1072,
+   "start_chapter": 1070,
+   "chapters_adapted": "1070-1072",
+   "volume": 101,
+   "confidence": "high",
+   "note": "DCW manga-source V101 F1-V101 F3 = ch 1070-1072 (en-WP: vol 101 starts at ch 1070). END = last file of the case, attested by both DCW (per-episode) and ja.WP (per-case).",
+   "sources": [
+    "https://www.detectiveconanworld.com/wiki/Season_28",
+    "https://en.wikipedia.org/wiki/List_of_Case_Closed_volumes_(101%E2%80%93current)",
+    "https://ja.wikipedia.org/wiki/%E5%90%8D%E6%8E%A2%E5%81%B5%E3%82%B3%E3%83%8A%E3%83%B3%E3%81%AE%E3%82%A2%E3%83%8B%E3%83%A1%E3%82%A8%E3%83%94%E3%82%BD%E3%83%BC%E3%83%89%E4%B8%80%E8%A6%A7"
+   ]
+  },
+  {
+   "episode": 1106,
+   "end_chapter": 1078,
+   "start_chapter": 1076,
+   "chapters_adapted": "1076-1078",
+   "volume": 101,
+   "confidence": "high",
+   "note": "DCW manga-source V101 F7-V101 F9 = ch 1076-1078 (en-WP: vol 101 starts at ch 1070). END = last file of the case, attested by both DCW (per-episode) and ja.WP (per-case).",
+   "sources": [
+    "https://www.detectiveconanworld.com/wiki/Season_28",
+    "https://en.wikipedia.org/wiki/List_of_Case_Closed_volumes_(101%E2%80%93current)",
+    "https://ja.wikipedia.org/wiki/%E5%90%8D%E6%8E%A2%E5%81%B5%E3%82%B3%E3%83%8A%E3%83%B3%E3%81%AE%E3%82%A2%E3%83%8B%E3%83%A1%E3%82%A8%E3%83%94%E3%82%BD%E3%83%BC%E3%83%89%E4%B8%80%E8%A6%A7"
+   ]
+  },
+  {
+   "episode": 1109,
+   "end_chapter": 1081,
+   "start_chapter": 1079,
+   "chapters_adapted": "1079-1081",
+   "volume": 102,
+   "confidence": "high",
+   "note": "DCW manga-source V101 F10-V102 F1 = ch 1079-1081 (en-WP: vol 102 starts at ch 1081). END = last file of the case, attested by both DCW (per-episode) and ja.WP (per-case).",
+   "sources": [
+    "https://www.detectiveconanworld.com/wiki/Season_29",
+    "https://en.wikipedia.org/wiki/List_of_Case_Closed_volumes_(101%E2%80%93current)",
+    "https://ja.wikipedia.org/wiki/%E5%90%8D%E6%8E%A2%E5%81%B5%E3%82%B3%E3%83%8A%E3%83%B3%E3%81%AE%E3%82%A2%E3%83%8B%E3%83%A1%E3%82%A8%E3%83%94%E3%82%BD%E3%83%BC%E3%83%89%E4%B8%80%E8%A6%A7"
+   ]
+  },
+  {
+   "episode": 1123,
+   "end_chapter": 1084,
+   "start_chapter": 1082,
+   "chapters_adapted": "1082-1084",
+   "volume": 102,
+   "confidence": "high",
+   "note": "DCW manga-source V102 F2-V102 F4 = ch 1082-1084 (en-WP: vol 102 starts at ch 1081). END = last file of the case, attested by both DCW (per-episode) and ja.WP (per-case).",
+   "sources": [
+    "https://www.detectiveconanworld.com/wiki/Season_29",
+    "https://en.wikipedia.org/wiki/List_of_Case_Closed_volumes_(101%E2%80%93current)",
+    "https://ja.wikipedia.org/wiki/%E5%90%8D%E6%8E%A2%E5%81%B5%E3%82%B3%E3%83%8A%E3%83%B3%E3%81%AE%E3%82%A2%E3%83%8B%E3%83%A1%E3%82%A8%E3%83%94%E3%82%BD%E3%83%BC%E3%83%89%E4%B8%80%E8%A6%A7"
+   ]
+  },
+  {
+   "episode": 1135,
+   "end_chapter": 1090,
+   "start_chapter": 1088,
+   "chapters_adapted": "1088-1090",
+   "volume": 102,
+   "confidence": "high",
+   "note": "DCW manga-source V102 F8-V102 F10 = ch 1088-1090 (en-WP: vol 102 starts at ch 1081). END = last file of the case, attested by both DCW (per-episode) and ja.WP (per-case).",
+   "sources": [
+    "https://www.detectiveconanworld.com/wiki/Season_29",
+    "https://en.wikipedia.org/wiki/List_of_Case_Closed_volumes_(101%E2%80%93current)",
+    "https://ja.wikipedia.org/wiki/%E5%90%8D%E6%8E%A2%E5%81%B5%E3%82%B3%E3%83%8A%E3%83%B3%E3%81%AE%E3%82%A2%E3%83%8B%E3%83%A1%E3%82%A8%E3%83%94%E3%82%BD%E3%83%BC%E3%83%89%E4%B8%80%E8%A6%A7"
+   ]
+  },
+  {
+   "episode": 1145,
+   "end_chapter": 1096,
+   "start_chapter": 1094,
+   "chapters_adapted": "1094-1096",
+   "volume": 103,
+   "confidence": "high",
+   "note": "DCW manga-source V103 F3-V103 F5 = ch 1094-1096 (en-WP: vol 103 starts at ch 1092). END = last file of the case, attested by both DCW (per-episode) and ja.WP (per-case).",
+   "sources": [
+    "https://www.detectiveconanworld.com/wiki/Season_29",
+    "https://en.wikipedia.org/wiki/List_of_Case_Closed_volumes_(101%E2%80%93current)",
+    "https://ja.wikipedia.org/wiki/%E5%90%8D%E6%8E%A2%E5%81%B5%E3%82%B3%E3%83%8A%E3%83%B3%E3%81%AE%E3%82%A2%E3%83%8B%E3%83%A1%E3%82%A8%E3%83%94%E3%82%BD%E3%83%BC%E3%83%89%E4%B8%80%E8%A6%A7"
+   ]
+  },
+  {
+   "episode": 1148,
+   "end_chapter": 1099,
+   "start_chapter": 1097,
+   "chapters_adapted": "1097-1099",
+   "volume": 103,
+   "confidence": "high",
+   "note": "DCW manga-source V103 F6-V103 F8 = ch 1097-1099 (en-WP: vol 103 starts at ch 1092). END = last file of the case, attested by both DCW (per-episode) and ja.WP (per-case).",
+   "sources": [
+    "https://www.detectiveconanworld.com/wiki/Season_30",
+    "https://en.wikipedia.org/wiki/List_of_Case_Closed_volumes_(101%E2%80%93current)",
+    "https://ja.wikipedia.org/wiki/%E5%90%8D%E6%8E%A2%E5%81%B5%E3%82%B3%E3%83%8A%E3%83%B3%E3%81%AE%E3%82%A2%E3%83%8B%E3%83%A1%E3%82%A8%E3%83%94%E3%82%BD%E3%83%BC%E3%83%89%E4%B8%80%E8%A6%A7"
+   ]
+  },
+  {
+   "episode": 1164,
+   "end_chapter": 1109,
+   "start_chapter": 1103,
+   "chapters_adapted": "1103-1109",
+   "volume": 104,
+   "confidence": "high",
+   "note": "DCW manga-source V104 F1-V104 F7 = ch 1103-1109 (en-WP: vol 104 starts at ch 1103). END = last file of the case, attested by both DCW (per-episode) and ja.WP (per-case).",
+   "sources": [
+    "https://www.detectiveconanworld.com/wiki/Season_30",
+    "https://en.wikipedia.org/wiki/List_of_Case_Closed_volumes_(101%E2%80%93current)",
+    "https://ja.wikipedia.org/wiki/%E5%90%8D%E6%8E%A2%E5%81%B5%E3%82%B3%E3%83%8A%E3%83%B3%E3%81%AE%E3%82%A2%E3%83%8B%E3%83%A1%E3%82%A8%E3%83%94%E3%82%BD%E3%83%BC%E3%83%89%E4%B8%80%E8%A6%A7"
+   ]
+  },
+  {
+   "episode": 1169,
+   "end_chapter": 1112,
+   "start_chapter": 1110,
+   "chapters_adapted": "1110-1112",
+   "volume": 104,
+   "confidence": "high",
+   "note": "DCW manga-source V104 F8-V104 F10 = ch 1110-1112 (en-WP: vol 104 starts at ch 1103). END = last file of the case, attested by both DCW (per-episode) and ja.WP (per-case).",
+   "sources": [
+    "https://www.detectiveconanworld.com/wiki/Season_30",
+    "https://en.wikipedia.org/wiki/List_of_Case_Closed_volumes_(101%E2%80%93current)",
+    "https://ja.wikipedia.org/wiki/%E5%90%8D%E6%8E%A2%E5%81%B5%E3%82%B3%E3%83%8A%E3%83%B3%E3%81%AE%E3%82%A2%E3%83%8B%E3%83%A1%E3%82%A8%E3%83%94%E3%82%BD%E3%83%BC%E3%83%89%E4%B8%80%E8%A6%A7"
+   ]
+  },
+  {
+   "episode": 1172,
+   "end_chapter": 1115,
+   "start_chapter": 1113,
+   "chapters_adapted": "1113-1115",
+   "volume": 105,
+   "confidence": "high",
+   "note": "DCW manga-source V104 F11-V105 F2 = ch 1113-1115 (en-WP: vol 105 starts at ch 1114). END = last file of the case, attested by both DCW (per-episode) and ja.WP (per-case).",
+   "sources": [
+    "https://www.detectiveconanworld.com/wiki/Season_30",
+    "https://en.wikipedia.org/wiki/List_of_Case_Closed_volumes_(101%E2%80%93current)",
+    "https://ja.wikipedia.org/wiki/%E5%90%8D%E6%8E%A2%E5%81%B5%E3%82%B3%E3%83%8A%E3%83%B3%E3%81%AE%E3%82%A2%E3%83%8B%E3%83%A1%E3%82%A8%E3%83%94%E3%82%BD%E3%83%BC%E3%83%89%E4%B8%80%E8%A6%A7"
+   ]
+  },
+  {
+   "episode": 1178,
+   "end_chapter": 1118,
+   "start_chapter": 1116,
+   "chapters_adapted": "1116-1118",
+   "volume": 105,
+   "confidence": "high",
+   "note": "DCW manga-source V105 F3-V105 F5 = ch 1116-1118 (en-WP: vol 105 starts at ch 1114). END = last file of the case, attested by both DCW (per-episode) and ja.WP (per-case).",
+   "sources": [
+    "https://www.detectiveconanworld.com/wiki/Season_30",
+    "https://en.wikipedia.org/wiki/List_of_Case_Closed_volumes_(101%E2%80%93current)",
+    "https://ja.wikipedia.org/wiki/%E5%90%8D%E6%8E%A2%E5%81%B5%E3%82%B3%E3%83%8A%E3%83%B3%E3%81%AE%E3%82%A2%E3%83%8B%E3%83%A1%E3%82%A8%E3%83%94%E3%82%BD%E3%83%BC%E3%83%89%E4%B8%80%E8%A6%A7"
+   ]
+  },
+  {
+   "episode": 1179,
+   "end_chapter": 1118,
+   "start_chapter": 1116,
+   "chapters_adapted": "1116-1118",
+   "volume": 105,
+   "confidence": "high",
+   "note": "DCW manga-source V105 F3-V105 F5 = ch 1116-1118 (en-WP: vol 105 starts at ch 1114). END = last file of the case, attested by both DCW (per-episode) and ja.WP (per-case).",
+   "sources": [
+    "https://www.detectiveconanworld.com/wiki/Season_30",
+    "https://en.wikipedia.org/wiki/List_of_Case_Closed_volumes_(101%E2%80%93current)",
+    "https://ja.wikipedia.org/wiki/%E5%90%8D%E6%8E%A2%E5%81%B5%E3%82%B3%E3%83%8A%E3%83%B3%E3%81%AE%E3%82%A2%E3%83%8B%E3%83%A1%E3%82%A8%E3%83%94%E3%82%BD%E3%83%BC%E3%83%89%E4%B8%80%E8%A6%A7"
+   ]
+  },
+  {
+   "episode": 1185,
+   "end_chapter": 1125,
+   "start_chapter": 1124,
+   "chapters_adapted": "1124-1125",
+   "volume": 106,
+   "confidence": "high",
+   "note": "DCW manga-source V106 F1-V106 F2 = ch 1124-1125 (en-WP: vol 106 starts at ch 1124). END = last file of the case, attested by both DCW (per-episode) and ja.WP (per-case).",
+   "sources": [
+    "https://www.detectiveconanworld.com/wiki/Season_30",
+    "https://en.wikipedia.org/wiki/List_of_Case_Closed_volumes_(101%E2%80%93current)",
+    "https://ja.wikipedia.org/wiki/%E5%90%8D%E6%8E%A2%E5%81%B5%E3%82%B3%E3%83%8A%E3%83%B3%E3%81%AE%E3%82%A2%E3%83%8B%E3%83%A1%E3%82%A8%E3%83%94%E3%82%BD%E3%83%BC%E3%83%89%E4%B8%80%E8%A6%A7"
+   ]
+  },
+  {
+   "episode": 1193,
+   "end_chapter": 1120,
+   "start_chapter": 1119,
+   "chapters_adapted": "1119-1120",
+   "volume": 105,
+   "confidence": "medium",
+   "note": "DCW manga-source V105 F6-V105 F7 = ch 1119-1120 (en-WP: vol 105 starts at ch 1114). END from DCW per-episode split inside a multi-episode case (ja.WP gives only the case span 1119-1122).",
+   "sources": [
+    "https://www.detectiveconanworld.com/wiki/Season_31",
+    "https://en.wikipedia.org/wiki/List_of_Case_Closed_volumes_(101%E2%80%93current)",
+    "https://ja.wikipedia.org/wiki/%E5%90%8D%E6%8E%A2%E5%81%B5%E3%82%B3%E3%83%8A%E3%83%B3%E3%81%AE%E3%82%A2%E3%83%8B%E3%83%A1%E3%82%A8%E3%83%94%E3%82%BD%E3%83%BC%E3%83%89%E4%B8%80%E8%A6%A7"
+   ]
+  },
+  {
+   "episode": 1205,
+   "end_chapter": 1128,
+   "start_chapter": 1127,
+   "chapters_adapted": "1127-1128",
+   "volume": 106,
+   "confidence": "high",
+   "note": "DCW manga-source V106 F4-V106 F5 = ch 1127-1128 (en-WP: vol 106 starts at ch 1124). END = last file of the case, attested by both DCW (per-episode) and ja.WP (per-case).",
+   "sources": [
+    "https://www.detectiveconanworld.com/wiki/Season_31",
+    "https://en.wikipedia.org/wiki/List_of_Case_Closed_volumes_(101%E2%80%93current)",
+    "https://ja.wikipedia.org/wiki/%E5%90%8D%E6%8E%A2%E5%81%B5%E3%82%B3%E3%83%8A%E3%83%B3%E3%81%AE%E3%82%A2%E3%83%8B%E3%83%A1%E3%82%A8%E3%83%94%E3%82%BD%E3%83%BC%E3%83%89%E4%B8%80%E8%A6%A7"
+   ]
+  }
+ ],
+ "continue_points": [
+  {
+   "episode": 5,
+   "continue_chapter": 10,
+   "note": "Parity: DC adapts cases out of chapter order. After ep 5 the anime has covered every chapter below 10; chapters already animated ahead of that point (skip on arrival): 33-39 (furthest chapter animated by this point: 39)."
+  },
+  {
+   "episode": 10,
+   "continue_chapter": 10,
+   "note": "Parity: DC adapts cases out of chapter order. After ep 10 the anime has covered every chapter below 10; chapters already animated ahead of that point (skip on arrival): 26-39, 59-61, 68-71 (furthest chapter animated by this point: 71)."
+  },
+  {
+   "episode": 15,
+   "continue_chapter": 10,
+   "note": "Parity: DC adapts cases out of chapter order. After ep 15 the anime has covered every chapter below 10; chapters already animated ahead of that point (skip on arrival): 13-16, 26-39, 56-71, 81-83 (furthest chapter animated by this point: 83)."
+  },
+  {
+   "episode": 20,
+   "continue_chapter": 10,
+   "note": "Parity: DC adapts cases out of chapter order. After ep 20 the anime has covered every chapter below 10; chapters already animated ahead of that point (skip on arrival): 13-19, 26-39, 52-71, 78-83 (furthest chapter animated by this point: 83)."
+  },
+  {
+   "episode": 28,
+   "continue_chapter": 10,
+   "note": "Parity: DC adapts cases out of chapter order. After ep 28 the anime has covered every chapter below 10; chapters already animated ahead of that point (skip on arrival): 13-39, 52-71, 78-86 (furthest chapter animated by this point: 86)."
+  },
+  {
+   "episode": 32,
+   "continue_chapter": 10,
+   "note": "Parity: DC adapts cases out of chapter order. After ep 32 the anime has covered every chapter below 10; chapters already animated ahead of that point (skip on arrival): 13-39, 52-71, 78-86, 102-107 (furthest chapter animated by this point: 107)."
+  },
+  {
+   "episode": 39,
+   "continue_chapter": 45,
+   "note": "Parity: DC adapts cases out of chapter order. After ep 39 the anime has covered every chapter below 45; chapters already animated ahead of that point (skip on arrival): 52-71, 78-91, 102-107 (furthest chapter animated by this point: 107)."
+  },
+  {
+   "episode": 43,
+   "continue_chapter": 72,
+   "note": "Parity: DC adapts cases out of chapter order. After ep 43 the anime has covered every chapter below 72; chapters already animated ahead of that point (skip on arrival): 78-91, 102-107 (furthest chapter animated by this point: 107)."
+  },
+  {
+   "episode": 49,
+   "continue_chapter": 72,
+   "note": "Parity: DC adapts cases out of chapter order. After ep 49 the anime has covered every chapter below 72; chapters already animated ahead of that point (skip on arrival): 78-96, 99-107 (furthest chapter animated by this point: 107)."
+  },
+  {
+   "episode": 57,
+   "continue_chapter": 72,
+   "note": "Parity: DC adapts cases out of chapter order. After ep 57 the anime has covered every chapter below 72; chapters already animated ahead of that point (skip on arrival): 78-110, 114-121 (furthest chapter animated by this point: 121)."
+  },
+  {
+   "episode": 63,
+   "continue_chapter": 72,
+   "note": "Parity: DC adapts cases out of chapter order. After ep 63 the anime has covered every chapter below 72; chapters already animated ahead of that point (skip on arrival): 78-110, 114-121, 125-130 (furthest chapter animated by this point: 130)."
+  },
+  {
+   "episode": 72,
+   "continue_chapter": 111,
+   "note": "Parity: DC adapts cases out of chapter order. After ep 72 the anime has covered every chapter below 111; chapters already animated ahead of that point (skip on arrival): 114-130 (furthest chapter animated by this point: 130)."
+  },
+  {
+   "episode": 78,
+   "continue_chapter": 111,
+   "note": "Parity: DC adapts cases out of chapter order. After ep 78 the anime has covered every chapter below 111; chapters already animated ahead of that point (skip on arrival): 114-130, 147-153, 156-159 (furthest chapter animated by this point: 159)."
+  },
+  {
+   "episode": 85,
+   "continue_chapter": 111,
+   "note": "Parity: DC adapts cases out of chapter order. After ep 85 the anime has covered every chapter below 111; chapters already animated ahead of that point (skip on arrival): 114-130, 139-153, 156-159 (furthest chapter animated by this point: 159)."
+  },
+  {
+   "episode": 91,
+   "continue_chapter": 111,
+   "note": "Parity: DC adapts cases out of chapter order. After ep 91 the anime has covered every chapter below 111; chapters already animated ahead of that point (skip on arrival): 114-130, 139-153, 156-159, 166 (furthest chapter animated by this point: 166)."
+  },
+  {
+   "episode": 100,
+   "continue_chapter": 111,
+   "note": "Parity: DC adapts cases out of chapter order. After ep 100 the anime has covered every chapter below 111; chapters already animated ahead of that point (skip on arrival): 114-153, 156-162, 166, 173-175 (furthest chapter animated by this point: 175)."
+  },
+  {
+   "episode": 104,
+   "continue_chapter": 111,
+   "note": "Parity: DC adapts cases out of chapter order. After ep 104 the anime has covered every chapter below 111; chapters already animated ahead of that point (skip on arrival): 114-153, 156-162, 166-175 (furthest chapter animated by this point: 175)."
+  },
+  {
+   "episode": 115,
+   "continue_chapter": 111,
+   "note": "Parity: DC adapts cases out of chapter order. After ep 115 the anime has covered every chapter below 111; chapters already animated ahead of that point (skip on arrival): 114-175 (furthest chapter animated by this point: 175)."
+  },
+  {
+   "episode": 122,
+   "continue_chapter": 111,
+   "note": "Parity: DC adapts cases out of chapter order. After ep 122 the anime has covered every chapter below 111; chapters already animated ahead of that point (skip on arrival): 114-175, 182-188, 197-199 (furthest chapter animated by this point: 199)."
+  },
+  {
+   "episode": 129,
+   "continue_chapter": 111,
+   "note": "Parity: DC adapts cases out of chapter order. After ep 129 the anime has covered every chapter below 111; chapters already animated ahead of that point (skip on arrival): 114-188, 197-199 (furthest chapter animated by this point: 199)."
+  },
+  {
+   "episode": 133,
+   "continue_chapter": 111,
+   "note": "Parity: DC adapts cases out of chapter order. After ep 133 the anime has covered every chapter below 111; chapters already animated ahead of that point (skip on arrival): 114-199 (furthest chapter animated by this point: 199)."
+  },
+  {
+   "episode": 142,
+   "continue_chapter": 111,
+   "note": "Parity: DC adapts cases out of chapter order. After ep 142 the anime has covered every chapter below 111; chapters already animated ahead of that point (skip on arrival): 114-203, 211-214, 222-224 (furthest chapter animated by this point: 224)."
+  },
+  {
+   "episode": 157,
+   "continue_chapter": 111,
+   "note": "Parity: DC adapts cases out of chapter order. After ep 157 the anime has covered every chapter below 111; chapters already animated ahead of that point (skip on arrival): 114-203, 208-224, 231-233 (furthest chapter animated by this point: 233)."
+  },
+  {
+   "episode": 171,
+   "continue_chapter": 225,
+   "note": "Parity: DC adapts cases out of chapter order. After ep 171 the anime has covered every chapter below 225; chapters already animated ahead of that point (skip on arrival): 231-237, 246-250 (furthest chapter animated by this point: 250)."
+  },
+  {
+   "episode": 173,
+   "continue_chapter": 225,
+   "note": "Parity: DC adapts cases out of chapter order. After ep 173 the anime has covered every chapter below 225; chapters already animated ahead of that point (skip on arrival): 231-237, 243-250 (furthest chapter animated by this point: 250)."
+  },
+  {
+   "episode": 174,
+   "continue_chapter": 238,
+   "note": "Parity: DC adapts cases out of chapter order. After ep 174 the anime has covered every chapter below 238; chapters already animated ahead of that point (skip on arrival): 243-250 (furthest chapter animated by this point: 250)."
+  },
+  {
+   "episode": 212,
+   "continue_chapter": 270,
+   "note": "Parity: DC adapts cases out of chapter order. After ep 212 the anime has covered every chapter below 270; chapters already animated ahead of that point (skip on arrival): 273-275 (furthest chapter animated by this point: 275)."
+  },
+  {
+   "episode": 218,
+   "continue_chapter": 270,
+   "note": "Parity: DC adapts cases out of chapter order. After ep 218 the anime has covered every chapter below 270; chapters already animated ahead of that point (skip on arrival): 273-275, 284-286 (furthest chapter animated by this point: 286)."
+  },
+  {
+   "episode": 219,
+   "continue_chapter": 270,
+   "note": "Parity: DC adapts cases out of chapter order. After ep 219 the anime has covered every chapter below 270; chapters already animated ahead of that point (skip on arrival): 273-275, 284-286, 299-302 (furthest chapter animated by this point: 302)."
+  },
+  {
+   "episode": 228,
+   "continue_chapter": 287,
+   "note": "Parity: DC adapts cases out of chapter order. After ep 228 the anime has covered every chapter below 287; chapters already animated ahead of that point (skip on arrival): 299-302, 305-307 (furthest chapter animated by this point: 307)."
+  },
+  {
+   "episode": 240,
+   "continue_chapter": 303,
+   "note": "Parity: DC adapts cases out of chapter order. After ep 240 the anime has covered every chapter below 303; chapters already animated ahead of that point (skip on arrival): 305-307 (furthest chapter animated by this point: 307)."
+  },
+  {
+   "episode": 250,
+   "continue_chapter": 314,
+   "note": "Parity: DC adapts cases out of chapter order. After ep 250 the anime has covered every chapter below 314; chapters already animated ahead of that point (skip on arrival): 322-324 (furthest chapter animated by this point: 324)."
+  },
+  {
+   "episode": 259,
+   "continue_chapter": 314,
+   "note": "Parity: DC adapts cases out of chapter order. After ep 259 the anime has covered every chapter below 314; chapters already animated ahead of that point (skip on arrival): 322-330 (furthest chapter animated by this point: 330)."
+  },
+  {
+   "episode": 263,
+   "continue_chapter": 331,
+   "note": "Parity: DC adapts cases out of chapter order. After ep 263 the anime has covered every chapter below 331; chapters already animated ahead of that point (skip on arrival):  (furthest chapter animated by this point: 330)."
+  },
+  {
+   "episode": 274,
+   "continue_chapter": 341,
+   "note": "Parity: DC adapts cases out of chapter order. After ep 274 the anime has covered every chapter below 341; chapters already animated ahead of that point (skip on arrival): 355-357 (furthest chapter animated by this point: 357)."
+  },
+  {
+   "episode": 286,
+   "continue_chapter": 358,
+   "note": "Parity: DC adapts cases out of chapter order. After ep 286 the anime has covered every chapter below 358; chapters already animated ahead of that point (skip on arrival):  (furthest chapter animated by this point: 357)."
+  },
+  {
+   "episode": 336,
+   "continue_chapter": 401,
+   "note": "Parity: DC adapts cases out of chapter order. After ep 336 the anime has covered every chapter below 401; chapters already animated ahead of that point (skip on arrival): 407-409, 413-419 (furthest chapter animated by this point: 419)."
+  },
+  {
+   "episode": 344,
+   "continue_chapter": 401,
+   "note": "Parity: DC adapts cases out of chapter order. After ep 344 the anime has covered every chapter below 401; chapters already animated ahead of that point (skip on arrival): 407-409, 413-428 (furthest chapter animated by this point: 428)."
+  },
+  {
+   "episode": 345,
+   "continue_chapter": 401,
+   "note": "Parity: DC adapts cases out of chapter order. After ep 345 the anime has covered every chapter below 401; chapters already animated ahead of that point (skip on arrival): 407-409, 413-434 (furthest chapter animated by this point: 434)."
+  },
+  {
+   "episode": 358,
+   "continue_chapter": 410,
+   "note": "Parity: DC adapts cases out of chapter order. After ep 358 the anime has covered every chapter below 410; chapters already animated ahead of that point (skip on arrival): 413-440, 453-456 (furthest chapter animated by this point: 456)."
+  },
+  {
+   "episode": 372,
+   "continue_chapter": 410,
+   "note": "Parity: DC adapts cases out of chapter order. After ep 372 the anime has covered every chapter below 410; chapters already animated ahead of that point (skip on arrival): 413-440, 453-465 (furthest chapter animated by this point: 465)."
+  },
+  {
+   "episode": 383,
+   "continue_chapter": 410,
+   "note": "Parity: DC adapts cases out of chapter order. After ep 383 the anime has covered every chapter below 410; chapters already animated ahead of that point (skip on arrival): 413-449, 453-469 (furthest chapter animated by this point: 469)."
+  },
+  {
+   "episode": 385,
+   "continue_chapter": 410,
+   "note": "Parity: DC adapts cases out of chapter order. After ep 385 the anime has covered every chapter below 410; chapters already animated ahead of that point (skip on arrival): 413-449, 453-474 (furthest chapter animated by this point: 474)."
+  },
+  {
+   "episode": 396,
+   "continue_chapter": 410,
+   "note": "Parity: DC adapts cases out of chapter order. After ep 396 the anime has covered every chapter below 410; chapters already animated ahead of that point (skip on arrival): 413-478 (furthest chapter animated by this point: 478)."
+  },
+  {
+   "episode": 408,
+   "continue_chapter": 410,
+   "note": "Parity: DC adapts cases out of chapter order. After ep 408 the anime has covered every chapter below 410; chapters already animated ahead of that point (skip on arrival): 413-490 (furthest chapter animated by this point: 490)."
+  },
+  {
+   "episode": 422,
+   "continue_chapter": 499,
+   "note": "Parity: DC adapts cases out of chapter order. After ep 422 the anime has covered every chapter below 499; chapters already animated ahead of that point (skip on arrival):  (furthest chapter animated by this point: 498)."
+  },
+  {
+   "episode": 453,
+   "continue_chapter": 518,
+   "note": "Parity: DC adapts cases out of chapter order. After ep 453 the anime has covered every chapter below 518; chapters already animated ahead of that point (skip on arrival): 523-537 (furthest chapter animated by this point: 537)."
+  },
+  {
+   "episode": 458,
+   "continue_chapter": 518,
+   "note": "Parity: DC adapts cases out of chapter order. After ep 458 the anime has covered every chapter below 518; chapters already animated ahead of that point (skip on arrival): 523-543 (furthest chapter animated by this point: 543)."
+  },
+  {
+   "episode": 460,
+   "continue_chapter": 518,
+   "note": "Parity: DC adapts cases out of chapter order. After ep 460 the anime has covered every chapter below 518; chapters already animated ahead of that point (skip on arrival): 523-543, 548-549 (furthest chapter animated by this point: 549)."
+  },
+  {
+   "episode": 470,
+   "continue_chapter": 518,
+   "note": "Parity: DC adapts cases out of chapter order. After ep 470 the anime has covered every chapter below 518; chapters already animated ahead of that point (skip on arrival): 523-558 (furthest chapter animated by this point: 558)."
+  },
+  {
+   "episode": 482,
+   "continue_chapter": 518,
+   "note": "Parity: DC adapts cases out of chapter order. After ep 482 the anime has covered every chapter below 518; chapters already animated ahead of that point (skip on arrival): 523-575, 579-581 (furthest chapter animated by this point: 581)."
+  },
+  {
+   "episode": 490,
+   "continue_chapter": 585,
+   "note": "Parity: DC adapts cases out of chapter order. After ep 490 the anime has covered every chapter below 585; chapters already animated ahead of that point (skip on arrival): 591-593 (furthest chapter animated by this point: 593)."
+  },
+  {
+   "episode": 513,
+   "continue_chapter": 613,
+   "note": "Parity: DC adapts cases out of chapter order. After ep 513 the anime has covered every chapter below 613; chapters already animated ahead of that point (skip on arrival): 619-624, 628-630, 638-640 (furthest chapter animated by this point: 640)."
+  },
+  {
+   "episode": 517,
+   "continue_chapter": 625,
+   "note": "Parity: DC adapts cases out of chapter order. After ep 517 the anime has covered every chapter below 625; chapters already animated ahead of that point (skip on arrival): 628-634, 638-640 (furthest chapter animated by this point: 640)."
+  },
+  {
+   "episode": 521,
+   "continue_chapter": 625,
+   "note": "Parity: DC adapts cases out of chapter order. After ep 521 the anime has covered every chapter below 625; chapters already animated ahead of that point (skip on arrival): 628-634, 638-640, 646-649 (furthest chapter animated by this point: 649)."
+  },
+  {
+   "episode": 530,
+   "continue_chapter": 655,
+   "note": "Parity: DC adapts cases out of chapter order. After ep 530 the anime has covered every chapter below 655; chapters already animated ahead of that point (skip on arrival):  (furthest chapter animated by this point: 654)."
+  },
+  {
+   "episode": 542,
+   "continue_chapter": 655,
+   "note": "Parity: DC adapts cases out of chapter order. After ep 542 the anime has covered every chapter below 655; chapters already animated ahead of that point (skip on arrival): 664-676 (furthest chapter animated by this point: 676)."
+  },
+  {
+   "episode": 557,
+   "continue_chapter": 677,
+   "note": "Parity: DC adapts cases out of chapter order. After ep 557 the anime has covered every chapter below 677; chapters already animated ahead of that point (skip on arrival): 680-681 (furthest chapter animated by this point: 681)."
+  },
+  {
+   "episode": 561,
+   "continue_chapter": 677,
+   "note": "Parity: DC adapts cases out of chapter order. After ep 561 the anime has covered every chapter below 677; chapters already animated ahead of that point (skip on arrival): 680-686 (furthest chapter animated by this point: 686)."
+  },
+  {
+   "episode": 563,
+   "continue_chapter": 687,
+   "note": "Parity: DC adapts cases out of chapter order. After ep 563 the anime has covered every chapter below 687; chapters already animated ahead of that point (skip on arrival):  (furthest chapter animated by this point: 686)."
+  },
+  {
+   "episode": 597,
+   "continue_chapter": 719,
+   "note": "Parity: DC adapts cases out of chapter order. After ep 597 the anime has covered every chapter below 719; chapters already animated ahead of that point (skip on arrival): 722-724 (furthest chapter animated by this point: 724)."
+  },
+  {
+   "episode": 601,
+   "continue_chapter": 725,
+   "note": "Parity: DC adapts cases out of chapter order. After ep 601 the anime has covered every chapter below 725; chapters already animated ahead of that point (skip on arrival):  (furthest chapter animated by this point: 724)."
+  },
+  {
+   "episode": 623,
+   "continue_chapter": 731,
+   "note": "Parity: DC adapts cases out of chapter order. After ep 623 the anime has covered every chapter below 731; chapters already animated ahead of that point (skip on arrival): 734-740, 743-787 (furthest chapter animated by this point: 787)."
+  },
+  {
+   "episode": 633,
+   "continue_chapter": 788,
+   "note": "Parity: DC adapts cases out of chapter order. After ep 633 the anime has covered every chapter below 788; chapters already animated ahead of that point (skip on arrival):  (furthest chapter animated by this point: 787)."
+  },
+  {
+   "episode": 642,
+   "continue_chapter": 788,
+   "note": "Parity: DC adapts cases out of chapter order. After ep 642 the anime has covered every chapter below 788; chapters already animated ahead of that point (skip on arrival):  (furthest chapter animated by this point: 787)."
+  },
+  {
+   "episode": 650,
+   "continue_chapter": 788,
+   "note": "Parity: DC adapts cases out of chapter order. After ep 650 the anime has covered every chapter below 788; chapters already animated ahead of that point (skip on arrival):  (furthest chapter animated by this point: 787)."
+  },
+  {
+   "episode": 659,
+   "continue_chapter": 788,
+   "note": "Parity: DC adapts cases out of chapter order. After ep 659 the anime has covered every chapter below 788; chapters already animated ahead of that point (skip on arrival): 790-792 (furthest chapter animated by this point: 792)."
+  },
+  {
+   "episode": 711,
+   "continue_chapter": 828,
+   "note": "Parity: DC adapts cases out of chapter order. After ep 711 the anime has covered every chapter below 828; chapters already animated ahead of that point (skip on arrival): 831-833 (furthest chapter animated by this point: 833)."
+  },
+  {
+   "episode": 723,
+   "continue_chapter": 828,
+   "note": "Parity: DC adapts cases out of chapter order. After ep 723 the anime has covered every chapter below 828; chapters already animated ahead of that point (skip on arrival): 831-843 (furthest chapter animated by this point: 843)."
+  },
+  {
+   "episode": 724,
+   "continue_chapter": 844,
+   "note": "Parity: DC adapts cases out of chapter order. After ep 724 the anime has covered every chapter below 844; chapters already animated ahead of that point (skip on arrival):  (furthest chapter animated by this point: 843)."
+  },
+  {
+   "episode": 749,
+   "continue_chapter": 865,
+   "note": "Parity: DC adapts cases out of chapter order. After ep 749 the anime has covered every chapter below 865; chapters already animated ahead of that point (skip on arrival): 869-871 (furthest chapter animated by this point: 871)."
+  },
+  {
+   "episode": 773,
+   "continue_chapter": 891,
+   "note": "Parity: DC adapts cases out of chapter order. After ep 773 the anime has covered every chapter below 891; chapters already animated ahead of that point (skip on arrival):  (furthest chapter animated by this point: 890)."
+  },
+  {
+   "episode": 823,
+   "continue_chapter": 921,
+   "note": "Parity: DC adapts cases out of chapter order. After ep 823 the anime has covered every chapter below 921; chapters already animated ahead of that point (skip on arrival): 925-927 (furthest chapter animated by this point: 927)."
+  },
+  {
+   "episode": 844,
+   "continue_chapter": 921,
+   "note": "Parity: DC adapts cases out of chapter order. After ep 844 the anime has covered every chapter below 921; chapters already animated ahead of that point (skip on arrival): 925-941 (furthest chapter animated by this point: 941)."
+  },
+  {
+   "episode": 847,
+   "continue_chapter": 921,
+   "note": "Parity: DC adapts cases out of chapter order. After ep 847 the anime has covered every chapter below 921; chapters already animated ahead of that point (skip on arrival): 925-944 (furthest chapter animated by this point: 944)."
+  },
+  {
+   "episode": 879,
+   "continue_chapter": 963,
+   "note": "Parity: DC adapts cases out of chapter order. After ep 879 the anime has covered every chapter below 963; chapters already animated ahead of that point (skip on arrival): 969-971 (furthest chapter animated by this point: 971)."
+  },
+  {
+   "episode": 886,
+   "continue_chapter": 963,
+   "note": "Parity: DC adapts cases out of chapter order. After ep 886 the anime has covered every chapter below 963; chapters already animated ahead of that point (skip on arrival): 969-974, 981-983 (furthest chapter animated by this point: 983)."
+  },
+  {
+   "episode": 1123,
+   "continue_chapter": 1088,
+   "note": "Parity: DC adapts cases out of chapter order. After ep 1123 the anime has covered every chapter below 1088; chapters already animated ahead of that point (skip on arrival):  (furthest chapter animated by this point: 1087)."
+  },
+  {
+   "episode": 1135,
+   "continue_chapter": 1094,
+   "note": "Parity: DC adapts cases out of chapter order. After ep 1135 the anime has covered every chapter below 1094; chapters already animated ahead of that point (skip on arrival):  (furthest chapter animated by this point: 1093)."
+  },
+  {
+   "episode": 1185,
+   "continue_chapter": 1119,
+   "note": "Parity: DC adapts cases out of chapter order. After ep 1185 the anime has covered every chapter below 1119; chapters already animated ahead of that point (skip on arrival): 1123-1125 (furthest chapter animated by this point: 1125)."
+  }
+ ],
+ "annotations": [
+  {
+   "episodes": [
+    1,
+    1205
+   ],
+   "kind": "rearranged",
+   "chapters": "1-1128",
+   "note": "Systemic: Detective Conan animates manga cases out of publication order. 201 of the 631 manga-adapted episodes start below the furthest chapter already animated, so END chapter is NOT monotonic in episode order - read position from continue_points, not from END+1."
+  },
+  {
+   "episodes": [
+    493,
+    594
+   ],
+   "kind": "divergence",
+   "chapters": "594",
+   "note": "Chapter 594 'The Fugitive' (V57 F8) is the ONLY mainline chapter below 1128 never animated as a TV episode; DCW's Volume 57 page marks it {{ref special|Fugitive: Kogoro Mouri}} (OVA/special only). All continue-point math here skips it."
+  },
+  {
+   "episodes": [
+    128
+   ],
+   "kind": "divergence",
+   "chapters": "13-16",
+   "note": "Anime-original re-do of files 13-16 (Hirota Masami case) with the Black Organization restored - ep 13 had already animated the same files with the BO written out. DCW marks it 'h.a.' (heavily altered), ja.WP marks it anime-original. Chapter re-use: no anchor emitted (an END of 16 here would drag position backwards)."
+  },
+  {
+   "episodes": [
+    1000,
+    1001
+   ],
+   "kind": "divergence",
+   "chapters": "62-67",
+   "note": "2021 remake of the Moonlight Sonata case (files 62-67), already animated as ep 11. ja.WP labels both episodes anime-original; DCW still lists V7 F2-F7. Chapter re-use: no anchor emitted."
+  },
+  {
+   "episodes": [
+    1187
+   ],
+   "kind": "side_story",
+   "chapters": "882-884, Special Edition File 0",
+   "note": "Episode ZERO re-animates the Aquarium case (files 882-884, first animated as eps 772-773) plus the Volume 1 Special-Edition appendix 'File 0 - Awkward Couple'. Row is typed anime-only-canon; A1 - no anchor."
+  },
+  {
+   "episodes": [
+    86,
+    113
+   ],
+   "kind": "side_story",
+   "chapters": "Detective Conan Special SV1 F2 / SV1 F6",
+   "note": "Both episodes adapt the DETECTIVE CONAN SPECIAL spinoff manga (DCW 'SV' = Special Volume; ja.WP writes them as 特別編File.2 / 特別編File.6 + anime-original). No mainline chapter is consumed, so no anchor - the rows are typed canon in our data but carry no mainline position."
+  },
+  {
+   "episodes": [
+    1029,
+    1061
+   ],
+   "kind": "side_story",
+   "chapters": "Wild Police Story F1-F12",
+   "note": "Eps 1029, 1038, 1042 and 1061 adapt the POLICE ACADEMY ARC: WILD POLICE STORY spinoff (WPS V1 F1-3, F4-6; WPS V2 F7-9, F10-12). Spinoff chapter space - never converted to mainline numbers, no anchors."
+  },
+  {
+   "episodes": [
+    219
+   ],
+   "kind": "graft",
+   "chapters": "156, 299-302 (+ Magic Kaito V4 C3-4)",
+   "note": "2-hour Kaitou Kid special: grafts a recap of file 156 and Magic Kaito volume 4 chapters 3-4 onto the new material in files 299-302. Anchor uses the mainline 299-302 only."
+  },
+  {
+   "episodes": [
+    510,
+    511
+   ],
+   "kind": "graft",
+   "chapters": "622-624 + 638-640",
+   "note": "DCW gives ep 510 two disjoint mainline segments (V60 F3-5 = 622-624 and V61 F8-10 = 638-640); ja.WP splits them as ep 509 = 622-624 and ep 510 = 638-640. Sources disagree on the split; no anchor emitted at 510."
+  },
+  {
+   "episodes": [
+    524
+   ],
+   "kind": "graft",
+   "chapters": "635-637 + tail of 654",
+   "note": "Both sources agree: files 635-637 (V61 sports-car arson) plus the closing pages of file 654 (V63 F2) grafted in as the lead-in. No anchor emitted."
+  },
+  {
+   "episodes": [
+    585
+   ],
+   "kind": "graft",
+   "chapters": "705-708 + 712",
+   "note": "DCW: V67 F9 ~ V68 F1 (705-708) plus V68 F5 (712). File 712 is pulled forward out of the Kirin's Horn case that ep 587 then completes."
+  },
+  {
+   "episodes": [
+    50
+   ],
+   "kind": "partial",
+   "chapters": "96-98",
+   "note": "ja.WP records 'File.96(latter half) - 98': the episode starts mid-chapter 96. START recorded as 96 per majority rule."
+  },
+  {
+   "episodes": [
+    941,
+    942
+   ],
+   "kind": "partial",
+   "chapters": "1005-1008",
+   "note": "ja.WP records 'File.1005 (closing section) - 1008'; DCW gives 1006-1008. START recorded as 1006 - the tail of 1005 is not the bulk."
+  },
+  {
+   "episodes": [
+    145,
+    1205
+   ],
+   "kind": "partial",
+   "chapters": "various",
+   "note": "18 episodes share a straddled chapter with the adjacent part (eps 50, 145, 492, 496, 497, 499, 500, 502, 503, 504, 510, 524, 585, 586, 618, 661, 1185, 1205). chapters_adapted lists the straddled chapter on both parts; only the first-time coverage moves position."
+  }
+ ],
+ "type_corrections": [
+  {
+   "episodes": [
+    128
+   ],
+   "type": "mixed",
+   "note": "Currently canon. DCW manga-source marks it 'h.a.' = heavily altered (V2 F4-F7); ja.WP's 原作 column gives File.16 plus an explicit アニメオリジナル tag. Partly-manga = mixed. Either way it must stay unanchored: files 13-16 were already animated in ep 13.",
+   "sources": [
+    "https://www.detectiveconanworld.com/wiki/Season_3",
+    "https://ja.wikipedia.org/wiki/%E5%90%8D%E6%8E%A2%E5%81%B5%E3%82%B3%E3%83%8A%E3%83%B3%E3%81%AE%E3%82%A2%E3%83%8B%E3%83%A1%E3%82%A8%E3%83%94%E3%82%BD%E3%83%BC%E3%83%89%E4%B8%80%E8%A6%A7",
+    "https://www.detectiveconanworld.com/wiki/Detective_Conan_Wiki:Manga_Legend"
+   ]
+  },
+  {
+   "episodes": [
+    1000,
+    1001
+   ],
+   "type": "mixed",
+   "note": "Currently canon. ja.WP tags both rows アニメオリジナル while giving File.62-67; DCW still lists V7 F2-F7 with no h.a. marker. 2021 remake of ep 11 with substantial new anime material - mixed is the honest reconciliation, and no anchor either way (chapter re-use).",
+   "sources": [
+    "https://www.detectiveconanworld.com/wiki/Season_26",
+    "https://ja.wikipedia.org/wiki/%E5%90%8D%E6%8E%A2%E5%81%B5%E3%82%B3%E3%83%8A%E3%83%B3%E3%81%AE%E3%82%A2%E3%83%8B%E3%83%A1%E3%82%A8%E3%83%94%E3%82%BD%E3%83%BC%E3%83%89%E4%B8%80%E8%A6%A7"
+   ]
+  }
+ ],
+ "repairs": [],
+ "structure": {
+  "notes": "ROW-COUNT IDENTITY - VERIFIED, NO SHIFT. Detective Conan World's season pages carry two numbering columns: the international episode number and the Japanese broadcast count (which inflates multi-part specials, e.g. our ep 521 = JP 570-571). OUR numbering matches DCW's INTERNATIONAL column 1:1 across all 1207 rows: air dates agree on 1196/1207 rows and all 11 exceptions are same-title rows where our stored air date is off by a week (eps 102, 110-115, 147, 353, 730, 904 - our 110/111/113/114/115 dates are scrambled among themselves, titles are in the right order). Title similarity is >=0.6 on 1168/1207 and every one of the 39 low-similarity rows is an alternate translation of the same title. No insert, no drift, at any point in 1-1207. FILE = CHAPTER. DCW's own Manga Legend defines 'File' as 'also known as chapter'. Verified numerically: DCW's V<n> F<k> label converts to the global chapter number via en-Wikipedia's volume lists (vols 1-108 = chapters 1-1154, fully continuous, no gaps) and agrees with DCW's own absolute file numbers on 627 of 631 manga episodes; the 4 apparent misses (eps 493, 494, 1185, 1205) are DCW rows where the parenthetical is the CASE span rather than the episode span, not numbering errors. Independent third check: DCW Volume pages' reverse {{ref anime|...}} mapping matched on 10/10 sampled anchors; ja-Wikipedia's 原作 column gives global File numbers directly and agrees with DCW on 621 of 632 manga episodes (the 11 exceptions are all grafts, parse artefacts, or per-case vs per-episode granularity - each is annotated). TYPE AGREEMENT IS PERFECT. Our stored AFL types and DCW's manga-source field agree on all 1207 rows: 631 canon rows all carry a mainline manga source, 569 filler rows are all 'TV Original', and the only 7 residuals are the 2 Detective Conan Special episodes (86, 113), the 4 Wild Police Story episodes (1029, 1038, 1042, 1061) and Episode ZERO (1187, already typed anime-only-canon). Zero mis-typings found. ADAPTATION IS NON-LINEAR. 201 of 631 manga episodes start below the running maximum chapter; the anime routinely animates a later case first and backfills. Coverage as of ep 1205 is chapters 1-1128 COMPLETE except chapter 594 ('The Fugitive', V57 F8), which DCW marks as adapted only in the 'Fugitive: Kogoro Mouri' special. SEASONS. DCW's 31 seasons map onto our numbering as 1-42, 43-85, 86-128, 129-173, 174-218, 219-262, 263-303, 304-344, 345-383, 384-424, 425-459, 460-490, 491-520, 521-561, 562-601, 602-641, 642-680, 681-723, 724-762, 763-803, 804-844, 845-886, 887-926, 927-964, 965-992, 993-1032, 1033-1067, 1068-1108, 1109-1147, 1148-1186, 1187-present. Every season's first and last CANON episode is anchored. OPEN FLAG #668 (count_mismatch, episodes 1212 vs structureCovered 1209): resolved in favour of our rows. DCW season 31 enumerates episodes through 1212 (1208 'Welcome to the Stone Age Village' 2026-07-25 ... 1212 'The Birdman Rally Bombing (Part 2)' 2026-09-05), all TV Original. Our 1212 rows are correct; the AniList component range 1-1210 is the stale side. Separately, three broadcasts are NOT part of the numbering in any source (ja.WP calls them 番外編/特別編): 'Kinga Shinnen Kogoro Mouri' (2015-01-03), Wild Police Story CASE. Rei Furuya (2023-03-11) and the Precure collab 'Hanamaru na Answer' (2026-06-06). None of them appear as numbered rows in our data - correct.",
+  "order_only": []
+ },
+ "flags_for_sean": [
+  "CONTINUE-POINT REGIME NEEDS A RULING. Because DC adapts out of order, the C2 'parity' continue point (first chapter not yet animated) is BELOW the episode's own END on 61 of the 80 continue_points emitted here (e.g. after ep 32, which adapts 105-107, the first un-animated chapter is 10). The alternative reading of C3 (furthest-covered + 1) would instead give a monotonic value. Each continue_point note carries BOTH numbers ('furthest chapter animated by this point: N') so either regime can be applied without re-research. If backward continue points are unacceptable to the UI, drop the continue_points block and keep the anchors.",
+  "Chapter 594 ('The Fugitive', V57 F8) is skipped by the TV series entirely (DCW Volume 57: {{ref special|Fugitive: Kogoro Mouri}}). Continue-point math here treats it as permanently skipped. If mangaMapper's model cannot express a permanent hole, ep-495-onward positions will read one chapter optimistic.",
+  "Eps 86 and 113 are typed canon but adapt the DETECTIVE CONAN SPECIAL spinoff manga, and eps 1029/1038/1042/1061 are typed canon but adapt WILD POLICE STORY. Both spinoffs have their own chapter space. They consume no mainline chapter, so they are left unanchored; if the interpolator treats an unanchored canon row as consuming mainline chapters it will over-advance across them.",
+  "Eps 128, 1000, 1001 are chapter RE-RUNS (files 13-16 and 62-67, already animated in eps 13 and 11). No anchors emitted; type_corrections to 'mixed' proposed but the anchoring decision does not depend on the type.",
+  "Ep 510: DCW gives the episode two disjoint segments (622-624 + 638-640) while ja.WP assigns 622-624 to ep 509 and 638-640 to ep 510. Unresolved; ep 510 left unanchored and eps 509/511 anchored around it.",
+  "Ep 1205's existing stored anchor (end 1128, vol 106, source mu) is CONFIRMED correct - no repair needed. The anchor emitted here re-states it with start_chapter 1127, chapters_adapted 1127-1128 and citations; if the apply script would treat that as a derivation-tier row, it must be flipped to 'manual'."
+ ]
+}
