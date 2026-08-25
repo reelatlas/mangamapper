@@ -255,3 +255,58 @@ and expect zones where two errors cancel.
 misaligned episodes, title-keyed, reopening the ep-15/16 C2 continue point.
 **New follow-up task (needs Sean's go):** batch-12 as-stored spot-check —
 7 rows (iruma-kun 63-64, rosario-vampire 3,5,7,8,11).
+
+## 11. RULINGS SESSION (2026-08-25) — Sean's calls on the wave-1 forks
+
+RULED AND CLOSED:
+- **D4: YES — extend the A1 gate to the AFG writers** (D1-style; retype
+  stays research-tier). Build at apply time.
+- **FotNS**: ep 109 null + terminal ep 108→136; "fandom + chapter accounting
+  beats AFL alone" accepted for its 8 type corrections.
+- **Retypes**: dbz 100 / fairy-tail 256 / tpn 23 / one-piece 737 → mixed.
+  Confirmed they follow the ruled type semantics (see below).
+- **Rurouni**: 99-100 → filler WITH reasoning stored as annotations (for
+  future watch-order surfacing). 95-98 anchors apply as researched.
+- **Mashle**: §9 fractional ruling stands; UI surfacing deferred to the
+  specials/OVAs design pass — for now the note + correct counts/titles.
+- **Sket-dance modelling**: END = max(adapted) with reorder annotations
+  (per the C2/A4 architecture; the sparse-frontier alternative rejected).
+
+RESOLVED BY EXISTING RULES (no new rule needed — A4 + C2, §10 2026-08-24):
+- **Hellsing frontier**: A4 already says coverage/continue-read = MAX-chapter
+  anchor across the run, never the run-end anchor (assemble.ts
+  coverageAnchor). Ep 10's ch-2 flashback anchor is an honest record; the
+  reader's continue point comes from coverage (ep 7 → ch 12, continue 13,
+  kind post_series). The agent's "max over ENDs" recommendation was a
+  rediscovery of A4. Apply as researched.
+- **Gintama ep 227**: duplicate chapter positions are legitimate (episodes
+  can share chapters). Keep the v41→L360 anchor + crossover annotation;
+  continue metadata (C2 parity) carries where-to-read-next, not anchor
+  uniqueness. The annotation-only fallback is rejected.
+- **Noragami**: null ep 12; terminal anchor on ep 10 (mixed — verified in
+  DB) END 12 per A4 honest record; parity healer stamps continue metadata.
+  Also clean the batch-12 ep-12 continue-note that repeats the refuted
+  railgun-style graft claim... (that item is railgun's — noragami's ep-12
+  cleanup is just the null + annotation).
+
+NEW RULES CODIFIED THIS SESSION (capture done):
+- **Episode-type semantics** (canon / anime-only-canon = consensus-canon /
+  filler = zero canon / mixed) + AFL/AFG advisory-only → §10 row +
+  research-agent definition.
+- **Chapter overlap never proves filler** (the zatch-bell lesson) → §10 row
+  + research-agent definition trap.
+
+REOPENED — zatch-bell 10-ep contested block (13, 51, 57, 103, 108, 117,
+118, 119, 122, 123): the verdict's filler proposal rested on exhaustive
+accounting, now ruled insufficient. Sean's quick cross-check (instant-answer
+class — cross-check only, never primary) suggests 103/117/118/119/122/123
+may be MIXED (canon from chs ~172, 179-183, 184-187 + padding) and
+13/51/57 pure filler. NEW NARROW TASK: re-research the 10 under the
+overlap rule — judge each episode's own content; overlap with other
+episodes' chapters does not exclude canon. The 105 zatch anchors on
+uncontested rows are unaffected and can apply.
+
+HELD: wave 2 dispatch — until the open questions above are worked through
+with Sean (his instruction). Follow-up tasks pending his go: ranma
+title-keyed re-anchor; batch-12 as-stored spot-check (7 rows); zatch-bell
+10-ep re-research (new).

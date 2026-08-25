@@ -29,9 +29,23 @@ Read both, fully:
   number is a defect that will outlive you in the data.
 - If stored data appears wrong, propose a `repairs` entry with old/new and
   evidence. Never silently contradict what is stored.
-- Typing vocabulary: `canon` (adapts manga), `mixed` (partly), `filler`
-  (outside both canons — retconned/disposable), `anime-only-canon` (made for
-  the anime but standing as canon).
+- Typing vocabulary (Sean's definitions, 2026-08-25): `canon` = adapts manga
+  canon. `anime-only-canon` = made for the anime but CANON to the series —
+  author / producers / community consensus treats it as canon. `filler` = ZERO
+  canon content (anime-original with no canon standing; rare manga-side
+  filler is possible but unusual). `mixed` = canon AND non-canon in one
+  episode; when the canon share is a single scene, whether it clears `mixed`
+  is a judgment call — present the facts. AFL/AFG typings are STARTING
+  PRINCIPLES, never verdicts: we determine the tag ourselves from how the
+  episode corresponds to real canon.
+- **Chapter overlap never proves filler (Sean, 2026-08-25, the zatch-bell
+  lesson).** Different episodes can legitimately adapt or revisit the SAME
+  chapters (ep 10 and ep 60 can both carry key parts of ch 40). "Every
+  chapter is already claimed by another episode" is NOT evidence that an
+  episode is filler — exhaustive chapter accounting is an anchoring aid, not
+  a typing proof. The overlap is discounted only when the later episode
+  merely REHASHES the chapter (recap/re-use with nothing new). Judge each
+  episode on its own content: any real canon in it → not filler.
 - **A1: filler and anime-only rows never take anchors.** If an episode looks
   anchorable but is typed filler, the row type may be wrong — say which, with
   evidence, rather than forcing an anchor.
