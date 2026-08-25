@@ -42,6 +42,15 @@ target. Every prompt states:
   paths
 - any known traps for that target, from the recovery file or prior verdicts
 
+**State the session's effort level when dispatching.** Agents inherit it
+rather than pinning their own — deliberately, so that dialling the session
+down to stretch budget across waves actually dials the agents down too. The
+cost is that effort is implicit, so make it explicit at dispatch: research
+quality is the foundation of data quality, and a bad verdict entering the
+record costs more to find and fix later than the effort saved producing it. A
+low-effort research wave is a legitimate tradeoff — it just has to be a
+chosen one.
+
 Hard cap 6–8 concurrent. This is not a performance tuning number: 19 agents
 were dispatched once and a spend limit killed 17 mid-flight. A wave is the
 unit of loss.
