@@ -140,9 +140,38 @@ const DELETIONS_APPROVED = new Map<string, string>([
 // exactly like verdict anchors (source manual, batch note).
 const CURATED_ANCHORS: { sid: string; anchor: Anchor; why: string }[] = [
   {
+    sid: 'zatch-bell',
+    anchor: { episode: 51, end_chapter: 22, start_chapter: 22, chapters_adapted: '22 (Germany half — Brago vs Furigaro; first and only adaptation, held back 41 episodes from the S1 Germany arc)', volume: 3, confidence: 'high', note: "Sean's C3 ruling 2026-08-25: the row truthfully shows what it adapts (ch 22, first-time); coverage/continue stay at parity (everything through ch 98/99 already covered — resume ch 100 with ep 52). The reorder is explained by this row's graft/divergence annotations.", sources: ['https://konjikinogash.fandom.com', 'https://en.wikipedia.org/wiki/List_of_Zatch_Bell!_episodes'] },
+    why: 'evidence in out2/zatch-bell-contested.json (withheld there pending Sean; ruled 2026-08-25: anchor + annotation, continue via parity)',
+  },
+  {
+    sid: 'zatch-bell',
+    anchor: { episode: 103, end_chapter: 173, start_chapter: 173, chapters_adapted: '173 (opening beat only — partial)', volume: 19, confidence: 'medium', note: "Sean's C3 ruling 2026-08-25: first-time partial adaptation anchors truthfully; the anime backfills chs 164-168 across eps 104-107, so continue = 164 (the coming block's chronological start), matching the stored eps 102/104 continues.", sources: ['https://konjikinogash.fandom.com', 'https://en.wikipedia.org/wiki/List_of_Zatch_Bell!_episodes'] },
+    why: 'evidence in out2/zatch-bell-contested.json (withheld there pending Sean; ruled 2026-08-25: anchor + partial annotation, continue 164)',
+  },
+  {
     sid: 'noragami',
     anchor: { episode: 10, end_chapter: 12, start_chapter: 9, chapters_adapted: '9 (part), 12 (part)', volume: null, confidence: 'high', note: 'honest S1 terminal (Sean 2026-08-25): ep 10 is the last episode with manga content (parts of chs 9 and 12) before the anime-only Rabou arc closes the season; replaces the deleted junk ep-12 anchor per A4 (anchor = what the episode adapts; coverage carries continue-read)', sources: ['https://noragami.fandom.com/wiki/Rabou_Arc'] },
     why: 'evidence in out2/noragami-a1.json flags; DB pre-check confirmed ep 10 typed mixed and previously anchorless',
+  },
+];
+// Curated continue points (Sean's C3 regime rule 2026-08-25): when the anime
+// is KNOWN to cover skipped material in later episodes, continue points at
+// the skip (parity) and the note tells the reader which already-covered
+// chapter to skip on arrival; when not known, continue = furthest-covered+1
+// with the skip range annotated. Applied after the anchor pass.
+const CURATED_CONTINUES: { sid: string; episode: number; continue_chapter: number; kind: string; note: string }[] = [
+  {
+    sid: 'welcome-to-demon-school-iruma-kun', episode: 63, continue_chapter: 143, kind: 'parity',
+    note: "Sean's C3 ruling 2026-08-25: ep 63 adapts 142 + 145 (forward graft); the anime covers 143-144 next (ep 64), so continue from 143 — and skip ch 145 when you reach it (already covered by this episode) unless re-reading.",
+  },
+  {
+    sid: 'zatch-bell', episode: 103, continue_chapter: 164, kind: 'parity',
+    note: "Sean's C3 ruling 2026-08-25: eps 104-107 backfill chs 164-168 (scrambled); continue from 164, the coming block's chronological start — ch 173's opening beat seen here re-arrives at ep 108+.",
+  },
+  {
+    sid: 'zatch-bell', episode: 51, continue_chapter: 100, kind: 'parity',
+    note: "Sean's C3 ruling 2026-08-25: ch 22 here is a held-back first-time adaptation inside fully-covered territory (coverage through 99); resume at 100 with ep 52.",
   },
 ];
 // Stored episode_annotations DELETED by this batch (key `${sid}#${episode}#${kind}`):
@@ -407,6 +436,19 @@ async function main() {
         if (!DRY) {
           const { error } = await db.from('chapter_anchors').update({ continue_chapter: Number(c.continue_chapter) }).eq('series_id', sid).eq('episode', ep);
           if (error) throw new Error(`continue ${sid} ep${ep}: ${error.message}`);
+        }
+        totals.continues++;
+      }
+
+      // curated continue points (C3): explicit values with kind + note —
+      // never overwritten by the parity healer (it only fills absent metadata)
+      for (const cc of CURATED_CONTINUES.filter((c) => c.sid === sid)) {
+        lines.push(`   CURATED continue ep${cc.episode} → ${cc.continue_chapter} [${cc.kind}]`);
+        if (!DRY) {
+          const { error } = await db.from('chapter_anchors')
+            .update({ continue_chapter: cc.continue_chapter, continue_kind: cc.kind, continue_note: cc.note.slice(0, 600) })
+            .eq('series_id', sid).eq('episode', cc.episode);
+          if (error) throw new Error(`curated-continue ${sid} ep${cc.episode}: ${error.message}`);
         }
         totals.continues++;
       }

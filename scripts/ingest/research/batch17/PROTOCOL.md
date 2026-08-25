@@ -37,8 +37,17 @@ necessarily every episode:
   includes mid-run specials/oneshots. If your source's numbering differs
   from the context file's chapter space, state the conversion.
 - **Continue point** = the reader's honest resume where it differs from
-  END+1 (mid-chapter ending → the chapter itself; skips → the earliest
-  not-yet-adapted-but-will-be chapter).
+  END+1, per Sean's C2/C3 regimes (2026-08-25, §10):
+  - mid-chapter ending → the straddled chapter itself (C1);
+  - skipped material the anime WILL cover in known later episodes →
+    PARITY: continue at the next episode's start (the reader stays in
+    step with the anime), noting any already-covered later chapter to
+    skip on arrival;
+  - skips never covered / future unknown → furthest-covered + 1, with
+    the skip range noted for context.
+  Chapter RE-USE across episodes is listed as true data everywhere it
+  occurs but never moves position — only furthest first-time coverage
+  does.
 - **Spinoff/bonus chapters** are labeled inside chapters_adapted (e.g.
   "omake 85.5", "Gaiden 3"), never converted to mainline numbers.
 - **Finales anchor to what they adapt**, never inflated to the furthest

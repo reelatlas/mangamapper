@@ -135,3 +135,22 @@ canon-standing filter. Plan: a separate per-episode format dimension
 today's interim being annotations that record the format facts as research
 lands (rurouni 95-98 OVA facts are already in the batch-17 verdict). Same
 principle series-side: source_type extends by value, never by overloading.
+
+## Pre-batch-18 backlog additions (2026-08-25)
+
+- **Air-date override pass** (Sean's go, deferred by design): 9 known-wrong
+  air dates — fist-of-the-north-star ×6 (AFL-inherited; ep 108 carries ep
+  112's date), ranma-1-2 ep 153 (1992-09-04 → 1992-07-31; this artifact
+  faked an "order deviation"), a-certain-scientific-railgun ep 14 (one day
+  off). A bare update is clobbered by the next AFL refresh — build an
+  AIR_DATE_OVERRIDES map applied in filterEpisodeRows (the type-override
+  pattern), land the 9 entries with citations, add an outcome audit if the
+  class grows. Route: the rules/skills/MDs restructuring phase before 18.
+- **iruma ep-65 enrichment** (offered by the as-stored agent, held — not
+  researched to anchor depth): full record start 141, adapted "146, 141,
+  147 (partial — 147 restarts in S4 ep 1)", vol 17. Verify to anchor depth
+  in a future narrow pass, then apply.
+- **konjikinogash second-source sweep** (from the zatch contested verdict):
+  its per-episode table resolves the base verdict's eps 66-68 split and
+  adds partials at eps 1/23/55/60/70/79/102/109/114/136 — none re-verified
+  yet; a future zatch pass should consume it.
