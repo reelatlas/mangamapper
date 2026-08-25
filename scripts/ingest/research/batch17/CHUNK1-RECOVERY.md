@@ -235,3 +235,23 @@ Mashle apply plan (supersedes the verdict's shift-the-anchors reading):
 6. Generalisation for §10 at capture: when OUR rows have absorbed an
    in-between entry that the community convention holds fractional,
    renumber to the convention — never keep the absorption.
+
+## 10. VERIFY PASS RESULTS (2026-08-25) — 4 verifiers, all landed
+
+| claim | verdict | what changed |
+|---|---|---|
+| mashle off-by-one | CONFIRMED (4/4) | repair-shape caveat: ep-7 repair formally nulls only end_chapter — expand to full null at curation. Superseded anyway by Sean's §9 fractional ruling. |
+| sket-dance non-linear | CONFIRMED (5/5) | zero drift between summary and rows; ep-77 repair exact. Open: Sean's monotonicity modelling ruling. |
+| railgun batch-12 falsity | CONFIRMED (4/4) | failure mode = "as-stored" confirmation-laundering (blessing an inherited pin with an invented rationale). Batch-12's researched railgun anchors are clean 3/3. NEW QUEUE: 7 other as-stored rows (iruma-kun 63-64; rosario-vampire 3,5,7,8,11). Cleanup: ep-12 continue-point note still repeats the refuted graft claim. |
+| ranma production-order | PARTIALLY CONFIRMED | six nulls all stand independently (wiki manga=None + AFL + anime-only categories). Mechanism amended: AFG's row order is INCONSISTENT — production order in zones 88-90/121-135/154-156, aired order in 15-30 where OUR rows deviate (AFL numbering, non-monotonic air dates); ep 14 was correct-row-wrong-source. The verdict's proposed fix (key on wiki AIRED number) would CORRUPT eps 15-30 and 153 — join on normalized TITLE only. Verified live damage beyond the six: eps 15/89/122/155 carry wrong canon anchors NOW; eps 88/126 anchorless; ep 15's C2 parity continue point was reasoned on the bad anchor and must be reopened; ep 18 is accidentally correct (two cancelling errors) — a naive re-index would break it. |
+
+**Amended source trap (replaces the wave-1 wording):** AFG's row order is
+inconsistent — production order in some zones, aired in others — and OUR
+rows are not always aired order either (ranma 15-30, 153 follow AFL). Never
+index-join ANY per-episode chart; join on normalized title (or air date),
+and expect zones where two errors cancel.
+
+**New follow-up task (needs Sean's go):** ranma-1-2 series re-anchor, 37
+misaligned episodes, title-keyed, reopening the ep-15/16 C2 continue point.
+**New follow-up task (needs Sean's go):** batch-12 as-stored spot-check —
+7 rows (iruma-kun 63-64, rosario-vampire 3,5,7,8,11).
