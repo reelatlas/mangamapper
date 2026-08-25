@@ -1,0 +1,664 @@
+{
+  "series_id": "hayate-the-combat-butler",
+  "summary": "Season 1 (our eps 1-52) adapts Hayate no Gotoku! in a deliberately SHUFFLED order rather than a linear run: eps 1-3 take ch 1-7, then ep 4 jumps to v4 ch 34-36, ep 5 returns to ch 11/16, and the season keeps criss-crossing the manga for the rest of its run, with late grafts from v7-v12 (ch 65, 68-71, 73, 85, 90, 99-104, 107, 128, 129) dropped into episodes that otherwise sit in v2-v5. 30 anchors are produced across eps 1-49. Two target episodes get no anchor: ep 10 is anime-only (type correction proposed) and the ep 52 finale adapts only the volume-4 and volume-8 BONUS chapters ('Radical Dreamers', 'Small Two of Pieces'), which have no mainline chapter number — an honest gap rather than an invented END. Because the adaptation order is non-monotonic, the END chapters do NOT increase with episode number (…36, 16, 20, 23, 19, 46, …, 68, 48, 25, 85, 70, 28, 32, 99, 71, 65, 129, 51, 100, 103, 128), so any interpolating position model must be suppressed for eps 1-52; the honest reader resume for the whole season is ch 52, which is exactly where season 2 (our ep 53) picks up. Row identity was verified against ja.wikipedia and en.wikipedia by air date and Japanese title at eps 1/20/29/52 — no Ryuusui-class numbering shift exists here.",
+  "anchors": [
+    {
+      "episode": 1,
+      "end_chapter": 2,
+      "start_chapter": 1,
+      "chapters_adapted": "1-2",
+      "volume": 1,
+      "confidence": "high",
+      "note": "Santa/kidnapping opening through the car rescue; ep title = ch 2 title exactly (運命は、英語で言うとデスティニー).",
+      "sources": [
+        "https://hayatenogotoku.fandom.com/wiki/Hayate_no_Gotoku!_Episode_1",
+        "https://hayatenogotoku.fandom.com/wiki/Chapter_2",
+        "https://hayatenogotoku.fandom.com/wiki/Chapter_1",
+        "https://en.wikipedia.org/wiki/List_of_Hayate_the_Combat_Butler_chapters",
+        "https://en.wikipedia.org/wiki/List_of_Hayate_the_Combat_Butler_episodes"
+      ]
+    },
+    {
+      "episode": 2,
+      "end_chapter": 5,
+      "start_chapter": 3,
+      "chapters_adapted": "3-5",
+      "volume": 1,
+      "confidence": "high",
+      "note": "Waking in the mansion through Klaus' firing order and Nagi's 'Mask the Money' rescue — ch 5 is the wharf rescue.",
+      "sources": [
+        "https://hayatenogotoku.fandom.com/wiki/Hayate_no_Gotoku!_Episode_2",
+        "https://hayatenogotoku.fandom.com/wiki/Chapter_5",
+        "https://hayatenogotoku.fandom.com/wiki/Chapter_3",
+        "https://hayatenogotoku.fandom.com/wiki/Chapter_4",
+        "https://en.wikipedia.org/wiki/List_of_Hayate_the_Combat_Butler_chapters",
+        "https://en.wikipedia.org/wiki/List_of_Hayate_the_Combat_Butler_episodes"
+      ]
+    },
+    {
+      "episode": 3,
+      "end_chapter": 7,
+      "start_chapter": 6,
+      "chapters_adapted": "4 (Klaus/Maria material re-used from ep 2), 6-7",
+      "volume": 1,
+      "confidence": "high",
+      "note": "Butler aptitude test (ch 6) + Tama the tiger (ch 7, whose title the episode title parodies); ch 4 material is a reprise from ep 2, so START is 6.",
+      "sources": [
+        "https://hayatenogotoku.fandom.com/wiki/Hayate_no_Gotoku!_Episode_3",
+        "https://hayatenogotoku.fandom.com/wiki/Chapter_7",
+        "https://hayatenogotoku.fandom.com/wiki/Chapter_4",
+        "https://hayatenogotoku.fandom.com/wiki/Chapter_6",
+        "https://en.wikipedia.org/wiki/List_of_Hayate_the_Combat_Butler_chapters",
+        "https://en.wikipedia.org/wiki/List_of_Hayate_the_Combat_Butler_episodes"
+      ]
+    },
+    {
+      "episode": 4,
+      "end_chapter": 36,
+      "start_chapter": 34,
+      "chapters_adapted": "34-36",
+      "volume": 4,
+      "confidence": "high",
+      "note": "Volume-4 jump: bento errand to Hakuou, Yukiji, first Hinagiku meeting and the clock tower — fandom ch 36 summary is the clock-tower scene that closes the episode.",
+      "sources": [
+        "https://hayatenogotoku.fandom.com/wiki/Hayate_no_Gotoku!_Episode_4",
+        "https://hayatenogotoku.fandom.com/wiki/Chapter_36",
+        "https://hayatenogotoku.fandom.com/wiki/Chapter_34",
+        "https://hayatenogotoku.fandom.com/wiki/Chapter_35",
+        "https://en.wikipedia.org/wiki/List_of_Hayate_the_Combat_Butler_chapters",
+        "https://en.wikipedia.org/wiki/List_of_Hayate_the_Combat_Butler_episodes"
+      ]
+    },
+    {
+      "episode": 5,
+      "end_chapter": 16,
+      "start_chapter": 11,
+      "chapters_adapted": "11, 16",
+      "volume": 2,
+      "confidence": "high",
+      "note": "Sakuya's comedy lesson (ch 11) then the cashmere-coat tea errand and meeting Isumi (ch 16); ep title ≈ ch 16 title (不用意な優しさが不幸を呼ぶ).",
+      "sources": [
+        "https://hayatenogotoku.fandom.com/wiki/Hayate_no_Gotoku!_Episode_5",
+        "https://hayatenogotoku.fandom.com/wiki/Chapter_16",
+        "https://hayatenogotoku.fandom.com/wiki/Chapter_11",
+        "https://en.wikipedia.org/wiki/List_of_Hayate_the_Combat_Butler_chapters",
+        "https://en.wikipedia.org/wiki/List_of_Hayate_the_Combat_Butler_episodes"
+      ]
+    },
+    {
+      "episode": 6,
+      "end_chapter": 20,
+      "start_chapter": 17,
+      "chapters_adapted": "17-18, 20",
+      "volume": 2,
+      "confidence": "high",
+      "note": "Isumi/tea aftermath and Hayate's cold (ch 17-18), closing on Saki and Wataru's arrival (ch 20); ch 19 is held back to ep 8.",
+      "sources": [
+        "https://hayatenogotoku.fandom.com/wiki/Hayate_no_Gotoku!_Episode_6",
+        "https://hayatenogotoku.fandom.com/wiki/Chapter_20",
+        "https://hayatenogotoku.fandom.com/wiki/Chapter_17",
+        "https://hayatenogotoku.fandom.com/wiki/Chapter_18",
+        "https://en.wikipedia.org/wiki/List_of_Hayate_the_Combat_Butler_chapters",
+        "https://en.wikipedia.org/wiki/List_of_Hayate_the_Combat_Butler_episodes"
+      ]
+    },
+    {
+      "episode": 7,
+      "end_chapter": 23,
+      "start_chapter": 21,
+      "chapters_adapted": "21-23",
+      "volume": 3,
+      "confidence": "high",
+      "note": "Wataru duel (ch 21 = ep title 男の戦い), Tokyo subway (ch 22), video-store apology (ch 23).",
+      "sources": [
+        "https://hayatenogotoku.fandom.com/wiki/Hayate_no_Gotoku!_Episode_7",
+        "https://hayatenogotoku.fandom.com/wiki/Chapter_23",
+        "https://hayatenogotoku.fandom.com/wiki/Chapter_21",
+        "https://hayatenogotoku.fandom.com/wiki/Chapter_22",
+        "https://en.wikipedia.org/wiki/List_of_Hayate_the_Combat_Butler_chapters",
+        "https://en.wikipedia.org/wiki/List_of_Hayate_the_Combat_Butler_episodes"
+      ]
+    },
+    {
+      "episode": 8,
+      "end_chapter": 19,
+      "start_chapter": 8,
+      "chapters_adapted": "8, 19",
+      "volume": 2,
+      "confidence": "high",
+      "note": "Neko-mimi cosplay (ch 8 = ep title) then the night billiards game with Maria (ch 19, 'Night of the Servants'), lifted out of the ep-6 block.",
+      "sources": [
+        "https://hayatenogotoku.fandom.com/wiki/Hayate_no_Gotoku!_Episode_8",
+        "https://hayatenogotoku.fandom.com/wiki/Chapter_19",
+        "https://hayatenogotoku.fandom.com/wiki/Chapter_8",
+        "https://en.wikipedia.org/wiki/List_of_Hayate_the_Combat_Butler_chapters",
+        "https://en.wikipedia.org/wiki/List_of_Hayate_the_Combat_Butler_episodes"
+      ]
+    },
+    {
+      "episode": 9,
+      "end_chapter": 46,
+      "start_chapter": 44,
+      "chapters_adapted": "44-46",
+      "volume": 5,
+      "confidence": "high",
+      "note": "Night-school ghost arc; ep title = ch 46 title (ウシくん ウシくん!なんだい カエルくん?).",
+      "sources": [
+        "https://hayatenogotoku.fandom.com/wiki/Hayate_no_Gotoku!_Episode_9",
+        "https://hayatenogotoku.fandom.com/wiki/Chapter_46",
+        "https://hayatenogotoku.fandom.com/wiki/Chapter_44",
+        "https://hayatenogotoku.fandom.com/wiki/Chapter_45",
+        "https://en.wikipedia.org/wiki/List_of_Hayate_the_Combat_Butler_chapters",
+        "https://en.wikipedia.org/wiki/List_of_Hayate_the_Combat_Butler_episodes"
+      ]
+    },
+    {
+      "episode": 11,
+      "end_chapter": 14,
+      "start_chapter": 13,
+      "chapters_adapted": "13-14",
+      "volume": 2,
+      "confidence": "high",
+      "note": "Visit to Mikado; ep title 'The Value of My Life is Priceless' answers ch 14 'How Much is Your Life?'.",
+      "sources": [
+        "https://hayatenogotoku.fandom.com/wiki/Hayate_no_Gotoku!_Episode_11",
+        "https://hayatenogotoku.fandom.com/wiki/Chapter_14",
+        "https://hayatenogotoku.fandom.com/wiki/Chapter_13",
+        "https://en.wikipedia.org/wiki/List_of_Hayate_the_Combat_Butler_chapters",
+        "https://en.wikipedia.org/wiki/List_of_Hayate_the_Combat_Butler_episodes"
+      ]
+    },
+    {
+      "episode": 12,
+      "end_chapter": 43,
+      "start_chapter": 15,
+      "chapters_adapted": "15, 37, 43",
+      "volume": 5,
+      "confidence": "medium",
+      "note": "Three-chapter graft: golden feather/phone (ch 15), Shiomi visit and Ayumu's confession (ch 37 = ep title), video-return coda (ch 43). END 43 rests on the fandom pair only.",
+      "sources": [
+        "https://hayatenogotoku.fandom.com/wiki/Hayate_no_Gotoku!_Episode_12",
+        "https://hayatenogotoku.fandom.com/wiki/Chapter_43",
+        "https://hayatenogotoku.fandom.com/wiki/Chapter_15",
+        "https://hayatenogotoku.fandom.com/wiki/Chapter_37",
+        "https://en.wikipedia.org/wiki/List_of_Hayate_the_Combat_Butler_chapters",
+        "https://en.wikipedia.org/wiki/List_of_Hayate_the_Combat_Butler_episodes"
+      ]
+    },
+    {
+      "episode": 13,
+      "end_chapter": 38,
+      "start_chapter": 38,
+      "chapters_adapted": "38",
+      "volume": 4,
+      "confidence": "high",
+      "note": "Single chapter; ep title = ch 38 title (夏を制する者は受験を制す…).",
+      "sources": [
+        "https://hayatenogotoku.fandom.com/wiki/Hayate_no_Gotoku!_Episode_13",
+        "https://hayatenogotoku.fandom.com/wiki/Chapter_38",
+        "https://en.wikipedia.org/wiki/List_of_Hayate_the_Combat_Butler_chapters",
+        "https://en.wikipedia.org/wiki/List_of_Hayate_the_Combat_Butler_episodes"
+      ]
+    },
+    {
+      "episode": 14,
+      "end_chapter": 39,
+      "start_chapter": 39,
+      "chapters_adapted": "39",
+      "volume": 4,
+      "confidence": "high",
+      "note": "Single chapter 'Funny Bunny' — fandom ch 39 summary (Hayate's pass celebration, Yukiji/Hinagiku) matches the episode exactly.",
+      "sources": [
+        "https://hayatenogotoku.fandom.com/wiki/Hayate_no_Gotoku!_Episode_14",
+        "https://hayatenogotoku.fandom.com/wiki/Chapter_39",
+        "https://en.wikipedia.org/wiki/List_of_Hayate_the_Combat_Butler_chapters",
+        "https://en.wikipedia.org/wiki/List_of_Hayate_the_Combat_Butler_episodes"
+      ]
+    },
+    {
+      "episode": 15,
+      "end_chapter": 41,
+      "start_chapter": 40,
+      "chapters_adapted": "40-41",
+      "volume": 4,
+      "confidence": "high",
+      "note": "First day at Hakuou; ep title = ch 41 title (サムライ、ブシドー、動くヴァンダム).",
+      "sources": [
+        "https://hayatenogotoku.fandom.com/wiki/Hayate_no_Gotoku!_Episode_15",
+        "https://hayatenogotoku.fandom.com/wiki/Chapter_41",
+        "https://hayatenogotoku.fandom.com/wiki/Chapter_40",
+        "https://en.wikipedia.org/wiki/List_of_Hayate_the_Combat_Butler_chapters",
+        "https://en.wikipedia.org/wiki/List_of_Hayate_the_Combat_Butler_episodes"
+      ]
+    },
+    {
+      "episode": 16,
+      "end_chapter": 42,
+      "start_chapter": 42,
+      "chapters_adapted": "42",
+      "volume": 5,
+      "confidence": "high",
+      "note": "Single chapter; ep title = ch 42 title (負けてもマケンドー).",
+      "sources": [
+        "https://hayatenogotoku.fandom.com/wiki/Hayate_no_Gotoku!_Episode_16",
+        "https://hayatenogotoku.fandom.com/wiki/Chapter_42",
+        "https://en.wikipedia.org/wiki/List_of_Hayate_the_Combat_Butler_chapters",
+        "https://en.wikipedia.org/wiki/List_of_Hayate_the_Combat_Butler_episodes"
+      ]
+    },
+    {
+      "episode": 17,
+      "end_chapter": 68,
+      "start_chapter": 68,
+      "chapters_adapted": "68 (+ ch 100 cold-open gag only)",
+      "volume": 7,
+      "confidence": "medium",
+      "note": "Body of the episode is ch 68 ('There Are Things That Money Can't Buy. Priceless' — Maria's 'money can't solve everything' line). The Britney magical-girl cold open is a few pages of ch 100, which ep 44 adapts in full, so END is not inflated to 100.",
+      "sources": [
+        "https://hayatenogotoku.fandom.com/wiki/Hayate_no_Gotoku!_Episode_17",
+        "https://hayatenogotoku.fandom.com/wiki/Chapter_68",
+        "https://hayatenogotoku.fandom.com/wiki/Chapter_100",
+        "https://en.wikipedia.org/wiki/List_of_Hayate_the_Combat_Butler_chapters",
+        "https://en.wikipedia.org/wiki/List_of_Hayate_the_Combat_Butler_episodes"
+      ]
+    },
+    {
+      "episode": 20,
+      "end_chapter": 48,
+      "start_chapter": 47,
+      "chapters_adapted": "47-48",
+      "volume": 5,
+      "confidence": "high",
+      "note": "Library/ultimate-move training (ch 47) then Nagi running off and the Ayumu karaoke duel (ch 48, 歌え竜宮城 = ep title).",
+      "sources": [
+        "https://hayatenogotoku.fandom.com/wiki/Hayate_no_Gotoku!_Episode_20",
+        "https://hayatenogotoku.fandom.com/wiki/Chapter_48",
+        "https://hayatenogotoku.fandom.com/wiki/Chapter_47",
+        "https://en.wikipedia.org/wiki/List_of_Hayate_the_Combat_Butler_chapters",
+        "https://en.wikipedia.org/wiki/List_of_Hayate_the_Combat_Butler_episodes"
+      ]
+    },
+    {
+      "episode": 21,
+      "end_chapter": 25,
+      "start_chapter": 10,
+      "chapters_adapted": "10, 25",
+      "volume": 3,
+      "confidence": "high",
+      "note": "Eight's revenge (ch 10) grafted onto the Nagi Nagi Land amusement-park chapter (ch 25 = ep title ピーターさんもいい迷惑).",
+      "sources": [
+        "https://hayatenogotoku.fandom.com/wiki/Hayate_no_Gotoku!_Episode_21",
+        "https://hayatenogotoku.fandom.com/wiki/Chapter_25",
+        "https://hayatenogotoku.fandom.com/wiki/Chapter_10",
+        "https://en.wikipedia.org/wiki/List_of_Hayate_the_Combat_Butler_chapters",
+        "https://en.wikipedia.org/wiki/List_of_Hayate_the_Combat_Butler_episodes"
+      ]
+    },
+    {
+      "episode": 22,
+      "end_chapter": 85,
+      "start_chapter": 26,
+      "chapters_adapted": "26, 85",
+      "volume": 8,
+      "confidence": "high",
+      "note": "First half is ch 26 (bath, ep title); second half grafts v8 ch 85 (Sanzenin-lake fishing, complete with the 'Fishing Sampei' gag).",
+      "sources": [
+        "https://hayatenogotoku.fandom.com/wiki/Hayate_no_Gotoku!_Episode_22",
+        "https://hayatenogotoku.fandom.com/wiki/Chapter_85",
+        "https://hayatenogotoku.fandom.com/wiki/Chapter_26",
+        "https://en.wikipedia.org/wiki/List_of_Hayate_the_Combat_Butler_chapters",
+        "https://en.wikipedia.org/wiki/List_of_Hayate_the_Combat_Butler_episodes"
+      ]
+    },
+    {
+      "episode": 23,
+      "end_chapter": 70,
+      "start_chapter": 69,
+      "chapters_adapted": "69-70",
+      "volume": 7,
+      "confidence": "medium",
+      "note": "Shiori becomes homeroom teacher (ch 69 = ep title); the Izumi/student-council chase is ch 70. ch 70's page is a stub, so END is fandom-pair only.",
+      "sources": [
+        "https://hayatenogotoku.fandom.com/wiki/Hayate_no_Gotoku!_Episode_23",
+        "https://hayatenogotoku.fandom.com/wiki/Chapter_70",
+        "https://hayatenogotoku.fandom.com/wiki/Chapter_69",
+        "https://en.wikipedia.org/wiki/List_of_Hayate_the_Combat_Butler_chapters",
+        "https://en.wikipedia.org/wiki/List_of_Hayate_the_Combat_Butler_episodes"
+      ]
+    },
+    {
+      "episode": 24,
+      "end_chapter": 28,
+      "start_chapter": 27,
+      "chapters_adapted": "27-28",
+      "volume": 3,
+      "confidence": "high",
+      "note": "Isumi's stole and the King's Stone curse (ch 27) into the next-morning 'who do you like more' fallout (ch 28).",
+      "sources": [
+        "https://hayatenogotoku.fandom.com/wiki/Hayate_no_Gotoku!_Episode_24",
+        "https://hayatenogotoku.fandom.com/wiki/Chapter_28",
+        "https://hayatenogotoku.fandom.com/wiki/Chapter_27",
+        "https://en.wikipedia.org/wiki/List_of_Hayate_the_Combat_Butler_chapters",
+        "https://en.wikipedia.org/wiki/List_of_Hayate_the_Combat_Butler_episodes"
+      ]
+    },
+    {
+      "episode": 25,
+      "end_chapter": 32,
+      "start_chapter": 30,
+      "chapters_adapted": "30-32",
+      "volume": 4,
+      "confidence": "high",
+      "note": "Nagi/Hayate reconciliation and the Gilbert mecha fight — ch 31-32 are the mecha chapters; ep title = ch 30 title (心を揺らして).",
+      "sources": [
+        "https://hayatenogotoku.fandom.com/wiki/Hayate_no_Gotoku!_Episode_25",
+        "https://hayatenogotoku.fandom.com/wiki/Chapter_32",
+        "https://hayatenogotoku.fandom.com/wiki/Chapter_30",
+        "https://hayatenogotoku.fandom.com/wiki/Chapter_31",
+        "https://en.wikipedia.org/wiki/List_of_Hayate_the_Combat_Butler_chapters",
+        "https://en.wikipedia.org/wiki/List_of_Hayate_the_Combat_Butler_episodes"
+      ]
+    },
+    {
+      "episode": 29,
+      "end_chapter": 99,
+      "start_chapter": 99,
+      "chapters_adapted": "99",
+      "volume": 10,
+      "confidence": "high",
+      "note": "Saki's marriage meeting = ch 99 'Saki-san's Trifling Personal Errand (Warring Rival Episode)'. Episode is typed mixed; the Duel-Butler/Kirika B-plot is anime-original.",
+      "sources": [
+        "https://hayatenogotoku.fandom.com/wiki/Hayate_no_Gotoku!_Episode_29",
+        "https://hayatenogotoku.fandom.com/wiki/Chapter_99",
+        "https://en.wikipedia.org/wiki/List_of_Hayate_the_Combat_Butler_chapters",
+        "https://en.wikipedia.org/wiki/List_of_Hayate_the_Combat_Butler_episodes"
+      ]
+    },
+    {
+      "episode": 32,
+      "end_chapter": 71,
+      "start_chapter": 71,
+      "chapters_adapted": "71",
+      "volume": 7,
+      "confidence": "high",
+      "note": "ch 71 魔物ハンターようこそ伊澄 = ep title minus the anime-original Nabeshin material (episode correctly typed mixed).",
+      "sources": [
+        "https://hayatenogotoku.fandom.com/wiki/Hayate_no_Gotoku!_Episode_32",
+        "https://hayatenogotoku.fandom.com/wiki/Chapter_71",
+        "https://en.wikipedia.org/wiki/List_of_Hayate_the_Combat_Butler_chapters",
+        "https://en.wikipedia.org/wiki/List_of_Hayate_the_Combat_Butler_episodes"
+      ]
+    },
+    {
+      "episode": 40,
+      "end_chapter": 65,
+      "start_chapter": 12,
+      "chapters_adapted": "12, 65",
+      "volume": 7,
+      "confidence": "high",
+      "note": "New Year sunrise bike trip = ch 12 (新・僕らの太陽に向かって走れ!, confirmed by the fandom ch 12 summary); the blizzard/snowblower coda = ch 65 (the 'D2 snow field' chapter).",
+      "sources": [
+        "https://hayatenogotoku.fandom.com/wiki/Hayate_no_Gotoku!_Episode_40",
+        "https://hayatenogotoku.fandom.com/wiki/Chapter_65",
+        "https://hayatenogotoku.fandom.com/wiki/Chapter_12",
+        "https://en.wikipedia.org/wiki/List_of_Hayate_the_Combat_Butler_chapters",
+        "https://en.wikipedia.org/wiki/List_of_Hayate_the_Combat_Butler_episodes"
+      ]
+    },
+    {
+      "episode": 42,
+      "end_chapter": 129,
+      "start_chapter": 90,
+      "chapters_adapted": "90, 129",
+      "volume": 12,
+      "confidence": "medium",
+      "note": "Exam-cramming half is ch 90; fandom credits v12 ch 129 (それはギルの笛の音のように — the episode title copies its それは…のように formula) for the remainder. ch 129's page is a stub, so END 129 is fandom-pair only.",
+      "sources": [
+        "https://hayatenogotoku.fandom.com/wiki/Hayate_no_Gotoku!_Episode_42",
+        "https://hayatenogotoku.fandom.com/wiki/Chapter_129",
+        "https://hayatenogotoku.fandom.com/wiki/Chapter_90",
+        "https://en.wikipedia.org/wiki/List_of_Hayate_the_Combat_Butler_chapters",
+        "https://en.wikipedia.org/wiki/List_of_Hayate_the_Combat_Butler_episodes"
+      ]
+    },
+    {
+      "episode": 43,
+      "end_chapter": 51,
+      "start_chapter": 50,
+      "chapters_adapted": "50-51",
+      "volume": 5,
+      "confidence": "high",
+      "note": "Titanic cruise: ch 50 'Raging Waves' + ch 51 'Titanic Episode 4 - With a Vengeance' (explosion, flooded hold, sharks).",
+      "sources": [
+        "https://hayatenogotoku.fandom.com/wiki/Hayate_no_Gotoku!_Episode_43",
+        "https://hayatenogotoku.fandom.com/wiki/Chapter_51",
+        "https://hayatenogotoku.fandom.com/wiki/Chapter_50",
+        "https://en.wikipedia.org/wiki/List_of_Hayate_the_Combat_Butler_chapters",
+        "https://en.wikipedia.org/wiki/List_of_Hayate_the_Combat_Butler_episodes"
+      ]
+    },
+    {
+      "episode": 44,
+      "end_chapter": 100,
+      "start_chapter": 100,
+      "chapters_adapted": "100",
+      "volume": 10,
+      "confidence": "high",
+      "note": "Full adaptation of ch 100 (Nagi's 'Millennium Legend: Magical Destroy'/Britney manga, Isumi's continuation, Hayate's version).",
+      "sources": [
+        "https://hayatenogotoku.fandom.com/wiki/Hayate_no_Gotoku!_Episode_44",
+        "https://hayatenogotoku.fandom.com/wiki/Chapter_100",
+        "https://en.wikipedia.org/wiki/List_of_Hayate_the_Combat_Butler_chapters",
+        "https://en.wikipedia.org/wiki/List_of_Hayate_the_Combat_Butler_episodes"
+      ]
+    },
+    {
+      "episode": 47,
+      "end_chapter": 103,
+      "start_chapter": 102,
+      "chapters_adapted": "102-103",
+      "volume": 10,
+      "confidence": "medium",
+      "note": "Mecha-butler Thirteen arc; ep title = ch 102 title exactly. ch 103's page is a stub, so END 103 is fandom-pair only.",
+      "sources": [
+        "https://hayatenogotoku.fandom.com/wiki/Hayate_no_Gotoku!_Episode_47",
+        "https://hayatenogotoku.fandom.com/wiki/Chapter_103",
+        "https://hayatenogotoku.fandom.com/wiki/Chapter_102",
+        "https://en.wikipedia.org/wiki/List_of_Hayate_the_Combat_Butler_chapters",
+        "https://en.wikipedia.org/wiki/List_of_Hayate_the_Combat_Butler_episodes"
+      ]
+    },
+    {
+      "episode": 49,
+      "end_chapter": 128,
+      "start_chapter": 104,
+      "chapters_adapted": "104, 128",
+      "volume": 12,
+      "confidence": "medium",
+      "note": "You-To-Be Motion Picture Research Club = ch 104; the 'normal story' competition is credited to v12 ch 128 (未来世紀㊙倶楽部). ch 128's page is a stub, so END 128 is fandom-pair only.",
+      "sources": [
+        "https://hayatenogotoku.fandom.com/wiki/Hayate_no_Gotoku!_Episode_49",
+        "https://hayatenogotoku.fandom.com/wiki/Chapter_128",
+        "https://hayatenogotoku.fandom.com/wiki/Chapter_104",
+        "https://en.wikipedia.org/wiki/List_of_Hayate_the_Combat_Butler_chapters",
+        "https://en.wikipedia.org/wiki/List_of_Hayate_the_Combat_Butler_episodes"
+      ]
+    }
+  ],
+  "continue_points": [
+    {
+      "episode": 52,
+      "continue_chapter": 52,
+      "note": "Season-1 finale adapts only bonus chapters, so there is no END+1. Season 2 (our ep 53) begins at ch 52, and ch 52 is also the first mainline chapter S1 never touched in a continuous run — so 52 is the honest resume after finishing S1. Chapters 9, 24, 29 and 33 are skipped by S1 and are never adapted by any season."
+    }
+  ],
+  "annotations": [
+    {
+      "episodes": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        29,
+        32,
+        40,
+        42,
+        43,
+        44,
+        47,
+        49
+      ],
+      "kind": "rearranged",
+      "chapters": "1-51 plus 65, 68-71, 73, 85, 90, 99-104, 107, 128, 129",
+      "note": "Season 1 adapts the manga out of publication order throughout; anchor END chapters are non-monotonic and must not be interpolated between."
+    },
+    {
+      "episodes": [
+        3
+      ],
+      "kind": "partial",
+      "chapters": "4",
+      "note": "ch 4's Klaus/Maria 'fire him' material is split across eps 2 and 3; ep 3's first NEW chapter is 6."
+    },
+    {
+      "episodes": [
+        4
+      ],
+      "kind": "rearranged",
+      "chapters": "34-36",
+      "note": "The Hakuou/Hinagiku introduction (v4) is pulled forward to ep 4; ch 9-33 are adapted later (or skipped)."
+    },
+    {
+      "episodes": [
+        8
+      ],
+      "kind": "rearranged",
+      "chapters": "19",
+      "note": "ch 19 (night billiards with Maria) is lifted out of the ep-6 cold arc and used two episodes later."
+    },
+    {
+      "episodes": [
+        12
+      ],
+      "kind": "graft",
+      "chapters": "15, 37, 43",
+      "note": "Three widely separated chapters (v2, v4, v5) combined into one episode."
+    },
+    {
+      "episodes": [
+        17,
+        44
+      ],
+      "kind": "graft",
+      "chapters": "100",
+      "note": "ch 100's Britney magical-girl manga is used as a short cold-open gag in ep 17 and adapted in full in ep 44; only ep 44 carries it as END."
+    },
+    {
+      "episodes": [
+        21
+      ],
+      "kind": "graft",
+      "chapters": "10, 25",
+      "note": "Eight's revenge (v2 ch 10) grafted onto the amusement-park chapter (v3 ch 25)."
+    },
+    {
+      "episodes": [
+        22
+      ],
+      "kind": "graft",
+      "chapters": "26, 85",
+      "note": "v3 ch 26 (bath) + v8 ch 85 (lake fishing) in one episode."
+    },
+    {
+      "episodes": [
+        40
+      ],
+      "kind": "graft",
+      "chapters": "12, 65",
+      "note": "v2 ch 12 (New Year sunrise) + v7 ch 65 (snow field) in one episode."
+    },
+    {
+      "episodes": [
+        42
+      ],
+      "kind": "graft",
+      "chapters": "90, 129",
+      "note": "v9 ch 90 + v12 ch 129 in one episode — the furthest-forward reach of season 1."
+    },
+    {
+      "episodes": [
+        49
+      ],
+      "kind": "graft",
+      "chapters": "104, 128",
+      "note": "v10 ch 104 + v12 ch 128 in one episode."
+    },
+    {
+      "episodes": [
+        52
+      ],
+      "kind": "side_story",
+      "chapters": "volume 4 extra 'Radical Dreamers'; volume 8 extra 'Small Two of Pieces'",
+      "note": "Finale adapts two BONUS chapters only — no mainline chapter number exists, so no anchor is written. Both extras are the Mykonos/Greece Golden Week stories; Wikipedia lists 'Radical Dreamers' as volume 4's Extra Episode."
+    }
+  ],
+  "type_corrections": [
+    {
+      "episodes": [
+        10
+      ],
+      "type": "filler",
+      "note": "Stored as canon, but ep 10 adapts no manga: English Wikipedia's episode list states outright 'This episode, which is anime-only', the fandom episode page is the only S1 canon-numbered page with NO 'Adapted From' section, and no chapter page in the whole 1-140 sweep names ep 10. Story (Abe Maou inside a Famicom game) and its characters have no manga counterpart. NB: fandom trivia says the episode was 'originally drafted by Kenjiro Hata', which would argue for anime-only-canon instead — flagged for Sean; either way A1 forbids an anchor.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/List_of_Hayate_the_Combat_Butler_episodes",
+        "https://hayatenogotoku.fandom.com/wiki/Hayate_no_Gotoku!_Episode_10"
+      ]
+    },
+    {
+      "episodes": [
+        19
+      ],
+      "type": "mixed",
+      "note": "Stored as filler, but ep 19 adapts ch 49: the episode's Japanese title サキさんのヤボ用(全国版)2007 is ch 49's title サキさんのヤボ用(全国版) verbatim plus a year, the Saki coming-of-age/kimono plot is ch 49's plot, the fandom episode page credits ch 49 + a volume-3 omake, and ch 49's own page names ep 19. The cursed-video/giant-cockroach B-plot is anime-original, hence mixed rather than canon. NO ANCHOR REQUESTED — out of the gap scope and A1 applies until the type is changed.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/List_of_Hayate_the_Combat_Butler_chapters",
+        "https://hayatenogotoku.fandom.com/wiki/Hayate_no_Gotoku!_Episode_19",
+        "https://hayatenogotoku.fandom.com/wiki/Chapter_49"
+      ]
+    }
+  ],
+  "repairs": [],
+  "structure": {
+    "notes": "ROW-COUNT IDENTITY (Ryuusui-class check): CLEAN for eps 1-52. Fandom episode pages 1-52 carry ep= and date= fields that match en.wikipedia's episode list and ja.wikipedia's 各話リスト one-for-one at every point checked (ep 1 = 2007-04-01, ep 20 = 2007-08-12, ep 29 = 2007-10-14, ep 52 = 2008-03-30), and those match our stored air dates exactly. No source inserts the OVA or the movie into the TV numbering, so there is no shift. OPEN FLAG #829 RESOLVED for this range: the 29 title conflicts are translation variance, not an offset — e.g. our 'A New Beginning with Nagi Sanzenin's Estate' vs the wiki's 'Nagi Sanzenin's Mansion and a New Journey' (both 三千院ナギの屋敷と、新たなる旅立ち), 'Match-Making Meeting' vs 'Marriage Meeting' (見合). Stored titles should be kept. OPEN FLAG #672: the reading edition is the 1-513 mainline chapter numbering used by both en.wikipedia's chapter list and the fandom wiki, which reproduces the stored volume boundaries exactly (v1 1-9, v4 32-41, v8 75-85, v10 97-107, v12 119-129, v47 503-513). AniList's 570 and MU's 305 are both other counts; anchors here are in the 1-513 space. EPISODE-ROW GAP: the context file lists only 54 rows for a 101-episode series — eps 1-52, 77 and 101. Eps 53-76 and 78-100 appear to have no rows at all, which is why only 32 of the 100 target episodes were anchorable. Worth a separate row-ingest pass. SEASON BOUNDARY: season 2 (our ep 53) starts at ch 52 (fandom ch 52 page names 'Hayate no Gotoku!! Episode 1'), so S1 ends without ever adapting ch 9, 24, 29 or 33 — those four are never adapted by any season.",
+    "order_only": [
+      "OVA 'Atsu ga Natsuize - Mizugi-hen!' (component 2)",
+      "movie 'HEAVEN IS A PLACE ON EARTH' (component 4)"
+    ]
+  },
+  "flags_for_sean": [
+    "POSITION MODEL: season 1's END chapters are strongly non-monotonic (ep 4 = 36, ep 5 = 16; ep 22 = 85, ep 23 = 70; ep 42 = 129, ep 43 = 51). Interpolating between these anchors will produce nonsense. Recommend the rearranged annotation gate any interpolation over eps 1-52 and that per-episode continue points be suppressed for the season — the only continue point I could defend is ep 52 -> ch 52.",
+    "ep 52 has NO anchor by design: the finale adapts only the volume-4 and volume-8 BONUS chapters. Protocol forbids converting those to mainline numbers, so the season boundary anchor is an honest gap. If a boundary anchor is required for the UI, it should be recorded as a continue point (52), not a fabricated end_chapter.",
+    "ep 10 type: proposed filler, but the fandom page's trivia says the story was 'originally drafted by Kenjiro Hata' (stated in-episode by the narrator/Maria, so possibly a gag). If that credit is real the correct type is anime-only-canon. Either way it takes no anchor.",
+    "Three more stored-filler rows carry fandom chapter credits I did NOT correct because the evidence is fandom-only (forward + reverse pages, no independent corroboration): ep 35 -> ch 107 'A Lonesome War', ep 37 -> ch 73 'Heart To Heart' (ch 73 is ALSO credited to Hayate no Gotoku!! ep 5, which is likely the real adaptation), ep 41 -> ch 101 'You Don't Have Enough Kung Fu'. If Sean wants them re-typed mixed, they need a third source first.",
+    "Six anchors are medium (eps 12, 17, 23, 42, 47, 49): in each the END chapter's fandom page is a Summary stub, so the END rests on the fandom episode page + fandom chapter page pair without independent content confirmation. The START chapter of each of those is independently corroborated.",
+    "ep 17 END: fandom credits ch 68 AND ch 100. I set END = 68 and demoted ch 100 to an annotation because ep 44 is the full ch 100 adaptation and ep 17 uses only the Britney manga cold open. If Sean prefers the literal running-order rule, END would be 100 — but that would put ep 17 ahead of ep 44 in position."
+  ]
+}

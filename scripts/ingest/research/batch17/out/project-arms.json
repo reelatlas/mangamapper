@@ -1,0 +1,745 @@
+{
+  "series_id": "project-arms",
+  "summary": "The 52-episode TV series adapts the first four of the manga's five parts, ch1-~205 of 242 (v1-v19 of 22); the fifth part, 'Kikan-hen' / Program Bandersnatch (ch210-242), is never adapted. Season 1 (eps 1-26) is a clean, near-linear 2-4 chapters-per-episode run over ch1-77, and the season break falls exactly on the v7 finale ch77 (the departure for America), which is also the manga's part-two boundary - the single most load-bearing anchor here. Season 2 covers part three (ch78-110) over eps 27-36 at a similar rate, then compresses the whole 99-chapter Alice arc (ch111-209) into eps 37-50 with genuine restructuring: the Keith Violet / March Hare fight (ch~186-190) is pulled forward to ep 44 before the island infiltration, and Keith Silver is killed off early at Gallows Bell (eps 33-34) where the manga keeps him alive until inside the Karion Tower (ch180-183). Eps 51-52 are an anime-original wrap that kills Keith White, who is alive and the villain of the unadapted fifth part in the manga, so they are annotated rather than anchored. The chapter space itself had to be rebuilt: Shogakukan's per-volume TOCs (via Kinokuniya) and MangaDex agree chapter-for-chapter on all 22 volumes at 242 chapters, one more than the AniList figure our entry carries. Finally, stored episode 53 'PS2 Video Game' is not an episode at all - it is an animefillerlist row we imported verbatim, and it holds the series' only existing anchor.",
+  "anchors": [
+    {
+      "episode": 1,
+      "end_chapter": 3,
+      "start_chapter": 1,
+      "chapters_adapted": "1-3",
+      "volume": 1,
+      "confidence": "high",
+      "note": "Adapts ch1 Encounter (Ryo's childhood accident / Hayato transfers in), ch2 Disappearance (Misa reports Katsumi missing), ch3 Resonance/共振 = the episode's own title (White Knight revealed, Claw seizes Katsumi).",
+      "sources": [
+        "https://www.kinokuniya.co.jp/f/dsg-01-9784091248817",
+        "https://mangadex.org/title/9c5eda08-09b5-4f52-85db-d8eb80000492/arms",
+        "https://en.wikipedia.org/wiki/Project_ARMS",
+        "https://ja.wikipedia.org/wiki/ARMS"
+      ]
+    },
+    {
+      "episode": 2,
+      "end_chapter": 4,
+      "start_chapter": 3,
+      "chapters_adapted": "3-4 (bulk = 4)",
+      "volume": 1,
+      "confidence": "medium",
+      "note": "Ep title 発動（トランス）= ch4 Activation: Ryo first activates the Jabberwock, which is the episode's climax. Opens on the tail of ch3 (Claw fight already in progress).",
+      "sources": [
+        "https://www.kinokuniya.co.jp/f/dsg-01-9784091248817",
+        "https://mangadex.org/title/9c5eda08-09b5-4f52-85db-d8eb80000492/arms",
+        "https://en.wikipedia.org/wiki/Project_ARMS",
+        "https://ja.wikipedia.org/wiki/ARMS"
+      ]
+    },
+    {
+      "episode": 3,
+      "end_chapter": 7,
+      "start_chapter": 5,
+      "chapters_adapted": "5-7",
+      "volume": 1,
+      "confidence": "medium",
+      "note": "Takeshi's ARMS runs wild = ch5 Out of Control; the ten-years-ago traffic accident = ch6 The Past; Jeff & Al Bowen scheme and take Maya = ch7 蠢動 Groveling. Ep title 悪夢 is anime-original (no chapter of that name until ch115).",
+      "sources": [
+        "https://www.kinokuniya.co.jp/f/dsg-01-9784091248817",
+        "https://mangadex.org/title/9c5eda08-09b5-4f52-85db-d8eb80000492/arms",
+        "https://en.wikipedia.org/wiki/Project_ARMS"
+      ]
+    },
+    {
+      "episode": 4,
+      "end_chapter": 11,
+      "start_chapter": 8,
+      "chapters_adapted": "8-11",
+      "volume": 2,
+      "confidence": "medium",
+      "note": "School siege: ch8 Contact (the twins' letters), ch9 Choices, ch10 Attack (bombs), ch11 迎撃 Ambush/Intercept = ep title, v1->v2 seam.",
+      "sources": [
+        "https://www.kinokuniya.co.jp/f/dsg-01-9784091248824",
+        "https://mangadex.org/title/9c5eda08-09b5-4f52-85db-d8eb80000492/arms",
+        "https://en.wikipedia.org/wiki/Project_ARMS"
+      ]
+    },
+    {
+      "episode": 5,
+      "end_chapter": 13,
+      "start_chapter": 12,
+      "chapters_adapted": "12-13",
+      "volume": 2,
+      "confidence": "medium",
+      "note": "Escape from the top floor, art room and home-ec dust explosion = ch12 Closing In / ch13 反撃 Counter Attack = ep title.",
+      "sources": [
+        "https://www.kinokuniya.co.jp/f/dsg-01-9784091248824",
+        "https://mangadex.org/title/9c5eda08-09b5-4f52-85db-d8eb80000492/arms",
+        "https://en.wikipedia.org/wiki/Project_ARMS"
+      ]
+    },
+    {
+      "episode": 6,
+      "end_chapter": 16,
+      "start_chapter": 14,
+      "chapters_adapted": "14-16",
+      "volume": 2,
+      "confidence": "medium",
+      "note": "Plus destroyed by the Jabberwock cannon, Keith Red's arrival = ch14-16; ep title 瞬撃 = ch16 Blitzkrieg.",
+      "sources": [
+        "https://www.kinokuniya.co.jp/f/dsg-01-9784091248824",
+        "https://mangadex.org/title/9c5eda08-09b5-4f52-85db-d8eb80000492/arms",
+        "https://en.wikipedia.org/wiki/Project_ARMS"
+      ]
+    },
+    {
+      "episode": 7,
+      "end_chapter": 21,
+      "start_chapter": 17,
+      "chapters_adapted": "17-21",
+      "volume": 2,
+      "confidence": "medium",
+      "note": "Red spares Al and points Hayato to Abumisawa; Juzo's booby traps; departure by train/bus. Ep title 共闘 = ch20 Alliance; the closing bus hijack sits at the v2 finale ch21 決意 Resolve. END could be 20 if the hijack opens ch22 instead.",
+      "sources": [
+        "https://www.kinokuniya.co.jp/f/dsg-01-9784091248824",
+        "https://mangadex.org/title/9c5eda08-09b5-4f52-85db-d8eb80000492/arms",
+        "https://en.wikipedia.org/wiki/Project_ARMS"
+      ]
+    },
+    {
+      "episode": 8,
+      "end_chapter": 24,
+      "start_chapter": 22,
+      "chapters_adapted": "22-24",
+      "volume": 3,
+      "confidence": "medium",
+      "note": "Katsumi rescued, arrival in Abumisawa = ch22 Homecoming; ep title 異郷 = ch23 Foreign Sky; torch mob and the Crimson Triad = ch24. v3 has no publisher TOC on Kinokuniya, so chapter titles here come from MangaDex only; boundaries are volume-verified.",
+      "sources": [
+        "https://mangadex.org/title/9c5eda08-09b5-4f52-85db-d8eb80000492/arms",
+        "https://en.wikipedia.org/wiki/Project_ARMS"
+      ]
+    },
+    {
+      "episode": 9,
+      "end_chapter": 27,
+      "start_chapter": 25,
+      "chapters_adapted": "25-27",
+      "volume": 3,
+      "confidence": "medium",
+      "note": "Crimson Triad weaknesses, mind-controlled townspeople, the church bell transmitter = ch25 Village of the Damned / ch26 Regroup / ch27 Bad Angels. Arc-span derivation.",
+      "sources": [
+        "https://mangadex.org/title/9c5eda08-09b5-4f52-85db-d8eb80000492/arms",
+        "https://en.wikipedia.org/wiki/Project_ARMS"
+      ]
+    },
+    {
+      "episode": 10,
+      "end_chapter": 30,
+      "start_chapter": 28,
+      "chapters_adapted": "28-30",
+      "volume": 3,
+      "confidence": "medium",
+      "note": "Triad defeated = ch28 Showdown; ep title 魔獣（ジャバウォック）= ch29 The Jabberwock; Mary Katz grants access to the truth = ch30 The Truth.",
+      "sources": [
+        "https://mangadex.org/title/9c5eda08-09b5-4f52-85db-d8eb80000492/arms",
+        "https://en.wikipedia.org/wiki/Project_ARMS"
+      ]
+    },
+    {
+      "episode": 11,
+      "end_chapter": 32,
+      "start_chapter": 31,
+      "chapters_adapted": "31-32",
+      "volume": 3,
+      "confidence": "high",
+      "note": "Part-one finale. Egrigori wipe out Abumisawa = ch31 Sterilization; the Jabberwock fully awakens after Katsumi's apparent death = ch32 覚醒 Awakening = ep title. Shogakukan's own e-comi blurb for vol 3 states 'the first part, Awakening-hen, concludes' with exactly these beats.",
+      "sources": [
+        "https://mangadex.org/title/9c5eda08-09b5-4f52-85db-d8eb80000492/arms",
+        "https://en.wikipedia.org/wiki/Project_ARMS",
+        "https://csbs.shogakukan.co.jp/book?comic_id=5394"
+      ]
+    },
+    {
+      "episode": 12,
+      "end_chapter": 34,
+      "start_chapter": 33,
+      "chapters_adapted": "33-34",
+      "volume": 4,
+      "confidence": "medium",
+      "note": "Ep title 鼓動（ビート）= ch33 Pulse, the first chapter of v4 and of part two; ends with Kei's first appearance at the riverbank (ch34 Visit).",
+      "sources": [
+        "https://mangadex.org/title/9c5eda08-09b5-4f52-85db-d8eb80000492/arms",
+        "https://en.wikipedia.org/wiki/Project_ARMS"
+      ]
+    },
+    {
+      "episode": 13,
+      "end_chapter": 37,
+      "start_chapter": 35,
+      "chapters_adapted": "35-37",
+      "volume": 4,
+      "confidence": "medium",
+      "note": "Kei's Queen of Hearts = ch35 Evil Eye; Blue Men HQ and Li Chunyan = ch36 The Bluemen = ep title 組織（ブルーメン）; ch37 Will.",
+      "sources": [
+        "https://mangadex.org/title/9c5eda08-09b5-4f52-85db-d8eb80000492/arms",
+        "https://en.wikipedia.org/wiki/Project_ARMS"
+      ]
+    },
+    {
+      "episode": 14,
+      "end_chapter": 41,
+      "start_chapter": 38,
+      "chapters_adapted": "38-41",
+      "volume": 4,
+      "confidence": "medium",
+      "note": "Ryo goes home = ch38 Home; X-Armis appear = ch39 X-army / ch40 Mutant; Misa's soldier past revealed = ch41 Mother. Ep title 慈雨 is anime-original.",
+      "sources": [
+        "https://mangadex.org/title/9c5eda08-09b5-4f52-85db-d8eb80000492/arms",
+        "https://en.wikipedia.org/wiki/Project_ARMS"
+      ]
+    },
+    {
+      "episode": 15,
+      "end_chapter": 43,
+      "start_chapter": 42,
+      "chapters_adapted": "42-43",
+      "volume": 4,
+      "confidence": "high",
+      "note": "Amusement-park summons = ch42 The Abusement Park; ep title 魔宴（ショータイム）= ch43 Showtime, the last chapter of v4. Clean volume boundary.",
+      "sources": [
+        "https://mangadex.org/title/9c5eda08-09b5-4f52-85db-d8eb80000492/arms",
+        "https://en.wikipedia.org/wiki/Project_ARMS"
+      ]
+    },
+    {
+      "episode": 16,
+      "end_chapter": 47,
+      "start_chapter": 45,
+      "chapters_adapted": "45-47",
+      "volume": 5,
+      "confidence": "medium",
+      "note": "House of mirrors = ch45 Labyrinth, ch46 Twister; ep title 魔王（セイタン）= ch47 The Demon Prince (Cliff Gilbert).",
+      "sources": [
+        "https://www.kinokuniya.co.jp/f/dsg-01-9784091248855",
+        "https://mangadex.org/title/9c5eda08-09b5-4f52-85db-d8eb80000492/arms",
+        "https://en.wikipedia.org/wiki/Project_ARMS"
+      ]
+    },
+    {
+      "episode": 17,
+      "end_chapter": 49,
+      "start_chapter": 48,
+      "chapters_adapted": "48-49",
+      "volume": 5,
+      "confidence": "medium",
+      "note": "Cliff and Yugo's laboratory childhood = ch48 兄弟 Family; ep title 降臨 = ch49 Fall.",
+      "sources": [
+        "https://www.kinokuniya.co.jp/f/dsg-01-9784091248855",
+        "https://mangadex.org/title/9c5eda08-09b5-4f52-85db-d8eb80000492/arms",
+        "https://en.wikipedia.org/wiki/Project_ARMS"
+      ]
+    },
+    {
+      "episode": 18,
+      "end_chapter": 52,
+      "start_chapter": 50,
+      "chapters_adapted": "50-52",
+      "volume": 5,
+      "confidence": "medium",
+      "note": "Jabberwock vs Cliff = ch50 業火 Gehenna = ep title; ch51 Deliverance; Ryo regains his will and Cliff is spared = ch52 Unchained.",
+      "sources": [
+        "https://www.kinokuniya.co.jp/f/dsg-01-9784091248855",
+        "https://mangadex.org/title/9c5eda08-09b5-4f52-85db-d8eb80000492/arms",
+        "https://en.wikipedia.org/wiki/Project_ARMS"
+      ]
+    },
+    {
+      "episode": 19,
+      "end_chapter": 55,
+      "start_chapter": 53,
+      "chapters_adapted": "53-55",
+      "volume": 6,
+      "confidence": "medium",
+      "note": "X-Armis alliance and Cliff's death = ch53 別離 Restart / ch54 魔軍 Red Caps (v5 finale); the hunt begins = ch55 狩場 Snark Hunt = ep title, first chapter of v6.",
+      "sources": [
+        "https://www.kinokuniya.co.jp/f/dsg-01-9784091248862",
+        "https://mangadex.org/title/9c5eda08-09b5-4f52-85db-d8eb80000492/arms",
+        "https://en.wikipedia.org/wiki/Project_ARMS"
+      ]
+    },
+    {
+      "episode": 20,
+      "end_chapter": 57,
+      "start_chapter": 56,
+      "chapters_adapted": "56-57",
+      "volume": 6,
+      "confidence": "medium",
+      "note": "Red Caps take Aisora = ch56 危機 Crisis = ep title; ch57 葛藤 Dilemma.",
+      "sources": [
+        "https://www.kinokuniya.co.jp/f/dsg-01-9784091248862",
+        "https://mangadex.org/title/9c5eda08-09b5-4f52-85db-d8eb80000492/arms",
+        "https://en.wikipedia.org/wiki/Project_ARMS"
+      ]
+    },
+    {
+      "episode": 21,
+      "end_chapter": 61,
+      "start_chapter": 58,
+      "chapters_adapted": "58-61",
+      "volume": 6,
+      "confidence": "medium",
+      "note": "Tower block and the bomb = ch58 巨塔 The Tower; ch59 Flight, ch60 Dignity; Yugo's 'there is always hope' = ch61 希望 Hope = ep title.",
+      "sources": [
+        "https://www.kinokuniya.co.jp/f/dsg-01-9784091248862",
+        "https://mangadex.org/title/9c5eda08-09b5-4f52-85db-d8eb80000492/arms",
+        "https://en.wikipedia.org/wiki/Project_ARMS"
+      ]
+    },
+    {
+      "episode": 22,
+      "end_chapter": 63,
+      "start_chapter": 62,
+      "chapters_adapted": "62-63",
+      "volume": 6,
+      "confidence": "medium",
+      "note": "Hayato vs Keith Red = ch62 対決 Duel; the White Knight fully awakens = ch63 騎士 Knight = ep title.",
+      "sources": [
+        "https://www.kinokuniya.co.jp/f/dsg-01-9784091248862",
+        "https://mangadex.org/title/9c5eda08-09b5-4f52-85db-d8eb80000492/arms",
+        "https://en.wikipedia.org/wiki/Project_ARMS"
+      ]
+    },
+    {
+      "episode": 23,
+      "end_chapter": 66,
+      "start_chapter": 64,
+      "chapters_adapted": "64-66",
+      "volume": 7,
+      "confidence": "medium",
+      "note": "Gryphon fully awakens = ch64 幻獣 Gryphon; the Knight's spear severs Red = ch65 魔剣 Sword; the White Rabbit fully awakens = ch66 白兎 White Rabbit = ep title, first chapter of v7.",
+      "sources": [
+        "https://www.kinokuniya.co.jp/f/dsg-01-9784091248879",
+        "https://mangadex.org/title/9c5eda08-09b5-4f52-85db-d8eb80000492/arms",
+        "https://en.wikipedia.org/wiki/Project_ARMS"
+      ]
+    },
+    {
+      "episode": 24,
+      "end_chapter": 69,
+      "start_chapter": 67,
+      "chapters_adapted": "67-69",
+      "volume": 7,
+      "confidence": "medium",
+      "note": "Ch67 Ash / ch68 Blanks; Gauss's nanomachine silver bullet = ch69 猛毒 Venom = ep title.",
+      "sources": [
+        "https://www.kinokuniya.co.jp/f/dsg-01-9784091248879",
+        "https://mangadex.org/title/9c5eda08-09b5-4f52-85db-d8eb80000492/arms",
+        "https://en.wikipedia.org/wiki/Project_ARMS"
+      ]
+    },
+    {
+      "episode": 25,
+      "end_chapter": 74,
+      "start_chapter": 70,
+      "chapters_adapted": "70-74",
+      "volume": 7,
+      "confidence": "high",
+      "note": "Every beat lands: the Katsumi hallucination = ch70 Phantasm, the depths of the Jabberwock's soul and Alice = ch71 Abyss, the Jabberwock reborn in fiery armour = ch72 Reborn, ch73 Red Hot, and Gauss/Red Caps expiring at midnight = ch74 審判 Judgment = ep title.",
+      "sources": [
+        "https://www.kinokuniya.co.jp/f/dsg-01-9784091248879",
+        "https://mangadex.org/title/9c5eda08-09b5-4f52-85db-d8eb80000492/arms",
+        "https://en.wikipedia.org/wiki/Project_ARMS"
+      ]
+    },
+    {
+      "episode": 26,
+      "end_chapter": 77,
+      "start_chapter": 75,
+      "chapters_adapted": "75-77",
+      "volume": 7,
+      "confidence": "high",
+      "note": "Season 1 finale = end of the manga's part two. The four Keiths appear = ch75 到来 Advent; Keith Blue's revelation = ch76 告白 Confession; the four leave for America = ch77 離陸 Take Off, the last chapter of v7.",
+      "sources": [
+        "https://www.kinokuniya.co.jp/f/dsg-01-9784091248879",
+        "https://mangadex.org/title/9c5eda08-09b5-4f52-85db-d8eb80000492/arms",
+        "https://en.wikipedia.org/wiki/Project_ARMS"
+      ]
+    },
+    {
+      "episode": 27,
+      "end_chapter": 78,
+      "start_chapter": 78,
+      "chapters_adapted": "78",
+      "volume": 8,
+      "confidence": "medium",
+      "note": "Typed mixed: the first half is an anime-original clip-show recap of season 1. New material = ch78 月面〜アリゾナ〜 (arrival in Arizona / Gallows Bell), the first chapter of v8 and of part three.",
+      "sources": [
+        "https://www.kinokuniya.co.jp/f/dsg-01-9784091248886",
+        "https://mangadex.org/title/9c5eda08-09b5-4f52-85db-d8eb80000492/arms",
+        "https://en.wikipedia.org/wiki/Project_ARMS"
+      ]
+    },
+    {
+      "episode": 28,
+      "end_chapter": 80,
+      "start_chapter": 79,
+      "chapters_adapted": "79-80",
+      "volume": 8,
+      "confidence": "medium",
+      "note": "Stinger and the Hounds = ch79 猟犬 Hounds = ep title; 'kill the alpha and the pack falls apart' = ch80 首領 Alpha.",
+      "sources": [
+        "https://www.kinokuniya.co.jp/f/dsg-01-9784091248886",
+        "https://mangadex.org/title/9c5eda08-09b5-4f52-85db-d8eb80000492/arms",
+        "https://en.wikipedia.org/wiki/Project_ARMS"
+      ]
+    },
+    {
+      "episode": 29,
+      "end_chapter": 84,
+      "start_chapter": 81,
+      "chapters_adapted": "81-84",
+      "volume": 8,
+      "confidence": "medium",
+      "note": "Kei's fire flashback = ch81 追憶 Memories; the Keith Series clones = ch82 茶会 Mad Tea Party; Iwao Takatsuki and the Gallows Bell crater = ch83 犯罪 Crime / ch84 異形 Alien. Note the ep title 闘士（ハンター）reuses ch86's title but the content precedes it - title matching alone would mis-order eps 29/30.",
+      "sources": [
+        "https://www.kinokuniya.co.jp/f/dsg-01-9784091248886",
+        "https://mangadex.org/title/9c5eda08-09b5-4f52-85db-d8eb80000492/arms",
+        "https://en.wikipedia.org/wiki/Project_ARMS"
+      ]
+    },
+    {
+      "episode": 30,
+      "end_chapter": 88,
+      "start_chapter": 85,
+      "chapters_adapted": "85-88",
+      "volume": 8,
+      "confidence": "medium",
+      "note": "Ch85 信頼 Trust/Link = ep title; the Stinger duel = ch86 Hunters / ch87 Stinger; 'the Hounds are genetically altered' = ch88 強化 Boosted, the last chapter of v8.",
+      "sources": [
+        "https://www.kinokuniya.co.jp/f/dsg-01-9784091248886",
+        "https://mangadex.org/title/9c5eda08-09b5-4f52-85db-d8eb80000492/arms",
+        "https://en.wikipedia.org/wiki/Project_ARMS"
+      ]
+    },
+    {
+      "episode": 31,
+      "end_chapter": 92,
+      "start_chapter": 89,
+      "chapters_adapted": "89-92",
+      "volume": 9,
+      "confidence": "medium",
+      "note": "Epsilon surrounds Gallows Bell = ch89 来襲（ハーキュリー）= ep title, first chapter of v9; ch90 Atonement, ch91 Penetration, ch92 Danger Zone (the Locusts).",
+      "sources": [
+        "https://www.kinokuniya.co.jp/f/dsg-01-9784091248893",
+        "https://mangadex.org/title/9c5eda08-09b5-4f52-85db-d8eb80000492/arms",
+        "https://en.wikipedia.org/wiki/Project_ARMS"
+      ]
+    },
+    {
+      "episode": 32,
+      "end_chapter": 95,
+      "start_chapter": 93,
+      "chapters_adapted": "93-95",
+      "volume": 9,
+      "confidence": "high",
+      "note": "Azazel wakes = ch93 孵化 Incubation = ep title; Yugo revived = ch94 奇蹟 Miracle; the four shed tears as Azazel dissolves = ch95 涙滴 Tears.",
+      "sources": [
+        "https://www.kinokuniya.co.jp/f/dsg-01-9784091248893",
+        "https://mangadex.org/title/9c5eda08-09b5-4f52-85db-d8eb80000492/arms",
+        "https://en.wikipedia.org/wiki/Project_ARMS"
+      ]
+    },
+    {
+      "episode": 33,
+      "end_chapter": 99,
+      "start_chapter": 96,
+      "chapters_adapted": "96-99",
+      "volume": 9,
+      "confidence": "medium",
+      "note": "Epsilon's assault = ch96 嵐撃（イプシロン・アタック）; ch97 Concentration; the supersonic Epsilon troops = ch98 音速（ソニック・ランナー）; ends at the v9 finale ch99 戦神（マーズ）- the ep title 火神（マーズ）fuses ch99's reading (マーズ) with ch100's kanji (火神), so END 99/100 is a one-chapter judgement call; the publisher blurb for v10 puts Silver's flames and Takeshi's transformation in v10 ch1, which is ep 34's opening.",
+      "sources": [
+        "https://www.kinokuniya.co.jp/f/dsg-01-9784091248893",
+        "https://mangadex.org/title/9c5eda08-09b5-4f52-85db-d8eb80000492/arms",
+        "https://en.wikipedia.org/wiki/Project_ARMS"
+      ]
+    },
+    {
+      "episode": 34,
+      "end_chapter": 102,
+      "start_chapter": 100,
+      "chapters_adapted": "100-102",
+      "volume": 10,
+      "confidence": "medium",
+      "note": "Keith Silver's fire and Takeshi's transformation = ch100 火神（アグニ）(named as v10's first chapter in Shogakukan's own blurb); Jabberwock evolves and kills the Mad Hatter = ch101 共存; the survivors flee into the waterway = ch102 脱出 Exodus. Ep title 鳥篭（カナリア）is anime-original.",
+      "sources": [
+        "https://www.kinokuniya.co.jp/f/dsg-01-9784091248909",
+        "https://mangadex.org/title/9c5eda08-09b5-4f52-85db-d8eb80000492/arms",
+        "https://en.wikipedia.org/wiki/Project_ARMS"
+      ]
+    },
+    {
+      "episode": 35,
+      "end_chapter": 105,
+      "start_chapter": 103,
+      "chapters_adapted": "103-105",
+      "volume": 10,
+      "confidence": "medium",
+      "note": "Underground waterway = ch103 洞穴 The Cave; the Grand Canyon / Colorado River = ch104 峡谷 Canyon; ch105 静寂 Silent = ep title.",
+      "sources": [
+        "https://www.kinokuniya.co.jp/f/dsg-01-9784091248909",
+        "https://mangadex.org/title/9c5eda08-09b5-4f52-85db-d8eb80000492/arms",
+        "https://en.wikipedia.org/wiki/Project_ARMS"
+      ]
+    },
+    {
+      "episode": 36,
+      "end_chapter": 108,
+      "start_chapter": 106,
+      "chapters_adapted": "106-108",
+      "volume": 10,
+      "confidence": "medium",
+      "note": "Keith Green's Cheshire Cat = ch106 魔猫（チェシャキャット）; ch107 臨界; the Queen of Hearts fully awakens = ch108 奔流 Flood = ep title.",
+      "sources": [
+        "https://www.kinokuniya.co.jp/f/dsg-01-9784091248909",
+        "https://mangadex.org/title/9c5eda08-09b5-4f52-85db-d8eb80000492/arms",
+        "https://en.wikipedia.org/wiki/Project_ARMS"
+      ]
+    },
+    {
+      "episode": 37,
+      "end_chapter": 112,
+      "start_chapter": 109,
+      "chapters_adapted": "109-112",
+      "volume": 11,
+      "confidence": "medium",
+      "note": "Katsumi's birthplace and the truth about the stolen core chips = ch109 未来 / ch110 真相 (last chapter of v10 and of part three); the move to New York = ch111 紐育 and the plan to seize Tillinghast = ch112 宣戦. The part-three/part-four seam (ch110/111) falls inside this episode.",
+      "sources": [
+        "https://www.kinokuniya.co.jp/f/dsg-01-9784091248916",
+        "https://mangadex.org/title/9c5eda08-09b5-4f52-85db-d8eb80000492/arms",
+        "https://en.wikipedia.org/wiki/Project_ARMS"
+      ]
+    },
+    {
+      "episode": 38,
+      "end_chapter": 117,
+      "start_chapter": 113,
+      "chapters_adapted": "113-117",
+      "volume": 11,
+      "confidence": "medium",
+      "note": "Karunagi Kou 'the Fang' = ch113 獣牙 Fang / ch114 咆哮 Roar; ch115 夢魔 Nightmare, ch116 暗黒 Darkness; Takeshi's death and coma = ch117 昏睡 Coma = ep title.",
+      "sources": [
+        "https://www.kinokuniya.co.jp/f/dsg-01-9784091248916",
+        "https://mangadex.org/title/9c5eda08-09b5-4f52-85db-d8eb80000492/arms",
+        "https://en.wikipedia.org/wiki/Project_ARMS"
+      ]
+    },
+    {
+      "episode": 39,
+      "end_chapter": 120,
+      "start_chapter": 118,
+      "chapters_adapted": "118-120",
+      "volume": 11,
+      "confidence": "medium",
+      "note": "Hayato walks out = ch118 彷徨 Wandering; Iwao teaches him to turn a fiery heart to water = ch119 火水 Fire and Water = ep title; Iwao 'the Wind' = ch120 疾風（ウインド）.",
+      "sources": [
+        "https://www.kinokuniya.co.jp/f/dsg-01-9784091248916",
+        "https://mangadex.org/title/9c5eda08-09b5-4f52-85db-d8eb80000492/arms",
+        "https://en.wikipedia.org/wiki/Project_ARMS"
+      ]
+    },
+    {
+      "episode": 40,
+      "end_chapter": 127,
+      "start_chapter": 121,
+      "chapters_adapted": "121-127",
+      "volume": 12,
+      "confidence": "medium",
+      "note": "Heavy compression begins. Ch121 灰色（グリージョ）through the Tillinghast chess/Alice-chatroom material (ch122 取引 Deal, ch123 境界, ch124 再起, ch125 奸計, ch126 沸点) to the White Knight's return = ch127 復活（リーバス）= ep title. Arc-span derivation; interior boundaries are not individually sourced.",
+      "sources": [
+        "https://www.kinokuniya.co.jp/f/dsg-01-9784091248923",
+        "https://mangadex.org/title/9c5eda08-09b5-4f52-85db-d8eb80000492/arms",
+        "https://en.wikipedia.org/wiki/Project_ARMS"
+      ]
+    },
+    {
+      "episode": 41,
+      "end_chapter": 138,
+      "start_chapter": 128,
+      "chapters_adapted": "128-138",
+      "volume": 13,
+      "confidence": "medium",
+      "note": "Compresses the rest of Tillinghast's Egrigori exposition (v12, ch128-132) and the opening of the Alice arc (v13) down to the Drakken Corps material: ch136 離反 Betrayer and ch137 竜隊（ドラッケン）= ep title, closing on ch138 決断. Arc-span derivation.",
+      "sources": [
+        "https://www.kinokuniya.co.jp/f/dsg-01-9784091248930",
+        "https://mangadex.org/title/9c5eda08-09b5-4f52-85db-d8eb80000492/arms",
+        "https://en.wikipedia.org/wiki/Project_ARMS"
+      ]
+    },
+    {
+      "episode": 42,
+      "end_chapter": 154,
+      "start_chapter": 139,
+      "chapters_adapted": "139-154",
+      "volume": 14,
+      "confidence": "medium",
+      "note": "The Alice flashback episode. Ch139 証明 / ch140 始源（オリジネーター）/ ch141 誕生 = ep title 誕生（アリス）/ ch142 成長 / ch143 青花（ブルーウィッシュ）(the blue roses) and all of v14 (ch144-154), which Shogakukan's own v14 blurb describes as Alice's escape attempt and the slaughter of the test children - exactly this episode's content. END = ch154, the v14 finale.",
+      "sources": [
+        "https://www.kinokuniya.co.jp/f/dsg-01-9784091248947",
+        "https://mangadex.org/title/9c5eda08-09b5-4f52-85db-d8eb80000492/arms",
+        "https://en.wikipedia.org/wiki/Project_ARMS"
+      ]
+    },
+    {
+      "episode": 45,
+      "end_chapter": 166,
+      "start_chapter": 162,
+      "chapters_adapted": "162-166",
+      "volume": 16,
+      "confidence": "medium",
+      "note": "Arrival at the Karion Fortress island = ch162 Fortress (v15); Takeshi rejoins; Black's dining-room reveal and the wall that separates the party = ch166 陥穽 Snare, the first chapter of v16, which Shogakukan's v16 blurb names as the start of the Karion Tower infiltration. v15 has no publisher TOC on Kinokuniya; titles from MangaDex.",
+      "sources": [
+        "https://www.kinokuniya.co.jp/f/dsg-01-9784091248961",
+        "https://mangadex.org/title/9c5eda08-09b5-4f52-85db-d8eb80000492/arms",
+        "https://en.wikipedia.org/wiki/Project_ARMS"
+      ]
+    },
+    {
+      "episode": 47,
+      "end_chapter": 177,
+      "start_chapter": 167,
+      "chapters_adapted": "167-177",
+      "volume": 17,
+      "confidence": "medium",
+      "note": "Huey Graham and the Next = ch167 機人（ネクスト）; ch173-175 (理想 / 死地 / 交差（ジャンクション）= ep title); Samuel destroying the 'central processing unit' = ch176 中枢（ピポット）; the self-destruct countdown = ch177, which Shogakukan's v17 blurb places at the head of v17 ('Tillinghast shoots Dr Dewey Graham, and the tower's self-destruct begins'). END is 176 or 177 - a one-chapter, volume-crossing judgement call.",
+      "sources": [
+        "https://www.kinokuniya.co.jp/f/dsg-01-9784091248978",
+        "https://mangadex.org/title/9c5eda08-09b5-4f52-85db-d8eb80000492/arms",
+        "https://en.wikipedia.org/wiki/Project_ARMS"
+      ]
+    },
+    {
+      "episode": 48,
+      "end_chapter": 192,
+      "start_chapter": 178,
+      "chapters_adapted": "~178-185, 191-192 (186-190 relocated to ep 44)",
+      "volume": 18,
+      "confidence": "medium",
+      "note": "Huey's end, Samuel mortally wounded, and Green stabbed by Black then teleporting Ryo to Katsumi = ch192 転移 Teleportation. Note the Keith Violet / March Hare block (ch~186-190) is NOT here: the anime moved it forward to ep 44 (see annotations), so this episode's span is discontinuous.",
+      "sources": [
+        "https://www.kinokuniya.co.jp/f/dsg-01-9784091248985",
+        "https://mangadex.org/title/9c5eda08-09b5-4f52-85db-d8eb80000492/arms",
+        "https://en.wikipedia.org/wiki/Project_ARMS"
+      ]
+    },
+    {
+      "episode": 49,
+      "end_chapter": 198,
+      "start_chapter": 193,
+      "chapters_adapted": "193-198",
+      "volume": 18,
+      "confidence": "medium",
+      "note": "Ch193 激震; Keith White resurrected inside Black's body = ch194 帰還（リザレクション）Resurrection; ep title 黙示（リベレイション）= ch195 Revelations; ch196 地上 / ch197 激突; the Jabberwock merging with Black Alice = ch198 侵食（エンクローチメント）, the v18 finale.",
+      "sources": [
+        "https://www.kinokuniya.co.jp/f/dsg-01-9784091248985",
+        "https://mangadex.org/title/9c5eda08-09b5-4f52-85db-d8eb80000492/arms",
+        "https://en.wikipedia.org/wiki/Project_ARMS"
+      ]
+    },
+    {
+      "episode": 50,
+      "end_chapter": 205,
+      "start_chapter": 199,
+      "chapters_adapted": "199-205",
+      "volume": 19,
+      "confidence": "high",
+      "note": "Takeshi's cocoon = ch199 繭玉 (named in Shogakukan's v19 blurb: 'White Alice enters Takeshi's cocoon'); ch200-203; and the ep title 世界（アニムス）fuses ch204 憎悪（アニムス）with ch205 世界（アリス）- the same kanji/reading splice the show used at ep 33. Independently, MangaUpdates records the anime's coverage as ending at 'Vol 19, Chap 205'.",
+      "sources": [
+        "https://www.kinokuniya.co.jp/f/dsg-01-9784091248992",
+        "https://mangadex.org/title/9c5eda08-09b5-4f52-85db-d8eb80000492/arms",
+        "https://en.wikipedia.org/wiki/Project_ARMS",
+        "https://www.mangaupdates.com/series/g656ndt/arms"
+      ]
+    }
+  ],
+  "continue_points": [],
+  "annotations": [
+    {
+      "episodes": [
+        44
+      ],
+      "kind": "rearranged",
+      "chapters": "~186-190",
+      "note": "The Keith Violet / March Hare fight is pulled forward: the anime stages it on the bridge BEFORE the island, while Shogakukan's v18 blurb places it at the head of v18 (after Silver's defeat), with the identical beat of Hayato fully synchronising with the Knight to save Ryo. Ep title 幻境（アルカディア）= ch186."
+    },
+    {
+      "episodes": [
+        33,
+        34
+      ],
+      "kind": "divergence",
+      "chapters": "100-102 vs 180-183",
+      "note": "The anime kills Keith Silver / the Mad Hatter at Gallows Bell (ch100-102 material). In the manga Silver survives Gallows Bell and is only defeated inside the Karion Tower (ch180 銀光（シルバー）/ ch181 戦鬼（マッドハッター）/ ch182 溶融 / ch183 炎熱, per the v17 TOC and the v18 blurb's 'having only just defeated Keith Silver')."
+    },
+    {
+      "episodes": [
+        40,
+        41,
+        42
+      ],
+      "kind": "abridged",
+      "chapters": "121-154",
+      "note": "Roughly 34 chapters (v12-v14: Tillinghast's exposition, Takeshi's journey through Alice's world, the full Alice backstory) are compressed into three episodes and partly re-ordered. Interior chapter boundaries in this stretch are not individually attestable."
+    },
+    {
+      "episodes": [
+        27
+      ],
+      "kind": "partial",
+      "chapters": "78",
+      "note": "First half is an anime-original clip-show recap of season 1 (the four Keiths reviewing events); only the back half adapts new material."
+    },
+    {
+      "episodes": [
+        49,
+        50
+      ],
+      "kind": "divergence",
+      "chapters": "198-205",
+      "note": "In the manga the Jabberwock/Alice giant appears over NEW YORK and a runaway nuclear missile is the crisis (Shogakukan v19 blurb). The anime relocates the same climax to the Karion Fortress island."
+    },
+    {
+      "episodes": [
+        51,
+        52
+      ],
+      "kind": "divergence",
+      "chapters": "206-209",
+      "note": "The anime finished on 2002-03-30, three weeks before the manga ended, and wraps with an original resolution: Keith Blue and Keith White kill each other (Dormouse vs Humpty Dumpty). In the manga Keith White SURVIVES the Alice arc and is the antagonist of the unadapted fifth part, 'Kikan-hen' (ch210-242, Program Bandersnatch). MangaUpdates puts the anime's coverage end at ch205, so eps 51-52 are left unanchored rather than pushed to ch209."
+    }
+  ],
+  "type_corrections": [],
+  "repairs": [
+    {
+      "episode": 53,
+      "field": "end_chapter",
+      "old": 205,
+      "new": null,
+      "why": "Episode 53 is not an episode. Both seasons total 52 (26 + 26) per en.wikipedia, ja.wikipedia and the two AniList components in the context file. The stored row 53 'PS2 Video Game' is an animefillerlist artifact - AFL's own table carries a 53rd row literally titled 'PS2 Video Game' dated 2002-03-28, and our row reproduces it verbatim including the type 'Mixed Canon/Filler'. The mu-derived anchor 205/v19 attached to it comes from MangaUpdates' series field anime.end = 'Vol 19, Chap 205', which describes the anime's END, not a 53rd episode. Recommend deleting the anchor (and, separately, the row); the ch205 datum is carried here on ep 50 where the content evidence independently lands.",
+      "sources": [
+        "https://www.animefillerlist.com/shows/project-arms",
+        "https://en.wikipedia.org/wiki/Project_ARMS",
+        "https://ja.wikipedia.org/wiki/ARMS",
+        "https://www.mangaupdates.com/series/g656ndt/arms"
+      ]
+    }
+  ],
+  "structure": {
+    "notes": "CHAPTER SPACE. The manga runs 242 numbered chapters in 22 tankoubon; the context file's AniList total_chapters=241 is one short. Volume boundaries were rebuilt from Shogakukan's own per-volume tables of contents (the '出版社内容情報' block on Kinokuniya's product pages, which lists every 第N話 in the volume) for 19 of the 22 volumes, and cross-checked chapter-for-chapter against MangaDex's chapter feed for all 22: ZERO mismatches. Boundaries used throughout: v1 1-10, v2 11-21, v3 22-32, v4 33-43, v5 44-54, v6 55-65, v7 66-77, v8 78-88, v9 89-99, v10 100-110, v11 111-121, v12 122-132, v13 133-143, v14 144-154, v15 155-165, v16 166-176, v17 177-187, v18 188-198, v19 199-209, v20 210-220, v21 221-231, v22 232-242. Kinokuniya's blurbs for v3, v4 and v15 are truncated (no TOC), so those three volumes rest on MangaDex plus the arithmetic pinned by the two neighbouring publisher TOCs. Note the trap: a prior pass on this series dropped v10's first chapter (火神（アグニ）) from the same blurb and came out with 241 chapters and every volume from 10 on shifted by one.\n\nSEASONS. 52 episodes, not 53: PROJECT ARMS eps 1-26 (2001-04-07..09-29) and PROJECT ARMS: The 2nd Chapter eps 27-52 (2001-10-06..2002-03-30). Our cumulative numbering already matches Wikipedia's overall numbering 1-52 one-for-one. Row 53 'PS2 Video Game' is an animefillerlist artifact and is not an episode - see repairs.\n\nADAPTATION SHAPE. Season 1 (eps 1-26) covers exactly the manga's first two parts, ch1-77 = v1-v7, at a steady 2-4 chapters per episode, and the season break lands precisely on the v7 finale (ch77 離陸 Take Off, the departure for America). Season 2 accelerates hard: eps 27-36 cover part three (ch78-110 = v8-v10) at ~3-4 chapters an episode, then eps 37-50 compress the whole of part four (ch111-209 = v11-v19) at 5-16 chapters an episode with real re-ordering. The manga's fifth part, 'Kikan-hen' (ch210-242, v20-v22, Program Bandersnatch), is NOT adapted at all. The manga's part boundaries in chapter space: part 1 'Kakusei-hen' 1-32, part 2 'Kaikou-hen' 33-77, part 3 'Shinka-hen' 78-110, part 4 'Alice-hen' 111-209, part 5 'Kikan-hen' 210-242.\n\nTITLE TRAP. Anime episode titles are frequently, but not always, lifted from a chapter inside the episode - and the show reuses chapter titles out of position (ep 29 is titled 闘士（ハンター）, which is ch86, but its content is ch81-84; ep 51 青空（ブルーウィッシュ） echoes ch143 青花 which was already animated at ep 42). It also splices two adjacent chapters into one title twice: ep 33 火神（マーズ） = ch100's kanji + ch99's reading, ep 50 世界（アニムス） = ch205's kanji + ch204's reading. Every anchor here was made on episode-summary content, with the title match as corroboration only.\n\nSTORED TITLES. Our episode titles are AFL's English set and differ cosmetically from Wikipedia's for eps 27 (Arrive/Alive), 29 (Hunter/Hunted), 40 (Reverse/Rebirth), 48 (Humans/Human), 50 (Existence/Animus), 52 (Departure/Life). Same episodes; no repair proposed.",
+    "order_only": []
+  },
+  "flags_for_sean": [
+    "Row 53 'PS2 Video Game' is not an episode (animefillerlist artifact reproduced verbatim, including its Mixed type). It currently holds the series' ONLY anchor (205/v19, source mu). Proposed repair deletes that anchor; the row itself probably wants deleting too, and aired_episodes/total_episodes want 53 -> 52.",
+    "Manga chapter count: sources say 242 (MangaDex lastChapter=242 and the summed publisher TOCs), the context file carries AniList total_chapters=241, and ja.wikipedia's infobox says 243. The volume arithmetic is independently double-verified at 242, so 241 is likely one short. Not proposed as a repair because it is an entry-level field, not an anchor.",
+    "Eps 51-52 deliberately left unanchored. MangaUpdates places the anime's coverage end at ch205 (which ep 50 reaches), while the two episodes' content loosely parallels ch206-209 and then resolves with an anime-original Blue-vs-White duel that contradicts the manga (White survives into the unadapted fifth part). AFL types ep 51 as Manga Canon and ep 52 as Mixed; I could not source a retype to anime-only-canon with two independent sources, so no type_correction is proposed - flagging for Sean instead.",
+    "Ep 44 is unanchored on purpose: its content (Keith Violet / March Hare, ch~186-190) is out of running order relative to eps 45-49, so an anchor there would break monotonicity. Recorded as a 'rearranged' annotation instead.",
+    "Eps 43 and 46 left unanchored - no evidence I could source pinned their boundaries; they interpolate between the ep 42 (154) and ep 45 (166), and ep 45 (166) and ep 47 (177) anchors.",
+    "Ep 47 END is 176 or 177 (a volume-crossing one-chapter ambiguity: ch176 中枢（ピボット） matches 'central processing unit', but Shogakukan's v17 blurb puts Tillinghast shooting Dewey and the self-destruct at the head of v17). Chose 177; flagging.",
+    "Ep 33 END is 99 or 100 for the same reason (the ep title splices both). Chose 99 so that ch100 火神（アグニ）- which Shogakukan names as v10's first chapter, with Silver's flames and Takeshi's transformation - opens ep 34, matching ep 34's summary."
+  ]
+}

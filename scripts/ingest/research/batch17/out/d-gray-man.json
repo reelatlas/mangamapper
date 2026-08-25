@@ -1,0 +1,1268 @@
+{
+  "series_id": "d-gray-man",
+  "summary": "Episodes 52-102 of the 2006 series adapt chs 45-154 essentially linearly and densely - the D.Gray-man Encyclopedia carries a per-episode 'chapter(s)' field AND a reverse 'episode(s)' field on every chapter page, and the two families agree on all but one episode (ep 98, where the episode infobox drops ch 141). Chapter numbering and volume boundaries were verified against Wikipedia's chapter list and match the context file exactly (258 chapters, v5=37-46 ... v23=206-212), so no numbering conversion is needed. Types match animefillerlist one-for-one (eps 45-50 filler, 63-64 mixed, everything else in range manga canon), so no type corrections. The load-bearing structural finding is the seam: the 2006 finale (ep 103) adapts ch 156 in full and then only fragments of chs 157-158 inside an anime-original ending, and D.Gray-man Hallow restarts at ch 165 - chs 159-164, the Black Order relocation run, are adapted by NEITHER anime. Hallow then covers chs 165-208 across eps 104-116, skipping ch 170 entirely and ch 171 p6-12, and ending 20 pages into ch 208. That last point contradicts the stored ep 116 anchor of 206, which is repaired here to 208 on three sources.",
+  "anchors": [
+    {
+      "episode": 52,
+      "end_chapter": 48,
+      "start_chapter": 45,
+      "chapters_adapted": "45 (p10-17), 46 (p10-17), 47, 48 (p1-10)",
+      "volume": 6,
+      "confidence": "high",
+      "note": "Japan's '2nd stage' opener; picks up the halves of chs 45-46 that ep 51 left (Suman's unit vs Tyki) and runs into ch 48. Fandom episode field and the ch 45/46/47/48 pages agree.",
+      "sources": [
+        "https://dgrayman.fandom.com/wiki/Episode_52",
+        "https://dgrayman.fandom.com/wiki/Chapter_45",
+        "https://dgrayman.fandom.com/wiki/Chapter_47",
+        "https://dgrayman.fandom.com/wiki/Chapter_48",
+        "https://en.wikipedia.org/wiki/List_of_D.Gray-man_chapters"
+      ]
+    },
+    {
+      "episode": 53,
+      "end_chapter": 50,
+      "start_chapter": 48,
+      "chapters_adapted": "48 (p10-17), 49, 50",
+      "volume": 6,
+      "confidence": "high",
+      "note": "Suman Dark's Fallen arc continues; ch 48 tail through ch 50.",
+      "sources": [
+        "https://dgrayman.fandom.com/wiki/Episode_53",
+        "https://dgrayman.fandom.com/wiki/Chapter_48",
+        "https://dgrayman.fandom.com/wiki/Chapter_49",
+        "https://dgrayman.fandom.com/wiki/Chapter_50",
+        "https://en.wikipedia.org/wiki/List_of_D.Gray-man_chapters"
+      ]
+    },
+    {
+      "episode": 54,
+      "end_chapter": 53,
+      "start_chapter": 51,
+      "chapters_adapted": "51, 52, 53 (p1-4)",
+      "volume": 6,
+      "confidence": "high",
+      "note": "Ch 52's title 'Beginning of the Night of the End' is the episode title. Stops 4 pages into ch 53.",
+      "sources": [
+        "https://dgrayman.fandom.com/wiki/Episode_54",
+        "https://dgrayman.fandom.com/wiki/Chapter_51",
+        "https://dgrayman.fandom.com/wiki/Chapter_52",
+        "https://dgrayman.fandom.com/wiki/Chapter_53",
+        "https://en.wikipedia.org/wiki/List_of_D.Gray-man_chapters"
+      ]
+    },
+    {
+      "episode": 55,
+      "end_chapter": 54,
+      "start_chapter": 53,
+      "chapters_adapted": "53 (p5-17), 54",
+      "volume": 6,
+      "confidence": "high",
+      "note": "Ch 53 remainder + ch 54 complete (17 pp).",
+      "sources": [
+        "https://dgrayman.fandom.com/wiki/Episode_55",
+        "https://dgrayman.fandom.com/wiki/Chapter_53",
+        "https://dgrayman.fandom.com/wiki/Chapter_54",
+        "https://en.wikipedia.org/wiki/List_of_D.Gray-man_chapters"
+      ]
+    },
+    {
+      "episode": 56,
+      "end_chapter": 56,
+      "start_chapter": 55,
+      "chapters_adapted": "55, 56",
+      "volume": 6,
+      "confidence": "high",
+      "note": "Ch 55's title 'Delete' is the episode title; ends volume 6.",
+      "sources": [
+        "https://dgrayman.fandom.com/wiki/Episode_56",
+        "https://dgrayman.fandom.com/wiki/Chapter_55",
+        "https://dgrayman.fandom.com/wiki/Chapter_56",
+        "https://en.wikipedia.org/wiki/List_of_D.Gray-man_chapters"
+      ]
+    },
+    {
+      "episode": 57,
+      "end_chapter": 59,
+      "start_chapter": 57,
+      "chapters_adapted": "57, 58, 59",
+      "volume": 7,
+      "confidence": "high",
+      "note": "Edo/Asian Branch arc opens; three chapters, volume 7 starts at ch 57.",
+      "sources": [
+        "https://dgrayman.fandom.com/wiki/Episode_57",
+        "https://dgrayman.fandom.com/wiki/Chapter_57",
+        "https://dgrayman.fandom.com/wiki/Chapter_58",
+        "https://dgrayman.fandom.com/wiki/Chapter_59",
+        "https://en.wikipedia.org/wiki/List_of_D.Gray-man_chapters"
+      ]
+    },
+    {
+      "episode": 58,
+      "end_chapter": 61,
+      "start_chapter": 60,
+      "chapters_adapted": "60, 61",
+      "volume": 7,
+      "confidence": "high",
+      "note": "Ch 60 'The Sworn Path' / ch 61 'Left Arm'.",
+      "sources": [
+        "https://dgrayman.fandom.com/wiki/Episode_58",
+        "https://dgrayman.fandom.com/wiki/Chapter_60",
+        "https://dgrayman.fandom.com/wiki/Chapter_61",
+        "https://en.wikipedia.org/wiki/List_of_D.Gray-man_chapters"
+      ]
+    },
+    {
+      "episode": 59,
+      "end_chapter": 63,
+      "start_chapter": 62,
+      "chapters_adapted": "62, 63 (p1-16)",
+      "volume": 7,
+      "confidence": "medium",
+      "note": "Ch 63 shown to p16; the wiki lists ch 63 as 16 pages, so the split may in fact be the whole chapter. Chapter span itself is unambiguous.",
+      "sources": [
+        "https://dgrayman.fandom.com/wiki/Episode_59",
+        "https://dgrayman.fandom.com/wiki/Chapter_62",
+        "https://dgrayman.fandom.com/wiki/Chapter_63",
+        "https://en.wikipedia.org/wiki/List_of_D.Gray-man_chapters"
+      ]
+    },
+    {
+      "episode": 60,
+      "end_chapter": 65,
+      "start_chapter": 64,
+      "chapters_adapted": "63 (p17-19 tail), 64, 65",
+      "volume": 7,
+      "confidence": "high",
+      "note": "Only a 3-page tail of ch 63 leads, so START is ch 64 by the majority rule; ch 65's title 'Title' is the episode title.",
+      "sources": [
+        "https://dgrayman.fandom.com/wiki/Episode_60",
+        "https://dgrayman.fandom.com/wiki/Chapter_63",
+        "https://dgrayman.fandom.com/wiki/Chapter_64",
+        "https://dgrayman.fandom.com/wiki/Chapter_65",
+        "https://en.wikipedia.org/wiki/List_of_D.Gray-man_chapters"
+      ]
+    },
+    {
+      "episode": 61,
+      "end_chapter": 68,
+      "start_chapter": 66,
+      "chapters_adapted": "66, 67, 68",
+      "volume": 8,
+      "confidence": "high",
+      "note": "Crosses the v7/v8 line; ch 68 'The Sinking Darkness' is the episode title.",
+      "sources": [
+        "https://dgrayman.fandom.com/wiki/Episode_61",
+        "https://dgrayman.fandom.com/wiki/Chapter_66",
+        "https://dgrayman.fandom.com/wiki/Chapter_67",
+        "https://dgrayman.fandom.com/wiki/Chapter_68",
+        "https://en.wikipedia.org/wiki/List_of_D.Gray-man_chapters"
+      ]
+    },
+    {
+      "episode": 62,
+      "end_chapter": 72,
+      "start_chapter": 69,
+      "chapters_adapted": "69, 70, 71, 72",
+      "volume": 8,
+      "confidence": "high",
+      "note": "Four chapters; both fandom page families agree on the whole block.",
+      "sources": [
+        "https://dgrayman.fandom.com/wiki/Episode_62",
+        "https://dgrayman.fandom.com/wiki/Chapter_69",
+        "https://dgrayman.fandom.com/wiki/Chapter_70",
+        "https://dgrayman.fandom.com/wiki/Chapter_71",
+        "https://en.wikipedia.org/wiki/List_of_D.Gray-man_chapters"
+      ]
+    },
+    {
+      "episode": 63,
+      "end_chapter": 74,
+      "start_chapter": 73,
+      "chapters_adapted": "73, 74",
+      "volume": 8,
+      "confidence": "high",
+      "note": "Typed MIXED by us and by AFL (anime padding around the manga content); ch 74 'Ship in Ruins, Girl Missing' is the episode title.",
+      "sources": [
+        "https://dgrayman.fandom.com/wiki/Episode_63",
+        "https://dgrayman.fandom.com/wiki/Chapter_73",
+        "https://dgrayman.fandom.com/wiki/Chapter_74",
+        "https://en.wikipedia.org/wiki/List_of_D.Gray-man_chapters",
+        "https://www.animefillerlist.com/shows/d-gray-man"
+      ]
+    },
+    {
+      "episode": 64,
+      "end_chapter": 76,
+      "start_chapter": 75,
+      "chapters_adapted": "75, 76",
+      "volume": 8,
+      "confidence": "high",
+      "note": "MIXED row (AFL agrees); ch 75 'The Message' is the episode title.",
+      "sources": [
+        "https://dgrayman.fandom.com/wiki/Episode_64",
+        "https://dgrayman.fandom.com/wiki/Chapter_75",
+        "https://dgrayman.fandom.com/wiki/Chapter_76",
+        "https://en.wikipedia.org/wiki/List_of_D.Gray-man_chapters",
+        "https://www.animefillerlist.com/shows/d-gray-man"
+      ]
+    },
+    {
+      "episode": 65,
+      "end_chapter": 78,
+      "start_chapter": 77,
+      "chapters_adapted": "77, 78 (p1-7)",
+      "volume": 9,
+      "confidence": "high",
+      "note": "Volume 9 opens at ch 77; ends 7 pages into ch 78.",
+      "sources": [
+        "https://dgrayman.fandom.com/wiki/Episode_65",
+        "https://dgrayman.fandom.com/wiki/Chapter_77",
+        "https://dgrayman.fandom.com/wiki/Chapter_78",
+        "https://en.wikipedia.org/wiki/List_of_D.Gray-man_chapters"
+      ]
+    },
+    {
+      "episode": 66,
+      "end_chapter": 78,
+      "start_chapter": 78,
+      "chapters_adapted": "78 (approx. p13 only)",
+      "volume": 9,
+      "confidence": "medium",
+      "note": "Heavily expanded Asian-Branch training episode built out of roughly a single page of ch 78; both wiki families place it inside ch 78 and nowhere else. Typed canon by us and by AFL, so it takes an anchor, but position barely advances.",
+      "sources": [
+        "https://dgrayman.fandom.com/wiki/Episode_66",
+        "https://dgrayman.fandom.com/wiki/Chapter_78",
+        "https://en.wikipedia.org/wiki/List_of_D.Gray-man_chapters",
+        "https://www.animefillerlist.com/shows/d-gray-man"
+      ]
+    },
+    {
+      "episode": 67,
+      "end_chapter": 79,
+      "start_chapter": 78,
+      "chapters_adapted": "78 (p8 onward), 79",
+      "volume": 9,
+      "confidence": "high",
+      "note": "Ch 78 remainder + ch 79 'Battle-Edo + China'.",
+      "sources": [
+        "https://dgrayman.fandom.com/wiki/Episode_67",
+        "https://dgrayman.fandom.com/wiki/Chapter_78",
+        "https://dgrayman.fandom.com/wiki/Chapter_79",
+        "https://en.wikipedia.org/wiki/List_of_D.Gray-man_chapters"
+      ]
+    },
+    {
+      "episode": 68,
+      "end_chapter": 81,
+      "start_chapter": 80,
+      "chapters_adapted": "80, 81 (p1-4)",
+      "volume": 9,
+      "confidence": "high",
+      "note": "Ch 80 'White Confusion' complete, 4 pages into ch 81.",
+      "sources": [
+        "https://dgrayman.fandom.com/wiki/Episode_68",
+        "https://dgrayman.fandom.com/wiki/Chapter_80",
+        "https://dgrayman.fandom.com/wiki/Chapter_81",
+        "https://en.wikipedia.org/wiki/List_of_D.Gray-man_chapters"
+      ]
+    },
+    {
+      "episode": 69,
+      "end_chapter": 82,
+      "start_chapter": 81,
+      "chapters_adapted": "81 (p5 onward), 82",
+      "volume": 9,
+      "confidence": "high",
+      "note": "Ch 82 'And Then Allen Walked On'.",
+      "sources": [
+        "https://dgrayman.fandom.com/wiki/Episode_69",
+        "https://dgrayman.fandom.com/wiki/Chapter_81",
+        "https://dgrayman.fandom.com/wiki/Chapter_82",
+        "https://en.wikipedia.org/wiki/List_of_D.Gray-man_chapters"
+      ]
+    },
+    {
+      "episode": 70,
+      "end_chapter": 85,
+      "start_chapter": 83,
+      "chapters_adapted": "83, 84, 85 (p1-9)",
+      "volume": 9,
+      "confidence": "high",
+      "note": "Three chapters, stopping mid ch 85.",
+      "sources": [
+        "https://dgrayman.fandom.com/wiki/Episode_70",
+        "https://dgrayman.fandom.com/wiki/Chapter_83",
+        "https://dgrayman.fandom.com/wiki/Chapter_84",
+        "https://dgrayman.fandom.com/wiki/Chapter_85",
+        "https://en.wikipedia.org/wiki/List_of_D.Gray-man_chapters"
+      ]
+    },
+    {
+      "episode": 71,
+      "end_chapter": 86,
+      "start_chapter": 85,
+      "chapters_adapted": "85 (p10 onward), 86 (p11-14, out of order)",
+      "volume": 9,
+      "confidence": "medium",
+      "note": "Ends on a relocated middle slice of ch 86; ch 86's opening and closing pages are held back for ep 72, so position is honest only at ch 86 itself.",
+      "sources": [
+        "https://dgrayman.fandom.com/wiki/Episode_71",
+        "https://dgrayman.fandom.com/wiki/Chapter_85",
+        "https://dgrayman.fandom.com/wiki/Chapter_86",
+        "https://en.wikipedia.org/wiki/List_of_D.Gray-man_chapters"
+      ]
+    },
+    {
+      "episode": 72,
+      "end_chapter": 86,
+      "start_chapter": 86,
+      "chapters_adapted": "86 (p1-10 and p15 to end)",
+      "volume": 9,
+      "confidence": "high",
+      "note": "Adapts the head and tail of ch 86 that ep 71 skipped; completes volume 9.",
+      "sources": [
+        "https://dgrayman.fandom.com/wiki/Episode_72",
+        "https://dgrayman.fandom.com/wiki/Chapter_86",
+        "https://en.wikipedia.org/wiki/List_of_D.Gray-man_chapters"
+      ]
+    },
+    {
+      "episode": 73,
+      "end_chapter": 87,
+      "start_chapter": 87,
+      "chapters_adapted": "87",
+      "volume": 10,
+      "confidence": "high",
+      "note": "Ch 87 'Tiedoll's Entry' = 'Kanda Joins the Battle'; volume 10 starts here.",
+      "sources": [
+        "https://dgrayman.fandom.com/wiki/Episode_73",
+        "https://dgrayman.fandom.com/wiki/Chapter_87",
+        "https://en.wikipedia.org/wiki/List_of_D.Gray-man_chapters"
+      ]
+    },
+    {
+      "episode": 74,
+      "end_chapter": 88,
+      "start_chapter": 88,
+      "chapters_adapted": "88",
+      "volume": 10,
+      "confidence": "high",
+      "note": "One chapter, ch 88 'The Villain Laughs'.",
+      "sources": [
+        "https://dgrayman.fandom.com/wiki/Episode_74",
+        "https://dgrayman.fandom.com/wiki/Chapter_88",
+        "https://en.wikipedia.org/wiki/List_of_D.Gray-man_chapters"
+      ]
+    },
+    {
+      "episode": 75,
+      "end_chapter": 89,
+      "start_chapter": 89,
+      "chapters_adapted": "89",
+      "volume": 10,
+      "confidence": "high",
+      "note": "One chapter, ch 89 'Tragicomedy'.",
+      "sources": [
+        "https://dgrayman.fandom.com/wiki/Episode_75",
+        "https://dgrayman.fandom.com/wiki/Chapter_89",
+        "https://en.wikipedia.org/wiki/List_of_D.Gray-man_chapters"
+      ]
+    },
+    {
+      "episode": 76,
+      "end_chapter": 91,
+      "start_chapter": 90,
+      "chapters_adapted": "90, 91",
+      "volume": 10,
+      "confidence": "high",
+      "note": "Noah's Ark arc begins; ch 91 'A Key and Four Doors' is the episode title.",
+      "sources": [
+        "https://dgrayman.fandom.com/wiki/Episode_76",
+        "https://dgrayman.fandom.com/wiki/Chapter_90",
+        "https://dgrayman.fandom.com/wiki/Chapter_91",
+        "https://en.wikipedia.org/wiki/List_of_D.Gray-man_chapters"
+      ]
+    },
+    {
+      "episode": 77,
+      "end_chapter": 92,
+      "start_chapter": 92,
+      "chapters_adapted": "92",
+      "volume": 10,
+      "confidence": "high",
+      "note": "Ch 92 'Skinn Bolic's Room' is the episode title.",
+      "sources": [
+        "https://dgrayman.fandom.com/wiki/Episode_77",
+        "https://dgrayman.fandom.com/wiki/Chapter_92",
+        "https://en.wikipedia.org/wiki/List_of_D.Gray-man_chapters"
+      ]
+    },
+    {
+      "episode": 78,
+      "end_chapter": 95,
+      "start_chapter": 93,
+      "chapters_adapted": "93 (p3-13), 94, 95",
+      "volume": 10,
+      "confidence": "high",
+      "note": "Noah's Memory parts 1-3.",
+      "sources": [
+        "https://dgrayman.fandom.com/wiki/Episode_78",
+        "https://dgrayman.fandom.com/wiki/Chapter_93",
+        "https://dgrayman.fandom.com/wiki/Chapter_94",
+        "https://dgrayman.fandom.com/wiki/Chapter_95",
+        "https://en.wikipedia.org/wiki/List_of_D.Gray-man_chapters"
+      ]
+    },
+    {
+      "episode": 79,
+      "end_chapter": 97,
+      "start_chapter": 96,
+      "chapters_adapted": "96, 97",
+      "volume": 10,
+      "confidence": "high",
+      "note": "Noah's Memory parts 4-5; ends volume 10.",
+      "sources": [
+        "https://dgrayman.fandom.com/wiki/Episode_79",
+        "https://dgrayman.fandom.com/wiki/Chapter_96",
+        "https://dgrayman.fandom.com/wiki/Chapter_97",
+        "https://en.wikipedia.org/wiki/List_of_D.Gray-man_chapters"
+      ]
+    },
+    {
+      "episode": 80,
+      "end_chapter": 98,
+      "start_chapter": 98,
+      "chapters_adapted": "98",
+      "volume": 11,
+      "confidence": "high",
+      "note": "Volume 11 opens at ch 98 'Twin's Room'.",
+      "sources": [
+        "https://dgrayman.fandom.com/wiki/Episode_80",
+        "https://dgrayman.fandom.com/wiki/Chapter_98",
+        "https://en.wikipedia.org/wiki/List_of_D.Gray-man_chapters"
+      ]
+    },
+    {
+      "episode": 81,
+      "end_chapter": 99,
+      "start_chapter": 99,
+      "chapters_adapted": "99",
+      "volume": 11,
+      "confidence": "high",
+      "note": "Ch 99 'Debt Crisis' is the episode title.",
+      "sources": [
+        "https://dgrayman.fandom.com/wiki/Episode_81",
+        "https://dgrayman.fandom.com/wiki/Chapter_99",
+        "https://en.wikipedia.org/wiki/List_of_D.Gray-man_chapters"
+      ]
+    },
+    {
+      "episode": 82,
+      "end_chapter": 103,
+      "start_chapter": 100,
+      "chapters_adapted": "100, 101, 102, 103 (p1-11)",
+      "volume": 11,
+      "confidence": "high",
+      "note": "Ch 102 'Bad Game' is the episode title; stops 11 pages into ch 103.",
+      "sources": [
+        "https://dgrayman.fandom.com/wiki/Episode_82",
+        "https://dgrayman.fandom.com/wiki/Chapter_100",
+        "https://dgrayman.fandom.com/wiki/Chapter_101",
+        "https://dgrayman.fandom.com/wiki/Chapter_102",
+        "https://en.wikipedia.org/wiki/List_of_D.Gray-man_chapters"
+      ]
+    },
+    {
+      "episode": 83,
+      "end_chapter": 107,
+      "start_chapter": 103,
+      "chapters_adapted": "103 (p12 onward), 104, 105, 106, 107",
+      "volume": 11,
+      "confidence": "high",
+      "note": "Five-chapter compression closing volume 11.",
+      "sources": [
+        "https://dgrayman.fandom.com/wiki/Episode_83",
+        "https://dgrayman.fandom.com/wiki/Chapter_103",
+        "https://dgrayman.fandom.com/wiki/Chapter_104",
+        "https://dgrayman.fandom.com/wiki/Chapter_105",
+        "https://en.wikipedia.org/wiki/List_of_D.Gray-man_chapters"
+      ]
+    },
+    {
+      "episode": 84,
+      "end_chapter": 110,
+      "start_chapter": 108,
+      "chapters_adapted": "108, 109 (p2-17), 110 (p3-17)",
+      "volume": 12,
+      "confidence": "high",
+      "note": "Volume 12 opens at ch 108 'Bloody Krory', the episode title.",
+      "sources": [
+        "https://dgrayman.fandom.com/wiki/Episode_84",
+        "https://dgrayman.fandom.com/wiki/Chapter_108",
+        "https://dgrayman.fandom.com/wiki/Chapter_109",
+        "https://dgrayman.fandom.com/wiki/Chapter_110",
+        "https://en.wikipedia.org/wiki/List_of_D.Gray-man_chapters"
+      ]
+    },
+    {
+      "episode": 85,
+      "end_chapter": 113,
+      "start_chapter": 111,
+      "chapters_adapted": "111, 112, 113",
+      "volume": 12,
+      "confidence": "high",
+      "note": "Ch 111 'Dark Rhapsody' is the episode title.",
+      "sources": [
+        "https://dgrayman.fandom.com/wiki/Episode_85",
+        "https://dgrayman.fandom.com/wiki/Chapter_111",
+        "https://dgrayman.fandom.com/wiki/Chapter_112",
+        "https://dgrayman.fandom.com/wiki/Chapter_113",
+        "https://en.wikipedia.org/wiki/List_of_D.Gray-man_chapters"
+      ]
+    },
+    {
+      "episode": 86,
+      "end_chapter": 116,
+      "start_chapter": 114,
+      "chapters_adapted": "114, 115, 116",
+      "volume": 12,
+      "confidence": "high",
+      "note": "Ch 115 'Weak People' is the episode title.",
+      "sources": [
+        "https://dgrayman.fandom.com/wiki/Episode_86",
+        "https://dgrayman.fandom.com/wiki/Chapter_114",
+        "https://dgrayman.fandom.com/wiki/Chapter_115",
+        "https://dgrayman.fandom.com/wiki/Chapter_116",
+        "https://en.wikipedia.org/wiki/List_of_D.Gray-man_chapters"
+      ]
+    },
+    {
+      "episode": 87,
+      "end_chapter": 119,
+      "start_chapter": 117,
+      "chapters_adapted": "117, 118, 119 (p1-7)",
+      "volume": 13,
+      "confidence": "high",
+      "note": "Ch 116 'The Transcendent One' gave the episode title but was consumed by ep 86; runs into ch 119, which opens volume 13.",
+      "sources": [
+        "https://dgrayman.fandom.com/wiki/Episode_87",
+        "https://dgrayman.fandom.com/wiki/Chapter_117",
+        "https://dgrayman.fandom.com/wiki/Chapter_118",
+        "https://dgrayman.fandom.com/wiki/Chapter_119",
+        "https://en.wikipedia.org/wiki/List_of_D.Gray-man_chapters"
+      ]
+    },
+    {
+      "episode": 88,
+      "end_chapter": 121,
+      "start_chapter": 119,
+      "chapters_adapted": "119 (p1-2, p9-16), 120, 121",
+      "volume": 13,
+      "confidence": "high",
+      "note": "Ch 119 'La + vi' is the episode title; re-uses ch 119's first pages after ep 87.",
+      "sources": [
+        "https://dgrayman.fandom.com/wiki/Episode_88",
+        "https://dgrayman.fandom.com/wiki/Chapter_119",
+        "https://dgrayman.fandom.com/wiki/Chapter_120",
+        "https://dgrayman.fandom.com/wiki/Chapter_121",
+        "https://en.wikipedia.org/wiki/List_of_D.Gray-man_chapters"
+      ]
+    },
+    {
+      "episode": 89,
+      "end_chapter": 124,
+      "start_chapter": 122,
+      "chapters_adapted": "122, 123, 124 (p1-9)",
+      "volume": 13,
+      "confidence": "high",
+      "note": "Ch 123 'The Voice of Darkness' is the episode title.",
+      "sources": [
+        "https://dgrayman.fandom.com/wiki/Episode_89",
+        "https://dgrayman.fandom.com/wiki/Chapter_122",
+        "https://dgrayman.fandom.com/wiki/Chapter_123",
+        "https://dgrayman.fandom.com/wiki/Chapter_124",
+        "https://en.wikipedia.org/wiki/List_of_D.Gray-man_chapters"
+      ]
+    },
+    {
+      "episode": 90,
+      "end_chapter": 127,
+      "start_chapter": 124,
+      "chapters_adapted": "124 (p10-17), 125, 126, 127 (p1, p5-12)",
+      "volume": 13,
+      "confidence": "high",
+      "note": "Ch 124 'The Black Carnival' is the episode title.",
+      "sources": [
+        "https://dgrayman.fandom.com/wiki/Episode_90",
+        "https://dgrayman.fandom.com/wiki/Chapter_124",
+        "https://dgrayman.fandom.com/wiki/Chapter_125",
+        "https://dgrayman.fandom.com/wiki/Chapter_126",
+        "https://en.wikipedia.org/wiki/List_of_D.Gray-man_chapters"
+      ]
+    },
+    {
+      "episode": 91,
+      "end_chapter": 130,
+      "start_chapter": 127,
+      "chapters_adapted": "127 (p1-4, p13-19), 128, 129, 130 (p1-4)",
+      "volume": 14,
+      "confidence": "high",
+      "note": "Crosses into volume 14 at ch 129.",
+      "sources": [
+        "https://dgrayman.fandom.com/wiki/Episode_91",
+        "https://dgrayman.fandom.com/wiki/Chapter_127",
+        "https://dgrayman.fandom.com/wiki/Chapter_128",
+        "https://dgrayman.fandom.com/wiki/Chapter_129",
+        "https://en.wikipedia.org/wiki/List_of_D.Gray-man_chapters"
+      ]
+    },
+    {
+      "episode": 92,
+      "end_chapter": 133,
+      "start_chapter": 130,
+      "chapters_adapted": "130 (p5-17), 131, 132, 133",
+      "volume": 14,
+      "confidence": "medium",
+      "note": "Ch 132 'The Pianist?!!' matches the episode title; ch 133 is shared with ep 93, so the exact hand-off inside ch 133 is not pinned.",
+      "sources": [
+        "https://dgrayman.fandom.com/wiki/Episode_92",
+        "https://dgrayman.fandom.com/wiki/Chapter_130",
+        "https://dgrayman.fandom.com/wiki/Chapter_131",
+        "https://dgrayman.fandom.com/wiki/Chapter_132",
+        "https://en.wikipedia.org/wiki/List_of_D.Gray-man_chapters"
+      ]
+    },
+    {
+      "episode": 93,
+      "end_chapter": 134,
+      "start_chapter": 133,
+      "chapters_adapted": "133, 134 (p1-10)",
+      "volume": 14,
+      "confidence": "high",
+      "note": "Ch 133 'Homecoming' is ep 94's title but is adapted here and in ep 92; stops mid ch 134.",
+      "sources": [
+        "https://dgrayman.fandom.com/wiki/Episode_93",
+        "https://dgrayman.fandom.com/wiki/Chapter_133",
+        "https://dgrayman.fandom.com/wiki/Chapter_134",
+        "https://en.wikipedia.org/wiki/List_of_D.Gray-man_chapters"
+      ]
+    },
+    {
+      "episode": 94,
+      "end_chapter": 135,
+      "start_chapter": 134,
+      "chapters_adapted": "134 (p10-17), 135 (p1-15)",
+      "volume": 14,
+      "confidence": "high",
+      "note": "Ch 133's title 'Homecoming' is reused as this episode's title.",
+      "sources": [
+        "https://dgrayman.fandom.com/wiki/Episode_94",
+        "https://dgrayman.fandom.com/wiki/Chapter_134",
+        "https://dgrayman.fandom.com/wiki/Chapter_135",
+        "https://en.wikipedia.org/wiki/List_of_D.Gray-man_chapters"
+      ]
+    },
+    {
+      "episode": 95,
+      "end_chapter": 136,
+      "start_chapter": 136,
+      "chapters_adapted": "135 (p16-17 tail), 136",
+      "volume": 14,
+      "confidence": "high",
+      "note": "Only a 2-page tail of ch 135 leads, so START is ch 136 'Sheep and Dog' = 'Lamb and Dog'. Invasion of the Black Order arc begins.",
+      "sources": [
+        "https://dgrayman.fandom.com/wiki/Episode_95",
+        "https://dgrayman.fandom.com/wiki/Chapter_135",
+        "https://dgrayman.fandom.com/wiki/Chapter_136",
+        "https://en.wikipedia.org/wiki/List_of_D.Gray-man_chapters"
+      ]
+    },
+    {
+      "episode": 96,
+      "end_chapter": 138,
+      "start_chapter": 137,
+      "chapters_adapted": "137, 138",
+      "volume": 14,
+      "confidence": "high",
+      "note": "Ch 138 'The Clock Ticks On' is the episode title; ends volume 14.",
+      "sources": [
+        "https://dgrayman.fandom.com/wiki/Episode_96",
+        "https://dgrayman.fandom.com/wiki/Chapter_137",
+        "https://dgrayman.fandom.com/wiki/Chapter_138",
+        "https://en.wikipedia.org/wiki/List_of_D.Gray-man_chapters"
+      ]
+    },
+    {
+      "episode": 97,
+      "end_chapter": 140,
+      "start_chapter": 139,
+      "chapters_adapted": "139, 140",
+      "volume": 15,
+      "confidence": "high",
+      "note": "Volume 15 opens with ch 139 'Attack on Headquarters', the episode title.",
+      "sources": [
+        "https://dgrayman.fandom.com/wiki/Episode_97",
+        "https://dgrayman.fandom.com/wiki/Chapter_139",
+        "https://dgrayman.fandom.com/wiki/Chapter_140",
+        "https://en.wikipedia.org/wiki/List_of_D.Gray-man_chapters"
+      ]
+    },
+    {
+      "episode": 98,
+      "end_chapter": 143,
+      "start_chapter": 141,
+      "chapters_adapted": "141, 142, 143 (+ a 1-page glimpse of ch 144)",
+      "volume": 15,
+      "confidence": "medium",
+      "note": "The fandom episode infobox omits ch 141, but the ch 141 'Allies' page assigns itself to this episode and no other episode covers it (ep 97 ends at 140, ep 99 starts at 143) - so START is 141. Ch 143-144 are shared with ep 99, hence the continue point is set back to 143.",
+      "sources": [
+        "https://dgrayman.fandom.com/wiki/Episode_98",
+        "https://dgrayman.fandom.com/wiki/Chapter_141",
+        "https://dgrayman.fandom.com/wiki/Chapter_142",
+        "https://dgrayman.fandom.com/wiki/Chapter_143",
+        "https://en.wikipedia.org/wiki/List_of_D.Gray-man_chapters"
+      ]
+    },
+    {
+      "episode": 99,
+      "end_chapter": 144,
+      "start_chapter": 143,
+      "chapters_adapted": "143, 144",
+      "volume": 15,
+      "confidence": "high",
+      "note": "Ch 144 'Black Star, Red Star'; both wiki families place 143-144 here.",
+      "sources": [
+        "https://dgrayman.fandom.com/wiki/Episode_99",
+        "https://dgrayman.fandom.com/wiki/Chapter_143",
+        "https://dgrayman.fandom.com/wiki/Chapter_144",
+        "https://en.wikipedia.org/wiki/List_of_D.Gray-man_chapters"
+      ]
+    },
+    {
+      "episode": 100,
+      "end_chapter": 147,
+      "start_chapter": 145,
+      "chapters_adapted": "145, 146, 147",
+      "volume": 15,
+      "confidence": "high",
+      "note": "Ch 145 'Darkness 4' = the episode title 'Level 4'.",
+      "sources": [
+        "https://dgrayman.fandom.com/wiki/Episode_100",
+        "https://dgrayman.fandom.com/wiki/Chapter_145",
+        "https://dgrayman.fandom.com/wiki/Chapter_146",
+        "https://dgrayman.fandom.com/wiki/Chapter_147",
+        "https://en.wikipedia.org/wiki/List_of_D.Gray-man_chapters"
+      ]
+    },
+    {
+      "episode": 101,
+      "end_chapter": 151,
+      "start_chapter": 148,
+      "chapters_adapted": "148, 149, 150, 151",
+      "volume": 16,
+      "confidence": "high",
+      "note": "Crosses into volume 16; ch 151 'The God I Hate' is the episode title.",
+      "sources": [
+        "https://dgrayman.fandom.com/wiki/Episode_101",
+        "https://dgrayman.fandom.com/wiki/Chapter_148",
+        "https://dgrayman.fandom.com/wiki/Chapter_149",
+        "https://dgrayman.fandom.com/wiki/Chapter_150",
+        "https://en.wikipedia.org/wiki/List_of_D.Gray-man_chapters"
+      ]
+    },
+    {
+      "episode": 102,
+      "end_chapter": 154,
+      "start_chapter": 152,
+      "chapters_adapted": "152, 153, 154 (p1-14)",
+      "volume": 16,
+      "confidence": "high",
+      "note": "Ch 152 'Until We Meet Again' = 'The Promise'; stops 14 pages into ch 154.",
+      "sources": [
+        "https://dgrayman.fandom.com/wiki/Episode_102",
+        "https://dgrayman.fandom.com/wiki/Chapter_152",
+        "https://dgrayman.fandom.com/wiki/Chapter_153",
+        "https://dgrayman.fandom.com/wiki/Chapter_154",
+        "https://en.wikipedia.org/wiki/List_of_D.Gray-man_chapters"
+      ]
+    },
+    {
+      "episode": 104,
+      "end_chapter": 168,
+      "start_chapter": 165,
+      "chapters_adapted": "169 (p8-18, used as a flash-forward cold open), 165, 166, 167, 168",
+      "volume": 17,
+      "confidence": "high",
+      "note": "Hallow opens at ch 165 'Rain' - chs 159-164 (the Order's relocation / 'Destruction of the Black Order' run) are never animated by either series. Ch 169's second half is lifted to the front as a flash-forward of Cross's Timcanpy message, so the running-order END is ch 168 'Parting Ways' (episode closes on Cross shot dead).",
+      "sources": [
+        "https://dgrayman.fandom.com/wiki/Episode_1_(Hallow)",
+        "https://dgrayman.fandom.com/wiki/Chapter_165",
+        "https://dgrayman.fandom.com/wiki/Chapter_166",
+        "https://dgrayman.fandom.com/wiki/Chapter_167",
+        "https://en.wikipedia.org/wiki/List_of_D.Gray-man_chapters"
+      ]
+    },
+    {
+      "episode": 105,
+      "end_chapter": 178,
+      "start_chapter": 169,
+      "chapters_adapted": "169 (p1-7), 171 (p1-5, p13-18), 172, 173, 174, 175, 176, 177, 178 (p1-10)",
+      "volume": 18,
+      "confidence": "high",
+      "note": "Phantom Thief G arc. Ch 170 'Ten Days Later...' is skipped entirely (its wiki page carries no episode), as is ch 171 p6-12. Ends 10 pages into ch 178.",
+      "sources": [
+        "https://dgrayman.fandom.com/wiki/Episode_2_(Hallow)",
+        "https://dgrayman.fandom.com/wiki/Chapter_169",
+        "https://dgrayman.fandom.com/wiki/Chapter_170",
+        "https://dgrayman.fandom.com/wiki/Chapter_171",
+        "https://en.wikipedia.org/wiki/List_of_D.Gray-man_chapters"
+      ]
+    },
+    {
+      "episode": 106,
+      "end_chapter": 183,
+      "start_chapter": 178,
+      "chapters_adapted": "178 (p11 onward), 179, 180, 181, 182, 183",
+      "volume": 19,
+      "confidence": "high",
+      "note": "Ch 183 'Wash Your Face And You'll Be All Right' is the episode title; ends volume 19's opening stretch.",
+      "sources": [
+        "https://dgrayman.fandom.com/wiki/Episode_3_(Hallow)",
+        "https://dgrayman.fandom.com/wiki/Chapter_178",
+        "https://dgrayman.fandom.com/wiki/Chapter_179",
+        "https://dgrayman.fandom.com/wiki/Chapter_180",
+        "https://en.wikipedia.org/wiki/List_of_D.Gray-man_chapters"
+      ]
+    },
+    {
+      "episode": 107,
+      "end_chapter": 187,
+      "start_chapter": 184,
+      "chapters_adapted": "184, 185, 186, 187 (p1-45)",
+      "volume": 19,
+      "confidence": "medium",
+      "note": "Third Exorcists arc. Ch 187 'Party and Party' is a 50-page chapter split across eps 107-108; the episode infobox also lists a single page of ch 188, but ch 188's own page assigns itself only to ep 108, so END is held at 187.",
+      "sources": [
+        "https://dgrayman.fandom.com/wiki/Episode_4_(Hallow)",
+        "https://dgrayman.fandom.com/wiki/Chapter_184",
+        "https://dgrayman.fandom.com/wiki/Chapter_185",
+        "https://dgrayman.fandom.com/wiki/Chapter_186",
+        "https://en.wikipedia.org/wiki/List_of_D.Gray-man_chapters"
+      ]
+    },
+    {
+      "episode": 108,
+      "end_chapter": 190,
+      "start_chapter": 188,
+      "chapters_adapted": "187 (p46-50 tail), 188, 189, 190 (p1-2)",
+      "volume": 20,
+      "confidence": "high",
+      "note": "Only a 5-page tail of ch 187 leads, so START is ch 188 'Holy War Blood'. Volume 20 opens at ch 189.",
+      "sources": [
+        "https://dgrayman.fandom.com/wiki/Episode_5_(Hallow)",
+        "https://dgrayman.fandom.com/wiki/Chapter_187",
+        "https://dgrayman.fandom.com/wiki/Chapter_188",
+        "https://dgrayman.fandom.com/wiki/Chapter_189",
+        "https://en.wikipedia.org/wiki/List_of_D.Gray-man_chapters"
+      ]
+    },
+    {
+      "episode": 109,
+      "end_chapter": 192,
+      "start_chapter": 190,
+      "chapters_adapted": "190 (p2 onward), 191, 192 (p1-28)",
+      "volume": 20,
+      "confidence": "high",
+      "note": "Ch 193's title 'Friend' is this episode's title but ch 193 itself lands in ep 110.",
+      "sources": [
+        "https://dgrayman.fandom.com/wiki/Episode_6_(Hallow)",
+        "https://dgrayman.fandom.com/wiki/Chapter_190",
+        "https://dgrayman.fandom.com/wiki/Chapter_191",
+        "https://dgrayman.fandom.com/wiki/Chapter_192",
+        "https://en.wikipedia.org/wiki/List_of_D.Gray-man_chapters"
+      ]
+    },
+    {
+      "episode": 110,
+      "end_chapter": 195,
+      "start_chapter": 192,
+      "chapters_adapted": "192 (p28 onward), 193, 194, 195 (p1-8)",
+      "volume": 21,
+      "confidence": "high",
+      "note": "Runs into ch 195 'Ripples', which opens volume 21's stretch.",
+      "sources": [
+        "https://dgrayman.fandom.com/wiki/Episode_7_(Hallow)",
+        "https://dgrayman.fandom.com/wiki/Chapter_192",
+        "https://dgrayman.fandom.com/wiki/Chapter_193",
+        "https://dgrayman.fandom.com/wiki/Chapter_194",
+        "https://en.wikipedia.org/wiki/List_of_D.Gray-man_chapters"
+      ]
+    },
+    {
+      "episode": 111,
+      "end_chapter": 198,
+      "start_chapter": 195,
+      "chapters_adapted": "195 (p8 onward), 196, 197, 198 (p1-11)",
+      "volume": 21,
+      "confidence": "high",
+      "note": "Ch 194 'The Awakening of Alma Karma' gave ep 111's title 'Awakening' but was adapted in ep 110.",
+      "sources": [
+        "https://dgrayman.fandom.com/wiki/Episode_8_(Hallow)",
+        "https://dgrayman.fandom.com/wiki/Chapter_195",
+        "https://dgrayman.fandom.com/wiki/Chapter_196",
+        "https://dgrayman.fandom.com/wiki/Chapter_197",
+        "https://en.wikipedia.org/wiki/List_of_D.Gray-man_chapters"
+      ]
+    },
+    {
+      "episode": 112,
+      "end_chapter": 201,
+      "start_chapter": 198,
+      "chapters_adapted": "198 (p11 onward), 199, 200, 201 (p1-2)",
+      "volume": 22,
+      "confidence": "medium",
+      "note": "Ch 199 'Little Goodbye' is the episode title; ch 200 'Seeds of Destruction' opens volume 22. The 2-page lead into ch 201 is not confirmed by ch 201's own page, which assigns itself to ep 113 only.",
+      "sources": [
+        "https://dgrayman.fandom.com/wiki/Episode_9_(Hallow)",
+        "https://dgrayman.fandom.com/wiki/Chapter_198",
+        "https://dgrayman.fandom.com/wiki/Chapter_199",
+        "https://dgrayman.fandom.com/wiki/Chapter_200",
+        "https://en.wikipedia.org/wiki/List_of_D.Gray-man_chapters"
+      ]
+    },
+    {
+      "episode": 113,
+      "end_chapter": 202,
+      "start_chapter": 201,
+      "chapters_adapted": "201 (p2 onward), 202",
+      "volume": 22,
+      "confidence": "high",
+      "note": "Ch 201 'Sinner in Despair' is the episode title.",
+      "sources": [
+        "https://dgrayman.fandom.com/wiki/Episode_10_(Hallow)",
+        "https://dgrayman.fandom.com/wiki/Chapter_201",
+        "https://dgrayman.fandom.com/wiki/Chapter_202",
+        "https://en.wikipedia.org/wiki/List_of_D.Gray-man_chapters"
+      ]
+    },
+    {
+      "episode": 114,
+      "end_chapter": 205,
+      "start_chapter": 203,
+      "chapters_adapted": "203, 204, 205 (to p2)",
+      "volume": 22,
+      "confidence": "high",
+      "note": "Seed of Destruction arc; stops 2 pages into ch 205.",
+      "sources": [
+        "https://dgrayman.fandom.com/wiki/Episode_11_(Hallow)",
+        "https://dgrayman.fandom.com/wiki/Chapter_203",
+        "https://dgrayman.fandom.com/wiki/Chapter_204",
+        "https://dgrayman.fandom.com/wiki/Chapter_205",
+        "https://en.wikipedia.org/wiki/List_of_D.Gray-man_chapters"
+      ]
+    },
+    {
+      "episode": 115,
+      "end_chapter": 205,
+      "start_chapter": 205,
+      "chapters_adapted": "205 (from p3)",
+      "volume": 22,
+      "confidence": "high",
+      "note": "Ch 205 'My Home' is the episode title; completes volume 22.",
+      "sources": [
+        "https://dgrayman.fandom.com/wiki/Episode_12_(Hallow)",
+        "https://dgrayman.fandom.com/wiki/Chapter_204",
+        "https://dgrayman.fandom.com/wiki/Chapter_205",
+        "https://en.wikipedia.org/wiki/List_of_D.Gray-man_chapters"
+      ]
+    },
+    {
+      "episode": 116,
+      "end_chapter": 208,
+      "start_chapter": 206,
+      "chapters_adapted": "206 (bonus chapter 'Maria's Gaze'), 207 (p1-5), 208 (p1-20)",
+      "volume": 23,
+      "confidence": "high",
+      "note": "Series terminus. Volume 23 opens at ch 206. AFG independently states ep 116 covers ch 206, ch 207 p1-5 and ch 208 p1-20, and that ch 207 p6-17 is skipped; the ch 207 and ch 208 wiki pages both assign themselves to this episode.",
+      "sources": [
+        "https://dgrayman.fandom.com/wiki/Episode_13_(Hallow)",
+        "https://dgrayman.fandom.com/wiki/Chapter_206",
+        "https://dgrayman.fandom.com/wiki/Chapter_207",
+        "https://dgrayman.fandom.com/wiki/Chapter_208",
+        "https://en.wikipedia.org/wiki/List_of_D.Gray-man_chapters",
+        "https://www.animefillerguide.com/anime/d-gray-man/"
+      ]
+    }
+  ],
+  "continue_points": [
+    {
+      "episode": 52,
+      "continue_chapter": 48,
+      "note": "ends 10 pages into ch 48"
+    },
+    {
+      "episode": 54,
+      "continue_chapter": 53,
+      "note": "ends 4 pages into ch 53"
+    },
+    {
+      "episode": 59,
+      "continue_chapter": 63,
+      "note": "ch 63 shown only to p16 per the episode infobox"
+    },
+    {
+      "episode": 65,
+      "continue_chapter": 78,
+      "note": "ends 7 pages into ch 78"
+    },
+    {
+      "episode": 66,
+      "continue_chapter": 78,
+      "note": "episode is an expansion of about one page of ch 78; reader has not left ch 78"
+    },
+    {
+      "episode": 68,
+      "continue_chapter": 81,
+      "note": "ends 4 pages into ch 81"
+    },
+    {
+      "episode": 70,
+      "continue_chapter": 85,
+      "note": "ends 9 pages into ch 85"
+    },
+    {
+      "episode": 71,
+      "continue_chapter": 86,
+      "note": "only ch 86 p11-14 shown, out of order; ch 86 p1-10 and p15+ arrive in ep 72"
+    },
+    {
+      "episode": 82,
+      "continue_chapter": 103,
+      "note": "ends 11 pages into ch 103"
+    },
+    {
+      "episode": 87,
+      "continue_chapter": 119,
+      "note": "ends 7 pages into ch 119"
+    },
+    {
+      "episode": 89,
+      "continue_chapter": 124,
+      "note": "ends 9 pages into ch 124"
+    },
+    {
+      "episode": 90,
+      "continue_chapter": 127,
+      "note": "ch 127 shown only as p1 and p5-12; p13-19 arrive in ep 91"
+    },
+    {
+      "episode": 91,
+      "continue_chapter": 130,
+      "note": "ends 4 pages into ch 130"
+    },
+    {
+      "episode": 92,
+      "continue_chapter": 133,
+      "note": "ch 133 is split with ep 93"
+    },
+    {
+      "episode": 93,
+      "continue_chapter": 134,
+      "note": "ends 10 pages into ch 134"
+    },
+    {
+      "episode": 94,
+      "continue_chapter": 135,
+      "note": "ends 15 pages into ch 135 (17 pp)"
+    },
+    {
+      "episode": 98,
+      "continue_chapter": 143,
+      "note": "chs 143-144 are adapted properly in ep 99; parity resume at ep 99's start"
+    },
+    {
+      "episode": 102,
+      "continue_chapter": 154,
+      "note": "ends 14 pages into ch 154"
+    },
+    {
+      "episode": 103,
+      "continue_chapter": 157,
+      "note": "2006 finale: ch 156 is the last chapter adapted in full; chs 157 (p1-3, p11-15) and 158 (p6-8, p13-14) appear only as fragments inside the anime-original ending, and chs 159-164 are never animated by either series (Hallow resumes at ch 165) - so an honest resume is ch 157, reading 157-164 before starting Hallow"
+    },
+    {
+      "episode": 104,
+      "continue_chapter": 169,
+      "note": "ch 169 p8-18 was shown out of order as a cold open; ch 169 p1-7 opens ep 105"
+    },
+    {
+      "episode": 105,
+      "continue_chapter": 178,
+      "note": "ends 10 pages into ch 178; ch 170 in full and ch 171 p6-12 are never animated"
+    },
+    {
+      "episode": 107,
+      "continue_chapter": 187,
+      "note": "ch 187 (50 pp) shown only to p45"
+    },
+    {
+      "episode": 108,
+      "continue_chapter": 190,
+      "note": "ends 2 pages into ch 190"
+    },
+    {
+      "episode": 109,
+      "continue_chapter": 192,
+      "note": "ends 28 pages into ch 192"
+    },
+    {
+      "episode": 110,
+      "continue_chapter": 195,
+      "note": "ends 8 pages into ch 195"
+    },
+    {
+      "episode": 111,
+      "continue_chapter": 198,
+      "note": "ends 11 pages into ch 198"
+    },
+    {
+      "episode": 112,
+      "continue_chapter": 201,
+      "note": "ends 2 pages into ch 201"
+    },
+    {
+      "episode": 114,
+      "continue_chapter": 205,
+      "note": "ends 2 pages into ch 205"
+    },
+    {
+      "episode": 116,
+      "continue_chapter": 208,
+      "note": "series terminus: ep 116 adapts ch 208 to p20; AFG says resume at ch 208 p21, and ch 207 p6-17 was skipped and should be read"
+    }
+  ],
+  "annotations": [
+    {
+      "episodes": [
+        51,
+        52
+      ],
+      "kind": "partial",
+      "chapters": "45-46",
+      "note": "chs 45 and 46 are each split down the middle between eps 51 and 52 (ship storyline vs Suman's unit in India)"
+    },
+    {
+      "episodes": [
+        65,
+        66,
+        67
+      ],
+      "kind": "abridged",
+      "chapters": "78",
+      "note": "ch 78 is stretched over three episodes; ep 66 in particular is built out of roughly one page of it"
+    },
+    {
+      "episodes": [
+        71,
+        72
+      ],
+      "kind": "rearranged",
+      "chapters": "86",
+      "note": "ep 71 closes on ch 86 p11-14; ch 86 p1-10 and p15-end are held for ep 72"
+    },
+    {
+      "episodes": [
+        87,
+        88
+      ],
+      "kind": "rearranged",
+      "chapters": "119",
+      "note": "ep 87 shows ch 119 p1-7, ep 88 re-shows p1-2 then continues at p9-16"
+    },
+    {
+      "episodes": [
+        90,
+        91
+      ],
+      "kind": "rearranged",
+      "chapters": "127",
+      "note": "ep 90 takes ch 127 p1 and p5-12; ep 91 takes p1-4 and p13-19"
+    },
+    {
+      "episodes": [
+        98
+      ],
+      "kind": "partial",
+      "chapters": "141-144",
+      "note": "episode infobox omits ch 141; the ch 141 page assigns itself here, and chs 143-144 are re-adapted properly in ep 99"
+    },
+    {
+      "episodes": [
+        103
+      ],
+      "kind": "divergence",
+      "chapters": "156-158",
+      "note": "the 2006 finale is anime-original from roughly ch 156 onward; chs 157-158 survive only as scattered pages inside it"
+    },
+    {
+      "episodes": [
+        103,
+        104
+      ],
+      "kind": "divergence",
+      "chapters": "159-164",
+      "note": "chs 159-164 (the Black Order's relocation arc) are adapted by NEITHER anime - the 2006 series ended before them and Hallow opens after them, at ch 165"
+    },
+    {
+      "episodes": [
+        104
+      ],
+      "kind": "rearranged",
+      "chapters": "169",
+      "note": "Hallow ep 1 opens with ch 169 p8-18 (Cross's recorded Timcanpy message) as a flash-forward before adapting chs 165-168 in order"
+    },
+    {
+      "episodes": [
+        105
+      ],
+      "kind": "partial",
+      "chapters": "170-171",
+      "note": "ch 170 'Ten Days Later...' is skipped entirely and ch 171 is reduced to p1-5 and p13-18"
+    },
+    {
+      "episodes": [
+        116
+      ],
+      "kind": "partial",
+      "chapters": "207-208",
+      "note": "ch 207 p6-17 is skipped and ch 208 is adapted only to p20 (AFG)"
+    }
+  ],
+  "type_corrections": [],
+  "repairs": [
+    {
+      "episode": 116,
+      "field": "end_chapter",
+      "old": 206,
+      "new": 208,
+      "why": "Three sources put the Hallow finale's end at ch 208, not ch 206: the Episode 13 (Hallow) infobox says 'Chapters 206 - 208'; the fandom Chapter 207 and Chapter 208 pages both list Episode 13 (Hallow) in their Episodes field; and animefillerguide states the last episode corresponds to 'Chapter 206, 207 (p. 1-5) and 208 (p. 1-20)' and that a reader should resume at ch 208 p21. Ch 206 is in fact a bonus chapter ('Maria's Gaze') used as the episode's opening flashback, so 206 was almost certainly a floor, not the end. NOTE (hikaru rule): ep 116 is already source=manual, so no source flip is required.",
+      "sources": [
+        "https://dgrayman.fandom.com/wiki/Episode_13_(Hallow)",
+        "https://dgrayman.fandom.com/wiki/Chapter_207",
+        "https://dgrayman.fandom.com/wiki/Chapter_208",
+        "https://www.animefillerguide.com/anime/d-gray-man/"
+      ]
+    }
+  ],
+  "structure": {
+    "notes": "OUR cumulative numbering 1-116 is identical to animefillerlist's and to the fandom wiki's 'overall' numbering. The 2006 TV run is 103 episodes: Japan's '1st stage' = eps 1-51, '2nd stage' = eps 52-103 (the Episode 52 page states it is the first episode of the second season in Japan; Funimation instead sold eps 52-64 as 'Season 3 Part 1'). Hallow episodes are numbered 1-13 on the wiki as 'Episode N (Hallow)' and carry an explicit 'N (overall)' line: Hallow 1 = ep 104 ... Hallow 13 = ep 116, matching our components. Fandom URLs for Hallow are https://dgrayman.fandom.com/wiki/Episode_N_(Hallow) - 'Episode 116' is only a redirect to 'Episode 13 (Hallow)'. Arc boundaries inside the target range: Suman Dark's Fallen (eps 51-56, chs 44-56), Edo and Asian Branch (eps 57-75, chs 57-89), Noah's Ark (eps 76-94, chs 90-135), Invasion of the Black Order (eps 95-103, chs 135-158), then Hallow: Disappearance of Cross Marian (ep 104, chs 165-169), Phantom Thief G (eps 105-106, chs 169-183), Third Exorcists (eps 107-110, chs 184-195), Artificial Exorcists (eps 111-113, chs 195-202), Seed of Destruction (eps 113-116, chs 201-208). Eps 45-50 are filler and their wiki pages carry no chapter field at all, consistent with our stored typing. No OVAs/movies sit inside the range.",
+    "order_only": []
+  },
+  "flags_for_sean": [
+    "ep 103 (stored manual anchor END=157, not touched here): the fandom episode page and the ch 155/156/157/158 pages put chs 154 p15, 155, 156 p1-18, 157 p1-3+p11-15 and 158 p6-8+p13-14 in this episode. Only ch 156 is adapted in full; 157 and 158 are scattered pages inside the anime-original ending. 157 is therefore defensible as END, but if you prefer 'last chapter touched in running order' the value would be 158, and if you prefer 'last chapter fully adapted' it would be 156. Left as stored; a continue_point of 157 is proposed instead. Sources: https://dgrayman.fandom.com/wiki/Episode_103 , https://dgrayman.fandom.com/wiki/Chapter_158",
+    "series-level entry field continue_from_chapter=206 should follow the ep 116 repair to 208 (AFG: resume at ch 208 p21). MangaShed, a low-trust aggregator, is the only source found saying 'up to 205 / resume at 206'; it is contradicted by the wiki episode page, the ch 207/208 pages and AFG.",
+    "ep 98 disagreement (resolved to START=141, medium): the Episode 98 infobox lists only chs 142/143/144 p2, but https://dgrayman.fandom.com/wiki/Chapter_141 names Episode 98 and no other episode covers ch 141 (ep 97 ends at 140, ep 99 starts at 143). A skipped ch 141 would be a silent hole, so START=141 was taken.",
+    "ep 66 (medium): both wiki families place the entire episode inside ch 78 (roughly one page of it). It is typed manga canon by us and by AFL, so it takes an anchor under A1, but its END equals ep 65's END - the position genuinely does not advance across that episode.",
+    "Source independence caveat: outside the boundaries, most anchors rest on two separately-maintained page families of the same wiki (episode infoboxes vs chapter infoboxes) plus Wikipedia for the chapter/volume space. They are demonstrably independent (they disagree at ep 98 and ep 107/112), but no third per-episode source exists for this series - animefillerguide publishes only the terminus and animefillerlist only types. Boundary anchors (ep 52, ep 104, ep 116) and the ch 159-164 gap were corroborated further."
+  ]
+}

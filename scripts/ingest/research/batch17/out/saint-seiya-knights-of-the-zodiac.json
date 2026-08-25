@@ -1,0 +1,886 @@
+{
+  "series_id": "saint-seiya-knights-of-the-zodiac",
+  "summary": "Episodes 1-72 cover the whole Sanctuary saga up to the eve of its finale: manga chapters 1-45 in the stored (Wikipedia) chapter space, i.e. volumes 1-13. The Spanish Saint Seiya wiki carries an explicit arc-boundary table for the saga (Introductorio caps 1-2/ep 1; Galaxian Wars caps 3-10/eps 2-7; Black Saints caps 11-19/eps 8-15; Silver Saints caps 20-25/eps 23-31; Gold Saints caps 26-28/eps 36-41; Doce Templos caps 29-45/eps 42-73) and two anime-original blocks inside the range (eps 16-22 Gold Cloth contention, eps 32-35 post-Silver Saints); this reconciles exactly with the stored ep73->46 anchor once the numbering offset described below is applied. The adaptation is extremely padded - the Twelve Temples arc alone spends 32 episodes on 18 chapters, so several chapters carry three consecutive episodes; the anchors deliberately repeat a chapter rather than let interpolation run ahead. The one genuine re-ordering is in the Silver Saints stretch: the anime animates ch 25's Perseus Algol duel (eps 27-28) before ch 24's Jamian abduction (eps 29-30), and defers ch 22's Babel vs Hyoga fight into eps 25-26. IMPORTANT numbering finding: Shueisha's own tankobon tables of contents show 108 chapters, not 110 - Wikipedia's chapter list (which the stored volume boundaries follow) inserts a phantom ch 30 'Battle in the Golden Bull Palace', which is in fact the title of ANIME episode 43 (ビッグバン！金牛宮の戦闘), and a phantom ch 53. Anchors below are delivered in the STORED space so nothing silently contradicts the two existing anchors; the offsets are spelled out in flags_for_sean.",
+  "anchors": [
+    {
+      "episode": 1,
+      "end_chapter": 2,
+      "start_chapter": 1,
+      "chapters_adapted": "1-2",
+      "volume": 1,
+      "confidence": "high",
+      "note": "Seiya beats Cassios, is granted the Pegasus Cloth and beats Shaina; ends as he leaves for Japan = ch 1-2 (ES arc table: Arco Introductorio = caps. 1-2 / ep. 1).",
+      "sources": [
+        "https://saintseiya.fandom.com/es/wiki/Saga_del_Santuario",
+        "https://saintseiya.fandom.com/es/wiki/Episodio_001",
+        "https://en.wikipedia.org/wiki/List_of_Saint_Seiya_chapters_(series)"
+      ]
+    },
+    {
+      "episode": 2,
+      "end_chapter": 4,
+      "start_chapter": 3,
+      "chapters_adapted": "3-4",
+      "volume": 1,
+      "confidence": "high",
+      "note": "Japan, Mitsumasa dead, Saori's offer, Galaxian Wars opens and Seiya beats Bear Geki - the exact point WP's vol 1 summary ends (ch 4 'The Galaxian Wars').",
+      "sources": [
+        "https://saintseiya.fandom.com/wiki/Burn!_Meteor_Punch_of_Pegasus!",
+        "https://en.wikipedia.org/wiki/List_of_Saint_Seiya_chapters_(series)",
+        "https://saintseiya.fandom.com/es/wiki/Arco_del_Galaxian_Wars"
+      ]
+    },
+    {
+      "episode": 3,
+      "end_chapter": 5,
+      "start_chapter": 5,
+      "chapters_adapted": "5",
+      "volume": 2,
+      "confidence": "high",
+      "note": "Hyoga's Siberia training and his win over Hydra Ichi = ch 5; episode title キグナス！氷原の戦士 is the chapter title キグナス 氷原の戦士.",
+      "sources": [
+        "https://saintseiya.fandom.com/es/wiki/Episodio_003",
+        "https://en.wikipedia.org/wiki/List_of_Saint_Seiya_chapters_(series)",
+        "https://ja.wikipedia.org/wiki/%E8%81%96%E9%97%98%E5%A3%AB%E6%98%9F%E7%9F%A2_(%E3%82%A2%E3%83%8B%E3%83%A1)"
+      ]
+    },
+    {
+      "episode": 4,
+      "end_chapter": 6,
+      "start_chapter": 6,
+      "chapters_adapted": "6",
+      "volume": 2,
+      "confidence": "high",
+      "note": "Seiya vs Shiryu, the Dragon shield broken, both strip their Cloths = ch 6 (ep title ドラゴン！無敵の拳と盾 ~ ch ドラゴン 最強の盾と拳).",
+      "sources": [
+        "https://saintseiya.fandom.com/es/wiki/Episodio_004",
+        "https://en.wikipedia.org/wiki/List_of_Saint_Seiya_chapters_(series)"
+      ]
+    },
+    {
+      "episode": 5,
+      "end_chapter": 7,
+      "start_chapter": 7,
+      "chapters_adapted": "7",
+      "volume": 2,
+      "confidence": "high",
+      "note": "Bare-fist finish; Seiya restarts Shiryu's heart = ch 7 'Death Match! Pegasus vs. Dragon'.",
+      "sources": [
+        "https://saintseiya.fandom.com/es/wiki/Episodio_005",
+        "https://en.wikipedia.org/wiki/List_of_Saint_Seiya_chapters_(series)"
+      ]
+    },
+    {
+      "episode": 6,
+      "end_chapter": 9,
+      "start_chapter": 8,
+      "chapters_adapted": "8-9",
+      "volume": 3,
+      "confidence": "high",
+      "note": "Shun vs Jabu and the AXIA chain warning (ch 8), closing on Ikki unmasking as Shun's brother which opens ch 9; ep title フェニックス！地獄を見た戦士 mirrors ch 9 フェニックス！地獄よりの戦士.",
+      "sources": [
+        "https://saintseiya.fandom.com/es/wiki/Episodio_006",
+        "https://en.wikipedia.org/wiki/List_of_Saint_Seiya_chapters_(series)",
+        "https://ja.wikipedia.org/wiki/%E8%81%96%E9%97%98%E5%A3%AB%E6%98%9F%E7%9F%A2_(%E3%82%A2%E3%83%8B%E3%83%A1)"
+      ]
+    },
+    {
+      "episode": 7,
+      "end_chapter": 10,
+      "start_chapter": 9,
+      "chapters_adapted": "9-10",
+      "volume": 3,
+      "confidence": "high",
+      "note": "Ikki's revenge, Jabu and Nachi beaten (ch 9), ending on the Black Saints stealing the Gold Cloth = ch 10; ep title うばわれた！黄金聖衣 is ch 10's title. ES arc table ends the Galaxian Wars arc at ep 7 / cap. 10.",
+      "sources": [
+        "https://saintseiya.fandom.com/es/wiki/Saga_del_Santuario",
+        "https://saintseiya.fandom.com/es/wiki/Episodio_007",
+        "https://en.wikipedia.org/wiki/List_of_Saint_Seiya_chapters_(series)"
+      ]
+    },
+    {
+      "episode": 8,
+      "end_chapter": 10,
+      "start_chapter": 10,
+      "chapters_adapted": "10",
+      "volume": 3,
+      "confidence": "medium",
+      "note": "Chase to the warehouse, Black Saints beaten, Gold Cloth pieces recovered, Shiryu leaves to have the Cloths repaired = ch 10. Seam caveat: the ES arc table nominally opens the Black Saints arc at cap. 11 / ep. 8, but ep 8's content is ch 10's body and only sets up ch 11's Jamir departure.",
+      "sources": [
+        "https://saintseiya.fandom.com/wiki/Defeat_them!_The_Black_Phoenix_Army",
+        "https://saintseiya.fandom.com/es/wiki/Episodio_008",
+        "https://en.wikipedia.org/wiki/List_of_Saint_Seiya_chapters_(series)"
+      ]
+    },
+    {
+      "episode": 9,
+      "end_chapter": 11,
+      "start_chapter": 11,
+      "chapters_adapted": "11",
+      "volume": 3,
+      "confidence": "high",
+      "note": "Ikki summons the four Black Saints and parcels out the Gold Cloth = ch 11; ep title 強敵！暗黒四天王あらわる is ch 11's title 暗黒四天王！登場.",
+      "sources": [
+        "https://saintseiya.fandom.com/es/wiki/Episodio_009",
+        "https://en.wikipedia.org/wiki/List_of_Saint_Seiya_chapters_(series)",
+        "https://ja.wikipedia.org/wiki/%E8%81%96%E9%97%98%E5%A3%AB%E6%98%9F%E7%9F%A2_(%E3%82%A2%E3%83%8B%E3%83%A1)"
+      ]
+    },
+    {
+      "episode": 10,
+      "end_chapter": 12,
+      "start_chapter": 12,
+      "chapters_adapted": "12",
+      "volume": 3,
+      "confidence": "high",
+      "note": "Ikki's challenge, Shiryu crosses the Cloth graveyard to Jamir, meets Mu and Kiki, agrees to give half his blood = ch 12 'The Tower of Mu'.",
+      "sources": [
+        "https://saintseiya.fandom.com/es/wiki/Episodio_010",
+        "https://en.wikipedia.org/wiki/List_of_Saint_Seiya_chapters_(series)"
+      ]
+    },
+    {
+      "episode": 11,
+      "end_chapter": 13,
+      "start_chapter": 13,
+      "chapters_adapted": "13",
+      "volume": 4,
+      "confidence": "high",
+      "note": "Kiki delivers the repaired Cloth; Seiya vs Black Pegasus and the Black Death poison; Hyoga vs Black Swan = ch 13; ep title 死闘！恐怖の黒死拳 = ch 13 黒死拳の恐怖.",
+      "sources": [
+        "https://saintseiya.fandom.com/es/wiki/Episodio_011",
+        "https://en.wikipedia.org/wiki/List_of_Saint_Seiya_chapters_(series)",
+        "https://ja.wikipedia.org/wiki/%E8%81%96%E9%97%98%E5%A3%AB%E6%98%9F%E7%9F%A2_(%E3%82%A2%E3%83%8B%E3%83%A1)"
+      ]
+    },
+    {
+      "episode": 12,
+      "end_chapter": 15,
+      "start_chapter": 14,
+      "chapters_adapted": "14-15",
+      "volume": 4,
+      "confidence": "high",
+      "note": "Hyoga beaten by Ikki (ch 14 'A Cold End! Cygnus vs. Phoenix') then Shun rescues Seiya and destroys Black Andromeda (ch 15 'Shun! The Angry Nebula').",
+      "sources": [
+        "https://saintseiya.fandom.com/es/wiki/Episodio_012",
+        "https://en.wikipedia.org/wiki/List_of_Saint_Seiya_chapters_(series)"
+      ]
+    },
+    {
+      "episode": 13,
+      "end_chapter": 16,
+      "start_chapter": 16,
+      "chapters_adapted": "16",
+      "volume": 4,
+      "confidence": "high",
+      "note": "Shiryu vs Black Dragon and the Rozan Shoryuha backlash = ch 16 'A Battle of Titans - Dragon vs. Dragon'.",
+      "sources": [
+        "https://saintseiya.fandom.com/es/wiki/Episodio_013",
+        "https://en.wikipedia.org/wiki/List_of_Saint_Seiya_chapters_(series)"
+      ]
+    },
+    {
+      "episode": 14,
+      "end_chapter": 17,
+      "start_chapter": 17,
+      "chapters_adapted": "17",
+      "volume": 4,
+      "confidence": "high",
+      "note": "Hyoga survives via his mother's cross and reflects Ikki's Genmaken, forcing Ikki's own memories on him = ch 17 'The Memory of Hate'.",
+      "sources": [
+        "https://saintseiya.fandom.com/es/wiki/Episodio_014",
+        "https://en.wikipedia.org/wiki/List_of_Saint_Seiya_chapters_(series)"
+      ]
+    },
+    {
+      "episode": 15,
+      "end_chapter": 19,
+      "start_chapter": 18,
+      "chapters_adapted": "18-19",
+      "volume": 5,
+      "confidence": "high",
+      "note": "Death Queen Island / Esmeralda memories (ch 18) plus Ikki's defeat by the four (ch 19); ES arc table closes the Black Saints arc at ep 15 / cap. 19. The episode's coda (Ikki buried, funeral) is anime-original - in the manga Ikki survives and Misty appears.",
+      "sources": [
+        "https://saintseiya.fandom.com/es/wiki/Saga_del_Santuario",
+        "https://saintseiya.fandom.com/es/wiki/Episodio_015",
+        "https://en.wikipedia.org/wiki/List_of_Saint_Seiya_chapters_(series)",
+        "https://www.animefillerguide.com/saint-seiya/"
+      ]
+    },
+    {
+      "episode": 23,
+      "end_chapter": 20,
+      "start_chapter": 20,
+      "chapters_adapted": "20",
+      "volume": 5,
+      "confidence": "high",
+      "note": "Silver Saints arc opens: Phaeton sends Marin and Lizard Misty, Misty corners Seiya on the beach = ch 20; ES arc table: Silver Saints = caps. 20-25 / eps. 23-31.",
+      "sources": [
+        "https://saintseiya.fandom.com/es/wiki/Arco_de_los_Silver_Saints",
+        "https://saintseiya.fandom.com/es/wiki/Episodio_023",
+        "https://en.wikipedia.org/wiki/List_of_Saint_Seiya_chapters_(series)"
+      ]
+    },
+    {
+      "episode": 24,
+      "end_chapter": 23,
+      "start_chapter": 21,
+      "chapters_adapted": "21-23",
+      "volume": 6,
+      "confidence": "medium",
+      "note": "Misty killed with the Rolling Crash (ch 21 'Medals of Men'), then Moses maims Marin (ch 22 tail) and Seiya kills Moses (ch 23). Ch 22's Babel vs Hyoga half is skipped here and animated at eps 25-26.",
+      "sources": [
+        "https://saintseiya.fandom.com/es/wiki/Episodio_024",
+        "https://en.wikipedia.org/wiki/List_of_Saint_Seiya_chapters_(series)",
+        "https://saintseiya.fandom.com/es/wiki/Arco_de_los_Silver_Saints"
+      ]
+    },
+    {
+      "episode": 25,
+      "end_chapter": 24,
+      "start_chapter": 23,
+      "chapters_adapted": "23-24",
+      "volume": 6,
+      "confidence": "high",
+      "note": "Marin finishes Asterion (ch 23) then Tatsumi reveals Saori is Athena's reincarnation and the Saints swear to protect her = ch 24; ep title 戦え！アテナのもとで matches ch 24 戦え！女神のもとで. Steel Saints tag at the end are anime-original.",
+      "sources": [
+        "https://saintseiya.fandom.com/es/wiki/Episodio_025",
+        "https://en.wikipedia.org/wiki/List_of_Saint_Seiya_chapters_(series)",
+        "https://saintseiya.fandom.com/es/wiki/Relleno"
+      ]
+    },
+    {
+      "episode": 27,
+      "end_chapter": 25,
+      "start_chapter": 25,
+      "chapters_adapted": "25",
+      "volume": 7,
+      "confidence": "high",
+      "note": "Forced landing, Shaina/Spartan/Algol; Perseus Algol petrifies Shun and Seiya = ch 25 'For a Magnificent Future' (WP vol 7 summary places Algol at the head of vol 7). Anime pulls this ahead of ch 24's Jamian sequence.",
+      "sources": [
+        "https://saintseiya.fandom.com/es/wiki/Episodio_027",
+        "https://en.wikipedia.org/wiki/List_of_Saint_Seiya_chapters_(series)"
+      ]
+    },
+    {
+      "episode": 28,
+      "end_chapter": 25,
+      "start_chapter": 25,
+      "chapters_adapted": "25",
+      "volume": 7,
+      "confidence": "high",
+      "note": "Shiryu destroys his own eyes and kills Algol = ch 25; Steel Saints interlude is anime-original.",
+      "sources": [
+        "https://saintseiya.fandom.com/es/wiki/Episodio_028",
+        "https://en.wikipedia.org/wiki/List_of_Saint_Seiya_chapters_(series)",
+        "https://saintseiya.fandom.com/es/wiki/Relleno"
+      ]
+    },
+    {
+      "episode": 31,
+      "end_chapter": 25,
+      "start_chapter": 25,
+      "chapters_adapted": "24-25",
+      "volume": 7,
+      "confidence": "high",
+      "note": "Cerberus Dante and Auriga Capella (ch 24 tail) are destroyed by Ikki = ch 25; ES arc table closes the Silver Saints arc at ep 31 / cap. 25.",
+      "sources": [
+        "https://saintseiya.fandom.com/es/wiki/Arco_de_los_Silver_Saints",
+        "https://saintseiya.fandom.com/es/wiki/Episodio_031",
+        "https://en.wikipedia.org/wiki/List_of_Saint_Seiya_chapters_(series)"
+      ]
+    },
+    {
+      "episode": 36,
+      "end_chapter": 26,
+      "start_chapter": 26,
+      "chapters_adapted": "26",
+      "volume": 7,
+      "confidence": "high",
+      "note": "Gold Saints arc opens: Milo summoned, Shaina attacks the hospitalised Seiya, Aiolia volunteers = ch 26 'Leo Aiolia's Challenge'; ES arc table: Gold Saints = caps. 26-28 / eps. 36-41.",
+      "sources": [
+        "https://saintseiya.fandom.com/es/wiki/Arco_de_los_Gold_Saints",
+        "https://saintseiya.fandom.com/es/wiki/Episodio_036",
+        "https://en.wikipedia.org/wiki/List_of_Saint_Seiya_chapters_(series)"
+      ]
+    },
+    {
+      "episode": 37,
+      "end_chapter": 26,
+      "start_chapter": 26,
+      "chapters_adapted": "26",
+      "volume": 7,
+      "confidence": "high",
+      "note": "Aiolia's lightspeed beating, Shaina takes the blow and confesses, the three Silver Saints die to the Sagittarius Cloth = ch 26 (WP vol 7 summary).",
+      "sources": [
+        "https://saintseiya.fandom.com/es/wiki/Episodio_037",
+        "https://en.wikipedia.org/wiki/List_of_Saint_Seiya_chapters_(series)"
+      ]
+    },
+    {
+      "episode": 38,
+      "end_chapter": 27,
+      "start_chapter": 27,
+      "chapters_adapted": "27",
+      "volume": 7,
+      "confidence": "high",
+      "note": "Seiya in the Sagittarius Gold Cloth vs Aiolia, Saori reveals herself, Aiolos's spirit, Aiolia leaves for the Sanctuary = ch 27; ep title 激突！黄金聖闘士 ~ ch 27 激突！黄金聖衣.",
+      "sources": [
+        "https://saintseiya.fandom.com/es/wiki/Episodio_038",
+        "https://en.wikipedia.org/wiki/List_of_Saint_Seiya_chapters_(series)",
+        "https://ja.wikipedia.org/wiki/%E8%81%96%E9%97%98%E5%A3%AB%E6%98%9F%E7%9F%A2_(%E3%82%A2%E3%83%8B%E3%83%A1)"
+      ]
+    },
+    {
+      "episode": 39,
+      "end_chapter": 28,
+      "start_chapter": 28,
+      "chapters_adapted": "28",
+      "volume": 8,
+      "confidence": "high",
+      "note": "Deathmask at Rozan, Dohko revealed as the Libra Gold Saint, Mu drives him off = ch 28 'A Time For Battle' (the opening of WP's vol 8 summary).",
+      "sources": [
+        "https://saintseiya.fandom.com/es/wiki/Episodio_039",
+        "https://en.wikipedia.org/wiki/List_of_Saint_Seiya_chapters_(series)"
+      ]
+    },
+    {
+      "episode": 40,
+      "end_chapter": 28,
+      "start_chapter": 28,
+      "chapters_adapted": "28",
+      "volume": 8,
+      "confidence": "medium",
+      "note": "Orphanage farewell and the gathering at the airstrip = ch 28; the bulk of the episode (June, Leda, Spica, Albiore) is anime-original per the ES filler page, so this row may belong at type=mixed.",
+      "sources": [
+        "https://saintseiya.fandom.com/es/wiki/Episodio_040",
+        "https://saintseiya.fandom.com/es/wiki/Relleno",
+        "https://en.wikipedia.org/wiki/List_of_Saint_Seiya_chapters_(series)"
+      ]
+    },
+    {
+      "episode": 41,
+      "end_chapter": 29,
+      "start_chapter": 28,
+      "chapters_adapted": "28-29",
+      "volume": 8,
+      "confidence": "high",
+      "note": "Aiolia confronts the Pope and Shaka intervenes (ch 28), then Greece, the hooded guide Ptolemy and the golden arrow into Athena = ch 29 'Sanctuary! The Twelve Palaces'.",
+      "sources": [
+        "https://saintseiya.fandom.com/es/wiki/Episodio_041",
+        "https://en.wikipedia.org/wiki/List_of_Saint_Seiya_chapters_(series)",
+        "https://saintseiya.fandom.com/es/wiki/Arco_de_los_Doce_Templos"
+      ]
+    },
+    {
+      "episode": 42,
+      "end_chapter": 29,
+      "start_chapter": 29,
+      "chapters_adapted": "29",
+      "volume": 8,
+      "confidence": "high",
+      "note": "Twelve Temples arc opens: the twelve-hour deadline, Aries/Mu repairs the Cloths and explains the 7th sense, Aldebaran blocks Taurus = ch 29; ES arc table: Doce Templos = eps. 42-73.",
+      "sources": [
+        "https://saintseiya.fandom.com/es/wiki/Arco_de_los_Doce_Templos",
+        "https://saintseiya.fandom.com/es/wiki/Episodio_042",
+        "https://en.wikipedia.org/wiki/List_of_Saint_Seiya_chapters_(series)"
+      ]
+    },
+    {
+      "episode": 43,
+      "end_chapter": 30,
+      "start_chapter": 30,
+      "chapters_adapted": "30",
+      "volume": 8,
+      "confidence": "high",
+      "note": "The whole episode is the Taurus duel; ep title ビッグバン！金牛宮の戦闘 is exactly the stored ch 30 title 金牛宮の戦闘 ('Battle in the Golden Bull Palace'). See flags: in the tankobon this material is inside ch 29.",
+      "sources": [
+        "https://ja.wikipedia.org/wiki/%E8%81%96%E9%97%98%E5%A3%AB%E6%98%9F%E7%9F%A2_(%E3%82%A2%E3%83%8B%E3%83%A1)",
+        "https://en.wikipedia.org/wiki/List_of_Saint_Seiya_chapters_(series)",
+        "https://saintseiya.fandom.com/es/wiki/Episodio_043"
+      ]
+    },
+    {
+      "episode": 44,
+      "end_chapter": 31,
+      "start_chapter": 30,
+      "chapters_adapted": "30-31",
+      "volume": 8,
+      "confidence": "high",
+      "note": "Aldebaran's horn broken and the group let through (ch 30), then the Gemini labyrinth splits them = ch 31 'Gemini's Labyrinth'; ep title 双児宮！光と闇の迷宮.",
+      "sources": [
+        "https://saintseiya.fandom.com/es/wiki/Episodio_044",
+        "https://en.wikipedia.org/wiki/List_of_Saint_Seiya_chapters_(series)",
+        "https://ja.wikipedia.org/wiki/%E8%81%96%E9%97%98%E5%A3%AB%E6%98%9F%E7%9F%A2_(%E3%82%A2%E3%83%8B%E3%83%A1)"
+      ]
+    },
+    {
+      "episode": 45,
+      "end_chapter": 32,
+      "start_chapter": 31,
+      "chapters_adapted": "31-32",
+      "volume": 9,
+      "confidence": "high",
+      "note": "Gemini's mirror floors Hyoga and Shiryu's blindness sees through the illusion (ch 31), then Shun's chain anchors him while Hyoga is thrown into Another Dimension = ch 32 'Gemini's Illusion'.",
+      "sources": [
+        "https://saintseiya.fandom.com/es/wiki/Episodio_045",
+        "https://en.wikipedia.org/wiki/List_of_Saint_Seiya_chapters_(series)"
+      ]
+    },
+    {
+      "episode": 46,
+      "end_chapter": 32,
+      "start_chapter": 32,
+      "chapters_adapted": "32",
+      "volume": 9,
+      "confidence": "high",
+      "note": "Ikki's cosmo breaks Saga's concentration, Shun's chain reaches the Pope's chamber and Andromeda clears Gemini = ch 32 (WP vol 9 summary: 'Shun's chains manage to injure the real Gemini Saint, and the illusions disappear').",
+      "sources": [
+        "https://saintseiya.fandom.com/es/wiki/Episodio_046",
+        "https://en.wikipedia.org/wiki/List_of_Saint_Seiya_chapters_(series)"
+      ]
+    },
+    {
+      "episode": 47,
+      "end_chapter": 32,
+      "start_chapter": 32,
+      "chapters_adapted": "32",
+      "volume": 9,
+      "confidence": "medium",
+      "note": "Camus meets Hyoga in the Libra temple and seals him in the ice coffin - WP's vol 9 summary places this immediately after the Gemini illusions and before the Cancer fight, i.e. still ch 32; the anime expands it to a full episode.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/List_of_Saint_Seiya_chapters_(series)",
+        "https://saintseiya.fandom.com/es/wiki/Episodio_047"
+      ]
+    },
+    {
+      "episode": 48,
+      "end_chapter": 33,
+      "start_chapter": 33,
+      "chapters_adapted": "33",
+      "volume": 9,
+      "confidence": "high",
+      "note": "Cancer temple, the wall of faces, Deathmask sends Shiryu to Yomotsu Hirasaka = ch 33 'Mortal Combat in the Cancer Palace'.",
+      "sources": [
+        "https://saintseiya.fandom.com/es/wiki/Episodio_048",
+        "https://en.wikipedia.org/wiki/List_of_Saint_Seiya_chapters_(series)"
+      ]
+    },
+    {
+      "episode": 49,
+      "end_chapter": 33,
+      "start_chapter": 33,
+      "chapters_adapted": "33",
+      "volume": 9,
+      "confidence": "high",
+      "note": "Shunrei's prayers, Deathmask hurls her into the Rozan falls, Shiryu's rage = ch 33 (same chapter, padded across three episodes).",
+      "sources": [
+        "https://saintseiya.fandom.com/es/wiki/Episodio_049",
+        "https://en.wikipedia.org/wiki/List_of_Saint_Seiya_chapters_(series)"
+      ]
+    },
+    {
+      "episode": 50,
+      "end_chapter": 33,
+      "start_chapter": 33,
+      "chapters_adapted": "33",
+      "volume": 9,
+      "confidence": "high",
+      "note": "The Cancer Cloth abandons Deathmask, Shiryu kills him and recovers his sight = end of ch 33 (WP vol 9 summary).",
+      "sources": [
+        "https://saintseiya.fandom.com/es/wiki/Episodio_050",
+        "https://en.wikipedia.org/wiki/List_of_Saint_Seiya_chapters_(series)"
+      ]
+    },
+    {
+      "episode": 51,
+      "end_chapter": 34,
+      "start_chapter": 34,
+      "chapters_adapted": "34",
+      "volume": 9,
+      "confidence": "high",
+      "note": "Leo temple: Aiolia, mind-controlled, refuses to let Seiya pass = ch 34 'For My Goddess'. Marin vs Jaki is anime-original per the ES filler page.",
+      "sources": [
+        "https://saintseiya.fandom.com/es/wiki/Episodio_051",
+        "https://en.wikipedia.org/wiki/List_of_Saint_Seiya_chapters_(series)",
+        "https://saintseiya.fandom.com/es/wiki/Relleno"
+      ]
+    },
+    {
+      "episode": 52,
+      "end_chapter": 34,
+      "start_chapter": 34,
+      "chapters_adapted": "34",
+      "volume": 9,
+      "confidence": "high",
+      "note": "Aiolia overwhelms Seiya; Shaina and Cassios learn of the Pope's Genromaoken = ch 34.",
+      "sources": [
+        "https://saintseiya.fandom.com/es/wiki/Episodio_052",
+        "https://en.wikipedia.org/wiki/List_of_Saint_Seiya_chapters_(series)"
+      ]
+    },
+    {
+      "episode": 53,
+      "end_chapter": 34,
+      "start_chapter": 34,
+      "chapters_adapted": "34",
+      "volume": 9,
+      "confidence": "high",
+      "note": "Cassios takes Aiolia's blow and dies, breaking the trance and igniting Seiya's 7th sense = the close of ch 34 (WP vol 9 summary ends there).",
+      "sources": [
+        "https://saintseiya.fandom.com/es/wiki/Episodio_053",
+        "https://en.wikipedia.org/wiki/List_of_Saint_Seiya_chapters_(series)"
+      ]
+    },
+    {
+      "episode": 56,
+      "end_chapter": 35,
+      "start_chapter": 35,
+      "chapters_adapted": "35",
+      "volume": 10,
+      "confidence": "high",
+      "note": "Virgo temple: Shaka floors all three and sends Ikki to one of the six realms = ch 35 'Shaka! The Godlike Saint'; ep title シャカ！神に一番近い男 ~ ch 35 シャカ！神に近い男.",
+      "sources": [
+        "https://saintseiya.fandom.com/es/wiki/Episodio_056",
+        "https://en.wikipedia.org/wiki/List_of_Saint_Seiya_chapters_(series)",
+        "https://ja.wikipedia.org/wiki/%E8%81%96%E9%97%98%E5%A3%AB%E6%98%9F%E7%9F%A2_(%E3%82%A2%E3%83%8B%E3%83%A1)"
+      ]
+    },
+    {
+      "episode": 57,
+      "end_chapter": 35,
+      "start_chapter": 35,
+      "chapters_adapted": "35",
+      "volume": 10,
+      "confidence": "high",
+      "note": "Ikki on the palm of Buddha; Shaka opens his eyes and strips five senses = ch 35.",
+      "sources": [
+        "https://saintseiya.fandom.com/es/wiki/Episodio_057",
+        "https://en.wikipedia.org/wiki/List_of_Saint_Seiya_chapters_(series)"
+      ]
+    },
+    {
+      "episode": 58,
+      "end_chapter": 35,
+      "start_chapter": 35,
+      "chapters_adapted": "35",
+      "volume": 10,
+      "confidence": "high",
+      "note": "Ikki awakens the 7th sense and vanishes together with Shaka = end of ch 35 (WP vol 10 summary).",
+      "sources": [
+        "https://saintseiya.fandom.com/es/wiki/Episodio_058",
+        "https://en.wikipedia.org/wiki/List_of_Saint_Seiya_chapters_(series)"
+      ]
+    },
+    {
+      "episode": 59,
+      "end_chapter": 36,
+      "start_chapter": 36,
+      "chapters_adapted": "36",
+      "volume": 10,
+      "confidence": "high",
+      "note": "Libra temple, Hyoga's ice coffin, the Libra Cloth's twelve weapons freed by Shiryu = ch 36 'The Secret of the Libra Cloth'.",
+      "sources": [
+        "https://saintseiya.fandom.com/es/wiki/Episodio_059",
+        "https://en.wikipedia.org/wiki/List_of_Saint_Seiya_chapters_(series)"
+      ]
+    },
+    {
+      "episode": 60,
+      "end_chapter": 37,
+      "start_chapter": 36,
+      "chapters_adapted": "36-37",
+      "volume": 10,
+      "confidence": "high",
+      "note": "Shun burns his cosmo to thaw Hyoga (ch 36), then Milo blocks the Scorpio temple = ch 37 'Scorpion vs. Cygnus' (WP vol 10 summary ends exactly here).",
+      "sources": [
+        "https://saintseiya.fandom.com/es/wiki/Episodio_060",
+        "https://en.wikipedia.org/wiki/List_of_Saint_Seiya_chapters_(series)"
+      ]
+    },
+    {
+      "episode": 61,
+      "end_chapter": 37,
+      "start_chapter": 37,
+      "chapters_adapted": "37",
+      "volume": 10,
+      "confidence": "high",
+      "note": "Hyoga takes Milo alone, the Scarlet Needle, Jabu and the others shield Athena outside = ch 37.",
+      "sources": [
+        "https://saintseiya.fandom.com/es/wiki/Episodio_061",
+        "https://en.wikipedia.org/wiki/List_of_Saint_Seiya_chapters_(series)"
+      ]
+    },
+    {
+      "episode": 62,
+      "end_chapter": 38,
+      "start_chapter": 38,
+      "chapters_adapted": "38",
+      "volume": 11,
+      "confidence": "high",
+      "note": "Antares, Milo's respect, the bleeding stopped and Hyoga allowed through = ch 38 'Only Death Can Stop Us!' (WP vol 11 summary opens with it).",
+      "sources": [
+        "https://saintseiya.fandom.com/es/wiki/Episodio_062",
+        "https://en.wikipedia.org/wiki/List_of_Saint_Seiya_chapters_(series)"
+      ]
+    },
+    {
+      "episode": 63,
+      "end_chapter": 39,
+      "start_chapter": 38,
+      "chapters_adapted": "38-39",
+      "volume": 11,
+      "confidence": "medium",
+      "note": "Saori's staff makes the Gold Cloths resonate and the Sagittarius Cloth returns to its temple (the close of ch 38), opening the empty Sagittarius house of ch 39.",
+      "sources": [
+        "https://saintseiya.fandom.com/es/wiki/Episodio_063",
+        "https://en.wikipedia.org/wiki/List_of_Saint_Seiya_chapters_(series)"
+      ]
+    },
+    {
+      "episode": 65,
+      "end_chapter": 40,
+      "start_chapter": 40,
+      "chapters_adapted": "40",
+      "volume": 11,
+      "confidence": "high",
+      "note": "Capricorn: Shura's Excalibur against Shiryu = ch 40 'Shura! The Man Who Wields Excalibur'; ep title うなる聖剣！シュラ対ドラゴン.",
+      "sources": [
+        "https://saintseiya.fandom.com/es/wiki/Episodio_065",
+        "https://en.wikipedia.org/wiki/List_of_Saint_Seiya_chapters_(series)",
+        "https://ja.wikipedia.org/wiki/%E8%81%96%E9%97%98%E5%A3%AB%E6%98%9F%E7%9F%A2_(%E3%82%A2%E3%83%8B%E3%83%A1)"
+      ]
+    },
+    {
+      "episode": 66,
+      "end_chapter": 40,
+      "start_chapter": 40,
+      "chapters_adapted": "40",
+      "volume": 11,
+      "confidence": "high",
+      "note": "Shiryu's Last Rozan Dragon carries Shura into the sky = end of ch 40 (WP vol 11 summary).",
+      "sources": [
+        "https://saintseiya.fandom.com/es/wiki/Episodio_066",
+        "https://en.wikipedia.org/wiki/List_of_Saint_Seiya_chapters_(series)"
+      ]
+    },
+    {
+      "episode": 67,
+      "end_chapter": 41,
+      "start_chapter": 41,
+      "chapters_adapted": "41",
+      "volume": 11,
+      "confidence": "high",
+      "note": "Aquarius: Hyoga vs Camus, Absolute Zero, the twin Aurora Executions = ch 41 'The Ultimate Frozen Air! The Absolute Zero'.",
+      "sources": [
+        "https://saintseiya.fandom.com/es/wiki/Episodio_067",
+        "https://en.wikipedia.org/wiki/List_of_Saint_Seiya_chapters_(series)"
+      ]
+    },
+    {
+      "episode": 68,
+      "end_chapter": 42,
+      "start_chapter": 42,
+      "chapters_adapted": "42",
+      "volume": 12,
+      "confidence": "high",
+      "note": "Pisces: Aphrodite holds Shun while Seiya crosses the blood-rose path = ch 42 'The Funeral Procession of Roses'.",
+      "sources": [
+        "https://saintseiya.fandom.com/es/wiki/Episodio_068",
+        "https://en.wikipedia.org/wiki/List_of_Saint_Seiya_chapters_(series)"
+      ]
+    },
+    {
+      "episode": 69,
+      "end_chapter": 42,
+      "start_chapter": 42,
+      "chapters_adapted": "42",
+      "volume": 12,
+      "confidence": "high",
+      "note": "Royal Demon Rose against Shun, then the black Piranha Rose = ch 42.",
+      "sources": [
+        "https://saintseiya.fandom.com/es/wiki/Episodio_069",
+        "https://en.wikipedia.org/wiki/List_of_Saint_Seiya_chapters_(series)"
+      ]
+    },
+    {
+      "episode": 70,
+      "end_chapter": 42,
+      "start_chapter": 42,
+      "chapters_adapted": "42",
+      "volume": 12,
+      "confidence": "high",
+      "note": "Nebula Storm kills Aphrodite as the Bloody Rose kills Shun = end of ch 42 (WP vol 12 summary).",
+      "sources": [
+        "https://saintseiya.fandom.com/es/wiki/Episodio_070",
+        "https://en.wikipedia.org/wiki/List_of_Saint_Seiya_chapters_(series)"
+      ]
+    },
+    {
+      "episode": 71,
+      "end_chapter": 43,
+      "start_chapter": 43,
+      "chapters_adapted": "43",
+      "volume": 12,
+      "confidence": "high",
+      "note": "Marin carries Seiya through the roses; the Pope's chamber, the shield of Athena's statue and the Gemini unmasking = ch 43 'Death Match in the Pope's Chamber!'; ep title 消える火時計！教皇の正体.",
+      "sources": [
+        "https://saintseiya.fandom.com/es/wiki/Episodio_071",
+        "https://en.wikipedia.org/wiki/List_of_Saint_Seiya_chapters_(series)",
+        "https://ja.wikipedia.org/wiki/%E8%81%96%E9%97%98%E5%A3%AB%E6%98%9F%E7%9F%A2_(%E3%82%A2%E3%83%8B%E3%83%A1)"
+      ]
+    },
+    {
+      "episode": 72,
+      "end_chapter": 45,
+      "start_chapter": 44,
+      "chapters_adapted": "44-45",
+      "volume": 13,
+      "confidence": "high",
+      "note": "Mu transports Shaka and Ikki back and Ikki challenges Saga (ch 44 'Gemini: The Man With Two Faces'), then Saga's history, Seiya reaching the shield and Athena opening her eyes (ch 45 'His Name is Saga!').",
+      "sources": [
+        "https://saintseiya.fandom.com/es/wiki/Episodio_072",
+        "https://en.wikipedia.org/wiki/List_of_Saint_Seiya_chapters_(series)"
+      ]
+    }
+  ],
+  "continue_points": [
+    {
+      "episode": 15,
+      "continue_chapter": 20,
+      "note": "Ep 15's coda (Ikki's death and burial) is anime-original; the manga runs straight on from ch 19 to ch 20, which the anime only reaches at ep 23 after seven filler episodes."
+    },
+    {
+      "episode": 24,
+      "continue_chapter": 23,
+      "note": "Ch 22's Babel vs Hyoga half is skipped at ep 24 and animated at eps 25-26 - parity regime: resume at ch 23 and stay in step with the anime."
+    },
+    {
+      "episode": 28,
+      "continue_chapter": 24,
+      "note": "The anime has run ahead into ch 25 (Algol) but has not yet animated ch 24's Jamian sequence, which arrives at eps 29-30. Parity resume point is ch 24; ch 25's Algol pages have already been seen."
+    },
+    {
+      "episode": 31,
+      "continue_chapter": 26,
+      "note": "Ch 24-25 are fully covered by the end of ep 31; eps 32-35 are anime-original, so the manga does not move again until ep 36."
+    }
+  ],
+  "annotations": [
+    {
+      "episodes": [
+        15,
+        32
+      ],
+      "kind": "rearranged",
+      "chapters": "19",
+      "note": "Ikki's Death Queen Island / Black Phoenix material from ch 19 is split: ep 15 uses the Esmeralda memories, and the anime-original ep 32 re-stages the Black Phoenix and Jango fight from the same chapter under different circumstances (ES filler page states so explicitly)."
+    },
+    {
+      "episodes": [
+        24,
+        25,
+        26
+      ],
+      "kind": "rearranged",
+      "chapters": "22",
+      "note": "Ch 22 (Mu's illusion of the buried bodies, Babel vs Hyoga) is deferred: ep 24 uses only its Moses-attacks-Marin tail, the Babel duel starts at the end of ep 25 and finishes in the filler-typed ep 26."
+    },
+    {
+      "episodes": [
+        27,
+        28,
+        29,
+        30,
+        31
+      ],
+      "kind": "rearranged",
+      "chapters": "24-25",
+      "note": "The anime swaps the manga order. Manga: Jamian abducts Saori (ch 24 tail) -> Ikki destroys Capella and Dante (ch 25) -> Perseus Algol (ch 25). Anime: Algol (eps 27-28) -> Jamian (eps 29-30) -> Capella/Dante (ep 31). Eps 29-30 therefore revisit ch 24 material after eps 27-28 already reached ch 25 and are deliberately left unanchored so position never runs backwards."
+    },
+    {
+      "episodes": [
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22
+      ],
+      "kind": "side_story",
+      "chapters": "none",
+      "note": "黄金聖衣争奪編 / 'Gold Cloth contention' - a wholly anime-original arc (Docrates, Geist and the Ghost Saints, Crystal Saint) inserted between the manga's Black Saints and Silver Saints arcs. No manga content; already typed filler."
+    },
+    {
+      "episodes": [
+        32,
+        33,
+        34,
+        35
+      ],
+      "kind": "side_story",
+      "chapters": "19",
+      "note": "'Arco Post-Silver Saints' - anime-original block (Okko, Aracne of Tarantula, the Water of Life). Only ep 32 borrows manga material, and only by re-staging ch 19's Black Phoenix fight; nothing new is covered."
+    },
+    {
+      "episodes": [
+        40,
+        41
+      ],
+      "kind": "graft",
+      "chapters": "28",
+      "note": "June of Chamaeleon, Leda, Spica and the Albiore/Milo backstory are Toei inventions grafted onto ch 28's departure-for-the-Sanctuary scene; in the manga Shun's master is Daidalos and Aphrodite, not Milo, killed him."
+    },
+    {
+      "episodes": [
+        64
+      ],
+      "kind": "partial",
+      "chapters": "39",
+      "note": "The whole trial sequence inside the Sagittarius temple is anime-original, but the episode closes on ch 39's Aiolos testament - ep 64's Japanese title 少年よ！君たちにアテナを託す is chapter 39's title 少年たちよ！女神を託す. See type_corrections."
+    },
+    {
+      "episodes": [
+        47
+      ],
+      "kind": "divergence",
+      "chapters": "32",
+      "note": "Camus is Hyoga's own master in the manga; the anime had already given Hyoga the invented Crystal Saint as his teacher during the filler arc (eps 20-21), so ep 47 reframes the ice-coffin scene of ch 32 as a master's-master meeting."
+    },
+    {
+      "episodes": [
+        43
+      ],
+      "kind": "abridged",
+      "chapters": "30",
+      "note": "In the tankobon the Taurus duel is not a chapter of its own - it sits inside ch 29 (聖域！十二の宮殿, pp. 64-144 of vol 8). The stored numbering follows Wikipedia, which splits it out as ch 30 using this episode's own title."
+    }
+  ],
+  "type_corrections": [
+    {
+      "episodes": [
+        64
+      ],
+      "type": "mixed",
+      "note": "Currently typed filler. The Sagittarius-temple trials are anime-original, but the episode delivers ch 39's Aiolos testament ('To those who have come this far, I entrust Athena'), which is that chapter's title and content; Wikipedia's vol 11 summary likewise has the Saints passing through the empty Sagittarius temple. If accepted, ep 64 would anchor at end_chapter 39 (start 39, vol 11). Left unanchored here under A1.",
+      "sources": [
+        "https://saintseiya.fandom.com/es/wiki/Relleno",
+        "https://ja.wikipedia.org/wiki/%E8%81%96%E9%97%98%E5%A3%AB%E6%98%9F%E7%9F%A2_(%E3%82%A2%E3%83%8B%E3%83%A1)",
+        "https://en.wikipedia.org/wiki/List_of_Saint_Seiya_chapters_(series)"
+      ]
+    }
+  ],
+  "repairs": [],
+  "structure": {
+    "notes": "One component (AniList 1254), 114 episodes, no OVAs or movies in the ordering; the target range 1-72 is all inside season component 1. Arc structure of the range (ES fandom arc pages, corroborated by ja.wikipedia's production notes and animefillerguide): Sanctuary saga eps 1-73 = manga vols 1-13; Asgard eps 74-99 anime-original; Poseidon eps 100-114 = vols 14-18. Anime-original blocks inside eps 1-72: eps 16-22 (Gold Cloth contention) and eps 32-35 (post-Silver Saints), plus single filler episodes 26, 54, 55 and (currently) 64. CHAPTER-SPACE CONVERSION used throughout: the Spanish and French Saint Seiya wikis and Shueisha's own volume tables of contents number the tankobon at 108 chapters, while en.wikipedia's list (which the stored volume boundaries reproduce exactly) numbers 110. The two extra Wikipedia entries are ch 30 'Battle in the Golden Bull Palace' and ch 53 'The Golden Chains'. Mapping: stored = ES for ES <= 29; stored = ES + 1 for ES 30-45 (so ES 45 'Athena Revives' = stored 46, which is exactly the existing ep73 anchor); stored = ES + 2 from ES 50 onward (ES 65 = stored 67, exactly the existing ep114 anchor). Both existing anchors are therefore correct IN THE STORED SPACE and no repair is proposed.",
+    "order_only": []
+  },
+  "flags_for_sean": [
+    "CHAPTER SPACE (open flag #702). Shueisha's own digital tables of contents for all 28 tankobon list 108 chapters, not 110: vol 8 contains exactly 決戦の時 / 聖域！十二の宮殿 / 双子座の迷宮 (3 chapters) and vol 15 contains 3, whereas en.wikipedia's chapter list gives them 4 each. The two surplus Wikipedia entries are ch 30 'Battle in the Golden Bull Palace' (金牛宮の戦闘) and ch 53 'The Golden Chains'. 金牛宮の戦闘 is the title of ANIME episode 43 (ビッグバン！金牛宮の戦闘), so a Wikipedia editor almost certainly pulled an episode title into the chapter list. The Spanish and French Saint Seiya wikis independently agree with Shueisha. Our stored volume boundaries and both stored anchors are in the inflated 110 space, so I delivered in that space rather than silently contradict them - but if you want the true tankobon space, every anchor at stored ch >= 30 drops by 1 (and anything at stored ch >= 51 drops by 2), which would mean repairing the two existing anchors to ep73 -> 45 and ep114 -> 65, and the volume table needs rewriting from v8 on. Evidence: https://books.shueisha.co.jp/items/contents.html?jdcn=08851761851754315501 (vol 8), https://saintseiya.fandom.com/es/wiki/Saint_Seiya_-_Volumen_8, https://saintseiya.fandom.com/fr/wiki/Liste_des_Chapitres_de_Saint_Seiya.",
+    "Typing: eps 40 and 41 are stored canon but the ES fandom filler page lists the June / Leda / Spica / Albiore material in both as Toei inventions; ep 40 in particular is mostly original around a short ch 28 beat. animefillerguide still calls both non-filler, so I did not raise a type_correction - flagging only. Anchors for 40 and 41 are given at medium/high respectively and are safe either way (both sit on ch 28-29).",
+    "Typing: ep 26 is stored filler but it finishes the ch 22 Babel vs Hyoga duel before introducing the anime-original Steel Saints, i.e. it is arguably mixed. I did NOT propose the correction, because even as mixed it must not be anchored - its manga content (ch 22) precedes ep 25's ch 24 and an anchor there would run position backwards. The rearranged annotation on eps 24/25/26 carries the fact instead.",
+    "Density note: chapters 33, 34, 35, 42 each carry three consecutive episodes and ch 25/26 two each. I anchored every one of those episodes to the same chapter rather than leaving gaps, so interpolation cannot advance a reader through a chapter the anime has not finished. If the position math dislikes repeated end_chapter values across consecutive rows, these are the rows to look at.",
+    "The MU record behind flag #702 (latest chapter 33) is unusable for this series; AniList's 249 appears to be a magazine-installment count (the ES wiki gives 112 magazine chapters for the Sanctuary saga alone against 45 tankobon chapters), so neither matches the stored 110-chapter space."
+  ]
+}

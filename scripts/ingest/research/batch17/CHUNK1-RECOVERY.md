@@ -324,3 +324,46 @@ saint-seiya-knights-of-the-zodiac, project-arms, d-gray-man, angel-heart,
 hayate-the-combat-butler, trigun (traps in §5). Then chunk 2
 (detective-conan + 9 lighter), then the system-evolution rework before 18.
 Open Sean items listed in §12.45.
+
+## 13. WAVE 2 LANDED (2026-08-25) — chunk-1 research COMPLETE (16 of 16 tasks)
+
+All 8 agents completed; 8 verdict files, every one mechanically validated
+(parse + series_id, no dupes, A1-consistent, monotonicity checked):
+
+| series | anchors | headline |
+|---|---|---|
+| d-gray-man | 64 | full 52-102 + Hallow 104-116; Hallow = chs 165-208 EXACT; chs 159-164 never animated by either series; ep 116 repair 206→208 |
+| hayate | 30 | row-count identity CLEAN (flag #829 resolved); ep 10 → filler; S1 pervasive reorder (regime needed); TABLE ONLY HAS 54 ROWS of 101 (eps 53-76, 78-100 missing — row-ingest backlog) |
+| trigun | 6 | chapter space = Trigun original (ch 1-20 + ch 0); anime exhausts it by ep 15-16; latest_known=102 is TRIGUN MAXIMUM's MU value cross-contaminating (root of flag #943 + the old nonsense pin) — fix the MU association, not the number; eps 17-26 recommended hard no-anchor zone |
+| eyeshield-21 | 59 | 19-ep filler proposal (Cream Puff + Death Game arcs + recap stored as canon); flag #830 resolved (no offset); ep-155 mu anchor suspected AFG row-number artifact; true anime reach ~ch 238 not 333 |
+| angel-heart | 44 | archived official Yomiuri synopses + 3 chapter-title lists (13 title-identity pins); 3 provable omitted blocks; STORED VOLUME TABLE DEFECT: v6 "56-77" merges v6+v7 (true 56-66 / 67-77) — boundary seed |
+| saint-seiya | 55 | PHANTOM CHAPTERS: stored 110-ch space (Wikipedia) contains phantom ch 30 (actually ep 43's TITLE) + phantom 53; Shueisha TOCs + ES/FR = 108. Delivered in STORED space; correction cost spelled out (flag #702) — Sean's chapter-space ruling |
+| project-arms | 47 | chapter space rebuilt: 242 not 241 (prior pass dropped v10's first chapter, shifting v10+); "EP 53" IS A PS2 VIDEO GAME (imported AFL row) holding the sole stored anchor — delete anchor + row + counts 53→52 (Sean) |
+| kinnikuman | 58 | ch 68-89 never animated by TV (went to the '84 special + Movie 2); eps 120-137 → filler proposal (1991 sequel ignores them; 120-121 stored anime-only-canon — Sean's ruling); 31 air dates wrong vs ja-WP (backlog class grows) |
+
+**Wave-2 verifier candidates (weight-bearing):** saint-seiya phantom-chapter
+space claim · project-arms 242-space rebuild + ep-53-video-game claim ·
+eyeshield 19-ep filler block · kinnikuman ch-68-89 exclusion + 120-137
+filler proposal. Trigun's MU cross-contamination is mechanically checkable
+(registry) — script, not model.
+
+**New traps this wave (capture to research-agent at consolidation):**
+Shogakukan/Kinokuniya 出版社内容情報 blocks = publisher per-volume TOCs
+(project-arms spine; can TRUNCATE — cross MangaDex) · Wikipedia chapter
+lists can contain PHANTOM chapters that are actually anime episode titles
+(saint-seiya) · archived official broadcaster episode pages
+(web.archive.org) are a primary for thin-fandom series (angel-heart) ·
+AFL can import non-episodes as rows (project-arms "PS2 Video Game") ·
+MU associations can cross-contaminate sequels (trigun latest_known).
+
+**Air-date backlog grew:** + kinnikuman ×31 (ep 38 wrong, 90-119 one week
+early, 87 missing) — the AIR_DATE_OVERRIDES pass (system-evolution) now
+covers ~40 rows.
+
+**Row-ingest backlog:** hayate rows 53-76, 78-100 missing (54 of 101 rows).
+
+**REMAINING in batch 17: chunk 2 only** (detective-conan + tokyo-mew-mew,
+blade-of-the-immortal-ona, arms-alchemy, x, emma-a-victorian-romance,
+detective-school-q, fist-of-the-blue-sky, magic-knight-rayearth,
+space-adventure-cobra) — waits on Sean's usage check. Then the pre-18
+restructuring phase.

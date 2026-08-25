@@ -1,0 +1,220 @@
+{
+  "series_id": "trigun",
+  "summary": "CHAPTER SPACE FIRST: this entry's manga is Trigun (original), AniList 30703 = 3 Tokuma volumes, chapter NUMBER space 0-20 plus two unnumbered bonus tracks (TRIGUN PILOT, DAY IN DAY OUT) -- 20 mainline chapters, 23 items total, which is exactly AniList's chapters=23. Trigun Maximum (AniList 30704, 14 vols, 1-104) is a SEQUEL with its own numbering and is NOT this entry's space. The stored latest_known_chapters=102 is Trigun Maximum's MangaUpdates number and is cross-contaminated (see flags) -- that is what produced the refused ep19 -> ch6 pin. The anime consumes the ENTIRE original manga by episodes 15-16: eps 5-16 adapt ch1-20 in a REARRANGED order (ep9 pulls Wolfwood's ch18-19 introduction ~9 chapters forward; ep12 adapts ch13-15 before ep14 returns to ch10-12), with heavy anime-original padding between. The divergence point is episode 17: from ep17/18 the anime leaves this chapter space for good -- ep18 adapts Trigun Maximum ch1-2, eps 19-20 use TM-adjacent material, and eps 21-26 are an anime-original ending written while Nightow was still serialising. Six anchors on the faithful front (eps 5-15, ch1-20); eps 16-26 carry no anchors and the honest terminal for this entry is ep15 -> ch20.",
+  "anchors": [
+    {
+      "episode": 5,
+      "end_chapter": 3,
+      "start_chapter": 1,
+      "chapters_adapted": "1-3",
+      "volume": 1,
+      "confidence": "medium",
+      "note": "Inepril City / Nebraska Family arc = ch1 'The $$60 Billion Double Dollar Man', ch2 'Looney Tunes', ch3 'Hard Puncher' (episode title = chapter 3's title). trigun.fandom's infobox also lists ch4, but ch4's opening beats (the bounty-money conversation, the sandsteamer's arrival) are demonstrably in ep6 per trigunwiki's ep6 comparison, so END is held at 3 rather than overstating.",
+      "sources": [
+        "https://trigunwiki.com/wiki/HARD_PUNCHER_(episode)",
+        "https://trigun.fandom.com/wiki/Hard_Puncher_(anime)",
+        "https://en.wikipedia.org/wiki/List_of_Trigun_chapters"
+      ]
+    },
+    {
+      "episode": 7,
+      "end_chapter": 6,
+      "start_chapter": 4,
+      "chapters_adapted": "4-6",
+      "volume": 1,
+      "confidence": "high",
+      "note": "Sandsteamer / B.D.N. arc opening = ch4 'Popo' (BANG!BANG!), ch5 'Assault', ch6 'Die Hards'. Both wikis list exactly 4-6. Episode ends inside ch6 (B.D.N. kills the helmsman and calls Kaite to steer); the rest of ch6 opens ep8.",
+      "sources": [
+        "https://trigunwiki.com/wiki/B._D._N.",
+        "https://trigun.fandom.com/wiki/B.D.N.",
+        "https://trigun.fandom.com/wiki/Chapter_6"
+      ]
+    },
+    {
+      "episode": 8,
+      "end_chapter": 9,
+      "start_chapter": 7,
+      "chapters_adapted": "6 (closing pages) - 9",
+      "volume": 2,
+      "confidence": "high",
+      "note": "B.D.N. arc conclusion = ch7 'Rem', ch8 'Duelist', ch9 'And Between the Wasteland and Sky' -- the episode's Japanese title is identical to ch9's. Opens on ch6's closing ductwork/blueprint pages (fandom lists ch6; majority rule puts START at 7). Ends where ch9 ends (Kaite sings Rem's song, the caravan reaches May City).",
+      "sources": [
+        "https://trigunwiki.com/wiki/AND_BETWEEN_THE_WASTELAND_AND_SKY...",
+        "https://trigun.fandom.com/wiki/And_Between_the_Wasteland_and_Sky..._(anime)",
+        "https://en.wikipedia.org/wiki/List_of_Trigun_chapters"
+      ]
+    },
+    {
+      "episode": 12,
+      "end_chapter": 15,
+      "start_chapter": 13,
+      "chapters_adapted": "13-15 (+ ch5's Rem dream re-used as the climax flashback)",
+      "volume": 3,
+      "confidence": "medium",
+      "note": "Legato's introduction and the Monev the Gale fight = ch13 'Blood and Thunder', ch14 'Diablo' (episode title = ch14's title), ch15 'Fragile'; the episode ends exactly where ch15 ends (Vash spares Monev at sunrise). trigun.fandom's infobox also lists ch16, but ch16's content is split between ep13 (the scars reveal) and ep16 (the E.G. Mine duel) -- see annotations. Out of manga order: this episode precedes ep14's ch10-12.",
+      "sources": [
+        "https://trigunwiki.com/wiki/DIABLO_(episode)",
+        "https://trigun.fandom.com/wiki/Diablo_(anime)",
+        "https://trigun.fandom.com/wiki/Chapter_15"
+      ]
+    },
+    {
+      "episode": 14,
+      "end_chapter": 12,
+      "start_chapter": 10,
+      "chapters_adapted": "10-12",
+      "volume": 2,
+      "confidence": "high",
+      "note": "Badwick / Morgan geo-plant arc = ch10 'Little Arcadia' (episode title = ch10's title), ch11 'Son', ch12 'River of Life'. Both wikis agree exactly, and Wikipedia's Dark Horse vol.1 summary ends on this arc at ch12. Adapted OUT of order -- it sits after ep12's ch13-15, so it does not advance the reader's position (see continue_points).",
+      "sources": [
+        "https://trigunwiki.com/wiki/LITTLE_ARCADIA_(episode)",
+        "https://trigun.fandom.com/wiki/Little_Arcadia_(anime)",
+        "https://en.wikipedia.org/wiki/List_of_Trigun_chapters"
+      ]
+    },
+    {
+      "episode": 15,
+      "end_chapter": 20,
+      "start_chapter": 17,
+      "chapters_adapted": "17-20 (stops partway into ch20, at Dominique's defeat)",
+      "volume": 3,
+      "confidence": "high",
+      "note": "Legato at the Jeneora Rock saloon = ch17 'Slaughter Cafe/Murder Cafe'; the Gung-Ho Guns roll call = ch18; Dominique the Cyclops = ch19 'Eye of Invisibility / Demon's Eye' (episode title = ch19's Overhaul title); the duel's resolution opens ch20. Both wikis agree on ch19+ch20; ch17-18 are fandom's infobox plus trigunwiki's ep9 note that the Roderick-Thieves scene was deferred from ep9 to here. END=20 is the LAST chapter of this entry's whole chapter space -- ep15 is the honest terminal anchor for Trigun.",
+      "sources": [
+        "https://trigunwiki.com/wiki/DEMONS_EYE",
+        "https://trigun.fandom.com/wiki/Demon%27s_Eye",
+        "https://trigun.fandom.com/wiki/Chapter_20"
+      ]
+    }
+  ],
+  "continue_points": [
+    {
+      "episode": 7,
+      "continue_chapter": 6,
+      "note": "C1: ep7 stops partway through ch6 (B.D.N. takes the helm); ep8 resumes inside the same chapter."
+    },
+    {
+      "episode": 12,
+      "continue_chapter": 10,
+      "note": "PARITY (C3): after ep12 the reader has ch1-9 and ch13-15 but NOT ch10-12, which the anime covers next at ep14. Resume at ch10 and skip ch13-15 on arrival."
+    },
+    {
+      "episode": 14,
+      "continue_chapter": 16,
+      "note": "ep14 goes BACKWARDS to ch10-12; furthest first-time coverage is still ch15 from ep12, so the honest resume after ep14 is ch16."
+    },
+    {
+      "episode": 15,
+      "continue_chapter": 20,
+      "note": "C1: ep15 ends partway into ch20 (Dominique concedes). The remainder of ch20 -- Knives' resurrection and the Angel Arm firing -- is re-staged in ep16, so the reader should read ch20 whole. ch20 is the last chapter of Trigun; after it the manga continues as Trigun Maximum."
+    }
+  ],
+  "annotations": [
+    {
+      "episodes": [1],
+      "kind": "partial",
+      "chapters": "1",
+      "note": "Meryl and Milly's bar introduction is lifted from ch1; the rest of ep1 (Descartes, Loose Ruth) is anime-original. Sliver only -- filler row, no anchor."
+    },
+    {
+      "episodes": [4],
+      "kind": "side_story",
+      "chapters": "bonus track 'TRIGUN PILOT' (+ a one-panel re-use of ch12)",
+      "note": "ep4 adapts the unnumbered pilot one-shot collected as a bonus track in vol.2/vol.3, not a mainline chapter, so it takes no anchor under the spinoff/bonus rule. Meryl's derringer-lined-cape reveal is borrowed from ch12."
+    },
+    {
+      "episodes": [6],
+      "kind": "partial",
+      "chapters": "0, 4",
+      "note": "Mostly anime-original (Elizabeth, Kesskass), but it carries ch0's July prologue imagery and ch4's opening beats -- the Nebraska bounty-money conversation, the sandsteamer's arrival, Kaite's introduction. See type_corrections."
+    },
+    {
+      "episodes": [9, 15],
+      "kind": "rearranged",
+      "chapters": "17-19",
+      "note": "Wolfwood's manga introduction (the bus sequence spanning ch18 into ch19) is pulled forward to ep9, roughly nine chapters ahead of where the anime actually stands; the scene running concurrently with it in the manga (Legato and the Roderick Thieves, ch17) is deferred to ep15. NO anchor on ep9 deliberately: an END of 18 there would push position past ch10-15, which the anime has not yet adapted. Interpolating ep9 between ep8 (ch9) and ep12 (ch15) yields roughly ch11, which is closer to the truth."
+    },
+    {
+      "episodes": [10],
+      "kind": "side_story",
+      "chapters": "bonus track 'DAY IN DAY OUT'",
+      "note": "Only the opening 'day in the life' routine comes from the bonus track; the Wolfwood/Neil/Clair story is anime-original. Bonus track, no mainline number, no anchor."
+    },
+    {
+      "episodes": [12, 14],
+      "kind": "rearranged",
+      "chapters": "10-15",
+      "note": "Arc order swapped against the manga: the anime runs Legato/Monev (ch13-15) at ep12 and only then returns to the Little Arcadia arc (ch10-12) at ep14. In the manga Little Arcadia comes first. Position must not regress at ep14 -- see continue_points."
+    },
+    {
+      "episodes": [13, 16],
+      "kind": "partial",
+      "chapters": "16",
+      "note": "ch16 'Scars' is split across two episodes the anime types as filler: the girls discovering Vash's scars lands in ep13, and the E.G. Mine duel is relocated to ep16's Augusta setting. Neither row can be anchored while typed filler (A1)."
+    },
+    {
+      "episodes": [16],
+      "kind": "divergence",
+      "chapters": "20",
+      "note": "ch20's Angel Arm / Fifth Moon climax is re-staged: in the manga Knives forces it during his own resurrection; in the anime Legato forces it during an anime-original duel with Rai-Dei the Blade in Augusta, and Knives never appears. Same event, different cause and cast."
+    },
+    {
+      "episodes": [17],
+      "kind": "partial",
+      "chapters": "14-15",
+      "note": "The Rem / Project SEEDS flashbacks embedded in ch14-15 are expanded into a whole episode and fused with Trigun Maximum material. Pure re-use of already-covered chapters -- it advances position by zero in this chapter space."
+    },
+    {
+      "episodes": [18, 19, 20],
+      "kind": "divergence",
+      "chapters": "none in this chapter space (Trigun Maximum ch1-2, and TM-adjacent material)",
+      "note": "THE DIVERGENCE BOUND. ep18 adapts Trigun Maximum ch1 'Hero Reborn' and ch2 'Lina'; fandom maps ep19 to TM ch3-6 and ep20 to TM ch12, while trigunwiki holds the flow ran the other way (anime first, later folded into TM). Either way this is the SEQUEL's chapter space (AniList 30704, 1-104) and no row here may ever carry an anchor in this entry. This is exactly the confusion that produced the refused ep19 -> ch6 pin."
+    },
+    {
+      "episodes": [21],
+      "kind": "partial",
+      "chapters": "9",
+      "note": "Vash's communion with the Plant is re-staged from ch9 (where it happens aboard the sandsteamer Flourish). Re-use, no forward movement."
+    },
+    {
+      "episodes": [21, 22, 23, 24, 25, 26],
+      "kind": "divergence",
+      "chapters": "none",
+      "note": "Anime-original resolution. Nightow was still serialising, so Madhouse wrote its own ending; several Gung-Ho Guns used here (Zazie, Caine, Chapel, Leonof, Rai-Dei) were created for the anime and only later given manga counterparts in Trigun Maximum. Wikipedia states the narrative differs in the second half for exactly this reason."
+    }
+  ],
+  "type_corrections": [
+    {
+      "episodes": [6],
+      "type": "mixed",
+      "note": "Stored as filler (animefillerlist). Both Trigun wikis state it adapts manga material: trigun.fandom's infobox and prose say 'partially covers chapter 4', trigunwiki says scenes are adapted from the prologue 'HIGH NOON AT JULY' (ch0) and 'BANG!BANG!' (ch4). If Sean accepts the retype, the honest anchor would be ep6 END 4 / START 4 / vol 1 / chapters_adapted '0 (prologue imagery), 4 (opening)'; withheld here because A1 forbids emitting an anchor on a row that is currently filler.",
+      "sources": [
+        "https://trigun.fandom.com/wiki/Lost_July",
+        "https://trigunwiki.com/wiki/LOST_JULY"
+      ]
+    },
+    {
+      "episodes": [16],
+      "type": "mixed",
+      "note": "Stored as filler (animefillerlist), but the episode title equals ch20's title and both wikis map it to manga chapters: trigun.fandom lists ch16 + ch20, trigunwiki says it is 'loosely adapted from portions of SCARS (ch16) and FIFTH MOON (ch20)'. It contains the manga's single most consequential event (the Angel Arm firing / the hole in the fifth moon). No anchor is proposed even if retyped: ep15 already reaches ch20, the top of this chapter space, so ep16 would add no position.",
+      "sources": [
+        "https://trigun.fandom.com/wiki/Fifth_Moon",
+        "https://trigunwiki.com/wiki/FIFTH_MOON_(episode)",
+        "https://en.wikipedia.org/wiki/List_of_Trigun_chapters"
+      ]
+    }
+  ],
+  "repairs": [],
+  "structure": {
+    "notes": "CHAPTER SPACE. Manga = Trigun (original), AniList 30703, Tokuma Shoten 3 volumes. Chapter NUMBER space: ch0 (prologue 'High Noon at July') + ch1-20 mainline + two unnumbered bonus tracks ('TRIGUN PILOT', 'DAY IN DAY OUT') = 23 items, matching AniList chapters=23 ('Note: includes three extra chapters'). Last chapter NUMBER = 20. Confirmed identically by Wikipedia's chapter list, trigunwiki's chapter list and trigun.fandom's chapter pages. Trigun Maximum (AniList 30704, 14 vols, MangaUpdates latest_chapter 102/104) is a SEQUEL with independent 1-104 numbering and must never be mixed into this space. VOLUME BOUNDARIES (Tokuma 3-volume edition, matching total_volumes=3, none currently stored): vol1 = ch0-7; vol2 = ch8-13 (+ bonus 'Trigun Pilot'); vol3 = ch14-20 (+ bonus 'Day In Day Out'). The Shonen Gahosha/Dark Horse 2-volume reprint splits vol1 = ch0-12, vol2 = ch13-20 + both bonus tracks -- do NOT use it, it contradicts total_volumes=3. STRUCTURE VERDICT: faithful front eps 5-16 / divergence at ep17 / anime-original from ep21. Eps 1-3 are wholly anime-original openers; ep4 and ep10 adapt the two bonus tracks; eps 5-8 adapt ch1-9 in order; eps 9-16 adapt ch10-20 REARRANGED (ep9 grafts ch18-19 forward, ep12 runs ch13-15 before ep14's ch10-12, ep15 covers ch17-20, ep16 re-stages ch16+ch20); ch20 -- the end of the manga -- is reached at ep15/16, i.e. the anime exhausts this entry's ENTIRE chapter space with ten episodes still to run. Eps 17-20 move into Trigun Maximum material and eps 21-26 are an original ending. Consequently max_adapted_chapter for this entry is 20 at ep15, and a viewer who finishes the anime has effectively covered all of Trigun; the reader's next step is Trigun Maximum, which is a different catalog entry. Anchor monotonicity is genuinely broken here (ep12 -> 15, ep14 -> 12): the rearrangement is real, and the continue_points carry the true position.",
+    "order_only": []
+  },
+  "flags_for_sean": [
+    "SERIES-LEVEL DATA DEFECT (this is the root cause of open flag #943): the entry stores manga AniList 30703 = Trigun original (total_chapters=23, total_volumes=3) but latest_known_chapters=102, which is MangaUpdates' value for a DIFFERENT series -- Trigun Maximum (MU series 30005048940, latest_chapter=102; MU's Trigun entry 18243290751 has latest_chapter=0). Proposed repair: latest_known_chapters 102 -> 20 (last chapter NUMBER) or 23 (item count), whichever the field means, and max_adapted_chapter -> 20. Not filed under 'repairs' because that block is episode-scoped and this entry currently has zero anchors. Until this is fixed any MU-frontier derivation for trigun will keep landing nonsense pins, which is exactly how ep19 -> ch6 was generated.",
+    "ep9 anchor WITHHELD by judgement, not by lack of evidence. Both wikis agree ep9 adapts ch18 (and ch19's opening) -- Wolfwood's bus introduction. Recording END 18 there would be true-as-adapted but false-as-position, since ch10-15 are not covered until eps 12/14. If you prefer the parity regime instead, the alternative is: ep9 END 18 / START 18 / chapters_adapted '18-19 (bus sequence only)' / vol 3 / continue_chapter 13 / medium. Your call.",
+    "TWO SOURCE DISAGREEMENTS, both resolved toward the more granular source (trigunwiki.com, which writes scene-level manga-vs-anime comparisons) and both marked medium: (a) ep5 END -- trigun.fandom says ch1-4, trigunwiki says ch1-3; ch4's opening beats are shown to be in ep6, so 3 was taken. (b) ep12 END -- fandom says ch13-16, trigunwiki says ch13-15; ch16's two scenes are traceable to ep13 and ep16, so 15 was taken. If either is later ruled the other way the change is +1 chapter and affects ep12's continue point only.",
+    "GUARDRAIL, D4-relevant: ep18 is typed 'mixed' and DOES adapt canon -- but Trigun Maximum ch1-2, i.e. the SEQUEL's chapter space. It is therefore anchor-ELIGIBLE by type and anchor-FORBIDDEN by chapter space. Any future MU/AFG frontier pass will happily pin it. Recommend eps 17-26 be treated as a hard no-anchor zone for this entry (annotation-only), and that eps 19-20 stay typed filler rather than being 'corrected' to mixed on the strength of their Trigun Maximum content.",
+    "Cross-check only, not used as a citation: wheredoestheanimeleaveoff.com states a viewer finishing the anime should resume at Trigun Maximum ch6 because TM ch1-5 correspond to eps 18-19. That is consistent with the fandom mapping and with this verdict's divergence bound, and would be the right continue_from value IF the catalog ever links trigun's tail to the Trigun Maximum entry. It is not actionable inside this entry's chapter space.",
+    "trigun.fandom internal inconsistency noted while cross-checking: the Chapter 4 page's reverse 'anime' field lists Episodes 5, 7 and 20; Episode 20 ('Flying Ship') has no ch4 content and its own infobox says TM ch12. It is almost certainly a mis-link for Episode 6 ('Lost July'). No anchor depends on it."
+  ]
+}

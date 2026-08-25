@@ -1,0 +1,696 @@
+{
+  "series_id": "angel-heart",
+  "summary": "The 50-episode Angel Heart anime adapts the Bunch-Comics manga from ch1 to ch198 (end of volume 18) — ja.wikipedia states outright that episodes 1-13 are a positioned 'prologue' (Glass Heart becoming Xiang-Ying) and that everything after 'roughly matches the content up to volume 18', which the stored mu anchor (ep50 -> 198, v18) already agrees with. No source anywhere states a per-episode chapter mapping, so every anchor below is DERIVED by correlating the official Yomiuri-TV per-episode synopses (archived) against the Japanese chapter-title list (Coamix's own MangaHot listing, cross-checked against the en- and fr-Wikipedia chapter lists, which agree chapter-for-chapter); confidence is therefore capped at medium except for the finale. Three structural findings: (1) episode 19 BACK-FILLS ch41-43 (vol 4, Chen's restaurant), which were skipped at ep13 and only animated after ep18 had already reached ch58 — position must not regress there; (2) the anime omits whole blocks of the manga, provably so by arithmetic between title-locked episodes: ~ch78-89 (all of volume 8, the Saeko / Hideyuki serial-killer arc) between eps 26 and 27, ~ch129-136 (the Ayane-Takahata transplant arc) between eps 35 and 36, and ~ch184-195 (the summer sea-school / bus-jack arc) between eps 49 and 50; (3) only ep24 is non-canon — ja.wikipedia footnotes it as 'zenhan sōshūhen' (first-half recap) and animefillerlist types it Filler, so it correctly carries no anchor under A1. Note the widespread Japanese claim that the anime is 'faithful with no original episodes' is about anime-ORIGINAL content, not omissions.",
+  "anchors": [
+    {
+      "episode": 1,
+      "end_chapter": 1,
+      "start_chapter": 1,
+      "chapters_adapted": "1",
+      "volume": 1,
+      "confidence": "medium",
+      "note": "Ch1 'Unmei ni yureru ansatsusha' is a double-length opening chapter (split into two halves as ch1(1)/(2) in the Coamix MangaHot reissue); the YTV synopsis for ep1 covers exactly its content — Glass Heart's suicide attempt, the transplant, the year-long coma, Ryo's loss of Kaori and the theft of her donated heart.",
+      "sources": [
+        "https://web.archive.org/web/20061216145742/http://www.ytv.co.jp/angelheart/story/story01.html",
+        "https://en.wikipedia.org/wiki/List_of_Angel_Heart_chapters",
+        "https://mangahot.jp/site/works/b_R0001"
+      ]
+    },
+    {
+      "episode": 2,
+      "end_chapter": 5,
+      "start_chapter": 2,
+      "chapters_adapted": "2-5",
+      "volume": 1,
+      "confidence": "medium",
+      "note": "YTV synopsis beats map to ch2 'Zekkyo suru yume no kioku' (waking from the screaming dream) -> ch3 'Ano hito ni aitakute' -> ch4 'Shinjuku de oabare!' (the car she blows up) -> ch5 'Omoide ni michibikarete' (led to Cat's Eye). Boundary with ch6 is +-1.",
+      "sources": [
+        "https://web.archive.org/web/20061216145742/http://www.ytv.co.jp/angelheart/story/story02.html",
+        "https://en.wikipedia.org/wiki/List_of_Angel_Heart_chapters",
+        "https://mangahot.jp/site/works/b_R0001"
+      ]
+    },
+    {
+      "episode": 3,
+      "end_chapter": 9,
+      "start_chapter": 6,
+      "chapters_adapted": "6-9",
+      "volume": 1,
+      "confidence": "medium",
+      "note": "ch6 'Omoide to no saikai' -> ch7 'Dengonban e no joso' (the Shinjuku station message board, the synopsis' closing beat) -> ch8/9, the encounter chapters ('Deai to iu na no saikai' / 'Shogeki no kaigo'); ep4 opens after the meeting, at Doc's clinic.",
+      "sources": [
+        "https://web.archive.org/web/20061216145742/http://www.ytv.co.jp/angelheart/story/story03.html",
+        "https://en.wikipedia.org/wiki/List_of_Angel_Heart_chapters",
+        "https://mangahot.jp/site/works/b_R0001"
+      ]
+    },
+    {
+      "episode": 4,
+      "end_chapter": 12,
+      "start_chapter": 10,
+      "chapters_adapted": "10-12",
+      "volume": 2,
+      "confidence": "medium",
+      "note": "ch10 'Kokoro to no taiwa' is exactly ep4's core (Glass Heart confronting Kaori inside her); ch11 'Jijitsu e no koyo' = Doc racing to tell Ryo; ch12 'Shogeki o koeta shinjitsu' = Ryo's refusal to believe. Li Da-Ren's shooting straddles into ch13.",
+      "sources": [
+        "https://web.archive.org/web/20061216145742/http://www.ytv.co.jp/angelheart/story/story04.html",
+        "https://en.wikipedia.org/wiki/List_of_Angel_Heart_chapters",
+        "https://mangahot.jp/site/works/b_R0001"
+      ]
+    },
+    {
+      "episode": 5,
+      "end_chapter": 14,
+      "start_chapter": 13,
+      "chapters_adapted": "13-14",
+      "volume": 2,
+      "confidence": "medium",
+      "note": "ch13 'Kinpaku suru Shinjuku' = Li critical, Seidokai hunting her, the police task force; ch14 'Shogeki no flashback' = her collapse and attempted suicide. Short episode (2 chapters) — boundary is the least certain in the prologue block.",
+      "sources": [
+        "https://web.archive.org/web/20061216145742/http://www.ytv.co.jp/angelheart/story/story05.html",
+        "https://en.wikipedia.org/wiki/List_of_Angel_Heart_chapters",
+        "https://mangahot.jp/site/works/b_R0001"
+      ]
+    },
+    {
+      "episode": 6,
+      "end_chapter": 17,
+      "start_chapter": 15,
+      "chapters_adapted": "15-17",
+      "volume": 2,
+      "confidence": "medium",
+      "note": "Three-chapter match to the YTV synopsis: ch15 'Li kyodai to no shukuun' (the Li twins, the 22-years-ago rescue of Kentoku), ch16 'Shussei no himitsu' (she is Li's daughter), ch17 'Unmei no taimen'.",
+      "sources": [
+        "https://web.archive.org/web/20061216145742/http://www.ytv.co.jp/angelheart/story/story06.html",
+        "https://en.wikipedia.org/wiki/List_of_Angel_Heart_chapters",
+        "https://mangahot.jp/site/works/b_R0001"
+      ]
+    },
+    {
+      "episode": 7,
+      "end_chapter": 20,
+      "start_chapter": 18,
+      "chapters_adapted": "18-20",
+      "volume": 2,
+      "confidence": "medium",
+      "note": "ch18 'Glass Heart no tokimeki' (she finally stands before Ryo), ch19 'Mysterious na Ryo', ch20 'Sensen fukoku!!' (the Seiryu unit's declaration of war) — all three beats are in the YTV synopsis.",
+      "sources": [
+        "https://web.archive.org/web/20061216145742/http://www.ytv.co.jp/angelheart/story/story07.html",
+        "https://en.wikipedia.org/wiki/List_of_Angel_Heart_chapters",
+        "https://mangahot.jp/site/works/b_R0001"
+      ]
+    },
+    {
+      "episode": 9,
+      "end_chapter": 30,
+      "start_chapter": 26,
+      "chapters_adapted": "26-30",
+      "volume": 3,
+      "confidence": "medium",
+      "note": "Episode title 'Xiang-Ying ~ushinawareta namae~' is chapter 30 'Ushinawareta namae'. The synopsis' trainee-days flashback = ch27 'Kunren-sei jidai no omoide' / ch28 'Inochi ni kaete mo' / ch29 'Li Da-Ren no seisai'. Start (26 vs 25) is the soft edge.",
+      "sources": [
+        "https://web.archive.org/web/20061216145742/http://www.ytv.co.jp/angelheart/story/story09.html",
+        "https://en.wikipedia.org/wiki/List_of_Angel_Heart_chapters",
+        "https://mangahot.jp/site/works/b_R0001"
+      ]
+    },
+    {
+      "episode": 10,
+      "end_chapter": 32,
+      "start_chapter": 31,
+      "chapters_adapted": "31-32",
+      "volume": 3,
+      "confidence": "medium",
+      "note": "ch31 'Saigo no ketchaku' (Genbu crushes Seiryu, Ryo executes Zhang) and ch32 'Baba' (Li holding his daughter for the first time) — the two beats of the YTV synopsis.",
+      "sources": [
+        "https://web.archive.org/web/20061216145742/http://www.ytv.co.jp/angelheart/story/story10.html",
+        "https://en.wikipedia.org/wiki/List_of_Angel_Heart_chapters",
+        "https://mangahot.jp/site/works/b_R0001"
+      ]
+    },
+    {
+      "episode": 11,
+      "end_chapter": 35,
+      "start_chapter": 33,
+      "chapters_adapted": "33-35",
+      "volume": 4,
+      "confidence": "medium",
+      "note": "ch33 'Ichinen-buri no shogeki', ch34 'Taiin' (discharge), ch35 'Papa to musume no hatsu date' — the episode title 'Chichi-ko no jikan' is the same beat as ch35.",
+      "sources": [
+        "https://web.archive.org/web/20061216145742/http://www.ytv.co.jp/angelheart/story/story11.html",
+        "https://en.wikipedia.org/wiki/List_of_Angel_Heart_chapters",
+        "https://mangahot.jp/site/works/b_R0001"
+      ]
+    },
+    {
+      "episode": 12,
+      "end_chapter": 37,
+      "start_chapter": 36,
+      "chapters_adapted": "36-37",
+      "volume": 4,
+      "confidence": "medium",
+      "note": "Episode title = ch36 'Senjo no deai to wakare' verbatim; ch37 'Kage no baba' is Kentoku, the body-double twin whose funeral the episode is built on.",
+      "sources": [
+        "https://web.archive.org/web/20061216145742/http://www.ytv.co.jp/angelheart/story/story12.html",
+        "https://en.wikipedia.org/wiki/List_of_Angel_Heart_chapters",
+        "https://mangahot.jp/site/works/b_R0001"
+      ]
+    },
+    {
+      "episode": 13,
+      "end_chapter": 40,
+      "start_chapter": 38,
+      "chapters_adapted": "38-40",
+      "volume": 4,
+      "confidence": "medium",
+      "note": "ch38 'Okaeri', ch39 'Li Da-Ren kara no okurimono' (= the episode title verbatim; the HLA/medical-data gift), ch40 'Oyafuko' (dying before your parent — exactly the fear the YTV synopsis gives Xiang-Ying). ch41-43 are then deferred to ep19.",
+      "sources": [
+        "https://web.archive.org/web/20061216145742/http://www.ytv.co.jp/angelheart/story/story13.html",
+        "https://en.wikipedia.org/wiki/List_of_Angel_Heart_chapters",
+        "https://mangahot.jp/site/works/b_R0001"
+      ]
+    },
+    {
+      "episode": 14,
+      "end_chapter": 46,
+      "start_chapter": 44,
+      "chapters_adapted": "44-46",
+      "volume": 5,
+      "confidence": "medium",
+      "note": "ch44 'Irainin dai-ichi-go' (client number one) is the episode's spine — Ryo restarts City Hunter work and takes Nagisa's job. ch45-46 fill the slot to ep15's start at ch47; ch46 'Ryo to Benjamin to onna shacho' is not visible in the official synopsis, so the END here is the softest point in this block.",
+      "sources": [
+        "https://web.archive.org/web/20061216145742/http://www.ytv.co.jp/angelheart/story/story14.html",
+        "https://en.wikipedia.org/wiki/List_of_Angel_Heart_chapters",
+        "https://mangahot.jp/site/works/b_R0001"
+      ]
+    },
+    {
+      "episode": 15,
+      "end_chapter": 49,
+      "start_chapter": 47,
+      "chapters_adapted": "47-49",
+      "volume": 5,
+      "confidence": "medium",
+      "note": "Episode title = ch47 'Papa o sagashite!!' verbatim; ch48 'Papa no nigaoe' and ch49 'Tanya no honto no egao' are the same Tanya request that ep16 continues.",
+      "sources": [
+        "https://web.archive.org/web/20061216145742/http://www.ytv.co.jp/angelheart/story/story15.html",
+        "https://en.wikipedia.org/wiki/List_of_Angel_Heart_chapters",
+        "https://mangahot.jp/site/works/b_R0001"
+      ]
+    },
+    {
+      "episode": 18,
+      "end_chapter": 58,
+      "start_chapter": 56,
+      "chapters_adapted": "56-58",
+      "volume": 6,
+      "confidence": "medium",
+      "note": "Episode title 'Oyako no kizuna' = ch58 verbatim (the chapter in which Kaori gives Ryo the Saeba name and Hideyuki's role is set); ch56 'Nihiki no norainu' / ch57 'Norainu no kokuhaku' are the rest of the Ryo-Kaori first-meeting dream.",
+      "sources": [
+        "https://web.archive.org/web/20061216145742/http://www.ytv.co.jp/angelheart/story/story18.html",
+        "https://en.wikipedia.org/wiki/List_of_Angel_Heart_chapters",
+        "https://mangahot.jp/site/works/b_R0001"
+      ]
+    },
+    {
+      "episode": 19,
+      "end_chapter": 43,
+      "start_chapter": 41,
+      "chapters_adapted": "41-43",
+      "volume": 4,
+      "confidence": "medium",
+      "note": "BACK-FILL: this episode adapts vol-4 chapters ch41 'Chin rojin no mise' (= the episode title verbatim), ch42 'Oshare' and ch43 'Shinjuku no senrei' (the Nebori-gumi shakedown), which were skipped at ep13. Furthest first-time coverage does not move (still ch58).",
+      "sources": [
+        "https://web.archive.org/web/20061216145742/http://www.ytv.co.jp/angelheart/story/story19.html",
+        "https://en.wikipedia.org/wiki/List_of_Angel_Heart_chapters",
+        "https://mangahot.jp/site/works/b_R0001",
+        "https://fr.wikipedia.org/wiki/Liste_des_chapitres_d%27Angel_Heart"
+      ]
+    },
+    {
+      "episode": 20,
+      "end_chapter": 61,
+      "start_chapter": 59,
+      "chapters_adapted": "59-61",
+      "volume": 6,
+      "confidence": "medium",
+      "note": "Yume Kayano arc opens: ch59 'C.H. ga hannin!?' (she asks City Hunter to find her father's killer, who is Xiang-Ying), ch60 'Kokoro no kizu', ch61 'Kodoku na shojo'.",
+      "sources": [
+        "https://web.archive.org/web/20061216145742/http://www.ytv.co.jp/angelheart/story/story20.html",
+        "https://en.wikipedia.org/wiki/List_of_Angel_Heart_chapters",
+        "https://mangahot.jp/site/works/b_R0001"
+      ]
+    },
+    {
+      "episode": 22,
+      "end_chapter": 67,
+      "start_chapter": 64,
+      "chapters_adapted": "64-67",
+      "volume": 7,
+      "confidence": "medium",
+      "note": "ch64 'Tsukitsukerareta shinjitsu' (Yume is shown the truth by the Dog Walker) and ch65 'Xiang-Ying no ketsui' are the YTV synopsis beats; the episode title 'Fukohei na shiawase' is ch67, the last chapter of vol 7's opening run.",
+      "sources": [
+        "https://web.archive.org/web/20061216145742/http://www.ytv.co.jp/angelheart/story/story22.html",
+        "https://en.wikipedia.org/wiki/List_of_Angel_Heart_chapters",
+        "https://mangahot.jp/site/works/b_R0001"
+      ]
+    },
+    {
+      "episode": 23,
+      "end_chapter": 70,
+      "start_chapter": 68,
+      "chapters_adapted": "68-70",
+      "volume": 7,
+      "confidence": "medium",
+      "note": "ch68 'Yasashii shinon' is literally the episode's climax (Yume feels Xiang-Ying's heartbeat through the pressed gun barrel); ch69 'Egao no futari' and ch70 'Xiang-Ying no henka' close the arc.",
+      "sources": [
+        "https://web.archive.org/web/20061216145742/http://www.ytv.co.jp/angelheart/story/story23.html",
+        "https://en.wikipedia.org/wiki/List_of_Angel_Heart_chapters",
+        "https://mangahot.jp/site/works/b_R0001"
+      ]
+    },
+    {
+      "episode": 25,
+      "end_chapter": 73,
+      "start_chapter": 71,
+      "chapters_adapted": "71-73",
+      "volume": 7,
+      "confidence": "medium",
+      "note": "ch71 'Irai wa koroshi!?' = the client who asks to be killed; ch72 'Tsutawaranu omoi', ch73 'Bukiyo na otoko' are the twin brothers Yusuke/Yuji.",
+      "sources": [
+        "https://web.archive.org/web/20061216145742/http://www.ytv.co.jp/angelheart/story/story25.html",
+        "https://en.wikipedia.org/wiki/List_of_Angel_Heart_chapters",
+        "https://mangahot.jp/site/works/b_R0001"
+      ]
+    },
+    {
+      "episode": 26,
+      "end_chapter": 77,
+      "start_chapter": 74,
+      "chapters_adapted": "74-77",
+      "volume": 7,
+      "confidence": "medium",
+      "note": "Episode title = ch76 'Mo ichido ano koro ni' verbatim; the arc closes on ch77 'Honto no kazoku', which is also the last chapter of volume 7. The anime then jumps over the whole of volume 8.",
+      "sources": [
+        "https://web.archive.org/web/20061216145742/http://www.ytv.co.jp/angelheart/story/story26.html",
+        "https://en.wikipedia.org/wiki/List_of_Angel_Heart_chapters",
+        "https://mangahot.jp/site/works/b_R0001",
+        "https://fr.wikipedia.org/wiki/Liste_des_chapitres_d%27Angel_Heart"
+      ]
+    },
+    {
+      "episode": 27,
+      "end_chapter": 94,
+      "start_chapter": 90,
+      "chapters_adapted": "90-94",
+      "volume": 9,
+      "confidence": "medium",
+      "note": "After the vol-8 skip: ch90 'Hajimete no kanjo' / ch92 'Kore ga, koi?' are exactly the YTV synopsis ('umarete hajimete keiken suru koi no tokimeki'); ch93-94 carry Ryo's father-ish reaction. Whether ch89 'Okurete kita shiawase' belongs to the skipped vol-8 epilogue or opens this episode is unresolved.",
+      "sources": [
+        "https://web.archive.org/web/20061216145742/http://www.ytv.co.jp/angelheart/story/story27.html",
+        "https://en.wikipedia.org/wiki/List_of_Angel_Heart_chapters",
+        "https://mangahot.jp/site/works/b_R0001",
+        "https://fr.wikipedia.org/wiki/Liste_des_chapitres_d%27Angel_Heart"
+      ]
+    },
+    {
+      "episode": 28,
+      "end_chapter": 99,
+      "start_chapter": 95,
+      "chapters_adapted": "95-99",
+      "volume": 9,
+      "confidence": "medium",
+      "note": "Episode title 'Yakusoku' = ch96 'Toi yakusoku'; the gallery's last day and the handover of Kaori's portrait = ch97-98 'Hatsukoi, namida no wakare'; ch99 closes volume 9.",
+      "sources": [
+        "https://web.archive.org/web/20061216145742/http://www.ytv.co.jp/angelheart/story/story28.html",
+        "https://en.wikipedia.org/wiki/List_of_Angel_Heart_chapters",
+        "https://mangahot.jp/site/works/b_R0001"
+      ]
+    },
+    {
+      "episode": 29,
+      "end_chapter": 102,
+      "start_chapter": 100,
+      "chapters_adapted": "100-102",
+      "volume": 10,
+      "confidence": "medium",
+      "note": "ch100 'Imoto o sagashite' (= the client is Kaori's sister Sayuri) and ch101 'Imoto wa shiawase datta?' are the YTV synopsis verbatim; ch102 'Kokoro no hanno'.",
+      "sources": [
+        "https://web.archive.org/web/20061216145742/http://www.ytv.co.jp/angelheart/story/story29.html",
+        "https://en.wikipedia.org/wiki/List_of_Angel_Heart_chapters",
+        "https://mangahot.jp/site/works/b_R0001"
+      ]
+    },
+    {
+      "episode": 30,
+      "end_chapter": 106,
+      "start_chapter": 103,
+      "chapters_adapted": "103-106",
+      "volume": 10,
+      "confidence": "medium",
+      "note": "ch104 'Kiseki no tekigosei' (the miraculous compatibility) and ch105 'Omoide no machi' (Xiang-Ying walking Sayuri round Kaori's places) are both named in the YTV synopsis; ch103 'Shinjuku no tenshi' and ch106 'Chiisana negai' bracket them.",
+      "sources": [
+        "https://web.archive.org/web/20061216145742/http://www.ytv.co.jp/angelheart/story/story30.html",
+        "https://en.wikipedia.org/wiki/List_of_Angel_Heart_chapters",
+        "https://mangahot.jp/site/works/b_R0001"
+      ]
+    },
+    {
+      "episode": 31,
+      "end_chapter": 110,
+      "start_chapter": 107,
+      "chapters_adapted": "107-110",
+      "volume": 10,
+      "confidence": "medium",
+      "note": "ch107 'Makimura no ketsui' and ch108 'C.H. no shotai' are the Makimura-was-City-Hunter flashback the episode is made of; ch109-110 close volume 10. Whether ch111 'Sayuri no tabidachi' (her departure) is the tail of this episode or the head of ep32 is unresolved.",
+      "sources": [
+        "https://web.archive.org/web/20061216145742/http://www.ytv.co.jp/angelheart/story/story31.html",
+        "https://en.wikipedia.org/wiki/List_of_Angel_Heart_chapters",
+        "https://mangahot.jp/site/works/b_R0001"
+      ]
+    },
+    {
+      "episode": 33,
+      "end_chapter": 121,
+      "start_chapter": 119,
+      "chapters_adapted": "119-121",
+      "volume": 11,
+      "confidence": "medium",
+      "note": "ch119 'Scope no naka no shinjitsu' = the sniping simulation in the YTV synopsis; the episode title 'Kami kara sazukarishi ko' is ch120 verbatim; ch121 'Hajimete no aijo'.",
+      "sources": [
+        "https://web.archive.org/web/20061216145742/http://www.ytv.co.jp/angelheart/story/story33.html",
+        "https://en.wikipedia.org/wiki/List_of_Angel_Heart_chapters",
+        "https://mangahot.jp/site/works/b_R0001"
+      ]
+    },
+    {
+      "episode": 34,
+      "end_chapter": 123,
+      "start_chapter": 122,
+      "chapters_adapted": "122-123",
+      "volume": 12,
+      "confidence": "medium",
+      "note": "Episode title 'Futari no ketsui' tracks ch122 'Bai-Lan no ketsui'; ch123 'Kanashimi no kekkobi' is the execution date the synopsis turns on.",
+      "sources": [
+        "https://web.archive.org/web/20061216145742/http://www.ytv.co.jp/angelheart/story/story34.html",
+        "https://en.wikipedia.org/wiki/List_of_Angel_Heart_chapters",
+        "https://mangahot.jp/site/works/b_R0001"
+      ]
+    },
+    {
+      "episode": 35,
+      "end_chapter": 128,
+      "start_chapter": 124,
+      "chapters_adapted": "124-128",
+      "volume": 12,
+      "confidence": "medium",
+      "note": "Bai-Lan/Hayakawa climax: ch124-125 'Uketsugareshi inochi', ch126 'Bai-Lan kara no tegami', ch127-128 the 'kokoro' chapters that close the arc at the end of volume 12. Chapters 129-136 (the Ayane/Takahata transplant arc) are then skipped.",
+      "sources": [
+        "https://web.archive.org/web/20061216145742/http://www.ytv.co.jp/angelheart/story/story35.html",
+        "https://en.wikipedia.org/wiki/List_of_Angel_Heart_chapters",
+        "https://mangahot.jp/site/works/b_R0001",
+        "https://fr.wikipedia.org/wiki/Liste_des_chapitres_d%27Angel_Heart"
+      ]
+    },
+    {
+      "episode": 36,
+      "end_chapter": 139,
+      "start_chapter": 137,
+      "chapters_adapted": "137-139",
+      "volume": 13,
+      "confidence": "medium",
+      "note": "ch137 'Saeko to nazo no onnanoko' is the YTV synopsis verbatim (the evidence left at Saeko's flat); ch138 'Tokai no zashiki-warashi' is the episode title's 'girl who brings happiness'; ch139 'Saeko no okaeshi'.",
+      "sources": [
+        "https://web.archive.org/web/20061216145742/http://www.ytv.co.jp/angelheart/story/story36.html",
+        "https://en.wikipedia.org/wiki/List_of_Angel_Heart_chapters",
+        "https://mangahot.jp/site/works/b_R0001"
+      ]
+    },
+    {
+      "episode": 37,
+      "end_chapter": 142,
+      "start_chapter": 140,
+      "chapters_adapted": "140-142",
+      "volume": 13,
+      "confidence": "medium",
+      "note": "Episode title 'Kegare no nai kokoro' = ch142 'Kegarenaki kokoro'; ch141 'Umibozu to zashiki-warashi' is the picture-book reading that the whole episode is built on.",
+      "sources": [
+        "https://web.archive.org/web/20061216145742/http://www.ytv.co.jp/angelheart/story/story37.html",
+        "https://en.wikipedia.org/wiki/List_of_Angel_Heart_chapters",
+        "https://mangahot.jp/site/works/b_R0001"
+      ]
+    },
+    {
+      "episode": 38,
+      "end_chapter": 145,
+      "start_chapter": 143,
+      "chapters_adapted": "143-145",
+      "volume": 14,
+      "confidence": "medium",
+      "note": "ch143 'Mama e no omoi' (Miki cannot accept her mother's death) and ch145 'Kurayami ni mieta yuhi' (the blind Umibozu — the episode title 'Be my eyes') bracket the episode; ch144 'Itsumo issho' is Kaori's explanation of death.",
+      "sources": [
+        "https://web.archive.org/web/20061216145742/http://www.ytv.co.jp/angelheart/story/story38.html",
+        "https://en.wikipedia.org/wiki/List_of_Angel_Heart_chapters",
+        "https://mangahot.jp/site/works/b_R0001"
+      ]
+    },
+    {
+      "episode": 39,
+      "end_chapter": 149,
+      "start_chapter": 146,
+      "chapters_adapted": "146-149",
+      "volume": 14,
+      "confidence": "medium",
+      "note": "Episode title 'Irainin wa daijoyu' = ch147 'Kiken na daijoyu!'; ch148 'Joy no jijo' is the confession that her own country's army is after her; ch146 and ch149 bracket.",
+      "sources": [
+        "https://web.archive.org/web/20061216145742/http://www.ytv.co.jp/angelheart/story/story39.html",
+        "https://en.wikipedia.org/wiki/List_of_Angel_Heart_chapters",
+        "https://mangahot.jp/site/works/b_R0001"
+      ]
+    },
+    {
+      "episode": 40,
+      "end_chapter": 152,
+      "start_chapter": 150,
+      "chapters_adapted": "150-152",
+      "volume": 14,
+      "confidence": "medium",
+      "note": "ch150 'Itoshiki hito no katami' / ch151 'Kyodo seikatsu kaishi!' / ch152 'Miki no shiawase' — the episode title 'Miki's hidden secret' is the ch152 beat; Joy takes refuge at Cat's Eye.",
+      "sources": [
+        "https://web.archive.org/web/20061216145742/http://www.ytv.co.jp/angelheart/story/story40.html",
+        "https://en.wikipedia.org/wiki/List_of_Angel_Heart_chapters",
+        "https://mangahot.jp/site/works/b_R0001"
+      ]
+    },
+    {
+      "episode": 41,
+      "end_chapter": 156,
+      "start_chapter": 153,
+      "chapters_adapted": "153-156",
+      "volume": 15,
+      "confidence": "medium",
+      "note": "ch153 'Oyako no yo ni' and ch154 'Joy no yukisaki' are the episode's Joy-disappears ending; ch155-156 ('Kokuhaku...!', 'Kazoku no shashin') fill to ep42's hard start at ch157.",
+      "sources": [
+        "https://web.archive.org/web/20061216145742/http://www.ytv.co.jp/angelheart/story/story41.html",
+        "https://en.wikipedia.org/wiki/List_of_Angel_Heart_chapters",
+        "https://mangahot.jp/site/works/b_R0001"
+      ]
+    },
+    {
+      "episode": 42,
+      "end_chapter": 159,
+      "start_chapter": 157,
+      "chapters_adapted": "157-159",
+      "volume": 15,
+      "confidence": "medium",
+      "note": "ch157 'Ryo no keitai life' is literally the lost girls-only mobile phone the episode opens on, and the episode title 'Futari dake no sign' = ch159 'Love sa-i-n'.",
+      "sources": [
+        "https://web.archive.org/web/20061216145742/http://www.ytv.co.jp/angelheart/story/story42.html",
+        "https://en.wikipedia.org/wiki/List_of_Angel_Heart_chapters",
+        "https://mangahot.jp/site/works/b_R0001"
+      ]
+    },
+    {
+      "episode": 43,
+      "end_chapter": 163,
+      "start_chapter": 160,
+      "chapters_adapted": "160-163",
+      "volume": 15,
+      "confidence": "medium",
+      "note": "ch160 'Horeta otoko wa nazo darake!?' = Tomomi unable to work out who Ryo is; the episode closes on the Black Panther unit insignia, i.e. the run-up to Yang in ch164-165.",
+      "sources": [
+        "https://web.archive.org/web/20061216145742/http://www.ytv.co.jp/angelheart/story/story43.html",
+        "https://en.wikipedia.org/wiki/List_of_Angel_Heart_chapters",
+        "https://mangahot.jp/site/works/b_R0001"
+      ]
+    },
+    {
+      "episode": 44,
+      "end_chapter": 167,
+      "start_chapter": 164,
+      "chapters_adapted": "164-167",
+      "volume": 16,
+      "confidence": "medium",
+      "note": "ch165 'Yang kara no irai?' and ch167 'Yang Fang-Yu no shigoto' are the episode's Yang beats (the forced date, the birthday mail, the attache case); ch166 'Ai wa chikyu o sukuu!?' sits between.",
+      "sources": [
+        "https://web.archive.org/web/20061216145742/http://www.ytv.co.jp/angelheart/story/story44.html",
+        "https://en.wikipedia.org/wiki/List_of_Angel_Heart_chapters",
+        "https://mangahot.jp/site/works/b_R0001"
+      ]
+    },
+    {
+      "episode": 45,
+      "end_chapter": 169,
+      "start_chapter": 168,
+      "chapters_adapted": "168-169",
+      "volume": 16,
+      "confidence": "medium",
+      "note": "ch169 'Kuromaku arawaru!!' is the YTV synopsis' closing beat ('sono kuromaku no koe o kiite Yang wa kyogaku suru'); ch168 'Tengoku to jigoku!?' opens. Two-chapter episode — the 169/170 split is soft.",
+      "sources": [
+        "https://web.archive.org/web/20061216145742/http://www.ytv.co.jp/angelheart/story/story45.html",
+        "https://en.wikipedia.org/wiki/List_of_Angel_Heart_chapters",
+        "https://mangahot.jp/site/works/b_R0001"
+      ]
+    },
+    {
+      "episode": 46,
+      "end_chapter": 172,
+      "start_chapter": 170,
+      "chapters_adapted": "170-172",
+      "volume": 16,
+      "confidence": "medium",
+      "note": "ch170 'Yang, shido!', ch171 'Saikai...!' and ch172 'Haha naru omoi' — the last is the episode title 'Mother Heart' (Kaori stopping Yang from shooting Chen).",
+      "sources": [
+        "https://web.archive.org/web/20061216145742/http://www.ytv.co.jp/angelheart/story/story46.html",
+        "https://en.wikipedia.org/wiki/List_of_Angel_Heart_chapters",
+        "https://mangahot.jp/site/works/b_R0001"
+      ]
+    },
+    {
+      "episode": 47,
+      "end_chapter": 176,
+      "start_chapter": 173,
+      "chapters_adapted": "173-176",
+      "volume": 16,
+      "confidence": "medium",
+      "note": "Episode title = ch173 'Akarui mirai!?' verbatim; ch174 'Reisen no nayami' is the fortune-teller's request in the synopsis; ch175-176 close volume 16.",
+      "sources": [
+        "https://web.archive.org/web/20061216145742/http://www.ytv.co.jp/angelheart/story/story47.html",
+        "https://en.wikipedia.org/wiki/List_of_Angel_Heart_chapters",
+        "https://mangahot.jp/site/works/b_R0001"
+      ]
+    },
+    {
+      "episode": 48,
+      "end_chapter": 180,
+      "start_chapter": 177,
+      "chapters_adapted": "177-180",
+      "volume": 17,
+      "confidence": "medium",
+      "note": "Episode title = ch180 'Hikiyoserareru unmei' verbatim; ch177-179 ('Otoko no shinnen', 'Toshi no daisho', 'Egao no mirai') are the Shimazu/Su-jeong set-up and Reiko's death prophecy.",
+      "sources": [
+        "https://web.archive.org/web/20061216145742/http://www.ytv.co.jp/angelheart/story/story48.html",
+        "https://en.wikipedia.org/wiki/List_of_Angel_Heart_chapters",
+        "https://mangahot.jp/site/works/b_R0001"
+      ]
+    },
+    {
+      "episode": 49,
+      "end_chapter": 183,
+      "start_chapter": 181,
+      "chapters_adapted": "181-183",
+      "volume": 17,
+      "confidence": "medium",
+      "note": "ch181 'Mirai o kaeru otoko' is exactly Xin-Hong's act in the climax; ch183 'Reiko no mirai' closes the arc. Chapters 184-195 (the summer sea-school / bus-jack arc) are then skipped.",
+      "sources": [
+        "https://web.archive.org/web/20061216145742/http://www.ytv.co.jp/angelheart/story/story49.html",
+        "https://en.wikipedia.org/wiki/List_of_Angel_Heart_chapters",
+        "https://mangahot.jp/site/works/b_R0001",
+        "https://fr.wikipedia.org/wiki/Liste_des_chapitres_d%27Angel_Heart"
+      ]
+    },
+    {
+      "episode": 50,
+      "end_chapter": 198,
+      "start_chapter": 196,
+      "chapters_adapted": "196-198",
+      "volume": 18,
+      "confidence": "high",
+      "note": "ch196 'Yang, sairai!!' = Yang's return with the finished vaccine, and ch198 'Christmas present' = the episode title 'Last Present'. Independently corroborated: ja.wikipedia states the anime after the ep1-13 prologue 'roughly matches the content up to volume 18' (vol 18 = ch188-198), and the stored mu anchor already reads 198/v18.",
+      "sources": [
+        "https://web.archive.org/web/20061216145742/http://www.ytv.co.jp/angelheart/story/story50.html",
+        "https://en.wikipedia.org/wiki/List_of_Angel_Heart_chapters",
+        "https://mangahot.jp/site/works/b_R0001",
+        "https://ja.wikipedia.org/wiki/%E3%82%A8%E3%83%B3%E3%82%B8%E3%82%A7%E3%83%AB%E3%83%BB%E3%83%8F%E3%83%BC%E3%83%88"
+      ]
+    }
+  ],
+  "continue_points": [
+    {
+      "episode": 19,
+      "continue_chapter": 59,
+      "note": "ep19 back-fills ch41-43 (deferred vol-4 material). Furthest first-time coverage is still ch58 from ep18, so the reader's resume stays at ch59; ch41-43 are re-used, not new ground."
+    }
+  ],
+  "annotations": [
+    {
+      "episodes": [
+        13,
+        19
+      ],
+      "kind": "rearranged",
+      "chapters": "41-43",
+      "note": "ch41-43 (Chen's restaurant / Oshare / Shinjuku no senrei) are skipped after ep13's ch40 and animated later as ep19, out of running order."
+    },
+    {
+      "episodes": [
+        26,
+        27
+      ],
+      "kind": "divergence",
+      "chapters": "78-89",
+      "note": "Volume 8 in full (Saeko's inherited ring, the psychopath who murdered Hideyuki Makimura) is never animated: ep26 is title-locked to ch76/77 and ep27 to ch95, leaving ~18 chapters across one episode boundary — impossible without an omission."
+    },
+    {
+      "episodes": [
+        35,
+        36
+      ],
+      "kind": "divergence",
+      "chapters": "129-136",
+      "note": "The Saori/Ayane/Takahata heart-transplant arc appears unadapted: ep33 is title-locked to ch120 and ep36 lands on ch137-138 ('Saeko to nazo no onnanoko' / 'Tokai no zashiki-warashi'), which only fits with this block dropped."
+    },
+    {
+      "episodes": [
+        49,
+        50
+      ],
+      "kind": "divergence",
+      "chapters": "184-195",
+      "note": "The summer sea-school / bus-jack arc (Umibozu, Miki, the school trip) is not animated: ep48 is title-locked to ch180 and ep50 opens on ch196 'Yang, sairai!!' with the finale on ch198."
+    },
+    {
+      "episodes": [
+        1
+      ],
+      "kind": "partial",
+      "chapters": "1",
+      "note": "ch1 is a double-length opening chapter (published as two halves, 'ch1(1)' and 'ch1(2)', in the Coamix MangaHot / Tokuma 1st-Season re-serialisation) — one chapter number, roughly two chapters' worth of pages."
+    }
+  ],
+  "type_corrections": [],
+  "repairs": [],
+  "structure": {
+    "notes": "Single 50-episode season, our numbering == broadcast numbering; no OVAs, no movies, no specials in scope. Chapter-number space: the Bunch Comics 33-volume 1st season, 363 chapters, which is the space the stored volume boundaries and the stored mu anchor already use — do NOT mix in the 16-volume 'Angel Heart 2nd Season' (Zenon) numbering, and note that the Coamix MangaHot / Tokuma '1st Season' re-serialisation lists 364 entries because it splits the double-length ch1 into two parts (MangaHot entry N == Bunch chapter N-1 for N>=3). The anime's adapted ceiling is ch198 (= end of vol 18); chapters 199-363 are unadapted, so max_adapted_chapter for this series is 198. Stored volume-boundary table has a defect: it lists 'v6: 56-77' and no v7; three independent chapter lists (en.wikipedia, fr.wikipedia, MangaHot) agree v6 = 56-66 and v7 = 67-77. Only ep24 is non-canon (recap); eps 1-23 and 25-50 are manga canon per animefillerlist and ja.wikipedia.",
+    "order_only": []
+  },
+  "flags_for_sean": [
+    "NO source states an episode->chapter mapping for this series. Every anchor is a derivation from the official YTV per-episode synopses (web.archive.org copy of ytv.co.jp/angelheart/story/) correlated against three mutually-agreeing chapter-title lists. Title-identity matches (ep12=ch36, ep13~ch39, ep15=ch47, ep18=ch58, ep19=ch41, ep22=ch67, ep26~ch76, ep33=ch120, ep37~ch142, ep42~ch159, ep47=ch173, ep48=ch180, ep50~ch198) are the load-bearing pins; the chapters between pins are apportioned by the arc pacing those pins imply. Confidence is medium everywhere except ep50.",
+    "Unanchored on purpose (honest gaps, evidence too thin to pin a number): eps 8, 16, 17, 21, 24 (filler), 32. Interpolation between the neighbouring anchors lands on the same values my derivation gives for 8/16/17/21, so nothing is lost; ep32 is genuinely unresolved (see next flag).",
+    "UNRESOLVED, ep31/ep32 region: whether ch111-115 ('Sayuri no tabidachi', 'Irainin wa hittakuri!?', 'Baby trouble', 'Koibito doshi no gokai', 'Seiya no kiseki') were animated at all. ep31 is pinned to ch107-108 and ep33 to ch119-120; that leaves 8-10 chapters for one-and-a-bit episodes, which is denser than the series' ~3.3 chapters/episode elsewhere and hints at a further small omission. I did not anchor ep32 rather than guess.",
+    "UNRESOLVED, ep27 start: ch89 'Okurete kita shiawase' may be the epilogue of the skipped volume-8 arc (Saeko's belated happiness) or the opening of ep27. I used start=90; if ch89 is in fact skipped material, nothing moves, but if it opens ep27 the skip block is 78-88 rather than 78-89.",
+    "STORED-DATA DEFECT (not episode-scoped, so not filed as a repair): the context file's volume table reads 'v6: 56-77' with volume 7 missing entirely. en.wikipedia 'List of Angel Heart chapters', fr.wikipedia 'Liste des chapitres d'Angel Heart' and Coamix's own MangaHot listing all agree: v6 = ch56-66, v7 = ch67-77. Volume assignments in my anchors use the corrected table.",
+    "Series-level fields worth filling from this pass: manga_start_chapter = 1, max_adapted_chapter = 198, continue_from_chapter = 199.",
+    "PAID-FOR DEAD END, do not re-spend: the English 'Angel Heart' page on cityhunter.fandom.com is the City Hunter minor character of that name, not this series; angelheart.fandom.com exists but its Anime page is a bare episode-title list with no chapter data; animefillerguide has no Angel Heart page; b-ch.com / Hulu / dAnime episode pages are JS-rendered and yielded nothing. The working sources are the archived YTV official site and the chapter-title lists."
+  ]
+}
