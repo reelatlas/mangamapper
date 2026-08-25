@@ -82,6 +82,13 @@ const REPAIRS_APPROVED = new Map<string, string>([
   // ---- batch-12 "as-stored" sweep (2026-08-25, out2/rosario-vampire-asstored.json):
   ['rosario-vampire#11#end_chapter', 'ep 11 is the Keito/newspaper episode = ch 8 "Wish Upon the Moon" (fandom + Wikipedia vol-2 summary); stored 9 came from the wiki\'s episode-page off-by-one from ep 11 onward, inherited by batch 12\'s as-stored blessing'],
   ['rosario-vampire#11#volume', 'paired: ch 8 sits in vol 2, not vol 3'],
+  // eps 12/13 rode the same broken chain — VERIFIER-CONFIRMED 2026-08-25
+  // (beat-for-beat vs fandom ch 9/10/11 + Wikipedia; ch 11 "Blood" proven
+  // never adapted in S1; chain tiles 11→8, 12→9, 13→9-10 with no gaps):
+  ['rosario-vampire#12#end_chapter', 'ep 12 is the arrest/interrogation/confession = ch 9 "The Secret" (the ep page\'s own Trivia cross-references the manga arrest); stored ch 10 is entirely the Kuyou fight, none of it in ep 12'],
+  ['rosario-vampire#12#start_chapter', 'paired: single-chapter episode, moves with end'],
+  ['rosario-vampire#13#end_chapter', 'S1 finale second half IS ch 10 beat-for-beat (fire attack, blood transfusion, yoko form, Gin, finishing kick); stored END 11 inflated — ch 11 "Blood" is never adapted in S1'],
+  ['rosario-vampire#13#start_chapter', 'ch 9\'s second movement (the rescue decision) opens ep 13; medium confidence per the verifier, better than the stored 10'],
   // HELD (not applied — see DECISIONS-FOR-SEAN batch 17):
   //   toriko#147 → handled as a DELETION instead (filler row, A1)
   //   shugo-chara#127 → agent kept the stored value deliberately (scene-level
