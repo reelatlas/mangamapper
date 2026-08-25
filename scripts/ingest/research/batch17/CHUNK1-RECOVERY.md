@@ -434,3 +434,9 @@ All seven verdicts survived; zero value-level refutations. ~424k tokens.
 Final wave usage ~439k. Verify pass (standing practice) dispatched over the
 three weight-bearing sets: cobra's count-vs-number repair mechanism, rayearth's
 D2 space claims + deletion, fotbs's confirmation legs + component finding.
+
+## 19. BATCH 17 CLOSED (2026-08-25). This file is history.
+
+Final wave verified/ruled/applied (§12.51). Rayearth's 15-ruling, cobra's
+story-count repair, fotbs's component demotion all in. The restructuring
+phase is next; its scope lives in system-evolution.md.

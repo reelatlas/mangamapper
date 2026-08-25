@@ -83,6 +83,16 @@ Read both, fully:
   the **Int#** column splits them and runs ~50-60 HIGHER by the modern era.
   A batch-17 verdict stated this backwards while keying correctly by
   title+date. NEVER key DC rows by the Int column; verify by title+date.
+- **MangaDex web UI hides non-English chapters behind a language filter** —
+  a title that looks empty can hold uploads (rayearth showed "no chapters"
+  while its API feed held 16). ALWAYS check the API feed
+  (`api.mangadex.org/manga/<id>/aggregate` or `/feed`), never the filtered
+  web page, before claiming a MangaDex negative.
+- **Digital storefront chapter labels are re-cuts, not serialization
+  numbers** (Omoi/Azuki/mechacomic): rayearth's Omoi edition labels 15 units
+  "1-5, 5b, ..., 14" where the Nakayoshi serialization numbers them 1-15.
+  Chapter-space verdicts must rest on serialization/tankōbon numbering;
+  treat storefront unit labels as a count at best.
 - **Look for a second wiki.** Franchises often have two fandom wikis with
   different data quality (zatch-bell: konjikinogash.fandom carries
   per-episode manga_chapter fields the main wiki lacks; one-piece ARC pages

@@ -140,6 +140,21 @@ async function main() {
       console.log('  blade v31: already fixed');
     }
   }
+  // ---- 6. fist-of-the-blue-sky mislabeled component (verifier-confirmed
+  // 2026-08-25, Sean's ruling): AniList 3864 "DVD episodes" is stored
+  // spanning eps 23-26 (kind ova) but the four DVD-only episodes are
+  // WITHHELD TV eps (production 16/17/18/21) inside the one continuous
+  // 26-episode numbering. A wrong non-season span can mis-shift AFG
+  // numbering conversion — demote to ORDER-ONLY (null span), facts in note.
+  const { data: comp } = await db.from('series_components').select('episode_start').eq('series_id', 'fist-of-the-blue-sky').eq('anilist_id', 3864).maybeSingle();
+  if (comp?.episode_start != null) {
+    console.log('  fotbs: AniList-3864 component → order-only (was eps 23-26, kind ova)');
+    if (!DRY) {
+      await db.from('series_components').update({ episode_start: null, episode_end: null, label: 'DVD-only release of withheld TV eps 16-18, 21 (not OVAs; not a trailing block — Sean 2026-08-25, verifier-confirmed vs AniList/ja-WP/en-WP/fandom)' }).eq('series_id', 'fist-of-the-blue-sky').eq('anilist_id', 3864);
+    }
+  } else {
+    console.log('  fotbs component: already order-only');
+  }
   console.log('[rulings-20260825b] done');
 }
 main().then(() => process.exit(0));

@@ -1258,6 +1258,33 @@ Fixed weekly is correct.
    durable guard. Lesson for the floor rule: a >2 overshoot sourced from a
    SINGLE chart row with no corroborating content anywhere is a typo
    candidate, not an adoption candidate.
+51. ✅ **BATCH 17 COMPLETE (2026-08-25) — final wave verified, ruled,
+   applied; the gap-tier batch closes end-to-end.** Final three (rayearth /
+   fist-of-the-blue-sky / cobra) each verifier-checked; the rayearth
+   verifier REFUTED the verdict's 14-chapter conclusion (Nakayoshi
+   serialization record + date math + MU + pt-br MangaDex = 15; the
+   storefront's "5b…14" labels are a re-cut artifact) — Sean ruled 15:
+   curated ep-20 anchor END 15 OVERRIDES the verdict's 14 (the apply loop
+   now processes curated anchors FIRST so the curated map wins duplicate
+   episodes), boundaries seeded v1 1-5/v2 6-10/v3 11-15, total 15 stands,
+   ep-49 deletion proceeds on the scope leg alone. Cobra: story-count
+   mechanism confirmed (MU "chapters" = fr-WP's 28 Histoires), ep-31 repair
+   14→76 applied, ep-2 elimination STRENGTHENED by independent French
+   corroboration, reorder regime added. FotBS: MU pin confirmed 3-legged
+   and promoted manual; the mislabeled "DVD episodes" component (really
+   withheld TV eps 16-18/21) demoted to order-only. New agent traps:
+   MangaDex web-UI language filter (check the API feed, never the filtered
+   page) + digital-storefront re-cut numbering class. Census: all rule
+   classes 0, display 220/0, gap 12→9, mu_pin_unverified 30; the +1
+   frontier_tail_null is rayearth's D2 tail rendering honestly (annotated;
+   specimen #3).
+   **BATCH 17 TOTALS**: 26 gap/tail targets + 12 narrow/re-research tasks +
+   16 verifier passes; ~5.1M research + ~1.1M verify Opus/Fable tokens;
+   ~1,100 anchors landed, 88 retypes, 3 chapter-space migrations, 4 phantom
+   entities removed, 5 volume tables recovered, 12 open flags resolved,
+   A1 class closed with writer gates at MU + AFG, C3 healed catalog-wide.
+   NEXT: the RESTRUCTURING PHASE (system-evolution.md scope + taxonomy v2)
+   before batch 18.
 50. ✅ **CHUNK 2 WAVE 1 VERIFIED + RULED + APPLIED (2026-08-25)**. 7 verdicts,
    7/7 formal verify (Sean-requested, ~424k; §recovery-17): zero value-level
    refutations; the DC Jp/Int column-label inversion caught and captured as

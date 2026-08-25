@@ -155,6 +155,7 @@ const DELETIONS_APPROVED = new Map<string, string>([
   ['slam-dunk#92', 'A1 junk anchor (out/slam-dunk.json): pure anime-original beachside comedy episode'],
   // ---- wave 2 (Sean 2026-08-25, verifier-confirmed):
   ['detective-school-q#45', 'MU\'s record is SELF-contradictory (vol 13 cannot contain ch 69 — vol 13 = chs 96-103; verifier-confirmed against MU\'s live API + MangaDex); ep 45 is the anime-original padded finale (ja-WP verbatim) where A1 forbids anchors; coverage lives on the ep-40 anchor (95-96, v13)'],
+  ['magic-knight-rayearth#49', 'wrong chapter space (verifier-confirmed): ep 49 is the S2 finale adapting MKR II\'s separately-numbered manga; the stored ch-15 pin is MU\'s MKR-I S1 endpoint ("Vol 3, Chap 15 (1994 S1)") pinned to the wrong episode by the run-end derivation. Deletion stands on the scope leg; NOTE the verdict\'s "15 is not a valid number" leg was REFUTED (serialization numbering runs 1-15) — Sean ruled 15, total_chapters stays 15'],
   ['project-arms#53', '"episode 53" is a PS2 VIDEO GAME animefillerlist absorbed as a row (air date 2002-03-28 sits BEFORE ep 52\'s 03-30 — the giveaway); its ch-205/v19 mu anchor is MangaUpdates\' series-level anime.end, not an episode record. The row itself is deleted by apply-rulings-20260825b (durability: the row is typed mixed, so the anchor alone would be re-derived); ch 205 lands on ep 50 by content evidence'],
 ]);
 // Curated anchors this batch AUTHORS (not proposed as a verdict anchors row —
@@ -170,6 +171,11 @@ const CURATED_ANCHORS: { sid: string; anchor: Anchor; why: string }[] = [
     sid: 'zatch-bell',
     anchor: { episode: 103, end_chapter: 173, start_chapter: 173, chapters_adapted: '173 (opening beat only — partial)', volume: 19, confidence: 'medium', note: "Sean's C3 ruling 2026-08-25: first-time partial adaptation anchors truthfully; the anime backfills chs 164-168 across eps 104-107, so continue = 164 (the coming block's chronological start), matching the stored eps 102/104 continues.", sources: ['https://konjikinogash.fandom.com', 'https://en.wikipedia.org/wiki/List_of_Zatch_Bell!_episodes'] },
     why: 'evidence in out2/zatch-bell-contested.json (withheld there pending Sean; ruled 2026-08-25: anchor + partial annotation, continue 164)',
+  },
+  {
+    sid: 'magic-knight-rayearth',
+    anchor: { episode: 20, end_chapter: 15, start_chapter: null, chapters_adapted: '11-15 (vol 3)', volume: 3, confidence: 'high', note: "Sean's numbering ruling 2026-08-25: MKR I runs chs 1-15 in SERIALIZATION numbering (Nakayoshi issue-by-issue record, date math, MU's own Vol 3 Chap 15, pt-br MangaDex — verifier-confirmed); the digital storefront's '...5b...14' labels are a re-cut artifact. S1 finale ends the manga at ch 15.", sources: ['https://shidouhikaru15.wordpress.com/2021/08/12/rayearth-in-nakayoshi-magazine/', 'https://en.wikipedia.org/wiki/List_of_Magic_Knight_Rayearth_episodes'] },
+    why: 'overrides the verdict\'s END 14 (built on the refuted re-cut numbering); the verdict\'s own boundary evidence (v3 → eps 10-20) is unchanged',
   },
   {
     sid: 'trigun',
@@ -270,6 +276,15 @@ BOUNDARY_SEEDS.push(
 );
 BOUNDARY_SEEDS.push(
   {
+    sid: 'magic-knight-rayearth', full: true,
+    why: "Sean's 15-ruling (2026-08-25, verifier-corrected): MKR I serialization numbering 1-15 over 3 volumes (Nakayoshi record + tankōbon; the storefront re-cut's 5b/14 labels rejected)",
+    rows: [
+      { volume: 1, chapter_start: 1, chapter_end: 5 },
+      { volume: 2, chapter_start: 6, chapter_end: 10 },
+      { volume: 3, chapter_start: 11, chapter_end: 15 },
+    ],
+  },
+  {
     sid: 'emma-a-victorian-romance', full: true,
     why: 'no boundaries stored; mainline 52-chapter space over 7 volumes, agreed exactly by en-WP, ja-WP 目次 and fandom (verifier-confirmed; both final chapters are UNNUMBERED — casual counts read 51, the true count is 52)',
     rows: [
@@ -317,6 +332,10 @@ const SERIES_UPDATES: { sid: string; patch: Record<string, unknown>; why: string
 // order-check ruledEps): zone facts the verdicts evidence but did not file.
 const CURATED_ANNOTATIONS: { sid: string; episodes: number[]; kind: string; chapters?: string; note: string }[] = [
   {
+    sid: 'magic-knight-rayearth', episodes: [21], kind: 'divergence',
+    note: "Sean's D2 ruling 2026-08-25: eps 21-49 adapt Magic Knight Rayearth II — a SEPARATE manga with its own restarted numbering — while this entry's chapter space is MKR I (chs 1-15, fully adapted by ep 20). The 14 canon/mixed rows in 21-49 can never carry anchors in this space without lying; scoped/segmented representation lands with the D2 design pass (specimen #3, with prisma-illya and rosario ep 14).",
+  },
+  {
     sid: 'x', episodes: [21, 22, 23, 24], kind: 'divergence',
     note: "Sean's ruling 2026-08-25 (the \"only ending\" class): studio-original ending, technically filler — but the manga went on indefinite hiatus so no true ending exists; the community accepts this as the series' only ending and prefers it over the 1996 movie's alternative ending. Asterisked for re-evaluation under the taxonomy-v2 rule (system-evolution.md).",
   },
@@ -363,6 +382,7 @@ const REORDER_REGIMES: Record<string, string> = {
   'hunter-x-hunter': 'reorder regime (batch 17): the Yorknew stretch pre-grafts and re-treads chapters (ch 72 p.1-3 into ep 50, the Uvogin fight stretched with overlapping page splits across eps 53-56, ch 83 mainline in ep 56 after its ep-45 pre-graft)',
   'that-time-i-got-reincarnated-as-a-slime': 'reorder regime (batch 17): S1 skips chs 40-42 and 44-45 and jumps to ch 43 + 46-52 for its final four episodes, leaving the skipped block to S2',
   kingdom: 'reorder regime (batch 17): ep 16 grafts the Ryo Fui introduction (chs 96-100) ahead of the campaign arc, and ep 22 skips 74-81 (adapted later in S2)',
+  'space-adventure-cobra': 'reorder regime (chunk 2 final wave, verifier-confirmed vs ja-WP character statements + jajanken installment table): six blocks air out of Jump order — ep 2 pulls the Psychogun-secret story (ch 32) forward, the Sword-people block (chs 20-23) lands at eps 20-21, ep 25 (ch 53-54) before ep 26 (ch 51-52)',
   'detective-school-q': 'reorder regime (chunk 2, verifier-confirmed against fandom Story_Arcs + ja-WP case table): ch 34-37 airs before ch 14-30, the Q-vs-A duel block (38-44) is dismantled across eps 5/16/22/24-25, vol 8 is scrambled (62-63→ep 23, 64→ep 32, 60-61→eps 33-34), and ch 95-96 airs at ep 40 before 84-89 at eps 41-43',
   'detective-conan': 'reorder regime (chunk 2, verifier-confirmed): 201 of 631 manga episodes start below the running-max chapter — the adaptation freely interleaves backlog cases; every continue point carries both the parity value and the monotonic alternative (out/detective-conan.json)',
   'eyeshield-21': 'reorder regime (batch 17 wave 2, Sean sign-off): documented relocations — Musashi\'s return (chs 141-142) moved from ep 70 to eps 82-83, ch 131 into ep 87, the 109/110 and 120/121 swaps, ch 99 backfilled at ep 49, ch 100 backfilled at ep 88 (first-time adaptation, anchored per the zatch-51 precedent) — every jump per-episode evidenced in the verdicts',
@@ -446,7 +466,10 @@ async function main() {
       const curatedHere = CURATED_ANCHORS.filter((c) => c.sid === sid);
       for (const c of curatedHere) lines.push(`   CURATED anchor ep${c.anchor.episode}: ${c.why.slice(0, 160)}`);
       const seenEp = new Set<number>();
-      for (const a of [...(v.anchors ?? []), ...curatedHere.map((c) => c.anchor)]) {
+      // curated anchors FIRST: the curated map decides — a verdict anchor at
+      // the same episode is then skipped as the duplicate (rayearth ep 20:
+      // Sean's 15-ruling overrides the verdict's re-cut-derived 14)
+      for (const a of [...curatedHere.map((c) => c.anchor), ...(v.anchors ?? [])]) {
         const ep = Number(a.episode);
         const excl = EXCLUDED_ANCHORS.get(`${sid}#${ep}`);
         if (excl) { lines.push(`   EXCLUDED ep${ep} (Sean decision pending): ${excl.slice(0, 160)}`); totals.skipped++; continue; }
