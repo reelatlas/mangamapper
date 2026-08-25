@@ -77,6 +77,12 @@ Read both, fully:
   (rosario-vampire's "Adapted From" is right for eps 1-10, one off from ep
   11 on). Cross-check a mid-series row before trusting the rest of a page's
   lineage.
+- **Detective Conan World column semantics (verifier-caught inversion,
+  2026-08-25):** DCW's Anime tables carry TWO numbering columns — the
+  **Jp#** column counts hour-specials as ONE episode and is OUR row space;
+  the **Int#** column splits them and runs ~50-60 HIGHER by the modern era.
+  A batch-17 verdict stated this backwards while keying correctly by
+  title+date. NEVER key DC rows by the Int column; verify by title+date.
 - **Look for a second wiki.** Franchises often have two fandom wikis with
   different data quality (zatch-bell: konjikinogash.fandom carries
   per-episode manga_chapter fields the main wiki lacks; one-piece ARC pages

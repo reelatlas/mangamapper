@@ -408,3 +408,17 @@ tmm ep-52, dsq ep-45 deletions), retypes (dsq 35/44/45, emma 19-23, dc
 tmm chapter-space display (27 vs stored total), emma 13-24-vs-19-23 mixed
 scope, dc ep-510 split. REMAINING: wave 2 = fist-of-the-blue-sky,
 magic-knight-rayearth, space-adventure-cobra.
+
+## 17. CHUNK-2 WAVE-1 FORMAL VERIFY PASS (2026-08-25, Sean-requested) — 7/7
+
+All seven verdicts survived; zero value-level refutations. ~424k tokens.
+
+| verdict | result | corrections/finds |
+|---|---|---|
+| detective-conan | CONFIRMED values / prose defect | ZERO errors in 132 anchors, 89 vol-start claims, 80×132 continue checks. BUT the Jp/Int column labels are INVERTED in the prose — our rows = DCW's JAPANESE column (Int runs +50-60 higher); the sentence would poison a future re-derive → captured as a research-agent trap; fix prose at curation. Row count now 1212 (5 new filler rows since snapshot). |
+| detective-school-q | CONFIRMED 4/4 | MU record proven SELF-contradictory (vol 13 can't hold ch 69); "transposition" downgraded to hypothesis; ep-26 Campaign-Girl tail noted |
+| emma | CONFIRMED | 52/20/72 arithmetic exact; annotation span fix 37→38-46; counting trap: unnumbered final chapters make casual counts read 51/19 |
+| tokyo-mew-mew | CONFIRMED 5/5 | ep-46 annotation contradicts its own correct flag (fix at curation); ep-38 ch-19 attribution softened to coin-flip |
+| x | CONFIRMED / ep-20 PARTIAL | vol-18 half solid; 94 = best-supported estimate (95 overshoots); timeline sentence overstated (ch 94 postdated airdate); verifier's own sub-fetch hallucinated (raw wikitext refuted it) |
+| blade-of-the-immortal-ona | CONFIRMED | ep-22 END bounded 189-191 (stored volume safe either way); total_chapters 219 vs 206-act space = pre-existing count-space item |
+| arms-alchemy | CONFIRMED | ep-18 END fork surfaced (61 vs 63/64 graveyard cliffhanger); finale evidence edge 83 over 81; SCHEMA FIND: unadapted ch 82 sits inside ep-26's start/end range — exclusions live only in free text (restructuring-phase item) |
