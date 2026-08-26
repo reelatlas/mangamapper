@@ -77,7 +77,7 @@ function checkRules() {
 // ---- citations: id-shaped tokens in the places that cite rules
 function checkCitations(ids: Map<string, Rule>) {
   // docs/restructure* are excluded: their T0–T5 track ids are phase-temporary, not rule citations.
-  const roots = ['.claude', 'CLAUDE.md', 'scripts/ingest/lib', 'scripts/ingest/research'];
+  const roots = ['.claude', 'CLAUDE.md', 'docs/architecture.md', 'docs/runbook.md', 'docs/franchise-rulings.md', 'docs/STATE.md', 'scripts/ingest/lib', 'scripts/ingest/research'];
   const files: string[] = [];
   const walk = (p: string) => {
     const full = join(ROOT, p);

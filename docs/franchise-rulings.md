@@ -1,4 +1,5 @@
 # Franchise rulings
+> **Restructure note (2026-08-26):** the PRINCIPLES in this file are now I-family ledger rules (`docs/rules.md`: I15 one continuous story, I16 relation kinds, I19 in-flow extras, I21 ownership guard, I24–I35 stitching…). The per-franchise RULINGS below stay here until T2.2 generates `docs/rulings.md` from typed maps; cite them as instances, never as rules.
 
 How multi-entry franchises are structured in mangaMapper's canonical catalog.
 Process and baseline: [data-pipeline.md](data-pipeline.md) §8 — one continuous

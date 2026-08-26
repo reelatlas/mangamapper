@@ -2390,7 +2390,7 @@ An AFL pull in which more than 20% of previously known episode types change (LAR
 
 A show AFL has not classified at all (zero episode rows) is held with a parse_integrity {empty} flag rather than resolved as an empty instrument, unless its status is upcoming. It returns automatically when AFL classifies.
 
-*Why:* An empty strip reads as "all canon"; an honest hold is the product promise. Sparse (S12) is the finished-show extension of the same idea.
+*Why:* An empty strip reads as "all canon"; an honest hold is the product promise. Sparse (G12) is the finished-show extension of the same idea.
 
 - ruled Sean 2026-08-22 (data-pipeline §8; §10 "Empty hold")
 - layer **writer**
@@ -2430,7 +2430,7 @@ A gap of more than 12 episodes between AniList's aired count and AFL's classifie
 
 Every scrape-host fetch (AFL, AFG) sends If-None-Match / If-Modified-Since from the staged etag and last_modified; a 304 is a skip that only bumps fetched_at. GraphQL (AniList) has no conditional fetch and the small batched sweep does not need one.
 
-*Why:* Change detection before download is half of the etiquette bargain (S16): most hourly refresh-afl runs no-op instantly.
+*Why:* Change detection before download is half of the etiquette bargain (G16): most hourly refresh-afl runs no-op instantly.
 
 - ruled session 2026-08-22 (data-pipeline §4 (live text under a superseded banner); §11 refresh-afl bullet)
 - layer **writer**
@@ -2576,7 +2576,7 @@ MangaUpdates' curated anime-coverage field is MULTI-SEGMENT prose: parse ALL "Vo
 
 ### G32 · D1: the MU pin writes only when every gate passes
 
-applyMuFrontier writes a pin only when the whole stack passes, in order: suppression (S37) → sibling-scope filter (S33) → chapter-space / count-space (S21) → airing-pin (S34) → pin-episode redundancy and curated precedence (skips) → scope-consumed (S35) → A1 episode type (S36). Every refusal files a count_mismatch flag (the established withheld-frontier kind) naming its reason, and each refusal is its own census class so a refused frontier never masquerades as "no MU coverage".
+applyMuFrontier writes a pin only when the whole stack passes, in order: suppression (G37) → sibling-scope filter (G33) → chapter-space / count-space (N28) → airing-pin (G34) → pin-episode redundancy and curated precedence (skips) → scope-consumed (G35) → A1 episode type (G36). Every refusal files a count_mismatch flag (the established withheld-frontier kind) naming its reason, and each refusal is its own census class so a refused frontier never masquerades as "no MU coverage".
 
 *Why:* The batch-17 five-case class: MU's prose is franchise-level and a sequel's endpoint sits INSIDE the manga's chapter space where the chapter-space gate cannot see it (ace-ii ep52 → 259, yowamushi ep38 → 544, gantz ep26 → 280 on a filler row, toriko ep147, prisma-illya ep42). First run: mu pins 80→66, every removal triaged.
 

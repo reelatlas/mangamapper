@@ -1,6 +1,6 @@
 # Restructure phase — the plan (v2, agreed 2026-08-25)
 
-Status: **T0 done (2026-08-25) — awaiting Sean's rulings on `docs/restructure/DRIFT-LIST.md` §A; T1 next.** v1 was drafted from a disk survey, cross-checked
+Status: **T1 done (2026-08-26). Next: T4.0 glossary session (Sean) — agenda §5; T2/T3 may run on either side of it.** v1 was drafted from a disk survey, cross-checked
 by a second model (Cursor/Grok), re-checked against the tree, and folded.
 This file is the phase's tracked board: every piece has an id, a track, a
 dependency and a status; the board is updated at every save point. When the
@@ -275,13 +275,13 @@ words after the glossary exists. Rough total: 8–12 sessions.
 
 | metric | today | done |
 |---|---|---|
-| ledger rows with no audit class | 69/88 §10 rows; 423/518 statements | falling; empty cell = visible backlog |
+| ledger rules with no audit class | 88 of 258 (2026-08-26 ledger v1) | falling; empty cell = visible backlog |
 | PROTOCOL copies restating rule text | 4 (13/21/17/33 rule citations) | 1, ids only |
 | standing ruling maps outside `lib/rulings/` | ≈30 (T0 count) | 0 |
 | unrostered ingest scripts | 36 to move/delete (34 history + 2 dead); 27 to roster | 0 |
-| CLAUDE.md role | mini-ledger | router + family strip |
-| one-hop cases (batch-17 misses) | 0 defined | all pass, mechanically + cold probe |
-| broken ledger citations | unknown | 0 (system census green) |
+| CLAUDE.md role | router + family strip (done 2026-08-26) | router + family strip |
+| one-hop cases (batch-17 misses) | 16 defined, 16 pass mechanically (2026-08-26); cold probe pending T3.5 | all pass, mechanically + cold probe |
+| broken ledger citations | 0 (ledger-check --citations, 2026-08-26) | 0 (system census green) |
 | walks that cannot prove completeness | 4 paging impls, 7+ unpaged selects, syncAnchors A1 hole | 0 |
 | ingest files outside the `tsc -b` graph | all of `scripts/` | 0 |
 | edge bundles ≠ lib hash | unchecked | 0 |
@@ -312,16 +312,16 @@ words after the glossary exists. Rough total: 8–12 sessions.
 | T0.1 | per-home extracts (8 readers, 15 part-files, 1,142 entries) | — | done |
 | T0.2 | merged inventory + drift list (`docs/restructure/DRIFT-LIST.md`) | T0.1 | done — **§A awaits Sean** |
 | T0.3 | script triage (65 files: pull 7 · heal 16 · census 4 · history 34 · lib-support 2 · dead 2) | T0.1 | done |
-| T1.1 | docs split + CLAUDE.md router | T0.2 | planned |
-| T1.2 | ledger records + check + gen-docs | T0.2 | planned |
-| T1.3 | separations front page | T1.2 | planned |
-| T1.4 | drift rulings (Sean) | T0.2 | planned |
-| T1.5 | STATE.md under the read-first/write-last loop | T1.1 | planned |
-| T1.6 | one-hop cases | T1.2 | planned |
+| T1.1 | docs split (architecture / runbook / changelog / stub) + CLAUDE.md router | T0.2 | done 2026-08-26 |
+| T1.2 | ledger records (258, 9 families, S→G) + ledger-check + gen-docs → rules.md | T0.2 | done 2026-08-26 |
+| T1.3 | separations front page (rules.md header + CLAUDE.md five kinds) | T1.2 | done 2026-08-26 |
+| T1.4 | drift rulings (Sean) — A-1..A-10 | T0.2 | done 2026-08-25 |
+| T1.5 | STATE.md; memory points at it (consolidate loop wired in T3.3) | T1.1 | done 2026-08-26 |
+| T1.6 | one-hop cases (16, batch-17 misses first) + one-hop-check | T1.2 | done 2026-08-26 |
 | T4.0 | glossary session (Sean) | T1.2 | planned |
 | T2.1 | lib/rulings/ + RulingEntry | T1.2 | planned |
 | T2.2 | rulings index by series | T2.1 | planned |
-| T2.0 | compile-graph sidecar (tsconfig.scripts.json) | T0.1 readers done | planned |
+| T2.0 | compile-graph sidecar (tsconfig.scripts.json) | — | done 2026-08-26 |
 | T2.3 | completeness sidecar | — | planned |
 | T2.4 | three rosters | T0.3 | planned |
 | T2.5 | script triage applied | T2.4 | planned |

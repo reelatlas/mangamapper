@@ -11,7 +11,7 @@ size the work below.
 
 ---
 
-## 1. Split `docs/data-pipeline.md`
+## 1. Split `docs/data-pipeline.md` — DONE 2026-08-26 (T1.1)
 
 1,479 lines doing four unrelated jobs. §10 is consulted on nearly every
 decision while §12 grows monotonically — today reading the rules means paging
@@ -27,7 +27,7 @@ past the log.
 Update CLAUDE.md's pointer table in the same change, or the split makes things
 harder to find rather than easier.
 
-## 2. Give §10 a third column: `rule | enforcement site | audit class`
+## 2. Give §10 a third column — DONE 2026-08-26 as the ledger's `auditClass` field (T1.2; `docs/rules.md` scoreboard)
 
 Today it is two columns. With a third, **a rule with an empty audit-class cell
 is visibly still costing model attention** — the automation backlog becomes a
@@ -37,7 +37,7 @@ This operationalises the standing direction of travel (judgment → writer gate
 → audit class) better than any prose, and it feeds `/consolidate` step 10,
 which hunts exactly these gaps.
 
-## 3. Build `/add-rule` — the missing skill
+## 3. Build `/add-rule` — the missing skill (T3.1, pending)
 
 The most important repeatable sequence in the project, currently done from
 judgment each time. Building the D1 MU-conflation gate followed it exactly:
@@ -58,7 +58,7 @@ human-shaped hole in it.
 different moment than a consolidation pass), but decide after D4 goes through
 it once.
 
-## 4. Collapse the four `PROTOCOL.md` files
+## 4. Collapse the four `PROTOCOL.md` files (T3.2, pending)
 
 ~88 lines each, largely duplicate, one per batch. Fold into the
 `research-batch` skill plus short per-batch delta files.
@@ -68,7 +68,7 @@ RULE DRIFT** between batches, where batch 15 and batch 17 encoded the same
 rule differently. Reconciling those differences is the point; expect to find
 some and to need Sean's ruling on which version stands.
 
-## 5. Rework `/consolidate` and `/consolidate deep`
+## 5. Rework `/consolidate` and `/consolidate deep` (T3.3, pending)
 
 The skill predates the data cycle and shows it. Evaluate after batch 17:
 
@@ -89,7 +89,7 @@ The skill predates the data cycle and shows it. Evaluate after batch 17:
 - **Deep mode's permanence tiers** (locked series drop out of routine
   rescans) were designed but never implemented. Either build or drop them.
 
-## 6. Update `research-agent` with batch 17's traps
+## 6. Update `research-agent` with batch 17's traps — partly done 2026-08-25; T3.5 finishes (four CHUNK1 traps still uncaptured, DRIFT-LIST §B)
 
 Every batch has taught 2–4 source traps. They belong in the agent definition,
 where every future agent starts knowing them — not in a recovery file that
