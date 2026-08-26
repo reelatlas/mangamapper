@@ -1,6 +1,6 @@
 # Restructure phase — the plan (v2, agreed 2026-08-25)
 
-Status: **T1 done (2026-08-26). Next: T4.0 glossary session (Sean) — agenda §5; T2/T3 may run on either side of it.** v1 was drafted from a disk survey, cross-checked
+Status: **T1 + T2 done (2026-08-26). Next: T4.0 glossary session (Sean) — agenda §5 — and T3 skills (T3.1 /add-rule first).** v1 was drafted from a disk survey, cross-checked
 by a second model (Cursor/Grok), re-checked against the tree, and folded.
 This file is the phase's tracked board: every piece has an id, a track, a
 dependency and a status; the board is updated at every save point. When the
@@ -278,13 +278,13 @@ words after the glossary exists. Rough total: 8–12 sessions.
 | ledger rules with no audit class | 88 of 258 (2026-08-26 ledger v1) | falling; empty cell = visible backlog |
 | PROTOCOL copies restating rule text | 4 (13/21/17/33 rule citations) | 1, ids only |
 | standing ruling maps outside `lib/rulings/` | 1 — WIKI_NUMBERING_SHIFTS (empty; unify with explicit `spaces` in T2, see DRIFT-LIST §E.8) | 0 |
-| unrostered ingest scripts | 36 to move/delete (34 history + 2 dead); 27 to roster | 0 |
+| unrostered ingest scripts | 0 (2026-08-26: 33 scripts rostered/lib-support; 36 in history/) | 0 |
 | CLAUDE.md role | router + family strip (done 2026-08-26) | router + family strip |
 | one-hop cases (batch-17 misses) | 16 defined, 16 pass mechanically (2026-08-26); cold probe pending T3.5 | all pass, mechanically + cold probe |
-| broken ledger citations | 0 (ledger-check --citations, 2026-08-26) | 0 (system census green) |
+| broken ledger citations | 0 — system census green 2026-08-26 | 0 (system census green) |
 | walks that cannot prove completeness | 0 (2026-08-26: unpaged-selects scanner clean; healer idempotency check pending T2.4) | 0 |
 | ingest files outside the `tsc -b` graph | all of `scripts/` | 0 |
-| edge bundles ≠ lib hash | unchecked | 0 |
+| edge bundles ≠ lib hash | 0 (stamped + checked, 2026-08-26) | 0 |
 | duplicated mechanisms (DRIFT-LIST §C) | 18 | 0 |
 | log-only rules | 52 (§12) + 11 (§11 prose) | 0 |
 
@@ -324,9 +324,9 @@ words after the glossary exists. Rough total: 8–12 sessions.
 | T2.0 | compile-graph sidecar (tsconfig.scripts.json) | — | done 2026-08-26 |
 | T2.3 | completeness sidecar — selectAll (count-checked) in lib/db.ts; 4 paging helpers → 1; 80+ sites converted incl. syncAnchors A1 hole; unpaged-selects scanner (P32 live) | — | done 2026-08-26 |
 | T2.4 | rosters.ts (pull/heal/census, standard vs event) + run-roster + npm heal/census/pull; parity healer moved into the roster path | T0.3 | done 2026-08-26 |
-| T2.5 | script triage applied | T2.4 | planned |
-| T2.6 | edges + lib-hash stamp | T2.1–2.5 | planned |
-| T2.7 | system census | T2.4, T1.6 | planned |
+| T2.5 | 36 history/dead scripts → scripts/ingest/history/ (README: never run; P34); 23 ledger rules now visibly enforced only by history = the /add-rule backlog (DRIFT-LIST §C2) | T2.4 | done 2026-08-26 |
+| T2.6 | lib-hash.ts stamped into every bundle by build-functions; system-census proves bundles current (P4 live) | T2.1–2.5 | done 2026-08-26 |
+| T2.7 | system-census.ts (7 checks: ledger+citations, unpaged selects, one-hop, rosters, rulings index, generated docs fresh, edge hash) = `npm run system:census` (P33 live) | T2.4, T1.6 | done 2026-08-26 |
 | T3.1 | /add-rule + 2 exercises | T1.2, T2.1 | planned |
 | T3.2 | PROTOCOL collapse + rules_applied + pin | T1.2, T4.0 | planned |
 | T3.3 | consolidate rework | T2.4, T2.7 | planned |

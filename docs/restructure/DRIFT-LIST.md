@@ -104,6 +104,12 @@ Code comments: `afg.ts` header "AFL is the type authority" vs resolve.ts "AFL/AF
 
 ---
 
+## C2. Rules whose only code enforcement is a HISTORY script (T2.5 finding, 2026-08-26) — the /add-rule backlog
+
+After the 36 one-shot scripts moved to `scripts/ingest/history/`, these ledger records point at code that is never run again: their predicate is enforced only by curation discipline (the apply-batch skill) until a lib gate + audit class exists. Each is an `/add-rule` candidate; the ledger keeps the history path so the citation resolves and the gap stays visible.
+
+`A3`, `A6`, `A7`, `A9`, `A10`, `A11`, `A12`, `A41`, `C7`, `C9`, `N20`, `I12`, `I13`, `G52`, `R12`, `R13`, `R16`, `R17`, `R29`, `P8`, `P10`, `P15`, `P16`
+
 ## D. Log-only rules — 52 in §12 with no §10/§11 presence (ledger candidates; full list in `inventory.md` §B and `t0/s12.json`)
 
 Notable: CONTINUA_SUPPRESSED (standing map, no row) · mu_pin_unverified (audit class in every census, no row) · never-index-join / join-on-title · curated-first apply loop · typo-candidate floor lesson · continua-vs-chart cross-check gate (candidate) · AFG "* Filler" title-marker rule · fractional-never-integer (mashle) · canon-tier creation (A-9) · the 15-series permanence-lock candidate list · "AFL becomes validation when it returns" · "a bad pin masks a gap" (verify-pool delta) · "do not decide a gate on a small sample" · Boruto ep-219 curated-consistency (lesson named, predicate never stated — inferred from `syncAnchors`) · ~12 source traps (nisekoi continue-as-anchor, rosario series-summary line, second infobox, DC Jp/Int, MangaDex filter, storefront re-cuts, Sasuke Retsuden…).

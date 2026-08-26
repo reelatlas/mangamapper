@@ -261,7 +261,7 @@
 - `P1` The data cycle, seven steps run in order — aka `the data cycle`, `data cycle`, `the cycle`
 - `P2` Rules live in shared lib code, never inline at a call site — aka `invariant 1`, `hard invariant 1`, `rules live in lib`, `every-writer rule`
 - `P3` Any lib/ change → rebuild and deploy all four edge functions — aka `invariant 2`, `hard invariant 2`, `lib → four edges`, `lib → edges`, `missed edge deploy`
-- `P4` Edge bundles carry the lib content hash *(planned)* — aka `edge hash`, `lib-hash stamp`, `T2.6`
+- `P4` Edge bundles carry the lib content hash — aka `edge hash`, `lib-hash stamp`, `T2.6`
 - `P5` Audits verify OUTCOMES; mechanical checks are mandatory — aka `invariant 3`, `hard invariant 3`, `audits verify outcomes`, `outcome-check pattern`, `script before model`
 - `P6` Incomplete data degrades gracefully — never NaN — aka `invariant 4`, `hard invariant 4`, `graceful degradation`
 - `P8` Repairs live at the manual tier — aka `invariant 7`, `hard invariant 7`, `repairs live at the manual tier`, `hikaru ep-75 wipe`, `hikaru lesson`
@@ -287,8 +287,8 @@
 - `P30` Judgment → gate → audit; an empty audit cell is the backlog — aka `judgment → gate → audit`, `judgment to gate to audit`, `the standing goal`, `direction of travel`, `check the gates are real`
 - `P31` /add-rule: gate → edges → audit → heal → deltas → record *(planned)* — aka `/add-rule`, `add-rule`, `add-rule sequence`, `T3.1`
 - `P32` Completeness is an outcome: walks prove processed = total — aka `completeness as an outcome`, `completeness sidecar`, `T2.3`, `healer-pagination trap`
-- `P33` System census checks the reference structure mechanically *(planned)* — aka `system census`, `T2.7`, `three rosters`, `T2.4`
-- `P34` Historical apply scripts are kept as records, non-runnable *(planned)* — aka `history/`, `historical apply scripts non-runnable`, `history non-runnable`, `T2.5`, `D-5`
+- `P33` System census checks the reference structure mechanically — aka `system census`, `T2.7`, `three rosters`, `T2.4`
+- `P34` Historical apply scripts are kept as records, non-runnable — aka `history/`, `historical apply scripts non-runnable`, `history non-runnable`, `T2.5`, `D-5`
 - `P36` Cross-model check the frames, not just the data *(planned)* — aka `cross-model check the frames`, `frame check after T4.0`, `principle 8`
 - `P37` Episode-level display reads only the hydrated series — aka `metadata contract`, `card-hydration rule`, `hydration contract`, `hydrated series only`
 
@@ -330,7 +330,7 @@ Inside a rearranged zone, exact known per-episode adaptation ALWAYS becomes an a
 
 - ruled Sean 2026-08-23 (data-pipeline §11 "Rearranged zones (the GTO 20/21 lesson)")
 - layer **both**
-- enforced: [audit-ui-truth.ts#classes.rearranged_zone_unanchored](../scripts/ingest/audit-ui-truth.ts) · [apply-rearranged-anchors.ts](../scripts/ingest/apply-rearranged-anchors.ts)
+- enforced: [audit-ui-truth.ts#classes.rearranged_zone_unanchored](../scripts/ingest/audit-ui-truth.ts) · [history/apply-rearranged-anchors.ts](../scripts/ingest/history/apply-rearranged-anchors.ts)
 - audit: `rearranged_zone_unanchored`
 - witnesses: gto-great-teacher-onizuka, black-lagoon, rosario-vampire
 - aliases: GTO lesson, GTO 20/21 lesson, rearranged-zone rule, rearranged zones
@@ -372,7 +372,7 @@ Every anchor_on_noncanon_row hit is exactly one of: a junk anchor (deleted via a
 
 - ruled Sean 2026-08-24 (data-pipeline §10 "A1 outcome verification"; §12.42 DELETIONS_APPROVED; CLAUDE.md cycle step 4)
 - layer **process**
-- enforced: [audit-ui-truth.ts#classes.anchor_on_noncanon_row](../scripts/ingest/audit-ui-truth.ts) · [apply-research-batch-17.ts#DELETIONS_APPROVED](../scripts/ingest/apply-research-batch-17.ts) · [.claude/skills/apply-batch/SKILL.md](../.claude/skills/apply-batch/SKILL.md)
+- enforced: [audit-ui-truth.ts#classes.anchor_on_noncanon_row](../scripts/ingest/audit-ui-truth.ts) · [history/apply-research-batch-17.ts#DELETIONS_APPROVED](../scripts/ingest/history/apply-research-batch-17.ts) · [.claude/skills/apply-batch/SKILL.md](../.claude/skills/apply-batch/SKILL.md)
 - audit: `anchor_on_noncanon_row`
 - witnesses: toriko, my-hero-academia, cardcaptor-sakura
 - aliases: A1 triage, Toriko deletion, Toriko deletion precedent, A1 outcome verification
@@ -386,7 +386,7 @@ Once research PROVES that only zone-level knowledge exists for a rearranged/graf
 
 - ruled session 2026-08-24 (data-pipeline §11 "Rearranged zones — AMENDED batch 15")
 - layer **both**
-- enforced: [apply-research-batch-15.ts#ZMARK](../scripts/ingest/apply-research-batch-15.ts) · [audit-ui-truth.ts#classes.rearranged_zone_acknowledged](../scripts/ingest/audit-ui-truth.ts)
+- enforced: [history/apply-research-batch-15.ts#ZMARK](../scripts/ingest/history/apply-research-batch-15.ts) · [audit-ui-truth.ts#classes.rearranged_zone_acknowledged](../scripts/ingest/audit-ui-truth.ts)
 - audit: `rearranged_zone_unanchored`, `rearranged_zone_acknowledged`
 - witnesses: gto-great-teacher-onizuka
 - aliases: zone-acknowledged, zone-acknowledged marker, acknowledged approximation
@@ -414,7 +414,7 @@ When an agent's running-order END sits BELOW the episode's START (a scrambled sa
 
 - ruled session 2026-08-23 (data-pipeline §10 "Running-order END normalization (2026-08-23 s2, Dagashi S1)")
 - layer **writer**
-- enforced: [apply-research-batch-14.ts#main](../scripts/ingest/apply-research-batch-14.ts) · [apply-research-batch-17.ts#main](../scripts/ingest/apply-research-batch-17.ts)
+- enforced: [history/apply-research-batch-14.ts#main](../scripts/ingest/history/apply-research-batch-14.ts) · [history/apply-research-batch-17.ts#main](../scripts/ingest/history/apply-research-batch-17.ts)
 - **audit: none — automation backlog**
 - witnesses: dagashi-kashi
 - aliases: running-order END normalization, running-order END convention, Dagashi S1 normalization
@@ -428,7 +428,7 @@ START (chapter_anchors.start_chapter) is the first chapter the episode animates.
 
 - ruled Sean 2026-08-23 (data-pipeline §10 "Sliver rule (Sean 2026-08-23 s2, MHA ep 170)")
 - layer **writer**
-- enforced: [apply-research-batch-14.ts#main](../scripts/ingest/apply-research-batch-14.ts) · [apply-research-batch-17.ts#main](../scripts/ingest/apply-research-batch-17.ts) · [research/batch17/PROTOCOL.md](../scripts/ingest/research/batch17/PROTOCOL.md)
+- enforced: [history/apply-research-batch-14.ts#main](../scripts/ingest/history/apply-research-batch-14.ts) · [history/apply-research-batch-17.ts#main](../scripts/ingest/history/apply-research-batch-17.ts) · [research/batch17/PROTOCOL.md](../scripts/ingest/research/batch17/PROTOCOL.md)
 - **audit: none — automation backlog**
 - witnesses: my-hero-academia, hajime-no-ippo-the-fighting
 - aliases: sliver rule, START = first chapter animated, A1 + sliver rule
@@ -443,7 +443,7 @@ When an episode opens by finishing the tail pages of the previous chapter, START
 
 - ruled Sean 2026-08-23 (apply-start-chapters.ts header; batch-14/15/16 PROTOCOL "START chapter")
 - layer **writer**
-- enforced: [apply-start-chapters.ts#main](../scripts/ingest/apply-start-chapters.ts)
+- enforced: [history/apply-start-chapters.ts#main](../scripts/ingest/history/apply-start-chapters.ts)
 - **audit: none — automation backlog**
 - witnesses: oshi-no-ko, attack-on-titan, jujutsu-kaisen, haikyu, naruto
 - aliases: majority rule, START majority rule, first FULL chapter rule
@@ -457,7 +457,7 @@ START is the first ON-TREND chapter. A far-earlier relocation, flashback or graf
 
 - ruled Sean 2026-08-24 (data-pipeline §11 "Relocated openers are never the START (AoT ep-87 rule, re-enforced batch 15)")
 - layer **both**
-- enforced: [apply-research-batch-17.ts#main](../scripts/ingest/apply-research-batch-17.ts) · [src/lib/mapping.ts#canonEpStartCh](../src/lib/mapping.ts)
+- enforced: [history/apply-research-batch-17.ts#main](../scripts/ingest/history/apply-research-batch-17.ts) · [src/lib/mapping.ts#canonEpStartCh](../src/lib/mapping.ts)
 - audit: `anchor_start_offtrend`
 - witnesses: attack-on-titan, jujutsu-kaisen, naruto-shippuden, hajime-no-ippo-the-fighting, my-hero-academia
 - aliases: AoT ep-87 rule, AoT-87 rule, relocated openers, relocated openers are never the START
@@ -834,7 +834,7 @@ An episode carrying a rearranged or graft annotation is a settled reorder: the n
 
 - ruled session 2026-08-23 (audit-ui-truth anchor_nonmonotonic comment ("settled, stop asking"); §12.42 REORDER_REGIMES)
 - layer **both**
-- enforced: [audit-ui-truth.ts#classes.anchor_nonmonotonic](../scripts/ingest/audit-ui-truth.ts) · [verify-series-display.ts#verifySeries](../scripts/ingest/verify-series-display.ts) · [apply-research-batch-17.ts#REORDER_REGIMES](../scripts/ingest/apply-research-batch-17.ts)
+- enforced: [audit-ui-truth.ts#classes.anchor_nonmonotonic](../scripts/ingest/audit-ui-truth.ts) · [verify-series-display.ts#verifySeries](../scripts/ingest/verify-series-display.ts) · [history/apply-research-batch-17.ts#REORDER_REGIMES](../scripts/ingest/history/apply-research-batch-17.ts)
 - audit: `anchor_nonmonotonic`, `anchor_start_offtrend`, `verify:regression`
 - witnesses: my-hero-academia, sket-dance, zatch-bell, ranma-1-2
 - aliases: ruled reorder exemption, rearranged/graft exemption, settled reorders
@@ -960,7 +960,7 @@ continue_chapter / continue_kind / continue_note are curated data that may live 
 
 - ruled session 2026-08-24 (data-pipeline §12.38 "CRON REVIEW" (preservation added to syncAnchors + applyContinua); apply-research-batch-17 CURATED_CONTINUES)
 - layer **writer**
-- enforced: [lib/anchors.ts#syncAnchors](../scripts/ingest/lib/anchors.ts) · [lib/anchors.ts#applyContinua](../scripts/ingest/lib/anchors.ts) · [apply-research-batch-17.ts#CURATED_CONTINUES](../scripts/ingest/apply-research-batch-17.ts) · [heal-parity-continues.ts](../scripts/ingest/heal-parity-continues.ts)
+- enforced: [lib/anchors.ts#syncAnchors](../scripts/ingest/lib/anchors.ts) · [lib/anchors.ts#applyContinua](../scripts/ingest/lib/anchors.ts) · [history/apply-research-batch-17.ts#CURATED_CONTINUES](../scripts/ingest/history/apply-research-batch-17.ts) · [heal-parity-continues.ts](../scripts/ingest/heal-parity-continues.ts)
 - **audit: none — automation backlog**
 - witnesses: trigun
 - aliases: parity-continue preservation, continue fields survive re-derive, curated continues, CURATED_CONTINUES
@@ -988,7 +988,7 @@ Where to resume reading after an episode is first-class data distinct from displ
 
 - ruled Sean 2026-08-23 (data-pipeline §10 "Continue-reading points (Sean 2026-08-23; UI deferred)"; §12.27)
 - layer **writer**
-- enforced: [apply-continue-points.ts](../scripts/ingest/apply-continue-points.ts)
+- enforced: [history/apply-continue-points.ts](../scripts/ingest/history/apply-continue-points.ts)
 - **audit: none — automation backlog**
 - witnesses: jujutsu-kaisen, oshi-no-ko, rent-a-girlfriend, miss-kobayashis-dragon-maid, seraph-of-the-end, blue-exorcist, food-wars, the-case-study-of-vanitas
 - aliases: continue-reading points, end+1 default, default continue = end + 1, apply-continue-points
@@ -1558,7 +1558,7 @@ For every shift-ruled series (each SOURCE_NUMBERING_SHIFTS key), aired/total cou
 
 - ruled session 2026-08-23 (apply-research-batch-11.ts header)
 - layer **writer**
-- enforced: [apply-research-batch-11.ts#main](../scripts/ingest/apply-research-batch-11.ts)
+- enforced: [history/apply-research-batch-11.ts#main](../scripts/ingest/history/apply-research-batch-11.ts)
 - audit: `integrity_total_beyond_eps`, `ruling_violation`
 - witnesses: yu-yu-hakusho-ghostfiles
 - aliases: YYH class, community-count restructure heal
@@ -1906,7 +1906,7 @@ When two AFL pages describe one series (Drupal "-0" collision slugs, flagged dup
 
 - ruled Sean 2026-08-22 (data-pipeline §8 "Duplicate AFL pages" / §10 row Duplicate rule)
 - layer **writer**
-- enforced: [cleanup.ts#main](../scripts/ingest/cleanup.ts) · [stabilize.ts#DUPLICATE_OF](../scripts/ingest/stabilize.ts)
+- enforced: [history/cleanup.ts#main](../scripts/ingest/history/cleanup.ts) · [history/stabilize.ts#DUPLICATE_OF](../scripts/ingest/history/stabilize.ts)
 - **audit: none — automation backlog**
 - witnesses: promised-neverland, food-wars
 - aliases: duplicate rule, more classified episodes wins
@@ -1920,7 +1920,7 @@ A source entry whose AniList format is MOVIE/OVA/SPECIAL/MUSIC, or an unresolved
 
 - ruled Sean 2026-08-22 (data-pipeline §8 "Movies, films, and OVAs are OUT of v1"; cleanup.ts)
 - layer **writer**
-- enforced: [cleanup.ts#markExcluded](../scripts/ingest/cleanup.ts) · [lib/match.ts#SERIES_FORMATS](../scripts/ingest/lib/match.ts)
+- enforced: [history/cleanup.ts#markExcluded](../scripts/ingest/history/cleanup.ts) · [lib/match.ts#SERIES_FORMATS](../scripts/ingest/lib/match.ts)
 - **audit: none — automation backlog**
 - aliases: movies/OVAs excluded, movies are OUT of v1, movie/OVA exclusion
 - see: I11, I19, movies count only when numbered, recap rule
@@ -2825,7 +2825,7 @@ A manga-sourced show with no per-episode chart anywhere (~0% filler, so AFL neve
 
 - ruled Sean 2026-08-23 (data-pipeline §12.19c2; docs/restructure/DRIFT-LIST.md §A A-9)
 - layer **writer**
-- enforced: [canon-tier.ts](../scripts/ingest/canon-tier.ts)
+- enforced: [history/canon-tier.ts](../scripts/ingest/history/canon-tier.ts)
 - audit: `pending_no_canon`, `title_incomplete`
 - witnesses: shy, cells-at-work, ranking-of-kings, chrono-crusade, orient, shaman-king-2001
 - aliases: canon-tier creation, canon-tier, A-9
@@ -3115,7 +3115,7 @@ If an existing stored value in the context file is wrong, the verdict says so as
 
 - ruled session 2026-08-23 (batch14 PROTOCOL line 17; research-agent definition "The bar")
 - layer **process**
-- enforced: [.claude/agents/research-agent.md](../.claude/agents/research-agent.md) · [research/batch17/PROTOCOL.md](../scripts/ingest/research/batch17/PROTOCOL.md) · [apply-research-batch-17.ts#REPAIRS_APPROVED](../scripts/ingest/apply-research-batch-17.ts)
+- enforced: [.claude/agents/research-agent.md](../.claude/agents/research-agent.md) · [research/batch17/PROTOCOL.md](../scripts/ingest/research/batch17/PROTOCOL.md) · [history/apply-research-batch-17.ts#REPAIRS_APPROVED](../scripts/ingest/history/apply-research-batch-17.ts)
 - **audit: none — automation backlog**
 - witnesses: hikaru-no-go
 - aliases: repairs never silent, never silently contradict stored data, repairs with old/new
@@ -3129,7 +3129,7 @@ If the evidence does not support an anchor, the verdict says so and states what 
 
 - ruled Sean 2026-08-24 (batch15 PROTOCOL mission item 2; research-agent definition "The bar")
 - layer **process**
-- enforced: [.claude/agents/research-agent.md](../.claude/agents/research-agent.md) · [research/batch17/PROTOCOL.md](../scripts/ingest/research/batch17/PROTOCOL.md) · [apply-research-batch-15.ts](../scripts/ingest/apply-research-batch-15.ts)
+- enforced: [.claude/agents/research-agent.md](../.claude/agents/research-agent.md) · [research/batch17/PROTOCOL.md](../scripts/ingest/research/batch17/PROTOCOL.md) · [history/apply-research-batch-15.ts](../scripts/ingest/history/apply-research-batch-15.ts)
 - audit: `rearranged_zone_acknowledged`, `rearranged_zone_unanchored`
 - witnesses: magic-knight-rayearth, gto-great-teacher-onizuka
 - aliases: honest gap > guess, honest gap beats a plausible guess, zone_level_only, zone-level only
@@ -3170,7 +3170,7 @@ Every anchor carries confidence `high` = 2+ independent sources agree on the exa
 
 - ruled session 2026-08-23 (batch14 PROTOCOL "Confidence"; batch17 PROTOCOL "Confidence")
 - layer **process**
-- enforced: [research/batch17/PROTOCOL.md](../scripts/ingest/research/batch17/PROTOCOL.md) · [apply-research-batch-17.ts](../scripts/ingest/apply-research-batch-17.ts)
+- enforced: [research/batch17/PROTOCOL.md](../scripts/ingest/research/batch17/PROTOCOL.md) · [history/apply-research-batch-17.ts](../scripts/ingest/history/apply-research-batch-17.ts)
 - **audit: none — automation backlog**
 - aliases: confidence vocabulary, high/medium, confidence high medium
 - see: R3, R17
@@ -3183,7 +3183,7 @@ When sources disagree the agent researches until resolved. If unresolved, the ve
 
 - ruled session 2026-08-23 (batch14 PROTOCOL "Confidence"; batch17 PROTOCOL "Confidence")
 - layer **process**
-- enforced: [research/batch17/PROTOCOL.md](../scripts/ingest/research/batch17/PROTOCOL.md) · [apply-research-batch-14.ts](../scripts/ingest/apply-research-batch-14.ts)
+- enforced: [research/batch17/PROTOCOL.md](../scripts/ingest/research/batch17/PROTOCOL.md) · [history/apply-research-batch-14.ts](../scripts/ingest/history/apply-research-batch-14.ts)
 - **audit: none — automation backlog**
 - aliases: disagreement handling, flags_for_sean, unresolved disagreement
 - see: R16, R1
@@ -3347,7 +3347,7 @@ A series is listed in REORDER_REGIMES only for pervasive reorder the verdict doc
 
 - ruled session 2026-08-24 (batch17 DECISIONS-FOR-SEAN "Applied without needing you"; apply-batch skill trap "Regime maps launder bad data")
 - layer **process**
-- enforced: [apply-research-batch-17.ts#REORDER_REGIMES](../scripts/ingest/apply-research-batch-17.ts) · [.claude/skills/apply-batch/SKILL.md](../.claude/skills/apply-batch/SKILL.md)
+- enforced: [history/apply-research-batch-17.ts#REORDER_REGIMES](../scripts/ingest/history/apply-research-batch-17.ts) · [.claude/skills/apply-batch/SKILL.md](../.claude/skills/apply-batch/SKILL.md)
 - audit: `anchor_nonmonotonic`
 - witnesses: detective-conan, hayate-the-combat-butler, sket-dance
 - aliases: REORDER_REGIMES listing rule, regime annotations from real jumps, REORDER_REGIMES laundering
@@ -3420,15 +3420,15 @@ If anything under scripts/ingest/lib/ changed since the last deploy, run build-f
 - aliases: invariant 2, hard invariant 2, lib → four edges, lib → edges, missed edge deploy
 - see: P2, P4
 
-### P4 · Edge bundles carry the lib content hash *(planned)*
+### P4 · Edge bundles carry the lib content hash
 
 build-functions.ts stamps the content hash of scripts/ingest/lib/ into each edge bundle; every refresh run logs the hash it ran under; the system census compares the deployed hash to the lib on disk and reports any edge running stale code. Invariant 2 becomes mechanically checkable.
 
 *Why:* Invariant 2 is enforced only by memory today ("edge bundles ≠ lib hash: unchecked" on the restructure scoreboard).
 
-- ruled Sean 2026-08-25 (docs/restructure-plan.md §3 T2.6)
+- ruled Sean 2026-08-26 (docs/restructure-plan.md §3 T2.6)
 - layer **process**
-- enforced: [build-functions.ts](../scripts/ingest/build-functions.ts) · [docs/restructure-plan.md#T2.6](../docs/restructure-plan.md)
+- enforced: [lib-hash.ts#libHash](../scripts/ingest/lib-hash.ts) · [build-functions.ts](../scripts/ingest/build-functions.ts) · [scripts/restructure/system-census.ts](../scripts/restructure/system-census.ts)
 - **audit: none — automation backlog**
 - aliases: edge hash, lib-hash stamp, T2.6
 - see: P3, P32
@@ -3467,7 +3467,7 @@ A repaired value is a RESEARCHED value. Derivation-tier rows (source mu, afg, af
 
 - ruled Sean 2026-08-24 (data-pipeline §10 "Curated repairs live at the MANUAL tier (2026-08-24, the hikaru ep-75 wipe)"; §12.43)
 - layer **writer**
-- enforced: [apply-research-batch-17.ts#REPAIRS_APPROVED](../scripts/ingest/apply-research-batch-17.ts) · [.claude/skills/apply-batch/SKILL.md#Repairs on derivation-tier rows get wiped](../.claude/skills/apply-batch/SKILL.md) · [.claude/skills/consolidate/SKILL.md#hikaru ep-75 wipe](../.claude/skills/consolidate/SKILL.md)
+- enforced: [history/apply-research-batch-17.ts#REPAIRS_APPROVED](../scripts/ingest/history/apply-research-batch-17.ts) · [.claude/skills/apply-batch/SKILL.md#Repairs on derivation-tier rows get wiped](../.claude/skills/apply-batch/SKILL.md) · [.claude/skills/consolidate/SKILL.md#hikaru ep-75 wipe](../.claude/skills/consolidate/SKILL.md)
 - **audit: none — automation backlog**
 - witnesses: hikaru-no-go, mashle-magic-and-muscles
 - aliases: invariant 7, hard invariant 7, repairs live at the manual tier, hikaru ep-75 wipe, hikaru lesson
@@ -3494,7 +3494,7 @@ Step 4 is Sean's. The approval maps in the apply script (REPAIRS_APPROVED, DELET
 
 - ruled Sean 2026-08-24 (data-pipeline §12.42 (Toriko); apply-batch skill "The curation principle"; §12.51 (curated first))
 - layer **process**
-- enforced: [apply-research-batch-17.ts#DELETIONS_APPROVED](../scripts/ingest/apply-research-batch-17.ts) · [apply-research-batch-17.ts#curated anchors FIRST](../scripts/ingest/apply-research-batch-17.ts) · [.claude/skills/apply-batch/SKILL.md#The curation principle](../.claude/skills/apply-batch/SKILL.md)
+- enforced: [history/apply-research-batch-17.ts#DELETIONS_APPROVED](../scripts/ingest/history/apply-research-batch-17.ts) · [history/apply-research-batch-17.ts#curated anchors FIRST](../scripts/ingest/history/apply-research-batch-17.ts) · [.claude/skills/apply-batch/SKILL.md#The curation principle](../.claude/skills/apply-batch/SKILL.md)
 - **audit: none — automation backlog**
 - witnesses: toriko, magic-knight-rayearth
 - aliases: Sean rules, the curated map decides, curation principle, curated-first apply, report, don't apply uncurated
@@ -3548,7 +3548,7 @@ Apply runs in order: (1) READ the verdicts, do not skim — mechanically scan ea
 
 - ruled session 2026-08-24 (apply-batch skill "Sequence"; CHUNK1-RECOVERY §6 closing sequence)
 - layer **process**
-- enforced: [.claude/skills/apply-batch/SKILL.md#Sequence](../.claude/skills/apply-batch/SKILL.md) · [apply-research-batch-17.ts#loadVerdicts](../scripts/ingest/apply-research-batch-17.ts)
+- enforced: [.claude/skills/apply-batch/SKILL.md#Sequence](../.claude/skills/apply-batch/SKILL.md) · [history/apply-research-batch-17.ts#loadVerdicts](../scripts/ingest/history/apply-research-batch-17.ts)
 - **audit: none — automation backlog**
 - aliases: apply-batch sequence, the apply discipline, read, don't skim, dry-run as proposal
 - see: P10, P16, P17, P18, P19, P28
@@ -3561,7 +3561,7 @@ A verdict file on disk that is not yet curated into the maps, or that was writte
 
 - ruled session 2026-08-25 (data-pipeline §12.47 "Mashle verdict files HELD"; apply-research-batch-17.ts HELD_FILES)
 - layer **writer**
-- enforced: [apply-research-batch-17.ts#HELD_FILES](../scripts/ingest/apply-research-batch-17.ts)
+- enforced: [history/apply-research-batch-17.ts#HELD_FILES](../scripts/ingest/history/apply-research-batch-17.ts)
 - **audit: none — automation backlog**
 - witnesses: mashle-magic-and-muscles
 - aliases: HELD_FILES, mashle HELD, stale verdict HELD, held verdict files
@@ -3616,7 +3616,7 @@ Every healer is idempotent — a re-run on a clean catalog changes nothing — a
 
 - ruled session 2026-08-23 (consolidate skill §4 "Healer rescans (all idempotent)"; data-pipeline §11 maintenance audits)
 - layer **process**
-- enforced: [.claude/skills/consolidate/SKILL.md#Healer rescans](../.claude/skills/consolidate/SKILL.md) · [.claude/skills/apply-batch/SKILL.md#Healers](../.claude/skills/apply-batch/SKILL.md)
+- enforced: [rosters.ts#HEAL](../scripts/ingest/rosters.ts) · [run-roster.ts](../scripts/ingest/run-roster.ts) · [scripts/restructure/system-census.ts](../scripts/restructure/system-census.ts)
 - **audit: none — automation backlog**
 - aliases: healer roster, healers idempotent, healers idempotent + rostered
 - see: P31, P32, P33
@@ -3766,28 +3766,28 @@ Every catalog walk reads through a paged selectAll with an exact count, reports 
 - aliases: completeness as an outcome, completeness sidecar, T2.3, healer-pagination trap
 - see: P20, P33, A1
 
-### P33 · System census checks the reference structure mechanically *(planned)*
+### P33 · System census checks the reference structure mechanically
 
 `npm run census -- --system` asserts: every ledger enforcement path and symbol resolves; every audit class exists; every rule id cited in skills, agents, PROTOCOL and maps is live; PROTOCOL and skills contain ids, not rule prose; every scripts/ingest/*.ts is on a pull/heal/census roster, in history/, or lib-support; generated docs are not stale; edge bundles match the lib hash; the one-hop cases pass. It is consolidate step 0 and blocking while red during the restructure phase.
 
 *Why:* Files existing is not a metric — broken citations, unrostered healers and stale generated docs are all invisible until something asserts them.
 
-- ruled Sean 2026-08-25 (docs/restructure-plan.md §3 T2.4, T2.7; ledger-check.ts is the first piece)
+- ruled Sean 2026-08-26 (docs/restructure-plan.md §3 T2.4, T2.7; ledger-check.ts is the first piece)
 - layer **process**
-- enforced: [scripts/restructure/ledger-check.ts](../scripts/restructure/ledger-check.ts) · [docs/restructure-plan.md#T2.7](../docs/restructure-plan.md)
+- enforced: [scripts/restructure/system-census.ts](../scripts/restructure/system-census.ts) · [package.json#system:census](../package.json)
 - **audit: none — automation backlog**
 - aliases: system census, T2.7, three rosters, T2.4
 - see: P4, P20, P22, P30, P32
 
-### P34 · Historical apply scripts are kept as records, non-runnable *(planned)*
+### P34 · Historical apply scripts are kept as records, non-runnable
 
 One-shot apply scripts move to history/ with their reasoning extracted first; they are non-runnable by convention AND by the roster check, and are never deleted while they are the record of a ruling. A live script is on a roster; a historical one is not.
 
 *Why:* Re-running apply-research-batch.ts recreates the fist-of-the-blue-sky 23–26 OVA span demoted 2026-08-25; apply-research-aot-s4p2.ts reverts ep 87 start 130→123; the dr-stone row-95 creation contradicts the later order-only ruling (DRIFT-LIST §E.5).
 
-- ruled Sean 2026-08-25 (docs/restructure-plan.md §7 D-5; §3 T2.5; DRIFT-LIST §E.5)
+- ruled Sean 2026-08-26 (docs/restructure-plan.md §7 D-5; §3 T2.5; DRIFT-LIST §E.5)
 - layer **process**
-- enforced: [docs/restructure-plan.md#D-5](../docs/restructure-plan.md)
+- enforced: [history/README.md](../scripts/ingest/history/README.md) · [scripts/restructure/system-census.ts](../scripts/restructure/system-census.ts) · [rosters.ts#ROSTERED](../scripts/ingest/rosters.ts)
 - **audit: none — automation backlog**
 - witnesses: fist-of-the-blue-sky, dr-stone
 - aliases: history/, historical apply scripts non-runnable, history non-runnable, T2.5, D-5
@@ -4718,6 +4718,6 @@ Any component that renders episode-level data consumes the HYDRATED series (getB
 
 ## Scoreboard
 
-- rules: 258 (live 239, planned 14, superseded 5)
+- rules: 258 (live 242, planned 11, superseded 5)
 - live data rules with no audit class (the automation backlog): 89
 - by layer: writer 131 · display 23 · both 21 · process 83

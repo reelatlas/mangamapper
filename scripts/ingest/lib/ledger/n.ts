@@ -370,7 +370,7 @@ export const RULES: Rule[] = [
     ruledBy: 'session',
     ruledOn: '2026-08-23',
     origin: 'apply-research-batch-11.ts header',
-    enforcement: [{ path: 'scripts/ingest/apply-research-batch-11.ts', symbol: 'main' }],
+    enforcement: [{ path: 'scripts/ingest/history/apply-research-batch-11.ts', symbol: 'main' }],
     layer: 'writer',
     auditClass: ['integrity_total_beyond_eps', 'ruling_violation'],
     witnesses: ['yu-yu-hakusho-ghostfiles'],

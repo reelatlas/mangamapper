@@ -56,6 +56,6 @@ export const CENSUS: RosterEntry[] = [
   { file: 'wiki-title-verify.ts', when: 'event', trigger: 'before declaring a wiki numbering shift', note: 'title alignment at offsets −1/0/+1' },
 ];
 
-export const LIB_SUPPORT: string[] = ['build-functions.ts', 'parser-check.ts', 'rosters.ts', 'run-roster.ts'];
+export const LIB_SUPPORT: string[] = ['build-functions.ts', 'parser-check.ts', 'rosters.ts', 'run-roster.ts', 'lib-hash.ts'];
 
 export const ROSTERED = new Set([...PULL, ...HEAL, ...CENSUS].map((e) => e.file));

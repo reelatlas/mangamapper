@@ -11,8 +11,8 @@ import { readFileSync, readdirSync, statSync } from 'node:fs';
 import { join } from 'node:path';
 
 const BIG = new Set(['series', 'episodes', 'chapter_anchors', 'episode_annotations', 'volume_boundaries', 'series_components', 'series_external_ids', 'source_map', 'ingest_afl_shows', 'ingest_afg_pages', 'ingest_anilist_media', 'ingest_mangaupdates', 'ingest_flags', 'watch_order_entries', 'ingest_fractionals', 'series_scopes']);
-// T0 triage classes history/dead (docs/restructure/t0/scripts-1.json) are skipped until T2.5 moves them to history/.
-const HISTORY = new Set(["apply-continue-points.ts", "apply-rearranged-anchors-2.ts", "apply-rearranged-anchors-3.ts", "apply-rearranged-anchors.ts", "apply-research-aot-finale.ts", "apply-research-aot-s4p2.ts", "apply-research-batch-10.ts", "apply-research-batch-11.ts", "apply-research-batch-12.ts", "apply-research-batch-13.ts", "apply-research-batch-14.ts", "apply-research-batch-15.ts", "apply-research-batch-16.ts", "apply-research-batch-17.ts", "apply-research-batch-3.ts", "apply-research-batch-4.ts", "apply-research-batch-5.ts", "apply-research-batch-6.ts", "apply-research-batch-7.ts", "apply-research-batch-8.ts", "apply-research-batch-9.ts", "apply-research-batch.ts", "apply-rulings-20260824.ts", "apply-rulings-20260825-mashle.ts", "apply-rulings-20260825b.ts", "apply-start-chapters.ts", "assisted-prep.ts", "canon-tier-2.ts", "canon-tier.ts", "cleanup.ts", "fix-mismatch.ts", "merge.ts", "pilot.ts", "polish-ids.ts", "stabilize.ts", "wayback-recover2.ts"]);
+// scripts/ingest/history/ (T2.5) is skipped by the SKIP regex; nothing else is exempt.
+const HISTORY = new Set<string>();
 const SKIP = /\/history\/|\/research\/batch1[4-7]\/context\.ts$/;
 
 const files: string[] = [];

@@ -146,7 +146,7 @@ export const RULES: Rule[] = [
     enforcement: [
       { path: 'scripts/ingest/lib/anchors.ts', symbol: 'syncAnchors' },
       { path: 'scripts/ingest/lib/anchors.ts', symbol: 'applyContinua' },
-      { path: 'scripts/ingest/apply-research-batch-17.ts', symbol: 'CURATED_CONTINUES' },
+      { path: 'scripts/ingest/history/apply-research-batch-17.ts', symbol: 'CURATED_CONTINUES' },
       { path: 'scripts/ingest/heal-parity-continues.ts' },
     ],
     layer: 'writer',
@@ -184,7 +184,7 @@ export const RULES: Rule[] = [
     ruledBy: 'Sean',
     ruledOn: '2026-08-23',
     origin: 'data-pipeline §10 "Continue-reading points (Sean 2026-08-23; UI deferred)"; §12.27',
-    enforcement: [{ path: 'scripts/ingest/apply-continue-points.ts' }],
+    enforcement: [{ path: 'scripts/ingest/history/apply-continue-points.ts' }],
     layer: 'writer',
     auditClass: [],
     witnesses: ['jujutsu-kaisen', 'oshi-no-ko', 'rent-a-girlfriend', 'miss-kobayashis-dragon-maid', 'seraph-of-the-end', 'blue-exorcist', 'food-wars', 'the-case-study-of-vanitas'],

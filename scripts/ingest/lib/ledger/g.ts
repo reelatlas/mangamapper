@@ -857,7 +857,7 @@ export const RULES: Rule[] = [
     ruledBy: 'Sean',
     ruledOn: '2026-08-23',
     origin: 'data-pipeline §12.19c2; docs/restructure/DRIFT-LIST.md §A A-9',
-    enforcement: [{ path: 'scripts/ingest/canon-tier.ts' }],
+    enforcement: [{ path: 'scripts/ingest/history/canon-tier.ts' }],
     layer: 'writer',
     auditClass: ['pending_no_canon', 'title_incomplete'],
     witnesses: ['shy', 'cells-at-work', 'ranking-of-kings', 'chrono-crusade', 'orient', 'shaman-king-2001'],

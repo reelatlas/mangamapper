@@ -226,8 +226,8 @@ export const RULES: Rule[] = [
     ruledOn: '2026-08-22',
     origin: 'data-pipeline §8 "Duplicate AFL pages" / §10 row Duplicate rule',
     enforcement: [
-      { path: 'scripts/ingest/cleanup.ts', symbol: 'main' },
-      { path: 'scripts/ingest/stabilize.ts', symbol: 'DUPLICATE_OF' },
+      { path: 'scripts/ingest/history/cleanup.ts', symbol: 'main' },
+      { path: 'scripts/ingest/history/stabilize.ts', symbol: 'DUPLICATE_OF' },
     ],
     layer: 'writer',
     auditClass: [],
@@ -247,7 +247,7 @@ export const RULES: Rule[] = [
     ruledOn: '2026-08-22',
     origin: 'data-pipeline §8 "Movies, films, and OVAs are OUT of v1"; cleanup.ts',
     enforcement: [
-      { path: 'scripts/ingest/cleanup.ts', symbol: 'markExcluded' },
+      { path: 'scripts/ingest/history/cleanup.ts', symbol: 'markExcluded' },
       { path: 'scripts/ingest/lib/match.ts', symbol: 'SERIES_FORMATS' },
     ],
     layer: 'writer',

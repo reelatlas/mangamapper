@@ -69,7 +69,7 @@ export const RULES: Rule[] = [
     origin: 'data-pipeline §10 "A1 outcome verification"; §12.42 DELETIONS_APPROVED; CLAUDE.md cycle step 4',
     enforcement: [
       { path: 'scripts/ingest/audit-ui-truth.ts', symbol: 'classes.anchor_on_noncanon_row' },
-      { path: 'scripts/ingest/apply-research-batch-17.ts', symbol: 'DELETIONS_APPROVED' },
+      { path: 'scripts/ingest/history/apply-research-batch-17.ts', symbol: 'DELETIONS_APPROVED' },
       { path: '.claude/skills/apply-batch/SKILL.md' },
     ],
     layer: 'process',
@@ -114,7 +114,7 @@ export const RULES: Rule[] = [
     origin: 'data-pipeline §11 "Rearranged zones (the GTO 20/21 lesson)"',
     enforcement: [
       { path: 'scripts/ingest/audit-ui-truth.ts', symbol: 'classes.rearranged_zone_unanchored' },
-      { path: 'scripts/ingest/apply-rearranged-anchors.ts' },
+      { path: 'scripts/ingest/history/apply-rearranged-anchors.ts' },
     ],
     layer: 'both',
     auditClass: ['rearranged_zone_unanchored'],
@@ -134,7 +134,7 @@ export const RULES: Rule[] = [
     ruledOn: '2026-08-24',
     origin: 'data-pipeline §11 "Rearranged zones — AMENDED batch 15"',
     enforcement: [
-      { path: 'scripts/ingest/apply-research-batch-15.ts', symbol: 'ZMARK' },
+      { path: 'scripts/ingest/history/apply-research-batch-15.ts', symbol: 'ZMARK' },
       { path: 'scripts/ingest/audit-ui-truth.ts', symbol: 'classes.rearranged_zone_acknowledged' },
     ],
     layer: 'both',
@@ -199,8 +199,8 @@ export const RULES: Rule[] = [
     ruledOn: '2026-08-23',
     origin: 'data-pipeline §10 "Running-order END normalization (2026-08-23 s2, Dagashi S1)"',
     enforcement: [
-      { path: 'scripts/ingest/apply-research-batch-14.ts', symbol: 'main' },
-      { path: 'scripts/ingest/apply-research-batch-17.ts', symbol: 'main' },
+      { path: 'scripts/ingest/history/apply-research-batch-14.ts', symbol: 'main' },
+      { path: 'scripts/ingest/history/apply-research-batch-17.ts', symbol: 'main' },
     ],
     layer: 'writer',
     auditClass: [],
@@ -220,8 +220,8 @@ export const RULES: Rule[] = [
     ruledOn: '2026-08-23',
     origin: 'data-pipeline §10 "Sliver rule (Sean 2026-08-23 s2, MHA ep 170)"',
     enforcement: [
-      { path: 'scripts/ingest/apply-research-batch-14.ts', symbol: 'main' },
-      { path: 'scripts/ingest/apply-research-batch-17.ts', symbol: 'main' },
+      { path: 'scripts/ingest/history/apply-research-batch-14.ts', symbol: 'main' },
+      { path: 'scripts/ingest/history/apply-research-batch-17.ts', symbol: 'main' },
       { path: 'scripts/ingest/research/batch17/PROTOCOL.md' },
     ],
     layer: 'writer',
@@ -242,7 +242,7 @@ export const RULES: Rule[] = [
     ruledBy: 'Sean',
     ruledOn: '2026-08-23',
     origin: 'apply-start-chapters.ts header; batch-14/15/16 PROTOCOL "START chapter"',
-    enforcement: [{ path: 'scripts/ingest/apply-start-chapters.ts', symbol: 'main' }],
+    enforcement: [{ path: 'scripts/ingest/history/apply-start-chapters.ts', symbol: 'main' }],
     layer: 'writer',
     auditClass: [],
     witnesses: ['oshi-no-ko', 'attack-on-titan', 'jujutsu-kaisen', 'haikyu', 'naruto'],
@@ -262,7 +262,7 @@ export const RULES: Rule[] = [
     ruledOn: '2026-08-24',
     origin: 'data-pipeline §11 "Relocated openers are never the START (AoT ep-87 rule, re-enforced batch 15)"',
     enforcement: [
-      { path: 'scripts/ingest/apply-research-batch-17.ts', symbol: 'main' },
+      { path: 'scripts/ingest/history/apply-research-batch-17.ts', symbol: 'main' },
       { path: 'src/lib/mapping.ts', symbol: 'canonEpStartCh' },
     ],
     layer: 'both',
@@ -821,7 +821,7 @@ export const RULES: Rule[] = [
     enforcement: [
       { path: 'scripts/ingest/audit-ui-truth.ts', symbol: 'classes.anchor_nonmonotonic' },
       { path: 'scripts/ingest/verify-series-display.ts', symbol: 'verifySeries' },
-      { path: 'scripts/ingest/apply-research-batch-17.ts', symbol: 'REORDER_REGIMES' },
+      { path: 'scripts/ingest/history/apply-research-batch-17.ts', symbol: 'REORDER_REGIMES' },
     ],
     layer: 'both',
     auditClass: ['anchor_nonmonotonic', 'anchor_start_offtrend', 'verify:regression'],
