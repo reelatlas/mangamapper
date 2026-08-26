@@ -100,7 +100,7 @@ export function parseShowPage(html: string): AflShowPage {
     const nums: number[] = [];
     $(el)
       .find('.Episodes a')
-      .each((_i, a) => nums.push(...expandRange($(a).text())));
+      .each((_i, a) => { nums.push(...expandRange($(a).text())); });
     quickList[type] = nums.sort((a, b) => a - b);
   });
 

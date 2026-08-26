@@ -35082,7 +35082,9 @@ function parseShowPage(html3) {
     const type = CLASS_TO_TYPE[($2(el).attr("class") ?? "").trim()];
     if (!type) return;
     const nums = [];
-    $2(el).find(".Episodes a").each((_i, a) => nums.push(...expandRange($2(a).text())));
+    $2(el).find(".Episodes a").each((_i, a) => {
+      nums.push(...expandRange($2(a).text()));
+    });
     quickList[type] = nums.sort((a, b) => a - b);
   });
   const mismatches = [];

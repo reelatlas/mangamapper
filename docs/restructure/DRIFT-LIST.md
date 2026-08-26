@@ -13,7 +13,24 @@ name no audit class. 247 are bundles. 52 rules live ONLY in the change log.
 
 ---
 
-## A. Rulings needed (two live versions, or a question only you can settle)
+## A. Rulings — RULED by Sean 2026-08-25 (yes to all, cross-checked by Cursor; two edges recorded)
+
+| # | ruling |
+|---|---|
+| A-1 | b17 stands: the agent delivers the C2/C3 continue point; b16's "earliest not-yet-adapted" was the note-value. |
+| A-2 | Two ledger rows: episode END = running order; series COVERAGE = max across the run (A4). |
+| A-3 | Both, by tier: AFG-derived anchors may drop non-monotonic junk; research/manual anchors render as stored. |
+| A-4 | Research never index-joins. A writer-side title-join (or refuse pages whose order ≠ ours) is `/add-rule` BACKLOG — not a T3.1 proving exercise. |
+| A-5 | Re-staged content with nothing new = filler; mixed needs new canon. detective-conan 128/1000/1001 become a named re-check task (list, not vibe). |
+| A-6 | Healer over the 27 seeded starts under the sliver rule; deltas listed; Sean signs. |
+| A-7 | Parked to T4.0 with the evidence. Nothing retyped now. |
+| A-8 | `dismissed_permanent` disposition + reason; permanent conditions leave the open queue. |
+| A-9 | canon-tier creation is a standing rule; the system census finds whether the path exists — never rebuilt from the log. |
+| A-10 | one-pace excluded; the note must match the apply. |
+
+T2 edge (Cursor, accepted): `chain.ts#aggregate` may be UNIFIED with `resolve.ts`; it must not invent `source_type` values before T4.0.
+
+### The forks as presented (kept for the record)
 
 | # | the fork | versions on disk | recommendation |
 |---|---|---|---|

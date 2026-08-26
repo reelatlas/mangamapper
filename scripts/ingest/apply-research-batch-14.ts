@@ -85,7 +85,7 @@ async function main() {
       }
       const { data: existing } = await db
         .from('chapter_anchors')
-        .select('episode, chapter, start_chapter, source, chapters_adapted')
+        .select('episode, chapter, start_chapter, source, chapters_adapted, note')
         .eq('series_id', sid);
       const byEp = new Map((existing ?? []).map((a) => [a.episode, a]));
       const { data: comps } = await db.from('series_components').select('anilist_id, episode_end, season_order').eq('series_id', sid).order('season_order');
