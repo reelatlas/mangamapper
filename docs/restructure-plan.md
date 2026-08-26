@@ -1,6 +1,6 @@
 # Restructure phase — the plan (v2, agreed 2026-08-25)
 
-Status: **T0 in progress.** v1 was drafted from a disk survey, cross-checked
+Status: **T0 done (2026-08-25) — awaiting Sean's rulings on `docs/restructure/DRIFT-LIST.md` §A; T1 next.** v1 was drafted from a disk survey, cross-checked
 by a second model (Cursor/Grok), re-checked against the tree, and folded.
 This file is the phase's tracked board: every piece has an id, a track, a
 dependency and a status; the board is updated at every save point. When the
@@ -159,6 +159,12 @@ no agent ships the old words after the glossary exists. Agenda in §5.
   them; behaviour identical.
 - T2.2 `gen-docs` → `docs/rulings.md` keyed BY SERIES (one hop to "what have
   we ruled about this series").
+- T2.0 **Compile-graph sidecar (found 2026-08-25 during T0 setup):** root
+  `tsconfig.json` references only `src` and `vite.config.ts` — `scripts/ingest/`
+  (every lib gate, all scripts, the edge sources) is type-checked by NOTHING;
+  `tsx` strips types. The `tsc -b` gate is vacuous for the pipeline (the
+  `-p .` lesson again). Fix: `tsconfig.scripts.json` referenced from the root,
+  errors fixed, gate real — BEFORE T1.2 (the ledger check depends on it).
 - T2.3 **Completeness as an outcome (sidecar — starts now, no dependency):**
   `lib/db.ts` `selectAll` (paged, `count: 'exact'`), every catalog walk
   reports `processed/total` and FAILS if short; healers no-op on a clean
@@ -269,15 +275,18 @@ words after the glossary exists. Rough total: 8–12 sessions.
 
 | metric | today | done |
 |---|---|---|
-| ledger rows with no audit class | 69/88 | falling; empty cell = visible backlog |
-| PROTOCOL copies restating rule text | 4 | 1, ids only |
-| standing ruling maps outside `lib/rulings/` | T0 counts | 0 |
-| unrostered ingest scripts | ~20 | 0 |
+| ledger rows with no audit class | 69/88 §10 rows; 423/518 statements | falling; empty cell = visible backlog |
+| PROTOCOL copies restating rule text | 4 (13/21/17/33 rule citations) | 1, ids only |
+| standing ruling maps outside `lib/rulings/` | ≈30 (T0 count) | 0 |
+| unrostered ingest scripts | 36 to move/delete (34 history + 2 dead); 27 to roster | 0 |
 | CLAUDE.md role | mini-ledger | router + family strip |
 | one-hop cases (batch-17 misses) | 0 defined | all pass, mechanically + cold probe |
 | broken ledger citations | unknown | 0 (system census green) |
-| walks that cannot prove completeness | unknown | 0 |
+| walks that cannot prove completeness | 4 paging impls, 7+ unpaged selects, syncAnchors A1 hole | 0 |
+| ingest files outside the `tsc -b` graph | all of `scripts/` | 0 |
 | edge bundles ≠ lib hash | unchecked | 0 |
+| duplicated mechanisms (DRIFT-LIST §C) | 18 | 0 |
+| log-only rules | 52 (§12) + 11 (§11 prose) | 0 |
 
 ---
 
@@ -300,9 +309,9 @@ words after the glossary exists. Rough total: 8–12 sessions.
 
 | id | piece | depends | status |
 |---|---|---|---|
-| T0.1 | per-home extracts (9 homes, fan-out) | — | **in progress** |
-| T0.2 | merged inventory + duplicates + drift list (→ Sean) | T0.1 | planned |
-| T0.3 | script triage | T0.1 | planned |
+| T0.1 | per-home extracts (8 readers, 15 part-files, 1,142 entries) | — | done |
+| T0.2 | merged inventory + drift list (`docs/restructure/DRIFT-LIST.md`) | T0.1 | done — **§A awaits Sean** |
+| T0.3 | script triage (65 files: pull 7 · heal 16 · census 4 · history 34 · lib-support 2 · dead 2) | T0.1 | done |
 | T1.1 | docs split + CLAUDE.md router | T0.2 | planned |
 | T1.2 | ledger records + check + gen-docs | T0.2 | planned |
 | T1.3 | separations front page | T1.2 | planned |
@@ -312,6 +321,7 @@ words after the glossary exists. Rough total: 8–12 sessions.
 | T4.0 | glossary session (Sean) | T1.2 | planned |
 | T2.1 | lib/rulings/ + RulingEntry | T1.2 | planned |
 | T2.2 | rulings index by series | T2.1 | planned |
+| T2.0 | compile-graph sidecar (tsconfig.scripts.json) | T0.1 readers done | planned |
 | T2.3 | completeness sidecar | — | planned |
 | T2.4 | three rosters | T0.3 | planned |
 | T2.5 | script triage applied | T2.4 | planned |

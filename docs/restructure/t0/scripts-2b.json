@@ -1,0 +1,1198 @@
+{
+ "home": "scripts",
+ "part": "2b of 5 — rules/rulings in non-apply scripts (second half) + standing maps of non-apply scripts",
+ "read": [
+  "see scripts-1.json `read` — same material; no sources re-read for this part"
+ ],
+ "entries": [
+  {
+   "kind": "rule",
+   "statement": "A series whose ONLY anchors are source 'mu' is unverified BY DEFINITION (5 of the first 10 solo MU pins checked were wrong); verification exit = research rewrites the pin as source 'manual' with citations.",
+   "alias": "MU-pin verification queue",
+   "family_candidate": "V",
+   "where": [
+    {
+     "file": "scripts/ingest/audit-ui-truth.ts",
+     "loc": "lines 42-49, 472-476"
+    }
+   ],
+   "enforcement_site": null,
+   "enforcement_layer": "process",
+   "audit_class": "mu_pin_unverified",
+   "witnesses": [],
+   "bundle": false,
+   "bundle_parts": [],
+   "ruled_by": "Sean",
+   "ruled_on": "2026-08-23",
+   "status_hint": "live",
+   "notes": ""
+  },
+  {
+   "kind": "rule",
+   "statement": "Every ruling in lib/resolve is verified OUTCOME-side (community caps: no rows/totals above cap; SOURCE_NUMBERING_SHIFTS: no two adjacent rows share a non-empty title and the run is contiguous 1..max; CONTINUA_SUPPRESSED: zero afg-continua anchors; EPISODE_TYPE_OVERRIDES: stored type equals the override; AFG '* Filler' marker never in a stored title) so a writer that forgets the shared gate surfaces as data.",
+   "alias": "no one-offs — ways to ensure integrity",
+   "family_candidate": "R",
+   "where": [
+    {
+     "file": "scripts/ingest/audit-ui-truth.ts",
+     "loc": "lines 154-195, 432-439"
+    }
+   ],
+   "enforcement_site": "scripts/ingest/audit-ui-truth.ts#ruling_violation",
+   "enforcement_layer": "process",
+   "audit_class": "ruling_violation",
+   "witnesses": [
+    "dr-stone",
+    "eyeshield-21"
+   ],
+   "bundle": true,
+   "bundle_parts": [
+    "cap violations",
+    "shift: adjacent duplicate titles",
+    "shift: numbering holes",
+    "suppressed continua anchors",
+    "type override contradictions",
+    "'* Filler' marker leak"
+   ],
+   "ruled_by": "Sean",
+   "ruled_on": "2026-08-23",
+   "status_hint": "live",
+   "notes": ""
+  },
+  {
+   "kind": "rule",
+   "statement": "Filler / anime-only rows never take anchors — writer-side D1 gate in applyMuFrontier, outcome-side anchor_on_noncanon_row for ANY source; a hit is triage (junk anchor → delete with honest terminal on last canon/mixed ep, or wrong row type), never auto-delete; rearranged_zone_unanchored skips such rows because the rules forbid the record it would ask for.",
+   "alias": "A1",
+   "family_candidate": "A",
+   "where": [
+    {
+     "file": "scripts/ingest/audit-ui-truth.ts",
+     "loc": "lines 309-321, 350-356, 413-416"
+    }
+   ],
+   "enforcement_site": "scripts/ingest/lib/mu-frontier.ts#applyMuFrontier (writer) / audit-ui-truth anchor_on_noncanon_row (outcome)",
+   "enforcement_layer": "both",
+   "audit_class": "anchor_on_noncanon_row",
+   "witnesses": [
+    "my-hero-academia"
+   ],
+   "bundle": false,
+   "bundle_parts": [],
+   "ruled_by": "Sean",
+   "ruled_on": "2026-08-24",
+   "status_hint": "live",
+   "notes": "MHA ep 104 is the founding case."
+  },
+  {
+   "kind": "rule",
+   "statement": "Rearranged-zone gap (the GTO 20/21 lesson): an episode annotated rearranged/graft WITH chapter data but NO anchor sits where interpolation paints a plausible-but-wrong value — every hit is a research/promotion target; zone-level-only knowledge (note contains 'zone-acknowledged') is an acknowledged-approximate review item, not an open target; loose series and series with <2 anchors are exempt.",
+   "alias": "GTO lesson",
+   "family_candidate": "A",
+   "where": [
+    {
+     "file": "scripts/ingest/audit-ui-truth.ts",
+     "loc": "lines 295-338"
+    },
+    {
+     "file": "scripts/ingest/apply-rearranged-anchors.ts",
+     "loc": "lines 1-9"
+    }
+   ],
+   "enforcement_site": "scripts/ingest/audit-ui-truth.ts#rearranged_zone_unanchored",
+   "enforcement_layer": "process",
+   "audit_class": "rearranged_zone_unanchored / rearranged_zone_acknowledged",
+   "witnesses": [
+    "gto-great-teacher-onizuka"
+   ],
+   "bundle": false,
+   "bundle_parts": [],
+   "ruled_by": "Sean",
+   "ruled_on": "2026-08-23",
+   "status_hint": "live",
+   "notes": ""
+  },
+  {
+   "kind": "rule",
+   "statement": "Anchor sanity outcome checks: non-monotonic sequences are real reorder or junk (ask Sean) unless ruled by rearranged/graft annotations; START below prev END−1 is a poisoned start unless ruled; chapter > manga space+10 is junk by definition; chapter/START above the same-edition DISPLAY total (or CONTINUE above total+1) is count-space poison in a number-space instrument; a DERIVED fractional-chapter anchor is a bonus-chapter mis-scrape (research/wiki fractionals are legal); loose series are exempt from monotonicity.",
+   "alias": null,
+   "family_candidate": "A",
+   "where": [
+    {
+     "file": "scripts/ingest/audit-ui-truth.ts",
+     "loc": "lines 275-281, 340-412"
+    }
+   ],
+   "enforcement_site": "scripts/ingest/audit-ui-truth.ts",
+   "enforcement_layer": "process",
+   "audit_class": "anchor_nonmonotonic / anchor_start_offtrend / anchor_beyond_chapter_space / anchor_beyond_display_total / anchor_fractional_chapter",
+   "witnesses": [
+    "boruto-naruto-next-generations",
+    "oshi-no-ko",
+    "tokyo-ghoul",
+    "the-case-study-of-vanitas"
+   ],
+   "bundle": true,
+   "bundle_parts": [
+    "nonmonotonic unless ruled",
+    "start off-trend unless ruled",
+    "beyond chapter space +10",
+    "beyond display total (same-edition band; continue ≤ total+1)",
+    "derived fractional = mis-scrape; manual/wiki fractional legal",
+    "loose exempt"
+   ],
+   "ruled_by": "Sean",
+   "ruled_on": "2026-08-23/24",
+   "status_hint": "live",
+   "notes": "Audits home owns the class definitions; recorded here because the comments state the rules."
+  },
+  {
+   "kind": "rule",
+   "statement": "C3 outcome check: a continue point sitting below chapters the same episode already covered must carry a skip-on-arrival note (strictly greater — continue == an adapted chapter is C1 mid-chapter straddle); healed by the parity healer's C3 pass.",
+   "alias": "C3",
+   "family_candidate": "C",
+   "where": [
+    {
+     "file": "scripts/ingest/audit-ui-truth.ts",
+     "loc": "lines 417-428"
+    }
+   ],
+   "enforcement_site": "scripts/ingest/lib/c3.ts#c3Ahead / hasSkipLanguage",
+   "enforcement_layer": "both",
+   "audit_class": "continue_skip_unnoted",
+   "witnesses": [],
+   "bundle": false,
+   "bundle_parts": [],
+   "ruled_by": "Sean",
+   "ruled_on": "2026-08-25",
+   "status_hint": "live",
+   "notes": "Healer named as 'apply-parity-continues.ts' — lives in research/batch15/, outside this home."
+  },
+  {
+   "kind": "rule",
+   "statement": "Anchor-density: a canon/mixed desert of >12 unanchored episodes between anchor points (filler and anime-only-canon do not count — the Black Clover 130-157 lesson) is a research-tier target; canon episodes past the last anchor render null (beyond-frontier rule refuses to extrapolate) and each is one of mis-numbered anchor / mistyped episode / real side content — never auto-fix.",
+   "alias": "beyond-frontier rule",
+   "family_candidate": "A",
+   "where": [
+    {
+     "file": "scripts/ingest/audit-ui-truth.ts",
+     "loc": "lines 479-518"
+    }
+   ],
+   "enforcement_site": "scripts/ingest/audit-ui-truth.ts",
+   "enforcement_layer": "process",
+   "audit_class": "anchor_gap_research / frontier_tail_null",
+   "witnesses": [
+    "black-clover",
+    "rurouni-kenshin",
+    "haikyu",
+    "x"
+   ],
+   "bundle": true,
+   "bundle_parts": [
+    ">12 canon gap = research target",
+    "anime-only-canon has no manga counterpart by design",
+    "trailing canon eps render null, never auto-fix"
+   ],
+   "ruled_by": "Sean",
+   "ruled_on": "2026-08-23/24",
+   "status_hint": "live",
+   "notes": ""
+  },
+  {
+   "kind": "rule",
+   "statement": "Volume-boundary identity + sanity: a manga's Wikipedia boundary rows must come from a page naming THAT manga (≥0.5 title-token overlap with any series/synonym), must not run past a finished manga's known total, and no row may have end<start or a start not exceeding the previous volume's (parse artifact → heal-volume-boundaries).",
+   "alias": "Slime ← Cells at Work / Made in Abyss ← Claymore class; Sailor Moon v3 report",
+   "family_candidate": "V",
+   "where": [
+    {
+     "file": "scripts/ingest/audit-ui-truth.ts",
+     "loc": "lines 525-580"
+    },
+    {
+     "file": "scripts/ingest/volumes-backfill.ts",
+     "loc": "lines 7-15"
+    }
+   ],
+   "enforcement_site": "scripts/ingest/volumes-backfill.ts (writer) / lib/wikipedia boundariesWithDrops / heal-volume-boundaries.ts",
+   "enforcement_layer": "both",
+   "audit_class": "boundaries_wrong_page / boundaries_beyond_total / boundaries_degenerate",
+   "witnesses": [
+    "that-time-i-got-reincarnated-as-a-slime",
+    "made-in-abyss",
+    "sailor-moon",
+    "cardcaptor-sakura",
+    "rosario-vampire",
+    "dragon-ball"
+   ],
+   "bundle": true,
+   "bundle_parts": [
+    "page identity by title overlap",
+    "finished total trim",
+    "monotonic start / end ≥ start"
+   ],
+   "ruled_by": "Sean",
+   "ruled_on": "2026-08-23/24",
+   "status_hint": "live",
+   "notes": ""
+  },
+  {
+   "kind": "rule",
+   "statement": "Structure integrity: episodes outrunning the component structure (max episode > max(total, comp end, aired)) is integrity_eps_beyond_total; a FINISHED series whose aired count exceeds its row count is integrity_total_beyond_eps (a source counts content our list lacks); an unaired component must hold a NULL span, never start>end (Tokyo Revengers' 51-50 escape); one AniList entry claimed by two series' components is integrity_double_claimed.",
+   "alias": "±2 interrogation",
+   "family_candidate": "S",
+   "where": [
+    {
+     "file": "scripts/ingest/audit-ui-truth.ts",
+     "loc": "lines 57-67, 141-153, 449-461"
+    }
+   ],
+   "enforcement_site": "scripts/ingest/lib/chain.ts#writeComponents (span guard) / reconcile-structure.ts",
+   "enforcement_layer": "both",
+   "audit_class": "integrity_eps_beyond_total / integrity_total_beyond_eps / integrity_degenerate_span / integrity_double_claimed",
+   "witnesses": [
+    "tokyo-revengers",
+    "attack-on-titan"
+   ],
+   "bundle": true,
+   "bundle_parts": [],
+   "ruled_by": "Sean",
+   "ruled_on": "2026-08-24",
+   "status_hint": "live",
+   "notes": ""
+  },
+  {
+   "kind": "process",
+   "statement": "Asterisk review workflow: annotation kinds derive from episode_annotations (single source of truth); series.asterisk_review tracks sign-off; annotated-but-unmarked series heal to 'pending'; 'pending' rows are Sean's sign-off queue; every aired episode should carry a real title and an air date (episode-data initiative work-lists).",
+   "alias": null,
+   "family_candidate": "P",
+   "where": [
+    {
+     "file": "scripts/ingest/audit-ui-truth.ts",
+     "loc": "lines 197-273"
+    }
+   ],
+   "enforcement_site": "scripts/ingest/audit-ui-truth.ts (asterisk heal)",
+   "enforcement_layer": "process",
+   "audit_class": "asterisk_unreviewed / title_incomplete / airdate_incomplete / fractional_unmodeled",
+   "witnesses": [],
+   "bundle": true,
+   "bundle_parts": [],
+   "ruled_by": "Sean",
+   "ruled_on": "2026-08-23",
+   "status_hint": "live",
+   "notes": ""
+  },
+  {
+   "kind": "rule",
+   "statement": "Manga-coverage classification: 'anchored' counts only when the frontier is FRESH (a max anchor far behind the run is stale); an MU pair adding no chapter progress is the same stale frontier; stale anchors + no MU frontier → flag for research, synthesis must NOT override (a diverged anime would claim full coverage); D1 refusals (sibling scope / scope consumed / episode type) surface as their own classes so a refused frontier never masquerades as 'no MU coverage'; a manga-sourced series with no manga link is a data hole.",
+   "alias": "anchor-freshness rule",
+   "family_candidate": "V",
+   "where": [
+    {
+     "file": "scripts/ingest/audit-manga-coverage.ts",
+     "loc": "lines 1-9, 22-45, 76-147"
+    }
+   ],
+   "enforcement_site": "scripts/ingest/lib/mu-frontier.ts#applyMuFrontier",
+   "enforcement_layer": "both",
+   "audit_class": "active_anchored / stale_anchor_no_frontier / mu_refused_* / data_hole_no_manga_link / pending_finished_unknown_coverage",
+   "witnesses": [
+    "my-hero-academia"
+   ],
+   "bundle": true,
+   "bundle_parts": [],
+   "ruled_by": "Sean",
+   "ruled_on": "2026-08-23/24",
+   "status_hint": "live",
+   "notes": ""
+  },
+  {
+   "kind": "rule",
+   "statement": "latest_known_chapters is written from MU only under the same-edition band + confirmed-anchor chapter floor (release number ≥ confirmed anchors; status-string count as fallback); failures NULL-heal (a pre-guard bad write must not linger) and flag 'MU numbering diverges >20% — which is the reading edition?'.",
+   "alias": "same-edition band",
+   "family_candidate": "V",
+   "where": [
+    {
+     "file": "scripts/ingest/audit-manga-coverage.ts",
+     "loc": "lines 82-104"
+    },
+    {
+     "file": "scripts/ingest/mu-backfill.ts",
+     "loc": "lines 97-118"
+    }
+   ],
+   "enforcement_site": "scripts/ingest/lib/mu-frontier.ts#bestLatestKnown",
+   "enforcement_layer": "writer",
+   "audit_class": null,
+   "witnesses": [
+    "kakegurui",
+    "dragon-ball-z"
+   ],
+   "bundle": false,
+   "bundle_parts": [],
+   "ruled_by": "session",
+   "ruled_on": "2026-08-24",
+   "status_hint": "live",
+   "notes": "Kakegurui's '9' was a volume count against ch-55 anchors."
+  },
+  {
+   "kind": "rule",
+   "statement": "MU applies to ALL series as check + validation (universal targeting); identity strictly via the MangaDex bridge (no title-guessing; unbridgeable manga flag); inline upkeep (latest_known + frontier + status cross-check) lands WITH the pull, never in a separate step.",
+   "alias": "new-source checklist",
+   "family_candidate": "V",
+   "where": [
+    {
+     "file": "scripts/ingest/mu-backfill.ts",
+     "loc": "lines 1-14, 28-31, 97-99"
+    }
+   ],
+   "enforcement_site": "scripts/ingest/mu-backfill.ts#main / refresh-mu",
+   "enforcement_layer": "writer",
+   "audit_class": null,
+   "witnesses": [
+    "dragon-ball-z"
+   ],
+   "bundle": true,
+   "bundle_parts": [
+    "universal targeting",
+    "MangaDex-bridge identity only",
+    "inline upkeep with the pull"
+   ],
+   "ruled_by": "Sean",
+   "ruled_on": "2026-08-24",
+   "status_hint": "live",
+   "notes": ""
+  },
+  {
+   "kind": "rule",
+   "statement": "Monotonic-start heal over stored boundary rows: keep the maximum-weight strictly-increasing subsequence of chapter_start (research rows weight 1000 and are never dropped; self-degenerate rows lose ties), re-close ONLY broken ends (degenerate, overlapping, or null-with-successor — a valid end like Tokyo Ghoul :re v3 ending at 31 before a fractional 31.5 is left alone), null a degenerate FINAL volume; when the coherent run is a minority of the table and no research rows exist, WIPE the whole table (the Ippo v61 / Urusei Yatsura principle) and flag boundary_parse_unusable; otherwise flag boundary_parse_artifact so research can restore the true starts.",
+   "alias": "Ippo v61 partial-boundary principle",
+   "family_candidate": "V",
+   "where": [
+    {
+     "file": "scripts/ingest/heal-volume-boundaries.ts",
+     "loc": "lines 1-16, 63-171"
+    }
+   ],
+   "enforcement_site": "scripts/ingest/heal-volume-boundaries.ts#main",
+   "enforcement_layer": "writer",
+   "audit_class": "boundaries_degenerate",
+   "witnesses": [
+    "sailor-moon",
+    "fairy-tail",
+    "tokyo-ghoul-re",
+    "beelzebub",
+    "urusei-yatsura",
+    "hajime-no-ippo-the-fighting"
+   ],
+   "bundle": true,
+   "bundle_parts": [
+    "max-weight increasing subsequence",
+    "research rows authoritative, never deleted",
+    "re-close only broken ends",
+    "final degenerate → null",
+    "wholesale-garbage wipe when kept*2 < total and no research rows"
+   ],
+   "ruled_by": "Sean",
+   "ruled_on": "2026-08-24",
+   "status_hint": "live",
+   "notes": ""
+  },
+  {
+   "kind": "rule",
+   "statement": "Volume-boundary ingest: targets are manga behind ANCHORED series (explicit id list overrides); the manga's OWN title leads the page search (anime title fallback); a manga whose page family no longer qualifies loses its stale wikipedia rows; a page whose parse repeats volume numbers or runs backwards is a franchise/disambiguation page and is skipped; boundariesWithDrops drops non-increasing starts and flags; for a FINISHED manga with a known total, rows past the total are TRIMMED and the last end clamped; <2 volumes or last start > total+50 flag; research-tier later rows close the last wiki volume at their first chapter −1; wikipedia rows are full-replaced, research rows untouched.",
+   "alias": "Slime/Dragon Ball lesson",
+   "family_candidate": "V",
+   "where": [
+    {
+     "file": "scripts/ingest/volumes-backfill.ts",
+     "loc": "lines 1-15, 31-62, 65-198"
+    }
+   ],
+   "enforcement_site": "scripts/ingest/volumes-backfill.ts#main",
+   "enforcement_layer": "writer",
+   "audit_class": "boundaries_wrong_page / boundaries_beyond_total",
+   "witnesses": [
+    "dragon-ball",
+    "dragon-ball-z-kai",
+    "cardcaptor-sakura",
+    "rosario-vampire"
+   ],
+   "bundle": true,
+   "bundle_parts": [
+    "anchored-only targets",
+    "manga title first",
+    "stale rows cleared",
+    "inconsistent page skipped",
+    "monotonic-start drops",
+    "finished-total trim + clamp",
+    "<2 vols / start>total+50 flag",
+    "research rows close last wiki volume",
+    "wikipedia rows full-replace"
+   ],
+   "ruled_by": "Sean",
+   "ruled_on": "2026-08-23/24",
+   "status_hint": "live",
+   "notes": ""
+  },
+  {
+   "kind": "rule",
+   "statement": "Whole-series display verification: after ANY anchor/episode adjustment, render the series through the app's exact code path (assemble + buildEpisodeList) BEFORE reporting done; every canon/mixed row inside the mapped frontier must have a chapter (no null/NaN holes) and starts must be non-decreasing except episodes ruled by rearranged/graft annotations; loose series are skipped whole; a canon row inside a reorder crossing renders null BY RULE (no formula may bridge a reorder) and is reported as a hole (exact-record work-list), never a failure.",
+   "alias": "verify-after-adjust ruling / reorder hole rule",
+   "family_candidate": "P",
+   "where": [
+    {
+     "file": "scripts/ingest/verify-series-display.ts",
+     "loc": "lines 1-21, 105-129"
+    }
+   ],
+   "enforcement_site": "scripts/ingest/verify-series-display.ts#verifySeries",
+   "enforcement_layer": "display",
+   "audit_class": null,
+   "witnesses": [
+    "my-hero-academia"
+   ],
+   "bundle": true,
+   "bundle_parts": [
+    "run after any adjustment before reporting done",
+    "canon/mixed rows inside frontier must have ch",
+    "starts non-decreasing unless ruled",
+    "loose skipped",
+    "reorder crossing → null hole, not failure"
+   ],
+   "ruled_by": "Sean",
+   "ruled_on": "2026-08-23",
+   "status_hint": "live",
+   "notes": "Not a re-implementation: imports src/data/catalog/assemble.ts and src/lib/mapping.ts."
+  },
+  {
+   "kind": "rule",
+   "statement": "AFG never touches episode types — the AFG backfill writes anchors only (source 'afg'), through the shared lib/anchors write path; series lookup is identity-registry FIRST, then afl_slug / own id / slugified title only for never-registered pages; 10s/host courtesy pacing; 24h resume window; --force re-fetches + re-parses after parser changes.",
+   "alias": null,
+   "family_candidate": "T",
+   "where": [
+    {
+     "file": "scripts/ingest/afg-backfill.ts",
+     "loc": "lines 1-17, 41-56, 108-111"
+    },
+    {
+     "file": "scripts/ingest/rederive-anchors.ts",
+     "loc": "lines 15-29"
+    }
+   ],
+   "enforcement_site": "scripts/ingest/lib/anchors.ts#syncAnchors",
+   "enforcement_layer": "writer",
+   "audit_class": null,
+   "witnesses": [],
+   "bundle": true,
+   "bundle_parts": [
+    "AFG = anchors only, never types",
+    "registry-first lookup",
+    "pacing/resume/--force"
+   ],
+   "ruled_by": "session",
+   "ruled_on": null,
+   "status_hint": "live",
+   "notes": ""
+  },
+  {
+   "kind": "rule",
+   "statement": "afg-continua anchors are derivation-tier: the sweep wipes and rebuilds them per series via the same applyContinua the refresh-afg edge runs inline (identity guard, self-consistency, chapter-space gate, precedence, boundary writes, cross-check flags); unserved pages apply at series-creation time.",
+   "alias": null,
+   "family_candidate": "V",
+   "where": [
+    {
+     "file": "scripts/ingest/afg-continua-apply.ts",
+     "loc": "lines 1-7, 26"
+    }
+   ],
+   "enforcement_site": "scripts/ingest/lib/anchors.ts#applyContinua",
+   "enforcement_layer": "writer",
+   "audit_class": null,
+   "witnesses": [],
+   "bundle": false,
+   "bundle_parts": [],
+   "ruled_by": "Sean",
+   "ruled_on": "2026-08-23",
+   "status_hint": "live",
+   "notes": "CLAUDE.md invariant 7 (repairs on derivation-tier rows are wiped) is the consequence."
+  },
+  {
+   "kind": "trap",
+   "statement": "Conditional GETs are wrong when we hold no body: registration-tier AFG rows carried etags but no raw_html, so the first continua campaign got 304s and staged nothing — never send etag/last-modified for a page whose body is not stored.",
+   "alias": null,
+   "family_candidate": "P",
+   "where": [
+    {
+     "file": "scripts/ingest/afg-continua-backfill.ts",
+     "loc": "lines 35-40"
+    }
+   ],
+   "enforcement_site": "scripts/ingest/afg-continua-backfill.ts#main",
+   "enforcement_layer": "writer",
+   "audit_class": null,
+   "witnesses": [],
+   "bundle": false,
+   "bundle_parts": [],
+   "ruled_by": "session",
+   "ruled_on": "2026-08-23",
+   "status_hint": "live",
+   "notes": "Pipeline trap; the same no-conditional-header choice appears in refix.ts (parser changed, page did not)."
+  },
+  {
+   "kind": "rule",
+   "statement": "AFG expansion: AFG-only shows become canonical series only on exact-match-or-flag against AniList (whitespace-insensitive full-title/synonym equality, series formats TV/TV_SHORT/ONA preferred, ASCII-folded retry for accented titles, never prefix-matching); the matched entry's SEQUEL chain is walked (ownership-guarded) before the ±2/lag alignment gate; the 60% sparse guard applies against the whole finished chain; id clashes fall back to id-year then id-anilistId; zero-episode registration-tier pages are still candidates for unserved slugs (SHY sat invisible behind the ≥6 filter).",
+   "alias": "exact-match-or-flag",
+   "family_candidate": "I",
+   "where": [
+    {
+     "file": "scripts/ingest/afg-expansion.ts",
+     "loc": "lines 1-14, 51-59, 91-176"
+    }
+   ],
+   "enforcement_site": "scripts/ingest/afg-expansion.ts#main",
+   "enforcement_layer": "writer",
+   "audit_class": null,
+   "witnesses": [
+    "frieren",
+    "solo-leveling",
+    "oshi-no-ko",
+    "cafe-terrace",
+    "ao-ashi",
+    "shy"
+   ],
+   "bundle": true,
+   "bundle_parts": [
+    "exact title equality only",
+    "series formats preferred",
+    "accent-fold retry",
+    "chain walk before gate (stitch-aware)",
+    "sparse 60% vs chain",
+    "id clash fallbacks",
+    "zero-row pages still candidates"
+   ],
+   "ruled_by": "Sean",
+   "ruled_on": "2026-08-24",
+   "status_hint": "live",
+   "notes": ""
+  },
+  {
+   "kind": "rule",
+   "statement": "Staging must never hold output the current parse would not produce: after any lib/afg.ts parser change every staged page's raw_html is re-parsed into raw (preserving a previously staged continua when the re-parse finds none) and content_hash updated.",
+   "alias": "consolidate step-3 contract",
+   "family_candidate": "P",
+   "where": [
+    {
+     "file": "scripts/ingest/afg-restage.ts",
+     "loc": "lines 1-7, 24-30"
+    }
+   ],
+   "enforcement_site": "scripts/ingest/afg-restage.ts#main",
+   "enforcement_layer": "process",
+   "audit_class": null,
+   "witnesses": [],
+   "bundle": false,
+   "bundle_parts": [],
+   "ruled_by": "session",
+   "ruled_on": "2026-08-25",
+   "status_hint": "live",
+   "notes": ""
+  },
+  {
+   "kind": "rule",
+   "statement": "Structure reconciliation: whenever a series' episode numbering outruns its component structure BY ANY AMOUNT, walk the AniList chain to the episodes' end (ownership-guarded, bridge formats included); chain confirms (±2/lag) → structure rebuilds (id/title/afl_slug preserved, scope applied, episode floor); a 1-2 episode overshoot with no chain progress just floors the totals (episode-floor invariant); larger unexplained overshoot files count_mismatch (stage reconcile-structure) — nothing guessed; EXTRAS_ADOPTED series adopt the episode count.",
+   "alias": "episode-floor invariant / AoT Final Chapters finding",
+   "family_candidate": "S",
+   "where": [
+    {
+     "file": "scripts/ingest/reconcile-structure.ts",
+     "loc": "lines 1-11, 40-120"
+    }
+   ],
+   "enforcement_site": "scripts/ingest/reconcile-structure.ts#main / lib/resolve applyEpisodeFloor + EXTRAS_ADOPTED",
+   "enforcement_layer": "writer",
+   "audit_class": "integrity_eps_beyond_total",
+   "witnesses": [
+    "attack-on-titan"
+   ],
+   "bundle": true,
+   "bundle_parts": [
+    "any overshoot triggers a walk",
+    "confirm → rebuild, id/title/slug stable",
+    "≤2 overshoot floors totals",
+    "else flag, never guess",
+    "EXTRAS_ADOPTED adopt count"
+   ],
+   "ruled_by": "Sean",
+   "ruled_on": "2026-08-24",
+   "status_hint": "live",
+   "notes": ""
+  },
+  {
+   "kind": "rule",
+   "statement": "Sequel-linked series sharing one manga MUST be scoped (series_scopes) — otherwise each shows the whole franchise (the Naruto bug); any such pair without a scope row flags count_mismatch 'needs scope curation'; a curated scope row dismisses that flag and syncs total/start volume+chapter into canonical.",
+   "alias": "the Naruto bug",
+   "family_candidate": "S",
+   "where": [
+    {
+     "file": "scripts/ingest/scopes-apply.ts",
+     "loc": "lines 13-35, 36-73"
+    }
+   ],
+   "enforcement_site": "scripts/ingest/scopes-apply.ts#main / lib/resolve applyScope (inline on every resolve/stitch)",
+   "enforcement_layer": "writer",
+   "audit_class": null,
+   "witnesses": [
+    "naruto"
+   ],
+   "bundle": false,
+   "bundle_parts": [],
+   "ruled_by": "session",
+   "ruled_on": "2026-08-22",
+   "status_hint": "live",
+   "notes": ""
+  },
+  {
+   "kind": "rule",
+   "statement": "source_map dispositions are RULINGS, not cache state: excluded (movies/OVAs, alias-corrupt pages) and duplicate slugs stay out of the AFL sweep until deliberately re-evaluated; parse-integrity failures and large staging diffs are HELD (flagged), never written.",
+   "alias": null,
+   "family_candidate": "I",
+   "where": [
+    {
+     "file": "scripts/ingest/backfill.ts",
+     "loc": "lines 27-35, 62-82"
+    }
+   ],
+   "enforcement_site": "scripts/ingest/backfill.ts#main / lib/resolve stageAfl",
+   "enforcement_layer": "writer",
+   "audit_class": null,
+   "witnesses": [],
+   "bundle": false,
+   "bundle_parts": [],
+   "ruled_by": "Sean",
+   "ruled_on": "2026-08-22",
+   "status_hint": "live",
+   "notes": ""
+  },
+  {
+   "kind": "rule",
+   "statement": "Cleanup rulings (2026-08-22): (1) series whose AniList format is MOVIE/OVA/SPECIAL/MUSIC, and unresolved slugs matching /(movies?|films?|ovas?|oads?|oav|specials?|ovaoad)/, are excluded from v1 with a durable note 're-evaluate with the watch-order concept'; (2) duplicate AFL pages ('-0' Drupal collision slugs, flagged dups): more classified episodes wins, loser marked duplicate; (3) unclassified (zero-row) series leave canonical unless status=upcoming; (4) every canonical series gets a baseline season-1 component row.",
+   "alias": null,
+   "family_candidate": "I",
+   "where": [
+    {
+     "file": "scripts/ingest/cleanup.ts",
+     "loc": "lines 1-13, 44-146"
+    }
+   ],
+   "enforcement_site": "scripts/ingest/cleanup.ts#main (one-shot); lib/match.ts SERIES_FORMATS preference (ongoing)",
+   "enforcement_layer": "writer",
+   "audit_class": null,
+   "witnesses": [
+    "promised-neverland"
+   ],
+   "bundle": true,
+   "bundle_parts": [
+    "movie/OVA format + slug exclusion",
+    "duplicate: more classified wins",
+    "unclassified leave unless upcoming",
+    "baseline component row"
+   ],
+   "ruled_by": "Sean",
+   "ruled_on": "2026-08-22",
+   "status_hint": "live",
+   "notes": "The format rule mis-swept jojo/monster/x (bad MATCH, not movie pages) — fix-mismatch UNEXCLUDE reverted them and the matcher became format-aware. Step 4 (baseline component) would clobber stitched components if re-run."
+  },
+  {
+   "kind": "rule",
+   "statement": "Flag-queue hygiene: exact-duplicate OPEN flags (same series_key + kind) are dismissed keeping the oldest; a unique flag is never dismissed by a script — rulings stay human.",
+   "alias": null,
+   "family_candidate": "P",
+   "where": [
+    {
+     "file": "scripts/ingest/cleanup-flags.ts",
+     "loc": "lines 1-6"
+    }
+   ],
+   "enforcement_site": "scripts/ingest/cleanup-flags.ts#main / lib/db fileFlagOnce",
+   "enforcement_layer": "process",
+   "audit_class": null,
+   "witnesses": [],
+   "bundle": false,
+   "bundle_parts": [],
+   "ruled_by": "session",
+   "ruled_on": null,
+   "status_hint": "live",
+   "notes": ""
+  },
+  {
+   "kind": "rule",
+   "statement": "EPISODE_TYPE_OVERRIDES re-apply on every episode WRITE, but a ruling entered after a row's last write leaves the stored row stale until the next refresh — the healer asserts every override over stored rows now (the eyeshield ep-74 lesson), pairing with the ruling_violation outcome check.",
+   "alias": "eyeshield ep-74 lesson",
+   "family_candidate": "T",
+   "where": [
+    {
+     "file": "scripts/ingest/assert-type-overrides.ts",
+     "loc": "lines 1-8"
+    }
+   ],
+   "enforcement_site": "scripts/ingest/assert-type-overrides.ts#main",
+   "enforcement_layer": "writer",
+   "audit_class": "ruling_violation",
+   "witnesses": [
+    "eyeshield-21"
+   ],
+   "bundle": false,
+   "bundle_parts": [],
+   "ruled_by": "session",
+   "ruled_on": "2026-08-25",
+   "status_hint": "live",
+   "notes": "Not yet listed in the consolidate skill's healer list (apply-research-batch-8/11/12 did the same retype ad hoc)."
+  },
+  {
+   "kind": "architecture",
+   "statement": "supabase/functions/<name>/index.ts are GENERATED bundles of supabase/functions/_src/*.ts over scripts/ingest/lib (esbuild, esm, browser platform, node:* external) — never edit them; lib is the single source of truth.",
+   "alias": "invariant 2",
+   "family_candidate": "P",
+   "where": [
+    {
+     "file": "scripts/ingest/build-functions.ts",
+     "loc": "lines 1-4, 14-24"
+    }
+   ],
+   "enforcement_site": "scripts/ingest/build-functions.ts",
+   "enforcement_layer": "process",
+   "audit_class": null,
+   "witnesses": [],
+   "bundle": false,
+   "bundle_parts": [],
+   "ruled_by": "Sean",
+   "ruled_on": null,
+   "status_hint": "live",
+   "notes": ""
+  },
+  {
+   "kind": "process",
+   "statement": "Run parser-check.ts (fixture regressions for AFL/AFG/Wikipedia parsers: Naruto 220 eps 90/74/56 types, Another ep 0, Boruto duplicate-row collapse, One Piece AFG ep 62 = 102,103, parseChapters thousands/ranges, One Piece vol 1 = ch 1-8, final volume open) before any live ingest and after touching any parser.",
+   "alias": null,
+   "family_candidate": "P",
+   "where": [
+    {
+     "file": "scripts/ingest/parser-check.ts",
+     "loc": "lines 1-3"
+    }
+   ],
+   "enforcement_site": "scripts/ingest/parser-check.ts",
+   "enforcement_layer": "process",
+   "audit_class": null,
+   "witnesses": [
+    "naruto",
+    "another",
+    "boruto-naruto-next-generations",
+    "one-piece"
+   ],
+   "bundle": false,
+   "bundle_parts": [],
+   "ruled_by": "session",
+   "ruled_on": null,
+   "status_hint": "live",
+   "notes": "Not wired into npm test / the gates in CLAUDE.md."
+  },
+  {
+   "kind": "architecture",
+   "statement": "rebuild.ts is a canonical-shape migration only: it wipes canonical (series cascade) and re-resolves every active matched staged slug as SINGLE-SEASON, clobbering stitched aggregates and components — ALWAYS re-run stitch.ts (and scopes-apply.ts) afterwards.",
+   "alias": "DANGER post-stitching",
+   "family_candidate": "P",
+   "where": [
+    {
+     "file": "scripts/ingest/rebuild.ts",
+     "loc": "lines 1-7"
+    }
+   ],
+   "enforcement_site": null,
+   "enforcement_layer": "process",
+   "audit_class": null,
+   "witnesses": [],
+   "bundle": false,
+   "bundle_parts": [],
+   "ruled_by": "session",
+   "ruled_on": null,
+   "status_hint": "live",
+   "notes": "merge.ts and polish-ids.ts would also need re-running after a rebuild; not stated."
+  },
+  {
+   "kind": "trap",
+   "statement": "Wayback's id_ raw-form URLs redirect to the NEAREST raw capture (sometimes years off — mid-airing pages), so v1 staged truncated data; recovery must fetch RENDERED snapshots at exact timestamps, normalize archive-rewritten hrefs, validate the parsed count against the AniList total (≥90%), and walk newer→older until a complete capture parses; archive.org drops connections under load — retry with backoff.",
+   "alias": null,
+   "family_candidate": "P",
+   "where": [
+    {
+     "file": "scripts/ingest/wayback-recover2.ts",
+     "loc": "lines 1-7, 30-45, 87-111"
+    }
+   ],
+   "enforcement_site": "scripts/ingest/wayback-recover2.ts",
+   "enforcement_layer": "writer",
+   "audit_class": null,
+   "witnesses": [],
+   "bundle": false,
+   "bundle_parts": [],
+   "ruled_by": "session",
+   "ruled_on": "2026-08-22",
+   "status_hint": "dead",
+   "notes": "Script is triaged dead (input file is an out-of-repo scratch); the trap knowledge would be lost with it."
+  },
+  {
+   "kind": "rule",
+   "statement": "Title-alignment verification: compare stored non-empty titles against the wiki episode list at offsets −1/0/+1 per quarter of the run; the flip point localizes numbering-space divergence (a special one source numbers, segment-vs-broadcast counting); read-only — findings drive DECLARED shifts, never automatic ones.",
+   "alias": "Sean's UY report",
+   "family_candidate": "N",
+   "where": [
+    {
+     "file": "scripts/ingest/wiki-title-verify.ts",
+     "loc": "lines 1-6, 45-59"
+    }
+   ],
+   "enforcement_site": null,
+   "enforcement_layer": "process",
+   "audit_class": null,
+   "witnesses": [
+    "urusei-yatsura"
+   ],
+   "bundle": false,
+   "bundle_parts": [],
+   "ruled_by": "Sean",
+   "ruled_on": "2026-08-23",
+   "status_hint": "live",
+   "notes": ""
+  },
+  {
+   "kind": "process",
+   "statement": "The full backfill runs only after Sean reviews the pilot's output and flags (three headline shows end-to-end first).",
+   "alias": null,
+   "family_candidate": "P",
+   "where": [
+    {
+     "file": "scripts/ingest/pilot.ts",
+     "loc": "lines 1-4"
+    }
+   ],
+   "enforcement_site": null,
+   "enforcement_layer": "process",
+   "audit_class": null,
+   "witnesses": [
+    "naruto",
+    "one-piece",
+    "bleach"
+   ],
+   "bundle": false,
+   "bundle_parts": [],
+   "ruled_by": "Sean",
+   "ruled_on": "2026-08-22",
+   "status_hint": "dead",
+   "notes": "Historical process step; script triaged dead."
+  },
+  {
+   "kind": "ruling",
+   "statement": "assisted-prep SET_MATCH ×6 (f-zero-legend-falcon → 3101; sword-oratoria → 21676 'separate series per ruling, side_story of DanMachi'; kuroko's-basketball → 11771; jojos-bizarre-adventure-tv → 14719; x → 156; melancholy-haruhi-suzumiya → 4382 '2009 rebroadcast = the full 28-ep ordering AFL uses') and EXCLUDE ×4 (rwby no AniList entry; ippo mashiba-vs-kimura 1-ep special; k-seven-stories movie series; pokémon-origins 4-ep miniseries — out of v1 scope, re-evaluate with watch-order).",
+   "alias": null,
+   "family_candidate": "I",
+   "where": [
+    {
+     "file": "scripts/ingest/assisted-prep.ts",
+     "loc": "const SET_MATCH lines 10-17; const EXCLUDE lines 19-24"
+    }
+   ],
+   "enforcement_site": "source_map (manual, verified)",
+   "enforcement_layer": "writer",
+   "audit_class": null,
+   "witnesses": [
+    "f-zero-legend-falcon",
+    "it-wrong-try-pick-girls-dungeon-side-sword-oratoria",
+    "jojos-bizarre-adventure-tv",
+    "x",
+    "melancholy-haruhi-suzumiya",
+    "rwby",
+    "k-seven-stories"
+   ],
+   "bundle": false,
+   "bundle_parts": [],
+   "ruled_by": "Sean",
+   "ruled_on": "2026-08-22",
+   "status_hint": "live",
+   "notes": "Reasons inline per entry; chains themselves live in stitch OVERRIDE_CHAINS (header)."
+  },
+  {
+   "kind": "ruling",
+   "statement": "fix-mismatch UNEXCLUDE ×3: jojos-bizarre-adventure-tv, monster, x were wrongly excluded by cleanup's format rule (a bad MATCH to a movie/OVA-format AniList entry was mistaken for a movie page) — un-excluded and rematched with the format-aware matcher; suspects = staged slug↔title token overlap <0.5, confirmed by the parser's canonicalSlug on re-fetch.",
+   "alias": null,
+   "family_candidate": "I",
+   "where": [
+    {
+     "file": "scripts/ingest/fix-mismatch.ts",
+     "loc": "lines 17-19, 52-59"
+    }
+   ],
+   "enforcement_site": "scripts/ingest/lib/match.ts (format-aware)",
+   "enforcement_layer": "writer",
+   "audit_class": null,
+   "witnesses": [
+    "jojos-bizarre-adventure-tv",
+    "monster",
+    "x"
+   ],
+   "bundle": false,
+   "bundle_parts": [],
+   "ruled_by": "session",
+   "ruled_on": "2026-08-22",
+   "status_hint": "live",
+   "notes": ""
+  },
+  {
+   "kind": "ruling",
+   "statement": "canon-tier TARGETS ×7 (Sean's Q2 ruling list 2026-08-23): manga-sourced shows with no per-episode chart anywhere enter the catalog via the ownership-guarded chain walk with canon-default typing and NO fabricated episode rows — shy (155389, afg shy), cells-work (100977), cells-work-code-black (117533), ranking-kings (113717, afg ousama-ranking), chrono-crusade (60), orient (128034), shaman-king (154); AFG continua supplies the end-frontier where staged; branches flag rather than guess.",
+   "alias": "canon tier",
+   "family_candidate": "T",
+   "where": [
+    {
+     "file": "scripts/ingest/canon-tier.ts",
+     "loc": "lines 1-30"
+    }
+   ],
+   "enforcement_site": "scripts/ingest/canon-tier.ts#main",
+   "enforcement_layer": "writer",
+   "audit_class": "title_incomplete (row-less canon-tier)",
+   "witnesses": [
+    "shy",
+    "cells-at-work",
+    "cells-at-work-code-black",
+    "ranking-of-kings",
+    "chrono-crusade",
+    "orient",
+    "shaman-king"
+   ],
+   "bundle": false,
+   "bundle_parts": [],
+   "ruled_by": "Sean",
+   "ruled_on": "2026-08-23",
+   "status_hint": "live",
+   "notes": "Dead/held AFL slug kept for provenance (a 0-row page refresh is a harmless no-op)."
+  },
+  {
+   "kind": "ruling",
+   "statement": "canon-tier-2 (Sean 'apply all B' 2026-08-23): kinnikuman (3272) created single-entry with explicit rows 1-119 canon / 120-137 anime-only-canon, anchor ep 119 → ch 273, continue 274 (Throne arc = the separate Scramble for the Throne anime); city-hunter (1470) loose, continue vol 15 ch 63; elemental-gelade (1250) loose, continue 1, divergence from ep 12 (anime-original Chaos Choir story). Sequels are SEPARATE series by research.",
+   "alias": null,
+   "family_candidate": "T",
+   "where": [
+    {
+     "file": "scripts/ingest/canon-tier-2.ts",
+     "loc": "lines 1-8, 39-74"
+    }
+   ],
+   "enforcement_site": "scripts/ingest/canon-tier-2.ts#main",
+   "enforcement_layer": "writer",
+   "audit_class": null,
+   "witnesses": [
+    "kinnikuman",
+    "city-hunter",
+    "elemental-gelade"
+   ],
+   "bundle": false,
+   "bundle_parts": [],
+   "ruled_by": "Sean",
+   "ruled_on": "2026-08-23",
+   "status_hint": "live",
+   "notes": "Loose entries carry the info we do know (continue waypoints, divergence annotations) until the loose-adaptation UI pass."
+  }
+ ],
+ "standing_maps": [
+  {
+   "file": "scripts/ingest/stitch.ts",
+   "symbol": "OVERRIDE_CHAINS",
+   "shape": "Record<aflSlug, { ids: number[]; extras?: { id; after }[]; title?; ruledExtent?: string }>",
+   "entries": 26,
+   "has_reason_per_entry": false,
+   "consumed_by": [
+    "scripts/ingest/stitch.ts#main"
+   ],
+   "note": "Explicit AniList chains + order-only extras; 10 entries carry ruledExtent (ruled extensions = standing candidates re-asserted every run); reasons inline only on ruledExtent entries and scattered comments."
+  },
+  {
+   "file": "scripts/ingest/stitch.ts",
+   "symbol": "HOLD",
+   "shape": "Set<aflSlug>",
+   "entries": 0,
+   "has_reason_per_entry": false,
+   "consumed_by": [
+    "scripts/ingest/stitch.ts#main"
+   ],
+   "note": "Stitch hold list; emptied 2026-08-22 when Sean ruled JoJo and Monogatari ONE series each. Empty suppression map."
+  },
+  {
+   "file": "scripts/ingest/afg-extend.ts",
+   "symbol": "RULED_SPLITS",
+   "shape": "Set<afgSlug>",
+   "entries": 2,
+   "has_reason_per_entry": true,
+   "consumed_by": [
+    "scripts/ingest/afg-extend.ts#main"
+   ],
+   "note": "AFG pages spanning a ruled split (bleach → TYBW, tokyo-ghoul → :re) skipped by name."
+  },
+  {
+   "file": "scripts/ingest/relations.ts",
+   "symbol": "RULED",
+   "shape": "[fromAflSlug, toAflSlug, kind][]",
+   "entries": 27,
+   "has_reason_per_entry": false,
+   "consumed_by": [
+    "scripts/ingest/relations.ts#main"
+   ],
+   "note": "Franchise relation kinds overriding AniList auto edges; source stated as docs/franchise-rulings.md; 2 rows have comments."
+  },
+  {
+   "file": "scripts/ingest/audit-afg-structure.ts",
+   "symbol": "RULED",
+   "shape": "Record<afgSlug, seriesId | null>",
+   "entries": 2,
+   "has_reason_per_entry": true,
+   "consumed_by": [
+    "scripts/ingest/audit-afg-structure.ts#resolveTier"
+   ],
+   "note": "Explicit AFG identity rulings (null = ruled NOT a match); durable like OVERRIDE_CHAINS per header."
+  },
+  {
+   "file": "scripts/ingest/audit-ui-truth.ts",
+   "symbol": "REVIEWED_NUMBERED_SPECIALS",
+   "shape": "Set<`${seriesId}:${anilistId}`>",
+   "entries": 29,
+   "has_reason_per_entry": true,
+   "consumed_by": [
+    "scripts/ingest/audit-ui-truth.ts#special_numbered_unreviewed"
+   ],
+   "note": "Suppression-with-reason for numbered non-season components; a ruling map inside an audit file; fist-of-the-blue-sky:3864 entry stale after apply-rulings-20260825b demoted it."
+  },
+  {
+   "file": "scripts/ingest/audit-titles.ts",
+   "symbol": "MANUAL_EXCLUDE",
+   "shape": "Record<aflSlug, note>",
+   "entries": 4,
+   "has_reason_per_entry": true,
+   "consumed_by": [
+    "scripts/ingest/audit-titles.ts#main → source_map"
+   ],
+   "note": "Content exclusions slug patterns could not catch; one-pace marked 'pending Sean confirmation'."
+  },
+  {
+   "file": "scripts/ingest/stabilize.ts",
+   "symbol": "DUPLICATE_OF",
+   "shape": "Record<aflSlug, primarySeriesId>",
+   "entries": 5,
+   "has_reason_per_entry": false,
+   "consumed_by": [
+    "scripts/ingest/stabilize.ts#main → source_map.disposition 'duplicate'"
+   ],
+   "note": "Per-season pages duplicating stitched series; persisted as dispositions (history script)."
+  },
+  {
+   "file": "scripts/ingest/stabilize.ts",
+   "symbol": "SPARSE_HOLD",
+   "shape": "aflSlug[]",
+   "entries": 8,
+   "has_reason_per_entry": false,
+   "consumed_by": [
+    "scripts/ingest/stabilize.ts#main"
+   ],
+   "note": "Hold list pre-dating the resolver's 60% sparse guard; stale — four members later re-entered via canon-tier scripts."
+  },
+  {
+   "file": "scripts/ingest/merge.ts",
+   "symbol": "MERGES",
+   "shape": "{ baseAfl; absorb: aflSlug[]; note }[]",
+   "entries": 1,
+   "has_reason_per_entry": true,
+   "consumed_by": [
+    "scripts/ingest/merge.ts#main"
+   ],
+   "note": "SAO + Alicization one-series ruling."
+  },
+  {
+   "file": "scripts/ingest/polish-ids.ts",
+   "symbol": "REKEY",
+   "shape": "Record<oldId, newId>",
+   "entries": 9,
+   "has_reason_per_entry": false,
+   "consumed_by": [
+    "scripts/ingest/polish-ids.ts#main"
+   ],
+   "note": "Canonical id choices; applied; no reasons."
+  },
+  {
+   "file": "scripts/ingest/wiki-episodes-backfill.ts",
+   "symbol": "WIKI_NUMBERING_SHIFTS",
+   "shape": "Record<seriesId, { from: number; offset: number }[]>",
+   "entries": 0,
+   "has_reason_per_entry": false,
+   "consumed_by": [
+    "scripts/ingest/wiki-episodes-backfill.ts#shiftFor / midRunOrderOnly guard"
+   ],
+   "note": "DUPLICATES lib/resolve SOURCE_NUMBERING_SHIFTS' purpose for the wiki source; empty because Dr. Stone resolved on the AFL side. Candidate for removal/merge into the lib map keyed by source."
+  },
+  {
+   "file": "scripts/ingest/sync-watch-order.ts",
+   "symbol": "RULED_LABELS",
+   "shape": "Record<seriesId, Record<position, label>>",
+   "entries": 0,
+   "has_reason_per_entry": false,
+   "consumed_by": [
+    "scripts/ingest/sync-watch-order.ts#main"
+   ],
+   "note": "Per-series surface rulings; PARKED (MHA '170+1' / '170+1.5' removed 2026-08-24 pending the specials STATUS design pass); authoritative both ways."
+  },
+  {
+   "file": "scripts/ingest/sync-watch-order.ts",
+   "symbol": "RULED_RECORDS",
+   "shape": "Record<seriesId, Record<position, { chapter; volume; chapters_adapted; kind }>>",
+   "entries": 1,
+   "has_reason_per_entry": false,
+   "consumed_by": [
+    "scripts/ingest/sync-watch-order.ts#main"
+   ],
+   "note": "1 series / 2 positions (MHA 171, 171.5); prose reasoning lives in ingest_fractionals notes written by apply-rulings-20260824.ts."
+  },
+  {
+   "file": "scripts/ingest/assisted-prep.ts",
+   "symbol": "SET_MATCH",
+   "shape": "Record<aflSlug, { id: anilistId; note }>",
+   "entries": 6,
+   "has_reason_per_entry": true,
+   "consumed_by": [
+    "scripts/ingest/assisted-prep.ts#main → source_map (manual, verified)"
+   ],
+   "note": "Manual match overrides; persisted as source_map rows (history script)."
+  },
+  {
+   "file": "scripts/ingest/assisted-prep.ts",
+   "symbol": "EXCLUDE",
+   "shape": "Record<aflSlug, note>",
+   "entries": 4,
+   "has_reason_per_entry": true,
+   "consumed_by": [
+    "scripts/ingest/assisted-prep.ts#main → source_map"
+   ],
+   "note": "Exclusions with reasons; persisted as dispositions (history script)."
+  },
+  {
+   "file": "scripts/ingest/canon-tier.ts",
+   "symbol": "TARGETS",
+   "shape": "{ anilistId; aflSlug?; afgSlug? }[]",
+   "entries": 7,
+   "has_reason_per_entry": false,
+   "consumed_by": [
+    "scripts/ingest/canon-tier.ts#main"
+   ],
+   "note": "Sean's Q2 ruling list — identity registration (anilist + dead AFL slug + AFG slug) persisted to series_external_ids; borderline standing (one-shot creation list, re-run skips)."
+  }
+ ],
+ "scripts": []
+}

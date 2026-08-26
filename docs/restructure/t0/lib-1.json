@@ -1,0 +1,779 @@
+{
+ "home": "lib",
+ "part": "1 of 4 — resolve.ts gates and architecture",
+ "read": [
+  "scripts/ingest/lib/resolve.ts (full, 923 lines)",
+  "scripts/ingest/lib/slug.ts",
+  "scripts/ingest/lib/hash.ts",
+  "docs/restructure/T0-BRIEF.md",
+  "docs/restructure-plan.md §1 and §3-T0"
+ ],
+ "entries": [
+  {
+   "kind": "rule",
+   "statement": "An AFL pull in which more than 20% of previously known episode types change is held (large_diff flag with the proposed data) instead of staged — that churn is a parser break, not a filler list evolving.",
+   "alias": null,
+   "family_candidate": "S",
+   "where": [
+    {
+     "file": "scripts/ingest/lib/resolve.ts",
+     "loc": "line 13-15 LARGE_DIFF_RATIO; line 601-615 stageAfl"
+    }
+   ],
+   "enforcement_site": "scripts/ingest/lib/resolve.ts#stageAfl",
+   "enforcement_layer": "writer",
+   "audit_class": null,
+   "witnesses": [],
+   "bundle": false,
+   "bundle_parts": [],
+   "ruled_by": null,
+   "ruled_on": null,
+   "status_hint": "live",
+   "notes": "Threshold 0.2 over oldTypes.size; only counts episodes present in both old and new. Flag kind large_diff."
+  },
+  {
+   "kind": "rule",
+   "statement": "Never stage another show's data: an AFL page whose own episode links resolve to a different slug, or whose title fails the loose token match against the expected title, is held with a parse_integrity flag.",
+   "alias": null,
+   "family_candidate": "I",
+   "where": [
+    {
+     "file": "scripts/ingest/lib/resolve.ts",
+     "loc": "line 574-587 stageAfl alias/title mismatch"
+    },
+    {
+     "file": "scripts/ingest/lib/afl.ts",
+     "loc": "line 26-29 canonicalSlug comment"
+    }
+   ],
+   "enforcement_site": "scripts/ingest/lib/resolve.ts#stageAfl",
+   "enforcement_layer": "writer",
+   "audit_class": null,
+   "witnesses": [
+    "chrono-crusade"
+   ],
+   "bundle": false,
+   "bundle_parts": [],
+   "ruled_by": "session",
+   "ruled_on": "2026-08-22",
+   "status_hint": "live",
+   "notes": "Two corruption forms (2026-08-22): node kept its true alias (links betray it) vs Drupal swapped the primary alias (only the index-anchor title exposes it). titlesAgree = >=50% shared non-stop-word tokens over the smaller token set; empty token sets pass."
+  },
+  {
+   "kind": "rule",
+   "statement": "Staging writes are content-hash gated: identical content is 'unchanged' (no write, only fetched_at bumps for AniList); anything suspicious files a flag and HOLDS, so the previous data stands until Sean rules.",
+   "alias": null,
+   "family_candidate": "S",
+   "where": [
+    {
+     "file": "scripts/ingest/lib/resolve.ts",
+     "loc": "line 1-3 header; line 589-599 stageAfl; line 631-652 stageAniList"
+    },
+    {
+     "file": "scripts/ingest/lib/hash.ts",
+     "loc": "line 3-16 contentHash (key-order-stable)"
+    }
+   ],
+   "enforcement_site": "scripts/ingest/lib/resolve.ts#stageAfl",
+   "enforcement_layer": "writer",
+   "audit_class": null,
+   "witnesses": [],
+   "bundle": false,
+   "bundle_parts": [],
+   "ruled_by": null,
+   "ruled_on": null,
+   "status_hint": "live",
+   "notes": "Also stageAniList. Resolution rules are said to live in docs/data-pipeline.md §2."
+  },
+  {
+   "kind": "rule",
+   "statement": "A curated series_scopes row overrides the manga-wide totals with the entry's OWN range (end_volume/end_chapter/start_volume/start_chapter), applied by every totals writer and runnable standalone.",
+   "alias": "source-scope enforcement (DESIGN_SYSTEM §6)",
+   "family_candidate": "N",
+   "where": [
+    {
+     "file": "scripts/ingest/lib/resolve.ts",
+     "loc": "line 29-49 applyScope"
+    }
+   ],
+   "enforcement_site": "scripts/ingest/lib/resolve.ts#applyScope",
+   "enforcement_layer": "writer",
+   "audit_class": null,
+   "witnesses": [],
+   "bundle": false,
+   "bundle_parts": [],
+   "ruled_by": null,
+   "ruled_on": null,
+   "status_hint": "live",
+   "notes": "The scope map itself is DB-resident (table series_scopes, keyed by afl_slug) — a standing map not in code; entry count not read (no DB access). Consumers: stitch, afg-expansion, afg-extend, reconcile-structure, refresh-afl, refresh-anilist, scopes-apply."
+  },
+  {
+   "kind": "rule",
+   "statement": "Episode-floor invariant: displayed aired/total episode counts can never be lower than our own highest episode number; an overshoot of at most 2 (recap/ep-0 numbering) floors automatically, a larger overshoot floors only for series in EXTRAS_ADOPTED — otherwise the writer returns without change and the reconcile-structure flag is the research trigger.",
+   "alias": "episode-floor invariant",
+   "family_candidate": "N",
+   "where": [
+    {
+     "file": "scripts/ingest/lib/resolve.ts",
+     "loc": "line 51-59 comment; line 445-457 applyEpisodeFloor"
+    }
+   ],
+   "enforcement_site": "scripts/ingest/lib/resolve.ts#applyEpisodeFloor",
+   "enforcement_layer": "writer",
+   "audit_class": null,
+   "witnesses": [],
+   "bundle": true,
+   "bundle_parts": [
+    "totals >= our episode max",
+    "overshoot <=2 floors automatically",
+    "overshoot >2 floors only once RULED (EXTRAS_ADOPTED), flag-first otherwise"
+   ],
+   "ruled_by": "Sean",
+   "ruled_on": "2026-08-24",
+   "status_hint": "live",
+   "notes": "Applied by every totals writer (resolveSeries, refreshStitchedVolatile, stitch, afg-expansion, afg-extend, reconcile-structure, refresh-afl, refresh-anilist). Runs BEFORE applyCommunityCap."
+  },
+  {
+   "kind": "rule",
+   "statement": "The community-consensus episode count is the truth: specials/ep-0s the community numbers are IN; large events it does not number are order-only components. Per-series caps (COMMUNITY_COUNT_OVERRIDES) clamp aired/total after the floor and drop episode rows above the cap at every episode write.",
+   "alias": "community-count rule",
+   "family_candidate": "N",
+   "where": [
+    {
+     "file": "scripts/ingest/lib/resolve.ts",
+     "loc": "line 69-78 comment; line 94-102 applyCommunityCap; line 438-439 filterEpisodeRows"
+    }
+   ],
+   "enforcement_site": "scripts/ingest/lib/resolve.ts#applyCommunityCap",
+   "enforcement_layer": "writer",
+   "audit_class": null,
+   "witnesses": [
+    "psycho-pass",
+    "monogatari-series"
+   ],
+   "bundle": true,
+   "bundle_parts": [
+    "community count is truth (general principle — enforced only through per-series map entries)",
+    "totals clamp to cap after the floor",
+    "episode rows above cap dropped at every episode write"
+   ],
+   "ruled_by": "Sean",
+   "ruled_on": "2026-08-24",
+   "status_hint": "live",
+   "notes": "The general principle has no derivation — it is enforced only via the per-series map; the map is the durable instrument (yu-yu-hakusho note: 'the CAP is the durable instrument'). Also enforced in filterEpisodeRows. Audit-ui-truth imports the map."
+  },
+  {
+   "kind": "rule",
+   "statement": "Recap specials are excluded from the numbered episode count even when MAL/AniList number them (the Monogatari precedent).",
+   "alias": "recap rule",
+   "family_candidate": "N",
+   "where": [
+    {
+     "file": "scripts/ingest/lib/resolve.ts",
+     "loc": "line 83 COMMUNITY_COUNT_OVERRIDES urusei-yatsura note; line 407-410 SOURCE_NUMBERING_SHIFTS kimi-ni-todoke comment; line 75-76 monogatari comment"
+    }
+   ],
+   "enforcement_site": null,
+   "enforcement_layer": "none-stated",
+   "audit_class": null,
+   "witnesses": [
+    "monogatari-series",
+    "urusei-yatsura",
+    "kimi-ni-todoke-from-me-to-you",
+    "mashle-magic-and-muscles"
+   ],
+   "bundle": false,
+   "bundle_parts": [],
+   "ruled_by": "Sean",
+   "ruled_on": null,
+   "status_hint": "live",
+   "notes": "comment-only as a general rule; enforced only through per-series entries in COMMUNITY_COUNT_OVERRIDES / SOURCE_NUMBERING_SHIFTS."
+  },
+  {
+   "kind": "rule",
+   "statement": "Movies are order-only unless the community numbers them.",
+   "alias": null,
+   "family_candidate": "N",
+   "where": [
+    {
+     "file": "scripts/ingest/lib/resolve.ts",
+     "loc": "line 394 SOURCE_NUMBERING_SHIFTS ghost-in-the-shell comment; line 395 yu-gi-oh-2000"
+    }
+   ],
+   "enforcement_site": null,
+   "enforcement_layer": "none-stated",
+   "audit_class": null,
+   "witnesses": [
+    "ghost-in-the-shell-stand-alone-complex",
+    "yu-gi-oh-2000",
+    "psycho-pass"
+   ],
+   "bundle": false,
+   "bundle_parts": [],
+   "ruled_by": null,
+   "ruled_on": null,
+   "status_hint": "live",
+   "notes": "comment-only as a general rule; enforced only via per-series drop entries."
+  },
+  {
+   "kind": "rule",
+   "statement": "Research-ruled per-episode TYPE corrections live in EPISODE_TYPE_OVERRIDES and re-apply on every episode write, because a bare DB update would be clobbered by the next AFL page refresh; each entry carries citations.",
+   "alias": null,
+   "family_candidate": "T",
+   "where": [
+    {
+     "file": "scripts/ingest/lib/resolve.ts",
+     "loc": "line 104-107 comment; line 440-442 filterEpisodeRows"
+    }
+   ],
+   "enforcement_site": "scripts/ingest/lib/resolve.ts#filterEpisodeRows",
+   "enforcement_layer": "writer",
+   "audit_class": null,
+   "witnesses": [
+    "x"
+   ],
+   "bundle": false,
+   "bundle_parts": [],
+   "ruled_by": "Sean",
+   "ruled_on": "2026-08-23",
+   "status_hint": "live",
+   "notes": "Only rows that already carry a `type` field are retyped ('type' in r). Consumers: resolveSeries, stitch, afg-expansion, afg-extend, wiki-episodes-backfill, refresh-afl/anilist/afg; assert-type-overrides.ts and audit-ui-truth import the map for outcome checks."
+  },
+  {
+   "kind": "rule",
+   "statement": "Research-ruled SOURCE SUPPRESSION: when research proves a source's frontier wrong for a series, that source is suppressed for the series entirely (its rows deleted, never rewritten) — same-episode precedence cannot stop a ruled-wrong value landing on a DIFFERENT episode.",
+   "alias": "Claymore/Kimi lesson",
+   "family_candidate": "A",
+   "where": [
+    {
+     "file": "scripts/ingest/lib/resolve.ts",
+     "loc": "line 112-121 CONTINUA_SUPPRESSED"
+    },
+    {
+     "file": "scripts/ingest/lib/anchors.ts",
+     "loc": "line 40-46 applyContinua suppression delete"
+    },
+    {
+     "file": "scripts/ingest/lib/mu-frontier.ts",
+     "loc": "line 51-66 MU_FRONTIER_SUPPRESSED; line 77-78 applyMuFrontier"
+    }
+   ],
+   "enforcement_site": "scripts/ingest/lib/anchors.ts#applyContinua",
+   "enforcement_layer": "writer",
+   "audit_class": "ruling_violation",
+   "witnesses": [
+    "claymore",
+    "kimi-ni-todoke-from-me-to-you"
+   ],
+   "bundle": false,
+   "bundle_parts": [],
+   "ruled_by": "session",
+   "ruled_on": "2026-08-23",
+   "status_hint": "live",
+   "notes": "Two maps implement it: CONTINUA_SUPPRESSED (afg-continua) and MU_FRONTIER_SUPPRESSED (mu, D1 2026-08-24). Comment says 'verified outcome-side by the ruling_violation audit'."
+  },
+  {
+   "kind": "rule",
+   "statement": "Source numbering translation: a source that NUMBERS an entry our community count holds order-only lives in a different numbering space — its rows past the insert shift into ours by the ruled offset and the insert's own row drops (it exists as a watch-order component, never an episode); since 2026-08-25 a ruling may name the SOURCE SPACES ('afl'|'afg'|'wiki') it applies to, and the shift skips spaces it does not name.",
+   "alias": "Dr. Stone / Ryuusui lesson",
+   "family_candidate": "N",
+   "where": [
+    {
+     "file": "scripts/ingest/lib/resolve.ts",
+     "loc": "line 362-376 comment; line 377-411 SOURCE_NUMBERING_SHIFTS; line 413-424 translateEpisodeNumber; line 429-437 filterEpisodeRows"
+    }
+   ],
+   "enforcement_site": "scripts/ingest/lib/resolve.ts#translateEpisodeNumber",
+   "enforcement_layer": "writer",
+   "audit_class": null,
+   "witnesses": [
+    "dr-stone",
+    "mashle-magic-and-muscles",
+    "bungo-stray-dogs"
+   ],
+   "bundle": true,
+   "bundle_parts": [
+    "drop: source-space rows that ARE the order-only entry never become episode rows",
+    "shifts: source n >= from maps to n + offset",
+    "spaces: absent = every space; present = only named spaces translate (mashle lesson 2026-08-25)",
+    "anchor/annotation writers translate through the same function so a shift-ruled series never receives per-episode data at untranslated numbers (gap closed 2026-08-23, Sean's bake-into-sources directive)"
+   ],
+   "ruled_by": "Sean",
+   "ruled_on": "2026-08-23",
+   "status_hint": "live",
+   "notes": "Without it titles AND types downstream of the insert are silently off by the insert's length. translateEpisodeNumber consumed by anchors.ts#syncAnchors (space 'afg') and refresh-afg. Every caller must state its space."
+  },
+  {
+   "kind": "rule",
+   "statement": "Per-series episode-row rulings apply in a fixed order at EVERY episode writer: source-numbering translation first, then community caps, then type overrides.",
+   "alias": null,
+   "family_candidate": "N",
+   "where": [
+    {
+     "file": "scripts/ingest/lib/resolve.ts",
+     "loc": "line 426-443 filterEpisodeRows"
+    }
+   ],
+   "enforcement_site": "scripts/ingest/lib/resolve.ts#filterEpisodeRows",
+   "enforcement_layer": "writer",
+   "audit_class": null,
+   "witnesses": [],
+   "bundle": false,
+   "bundle_parts": [],
+   "ruled_by": null,
+   "ruled_on": null,
+   "status_hint": "live",
+   "notes": "Order matters: cap and overrides are keyed in OUR numbering, so translation must precede them."
+  },
+  {
+   "kind": "rule",
+   "statement": "Order-only components (null episode range — films, Kizu movies) hold watch-order positions and NEVER count toward aired/total episodes; stitched volatile refresh sums only components with a non-null episode_start.",
+   "alias": null,
+   "family_candidate": "N",
+   "where": [
+    {
+     "file": "scripts/ingest/lib/resolve.ts",
+     "loc": "line 459-467 refreshStitchedVolatile"
+    },
+    {
+     "file": "scripts/ingest/lib/chain.ts",
+     "loc": "line 256-258, 288-304 writeComponents extras (null episode range)"
+    }
+   ],
+   "enforcement_site": "scripts/ingest/lib/resolve.ts#refreshStitchedVolatile",
+   "enforcement_layer": "writer",
+   "audit_class": null,
+   "witnesses": [
+    "monogatari-series",
+    "psycho-pass"
+   ],
+   "bundle": false,
+   "bundle_parts": [],
+   "ruled_by": null,
+   "ruled_on": null,
+   "status_hint": "live",
+   "notes": "Comment names 'Kizu movies, Psycho-Pass films'."
+  },
+  {
+   "kind": "rule",
+   "statement": "Stitched-series volatile refresh: aired = sum of components' aired (nextAiringEpisode-1 else episodes), total = sum only when every component's total is known (else null); status = airing if any RELEASING, else upcoming if any NOT_YET_RELEASED, else hiatus if any HIATUS, else finished; popularity = max, score = popularity-weighted mean, trending = max; then episode floor and community cap.",
+   "alias": null,
+   "family_candidate": "N",
+   "where": [
+    {
+     "file": "scripts/ingest/lib/resolve.ts",
+     "loc": "line 474-509 refreshStitchedVolatile"
+    },
+    {
+     "file": "scripts/ingest/lib/chain.ts",
+     "loc": "line 155-254 aggregate (same derivation for the stitcher)"
+    }
+   ],
+   "enforcement_site": "scripts/ingest/lib/resolve.ts#refreshStitchedVolatile",
+   "enforcement_layer": "writer",
+   "audit_class": null,
+   "witnesses": [],
+   "bundle": true,
+   "bundle_parts": [
+    "aired = sum(nextAiringEpisode-1 ?? episodes ?? 0)",
+    "total = sum only if all known, else null (graceful degrade)",
+    "status precedence RELEASING > NOT_YET_RELEASED > HIATUS > finished",
+    "score = popularity-weighted average",
+    "structure untouched — only volatile fields"
+   ],
+   "ruled_by": null,
+   "ruled_on": null,
+   "status_hint": "live",
+   "notes": "Duplicated between resolve.ts#refreshStitchedVolatile and chain.ts#aggregate (two copies of the same derivation)."
+  },
+  {
+   "kind": "rule",
+   "statement": "Identity registry: external ids (anilist, mal, afl, afg) map INTO our series id; registering an id already held by a DIFFERENT series is a hard error (ID COLLISION, refused), while a changed id for the same (series, source) is updated in place.",
+   "alias": "identity registry",
+   "family_candidate": "I",
+   "where": [
+    {
+     "file": "scripts/ingest/lib/resolve.ts",
+     "loc": "line 512-545 registerIds"
+    }
+   ],
+   "enforcement_site": "scripts/ingest/lib/resolve.ts#registerIds",
+   "enforcement_layer": "writer",
+   "audit_class": null,
+   "witnesses": [],
+   "bundle": false,
+   "bundle_parts": [],
+   "ruled_by": null,
+   "ruled_on": null,
+   "status_hint": "live",
+   "notes": "Table series_external_ids. Called by resolveSeries, syncAnchors (afg), stitch, afg-expansion, canon-tier*, audit-afg-structure, all three refresh functions."
+  },
+  {
+   "kind": "rule",
+   "statement": "Canonical id is OUR slug: once assigned to an afl_slug it is stable (app identity survives AFL renames); a new series slugifies its English/romaji title, with '-<year>' then '-<anilistId>' as collision tiebreakers, and refuses to resolve if none is free.",
+   "alias": "our slug is identity",
+   "family_candidate": "I",
+   "where": [
+    {
+     "file": "scripts/ingest/lib/resolve.ts",
+     "loc": "line 778-794 resolveSeries id assignment"
+    },
+    {
+     "file": "scripts/ingest/lib/slug.ts",
+     "loc": "line 1-14 slugify"
+    }
+   ],
+   "enforcement_site": "scripts/ingest/lib/resolve.ts#resolveSeries",
+   "enforcement_layer": "writer",
+   "audit_class": null,
+   "witnesses": [],
+   "bundle": false,
+   "bundle_parts": [],
+   "ruled_by": null,
+   "ruled_on": null,
+   "status_hint": "live",
+   "notes": "slugify strips diacritics and apostrophes (JoJo's → jojos), '&' → 'and'. chain.ts#aggregate re-derives id = slugify(head title) WITHOUT the prior-id lookup or tiebreakers — callers must handle collisions (possible drift)."
+  },
+  {
+   "kind": "rule",
+   "statement": "A show AFL has not classified at all (zero episode rows) is held with a parse_integrity {empty} flag rather than published as an empty instrument.",
+   "alias": null,
+   "family_candidate": "S",
+   "where": [
+    {
+     "file": "scripts/ingest/lib/resolve.ts",
+     "loc": "line 719-724 resolveSeries"
+    }
+   ],
+   "enforcement_site": "scripts/ingest/lib/resolve.ts#resolveSeries",
+   "enforcement_layer": "writer",
+   "audit_class": null,
+   "witnesses": [],
+   "bundle": false,
+   "bundle_parts": [],
+   "ruled_by": null,
+   "ruled_on": null,
+   "status_hint": "live",
+   "notes": ""
+  },
+  {
+   "kind": "rule",
+   "statement": "Derivative-manga rule: AniList's ADAPTATION edge is directionless, so on a source=ORIGINAL show the linked manga is an adaptation OF the anime and is never attached as source material.",
+   "alias": "Evangelion/Madoka class",
+   "family_candidate": "I",
+   "where": [
+    {
+     "file": "scripts/ingest/lib/resolve.ts",
+     "loc": "line 726-730 resolveSeries"
+    },
+    {
+     "file": "scripts/ingest/lib/chain.ts",
+     "loc": "line 174-181 aggregate"
+    }
+   ],
+   "enforcement_site": "scripts/ingest/lib/resolve.ts#resolveSeries",
+   "enforcement_layer": "writer",
+   "audit_class": null,
+   "witnesses": [
+    "Evangelion",
+    "Madoka"
+   ],
+   "bundle": false,
+   "bundle_parts": [],
+   "ruled_by": "session",
+   "ruled_on": "2026-08-23",
+   "status_hint": "live",
+   "notes": "Enforced in both resolveSeries and chain.ts#aggregate."
+  },
+  {
+   "kind": "rule",
+   "statement": "The source manga is the ADAPTATION edge of type MANGA and format MANGA, most popular on ties; manga_status maps AniList status (RELEASING→publishing, FINISHED→finished, HIATUS→hiatus, NOT_YET_RELEASED→publishing, CANCELLED→finished, unknown→publishing) and is 'anime_only' when no manga is attached.",
+   "alias": null,
+   "family_candidate": "I",
+   "where": [
+    {
+     "file": "scripts/ingest/lib/resolve.ts",
+     "loc": "line 688-694 pickManga; line 662-668 MANGA_STATUS_MAP; line 863-864 resolveSeries"
+    },
+    {
+     "file": "scripts/ingest/lib/chain.ts",
+     "loc": "line 176-181, 237-242 aggregate inline manga pick + status map"
+    }
+   ],
+   "enforcement_site": "scripts/ingest/lib/resolve.ts#pickManga",
+   "enforcement_layer": "writer",
+   "audit_class": null,
+   "witnesses": [],
+   "bundle": true,
+   "bundle_parts": [
+    "manga = ADAPTATION edge, type MANGA, format MANGA, top popularity",
+    "manga_status vocabulary mapping",
+    "no manga → manga_status 'anime_only'"
+   ],
+   "ruled_by": null,
+   "ruled_on": null,
+   "status_hint": "live",
+   "notes": "DRIFT: chain.ts#aggregate uses an inline 3-key map {RELEASING,FINISHED,HIATUS} — CANCELLED maps to 'finished' in resolve.ts but falls to the 'publishing' default in chain.ts."
+  },
+  {
+   "kind": "rule",
+   "statement": "source_type derivation: AniList source MANGA/DOUJINSHI/ONE_SHOT → 'manga' ('webtoon' when countryOfOrigin KR or CN); LIGHT_NOVEL/NOVEL/WEB_NOVEL → 'light_novel'; no declared source but a manga ADAPTATION edge exists → 'manga' (old AniList entries omit source); otherwise 'original'.",
+   "alias": null,
+   "family_candidate": "S",
+   "where": [
+    {
+     "file": "scripts/ingest/lib/resolve.ts",
+     "loc": "line 670-680 sourceType"
+    },
+    {
+     "file": "scripts/ingest/lib/chain.ts",
+     "loc": "line 203-210 aggregate source_type"
+    }
+   ],
+   "enforcement_site": "scripts/ingest/lib/resolve.ts#sourceType",
+   "enforcement_layer": "writer",
+   "audit_class": null,
+   "witnesses": [],
+   "bundle": false,
+   "bundle_parts": [],
+   "ruled_by": null,
+   "ruled_on": null,
+   "status_hint": "live",
+   "notes": "DRIFT: chain.ts#aggregate re-implements this inline WITHOUT the DOUJINSHI/ONE_SHOT cases and WITHOUT the no-source-but-edge fallback (a stitched series with an old AniList head lacking `source` becomes 'original'). Relevant to T4 source-first typing."
+  },
+  {
+   "kind": "rule",
+   "statement": "Anime status maps AniList status to ours: RELEASING→airing, FINISHED→finished, HIATUS→hiatus, NOT_YET_RELEASED→upcoming, CANCELLED→finished, unknown→finished.",
+   "alias": null,
+   "family_candidate": "S",
+   "where": [
+    {
+     "file": "scripts/ingest/lib/resolve.ts",
+     "loc": "line 654-660 STATUS_MAP; line 840"
+    }
+   ],
+   "enforcement_site": "scripts/ingest/lib/resolve.ts#STATUS_MAP",
+   "enforcement_layer": "writer",
+   "audit_class": null,
+   "witnesses": [],
+   "bundle": false,
+   "bundle_parts": [],
+   "ruled_by": null,
+   "ruled_on": null,
+   "status_hint": "live",
+   "notes": "Vocabulary map, not per-series."
+  },
+  {
+   "kind": "rule",
+   "statement": "Dates: display uses only years; when AniList omits month/day they default to 1; no year → null.",
+   "alias": null,
+   "family_candidate": null,
+   "where": [
+    {
+     "file": "scripts/ingest/lib/resolve.ts",
+     "loc": "line 682-686 fuzzyDate"
+    },
+    {
+     "file": "scripts/ingest/lib/chain.ts",
+     "loc": "line 211-217 aggregate start/end date"
+    }
+   ],
+   "enforcement_site": "scripts/ingest/lib/resolve.ts#fuzzyDate",
+   "enforcement_layer": "writer",
+   "audit_class": null,
+   "witnesses": [],
+   "bundle": false,
+   "bundle_parts": [],
+   "ruled_by": null,
+   "ruled_on": null,
+   "status_hint": "live",
+   "notes": "chain.ts inlines the same logic; aggregate sets end_date only when status is finished."
+  },
+  {
+   "kind": "rule",
+   "statement": "A STITCHED series (more than one component) is owned by the stitcher: a plain resolve refreshes only AFL's episode rows within the translated numbering range and leaves the aggregate to the next stitch run, so it cannot collapse back to one season.",
+   "alias": "stitcher ownership",
+   "family_candidate": "I",
+   "where": [
+    {
+     "file": "scripts/ingest/lib/resolve.ts",
+     "loc": "line 732-776 resolveSeries stitched guard"
+    }
+   ],
+   "enforcement_site": "scripts/ingest/lib/resolve.ts#resolveSeries",
+   "enforcement_layer": "writer",
+   "audit_class": null,
+   "witnesses": [],
+   "bundle": false,
+   "bundle_parts": [],
+   "ruled_by": null,
+   "ruled_on": null,
+   "status_hint": "live",
+   "notes": "compCount > 1 branch."
+  },
+  {
+   "kind": "rule",
+   "statement": "Episode rows MERGE, never full-replace: AFL owns only its own numbering range, so the writer deletes rows <= the TRANSLATED page max and re-inserts; rows beyond it (AFG-filled tails, curated specials) survive a page refresh.",
+   "alias": null,
+   "family_candidate": "N",
+   "where": [
+    {
+     "file": "scripts/ingest/lib/resolve.ts",
+     "loc": "line 742-760 stitched branch; line 884-899 resolveSeries"
+    }
+   ],
+   "enforcement_site": "scripts/ingest/lib/resolve.ts#resolveSeries",
+   "enforcement_layer": "writer",
+   "audit_class": null,
+   "witnesses": [
+    "dr-stone"
+   ],
+   "bundle": false,
+   "bundle_parts": [],
+   "ruled_by": null,
+   "ruled_on": null,
+   "status_hint": "live",
+   "notes": "Boundary uses the translated max because AFL numbering can sit +N of ours past an order-only insert (Ryuusui); deleting to the source-space max would eat rows the translation does not refill."
+  },
+  {
+   "kind": "rule",
+   "statement": "Stale-zone healing: when translation SHRINKS the range (our max < source max), rows stranded in (ourMax, sourceMax] are pre-translation leftovers wearing shifted titles and are purged — stale wrong data never self-heals; an AFG tail re-extends.",
+   "alias": "stale-zone healing",
+   "family_candidate": "N",
+   "where": [
+    {
+     "file": "scripts/ingest/lib/resolve.ts",
+     "loc": "line 761-768 stitched branch; line 900-903 resolveSeries"
+    }
+   ],
+   "enforcement_site": "scripts/ingest/lib/resolve.ts#resolveSeries",
+   "enforcement_layer": "writer",
+   "audit_class": null,
+   "witnesses": [],
+   "bundle": false,
+   "bundle_parts": [],
+   "ruled_by": "Sean",
+   "ruled_on": "2026-08-23",
+   "status_hint": "live",
+   "notes": ""
+  },
+  {
+   "kind": "rule",
+   "statement": "Sparse-classification hold: a non-RELEASING show whose AFL page classifies fewer than 60% of AniList's episode total is held (count_mismatch {sparse}) rather than published as a misleading strip; it returns automatically once classification grows past the bar.",
+   "alias": "sparse-classification hold",
+   "family_candidate": "S",
+   "where": [
+    {
+     "file": "scripts/ingest/lib/resolve.ts",
+     "loc": "line 801-816 resolveSeries"
+    }
+   ],
+   "enforcement_site": "scripts/ingest/lib/resolve.ts#resolveSeries",
+   "enforcement_layer": "writer",
+   "audit_class": null,
+   "witnesses": [
+    "kinnikuman"
+   ],
+   "bundle": false,
+   "bundle_parts": [],
+   "ruled_by": "session",
+   "ruled_on": "2026-08-22",
+   "status_hint": "live",
+   "notes": "Kinnikuman: 4 of 137 classified at the time."
+  },
+  {
+   "kind": "rule",
+   "statement": "A gap of more than 12 episodes between AniList's aired count and AFL's classified max files an informational count_mismatch flag; resolve proceeds (a season of natural lag is noise).",
+   "alias": null,
+   "family_candidate": "N",
+   "where": [
+    {
+     "file": "scripts/ingest/lib/resolve.ts",
+     "loc": "line 695-698 COUNT_MISMATCH_THRESHOLD; line 818-825"
+    }
+   ],
+   "enforcement_site": "scripts/ingest/lib/resolve.ts#resolveSeries",
+   "enforcement_layer": "writer",
+   "audit_class": null,
+   "witnesses": [],
+   "bundle": false,
+   "bundle_parts": [],
+   "ruled_by": null,
+   "ruled_on": null,
+   "status_hint": "live",
+   "notes": "Same 12-episode threshold reused for AFG numbering alignment in anchors.ts#syncAnchors (there it WITHHOLDS, here it only flags)."
+  },
+  {
+   "kind": "rule",
+   "statement": "aired_episodes for a single-season series = AniList nextAiringEpisode-1 when airing, else AniList episodes, else AFL's max; total_episodes = AniList episodes; then the episode floor and community cap apply.",
+   "alias": null,
+   "family_candidate": "N",
+   "where": [
+    {
+     "file": "scripts/ingest/lib/resolve.ts",
+     "loc": "line 796-799, 846-847, 877-878 resolveSeries"
+    }
+   ],
+   "enforcement_site": "scripts/ingest/lib/resolve.ts#resolveSeries",
+   "enforcement_layer": "writer",
+   "audit_class": null,
+   "witnesses": [],
+   "bundle": false,
+   "bundle_parts": [],
+   "ruled_by": null,
+   "ruled_on": null,
+   "status_hint": "live",
+   "notes": ""
+  },
+  {
+   "kind": "architecture",
+   "statement": "Every resolve upserts a baseline component row (season_order 1, episodes 1..total, afl_offset 0); the stitcher replaces baselines with full chains for multi-season series.",
+   "alias": null,
+   "family_candidate": "I",
+   "where": [
+    {
+     "file": "scripts/ingest/lib/resolve.ts",
+     "loc": "line 909-920 resolveSeries"
+    }
+   ],
+   "enforcement_site": "scripts/ingest/lib/resolve.ts#resolveSeries",
+   "enforcement_layer": "writer",
+   "audit_class": null,
+   "witnesses": [],
+   "bundle": false,
+   "bundle_parts": [],
+   "ruled_by": null,
+   "ruled_on": null,
+   "status_hint": "live",
+   "notes": ""
+  },
+  {
+   "kind": "architecture",
+   "statement": "search_text is every name a series answers to (english/romaji/native/AFL title + synonyms, lowercased, deduped), and a stitched series adds every component's titles.",
+   "alias": null,
+   "family_candidate": null,
+   "where": [
+    {
+     "file": "scripts/ingest/lib/resolve.ts",
+     "loc": "line 25-27 searchTextFor; line 871-874"
+    },
+    {
+     "file": "scripts/ingest/lib/chain.ts",
+     "loc": "line 247-251 aggregate"
+    }
+   ],
+   "enforcement_site": "scripts/ingest/lib/resolve.ts#searchTextFor",
+   "enforcement_layer": "writer",
+   "audit_class": null,
+   "witnesses": [],
+   "bundle": false,
+   "bundle_parts": [],
+   "ruled_by": null,
+   "ruled_on": null,
+   "status_hint": "live",
+   "notes": ""
+  }
+ ],
+ "standing_maps": [],
+ "scripts": []
+}

@@ -1,0 +1,1061 @@
+{
+ "home": "scripts",
+ "part": "2a of 5 — rules/rulings in non-apply scripts (first half)",
+ "read": [
+  "see scripts-1.json `read` — same material; no sources re-read for this part"
+ ],
+ "entries": [
+  {
+   "kind": "ruling",
+   "statement": "OVERRIDE_CHAINS: 26 explicit AniList chains the relation walker cannot derive; 10 carry `ruledExtent` (Kingdom/Beastars/Black Butler class) and are standing candidates re-asserted on every run; extras are order-only in-flow components (Kizumonogatari inside Monogatari, MHA 170+1/170+1.5, Golden Kamuy OVAs, Slime films, Arslan OVA, Magus Bride OVA, Black Butler Murder/Atlantic, To-Love-Ru Darkness specials).",
+   "alias": "ruled extensions",
+   "family_candidate": "I",
+   "where": [
+    {
+     "file": "scripts/ingest/stitch.ts",
+     "loc": "const OVERRIDE_CHAINS, lines 27-133"
+    }
+   ],
+   "enforcement_site": "scripts/ingest/stitch.ts#main",
+   "enforcement_layer": "writer",
+   "audit_class": null,
+   "witnesses": [
+    "jojos-bizarre-adventure-tv",
+    "monogatari-series",
+    "dragon-ball-z-kai",
+    "bleach-thousand-year-blood-war",
+    "yu-gi-oh-zexal",
+    "hell-girl",
+    "magi-labyrinth-magic",
+    "melancholy-haruhi-suzumiya",
+    "love-ru-darkness",
+    "kamisama-kiss",
+    "x",
+    "tokyo-ghoul",
+    "tokyo-ghoul-re-0",
+    "fatestay-night-unlimited-blade-works",
+    "rurouni-kenshin-2023",
+    "berserk-2016",
+    "blade-immortal-2019",
+    "hokuto-no-ken",
+    "black-butler",
+    "kingdom",
+    "rent-girlfriend",
+    "beastars",
+    "ancient-magus-bride",
+    "golden-kamuy",
+    "cardcaptor-sakura",
+    "my-hero-academia",
+    "heroic-legend-arslan",
+    "time-i-got-reincarnated-slime"
+   ],
+   "bundle": false,
+   "bundle_parts": [],
+   "ruled_by": "Sean",
+   "ruled_on": "2026-08-22/23/24 (per entry)",
+   "status_hint": "live",
+   "notes": "Keys are AFL slugs, not series ids. Reasons inline only on the ruledExtent entries + some comments (JoJo Off & Monster absent by design; Sealed Card excluded; Sapporo Beer recut excluded; 1991 Arslan OVA excluded)."
+  },
+  {
+   "kind": "rule",
+   "statement": "Stitch candidacy: an open count_mismatch flag where AFL classified MORE than the matched entry aired by >2 is the lumped-page signature (AFL cannot know more episodes than exist); AFL having FEWER is site lag and never a stitch trigger.",
+   "alias": null,
+   "family_candidate": "S",
+   "where": [
+    {
+     "file": "scripts/ingest/stitch.ts",
+     "loc": "lines 166-183"
+    }
+   ],
+   "enforcement_site": "scripts/ingest/stitch.ts#main",
+   "enforcement_layer": "writer",
+   "audit_class": null,
+   "witnesses": [
+    "tokyo-ghoul"
+   ],
+   "bundle": false,
+   "bundle_parts": [],
+   "ruled_by": "session",
+   "ruled_on": null,
+   "status_hint": "live",
+   "notes": "Tokyo Ghoul slipped a former +12 gate (S1+√A page vs the √A entry was exactly 12 over)."
+  },
+  {
+   "kind": "rule",
+   "statement": "Stitch finalize gate: an un-ruled chain auto-finalizes only when the chain's aired sum matches AFL's continuous numbering within ±2 OR the excess fits inside the last (airing) node (lag); a RULED extension only needs the chain to COVER AFL's numbering (chainAired >= aflMax − 2) — the ruling covers the excess. Ambiguity or gate failure files count_mismatch (stage: stitch) and never guesses.",
+   "alias": "±2/lag finalize gate",
+   "family_candidate": "S",
+   "where": [
+    {
+     "file": "scripts/ingest/stitch.ts",
+     "loc": "lines 224-246"
+    }
+   ],
+   "enforcement_site": "scripts/ingest/stitch.ts#main",
+   "enforcement_layer": "writer",
+   "audit_class": null,
+   "witnesses": [],
+   "bundle": true,
+   "bundle_parts": [
+    "un-ruled: |chainAired − aflMax| ≤ 2 or lagOk",
+    "lagOk = excess ≤ aired(last node)",
+    "ruled: chainAired ≥ aflMax − 2",
+    "failure → fileFlagOnce count_mismatch, never finalize"
+   ],
+   "ruled_by": "session",
+   "ruled_on": null,
+   "status_hint": "live",
+   "notes": "The same ±2/lag gate is copied into afg-extend.ts, afg-expansion.ts and reconcile-structure.ts — four call sites, not a lib predicate."
+  },
+  {
+   "kind": "rule",
+   "statement": "A ruled extension is structure only: the canonical id and title an existing series already carries are stable (a re-stitch never re-keys or renames it).",
+   "alias": "afg-extend's rule",
+   "family_candidate": "I",
+   "where": [
+    {
+     "file": "scripts/ingest/stitch.ts",
+     "loc": "lines 256-261"
+    },
+    {
+     "file": "scripts/ingest/afg-extend.ts",
+     "loc": "lines 144-145"
+    },
+    {
+     "file": "scripts/ingest/reconcile-structure.ts",
+     "loc": "lines 96-97"
+    }
+   ],
+   "enforcement_site": "scripts/ingest/stitch.ts#main (ruled && old)",
+   "enforcement_layer": "writer",
+   "audit_class": null,
+   "witnesses": [],
+   "bundle": false,
+   "bundle_parts": [],
+   "ruled_by": "session",
+   "ruled_on": "2026-08-24",
+   "status_hint": "live",
+   "notes": "Un-ruled stitches CAN re-key (old.id !== series.id → delete old row) — the stability rule applies only to ruled extensions / extend / reconcile."
+  },
+  {
+   "kind": "rule",
+   "statement": "AFL-range merge: on re-stitch only AFL's own numbering range is rewritten (delete rows ≤ aflTop, reinsert); rows beyond it (AFG/Wikipedia fills on a ruled extension) survive.",
+   "alias": "AFL-range merge rule",
+   "family_candidate": "S",
+   "where": [
+    {
+     "file": "scripts/ingest/stitch.ts",
+     "loc": "lines 12-14, 296-304"
+    }
+   ],
+   "enforcement_site": "scripts/ingest/stitch.ts#main",
+   "enforcement_layer": "writer",
+   "audit_class": null,
+   "witnesses": [],
+   "bundle": false,
+   "bundle_parts": [],
+   "ruled_by": "session",
+   "ruled_on": "2026-08-23",
+   "status_hint": "live",
+   "notes": "Header cites '§10 AFL-range merge rule'."
+  },
+  {
+   "kind": "rule",
+   "statement": "Every episode writer goes through filterEpisodeRows (community caps + type overrides) — a re-stitch, extension fill, expansion or wiki row-creation must never resurrect rows or types a ruling removed.",
+   "alias": null,
+   "family_candidate": "R",
+   "where": [
+    {
+     "file": "scripts/ingest/stitch.ts",
+     "loc": "lines 286-295"
+    },
+    {
+     "file": "scripts/ingest/afg-extend.ts",
+     "loc": "lines 167-171"
+    },
+    {
+     "file": "scripts/ingest/afg-expansion.ts",
+     "loc": "lines 202-204"
+    },
+    {
+     "file": "scripts/ingest/wiki-episodes-backfill.ts",
+     "loc": "lines 11-14, 399-401"
+    },
+    {
+     "file": "scripts/ingest/apply-rulings-20260824.ts",
+     "loc": "line 70"
+    }
+   ],
+   "enforcement_site": "scripts/ingest/lib/resolve.ts#filterEpisodeRows",
+   "enforcement_layer": "writer",
+   "audit_class": "ruling_violation",
+   "witnesses": [],
+   "bundle": false,
+   "bundle_parts": [],
+   "ruled_by": "Sean",
+   "ruled_on": "2026-08-23",
+   "status_hint": "live",
+   "notes": "Outcome check in audit-ui-truth ruling_violation (caps + type overrides)."
+  },
+  {
+   "kind": "rule",
+   "statement": "Ownership guard: an un-ruled chain walk stops at any AniList entry another canonical series already claims (ruled splits stay split).",
+   "alias": "ownership guard",
+   "family_candidate": "I",
+   "where": [
+    {
+     "file": "scripts/ingest/stitch.ts",
+     "loc": "lines 218-222"
+    },
+    {
+     "file": "scripts/ingest/afg-extend.ts",
+     "loc": "lines 12-15, 118-119"
+    },
+    {
+     "file": "scripts/ingest/afg-expansion.ts",
+     "loc": "lines 122-124"
+    },
+    {
+     "file": "scripts/ingest/canon-tier.ts",
+     "loc": "line 54"
+    },
+    {
+     "file": "scripts/ingest/reconcile-structure.ts",
+     "loc": "lines 57-58"
+    }
+   ],
+   "enforcement_site": "scripts/ingest/lib/chain.ts#walkChain / ownedAnilistIds",
+   "enforcement_layer": "writer",
+   "audit_class": "integrity_double_claimed",
+   "witnesses": [],
+   "bundle": false,
+   "bundle_parts": [],
+   "ruled_by": "session",
+   "ruled_on": null,
+   "status_hint": "live",
+   "notes": "Predicate lives in lib/chain (lib home); scripts are the call sites."
+  },
+  {
+   "kind": "rule",
+   "statement": "Movies/OVAs inside a chain count only when numbered by the community; otherwise they are order-only watch-order entries (extras with a null span).",
+   "alias": "movies rule / Initial D rule",
+   "family_candidate": "N",
+   "where": [
+    {
+     "file": "scripts/ingest/stitch.ts",
+     "loc": "lines 69-72"
+    },
+    {
+     "file": "scripts/ingest/apply-research-batch-7.ts",
+     "loc": "DEMOTIONS ghost-in-the-shell / yu-gi-oh entries"
+    }
+   ],
+   "enforcement_site": "scripts/ingest/lib/chain.ts#writeComponents (extras → null span)",
+   "enforcement_layer": "writer",
+   "audit_class": "special_numbered_unreviewed",
+   "witnesses": [
+    "black-butler",
+    "ghost-in-the-shell-stand-alone-complex",
+    "yu-gi-oh-2000"
+   ],
+   "bundle": false,
+   "bundle_parts": [],
+   "ruled_by": "Sean",
+   "ruled_on": "2026-08-23",
+   "status_hint": "live",
+   "notes": "Header comment cites '§10'."
+  },
+  {
+   "kind": "architecture",
+   "statement": "One candidate's failure (e.g. AniList outage on a cache miss) must never kill a stitch/extend/reconcile run — it stays flagged and retries next time (per-candidate try/catch).",
+   "alias": null,
+   "family_candidate": "P",
+   "where": [
+    {
+     "file": "scripts/ingest/stitch.ts",
+     "loc": "lines 318-322"
+    },
+    {
+     "file": "scripts/ingest/afg-extend.ts",
+     "loc": "lines 190-192"
+    },
+    {
+     "file": "scripts/ingest/reconcile-structure.ts",
+     "loc": "lines 121-123"
+    }
+   ],
+   "enforcement_site": null,
+   "enforcement_layer": "process",
+   "audit_class": null,
+   "witnesses": [],
+   "bundle": false,
+   "bundle_parts": [],
+   "ruled_by": "session",
+   "ruled_on": null,
+   "status_hint": "live",
+   "notes": ""
+  },
+  {
+   "kind": "ruling",
+   "statement": "RULED_SPLITS: AFG pages whose numbering deliberately runs across one of OUR ruled splits are skipped by afg-extend by name — bleach (367+ = TYBW) and tokyo-ghoul (25+ = :re, the Naruto/Shippuden pattern).",
+   "alias": null,
+   "family_candidate": "I",
+   "where": [
+    {
+     "file": "scripts/ingest/afg-extend.ts",
+     "loc": "const RULED_SPLITS, lines 26-32"
+    }
+   ],
+   "enforcement_site": "scripts/ingest/afg-extend.ts#main",
+   "enforcement_layer": "writer",
+   "audit_class": null,
+   "witnesses": [
+    "bleach",
+    "tokyo-ghoul"
+   ],
+   "bundle": false,
+   "bundle_parts": [],
+   "ruled_by": "Sean",
+   "ruled_on": "2026-08-24",
+   "status_hint": "live",
+   "notes": "Comment: the ownership guard would stop the walk anyway; the skip list keeps the report honest about WHY."
+  },
+  {
+   "kind": "rule",
+   "statement": "AFG-driven extension: the AniList chain must INDEPENDENTLY confirm AFG's numbering (walkChain + the ±2/lag gate) before anything applies; unconfirmed pages flag count_mismatch (stage: extend); a chain that would SHRINK us is skipped.",
+   "alias": null,
+   "family_candidate": "S",
+   "where": [
+    {
+     "file": "scripts/ingest/afg-extend.ts",
+     "loc": "lines 1-6, 117-140"
+    }
+   ],
+   "enforcement_site": "scripts/ingest/afg-extend.ts#main",
+   "enforcement_layer": "writer",
+   "audit_class": null,
+   "witnesses": [
+    "dan-da-dan"
+   ],
+   "bundle": false,
+   "bundle_parts": [],
+   "ruled_by": "Sean",
+   "ruled_on": "2026-08-24",
+   "status_hint": "live",
+   "notes": "'populate what AFG/AFL know, always via repeatable mechanisms' (Sean 2026-08-24)."
+  },
+  {
+   "kind": "rule",
+   "statement": "Extend candidacy compares AFG's max against the series' STRUCTURE (component ends / totals / aired), not the episodes table; extend only when AFG's numbering outruns the structure by >2 — our own episodes exceeding it is the ruled AFL-extras class (Angel Beats OVAs, Kenshin 95-100), already accepted per case; walking chains to 'explain' extras grabs unrelated OVAs. Sparse pages (<6 rows) carry no signal.",
+   "alias": null,
+   "family_candidate": "S",
+   "where": [
+    {
+     "file": "scripts/ingest/afg-extend.ts",
+     "loc": "lines 60, 74-94"
+    }
+   ],
+   "enforcement_site": "scripts/ingest/afg-extend.ts#main",
+   "enforcement_layer": "writer",
+   "audit_class": "integrity_eps_beyond_total",
+   "witnesses": [
+    "cuckoos",
+    "angel-beats",
+    "rurouni-kenshin"
+   ],
+   "bundle": true,
+   "bundle_parts": [
+    "candidacy vs structure not episode count (Cuckoos 36 vs total 24)",
+    "extend only when stagedMax > structure + 2",
+    "ruled AFL-extras class never triggers a walk",
+    "<6 rows = no signal"
+   ],
+   "ruled_by": "session",
+   "ruled_on": null,
+   "status_hint": "live",
+   "notes": ""
+  },
+  {
+   "kind": "rule",
+   "statement": "Episode MERGE on extension: existing AFL rows stay the type authority and are untouched; AFG fills only the numbers we lack, with AFG's own 3-way taxonomy and null air_date.",
+   "alias": null,
+   "family_candidate": "T",
+   "where": [
+    {
+     "file": "scripts/ingest/afg-extend.ts",
+     "loc": "lines 9-10, 159-175"
+    },
+    {
+     "file": "scripts/ingest/afg-expansion.ts",
+     "loc": "lines 2-5, 195-201"
+    }
+   ],
+   "enforcement_site": "scripts/ingest/afg-extend.ts#main",
+   "enforcement_layer": "writer",
+   "audit_class": null,
+   "witnesses": [],
+   "bundle": false,
+   "bundle_parts": [],
+   "ruled_by": "Sean",
+   "ruled_on": "2026-08-24",
+   "status_hint": "live",
+   "notes": "AFG vocabulary: red=filler, blue=mixed, plain=canon; no anime-canon."
+  },
+  {
+   "kind": "ruling",
+   "statement": "relations.ts RULED: 27 franchise relation pairs (afl_slug from → to → kind) whose kind overrides the AniList auto edge per pair — sequel/remake/spin_off/alternative/side_story; 'remake' is not an AniList concept.",
+   "alias": null,
+   "family_candidate": "I",
+   "where": [
+    {
+     "file": "scripts/ingest/relations.ts",
+     "loc": "const RULED, lines 13-43"
+    }
+   ],
+   "enforcement_site": "scripts/ingest/relations.ts#main",
+   "enforcement_layer": "writer",
+   "audit_class": null,
+   "witnesses": [
+    "naruto-shippuden",
+    "cardcaptor-sakura-clear-card",
+    "boruto-naruto-next-generations",
+    "dragon-ball-z",
+    "dragon-ball-gt",
+    "dragon-ball-super",
+    "dragon-ball-z-kai",
+    "yu-gi-oh-gx",
+    "yu-gi-oh-5ds",
+    "yu-gi-oh-zexal",
+    "yu-gi-oh-arc-v",
+    "yu-gi-oh-vrains",
+    "yu-gi-oh-sevens",
+    "digimon-adventure-2020",
+    "sailor-moon-crystal",
+    "fairy-tail-100-years-quest",
+    "hunter-x-hunter",
+    "fullmetal-alchemist-brotherhood",
+    "fruits-basket-2019",
+    "shaman-king-2021",
+    "shaman-kingflowers",
+    "rurouni-kenshin-2023",
+    "seven-deadly-sins-four-knights-apocalypse",
+    "it-wrong-try-pick-girls-dungeon-side-sword-oratoria",
+    "sword-art-online-alternative-ggo",
+    "a-certain-scientific-railgun",
+    "bleach-thousand-year-blood-war"
+   ],
+   "bundle": false,
+   "bundle_parts": [],
+   "ruled_by": "Sean",
+   "ruled_on": "2026-08-22 (+ clear-card 2026-08-24)",
+   "status_hint": "live",
+   "notes": "Source of truth stated as docs/franchise-rulings.md; only 2 of 27 rows carry an inline reason. Pairs missing from canonical are skipped silently (recovery-dependent)."
+  },
+  {
+   "kind": "rule",
+   "statement": "series_relations keeps AniList's full relation vocabulary verbatim lowercase (SEQUEL/PREQUEL/SIDE_STORY/SPIN_OFF/ALTERNATIVE/PARENT) between components of DIFFERENT canonical series; the table is rebuilt from scratch each run and RULED pairs replace the auto rows for that pair.",
+   "alias": null,
+   "family_candidate": "I",
+   "where": [
+    {
+     "file": "scripts/ingest/relations.ts",
+     "loc": "lines 1-11, 55-96"
+    }
+   ],
+   "enforcement_site": "scripts/ingest/relations.ts#main",
+   "enforcement_layer": "writer",
+   "audit_class": null,
+   "witnesses": [],
+   "bundle": false,
+   "bundle_parts": [],
+   "ruled_by": "Sean",
+   "ruled_on": "2026-08-22",
+   "status_hint": "live",
+   "notes": ""
+  },
+  {
+   "kind": "ruling",
+   "statement": "stabilize.ts DUPLICATE_OF: five per-season AFL pages ruled duplicates of a stitched series (food-wars plates ×4 → food-wars; nekomonogatari-kuro → monogatari-series) — series row deleted, source_map disposition 'duplicate'.",
+   "alias": null,
+   "family_candidate": "I",
+   "where": [
+    {
+     "file": "scripts/ingest/stabilize.ts",
+     "loc": "const DUPLICATE_OF, lines 14-21"
+    }
+   ],
+   "enforcement_site": "scripts/ingest/stabilize.ts#main → source_map.disposition",
+   "enforcement_layer": "writer",
+   "audit_class": null,
+   "witnesses": [
+    "food-wars-second-plate-1",
+    "food-wars-third-plate-1",
+    "food-wars-fourth-plate",
+    "food-wars-fifth-plate",
+    "nekomonogatari-kuro"
+   ],
+   "bundle": false,
+   "bundle_parts": [],
+   "ruled_by": "Sean",
+   "ruled_on": "2026-08-22",
+   "status_hint": "live",
+   "notes": "Persists as a source_map disposition (backfill.ts honors it); the map itself is history."
+  },
+  {
+   "kind": "ruling",
+   "statement": "stabilize.ts SPARSE_HOLD: eight AFL pages AFL never fully classified (Kinnikuman 4/137…) removed from canonical until classification reaches 60% (the resolver's sparse guard) — kakegurui, city-hunter, elemental-gelade, kinnikuman, ranking-kings, mobile-suit-zeta-gundam, mobile-suit-gundam-zz, digimon-adventure-02.",
+   "alias": "sparse guard (60%)",
+   "family_candidate": "S",
+   "where": [
+    {
+     "file": "scripts/ingest/stabilize.ts",
+     "loc": "const SPARSE_HOLD, lines 9-12"
+    }
+   ],
+   "enforcement_site": "scripts/ingest/lib/resolve.ts (sparse guard)",
+   "enforcement_layer": "writer",
+   "audit_class": null,
+   "witnesses": [
+    "kinnikuman"
+   ],
+   "bundle": false,
+   "bundle_parts": [],
+   "ruled_by": "session",
+   "ruled_on": "2026-08-22",
+   "status_hint": "superseded",
+   "notes": "Several of these later re-entered via canon-tier.ts / canon-tier-2.ts (ranking-kings, kinnikuman, city-hunter, elemental-gelade) — the hold list is stale as a list; the 60% predicate lives in lib/resolve."
+  },
+  {
+   "kind": "ruling",
+   "statement": "School Days / School Rumble disentanglement: the corrupt-era alias matched School Days to School Rumble; the School Rumble shell is deleted, school-days is manually matched to AniList 2476 and re-resolved; School Rumble has no readable AFL page (§9).",
+   "alias": null,
+   "family_candidate": "I",
+   "where": [
+    {
+     "file": "scripts/ingest/stabilize.ts",
+     "loc": "lines 44-59"
+    }
+   ],
+   "enforcement_site": "source_map (manual, verified)",
+   "enforcement_layer": "writer",
+   "audit_class": null,
+   "witnesses": [
+    "school-days"
+   ],
+   "bundle": false,
+   "bundle_parts": [],
+   "ruled_by": "session",
+   "ruled_on": "2026-08-22",
+   "status_hint": "live",
+   "notes": ""
+  },
+  {
+   "kind": "ruling",
+   "statement": "merge.ts MERGES: sword-art-online absorbs sword-art-online-alicization — Alicization = seasons 3+ of the one SAO series (franchise-rulings.md); absorbed rows renumber by afl_offset, components append in season_order.",
+   "alias": "SAO ruling",
+   "family_candidate": "I",
+   "where": [
+    {
+     "file": "scripts/ingest/merge.ts",
+     "loc": "const MERGES, lines 9-15"
+    }
+   ],
+   "enforcement_site": "scripts/ingest/merge.ts#main",
+   "enforcement_layer": "writer",
+   "audit_class": null,
+   "witnesses": [
+    "sword-art-online"
+   ],
+   "bundle": false,
+   "bundle_parts": [],
+   "ruled_by": "Sean",
+   "ruled_on": "2026-08-22",
+   "status_hint": "live",
+   "notes": "Applied; re-runs skip (victim absent). Header mentions 'later the recovered Food Wars plates' but those went via stabilize DUPLICATE_OF, not MERGES."
+  },
+  {
+   "kind": "rule",
+   "statement": "Multi-page merge aggregates: aired sums; total sums only when both known else null; victim's status/end_date/next_airing win (currency); popularity max; average_score base-first.",
+   "alias": null,
+   "family_candidate": "S",
+   "where": [
+    {
+     "file": "scripts/ingest/merge.ts",
+     "loc": "lines 84-101"
+    }
+   ],
+   "enforcement_site": "scripts/ingest/merge.ts#main",
+   "enforcement_layer": "writer",
+   "audit_class": null,
+   "witnesses": [],
+   "bundle": false,
+   "bundle_parts": [],
+   "ruled_by": "session",
+   "ruled_on": null,
+   "status_hint": "live",
+   "notes": "Parallel aggregation rule lives in lib/chain aggregate (lib home) — potential drift."
+  },
+  {
+   "kind": "ruling",
+   "statement": "polish-ids.ts REKEY: nine canonical id re-keys before ids became user-visible (jojo-s… → jojos-bizarre-adventure, heaven-s… → heavens-lost-property, hell-s… → hells-paradise, miss-kobayashi-s… → miss-kobayashis-dragon-maid, konosuba…, pretty-guardian-sailor-moon-crystal-seasons-1-2 → sailor-moon-crystal, the-melancholy-of-haruhi-suzumiya-2009 → …-suzumiya, initial-d-1st-stage → initial-d, x-tv → x).",
+   "alias": null,
+   "family_candidate": "I",
+   "where": [
+    {
+     "file": "scripts/ingest/polish-ids.ts",
+     "loc": "const REKEY, lines 8-18"
+    }
+   ],
+   "enforcement_site": "scripts/ingest/polish-ids.ts#main",
+   "enforcement_layer": "writer",
+   "audit_class": null,
+   "witnesses": [
+    "jojos-bizarre-adventure",
+    "sailor-moon-crystal",
+    "initial-d",
+    "x"
+   ],
+   "bundle": false,
+   "bundle_parts": [],
+   "ruled_by": "session",
+   "ruled_on": "2026-08-22",
+   "status_hint": "live",
+   "notes": "No per-entry reasons. Architecture fact in header: no ON UPDATE CASCADE, so a re-key is copy → move children → delete."
+  },
+  {
+   "kind": "architecture",
+   "statement": "ingest_fractionals is the staging/ruling record (service-role only); watch_order_entries is the canonical app-readable mirror of its order_only rows, rebuilt idempotently (entries whose fractional vanished are dropped).",
+   "alias": null,
+   "family_candidate": "N",
+   "where": [
+    {
+     "file": "scripts/ingest/sync-watch-order.ts",
+     "loc": "lines 1-9, 36-72"
+    }
+   ],
+   "enforcement_site": "scripts/ingest/sync-watch-order.ts#main",
+   "enforcement_layer": "writer",
+   "audit_class": null,
+   "witnesses": [],
+   "bundle": false,
+   "bundle_parts": [],
+   "ruled_by": "session",
+   "ruled_on": "2026-08-24",
+   "status_hint": "live",
+   "notes": ""
+  },
+  {
+   "kind": "rule",
+   "statement": "display_label on a watch-order entry is a per-series SURFACE RULING held in the code map (RULED_LABELS); an entry absent from the map carries display_label null and does NOT render — everything stays data-ready and unsurfaced until its own ruling.",
+   "alias": null,
+   "family_candidate": "N",
+   "where": [
+    {
+     "file": "scripts/ingest/sync-watch-order.ts",
+     "loc": "lines 3-7, 13-26, 58"
+    }
+   ],
+   "enforcement_site": "scripts/ingest/sync-watch-order.ts#RULED_LABELS",
+   "enforcement_layer": "both",
+   "audit_class": null,
+   "witnesses": [
+    "my-hero-academia"
+   ],
+   "bundle": false,
+   "bundle_parts": [],
+   "ruled_by": "Sean",
+   "ruled_on": "2026-08-24",
+   "status_hint": "live",
+   "notes": "MHA labels PARKED 2026-08-24 (map emptied) pending the specials/OVAs/movies STATUS design pass."
+  },
+  {
+   "kind": "process",
+   "statement": "PARKED v2 watch-order logic (reference point): +N entries render as episode rows (#170+1, #170+1.5), COUNT as units — section envelope includes their chapters and volume, section counts include them, they appear on the manga strip, are selectable/steppable, and the series total reads '170+1.5'. Re-activate by restoring 'my-hero-academia': { 171: '170+1', 171.5: '170+1.5' }.",
+   "alias": null,
+   "family_candidate": "N",
+   "where": [
+    {
+     "file": "scripts/ingest/sync-watch-order.ts",
+     "loc": "lines 17-25"
+    }
+   ],
+   "enforcement_site": null,
+   "enforcement_layer": "none-stated",
+   "audit_class": null,
+   "witnesses": [
+    "my-hero-academia"
+   ],
+   "bundle": false,
+   "bundle_parts": [],
+   "ruled_by": "Sean",
+   "ruled_on": "2026-08-24",
+   "status_hint": "planned-not-built",
+   "notes": "Text says 'docs §10 has the full version'."
+  },
+  {
+   "kind": "ruling",
+   "statement": "sync-watch-order RULED_RECORDS: my-hero-academia positions 171 (ch 431, vol 42, kind special) and 171.5 (ch 431.5, vol 42, kind special) carry structured adaptation fields.",
+   "alias": null,
+   "family_candidate": "N",
+   "where": [
+    {
+     "file": "scripts/ingest/sync-watch-order.ts",
+     "loc": "const RULED_RECORDS, lines 28-34"
+    }
+   ],
+   "enforcement_site": "scripts/ingest/sync-watch-order.ts#main",
+   "enforcement_layer": "writer",
+   "audit_class": null,
+   "witnesses": [
+    "my-hero-academia"
+   ],
+   "bundle": false,
+   "bundle_parts": [],
+   "ruled_by": "Sean",
+   "ruled_on": "2026-08-24",
+   "status_hint": "live",
+   "notes": "Duplicates facts also stored in ingest_fractionals notes by apply-rulings-20260824.ts (prose there, structured here)."
+  },
+  {
+   "kind": "ruling",
+   "statement": "audit-titles MANUAL_EXCLUDE: berserk-golden-age-arc, kizumonogatari, digimon-adventure-tri (film trilogies/series — movies out of v1 scope, Sean 2026-08-22, re-evaluate with watch-order) and one-pace (fan re-edit, not official — excluded pending Sean confirmation).",
+   "alias": null,
+   "family_candidate": "I",
+   "where": [
+    {
+     "file": "scripts/ingest/audit-titles.ts",
+     "loc": "const MANUAL_EXCLUDE, lines 14-21"
+    }
+   ],
+   "enforcement_site": "scripts/ingest/audit-titles.ts#exclude → source_map.disposition",
+   "enforcement_layer": "writer",
+   "audit_class": null,
+   "witnesses": [
+    "berserk-golden-age-arc",
+    "kizumonogatari",
+    "digimon-adventure-tri",
+    "one-pace"
+   ],
+   "bundle": false,
+   "bundle_parts": [],
+   "ruled_by": "Sean",
+   "ruled_on": "2026-08-22",
+   "status_hint": "live",
+   "notes": "one-pace is marked 'pending Sean confirmation' — an unresolved ruling in a standing map. Kizumonogatari later became order-only extras inside monogatari-series (stitch OVERRIDE_CHAINS) — the exclusion note and the extras entry describe the same films."
+  },
+  {
+   "kind": "rule",
+   "statement": "AFL alias corruption re-audit: a staged page whose served title disagrees (titlesAgree) with the index title for its slug is an alias-corruption victim — purge staging + canonical, exclude in source_map with a note so sweeps skip it until a deliberate re-audit.",
+   "alias": "AFL alias corruption (§9)",
+   "family_candidate": "I",
+   "where": [
+    {
+     "file": "scripts/ingest/audit-titles.ts",
+     "loc": "lines 1-7, 52-64"
+    },
+    {
+     "file": "scripts/ingest/fix-mismatch.ts",
+     "loc": "lines 1-8, 61-97"
+    }
+   ],
+   "enforcement_site": "scripts/ingest/lib/resolve.ts#titlesAgree / stageAfl 'held'",
+   "enforcement_layer": "writer",
+   "audit_class": null,
+   "witnesses": [
+    "chrono-crusade"
+   ],
+   "bundle": false,
+   "bundle_parts": [],
+   "ruled_by": "session",
+   "ruled_on": "2026-08-22",
+   "status_hint": "live",
+   "notes": "audit-titles reads the FIXTURE index (fixtures/afl-shows-index.html), not a live one."
+  },
+  {
+   "kind": "rule",
+   "statement": "Wikipedia episode fill is FILL-ONLY: AFL remains the title authority where it has real titles; Wikipedia fills '' titles and null air dates; a wiki title that disagrees with a non-empty stored title is NOT written (counted as a conflict; >3 conflicts per series files taxonomy_conflict 'numbering offset suspected').",
+   "alias": "metadata contract",
+   "family_candidate": "T",
+   "where": [
+    {
+     "file": "scripts/ingest/wiki-episodes-backfill.ts",
+     "loc": "lines 1-6, 379-413"
+    }
+   ],
+   "enforcement_site": "scripts/ingest/wiki-episodes-backfill.ts#main",
+   "enforcement_layer": "writer",
+   "audit_class": "title_incomplete",
+   "witnesses": [],
+   "bundle": false,
+   "bundle_parts": [],
+   "ruled_by": "Sean",
+   "ruled_on": "2026-08-23",
+   "status_hint": "live",
+   "notes": ""
+  },
+  {
+   "kind": "rule",
+   "statement": "Wiki fill gates: only numbers 1..aired are written; rows this script CREATES go through filterEpisodeRows and default to type canon (row-less canon-tier series get full rows); the page family's max number must fit our aired count (+2 lag) or the family flags instead of writing garbage.",
+   "alias": null,
+   "family_candidate": "T",
+   "where": [
+    {
+     "file": "scripts/ingest/wiki-episodes-backfill.ts",
+     "loc": "lines 7-14, 369-406"
+    }
+   ],
+   "enforcement_site": "scripts/ingest/wiki-episodes-backfill.ts#main",
+   "enforcement_layer": "writer",
+   "audit_class": null,
+   "witnesses": [],
+   "bundle": true,
+   "bundle_parts": [
+    "per-row 1..aired",
+    "created rows via filterEpisodeRows, type canon",
+    "alignment +2 lag"
+   ],
+   "ruled_by": "session",
+   "ruled_on": null,
+   "status_hint": "live",
+   "notes": ""
+  },
+  {
+   "kind": "rule",
+   "statement": "NUMBERING-SPACE TRANSLATION (the Dr. Stone Ryuusui lesson): every per-episode external source has its OWN numbering space; a series with a MID-RUN order-only component REQUIRES a declared shift (WIKI_NUMBERING_SHIFTS) or proven alignment (fractional separators, or page top == our count) before any fill past that position — otherwise fills past the insert are withheld and count_mismatch flags; declared shifts also run in CORRECTION mode (a stored title matching the wiki value at the WRONG offset is rewritten).",
+   "alias": "Ryuusui lesson",
+   "family_candidate": "N",
+   "where": [
+    {
+     "file": "scripts/ingest/wiki-episodes-backfill.ts",
+     "loc": "lines 24-42, 320-350, 370-390"
+    }
+   ],
+   "enforcement_site": "scripts/ingest/wiki-episodes-backfill.ts#shiftFor / midRunOrderOnly guard",
+   "enforcement_layer": "writer",
+   "audit_class": null,
+   "witnesses": [
+    "dr-stone",
+    "the-ancient-magus-bride"
+   ],
+   "bundle": true,
+   "bundle_parts": [
+    "own numbering space per source",
+    "mid-run order-only requires declared shift or alignment evidence",
+    "fractional rows prove alignment",
+    "page top == our count proves alignment (Magus Bride S2 case)",
+    "correction mode rewrites poisoned fills"
+   ],
+   "ruled_by": "Sean",
+   "ruled_on": "2026-08-23",
+   "status_hint": "live",
+   "notes": "Dr. Stone itself resolved differently — Wikipedia labels Ryuusui 35.5 (already our space); the shifted source was AFL, handled by lib SOURCE_NUMBERING_SHIFTS. WIKI_NUMBERING_SHIFTS is therefore EMPTY and duplicates the lib mechanism's purpose for a source that never needed it."
+  },
+  {
+   "kind": "rule",
+   "statement": "EVIDENCE-LOCKED per-page offsets (Sean's When They Cry case): a wiki page's offset into OUR numbering must be PROVEN before its rows merge — votes from exact air-date matches (weight 2) and ≥75% title-token similarity (weight 1) against stored rows; the winner needs ≥3 votes AND ≥3× the runner-up (margin lock); else component lock (page named 'season N' → our season-N component group, labels first then position), else first-segment fallback (exact-name/own-article page starting at 1, dates within ±1 year), else continuity lock (rows begin exactly where merged rows end, fit our count, dates monotone); unlockable pages skip per page.",
+   "alias": "When They Cry case / Kingdom S6 lesson / Slime lesson",
+   "family_candidate": "N",
+   "where": [
+    {
+     "file": "scripts/ingest/wiki-episodes-backfill.ts",
+     "loc": "lines 128-272"
+    }
+   ],
+   "enforcement_site": "scripts/ingest/wiki-episodes-backfill.ts#lockAndMerge",
+   "enforcement_layer": "writer",
+   "audit_class": null,
+   "witnesses": [
+    "when-they-cry",
+    "rurouni-kenshin-2023",
+    "kingdom",
+    "that-time-i-got-reincarnated-as-a-slime",
+    "kinnikuman"
+   ],
+   "bundle": true,
+   "bundle_parts": [
+    "date votes weigh double",
+    "similarity ≥0.75 tokens",
+    "lock: best ≥3 and best ≥3×second",
+    "component lock by season label, positional fallback",
+    "airing tail capped at total_episodes",
+    "first-segment fallback needs page-name match + datesCompatible",
+    "continuity lock (3 passes)"
+   ],
+   "ruled_by": "Sean",
+   "ruled_on": "2026-08-23",
+   "status_hint": "live",
+   "notes": ""
+  },
+  {
+   "kind": "trap",
+   "statement": "Wikipedia list-page search can return NAMESAKES and token-overlapping strangers ('List of Kingdom episodes' is the 2007 British drama; Orphan Black / HBO Girls; all four 'Rurouni Kenshin' list pages belong to the 1996 series) — evidence-locked pages prove identity by content, fallback pages must prove it by NAME, and a page whose earliest air date sits >1 year from our start is another show whatever its name says; main-article fallback tries disambiguated forms first ('(Japanese TV series)').",
+   "alias": "the Kingdom lesson / Orphan-Black lesson / SHY class",
+   "family_candidate": "N",
+   "where": [
+    {
+     "file": "scripts/ingest/wiki-episodes-backfill.ts",
+     "loc": "lines 118-127, 155-163, 274-313"
+    }
+   ],
+   "enforcement_site": "scripts/ingest/wiki-episodes-backfill.ts#datesCompatible / pageNameMatches",
+   "enforcement_layer": "writer",
+   "audit_class": null,
+   "witnesses": [
+    "kingdom",
+    "rurouni-kenshin-2023",
+    "shy"
+   ],
+   "bundle": false,
+   "bundle_parts": [],
+   "ruled_by": "session",
+   "ruled_on": "2026-08-23",
+   "status_hint": "live",
+   "notes": "Source trap — belongs in the research-agent definition too."
+  },
+  {
+   "kind": "rule",
+   "statement": "Every Wikipedia fractional episode row (35.5-style) is staged durably into ingest_fractionals (Sean's ruling: non-main entries are NOTED so the UI/watch-order phase decides from data).",
+   "alias": null,
+   "family_candidate": "N",
+   "where": [
+    {
+     "file": "scripts/ingest/wiki-episodes-backfill.ts",
+     "loc": "lines 351-364"
+    }
+   ],
+   "enforcement_site": "scripts/ingest/wiki-episodes-backfill.ts#main",
+   "enforcement_layer": "writer",
+   "audit_class": "fractional_unmodeled",
+   "witnesses": [],
+   "bundle": false,
+   "bundle_parts": [],
+   "ruled_by": "Sean",
+   "ruled_on": "2026-08-23",
+   "status_hint": "live",
+   "notes": ""
+  },
+  {
+   "kind": "ruling",
+   "statement": "audit-afg-structure RULED: 'bishoujo-senshi-sailor-moon' → sailor-moon (90s original, NOT Crystal — synonym collision) and 'digimon-adventure' → digimon-digital-monsters (zero-episode AFG stub colliding with the 2020 entry's id; AFG's title is the 1999 romaji).",
+   "alias": null,
+   "family_candidate": "I",
+   "where": [
+    {
+     "file": "scripts/ingest/audit-afg-structure.ts",
+     "loc": "const RULED, lines 27-35"
+    }
+   ],
+   "enforcement_site": "scripts/ingest/audit-afg-structure.ts#resolveTier ('ruled' tier)",
+   "enforcement_layer": "writer",
+   "audit_class": null,
+   "witnesses": [
+    "sailor-moon",
+    "digimon-digital-monsters"
+   ],
+   "bundle": false,
+   "bundle_parts": [],
+   "ruled_by": "Sean",
+   "ruled_on": "2026-08-24",
+   "status_hint": "live",
+   "notes": "null value = ruled NOT a match (shape supports it; no such entry yet)."
+  },
+  {
+   "kind": "rule",
+   "statement": "AFG identity match tiers (identity-first, flag-first): registry → ruled → slug (AFG slug equals our id / afl_slug / slugified title) → title (whitespace-insensitive FULL title/synonym equality) → prefix (subtitle-stripped, ≥5 chars) which registers only when the episode span INDEPENDENTLY agrees (±2 of our max or a component boundary); a key two series both claim is ambiguous and never auto-matches; one afg id per series (strongest tier wins, never overwrites an existing registration).",
+   "alias": null,
+   "family_candidate": "I",
+   "where": [
+    {
+     "file": "scripts/ingest/audit-afg-structure.ts",
+     "loc": "lines 8-18, 124-191, 196-229"
+    }
+   ],
+   "enforcement_site": "scripts/ingest/audit-afg-structure.ts#resolveTier",
+   "enforcement_layer": "writer",
+   "audit_class": null,
+   "witnesses": [],
+   "bundle": true,
+   "bundle_parts": [
+    "tier order registry/ruled/slug/title/prefix",
+    "ambiguous keys never auto-match",
+    "prefix requires span agreement",
+    "one afg id per series"
+   ],
+   "ruled_by": "Sean",
+   "ruled_on": "2026-08-23/24",
+   "status_hint": "live",
+   "notes": "Header: 'AFG's series structuring is thoughtfully curated — consult it as evidence even where AFL exists'."
+  },
+  {
+   "kind": "ruling",
+   "statement": "audit-ui-truth REVIEWED_NUMBERED_SPECIALS: 29 (series:anilistId) non-season components verified as community-counted in the numbered run (Queue-2 Groups A/B, Sean sign-off 2026-08-23; Clear Card Prologue OVA = ep 71 and shounan-junai-gumi 1-5 identity, Sean 2026-08-24; dr-stone Ryuusui confirmed order-only mid-run).",
+   "alias": "numbered-vs-event rule",
+   "family_candidate": "N",
+   "where": [
+    {
+     "file": "scripts/ingest/audit-ui-truth.ts",
+     "loc": "const REVIEWED_NUMBERED_SPECIALS, lines 94-135"
+    }
+   ],
+   "enforcement_site": "scripts/ingest/audit-ui-truth.ts (special_numbered_unreviewed suppression)",
+   "enforcement_layer": "process",
+   "audit_class": "special_numbered_unreviewed",
+   "witnesses": [
+    "initial-d",
+    "attack-on-titan",
+    "hunter-x-hunter",
+    "fist-of-the-blue-sky",
+    "hajime-no-ippo-the-fighting",
+    "dr-stone",
+    "haikyu",
+    "monogatari-series",
+    "relife",
+    "black-lagoon",
+    "when-they-cry",
+    "kenichi-the-mightiest-disciple",
+    "steins-gate",
+    "cardcaptor-sakura",
+    "shounan-junai-gumi",
+    "the-future-diary",
+    "heavens-lost-property",
+    "gintama",
+    "to-love-ru",
+    "kill-la-kill",
+    "high-school-of-the-dead",
+    "dragon-ball-z-kai",
+    "dragon-ball-gt",
+    "kamisama-kiss"
+   ],
+   "bundle": false,
+   "bundle_parts": [],
+   "ruled_by": "Sean",
+   "ruled_on": "2026-08-23/24",
+   "status_hint": "live",
+   "notes": "A ruling map living inside an AUDIT file (suppression-with-reason). fist-of-the-blue-sky:3864 is still listed as 'AFL numbers 23-26' although apply-rulings-20260825b demoted that component to order-only — stale entry. Group B entries flagged 'medium (re-open if evidence emerges)'."
+  },
+  {
+   "kind": "rule",
+   "statement": "Any non-typical entry (special/OVA/movie/recap) NUMBERED into a run by any source is a research trigger — verify against community consensus, ask Sean, then record the ruling in REVIEWED_NUMBERED_SPECIALS.",
+   "alias": null,
+   "family_candidate": "N",
+   "where": [
+    {
+     "file": "scripts/ingest/audit-ui-truth.ts",
+     "loc": "lines 94-97"
+    }
+   ],
+   "enforcement_site": "scripts/ingest/audit-ui-truth.ts#special_numbered_unreviewed",
+   "enforcement_layer": "process",
+   "audit_class": "special_numbered_unreviewed",
+   "witnesses": [],
+   "bundle": false,
+   "bundle_parts": [],
+   "ruled_by": "Sean",
+   "ruled_on": "2026-08-24",
+   "status_hint": "live",
+   "notes": ""
+  }
+ ],
+ "standing_maps": [],
+ "scripts": []
+}

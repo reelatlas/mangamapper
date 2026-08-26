@@ -1,0 +1,1554 @@
+{
+  "home": "client",
+  "read": [
+    "docs/restructure/T0-BRIEF.md",
+    "docs/restructure-plan.md §1",
+    "docs/restructure-plan.md §3 T0",
+    "src/lib/mapping.ts",
+    "src/lib/mapping.test.ts",
+    "src/lib/mapping.position.test.ts",
+    "src/lib/format.ts",
+    "src/lib/hold.ts",
+    "src/lib/urls.ts",
+    "src/lib/utils.ts",
+    "src/data/catalog/supabaseSource.ts (the brief's 'src/lib/supabaseSource.ts' — lives under src/data/catalog/)",
+    "src/data/catalog/assemble.ts (split out of supabaseSource 2026-08-23; holds buildMapping/buildSpans/toEpisodes/toAnimeSeries)",
+    "src/data/catalog/source.ts",
+    "src/data/catalog/index.ts",
+    "src/data/catalog/mockSource.ts (head only — standing-map shapes)",
+    "src/types/anime.ts (type contracts + rule comments)",
+    "src/hooks/usePositionLookup.ts (the position instrument's rules; consumed by InlinePositionRow)",
+    "src/components/TypeBadge.tsx",
+    "src/components/EpisodeList.tsx",
+    "src/components/AnimeCard.tsx",
+    "src/components/MappingStrip.tsx",
+    "src/components/MangaMappingDisplay.tsx",
+    "src/components/PositionLabel.tsx",
+    "src/components/InlinePositionRow.tsx",
+    "src/components/StatusChip.tsx (status vocabulary strings only)",
+    "scripts/ingest/verify-series-display.ts lines 1-40 (to confirm the shared-code-path contract)",
+    "scripts/ingest/audit-ui-truth.ts lines 1-25, 70-80, 336-350, 440-475 (to confirm duplicate-logic candidates)",
+    "scripts/ingest/lib/mu-frontier.ts lines 136-158, 268-275 (to confirm the same-edition band duplicate)"
+  ],
+  "entries": [
+    {
+      "kind": "rule",
+      "statement": "Chapters exist only in canon/mixed episodes: every chapter↔episode conversion is canon-aware — it walks the span data and skips filler, a chapter can never resolve to a filler episode, and stepping a chapter hops over filler blocks.",
+      "alias": null,
+      "family_candidate": "A",
+      "where": [
+        { "file": "src/lib/mapping.ts", "loc": "lines 3-10 header comment 'Core principle'" },
+        { "file": "src/lib/mapping.ts", "loc": "lines 38-76 epToCanonIdx / canonIdxToEp / nextCanonEp / prevCanonEp" },
+        { "file": "src/lib/mapping.ts", "loc": "lines 284-301 chToEp 'by construction never filler'" }
+      ],
+      "enforcement_site": "src/lib/mapping.ts#epToCanonIdx,canonIdxToEp,nextCanonEp,prevCanonEp,chToEp",
+      "enforcement_layer": "display",
+      "audit_class": null,
+      "witnesses": [],
+      "bundle": false,
+      "bundle_parts": [],
+      "ruled_by": "session",
+      "ruled_on": null,
+      "status_hint": "live",
+      "notes": "Display-side analog of hard invariant A1 (filler rows never carry chapter anchors). WITNESSED by tests: mapping.test.ts 'nextCanonEp / prevCanonEp' → 'hops over the filler desert in both directions', 'never returns a filler episode from inside the desert', 'returns null at the edges of the run', 'steps to the adjacent episode inside a canon run'; mapping.position.test.ts 'canonEpToCh' → 'skips filler when counting toward a chapter'."
+    },
+    {
+      "kind": "rule",
+      "statement": "The trailing chapter of a chapter string is its coverage end ('1088-1089' → 1089, '8-12,14' → 14); unparseable input yields null, never NaN.",
+      "alias": null,
+      "family_candidate": "N",
+      "where": [
+        { "file": "src/lib/mapping.ts", "loc": "lines 14-18 lastChapterNumber" }
+      ],
+      "enforcement_site": "src/lib/mapping.ts#lastChapterNumber",
+      "enforcement_layer": "display",
+      "audit_class": null,
+      "witnesses": [],
+      "bundle": false,
+      "bundle_parts": [],
+      "ruled_by": "session",
+      "ruled_on": null,
+      "status_hint": "live",
+      "notes": "Consumed by assemble.ts (buildMapping coveredChapter), usePositionLookup (rest.ch), and mockSource. WITNESSED by tests: mapping.test.ts 'lastChapterNumber' → 'takes the trailing chapter of a range', 'takes the last part of a comma list', 'returns the number itself for a single chapter', 'returns null for unparseable input rather than NaN'. Instance of hard invariant 4 (never NaN)."
+    },
+    {
+      "kind": "rule",
+      "statement": "A chapter string contains a chapter when any comma-part's range includes it; a single-number part has no hi element and must compare as equality (a plain isNaN(hi) check silently broke every single-chapter mapping).",
+      "alias": null,
+      "family_candidate": "N",
+      "where": [
+        { "file": "src/lib/mapping.ts", "loc": "lines 20-29 chapterInRange (fix dated 2026-08-19)" }
+      ],
+      "enforcement_site": "src/lib/mapping.ts#chapterInRange",
+      "enforcement_layer": "display",
+      "audit_class": null,
+      "witnesses": [],
+      "bundle": false,
+      "bundle_parts": [],
+      "ruled_by": "session",
+      "ruled_on": "2026-08-19",
+      "status_hint": "live",
+      "notes": "Used by solvePosition (exact-episode lookup for a chapter) and chapterForEpisode. No direct test."
+    },
+    {
+      "kind": "rule",
+      "statement": "An episode outside every span is typed canon by default (episodeTypeAt falls back to 'canon').",
+      "alias": null,
+      "family_candidate": "T",
+      "where": [
+        { "file": "src/lib/mapping.ts", "loc": "lines 35-36 episodeTypeAt" }
+      ],
+      "enforcement_site": "src/lib/mapping.ts#episodeTypeAt",
+      "enforcement_layer": "display",
+      "audit_class": null,
+      "witnesses": [],
+      "bundle": false,
+      "bundle_parts": [],
+      "ruled_by": "session",
+      "ruled_on": null,
+      "status_hint": "live",
+      "notes": "DRIFT CANDIDATE: this hardcodes canon, whereas assemble.ts buildSpans pads gaps with the series' OWN base type (anime-only-canon for originals) — the very fabrication buildSpans' comment says hardcoding canon caused on Super Dragon Ball Heroes. In practice buildSpans covers 1..aired so the fallback is only reachable off-range, but the two defaults disagree. WITNESSED by tests: mapping.test.ts 'episodeTypeAt' → 'reads the type from the containing span', 'reports span boundaries inclusively', 'defaults to canon outside every span'."
+    },
+    {
+      "kind": "rule",
+      "statement": "SOURCE SCOPE: a series entry adapts a range of the source; totals are the scope's END in absolute numbering and mangaStartVolume/mangaStartChapter mark where the scope BEGINS (null = 1). Sequels start mid-manga; a franchise split into distinct series is separate entries, never lumped.",
+      "alias": null,
+      "family_candidate": "S",
+      "where": [
+        { "file": "src/types/anime.ts", "loc": "lines 106-113 'SOURCE SCOPE' comment on AnimeSeries" },
+        { "file": "src/lib/mapping.ts", "loc": "lines 80-101 Ratios / ratios (startCh = mangaStartChapter ?? 1, published = totalChapters, perVol over the scope)" },
+        { "file": "src/lib/mapping.ts", "loc": "lines 402-408 solveChapter 'chapters before this entry's scope belong to a predecessor series'" },
+        { "file": "src/lib/mapping.ts", "loc": "lines 475-478 vol query 'volumes before this entry's scope belong to a predecessor series'" },
+        { "file": "src/lib/mapping.ts", "loc": "lines 505-514 fieldMin 'the scope's start, not 1, for sequels'" }
+      ],
+      "enforcement_site": "src/lib/mapping.ts#ratios,solvePosition,fieldMin",
+      "enforcement_layer": "display",
+      "audit_class": null,
+      "witnesses": ["bleach-tybw (text: 'Bleach TYBW start mid-manga (vol 55 / ch 480)')", "naruto → naruto-shippuden (text: 'Naruto → Shippuden')"],
+      "bundle": false,
+      "bundle_parts": [],
+      "ruled_by": "session",
+      "ruled_on": null,
+      "status_hint": "live",
+      "notes": "WITNESSED by test: mapping.position.test.ts 'canonEpStartCh' → 'starts the first episode at the entry's scope start, not chapter 1' (fixture mangaStartChapter 480, totalChapters 686). Out-of-scope chapter/volume queries render '// out_of_range (ch S-E)' / '(vol S-E)'."
+    },
+    {
+      "kind": "rule",
+      "statement": "Chapter → volume prefers REAL print boundaries (volume_boundaries) and falls back to a ratio estimate only when no boundary covers the chapter; an estimated row must never contradict a curated neighbour's volume.",
+      "alias": null,
+      "family_candidate": "V",
+      "where": [
+        { "file": "src/lib/mapping.ts", "loc": "lines 103-114 chToVol ('the Kenshin ep-29 wobble, Sean 2026-08-23')" },
+        { "file": "src/data/catalog/assemble.ts", "loc": "lines 70-79 volumeFor" },
+        { "file": "src/data/catalog/assemble.ts", "loc": "lines 168-175 toAnimeSeries volumeBoundaries comment" },
+        { "file": "src/data/catalog/supabaseSource.ts", "loc": "lines 72-85 allBoundaries comment" },
+        { "file": "src/types/anime.ts", "loc": "lines 118-121 volumeBoundaries comment" }
+      ],
+      "enforcement_site": "src/lib/mapping.ts#chToVol",
+      "enforcement_layer": "display",
+      "audit_class": null,
+      "witnesses": ["rurouni-kenshin (text: 'the Kenshin ep-29 wobble')"],
+      "bundle": false,
+      "bundle_parts": [],
+      "ruled_by": "Sean",
+      "ruled_on": "2026-08-23",
+      "status_hint": "live",
+      "notes": "DUPLICATE-LOGIC CANDIDATE: two client implementations of the ratio fallback differ — mapping.ts#chToVol uses startVol + floor((ch - startCh)/perVol) clamped to [startVol, totalVolumes] (scope-aware), assemble.ts#volumeFor uses min(totalVolumes, max(1, ceil(ch*vols/chs))) (not scope-aware). scripts/ingest/audit-ui-truth.ts line 73 re-implements volumeFor a third time. chToVol is the display path for rows/positions; volumeFor feeds anchor volumes, latestKnown and continueFrom."
+    },
+    {
+      "kind": "rule",
+      "statement": "Anchor-aware interpolation: confirmed points (every episode with a real mangaMapping, its last chapter = frontier reached BY that episode, plus the latestKnown frontier) form a piecewise curve in canon-index space; an estimate interpolates BETWEEN surrounding points and is clamped to [scope start, covered].",
+      "alias": null,
+      "family_candidate": "A",
+      "where": [
+        { "file": "src/lib/mapping.ts", "loc": "lines 117-123 'anchor-aware interpolation (Sean 2026-08-24)' header" },
+        { "file": "src/lib/mapping.ts", "loc": "lines 143-176 anchorPoints" },
+        { "file": "src/lib/mapping.ts", "loc": "lines 197-223 canonEpToCh" }
+      ],
+      "enforcement_site": "src/lib/mapping.ts#canonEpToCh,anchorPoints",
+      "enforcement_layer": "display",
+      "audit_class": null,
+      "witnesses": ["boruto (text: 'a single far-end frontier anchor (Boruto: ep 293 → ch 67) made the old global linear estimate paint wrong values')"],
+      "bundle": false,
+      "bundle_parts": [],
+      "ruled_by": "Sean",
+      "ruled_on": "2026-08-24",
+      "status_hint": "live",
+      "notes": "Supersedes the old global origin→frontier linear estimate (retained only as the no-interior-anchor fallback). chapterForEpisode line 333-337 still carries a stale comment ('Anchor-aware interpolation ... is the real fix once AniList data lands; until then') — comment predates the implementation. WITNESSED by tests: mapping.position.test.ts 'canonEpToCh — anchored interpolation' → 'returns an anchor's own chapter exactly', 'interpolates between two confirmed points'."
+    },
+    {
+      "kind": "rule",
+      "statement": "Beyond the last confirmed point the honest estimate is NO estimate: canon-typed episodes past the frontier may adapt side stories or nothing, so an extrapolated chapter there is a fabrication and renders null.",
+      "alias": "Kenshin rule",
+      "family_candidate": "A",
+      "where": [
+        { "file": "src/lib/mapping.ts", "loc": "lines 219-222 canonEpToCh tail ('Kenshin's \"lost episodes\" 95-98 repeated ch 151 under the old clamp')" },
+        { "file": "src/lib/mapping.position.test.ts", "loc": "lines 92-98 'refuses to extrapolate past the last confirmed point' ('Sean's Kenshin rule')" }
+      ],
+      "enforcement_site": "src/lib/mapping.ts#canonEpToCh",
+      "enforcement_layer": "display",
+      "audit_class": null,
+      "witnesses": ["rurouni-kenshin (text: 'Kenshin's lost episodes 95-98')"],
+      "bundle": false,
+      "bundle_parts": [],
+      "ruled_by": "Sean",
+      "ruled_on": null,
+      "status_hint": "live",
+      "notes": "WITNESSED by test: mapping.position.test.ts 'canonEpToCh — anchored interpolation' → 'refuses to extrapolate past the last confirmed point'. Instance of hard invariant 4 (honest gap beats plausible guess)."
+    },
+    {
+      "kind": "rule",
+      "statement": "REORDER REGIME: an anchor point below the running chapter maximum sits inside a jumped-back block; formulas (interpolation, prevEnd+1 starts, the successor cap) only hold BETWEEN points of the same regime, and across a regime boundary they return null (honest unknown) rather than a plausible-but-wrong number.",
+      "alias": "reorder regime",
+      "family_candidate": "A",
+      "where": [
+        { "file": "src/lib/mapping.ts", "loc": "lines 125-141 AnchorPoint.onTrend / bridgeable ('Sean's MHA 107/113 report, 2026-08-23')" },
+        { "file": "src/lib/mapping.ts", "loc": "lines 178-195 regimeAt / inReorderCrossing" },
+        { "file": "src/lib/mapping.ts", "loc": "lines 209-212 canonEpToCh 'an ESTIMATE inside a reorder crossing has no honest value (MHA ep 107 ...)'" },
+        { "file": "src/lib/mapping.ts", "loc": "lines 245-249 canonEpStartCh cross-regime start → null (MHA ep 113)" }
+      ],
+      "enforcement_site": "src/lib/mapping.ts#regimeAt,bridgeable,inReorderCrossing",
+      "enforcement_layer": "display",
+      "audit_class": null,
+      "witnesses": ["my-hero-academia (text: 'MHA's My Villain Academia arc aired after the Endeavor Agency arc: 218-240 after 241-252'; eps 107/113)"],
+      "bundle": false,
+      "bundle_parts": [],
+      "ruled_by": "Sean",
+      "ruled_on": "2026-08-23",
+      "status_hint": "live",
+      "notes": "Two consecutive points bridge only when both are on the monotonic envelope, or both inside the same jumped-back block and still advancing (b.ch >= a.ch). Rows inside a crossing are the 'zone holes' the verifier (scripts/ingest/verify-series-display.ts) reports as `hole` lines via inReorderCrossing — the exact-record work-list, never failures. WITNESSED by tests: mapping.position.test.ts 'inReorderCrossing — jumped-back adaptation order' → 'flags an unanchored episode spanning a back-jump', 'does not flag a normal forward run'."
+    },
+    {
+      "kind": "rule",
+      "statement": "Non-monotonic anchors render AS STORED: decreasing chapters at later episodes are KEPT at display time (adaptation order may legitimately jump back); junk numbering-space anchors are gated at write time and audited, never silently dropped by the client. Section coverage ranges likewise render high-to-low as real flow, never collapsed to a single number.",
+      "alias": null,
+      "family_candidate": "A",
+      "where": [
+        { "file": "src/lib/mapping.ts", "loc": "lines 158-162 anchorPoints comment ('Sean 2026-08-23 ... gated at write time (chapter-space gate, lib/anchors) and audited (anchor_nonmonotonic)')" },
+        { "file": "src/components/EpisodeList.tsx", "loc": "lines 95-97 coverageLabel comment 'Ranges render AS STORED in either direction (Sean 2026-08-23)'" },
+        { "file": "src/lib/mapping.ts", "loc": "lines 594-596 buildEpisodeList 'rows still show the flow as stored'" }
+      ],
+      "enforcement_site": "src/lib/mapping.ts#anchorPoints",
+      "enforcement_layer": "both",
+      "audit_class": "anchor_nonmonotonic",
+      "witnesses": [],
+      "bundle": false,
+      "bundle_parts": [],
+      "ruled_by": "Sean",
+      "ruled_on": "2026-08-23",
+      "status_hint": "live",
+      "notes": "The text names the writer gate ('chapter-space gate, lib/anchors') and the audit class (anchor_nonmonotonic) as the enforcement sites for the junk case; the client's only duty is not to hide the stored flow. Same-canon-index duplicates keep the max chapter (line 166)."
+    },
+    {
+      "kind": "rule",
+      "statement": "FIRST-CHAPTER RULING: an episode row displays the FIRST chapter it animates (where it STARTS in the manga), never its end/mid point — 'ep 35 = ch 119', not 127. The anchors themselves stay end-position instruments.",
+      "alias": "first-chapter ruling",
+      "family_candidate": "A",
+      "where": [
+        { "file": "src/lib/mapping.ts", "loc": "lines 225-234 canonEpStartCh header ('Sean's ruling 2026-08-23')" },
+        { "file": "src/lib/mapping.ts", "loc": "lines 438-449 solvePosition ep branch 'position readout mirrors the episode list: START chapter'" },
+        { "file": "src/lib/mapping.ts", "loc": "lines 451-457 solvePosition 'estimated rows display the episode's START chapter (Sean's ruling)'" },
+        { "file": "src/lib/mapping.ts", "loc": "lines 552-579 buildEpisodeList row loop ('Sean's first-chapter ruling')" },
+        { "file": "src/data/catalog/assemble.ts", "loc": "lines 93-95 toEpisodes 'a bare end value means only the end-position is known and display derives the start'" },
+        { "file": "src/types/anime.ts", "loc": "lines 62-69 MangaMapping.start comment" }
+      ],
+      "enforcement_site": "src/lib/mapping.ts#canonEpStartCh,buildEpisodeList,solvePosition",
+      "enforcement_layer": "display",
+      "audit_class": null,
+      "witnesses": [],
+      "bundle": true,
+      "bundle_parts": [
+        "The displayed chapter for a canon/mixed row is its START chapter, not its end.",
+        "Start precedence: the record's OWN start (MangaMapping.start / start_chapter) wins whenever stated (a single-chapter episode states it too); then a span's first number ('119-127' → 119); derivation only when the start is genuinely unknown (bare end value).",
+        "Derived start = previous canon episode's end + 1, clamped to this episode's own end (one derivation path off the end-position curve).",
+        "The clamp IS the majority/sliver rule: when the previous episode ended mid-chapter leaving only scraps, the next full chapter is shown; when two episodes share a chapter (end(prev) = end(ep)) the shared chapter is shown.",
+        "The first canon episode starts at the entry's scope start (mangaStartChapter), not chapter 1.",
+        "Across a reorder boundary (different regime, or prevEnd > end) no start is derived → null; callers fall back to the row's own end value when one is known."
+      ],
+      "ruled_by": "Sean",
+      "ruled_on": "2026-08-23",
+      "status_hint": "live",
+      "notes": "Rendering the start requires the ambiguity fix in MangaMapping.start (Sean's Gintama ep-35 report, 2026-08-24: an exact ch-86 record rendered as ch 48 because derivation walked backwards into a jumped block). The 'sliver' language does not appear in this home; the client calls it 'the majority rule'. WITNESSED by tests: mapping.position.test.ts 'canonEpStartCh — display shows the FIRST chapter animated' → 'derives start as the previous episode's end + 1', 'clamps the start to this episode's own end when both share a chapter', 'starts the first episode at the entry's scope start, not chapter 1'."
+    },
+    {
+      "kind": "rule",
+      "statement": "Successor cap (one-chapter-dip class): an episode can never start after its successor, so the nearest following EXACT row's span start caps every derived start before it — within ONE regime only, and only when that row states a real span.",
+      "alias": "one-chapter-dip class",
+      "family_candidate": "A",
+      "where": [
+        { "file": "src/lib/mapping.ts", "loc": "lines 260-280 canonEpStartCh successor loop ('the one-chapter-dip class, Sean 2026-08-23')" }
+      ],
+      "enforcement_site": "src/lib/mapping.ts#canonEpStartCh",
+      "enforcement_layer": "display",
+      "audit_class": null,
+      "witnesses": [],
+      "bundle": false,
+      "bundle_parts": [],
+      "ruled_by": "Sean",
+      "ruled_on": "2026-08-23",
+      "status_hint": "live",
+      "notes": "Cap only applies when the successor's chapters string contains '-' or ',' (a stated span), s < start, s >= floor, and nextRegime === myRegime. 'only the nearest following exact row bounds this one' (break after first)."
+    },
+    {
+      "kind": "rule",
+      "statement": "Predecessor floor: the previous exact row's OWN stated start is a floor — a row may share or re-tread its predecessor's chapters but can never render as beginning BEFORE it did. A successor that reaches back past the predecessor's end is a reorder, and reorders never set a neighbour's position.",
+      "alias": "AoT-87 rule",
+      "family_candidate": "A",
+      "where": [
+        { "file": "src/lib/mapping.ts", "loc": "lines 251-258 canonEpStartCh floor" },
+        { "file": "src/lib/mapping.ts", "loc": "lines 266-272 comment ('Sean's Sailor Moon ep-72 report, 2026-08-24 ... the AoT-87 rule')" }
+      ],
+      "enforcement_site": "src/lib/mapping.ts#canonEpStartCh",
+      "enforcement_layer": "display",
+      "audit_class": null,
+      "witnesses": ["sailor-moon (text: 'ep 73 re-treads chs 15-17 after ep 71 reached 16, and the cap dragged ep 72's derived start back to 15')", "attack-on-titan (text: 'the AoT-87 rule')"],
+      "bundle": false,
+      "bundle_parts": [],
+      "ruled_by": "Sean",
+      "ruled_on": "2026-08-24",
+      "status_hint": "live",
+      "notes": "Text says the floor 'is the same rule the regime check aims at, enforced locally so it also holds where regime detection is too coarse'. 'AoT-87 rule' is cited by alias only — its statement lives in another home (merge should join)."
+    },
+    {
+      "kind": "rule",
+      "statement": "A strip click must land the needle where the user clicked: the chapter chosen for an episode must round-trip back to that episode under the SAME resolution solvePosition uses (confirmed episode ranges win before the estimator), searching ±3 around the estimate within [scope start, covered].",
+      "alias": null,
+      "family_candidate": null,
+      "where": [
+        { "file": "src/lib/mapping.ts", "loc": "lines 303-338 chapterForEpisode" }
+      ],
+      "enforcement_site": "src/lib/mapping.ts#chapterForEpisode",
+      "enforcement_layer": "display",
+      "audit_class": null,
+      "witnesses": [],
+      "bundle": false,
+      "bundle_parts": [],
+      "ruled_by": "session",
+      "ruled_on": null,
+      "status_hint": "unknown",
+      "notes": "Exported but NOT consumed by any file read in this home (usePositionLookup.stripClick sets 'ep' directly for aired units and uses unitToChapter for the tail) — possible dead code; its trailing comment is stale (predates anchor-aware interpolation). Flag for the T0.3 triage."
+    },
+    {
+      "kind": "rule",
+      "statement": "Strip units beyond the aired run (the manga_only tail) map to chapters at the tail's pacing: covered + (unit − aired) × (published − covered) / mangaAheadUnits, capped at published; units within the run resolve through canonEpToCh.",
+      "alias": null,
+      "family_candidate": "C",
+      "where": [
+        { "file": "src/lib/mapping.ts", "loc": "lines 340-351 unitToChapter" },
+        { "file": "src/lib/mapping.ts", "loc": "lines 459-469 solvePosition ep > aired 'project at the tail's pacing'" },
+        { "file": "src/lib/mapping.ts", "loc": "lines 421-425 solveChapter hatch unit" }
+      ],
+      "enforcement_site": "src/lib/mapping.ts#unitToChapter,solvePosition",
+      "enforcement_layer": "display",
+      "audit_class": null,
+      "witnesses": [],
+      "bundle": false,
+      "bundle_parts": [],
+      "ruled_by": "session",
+      "ruled_on": null,
+      "status_hint": "live",
+      "notes": "The tail position state is 'hatch' (PositionResult.state); the strip marker in the tail renders 'ep_N // projected'."
+    },
+    {
+      "kind": "rule",
+      "statement": "solvePosition — the unified position solve: one driver field (ep | vol | ch) resolves to a full position whose state is 'run' (aired), 'hatch' (manga_only tail) or 'out' (out_of_range), with filler/anime-only episodes carrying NO manga values.",
+      "alias": null,
+      "family_candidate": null,
+      "where": [
+        { "file": "src/lib/mapping.ts", "loc": "lines 353-488 solvePosition" }
+      ],
+      "enforcement_site": "src/lib/mapping.ts#solvePosition",
+      "enforcement_layer": "display",
+      "audit_class": null,
+      "witnesses": [],
+      "bundle": true,
+      "bundle_parts": [
+        "A non-integer or < 1 query value yields null (pending), not a fabricated position.",
+        "ch < scope start → 'out' with boundMsg 'ch {startCh}-{published}' (chapters before the scope belong to a predecessor series).",
+        "ch > published → 'out' with the same boundMsg and unit = aired + aheadUnits + 1.",
+        "ch ≤ covered → 'run': the episode whose confirmed chapter range contains ch wins; otherwise chToEp; type from the exact row else episodeTypeAt.",
+        "covered < ch ≤ published → 'hatch' with a unit proportional to the tail's pacing (aired when no tail).",
+        "ep ≤ aired and type filler or anime-only-canon → 'run' with noManga = true (vol/ch null by design).",
+        "ep ≤ aired with an exact record → START chapter per the first-chapter ruling; vol from chToVol(start) falling back to the record's volume.",
+        "ep ≤ aired without a record → canonEpStartCh estimate (null when none) and its volume.",
+        "ep > aired → 'hatch' projection when a tail exists and the projected chapter ≤ published; otherwise 'out' with boundMsg 'ep 1-{aired}'.",
+        "vol < scope start volume or > totalVolumes → 'out' with boundMsg 'vol {startVol}-{totalVolumes ?? ?}'; without a per-volume ratio → null.",
+        "vol → resolves as the volume's FIRST chapter (volStartCh) with chEnd = the volume's estimated last chapter, then solves as a chapter."
+      ],
+      "ruled_by": "session",
+      "ruled_on": null,
+      "status_hint": "live",
+      "notes": "Interaction spec is cited as docs/components/map-lookup.md (not read; outside the brief). Vol-driven chapter resolution uses the ratio (perVol) even when volume boundaries exist — a second inconsistency with the boundaries-first rule (chToVol is boundaries-first, the vol→ch inverse is ratio-only)."
+    },
+    {
+      "kind": "rule",
+      "statement": "Stepping never leaves the valid range: ep clamps to the aired run (the manga_only hatch holds no episode numbers), ch to published chapters, vol to total volumes, with the scope's start as the minimum for sequels; typing beyond these remains allowed (an intentional query → projection or out_of_range). From outside the range, stepping toward it snaps to the boundary and stepping away is a no-op.",
+      "alias": null,
+      "family_candidate": "S",
+      "where": [
+        { "file": "src/lib/mapping.ts", "loc": "lines 490-514 fieldMax / fieldMin" },
+        { "file": "src/hooks/usePositionLookup.ts", "loc": "lines 165-186 step ('ch/vol respect the entry's SOURCE SCOPE. Directional integrity')" }
+      ],
+      "enforcement_site": "src/lib/mapping.ts#fieldMax,fieldMin",
+      "enforcement_layer": "display",
+      "audit_class": null,
+      "witnesses": [],
+      "bundle": false,
+      "bundle_parts": [],
+      "ruled_by": "session",
+      "ruled_on": null,
+      "status_hint": "live",
+      "notes": null
+    },
+    {
+      "kind": "rule",
+      "statement": "DIRECTIONAL INTEGRITY of seeded stepping: stepping an empty ('—') field seeds from the current position only in the pressed direction — from a manga_only hatch pin ep↑ is a no-op and ep↓ = last aired (the hatch chapter is a real published chapter); from a filler position ch/vol seed from the nearest canon episode in the step direction; nothing that way → no-op, never reverse, never reset.",
+      "alias": null,
+      "family_candidate": null,
+      "where": [
+        { "file": "src/lib/mapping.ts", "loc": "lines 628-681 seedStepValue" },
+        { "file": "src/hooks/usePositionLookup.ts", "loc": "lines 187-201 step '—' branch" },
+        { "file": "src/components/EpisodeList.tsx", "loc": "line 522 'directional integrity: nothing that way → no-op'" }
+      ],
+      "enforcement_site": "src/lib/mapping.ts#seedStepValue",
+      "enforcement_layer": "display",
+      "audit_class": null,
+      "witnesses": [],
+      "bundle": false,
+      "bundle_parts": [],
+      "ruled_by": "session",
+      "ruled_on": null,
+      "status_hint": "live",
+      "notes": null
+    },
+    {
+      "kind": "rule",
+      "statement": "Episode-list rows for filler and anime-only-canon episodes keep manga values null by design and render the universal null '—'; only canon/mixed rows carry vol/ch.",
+      "alias": null,
+      "family_candidate": "A",
+      "where": [
+        { "file": "src/lib/mapping.ts", "loc": "lines 520-526 EpisodeRow ('null for filler/anime-only (no manga values exist)')" },
+        { "file": "src/lib/mapping.ts", "loc": "lines 562-563 buildEpisodeList 'filler/anime-only rows keep manga values null by design (— in the UI)'" },
+        { "file": "src/components/EpisodeList.tsx", "loc": "lines 718-727 row render ('—' when row.ch === null)" },
+        { "file": "src/components/MangaMappingDisplay.tsx", "loc": "lines 6-8, 49-51 ('— is the universal null for a missing manga position (filler/anime-only)')" },
+        { "file": "src/types/anime.ts", "loc": "line 87 Episode.mangaMapping 'null for filler/anime-only'" }
+      ],
+      "enforcement_site": "src/lib/mapping.ts#buildEpisodeList",
+      "enforcement_layer": "display",
+      "audit_class": null,
+      "witnesses": [],
+      "bundle": false,
+      "bundle_parts": [],
+      "ruled_by": "session",
+      "ruled_on": null,
+      "status_hint": "live",
+      "notes": "Display-side outcome of hard invariant A1; the assembly gate (assemble.ts#toEpisodes 'mappable') is the entry that actually drops a filler anchor before it reaches the row."
+    },
+    {
+      "kind": "rule",
+      "statement": "A chapter anchor attaches to an episode only when the episode's type is canon or mixed; at assembly a filler or anime-only-canon episode gets mangaMapping = null even if an anchor row exists for it.",
+      "alias": null,
+      "family_candidate": "A",
+      "where": [
+        { "file": "src/data/catalog/assemble.ts", "loc": "lines 81-109 toEpisodes ('mappable = type === canon || type === mixed'; 'mappable && anchor')" }
+      ],
+      "enforcement_site": "src/data/catalog/assemble.ts#toEpisodes",
+      "enforcement_layer": "display",
+      "audit_class": null,
+      "witnesses": [],
+      "bundle": false,
+      "bundle_parts": [],
+      "ruled_by": "session",
+      "ruled_on": null,
+      "status_hint": "live",
+      "notes": "This is the client-side A1 gate (CLAUDE.md hard invariant 6). Consequence: a stray filler anchor is invisible in the UI but NOT invisible to buildMapping — latestAnchor/coverageAnchor in assemble.ts#buildMapping read the raw anchors array with no type filter, so a filler-row anchor can still set the frontier. Drift candidate between the two consumers of the same anchor list."
+    },
+    {
+      "kind": "rule",
+      "statement": "An anchor's chapters string carries the REAL adapted span when the start is known and differs from the end ('119-127'); otherwise it is the bare end value, and MangaMapping.start carries the record's own start separately so a bare '86' is not ambiguous.",
+      "alias": null,
+      "family_candidate": "A",
+      "where": [
+        { "file": "src/data/catalog/assemble.ts", "loc": "lines 93-105 toEpisodes mangaMapping" },
+        { "file": "src/types/anime.ts", "loc": "lines 57-70 MangaMapping ('Sean's Gintama ep-35 report, 2026-08-24')" }
+      ],
+      "enforcement_site": "src/data/catalog/assemble.ts#toEpisodes",
+      "enforcement_layer": "display",
+      "audit_class": null,
+      "witnesses": ["gintama (text: 'an exact ch-86 record rendered as ch 48')"],
+      "bundle": false,
+      "bundle_parts": [],
+      "ruled_by": "Sean",
+      "ruled_on": "2026-08-24",
+      "status_hint": "live",
+      "notes": "Depends on the chapter_anchors.start_chapter column."
+    },
+    {
+      "kind": "rule",
+      "statement": "ANCHORED ROW-LESS EPISODES: an exact anchor record for an episode number with no episode row synthesizes a canon, title-pending row (within 1..aired_episodes) so every consumer sees the record; real rows always win.",
+      "alias": null,
+      "family_candidate": "A",
+      "where": [
+        { "file": "src/data/catalog/assemble.ts", "loc": "lines 110-133 toEpisodes ('cells-at-work 12/13, 2026-08-24')" }
+      ],
+      "enforcement_site": "src/data/catalog/assemble.ts#toEpisodes",
+      "enforcement_layer": "display",
+      "audit_class": null,
+      "witnesses": ["cells-at-work (text: 'cells-at-work 12/13')"],
+      "bundle": false,
+      "bundle_parts": [],
+      "ruled_by": "session",
+      "ruled_on": "2026-08-24",
+      "status_hint": "live",
+      "notes": "Reason given: AFL/wiki row sparseness must not hide a researched row from the mapping layer, or a row inside a reorder crossing regresses to a 'no exact record' hole. Note the synthesized type is hardcoded 'canon' — a synthesized row for an original-source series would be typed canon rather than anime-only-canon (edge case)."
+    },
+    {
+      "kind": "rule",
+      "statement": "A pending title is stored as '' in the DB (NOT NULL column) and becomes null at assembly; the UI renders a null title as '// title_pending'.",
+      "alias": null,
+      "family_candidate": null,
+      "where": [
+        { "file": "src/data/catalog/assemble.ts", "loc": "lines 89-91 toEpisodes title" },
+        { "file": "src/lib/mapping.ts", "loc": "line 523 EpisodeRow.title 'null → rendered as // title_pending'" },
+        { "file": "src/components/EpisodeList.tsx", "loc": "lines 711-717 row title render" }
+      ],
+      "enforcement_site": "src/components/EpisodeList.tsx#EpisodeList",
+      "enforcement_layer": "display",
+      "audit_class": null,
+      "witnesses": [],
+      "bundle": false,
+      "bundle_parts": [],
+      "ruled_by": "session",
+      "ruled_on": null,
+      "status_hint": "live",
+      "notes": "Honest-pending degradation (hard invariant 4)."
+    },
+    {
+      "kind": "rule",
+      "statement": "Only RULED watch-order entries surface: an order-only special appears in the episode list only when a per-series ruling set a display_label ('170+1'); unlabeled entries stay data-side. Surfaced entries slot in AFTER their position's episode (integer position N = after ep N−1; fractional follows its floor; past the run trails the last section) as non-interactive rows.",
+      "alias": null,
+      "family_candidate": "I",
+      "where": [
+        { "file": "src/data/catalog/assemble.ts", "loc": "lines 155-167 toAnimeSeries watchOrderEntries ('only RULED (labeled) entries surface')" },
+        { "file": "src/data/catalog/supabaseSource.ts", "loc": "lines 87-97 allWatchOrder ('Sean 2026-08-24')" },
+        { "file": "src/types/anime.ts", "loc": "lines 72-81, 122-125 WatchOrderEntry / watchOrderEntries" },
+        { "file": "src/components/EpisodeList.tsx", "loc": "lines 131-134, 179-199 entries / entryPlan" },
+        { "file": "src/components/EpisodeList.tsx", "loc": "lines 635-668 entry row render ('#label', vol/ch or '—')" }
+      ],
+      "enforcement_site": "src/data/catalog/assemble.ts#toAnimeSeries",
+      "enforcement_layer": "display",
+      "audit_class": null,
+      "witnesses": [],
+      "bundle": false,
+      "bundle_parts": [],
+      "ruled_by": "Sean",
+      "ruled_on": "2026-08-24",
+      "status_hint": "live",
+      "notes": "Text: 'tagging/visual differentiation comes at the UI design pass' — entries currently render with canon hash/number colors regardless of kind. Example label strings in the text: '170+1', '170+1.5'. watch-order entries are fetched by getById only, not getMapping."
+    },
+    {
+      "kind": "rule",
+      "statement": "totalVolumes for an ongoing manga (AniList null) falls back to the published boundary count ONLY when the boundary table is complete from the manga's scope start; a lone research row must not masquerade as '1 volume total' and clamp every readout to v1.",
+      "alias": null,
+      "family_candidate": "V",
+      "where": [
+        { "file": "src/data/catalog/assemble.ts", "loc": "lines 185-192 toAnimeSeries totalVolumes ('Ippo's v61 552-561', 2026-08-24)" }
+      ],
+      "enforcement_site": "src/data/catalog/assemble.ts#toAnimeSeries",
+      "enforcement_layer": "display",
+      "audit_class": null,
+      "witnesses": ["hajime-no-ippo (text: 'Ippo's v61 552-561')"],
+      "bundle": false,
+      "bundle_parts": [],
+      "ruled_by": "session",
+      "ruled_on": "2026-08-24",
+      "status_hint": "live",
+      "notes": "Completeness test = some boundary has chapter_start ≤ manga_start_chapter ?? 1."
+    },
+    {
+      "kind": "rule",
+      "statement": "DISPLAYED chapter total: null (rendered as the em dash — 'no final chapter yet') while the manga publishes; for a finished manga show MU's last chapter NUMBER instead of AniList's COUNT only when the two agree within the same-edition band (latest < total and latest ≥ 0.8 × total); a divergent MU edition must not hijack the display.",
+      "alias": "same-edition band",
+      "family_candidate": "N",
+      "where": [
+        { "file": "src/data/catalog/assemble.ts", "loc": "lines 193-210 toAnimeSeries totalChapters ('Sean 2026-08-24'; 'AoT says 141 ... MU's latest (139)'; 'Space Cobra's 28-vs-156')" }
+      ],
+      "enforcement_site": "src/data/catalog/assemble.ts#toAnimeSeries",
+      "enforcement_layer": "display",
+      "audit_class": null,
+      "witnesses": ["attack-on-titan (text: 'AoT says 141 ... 139')", "space-cobra (text: 'Space Cobra's 28-vs-156')"],
+      "bundle": false,
+      "bundle_parts": [],
+      "ruled_by": "Sean",
+      "ruled_on": "2026-08-24",
+      "status_hint": "live",
+      "notes": "DUPLICATE-LOGIC CANDIDATE across layers: scripts/ingest/lib/mu-frontier.ts lines 149-156 ('Mirrors the display rule in assemble.ts totalChapters exactly' — count→number conversion, Sean's Tokyo Ghoul 144/143 report) and scripts/ingest/audit-ui-truth.ts lines 341-348 displayTotalOf re-state the identical 0.8 band. Three copies of one constant. Text says divergent editions 'flag in the audit' (class not named here)."
+    },
+    {
+      "kind": "rule",
+      "statement": "EFFECTIVE chapter total for tail math = min(AniList total_chapters, MU latest_known_chapters) when either exists: while publishing MU bounds from below; for finished manga AniList's COUNT and MU's last chapter NUMBER live in different spaces, so the min keeps the tail from claiming count-space padding. Displayed totals stay AniList's.",
+      "alias": "effective total",
+      "family_candidate": "N",
+      "where": [
+        { "file": "src/data/catalog/assemble.ts", "loc": "lines 315-326 buildMapping effectiveTotalChapters ('Sean's rulings 2026-08-24')" }
+      ],
+      "enforcement_site": "src/data/catalog/assemble.ts#buildMapping",
+      "enforcement_layer": "display",
+      "audit_class": null,
+      "witnesses": ["attack-on-titan (text: 'AoT says 141')"],
+      "bundle": false,
+      "bundle_parts": [],
+      "ruled_by": "Sean",
+      "ruled_on": "2026-08-24",
+      "status_hint": "live",
+      "notes": "Text: 'synthesis still requires real totals' — latestKnown synthesis keys off row.total_chapters, not the effective total. Note mapping.ts#ratios computes `published` from anime.totalChapters (the DISPLAY total), not the effective total, so the position solver's ch upper bound and the tail's chapter count can disagree by count-space padding."
+    },
+    {
+      "kind": "rule",
+      "statement": "TAIL HONESTY / coverage gate: the manga_only tail (mangaAheadChapters/Units) is computed only when anchors reach the end of the run — the latest anchor's episode ≥ last canon episode − 12 — and hasSource, effective total, coverage, adapted span and canon episode count are all positive, and the effective total exceeds coverage. An unknown frontier shows no tail: sparse coverage would fabricate a tail out of chapters the anime DID adapt.",
+      "alias": "anchorsReachEnd",
+      "family_candidate": "C",
+      "where": [
+        { "file": "src/data/catalog/assemble.ts", "loc": "lines 327-354 buildMapping anchorsReachEnd / mangaAheadChapters ('AFG's Naruto table stops early')" }
+      ],
+      "enforcement_site": "src/data/catalog/assemble.ts#buildMapping",
+      "enforcement_layer": "display",
+      "audit_class": null,
+      "witnesses": ["naruto (text: 'AFG's Naruto table stops early')"],
+      "bundle": true,
+      "bundle_parts": [
+        "anchorsReachEnd: latestAnchor.episode ≥ lastCanonEpisode − 12 (the 12-episode tolerance is a client constant).",
+        "No tail when the residue is handed off to a same-manga continuation (see continuation handoff).",
+        "mangaAheadChapters = effectiveTotal − covered; mangaAheadUnits = round(aheadChapters × canonEpisodes / adaptedSpan) — the tail's width in episode-equivalents at the run's own pacing.",
+        "The legend's manga_only badge and the strip's hatch render only when mangaAheadChapters > 0 ('first-class empty state beats a false claim')."
+      ],
+      "ruled_by": "session",
+      "ruled_on": null,
+      "status_hint": "live",
+      "notes": "Note the synthesized latestKnown for finished anchor-less series does NOT satisfy anchorsReachEnd (latestAnchor is null), so such series never show a tail even when total > coverage — consistent with 'unknown frontier shows no tail'. The '−12' tolerance is not stated anywhere else read in this home; check whether audit-ui-truth mirrors it (its grep showed no '- 12')."
+    },
+    {
+      "kind": "rule",
+      "statement": "CONTINUATION HANDOFF (segment model): when a same-manga sibling entry's manga_start_chapter lies strictly after our scope start and at or before our total_chapters + 1, the residue between our frontier and scope end is adapted THERE — it is franchise flow, not a manga_only tail, and no tail is shown. Inter-segment reading gaps surface in the universe view, not on the card.",
+      "alias": "continuation handoff",
+      "family_candidate": "C",
+      "where": [
+        { "file": "src/data/catalog/supabaseSource.ts", "loc": "lines 99-117 continuationStart ('Sean 2026-08-24'; 'Naruto→Shippuden, Berserk 1997→2016')" },
+        { "file": "src/data/catalog/assemble.ts", "loc": "lines 335-344 buildMapping residueHandedOff ('Shippuden adapted Naruto's ch 239-244'; 'Berserk 1997 ch 88-94 before 2016')" }
+      ],
+      "enforcement_site": "src/data/catalog/supabaseSource.ts#continuationStart",
+      "enforcement_layer": "display",
+      "audit_class": null,
+      "witnesses": ["naruto → naruto-shippuden (text: 'Shippuden adapted Naruto's ch 239-244')", "berserk-1997 → berserk-2016 (text: 'Berserk 1997 ch 88-94 before 2016')"],
+      "bundle": false,
+      "bundle_parts": [],
+      "ruled_by": "Sean",
+      "ruled_on": "2026-08-24",
+      "status_hint": "live",
+      "notes": "DUPLICATE-LOGIC CANDIDATE: scripts/ingest/verify-series-display.ts line 48-50 carries its own continuationStart that 'mirrors supabaseSource.continuationStart' (the lookup is a DB query, so it could not move into assemble.ts). buildMapping only receives the continuation's first chapter and uses it as a boolean. The 'universe view' referenced does not exist in the files read."
+    },
+    {
+      "kind": "rule",
+      "statement": "COVERAGE ≠ run-end: the latestKnown frontier EPISODE is the last anchor's episode, but coverage — and continue-reading = coverage + 1 — is the FURTHEST chapter adapted by ANY anchor in the run, because an anime may end on a relocated earlier block.",
+      "alias": "Ippo finale lesson",
+      "family_candidate": "C",
+      "where": [
+        { "file": "src/data/catalog/assemble.ts", "loc": "lines 262-270 buildMapping latestAnchor / coverageAnchor ('Sean's ruling 2026-08-24, the Ippo finale lesson')" },
+        { "file": "src/data/catalog/assemble.ts", "loc": "lines 302-309 continueFrom" }
+      ],
+      "enforcement_site": "src/data/catalog/assemble.ts#buildMapping",
+      "enforcement_layer": "display",
+      "audit_class": null,
+      "witnesses": ["hajime-no-ippo (text: 'Ippo 124-127 = the Post-War arc, chs 400-414, aired last ... ch 557 via ep 123 → continue 558')"],
+      "bundle": false,
+      "bundle_parts": [],
+      "ruled_by": "Sean",
+      "ruled_on": "2026-08-24",
+      "status_hint": "live",
+      "notes": "latestKnown.chapters = coverageAnchor.chapter (a bare number string); latestKnown.episode = latestAnchor.episode. In mapping.ts#anchorPoints the latestKnown point is placed at epToCanonIdx(latestKnown.episode) with ch = coverage — i.e. the max chapter is attributed to the LAST episode's index, which for a relocated finale (the Ippo shape) plants an on-trend point at the finale index. audit-ui-truth.ts line 468 still keys latestKnown off latestAnchor.chapter only (no coverageAnchor) — drift candidate vs. this ruling."
+    },
+    {
+      "kind": "rule",
+      "statement": "Canon-tier series carry NO episode rows; their spans default to canon and the last canon episode IS the last aired one, so the finished-series latestKnown fallback can fire instead of rendering mapping_pending.",
+      "alias": "canon-tier",
+      "family_candidate": "T",
+      "where": [
+        { "file": "src/data/catalog/assemble.ts", "loc": "lines 271-279 buildMapping lastCanonEpisode ('canon-tier series (Sean 2026-08-23)')" }
+      ],
+      "enforcement_site": "src/data/catalog/assemble.ts#buildMapping",
+      "enforcement_layer": "display",
+      "audit_class": null,
+      "witnesses": [],
+      "bundle": false,
+      "bundle_parts": [],
+      "ruled_by": "Sean",
+      "ruled_on": "2026-08-23",
+      "status_hint": "live",
+      "notes": "Mirrored in scripts/ingest/audit-ui-truth.ts lines 444-448 ('lockstep with buildMapping: row-less canon-tier series default to canon spans')."
+    },
+    {
+      "kind": "rule",
+      "statement": "latestKnown SYNTHESIS: with no anchors, a FINISHED entry with a real total_chapters and at least one canon episode (not loose) takes its scope end as coverage (episode = last canon episode, chapters = total_chapters) — coverage IS the scope end by source-scope semantics; an airing series without anchors stays mapping_pending (frontier unknown).",
+      "alias": "latestKnown synthesis",
+      "family_candidate": "C",
+      "where": [
+        { "file": "src/data/catalog/assemble.ts", "loc": "lines 290-301 buildMapping ('mock-era assumption: anchors always existed'; '~260 series')" }
+      ],
+      "enforcement_site": "src/data/catalog/assemble.ts#buildMapping",
+      "enforcement_layer": "display",
+      "audit_class": null,
+      "witnesses": [],
+      "bundle": false,
+      "bundle_parts": [],
+      "ruled_by": "session",
+      "ruled_on": null,
+      "status_hint": "live",
+      "notes": "Mirrored in scripts/ingest/audit-ui-truth.ts lines 469-471 (same predicate) — the audit's pending_* classes are the outcome check. Synthesis uses row.total_chapters (display/AniList count), not effectiveTotalChapters — see the effective-total entry."
+    },
+    {
+      "kind": "rule",
+      "statement": "LOOSE mapping mode: a series ruled 'loose' (parallel telling) gets no latestKnown/continueFrom and the card renders '// loose_adaptation' — an honest verdict, not a data gap, and never mapping_pending.",
+      "alias": "loose",
+      "family_candidate": "S",
+      "where": [
+        { "file": "src/types/anime.ts", "loc": "lines 114-117 mappingMode ('Outlaw Star, Sgt. Frog — research-tier verdicts')" },
+        { "file": "src/data/catalog/assemble.ts", "loc": "lines 281-283, 295 buildMapping loose gate" },
+        { "file": "src/components/InlinePositionRow.tsx", "loc": "lines 135-137 '// loose_adaptation' ('parallel telling — an honest verdict, not a data gap')" }
+      ],
+      "enforcement_site": "src/data/catalog/assemble.ts#buildMapping",
+      "enforcement_layer": "display",
+      "audit_class": null,
+      "witnesses": ["outlaw-star", "sgt-frog"],
+      "bundle": false,
+      "bundle_parts": [],
+      "ruled_by": "source-derived",
+      "ruled_on": null,
+      "status_hint": "live",
+      "notes": "mapping_mode is a series column ('chapter' | 'loose'). audit-ui-truth.ts has an ok_loose class. Loose series still get spans/legend/strip (the tail is gated off because latestKnown is null)."
+    },
+    {
+      "kind": "rule",
+      "statement": "hasSource (the mapping layer's 'this series has source material') = source_type !== 'original' AND manga_status !== 'anime_only'; hasManga (the series model) = manga_status not null and not 'anime_only'; a null manga_status reads as 'anime_only'.",
+      "alias": null,
+      "family_candidate": "S",
+      "where": [
+        { "file": "src/data/catalog/assemble.ts", "loc": "line 254 buildMapping hasSource" },
+        { "file": "src/data/catalog/assemble.ts", "loc": "lines 183-184 toAnimeSeries mangaStatus / hasManga" },
+        { "file": "src/components/AnimeCard.tsx", "loc": "line 57 'hasSource = mapping ? mapping.sourceType !== original : anime.hasManga'" },
+        { "file": "src/hooks/usePositionLookup.ts", "loc": "line 81 same expression" }
+      ],
+      "enforcement_site": "src/data/catalog/assemble.ts#buildMapping",
+      "enforcement_layer": "display",
+      "audit_class": null,
+      "witnesses": [],
+      "bundle": false,
+      "bundle_parts": [],
+      "ruled_by": "session",
+      "ruled_on": null,
+      "status_hint": "live",
+      "notes": "DRIFT CANDIDATE within the client: AnimeCard/usePositionLookup derive hasSource from mapping.sourceType alone once the mapping is loaded (ignoring manga_status = 'anime_only'), while buildMapping uses both. A series with source_type 'manga' but manga_status 'anime_only' would have hasSource = true in the card (rendering '// mapping_pending') but false in buildMapping (spans padded anime-only-canon, no latestKnown). audit-ui-truth.ts line 456 mirrors the buildMapping form. This is exactly the source-first typing question T4 is scheduled to rule on."
+    },
+    {
+      "kind": "rule",
+      "statement": "BASE-TYPE PADDING: episode spans are contiguous same-type runs; classification gaps and the not-yet-classified tail default to the series' OWN base type — canon for source-material series, anime-only-canon for originals — never a hardcoded canon. Episode 0 stays visible in lists but is excluded from strip math.",
+      "alias": "base-type padding",
+      "family_candidate": "T",
+      "where": [
+        { "file": "src/data/catalog/assemble.ts", "loc": "lines 221-243 buildSpans ('hardcoding canon fabricated \"canon\" episodes on Super Dragon Ball Heroes' unclassified tail')" },
+        { "file": "src/data/catalog/assemble.ts", "loc": "line 257 buildMapping fallback = hasSource ? 'canon' : 'anime-only-canon'" }
+      ],
+      "enforcement_site": "src/data/catalog/assemble.ts#buildSpans",
+      "enforcement_layer": "display",
+      "audit_class": null,
+      "witnesses": ["super-dragon-ball-heroes"],
+      "bundle": false,
+      "bundle_parts": [],
+      "ruled_by": "session",
+      "ruled_on": null,
+      "status_hint": "live",
+      "notes": "aired = max(row.aired_episodes, highest episode number) (line 255), so an episode row beyond aired_episodes extends the run. Contrast with mapping.ts#episodeTypeAt's hardcoded 'canon' fallback (separate entry)."
+    },
+    {
+      "kind": "rule",
+      "statement": "fillerPercent = round(fillerCount / totalEpisodes × 100), and 0 when there are no episodes — never NaN.",
+      "alias": null,
+      "family_candidate": null,
+      "where": [
+        { "file": "src/data/catalog/assemble.ts", "loc": "line 364 buildMapping fillerPercent" }
+      ],
+      "enforcement_site": "src/data/catalog/assemble.ts#buildMapping",
+      "enforcement_layer": "display",
+      "audit_class": null,
+      "witnesses": [],
+      "bundle": false,
+      "bundle_parts": [],
+      "ruled_by": "session",
+      "ruled_on": null,
+      "status_hint": "live",
+      "notes": "Rendered inside the filler badge as '{count} ({percent}%)'. Instance of hard invariant 4."
+    },
+    {
+      "kind": "rule",
+      "statement": "Identity-line air years are computed from VALID air dates only and render nothing (rather than NaN) when none exist; an airing series renders 'YYYY–', a finished one 'YYYY' or 'YYYY–YYYY'.",
+      "alias": null,
+      "family_candidate": null,
+      "where": [
+        { "file": "src/components/AnimeCard.tsx", "loc": "lines 20-35 airYears ('Sean 2026-08-23'; '45+ series lack them on some rows'; '§12.19d')" }
+      ],
+      "enforcement_site": "src/components/AnimeCard.tsx#airYears",
+      "enforcement_layer": "display",
+      "audit_class": null,
+      "witnesses": [],
+      "bundle": false,
+      "bundle_parts": [],
+      "ruled_by": "Sean",
+      "ruled_on": "2026-08-23",
+      "status_hint": "live",
+      "notes": "Instance of hard invariant 4 (never NaN). Text says full date completeness ships with the episode data initiative (§12.19d) — cross-reference for the s12 home. Note: takes years[0] and years[last] of the filtered array, which assumes episodes are in air order."
+    },
+    {
+      "kind": "rule",
+      "statement": "The type-badge vocabulary is exactly five kinds — canon, mixed, filler, manga_only, anime_only — rendered as their literal kind string; the episode type 'anime-only-canon' maps to the badge kind 'anime_only' and manga_only is a legend/strip kind with no episode type behind it.",
+      "alias": null,
+      "family_candidate": "T",
+      "where": [
+        { "file": "src/components/TypeBadge.tsx", "loc": "line 20 TypeBadgeKind; line 54 renders `{type}` literally" },
+        { "file": "src/components/MangaMappingDisplay.tsx", "loc": "lines 10-15 KIND map ('anime-only-canon' → 'anime_only')" },
+        { "file": "src/components/MappingStrip.tsx", "loc": "lines 15-20 SPAN_LABELS ('anime-only-canon' → 'anime_only')" },
+        { "file": "src/components/AnimeCard.tsx", "loc": "lines 96-105 hiddenTypes mapping ('anime_only' ↔ 'anime-only-canon', 'manga_only')" },
+        { "file": "src/types/anime.ts", "loc": "line 1 EpisodeType = 'canon' | 'mixed' | 'filler' | 'anime-only-canon'" }
+      ],
+      "enforcement_site": "src/components/TypeBadge.tsx#TypeBadge",
+      "enforcement_layer": "display",
+      "audit_class": null,
+      "witnesses": [],
+      "bundle": false,
+      "bundle_parts": [],
+      "ruled_by": "session",
+      "ruled_on": null,
+      "status_hint": "live",
+      "notes": "USER-FACING STRINGS (the T4.0 rename vocabulary): badges render 'canon', 'mixed', 'filler', 'manga_only', 'anime_only'. Badge counts: canon/mixed/anime_only → plain count; filler → '{n} ({p}%)'; manga_only → '+{n}ch'. Strip tooltips: 'ep_{s}-{e} // canon|mixed|filler|anime_only', '+{n}ch // manga_only (not_animated)', suffix ' (filtered)' when hidden; marker tooltips 'ep_{n}', 'ep_{n} // current', 'ep_{n} // projected'. Position row: labels 'anime' / 'manga' / 'meta' (PositionLabel), keys 'ep:' 'vol:' 'ch:', totals '/{n}' or '/—', states '// mapping_pending', '// loose_adaptation', '// out_of_range ({boundMsg})', '// reset()', null '—'. Episode list: 'episode_list', ' > expand_all' / ' > collapse_all', header 'ep:{s}-{e} ({count})' + 'vol:{v} · ch:{a}-{b}' with '+' suffix when open-ended, '// title_pending', '// filtered(0) — no sections match the legend selection', row '#{ep}'. Detail page (MangaMappingDisplay): '#{n}', 'vol:', 'ch:', '—'. StatusChip renders the raw status word ('airing' | 'finished' | 'hiatus' | 'upcoming'). Internal type string 'anime-only-canon' never reaches the user; the DB/types vocabulary ('anime-only-canon', manga_status 'anime_only', source_type 'original') vs the badge vocabulary ('anime_only', 'manga_only') is the rename surface."
+    },
+    {
+      "kind": "rule",
+      "statement": "The badge is the legend unit: counts live INSIDE it; a badge with no data does not render at all (empty-state rule, enforced by conditional rendering at the call site, never with a disabled look).",
+      "alias": "empty-state rule",
+      "family_candidate": null,
+      "where": [
+        { "file": "src/components/TypeBadge.tsx", "loc": "lines 13-17 'Rules (DESIGN_SYSTEM.md)'" },
+        { "file": "src/components/AnimeCard.tsx", "loc": "lines 221-247 legend (count > 0 guards)" }
+      ],
+      "enforcement_site": "src/components/AnimeCard.tsx#AnimeCard",
+      "enforcement_layer": "display",
+      "audit_class": null,
+      "witnesses": [],
+      "bundle": false,
+      "bundle_parts": [],
+      "ruled_by": "session",
+      "ruled_on": null,
+      "status_hint": "live",
+      "notes": "Cites DESIGN_SYSTEM.md (not in the brief's read list)."
+    },
+    {
+      "kind": "rule",
+      "statement": "LEGEND-BY-COUNT: the legend renders purely by count — NO source-type branching. Data decides which type badges exist, not the series' class (a manga series can have anime-original canon; an original can have filler).",
+      "alias": "legend-by-count",
+      "family_candidate": "T",
+      "where": [
+        { "file": "src/components/AnimeCard.tsx", "loc": "lines 216-220 legend comment ('One Piece's 21 eps', 'Super Dragon Ball Heroes')" }
+      ],
+      "enforcement_site": "src/components/AnimeCard.tsx#AnimeCard",
+      "enforcement_layer": "display",
+      "audit_class": null,
+      "witnesses": ["one-piece (text: 'manga series with anime-original canon (One Piece's 21 eps)')", "super-dragon-ball-heroes (text: 'originals with filler')"],
+      "bundle": false,
+      "bundle_parts": [],
+      "ruled_by": "session",
+      "ruled_on": null,
+      "status_hint": "live",
+      "notes": "Supersedes the mock era's two source-type branches ('each hid real tags on real data'). Directly relevant to T4 source-first typing: the client already treats type counts as data, not class."
+    },
+    {
+      "kind": "rule",
+      "statement": "Legend-as-filter is a pure VIEW concern: clicking a badge hides that type (click again restores); hidden types render as neutral ghosts IN PLACE on the strip and their sections drop from the list, but strip geometry (units, needle, clicks) and the lookup instrument are never filtered; keyboard walking moves only through visible sections.",
+      "alias": null,
+      "family_candidate": null,
+      "where": [
+        { "file": "src/components/AnimeCard.tsx", "loc": "lines 85-119 hiddenKinds / hiddenTypes / visibleSections" },
+        { "file": "src/components/MappingStrip.tsx", "loc": "lines 64-67 hiddenTypes prop; 252-263 ghost render" },
+        { "file": "src/components/TypeBadge.tsx", "loc": "lines 33-38, 48-49 onClick/pressed/dimmed ('hidden-state = fade')" },
+        { "file": "src/components/EpisodeList.tsx", "loc": "lines 479-481, 562-566 visible-sections walking and the filtered(0) message" }
+      ],
+      "enforcement_site": "src/components/AnimeCard.tsx#AnimeCard",
+      "enforcement_layer": "display",
+      "audit_class": null,
+      "witnesses": [],
+      "bundle": false,
+      "bundle_parts": [],
+      "ruled_by": "session",
+      "ruled_on": null,
+      "status_hint": "live",
+      "notes": "UI interaction rule, not a data rule."
+    },
+    {
+      "kind": "rule",
+      "statement": "manga_only wears its OWN purple (--type-manga) on the badge, the strip's hatched tail and its section band — reversing the earlier shares-canon ruling.",
+      "alias": null,
+      "family_candidate": null,
+      "where": [
+        { "file": "src/components/TypeBadge.tsx", "loc": "lines 10-11 ('2026-08-21, reverses the shares-canon ruling')" },
+        { "file": "src/components/MappingStrip.tsx", "loc": "lines 22-25 MANGA_ONLY_BACKGROUND" },
+        { "file": "src/components/EpisodeList.tsx", "loc": "lines 76-84 SECTION_BAND manga_only" }
+      ],
+      "enforcement_site": "src/components/TypeBadge.tsx#STYLES",
+      "enforcement_layer": "display",
+      "audit_class": null,
+      "witnesses": [],
+      "bundle": false,
+      "bundle_parts": [],
+      "ruled_by": "session",
+      "ruled_on": "2026-08-21",
+      "status_hint": "live",
+      "notes": "Design ruling; supersedes 'shares-canon'. EpisodeList has a SECTION_BAND['manga_only'] entry although no EpisodeSection ever has type manga_only (sections come from spans of EpisodeType) — dead key."
+    },
+    {
+      "kind": "rule",
+      "statement": "VOCABULARY: contiguous same-type episode runs are 'sections', never 'arcs' (arcs are story arcs).",
+      "alias": null,
+      "family_candidate": "T",
+      "where": [
+        { "file": "src/components/TypeBadge.tsx", "loc": "line 17 'vocabulary: these spans are \"sections\", never \"arcs\"'" },
+        { "file": "src/components/EpisodeList.tsx", "loc": "lines 13-14 'grouped by its filler/canon SECTIONS (never \"arcs\")'" }
+      ],
+      "enforcement_site": null,
+      "enforcement_layer": "none-stated",
+      "audit_class": null,
+      "witnesses": [],
+      "bundle": false,
+      "bundle_parts": [],
+      "ruled_by": "session",
+      "ruled_on": null,
+      "status_hint": "live",
+      "notes": "Relevant to the T4.0 glossary."
+    },
+    {
+      "kind": "rule",
+      "statement": "'—' is the universal null for a missing value (a missing manga position, a null total, an unknown coverage range), rendered in the disabled tone; '// …' comments are reserved for system messages; episode numbers render as '#1', never zero-padded.",
+      "alias": null,
+      "family_candidate": null,
+      "where": [
+        { "file": "src/components/MangaMappingDisplay.tsx", "loc": "lines 4-8 header comment" },
+        { "file": "src/components/InlinePositionRow.tsx", "loc": "lines 28, 104-110, 140-143 NULL_TONE / total() / no-source dash" },
+        { "file": "src/components/EpisodeList.tsx", "loc": "lines 91, 99-101 coverageLabel null; 664, 726 row nulls" },
+        { "file": "src/hooks/usePositionLookup.ts", "loc": "lines 28-31, 113-130 InlineField '—' (universal null, disabled tone)" }
+      ],
+      "enforcement_site": "src/components/InlinePositionRow.tsx#InlinePositionRow",
+      "enforcement_layer": "display",
+      "audit_class": null,
+      "witnesses": [],
+      "bundle": false,
+      "bundle_parts": [],
+      "ruled_by": "session",
+      "ruled_on": null,
+      "status_hint": "live",
+      "notes": "The honest-dash degradation of hard invariant 4."
+    },
+    {
+      "kind": "rule",
+      "statement": "The position row's manga column has four honest states: known frontier → 'vol: X/Y · ch: A/B' editable fields; loose → '// loose_adaptation'; source exists but no frontier → '// mapping_pending'; no source material → '—'. Totals that are null render '/—'. The ep field works for EVERY mapped series including anime-originals; vol/ch are editable only when a latestKnown frontier exists.",
+      "alias": null,
+      "family_candidate": null,
+      "where": [
+        { "file": "src/components/InlinePositionRow.tsx", "loc": "lines 100-143" },
+        { "file": "src/hooks/usePositionLookup.ts", "loc": "lines 81-83 mangaEditable / epEditable" },
+        { "file": "src/components/AnimeCard.tsx", "loc": "lines 57-61 hasSource / lookupEnabled" }
+      ],
+      "enforcement_site": "src/components/InlinePositionRow.tsx#InlinePositionRow",
+      "enforcement_layer": "display",
+      "audit_class": null,
+      "witnesses": [],
+      "bundle": true,
+      "bundle_parts": [
+        "hasSource && latestKnown → editable vol/ch with '/total' denominators.",
+        "hasSource && mappingMode === 'loose' → '// loose_adaptation'.",
+        "hasSource otherwise → '// mapping_pending'.",
+        "!hasSource → '—' (disabled tone).",
+        "Totals: '/{n}' when known, '/—' when null (ongoing manga renders '/—' for chapters by the display-total rule).",
+        "Denominators read at FULL foreground (CONFIRMED 2026-08-21, supersedes the interior_v1 /40 dim); only labels stay muted."
+      ],
+      "ruled_by": "Sean",
+      "ruled_on": "2026-08-21",
+      "status_hint": "live",
+      "notes": "'// mapping_pending' is the state audit-ui-truth.ts's pending_* classes are the outcome check for (its header: 'still quite a few series where manga says mapping pending', Sean 2026-08-24)."
+    },
+    {
+      "kind": "rule",
+      "statement": "REST = the series' present position (latest aired episode + latestKnown vol/ch); editing any field makes it the DRIVER and the others show DERIVED values (dimmed only while focused); vol-driven ch derives to the volume's FIRST chapter; reset() (or the '// reset()' control) restores rest; Esc is UNDO to the pre-focus state, never the full reset; the strip marker at rest is dim ('// current').",
+      "alias": null,
+      "family_candidate": null,
+      "where": [
+        { "file": "src/hooks/usePositionLookup.ts", "loc": "lines 14-25 header; 85-91 rest; 102-141 fields; 49-54 Esc = UNDO; 123-126 vol-driven ch" },
+        { "file": "src/components/InlinePositionRow.tsx", "loc": "lines 9-19 header; 69-72 Esc; 77-80 derived dimming only while editing" },
+        { "file": "src/components/MappingStrip.tsx", "loc": "lines 56, 294, 300-306 markerRest / '// current'" }
+      ],
+      "enforcement_site": "src/hooks/usePositionLookup.ts#usePositionLookup",
+      "enforcement_layer": "display",
+      "audit_class": null,
+      "witnesses": [],
+      "bundle": true,
+      "bundle_parts": [
+        "REST = latest aired ep + latestKnown vol/ch (phase-2 user progress changes restEp HERE).",
+        "Driver model: last field touched drives; others derive; no channels, no pins.",
+        "vol-driven ch derives to the volume's FIRST chapter (2026-08-19, supersedes 'vol never fills ch').",
+        "Esc = undo to the pre-focus snapshot (2026-08-21); reset() = explicit return to rest; blur with an emptied driver → reset.",
+        "Focus-only width lock (2026-08-19): fields freeze at series-max digit widths while focused.",
+        "Only digits are accepted in a field (non-digits stripped)."
+      ],
+      "ruled_by": "Sean",
+      "ruled_on": "2026-08-21",
+      "status_hint": "contradicted",
+      "notes": "INTERNAL CONTRADICTION in usePositionLookup.ts: the header comment (line 23-24) still says 'One-way fill survives: ch fills vol, vol never fills ch', while lines 123-126 implement and document the opposite ('vol-driven ch derives to the volume's FIRST chapter (2026-08-19) ... supersedes'). The code is the live rule; the header is stale. Interaction spec cited: docs/components/position-row.md (not read)."
+    },
+    {
+      "kind": "rule",
+      "statement": "Section header coverage: a section's range is the true ENVELOPE of the rows inside it — chStart = the LOWEST row start anywhere in the section, chEnd = the HIGHEST coverage end anywhere in it — never 'first row → last row'; volumes are whole volumes from those two chapters, no partial marking.",
+      "alias": "envelope rule",
+      "family_candidate": null,
+      "where": [
+        { "file": "src/lib/mapping.ts", "loc": "lines 589-596 buildEpisodeList ENVELOPE RULE ('Sean 2026-08-23 s2, the MHA 106-126 header'; 'Supersedes the high-to-low header ruling')" },
+        { "file": "src/lib/mapping.ts", "loc": "lines 597-624 sections map" },
+        { "file": "src/components/EpisodeList.tsx", "loc": "line 91 'section coverage label: whole volumes, no partial marking'" }
+      ],
+      "enforcement_site": "src/lib/mapping.ts#buildEpisodeList",
+      "enforcement_layer": "display",
+      "audit_class": null,
+      "witnesses": ["my-hero-academia (text: 'that hid MHA's vol-23 MVA block inside a \"ch:250-295\" header')"],
+      "bundle": false,
+      "bundle_parts": [],
+      "ruled_by": "Sean",
+      "ruled_on": "2026-08-23",
+      "status_hint": "live",
+      "notes": "Supersedes 'the high-to-low header ruling' (rows still show flow as stored; the header shows what the section spans). Section coverage reads from the rows themselves so header ranges always agree with the rows revealed on expand. chEnd also includes chStart so a section never has chEnd < chStart."
+    },
+    {
+      "kind": "rule",
+      "statement": "PARTIAL KNOWLEDGE RENDERS AS PARTIAL: a section straddling the frontier keeps its KNOWN start/end from the valued rows and marks the tail open-ended with a '+' suffix on both ch and vol — never a bare dash while values exist inside.",
+      "alias": "open-ended section",
+      "family_candidate": null,
+      "where": [
+        { "file": "src/lib/mapping.ts", "loc": "lines 584-588 buildEpisodeList ('Sean 2026-08-23'; example text 'ch:48–?')" },
+        { "file": "src/lib/mapping.ts", "loc": "lines 539-540, 620-622 EpisodeSection.openEnded" },
+        { "file": "src/components/EpisodeList.tsx", "loc": "lines 109-115 coverageLabel '+' suffix ('Sean 2026-08-23'; vol gets the same treatment)" }
+      ],
+      "enforcement_site": "src/components/EpisodeList.tsx#coverageLabel",
+      "enforcement_layer": "display",
+      "audit_class": null,
+      "witnesses": [],
+      "bundle": false,
+      "bundle_parts": [],
+      "ruled_by": "Sean",
+      "ruled_on": "2026-08-23",
+      "status_hint": "live",
+      "notes": "Minor comment/render mismatch: mapping.ts describes the rendering as 'ch:48–?' while EpisodeList renders '48+'. openEnded = chEnd known AND the section's final row has no ch."
+    },
+    {
+      "kind": "rule",
+      "statement": "Section-header numbers are ALWAYS the normal text color, collapsed or open; labels stay muted (key:value grammar). The type tag is retired from headers — the band color and colored marker carry the type. Selection rail and jump pulse wear the row's TYPE color.",
+      "alias": null,
+      "family_candidate": null,
+      "where": [
+        { "file": "src/components/EpisodeList.tsx", "loc": "lines 92-94 ('CONFIRMED ruling 2026-08-21 — supersedes the interior_v1 \"engaged\" brightening')" },
+        { "file": "src/components/EpisodeList.tsx", "loc": "lines 617-619 'type tag retired from headers (2026-08-21)'" },
+        { "file": "src/components/EpisodeList.tsx", "loc": "lines 59-74 RAIL_COLOR / PULSE_COLOR ('Sean's ruling 2026-08-21')" }
+      ],
+      "enforcement_site": "src/components/EpisodeList.tsx#EpisodeList",
+      "enforcement_layer": "display",
+      "audit_class": null,
+      "witnesses": [],
+      "bundle": true,
+      "bundle_parts": [
+        "Header numbers always foreground; labels muted (supersedes interior_v1 engaged brightening).",
+        "No type tag in headers; band + marker color carry the type.",
+        "Selection rail = 2px inset in the row's type color; jump pulse washes the row in its type color (never zebra)."
+      ],
+      "ruled_by": "Sean",
+      "ruled_on": "2026-08-21",
+      "status_hint": "live",
+      "notes": "Design rulings; recorded because they carry Sean's name and 'supersedes' language."
+    },
+    {
+      "kind": "rule",
+      "statement": "Keyboard walking (↑/↓ or j/k) moves the selection through episodes GLOBALLY except inside an editable control; with no selection the first press SEEDS from the rest position (rest±1); only an actual STRIP click hands the keyboard to the list (field edits never steal focus); a lookup/strip-driven jump lands the row at the top under the sticky header, a key walk scrolls minimally; a manga_only (hatch) position orients the list at the last aired episode.",
+      "alias": null,
+      "family_candidate": null,
+      "where": [
+        { "file": "src/components/EpisodeList.tsx", "loc": "lines 471-481, 500-528 keyboard ('Gmail/Linear-pattern list shortcuts (ruling 2026-08-21)'; 'SEED from the rest position (Sean, 2026-08-21) ... supersedes both keys-stay-native and the list-frame edge-seed')" },
+        { "file": "src/components/EpisodeList.tsx", "loc": "lines 388-398 strip → list keyboard handoff ('ruling 2026-08-21')" },
+        { "file": "src/components/EpisodeList.tsx", "loc": "lines 165-169, 236-240 jump placement ('user ruling, 2026-08-19')" },
+        { "file": "src/hooks/usePositionLookup.ts", "loc": "lines 42-45, 58-63 restEp / jumpSerial" },
+        { "file": "src/components/AnimeCard.tsx", "loc": "lines 69-77 selectedEp ('a manga_only (hatch) position orients the list at the nearest aired episode before it')" }
+      ],
+      "enforcement_site": "src/components/EpisodeList.tsx#EpisodeList",
+      "enforcement_layer": "display",
+      "audit_class": null,
+      "witnesses": [],
+      "bundle": true,
+      "bundle_parts": [
+        "Global j/k / arrow walking while a selection exists, except inside input/textarea/select/contenteditable.",
+        "No selection → seed at rest±1 on the first press (Sean 2026-08-21); no-rest fallbacks: keys stay native unless focus is in the list frame (edge-seed).",
+        "Only a strip click bumps jumpSerial and hands the keyboard to the list; typing/stepping never does.",
+        "Jump placement: strip/lookup-driven → row at the top under the sticky header (clamps naturally near the end, no overscroll — user ruling 2026-08-19); key walk → minimal scroll; up-walk auto-expand anchors the user's focus node.",
+        "Walks only through VISIBLE (legend-filtered) sections; at the edge it no-ops.",
+        "A hatch (manga_only) position selects the last aired episode in the list."
+      ],
+      "ruled_by": "Sean",
+      "ruled_on": "2026-08-21",
+      "status_hint": "live",
+      "notes": "Interaction rulings; behavioral contract cited as docs/components/episode-list.md (not read). Scroll-anchoring and component-owned-scroll implementation notes (lines 289-347) are engineering, not rules, and are not extracted."
+    },
+    {
+      "kind": "rule",
+      "statement": "The strip's minimap band reports the episode range that is at least HALF visible below the pinned sticky header, from the actually-rendered items (open sections contribute visible rows; a collapsed header contributes its whole range; a watch-order entry stands for its anchor episode); the range is deduped before reporting.",
+      "alias": null,
+      "family_candidate": null,
+      "where": [
+        { "file": "src/components/EpisodeList.tsx", "loc": "lines 411-469 computeRange" },
+        { "file": "src/components/MappingStrip.tsx", "loc": "lines 60-63, 268-281 viewband (M1 fill-only, chosen 2026-08-19; BRIGHT veil 2026-08-21)" }
+      ],
+      "enforcement_site": "src/components/EpisodeList.tsx#computeRange",
+      "enforcement_layer": "display",
+      "audit_class": null,
+      "witnesses": [],
+      "bundle": false,
+      "bundle_parts": [],
+      "ruled_by": "session",
+      "ruled_on": null,
+      "status_hint": "live",
+      "notes": "UI rule, not a data rule. Minimap visibility is a per-viewer localStorage preference (MinimapToggle, not read)."
+    },
+    {
+      "kind": "rule",
+      "statement": "CHAPTER-BAR LAYOUT MODEL for the strip: every segment gets a minimum paint width (2px), a fixed 1px gap separates segments, the pointer hit-tests the painted segment and maps within its own unit range (a gap snaps to the nearest segment), needle/band placement is the exact inverse of that mapping, and indicator ticks are clamped inside their segment's paint so they never sit in a gap.",
+      "alias": null,
+      "family_candidate": null,
+      "where": [
+        { "file": "src/components/MappingStrip.tsx", "loc": "lines 27-37 ('final, 2026-08-21')" },
+        { "file": "src/components/MappingStrip.tsx", "loc": "lines 131-153 rects; 157-200 unitAt / xAt / tickX ('Sean's ep_336/382 report')" }
+      ],
+      "enforcement_site": "src/components/MappingStrip.tsx#MappingStrip",
+      "enforcement_layer": "display",
+      "audit_class": null,
+      "witnesses": [],
+      "bundle": false,
+      "bundle_parts": [],
+      "ruled_by": "session",
+      "ruled_on": "2026-08-21",
+      "status_hint": "live",
+      "notes": "UI geometry rule. Strip renders nothing when airedEpisodes ≤ 0 or there are no spans. A strip click in the aired zone drives 'ep' (filler included — ep is a real value there); in the hatch it drives 'ch' via unitToChapter (usePositionLookup.stripClick lines 205-218)."
+    },
+    {
+      "kind": "rule",
+      "statement": "One app-wide hold-to-repeat pacing (400ms initial delay, then 130 → 80 → 40ms as the hold lengthens) is shared by the position steppers and catalog keyboard walking; the numbers are never forked per surface.",
+      "alias": null,
+      "family_candidate": null,
+      "where": [
+        { "file": "src/lib/hold.ts", "loc": "lines 1-8 ('2026-08-21, extracted from StepperInput')" }
+      ],
+      "enforcement_site": "src/lib/hold.ts#holdInterval",
+      "enforcement_layer": "display",
+      "audit_class": null,
+      "witnesses": [],
+      "bundle": false,
+      "bundle_parts": [],
+      "ruled_by": "session",
+      "ruled_on": "2026-08-21",
+      "status_hint": "live",
+      "notes": "UI rule only."
+    },
+    {
+      "kind": "rule",
+      "statement": "A series-level URL counts as defined only when, after trimming and stripping trailing slashes, it differs from the reader URL.",
+      "alias": null,
+      "family_candidate": null,
+      "where": [
+        { "file": "src/lib/urls.ts", "loc": "lines 1-6 normalizeUrl / isSeriesUrlDefined" }
+      ],
+      "enforcement_site": "src/lib/urls.ts#isSeriesUrlDefined",
+      "enforcement_layer": "display",
+      "audit_class": null,
+      "witnesses": [],
+      "bundle": false,
+      "bundle_parts": [],
+      "ruled_by": "session",
+      "ruled_on": null,
+      "status_hint": "unknown",
+      "notes": "Library/reader-management helper (phase-2 surface); no data-pipeline relevance. format.ts (formatTimestamp) and utils.ts (cn) carry no rules."
+    },
+    {
+      "kind": "rule",
+      "statement": "Streaming availability is derived from AniList external_links of type STREAMING by site-name regex into six tokens (crunchyroll, netflix, amazon, disney-hulu, bilibili, hidive).",
+      "alias": null,
+      "family_candidate": null,
+      "where": [
+        { "file": "src/data/catalog/assemble.ts", "loc": "lines 50-66 STREAM_TOKENS / streamingOn" }
+      ],
+      "enforcement_site": "src/data/catalog/assemble.ts#streamingOn",
+      "enforcement_layer": "display",
+      "audit_class": null,
+      "witnesses": [],
+      "bundle": false,
+      "bundle_parts": [],
+      "ruled_by": "session",
+      "ruled_on": null,
+      "status_hint": "live",
+      "notes": "Metadata-only; recorded for completeness."
+    },
+    {
+      "kind": "architecture",
+      "statement": "SHALLOW LIST vs HYDRATED SERIES: list() and search() return AnimeSeries with episodes deliberately EMPTY (no anchors, boundaries or watch-order); getById() hydrates the full series (episode rows + anchor mangaMappings + volume boundaries + surfaced watch-order entries) and getMapping() builds the MappingSummary. The expanded card must run on the hydrated series or every readout silently degrades to the anchor-less linear estimate; until hydration lands the shallow item renders identity fields only.",
+      "alias": "hydration",
+      "family_candidate": null,
+      "where": [
+        { "file": "src/data/catalog/supabaseSource.ts", "loc": "lines 119-174 list/search ('list stays shallow: episodes load when a card opens'), getById, getMapping" },
+        { "file": "src/components/AnimeCard.tsx", "loc": "lines 44-52 HYDRATION ('Sean's Kenshin report, 2026-08-23')" },
+        { "file": "src/data/catalog/source.ts", "loc": "lines 12-20 CatalogSource seam" }
+      ],
+      "enforcement_site": "src/components/AnimeCard.tsx#AnimeCard",
+      "enforcement_layer": "display",
+      "audit_class": null,
+      "witnesses": ["rurouni-kenshin (text: 'Sean's Kenshin report, 2026-08-23')"],
+      "bundle": false,
+      "bundle_parts": [],
+      "ruled_by": "session",
+      "ruled_on": "2026-08-23",
+      "status_hint": "live",
+      "notes": "Two data paths per card: getById → AnimeSeries (episodes, boundaries, watchOrder, rank) and getMapping → MappingSummary (spans, counts, latestKnown, tail, continuation). Both re-fetch the series row, episodes, anchors and boundaries independently (4 duplicate queries per open). getById does NOT compute continuation; getMapping does NOT fetch watch-order. Rank = 1 + count of series with higher popularity."
+    },
+    {
+      "kind": "architecture",
+      "statement": "The app reads ONLY the Supabase canonical tables (series, episodes, chapter_anchors, volume_boundaries, watch_order_entries) filled by scripts/ingest/; external APIs never appear on a user path. The swap from mock data happened 2026-08-22; mockSource stays in-tree for offline reference.",
+      "alias": null,
+      "family_candidate": null,
+      "where": [
+        { "file": "src/data/catalog/supabaseSource.ts", "loc": "lines 29-31" },
+        { "file": "src/data/catalog/index.ts", "loc": "lines 4-7 'THE SWAP happened 2026-08-22'" },
+        { "file": "src/data/catalog/source.ts", "loc": "lines 12-14 (stale: 'Today: mock data. Later: AniList ...')" }
+      ],
+      "enforcement_site": null,
+      "enforcement_layer": "none-stated",
+      "audit_class": null,
+      "witnesses": [],
+      "bundle": false,
+      "bundle_parts": [],
+      "ruled_by": "session",
+      "ruled_on": "2026-08-22",
+      "status_hint": "live",
+      "notes": "source.ts's comment predates the swap (says 'Today: mock data'). PostgREST caps selects at 1000 rows, so episodes and anchors page in 1000-row ranges (long runs like One Piece). The library views (src/components/library/*, SeriesCombobox) still import mockAnime — the phase-2 surface has NOT been swapped."
+    },
+    {
+      "kind": "architecture",
+      "statement": "SHARED CODE PATH: pure row→model assembly lives in src/data/catalog/assemble.ts (no client imports) so the ingest-side verifier runs the EXACT app code path (assemble + buildEpisodeList + inReorderCrossing) against service-role data — the display the user sees is the display the verifier checks, never a re-implementation that can drift.",
+      "alias": "Oshi stale-harness lesson",
+      "family_candidate": null,
+      "where": [
+        { "file": "src/data/catalog/assemble.ts", "loc": "lines 14-18 ('the Oshi stale-harness lesson, Sean 2026-08-23')" },
+        { "file": "scripts/ingest/verify-series-display.ts", "loc": "lines 1-8, 24-35 imports from ../../src/data/catalog/assemble and ../../src/lib/mapping" }
+      ],
+      "enforcement_site": "scripts/ingest/verify-series-display.ts",
+      "enforcement_layer": "both",
+      "audit_class": null,
+      "witnesses": ["oshi-no-ko (text: 'the Oshi stale-harness lesson')"],
+      "bundle": false,
+      "bundle_parts": [],
+      "ruled_by": "Sean",
+      "ruled_on": "2026-08-23",
+      "status_hint": "live",
+      "notes": "Contrast: scripts/ingest/audit-ui-truth.ts explicitly RE-IMPLEMENTS buildMapping's decision points ('replicates buildMapping's EXACT decision points ... Keep the logic in lockstep with supabaseSource.ts when either changes') rather than importing assemble.ts — the very drift shape this architecture fact forbids. Its header still names supabaseSource.ts, though the logic moved to assemble.ts on 2026-08-23. Duplicate-logic candidates found there: volumeFor (line 73), the 0.8 same-edition band (line 347), lastCanon for row-less series (line 444-448), latestKnown synthesis (469-471), hasSource (456). Its latestKnown (line 468) uses latestAnchor.chapter, not the coverageAnchor max — behind the Ippo-finale ruling."
+    },
+    {
+      "kind": "architecture",
+      "statement": "Two type vocabularies coexist in the client: the data vocabulary (EpisodeType 'canon' | 'mixed' | 'filler' | 'anime-only-canon'; SourceType 'manga' | 'webtoon' | 'light_novel' | 'original'; MangaStatus incl. 'anime_only'; mapping_mode 'chapter' | 'loose') and the display vocabulary (TypeBadgeKind 'canon' | 'mixed' | 'filler' | 'manga_only' | 'anime_only'), joined by three separate mapping tables.",
+      "alias": null,
+      "family_candidate": "T",
+      "where": [
+        { "file": "src/types/anime.ts", "loc": "lines 1-3, 36-37, 114-117" },
+        { "file": "src/components/TypeBadge.tsx", "loc": "line 20" },
+        { "file": "src/components/MangaMappingDisplay.tsx", "loc": "lines 10-15 KIND" },
+        { "file": "src/components/MappingStrip.tsx", "loc": "lines 8-20 SPAN_COLORS / SPAN_LABELS" },
+        { "file": "src/components/AnimeCard.tsx", "loc": "lines 96-105" }
+      ],
+      "enforcement_site": null,
+      "enforcement_layer": "display",
+      "audit_class": null,
+      "witnesses": [],
+      "bundle": false,
+      "bundle_parts": [],
+      "ruled_by": "session",
+      "ruled_on": null,
+      "status_hint": "live",
+      "notes": "Input to T4.0 (rename session): 'anime-only-canon' (data) ↔ 'anime_only' (display); 'manga_only' has no data-side type — it is a derived tail state (mangaAheadChapters > 0). Type colors are dedicated --type-{canon,mixed,filler,anime,manga} tokens (forest_v1, 2026-08-21)."
+    },
+    {
+      "kind": "architecture",
+      "statement": "The card is ONE instrument: lookup state (usePositionLookup) lives in AnimeCard so the inline position row (inputs), the strip (needle + click-to-set) and the episode list (rows) share one driver/result; the ep field works for every mapped series including anime-originals.",
+      "alias": null,
+      "family_candidate": null,
+      "where": [
+        { "file": "src/components/AnimeCard.tsx", "loc": "lines 53-61" },
+        { "file": "src/components/EpisodeList.tsx", "loc": "lines 20-23 'three-way sync'" }
+      ],
+      "enforcement_site": "src/components/AnimeCard.tsx#AnimeCard",
+      "enforcement_layer": "display",
+      "audit_class": null,
+      "witnesses": [],
+      "bundle": false,
+      "bundle_parts": [],
+      "ruled_by": "session",
+      "ruled_on": null,
+      "status_hint": "live",
+      "notes": "MangaMappingDisplay (detail page, src/pages/AnimeDetail.tsx) is a separate, simpler render of Episode.mangaMapping that shows the raw chapters string (end-position or span) — it does NOT apply the first-chapter ruling, so the detail page and the card can show different chapters for the same episode. Drift candidate within the client."
+    },
+    {
+      "kind": "trap",
+      "statement": "A pipeline trap: when supabaseSource was split into assemble.ts (2026-08-23), the browser wrapper stopped passing volume boundaries into the card, and nothing caught it because the verifier imports assemble.ts directly — the browser-only wrapper was never exercised by any check.",
+      "alias": null,
+      "family_candidate": null,
+      "where": [
+        { "file": "src/data/catalog/supabaseSource.ts", "loc": "lines 72-75 allBoundaries comment ('Lost in the 2026-08-23 assemble.ts split ... restored 2026-08-23')" }
+      ],
+      "enforcement_site": null,
+      "enforcement_layer": "none-stated",
+      "audit_class": null,
+      "witnesses": [],
+      "bundle": false,
+      "bundle_parts": [],
+      "ruled_by": "session",
+      "ruled_on": "2026-08-23",
+      "status_hint": "live",
+      "notes": "The shared-code-path guarantee covers assemble.ts + mapping.ts but NOT the wiring in supabaseSource.ts (query columns, argument passing, continuationStart). No audit asserts the wrapper's outcome."
+    },
+    {
+      "kind": "trap",
+      "statement": "A source trap recorded in client code: air dates are INCOMPLETE data — 45+ series lack them on some rows (AFL omits dates on newer pages; AFG/canon-tier rows never had them).",
+      "alias": null,
+      "family_candidate": null,
+      "where": [
+        { "file": "src/components/AnimeCard.tsx", "loc": "lines 21-25 airYears comment" }
+      ],
+      "enforcement_site": "src/components/AnimeCard.tsx#airYears",
+      "enforcement_layer": "display",
+      "audit_class": null,
+      "witnesses": [],
+      "bundle": false,
+      "bundle_parts": [],
+      "ruled_by": "session",
+      "ruled_on": "2026-08-23",
+      "status_hint": "live",
+      "notes": "Display copes by filtering invalid dates; the data fix is deferred to §12.19d."
+    },
+    {
+      "kind": "trap",
+      "statement": "A source trap recorded in client code: MU's coverage/latest values live in chapter-NUMBER space while AniList's finished-manga total is a COUNT (mid-run specials included), and a divergent MU edition can carry a wholly different chapter count — the two must not be mixed without the same-edition band check.",
+      "alias": null,
+      "family_candidate": "N",
+      "where": [
+        { "file": "src/data/catalog/assemble.ts", "loc": "lines 193-202, 315-322" }
+      ],
+      "enforcement_site": "src/data/catalog/assemble.ts#toAnimeSeries,buildMapping",
+      "enforcement_layer": "display",
+      "audit_class": null,
+      "witnesses": ["attack-on-titan", "space-cobra"],
+      "bundle": false,
+      "bundle_parts": [],
+      "ruled_by": "Sean",
+      "ruled_on": "2026-08-24",
+      "status_hint": "live",
+      "notes": "The rule entries 'same-edition band' and 'effective total' are the client's handling of this trap."
+    },
+    {
+      "kind": "process",
+      "statement": "After ANY anchor/episode adjustment to a series, run verify-series-display against it BEFORE reporting the change done — it renders the series exactly as the app does and checks every row.",
+      "alias": null,
+      "family_candidate": "P",
+      "where": [
+        { "file": "scripts/ingest/verify-series-display.ts", "loc": "lines 1-8 header ('Sean's ruling 2026-08-23: after adjusting, check ALL other episodes')" }
+      ],
+      "enforcement_site": "scripts/ingest/verify-series-display.ts",
+      "enforcement_layer": "process",
+      "audit_class": null,
+      "witnesses": [],
+      "bundle": false,
+      "bundle_parts": [],
+      "ruled_by": "Sean",
+      "ruled_on": "2026-08-23",
+      "status_hint": "live",
+      "notes": "Recorded here only because the client's shared-code-path architecture exists to serve it; the audits home owns the full entry."
+    }
+  ],
+  "standing_maps": [
+    {
+      "file": "src/data/catalog/mockSource.ts",
+      "symbol": "SOURCE_TYPE_OVERRIDES",
+      "shape": "Record<seriesId, SourceType>",
+      "entries": 2,
+      "has_reason_per_entry": false,
+      "consumed_by": ["src/data/catalog/mockSource.ts#toSummary (mock path only)"],
+      "note": "Mock-era per-series source-type override (dragon-ball-daima → original, solo-leveling → webtoon). NOT consumed by the live catalog (index.ts points at supabaseCatalogSource); the live equivalent is the series.source_type column. Dead unless the mock is swapped back in."
+    },
+    {
+      "file": "src/data/catalog/mockSource.ts",
+      "symbol": "FILLER_SPANS",
+      "shape": "Record<seriesId, EpisodeSpan[]>",
+      "entries": 4,
+      "has_reason_per_entry": false,
+      "consumed_by": ["src/data/catalog/mockSource.ts (mock path only)"],
+      "note": "Mock-era hand-typed span tables 'approximating real filler distribution'; series absent are all-canon (or all anime-only without source). Superseded by AFL episode rows + buildSpans. Dead on the live path."
+    },
+    {
+      "file": "src/data/catalog/assemble.ts",
+      "symbol": "STREAM_TOKENS",
+      "shape": "[RegExp, StreamingService][]",
+      "entries": 6,
+      "has_reason_per_entry": false,
+      "consumed_by": ["src/data/catalog/assemble.ts#streamingOn"],
+      "note": "Not per-series; a vocabulary table (site-name regex → streaming token). Listed for completeness; fails the per-id discriminator."
+    },
+    {
+      "file": "src/components/MangaMappingDisplay.tsx / MappingStrip.tsx",
+      "symbol": "KIND / SPAN_LABELS",
+      "shape": "Record<EpisodeType, TypeBadgeKind | string>",
+      "entries": 4,
+      "has_reason_per_entry": false,
+      "consumed_by": ["src/components/MangaMappingDisplay.tsx", "src/components/MappingStrip.tsx"],
+      "note": "Type-vocabulary translation tables ('anime-only-canon' → 'anime_only'); not per-series. The rename surface for T4.0. Fails the per-id discriminator."
+    }
+  ],
+  "scripts": [
+    {
+      "file": "src/lib/mapping.ts",
+      "class": "lib-support",
+      "writes": [],
+      "idempotent": true,
+      "referenced_by": ["src/data/catalog/assemble.ts", "src/data/catalog/supabaseSource.ts", "src/hooks/usePositionLookup.ts", "src/components/AnimeCard.tsx", "src/components/EpisodeList.tsx", "scripts/ingest/verify-series-display.ts", "src/lib/mapping.test.ts", "src/lib/mapping.position.test.ts"],
+      "last_touched": "2026-08-24",
+      "evidence": "Pure position math (681 lines), unit-tested; exported chapterForEpisode appears unconsumed."
+    },
+    {
+      "file": "src/lib/mapping.test.ts",
+      "class": "census",
+      "writes": [],
+      "idempotent": true,
+      "referenced_by": ["npm test (vitest)"],
+      "last_touched": "2026-08-24",
+      "evidence": "3 describes / 11 its: lastChapterNumber, episodeTypeAt, nextCanonEp/prevCanonEp."
+    },
+    {
+      "file": "src/lib/mapping.position.test.ts",
+      "class": "census",
+      "writes": [],
+      "idempotent": true,
+      "referenced_by": ["npm test (vitest)"],
+      "last_touched": "2026-08-24",
+      "evidence": "3 describes / 9 its: canonEpToCh interpolation, canonEpStartCh first-chapter ruling, inReorderCrossing."
+    },
+    {
+      "file": "src/data/catalog/assemble.ts",
+      "class": "lib-support",
+      "writes": [],
+      "idempotent": true,
+      "referenced_by": ["src/data/catalog/supabaseSource.ts", "scripts/ingest/verify-series-display.ts"],
+      "last_touched": "2026-08-24",
+      "evidence": "Row→model assembly shared by app and verifier; no tests of its own (buildMapping/buildSpans/toEpisodes are untested)."
+    },
+    {
+      "file": "src/data/catalog/supabaseSource.ts",
+      "class": "lib-support",
+      "writes": [],
+      "idempotent": true,
+      "referenced_by": ["src/data/catalog/index.ts"],
+      "last_touched": "2026-08-24",
+      "evidence": "Read-only Supabase queries (series, episodes, chapter_anchors, volume_boundaries, watch_order_entries); browser-only wrapper not exercised by the verifier."
+    },
+    {
+      "file": "src/data/catalog/source.ts",
+      "class": "lib-support",
+      "writes": [],
+      "idempotent": true,
+      "referenced_by": ["src/data/catalog/index.ts", "src/data/catalog/supabaseSource.ts", "src/data/catalog/mockSource.ts"],
+      "last_touched": "2026-08-19",
+      "evidence": "CatalogSource interface; header comment stale ('Today: mock data')."
+    },
+    {
+      "file": "src/data/catalog/index.ts",
+      "class": "lib-support",
+      "writes": [],
+      "idempotent": true,
+      "referenced_by": ["src/hooks/useCatalog.ts (not read)"],
+      "last_touched": "2026-08-22",
+      "evidence": "The swap point; exports catalog = supabaseCatalogSource."
+    },
+    {
+      "file": "src/data/catalog/mockSource.ts",
+      "class": "dead",
+      "writes": [],
+      "idempotent": true,
+      "referenced_by": ["(none — only a comment in index.ts)"],
+      "last_touched": "2026-08-19",
+      "evidence": "Not imported anywhere; kept 'for offline reference'. Carries two mock-era standing maps."
+    },
+    {
+      "file": "src/data/mockAnime.ts",
+      "class": "lib-support",
+      "writes": [],
+      "idempotent": true,
+      "referenced_by": ["src/components/SeriesCombobox.tsx", "src/components/library/SeriesCard.tsx", "src/components/library/LibraryFlatView.tsx", "src/components/library/LibraryGroupedView.tsx", "src/data/catalog/mockSource.ts"],
+      "last_touched": null,
+      "evidence": "Not read in full; still imported by the library (phase-2) surface, so not dead — the library has not been swapped to Supabase."
+    },
+    {
+      "file": "src/lib/hold.ts",
+      "class": "lib-support",
+      "writes": [],
+      "idempotent": true,
+      "referenced_by": ["StepperInput / catalog keyboard walking (per its comment)"],
+      "last_touched": "2026-08-21",
+      "evidence": "UI pacing constants."
+    },
+    {
+      "file": "src/lib/urls.ts",
+      "class": "lib-support",
+      "writes": [],
+      "idempotent": true,
+      "referenced_by": ["library surface (not traced)"],
+      "last_touched": "2026-08-19",
+      "evidence": "URL normalization helper."
+    },
+    {
+      "file": "src/lib/format.ts",
+      "class": "lib-support",
+      "writes": [],
+      "idempotent": true,
+      "referenced_by": ["(not traced)"],
+      "last_touched": "2026-08-19",
+      "evidence": "Timestamp formatter; no rules."
+    },
+    {
+      "file": "src/lib/utils.ts",
+      "class": "lib-support",
+      "writes": [],
+      "idempotent": true,
+      "referenced_by": ["every component (cn)"],
+      "last_touched": "2025-01-01",
+      "evidence": "shadcn cn() helper; no rules."
+    },
+    {
+      "file": "src/components/MangaMappingDisplay.tsx",
+      "class": "lib-support",
+      "writes": [],
+      "idempotent": true,
+      "referenced_by": ["src/pages/AnimeDetail.tsx"],
+      "last_touched": "2026-08-22",
+      "evidence": "Detail-page episode row; renders the raw chapters string (does not apply the first-chapter ruling)."
+    }
+  ]
+}
