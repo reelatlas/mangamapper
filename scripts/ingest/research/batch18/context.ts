@@ -61,6 +61,20 @@ const ranges = (s: string): [number, number][] =>
     return [a, b ?? a];
   });
 
+/** the TARGET rows of one task: waves 2-3 name their rows; wave 1 ranges are arcs → AFL's anime-canon rows inside them */
+export async function targetRows(id: string, range: string, wave: 1 | 2 | 3): Promise<number[]> {
+  const { data: s } = await db.from('series').select('afl_slug').eq('id', id).maybeSingle();
+  const eps = await selectAll<{ number: number }>('episodes', 'number', (q) => q.eq('series_id', id).order('number'));
+  const { data: afl } = s?.afl_slug ? await db.from('ingest_afl_shows').select('raw').eq('slug', s.afl_slug).maybeSingle() : { data: null };
+  const claim = new Set<number>();
+  for (const e of (afl?.raw?.episodes ?? []) as { number: number; type: string }[]) {
+    const n = translateEpisodeNumber(id, e.number, 'afl');
+    if (n != null && e.type === 'anime-only-canon') claim.add(n);
+  }
+  const rs = ranges(range);
+  return eps.map((e) => e.number).filter((n) => rs.some(([a, b]) => n >= a && n <= b) && (wave !== 1 || claim.has(n)));
+}
+
 async function main() {
   const index: string[] = [];
   for (const [id, range, wave, ask] of TARGETS) {
@@ -128,4 +142,4 @@ async function main() {
   }
   console.log(index.join('\n'));
 }
-main().then(() => process.exit(0)).catch((e) => { console.error(e); process.exit(1); });
+if (process.argv[1]?.endsWith('context.ts')) main().then(() => process.exit(0)).catch((e) => { console.error(e); process.exit(1); });

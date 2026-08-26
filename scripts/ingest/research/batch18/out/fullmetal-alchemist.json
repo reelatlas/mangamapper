@@ -1,0 +1,239 @@
+{
+  "series_id": "fullmetal-alchemist",
+  "summary": "FMA 2003 (Bones, 51 eps) is a manga-sourced series whose adaptation runs out of source mid-run: the manga was 6 volumes old at broadcast and Arakawa explicitly commissioned a DIFFERENT ending. AFL flags 27 of our rows 'anime canon'; that single label conceals four genuinely different things, and the block is NOT uniform. (1) Eleven of the 27 carry real Arakawa chapters — the Fullmetal Alchemist Wiki's per-episode 'adapted from content in Chapter N' notes name them for eps 8, 16, 21, 22, 24, 29, 30, 32 and, deep inside the original half, for eps 40 and 41 (both carry Chapter 30's Martel-dies-inside-Al beat). (2) Eps 11-12 are not anime-original at all: they adapt the FIRST FMA light novel, 'The Land of Sand' (Makoto Inoue / Square Enix, 2003-02-28) — the Japanese episode titles are literally the novel's title, and en.wikipedia's light-novel list, citing Square Enix's own novel page, says the novel 'was used as the source material for episodes 11, 12 and part of 37'. (3) Ep 31 and eps 35-36, 38-39 are anime-original connective material sitting between adapted episodes. (4) Eps 42-51 are Bones' studio ending outright. The last chapter touched anywhere in the series is Chapter 30 (vol 8) at ep 41; the manga ran to 108 chapters. On the landmark question I recommend FILLER for the original half: Arakawa's involvement is documented and real (script-meeting attendance by Square Enix editorial at every meeting, author NG-list, consultation) but it is guardrail-and-blessing, not adoption — the Asahi Shimbun 2005 interview has her ORDERING an ending different from the manga and then comparing the TV ending against 'the ending in my own head', which she kept for the manga. Authorised parallel continuity, zero standing in the source.",
+  "standings": [
+    {
+      "episodes": [11, 12],
+      "type": "canon",
+      "chapters": "none",
+      "confidence": "high",
+      "note": "NOT anime-original. Both episodes adapt the first FMA light novel, 'Fullmetal Alchemist: The Land of Sand' (Sareki no Daichi), written by Makoto Inoue with Arakawa illustrations, Square Enix, published 2003-02-28 — ten months BEFORE these episodes aired (2003-12-13 / 2003-12-20). The Japanese episode titles are the novel's title split in two: 砂礫の大地・前編 / 砂礫の大地・後編. The Tringham brothers, Mugear, Xenotime and the red water all originate in the novel, not in the anime. No manga chapter is touched, so no chapter anchor — see the side_source annotation. AFL's 'anime canon' is wrong on these two rows in a way that matters: they have a licensed source, it just isn't the manga.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/List_of_Fullmetal_Alchemist_light_novels",
+        "https://fma.fandom.com/api.php?action=parse&page=Episode%2011%20(2003%20Anime)&prop=wikitext&format=json",
+        "https://fma.fandom.com/api.php?action=parse&page=Episode%2012%20(2003%20Anime)&prop=wikitext&format=json",
+        "https://ja.wikipedia.org/wiki/%E9%8B%BC%E3%81%AE%E9%8C%AC%E9%87%91%E8%A1%93%E5%B8%AB"
+      ]
+    },
+    {
+      "episodes": [16],
+      "type": "canon",
+      "chapters": "7-8",
+      "confidence": "high",
+      "note": "Spine is manga: Marcoh's dropped note pointing Ed at the First Branch of the National Central Library, the Fuhrer taking Marcoh into custody, Ed needing his automail repaired, Armstrong assigned as escort, the train toward Resembool — that is Chapter 7 'After the Rain' into Chapter 8 'The Road of Hope'. The FMA Wiki states 'This episode is adapted from content in Chapter 7: After the Rain and Chapter 8: The Road of Hope'. The stolen-armor boy subplot is the only anime-original insert and is connective, so canon rather than mixed. AFL's 'anime canon' is simply wrong here.",
+      "sources": [
+        "https://fma.fandom.com/api.php?action=parse&page=Episode%2016%20(2003%20Anime)&prop=wikitext&format=json",
+        "https://fma.fandom.com/api.php?action=parse&page=Chapter%208%3A%20The%20Road%20of%20Hope&prop=wikitext&format=json",
+        "https://en.wikipedia.org/wiki/Fullmetal_Alchemist_(TV_series)"
+      ]
+    },
+    {
+      "episodes": [22],
+      "type": "canon",
+      "chapters": "13",
+      "confidence": "medium",
+      "note": "Laboratory 5 climax. The FMA Wiki: 'This episode is adapted from content in Chapter 13: Fullmetal Body'. The episode's emotional centre — Ed confronted with the fact that a Philosopher's Stone is made of human lives, refusing, collapsing, and 2nd Lt. Ross embracing him — is Chapter 13 direct; screenwriter Sho Aikawa is quoted on the same page describing that exact beat as the episode's critical moment. Medium not high because the 2003 version literalises the manga's moral test (a room of Central Prison convicts, Scar and Envy-as-Grand present) rather than reproducing its staging; a curator who weights that heavily could call this mixed.",
+      "sources": [
+        "https://fma.fandom.com/api.php?action=parse&page=Episode%2022%20(2003%20Anime)&prop=wikitext&format=json",
+        "https://en.wikipedia.org/wiki/Fullmetal_Alchemist_(TV_series)",
+        "https://www.animefillerlist.com/shows/fullmetal-alchemist"
+      ]
+    },
+    {
+      "episodes": [8],
+      "type": "mixed",
+      "chapters": "5, 24",
+      "confidence": "medium",
+      "note": "Two real manga components inside a mostly anime-original episode. The opening — the rain, Tucker's execution, Ed's collapse after Nina — closes out Chapter 5 'The Alchemist's Suffering'; the closing scene in which Mustang hands Ed his State Alchemist title and remarks on the irony of 'Fullmetal' is Chapter 24 'Fullmetal Alchemist' (vol 6), moved forward out of serialized order. The bulk of the episode (Winry visiting Central, Barry the Chopper as a live serial killer stalking her, Ed resigning and being used as bait, Ed learning of the Stone from Tucker's own research notes) is anime-original: in the manga Ed learns of the Stone from Marcoh and Barry is first met already bound to armour in Lab 5. FMA Wiki: 'This episode is adapted from content in Chapter 5 ... and Chapter 24'.",
+      "sources": [
+        "https://fma.fandom.com/api.php?action=parse&page=Episode%208%20(2003%20Anime)&prop=wikitext&format=json",
+        "https://fma.fandom.com/api.php?action=parse&page=Chapter%2024%3A%20Fullmetal%20Alchemist&prop=wikitext&format=json",
+        "https://www.animefillerlist.com/shows/fullmetal-alchemist"
+      ]
+    },
+    {
+      "episodes": [21],
+      "type": "mixed",
+      "chapters": "12-13",
+      "confidence": "high",
+      "note": "Half Lab 5 manga, half documented expansion. Al vs Barry the Chopper with Barry taunting him that his soul and memories are fabricated, and Ed pinned by the Slicer brothers, are Chapter 12 'The Two Guardians' / Chapter 13 'Fullmetal Body'. The FMA Wiki carries an unusually explicit production note on the same page: screenwriter Sho Aikawa 'decided to expand upon the Fifth Laboratory story with this episode. This included adding characters such as Scar, Greed and Kimbley in order to engage viewers and set up future plotlines' — none of those three is present in the manga's Lab 5, and Greed's sealed chamber under Lab 5 is a 2003 invention. Source content and anime-original content in one episode: mixed.",
+      "sources": [
+        "https://fma.fandom.com/api.php?action=parse&page=Episode%2021%20(2003%20Anime)&prop=wikitext&format=json",
+        "https://fma.fandom.com/api.php?action=parse&page=Chapter%2030%3A%20The%20Truth%20Inside%20the%20Armor&prop=wikitext&format=json",
+        "https://en.wikipedia.org/wiki/Fullmetal_Alchemist_(TV_series)"
+      ]
+    },
+    {
+      "episodes": [24],
+      "type": "mixed",
+      "chapters": "15",
+      "confidence": "medium",
+      "note": "The FMA Wiki hedges its own wording here — 'This episode HAS SOME adapted content from Chapter 15: Fullmetal Heart' — and the content bears that out. Al walking through the rain re-running the argument with Ed and asking whether even his memories of his mother are fabricated is Chapter 15's material; Winry telling Ed that answers never come to unasked questions is the same chapter's Winry beat, redistributed. Everything else — the Ishvalan refugee camp, Rick and Leo, the mercenary massacre, Barry riding with the mercenaries, Al and Scar's third meeting — is anime-original. Mixed, with the source share clearly the minority.",
+      "sources": [
+        "https://fma.fandom.com/api.php?action=parse&page=Episode%2024%20(2003%20Anime)&prop=wikitext&format=json",
+        "https://fma.fandom.com/api.php?action=parse&page=Chapter%2015%3A%20Fullmetal%20Heart&prop=wikitext&format=json",
+        "https://www.animefillerlist.com/shows/fullmetal-alchemist"
+      ]
+    },
+    {
+      "episodes": [29],
+      "type": "mixed",
+      "chapters": "22-23, 25",
+      "confidence": "medium",
+      "note": "FMA Wiki: 'This episode is adapted from content in Chapter 22: The Masked Man, Chapter 23: Knocking on Heaven's Door and Chapter 25: Master and Apprentice'. The Yock Island frame — Mason confessing he was the masked man, the survival training, Izumi as teacher — is that manga material, continuing directly from ep 28 (stored canon). The present-day A-plot, the nameless boy who transmutes without a circle and who becomes the 2003 Wrath, is wholly anime-original: the manga's Wrath is King Bradley, a different character entirely, and Izumi's stillborn child never becomes a homunculus in the source. Source and non-source in one episode.",
+      "sources": [
+        "https://fma.fandom.com/api.php?action=parse&page=Episode%2029%20(2003%20Anime)&prop=wikitext&format=json",
+        "https://ja.wikipedia.org/wiki/%E9%8B%BC%E3%81%AE%E9%8C%AC%E9%87%91%E8%A1%93%E5%B8%AB_(%E3%82%A2%E3%83%8B%E3%83%A1)",
+        "https://en.wikipedia.org/wiki/Fullmetal_Alchemist_(TV_series)"
+      ]
+    },
+    {
+      "episodes": [30],
+      "type": "mixed",
+      "chapters": "25-26, 28",
+      "confidence": "medium",
+      "note": "FMA Wiki names Chapters 25, 26 and 28, and pins one scene precisely: 'The scene of Major Armstrong and Sig Curtis showing up their muscular bodies is based off Chapter 28: A Fool's Courage from the manga. The only difference is that Frank Archer, a character exclusive to this series, is the man accompanying Armstrong, rather than the Fuhrer.' Bido approaching Ed about the Philosopher's Stone is the Devil's Nest hook from the same stretch of vol 7. Against that, Archer, Wrath's escape and the Ishvalan-refugee/Yoki slum thread are anime-original. Mixed.",
+      "sources": [
+        "https://fma.fandom.com/api.php?action=parse&page=Episode%2030%20(2003%20Anime)&prop=wikitext&format=json",
+        "https://fma.fandom.com/api.php?action=parse&page=Chapter%2028%3A%20A%20Fool's%20Courage&prop=wikitext&format=json",
+        "https://www.animefillerlist.com/shows/fullmetal-alchemist"
+      ]
+    },
+    {
+      "episodes": [32],
+      "type": "mixed",
+      "chapters": "25-26",
+      "confidence": "medium",
+      "note": "FMA Wiki: 'This episode has adapted content from Chapter 25: Master and Apprentice and Chapter 26: To Meet the Master' — the source share is Izumi's own human transmutation and the price she paid for it, i.e. the vol 7 revelation about the teacher. The rest is 2003-only: the Wrath fight, Envy impersonating Fuhrer Bradley, Sloth in her Juliet Douglas civilian identity, and the introduction of Dante, the anime's invented final antagonist. Mixed, and this is where the original story visibly takes the wheel.",
+      "sources": [
+        "https://fma.fandom.com/api.php?action=parse&page=Episode%2032%20(2003%20Anime)&prop=wikitext&format=json",
+        "https://ja.wikipedia.org/wiki/%E9%8B%BC%E3%81%AE%E9%8C%AC%E9%87%91%E8%A1%93%E5%B8%AB_(%E3%82%A2%E3%83%8B%E3%83%A1)",
+        "https://en.wikipedia.org/wiki/Fullmetal_Alchemist_(TV_series)"
+      ]
+    },
+    {
+      "episodes": [40],
+      "type": "mixed",
+      "chapters": "30",
+      "confidence": "medium",
+      "note": "The single most surprising finding in this block: real manga content survives 15 episodes INTO the original half. FMA Wiki: 'This episode has some adapted content from Chapter 30: The Truth Inside the Armor'. The episode's closing sequence — Martel hiding inside Al's armour, Bradley's eyepatch coming off to show the ouroboros, Bradley putting his sword through a gap in the armour to kill Martel inside Al, Al watching her blood run down him — is Chapter 30 (vol 8) beat for beat; the chapter's own wiki synopsis confirms the correspondence. Everything around it (Reole, Kimbley reinstated by Archer, the Elrics as Scar's targets) is anime-original. Do NOT read this as the anime 'still adapting' — it is a single grafted chapter scene inside an original episode, so mixed, and it is the LAST chapter content in the series.",
+      "sources": [
+        "https://fma.fandom.com/api.php?action=parse&page=Episode%2040%20(2003%20Anime)&prop=wikitext&format=json",
+        "https://fma.fandom.com/api.php?action=parse&page=Chapter%2030%3A%20The%20Truth%20Inside%20the%20Armor&prop=wikitext&format=json",
+        "https://www.animefillerlist.com/shows/fullmetal-alchemist"
+      ]
+    },
+    {
+      "episodes": [41],
+      "type": "mixed",
+      "chapters": "30",
+      "confidence": "medium",
+      "note": "The aftermath half of the same Chapter 30 scene: Martel's corpse cut out of Alphonse's armour (Armstrong performs this in the manga, the Mustang Unit here), Al's breakdown at having failed to save her, and Al's realisation that the Fuhrer is a homunculus after seeing the ouroboros. FMA Wiki: 'This episode has adapted content from Chapter 30: The Truth Inside the Armor'. Confidence medium rather than high because the correspondence is a beat-level parallel, not a staged adaptation — the manga has Al glimpse 'the Truth' at this moment and the anime does not — and because the remainder of the episode (Scar turning Reole into a transmutation array, Rose as the mute Holy Mother, Tucker) has no source at all. This is the last row in the series with any manga standing.",
+      "sources": [
+        "https://fma.fandom.com/api.php?action=parse&page=Episode%2041%20(2003%20Anime)&prop=wikitext&format=json",
+        "https://fma.fandom.com/api.php?action=parse&page=Chapter%2030%3A%20The%20Truth%20Inside%20the%20Armor&prop=wikitext&format=json",
+        "https://en.wikipedia.org/wiki/Fullmetal_Alchemist_(TV_series)"
+      ]
+    },
+    {
+      "episodes": [31],
+      "type": "filler",
+      "confidence": "medium",
+      "note": "The only row inside the Dublith stretch with no manga counterpart: the FMA Wiki names adapted chapters for eps 29, 30, 32, 33 and 34 and names NONE for ep 31, whose sole trivia line is a colour comparison of the Eye of God. Content is anime-original throughout — Envy impersonating Fuhrer Bradley to abduct the boy, Envy feeding him red stones, Wrath recovering his memory of the Gate and being revealed to hold Ed's original arm and leg, Lt. Colonel Frank Archer (a 2003-exclusive character) reinstating Kimbley. Zero source standing. Medium rather than high because the judgement rests on an absence in the per-episode notes plus content reading rather than an explicit 'anime-original' statement.",
+      "sources": [
+        "https://fma.fandom.com/api.php?action=parse&page=Episode%2031%20(2003%20Anime)&prop=wikitext&format=json",
+        "https://ja.wikipedia.org/wiki/%E9%8B%BC%E3%81%AE%E9%8C%AC%E9%87%91%E8%A1%93%E5%B8%AB_(%E3%82%A2%E3%83%8B%E3%83%A1)",
+        "https://www.animefillerlist.com/shows/fullmetal-alchemist"
+      ]
+    },
+    {
+      "episodes": [35, 36, 38, 39],
+      "type": "filler",
+      "confidence": "high",
+      "note": "The first solid block of Bones-original story after Greed's death (ep 34, the last stored-canon row). Ep 35 is the Lujon / Lydia / fossilising-disease village — anime-exclusive characters in a self-contained story the show itself never references again. Ep 36 is the Ishvalan refugee train, Rick and Leo, and Scar's master, all 2003-only. Eps 38-39 run the Sheska-and-Winry investigation into Hughes' death to Juliet Douglas, the Fuhrer's secretary — Douglas is the 2003 Sloth, an anime-exclusive character created from the Elrics' own failed transmutation, a premise the manga contradicts outright. The FMA Wiki names adapted chapters for the episodes on both sides of this block and none for any row in it. ja.wikipedia states flatly that from the middle of the series onward it becomes a 完全アニメオリジナルのストーリー (a completely anime-original story). Zero source standing.",
+      "sources": [
+        "https://ja.wikipedia.org/wiki/%E9%8B%BC%E3%81%AE%E9%8C%AC%E9%87%91%E8%A1%93%E5%B8%AB_(%E3%82%A2%E3%83%8B%E3%83%A1)",
+        "https://fma.fandom.com/api.php?action=parse&page=Episode%2035%20(2003%20Anime)&prop=wikitext&format=json",
+        "https://fma.fandom.com/api.php?action=parse&page=Episode%2038%20(2003%20Anime)&prop=wikitext&format=json",
+        "https://en.wikipedia.org/wiki/Fullmetal_Alchemist_(TV_series)"
+      ]
+    },
+    {
+      "episodes": [42, 43, 44, 45, 46, 47, 48, 49, 50, 51],
+      "type": "filler",
+      "confidence": "high",
+      "note": "Bones' studio ending. From ep 42 (the start of the fourth and final season on the wiki's own season boundaries) nothing in these rows exists in Arakawa's manga: Scar dies completing the Stone inside Al; Dante, an anime-invented antagonist, is revealed as Hohenheim's centuries-old former lover and the homunculi's master; Hohenheim's body-hopping backstory; Sloth as the transmuted Trisha; Envy as Hohenheim's son and Ed's half-brother; the Gate opening onto our own world; Ed dying, Al reviving him, and Ed ending the series in Munich, 1921. Every one of these contradicts the source. ja.wikipedia: 中盤以降は完全アニメオリジナルのストーリーとなり ... 主人公たちが迎える物語の結末も原作とは異なる — from mid-series it becomes a completely anime-original story and the ending the protagonists reach differs from the original. The protocol's own definition puts a studio ending here: filler, zero standing in the source. See flags_for_sean for the adopted{author} reading I considered and rejected. NOTE: ep 51's wiki trivia observes that Mustang drawing a circle in his own blood to burn Pride is 'similar to how he killed Lust in the manga', 'the chapter this plotline originated from' being Chapter 39 — that is a borrowed alchemy device transplanted into a different scene with different characters, not adapted content, and it does not lift ep 51 to mixed.",
+      "sources": [
+        "https://ja.wikipedia.org/wiki/%E9%8B%BC%E3%81%AE%E9%8C%AC%E9%87%91%E8%A1%93%E5%B8%AB_(%E3%82%A2%E3%83%8B%E3%83%A1)",
+        "https://en.wikipedia.org/wiki/Fullmetal_Alchemist_(TV_series)",
+        "https://fma.fandom.com/api.php?action=parse&page=Fullmetal%20Alchemist%20(2003%20Anime)&prop=wikitext&format=json",
+        "https://fma.fandom.com/api.php?action=parse&page=Episode%2051%20(2003%20Anime)&prop=wikitext&format=json",
+        "https://web.archive.org/web/20050728025135/http://www.asahi.com/culture/theater/TKY200507250335.html"
+      ]
+    }
+  ],
+  "annotations": [
+    {
+      "episodes": [11, 12],
+      "kind": "side_source",
+      "note": "Adapts the light novel 'Fullmetal Alchemist: The Land of Sand' (鋼の錬金術師1 砂礫の大地), story by Makoto Inoue from Arakawa's original work, illustrations by Arakawa, Square Enix, published 2003-02-28 — a different licensed work in the same franchise, not the manga. en.wikipedia's light-novel list, citing Square Enix's own novel page, states the novel 'was used as the source material for episodes 11, 12 and part of 37'. Episode titles 砂礫の大地・前編 / ・後編 are the novel's title. No manga chapter is involved, so these rows take no chapter anchor.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/List_of_Fullmetal_Alchemist_light_novels",
+        "https://ja.wikipedia.org/wiki/%E9%8B%BC%E3%81%AE%E9%8C%AC%E9%87%91%E8%A1%93%E5%B8%AB",
+        "https://fma.fandom.com/api.php?action=parse&page=Episode%2011%20(2003%20Anime)&prop=wikitext&format=json"
+      ]
+    },
+    {
+      "episodes": [8],
+      "kind": "rearranged",
+      "note": "Chapter 24 (vol 6, Mustang recruiting the Elrics / Ed receiving the name 'Fullmetal') is pulled forward out of serialized order and used as this episode's closing scene, 16 chapters ahead of its published position. FMA 2003 does this repeatedly in eps 1-9 because eps 3-9 are a restructured backstory block.",
+      "sources": [
+        "https://fma.fandom.com/api.php?action=parse&page=Chapter%2024%3A%20Fullmetal%20Alchemist&prop=wikitext&format=json",
+        "https://fma.fandom.com/api.php?action=parse&page=Episode%208%20(2003%20Anime)&prop=wikitext&format=json"
+      ]
+    },
+    {
+      "episodes": [21],
+      "kind": "graft",
+      "note": "Screenwriter Sho Aikawa is on record (FMA Wiki episode notes) as having expanded the manga's Laboratory 5 story by grafting Scar, Greed and Kimbley into it 'in order to engage viewers and set up future plotlines'. The Chapter 12-13 material is intact underneath; the grafted threads are what later carry the original half.",
+      "sources": [
+        "https://fma.fandom.com/api.php?action=parse&page=Episode%2021%20(2003%20Anime)&prop=wikitext&format=json"
+      ]
+    },
+    {
+      "episodes": [40, 41],
+      "kind": "divergence",
+      "note": "Chapter 30's Martel-dies-inside-Al scene is relocated into an anime-original context: in the manga it happens in the Devil's Nest tunnels immediately after Greed's capture and triggers Al recovering his memory of the Truth; in the 2003 anime it happens at a military outpost outside Reole, weeks later in story time, with Kimbley reinstated and Reole about to be destroyed, and Al does not see the Truth. Same beat, different continuity around it.",
+      "sources": [
+        "https://fma.fandom.com/api.php?action=parse&page=Chapter%2030%3A%20The%20Truth%20Inside%20the%20Armor&prop=wikitext&format=json",
+        "https://fma.fandom.com/api.php?action=parse&page=Episode%2040%20(2003%20Anime)&prop=wikitext&format=json",
+        "https://fma.fandom.com/api.php?action=parse&page=Episode%2041%20(2003%20Anime)&prop=wikitext&format=json"
+      ]
+    }
+  ],
+  "repairs": [
+    {
+      "episode": 37,
+      "field": "type",
+      "old": "filler",
+      "new": "canon",
+      "why": "NOT a target row (AFL calls it filler and we store filler) but the sources say both are wrong. Ep 37 is a three-segment omnibus and two of the three segments adapt Arakawa's own manga bonus chapters: 'The first part of the episode is adapted from the content of the Bonus Chapter: Roy Mustang's Observation Diary, while the Bachelor Lieutenant portion of the episode is adapted from content in Bonus Chapter: The Second Lieutenant Goes to Battle!, and the Warehouse 13 part is adapted from a mini-story in the first FMA Light Novel: The Land of Sand.' en.wikipedia independently confirms the third segment ('episodes 11, 12 and part of 37'). Compare ep 13, which we already store as canon and which the same wiki says adapts the bonus chapters 'Dog of the Military?' and 'The Military Festival' — the treatment of ep 37 is inconsistent with it. Suggested shape: type canon, annotation side_story (Arakawa's bonus/gaiden chapters, outside the 108 numbered chapters, so no numbered-chapter anchor) plus side_source for the Warehouse 13 segment. If Sean prefers to keep bonus-chapter omnibuses out of the canon spine, then ep 13 should be repaired the other way for consistency — but the two rows must not disagree.",
+      "sources": [
+        "https://fma.fandom.com/api.php?action=parse&page=Episode%2037%20(2003%20Anime)&prop=wikitext&format=json",
+        "https://en.wikipedia.org/wiki/List_of_Fullmetal_Alchemist_light_novels",
+        "https://fma.fandom.com/api.php?action=parse&page=Episode%2013%20(2003%20Anime)&prop=wikitext&format=json"
+      ]
+    }
+  ],
+  "structure": {
+    "notes": "ROW IDENTITY CHECKED FIRST. animefillerlist's Fullmetal Alchemist table has exactly 51 rows and joins 1:1 to our 51 rows by title with no shift (verified title-by-title, not by index): AFL 1-51 titles match our stored titles including the two-part 'The Other Brothers Elric: Part 1/2' at 11-12 and the long omnibus title at 37. AFL's mix is 21 manga_canon / 27 anime_canon / 3 filler (4, 10, 37); the 27 anime_canon rows are exactly our 27 target rows. Single component (AniList 121), one season in our model; ja.wikipedia and the FMA Wiki both split the broadcast into four internal 'seasons' (ep 25 = last of s2, ep 26 = first of s3, ep 41 = last of s3, ep 42 = first of s4) — those are arc groupings for DVD sets, not our rows, and I did not renumber anything. Four OVAs exist (2006, listed in the en.wikipedia infobox as '51 + 4 OVAs') and are NOT in our row space; likewise the 2005 film 'Conqueror of Shamballa', which ja.wikipedia describes as 2003年版アニメの完結編 — the completion of the 2003 VERSION, i.e. the original continuity's own ending, not the manga's. CHAPTER SPACE: the manga is 108 serialized chapters in 27 volumes (en.wikipedia chapter list, cited to ANN and to vol 1). Our AniList link stores total_chapters=116; the extra 8 are the side-story / bonus chapters (e.g. 'Dog of the Military?', 'The Military Festival', 'Roy Mustang's Observation Diary', 'The Second Lieutenant Goes to Battle!'), which are NOT part of the 1-108 numbering. Any anchor written from this verdict must use serialized 1-108 numbering; do not let 116 leak into a position calculation. Volume boundaries relevant here (4 chapters per volume): vol 6 = ch 21-24, vol 7 = ch 25-28, vol 8 = ch 29-32. THE DIVERGENCE, precisely: chapter content is continuous through ep 34 (stored canon, ch 28-29), stops dead after it, and reappears exactly twice more — eps 40 and 41, both on Chapter 30. Chapter 30 (vol 8, published December 2003) is the highest chapter the series ever touches; the manga ran another 78 chapters. en.wikipedia summarises the same shape independently: 'The first half of the anime's plot adapts the first six volumes of the manga, while the second half incorporates plot points from the seventh and eighth volumes with significant recontextualizations.' The FMA Wiki's own series page places its divergence marker one arc earlier, right after Hughes' death (ep 25): 'At this time, the anime diverges severely from the manga plot line.' Both are true and they are not in conflict — from ep 26 the ORDER and meaning diverge while individual vol 7-8 scenes keep being harvested until ep 41.",
+    "order_only": []
+  },
+  "flags_for_sean": [
+    "THE LANDMARK CALL — eps 42-51 (and by extension 31, 35-36, 38-39). Both readings, then my recommendation. READING A, filler (what I wrote): (1) Asahi Shimbun, 2005-07-25, interviewing Arakawa directly — 「アニメ化の際、『マンガと違う独自の結末を』と注文した」, she ORDERED an original ending different from the manga; and 「テレビ版も映画版もラストに驚かされると同時に、私自身の頭の中のラストとつい比べてしまう」, she is surprised by the TV/film endings and compares them against 'the ending in my own head', which the same interview says she had fixed 連載開始時から, since serialization began. An author who withholds her ending and asks the studio for a different one is separating continuities, not adopting one. (2) ja.wikipedia: 中盤以降は完全アニメオリジナルのストーリーとなり…主人公たちが迎える物語の結末も原作とは異なる. (3) Credits: ja.wikipedia's staff block credits Arakawa as 原作 only — there is NO 監修 (supervision) credit; ストーリーエディター is Sho Aikawa, director Seiji Mizushima. (4) Director Mizushima's own framing, quoted on ja.wikipedia from the official fanbook vol 5: 「アニメ版は二次作品」 — the anime version is a secondary/derivative work. (5) The franchise did not carry it forward: the manga ran to its own ending and Bones re-adapted it in 2009 as Brotherhood, which ja.wikipedia calls 原作に準拠した内容での再アニメ化 — a re-animation in accordance with the original. The 2003 story's only continuation is its own film. (6) The protocol's own kinnikuman discriminator: author-commissioned is not author-declared canon; the test is declaration or supervision, and neither is present. READING B, canon + adopted{author}: (1) en.wikipedia's Production section, citing 鋼の錬金術師 パーフェクトガイドブック 2 (Square Enix, 2005, pp. 168-172) and the extras in manga vol 8: 'she was directly involved in the production of it at a storywise standpoint … she helped the anime's development team with consultation for the characters and telling the overall story she had planned for her manga, helping them fill in some of the gaps to create the anime original ending of the 2003 series.' (2) ja.wikipedia attributes the divergence itself to 原作者である荒川弘の意向 — the original author's intent. (3) Newly surfaced, and the strongest single piece for B: on 2026-02-08 lead scriptwriter Sho Aikawa (@nishi_ogi) posted that Arakawa issued explicit NGs — 「錬金術で空を飛ばない」「主人公をバイクに乗せない」 (no flying by alchemy, don't put the protagonists on a motorcycle) — and that 「脚本会議には一度も欠かさず編集部やスクエニ関係者が同席し、場合によっては原作者にその場で問い合わせてくださっていました」: Square Enix editorial attended EVERY script meeting without exception and would consult the author on the spot. That is continuous author veto power in the room, which is close to supervision in practice. (4) Arakawa to Newtype USA: 'I left the adaptation completely up to [the Bones staff] … There's little point in having a cross-media story if everything is exactly the same in all versions.' MY RECOMMENDATION: filler. Reading B documents authorisation, guardrails and consultation — it does not document adoption. The distinguishing question for adopted{author} is whether the author treats the material as having happened in the source; here she demonstrably does not, because the manga went on to contradict every load-bearing element of it (Dante, Sloth-as-Trisha, Wrath, Envy as Ed's half-brother, the Gate opening onto our world). This is an authorised parallel continuity: canon to itself, zero standing in the manga. If Sean rules the other way, the mechanical change is: eps 31, 35-36, 38-39, 42-51 flip from filler to canon and take an annotation {kind: adopted, basis: author, sources: the Perfect Guidebook 2 / vol 8 extras via en.wikipedia + the Aikawa 2026-02-08 X post via Automaton West}. I would not do it, and the Asahi quote is the reason.",
+    "Eps 11-12 are the second decision. Under the protocol's Shippuden-452 precedent a manga-sourced series' episodes that adapt a licensed novel are canon + side_source, which is what I wrote. But note the difference from Itachi Shinden: The Land of Sand is written by Makoto Inoue, not by Arakawa (she supplied the original work and the illustrations), and it is a spin-off adventure rather than a canon-gap novel. If Sean would rather hold licensed-spinoff-novel adaptations at filler, 11-12 flip together and ep 37's third segment goes with them — but 11-12 must not stay AFL's 'anime canon' either way, because they are demonstrably an adaptation of a published work that predates them by ten months.",
+    "Eps 40-41 are the fragile rows. They rest on the FMA Wiki's per-episode notes plus my own beat-level comparison against the wiki's Chapter 30 synopsis; I could not find a second, fully independent source that says 'ep 40/41 adapt chapter 30' in so many words. The content correspondence is unmistakable (Bradley's eyepatch, the ouroboros, the sword through the armour gap, Martel dying inside Al, the body cut out afterwards), and en.wikipedia's 'the second half incorporates plot points from the seventh and eighth volumes' covers it at block level, but if Sean wants these two at filler for want of a second per-episode source that is a defensible call and it does not disturb anything else. They carry no anchor either way under A1 unless typed canon.",
+    "Ep 22 is the one row where I split canon/mixed on judgement rather than on a source. The wiki says 'adapted from content in Chapter 13' and the Ross-embrace climax is straight Chapter 13, but the 2003 staging (a room full of Central Prison convicts for Ed to nearly transmute, with Scar and Envy-as-Grand present) is invented. I called it canon; mixed would not be wrong.",
+    "Repair proposed on a NON-target row: ep 37, stored filler, actually two manga bonus chapters plus a Land of Sand mini-story. It is inconsistent with ep 13, which we already store as canon on the same basis (bonus chapters). Whichever way Sean rules, 13 and 37 should agree. AFG had no reachable page for this series (animefillerguide.com/fullmetal-alchemist-2003/ returns 404), so AFL is the only filler-site principle in play here and it is wrong on 11 of the 27 target rows."
+  ]
+}

@@ -1,0 +1,169 @@
+{
+  "series_id": "soul-eater",
+  "summary": "Rows 39-51 are Bones' own conclusion to Soul Eater, not an adaptation. The last row that adapts chapters is ep 38 (ch 38-39, partial, already stored); en.wikipedia states flatly that 'after episode 38, the anime deviated from the manga ... which lead to an anime original ending not found in the source material', and ja.wikipedia states that from ep 37 the show 'concluded with its own independent story as an anime-original story' (第37話以降はアニメオリジナルストーリーとして独自の物語で完結した). The souleater.fandom chapter-side reverse index agrees and is finer-grained: only two post-38 rows carry any source content at all — ep 39 lifts the opening scene of ch 40 (Eruka orders Crona back to Medusa) and ep 40 adapts 'in part' the arrival/deal beat of ch 45 — while ch 46/47/48 carry an explicit 'anime correspondent: None' and the manga's entire Clown arc (ch 41-44) was never adapted. Eps 48-51 are the wiki's 'Kishin Battle arc', described as 'the final anime-only arc', with zero chapters attached. No author basis exists for adoption: ja.wikipedia's staff list credits Ohkubo only as 原作 (source), series composition is Akatsuki Yamatoya, there is no 監修/supervision credit, en.wikipedia says only that the scenario writer 'based the anime's story on Ohkubo's original concept', and Ohkubo's own manga later contradicts the anime finale on every major point (Death dies, Kid becomes Shinigami, Crona kills Medusa, Asura is sealed not killed) — so this is a studio ending, the A-7 class. Surprising finding: the usual 'the anime outran the manga' framing is loose — at the divergence point the manga was ~13 chapters AHEAD (vol 13 = ch 49-52, released 2008-10-22; vol 14 = ch 53-57, 2009-03-21), i.e. roughly one chapter per remaining episode. Bones diverged not for lack of material but because no ENDING was in reach: Asura is not defeated until ch 111 (2013).",
+  "standings": [
+    {
+      "episodes": [
+        39
+      ],
+      "type": "mixed",
+      "chapters": "40 (partial — the opening scene only: Eruka visits Crona's room and orders Crona to return to Medusa; the rest of ch 40 and its outcome are unadapted)",
+      "confidence": "high",
+      "note": "First row past the divergence. souleater.fandom's Chapter 40 page: 'Although Crona's departure from DWMA was shown in Episode 39 ... much of the content to this chapter is original to the manga.' Independently corroborated by matching en.wikipedia's ep 39 summary ('Crona is visited by Eruka again, who tells him to return to Medusa') against en.wikipedia's manga vol 11 summary ('Eruka arrives at Crona's room to instruct Crona to leave DWMA'). Everything else in the episode is anime-original: Arachne recruits Asura from a Tibetan temple (in the manga Asura hides on the Moon), Crona is found in the desert by Maka and Soul and STAYS at the DWMA (in the manga Crona leaves with Medusa and stays an antagonist until the final arc), and Medusa's surrender is announced. Real but single-scene source content — the judgment call is presented rather than hidden: one scene of ch 40 out of a 23-minute original episode.",
+      "sources": [
+        "https://souleater.fandom.com/api.php?action=parse&page=Chapter%2040&prop=wikitext&format=json",
+        "https://souleater.fandom.com/api.php?action=parse&page=Episode%2039&prop=wikitext&format=json",
+        "https://en.wikipedia.org/wiki/List_of_Soul_Eater_episodes",
+        "https://en.wikipedia.org/wiki/List_of_Soul_Eater_chapters"
+      ]
+    },
+    {
+      "episodes": [
+        40
+      ],
+      "type": "mixed",
+      "chapters": "45 (partial and OUT OF ORDER — Medusa's arrival at the DWMA, her offer of a deal and the handover of the real BREW only; ch 41-44 were skipped entirely and the rest of ch 45 is unadapted)",
+      "confidence": "high",
+      "note": "The only target row that carries a manga-correspondent field on souleater.fandom (Episode 40 infobox: 'manga correspondent = Chapter 45'). The Chapter 45 page states the relationship directly: 'Although Medusa's arrival and announcement that she has arrived at the DWMA to offer a deal to Lord Death is adapted in part in Episode 40 ... much of this chapter's content is original to the manga and was not adapted into the anime.' Corroborated independently by en.wikipedia: ep 40 summary ('Medusa reveals the location of the real \"Brew\", and proposes to give information about Asura's whereabouts in exchange for her freedom') vs manga vol 12 summary ('Medusa offers to lead a strike team into Baba Yaga's castle ... and gives Shinigami the real Brew as a sign of good faith'). NOTE the fandom episode page has the chronology backwards ('her deal was LATER adapted into Chapter 45') — ch 45 shipped in tankōbon vol 12 on 2008-06-21, seven months BEFORE ep 40 aired (2009-01-12), so the anime borrowed from an already-published chapter; the wiki's 'the anime proceeded the manga' claims on eps 40 and 47 are unreliable and were not relied on. This is a graft, not a reading position: ch 41-44 are wholly unadapted, so this row must not advance continue-read.",
+      "sources": [
+        "https://souleater.fandom.com/api.php?action=parse&page=Chapter%2045&prop=wikitext&format=json",
+        "https://souleater.fandom.com/api.php?action=parse&page=Episode%2040&prop=wikitext&format=json",
+        "https://en.wikipedia.org/wiki/List_of_Soul_Eater_episodes",
+        "https://en.wikipedia.org/wiki/List_of_Soul_Eater_chapters"
+      ]
+    },
+    {
+      "episodes": [
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47
+      ],
+      "type": "filler",
+      "confidence": "high",
+      "note": "Bones' original 'Arachnophobia vs DWMA' war and the Medusa/Stein rescue plot. Zero chapters are adapted here: on souleater.fandom the chapter pages for ch 46, 47 and 48 (Operation Capture Baba Yaga Castle Parts 1-3) each carry an explicit 'anime correspondent = None', ch 50-60 carry the field empty, and none of eps 41-47 carries a manga-correspondent field. The episode pages deny adaptation in prose: ep 42 'it is not a direct adaptation of content from the arc \"Operation Capture Baba Yaga Castle\"'; ep 47 'shares similarities with the manga arc ... has significant differences'. The manga's version differs in cause, cast and outcome throughout — the manga operation is a covert infiltration led by Medusa to assassinate Arachne and rescue Kim/Jacqueline/Crona, the anime's is a mass battle in the Amazon to capture Asura ending with Death City transformed into a giant robot (anime-only); Medusa is killed by Maka's Genie Hunter in ep 45 whereas in the manga Crona kills her far later; Mifune is spared and becomes a DWMA teacher in ep 47 whereas Black☆Star kills him in the manga (ch 57); Arachne is killed by Asura in the anime and by Maka/Soul in the manga; Soul never becomes a Death Scythe in the anime; Joe and Justin both survive in the anime. ja.wikipedia and en.wikipedia both place this whole stretch inside the anime-original conclusion.",
+      "sources": [
+        "https://souleater.fandom.com/api.php?action=parse&page=Chapter%2046&prop=wikitext&format=json",
+        "https://souleater.fandom.com/api.php?action=parse&page=Episode%2042&prop=wikitext&format=json",
+        "https://souleater.fandom.com/api.php?action=parse&page=Difference%20in%20the%20Soul%20Eater%20media&prop=wikitext&format=json",
+        "https://en.wikipedia.org/wiki/List_of_Soul_Eater_episodes",
+        "https://ja.wikipedia.org/wiki/%E3%82%BD%E3%82%A6%E3%83%AB%E3%82%A4%E3%83%BC%E3%82%BF%E3%83%BC"
+      ]
+    },
+    {
+      "episodes": [
+        48,
+        49,
+        50,
+        51
+      ],
+      "type": "filler",
+      "confidence": "high",
+      "note": "The studio ending proper. souleater.fandom's arc index gives these four episodes their own arc — 'Kishin Battle arc ... the final anime-only arc in Soul Eater' — with an Episodes list and NO Chapters list at all, the only arc on the wiki's Story Arcs table with episodes but no chapters. Content is unique to the anime on every beat: Death City swallows Asura, Lord Death fights him with Spirit as his Death Scythe and survives gravely wounded, Kid's Lines of Sanzu activate, and Maka defeats Asura with a bare-fisted punch powered by courage; Asura's soul is buried. The manga instead has Death die, Kid inherit the Shinigami role, and Asura sealed on the Moon inside Crona's black blood (ch 104-113). No adoption: no 監修 (supervision) or 原案 credit for Ohkubo on the ja.wikipedia staff list — he is credited only as 原作 — series composition is Akatsuki Yamatoya, the ep 48-51 scripts are Yamatoya's and Igarashi's, and en.wikipedia says only that the scenario writer 'based the anime's story on Ohkubo's original concept'. 'Based on the author's concept' is not declaration or supervision (the kinnikuman discriminator), and Ohkubo's manga subsequently overwrote every one of these outcomes.",
+      "sources": [
+        "https://souleater.fandom.com/api.php?action=parse&page=Kishin%20Battle%20Arc&prop=wikitext&format=json",
+        "https://souleater.fandom.com/api.php?action=parse&page=Story%20Arcs&prop=wikitext&format=json",
+        "https://souleater.fandom.com/api.php?action=parse&page=Difference%20in%20the%20Soul%20Eater%20media&prop=wikitext&format=json",
+        "https://ja.wikipedia.org/wiki/%E3%82%BD%E3%82%A6%E3%83%AB%E3%82%A4%E3%83%BC%E3%82%BF%E3%83%BC",
+        "https://en.wikipedia.org/wiki/Soul_Eater"
+      ]
+    }
+  ],
+  "annotations": [
+    {
+      "episodes": [
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49,
+        50,
+        51
+      ],
+      "kind": "divergence",
+      "note": "Divergence point established: ep 38 is the last row that adapts chapters (ch 38-39, partial — already stored). From ep 39 the anime runs its own story to its own ending. en.wikipedia: 'After episode 38, the anime deviated from the manga it was based on which lead to an anime original ending not found in the source material.' ja.wikipedia: 「第36話までは原作の展開を踏襲していたが、原作への追いつきに伴い第37話以降はアニメオリジナルストーリーとして独自の物語で完結した」. The two disagree by one row only because ep 38 still carries the Black☆Star-vs-Kid duel from ch 39; the finer fandom chapter-side index resolves it in favour of 'ep 38 last, ep 39 first diverged'. CONTINUE-READ CONSEQUENCE: the manga's Clown arc (ch 41-44) was never adapted in any form, so the correct post-series reading position for Soul Eater is CHAPTER 40, not a chapter derived from eps 39-51.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/List_of_Soul_Eater_episodes",
+        "https://ja.wikipedia.org/wiki/%E3%82%BD%E3%82%A6%E3%83%AB%E3%82%A4%E3%83%BC%E3%82%BF%E3%83%BC",
+        "https://souleater.fandom.com/api.php?action=parse&page=Internal%20Investigation%20Arc&prop=wikitext&format=json"
+      ]
+    },
+    {
+      "episodes": [
+        39
+      ],
+      "kind": "partial",
+      "note": "Only the opening scene of ch 40 (Eruka orders Crona back to Medusa) survives into the episode; the chapter's substance and outcome do not. Do not treat this row as covering ch 40.",
+      "sources": [
+        "https://souleater.fandom.com/api.php?action=parse&page=Chapter%2040&prop=wikitext&format=json"
+      ]
+    },
+    {
+      "episodes": [
+        40
+      ],
+      "kind": "graft",
+      "note": "ch 45's Medusa-arrival/deal scene lifted out of order into an otherwise original episode, with ch 41-44 skipped entirely. An out-of-sequence graft, not a reading position — the row must not advance continue-read past ch 40.",
+      "sources": [
+        "https://souleater.fandom.com/api.php?action=parse&page=Chapter%2045&prop=wikitext&format=json",
+        "https://en.wikipedia.org/wiki/List_of_Soul_Eater_chapters"
+      ]
+    },
+    {
+      "episodes": [
+        42,
+        46,
+        47
+      ],
+      "kind": "loose_parallel",
+      "note": "Reworks recognisable beats of the manga's Operation Capture Baba Yaga Castle arc (ch 45-60) — the assault on Baba Yaga Castle in the Amazon (ch 46-48) and the Black☆Star vs Mifune duel (ch 49, 56-57) — with different causes, participants and outcomes, and without adapting the chapters (ch 46/47/48 are marked 'anime correspondent: None'). In the manga Black☆Star kills Mifune; in the anime he spares him and Mifune joins the DWMA. The wiki's stray 'ch 49 → Episode 47' infobox value has no supporting prose and was not treated as an adaptation claim.",
+      "sources": [
+        "https://souleater.fandom.com/api.php?action=parse&page=Operation%20Capture%20Baba%20Yaga%20Castle%20Arc&prop=wikitext&format=json",
+        "https://souleater.fandom.com/api.php?action=parse&page=Difference%20in%20the%20Soul%20Eater%20media&prop=wikitext&format=json"
+      ]
+    },
+    {
+      "episodes": [
+        43
+      ],
+      "kind": "loose_parallel",
+      "note": "Uses the manga's Clown concept (ch 41-43, 'The Clown') but nothing of its story: in the manga Maka fights a madness-born clown in a demonic factory, in the anime Kid fights two mechanical Clowns guarding the last magic tool in the town of Sarcophagus. souleater.fandom's Chapter 41 page: 'Although a version of The Clown would appear in the Soul Eater anime, this chapter's story is original to the manga.'",
+      "sources": [
+        "https://souleater.fandom.com/api.php?action=parse&page=Chapter%2041&prop=wikitext&format=json",
+        "https://en.wikipedia.org/wiki/List_of_Soul_Eater_chapters"
+      ]
+    },
+    {
+      "episodes": [
+        45
+      ],
+      "kind": "loose_parallel",
+      "note": "Relocates two manga elements into an original scene: Maka's anti-magic Genie Hunter (Majin-gari, used against Arachne late in the manga's Baba Yaga arc) and Medusa's death (dealt by Crona far later in the manga). Here Maka's Genie Hunter kills Medusa — an outcome the manga never has.",
+      "sources": [
+        "https://souleater.fandom.com/api.php?action=parse&page=Difference%20in%20the%20Soul%20Eater%20media&prop=wikitext&format=json",
+        "https://en.wikipedia.org/wiki/List_of_Soul_Eater_episodes"
+      ]
+    }
+  ],
+  "repairs": [],
+  "structure": {
+    "notes": "Row-count identity checked FIRST: animefillerlist lists exactly 51 rows for soul-eater, 1:1 with our 51 rows, no recap/special/'ep 0' entries and no numbering shift; AFL types 34-38 manga_canon and 39-51 anime_canon, matching the target block exactly. Single component (anilist 3588, eps 1-51, one season); ja.wikipedia's episode table also runs 1-50 plus 最終話 = our 51. Two related broadcast variants exist and are NOT extra rows: 'Soul Eater Late Show' (late-night simulcast of the same episodes with bonus segments; ja.wikipedia notes 本編自体には夕方版との差は無い — no difference in the episode proper) and the 2010 'Repeat Show' rebroadcast (eps 1-25 + 32, new OP/ED, some reordering, eps 23-24 never aired). Chapter space: 113 serialized chapters / 25 volumes, plus 3 prologue one-shots numbered 0.1-0.3 on the wiki and collected in vol 1 — our stored total_chapters=117 vs latest_known=113 is unexplained by anything I verified (the 3 prologues would give 116) and I did not chase it; every chapter number in this verdict is serialization numbering (ch 1 = 'Remedial Lesson (Part 1)', Gangan June 2004 issue) cross-checked against en.wikipedia's tankobon contents table. Anchoring boundary: the anime never adapted ch 41-44 (the Clown arc) or ch 46-60 (Operation Capture Baba Yaga Castle), so the last fully-adapted chapter for the series is ch 39 and the honest post-series reading position is ch 40. Timeline finding that corrects the common framing: the manga was NOT outrun in the literal sense — tankōbon vol 13 (ch 49-52) shipped 2008-10-22 and vol 14 (ch 53-57) on 2009-03-21, so at ep 38 (2008-12-22) roughly 13 published chapters remained for 13 remaining episodes. What was missing was an ENDING (Asura is not defeated until ch 111, 2013), which is why Bones wrote one.",
+    "order_only": []
+  },
+  "flags_for_sean": [
+    "Judgment call surfaced, not hidden — eps 39 and 40 typed `mixed` on a single scene each (ch 40's Eruka/Crona opening; ch 45's Medusa arrival-and-deal, which fandom calls 'adapted in part'). A defensible alternative is `filler` for both, which is what en.wikipedia's coarse 'after episode 38 the anime deviated' and ja.wikipedia's 'ep 37 onward is anime-original' would give. I recommend `mixed` because the source content is real, named and independently corroborated, but if `mixed` would let the apply layer derive an anchor, prefer `filler` — an anchor on either row is worse than the gap, since ch 41-44 are wholly unadapted and any forward position past ch 40 is false.",
+    "A1 / anchor guard: whatever type lands on 39 and 40, neither row may carry a continue-read-advancing anchor. Ep 39 covers one scene of ch 40; ep 40 grafts ch 45 out of order across an unadapted ch 41-44 gap. Correct post-series reading position = chapter 40.",
+    "Adjacent non-target row worth a second look (NOT proposed as a repair, batch 17 researched it): ep 37 is stored `canon` + loose_parallel{38}, and animefillerlist calls it manga_canon, but souleater.fandom's Episode 37 page states outright 'this episode does not have any corresponding chapters', and ja.wikipedia dates the anime-original story from ep 37. If ep 37 carries no chapter, `canon` may be over-typed there (mixed or filler). https://souleater.fandom.com/api.php?action=parse&page=Episode%2037&prop=wikitext&format=json",
+    "Source-reliability trap recorded for the ledger/traps: souleater.fandom's episode pages assert anime-before-manga chronology twice (ep 40 'her deal was LATER adapted into Chapter 45'; ep 47 'this episode proceeded the manga'). Both are false — ch 45 shipped in vol 12 on 2008-06-21 and ch 49-52 in vol 13 on 2008-10-22, all before the corresponding episodes aired in 2009. The wiki's directional claims about which medium came first cannot be trusted; its per-chapter 'anime correspondent' fields and the arc index held up fine.",
+    "No adoption basis found for the anime ending after a targeted search (ANN, Japanese-language searches, the wiki's Archived Real World Information page): Ohkubo has no 監修/supervision or 原案 credit on ja.wikipedia's staff list, en.wikipedia records only 'the scenario writer ... based the anime's story on Ohkubo's original concept', and the manga later contradicted the anime finale wholesale. Recorded as an honest negative rather than a weak `adopted{author}`. If Sean has the Soul Eater artbook / Otona Anime Vol.9 interview to hand, that is where a supervision statement would live if one exists."
+  ]
+}

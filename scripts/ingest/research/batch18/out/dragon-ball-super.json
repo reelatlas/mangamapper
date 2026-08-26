@@ -1,0 +1,201 @@
+{
+  "series_id": "dragon-ball-super",
+  "summary": "All 15 target rows are AFL 'Anime Canon' episodes in a series whose SOURCE is the Toyotarou/Toriyama Dragon Ball Super manga (V-Jump, ch. 1-104+). DBS is the unusual case where anime and manga are PARALLEL realisations of one Toriyama text outline rather than adaptation-of-manga, so standing has to be judged beat by beat. Thirteen of the fifteen rows are confirmed filler: dragonball.fandom's per-episode 'Differences from the manga' field declares each of eps 16, 17, 22, 50, 52, 71, 72, 79, 80, 81, 90, 94, 95 wholly (or, for 94/95, all-but-one-scene) anime-exclusive, and the structural evidence agrees - the manga SKIPS the entire Golden Frieza / Resurrection 'F' arc (no chapters at all for anime eps 15-27, per Kanzenshuu and the ja.wikipedia chapter table), it jumps straight from ch. 26 to ch. 27 across the anime's eps 68-76 inter-arc block, and its Zeno Expo (ch. 28-29) is a Gods-of-Destruction battle royal plus Goku vs Top, not the Trio-of-Danger matches the anime stages in eps 79-81. Two rows are repairs: ep 78 carries the Grand Minister's announcement of the Tournament of Power's terms and the assembly of all twelve universes' gods (manga ch. 28 + ch. 30) alongside its anime-original expo setup, and ep 91 closes on Mr. Satan's call that Good Buu has entered hibernation (manga ch. 31) after ~20 minutes of anime-original recruiting vignettes - both are mixed, not filler. NO adopted{author} annotation is proposed anywhere: Toriyama is credited as the whole series' story concept (ストーリー原案) and drew the character concepts, but ja.wikipedia documents that his outline reaches Toei as TEXT which the SCREENWRITERS 'expand with additions and changes' into each episode, that Toriyama had not even seen the finished TV scripts at the series' start, and every one of the 15 rows is credited to a Toei 脚本 writer - author-commissioned, not author-declared (the kinnikuman discriminator). Where the same outline was realised by the author-supervised manga, it produced different material, which is the strongest evidence these specific episodes are not the author's.",
+  "standings": [
+    {
+      "episodes": [16, 17],
+      "type": "filler",
+      "confidence": "high",
+      "note": "Bridge episodes between the Battle of Gods material and Resurrection 'F' (Vegeta talks Whis into taking him as a student; Pan is born and Goku leaves to train). The DBS manga has NO chapters here at all: its Beerus arc ends at ch. 4 '神と神 / Battle of Gods' and ch. 5 'ビルスとシャンパ / Beerus and Champa' opens the Universe 6 arc with Goku and Vegeta already training on Beerus' planet - the manga skipped the Resurrection 'F' retelling entirely (Kanzenshuu; ja.wikipedia 漫画版 section: 「フリーザ復活編」はその事件の顛末が解説で語られたのみで省略). dragonball.fandom's 'Differences from the manga' on both episode pages reads 'The entire events of this episode were exclusive to the anime.' Relative to the movie these are also new: the fandom Golden Frieza Saga page notes Vegeta trains with Whis for six months before Goku joins, the reverse of the film. Toei-scripted (ep 16 脚本 中島太貫).",
+      "sources": [
+        "https://dragonball.fandom.com/api.php?action=parse&page=Vegeta%20Becomes%20a%20Student%3F!%20Win%20Over%20Whis!&prop=wikitext&format=json",
+        "https://dragonball.fandom.com/api.php?action=parse&page=Pan%20is%20Born!%20And%20Goku%20Goes%20on%20a%20Training%20Journey%3F!&prop=wikitext&format=json",
+        "https://www.kanzenshuu.com/2017/09/21/viz-posts-dragon-ball-super-manga-chapter-28-english-translation/",
+        "https://ja.wikipedia.org/wiki/%E3%83%89%E3%83%A9%E3%82%B4%E3%83%B3%E3%83%9C%E3%83%BC%E3%83%AB%E8%B6%85",
+        "https://dragonball.fandom.com/api.php?action=parse&page=Golden%20Frieza%20Saga&prop=wikitext&format=json"
+      ]
+    },
+    {
+      "episodes": [22],
+      "type": "filler",
+      "confidence": "high",
+      "note": "Frog-Ginyu stows away on Jaco's ship and body-swaps into Tagoma. Anime-original twice over: the fandom Golden Frieza Saga page states outright that Ginyu 'did not appear in the movie', and the DBS manga contains no Resurrection 'F' chapters to adapt (Kanzenshuu: the manga 'covered the Battle of Gods re-telling, skipped the Resurrection F re-telling, and charged ahead to the Champa arc'). The episode page's 'Differences from the manga' reads 'The entire events of this episode were exclusive to the anime.' Note this is the single AFL 'Anime Canon' row inside an otherwise 'Manga Canon' block (AFL 18-21, 23-27), i.e. AFL itself flags it as the arc's anime-original insert.",
+      "sources": [
+        "https://dragonball.fandom.com/api.php?action=parse&page=Change!%20An%20Unexpected%20Return!%20His%20Name%20Is%20Ginyu!!&prop=wikitext&format=json",
+        "https://dragonball.fandom.com/api.php?action=parse&page=Golden%20Frieza%20Saga&prop=wikitext&format=json",
+        "https://www.kanzenshuu.com/2017/09/21/viz-posts-dragon-ball-super-manga-chapter-28-english-translation/",
+        "https://www.animefillerlist.com/shows/dragon-ball-super"
+      ]
+    },
+    {
+      "episodes": [50],
+      "type": "filler",
+      "confidence": "high",
+      "note": "Goku Black follows Future Trunks into the present, fights Goku, is dragged back through the time portal and destroys the time machine on the way out. None of this happens in the manga: ch. 15 'HOPE!!再び / Hope!! Once Again' ends with Black losing Trunks when the time machine activates ('Goku Black is surprised that Future Trunks completely vanished'), and ch. 16 '“未来”トランクスの過去 / Future Trunks's Past' goes straight to Trunks recounting the Z-Sword / Babidi / Future Shin story. Fandom's 'Differences from the manga' on ep 50: 'The entire events of this episode were exclusive to the anime.'",
+      "sources": [
+        "https://dragonball.fandom.com/api.php?action=parse&page=Goku%20vs.%20Black!%20A%20Closed-Off%20Road%20to%20the%20Future!&prop=wikitext&format=json",
+        "https://dragonball.fandom.com/api.php?action=parse&page=Hope!!%20Once%20Again&prop=wikitext&format=json",
+        "https://dragonball.fandom.com/api.php?action=parse&page=Future%20Trunks's%20Past&prop=wikitext&format=json",
+        "https://ja.wikipedia.org/wiki/%E3%83%89%E3%83%A9%E3%82%B4%E3%83%B3%E3%83%9C%E3%83%BC%E3%83%AB%E8%B6%85"
+      ]
+    },
+    {
+      "episodes": [52],
+      "type": "filler",
+      "confidence": "high",
+      "note": "Future Trunks' downtime: he visits Gohan, meets Pan, and re-lives the History of Trunks farewell. Fandom's 'Differences from the manga' gives both the blanket statement ('The entire events of this episode were exclusive to the anime') and the specific one ('Trunks spends his down time completely differently between the anime and manga. In the anime he goes to see Gohan whereas in the manga he ends up having a meal with his friends and family inside a restaurant in Capsule Corporation'). The flashback's provenance is anime too - ja.wikipedia notes it follows the DBZ TV special 絶望への反抗!!残された超戦士・悟飯とトランクス rather than Toriyama's gaiden TRUNKS THE STORY, newly animated and re-recorded. The manga's own 'Future Trunks's Past' chapter (ch. 16) tells a completely different story (Z-Sword, Babidi and Dabura, Future Shin's death).",
+      "sources": [
+        "https://dragonball.fandom.com/api.php?action=parse&page=Master%20and%20Pupil%20Reunited!%20Gohan%20and%20%22Future%22%20Trunks!&prop=wikitext&format=json",
+        "https://ja.wikipedia.org/wiki/%E3%83%89%E3%83%A9%E3%82%B4%E3%83%B3%E3%83%9C%E3%83%BC%E3%83%AB%E8%B6%85",
+        "https://dragonball.fandom.com/api.php?action=parse&page=Future%20Trunks's%20Past&prop=wikitext&format=json"
+      ]
+    },
+    {
+      "episodes": [71, 72],
+      "type": "filler",
+      "confidence": "high",
+      "note": "The two-part 'Goku hires Hit to assassinate him' story. Both fandom episode pages read 'The entire events of this episode were exclusive to the anime.' Structurally these sit in the anime's inter-arc block (eps 68-76), which ja.wikipedia describes explicitly as inserts: 「TVアニメ版の長編エピソードの合間には、1話完結のエピソードや前後編のエピソードが挿入されている」 (standalone and two-part episodes are inserted between the long arcs). The manga has nothing between ch. 26 '決戦!さらばトランクス' (= anime ep 67) and ch. 27 '修行と日常 そして' (= anime ep 77), so there is no chapter space for eps 68-76 at all. Toei-scripted (脚本 山元清里/唐澤和也/角銅博之).",
+      "sources": [
+        "https://dragonball.fandom.com/api.php?action=parse&page=Goku%20Dies!%20An%20Assassination%20That%20Must%20Be%20Executed!&prop=wikitext&format=json",
+        "https://dragonball.fandom.com/api.php?action=parse&page=Will%20He%20Strike%20Back%3F%20The%20Unseen%20Killing%20Technique!&prop=wikitext&format=json",
+        "https://ja.wikipedia.org/wiki/%E3%83%89%E3%83%A9%E3%82%B4%E3%83%B3%E3%83%9C%E3%83%BC%E3%83%AB%E8%B6%85",
+        "https://dragonball.fandom.com/api.php?action=parse&page=Life,%20Training%20and%20More&prop=wikitext&format=json"
+      ]
+    },
+    {
+      "episodes": [78],
+      "type": "mixed",
+      "chapters": "28, 30 (partial)",
+      "confidence": "medium",
+      "note": "REPAIR from filler. Unlike every other row in this block, ep 78's fandom page does NOT declare the episode anime-exclusive - it lists three specific divergences. The episode's first half is source material: the Grand Minister announces the Tournament of Power's terms (the World of Void venue, the Super Dragon Balls, and the ultimatum that every defeated universe is erased) and every God of Destruction, Angel and Supreme Kai in the multiverse assembles before the two Zenos - i.e. manga ch. 28 '12宇宙の破壊神 / The Gods of Destruction From All 12 Universes' plus the rules announcement of ch. 30 'ジレンという男 / The Man Named Jiren' (Super Dragon Ball prize, losing universes erased, Universes 1/5/8/12 exempt). The anime-original share is the framing: the Grand Minister briefing Universe 7's Supreme Kai instead of summoning all gods himself, Goku recruiting Gohan and Buu for a 3-on-3 exhibition, and Top's hood. Also rearranged: the manga's order is Expo (ch. 28-29) then rules (ch. 30); the anime announces the rules first. Medium because the canon share is a first-half correspondence of beats rather than a panel-level adaptation.",
+      "sources": [
+        "https://dragonball.fandom.com/api.php?action=parse&page=Even%20the%20Universes'%20Gods%20are%20Appalled%3F!%20The%20Lose-and-Perish%20Tournament%20of%20Power&prop=wikitext&format=json",
+        "https://dragonball.fandom.com/api.php?action=parse&page=The%20Gods%20of%20Destruction%20From%20All%2012%20Universes&prop=wikitext&format=json",
+        "https://dragonball.fandom.com/api.php?action=parse&page=The%20Man%20Named%20Jiren&prop=wikitext&format=json",
+        "https://ja.wikipedia.org/wiki/%E3%83%89%E3%83%A9%E3%82%B4%E3%83%B3%E3%83%9C%E3%83%BC%E3%83%AB%E8%B6%85"
+      ]
+    },
+    {
+      "episodes": [79, 80, 81],
+      "type": "filler",
+      "confidence": "high",
+      "note": "The three Zeno Expo matches (Good Buu vs Basil, Gohan vs Lavender, Goku vs Bergamo, plus Bergamo's petition to Zeno to rescind the erasure rule). All three fandom episode pages carry the identical line: 'The entire events of this episode were exclusive to the anime though the Zeno Expo did still take place in the manga albeit with a completely different battle.' The manga's Expo is manga ch. 28-29: a battle royal between all twelve Gods of Destruction, cancelled by the Grand Minister because the Zenos cannot follow it, and replaced by a single Goku vs Top match that Top wins by ring-out - the Trio of Danger fight nobody until the tournament proper (ch. 34). The Universe Survival Saga page states this as a differences entry in its own words. This is a substitution, not an omission: zero source content is carried by these three episodes.",
+      "sources": [
+        "https://dragonball.fandom.com/api.php?action=parse&page=The%209th%20Universe's%20Kicking%20Basil%20vs.%20The%207th%20Universe's%20Majin%20Buu!!&prop=wikitext&format=json",
+        "https://dragonball.fandom.com/api.php?action=parse&page=Bergamo%20the%20Crusher%20vs.%20Goku!%20Whose%20Strength%20Reaches%20the%20Wild%20Blue%20Yonder%3F&prop=wikitext&format=json",
+        "https://dragonball.fandom.com/api.php?action=parse&page=Universe%20Survival%20Saga&prop=wikitext&format=json",
+        "https://dragonball.fandom.com/api.php?action=parse&page=Toppo,%20Universe%2011%20God%20of%20Destruction%20Candidate!&prop=wikitext&format=json",
+        "https://ja.wikipedia.org/wiki/%E3%83%89%E3%83%A9%E3%82%B4%E3%83%B3%E3%83%9C%E3%83%BC%E3%83%AB%E8%B6%85"
+      ]
+    },
+    {
+      "episodes": [90],
+      "type": "filler",
+      "confidence": "high",
+      "note": "Goku and Gohan spar to draw out Gohan's dormant power. Fandom: 'The entire events of this episode were exclusive to the anime.' In the manga Gohan is not on the team at first and is trained by Piccolo, who is the one who insists Goku cannot win without him (ch. 31, and the Universe Survival Saga differences list: 'In the manga, the team does not include Gohan from the start nor intended to... While Goku recruited Piccolo, Piccolo suggested to take in Gohan'); there is no Goku-vs-Gohan match anywhere in the recruitment chapters. Toei-scripted (脚本 キング・リュウ).",
+      "sources": [
+        "https://dragonball.fandom.com/api.php?action=parse&page=Staring%20Down%20the%20Wall%20to%20be%20Overcome%20Goku%20vs.%20Gohan&prop=wikitext&format=json",
+        "https://dragonball.fandom.com/api.php?action=parse&page=Universe%20Survival%20Saga&prop=wikitext&format=json",
+        "https://dragonball.fandom.com/api.php?action=parse&page=The%20Super%20Warriors%20Gather!&prop=wikitext&format=json"
+      ]
+    },
+    {
+      "episodes": [91],
+      "type": "mixed",
+      "chapters": "31 (partial)",
+      "confidence": "medium",
+      "note": "REPAIR from filler. Like ep 78, ep 91's fandom page lists divergences rather than declaring the episode anime-exclusive. The closing beat is source material: Bulma brings word from Mr. Satan that Good Buu has fallen into a two-month hibernation and Goku leaves to try to wake him - manga ch. 31 'The Super Warriors Gather!' ('Mr. Satan... goes to see Buu only to find that he has fallen asleep, a hibernation that he enters once a year. He contacts Bulma and tells her the unfortunate news'). The rest of the episode - the Zenos' game, the Grand Minister's tour of Universe 9's riots, Hit recruiting Frost, Roshi training with Puar, Universe 2's idol audition, Universe 10's dance, Goku training with Whis and Vegeta in the Hyperbolic Time Chamber - is anime-original; fandom notes the manga shows only Universes 11 and 6 recruiting, and that Goku's gravity-room training and Vegeta's solo HTC stint are anime-exclusive. Medium: the canon share is one closing scene, and even there the anime moves it after the tenth member is found while the manga has it before Gohan is considered.",
+      "sources": [
+        "https://dragonball.fandom.com/api.php?action=parse&page=Which%20Universe%20Will%20Win%20Their%20Place%3F%20The%20Mighty%20Warriors%20Gradually%20Assemble!&prop=wikitext&format=json",
+        "https://dragonball.fandom.com/api.php?action=parse&page=The%20Super%20Warriors%20Gather!&prop=wikitext&format=json",
+        "https://dragonball.fandom.com/api.php?action=parse&page=Universe%20Survival%20Saga&prop=wikitext&format=json",
+        "https://ja.wikipedia.org/wiki/%E3%83%89%E3%83%A9%E3%82%B4%E3%83%B3%E3%83%9C%E3%83%BC%E3%83%AB%E8%B6%85"
+      ]
+    },
+    {
+      "episodes": [94, 95],
+      "type": "filler",
+      "confidence": "medium",
+      "note": "The Universe 4 / Universe 9 conspiracy to assassinate Frieza before he can join Team Universe 7, Frieza's rampage against the assassins, the Energy of Destruction, and Frieza's attempt to defect to Universe 9. The fandom Universe Survival Saga page states it flatly: 'In the manga, Universes 9 and 4 never tried to sabotage Universe 7's chance of entering the Tournament of Power so the Universe 9 assassins do not appear. Likewise, Goku and Frieza's battle happens off-screen in the manga.' Both episode pages describe themselves as anime-exclusive with a single exception each - ep 94 'the only similarity being the scene where all the members of Team Universe 7 minus Goku and Frieza meet up at Capsule Corporation' (and even that happens on the tournament morning in the manga, the previous night in the anime), ep 95 'with the exception of Goku and Frieza teleporting over to Capsule Corporation' (Whis at night in the anime, Fortuneteller Baba in the morning in the manga). RULED FILLER because the entire plot engine is absent from the source and the two overlapping items are a differently-staged scene and an event the manga deliberately leaves off-panel (ch. 32: Goku and Frieza simply 'arrive, battered and bruised from a battle'). The competing `mixed` reading is flagged for Sean below.",
+      "sources": [
+        "https://dragonball.fandom.com/api.php?action=parse&page=The%20Evil%20Emperor%20Returns!%20A%20Reception%20from%20Mysterious%20Assassins%3F&prop=wikitext&format=json",
+        "https://dragonball.fandom.com/api.php?action=parse&page=Most%20Heinous!%20Most%20Evil!%20Frieza's%20Rampage!&prop=wikitext&format=json",
+        "https://dragonball.fandom.com/api.php?action=parse&page=Universe%20Survival%20Saga&prop=wikitext&format=json",
+        "https://dragonball.fandom.com/api.php?action=parse&page=The%20Super%20Warriors%20Gather!%20Part%202&prop=wikitext&format=json"
+      ]
+    }
+  ],
+  "annotations": [
+    {
+      "episodes": [79, 80, 81],
+      "kind": "divergence",
+      "note": "Substitution, not omission: the Zeno Expo exists in the source (manga ch. 28-29) but as a twelve-God-of-Destruction battle royal that the Grand Minister cancels, followed by one Goku vs Top match Top wins by ring-out. The anime replaces it with three Universe 7 vs Universe 9 matches against the Trio of Danger. Recording this so the block is not mistaken for material the source simply skipped.",
+      "sources": [
+        "https://dragonball.fandom.com/api.php?action=parse&page=Universe%20Survival%20Saga&prop=wikitext&format=json",
+        "https://dragonball.fandom.com/api.php?action=parse&page=Toppo,%20Universe%2011%20God%20of%20Destruction%20Candidate!&prop=wikitext&format=json"
+      ]
+    },
+    {
+      "episodes": [78],
+      "kind": "rearranged",
+      "note": "The manga runs Expo (ch. 28-29) then the Grand Minister's rules announcement (ch. 30); the anime front-loads the rules into ep 78 and runs the Expo afterwards in eps 78-81. Any chapter position on this row must account for the reordering.",
+      "sources": [
+        "https://dragonball.fandom.com/api.php?action=parse&page=The%20Man%20Named%20Jiren&prop=wikitext&format=json",
+        "https://dragonball.fandom.com/api.php?action=parse&page=Even%20the%20Universes'%20Gods%20are%20Appalled%3F!%20The%20Lose-and-Perish%20Tournament%20of%20Power&prop=wikitext&format=json"
+      ]
+    },
+    {
+      "episodes": [91],
+      "kind": "partial",
+      "note": "Only the closing scene (Buu's hibernation, manga ch. 31) has source standing; roughly nineteen minutes of the episode are anime-original recruitment vignettes across Universes 2, 6, 9, 10 and 11.",
+      "sources": [
+        "https://dragonball.fandom.com/api.php?action=parse&page=Which%20Universe%20Will%20Win%20Their%20Place%3F%20The%20Mighty%20Warriors%20Gradually%20Assemble!&prop=wikitext&format=json",
+        "https://dragonball.fandom.com/api.php?action=parse&page=The%20Super%20Warriors%20Gather!&prop=wikitext&format=json"
+      ]
+    },
+    {
+      "episodes": [94, 95],
+      "kind": "divergence",
+      "note": "The anime dramatises as a two-part assassination plot an event the source states in one clause: in manga ch. 32 Goku and Frieza simply turn up at Capsule Corporation 'battered and bruised from a battle' and Piccolo hands them Senzu Beans. Universes 4 and 9 never move against Universe 7 in the manga and the Universe 9 assassins do not exist there.",
+      "sources": [
+        "https://dragonball.fandom.com/api.php?action=parse&page=Universe%20Survival%20Saga&prop=wikitext&format=json",
+        "https://dragonball.fandom.com/api.php?action=parse&page=The%20Super%20Warriors%20Gather!%20Part%202&prop=wikitext&format=json"
+      ]
+    }
+  ],
+  "repairs": [
+    {
+      "episode": 78,
+      "field": "type",
+      "old": "filler",
+      "new": "mixed",
+      "why": "Carries the Grand Minister's announcement of the Tournament of Power's terms and the assembly of all twelve universes' gods before the Zenos - manga ch. 28 plus the rules of ch. 30. Fandom's episode page lists three specific divergences rather than the 'entire events ... exclusive to the anime' blanket it applies to eps 79-81, and AFL's 'anime canon' claim does not survive comparison with ch. 28's content.",
+      "sources": [
+        "https://dragonball.fandom.com/api.php?action=parse&page=Even%20the%20Universes'%20Gods%20are%20Appalled%3F!%20The%20Lose-and-Perish%20Tournament%20of%20Power&prop=wikitext&format=json",
+        "https://dragonball.fandom.com/api.php?action=parse&page=The%20Gods%20of%20Destruction%20From%20All%2012%20Universes&prop=wikitext&format=json",
+        "https://dragonball.fandom.com/api.php?action=parse&page=The%20Man%20Named%20Jiren&prop=wikitext&format=json"
+      ]
+    },
+    {
+      "episode": 91,
+      "field": "type",
+      "old": "filler",
+      "new": "mixed",
+      "why": "Closes on Mr. Satan's call that Good Buu has entered his annual hibernation, the plot beat that forces the tenth-member crisis - manga ch. 31. Fandom's episode page frames the episode as divergent (three listed differences, one of which is precisely how the Buu news lands) rather than anime-exclusive.",
+      "sources": [
+        "https://dragonball.fandom.com/api.php?action=parse&page=Which%20Universe%20Will%20Win%20Their%20Place%3F%20The%20Mighty%20Warriors%20Gradually%20Assemble!&prop=wikitext&format=json",
+        "https://dragonball.fandom.com/api.php?action=parse&page=The%20Super%20Warriors%20Gather!&prop=wikitext&format=json"
+      ]
+    }
+  ],
+  "structure": {
+    "notes": "ROW IDENTITY: our 131 rows == dragonball.fandom's List of Dragon Ball Super episodes (131 numbered rows, no 0/x.5 entries) == ja.wikipedia's 各話リスト (全131話). One season component, 1-131, no recaps or specials in the row space, so no join shift is possible; every target title matched 1:1 by number and title on both lists and on animefillerlist. SOURCE STRUCTURE (independent, ja.wikipedia 書誌情報 chapter table cross-checked against the fandom arc pages): manga God of Destruction Beerus arc = ch. 1-4; **no chapters at all for the Golden Frieza / Resurrection 'F' arc**; Universe 6 (Champa) arc = ch. 5-13; 'Future' Trunks arc = ch. 14-26; Tournament of Power arc = ch. 27-42. Anime arc mapping: eps 1-14/15 Beerus, 16-27 Golden Frieza, 28-46 Universe 6, 47-67 Future Trunks, 68-76 inter-arc inserts, 77-131 Universe Survival. animefillerguide independently puts the anime's end at manga ch. 42 p.31, consistent with ch. 27-42 covering eps 77-131. ARC-BOUNDARY DISAGREEMENT (harmless): dragonball.fandom puts eps 16-27 in the Golden Frieza Saga; ja.wikipedia's episode table keeps eps 15-17 in 破壊神ビルス編 and starts フリーザ復活編 at ep 18. No row's standing turns on this. PRODUCTION: Toriyama is credited ストーリー原案 for the whole TV series and キャラクターデザイン原案; ja.wikipedia states his outline arrives as text and 脚本家 expand it with additions and changes into per-episode scripts, and that the finished TV scripts had not been checked by Toriyama at the series' start. Every one of the 15 target rows has a Toei 脚本 credit; none is written or storyboarded by Toriyama. By contrast Toriyama checks every manga storyboard (Tori-Toyo interview, Kanzenshuu) and Shueisha's own Skytree / SDCC 2018 exhibit labels the MANGA the 正統続編 (canon sequel).",
+    "order_only": []
+  },
+  "flags_for_sean": [
+    "OUT OF SCOPE BUT LOAD-BEARING: eps 18-27 are stored `canon`, but the DBS manga has NO chapters for that arc - the manga skipped the Resurrection 'F' retelling entirely (Kanzenshuu; ja.wikipedia; the fandom Golden Frieza Saga infobox has an empty `manga chapters` field). Their canon standing can only rest on a different licensed work: the Resurrection 'F' film, Toyotarou's separate 3-chapter Dragon Ball Z: Resurrection 'F' manga, or the Film Animation Comic that V-Jump instructs readers to slot in for a full run-through. If that block keeps `canon` it arguably needs a `side_source` annotation; if the series' chapter space is the DBS manga's ch. 1-104, eps 15-27 have no chapter position at all. Same question applies more weakly to eps 1-14 (manga ch. 1-4 are a four-chapter digest of a thirteen-episode arc).",
+    "SPLIT EVIDENCE on eps 94-95. I ruled filler. The `mixed` reading is defensible: ep 94 contains the Team Universe 7 assembly at Capsule Corporation and ep 95 contains the Goku-vs-Frieza fight, and manga ch. 32 has both (the fight off-panel, 'battered and bruised from a battle'; the assembly on the tournament morning). If Sean prefers beat-correspondence over panel-correspondence for DBS - which is arguably the standard the rest of the series' typing already uses, since anime and manga are parallel realisations of one outline - these become mixed at ch. 32. Deciding factor I used: both fandom pages frame the episodes as anime-exclusive-with-one-exception, and both exceptions are staged differently from the manga.",
+    "NO adopted{author} PROPOSED anywhere, deliberately. Toriyama's series-wide ストーリー原案 credit and his character concept designs are real, but that is author-COMMISSIONED, not author-DECLARED (the kinnikuman discriminator). The decisive evidence is internal: the manga, made from the same Toriyama outline and with Toriyama checking every storyboard, realises the same arcs with entirely different content at exactly the points AFL calls 'anime canon' (the Zeno Expo is the cleanest case). If a Toriyama statement adopting specific anime-only episodes exists I did not find it; I checked kanzenshuu.com (their Dragon Ball Super tag and the two Tori-Toyo volume-1 interview translations) and the ja.wikipedia production section.",
+    "Kanzenshuu has no per-episode guide for Dragon Ball Super (/dragon-ball-super/episode-guide/, /episode-guide/super/ and /anime/super/ all 404 as of this pass); animefillerguide has no per-episode table for this series either, only a 'the anime ends at ch. 42' box. Per-row evidence therefore rests on dragonball.fandom's per-episode 'Differences from the manga' field plus the manga chapter pages and arc-level differences lists, cross-checked structurally against ja.wikipedia's independent chapter and episode tables."
+  ]
+}

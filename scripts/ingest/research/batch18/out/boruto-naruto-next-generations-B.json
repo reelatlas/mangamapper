@@ -1,0 +1,193 @@
+{
+  "series_id": "boruto-naruto-next-generations",
+  "summary": "51 target rows (120-126, 128-137, 141-147, 155, 158-180, 190-191, 209) carry ZERO manga content: narutopedia's per-episode `chapters=` infobox field is empty on every one of them, and animefillerguide prints 'N/A' in its Chapters column for every one of them, while the rows immediately around them (148-151, 181-189, 192-208, 210-220) carry explicit chapter numbers in both. So none of them adapts the source and none may take an anchor (A1). The question is therefore adoption, and for this block the evidence is unusually strong and specifically AUTHOR-side: the Boruto manga's own credited writer, Ukyo Kodachi (script, chs 1-51 / vols 1-13), is credited on the anime as story supervisor (ja.wikipedia staff list: 'ストーリー監修 - 小太刀右京'; en.wikipedia TV-series Production: 'Kodachi supervised the anime's story until episode 216'; ja.wikipedia's Kodachi article: 'BORUTO ... (-2021年、漫画脚本、テレビアニメストーリー監修)'). EVERY target row (120 = 2019-08-18 through 209 = 2021-08-01) falls inside that window, and the window closes at almost exactly the point the anime finishes adapting Kodachi's own chapters (ep 216 = chs 50-52). On top of that, Masashi Kishimoto - the source's creator and credited supervisor - personally supplied the story idea for the Time Slip arc (128-136) as an official Naruto 20th-anniversary project, and rough-designed Urashiki, the antagonist of 120-126 and 128-136. ja.wikipedia additionally describes the two big anime-original blocks here as '原作のストーリーを膨らませた' (arcs that FLESH OUT the source's story): the Mujina Bandits prologue and the Kara Actuation arc. I therefore type 50 of the 51 rows canon + adopted{author}. The single exception is ep 155 'Mitsuki's Rainy Day', which animefillerguide types 'Filler' outright (AFL is alone in calling it anime canon), which narutopedia assigns to no arc, and whose only new character ends the episode comatose and never returns - it stays filler. Surprises: three anime-original target episodes are structurally load-bearing for chapters the anime later adapts - ep 180 shows Himawari MAKING the flower vase that manga ch 28 (ep 195) has Kawaki break; eps 158-180 supply the Konoha connection that manga ch 16 (ep 181) asserts when Koji kills Victor (Victor and Mugino are both manga characters, manga debut chs 15 and 16 per narutopedia's semantic data); and ep 137 stages Sumire's move to the Scientific Ninja Weapons Team, the posting the manga simply takes as given at her manga debut in ch 18. Note also that the Boruto manga has itself absorbed anime-original creations (Sumire Kakei: anime debut Boruto ep 1, manga debut ch 18), which is direct evidence that the source treats anime-side material as having happened.",
+  "standings": [
+    {
+      "episodes": [120, 121, 122, 123, 124, 125, 126],
+      "type": "canon",
+      "chapters": "none",
+      "confidence": "medium",
+      "note": "One-Tail Escort Arc (一尾護衛編), narutopedia's 14th anime arc, ja.wikipedia's official arc block 120-126. Anime-original: no `chapters=` value on any of the seven narutopedia episode pages, 'N/A' in AFG's chapter column for all seven. Not filler: it is the first half of the Urashiki storyline that the Kishimoto-originated Time Slip arc completes, its antagonist Urashiki being a discarded Boruto-movie concept ROUGH-DESIGNED BY KISHIMOTO whose addition ja.wikipedia says 'その後のストーリーにも大きく関与している' (is heavily involved in the subsequent story). Produced inside Ukyo Kodachi's story-supervision window (eps 1-216). See adopted{author} annotation.",
+      "sources": [
+        "https://naruto.fandom.com/wiki/One-Tail_Escort_Arc",
+        "https://naruto.fandom.com/wiki/With_Sasuke_as_the_Goal",
+        "https://ja.wikipedia.org/wiki/BORUTO-%E3%83%9C%E3%83%AB%E3%83%88-_-NARUTO_NEXT_GENERATIONS-",
+        "https://www.animefillerguide.com/anime/boruto/"
+      ]
+    },
+    {
+      "episodes": [128, 129, 130, 131, 132, 133, 134, 135, 136],
+      "type": "canon",
+      "chapters": "none",
+      "confidence": "high",
+      "note": "Time Slip Arc (タイムスリップ編) - narutopedia: 'This arc is part of the 20th anniversary project for Masashi Kishimoto's original Naruto manga.' ja.wikipedia is explicit that Kishimoto himself supplied the story idea: '「タイムスリップ編」は『NARUTO』漫画連載20周年を記念して岸本がアイデアを提供したストーリー'. Anime-original in chapter terms (no `chapters=` on any of the nine narutopedia pages; AFG chapter column 'N/A' throughout), but authored at the top: the source's creator pitched it and the arc was made as an official anniversary project under Kodachi's story supervision. This is the strongest adoption case in the whole block.",
+      "sources": [
+        "https://naruto.fandom.com/wiki/Time_Slip_Arc",
+        "https://ja.wikipedia.org/wiki/BORUTO-%E3%83%9C%E3%83%AB%E3%83%88-_-NARUTO_NEXT_GENERATIONS-",
+        "https://en.wikipedia.org/wiki/Boruto:_Naruto_Next_Generations_(TV_series)",
+        "https://comicbook.com/anime/news/naruto-boruto-anime-anniversary-arc-masashi-kishimoto-comments/"
+      ]
+    },
+    {
+      "episodes": [137],
+      "type": "canon",
+      "chapters": "none",
+      "confidence": "medium",
+      "note": "'The Samurai Exchange Student' - AFL folds this into its 128-137 anime-canon run, but every arc source ends the Time Slip arc at 136 (narutopedia arc page: 'covers episodes 128 to 136'; ja.wikipedia's arc header block puts 137 in the following section), so it is a standalone, judged on its own. Anime-original (no `chapters=`; AFG 'N/A') and it introduces Tsubaki Kurogane, who never appears in the manga - but it is the episode that stages Sumire Kakei's transfer OUT of Team 15 and INTO the Scientific Ninja Weapons Team, and the manga takes that posting as an accomplished fact at Sumire's own manga debut (narutopedia semantic data for Sumire Kakei: Debut_anime 721 = Boruto ep 1, Debut_manga chapter 18, teams Team 15 + Scientific Ninja Weapons Team). Both AFL and AFG type it anime canon rather than filler. Weaker case than the arcs around it; medium.",
+      "sources": [
+        "https://naruto.fandom.com/wiki/The_Samurai_Exchange_Student",
+        "https://naruto.fandom.com/wiki/Sumire_Kakei",
+        "https://www.animefillerguide.com/anime/boruto/",
+        "https://www.animefillerlist.com/shows/boruto-naruto-next-generations"
+      ]
+    },
+    {
+      "episodes": [141, 142, 143, 144, 145, 146, 147],
+      "type": "canon",
+      "chapters": "none",
+      "confidence": "medium",
+      "note": "Hozuki Castle prison-break block, the anime-original prologue narutopedia files under the Mujina Bandits Arc ('covers chapters 11 to 15 of the Boruto manga and episodes 141 to 151 of the anime' - so 141-147 are the anime's addition and 148-151 are chs 11-15). ja.wikipedia describes this arc as one of the two that '原作のストーリーを膨らませた' - fleshed out the source's story. The material is built on source-owned elements: the Mujina Bandits are a manga group (narutopedia team infobox: manga debut ch 11) and narutopedia's own Known Missions list separates 'Assassinate Kokuri (Anime only)' from 'Break into Konoha's bank (Manga only)'. No `chapters=` on any of the seven episode pages, AFG 'N/A' for all seven. Kodachi-supervised. Note honestly: manga ch 11 (ep 148) opens on the bank robbery and never references the prison mission, so this is additive expansion, not something the manga depends on.",
+      "sources": [
+        "https://naruto.fandom.com/wiki/Mujina_Bandits_Arc",
+        "https://naruto.fandom.com/wiki/Mujina_Bandits",
+        "https://ja.wikipedia.org/wiki/BORUTO-%E3%83%9C%E3%83%AB%E3%83%88-_-NARUTO_NEXT_GENERATIONS-",
+        "https://www.animefillerguide.com/anime/boruto/"
+      ]
+    },
+    {
+      "episodes": [155],
+      "type": "filler",
+      "confidence": "medium",
+      "note": "'Mitsuki's Rainy Day' - the one target row I do NOT adopt, and the one place the two filler sources split. animefillerguide types it '* Filler' outright; AFL is alone in calling it anime canon (and AFL mirrors that inconsistency in the other direction on its neighbours - AFG types 152 and 154 'Anime Canon' where AFL and our stored rows say filler). Narutopedia assigns it to no arc at all, unlike every other target row's block. Content is a self-contained one-off: Samidare Amaashi, the 'Rain Killer', is a revenge plot with no tie to Kara or to any adapted chapter, and narutopedia's own page ends him comatose with no further appearances - zero standing in the source and nothing that any chapter depends on. Stored standing is already filler, so no repair; this entry confirms it and records why AFL's claim is not followed here.",
+      "sources": [
+        "https://www.animefillerguide.com/anime/boruto/",
+        "https://naruto.fandom.com/wiki/Samidare_Amaashi",
+        "https://naruto.fandom.com/wiki/Mitsuki%27s_Rainy_Day",
+        "https://www.animefillerlist.com/shows/boruto-naruto-next-generations"
+      ]
+    },
+    {
+      "episodes": [158, 159, 160, 161, 162, 163, 164, 165, 166, 167, 168, 169, 170, 171, 172, 173, 174, 175, 176, 177, 178, 179, 180],
+      "type": "canon",
+      "chapters": "none",
+      "confidence": "medium",
+      "note": "The continuous Victor / Deepa / Kara storyline: narutopedia's Kara Actuation Arc (157-175, of which 157 is already stored mixed and is not a target), then 176-177 unassigned, then 178-180 which narutopedia files under the Ao Arc as its anime-original lead-in (ja.wikipedia's official arc blocks draw the same material as 殻始動編 157-176 + 器編 177-189). No `chapters=` on any of these 23 narutopedia episode pages; AFG 'N/A' on all 23. ja.wikipedia names 殻始動編 as the second arc that '原作のストーリーを膨らませた' (fleshed out the source's story), and that is literally what it does: it is built around two MANGA characters (narutopedia semantic data - Victor: Debut_manga ch 15; Mugino: Debut_manga ch 16) and it supplies the Konoha connection that manga ch 16 asserts as fact when Koji kills Victor in ep 181. Ep 178 gives Ao (manga ch 17) the rehabilitation backstory ep 182 then builds on, and ep 180 shows Himawari making the flower vase that manga ch 28 (ep 195) has Kawaki break. Caveat recorded: AFG treats two of these rows as largely skippable, marking ep 172 'watch from 18:15 to the end' and ep 177 'only watch from 0:00 to 3:43' - neither carries manga content either way, so their standing is the arc's standing, but they are the thinnest rows in the block.",
+      "sources": [
+        "https://naruto.fandom.com/wiki/Kara_Actuation_Arc",
+        "https://naruto.fandom.com/wiki/Ao_Arc",
+        "https://ja.wikipedia.org/wiki/BORUTO-%E3%83%9C%E3%83%AB%E3%83%88-_-NARUTO_NEXT_GENERATIONS-",
+        "https://www.animefillerguide.com/anime/boruto/",
+        "https://naruto.fandom.com/wiki/The_Assassin,_Mugino"
+      ]
+    },
+    {
+      "episodes": [190, 191],
+      "type": "canon",
+      "chapters": "none",
+      "confidence": "medium",
+      "note": "'Escape' / 'Stray Dog' - anime-original bridge sitting inside the manga-adapting Kawaki arc, between ep 189 (ch 25) and ep 192 (chs 24, 26). No `chapters=` on either narutopedia page; AFG lists both with 'N/A' chapters but does NOT mark either 'Filler' (unlike 152-156), i.e. AFG keeps them in the canon viewing path. Content is Kawaki's escape from Katasuke's Ryutan facility and his recapture - the anime dramatising the gap the manga jumps between Kawaki's awakening (ch 25) and his arrival in Konoha (ch 26), with Sumire, Katasuke, Nue and Team 7 (all source cast). Kodachi-supervised (eps 1-216). Basis is the general author-supervision credit rather than an arc-specific declaration, hence medium.",
+      "sources": [
+        "https://naruto.fandom.com/wiki/Escape",
+        "https://naruto.fandom.com/wiki/Stray_Dog",
+        "https://www.animefillerguide.com/anime/boruto/",
+        "https://en.wikipedia.org/wiki/Boruto:_Naruto_Next_Generations_(TV_series)"
+      ]
+    },
+    {
+      "episodes": [209],
+      "type": "canon",
+      "chapters": "none",
+      "confidence": "medium",
+      "note": "'The Outcast' - anime-original Kawaki character episode wedged between ep 208 (chs 43-44) and ep 210 (ch 45). No `chapters=` on the narutopedia page; AFG 'N/A' with no Filler mark. It is not a detachable side story: it is set at a fixed point in the source's own timeline (after Boro, with Konohamaru hospitalised and Boruto's and Kawaki's Karma resonating) and it carries Kawaki's integration into the Uzumaki household, the state the manga's later chapters presuppose. Weakest of the adopted group along with 137 - the basis here is Kodachi's blanket story supervision, not an arc-specific author statement. Medium.",
+      "sources": [
+        "https://naruto.fandom.com/wiki/The_Outcast",
+        "https://www.animefillerguide.com/anime/boruto/",
+        "https://en.wikipedia.org/wiki/Boruto:_Naruto_Next_Generations_(TV_series)",
+        "https://ja.wikipedia.org/wiki/BORUTO-%E3%83%9C%E3%83%AB%E3%83%88-_-NARUTO_NEXT_GENERATIONS-"
+      ]
+    }
+  ],
+  "annotations": [
+    {
+      "episodes": [128, 129, 130, 131, 132, 133, 134, 135, 136],
+      "kind": "adopted",
+      "basis": "author",
+      "note": "WHO: Masashi Kishimoto, creator of Naruto and the credited 原作・原案・監修 of the Boruto manga. He supplied the story idea for this arc himself, as an official project for the Naruto manga's 20th anniversary. ja.wikipedia: '「タイムスリップ編」は『NARUTO』漫画連載20周年を記念して岸本がアイデアを提供したストーリーであり、過去に跳躍したボルトが少年時代のナルトと邂逅する。' Narutopedia's arc page states the same standing independently: 'This arc is part of the 20th anniversary project for Masashi Kishimoto's original Naruto manga.' Kishimoto's own published comment on the arc: 'The anime staff have sincerely answered to my crazy idea, \"It must be exciting if Boruto and Naruto in his childhood meet.\"' (comicbook.com relay of the official comment - used as cross-check only, the two wiki statements are the load-bearing citations). Secondary: produced under Ukyo Kodachi's credited anime story supervision (see the 120-126 annotation).",
+      "sources": [
+        "https://ja.wikipedia.org/wiki/BORUTO-%E3%83%9C%E3%83%AB%E3%83%88-_-NARUTO_NEXT_GENERATIONS-",
+        "https://naruto.fandom.com/wiki/Time_Slip_Arc",
+        "https://comicbook.com/anime/news/naruto-boruto-anime-anniversary-arc-masashi-kishimoto-comments/"
+      ]
+    },
+    {
+      "episodes": [120, 121, 122, 123, 124, 125, 126],
+      "kind": "adopted",
+      "basis": "author",
+      "note": "WHO: (a) Ukyo Kodachi, the Boruto MANGA's own credited writer (脚本, chs 1-51 / vols 1-13), credited on the anime as story supervisor - ja.wikipedia's anime staff list reads 'ストーリー監修 - 小太刀右京'; ja.wikipedia's Kodachi article reads 'BORUTO-ボルト- NARUTO NEXT GENERATIONS（-2021年、漫画脚本、テレビアニメストーリー監修）'; en.wikipedia's TV-series Production section states 'Ukyo Kodachi supervised the anime's story until episode 216'. All seven rows (2019-08-18 to 2019-09-29) fall inside that window. (b) Masashi Kishimoto for the arc's antagonist: ja.wikipedia records Urashiki as a discarded Boruto-movie concept that Kishimoto rough-designed ('当作の没案であり岸本斉史がラフデザインした「ウラシキ」'), whose addition is 'heavily involved in the subsequent story'. This is supervision + author-supplied material, not mere commissioning.",
+      "sources": [
+        "https://ja.wikipedia.org/wiki/BORUTO-%E3%83%9C%E3%83%AB%E3%83%88-_-NARUTO_NEXT_GENERATIONS-",
+        "https://en.wikipedia.org/wiki/Boruto:_Naruto_Next_Generations_(TV_series)",
+        "https://ja.wikipedia.org/wiki/%E5%B0%8F%E5%A4%AA%E5%88%80%E5%8F%B3%E4%BA%AC"
+      ]
+    },
+    {
+      "episodes": [137],
+      "kind": "adopted",
+      "basis": "author",
+      "note": "WHO: Ukyo Kodachi, the source manga's writer for chs 1-51, credited as the anime's story supervisor through ep 216 (en.wikipedia TV-series Production; ja.wikipedia staff list 'ストーリー監修 - 小太刀右京'; ja.wikipedia Kodachi article '-2021年、漫画脚本、テレビアニメストーリー監修'). Ep 137 aired 2019-12-22, inside the window. Corroborating source-side fact: the episode's Team 15 reshuffle puts Sumire on the Scientific Ninja Weapons Team, which is where the manga has her when she debuts there in ch 18.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Boruto:_Naruto_Next_Generations_(TV_series)",
+        "https://ja.wikipedia.org/wiki/BORUTO-%E3%83%9C%E3%83%AB%E3%83%88-_-NARUTO_NEXT_GENERATIONS-",
+        "https://naruto.fandom.com/wiki/Sumire_Kakei"
+      ]
+    },
+    {
+      "episodes": [141, 142, 143, 144, 145, 146, 147],
+      "kind": "adopted",
+      "basis": "author",
+      "note": "WHO: Ukyo Kodachi, the Boruto manga's writer for chs 1-51, credited as the anime's story supervisor for eps 1-216 (en.wikipedia TV-series Production section; ja.wikipedia anime staff list; ja.wikipedia Kodachi article). Rows aired 2020-01-26 to 2020-03-08, inside the window - and inside the very chapters (11-15) Kodachi himself wrote. ja.wikipedia characterises the arc as expanding the source's story rather than departing from it: '同編終了後は原作のストーリーを膨らませた「貉強盗団編」、「殻始動編」が開始。'",
+      "sources": [
+        "https://ja.wikipedia.org/wiki/BORUTO-%E3%83%9C%E3%83%AB%E3%83%88-_-NARUTO_NEXT_GENERATIONS-",
+        "https://en.wikipedia.org/wiki/Boruto:_Naruto_Next_Generations_(TV_series)",
+        "https://naruto.fandom.com/wiki/Mujina_Bandits_Arc"
+      ]
+    },
+    {
+      "episodes": [158, 159, 160, 161, 162, 163, 164, 165, 166, 167, 168, 169, 170, 171, 172, 173, 174, 175, 176, 177, 178, 179, 180],
+      "kind": "adopted",
+      "basis": "author",
+      "note": "WHO: Ukyo Kodachi, the source manga's writer (chs 1-51), credited as the anime's story supervisor for eps 1-216 (en.wikipedia TV-series Production; ja.wikipedia anime staff list 'ストーリー監修 - 小太刀右京'; ja.wikipedia Kodachi article, involvement running to 2021). Rows aired 2020-07-26 to 2020-12-27, inside the window and inside the chapters Kodachi wrote (16-23 land at eps 181-187). ja.wikipedia names 殻始動編 explicitly as an arc that '原作のストーリーを膨らませた' - fleshed out the source's story - and the arc is constructed on source-owned characters: Victor (manga debut ch 15) and Mugino (manga debut ch 16) per narutopedia's semantic data, with the arc supplying the Konoha link manga ch 16 asserts when Koji kills Victor.",
+      "sources": [
+        "https://ja.wikipedia.org/wiki/BORUTO-%E3%83%9C%E3%83%AB%E3%83%88-_-NARUTO_NEXT_GENERATIONS-",
+        "https://en.wikipedia.org/wiki/Boruto:_Naruto_Next_Generations_(TV_series)",
+        "https://naruto.fandom.com/wiki/Victor",
+        "https://naruto.fandom.com/wiki/Mugino"
+      ]
+    },
+    {
+      "episodes": [190, 191, 209],
+      "kind": "adopted",
+      "basis": "author",
+      "note": "WHO: Ukyo Kodachi, the source manga's writer for chs 1-51, credited as the anime's story supervisor for eps 1-216 (en.wikipedia TV-series Production section: 'Ukyo Kodachi supervised the anime's story until episode 216'; ja.wikipedia anime staff list 'ストーリー監修 - 小太刀右京'; ja.wikipedia Kodachi article 'BORUTO ...（-2021年、漫画脚本、テレビアニメストーリー監修）'). Eps 190-191 aired 2021-03-14/21 and ep 209 aired 2021-08-01 - all inside the window, and all inside the stretch adapting Kodachi's own chapters 24-45. These three are the thinnest adoptions in the block: the basis is the standing supervision credit and the episodes' placement inside the adapted chapter run, not an arc-specific author statement. Recorded that way deliberately rather than overstated.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Boruto:_Naruto_Next_Generations_(TV_series)",
+        "https://ja.wikipedia.org/wiki/BORUTO-%E3%83%9C%E3%83%AB%E3%83%88-_-NARUTO_NEXT_GENERATIONS-",
+        "https://ja.wikipedia.org/wiki/%E5%B0%8F%E5%A4%AA%E5%88%80%E5%8F%B3%E4%BA%AC"
+      ]
+    }
+  ],
+  "repairs": [],
+  "structure": {
+    "notes": "ROW IDENTITY (checked first, per the mashle trap): our 293 rows are plain broadcast numbering with no recap/special inserts, and every per-episode source in this range uses the same integers. Verified at four points by title+date, not by index: our 120 'With Sasuke as the Goal' 2019-08-18 = narutopedia episode=120 japanese airdate=2019-08-18 = ja.wikipedia 第120話 サスケを目指して = AFL row 120 = AFG row 120; likewise 141 (2020-01-26), 155 (2020-07-05), 209 (2021-08-01). No shift anywhere in 120-220. ONE numbering trap on narutopedia: its Semantic MediaWiki 'Debut_anime' property uses the CONTINUOUS Naruto count (Boruto ep 1 = 721), so a character with Debut_anime 878 debuts in Boruto ep 158; the `episode=` field inside the episode infobox is our numbering and is the one to use. ARC BOUNDARIES differ between sources and neither is a canon flag: narutopedia = One-Tail Escort 120-126, Time Slip 128-136, Mujina Bandits 141-151 (chs 11-15 in the manga), Kara Actuation 157-175, Ao/Vessel 178-187 (chs 16-23), Kawaki 188-220 (chs 24-55); ja.wikipedia's official TV-Tokyo/DVD blocks = 一尾護衛編 120-126, タイムスリップ編 127-136, 貉強盗団編 137-156, 『殻』編 157-176, 器編 177-189, カワキ編『殻』激突 190-205, カワキ編 大筒木覚醒 206-220, 中忍再試験編 221-232. The 176/177 and 137/155 rows sit in the seam between the two schemes, which is why AFL and AFG disagree exactly there. CHAPTER FIELD: narutopedia episode infoboxes carry a `chapters=` parameter (label 'Manga'). It is populated on 148-151, 157, 181-189, 192-208, 210-220 and 287-293 and EMPTY on every one of the 51 target rows - the cleanest per-row discriminator available for this series, and it agrees row-for-row with AFG's Chapters column. Do NOT read the `boruto=` parameter on episode pages: the episode infobox template does not consume it, and it flips from No to Yes at ep 209 for editorial reasons unrelated to content. SOURCE-SIDE ADOPTION IS REAL IN THIS FRANCHISE: anime-original characters have been drawn into the manga - Sumire Kakei has Debut_anime 721 (Boruto ep 1, anime-original) and Debut_manga chapter 18 - which is why 'the manga never depicts it' is not by itself a filler argument here.",
+    "order_only": []
+  },
+  "flags_for_sean": [
+    "221-286 basis, direct answer to the ask: my evidence does NOT upgrade it to author, it CORROBORATES the existing adopted{community, PROVISIONAL}. Kodachi's story supervision is bounded at ep 216 by en.wikipedia's TV-series Production section ('supervised the anime's story until episode 216') and by ja.wikipedia's Kodachi article ('-2021年'), and that boundary is not arbitrary: ep 216 is where the anime finishes adapting Kodachi's own manga chapters (216 = chs 50-52; he wrote chs 1-51). Every row in 221-286 aired after his tenure, under 監督 changes and with no author credit of any kind. So 120-209 = author basis, 221-286 = community basis, and the split has a documented mechanism rather than being a judgement call.",
+    "221-286 sub-block that should NOT be adopted{community}: eps 282-286 (Sasuke Retsuden) are an adaptation of a licensed franchise NOVEL, not anime-original material - ja.wikipedia's arc header footnote reads 'サスケ烈伝{{Efn2|ノベライズ『サスケ烈伝』を原作としてアニメ化。}}' and narutopedia's Sasuke Retsuden Arc page says it adapts 'Sasuke Retsuden: The Uchiha Descendants and the Heavenly Stardust' (Jun Esaka), with parts of Kakashi Retsuden. Under the batch-18 vocabulary that is canon + side_source (the Shippuden 452-457 / Itachi Shinden pattern), not adopted{community}. Recommend re-typing that annotation when the 221-286 block is revisited. Sources: https://ja.wikipedia.org/wiki/BORUTO-%E3%83%9C%E3%83%AB%E3%83%88-_-NARUTO_NEXT_GENERATIONS- and https://naruto.fandom.com/wiki/Sasuke_Retsuden_Arc",
+    "221-286, kinnikuman-trap warning for whoever revisits it: ja.wikipedia's arc header for カワキ・ヒマワリ忍者学校編 (eps 261-273) carries the footnote '原作漫画の作画担当者・池本幹雄がキービジュアルを書き下ろし' - the manga's ARTIST drew the arc's key visual. That is promotional art, not story authorship or supervision, and must not be read as an author basis.",
+    "The line I drew, and it needs your ruling: Kodachi's story-supervision credit covers eps 1-216 wholesale, so the same author argument would sweep in every AFL-FILLER row in that range too (112-119, 138-140, 152-154, 156, ...). I did not extend it. My discriminator was storyline continuity with the source - does the episode set up, bridge or resolve something the adapted chapters carry or presuppose - which is why 155 stays filler while 190/191/209 do not. If you want a different line (e.g. adopt only the rows with an arc-specific author statement, which would be 120-136 only, and leave 137/141-147/158-180/190-191/209 filler), the evidence in this file supports drawing it and the two readings are cleanly separable.",
+    "Split source evidence on ep 155 'Mitsuki's Rainy Day': AFL types it Anime Canon, animefillerguide types it '* Filler'. The same two sources invert on its neighbours - AFG types 152 'Developing One's Medical Ninjutsu' and 154 'Himawari's Ninja Trial Session' as Anime Canon while AFL and our stored rows call them filler. Neither 152 nor 154 is a target here, but if 137 is adopted on continuity grounds they are the next candidates to look at. I ruled 155 filler (self-contained, narutopedia gives it no arc, its only new character ends comatose and never returns).",
+    "Possible anchor repair OUTSIDE my target block - ep 220. Stored anchor is manual, ep220 -> END 55. Two independent sources put eps 219-220 well past ch 55: narutopedia infoboxes give ep 219 `chapters=55, 56` and ep 220 `chapters=56, 57, 58`; AFG's chapter column gives 219 = '55, 56' and 220 = '57, 58'. The ep 219/220 synopses match (Code introduced, Amado's debrief on Code, the Five Kage conference on the destroyed Space-Time Gates), which is ch 56-58 material. That would mean the stored annotation 'eps 287-293 rearranged {56-67}' re-adapts chs 56-58 - legitimate under the overlap rule (narutopedia gives ep 287 `chapters=55, 56, 57, 60`), but the ep 220 END looks understated. Flagged rather than filed as a repair because 219-220 are outside my targets and the value is a ruled manual-tier anchor.",
+    "Minor, outside targets: ep 127 'Make-Out Tactics' is stored mixed (from AFL's Mixed Canon/Filler), but narutopedia's episode page carries no `chapters=` value and AFG lists it '* Anime Canon' with chapters 'N/A'. If it carries no source content at all, 'mixed' is the wrong type for it under T25. Similarly ep 157 'Kara's Footprints' is stored mixed and narutopedia prints `chapters=11` on it - a chapter already fully adapted at ep 148 - which looks like a wiki error rather than a real second pass. Neither was re-judged here."
+  ]
+}

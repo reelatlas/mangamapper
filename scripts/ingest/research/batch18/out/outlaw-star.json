@@ -1,0 +1,122 @@
+{
+  "series_id": "outlaw-star",
+  "summary": "Outlaw Star is not a manga the anime adapted downstream — it is a Sunrise/Morning Star multimedia original in which Takehiko Ito is the credited 原作者 of BOTH branches. ja.wikipedia's staff block credits the TV series to 原作 = 矢立肇・伊東岳彦, and records that Ito had been planning the project since 1994, accumulating story plots and image boards, before the Ultra Jump manga launched (Sept 1996) 16 months ahead of broadcast (Jan 1998). ja.wikipedia's 漫画 section quotes Ito during serialization: the manga and the anime would 'greatly change the developments along the way', while he and director Hongo agreed both would land on the same final scene (sourced to Animage 1997-06, pp.17-18). Ito personally wrote the screenplay of ep 19 and appears on the Blu-ray commentary for ep 1. Concretely, only the opening block has published-manga footing: eps 1-2 carry vol 1 (ch 1-4) — Sentinel III, the disguised-Hilda bodyguard job, the Kei pirate/Tao ambush, the Caster, the suitcase containing Melfina — compressed and recast. From ep 3 on there is no manga counterpart: in the manga Hilda dies on Sentinel III killed by Gene (anime: at Farfalas), the XGP acquisition is explicitly different and is never depicted in the published volumes (the ship appears only in vol 1's in-medias-res prologue), Suzuka debuts in ch 3 (anime: ep 6), and Aisha and Hazanko have no recorded manga appearance at all. So the 13 target rows split 2 / 11: eps 1-2 are canon-by-adaptation with divergence, and eps 3-17 are the author's own parallel road — recommended canon + adopted{author}, with the strict-source counter-reading (filler) presented for Sean. The AFL 'anime canon' / 'filler' split inside this series is a plot-relevance judgment, not a source-standing one: the adoption basis is series-wide.",
+  "standings": [
+    {
+      "episodes": [1, 2],
+      "type": "canon",
+      "chapters": "1-4",
+      "confidence": "medium",
+      "note": "These two episodes carry the manga's opening arc, tankobon vol 1 'Fire & Ice' (ch 1 Fire & Ice, 2 Night of the Sentinel, 3 Kaizoku, 4 Caster): Gene and Jim on Sentinel III, a revived-cyborg gunman killed in the cold open, a woman who hires them for nanotech parts plus bodyguard work and turns out to be 'Hot Ice' Hilda, the Kei pirate / Tao-magic ambush, the Caster reveal, and the suitcase containing the sleeping Melfina. The anime compresses and recasts (ch 1's Wraith and the Liberty Bell gang become Death Rob; the alley meeting becomes the 'Rachel Sweet' phone hire; Mother Ranch 221 becomes the wheat fields). Independent corroboration that ep 1 is manga material: the fandom ep-1 page notes the three Kei pirates who attack (Soi Len, Roi Fong, Guugaku) go unnamed in the anime but are named in the manga, and MangaUpdates records the anime adaptation as starting at 'Vol 1, Chap 1'. CAUTION: no source anywhere gives a per-episode chapter mapping — the attribution is VOLUME-level and mapping_mode is loose; ep 2's back half (Horus to Blue Heaven, Swanzo, the McCoy bar fight) is already off the manga's road, so ep 2 could equally be typed mixed (see flags).",
+      "sources": [
+        "https://outlawstar.fandom.com/wiki/Outlaw_Star:_1st_Star:_Fire_%26_Ice",
+        "https://en.wikipedia.org/wiki/List_of_Outlaw_Star_chapters",
+        "https://outlawstar.fandom.com/wiki/Outlaw_World",
+        "https://www.mangaupdates.com/series/22966286624",
+        "https://en.wikipedia.org/wiki/List_of_Outlaw_Star_episodes"
+      ]
+    },
+    {
+      "episodes": [3, 4, 5, 6, 7, 8, 10, 11, 12, 15, 17],
+      "type": "canon",
+      "chapters": "none",
+      "confidence": "medium",
+      "note": "No published manga chapter corresponds to any of these episodes, and the divergences are documented, not inferred: in the manga Hilda dies before ever leaving Sentinel III, shot in the back by Gene via a bomb he had planted in the prosthetic she hired him to repair (anime ep 4: she dies at Farfalas after the XGP is taken); ja.wikipedia states outright that the circumstances of acquiring the XGP-15A2 differ between the versions and are not depicted in the existing volumes, and the fandom ship infobox lists the Outlaw Star's only manga appearance as vol 1's in-medias-res prologue; Suzuka's manga debut is ch 3 while the anime defers her to ep 6 with a wholly different introduction (the Fred Luo contract); Aisha Clan-Clan (eps 3/5/11) and Hazanko with the Anten Seven (ep 15) have no recorded manga appearance. AFL's 'anime canon' label on these rows is therefore correct about the FACT (not in the manga) and useless as a type. RECOMMENDED STANDING: canon by adoption on an AUTHOR basis — Outlaw Star's anime is not a downstream adaptation but the co-primary branch of Takehiko Ito's own project. He is the credited 原作者 of the TV series (ja.wikipedia staff: 原作 - 矢立肇、伊東岳彦), had been planning it since 1994 with story plots and image boards, his own Morning Star Studio is credited on the anime and, per the wiki, produced both the anime and the manga, he wrote the screenplay of ep 19 himself, and he stated during serialization that the two versions would deliberately take different roads to the same final scene, agreed with director Hongo. That is authorship and declaration, not mere commissioning. The strict-source counter-reading (filler, because standing is relative to the manga and the author himself said the roads differ) is set out in flags_for_sean.",
+      "sources": [
+        "https://ja.wikipedia.org/wiki/%E6%98%9F%E6%96%B9%E6%AD%A6%E4%BE%A0%E3%82%A2%E3%82%A6%E3%83%88%E3%83%AD%E3%83%BC%E3%82%B9%E3%82%BF%E3%83%BC",
+        "https://outlawstar.fandom.com/wiki/Hilda",
+        "https://outlawstar.fandom.com/wiki/Outlaw_Star_(ship)",
+        "https://outlawstar.fandom.com/wiki/Suzuka",
+        "https://outlawstar.fandom.com/wiki/Outlaw_Star_(anime)",
+        "https://en.wikipedia.org/wiki/Outlaw_Star",
+        "https://en.wikipedia.org/wiki/List_of_Outlaw_Star_episodes",
+        "https://anilist.co/manga/37438",
+        "https://www.animefillerlist.com/shows/outlaw-star"
+      ]
+    }
+  ],
+  "annotations": [
+    {
+      "episodes": [1, 2],
+      "kind": "divergence",
+      "note": "Same opening events, different execution: the manga's ch 1 antagonist (Wraith, revived as a cyborg, with the Liberty Bell gang) is replaced by Death Rob; Hilda's manga arc keeps her on Sentinel III to her death while the anime sends her to space at the end of ep 2. ja.wikipedia: the anime and manga differ in characterisation and in how the XGP-15A2 is obtained, and Ito said during serialization that the two versions would greatly change the developments along the way while landing on the same final scene (Animage 1997-06, pp.17-18).",
+      "sources": [
+        "https://ja.wikipedia.org/wiki/%E6%98%9F%E6%96%B9%E6%AD%A6%E4%BE%A0%E3%82%A2%E3%82%A6%E3%83%88%E3%83%AD%E3%83%BC%E3%82%B9%E3%82%BF%E3%83%BC",
+        "https://outlawstar.fandom.com/wiki/Hilda",
+        "https://outlawstar.fandom.com/wiki/Outlaw_Star:_1st_Star:_Fire_%26_Ice"
+      ]
+    },
+    {
+      "episodes": [1, 2],
+      "kind": "rearranged",
+      "note": "Vol 1's four chapters are resequenced across two episodes: the ch 4 Caster reveal is pulled forward into ep 1's ambush, and Suzuka — who appears in the manga in ch 3 at the Virginia space port with the Eighth Evil Star — is held back to ep 6 and reintroduced through a different storyline.",
+      "sources": [
+        "https://outlawstar.fandom.com/wiki/Outlaw_Star:_1st_Star:_Fire_%26_Ice",
+        "https://outlawstar.fandom.com/wiki/Suzuka",
+        "https://outlawstar.fandom.com/wiki/The_Beautiful_Assassin"
+      ]
+    },
+    {
+      "episodes": [3, 4, 5, 6, 7, 8, 10, 11, 12, 15, 17],
+      "kind": "adopted",
+      "basis": "author",
+      "note": "Takehiko Ito is credited as 原作 (original creator) of the TV series alongside Hajime Yatate — ja.wikipedia staff block and infobox; en.wikipedia's Production section records that Outlaw Star was created by Ito's Morning Star Studio with Ito as writer/chief artist 'aided by Hajime Yatate, a pseudonym of writers at Sunrise'. ja.wikipedia further records that Ito had been drafting the project's story plots and image boards since 1994 (Animage 1997-04 p.24; Animage 1997-06 pp.17-18) and that he described the anime and manga as deliberately divergent roads to a shared final scene, decided with director Hongo. Ito wrote the screenplay of ep 19 '法と無法' himself (ja.wikipedia 各話リスト and en.wikipedia's episode list both credit him), his studio is listed under デザイン協力 on the anime, and he participates in the Japanese Blu-ray commentary for ep 1. The franchise also carries the ANIME forward, never the manga: the Angel Links spin-off anime, the Chapter of the Galactic Dragon Vein novelization and the El Dorado Covered With Clouds side-story novel (set between eps 16-18) all continue the anime continuity. Basis is therefore author-level declaration + authorship, not author-commissioning.",
+      "sources": [
+        "https://ja.wikipedia.org/wiki/%E6%98%9F%E6%96%B9%E6%AD%A6%E4%BE%A0%E3%82%A2%E3%82%A6%E3%83%88%E3%83%AD%E3%83%BC%E3%82%B9%E3%82%BF%E3%83%BC",
+        "https://en.wikipedia.org/wiki/Outlaw_Star",
+        "https://en.wikipedia.org/wiki/List_of_Outlaw_Star_episodes",
+        "https://outlawstar.fandom.com/wiki/Morning_Star_Studio",
+        "https://outlawstar.fandom.com/wiki/Outlaw_Star_(anime)"
+      ]
+    },
+    {
+      "episodes": [3, 4, 5, 6, 7, 8, 10, 11, 12, 15, 17],
+      "kind": "divergence",
+      "note": "From ep 3 the anime is on a road the published manga never takes. Anchor facts: Hilda's death (Sentinel III, by Gene's hand, in the manga vs Farfalas, by her own tooth-bomb, in ep 4); the XGP acquisition explicitly different and undepicted in vols 1-3; the ship's only manga appearance is vol 1's prologue; Aisha and Hazanko carry no manga appearance; AniList's own manga entry warns 'there are significant differences between the anime and manga plots'.",
+      "sources": [
+        "https://ja.wikipedia.org/wiki/%E6%98%9F%E6%96%B9%E6%AD%A6%E4%BE%A0%E3%82%A2%E3%82%A6%E3%83%88%E3%83%AD%E3%83%BC%E3%82%B9%E3%82%BF%E3%83%BC",
+        "https://outlawstar.fandom.com/wiki/Hilda",
+        "https://outlawstar.fandom.com/wiki/Outlaw_Star_(ship)",
+        "https://anilist.co/manga/37438"
+      ]
+    }
+  ],
+  "repairs": [
+    {
+      "episode": 1,
+      "field": "air_date",
+      "old": "1998-01-05",
+      "new": "1998-01-08",
+      "why": "Stored value is AFL's, and AFL is wrong here. ja.wikipedia's 各話リスト gives 1998年1月8日, en.wikipedia's episode list gives January 8, 1998, and the fandom episode page's infobox gives jp airdate = January 8, 1998. (ja.wikipedia adds that the slot was 1:15 A.M. so the broadcast physically began on Jan 9; the listed date is Jan 8.)",
+      "sources": [
+        "https://ja.wikipedia.org/wiki/%E6%98%9F%E6%96%B9%E6%AD%A6%E4%BE%A0%E3%82%A2%E3%82%A6%E3%83%88%E3%83%AD%E3%83%BC%E3%82%B9%E3%82%BF%E3%83%BC",
+        "https://en.wikipedia.org/wiki/List_of_Outlaw_Star_episodes",
+        "https://outlawstar.fandom.com/wiki/Outlaw_World"
+      ]
+    },
+    {
+      "episode": 8,
+      "field": "air_date",
+      "old": "1998-12-26",
+      "new": "1998-02-26",
+      "why": "Stored value is AFL's typo (a December date inside a Jan-Jun 1998 run, sitting between ep 7 on 1998-02-19 and ep 9 on 1998-03-05). ja.wikipedia gives 2月26日, en.wikipedia gives February 26, 1998, and the fandom page for 'Forced Departure' gives jp airdate = February 26, 1998.",
+      "sources": [
+        "https://ja.wikipedia.org/wiki/%E6%98%9F%E6%96%B9%E6%AD%A6%E4%BE%A0%E3%82%A2%E3%82%A6%E3%83%88%E3%83%AD%E3%83%BC%E3%82%B9%E3%82%BF%E3%83%BC",
+        "https://en.wikipedia.org/wiki/List_of_Outlaw_Star_episodes",
+        "https://outlawstar.fandom.com/wiki/Forced_Departure"
+      ]
+    }
+  ],
+  "structure": {
+    "notes": "COMPONENT RANGE LOOKS SHORT. The stored component declares episodes 1-24 (that is AniList's count for anime id 400: episodes = 24, i.e. TV-aired only), but the series has 26 production episodes and OUR rows are in the 26-space: our row 16 is 'Demon of the Water Planet' and row 17 is 'Between Life and Machine', which is the ja.wikipedia / fandom / AFL numbering. Entry facts already say aired_episodes = 26 and total_episodes = 26. So rows 25 ('Maze of Despair') and 26 ('Return to Space') fall outside the component's declared 1-24 range — worth checking that they exist and are attached. NOT-BROADCAST EPISODES: ja.wikipedia marks BOTH #16 海の星の悪魔 and #23 温泉惑星天鈴 as 未放送 (not aired on TV Tokyo); AFL likewise carries no airdate for #16. en.wikipedia marks only #16 'Not aired' and dates #23 to 1998-06-04, and ja.wikipedia's own date column leaves 1998-06-04 unaccounted for — the two sources conflict on #23's Japanese broadcast, so I have not proposed a repair there. Ep 23 is separately famous for being skipped on Toonami until 2018-02-24. UNAIRED PILOT: a 1996-copyright promotional pilot (Melfina narration montage, footage later reused in ep 1) ships as a home-video bonus; it is not a numbered episode and should not become a row. MANGA CHAPTER SPACE: 21 chapters in Ultra Jump 1996-1999; vol 1 = ch 1-4, vol 2 = ch 5-10, vol 3 = ch 11-17, ch 18-21 ('Intermission', 'Intermission II', 'Sacred Ground', 'Chaser') were serialized but never collected; the series has been on indefinite hiatus since 1999. Our stored latest_known = 16 (AniList/MangaUpdates 'latest_chapter': 16) undercounts the real 21. Note also that the fandom 'Uncollected Issues' page's body text mis-numbers those four as 18/19/22/23 while its own infobox and both Wikipedia lists number them 18-21 — use 18-21.",
+    "order_only": []
+  },
+  "flags_for_sean": [
+    "THE FORK (this is the whole verdict for eps 3-17). Reading A, recommended: canon + adopted{author}. Outlaw Star's anime is not downstream of the manga — Ito is its credited 原作者 (with Hajime Yatate), he conceived and plotted the project from 1994 before the manga existed, his Morning Star Studio is credited on the anime, he wrote ep 19's script himself, and he publicly declared the two versions as deliberately different roads to the same ending. Under T26's definition of adopted ('the source's author wrote / supervised / declared it') that is satisfied by authorship, not merely commissioning. Reading B, strict: filler. Standing is relative to THE MANGA; the author himself said the anime does not tell the manga's story, so material with no manga counterpart has zero source standing however distinguished its provenance. Both readings are defensible; I recommend A but the evidence is a judgment call, hence medium confidence.",
+    "SPILLOVER — do not apply the adoption to only the AFL 'anime canon' rows. The author basis is series-wide, so if you take Reading A it necessarily also covers eps 13, 14, 16, 18, 19, 20 (stored filler) and eps 21-26. AFL's canon/filler split inside Outlaw Star is a main-arc-relevance judgment ('does this advance the Leyline plot'), not a statement about the manga at all — nothing in eps 13/14/18/20 is any less Ito's than eps 15/17. Applying adoption to 11 rows and leaving 6 neighbours filler would encode AFL's judgment, not ours.",
+    "EP 19 IS THE STRONGEST SINGLE-ROW CASE AND IS STORED filler. 'Law and Lawlessness' (法と無法) was written by Takehiko Ito personally — ja.wikipedia's 各話リスト gives 脚本 - 伊東岳彦 and en.wikipedia's episode list gives WrittenBy = Takehiko Ito. It is also the episode that debuts Valeria and Duuz, who carry into the Angel Links spin-off. It is outside my target set so I did not write a standings entry for it, but under Reading A it is canon + adopted{author} with the best per-row citation in the series.",
+    "NO SOURCE ANYWHERE GIVES A PER-EPISODE CHAPTER MAPPING. My ch 1-4 attribution for eps 1-2 is volume-level, built by comparing the fandom volume-1 chapter summaries against the episode summaries, with MangaUpdates' 'anime: start Vol 1, Chap 1' as corroboration. If you want strict A-family precision, treat eps 1-2 as zone-level (vol 1) rather than as a ch 1-4 anchor. Related sub-question: ep 2 splits roughly one-quarter manga-footed (Melfina's awakening, the escape from the Kei pirates with Hilda) and three-quarters anime-track (Horus to Blue Heaven, Swanzo, McCoy) — mixed is a reasonable alternative type for that single row.",
+    "SOURCE-INDEPENDENCE WARNING for the verifier: sunrise.fandom.com/ja's 星方武侠アウトロースター page is a near-verbatim copy of an older ja.wikipedia revision and must NOT be counted as a second source for anything ja.wikipedia says. Likewise weblio's entry mirrors ja.wikipedia. I did not cite either. animefillerlist and TV Tropes were consulted as starting principles / cross-check only; TV Tropes and the ANN forum thread on manga-vs-anime differences both returned 403 and are not cited.",
+    "UNRESOLVED: the plot of manga chapters 5-21 (vols 2-3 plus the uncollected tail) is not documented anywhere I could reach — the fandom volume-2 and volume-3 pages are stubs with chapter titles only, no scanlation or synopsis exists, and no Japanese review source describes them. So I can prove there is no counterpart for the anime's specific storylines (Aisha, Hazanko/Anten Seven, the Heifong race) only via the character-page 'manga appearance' fields, not by reading the chapters. If a chapter-level source for vols 2-3 ever surfaces it could upgrade one or two of eps 5-17 from adopted to genuinely adapted."
+  ]
+}

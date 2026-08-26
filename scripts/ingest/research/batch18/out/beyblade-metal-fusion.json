@@ -1,0 +1,108 @@
+{
+  "series_id": "beyblade-metal-fusion",
+  "summary": "All 32 target rows resolve to filler relative to the source (Takafumi Adachi's Metal Fight Beyblade manga, CoroCoro 2008-09 to 2012-02, 46 numbered chapters in 11 volumes). The anime credits Adachi as 原作 and ja.wikipedia's lead calls the manga the 原作 of the anime and games, but the same paragraph states the two were made 'ほぼ平行作業' (near-parallel production) with settings flowing BOTH ways, citing Adachi's official blog. The consequence is structural, not cosmetic: S1's 51 episodes cover only manga ch 1-20 (ja.wikipedia: the manga's Battle Bladers arc starts at ch 8, the anime's at ep 24), and the expansion material is anime-side invention, not adapted chapters. The three load-bearing S1 structures — the Survival Battle (eps 20-22), the BeyPoint/Challenge-Match qualification for Battle Bladers (eps 23-39) and the anime's 16-blader Battle Bladers bracket (eps 40-51) — have no manga counterpart; ja.wikipedia's 作中用語 entry for バトルブレーダーズ says outright that the anime requires 50,000 BeyPoints with 16 bladers while the manga has no entry requirement, 1000+ entrants, 15 finalists, and 『漫画版とアニメ版で対戦組み合わせが異なる』(different matchups). Five characters carrying these blocks are labelled アニメオリジナルキャラクター on ja.wikipedia with the episode of first appearance and citations to Adachi's own blog: Madoka Amano (ep 2), Hyoma (ep 15), the Sodo twins (ep 12), the Kumade brothers (ep 26) and Teru Saotome (ep 34); Merci (ep 8) has no manga existence either. NO adoption is proposed: nothing documents Adachi or Takara Tomy declaring anime episodes canon to the manga, and the documented flow runs the other way — Tetsuya Watarigani and Madoka are anime-origin characters that Adachi later 逆輸入'd into HIS manga, which makes those manga pages canon, not the episodes. Surprise worth recording: the anime and manga diverge from ch 5 onward in the most basic way possible — in the manga Ryuga DESTROYS Pegasus (ch 5) and Gingka reforges it into Storm Pegasus in Mt. Fuji's crater (ch 6) guided by a talking dog and a Beyblading monkey; in the anime Gingka owns Storm Pegasus from ep 1 and neither Mawashi nor the reforging exists.",
+  "standings": [
+    {
+      "episodes": [4, 5, 6, 7, 8, 9, 10, 11],
+      "type": "filler",
+      "confidence": "high",
+      "note": "Metal Bey City block. Manga ch 2 ends with Gingka beating Kyoya and Doji's Wolf felling the building; ch 3 immediately moves to Hokuto's hut, the Dark Nebula/Forbidden Bey exposition and the Busujima battle. None of that is here. Instead: Benkei's Dark Bull grudge match (ep 4), Tetsuya Watarigani's introduction (ep 5), Hikaru Hasama's arrival and Kenta's training arc culminating in the Metal Face Bolt Madoka gives him (eps 6-7), Merci's data-gathering trap (ep 8), the Face Hunters' dissolution (ep 9), a SECOND Gingka-vs-Kyoya battle to free Kyoya from Dark Nebula (ep 10), and the march on Dark Nebula HQ (ep 11). Kyoya never joins Dark Nebula in the manga; Merci does not exist in it (ja.wikipedia lists him only as 『アニメ第8話から登場』, Doji's mainframe); Madoka, who drives eps 3-11, is flagged 『第2話より登場するアニメ版のオリジナルキャラクター』. Kenta's Flame Sagittario upgrade does happen in the manga — but in ch 8, from Phoenix, after Busujima crushes Sagittario at Battle Bladers, not from Madoka in a training episode. Ep 11's L-Drago exposition echoes ch 3's in function only (delivered by Gingka, in the anime's own Koma-Village lore, not by Hokuto). Zero adapted chapter content in any of the eight.",
+      "sources": [
+        "https://ja.wikipedia.org/wiki/%E3%83%A1%E3%82%BF%E3%83%AB%E3%83%95%E3%82%A1%E3%82%A4%E3%83%88_%E3%83%99%E3%82%A4%E3%83%96%E3%83%AC%E3%83%BC%E3%83%89",
+        "https://ja.wikipedia.org/wiki/%E3%83%A1%E3%82%BF%E3%83%AB%E3%83%95%E3%82%A1%E3%82%A4%E3%83%88_%E3%83%99%E3%82%A4%E3%83%96%E3%83%AC%E3%83%BC%E3%83%89%E3%81%AE%E7%99%BB%E5%A0%B4%E4%BA%BA%E7%89%A9",
+        "https://ja.wikipedia.org/wiki/%E3%83%A1%E3%82%BF%E3%83%AB%E3%83%95%E3%82%A1%E3%82%A4%E3%83%88_%E3%83%99%E3%82%A4%E3%83%96%E3%83%AC%E3%83%BC%E3%83%89%E3%81%AE%E4%B8%BB%E8%A6%81%E4%BA%BA%E7%89%A9",
+        "https://beyblade.fandom.com/api.php?action=parse&page=Metal_Fight_Beyblade_-_Chapter_03&prop=wikitext&format=json",
+        "https://beyblade.fandom.com/api.php?action=parse&page=Metal_Fight_Beyblade_-_Chapter_08&prop=wikitext&format=json",
+        "https://beyblade.fandom.com/api.php?action=parse&page=Beyblade:_Metal_Fusion_-_Episode_04&prop=wikitext&format=json",
+        "https://beyblade.fandom.com/api.php?action=parse&page=Merci&prop=wikitext&format=json"
+      ]
+    },
+    {
+      "episodes": [15, 16, 18],
+      "type": "filler",
+      "confidence": "high",
+      "note": "Koma Village / Hyoma block. Hyoma is anime-original: ja.wikipedia states 『アニメオリジナルキャラクターで第15話から登場』 and, in the 漫画版 sub-entry, 『漫画版では登場しない』 — Adachi kept a Koma-clan researcher in the setting but dropped the childhood-friend relationship 『銀河の孤独さを引き立たせるために』, cited to his own blog (hottate2.exblog.jp, 2012-06-16). The beyblade wiki's Hyoma infobox likewise has AppearAnime=ep 15 with AppearManga empty. All three episodes are built on him (ep 15 his introduction, ep 16 his battles with Kenta and Benkei, ep 18 Gingka vs Hyoma in the 'Green Hell' stadium). The manga's equivalent stretch (ch 5-6) is a completely different journey — Gingka's Pegasus has been DESTROYED by Ryuga, a letter from his father sends him to 'the God of Beyblade' (Mawashi, a Beyblading monkey), and Pegasus is reforged into Storm Pegasus in the crater of Mt. Fuji. None of that is in the anime, which gave Gingka Storm Pegasus from ep 1.",
+      "sources": [
+        "https://ja.wikipedia.org/wiki/%E3%83%A1%E3%82%BF%E3%83%AB%E3%83%95%E3%82%A1%E3%82%A4%E3%83%88_%E3%83%99%E3%82%A4%E3%83%96%E3%83%AC%E3%83%BC%E3%83%89%E3%81%AE%E7%99%BB%E5%A0%B4%E4%BA%BA%E7%89%A9",
+        "https://beyblade.fandom.com/api.php?action=parse&page=Hyoma&prop=wikitext&format=json",
+        "https://beyblade.fandom.com/api.php?action=parse&page=Metal_Fight_Beyblade_-_Chapter_05&prop=wikitext&format=json",
+        "https://beyblade.fandom.com/api.php?action=parse&page=Metal_Fight_Beyblade_-_Chapter_06&prop=wikitext&format=json"
+      ]
+    },
+    {
+      "episodes": [20, 21, 22],
+      "type": "filler",
+      "confidence": "high",
+      "note": "Survival Battle arc — an anime-only tournament and the anime's own device for bringing Battle Bladers into existence. ja.wikipedia's 作中用語 defines サバイバルバトル as a WBBA annual event on the uninhabited Beyblade Island whose winner gets one wish granted, with 1000 entrants 'including Madoka who got swept in' — Madoka being an anime-original character, and the entry carries no 漫画版 counterpart at all. Yu Tendo debuts here and wins, and his WISH creates Battle Bladers (ep 22). In the manga there is no Survival Battle: Doji announces Battle Bladers directly at the end of ch 7 ('in three months'), and Yu Tendo does not appear until ch 9, already a finalist. Madoka's own Bey appears only here (ja.wikipedia: マッドキャンサー145F, used in the S1 Survival Battle and one game), confirming the arc is anime-side.",
+      "sources": [
+        "https://ja.wikipedia.org/wiki/%E3%83%A1%E3%82%BF%E3%83%AB%E3%83%95%E3%82%A1%E3%82%A4%E3%83%88_%E3%83%99%E3%82%A4%E3%83%96%E3%83%AC%E3%83%BC%E3%83%89",
+        "https://ja.wikipedia.org/wiki/%E3%83%A1%E3%82%BF%E3%83%AB%E3%83%95%E3%82%A1%E3%82%A4%E3%83%88_%E3%83%99%E3%82%A4%E3%83%96%E3%83%AC%E3%83%BC%E3%83%89%E3%81%AE%E4%B8%BB%E8%A6%81%E4%BA%BA%E7%89%A9",
+        "https://beyblade.fandom.com/api.php?action=parse&page=Metal_Fight_Beyblade_-_Chapter_07&prop=wikitext&format=json",
+        "https://beyblade.fandom.com/api.php?action=parse&page=Metal_Fight_Beyblade_-_Chapter_09&prop=wikitext&format=json"
+      ]
+    },
+    {
+      "episodes": [23],
+      "type": "filler",
+      "confidence": "high",
+      "note": "The one target row with a defensible claim to a source beat — Battle Bladers is proclaimed, as it is in manga ch 7-8 — and it still fails. Everything the episode actually contains is anime-side: Yu's Survival-Battle wish is the trigger, Yu is revealed as Dark Nebula, Doji makes Dark Nebula co-sponsor with the WBBA, and Doji sets the entry bar at 50,000 BeyPoints. ja.wikipedia's バトルブレーダーズ entry states the 50,000-point requirement and the 16-blader field are ANIME terms and that the manga has 『出場資格は特になく』 with 1000+ entrants and 15 finalists; the BeyPoint entry adds that points 'matter in the anime's first season because they are required to enter Battle Bladers'. In the manga the announcement is Doji's, three months ahead, at the end of ch 7 immediately after Gingka shatters his Wolf. Shared premise, zero shared content — filler under the batch-18 rule that 'made for the anime is filler unless adopted'.",
+      "sources": [
+        "https://ja.wikipedia.org/wiki/%E3%83%A1%E3%82%BF%E3%83%AB%E3%83%95%E3%82%A1%E3%82%A4%E3%83%88_%E3%83%99%E3%82%A4%E3%83%96%E3%83%AC%E3%83%BC%E3%83%89",
+        "https://beyblade.fandom.com/api.php?action=parse&page=Metal_Fight_Beyblade_-_Chapter_07&prop=wikitext&format=json",
+        "https://beyblade.fandom.com/api.php?action=parse&page=Beyblade:_Metal_Fusion_-_Episode_23&prop=wikitext&format=json"
+      ]
+    },
+    {
+      "episodes": [24, 25, 26, 27, 29, 31, 33, 34, 35, 36, 38, 39],
+      "type": "filler",
+      "confidence": "high",
+      "note": "The Challenge Match / BeyPoint qualification block (eps 24-39; 28, 30, 32 and 37 are not targets). ja.wikipedia defines チャレンジマッチ as the three-month regional qualifier run between the Survival Battle and Battle Bladers for bladers short of points — a structure with no manga counterpart, since the manga's Battle Bladers has no entry requirement. Every target row here is a station of that structure: Tsubasa's debut and recruitment by Dark Nebula (24, 26), Kyoya vs Tobio (25), the Tsubasa/Yu tag match (27), Kenta vs Sora (29), the Sodo twins' Evil Gemios (31, twins flagged アニメオリジナル from ep 12), Phoenix destroying Gingka's Beypointer to wipe his 48,000 points (33), Teru Saotome (34, flagged アニメオリジナル from ep 34), Ryuga's point rampage and Ryutaro/Tobio's recruitment (35), Ryuga vs Tsubasa (36), Tsubasa's WBBA reveal (38) and Gingka's rematch win returning his points (39). The manga's corresponding pages are ch 8-16, all set INSIDE the tournament: Tsubasa, Sora, Ryutaro, Tobio, Reiji and Yu are simply named among the 15 finalists in ch 9, and Phoenix's battle with Gingka (ch 16) ends with Doji's attack unmasking him as Ryo and with Galaxy Nova training — not with a destroyed Beypointer. The Kumade brothers who anchor eps 26/31 are likewise 『アニメオリジナルキャラクターで第26話から登場』.",
+      "sources": [
+        "https://ja.wikipedia.org/wiki/%E3%83%A1%E3%82%BF%E3%83%AB%E3%83%95%E3%82%A1%E3%82%A4%E3%83%88_%E3%83%99%E3%82%A4%E3%83%96%E3%83%AC%E3%83%BC%E3%83%89",
+        "https://ja.wikipedia.org/wiki/%E3%83%A1%E3%82%BF%E3%83%AB%E3%83%95%E3%82%A1%E3%82%A4%E3%83%88_%E3%83%99%E3%82%A4%E3%83%96%E3%83%AC%E3%83%BC%E3%83%89%E3%81%AE%E7%99%BB%E5%A0%B4%E4%BA%BA%E7%89%A9",
+        "https://beyblade.fandom.com/api.php?action=parse&page=Metal_Fight_Beyblade_-_Chapter_09&prop=wikitext&format=json",
+        "https://beyblade.fandom.com/api.php?action=parse&page=Metal_Fight_Beyblade_-_Chapter_16&prop=wikitext&format=json",
+        "https://beyblade.fandom.com/api.php?action=parse&page=Teru_Saotome&prop=wikitext&format=json",
+        "https://beyblade.fandom.com/api.php?action=parse&page=Dan_Sodo&prop=wikitext&format=json"
+      ]
+    },
+    {
+      "episodes": [40, 41, 42, 44, 45],
+      "type": "filler",
+      "confidence": "high",
+      "note": "Battle Bladers rounds one and two. Both versions run a tournament of this name, and ja.wikipedia states flatly that 『漫画版とアニメ版で対戦組み合わせが異なる』 — the brackets are different — on top of different entry rules (50,000 BeyPoints vs none) and different field sizes (16 vs 15 finalists out of 1000+). Every matchup in these five episodes is anime-only: Benkei vs Tobio, Kenta vs Tetsuya, Teru (an anime-original character) vs Ryutaro and Gingka vs Yu (ep 40); Kyoya vs Kumasuke, Tsubasa vs Reiki, Reiji vs Hyoma (anime-original) and Ryuga vs Hikaru (ep 41); Ryuga's mass 制裁 of the Kumade brothers, Sodo twins, Tobio and Tetsuya, and Yu vs Reiji (ep 42); Kenta vs Reiji (ep 44); Tsubasa vs Ryuga (ep 45). The manga's ch 8-15 first rounds are a 1000-blader battle royale in eight blocks, then Benkei vs Ryuga, Kyoya vs Tetsuya, Tsubasa vs Hikaru, Reiji vs Phoenix (a no-show), Tobio vs Hokuto, Gingka vs Ryutaro and Kenta vs Yu — a different bracket entirely, in which Kenta never faces Reiji and Tsubasa never faces Ryuga. Note the boundary: the neighbouring non-target rows 46-51 DO carry ch 17-20 content (Gingka vs Reiji, the Phoenix/Ryo unmasking, Kyoya vs Ryuga, the final), which is why they are stored mixed/canon and these five are not.",
+      "sources": [
+        "https://ja.wikipedia.org/wiki/%E3%83%A1%E3%82%BF%E3%83%AB%E3%83%95%E3%82%A1%E3%82%A4%E3%83%88_%E3%83%99%E3%82%A4%E3%83%96%E3%83%AC%E3%83%BC%E3%83%89",
+        "https://ja.wikipedia.org/wiki/%E3%83%A1%E3%82%BF%E3%83%AB%E3%83%95%E3%82%A1%E3%82%A4%E3%83%88_%E3%83%99%E3%82%A4%E3%83%96%E3%83%AC%E3%83%BC%E3%83%89%E3%81%AE%E7%99%BB%E5%A0%B4%E4%BA%BA%E7%89%A9",
+        "https://beyblade.fandom.com/api.php?action=parse&page=Metal_Fight_Beyblade_-_Chapter_12&prop=wikitext&format=json",
+        "https://beyblade.fandom.com/api.php?action=parse&page=Metal_Fight_Beyblade_-_Chapter_14&prop=wikitext&format=json",
+        "https://beyblade.fandom.com/api.php?action=parse&page=Metal_Fight_Beyblade_-_Chapter_17&prop=wikitext&format=json",
+        "https://beyblade.fandom.com/api.php?action=parse&page=Beyblade:_Metal_Fusion_-_Episode_40&prop=wikitext&format=json"
+      ]
+    }
+  ],
+  "annotations": [],
+  "repairs": [
+    {
+      "episode": 3,
+      "field": "type",
+      "old": "mixed",
+      "new": "filler",
+      "why": "Not a target row, offered because the evidence is unambiguous. Ep 3 'The Wolf's Ambition' is Doji flying the Face Hunters to a mountain base, beating Kyoya and taking him away to train, plus Madoka's B-Pit repairing Storm Pegasus and Gingka refusing to coach Kenta's friends. Kyoya NEVER joins Dark Nebula in the manga — he is Gingka's ally from ch 2 onward and is present in ch 3-7 and through Battle Bladers — and Madoka is an anime-original character (ja.wikipedia: 『第2話より登場するアニメ版のオリジナルキャラクター』). Manga ch 3, the chapter that would have to be the source here, is Hokuto's hut, the Dark Nebula / Forbidden Bey exposition, Ryuga's introduction and the Busujima vs Hokuto vs Gingka battle — none of which is in ep 3. Nothing in the episode adapts the manga, so 'mixed' has no source half to rest on.",
+      "sources": [
+        "https://ja.wikipedia.org/wiki/%E3%83%A1%E3%82%BF%E3%83%AB%E3%83%95%E3%82%A1%E3%82%A4%E3%83%88_%E3%83%99%E3%82%A4%E3%83%96%E3%83%AC%E3%83%BC%E3%83%89%E3%81%AE%E4%B8%BB%E8%A6%81%E4%BA%BA%E7%89%A9",
+        "https://beyblade.fandom.com/api.php?action=parse&page=Metal_Fight_Beyblade_-_Chapter_03&prop=wikitext&format=json",
+        "https://beyblade.fandom.com/api.php?action=parse&page=Beyblade:_Metal_Fusion_-_Episode_03&prop=wikitext&format=json"
+      ]
+    }
+  ],
+  "structure": {
+    "notes": "ROW IDENTITY: one season, 51 episodes, no specials, no recap, no ep 0 in the broadcast run. Our rows join 1:1 on title+air date with ja.wikipedia's 各話リスト and with the beyblade wiki's 'List of Beyblade: Metal Fusion episodes' — spot-checked at both ends of the target range (ep 4 突進!牡牛パワー! 2009-04-26; ep 45 逆襲のアクイラ 2010-02-14) and at ep 24 (美しきアクイラ 2009-09-13). en.wikipedia independently gives 51 episodes, 2009-04-05 to 2010-03-28. No renumbering anywhere; AFL's numbering matches too. CHAPTER SPACE (for whoever anchors this later): the manga ran in CoroCoro 2008-09-13 to 2012-02-15, 46 numbered chapters plus a 5-page ch 0 preview ('メタルファイトベイブレード超予告', CoroCoro 2008-09, collected in vol 1) and eight side/special chapters collected across vols 3-11 — that sum, not 46, is what AniList's total_chapters=56 is counting. WARNING: tankoubon numbering is NOT magazine numbering here. The beyblade wiki records that CoroCoro chapters 9, 18 and 19 were each SPLIT INTO TWO in the shinshoban volumes, so the 46-chapter volume numbering runs ahead of the serialization by three from ch 9 on. Any future chapter anchor must state which numbering it uses. ARC BOUNDARIES: ja.wikipedia states the manga's part 1 is ch 1-7, Battle Bladers is ch 8-20, Big Bang Bladers starts at ch 21 and Ultimate Bladers at ch 34; the ANIME's Battle Bladers arc starts at ep 24 and season 2 (Big Bang Bladers) at ep 52. So S1's entire source ceiling is manga ch 20 — 51 episodes against 20 chapters, which is the arithmetic behind this verdict. The DVD releases corroborate the ep 23/24 seam: eps 1-23 shipped as six 'Metal Fight Beyblade' volumes, eps 24-51 as seven 'Battle Bladers-hen' volumes (en.wikipedia). CONTINUITY CLAIM, supported per block above: the anime is a parallel adaptation, not a chapter-by-chapter one. ja.wikipedia's 概要 says the manga is the 原作 of the anime and games but that the two were 『ほぼ平行作業』 with anime settings fed back into the manga and anime-originated settings and characters used in it, citing Adachi's official blog. The beyblade wiki's manga page says the anime 'is written differently than in the manga... while initially starting with a similar plot, the importance of characters began to diverge heavily... Some anime and manga counterparts share only a name and character design', and its Metal Fusion page concedes only that 'the general plotline is adapted from the first four volumes... However, there are notable differences'. Volumes 1-4 = ch 1-19, consistent with the ch-20 ceiling. The episodes that DO carry chapter content are the stored canon/mixed rows at the seams (1 = ch 1, 2 = ch 2, 12-14 = ch 4 and ch 7, 17 = a loose restaging of ch 5-6, 46-51 = ch 17-20); everything between them is the anime's own material.",
+    "order_only": []
+  },
+  "flags_for_sean": [
+    "NO adoption proposed, deliberately. The 原作 credit to Adachi on the anime is a media-mix creator credit, not a per-episode declaration or supervision — the batch-18 discriminator. The documented author involvement runs the OPPOSITE way: ja.wikipedia flags Tetsuya Watarigani as 『アニメオリジナルキャラクター』 (cited to Adachi's blog, 2009-05-02, the day before ep 5 aired) who 『後に漫画にもダークネビュラの一員として登場し』, and Madoka as anime-original who appears in the manga only as a 逆輸入 two-panel cameo in a vol-9 special chapter plus the 2019 Soul Burst one-shot (cited to Adachi's blog, 2011-07-14). Adachi importing an anime character into HIS manga makes those manga pages canon; it does not retroactively make the episodes that created the character canon. If you disagree and want a studio-basis adoption for the whole S1 block on the grounds that the franchise (Takara Tomy / d-rights) carries the anime continuity forward into Metal Masters / 4D / ZeroG / the film / the games, that reading is available — but it would be true of every anime-original continuity and would empty 'filler' of meaning. Recommendation: filler, as written.",
+    "NOT re-judged but shaky, in case you want a follow-up pass: ep 30 'The Bewitching Pisces' and ep 32 'The Storm Battle Royal' are both stored canon and both look loose. Gingka vs Ryutaro's Pisces with Distortion Drive is real manga content (ch 12) but the anime stages it at the Vegas City Challenge Match with a proto-Storm-Bringer finish (ja.wikipedia's Ryutaro entry) rather than inside Battle Bladers with the Shooting Star Attack crater trick. Ep 32's battle royal is the Challenge Match FINAL; ja.wikipedia's エクストリームベイスタジアム entry says that stadium hosts the anime's ep-28 Mondo City Challenge Match final and, in the manga, the Battle Bladers QUARTER-FINAL battle royale — i.e. two different events. Ep 28 (stored mixed) has the same problem: Tetsuya's Mad Gasher is remodelled into Dark Gasher by Doji's system, which is anime-only (in the manga Kyoya shatters an unmodified Mad Cancer in ch 11).",
+    "Curiosity, no action needed: ep 29 'Kenta and Sora' is the one filler row with a traceable path back into the source, and it is three removes long. ja.wikipedia's game section says the DS title 『爆誕!サイバーペガシス』 opens by following anime ep 29 ('冒頭の一部は暁宇宙が初登場するアニメ第29話を踏襲している'), and the manga side-chapter 『暁 宇宙外伝 爆誕! サイバーペガシス』 (CoroCoro 2009-12, collected in vol 4) is a DIGEST OF THAT GAME. Sora himself is a manga character from ch 9, so this is the anime's introduction story for him looping back via a game into a manga omake. It is not adoption of the episode and I did not treat it as such."
+  ]
+}

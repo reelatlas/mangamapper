@@ -1,0 +1,225 @@
+{
+  "series_id": "boruto-naruto-next-generations",
+  "summary": "All 68 target rows (eps 2-105) are episodes AFL labels \"anime canon\". AFL's own published definition on this very show settles what that label means: \"Canon episodes are determined by whether they are adapted from the Boruto: Naruto Next Generations manga series, any of the Naruto spinoff manga, or any of the official novels. If episodes are not adapted from any of the manga series, they're separated by 'Filler' or 'Anime Canon.' 'Anime Canon' episodes are non-adapted episodes that contain vital information that is referenced within the manga-adapted episodes.\" That is a claim about the ANIME's internal continuity, not about the manga. I checked every one of the 68 rows against Narutopedia's per-episode infobox: the `chapters=` field (which carries a number on genuinely adapting rows, e.g. ep 53 -> `chapters=1`) is ABSENT on all 68 — zero source chapters anywhere in the block. The Boruto manga never depicts these events, and the arcs' original casts (Kagura Karatachi, Ryogi, Ku, Sekiei, Kokuyo, Akuta, Kozuchi, Urashiki Otsutsuki, Tanuki Shigaraki, Iwabee, Tsubaki) carry \"Appears in: Anime (+Novel/Game)\" with no manga, corroborated by ja.wikipedia's explicit 'アニメオリジナルキャラであるため漫画には登場しない'. Weekly Shonen Jump editor-in-chief Hiroyuki Nakano (Lucca Comics 2018, with Ikemoto present) stated the anime 'took a different path from that of the manga… they are two different projects', while 'what is narrated in the manga will sooner or later be transposed into the anime series' — i.e. the manga is the source and the anime's own material is not the manga's story. VERDICT: filler on all 68. THE REAL FORK, and it is a live one: Ukyo Kodachi — the Boruto manga's own writer (脚本, chs 1-52 / vols 1-13) — holds a dedicated ストーリー監修 'Story Supervisor' credit on the TV anime for episodes 1-216, i.e. the whole of this block, and Kishimoto (原作・原案・監修) supervised the Academy arc closely enough that he and Kodachi personally expanded one planned episode into eps 8 and 9. That is author supervision in the literal sense the protocol accepts for adopted{author}. I did NOT apply it, because the credit does not discriminate: eps 16-17, 40-41, 48-50, 67-69 and 96-97 sit inside the identical credit window and are filler by AFL, by our stored data and by every source — a basis that cannot tell canon from filler is not an adoption basis (compare Kishimoto's identical 原作・監修 credit over Naruto Shippuden's filler arcs). Sean should rule; see flags_for_sean, including the consistency question against the already-ruled adopted{community} on eps 221-286.",
+  "standings": [
+    {
+      "episodes": [2, 3, 4, 5, 6, 7],
+      "type": "filler",
+      "chapters": "none",
+      "confidence": "medium",
+      "note": "Academy Entrance Arc (Narutopedia and ja.wikipedia both bound it eps 1-15; ja.wp 忍者学校入学編). Anime-original PREQUEL: ja.wikipedia states the anime did not start from manga ch 1 but from the 忍者学校入学編 prequel, 'テレビアニメ化にあたっては、映画や漫画よりも前の時系列にあたる忍者学校でのエピソードが制作され'. Narutopedia's per-episode infobox carries no `chapters=` on any of these rows. Confidence is medium rather than high ONLY because this specific arc has the block's strongest adoption case (Kodachi's own statement that it is made under Kishimoto's 'extremely careful supervision'; the manga later took the arc's original character Sumire Kakei into its own cast, Narutopedia manga debut Boruto ch 18) — see flags_for_sean.",
+      "sources": [
+        "https://naruto.fandom.com/api.php?action=parse&page=Academy_Entrance_Arc&prop=wikitext&format=json",
+        "https://ja.wikipedia.org/wiki/BORUTO-%E3%83%9C%E3%83%AB%E3%83%88-_-NARUTO_NEXT_GENERATIONS-",
+        "https://naruto.fandom.com/api.php?action=parse&page=The%20Hokage%27s%20Son%E2%80%A6!!&prop=wikitext&format=json",
+        "https://www.animefillerlist.com/shows/boruto-naruto-next-generations-definitive-filler-list"
+      ]
+    },
+    {
+      "episodes": [8, 9],
+      "type": "filler",
+      "chapters": "none",
+      "confidence": "medium",
+      "note": "Academy Entrance Arc, the Jogan / Toneri episodes. THESE TWO ROWS CARRY THE BLOCK'S MOST SPECIFIC AUTHOR ACT: English Wikipedia states 'series creator Masashi Kishimoto acted as a supervisor for episodes 8 and 9', citing Kodachi's own words — 'Boruto is created under Mr Kishimoto's careful (extremely careful) supervision, but episode 8 and 9 were originally one episode, and it became two episodes due to thoughts such as \"let's expand this because it's interesting\"… from Mr Kishimoto and I.' Still filler here because they adapt no chapter (no `chapters=` on either Narutopedia page) and nothing in them enters the manga; but if Sean wants a narrow adopted{author} instead of a block-wide one, eps 8-9 (with ep 34, and eps 67-69 outside this block) are the rows that carry it.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Boruto:_Naruto_Next_Generations_(TV_series)",
+        "https://web.archive.org/web/20170906191750/http://www.spirallingsphere.com/2017/06/ukyou-kodachi-talks-about-kishimotos-extremely-carefull-supervision-of-boruto/",
+        "https://naruto.fandom.com/api.php?action=parse&page=The%20Dream%27s%20Revelation&prop=wikitext&format=json",
+        "https://naruto.fandom.com/api.php?action=parse&page=Proof%20of%20Oneself&prop=wikitext&format=json"
+      ]
+    },
+    {
+      "episodes": [10, 11, 12, 13, 14, 15],
+      "type": "filler",
+      "chapters": "none",
+      "confidence": "medium",
+      "note": "Academy Entrance Arc conclusion — the Ghost Incident / Nue / Sumire reveal. Anime-original; no `chapters=` on any Narutopedia episode page. Sumire's father Tanuki Shigaraki, the Gozu Tenno and the Ghost Incident exist only in the anime and the three JUMP j BOOKS novelisations of eps 1-15 (Narutopedia lists the novels; Tanuki Shigaraki 'Appears in: Anime, Novel, Game' — no manga). The manga does not depict any of it.",
+      "sources": [
+        "https://naruto.fandom.com/api.php?action=parse&page=Academy_Entrance_Arc&prop=wikitext&format=json",
+        "https://naruto.fandom.com/api.php?action=parse&page=Tanuki%20Shigaraki&prop=text&format=json",
+        "https://ja.wikipedia.org/wiki/BORUTO-%E3%83%9C%E3%83%AB%E3%83%88-_-NARUTO_NEXT_GENERATIONS-"
+      ]
+    },
+    {
+      "episodes": [25, 26, 27, 28, 29, 30, 31, 32],
+      "type": "filler",
+      "chapters": "none",
+      "confidence": "high",
+      "note": "School Trip Arc (修学旅行編) — Narutopedia and ja.wikipedia agree on eps 25-32. Wholly anime-original: no `chapters=` on any of the eight Narutopedia episode pages. Its central original character Kagura Karatachi carries 'Appears in: Anime, Novel' on Narutopedia — he never enters the manga; the New Seven Ninja Swordsmen likewise (ja.wikipedia notes their predecessor Kurosuki Raiga was himself a Naruto anime-original character, 原作には登場しない). The arc's later novelisation (School Trip Bloodwind Records, Nov 2017) is a novelisation OF the anime, not a source the anime adapts.",
+      "sources": [
+        "https://naruto.fandom.com/api.php?action=parse&page=School_Trip_Arc&prop=wikitext&format=json",
+        "https://naruto.fandom.com/api.php?action=parse&page=Kagura%20Karatachi&prop=text&format=json",
+        "https://ja.wikipedia.org/wiki/BORUTO-%E3%83%9C%E3%83%AB%E3%83%88-_-NARUTO_NEXT_GENERATIONS-"
+      ]
+    },
+    {
+      "episodes": [33],
+      "type": "filler",
+      "chapters": "none",
+      "confidence": "high",
+      "note": "'The Super Beast Scroll Slump!' — a standalone Inojin comedy episode. Narutopedia assigns it to NO arc (its `arc=` field is empty; the Graduation Exams Arc page bounds that arc at 34-37); ja.wikipedia files it loosely under 忍者学校卒業編. No `chapters=`, no manga content. AFL's own 'definitive' list classes 32-35 as plain FILLER while its main list calls them anime canon — AFL contradicts itself on this row.",
+      "sources": [
+        "https://naruto.fandom.com/api.php?action=parse&page=The%20Super%20Beast%20Scroll%20Slump!&prop=wikitext&format=json",
+        "https://www.animefillerlist.com/shows/boruto-naruto-next-generations-definitive-filler-list",
+        "https://www.animefillerlist.com/shows/boruto-naruto-next-generations"
+      ]
+    },
+    {
+      "episodes": [34],
+      "type": "filler",
+      "chapters": "none",
+      "confidence": "medium",
+      "note": "'The Night of the Shooting Stars' (星降る夜). The ONLY episode in the entire block whose script is credited to the manga's own writer: ja.wikipedia's per-episode 脚本 column reads 三輪清宗／小太刀右京, and ANN's staff list carries Ukyo Kodachi under 'Script'. Author-written, but it adapts no chapter (no `chapters=` on Narutopedia) and the camping trip it depicts never appears in the manga. Medium confidence: this is the single strongest candidate row for a narrow adopted{author} if Sean prefers per-episode adoption to a block ruling.",
+      "sources": [
+        "https://ja.wikipedia.org/wiki/BORUTO-%E3%83%9C%E3%83%AB%E3%83%88-_-NARUTO_NEXT_GENERATIONS-",
+        "https://cdn.animenewsnetwork.com/encyclopedia/api.xml?anime=18934",
+        "https://naruto.fandom.com/api.php?action=parse&page=The%20Night%20of%20the%20Shooting%20Stars&prop=wikitext&format=json"
+      ]
+    },
+    {
+      "episodes": [35, 36, 37],
+      "type": "filler",
+      "chapters": "none",
+      "confidence": "high",
+      "note": "Graduation Exams Arc (卒業試験編) — Narutopedia bounds it 34-37. Anime-original: the manga never shows the Academy graduation exam (its ch 1 opens with the cast already genin), and none of these three Narutopedia pages carries a `chapters=` value. The related novel 'The Last Day at the Ninja Academy!' (Jan 2018) covers events NOT seen in the anime, so it is not a source for these rows either.",
+      "sources": [
+        "https://naruto.fandom.com/api.php?action=parse&page=Graduation_Exams_Arc&prop=wikitext&format=json",
+        "https://naruto.fandom.com/api.php?action=parse&page=Boruto:_Naruto_Next_Generations&prop=wikitext&format=json",
+        "https://www.animefillerlist.com/shows/boruto-naruto-next-generations-definitive-filler-list"
+      ]
+    },
+    {
+      "episodes": [38],
+      "type": "filler",
+      "chapters": "none",
+      "confidence": "high",
+      "note": "'Formation of the Three-Man Squad?' — standalone; Narutopedia gives it no arc (empty `arc=`), sitting between the Graduation Exams Arc (34-37) and ep 39 (which DOES adapt Kishimoto's 'Naruto Gaiden: The Path Lit by the Full Moon' and is already stored canon). Team assignments are anime-original padding here; no `chapters=`.",
+      "sources": [
+        "https://naruto.fandom.com/api.php?action=parse&page=Formation%20of%20the%20Three-Man%20Squad%3F&prop=wikitext&format=json",
+        "https://ja.wikipedia.org/wiki/BORUTO-%E3%83%9C%E3%83%AB%E3%83%88-_-NARUTO_NEXT_GENERATIONS-"
+      ]
+    },
+    {
+      "episodes": [42],
+      "type": "filler",
+      "chapters": "none",
+      "confidence": "high",
+      "note": "'A Ninja's Job' — Genin Mission Arc (下忍ミッション編, Narutopedia eps 40-42; ja.wp 下忍編 40-42). Our stored data already types the arc's other two rows (40, 41) filler and AFL agrees; ep 42 is the same anime-original D-rank-mission material and carries no `chapters=`. AFL's own definitive list treats 40-47 as a single undifferentiated 'anime canon' run, which is why 42 landed in this batch while 40-41 did not — an artefact of AFL, not a content difference.",
+      "sources": [
+        "https://naruto.fandom.com/api.php?action=parse&page=Genin_Mission_Arc&prop=wikitext&format=json",
+        "https://naruto.fandom.com/api.php?action=parse&page=A%20Ninja%27s%20Job&prop=wikitext&format=json",
+        "https://www.animefillerlist.com/shows/boruto-naruto-next-generations-definitive-filler-list"
+      ]
+    },
+    {
+      "episodes": [43, 44, 45, 46, 47],
+      "type": "filler",
+      "chapters": "none",
+      "confidence": "high",
+      "note": "Byakuya Gang Arc (白夜団編) — Narutopedia eps 43-47. Entirely anime-original; the Byakuya Gang, Gekko and Ryogi have no manga existence (Ryogi: 'Appears in: Anime' only). None of the five Narutopedia pages carries `chapters=`. Shikadai's shogi/Ryogi storyline is never referenced in the manga.",
+      "sources": [
+        "https://naruto.fandom.com/api.php?action=parse&page=Byakuya_Gang_Arc&prop=wikitext&format=json",
+        "https://naruto.fandom.com/api.php?action=parse&page=Ry%C5%8Dgi&prop=text&format=json",
+        "https://ja.wikipedia.org/wiki/BORUTO-%E3%83%9C%E3%83%AB%E3%83%88-_-NARUTO_NEXT_GENERATIONS-"
+      ]
+    },
+    {
+      "episodes": [51, 52],
+      "type": "filler",
+      "chapters": "none",
+      "confidence": "high",
+      "note": "Anime-original LEAD-IN inside the Versus Momoshiki Arc. Narutopedia states that arc 'covers chapters 1 to 10 of the Boruto manga and episodes 51 to 66' — but the chapter-1 material starts at ep 53 (Narutopedia ep 53 infobox: `chapters=1`, matching our stored anchor ep53->ch1). Eps 51-52 carry no `chapters=` and precede the manga entirely: they invent a White Zetsu mission and introduce Urashiki Otsutsuki, an anime-only Otsutsuki ('Appears in: Anime, Game' — never in the manga) who then drives several later anime-original arcs.",
+      "sources": [
+        "https://naruto.fandom.com/api.php?action=parse&page=Versus_Momoshiki_Arc&prop=wikitext&format=json",
+        "https://naruto.fandom.com/api.php?action=parse&page=Urashiki%20%C5%8Ctsutsuki&prop=text&format=json",
+        "https://naruto.fandom.com/api.php?action=parse&page=Boruto%27s%20Birthday&prop=wikitext&format=json"
+      ]
+    },
+    {
+      "episodes": [60],
+      "type": "filler",
+      "chapters": "none",
+      "confidence": "high",
+      "note": "'The Hidden Leaf vs. the Hidden Sand' — an anime-original tournament match (Sarada vs Araya) INSERTED between two adapting rows: our stored anchors run ep59->ch4 and ep61->chs4-5, and Narutopedia's ep 60 page carries no `chapters=`. The manga's third round does not contain this bout. Not 'overlap' filler in the zatch-bell sense — it adds no source content at all, it inserts new content.",
+      "sources": [
+        "https://naruto.fandom.com/api.php?action=parse&page=The%20Hidden%20Leaf%20vs.%20The%20Hidden%20Sand&prop=wikitext&format=json",
+        "https://naruto.fandom.com/api.php?action=parse&page=Versus_Momoshiki_Arc&prop=wikitext&format=json",
+        "https://www.animefillerlist.com/shows/boruto-naruto-next-generations"
+      ]
+    },
+    {
+      "episodes": [70],
+      "type": "filler",
+      "chapters": "none",
+      "confidence": "high",
+      "note": "'The Other Side of Anxiety' — a standalone Metal Lee / Might Guy episode. STRUCTURE NOTE: Narutopedia assigns it to no arc (empty `arc=`; Chocho Arc = 67-69, Mitsuki's Disappearance Arc = 71-92), while ja.wikipedia's table leaves it under the preceding 超チョウチョウ蝶モード編 header. That matters because the Chocho header carries the note '原作者である岸本斉史が原案を務めた' (Kishimoto supplied the original concept) — a credit that on Narutopedia's reading covers only 67-69, NOT ep 70. AFL's definitive list calls 67-70 filler outright. No `chapters=`; no manga content.",
+      "sources": [
+        "https://naruto.fandom.com/api.php?action=parse&page=The%20Other%20Side%20of%20Anxiety&prop=wikitext&format=json",
+        "https://naruto.fandom.com/api.php?action=parse&page=Ch%C5%8Dch%C5%8D_Arc&prop=wikitext&format=json",
+        "https://ja.wikipedia.org/wiki/BORUTO-%E3%83%9C%E3%83%AB%E3%83%88-_-NARUTO_NEXT_GENERATIONS-"
+      ]
+    },
+    {
+      "episodes": [71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92],
+      "type": "filler",
+      "chapters": "none",
+      "confidence": "high",
+      "note": "Mitsuki's Disappearance Arc (ミツキ失踪編) — Narutopedia and ja.wikipedia agree on eps 71-92, the anime's largest original arc. None of the 22 Narutopedia pages carries `chapters=`. Nothing in it exists in the manga: Ku ('Appears in: Anime, Game'), Sekiei, Kokuyo, Akuta and Kozuchi are anime-only; Narutopedia prefixes the whole Onoki/Fabrications backstory with 'In the anime…' and cites only Boruto episodes 83/84 for it; Onoki's death is an anime-only event the manga never acknowledges. Sean's ruling on eps 221-286 (adopted{community}) is the nearest stored precedent — see flags_for_sean.",
+      "sources": [
+        "https://naruto.fandom.com/api.php?action=parse&page=Mitsuki%27s_Disappearance_Arc&prop=wikitext&format=json",
+        "https://naruto.fandom.com/api.php?action=parse&page=%C5%8Cnoki&prop=wikitext&format=json",
+        "https://naruto.fandom.com/api.php?action=parse&page=K%C5%AB&prop=text&format=json",
+        "https://ja.wikipedia.org/wiki/BORUTO-%E3%83%9C%E3%83%AB%E3%83%88-_-NARUTO_NEXT_GENERATIONS-"
+      ]
+    },
+    {
+      "episodes": [98, 99, 100, 101, 102, 103],
+      "type": "filler",
+      "chapters": "none",
+      "confidence": "high",
+      "note": "Jugo Arc / Cursed Seal Infection Arc (重吾編・呪印感染編) — Narutopedia bounds it 98-103; ja.wikipedia's 呪印感染編 header opens at ep 96 (our stored filler rows 96-97 belong to it). Anime-original throughout, no `chapters=` on any page; Momo and Sasami are anime-only. Note it is bracketed by novel-adapted blocks (93-95 = Naruto Shinden: Parent and Child Day; 106+ = Konoha Shinden: Steam Ninja Scrolls) but adapts no novel itself.",
+      "sources": [
+        "https://naruto.fandom.com/api.php?action=parse&page=J%C5%ABgo_Arc&prop=wikitext&format=json",
+        "https://naruto.fandom.com/api.php?action=parse&page=The%20Cursed%20Forest&prop=wikitext&format=json",
+        "https://ja.wikipedia.org/wiki/BORUTO-%E3%83%9C%E3%83%AB%E3%83%88-_-NARUTO_NEXT_GENERATIONS-"
+      ]
+    },
+    {
+      "episodes": [104, 105],
+      "type": "filler",
+      "chapters": "none",
+      "confidence": "high",
+      "note": "Two standalone follow-ups after the Jugo Arc: 104 'The Little Roommate' (Mitsuki and a stray kitten) and 105 'A Wound on the Heart' (Orochimaru and Log reviewing Mitsuki's memories of the Iwagakure incident — a coda to eps 71-92). Narutopedia gives both an empty `arc=` and no `chapters=`; ja.wikipedia keeps them inside 呪印感染編. AFL's definitive list calls both plain filler while its main list calls them anime canon — another AFL self-contradiction on this range.",
+      "sources": [
+        "https://naruto.fandom.com/api.php?action=parse&page=The%20Little%20Roommate&prop=wikitext&format=json",
+        "https://naruto.fandom.com/api.php?action=parse&page=A%20Wound%20on%20the%20Heart&prop=wikitext&format=json",
+        "https://www.animefillerlist.com/shows/boruto-naruto-next-generations-definitive-filler-list"
+      ]
+    }
+  ],
+  "annotations": [
+    {
+      "episodes": [51, 52, 60],
+      "kind": "divergence",
+      "note": "Anime-original episodes interleaved INTO the Versus Momoshiki Arc, which otherwise adapts Boruto manga chs 1-10 (eps 53-59, 61-66). Eps 51-52 prepend a White Zetsu mission and introduce Urashiki Otsutsuki — an Otsutsuki who exists nowhere in the manga; ep 60 inserts a Sarada vs Araya tournament match the manga does not contain. The anime's telling of chs 1-10 therefore diverges from the source even inside the adapted arc.",
+      "sources": [
+        "https://naruto.fandom.com/api.php?action=parse&page=Versus_Momoshiki_Arc&prop=wikitext&format=json",
+        "https://naruto.fandom.com/api.php?action=parse&page=Urashiki%20%C5%8Ctsutsuki&prop=text&format=json"
+      ]
+    }
+  ],
+  "repairs": [],
+  "structure": {
+    "notes": "Single-season entry, 293 aired rows, no specials/ep-0 inside 2-105, no numbering conversion needed: Narutopedia, ja.wikipedia, en.wikipedia and AFL all use the same flat 1-293 cumulative numbering our rows use, and I verified per-row identity by matching Narutopedia's `episode=` field AND air date for all 68 targets (no off-by-one anywhere). ARC BOUNDARIES — the two wikis disagree in places and I used Narutopedia (which publishes explicit numeric bounds on each arc page) as primary: Academy Entrance 1-15 (both agree); Sarada Uchiha 19-24 Narutopedia vs 16-24 ja.wp; School Trip 25-32 (both); Graduation Exams 34-37 Narutopedia vs 33-39 ja.wp; Genin Mission 40-42 (both); Byakuya Gang 43-47 (both); Versus Momoshiki / Chunin Exams 51-66 (both) = manga chs 1-10; Chocho 67-69 Narutopedia vs 67-70 ja.wp; Mitsuki's Disappearance 71-92 (both); Parent and Child Day 93-95; Jugo 98-103 Narutopedia vs 96-105 ja.wp. Consequence: eps 33, 38, 70, 104 and 105 are ARC-LESS standalone episodes on Narutopedia (empty `arc=` field), which is why they are typed individually above. PER-EPISODE ADAPTATION FIELD: Narutopedia's episode infobox `chapters=` is the reliable signal (ep 53 -> `chapters=1`); the sibling `boruto=Yes/No` field is NOT reliable — ep 4 carries `boruto=Yes` with no `chapters` and adapts nothing. AFL INSTABILITY: animefillerlist publishes two mutually inconsistent lists for this show — the main list calls 32-35, 70 and 104-105 'anime canon' (which is why they are targets), the 'definitive' list calls those same rows plain filler, and the definitive list additionally moves 16-17 and 40-41 into 'anime canon'. AFL's boundary here is not stable enough to be evidence of anything. NOVEL-SOURCED BLOCKS near this range (orientation only, not target rows): eps 93-95 adapt the novel 'Naruto Shinden: Parent and Child Day', eps 106+ adapt 'Konoha Shinden: Steam Ninja Scrolls', eps 282-286 adapt 'Sasuke Retsuden' — all three per ja.wikipedia's arc-header footnotes and Narutopedia's arc pages; under this protocol those are canon + side_source, not adopted{community}.",
+    "order_only": []
+  },
+  "flags_for_sean": [
+    "THE RULING SEAN OWES: block-wide adopted{author}, or filler? FOR adoption — Ukyo Kodachi, writer (脚本) of the Boruto manga chs 1-52, holds a dedicated ストーリー監修 'Story Supervisor' credit on the TV anime for EPISODES 1-216, i.e. every target row here. Three independent sources: en.wikipedia's infobox ('Ukyo Kodachi (#1-216) [Story Supervisor ストーリー監修]') and body ('Kodachi supervised the anime's story until episode 216'); ja.wikipedia's staff block ('ストーリー監修 - 小太刀右京'); Narutopedia ('Kodachi supervised the screenwriters of the anime up until episode 216… several screenwriters submitted their stories to him, with Kodachi monitoring everything in the event a scene could dramatically change the characterisation of a character'). Plus Kishimoto is 原作・原案・監修 on both works. The protocol's adopted{author} criterion is literally 'the source's author wrote / supervised / declared it' — this is supervision, credited, with an exact episode range. AGAINST — the credit does not DISCRIMINATE: eps 16-17, 40-41, 48-50, 67-69 and 96-97 are inside the identical window and are filler in our data, in AFL's data and in every source; applying it would make ~216 of 293 episodes canon and abolish the filler/canon line for the whole first part. Compare Kishimoto's identical 原作・監修 credit across Naruto Shippuden's filler arcs. I recommend FILLER. Links: https://en.wikipedia.org/wiki/Boruto:_Naruto_Next_Generations_(TV_series) · https://ja.wikipedia.org/wiki/BORUTO-%E3%83%9C%E3%83%AB%E3%83%88-_-NARUTO_NEXT_GENERATIONS- · https://naruto.fandom.com/api.php?action=parse&page=Boruto:_Naruto_Next_Generations&prop=wikitext&format=json",
+    "CONSISTENCY AGAINST A STORED RULING: eps 221-286 are already ruled canon + adopted{community} (five anime-original arcs). Those sit OUTSIDE Kodachi's supervision window (which ends at 216), so they have strictly WEAKER author backing than eps 2-105 — yet they are canon and eps 2-105 would stay filler. A defensible distinction exists: 221-286 are inserted INTO the anime's ongoing adaptation of the manga (between ep 220 = ch 55 and ep 287 = ch 56), i.e. they occupy a position in the source's own timeline the way Black Clover 130-157 do; eps 2-105 are a parallel prequel plus scattered insertions the manga never reaches. If Sean does not accept that distinction, the two blocks must be ruled the same way — either 2-105 up, or 221-286 down. This is the single most important thing to decide before applying this verdict.",
+    "IF SEAN WANTS A NARROW ADOPTION instead of a block ruling, exactly these rows carry a SPECIFIC author act rather than the blanket credit: (a) eps 8-9 — Kishimoto personally expanded one planned episode into two, in Kodachi's own words (en.wikipedia, citing https://web.archive.org/web/20170906191750/http://www.spirallingsphere.com/2017/06/ukyou-kodachi-talks-about-kishimotos-extremely-carefull-supervision-of-boruto/); (b) ep 34 — Kodachi personally co-credited as 脚本 (ja.wikipedia per-episode script column; ANN staff list 'Script | Ukyo Kodachi'); (c) OUTSIDE this block, eps 67-69, the Chocho Arc, which Narutopedia says 'is based on Kishimoto's idea, with him also providing some dialogue for it' and ja.wikipedia footnotes '原作者である岸本斉史が原案を務めた' — these three rows are stored filler and are NOT batch-18 targets, but they carry a STRONGER per-arc author credit than any target row here. Any narrow adopted{author} ruling that covers 8-9 and 34 should almost certainly cover 67-69 too, which would be a repair on rows outside my scope. Same for the Time Slip arc (eps 137-140 region), which ja.wikipedia says Kishimoto supplied the idea for.",
+    "PUBLISHER COUNTER-TESTIMONY worth reading before ruling: at Lucca Comics 2018, with Ikemoto present, WSJ editor-in-chief Hiroyuki Nakano was asked directly whether the Boruto anime and manga are 'two alternative stories'. He answered that anime are usually transpositions of manga, 'however Boruto is born first of all as a film, and the anime series has taken a different path from that of the manga. They are two different projects, but what is narrated in the manga will sooner or later be transposed into the anime series.' That is a publisher-level statement that the manga is the source and the anime's own material is a separate project — the strongest single argument for filler. https://www.animeclick.it/news/78138-lucca-2018-reportage-degli-incontri-con-mikio-ikemoto (Narutopedia cites the same interview.)",
+    "PARTIAL ADOPTION IN THE OTHER DIRECTION (does not change the typing, but is a real fact): the Academy Entrance Arc's original character Sumire Kakei was subsequently taken INTO the manga — Narutopedia's character infobox gives her a manga debut of Boruto chapter #18 and 'Appears in: Anime, Manga, Novel, Game', and she is a standing manga cast member through the Kawaki, Code, Omnipotence and Two Blue Vortex arcs (V-Jump #10, Aug 2026 TBV character profile). So the SOURCE adopted the arc's creation, even though the source never depicts the arc's events. No other target arc has this property: Kagura (School Trip), Ryogi (Byakuya), Ku/Sekiei/Kokuyo/Akuta/Kozuchi (Mitsuki), Urashiki (51-52) and Iwabee/Tsubaki all carry 'Appears in: Anime (+Novel/Game)' with no manga, and ja.wikipedia states outright 'アニメオリジナルキャラであるため漫画には登場しない'.",
+    "MINOR SOURCE CONFLICT, unresolved, does not affect any target row: ja.wikipedia says Denki Kaminarimon does not appear in the manga ('イワベエとデンキはアニメオリジナルキャラであるため漫画には登場しない'), while Narutopedia's Denki infobox says 'Appears in: Anime, Manga, Novel, Game' with no manga debut chapter listed. The two agree on Iwabee (no manga). I cited only Iwabee.",
+    "OUT-OF-SCOPE REPAIR CANDIDATE for whoever holds Boruto's later rows: eps 282-286 are inside the stored adopted{community} block 221-286, but ja.wikipedia's arc footnote says the Sasuke Retsuden arc is 'ノベライズ『サスケ烈伝』を原作としてアニメ化' — it adapts the Sasuke Retsuden novel. Under this protocol that is canon + side_source, not adopted{community}. Same shape for eps 93-95 (Naruto Shinden: Parent and Child Day, stored mixed) and eps 106+ (Konoha Shinden: Steam Ninja Scrolls, stored canon). I did not file these as repairs because they are outside my target rows and another wave may own them."
+  ]
+}
