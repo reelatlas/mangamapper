@@ -108,7 +108,7 @@ export const RULES: Rule[] = [
     enforcement: [
       { path: 'scripts/ingest/audit-ui-truth.ts', symbol: 'ruling_violation' },
       { path: '.claude/skills/research-batch/SKILL.md', symbol: 'When research is the wrong tool' },
-      { path: '.claude/skills/consolidate/SKILL.md', symbol: 'Full census + verification' },
+      { path: '.claude/skills/consolidate/SKILL.md', symbol: 'Census' },
     ],
     layer: 'process',
     auditClass: ['ruling_violation'],
@@ -129,7 +129,7 @@ export const RULES: Rule[] = [
     enforcement: [
       { path: 'src/lib/mapping.ts' },
       { path: 'src/data/catalog/assemble.ts' },
-      { path: '.claude/skills/consolidate/SKILL.md', symbol: 'Frontend contract check' },
+      { path: '.claude/skills/consolidate/SKILL.md', symbol: 'Frontend contract' },
     ],
     layer: 'display',
     auditClass: ['verify:fail'],
@@ -150,7 +150,7 @@ export const RULES: Rule[] = [
     enforcement: [
       { path: 'scripts/ingest/history/apply-research-batch-17.ts', symbol: 'REPAIRS_APPROVED' },
       { path: '.claude/skills/apply-batch/SKILL.md', symbol: 'Repairs on derivation-tier rows get wiped' },
-      { path: '.claude/skills/consolidate/SKILL.md', symbol: 'hikaru ep-75 wipe' },
+      { path: '.claude/skills/consolidate/SKILL.md', symbol: 'derivation-tier rows' },
     ],
     layer: 'writer',
     witnesses: ['hikaru-no-go', 'mashle-magic-and-muscles'],
@@ -313,7 +313,7 @@ export const RULES: Rule[] = [
     origin: 'consolidate skill §5; apply-batch skill step 8',
     enforcement: [
       { path: '.claude/skills/apply-batch/SKILL.md', symbol: 'Explain every census delta' },
-      { path: '.claude/skills/consolidate/SKILL.md', symbol: 'Full census + verification' },
+      { path: '.claude/skills/consolidate/SKILL.md', symbol: 'Census' },
       { path: 'scripts/ingest/audit-ui-truth.ts' },
     ],
     layer: 'process',
@@ -334,7 +334,7 @@ export const RULES: Rule[] = [
     origin: 'consolidate skill §5 (2026-08-23); §12.21 consolidation pass 2 (class defined)',
     enforcement: [
       { path: 'scripts/ingest/audit-ui-truth.ts', symbol: 'ruling_violation' },
-      { path: '.claude/skills/consolidate/SKILL.md', symbol: 'ruling_violation MUST be 0' },
+      { path: '.claude/skills/consolidate/SKILL.md', symbol: 'MUST be 0' },
       { path: '.claude/skills/apply-batch/SKILL.md', symbol: 'Explain every census delta' },
     ],
     layer: 'process',
@@ -356,7 +356,7 @@ export const RULES: Rule[] = [
     origin: 'data-pipeline §11 "Post-adjustment whole-series verification (Sean\'s ruling 2026-08-23)"; §12.33 (c)',
     enforcement: [
       { path: 'scripts/ingest/verify-series-display.ts', symbol: 'verifySeries' },
-      { path: '.claude/skills/apply-batch/SKILL.md', symbol: 'verify-series-display.ts --all' },
+      { path: '.claude/skills/apply-batch/SKILL.md', symbol: 'verify-series-display --all' },
     ],
     layer: 'process',
     auditClass: ['verify:fail', 'verify:hole', 'verify:regression'],
@@ -494,7 +494,7 @@ export const RULES: Rule[] = [
     enforcement: [
       { path: 'CLAUDE.md', symbol: 'Gates before any commit' },
       { path: 'tsconfig.scripts.json' },
-      { path: '.claude/skills/consolidate/SKILL.md', symbol: 'Frontend contract check' },
+      { path: '.claude/skills/consolidate/SKILL.md', symbol: 'Frontend contract' },
     ],
     layer: 'process',
     status: 'live',
@@ -536,7 +536,7 @@ export const RULES: Rule[] = [
     enforcement: [
       { path: 'CLAUDE.md', symbol: 'Capture' },
       { path: '.claude/skills/consolidate/SKILL.md', symbol: 'Close the loop' },
-      { path: '.claude/skills/apply-batch/SKILL.md', symbol: 'Capture' },
+      { path: '.claude/skills/apply-batch/SKILL.md', symbol: 'capture' },
     ],
     layer: 'process',
     status: 'live',
@@ -555,7 +555,7 @@ export const RULES: Rule[] = [
     origin: 'apply-batch skill "The standing goal"; consolidate skill §10 "Check the gates are real"; docs/system-evolution.md §2',
     enforcement: [
       { path: '.claude/skills/apply-batch/SKILL.md', symbol: 'The standing goal' },
-      { path: '.claude/skills/consolidate/SKILL.md', symbol: 'Check the gates are real' },
+      { path: '.claude/skills/consolidate/SKILL.md', symbol: 'costing model attention' },
       { path: 'scripts/restructure/ledger-check.ts', symbol: 'noAudit' },
     ],
     layer: 'process',

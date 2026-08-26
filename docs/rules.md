@@ -3456,7 +3456,7 @@ A misbehaving writer must surface as data (audit-ui-truth.ts), whichever code pa
 
 - ruled Sean 2026-08-23 (CLAUDE.md Hard invariants #3; §12.21 consolidation pass 2 (ruling_violation))
 - layer **process**
-- enforced: [audit-ui-truth.ts#ruling_violation](../scripts/ingest/audit-ui-truth.ts) · [.claude/skills/research-batch/SKILL.md#When research is the wrong tool](../.claude/skills/research-batch/SKILL.md) · [.claude/skills/consolidate/SKILL.md#Full census + verification](../.claude/skills/consolidate/SKILL.md)
+- enforced: [audit-ui-truth.ts#ruling_violation](../scripts/ingest/audit-ui-truth.ts) · [.claude/skills/research-batch/SKILL.md#When research is the wrong tool](../.claude/skills/research-batch/SKILL.md) · [.claude/skills/consolidate/SKILL.md#Census](../.claude/skills/consolidate/SKILL.md)
 - audit: `ruling_violation`
 - aliases: invariant 3, hard invariant 3, audits verify outcomes, outcome-check pattern, script before model
 - see: P2, P17, P18, P29
@@ -3469,7 +3469,7 @@ Where data is incomplete the display shows pending, hides the element, or render
 
 - ruled Sean 2026-08-23 (CLAUDE.md Hard invariants #4; consolidate skill §7 (2026-08-23))
 - layer **display**
-- enforced: [src/lib/mapping.ts](../src/lib/mapping.ts) · [src/data/catalog/assemble.ts](../src/data/catalog/assemble.ts) · [.claude/skills/consolidate/SKILL.md#Frontend contract check](../.claude/skills/consolidate/SKILL.md)
+- enforced: [src/lib/mapping.ts](../src/lib/mapping.ts) · [src/data/catalog/assemble.ts](../src/data/catalog/assemble.ts) · [.claude/skills/consolidate/SKILL.md#Frontend contract](../.claude/skills/consolidate/SKILL.md)
 - audit: `verify:fail`
 - aliases: invariant 4, hard invariant 4, graceful degradation
 - see: P18, A4
@@ -3482,7 +3482,7 @@ A repaired value is a RESEARCHED value. Derivation-tier rows (source mu, afg, af
 
 - ruled Sean 2026-08-24 (data-pipeline §10 "Curated repairs live at the MANUAL tier (2026-08-24, the hikaru ep-75 wipe)"; §12.43)
 - layer **writer**
-- enforced: [history/apply-research-batch-17.ts#REPAIRS_APPROVED](../scripts/ingest/history/apply-research-batch-17.ts) · [.claude/skills/apply-batch/SKILL.md#Repairs on derivation-tier rows get wiped](../.claude/skills/apply-batch/SKILL.md) · [.claude/skills/consolidate/SKILL.md#hikaru ep-75 wipe](../.claude/skills/consolidate/SKILL.md)
+- enforced: [history/apply-research-batch-17.ts#REPAIRS_APPROVED](../scripts/ingest/history/apply-research-batch-17.ts) · [.claude/skills/apply-batch/SKILL.md#Repairs on derivation-tier rows get wiped](../.claude/skills/apply-batch/SKILL.md) · [.claude/skills/consolidate/SKILL.md#derivation-tier rows](../.claude/skills/consolidate/SKILL.md)
 - **audit: none — automation backlog**
 - witnesses: hikaru-no-go, mashle-magic-and-muscles
 - aliases: invariant 7, hard invariant 7, repairs live at the manual tier, hikaru ep-75 wipe, hikaru lesson
@@ -3590,7 +3590,7 @@ After any apply or consolidation the census (audit-ui-truth.ts) is compared clas
 
 - ruled session 2026-08-23 (consolidate skill §5; apply-batch skill step 8)
 - layer **process**
-- enforced: [.claude/skills/apply-batch/SKILL.md#Explain every census delta](../.claude/skills/apply-batch/SKILL.md) · [.claude/skills/consolidate/SKILL.md#Full census + verification](../.claude/skills/consolidate/SKILL.md) · [audit-ui-truth.ts](../scripts/ingest/audit-ui-truth.ts)
+- enforced: [.claude/skills/apply-batch/SKILL.md#Explain every census delta](../.claude/skills/apply-batch/SKILL.md) · [.claude/skills/consolidate/SKILL.md#Census](../.claude/skills/consolidate/SKILL.md) · [audit-ui-truth.ts](../scripts/ingest/audit-ui-truth.ts)
 - audit: `anchor_nonmonotonic`, `anchor_beyond_chapter_space`
 - aliases: census + delta explanation, explain every census delta, every census delta explained
 - see: P5, P18, P15
@@ -3603,7 +3603,7 @@ The ruling_violation census class verifies every standing ruling outcome-side in
 
 - ruled Sean 2026-08-23 (consolidate skill §5 (2026-08-23); §12.21 consolidation pass 2 (class defined))
 - layer **process**
-- enforced: [audit-ui-truth.ts#ruling_violation](../scripts/ingest/audit-ui-truth.ts) · [.claude/skills/consolidate/SKILL.md#ruling_violation MUST be 0](../.claude/skills/consolidate/SKILL.md) · [.claude/skills/apply-batch/SKILL.md#Explain every census delta](../.claude/skills/apply-batch/SKILL.md)
+- enforced: [audit-ui-truth.ts#ruling_violation](../scripts/ingest/audit-ui-truth.ts) · [.claude/skills/consolidate/SKILL.md#MUST be 0](../.claude/skills/consolidate/SKILL.md) · [.claude/skills/apply-batch/SKILL.md#Explain every census delta](../.claude/skills/apply-batch/SKILL.md)
 - audit: `ruling_violation`
 - witnesses: eyeshield-21
 - aliases: ruling_violation = 0 gate, ruling_violation MUST be 0, fix the writer, never the data
@@ -3617,7 +3617,7 @@ After any anchor or episode adjustment to a series, run verify-series-display ag
 
 - ruled Sean 2026-08-23 (data-pipeline §11 "Post-adjustment whole-series verification (Sean's ruling 2026-08-23)"; §12.33 (c))
 - layer **process**
-- enforced: [verify-series-display.ts#verifySeries](../scripts/ingest/verify-series-display.ts) · [.claude/skills/apply-batch/SKILL.md#verify-series-display.ts --all](../.claude/skills/apply-batch/SKILL.md)
+- enforced: [verify-series-display.ts#verifySeries](../scripts/ingest/verify-series-display.ts) · [.claude/skills/apply-batch/SKILL.md#verify-series-display --all](../.claude/skills/apply-batch/SKILL.md)
 - audit: `verify:fail`, `verify:hole`, `verify:regression`
 - witnesses: oshi-no-ko, my-hero-academia
 - aliases: the verifier, whole-series verifier, verify-after-adjust ruling, Oshi stale-harness lesson, post-adjustment whole-series verification
@@ -3710,7 +3710,7 @@ Before any save point: npx tsc -b --noEmit shows 0 errors, npm run lint, npm tes
 
 - ruled session 2026-08-23 (data-pipeline §12.34 (a); §10 "Frontend gate is tsc -b (2026-08-23 s2)"; CLAUDE.md "Gates before any commit"; restructure-plan T2.0)
 - layer **process**
-- enforced: [CLAUDE.md#Gates before any commit](../CLAUDE.md) · [tsconfig.scripts.json](../tsconfig.scripts.json) · [.claude/skills/consolidate/SKILL.md#Frontend contract check](../.claude/skills/consolidate/SKILL.md)
+- enforced: [CLAUDE.md#Gates before any commit](../CLAUDE.md) · [tsconfig.scripts.json](../tsconfig.scripts.json) · [.claude/skills/consolidate/SKILL.md#Frontend contract](../.claude/skills/consolidate/SKILL.md)
 - **audit: none — automation backlog**
 - aliases: tsc -b gate, frontend gate, gates before commit, gates before any commit, frontend gate is tsc -b
 - see: P28, P19
@@ -3736,7 +3736,7 @@ When something is learned it is routed and the route stated: a RULE → a ledger
 
 - ruled Sean 2026-08-24 (CLAUDE.md "Capture — where a new learning goes"; consolidate skill §10; apply-batch "Next step" step 7)
 - layer **process**
-- enforced: [CLAUDE.md#Capture](../CLAUDE.md) · [.claude/skills/consolidate/SKILL.md#Close the loop](../.claude/skills/consolidate/SKILL.md) · [.claude/skills/apply-batch/SKILL.md#Capture](../.claude/skills/apply-batch/SKILL.md)
+- enforced: [CLAUDE.md#Capture](../CLAUDE.md) · [.claude/skills/consolidate/SKILL.md#Close the loop](../.claude/skills/consolidate/SKILL.md) · [.claude/skills/apply-batch/SKILL.md#capture](../.claude/skills/apply-batch/SKILL.md)
 - **audit: none — automation backlog**
 - aliases: capture, capture routing, close the loop, the capture table
 - see: P1, P30, P31
@@ -3749,7 +3749,7 @@ Every rule should end up enforced by a writer gate and verified by an audit clas
 
 - ruled Sean 2026-08-24 (apply-batch skill "The standing goal"; consolidate skill §10 "Check the gates are real"; docs/system-evolution.md §2)
 - layer **process**
-- enforced: [.claude/skills/apply-batch/SKILL.md#The standing goal](../.claude/skills/apply-batch/SKILL.md) · [.claude/skills/consolidate/SKILL.md#Check the gates are real](../.claude/skills/consolidate/SKILL.md) · [scripts/restructure/ledger-check.ts#noAudit](../scripts/restructure/ledger-check.ts)
+- enforced: [.claude/skills/apply-batch/SKILL.md#The standing goal](../.claude/skills/apply-batch/SKILL.md) · [.claude/skills/consolidate/SKILL.md#costing model attention](../.claude/skills/consolidate/SKILL.md) · [scripts/restructure/ledger-check.ts#noAudit](../scripts/restructure/ledger-check.ts)
 - **audit: none — automation backlog**
 - aliases: judgment → gate → audit, judgment to gate to audit, the standing goal, direction of travel, check the gates are real
 - see: P5, P29, P31
