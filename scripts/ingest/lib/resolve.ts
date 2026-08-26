@@ -7,6 +7,12 @@ import { contentHash } from './hash';
 import { slugify } from './slug';
 import type { AflShowPage } from './afl';
 import type { AniListMedia } from './anilist';
+// Standing per-series rulings (T2.1): the records live in rulings/, each
+// file exports the consumer lookup; re-exported below at the old names.
+import { EXTRAS_ADOPTED } from './rulings/extras-adopted';
+import { COMMUNITY_COUNT_OVERRIDES } from './rulings/community-counts';
+import { SOURCE_NUMBERING_SHIFTS } from './rulings/numbering-shifts';
+import { EPISODE_TYPE_OVERRIDES } from './rulings/episode-types';
 
 export type StageOutcome = 'unchanged' | 'changed' | 'held';
 
@@ -57,14 +63,7 @@ export async function applyScope(
 // a whole cour, so they can't be confused. Larger overshoots floor only once
 // RULED (Sean's confirm loop via reconcile-structure flags); until then the
 // flag is the research trigger. Every totals writer applies this.
-export const EXTRAS_ADOPTED = new Set<string>([
-  'angel-beats', // OVA specials 14-16 (broadcast content, ruled 2026-08-24)
-  'rurouni-kenshin', // 1996 broadcast tail 95-100
-  // eyeshield-21 REMOVED (Sean's report 2026-08-25, §12.49): the "10
-  // specials beyond 145" premise was an AFG PAGE TYPO — its chart has 145
-  // rows with the finale mis-numbered "155."; no source names any content
-  // for 146-154. The adopted floor rationalized a parse artifact.
-]);
+export { EXTRAS_ADOPTED } from './rulings/extras-adopted';
 
 // Community-count rulings (Sean 2026-08-24: the community-consensus episode
 // count is the truth — specials/ep-0s the community numbers are IN; large
@@ -76,20 +75,7 @@ export const EXTRAS_ADOPTED = new Set<string>([
 //   community numbering excludes → 100.
 // Enforced at every episode-row write (rows above the cap are dropped) and
 // as a totals clamp after the floor.
-export const COMMUNITY_COUNT_OVERRIDES: Record<string, { cap: number; note: string }> = {
-  'psycho-pass': { cap: 41, note: 'First Inspector + films are watch-order events, not numbered episodes (Sean 2026-08-24)' },
-  'monogatari-series': { cap: 100, note: 'community numbering excludes the 3 Second Season recaps (Sean 2026-08-24)' },
-  'high-school-dxd': { cap: 48, note: "HERO's Episode 0 is a mid-run special the community's continuous numbering excludes — order-only (Sean 2026-08-24)" },
-  'urusei-yatsura': { cap: 194, note: 'MAL/AniList count the farewell RECAP special (rebroadcast of ep 44 + countdown) as #194; Wikipedia holds it at 193.5 unnumbered — recap rule (Monogatari precedent): excluded, finale = 194 (research-verified 2026-08-23)' },
-  'yu-yu-hakusho-ghostfiles': { cap: 112, note: 'TV run = 112; trailing extras (2009 Picture Drama, 2018 OVAs Two Shot/All or Nothing) are order-only — AFL renumbers them after drops, so the CAP is the durable instrument (the drop[113] alone let All or Nothing re-enter as 113; research batch 11, 2026-08-23)' },
-  //   Clear Card = SEPARATE series (Sean 2026-08-24, the Naruto→Shippuden
-  //   pattern: different manga, 87296). The shared AFL page numbers through
-  //   93 — rows beyond 71 (1998 TV 1-70 + Prologue OVA 71) belong to
-  //   cardcaptor-sakura-clear-card in its own 1-22 numbering
-  'cardcaptor-sakura': { cap: 71, note: 'Clear Card split (Sean 2026-08-24); AFL page spans both series' },
-  'eyeshield-21': { cap: 145, note: 'AFG\'s chart typos its finale row as "155." (the page has 145 rows) — the cap keeps the phantom from re-entering via extend/expansion (Sean 2026-08-25, §12.49); the anime is 145 episodes on every real source' },
-  'project-arms': { cap: 52, note: 'AFL row 53 "PS2 Video Game" is a Bandai PS2 game absorbed as an episode row (air date 2002-03-28 sits BEFORE ep 52\'s — verifier-confirmed 2026-08-25); the anime is 52 eps (26+26). Cap keeps the phantom from re-entering on any AFL refresh' },
-};
+export { COMMUNITY_COUNT_OVERRIDES } from './rulings/community-counts';
 
 export function applyCommunityCap(
   seriesId: string,
@@ -104,260 +90,16 @@ export function applyCommunityCap(
 // Research-ruled per-episode TYPE corrections (Sean 2026-08-23): where a
 // source site misclasses episodes against community consensus, the ruling
 // lives here and re-applies on every episode write — a bare DB update would
-// be clobbered by the next AFL page refresh. Each entry carries citations.
-//   x 21-24: the anime-original ending (manga on hiatus at broadcast) — AFL
-//   classes them manga-canon; research verdict (xtvclamp.fandom, Wikipedia,
-//   cbr.com) says original. anime-only-canon renders them truthfully (no
-//   chapter counterpart BY DESIGN, not mapping-pending null).
+// be clobbered by the next AFL page refresh. Each entry carries citations —
+// the records live in rulings/episode-types.ts (T2.1).
+export { EPISODE_TYPE_OVERRIDES } from './rulings/episode-types';
+
 // Research-ruled SOURCE SUPPRESSIONS (2026-08-23, the Claymore/Kimi lesson):
 // same-episode precedence cannot stop a ruled-WRONG source value landing on
 // a DIFFERENT episode — when research proves a source's frontier wrong for a
 // series, that source is suppressed there entirely. Applied by the source's
 // writer; verified outcome-side by the ruling_violation audit.
-export const CONTINUA_SUPPRESSED: Record<string, string> = {
-  'you-and-i-are-polar-opposites': 'continua endEpisode converts to our ep 11 while AFG\'s OWN chart rows put the frontier at ep 12 (chart: ep 11 = 26-28, ep 12 = 29-31) — a wrong-episode pin that overwrote real chart data and tripped anchor_start_offtrend (deep pass 2026-08-25); the chart rows carry the true frontier. Retire if AFG fixes its continua episode or the conversion gains a chart cross-check (restructuring-phase gate candidate)',
-  claymore: 'continua says ep 26 → ch 54, but eps 24-26 are fully anime-original (research 2026-08-23) — the manual ep-20 → ch-56 anchor is the frontier',
-  'kimi-ni-todoke-from-me-to-you': 'continua says ep 43 → ch 86 — ch 86 is unsupported anywhere (mid-vol 21, unadapted; research 2026-08-23); manual ep-44 → ch-75 is the frontier',
-};
-
-const range = (from: number, to: number, type: string) =>
-  Object.fromEntries(Array.from({ length: to - from + 1 }, (_, i) => [from + i, type]));
-
-export const EPISODE_TYPE_OVERRIDES: Record<string, Record<number, string>> = {
-  //   x 21-24 RE-RULED filler (Sean 2026-08-25, superseding the 2026-08-23
-  //   anime-only-canon ruling): the studio ending is technically filler; the
-  //   community accepts it only because no true ending exists (manga on
-  //   indefinite hiatus) and prefers it over the movie's alternative — the
-  //   "only ending" class, annotated + asterisked for re-evaluation when the
-  //   taxonomy-v2 rule lands (system-evolution.md).
-  x: { 21: 'filler', 22: 'filler', 23: 'filler', 24: 'filler' },
-  //   RESEARCH BATCH 15 (2026-08-24, exact-record promotion — 2+ sources each,
-  //   verdict JSONs in research/batch15/out):
-  //   black-butler ep 3: Grelle subplot anime-original (ScreenRant explicit +
-  //   fandom differences; AFL dissents — 2-of-3). bleach ep 149: adapts ch 247
-  //   p.16-end in its closing minutes (fandom page-level + AFG 'Mixed'; AFL
-  //   dissents). dagashi ep 11: second half anime-original framing around chs
-  //   50/52/13. kamisama ep 10: ch-25 beats reworked into anime-only Christmas
-  //   mixer + past-arc graft. dragon-maid 19-21/23: one segment per ep
-  //   anime-original (fandom + Rory Muses per-episode reviews).
-  //   naruto-shippuden 452-454/456-457: Itachi Shinden novel adaptation, zero
-  //   manga pages (Narutopedia + AFG + Wikipedia S20) — licensed canon side
-  //   story = anime-only-canon per the Boruto/Black Clover precedent (ep 455
-  //   stays mixed: disputed ch-678 frame).
-  'black-butler': { 3: 'mixed' },
-  bleach: { 149: 'mixed' },
-  'kamisama-kiss': { 10: 'mixed' },
-  'miss-kobayashis-dragon-maid': { 19: 'mixed', 20: 'mixed', 21: 'mixed', 23: 'mixed' },
-  'naruto-shippuden': { 452: 'anime-only-canon', 453: 'anime-only-canon', 454: 'anime-only-canon', 456: 'anime-only-canon', 457: 'anime-only-canon' },
-  //   RESEARCH BATCH 17 (2026-08-24, gap tier — 2+ sources each, verdict
-  //   JSONs in research/batch17/out). Sean's vocabulary (2026-08-24):
-  //   anime-only-canon = made for the anime but standing as canon;
-  //   filler = outside both canons (retconned or disposable).
-  //   chrono-crusade: anime departs after ep 13 — 5/7/8/11/12 are original
-  //   bridges on canon continuity, 14-21 the "primarily original" stretch
-  //   that still pulls manga beats (Wikipedia lead + MU + ja-WP), 22-24 the
-  //   original ending. kenichi 51: OAD 1 is an author-original scenario
-  //   (ja-WP 原作者オリジナルの書き下ろし). rave-master 41: filler sites say
-  //   filler, but its core IS ch 74 (Let joins / Silver Knights) — mixed.
-  //   rurouni-kenshin-2023 34/44: zero chapters adapted (fandom blank +
-  //   no Act page); 34 is Watsuki's own exhibition storyboard = canon-grade.
-  //   sailor-moon 167-172: Nehelenia-revival arc, anime-original
-  //   continuation of SuperS's villain. twin-star 20 mixed (canon to
-  //   ~14:05) and 21-50 the anime's own serialized finale — never returns
-  //   to the manga (contradicts it: Yuto dies here, survives there).
-  //   world-trigger 48 = anime-original breather inside the canon arc;
-  //   49-63 = the Fugitive Arc, RETCONNED by S2 → filler, not canon.
-  'chrono-crusade': {
-    ...range(5, 5, 'mixed'), ...range(7, 8, 'mixed'), ...range(11, 12, 'mixed'),
-    ...range(14, 21, 'mixed'), ...range(22, 24, 'anime-only-canon'),
-  },
-  'kenichi-the-mightiest-disciple': { 51: 'mixed' },
-  'rave-master': { 41: 'mixed' },
-  'rurouni-kenshin-2023': { 34: 'anime-only-canon', 44: 'anime-only-canon' },
-  //   rurouni-kenshin (1996) 79-82: were typed mixed, but the whole 63-94
-  //   block is anime-original (batch-17 verdict: Wikipedia season-3 "not
-  //   adapted from the manga" + AFL) — the Shimabara/Christian arc included.
-  //   Found in Sean's post-switch review 2026-08-24: these four mistyped rows
-  //   were why frontier_tail_null flagged the series (the audit was RIGHT;
-  //   the earlier "false positive" framing was wrong). Rows 95-98 are the
-  //   Trust & Betrayal OVAs adopted as episodes — real manga adaptation
-  //   (Remembrance arc), kept canon, flagged for anchor research.
-  'rurouni-kenshin': { 79: 'filler', 80: 'filler', 81: 'filler', 82: 'filler' },
-  'sailor-moon': { ...range(167, 172, 'anime-only-canon') },
-  'twin-star-exorcists': { 20: 'mixed', ...range(21, 50, 'anime-only-canon') },
-  'world-trigger': { 48: 'anime-only-canon', ...range(49, 63, 'filler') },
-  //   BATCH 17 CHUNK 1 WAVE 1 (Sean's rulings 2026-08-25; verdict JSONs in
-  //   research/batch17/out + out2, each 2+ sources, cross-model verified
-  //   where weight-bearing). Type semantics per Sean's 2026-08-25 ruling:
-  //   mixed = canon AND non-canon in one episode; AFL/AFG advisory only.
-  //   hellsing 7/10: ep 7 closes with ch 11-12 material inside an
-  //   increasingly-original stretch; ep 10 adapts ch 2 as a rearranged
-  //   flashback inside the original back half — both mixed.
-  //   fist-of-the-north-star: 61/78/83 zero canon (Bugal filler, recap-block
-  //   opener, filler — hokuto.fandom + Finn Clark part-3/4 reviews; AFL
-  //   dissents, ruled fandom+accounting-beats-AFL); 58/75/84/86/91 carry
-  //   canon alongside original material — mixed.
-  //   sket-dance 26/32: AFL's table STOPS at ep 54 so its filler labels
-  //   there are not typings — ep 26 adapts ch 180 in full (ja-WP subtitle =
-  //   the chapter title), ep 32 adapts chs 18+45 → canon. ep 77: finale
-  //   adapts ch 167 with an anime-original bookend → mixed.
-  //   dragon-ball-z 100: Kanzenshuu ch 323 p.1-11 "Half Filler" + Dragon
-  //   Universe manga field — 3 sources vs AFL alone → mixed.
-  //   fairy-tail 256: closing act adapts ch 398 p.12-end (~9 pages, past
-  //   the sliver line); Laxus/Tempester substitution is original → mixed.
-  //   the-promised-neverland 23: adapts chs 172-178 beat-for-beat with
-  //   ruled substitutions (Isabella lives, Emma keeps memories) → mixed.
-  //   one-piece 737: the Sabo special adapts ch 794 (wiki fwd+reverse) —
-  //   AFL's anime-canon label loses to the explicit chapter mapping → mixed.
-  hellsing: { 7: 'mixed', 10: 'mixed' },
-  //   zatch-bell contested block (Sean's overlap-rule re-research 2026-08-25,
-  //   out2/zatch-bell-contested.json — konjikinogash.fandom per-episode
-  //   manga_chapter fields + en-WP; the prior "all 10 filler" proposal rested
-  //   on exhaustive accounting, ruled insufficient): 13/108/118/119/123 zero
-  //   canon (119 = a re-staged REHASH of the ch 35-36 flashback already
-  //   animated at eps 14-15 — the overlap rule's discount case); 51 (ch 22
-  //   Germany half, held back 41 eps), 57 (chs 109-110 reworked), 103
-  //   (ch 173 opening), 117 (ch 183 closing scene), 122 (ch 186 tail) all
-  //   carry real canon → mixed.
-  'zatch-bell': {
-    13: 'filler', 108: 'filler', 118: 'filler', 119: 'filler', 123: 'filler',
-    51: 'mixed', 57: 'mixed', 103: 'mixed', 117: 'mixed', 122: 'mixed',
-  },
-  //   BATCH 17 WAVE 2 (Sean's rulings 2026-08-25, verifier-confirmed where
-  //   weight-bearing; verdicts in research/batch17/out):
-  //   kinnikuman 120-137: the two anime-original arcs — author-COMMISSIONED
-  //   but never author-declared canon; the 1991 sequel continuity-overwrites
-  //   their timeline slot (ja-WP verbatim) and the canon-signal hunt came up
-  //   empty → filler (were anime-only-canon).
-  //   trigun 6: adapts ch 0 prologue + ch 4's opening inside original
-  //   framing; 16: adapts ch 16 + ch 20's Angel Arm climax (episode title =
-  //   chapter title) inside the divergence zone → mixed.
-  //   hayate 10: anime-only per Wikipedia outright + only S1 canon-numbered
-  //   fandom page with no Adapted From → filler; 19: canon + original mix.
-  //   saint-seiya 64: JP title = ch 39's title (Sagittarius trials are
-  //   Toei's) → mixed.
-  kinnikuman: { ...range(120, 137, 'filler') },
-  //   eyeshield-21 (Sean's sign-off 2026-08-25; base verdict + contested
-  //   re-research out2/eyeshield-21-contested.json; the 19-block verified
-  //   per-episode AND double-sourced via ja-WP's 備考 column): import took
-  //   AFG titles but never mapped its filler flag → all defaulted canon.
-  //   45/46 exhibition, 89-95 Cream Puff Cup, 96 recap, 97-105 Death Game
-  //   (101 EXCLUDED — canon island chs 168-169), 108 whodunnit, 51 fake-
-  //   Eyeshield, 109/110 (relocation hypothesis REFUTED on content) → filler.
-  //   39 recap + canon scene, 66 ch-133 tag, 88 ch-100 4-koma intervals in
-  //   original framing (wiki states mixed outright), 74 ch-150 content in
-  //   flagged-original episode → mixed.
-  'eyeshield-21': {
-    45: 'filler', 46: 'filler', ...range(89, 100, 'filler'), ...range(102, 105, 'filler'),
-    108: 'filler', 51: 'filler', 109: 'filler', 110: 'filler',
-    39: 'mixed', 66: 'mixed', 88: 'mixed', 74: 'mixed',
-  },
-  trigun: { 6: 'mixed', 16: 'mixed' },
-  'hayate-the-combat-butler': { 10: 'filler', 19: 'mixed' },
-  'saint-seiya-knights-of-the-zodiac': { 64: 'mixed' },
-  //   CHUNK 2 WAVE 1 (Sean's rulings 2026-08-25, all verifier-confirmed):
-  //   dsq 35 zero canon; 44-45 = the "caught up, padded out" class — anime
-  //   outran the manga, studio padded a finale: pure filler (Sean overruled
-  //   the verdict's anime-only-canon), annotated with why the real canon was
-  //   never animated. emma 19-23: the O'Donnell arc (chs 38-46) replaced by
-  //   an invented conspiracy → mixed. dc 128/1000/1001: chapter re-runs —
-  //   re-staged canon content, never position → mixed.
-  'detective-school-q': { 35: 'filler', 44: 'filler', 45: 'filler' },
-  'emma-a-victorian-romance': { 19: 'mixed', 20: 'mixed', 21: 'mixed', 22: 'mixed', 23: 'mixed' },
-  'detective-conan': { 128: 'mixed', 1000: 'mixed', 1001: 'mixed' },
-  'fist-of-the-north-star': {
-    61: 'filler', 78: 'filler', 83: 'filler',
-    58: 'mixed', 75: 'mixed', 84: 'mixed', 86: 'mixed', 91: 'mixed',
-  },
-  'sket-dance': { 26: 'canon', 32: 'canon', 77: 'mixed' },
-  'dragon-ball-z': { 100: 'mixed' },
-  'fairy-tail': { 256: 'mixed' },
-  'the-promised-neverland': { 23: 'mixed' },
-  'one-piece': { 737: 'mixed' },
-  //   claymore 24-26: fully anime-original ending (Madhouse outran the
-  //   manga) — research verdict 2026-08-23 (AFG + wheredoestheanimeleaveoff
-  //   + sportskeeda), Sean sign-off
-  claymore: { 24: 'anime-only-canon', 25: 'anime-only-canon', 26: 'anime-only-canon' },
-  //   black-clover 130-157: zero manga chapters adapted anywhere in the
-  //   stretch (blackclover.fandom infoboxes all empty + animefillerguide +
-  //   animefillerlist agree; research batch 8, 2026-08-23) — manga position
-  //   holds at ch 228 until canon resumes at ep 158 → ch 229-231.
-  //   Tabata-supervised side stories = anime-only-canon; the disputed
-  //   131/134-135 and the Devil Banishers arc 142-149 = filler (2-of-3
-  //   sources).
-  'black-clover': {
-    ...range(130, 130, 'anime-only-canon'),
-    ...range(131, 131, 'filler'),
-    ...range(132, 133, 'anime-only-canon'),
-    ...range(134, 135, 'filler'),
-    ...range(136, 141, 'anime-only-canon'),
-    ...range(142, 149, 'filler'),
-    ...range(150, 157, 'anime-only-canon'),
-  },
-  //   boruto 221-286: five ANIME-CANON arcs between the Kawaki arc end
-  //   (ep 220 → ch 55) and Code's Assault (287-293 = chs 56-67) — Chunin
-  //   Re-Exam, Kirigakure war, Kawaki Academy, Labyrinth, Sasuke Retsuden.
-  //   TRAP: animefillerlist marks 282-293 'Manga Canon' crediting the
-  //   Sasuke Retsuden SPIN-OFF manga — trusting it would falsely advance
-  //   Boruto chapter progress (research batch 11, 2026-08-23:
-  //   narutopedia arc pages + animefillerguide + cbr).
-  'boruto-naruto-next-generations': range(221, 286, 'anime-only-canon'),
-  //   gto: anime-original mid-series block + the original ending (caught
-  //   up to the manga) — fandom infoboxes list Manga Chapter(s) = N/A;
-  //   mangashed + wheredoestheanimeleaveoff call 42-43 non-canon
-  //   (research batch 11, 2026-08-23).
-  'gto-great-teacher-onizuka': {
-    ...range(22, 28, 'anime-only-canon'),
-    ...range(34, 34, 'anime-only-canon'),
-    ...range(42, 43, 'anime-only-canon'),
-  },
-  //   railgun: S1 back half (Big Spider/Poltergeist) + S's Silent Party are
-  //   anime-original (director-confirmed); ep 14 EXCEPTED — it grafts manga
-  //   ch 17 (research batch 12, 2026-08-23: animefillerlist + fandom arc
-  //   pages + Wikipedia).
-  'a-certain-scientific-railgun': {
-    ...range(13, 13, 'anime-only-canon'),
-    ...range(15, 24, 'anime-only-canon'),
-    ...range(41, 48, 'anime-only-canon'),
-  },
-  //   ajin S2 (14-26) is anime-original from the start with a non-canon
-  //   ending (research batch 12: WDTALO + mangashed + per-episode breakdown);
-  //   canon resumes at manga ch 22.
-  'ajin-demi-human': range(14, 26, 'anime-only-canon'),
-  //   hunter-x-hunter (1999) ep 7: AFL types it filler, but Hunterpedia's
-  //   page-level 'Adapted' field has it adapting ch 7 p.3-9,12-19 + ch 8
-  //   p.2-4 (Wikipedia's summary + AniB's phase ranges agree on the content)
-  //   — research batch 14 (2026-08-23 s2), anchored ep7→7
-  'hunter-x-hunter': { 7: 'mixed' },
-  // ---- research batch 14 (2026-08-23 s2) type corrections, 2+ sources each
-  //   beastars Final Season: ep 44 adapts no chapter (reviewer recap vs every
-  //   chapter synopsis 149-196); eps 37/42 mix anime-original plots with 141 / 155.
-  //   ep 44 SEAN-RULED anime-only-canon 2026-08-24 on positive evidence
-  //   (batch15/out/beastars-ep44-followup.json): chs 169-171 = cut Kyuu
-  //   chapters, 172-176 in ep 47, frame-up/rat-base/kiss-deferral content
-  //   matches no chapter in 161-179 (the manga's ch-173 first kiss is
-  //   relocated to the ep-48 finale). Caveat: flips to mixed if the
-  //   step-stool line is ever confirmed inside ch 166.
-  beastars: { 37: 'mixed', 42: 'mixed', 44: 'anime-only-canon' },
-  //   cardcaptor-sakura: Wood/Rain (4) and Silent (7) are anime-only cards with
-  //   anime-original plots; 5 (ch-1 flashback video only) and 39 (Cloud, on the
-  //   premise of ch 33) are mixed; Clear Card 76, 83-87 anime-original, 82 mixed
-  'cardcaptor-sakura': { 4: 'filler', 5: 'mixed', 7: 'filler', 39: 'mixed' },
-  //   Clear Card (separate series, Sean 2026-08-24): our old 76/82-87 in the
-  //   split entry's own numbering (−71)
-  'cardcaptor-sakura-clear-card': { 5: 'anime-only-canon', 11: 'mixed', 12: 'anime-only-canon', 13: 'anime-only-canon', 14: 'anime-only-canon', 15: 'anime-only-canon', 16: 'anime-only-canon' },
-  //   dagashi-kashi ep 10 'That's Dagashi!': anime-original sick-Hotaru story
-  //   with gag fragments only (MAL reader posts, Inquisitr, WDTALO list, fandom);
-  //   ep 11 second half anime-original station-farewell framing around chs
-  //   50/52/13 (research batch 15, 2026-08-24)
-  'dagashi-kashi': { 10: 'mixed', 11: 'mixed' },
-  //   reborn 111-112: fights against anime-only characters with anime-original
-  //   box weapons (ja.wikipedia アニメオリジナル匣 + fandom Future Arc page)
-  reborn: { 111: 'mixed', 112: 'mixed' },
-  //   slime ep 30 (S2E6): adapts 54-55 (Rimuru/Hinata) but the whole Tempest
-  //   segment is anime-original (fandom adaptation notes + batch-14 review)
-  'that-time-i-got-reincarnated-as-a-slime': { 30: 'mixed' },
-};
+export { CONTINUA_SUPPRESSED } from './rulings/continua-suppressed';
 
 // SOURCE NUMBERING TRANSLATION (Sean's ruling 2026-08-23, the Dr. Stone /
 // Ryuusui lesson): a source that NUMBERS an entry our community count holds
@@ -374,41 +116,7 @@ export const EPISODE_TYPE_OVERRIDES: Record<string, Record<number, string>> = {
 //   integer ep 7 on AFL but "6.5" (excluded) on AFG/fandom/Wikipedia — so a
 //   blanket shift would corrupt the already-aligned source. Every caller
 //   states its space; the shift skips spaces it does not name.
-export const SOURCE_NUMBERING_SHIFTS: Record<string, { drop: number[]; shifts: { from: number; offset: number }[]; spaces?: string[] }> = {
-  'dr-stone': { drop: [36], shifts: [{ from: 37, offset: -1 }] }, // AFL numbers the Ryuusui special as ep 36; our ruling holds it order-only at position 36
-  // Queue-2 Group C demotions (Sean sign-off 2026-08-23): standalone
-  // bonuses/films the community does not number — order-only by ruling;
-  // AFL numbers them, so its rows translate on every refresh.
-  'yu-yu-hakusho-ghostfiles': { drop: [113], shifts: [] }, // Picture Drama bonus
-  'miss-kobayashis-dragon-maid': { drop: [14], shifts: [{ from: 15, offset: -1 }] }, // Valentine/Onsen bonus OVA
-  'fate-kaleid-liner-prisma-illya': { drop: [11], shifts: [{ from: 12, offset: -1 }] }, // Undoukai DE Dance bonus
-  // mashle (Sean's fractional ruling 2026-08-25, CHUNK1-RECOVERY.md §9): the
-  // S1 recap is integer ep 7 in AFL's numbering only — AFG/fandom/Wikipedia/
-  // AniList all exclude it (fandom calls it "Episode 6.5"). Our rows follow
-  // the community convention: recap = watch-order entry at 6.5, main rows
-  // 1-24. AFL-space rows translate; AFG chart numbers are ALREADY in our
-  // space and must not shift.
-  'mashle-magic-and-muscles': { drop: [7], shifts: [{ from: 8, offset: -1 }], spaces: ['afl'] },
-  'prison-school': { drop: [13], shifts: [] }, // Mad Wax bonus OVA
-  'to-love-ru-darkness': { drop: [25, 26], shifts: [] }, // 2nd Specials bonuses
-  'ghost-in-the-shell-stand-alone-complex': { drop: [53], shifts: [] }, // Solid State Society is a FILM (movies order-only unless community-numbered)
-  'yu-gi-oh-2000': { drop: [225], shifts: [] }, // Dark Side of Dimensions is a FILM
-  //   AFL counts the 2017 OVA 'Hitori Ayumu' as ep 25 (aired between S2 and
-  //   S3), shifting S3+ by +1 vs the community's 60-episode TV numbering —
-  //   research batch 8 (2026-08-23): fandom's 'Episode 61' = TV ep 60
-  //   'Twilight Goodbye'. The OVA holds watch position 24.5 (order-only,
-  //   adapts ~ch 40 side material).
-  'bungo-stray-dogs': { drop: [25], shifts: [{ from: 26, offset: -1 }] },
-  //   AFL counts the anime-original OVA 'Vampire Shahal' (May 2016) as a
-  //   trailing ep 25; only 24 TV episodes exist (research batch 9,
-  //   2026-08-23). No shift — the row is at the end. OVA holds watch
-  //   position 24.5 (order-only, adapts no manga).
-  'seraph-of-the-end-vampire-reign': { drop: [25], shifts: [] },
-  //   Netflix lists a ~14-min RECAP special ('S3 Episode 00') as a sixth S3
-  //   item; AFL numbers it as a trailing ep 44 — only 43 story episodes
-  //   exist (research batch 10, 2026-08-23). Recap rule: excluded.
-  'kimi-ni-todoke-from-me-to-you': { drop: [44], shifts: [] },
-};
+export { SOURCE_NUMBERING_SHIFTS } from './rulings/numbering-shifts';
 
 // Translate ONE source-space episode number into ours (null = the number IS
 // a dropped order-only entry). Anchor/annotation writers use this so a

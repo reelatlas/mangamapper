@@ -13,6 +13,7 @@
 // everything.
 
 import { db, fileFlagOnce, selectAll } from './db';
+import { MU_FRONTIER_SUPPRESSED } from './rulings/mu-frontier-suppressed';
 
 export function parseCoverageAll(text: string | null): {
   pairs: { volume: number; chapter: number }[];
@@ -53,17 +54,7 @@ export type FrontierResult =
 // can derive from held data. Each entry states its reasoning and the
 // condition that retires it. The delete-at-entry still runs, so a standing
 // bad pin heals on the next pass; the suppression only blocks the rewrite.
-export const MU_FRONTIER_SUPPRESSED: Record<string, string> = {
-  // The entry's seasons adapt THREE different manga (S1 eps 1-10 = the 1st
-  // series' 14-chapter space, 2wei!/Herz!, 3rei!!) but the entry holds ONE
-  // chapter space. MU's "Vol 2, Chap 14" states S1's completion of the
-  // FIRST manga; the run-end assumption would land it on ep 42 — the movie,
-  // which adapts 3rei!! 29-39. The scope-consumed check misses it by one
-  // chapter (research ENDs stop at 13; 14 is the unadapted epilogue).
-  // Retire when the D2 split (Clear-Card-style scoped entries) lands.
-  'fate-kaleid-liner-prisma-illya':
-    'multi-manga entry pending the D2 split — the MU pin conflates S1\'s first-manga completion onto the 3rei!!-adapting movie episode',
-};
+export { MU_FRONTIER_SUPPRESSED } from './rulings/mu-frontier-suppressed';
 
 // nonMuMaxEp/nonMuMaxCh: the series' anchor maxima EXCLUDING source 'mu'
 // (undefined when the series has no non-MU anchors at all).

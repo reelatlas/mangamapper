@@ -122,7 +122,10 @@ Label collisions the ledger must alias: "D1" = kamisama ep-10 (§12.41) AND the 
 4. **Client frontier ignores episode type** — a stray filler anchor is hidden in the list but can set latestKnown. T2 dedupe (one A1 predicate for both consumers).
 5. **Re-running historical apply scripts reverts later rulings**: apply-research-batch.ts recreates the fotbs 23-26 ova span (demoted 08-25b); apply-research-aot-s4p2.ts reverts ep 87 start 130→123; the dr-stone row-95 creation is contradicted by the later order-only ruling. `history/` must be non-runnable by convention AND by the roster check.
 6. **Batches 15/16 did not promote repaired rows to manual** (only 17 does) — invariant 7 gap in two historical scripts; check whether any mu/afg row repaired by 15/16 still stands (a census query).
-7. `one-pace` applied while noted pending (A-10).
+7. **FIXED 2026-08-26** — `one-pace` exclusion now carries Sean's ruling (A-10).
+8. `wiki-episodes-backfill.ts:403` runs wiki-CREATED rows (already in our space) through `filterEpisodeRows(…, 'wiki')`; a series whose SOURCE_NUMBERING_SHIFTS entry declares no `spaces` would be mis-shifted on the row-less canon-tier path. Fix in T2: make `spaces` explicit on every historical shift, then unify WIKI_NUMBERING_SHIFTS into it. (Found by the T2.1 non-lib agent.)
+9. 14 repairs approved in batches 15/16 never promoted the row to `manual` (P8); their rulings carry `retiresWhen: 'P8 check…'` — a census query must confirm none still stands at derivation tier.
+10. 8 assisted-batch OVERRIDE_CHAINS entries have no recorded reason (UNRECORDED in docs/rulings.md) — backfill from §12/AniList when touched.
 
 ---
 

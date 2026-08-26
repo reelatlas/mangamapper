@@ -21,18 +21,13 @@
 import { db, selectAll, startRun, finishRun } from './lib/db';
 import { registerIds } from './lib/resolve';
 import { slugify } from './lib/slug';
+import { RULED } from './lib/rulings/afg-registrations';
 
 const REGISTER = process.argv.includes('--register');
 
-// Explicit rulings: afg slug → our series id (null = ruled NOT a match).
-const RULED: Record<string, string | null> = {
-  // 90s original, NOT Crystal (synonym collision found in the 2026-08-24 audit)
-  'bishoujo-senshi-sailor-moon': 'sailor-moon',
-  // zero-episode AFG stub whose slug collides with our 2020 entry's id AND the
-  // 1999 entry's afl_slug; AFG's title "Digimon Adventure" is the 1999 romaji
-  // exactly (the 2020 reboot is "Digimon Adventure:" per AniList naming)
-  'digimon-adventure': 'digimon-digital-monsters',
-};
+// Explicit rulings (afg slug → our series id, null = ruled NOT a match) live
+// in lib/rulings/afg-registrations.ts (restructure T2.1); RULED is the
+// derived lookup.
 
 const normalize = (s: string) =>
   s.toLowerCase().normalize('NFKD').replace(/[^a-z0-9]+/g, ' ').trim();

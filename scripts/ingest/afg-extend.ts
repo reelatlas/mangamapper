@@ -22,14 +22,10 @@ import { db, selectAll, startRun, finishRun, fileFlagOnce } from './lib/db';
 import { stageAniList, applyScope, applyEpisodeFloor, filterEpisodeRows } from './lib/resolve';
 import { aired, walkChain, aggregate, writeComponents, ownedAnilistIds } from './lib/chain';
 import { syncAnchors } from './lib/anchors';
+import { RULED_SPLITS } from './lib/rulings/ruled-splits';
 
-// AFG pages whose numbering deliberately runs across one of OUR ruled splits
-// (they treat the franchise as one list; we keep separate entries by ruling).
-// Their data for the split-off part belongs to the OTHER series' own page/scope.
-const RULED_SPLITS = new Set<string>([
-  'bleach', // 367+ = TYBW, separate entry (bleach-thousand-year-blood-war)
-  'tokyo-ghoul', // 25+ = :re, separate entry (Sean 2026-08-24: Naruto/Shippuden pattern)
-]);
+// Ruled splits live in lib/rulings/ruled-splits.ts (restructure T2.1): AFG
+// pages whose numbering runs across one of OUR ruled splits, skipped by name.
 
 async function main() {
   const runId = await startRun('afg');

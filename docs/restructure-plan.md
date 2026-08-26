@@ -277,7 +277,7 @@ words after the glossary exists. Rough total: 8–12 sessions.
 |---|---|---|
 | ledger rules with no audit class | 88 of 258 (2026-08-26 ledger v1) | falling; empty cell = visible backlog |
 | PROTOCOL copies restating rule text | 4 (13/21/17/33 rule citations) | 1, ids only |
-| standing ruling maps outside `lib/rulings/` | ≈30 (T0 count) | 0 |
+| standing ruling maps outside `lib/rulings/` | 1 — WIKI_NUMBERING_SHIFTS (empty; unify with explicit `spaces` in T2, see DRIFT-LIST §E.8) | 0 |
 | unrostered ingest scripts | 36 to move/delete (34 history + 2 dead); 27 to roster | 0 |
 | CLAUDE.md role | router + family strip (done 2026-08-26) | router + family strip |
 | one-hop cases (batch-17 misses) | 16 defined, 16 pass mechanically (2026-08-26); cold probe pending T3.5 | all pass, mechanically + cold probe |
@@ -319,11 +319,11 @@ words after the glossary exists. Rough total: 8–12 sessions.
 | T1.5 | STATE.md; memory points at it (consolidate loop wired in T3.3) | T1.1 | done 2026-08-26 |
 | T1.6 | one-hop cases (16, batch-17 misses first) + one-hop-check | T1.2 | done 2026-08-26 |
 | T4.0 | glossary session (Sean) | T1.2 | planned |
-| T2.1 | lib/rulings/ + RulingEntry | T1.2 | planned |
-| T2.2 | rulings index by series | T2.1 | planned |
+| T2.1 | lib/rulings/ + RulingEntry — 13 standing maps converted (deep-equality proven), 26 applied files extracted from batches 1–17 + rulings scripts | T1.2 | done 2026-08-26 |
+| T2.2 | gen-rulings → docs/rulings.md (1,645 rulings, 192 series, 8 UNRECORDED) | T2.1 | done 2026-08-26 |
 | T2.0 | compile-graph sidecar (tsconfig.scripts.json) | — | done 2026-08-26 |
 | T2.3 | completeness sidecar — selectAll (count-checked) in lib/db.ts; 4 paging helpers → 1; 80+ sites converted incl. syncAnchors A1 hole; unpaged-selects scanner (P32 live) | — | done 2026-08-26 |
-| T2.4 | three rosters | T0.3 | planned |
+| T2.4 | rosters.ts (pull/heal/census, standard vs event) + run-roster + npm heal/census/pull; parity healer moved into the roster path | T0.3 | done 2026-08-26 |
 | T2.5 | script triage applied | T2.4 | planned |
 | T2.6 | edges + lib-hash stamp | T2.1–2.5 | planned |
 | T2.7 | system census | T2.4, T1.6 | planned |

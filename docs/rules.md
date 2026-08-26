@@ -891,7 +891,7 @@ Where the next canon/mixed episode's start is KNOWN, continue_chapter = that sta
 
 - ruled Sean 2026-08-24 (batch-15 DECISIONS-FOR-SEAN "C2 continue-read = ANIME PARITY"; data-pipeline §12.37; migration 20260825200000)
 - layer **writer**
-- enforced: [research/batch15/apply-parity-continues.ts](../scripts/ingest/research/batch15/apply-parity-continues.ts) · [research/batch17/PROTOCOL.md](../scripts/ingest/research/batch17/PROTOCOL.md)
+- enforced: [heal-parity-continues.ts](../scripts/ingest/heal-parity-continues.ts) · [research/batch17/PROTOCOL.md](../scripts/ingest/research/batch17/PROTOCOL.md)
 - **audit: none — automation backlog**
 - aliases: C2 rule, anime parity, parity continue, continue-read = anime parity, C2 ANIME-PARITY continue rule
 - see: C1, C3, C5, C6, C7, A4, A32
@@ -905,7 +905,7 @@ A continue point sitting STRICTLY below integer chapters listed in the same epis
 
 - ruled Sean 2026-08-25 (data-pipeline §10 "Continue-read regimes + re-use is true data (Sean's C3 clarification, 2026-08-25)"; §12.46)
 - layer **both**
-- enforced: [lib/c3.ts#c3Ahead](../scripts/ingest/lib/c3.ts) · [lib/c3.ts#hasSkipLanguage](../scripts/ingest/lib/c3.ts) · [lib/c3.ts#c3Note](../scripts/ingest/lib/c3.ts) · [research/batch15/apply-parity-continues.ts](../scripts/ingest/research/batch15/apply-parity-continues.ts)
+- enforced: [lib/c3.ts#c3Ahead](../scripts/ingest/lib/c3.ts) · [lib/c3.ts#hasSkipLanguage](../scripts/ingest/lib/c3.ts) · [lib/c3.ts#c3Note](../scripts/ingest/lib/c3.ts) · [heal-parity-continues.ts](../scripts/ingest/heal-parity-continues.ts)
 - audit: `continue_skip_unnoted`
 - witnesses: welcome-to-demon-school-iruma-kun, trigun, zatch-bell
 - aliases: C3 rule, skip notes, skip-on-arrival note, C3 skip-note predicate, C3 clarification
@@ -933,7 +933,7 @@ The continue point is governed by COVERAGE and KNOWN FUTURE anime coverage, neve
 
 - ruled Sean 2026-08-25 (data-pipeline §11 "THE POSITION & CONTINUE-READ LOGIC, AS ONE UNIT" item 3; batch-17 PROTOCOL "Rules that bind" bullet 4; DRIFT-LIST A-1)
 - layer **both**
-- enforced: [research/batch17/PROTOCOL.md](../scripts/ingest/research/batch17/PROTOCOL.md) · [research/batch15/apply-parity-continues.ts](../scripts/ingest/research/batch15/apply-parity-continues.ts) · [audit-ui-truth.ts#classes.anchor_beyond_display_total](../scripts/ingest/audit-ui-truth.ts)
+- enforced: [research/batch17/PROTOCOL.md](../scripts/ingest/research/batch17/PROTOCOL.md) · [heal-parity-continues.ts](../scripts/ingest/heal-parity-continues.ts) · [audit-ui-truth.ts#classes.anchor_beyond_display_total](../scripts/ingest/audit-ui-truth.ts)
 - audit: `continue_skip_unnoted`, `anchor_beyond_display_total`
 - witnesses: welcome-to-demon-school-iruma-kun, zatch-bell, ranma-1-2, shugo-chara, hajime-no-ippo-the-fighting
 - aliases: continue-read regimes, regime choice, continue point (b17), continue point, C1 C2 C3, continue-read = a regime choice
@@ -947,7 +947,7 @@ chapter_anchors.continue_kind takes exactly one of: parity (continue = the next 
 
 - ruled Sean 2026-08-24 (batch-15 DECISIONS-FOR-SEAN C2 (migration 20260825200000); data-pipeline §11 "CONTINUE-READ = ANIME PARITY")
 - layer **writer**
-- enforced: [research/batch15/apply-parity-continues.ts](../scripts/ingest/research/batch15/apply-parity-continues.ts)
+- enforced: [heal-parity-continues.ts](../scripts/ingest/heal-parity-continues.ts)
 - **audit: none — automation backlog**
 - aliases: continue_kind, continue_kind vocabulary, parity | unseen | post_series
 - see: C2, C5, C7
@@ -960,7 +960,7 @@ continue_chapter / continue_kind / continue_note are curated data that may live 
 
 - ruled session 2026-08-24 (data-pipeline §12.38 "CRON REVIEW" (preservation added to syncAnchors + applyContinua); apply-research-batch-17 CURATED_CONTINUES)
 - layer **writer**
-- enforced: [lib/anchors.ts#syncAnchors](../scripts/ingest/lib/anchors.ts) · [lib/anchors.ts#applyContinua](../scripts/ingest/lib/anchors.ts) · [apply-research-batch-17.ts#CURATED_CONTINUES](../scripts/ingest/apply-research-batch-17.ts) · [research/batch15/apply-parity-continues.ts](../scripts/ingest/research/batch15/apply-parity-continues.ts)
+- enforced: [lib/anchors.ts#syncAnchors](../scripts/ingest/lib/anchors.ts) · [lib/anchors.ts#applyContinua](../scripts/ingest/lib/anchors.ts) · [apply-research-batch-17.ts#CURATED_CONTINUES](../scripts/ingest/apply-research-batch-17.ts) · [heal-parity-continues.ts](../scripts/ingest/heal-parity-continues.ts)
 - **audit: none — automation backlog**
 - witnesses: trigun
 - aliases: parity-continue preservation, continue fields survive re-derive, curated continues, CURATED_CONTINUES

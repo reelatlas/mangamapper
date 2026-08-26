@@ -20,117 +20,14 @@ import { stageAniList, registerIds, applyScope, applyEpisodeFloor, filterEpisode
 import { slugify } from './lib/slug';
 import type { AflShowPage } from './lib/afl';
 import { getMedia, aired, walkChain, aggregate, writeComponents, ownedAnilistIds } from './lib/chain';
+import { OVERRIDE_CHAINS } from './lib/rulings/override-chains';
 
-// (JoJo and Monogatari unheld 2026-08-22: Sean ruled both ONE series.)
-const HOLD = new Set<string>([]);
-
-// Assisted-batch explicit chains (2026-08-22): cases the relation walker
-// can't derive — wrong upstream matches, broken/ambiguous relation graphs.
-// ids are AniList entries in series order (verified against AFL counts by the
-// same finalize gate); extras are in-flow components WITHOUT AFL episode rows
-// (Sean's ruling: Kizumonogatari movies belong inside Monogatari).
-const OVERRIDE_CHAINS: Record<
-  string,
-  { ids: number[]; extras?: { id: number; after: number }[]; title?: string; ruledExtent?: string }
-> = {
-  'jojos-bizarre-adventure-tv': { ids: [14719, 20474, 20799, 21450, 102883, 131942, 146722] },
-  // Off & Monster Season (173533) intentionally absent: AFL's page (100 rows)
-  // predates it — the count_mismatch flag on AFL's next update re-adds it here.
-  'monogatari-series': {
-    title: 'Monogatari Series', // the franchise identity, not the head season's
-    ids: [5081, 11597, 15689, 17074, 20593, 20918, 21262, 21520, 21745, 100815],
-    extras: [
-      { id: 9260, after: 21520 },
-      { id: 21399, after: 21520 },
-      { id: 21400, after: 21520 },
-    ],
-  },
-  'dragon-ball-z-kai': { ids: [6033, 20635] },
-  'bleach-thousand-year-blood-war': { ids: [116674, 159322, 169755, 185874] },
-  'yu-gi-oh-zexal': { ids: [10015, 15489] },
-  'hell-girl': { ids: [228, 1594, 3713, 98379] },
-  'magi-labyrinth-magic': { ids: [14513, 18115] },
-  'melancholy-haruhi-suzumiya': { ids: [4382] }, // 2009 rebroadcast = full 28-ep ordering AFL uses
-  'love-ru-darkness': {
-    ids: [13663, 20995],
-    extras: [{ id: 21852, after: 20995 }], // '2nd Specials' (eps 13-14 of 2nd) — order-only, adapts chs 43-47 (batch 14)
-    ruledExtent: 'AFL numbers the two 2nd-season specials as 25-26 (dropped by SOURCE_NUMBERING_SHIFTS); they hold an order-only position after 20995 — batch 14 (2026-08-23 s2)',
-  },
-  'kamisama-kiss': { ids: [14713, 20801, 21186] },
-  x: { ids: [156] },
-  // AniList relation-graph gaps found post-recovery (2026-08-23):
-  'tokyo-ghoul': { ids: [20605, 20850] }, // S1 + √A (AFL page = both, 24 eps)
-  'tokyo-ghoul-re-0': { ids: [100240, 102351] }, // :re parts 1+2
-  'fatestay-night-unlimited-blade-works': { ids: [19603, 20792] }, // UBW two cours
-  'rurouni-kenshin-2023': { ids: [142877, 171637] }, // 2023 + Kyoto Disturbance
-  'berserk-2016': { ids: [21560, 97643] }, // 2016+2017 (Memorial is its PREQUEL edge — separate entry by ruling)
-  'blade-immortal-2019': { ids: [109616] }, // 2019 ONA (match had landed on the 2008 TV)
-  'hokuto-no-ken': { ids: [967, 1356] },
-  // RULED EXTENSIONS (2026-08-23; AniList back up after the 08-23 outage):
-  // the stitch queue's AFL-lag class — every id verified against AniList's
-  // SEQUEL graph this session; extras are order-only watch-order entries
-  // (movies count only when numbered, §10).
-  'black-butler': {
-    ids: [4898, 6707, 20606, 166715, 179054],
-    extras: [
-      { id: 20670, after: 20606 }, // Book of Murder OVAs — order-only (flag #853)
-      { id: 21425, after: 20606 }, // Book of the Atlantic film — order-only (flag #853)
-    ],
-    ruledExtent: 'AFL page = S1+S2+Circus (46); Public School Arc TV (2024, our 47-57) + Emerald Witch Arc TV (2025, our 58-70) aired — flag #853',
-  },
-  kingdom: {
-    ids: [12031, 17389, 113108, 140350, 155227, 190840],
-    ruledExtent: 'AFL page stops at S3 (104 rows); S5 (2024, our 130-142) + S6 (Oct-Dec 2025, our 143-155) aired — flag #814. Zoku-hen (204688) joins when it airs',
-  },
-  'rent-girlfriend': {
-    ids: [113813, 124410, 154745, 179344, 199029],
-    ruledExtent: 'AFL page = S1-S3 (36); S4 (ONA, Jul 2025, our 37-48) + S5 (ONA, Apr 2026, our 49-60) aired — flag #839',
-  },
-  beastars: {
-    ids: [107660, 114194, 136880, 187267],
-    ruledExtent: 'AFL page = S1+S2 (24); FINAL SEASON Part 1 (Dec 2024, our 25-36) + Part 2 (Mar 2026, our 37-48) complete the manga — flag #854',
-  },
-  'ancient-magus-bride': {
-    ids: [98436, 154364, 166452],
-    extras: [{ id: 130713, after: 98436 }], // 2021 OVA 'Nishi no Shounen to Seiran no Kishi' — order-only between S1 and S2
-    ruledExtent: 'AFL page = S1 (24); SEASON 2 (2023, two cours, our 25-48) aired — batch-10 stitch flag',
-  },
-  'golden-kamuy': {
-    ids: [99699, 102977, 110355, 142343, 166521],
-    extras: [
-      { id: 101830, after: 99699 }, // OVA 1 (with vol 15): chs 55 (part)-59 + 32 — order-only (batch 14)
-      { id: 124756, after: 102977 }, // OVAs 2/3/4 (with vols 17/19/21): 83-85+104 / 63-69 / 108-113 — order-only (batch 14)
-      { id: 194872, after: 142343 }, // OVA 5 (2025): 102, 104-107, 228 — order-only (batch 14)
-    ],
-    ruledExtent: 'AFL page = S1+S2 (24); S3 (2020, our 25-36) + S4 (2022, our 37-49) + Final Season (Jan-Mar 2026, our 50-62 → ch 302, NOT the manga end: Bousou Ressha-hen 210073 will adapt 303-314) — flag #856; OVAs order-only per batch 14. Sapporo Beer Koujou-hen films (196115) = recut of eps 50-55, excluded',
-  },
-  'cardcaptor-sakura': {
-    ids: [232, 98554],
-    ruledExtent: "1998 TV (232, 1-70) + Clear Card PROLOGUE OVA 98554 ('Sakura and the Two Bears', ep 71, adapts chs 46-50 — NOT the Sealed Card film 372 the relation walk bridged through). Clear Card TV (97881) = SEPARATE series cardcaptor-sakura-clear-card (Sean 2026-08-24, different manga 87296); community cap 71 keeps the shared AFL page's tail out",
-  },
-  'my-hero-academia': {
-    ids: [21459, 21856, 100166, 104276, 117193, 139630, 163139, 182896],
-    extras: [
-      { id: 204356, after: 182896 }, // "No. 170+1: More" (2026-05-02, ch 431) — community-numbered 170+1 (Sean 2026-08-24)
-      { id: 211711, after: 182896 }, // "I am a hero too" Eri special (2026-08-03, ch 431.5) — mangaMapper position 170+1.5 (Sean's ruling)
-    ],
-    ruledExtent: "post-finale specials join as order-only entries (Sean 2026-08-24: essential canon the community groups with the series; surfaced with the community +N format — 'No. 170+1: More' at 170+1, the Eri fan-book special at Sean's 170+1.5, matching the manga's .5 bonus format). Counts stay 170",
-  },
-  'heroic-legend-arslan': {
-    ids: [20935, 21424],
-    extras: [{ id: 21817, after: 21424 }], // OVA: two anime-original side stories — order-only (batch 14)
-    ruledExtent: 'AFL page = S1 (25); Fuujin Ranbu (2016, 8 eps, our 26-33, chs 72-107) aired — batch 14 (2026-08-23 s2): the stored ep25→107 pin was the S2 endpoint (repaired to 71). 1991 OVA (1762) is a separate novel adaptation — excluded',
-  },
-  'time-i-got-reincarnated-slime': {
-    ids: [101280, 108511, 116742, 156822, 182205],
-    extras: [
-      { id: 161802, after: 101280 }, // Visions of Coleus OVA — order-only, anime-original (batch 14 placement)
-      { id: 139498, after: 116742 }, // Scarlet Bond film — order-only, anime-original (batch 14)
-      { id: 182206, after: 156822 }, // Tears of the Azure Sea film — order-only, anime-original (batch 14)
-    ],
-    ruledExtent: 'AFL page = S1 (24); S2 (2021, two parts, our 25-48) + S3 (2024, our 49-72) + S4 (airing 2026, our 73-96) — docs §12.19e structure gap, MU out-of-space flag #728. OVA/films wired order-only once batch-14 research places them',
-  },
-};
+// Override chains live in lib/rulings/override-chains.ts (restructure T2.1,
+// 2026-08-26): the typed RulingEntry record carrying each chain and its
+// reason; OVERRIDE_CHAINS is the derived lookup (same name, same shape).
+// HOLD (a stitch skip-list) had been empty since JoJo and Monogatari were
+// unheld 2026-08-22 (Sean ruled both ONE series) and was removed with the
+// extraction — a future hold is a ruling, declared in lib/rulings.
 
 const DRY_RUN = process.argv.includes('--dry-run');
 
@@ -176,12 +73,12 @@ async function main() {
         afl: (f.detail as { aflClassified?: number }).aflClassified ?? 0,
         anilist: (f.detail as { anilistAired?: number }).anilistAired ?? 0,
       }))
-      .filter((c) => c.afl > c.anilist + 2 && !HOLD.has(c.slug));
+      .filter((c) => c.afl > c.anilist + 2);
     // ruled extensions: standing candidates whenever the stored structure
     // differs from the ruled chain (self-healing, no flag required)
     const flagged = new Set(candidates.map((c) => c.slug));
     for (const [slug, o] of Object.entries(OVERRIDE_CHAINS)) {
-      if (!o.ruledExtent || flagged.has(slug) || HOLD.has(slug)) continue;
+      if (!o.ruledExtent || flagged.has(slug)) continue;
       if (await structureMatches(slug, o.ids, o.extras)) {
         counters.unchanged++;
         continue;

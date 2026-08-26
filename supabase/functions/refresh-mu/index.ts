@@ -20364,6 +20364,28 @@ function stable(value) {
 }
 var contentHash = (value) => createHash("sha256").update(stable(value)).digest("hex");
 
+// scripts/ingest/lib/rulings/types.ts
+var toRecord = (entries) => {
+  const out = {};
+  for (const e of entries) out[e.seriesId] = e.value;
+  return out;
+};
+
+// scripts/ingest/lib/rulings/mu-frontier-suppressed.ts
+var FATE_KALEID_REASON = "multi-manga entry pending the D2 split \u2014 the MU pin conflates S1's first-manga completion onto the 3rei!!-adapting movie episode";
+var ENTRIES = [
+  {
+    seriesId: "fate-kaleid-liner-prisma-illya",
+    ruleId: "G37",
+    value: FATE_KALEID_REASON,
+    reason: `The entry's seasons adapt THREE different manga (S1 eps 1-10 = the 1st series' 14-chapter space, 2wei!/Herz!, 3rei!!) but the entry holds ONE chapter space. MU's "Vol 2, Chap 14" states S1's completion of the FIRST manga; the run-end assumption would land it on ep 42 \u2014 the movie, which adapts 3rei!! 29-39. The scope-consumed check misses it by one chapter (research ENDs stop at 13; 14 is the unadapted epilogue), so no structural gate can refuse the pin.`,
+    ruledBy: "Sean",
+    ruledOn: "2026-08-24",
+    retiresWhen: "D2 lands (Clear-Card-style scoped entries split the multi-manga run)"
+  }
+];
+var MU_FRONTIER_SUPPRESSED = toRecord(ENTRIES);
+
 // scripts/ingest/lib/mu-frontier.ts
 function parseCoverageAll(text) {
   if (!text) return { pairs: [], explicitEp: null };
@@ -20374,16 +20396,6 @@ function parseCoverageAll(text) {
   const ep = pairs.length === 1 ? text.match(/EP\.?\s*(\d+)/i) : null;
   return { pairs, explicitEp: ep ? Number(ep[1]) : null };
 }
-var MU_FRONTIER_SUPPRESSED = {
-  // The entry's seasons adapt THREE different manga (S1 eps 1-10 = the 1st
-  // series' 14-chapter space, 2wei!/Herz!, 3rei!!) but the entry holds ONE
-  // chapter space. MU's "Vol 2, Chap 14" states S1's completion of the
-  // FIRST manga; the run-end assumption would land it on ep 42 — the movie,
-  // which adapts 3rei!! 29-39. The scope-consumed check misses it by one
-  // chapter (research ENDs stop at 13; 14 is the unadapted epilogue).
-  // Retire when the D2 split (Clear-Card-style scoped entries) lands.
-  "fate-kaleid-liner-prisma-illya": "multi-manga entry pending the D2 split \u2014 the MU pin conflates S1's first-manga completion onto the 3rei!!-adapting movie episode"
-};
 async function applyMuFrontier(runId, s, muEnd, nonMuMaxEp, nonMuMaxCh) {
   await db.from("chapter_anchors").delete().eq("series_id", s.id).eq("source", "mu");
   if (MU_FRONTIER_SUPPRESSED[s.id]) return "suppressed";

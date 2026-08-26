@@ -10,15 +10,11 @@ import { readFileSync } from 'node:fs';
 import { parseShowsIndex } from './lib/afl';
 import { db, selectAll, startRun, finishRun } from './lib/db';
 import { titlesAgree } from './lib/resolve';
+import { MANUAL_EXCLUDE } from './lib/rulings/title-exclusions';
 
-// Content exclusions per Sean's rulings that slug patterns couldn't catch:
-// film trilogies/collections and fan re-edits.
-const MANUAL_EXCLUDE: Record<string, string> = {
-  'berserk-golden-age-arc': 'film trilogy — movies out of v1 scope (Sean 2026-08-22), re-evaluate with watch-order',
-  kizumonogatari: 'film trilogy — movies out of v1 scope (Sean 2026-08-22), re-evaluate with watch-order',
-  'digimon-adventure-tri': 'six-part film series — movies out of v1 scope (Sean 2026-08-22), re-evaluate with watch-order',
-  'one-pace': 'fan re-edit of One Piece, not an official series — excluded pending Sean confirmation',
-};
+// Content exclusions per Sean's rulings that slug patterns couldn't catch
+// live in lib/rulings/title-exclusions.ts (restructure T2.1); MANUAL_EXCLUDE
+// is the derived slug → note lookup.
 
 async function exclude(slug: string, note: string, disposition: 'excluded' | 'duplicate' = 'excluded') {
   const { error } = await db.from('source_map').upsert({

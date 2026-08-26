@@ -14,9 +14,9 @@
 //     'post_series' (coverage+1 semantics; ippo 558, dragon-maid 65).
 //   - loose series skipped (borrow-maps).
 // Re-runnable. --dry-run prints every change without writing.
-//   npx tsx --env-file=.env.ingest scripts/ingest/research/batch15/apply-parity-continues.ts [--dry-run] [seriesId ...]
-import { db, selectAll } from '/Users/sean/Projects/mangamapper/scripts/ingest/lib/db';
-import { c3Ahead, hasSkipLanguage, c3Note } from '/Users/sean/Projects/mangamapper/scripts/ingest/lib/c3';
+//   npx tsx --env-file=.env.ingest scripts/ingest/heal-parity-continues.ts [--dry-run] [seriesId ...]
+import { db, selectAll } from './lib/db';
+import { c3Ahead, hasSkipLanguage, c3Note } from './lib/c3';
 
 const DRY = process.argv.includes('--dry-run');
 const ONLY = process.argv.slice(2).filter((a) => !a.startsWith('--'));

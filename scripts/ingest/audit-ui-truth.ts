@@ -11,6 +11,7 @@
 import { db, selectAll } from './lib/db';
 import { c3Ahead, hasSkipLanguage } from './lib/c3';
 import { COMMUNITY_COUNT_OVERRIDES, CONTINUA_SUPPRESSED, EPISODE_TYPE_OVERRIDES, SOURCE_NUMBERING_SHIFTS } from './lib/resolve';
+import { REVIEWED_NUMBERED_SPECIALS } from './lib/rulings/reviewed-specials';
 
 async function main() {
   const series = await selectAll<any>('series', 'id, source_type, manga_status, status, aired_episodes, total_episodes, total_chapters, total_volumes, latest_known_chapters, manga_anilist_id, manga_start_chapter, mapping_mode, asterisk_review');
@@ -80,48 +81,9 @@ async function main() {
     no_source: [], ok_full: [], ok_no_volume: [], ok_loose: [],
     pending_airing_no_anchor: [], pending_finished_no_totals: [], pending_no_canon: [], pending_other: [],
   };
-  // Sean's standing rule (2026-08-24): any non-typical entry (special/OVA/
-  // movie/recap) NUMBERED into a run by any source is a research trigger —
-  // verify against community consensus, ask Sean, then record the ruling
-  // here. Reviewed = verified community-counted this session.
-  const REVIEWED_NUMBERED_SPECIALS = new Set<string>([
-    'initial-d:187', // Third Stage = AFL's ep 40 (the founding precedent)
-    'attack-on-titan:146984', // Final Chapters Zenpen = ep 88 (AFL-numbered)
-    'attack-on-titan:165790', // Final Chapters Kouhen = ep 89
-    'hunter-x-hunter:137', // HxH 1999 OVA continuations (ruled in-flow)
-    'hunter-x-hunter:138',
-    'hunter-x-hunter:139',
-    'fist-of-the-blue-sky:3864', // 4 DVD episodes, AFL numbers 23-26
-    'hajime-no-ippo-the-fighting:12069', // Boxer's Fist = community ep 76
-    'dr-stone:142876', // Ryuusui: order-only at position 36 (after Stone Wars) — Sean confirmed 2026-08-24 (his 'ep 95' was a typo; community places it mid-run)
-    // ── Queue-2 Groups A+B, Sean sign-off 2026-08-23: continuation/finale
-    // content the community counts as episodic canon (kind stays on the
-    // component for UI differentiation later). A = high confidence,
-    // B = medium (community-practice based; re-open if evidence emerges).
-    'haikyu:111790', // A: Riku vs Kuu OVA 61-62 (our conversion ruling)
-    'attack-on-titan:162314', // A: Final Chapters Kouhen 89 (twin of reviewed 88)
-    'monogatari-series:100815', // A: Zoku Owari 97-102 (one-series numbering)
-    'relife:98635', // A: Kanketsu-hen 14-17 = the actual ending
-    'black-lagoon:4901', // A: Roberta's Blood Trail = functionally S3
-    'when-they-cry:3652', // A: Rei 51-55 counted as the third entry
-    'kenichi-the-mightiest-disciple:11813', // A: OVA 51-61 direct continuation
-    'steins-gate:10863', // A: Egg OVA 25 epilogue, near-universally counted
-    // Sean 2026-08-24: Sealed Card is the direct FINALE but stays order-only
-    // (@70.2); the Clear Card Prologue OVA is the bridge to the sequel and
-    // acts as ep 71 (community identity)
-    'cardcaptor-sakura:98554', // A: Clear Card Prologue OVA = ep 71 (Sean 2026-08-24)
-    'shounan-junai-gumi:1913', // A: the series IS the 5-ep OVA run — numbering 1-5 is its identity (Sean 2026-08-24)
-    'the-future-diary:16762', // A: Redial 27 epilogue
-    'heavens-lost-property:9790', // A: Clockwork Angeloid film 26, canon continuation
-    'heavens-lost-property:12783', // A: Final film 27, canon conclusion
-    'gintama:126819', // A: Semi-Final 368-369, canon prelude to the finale film
-    'to-love-ru:5667', // B: OVA 27-32 bridges to Motto (medium confidence)
-    'kill-la-kill:20572', // B: Tokubetsu-hen 25 commonly counted (medium)
-    'high-school-of-the-dead:9515', // B: Drifters of the Dead 13 (medium)
-    'dragon-ball-z-kai:11359', // B: Kai special 98 (medium)
-    'dragon-ball-gt:987', // B: A Hero's Legacy 65 epilogue special (medium)
-    'kamisama-kiss:21186', // B: Kako-hen 26-29 prequel OVAs (medium)
-  ]);
+  // Sean's standing rule (2026-08-24, N7): any non-typical entry NUMBERED
+  // into a run by any source is a research trigger — the reviewed set (with
+  // each ruling's reason) lives in lib/rulings/reviewed-specials.ts.
   for (const c of comps) {
     if (c.kind && c.kind !== 'season' && c.episode_start != null && !REVIEWED_NUMBERED_SPECIALS.has(`${c.series_id}:${c.anilist_id}`)) {
       classes.special_numbered_unreviewed.push(`${c.series_id}: ${c.kind} "${c.label ?? c.anilist_id}" numbered ${c.episode_start}-${c.episode_end ?? '?'} [${c.series_id}:${c.anilist_id}]`);

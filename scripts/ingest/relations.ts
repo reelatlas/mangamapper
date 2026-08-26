@@ -7,40 +7,13 @@
 
 import { db, selectAll, startRun, finishRun } from './lib/db';
 import type { AniListMedia } from './lib/anilist';
+import { RULED } from './lib/rulings/relations';
 
 const AUTO_KINDS = new Set(['SEQUEL', 'PREQUEL', 'SIDE_STORY', 'SPIN_OFF', 'ALTERNATIVE', 'PARENT']);
 
-// franchise-rulings.md, addressed by afl_slug (skipped when either side is
-// not in canonical yet — recovery-dependent pairs appear on a later run).
-const RULED: [string, string, string][] = [
-  ['naruto-shippuden', 'naruto', 'sequel'],
-  ['cardcaptor-sakura-clear-card', 'cardcaptor-sakura', 'sequel'], // Sean 2026-08-24: Clear Card split (different manga)
-  ['boruto-naruto-next-generations', 'naruto-shippuden', 'sequel'],
-  ['dragon-ball-z', 'dragon-ball', 'sequel'],
-  ['dragon-ball-gt', 'dragon-ball-z', 'sequel'],
-  ['dragon-ball-super', 'dragon-ball-z', 'sequel'],
-  ['dragon-ball-z-kai', 'dragon-ball-z', 'remake'],
-  ['yu-gi-oh-gx', 'yu-gi-oh', 'sequel'],
-  ['yu-gi-oh-5ds', 'yu-gi-oh-gx', 'sequel'],
-  ['yu-gi-oh-zexal', 'yu-gi-oh', 'spin_off'],
-  ['yu-gi-oh-arc-v', 'yu-gi-oh', 'spin_off'],
-  ['yu-gi-oh-vrains', 'yu-gi-oh', 'spin_off'],
-  ['yu-gi-oh-sevens', 'yu-gi-oh', 'spin_off'],
-  ['digimon-adventure-2020', 'digimon-adventure', 'alternative'],
-  ['sailor-moon-crystal', 'sailor-moon', 'remake'],
-  ['fairy-tail-100-years-quest', 'fairy-tail', 'sequel'],
-  ['hunter-x-hunter', 'hunter-x-hunter-1999', 'remake'], // 2011 remakes 1999
-  ['fullmetal-alchemist-brotherhood', 'fullmetal-alchemist', 'alternative'],
-  ['fruits-basket-2019', 'fruits-basket-2001', 'remake'],
-  ['shaman-king-2021', 'shaman-king', 'remake'],
-  ['shaman-kingflowers', 'shaman-king-2021', 'sequel'],
-  ['rurouni-kenshin-2023', 'rurouni-kenshin', 'remake'],
-  ['seven-deadly-sins-four-knights-apocalypse', 'nanatsu-no-taizai', 'sequel'],
-  ['it-wrong-try-pick-girls-dungeon-side-sword-oratoria', 'it-wrong-try-pick-girls-dungeon', 'side_story'],
-  ['sword-art-online-alternative-ggo', 'sword-art-online', 'spin_off'],
-  ['a-certain-scientific-railgun', 'certain-magical-index', 'spin_off'],
-  ['bleach-thousand-year-blood-war', 'bleach', 'sequel'],
-];
+// RULED (franchise-rulings.md kinds, addressed by afl_slug; skipped when
+// either side is not in canonical yet) lives in lib/rulings/relations.ts
+// (restructure T2.1) — the typed record with each pair's reason.
 
 async function main() {
   const runId = await startRun('resolve');

@@ -9,29 +9,13 @@
 //   npx tsx --env-file=.env.ingest scripts/ingest/sync-watch-order.ts
 
 import { db, selectAll, startRun, finishRun } from './lib/db';
+import { RULED_LABELS, RULED_RECORDS } from './lib/rulings/watch-order-labels';
 
-// series_id → position → surfaced label (a UI-surface ruling, per series).
-// AUTHORITATIVE both ways: an entry absent here carries display_label null
-// and does NOT render.
-//
-// PARKED (Sean 2026-08-24): MHA's labels were briefly live, then pulled —
-// surfacing waits for the specials/OVAs/movies STATUS design pass. The
-// intended v2 logic, recorded as the reference point (docs §10 has the
-// full version): entries render as episode rows in the +N format
-// (#170+1 'More', #170+1.5 'I am a hero too'), COUNT as units — section
-// header envelope includes their chapters (…-431.5) and volume, section
-// counts include them, they appear on the manga strip and are selectable/
-// steppable, and the series episode total reads "170+1.5". Re-activate by
-// restoring: 'my-hero-academia': { 171: '170+1', 171.5: '170+1.5' }.
-const RULED_LABELS: Record<string, Record<number, string>> = {};
-
-// structured adaptation records for ruled entries (prose lives in the note)
-const RULED_RECORDS: Record<string, Record<number, { chapter: number; volume: number | null; chapters_adapted: string; kind: string }>> = {
-  'my-hero-academia': {
-    171: { chapter: 431, volume: 42, chapters_adapted: '431', kind: 'special' },
-    171.5: { chapter: 431.5, volume: 42, chapters_adapted: '431.5', kind: 'special' },
-  },
-};
+// RULED_LABELS (series_id → position → surfaced label; AUTHORITATIVE both
+// ways — absent = display_label null, not rendered) and RULED_RECORDS
+// (structured adaptation records; prose lives in the note) live in
+// lib/rulings/watch-order-labels.ts (restructure T2.1), including the PARKED
+// MHA surfacing ruling (Sean 2026-08-24) and how to re-activate it.
 
 async function main() {
   const runId = await startRun('resolve');
