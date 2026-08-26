@@ -70,7 +70,7 @@
 - `C8` AFG continue-from is reading guidance, not the frontier — aka `continue-from is guidance`, `continue-from-is-guidance`, `sanity band`, `40-chapter band`, `three-numbers model`
 - `C9` Default continue = anchor end + 1 (superseded by C2) *(superseded)* — aka `continue-reading points`, `end+1 default`, `default continue = end + 1`, `apply-continue-points`
 
-**T — Typing & taxonomy** (24)
+**T — Typing & taxonomy** (25)
 - `T1` Episode-type vocabulary: four stored tokens — aka `four tokens`, `AFL class map`, `CLASS_TO_TYPE`, `episodes.type vocabulary`, `type_corrections allowed types`
 - `T2` Episode-type semantics (Sean 2026-08-25) — aka `episode-type semantics`, `Sean's vocabulary`, `typing vocabulary`, `filler = zero canon`, `consensus-canon`, `mixed = canon AND non-canon`
 - `T3` Filler = outside both canons (b17 D3 form) *(superseded)* — aka `b17 D3`, `outside both canons`, `b17 D3 form`
@@ -90,11 +90,12 @@
 - `T17` Base-type padding: gaps take the series’ own base type — aka `base-type padding`, `canon-default typing`, `canon-tier spans`, `canon-default`
 - `T18` Legend by count: badges from data, not source-type branches — aka `legend by count`, `legend-by-count`
 - `T19` Type-badge vocabulary (display) — aka `type-badge vocabulary`, `TypeBadgeKind`, `sections never arcs`, `anime_only badge`, `manga_only badge`, `display vocabulary`
-- `T20` source_type derivation (AniList source + country) — aka `source_type derivation`, `sourceType`, `source typing`, `source_type vocabulary`
+- `T20` source_type derivation (AniList source + country) *(superseded)* — aka `source_type derivation`, `sourceType`, `source typing`, `source_type vocabulary`
 - `T21` Derivative-manga rule (Evangelion class) — aka `derivative-manga rule`, `Evangelion class`, `Evangelion/Madoka class`
 - `T22` manga_status vocabulary and the 'anime_only' homonym — aka `manga_status vocabulary`, `MANGA_STATUS_MAP`, `manga_status 'anime_only'`, `hasSource`, `anime_only homonym`
 - `T23` Format is orthogonal to canon standing — aka `format ⟂ canon standing`, `format-is-orthogonal`, `format is orthogonal to standing`, `never overload episodes.type`
 - `T24` LN instrument ruling: volume-space for light novels *(planned)* — aka `LN instrument ruling`, `LN class`, `light-novel instrument`, `Queue 3 LN ruling`, `LN volume-space instrument`
+- `T25` Source is series identity: the SOURCE_KINDS registry — aka `SOURCE_KINDS`, `source kinds registry`, `source-kinds`, `D-9`, `source is identity`, `source is series identity`, `SOURCE_TYPE_OVERRIDES`, `hasInstrument`, `hasSource vs hasInstrument`, `series_without_source_kind`, `studio original`, `fail closed source`, `visual novel source`, `game source`
 
 **N — Numbering, counts & chapter spaces** (31)
 - `N1` Episode-floor invariant — aka `episode-floor invariant`, `episode floor`, `floor rule`, `EXTRAS_ADOPTED`
@@ -1260,7 +1261,7 @@ The display vocabulary is exactly five badge kinds — canon, mixed, filler, man
 - aliases: type-badge vocabulary, TypeBadgeKind, sections never arcs, anime_only badge, manga_only badge, display vocabulary
 - see: T1, T18, T22
 
-### T20 · source_type derivation (AniList source + country)
+### T20 · source_type derivation (AniList source + country) *(superseded → T25)*
 
 series.source_type is derived from AniList: source MANGA / DOUJINSHI / ONE_SHOT → 'manga', or 'webtoon' when countryOfOrigin is KR or CN; LIGHT_NOVEL / NOVEL / WEB_NOVEL → 'light_novel'; no declared source but a manga ADAPTATION edge → 'manga' (old entries omit source); otherwise 'original'. The vocabulary is check-constrained to manga / webtoon / light_novel / original and extends by value, never by overloading.
 
@@ -1271,7 +1272,7 @@ series.source_type is derived from AniList: source MANGA / DOUJINSHI / ONE_SHOT 
 - enforced: [lib/resolve.ts#sourceType](../scripts/ingest/lib/resolve.ts) · [lib/chain.ts#aggregate](../scripts/ingest/lib/chain.ts) · [supabase/migrations/20260822000000_catalog_pipeline.sql](../supabase/migrations/20260822000000_catalog_pipeline.sql)
 - **audit: none — automation backlog**
 - aliases: source_type derivation, sourceType, source typing, source_type vocabulary
-- see: T21, T22, T24
+- see: T21, T22, T24, T25
 
 ### T21 · Derivative-manga rule (Evangelion class)
 
@@ -1289,13 +1290,13 @@ AniList's ADAPTATION edge is directionless. A source=ORIGINAL anime never claims
 
 ### T22 · manga_status vocabulary and the 'anime_only' homonym
 
-series.manga_status maps the attached manga's AniList status — RELEASING → publishing, FINISHED → finished, HIATUS → hiatus, NOT_YET_RELEASED → publishing, CANCELLED → finished, unknown → publishing — and is 'anime_only' when no manga is attached. That 'anime_only' is a SERIES fact ('there is no manga'), unrelated to the episode type anime-only-canon. A series has a source instrument iff source_type ≠ 'original' AND manga_status ≠ 'anime_only'.
+series.manga_status maps the attached publication's AniList status — RELEASING → publishing, FINISHED → finished, HIATUS → hiatus, NOT_YET_RELEASED → publishing, CANCELLED → finished, unknown → publishing — and is 'none' when no source publication is attached (T4.1, 2026-08-26: the 'anime_only' homonym is retired; 'none' = 'no source publication to compare against'). The vocabulary lives in lib/rulings/source-kinds.ts (MANGA_STATUS_MAP / mangaStatusOf) and both writers call it. hasSource / hasInstrument derive from the SOURCE KIND alone (T25), never from manga_status; manga_status only says whether the attached publication is still running.
 
 *Why:* The homonym is T4.0 D-12 (renamed in the same session as the badge strings). chain.ts#aggregate's inline map lacks CANCELLED → finished (DRIFT-LIST §C). The hasSource predicate is inlined in buildMapping and both audits (census bucket no_source, not an outcome check) and — with manga_status dropped — in AnimeCard/usePositionLookup: a series with source_type manga but manga_status anime_only renders differently in card and mapping (DRIFT-LIST §C 'hasSource').
 
 - ruled session 2026-08-22 (lib/resolve.ts MANGA_STATUS_MAP / resolveSeries; assemble.ts buildMapping hasSource)
 - layer **both**
-- enforced: [lib/resolve.ts#MANGA_STATUS_MAP](../scripts/ingest/lib/resolve.ts) · [lib/resolve.ts#resolveSeries](../scripts/ingest/lib/resolve.ts) · [lib/chain.ts#aggregate](../scripts/ingest/lib/chain.ts) · [src/data/catalog/assemble.ts#buildMapping](../src/data/catalog/assemble.ts)
+- enforced: [lib/rulings/source-kinds.ts#mangaStatusOf](../scripts/ingest/lib/rulings/source-kinds.ts) · [lib/resolve.ts#resolveSeries](../scripts/ingest/lib/resolve.ts) · [lib/chain.ts#aggregate](../scripts/ingest/lib/chain.ts) · [supabase/migrations/20260826000000_source_kinds.sql](../supabase/migrations/20260826000000_source_kinds.sql)
 - **audit: none — automation backlog**
 - aliases: manga_status vocabulary, MANGA_STATUS_MAP, manga_status 'anime_only', hasSource, anime_only homonym
 - see: T19, T20, T21, T17
@@ -1327,6 +1328,21 @@ Light-novel-sourced series (source_type light_novel — the 86 / Re:Zero class) 
 - witnesses: 86-eighty-six, re-zero, sword-art-online, overlord
 - aliases: LN instrument ruling, LN class, light-novel instrument, Queue 3 LN ruling, LN volume-space instrument
 - see: T20, T22
+
+### T25 · Source is series identity: the SOURCE_KINDS registry
+
+series.source_type names what the anime ADAPTS and is derived ONLY by deriveSourceKind: AniList `source` × the picked manga node's countryOfOrigin (MANGA → manga / manhwa / manhua by JP / KR / CN) × SOURCE_TYPE_OVERRIDES (ruled, reason + cite), against the declarative SOURCE_KINDS registry (value = AniList's word lower-cased; noun; unit chapter / volume / none; tailBadge; anilistSources; countries). An AniList value or country with no record → source_type NULL + flag source_kind_unknown — fail closed, never default to manga; series_without_source_kind must read 0. A new source is one registry record plus its instrument ruling, never a migration. hasSource = the kind is not `original` (an adapted work exists); hasInstrument = hasSource AND unit ≠ none (there are units to map to) — tail math, the strip and every manga position need hasInstrument; spans pad canon on hasSource alone. Both writers (resolve.ts, chain.ts#aggregate) and the app (assemble.ts) read the same registry; a stored value ≠ the derivation is a ruling_violation.
+
+*Why:* T4.0 D-9 (Sean, cross-checked with Cursor, 2026-08-26): Steins;Gate adapts a visual novel even though a manga exists — that manga is a sibling adaptation, never the instrument; manga is not a global first look. Before T4.1, 9 VN + 4 game + 3 OTHER series were collapsed into 'original' (no source at all) and KR webtoon adaptations derived 'manga' because the anime's countryOfOrigin is always JP — the manga NODE's country is what tells manhwa from manga, so T4.1 added it to the AniList query (anilist-restage). chain.ts#aggregate's inline copy of the derivation (DRIFT-LIST §C) is unified here.
+
+- ruled Sean 2026-08-26 (docs/restructure/T4-GLOSSARY.md §1–§2 (D-9); restructure T4.1)
+- layer **both**
+- enforced: [lib/rulings/source-kinds.ts#deriveSourceKind](../scripts/ingest/lib/rulings/source-kinds.ts) · [lib/rulings/source-kinds.ts#SOURCE_KINDS](../scripts/ingest/lib/rulings/source-kinds.ts) · [lib/resolve.ts#sourceType](../scripts/ingest/lib/resolve.ts) · [lib/chain.ts#aggregate](../scripts/ingest/lib/chain.ts) · [heal-source-kinds.ts#main](../scripts/ingest/heal-source-kinds.ts) · [src/data/catalog/assemble.ts#buildMapping](../src/data/catalog/assemble.ts) · [supabase/migrations/20260826000000_source_kinds.sql](../supabase/migrations/20260826000000_source_kinds.sql)
+- audit: `series_without_source_kind`, `ruling_violation`, `no_source`, `no_instrument`
+- witnesses: steins-gate, ace-attorney, solo-leveling, the-god-of-high-school
+- aliases: SOURCE_KINDS, source kinds registry, source-kinds, D-9, source is identity, source is series identity, SOURCE_TYPE_OVERRIDES, hasInstrument, hasSource vs hasInstrument, series_without_source_kind, studio original, fail closed source, visual novel source, game source
+- see: T20, T21, T22, T24, G50, P6
+- supersedes: T20
 
 ## N — Numbering, counts & chapter spaces
 
@@ -4121,6 +4137,7 @@ Any component that renders episode-level data consumes the HYDRATED series (getB
 - curated-first apply → `P10`
 - curation principle → `P10`
 - D-5 → `P34`
+- D-9 → `T25`
 - D1 → `G32`
 - D1 airing-pin → `G34`
 - D1 chapter-space → `N28`
@@ -4209,6 +4226,7 @@ Any component that renders episode-level data consumes the HYDRATED series (getB
 - eyeshield lesson → `T15`
 - eyeshield title report → `T16`
 - eyeshield-21 155 lesson → `N2`
+- fail closed source → `T25`
 - fan mapping threads → `R5`
 - fan threads first-class → `R5`
 - fandom + accounting beats AFL → `T4`
@@ -4259,6 +4277,7 @@ Any component that renders episode-level data consumes the HYDRATED series (getB
 - full-record protocol → `A30`
 - full-record ruling → `A30`
 - full-source ruling → `G22`
+- game source → `T25`
 - gates before any commit → `P27`
 - gates before commit → `P27`
 - Gintama ep-35 report → `A14`
@@ -4278,7 +4297,9 @@ Any component that renders episode-level data consumes the HYDRATED series (getB
 - hard invariant 8 → `P9`
 - hash gate → `G9`
 - hash-only-acted-on-fields → `G42`
+- hasInstrument → `T25`
 - hasSource → `T22`
+- hasSource vs hasInstrument → `T25`
 - heal-volume-boundaries → `V2`
 - healer roster → `P20`
 - healer-pagination trap → `P32`
@@ -4599,6 +4620,7 @@ Any component that renders episode-level data consumes the HYDRATED series (getB
 - series_external_ids → `I2`
 - series_relations vocabulary → `I17`
 - series_scopes → `I36`
+- series_without_source_kind → `T25`
 - settled reorders → `A41`
 - shared chapters → `A31`
 - sharing never moves position → `A31`
@@ -4614,14 +4636,20 @@ Any component that renders episode-level data consumes the HYDRATED series (getB
 - Slime/4KOTA class → `N28`
 - sliver rule → `A10`
 - small-sample rule → `R28`
+- source is identity → `T25`
+- source is series identity → `T25`
+- source kinds registry → `T25`
 - source numbering translation → `N11`
 - source spaces → `N12`
 - source suppressions → `G26`
 - source typing → `T20`
+- SOURCE_KINDS → `T25`
 - source_map dispositions → `I11`
 - SOURCE_NUMBERING_SHIFTS → `N11`
 - source_type derivation → `T20`
 - source_type vocabulary → `T20`
+- SOURCE_TYPE_OVERRIDES → `T25`
+- source-kinds → `T25`
 - source-scope enforcement → `I36`
 - source-scope rule → `I36`
 - sourceType → `T20`
@@ -4651,6 +4679,7 @@ Any component that renders episode-level data consumes the HYDRATED series (getB
 - straddled chapter → `C1`
 - strict episode-cell parse → `G20`
 - structure reconciliation → `I33`
+- studio original → `T25`
 - successor cap → `A16`
 - successor-span cap → `A16`
 - summary-vs-rows scan → `R25`
@@ -4728,6 +4757,7 @@ Any component that renders episode-level data consumes the HYDRATED series (getB
 - verify pass → `R23`
 - verify pool → `R23`
 - verify-after-adjust ruling → `P19`
+- visual novel source → `T25`
 - volume = END's volume → `V10`
 - volume ratio fallback → `V3`
 - volume span → `V9`
@@ -4760,6 +4790,6 @@ Any component that renders episode-level data consumes the HYDRATED series (getB
 
 ## Scoreboard
 
-- rules: 260 (live 245, planned 10, superseded 5)
-- live data rules with no audit class (the automation backlog): 88
-- by layer: writer 133 · display 23 · both 21 · process 83
+- rules: 261 (live 245, planned 10, superseded 6)
+- live data rules with no audit class (the automation backlog): 87
+- by layer: writer 133 · display 23 · both 22 · process 83

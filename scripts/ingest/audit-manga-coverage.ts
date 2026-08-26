@@ -9,6 +9,7 @@
 //   npx tsx --env-file=.env.ingest scripts/ingest/audit-manga-coverage.ts
 
 import { db, selectAll, startRun, finishRun, fileFlagOnce } from './lib/db';
+import { seriesHasInstrument } from './lib/rulings/source-kinds';
 import { applyMuFrontier, bestLatestKnown, crossCheckMangaStatus } from './lib/mu-frontier';
 
 interface MuRaw {
@@ -64,7 +65,7 @@ async function main() {
     }>('series', 'id, status, source_type, manga_status, manga_anilist_id, total_chapters, aired_episodes, manga_start_chapter');
 
     for (const s of series) {
-      const hasSource = s.source_type !== 'original' && s.manga_status !== 'anime_only';
+      const hasSource = seriesHasInstrument(s.source_type); // T25: the manga instrument, not mere identity
       if (!hasSource) {
         classes.no_source.push(s.id);
         continue;

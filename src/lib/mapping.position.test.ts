@@ -58,6 +58,8 @@ const mapping = (
   return {
     airedEpisodes: aired,
     sourceType: "manga",
+    hasSource: true,
+    hasInstrument: true,
     spans,
     canonCount: count("canon"),
     mixedCount: count("mixed"),

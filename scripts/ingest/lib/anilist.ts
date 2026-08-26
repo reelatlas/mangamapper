@@ -46,7 +46,7 @@ const MEDIA_FIELDS = `
   studios(isMain: true) { nodes { name } }
   externalLinks { site type language url }
   relations { edges { relationType node {
-    id type format status popularity chapters volumes
+    id type format status popularity chapters volumes countryOfOrigin
     title { romaji native }
   } } }
 `;
@@ -91,6 +91,8 @@ export interface AniListMedia {
         popularity: number | null;
         chapters: number | null;
         volumes: number | null;
+        /** absent on media staged before 2026-08-26 (T4.1) — deriveSourceKind fails closed until re-staged */
+        countryOfOrigin?: string | null;
         title: { romaji: string | null; native: string | null };
       };
     }[];

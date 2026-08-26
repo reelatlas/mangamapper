@@ -607,6 +607,42 @@
    durable guard. Lesson for the floor rule: a >2 overshoot sourced from a
    SINGLE chart row with no corroborating content anywhere is a typo
    candidate, not an adoption candidate.
+54. ✅ **T4.1 — SOURCE IS SERIES IDENTITY: THE SOURCE_KINDS REGISTRY (`T25`,
+   2026-08-26; supersedes T20, amends T22).** Sean's T4.0 D-9 built: one
+   declarative registry (`lib/rulings/source-kinds.ts` — value = AniList's
+   word lower-cased, noun, unit chapter/volume/none, tailBadge, anilistSources,
+   countries) and ONE derivation, `deriveSourceKind` = AniList `source` × the
+   picked manga NODE's countryOfOrigin × `SOURCE_TYPE_OVERRIDES`, called by
+   resolve.ts, chain.ts#aggregate (the DRIFT-LIST §C copy unified — no value
+   invented outside the registry), the healer and the census. FAIL CLOSED:
+   unregistered → `source_type` NULL + flag `source_kind_unknown`;
+   `series_without_source_kind` = 0. The anime's countryOfOrigin is always
+   JP, so KR/CN could never derive — T4.1 added `countryOfOrigin` to the
+   relation node in the AniList query and `anilist-restage.ts` (event
+   healer, G44 analogue: 664 media refetched, 661 restaged). Migration
+   `20260826000000_source_kinds.sql`: source_type nullable, no default,
+   check = registry values; manga_status 'anime_only' → 'none'. Healer
+   `heal-source-kinds.ts` (standard roster) moved 17 rows: 9 → visual_novel,
+   4 → video_game, 3 → other (the ruled 16) + the-god-of-high-school manga →
+   manhwa (node country KR). hasSource ≠ hasInstrument split shipped in
+   assemble.ts / MappingSummary and the three display sites; spans pad canon
+   on hasSource, every manga position on hasInstrument. Census delta, all
+   explained: no_source 88→37 (= the 37 studio originals exactly);
+   no_instrument 0→16 (VN / game / other — hasSource, no units: honest dash);
+   the other 35 are the LIGHT-NOVEL class (SAO, Re:Zero, Overlord, Konosuba,
+   86, DanMachi, Toradora, Haruhi, Durarara…) plus a few link-less manga
+   series: their manga_status was 'anime_only' because pickManga only links
+   MANGA-format adaptations, and the old hasSource read manga_status — so a
+   novel-sourced series rendered exactly like a studio original ("no
+   source"). hasSource now derives from the KIND alone, so they render as
+   PENDING on the source side (the honest state: the novel-side publication
+   link and totals are the T24 volume-instrument build): pending_finished_
+   no_totals 1→33, pending_no_canon 1→2, ok_no_volume 12→14 (+
+   anchor_gap_research 9→10, frontier_tail_null 5→6 — the same series in
+   overlapping classes). Not a regression: display 220/0; ruling_violation 0
+   (stored source_type = derivation for all 343).
+   Ruling candidates for Sean recorded in T4-GLOSSARY §7 (solo-leveling /
+   TBATE → manhwa?; GitS Arise AA → original?). NEXT: T4.2 annotation kinds.
 53. ✅ **A-11 EXECUTED AS `G54` — AIR-DATE ORDER GATE (2026-08-26, /add-rule
    exercise 2; the skill is now PROVEN, T3.1 closed).** Sean's ruling (the
    A-11 proposal: 365-day threshold, NULL-not-store) built as ONE lib

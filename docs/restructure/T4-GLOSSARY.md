@@ -141,12 +141,13 @@ D2 (multi-space entries) OUT of the build (design note stands; after batch
 18). The build, each step through `/add-rule`, in THIS order — **UI strings
 last, after the big unruled blocks are reviewed**:
 
-1. A-11 (exercise 2): `airdate_regression` audit class + `AIRDATE_ORDER_ACK`
+1. ✅ (G54, 2026-08-26) A-11 (exercise 2): `airdate_regression` audit class + `AIRDATE_ORDER_ACK`
    map, then the 365-day NULL write gate; the "AFL trailing non-episode
    row" withhold is a sibling rule (project-arms 53), not the same one.
-2. T4.1 SOURCE_KINDS registry + `SOURCE_TYPE_OVERRIDES` + derivation +
-   `series_without_source_kind`; migrate the 16 collapsed rows;
-   `manga_status: anime_only → none`; hasSource / hasInstrument split.
+2. ✅ (T25, 2026-08-26) T4.1 SOURCE_KINDS registry + `SOURCE_TYPE_OVERRIDES` + derivation +
+   `series_without_source_kind`; migrate the 16 collapsed rows (+ god-of-high-school → manhwa
+   once the manga node's country was fetched); `manga_status: anime_only → none`;
+   hasSource / hasInstrument split.
 3. T4.2 the annotation kinds (`adopted` with basis, `retconned`,
    `side_source`) — migration + types regenerated.
 4. T4.3 the standing migration (§3) with `afl_anime_canon_unruled` and the
@@ -161,6 +162,7 @@ last, after the big unruled blocks are reviewed**:
 
 ## 7. Open for Sean at batch 18 (recorded, not decided)
 
+`SOURCE_TYPE_OVERRIDES` candidates surfaced by T4.1: solo-leveling and the-beginning-after-the-end derive `other` (AniList source OTHER) though each adapts a KR webtoon → `manhwa`?; ghost-in-the-shell-arise-alternative-architecture derives `other` (a re-cut of Arise — a relation, arguably `original`). ·
 twin-star 21–50 adopted or filler · FMA 2003's second half (community
 adopted?) · soul-eater ending · claymore / gto / ajin / chrono endings ·
 which `adopted.basis` each ruled consensus row carries · the VN/game

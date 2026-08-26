@@ -78,7 +78,7 @@ export const usePositionLookup = (
   const [raw, setRaw] = useState('');
   const [jumpSerial, setJumpSerial] = useState(0);
 
-  const hasSource = mapping ? mapping.sourceType !== 'original' : anime.hasManga;
+  const hasSource = mapping ? mapping.hasInstrument : anime.hasManga; // T25: the manga position needs an instrument
   const mangaEditable = hasSource && !!mapping?.latestKnown;
   const epEditable = !!mapping && mapping.airedEpisodes > 0;
 

@@ -12,6 +12,7 @@ import { db, selectAll } from './db';
 import { mediaByIds, type AniListMedia } from './anilist';
 import { stageAniList, searchTextFor } from './resolve';
 import { slugify } from './slug';
+import { deriveSourceKind, mangaStatusOf } from './rulings/source-kinds';
 
 export const SERIES_FORMATS = new Set(['TV', 'TV_SHORT', 'ONA']);
 // In-flow movies/OVAs join the chain when the TV path dead-ends before the
@@ -162,12 +163,11 @@ export function aggregate(chain: AniListMedia[], aflSlug: string | null, fallbac
 
   // derivative-manga rule holds here too: a source=ORIGINAL head never
   // claims its ADAPTATION edge (that manga adapts the anime)
-  const manga =
-    head.source === 'ORIGINAL'
-      ? undefined
-      : head.relations.edges
-          .filter((e) => e.relationType === 'ADAPTATION' && e.node.type === 'MANGA' && e.node.format === 'MANGA')
-          .sort((a, b) => (b.node.popularity ?? 0) - (a.node.popularity ?? 0))[0]?.node;
+  const mangaEdge = head.relations.edges
+    .filter((e) => e.relationType === 'ADAPTATION' && e.node.type === 'MANGA' && e.node.format === 'MANGA')
+    .sort((a, b) => (b.node.popularity ?? 0) - (a.node.popularity ?? 0))[0]?.node;
+  const manga = head.source === 'ORIGINAL' ? undefined : mangaEdge;
+  const seriesId = slugify(head.title.english ?? head.title.romaji ?? fallbackTitle);
 
   const dedupBy = <T>(items: T[], key: (t: T) => string) => {
     const m = new Map<string, T>();
@@ -176,7 +176,7 @@ export function aggregate(chain: AniListMedia[], aflSlug: string | null, fallbac
   };
 
   return {
-    id: slugify(head.title.english ?? head.title.romaji ?? fallbackTitle),
+    id: seriesId,
     afl_slug: aflSlug,
     anilist_id: head.id,
     mal_id: head.idMal,
@@ -189,14 +189,8 @@ export function aggregate(chain: AniListMedia[], aflSlug: string | null, fallbac
     banner_url: head.bannerImage,
     format: head.format,
     status,
-    source_type:
-      head.source === 'MANGA'
-        ? head.countryOfOrigin === 'KR' || head.countryOfOrigin === 'CN'
-          ? 'webtoon'
-          : 'manga'
-        : head.source === 'LIGHT_NOVEL' || head.source === 'NOVEL' || head.source === 'WEB_NOVEL'
-          ? 'light_novel'
-          : 'original',
+    // T25: the shared registry derivation (unified with resolve.ts, T2 edge)
+    source_type: deriveSourceKind(seriesId, { source: head.source, mangaCountry: mangaEdge ? mangaEdge.countryOfOrigin : null, hasMangaEdge: !!mangaEdge }).value,
     start_date: head.startDate.year
       ? `${head.startDate.year}-${String(head.startDate.month ?? 1).padStart(2, '0')}-${String(head.startDate.day ?? 1).padStart(2, '0')}`
       : null,
@@ -224,11 +218,7 @@ export function aggregate(chain: AniListMedia[], aflSlug: string | null, fallbac
     synopsis_html: head.description,
     external_links: dedupBy(chain.flatMap((m) => m.externalLinks), (l) => l.url ?? l.site),
     manga_anilist_id: manga?.id ?? null,
-    manga_status: manga
-      ? ({ RELEASING: 'publishing', FINISHED: 'finished', HIATUS: 'hiatus' } as Record<string, string>)[
-          manga.status ?? ''
-        ] ?? 'publishing'
-      : 'anime_only',
+    manga_status: mangaStatusOf(manga),
     total_volumes: manga?.volumes ?? null,
     total_chapters: manga?.chapters ?? null,
     manga_start_volume: null as number | null,

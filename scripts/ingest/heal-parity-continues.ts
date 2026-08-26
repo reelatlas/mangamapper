@@ -16,6 +16,7 @@
 // Re-runnable. --dry-run prints every change without writing.
 //   npx tsx --env-file=.env.ingest scripts/ingest/heal-parity-continues.ts [--dry-run] [seriesId ...]
 import { db, selectAll } from './lib/db';
+import { seriesHasInstrument } from './lib/rulings/source-kinds';
 import { c3Ahead, hasSkipLanguage, c3Note } from './lib/c3';
 
 const DRY = process.argv.includes('--dry-run');
@@ -35,7 +36,7 @@ async function main() {
     (q) => q.neq('mapping_mode', 'loose'),
   );
   const targets = seriesRows.filter((s: any) => (ONLY.length ? ONLY.includes(s.id) : true))
-    .filter((s: any) => s.source_type !== 'original' && s.manga_status !== 'anime_only');
+    .filter((s: any) => seriesHasInstrument(s.source_type)); // T25
   let converted = 0, stamped = 0, postSeries = 0;
   for (const s of targets) {
     const anchors = await selectAll<any>('chapter_anchors', 'episode, chapter, start_chapter, chapters_adapted, continue_chapter, continue_kind, source', (q) => q.eq('series_id', s.id).order('episode'));

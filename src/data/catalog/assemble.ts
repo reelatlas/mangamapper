@@ -1,3 +1,4 @@
+import { seriesHasInstrument, seriesHasSource } from '../../../scripts/ingest/lib/rulings/source-kinds';
 import type {
   AnimeSeries,
   AnimeStatus,
@@ -23,7 +24,7 @@ export type SeriesRow = {
   title_native: string | null;
   cover_url: string | null;
   status: string;
-  source_type: string;
+  source_type: string | null;
   manga_status: string | null;
   manga_anilist_id: number | null;
   aired_episodes: number;
@@ -180,8 +181,8 @@ export const toAnimeSeries = (
   currentEpisode: row.aired_episodes,
   totalEpisodes: row.total_episodes,
   status: row.status as AnimeStatus,
-  mangaStatus: (row.manga_status ?? 'anime_only') as MangaStatus,
-  hasManga: row.manga_status !== null && row.manga_status !== 'anime_only',
+  mangaStatus: (row.manga_status ?? 'none') as MangaStatus,
+  hasManga: row.manga_status !== null && row.manga_status !== 'none',
   // ongoing manga: AniList totals are null — published volume count (from
   // real boundaries) stands in as the latest-known denominator. ONLY when the
   // boundary table is complete from the manga's start: a lone research row
@@ -250,8 +251,13 @@ export const buildMapping = (
   boundaries: Boundary[],
   continuationStartCh: number | null = null,
 ): MappingSummary => {
-  const sourceType = row.source_type as SourceType;
-  const hasSource = sourceType !== 'original' && row.manga_status !== 'anime_only';
+  const sourceType = row.source_type as SourceType | null;
+  // T25: identity (hasSource) pads unclassified rows canon — the series
+  // adapts SOMETHING; the instrument (hasInstrument) gates every manga
+  // position / tail computation below. A VN or game series has the first
+  // without the second and renders an honest dash on the manga side.
+  const hasSource = seriesHasSource(sourceType);
+  const hasInstrument = seriesHasInstrument(sourceType);
   const aired = Math.max(row.aired_episodes, eps.reduce((m, e) => Math.max(m, e.number), 0));
 
   const spans = buildSpans(eps, aired, hasSource ? 'canon' : 'anime-only-canon');
@@ -274,13 +280,13 @@ export const buildMapping = (
   // never fires and a fully-mappable series renders mapping_pending
   const lastCanonEpisode = eps.length
     ? eps.reduce((m, e) => (e.type !== 'filler' ? Math.max(m, e.number) : m), 0)
-    : hasSource
+    : hasInstrument
       ? aired
       : 0;
 
   const loose = row.mapping_mode === 'loose';
   let latestKnown =
-    hasSource && !loose && latestAnchor && coverageAnchor
+    hasInstrument && !loose && latestAnchor && coverageAnchor
       ? {
           episode: latestAnchor.episode,
           volume: coverageAnchor.volume ?? volumeFor(row, coverageAnchor.chapter, boundaries),
@@ -292,7 +298,7 @@ export const buildMapping = (
   // position instrument works from totals instead of rendering
   // mapping_pending across ~260 series (mock-era assumption: anchors always
   // existed). Airing series without anchors stay pending (frontier unknown).
-  if (!latestKnown && hasSource && !loose && row.total_chapters && row.status === 'finished' && lastCanonEpisode > 0) {
+  if (!latestKnown && hasInstrument && !loose && row.total_chapters && row.status === 'finished' && lastCanonEpisode > 0) {
     latestKnown = {
       episode: lastCanonEpisode,
       volume: row.total_volumes ?? volumeFor(row, row.total_chapters, boundaries),
@@ -300,7 +306,7 @@ export const buildMapping = (
     };
   }
   const continueFrom =
-    hasSource && latestKnown
+    hasInstrument && latestKnown
       ? {
           episode: latestKnown.episode,
           volume: volumeFor(row, Number(latestKnown.chapters) + 1, boundaries) ?? latestKnown.volume,
@@ -339,7 +345,7 @@ export const buildMapping = (
   // before 2016) surface in the universe view, not here.
   const residueHandedOff = continuationStartCh !== null;
   if (
-    hasSource &&
+    hasInstrument &&
     anchorsReachEnd &&
     !residueHandedOff &&
     effectiveTotalChapters &&
@@ -356,6 +362,8 @@ export const buildMapping = (
   return {
     airedEpisodes: aired,
     sourceType,
+    hasSource,
+    hasInstrument,
     spans,
     canonCount: counts.canon,
     mixedCount: counts.mixed,

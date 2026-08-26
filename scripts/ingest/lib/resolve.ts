@@ -66,6 +66,7 @@ export async function applyScope(
 export { EXTRAS_ADOPTED } from './rulings/extras-adopted';
 export { AIR_DATE_OVERRIDES } from './rulings/air-dates';
 import { AIR_DATE_OVERRIDES } from './rulings/air-dates';
+import { deriveSourceKind, mangaStatusOf } from './rulings/source-kinds';
 import { withholdAirdateRegressions, type AirdateWithheld } from './airdate-order';
 
 // Community-count rulings (Sean 2026-08-24: the community-consensus episode
@@ -392,24 +393,20 @@ export const STATUS_MAP: Record<string, string> = {
   CANCELLED: 'finished',
 };
 
-export const MANGA_STATUS_MAP: Record<string, string> = {
-  RELEASING: 'publishing',
-  FINISHED: 'finished',
-  HIATUS: 'hiatus',
-  NOT_YET_RELEASED: 'publishing',
-  CANCELLED: 'finished',
-};
+// T22 vocabulary lives with the source registry (pure, shared with the app);
+// re-exported here so existing writers keep their import.
+export { MANGA_STATUS_MAP, mangaStatusOf } from './rulings/source-kinds';
 
-export function sourceType(media: AniListMedia, hasMangaEdge: boolean): string {
-  const src = media.source ?? '';
-  if (src === 'MANGA' || src === 'DOUJINSHI' || src === 'ONE_SHOT') {
-    return media.countryOfOrigin === 'KR' || media.countryOfOrigin === 'CN' ? 'webtoon' : 'manga';
-  }
-  if (src === 'LIGHT_NOVEL' || src === 'NOVEL' || src === 'WEB_NOVEL') return 'light_novel';
-  // no declared source but a manga ADAPTATION edge exists: old AniList
-  // entries often omit `source` — the edge is evidence of a manga source
-  if (!src && hasMangaEdge) return 'manga';
-  return 'original';
+// T25 (T4.1): source_type is DERIVED by the registry — AniList source × the
+// picked manga node's country × SOURCE_TYPE_OVERRIDES — and fails closed
+// (null + flag) on anything unregistered. chain.ts#aggregate calls the same
+// function (the T2 unification, no values invented outside the registry).
+export function sourceType(seriesId: string, media: AniListMedia, mangaNode: AniListMedia['relations']['edges'][number]['node'] | null | undefined) {
+  return deriveSourceKind(seriesId, {
+    source: media.source,
+    mangaCountry: mangaNode ? mangaNode.countryOfOrigin : null,
+    hasMangaEdge: !!mangaNode,
+  });
 }
 
 export function fuzzyDate(d: { year: number | null; month: number | null; day: number | null }): string | null {
@@ -560,6 +557,12 @@ export async function resolveSeries(runId: number, slug: string): Promise<{ epis
     flagged = true;
   }
 
+  // T25: source kind from the registry; fail closed — an unregistered
+  // AniList source / country is a ruling (flag), never a default
+  const derived = sourceType(id, media, mangaEdge);
+  if (!derived.value) {
+    await fileFlagOnce(runId, slug, 'resolve', 'source_kind_unknown', { anilistSource: media.source, mangaCountry: mangaEdge?.countryOfOrigin ?? null, reason: derived.reason });
+  }
   const series = {
     id,
     afl_slug: slug,
@@ -574,7 +577,7 @@ export async function resolveSeries(runId: number, slug: string): Promise<{ epis
     banner_url: media.bannerImage,
     format: media.format,
     status: STATUS_MAP[media.status] ?? 'finished',
-    source_type: sourceType(media, mangaEdge !== null),
+    source_type: derived.value,
     start_date: fuzzyDate(media.startDate),
     end_date: fuzzyDate(media.endDate),
     season: media.season,
@@ -597,7 +600,7 @@ export async function resolveSeries(runId: number, slug: string): Promise<{ epis
     synopsis_html: media.description,
     external_links: media.externalLinks,
     manga_anilist_id: manga?.id ?? null,
-    manga_status: manga ? MANGA_STATUS_MAP[manga.status ?? ''] ?? 'publishing' : 'anime_only',
+    manga_status: mangaStatusOf(manga),
     ...(await applyScope(slug, {
       total_volumes: manga?.volumes ?? null,
       total_chapters: manga?.chapters ?? null,

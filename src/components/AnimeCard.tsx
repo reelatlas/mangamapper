@@ -54,7 +54,7 @@ export const AnimeCard = ({ anime: listItem, onClose }: AnimeCardProps) => {
   // click-to-set) operate as one instrument.
   const lookup = usePositionLookup(anime, mapping);
 
-  const hasSource = mapping ? mapping.sourceType !== 'original' : anime.hasManga;
+  const hasSource = mapping ? mapping.hasInstrument : anime.hasManga; // T25: the manga position needs an instrument
   // The ep field works for EVERY mapped series (incl. anime-original) —
   // inline field, strip clicks, and list rows are one instrument. The vol/ch
   // fields are editable only when manga values exist (the hook handles it).

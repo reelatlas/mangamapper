@@ -13,10 +13,12 @@ import { c3Ahead, hasSkipLanguage } from './lib/c3';
 import { COMMUNITY_COUNT_OVERRIDES, CONTINUA_SUPPRESSED, EPISODE_TYPE_OVERRIDES, SOURCE_NUMBERING_SHIFTS, translateEpisodeNumber } from './lib/resolve';
 import { AIRDATE_REGRESSION_THRESHOLD_DAYS, airdateOrderWalk } from './lib/airdate-order';
 import { AIR_DATE_OVERRIDES } from './lib/rulings/air-dates';
+import { deriveSourceKind, seriesHasInstrument, seriesHasSource, SOURCE_TYPE_OVERRIDES } from './lib/rulings/source-kinds';
+import { pickManga } from './lib/resolve';
 import { REVIEWED_NUMBERED_SPECIALS } from './lib/rulings/reviewed-specials';
 
 async function main() {
-  const series = await selectAll<any>('series', 'id, afl_slug, source_type, manga_status, status, aired_episodes, total_episodes, total_chapters, total_volumes, latest_known_chapters, manga_anilist_id, manga_start_chapter, mapping_mode, asterisk_review');
+  const series = await selectAll<any>('series', 'id, afl_slug, anilist_id, source_type, manga_status, status, aired_episodes, total_episodes, total_chapters, total_volumes, latest_known_chapters, manga_anilist_id, manga_start_chapter, mapping_mode, asterisk_review');
   const episodes = await selectAll<any>('episodes', 'series_id, number, type, title, air_date');
   const anchors = await selectAll<any>('chapter_anchors', 'series_id, episode, chapter, start_chapter, chapters_adapted, continue_chapter, continue_note, volume, source');
   const comps = await selectAll<any>('series_components', 'series_id, episode_end, episode_start, anilist_id, kind, label');
@@ -80,7 +82,7 @@ async function main() {
     rearranged_zone_unanchored: [], rearranged_zone_acknowledged: [],
     title_incomplete: [], airdate_incomplete: [], airdate_regression: [], airdate_withheld: [], asterisk_unreviewed: [],
     fractional_unmodeled: [],
-    no_source: [], ok_full: [], ok_no_volume: [], ok_loose: [],
+    series_without_source_kind: [], no_source: [], no_instrument: [], ok_full: [], ok_no_volume: [], ok_loose: [],
     pending_airing_no_anchor: [], pending_finished_no_totals: [], pending_no_canon: [], pending_other: [],
   };
   // Sean's standing rule (2026-08-24, N7): any non-typical entry NUMBERED
@@ -123,6 +125,25 @@ async function main() {
   for (const a of anchors) {
     if (['mu', 'afg', 'afg-continua'].includes(a.source) && /research-tier|repair|Sean/i.test(a.note ?? '')) {
       classes.repair_on_derivation_tier.push(`${a.series_id}: ep ${a.episode} ${a.source} note reads research/repair — promote to manual (P8)`);
+    }
+  }
+  // T25 source kinds (T4.1, 2026-08-26): series.source_type must equal what
+  // the registry derives from CURRENT staging (+ SOURCE_TYPE_OVERRIDES) — a
+  // writer that bypassed deriveSourceKind, or a healer that has not run,
+  // surfaces here. NULL is the fail-closed outcome: its own class is the
+  // ruling queue (series_without_source_kind), never a violation.
+  {
+    const ids = series.map((s: any) => s.anilist_id).filter((n: any) => n != null);
+    const staged = await selectAll<{ anilist_id: number; raw: any }>('ingest_anilist_media', 'anilist_id, raw', (q) => q.in('anilist_id', ids));
+    const rawBy = new Map(staged.map((r) => [r.anilist_id, r.raw]));
+    for (const row of series) {
+      if (row.source_type == null) classes.series_without_source_kind.push(`${row.id}: source_type NULL — AniList source ${rawBy.get(row.anilist_id)?.source ?? '?'} needs a SOURCE_KINDS record or a SOURCE_TYPE_OVERRIDES ruling`);
+      const media = rawBy.get(row.anilist_id);
+      if (!media) continue;
+      const node = pickManga(media);
+      const d = deriveSourceKind(row.id, { source: media.source, mangaCountry: node ? node.countryOfOrigin : null, hasMangaEdge: !!node });
+      if (d.value !== row.source_type) classes.ruling_violation.push(`${row.id}: source_type '${row.source_type}' ≠ derived '${d.value}' (${d.reason}; T25)`);
+      if (SOURCE_TYPE_OVERRIDES[row.id] && row.source_type !== SOURCE_TYPE_OVERRIDES[row.id]) classes.ruling_violation.push(`${row.id}: source_type '${row.source_type}' ≠ ruled '${SOURCE_TYPE_OVERRIDES[row.id]}' (T25)`);
     }
   }
   // G53 air-date overrides (2026-08-26): a stored air_date that disagrees with a ruled one = a writer bypassed filterEpisodeRows or the assert healer has not run.
@@ -448,7 +469,7 @@ async function main() {
     const e = epsBy.get(row.id) ?? { max: 0, lastCanon: 0, count: 0 };
     // lockstep with buildMapping: row-less canon-tier series default to
     // canon spans, so the last canon episode is the last aired one
-    if (e.count === 0 && row.source_type !== 'original' && row.manga_status !== 'anime_only') {
+    if (e.count === 0 && seriesHasSource(row.source_type)) {
       e.lastCanon = row.aired_episodes ?? 0;
     }
     const covered = Math.max(row.total_episodes ?? 0, compEnd.get(row.id) ?? 0, row.aired_episodes ?? 0);
@@ -464,8 +485,10 @@ async function main() {
     if (row.status === 'finished' && row.aired_episodes > 0 && e.count > 0 && row.aired_episodes > e.count) {
       classes.integrity_total_beyond_eps.push(`${row.id} (aired/total=${row.aired_episodes}, rows=${e.count})`);
     }
-    const hasSource = row.source_type !== 'original' && row.manga_status !== 'anime_only';
-    if (!hasSource) { classes.no_source.push(row.id); continue; }
+    // T25: identity vs instrument — a studio original / unruled kind has no
+    // source; a VN / game / other series HAS a source but no units to map
+    if (!seriesHasSource(row.source_type)) { classes.no_source.push(row.id); continue; }
+    if (!seriesHasInstrument(row.source_type)) { classes.no_instrument.push(`${row.id} (${row.source_type})`); continue; }
     if (row.source_type === 'light_novel') lightNovel.push(row.id);
     if (row.mapping_mode === 'loose') { classes.ok_loose.push(row.id); continue; }
     const latestAnchor = anchBy.get(row.id) ?? null;

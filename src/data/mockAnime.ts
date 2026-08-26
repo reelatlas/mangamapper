@@ -87,7 +87,7 @@ export const mockAnimeData: AnimeSeries[] = [
     currentEpisode: 8,
     totalEpisodes: 20,
     status: 'airing',
-    mangaStatus: 'anime_only',
+    mangaStatus: 'none',
     hasManga: false,
     totalVolumes: null,
     totalChapters: null,

@@ -12,6 +12,8 @@ import type { MappingSummary } from "@/types/anime";
 const summary = (over: Partial<MappingSummary> = {}): MappingSummary => ({
   airedEpisodes: 20,
   sourceType: "manga",
+    hasSource: true,
+    hasInstrument: true,
   spans: [
     { start: 1, end: 10, type: "canon" },
     { start: 11, end: 13, type: "filler" },

@@ -193,7 +193,7 @@ const AnimeDetail = () => {
                       ep_1 underscore style and pre-syntax_v1 hues retired) */}
                   <span className="text-muted-foreground tabular-nums">
                     ep:1-{mapping.airedEpisodes}
-                    {mapping.sourceType !== 'original' && (
+                    {mapping.hasSource && (
                       <> · <span className="text-type-filler">filler</span>:{mapping.fillerPercent}%</>
                     )}
                     {mapping.mangaAheadChapters != null && (

@@ -1,3 +1,4 @@
+import { seriesHasInstrument, seriesHasSource } from '../../../scripts/ingest/lib/rulings/source-kinds';
 import type { AnimeSeries, EpisodeSpan, MappingSummary, SourceType } from '@/types/anime';
 import { mockAnimeData, getFilteredAnime, searchAnime, getAnimeById } from '@/data/mockAnime';
 import { lastChapterNumber } from '@/lib/mapping';
@@ -137,7 +138,8 @@ const estimateNextChapter = (chapters: string): string | null => {
 const buildMapping = (anime: AnimeSeries): MappingSummary => {
   const aired = anime.currentEpisode;
   const sourceType = getSourceType(anime);
-  const hasSource = sourceType !== 'original';
+  const hasSource = seriesHasSource(sourceType);
+  const hasInstrument = seriesHasInstrument(sourceType);
 
   const spans: EpisodeSpan[] = FILLER_SPANS[anime.id] ?? [
     { start: 1, end: aired, type: hasSource ? 'canon' : 'anime-only-canon' },
@@ -186,6 +188,8 @@ const buildMapping = (anime: AnimeSeries): MappingSummary => {
   return {
     airedEpisodes: aired,
     sourceType,
+    hasSource,
+    hasInstrument,
     spans,
     canonCount: counts.canon,
     mixedCount: counts.mixed,

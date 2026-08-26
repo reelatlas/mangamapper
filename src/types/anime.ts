@@ -1,6 +1,11 @@
 export type EpisodeType = 'canon' | 'mixed' | 'filler' | 'anime-only-canon';
 
-export type SourceType = 'manga' | 'webtoon' | 'light_novel' | 'original';
+import type { SourceKindValue } from '../../scripts/ingest/lib/rulings/source-kinds';
+
+// The stored vocabulary IS the SOURCE_KINDS registry (rule T25) — never a
+// second list here. null = AniList named a source the registry does not
+// cover (fails closed; series_without_source_kind is the ruling queue).
+export type SourceType = SourceKindValue;
 
 // A contiguous run of episodes sharing one type — the unit of the filler density strip
 export interface EpisodeSpan {
@@ -19,7 +24,11 @@ export interface ContinuePoint {
 // Per-series summary powering the comparison-first UI
 export interface MappingSummary {
   airedEpisodes: number;
-  sourceType: SourceType;
+  sourceType: SourceType | null;
+  /** an adapted work exists — false for studio originals and unruled kinds (T25) */
+  hasSource: boolean;
+  /** there are units to map to (chapter / volume) — tail math, strip and manga position only when true (T25) */
+  hasInstrument: boolean;
   spans: EpisodeSpan[];
   canonCount: number;
   mixedCount: number;
@@ -34,7 +43,7 @@ export interface MappingSummary {
 }
 
 export type AnimeStatus = 'airing' | 'finished' | 'hiatus' | 'upcoming';
-export type MangaStatus = 'publishing' | 'finished' | 'hiatus' | 'anime_only';
+export type MangaStatus = 'publishing' | 'finished' | 'hiatus' | 'none'; // 'none' = no source publication attached (T22; was the 'anime_only' homonym)
 
 export type TrackingSite = 'mal' | 'anilist';
 export type StreamingService = 'all' | 'crunchyroll' | 'netflix' | 'amazon' | 'disney-hulu' | 'bilibili' | 'hidive';

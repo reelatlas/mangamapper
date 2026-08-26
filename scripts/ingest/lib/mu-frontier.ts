@@ -315,7 +315,7 @@ export async function crossCheckMangaStatus(
   mu: { status?: string | null; completed?: boolean | null },
 ) {
   const muStatus = muPublicationStatus(mu);
-  if (!muStatus || ourStatus === 'anime_only' || muStatus === ourStatus) return;
+  if (!muStatus || ourStatus === 'none' || muStatus === ourStatus) return;
   await fileFlagOnce(runId, seriesId, 'mangaupdates', 'taxonomy_conflict', {
     ourMangaStatus: ourStatus,
     muStatus: mu.status,

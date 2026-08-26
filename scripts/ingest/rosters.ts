@@ -30,6 +30,7 @@ export const PULL: RosterEntry[] = [
 ];
 
 export const HEAL: RosterEntry[] = [
+  { file: 'heal-source-kinds.ts', when: 'standard', note: 'series.source_type re-derived from staging through SOURCE_KINDS + SOURCE_TYPE_OVERRIDES; unregistered → NULL + flag (T25)' },
   { file: 'scopes-apply.ts', when: 'standard', note: 'curated series_scopes → canonical; flags unscoped shared-manga siblings (I36)' },
   { file: 'afg-continua-apply.ts', when: 'standard', note: 'applyContinua over every staged page (G22–G26)' },
   { file: 'audit-manga-coverage.ts', when: 'standard', note: 'SELF-HEALING despite the name: MU frontier pins, latest_known, status cross-check (G31–G38); classes are a census by-product' },
@@ -43,6 +44,7 @@ export const HEAL: RosterEntry[] = [
   { file: 'stitch.ts', when: 'event', trigger: 'count_mismatch candidates or a ruled extension', note: 'the stitcher (I24–I27)' },
   { file: 'afg-extend.ts', when: 'event', trigger: 'AFG page outruns our structure (audit-afg-structure)', note: 'merge-never-replace extension (I28/I29)' },
   { file: 'afg-restage.ts', when: 'event', trigger: 'any lib/afg.ts parser change', note: 're-parse stored raw_html, no refetch (G44)' },
+  { file: 'anilist-restage.ts', when: 'event', trigger: 'any change to MEDIA_FIELDS in lib/anilist.ts', note: 'refetch + hash-gated restage of every series/component media so staging carries the current query shape (G44 analogue; T4.1 added relation countryOfOrigin)' },
   { file: 'rederive-anchors.ts', when: 'event', trigger: 'any change to lib/afg deriveAnchors or lib/anchors syncAnchors', note: 're-derive AFG anchors from staging (A20/A24)' },
   { file: 'refix.ts', when: 'event', trigger: 'parse_integrity flags after an AFL page change', note: 'no-conditional re-scrape of held slugs' },
   { file: 'audit-titles.ts', when: 'event', trigger: 'title_incomplete rows; NOTE reads the static fixture index (T0 finding)', note: 'staged titles vs AFL index; MANUAL_EXCLUDE rulings (I11)' },
