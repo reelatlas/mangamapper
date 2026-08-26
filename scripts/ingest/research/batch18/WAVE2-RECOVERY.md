@@ -17,6 +17,19 @@ divergence annotation (T4.3); these verdicts propose what replaces it.
 | railgun 13, 15-24, 41-48 | 19 | 13 filler / 41 mixed / 17 canon + adopted{author} | **NEW BASIS CLASS: downstream authorial use** — Railgun manga ch 31/32 references a photo taken in ep 20; Kamachi's later novels bring back Therestina, Kurozuma/Big Spider, Haruue, Febrie | 18 repairs; Silent Party basis thin (one LN referback) |
 | world-trigger 48 | 1 | filler | none | divergence → side_story (inserted interlude, nothing contradicted) |
 
+## Verification (R24, Fable, ~0.83M) — reports in `verify/`
+
+| verdict | result | changes to filed rows |
+|---|---|---|
+| twin-star | SOUND | none; ADD Sukeno's 2020 "from-ep-1 remake, not a season 2" tweet to the note |
+| claymore | SOUND WITH CORRECTIONS | none (24/26 mixed, 25 filler); 21-23 narrowing accepted as annotation, frontier ruled separately |
+| sailor-moon | SOUND WITH CORRECTIONS | none (167-168 mixed); loose_parallel chapters "45, 47" (not 50-51) |
+| chrono-crusade | SOUND WITH CORRECTIONS | none (22 mixed); total_chapters 59 IS right (56 + 2 extras + epilogue) |
+| gto | SOUND WITH CORRECTIONS | none (27 mixed + side_story, not side_source; 25-26 filler + loose_parallel) |
+| railgun | SOUND WITH CORRECTIONS | drop the ep-20 cover-art graft; basis must be stated as INCORPORATION; **the class is Sean's ruling** |
+| ajin | SOUND WITH CORRECTIONS | ep 22 canon → MIXED; ep 23 mixed → FILLER + loose_parallel; continue 29 not ~43 |
+| world-trigger | not verified (one row, agrees with stored) | divergence → side_story |
+
 ## Decisions for Sean (after verification)
 
 1. **Is "the author later USED it" an adoption basis?** Railgun's case is the
