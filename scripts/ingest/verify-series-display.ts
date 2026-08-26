@@ -72,7 +72,7 @@ export async function verifySeries(id: string, print = false): Promise<string[]>
     (q) => q.eq('series_id', id).order('position'),
   );
   const m = buildMapping(row, eps, anchors, boundaries, await continuationStart(row));
-  const anime = toAnimeSeries(row, 1, toEpisodes(row, eps, anchors, boundaries), boundaries.length, boundaries, wo);
+  const anime = toAnimeSeries(row, 1, toEpisodes(row, eps, anchors, boundaries, annos), boundaries.length, boundaries, wo);
   const list = buildEpisodeList(anime, m);
 
   if (print) {
@@ -88,11 +88,14 @@ export async function verifySeries(id: string, print = false): Promise<string[]>
   const problems: string[] = [];
   if (row.mapping_mode === 'loose') return problems; // borrow-maps render as stored
   const ruled = new Set(annos.filter((a) => a.kind === 'rearranged' || a.kind === 'graft').map((a) => a.episode));
+  // T26 / T14: adopted / side_source rows are canon with NO source counterpart — a null chapter there is the design, not a hole
+  const offSource = new Set(annos.filter((a) => a.kind === 'adopted' || a.kind === 'side_source').map((a) => a.episode));
   const frontier = m.latestKnown ? m.latestKnown.episode : 0;
   let prevStart: number | null = null;
   let prevEp = 0;
   for (const r of list.rows) {
     if (r.type !== 'canon' && r.type !== 'mixed') continue;
+    if (offSource.has(r.ep)) continue;
     const start = r.ch != null ? parseInt(r.ch.split(/[-,]/)[0], 10) : NaN;
     if (r.ep <= frontier && (r.ch == null || Number.isNaN(start))) {
       if (inReorderCrossing(anime, m, r.ep)) {

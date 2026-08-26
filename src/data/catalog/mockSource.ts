@@ -142,7 +142,7 @@ const buildMapping = (anime: AnimeSeries): MappingSummary => {
   const hasInstrument = seriesHasInstrument(sourceType);
 
   const spans: EpisodeSpan[] = FILLER_SPANS[anime.id] ?? [
-    { start: 1, end: aired, type: hasSource ? 'canon' : 'anime-only-canon' },
+    { start: 1, end: aired, type: 'canon' },
   ];
 
   const counts = { canon: 0, mixed: 0, filler: 0, 'anime-only-canon': 0 };

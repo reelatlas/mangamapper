@@ -431,7 +431,7 @@ export const solvePosition = (
     if (ep <= aired) {
       const exact = anime.episodes.find((e) => e.number === ep);
       const type = exact?.type ?? episodeTypeAt(mapping, ep);
-      if (type === 'filler' || type === 'anime-only-canon') {
+      if (type === 'filler' || type === 'anime-only-canon' || exact?.offSource) {
         return base({ state: 'run', driver: 'ep', ep, type, unit: ep, noManga: true });
       }
       if (exact?.mangaMapping) {
@@ -559,8 +559,8 @@ export const buildEpisodeList = (anime: AnimeSeries, m: MappingSummary): Episode
     let vol: number | null = null;
     let ch: string | null = null;
     let end: number | null = null;
-    // filler/anime-only rows keep manga values null by design (— in the UI)
-    if (type !== 'filler' && type !== 'anime-only-canon') {
+    // filler and off-source (adopted / side_source, T26) rows keep manga values null by design (— in the UI)
+    if (type !== 'filler' && type !== 'anime-only-canon' && !exact?.offSource) {
       if (exact?.mangaMapping) {
         end = lastChapterNumber(exact.mangaMapping.chapters);
         // display the episode's START (Sean's first-chapter ruling): the

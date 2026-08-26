@@ -1,3 +1,6 @@
+// T27 (T4.3): the DATA vocabulary is canon | mixed | filler. 'anime-only-canon'
+// stays in this union only until T4.5 retires the display strings that key on
+// it — no stored row carries it (episodes_type_check).
 export type EpisodeType = 'canon' | 'mixed' | 'filler' | 'anime-only-canon';
 
 import type { SourceKindValue } from '../../scripts/ingest/lib/rulings/source-kinds';
@@ -93,8 +96,10 @@ export interface Episode {
   number: number;
   title: string;
   type: EpisodeType;
-  mangaMapping: MangaMapping | null; // null for filler/anime-only
+  mangaMapping: MangaMapping | null; // null for filler and off-source rows
   airDate: string;
+  /** T26: canon by ruling but outside the source (adopted / side_source annotation) — no source position exists, render the honest dash */
+  offSource?: boolean;
 }
 
 export interface TrackingRanking {

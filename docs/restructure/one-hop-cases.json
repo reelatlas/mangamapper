@@ -229,6 +229,19 @@
         "basis"
       ],
       "source": "T4.0 D-10 / T4.2 (2026-08-26)"
+    },
+    {
+      "ask": "AFL marks Madoka's episodes 'anime canon' and FMA 2003's second half 'anime canon' too — do both get the same stored type?",
+      "expected": [
+        "T27",
+        "T25"
+      ],
+      "terms": [
+        "anime_canon",
+        "source kind",
+        "filler"
+      ],
+      "source": "T4.0 D-10 / T4.3 (2026-08-26)"
     }
   ]
 }

@@ -70,7 +70,7 @@
 - `C8` AFG continue-from is reading guidance, not the frontier — aka `continue-from is guidance`, `continue-from-is-guidance`, `sanity band`, `40-chapter band`, `three-numbers model`
 - `C9` Default continue = anchor end + 1 (superseded by C2) *(superseded)* — aka `continue-reading points`, `end+1 default`, `default continue = end + 1`, `apply-continue-points`
 
-**T — Typing & taxonomy** (26)
+**T — Typing & taxonomy** (27)
 - `T1` Episode-type vocabulary: four stored tokens — aka `four tokens`, `AFL class map`, `CLASS_TO_TYPE`, `episodes.type vocabulary`, `type_corrections allowed types`
 - `T2` Episode-type semantics (Sean 2026-08-25) — aka `episode-type semantics`, `Sean's vocabulary`, `typing vocabulary`, `filler = zero canon`, `consensus-canon`, `mixed = canon AND non-canon`
 - `T3` Filler = outside both canons (b17 D3 form) *(superseded)* — aka `b17 D3`, `outside both canons`, `b17 D3 form`
@@ -79,7 +79,7 @@
 - `T6` Retypes are standing rulings in EPISODE_TYPE_OVERRIDES — aka `EPISODE_TYPE_OVERRIDES`, `episode-type overrides`, `eyeshield ep-74 lesson`, `retype stays research-tier`, `type corrections via overrides`, `assert-type-overrides`
 - `T7` Chapter overlap never proves filler (zatch-bell lesson) — aka `zatch-bell lesson`, `overlap rule`, `overlap ≠ filler`, `chapter overlap never proves filler`
 - `T8` Rehash with nothing new = filler; mixed needs new canon — aka `rehash rule`, `overlap discount clause`, `A-5`, `rehash = filler`, `rehash discount`
-- `T9` Consensus-original class: declared canon side story — aka `Boruto/Black Clover precedent`, `consensus-original class`, `author-declaration discriminator`, `licensed canon side story`
+- `T9` Consensus-original class: declared canon side story *(superseded)* — aka `Boruto/Black Clover precedent`, `consensus-original class`, `author-declaration discriminator`, `licensed canon side story`
 - `T10` Only-ending class: filler + annotation + asterisk (X) — aka `only-ending class`, `only ending`, `X 21-24 class`, `X only-ending`
 - `T11` Caught-up-padded-out class: padding is filler (DSQ) — aka `caught up, padded out`, `caught-up-padded-out class`, `DSQ class`, `padded finale`
 - `T12` Contested-ending class: all canon, annotated (Evangelion) *(planned)* — aka `contested canonical ending`, `contested-ending class`, `Evangelion ending class`
@@ -97,6 +97,7 @@
 - `T24` LN instrument ruling: volume-space for light novels *(planned)* — aka `LN instrument ruling`, `LN class`, `light-novel instrument`, `Queue 3 LN ruling`, `LN volume-space instrument`
 - `T25` Source is series identity: the SOURCE_KINDS registry — aka `SOURCE_KINDS`, `source kinds registry`, `source-kinds`, `D-9`, `source is identity`, `source is series identity`, `SOURCE_TYPE_OVERRIDES`, `hasInstrument`, `hasSource vs hasInstrument`, `series_without_source_kind`, `studio original`, `fail closed source`, `visual novel source`, `game source`
 - `T26` Overrides are annotations, never a fourth episode type — aka `overrides are annotations`, `adopted annotation`, `adopted`, `retconned`, `side_source`, `adopted basis`, `community canon is not a type`, `no fourth type`, `D-10 annotations`, `annotation_invalid`
+- `T27` Standing is canon / mixed / filler, relative to the source — aka `three standings`, `canon mixed filler only`, `anime-only-canon retired`, `AFL anime_canon mapping`, `aflAnimeCanon`, `afl_anime_canon_unruled`, `standing migration`, `D-10 standing`, `anime only retired`
 
 **N — Numbering, counts & chapter spaces** (31)
 - `N1` Episode-floor invariant — aka `episode-floor invariant`, `episode floor`, `floor rule`, `EXTRAS_ADOPTED`
@@ -1109,11 +1110,11 @@ An episode that re-stages chapters already animated earlier and adds nothing new
 - aliases: rehash rule, overlap discount clause, A-5, rehash = filler, rehash discount
 - see: T7, T2, C3
 
-### T9 · Consensus-original class: declared canon side story
+### T9 · Consensus-original class: declared canon side story *(superseded → T26)*
 
 A licensed, author-supervised or author-declared canon side story adapted with zero source pages (a supervised novel or spin-off; studio content the author declares canon) is anime-only-canon. The discriminator is author DECLARATION or supervision, not commissioning: author-commissioned arcs never declared canon are filler.
 
-*Why:* naruto-shippuden 452–457, black-clover 130–157 (Tabata-supervised), boruto 221–286 → anime-only-canon; kinnikuman 120–137 (commissioned, never declared canon, timeline overwritten by the 1991 sequel) → filler (wave 2, 2026-08-25). T4.0 D-10 keeps this class DISTINCT from the Madoka-style 'the anime is the source' meaning — do not merge them.
+*Why:* naruto-shippuden 452–457, black-clover 130–157 (Tabata-supervised), boruto 221–286 → anime-only-canon; kinnikuman 120–137 (commissioned, never declared canon, timeline overwritten by the 1991 sequel) → filler (wave 2, 2026-08-25). T4.0 D-10 keeps this class DISTINCT from the Madoka-style 'the anime is the source' meaning — do not merge them. SUPERSEDED 2026-08-26 (T4.3): the class is canon + adopted{author} / side_source (T26); the discriminator (declaration or supervision, not commissioning) survives as the basis test.
 
 - ruled Sean 2026-08-24 (lib/resolve.ts naruto-shippuden / black-clover / boruto comments; §12.47 (kinnikuman))
 - layer **writer**
@@ -1181,7 +1182,7 @@ ANY debate about a series' final episodes — a contested, studio-original, padd
 
 ### T14 · anime-only-canon ≠ anchor desert (Black Clover lesson)
 
-Episodes typed anime-only-canon have no source counterpart BY DESIGN: they render truthfully with no chapter (never mapping-pending), never count toward anchor_gap_research, and position holds at the last anchor until the next canon/mixed episode.
+Rows carrying an adopted or side_source annotation (T26; before T4.3 the type anime-only-canon) have no source counterpart BY DESIGN: they render truthfully with no chapter (Episode.offSource → the honest dash, never mapping-pending, never an interpolated position), never count toward anchor_gap_research, and position holds at the last anchor until the next mapped canon/mixed episode.
 
 *Why:* black-clover 130–157 adapts zero chapters across 28 episodes; position holds at ch 228 until ep 158. The typing itself is research-ruled per episode (T6); the anchor prohibition on such rows is A1.
 
@@ -1358,6 +1359,20 @@ An author / studio / community override of the source is an ANNOTATION, never a 
 - witnesses: black-clover, boruto-naruto-next-generations, naruto-shippuden, x
 - aliases: overrides are annotations, adopted annotation, adopted, retconned, side_source, adopted basis, community canon is not a type, no fourth type, D-10 annotations, annotation_invalid
 - see: T25, R10, A43, A1, T13
+
+### T27 · Standing is canon / mixed / filler, relative to the source
+
+episodes.type is exactly canon | mixed | filler, each relative to the series' identified source (T25); 'anime-only-canon' is not a stored value (episodes_type_check). AFL's anime_canon class is kept in staging (G51) and mapped at every write by the series' source kind (SOURCE_KINDS.aflAnimeCanon: original and video_game → canon because the anime IS that source's story; manga / novel / VN / other → filler because the row adheres to no identified source), then T6 rulings win row by row and the override facts live in annotations (T26). A stored filler row that AFL calls anime-canon with no ruling on it is afl_anime_canon_unruled — the batch-18 review queue, derived from staging, never a holding type. A1 stands: filler never anchors (anchor_on_noncanon_row must read 0 after any standing migration).
+
+*Why:* T4.0 D-10 (Sean, 2026-08-26): 977 rows wore 'anime-only-canon' meaning four different things (the anime is the source — Madoka; author-adopted side stories — Black Clover; studio endings — Claymore; plain anime-original filler — FMA 2003's second half). A cold agent could not tell which, and 'anime only' read as filler to everyone else. The standing migration (T4.3) flipped them by kind and ruling: 387 original + 131 game rows → canon, 88 ruled rows → canon + adopted / side_source, the A-7 endings → filler + divergence on the review list, the rest → filler in the staging-derived queue.
+
+- ruled Sean 2026-08-26 (docs/restructure/T4-GLOSSARY.md §1, §3 (D-10 / D-12); restructure T4.3)
+- layer **writer**
+- enforced: [lib/rulings/source-kinds.ts#aflAnimeCanonStanding](../scripts/ingest/lib/rulings/source-kinds.ts) · [lib/resolve.ts#filterEpisodeRows](../scripts/ingest/lib/resolve.ts) · [assert-overrides.ts#assertStandings](../scripts/ingest/assert-overrides.ts) · [supabase/migrations/20260826200000_three_standings.sql](../supabase/migrations/20260826200000_three_standings.sql) · [audit-ui-truth.ts#afl_anime_canon_unruled](../scripts/ingest/audit-ui-truth.ts)
+- audit: `afl_anime_canon_unruled`, `anchor_on_noncanon_row`, `ruling_violation`
+- witnesses: puella-magi-madoka-magica, ace-attorney, black-clover, claymore, fullmetal-alchemist
+- aliases: three standings, canon mixed filler only, anime-only-canon retired, AFL anime_canon mapping, aflAnimeCanon, afl_anime_canon_unruled, standing migration, D-10 standing, anime only retired
+- see: T25, T26, T6, A1, T13, T14, G51
 
 ## N — Numbering, counts & chapter spaces
 
@@ -3940,6 +3955,7 @@ Any component that renders episode-level data consumes the HYDRATED series (getB
 - AFG-expansion typing sweep → `T15`
 - afg-extend → `I29`
 - AFL alias corruption → `G8`
+- AFL anime_canon mapping → `T27`
 - AFL class map → `T1`
 - AFL is the type authority → `T4`
 - AFL label past table stop → `T4`
@@ -3948,11 +3964,13 @@ Any component that renders episode-level data consumes the HYDRATED series (getB
 - AFL row parse contract → `G7`
 - AFL wins → `T5`
 - AFL wins, always → `T5`
+- afl_anime_canon_unruled → `T27`
 - AFL-lag class → `I27`
 - AFL-range merge → `I32`
 - AFL-range merge on refresh → `I32`
 - AFL-range merge rule → `I32`
 - AFL/AFG advisory → `T4`
+- aflAnimeCanon → `T27`
 - agent contract → `R8`
 - agent is read-only → `R22`
 - air date override pass → `G53`
@@ -3988,11 +4006,13 @@ Any component that renders episode-level data consumes the HYDRATED series (getB
 - anchorsReachEnd → `A37`
 - AniFiller seed → `I10`
 - AniList naming authority → `I7`
+- anime only retired → `T27`
 - anime parity → `C2`
 - anime_only badge → `T19`
 - anime_only homonym → `T22`
 - anime-only-canon ≠ anchor desert → `T14`
 - anime-only-canon has no chapter counterpart → `T14`
+- anime-only-canon retired → `T27`
 - anime→manga linkage → `I38`
 - annotation kind vocabulary → `R10`
 - annotation kinds → `R10`
@@ -4058,6 +4078,7 @@ Any component that renders episode-level data consumes the HYDRATED series (getB
 - C4 rule → `C4`
 - cameo rule → `A2`
 - cameo/sliver borrowings → `A2`
+- canon mixed filler only → `T27`
 - canon-default → `T17`
 - canon-default typing → `T17`
 - canon-tier → `G52`
@@ -4157,6 +4178,7 @@ Any component that renders episode-level data consumes the HYDRATED series (getB
 - curated-first apply → `P10`
 - curation principle → `P10`
 - D-10 annotations → `T26`
+- D-10 standing → `T27`
 - D-5 → `P34`
 - D-9 → `T25`
 - D1 → `G32`
@@ -4691,6 +4713,7 @@ Any component that renders episode-level data consumes the HYDRATED series (getB
 - stale verdict HELD → `P16`
 - stale-anchor class → `A27`
 - stale-zone healing → `N19`
+- standing migration → `T27`
 - START = first chapter animated → `A10`
 - START majority rule → `A11`
 - start sanity → `A21`
@@ -4737,6 +4760,7 @@ Any component that renders episode-level data consumes the HYDRATED series (getB
 - the standing goal → `P30`
 - the verifier → `P19`
 - three rosters → `P33`
+- three standings → `T27`
 - three-numbers model → `C8`
 - ties escalate to research → `R2`
 - title-alignment verification → `N21`
@@ -4815,6 +4839,6 @@ Any component that renders episode-level data consumes the HYDRATED series (getB
 
 ## Scoreboard
 
-- rules: 262 (live 246, planned 10, superseded 6)
+- rules: 263 (live 246, planned 10, superseded 7)
 - live data rules with no audit class (the automation backlog): 87
-- by layer: writer 134 · display 23 · both 22 · process 83
+- by layer: writer 135 · display 23 · both 22 · process 83

@@ -47,6 +47,7 @@ export const SERIES_COLS =
 
 export type EpisodeRow = { number: number; title: string; type: string; air_date: string | null };
 export type AnchorRow = { episode: number; volume: number | null; chapter: number; start_chapter: number | null };
+export type AnnotationRow = { episode: number; kind: string };
 
 const STREAM_TOKENS: [RegExp, StreamingService][] = [
   [/crunchyroll/i, 'crunchyroll'],
@@ -79,12 +80,18 @@ export const volumeFor = (row: SeriesRow, chapter: number, boundaries: Boundary[
   return Math.min(row.total_volumes, Math.max(1, Math.ceil((chapter * row.total_volumes) / row.total_chapters)));
 };
 
-export const toEpisodes = (row: SeriesRow, eps: EpisodeRow[], anchors: AnchorRow[], boundaries: Boundary[]): Episode[] => {
+export const toEpisodes = (row: SeriesRow, eps: EpisodeRow[], anchors: AnchorRow[], boundaries: Boundary[],
+  annotations: AnnotationRow[] = [],
+): Episode[] => {
   const anchorByEp = new Map(anchors.map((a) => [a.episode, a]));
+  const off = new Set(annotations.filter((a) => a.kind === 'adopted' || a.kind === 'side_source').map((a) => a.episode));
   const out: Episode[] = eps.map((e) => {
     const anchor = anchorByEp.get(e.number);
     const type = e.type as EpisodeType;
-    const mappable = type === 'canon' || type === 'mixed';
+    // T26: an adopted / side_source row is canon with no source counterpart —
+    // never a mapping, never an interpolated position (A1 stands for filler)
+    const offSource = off.has(e.number);
+    const mappable = (type === 'canon' || type === 'mixed') && !offSource;
     return {
       number: e.number,
       // DB uses '' for pending titles (NOT NULL column); the UI's
@@ -106,6 +113,7 @@ export const toEpisodes = (row: SeriesRow, eps: EpisodeRow[], anchors: AnchorRow
             }
           : null,
       airDate: e.air_date ?? '',
+      ...(offSource ? { offSource: true } : {}),
     };
   });
   // ANCHORED ROW-LESS EPISODES (cells-at-work 12/13, 2026-08-24): an exact
@@ -260,7 +268,9 @@ export const buildMapping = (
   const hasInstrument = seriesHasInstrument(sourceType);
   const aired = Math.max(row.aired_episodes, eps.reduce((m, e) => Math.max(m, e.number), 0));
 
-  const spans = buildSpans(eps, aired, hasSource ? 'canon' : 'anime-only-canon');
+  // T27: every series' base standing is canon relative to ITS source — a
+  // studio original is its own source; nothing pads 'anime-only-canon' any more
+  const spans = buildSpans(eps, aired, 'canon');
   const counts = { canon: 0, mixed: 0, filler: 0, 'anime-only-canon': 0 };
   for (const s of spans) counts[s.type] += s.end - s.start + 1;
   const total = counts.canon + counts.mixed + counts.filler + counts['anime-only-canon'];

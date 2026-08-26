@@ -35,22 +35,30 @@ export type SourceKind = {
   countries?: string[];
   /** the series label when this kind is the source itself */
   seriesLabel?: string;
+  /**
+   * T27 (T4.3): what AFL's `anime_canon` class means on a series of this kind.
+   * AFL's word means "canon to the anime, not from the manga": on a studio
+   * original or a game adaptation that IS the source's own story (canon);
+   * on a manga / novel / VN series it adheres to no source (filler) unless a
+   * T6 ruling says otherwise.
+   */
+  aflAnimeCanon: 'canon' | 'filler';
   note?: string;
 };
 
 export const SOURCE_KINDS = [
-  { value: 'manga', noun: 'manga', unit: 'chapter', tailBadge: 'manga only', anilistSources: ['MANGA', 'ONE_SHOT'], countries: ['JP'] },
-  { value: 'manhwa', noun: 'manhwa', unit: 'chapter', tailBadge: 'manhwa only', anilistSources: ['MANGA', 'ONE_SHOT'], countries: ['KR'] },
-  { value: 'manhua', noun: 'manhua', unit: 'chapter', tailBadge: 'manhua only', anilistSources: ['MANGA', 'ONE_SHOT'], countries: ['CN', 'TW', 'HK'] },
-  { value: 'webtoon', noun: 'webtoon', unit: 'chapter', tailBadge: 'webtoon only', anilistSources: [], note: 'reserved — AniList has no WEBTOON manga format; enters only through SOURCE_TYPE_OVERRIDES' },
-  { value: 'doujinshi', noun: 'doujinshi', unit: 'chapter', tailBadge: 'doujinshi only', anilistSources: ['DOUJINSHI'] },
-  { value: 'light_novel', noun: 'novel', unit: 'volume', tailBadge: 'novel only', anilistSources: ['LIGHT_NOVEL'], note: 'volume-space instrument (T24)' },
-  { value: 'web_novel', noun: 'novel', unit: 'volume', tailBadge: 'novel only', anilistSources: ['WEB_NOVEL'] },
-  { value: 'novel', noun: 'novel', unit: 'volume', tailBadge: 'novel only', anilistSources: ['NOVEL'] },
-  { value: 'visual_novel', noun: 'visual novel', unit: 'none', tailBadge: null, anilistSources: ['VISUAL_NOVEL'], note: 'never collapsed into novel; no instrument until a citeable, mapped example exists' },
-  { value: 'video_game', noun: 'game', unit: 'none', tailBadge: null, anilistSources: ['VIDEO_GAME', 'GAME'], note: 'no instrument until a citeable, mapped example exists' },
-  { value: 'original', noun: 'anime', unit: 'none', tailBadge: null, anilistSources: ['ORIGINAL'], seriesLabel: 'studio original', note: 'the anime IS the source — hasSource false, no tail' },
-  { value: 'other', noun: 'source', unit: 'none', tailBadge: null, anilistSources: ['OTHER'], note: 'flag for a ruling: SOURCE_TYPE_OVERRIDES names the real kind' },
+  { value: 'manga', noun: 'manga', unit: 'chapter', tailBadge: 'manga only', anilistSources: ['MANGA', 'ONE_SHOT'], countries: ['JP'], aflAnimeCanon: 'filler' },
+  { value: 'manhwa', noun: 'manhwa', unit: 'chapter', tailBadge: 'manhwa only', anilistSources: ['MANGA', 'ONE_SHOT'], countries: ['KR'], aflAnimeCanon: 'filler' },
+  { value: 'manhua', noun: 'manhua', unit: 'chapter', tailBadge: 'manhua only', anilistSources: ['MANGA', 'ONE_SHOT'], countries: ['CN', 'TW', 'HK'], aflAnimeCanon: 'filler' },
+  { value: 'webtoon', noun: 'webtoon', unit: 'chapter', tailBadge: 'webtoon only', anilistSources: [], aflAnimeCanon: 'filler', note: 'reserved — AniList has no WEBTOON manga format; enters only through SOURCE_TYPE_OVERRIDES' },
+  { value: 'doujinshi', noun: 'doujinshi', unit: 'chapter', tailBadge: 'doujinshi only', anilistSources: ['DOUJINSHI'], aflAnimeCanon: 'filler' },
+  { value: 'light_novel', noun: 'novel', unit: 'volume', tailBadge: 'novel only', anilistSources: ['LIGHT_NOVEL'], aflAnimeCanon: 'filler', note: 'volume-space instrument (T24)' },
+  { value: 'web_novel', noun: 'novel', unit: 'volume', tailBadge: 'novel only', anilistSources: ['WEB_NOVEL'], aflAnimeCanon: 'filler' },
+  { value: 'novel', noun: 'novel', unit: 'volume', tailBadge: 'novel only', anilistSources: ['NOVEL'], aflAnimeCanon: 'filler' },
+  { value: 'visual_novel', noun: 'visual novel', unit: 'none', tailBadge: null, anilistSources: ['VISUAL_NOVEL'], aflAnimeCanon: 'filler', note: 'never collapsed into novel; no instrument until a citeable, mapped example exists' },
+  { value: 'video_game', noun: 'game', unit: 'none', tailBadge: null, anilistSources: ['VIDEO_GAME', 'GAME'], aflAnimeCanon: 'canon', note: 'no instrument until a citeable, mapped example exists' },
+  { value: 'original', noun: 'anime', unit: 'none', tailBadge: null, anilistSources: ['ORIGINAL'], seriesLabel: 'studio original', aflAnimeCanon: 'canon', note: 'the anime IS the source — hasSource false, no tail' },
+  { value: 'other', noun: 'source', unit: 'none', tailBadge: null, anilistSources: ['OTHER'], aflAnimeCanon: 'filler', note: 'flag for a ruling: SOURCE_TYPE_OVERRIDES names the real kind' },
 ] as const satisfies readonly SourceKind[];
 
 /** the stored vocabulary, derived from the registry — never a second list */
@@ -66,6 +74,9 @@ export const seriesHasSource = (sourceType: string | null | undefined): boolean 
   const k = sourceKindOf(sourceType);
   return !!k && k.value !== 'original';
 };
+
+/** T27: the standing an AFL `anime_canon` row takes on a series of this kind; unknown kind → filler (adheres to no identified source) */
+export const aflAnimeCanonStanding = (sourceType: string | null | undefined): 'canon' | 'filler' => sourceKindOf(sourceType)?.aflAnimeCanon ?? 'filler';
 
 /** there are units to map to — tail math, strip, `{noun} only` only when true */
 export const seriesHasInstrument = (sourceType: string | null | undefined): boolean => {

@@ -400,7 +400,7 @@ async function main() {
           }
         }
         if (newRows.length) {
-          const ruled = filterEpisodeRows(t.id, newRows, 'wiki');
+          const ruled = filterEpisodeRows(t.id, newRows, 'wiki', { sourceType: t.source_type });
           for (let i = 0; i < ruled.length; i += 500) {
             const { error } = await db.from('episodes').insert(ruled.slice(i, i + 500));
             if (error) throw new Error(error.message);

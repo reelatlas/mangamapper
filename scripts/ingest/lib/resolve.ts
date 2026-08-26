@@ -66,7 +66,7 @@ export async function applyScope(
 export { EXTRAS_ADOPTED } from './rulings/extras-adopted';
 export { AIR_DATE_OVERRIDES } from './rulings/air-dates';
 import { AIR_DATE_OVERRIDES } from './rulings/air-dates';
-import { deriveSourceKind, mangaStatusOf } from './rulings/source-kinds';
+import { aflAnimeCanonStanding, deriveSourceKind, mangaStatusOf } from './rulings/source-kinds';
 import { withholdAirdateRegressions, type AirdateWithheld } from './airdate-order';
 
 // Community-count rulings (Sean 2026-08-24: the community-consensus episode
@@ -142,7 +142,7 @@ export const filterEpisodeRows = <T extends { number: number; type?: string; air
   seriesId: string,
   rows: T[],
   space: string,
-  opts?: { onAirdateWithheld?: (withheld: AirdateWithheld[]) => void },
+  opts?: { onAirdateWithheld?: (withheld: AirdateWithheld[]) => void; sourceType?: string | null },
 ): T[] => {
   const t0 = SOURCE_NUMBERING_SHIFTS[seriesId];
   const t = t0 && (!t0.spaces || t0.spaces.includes(space)) ? t0 : undefined;
@@ -154,9 +154,15 @@ export const filterEpisodeRows = <T extends { number: number; type?: string; air
   }
   const o = COMMUNITY_COUNT_OVERRIDES[seriesId];
   const capped = o ? translated.filter((r) => r.number <= o.cap) : translated;
+  // T27 (T4.3): AFL's `anime_canon` class ('anime-only-canon' in staging, kept
+  // there — G51) is not a stored standing; it maps by the series' source kind
+  // (original / game → canon, sourced series → filler) BEFORE the T6 rulings,
+  // which then win row by row. No sourceType → filler (fail closed).
+  const standing = aflAnimeCanonStanding(opts?.sourceType);
+  const stood = capped.map((r) => ('type' in r && r.type === 'anime-only-canon' ? { ...r, type: standing } : r));
   const types = EPISODE_TYPE_OVERRIDES[seriesId];
   const dates = AIR_DATE_OVERRIDES[seriesId]; // G53: ruled air dates re-applied at every write
-  const ruled = !types && !dates ? capped : capped.map((r) => {
+  const ruled = !types && !dates ? stood : stood.map((r) => {
     let out = r;
     if (types?.[r.number] && 'type' in r) out = { ...out, type: types[r.number] };
     if (dates?.[r.number] && 'air_date' in r) out = { ...out, air_date: dates[r.number] };
@@ -462,7 +468,7 @@ export async function resolveSeries(runId: number, slug: string): Promise<{ epis
   // A STITCHED series (multiple components) is owned by the stitcher — a
   // plain resolve would collapse it back to one season. Refresh only the
   // episode rows (AFL's data) and leave the aggregate to the next stitch run.
-  const { data: existing } = await db.from('series').select('id').eq('afl_slug', slug).maybeSingle();
+  const { data: existing } = await db.from('series').select('id, source_type').eq('afl_slug', slug).maybeSingle();
   if (existing) {
     const { count: compCount } = await db
       .from('series_components')
@@ -486,7 +492,7 @@ export async function resolveSeries(runId: number, slug: string): Promise<{ epis
           air_date: e.airDate,
         })),
         'afl',
-        { onAirdateWithheld: (w) => (stitchedWithheld = w) },
+        { onAirdateWithheld: (w) => (stitchedWithheld = w), sourceType: existing.source_type },
       );
       if (stitchedWithheld.length) await flagAirdateWithheld(runId, slug, 'afl', stitchedWithheld);
       const ourPageMax = stitchedRows.reduce((m, e) => Math.max(m, e.number), 0);
@@ -631,7 +637,7 @@ export async function resolveSeries(runId: number, slug: string): Promise<{ epis
     title: e.title,
     type: e.type,
     air_date: e.airDate,
-  })), 'afl', { onAirdateWithheld: (w) => (withheld = w) });
+  })), 'afl', { onAirdateWithheld: (w) => (withheld = w), sourceType: derived.value });
   if (withheld.length) await flagAirdateWithheld(runId, slug, 'afl', withheld);
   // translated-max boundary (see the stitched-guard note): never delete past
   // what the translated rows refill

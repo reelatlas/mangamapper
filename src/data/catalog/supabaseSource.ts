@@ -22,8 +22,7 @@ import {
   type SeriesRow,
   type WatchOrderRow,
   buildMapping,
-  buildSpans,
-} from './assemble';
+  buildSpans, type AnnotationRow } from './assemble';
 import type { CatalogSource, ListOptions } from './source';
 
 // The real catalog: canonical tables filled by scripts/ingest/ (AFL episode
@@ -58,6 +57,24 @@ async function allAnchors(seriesId: string): Promise<AnchorRow[]> {
       .range(from, from + 999);
     if (error) throw error;
     out.push(...((data ?? []) as AnchorRow[]));
+    if (!data || data.length < 1000) break;
+  }
+  return out;
+}
+
+// T26: adopted / side_source annotations mark canon rows with no source
+// counterpart — the display needs them to keep the honest dash.
+async function allAnnotations(seriesId: string): Promise<AnnotationRow[]> {
+  const out: AnnotationRow[] = [];
+  for (let from = 0; ; from += 1000) {
+    const { data, error } = await supabase
+      .from('episode_annotations')
+      .select('episode, kind')
+      .eq('series_id', seriesId)
+      .order('episode')
+      .range(from, from + 999);
+    if (error) throw error;
+    out.push(...((data ?? []) as AnnotationRow[]));
     if (!data || data.length < 1000) break;
   }
   return out;
@@ -148,17 +165,18 @@ export const supabaseCatalogSource: CatalogSource = {
   async getById(id: string) {
     const row = await fetchSeriesRow(id);
     if (!row) return null;
-    const [eps, anchors, boundaries, watchOrder] = await Promise.all([
+    const [eps, anchors, boundaries, watchOrder, annotations] = await Promise.all([
       allEpisodes(id),
       allAnchors(id),
       allBoundaries(row.manga_anilist_id),
       allWatchOrder(id),
+      allAnnotations(id),
     ]);
     const { count } = await supabase
       .from('series')
       .select('*', { count: 'exact', head: true })
       .gt('popularity', row.popularity);
-    return toAnimeSeries(row, (count ?? 0) + 1, toEpisodes(row, eps, anchors, boundaries), boundaries.length, boundaries, watchOrder);
+    return toAnimeSeries(row, (count ?? 0) + 1, toEpisodes(row, eps, anchors, boundaries, annotations), boundaries.length, boundaries, watchOrder);
   },
 
   async getMapping(id: string) {

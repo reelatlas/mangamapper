@@ -607,6 +607,43 @@
    durable guard. Lesson for the floor rule: a >2 overshoot sourced from a
    SINGLE chart row with no corroborating content anywhere is a typo
    candidate, not an adoption candidate.
+56. ✅ **T4.3 — THE STANDING MIGRATION: canon / mixed / filler, relative to
+   the source (`T27`; T9 superseded by T26; T14 amended; 2026-08-26).**
+   'anime-only-canon' left the canonical vocabulary (migration
+   `20260826200000_three_standings.sql`, `episodes_type_check`). AFL's
+   `anime_canon` class stays in staging (G51) and is mapped at every write
+   by the series' source kind — a new registry field `aflAnimeCanon`
+   (original, video_game → canon: the anime IS that source's story; manga /
+   novel / VN / other → filler: adheres to no identified source) inside
+   `filterEpisodeRows` (all three writers pass the series' source kind; no
+   kind → filler, fail closed) — then the T6 rulings win row by row. The
+   healer (`assert-overrides.ts`, two new passes) migrated the 977 rows:
+   387 original + 131 game → canon; the T6 map's 17 anime-only-canon
+   entries rewritten (shippuden 452-457, kenshin-2023 34, black-clover
+   130-157's 21, boruto 221-286, beastars 44 → canon; kenshin-2023 44 and
+   the A-7 endings → filler); the override facts landed as annotations from
+   the new rulings map `lib/rulings/standing-annotations.ts` (190 rows /
+   13 series: adopted{author} black-clover + kenshin 34, adopted{community,
+   PROVISIONAL} boruto, adopted{studio, PROVISIONAL} beastars 44,
+   side_source shippuden, retconned world-trigger 49-63, divergence on the
+   A-7 class — claymore, gto, ajin, chrono, sailor-moon, railgun,
+   world-trigger 48, twin-star 21-50 — all on the asterisk review list).
+   Display: `Episode.offSource` (from adopted / side_source annotations,
+   now loaded by the app's hydration and the verifier) keeps the honest
+   dash and no interpolated position on those rows (T14 restated); every
+   series pads `canon` (a studio original is its own source). Census
+   class `afl_anime_canon_unruled` = the batch-18 review queue, derived
+   from staging: 24 series / 257 rows (boruto 119, beyblade-metal-fusion
+   32, FMA 2003 27, DBS 15, outlaw-star 13, soul-eater 13, one-piece 9 …).
+   A1 SPIKE CHECK: `anchor_on_noncanon_row` 0 after the flip;
+   ruling_violation 0; display 220/0 (the verifier and the rearranged-zone
+   class learned that an off-source canon row is not a hole — 4 series /
+   2 rows had tripped them). Every other class unchanged (asterisk queue
+   134: the 13 series were already pending). Edges rebuilt + deployed.
+   Open for Sean (T4-GLOSSARY §7): the two PROVISIONAL bases; kenshin-2023
+   44; clannad 24 / clannad-after-story 23 (VN routes AFL calls anime-canon
+   — filler in the queue, likely canon). NEXT: batch-18 review of the big
+   unruled blocks BEFORE T4.4 format (glossary §6 step 5).
 55. ✅ **T4.2 — OVERRIDES ARE ANNOTATIONS, NEVER A FOURTH TYPE (`T26`;
    R10 / A43 extended; 2026-08-26).** Sean's T4.0 D-10 built: three kinds
    join the closed annotation vocabulary — `adopted` (REQUIRED `basis`

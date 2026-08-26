@@ -83,9 +83,9 @@ export const ENTRIES: RulingEntry<EpisodeTypes>[] = [
   {
     seriesId: 'naruto-shippuden',
     ruleId: 'T6',
-    value: { 452: 'anime-only-canon', 453: 'anime-only-canon', 454: 'anime-only-canon', 456: 'anime-only-canon', 457: 'anime-only-canon' },
+    value: { 452: 'canon', 453: 'canon', 454: 'canon', 456: 'canon', 457: 'canon' },
     reason:
-      'Eps 452-454/456-457 adapt the Itachi Shinden NOVEL — zero manga pages (Narutopedia + AFG + Wikipedia S20). A licensed canon side story = anime-only-canon per the Boruto/Black Clover precedent (T9). Ep 455 stays mixed: disputed ch-678 frame.',
+      'Eps 452-454/456-457 adapt the Itachi Shinden NOVEL — zero manga pages (Narutopedia + AFG + Wikipedia S20). A licensed canon side story = anime-only-canon per the Boruto/Black Clover precedent (T9). Ep 455 stays mixed: disputed ch-678 frame. T4.3 (T26/T27, 2026-08-26): anime-only-canon → canon; the override lives as an adopted / side_source annotation (lib/rulings/standing-annotations.ts), mapping null by design.',
     ruledBy: 'session',
     ruledOn: '2026-08-24',
     cite: [`${B15}/naruto-shippuden.json`],
@@ -96,10 +96,10 @@ export const ENTRIES: RulingEntry<EpisodeTypes>[] = [
     ruleId: 'T6',
     value: {
       ...range(5, 5, 'mixed'), ...range(7, 8, 'mixed'), ...range(11, 12, 'mixed'),
-      ...range(14, 21, 'mixed'), ...range(22, 24, 'anime-only-canon'),
+      ...range(14, 21, 'mixed'), ...range(22, 24, 'filler'),
     },
     reason:
-      'The anime departs after ep 13: 5/7/8/11/12 are original bridges on canon continuity, 14-21 the "primarily original" stretch that still pulls manga beats (Wikipedia lead + MU + ja-WP), 22-24 the original ending.',
+      'The anime departs after ep 13: 5/7/8/11/12 are original bridges on canon continuity, 14-21 the "primarily original" stretch that still pulls manga beats (Wikipedia lead + MU + ja-WP), 22-24 the original ending. T4.3 (T27, 2026-08-26): anime-only-canon → filler (adheres to no source; the studio-ending class A-7 carries a divergence annotation and stays on the review list — twin-star 21-50 explicitly, T4-GLOSSARY §7).',
     ruledBy: 'session',
     ruledOn: '2026-08-24',
     cite: [`${B17}/chrono-crusade.json`],
@@ -125,9 +125,9 @@ export const ENTRIES: RulingEntry<EpisodeTypes>[] = [
   {
     seriesId: 'rurouni-kenshin-2023',
     ruleId: 'T6',
-    value: { 34: 'anime-only-canon', 44: 'anime-only-canon' },
+    value: { 34: 'canon', 44: 'filler' },
     reason:
-      "Eps 34/44 adapt zero chapters (fandom blank + no Act page); 34 is Watsuki's own exhibition storyboard = canon-grade, so anime-only-canon rather than filler.",
+      "Eps 34/44 adapt zero chapters (fandom blank + no Act page); 34 is Watsuki's own exhibition storyboard = canon-grade, so anime-only-canon rather than filler. T4.3 (T26/T27): 34 → canon + adopted{author} (Watsuki's storyboard); 44 has no positive canon signal → filler (adheres to no source), on the review list.",
     ruledBy: 'session',
     ruledOn: '2026-08-24',
     cite: [`${B17}/rurouni-kenshin-2023.json`],
@@ -145,8 +145,8 @@ export const ENTRIES: RulingEntry<EpisodeTypes>[] = [
   {
     seriesId: 'sailor-moon',
     ruleId: 'T6',
-    value: { ...range(167, 172, 'anime-only-canon') },
-    reason: "Eps 167-172: the Nehelenia-revival arc, an anime-original continuation of SuperS's villain — made for the anime, standing as canon.",
+    value: { ...range(167, 172, 'filler') },
+    reason: "Eps 167-172: the Nehelenia-revival arc, an anime-original continuation of SuperS's villain — made for the anime, standing as canon. T4.3 (T27, 2026-08-26): anime-only-canon → filler (adheres to no source; the studio-ending class A-7 carries a divergence annotation and stays on the review list — twin-star 21-50 explicitly, T4-GLOSSARY §7).",
     ruledBy: 'session',
     ruledOn: '2026-08-24',
     cite: [`${B17}/sailor-moon.json`],
@@ -154,9 +154,9 @@ export const ENTRIES: RulingEntry<EpisodeTypes>[] = [
   {
     seriesId: 'twin-star-exorcists',
     ruleId: 'T6',
-    value: { 20: 'mixed', ...range(21, 50, 'anime-only-canon') },
+    value: { 20: 'mixed', ...range(21, 50, 'filler') },
     reason:
-      "Ep 20 is canon to ~14:05 then departs (mixed); 21-50 are the anime's own serialized finale that never returns to the manga and contradicts it (Yuto dies here, survives there).",
+      "Ep 20 is canon to ~14:05 then departs (mixed); 21-50 are the anime's own serialized finale that never returns to the manga and contradicts it (Yuto dies here, survives there). T4.3 (T27, 2026-08-26): anime-only-canon → filler (adheres to no source; the studio-ending class A-7 carries a divergence annotation and stays on the review list — twin-star 21-50 explicitly, T4-GLOSSARY §7).",
     ruledBy: 'session',
     ruledOn: '2026-08-24',
     cite: [`${B17}/twin-star-exorcists.json`],
@@ -164,8 +164,8 @@ export const ENTRIES: RulingEntry<EpisodeTypes>[] = [
   {
     seriesId: 'world-trigger',
     ruleId: 'T6',
-    value: { 48: 'anime-only-canon', ...range(49, 63, 'filler') },
-    reason: 'Ep 48 is an anime-original breather inside the canon arc; 49-63 is the Fugitive Arc, RETCONNED by S2 → filler, not canon.',
+    value: { 48: 'filler', ...range(49, 63, 'filler') },
+    reason: 'Ep 48 is an anime-original breather inside the canon arc; 49-63 is the Fugitive Arc, RETCONNED by S2 → filler, not canon. T4.3 (T27, 2026-08-26): anime-only-canon → filler (adheres to no source; the studio-ending class A-7 carries a divergence annotation and stays on the review list — twin-star 21-50 explicitly, T4-GLOSSARY §7).',
     ruledBy: 'session',
     ruledOn: '2026-08-24',
     cite: [`${B17}/world-trigger.json`],
@@ -344,9 +344,9 @@ export const ENTRIES: RulingEntry<EpisodeTypes>[] = [
   {
     seriesId: 'claymore',
     ruleId: 'T6',
-    value: { 24: 'anime-only-canon', 25: 'anime-only-canon', 26: 'anime-only-canon' },
+    value: { 24: 'filler', 25: 'filler', 26: 'filler' },
     reason:
-      'Eps 24-26: fully anime-original ending (Madhouse outran the manga) — research verdict (AFG + wheredoestheanimeleaveoff + sportskeeda), Sean sign-off. Contrary to the later T11 (DSQ) class; parked under DRIFT-LIST A-7, nothing retyped.',
+      'Eps 24-26: fully anime-original ending (Madhouse outran the manga) — research verdict (AFG + wheredoestheanimeleaveoff + sportskeeda), Sean sign-off. Contrary to the later T11 (DSQ) class; parked under DRIFT-LIST A-7, nothing retyped. T4.3 (T27, 2026-08-26): anime-only-canon → filler (adheres to no source; the studio-ending class A-7 carries a divergence annotation and stays on the review list — twin-star 21-50 explicitly, T4-GLOSSARY §7).',
     ruledBy: 'Sean',
     ruledOn: '2026-08-23',
     retiresWhen: 'T4.0 taxonomy v2 unifies the studio-original-ending classes (A-7)',
@@ -355,25 +355,25 @@ export const ENTRIES: RulingEntry<EpisodeTypes>[] = [
     seriesId: 'black-clover',
     ruleId: 'T6',
     value: {
-      ...range(130, 130, 'anime-only-canon'),
+      ...range(130, 130, 'canon'),
       ...range(131, 131, 'filler'),
-      ...range(132, 133, 'anime-only-canon'),
+      ...range(132, 133, 'canon'),
       ...range(134, 135, 'filler'),
-      ...range(136, 141, 'anime-only-canon'),
+      ...range(136, 141, 'canon'),
       ...range(142, 149, 'filler'),
-      ...range(150, 157, 'anime-only-canon'),
+      ...range(150, 157, 'canon'),
     },
     reason:
-      'Eps 130-157 adapt zero manga chapters anywhere in the stretch (blackclover.fandom infoboxes all empty + animefillerguide + animefillerlist agree; research batch 8) — manga position holds at ch 228 until canon resumes at ep 158 → ch 229-231. Tabata-supervised side stories = anime-only-canon (T9); the disputed 131/134-135 and the Devil Banishers arc 142-149 = filler (2-of-3 sources).',
+      'Eps 130-157 adapt zero manga chapters anywhere in the stretch (blackclover.fandom infoboxes all empty + animefillerguide + animefillerlist agree; research batch 8) — manga position holds at ch 228 until canon resumes at ep 158 → ch 229-231. Tabata-supervised side stories = anime-only-canon (T9); the disputed 131/134-135 and the Devil Banishers arc 142-149 = filler (2-of-3 sources). T4.3 (T26/T27, 2026-08-26): anime-only-canon → canon; the override lives as an adopted / side_source annotation (lib/rulings/standing-annotations.ts), mapping null by design.',
     ruledBy: 'session',
     ruledOn: '2026-08-23',
   },
   {
     seriesId: 'boruto-naruto-next-generations',
     ruleId: 'T6',
-    value: range(221, 286, 'anime-only-canon'),
+    value: range(221, 286, 'canon'),
     reason:
-      "Eps 221-286: five ANIME-CANON arcs between the Kawaki arc end (ep 220 → ch 55) and Code's Assault (287-293 = chs 56-67) — Chunin Re-Exam, Kirigakure war, Kawaki Academy, Labyrinth, Sasuke Retsuden (narutopedia arc pages + animefillerguide + cbr; research batch 11). TRAP: animefillerlist marks 282-293 'Manga Canon' crediting the Sasuke Retsuden SPIN-OFF manga — trusting it would falsely advance Boruto chapter progress.",
+      "Eps 221-286: five ANIME-CANON arcs between the Kawaki arc end (ep 220 → ch 55) and Code's Assault (287-293 = chs 56-67) — Chunin Re-Exam, Kirigakure war, Kawaki Academy, Labyrinth, Sasuke Retsuden (narutopedia arc pages + animefillerguide + cbr; research batch 11). TRAP: animefillerlist marks 282-293 'Manga Canon' crediting the Sasuke Retsuden SPIN-OFF manga — trusting it would falsely advance Boruto chapter progress. T4.3 (T26/T27, 2026-08-26): anime-only-canon → canon; the override lives as an adopted / side_source annotation (lib/rulings/standing-annotations.ts), mapping null by design.",
     ruledBy: 'session',
     ruledOn: '2026-08-23',
   },
@@ -381,12 +381,12 @@ export const ENTRIES: RulingEntry<EpisodeTypes>[] = [
     seriesId: 'gto-great-teacher-onizuka',
     ruleId: 'T6',
     value: {
-      ...range(22, 28, 'anime-only-canon'),
-      ...range(34, 34, 'anime-only-canon'),
-      ...range(42, 43, 'anime-only-canon'),
+      ...range(22, 28, 'filler'),
+      ...range(34, 34, 'filler'),
+      ...range(42, 43, 'filler'),
     },
     reason:
-      'Anime-original mid-series block (22-28, 34) + the original ending 42-43 (caught up to the manga) — fandom infoboxes list Manga Chapter(s) = N/A; mangashed + wheredoestheanimeleaveoff call 42-43 non-canon (research batch 11). Contrary to the later T11 class; parked under A-7.',
+      'Anime-original mid-series block (22-28, 34) + the original ending 42-43 (caught up to the manga) — fandom infoboxes list Manga Chapter(s) = N/A; mangashed + wheredoestheanimeleaveoff call 42-43 non-canon (research batch 11). Contrary to the later T11 class; parked under A-7. T4.3 (T27, 2026-08-26): anime-only-canon → filler (adheres to no source; the studio-ending class A-7 carries a divergence annotation and stays on the review list — twin-star 21-50 explicitly, T4-GLOSSARY §7).',
     ruledBy: 'session',
     ruledOn: '2026-08-23',
     retiresWhen: 'T4.0 taxonomy v2 unifies the studio-original-ending classes (A-7)',
@@ -395,12 +395,12 @@ export const ENTRIES: RulingEntry<EpisodeTypes>[] = [
     seriesId: 'a-certain-scientific-railgun',
     ruleId: 'T6',
     value: {
-      ...range(13, 13, 'anime-only-canon'),
-      ...range(15, 24, 'anime-only-canon'),
-      ...range(41, 48, 'anime-only-canon'),
+      ...range(13, 13, 'filler'),
+      ...range(15, 24, 'filler'),
+      ...range(41, 48, 'filler'),
     },
     reason:
-      "S1's back half (Big Spider / Poltergeist, 13 + 15-24) and S's Silent Party (41-48) are anime-original (director-confirmed); ep 14 EXCEPTED — it grafts manga ch 17 (animefillerlist + fandom arc pages + Wikipedia; research batch 12).",
+      "S1's back half (Big Spider / Poltergeist, 13 + 15-24) and S's Silent Party (41-48) are anime-original (director-confirmed); ep 14 EXCEPTED — it grafts manga ch 17 (animefillerlist + fandom arc pages + Wikipedia; research batch 12). T4.3 (T27, 2026-08-26): anime-only-canon → filler (adheres to no source; the studio-ending class A-7 carries a divergence annotation and stays on the review list — twin-star 21-50 explicitly, T4-GLOSSARY §7).",
     ruledBy: 'session',
     ruledOn: '2026-08-23',
     cite: [`${B14}/a-certain-scientific-railgun.json`, `${B15}/a-certain-scientific-railgun.json`],
@@ -408,9 +408,9 @@ export const ENTRIES: RulingEntry<EpisodeTypes>[] = [
   {
     seriesId: 'ajin-demi-human',
     ruleId: 'T6',
-    value: range(14, 26, 'anime-only-canon'),
+    value: range(14, 26, 'filler'),
     reason:
-      'S2 (14-26) is anime-original from the start with a non-canon ending (WDTALO + mangashed + per-episode breakdown; research batch 12); canon resumes at manga ch 22. Contrary to the later T11 class; parked under A-7.',
+      'S2 (14-26) is anime-original from the start with a non-canon ending (WDTALO + mangashed + per-episode breakdown; research batch 12); canon resumes at manga ch 22. Contrary to the later T11 class; parked under A-7. T4.3 (T27, 2026-08-26): anime-only-canon → filler (adheres to no source; the studio-ending class A-7 carries a divergence annotation and stays on the review list — twin-star 21-50 explicitly, T4-GLOSSARY §7).',
     ruledBy: 'session',
     ruledOn: '2026-08-23',
     cite: [`${B15}/ajin-demi-human.json`],
@@ -430,9 +430,9 @@ export const ENTRIES: RulingEntry<EpisodeTypes>[] = [
   {
     seriesId: 'beastars',
     ruleId: 'T6',
-    value: { 37: 'mixed', 42: 'mixed', 44: 'anime-only-canon' },
+    value: { 37: 'mixed', 42: 'mixed', 44: 'canon' },
     reason:
-      'Final Season: eps 37/42 mix anime-original plots with chs 141 / 155. Ep 44 adapts no chapter (reviewer recap vs every chapter synopsis 149-196); SEAN-RULED anime-only-canon 2026-08-24 on positive evidence: chs 169-171 are the cut Kyuu chapters, 172-176 land in ep 47, and the frame-up / rat-base / kiss-deferral content matches no chapter in 161-179 (the manga\'s ch-173 first kiss is relocated to the ep-48 finale).',
+      'Final Season: eps 37/42 mix anime-original plots with chs 141 / 155. Ep 44 adapts no chapter (reviewer recap vs every chapter synopsis 149-196); SEAN-RULED anime-only-canon 2026-08-24 on positive evidence: chs 169-171 are the cut Kyuu chapters, 172-176 land in ep 47, and the frame-up / rat-base / kiss-deferral content matches no chapter in 161-179 (the manga\'s ch-173 first kiss is relocated to the ep-48 finale). T4.3 (T26/T27, 2026-08-26): anime-only-canon → canon; the override lives as an adopted / side_source annotation (lib/rulings/standing-annotations.ts), mapping null by design.',
     ruledBy: 'Sean',
     ruledOn: '2026-08-24',
     cite: [`${B14}/beastars.json`, `${B15}/beastars-ep44-followup.json`],
@@ -451,9 +451,9 @@ export const ENTRIES: RulingEntry<EpisodeTypes>[] = [
   {
     seriesId: 'cardcaptor-sakura-clear-card',
     ruleId: 'T6',
-    value: { 5: 'anime-only-canon', 11: 'mixed', 12: 'anime-only-canon', 13: 'anime-only-canon', 14: 'anime-only-canon', 15: 'anime-only-canon', 16: 'anime-only-canon' },
+    value: { 5: 'filler', 11: 'mixed', 12: 'filler', 13: 'filler', 14: 'filler', 15: 'filler', 16: 'filler' },
     reason:
-      'Clear Card is a separate series (Sean 2026-08-24): the batch-14 typings of our old rows 76 (anime-original), 82 (mixed) and 83-87 (anime-original) carried into the split entry\'s own numbering (−71).',
+      'Clear Card is a separate series (Sean 2026-08-24): the batch-14 typings of our old rows 76 (anime-original), 82 (mixed) and 83-87 (anime-original) carried into the split entry\'s own numbering (−71). T4.3 (T27, 2026-08-26): anime-only-canon → filler (adheres to no source; the studio-ending class A-7 carries a divergence annotation and stays on the review list — twin-star 21-50 explicitly, T4-GLOSSARY §7).',
     ruledBy: 'Sean',
     ruledOn: '2026-08-24',
     cite: [`${B15}/cardcaptor-sakura-clear-card.json`],

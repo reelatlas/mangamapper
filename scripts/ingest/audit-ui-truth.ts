@@ -82,10 +82,19 @@ async function main() {
     mu_pin_unverified: [],
     rearranged_zone_unanchored: [], rearranged_zone_acknowledged: [],
     title_incomplete: [], airdate_incomplete: [], airdate_regression: [], airdate_withheld: [], asterisk_unreviewed: [],
-    fractional_unmodeled: [], annotation_invalid: [],
+    fractional_unmodeled: [], annotation_invalid: [], afl_anime_canon_unruled: [],
     series_without_source_kind: [], no_source: [], no_instrument: [], ok_full: [], ok_no_volume: [], ok_loose: [],
     pending_airing_no_anchor: [], pending_finished_no_totals: [], pending_no_canon: [], pending_other: [],
   };
+  // T26: annotations are read once up front — the adopted / side_source rows
+  // (canon with NO source counterpart by design, T14) and the set of
+  // annotated rows are inputs to the gap audit and the AFL unruled queue.
+  const offSource = new Set<string>();
+  const annotated = new Set<string>();
+  for (const a of await selectAll<any>('episode_annotations', 'series_id, episode, kind')) {
+    if (a.kind === 'adopted' || a.kind === 'side_source') offSource.add(`${a.series_id}#${a.episode}`);
+    annotated.add(`${a.series_id}#${a.episode}`);
+  }
   // Sean's standing rule (2026-08-24, N7): any non-typical entry NUMBERED
   // into a run by any source is a research trigger — the reviewed set (with
   // each ruling's reason) lives in lib/rulings/reviewed-specials.ts.
@@ -260,6 +269,11 @@ async function main() {
       for (const r of regressions) classes.airdate_regression.push(`${sid}: ep ${r.number} ${r.date} is ${r.days} d before ep ${r.against} ${r.againstDate}${r.days > AIRDATE_REGRESSION_THRESHOLD_DAYS ? ' — block change, gate cannot name the outlier' : ''}`);
       for (const w of withheld) classes.ruling_violation.push(`${sid}: ep ${w.number} air_date ${w.date} stands ${w.days} d out of order — the G54 gate/healer should have withheld it`);
     }
+    // T27 (T4.3): AFL's anime_canon claim is kept in staging (G51); a stored
+    // FILLER row AFL calls anime-canon with no ruling on it (no T6 override,
+    // no annotation) is the batch-18 work-list — derived here, never a
+    // holding type in the canonical table.
+    const unruledBy = new Map<string, number[]>();
     const aflBySeries = new Map(series.filter((s: any) => s.afl_slug).map((s: any) => [s.afl_slug, s.id]));
     const staged = await selectAll<{ slug: string; raw: any }>('ingest_afl_shows', 'slug, raw', (q) => q.in('slug', [...aflBySeries.keys()]));
     for (const st of staged) {
@@ -273,6 +287,20 @@ async function main() {
         const row = stored.get(n);
         if (row && !row.air_date) classes.airdate_withheld.push(`${sid}: ep ${n} stored NULL, AFL says ${ep.airDate} — G53 candidate (cite the correct date) or an ack`);
       }
+      for (const ep of (st.raw?.episodes ?? []) as { number: number; type?: string }[]) {
+        if (ep.type !== 'anime-only-canon') continue;
+        const n = translateEpisodeNumber(sid, ep.number, 'afl');
+        if (n == null) continue;
+        const row = stored.get(n);
+        if (!row || row.type !== 'filler') continue;
+        if (EPISODE_TYPE_OVERRIDES[sid]?.[n] || annotated.has(`${sid}#${n}`)) continue;
+        if (!unruledBy.has(sid)) unruledBy.set(sid, []);
+        unruledBy.get(sid)!.push(n);
+      }
+    }
+    for (const [sid, nums] of [...unruledBy].sort((a, b) => b[1].length - a[1].length)) {
+      nums.sort((a, b) => a - b);
+      classes.afl_anime_canon_unruled.push(`${sid}: ${nums.length} rows AFL calls anime-canon stored filler, unruled (${nums.slice(0, 12).join(', ')}${nums.length > 12 ? '…' : ''})`);
     }
   }
 
@@ -353,7 +381,7 @@ async function main() {
         if ((anchorCount.get(a.series_id) ?? 0) < 2) continue; // no interpolation happening
         if (anchoredEps.has(`${a.series_id}#${a.episode}`)) continue;
         const t = epType.get(`${a.series_id}#${a.episode}`);
-        if (t === 'filler' || t === 'anime-only-canon') continue;
+        if (t === 'filler' || offSource.has(`${a.series_id}#${a.episode}`)) continue; // T26: no source position exists on an adopted / side_source row
         // zone-acknowledged rows (batch-15 rule): research established that
         // only zone-level knowledge exists — an acknowledged-approximate
         // review item, not an open research target
@@ -529,7 +557,7 @@ async function main() {
           // anime-only-canon has no manga counterpart BY DESIGN — the
           // Black Clover 130-157 lesson, research batch 8)
           const canonInGap = episodes.filter(
-            (e: any) => e.series_id === row.id && e.number > prevEp && e.number < ep && e.type !== 'filler' && e.type !== 'anime-only-canon',
+            (e: any) => e.series_id === row.id && e.number > prevEp && e.number < ep && e.type !== 'filler' && !offSource.has(`${row.id}#${e.number}`),
           ).length;
           if (canonInGap > worst) {
             worst = canonInGap;

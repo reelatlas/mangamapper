@@ -186,7 +186,7 @@ export const RULES: Rule[] = [
     statement:
       'A licensed, author-supervised or author-declared canon side story adapted with zero source pages (a supervised novel or spin-off; studio content the author declares canon) is anime-only-canon. The discriminator is author DECLARATION or supervision, not commissioning: author-commissioned arcs never declared canon are filler.',
     why:
-      "naruto-shippuden 452–457, black-clover 130–157 (Tabata-supervised), boruto 221–286 → anime-only-canon; kinnikuman 120–137 (commissioned, never declared canon, timeline overwritten by the 1991 sequel) → filler (wave 2, 2026-08-25). T4.0 D-10 keeps this class DISTINCT from the Madoka-style 'the anime is the source' meaning — do not merge them.",
+      "naruto-shippuden 452–457, black-clover 130–157 (Tabata-supervised), boruto 221–286 → anime-only-canon; kinnikuman 120–137 (commissioned, never declared canon, timeline overwritten by the 1991 sequel) → filler (wave 2, 2026-08-25). T4.0 D-10 keeps this class DISTINCT from the Madoka-style 'the anime is the source' meaning — do not merge them. SUPERSEDED 2026-08-26 (T4.3): the class is canon + adopted{author} / side_source (T26); the discriminator (declaration or supervision, not commissioning) survives as the basis test.",
     ruledBy: 'Sean',
     ruledOn: '2026-08-24',
     origin: 'lib/resolve.ts naruto-shippuden / black-clover / boruto comments; §12.47 (kinnikuman)',
@@ -194,7 +194,8 @@ export const RULES: Rule[] = [
     layer: 'writer',
     auditClass: ['ruling_violation'],
     witnesses: ['naruto-shippuden', 'black-clover', 'boruto-naruto-next-generations', 'kinnikuman'],
-    status: 'live',
+    status: 'superseded',
+    supersededBy: 'T26',
     see: ['T2', 'T10', 'T11', 'T14'],
   },
   {
@@ -279,7 +280,7 @@ export const RULES: Rule[] = [
     family: 'T',
     title: 'anime-only-canon ≠ anchor desert (Black Clover lesson)',
     statement:
-      'Episodes typed anime-only-canon have no source counterpart BY DESIGN: they render truthfully with no chapter (never mapping-pending), never count toward anchor_gap_research, and position holds at the last anchor until the next canon/mixed episode.',
+      'Rows carrying an adopted or side_source annotation (T26; before T4.3 the type anime-only-canon) have no source counterpart BY DESIGN: they render truthfully with no chapter (Episode.offSource → the honest dash, never mapping-pending, never an interpolated position), never count toward anchor_gap_research, and position holds at the last anchor until the next mapped canon/mixed episode.',
     why:
       'black-clover 130–157 adapts zero chapters across 28 episodes; position holds at ch 228 until ep 158. The typing itself is research-ruled per episode (T6); the anchor prohibition on such rows is A1.',
     ruledBy: 'session',
@@ -571,5 +572,30 @@ export const RULES: Rule[] = [
     witnesses: ['black-clover', 'boruto-naruto-next-generations', 'naruto-shippuden', 'x'],
     status: 'live',
     see: ['T25', 'R10', 'A43', 'A1', 'T13'],
+  },
+  {
+    id: 'T27',
+    aliases: ['three standings', 'canon mixed filler only', 'anime-only-canon retired', 'AFL anime_canon mapping', 'aflAnimeCanon', 'afl_anime_canon_unruled', 'standing migration', 'D-10 standing', 'anime only retired'],
+    family: 'T',
+    title: 'Standing is canon / mixed / filler, relative to the source',
+    statement:
+      "episodes.type is exactly canon | mixed | filler, each relative to the series' identified source (T25); 'anime-only-canon' is not a stored value (episodes_type_check). AFL's anime_canon class is kept in staging (G51) and mapped at every write by the series' source kind (SOURCE_KINDS.aflAnimeCanon: original and video_game → canon because the anime IS that source's story; manga / novel / VN / other → filler because the row adheres to no identified source), then T6 rulings win row by row and the override facts live in annotations (T26). A stored filler row that AFL calls anime-canon with no ruling on it is afl_anime_canon_unruled — the batch-18 review queue, derived from staging, never a holding type. A1 stands: filler never anchors (anchor_on_noncanon_row must read 0 after any standing migration).",
+    why:
+      "T4.0 D-10 (Sean, 2026-08-26): 977 rows wore 'anime-only-canon' meaning four different things (the anime is the source — Madoka; author-adopted side stories — Black Clover; studio endings — Claymore; plain anime-original filler — FMA 2003's second half). A cold agent could not tell which, and 'anime only' read as filler to everyone else. The standing migration (T4.3) flipped them by kind and ruling: 387 original + 131 game rows → canon, 88 ruled rows → canon + adopted / side_source, the A-7 endings → filler + divergence on the review list, the rest → filler in the staging-derived queue.",
+    ruledBy: 'Sean',
+    ruledOn: '2026-08-26',
+    origin: 'docs/restructure/T4-GLOSSARY.md §1, §3 (D-10 / D-12); restructure T4.3',
+    enforcement: [
+      { path: 'scripts/ingest/lib/rulings/source-kinds.ts', symbol: 'aflAnimeCanonStanding' },
+      { path: 'scripts/ingest/lib/resolve.ts', symbol: 'filterEpisodeRows' },
+      { path: 'scripts/ingest/assert-overrides.ts', symbol: 'assertStandings' },
+      { path: 'supabase/migrations/20260826200000_three_standings.sql' },
+      { path: 'scripts/ingest/audit-ui-truth.ts', symbol: 'afl_anime_canon_unruled' },
+    ],
+    layer: 'writer',
+    auditClass: ['afl_anime_canon_unruled', 'anchor_on_noncanon_row', 'ruling_violation'],
+    witnesses: ['puella-magi-madoka-magica', 'ace-attorney', 'black-clover', 'claymore', 'fullmetal-alchemist'],
+    status: 'live',
+    see: ['T25', 'T26', 'T6', 'A1', 'T13', 'T14', 'G51'],
   },
 ];
