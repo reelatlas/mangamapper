@@ -115,6 +115,7 @@ export function applyCommunityCap(
 // series, that source is suppressed there entirely. Applied by the source's
 // writer; verified outcome-side by the ruling_violation audit.
 export const CONTINUA_SUPPRESSED: Record<string, string> = {
+  'you-and-i-are-polar-opposites': 'continua endEpisode converts to our ep 11 while AFG\'s OWN chart rows put the frontier at ep 12 (chart: ep 11 = 26-28, ep 12 = 29-31) — a wrong-episode pin that overwrote real chart data and tripped anchor_start_offtrend (deep pass 2026-08-25); the chart rows carry the true frontier. Retire if AFG fixes its continua episode or the conversion gains a chart cross-check (restructuring-phase gate candidate)',
   claymore: 'continua says ep 26 → ch 54, but eps 24-26 are fully anime-original (research 2026-08-23) — the manual ep-20 → ch-56 anchor is the frontier',
   'kimi-ni-todoke-from-me-to-you': 'continua says ep 43 → ch 86 — ch 86 is unsupported anywhere (mid-vol 21, unadapted; research 2026-08-23); manual ep-44 → ch-75 is the frontier',
 };

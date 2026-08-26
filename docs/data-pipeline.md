@@ -1258,6 +1258,33 @@ Fixed weekly is correct.
    durable guard. Lesson for the floor rule: a >2 overshoot sourced from a
    SINGLE chart row with no corroborating content anywhere is a typo
    candidate, not an adoption candidate.
+52. ✅ **CLOSING DEEP CONSOLIDATION (2026-08-25) — batch 17's cycle sealed.**
+   Writer sweep: 5 new scripts since the last sweep, all principled (2
+   declared migrations, 2 healers — assert-type-overrides + afg-restage —
+   and lib/c3.ts, the shared predicate). Edges current. The deep pass's
+   REAL find: the §12.48 restage had populated parsed continua for ~60
+   pages that never had them staged; this pass's sweep was the first to
+   consume them — 60 new afg-continua frontier pins through the full gate
+   stack (4 withheld, 20 kept-curated cross-checks). Triage of the fallout:
+   (1) polar-opposites got a WRONG-EPISODE pin (continua endEpisode → our
+   ep 11 while AFG's own chart says ep 12) that overwrote chart data —
+   CONTINUA_SUPPRESSED entry added (Claymore precedent), chart self-heals
+   on the next refresh; gate candidate for the restructuring phase: the
+   continua episode conversion should cross-check the page's own chart
+   rows. (2) project-arms ep-52 mu pin re-derived onto the new last
+   episode — gate-legal (episode-space knowledge, duplicates the honest
+   205), heals via D1 if eps 51-52 ever retype; left standing, flagged.
+   Notes revalidated (suppressions ×3 valid, EXTRAS_ADOPTED ×2 valid,
+   regimes all verdict-documented). Stale cleanup: nothing dead found —
+   the batch's apply scripts and verdicts stay as records by design; 358
+   open flags are Sean's review queue (68 batch-17 bookmarks carry the
+   resolutions inline). PERMANENCE-TIER CANDIDATES now 15 (chunk-2 adds
+   d-gray-man, arms-alchemy, blade-ona, cobra, emma, dsq, fotbs, x, tmm) —
+   lock mechanism lands with the restructuring phase. Census: every rule
+   class 0, display 220/0 (ok_full 234→231 is a class shuffle from
+   null-volume continua pins on 3 series — boundaries write absent-only,
+   volumes-staleness events queue the backfill). CYCLE POSITION: batch 17
+   fully closed; THE RESTRUCTURING PHASE IS NEXT.
 51. ✅ **BATCH 17 COMPLETE (2026-08-25) — final wave verified, ruled,
    applied; the gap-tier batch closes end-to-end.** Final three (rayearth /
    fist-of-the-blue-sky / cobra) each verifier-checked; the rayearth
