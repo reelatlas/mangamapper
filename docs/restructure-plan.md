@@ -1,6 +1,6 @@
 # Restructure phase — the plan (v2, agreed 2026-08-25)
 
-Status: **T0–T2 done; T3.1 (skill + exercise 1), T3.3, T3.4 done (2026-08-26). Waiting on Sean: A-11 (exercise 2) and the T4.0 glossary session (→ T3.2, T3.5, T4).** v1 was drafted from a disk survey, cross-checked
+Status: **T0–T2 done; T3.1 (skill + exercise 1), T3.3, T3.4 done. T4.0 RULED 2026-08-26 → docs/restructure/T4-GLOSSARY.md is the ruled record and the build order; A-11 approved. Execution resumes after Sean's compact.** v1 was drafted from a disk survey, cross-checked
 by a second model (Cursor/Grok), re-checked against the tree, and folded.
 This file is the phase's tracked board: every piece has an id, a track, a
 dependency and a status; the board is updated at every save point. When the
@@ -318,7 +318,7 @@ words after the glossary exists. Rough total: 8–12 sessions.
 | T1.4 | drift rulings (Sean) — A-1..A-10 | T0.2 | done 2026-08-25 |
 | T1.5 | STATE.md; memory points at it (consolidate loop wired in T3.3) | T1.1 | done 2026-08-26 |
 | T1.6 | one-hop cases (16, batch-17 misses first) + one-hop-check | T1.2 | done 2026-08-26 |
-| T4.0 | glossary session (Sean) | T1.2 | planned |
+| T4.0 | glossary session — RULED (three standings; SOURCE_KINDS registry; adopted/retconned/side_source annotations; format axis; 'anime only' retired; UI strings last) | T1.2 | done 2026-08-26 |
 | T2.1 | lib/rulings/ + RulingEntry — 13 standing maps converted (deep-equality proven), 26 applied files extracted from batches 1–17 + rulings scripts | T1.2 | done 2026-08-26 |
 | T2.2 | gen-rulings → docs/rulings.md (1,645 rulings, 192 series, 8 UNRECORDED) | T2.1 | done 2026-08-26 |
 | T2.0 | compile-graph sidecar (tsconfig.scripts.json) | — | done 2026-08-26 |

@@ -1,160 +1,167 @@
-# T4.0 — the glossary session: decisions D-9…D-13 with the evidence (prepared 2026-08-26)
+# T4.0 — the glossary, RULED (Sean, 2026-08-26; cross-checked with Cursor; banked pre-compact, NOT executed)
 
-Purpose: name the terms so no agent, badge or rule can say "anime only" and
-mean two things. Output of the session: T-family ledger records, the
-PROTOCOL/agent vocabulary (T3.2/T3.5), and the T4 build scope. Nothing is
-retyped in this session; the build runs through `/add-rule` afterwards.
+This file is the ruling record for D-9…D-13. The build (T4.1–T4.5) runs
+through `/add-rule` after A-11 (exercise 2), in the order in §6, and ends
+in `/consolidate deep`. Nothing below has been applied yet.
 
-Success test (v2 plan §5): *a cold agent cannot use "anime only" to mean
-filler, and a Madoka episode is not the same type as Black Clover 130–157.*
-
----
-
-## The facts (queried 2026-08-26)
-
-**Sources.** AniList `source` across our 343 series: MANGA 256 · ORIGINAL 37
-· LIGHT_NOVEL 34 · VISUAL_NOVEL 9 · VIDEO_GAME 4 · OTHER 3. Every series is
-`countryOfOrigin: JP` — no manhwa/webtoon/manhua exists in the catalog
-today. **Our `series.source_type` collapses VISUAL_NOVEL, VIDEO_GAME and
-OTHER into `original`** (16 series): steins-gate and clannad are visual-novel
-adaptations, ace-attorney is a game adaptation — their "anime-only-canon"
-rows are NOT Madoka-class, they adapt a source we do not name. That is a
-source-level lie, not a naming quibble.
-
-**`series.manga_status`:** manga/publishing 66 · manga/finished 188 ·
-original/anime_only 51 · light_novel/anime_only 33 · manga/anime_only 2 ·
-original/finished 2 · light_novel/publishing 1. The value `anime_only` means
-"no manga to compare against" and is set for LN series too (33) — the
-series-level homonym.
-
-**`episodes.type = anime-only-canon`, 977 rows in 62 series:**
-- 24 ORIGINAL-source series, ~530 rows, all "AFL anime_canon, unruled"
-  (code-geass 50, psycho-pass 41, utena 34, nadia 30, bebop 27, champloo
-  26, evangelion 26, kill-la-kill 25, madoka 12…). For these the anime IS
-  the source: the value is doing the job `canon` should do.
-- 3 VN/game-source series (ace-attorney 41, clannad 1+2, steins-gate 1) —
-  studio-original material inside an ADAPTATION, mislabelled by the source
-  collapse above.
-- 3 LN-source singletons (durarara, 86, SAO), unruled.
-- 35 MANGA-source series, ~430 rows. Ruled (T6, reasons in
-  `docs/rulings.md`): boruto 221-286 (185, consensus-canon arcs),
-  twin-star 21-50 (30, studio finale), black-clover 130-157 (21,
-  consensus original), one-piece Sabo special (Sean), railgun originals
-  (20), ajin S2 non-canon ending (13), gto mid-block + caught-up ending
-  (10), naruto-shippuden 452-457 (6 — adapts the Itachi Shinden NOVEL: a
-  SECOND source, "canon to what?"), sailor-moon 167-172 (6), claymore
-  24-26 (3, outran the manga), chrono-crusade (3), kenshin-2023 (2),
-  fairy-tail 256 (Sean), tpn 23 (Sean), beastars 44 (Sean), conan (Sean).
-  Unruled AFL anime_canon: fullmetal-alchemist 27 (the 2003 divergent
-  anime), beyblade-metal-fusion 32, dragon-ball-super 15, outlaw-star 13,
-  soul-eater 13 (original ending), akame-ga-kill 5, and 12 singletons.
-
-**Format facts today:** `series_components.kind` season 604 · ova 30 ·
-special 13 · movie 17; `watch_order_entries.kind` null 38 · special 2 ·
-recap 1. No per-episode format column; kenshin Trust & Betrayal rows are
-`canon` AND OVAs — the two dimensions are independent.
-
-**Badge strings today (`TypeBadge.tsx`):** `canon`, `mixed`, `filler`,
-`manga_only`, `anime_only` — rendered literally.
+Success test: *a cold agent cannot use "anime only" to mean filler, and a
+Madoka episode is not the same type as Black Clover 130–157.*
 
 ---
 
-## D-9 — the SOURCE enum and its derivation
+## 1. The model (ruled)
 
-**Decide:** the exhaustive `series.source_type` vocabulary and how it is
-derived.
+- **Source is series identity.** `series.source_type` names what the anime
+  ADAPTS. Manga is NOT a global first look: manga is the instrument only
+  when THIS series' source is manga. Steins;Gate adapts a visual novel even
+  though a manga exists — that manga is a sibling adaptation (a
+  relation/citation), never the instrument. The derivative-manga rule
+  (`T21`, Evangelion class) stands and extends.
+- **Standing is exactly three values, relative to the source:** `canon`
+  (adheres to the identified source), `mixed` (source and non-source in
+  one episode), `filler` (zero standing in the source — including
+  studio-created material that does not adhere; X / DSQ endings stay
+  filler). The sliver / cameo / overlap / rehash gauges (`A2`, `A10`, `T7`,
+  `T8`) apply unchanged; the first non-manga evaluation may TUNE thresholds,
+  never fork a second system.
+- **Community / author / studio override is an ANNOTATION, never a fourth
+  type.** Type becomes canon or filler as Sean rules; the exception lives in
+  `episode_annotations` (§3). Canon does not imply a chapter mapping:
+  consensus-canon-not-in-the-source = `canon` + annotation + null mapping
+  (honest dash, no strip units). `A1` stands: filler never anchors.
+- **Totals and the strip follow the source's own units.** Anime episode
+  total always. Source totals = the source's real division (manga vol/ch;
+  LN volumes per `T24`; VN / game / studio-original: NO invented instrument
+  until a citeable, mapped example exists — named works such as Persona
+  1–4 are citations/relations, not a count pretending to be chapters).
+- **hasSource ≠ hasInstrument.** hasSource = an adapted work exists.
+  hasInstrument = there are units to map to (a tail, a strip). Tail math
+  and `{noun} only` badges only when hasInstrument. There is no
+  `studio_only` tail — on a studio original the anime IS the source.
+- **Format is an independent second axis, stored now, surfaced later**
+  (`episodes.format`: tv / ova / special / movie / recap). Standing is never
+  inferred from format: a movie that adheres is `canon` + `movie`; a recap
+  can be filler, mixed or canon + `recap`. Remake is a SERIES relation, not
+  an episode format. UI stacks chips from independent fields (standing +
+  format, optionally the override chip); no combined enum.
 
-**Recommendation:** adopt AniList's own `source` values, lower-cased, as the
-vocabulary — no invented names: `manga`, `light_novel`, `web_novel`, `novel`,
-`visual_novel`, `video_game`, `game`, `doujinshi`, `original`, `other`, plus
-region-qualified manga where `countryOfOrigin` says so: `manhwa` (KR),
-`manhua` (CN), `webtoon` (format WEBTOON regardless of country — none exist
-today; the value is reserved, not populated). Derivation = AniList source ×
-countryOfOrigin × linked-manga format, with a `SOURCE_TYPE_OVERRIDES`
-ruling map for the cases AniList gets wrong; an unmapped value FAILS CLOSED
-(`source_type = null` + flag), never defaults to manga. Migration today is
-mechanical: 9 → `visual_novel`, 4 → `video_game`, 3 → `other`; nothing else
-moves.
+## 2. D-9 — SOURCE_KINDS, a registry not an enum (ruled)
 
-## D-10 — canon STANDING, relative to the source
+`scripts/ingest/lib/rulings/source-kinds.ts` — one declarative record per
+source kind: `{ value, noun, unit: 'chapter' | 'volume' | 'none', tailBadge,
+anilistSources: string[], countries?: string[] }`. Derivation = AniList
+`source` × `countryOfOrigin` × `SOURCE_TYPE_OVERRIDES` (a RulingEntry map
+for AniList's mistakes). An AniList value / country combination with no
+record → `source_type = null` + flag — FAIL CLOSED, never default to
+manga. Audit class `series_without_source_kind` must be 0. **A new source
+= add one record and rule its instrument; never a migration debate.**
 
-**Decide:** the episode-type values and what each means *relative to
-`source_type`*.
+Seed records (values are AniList's, lower-cased — no invented names):
+`manga` (chapter, "manga only") · `manhwa` (KR; chapter) · `manhua` (CN;
+chapter) · `webtoon` (reserved, format WEBTOON; chapter) · `light_novel`
+(volume, "novel only") · `web_novel` (volume, "novel only") · `novel`
+(volume, "novel only") · `visual_novel` (none; never collapsed into novel;
+"vn only" only if an instrument ever exists) · `video_game` / `game` (none;
+"game only" only if an instrument ever exists) · `doujinshi` (chapter) ·
+`original` (none — series label **studio original**) · `other` (none;
+flag for a ruling).
 
-**Recommendation — four values, one holding value:**
-- `canon` — adapts the source's canon. For `source_type = original` every
-  story episode is canon by definition (the anime is the source); AFL's
-  `anime_canon` maps straight to `canon` there. This retires the Madoka
-  confusion: Madoka is `canon`, full stop.
-- `mixed` — canon and non-canon in one episode (unchanged).
-- `filler` — zero source standing (unchanged; the X only-ending and DSQ
-  padded finale stay filler + annotation + asterisk).
-- `original_canon` — made for the anime inside an ADAPTATION, with canon
-  standing by author/producer/community consensus (Black Clover 130-157,
-  Boruto 221-286, the Sabo special). Only ever set by a ruling (T6), never
-  by a source label.
-- `original_unruled` — the HOLDING value for adapted series: AFL/AFG's
-  "anime canon" on a series that has a source, not yet ruled. Renders as
-  anime-original with NO canon claim (`P6`); its audit class is the
-  batch-18 work-list (~40 series today). Never reaches the UI as "canon".
+Migration today: 9 → `visual_novel`, 4 → `video_game`, 3 → `other`.
+Nothing else moves (all 343 series are JP-origin).
 
-The AFL-import rule (T4.2): `source_type = original` → `canon`; otherwise →
-`original_unruled` unless an override rules it. Cross-source adaptations
-(Shippuden 452-457 adapting a novel) are `original_canon` + a `side_source`
-annotation naming the work — "canon to what" is answered in the annotation.
+## 3. D-10 — standing migration + the override annotations (ruled)
 
-The A-7 contradictions (claymore / gto / ajin endings typed anime-only-canon
-vs DSQ filler) are re-ruled per series under these definitions in batch 18,
-not in this session.
+The 977 `anime-only-canon` rows and the T6 map:
+- `source_type = original` (24 series, ~530 rows): AFL `anime_canon` →
+  `canon`. AFL `filler` / `mixed` on a studio original STAY as classified —
+  only the "anime is the source" class becomes canon; recaps are not
+  flattened.
+- Ruled consensus rows → `canon` + `adopted` annotation with their existing
+  reasons: boruto 221–286, black-clover 130–157, one-piece Sabo special
+  (Sean), tpn 23 (Sean), beastars 44 (Sean), kenshin-2023 34 (Watsuki's own
+  storyboard). Shippuden 452–457 (adapt the Itachi Shinden NOVEL): `canon`
+  + `side_source` annotation naming the work; the series stays manga.
+- The A-7 studio-ending class → `filler` + asterisk, ON THE REVIEW LIST:
+  claymore 24–26, gto 22–28/34 + 42–43, ajin S2 14–26, chrono-crusade,
+  sailor-moon 167–172, railgun originals, world-trigger 48, **and
+  twin-star-exorcists 21–50 (30 eps: "the anime's own serialized finale
+  that never returns to the manga" = studio ending, NOT author consensus
+  — confirmed here as a review item, not a quiet demotion)**.
+- Every other unruled AFL `anime_canon` on a manga / LN / VN / game series
+  → `filler` (true by definition: adheres to no source). **AFL's claim is
+  kept in staging** (`ingest_afl_shows.raw` is greedy) and the audit class
+  `afl_anime_canon_unruled` (= stored filler where AFL said anime-canon and
+  no ruling exists) IS the batch-18 work-list, derived mechanically. No
+  holding type in the canonical table. LN / VN / game series: episodes that
+  adapt THAT source are canon (Ace Attorney adapts the games).
+- **A1 spike check in the same pass:** `anchor_on_noncanon_row` must read 0
+  after the flip (these rows carry no anchors today under A1; the census
+  proves it rather than heals it).
+- **AFL refresh after the flip:** `filterEpisodeRows` maps AFL's
+  `anime_canon` by the series' source kind (original → canon; else →
+  filler) and the raw class is still staged — otherwise the audit dies on
+  the next pull. The T6 map's `anime-only-canon` values migrate in the same
+  script (each entry's reason already says which class it is).
 
-## D-11 — FORMAT, orthogonal to standing
+**Annotation kinds added:** `adopted` — REQUIRED `basis: 'author' |
+'studio' | 'community'` (Black Clover = author-supervised; Evangelion's EoE
+= studio; X's only-ending = community, accepted for lack of an ending);
+`retconned` — material later dropped from canon (world-trigger 49–63);
+`side_source` — adapts a work other than the series' source (Shippuden
+452–457). The check constraint on `episode_annotations.kind` extends
+accordingly. "Community canon" is NOT a badge or a type.
 
-**Decide:** where the tv / ova / special / movie / recap fact lives.
+## 4. D-11 — format (ruled)
 
-**Recommendation:** a nullable `episodes.format` column, DERIVED by a healer
-from the containing component's `kind` and the watch-order entry's `kind`
-(season → `tv`, else the kind), with a `FORMAT_OVERRIDES` ruling map for
-the rest (kenshin 95-98 → `ova`, recaps → `recap`). `watch_order_entries.kind`
-is backfilled in the same pass (38 nulls). A format never changes a type.
+Nullable `episodes.format` ∈ tv / ova / special / movie / recap, DERIVED by
+a healer from the containing component's `kind` (season → tv) and the
+watch-order entry's `kind`, with `FORMAT_OVERRIDES` (RulingEntry map:
+kenshin 95–98 → ova, recaps → recap). `watch_order_entries.kind` backfilled
+(38 nulls). A format never changes a type. Remake ≠ format.
 
-## D-12 — the WORDS users and agents say
+## 5. D-12 — the words (ruled)
 
-**Decide:** badge strings, the series-level "no source" value, the tail
-label, the instrument unit.
+- **Retired everywhere** (code, badges, docs, agent text, types): `anime
+  only`, `anime-only`, `anime-only-canon`, `anime_only`, `original canon`,
+  `anime-original`.
+- Badges: `canon` · `mixed` · `filler` · `{noun} only` for the unadapted
+  tail when hasInstrument (`manga only`; `novel only` for LN / web novel /
+  novel; VN never collapsed into novel). Format chips (`movie`, `ova`,
+  `special`, `recap`) and the `adopted` chip are extra, from independent
+  fields.
+- Series label for the Madoka class: **`studio original`** (DB
+  `source_type` stays `original`; the word `original` is never reused for an
+  episode value).
+- `series.manga_status = 'anime_only'` → **`none`** ("no source publication
+  to compare against"); `hasSource` derives from the source kind alone.
 
-**Recommendation:**
-- Badges: `canon` · `mixed` · `filler` · `original canon` (for
-  `original_canon`) · `anime-original` (for `original_unruled` — no canon
-  claim) · `source only` for the unadapted tail, rendered with the source
-  noun where one exists ("manga only", "novel only"). The string
-  `anime only` is RETIRED everywhere — code, badges, docs, agent text.
-- `series.manga_status = 'anime_only'` → `none` ("no source publication to
-  compare against"); `hasSource` derives from `source_type !== 'original'`
-  alone (the second check goes away with the homonym).
-- Instrument unit per source: chapter (manga/manhwa/manhua/webtoon),
-  volume (light_novel/novel/web_novel — the LN instrument ruling `T24`),
-  none (visual_novel/video_game/game/original/other — no position
-  instrument; the card shows the series as original-canon with no tail).
+## 6. D-13 — scope and ORDER of the T4 build (ruled)
 
-## D-13 — scope of the T4 build
+D2 (multi-space entries) OUT of the build (design note stands; after batch
+18). The build, each step through `/add-rule`, in THIS order — **UI strings
+last, after the big unruled blocks are reviewed**:
 
-**Decide:** D2 (multi-space entries: prisma-illya, rosario S2 graft,
-rayearth, trigun) in or out; the ch-82-inside-range schema question.
+1. A-11 (exercise 2): `airdate_regression` audit class + `AIRDATE_ORDER_ACK`
+   map, then the 365-day NULL write gate; the "AFL trailing non-episode
+   row" withhold is a sibling rule (project-arms 53), not the same one.
+2. T4.1 SOURCE_KINDS registry + `SOURCE_TYPE_OVERRIDES` + derivation +
+   `series_without_source_kind`; migrate the 16 collapsed rows;
+   `manga_status: anime_only → none`; hasSource / hasInstrument split.
+3. T4.2 the annotation kinds (`adopted` with basis, `retconned`,
+   `side_source`) — migration + types regenerated.
+4. T4.3 the standing migration (§3) with `afl_anime_canon_unruled` and the
+   A1 spike check; the T6 map migrated; census deltas explained.
+5. **Batch-18 review of the biggest unruled blocks BEFORE step 6** — FMA
+   2003 (27), beyblade-metal-fusion (32), dragon-ball-super (15),
+   outlaw-star (13), soul-eater (13), twin-star (30), the A-7 endings.
+6. T4.4 `episodes.format` + healer + `FORMAT_OVERRIDES` + watch-order kinds.
+7. T4.5 the words: badge strings, `{noun} only`, `studio original` label,
+   `anime only` retired in agent/PROTOCOL text (T3.2 / T3.5 land here).
+8. `/consolidate deep`; then the cross-model frame check (`P36`).
 
-**Recommendation:** OUT of the T4 build — D2 is a segment schema, not a
-vocabulary; record the design note, build after batch 18. T4 build = D-9
-migration (16 rows) + D-10 values (the 24 originals → `canon`
-mechanically; the rest → `original_unruled` except T6-ruled rows →
-`original_canon`) + D-11 column and healer + D-12 strings + the AFL-import
-rule + audit classes; each step through `/add-rule`, ending in
-`/consolidate deep`.
+## 7. Open for Sean at batch 18 (recorded, not decided)
 
----
-
-## What the session produces
-
-1. Your yes/no/amend on D-9…D-13 (this file records the rulings).
-2. T-family ledger records for the glossary (`/add-rule`, ids T25+).
-3. The vocabulary block for `research/PROTOCOL.md` and `research-agent.md`
-   (T3.2/T3.5) — so batch 18 agents ship the new words from day one.
-4. The T4 build order on the board.
+twin-star 21–50 adopted or filler · FMA 2003's second half (community
+adopted?) · soul-eater ending · claymore / gto / ajin / chrono endings ·
+which `adopted.basis` each ruled consensus row carries · the VN/game
+instrument question when the first mapped example appears.
