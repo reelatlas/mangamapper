@@ -1,0 +1,44 @@
+{
+  "series_id": "beastars",
+  "summary": "BASIS-ONLY task on ep 44 (FINAL SEASON Part 2 ep 8 = FS ep 20, 'Gotta Buy a Step Stool' / 踏み台を買わなきゃ, dropped 2026-03-07). The standing itself is not reopened: Sean ruled canon on 2026-08-24 on positive evidence (batch-15 follow-up proved chs 169-171 are the cut Kyuu chapters and 172-176 land in ep 47, so the frame-up / rat-base / kiss-deferral material adapts nothing), and this pass found nothing that contradicts it — the fandom Episode 44 page is still an 'adapted_from = TBA' stub and no new chapter claim exists anywhere. On the basis question the evidence is one-sided: the AUTHOR basis fails on every test. Itagaki Paru carries a bare 原作 credit and nothing else on all three staff lists checked (ja.wikipedia's series staff block, the Final Season credit block printed by Animage Plus, the fandom staff list) — no 監修, no 脚本監修, no ストーリー原案; the Final Season's scripts are Higuchi Nanami with director Matsumi Shinichi added for S3. Itagaki herself, in the Animate Times S2 interview, says she told the staff '本当に自由にやってください' (do it completely freely), calls the result 'また別の BEASTARS が生まれた' (another BEASTARS was born), and puts her whole involvement at '第1期と同じで、新しいキャラデザや脚本のチェックくらい' — a check, described about S1/S2, never about the Final Season, and never about a specific episode. Author-by-incorporation is chronologically impossible: the manga ended 2020-10-08 at ch 196 (ja.wikipedia infobox: 終了号 2020年45号, 全196話) while ep 44 aired 2026-03-07. COMMUNITY fails structurally: the source has a real ending and the anime adapts it (chs 172-196 in eps 47-48), so there is no missing ending for a consensus to supply. STUDIO is therefore both the residual and the positively-supported reading: ep 44 is Orange's own bridge inside the licensed Final Season, and the season carries it forward — the frame-up manhunt it starts is what eps 45-48 resolve, Gosha guarding Haru sets up ep 45's ch-189 graft, and the kiss it defers is paid off by the anime-original public kiss in the ep-48 finale. The stored adopted{studio} annotation is CONFIRMED; its 'PROVISIONAL' marker can be lifted.",
+  "standings": [
+    {
+      "episodes": [44],
+      "type": "canon",
+      "chapters": "none",
+      "confidence": "high",
+      "note": "Adapts zero manga chapters (fandom Episode 44 infobox adapted_from = TBA, re-checked 2026-08-26; ja.wikipedia's episode list stops at ep 36 and carries no chapter column at all; batch-15 follow-up ruled out the only unclaimed range, 169-171 = the cut Kyuu chapters). Standing is canon by ADOPTION, not by adaptation — Sean's 2026-08-24 ruling, unchanged here; the annotation below carries the basis.",
+      "sources": [
+        "https://beastars.fandom.com/api.php?action=parse&page=Episode%2044&prop=wikitext&format=json",
+        "https://ja.wikipedia.org/w/api.php?action=parse&page=BEASTARS&prop=wikitext&format=json",
+        "https://beastars.fandom.com/api.php?action=parse&page=Third%20Season&prop=wikitext&format=json"
+      ]
+    }
+  ],
+  "annotations": [
+    {
+      "episodes": [44],
+      "kind": "adopted",
+      "basis": "studio",
+      "note": "STUDIO basis confirmed (was PROVISIONAL). WHO adopted it: Studio Orange / the BEASTARS production committee, as the Final Season's own connective material — written by the anime's own writers (脚本 樋口七海, plus director 松見真一 on the third season per ja.wikipedia's staff block) and carried forward by the same production to its finale (the frame-up manhunt opened here is resolved across eps 45-48; Gosha guarding Haru sets up ep 45's ch-189 graft; the deferred kiss is paid off by the anime-original public kiss in ep 48). AUTHOR is ruled out, not merely unproven: Itagaki holds a bare 原作 credit on every staff list checked (ja.wikipedia; the Final Season credit block printed by Animage Plus: 原作 板垣巴留 / 監督 松見真一 / 脚本 樋口七海 and nothing else for her; the beastars fandom staff list: 'Original Story: Paru Itagaki'), there is no 監修 or 脚本監修 credit anywhere, and she describes her own involvement as script/design CHECKS while telling the staff '本当に自由にやってください' and calling the anime 'another BEASTARS' (Animate Times, 2021-01-06). Incorporation into the source is impossible in time: the manga ended 2020-10-08 at ch 196; ep 44 aired 2026-03-07. COMMUNITY is inapplicable: the source has an ending and eps 47-48 adapt it (172-196), so nothing is missing for a consensus to fill.",
+      "sources": [
+        "https://ja.wikipedia.org/w/api.php?action=parse&page=BEASTARS&prop=wikitext&format=json",
+        "https://animageplus.jp/articles/detail/66267/2/1/1",
+        "https://beastars.fandom.com/api.php?action=parse&page=Beastars%20(Anime)&prop=wikitext&format=json",
+        "https://www.animatetimes.com/news/details.php?id=1609909844",
+        "https://www.animatetimes.com/news/details.php?id=1609909844&p=2"
+      ]
+    }
+  ],
+  "repairs": [],
+  "structure": {
+    "notes": "Components unchanged: S1 1-12, S2 13-24, FINAL SEASON Part 1 25-36 (Netflix batch drop 2024-12-05), Part 2 37-48 (batch drop 2026-03-07) — ja.wikipedia's 各話リスト confirms the batch-drop pattern (all twelve Part-1 rows share 2024年12月5日) and currently ends at ep 36, so it offers no per-episode data for the target row. The beastars fandom 'Third Season' page numbers the block 25-48 continuously, matching OUR rows exactly (ep 44 = 'the twentieth episode of Season 3'). ja.wikipedia's per-episode table has 絵コンテ/演出/作画監督/CGディレクター columns but NO 脚本 column, so there is no per-episode writer credit to check for author involvement; the series-level 脚本 line is 樋口七海 + 松見真一 (第3期). Manga anchor facts for the basis argument: serialization 2016年41号 - 2020年45号, 全196話, 全22巻 (ja.wikipedia infobox).",
+    "order_only": []
+  },
+  "flags_for_sean": [
+    "Lift the PROVISIONAL marker on ep 44's adopted{studio}: the basis is now positively argued, not inferred by elimination alone — no author credit or act exists (three independent staff lists), incorporation is time-barred (manga ended 2020-10, episode aired 2026-03), community is structurally inapplicable (the source has an ending and the anime adapts it in 47-48), and the material is load-bearing for the studio's own finale.",
+    "The single author-side datum, recorded so it is not lost: Animate Times 2021-01-06, Itagaki on her involvement — '第1期と同じで、新しいキャラデザや脚本のチェックくらいですね' (about the same as S1: checking new character designs and scripts). Read strictly this is a rubber-stamp check, it is stated about S1/S2 rather than the 2024/2026 Final Season, it names no episode, and it sits beside her '本当に自由にやってください' and 'another BEASTARS was born' framing. Under the batch-18 discriminator (declaration or supervision, never a blanket 原作 credit) it does not reach an `author` basis. If Sean wants a stricter reading, the fallback would be adopted{author, medium} for the WHOLE anime rather than for ep 44 specifically — which is exactly what a blanket credit looks like, so studio remains the recommendation.",
+    "Genuine author-side precedent in this series, but on the other side of the timeline: in the same interview Itagaki says S1's school-life episodes made her homesick for Cherryton and she pulled Legoshi back to school, '3～4話分ほど影響を受けて…ある意味、逆輸入した感じ' (about 3-4 chapters, a reverse import). That is atmosphere, not the incorporation of anime EVENTS into the source line, and it happened during 2019-2020 serialization — it cannot touch a 2026 episode. Filed as a curiosity, not as a basis.",
+    "No new chapter claim for ep 44 surfaced this pass (fandom page still a stub with adapted_from = TBA; es-fandom Episodio 44 still does not exist). The batch-15 flag about a possible ch-166 motif echo in the park scene remains open and unchanged."
+  ]
+}

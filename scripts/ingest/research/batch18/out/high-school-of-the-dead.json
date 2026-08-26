@@ -1,0 +1,44 @@
+{
+ "series_id": "high-school-of-the-dead",
+ "summary": "Row 13 is the OVA 'Drifters of the DEAD' (ACT♂♀), a ~16-minute episode bundled as a Blu-ray with the limited first-press edition of MANGA volume 7 on 2011-04-26. It does not adapt a bonus chapter: the manga has exactly three extra episodes - 'Cos-play of the DEAD', 'Beginning of the DEAD' and 'DEAD Illusion' - and none is the island story; the HOTD wiki's episode infobox reads 'Manga Chapters = None' for the OVA where ep 12's reads three named acts (Act.14/15/16), and ja.wikipedia calls the OVA 内容はテレビアニメ版の番外編 (a side story of the TV anime version), noting that the deserted offshore island exists 'in the OVA version' of the setting only and that its comical, fan-service register deviates from the main work. Content: a fast ecchi-flavoured recap voiceover by Takashi, then the group washed up on an island, swimsuits, and a hydrangea-smoke hallucination sequence. So: filler, anime-original, with the brief opening recap noted. This also supports the stored N7 placement ruling (Drifters = row 13, after ep 12): both the wiki's episode list and ja.wikipedia's per-episode table place it as the single post-ep-12 entry, and it is the series' only OVA.",
+ "standings": [
+  {
+   "episodes": [
+    13
+   ],
+   "type": "filler",
+   "confidence": "high",
+   "note": "Anime-original OVA side story: the survivors on a deserted island, swimsuits, and a hydrangea-induced mass hallucination - no manga counterpart. The HOTD wiki's OVA infobox says 'Manga Chapters = None' (a field it fills for TV episodes, e.g. ep 12 = Act.14, Act.15, Act.16), and ja.wikipedia describes it as 番外編 of the TV anime whose island setting appears only in the OVA. Checked directly against the manga's three extra episodes (Cos-play of the DEAD, Beginning of the DEAD, DEAD Illusion) - none matches; DEAD Illusion is a pre-outbreak school piece with Hisashi alive. The first minute is a rapid recap of eps 1-12 intercut with fan-service, which does not make the entry a recap episode - the body is new material. AFL's 'anime canon' is the made-for-anime tag; under T27 with no adoption basis (no Sato Shouji story or supervision credit is documented) that is filler.",
+   "sources": [
+    "https://highschool-of-the-dead.fandom.com/api.php?action=parse&page=Act.%E2%99%82%E2%99%80%20Drifters%20of%20the%20DEAD&prop=wikitext&format=json",
+    "https://highschool-of-the-dead.fandom.com/api.php?action=parse&page=Episode%2012%3A%20All%20DEAD's%20attack&prop=wikitext&format=json",
+    "https://highschool-of-the-dead.fandom.com/api.php?action=parse&page=Chapter_List&prop=wikitext&format=json",
+    "https://ja.wikipedia.org/wiki/%E5%AD%A6%E5%9C%92%E9%BB%99%E7%A4%BA%E9%8C%B2_HIGHSCHOOL_OF_THE_DEAD",
+    "https://en.wikipedia.org/wiki/Highschool_of_the_Dead",
+    "https://www.animefillerlist.com/shows/highschoool-dead"
+   ]
+  }
+ ],
+ "annotations": [
+  {
+   "episodes": [
+    13
+   ],
+   "kind": "abridged",
+   "note": "Format note, not a typing claim: the OVA OPENS with a fast recap montage of episodes 1-12 (Takashi voiceover, intercut with ecchi shots) before its original island story begins. Entry format = OVA (~16 min), bundled as a Blu-ray with the limited first-press edition of manga volume 7 (2011-04-26), never broadcast.",
+   "sources": [
+    "https://highschool-of-the-dead.fandom.com/api.php?action=parse&page=Act.%E2%99%82%E2%99%80%20Drifters%20of%20the%20DEAD&prop=wikitext&format=json",
+    "https://ja.wikipedia.org/wiki/%E5%AD%A6%E5%9C%92%E9%BB%99%E7%A4%BA%E9%8C%B2_HIGHSCHOOL_OF_THE_DEAD",
+    "https://en.wikipedia.org/wiki/Highschool_of_the_Dead"
+   ]
+  }
+ ],
+ "repairs": [],
+ "structure": {
+  "notes": "Row 13 = the series' only OVA and its last entry; rows 1-12 are the 2010 TV episodes (which adapt manga acts 1-17, i.e. volumes 1-4). The OVA has no broadcast date - 2011-04-26 is the Blu-ray/manga-volume-7 release date, which is what our row stores. Supports the stored N7 ruling (Drifters of the Dead = ep 13): the fandom episode list appends it after ep 12 as 'ACT♂♀' and ja.wikipedia's staff table does the same, so the placement is not merely community practice but how both catalogues present it - the ruling could be upgraded from B/medium if Sean wants. The manga (30 acts, act 30 uncollected) far outruns the anime; nothing here touches chapter mapping.",
+  "order_only": []
+ },
+ "flags_for_sean": [
+  "N7 upgrade candidate: 'Drifters of the Dead = ep 13' is stored at medium (community practice). Both the HOTD fandom episode list and ja.wikipedia's episode/staff table list it as the single entry after ep 12 (ACT♂♀), and it is the only OVA - that is two catalogue sources for the placement."
+ ]
+}

@@ -1,0 +1,188 @@
+{
+  "series_id": "one-piece",
+  "summary": "Nine AFL 'anime canon' rows, all stored filler. They fall into three groups. (1) 213 and 215 are two of the four extra Davy Back games Toei invented after the Groggy Ring (Roller Race, Pirate Dodgeball, Red Light/Green Light) — onepiece.fandom files them under the Long Ring Long Land Arc's own 'Anime Filler' heading and ja.wikipedia bolds them as アニメオリジナル: filler, and they belong to the same insertion already annotated divergence{313} on 214/216. (2) 453, 454 and 456 are NOT filler: together with 455 they animate the Straw Hat's Separation Serial, Oda's 8-part cover-page side story from chapters 543-560, which the wiki's own Canon page files under Canon>Manga ('cover arcs are considered equally canonical'), and which ja.wikipedia pointedly does NOT bold. Each episode carries two complete cover stories (four cover pages) as its entire narrative spine, padded with anime-original antics — mixed under T28's 'the side story IS the episode's plot' clause. That makes stored ep 455 (filler + side_story) inconsistent; a repair is proposed. (3) 499, 506, 775 and 1084 are anime-original episodes that sit in a manga ellipsis or elaborate an off-panel event: each is filler with a mandatory tie annotation (ep 506 is the interesting one — the wiki states twice that 'the only canon scene was Robin's', i.e. a graft of ch 593's Tequila Wolf scene, replayed in full in ep 510). NOTHING in this block is Oda-supervised anime material: the fandom Canon page puts 'Oda's Involvement' (movie stories, anime-only character designs) under NON-CANON, so no adopted{author} basis exists for any target row. The big operational risk: the cover-page chapters on 453/454/456 run 8-11 chapters AHEAD of the main-line reading position at that point (ep 452 ends at ch 549, ep 459 at ch 551) — they must not become anchors.",
+  "standings": [
+    {
+      "episodes": [213, 215],
+      "type": "filler",
+      "confidence": "high",
+      "note": "Two of the extra Davy Back games Toei invented to lengthen the arc. The Long Ring Long Land Arc page lists 'Roller Race' (ep 213-214) and 'Pirate Dodgeball' (ep 215) under its ==Anime Filler== heading — 'Three more games... were added after the Groggy Ring event to lengthen the storyline' — and every citation in those sections is episode-only ({{Qref|ep=214}}, {{Qref|ep=215}}), never a chapter. In the manga the Davy Back Fight is three rounds and Chopper is won back at the end of the Groggy Ring (ch 313); the anime replaced round 3 with the Roller Race and then invented a whole second three-coin set. ja.wikipedia bolds both titles (太字はアニメオリジナルストーリー) and does NOT attach its 一部原作のストーリーあり footnote to either (it does attach it to ep 214). Ep 213 is also in fandom's Filler Episodes category; ep 215 is not, which is a wiki tagging gap — the arc page covers it explicitly.",
+      "sources": [
+        "https://onepiece.fandom.com/api.php?action=parse&page=Long%20Ring%20Long%20Land%20Arc&prop=wikitext&format=json",
+        "https://onepiece.fandom.com/api.php?action=parse&page=Episode_213&prop=wikitext&format=json",
+        "https://onepiece.fandom.com/api.php?action=parse&page=Episode_215&prop=wikitext&format=json",
+        "https://ja.wikipedia.org/wiki/ONE_PIECE%E3%81%AE%E3%82%A2%E3%83%8B%E3%83%A1%E3%82%A8%E3%83%94%E3%82%BD%E3%83%BC%E3%83%89%E4%B8%80%E8%A6%A7"
+      ]
+    },
+    {
+      "episodes": [453],
+      "type": "mixed",
+      "chapters": "548 p.1, 549 p.1, 555 p.1, 556 p.1 (cover pages only)",
+      "confidence": "high",
+      "note": "Animates two complete instalments of the Straw Hat's Separation Serial — Nami's 'Weather Report' (cover pages of ch 555 and 556) and Franky's 'This Week's Me is No Good' (ch 548, 549) — as the episode's whole plot; the fandom infobox prints exactly those four cover pages in its chapter field. The serial page says Nami's version 'differed very little from the manga', while Franky's was 'covered with filler content from Episode 418' (the Kitton material). Cover-page serials are canon manga: the wiki's Canon page files Short-Term Focused Cover Page Serials under Canon > Manga ('cover arcs are considered equally canonical'). ja.wikipedia does not bold this title, i.e. it is not classed as アニメオリジナル. Source content + heavy anime padding = mixed under T28 (the side story IS the episode's plot). CHAPTERS ARE COVER PAGES ONLY — see flags: they must not drive reading position.",
+      "sources": [
+        "https://onepiece.fandom.com/api.php?action=parse&page=Episode_453&prop=wikitext&format=json",
+        "https://onepiece.fandom.com/api.php?action=parse&page=Straw%20Hat%27s%20Separation%20Serial&prop=wikitext&format=json",
+        "https://onepiece.fandom.com/api.php?action=parse&page=Canon&prop=wikitext&format=json",
+        "https://ja.wikipedia.org/wiki/ONE_PIECE%E3%81%AE%E3%82%A2%E3%83%8B%E3%83%A1%E3%82%A8%E3%83%94%E3%82%BD%E3%83%BC%E3%83%89%E4%B8%80%E8%A6%A7"
+      ]
+    },
+    {
+      "episodes": [454],
+      "type": "mixed",
+      "chapters": "543 p.1, 544 p.1, 552 p.1, 554 p.1 (cover pages only)",
+      "confidence": "high",
+      "note": "Animates Sanji's 'Resisting in Kamabakka' (cover pages of ch 543, 544) and Chopper's 'I'm Not Food You Assholes' (ch 552, 554) — the fandom infobox lists exactly those four cover pages. The serial page records the anime-original additions: Caroline's fight/'traditional fighting outfit' explanation for Sanji (in the manga he is simply forced into it) and a filler plot about Chopper nursing a giant chick, with 'the main plot points of his cover story covered briefly'. Same T28 reading as 453: Oda's canon cover story is the episode's plot, wrapped in original padding → mixed. ja.wikipedia does not mark it anime-original. Cover pages only — not an anchor.",
+      "sources": [
+        "https://onepiece.fandom.com/api.php?action=parse&page=Episode_454&prop=wikitext&format=json",
+        "https://onepiece.fandom.com/api.php?action=parse&page=Straw%20Hat%27s%20Separation%20Serial&prop=wikitext&format=json",
+        "https://onepiece.fandom.com/api.php?action=parse&page=Canon&prop=wikitext&format=json",
+        "https://ja.wikipedia.org/wiki/ONE_PIECE%E3%81%AE%E3%82%A2%E3%83%8B%E3%83%A1%E3%82%A8%E3%83%94%E3%82%BD%E3%83%BC%E3%83%89%E4%B8%80%E8%A6%A7"
+      ]
+    },
+    {
+      "episodes": [456],
+      "type": "mixed",
+      "chapters": "557 p.1, 558 p.1, 559 p.1, 560 p.1 (cover pages only)",
+      "confidence": "high",
+      "note": "Closes the serial with Brook's 'Lodgings and Panties Repayment' (cover pages of ch 557, 558) and Zoro's 'Where the Hell Are They?' (ch 559, 560) — the four cover pages are printed in the fandom infobox. The serial page: Brook's version 'differed only a little bit' (only the villagers' reason for summoning 'Satan' was added); Zoro's was 'added with bits of antics and filler' and the ape-like figures at the end are the Humandrills the manga later confirms in ch 592. Same T28 reading → mixed. ja.wikipedia does not mark it anime-original. Cover pages only — not an anchor (ch 560 is nine chapters ahead of the ep 459 position).",
+      "sources": [
+        "https://onepiece.fandom.com/api.php?action=parse&page=Episode_456&prop=wikitext&format=json",
+        "https://onepiece.fandom.com/api.php?action=parse&page=Straw%20Hat%27s%20Separation%20Serial&prop=wikitext&format=json",
+        "https://onepiece.fandom.com/api.php?action=parse&page=Canon&prop=wikitext&format=json",
+        "https://ja.wikipedia.org/wiki/ONE_PIECE%E3%81%AE%E3%82%A2%E3%83%8B%E3%83%A1%E3%82%A8%E3%83%94%E3%82%BD%E3%83%BC%E3%83%89%E4%B8%80%E8%A6%A7"
+      ]
+    },
+    {
+      "episodes": [499],
+      "type": "filler",
+      "confidence": "high",
+      "note": "Third and last of the anime-original episodes (497-499) that fill the ellipsis inside ch 585 — the montage panel 'from day to day they kept getting stronger... they would fight against the wild animals of the forest... they built their own treehouse'. The episode's plot is built on Naguri, an anime-only character who claims to have fought Gol D. Roger, his pirate ship, and the big-tiger hunt; the fandom infobox carries chapter = Filler and filler = true and the page is in Category:Filler Episodes; ja.wikipedia bolds the title as アニメオリジナル and, unlike ep 498, attaches no 一部原作のストーリーあり footnote. Its closing beat (Bluejam telling his crew to report Sabo's whereabouts to Sabo's father) is the hook into the capture that ends ch 585, which ep 500 adapts properly. No adapted panel of its own → filler, with the structural tie recorded as an annotation.",
+      "sources": [
+        "https://onepiece.fandom.com/api.php?action=parse&page=Episode_499&prop=wikitext&format=json",
+        "https://onepiece.fandom.com/api.php?action=parse&page=Chapter_585&prop=wikitext&format=json",
+        "https://ja.wikipedia.org/wiki/ONE_PIECE%E3%81%AE%E3%82%A2%E3%83%8B%E3%83%A1%E3%82%A8%E3%83%94%E3%82%BD%E3%83%BC%E3%83%89%E4%B8%80%E8%A6%A7"
+      ]
+    },
+    {
+      "episodes": [506],
+      "type": "filler",
+      "confidence": "high",
+      "note": "The 'Straw Hats receive the bad news' round-robin. onepiece.fandom states the position twice and identically: the episode page's Anime Notes say 'Although the episode is mostly filler... The only canon scene was Robin's', and the Post-War Arc page's ==Anime Filler== section says the arc 'includes an episode which is mostly filler but is roughly based on the cover stories... Robin's scenes on this episode are considered canon.' The arc's Anime and Manga Differences confirm 'the Straw Hats receiving and reacting to the news on the war' was not shown in the manga. ja.wikipedia bolds it as アニメオリジナル with no partial-manga footnote. One canon scene inside an original plot = filler under T28, with the tie recorded as a mandatory graft annotation.",
+      "sources": [
+        "https://onepiece.fandom.com/api.php?action=parse&page=Episode_506&prop=wikitext&format=json",
+        "https://onepiece.fandom.com/api.php?action=parse&page=Post-War%20Arc&prop=wikitext&format=json",
+        "https://ja.wikipedia.org/wiki/ONE_PIECE%E3%81%AE%E3%82%A2%E3%83%8B%E3%83%A1%E3%82%A8%E3%83%94%E3%82%BD%E3%83%BC%E3%83%89%E4%B8%80%E8%A6%A7"
+      ]
+    },
+    {
+      "episodes": [775],
+      "type": "filler",
+      "confidence": "high",
+      "note": "An anime-original episode dramatising the off-panel treatment of Zunesha's leg wound. Ch 821 ends with Jack's bombardment and Zunesha's counter-attack; ch 822 opens with the job already done ('Chopper and the minks finish bandaging the wounds on Zunesha's front left leg') and ep 776 adapts that. Ep 775 fills the gap with invented material — the fandom Anime Notes enumerate it (Musatobi the flying-squirrel mink, herb-gathering, Franky asking Inuarashi about the minks' ships, tree-felling, Franky's repairs, the Silent Supercell storm, Carrot taking Luffy to the food storehouse) and explicitly note that Carrot's decision to go to sea 'happened off-panel in the manga'. Page is in Category:Filler Episodes; ja.wikipedia bolds it as アニメオリジナル with no partial-manga footnote.",
+      "sources": [
+        "https://onepiece.fandom.com/api.php?action=parse&page=Episode_775&prop=wikitext&format=json",
+        "https://onepiece.fandom.com/api.php?action=parse&page=Chapter_822&prop=wikitext&format=json",
+        "https://ja.wikipedia.org/wiki/ONE_PIECE%E3%81%AE%E3%82%A2%E3%83%8B%E3%83%A1%E3%82%A8%E3%83%94%E3%82%BD%E3%83%BC%E3%83%89%E4%B8%80%E8%A6%A7"
+      ]
+    },
+    {
+      "episodes": [1084],
+      "type": "filler",
+      "confidence": "high",
+      "note": "The Wano farewell episode. The fandom episode page states it outright: 'This episode is a filler that mainly focuses on the Straw Hat Pirates' farewells to most of their allies and Wano Country friends... something that was mentioned by Hiyori in Chapter 1056.' The manga never stages the goodbyes: ch 1056 refers to them and ch 1057 jumps straight to Tokage Port and the departure (ep 1085). Two details are back-fills of later manga reveals — Chopper gifting Bepo the Sulong drug (revealed in ch 1081) and Usopp buying the black cloth used for Momonosuke's Jolly Roger (ch 1057). Page is in Category:Filler Episodes; ja.wikipedia bolds it as アニメオリジナル with no partial-manga footnote. Original plot elaborating a one-line manga mention → filler, tie annotated.",
+      "sources": [
+        "https://onepiece.fandom.com/api.php?action=parse&page=Episode_1084&prop=wikitext&format=json",
+        "https://onepiece.fandom.com/api.php?action=parse&page=Chapter_1057&prop=wikitext&format=json",
+        "https://ja.wikipedia.org/wiki/ONE_PIECE%E3%81%AE%E3%82%A2%E3%83%8B%E3%83%A1%E3%82%A8%E3%83%94%E3%82%BD%E3%83%BC%E3%83%89%E4%B8%80%E8%A6%A7"
+      ]
+    }
+  ],
+  "annotations": [
+    {
+      "episodes": [213, 215],
+      "kind": "divergence",
+      "chapters": "313",
+      "note": "Same insertion already annotated divergence{313} on eps 214 and 216 (batch 17): Toei added three extra Davy Back games after the Groggy Ring 'to lengthen the storyline', the Roller Race replacing the manga's Combat round as the finale of the first three-coin set. This is a STRUCTURAL divergence marker, not adapted content — neither episode carries a manga panel. The displaced beat is ch 313's: in the manga winning the Groggy Ring (ch 313) is what wins Chopper back, whereas the anime holds Chopper's return until the end of the invented Roller Race, i.e. the opening of ep 215.",
+      "sources": [
+        "https://onepiece.fandom.com/api.php?action=parse&page=Long%20Ring%20Long%20Land%20Arc&prop=wikitext&format=json",
+        "https://onepiece.fandom.com/api.php?action=parse&page=Chapter_313&prop=wikitext&format=json"
+      ]
+    },
+    {
+      "episodes": [453, 454, 456],
+      "kind": "side_story",
+      "chapters": "543-560 (cover pages only): ep 453 = 548, 549, 555, 556; ep 454 = 543, 544, 552, 554; ep 456 = 557, 558, 559, 560",
+      "note": "Each episode animates two complete instalments of the Straw Hat's Separation Serial, Oda's 11th-18th cover-page serial (8 stories, two cover pages each, ch 543-560), which the wiki's Canon page counts as canon manga. The adapted material is the CHAPTER COVER PAGE ONLY — the main-line body of those chapters is far ahead of the anime's story position here (ep 452 ends at ch 549, ep 459 at ch 551), so these chapter numbers must stay descriptive and must not be turned into a reading-position anchor. This matches the treatment already given to ep 455 (A6 junk-anchor null + side_story annotation).",
+      "sources": [
+        "https://onepiece.fandom.com/api.php?action=parse&page=Straw%20Hat%27s%20Separation%20Serial&prop=wikitext&format=json",
+        "https://onepiece.fandom.com/api.php?action=parse&page=Canon&prop=wikitext&format=json"
+      ]
+    },
+    {
+      "episodes": [499],
+      "kind": "divergence",
+      "chapters": "585",
+      "note": "Continues the anime-original expansion of ch 585's 'and from day to day they kept getting stronger' montage that is already annotated divergence{585} on eps 497 and 498 — same ellipsis, same annotation kind kept for consistency. The episode itself carries no adapted panel (Naguri and his ship are anime-only); its closing beat, Bluejam ordering his crew to tell Sabo's father they have found him, is the set-up for the capture that ends ch 585 and is adapted in ep 500.",
+      "sources": [
+        "https://onepiece.fandom.com/api.php?action=parse&page=Chapter_585&prop=wikitext&format=json",
+        "https://onepiece.fandom.com/api.php?action=parse&page=Episode_499&prop=wikitext&format=json"
+      ]
+    },
+    {
+      "episodes": [506],
+      "kind": "graft",
+      "chapters": "593",
+      "note": "The one canon scene the wiki names — Robin on Tequila Wolf: the Revolutionaries ask her to come to Dragon, she answers that she has to reach her crew, and they hand her the newspaper. That is ch 593's opening (Bunny Joe, 'the Light of the Revolution', the crow delivering the paper), pre-played here and then animated in full in ep 510, whose infobox reads 'Chapter 591 p.17-19 and Chapter 593 p.2-11'. Every other strand of ep 506 (Zoro vs the Humandrills and Mihawk's arrival, Chopper brokering peace between the Torino natives and the birds, Nami, Usopp, Sanji, Franky, Brook receiving the paper) is anime-original. Chapter cited for the tie only — A1: no anchor on a filler row, and ch 593 is already anchored by ep 510.",
+      "sources": [
+        "https://onepiece.fandom.com/api.php?action=parse&page=Post-War%20Arc&prop=wikitext&format=json",
+        "https://onepiece.fandom.com/api.php?action=parse&page=Chapter_593&prop=wikitext&format=json",
+        "https://onepiece.fandom.com/api.php?action=parse&page=Episode_510&prop=wikitext&format=json"
+      ]
+    },
+    {
+      "episodes": [775],
+      "kind": "loose_parallel",
+      "chapters": "822",
+      "note": "The episode dramatises, at feature length and with invented complications, the single event the manga reports as already complete on the first page of ch 822 ('Chopper and the minks finish bandaging the wounds on Zunesha's front left leg'). No manga panel is adapted here — ch 822 is adapted by ep 776 — but the episode is not free-standing filler either: it occupies the off-panel interval between ch 821 and ch 822.",
+      "sources": [
+        "https://onepiece.fandom.com/api.php?action=parse&page=Chapter_822&prop=wikitext&format=json",
+        "https://onepiece.fandom.com/api.php?action=parse&page=Episode_775&prop=wikitext&format=json"
+      ]
+    },
+    {
+      "episodes": [1084],
+      "kind": "loose_parallel",
+      "chapters": "1056-1057",
+      "note": "Stages the Wano goodbyes that ch 1056 only refers to (Hiyori's line) and that ch 1057 skips over on the way to the Tokage Port departure. Two beats are consistent back-fills of later manga reveals rather than adaptations: Chopper handing Bepo the Sulong drug used in ch 1081, and Usopp buying the black cloth that becomes Momonosuke's Jolly Roger in ch 1057.",
+      "sources": [
+        "https://onepiece.fandom.com/api.php?action=parse&page=Episode_1084&prop=wikitext&format=json",
+        "https://onepiece.fandom.com/api.php?action=parse&page=Chapter_1056&prop=wikitext&format=json"
+      ]
+    }
+  ],
+  "repairs": [
+    {
+      "episode": 455,
+      "field": "type",
+      "old": "filler",
+      "new": "mixed",
+      "why": "Consistency with the T28 ruling applied to its three siblings. Ep 455 is the fourth episode of the same block: its infobox chapter field reads 'Chapter 545 p.1, 546 p.1, 550 p.1, and 551 p.1 (Cover Pages)' and it animates Robin's 'How Terrible You People Are' and Usopp's 'I'll-Die-If-I'm-On-My-Own Disease' as its whole plot. It shares the Straw Hat's Separation Serial Episodes category with 453/454/456, is not in Category:Filler Episodes, and is not bolded on ja.wikipedia. Batch 17 typed it filler + side_story under the pre-T28 regime; under T28 (an omake/side story that IS the episode's plot counts as a real adaptation) it takes the same standing as 453/454/456. The existing side_story annotation and the A6 junk-anchor null on ep 455 should BOTH stand — the repair is to the type only, and no anchor should be created.",
+      "sources": [
+        "https://onepiece.fandom.com/api.php?action=parse&page=Episode_455&prop=wikitext&format=json",
+        "https://onepiece.fandom.com/api.php?action=parse&page=Straw%20Hat%27s%20Separation%20Serial&prop=wikitext&format=json",
+        "https://onepiece.fandom.com/api.php?action=parse&page=Canon&prop=wikitext&format=json"
+      ]
+    }
+  ],
+  "structure": {
+    "notes": "Single continuous season component (1-1175); OUR row numbers match onepiece.fandom's Episode N pages and ja.wikipedia's 話数 column one-for-one across all nine targets — verified by title and air date on 213, 215, 453, 454, 456, 499, 506, 775, 1084 (no recap/special rows in the way, no off-by-one). ja.wikipedia's list is a genuinely independent second source with a documented legend: 太字はアニメオリジナルストーリー (bold = anime-original story) plus a footnote 一部原作のストーリーあり (contains some manga story) on 13 episodes. That footnote set — 51, 55, 61, 101, 143, 203, 214, 226, 319, 498, 626, 628, 747 — independently corroborates most of batch 17's graft/partial annotations, and none of it lands on 213, 215, 499, 506, 775 or 1084. The Straw Hat's Separation Serial is a cover-page arc, not an anime arc: 8 instalments on the cover pages of ch 543-560, animated across eps 418-421 and 453-456; the wiki's own hidden editor note records that 418-421 are NOT the first parts of the cover stories (they expand ch 523-524's landing panels, as batch 17 found), so the actual cover-story adaptation is 453-456. On adoption: the fandom Canon page files 'Oda's Involvement' (Strong World's story, executive-producer credits, anime-only character designs such as Musshuru and Accino) under NON-CANON, i.e. Oda's involvement in Toei material is documented as commissioning/designing, not as declaring canon — no adopted{author} basis exists for any row in this block. The Toriko crossover and the Sabo/Ace flashback specials raised in the ask are not in this block (457/458 are AFL-filler recap specials; ep 737 is already ruled mixed).",
+    "order_only": []
+  },
+  "flags_for_sean": [
+    "ANCHOR RISK on 453/454/456 (and 455): typing them mixed makes them anchor-eligible, but the only source content is CHAPTER COVER PAGES from ch 543-560, which run ahead of the main-line reading position at that point (ep 452 ends ch 549, ep 459 ends ch 551). An anchor built from 555/556/560 would jump a reader ~10 chapters forward and spoil Marineford. Recommendation: apply the type, record the chapters in the side_story annotation only, and keep these rows anchorless — exactly the shape ep 455 already has after its A6 junk-anchor null.",
+    "REPAIR 455 (filler -> mixed) contradicts a batch-17 verdict that was correct under the pre-T28 regime. If you prefer to leave 455 alone, the alternative is to type 453/454/456 filler + side_story and keep the block uniform the other way — but then T28's Railgun-41/GTO-27 clause is not being applied to the clearest cover-story case in the catalog. Recommendation: repair 455.",
+    "Split evidence on ep 506's graft: onepiece.fandom asserts twice that Robin's scene is canon (which maps to ch 593 p.2ff), while ja.wikipedia bolds the episode with no 一部原作のストーリーあり footnote. The filler standing is not in doubt either way; the {593} chapter tie rests mainly on the fandom statement plus the ep-510 infobox, so treat the annotation's chapter as medium-confidence.",
+    "Ep 497 is stored filler (batch 17, divergence{585}) but ja.wikipedia does NOT bold it, unlike 498 and 499. Not a target row and not enough on its own to move — noting it so a future pass can check whether ep 497 carries ch 585 p.15-17 (the treehouse panels) as real adapted content."
+  ]
+}

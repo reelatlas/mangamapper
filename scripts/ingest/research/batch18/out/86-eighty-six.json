@@ -1,0 +1,56 @@
+{
+ "series_id": "86-eighty-six",
+ "summary": "Ep 10 'Thank You' is NOT a recap and not a free-standing anime interlude: it is an adaptation of the light novel's own short stories. The 86 fandom wiki's per-episode 'adaptation' field (the same field that reads 'Light Novel Volume 1: Chapter 7' for ep 9 and 'Volume 1 Ch 7 + Volume 2 Ch 2' for ep 11) reads for ep 10: 'Light Novel Volume 10: Varlet, Banks of Lethe, & Fido' plus the side story 'For Nameless Soldiers Have No Graves'. Volume 10 (Ep.10 -Fragmental Neoteny-, Dengeki Bunko, released 2021-06-10, two days BEFORE this episode aired) is a numbered volume of the source series - a compilation of previously and newly written short stories - so this material is the source, not an anime invention. TV Tropes' LN-reader adaptation log independently breaks the episode down the same way: the front half (river rest, fishing, the abandoned Giadian town and zoo) is the short story 'By the Lethe River' = ch 8 of Volume 10; the back half (Fido's memory montage) is built on the 'Fido' short story plus the 4-page side story bundled with manga volume 1; and 'the only thing directly taken from the main story novels is the last 30 seconds of the episode, which shows Fido destroyed as the start of Volume 2 Chapter 2.' The one dissent is ANN's episode review (Callum May), which calls it an 'anime original episode' - written by an anime-only reviewer two days after the source volume shipped in Japanese; it is a perception, not a source claim. Under T28 the episode's whole plot IS those short stories, so this clears the materiality bar comfortably: canon, with a side_story annotation because the bulk is the LN's short-story volume rather than mainline volume progression.",
+ "standings": [
+  {
+   "episodes": [
+    10
+   ],
+   "type": "canon",
+   "chapters": "none",
+   "confidence": "high",
+   "note": "Adapts light novel material, not anime-original: LN volume 10 'Fragmental Neoteny' short stories ('The Banks of Lethe' = vol 10 ch 8; 'Fido') + the 4-page Asato-written side story 'For Nameless Soldiers Have No Graves' bundled with manga vol 1, closing on the opening of LN vol 2 ch 2 (Fido's destruction). Two independent sources agree (fandom per-episode adaptation field; TV Tropes' LN-reader adaptation log). Volume unit, no chapter anchor claimed - the series has no anchors and LN volumes are the instrument; 'chapters: none' means no chapter mapping, NOT no source content. Repair of the stored filler standing (T27 default) to canon. Dissent recorded: ANN's episode-10 review calls it an 'anime original episode' (anime-only reviewer, 2021-06-14).",
+   "sources": [
+    "https://86-eighty-six.fandom.com/api.php?action=parse&page=Episode_10&prop=wikitext&format=json",
+    "https://86-eighty-six.fandom.com/api.php?action=parse&page=Light_Novel_Volume_10&prop=wikitext&format=json",
+    "https://web.archive.org/web/20260525042035/https://tvtropes.org/pmwiki/pmwiki.php/Literature/EightySixEightySix",
+    "https://86-eighty-six.fandom.com/api.php?action=parse&page=Side_Story:_For_Nameless_Soldiers_Have_No_Graves&prop=wikitext&format=json",
+    "https://www.animenewsnetwork.com/review/86/episode-10/.173902"
+   ]
+  }
+ ],
+ "annotations": [
+  {
+   "episodes": [
+    10
+   ],
+   "kind": "side_story",
+   "note": "The episode's body is the source's SIDE stories (LN vol 10's short-story collection + the manga-vol-1 bonus story by Asato Asato), not mainline volume progression; only the final ~30 seconds is mainline (start of vol 2 ch 2). Mainline position is unaffected: ep 9 and ep 11 both sit in vol 1 ch 7, and ep 11 is the one that moves into vol 2 ch 2.",
+   "sources": [
+    "https://86-eighty-six.fandom.com/api.php?action=parse&page=Episode_10&prop=wikitext&format=json",
+    "https://web.archive.org/web/20260525042035/https://tvtropes.org/pmwiki/pmwiki.php/Literature/EightySixEightySix"
+   ]
+  }
+ ],
+ "repairs": [
+  {
+   "episode": 10,
+   "field": "type",
+   "old": "filler",
+   "new": "canon",
+   "why": "Not anime-original: it adapts LN vol 10's short stories ('By the Lethe River' ch 8, 'Fido'), the manga-vol-1 bonus side story, and the opening of vol 2 ch 2. AFL's 'anime canon' tag here reflects 'not a mainline volume', not 'no source'.",
+   "sources": [
+    "https://86-eighty-six.fandom.com/api.php?action=parse&page=Episode_10&prop=wikitext&format=json",
+    "https://web.archive.org/web/20260525042035/https://tvtropes.org/pmwiki/pmwiki.php/Literature/EightySixEightySix"
+   ]
+  }
+ ],
+ "structure": {
+  "notes": "Our 23 rows = the 23 TV episodes only (S1 eps 1-11 = rows 1-11; Part 2 eps 12-23 = rows 12-23), which matches the fandom episode list and Wikipedia. Broadcast ALSO included four 'Special Edition' programmes that we do NOT carry as rows: SE1 'Coquelicots Blooming Across the Battlefield' (2021-06-26, after ep 11), SE2 'Visual Commentary Special' (2021-11-13), SE3 'If There's Something Worth Dying For' (2021-11-27), SE4 'At Least Try To Be Human' (2022-03-05). These are recap/commentary specials; if they are ever ingested they would be filler + abridged (recap) and would shift every row after ep 11 - do not add them without renumbering. No ep 0. Ep 10 is a regular numbered TV episode, not an OVA or special.",
+  "order_only": []
+ },
+ "flags_for_sean": [
+  "Split perception on 86 ep 10: fandom + TV Tropes document it as an adaptation of LN vol 10's short stories, while ANN's contemporaneous review calls it 'anime original' (https://www.animenewsnetwork.com/review/86/episode-10/.173902). I recommend canon + side_story; the vol-10 stories are numbered source material (Dengeki Bunko 'Ep.10 -Fragmental Neoteny-') and the episode's plot IS them.",
+  "If side-story-sourced rows should carry a volume-level position rather than 'none', 86 ep 10 is the test case: the mainline reading position at ep 10 is still vol 1 ch 7 / vol 2 ch 2 (ep 11 carries that)."
+ ]
+}

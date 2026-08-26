@@ -1,0 +1,42 @@
+{
+ "series_id": "demon-slayer-kimetsu-no-yaiba",
+ "summary": "Row 27 'Flame Hashira Kyojuro Rengoku' (2021-10-10) is NOT a recap and not the film re-cut: it is a brand-new, fully animated episode produced for the TV broadcast of the Mugen Train Arc, depicting Rengoku's road TO the train - a stretch the Mugen Train film never showed and the manga never wrote. ja.wikipedia states the TV 'Mugen Ressha-hen' (7 episodes from 2021-10-10) added 'Kyojuro Rengoku's journey until he boards the Mugen Train', unreleased scenes and new next-episode previews to the film's material; the Kimetsu fandom episode page carries NO 'chapters' field for ep 27 (ep 28 carries 'Chapter 54 (p. 5-19), Chapter 55 (p. 1-4, 14-19)') and its Anime Notes say flatly: 'Episode 27 is entirely anime-original. In the manga, it appears to take place during the events of Chapter 53.' The demon Rengoku fights (the 'Slasher') and the bento-seller Fuku, her grandmother Tomi and the boy Tatsu exist only in the anime. Standing: filler - zero manga content - with the reading position recorded as an annotation (it sits at ch 53, and its closing seconds restage the Tanjiro/Zenitsu/Inosuke arrival at the station from an original vantage, the beat the manga opens ch 54 with). The stored A3 ruling on ep 33 ('ep 27 prologue anime-original') already assumed this; nothing to repair. Rows 28-33 (the film re-edited into six TV episodes, with added footage) keep their canon standing.",
+ "standings": [
+  {
+   "episodes": [
+    27
+   ],
+   "type": "filler",
+   "confidence": "high",
+   "note": "Entirely anime-original prologue episode made for the TV version of the Mugen Train Arc: Rengoku's mission against the anime-only 'Slasher' demon and the bento sellers Fuku/Tomi/Tatsu before he boards the train. Fandom episode page: 'Episode 27 is entirely anime-original. In the manga, it appears to take place during the events of Chapter 53' - and, unlike every neighbouring row, its infobox has no chapters field (ep 28 = ch 54 p.5-19 + ch 55 p.1-4, 14-19). ja.wikipedia: the TV Mugen Ressha-hen added the road Rengoku took to board the train, which the FILM never depicted. Not a recap: it is newly produced material, not compiled footage. AFL's 'anime canon' = made-for-anime, which under T27 is filler absent an adoption basis; no Gotouge story/supervision credit exists for it (script/storyboard credits are ufotable's).",
+   "sources": [
+    "https://kimetsu-no-yaiba.fandom.com/api.php?action=parse&page=Episode_27&prop=wikitext&format=json",
+    "https://kimetsu-no-yaiba.fandom.com/api.php?action=parse&page=Episode_28&prop=wikitext&format=json",
+    "https://ja.wikipedia.org/wiki/%E9%AC%BC%E6%BB%85%E3%81%AE%E5%88%83",
+    "https://demonslayer-anime.com/mugentrainarc/story/?id=ep1",
+    "https://www.animefillerlist.com/shows/demon-slayer-kimetsu-no-yaiba"
+   ]
+  }
+ ],
+ "annotations": [
+  {
+   "episodes": [
+    27
+   ],
+   "kind": "loose_parallel",
+   "note": "Reading-position tie only (T28: record the tie, do not let it colour the typing): the episode is placed inside manga ch 53 by the fandom's own Anime Notes, and its final scene - Fuku watching Inosuke headbutt the locomotive while Zenitsu scolds him - is an original-vantage restaging of the trio's arrival at the station, the beat the manga uses to open ch 54 (adapted properly in ep 28). No manga pages are adapted.",
+   "sources": [
+    "https://kimetsu-no-yaiba.fandom.com/api.php?action=parse&page=Episode_27&prop=wikitext&format=json",
+    "https://kimetsu-no-yaiba.fandom.com/api.php?action=parse&page=Episode_28&prop=wikitext&format=json"
+   ]
+  }
+ ],
+ "repairs": [],
+ "structure": {
+  "notes": "Row 27 = 'Kimetsu no Yaiba: Mugen Ressha-hen (TV)' episode 1, an ordinary numbered TV episode (not an OVA, not a recap, not the movie). The TV Mugen Train Arc is 7 episodes = our rows 27-33: ep 27 is new material and eps 28-33 are the 2020 theatrical film re-edited for television with additional footage and new previews (ja.wikipedia). The fandom's Mugen Train Arc page prints the arc's episode span as '27-34', one row wider than our component (27-33) because ep 34 continues the post-train aftermath into the Entertainment District season; our stored A3 boundary (ep 33 -> ch 69, ep 34 starts ch 70) is unaffected. Our cumulative numbering matches the fandom's continuous numbering exactly (S1 1-26, Mugen Train TV 27-33, Entertainment District 34-44).",
+  "order_only": []
+ },
+ "flags_for_sean": [
+  "Format axis (T4.4): row 27 is 'new TV episode', rows 28-33 are 'theatrical film re-cut into TV episodes' - same season, two different formats. Worth capturing when the format axis lands."
+ ]
+}

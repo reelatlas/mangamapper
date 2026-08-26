@@ -1,0 +1,38 @@
+{
+  "series_id": "vinland-saga",
+  "summary": "Ep 5 'The Troll's Son' is an anime-original episode with one real manga graft, and the T28 materiality bar puts it on the filler side. vinlandsaga.fandom's Episode 5 infobox says it outright: |chapters = [[Bonus Story: Ylva at Work|21.5 - Ylva at Work]], Anime Original — and the page's own 'Differences from the manga' section is explicit: 'The entirety of this episode excluding the scenes with Ylva is anime original content that was not seen in the original manga.' animefillerguide independently prints the same thing in its chapter column: '05. The Troll's Son — 21.5 – Ylva at Work' (its neighbours read 04 = 12,13,14,15,16 and 06 = 17, which is why our stored AFG anchors skip ep 5 entirely). So the episode's PLOT — Thorfinn starving as a stowaway on his father's stolen ship, following Askeladd's band ashore at the Humber, witnessing the village raid, failing to knife the sleeping Askeladd and then losing a duel to him — is WIT Studio's own bridge material, invented to connect the Iceland childhood arc to the mercenary present. The manga content is the Iceland cutaway to Ylva and Helga, adapted from the volume-3 gaiden はたらくユルヴァちゃん / 'Ylva at Work' (chapter 21.5, 14 pages, May 2006), transplanted forward roughly five volumes. Anime News Network's episode-5 review confirms the proportion: 'The vast majority of the episode focuses on Thorfinn with Askeladd's forces during the village raid and its aftermath. The Iceland scenes receive only brief coverage.' That is an original plot quoting a source fragment, not a side story that IS the episode — filler + a mandatory graft annotation. Stored typing (filler) is correct; the missing piece was the annotation.",
+  "standings": [
+    {
+      "episodes": [5],
+      "type": "filler",
+      "confidence": "high",
+      "note": "Anime-original bridge episode. vinlandsaga.fandom Episode 5: |chapters = '21.5 - Ylva at Work, Anime Original', and 'Differences from the manga': 'The entirety of this episode excluding the scenes with Ylva is anime original content that was not seen in the original manga' (plus 'Ear makes his anime debut in this episode earlier in the story than in the manga'). animefillerguide's per-episode chapter column gives ep 5 only '21.5 – Ylva at Work' while giving ep 4 '12, 13, 14, 15, 16' and ep 6 '17' — the manga frontier does not move across this row, which is exactly why our stored AFG anchors jump ep4 (END 16) straight to ep6 (END 17). Materiality (T28): ANN's review reports 'the vast majority of the episode focuses on Thorfinn with Askeladd's forces during the village raid and its aftermath' and that 'the Iceland scenes receive only brief coverage'; the episode's title and job are Thorfinn's, and the Ylva material is a cutaway inside that original plot. So filler, with the chapter tie recorded as a graft annotation rather than promoted to mixed. Stored value (filler) is correct; no repair. No anchor (A1).",
+      "sources": [
+        "https://vinlandsaga.fandom.com/api.php?action=parse&page=Episode%205&prop=wikitext&format=json",
+        "https://www.animefillerguide.com/anime/vinland-saga/",
+        "https://www.animenewsnetwork.com/review/vinland-saga/episode-5/.149729"
+      ]
+    }
+  ],
+  "annotations": [
+    {
+      "episodes": [5],
+      "kind": "graft",
+      "note": "Carries the volume-3 gaiden 'Ylva at Work' (はたらくユルヴァちゃん, Hataraku Yuruva-chan), numbered chapter 21.5 between ch 21 and ch 22, 14 pages, first published in issue 2006-07 (25 May 2006) — Leif and the village boys return to Iceland with Thors' war chest and the news that Thorfinn is missing; then, in 1003 AD, Ylva works herself to exhaustion so Helga can rest, spears the whale in the bay, and finally breaks down crying when her mother takes the weaving stick from her hands. Transplanted forward roughly five volumes to sit against the ep-4/ep-6 position (ch 16-17); the chapter's own wiki page reverse-indexes |episode=[[Episode 5]]. This is a real chapter tie inside an otherwise anime-original episode, recorded per T28 as an annotation and NOT as position: ch 21.5 is far ahead of the ep-5 reading position and eps 11 ('A Gamble', ch 21-22) later adapt the surrounding chapters, so no anchor and no continue-read effect.",
+      "sources": [
+        "https://vinlandsaga.fandom.com/api.php?action=parse&page=Bonus%20Story%3A%20Ylva%20at%20Work&prop=wikitext&format=json",
+        "https://vinlandsaga.fandom.com/api.php?action=parse&page=Episode%205&prop=wikitext&format=json",
+        "https://www.animefillerguide.com/anime/vinland-saga/"
+      ]
+    }
+  ],
+  "repairs": [],
+  "structure": {
+    "notes": "Two components: VINLAND SAGA eps 1-24 (AniList 101348) and VINLAND SAGA SEASON 2 eps 25-48 (AniList 136430); our cumulative numbering matches animefillerguide's season-1 table 1:1 by title, and the fandom's 'Episode N' pages run 1-48 cumulatively, so no join risk. THE STRUCTURAL FACT THAT EXPLAINS THIS ROW: the anime does not open where the manga opens. Yukimura's manga starts in medias res with Thorfinn already a mercenary (ch 1 'Normanni', ch 2 'Beyond the Edge of the Sea'); WIT reordered the front of the story so that the Iceland childhood arc runs first, at eps 1-6, and then adapts ch 1-2 afterwards at eps 7 ('Normanni' = ch 1) and 8 ('Beyond the Edge of the Sea' = ch 2) — per animefillerguide's own chapter column (01: 2,3,4 / 02: 5,6,7,9 / 03: 8,9,10,11 / 04: 12-16 / 05: gaiden 21.5 / 06: 17 / 07: 1 / 08: 2 / 09: 18,19 ...). Ep 5 exists because that reordering left a gap between Thors' death (ch 16) and Thorfinn's life in the band (ch 17), and WIT filled it with original material plus the Ylva gaiden. Consequences for our data: (a) the chapter sequence across eps 1-9 is NON-MONOTONIC by design — 2-4, 5-9, 8-11, 12-16, [21.5], 17, 1, 2, 18-19 — so any monotonicity audit will flag eps 7-8 as a regression that is CORRECT and must not be 'healed'; (b) ep 6 is already stored mixed, which fits (fandom Episode 6: |chapters = 17, Anime Original); (c) a rearranged-style annotation on eps 7-8 would be a fair follow-up but is outside this task's target row and is not proposed here. Stored anchors bracketing the block (ep4 END 16, ep6 END 17) are consistent with everything found and need no change.",
+    "order_only": []
+  },
+  "flags_for_sean": [
+    "Materiality call, stated plainly so you can overrule it: ep 5 does adapt a whole manga bonus chapter (ch 21.5, 14 pages), which is more than a one-panel cameo — but it is not the episode's plot. Under T28 the discriminator is 'what is this episode's job?', and this episode's job is Thorfinn's anime-original stowaway ordeal and first duel; the Ylva gaiden is a cutaway that ANN's review calls 'brief coverage'. I therefore recommend filler + graft rather than mixed. If you prefer mixed, note that it would still take no anchor: ch 21.5 is ahead of the reading position and its neighbours are adapted later at ep 11.",
+    "Not actioned, offered: eps 7-8 adapt manga ch 1-2 AFTER eps 1-6 adapted ch 2-17 — a deliberate front-of-series rearrangement. That is a `rearranged` annotation waiting to be written and a landmine for any monotonic-anchor audit. Outside this task's row, so no verdict entry was created for it."
+  ]
+}

@@ -1,0 +1,46 @@
+{
+ "series_id": "naruto-shippuden",
+ "summary": "Row 28 'Beasts! Alive Again!' (2007-09-13) is an anime expansion episode inside the Kazekage Rescue arc, not a manga adaptation. Narutopedia gives it NO chapters field - eps 26 (272-273), 27 (274-275), 29 (276-277) and 30 all have one - and its trivia states the discriminator plainly: 'This episode is unique to the anime because only the start and end of Team Guy's fights against their clones are seen in the manga.' The episode is the invented middle of those clone fights, and every finishing technique it stages is anime-only: Youth Full Power, Manipulated Tools: Heavenly Chain Disaster, Leaf Great Flash and Eight Trigrams Mountain Crusher all carry 'debut anime = 28' with no manga debut on their Narutopedia pages. AFG independently prints 'N/A' in its chapter column for ep 28 while giving 274-275 to ep 27 and 276-277 to ep 29 - the same hole our anchors show. It is not pure vacuum: two short connective beats are straight out of the manga - Chiyo collapsing from the poison and refusing to be taken back to Suna (end of ch 275) and Naruto telling Kakashi he will finish Deidara himself if the new Sharingan fails (opening of ch 276) - but those are seam fragments already carried by the anchored neighbours, so under T28 the row stays filler and the tie is recorded as an annotation. Stored standing is already filler: no repair. The 452-457 side_source block was not touched.",
+ "standings": [
+  {
+   "episodes": [
+    28
+   ],
+   "type": "filler",
+   "confidence": "high",
+   "note": "Anime-original expansion of Team Guy's clone battle (the manga shows only its start, from ch 263's Mirrored Sudden Attacker Technique, and its conclusion). Narutopedia carries no chapters field for this episode while every neighbour has one, and its trivia says the episode 'is unique to the anime because only the start and end of Team Guy's fights against their clones are seen in the manga'. The four techniques that win the fights on screen - Youth Full Power, Manipulated Tools: Heavenly Chain Disaster, Leaf Great Flash, Eight Trigrams Mountain Crusher - are all anime-only, debuting in this very episode. AFG's chapter column reads N/A for ep 28 (ep 27 = 274-275, ep 29 = 276-277), matching the gap in our stored anchors. AFL's 'anime canon' tag = made-for-anime; T27 default holds because no Kishimoto story or supervision credit exists for it.",
+   "sources": [
+    "https://naruto.fandom.com/api.php?action=parse&page=Beasts!_Alive_Again!&prop=wikitext&format=json",
+    "https://naruto.fandom.com/api.php?action=parse&page=Impossible_Dream&prop=wikitext&format=json",
+    "https://naruto.fandom.com/api.php?action=parse&page=Kakashi_Enlightened!&prop=wikitext&format=json",
+    "https://naruto.fandom.com/api.php?action=parse&page=Youth_Full_Power&prop=wikitext&format=json",
+    "https://naruto.fandom.com/api.php?action=parse&page=Eight_Trigrams_Mountain_Crusher&prop=wikitext&format=json",
+    "https://animefillerguide.com/naruto-shippuden/",
+    "https://www.animefillerlist.com/shows/naruto-shippuden"
+   ]
+  }
+ ],
+ "annotations": [
+  {
+   "episodes": [
+    28
+   ],
+   "kind": "partial",
+   "chapters": "275-276 (seam fragments)",
+   "note": "T28 tie record, not a typing claim: inside the original clone-fight material the episode carries two genuine manga beats - Chiyo collapsing from Sasori's poison and refusing to return to Sunagakure (the closing page-beats of ch 275, per Narutopedia's chapter summary) and Naruto's declaration that he will finish Deidara if Kakashi's Mangekyo fails (the opening of ch 276). Both sit on the 275/276 seam that eps 27 and 29 already carry, so no anchor moves; the episode's own job is the anime-invented middle of the clone fights.",
+   "sources": [
+    "https://naruto.fandom.com/api.php?action=parse&page=Beasts!_Alive_Again!&prop=wikitext&format=json",
+    "https://naruto.fandom.com/api.php?action=parse&page=Reward%E2%80%A6!!&prop=wikitext&format=json",
+    "https://naruto.fandom.com/api.php?action=parse&page=The_New_Sharingan!!&prop=wikitext&format=json"
+   ]
+  }
+ ],
+ "repairs": [],
+ "structure": {
+  "notes": "Only row 28 was judged, per the task. Row identity confirmed on title + air date against AFL ('28 Beasts! Alive Again! Anime Canon 2007-09-13') and Narutopedia (episode = 28, Kazekage Rescue Mission arc). Nothing in this verdict touches rows 452-457 (Itachi Shinden novel, stored canon + side_source) or any existing anchor/annotation. The stored anchors already skip ep 28 (ep 27 -> 275, ep 29 -> 277), which is consistent with filler; no renumbering, no ep 0, single component 1-500.",
+  "order_only": []
+ },
+ "flags_for_sean": [
+  "Alternative reading available if the materiality bar is set lower: ep 28 does contain the ch-275 Chiyo beat and the ch-276 Naruto/Kakashi beat verbatim, which would make it mixed. I recommend filler (T28 - an original plot quoting seam fragments already carried by the anchored neighbours), with the fragments preserved as a partial annotation."
+ ]
+}

@@ -1,0 +1,40 @@
+{
+  "series_id": "sgt-frog",
+  "summary": "Both AFL 'anime canon' rows are anime-original, not manga-adapting and not recaps. The decisive source is one this series has been missing: ja.wikipedia's 'ケロロ軍曹のアニメエピソード一覧' carries an explicit per-episode adaptation index — its header states 「なお、●は、原作に沿った内容のエピソードである」 ('a ● marks an episode whose content follows the original manga'), applied to all 358 rows in the same 通し番号 (cumulative) numbering we use. Ep 180 (ケロロ 争奪大戦争 であります, 2007-09-29) and ep 357 (日向家 春、帰還 であります, 2011-04-02) both carry NO ●. The index is trustworthy here because it agrees with our stored typing on every neighbouring row I checked: 177-A/B no ● (stored filler), 178 ● (canon), 179-A/B no ● (filler), 181-A/B no ● (filler), 182-A/B no ● (filler), 183 ● (canon), 354/355/356 no ● (filler), 358-A ● and 358-B ● (canon) — 10 of 10. Ep 180's plot (Karara and Chiroro fawning over Keroro, Tamama going to war with them, Mois finding a fault line) cannot be manga: keroro.fandom records that Karara and Chiroro 'appear exclusively in just one chapter' of the manga (vol 11 ch 90) and that Karara's marriage obsession is an anime-only characterisation. Ep 357 is the anime's own ending: keroro.fandom notes it 'was originally planned to be the last episode, in which things like the credits sequence are different and its plot feels more conclusive', before ep 358 was made as the true finale — a studio ending with no documented author/studio/community adoption, so filler under T27. Neither row is a recap; both are full-length single-segment episodes (no A/B split), which in this series is the 'special' format, not the recap format.",
+  "standings": [
+    {
+      "episodes": [180],
+      "type": "filler",
+      "confidence": "high",
+      "note": "Anime-original full-length episode (no A/B split). ja.wikipedia's episode list gives it no ● (原作に沿った内容), while its immediate full-length neighbours 178 and 183 both have one. en.wikipedia's season-4 list summarises it as 'Karara and Chiroro return again, this time fawning over Keroro. Tamama is not pleased by this, and he goes to war with the two of them. Meanwhile, Mois has found a perfect fault line in the backyard with which to bring about the end of the world.' — a premise the manga cannot supply: keroro.fandom's Karara and Chiroro pages both say each 'appears exclusively in just one chapter' of the manga (vol 11 ch 90, as Taruru's apprentices) and that in the manga Karara 'never ends up developing an obsession with marrying the platoon members'. Not a recap and not a special-format re-cut; simply an anime-original story. Stored value (filler) is correct; no repair.",
+      "sources": [
+        "https://ja.wikipedia.org/wiki/%E3%82%B1%E3%83%AD%E3%83%AD%E8%BB%8D%E6%9B%B9%E3%81%AE%E3%82%A2%E3%83%8B%E3%83%A1%E3%82%A8%E3%83%94%E3%82%BD%E3%83%BC%E3%83%89%E4%B8%80%E8%A6%A7",
+        "https://en.wikipedia.org/wiki/Sgt._Frog_season_4",
+        "https://keroro.fandom.com/api.php?action=parse&page=Karara&prop=wikitext&format=json",
+        "https://keroro.fandom.com/api.php?action=parse&page=Chiroro&prop=wikitext&format=json"
+      ]
+    },
+    {
+      "episodes": [357],
+      "type": "filler",
+      "confidence": "high",
+      "note": "The anime's own (originally intended) ending — a studio ending, which is filler unless adopted, and no adoption basis is documented. ja.wikipedia gives it no ● while both halves of the true finale 358 do. keroro.fandom's Keroro Episode 357 page ('The Hinata Family: Haru Comes Home', 日向家 春、帰還 であります) records: 'This was originally planned to be the last episode, in which things like the credits sequence are different and its plot feels more conclusive. However, another episode was created shortly after this one, being episode 358, which would end up being the true last episode.' en.wikipedia's season-7 list gives the plot as 'The platoon's Pekoponian friends are invited to Keron for a vacation, unaware that this is actually a plot by HQ to eliminate all threats to their invasion.' The one manga-adjacent element is the father, Haru Hinata: keroro.fandom's character page says he is only 'briefly mentioned and shown in a flashback during episode 5' and 'only appears, in the present, at the end of episode 357' — i.e. the homecoming is an anime event; the manga merely implies things about him ('In the manga it is implied he knew Aki since middle school'). That is a character carried over, not a chapter adapted, so no graft/partial annotation. ja.wikipedia also notes the finale was broadcast expanded (Saturday morning carried 357; ケロロ軍曹乙 carried 357 and 358) — a scheduling fact, not a format change; the row is a normal full-length episode, not a recap. Stored value (filler) is correct; no repair.",
+      "sources": [
+        "https://ja.wikipedia.org/wiki/%E3%82%B1%E3%83%AD%E3%83%AD%E8%BB%8D%E6%9B%B9%E3%81%AE%E3%82%A2%E3%83%8B%E3%83%A1%E3%82%A8%E3%83%94%E3%82%BD%E3%83%BC%E3%83%89%E4%B8%80%E8%A6%A7",
+        "https://keroro.fandom.com/api.php?action=parse&page=Keroro%20Episode%20357&prop=wikitext&format=json",
+        "https://keroro.fandom.com/api.php?action=parse&page=Haru%20Hinata&prop=wikitext&format=json",
+        "https://en.wikipedia.org/wiki/Sgt._Frog_season_7"
+      ]
+    }
+  ],
+  "annotations": [],
+  "repairs": [],
+  "structure": {
+    "notes": "ROW-COUNT IDENTITY: ja.wikipedia's 'ケロロ軍曹のアニメエピソード一覧' numbers by 通し番号 from season 1 and ends at 358 with 358-A/358-B as the last pair, exactly our 358 rows; it splits A/B segments inside a numbered row (177-A, 177-B) the way our titles do ('Title A/ Title B'), and full-length episodes appear unsplit (178, 180, 183, 357). Titles and air dates match ours row for row on every row I checked (177-183, 354-358), so a title/date join is safe and no shift exists. Ep 351 is the notorious 'ゲロゲロ15分/こんどはゲロゲロ15分' gag row containing 23 micro-segments (351-A1..A14, 351-B全, 351-B15..B23) inside ONE numbered episode — worth knowing before anyone tries to expand this series' rows. NEW REUSABLE SOURCE, the main finding of this task: that ja.wikipedia list is a complete per-episode canon index for all 358 rows via its ● convention (「●は、原作に沿った内容のエピソードである」). We currently type this series from animefillerlist alone with mapping_mode=loose (A40, 2026-08-24: '71% filler, manga stories cherry-picked non-linearly'). The ● index would let a future pass re-verify the whole 358-row typing from a second, Japanese, per-episode source at low cost — and it is segment-level (● sits on 177-A vs 177-B individually), which is finer than our row grain and would surface mixed rows we currently call filler or canon wholesale. It does NOT give chapter numbers, so A40's mapping_mode=loose ruling stands untouched.",
+    "order_only": []
+  },
+  "flags_for_sean": [
+    "No repair proposed and no anchors — both target rows confirm the stored filler typing, and A40/G3 (mapping_mode=loose, no meaningful chapter mapping) is unaffected.",
+    "Opportunity, not a defect: ja.wikipedia's ● index (see structure notes) is a second per-episode source covering all 358 rows at SEGMENT grain. If you ever want to raise sgt-frog above single-source typing, that index is the cheapest path, and it would likely convert a number of our whole-row 'filler'/'canon' calls into 'mixed' (e.g. 345 is ●345-A + non-● 345-B in one of our rows). Not actioned here — outside this task's two rows."
+  ]
+}

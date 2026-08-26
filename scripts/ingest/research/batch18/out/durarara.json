@@ -1,0 +1,46 @@
+{
+ "series_id": "durarara",
+ "summary": "Row 25 'World at Peace' is the second of season 1's two unaired OVA episodes: Japanese title 'Tenka Taihei' (天下泰平), script by Toshizo Nemoto, storyboard Kiyotaka Ohata, shipped on DVD/BD volume 13 on 2011-02-23 (ja.wikipedia's episode table marks both #12.5 and #25 as 未放映エピソード / unaired; Wikipedia numbers it 24.5 with the same date, writer and plot). It is an epilogue romp - Kasuka/Yuuhei's TV programme hunting Ikebukuro's 'number one couple', Izaya baiting Shizuo on live television, and a closing mirror of episode 1 as Mikado directs a newly arrived Raira student. Season 1 adapts light novel volumes 1-3 (fandom's anime page states this; ep 24's infobox reads 'adapted from Durarara!! Light Novel Volume 03'), and the Hollywood Arc (LN volume 4) is credited on the wiki to x2 Shou episodes 1-4, not to this OVA. The ep-25 infobox's 'adapted from' field is EMPTY while every TV episode's is filled - and no Narita prose matches the premise (the four Narita short stories in the 2010 guidebook 'All About Durarara!!' are unrelated). So: filler, anime-original. What the OVA does do is introduce Mairu Orihara, Kururi Orihara and Max Sandshelt on screen months before x2 Shou adapts their LN debut (all three debut in LN vol 4 ch 1) - recorded as a loose_parallel annotation, not as source content.",
+ "standings": [
+  {
+   "episodes": [
+    25
+   ],
+   "type": "filler",
+   "confidence": "medium",
+   "note": "Anime-original OVA epilogue after season 1 finished the LN's vol-1-to-3 arc. Evidence: (1) the fandom episode page leaves 'adapted from' EMPTY for ep 25 while it is filled for every TV episode (ep 1 = LN vol 1, ep 12 = LN vol 1, ep 24 = LN vol 3); (2) the wiki's Hollywood Arc page assigns LN vol 4 to x2 Shou eps 1-4 only, and x2 Shou ep 1's infobox reads 'adapted from Durarara!!x4' - the OVA is not credited with any volume; (3) its premise (Yuuhei's 'best couple in Ikebukuro' TV special) matches no LN chapter, and the four Narita-written short stories in the official guidebook 'All About Durarara!!' (July 2010) are unrelated. Medium rather than high: no source says 'anime original' in so many words for ep 25 (the wiki says it explicitly only for ep 12.5, 'The events in this episode are anime exclusive'), so this rests on a consistent absence plus positive arc attribution elsewhere.",
+   "sources": [
+    "https://durarara.fandom.com/api.php?action=parse&page=Durarara!!_Episode_25&prop=wikitext&format=json",
+    "https://durarara.fandom.com/api.php?action=parse&page=Durarara!!_Episode_24&prop=wikitext&format=json",
+    "https://durarara.fandom.com/api.php?action=parse&page=Durarara!!_Anime&prop=wikitext&format=json",
+    "https://durarara.fandom.com/api.php?action=parse&page=Hollywood_Arc&prop=wikitext&format=json",
+    "https://durarara.fandom.com/api.php?action=parse&page=Durarara!!x2_Shou_Episode_01&prop=wikitext&format=json",
+    "https://ja.wikipedia.org/wiki/%E3%83%87%E3%83%A5%E3%83%A9%E3%83%A9%E3%83%A9!!_(%E3%82%A2%E3%83%8B%E3%83%A1)",
+    "https://en.wikipedia.org/wiki/Durarara!!_season_1",
+    "https://durarara.fandom.com/api.php?action=parse&page=All_About_Durarara!!&prop=wikitext&format=json"
+   ]
+  }
+ ],
+ "annotations": [
+  {
+   "episodes": [
+    25
+   ],
+   "kind": "loose_parallel",
+   "note": "Records the tie without treating it as adaptation: the OVA gives Mairu Orihara, Kururi Orihara and Max Sandshelt (all three debut in LN volume 4 chapter 1, per their fandom character infoboxes) their first ANIME appearance ahead of x2 Shou ep 1, which is where vol 4 is actually adapted. Plot events are original; only the cast is pulled forward. The closing scene deliberately mirrors ep 1 (Mikado meeting a new arrival at the station).",
+   "sources": [
+    "https://durarara.fandom.com/api.php?action=parse&page=Durarara!!_Episode_25&prop=wikitext&format=json",
+    "https://durarara.fandom.com/api.php?action=parse&page=Durarara!!x2_Shou_Episode_01&prop=wikitext&format=json"
+   ]
+  }
+ ],
+ "repairs": [],
+ "structure": {
+  "notes": "ROW/COMPONENT MISMATCH worth a look: our 61 rows are 24 (S1 TV) + 1 (this OVA, row 25) + 36 (x2 Shou/Ten/Ketsu, rows 26-61), but the stored components read 25-36 = x2 Shou, 37-48 = x2 Ten, 49-60 = x2 Ketsu, which is one row too low from row 25 on and leaves row 61 outside every component. Confirmed by title: our row 26 'A Picture Is Worth a Thousand Words' = x2 Shou #1 (百聞は一見に如かず, 2015-01-10), so x2 Shou is rows 26-37, Ten 38-49, Ketsu 50-61. The three season-2 unaired episodes (x2 Shou #4.5 'Watashi no Kokoro wa Nabe Moyou', Ten #13.5, Ketsu #19.5) and season 1's FIRST OVA (#12.5 'Heaven's Vengeance', shipped with DVD 7 on 2010-08-25, explicitly anime-exclusive on the wiki) are NOT rows - do not add them without renumbering. Naming note: the fandom page titles ep 25 'World at Peace (世界平和, Sekai Heiwa)'; ja.wikipedia and Wikipedia both give the actual Japanese subtitle as 天下泰平 (Tenkataihei) - the fandom kanji is wrong, our stored title is right.",
+  "order_only": []
+ },
+ "flags_for_sean": [
+  "Component ranges for durarara are off by one from row 25 (the S1 OVA has no component and row 61 is uncovered). Not a typing issue, but it will mis-attribute every season-2 row if anything joins on components.",
+  "Ep 25's filler standing rests on an absence (empty 'adapted from' + arc credited elsewhere) rather than an explicit 'anime original' statement - medium confidence. If a Narita side story matching the 'best couple in Ikebukuro' TV special ever surfaces, re-open."
+ ]
+}

@@ -1,0 +1,72 @@
+{
+  "series_id": "rurouni-kenshin-2023",
+  "summary": "Ep 44 is 第四十四話「京都大火（中編）」 (2025-02-28), the middle third of the Great Kyoto Fire trilogy — NOT a breather and NOT a recap. It adapts zero Acts (kenshin fandom's episode infobox chapter field is empty, and the reverse index agrees: Act 100 and Act 101 both list 2023ep = The Great Kyoto Fire (Part One) = our ep 43, Act 102 and Act 103 list Part Three = our ep 45; nothing points at Part Two). Its content, per the OFFICIAL Aniplex site synopsis, is Kenshin vs Aoshi on the ironclad Rengoku's deck, Sanosuke boarding with Tsunan's 炸裂弾 to blow the engine room and being blocked by Hoji and Shishio's men, and Arato holding off Kamatari and Henya alone in Kyoto — exactly the two things the production says came out of scenario meetings WITH WATSUKI. Real Sound's S2 director+producer interview (2024-11-09) prints it plainly: 'シナリオ会議で和月先生から爆発映えする炸裂弾にしたらどうか？となり…かなり原作からデザインを変更しています。ほかの話数ですと、大型甲鉄艦“煉獄”も志々雄一派がより活躍できるよう、相談して盛り上げています' — the redesigned explosive and the beefed-up Rengoku episodes, so Shishio's faction gets more to do, are author-consulted changes; the same interview says parts Watsuki could not fit into the weekly serialization are being adjusted back in through the scenario, and that he has attended scenario meetings since S1. Watsuki is not merely 原作 here: the official Kyoto Douran staff page credits him 脚本監修 (script supervisor), the launch press said he 完全監修 the character designs and scenario, and he confirms it himself in the Comic Natalie 対談: '今までのメディアミックスの中で一番多く関わっていると思います'. Verdict: ep 44 is canon + adopted{author} — a REPAIR of the stored `filler`. The existing eps 43/44/45 divergence{100-102} annotation stands unchanged.",
+  "standings": [
+    {
+      "episodes": [44],
+      "type": "canon",
+      "chapters": "none",
+      "confidence": "high",
+      "note": "Adapts no Act — fandom's episode infobox chapter field is blank ('Act ') and the Act-page reverse index puts 100+101 in ep 43 and 102+103 in ep 45, leaving ep 44 with nothing; every beat the fandom lists is flagged anime-original (Aoshi fighting Kenshin across the Rengoku's deck and masts under Shishio's eyes, Sanosuke hunting the engine room, Kamatari/Henya vs the Kyoto police, Usui vs the Oniwabanshu, Megumi's field hospital, the Kaiten Kenbu Rokuren vs Kuzu Ryu Sen clash). Standing is canon by ADOPTION: this is author-supervised expansion of the canon fire night, not padding invented around the author — see the annotation. Not a recap (no re-used material; a distinct installment with new staff, 絵コンテ 水井麻衣・こうじ, 演出 大久保朋) and not a side story (same night, same cast, continuous with 43 and 45).",
+      "sources": [
+        "https://kenshin.fandom.com/api.php?action=parse&page=The%20Great%20Ky%C5%8Dto%20Fire%20(Part%20Two)&prop=wikitext&format=json",
+        "https://kenshin.fandom.com/api.php?action=parse&page=Act%20101&prop=wikitext&format=json",
+        "https://kenshin.fandom.com/api.php?action=parse&page=Act%20102&prop=wikitext&format=json",
+        "https://rurouni-kenshin.com/story/?id=44",
+        "https://ja.wikipedia.org/w/api.php?action=parse&pageid=2641313&prop=wikitext&format=json"
+      ]
+    }
+  ],
+  "annotations": [
+    {
+      "episodes": [44],
+      "kind": "adopted",
+      "basis": "author",
+      "note": "AUTHOR basis, specific act — not a blanket 原作 credit. (1) CREDIT: the official Aniplex site for the season containing this row (京都動乱 = our eps 25-47) lists 脚本監修：和月伸宏 alongside シリーズ構成・脚本 倉田英之 and シリーズ構成・脚本協力 黒碕薫; Real Sound reprints the identical credit block; ja.wikipedia's staff table footnotes it as 「第二期では脚本監修も務める」. (2) DECLARED SUPERVISION: the 2022 launch press said Watsuki 完全監修 the character designs and scenario for the whole remake (Comic Natalie 494932, carried by en.wikipedia and ja.wikipedia), and Watsuki confirms it first-hand in the Comic Natalie 対談 (2023-07-06) — asked about 完全監修 he answers 「今までのメディアミックスの中で一番多く関わっていると思います」. (3) THIS EPISODE'S MATERIAL SPECIFICALLY: Real Sound (2024-11-09) — producer Niwa: 「シナリオ会議は、第一期から変わらず出ていただいていて、ご意見をいただいています」; director Komada: 「当時、週刊連載でどうしても描ききれなかった部分があるとのことで、そういった部分はシナリオで調整して反映しています」 and 「シナリオ会議で和月先生から爆発映えする炸裂弾にしたらどうか？となり…かなり原作からデザインを変更しています。ほかの話数ですと、大型甲鉄艦“煉獄”も志々雄一派がより活躍できるよう、相談して盛り上げています」. The official ep-44 synopsis is precisely those two items (Tsunan's redesigned 炸裂弾 aboard the Rengoku; the Juppongatana given room to fight) and the fandom's ep-43/44 anime-notes independently record both changes (stielhandgranate-style grenades vs the manga's small oval ones; Aoshi placed aboard the Rengoku). So the episode's defining content is material the author proposed or was consulted on, under a named script-supervision credit.",
+      "sources": [
+        "https://rurouni-kenshin.com/staffcast/",
+        "https://realsound.jp/movie/2024/11/post-1834093_2.html",
+        "https://ja.wikipedia.org/w/api.php?action=parse&pageid=2641313&prop=wikitext&format=json",
+        "https://en.wikipedia.org/wiki/Rurouni_Kenshin_(2023_TV_series)",
+        "https://web.archive.org/web/20230708084617/https://natalie.mu/comic/pp/rurouni-kenshin/page/2",
+        "https://kenshin.fandom.com/api.php?action=parse&page=The%20Great%20Ky%C5%8Dto%20Fire%20(Part%20One)&prop=wikitext&format=json"
+      ]
+    }
+  ],
+  "repairs": [
+    {
+      "episode": 44,
+      "field": "type",
+      "old": "filler",
+      "new": "canon",
+      "why": "T27's default (zero chapters, no positive canon signal) is overturned by a documented author act on THIS episode's material: Watsuki is credited 脚本監修 on season 2 (official staff page + Real Sound credit block + ja.wikipedia footnote), attends every scenario meeting since S1, and the production names the two changes that constitute ep 44 — the redesigned 炸裂弾 he proposed in a scenario meeting, and the Rengoku episodes played up in consultation so Shishio's faction could do more — as coming from those meetings, on top of the stated policy of reflecting material he could not fit into the weekly serialization. Canon + adopted{author}, matching the ep-34 precedent. The stored eps 43/44/45 divergence{100-102} annotation is unaffected and should stay.",
+      "sources": [
+        "https://rurouni-kenshin.com/staffcast/",
+        "https://realsound.jp/movie/2024/11/post-1834093_2.html",
+        "https://rurouni-kenshin.com/story/?id=44",
+        "https://kenshin.fandom.com/api.php?action=parse&page=The%20Great%20Ky%C5%8Dto%20Fire%20(Part%20Two)&prop=wikitext&format=json"
+      ]
+    },
+    {
+      "episode": 44,
+      "field": "title",
+      "old": "(none stored)",
+      "new": "京都大火（中編） / The Great Kyoto Fire (Part Two)",
+      "why": "Our row 44 has no title; the official Aniplex site and ja.wikipedia both give 第四十四話「京都大火（中編）」, air date 2025-02-28, and kenshin fandom titles the page 'The Great Kyoto Fire (Part Two)'. Cosmetic, but it also documents the title trap below.",
+      "sources": [
+        "https://rurouni-kenshin.com/story/?id=44",
+        "https://ja.wikipedia.org/w/api.php?action=parse&pageid=2641313&prop=wikitext&format=json",
+        "https://kenshin.fandom.com/api.php?action=parse&page=The%20Great%20Ky%C5%8Dto%20Fire%20(Part%20Two)&prop=wikitext&format=json"
+      ]
+    }
+  ],
+  "structure": {
+    "notes": "TITLE TRAP for any future agent: the manga's Acts 100/101/102 are titled 京都大火 前編/中編/後編 and the anime's eps 43/44/45 carry the same three titles — but the mapping is NOT 1:1. Ep 43 (前編) adapts Acts 100 AND 101, ep 44 (中編) adapts nothing, ep 45 (後編) adapts Act 102 plus a 103 p9-12 coda. Fandom even notes 'This episode was titled after the original of Act 101' on the ep-44 page — that is a TITLE inheritance, not an adaptation claim; never anchor ep 44 to Act 101. Numbering: ja.wikipedia numbers 京都動乱 continuously (第二十五話 … 第四十七話), identical to OUR rows 25-47, and the official site's story index runs 25-47 as well — no conversion needed for this series. Per-episode 脚本 for our eps 35-47 is 倉田英之 (one RowSpan=13 block); 黒碕薫 wrote eps 31, 32 and 34 (she is credited シリーズ構成・脚本協力 and is Watsuki's long-running story collaborator), which corroborates the existing ep-34 adopted{author}. A third season is announced (natalie 616889) and will continue Acts 107-151.",
+    "order_only": []
+  },
+  "flags_for_sean": [
+    "Counterweight quoted in full so the ruling is made with both halves: in the same Real Sound interview director Komada says 「和月先生も本読みに参加してくださり、ご意見いただくこともあるのですが、『自分は漫画家だから』という言い方をされてアニメのことは私たちに任せてくれている感じです」 — Watsuki attends the read-throughs and comments, but says he is a manga artist and leaves the anime to the staff. That cuts against 'author-DECLARED', not against 'author-SUPERVISED': he holds the named 脚本監修 credit, and the specific ep-44 elements (the 炸裂弾 redesign he proposed, the Rengoku expansion agreed in consultation) are attributed to him by name. I recommend adopted{author}; if Sean prefers the stricter declaration test, the fallback is filler + divergence{100-102} + a note recording the author consultation — but that would also undercut the already-ruled ep 34.",
+    "This is a SERIES-LEVEL regime, not a one-episode fact: Watsuki 完全監修 covers the whole 2023 remake and 脚本監修 covers all of season 2 (our eps 25-47). Every anime-original expansion in this series therefore sits under the same author basis — it only changes a typing where an episode adapts zero Acts, which in S2 is exactly eps 34 and 44 (both now canon + adopted{author}). Worth encoding as a series ruling before S3 rows arrive, so the next zero-chapter row is answered by the regime instead of re-researched.",
+    "Batch-17's ep-44 flag ('confirm no anchor is desired') is answered: still zero Acts, so still no anchor — A1 is not in play since the row becomes canon-by-adoption rather than adaptation, and interpolation between ep 43 (END 101) and ep 45 (END 102) continues to position readers correctly."
+  ]
+}

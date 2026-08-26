@@ -1,0 +1,63 @@
+{
+ "series_id": "sword-art-online",
+ "summary": "First, a correction to the task's premise: row 50 is NOT Extra Edition. Title and date ('Ordinal Scale (Movie)', 2017-02-18) identify it as the theatrical film Sword Art Online the Movie -Ordinal Scale-, slotted between SAO II (rows 26-49) and Alicization (rows 51-74); Extra Edition (2013-12-31, recap + a ~20-minute original ALO Undersea Temple quest) is not a row in our data at all. Ordinal Scale is an ORIGINAL story - the SAO wiki's arc page: 'Ordinal Scale is the first animated story in the Sword Art Online series to not be based on any novel or side story previously written by the author' - but it is original BY the author: Wikipedia credits the screenplay to Reki Kawahara (with Tomohiko Ito) and calls the film 'an official part of the Sword Art Online storyline, featuring an original story by Kawahara'; the wiki cites Kawahara's Dengeki Bunko MAGAZINE vol 46 interview for the same. Kawahara then wrote prose around it himself: 'Hopeful Chant' (2017-03-04 cinema bonus), a prequel set during Aincrad that tells how Yuna died, and 'Cordial Chords' (bundled with the film's limited-edition BD/DVD, 2017-09-27, illustrated by abec), a sequel set eight days after the film - and the wiki records that 'the events of Ordinal Scale were later incorporated into the light novel canon'. That is adoption by the source's author, documented in three places, so: canon + adopted{author}, high.",
+ "standings": [
+  {
+   "episodes": [
+    50
+   ],
+   "type": "canon",
+   "chapters": "none",
+   "confidence": "high",
+   "note": "Theatrical feature (2017-02-18) whose story is original to the anime but written by the light novel's author, and carried into the novel line by him. Evidence: (1) Wikipedia - screenplay credited to Reki Kawahara and Tomohiko Ito, and the film is 'an official part of the Sword Art Online storyline, featuring an original story by Kawahara'; (2) SAO wiki film page - 'an original animated film in the Sword Art Online series, written by Sword Art Online light novel author Kawahara Reki' (cites Kawahara's interview in Dengeki Bunko MAGAZINE vol 46), 'The movie spawned an original interquel story arc in the Sword Art Online series, set in-between Mother's Rosario and the Alicization Arc'; (3) SAO wiki arc page - first animated SAO story not based on a prior novel or side story, but 'the events of Ordinal Scale were later incorporated into the light novel canon'; Kawahara wrote the prequel side story 'Hopeful Chant' (cinema bonus, 2017-03-04) and the sequel novel 'Cordial Chords' (limited-edition BD/DVD bonus, 2017-09-27, illustrated by abec - also reported by Crunchyroll). No novel is adapted, so no volume/chapter position is claimed: 'chapters: none' means no source position, not no standing. Repair of the stored filler (T27 default).",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Sword_Art_Online_the_Movie:_Ordinal_Scale",
+    "https://swordartonline.fandom.com/api.php?action=parse&page=Sword%20Art%20Online%20the%20Movie%20-Ordinal%20Scale-&prop=wikitext&format=json",
+    "https://swordartonline.fandom.com/api.php?action=parse&page=Ordinal%20Scale%20(arc)&prop=wikitext&format=json",
+    "https://swordartonline.fandom.com/api.php?action=parse&page=Hopeful_Chant&prop=wikitext&format=json",
+    "https://swordartonline.fandom.com/api.php?action=parse&page=Cordial_Chords&prop=wikitext&format=json",
+    "https://www.crunchyroll.com/anime-news/2017/08/04-1/sword-art-online-the-movie-ordinal-scale-dvdblu-ray-comes-with-sequel-novel"
+   ]
+  }
+ ],
+ "annotations": [
+  {
+   "episodes": [
+    50
+   ],
+   "kind": "adopted",
+   "basis": "author",
+   "note": "Reki Kawahara, the light novel author, wrote the film's original story and its screenplay (Wikipedia staff credits; Kawahara interview in Dengeki Bunko MAGAZINE vol 46 cited by the SAO wiki), and then wrote its surrounding prose himself - 'Hopeful Chant' (prequel, Aincrad-set, Yuna's death) and 'Cordial Chords' (sequel, eight days after the film, abec-illustrated, bundled with the LE BD/DVD) - the franchise placing the events as an interquel arc between Mother's Rosario and Alicization. Author-written and author-continued, not merely author-approved.",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Sword_Art_Online_the_Movie:_Ordinal_Scale",
+    "https://swordartonline.fandom.com/api.php?action=parse&page=Sword%20Art%20Online%20the%20Movie%20-Ordinal%20Scale-&prop=wikitext&format=json",
+    "https://swordartonline.fandom.com/api.php?action=parse&page=Ordinal%20Scale%20(arc)&prop=wikitext&format=json",
+    "https://swordartonline.fandom.com/api.php?action=parse&page=Hopeful_Chant&prop=wikitext&format=json",
+    "https://swordartonline.fandom.com/api.php?action=parse&page=Cordial_Chords&prop=wikitext&format=json"
+   ]
+  }
+ ],
+ "repairs": [
+  {
+   "episode": 50,
+   "field": "type",
+   "old": "filler",
+   "new": "canon",
+   "why": "Anime-original but adopted by the author: Kawahara wrote the story and screenplay and then wrote the prequel/sequel prose ('Hopeful Chant', 'Cordial Chords'); the franchise treats it as an interquel arc between Mother's Rosario and Alicization and the events were folded into the light novel canon.",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Sword_Art_Online_the_Movie:_Ordinal_Scale",
+    "https://swordartonline.fandom.com/api.php?action=parse&page=Ordinal%20Scale%20(arc)&prop=wikitext&format=json",
+    "https://swordartonline.fandom.com/api.php?action=parse&page=Sword%20Art%20Online%20the%20Movie%20-Ordinal%20Scale-&prop=wikitext&format=json"
+   ]
+  }
+ ],
+ "structure": {
+  "notes": "WHAT ROW 50 IS: the ~2-hour theatrical film Ordinal Scale (JP release 2017-02-18), carried as a single row between SAO II and Alicization. It has NO component: the stored components run 1-25, 26-49, 51-74, 75-86, 87-97, so row 50 belongs to no season entry - worth fixing (a movie-kind component of one row), because anything that walks components will skip it. It is a film, not a TV episode or an OVA. Extra Edition (2013-12-31) - about two thirds recap of Aincrad/Fairy Dance plus a ~20-minute original ALO Undersea Temple quest - is NOT one of our rows and should not be inserted without renumbering everything from 26 up; if it is ever added it is filler + abridged (recap). Other franchise entries also absent and best kept out of this series: Alternative Gun Gale Online, Progressive films, and the SAO II 'Sword Art Offline' shorts.",
+  "order_only": []
+ },
+ "flags_for_sean": [
+  "Task premise correction: the ask described row 50 as 'Extra Edition (recap + original segment)'. It is not - row 50 is the Ordinal Scale movie (title + 2017-02-18 date). Extra Edition is not in our rows at all.",
+  "Structure: row 50 has no component. If a movie component is added, note the film's runtime means it is not comparable to a 24-minute row for progress math.",
+  "Adoption basis is author (Kawahara wrote story + screenplay + the surrounding side stories). If Sean prefers to reserve adopted{author} for material the author declared canon in the SOURCE line, note that Cordial Chords/Hopeful Chant ARE Kawahara prose in the SAO novel line - which is why I graded this high rather than medium."
+ ]
+}

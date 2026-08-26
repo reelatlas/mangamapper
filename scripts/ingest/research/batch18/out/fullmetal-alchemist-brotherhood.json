@@ -1,0 +1,30 @@
+{
+ "series_id": "fullmetal-alchemist-brotherhood",
+ "summary": "Brotherhood ep 1 is the one anime-original episode in an otherwise faithful adaptation, and it adapts NO manga pages. ja.wikipedia states it directly - 本作品は第1話を除けば、ほぼ原作に沿った展開や内容でストーリーが進行する ('except for episode 1, the series proceeds essentially in line with the original work') - and lists Isaac McDougal under アニメ版の人物 (anime-version characters). The FMA wiki agrees: 'It features an anime-original story and is almost entirely noncanonical to the original manga', 'Isaac the Freezer does not appear in the manga nor the first anime, making him a character exclusive to the 2009 anime', and it notes that skipping ep 1 puts the anime at exactly the manga's starting point (ep 2 = manga ch 1). The adoption question is real but does not clear the bar: the official guidebook (via ja.wikipedia) says Isaac's character design was drawn FROM A ROUGH ILLUSTRATION BY ARAKAWA with a Scar-adjacent 'sorrow' image added, and Arakawa attended script meetings several times (Nintendo DREAM interview, Aug 2009) - that is author-contributed design plus general involvement, i.e. 'author-commissioned', not the declaration or per-episode supervision that T27/the kinnikuman precedent requires. The manga never carries the episode forward (the wiki notes the events are referenced only twice within the anime and Riza's spare-glove briefcase 'is not part of the manga continuity and never appears again'); the only manga trace is the name 'Isaac squad' mentioned for a unit lost in Ishval, which ja.wikipedia says may or may not be the basis. Recommendation: filler stands (no repair) - with the adoption reading laid out for Sean.",
+ "standings": [
+  {
+   "episodes": [
+    1
+   ],
+   "type": "filler",
+   "confidence": "high",
+   "note": "Anime-original prologue with zero manga content: the hunt for the anime-exclusive 'Freezing Alchemist' Isaac McDougal. ja.wikipedia (citing the official guidebook and Animage/Newtype interviews): the series follows the manga closely 'except for episode 1', and McDougal is listed among the anime-only characters. FMA wiki: 'anime-original story and is almost entirely noncanonical to the original manga'; ep 2 'The First Day' is where the manga (ch 1) begins. Character introductions and foreshadowing (Father, Lust and Gluttony in Reole, Kimblee in prison) are anime placements, not adapted pages. Adoption considered and rejected as insufficient: Arakawa supplied the ROUGH design sketch for Isaac and attended script meetings, but no declaration or per-episode supervision is documented and the manga never acknowledges the events (kinnikuman precedent: commissioned is not declared). Stored standing already filler - no repair, and A1 keeps it anchorless.",
+   "sources": [
+    "https://fma.fandom.com/api.php?action=parse&page=Episode%201%20(2009%20Anime)&prop=wikitext&format=json",
+    "https://fma.fandom.com/api.php?action=parse&page=Isaac%20McDougal&prop=wikitext&format=json",
+    "https://ja.wikipedia.org/wiki/%E9%8B%BC%E3%81%AE%E9%8C%AC%E9%87%91%E8%A1%93%E5%B8%AB_FULLMETAL_ALCHEMIST",
+    "https://en.wikipedia.org/wiki/List_of_Fullmetal_Alchemist:_Brotherhood_episodes",
+    "https://www.animefillerlist.com/shows/fullmetal-alchemist-brotherhood"
+   ]
+  }
+ ],
+ "annotations": [],
+ "repairs": [],
+ "structure": {
+  "notes": "Our 64 rows = the 64 TV episodes, one component, no ep 0. The four DVD/BD-bundled OVAs (bundled with volumes 1, 5, 9 and 13, including 'Yet Another Man's Battlefield' with its own anime-exclusive character Heathcliff Erbe) and the film 'The Sacred Star of Milos' are NOT rows and should stay out of this series' numbering. Ep 1 is a regular TV episode, not a special. Note for the reader-position model: because ep 1 adapts nothing, the manga's ch 1 begins at row 2 - a viewer starting at ep 2 is exactly at manga page 1.",
+  "order_only": []
+ },
+ "flags_for_sean": [
+  "Adoption call on FMAB ep 1: FOR = Arakawa drew the rough illustration Isaac McDougal's design was built from (official guidebook, via ja.wikipedia) and she attended the anime's script meetings several times (Nintendo DREAM, Oct 2009 issue interview); she also drew a bonus 4-koma for every BD volume. AGAINST = no declaration, no per-episode supervision credit, no manga carry-forward (only an unlinked mention of an 'Isaac squad' lost in Ishval, which ja.wikipedia says may not be related), and the anime itself references the episode only twice. I recommend filler; if Sean reads author-supplied design + script-meeting attendance as supervision, the alternative is canon + adopted{author} at medium."
+ ]
+}

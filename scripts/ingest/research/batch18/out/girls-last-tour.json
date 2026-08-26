@@ -1,0 +1,44 @@
+{
+  "series_id": "girls-last-tour",
+  "summary": "Ep 4 is a straight manga adaptation and AFL's 'Anime Canon' label on it is simply a data error. Girls' Last Tour is a twelve-episode, strictly linear adaptation of Tsukumizu's manga in which every episode title is a list of the manga chapter titles it adapts, in order. Ep 4 is titled 写真／寺院 (Photograph / Temple) — chapters 9 and 10 — and it sits exactly between ep 3 (遭遇／都市／街灯 = ch 6-8) and ep 5 (住居／昼寝／雨音 = ch 11-13) with no gap and no overlap. girls-last-tour.fandom's chapter pages state it from the other direction: the 'Photographs' page ('the 9th chapter', tankoubon Volume 2 Chapter 9) and the 'Temple' page ('the 10th chapter', tankoubon Volume 2 Chapter 10) each carry |anime = [[Episode 4]] and [[Category:Episode 4]], and the Volume 2 contents list runs 9 Photographs, 10 Temple, 11 Residence, 12 Nap, 13 The Sound of Rain, 14 Breakdown, 15 Technology, 16 Takeoff. MangaDex's English feed independently gives ch 9 = 'Photograph' and ch 10 = 'Temple' in volume 2. AFL marks all eleven other episodes 'Manga Canon' and only ep 4 'Anime Canon' — an isolated mislabel with nothing behind it; the episode's synopsis (Yuuri photographing the stone statues with Kanazawa's camera; the girls exploring the temple after their lantern dies) is chapters 9 and 10 beat for beat. Repair: type filler -> canon, chapters 9-10.",
+  "standings": [
+    {
+      "episodes": [4],
+      "type": "canon",
+      "chapters": "9-10",
+      "confidence": "high",
+      "note": "Adapts ch 9 '写真 / Photograph' and ch 10 '寺院 / Temple' (both Volume 2), in order, complete. girls-last-tour.fandom Episode 4 infobox: |name = Photograph, Temple |kana = 写真, 寺院; synopsis 'Yuuri uses Kanazawa's camera to take pictures of curious stone statues all around the city while Chito discovers one of its functions. Later, the girls explore a temple when their lantern suddenly goes out...' — which is ch 9 ('Chito and Yuuri use a camera given to them by Kanazawa while on their way to the Temple ... Chito discovered that the camera has a delay function') followed by ch 10 ('After reaching the bright spot, Chito and Yuuri discover that it is a temple. Inside sits a statue of one of the three gods...'). Both chapter pages reverse-index |anime = Episode 4. ja.wikipedia's 各話リスト gives 第4話 = 写真／寺院, the same two manga chapter titles. MangaDex's English feed lists vol 2 ch 9 'Photograph' and ch 10 'Temple'. Nothing anime-original is documented on any of these pages. END chapter 10; the row is a clean linear anchor between ep 3 (END 8) and ep 5 (END 13).",
+      "sources": [
+        "https://girls-last-tour.fandom.com/api.php?action=parse&page=Episode%204&prop=wikitext&format=json",
+        "https://girls-last-tour.fandom.com/api.php?action=parse&page=Photographs&prop=wikitext&format=json",
+        "https://girls-last-tour.fandom.com/api.php?action=parse&page=Temple&prop=wikitext&format=json",
+        "https://girls-last-tour.fandom.com/api.php?action=parse&page=Volume%202&prop=wikitext&format=json",
+        "https://ja.wikipedia.org/wiki/%E5%B0%91%E5%A5%B3%E7%B5%82%E6%9C%AB%E6%97%85%E8%A1%8C",
+        "https://api.mangadex.org/manga/5b93fa0f-0640-49b8-974e-954b9959929b/feed?translatedLanguage%5B%5D=en&order%5Bchapter%5D=asc"
+      ]
+    }
+  ],
+  "annotations": [],
+  "repairs": [
+    {
+      "episode": 4,
+      "field": "type",
+      "old": "filler",
+      "new": "canon",
+      "why": "AFL's 'Anime Canon' claim is a mislabel: ep 4 adapts manga chapters 9 (Photograph) and 10 (Temple) in full, confirmed from both directions on girls-last-tour.fandom (episode page and both chapter pages), by ja.wikipedia's episode title 写真／寺院 matching the two chapter titles, and by MangaDex's chapter numbering. It is the only row of twelve AFL does not call Manga Canon, and it fills the exact gap between ep 3 (ch 6-8) and ep 5 (ch 11-13) — under the stored filler typing this series has an unexplained two-chapter hole in an otherwise perfectly linear adaptation.",
+      "sources": [
+        "https://girls-last-tour.fandom.com/api.php?action=parse&page=Episode%204&prop=wikitext&format=json",
+        "https://girls-last-tour.fandom.com/api.php?action=parse&page=Temple&prop=wikitext&format=json",
+        "https://www.animefillerlist.com/shows/girls-last-tour"
+      ]
+    }
+  ],
+  "structure": {
+    "notes": "Single component, 12 rows, one season, strictly linear. Full episode->chapter map recovered from the fandom volume lists plus ja.wikipedia's 各話リスト title match: ep 1 = ch 1-2 (星空/戦争), ep 2 = ch 3-5 (風呂/日記/洗濯), ep 3 = ch 6-8 (遭遇/都市/街灯), ep 4 = ch 9-10 (写真/寺院), ep 5 = ch 11-13 (住居/昼寝/雨音), ep 6 = ch 14-16 (故障/技術/離陸), ep 7 = ch 16-17 by title (迷路/調理; the fandom places Labyrinth in Volume 3 so ep 7 is ch 17-18 on its numbering — see the trap below before anchoring eps 7+). Note also that eps 3, 6, 8, 9, 11 and 12 aired with only their LAST subtitle on screen even though the official site and EPG list two or three — a display quirk, not a content difference. CHAPTER-SPACE TRAP found here: MangaDex's English feed is NOT a reliable numbering for this title past ch 10. Its vol-2 run is 9 Photograph, 10 Temple, 11 Nap, 12 The Sound of Rain, 13 Breakdown, 14 Technology, 15 Takeoff, 16 Labyrinth — it OMITS the chapter 住居 / 'Residence (House)' entirely, so every chapter from 11 on is one LOW against the tankoubon numbering the fandom uses (8 chapters per volume: vol 1 = 1-8, vol 2 = 9-16). The anime itself proves Residence exists: ep 5 is 住居／昼寝／雨音. Ch 9 and 10 are the same in both numberings, so this verdict is unaffected, but anyone anchoring eps 5-12 must use the tankoubon numbering, not the MangaDex feed. Stored AniList figures (total_chapters=47, latest_known=39, 6 volumes) are also below the 48 that 6 x 8 implies — a separate, unresolved chapter-space question, flagged not fixed.",
+    "order_only": []
+  },
+  "flags_for_sean": [
+    "Repair proposed: ep 4 filler -> canon with chapters 9-10 (END 10). This creates the series' first anchor in the target range and closes a two-chapter hole; every other row of the twelve is already canon.",
+    "Chapter-space discrepancy left OPEN, not repaired: our stored AniList figures say total_chapters=47 / latest_known=39 across 6 volumes, but girls-last-tour.fandom's volume contents are 8 chapters each (vol 1 = ch 1-8, vol 2 = ch 9-16), which implies 48 numbered chapters plus whatever the final volume adds. MangaDex's EN feed is missing a chapter ('Residence') so it cannot arbitrate. Only ch 9-10 are load-bearing for this verdict and those two are agreed by every source; the total-count question needs its own pass before anyone anchors the series' tail or writes a continue-read number."
+  ]
+}

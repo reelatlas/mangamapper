@@ -1,0 +1,29 @@
+{
+ "series_id": "steins-gate",
+ "summary": "Row 25 'Egoistic Poriomania' (横行跋扈のポリオマニア, Okobakko no Poriomania) is confirmed filler. It is the unaired special included on the ninth and last BD/DVD volume, released 2012-02-22 (ja.wikipedia: スペシャル - 2012年2月22日発売のアニメDVD/BD 第9巻収録のテレビ未放送エピソード, set some time after the main story, in America). The Steins;Gate Wiki states it outright: 'It is entirely anime-original content, and considered as Episode 25 of the anime.' Its plot - Faris inviting the lab members to Los Angeles for a Rai-Net tournament, Okabe reuniting with Kurisu, Okabe stranded in the desert - has no counterpart in the source visual novel, whose story ends in Akihabara; the OVA sits months after the anime's Steins Gate-worldline ending. Script by Jukki Hanada, direction/storyboard by Tomoki Kobayashi - the anime staff, not 5pb./Nitroplus writers. The one carry-forward worth recording is downstream, not upstream: the licensed Kadokawa Sneaker Bunko novelisation of the MOVIE (劇場版 STEINS;GATE 負荷領域のデジャヴ 上, by Tatsuya Hamasaki) devotes its chapter 2 to a novelisation of this special (ja.wikipedia) - a tie-in retelling the anime, not the VN adopting it, so it does not reach the adoption bar. Verdict: filler, high, VN default (T27) upheld.",
+ "standings": [
+  {
+   "episodes": [
+    25
+   ],
+   "type": "filler",
+   "confidence": "high",
+   "note": "Anime-original OVA epilogue with zero visual-novel content. Steins;Gate Wiki: 'It is entirely anime-original content, and considered as Episode 25 of the anime.' ja.wikipedia lists it as the TV-unaired special on BD/DVD volume 9 (2012-02-22) set 'some time after the main story, in America' - a setting and cast configuration (Faris's Rai-Net tournament in Los Angeles, Kurisu studying in the US) that exists nowhere in the 2009 VN, whose narrative closes in Akihabara. Written by anime scriptwriter Jukki Hanada, directed/storyboarded by Tomoki Kobayashi. No VN material adapted, no adoption basis documented (5pb./Nitroplus supervision of the anime as a whole is not a declaration about this episode). AFL's 'anime canon' is exactly what T27 sends to filler for a VN-sourced series.",
+   "sources": [
+    "https://steins-gate.fandom.com/api.php?action=parse&page=S%3BG%20(anime)%20-%20Ep.25-SP&prop=wikitext&format=json",
+    "https://ja.wikipedia.org/wiki/STEINS;GATE",
+    "https://en.wikipedia.org/wiki/Steins;Gate_(TV_series)",
+    "https://www.animefillerlist.com/shows/steinsgate"
+   ]
+  }
+ ],
+ "annotations": [],
+ "repairs": [],
+ "structure": {
+  "notes": "Row 25 = the OVA/special 'Egoistic Poriomania', the ninth BD/DVD volume's unaired episode (2012-02-22), appended after the 24 TV episodes - which is exactly the stored N7 ruling (A/high) and is how the Steins;Gate Wiki numbers it ('Episode 25-OVA', previous = ep 24, next = the movie 'Load Region of Deja Vu'). Not a recap: it is fully new animation. The 2013 film, the Soumei Eichi no Cognitive Computing shorts and the drama CDs are not rows and should stay out. Naming: our stored English title matches the wiki's; the Japanese subtitle follows the VN's own chapter-title style (four-character compound + a '-mania/-paranoia' noun), which is a stylistic nod, not a claim of VN sourcing.",
+  "order_only": []
+ },
+ "flags_for_sean": [
+  "Downstream carry-forward recorded for completeness (does NOT change the typing): ja.wikipedia notes that chapter 2 of the licensed movie novelisation 劇場版 STEINS;GATE 負荷領域のデジャヴ 上 (Kadokawa Sneaker Bunko, Tatsuya Hamasaki) is a novelisation of this unaired special - a tie-in novelising the anime, not the source VN adopting the material, so no adopted{...} basis."
+ ]
+}

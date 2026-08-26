@@ -1,0 +1,100 @@
+{
+  "series_id": "black-clover",
+  "summary": "Three AFL 'anime canon' rows outside the ruled 130-157 Tabata-supervised block (that block is untouched here). They split two ways. Ep 13 ('The Wizard King Saw, Continued') is pure anime-original: blackclover.fandom's episode infobox leaves the |chapter= field EMPTY (ep 12, its first half, carries |chapter=Chapter 10 and an inline {{Ref|ch=10|p=12-19}}), and animefillerguide marks 013 'Filler / N/A'. The Salim-Hapshass bodyguard plot that ep 12 turns into after minute 10:45 and that ep 13 resolves does not exist in the manga. Eps 55-56 are the surprise: they are NOT filler and NOT Tabata-supervised anime-original — they ADAPT a licensed Black Clover light novel, 'Black Clover: Abareushi no Sho' (ブラッククローバー 暴牛の書, 'Stubborn Bull Book'), Johnny Onda author / Yuki Tabata illustrator, Shueisha Jump J-Books, 4 Aug 2016. Both blackclover.fandom (|chapter= [[Stubborn Bull Book]]) and animefillerguide (chapter column literally prints 'Stubborn Bull Book' for 055 and 056, with no filler mark) say so independently; the novel's own wiki page maps its story 1 'Boy's Challenge' to ep 55 and its story 4 'Bulls' to ep 56. That makes them canon + side_source, exactly the Shippuden 452-457 / Itachi Shinden pattern. Ep 56 additionally closes on real manga content (the ch-82 Witches' Forest conversation at Fanzell's house and Vanessa reaching the forest gate); that share is a closing frame only and the position is already held by ep 54's END-82 anchor, so it is recorded as an annotation, not a new frontier.",
+  "standings": [
+    {
+      "episodes": [13],
+      "type": "filler",
+      "confidence": "high",
+      "note": "Anime-original. Resolves the Salim/Yuno/Klaus bodyguard plot invented at the end of ep 12 (Sister Lily kidnapped by Salim's hired bandits, Yuno rescues her, Golden Dawn earns a star). blackclover.fandom's Episode 13 infobox has an EMPTY |chapter= field and the page body carries zero {{Ref|ch=}} citations (contrast Episode 12, |chapter=Chapter 10 with {{Ref|ch=10|p=12-19|ep=12}}, and Episode 57 with four page-level refs). animefillerguide lists 013 struck through as '* Filler' with chapters 'N/A', and explicitly says of ep 12 that 'after 10:45 the episode shifts into anime-original content, featuring Klaus, Yuno, and Mimosa acting as bodyguards for Salim ... which does not happen in the manga'. No manga fragment is documented anywhere in the episode, so no graft/partial annotation is warranted. Stored value (filler) is correct; no repair.",
+      "sources": [
+        "https://blackclover.fandom.com/api.php?action=parse&page=Episode%2013&prop=wikitext&format=json",
+        "https://blackclover.fandom.com/api.php?action=parse&page=Episode%2012&prop=wikitext&format=json",
+        "https://www.animefillerguide.com/anime/black-clover/"
+      ]
+    },
+    {
+      "episodes": [55],
+      "type": "canon",
+      "chapters": "none (manga); adapts light novel 'Black Clover: Stubborn Bull Book' story 1, 'Boy's Challenge'",
+      "confidence": "high",
+      "note": "Adapts the first Black Clover light novel, not the manga and not an anime original. blackclover.fandom Episode 55 infobox: |chapter= [[Stubborn Bull Book]]. animefillerguide's chapter column for 055 'The Man Named Fanzell' prints 'Stubborn Bull Book' (no filler/mixed mark). The novel's wiki page lists its four stories and tags story 1, {{Nihongo|Boy's Challenge|少年の挑戦}} — 'Asta encounters Fanzell Kruger in the woods near Hage. Fanzell teaches the boy the basics of swordsmanship, and Asta defends his teacher from a group of Diamond Kingdom mages, including Mariella' — with {{Ref|ep=55}}. That is the whole episode (a five-months-prior flashback framed by one line of Noelle/Finral travelling). Zero manga chapters, so no anchor: the manga position holds flat across this row at ep 54's END 82.",
+      "sources": [
+        "https://blackclover.fandom.com/api.php?action=parse&page=Episode%2055&prop=wikitext&format=json",
+        "https://blackclover.fandom.com/api.php?action=parse&page=Stubborn%20Bull%20Book&prop=wikitext&format=json",
+        "https://www.animefillerguide.com/anime/black-clover/",
+        "https://en.wikipedia.org/wiki/Black_Clover"
+      ]
+    },
+    {
+      "episodes": [56],
+      "type": "canon",
+      "chapters": "81-82 (partial — the present-day closing frame only; body adapts the novel). RECOMMENDATION: annotation only, no new anchor — ep 54 already holds END 82 and ep 57 END 83, so an ep-56 anchor would be a flat duplicate (same class as the A6/D4 sliver deletions on eps 3, 68 and 157).",
+      "confidence": "high",
+      "note": "Two-source split on the same row and both are right. Body = the same light novel's story 4, {{Nihongo|Bulls|暴牛}} — 'Recognizing Noelle's wand, Fanzell asks the Black Bulls for help in locating Dominante ... Mariella betrays Galleo and helps reunite Fanzell and Dominante' — tagged {{Ref|ep=56}} on the novel's wiki page; animefillerguide prints 'Stubborn Bull Book' for 056 and nothing else. Tail = real manga: the closing minutes return to the present with Finral and Noelle at Fanzell's house, Domina naming the Witches' Forest, and Vanessa swallowed by the forest gate — that is Chapter 82 ('Witches' Forest'), whose own wiki infobox reverse-indexes |episode= Episode 54 / Episode 56 / Episode 57 (Chapter 81 likewise lists Episode 54 / Episode 56). Because BOTH halves have standing (the novel is canon by side_source, the tail is canon manga), there is no non-source material and the row is canon, not mixed.",
+      "sources": [
+        "https://blackclover.fandom.com/api.php?action=parse&page=Episode%2056&prop=wikitext&format=json",
+        "https://blackclover.fandom.com/api.php?action=parse&page=Chapter%2082&prop=wikitext&format=json",
+        "https://blackclover.fandom.com/api.php?action=parse&page=Chapter%2081&prop=wikitext&format=json",
+        "https://blackclover.fandom.com/api.php?action=parse&page=Stubborn%20Bull%20Book&prop=wikitext&format=json",
+        "https://www.animefillerguide.com/anime/black-clover/"
+      ]
+    }
+  ],
+  "annotations": [
+    {
+      "episodes": [55, 56],
+      "kind": "side_source",
+      "note": "Adapts 'Black Clover: Abareushi no Sho' (ブラッククローバー 暴牛の書, Viz: 'The Book of the Black Bulls'; fandom romanises it 'Bogyu no Sho' / 'Stubborn Bull Book'), the first Black Clover light novel: author Johnny Onda, illustrator Yuki Tabata, Shueisha Jump J-Books, released 4 August 2016, 256pp, ISBN 978-4-08-703400-4 — the same day as manga Volume 7, with a cover illustration that lines up with it. Ep 55 = story 1 'Boy's Challenge'; ep 56 = story 4 'Bulls'. English Wikipedia independently confirms the novel's existence, author, imprint and date ('Three novels written by Johnny Onda have been released under the Jump J-Books imprint. The first, Black Clover: Abareushi no Sho ... was released on August 4, 2016'). This is a DIFFERENT licensed work from the series' source manga, so side_source — not adopted{author}, and not the 130-157 Tabata-supervised class.",
+      "sources": [
+        "https://blackclover.fandom.com/api.php?action=parse&page=Stubborn%20Bull%20Book&prop=wikitext&format=json",
+        "https://en.wikipedia.org/wiki/Black_Clover",
+        "https://j-books.shueisha.co.jp/books/blackclover_bougyuuno.html",
+        "https://www.animefillerguide.com/anime/black-clover/"
+      ]
+    },
+    {
+      "episodes": [56],
+      "kind": "partial",
+      "note": "Only the present-day closing frame is manga: ch 82's Fanzell-house conversation (Domina explains the Witches' Forest, reveals she and Vanessa are fugitives of it) plus the Vanessa-at-the-gate beat; fandom also credits ch 81 to this row. Everything before it is the light-novel flashback. The manga position does not advance — ep 54 already ends at ch 82 — so this is a chapter TIE, not a frontier.",
+      "sources": [
+        "https://blackclover.fandom.com/api.php?action=parse&page=Episode%2056&prop=wikitext&format=json",
+        "https://blackclover.fandom.com/api.php?action=parse&page=Chapter%2082&prop=wikitext&format=json"
+      ]
+    }
+  ],
+  "repairs": [
+    {
+      "episode": 55,
+      "field": "type",
+      "old": "filler",
+      "new": "canon",
+      "why": "Not anime-original: adapts story 1 of the licensed light novel 'Black Clover: Stubborn Bull Book'. Canon + side_source under the batch-18 model (the Shippuden/Itachi-Shinden pattern). Two independent sources print the novel as this episode's source.",
+      "sources": [
+        "https://blackclover.fandom.com/api.php?action=parse&page=Episode%2055&prop=wikitext&format=json",
+        "https://www.animefillerguide.com/anime/black-clover/",
+        "https://blackclover.fandom.com/api.php?action=parse&page=Stubborn%20Bull%20Book&prop=wikitext&format=json"
+      ]
+    },
+    {
+      "episode": 56,
+      "field": "type",
+      "old": "filler",
+      "new": "canon",
+      "why": "Adapts story 4 of the same light novel and closes on manga ch 81-82. Both halves have source standing, so the row is canon (side_source + partial), not filler and not mixed.",
+      "sources": [
+        "https://blackclover.fandom.com/api.php?action=parse&page=Episode%2056&prop=wikitext&format=json",
+        "https://www.animefillerguide.com/anime/black-clover/",
+        "https://blackclover.fandom.com/api.php?action=parse&page=Chapter%2082&prop=wikitext&format=json"
+      ]
+    }
+  ],
+  "structure": {
+    "notes": "Single component, 170 rows, our numbering = fandom's 'Episode N' page numbering = animefillerguide's numbering (verified on eps 12/13/54/55/56/57 by title AND air date: 2017-12-19, 2017-12-26, 2018-10-16, 2018-10-23, 2018-10-30, 2018-11-06). ja.wikipedia's ページNN table matches title-for-title (ページ13 続・魔法帝は見た, ページ55 ファンゼルという男, ページ56 続・ファンゼルという男) but carries no source-notes column. NEW STRUCTURAL FACT for this series: the Black Clover franchise has three Jump J-Books light novels (Abareushi no Sho 2016, Kishidan no Sho 2017, Yuno no Sho 2019) plus a film novelisation; only the FIRST has been animated, at eps 55-56, and animefillerguide's chapter column prints 'Stubborn Bull Book' on exactly those two rows and nowhere else in 1-170. So the side_source class in this series is closed at {55, 56} unless a later re-scan says otherwise. The ruled 130-157 adopted{author} block was NOT re-litigated and is untouched by this verdict. Fanzell/Dominante/Mariella were introduced in the novel and only later entered the manga (from ch 82 on) — which is why the anime could interleave novel and manga in the same arc.",
+    "order_only": []
+  },
+  "flags_for_sean": [
+    "Ep 56 chapter tie: fandom credits ch 81 AND 82, animefillerguide credits neither (it prints only 'Stubborn Bull Book'). I recommend recording the tie as the `partial` annotation above and NOT creating an anchor — ep 54 already holds END 82 and ep 57 END 83, so any ep-56 anchor is a flat duplicate, the same shape as the A6/D4 sliver deletions already ruled on eps 3, 68 and 157 in this series.",
+    "Typing question worth a ruling beyond these rows: eps 55-56 are the first side_source pair found in Black Clover. If you accept them as canon+side_source, the continue-read text for a viewer stopping at ep 56 should still say 'continue from ch 83' (position unchanged), but the novel should be surfaced as a distinct readable — it is licensed in Japan only (no English edition of Abareushi no Sho), which may matter for how the UI phrases it."
+  ]
+}
