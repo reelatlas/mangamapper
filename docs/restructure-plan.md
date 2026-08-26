@@ -1,6 +1,6 @@
 # Restructure phase — the plan (v2, agreed 2026-08-25)
 
-Status: **T1 + T2 done (2026-08-26). Next: T4.0 glossary session (Sean) — agenda §5 — and T3 skills (T3.1 /add-rule first).** v1 was drafted from a disk survey, cross-checked
+Status: **T0–T2 done; T3.1 (skill + exercise 1), T3.3, T3.4 done (2026-08-26). Waiting on Sean: A-11 (exercise 2) and the T4.0 glossary session (→ T3.2, T3.5, T4).** v1 was drafted from a disk survey, cross-checked
 by a second model (Cursor/Grok), re-checked against the tree, and folded.
 This file is the phase's tracked board: every piece has an id, a track, a
 dependency and a status; the board is updated at every save point. When the
