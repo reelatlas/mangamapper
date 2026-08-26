@@ -52,6 +52,7 @@ These are not preferences. Breaking one is a bug even if everything is green.
 | Numbered change log | `docs/data-pipeline.md` §12 |
 | Franchise/identity rulings | `docs/franchise-rulings.md` |
 | **Planned changes to the working system itself** | `docs/system-evolution.md` |
+| **Restructure-phase board** (v2 plan, tracks, decisions, T4.0 agenda) | `docs/restructure-plan.md` |
 | Position math (pure, unit-tested) | `src/lib/mapping.ts` |
 | Shared ingest rules | `scripts/ingest/lib/` |
 
