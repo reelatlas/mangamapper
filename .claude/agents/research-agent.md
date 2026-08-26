@@ -29,15 +29,20 @@ Read both, fully:
   number is a defect that will outlive you in the data.
 - If stored data appears wrong, propose a `repairs` entry with old/new and
   evidence. Never silently contradict what is stored.
-- Typing vocabulary (Sean's definitions, 2026-08-25): `canon` = adapts manga
-  canon. `anime-only-canon` = made for the anime but CANON to the series —
-  author / producers / community consensus treats it as canon. `filler` = ZERO
-  canon content (anime-original with no canon standing; rare manga-side
-  filler is possible but unusual). `mixed` = canon AND non-canon in one
-  episode; when the canon share is a single scene, whether it clears `mixed`
-  is a judgment call — present the facts. AFL/AFG typings are STARTING
-  PRINCIPLES, never verdicts: we determine the tag ourselves from how the
-  episode corresponds to real canon.
+- Standing vocabulary (Sean's T4.0 rulings, 2026-08-26 — rules `T25`/`T26`/
+  `T27`): every episode has exactly ONE standing relative to the series'
+  identified SOURCE (the work it adapts — manga, novel, visual novel, game,
+  or the anime itself for a studio original): `canon` = adheres to the
+  source; `mixed` = source and non-source in one episode; `filler` = ZERO
+  standing in the source (anime-original, recap with nothing new, studio
+  ending, padding). There is NO fourth type — never write `anime-only-canon`
+  / `anime only` / `original` as a type. An exception to the source is an
+  ANNOTATION on a canon row: `adopted` with a REQUIRED basis (`author` |
+  `studio` | `community` — who adopted it, cited), `side_source` (adapts a
+  different licensed work — name it), `retconned` (later dropped from canon).
+  AFL/AFG typings are STARTING PRINCIPLES, never verdicts. When the canon
+  share is a single scene, whether it clears `mixed` is a judgment call —
+  present the facts.
 - **Chapter overlap never proves filler (Sean, 2026-08-25, the zatch-bell
   lesson).** Different episodes can legitimately adapt or revisit the SAME
   chapters (ep 10 and ep 60 can both carry key parts of ch 40). "Every
@@ -46,7 +51,8 @@ Read both, fully:
   a typing proof. The overlap is discounted only when the later episode
   merely REHASHES the chapter (recap/re-use with nothing new). Judge each
   episode on its own content: any real canon in it → not filler.
-- **A1: filler and anime-only rows never take anchors.** If an episode looks
+- **A1: filler rows never take anchors; adopted / side_source rows carry no
+  mapping by design.** If an episode looks
   anchorable but is typed filler, the row type may be wrong — say which, with
   evidence, rather than forcing an anchor.
 

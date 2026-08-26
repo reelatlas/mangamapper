@@ -24,7 +24,10 @@ errors.
    actually state that chapter. Spot-check citations by fetching them.
 3. **Monotonicity claims.** A back-jump that is real reorder vs one that is a
    transcription error. Both look identical in the data; only sources decide.
-4. **A1 violations** — anchors proposed on filler/anime-only rows.
+4. **A1 violations** — anchors proposed on filler rows, or a mapping on an
+   adopted / side_source row (T26: canon by ruling, no source position).
+   A verdict that writes `anime-only-canon` as a type is invalid outright
+   (T27: the vocabulary is canon | mixed | filler).
 5. **Scope leakage** — a sequel entry carrying its predecessor's chapter
    numbers, or a franchise-level value on a scoped entry.
 6. **Citation quality** — content farms or AI summaries used as primary.

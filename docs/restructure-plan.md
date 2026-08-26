@@ -336,6 +336,6 @@ words after the glossary exists. Rough total: 8–12 sessions.
 | T4.1 | SOURCE_KINDS registry (T25): deriveSourceKind shared by resolve/chain/app, fail closed, healer + restage, 17 rows moved (16 ruled + god-of-high-school → manhwa), manga_status none, hasSource/hasInstrument split | T4.0, T3.1 | DONE 2026-08-26 |
 | T4.2 | annotation kinds (T26): adopted{basis} / retconned / side_source, lib/annotations.ts gate + migration + annotation_invalid | T4.1 | DONE 2026-08-26 |
 | T4.3 | standing migration (T27): 977 rows by source kind + T6 + 190 override annotations; afl_anime_canon_unruled queue 24 series; A1 spike 0 | T4.2 | DONE 2026-08-26 |
-| batch-18 review lane | the big unruled blocks + A-7 endings + provisional bases | T4.3 | next (Sean) |
+| batch-18 review lane | batch18/PROTOCOL.md + context.ts built 2026-08-26 (32 targets, 3 waves, Boruto split); research-agent + verifier definitions speak the three standings | T4.3 | wave 1 awaits Sean's go |
 | T4.4–4.5 | format → words | review lane | after |
 | T5.* | backlog routing | per §3 | planned |
