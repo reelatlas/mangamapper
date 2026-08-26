@@ -10,6 +10,7 @@ import { db, selectAll } from '../../lib/db';
 import { EPISODE_TYPE_OVERRIDES, SOURCE_NUMBERING_SHIFTS, translateEpisodeNumber } from '../../lib/resolve';
 import { aflAnimeCanonStanding, sourceKindOf } from '../../lib/rulings/source-kinds';
 import { STANDING_ANNOTATIONS } from '../../lib/rulings/standing-annotations';
+import { ALL_RULINGS } from '../../lib/rulings/index';
 
 const OUT = process.argv[2] ?? '/tmp/batch18-ctx'; // pass an output dir; mkdir it first
 
@@ -110,7 +111,11 @@ async function main() {
     if (EPISODE_TYPE_OVERRIDES[id]) rul.push(`EPISODE_TYPE_OVERRIDES (T6, ruled — a verdict that contradicts one is a REPAIR with evidence): ${JSON.stringify(EPISODE_TYPE_OVERRIDES[id])}`);
     if (SOURCE_NUMBERING_SHIFTS[id]) rul.push(`SOURCE_NUMBERING_SHIFTS: ${JSON.stringify(SOURCE_NUMBERING_SHIFTS[id])}`);
     if (STANDING_ANNOTATIONS[id]) rul.push(`STANDING_ANNOTATIONS (T26): ${STANDING_ANNOTATIONS[id].map((a) => `${a.kind}${a.basis ? `{${a.basis}}` : ''} eps ${a.episodes.length > 12 ? `${a.episodes[0]}-${a.episodes[a.episodes.length - 1]} (${a.episodes.length})` : a.episodes.join(',')}`).join('; ')}`);
-    lines.push(`Rulings in code: ${rul.join(' · ') || 'none'}`);
+    // EVERY ruling on this series (the outlaw-star lesson, verify wave 1: the
+    // A40 loose-mode + G3 "no chapter mapping is meaningful" rulings were not
+    // printed, and the agent proposed the mapping Sean had ruled meaningless)
+    for (const r of ALL_RULINGS.filter((r) => r.seriesId === id)) rul.push(`${r.ruleId} (${r.ruledBy} ${r.ruledOn}): ${JSON.stringify(r.value).slice(0, 160)} — ${r.reason.slice(0, 200)}`);
+    lines.push(`Rulings in code (ALL — a verdict that contradicts one is a REPAIR with evidence, never a silent override):\n${rul.map((x) => `  - ${x}`).join('\n') || '  none'}`);
     lines.push('');
     // group identical annotation records (a T26 block is one fact over many rows)
     const grouped = new Map<string, number[]>();

@@ -16,7 +16,19 @@ vocabulary clean, adopted → basis, no self-contradiction).
 | outlaw-star (1-17) | 13 | 1-2 canon (chs 1-4); 11 canon + adopted{author} | Ito is 原作者 of BOTH branches, plotted the anime since 1994, wrote ep 19 | ep 1 / ep 8 air dates (AFL typos; ep 8 = the airdate_regression queue entry) |
 | soul-eater (39-51) | 13 | 39-40 mixed / 41-51 filler | none — no Ohkubo credit; studio ending (A-7 class) | 0; ep 37 flagged |
 
-## Decisions for Sean (apply blocks on these)
+## Verification (R24, Fable, ~0.71M) — reports in `verify/`
+
+| verdict | result |
+|---|---|
+| beyblade | SOUND — apply as written |
+| boruto A | SOUND WITH CORRECTIONS (text) |
+| boruto B | **REFUTED as filed** — Kodachi's supervision is arc-blind; 41 of 50 adoptions fail the protocol's test. Survivors: 128-136 (high), 8-9 (medium), 67-69 as repair (high), 34 at Sean's option |
+| FMA 2003 | SOUND WITH CORRECTIONS (text); two extra primaries strengthen filler |
+| soul-eater | SOUND WITH CORRECTIONS — ep 40 also grafts ch 44's tail; ep 37 should be a repair |
+| DBS | SOUND WITH CORRECTIONS — 94-95 must match 91's standard (→ mixed) or 91 re-argued; ep 78 chapters "28 (partial)"; two 脚本 names wrong |
+| outlaw-star | SOUND WITH CORRECTIONS — recommends SOURCE_TYPE_OVERRIDES → original (Sunrise official page; Yatate on the manga); eps 1-2 chapters collide with Sean's A40/G3 rulings that context.ts failed to print |
+
+## Decisions for Sean (apply blocks on these) — sharpened by verification
 
 1. **Boruto A vs B contradict on the same basis.** B adopts 120-220 on Kodachi's supervision; A rejects that basis for 2-105 because it also covers rows everyone calls filler. Either (a) adoption follows storyline continuity with the source (B's line: 120-220 adopted, 2-105 filler except narrow author rows 8-9 / 34 / 67-69), or (b) supervision alone is no basis (A's line: everything unruled → filler, Time Slip 128-136 adopted on Kishimoto's story). Both agents agree 221-286 is post-tenure → `community` stands, and **282-286 (Sasuke Retsuden) → side_source**. Verifier target.
 2. **FMA 2003 original half**: filler (recommended) vs adopted{author}. Also eps 11-12 → canon + side_source (the Land of Sand novel, not Arakawa's) — accept spin-off-novel adaptations as side_source? Ep 13 / ep 37 must agree.
