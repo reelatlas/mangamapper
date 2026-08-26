@@ -74,7 +74,7 @@ async function main() {
     integrity_eps_beyond_total: [], integrity_total_beyond_eps: [], integrity_double_claimed: [],
     integrity_degenerate_span: degenerateSpans,
     special_numbered_unreviewed: [], anchor_gap_research: [], frontier_tail_null: [],
-    anchor_nonmonotonic: [], anchor_start_offtrend: [], anchor_beyond_chapter_space: [], anchor_beyond_display_total: [], anchor_fractional_chapter: [], anchor_on_noncanon_row: [], continue_skip_unnoted: [], boundaries_degenerate: [], ruling_violation: [],
+    anchor_nonmonotonic: [], anchor_start_offtrend: [], anchor_beyond_chapter_space: [], anchor_beyond_display_total: [], anchor_fractional_chapter: [], anchor_on_noncanon_row: [], continue_skip_unnoted: [], boundaries_degenerate: [], ruling_violation: [], repair_on_derivation_tier: [],
     mu_pin_unverified: [],
     rearranged_zone_unanchored: [], rearranged_zone_acknowledged: [],
     title_incomplete: [], airdate_incomplete: [], asterisk_unreviewed: [],
@@ -114,6 +114,14 @@ async function main() {
     const row = series.find((s: any) => s.id === sid);
     if (row && (row.aired_episodes > o.cap || (row.total_episodes ?? 0) > o.cap)) {
       classes.ruling_violation.push(`${sid}: totals ${row.aired_episodes}/${row.total_episodes} exceed the community cap ${o.cap}`);
+    }
+  }
+  // P8 repairs live at the manual tier (2026-08-26): a derivation-tier
+  // anchor (mu / afg / afg-continua) whose note carries research or repair
+  // provenance is a repair that the next re-derive will wipe.
+  for (const a of anchors) {
+    if (['mu', 'afg', 'afg-continua'].includes(a.source) && /research-tier|repair|Sean/i.test(a.note ?? '')) {
+      classes.repair_on_derivation_tier.push(`${a.series_id}: ep ${a.episode} ${a.source} note reads research/repair — promote to manual (P8)`);
     }
   }
   // G53 air-date overrides (2026-08-26): a stored air_date that disagrees with a ruled one = a writer bypassed filterEpisodeRows or the assert healer has not run.

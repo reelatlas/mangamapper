@@ -28,6 +28,12 @@ name no audit class. 247 are bundles. 52 rules live ONLY in the change log.
 | A-9 | canon-tier creation is a standing rule; the system census finds whether the path exists — never rebuilt from the log. |
 | A-10 | one-pace excluded; the note must match the apply. |
 
+### A-11 — NEW (2026-08-26, from the T3.1 exercise-2 search): air-date regressions
+
+**Evidence:** 92 episode rows in 50 series carry an air date EARLIER than their predecessor's. Two classes: (a) wrong dates, mostly AFL-inherited, often a year or more out — beyblade-x ep 41 2001-10-15 after ep 40 2024-07-12; black-butler ep 32 2010 after ep 31 2017; black-cat, darling-in-the-franxx, beyblade-metal-fusion…; (b) genuine broadcast-order deviations where our rows follow production numbering — cowboy-bebop (TX aired a subset first), haruhi (broadcast order), another ep 0. Top counts: yu-gi-oh-5d-s 9 · dragon-ball-z-kai 8 · shugo-chara 6 · haruhi 6 · cowboy-bebop 4 · yu-gi-oh-gx 4.
+
+**Proposed rule (for your ruling — the /add-rule exercise 2 candidate):** (1) WRITE gate in filterEpisodeRows: an air date that regresses by more than 365 days against the previous row is a typo, not a broadcast quirk — store NULL (an honest gap beats a wrong date, `P6`) and flag; (2) audit class `airdate_regression` for every remaining regression, as a review queue; (3) a ruling map `AIRDATE_ORDER_ACK` (RulingEntry, reason required) for ruled broadcast-order cases so they leave the queue; (4) wrong dates with a cited correct value go to `AIR_DATE_OVERRIDES` (`G53`). Witnesses: project-arms ep 53 (the PS2 game row aired "before" ep 52 — the non-episode-row case), beyblade-x ep 41. **Nothing applied until you rule**; the threshold (365 d) and the null-not-store choice are yours.
+
 T2 edge (Cursor, accepted): `chain.ts#aggregate` may be UNIFIED with `resolve.ts`; it must not invent `source_type` values before T4.0.
 
 ### The forks as presented (kept for the record)

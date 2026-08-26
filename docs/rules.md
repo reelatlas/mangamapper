@@ -3483,7 +3483,7 @@ A repaired value is a RESEARCHED value. Derivation-tier rows (source mu, afg, af
 - ruled Sean 2026-08-24 (data-pipeline §10 "Curated repairs live at the MANUAL tier (2026-08-24, the hikaru ep-75 wipe)"; §12.43)
 - layer **writer**
 - enforced: [history/apply-research-batch-17.ts#REPAIRS_APPROVED](../scripts/ingest/history/apply-research-batch-17.ts) · [.claude/skills/apply-batch/SKILL.md#Repairs on derivation-tier rows get wiped](../.claude/skills/apply-batch/SKILL.md) · [.claude/skills/consolidate/SKILL.md#derivation-tier rows](../.claude/skills/consolidate/SKILL.md)
-- **audit: none — automation backlog**
+- audit: `repair_on_derivation_tier`
 - witnesses: hikaru-no-go, mashle-magic-and-muscles
 - aliases: invariant 7, hard invariant 7, repairs live at the manual tier, hikaru ep-75 wipe, hikaru lesson
 - see: P10, P31
@@ -4738,5 +4738,5 @@ Any component that renders episode-level data consumes the HYDRATED series (getB
 ## Scoreboard
 
 - rules: 259 (live 244, planned 10, superseded 5)
-- live data rules with no audit class (the automation backlog): 89
+- live data rules with no audit class (the automation backlog): 88
 - by layer: writer 132 · display 23 · both 21 · process 83

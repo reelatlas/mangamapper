@@ -153,6 +153,7 @@ export const RULES: Rule[] = [
       { path: '.claude/skills/consolidate/SKILL.md', symbol: 'derivation-tier rows' },
     ],
     layer: 'writer',
+    auditClass: ['repair_on_derivation_tier'],
     witnesses: ['hikaru-no-go', 'mashle-magic-and-muscles'],
     status: 'live',
     see: ['P10', 'P31'],

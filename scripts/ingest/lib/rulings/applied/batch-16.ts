@@ -8,16 +8,16 @@
 import type { RulingEntry } from '../types';
 
 const date = '2026-08-24';
-const P8 = "P8 check — repaired mu/afg row may still stand at derivation tier";
+const P8_VERIFIED = "P8 check 2026-08-26: row verified at source=manual (research-tier); no promotion was needed";
 
 export const ENTRIES: RulingEntry[] = [
   // ---- REPAIRS_APPROVED: agent repairs on NON-target episodes, applied only
   // via this curated list (never silent). Every one is P8-flagged: batch 16
   // did not promote a repaired derivation-tier row to manual (DRIFT-LIST §E.6).
-  { seriesId: 'kamisama-kiss', ruleId: 'A4', value: { episode: 25, field: "end_chapter" }, reason: "finale anchors to what it adapts (Sean A4 rule): ep 25 = chs 62-63; ch 64 is consumed by ep 24's opening graft (whose lifted END keeps position/coverage at 64)", ruledBy: 'session', ruledOn: date, cite: ['scripts/ingest/research/batch16/out/kamisama-kiss.json', 'scripts/ingest/apply-research-batch-16.ts#REPAIRS_APPROVED'], retiresWhen: P8 },
-  { seriesId: 'kamisama-kiss', ruleId: 'R12', value: { episode: 25, field: "start_chapter" }, reason: "season-envelope start 31 replaced by the per-episode record now that eps 14-24 are exact; ep 25 opens at ch 62", ruledBy: 'session', ruledOn: date, cite: ['scripts/ingest/research/batch16/out/kamisama-kiss.json', 'scripts/ingest/apply-research-batch-16.ts#REPAIRS_APPROVED'], retiresWhen: P8 },
-  { seriesId: 'kamisama-kiss', ruleId: 'R12', value: { episode: 25, field: "chapters_adapted" }, reason: "envelope list replaced; the envelope's factual content now lives in the S2 zone annotation (eps 14-25)", ruledBy: 'session', ruledOn: date, cite: ['scripts/ingest/research/batch16/out/kamisama-kiss.json', 'scripts/ingest/apply-research-batch-16.ts#REPAIRS_APPROVED'], retiresWhen: P8 },
-  { seriesId: 'kamisama-kiss', ruleId: 'R12', value: { episode: 10, field: "chapters_adapted" }, reason: "batch-15 error corrected: mixer boy is Kohiruimaki, a named ch-50 character — the goukon merges ch 50's group date with ch 25's beats (UA fandom ch-50 char list + completed-manga-review)", ruledBy: 'session', ruledOn: date, cite: ['scripts/ingest/research/batch16/out/kamisama-kiss.json', 'scripts/ingest/apply-research-batch-16.ts#REPAIRS_APPROVED'], retiresWhen: P8 },
+  { seriesId: 'kamisama-kiss', ruleId: 'A4', value: { episode: 25, field: "end_chapter" }, reason: "finale anchors to what it adapts (Sean A4 rule): ep 25 = chs 62-63; ch 64 is consumed by ep 24's opening graft (whose lifted END keeps position/coverage at 64)", ruledBy: 'session', ruledOn: date, cite: ['scripts/ingest/research/batch16/out/kamisama-kiss.json', 'scripts/ingest/apply-research-batch-16.ts#REPAIRS_APPROVED'], supersedes: P8_VERIFIED },
+  { seriesId: 'kamisama-kiss', ruleId: 'R12', value: { episode: 25, field: "start_chapter" }, reason: "season-envelope start 31 replaced by the per-episode record now that eps 14-24 are exact; ep 25 opens at ch 62", ruledBy: 'session', ruledOn: date, cite: ['scripts/ingest/research/batch16/out/kamisama-kiss.json', 'scripts/ingest/apply-research-batch-16.ts#REPAIRS_APPROVED'], supersedes: P8_VERIFIED },
+  { seriesId: 'kamisama-kiss', ruleId: 'R12', value: { episode: 25, field: "chapters_adapted" }, reason: "envelope list replaced; the envelope's factual content now lives in the S2 zone annotation (eps 14-25)", ruledBy: 'session', ruledOn: date, cite: ['scripts/ingest/research/batch16/out/kamisama-kiss.json', 'scripts/ingest/apply-research-batch-16.ts#REPAIRS_APPROVED'], supersedes: P8_VERIFIED },
+  { seriesId: 'kamisama-kiss', ruleId: 'R12', value: { episode: 10, field: "chapters_adapted" }, reason: "batch-15 error corrected: mixer boy is Kohiruimaki, a named ch-50 character — the goukon merges ch 50's group date with ch 25's beats (UA fandom ch-50 char list + completed-manga-review)", ruledBy: 'session', ruledOn: date, cite: ['scripts/ingest/research/batch16/out/kamisama-kiss.json', 'scripts/ingest/apply-research-batch-16.ts#REPAIRS_APPROVED'], supersedes: P8_VERIFIED },
 
   // ---- HELD repair (agent asked for a ruling)
   {
