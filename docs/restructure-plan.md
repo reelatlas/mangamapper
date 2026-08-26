@@ -1,6 +1,6 @@
 # Restructure phase — the plan (v2, agreed 2026-08-25)
 
-Status: **T0–T2 done; T3.1 (skill + both exercises: G53, G54), T3.3, T3.4 done. T4.0 RULED 2026-08-26 → docs/restructure/T4-GLOSSARY.md is the ruled record and the build order; A-11 EXECUTED 2026-08-26 as G54; T4.1 SOURCE_KINDS DONE 2026-08-26 as T25. Next: T4.2 annotation kinds.** v1 was drafted from a disk survey, cross-checked
+Status: **T0–T2 done; T3.1 (skill + both exercises: G53, G54), T3.3, T3.4 done. T4.0 RULED 2026-08-26 → docs/restructure/T4-GLOSSARY.md is the ruled record and the build order; A-11 EXECUTED 2026-08-26 as G54; T4.1 (T25) and T4.2 (T26) DONE 2026-08-26. Next: T4.3 the standing migration.** v1 was drafted from a disk survey, cross-checked
 by a second model (Cursor/Grok), re-checked against the tree, and folded.
 This file is the phase's tracked board: every piece has an id, a track, a
 dependency and a status; the board is updated at every save point. When the
@@ -334,5 +334,6 @@ words after the glossary exists. Rough total: 8–12 sessions.
 | T3.4 | /apply-batch + /research-batch on the new homes (ids, rosters, history/, HELD trap, verifier-first); PROTOCOL pointer stays batch-17 until T3.2 | — | done 2026-08-26 |
 | T3.5 | verifier + cold probe | T3.2 | planned |
 | T4.1 | SOURCE_KINDS registry (T25): deriveSourceKind shared by resolve/chain/app, fail closed, healer + restage, 17 rows moved (16 ruled + god-of-high-school → manhwa), manga_status none, hasSource/hasInstrument split | T4.0, T3.1 | DONE 2026-08-26 |
-| T4.2–4.5 | annotation kinds → standing migration → format → words | T4.1 | next: T4.2 |
+| T4.2 | annotation kinds (T26): adopted{basis} / retconned / side_source, lib/annotations.ts gate + migration + annotation_invalid | T4.1 | DONE 2026-08-26 |
+| T4.3–4.5 | standing migration → format → words | T4.2 | next: T4.3 |
 | T5.* | backlog routing | per §3 | planned |

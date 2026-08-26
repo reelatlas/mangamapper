@@ -148,7 +148,7 @@ last, after the big unruled blocks are reviewed**:
    `series_without_source_kind`; migrate the 16 collapsed rows (+ god-of-high-school → manhwa
    once the manga node's country was fetched); `manga_status: anime_only → none`;
    hasSource / hasInstrument split.
-3. T4.2 the annotation kinds (`adopted` with basis, `retconned`,
+3. ✅ (T26, 2026-08-26) T4.2 the annotation kinds (`adopted` with basis, `retconned`,
    `side_source`) — migration + types regenerated.
 4. T4.3 the standing migration (§3) with `afl_anime_canon_unruled` and the
    A1 spike check; the T6 map migrated; census deltas explained.

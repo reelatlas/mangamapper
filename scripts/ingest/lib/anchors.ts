@@ -5,6 +5,7 @@
 
 import { deriveAnchors, deriveBonusChapters, type AfgPage, type AfgContinua } from './afg';
 import { db, fileFlagOnce, selectAll } from './db';
+import { upsertAnnotation } from './annotations';
 import { CONTINUA_SUPPRESSED, registerIds, translateEpisodeNumber } from './resolve';
 
 // heading comparison: decode leftover entities, drop parenthetical year
@@ -364,7 +365,7 @@ export async function syncAnchors(
     .map((b) => ({ ...b, episode: translateEpisodeNumber(seriesId, b.episode, 'afg') }))
     .filter((b): b is { episode: number; chapters: number[] } => b.episode !== null);
   for (const b of bonus) {
-    await db.from('episode_annotations').upsert(
+    await upsertAnnotation(
       {
         series_id: seriesId,
         episode: b.episode,

@@ -15,6 +15,7 @@ import { AIRDATE_REGRESSION_THRESHOLD_DAYS, airdateOrderWalk } from './lib/airda
 import { AIR_DATE_OVERRIDES } from './lib/rulings/air-dates';
 import { deriveSourceKind, seriesHasInstrument, seriesHasSource, SOURCE_TYPE_OVERRIDES } from './lib/rulings/source-kinds';
 import { pickManga } from './lib/resolve';
+import { annotationProblem } from './lib/annotations';
 import { REVIEWED_NUMBERED_SPECIALS } from './lib/rulings/reviewed-specials';
 
 async function main() {
@@ -81,7 +82,7 @@ async function main() {
     mu_pin_unverified: [],
     rearranged_zone_unanchored: [], rearranged_zone_acknowledged: [],
     title_incomplete: [], airdate_incomplete: [], airdate_regression: [], airdate_withheld: [], asterisk_unreviewed: [],
-    fractional_unmodeled: [],
+    fractional_unmodeled: [], annotation_invalid: [],
     series_without_source_kind: [], no_source: [], no_instrument: [], ok_full: [], ok_no_volume: [], ok_loose: [],
     pending_airing_no_anchor: [], pending_finished_no_totals: [], pending_no_canon: [], pending_other: [],
   };
@@ -280,7 +281,15 @@ async function main() {
   // tracks sign-off. Heals annotated-but-unmarked series to 'pending';
   // 'pending' rows are Sean's sign-off queue for the asterisk UI pass.
   {
-    const annos = await selectAll<any>('episode_annotations', 'series_id, kind');
+    const annos = await selectAll<any>('episode_annotations', 'series_id, episode, kind, note, basis');
+    // T26 (T4.2): the lib vocabulary and the DB constraint must agree — a
+    // stored record the gate would refuse (unknown kind, adopted without a
+    // basis, side_source without the work named) is a writer that bypassed
+    // upsertAnnotation or a constraint that drifted from lib/annotations.ts
+    for (const a of annos) {
+      const problem = annotationProblem(a);
+      if (problem) classes.annotation_invalid.push(`${a.series_id} ep ${a.episode} ${a.kind}: ${problem}`);
+    }
     const kindsBy = new Map<string, Set<string>>();
     for (const a of annos) {
       if (!kindsBy.has(a.series_id)) kindsBy.set(a.series_id, new Set());

@@ -216,6 +216,19 @@
         "visual novel"
       ],
       "source": "T4.0 D-9 / T4.1 (2026-08-26)"
+    },
+    {
+      "ask": "Black Clover 130-157 were supervised by the author but are not in the manga — do we type them as a fourth kind of canon?",
+      "expected": [
+        "T26",
+        "A1"
+      ],
+      "terms": [
+        "fourth",
+        "adopted",
+        "basis"
+      ],
+      "source": "T4.0 D-10 / T4.2 (2026-08-26)"
     }
   ]
 }

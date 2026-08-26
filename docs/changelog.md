@@ -607,6 +607,24 @@
    durable guard. Lesson for the floor rule: a >2 overshoot sourced from a
    SINGLE chart row with no corroborating content anywhere is a typo
    candidate, not an adoption candidate.
+55. ✅ **T4.2 — OVERRIDES ARE ANNOTATIONS, NEVER A FOURTH TYPE (`T26`;
+   R10 / A43 extended; 2026-08-26).** Sean's T4.0 D-10 built: three kinds
+   join the closed annotation vocabulary — `adopted` (REQUIRED `basis`
+   author | studio | community: Black Clover = author-supervised, EoE =
+   studio, X's only-ending = community), `retconned` (world-trigger
+   49-63), `side_source` (Shippuden 452-457 → the Itachi Shinden novel; the
+   work is named in note). The vocabulary now lives in ONE place,
+   `lib/annotations.ts` (`ANNOTATION_KINDS`, `ADOPTED_BASES`,
+   `annotationProblem`), written only through `upsertAnnotation` (the AFG
+   graft writer in lib/anchors.ts routed through it; the T4.3 migration
+   will use it); migration `20260826100000_annotation_kinds.sql` adds the
+   `basis` column and mirrors the shape rules as constraints (adopted ⇔
+   basis; side_source ⇒ note). Census class `annotation_invalid` (0) keeps
+   lib and DB in lockstep. 5 unit tests. Edges rebuilt + deployed; types
+   regenerated. Census otherwise unchanged (2,270 standing annotations all
+   valid). Nothing retyped yet — the standing migration is T4.3. One-hop
+   case 20. NEXT: T4.3 the standing migration (§3 of the glossary) with
+   the A1 spike check and `afl_anime_canon_unruled`.
 54. ✅ **T4.1 — SOURCE IS SERIES IDENTITY: THE SOURCE_KINDS REGISTRY (`T25`,
    2026-08-26; supersedes T20, amends T22).** Sean's T4.0 D-9 built: one
    declarative registry (`lib/rulings/source-kinds.ts` — value = AniList's

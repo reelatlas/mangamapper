@@ -548,4 +548,28 @@ export const RULES: Rule[] = [
     supersedes: ['T20'],
     see: ['T20', 'T21', 'T22', 'T24', 'G50', 'P6'],
   },
+  {
+    id: 'T26',
+    aliases: ['overrides are annotations', 'adopted annotation', 'adopted', 'retconned', 'side_source', 'adopted basis', 'community canon is not a type', 'no fourth type', 'D-10 annotations', 'annotation_invalid'],
+    family: 'T',
+    title: 'Overrides are annotations, never a fourth episode type',
+    statement:
+      "An author / studio / community override of the source is an ANNOTATION, never a type: the episode's standing stays canon / mixed / filler relative to the identified source (T25), and the exception is a first-class record — kind 'adopted' (REQUIRED basis: author | studio | community), 'retconned' (material later dropped from canon), or 'side_source' (adapts a work other than the series' source; the work is named in note). Consensus canon that is not in the source = canon + adopted + a null mapping (an honest dash, no strip units; A1 stands — filler never anchors). The vocabulary is closed (lib/annotations.ts ANNOTATION_KINDS), mirrored by the DB constraints, written only through upsertAnnotation, and a stored record the gate would refuse is annotation_invalid. 'Community canon' is neither a badge nor a type.",
+    why:
+      "T4.0 D-10 (Sean, 2026-08-26): Black Clover 130-157 (author-supervised), Boruto 221-286, Shippuden 452-457 (the Itachi Shinden novel), Evangelion's EoE (studio), X's only ending (community, accepted for lack of an ending) were one class typed three ways (anime-only-canon / filler+asterisk / mixed); a fourth type would have hidden WHO adopted the material and why. The basis is required because 'adopted' without it is not a ruling.",
+    ruledBy: 'Sean',
+    ruledOn: '2026-08-26',
+    origin: 'docs/restructure/T4-GLOSSARY.md §1, §3 (D-10); restructure T4.2',
+    enforcement: [
+      { path: 'scripts/ingest/lib/annotations.ts', symbol: 'upsertAnnotation' },
+      { path: 'scripts/ingest/lib/annotations.ts', symbol: 'annotationProblem' },
+      { path: 'supabase/migrations/20260826100000_annotation_kinds.sql' },
+      { path: 'scripts/ingest/audit-ui-truth.ts', symbol: 'annotation_invalid' },
+    ],
+    layer: 'writer',
+    auditClass: ['annotation_invalid', 'asterisk_unreviewed'],
+    witnesses: ['black-clover', 'boruto-naruto-next-generations', 'naruto-shippuden', 'x'],
+    status: 'live',
+    see: ['T25', 'R10', 'A43', 'A1', 'T13'],
+  },
 ];

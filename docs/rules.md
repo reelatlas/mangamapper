@@ -70,7 +70,7 @@
 - `C8` AFG continue-from is reading guidance, not the frontier — aka `continue-from is guidance`, `continue-from-is-guidance`, `sanity band`, `40-chapter band`, `three-numbers model`
 - `C9` Default continue = anchor end + 1 (superseded by C2) *(superseded)* — aka `continue-reading points`, `end+1 default`, `default continue = end + 1`, `apply-continue-points`
 
-**T — Typing & taxonomy** (25)
+**T — Typing & taxonomy** (26)
 - `T1` Episode-type vocabulary: four stored tokens — aka `four tokens`, `AFL class map`, `CLASS_TO_TYPE`, `episodes.type vocabulary`, `type_corrections allowed types`
 - `T2` Episode-type semantics (Sean 2026-08-25) — aka `episode-type semantics`, `Sean's vocabulary`, `typing vocabulary`, `filler = zero canon`, `consensus-canon`, `mixed = canon AND non-canon`
 - `T3` Filler = outside both canons (b17 D3 form) *(superseded)* — aka `b17 D3`, `outside both canons`, `b17 D3 form`
@@ -96,6 +96,7 @@
 - `T23` Format is orthogonal to canon standing — aka `format ⟂ canon standing`, `format-is-orthogonal`, `format is orthogonal to standing`, `never overload episodes.type`
 - `T24` LN instrument ruling: volume-space for light novels *(planned)* — aka `LN instrument ruling`, `LN class`, `light-novel instrument`, `Queue 3 LN ruling`, `LN volume-space instrument`
 - `T25` Source is series identity: the SOURCE_KINDS registry — aka `SOURCE_KINDS`, `source kinds registry`, `source-kinds`, `D-9`, `source is identity`, `source is series identity`, `SOURCE_TYPE_OVERRIDES`, `hasInstrument`, `hasSource vs hasInstrument`, `series_without_source_kind`, `studio original`, `fail closed source`, `visual novel source`, `game source`
+- `T26` Overrides are annotations, never a fourth episode type — aka `overrides are annotations`, `adopted annotation`, `adopted`, `retconned`, `side_source`, `adopted basis`, `community canon is not a type`, `no fourth type`, `D-10 annotations`, `annotation_invalid`
 
 **N — Numbering, counts & chapter spaces** (31)
 - `N1` Episode-floor invariant — aka `episode-floor invariant`, `episode floor`, `floor rule`, `EXTRAS_ADOPTED`
@@ -859,14 +860,14 @@ An exact anchor record proves its episode exists. For any integer-numbered ancho
 
 ### A43 · Annotations are first-class; asterisk review is a queue
 
-Non-linear facts about an episode (divergence, partial, graft, rearranged, side_story, loose_parallel, abridged) are first-class per-episode records in episode_annotations, never prose buried in a note. A research-landed annotation sets the series' asterisk_review pending; the asterisk_unreviewed census class is Sean's review queue and is cleared only by a ruling.
+Non-linear facts about an episode (divergence, partial, graft, rearranged, side_story, loose_parallel, abridged; since T4.2 also adopted / retconned / side_source, T26) are first-class per-episode records in episode_annotations, never prose buried in a note, and every writer lands them through upsertAnnotation (lib/annotations.ts) so a malformed record cannot exist. A research-landed annotation sets the series' asterisk_review pending; the asterisk_unreviewed census class is Sean's review queue and is cleared only by a ruling.
 
 *Why:* Kenshin 95-98 and the GTO 20/21 zone were facts the display could not represent until annotations became data (migration 20260825100000_annotations_continue).
 
 - ruled Sean 2026-08-23 (data-pipeline §10 "Asterisk review workflow"; migration annotations_continue)
 - layer **writer**
-- enforced: [supabase/migrations/20260825100000_annotations_continue.sql](../supabase/migrations/20260825100000_annotations_continue.sql) · [audit-ui-truth.ts#asterisk_unreviewed](../scripts/ingest/audit-ui-truth.ts)
-- audit: `asterisk_unreviewed`
+- enforced: [supabase/migrations/20260825100000_annotations_continue.sql](../supabase/migrations/20260825100000_annotations_continue.sql) · [lib/annotations.ts#upsertAnnotation](../scripts/ingest/lib/annotations.ts) · [audit-ui-truth.ts#asterisk_unreviewed](../scripts/ingest/audit-ui-truth.ts)
+- audit: `asterisk_unreviewed`, `annotation_invalid`
 - witnesses: rurouni-kenshin, gto-great-teacher-onizuka
 - aliases: asterisk model, asterisk review workflow, annotations are first-class, episode_annotations
 - see: R10, A2
@@ -1343,6 +1344,20 @@ series.source_type names what the anime ADAPTS and is derived ONLY by deriveSour
 - aliases: SOURCE_KINDS, source kinds registry, source-kinds, D-9, source is identity, source is series identity, SOURCE_TYPE_OVERRIDES, hasInstrument, hasSource vs hasInstrument, series_without_source_kind, studio original, fail closed source, visual novel source, game source
 - see: T20, T21, T22, T24, G50, P6
 - supersedes: T20
+
+### T26 · Overrides are annotations, never a fourth episode type
+
+An author / studio / community override of the source is an ANNOTATION, never a type: the episode's standing stays canon / mixed / filler relative to the identified source (T25), and the exception is a first-class record — kind 'adopted' (REQUIRED basis: author | studio | community), 'retconned' (material later dropped from canon), or 'side_source' (adapts a work other than the series' source; the work is named in note). Consensus canon that is not in the source = canon + adopted + a null mapping (an honest dash, no strip units; A1 stands — filler never anchors). The vocabulary is closed (lib/annotations.ts ANNOTATION_KINDS), mirrored by the DB constraints, written only through upsertAnnotation, and a stored record the gate would refuse is annotation_invalid. 'Community canon' is neither a badge nor a type.
+
+*Why:* T4.0 D-10 (Sean, 2026-08-26): Black Clover 130-157 (author-supervised), Boruto 221-286, Shippuden 452-457 (the Itachi Shinden novel), Evangelion's EoE (studio), X's only ending (community, accepted for lack of an ending) were one class typed three ways (anime-only-canon / filler+asterisk / mixed); a fourth type would have hidden WHO adopted the material and why. The basis is required because 'adopted' without it is not a ruling.
+
+- ruled Sean 2026-08-26 (docs/restructure/T4-GLOSSARY.md §1, §3 (D-10); restructure T4.2)
+- layer **writer**
+- enforced: [lib/annotations.ts#upsertAnnotation](../scripts/ingest/lib/annotations.ts) · [lib/annotations.ts#annotationProblem](../scripts/ingest/lib/annotations.ts) · [supabase/migrations/20260826100000_annotation_kinds.sql](../supabase/migrations/20260826100000_annotation_kinds.sql) · [audit-ui-truth.ts#annotation_invalid](../scripts/ingest/audit-ui-truth.ts)
+- audit: `annotation_invalid`, `asterisk_unreviewed`
+- witnesses: black-clover, boruto-naruto-next-generations, naruto-shippuden, x
+- aliases: overrides are annotations, adopted annotation, adopted, retconned, side_source, adopted basis, community canon is not a type, no fourth type, D-10 annotations, annotation_invalid
+- see: T25, R10, A43, A1, T13
 
 ## N — Numbering, counts & chapter spaces
 
@@ -3128,16 +3143,16 @@ For each anchored episode a verdict delivers the complete shape, never just an e
 
 ### R10 · Non-linear facts: the annotation kind vocabulary
 
-A verdict records non-linear facts as annotations with kind ∈ rearranged | graft | partial | divergence | side_story | loose_parallel | abridged, the episodes and chapters involved, and a one-line why. A loose_parallel or divergence annotation is a better deliverable than a fabricated anchor for a range that proves anime-original.
+A verdict records non-linear facts as annotations with kind ∈ rearranged | graft | partial | divergence | side_story | loose_parallel | abridged — and, since T4.2 (T26), adopted (basis author | studio | community, required) | retconned | side_source (the work named) — the episodes and chapters involved, and a one-line why. The vocabulary is closed in lib/annotations.ts (ANNOTATION_KINDS) and mirrored by the DB constraint. A loose_parallel or divergence annotation is a better deliverable than a fabricated anchor for a range that proves studio-original.
 
 *Why:* The asterisk model: what an asterisk entails derives from per-episode annotations by aggregation, so the kinds must be a closed vocabulary the display can aggregate.
 
 - ruled session 2026-08-23 (batch14 PROTOCOL line 15; batch17 PROTOCOL "What to research")
 - layer **process**
-- enforced: [research/batch17/PROTOCOL.md](../scripts/ingest/research/batch17/PROTOCOL.md)
-- audit: `asterisk_unreviewed`
+- enforced: [research/batch17/PROTOCOL.md](../scripts/ingest/research/batch17/PROTOCOL.md) · [lib/annotations.ts#ANNOTATION_KINDS](../scripts/ingest/lib/annotations.ts)
+- audit: `asterisk_unreviewed`, `annotation_invalid`
 - aliases: annotation kind vocabulary, annotation kinds
-- see: R8, R13, A43
+- see: R8, R13, A43, T26
 
 ### R11 · type_corrections need 2+ sources and per-episode evidence
 
@@ -3903,6 +3918,9 @@ Any component that renders episode-level data consumes the HYDRATED series (getB
 - acknowledged approximation → `A7`
 - add-rule → `P31`
 - add-rule sequence → `P31`
+- adopted → `T26`
+- adopted annotation → `T26`
+- adopted basis → `T26`
 - AFG "* Filler" title-marker rule → `T16`
 - AFG alignment gate → `N16`
 - AFG as story-flow reference → `I20`
@@ -3978,6 +3996,7 @@ Any component that renders episode-level data consumes the HYDRATED series (getB
 - anime→manga linkage → `I38`
 - annotation kind vocabulary → `R10`
 - annotation kinds → `R10`
+- annotation_invalid → `T26`
 - annotations are first-class → `A43`
 - ANY debate about final episodes → `T13`
 - AoT 88-89 lesson → `A26`
@@ -4076,6 +4095,7 @@ Any component that renders episode-level data consumes the HYDRATED series (getB
 - CLASS_TO_TYPE → `T1`
 - Claymore precedent → `G26`
 - close the loop → `P29`
+- community canon is not a type → `T26`
 - community count rule → `N3`
 - COMMUNITY_COUNT_OVERRIDES → `N3`
 - community-count restructure heal → `N20`
@@ -4136,6 +4156,7 @@ Any component that renders episode-level data consumes the HYDRATED series (getB
 - curated-consistency precedence → `A25`
 - curated-first apply → `P10`
 - curation principle → `P10`
+- D-10 annotations → `T26`
 - D-5 → `P34`
 - D-9 → `T25`
 - D1 → `G32`
@@ -4453,6 +4474,7 @@ Any component that renders episode-level data consumes the HYDRATED series (getB
 - no blanket precedence rule → `R2`
 - no degenerate component spans → `I35`
 - no digit-mashing → `G20`
+- no fourth type → `T26`
 - no one-offs → `P9`
 - no one-offs (sources) → `G50`
 - no one-offs, ever → `P9`
@@ -4496,6 +4518,7 @@ Any component that renders episode-level data consumes the HYDRATED series (getB
 - overlap discount clause → `T8`
 - overlap rule → `T7`
 - override > AFL > AFG → `T4`
+- overrides are annotations → `T26`
 - own-slug identity → `I1`
 - ownedAnilistIds → `I21`
 - ownership guard → `I21`
@@ -4571,6 +4594,7 @@ Any component that renders episode-level data consumes the HYDRATED series (getB
 - RESEARCH-FIRST rule → `R1`
 - research-logged non-main entries → `N33`
 - restage from raw → `G28`
+- retconned → `T26`
 - retype stays research-tier → `T6`
 - REVIEWED_NUMBERED_SPECIALS → `N7`
 - row-count identity → `R19`
@@ -4627,6 +4651,7 @@ Any component that renders episode-level data consumes the HYDRATED series (getB
 - sharper deep trigger → `P22`
 - shift verification → `N11`
 - sibling-scope ceiling → `G33`
+- side_source → `T26`
 - single-source final → `C4`
 - single-source-final → `C4`
 - skeptic not second author → `R24`
@@ -4790,6 +4815,6 @@ Any component that renders episode-level data consumes the HYDRATED series (getB
 
 ## Scoreboard
 
-- rules: 261 (live 245, planned 10, superseded 6)
+- rules: 262 (live 246, planned 10, superseded 6)
 - live data rules with no audit class (the automation backlog): 87
-- by layer: writer 133 · display 23 · both 22 · process 83
+- by layer: writer 134 · display 23 · both 22 · process 83

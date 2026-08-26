@@ -105,6 +105,7 @@ export type Database = {
       }
       episode_annotations: {
         Row: {
+          basis: string | null
           chapters: string | null
           created_at: string
           episode: number
@@ -113,6 +114,7 @@ export type Database = {
           series_id: string
         }
         Insert: {
+          basis?: string | null
           chapters?: string | null
           created_at?: string
           episode: number
@@ -121,6 +123,7 @@ export type Database = {
           series_id: string
         }
         Update: {
+          basis?: string | null
           chapters?: string | null
           created_at?: string
           episode?: number

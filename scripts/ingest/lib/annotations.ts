@@ -1,0 +1,60 @@
+// Episode annotations — the closed kind vocabulary and the ONE writer gate
+// (rules R10 / A43, extended by T26 in T4.2, 2026-08-26). Non-linear facts
+// about an episode are first-class per-episode records; the asterisk UI
+// aggregates them by kind, so the vocabulary is closed and every writer
+// (scripts, edge functions, the T4.3 standing migration) goes through
+// upsertAnnotation so a malformed record cannot land (P2). The migration's
+// check constraints mirror this file; the census class annotation_invalid
+// keeps the two in lockstep (P5).
+//
+// T26: an author / studio / community override of the source is an
+// ANNOTATION, never a fourth episode type — the episode's standing stays
+// canon / mixed / filler relative to the source; the exception lives here.
+
+export const ANNOTATION_KINDS = [
+  'divergence', // the episode departs from the source material it adapts
+  'partial', // adapts part of its chapters (a partial finale, a cut arc)
+  'graft', // scenes from elsewhere in the source woven in (bonus / fractional chapters)
+  'rearranged', // adapts source out of the source's order (settles a reorder for audits, A42)
+  'side_story', // a side story / pilot one-shot outside the mainline
+  'loose_parallel', // loosely parallels the source with growing variation (anime outran the manga)
+  'abridged', // compresses source material
+  'adopted', // T26: outside the source, ruled CANON by Sean — basis REQUIRED
+  'retconned', // T26: material later dropped from canon (world-trigger 49-63)
+  'side_source', // T26: adapts a work other than the series' source — the work is named in note
+] as const;
+export type AnnotationKind = (typeof ANNOTATION_KINDS)[number];
+
+/** who adopted the material: the source's author (Black Clover 130-157), the studio (EoE), or the community for lack of an ending (X) */
+export const ADOPTED_BASES = ['author', 'studio', 'community'] as const;
+export type AdoptedBasis = (typeof ADOPTED_BASES)[number];
+
+export type AnnotationRow = {
+  series_id: string;
+  episode: number;
+  kind: AnnotationKind;
+  chapters?: string | null;
+  note?: string | null;
+  basis?: AdoptedBasis | null;
+};
+
+/** the shape rules, as data — the migration's constraints say the same thing */
+export const annotationProblem = (a: AnnotationRow): string | null => {
+  if (!(ANNOTATION_KINDS as readonly string[]).includes(a.kind)) return `kind '${a.kind}' is not in the vocabulary`;
+  if (a.kind === 'adopted' && !a.basis) return "kind 'adopted' requires basis author | studio | community";
+  if (a.kind !== 'adopted' && a.basis) return `basis is only for kind 'adopted' (got ${a.kind})`;
+  if (a.basis && !(ADOPTED_BASES as readonly string[]).includes(a.basis)) return `basis '${a.basis}' is not author | studio | community`;
+  if (a.kind === 'side_source' && !a.note?.trim()) return "kind 'side_source' must name the work in note";
+  return null;
+};
+
+/** The gate: refuses a malformed record before the DB does; idempotent (PK series_id, episode, kind). */
+export async function upsertAnnotation(a: AnnotationRow, opts?: { ignoreDuplicates?: boolean }) {
+  const problem = annotationProblem(a);
+  if (problem) throw new Error(`annotation ${a.series_id} ep ${a.episode} ${a.kind}: ${problem}`);
+  const { db } = await import('./db'); // lazy: the vocabulary + shape rules above are pure and unit-tested without a DB
+  const { error } = await db
+    .from('episode_annotations')
+    .upsert({ series_id: a.series_id, episode: a.episode, kind: a.kind, chapters: a.chapters ?? null, note: a.note ?? null, basis: a.basis ?? null }, { ignoreDuplicates: opts?.ignoreDuplicates ?? false });
+  if (error) throw new Error(`annotation ${a.series_id} ep ${a.episode} ${a.kind}: ${error.message}`);
+}
