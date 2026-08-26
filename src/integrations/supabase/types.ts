@@ -111,6 +111,7 @@ export type Database = {
           episode: number
           kind: string
           note: string | null
+          origin: string
           series_id: string
         }
         Insert: {
@@ -120,6 +121,7 @@ export type Database = {
           episode: number
           kind: string
           note?: string | null
+          origin?: string
           series_id: string
         }
         Update: {
@@ -129,6 +131,7 @@ export type Database = {
           episode?: number
           kind?: string
           note?: string | null
+          origin?: string
           series_id?: string
         }
         Relationships: [

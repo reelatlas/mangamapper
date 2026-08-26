@@ -128,7 +128,7 @@ export const ENTRIES: RulingEntry<StandingAnnotation[]>[] = [
     ruleId: 'T26',
     value: [
       { episodes: span(49, 63), kind: 'retconned', note: 'The Fugitive Arc — anime-original, RETCONNED by Season 2, which resumes from the manga as if it never happened.' },
-      { episodes: [48], kind: 'divergence', note: 'A-7 studio-original breather inside the canon arc — filler under T27; on the review list.' },
+      { episodes: [48], kind: 'side_story', note: 'Self-contained anime-original interlude inside the B-Rank Wars arc (no chapter fields on fandom for 48-63; ep 47 closes on ch 103, ep 64 opens on ch 104); NOT part of the Fugitive Arc retcon (four sources bound it at 49-63). Batch 18 wave 2: filler confirmed, no adoption; side_story replaces divergence — it alters no manga event.' },
     ],
     reason: 'T4.0 D-10 names world-trigger 49-63 as the retconned class; 48 is the A-7 review item.',
     ruledBy: 'Sean',
@@ -193,16 +193,141 @@ export const ENTRIES: RulingEntry<StandingAnnotation[]>[] = [
     ruledOn: '2026-08-26',
     cite: ["scripts/ingest/research/batch18/out/outlaw-star.json", "scripts/ingest/research/batch18/verify/outlaw-star.md", "https://www.sunrise-world.net/titles/pickup_094.php"],
   },
+  {
+    seriesId: 'a-certain-scientific-railgun',
+    ruleId: 'T26',
+    value: [
+      { episodes: [20, 21, 22, 23, 24], kind: 'adopted', basis: "author", note: "Poltergeist arc. BASIS = INCORPORATION (Sean's batch-18 class ruling): the source's author wrote the arc's events into the source line — Railgun manga ch 31 names Haruue Erii and ch 32 shows the photo on Mikoto's phone 'taken in episode 20' (chapter body, not cover); Kamachi's Souyaku v7 ch2 has Therestina in prison (the S1 ep-24 outcome); the 2022 Railgun novel has Saten regretting she let Haruue / Edasaki / Janie / Febrie go. HIGH. ja-WP's '2クール目は原作者・鎌池和馬の監修下' sentence is UNCITED — corroboration only, never the basis." },
+      { episodes: [17, 18, 19], kind: 'adopted', basis: "author", note: "Poltergeist arc: Haruue's existence and transfer presupposed by manga ch 31/32 and the 2022 novel — incorporation basis, MEDIUM (the ep-20 event anchors the class; these rows carry its setup)." },
+      { episodes: [15, 16], kind: 'adopted', basis: "author", note: "Big Spider arc: Kamachi's Item LN v1 ch2 winks at the arc's twist ('You thought Big Spider was led by a guy called Kurozuma? ...'), presupposing the arc happened. Incorporation basis, MEDIUM-LOW — one oblique line." },
+      { episodes: [42, 43, 44, 45, 46, 47, 48], kind: 'adopted', basis: "author", note: "Silent Party arc: the 2022 Railgun novel (Kamachi's own prose) has Saten say 'I'd even take Janie or Febrie's help right now! Oh, I never should have let them go!' — presupposing the arc's ENDING (Haruue moved, Febrie and Janie left with Nunotaba). MEDIUM: a single referback, readable as a fourth-wall joke; the Silent Party fandom page makes no canon claim. Souyaku v7's Therestina supports Poltergeist only. Sean's fallback if rejected: 42-45/48 filler, 46-47 filler + graft." },
+      { episodes: [13, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 41, 42, 43, 44, 45, 46, 47, 48], kind: 'divergence', note: "Anime-original arcs (Big Spider / Poltergeist in S1's second cour; Silent Party in S): director-confirmed original material that departs from the manga's timeline — Kongou is present months before her manga debut (ch 40); Kiyama's revived Child Errors never reappear in the manga. Ruled canon + adopted{author} by INCORPORATION (batch 18 wave 2), except 13 (filler, outside every arc) and 41 (mixed)." },
+      { episodes: [41], kind: 'graft', chapters: "39 special, 40 (rat scene), vol-5 omake", note: "zone-acknowledged — anchor-hostile: a gag special and a single scene do not advance the reading position. Refines the stored graft {39.5, 40}: confirmed and extended. The episode carries (a) material from the vol-7 special chapter after ch 39, 'The Iron Bridge is a Sign of Love' (its chapter page lists Adapted To = Railgun S eps 16 AND 17), (b) ch 40's rat-buying scene ('slightly altered' per the ch-40 page), and (c) a volume-5 omake 4-koma staged as the Kuroko/Frenda argument over whose Level 5 acquaintance is better. Graft, not anchor." },
+      { episodes: [46], kind: 'graft', chapters: "43 (Item pool scene only)", note: "Stored graft {43} re-verified from both sides: ep 46 (S #22 'STUDY') borrows only the Item swimming-pool scene from manga ch 43 'Negotiation' (ch 43 page: Adapted To = Railgun S ep 22, 'Item pool scene only, though slightly altered'). Ch 43 is properly adapted at ep 49; no anchor here." },
+      { episodes: [47], kind: 'graft', chapters: "44 (Aoki scene only)", note: "Stored graft {44} re-verified from both sides: ep 47 (S #23 'Silent Party') borrows a single scene from manga ch 44 'Opening' (ch 44 page: Adapted To = Railgun S ep 23, 'Aoki scene only'). Ch 44 is properly adapted at ep 50; no anchor here." },
+    ],
+    reason: "Batch 18 wave 2 (2026-08-26), verified R24, SEAN RULED THE CLASS: incorporating an arc's EVENTS/OUTCOMES into the source line adopts (T26 author basis); importing names/designs does not (Twin Star). Gradient recorded per block. The ep-20 cover-art 'graft' proposed by the verdict is DROPPED (artwork is not source material). 41 mixed under T28 (adapts a whole special chapter).",
+    ruledBy: 'Sean',
+    ruledOn: '2026-08-26',
+    cite: ["scripts/ingest/research/batch18/out/a-certain-scientific-railgun.json", "scripts/ingest/research/batch18/verify/a-certain-scientific-railgun.md", "https://toarumajutsunoindex.fandom.com/wiki/Toaru_Kagaku_no_Railgun_Manga_Chapter_032", "https://www.baka-tsuki.org/project/index.php?title=Toaru_Majutsu_no_Index:Railgun_Chapter2"],
+  },
+  {
+    seriesId: 'sailor-moon',
+    ruleId: 'T26',
+    value: [
+      { episodes: [167], kind: 'rearranged', chapters: "38, 44", note: "zone-acknowledged — no anchor by design: Acts 38/44 sit behind ep 166's Act 49 and an anchor would run position backwards. Deferred manga content, not new content. The tail of Act 38 (high-school entry; Chibiusa packing for the 30th century, her departure aborted by the new threat; the Outers taking in infant Hotaru) and the opening of Act 44 (the Outers' household, Hotaru's abnormal growth and her vision of the Moon devoured by darkness, her power-up of Uranus/Neptune/Pluto) land here because SuperS dropped the Outer Guardians wholesale. sailormoon.fandom's episode page states 'This episode is based on part of Act 38'; the Super-form and Sailor-Crystal bullets in the same section are Act 44 material." },
+      { episodes: [168], kind: 'rearranged', chapters: "44, 48-49", note: "zone-acknowledged — no anchor by design (see 167). Act 44's core (Sailor Saturn's spirit re-awakens Hotaru, returns her past-life memories and ages her; Super Sailor Saturn's debut; the ten guardians uniting) plus the Act 48-49 Eternal beat (the nine pour their power into Sailor Moon; Eternal Moon Article, Eternal Tiare, Eternal Sailor Moon and Starlight Honeymoon Therapy Kiss all debut). sailormoon.fandom: 'Half of this episode is based on Act 44 of the manga'. ja.wikipedia dates each Eternal item/form to 原作第4部 (Dream) and to the anime's 『スターズ』, confirming the relocation across the SuperS/Stars seam." },
+      { episodes: [170, 171, 172], kind: 'loose_parallel', chapters: "45, 47", note: "Element-level carryover only — recorded so it is not mistaken for adaptation. The guardians sealed inside mirror shards and later freed (manga Acts 45 and 47, where Zirconia traps Saturn and Chibi Moon and Sailor Moon frees them), Saturn's Silence Wall and Silence Glaive Surprise (both debut in manga Act 45; ja.wikipedia dates both to 原作第4部 and 初代テレビアニメ『スターズ』), and Chibi Moon fading from existence because Mamoru is lost (an idea from the manga's Stars arc, where Chibiusa ceases to exist after Galaxia kills Mamoru) are re-used inside a scenario with no manga counterpart. No manga act is adapted in 169-172; these rows stay filler. (verifier: the Chibiusa-fades beat is the Cauldron endgame, ~Acts 57-59, not 50-51.)" },
+    ],
+    reason: "Batch 18 wave 2 (2026-08-26), verified R24, Sean ruled: 167-168 mixed — half of 168 is Act 44 (Saturn re-awakens Hotaru; the Eternal debut) and 167 carries Act 38's tail + Act 44's opening (never adapted in SuperS); 169-172 filler; no adoption (Takeuchi: 原作/原案 + GAME 監修 only, documented friction). No anchors — they would run position backwards from ep 166.",
+    ruledBy: 'Sean',
+    ruledOn: '2026-08-26',
+    cite: ["scripts/ingest/research/batch18/out/sailor-moon.json", "scripts/ingest/research/batch18/verify/sailor-moon.md"],
+  },
+  {
+    seriesId: 'claymore',
+    ruleId: 'T26',
+    value: [
+      { episodes: [24], kind: 'partial', chapters: "60 (opening section)", note: "Scene 60 is split and never completed in place: its opening (Rigaldo's corpse, Clare's plea to Helen, Deneve taking Undine's sword) is here, its closing (Jean's sacrifice, Clare restored, Jean dead) is displaced to ep 26 in an invented setting, and its middle (Jean stopping Helen; the Northern Army closing in for the last stand) is dropped. T28: the opening section of Scene 60 before the studio ending takes over — filler + partial, not mixed (consensus block)." },
+      { episodes: [26], kind: 'graft', chapters: "60 (Jean’s sacrifice, transplanted)", note: "Scene 60's Jean-sacrifice beat is grafted out of sequence into the anime-original volcano finale: Jean is impaled on Clare's mandibles and spends her life realigning Clare's yoki to pull her back from awakening, exactly as in ch 60, but two episodes later, in a location and with a trigger (Raki) that do not exist in the manga." },
+      { episodes: [21], kind: 'divergence', chapters: "57", note: "Adapts Scene 57 section by section (five kills, Rigaldo's awakening); the Raki/Isley/Priscilla B-plot is the anime's own. Narrowed from the batch-15 loose_parallel {57-59} (verified R24). Frontier consequence (ep 23 → ch 59?) is a separate C/A ruling." },
+      { episodes: [22], kind: 'divergence', chapters: "58", note: "Adapts Scene 58 (Miria pierced, Clare's charge, the arm); B-plot original. Narrowed from loose_parallel {57-59}." },
+      { episodes: [23], kind: 'divergence', chapters: "59", note: "Adapts Scene 59 (Helen severs the arm, Clare's claw, Rigaldo shredded); Raki's entrance is the anime's own. Narrowed from loose_parallel {57-59}." },
+    ],
+    reason: "Batch 18 wave 2 (2026-08-26), verified R24, Sean ruled under T28: 24-26 stay FILLER (the community's 'completely non-canon' block holds; the two Scene-60 fragments are recorded as partial/graft, never as mixed); no adoption (Yagi 原作 only, NTV archived staff page). The 'Madhouse outran the manga' premise is false — 13 chapters were unadapted.",
+    ruledBy: 'Sean',
+    ruledOn: '2026-08-26',
+    cite: ["scripts/ingest/research/batch18/out/claymore.json", "scripts/ingest/research/batch18/verify/claymore.md"],
+  },
+  {
+    seriesId: 'gto-great-teacher-onizuka',
+    ruleId: 'T26',
+    value: [
+      { episodes: [27], kind: 'side_story', chapters: "GTO (Great Toroko Oppai) Scenes 1-7 (vols 11-12)", note: "Adapts the GTO (ぐれえと・とろこ・おっぱい) / 'Great Toroko Oppai' side story - Scene 1 日本一のアイドル, Scene 2 マネージャーブギ, Scene 3 明日のための\"その1\", Scene 4 事務所がない!, Scene 5 ヘア出し一番搾り, Scene 6 あの娘のスキャンダル!, Scene 7 明日のために.. - with Onizuka taking manga manager Munakata's role. The Scenes are part of the source work (Kodansha's Comic Days serialization carries them; collected in GTO vols 11-12) but carry NO Lesson number." },
+      { episodes: [27], kind: 'graft', note: "POSITION WARNING - do not anchor and do not advance the reader. In Kodansha reading order the Scenes sit AFTER Lesson 92 (Scenes 1-3) and AFTER Lesson 97 (Scenes 4-7), while eps 29-33 immediately afterwards go back and adapt Lessons 75-92. Ep 27 therefore grafts material from ahead of its own position, exactly like the stored ep-40 ch-107 graft." },
+      { episodes: [25, 26], kind: 'loose_parallel', note: "Imports Kadena Nao (嘉手納南風) and her brother from Fujisawa's own prequel manga Shonan Junai Gumi! (ch 229 / 241) into the manga nurse Naoko Moritaka's slot, reusing her Queen-of-Hakosuka / Last Signal past and the brother's racing accident, but telling a new story that ja.wikipedia says contradicts SJG continuity (in the anime she has never met Onizuka)." },
+      { episodes: [34], kind: 'loose_parallel', note: "Reuses only the celebrity hidden-camera-prank twist from the Great Toroko Oppai scene that follows Lesson 97, recast onto Onizuka/Saejima/gold/yakuza; 'rehashed into something completely different whilst using a similar event'." },
+      { episodes: [22], kind: 'divergence', note: "Substitutes an original two-episode Hakuba arc for manga Lesson 71 とっておきの場所; ep 21 carries Lesson 70, Lesson 71 itself is never adapted (chapter hole between the stored ep21->70 and ep35->72 anchors). (The fan blog's own CH 70-71 / EP 21-22 heading is a story-unit grouping, not an adaptation claim — Lesson 71 is unadapted.)" },
+      { episodes: [24], kind: 'divergence', note: "Anime-first: the manga's own Uchiyamada mid-life/daughter chapter is Lesson 143 中年ペイシェンス (vol 18, 2000-12-15), serialized after this episode aired 2000-03-05. Not an adaptation in either direction on the evidence available." },
+      { episodes: [28], kind: 'divergence', note: "Replaces the side story's Munakata press campaign with an original rigged beauty contest (MGPC) plus an MMR マガジンミステリー調査班 crossover; rival Hoshino Megumi is anime-only." },
+    ],
+    reason: "Batch 18 wave 2 (2026-08-26), verified R24, Sean ruled: ep 27 MIXED — it adapts the Toroko Oppai side story Fujisawa serialized INSIDE GTO (Comic Days feed: Scenes 1-3 between Lesson 92/93, 4-7 between 97/98) — the side story IS the source (T28: an omake that is the episode's plot counts), never side_source; no anchor (Scenes have no Lesson number). 25-26 filler + loose_parallel (a character loan from Shonan Junai Gumi, not an adaptation; re-open if SJG proves to contain an Eikichi-vs-Kadena race). 22/23/24/28/34/42-43 filler; no adoption (Fujisawa 原作 + a voice cameo).",
+    ruledBy: 'Sean',
+    ruledOn: '2026-08-26',
+    cite: ["scripts/ingest/research/batch18/out/gto-great-teacher-onizuka.json", "scripts/ingest/research/batch18/verify/gto.md", "https://comic-days.com/atom/series/10834108156636906135"],
+  },
+  {
+    seriesId: 'ajin-demi-human',
+    ruleId: 'T26',
+    value: [
+      { episodes: [23, 24, 25, 26], kind: 'divergence', note: "The genuine studio ending: the SDF seizure, the VX missiles and the tunnel burial have no manga counterpart; the manga's own final wave (Iruma base, F-15, the Flood) is ch 58-85, serialised 2018-2021. No Sakurai credit beyond 原作 (Polygon Pictures page, ja-WP staff) → filler, the A-7 class." },
+      { episodes: [14, 15, 16, 17, 19, 21, 22], kind: 'divergence', note: "Season-wide, systematic divergence inside otherwise adapted episodes. The single biggest change is a renaming rather than a replacement: ja.wikipedia's plot summary states that the second-wave ambush target is 'フォージ安全の甲斐と李' in the manga and '武蔵重工の橋口' in the anime, and Kai and Li are written off in a news report at ep 17 (原作 9巻41話). Other systematic changes, all sourced from ja.wikipedia's per-character 原作/アニメ版 tables: the hit list carries 15 numbered names killed in order instead of 11 unnumbered ones (5巻23話); Tosaki is removed from the list; Wakai's death (7巻29話) is moved forward to ep 14 and Kishi's (5巻24話) to ep 16; the Health Minister is killed at ep 20 where the manga's ryotei ambush leaves him alive; the Anti-Ajin Special Force is legalised and deployed at eps 20-22 where the manga withholds it until the final wave ; Tosaki's fiancee Ai never dies (manga 10巻45話); Sato acquires 10+ extra anime-original Ajin followers (第2期21話)." },
+      { episodes: [15], kind: 'graft', chapters: "23 (Kazuo Sakurai)", note: "The airliner assassination re-uses manga material the anime had skipped: ja.wikipedia's 桜井和夫 entry notes that the method of smuggling the weapon aboard and the cabin conversation 'は、原作の第1ウェーブのグラント製薬への旅客機墜落テロの時と一部同じ描写がされている' — i.e. the manga's first-wave airliner attack on Grant Pharmaceutical (ch 19-20), which S1 ep 11 had replaced with a collapsing building (ja.wikipedia plot footnote, 第1期11話). AllYourAnime independently: 'aspects of his terrorist activity have been adapted from earlier chapters of the manga, specifically the plane terrorist attack that the show replaced with the bombing in the 1st season.'" },
+      { episodes: [16, 17, 19], kind: 'rearranged', chapters: "28 before 27/27.5", note: "The anime adapts ch 28 (Kotobuki and Kaito in juvenile hall) BEFORE ch 27/27.5 (Shimomura's origin): ep 16 pulls ch 28's opening forward, ep 17 adapts ch 28's body, and only ep 19 doubles back for ch 27/27.5. AllYourAnime states it twice — 'the anime skips a couple flashback chapters for Shimomura' (ep 16 article) and 'this means the anime jumps over chapters 27 and 27.5. Instead we open with content from Chapter 28' (ep 17 article), then 'it does utilize a few chapters that were initially skipped over' (ep 19 article). Ordering matters for anchors: the covered set across eps 16-19 is 26, 28, 27, 27.5, not a monotone run." },
+      { episodes: [19], kind: 'abridged', chapters: "27, 27.5", note: "Ch 27/27.5 are severely truncated. ja.wikipedia's 下村泉 アニメ版 note enumerates the cuts and changes: '彼女の過去のエピソードは大幅に省略・変更されている。変更点は戸崎と初めて会った時に亜人の存在を知らないこと、実父は彼女が15歳の時に事故死したこと。省略されたのはバイト先・家庭内・学校での出来事や自殺未遂、義父の強姦未遂など'. AllYourAnime lists the same omissions (the convenience-store job, the drained bank account, the cheating boyfriend, the graveyard scene replaced with an apartment visit)." },
+      { episodes: [20, 24, 26], kind: 'loose_parallel', note: "Anime-original episodes that touch a source beat without adapting it. Ep 20: the Minister's meeting is 'a riff on the same meeting presented in the manga' (ch 29) with the outcome inverted — Sato attends and kills him, where in the manga he skips it out of boredom and the Minister lives. Ep 24: a compressed echo of the Kei/Nakano argument (ch 43) and a Tosaki/Kei reunion conversation 'similar... to one of the manga's latest chapters' (ch 48). Ep 26: the Shimomura-vs-Tanaka duel 'hearkening to the manga's big moment between the two during the Forge Security Arc' (ch 38-39), relocated to the finale. None of these carry source standing on their own." },
+      { episodes: [21], kind: 'loose_parallel', chapters: "31, 31.5 (story position only)", note: "Story position only: the episode sits at ch 31/31.5's place in the run without adapting a scene (the 'Nakano needling' beat is manga content AllYourAnime never places here). T28 → filler + loose_parallel." },
+      { episodes: [22], kind: 'partial', chapters: "32-42 (loose)", note: "Very loose reworking of the second wave: Hirasawa's death (ch 38), Suzumura/Manabe's deaths (ch 40), the tranquiliser / IBM-revival twist (ch 41-42) — plus a separable anime-original tail (VX theft, Hashiguchi, Sokabe). Mixed on the same standard as ep 17." },
+      { episodes: [23], kind: 'loose_parallel', chapters: "43, 44 (echoes)", note: "Nagai's reaction and an Okuyama conversation echo ch 43/44 with different portrayals — contact points comparable to ep 20 → filler (T28); the studio ending starts here." },
+    ],
+    reason: "Batch 18 wave 2 (2026-08-26), verified R24 (14 ja-WP 巻話↔第2期N話 pairs verbatim; AllYourAnime independent), Sean ruled: the batch-12 season-level 'anime-original' premise was WRONG — 14-22 adapt manga ch 23-42; 14/15/16 canon, 17/19/22 mixed, 18/20/21/23-26 filler; only 23-26 are the studio ending; no adoption. C-family follow-ups (ep-13 continue 22→23; series continue 29, not ~43) are a narrow task.",
+    ruledBy: 'Sean',
+    ruledOn: '2026-08-26',
+    cite: ["scripts/ingest/research/batch18/out/ajin-demi-human.json", "scripts/ingest/research/batch18/verify/ajin-demi-human.md", "https://ja.wikipedia.org/wiki/亜人_(漫画)"],
+  },
+  {
+    seriesId: 'chrono-crusade',
+    ruleId: 'T26',
+    value: [
+      { episodes: [22], kind: 'partial', chapters: "v7 (Satella / Fiore crystallisation)", note: "ANNOTATION-ONLY, never a position (same treatment as the stored ep-21 graft). Satella's confrontation with Fiore and the sisters' mutual impalement retells the manga's Eden-battle scene in which Satella instead crystallises herself together with Fiore — both survive there and are recovered in 1994. Manga side: vol 7 (Acts 43-48, Dec 2003); the act is 'Flower of Stone' (Act 47) by title, which I could NOT confirm independently, so no act number should be written into an anchor. The series' adaptation bound remains ch 30 (MangaUpdates). T28: one climactic scene retold inside the studio ending → filler + partial, not mixed. Never write an Act number (47 is unconfirmed)." },
+    ],
+    reason: "Batch 18 wave 2 (2026-08-26), verified R24, Sean ruled: 22-24 filler (the studio ending; Moriyama 原作 only; the manga's own ending printed a month before ep 24 aired); the Satella/Fiore scene is recorded as partial. total_chapters 59 is RIGHT (56 Acts + 2 extras + epilogue). Eps 15-16 → narrow re-look (likely filler).",
+    ruledBy: 'Sean',
+    ruledOn: '2026-08-26',
+    cite: ["scripts/ingest/research/batch18/out/chrono-crusade.json", "scripts/ingest/research/batch18/verify/chrono-crusade.md"],
+  },
+  {
+    seriesId: 'soul-eater',
+    ruleId: 'T26',
+    value: [
+      { episodes: [37], kind: 'partial', chapters: "38 (slivers)", note: "Joe's arrival and an Eruka/Crona beat are ch-38 slivers inside an otherwise original episode (fandom: no corresponding chapters; ja-WP anime-original from 37; AFG chapters []). T28 → filler + partial; keeps the batch-17 loose_parallel." },
+    ],
+    reason: "Batch 18 (2026-08-26) T28 repairs, Sean ruled: 37, 39, 40 → filler — the ch-40 opening scene (39, partial) and the grafted ch-44/45 Medusa deal (40, graft) are fragments inside Bones' original ending; the ties stay as annotations.",
+    ruledBy: 'Sean',
+    ruledOn: '2026-08-26',
+    cite: ["scripts/ingest/research/batch18/verify/soul-eater.md"],
+  },
+  {
+    seriesId: 'dragon-ball-super',
+    ruleId: 'T26',
+    value: [
+      { episodes: [94, 95], kind: 'partial', chapters: "32 (one restaged scene each)", note: "Ep 94 carries the Team U7 assembly at Capsule Corp, ep 95 Goku and Frieza's battered arrival (ch 32) — one restaged scene each inside anime-original two-parters. T28 → filler + partial (same shape as 91)." },
+    ],
+    reason: "Batch 18 (2026-08-26) T28 repairs, Sean ruled: 91, 94, 95 → filler — original episodes with one restaged ch-31 / ch-32 scene each; 78 stays mixed (ch 28's assembly and announcement carry the episode).",
+    ruledBy: 'Sean',
+    ruledOn: '2026-08-26',
+    cite: ["scripts/ingest/research/batch18/verify/dragon-ball-super.md"],
+  },
+  {
+    seriesId: 'fullmetal-alchemist',
+    ruleId: 'T26',
+    value: [
+      { episodes: [24], kind: 'partial', chapters: "15 (fragment)", note: "'Has some adapted content from Chapter 15' (fma.fandom) inside an otherwise Bones-original episode — T28 → filler + partial." },
+      { episodes: [40, 41], kind: 'graft', chapters: "30 (Martel dies inside Al; Bradley's ouroboros)", note: "Chapter 30's Martel-dies-inside-Al beat — Bradley's eyepatch, the sword through the armour gap — is the closing scene of ep 40 and a recall in ep 41, inside Bones' Lior/Dante plotline. The last manga contact of the 2003 series; T28 → filler + graft (Claymore-26 shape), coverage stays on 8/21/29/30/32." },
+    ],
+    reason: "Batch 18 (2026-08-26) T28 repairs, Sean ruled with Cursor: 24, 40, 41 → filler; the ch-15 fragment and the ch-30 Martel beat are recorded as partial/graft so the UI can surface them without painting the rows mixed.",
+    ruledBy: 'Sean',
+    ruledOn: '2026-08-26',
+    cite: ["scripts/ingest/research/batch18/verify/fullmetal-alchemist.md"],
+  },
   // ---- the A-7 studio-ending class: filler + asterisk, ON THE REVIEW LIST
   ...(
     [
       ['claymore', span(24, 26), 'Madhouse outran the manga and wrote its own ending (AFG + wheredoestheanimeleaveoff + sportskeeda).'],
       ['gto-great-teacher-onizuka', [...span(22, 28), 34, 42, 43], 'Anime-original mid-series block (22-28, 34) and the original ending 42-43 after the anime caught the manga (fandom infoboxes N/A; mangashed; wheredoestheanimeleaveoff).'],
-      ['ajin-demi-human', span(14, 26), 'Season 2 is anime-original from the start with a non-canon ending; canon resumes at manga ch 22 (WDTALO + mangashed).'],
       ['chrono-crusade', span(22, 24), 'The anime\'s original ending after departing the manga at ep 13 (Wikipedia lead + MU + ja-WP).'],
       ['sailor-moon', span(167, 172), 'The Nehelenia-revival arc: an anime-original continuation of SuperS\'s villain.'],
-      ['a-certain-scientific-railgun', [13, ...span(15, 24), ...span(41, 48)], 'S1\'s back half (Big Spider / Poltergeist) and S\'s Silent Party are anime-original, director-confirmed; ep 14 excepted (grafts ch 17).'],
-      ['twin-star-exorcists', span(21, 50), 'The anime\'s own serialized finale that never returns to the manga and contradicts it (Yuto dies here, survives there) — studio ending, NOT author consensus; explicitly a review item, not a quiet demotion (T4-GLOSSARY §3/§7).'],
+      ['twin-star-exorcists', span(21, 50), 'The anime\'s own serialized finale (列島覇乱篇 21-31 / 天地鳴動篇 32-40 / 破星篇 41-50) never returns to the manga and contradicts it (Yuto dies here, survives there). RULED FILLER, batch 18 wave 2 (verified R24): Sukeno\'s only credit is character-DESIGN 監修 (animatetimes: デザイン監修); no story credit; no sequel or game carries the ending; the manga ended with its own ending (ch 134, 2024); Sukeno later imported the anime\'s Basara DESIGNS into the manga (Suzu ch 78, Chijiwa/Yamato/Momochi ch 88, Kinasa ch 104 — alive there) while refusing its EVENTS; and in 2020 he wrote that his goal is a from-episode-1 REMAKE, not a season 2 (@sukeno0723, 2020-07). Community consensus and the author agree: not canon.'],
     ] as [string, number[], string][]
   ).map(([seriesId, episodes, why]) => ({
     seriesId,
@@ -215,4 +340,10 @@ export const ENTRIES: RulingEntry<StandingAnnotation[]>[] = [
   })),
 ];
 
-export const STANDING_ANNOTATIONS: Record<string, StandingAnnotation[]> = Object.fromEntries(ENTRIES.map((e) => [e.seriesId, e.value]));
+// MERGED per series — a series may carry several rulings (its A-7 spread
+// entry plus batch-18 entries); last-wins silently dropped railgun's adopted
+// rows on 2026-08-26 (caught by the post-heal note check).
+export const STANDING_ANNOTATIONS: Record<string, StandingAnnotation[]> = ENTRIES.reduce<Record<string, StandingAnnotation[]>>((acc, e) => {
+  (acc[e.seriesId] ??= []).push(...e.value);
+  return acc;
+}, {});

@@ -145,7 +145,7 @@ export const ENTRIES: RulingEntry<EpisodeTypes>[] = [
   {
     seriesId: 'sailor-moon',
     ruleId: 'T6',
-    value: { ...range(167, 172, 'filler') },
+    value: { 167: 'mixed', 168: 'mixed', ...range(169, 172, 'filler') }, // batch 18 wave 2: 167-168 play never-adapted Acts 38/44 (+ the Eternal debut)
     reason: "Eps 167-172: the Nehelenia-revival arc, an anime-original continuation of SuperS's villain — made for the anime, standing as canon. T4.3 (T27, 2026-08-26): anime-only-canon → filler (adheres to no source; the studio-ending class A-7 carries a divergence annotation and stays on the review list — twin-star 21-50 explicitly, T4-GLOSSARY §7).",
     ruledBy: 'session',
     ruledOn: '2026-08-24',
@@ -372,7 +372,9 @@ export const ENTRIES: RulingEntry<EpisodeTypes>[] = [
     seriesId: 'gto-great-teacher-onizuka',
     ruleId: 'T6',
     value: {
-      ...range(22, 28, 'filler'),
+      ...range(22, 26, 'filler'),
+      27: 'mixed', // batch 18 wave 2 (T28): adapts the Toroko Oppai side story serialized INSIDE GTO — the episode's plot IS the source
+      28: 'filler',
       ...range(34, 34, 'filler'),
       ...range(42, 43, 'filler'),
     },
@@ -386,9 +388,10 @@ export const ENTRIES: RulingEntry<EpisodeTypes>[] = [
     seriesId: 'a-certain-scientific-railgun',
     ruleId: 'T6',
     value: {
-      ...range(13, 13, 'filler'),
-      ...range(15, 24, 'filler'),
-      ...range(41, 48, 'filler'),
+      13: 'filler',
+      ...range(15, 24, 'canon'), // batch 18 wave 2: canon + adopted{author} by INCORPORATION (Kamachi wrote the arcs' events into the source line)
+      41: 'mixed', // adapts the ch-39 special + ch 40's rat scene inside original framing (T28: a whole chapter counts)
+      ...range(42, 48, 'canon'),
     },
     reason:
       "S1's back half (Big Spider / Poltergeist, 13 + 15-24) and S's Silent Party (41-48) are anime-original (director-confirmed); ep 14 EXCEPTED — it grafts manga ch 17 (animefillerlist + fandom arc pages + Wikipedia; research batch 12). T4.3 (T27, 2026-08-26): anime-only-canon → filler (adheres to no source; the studio-ending class A-7 carries a divergence annotation and stays on the review list — twin-star 21-50 explicitly, T4-GLOSSARY §7).",
@@ -399,7 +402,7 @@ export const ENTRIES: RulingEntry<EpisodeTypes>[] = [
   {
     seriesId: 'ajin-demi-human',
     ruleId: 'T6',
-    value: range(14, 26, 'filler'),
+    value: { 14: 'canon', 15: 'canon', 16: 'canon', 17: 'mixed', 18: 'filler', 19: 'mixed', 20: 'filler', 21: 'filler', 22: 'mixed', 23: 'filler', 24: 'filler', 25: 'filler', 26: 'filler' }, // batch 18 wave 2: 14-22 adapt ch 23-42 (batch-12 premise wrong); 23-26 the studio ending
     reason:
       'S2 (14-26) is anime-original from the start with a non-canon ending (WDTALO + mangashed + per-episode breakdown; research batch 12); canon resumes at manga ch 22. Contrary to the later T11 class; parked under A-7. T4.3 (T27, 2026-08-26): anime-only-canon → filler (adheres to no source; the studio-ending class A-7 carries a divergence annotation and stays on the review list — twin-star 21-50 explicitly, T4-GLOSSARY §7).',
     ruledBy: 'session',
@@ -520,9 +523,9 @@ export const ENTRIES: RulingEntry<EpisodeTypes>[] = [
   {
     seriesId: 'fullmetal-alchemist',
     ruleId: 'T6',
-    value: {"8": "mixed", "11": "canon", "12": "canon", "16": "canon", "21": "mixed", "22": "canon", "24": "mixed", "29": "mixed", "30": "mixed", "31": "filler", "32": "mixed", "35": "filler", "36": "filler", "37": "canon", "38": "filler", "39": "filler", "40": "mixed", "41": "mixed", "42": "filler", "43": "filler", "44": "filler", "45": "filler", "46": "filler", "47": "filler", "48": "filler", "49": "filler", "50": "filler", "51": "filler"},
+    value: {"8": "mixed", "11": "canon", "12": "canon", "16": "canon", "21": "mixed", "22": "canon", "24": "filler", "29": "mixed", "30": "mixed", "31": "filler", "32": "mixed", "35": "filler", "36": "filler", "37": "canon", "38": "filler", "39": "filler", "40": "filler", "41": "filler", "42": "filler", "43": "filler", "44": "filler", "45": "filler", "46": "filler", "47": "filler", "48": "filler", "49": "filler", "50": "filler", "51": "filler"},
     reason:
-      "Batch 18 (2026-08-26), verified R24, Sean ruled: manga content continues through ep 34 and resurfaces in 40-41 (ch 30, Martel inside Al) — 8/21/24/29/30/32/40/41 mixed, 16/22 canon (fma.fandom 'adapted from' fields verified verbatim); eps 11-12 adapt the first light novel The Land of Sand → canon + side_source (Itachi Shinden precedent); 31/35-36/38-39 anime-original connective → filler; 42-51 Bones' original finale → FILLER for manga standing — Arakawa ORDERED a different ending (Asahi 2005-07-25, her own words), holds no 監修 credit, 'did not write for the television series'; authorised parallel continuity is a divergence annotation, never adopted{author} (the kinnikuman rule). Ep 37 repair filler → canon: adapts Arakawa's bonus chapters + a novel story, the same basis ep 13 is stored canon on.",
+      "Batch 18 (2026-08-26), verified R24, Sean ruled: manga content continues through ep 34 and resurfaces in 40-41 (ch 30, Martel inside Al) — 8/21/24/29/30/32/40/41 mixed, 16/22 canon (fma.fandom 'adapted from' fields verified verbatim); eps 11-12 adapt the first light novel The Land of Sand → canon + side_source (Itachi Shinden precedent); 31/35-36/38-39 anime-original connective → filler; 42-51 Bones' original finale → FILLER for manga standing — Arakawa ORDERED a different ending (Asahi 2005-07-25, her own words), holds no 監修 credit, 'did not write for the television series'; authorised parallel continuity is a divergence annotation, never adopted{author} (the kinnikuman rule). Ep 37 repair filler → canon: adapts Arakawa's bonus chapters + a novel story, the same basis ep 13 is stored canon on. T28 (2026-08-26, Sean): 24/40/41 → filler — a ch-15 fragment; ch 30's Martel beat as a closer and a recall inside Bones' Lior/Dante plot (graft annotations); coverage stays on 8/21/29/30/32.",
     ruledBy: 'Sean',
     ruledOn: '2026-08-26',
     cite: ["scripts/ingest/research/batch18/out/fullmetal-alchemist.json", "scripts/ingest/research/batch18/verify/fullmetal-alchemist.md", "https://web.archive.org/web/20050728025135/http://www.asahi.com/culture/theater/TKY200507250335.html", "https://fma.fandom.com/wiki/Episode_40_(2003_Anime)"],
@@ -530,9 +533,9 @@ export const ENTRIES: RulingEntry<EpisodeTypes>[] = [
   {
     seriesId: 'dragon-ball-super',
     ruleId: 'T6',
-    value: {"16": "filler", "17": "filler", "22": "filler", "50": "filler", "52": "filler", "71": "filler", "72": "filler", "78": "mixed", "79": "filler", "80": "filler", "81": "filler", "90": "filler", "91": "mixed", "94": "mixed", "95": "mixed"},
+    value: {"16": "filler", "17": "filler", "22": "filler", "50": "filler", "52": "filler", "71": "filler", "72": "filler", "78": "mixed", "79": "filler", "80": "filler", "81": "filler", "90": "filler", "91": "filler", "94": "filler", "95": "filler"},
     reason:
-      "Batch 18 (2026-08-26), verified R24, Sean ruled: Toriyama's outline is commissioned text expanded by Toei screenwriters (ja.wikipedia verbatim; no 鳥山 in the 脚本 table) → no author adoption; 16/17/22/50/52/71/72/79-81/90 filler (fandom: entire events exclusive to the anime); 78 mixed (manga ch 28 assembly + announcement; chapters '28 (partial)' — ch 30 pairs with eps 82-83, not 78), 91 mixed (ch 31 Buu hibernation), 94-95 mixed on the SAME standard as 91 (one restaged ch-32 scene each; fandom infobox Manga = ch 32).",
+      "Batch 18 (2026-08-26), verified R24, Sean ruled: Toriyama's outline is commissioned text expanded by Toei screenwriters (ja.wikipedia verbatim; no 鳥山 in the 脚本 table) → no author adoption; 16/17/22/50/52/71/72/79-81/90 filler (fandom: entire events exclusive to the anime); 78 mixed (manga ch 28 assembly + announcement; chapters '28 (partial)' — ch 30 pairs with eps 82-83, not 78), 91 mixed (ch 31 Buu hibernation), 94-95 mixed on the SAME standard as 91 (one restaged ch-32 scene each; fandom infobox Manga = ch 32). T28 (2026-08-26, Sean): 91/94/95 → filler — original episodes with one restaged ch-31 / ch-32 scene each (partial annotations); 78 stays mixed.",
     ruledBy: 'Sean',
     ruledOn: '2026-08-26',
     cite: ["scripts/ingest/research/batch18/out/dragon-ball-super.json", "scripts/ingest/research/batch18/verify/dragon-ball-super.md", "https://ja.wikipedia.org/wiki/ドラゴンボール超", "https://dragonball.fandom.com/wiki/Dragon_Ball_Super_outline"],
@@ -550,9 +553,9 @@ export const ENTRIES: RulingEntry<EpisodeTypes>[] = [
   {
     seriesId: 'soul-eater',
     ruleId: 'T6',
-    value: {"37": "mixed", "39": "mixed", "40": "mixed", "41": "filler", "42": "filler", "43": "filler", "44": "filler", "45": "filler", "46": "filler", "47": "filler", "48": "filler", "49": "filler", "50": "filler", "51": "filler"},
+    value: {"37": "filler", "39": "filler", "40": "filler", "41": "filler", "42": "filler", "43": "filler", "44": "filler", "45": "filler", "46": "filler", "47": "filler", "48": "filler", "49": "filler", "50": "filler", "51": "filler"},
     reason:
-      "Batch 18 (2026-08-26), verified R24, Sean ruled: ep 38 is the last row adapting chapters; 39 mixed (ch 40's opening scene — fandom states the link, en-WP both sides), 40 mixed (ch 44 tail + ch 45 opening grafted, bidirectional fields); 41-51 Bones' original ending with no Ohkubo credit (archived TV Tokyo staff page; ja-WP) → filler, the A-7 class, divergence-annotated. Ep 37 repair canon → mixed: two sources now say no chapter standing (fandom 'no corresponding chapters', ja-WP anime-original from 37; AFG chapters []), ch 38 slivers only — parity with 39.",
+      "Batch 18 (2026-08-26), verified R24, Sean ruled: ep 38 is the last row adapting chapters; 39 mixed (ch 40's opening scene — fandom states the link, en-WP both sides), 40 mixed (ch 44 tail + ch 45 opening grafted, bidirectional fields); 41-51 Bones' original ending with no Ohkubo credit (archived TV Tokyo staff page; ja-WP) → filler, the A-7 class, divergence-annotated. Ep 37 repair canon → mixed: two sources now say no chapter standing (fandom 'no corresponding chapters', ja-WP anime-original from 37; AFG chapters []), ch 38 slivers only — parity with 39. T28 (2026-08-26, Sean): 37/39/40 → filler — a ch-38 sliver, the ch-40 opening scene, the grafted ch-44/45 deal, each inside Bones' original ending; the ties are annotations.",
     ruledBy: 'Sean',
     ruledOn: '2026-08-26',
     cite: ["scripts/ingest/research/batch18/out/soul-eater.json", "scripts/ingest/research/batch18/verify/soul-eater.md", "https://souleater.fandom.com/wiki/Chapter_40", "https://ja.wikipedia.org/wiki/ソウルイーター"],

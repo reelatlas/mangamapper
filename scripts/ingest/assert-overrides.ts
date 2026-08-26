@@ -87,12 +87,12 @@ async function assertStandings() {
   console.log(`[assert-overrides] standings (T27): ${rows.length} anime-only-canon rows → source-kind standing${DRY ? ' — DRY RUN' : ''}`);
 }
 
-// T26: the ruled override annotations exist for every row they name — and
-// for the three OVERRIDE kinds (adopted / side_source / retconned) the map is
-// the ONLY writer, so a stored row of those kinds the map no longer names is
-// stale and is removed (batch 18: boruto 282-286 moved from adopted{community}
-// to side_source; the old adopted rows must not linger under the PK's kind).
-const OVERRIDE_KINDS = new Set(['adopted', 'side_source', 'retconned']);
+// T26: the ruled annotations exist for every row the map names — stamped
+// origin 'ruling' — and every 'ruling' row the map no longer names is stale
+// and is removed (batch 18: boruto 282-286 moved from adopted{community} to
+// side_source; ajin's A-7 divergence spread shrank to 23-26; world-trigger 48
+// divergence → side_story). Research-written rows ('research') are a batch
+// apply's, never the map's to delete.
 async function assertStandingAnnotations() {
   let n = 0, removed = 0;
   for (const [sid, list] of Object.entries(STANDING_ANNOTATIONS)) {
@@ -101,14 +101,14 @@ async function assertStandingAnnotations() {
       for (const ep of a.episodes) {
         n++;
         want.add(`${ep}#${a.kind}`);
-        if (!DRY) await upsertAnnotation({ series_id: sid, episode: ep, kind: a.kind, basis: a.basis ?? null, chapters: a.chapters ?? null, note: a.note });
+        if (!DRY) await upsertAnnotation({ series_id: sid, episode: ep, kind: a.kind, basis: a.basis ?? null, chapters: a.chapters ?? null, note: a.note, origin: 'ruling' });
       }
     }
-    const stored = await selectAll<{ episode: number; kind: string }>('episode_annotations', 'episode, kind', (q) => q.eq('series_id', sid).in('kind', [...OVERRIDE_KINDS]));
+    const stored = await selectAll<{ episode: number; kind: string }>('episode_annotations', 'episode, kind', (q) => q.eq('series_id', sid).eq('origin', 'ruling'));
     for (const r of stored) {
       if (want.has(`${r.episode}#${r.kind}`)) continue;
       removed++;
-      console.log(`  ${sid} ep${r.episode} ${r.kind}: not in STANDING_ANNOTATIONS → removed (stale override annotation)`);
+      console.log(`  ${sid} ep${r.episode} ${r.kind}: ruling row not in STANDING_ANNOTATIONS → removed (stale)`);
       if (!DRY) {
         const { error } = await db.from('episode_annotations').delete().eq('series_id', sid).eq('episode', r.episode).eq('kind', r.kind);
         if (error) throw new Error(`${sid} ep${r.episode}: ${error.message}`);
@@ -116,7 +116,7 @@ async function assertStandingAnnotations() {
     }
     if (!DRY) await db.from('series').update({ asterisk_review: 'pending' }).eq('id', sid).is('asterisk_review', null);
   }
-  console.log(`[assert-overrides] standing annotations (T26): ${n} rows asserted, ${removed} stale override rows removed, over ${Object.keys(STANDING_ANNOTATIONS).length} series${DRY ? ' — DRY RUN' : ''}`);
+  console.log(`[assert-overrides] standing annotations (T26): ${n} rows asserted, ${removed} stale ruling rows removed, over ${Object.keys(STANDING_ANNOTATIONS).length} series${DRY ? ' — DRY RUN' : ''}`);
 }
 
 async function main() {

@@ -70,7 +70,7 @@
 - `C8` AFG continue-from is reading guidance, not the frontier — aka `continue-from is guidance`, `continue-from-is-guidance`, `sanity band`, `40-chapter band`, `three-numbers model`
 - `C9` Default continue = anchor end + 1 (superseded by C2) *(superseded)* — aka `continue-reading points`, `end+1 default`, `default continue = end + 1`, `apply-continue-points`
 
-**T — Typing & taxonomy** (27)
+**T — Typing & taxonomy** (28)
 - `T1` Episode-type vocabulary: four stored tokens — aka `four tokens`, `AFL class map`, `CLASS_TO_TYPE`, `episodes.type vocabulary`, `type_corrections allowed types`
 - `T2` Episode-type semantics (Sean 2026-08-25) — aka `episode-type semantics`, `Sean's vocabulary`, `typing vocabulary`, `filler = zero canon`, `consensus-canon`, `mixed = canon AND non-canon`
 - `T3` Filler = outside both canons (b17 D3 form) *(superseded)* — aka `b17 D3`, `outside both canons`, `b17 D3 form`
@@ -98,6 +98,7 @@
 - `T25` Source is series identity: the SOURCE_KINDS registry — aka `SOURCE_KINDS`, `source kinds registry`, `source-kinds`, `D-9`, `source is identity`, `source is series identity`, `SOURCE_TYPE_OVERRIDES`, `hasInstrument`, `hasSource vs hasInstrument`, `series_without_source_kind`, `studio original`, `fail closed source`, `visual novel source`, `game source`
 - `T26` Overrides are annotations, never a fourth episode type — aka `overrides are annotations`, `adopted annotation`, `adopted`, `retconned`, `side_source`, `adopted basis`, `community canon is not a type`, `no fourth type`, `D-10 annotations`, `annotation_invalid`
 - `T27` Standing is canon / mixed / filler, relative to the source — aka `three standings`, `canon mixed filler only`, `anime-only-canon retired`, `AFL anime_canon mapping`, `aflAnimeCanon`, `afl_anime_canon_unruled`, `standing migration`, `D-10 standing`, `anime only retired`
+- `T28` mixed needs a substantial share: the episode's job decides — aka `materiality bar for mixed`, `episode job test`, `what is this episode's job`, `fragment is an annotation`, `slivers are not mixed`, `Claymore-26 shape`, `mixed threshold`
 
 **N — Numbering, counts & chapter spaces** (31)
 - `N1` Episode-floor invariant — aka `episode-floor invariant`, `episode floor`, `floor rule`, `EXTRAS_ADOPTED`
@@ -1348,9 +1349,9 @@ series.source_type names what the anime ADAPTS and is derived ONLY by deriveSour
 
 ### T26 · Overrides are annotations, never a fourth episode type
 
-An author / studio / community override of the source is an ANNOTATION, never a type: the episode's standing stays canon / mixed / filler relative to the identified source (T25), and the exception is a first-class record — kind 'adopted' (REQUIRED basis: author | studio | community), 'retconned' (material later dropped from canon), or 'side_source' (adapts a work other than the series' source; the work is named in note). Consensus canon that is not in the source = canon + adopted + a null mapping (an honest dash, no strip units; A1 stands — filler never anchors). The vocabulary is closed (lib/annotations.ts ANNOTATION_KINDS), mirrored by the DB constraints, written only through upsertAnnotation, and a stored record the gate would refuse is annotation_invalid. 'Community canon' is neither a badge nor a type.
+An author / studio / community override of the source is an ANNOTATION, never a type: the episode's standing stays canon / mixed / filler relative to the identified source (T25), and the exception is a first-class record — kind 'adopted' (REQUIRED basis: author | studio | community; 'author' = the source's author wrote, supervised, declared, or INCORPORATED THE MATERIAL'S EVENTS into the source line — a specific act per arc, never a blanket credit; importing names or designs while contradicting the events is not adoption), 'retconned' (material later dropped from canon), or 'side_source' (adapts a work other than the series' source; the work is named in note). Consensus canon that is not in the source = canon + adopted + a null mapping (an honest dash, no strip units; A1 stands — filler never anchors). The vocabulary is closed (lib/annotations.ts ANNOTATION_KINDS), mirrored by the DB constraints, written only through upsertAnnotation, and a stored record the gate would refuse is annotation_invalid. 'Community canon' is neither a badge nor a type.
 
-*Why:* T4.0 D-10 (Sean, 2026-08-26): Black Clover 130-157 (author-supervised), Boruto 221-286, Shippuden 452-457 (the Itachi Shinden novel), Evangelion's EoE (studio), X's only ending (community, accepted for lack of an ending) were one class typed three ways (anime-only-canon / filler+asterisk / mixed); a fourth type would have hidden WHO adopted the material and why. The basis is required because 'adopted' without it is not a ruling.
+*Why:* T4.0 D-10 (Sean, 2026-08-26): Black Clover 130-157 (author-supervised), Boruto 221-286, Shippuden 452-457 (the Itachi Shinden novel), Evangelion's EoE (studio), X's only ending (community, accepted for lack of an ending) were one class typed three ways (anime-only-canon / filler+asterisk / mixed); a fourth type would have hidden WHO adopted the material and why. The basis is required because 'adopted' without it is not a ruling. Batch 18 sharpened 'author' twice: Kodachi's blanket story-supervision credit on Boruto (also covers undisputed filler) was REJECTED; Kamachi's incorporation of the Railgun anime arcs' EVENTS into his own manga and novels (ch 32's ep-20 photo; Therestina in prison; Saten regretting she let Febrie/Janie go) was ACCEPTED — while Sukeno importing Twin Star's anime DESIGNS and refusing its events stayed filler.
 
 - ruled Sean 2026-08-26 (docs/restructure/T4-GLOSSARY.md §1, §3 (D-10); restructure T4.2)
 - layer **writer**
@@ -1373,6 +1374,20 @@ episodes.type is exactly canon | mixed | filler, each relative to the series' id
 - witnesses: puella-magi-madoka-magica, ace-attorney, black-clover, claymore, fullmetal-alchemist
 - aliases: three standings, canon mixed filler only, anime-only-canon retired, AFL anime_canon mapping, aflAnimeCanon, afl_anime_canon_unruled, standing migration, D-10 standing, anime only retired
 - see: T25, T26, T6, A1, T13, T14, G51
+
+### T28 · mixed needs a substantial share: the episode's job decides
+
+An episode is `mixed` only when a SUBSTANTIAL share of its own plot is the source — the adapted scenes carry the episode's story (a chapter, an omake, a side story or a gag special that IS the episode's plot all count; community 'filler' meaning 'not mainline' does not override a real adaptation). When an original plot merely quotes a fragment — a cameo, a one-off graft, a transplanted single beat, a restaged closing scene, a recall, a rehash — the episode is `filler` and the tie to the source is RECORDED as an annotation (graft / partial / loose_parallel with the chapters and the why), never as the type. The test is 'what is this episode's job?': the studio ending that quotes one manga scene is filler + graft (Claymore 26); the episode that adapts a whole special chapter inside original framing is mixed (Railgun 41). Consensus on a block is a strong prior that one overlap does not overturn.
+
+*Why:* Batch 18 wave 2 (Sean, 2026-08-26, with Cursor): verifiers were typing rows mixed on single confirmed scenes — Claymore 24 (the opening section of Scene 60 before the studio ending takes over), soul-eater 40 (Medusa's deal grafted into the original ending), DBS 91/94/95 (one restaged scene each), FMA 40-41 (ch 30's Martel beat as a closer / a recall) — while the community reads every one of those blocks as non-canon. The type must say what the episode IS; the annotation keeps every tie so the UI can surface 'the ch-30 beat is here' without painting the row mixed. Coverage and the frontier stay on the genuinely adapted rows, which is honest.
+
+- ruled Sean 2026-08-26 (batch 18 wave 2 ruling; scripts/ingest/research/batch18/PROTOCOL.md (pinned for wave 3))
+- layer **process**
+- enforced: [research/batch18/PROTOCOL.md](../scripts/ingest/research/batch18/PROTOCOL.md) · [research/batch18/curate.ts](../scripts/ingest/research/batch18/curate.ts)
+- **audit: none — automation backlog**
+- witnesses: claymore, a-certain-scientific-railgun, soul-eater, dragon-ball-super, fullmetal-alchemist
+- aliases: materiality bar for mixed, episode job test, what is this episode's job, fragment is an annotation, slivers are not mixed, Claymore-26 shape, mixed threshold
+- see: T7, T8, A10, T26, T27, A43
 
 ## N — Numbering, counts & chapter spaces
 
@@ -4115,6 +4130,7 @@ Any component that renders episode-level data consumes the HYDRATED series (getB
 - claimed continuation → handoff → `I37`
 - CLASS_TO_TYPE → `T1`
 - Claymore precedent → `G26`
+- Claymore-26 shape → `T28`
 - close the loop → `P29`
 - community canon is not a type → `T26`
 - community count rule → `N3`
@@ -4235,6 +4251,7 @@ Any component that renders episode-level data consumes the HYDRATED series (getB
 - episode 0 is real → `G7`
 - episode display = FIRST chapter animated → `A13`
 - episode floor → `N1`
+- episode job test → `T28`
 - episode totals derivation → `N34`
 - episode_annotations → `A43`
 - EPISODE_TYPE_OVERRIDES → `T6`
@@ -4306,6 +4323,7 @@ Any component that renders episode-level data consumes the HYDRATED series (getB
 - fractional staging + disposition → `G46`
 - fractional watch-order positions → `N32`
 - fractional wiki labels prove a shared space → `N10`
+- fragment is an annotation → `T28`
 - frame check after T4.0 → `P36`
 - franchise baseline → `I15`
 - franchise evaluation → `I18`
@@ -4442,6 +4460,7 @@ Any component that renders episode-level data consumes the HYDRATED series (getB
 - match duplicate → `I9`
 - match ladder → `I8`
 - matching ladder → `I8`
+- materiality bar for mixed → `T28`
 - MAX_CHAIN → `I22`
 - MediaWiki API not HTML → `R6`
 - merge-never-replace → `I29`
@@ -4451,6 +4470,7 @@ Any component that renders episode-level data consumes the HYDRATED series (getB
 - mid-chapter straddle → `C1`
 - missed edge deploy → `P3`
 - mixed = canon AND non-canon → `T2`
+- mixed threshold → `T28`
 - Monogatari precedent → `N8`
 - monotonic boundaries → `V1`
 - monotonic starts → `V1`
@@ -4682,6 +4702,7 @@ Any component that renders episode-level data consumes the HYDRATED series (getB
 - Slime ← Cells at Work class → `V5`
 - Slime/4KOTA class → `N28`
 - sliver rule → `A10`
+- slivers are not mixed → `T28`
 - small-sample rule → `R28`
 - source is identity → `T25`
 - source is series identity → `T25`
@@ -4820,6 +4841,7 @@ Any component that renders episode-level data consumes the HYDRATED series (getB
 - watch-order v2 unit rendering → `N32`
 - wave cap → `P12`
 - wave cap 6-8 → `P12`
+- what is this episode's job → `T28`
 - When They Cry case → `G44`
 - whole-series verifier → `P19`
 - wiki fill gates → `G45`
@@ -4839,6 +4861,6 @@ Any component that renders episode-level data consumes the HYDRATED series (getB
 
 ## Scoreboard
 
-- rules: 263 (live 246, planned 10, superseded 7)
+- rules: 264 (live 247, planned 10, superseded 7)
 - live data rules with no audit class (the automation backlog): 87
-- by layer: writer 135 · display 23 · both 22 · process 83
+- by layer: writer 135 · display 23 · both 22 · process 84

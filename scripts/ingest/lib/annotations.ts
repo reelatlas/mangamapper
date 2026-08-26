@@ -36,6 +36,8 @@ export type AnnotationRow = {
   chapters?: string | null;
   note?: string | null;
   basis?: AdoptedBasis | null;
+  /** who owns the row: 'ruling' = written from lib/rulings/standing-annotations.ts (reconciled by the healer); 'research' = a batch apply (default) */
+  origin?: 'ruling' | 'research';
 };
 
 /** the shape rules, as data — the migration's constraints say the same thing */
@@ -55,6 +57,6 @@ export async function upsertAnnotation(a: AnnotationRow, opts?: { ignoreDuplicat
   const { db } = await import('./db'); // lazy: the vocabulary + shape rules above are pure and unit-tested without a DB
   const { error } = await db
     .from('episode_annotations')
-    .upsert({ series_id: a.series_id, episode: a.episode, kind: a.kind, chapters: a.chapters ?? null, note: a.note ?? null, basis: a.basis ?? null }, { ignoreDuplicates: opts?.ignoreDuplicates ?? false });
+    .upsert({ series_id: a.series_id, episode: a.episode, kind: a.kind, chapters: a.chapters ?? null, note: a.note ?? null, basis: a.basis ?? null, origin: a.origin ?? 'research' }, { ignoreDuplicates: opts?.ignoreDuplicates ?? false });
   if (error) throw new Error(`annotation ${a.series_id} ep ${a.episode} ${a.kind}: ${error.message}`);
 }

@@ -607,6 +607,56 @@
    durable guard. Lesson for the floor rule: a >2 overshoot sourced from a
    SINGLE chart row with no corroborating content anywhere is a typo
    candidate, not an adoption candidate.
+58. ✅ **BATCH 18 WAVE 2 — THE A-7 STUDIO-ENDING CLASS: researched, verified,
+   ruled, applied; rule `T28` (the materiality bar) and the incorporation
+   basis ruled (2026-08-26).** Eight Opus verdicts (~1.37M) + seven Fable
+   verifications (~0.83M), all sound. **Not one A-7 ending is adopted by
+   credit** — every author is 原作-only (Sukeno, Yagi, Fujisawa, Sakurai,
+   Moriyama, Takeuchi); three mangas printed their own endings; Sukeno
+   tweeted (2020) that he wants a from-episode-1 REMAKE. But "the ending is
+   anime-original" was too coarse in five of eight: **Ajin** 14-22 adapt
+   manga ch 23-42 (14 ja-WP 巻話↔第2期N話 pairs verbatim; the batch-12 premise
+   was wrong) → 14/15/16 canon, 17/19/22 mixed, only 23-26 the studio
+   ending; **Sailor Moon** 167-168 play never-adapted Acts 38/44 → mixed;
+   **GTO** 27 adapts the Toroko Oppai side story serialized INSIDE GTO →
+   mixed + side_story (never side_source). **Two rulings by Sean (with
+   Cursor):** (1) **T28** — `mixed` needs a substantial, story-carrying share
+   of the episode's own plot ("what is this episode's job?"); an original
+   plot that quotes a fragment is FILLER and the tie is a mandatory
+   annotation (graft / partial / loose_parallel with chapters); omake / side
+   stories that ARE the plot count; consensus on a block is a strong prior.
+   Applied to wave 2 (claymore 24/26, chrono 22, ajin 21/23 → filler + note)
+   and as REPAIRS to wave 1 (soul-eater 37/39/40, DBS 91/94/95, FMA
+   24/40/41 → filler + note; the Martel / Buu facts are on the rows as
+   graft/partial, verified by direct query). Railgun 41 stays mixed (adapts a
+   whole special chapter). (2) **The incorporation basis** — `adopted{author}`
+   extends to the source's author INCORPORATING the anime material's EVENTS
+   into the source line (Railgun: manga ch 32's ep-20 photo; Therestina in
+   prison in Souyaku v7; Saten's "I never should have let them go" in the
+   2022 novel — all Kamachi's prose) → 15-24 and 42-48 canon + adopted with
+   an honest gradient; importing DESIGNS while refusing EVENTS does not
+   adopt (Twin Star) and a blanket credit never did (Boruto B). T26's
+   statement carries the sharpened basis. **Mechanisms:** annotation
+   provenance column `origin` (ruling | research; migration 20260826300000 +
+   backfill 310000) — the healer stamps map rows 'ruling' and reconciles
+   stale ruling rows of ANY kind (removed: world-trigger 48's divergence,
+   ajin's shrunken spread); `STANDING_ANNOTATIONS` now MERGES entries per
+   series (last-wins had silently dropped railgun's adopted rows after the
+   first heal — caught by a direct post-heal note query, fixed, re-healed);
+   PROTOCOL pinned with T28 for wave 3; nine traps captured to
+   research-agent.md. Heal: 36 types, 321 annotation rows asserted.
+   Census: afl_anime_canon_unruled 16 (unchanged — wave-2 rows were already
+   T6-ruled), ruling_violation 0, A1 spike 0, display 220/0. Moved:
+   rearranged_zone_unanchored 11→11 after acks (ajin 15/16/17/19 ENTER the
+   class — canon/mixed rows adapting ch 23-28 with no anchor: the honest
+   anchoring queue for the narrow task; railgun 41 and sailor-moon 167/168
+   are zone-acknowledged, no anchor by design; soul-eater 40 LEFT it →
+   filler); DBS anchor_gap_research 105→102 (three rows → filler). Edges
+   deployed.
+   Batch-18 narrow tasks queued: claymore 21-23 frontier (Scene 57/58/59),
+   ajin continue (ep-13 22→23; series 29 not 43), soul-eater continue
+   (37 vs 40), chrono 15-16 re-look, gto 25-26 SJG race check, railgun ep 25
+   / ep 14 knock-ons, DBS Resurrection 'F' side_source. Wave 3 parked.
 57. ✅ **BATCH 18 WAVE 1 — RESEARCHED, VERIFIED, RULED, APPLIED (2026-08-26;
    the first batch under the three-standing model).** Seven Opus verdicts
    (~1.13M) on the big `afl_anime_canon_unruled` blocks, six Fable

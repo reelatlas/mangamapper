@@ -58,6 +58,38 @@ Read both, fully:
 
 ## Traps that have cost real time
 
+- **A season typed from one "the ending is anime-original" claim** can be
+  wrong for most of the season (Ajin S2: 14-22 adapt ch 23-42; only 23-26
+  are the studio ending). Type the A-7 class ROW BY ROW.
+- **AFL publishes two contradictory lists for some shows** (Boruto: 32-35,
+  70, 104-105 differ) and has NO page at all for others (Twin Star, World
+  Trigger) — "AFL: undefined" in a context means no page; AFG is the source.
+- **ja.wikipedia per-character 原作/アニメ版 tables carry 巻話 ↔ 第N期M話 pairs**
+  — a strong per-episode source when the episode list has no chapter column.
+- **A blanket story-supervision credit is not an adoption basis** (Boruto's
+  Kodachi ストーリー監修 also covers undisputed filler); a per-arc act by the
+  source's author is (Kishimoto's Time Slip story; Kamachi writing the
+  Railgun arcs' events into his own manga and novels). Importing DESIGNS
+  while refusing the EVENTS is evidence AGAINST adoption (Twin Star).
+- **A side story serialized inside the source IS the source** (GTO's Toroko
+  Oppai Scenes sit between Lessons 92/93 and 97/98) — mixed/canon, never
+  side_source. A licensed novel is side_source (Shippuden 452-457; Boruto
+  Sasuke Retsuden; FMA 2003 eps 11-12).
+- **Fan comparisons can pair a chapter serialized AFTER the episode**
+  (GTO Lesson 143 vs ep 24; souleater.fandom's "anime came first" on eps
+  40/47) — check tankōbon dates. AllYourAnime's per-article chapter header
+  is a reading-position header, not an adaptation claim.
+- **Garden-path sentences**: en-WP "an original storyline not found in the
+  manga written by Yagi" — "written by Yagi" modifies the manga.
+- **Wiki infobox fields lie in both directions**: beyblade.fandom's empty
+  `AppearManga` is not absence; fandom `writer =` credits on Outlaw Star
+  are junk (Yatate on eps 8/19); Narutopedia's `boruto=Yes/No` is
+  unreliable — only `chapters=` is. Corroborate with chapter character
+  lists or ja-WP.
+- **Every existing ruling on the series is in your context** — a verdict
+  that contradicts one (Outlaw Star's A40/G3 "no chapter mapping is
+  meaningful") is a REPAIR with evidence, never a silent override.
+
 - Two-part episodes carry **two infoboxes** on fandom wikis. Reading only the
   first misses the adapted chapter entirely.
 - Wikipedia chapter lists mix plain-string English titles among nihongo

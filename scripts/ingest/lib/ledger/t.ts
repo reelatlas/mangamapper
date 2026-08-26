@@ -555,9 +555,9 @@ export const RULES: Rule[] = [
     family: 'T',
     title: 'Overrides are annotations, never a fourth episode type',
     statement:
-      "An author / studio / community override of the source is an ANNOTATION, never a type: the episode's standing stays canon / mixed / filler relative to the identified source (T25), and the exception is a first-class record — kind 'adopted' (REQUIRED basis: author | studio | community), 'retconned' (material later dropped from canon), or 'side_source' (adapts a work other than the series' source; the work is named in note). Consensus canon that is not in the source = canon + adopted + a null mapping (an honest dash, no strip units; A1 stands — filler never anchors). The vocabulary is closed (lib/annotations.ts ANNOTATION_KINDS), mirrored by the DB constraints, written only through upsertAnnotation, and a stored record the gate would refuse is annotation_invalid. 'Community canon' is neither a badge nor a type.",
+      "An author / studio / community override of the source is an ANNOTATION, never a type: the episode's standing stays canon / mixed / filler relative to the identified source (T25), and the exception is a first-class record — kind 'adopted' (REQUIRED basis: author | studio | community; 'author' = the source's author wrote, supervised, declared, or INCORPORATED THE MATERIAL'S EVENTS into the source line — a specific act per arc, never a blanket credit; importing names or designs while contradicting the events is not adoption), 'retconned' (material later dropped from canon), or 'side_source' (adapts a work other than the series' source; the work is named in note). Consensus canon that is not in the source = canon + adopted + a null mapping (an honest dash, no strip units; A1 stands — filler never anchors). The vocabulary is closed (lib/annotations.ts ANNOTATION_KINDS), mirrored by the DB constraints, written only through upsertAnnotation, and a stored record the gate would refuse is annotation_invalid. 'Community canon' is neither a badge nor a type.",
     why:
-      "T4.0 D-10 (Sean, 2026-08-26): Black Clover 130-157 (author-supervised), Boruto 221-286, Shippuden 452-457 (the Itachi Shinden novel), Evangelion's EoE (studio), X's only ending (community, accepted for lack of an ending) were one class typed three ways (anime-only-canon / filler+asterisk / mixed); a fourth type would have hidden WHO adopted the material and why. The basis is required because 'adopted' without it is not a ruling.",
+      "T4.0 D-10 (Sean, 2026-08-26): Black Clover 130-157 (author-supervised), Boruto 221-286, Shippuden 452-457 (the Itachi Shinden novel), Evangelion's EoE (studio), X's only ending (community, accepted for lack of an ending) were one class typed three ways (anime-only-canon / filler+asterisk / mixed); a fourth type would have hidden WHO adopted the material and why. The basis is required because 'adopted' without it is not a ruling. Batch 18 sharpened 'author' twice: Kodachi's blanket story-supervision credit on Boruto (also covers undisputed filler) was REJECTED; Kamachi's incorporation of the Railgun anime arcs' EVENTS into his own manga and novels (ch 32's ep-20 photo; Therestina in prison; Saten regretting she let Febrie/Janie go) was ACCEPTED — while Sukeno importing Twin Star's anime DESIGNS and refusing its events stayed filler.",
     ruledBy: 'Sean',
     ruledOn: '2026-08-26',
     origin: 'docs/restructure/T4-GLOSSARY.md §1, §3 (D-10); restructure T4.2',
@@ -597,5 +597,27 @@ export const RULES: Rule[] = [
     witnesses: ['puella-magi-madoka-magica', 'ace-attorney', 'black-clover', 'claymore', 'fullmetal-alchemist'],
     status: 'live',
     see: ['T25', 'T26', 'T6', 'A1', 'T13', 'T14', 'G51'],
+  },
+  {
+    id: 'T28',
+    aliases: ['materiality bar for mixed', 'episode job test', "what is this episode's job", 'fragment is an annotation', 'slivers are not mixed', 'Claymore-26 shape', 'mixed threshold'],
+    family: 'T',
+    title: "mixed needs a substantial share: the episode's job decides",
+    statement:
+      "An episode is `mixed` only when a SUBSTANTIAL share of its own plot is the source — the adapted scenes carry the episode's story (a chapter, an omake, a side story or a gag special that IS the episode's plot all count; community 'filler' meaning 'not mainline' does not override a real adaptation). When an original plot merely quotes a fragment — a cameo, a one-off graft, a transplanted single beat, a restaged closing scene, a recall, a rehash — the episode is `filler` and the tie to the source is RECORDED as an annotation (graft / partial / loose_parallel with the chapters and the why), never as the type. The test is 'what is this episode's job?': the studio ending that quotes one manga scene is filler + graft (Claymore 26); the episode that adapts a whole special chapter inside original framing is mixed (Railgun 41). Consensus on a block is a strong prior that one overlap does not overturn.",
+    why:
+      "Batch 18 wave 2 (Sean, 2026-08-26, with Cursor): verifiers were typing rows mixed on single confirmed scenes — Claymore 24 (the opening section of Scene 60 before the studio ending takes over), soul-eater 40 (Medusa's deal grafted into the original ending), DBS 91/94/95 (one restaged scene each), FMA 40-41 (ch 30's Martel beat as a closer / a recall) — while the community reads every one of those blocks as non-canon. The type must say what the episode IS; the annotation keeps every tie so the UI can surface 'the ch-30 beat is here' without painting the row mixed. Coverage and the frontier stay on the genuinely adapted rows, which is honest.",
+    ruledBy: 'Sean',
+    ruledOn: '2026-08-26',
+    origin: 'batch 18 wave 2 ruling; scripts/ingest/research/batch18/PROTOCOL.md (pinned for wave 3)',
+    enforcement: [
+      { path: 'scripts/ingest/research/batch18/PROTOCOL.md' },
+      { path: 'scripts/ingest/research/batch18/curate.ts' },
+    ],
+    layer: 'process',
+    auditClass: [],
+    witnesses: ['claymore', 'a-certain-scientific-railgun', 'soul-eater', 'dragon-ball-super', 'fullmetal-alchemist'],
+    status: 'live',
+    see: ['T7', 'T8', 'A10', 'T26', 'T27', 'A43'],
   },
 ];

@@ -63,6 +63,9 @@ divergence annotation (T4.3); these verdicts propose what replaces it.
 - Fan comparisons can pair a chapter serialized AFTER the episode (gto
   Lesson 143 vs ep 24): check dates.
 
+## APPLIED 2026-08-26 (changelog §12.58)
+Sean's rulings (with Cursor): T28 materiality bar (episode's job decides; fragments are annotations) and the incorporation basis (railgun class in, with gradient). Applied via the maps + heal; a post-heal direct query confirmed the graft/partial notes on FMA 40-41, DBS 91/94/95, soul-eater 37/39/40, claymore 24/26, chrono 22.
+
 ## Outstanding
 - Verification (R24, Fable): ajin (season overturn), railgun (the new basis
   class + 18 repairs), claymore (mixed calls + the 21-23 frontier claim),
