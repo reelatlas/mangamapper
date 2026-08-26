@@ -642,8 +642,17 @@
    134: the 13 series were already pending). Edges rebuilt + deployed.
    Open for Sean (T4-GLOSSARY §7): the two PROVISIONAL bases; kenshin-2023
    44; clannad 24 / clannad-after-story 23 (VN routes AFL calls anime-canon
-   — filler in the queue, likely canon). NEXT: batch-18 review of the big
-   unruled blocks BEFORE T4.4 format (glossary §6 step 5).
+   — filler in the queue, likely canon). FOLLOW-UP same day (Sean + Cursor
+   concur): the VN default stays filler (Steins;Gate 25 = AFL 'anime canon'
+   = the original OVA; Ace Attorney is the no-manga whole-show case) and the
+   Clannad rows are three CITED T6 rulings — clannad 24 (Tomoyo route) and
+   after-story 25 (Kyou route) canon, after-story 23 (anime-original extra)
+   filler; the two inferred bases are marked ruledBy session + retiresWhen
+   so they never read as signed; the public-API eventuality is parked in
+   architecture.md (versioned view of canonical, staging never served,
+   provenance kept; episodes.type provenance column = a later pass). Queue
+   now 22 series / 254 rows. NEXT: batch-18 review of the big unruled blocks
+   BEFORE T4.4 format (glossary §6 step 5).
 55. ✅ **T4.2 — OVERRIDES ARE ANNOTATIONS, NEVER A FOURTH TYPE (`T26`;
    R10 / A43 extended; 2026-08-26).** Sean's T4.0 D-10 built: three kinds
    join the closed annotation vocabulary — `adopted` (REQUIRED `basis`

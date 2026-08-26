@@ -486,6 +486,26 @@ export const ENTRIES: RulingEntry<EpisodeTypes>[] = [
     ruledOn: '2026-08-23',
     cite: [`${B14}/that-time-i-got-reincarnated-as-a-slime.json`],
   },
+  {
+    seriesId: 'clannad',
+    ruleId: 'T6',
+    value: { 24: 'canon' },
+    reason:
+      "Ep 24 'Another World: Tomoyo Chapter' (OVA, 2008-07-16) adapts the visual novel's Tomoyo route — an alternate route of the SOURCE, not a studio invention (Clannad Wiki: 'highlighting segments of Tomoyo\'s visual novel route'; en-WP: alternate timeline from the TV series). AFL's anime-canon on a VN series maps filler by T27; the cited route makes it canon relative to the VN. Instrument none (no mapping). T4.3 follow-up 2026-08-26.",
+    ruledBy: 'Sean',
+    ruledOn: '2026-08-26',
+    cite: ['https://clannad.fandom.com/wiki/Another_World:_Tomoyo_Chapter', 'https://en.wikipedia.org/wiki/List_of_Clannad_episodes'],
+  },
+  {
+    seriesId: 'clannad-after-story',
+    ruleId: 'T6',
+    value: { 23: 'filler', 25: 'canon' },
+    reason:
+      "Ep 25 'Another World: Kyou Chapter' (OVA, 2009-07-01) adapts the visual novel's Kyou route (Clannad Wiki: 'based on the events of Kyou\'s route'; en-WP: alternate timeline) → canon relative to the VN. Ep 23 'The Event from One Year Before' is an anime-original extra set a year before the story (Clannad Wiki + en-WP) → filler, ruled so it leaves the afl_anime_canon_unruled queue. Ep 24 is the recap (AFL filler, untouched). T4.3 follow-up 2026-08-26.",
+    ruledBy: 'Sean',
+    ruledOn: '2026-08-26',
+    cite: ['https://clannad.fandom.com/wiki/Another_World:_Kyou_Chapter', 'https://clannad.fandom.com/wiki/The_Event_from_One_Year_Before', 'https://en.wikipedia.org/wiki/List_of_Clannad_episodes'],
+  },
 ];
 
 export const EPISODE_TYPE_OVERRIDES: Record<string, EpisodeTypes> = toRecord(ENTRIES);

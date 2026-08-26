@@ -163,7 +163,7 @@ last, after the big unruled blocks are reviewed**:
 ## 7. Open for Sean at batch 18 (recorded, not decided)
 
 `SOURCE_TYPE_OVERRIDES` candidates surfaced by T4.1: solo-leveling and the-beginning-after-the-end derive `other` (AniList source OTHER) though each adapts a KR webtoon → `manhwa`?; ghost-in-the-shell-arise-alternative-architecture derives `other` (a re-cut of Arise — a relation, arguably `original`). ·
-**adopted.basis PROVISIONAL (inferred, T4.3): boruto 221-286 = community, beastars 44 = studio** · kenshin-2023 44 (no positive canon signal → filler) · the VN-route rows clannad 24 / clannad-after-story 23 (AFL anime-canon on a VN series → filler by T27, likely canon — they adapt routes) · twin-star 21–50 adopted or filler · FMA 2003's second half (community
+**adopted.basis PROVISIONAL (inferred, T4.3; entries marked ruledBy session + retiresWhen): boruto 221-286 = community, beastars 44 = studio** · kenshin-2023 44 (no positive canon signal → filler) · ~~clannad VN-route rows~~ RULED 2026-08-26 as three cited T6 rows (clannad 24 canon, after-story 25 canon, after-story 23 filler) — the VN default stays filler: Steins;Gate 25 is AFL's 'anime canon' = the original OVA · twin-star 21–50 adopted or filler · FMA 2003's second half (community
 adopted?) · soul-eater ending · claymore / gto / ajin / chrono endings ·
 which `adopted.basis` each ruled consensus row carries · the VN/game
 instrument question when the first mapped example appears.

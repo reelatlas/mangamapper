@@ -2,7 +2,7 @@
 
 > GENERATED from `scripts/ingest/lib/rulings/**` by `scripts/restructure/gen-rulings.ts` — do not edit by hand. A ruling is an INSTANCE of a rule (`docs/rules.md`); the map is the record, this is the index.
 
-- rulings: 1662 across 194 series/keys · by Sean: 318 · UNRECORDED reasons: 8 · with a retire condition: 92
+- rulings: 1664 across 196 series/keys · by Sean: 318 · UNRECORDED reasons: 8 · with a retire condition: 94
 
 ## Retire conditions (re-evaluate when…)
 
@@ -35,6 +35,7 @@
 - **T4.0 studio-original-endings class ruling (DRIFT-LIST A-7: gto 42-43 "caught up" is one of three competing types)** — gto-great-teacher-onizuka (T6)
 - **T4.0 taxonomy v2 unifies the studio-original-ending classes (A-7)** — claymore (T6), gto-great-teacher-onizuka (T6), ajin-demi-human (T6)
 - **Zoku-hen (204688) airs — chain gains an id** — kingdom (I27)
+- **batch-18: Sean rules the adopted.basis (T4-GLOSSARY §7) — the basis here is INFERRED, not signed** — boruto-naruto-next-generations (T26), beastars (T26)
 - **flips to mixed if the step-stool line is ever confirmed inside ch 166** — beastars (T6)
 - **repaired §12.45 (rosario ep 11 9→8)** — rosario-vampire (A3)
 - **stitched 2026-08-23 (§12.34 stitch queue: Kingdom S5/S6 → 155)** — kingdom (I33)
@@ -227,7 +228,7 @@
 
 | rule | value | reason | ruled | retires when |
 |---|---|---|---|---|
-| `T26` | [{"episodes":[44],"kind":"adopted","basis":"studio","note":"Adapts no chapter (chs 169-171 are the cut Kyuu chapters, 172-176 land in ep 47); SEAN-RULED cano… | T4.0 D-10: beastars 44 (Sean) → canon + adopted; basis inferred and listed. | Sean 2026-08-26 · docs/restructure/T4-GLOSSARY.md §3, scripts/ingest/lib/rulings/episode-types.ts beastars |  |
+| `T26` | [{"episodes":[44],"kind":"adopted","basis":"studio","note":"Adapts no chapter (chs 169-171 are the cut Kyuu chapters, 172-176 land in ep 47); SEAN-RULED cano… | T4.0 D-10: beastars 44 (Sean) → canon + adopted; basis inferred and listed. | session 2026-08-26 · docs/restructure/T4-GLOSSARY.md §3, scripts/ingest/lib/rulings/episode-types.ts beastars | batch-18: Sean rules the adopted.basis (T4-GLOSSARY §7) — the basis here is INFERRED, not signed |
 | `A3` | {"episode":6,"chapter":25,"start_chapter":21,"chapters_adapted":"21, 22, 23, 24, 25","volume":3,"source":"manual","note":"research-tier batch 10 (2026-08-23,… | Black Market visit; exact v3 boundary; SKIPS ch 20 (ep 7 has it). fandom + VIZ v3 + Wikipedia | session 2026-08-23 · scripts/ingest/apply-research-batch-10.ts, scratchpad batch10/beastars.json (session scratchpad, not on disk), docs/changelog.md §12.29 |  |
 | `A3` | {"episode":9,"chapter":36,"start_chapter":33,"chapters_adapted":"33, 34, 35, 36","volume":5,"source":"manual","note":"research-tier batch 10 (2026-08-23, age… | Haru's abduction begins — MEDIUM. fandom + VIZ v5 | session 2026-08-23 · scripts/ingest/apply-research-batch-10.ts, scratchpad batch10/beastars.json (session scratchpad, not on disk), docs/changelog.md §12.29 |  |
 | `A3` | {"episode":12,"chapter":48,"start_chapter":44,"chapters_adapted":"44 (2nd half), 45-48, + ending of 53 grafted","volume":6,"source":"manual","note":"research… | S1 finale; ch 49 never animated. fandom + WDTALO | session 2026-08-23 · scripts/ingest/apply-research-batch-10.ts, scratchpad batch10/beastars.json (session scratchpad, not on disk), docs/changelog.md §12.29 |  |
@@ -521,7 +522,7 @@
 
 | rule | value | reason | ruled | retires when |
 |---|---|---|---|---|
-| `T26` | [{"episodes":[221,222,223,224,225,226,227,228,229,230,231,232,233,234,235,236,237,238,239,240,241,242,243,244,245,246,247,248,249,250,251,252,253,254,255,256… | T4.0 D-10 ruled consensus rows → canon + adopted. The basis is inferred (community-accepted anime canon; Sasuke Retsuden adapts a licensed novel) and listed for Sean. | Sean 2026-08-26 · docs/restructure/T4-GLOSSARY.md §3, scripts/ingest/lib/rulings/episode-types.ts boruto |  |
+| `T26` | [{"episodes":[221,222,223,224,225,226,227,228,229,230,231,232,233,234,235,236,237,238,239,240,241,242,243,244,245,246,247,248,249,250,251,252,253,254,255,256… | T4.0 D-10 ruled consensus rows → canon + adopted. The basis is inferred (community-accepted anime canon; Sasuke Retsuden adapts a licensed novel) and listed for Sean. | session 2026-08-26 · docs/restructure/T4-GLOSSARY.md §3, scripts/ingest/lib/rulings/episode-types.ts boruto | batch-18: Sean rules the adopted.basis (T4-GLOSSARY §7) — the basis here is INFERRED, not signed |
 | `A3` | {"episode":293,"chapter":67,"volume":17,"source":"manual"} | Ep 293 hiatus finale = end of Ch 67 "Rift". sportskeeda + mangashed + boruto.fandom.com | Sean 2026-08-24 · scripts/ingest/apply-research-batch.ts |  |
 | `G3` | {"flags":"open → confirmed","verdict":"research-tier frontier applied as manual anchor (sources in anchor note); Sean sign-off 2026-08-24"} | open ingest_flags closed with verdict: research-tier frontier applied as manual anchor (sources in anchor note); Sean sign-off 2026-08-24 | Sean 2026-08-24 · scripts/ingest/apply-research-batch.ts |  |
 | `A3` | {"episode":287,"chapter":56,"start_chapter":56,"chapters_adapted":"56 (+start of 57; ch-55 recap; ch-60 bit)","volume":15,"source":"manual","note":"research-… | Code's Assault opens. narutopedia + animefillerguide + arc page | session 2026-08-23 · scripts/ingest/apply-research-batch-11.ts, scratchpad batch11/boruto-naruto-next-generations.json (session scratchpad, not on disk), docs/changelog.md §12.30 |  |
@@ -629,6 +630,18 @@
 | `A7` | {"episode":8,"bound":"anime-original story borrowing only the spider/puppet CONCEPT from Acts 19-21 — concept-level, never a position"} | A2: anime-original story borrowing only the spider/puppet CONCEPT from Acts 19-21 — concept-level, never a position | session 2026-08-24 · scripts/ingest/research/batch17/out/chrono-crusade.json, scripts/ingest/apply-research-batch-17.ts, §12.42 |  |
 | `A7` | {"episode":21,"bound":"Mary Magdalene flashback pulls v6 material (36-41) far out of order inside an otherwise anime-original stretch — graft, not this episo… | A2: the Mary Magdalene flashback pulls v6 material (36-41) far out of order inside an otherwise anime-original stretch — a graft, not this episode's position | session 2026-08-24 · scripts/ingest/research/batch17/out/chrono-crusade.json, scripts/ingest/apply-research-batch-17.ts, §12.42 |  |
 | `T6` | {"5":"mixed","7":"mixed","8":"mixed","11":"mixed","12":"mixed","14":"mixed","15":"mixed","16":"mixed","17":"mixed","18":"mixed","19":"mixed","20":"mixed","21… | The anime departs after ep 13: 5/7/8/11/12 are original bridges on canon continuity, 14-21 the "primarily original" stretch that still pulls manga beats (Wikipedia lead + MU + ja-WP), 22-24 the original ending. T4.3 (T27, 2026-08-26): anime-only-canon → filler (adheres to no source; the studio-ending class A-7 carries a divergence annotation and stays on the review list — twin-star 21-50 explicitly, T4-GLOSSARY §7). | session 2026-08-24 · scripts/ingest/research/batch17/out/chrono-crusade.json |  |
+
+### clannad (1)
+
+| rule | value | reason | ruled | retires when |
+|---|---|---|---|---|
+| `T6` | {"24":"canon"} | Ep 24 'Another World: Tomoyo Chapter' (OVA, 2008-07-16) adapts the visual novel's Tomoyo route — an alternate route of the SOURCE, not a studio invention (Clannad Wiki: 'highlighting segments of Tomoyo's visual novel route'; en-WP: alternate timeline from the TV series). AFL's anime-canon on a VN series maps filler by T27; the cited route makes it canon relative to the VN. Instrument none (no mapping). T4.3 follow-up 2026-08-26. | Sean 2026-08-26 · https://clannad.fandom.com/wiki/Another_World:_Tomoyo_Chapter, https://en.wikipedia.org/wiki/List_of_Clannad_episodes |  |
+
+### clannad-after-story (1)
+
+| rule | value | reason | ruled | retires when |
+|---|---|---|---|---|
+| `T6` | {"23":"filler","25":"canon"} | Ep 25 'Another World: Kyou Chapter' (OVA, 2009-07-01) adapts the visual novel's Kyou route (Clannad Wiki: 'based on the events of Kyou's route'; en-WP: alternate timeline) → canon relative to the VN. Ep 23 'The Event from One Year Before' is an anime-original extra set a year before the story (Clannad Wiki + en-WP) → filler, ruled so it leaves the afl_anime_canon_unruled queue. Ep 24 is the recap (AFL filler, untouched). T4.3 follow-up 2026-08-26. | Sean 2026-08-26 · https://clannad.fandom.com/wiki/Another_World:_Kyou_Chapter, https://clannad.fandom.com/wiki/The_Event_from_One_Year_Before, https://en.wikipedia.org/wiki/List_of_Clannad_episodes |  |
 
 ### claymore (11)
 

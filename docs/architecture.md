@@ -215,3 +215,17 @@ re-audit (`audit-titles.ts`, runbook) restores them when AFL does.
 
 Rules: `G8` alias defense · `I14` alias-corruption victims excluded · `I1`
 our slug is identity.
+
+## Parked: the public-API eventuality (2026-08-26, Sean + Cursor + Code)
+
+Not designed now; the foundation is already the right one. When the catalog
+is trusted enough to sell: the API is a VERSIONED VIEW OF CANONICAL under
+our own ids; staging (`ingest_*`) is never served and never the product;
+every published field keeps provenance (anchor `source`, ruling maps with
+reason + cite, `ingest_runs` for "as of"); unknown stays unknown (P6);
+the schema grows additively (new columns / annotation kinds — the
+anime-only-canon lesson, T27). Known gap for that pass, not before:
+`episodes.type` carries no per-row provenance column (AFL vs T6 ruling is
+derivable from staging + the map, not stored). Auth, rate limits, SLAs and
+licensing are that pass's contract, not this phase's.
+
