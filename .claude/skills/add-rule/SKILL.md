@@ -86,6 +86,15 @@ per-series decisions may be invalid → `/consolidate deep` (`P21`).
 
 ## Proof of the skill
 
-Exercises that have run through it: **AIR_DATE_OVERRIDES** (2026-08-26,
-first run — 7 ruled rows, `G53`). A second DATA rule must run through it
-before the skill is called proven (T3.1).
+Exercises that have run through it — the skill is PROVEN (T3.1, 2026-08-26):
+
+1. **AIR_DATE_OVERRIDES** (`G53`) — 7 ruled rows; audit 7 → heal → 0.
+2. **Air-date order gate** (`G54`, A-11) — a pure lib walk shared by the
+   write gate, the healer and two audit classes; a ruling map with reasons;
+   12 unit tests on the shapes that ruled it; 10 standing dates withheld;
+   edges rebuilt and deployed TWICE (the healer exposed a fixed-point
+   requirement after the first deploy — a lib change is a redeploy, every
+   time). Lessons folded into the steps above: a healer must converge in
+   one run (step 5), and the audit class that names what the gate withheld
+   should be derived from STAGING so nothing is re-scraped to rule it
+   (step 4, `G51`).

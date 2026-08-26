@@ -28,7 +28,9 @@ name no audit class. 247 are bundles. 52 rules live ONLY in the change log.
 | A-9 | canon-tier creation is a standing rule; the system census finds whether the path exists — never rebuilt from the log. |
 | A-10 | one-pace excluded; the note must match the apply. |
 
-### A-11 — NEW (2026-08-26, from the T3.1 exercise-2 search): air-date regressions
+### A-11 — EXECUTED 2026-08-26 as `G54` (/add-rule exercise 2): air-date regressions
+
+**Outcome:** gate = `lib/airdate-order.ts#airdateOrderWalk` inside `filterEpisodeRows` (fixed-point walk; an outlier must disagree with BOTH neighbours, else report — block changes like kenshin-2023 25-27 / beyblade-x 41-44 and alternating JP/US blocks like dbz-kai 101-104 are reported, never withheld); ack map `lib/rulings/air-date-order.ts` (haruhi all; bebop 2/7/18); healer pass in `assert-overrides.ts`; classes `airdate_regression` (68 rows / 46 series — the batch-18 queue; 6 sit at 351-359 d, yearly typos just under the threshold) and `airdate_withheld` (10: gto 31, black-butler 31, fruits-basket 8, michiko 6, devil-part-timer 9, dbz-kai 106/108/111/113/165 — each a G53 candidate); write-side flag `airdate_withheld`. Ep-0 rows are outside the walk. The ORIGINAL text follows for the record.
 
 **Evidence:** 92 episode rows in 50 series carry an air date EARLIER than their predecessor's. Two classes: (a) wrong dates, mostly AFL-inherited, often a year or more out — beyblade-x ep 41 2001-10-15 after ep 40 2024-07-12; black-butler ep 32 2010 after ep 31 2017; black-cat, darling-in-the-franxx, beyblade-metal-fusion…; (b) genuine broadcast-order deviations where our rows follow production numbering — cowboy-bebop (TX aired a subset first), haruhi (broadcast order), another ep 0. Top counts: yu-gi-oh-5d-s 9 · dragon-ball-z-kai 8 · shugo-chara 6 · haruhi 6 · cowboy-bebop 4 · yu-gi-oh-gx 4.
 

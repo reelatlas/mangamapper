@@ -1,6 +1,6 @@
 # Restructure phase — the plan (v2, agreed 2026-08-25)
 
-Status: **T0–T2 done; T3.1 (skill + exercise 1), T3.3, T3.4 done. T4.0 RULED 2026-08-26 → docs/restructure/T4-GLOSSARY.md is the ruled record and the build order; A-11 approved. Execution resumes after Sean's compact.** v1 was drafted from a disk survey, cross-checked
+Status: **T0–T2 done; T3.1 (skill + both exercises: G53, G54), T3.3, T3.4 done. T4.0 RULED 2026-08-26 → docs/restructure/T4-GLOSSARY.md is the ruled record and the build order; A-11 EXECUTED 2026-08-26 as G54. Next: T4.1 SOURCE_KINDS.** v1 was drafted from a disk survey, cross-checked
 by a second model (Cursor/Grok), re-checked against the tree, and folded.
 This file is the phase's tracked board: every piece has an id, a track, a
 dependency and a status; the board is updated at every save point. When the
@@ -222,7 +222,8 @@ the new rule**, never a migration script.
 | item | route |
 |---|---|
 | AIR_DATE_OVERRIDES | T3.1 exercise 1 — DONE 2026-08-26 (G53); kinnikuman 90-119/38/87 + railgun ep 14 need cited dates → batch 18 narrow task |
-| AFL non-episode-row audit class | T3.1 exercise 2 (candidate) |
+| Air-date order gate (A-11) | T3.1 exercise 2 — DONE 2026-08-26 (G54): 10 dates withheld, airdate_regression queue 68 rows / 46 series → batch 18 |
+| AFL non-episode-row audit class (project-arms 53) | add-rule candidate (sibling of G54, not the same rule) |
 | Continua chart cross-check gate | add-rule |
 | Permanence locks (15 candidates, listed by T0) | after T4 |
 | AFG-expansion typing sweep | heal + census |
@@ -327,7 +328,7 @@ words after the glossary exists. Rough total: 8–12 sessions.
 | T2.5 | 36 history/dead scripts → scripts/ingest/history/ (README: never run; P34); 23 ledger rules now visibly enforced only by history = the /add-rule backlog (DRIFT-LIST §C2) | T2.4 | done 2026-08-26 |
 | T2.6 | lib-hash.ts stamped into every bundle by build-functions; system-census proves bundles current (P4 live) | T2.1–2.5 | done 2026-08-26 |
 | T2.7 | system-census.ts (7 checks: ledger+citations, unpaged selects, one-hop, rosters, rulings index, generated docs fresh, edge hash) = `npm run system:census` (P33 live) | T2.4, T1.6 | done 2026-08-26 |
-| T3.1 | /add-rule skill written; exercise 1 AIR_DATE_OVERRIDES done (G53: 7 cited rows, audit 7→0, edges deployed); exercise 2 (a second data rule) pending | T1.2, T2.1 | 1 of 2 exercises done 2026-08-26 |
+| T3.1 | /add-rule skill written; exercise 1 AIR_DATE_OVERRIDES (G53: 7 cited rows, audit 7→0); exercise 2 air-date order gate (G54: fixed-point walk, 10 withheld, 2 acks, 2 audit classes, 12 unit tests, edges deployed) | T1.2, T2.1 | DONE 2026-08-26 — skill proven |
 | T3.2 | PROTOCOL collapse + rules_applied + pin | T1.2, T4.0 | planned |
 | T3.3 | /consolidate rewritten around the cycle: system census step 0, deep REQUIRED on enforcement-site change (P22 live), rosters, STATE read-first/write-last, capture step | T2.4, T2.7 | done 2026-08-26 |
 | T3.4 | /apply-batch + /research-batch on the new homes (ids, rosters, history/, HELD trap, verifier-first); PROTOCOL pointer stays batch-17 until T3.2 | — | done 2026-08-26 |

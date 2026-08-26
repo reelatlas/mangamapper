@@ -66,6 +66,7 @@ export async function applyScope(
 export { EXTRAS_ADOPTED } from './rulings/extras-adopted';
 export { AIR_DATE_OVERRIDES } from './rulings/air-dates';
 import { AIR_DATE_OVERRIDES } from './rulings/air-dates';
+import { withholdAirdateRegressions, type AirdateWithheld } from './airdate-order';
 
 // Community-count rulings (Sean 2026-08-24: the community-consensus episode
 // count is the truth — specials/ep-0s the community numbers are IN; large
@@ -136,7 +137,12 @@ export const translateEpisodeNumber = (seriesId: string, n: number, space: strin
 // Per-series episode-row rulings, applied by EVERY episode writer:
 // source-numbering translation first, then community caps, then type
 // overrides.
-export const filterEpisodeRows = <T extends { number: number; type?: string; air_date?: string | null }>(seriesId: string, rows: T[], space: string): T[] => {
+export const filterEpisodeRows = <T extends { number: number; type?: string; air_date?: string | null }>(
+  seriesId: string,
+  rows: T[],
+  space: string,
+  opts?: { onAirdateWithheld?: (withheld: AirdateWithheld[]) => void },
+): T[] => {
   const t0 = SOURCE_NUMBERING_SHIFTS[seriesId];
   const t = t0 && (!t0.spaces || t0.spaces.includes(space)) ? t0 : undefined;
   let translated = rows;
@@ -149,14 +155,27 @@ export const filterEpisodeRows = <T extends { number: number; type?: string; air
   const capped = o ? translated.filter((r) => r.number <= o.cap) : translated;
   const types = EPISODE_TYPE_OVERRIDES[seriesId];
   const dates = AIR_DATE_OVERRIDES[seriesId]; // G53: ruled air dates re-applied at every write
-  if (!types && !dates) return capped;
-  return capped.map((r) => {
+  const ruled = !types && !dates ? capped : capped.map((r) => {
     let out = r;
     if (types?.[r.number] && 'type' in r) out = { ...out, type: types[r.number] };
     if (dates?.[r.number] && 'air_date' in r) out = { ...out, air_date: dates[r.number] };
     return out;
   });
+  // G54: after the ruled dates land, a date a year or more out of order
+  // against its neighbours is withheld (NULL), never stored (P6)
+  const gated = withholdAirdateRegressions(seriesId, ruled);
+  if (gated.withheld.length) opts?.onAirdateWithheld?.(gated.withheld);
+  return gated.rows;
 };
+
+// G54 write-side flag: the withheld dates, filed once per series so the
+// confirm queue holds the proposed (wrong) value without a re-scrape.
+export async function flagAirdateWithheld(runId: number, seriesKey: string, source: string, withheld: AirdateWithheld[]) {
+  await fileFlagOnce(runId, seriesKey, source, 'airdate_withheld', {
+    rule: 'G54',
+    rows: withheld.map((w) => ({ episode: w.number, withheld: w.date, against: w.against, againstDate: w.againstDate, days: w.days })),
+  });
+}
 
 export function applyEpisodeFloor(
   seriesId: string,
@@ -459,6 +478,7 @@ export async function resolveSeries(runId: number, slug: string): Promise<{ epis
       // can sit +N of ours past an order-only insert (Ryuusui), and
       // deleting to the source-space max would eat rows the translation
       // doesn't refill.
+      let stitchedWithheld: AirdateWithheld[] = [];
       const stitchedRows = filterEpisodeRows(
         existing.id,
         page.episodes.map((e) => ({
@@ -469,7 +489,9 @@ export async function resolveSeries(runId: number, slug: string): Promise<{ epis
           air_date: e.airDate,
         })),
         'afl',
+        { onAirdateWithheld: (w) => (stitchedWithheld = w) },
       );
+      if (stitchedWithheld.length) await flagAirdateWithheld(runId, slug, 'afl', stitchedWithheld);
       const ourPageMax = stitchedRows.reduce((m, e) => Math.max(m, e.number), 0);
       await db.from('episodes').delete().eq('series_id', existing.id).lte('number', ourPageMax);
       // STALE-ZONE healing (Sean 2026-08-23): when translation SHRINKS the
@@ -599,13 +621,15 @@ export async function resolveSeries(runId: number, slug: string): Promise<{ epis
   // the hash/large-diff gates); rows beyond aflMax — AFG tails, curated
   // specials — survive. Community-count caps drop rows the consensus does
   // not number (Psycho-Pass 42-44).
+  let withheld: AirdateWithheld[] = [];
   const rows = filterEpisodeRows(id, page.episodes.map((e) => ({
     series_id: id,
     number: e.number,
     title: e.title,
     type: e.type,
     air_date: e.airDate,
-  })), 'afl');
+  })), 'afl', { onAirdateWithheld: (w) => (withheld = w) });
+  if (withheld.length) await flagAirdateWithheld(runId, slug, 'afl', withheld);
   // translated-max boundary (see the stitched-guard note): never delete past
   // what the translated rows refill
   const ourMax = rows.reduce((m, e) => Math.max(m, e.number), 0) || aflMax;

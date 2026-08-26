@@ -35,7 +35,7 @@ export const HEAL: RosterEntry[] = [
   { file: 'audit-manga-coverage.ts', when: 'standard', note: 'SELF-HEALING despite the name: MU frontier pins, latest_known, status cross-check (G31–G38); classes are a census by-product' },
   { file: 'heal-volume-boundaries.ts', when: 'standard', note: 'monotonic-start rule over stored boundaries (V1/V2)' },
   { file: 'heal-parity-continues.ts', when: 'standard', note: 'C2 parity continues + C3 skip notes over every anchor (moved from research/batch15/ in T2.4)' },
-  { file: 'assert-overrides.ts', when: 'standard', note: 'EPISODE_TYPE_OVERRIDES (T6) + AIR_DATE_OVERRIDES (G53) asserted over standing rows' },
+  { file: 'assert-overrides.ts', when: 'standard', note: 'EPISODE_TYPE_OVERRIDES (T6) + AIR_DATE_OVERRIDES (G53) + the air-date order gate (G54) asserted over standing rows' },
   { file: 'sync-watch-order.ts', when: 'standard', note: 'order-only fractionals → watch_order_entries (N31)' },
   { file: 'relations.ts', when: 'standard', note: 'series_relations from AniList edges + ruled overrides (I16)' },
   { file: 'cleanup-flags.ts', when: 'standard', note: 'dismiss exact-duplicate open flags (G3)' },

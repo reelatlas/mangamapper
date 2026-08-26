@@ -190,6 +190,19 @@
         "refresh"
       ],
       "source": "first /add-rule exercise 2026-08-26"
+    },
+    {
+      "ask": "black-butler ep 31 carries 2017 between two 2010 rows — do we store the date, and what happens to cowboy-bebop, whose broadcast really was out of order?",
+      "expected": [
+        "G54",
+        "G53"
+      ],
+      "terms": [
+        "out of order",
+        "withheld",
+        "AIRDATE_ORDER_ACK"
+      ],
+      "source": "A-11 (/add-rule exercise 2, 2026-08-26)"
     }
   ]
 }

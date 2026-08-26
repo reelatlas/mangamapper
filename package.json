@@ -19,7 +19,7 @@
     "pull": "tsx --env-file=.env.ingest scripts/ingest/run-roster.ts pull",
     "ledger:check": "tsx scripts/restructure/ledger-check.ts --citations",
     "ledger:docs": "tsx scripts/restructure/gen-docs.ts && tsx scripts/restructure/gen-rulings.ts",
-    "system:census": "tsx scripts/restructure/ledger-check.ts --citations && tsx scripts/restructure/unpaged-selects.ts && tsx scripts/restructure/one-hop-check.ts"
+    "system:census": "tsx scripts/restructure/system-census.ts"
   },
   "dependencies": {
     "@radix-ui/react-collapsible": "^1.1.11",

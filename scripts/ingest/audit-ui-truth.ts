@@ -10,12 +10,13 @@
 
 import { db, selectAll } from './lib/db';
 import { c3Ahead, hasSkipLanguage } from './lib/c3';
-import { COMMUNITY_COUNT_OVERRIDES, CONTINUA_SUPPRESSED, EPISODE_TYPE_OVERRIDES, SOURCE_NUMBERING_SHIFTS } from './lib/resolve';
+import { COMMUNITY_COUNT_OVERRIDES, CONTINUA_SUPPRESSED, EPISODE_TYPE_OVERRIDES, SOURCE_NUMBERING_SHIFTS, translateEpisodeNumber } from './lib/resolve';
+import { AIRDATE_REGRESSION_THRESHOLD_DAYS, airdateOrderWalk } from './lib/airdate-order';
 import { AIR_DATE_OVERRIDES } from './lib/rulings/air-dates';
 import { REVIEWED_NUMBERED_SPECIALS } from './lib/rulings/reviewed-specials';
 
 async function main() {
-  const series = await selectAll<any>('series', 'id, source_type, manga_status, status, aired_episodes, total_episodes, total_chapters, total_volumes, latest_known_chapters, manga_anilist_id, manga_start_chapter, mapping_mode, asterisk_review');
+  const series = await selectAll<any>('series', 'id, afl_slug, source_type, manga_status, status, aired_episodes, total_episodes, total_chapters, total_volumes, latest_known_chapters, manga_anilist_id, manga_start_chapter, mapping_mode, asterisk_review');
   const episodes = await selectAll<any>('episodes', 'series_id, number, type, title, air_date');
   const anchors = await selectAll<any>('chapter_anchors', 'series_id, episode, chapter, start_chapter, chapters_adapted, continue_chapter, continue_note, volume, source');
   const comps = await selectAll<any>('series_components', 'series_id, episode_end, episode_start, anilist_id, kind, label');
@@ -77,7 +78,7 @@ async function main() {
     anchor_nonmonotonic: [], anchor_start_offtrend: [], anchor_beyond_chapter_space: [], anchor_beyond_display_total: [], anchor_fractional_chapter: [], anchor_on_noncanon_row: [], continue_skip_unnoted: [], boundaries_degenerate: [], ruling_violation: [], repair_on_derivation_tier: [],
     mu_pin_unverified: [],
     rearranged_zone_unanchored: [], rearranged_zone_acknowledged: [],
-    title_incomplete: [], airdate_incomplete: [], asterisk_unreviewed: [],
+    title_incomplete: [], airdate_incomplete: [], airdate_regression: [], airdate_withheld: [], asterisk_unreviewed: [],
     fractional_unmodeled: [],
     no_source: [], ok_full: [], ok_no_volume: [], ok_loose: [],
     pending_airing_no_anchor: [], pending_finished_no_totals: [], pending_no_canon: [], pending_other: [],
@@ -214,6 +215,43 @@ async function main() {
       if (!e.air_date || !String(e.air_date).trim()) missingBy.set(e.series_id, (missingBy.get(e.series_id) ?? 0) + 1);
     }
     for (const [sid, n] of missingBy) classes.airdate_incomplete.push(`${sid}: ${n}/${totalBy.get(sid)} rows missing air_date`);
+  }
+
+  // AIR-DATE ORDER (G54, 2026-08-26 — A-11). Two outcome classes from the
+  // one lib walk (lib/airdate-order.ts):
+  //   airdate_regression — a stored date earlier than its predecessor's and
+  //     not ruled in AIRDATE_ORDER_ACK: the review queue (typo → G53 with a
+  //     cited date; real broadcast order → an ack entry). A regression
+  //     deeper than the threshold that is still standing means the gate
+  //     could not name the outlier (a whole block changed era) — research.
+  //   airdate_withheld — stored NULL where AFL staging holds a date for the
+  //     row: the gate (or the healer) withheld it. Each is a G53 candidate;
+  //     staging keeps AFL's claim (G51) so nothing is re-scraped to rule it.
+  {
+    const epsBySeries = new Map<string, any[]>();
+    for (const e of episodes) {
+      if (!epsBySeries.has(e.series_id)) epsBySeries.set(e.series_id, []);
+      epsBySeries.get(e.series_id)!.push(e);
+    }
+    for (const [sid, rows] of epsBySeries) {
+      const { regressions, withheld } = airdateOrderWalk(sid, rows);
+      for (const r of regressions) classes.airdate_regression.push(`${sid}: ep ${r.number} ${r.date} is ${r.days} d before ep ${r.against} ${r.againstDate}${r.days > AIRDATE_REGRESSION_THRESHOLD_DAYS ? ' — block change, gate cannot name the outlier' : ''}`);
+      for (const w of withheld) classes.ruling_violation.push(`${sid}: ep ${w.number} air_date ${w.date} stands ${w.days} d out of order — the G54 gate/healer should have withheld it`);
+    }
+    const aflBySeries = new Map(series.filter((s: any) => s.afl_slug).map((s: any) => [s.afl_slug, s.id]));
+    const staged = await selectAll<{ slug: string; raw: any }>('ingest_afl_shows', 'slug, raw', (q) => q.in('slug', [...aflBySeries.keys()]));
+    for (const st of staged) {
+      const sid = aflBySeries.get(st.slug);
+      if (!sid) continue;
+      const stored = new Map((epsBySeries.get(sid) ?? []).map((e: any) => [e.number, e]));
+      for (const ep of (st.raw?.episodes ?? []) as { number: number; airDate?: string | null }[]) {
+        if (!ep.airDate) continue;
+        const n = translateEpisodeNumber(sid, ep.number, 'afl');
+        if (n == null) continue;
+        const row = stored.get(n);
+        if (row && !row.air_date) classes.airdate_withheld.push(`${sid}: ep ${n} stored NULL, AFL says ${ep.airDate} — G53 candidate (cite the correct date) or an ack`);
+      }
+    }
   }
 
   // ASTERISK review workflow (Sean 2026-08-23): kinds derive from

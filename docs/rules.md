@@ -169,7 +169,7 @@
 - `I37` Continuation handoff: adjoining sibling scope = flow — aka `continuation handoff`, `claimed continuation → handoff`, `continues in X`
 - `I38` The source manga is the ADAPTATION edge of type/format MANGA — aka `manga link selection`, `anime→manga linkage`, `pickManga`
 
-**G — Gates & freshness (sources)** (43)
+**G — Gates & freshness (sources)** (44)
 - `G1` The flag rule: nothing suspicious auto-applies — aka `flag rule`, `the flag rule`, `the confirm queue`, `nothing suspicious ever auto-applies`
 - `G3` Recurring conditions flag once; only Sean dismisses — aka `fileFlagOnce`, `once-per-open-kind`
 - `G4` Permanent conditions leave the open queue *(planned)* — aka `dismissed_permanent`, `permanent-flag disposition`, `A-8`
@@ -213,6 +213,7 @@
 - `G51` Staging keeps everything, raw HTML included — aka `staging is greedy`, `greedy staging`, `AFG re-fetch lesson`
 - `G52` Canon-tier creation: chartless manga shows still enter — aka `canon-tier creation`, `canon-tier`, `A-9`
 - `G53` Ruled air dates: AIR_DATE_OVERRIDES, applied at every write — aka `AIR_DATE_OVERRIDES`, `air-date overrides`, `air date override pass`, `ruled air dates`
+- `G54` Air-date order: a date a year out of order is withheld — aka `A-11`, `air-date order gate`, `airdate regression`, `airdate_regression`, `AIRDATE_ORDER_ACK`, `365-day rule`, `air-date withheld`, `airdate_withheld`
 
 **V — Volumes & boundaries** (10)
 - `V1` Monotonic starts, or the row is not data — aka `monotonic-start gate`, `MONOTONIC-START rule`, `monotonic boundaries`, `monotonic starts`, `Sailor Moon v3 report`, `Sailor Moon "v3: chs 10-3"`
@@ -2844,7 +2845,21 @@ A research-ruled episode air date (2+ cited sources) lives ONLY in AIR_DATE_OVER
 - audit: `ruling_violation`
 - witnesses: fist-of-the-north-star, ranma-1-2
 - aliases: AIR_DATE_OVERRIDES, air-date overrides, air date override pass, ruled air dates
-- see: T6, R3, R20
+- see: T6, R3, R20, G54
+
+### G54 · Air-date order: a date a year out of order is withheld
+
+Every episode writer walks its rows in number order through the air-date order gate (lib/airdate-order.ts): a stored date more than 365 days EARLIER than its predecessor names an outlier — the predecessor when it also jumped a year off its own past and the run resumes from the regressing row, else the regressing row when nothing continues from it — and the outlier's date is withheld (stored NULL, flagged airdate_withheld), never stored. When neither side can be named (a whole block changes era, or JP and US dates alternate) nothing is withheld and the row is reported. Ruled broadcast-order deviations live in AIRDATE_ORDER_ACK (whole series or an episode list, reason + cite) and are neither withheld nor reported; every other regression, shallow or deep, is the airdate_regression review queue. Episode 0 rows are outside the walk (N7). Corrected dates enter through G53.
+
+*Why:* AFL inherits date typos a year or more out: gto ep 31 wore 2014-02-07 between two May-2000 rows, black-butler ep 31 a 2017 date in a 2010 run, fruits-basket ep 8 a 2017 date in the 2001 series; 92 regressions across 50 series when A-11 was searched. An honest gap beats a wrong date (P6), but haruhi's 2006 broadcast and Cowboy Bebop's TX-first-run sessions regress for real — the ruled map keeps those out of the gate. Second /add-rule exercise (2026-08-26): 8 standing dates withheld at heal.
+
+- ruled Sean 2026-08-26 (docs/restructure/DRIFT-LIST.md A-11 (Sean: "I think I agree the a-11 proposal is good"); T4-GLOSSARY.md §6 step 1)
+- layer **writer**
+- enforced: [lib/airdate-order.ts#airdateOrderWalk](../scripts/ingest/lib/airdate-order.ts) · [lib/rulings/air-date-order.ts#AIRDATE_ORDER_ACK](../scripts/ingest/lib/rulings/air-date-order.ts) · [lib/resolve.ts#filterEpisodeRows](../scripts/ingest/lib/resolve.ts) · [assert-overrides.ts#assertAirdateOrder](../scripts/ingest/assert-overrides.ts) · [audit-ui-truth.ts#airdate_regression](../scripts/ingest/audit-ui-truth.ts)
+- audit: `airdate_regression`, `airdate_withheld`, `ruling_violation`
+- witnesses: gto-great-teacher-onizuka, black-butler, fruits-basket, the-melancholy-of-haruhi-suzumiya, cowboy-bebop
+- aliases: A-11, air-date order gate, airdate regression, airdate_regression, AIRDATE_ORDER_ACK, 365-day rule, air-date withheld, airdate_withheld
+- see: G53, P6, N7, R1
 
 ## V — Volumes & boundaries
 
@@ -3845,9 +3860,11 @@ Any component that renders episode-level data consumes the HYDRATED series (getB
 - 0.8 band → `N23`
 - 2+ independent sources per anchor → `R3`
 - 2+ sources → `R3`
+- 365-day rule → `G54`
 - 40-chapter band → `C8`
 - 6–8 wave cap → `P12`
 - a wave is the unit of loss → `P12`
+- A-11 → `G54`
 - A-4 → `R20`
 - A-5 → `T8`
 - A-8 → `G4`
@@ -3906,7 +3923,13 @@ Any component that renders episode-level data consumes the HYDRATED series (getB
 - agent is read-only → `R22`
 - air date override pass → `G53`
 - AIR_DATE_OVERRIDES → `G53`
+- air-date order gate → `G54`
 - air-date overrides → `G53`
+- air-date withheld → `G54`
+- airdate regression → `G54`
+- AIRDATE_ORDER_ACK → `G54`
+- airdate_regression → `G54`
+- airdate_withheld → `G54`
 - airing-lag allowance → `I26`
 - airing-pin rule → `G34`
 - alias defense → `G8`
@@ -4737,6 +4760,6 @@ Any component that renders episode-level data consumes the HYDRATED series (getB
 
 ## Scoreboard
 
-- rules: 259 (live 244, planned 10, superseded 5)
+- rules: 260 (live 245, planned 10, superseded 5)
 - live data rules with no audit class (the automation backlog): 88
-- by layer: writer 132 · display 23 · both 21 · process 83
+- by layer: writer 133 · display 23 · both 21 · process 83

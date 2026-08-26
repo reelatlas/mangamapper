@@ -2,7 +2,7 @@
 
 > GENERATED from `scripts/ingest/lib/rulings/**` by `scripts/restructure/gen-rulings.ts` — do not edit by hand. A ruling is an INSTANCE of a rule (`docs/rules.md`); the map is the record, this is the index.
 
-- rulings: 1647 across 192 series/keys · by Sean: 303 · UNRECORDED reasons: 8 · with a retire condition: 92
+- rulings: 1649 across 194 series/keys · by Sean: 305 · UNRECORDED reasons: 8 · with a retire condition: 92
 
 ## Retire conditions (re-evaluate when…)
 
@@ -638,6 +638,12 @@
 | `C8` | {"continue_from_chapter":57} | faithful adaptation ends at ch 56 (ep 20); readers continue at 57. | Sean 2026-08-23 · scripts/ingest/apply-research-batch-3.ts |  |
 | `G26` | continua says ep 26 → ch 54, but eps 24-26 are fully anime-original (research 2026-08-23) — the manual ep-20 → ch-56 anchor is the frontier | continua says ep 26 → ch 54, but eps 24-26 are fully anime-original (research 2026-08-23) — the manual ep-20 → ch-56 anchor is the frontier | session 2026-08-23 |  |
 | `T6` | {"24":"anime-only-canon","25":"anime-only-canon","26":"anime-only-canon"} | Eps 24-26: fully anime-original ending (Madhouse outran the manga) — research verdict (AFG + wheredoestheanimeleaveoff + sportskeeda), Sean sign-off. Contrary to the later T11 (DSQ) class; parked under DRIFT-LIST A-7, nothing retyped. | Sean 2026-08-23 | T4.0 taxonomy v2 unifies the studio-original-ending classes (A-7) |
+
+### cowboy-bebop (1)
+
+| rule | value | reason | ruled | retires when |
+|---|---|---|---|---|
+| `G54` | [2,7,18] | TV Tokyo first aired a 12-session subset (Apr–Jun 1998) before WOWOW ran all 26 (Oct 1998–Apr 1999); rows 2, 7 and 18 carry their TX first-air dates and so regress against WOWOW-dated neighbours — real broadcast order. Session 24 (regresses 146 d against 23's 1999-09-03) is NOT acknowledged: 23's date is suspect (WOWOW's run ended 1999-04-24) → batch-18 G53 candidate. | Sean 2026-08-26 · https://en.wikipedia.org/wiki/List_of_Cowboy_Bebop_episodes, docs/restructure/DRIFT-LIST.md A-11 |  |
 
 ### d-gray-man (7)
 
@@ -2252,6 +2258,12 @@
 | rule | value | reason | ruled | retires when |
 |---|---|---|---|---|
 | `R21` | {"file":"scripts/ingest/research/batch14/out/the-heroic-legend-of-arslan.json","anchors":25} | batch-14 verdict applied as-curated | session 2026-08-23 · scripts/ingest/research/batch14/out/the-heroic-legend-of-arslan.json |  |
+
+### the-melancholy-of-haruhi-suzumiya (1)
+
+| rule | value | reason | ruled | retires when |
+|---|---|---|---|---|
+| `G54` | all | The 2006 broadcast deliberately aired its 14 episodes out of chronological order ("Episode 00" first, the six-part Melancholy arc interleaved); our 28 rows follow the 2009 chronological rebroadcast numbering while the rows keep their ORIGINAL first-air dates (2006 for the original episodes, 2009 for the new ones). Every regression in the series is that design, not a typo. | Sean 2026-08-26 · https://en.wikipedia.org/wiki/List_of_The_Melancholy_of_Haruhi_Suzumiya_episodes, docs/restructure/DRIFT-LIST.md A-11 |  |
 
 ### the-promised-neverland (4)
 

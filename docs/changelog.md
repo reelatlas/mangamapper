@@ -607,6 +607,41 @@
    durable guard. Lesson for the floor rule: a >2 overshoot sourced from a
    SINGLE chart row with no corroborating content anywhere is a typo
    candidate, not an adoption candidate.
+53. ✅ **A-11 EXECUTED AS `G54` — AIR-DATE ORDER GATE (2026-08-26, /add-rule
+   exercise 2; the skill is now PROVEN, T3.1 closed).** Sean's ruling (the
+   A-11 proposal: 365-day threshold, NULL-not-store) built as ONE lib
+   mechanism, `lib/airdate-order.ts#airdateOrderWalk`, consumed by the
+   write gate (`filterEpisodeRows`, so every AFL/wiki writer and all four
+   edges), the standing-row healer (`assert-overrides.ts`, third pass) and
+   the census. The walk runs to a FIXED POINT; an outlier must disagree
+   with BOTH its neighbours (a predecessor spike with the run resuming →
+   the predecessor goes; a lone early date with nothing continuing from it
+   → it goes); when neither side can be named — a whole block changes era
+   (rurouni-kenshin-2023 25-27 wear 1996 titles AND dates; beyblade-x
+   41-44 are 2001 Beyblade rows: wiki-backfill contamination, batch 18) or
+   JP/US dates alternate (dragon-ball-z-kai 101-104) — nothing is withheld
+   and the row is reported (R1 decides). Ep-0 rows are outside the walk
+   (N7). Ruled deviations: `AIRDATE_ORDER_ACK` (haruhi 'all' — 2006
+   broadcast order; cowboy-bebop 2/7/18 — TX first-run sessions; bebop 24
+   deliberately NOT acked: session 23's 1999-09-03 is the suspect). Outcome
+   classes: `airdate_regression` (68 rows / 46 series — the batch-18
+   queue; 6 sit at 351-359 d, yearly typos just under Sean's threshold)
+   and `airdate_withheld` (stored NULL where AFL staging holds a date —
+   derived from staging, G51, so ruling it needs no re-scrape). Heal: 10
+   dates withheld (gto 31 = 2014 between two May-2000 rows; black-butler
+   31; fruits-basket 8; michiko 6; devil-part-timer 9; dbz-kai 106/108/
+   111/113/165 — Toonami dates in a JP run), each now a G53 candidate;
+   write-side flag kind `airdate_withheld`. 12 unit tests on the ruling
+   shapes (vitest now includes `scripts/ingest/lib/**/*.test.ts`). Census
+   delta, all explained: airdate_incomplete 22→28 (+6 series, the 10
+   withheld), airdate_regression 0→68 (91 raw regressions − 9 acked − 10
+   withheld − 4 ep-0), airdate_withheld 0→10, ruling_violation 0, every
+   other class unchanged; display 220/0. Edges rebuilt + deployed TWICE
+   (the healer's first pass exposed the fixed-point need — a lib change
+   is a redeploy, every time, P3). Side find: `npm run system:census` had
+   been wired to only 3 of the 7 checks (ledger/unpaged/one-hop) while
+   `system-census.ts` carried all 7 — package.json repointed (P33). One-hop
+   case 18 added. NEXT: T4.1 SOURCE_KINDS (T4-GLOSSARY.md §6 step 2).
 52. ✅ **CLOSING DEEP CONSOLIDATION (2026-08-25) — batch 17's cycle sealed.**
    Writer sweep: 5 new scripts since the last sweep, all principled (2
    declared migrations, 2 healers — assert-type-overrides + afg-restage —

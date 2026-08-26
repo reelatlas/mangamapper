@@ -27,7 +27,8 @@ applied.
    optional reading.
 2. **Curate.** Approved decisions go in the maps with reasoning. Type
    corrections → `EPISODE_TYPE_OVERRIDES` (`T6`); air dates →
-   `AIR_DATE_OVERRIDES` (`G53`); counts → `COMMUNITY_COUNT_OVERRIDES`
+   `AIR_DATE_OVERRIDES` (`G53`); real broadcast-order deviations →
+   `AIRDATE_ORDER_ACK` (`G54`); counts → `COMMUNITY_COUNT_OVERRIDES`
    (`N3`); numbering → `SOURCE_NUMBERING_SHIFTS` (`N11`) — all under
    `lib/rulings/`, never a direct row write. Deletions cite `A1`/`A6`;
    curated anchors/continues cite `A24`/`C5`; a repair on a derivation-tier
