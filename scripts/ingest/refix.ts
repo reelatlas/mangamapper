@@ -8,18 +8,13 @@
 import { AFL_BASE, parseShowPage } from './lib/afl';
 import { politeFetch } from './lib/http';
 import { mediaByIds } from './lib/anilist';
-import { db, startRun, finishRun, fileFlag } from './lib/db';
+import { db, startRun, finishRun, fileFlag, selectAll } from './lib/db';
 import { matchSlug } from './lib/match';
 import { stageAfl, stageAniList, resolveSeries } from './lib/resolve';
 
 async function openFlagSlugs(kind: string): Promise<string[]> {
-  const { data, error } = await db
-    .from('ingest_flags')
-    .select('series_key')
-    .eq('kind', kind)
-    .eq('status', 'open');
-  if (error) throw new Error(`flag read (${kind}): ${error.message}`);
-  return [...new Set((data ?? []).map((f) => f.series_key))];
+  const data = await selectAll<{ series_key: string }>('ingest_flags', 'series_key', (q) => q.eq('kind', kind).eq('status', 'open'));
+  return [...new Set(data.map((f) => f.series_key))];
 }
 
 async function dismissFlags(kind: string, slug: string) {
@@ -111,12 +106,12 @@ async function main() {
     // 4 — report
     const { count: seriesCount } = await db.from('series').select('*', { count: 'exact', head: true });
     const { count: episodeCount } = await db.from('episodes').select('*', { count: 'exact', head: true });
-    const { data: flags } = await db.from('ingest_flags').select('kind, series_key').eq('status', 'open');
+    const flags = await selectAll<{ kind: string; series_key: string }>('ingest_flags', 'kind, series_key', (q) => q.eq('status', 'open'));
     const byKind: Record<string, number> = {};
     for (const f of flags ?? []) byKind[f.kind] = (byKind[f.kind] ?? 0) + 1;
     // Per-series head counts: a plain select over episodes silently truncates
     // at PostgREST's 1000-row cap and false-positives nearly everything.
-    const { data: allSeries } = await db.from('series').select('id').order('id');
+    const allSeries = await selectAll<{ id: string }>('series', 'id', (q) => q.order('id'));
     const empty: string[] = [];
     for (const s of allSeries ?? []) {
       const { count } = await db

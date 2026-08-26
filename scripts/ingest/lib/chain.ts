@@ -8,7 +8,7 @@
 // splits (Bleach → TYBW, Tokyo Ghoul → :re, Naruto → Shippuden) are safe by
 // construction, whatever any source's continuous numbering suggests.
 
-import { db } from './db';
+import { db, selectAll } from './db';
 import { mediaByIds, type AniListMedia } from './anilist';
 import { stageAniList, searchTextFor } from './resolve';
 import { slugify } from './slug';
@@ -58,22 +58,11 @@ export interface ChainResult {
 // to allow re-walking the caller's own series.
 export async function ownedAnilistIds(excludeSeriesId?: string | null): Promise<Set<number>> {
   const owned = new Set<number>();
-  for (let from = 0; ; from += 1000) {
-    const { data } = await db
-      .from('series_components')
-      .select('series_id, anilist_id')
-      .range(from, from + 999);
-    for (const r of data ?? []) {
-      if (r.anilist_id != null && r.series_id !== excludeSeriesId) owned.add(r.anilist_id);
-    }
-    if (!data || data.length < 1000) break;
+  for (const r of await selectAll<{ series_id: string; anilist_id: number | null }>('series_components', 'series_id, anilist_id')) {
+    if (r.anilist_id != null && r.series_id !== excludeSeriesId) owned.add(r.anilist_id);
   }
-  for (let from = 0; ; from += 1000) {
-    const { data } = await db.from('series').select('id, anilist_id').range(from, from + 999);
-    for (const r of data ?? []) {
-      if (r.anilist_id != null && r.id !== excludeSeriesId) owned.add(r.anilist_id);
-    }
-    if (!data || data.length < 1000) break;
+  for (const r of await selectAll<{ id: string; anilist_id: number | null }>('series', 'id, anilist_id')) {
+    if (r.anilist_id != null && r.id !== excludeSeriesId) owned.add(r.anilist_id);
   }
   return owned;
 }

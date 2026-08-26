@@ -2,7 +2,7 @@
 // files a flag and HOLDS (the previous data stands until Sean rules on it).
 // Resolution rules live in docs/data-pipeline.md §2.
 
-import { db, fileFlag, fileFlagOnce } from './db';
+import { db, fileFlag, fileFlagOnce, selectAll } from './db';
 import { contentHash } from './hash';
 import { slugify } from './slug';
 import type { AflShowPage } from './afl';
@@ -459,12 +459,10 @@ export function applyEpisodeFloor(
 export async function refreshStitchedVolatile(seriesId: string) {
   // order-only components (null episode range — Kizu movies, Psycho-Pass
   // films) hold watch-order positions and NEVER count toward aired/totals
-  const { data: comps } = await db
-    .from('series_components')
-    .select('anilist_id')
-    .eq('series_id', seriesId)
-    .not('episode_start', 'is', null);
-  if (!comps?.length) return;
+  const comps = await selectAll<{ anilist_id: number }>('series_components', 'anilist_id', (q) =>
+    q.eq('series_id', seriesId).not('episode_start', 'is', null),
+  );
+  if (!comps.length) return;
   const media: AniListMedia[] = [];
   for (const c of comps) {
     const { data } = await db.from('ingest_anilist_media').select('raw').eq('anilist_id', c.anilist_id).maybeSingle();

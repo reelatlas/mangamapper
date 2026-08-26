@@ -20287,6 +20287,23 @@ if (!url || !secretKey) {
 var db = createClient(url, secretKey, {
   auth: { persistSession: false, autoRefreshToken: false }
 });
+async function selectAll(table, select, apply, pageSize = 1e3) {
+  const out = [];
+  let expected = null;
+  for (let from = 0; ; from += pageSize) {
+    let q = db.from(table).select(select, from === 0 ? { count: "exact" } : void 0);
+    if (apply) q = apply(q);
+    const { data, error, count } = await q.range(from, from + pageSize - 1);
+    if (error) throw new Error(`selectAll(${table}): ${error.message}`);
+    if (from === 0 && typeof count === "number") expected = count;
+    out.push(...data ?? []);
+    if (!data || data.length < pageSize) break;
+  }
+  if (expected != null && out.length !== expected) {
+    throw new Error(`selectAll(${table}): walk incomplete \u2014 ${out.length} rows read, server count ${expected} (P32)`);
+  }
+  return out;
+}
 async function startRun(source) {
   const { data, error } = await db.from("ingest_runs").insert({ source }).select("id").single();
   if (error) throw new Error(`startRun(${source}): ${error.message}`);
@@ -20749,8 +20766,12 @@ function applyEpisodeFloor(seriesId, row, epMax) {
   if (row.total_episodes != null) row.total_episodes = Math.max(row.total_episodes, epMax);
 }
 async function refreshStitchedVolatile(seriesId) {
-  const { data: comps } = await db.from("series_components").select("anilist_id").eq("series_id", seriesId).not("episode_start", "is", null);
-  if (!comps?.length) return;
+  const comps = await selectAll(
+    "series_components",
+    "anilist_id",
+    (q) => q.eq("series_id", seriesId).not("episode_start", "is", null)
+  );
+  if (!comps.length) return;
   const media = [];
   for (const c of comps) {
     const { data } = await db.from("ingest_anilist_media").select("raw").eq("anilist_id", c.anilist_id).maybeSingle();
@@ -21021,8 +21042,8 @@ async function run() {
       for (const c of data ?? []) compBySeries.set(c.series_id, [...compBySeries.get(c.series_id) ?? [], c.anilist_id]);
       if (!data || data.length < 1e3) break;
     }
-    const { data: allSeries } = await db.from("series").select("id, afl_slug, anilist_id");
-    for (const s of allSeries ?? []) {
+    const allSeries = await selectAll("series", "id, afl_slug, anilist_id");
+    for (const s of allSeries) {
       seriesMeta.set(s.id, { afl_slug: s.afl_slug });
       if (s.anilist_id) compBySeries.set(s.id, [.../* @__PURE__ */ new Set([...compBySeries.get(s.id) ?? [], s.anilist_id])]);
     }

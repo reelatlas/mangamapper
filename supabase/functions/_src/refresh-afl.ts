@@ -4,7 +4,7 @@
 // hourly cron makes the whole catalog cycle inside the weekly cadence.
 // Alias-corruption defenses run inline via stageAfl's expected-title check.
 
-import { db, startRun, finishRun } from '../../../scripts/ingest/lib/db';
+import { db, startRun, finishRun, selectAll } from '../../../scripts/ingest/lib/db';
 import { AFL_BASE, parseShowPage } from '../../../scripts/ingest/lib/afl';
 import { politeFetch } from '../../../scripts/ingest/lib/http';
 import { stageAfl, resolveSeries } from '../../../scripts/ingest/lib/resolve';
@@ -22,8 +22,8 @@ async function run() {
   const counters = { fetched: 0, unchanged: 0, changed: 0, flagged: 0 };
   const notes: string[] = [];
   try {
-    const { data: active } = await db.from('source_map').select('afl_slug').eq('disposition', 'active');
-    const activeSet = new Set((active ?? []).map((m) => m.afl_slug));
+    const active = await selectAll<{ afl_slug: string }>('source_map', 'afl_slug', (q) => q.eq('disposition', 'active'));
+    const activeSet = new Set(active.map((m) => m.afl_slug));
     const { data: staged } = await db
       .from('ingest_afl_shows')
       .select('slug, etag, last_modified, fetched_at, raw')

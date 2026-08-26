@@ -6,7 +6,7 @@
 import { AFL_BASE, parseShowPage, parseShowsIndex } from './lib/afl';
 import { politeFetch } from './lib/http';
 import { mediaByIds } from './lib/anilist';
-import { db, startRun, finishRun, fileFlag } from './lib/db';
+import { db, selectAll, startRun, finishRun, fileFlag } from './lib/db';
 import { matchSlug } from './lib/match';
 import { stageAfl, stageAniList, resolveSeries } from './lib/resolve';
 
@@ -27,9 +27,9 @@ async function main() {
     // Dispositions are rulings, not cache state: excluded (movies/OVAs,
     // alias-corrupt pages) and duplicate slugs stay out until deliberately
     // re-evaluated (docs/data-pipeline.md).
-    const { data: dispositions } = await db.from('source_map').select('afl_slug, disposition');
+    const dispositions = await selectAll<{ afl_slug: string; disposition: string }>('source_map', 'afl_slug, disposition');
     const skip = new Set(
-      (dispositions ?? []).filter((d) => d.disposition !== 'active').map((d) => d.afl_slug),
+      dispositions.filter((d) => d.disposition !== 'active').map((d) => d.afl_slug),
     );
     const shows = allShows.filter((s) => !skip.has(s.slug));
     console.log(`[index] ${allShows.length} shows, ${shows.length} active (${skip.size} excluded/duplicate)`);
@@ -126,9 +126,9 @@ async function main() {
 
     const { count: seriesCount } = await db.from('series').select('*', { count: 'exact', head: true });
     const { count: episodeCount } = await db.from('episodes').select('*', { count: 'exact', head: true });
-    const { data: flags } = await db.from('ingest_flags').select('kind').eq('status', 'open');
+    const flags = await selectAll<{ kind: string }>('ingest_flags', 'kind', (q) => q.eq('status', 'open'));
     const flagCounts: Record<string, number> = {};
-    for (const f of flags ?? []) flagCounts[f.kind] = (flagCounts[f.kind] ?? 0) + 1;
+    for (const f of flags) flagCounts[f.kind] = (flagCounts[f.kind] ?? 0) + 1;
 
     console.log('\n=== BACKFILL COMPLETE ===');
     console.log(`series in canonical: ${seriesCount}`);

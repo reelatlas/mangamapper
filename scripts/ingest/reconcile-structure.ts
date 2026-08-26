@@ -10,7 +10,7 @@
 // accepted by Sean) ADOPT the episode count per the episode-floor invariant.
 //   npx tsx --env-file=.env.ingest scripts/ingest/reconcile-structure.ts
 
-import { db, startRun, finishRun, fileFlagOnce } from './lib/db';
+import { db, selectAll, startRun, finishRun, fileFlagOnce } from './lib/db';
 import { stageAniList, applyScope, EXTRAS_ADOPTED, applyEpisodeFloor } from './lib/resolve';
 import { aired, walkChain, aggregate, writeComponents, ownedAnilistIds } from './lib/chain';
 
@@ -20,24 +20,24 @@ async function main() {
   const actions: string[] = [];
   try {
     const epMax = new Map<string, number>();
-    for (let from = 0; ; from += 1000) {
-      const { data } = await db.from('episodes').select('series_id, number').range(from, from + 999);
-      for (const r of data ?? []) epMax.set(r.series_id, Math.max(epMax.get(r.series_id) ?? 0, r.number));
-      if (!data || data.length < 1000) break;
+    for (const r of await selectAll<{ series_id: string; number: number }>('episodes', 'series_id, number')) {
+      epMax.set(r.series_id, Math.max(epMax.get(r.series_id) ?? 0, r.number));
     }
     const compEnd = new Map<string, number>();
-    for (let from = 0; ; from += 1000) {
-      const { data } = await db.from('series_components').select('series_id, episode_end').range(from, from + 999);
-      for (const r of data ?? []) {
-        if (r.episode_end != null) compEnd.set(r.series_id, Math.max(compEnd.get(r.series_id) ?? 0, r.episode_end));
-      }
-      if (!data || data.length < 1000) break;
+    for (const r of await selectAll<{ series_id: string; episode_end: number | null }>('series_components', 'series_id, episode_end')) {
+      if (r.episode_end != null) compEnd.set(r.series_id, Math.max(compEnd.get(r.series_id) ?? 0, r.episode_end));
     }
-    const { data: series } = await db
-      .from('series')
-      .select('id, afl_slug, anilist_id, title, aired_episodes, total_episodes, status');
+    const series = await selectAll<{
+      id: string;
+      afl_slug: string | null;
+      anilist_id: number | null;
+      title: string;
+      aired_episodes: number | null;
+      total_episodes: number | null;
+      status: string;
+    }>('series', 'id, afl_slug, anilist_id, title, aired_episodes, total_episodes, status');
 
-    for (const s of series ?? []) {
+    for (const s of series) {
       try {
         const eps = epMax.get(s.id) ?? 0;
         const covered = Math.max(compEnd.get(s.id) ?? 0, s.total_episodes ?? 0, s.aired_episodes ?? 0);

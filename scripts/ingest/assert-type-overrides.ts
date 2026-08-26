@@ -7,7 +7,7 @@
 // Idempotent; pairs with the ruling_violation outcome check.
 //   npx tsx --env-file=.env.ingest scripts/ingest/assert-type-overrides.ts [--dry-run]
 
-import { db } from './lib/db';
+import { db, selectAll } from './lib/db';
 import { EPISODE_TYPE_OVERRIDES } from './lib/resolve';
 
 const DRY = process.argv.includes('--dry-run');
@@ -16,8 +16,8 @@ async function main() {
   let fixed = 0, checked = 0;
   for (const [sid, map] of Object.entries(EPISODE_TYPE_OVERRIDES)) {
     const nums = Object.keys(map).map(Number);
-    const { data: rows } = await db.from('episodes').select('number, type').eq('series_id', sid).in('number', nums);
-    for (const r of rows ?? []) {
+    const rows = await selectAll<{ number: number; type: string }>('episodes', 'number, type', (q) => q.eq('series_id', sid).in('number', nums));
+    for (const r of rows) {
       checked++;
       const want = map[r.number];
       if (r.type !== want) {

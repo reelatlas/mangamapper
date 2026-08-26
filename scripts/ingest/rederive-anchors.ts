@@ -4,7 +4,7 @@
 //   npx tsx --env-file=.env.ingest scripts/ingest/rederive-anchors.ts
 
 import { syncAnchors } from './lib/anchors';
-import { db, startRun, finishRun } from './lib/db';
+import { db, startRun, finishRun, selectAll } from './lib/db';
 import { slugify } from './lib/slug';
 import type { AfgPage } from './lib/afg';
 
@@ -14,17 +14,17 @@ async function main() {
   try {
     // identity registry FIRST (the canonical afg↔series mapping), slug/title
     // heuristics only as fallback for never-registered pages
-    const { data: reg } = await db.from('series_external_ids').select('series_id, external_id').eq('source', 'afg');
+    const reg = await selectAll<{ series_id: string; external_id: string }>('series_external_ids', 'series_id, external_id', (q) => q.eq('source', 'afg'));
     const byRegistry = new Map((reg ?? []).map((r) => [r.external_id, r.series_id]));
-    const { data: series } = await db.from('series').select('id, afl_slug, title');
+    const series = await selectAll<{ id: string; afl_slug: string | null; title: string }>('series', 'id, afl_slug, title');
     const bySlug = new Map<string, string>();
     for (const s of series ?? []) {
       if (s.afl_slug) bySlug.set(s.afl_slug, s.id);
       bySlug.set(s.id, s.id);
       bySlug.set(slugify(s.title), s.id);
     }
-    const { data: pages } = await db.from('ingest_afg_pages').select('slug, raw');
-    for (const p of pages ?? []) {
+    const pages = await selectAll<{ slug: string; raw: AfgPage }>('ingest_afg_pages', 'slug, raw');
+    for (const p of pages) {
       const raw = p.raw as AfgPage;
       const target = byRegistry.get(p.slug) ?? bySlug.get(p.slug) ?? bySlug.get(slugify(raw.title));
       if (!target) continue;

@@ -16,7 +16,7 @@
 
 import { findChapterPages, fetchWikitext, parseVolumes, boundariesWithDrops, type WikiVolume } from './lib/wikipedia';
 import { contentHash } from './lib/hash';
-import { db, startRun, finishRun, fileFlagOnce } from './lib/db';
+import { db, selectAll, startRun, finishRun, fileFlagOnce } from './lib/db';
 
 const sleep = (ms: number) => new Promise((r) => setTimeout(r, ms));
 
@@ -31,18 +31,20 @@ async function main() {
     // manga targets: anchored series first (volumes actually render there).
     // chapter_anchors exceeds PostgREST's 1000-row cap — page it.
     const anchored = new Set<string>();
-    for (let from = 0; ; from += 1000) {
-      const { data } = await db.from('chapter_anchors').select('series_id').range(from, from + 999);
-      for (const r of data ?? []) anchored.add(r.series_id);
-      if (!data || data.length < 1000) break;
-    }
-    const { data: series } = await db
-      .from('series')
-      .select('id, title, anilist_id, manga_anilist_id, popularity, total_chapters, manga_status')
-      .not('manga_anilist_id', 'is', null)
-      .order('popularity', { ascending: false });
+    for (const r of await selectAll<{ series_id: string }>('chapter_anchors', 'series_id')) anchored.add(r.series_id);
+    const series = await selectAll<{
+      id: string;
+      title: string;
+      anilist_id: number | null;
+      manga_anilist_id: number | null;
+      popularity: number | null;
+      total_chapters: number | null;
+      manga_status: string | null;
+    }>('series', 'id, title, anilist_id, manga_anilist_id, popularity, total_chapters, manga_status', (q) =>
+      q.not('manga_anilist_id', 'is', null).order('popularity', { ascending: false }),
+    );
     const targets = new Map<number, { title: string; candidates: string[]; totalChapters: number | null; finished: boolean }>();
-    for (const s of series ?? []) {
+    for (const s of series) {
       if (targets.has(s.manga_anilist_id!)) continue;
       // an explicit id list overrides the anchored-only default (healing a
       // manga whose anchors are still landing)
@@ -178,9 +180,9 @@ async function main() {
         // which Wikipedia only lists in Viz's restarted numbering) close the
         // last wiki volume at their first chapter − 1 — an open-ended wiki
         // row would otherwise swallow every later chapter in chToVol
-        const { data: laterRows } = await db.from('volume_boundaries').select('volume, chapter_start').eq('manga_anilist_id', mangaId).neq('source', 'wikipedia');
+        const laterRows = await selectAll<{ volume: number; chapter_start: number }>('volume_boundaries', 'volume, chapter_start', (q) => q.eq('manga_anilist_id', mangaId).neq('source', 'wikipedia'));
         const lastWiki = bounds[bounds.length - 1];
-        const later = (laterRows ?? []).filter((r) => r.volume > lastWiki.volume).map((r) => r.chapter_start);
+        const later = laterRows.filter((r) => r.volume > lastWiki.volume).map((r) => r.chapter_start);
         if (later.length && (lastWiki.chapterEnd == null || lastWiki.chapterEnd >= Math.min(...later))) lastWiki.chapterEnd = Math.min(...later) - 1;
         await db.from('volume_boundaries').delete().eq('manga_anilist_id', mangaId).eq('source', 'wikipedia');
         const rows = bounds.map((b) => ({

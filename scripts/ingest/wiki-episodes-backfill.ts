@@ -15,7 +15,7 @@
 // Idempotent; re-runs fill only what is still missing.
 //   npx tsx --env-file=.env.ingest scripts/ingest/wiki-episodes-backfill.ts [seriesId ...]
 
-import { db, startRun, finishRun, fileFlagOnce } from './lib/db';
+import { db, selectAll, startRun, finishRun, fileFlagOnce } from './lib/db';
 import { extractTransclusions, findEpisodePages, fetchWikitext, parseEpisodeList, type WikiEpisode } from './lib/wikipedia';
 import { filterEpisodeRows } from './lib/resolve';
 
@@ -47,16 +47,20 @@ async function main() {
   const counters = { fetched: 0, unchanged: 0, changed: 0, flagged: 0 };
   try {
     // targets: series with missing titles/dates (or no rows at all)
-    const { data: series } = await db
-      .from('series')
-      .select('id, title, title_native, aired_episodes, total_episodes, start_date, source_type, manga_status, popularity')
-      .order('popularity', { ascending: false });
-    const eps: any[] = [];
-    for (let f = 0; ; f += 1000) {
-      const { data } = await db.from('episodes').select('series_id, number, title, air_date').range(f, f + 999);
-      eps.push(...(data ?? []));
-      if (!data || data.length < 1000) break;
-    }
+    const series = await selectAll<{
+      id: string;
+      title: string;
+      title_native: string | null;
+      aired_episodes: number | null;
+      total_episodes: number | null;
+      start_date: string | null;
+      source_type: string | null;
+      manga_status: string | null;
+      popularity: number | null;
+    }>('series', 'id, title, title_native, aired_episodes, total_episodes, start_date, source_type, manga_status, popularity', (q) =>
+      q.order('popularity', { ascending: false }),
+    );
+    const eps: any[] = await selectAll<any>('episodes', 'series_id, number, title, air_date');
     const stateBy = new Map<string, { rows: number; missingTitle: number; missingDate: number }>();
     for (const e of eps) {
       const s = stateBy.get(e.series_id) ?? { rows: 0, missingTitle: 0, missingDate: 0 };
@@ -65,7 +69,7 @@ async function main() {
       if (!e.air_date) s.missingDate++;
       stateBy.set(e.series_id, s);
     }
-    const targets = (series ?? []).filter((s) => {
+    const targets = series.filter((s) => {
       if (only.length) return only.includes(s.id);
       if (!s.aired_episodes) return false;
       const st = stateBy.get(s.id);
@@ -102,12 +106,11 @@ async function main() {
         }
         // our component structure — used by the component lock below and
         // the mid-run order-only guard after the merge list is built
-        const { data: comps } = await db
-          .from('series_components')
-          .select('season_order, episode_start, episode_end, label')
-          .eq('series_id', t.id)
-          .order('season_order');
-        const cl = comps ?? [];
+        const cl = await selectAll<{ season_order: number; episode_start: number | null; episode_end: number | null; label: string | null }>(
+          'series_components',
+          'season_order, episode_start, episode_end, label',
+          (q) => q.eq('series_id', t.id).order('season_order'),
+        );
         // which season a component LABEL names ("Kingdom 2nd Season",
         // "Mahoutsukai no Yome SEASON 2 Part 2" → 2); null when silent
         // ("Saishuushou", the head season) — callers fall back to position

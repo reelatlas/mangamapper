@@ -7,7 +7,7 @@
 // upkeep on change: latest_known (publishing only), frontier re-derivation
 // via the shared lib, and the manga-status cross-check.
 
-import { db, startRun, finishRun } from '../../../scripts/ingest/lib/db';
+import { db, startRun, finishRun, selectAll } from '../../../scripts/ingest/lib/db';
 import { fetchMuSeries, muHash } from '../../../scripts/ingest/lib/mangaupdates';
 import { contentHash } from '../../../scripts/ingest/lib/hash';
 import { applyMuFrontier, bestLatestKnown, crossCheckMangaStatus } from '../../../scripts/ingest/lib/mu-frontier';
@@ -54,11 +54,12 @@ async function run() {
         counters.changed++;
 
         // inline upkeep for every series backed by this manga
-        const { data: linked } = await db
-          .from('series')
-          .select('id, status, aired_episodes, total_chapters, manga_start_chapter, manga_status')
-          .eq('manga_anilist_id', row.manga_anilist_id);
-        for (const s of linked ?? []) {
+        const linked = await selectAll<{ id: string; status: string | null; aired_episodes: number | null; total_chapters: number | null; manga_start_chapter: number | null; manga_status: string | null }>(
+          'series',
+          'id, status, aired_episodes, total_chapters, manga_start_chapter, manga_status',
+          (q) => q.eq('manga_anilist_id', row.manga_anilist_id),
+        );
+        for (const s of linked) {
           const { data: epTop } = await db.from('chapter_anchors').select('episode').eq('series_id', s.id).neq('source', 'mu').order('episode', { ascending: false }).limit(1);
           const { data: chTop } = await db.from('chapter_anchors').select('chapter').eq('series_id', s.id).neq('source', 'mu').order('chapter', { ascending: false }).limit(1);
           await db

@@ -286,7 +286,7 @@
 - `P29` Capture: every learning is routed to a durable, named home — aka `capture`, `capture routing`, `close the loop`, `the capture table`
 - `P30` Judgment → gate → audit; an empty audit cell is the backlog — aka `judgment → gate → audit`, `judgment to gate to audit`, `the standing goal`, `direction of travel`, `check the gates are real`
 - `P31` /add-rule: gate → edges → audit → heal → deltas → record *(planned)* — aka `/add-rule`, `add-rule`, `add-rule sequence`, `T3.1`
-- `P32` Completeness is an outcome: walks prove processed = total *(planned)* — aka `completeness as an outcome`, `completeness sidecar`, `T2.3`, `healer-pagination trap`
+- `P32` Completeness is an outcome: walks prove processed = total — aka `completeness as an outcome`, `completeness sidecar`, `T2.3`, `healer-pagination trap`
 - `P33` System census checks the reference structure mechanically *(planned)* — aka `system census`, `T2.7`, `three rosters`, `T2.4`
 - `P34` Historical apply scripts are kept as records, non-runnable *(planned)* — aka `history/`, `historical apply scripts non-runnable`, `history non-runnable`, `T2.5`, `D-5`
 - `P36` Cross-model check the frames, not just the data *(planned)* — aka `cross-model check the frames`, `frame check after T4.0`, `principle 8`
@@ -3752,15 +3752,15 @@ A new rule enters in one sequence: (1) the gate in scripts/ingest/lib/, never in
 - aliases: /add-rule, add-rule, add-rule sequence, T3.1
 - see: P2, P3, P5, P17, P30
 
-### P32 · Completeness is an outcome: walks prove processed = total *(planned)*
+### P32 · Completeness is an outcome: walks prove processed = total
 
 Every catalog walk reads through a paged selectAll with an exact count, reports processed/total, and FAILS if short; a walk that cannot prove completeness fails closed. Healers no-op on a clean catalog (the idempotency check). No unpaged select on a table that can exceed the 1000-row page.
 
 *Why:* syncAnchors' unpaged per-series episode select lets one-piece and detective-conan rows past 1000 pass the A1 allow-list as row-less (DRIFT-LIST §E.2); the first c3 healer under-processed silently (§12.46).
 
-- ruled Sean 2026-08-25 (docs/restructure-plan.md §3 T2.3; DRIFT-LIST §E.2)
+- ruled Sean 2026-08-26 (docs/restructure-plan.md §3 T2.3; DRIFT-LIST §E.2)
 - layer **writer**
-- enforced: [lib/db.ts](../scripts/ingest/lib/db.ts) · [docs/restructure-plan.md#T2.3](../docs/restructure-plan.md)
+- enforced: [lib/db.ts#selectAll](../scripts/ingest/lib/db.ts) · [scripts/restructure/unpaged-selects.ts](../scripts/restructure/unpaged-selects.ts)
 - **audit: none — automation backlog**
 - witnesses: one-piece, detective-conan
 - aliases: completeness as an outcome, completeness sidecar, T2.3, healer-pagination trap
@@ -4718,6 +4718,6 @@ Any component that renders episode-level data consumes the HYDRATED series (getB
 
 ## Scoreboard
 
-- rules: 258 (live 238, planned 15, superseded 5)
-- live data rules with no audit class (the automation backlog): 88
+- rules: 258 (live 239, planned 14, superseded 5)
+- live data rules with no audit class (the automation backlog): 89
 - by layer: writer 131 · display 23 · both 21 · process 83

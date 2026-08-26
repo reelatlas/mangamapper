@@ -8,7 +8,7 @@
 //   - manga-status cross-check + edition-divergence flags
 //   npx tsx --env-file=.env.ingest scripts/ingest/audit-manga-coverage.ts
 
-import { db, startRun, finishRun, fileFlagOnce } from './lib/db';
+import { db, selectAll, startRun, finishRun, fileFlagOnce } from './lib/db';
 import { applyMuFrontier, bestLatestKnown, crossCheckMangaStatus } from './lib/mu-frontier';
 
 interface MuRaw {
@@ -45,22 +45,25 @@ async function main() {
     // pair that adds no chapter progress is the SAME stale frontier.
     const anchorMax = new Map<string, number>();
     const chapterMax = new Map<string, number>();
-    for (let from = 0; ; from += 1000) {
-      const { data } = await db.from('chapter_anchors').select('series_id, episode, chapter').neq('source', 'mu').range(from, from + 999);
-      for (const r of data ?? []) {
-        anchorMax.set(r.series_id, Math.max(anchorMax.get(r.series_id) ?? 0, r.episode));
-        chapterMax.set(r.series_id, Math.max(chapterMax.get(r.series_id) ?? 0, r.chapter));
-      }
-      if (!data || data.length < 1000) break;
+    for (const r of await selectAll<{ series_id: string; episode: number; chapter: number }>('chapter_anchors', 'series_id, episode, chapter', (q) => q.neq('source', 'mu'))) {
+      anchorMax.set(r.series_id, Math.max(anchorMax.get(r.series_id) ?? 0, r.episode));
+      chapterMax.set(r.series_id, Math.max(chapterMax.get(r.series_id) ?? 0, r.chapter));
     }
-    const { data: muRows } = await db.from('ingest_mangaupdates').select('manga_anilist_id, raw');
-    const muByManga = new Map((muRows ?? []).map((r) => [r.manga_anilist_id, r.raw as MuRaw]));
+    const muRows = await selectAll<{ manga_anilist_id: number; raw: unknown }>('ingest_mangaupdates', 'manga_anilist_id, raw');
+    const muByManga = new Map(muRows.map((r) => [r.manga_anilist_id, r.raw as MuRaw]));
 
-    const { data: series } = await db
-      .from('series')
-      .select('id, status, source_type, manga_status, manga_anilist_id, total_chapters, aired_episodes, manga_start_chapter');
+    const series = await selectAll<{
+      id: string;
+      status: string;
+      source_type: string | null;
+      manga_status: string | null;
+      manga_anilist_id: number | null;
+      total_chapters: number | null;
+      aired_episodes: number | null;
+      manga_start_chapter: number | null;
+    }>('series', 'id, status, source_type, manga_status, manga_anilist_id, total_chapters, aired_episodes, manga_start_chapter');
 
-    for (const s of series ?? []) {
+    for (const s of series) {
       const hasSource = s.source_type !== 'original' && s.manga_status !== 'anime_only';
       if (!hasSource) {
         classes.no_source.push(s.id);

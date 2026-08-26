@@ -20334,6 +20334,23 @@ if (!url || !secretKey) {
 var db = createClient(url, secretKey, {
   auth: { persistSession: false, autoRefreshToken: false }
 });
+async function selectAll(table, select2, apply, pageSize = 1e3) {
+  const out = [];
+  let expected = null;
+  for (let from = 0; ; from += pageSize) {
+    let q = db.from(table).select(select2, from === 0 ? { count: "exact" } : void 0);
+    if (apply) q = apply(q);
+    const { data: data2, error, count } = await q.range(from, from + pageSize - 1);
+    if (error) throw new Error(`selectAll(${table}): ${error.message}`);
+    if (from === 0 && typeof count === "number") expected = count;
+    out.push(...data2 ?? []);
+    if (!data2 || data2.length < pageSize) break;
+  }
+  if (expected != null && out.length !== expected) {
+    throw new Error(`selectAll(${table}): walk incomplete \u2014 ${out.length} rows read, server count ${expected} (P32)`);
+  }
+  return out;
+}
 async function startRun(source) {
   const { data: data2, error } = await db.from("ingest_runs").insert({ source }).select("id").single();
   if (error) throw new Error(`startRun(${source}): ${error.message}`);
@@ -25639,7 +25656,7 @@ function appendNextSiblings(elem, adapter2) {
   }
   return elems;
 }
-var selectAll = getSelectorFunc((query, elems, options) => query === import_boolbase6.default.falseFunc || !elems || elems.length === 0 ? [] : options.adapter.findAll(query, elems));
+var selectAll2 = getSelectorFunc((query, elems, options) => query === import_boolbase6.default.falseFunc || !elems || elems.length === 0 ? [] : options.adapter.findAll(query, elems));
 var selectOne = getSelectorFunc((query, elems, options) => query === import_boolbase6.default.falseFunc || !elems || elems.length === 0 ? null : options.adapter.findOne(query, elems));
 
 // node_modules/cheerio-select/lib/esm/index.js
@@ -35630,8 +35647,12 @@ async function applyContinua(runId, seriesId, continua, afgPageMax) {
     let shifted = continua.endEpisode;
     const pageMatchesOurs = afgPageMax !== void 0 && afgPageMax >= (s.aired_episodes ?? 0);
     if (!pageMatchesOurs) {
-      const { data: inserts } = await db.from("series_components").select("episode_start, episode_end, kind").eq("series_id", s.id).not("kind", "eq", "season").not("episode_start", "is", null).order("episode_start");
-      for (const c of inserts ?? []) {
+      const inserts = await selectAll(
+        "series_components",
+        "episode_start, episode_end, kind",
+        (q) => q.eq("series_id", s.id).not("kind", "eq", "season").not("episode_start", "is", null).order("episode_start")
+      );
+      for (const c of inserts) {
         const len = (c.episode_end ?? c.episode_start) - c.episode_start + 1;
         if (c.episode_start <= shifted) shifted += len;
       }
@@ -35735,14 +35756,22 @@ async function syncAnchors(runId, seriesId, afgSlug, page) {
     });
     return { anchors: 0, withheld: true };
   }
-  const { data: prevCont } = await db.from("chapter_anchors").select("episode, continue_chapter, continue_kind, continue_note").eq("series_id", seriesId).eq("source", "afg").not("continue_chapter", "is", null);
-  const contByEp = new Map((prevCont ?? []).map((c) => [c.episode, c]));
+  const prevCont = await selectAll(
+    "chapter_anchors",
+    "episode, continue_chapter, continue_kind, continue_note",
+    (q) => q.eq("series_id", seriesId).eq("source", "afg").not("continue_chapter", "is", null)
+  );
+  const contByEp = new Map(prevCont.map((c) => [c.episode, c]));
   await db.from("chapter_anchors").delete().eq("series_id", seriesId).eq("source", "afg");
-  const { data: curated } = await db.from("chapter_anchors").select("episode, chapter").eq("series_id", seriesId).in("source", ["manual", "wiki"]);
-  const protectedEps = new Set((curated ?? []).map((c) => c.episode));
+  const curated = await selectAll(
+    "chapter_anchors",
+    "episode, chapter",
+    (q) => q.eq("series_id", seriesId).in("source", ["manual", "wiki"])
+  );
+  const protectedEps = new Set(curated.map((c) => c.episode));
   const translated = anchors.map((a) => ({ ...a, episode: translateEpisodeNumber(seriesId, a.episode, "afg") })).filter((a) => a.episode !== null);
-  const { data: typeRows } = await db.from("episodes").select("number, type").eq("series_id", seriesId);
-  const typeByEp = new Map((typeRows ?? []).map((e) => [e.number, e.type]));
+  const typeRows = await selectAll("episodes", "number, type", (q) => q.eq("series_id", seriesId));
+  const typeByEp = new Map(typeRows.map((e) => [e.number, e.type]));
   const rows = translated.filter((a) => {
     const t = typeByEp.get(a.episode);
     return t === void 0 || t === "canon" || t === "mixed";
@@ -35813,15 +35842,15 @@ async function run() {
     const { data: staged } = await db.from("ingest_afg_pages").select("slug, etag, last_modified, fetched_at").order("fetched_at", { ascending: true }).limit(BATCH * 2);
     const cutoff = Date.now() - STALE_MS;
     const batch = (staged ?? []).filter((s) => new Date(s.fetched_at).getTime() < cutoff).slice(0, BATCH);
-    const { data: series } = await db.from("series").select("id, afl_slug, title");
+    const series = await selectAll("series", "id, afl_slug, title");
     const bySlug = /* @__PURE__ */ new Map();
-    for (const s of series ?? []) {
+    for (const s of series) {
       if (s.afl_slug) bySlug.set(s.afl_slug, s.id);
       bySlug.set(s.id, s.id);
       bySlug.set(slugify(s.title), s.id);
     }
-    const { data: reg } = await db.from("series_external_ids").select("series_id, external_id").eq("source", "afg");
-    for (const r of reg ?? []) bySlug.set(r.external_id, r.series_id);
+    const reg = await selectAll("series_external_ids", "series_id, external_id", (q) => q.eq("source", "afg"));
+    for (const r of reg) bySlug.set(r.external_id, r.series_id);
     for (const s of batch) {
       try {
         const res = await politeFetch(`${AFG_BASE}/anime/${s.slug}/`, {

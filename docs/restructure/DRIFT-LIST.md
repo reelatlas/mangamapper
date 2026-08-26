@@ -116,8 +116,8 @@ Label collisions the ledger must alias: "D1" = kamisama ep-10 (§12.41) AND the 
 
 ## E. Latent defects (fix in sidecars; none is live data corruption today)
 
-1. **`scripts/` is outside the `tsc -b` graph** — root tsconfig references src + vite.config only. Board T2.0.
-2. **`syncAnchors` typeRows is an unpaged per-series `episodes` select** — one-piece and detective-conan exceed 1000 rows; episodes past the cap pass the A1 allow-list as "row-less". Census `anchor_on_noncanon_row` = 0, so latent. Board T2.3, first item.
+1. **FIXED 2026-08-26 (T2.0).** `scripts/` was outside the `tsc -b` graph — root tsconfig references src + vite.config only. Board T2.0.
+2. **FIXED 2026-08-26 (T2.3).** `syncAnchors` typeRows was an unpaged per-series `episodes` select — one-piece and detective-conan exceed 1000 rows; episodes past the cap pass the A1 allow-list as "row-less". Census `anchor_on_noncanon_row` = 0, so latent. Board T2.3, first item.
 3. **`chain.ts#aggregate` source_type drift** — a stitched series whose AniList head lacks `source` becomes `original` (the fallback exists only in resolve.ts). T2.1 dedupe; T4.2 derivation rule.
 4. **Client frontier ignores episode type** — a stray filler anchor is hidden in the list but can set latestKnown. T2 dedupe (one A1 predicate for both consumers).
 5. **Re-running historical apply scripts reverts later rulings**: apply-research-batch.ts recreates the fotbs 23-26 ova span (demoted 08-25b); apply-research-aot-s4p2.ts reverts ep 87 start 130→123; the dr-stone row-95 creation is contradicted by the later order-only ruling. `history/` must be non-runnable by convention AND by the roster check.

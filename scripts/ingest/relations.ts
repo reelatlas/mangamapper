@@ -5,7 +5,7 @@
 // isn't an AniList concept, so rulings override the auto kind per pair).
 //   npx tsx --env-file=.env.ingest scripts/ingest/relations.ts
 
-import { db, startRun, finishRun } from './lib/db';
+import { db, selectAll, startRun, finishRun } from './lib/db';
 import type { AniListMedia } from './lib/anilist';
 
 const AUTO_KINDS = new Set(['SEQUEL', 'PREQUEL', 'SIDE_STORY', 'SPIN_OFF', 'ALTERNATIVE', 'PARENT']);
@@ -45,22 +45,19 @@ const RULED: [string, string, string][] = [
 async function main() {
   const runId = await startRun('resolve');
   try {
-    const { data: comps } = await db.from('series_components').select('series_id, anilist_id');
+    const comps = await selectAll<{ series_id: string; anilist_id: number }>('series_components', 'series_id, anilist_id');
     const owner = new Map<number, string>();
-    for (const c of comps ?? []) owner.set(c.anilist_id, c.series_id);
+    for (const c of comps) owner.set(c.anilist_id, c.series_id);
 
-    const { data: seriesRows } = await db.from('series').select('id, afl_slug');
-    const bySlug = new Map((seriesRows ?? []).map((s) => [s.afl_slug, s.id]));
+    const seriesRows = await selectAll<{ id: string; afl_slug: string | null }>('series', 'id, afl_slug');
+    const bySlug = new Map(seriesRows.map((s) => [s.afl_slug, s.id]));
 
     // AUTO: edges between components of different series
     const rows = new Map<string, { from_series: string; to_series: string; kind: string }>();
     const ids = [...owner.keys()];
     for (let i = 0; i < ids.length; i += 100) {
-      const { data: staged } = await db
-        .from('ingest_anilist_media')
-        .select('anilist_id, raw')
-        .in('anilist_id', ids.slice(i, i + 100));
-      for (const row of staged ?? []) {
+      const staged = await selectAll<{ anilist_id: number; raw: unknown }>('ingest_anilist_media', 'anilist_id, raw', (q) => q.in('anilist_id', ids.slice(i, i + 100)));
+      for (const row of staged) {
         const from = owner.get(row.anilist_id)!;
         const media = row.raw as AniListMedia;
         for (const e of media.relations.edges) {

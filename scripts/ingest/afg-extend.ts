@@ -18,7 +18,7 @@
 import { AFG_BASE, parseAfgPage } from './lib/afg';
 import { politeFetch } from './lib/http';
 import { contentHash } from './lib/hash';
-import { db, startRun, finishRun, fileFlagOnce } from './lib/db';
+import { db, selectAll, startRun, finishRun, fileFlagOnce } from './lib/db';
 import { stageAniList, applyScope, applyEpisodeFloor, filterEpisodeRows } from './lib/resolve';
 import { aired, walkChain, aggregate, writeComponents, ownedAnilistIds } from './lib/chain';
 import { syncAnchors } from './lib/anchors';
@@ -37,13 +37,14 @@ async function main() {
   const actions: string[] = [];
 
   try {
-    const { data: registry } = await db.from('series_external_ids').select('series_id, external_id').eq('source', 'afg');
-    const { data: seriesRows } = await db
-      .from('series')
-      .select('id, afl_slug, anilist_id, title, aired_episodes');
-    const seriesById = new Map((seriesRows ?? []).map((s) => [s.id, s]));
+    const registry = await selectAll<{ series_id: string; external_id: string }>('series_external_ids', 'series_id, external_id', (q) => q.eq('source', 'afg'));
+    const seriesRows = await selectAll<{ id: string; afl_slug: string | null; anilist_id: number | null; title: string; aired_episodes: number | null }>(
+      'series',
+      'id, afl_slug, anilist_id, title, aired_episodes',
+    );
+    const seriesById = new Map(seriesRows.map((s) => [s.id, s]));
 
-    for (const reg of registry ?? []) {
+    for (const reg of registry) {
       try {
         const s = seriesById.get(reg.series_id);
         if (!s?.anilist_id) continue;
@@ -76,13 +77,10 @@ async function main() {
         // expansion could hold AFG's full multi-season list against a
         // single-season structure (Cuckoos 36 eps vs total 24), which the
         // episode count alone can't see
-        const { data: comps } = await db
-          .from('series_components')
-          .select('episode_end')
-          .eq('series_id', s.id);
+        const comps = await selectAll<{ episode_end: number | null }>('series_components', 'episode_end', (q) => q.eq('series_id', s.id));
         const covered = Math.max(
           0,
-          ...(comps ?? []).map((c) => c.episode_end ?? 0),
+          ...comps.map((c) => c.episode_end ?? 0),
         );
         const structure = Math.max(covered, s.aired_episodes ?? 0);
         // extend only when AFG'S numbering outruns our structure — our own
@@ -159,11 +157,7 @@ async function main() {
         // MERGE episodes: existing rows (AFL = type authority) untouched;
         // AFG fills only the numbers we lack
         const have = new Set<number>();
-        for (let from = 0; ; from += 1000) {
-          const { data } = await db.from('episodes').select('number').eq('series_id', s.id).range(from, from + 999);
-          for (const r of data ?? []) have.add(r.number);
-          if (!data || data.length < 1000) break;
-        }
+        for (const r of await selectAll<{ number: number }>('episodes', 'number', (q) => q.eq('series_id', s.id))) have.add(r.number);
         // per-series rulings (community caps + type overrides) apply to
         // every episode writer, extension fills included
         const fill = filterEpisodeRows(s.id, page.episodes

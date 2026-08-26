@@ -15,7 +15,7 @@
 // a research row is never deleted by this healer.
 //   npx tsx --env-file=.env.ingest scripts/ingest/heal-volume-boundaries.ts [--dry-run]
 
-import { db, startRun, finishRun, fileFlagOnce } from './lib/db';
+import { db, selectAll, startRun, finishRun, fileFlagOnce } from './lib/db';
 
 const DRY = process.argv.includes('--dry-run');
 
@@ -28,24 +28,16 @@ type Row = {
 };
 
 async function main() {
-  const rows: Row[] = [];
-  for (let f = 0; ; f += 1000) {
-    const { data } = await db
-      .from('volume_boundaries')
-      .select('manga_anilist_id, volume, chapter_start, chapter_end, source')
-      .range(f, f + 999);
-    rows.push(...((data ?? []) as Row[]));
-    if (!data || data.length < 1000) break;
-  }
+  const rows = await selectAll<Row>('volume_boundaries', 'manga_anilist_id, volume, chapter_start, chapter_end, source');
   const byManga = new Map<number, Row[]>();
   for (const r of rows) {
     const list = byManga.get(r.manga_anilist_id) ?? [];
     list.push(r);
     byManga.set(r.manga_anilist_id, list);
   }
-  const { data: series } = await db.from('series').select('id, manga_anilist_id');
+  const series = await selectAll<{ id: string; manga_anilist_id: number | null }>('series', 'id, manga_anilist_id');
   const seriesOf = new Map<number, string[]>();
-  for (const s of series ?? []) {
+  for (const s of series) {
     if (!s.manga_anilist_id) continue;
     const list = seriesOf.get(s.manga_anilist_id) ?? [];
     list.push(s.id);

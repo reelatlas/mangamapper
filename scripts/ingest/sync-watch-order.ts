@@ -8,7 +8,7 @@
 // Idempotent; run after any fractional disposition change.
 //   npx tsx --env-file=.env.ingest scripts/ingest/sync-watch-order.ts
 
-import { db, startRun, finishRun } from './lib/db';
+import { db, selectAll, startRun, finishRun } from './lib/db';
 
 // series_id → position → surfaced label (a UI-surface ruling, per series).
 // AUTHORITATIVE both ways: an entry absent here carries display_label null
@@ -36,12 +36,17 @@ const RULED_RECORDS: Record<string, Record<number, { chapter: number; volume: nu
 async function main() {
   const runId = await startRun('resolve');
   try {
-    const { data: fr } = await db
-      .from('ingest_fractionals')
-      .select('series_id, position, title, air_date, note, source, disposition')
-      .eq('disposition', 'order_only');
+    const fr = await selectAll<{
+      series_id: string;
+      position: number;
+      title: string | null;
+      air_date: string | null;
+      note: string | null;
+      source: string | null;
+      disposition: string;
+    }>('ingest_fractionals', 'series_id, position, title, air_date, note, source, disposition', (q) => q.eq('disposition', 'order_only'));
     let n = 0;
-    for (const f of fr ?? []) {
+    for (const f of fr) {
       const label = RULED_LABELS[f.series_id]?.[Number(f.position)] ?? null;
       const rec = RULED_RECORDS[f.series_id]?.[Number(f.position)];
       const row: Record<string, unknown> = {
@@ -61,16 +66,16 @@ async function main() {
       n++;
     }
     // entries whose fractional record vanished (re-dispositioned) drop out
-    const keep = new Set((fr ?? []).map((f) => `${f.series_id}|${f.position}`));
-    const { data: existing } = await db.from('watch_order_entries').select('series_id, position');
+    const keep = new Set(fr.map((f) => `${f.series_id}|${f.position}`));
+    const existing = await selectAll<{ series_id: string; position: number }>('watch_order_entries', 'series_id, position');
     let dropped = 0;
-    for (const e of existing ?? []) {
+    for (const e of existing) {
       if (!keep.has(`${e.series_id}|${e.position}`)) {
         await db.from('watch_order_entries').delete().eq('series_id', e.series_id).eq('position', e.position);
         dropped++;
       }
     }
-    const labeled = (fr ?? []).filter((f) => RULED_LABELS[f.series_id]?.[Number(f.position)] != null).length;
+    const labeled = fr.filter((f) => RULED_LABELS[f.series_id]?.[Number(f.position)] != null).length;
     console.log(`watch_order_entries: ${n} synced (${labeled} labeled/surfaced), ${dropped} dropped`);
     await finishRun(runId, 'ok', { fetched: 0, unchanged: 0, changed: n, flagged: 0 }, 'watch-order sync');
   } catch (e) {

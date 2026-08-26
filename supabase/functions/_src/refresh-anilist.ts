@@ -4,7 +4,7 @@
 // request batches, stages changes hash-gated, then refreshes: stitched series
 // get a volatile-field recompute, single-season series a full re-resolve.
 
-import { db, startRun, finishRun } from '../../../scripts/ingest/lib/db';
+import { db, startRun, finishRun, selectAll } from '../../../scripts/ingest/lib/db';
 import { mediaByIds } from '../../../scripts/ingest/lib/anilist';
 import { stageAniList, resolveSeries, refreshStitchedVolatile } from '../../../scripts/ingest/lib/resolve';
 
@@ -25,8 +25,8 @@ async function run() {
       for (const c of data ?? []) compBySeries.set(c.series_id, [...(compBySeries.get(c.series_id) ?? []), c.anilist_id]);
       if (!data || data.length < 1000) break;
     }
-    const { data: allSeries } = await db.from('series').select('id, afl_slug, anilist_id');
-    for (const s of allSeries ?? []) {
+    const allSeries = await selectAll<{ id: string; afl_slug: string | null; anilist_id: number | null }>('series', 'id, afl_slug, anilist_id');
+    for (const s of allSeries) {
       seriesMeta.set(s.id, { afl_slug: s.afl_slug });
       if (s.anilist_id) compBySeries.set(s.id, [...new Set([...(compBySeries.get(s.id) ?? []), s.anilist_id])]);
     }

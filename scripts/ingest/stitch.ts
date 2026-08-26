@@ -14,7 +14,7 @@
 // survive; §10 AFL-range merge rule), id/title stay stable (structure only).
 //   npx tsx --env-file=.env.ingest scripts/ingest/stitch.ts [--dry-run]
 
-import { db, startRun, finishRun, fileFlagOnce } from './lib/db';
+import { db, selectAll, startRun, finishRun, fileFlagOnce } from './lib/db';
 import { type AniListMedia } from './lib/anilist';
 import { stageAniList, registerIds, applyScope, applyEpisodeFloor, filterEpisodeRows } from './lib/resolve';
 import { slugify } from './lib/slug';
@@ -140,11 +140,9 @@ const DRY_RUN = process.argv.includes('--dry-run');
 async function structureMatches(slug: string, ids: number[], extras?: { id: number; after: number }[]): Promise<boolean> {
   const { data: s } = await db.from('series').select('id').eq('afl_slug', slug).maybeSingle();
   if (!s) return false;
-  const { data: comps } = await db
-    .from('series_components')
-    .select('anilist_id, season_order, episode_start')
-    .eq('series_id', s.id)
-    .order('season_order');
+  const comps = await selectAll<{ anilist_id: number; season_order: number; episode_start: number | null }>('series_components', 'anilist_id, season_order, episode_start', (q) =>
+    q.eq('series_id', s.id).order('season_order'),
+  );
   // compare the id SEQUENCE and each entry's numbered-vs-order-only shape
   // (an extra that an earlier walk bridged in as a numbered season must be
   // rewritten to its null-span, order-only position)
@@ -153,7 +151,7 @@ async function structureMatches(slug: string, ids: number[], extras?: { id: numb
     want.push({ id, orderOnly: false });
     for (const x of extras?.filter((e) => e.after === id) ?? []) want.push({ id: x.id, orderOnly: true });
   }
-  const have = (comps ?? []).map((c) => ({ id: c.anilist_id as number, orderOnly: c.episode_start == null }));
+  const have = comps.map((c) => ({ id: c.anilist_id as number, orderOnly: c.episode_start == null }));
   return have.length === want.length && have.every((h, i) => h.id === want[i].id && h.orderOnly === want[i].orderOnly);
 }
 
@@ -167,13 +165,11 @@ async function main() {
     // lumped-page signature; AFL cannot know more episodes than exist, so any
     // excess >2 is suspect (Tokyo Ghoul slipped a +12 gate: S1+√A page vs the
     // √A entry was exactly 12 over). (AFL having FEWER = site lag, no stitch.)
-    const { data: flags } = await db
-      .from('ingest_flags')
-      .select('id, series_key, detail')
-      .eq('kind', 'count_mismatch')
-      .eq('status', 'open');
+    const flags = await selectAll<{ id: number; series_key: string; detail: unknown }>('ingest_flags', 'id, series_key, detail', (q) =>
+      q.eq('kind', 'count_mismatch').eq('status', 'open'),
+    );
     type Cand = { id: number | null; slug: string; afl: number; anilist: number };
-    const candidates: Cand[] = (flags ?? [])
+    const candidates: Cand[] = flags
       .map((f) => ({
         id: f.id as number,
         slug: f.series_key as string,
@@ -325,9 +321,9 @@ async function main() {
     await finishRun(runId, 'ok', counters, 'stitcher');
     console.log('\n=== STITCH COMPLETE ===');
     for (const a of actions) console.log('  -', a);
-    const { data: open } = await db.from('ingest_flags').select('kind').eq('status', 'open');
+    const open = await selectAll<{ kind: string }>('ingest_flags', 'kind', (q) => q.eq('status', 'open'));
     const byKind: Record<string, number> = {};
-    for (const f of open ?? []) byKind[f.kind] = (byKind[f.kind] ?? 0) + 1;
+    for (const f of open) byKind[f.kind] = (byKind[f.kind] ?? 0) + 1;
     console.log('open flags:', byKind);
   } catch (err) {
     await finishRun(runId, 'error', counters, String(err));

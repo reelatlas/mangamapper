@@ -5,7 +5,7 @@
 // broadcast counting, etc.). Read-only: findings drive declared shifts.
 //   npx tsx --env-file=.env.ingest scripts/ingest/wiki-title-verify.ts <ids...>
 
-import { db } from './lib/db';
+import { db, selectAll } from './lib/db';
 import { extractTransclusions, findEpisodePages, fetchWikitext, parseEpisodeList, type WikiEpisode } from './lib/wikipedia';
 
 const sleep = (ms: number) => new Promise((r) => setTimeout(r, ms));
@@ -25,8 +25,8 @@ async function main() {
   for (const id of ids) {
     const { data: s } = await db.from('series').select('title, title_native, aired_episodes').eq('id', id).maybeSingle();
     if (!s) { console.log(`${id}: no series`); continue; }
-    const { data: rows } = await db.from('episodes').select('number, title').eq('series_id', id).order('number');
-    const stored = (rows ?? []).filter((r) => String(r.title ?? '').trim());
+    const rows = await selectAll<{ number: number; title: string | null }>('episodes', 'number, title', (q) => q.eq('series_id', id).order('number'));
+    const stored = rows.filter((r) => String(r.title ?? '').trim());
     const pages = await findEpisodePages([s.title, s.title_native ?? ''].filter(Boolean));
     let wiki: WikiEpisode[] = [];
     for (const p of pages) {

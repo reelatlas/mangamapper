@@ -282,7 +282,7 @@ words after the glossary exists. Rough total: 8–12 sessions.
 | CLAUDE.md role | router + family strip (done 2026-08-26) | router + family strip |
 | one-hop cases (batch-17 misses) | 16 defined, 16 pass mechanically (2026-08-26); cold probe pending T3.5 | all pass, mechanically + cold probe |
 | broken ledger citations | 0 (ledger-check --citations, 2026-08-26) | 0 (system census green) |
-| walks that cannot prove completeness | 4 paging impls, 7+ unpaged selects, syncAnchors A1 hole | 0 |
+| walks that cannot prove completeness | 0 (2026-08-26: unpaged-selects scanner clean; healer idempotency check pending T2.4) | 0 |
 | ingest files outside the `tsc -b` graph | all of `scripts/` | 0 |
 | edge bundles ≠ lib hash | unchecked | 0 |
 | duplicated mechanisms (DRIFT-LIST §C) | 18 | 0 |
@@ -322,7 +322,7 @@ words after the glossary exists. Rough total: 8–12 sessions.
 | T2.1 | lib/rulings/ + RulingEntry | T1.2 | planned |
 | T2.2 | rulings index by series | T2.1 | planned |
 | T2.0 | compile-graph sidecar (tsconfig.scripts.json) | — | done 2026-08-26 |
-| T2.3 | completeness sidecar | — | planned |
+| T2.3 | completeness sidecar — selectAll (count-checked) in lib/db.ts; 4 paging helpers → 1; 80+ sites converted incl. syncAnchors A1 hole; unpaged-selects scanner (P32 live) | — | done 2026-08-26 |
 | T2.4 | three rosters | T0.3 | planned |
 | T2.5 | script triage applied | T2.4 | planned |
 | T2.6 | edges + lib-hash stamp | T2.1–2.5 | planned |

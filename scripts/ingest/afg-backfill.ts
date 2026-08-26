@@ -7,7 +7,7 @@
 import { AFG_BASE, parseAfgPage, parseSitemap } from './lib/afg';
 import { politeFetch } from './lib/http';
 import { contentHash } from './lib/hash';
-import { db, startRun, finishRun } from './lib/db';
+import { db, selectAll, startRun, finishRun } from './lib/db';
 import { slugify } from './lib/slug';
 import { syncAnchors } from './lib/anchors';
 
@@ -32,25 +32,21 @@ async function main() {
 
     // pages still missing stored HTML (greedy staging: reading-guidance prose)
     const noHtml = new Set<string>();
-    for (let from = 0; ; from += 1000) {
-      const { data } = await db.from('ingest_afg_pages').select('slug').is('raw_html', null).range(from, from + 999);
-      for (const r of data ?? []) noHtml.add(r.slug);
-      if (!data || data.length < 1000) break;
-    }
+    for (const r of await selectAll<{ slug: string }>('ingest_afg_pages', 'slug', (q) => q.is('raw_html', null))) noHtml.add(r.slug);
 
     // series lookup: identity registry FIRST, then afl_slug / own id /
     // slugified title as fallback for never-registered pages
-    const { data: series } = await db.from('series').select('id, afl_slug, title, total_chapters');
+    const series = await selectAll<{ id: string; afl_slug: string | null; title: string; total_chapters: number | null }>('series', 'id, afl_slug, title, total_chapters');
     const bySlug = new Map<string, { id: string; total_chapters: number | null }>();
-    const byId = new Map((series ?? []).map((s) => [s.id, { id: s.id, total_chapters: s.total_chapters }]));
-    for (const s of series ?? []) {
+    const byId = new Map(series.map((s) => [s.id, { id: s.id, total_chapters: s.total_chapters }]));
+    for (const s of series) {
       const entry = byId.get(s.id)!;
       if (s.afl_slug) bySlug.set(s.afl_slug, entry);
       bySlug.set(s.id, entry);
       bySlug.set(slugify(s.title), entry);
     }
-    const { data: reg } = await db.from('series_external_ids').select('series_id, external_id').eq('source', 'afg');
-    for (const r of reg ?? []) {
+    const reg = await selectAll<{ series_id: string; external_id: string }>('series_external_ids', 'series_id, external_id', (q) => q.eq('source', 'afg'));
+    for (const r of reg) {
       const entry = byId.get(r.series_id);
       if (entry) bySlug.set(r.external_id, entry);
     }

@@ -10,7 +10,7 @@
 //
 // Etiquette: politeFetch (shared host delay, project UA, conditional GETs).
 
-import { db, startRun, finishRun } from './lib/db';
+import { db, selectAll, startRun, finishRun } from './lib/db';
 import { AFG_BASE, parseAfgPage, parseContinua } from './lib/afg';
 import { politeFetch } from './lib/http';
 import { contentHash } from './lib/hash';
@@ -19,12 +19,15 @@ async function main() {
   const runId = await startRun('afg');
   const counters = { fetched: 0, unchanged: 0, changed: 0, flagged: 0 };
   try {
-    const { data: pages } = await db.from('ingest_afg_pages').select('slug, raw, raw_html, etag, last_modified');
-    const targets = (pages ?? []).filter((p) => {
+    const pages = await selectAll<{ slug: string; raw: unknown; raw_html: string | null; etag: string | null; last_modified: string | null }>(
+      'ingest_afg_pages',
+      'slug, raw, raw_html, etag, last_modified',
+    );
+    const targets = pages.filter((p) => {
       const raw = p.raw as { continua?: unknown };
       return !p.raw_html || raw.continua === undefined;
     });
-    console.log(`[continua-backfill] ${targets.length} of ${pages?.length} staged pages need fetch/parse`);
+    console.log(`[continua-backfill] ${targets.length} of ${pages.length} staged pages need fetch/parse`);
 
     for (const t of targets) {
       try {

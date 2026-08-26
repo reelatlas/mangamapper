@@ -20334,6 +20334,23 @@ if (!url || !secretKey) {
 var db = createClient(url, secretKey, {
   auth: { persistSession: false, autoRefreshToken: false }
 });
+async function selectAll(table, select2, apply, pageSize = 1e3) {
+  const out = [];
+  let expected = null;
+  for (let from = 0; ; from += pageSize) {
+    let q = db.from(table).select(select2, from === 0 ? { count: "exact" } : void 0);
+    if (apply) q = apply(q);
+    const { data: data2, error, count } = await q.range(from, from + pageSize - 1);
+    if (error) throw new Error(`selectAll(${table}): ${error.message}`);
+    if (from === 0 && typeof count === "number") expected = count;
+    out.push(...data2 ?? []);
+    if (!data2 || data2.length < pageSize) break;
+  }
+  if (expected != null && out.length !== expected) {
+    throw new Error(`selectAll(${table}): walk incomplete \u2014 ${out.length} rows read, server count ${expected} (P32)`);
+  }
+  return out;
+}
 async function startRun(source) {
   const { data: data2, error } = await db.from("ingest_runs").insert({ source }).select("id").single();
   if (error) throw new Error(`startRun(${source}): ${error.message}`);
@@ -25639,7 +25656,7 @@ function appendNextSiblings(elem, adapter2) {
   }
   return elems;
 }
-var selectAll = getSelectorFunc((query, elems, options) => query === import_boolbase6.default.falseFunc || !elems || elems.length === 0 ? [] : options.adapter.findAll(query, elems));
+var selectAll2 = getSelectorFunc((query, elems, options) => query === import_boolbase6.default.falseFunc || !elems || elems.length === 0 ? [] : options.adapter.findAll(query, elems));
 var selectOne = getSelectorFunc((query, elems, options) => query === import_boolbase6.default.falseFunc || !elems || elems.length === 0 ? null : options.adapter.findOne(query, elems));
 
 // node_modules/cheerio-select/lib/esm/index.js
@@ -35797,8 +35814,8 @@ async function run() {
   const counters = { fetched: 0, unchanged: 0, changed: 0, flagged: 0 };
   const notes = [];
   try {
-    const { data: active } = await db.from("source_map").select("afl_slug").eq("disposition", "active");
-    const activeSet = new Set((active ?? []).map((m) => m.afl_slug));
+    const active = await selectAll("source_map", "afl_slug", (q) => q.eq("disposition", "active"));
+    const activeSet = new Set(active.map((m) => m.afl_slug));
     const { data: staged } = await db.from("ingest_afl_shows").select("slug, etag, last_modified, fetched_at, raw").order("fetched_at", { ascending: true }).limit(200);
     const cutoff = Date.now() - STALE_MS;
     const batch = (staged ?? []).filter((s) => activeSet.has(s.slug) && new Date(s.fetched_at).getTime() < cutoff).slice(0, BATCH);

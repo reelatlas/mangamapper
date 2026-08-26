@@ -601,15 +601,12 @@ export const RULES: Rule[] = [
       'Every catalog walk reads through a paged selectAll with an exact count, reports processed/total, and FAILS if short; a walk that cannot prove completeness fails closed. Healers no-op on a clean catalog (the idempotency check). No unpaged select on a table that can exceed the 1000-row page.',
     why: 'syncAnchors\' unpaged per-series episode select lets one-piece and detective-conan rows past 1000 pass the A1 allow-list as row-less (DRIFT-LIST §E.2); the first c3 healer under-processed silently (§12.46).',
     ruledBy: 'Sean',
-    ruledOn: '2026-08-25',
+    ruledOn: '2026-08-26',
     origin: 'docs/restructure-plan.md §3 T2.3; DRIFT-LIST §E.2',
-    enforcement: [
-      { path: 'scripts/ingest/lib/db.ts' },
-      { path: 'docs/restructure-plan.md', symbol: 'T2.3' },
-    ],
+    enforcement: [{ path: 'scripts/ingest/lib/db.ts', symbol: 'selectAll' }, { path: 'scripts/restructure/unpaged-selects.ts' }],
     layer: 'writer',
     witnesses: ['one-piece', 'detective-conan'],
-    status: 'planned',
+    status: 'live',
     see: ['P20', 'P33', 'A1'],
   },
   {

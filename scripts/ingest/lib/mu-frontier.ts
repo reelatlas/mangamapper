@@ -12,7 +12,7 @@
 // refreshing a series deletes and re-derives its row so rule fixes heal
 // everything.
 
-import { db, fileFlagOnce } from './db';
+import { db, fileFlagOnce, selectAll } from './db';
 
 export function parseCoverageAll(text: string | null): {
   pairs: { volume: number; chapter: number }[];
@@ -100,12 +100,10 @@ export async function applyMuFrontier(
   let ceiling = Number.POSITIVE_INFINITY;
   let ceilingSib: string | null = null;
   if (srow?.manga_anilist_id != null) {
-    const { data: sibs } = await db
-      .from('series')
-      .select('id, manga_start_chapter')
-      .eq('manga_anilist_id', srow.manga_anilist_id)
-      .neq('id', s.id);
-    for (const sib of sibs ?? []) {
+    const sibs = await selectAll<{ id: string; manga_start_chapter: number | null }>('series', 'id, manga_start_chapter', (q) =>
+      q.eq('manga_anilist_id', srow.manga_anilist_id).neq('id', s.id),
+    );
+    for (const sib of sibs) {
       const sibStart = sib.manga_start_chapter ?? 1;
       if (sibStart > scopeStart && sibStart < ceiling) {
         ceiling = sibStart;

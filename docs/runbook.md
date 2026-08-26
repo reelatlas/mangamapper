@@ -59,7 +59,7 @@ What reaches Sean is a cited verdict (`R1`). The workflow is the data cycle
 anchors, scope rows, `EXTRAS_ADOPTED` entries, `EPISODE_TYPE_OVERRIDES`,
 annotations — all surviving refreshes.
 
-- Research protocol: `R1`–`R31`, R9 unassigned (research-first `R1`, 2+ sources `R3`,
+- Research protocol: `R1`–`R31`, id R‑9 unassigned (research-first `R1`, 2+ sources `R3`,
   cross-check-only sources `R4`, fan threads `R5`, MediaWiki API `R6`, full
   record `R8`, repairs explicit `R12`, honest gap `R13`, numbering
   conversion `R18`, never index-join `R20`, verdict shape `R21`,

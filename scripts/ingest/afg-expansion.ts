@@ -17,7 +17,7 @@ import { AFG_BASE, parseAfgPage } from './lib/afg';
 import { politeFetch } from './lib/http';
 import { contentHash } from './lib/hash';
 import { searchAnime } from './lib/anilist';
-import { db, startRun, finishRun, fileFlagOnce } from './lib/db';
+import { db, selectAll, startRun, finishRun, fileFlagOnce } from './lib/db';
 import { stageAniList, registerIds, applyScope, applyEpisodeFloor, filterEpisodeRows } from './lib/resolve';
 import { aired, walkChain, aggregate, writeComponents, ownedAnilistIds } from './lib/chain';
 import { syncAnchors } from './lib/anchors';
@@ -37,22 +37,22 @@ async function main() {
 
   try {
     // targets: staged AFG pages with real episode lists, not already serving a canonical series
-    const { data: pages } = await db.from('ingest_afg_pages').select('slug, raw, etag, last_modified');
-    const { data: series } = await db.from('series').select('id, afl_slug, title');
+    const pages = await selectAll<{ slug: string; raw: unknown; etag: string | null; last_modified: string | null }>('ingest_afg_pages', 'slug, raw, etag, last_modified');
+    const series = await selectAll<{ id: string; afl_slug: string | null; title: string }>('series', 'id, afl_slug, title');
     const taken = new Set<string>();
-    for (const s of series ?? []) {
+    for (const s of series) {
       if (s.afl_slug) taken.add(s.afl_slug);
       taken.add(s.id);
       taken.add(slugify(s.title));
     }
-    const { data: afgReg } = await db.from('series_external_ids').select('external_id').eq('source', 'afg');
-    for (const r of afgReg ?? []) taken.add(r.external_id);
+    const afgReg = await selectAll<{ external_id: string }>('series_external_ids', 'external_id', (q) => q.eq('source', 'afg'));
+    for (const r of afgReg) taken.add(r.external_id);
 
     // Zero-episode staged pages are the identity-registration tier (title +
     // season headers only) — for UNSERVED slugs they're still candidates:
     // the loop's fresh fetch supplies the real parse (SHY sat invisible
     // behind this filter, 2026-08-23). Served slugs stay excluded via taken.
-    const targets = (pages ?? []).filter((p) => {
+    const targets = pages.filter((p) => {
       const raw = p.raw as { title: string; episodes: unknown[] };
       if (taken.has(p.slug) || taken.has(slugify(raw.title))) return false;
       return raw.episodes.length >= 6 || raw.episodes.length === 0;

@@ -8,7 +8,7 @@
 
 import { readFileSync } from 'node:fs';
 import { parseShowsIndex } from './lib/afl';
-import { db, startRun, finishRun } from './lib/db';
+import { db, selectAll, startRun, finishRun } from './lib/db';
 import { titlesAgree } from './lib/resolve';
 
 // Content exclusions per Sean's rulings that slug patterns couldn't catch:
@@ -49,8 +49,8 @@ async function main() {
     const index = parseShowsIndex(readFileSync('scripts/ingest/fixtures/afl-shows-index.html', 'utf8'));
     const indexTitle = new Map(index.map((e) => [e.slug, e.title]));
 
-    const { data: staged } = await db.from('ingest_afl_shows').select('slug, raw');
-    for (const row of staged ?? []) {
+    const staged = await selectAll<{ slug: string; raw: unknown }>('ingest_afl_shows', 'slug, raw');
+    for (const row of staged) {
       const expected = indexTitle.get(row.slug);
       if (!expected) continue; // slug no longer on the index — leave for refresh logic
       const served = (row.raw as { title: string }).title;
@@ -72,9 +72,9 @@ async function main() {
 
     const { count: seriesCount } = await db.from('series').select('*', { count: 'exact', head: true });
     const { count: stagedCount } = await db.from('ingest_afl_shows').select('*', { count: 'exact', head: true });
-    const { data: flags } = await db.from('ingest_flags').select('kind').eq('status', 'open');
+    const flags = await selectAll<{ kind: string }>('ingest_flags', 'kind', (q) => q.eq('status', 'open'));
     const byKind: Record<string, number> = {};
-    for (const f of flags ?? []) byKind[f.kind] = (byKind[f.kind] ?? 0) + 1;
+    for (const f of flags) byKind[f.kind] = (byKind[f.kind] ?? 0) + 1;
     console.log('=== TITLE AUDIT COMPLETE ===');
     for (const a of actions) console.log('  -', a);
     console.log(`canonical: ${seriesCount} · staged: ${stagedCount} · open flags:`, byKind);

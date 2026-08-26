@@ -6,7 +6,7 @@
 // components / relations cascade) and re-resolve every active, matched slug.
 //   npx tsx --env-file=.env.ingest scripts/ingest/rebuild.ts
 
-import { db, startRun, finishRun } from './lib/db';
+import { db, startRun, finishRun, selectAll } from './lib/db';
 import { resolveSeries } from './lib/resolve';
 
 async function main() {
@@ -19,12 +19,10 @@ async function main() {
     const { error: wipeErr } = await db.from('series').delete().neq('id', '');
     if (wipeErr) throw new Error(`wipe: ${wipeErr.message}`);
 
-    const { data: maps } = await db
-      .from('source_map')
-      .select('afl_slug, anilist_id')
-      .eq('disposition', 'active')
-      .not('anilist_id', 'is', null);
-    const { data: staged } = await db.from('ingest_afl_shows').select('slug');
+    const maps = await selectAll<{ afl_slug: string; anilist_id: number }>('source_map', 'afl_slug, anilist_id', (q) =>
+      q.eq('disposition', 'active').not('anilist_id', 'is', null),
+    );
+    const staged = await selectAll<{ slug: string }>('ingest_afl_shows', 'slug');
     const stagedSet = new Set((staged ?? []).map((s) => s.slug));
 
     for (const m of maps ?? []) {

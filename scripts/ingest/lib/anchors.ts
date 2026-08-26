@@ -4,7 +4,7 @@
 // flag dismissal, and the volumes-staleness event trigger).
 
 import { deriveAnchors, deriveBonusChapters, type AfgPage, type AfgContinua } from './afg';
-import { db, fileFlagOnce } from './db';
+import { db, fileFlagOnce, selectAll } from './db';
 import { CONTINUA_SUPPRESSED, registerIds, translateEpisodeNumber } from './resolve';
 
 // heading comparison: decode leftover entities, drop parenthetical year
@@ -110,14 +110,12 @@ export async function applyContinua(
     // numbering space (its count includes the inserts) — no conversion
     const pageMatchesOurs = afgPageMax !== undefined && afgPageMax >= (s.aired_episodes ?? 0);
     if (!pageMatchesOurs) {
-      const { data: inserts } = await db
-        .from('series_components')
-        .select('episode_start, episode_end, kind')
-        .eq('series_id', s.id)
-        .not('kind', 'eq', 'season')
-        .not('episode_start', 'is', null)
-        .order('episode_start');
-      for (const c of inserts ?? []) {
+      const inserts = await selectAll<{ episode_start: number | null; episode_end: number | null; kind: string | null }>(
+        'series_components',
+        'episode_start, episode_end, kind',
+        (q) => q.eq('series_id', s.id).not('kind', 'eq', 'season').not('episode_start', 'is', null).order('episode_start'),
+      );
+      for (const c of inserts) {
         const len = (c.episode_end ?? c.episode_start!) - c.episode_start! + 1;
         if (c.episode_start! <= shifted) shifted += len;
       }
@@ -290,24 +288,21 @@ export async function syncAnchors(
   // fields are CURATED data that may live on derived rows — the
   // delete+reinsert rebuild must carry them over by episode, or the hourly
   // cron erodes the catalog-wide parity conversion one series at a time.
-  const { data: prevCont } = await db
-    .from('chapter_anchors')
-    .select('episode, continue_chapter, continue_kind, continue_note')
-    .eq('series_id', seriesId)
-    .eq('source', 'afg')
-    .not('continue_chapter', 'is', null);
-  const contByEp = new Map((prevCont ?? []).map((c) => [c.episode, c]));
+  const prevCont = await selectAll<{ episode: number; continue_chapter: number | null; continue_kind: string | null; continue_note: string | null }>(
+    'chapter_anchors',
+    'episode, continue_chapter, continue_kind, continue_note',
+    (q) => q.eq('series_id', seriesId).eq('source', 'afg').not('continue_chapter', 'is', null),
+  );
+  const contByEp = new Map(prevCont.map((c) => [c.episode, c]));
   await db.from('chapter_anchors').delete().eq('series_id', seriesId).eq('source', 'afg');
   // PRECEDENCE (completed 2026-08-23, the HxH ep-140 lesson): the PK allows
   // one anchor per episode, so a derived chart row at an episode holding a
   // manual/wiki (research-tier) anchor would OVERWRITE the ruling on every
   // refresh. Curated rows always win — derived rows at their episodes drop.
-  const { data: curated } = await db
-    .from('chapter_anchors')
-    .select('episode, chapter')
-    .eq('series_id', seriesId)
-    .in('source', ['manual', 'wiki']);
-  const protectedEps = new Set((curated ?? []).map((c) => c.episode));
+  const curated = await selectAll<{ episode: number; chapter: number }>('chapter_anchors', 'episode, chapter', (q) =>
+    q.eq('series_id', seriesId).in('source', ['manual', 'wiki']),
+  );
+  const protectedEps = new Set(curated.map((c) => c.episode));
   // NUMBERING TRANSLATION (2026-08-23): chart episode numbers live in the
   // source's space — shift-ruled series translate exactly like episode rows
   // (dropped order-only entries never anchor)
@@ -323,11 +318,11 @@ export async function syncAnchors(
   // claim. Allow-list (canon/mixed) so unknown types fail closed; row-less
   // episodes pass (can't be typed — D1 parity). Outcome-checked by the
   // anchor_on_noncanon_row audit class.
-  const { data: typeRows } = await db
-    .from('episodes')
-    .select('number, type')
-    .eq('series_id', seriesId);
-  const typeByEp = new Map((typeRows ?? []).map((e) => [e.number, e.type]));
+  // P32 (2026-08-26): this read was UNPAGED — one-piece / detective-conan
+  // exceed 1000 rows, so episodes past the cap passed as "row-less". selectAll
+  // proves the walk complete or throws.
+  const typeRows = await selectAll<{ number: number; type: string }>('episodes', 'number, type', (q) => q.eq('series_id', seriesId));
+  const typeByEp = new Map(typeRows.map((e) => [e.number, e.type]));
   const rows = translated
     .filter((a) => {
       const t = typeByEp.get(a.episode);

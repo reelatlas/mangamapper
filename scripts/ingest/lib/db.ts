@@ -17,6 +17,38 @@ export const db = createClient(url, secretKey, {
   auth: { persistSession: false, autoRefreshToken: false },
 });
 
+// P32 — completeness as an outcome (restructure T2.3, 2026-08-26). Supabase
+// caps a select at 1000 rows and says nothing; the C3 healer once stamped
+// 16 of 351 and reported success, and syncAnchors' per-series episode read
+// let one-piece/detective-conan rows past the cap through the A1 allow-list
+// as "row-less". EVERY catalog-sized read goes through selectAll: it pages
+// until a short page, asks the server for the exact count on the first
+// page, and THROWS if the two disagree — a walk that cannot prove it was
+// complete does not return. `apply` adds filters/order to the query.
+//   const rows = await selectAll<{ id: string }>('series', 'id', (q) => q.eq('status', 'finished'));
+export async function selectAll<T = Record<string, unknown>>(
+  table: string,
+  select: string,
+  apply?: (q: any) => any, // eslint-disable-line @typescript-eslint/no-explicit-any
+  pageSize = 1000,
+): Promise<T[]> {
+  const out: T[] = [];
+  let expected: number | null = null;
+  for (let from = 0; ; from += pageSize) {
+    let q: any = db.from(table).select(select, from === 0 ? { count: 'exact' } : undefined); // eslint-disable-line @typescript-eslint/no-explicit-any
+    if (apply) q = apply(q);
+    const { data, error, count } = await q.range(from, from + pageSize - 1);
+    if (error) throw new Error(`selectAll(${table}): ${error.message}`);
+    if (from === 0 && typeof count === 'number') expected = count;
+    out.push(...((data ?? []) as T[]));
+    if (!data || data.length < pageSize) break;
+  }
+  if (expected != null && out.length !== expected) {
+    throw new Error(`selectAll(${table}): walk incomplete — ${out.length} rows read, server count ${expected} (P32)`);
+  }
+  return out;
+}
+
 // Every ingest write goes through a run so provenance is queryable.
 export async function startRun(source: 'afl' | 'afg' | 'anilist' | 'resolve'): Promise<number> {
   const { data, error } = await db.from('ingest_runs').insert({ source }).select('id').single();

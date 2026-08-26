@@ -20,7 +20,7 @@
 // reorder. Such rows are reported as `hole` lines (the exact-record
 // work-list), never as failures. Exit 1 on any failure.
 
-import { db } from './lib/db';
+import { db, selectAll } from './lib/db';
 import {
   buildMapping,
   toAnimeSeries,
@@ -34,29 +34,15 @@ import {
 } from '../../src/data/catalog/assemble';
 import { buildEpisodeList, inReorderCrossing } from '../../src/lib/mapping';
 
-async function pageAll<T>(table: string, select: string, seriesId: string, order: string): Promise<T[]> {
-  const out: T[] = [];
-  for (let from = 0; ; from += 1000) {
-    const { data, error } = await db.from(table).select(select).eq('series_id', seriesId).order(order).range(from, from + 999);
-    if (error) throw error;
-    out.push(...((data ?? []) as T[]));
-    if (!data || data.length < 1000) break;
-  }
-  return out;
-}
-
 // same-manga continuation lookup (mirrors supabaseSource.continuationStart —
 // kept tiny here because it is a DB query, not assembly logic)
 async function continuationStart(row: SeriesRow): Promise<number | null> {
   if (!row.manga_anilist_id || !row.total_chapters) return null;
-  const { data } = await db
-    .from('series')
-    .select('manga_start_chapter')
-    .eq('manga_anilist_id', row.manga_anilist_id)
-    .neq('id', row.id)
-    .not('manga_start_chapter', 'is', null);
+  const data = await selectAll<{ manga_start_chapter: number }>('series', 'manga_start_chapter', (q) =>
+    q.eq('manga_anilist_id', row.manga_anilist_id).neq('id', row.id).not('manga_start_chapter', 'is', null),
+  );
   const ourStart = row.manga_start_chapter ?? 1;
-  const starts = (data ?? [])
+  const starts = data
     .map((s: any) => s.manga_start_chapter as number)
     .filter((st: number) => st > ourStart && st <= row.total_chapters! + 1);
   return starts.length ? Math.min(...starts) : null;
@@ -70,26 +56,23 @@ export async function verifySeries(id: string, print = false): Promise<string[]>
   const row = rowData as SeriesRow | null;
   if (!row) return [`${id}: series not found`];
 
-  const eps = await pageAll<DbEpisodeRow>('episodes', 'number, title, type, air_date', id, 'number');
-  const anchors = await pageAll<AnchorRow>('chapter_anchors', 'episode, volume, chapter, start_chapter', id, 'episode');
-  const annos = await pageAll<{ episode: number; kind: string }>('episode_annotations', 'episode, kind', id, 'episode');
+  const eps = await selectAll<DbEpisodeRow>('episodes', 'number, title, type, air_date', (q) => q.eq('series_id', id).order('number'));
+  const anchors = await selectAll<AnchorRow>('chapter_anchors', 'episode, volume, chapter, start_chapter', (q) => q.eq('series_id', id).order('episode'));
+  const annos = await selectAll<{ episode: number; kind: string }>('episode_annotations', 'episode, kind', (q) => q.eq('series_id', id).order('episode'));
   let boundaries: Boundary[] = [];
   if (row.manga_anilist_id) {
-    const { data: b } = await db
-      .from('volume_boundaries')
-      .select('volume, chapter_start, chapter_end')
-      .eq('manga_anilist_id', row.manga_anilist_id)
-      .order('volume');
-    boundaries = (b ?? []) as Boundary[];
+    boundaries = await selectAll<Boundary>('volume_boundaries', 'volume, chapter_start, chapter_end', (q) =>
+      q.eq('manga_anilist_id', row.manga_anilist_id).order('volume'),
+    );
   }
 
-  const { data: wo } = await db
-    .from('watch_order_entries')
-    .select('position, title, air_date, kind, display_label, chapter, volume, chapters_adapted')
-    .eq('series_id', id)
-    .order('position');
+  const wo = await selectAll<WatchOrderRow>(
+    'watch_order_entries',
+    'position, title, air_date, kind, display_label, chapter, volume, chapters_adapted',
+    (q) => q.eq('series_id', id).order('position'),
+  );
   const m = buildMapping(row, eps, anchors, boundaries, await continuationStart(row));
-  const anime = toAnimeSeries(row, 1, toEpisodes(row, eps, anchors, boundaries), boundaries.length, boundaries, (wo ?? []) as WatchOrderRow[]);
+  const anime = toAnimeSeries(row, 1, toEpisodes(row, eps, anchors, boundaries), boundaries.length, boundaries, wo);
   const list = buildEpisodeList(anime, m);
 
   if (print) {
@@ -138,11 +121,7 @@ if (isMain) {
     if (args.includes('--all')) {
       // every series that carries at least one anchor
       const seen = new Set<string>();
-      for (let from = 0; ; from += 1000) {
-        const { data } = await db.from('chapter_anchors').select('series_id').range(from, from + 999);
-        for (const r of data ?? []) seen.add(r.series_id as string);
-        if (!data || data.length < 1000) break;
-      }
+      for (const r of await selectAll<{ series_id: string }>('chapter_anchors', 'series_id')) seen.add(r.series_id);
       ids = [...seen].sort();
     }
     if (!ids.length) {

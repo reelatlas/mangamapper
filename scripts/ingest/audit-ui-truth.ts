@@ -8,27 +8,16 @@
 // integrity_eps_beyond_total (episodes outrun the component structure).
 //   npx tsx --env-file=.env.ingest scripts/ingest/audit-ui-truth.ts
 
-import { db } from './lib/db';
+import { db, selectAll } from './lib/db';
 import { c3Ahead, hasSkipLanguage } from './lib/c3';
 import { COMMUNITY_COUNT_OVERRIDES, CONTINUA_SUPPRESSED, EPISODE_TYPE_OVERRIDES, SOURCE_NUMBERING_SHIFTS } from './lib/resolve';
 
-async function pageAll(table: string, select: string): Promise<any[]> {
-  const out: any[] = [];
-  for (let from = 0; ; from += 1000) {
-    const { data, error } = await db.from(table).select(select).range(from, from + 999);
-    if (error) throw new Error(`${table}: ${error.message}`);
-    out.push(...(data ?? []));
-    if (!data || data.length < 1000) break;
-  }
-  return out;
-}
-
 async function main() {
-  const series = await pageAll('series', 'id, source_type, manga_status, status, aired_episodes, total_episodes, total_chapters, total_volumes, latest_known_chapters, manga_anilist_id, manga_start_chapter, mapping_mode, asterisk_review');
-  const episodes = await pageAll('episodes', 'series_id, number, type, title, air_date');
-  const anchors = await pageAll('chapter_anchors', 'series_id, episode, chapter, start_chapter, chapters_adapted, continue_chapter, continue_note, volume, source');
-  const comps = await pageAll('series_components', 'series_id, episode_end, episode_start, anilist_id, kind, label');
-  const bounds = await pageAll('volume_boundaries', 'manga_anilist_id, volume, chapter_start, chapter_end');
+  const series = await selectAll<any>('series', 'id, source_type, manga_status, status, aired_episodes, total_episodes, total_chapters, total_volumes, latest_known_chapters, manga_anilist_id, manga_start_chapter, mapping_mode, asterisk_review');
+  const episodes = await selectAll<any>('episodes', 'series_id, number, type, title, air_date');
+  const anchors = await selectAll<any>('chapter_anchors', 'series_id, episode, chapter, start_chapter, chapters_adapted, continue_chapter, continue_note, volume, source');
+  const comps = await selectAll<any>('series_components', 'series_id, episode_end, episode_start, anilist_id, kind, label');
+  const bounds = await selectAll<any>('volume_boundaries', 'manga_anilist_id, volume, chapter_start, chapter_end');
 
   const epsBy = new Map<string, { max: number; lastCanon: number; count: number }>();
   for (const e of episodes) {
@@ -183,8 +172,8 @@ async function main() {
     // suppressed sources must hold ZERO anchors on their series
     const suppressed = Object.keys(CONTINUA_SUPPRESSED);
     if (suppressed.length) {
-      const { data: bad } = await db.from('chapter_anchors').select('series_id, episode, chapter').in('series_id', suppressed).eq('source', 'afg-continua');
-      for (const b of bad ?? []) classes.ruling_violation.push(`${b.series_id}: suppressed afg-continua anchor present (ep ${b.episode} → ch ${b.chapter})`);
+      const bad = await selectAll<{ series_id: string; episode: number; chapter: number }>('chapter_anchors', 'series_id, episode, chapter', (q) => q.in('series_id', suppressed).eq('source', 'afg-continua'));
+      for (const b of bad) classes.ruling_violation.push(`${b.series_id}: suppressed afg-continua anchor present (ep ${b.episode} → ch ${b.chapter})`);
     }
   }
   for (const [sid, types] of Object.entries(EPISODE_TYPE_OVERRIDES)) {
@@ -223,8 +212,8 @@ async function main() {
   // position is a non-main entry we have NOT yet ruled on — the ask-Sean
   // queue for specials/recaps/OVAs worth (or not worth) surfacing.
   {
-    const fracs = (await pageAll('ingest_fractionals', 'series_id, position, title, disposition')).filter((f: any) => !f.disposition);
-    const oo = await pageAll('series_components', 'series_id, watch_position, episode_start');
+    const fracs = (await selectAll<any>('ingest_fractionals', 'series_id, position, title, disposition')).filter((f: any) => !f.disposition);
+    const oo = await selectAll<any>('series_components', 'series_id, watch_position, episode_start');
     const modeled = new Set(
       oo.filter((c: any) => c.episode_start === null && c.watch_position != null).map((c: any) => `${c.series_id}#${Math.floor(Number(c.watch_position))}`),
     );
@@ -254,7 +243,7 @@ async function main() {
   // tracks sign-off. Heals annotated-but-unmarked series to 'pending';
   // 'pending' rows are Sean's sign-off queue for the asterisk UI pass.
   {
-    const annos = await pageAll('episode_annotations', 'series_id, kind');
+    const annos = await selectAll<any>('episode_annotations', 'series_id, kind');
     const kindsBy = new Map<string, Set<string>>();
     for (const a of annos) {
       if (!kindsBy.has(a.series_id)) kindsBy.set(a.series_id, new Set());
@@ -286,7 +275,7 @@ async function main() {
       bySeries.get(a.series_id)!.push(a);
     }
     // ruled reorders carry rearranged/graft annotations — settled, stop asking
-    const annos = await pageAll('episode_annotations', 'series_id, episode, kind, chapters, note');
+    const annos = await selectAll<any>('episode_annotations', 'series_id, episode, kind, chapters, note');
     const ruled = new Set(
       annos
         .filter((a: any) => a.kind === 'rearranged' || a.kind === 'graft')
@@ -528,15 +517,16 @@ async function main() {
   // series/synonym on the manga) and, for a finished manga with a known
   // total, must not run past the total (shared pages list sequels)
   {
-    const brows: { manga_anilist_id: number; volume: number; chapter_start: number; chapter_end: number | null; source_page: string | null; source: string }[] = [];
-    for (let f = 0; ; f += 1000) {
-      const { data } = await db.from('volume_boundaries').select('manga_anilist_id, volume, chapter_start, chapter_end, source_page, source').range(f, f + 999);
-      brows.push(...((data ?? []) as typeof brows));
-      if (!data || data.length < 1000) break;
-    }
-    const { data: srows } = await db.from('series').select('id, title, title_english, synonyms, manga_anilist_id, total_chapters, manga_status');
+    const brows = await selectAll<{ manga_anilist_id: number; volume: number; chapter_start: number; chapter_end: number | null; source_page: string | null; source: string }>(
+      'volume_boundaries',
+      'manga_anilist_id, volume, chapter_start, chapter_end, source_page, source',
+    );
+    const srows = await selectAll<{ id: string; title: string; title_english: string | null; synonyms: string[] | null; manga_anilist_id: number | null; total_chapters: number | null; manga_status: string | null }>(
+      'series',
+      'id, title, title_english, synonyms, manga_anilist_id, total_chapters, manga_status',
+    );
     const byManga = new Map<number, typeof srows>();
-    for (const sr of srows ?? []) if (sr.manga_anilist_id) byManga.set(sr.manga_anilist_id, [...(byManga.get(sr.manga_anilist_id) ?? []), sr]);
+    for (const sr of srows) if (sr.manga_anilist_id) byManga.set(sr.manga_anilist_id, [...(byManga.get(sr.manga_anilist_id) ?? []), sr]);
     const STOP = new Set(['the', 'of', 'a', 'an', 'and', 'list', 'chapters', 'chapter', 'manga', 'volumes', 'volume', 'no', 'wa', 'to', 'ni', 'in', 'on', 'x', 'i']);
     const toks = (x: string) => new Set(x.toLowerCase().normalize('NFKD').replace(/[^a-z0-9]+/g, ' ').split(' ').filter((w) => w && !STOP.has(w)));
     const byPage = new Map<string, typeof brows>();

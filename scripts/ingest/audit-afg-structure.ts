@@ -18,7 +18,7 @@
 //   anything else → reported for ruling; nothing suspicious auto-applies
 //   npx tsx --env-file=.env.ingest scripts/ingest/audit-afg-structure.ts [--register]
 
-import { db, startRun, finishRun } from './lib/db';
+import { db, selectAll, startRun, finishRun } from './lib/db';
 import { registerIds } from './lib/resolve';
 import { slugify } from './lib/slug';
 
@@ -55,27 +55,14 @@ interface AfgRaw {
   episodes: { number: number }[];
 }
 
-async function pageAll<T>(table: string, select: string, filter?: (q: any) => any): Promise<T[]> {
-  const out: T[] = [];
-  for (let from = 0; ; from += 1000) {
-    let q = db.from(table).select(select).range(from, from + 999);
-    if (filter) q = filter(q);
-    const { data, error } = await q;
-    if (error) throw new Error(`${table}: ${error.message}`);
-    out.push(...((data ?? []) as T[]));
-    if (!data || data.length < 1000) break;
-  }
-  return out;
-}
-
 const addTo = (m: Map<string, Set<string>>, k: string, v: string) => {
   if (!m.has(k)) m.set(k, new Set());
   m.get(k)!.add(v);
 };
 
 async function main() {
-  const pages = await pageAll<{ slug: string; raw: AfgRaw }>('ingest_afg_pages', 'slug, raw');
-  const series = await pageAll<{
+  const pages = await selectAll<{ slug: string; raw: AfgRaw }>('ingest_afg_pages', 'slug, raw');
+  const series = await selectAll<{
     id: string;
     afl_slug: string | null;
     title: string;
@@ -84,17 +71,17 @@ async function main() {
     aired_episodes: number;
     status: string;
   }>('series', 'id, afl_slug, title, title_english, synonyms, aired_episodes, status');
-  const components = await pageAll<{
+  const components = await selectAll<{
     series_id: string;
     season_order: number;
     episode_start: number;
     episode_end: number | null;
   }>('series_components', 'series_id, season_order, episode_start, episode_end');
-  const registry = await pageAll<{ series_id: string; external_id: string; source: string }>(
+  const registry = await selectAll<{ series_id: string; external_id: string; source: string }>(
     'series_external_ids',
     'series_id, external_id, source',
   ).then((rows) => rows.filter((r) => r.source === 'afg'));
-  const episodes = await pageAll<{ series_id: string; number: number }>('episodes', 'series_id, number');
+  const episodes = await selectAll<{ series_id: string; number: number }>('episodes', 'series_id, number');
 
   const epMax = new Map<string, number>();
   for (const e of episodes) epMax.set(e.series_id, Math.max(epMax.get(e.series_id) ?? 0, e.number));

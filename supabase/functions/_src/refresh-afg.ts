@@ -5,7 +5,7 @@
 // anchors via the shared syncAnchors path (monotonicity filter, alignment
 // gate, volumes-staleness event trigger included).
 
-import { db, startRun, finishRun } from '../../../scripts/ingest/lib/db';
+import { db, startRun, finishRun, selectAll } from '../../../scripts/ingest/lib/db';
 import { AFG_BASE, parseAfgPage, parseContinua } from '../../../scripts/ingest/lib/afg';
 import { politeFetch } from '../../../scripts/ingest/lib/http';
 import { contentHash } from '../../../scripts/ingest/lib/hash';
@@ -34,15 +34,15 @@ async function run() {
     const batch = (staged ?? []).filter((s) => new Date(s.fetched_at).getTime() < cutoff).slice(0, BATCH);
 
     // identity registry FIRST, slug/title heuristics as fallback
-    const { data: series } = await db.from('series').select('id, afl_slug, title');
+    const series = await selectAll<{ id: string; afl_slug: string | null; title: string }>('series', 'id, afl_slug, title');
     const bySlug = new Map<string, string>();
-    for (const s of series ?? []) {
+    for (const s of series) {
       if (s.afl_slug) bySlug.set(s.afl_slug, s.id);
       bySlug.set(s.id, s.id);
       bySlug.set(slugify(s.title), s.id);
     }
-    const { data: reg } = await db.from('series_external_ids').select('series_id, external_id').eq('source', 'afg');
-    for (const r of reg ?? []) bySlug.set(r.external_id, r.series_id);
+    const reg = await selectAll<{ series_id: string; external_id: string }>('series_external_ids', 'series_id, external_id', (q) => q.eq('source', 'afg'));
+    for (const r of reg) bySlug.set(r.external_id, r.series_id);
 
     for (const s of batch) {
       try {

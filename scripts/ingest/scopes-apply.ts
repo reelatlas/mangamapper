@@ -3,21 +3,21 @@
 // on every resolve/stitch; this covers already-published series.)
 //   npx tsx --env-file=.env.ingest scripts/ingest/scopes-apply.ts
 
-import { db, startRun, finishRun, fileFlagOnce } from './lib/db';
+import { db, selectAll, startRun, finishRun, fileFlagOnce } from './lib/db';
 
 async function main() {
   const runId = await startRun('resolve');
   const actions: string[] = [];
   try {
-    const { data: scopes } = await db.from('series_scopes').select('*');
+    const scopes = await selectAll<{ afl_slug: string; start_volume: number | null; start_chapter: number | null; end_volume: number | null; end_chapter: number | null }>('series_scopes', '*');
 
     // Discovery: sequel-linked series sharing one manga MUST be scoped —
     // otherwise each shows the whole franchise (the Naruto bug). Flag any
     // pair the curated table doesn't cover yet.
-    const scoped = new Set((scopes ?? []).map((s) => s.afl_slug));
-    const { data: all } = await db.from('series').select('id, afl_slug, manga_anilist_id').not('manga_anilist_id', 'is', null);
+    const scoped = new Set(scopes.map((s) => s.afl_slug));
+    const all = await selectAll<{ id: string; afl_slug: string | null; manga_anilist_id: number | null }>('series', 'id, afl_slug, manga_anilist_id', (q) => q.not('manga_anilist_id', 'is', null));
     const byManga = new Map<number, { id: string; afl_slug: string | null }[]>();
-    for (const s of all ?? []) byManga.set(s.manga_anilist_id!, [...(byManga.get(s.manga_anilist_id!) ?? []), s]);
+    for (const s of all) byManga.set(s.manga_anilist_id!, [...(byManga.get(s.manga_anilist_id!) ?? []), s]);
     const { data: rels } = await db.from('series_relations').select('from_series, to_series, kind').in('kind', ['sequel', 'prequel']);
     const linked = new Set((rels ?? []).flatMap((r) => [`${r.from_series}|${r.to_series}`, `${r.to_series}|${r.from_series}`]));
     for (const group of byManga.values()) {
@@ -27,13 +27,13 @@ async function main() {
         if (isSequelLinked && s.afl_slug && !scoped.has(s.afl_slug)) {
           await fileFlagOnce(runId, s.afl_slug, 'resolve', 'count_mismatch', {
             note: 'shares a manga with a sequel-linked series but has no series_scopes row — needs scope curation',
-            mangaAnilistId: group[0] && (all ?? []).find((x) => x.id === s.id)?.manga_anilist_id,
+            mangaAnilistId: group[0] && all.find((x) => x.id === s.id)?.manga_anilist_id,
           });
           actions.push(`UNSCOPED shared-manga series flagged: ${s.afl_slug}`);
         }
       }
     }
-    for (const scope of scopes ?? []) {
+    for (const scope of scopes) {
       const { data: s } = await db
         .from('series')
         .select('id, total_volumes, total_chapters, manga_start_volume, manga_start_chapter')

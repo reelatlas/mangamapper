@@ -13,7 +13,7 @@
 // series and full re-syncs.
 //   npx tsx --env-file=.env.ingest scripts/ingest/mu-backfill.ts
 
-import { db, startRun, finishRun, fileFlagOnce } from './lib/db';
+import { db, selectAll, startRun, finishRun, fileFlagOnce } from './lib/db';
 import { bridgeViaMangaDex, fetchMuSeries, muHash } from './lib/mangaupdates';
 import { contentHash } from './lib/hash';
 import { applyMuFrontier, bestLatestKnown, crossCheckMangaStatus } from './lib/mu-frontier';
@@ -28,14 +28,20 @@ async function main() {
     // UNIVERSAL: every manga behind a canonical series (the DBZ 520-vs-519
     // display needed MU's number for a manga whose anchors were fresh, which
     // the old absent-or-stale filter skipped)
-    const { data: linked } = await db
-      .from('series')
-      .select('id, title, manga_anilist_id, manga_status, total_chapters, popularity, aired_episodes')
-      .not('manga_anilist_id', 'is', null)
-      .order('popularity', { ascending: false });
+    const linked = await selectAll<{
+      id: string;
+      title: string;
+      manga_anilist_id: number | null;
+      manga_status: string | null;
+      total_chapters: number | null;
+      popularity: number | null;
+      aired_episodes: number | null;
+    }>('series', 'id, title, manga_anilist_id, manga_status, total_chapters, popularity, aired_episodes', (q) =>
+      q.not('manga_anilist_id', 'is', null).order('popularity', { ascending: false }),
+    );
 
     const byManga = new Map<number, { title: string; seriesIds: string[]; statuses: Map<string, string> }>();
-    for (const s of linked ?? []) {
+    for (const s of linked) {
       const e = byManga.get(s.manga_anilist_id!) ?? { title: s.title, seriesIds: [], statuses: new Map() };
       if (!e.seriesIds.includes(s.id)) {
         e.seriesIds.push(s.id);

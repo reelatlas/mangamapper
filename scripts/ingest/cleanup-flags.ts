@@ -5,17 +5,13 @@
 // unique flag.
 //   npx tsx --env-file=.env.ingest scripts/ingest/cleanup-flags.ts
 
-import { db } from './lib/db';
+import { db, selectAll } from './lib/db';
 
 async function main() {
-  const { data } = await db
-    .from('ingest_flags')
-    .select('id, series_key, kind')
-    .eq('status', 'open')
-    .order('id');
+  const data = await selectAll<{ id: number; series_key: string; kind: string }>('ingest_flags', 'id, series_key, kind', (q) => q.eq('status', 'open').order('id'));
   const seen = new Map<string, number>();
   const dupes: number[] = [];
-  for (const f of data ?? []) {
+  for (const f of data) {
     const key = `${f.series_key}::${f.kind}`;
     if (seen.has(key)) dupes.push(f.id);
     else seen.set(key, f.id);

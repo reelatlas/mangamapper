@@ -20287,6 +20287,23 @@ if (!url || !secretKey) {
 var db = createClient(url, secretKey, {
   auth: { persistSession: false, autoRefreshToken: false }
 });
+async function selectAll(table, select, apply, pageSize = 1e3) {
+  const out = [];
+  let expected = null;
+  for (let from = 0; ; from += pageSize) {
+    let q = db.from(table).select(select, from === 0 ? { count: "exact" } : void 0);
+    if (apply) q = apply(q);
+    const { data, error, count } = await q.range(from, from + pageSize - 1);
+    if (error) throw new Error(`selectAll(${table}): ${error.message}`);
+    if (from === 0 && typeof count === "number") expected = count;
+    out.push(...data ?? []);
+    if (!data || data.length < pageSize) break;
+  }
+  if (expected != null && out.length !== expected) {
+    throw new Error(`selectAll(${table}): walk incomplete \u2014 ${out.length} rows read, server count ${expected} (P32)`);
+  }
+  return out;
+}
 async function startRun(source) {
   const { data, error } = await db.from("ingest_runs").insert({ source }).select("id").single();
   if (error) throw new Error(`startRun(${source}): ${error.message}`);
@@ -20377,8 +20394,12 @@ async function applyMuFrontier(runId, s, muEnd, nonMuMaxEp, nonMuMaxCh) {
   let ceiling = Number.POSITIVE_INFINITY;
   let ceilingSib = null;
   if (srow?.manga_anilist_id != null) {
-    const { data: sibs } = await db.from("series").select("id, manga_start_chapter").eq("manga_anilist_id", srow.manga_anilist_id).neq("id", s.id);
-    for (const sib of sibs ?? []) {
+    const sibs = await selectAll(
+      "series",
+      "id, manga_start_chapter",
+      (q) => q.eq("manga_anilist_id", srow.manga_anilist_id).neq("id", s.id)
+    );
+    for (const sib of sibs) {
       const sibStart = sib.manga_start_chapter ?? 1;
       if (sibStart > scopeStart && sibStart < ceiling) {
         ceiling = sibStart;
@@ -20515,8 +20536,12 @@ async function run() {
         }
         await db.from("ingest_mangaupdates").update({ raw: mu, content_hash: hash, fetched_at: (/* @__PURE__ */ new Date()).toISOString(), changed_at: (/* @__PURE__ */ new Date()).toISOString() }).eq("manga_anilist_id", row.manga_anilist_id);
         counters.changed++;
-        const { data: linked } = await db.from("series").select("id, status, aired_episodes, total_chapters, manga_start_chapter, manga_status").eq("manga_anilist_id", row.manga_anilist_id);
-        for (const s of linked ?? []) {
+        const linked = await selectAll(
+          "series",
+          "id, status, aired_episodes, total_chapters, manga_start_chapter, manga_status",
+          (q) => q.eq("manga_anilist_id", row.manga_anilist_id)
+        );
+        for (const s of linked) {
           const { data: epTop } = await db.from("chapter_anchors").select("episode").eq("series_id", s.id).neq("source", "mu").order("episode", { ascending: false }).limit(1);
           const { data: chTop } = await db.from("chapter_anchors").select("chapter").eq("series_id", s.id).neq("source", "mu").order("chapter", { ascending: false }).limit(1);
           await db.from("series").update({

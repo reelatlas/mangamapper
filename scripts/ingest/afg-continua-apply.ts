@@ -6,7 +6,7 @@
 // Idempotent: 'afg-continua' anchors are wiped + rebuilt per series.
 //   npx tsx --env-file=.env.ingest scripts/ingest/afg-continua-apply.ts
 
-import { db, startRun, finishRun } from './lib/db';
+import { selectAll, startRun, finishRun } from './lib/db';
 import { applyContinua } from './lib/anchors';
 import type { AfgContinua } from './lib/afg';
 
@@ -15,11 +15,11 @@ async function main() {
   const counters = { fetched: 0, unchanged: 0, changed: 0, flagged: 0 };
   const tally: Record<string, number> = {};
   try {
-    const { data: pages } = await db.from('ingest_afg_pages').select('slug, raw');
-    const { data: reg } = await db.from('series_external_ids').select('series_id, external_id').eq('source', 'afg');
-    const bySlug = new Map((reg ?? []).map((r) => [r.external_id, r.series_id]));
+    const pages = await selectAll<{ slug: string; raw: unknown }>('ingest_afg_pages', 'slug, raw');
+    const reg = await selectAll<{ series_id: string; external_id: string }>('series_external_ids', 'series_id, external_id', (q) => q.eq('source', 'afg'));
+    const bySlug = new Map(reg.map((r) => [r.external_id, r.series_id]));
 
-    for (const p of pages ?? []) {
+    for (const p of pages) {
       const raw = p.raw as { continua?: AfgContinua | null; episodes?: { number: number }[] };
       const continua = raw.continua;
       const seriesId = bySlug.get(p.slug);

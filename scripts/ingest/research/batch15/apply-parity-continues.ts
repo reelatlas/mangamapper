@@ -15,7 +15,7 @@
 //   - loose series skipped (borrow-maps).
 // Re-runnable. --dry-run prints every change without writing.
 //   npx tsx --env-file=.env.ingest scripts/ingest/research/batch15/apply-parity-continues.ts [--dry-run] [seriesId ...]
-import { db } from '/Users/sean/Projects/mangamapper/scripts/ingest/lib/db';
+import { db, selectAll } from '/Users/sean/Projects/mangamapper/scripts/ingest/lib/db';
 import { c3Ahead, hasSkipLanguage, c3Note } from '/Users/sean/Projects/mangamapper/scripts/ingest/lib/c3';
 
 const DRY = process.argv.includes('--dry-run');
@@ -28,27 +28,19 @@ const firstNum = (s: string | null): number | null => {
   return Number.isInteger(n) ? n : Math.floor(n);
 };
 
-async function pageAll(table: string, select: string, sid: string, order: string): Promise<any[]> {
-  const out: any[] = [];
-  for (let f = 0; ; f += 1000) {
-    const { data, error } = await db.from(table).select(select).eq('series_id', sid).order(order).range(f, f + 999);
-    if (error) throw new Error(`${table} ${sid}: ${error.message}`);
-    out.push(...(data ?? []));
-    if (!data || data.length < 1000) break;
-  }
-  return out;
-}
-
 async function main() {
-  const { data: seriesRows, error } = await db.from('series').select('id, status, mapping_mode, source_type, manga_status').neq('mapping_mode', 'loose');
-  if (error) throw new Error(error.message);
-  const targets = (seriesRows ?? []).filter((s: any) => (ONLY.length ? ONLY.includes(s.id) : true))
+  const seriesRows = await selectAll<{ id: string; status: string; mapping_mode: string | null; source_type: string | null; manga_status: string | null }>(
+    'series',
+    'id, status, mapping_mode, source_type, manga_status',
+    (q) => q.neq('mapping_mode', 'loose'),
+  );
+  const targets = seriesRows.filter((s: any) => (ONLY.length ? ONLY.includes(s.id) : true))
     .filter((s: any) => s.source_type !== 'original' && s.manga_status !== 'anime_only');
   let converted = 0, stamped = 0, postSeries = 0;
   for (const s of targets) {
-    const anchors = await pageAll('chapter_anchors', 'episode, chapter, start_chapter, chapters_adapted, continue_chapter, continue_kind, source', s.id, 'episode');
+    const anchors = await selectAll<any>('chapter_anchors', 'episode, chapter, start_chapter, chapters_adapted, continue_chapter, continue_kind, source', (q) => q.eq('series_id', s.id).order('episode'));
     if (anchors.length < 2) continue;
-    const eps = await pageAll('episodes', 'number, type', s.id, 'number');
+    const eps = await selectAll<any>('episodes', 'number, type', (q) => q.eq('series_id', s.id).order('number'));
     const typeOf = new Map(eps.map((e: any) => [e.number, e.type]));
     const lines: string[] = [];
     for (let i = 0; i < anchors.length; i++) {
@@ -115,20 +107,15 @@ async function main() {
   // idempotent — a note already carrying skip language is left alone.
   let c3 = 0;
   {
-    // paginate — the catalog holds >1000 continue-bearing anchors and the
-    // client caps unpaged selects at 1000 (the audit caught exactly this:
-    // 351 hits vs the 16 an unpaged first run saw)
-    const all: { series_id: string; episode: number; chapter: number | null; chapters_adapted: string | null; continue_chapter: number | null; continue_note: string | null }[] = [];
-    for (let off = 0; ; off += 1000) {
-      const { data: page } = await db.from('chapter_anchors')
-        .select('series_id,episode,chapter,chapters_adapted,continue_chapter,continue_note')
-        .not('continue_chapter', 'is', null)
-        .order('series_id').order('episode')
-        .range(off, off + 999);
-      all.push(...(page ?? []));
-      if (!page || page.length < 1000) break;
-    }
-    for (const a of all ?? []) {
+    // selectAll pages (P32) — the catalog holds >1000 continue-bearing anchors
+    // and the client caps unpaged selects at 1000 (the audit caught exactly
+    // this: 351 hits vs the 16 an unpaged first run saw)
+    const all = await selectAll<{ series_id: string; episode: number; chapter: number | null; chapters_adapted: string | null; continue_chapter: number | null; continue_note: string | null }>(
+      'chapter_anchors',
+      'series_id,episode,chapter,chapters_adapted,continue_chapter,continue_note',
+      (q) => q.not('continue_chapter', 'is', null).order('series_id').order('episode'),
+    );
+    for (const a of all) {
       if (ONLY.length && !ONLY.includes(a.series_id)) continue;
       const ahead = c3Ahead(a.chapters_adapted, a.continue_chapter);
       if (!ahead.length || hasSkipLanguage(a.continue_note)) continue;
