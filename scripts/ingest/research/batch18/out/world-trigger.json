@@ -1,0 +1,56 @@
+{
+  "series_id": "world-trigger",
+  "summary": "ONE target row: ep 48 'And Towards Tomorrow' / そして明日へ (S1 ep 48, aired 2015-10-04; our numbering is 1:1 with S1 for rows 1-73). It is an anime-original interlude with ZERO manga standing, so the stored `filler` typing is correct and no anchor may attach (A1). Evidence: the World Trigger Wiki's Anime/Episodes list carries an 'Adapted Chapters' field on 83 of 99 rows and omits it on exactly rows 48-63 — ep 47 ends on ch 103 and ep 64 resumes on ch 104, leaving ep 48 a zero-chapter gap; the ep-48 page is the ONLY member of Category:Anime-Only Episode on that wiki; animefillerguide prints ep 48 = filler, chapters N/A (ep 47 = 102-103, ep 49 = filler). animefillerlist has NO World Trigger page at all (404), which is why the context file shows 'AFL: undefined' for this row. I tested `mixed` directly by reading the fandom chapter pages for ch 103, 104, 105, 106 and 107 against ep 48's beat list: none of ep 48's content (Osamu's dream of Jin; the Tamakoma squad meeting run by Yōtarō/Usami; the PR-shoot encounter with Kitora; ~50 losing mock battles vs Kitora, Midorikawa, Yoneya, Arafune, Utagawa, Kumagai, Kuroe and Sasamori; night defence duty and the boy in the Forbidden Zone) appears in any of them. Ep 48 pre-echoes MOTIFS the manga develops in ch 105-107 ('you rely on Yūma too much' is Kikuchihara's line in ch 105 and Osamu's own in ch 107; the Kitora/Tokieda mentoring scene is ch 107) — but the anime adapts those chapters in place at eps 65-66, so nothing is carried only by ep 48. Motif re-use plus a flashback rehash does not clear `mixed`. No `adopted` basis exists: Ashihara Daisuke is credited only as blanket 原作 (Shūeisha WSJ serialisation) on Toei's own credit block for ep 48 (脚本 野村祐一 / 演出 川崎芳樹), with no 監修, 原案 or per-episode supervision credit anywhere, and the franchise never carries ep 48's events forward in S2, S3 or the manga. Finally, ep 48 is NOT part of the Fugitive Arc retcon: four sources bound that arc at 49-63.",
+  "standings": [
+    {
+      "episodes": [48],
+      "type": "filler",
+      "chapters": "none",
+      "confidence": "high",
+      "note": "Anime-original breather inserted inside the canon B-Rank Wars Arc between Round 3 and Round 4. Zero source standing: the fandom episode list gives 'Adapted Chapters' for every row except 48-63, ep 47 closes on ch 103 and ep 64 opens on ch 104 (no chapter is skipped over ep 48), the ep-48 page is the sole member of Category:Anime-Only Episode, and AFG prints filler / chapters N/A. Checked ch 103-107 page by page for a `mixed` reading — none of ep 48's scenes are in them; the episode only pre-echoes themes (over-reliance on Yūma, Kitora/Tokieda mentoring) that eps 65-66 adapt properly from ch 105-107, and its cold open is a dream rehash of Osamu's already-adapted Jin backstory.",
+      "sources": [
+        "https://worldtrigger.fandom.com/api.php?action=parse&page=Anime/Episodes&prop=wikitext&format=json",
+        "https://worldtrigger.fandom.com/api.php?action=query&list=categorymembers&cmtitle=Category:Anime-Only%20Episode&cmlimit=100&format=json",
+        "https://worldtrigger.fandom.com/api.php?action=parse&page=And%20Towards%20Tomorrow&prop=wikitext&format=json",
+        "https://worldtrigger.fandom.com/api.php?action=parse&page=Tamakoma%20Second%208&prop=wikitext&format=json",
+        "https://worldtrigger.fandom.com/api.php?action=parse&page=Osamu%20Mikumo%2012&prop=wikitext&format=json",
+        "https://lineup.toei-anim.co.jp/ja/tv/worldtrigger_01/episode/48/",
+        "https://www.animefillerguide.com/anime/world-trigger/"
+      ]
+    }
+  ],
+  "annotations": [
+    {
+      "episodes": [48],
+      "kind": "side_story",
+      "note": "CONFIRMS the stored side_story annotation. Self-contained anime-original interlude sitting in the manga's gap between ch 103 (ep 47's end) and ch 104 (ep 64's start) — the six in-story days the manga fills with ch 104-112. It adds no manga content and removes none: the 2020 BS rebroadcast that dropped 49-63 aired 48 and jumped straight to 64, and the anime resumes at ch 104 either way.",
+      "sources": [
+        "https://worldtrigger.fandom.com/api.php?action=parse&page=Anime/Episodes&prop=wikitext&format=json",
+        "https://worldtrigger.fandom.com/api.php?action=parse&page=Tamakoma%20Second%208&prop=wikitext&format=json"
+      ]
+    }
+  ],
+  "repairs": [
+    {
+      "episode": 48,
+      "field": "annotation.divergence",
+      "old": "divergence — 'A-7 studio-original breather inside the canon arc — filler under T27; on the review list'",
+      "new": "retire the divergence annotation; keep side_story only",
+      "why": "PROPOSAL, curator's call — the stored divergence entry reads as the A-7 review marker rather than a research finding, and its stated purpose ('on the review list') is discharged by this verdict. On the evidence ep 48 does not DIVERGE from the manga: it alters no manga event, contradicts no manga beat, and the anime rejoins the manga at ch 104 exactly where ch 103 left off. It is an inserted self-contained interlude, which is what side_story already says. Note this is a presentation question only — the typing (filler) is unchanged and is already correct in store.",
+      "sources": [
+        "https://worldtrigger.fandom.com/api.php?action=parse&page=Anime/Episodes&prop=wikitext&format=json",
+        "https://worldtrigger.fandom.com/api.php?action=parse&page=B-Rank%20Wars%20Arc&prop=wikitext&format=json"
+      ]
+    }
+  ],
+  "structure": {
+    "notes": "NUMBERING: ep 48 = S1 ep 48 (component 1, anilist 20729, our rows 1-73 are 1:1 with S1). Air date 2015-10-04. Our stored English title 'Then Towards Tomorrow' vs the wiki's 'And Towards Tomorrow' (そして明日へ, Soshite Ashita e) — same episode, matched on kanji title + air date + Toei's official ep-48 page; NOT a title repair, both renderings are in circulation (AFG also prints 'Then Towards Tomorrow'). SOURCE AVAILABILITY: animefillerlist.com has no World Trigger show page at all (https://www.animefillerlist.com/shows/world-trigger returns 'Page not found'), which is why the context file shows 'AFL: undefined' on this row; animefillerguide is the only filler-site source here and it says filler / chapters N/A. 48-49 IS A HARD PRODUCTION BOUNDARY, NOT AN ARC BOUNDARY IN OUR SENSE: series director Hongo Mitsuru covers eps 1-48 and Ogawa Kōji eps 49-73; series composition Yoshino Hiroyuki covers 1-48 (and S2 onward) while Sakaido Morito covers 49-73; character design Tsuruta Hitomi, colour design Ichinose Miyoko and monitor graphics all change at the same seam; the fan staff database keeps eps 1-48 on the 'World Trigger' page and opens a SEPARATE '逃亡者編' database at ep 49; Toei Video's 一挙見Blu-ray splits S1 as 1-21 / 22-48 / 49-73, and the singles BD/DVD vol 16 packages eps 46-48 together (vol 17 starts at 49). The new Pile OP was first used AS THE ENDING of ep 48. FUGITIVE-ARC SCOPE (confirmed, not re-litigated): the anime-original Fugitive Arc is eps 49-63 on four independent readings — the fandom Anime/Fugitive Arc page ('covers episodes 49-63', Chapter = N/A), ja.wikipedia ('第49話から第63話ではアニメオリジナルのシリーズ「逃亡者編」が放送された'), the staff database's 49- split, and magmix's feature ('1stシーズン49話から63話まで'). Ep 48 carries Category:B-Rank Wars Arc and NOT Category:Fugitive Arc; the Shizuka City training-camp setup is inside ep 49 (Rindō's flashback), not ep 48; ep 48 contains no anime-original Ergates cast (Xeno/Lilith/Giev/Charon all debut in 49+). No source anywhere treats ep 48 as the arc's prologue. ONE APPARENT COUNTER-READING, DISCLOSED: ja.wikipedia's あらすじ arc index prints 'B級ランク戦（原作：第86話 - 第202話 / アニメ版：1stシーズン第38話 - 第48話・第64話 - ）', i.e. it groups ep 48 into the B-Rank Wars block where the fandom arc infobox writes '38-47 and later continues on episode 64'. That is an ARC GROUPING, not a chapter claim (the batch trap): the same ja.wikipedia page assigns no per-episode chapters and separately names 49-63 as the anime-original series, and it also records that the anime kept nearly catching up with the manga so '原作を引き伸ばしたような演出がしばしばなされた' (padding-style staging was often used) — which is what ep 48 is.",
+    "order_only": []
+  },
+  "flags_for_sean": [
+    "ANNOTATION HYGIENE (repairs[0]): I propose retiring the `divergence` annotation on ep 48 and keeping `side_story` alone. The typing is unchanged (filler, already stored). Purely your call — I did not treat it as a data error, only as a review marker that this verdict discharges.",
+    "THE ONE ARGUMENT FOR A STUDIO READING, AND WHY I DID NOT TAKE IT: the 2020 BS rebroadcast that ran ahead of S2 CUT the Fugitive Arc entirely and aired ep 48 → ep 64, so the studio kept ep 48 in the manga-faithful re-cut of S1 while dropping 49-63. That distinguishes 48 from the retconned block, but it is a scheduling/continuity decision, not a declaration: ep 48 was kept because it contradicts nothing (it introduces no date shift and no anime-original cast), and nothing in it is ever carried forward. Under the batch-18 bar ('who adopted it, with the citation that proves it') there is no adoption act to cite, so the verdict is filler, not canon+adopted{studio}. My corroboration for the rebroadcast skip is an aggregator thread dated 2020-11-01 (animanch) — cross-check tier only, and I did not rest any part of the standing on it. https://animanch.com/archives/20335790.html",
+    "CROSS-CHECK-ONLY CLAIM I DELIBERATELY DID NOT USE: a Japanese blog states '当初の予定では48話で終了予定だったようです' (S1 was apparently meant to END at ep 48, and the Fugitive Arc was inserted as a stopgap when the show was extended) and speculates '原作者である葦原先生もどこまで関与できたか怪しい'. Both statements are hedged and unsourced, so they are cross-check only — but they would explain ep 48's wrap-up shape and the total staff turnover at the 48/49 seam. If you ever want the author question re-opened, a Toei/TV Asahi 2015 press item or an Ashihara interview is the artefact to find; I could not locate one. https://manga-tantei.com/worldtriggertobosha-2637",
+    "AUTHOR BASIS: searched ja.wikipedia, the Toei official ep-48 credit block, and the per-episode staff database for any 監修 / 原案 / story-credit for Ashihara on ep 48 (or on the anime-original material generally) and found NONE — only the blanket 原作：葦原大介（集英社「週刊少年ジャンプ」連載）. Per the protocol that is a credit, not a declaration."
+  ]
+}

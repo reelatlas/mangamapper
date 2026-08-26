@@ -1,0 +1,203 @@
+{
+  "series_id": "gto-great-teacher-onizuka",
+  "summary": "The 10 target rows are two blocks the 1999-2000 Pierrot series produced while it was ahead of / to one side of Fujisawa's serialization: the mid-run block 22-28 + 34, and the original ending 42-43 after the anime passed the manga at Lesson 106. Fujisawa's involvement is NOT documented for any of them: ja.wikipedia's staff list and the ANN encyclopedia both credit him only as 原作 / 'Original Manga' (series composition Masashi Sogo; scripts Sogo, Yoshiyuki Suga, Ryota Yamaguchi, Satoru Nishizono), and his sole production participation is a bit-part voice cameo as 受験者 - no 監修, no story credit, so there is no `author` basis. There is likewise no `studio` basis: nothing carries the anime ending forward (no sequel anime; 14 Days in Shonan and Paradise Lost continue the manga line, and the manga gave its own Miyabi resolution and its own ending at Lesson 200 in 2002), so no `community`-by-absence basis either. Nine rows therefore stay filler. The one real find is episode 27: it adapts scenes from GTO (ぐれえと・とろこ・おっぱい) / 'Great Toroko Oppai', the 7-part side story Fujisawa serialized inside GTO itself (Kodansha's own Comic Days feed prints Scene 1-3 between Lesson 92 and 93 and Scene 4-7 between Lesson 97 and 98; they are collected in tankobon vols 11-12) - the Gunma-daikon/melon regional CM run, Tomoko's cut waitress job and her manager's fury are the manga's scenes with Onizuka substituted for the manga's manager Munakata, so ep 27 is mixed, NOT filler. Two traps found and defused: (a) a fan comparison pairs 'CH 143, EP 24', but Lesson 143 (中年ペイシェンス, vol 18, released 2000-12-15) was serialized ~6 months AFTER ep 24 aired 2000-03-05 - the anime did the Uchiyamada-midlife story first, it did not adapt it; (b) eps 25-26's nurse Nao Kadena and her brother are not GTO characters at all - they are lifted from Fujisawa's own prequel manga Shonan Junai Gumi! (ch 229 / 241), and ja.wikipedia notes the borrowing openly CONTRADICTS that work.",
+  "standings": [
+    {
+      "episodes": [22],
+      "type": "filler",
+      "confidence": "high",
+      "note": "Anime-original close of the two-episode Hakuba arc (Azusa's old school is demolished; Onizuka rescues a former student from the building). The manga's counterpart material is Lesson 70 オンナ教師? + Lesson 71 とっておきの場所, where Onizuka instead ditches class and takes Fuyutsuki out on his bike to his special place (BookLive/Kodansha vol-9 blurb: 「つい弱音を口にする冬月に、鬼塚は授業をぶっちぎり、バイクで外へと連れ出す！」). Ep 21 already carries Lesson 70 (stored anchor); Lesson 71 is NOT adapted anywhere - ep 22 has no manga scene, only the arc's emotional resolution. Fandom infobox Manga Chapter(s) = N/A. AFL's 'anime canon' claim on this row is not supported.",
+      "sources": [
+        "https://great-teacher-onizuka-gto.fandom.com/api.php?action=parse&page=Lesson_22:_The_Art_of_Demolition&prop=wikitext&format=json",
+        "https://comic-days.com/atom/series/10834108156636906135",
+        "https://booklive.jp/product/index/title_id/203070/vol_no/009",
+        "https://everythingbeginswithyourheart.blogspot.com/2019/11/gto-manga-and-anime-differences-part-3.html"
+      ]
+    },
+    {
+      "episodes": [23],
+      "type": "filler",
+      "confidence": "high",
+      "note": "Chain-letter curse story, wholly anime-original. Fandom infobox Manga Chapter(s) = N/A; the fan chapter-by-chapter comparison states flatly 'EP 23 chain letter thing was an anime original'. The manga's own curse arc (Lesson 68 魔女っ子倶楽部 / Lesson 69 悪魔の毒々クッキー, the Ruruka chapters) is a different story and is unadapted - ja.wikipedia says of Hikita Ruruka 「原作では麗美の次という早い段階で登場したが、アニメには未登場」 (appears early in the manga, never appears in the anime).",
+      "sources": [
+        "https://great-teacher-onizuka-gto.fandom.com/api.php?action=parse&page=Lesson_23:_Superstition&prop=wikitext&format=json",
+        "https://ja.wikipedia.org/wiki/GTO_(%E6%BC%AB%E7%94%BB)",
+        "https://everythingbeginswithyourheart.blogspot.com/2019/11/gto-manga-and-anime-differences-part-3.html"
+      ]
+    },
+    {
+      "episodes": [24],
+      "type": "filler",
+      "confidence": "high",
+      "note": "Uchiyamada's mid-life crisis + his daughter Yoshiko's crush on Onizuka. Anime-original AT BROADCAST: the manga's dedicated Uchiyamada/Yoshiko chapter is Lesson 143 中年ペイシェンス (Kodansha Comic Days feed; en.wikipedia volume list places it in vol 18, released 2000-12-15, i.e. serialized ~Sept-Oct 2000) - roughly six months AFTER this episode aired 2000-03-05, so it cannot have been adapted here. Yoshiko herself is manga canon (first appears Lesson 22, anime ep 4), but this story is not. Fandom infobox Manga Chapter(s) = N/A. AFL's 'anime canon' claim on this row is not supported. DO NOT read the fan comparison's 'Uchiyamada's daughter, Yoshiko - CH 143, EP 24' heading as an adaptation claim; it is a thematic pairing and the chronology forbids it.",
+      "sources": [
+        "https://great-teacher-onizuka-gto.fandom.com/api.php?action=parse&page=Lesson_24:_Compromising_Positions&prop=wikitext&format=json",
+        "https://comic-days.com/atom/series/10834108156636906135",
+        "https://ja.wikipedia.org/wiki/GTO_(%E6%BC%AB%E7%94%BB)",
+        "https://en.wikipedia.org/wiki/List_of_Great_Teacher_Onizuka_chapters"
+      ]
+    },
+    {
+      "episodes": [25, 26],
+      "type": "filler",
+      "confidence": "medium",
+      "note": "Zero standing in the GTO manga: the school nurse in the manga is Naoko Moritaka (Lesson 16 on), and ja.wikipedia states under her entry 「アニメ版には、『湘南純愛組!』の嘉手納南風（かでな なお）が代わりに登場する。ただし、設定こそ踏襲するものの、鬼塚とは面識がないことになっている」 - the anime swaps in Kadena Nao from Fujisawa's PREQUEL manga Shonan Junai Gumi! (fandom infobox: Shonan Junai Gumi ch 229; her brother Takashi = SJG ch 241 'as Kazuhito Kadena'). Her 'Queen of Hakosuka' / Purple Haze past, the Last Signal race and the brother crippled in it are SJG-established, but the GTO-anime episodes are a NEW story built on them (American-doctor money scam, Onizuka racing her, Uchiyamada keeping her on) and ja.wikipedia flags the borrowing as producing a contradiction: 「彼女の登場によって本作品とアニメ版『GTO』との矛盾が生じている」. So this is a character/backstory loan from another licensed Fujisawa work, not an adaptation of it. Fandom infoboxes: Manga Chapter(s) = N/A on both episodes. See flags_for_sean for the alternative canon+side_source reading.",
+      "sources": [
+        "https://ja.wikipedia.org/wiki/GTO_(%E6%BC%AB%E7%94%BB)",
+        "https://ja.wikipedia.org/wiki/%E6%B9%98%E5%8D%97%E7%B4%94%E6%84%9B%E7%B5%84!",
+        "https://great-teacher-onizuka-gto.fandom.com/api.php?action=parse&page=Nao_Kadena&prop=wikitext&format=json",
+        "https://great-teacher-onizuka-gto.fandom.com/api.php?action=parse&page=Takashi_Kadena&prop=wikitext&format=json",
+        "https://great-teacher-onizuka-gto.fandom.com/api.php?action=parse&page=Lesson_25:_Playing_Doctor_-_GTO_Style&prop=wikitext&format=json"
+      ]
+    },
+    {
+      "episodes": [27],
+      "type": "mixed",
+      "chapters": "none in the Lesson space - adapts GTO (ぐれえと・とろこ・おっぱい) 'Great Toroko Oppai' Scene 1-3/4-7 material (vols 11-12). DO NOT ANCHOR.",
+      "confidence": "medium",
+      "note": "REPAIR candidate (stored filler). Real source content: ja.wikipedia describes the side story 「GTO（ぐれえと・とろこ・おっぱい）」 - 7 chapters printed inside GTO tankobon vols 11-12 - as 「アニメ版では本編の一部としてアレンジされており、いくつかのエピソードは踏襲するも、基本的にオリジナルのストーリーとなり」, and under Nomura Tomoko it says she is marketed nationwide by 「敏腕マネージャー・宗方（アニメでは鬼塚）」, with Munakata's own entry adding 「アニメ版には登場せず、彼の役割の一部を鬼塚が務める」. The fan chapter-by-chapter comparison confirms scene-level carryover for ep 27 ('it has the scenes but they kinda play out differently') and names the manga's radish/rice-ball regional commercials and the cut waitress job and the manager's anger; the episode's own image set on fandom carries 'Delicious Gunma Daikon', 'Mellow Melon', 'Tomoko Talk Show', 'Okinoshima Angry'. Non-source half: the MMR マガジンミステリー調査班 crossover (Kibayashi et al.) is an anime-only guest appearance per ja.wikipedia 「アニメ版第27、28話に登場」, as is the MGPC contest hook.",
+      "sources": [
+        "https://ja.wikipedia.org/wiki/GTO_(%E6%BC%AB%E7%94%BB)",
+        "https://comic-days.com/atom/series/10834108156636906135",
+        "https://great-teacher-onizuka-gto.fandom.com/api.php?action=parse&page=GTO:_Great_Toroko_Oppai%E2%99%A1&prop=wikitext&format=json",
+        "https://great-teacher-onizuka-gto.fandom.com/api.php?action=parse&page=Lesson_27:_Agent_to_the_Stars&prop=wikitext&format=json",
+        "https://everythingbeginswithyourheart.blogspot.com/2019/11/gto-manga-and-anime-differences-part-3.html"
+      ]
+    },
+    {
+      "episodes": [28],
+      "type": "filler",
+      "confidence": "medium",
+      "note": "The rigged Magazine Gravure Princess Contest is anime-original: the fan comparison states 'there was no special beauty contest that was rigged and took her to greater heights - instead she did reach greater heights through a legendary manager called Munakata', and ja.wikipedia lists the rival 星野めぐみ as 「アニメ版で登場したMGPC参加者の一人」 and the MMR crossover guests as appearing 「アニメ版第27、28話」. Fandom infobox Manga Chapter(s) = N/A. One transformed beat is visible - the manga's Munakata makes Tomoko famous partly by 'accidentally' publishing her address, while the anime hands the address leak to the saboteur Hoshino - but that is an inverted echo, not carried source content; see flags_for_sean.",
+      "sources": [
+        "https://great-teacher-onizuka-gto.fandom.com/api.php?action=parse&page=Lesson_28:_Whatever_Can_Go_Wrong,_Will_Go_Wrong&prop=wikitext&format=json",
+        "https://ja.wikipedia.org/wiki/GTO_(%E6%BC%AB%E7%94%BB)",
+        "https://everythingbeginswithyourheart.blogspot.com/2019/11/gto-manga-and-anime-differences-part-3.html"
+      ]
+    },
+    {
+      "episodes": [34],
+      "type": "filler",
+      "confidence": "medium",
+      "note": "Saejima + Onizuka + Tomoko, a suitcase of gold and the yakuza, revealed at the end to be a celebrity hidden-camera prank. The prank REVEAL is the only element with a source ancestor: in the Great Toroko Oppai scene that sits after Lesson 97, Okinoshima is tricked into 'rescuing' Tomoko from Munakata and the whole thing turns out to be a celebrity-cam shoot. The fan comparison puts it exactly: 'episode 34 is basically chapter 97 of the manga rehashed into something completely different whilst using a similar event', and fandom's own synopsis independently records the prank twist. Every character, motive and event around that twist is new, so under the single-scene test this does not clear mixed - filler with a loose_parallel. Fandom infobox Manga Chapter(s) = N/A. NOTE the near-miss: the Japanese title 監獄に一番近い警官 invites a reading against the manga's Saejima day-in-the-life chapters (Lesson 60 / Lesson 108 ある日常の記録―警官冴島俊行の場合―), but no source supports that and Lesson 60 stays unadapted (ep 17 = 56-59, ep 18 = 61-63).",
+      "sources": [
+        "https://great-teacher-onizuka-gto.fandom.com/api.php?action=parse&page=Lesson_34:_Good_Cop%2FBad_Cop&prop=wikitext&format=json",
+        "https://everythingbeginswithyourheart.blogspot.com/2019/11/gto-manga-and-anime-differences-part-3.html",
+        "https://comic-days.com/atom/series/10834108156636906135"
+      ]
+    },
+    {
+      "episodes": [42, 43],
+      "type": "filler",
+      "confidence": "high",
+      "note": "The studio ending, and the A-7 case for this series. ja.wikipedia: 「当時は原作がまだ未完だったため原作12巻から13巻の『修学旅行編』までに相当する内容であり、その後、アニメオリジナルエピソードによる最終回を迎えた」; the fandom wiki's series page says the same ('Eventually the anime ran past the arc that the manga was following resulting in a totally different ending'). The whole causal spine is anime-invented: Miyabi's motive is rebuilt around 横山瑞樹, 「アニメ版オリジナルキャラクター」 whose suicide starts the teacher-bullying, and the education-board antagonist 五十嵐光一 is likewise 「アニメ版オリジナルキャラクター」 - in the manga Miyabi's arc resolves completely differently and Onizuka is never arrested for a Saito stabbing. Fandom infoboxes: Manga Chapter(s) = N/A on both. No adoption basis exists (see summary): Fujisawa is credited only as 原作 / 'Original Manga' (ja.wikipedia staff list; ANN encyclopedia), no supervision or story credit, and nothing in the franchise carries this ending forward. Consistent with the stored A6 ruling that deleted the MU pin on ep 42 - the true endpoint is ep 41 -> 105, continue 106.",
+      "sources": [
+        "https://ja.wikipedia.org/wiki/GTO_(%E6%BC%AB%E7%94%BB)",
+        "https://great-teacher-onizuka-gto.fandom.com/api.php?action=parse&page=GTO_1999-2000&prop=wikitext&format=json",
+        "https://great-teacher-onizuka-gto.fandom.com/api.php?action=parse&page=Lesson_42:_Old_Wounds_Revisited&prop=wikitext&format=json",
+        "https://great-teacher-onizuka-gto.fandom.com/api.php?action=parse&page=Lesson_43:_Onizuka's_Final_Battle&prop=wikitext&format=json",
+        "https://www.animenewsnetwork.com/encyclopedia/anime.php?id=153"
+      ]
+    }
+  ],
+  "annotations": [
+    {
+      "episodes": [22],
+      "kind": "divergence",
+      "note": "Substitutes an original two-episode Hakuba arc for manga Lesson 71 とっておきの場所; ep 21 carries Lesson 70, Lesson 71 itself is never adapted (chapter hole between the stored ep21->70 and ep35->72 anchors).",
+      "sources": [
+        "https://comic-days.com/atom/series/10834108156636906135",
+        "https://booklive.jp/product/index/title_id/203070/vol_no/009"
+      ]
+    },
+    {
+      "episodes": [24],
+      "kind": "divergence",
+      "note": "Anime-first: the manga's own Uchiyamada mid-life/daughter chapter is Lesson 143 中年ペイシェンス (vol 18, 2000-12-15), serialized after this episode aired 2000-03-05. Not an adaptation in either direction on the evidence available.",
+      "sources": [
+        "https://comic-days.com/atom/series/10834108156636906135",
+        "https://en.wikipedia.org/wiki/List_of_Great_Teacher_Onizuka_chapters"
+      ]
+    },
+    {
+      "episodes": [25, 26],
+      "kind": "loose_parallel",
+      "note": "Imports Kadena Nao (嘉手納南風) and her brother from Fujisawa's own prequel manga Shonan Junai Gumi! (ch 229 / 241) into the manga nurse Naoko Moritaka's slot, reusing her Queen-of-Hakosuka / Last Signal past and the brother's racing accident, but telling a new story that ja.wikipedia says contradicts SJG continuity (in the anime she has never met Onizuka).",
+      "sources": [
+        "https://ja.wikipedia.org/wiki/%E6%B9%98%E5%8D%97%E7%B4%94%E6%84%9B%E7%B5%84!",
+        "https://great-teacher-onizuka-gto.fandom.com/api.php?action=parse&page=Nao_Kadena&prop=wikitext&format=json"
+      ]
+    },
+    {
+      "episodes": [27],
+      "kind": "side_story",
+      "note": "Adapts the GTO (ぐれえと・とろこ・おっぱい) / 'Great Toroko Oppai' side story - Scene 1 日本一のアイドル, Scene 2 マネージャーブギ, Scene 3 明日のための\"その1\", Scene 4 事務所がない!, Scene 5 ヘア出し一番搾り, Scene 6 あの娘のスキャンダル!, Scene 7 明日のために.. - with Onizuka taking manga manager Munakata's role. The Scenes are part of the source work (Kodansha's Comic Days serialization carries them; collected in GTO vols 11-12) but carry NO Lesson number.",
+      "sources": [
+        "https://comic-days.com/atom/series/10834108156636906135",
+        "https://great-teacher-onizuka-gto.fandom.com/api.php?action=parse&page=GTO_-_Volume_11&prop=wikitext&format=json",
+        "https://great-teacher-onizuka-gto.fandom.com/api.php?action=parse&page=GTO_-_Volume_12&prop=wikitext&format=json"
+      ]
+    },
+    {
+      "episodes": [27],
+      "kind": "graft",
+      "note": "POSITION WARNING - do not anchor and do not advance the reader. In Kodansha reading order the Scenes sit AFTER Lesson 92 (Scenes 1-3) and AFTER Lesson 97 (Scenes 4-7), while eps 29-33 immediately afterwards go back and adapt Lessons 75-92. Ep 27 therefore grafts material from ahead of its own position, exactly like the stored ep-40 ch-107 graft.",
+      "sources": [
+        "https://comic-days.com/atom/series/10834108156636906135"
+      ]
+    },
+    {
+      "episodes": [28],
+      "kind": "divergence",
+      "note": "Replaces the side story's Munakata press campaign with an original rigged beauty contest (MGPC) plus an MMR マガジンミステリー調査班 crossover; rival Hoshino Megumi is anime-only.",
+      "sources": [
+        "https://ja.wikipedia.org/wiki/GTO_(%E6%BC%AB%E7%94%BB)",
+        "https://everythingbeginswithyourheart.blogspot.com/2019/11/gto-manga-and-anime-differences-part-3.html"
+      ]
+    },
+    {
+      "episodes": [34],
+      "kind": "loose_parallel",
+      "note": "Reuses only the celebrity hidden-camera-prank twist from the Great Toroko Oppai scene that follows Lesson 97, recast onto Onizuka/Saejima/gold/yakuza; 'rehashed into something completely different whilst using a similar event'.",
+      "sources": [
+        "https://everythingbeginswithyourheart.blogspot.com/2019/11/gto-manga-and-anime-differences-part-3.html",
+        "https://great-teacher-onizuka-gto.fandom.com/api.php?action=parse&page=Lesson_34:_Good_Cop%2FBad_Cop&prop=wikitext&format=json"
+      ]
+    },
+    {
+      "episodes": [42, 43],
+      "kind": "divergence",
+      "note": "Anime-original ending after the series passed the manga at Lesson 106; Miyabi's motive, 横山瑞樹 and the education-board antagonist 五十嵐光一 are anime-only. Stored annotation confirmed, no change.",
+      "sources": [
+        "https://ja.wikipedia.org/wiki/GTO_(%E6%BC%AB%E7%94%BB)",
+        "https://great-teacher-onizuka-gto.fandom.com/api.php?action=parse&page=GTO_1999-2000&prop=wikitext&format=json"
+      ]
+    }
+  ],
+  "repairs": [
+    {
+      "episode": 27,
+      "field": "type",
+      "old": "filler",
+      "new": "mixed",
+      "why": "Carries real source content - scenes from the Great Toroko Oppai side story that Fujisawa serialized inside GTO itself (Comic Days prints Scene 1-3 between Lesson 92 and 93, Scene 4-7 between Lesson 97 and 98; collected in GTO vols 11-12), with Onizuka substituted for the manga's manager Munakata; the regional-CM run (Gunma daikon, melon), Tomoko's cut waitress job and Okinoshima's fury are the manga's scenes. Half the episode (MMR crossover, contest hook) is still anime-original, hence mixed rather than canon. MUST NOT take a chapter anchor: the Scenes have no Lesson number and their reading position (post-92 / post-97) is ahead of eps 29-33 (Lessons 75-92), so an anchor here would break the monotonic mapping.",
+      "sources": [
+        "https://ja.wikipedia.org/wiki/GTO_(%E6%BC%AB%E7%94%BB)",
+        "https://comic-days.com/atom/series/10834108156636906135",
+        "https://great-teacher-onizuka-gto.fandom.com/api.php?action=parse&page=GTO:_Great_Toroko_Oppai%E2%99%A1&prop=wikitext&format=json",
+        "https://everythingbeginswithyourheart.blogspot.com/2019/11/gto-manga-and-anime-differences-part-3.html"
+      ]
+    }
+  ],
+  "structure": {
+    "notes": "ROW IDENTITY CLEAN. Our 43 rows are the Lesson numbering, and they match one-for-one on title AND air date across en.wikipedia's episode list, the fandom wiki's 43 'Lesson N' pages (Category:Anime Episodes) and ja.wikipedia's 各話リスト - eps 22-28 = 2000-02-20 .. 2000-04-16, ep 34 = 2000-06-04, eps 42-43 = 2000-09-10 / 2000-09-17. Do NOT use broadcast numbering: Fuji TV aired 45 instalments, because 総集編1 (2000-09-03, between Lessons 41 and 42) and 総集編2 (2000-09-24, after Lesson 43) were recap compilations; ja.wikipedia states 「放送第42話・第45話は総集編であり、放送ストーリー数は全43話（Lesson1 - Lesson43）」. Neither recap is a row of ours and neither should be added. CHAPTER SPACE: the source is 200 numbered Lessons (en.wikipedia chapter list and the fandom volume pages agree on Lesson 200 forever as the last), but AniList's total_chapters=208 is also correct and is worth knowing - Kodansha's own Comic Days serialization of GTO contains exactly 208 instalments: 200 Lessons + the 7 'Scene' chapters of the GTO (ぐれえと・とろこ・おっぱい) side story + 1 bonus essay chapter (こんなモン食ってきた!!スペシャル 藤沢とおるのまんが道). The 7 Scenes are inside the work but OUTSIDE the Lesson instrument, which is why ep 27 is mixed-with-no-anchor. Unadapted Lessons in/around the target range: 67 ただ一人の天敵, 68 魔女っ子倶楽部, 69 悪魔の毒々クッキー, 71 とっておきの場所 (and 60 ある日常の記録―警官冴島俊行の場合― earlier). The existing stored anchors around the block (ep21->70, ep35->72, ep29->75-77, ep41->105, continue 106) are all consistent with everything found here; no anchor repair is proposed.",
+    "order_only": []
+  },
+  "flags_for_sean": [
+    "eps 25-26, the one genuinely split call: the alternative reading is canon + side_source (the episodes carry a Fujisawa-authored character arc from another licensed work of his, Shonan Junai Gumi! ch 229/241 - Nao's Queen-of-Hakosuka past, the Last Signal, the brother crippled in the race, the money she needs for him). I recommend filler because the anime does not adapt those SJG chapters, it writes a new story on top of the borrowed setup and ja.wikipedia says outright that the borrowing produces a contradiction with SJG (in the anime she has never met Onizuka; in SJG she was his class teacher). If you prefer the side_source reading, the rows would become canon+side_source and would still take no anchor (SJG is a different chapter space). Evidence both ways is in the standings note.",
+    "ep 27 is a REPAIR to `mixed` and must be blocked from taking a chapter anchor. The Great Toroko Oppai Scenes have no Lesson number and their reading position (after Lesson 92 / after Lesson 97) is AHEAD of what eps 29-33 adapt (Lessons 75-92). If the apply layer derives anything from a mixed row, this row needs an explicit suppression, same shape as the ep-40 graft cap ('do not advance past 106').",
+    "ep 34 is the closest single-scene call in the block: the celebrity-hidden-camera reveal is genuinely the manga's beat (Great Toroko Oppai, post-Lesson-97) but everything else is new, so I typed filler + loose_parallel rather than mixed. ep 28 has a weaker version of the same question (the anime hands the manga's 'leak her address' promotion beat to a saboteur rival). Both are judgment, not evidence gaps.",
+    "AFL calls eps 22 and 24 'anime canon'; both are refuted here - ep 22's demolition has no manga counterpart (Lesson 71 is a different story and stays unadapted) and ep 24 aired ~6 months before Lesson 143 was serialized. AFL's remaining filler calls in the block agree with this verdict.",
+    "No adoption basis of any kind exists for this series' A-7 ending. Fujisawa: 原作 credit only on ja.wikipedia's staff list and 'Original Manga' only in the ANN encyclopedia, plus a bit-part voice cameo as 受験者 - a cameo is weaker than the kinnikuman 'commissioned' case, so nothing approaching declaration or supervision. Studio: no sequel anime, and 14 Days in Shonan / Paradise Lost continue the manga line, which is incompatible with the anime ending. Community: the manga completed with its own ending (Lesson 200, 2002), so the 'only ending we have' condition never applied. The stored filler + divergence for 42-43 is correct as it stands."
+  ]
+}

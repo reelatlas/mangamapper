@@ -1,0 +1,81 @@
+{
+  "series_id": "twin-star-exorcists",
+  "summary": "Eps 21-50 are Studio Pierrot's own serialized finale, produced under three officially-named anime-original arcs (列島覇乱篇 eps 21-31, 天地鳴動篇 eps 32-40, 破星篇 eps 41-50) that never return to Sukeno's manga and directly contradict it. The verdict is filler for all 30 rows: no author basis and no studio basis for adoption survives scrutiny. The only author-involvement evidence is a design credit — animatetimes (2016-08-01) reports '助野嘉昭先生監修のオリジナルキャラクターも今後登場することが決定' and the PS Vita game's news item credits '助野嘉昭先生キャラクターデザインによる新キャラクター'; the anime's staff list carries only the blanket 原作 credit, with シリーズ構成 by Naruhisa Arakawa and NO 監修/ストーリー原案 credit for Sukeno. Under the protocol that is a design supervision credit, not a declaration or story supervision, so it does not reach adopted{author} (the same ground on which wave-1 verifiers refuted a blanket story-supervision credit). The genuinely surprising finding is the reverse flow: the anime-original Basara the official site announced for eps 21-28 (Suzu, Moro, Yamato, Chijiwa, Momochi, Kinasa, Kuranashi) were later imported INTO the manga at ch 78/88/104/80 — but Sukeno re-authored them into a different story in which they are alive and from Outcast Valley, so the manga borrowed the designs while refusing the anime's events. No studio basis exists either: there is no sequel, the three jBOOKS novels are manga-continuity side stories, and the Jan-2017 PS Vita game is an explicitly game-original story released before the finale aired, so nothing carries the anime ending forward. Divergence point: the last manga-derived material is inside ep 20 (stored mixed, canon to ~14:05, ch 14-15); ep 21 stands where manga ch 19 stands — after the manga's own two-year timeskip, which falls between ch 18 and ch 19 per Viz's vol-6 blurb — but adapts none of it.",
+  "standings": [
+    {
+      "episodes": [21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31],
+      "type": "filler",
+      "confidence": "high",
+      "note": "列島覇乱篇 (Archipelago Turmoil), the anime's first original arc: the official site announced the new arc starting with the 2016-08-31 broadcast (= our ep 21) and announced its cast as アニメオリジナルキャラクター — Sae and Suzu (2016-08-29), Kuranashi / Yamato / Chijiwa / Momochi (2016-09-11), Leon (2016-09-22), Moro (2016-09-14). Zero manga standing: the Dragon Spots (龍黒点), the Ame-no-mihashira branch child Sae (fandom infobox: 'manga debut = None'), and the arc's whole plot are absent from the source, which after ch 18 runs the Tsuchimikado Island qualification exam and the Hijirimaru/Sayo arc (ch 19-30) instead. ja.wikipedia files the entire post-ep-20 storyline under 'アニメオリジナルストーリー'; en.wikipedia states the divergence begins with ep 21; AFG types every one of these rows Filler. BD grouping puts the arc at eps 21-31 (vols 6-8 = eps 21-24 / 25-28 / 29-31, then the 天地鳴動篇 box starts at ep 32); the 2016-11-04 official news says the arc closed with the Nov-2 broadcast, leaving ep 31 (Kinako's flashback, Nov 9) an interlude — either way filler.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/List_of_Twin_Star_Exorcists_episodes",
+        "https://ja.wikipedia.org/wiki/%E5%8F%8C%E6%98%9F%E3%81%AE%E9%99%B0%E9%99%BD%E5%B8%AB",
+        "https://www.sousei-anime.jp/news/",
+        "https://twin-star-exorcists.fandom.com/api.php?action=parse&page=Sae&prop=wikitext&format=json",
+        "https://www.animefillerguide.com/anime/twin-star-exorcists/",
+        "https://www.animenewsnetwork.com/review/twin-star-exorcists/episode-21/.105963"
+      ]
+    },
+    {
+      "episodes": [32, 33, 34, 35, 36, 37, 38, 39, 40],
+      "type": "filler",
+      "confidence": "high",
+      "note": "天地鳴動篇 (Heaven and Earth Rumbling): official news 2016-11-04 announces the new arc starting with the Nov-16 broadcast (= our ep 32), and the home-video BOX release collects 第32話-第40話 under that arc name. Content is entirely anime-original — Kuranashi lifting the whole of Narukami town into the sky, the giant Kegare plant, the 六壬神課 ritual, Arima's staged death, Mayura destroying the bulb with Byakko's power, the Twelve Guardians' capture. None of it exists in the manga, whose corresponding chapters (ch 31-45, Tsuchimikado Island) go a different way; ja.wikipedia summarises the arc inside its 'アニメオリジナルストーリー' section, and AFG types all nine rows Filler. Ep 33's Moro and ep 35-36's Chijiwa are the official site's own 'original characters'; Moro's and Chijiwa's manga debut is ch 88 (2020), long after these episodes and in a different story where Chijiwa is alive.",
+      "sources": [
+        "https://www.sousei-anime.jp/news/",
+        "https://ja.wikipedia.org/wiki/%E5%8F%8C%E6%98%9F%E3%81%AE%E9%99%B0%E9%99%BD%E5%B8%AB",
+        "https://en.wikipedia.org/wiki/List_of_Twin_Star_Exorcists_episodes",
+        "https://www.animefillerguide.com/anime/twin-star-exorcists/",
+        "https://twin-star-exorcists.fandom.com/api.php?action=parse&page=Chijiwa&prop=wikitext&format=json"
+      ]
+    },
+    {
+      "episodes": [41, 42, 43, 44, 45, 46, 47, 48, 49, 50],
+      "type": "filler",
+      "confidence": "high",
+      "note": "破星篇 (the Cataclysm-King arc), the studio ending proper: official news 2017-01-18 announces '最終章「破星篇」' from the ep-41 broadcast, and the BOX release collects 第41話-第50話. The arc is anime-only and contradicts the source at its load-bearing points — Yuto is absorbed by Kuranashi and then killed by Rokuro (ep 46), whereas in the manga he flees the ch-15 battle wounded and is still active hundreds of chapters later at Tsuchimikado Island (ja.wikipedia's 石鏡悠斗 entry: the 5-point simultaneous attack, 深度2003/2013, fighting Rokuro and Tenma); Rokuro is Seimei's man-made 破星王 and Abe no Seimei is a man, while the manga's Seimei is a woman (ja.wikipedia keeps a separate 'アニメ版の安倍晴明' entry: 'アニメにおいては設定は大きく異なり、伝承通り男性'), and the fandom wiki keeps a separate 'Abe no Seimei (Anime)' page calling him 'the overarching antagonist of the anime adaptation'. The manga ran on to its own ending in Sept 2024 (ch 134 / 35 vols), so there is no 'the anime is the only ending' community basis either. AFG types all ten rows Filler.",
+      "sources": [
+        "https://www.sousei-anime.jp/news/",
+        "https://ja.wikipedia.org/wiki/%E5%8F%8C%E6%98%9F%E3%81%AE%E9%99%B0%E9%99%BD%E5%B8%AB",
+        "https://twin-star-exorcists.fandom.com/api.php?action=parse&page=Abe%20no%20Seimei%20(Anime)&prop=wikitext&format=json",
+        "https://en.wikipedia.org/wiki/List_of_Twin_Star_Exorcists_episodes",
+        "https://www.animefillerguide.com/anime/twin-star-exorcists/",
+        "https://www.animenewsnetwork.com/news/2024-06-03/twin-star-exorcists-manga-ends-in-3-chapters/.211481"
+      ]
+    }
+  ],
+  "annotations": [
+    {
+      "episodes": [21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50],
+      "kind": "divergence",
+      "note": "Reaffirms the stored T26 divergence annotation, now with the basis nailed down: the anime leaves the manga mid-ep-20 (~14:05) and never returns, running three officially-named anime-original arcs to a studio ending that contradicts the source (Yuto killed, Sae, Kuranashi, Rokuro as 破星王, a male Abe no Seimei). No adoption: staff credits carry only the blanket 原作 credit for Sukeno with シリーズ構成 by Naruhisa Arakawa and no 監修 / ストーリー原案 credit; no sequel, novel or game carries the anime ending forward.",
+      "sources": [
+        "https://ja.wikipedia.org/wiki/%E5%8F%8C%E6%98%9F%E3%81%AE%E9%99%B0%E9%99%BD%E5%B8%AB",
+        "https://en.wikipedia.org/wiki/List_of_Twin_Star_Exorcists_episodes",
+        "https://www.sousei-anime.jp/news/"
+      ]
+    },
+    {
+      "episodes": [21, 50],
+      "kind": "loose_parallel",
+      "note": "Reaffirms and sharpens the stored batch-17 loose_parallel {16+}. The parallel is now located: the manga's own two-year timeskip falls between ch 18 and ch 19 (Viz vol-6 blurb, 'Benio and Rokuro have trained for two years to get permission to go to Tsuchimikado Island'), so ep 21 stands at the manga's ch-19 position — post-timeskip, Mayura training as an exorcist, the Twelve Guardians in play — while adapting none of ch 19's content (the anime has no Tsuchimikado Island and no qualification exam). Ep 50's wedding of Ryogo and Haruka likewise parallels a much later manga development (Haruka marries Ryogo, renamed 椥辻遥, son Nanato) that the anime reached first. Skeleton only, no adapted panels.",
+      "sources": [
+        "https://twin-star-exorcists.fandom.com/api.php?action=parse&page=Twin%20Star%20Exorcists%20(manga)&prop=wikitext&format=json",
+        "https://ja.wikipedia.org/wiki/%E5%8F%8C%E6%98%9F%E3%81%AE%E9%99%B0%E9%99%BD%E5%B8%AB",
+        "https://www.animenewsnetwork.com/review/twin-star-exorcists/episode-21/.105963"
+      ]
+    }
+  ],
+  "repairs": [],
+  "structure": {
+    "notes": "ROW IDENTITY: 50 rows, 1:1 with both ja.wikipedia's 各話リスト and the official site's STORY list — no ep 0, no recap, no numbered special, no OVA. Every ja.wikipedia air date matches our stored dates exactly, including ep 30 = 2016-11-02 and ep 31 = 2016-11-09 (the official STORY page prints 11/02 twice, for eps 30 and 31; that is a site typo, ja.wikipedia and our rows are right). ARC STRUCTURE (official, from the anime's own news posts and the home-video releases): eps 1-20 are the manga-adapting run (re-broadcast under the label 選抜篇); 列島覇乱篇 = eps 21-31 (BD vols 6-8 cover 21-24 / 25-28 / 29-31); 天地鳴動篇 = eps 32-40 (its own BOX, 第32話-第40話); 破星篇 = eps 41-50 (its own BOX, 第41話-第50話, announced as 最終章). DIVERGENCE POINT: the last manga-derived material is inside ep 20 (stored mixed, canon 0:00-14:05, ch 14-15). Ep 20's Japanese title ふたりの道 is the back half of manga ch 17's title ふたつの道、ふたりの道, and the episode's second half re-uses ch 16-18's beat (the Twelve Guardians' rebuke, Arima's Miko demand, a two-year grace period) but re-purposes it: in the manga the two years are training to qualify for Tsuchimikado Island, in the anime they are a deadline to surpass the Twelve Guardians or bear the Miko, and the anime has no Tsuchimikado Island at all. So the stored 'mixed / partial' typing on ep 20 is right; whether its chapter span should read 14-15 or 14-18 is the only open point (see flags). Nothing at or after ep 21 adapts any chapter. REVERSE IMPORT (worth recording): the Basara the official site announced as anime-original for eps 21-28 later entered the MANGA — Suzu ch 78, Kuranashi ch 80 (cameo), Moro / Yamato / Chijiwa / Momochi ch 88, Kinasa ch 104 — as Outcast Valley characters in a different story where several of them are alive; the manga took the designs, not the events. AFL has NO entry for this series (confirmed against animefillerlist.com's full show index), so the batch-18 'AFL anime canon' premise does not apply here; AFG is the per-episode source and it types 21-50 Filler, agreeing with this verdict.",
+    "order_only": []
+  },
+  "flags_for_sean": [
+    "THE ADOPTION QUESTION, both readings. Reading A (adopted{author}) rests on one real credit: animatetimes 2016-08-01 reports '助野嘉昭先生監修のオリジナルキャラクターも今後登場することが決定！' for the ep-21 original story, the official site's 2016-11-04 game news credits '助野嘉昭先生キャラクターデザインによる新キャラクター 賀茂彩人', and Sukeno demonstrably later imported the anime's Basara into his own manga (Suzu ch 78, Kuranashi ch 80, Moro/Yamato/Chijiwa/Momochi ch 88, Kinasa ch 104) — so he was consulted and reused the anime's material. Reading B (filler, RECOMMENDED) notes that all of that is DESIGN supervision, not story supervision or a declaration: the anime's staff list has 原作 - 助野嘉昭 (blanket) and シリーズ構成 - 荒川稔久 with no 監修 or ストーリー原案 credit for Sukeno anywhere; and the decisive test is that Sukeno's own manga refuses the anime's events (Yuto alive for hundreds of chapters, Seimei a woman, no Sae, Chijiwa/Momochi/Yamato/Kinasa alive). An author who re-authors the material into a contradicting story has not declared it canon. Recommend filler + divergence; the design-supervision fact belongs in the note, not in an adopted{author} basis. https://www.animatetimes.com/news/details.php?id=1470026882",
+    "STUDIO BASIS CHECKED AND ABSENT. No season 2 / sequel / OVA; the three jBOOKS novels (天縁若虎 2016, 士牙繭闢 2017, 三天破邪 2018, 助野嘉昭 原作 / 田中創) are manga-continuity side stories; the PS Vita game (Bandai Namco, 2017-01-26) is 'ゲームオリジナルストーリー' with Sukeno-designed original heroines and shipped between eps 38 and 39, i.e. before the ending it would have to carry forward; the SD如律令!! spinoff is a gag strip (原案・監修 Sukeno). Nothing in the franchise transmits the anime's ending, so adopted{studio} has no anchor. https://www.4gamer.net/games/355/G035522/20170126014/",
+    "COMMUNITY BASIS UNAVAILABLE BY CONSTRUCTION: the manga finished with its own ending (Jump SQ 2024-10 issue, ch 134, 35 volumes), so the 'the anime is the only ending we have' pattern cannot apply here.",
+    "EP 20 (out of block, no repair proposed): its stored partial annotation says canon only to ~14:05 = ch 14-15 with the back half anime-original. Two indirect signals suggest the back half is a compressed, re-premised version of ch 16-18 rather than pure invention: the episode's Japanese title ふたりの道 is literally the tail of ch 17's title ふたつの道、ふたりの道, and the manga has the same two-year gap at the ch 18/19 boundary. I could NOT read ch 16-18 directly (the fandom chapter pages have empty Summary sections), so I am flagging rather than repairing. If Sean wants it settled, the question is whether the ch-17/18 Guardians scene is on screen after 14:05 — if it is, ep 20's chapter span should read 14-18 and the anchor (currently ep20 -> 14, afg-continua) is short by up to four chapters.",
+    "OUT OF BLOCK, FYI: AFG also types eps 5, 10, 11, 12, 13, 14, 15 and 16 as Filler while our stored data has 18-19 canon and gives afg anchors through ch 14. I did not research those rows; if any of them are stored canon on AFG's own conversion column, that column is a reading-position conversion and not an adaptation claim, so those rows may deserve their own pass."
+  ]
+}

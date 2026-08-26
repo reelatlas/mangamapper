@@ -1,0 +1,176 @@
+{
+  "series_id": "claymore",
+  "summary": "Claymore (Madhouse, 26 eps, Apr-Sep 2007) ends on a studio-written finale, but the block is NOT uniform and the stored premise is wrong on two counts. (1) No adoption on any basis: NTV's own archived staff page and ja.wikipedia's staff list credit Yagi only as 原作 (blanket source credit) with no 監修/supervision line; series composition is Yasuko Kobayashi, who wrote eps 25-26 herself, and ep 24 was written by Daisuke Nishida. No interview, no producer statement, no later work carries the anime ending forward, and the manga ran on to 2014 and contradicts it outright (Jean dies in Pieta, the battle group feigns death and hides 7 years, Clare and Raki only reunite after the timeskip). So there is no author, studio or community basis - the A-7 default (filler) holds wherever no source material survives. (2) Madhouse did NOT outrun Yagi: the last chapter the anime touches is Scene 60 (Monthly Shonen Jump June 2006 issue, on sale 2006-05-02), while the manga's last pre-hiatus chapter was Scene 73 (MJ July 2007 issue, on sale 2007-06-06) - 13 printed chapters the anime never used. ja.wikipedia attributes the original conclusion to the manga being unfinished (連載中), not to the anime catching up; the manga's next arc after the Battle of the North opens with a 7-year timeskip (Scene 65) that three episodes could not resolve. On content: ep 24 opens ON THE BOOK - its 'point of no return' sequence (Clare cannot revert, begs Helen to behead her, Helen's 'I will never forgive you for making me do this') and Deneve taking up Undine's sword are Scene 60's opening pages, essentially verbatim, before Priscilla's arrival diverts the episode into invented material; ep 25 is 100% invented; ep 26 is an invented volcano finale that nonetheless transplants Scene 60's closing beat (Jean impaled on Clare's mandibles, spending the last of her life to realign Clare's yoki, Clare restored, Jean dead). So 24 = mixed, 25 = filler, 26 = mixed. Surprise finding on the run-up: eps 21/22/23 are not 'loose parallels' at all - they map 1:1 onto Scenes 57/58/59 beat for beat, with only an inserted Raki-Isley-Priscilla B-plot as original, and the ep 23/24 title 臨界点 is itself Yagi's ORIGINAL MAGAZINE title for Scene 59 (retitled ピエタ侵攻 III in tankobon).",
+  "standings": [
+    {
+      "episodes": [24],
+      "type": "mixed",
+      "chapters": "ch 60 (opening portion only)",
+      "confidence": "high",
+      "note": "Adapts the first roughly one-third of Scene 60 (tankobon ピエタ侵攻 IV / magazine 死線の刃, vol 11) before leaving the manga for good. Manga-derived: Rigaldo's minced corpse and the warriors' reaction (Scene 60 cold open, replayed as ep 24's cold open); the 'point of no return' sequence - Clare cannot revert, asks Helen to use her extensible arm to kill her, Helen in tears says she will never forgive Clare for making her do this (claymorenew's Scene 60 and Anime Scene 24 pages carry that line identically); and Deneve taking up Undine's sword in her memory (Scene 60, 'Last stand'). Anime-original from there: Priscilla's re-awakening and gallop to Pieta interrupts Helen's mercy-kill in place of Jean's intervention, Rubel sends Galatea north as observer (in the manga Galatea is at Organization HQ arguing with Limt, Scene 61; ja.wikipedia notes the manga's new 'eyes' sent north were Rafaela and Renee, a role the anime gave Galatea), and Jean finding Raki in an alley. AFG/AFL and claymorenew's arc label call the whole episode original - that block label is contradicted by claymorenew's own scene-by-scene summary, by en.wikipedia's episode summary and by claymore.fandom's Episode 24 overview, all three of which open the episode on the Scene 60 beat. Not adopted: no author/studio/community basis (see summary).",
+      "sources": [
+        "https://claymorenew.fandom.com/api.php?action=parse&page=Anime%20Scene%2024&prop=wikitext&format=json",
+        "https://claymorenew.fandom.com/api.php?action=parse&page=Scene%2060&prop=wikitext&format=json",
+        "https://claymore.fandom.com/api.php?action=parse&page=Episode_24&prop=wikitext&format=json",
+        "https://claymore.fandom.com/api.php?action=parse&page=Jean&prop=wikitext&format=json",
+        "https://en.wikipedia.org/wiki/List_of_Claymore_episodes",
+        "https://www.animefillerguide.com/anime/claymore/"
+      ]
+    },
+    {
+      "episodes": [25],
+      "type": "filler",
+      "chapters": "none",
+      "confidence": "high",
+      "note": "Zero source standing. The whole episode is the invented Clare-vs-Priscilla duel inside a volcano, Isley spectating, Miria/Deneve/Helen arriving to fight Priscilla and being dismembered, and Jean carrying Raki toward the crater. None of it exists in the manga: Priscilla is at Isley's house through Scenes 61-63, she and Clare do not fight until the final arc near Rabona (Scene ~140s), Miria/Deneve/Helen never face her, and the volcano is not a manga location (claymorenew notes it appears only on the Claymore DS game world map). claymorenew labels eps 24-26 an anime arc, 'Priscilla-Clare (original to anime)', and marks ep 25 'Entire storyline original to the anime'; AFG says eps 24-26 'deviate completely from the manga taking a totally original ending'; AFL types it Filler. Written by Yasuko Kobayashi (series composition), not Yagi. No adoption basis found.",
+      "sources": [
+        "https://claymorenew.fandom.com/api.php?action=parse&page=Anime%20Scene%2025&prop=wikitext&format=json",
+        "https://claymorenew.fandom.com/api.php?action=parse&page=Scene%2063&prop=wikitext&format=json",
+        "https://en.wikipedia.org/wiki/List_of_Claymore_episodes",
+        "https://www.animefillerguide.com/anime/claymore/",
+        "https://www.animefillerlist.com/shows/claymore"
+      ]
+    },
+    {
+      "episodes": [26],
+      "type": "mixed",
+      "chapters": "ch 60 (closing beat only, transplanted out of sequence)",
+      "confidence": "medium",
+      "note": "Overwhelmingly the studio's own finale - the volcano fight's conclusion, Raki stopping Clare's beheading of Priscilla, Isley calling a truce and carrying Priscilla off, Galatea lying to Rubel from a Pieta church, and an epilogue where Miria/Deneve/Helen part ways and Clare leaves with Raki (the manga instead has the survivors feign death and hide in the north for seven years, with Clare and Raki reuniting only after the timeskip in Rabona). But it is not zero-canon: Scene 60's closing 'Sacrifice' beat is reproduced in substance - Jean is impaled on Clare's mandibles, declares she will now save Clare from awakening in turn, reveals her wound is fatal, spends the last of her life realigning her yoki with Clare's in a vortex of yoma power, Clare returns to human, Jean dies. NTV's own archived story synopsis carries that beat in those terms ('今度は自分がクレアを覚醒から救う、と宣言する... 残りの命をクレアのために使う'), and both wikis independently place the same event in manga Scene 60. Under our vocabulary filler requires ZERO source content, so this is mixed; the competing reading is that the transplant is so far from its source position (different location, different trigger, different consequences) that claymorenew is right to call the whole episode original and type it filler. Recommending mixed; see flags. Not adopted on any basis.",
+      "sources": [
+        "https://claymorenew.fandom.com/api.php?action=parse&page=Anime%20Scene%2026&prop=wikitext&format=json",
+        "https://claymorenew.fandom.com/api.php?action=parse&page=Scene%2060&prop=wikitext&format=json",
+        "https://claymore.fandom.com/api.php?action=parse&page=Jean&prop=wikitext&format=json",
+        "https://web.archive.org/web/20071007195549/http://www.ntv.co.jp/claymore/story/index.html",
+        "https://en.wikipedia.org/wiki/List_of_Claymore_episodes"
+      ]
+    }
+  ],
+  "annotations": [
+    {
+      "episodes": [24],
+      "kind": "divergence",
+      "note": "The series' permanent break from the manga happens inside this episode: it opens on Scene 60 and abandons it at the point where the manga has Jean stop Helen's mercy-kill, substituting Priscilla's re-awakening. Everything after that point in the series is studio material. Keeps the stored T26 divergence annotation, now with the break located precisely.",
+      "sources": [
+        "https://claymorenew.fandom.com/api.php?action=parse&page=Anime%20Scene%2024&prop=wikitext&format=json",
+        "https://claymorenew.fandom.com/api.php?action=parse&page=Scene%2060&prop=wikitext&format=json"
+      ]
+    },
+    {
+      "episodes": [24],
+      "kind": "partial",
+      "note": "Scene 60 is split and never completed in place: its opening (Rigaldo's corpse, Clare's plea to Helen, Deneve taking Undine's sword) is here, its closing (Jean's sacrifice, Clare restored, Jean dead) is displaced to ep 26 in an invented setting, and its middle (Jean stopping Helen; the Northern Army closing in for the last stand) is dropped.",
+      "sources": [
+        "https://claymorenew.fandom.com/api.php?action=parse&page=Scene%2060&prop=wikitext&format=json",
+        "https://claymore.fandom.com/api.php?action=parse&page=Jean&prop=wikitext&format=json"
+      ]
+    },
+    {
+      "episodes": [26],
+      "kind": "graft",
+      "note": "Scene 60's Jean-sacrifice beat is grafted out of sequence into the anime-original volcano finale: Jean is impaled on Clare's mandibles and spends her life realigning Clare's yoki to pull her back from awakening, exactly as in ch 60, but two episodes later, in a location and with a trigger (Raki) that do not exist in the manga.",
+      "sources": [
+        "https://claymorenew.fandom.com/api.php?action=parse&page=Anime%20Scene%2026&prop=wikitext&format=json",
+        "https://claymorenew.fandom.com/api.php?action=parse&page=Scene%2060&prop=wikitext&format=json",
+        "https://web.archive.org/web/20071007195549/http://www.ntv.co.jp/claymore/story/index.html"
+      ]
+    },
+    {
+      "episodes": [26],
+      "kind": "divergence",
+      "note": "Keeps the stored T26 divergence annotation. The finale actively contradicts the manga's continuation: the bulk of the battle group and the Northern Army survive, Miria/Deneve/Helen simply walk away, and Clare leaves with Raki - where the manga has the survivors feign death and hide in the north for seven years, with Clare and Raki reuniting only in Rabona after the timeskip.",
+      "sources": [
+        "https://claymorenew.fandom.com/api.php?action=parse&page=Anime%20Scene%2026&prop=wikitext&format=json",
+        "https://ja.wikipedia.org/wiki/CLAYMORE"
+      ]
+    }
+  ],
+  "repairs": [
+    {
+      "episode": 24,
+      "field": "type",
+      "old": "filler",
+      "new": "mixed",
+      "why": "Stored EPISODE_TYPE_OVERRIDES (T6, Sean 2026-08-23) types ep 24 filler on the strength of AFG's block statement that eps 24-26 'deviate completely'. Three independent descriptions of the episode's actual content (claymorenew Anime Scene 24; claymore.fandom Episode 24; en.wikipedia's episode summary) all open it on manga Scene 60 - Clare unable to revert and begging Helen to behead her, with Helen's 'I will never forgive you' line - and claymorenew additionally places Scene 60's Deneve/Undine's-sword beat in this episode. Filler requires ZERO source content; ep 24 carries roughly a third of ch 60.",
+      "sources": [
+        "https://claymorenew.fandom.com/api.php?action=parse&page=Anime%20Scene%2024&prop=wikitext&format=json",
+        "https://claymorenew.fandom.com/api.php?action=parse&page=Scene%2060&prop=wikitext&format=json",
+        "https://claymore.fandom.com/api.php?action=parse&page=Episode_24&prop=wikitext&format=json",
+        "https://en.wikipedia.org/wiki/List_of_Claymore_episodes"
+      ]
+    },
+    {
+      "episode": 26,
+      "field": "type",
+      "old": "filler",
+      "new": "mixed",
+      "why": "Same stored ruling. The episode is dominantly studio material, but Scene 60's closing event (Jean impaled on Clare's mandibles, spending the last of her life to realign Clare's yoki and return her to human, then dying) is reproduced in substance - confirmed on the manga side by two independent wikis and on the anime side by NTV's own archived story synopsis. Medium confidence: this is the judgment-call case the protocol describes, and the alternative reading (filler, per claymorenew's 'entire episode storyline original to the anime') is defensible.",
+      "sources": [
+        "https://claymorenew.fandom.com/api.php?action=parse&page=Anime%20Scene%2026&prop=wikitext&format=json",
+        "https://claymorenew.fandom.com/api.php?action=parse&page=Scene%2060&prop=wikitext&format=json",
+        "https://claymore.fandom.com/api.php?action=parse&page=Jean&prop=wikitext&format=json",
+        "https://web.archive.org/web/20071007195549/http://www.ntv.co.jp/claymore/story/index.html"
+      ]
+    },
+    {
+      "episode": 21,
+      "field": "annotation",
+      "old": "loose_parallel {ch 57-59} - 'loosely parallels the Northern Campaign / Pieta battle with growing variations'",
+      "new": "divergence {ch 57} - close 1:1 adaptation of Scene 57 with an inserted anime-original B-plot",
+      "why": "Ep 21 tracks Scene 57 beat for beat: the second engagement of Pieta, Team Undine killing the Mannequin awakened, Jean's Drill Sword killing the Tyrannosaur, Flora and Clare mincing the Stegosaur, Rigaldo's body count (five warriors lost to three awakened) and his recognition of the battle group's team strategy, his awakening as the Silver Lion, then Veronica cut in two, Undine killed, Jean impaled and thrown aside, Flora split vertically, and Rigaldo turning on Miria. claymorenew's own 'Manga versus anime' list for the episode cites only two originals - the five rank-and-file deaths being shown on screen, and the Raki/Priscilla cavern sequence. That is not a loose parallel; it is a faithful adaptation with an anime-original subplot running alongside. AFG independently says eps 21-23 'coincide with the events of the manga' and correspond to ch 57-59. Type (mixed) is unchanged.",
+      "sources": [
+        "https://claymorenew.fandom.com/api.php?action=parse&page=Anime%20Scene%2021&prop=wikitext&format=json",
+        "https://claymorenew.fandom.com/api.php?action=parse&page=Scene%2057&prop=wikitext&format=json",
+        "https://www.animefillerguide.com/anime/claymore/"
+      ]
+    },
+    {
+      "episode": 22,
+      "field": "annotation",
+      "old": "loose_parallel {ch 57-59} - 'loosely parallels the Northern Campaign / Pieta battle with growing variations'",
+      "new": "divergence {ch 58} - close 1:1 adaptation of Scene 58 with an inserted anime-original B-plot",
+      "why": "Ep 22 is Scene 58 end to end: Rigaldo attacking Miria, Helen's extensible arm interfering, Deneve disabled by his claws, Miria eluding then pierced midair and dropped, Clare's slow-motion charge, and Rigaldo's arm severed with Clare watching from a distance on awakened legs. claymorenew's 'Manga versus anime' for the episode lists exactly one original item: the Raki/Priscilla cavern sequence. Type (mixed) unchanged.",
+      "sources": [
+        "https://claymorenew.fandom.com/api.php?action=parse&page=Anime%20Scene%2022&prop=wikitext&format=json",
+        "https://claymorenew.fandom.com/api.php?action=parse&page=Scene%2058&prop=wikitext&format=json",
+        "https://www.animefillerguide.com/anime/claymore/"
+      ]
+    },
+    {
+      "episode": 23,
+      "field": "annotation",
+      "old": "loose_parallel {ch 57-59} - 'loosely parallels the Northern Campaign / Pieta battle with growing variations'",
+      "new": "divergence {ch 59} - close 1:1 adaptation of Scene 59 with one anime-original insert",
+      "why": "Ep 23 is Scene 59 end to end: the cold open on Rigaldo's severed arm and Clare's awakened legs, Helen snatching and chopping up the arm, Clare's uncontrolled charges, Helen's limb-stretching drawing Rigaldo's attention, Clare's left arm sprouting bladed mandibles into a claw that lets her anchor and turn, and Rigaldo shredded. claymorenew's 'Manga versus anime' for the episode lists exactly one original item: Raki's entrance into town. The episode title 臨界点 is itself Yagi's ORIGINAL MAGAZINE title for Scene 59 (retitled ピエタ侵攻 III in tankobon) - direct evidence of the pairing. Type (mixed) unchanged; arguably this row is closer to canon than mixed.",
+      "sources": [
+        "https://claymorenew.fandom.com/api.php?action=parse&page=Anime%20Scene%2023&prop=wikitext&format=json",
+        "https://claymorenew.fandom.com/api.php?action=parse&page=Scene%2059&prop=wikitext&format=json",
+        "https://www.animefillerguide.com/anime/claymore/"
+      ]
+    },
+    {
+      "episode": 24,
+      "field": "ruling_reason_text",
+      "old": "\"Madhouse outran the ongoing manga\" (T6/A43/A6/G26 notes, Sean 2026-08-23)",
+      "new": "The anime never caught up to the manga; it stopped adapting 13 printed chapters short and wrote an original conclusion because the manga was unfinished and its next arc opens with a 7-year timeskip.",
+      "why": "Publication dates: the anime's last adapted chapter is Scene 60, Monthly Shonen Jump June 2006 issue, on sale 2006-05-02. The manga's last pre-hiatus chapter was Scene 73, MJ July 2007 issue, on sale 2007-06-06 - MJ then folded and Claymore resumed in Jump SQ's December 2007 issue. The anime's finale aired 2007-09-26, so 13 already-published chapters (61-73) went unadapted. ja.wikipedia states the reason as 放送当時は原作が連載中だった事情から終盤はアニメオリジナルの展開で完結した - 'because the manga was still being serialized at the time of broadcast, the final stretch concluded with an anime-original development' - i.e. the manga was UNFINISHED, not overtaken. Fixing the reason text does not change the filler/mixed outcome, but the stored premise is factually wrong and would mislead a future re-research.",
+      "sources": [
+        "https://ja.wikipedia.org/wiki/CLAYMORE",
+        "https://claymorenew.fandom.com/api.php?action=parse&page=Scene%2060&prop=wikitext&format=json",
+        "https://claymorenew.fandom.com/api.php?action=parse&page=Scene%2073&prop=wikitext&format=json"
+      ]
+    }
+  ],
+  "structure": {
+    "notes": "One season, 26 episodes, no OVAs, no specials, no ep 0, no recaps - our 26 rows are the whole series. Row identity verified against a primary source: NTV's archived official episode list gives #024 2007/09/11 (臨界点 II), #025 2007/09/18 (誰が為に), #026 2007/09/25 (受け継ぐものへ), matching our stored titles and dates exactly. ja.wikipedia's table lists each date one day later (9/12, 9/19, 9/26) because it records the 01:26 JST Wednesday slot; that is a slot convention, not a numbering shift - no off-by-one anywhere. AFL's table is also 26 rows with our dates, so its rows join to ours directly. Chapter space: the fandom wikis' 'Scene N' numbering IS the serialization chapter numbering and matches our chapter space (batch 14's ep 20 -> ch 56 anchor lands on Scene 56, 北の戦乱 VII). The manga is 155 numbered scenes plus 5 side chapters in 27 volumes; AniList's total_chapters=159 is counting some of the extras, so treat 155 as the ceiling of the numbered space. Title lineage: the anime borrows Yagi's arc titles verbatim through ep 22 (北の戦乱 I-III = eps 18-20, ピエタ侵攻 I-II = eps 21-22). Eps 23-24's title 臨界点 does not exist in tankobon - but it is the ORIGINAL MAGAZINE title of Scene 59 (retitled ピエタ侵攻 III for volume 11), so eps 23-24 are still titled out of Yagi's own text. Only eps 25-26 (誰が為に, 受け継ぐものへ) carry titles with no manga counterpart at all - the cleanest structural marker of where the series stops being an adaptation. Divergence chronology, for the record: the first anime-original material in the northern block is ep 19's warrior-graveyard sequence where Raki meets Isley and Priscilla (claymorenew: 'with the sequence in the graveyard, the anime storyline begins to diverge from manga'; in the manga Raki is taken north by slave traders and the graveyard is found by Clarice after the 7-year timeskip); ep 20 widens it (Isley's party rides toward Pieta instead of south to Mucha, the Undine's-friend storeroom scene has no manga counterpart, and Clare's life story is told here where the manga withholds it to Scene 130); eps 21-23 run that original B-plot alongside a 1:1 adaptation of Scenes 57/58/59; the A-plot itself leaves the manga partway through ep 24 and never returns. Staff, for the adoption question: NTV's archived official staff page reads 原作: 八木教広 / シリーズ構成: 小林靖子 / 監督: 田中洋之 / アニメーション制作: マッドハウス, with no 監修 (supervision) or story-cooperation credit; ja.wikipedia's fuller staff list agrees. Per-episode scripts: ep 24 Daisuke Nishida, eps 25-26 Yasuko Kobayashi.",
+    "order_only": []
+  },
+  "flags_for_sean": [
+    "ADOPTION: none proposed. No author basis (Yagi has a blanket 原作 credit only - NTV's own 2007 staff page and ja.wikipedia both lack any 監修/supervision line; eps 25-26 were scripted by series-composition writer Yasuko Kobayashi). No studio basis (no sequel, film or later work carries the anime ending; the manga ran to 2014 and contradicts it). No community basis (the series HAS a finished manga ending, and AFL/AFG/both wikis all treat eps 24-26 as non-canon). So the A-7 default holds - but on CONTENT the block is not uniformly filler: 24 and 26 both carry ch-60 material.",
+    "READING TRAP for whoever re-researches this: en.wikipedia's List of Claymore episodes says 'The remaining 2 episodes follow an original storyline not found in the manga written by Yagi', and claymore.fandom's Anime page copies it verbatim. 'written by Yagi' modifies 'the manga', NOT 'the episodes'. It is a garden-path sentence, not an author-basis claim - do not read it as evidence Yagi wrote the ending. (It is also the source of the '24 episodes adapt volumes 1-11' figure, which is loose: the anime never touches ch 61-63, which are in vol 11.)",
+    "EP 26 TYPING IS THE JUDGMENT CALL: mixed (recommended - Scene 60's Jean-sacrifice event is reproduced in substance, and filler requires ZERO source content) vs filler (claymorenew, the best-sourced wiki, says 'entire episode storyline original to the anime' and treats the anime's Jean death as a different event from the manga's). Confidence medium. Ep 24's mixed is high-confidence and not in doubt.",
+    "BIGGER THAN THE BLOCK - the adaptation frontier may be in the wrong place. Eps 21/22/23 are not loose parallels: they are near-exact adaptations of Scenes 57/58/59 (see the three repair entries), and ep 24 carries ch 60's opening. That puts three of your rulings in question: A3 (ep 20 -> ch 56 as 'last faithful episode'), A43 (loose_parallel 57-59 on 21-23) and C8 (continue_from_chapter=57). On the evidence the frontier could move to ep 23 -> ch 59 with continue at ch 60. Counter-argument for leaving C8 at 57: ch 60 is split across ep 24 (opening) and ep 26 (closing beat) with its middle dropped, and from ch 61 the manga and the anime tell incompatible stories, so sending a reader to 60 or 61 hands them a Jean death they have already seen twice. I am flagging, not asserting - this is your call and it is outside my target rows.",
+    "ANCHOR HYGIENE: even if you accept mixed on 24 and 26, I recommend NO anchors on 24-26. The ch-60 material in them is fragmentary and out of order (opening in 24, closing beat in 26, middle dropped), so any ep->chapter anchor there would be a false position. A6 already deleted derived anchors on 24 and 26; keep them deleted. If 21-23 gain anchors from the repairs above, ep 23 -> ch 59 is the only clean one.",
+    "PREMISE CORRECTION carried in the repairs: 'Madhouse outran the ongoing manga' (in the T6, A43, A6 and G26 notes) is not supported. Scene 60 was on sale 2006-05-02; the manga reached Scene 73 by 2007-06-06 before Monthly Shonen Jump folded; the finale aired 2007-09-26. The anime stopped 13 printed chapters short. ja.wikipedia gives the reason as the manga being unfinished (連載中), and the manga's next arc opens on a 7-year timeskip (Scene 65). No source states Madhouse's actual reasoning - I did not find one, and I am not inferring one."
+  ]
+}

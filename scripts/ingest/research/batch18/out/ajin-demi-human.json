@@ -1,0 +1,384 @@
+{
+  "series_id": "ajin-demi-human",
+  "summary": "The stored batch-12 ruling that Ajin season 2 (our rows 14-26) is 'anime-original from the start' is WRONG for the first two thirds of the cour and right only for its ending. Three independent sources agree that eps 14-22 adapt manga chapters 23-42 (ja.wikipedia's per-character 原作/アニメ版 comparison tables with 巻話 + 第2期N話 citations; the AllYourAnime per-episode Anime/Manga comparison series, one article per S2 episode; and the Ajin Fandom episode + chapter pages read via the MediaWiki API). Eps 14-16 are close adaptations of ch 23-26 (AllYourAnime: 'pretty close to a one for one adaptation', 'one of the more faithful episodes'); ep 17 adapts ch 28 near 1:1 as its A-story; ep 19 carries a severely truncated ch 27/27.5 (Shimomura's origin, adapted OUT OF ORDER after ch 28); ep 21 is a loose counterpart of ch 31/31.5 and ep 22 is explicitly 'a very loose, highly reworked adaptation of the manga's Forge Security arc', chapters 32-42 — the four black-suit mercenaries die to Sato in the same corporate-siege battle they die in at manga ch 38/40/42. The season's pervasive divergence is a RENAMING, not a replacement: ja.wikipedia states outright that the second-wave ambush target is 'フォージ安全の甲斐と李' in the manga and '武蔵重工の橋口' in the anime, and that Kai and Li are instead written off in a news report at 第2期17話. The genuine studio ending starts at ep 23 and runs to ep 26: the SDF-garrison seizure, the 20 VX-gas missiles stolen from Musashi Heavy Industries, the missile fired at the Prime Minister's residence, burying Sato in the tunnels and the exploding US transport have NO manga counterpart — the manga's own final wave (Iruma Air Base, Sato's F-15, the severed arm, the Flood, Tosaki's death) is vol 13-17 / ch 58-85, serialised 2018-2021, years after the anime ended in Dec 2016. On the ASK's second half: NO author basis is documented. Both the studio's own credit block (Polygon Pictures' works page) and ja.wikipedia's staff list credit Gamon Sakurai only as 原作 (original manga) — there is no 原作協力, no 監修, no story credit, and I found no interview or statement in which Sakurai declared or supervised the anime ending. Nor is there a studio basis (nothing in the franchise carries the anime ending forward; the manga finished in 2021 with a completely different ending and the 2017 live-action film has a third one) or a community basis (the source is not endingless). Recommendation: eps 23-26 are a STUDIO ENDING = filler, not adopted.",
+  "standings": [
+    {
+      "episodes": [
+        14
+      ],
+      "type": "canon",
+      "chapters": "23, 24",
+      "confidence": "high",
+      "note": "Adapts ch 23-24. AllYourAnime titles this 'Episode 1/Chapters 23-24' and says 'the next several minutes of the anime come pretty close to a one for one adaptation' (Kei+Nakano in the noodle shop, the stolen car, the warehouse, the detective's report) and that the hospital-room confrontation aftermath with Tosaki 'is virtually one for one'. Fandom's Episode 14 summary matches ch 23 (second-wave list, 'they need a powerful ally') and ch 24 (drive to Ai's hospital room, Tosaki reluctantly allies). Divergences: the list has 15 names not 11 and Tosaki is NOT on it (ja.wikipedia, Tosaki entry, citing 5巻23話/第1期13話); the first kill shown is Dr Wakai, a ch-29 death moved forward (ja.wikipedia, 若井浩明: 'アニメ版: 生配信中に殺害された。暗殺リストの1番目'). AFL's 'anime canon' claim is wrong in the direction that matters least here — this row genuinely adapts the manga.",
+      "sources": [
+        "https://web.archive.org/web/20200217013515/http://www.allyouranime.net/ajin-animemanga-comparison-season-2-episode-1/",
+        "https://ja.wikipedia.org/wiki/%E4%BA%9C%E4%BA%BA_(%E6%BC%AB%E7%94%BB)",
+        "https://ajin.fandom.com/api.php?action=parse&page=Episode%2014&prop=wikitext&format=json"
+      ]
+    },
+    {
+      "episodes": [
+        15
+      ],
+      "type": "canon",
+      "chapters": "25 (+ ch 23's Kazuo Sakurai assassination dramatised)",
+      "confidence": "high",
+      "note": "Core is ch 25: the bulking-up training ('the adaptation is virtually one for one'), Shimomura taking Kei and Nakano to Ikuya Ogura, the IBM test and the Iowa story, the gun-range scene and Kei's scream, Nakano calling him out in the bathroom — all in both media per AllYourAnime 'Episode 2/Chapter 25'. The airliner sequence is the anime's dramatisation of a manga death: ja.wikipedia's 桜井和夫 entry gives the manga event as 5巻23話 (found dead) and the anime version as 第2期15話 (killed by Sato's IBM in first class, exit blown, ditching off Shizuoka), and notes the boarding method and cabin dialogue partly reuse the MANGA's first-wave Grant Pharmaceutical airliner attack (ch 19-20) which the anime had replaced in S1 ep 11 with a building collapse — i.e. skipped source material grafted back in. ja.wikipedia (Kei, アニメ版) also dates Kei's loss of IBM control to 第2期15話.",
+      "sources": [
+        "https://web.archive.org/web/2019/http://www.allyouranime.net/ajin-animemanga-comparison-season-2-episode-2/",
+        "https://ja.wikipedia.org/wiki/%E4%BA%9C%E4%BA%BA_(%E6%BC%AB%E7%94%BB)",
+        "https://ajin.fandom.com/api.php?action=parse&page=Chapter%2025&prop=wikitext&format=json"
+      ]
+    },
+    {
+      "episodes": [
+        16
+      ],
+      "type": "canon",
+      "chapters": "26 (+ ch 24's Kishi assassination, ch 28 opening pulled forward, a ch 29 fragment)",
+      "confidence": "high",
+      "note": "AllYourAnime: 'Episode 3 is perhaps one of the more faithful episodes in this second season... large sections that could also be considered near one for one adaptations' — the Ogura conversation, the target-selection meeting, the Ajin/IBM exposition, the gun training, the Manabe encounter, the Hirasawa forest talk, Nakano's repeated self-killing attempts ('largely a one for one adaptation') are all ch 26. Also carries ch 24's death of Dr Kishi (ja.wikipedia 岸祐二: manga 5巻24話, sold out by Wakai; anime locates him via his police guard and puts him 3rd on the list) and pulls a brief chunk of ch 28 forward (Kaito meeting his new cellmate). The late-night Tosaki/Nagai chat parallels a scene in ch 29. Divergence: the ambush target becomes the Health Minister rather than the manga's Forge Safety head and secretary.",
+      "sources": [
+        "https://web.archive.org/web/2018/http://www.allyouranime.net/ajin-animemanga-comparison-season-2-episode-3/",
+        "https://ja.wikipedia.org/wiki/%E4%BA%9C%E4%BA%BA_(%E6%BC%AB%E7%94%BB)",
+        "https://ajin.fandom.com/api.php?action=parse&page=Chapter%2026&prop=wikitext&format=json"
+      ]
+    },
+    {
+      "episodes": [
+        17
+      ],
+      "type": "mixed",
+      "chapters": "28",
+      "confidence": "high",
+      "note": "The A-story is ch 28 adapted near 1:1: the juvenile-hall staff discussing Kotobuki's inexplicable escape ('a near one for one adaptation'), the prisoners' interrogation and Kaito's interruption ('pretty similar, with few, if any changes'), the night beating ('this plays near one for one'), Kotobuki revealing his winged IBM and offering Kaito a way out. Against that, the episode launches the wholly anime-original US Department of Defense plotline (Douglas Almeida and Carly Myers are listed under ja.wikipedia's アニメオリジナルキャラクター section) plus original training material — a separable non-source block, hence mixed. This is also the episode where the anime writes the manga's Forge Safety targets out: ja.wikipedia's 甲斐敬一 and 李奈緒美 entries give the manga death as 9巻41話 and the anime version as 'ニュースで殺されたと報じられるだけだった... 第2期17話'.",
+      "sources": [
+        "https://web.archive.org/web/2019/http://www.allyouranime.net/ajin-animemanga-comparison-season-2-episode-4/",
+        "https://ja.wikipedia.org/wiki/%E4%BA%9C%E4%BA%BA_(%E6%BC%AB%E7%94%BB)",
+        "https://ajin.fandom.com/api.php?action=parse&page=Chapter%2028&prop=wikitext&format=json"
+      ]
+    },
+    {
+      "episodes": [
+        18
+      ],
+      "type": "filler",
+      "chapters": "none",
+      "confidence": "high",
+      "note": "No adapted source scene. AllYourAnime files it under 'Chapter 29-30' but states in the first line that 'Episode 5 is near entirely original', then walks every scene: the extra training, the American agents grilling Tosaki, Eriko and the nurses, the Ogura chat, Okuyama building the EMP, Tosaki being chewed out by the Minister, Shimomura stealing the Minister's schedule, the practice run, the abduction and the Myers/Shimomura fight — none of it in the manga, where ch 29 has Tosaki meeting Sokabe and the ryotei meeting being crashed and ch 30 is Sato's Marine-Corps backstory. Treat the article's chapter header as a READING-POSITION header, not an adaptation claim. Almeida and Myers are ja.wikipedia アニメオリジナルキャラクター.",
+      "sources": [
+        "https://web.archive.org/web/2019/http://www.allyouranime.net/ajin-animemanga-comparison-season-2-episode-5/",
+        "https://ja.wikipedia.org/wiki/%E4%BA%9C%E4%BA%BA_(%E6%BC%AB%E7%94%BB)",
+        "https://ajin.fandom.com/api.php?action=parse&page=Chapter%2029&prop=wikitext&format=json"
+      ]
+    },
+    {
+      "episodes": [
+        19
+      ],
+      "type": "mixed",
+      "chapters": "27, 27.5 (severely abridged)",
+      "confidence": "high",
+      "note": "The first act adapts ch 27 and 27.5 — Shimomura/Yoko Tainaka's origin, her hospital meeting with Tosaki, the stepfather, the recorded call revealing her mother killed him protecting her, her death and revival, the taking of the new name. AllYourAnime 'Episode 6/Chapters 27-27.5': 'it does utilize a few chapters that were initially skipped over... but that content is severely truncated'. ja.wikipedia's 下村泉 アニメ版 note independently confirms the abridgement and lists what was cut ('彼女の過去のエピソードは大幅に省略・変更されている... 省略されたのはバイト先・家庭内・学校での出来事や自殺未遂、義父の強姦未遂など'). The rest of the episode (Tosaki's torture by Almeida, the safe-house raid, the car chase) is anime-original.",
+      "sources": [
+        "https://web.archive.org/web/2018/http://www.allyouranime.net/ajin-animemanga-comparison-season-2-episode-6/",
+        "https://ja.wikipedia.org/wiki/%E4%BA%9C%E4%BA%BA_(%E6%BC%AB%E7%94%BB)",
+        "https://ajin.fandom.com/api.php?action=parse&page=Chapter%2027&prop=wikitext&format=json"
+      ]
+    },
+    {
+      "episodes": [
+        20
+      ],
+      "type": "filler",
+      "chapters": "none",
+      "confidence": "medium",
+      "note": "AllYourAnime: 'this episode actually contains very little content that's comparative to the manga. At best there's a handful of sequences that tie into similar events.' The only contact point is the Minister's secret meeting, described as 'a riff on the same meeting presented in the manga' (ch 29) — but the outcome is inverted: in the manga Sato skips the meeting out of boredom and the Minister survives (he is arrested in the epilogue, 17巻83話), while the anime has Sato ambush and shoot him (ja.wikipedia 大臣/徳井悠和, アニメ版). Everything else — the Almeida/Myers chase and Myers killing Almeida, Kei's fake e-mails to the Americans, the Musashi Heavy Industries declaration, the Anti-Ajin Special Force announcement (in the manga that unit is only mobilised in the final wave, ch 60) — is anime-original. Alternative reading offered under flags: mixed on the strength of that single riff.",
+      "sources": [
+        "https://web.archive.org/web/2018/http://www.allyouranime.net/ajin-animemanga-comparison-season-2-episode-7/",
+        "https://ja.wikipedia.org/wiki/%E4%BA%9C%E4%BA%BA_(%E6%BC%AB%E7%94%BB)",
+        "https://ajin.fandom.com/api.php?action=parse&page=Chapter%2029&prop=wikitext&format=json"
+      ]
+    },
+    {
+      "episodes": [
+        21
+      ],
+      "type": "mixed",
+      "chapters": "31, 31.5 (loose structural counterpart)",
+      "confidence": "medium",
+      "note": "AllYourAnime 'Episode 8/Chapters 31-31.5': 'Episode 8 is only loosely connected to the manga... At this point the anime starts presenting content that's at least partially comparable to the manga.' The source share is the ch 31/31.5 story position — the anti-Sato team getting itself and its two hidden Ajin inside the target company's building, the security walk-through, the wait for Sato's assault, Nakano needling Kei about his composure. The anime substitutes Musashi Heavy Industries / chairman Hashiguchi for Forge Safety / Kai and Li (ja.wikipedia states the substitution explicitly in the plot summary footnote) and replaces Kai's cooperation with Tosaki blackmailing Sokabe using Shimomura's S1 IBM recording (ja.wikipedia 曽我部, アニメ版). Large anime-original blocks: the Anti-Ajin weapons demonstration, the second arms-dealer visit, Okuyama's EMP.",
+      "sources": [
+        "https://web.archive.org/web/2018/http://www.allyouranime.net/ajin-animemanga-comparison-season-2-episode-8/",
+        "https://ja.wikipedia.org/wiki/%E4%BA%9C%E4%BA%BA_(%E6%BC%AB%E7%94%BB)",
+        "https://ajin.fandom.com/api.php?action=parse&page=Chapter%2031&prop=wikitext&format=json"
+      ]
+    },
+    {
+      "episodes": [
+        22
+      ],
+      "type": "canon",
+      "chapters": "32-42 (very loose, heavily reworked)",
+      "confidence": "high",
+      "note": "The last adapted episode. AllYourAnime 'Episode 9/Chapters 32-42': 'the anime offers up a very loose, highly reworked adaptation of the manga's Forge Security arc.' Beats carried over: Sato's group storming the target company and fighting its defenders floor by floor; Kei using the hostage/mind-games gambit to force Sato into acting ('echoes the same sort of mind games that Nagai played on Satou in the manga'); the reversal in which Sato is tranquilised but his self-walking IBM revives him ('the manga includes this same twist'); the mercenaries' deaths 'echoing their deaths from the manga'; Hirasawa's death at Sato's hands. ja.wikipedia independently pins each mercenary: 黒木 dies 9巻38話 in the manga and 第2期22話 in the anime; 真鍋 9巻40話 → 第2期22話; 平沢 9巻42話 → 第2期22話; 鈴村 dies 9巻40話 in the manga but survives to ep 26 in the anime. Divergence is heavy (Hashiguchi not Kai/Li, the EMP and Anti-Ajin Special Force, Kei's IBM-particle fan trap dropped) and the last few minutes launch the anime-original final arc — Sato stealing the VX gas and killing Hashiguchi for the key. See flags: 'mixed' is a defensible alternative for this row.",
+      "sources": [
+        "https://web.archive.org/web/2019/http://www.allyouranime.net/ajin-animemanga-comparison-season-2-episode-9/",
+        "https://ja.wikipedia.org/wiki/%E4%BA%9C%E4%BA%BA_(%E6%BC%AB%E7%94%BB)",
+        "https://ajin.fandom.com/api.php?action=parse&page=Chapter%2040&prop=wikitext&format=json"
+      ]
+    },
+    {
+      "episodes": [
+        23
+      ],
+      "type": "mixed",
+      "chapters": "43 (aftermath beat, reworked); ch 44's Okuyama/Sato coda",
+      "confidence": "medium",
+      "note": "Occupies ch 43's story position — the immediate aftermath of the lost building battle, the team's recriminations, Kei withdrawing and refusing to fight on (the episode's title is literally 'I won't do it'). AllYourAnime 'Episode 10/Chapters 43-45' walks the comparison scene by scene but flags that 'It's a very different portrayal of Nagai's reaction than the manga' (manga: Kei and Nakano's blow-up and the phone call to his mother, ch 43-44; anime: Kei internalises it), and that Okuyama's misgivings scene 'is similar to a conversation between the two briefly at the end of Chapter 44'. Ch 45 is NOT adapted — ja.wikipedia's 愛 entry states the manga has her die at 10巻45話 while '原作と違い彼女が死亡する描写は無い' in the anime. Everything from Sato's third-wave declaration onward — the SDF garrison assault, the gas missiles, the one-week ultimatum — is anime-original. Judgment call under the 'single-scene canon share' rule: the canon share is two reworked beats, so 'filler' is a defensible alternative (flagged).",
+      "sources": [
+        "https://web.archive.org/web/2019/http://www.allyouranime.net/ajin-animemanga-comparison-season-2-episode-10/",
+        "https://ja.wikipedia.org/wiki/%E4%BA%9C%E4%BA%BA_(%E6%BC%AB%E7%94%BB)",
+        "https://ajin.fandom.com/api.php?action=parse&page=Chapter%2043&prop=wikitext&format=json"
+      ]
+    },
+    {
+      "episodes": [
+        24
+      ],
+      "type": "filler",
+      "chapters": "none",
+      "confidence": "high",
+      "note": "AllYourAnime: 'Episode 11 is almost entirely anime original content, but continues to borrow and work around several manga concepts.' The Ajin-hunt riot at Eriko's hospital, Kaito and Kotobuki breaking out to rescue her, the India escape plan, the island-territory negotiation, Sato firing a gas missile at the Prime Minister's residence and his followers deserting — none of this exists in the manga. ja.wikipedia confirms both halves independently: 琴吹武 アニメ版 '亜人狩りに遭いそうになっている慧理子の元へ海斗を連れて少年院を脱走した... 第2期24話' (in the MANGA Kotobuki breaks Kaito out much later, after the Iruma-base news), and 永井慧理子 アニメ版 gives the same 第2期24話 rescue as an anime-only change. Only two passing echoes: a much-shortened version of the Kei/Nakano argument from ch 43, and a Tosaki/Kei reunion conversation 'similar... to one of the manga's latest chapters' (ch 48). Those are parallels, not adaptations.",
+      "sources": [
+        "https://web.archive.org/web/2019/http://www.allyouranime.net/ajin-animemanga-comparison-season-2-episode-11/",
+        "https://ja.wikipedia.org/wiki/%E4%BA%9C%E4%BA%BA_(%E6%BC%AB%E7%94%BB)",
+        "https://ajin.fandom.com/api.php?action=parse&page=Chapter%2048&prop=wikitext&format=json"
+      ]
+    },
+    {
+      "episodes": [
+        25
+      ],
+      "type": "filler",
+      "chapters": "none",
+      "confidence": "high",
+      "note": "Studio ending. AllYourAnime 'Episode 12/Chapters N/A': 'the Anime, by this point, fully diverges from the manga, with only the most vague of concepts remaining for worthwhile discussion.' The US plan to vent the recovered nerve gas under the base, Okuyama/Takahashi/Gen defecting to Tosaki, the plan to bury Sato alive in the tunnels and the cave-in all originate with the anime. The manga's own final wave is a different event entirely — Iruma Air Base, the base festival, Sato's F-15, the severed arm, the Flood, Tosaki's death (ja.wikipedia, 佐藤/中野攻/秋山礼二 entries citing 13巻60話, 14巻64話-66話, 17巻82-83話) — and was serialised in 2018-2021, well after this episode aired on 2016-12-17.",
+      "sources": [
+        "https://web.archive.org/web/20171012213143/http://www.allyouranime.net/ajin-animemanga-comparison-season-2-episode-12/",
+        "https://ja.wikipedia.org/wiki/%E4%BA%9C%E4%BA%BA_(%E6%BC%AB%E7%94%BB)",
+        "https://ajin.fandom.com/api.php?action=parse&page=Chapters%20and%20Volumes&prop=wikitext&format=json"
+      ]
+    },
+    {
+      "episodes": [
+        26
+      ],
+      "type": "filler",
+      "chapters": "none",
+      "confidence": "high",
+      "note": "Studio ending, finale. AllYourAnime 'Episode 13/Chapters N/A': 'Episode 13 is entirely anime only, leaving only scant elements worth comparing.' Suzumura's grenade suicide (ja.wikipedia 鈴村 アニメ版, citing 第2期26話 — in the manga he dies at 9巻40話 during the Forge Safety battle), Nakano manifesting his own IBM for the first time (something 'the manga has yet' to do), Kei's Flood, Sato's capture by US forces, the Ajin civil-rights bill and the exploding US transport are all the anime's own. The Shimomura-vs-Tanaka duel here is a callback 'hearkening to the manga's big moment between the two during the Forge Security Arc' (ch 38-39), relocated, not adapted. The manga's actual ending — Sato sealed, ch 84 'Seal' / Final Chapter, vol 17, May 2021 — is unrelated.",
+      "sources": [
+        "https://web.archive.org/web/2018/http://www.allyouranime.net/ajin-animemanga-comparison-season-2-episode-13/",
+        "https://ja.wikipedia.org/wiki/%E4%BA%9C%E4%BA%BA_(%E6%BC%AB%E7%94%BB)",
+        "https://ajin.fandom.com/api.php?action=parse&page=Chapters%20and%20Volumes&prop=wikitext&format=json"
+      ]
+    }
+  ],
+  "annotations": [
+    {
+      "episodes": [
+        14,
+        15,
+        16,
+        17,
+        19,
+        21,
+        22,
+        23
+      ],
+      "kind": "divergence",
+      "note": "Season-wide, systematic divergence inside otherwise adapted episodes. The single biggest change is a renaming rather than a replacement: ja.wikipedia's plot summary states that the second-wave ambush target is 'フォージ安全の甲斐と李' in the manga and '武蔵重工の橋口' in the anime, and Kai and Li are written off in a news report at ep 17 (原作 9巻41話). Other systematic changes, all sourced from ja.wikipedia's per-character 原作/アニメ版 tables: the hit list carries 15 numbered names killed in order instead of 11 unnumbered ones (5巻23話); Tosaki is removed from the list; Wakai's death (7巻29話) is moved forward to ep 14 and Kishi's (5巻24話) to ep 16; the Health Minister is killed at ep 20 where the manga's ryotei ambush leaves him alive; the Anti-Ajin Special Force is legalised and deployed at eps 20-22 where the manga withholds it until the final wave (13巻60話); Tosaki's fiancee Ai never dies (manga 10巻45話); Sato acquires 10+ extra anime-original Ajin followers (第2期21話).",
+      "sources": [
+        "https://ja.wikipedia.org/wiki/%E4%BA%9C%E4%BA%BA_(%E6%BC%AB%E7%94%BB)",
+        "https://web.archive.org/web/2019/http://www.allyouranime.net/ajin-animemanga-comparison-season-2-episode-9/"
+      ]
+    },
+    {
+      "episodes": [
+        15
+      ],
+      "kind": "graft",
+      "note": "The airliner assassination re-uses manga material the anime had skipped: ja.wikipedia's 桜井和夫 entry notes that the method of smuggling the weapon aboard and the cabin conversation 'は、原作の第1ウェーブのグラント製薬への旅客機墜落テロの時と一部同じ描写がされている' — i.e. the manga's first-wave airliner attack on Grant Pharmaceutical (ch 19-20), which S1 ep 11 had replaced with a collapsing building (ja.wikipedia plot footnote, 第1期11話). AllYourAnime independently: 'aspects of his terrorist activity have been adapted from earlier chapters of the manga, specifically the plane terrorist attack that the show replaced with the bombing in the 1st season.'",
+      "sources": [
+        "https://ja.wikipedia.org/wiki/%E4%BA%9C%E4%BA%BA_(%E6%BC%AB%E7%94%BB)",
+        "https://web.archive.org/web/2019/http://www.allyouranime.net/ajin-animemanga-comparison-season-2-episode-2/"
+      ]
+    },
+    {
+      "episodes": [
+        16,
+        17,
+        19
+      ],
+      "kind": "rearranged",
+      "note": "The anime adapts ch 28 (Kotobuki and Kaito in juvenile hall) BEFORE ch 27/27.5 (Shimomura's origin): ep 16 pulls ch 28's opening forward, ep 17 adapts ch 28's body, and only ep 19 doubles back for ch 27/27.5. AllYourAnime states it twice — 'the anime skips a couple flashback chapters for Shimomura' (ep 16 article) and 'this means the anime jumps over chapters 27 and 27.5. Instead we open with content from Chapter 28' (ep 17 article), then 'it does utilize a few chapters that were initially skipped over' (ep 19 article). Ordering matters for anchors: the covered set across eps 16-19 is 26, 28, 27, 27.5, not a monotone run.",
+      "sources": [
+        "https://web.archive.org/web/2019/http://www.allyouranime.net/ajin-animemanga-comparison-season-2-episode-4/",
+        "https://web.archive.org/web/2018/http://www.allyouranime.net/ajin-animemanga-comparison-season-2-episode-6/"
+      ]
+    },
+    {
+      "episodes": [
+        19
+      ],
+      "kind": "abridged",
+      "note": "Ch 27/27.5 are severely truncated. ja.wikipedia's 下村泉 アニメ版 note enumerates the cuts and changes: '彼女の過去のエピソードは大幅に省略・変更されている。変更点は戸崎と初めて会った時に亜人の存在を知らないこと、実父は彼女が15歳の時に事故死したこと。省略されたのはバイト先・家庭内・学校での出来事や自殺未遂、義父の強姦未遂など'. AllYourAnime lists the same omissions (the convenience-store job, the drained bank account, the cheating boyfriend, the graveyard scene replaced with an apartment visit).",
+      "sources": [
+        "https://ja.wikipedia.org/wiki/%E4%BA%9C%E4%BA%BA_(%E6%BC%AB%E7%94%BB)",
+        "https://web.archive.org/web/2018/http://www.allyouranime.net/ajin-animemanga-comparison-season-2-episode-6/"
+      ]
+    },
+    {
+      "episodes": [
+        20,
+        24,
+        26
+      ],
+      "kind": "loose_parallel",
+      "note": "Anime-original episodes that touch a source beat without adapting it. Ep 20: the Minister's meeting is 'a riff on the same meeting presented in the manga' (ch 29) with the outcome inverted — Sato attends and kills him, where in the manga he skips it out of boredom and the Minister lives. Ep 24: a compressed echo of the Kei/Nakano argument (ch 43) and a Tosaki/Kei reunion conversation 'similar... to one of the manga's latest chapters' (ch 48). Ep 26: the Shimomura-vs-Tanaka duel 'hearkening to the manga's big moment between the two during the Forge Security Arc' (ch 38-39), relocated to the finale. None of these carry source standing on their own.",
+      "sources": [
+        "https://web.archive.org/web/2018/http://www.allyouranime.net/ajin-animemanga-comparison-season-2-episode-7/",
+        "https://web.archive.org/web/2019/http://www.allyouranime.net/ajin-animemanga-comparison-season-2-episode-11/",
+        "https://web.archive.org/web/2018/http://www.allyouranime.net/ajin-animemanga-comparison-season-2-episode-13/"
+      ]
+    }
+  ],
+  "repairs": [
+    {
+      "episode": 14,
+      "field": "type",
+      "old": "filler",
+      "new": "canon",
+      "why": "Adapts manga ch 23-24; the batch-12 premise that S2 is 'anime-original from the start' is contradicted by three independent sources.",
+      "sources": [
+        "https://web.archive.org/web/20200217013515/http://www.allyouranime.net/ajin-animemanga-comparison-season-2-episode-1/",
+        "https://ja.wikipedia.org/wiki/%E4%BA%9C%E4%BA%BA_(%E6%BC%AB%E7%94%BB)"
+      ]
+    },
+    {
+      "episode": 15,
+      "field": "type",
+      "old": "filler",
+      "new": "canon",
+      "why": "Adapts manga ch 25 (training, the Ogura IBM test, the gun range, the bathroom confrontation), plus ch 23's Sakurai assassination dramatised with ch 19-20 material.",
+      "sources": [
+        "https://web.archive.org/web/2019/http://www.allyouranime.net/ajin-animemanga-comparison-season-2-episode-2/",
+        "https://ja.wikipedia.org/wiki/%E4%BA%9C%E4%BA%BA_(%E6%BC%AB%E7%94%BB)"
+      ]
+    },
+    {
+      "episode": 16,
+      "field": "type",
+      "old": "filler",
+      "new": "canon",
+      "why": "Adapts manga ch 26 with 'large sections that could also be considered near one for one adaptations', plus ch 24's Kishi death and ch 28's opening.",
+      "sources": [
+        "https://web.archive.org/web/2018/http://www.allyouranime.net/ajin-animemanga-comparison-season-2-episode-3/",
+        "https://ja.wikipedia.org/wiki/%E4%BA%9C%E4%BA%BA_(%E6%BC%AB%E7%94%BB)"
+      ]
+    },
+    {
+      "episode": 17,
+      "field": "type",
+      "old": "filler",
+      "new": "mixed",
+      "why": "A-story is manga ch 28 adapted near 1:1; the anime-original US-agent plotline runs alongside it.",
+      "sources": [
+        "https://web.archive.org/web/2019/http://www.allyouranime.net/ajin-animemanga-comparison-season-2-episode-4/",
+        "https://ja.wikipedia.org/wiki/%E4%BA%9C%E4%BA%BA_(%E6%BC%AB%E7%94%BB)"
+      ]
+    },
+    {
+      "episode": 19,
+      "field": "type",
+      "old": "filler",
+      "new": "mixed",
+      "why": "First act adapts manga ch 27/27.5 (Shimomura's origin), severely abridged; the rest is the anime-original rescue arc.",
+      "sources": [
+        "https://web.archive.org/web/2018/http://www.allyouranime.net/ajin-animemanga-comparison-season-2-episode-6/",
+        "https://ja.wikipedia.org/wiki/%E4%BA%9C%E4%BA%BA_(%E6%BC%AB%E7%94%BB)"
+      ]
+    },
+    {
+      "episode": 21,
+      "field": "type",
+      "old": "filler",
+      "new": "mixed",
+      "why": "Loose structural counterpart of manga ch 31/31.5 (the team occupying the target company building and awaiting Sato's assault) alongside large anime-original blocks. Medium confidence — see flags.",
+      "sources": [
+        "https://web.archive.org/web/2018/http://www.allyouranime.net/ajin-animemanga-comparison-season-2-episode-8/",
+        "https://ja.wikipedia.org/wiki/%E4%BA%9C%E4%BA%BA_(%E6%BC%AB%E7%94%BB)"
+      ]
+    },
+    {
+      "episode": 22,
+      "field": "type",
+      "old": "filler",
+      "new": "canon",
+      "why": "Explicitly 'a very loose, highly reworked adaptation of the manga's Forge Security arc' (ch 32-42); ja.wikipedia independently maps three of the four mercenary deaths from 9巻38/40/42話 onto 第2期22話.",
+      "sources": [
+        "https://web.archive.org/web/2019/http://www.allyouranime.net/ajin-animemanga-comparison-season-2-episode-9/",
+        "https://ja.wikipedia.org/wiki/%E4%BA%9C%E4%BA%BA_(%E6%BC%AB%E7%94%BB)"
+      ]
+    },
+    {
+      "episode": 23,
+      "field": "type",
+      "old": "filler",
+      "new": "mixed",
+      "why": "Carries ch 43's post-defeat beat (Kei's withdrawal and refusal) reworked, plus ch 44's Okuyama/Sato coda; the third-wave material is anime-original. Medium confidence — 'filler' is a defensible alternative, see flags.",
+      "sources": [
+        "https://web.archive.org/web/2019/http://www.allyouranime.net/ajin-animemanga-comparison-season-2-episode-10/",
+        "https://ja.wikipedia.org/wiki/%E4%BA%9C%E4%BA%BA_(%E6%BC%AB%E7%94%BB)"
+      ]
+    },
+    {
+      "episode": "14-26",
+      "field": "STANDING_ANNOTATIONS / A43 annotation note (eps 14-26)",
+      "old": "divergence eps 14-26, chapters '~25-38 loosely, then none', note 'S2 anime-original with non-canon ending' / 'A-7 studio-ending class — filler under T27 (adheres to no source)'",
+      "new": "divergence eps 14-17,19,21,22,23 with chapter coverage 23-42 (out of order: 26, 28, then 27/27.5); studio ending confined to eps 23-26; eps 18, 20, 24, 25, 26 filler",
+      "why": "The stored note asserts S2 'adheres to no source' and is 'anime-original from the start'. That is false for eps 14-22, which adapt ch 23-42; the loose '~25-38' range is also wrong at both ends (the season opens on ch 23 and its last adapted chapter is 42). The studio-ending characterisation is correct only from ep 23 onward.",
+      "sources": [
+        "https://web.archive.org/web/20200217013515/http://www.allyouranime.net/ajin-animemanga-comparison-season-2-episode-1/",
+        "https://ja.wikipedia.org/wiki/%E4%BA%9C%E4%BA%BA_(%E6%BC%AB%E7%94%BB)",
+        "https://ajin.fandom.com/api.php?action=parse&page=Chapters%20and%20Volumes&prop=wikitext&format=json"
+      ]
+    },
+    {
+      "episode": 13,
+      "field": "continue_chapter (C2)",
+      "old": "22",
+      "new": "23 (proposed; series-level continue point moves to ~43)",
+      "why": "The stored C2 (ep 13 -> continue at ch 22) exists only because batch 12 believed S2 adapted nothing. Ep 13's own anchor already covers 22, 22.5 and ch 23's opening beat, and ep 14 then adapts ch 23-24 — so the honest post-ep-13 continue point is 23, and after the FULL anime it is ~43 (ep 22 is the last adapted episode, covering through ch 42). Flagged rather than asserted: the ep-22 adaptation is so heavily reworked that a reader resuming at 43 meets contradictions (Kai and Li already dead offscreen, Ai still alive, Musashi instead of Forge). Sean's call.",
+      "sources": [
+        "https://web.archive.org/web/2019/http://www.allyouranime.net/ajin-animemanga-comparison-season-2-episode-9/",
+        "https://ja.wikipedia.org/wiki/%E4%BA%9C%E4%BA%BA_(%E6%BC%AB%E7%94%BB)"
+      ]
+    }
+  ],
+  "structure": {
+    "notes": "ROW IDENTITY: our rows 14-26 map 1:1 onto S2 (第2クール) episodes #14-#26 in ja.wikipedia's 各話リスト, in aired order, with titles matching exactly; no recap, no ep 0, no specials inside the run, so no off-by-one risk. The cour ran 2016-10-08 to 2016-12-24 on TBS/MBS Animeism B2 = twelve Saturday slots for thirteen episodes; our stored dates already encode the double bill (eps 24 and 25 both 2016-12-17), which matches. CONVERSION USED: AllYourAnime numbers per season, so its 'Season 2 Episode N' = our row N+13; every citation above states the conversion. SOURCE-HEADER TRAP: AllYourAnime's per-article chapter header is a READING-POSITION header for the later episodes, not an adaptation claim — its ep 5 article is headed 'Chapter 29-30' but opens 'Episode 5 is near entirely original', and its ep 10 article is headed 'Chapters 43-45' while ch 45 (Ai's death) is explicitly absent from the anime. Judgments above rest on the article bodies plus ja.wikipedia, never the headers. CHAPTER SPACE: the manga is 85 numbered chapters plus a Final Chapter and eleven .5 chapters (22.5, 27.5, 31.5, 35.5, 54.5, 54.6, 55.5, 60.5, 66.5, 74.5, 75.5, 83.5) and a chapter 0 ('The Shin'ya Nakamura Incident', collected in vol 2), across 17 volumes — AniList's total_chapters=99 is counting the .5 units and ch 0 separately. Chapter 22 = vol 5; 42 = vol 9; the anime's coverage stops mid-vol-9. PUBLICATION TIMING is the whole story of the ending: vol 9 (ch 39-43) shipped 2016-10-06, two days before S2 premiered, so the anime caught up to the serialisation frontier around ep 22 and had four episodes left. NOT TARGET ROWS but relevant: three OADs bundled with the manga's limited editions — vol 8's '中村慎也事件' adapts manga ch 0 (canon), vol 9's 'Intermission' is an original comedy short, vol 10's '佐藤ZERO' is an anime-original reworking of Sato's past that ja.wikipedia notes replaces the manga's Vietnam / Chinese-mafia backstory (ch 30, 47). Three compilation films (亜人 -衝動-/-衝突-/-衝戟-, 2015-2016) were made in parallel with the TV series with no master/servant relationship between them (ja.wikipedia, citing an animeanime.jp producer interview) — they are not a source for our rows.",
+    "order_only": []
+  },
+  "flags_for_sean": [
+    "ADOPTION: none proposed. The ASK asked whether Sakurai's involvement is documented (原作協力 / 監修 / story credit) for the ending. Two independent credit sources say no: Polygon Pictures' own works page for the TV series' second cour (https://www.ppi.co.jp/works/ajin_tv2/) lists 'Original Manga: Gamon Sakurai' and nothing else for him, and ja.wikipedia's スタッフ block lists '原作 - 桜井画門' with no 原作協力, no 監修 and no ストーリー原案. Series composition is Hiroshi Seko; supervising director Hiroyuki Seshita; director Hiroaki Ando. I searched Japanese and English for a Sakurai interview or statement declaring or supervising the anime ending and found none. A studio basis also fails (nothing in the franchise carries the anime ending forward: the manga ran to a different ending at ch 84-85/Final Chapter in 2021, and the 2017 live-action film has a third ending), and a community basis fails (the source is not endingless). VERDICT: eps 23-26 are a studio ending = filler, NOT adopted{studio}.",
+    "THE BIG ONE: batch-12's 'S2 is anime-original from the start' is wrong. Eps 14-22 adapt manga ch 23-42. Eight type repairs are proposed above (14/15/16 -> canon, 17/19/21/23 -> mixed, 22 -> canon). This also re-opens A1: rows 14-17, 19, 21, 22 and 23 become anchorable, and the A6 deletion of the ep-26 ch-22 anchor stays correct but for a different reason (the anime's coverage ENDS at ep 22 / ch 42, not at ep 13 / ch 21).",
+    "SPLIT EVIDENCE, ep 22 (canon vs mixed): recommended canon + divergence, because AllYourAnime frames the whole episode as an adaptation of ch 32-42 and ja.wikipedia maps three mercenary deaths from 9巻38/40/42話 onto 第2期22話. The counter-argument is that the last few minutes launch the wholly anime-original final arc (Sato stealing the VX gas, killing Hashiguchi for the key), which is a separable non-source block. If Sean prefers a conservative line, 'mixed' is defensible and does not change anchorability.",
+    "SPLIT EVIDENCE, ep 23 (mixed vs filler): recommended mixed, because the episode occupies ch 43's story position and carries its beat (Kei refuses to fight — the episode title) plus a ch 44 coda. The counter-argument is that both beats are reworkings rather than adaptations and the bulk of the runtime is the anime's own third wave. If the studio-ending block is preferred as a clean 23-26 unit, flip 23 to filler.",
+    "SPLIT EVIDENCE, ep 21 (mixed vs filler): recommended mixed at MEDIUM confidence. AllYourAnime says 'only loosely connected to the manga' but also 'at this point the anime starts presenting content that's at least partially comparable'. Every specific differs (Musashi/Hashiguchi for Forge/Kai+Li, Sokabe blackmailed instead of Kai cooperating, the EMP); only the story position survives. If Sean wants a stricter 'adapts a scene or it isn't canon' line, 21 goes filler + loose_parallel.",
+    "SPLIT EVIDENCE, ep 20 (filler vs mixed): recommended filler. Its only source contact is a riff on ch 29's meeting whose outcome is inverted (the Minister dies here, lives in the manga). Listed as loose_parallel.",
+    "C-RULE: the stored C2 ep-13 continue_chapter=22 is now stale (see repairs). More importantly the SERIES-level continue point should probably move from ch 22 to ~ch 43, but the anime's ep-22 divergence is heavy enough that a reader resuming at 43 hits contradictions (Kai and Li already dead offscreen at ep 17, Ai never dies, Musashi Heavy Industries instead of Forge Safety). Recommend Sean set the continue point with an explicit divergence caveat rather than a bare number.",
+    "NOTE FOR THE A-7 REVIEW CLASS: Ajin turns out NOT to be a clean A-7 'studio ending after the anime outran the manga' case at season granularity — it is an adapting cour whose last four episodes are a studio ending. If other A-7 members were typed at season granularity from a single 'the ending is anime-original' claim, they may carry the same error."
+  ]
+}

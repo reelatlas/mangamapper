@@ -1,0 +1,95 @@
+{
+  "series_id": "chrono-crusade",
+  "summary": "Eps 22-24 are the Gonzo ending Chrono Crusade built after leaving the manga's spine at ep 13. The source (Moriyama's 56-Act manga) ends completely differently: the Order and the Pursuers storm Eden and then Pandaemonium, Aion is beheaded/defeated there, Satella and Fiore are CRYSTALLISED (found alive in 1994, freed 1999), Joshua marries Azmaria and dies, Remington retires as a priest, and Rosette lives on to die in March 1932 with Chrono returning at the last moment (ja-WP character sections, chronocrusade.fandom Satella/Rosette/Pandaemonium/Grandson pages, tropedia manga-only list). The anime instead kills Satella outright (ep 22), settles Aion in Central Park (ep 23) and has Rosette and Chrono die together on a porch in 1929, closing on Remington the fallen angel watching Aion at the 1981 attempt on John Paul II (ep 24) — none of which exists in the manga. No adoption basis survives contact with the sources: Moriyama's ONLY anime credit is the blanket 原作 (ANN staff list: 'Original Manga'; ja-WP's スタッフ block does not even list him), there is no 監修/story credit, the manga finished its own ending one month before the anime's finale aired, and the 2010 Shonen Gahosha reissue carries that manga ending — so no author, studio or community adoption. 23 and 24 are filler (high). 22 is the one row that is NOT clean: its Satella-vs-Fiore duel is a divergent retelling of a REAL manga scene (the sisters' mutual sealing during the Eden battle, vol 7, published Dec 2003, five months before the episode aired) — I recommend mixed + divergence as a repair, with the filler reading laid out for Sean because the source share is a single scene. On the stored 14-21 'mixed' stretch: the zatch-bell discount does not apply anywhere in it (no row is a recap or a rehash of already-adapted material), ep 21's graft {36-41} and ep 6's graft {15} are independently corroborated by fandom debut fields, so the stretch holds as filed; the residual doubt runs the other way on 15/16 and is flagged, not repaired.",
+  "standings": [
+    {
+      "episodes": [22],
+      "type": "mixed",
+      "chapters": "v7 (Eden final battle; the Satella/Fiore act — 'Flower of Stone', Act 47 by title, act number NOT independently confirmed)",
+      "confidence": "medium",
+      "note": "RECOMMENDED REPAIR from stored filler. The episode's frame is anime-original (Rosette as Aion's saint healing crowds, the Elder's Enochian sword, Fiore fleeing the convent with Joshua — Fuji TV's own synopsis), but its climax, Satella confronting the sister who denies being Florette and then running them both through rather than let her go, is a divergent retelling of a real manga scene: ja-WP's manga description of Satella says that in the final battle she tries to win Florette back, becomes certain her sister is dead, and 'crystallises herself together with Fiore in a jewel, sealing them in mutual destruction'; chronocrusade.fandom's Satella page says of the manga 'During the final chapters involving the battle on Eden, Satella battles Fiore. The battle goes out like it does in the anime, and both characters seem to die in the same manner as in the anime' — the difference being that the manga's sisters are crystallised and Satella is found alive in 1994. The manga scene is in vol 7 (Acts 43-48, published Dec 2003, ja-WP 単行本 list), i.e. it existed months before ep 22 aired 2004-05-20, so the anime could and evidently did work from it. Under the zatch-bell rule real source content in an episode means it is not filler; this is the same species as the stored eps 18/20 divergence and ep 21 graft on this very series. ALTERNATIVE READING for Sean: the canon share is one scene with a changed outcome, a changed setting (a jewel-summoned barrier in New York vs the Eden battle) and changed props (ja-WP: matching Gemini-birthstone earrings in the manga, matching blades in the anime) — if that does not clear `mixed`, 22 stays filler with the divergence annotation and nothing else changes.",
+      "sources": [
+        "https://ja.wikipedia.org/wiki/%E3%82%AF%E3%83%AD%E3%83%8E%E3%82%AF%E3%83%AB%E3%82%BB%E3%82%A4%E3%83%89",
+        "https://chronocrusade.fandom.com/api.php?action=parse&page=Satella_Harvenheit&prop=wikitext&format=json",
+        "https://chronocrusade.fandom.com/api.php?action=parse&page=Chrono_Crusade_Episode_22&prop=wikitext&format=json",
+        "https://web.archive.org/web/20040604065744/http://www.fujitv.co.jp/b_hp/chrono/backnumber/203000015-22.html",
+        "https://en.wikipedia.org/wiki/List_of_Chrono_Crusade_episodes"
+      ]
+    },
+    {
+      "episodes": [23],
+      "type": "filler",
+      "chapters": "none",
+      "confidence": "high",
+      "note": "Zero source standing. Every load-bearing element is anime-only: Rosette is Aion's captive saint whose sanity returns with the last stigma (Fuji TV synopsis: 「最後の聖痕により正気を取り戻したロゼット」) — in the manga Rosette is not Magdalene's reincarnation and, per fandom's Rosette page, 'Rosette does not get held captive by Aion as he knows she is not needed in his plans'; Chrono mourns over Satella's COFFIN, but Satella does not die in the manga (fandom Satella infobox: 'Deceased (Anime) / Active (Manga)'); the duel is fought in Central Park with the horns thrown as weapons (tropedia files this under Anime Only), whereas the manga's Chrono-vs-Aion finale happens inside Pandaemonium beside their mother's corpse and is famously never shown on the page (tropedia manga-only: Where It All Began, Anticlimax). MangaUpdates bounds the whole adaptation at 'Vol 5, Chap 30 … Diverges to an original ending'.",
+      "sources": [
+        "https://web.archive.org/web/20040604070317/http://www.fujitv.co.jp/b_hp/chrono/backnumber/203000015-23.html",
+        "https://tropedia.fandom.com/api.php?action=parse&page=Chrono_Crusade&prop=wikitext&format=json",
+        "https://chronocrusade.fandom.com/api.php?action=parse&page=Rosette_Christopher&prop=wikitext&format=json",
+        "https://api.mangaupdates.com/v1/series/29425474161",
+        "https://en.wikipedia.org/wiki/Chrono_Crusade"
+      ]
+    },
+    {
+      "episodes": [24],
+      "type": "filler",
+      "chapters": "none",
+      "confidence": "high",
+      "note": "Zero source standing — the studio ending proper. Fuji TV's own synopsis: the orphanage is released from its time-freeze, Remington ABANDONS HIS FAITH and walks on with Joshua, Azmaria takes Rosette's road, and Rosette and Chrono spend their last hours together. The manga does none of this: Rosette survives the finale, returns to Seventh Bell as a caretaker and dies in MARCH 1932 (eight years later) with Chrono reaching her at the end; Joshua marries Azmaria and dies; Azmaria lives to 1998 and leaves a filmed memoir that her grandson shows a Satella freed from crystallisation in 1999 (fandom Rosette / Azmaria / Grandson pages; ja-WP Satella section). Ep 24's own closers — Joshua writing a novel he does not know is true, Aion alive in the Vatican on 1981-05-13 before the shooting of John Paul II — are listed as anime-only by tropedia and have no counterpart in the source. The manga's own final chapter shipped in the Dragon Age June 2004 issue on 2004-05-08 (ANN, en-WP), a month BEFORE this episode aired, so the studio ending was not a gap-filler for an unfinished source in the usual sense; it was simply a different ending.",
+      "sources": [
+        "https://web.archive.org/web/20040612200251/http://www.fujitv.co.jp/b_hp/chrono/backnumber/203000015-24.html",
+        "https://chronocrusade.fandom.com/api.php?action=parse&page=Rosette_Christopher&prop=wikitext&format=json",
+        "https://chronocrusade.fandom.com/api.php?action=parse&page=Grandson_of_Azmaria_and_Joshua&prop=wikitext&format=json",
+        "https://tropedia.fandom.com/api.php?action=parse&page=Chrono_Crusade&prop=wikitext&format=json",
+        "https://www.animenewsnetwork.com/news/2004-05-04/chrno-crusade-manga-finishing"
+      ]
+    }
+  ],
+  "annotations": [
+    {
+      "episodes": [22],
+      "kind": "divergence",
+      "note": "ANNOTATION-ONLY, never a position (same treatment as the stored ep-21 graft). Satella's confrontation with Fiore and the sisters' mutual impalement retells the manga's Eden-battle scene in which Satella instead crystallises herself together with Fiore — both survive there and are recovered in 1994. Manga side: vol 7 (Acts 43-48, Dec 2003); the act is 'Flower of Stone' (Act 47) by title, which I could NOT confirm independently, so no act number should be written into an anchor. The series' adaptation bound remains ch 30 (MangaUpdates).",
+      "sources": [
+        "https://ja.wikipedia.org/wiki/%E3%82%AF%E3%83%AD%E3%83%8E%E3%82%AF%E3%83%AB%E3%82%BB%E3%82%A4%E3%83%89",
+        "https://chronocrusade.fandom.com/api.php?action=parse&page=Satella_Harvenheit&prop=wikitext&format=json",
+        "https://api.mangaupdates.com/v1/series/29425474161"
+      ]
+    },
+    {
+      "episodes": [23, 24],
+      "kind": "divergence",
+      "note": "Keep the stored T26 divergence asterisk: the studio ending contradicts the source's ending rather than merely omitting it (Aion survives here and dies/vanishes in Pandaemonium there; Rosette dies in 1929 here and in 1932 there; Satella, Shader and Fiore die here and live there — en-WP character notes, ja-WP, fandom infoboxes). No adopted annotation: see the flags — Moriyama holds only a blanket 原作 credit, no 監修, and nothing in the franchise carries the anime ending forward.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Chrono_Crusade",
+        "https://cdn.animenewsnetwork.com/encyclopedia/api.xml?anime=2884",
+        "https://ja.wikipedia.org/wiki/%E3%82%AF%E3%83%AD%E3%83%8E%E3%82%AF%E3%83%AB%E3%82%BB%E3%82%A4%E3%83%89"
+      ]
+    }
+  ],
+  "repairs": [
+    {
+      "episode": 22,
+      "field": "type",
+      "old": "filler",
+      "new": "mixed",
+      "why": "The episode carries a real manga scene, not a concept: the Satella/Fiore confrontation ending in the sisters going down together exists in the source (vol 7, the Eden battle) with a changed outcome (crystallisation, not death). Two independent descriptions of the manga scene (ja-WP's Satella section; chronocrusade.fandom's Satella page, which says outright that the manga battle 'goes out like it does in the anime') plus the publication order (vol 7 = Dec 2003 vs ep 22 = 2004-05-20) support a divergent adaptation. Under the zatch-bell rule any real source content bars filler; the stored 18/20 divergence and 21 graft rulings on this series treat the identical species of relocated, rewritten manga material as `mixed`. Judgment call because the source share is one scene — the filler reading is written out in the ep-22 standing note.",
+      "sources": [
+        "https://ja.wikipedia.org/wiki/%E3%82%AF%E3%83%AD%E3%83%8E%E3%82%AF%E3%83%AB%E3%82%BB%E3%82%A4%E3%83%89",
+        "https://chronocrusade.fandom.com/api.php?action=parse&page=Satella_Harvenheit&prop=wikitext&format=json",
+        "https://chronocrusade.fandom.com/api.php?action=parse&page=Chrono_Crusade_Episode_22&prop=wikitext&format=json"
+      ]
+    }
+  ],
+  "structure": {
+    "notes": "ROW-COUNT IDENTITY: clean. 24 broadcast episodes, one season, no specials, no recap, no ep 0 — ja-WP 各話リスト, en-WP episode list, the official Fuji TV backnumber index (203000015-1 … -24) and our 24 rows all agree 1:1 on titles and order. The DVD extra 「アズでもわかるクロノクルセイド講座」 (11 shorts, Azmaria explaining series terminology) is a disc bonus, NOT an episode; the Marine Entertainment drama CDs and the 2004 Fujimi Fantasia novel (富永浩史, 『翼よ、あれが魂の灯だ』) are separate works and out of the episode space. AIR DATES: the official Fuji TV pages give 第1回 = 2003-11-24 and 第24回 = 2004-06-10, matching our stored 2004-05-20 / 2004-06-03 / 2004-06-10 for 22-24; en-WP's episode-list lead saying the series 'premiered … on November 23, 2003' is wrong against the broadcaster, and ja-WP's infobox 放送終了 2004年6月9日 is the pre-midnight late-night convention for the same 6/10 slot — no repair needed on our dates. The endgame dates are irregular (4/29 → 5/20 → 6/3 → 6/10) because Fuji TV suspended broadcast repeatedly, mostly for transmitter maintenance and 'especially towards the end' (ja-WP) — an air-date gap here is a broadcast pause, not a missing row. CHAPTER SPACE (does not affect the target rows, but the stored count looks wrong): the serialised manga is 56 Acts (en-WP List of chapters: 'spans 56 chapters, called Acts'; MangaUpdates latest_chapter = 56; fandom's volume guide lists Act 1 … Act 56 plus an 'Epilogue' in vol 8 = 57 tankōbon units, and tropedia records that the epilogue was ADDED for the collected volume months after the magazine ending). Our stored AniList figures are total_chapters=59 / latest_known=56 — 59 has no support in any serialisation or tankōbon source and should be reviewed at the N tier. Volumes: 8 (Dragon Comics 1999-12 … 2004-09; Young King reissue 2010).",
+    "order_only": []
+  },
+  "flags_for_sean": [
+    "EP 22 IS THE ONE JUDGMENT CALL. mixed + divergence (recommended, medium) vs filler (stored). For: the Satella/Fiore duel is a real manga scene retold with a changed outcome, published before the episode aired, and the series already types the same species of material `mixed` (18/20 divergence, 21 graft). Against: it is a single scene inside an otherwise wholly anime-original episode, and moving 22 breaks the clean 'A-7 studio ending = 22-24' block. 23 and 24 are filler under either reading. Evidence: https://chronocrusade.fandom.com/api.php?action=parse&page=Satella_Harvenheit&prop=wikitext&format=json ; https://ja.wikipedia.org/wiki/%E3%82%AF%E3%83%AD%E3%83%8E%E3%82%AF%E3%83%AB%E3%82%BB%E3%82%A4%E3%83%89",
+    "NO ADOPTION BASIS — this is the batch-18 answer for the A-7 class here, and I want it on the record so it is not re-litigated. (a) author: Moriyama's only anime credit anywhere is the blanket 原作 — ANN's staff list has exactly one entry for him, 'Original Manga: Daisuke Moriyama' (https://cdn.animenewsnetwork.com/encyclopedia/api.xml?anime=2884), and ja-WP's スタッフ block lists 監督/副監督/シリーズ構成/… with no 原作 or 監修 line at all. No 'story supervision', no scripts, no storyboards. Per the protocol's kinnikuman discriminator (declaration or supervision, not commission) that is not a basis. (b) The two documented acts of Moriyama touching the anime cut AGAINST adoption: he drew the anime-only 聖女化したロゼット as a 描き下ろし for the DVD packaging (ja-WP) — commissioned art — and in the ADV Manga vol-2 interview (p.195, cited by en-WP) he described the anime and the manga as expressing the same theme in DIFFERENT ways (anime: currents of time, fate and trust; manga: Rosette's own will), i.e. he treated them as two readings rather than declaring one canon. (c) studio: nothing carries the Gonzo ending forward — no sequel, no OVA; the manga printed its own ending on 2004-05-08 and the 2010 Shonen Gahosha reissue reprints it. (d) community: the fandom uniformly labels the anime a 'Gecko Ending' / original ending against an existing complete manga ending, so there is no ending-shaped hole for a community consensus to fill.",
+    "14-21 CROSS-CHECK — HOLDS AS FILED, with one soft spot. The zatch-bell discount is inapplicable: not one row in 14-21 is a recap or a rehash of already-adapted chapters, so nothing there falls to filler on overlap grounds. Two stored annotations are independently corroborated: ep 21's graft {36-41} — Mary Magdalene's fandom infobox reads debut-manga = Chapter 36, debut-anime = Episode 21; and ep 6's graft {15} — Satella's infobox reads debut-manga = Chap15, debut-anime = Ep6. Ep 14's desert pickup by Satella is a genuine vol-4 beat (tropedia's manga-only list records Satella collecting Rosette and Azmaria in the desert on the cross-country trip), ep 18's carnival is Acts 27-28 ('Night of the Carnival', 'Under the Starry Sky'), and ep 19's carnival battle sits 'about midway through the 5th volume' per tropedia — consistent with the stored ep20 anchor at ch 30 and MU's 'Vol 5, Chap 30' bound. The soft spot runs the OTHER way from the zatch-bell question: eps 15 and 16 may carry too LITTLE source content for `mixed`. Ep 16 is built entirely on Eliza Brown, whom chronocrusade.fandom describes as 'only appearing in an anime-exclusive for the TV series Chrono Crusade Episode 16', and its only source-derived content is relocated backstory (Aion telling Satella he destroyed her family and that her sister lives — a revelation the manga withholds until the Eden battle). Ep 15 introduces the anime-only premise that Rosette is Mary Magdalene's reincarnation and receives stigmata (ja-WP: 「アニメでは、ロゼットは普通の人間ではなく、聖女マグダラのマリアの生まれ変わりという設定になっている」), with the Order/Pursuers alliance as a loose parallel to the manga's joint assault on Eden. I did NOT find enough to overturn either row and am not proposing repairs — flagging them for a targeted re-look instead.",
+    "SOURCE-QUALITY CAVEAT for anyone reusing chronocrusade.fandom: its character 'appearances' fields are not reliable. Jack Guilliam is tagged 'appearances = Anime' although ja-WP places ギリアム牧師 in the manga's 後日談 alongside a 37-year-old Sister Kate. The infobox debut-manga / debut-anime chapter fields (used above for Magdalene and Satella) did check out; the free-text 'Anime only' claims did not.",
+    "STORED-DATA NOTE (N tier, not part of this verdict's rows): total_chapters = 59 from AniList conflicts with every primary-facing source — 56 serialised Acts (en-WP chapter list, MangaUpdates latest_chapter) plus a tankōbon-only Epilogue added to vol 8 (fandom volume guide; tropedia records the epilogue as an addition made months after the magazine ending). If the anchor ceiling for this series is ever computed from total_chapters it will be 3 too high."
+  ]
+}

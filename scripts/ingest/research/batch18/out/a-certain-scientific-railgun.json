@@ -1,0 +1,213 @@
+{
+  "series_id": "a-certain-scientific-railgun",
+  "summary": "Railgun's three anime-original blocks are NOT one class. There is no on-screen supervision credit anywhere: the ja.wikipedia staff table for all four seasons carries only 原作 = 鎌池和馬 + 冬川基 (a blanket credit) with no 監修 or 原案 row, and the 各話リスト has only 脚本/絵コンテ/演出/作画監督 columns - so nobody is credited with story for these arcs. What DOES exist is (a) ja.wikipedia's prose statement that S1's second cour was made 原作者・鎌池和馬の監修下 ('under the supervision of the original author Kamachi Kazuma') - an explicit supervision claim, but uncited on the article - and (b) a much harder body of evidence that the SOURCE ITSELF and its author later carried the anime-original material forward as having happened: the Railgun manga names Haruue Erii in ch 31 and shows a photo on Mikoto's phone in ch 32 that the wiki's chapter page states was taken in episode 20 (Poltergeist arc); Kamachi's own novels use the arcs' material repeatedly (Index LN v22 ch9 pt1 has Mugino refer to Therestina as 'some researcher from something-or-other Rescue' and her Level 6 attempt; NT v4 Period.21 has Kihara Enshuu name Therestina; Souyaku/GT v7 ch2 pt6 has Therestina appear in person in prison, matching the anime's own continuity; Toaru Anbu no Item LN v1 ch2 pt1 has Mugino listening to Colosseum interview recordings involving Komaba Ritoku, Kurozuma Wataru and Big Spider; and Kamachi's 2022 15th-anniversary Railgun light novel ch2 pt3 refers back to Haruue Erii, Edasaki Banri, Janie and Febrie). That is adoption by the source's author and artist, not a blanket credit - so the recommendation is canon + adopted{author} for eps 15-24 (high for the Poltergeist core 20-24, medium for 15-16 and 17-19) and, on thinner evidence, for the Silent Party block 42-48 (medium; the ja.wikipedia supervision sentence covers S1's cour only, and the sole author-side carry-forward is the Railgun-LN referback to Janie/Febrie). Two rows do not follow the block: ep 13 is a standalone beach episode that aired as the LAST episode of cour 1 (2009-12-25), outside the sentence that says the SECOND cour was supervised, with zero franchise carry-forward - it stays filler; and ep 41 (S #17 'Study Group') is not part of the Silent Party arc in either ja.wikipedia or the ja Railgun wiki, and actually adapts the vol-7 special chapter after ch 39 ('The Iron Bridge is a Sign of Love'), ch 40's rat-buying scene and a vol-5 omake 4-koma - that is mixed, a repair of the stored filler. Surprises: the arcs are not free-floating inventions - the Poltergeist arc closes a MANGA thread (Kiyama Harumi's comatose Child Errors, Edasaki Banri debuting in manga ch 14), Hebitani cameos in manga ch 8 and Yanagisako Aomi debuts in manga ch 17-special-2 (2008), and Therestina's design is by Haimura Kiyotaka, the franchise's own light-novel character designer. The counterweight is a genuine timeline conflict with the manga (Kongou Mitsuko is present from ep 1 but does not transfer until late August in the manga, where she debuts only in ch 40), which is exactly what the stored divergence annotation records - it should stay.",
+  "standings": [
+    {
+      "episodes": [13],
+      "type": "filler",
+      "confidence": "medium",
+      "note": "Standalone anime-original swimsuit/beach episode (Tokiwadai swim-team photo shoot). Toaru fandom episode page: 'This episode contains an anime-original story and thus, is not adapted from any source.' It is NOT part of either S1 original arc (ja.wikipedia's arc list runs Skill Out 15-16 and Poltergeist 20-24; the ja Railgun wiki's arc map agrees), and it aired 2009-12-25 as the last episode of the FIRST cour, so ja.wikipedia's '2クール目は原作者・鎌池和馬の監修下' supervision sentence (which covers eps 14-24) does not reach it. No manga, novel or later-anime carry-forward of its events was found; AFL also calls 13 filler. Its one lasting beat - Kongou Mitsuko becoming friends with Wannai and Awatsuki - actually CONFLICTS with the manga, where Kongou debuts only in ch 40. Stored type is already filler: no repair.",
+      "sources": [
+        "https://toarumajutsunoindex.fandom.com/api.php?action=parse&page=Toaru%20Kagaku%20no%20Railgun%20Episode%2013&prop=wikitext&format=json",
+        "https://ja.wikipedia.org/wiki/%E3%81%A8%E3%81%82%E3%82%8B%E7%A7%91%E5%AD%A6%E3%81%AE%E8%B6%85%E9%9B%BB%E7%A3%81%E7%A0%B2_(%E3%82%A2%E3%83%8B%E3%83%A1)",
+        "https://acertainscientificrailgun.fandom.com/ja/api.php?action=parse&page=%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AA%E3%83%BC&prop=wikitext&format=json",
+        "https://www.animefillerlist.com/shows/a-certain-scientific-railgun"
+      ]
+    },
+    {
+      "episodes": [15, 16],
+      "type": "canon",
+      "chapters": "none",
+      "confidence": "medium",
+      "note": "Big Spider arc (武装無能力者集団編), anime-original per ja.wikipedia and the toaru fandom episode pages ('This is an anime-original episode'). Adopted, author basis: (1) ja.wikipedia states S1's second cour is an anime-original story made 原作者・鎌池和馬の監修下 (under the original author's supervision); (2) Kamachi's own Toaru Anbu no Item light novel v1 ch2 pt1 has Mugino listening to Colosseum interview recordings that involve/reference Komaba Ritoku, KUROZUMA WATARU and BIG SPIDER - i.e. the author wrote the arc's anime-original gang and its founder into his own novel line (documented on the Item manga ch10/ch12 pages, which cite the LN parts). Supporting: the arc is built on source-side furniture - Hebitani Tsuguo already cameos in Railgun manga ch 8 and Konori's roommate Yanagisako Aomi debuts in Railgun manga ch 17-special-2 (2008-11-27), both pre-anime. Medium, not high: the ja.wikipedia supervision sentence is uncited and the Item-LN mention is a passing reference. AFL independently calls 15-16 'anime canon'.",
+      "sources": [
+        "https://ja.wikipedia.org/wiki/%E3%81%A8%E3%81%82%E3%82%8B%E7%A7%91%E5%AD%A6%E3%81%AE%E8%B6%85%E9%9B%BB%E7%A3%81%E7%A0%B2_(%E3%82%A2%E3%83%8B%E3%83%A1)",
+        "https://toarumajutsunoindex.fandom.com/api.php?action=parse&page=Big_Spider_Arc&prop=wikitext&format=json",
+        "https://toarumajutsunoindex.fandom.com/api.php?action=parse&page=Toaru_Anbu_no_Item_Manga_Chapter_010&prop=wikitext&format=json",
+        "https://toarumajutsunoindex.fandom.com/api.php?action=parse&page=Kurozuma_Wataru&prop=wikitext&format=json",
+        "https://toarumajutsunoindex.fandom.com/api.php?action=parse&page=Yanagisako_Aomi&prop=wikitext&format=json",
+        "https://www.animefillerlist.com/shows/a-certain-scientific-railgun"
+      ]
+    },
+    {
+      "episodes": [17, 18, 19],
+      "type": "canon",
+      "chapters": "none",
+      "confidence": "medium",
+      "note": "Opening third of the Poltergeist arc, in slice-of-life dress: ep 17 introduces Haruue Erii (her anime debut) and the first unexplained District 7 quake, ep 18 the Asunaro Park quake and the Child Error orphanage, ep 19 the Tokiwadai Midsummer Festival quake with Haruue present. The toaru fandom Poltergeist Arc page cites eps 17-24 as the arc and lists the ep-17/18 quakes as arc events; ja.wikipedia and the ja Railgun wiki draw the arc narrower (20-24) and leave 17-19 unattached, and AFL calls 17-19 filler while calling 20-25 'anime canon'. Either boundary puts these rows inside the anime-original SECOND COUR that ja.wikipedia says was made under Kamachi's supervision, and they carry the arc's plot rather than being self-contained. Same adopted{author} basis as 20-24; medium rather than high only because two sources exclude them from the arc proper. Fandom episode pages: all three 'anime-original ... not adapted from a manga volume nor a light novel volume'.",
+      "sources": [
+        "https://toarumajutsunoindex.fandom.com/api.php?action=parse&page=Poltergeist_Arc&prop=wikitext&format=json",
+        "https://toarumajutsunoindex.fandom.com/api.php?action=parse&page=Toaru%20Kagaku%20no%20Railgun%20Episode%2017&prop=wikitext&format=json",
+        "https://toarumajutsunoindex.fandom.com/api.php?action=parse&page=Haruue_Erii&prop=wikitext&format=json",
+        "https://ja.wikipedia.org/wiki/%E3%81%A8%E3%81%82%E3%82%8B%E7%A7%91%E5%AD%A6%E3%81%AE%E8%B6%85%E9%9B%BB%E7%A3%81%E7%A0%B2_(%E3%82%A2%E3%83%8B%E3%83%A1)",
+        "https://www.animefillerlist.com/shows/a-certain-scientific-railgun"
+      ]
+    },
+    {
+      "episodes": [20, 21, 22, 23, 24],
+      "type": "canon",
+      "chapters": "none",
+      "confidence": "high",
+      "note": "Poltergeist arc (乱雑開放編) proper - anime-original, but adopted by the source and its author, with the strongest evidence in the whole series. (1) THE SOURCE MANGA ITSELF: Railgun manga ch 31 (2010-05-27) names Haruue Erii and ch 32 (2010-06-28) shows her in a photo on Mikoto's phone - the chapter page's Referbacks state outright that 'the picture on Mikoto's phone featuring Haruue Erii was taken in Episode 20 during the Poltergeist Arc'. Fuyukawa/Kamachi therefore drew an anime-original character and an anime-original event into the manga two months after broadcast. (2) KAMACHI'S OWN NOVELS: Index LN v22 ch9 pt1 (Mugino references Therestina - 'some researcher from something or other Rescue' - and her Ability Body Crystal / Level 6 attempt, i.e. this arc's plot); Shinyaku (NT) v4 Period.21 (Kihara Enshuu names Therestina); Souyaku (GT) v7 ch2 pt6 (Therestina APPEARS in person, imprisoned next to Tessou Tsuzuri - continuous with the anime's own ending and with Railgun S ep 22's prison visit); NT v1 opening colour illustration shows Haruue with Uiharu and Saten. (3) ja.wikipedia: this cour was made 原作者・鎌池和馬の監修下. (4) The arc resolves a MANGA thread - Kiyama Harumi's comatose Child Errors from the Level Upper arc (manga chs 11-16), Edasaki Banri having debuted in manga ch 14 - and its antagonist Therestina was designed by Haimura Kiyotaka, the franchise's own light-novel character designer. Ep 20 additionally lifts a montage from the COVER of manga ch 17-special-2 (a chapter already adapted as ep 5) - artwork only, no narrative content, see annotations. AFL calls 20-25 'anime canon'.",
+      "sources": [
+        "https://toarumajutsunoindex.fandom.com/api.php?action=parse&page=Poltergeist_Arc&prop=wikitext&format=json",
+        "https://toarumajutsunoindex.fandom.com/api.php?action=parse&page=Toaru%20Kagaku%20no%20Railgun%20Manga%20Chapter%20032&prop=wikitext&format=json",
+        "https://toarumajutsunoindex.fandom.com/api.php?action=parse&page=Toaru%20Kagaku%20no%20Railgun%20Manga%20Chapter%20031&prop=wikitext&format=json",
+        "https://toarumajutsunoindex.fandom.com/api.php?action=parse&page=Therestina_Kihara_Lifeline&prop=wikitext&format=json",
+        "https://toarumajutsunoindex.fandom.com/api.php?action=parse&page=Haruue_Erii&prop=wikitext&format=json",
+        "https://ja.wikipedia.org/wiki/%E3%81%A8%E3%81%82%E3%82%8B%E7%A7%91%E5%AD%A6%E3%81%AE%E8%B6%85%E9%9B%BB%E7%A3%81%E7%A0%B2_(%E3%82%A2%E3%83%8B%E3%83%A1)",
+        "https://www.animefillerlist.com/shows/a-certain-scientific-railgun"
+      ]
+    },
+    {
+      "episodes": [41],
+      "type": "mixed",
+      "chapters": "39 special ('The Iron Bridge is a Sign of Love', vol 7) + 40 ('Clique, Part 1', rat-buying scene only) + a vol-5 omake 4-koma",
+      "confidence": "high",
+      "note": "REPAIR of the stored filler. S #17 'Study Group' is NOT part of the Silent Party arc: ja.wikipedia puts the arc at S #18-24 and the ja Railgun wiki's arc map does the same, while the toaru fandom's episode page states 'Most of this episode is an anime original, though features adapted content: Railgun ch 039 special, Railgun ch 40'. The manga-side pages agree independently: ch 39-special 'The Iron Bridge is a Sign of Love' (vol 7, 2011-02-28) is Adapted To 'Railgun S ep 16 and ep 17', and ch 40 'Clique, Part 1' is Adapted To 'Railgun S ep 17 (rat buying scene only, though slightly altered)'. The episode also stages a manga omake 4-koma from volume 5 (Kuroko vs Frenda arguing whose Level 5 is better). Real source material in a mostly original episode = mixed. NO ANCHOR: the content is partial and out of order (ch 39-special is the Sisters epilogue already closed at ep 40; chs 40-42 are the vol-7 intermission the TV run skips, per the stored ep-49 abridged fact), so this should stay a graft, not an anchor.",
+      "sources": [
+        "https://toarumajutsunoindex.fandom.com/api.php?action=parse&page=Toaru%20Kagaku%20no%20Railgun%20S%20Episode%2017&prop=wikitext&format=json",
+        "https://toarumajutsunoindex.fandom.com/api.php?action=parse&page=Toaru%20Kagaku%20no%20Railgun%20Manga%20Chapter%20039%20special&prop=wikitext&format=json",
+        "https://toarumajutsunoindex.fandom.com/api.php?action=parse&page=Toaru%20Kagaku%20no%20Railgun%20Manga%20Chapter%20040&prop=wikitext&format=json",
+        "https://ja.wikipedia.org/wiki/%E3%81%A8%E3%81%82%E3%82%8B%E7%A7%91%E5%AD%A6%E3%81%AE%E8%B6%85%E9%9B%BB%E7%A3%81%E7%A0%B2_(%E3%82%A2%E3%83%8B%E3%83%A1)",
+        "https://acertainscientificrailgun.fandom.com/ja/api.php?action=parse&page=%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AA%E3%83%BC&prop=wikitext&format=json"
+      ]
+    },
+    {
+      "episodes": [42, 43, 44, 45, 48],
+      "type": "canon",
+      "chapters": "none",
+      "confidence": "medium",
+      "note": "Silent Party arc (革命未明編), S #18-24 per ja.wikipedia (citing Animedia 2013/09 and Otona Anime Vol.31) and the ja Railgun wiki; the toaru fandom episode pages say 'This episode features original content, as such it is not adapted from any previous material'. Recommended canon + adopted{author}, but on THINNER evidence than the S1 arcs - say so to Sean. For: (1) Kamachi's own 15th-anniversary Railgun light novel (Dengeki Bunko, 2022-06-10, written by Kamachi) refers back in ch2 pt3 to Janie and Febrie (as well as Haruue Erii and Edasaki Banri); both Chemicaloids carry 'Novel Debut = Railgun LN (referenced-only)' on the wiki. (2) The arc is continuous with the S1 original arc that Kamachi HAS canonised: ep 46 has Mikoto visit the imprisoned Therestina, and Souyaku v7 ch2 pt6 later puts Therestina in exactly that situation in Kamachi's own prose. (3) It hangs on manga characters and manga plumbing - Nunotaba Shinobu (manga ch 18) is a lead, and the Chemicaloids' base program is her Radio Noise research; Kihara Gensei (Kamachi's novel character) is the one who dismissed Aritomi's plan. Against: ja.wikipedia's 監修 (supervision) sentence covers S1's second cour ONLY and says nothing about S2; STUDY and Aritomi Haruki carry 'Appears In: Anime and Game' with no novel or manga presence; and no manga chapter references the Silent Party. AFL calls all of 41-48 filler.",
+      "sources": [
+        "https://ja.wikipedia.org/wiki/%E3%81%A8%E3%81%82%E3%82%8B%E7%A7%91%E5%AD%A6%E3%81%AE%E8%B6%85%E9%9B%BB%E7%A3%81%E7%A0%B2_(%E3%82%A2%E3%83%8B%E3%83%A1)",
+        "https://toarumajutsunoindex.fandom.com/api.php?action=parse&page=Silent_Party_Arc&prop=wikitext&format=json",
+        "https://toarumajutsunoindex.fandom.com/api.php?action=parse&page=Toaru%20Kagaku%20no%20Railgun%20(light%20novel)/Chapter%202&prop=wikitext&format=json",
+        "https://toarumajutsunoindex.fandom.com/api.php?action=parse&page=Febrie&prop=wikitext&format=json",
+        "https://toarumajutsunoindex.fandom.com/api.php?action=parse&page=Janie&prop=wikitext&format=json",
+        "https://acertainscientificrailgun.fandom.com/ja/api.php?action=parse&page=%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AA%E3%83%BC&prop=wikitext&format=json"
+      ]
+    },
+    {
+      "episodes": [46, 47],
+      "type": "canon",
+      "chapters": "43 (Item pool scene only, ep 46); 44 (Aoki scene only, ep 47)",
+      "confidence": "medium",
+      "note": "Same Silent Party standing and same adopted{author} basis as 42-45/48, kept as a separate entry because these two rows are the fork point. Each lifts ONE scene from a Daihasei-arc manga chapter that is properly adapted later: the toaru fandom episode pages say ep 46 (S #22 'STUDY') takes the Item swimming-pool scene from ch 43 and ep 47 (S #23 'Silent Party') a single scene from ch 44, and the manga chapter pages agree from the other side (ch 43 Adapted To 'Railgun S ep 22 (Item pool scene only, though slightly altered)', ch 44 Adapted To 'Railgun S ep 23 (Aoki scene only)'). Those scenes sit in their correct calendar slot - the Silent Party arc occupies Aug 24-30 (per the Railgun BD/DVD 8 booklet cited on the arc page), the same window as manga chs 43-44 - and chs 43/44 are anchored later at eps 49 and 50, so no anchor should be created here; the stored graft annotations already carry them. IF Sean rules the Silent Party block FILLER instead of adopted, these two rows become MIXED (single-scene source content) rather than filler, while 42-45 and 48 would be plain filler.",
+      "sources": [
+        "https://toarumajutsunoindex.fandom.com/api.php?action=parse&page=Toaru%20Kagaku%20no%20Railgun%20S%20Episode%2022&prop=wikitext&format=json",
+        "https://toarumajutsunoindex.fandom.com/api.php?action=parse&page=Toaru%20Kagaku%20no%20Railgun%20S%20Episode%2023&prop=wikitext&format=json",
+        "https://toarumajutsunoindex.fandom.com/api.php?action=parse&page=Toaru%20Kagaku%20no%20Railgun%20Manga%20Chapter%20043&prop=wikitext&format=json",
+        "https://toarumajutsunoindex.fandom.com/api.php?action=parse&page=Toaru%20Kagaku%20no%20Railgun%20Manga%20Chapter%20044&prop=wikitext&format=json",
+        "https://toarumajutsunoindex.fandom.com/api.php?action=parse&page=Silent_Party_Arc&prop=wikitext&format=json"
+      ]
+    }
+  ],
+  "annotations": [
+    {
+      "episodes": [15, 16, 17, 18, 19, 20, 21, 22, 23, 24],
+      "kind": "adopted",
+      "basis": "author",
+      "note": "S1's anime-original second cour (Big Spider + Poltergeist). WHO adopted it: Kamachi Kazuma (the manga's 原作 / franchise author) and Fuyukawa Motoi (the manga's artist). Acts, not credits: the Railgun MANGA ch 31 names Haruue Erii and ch 32 shows a photo on Mikoto's phone taken in ep 20; Kamachi's Index LN v22 ch9 pt1 references Therestina and her Level 6 attempt; NT v4 Period.21 names her; Souyaku v7 ch2 pt6 has her appear in person in prison; Toaru Anbu no Item LN v1 ch2 pt1 references Kurozuma Wataru and Big Spider; the 2022 Kamachi-written Railgun light novel ch2 pt3 refers back to Haruue Erii and Edasaki Banri. Declared supervision (uncited): ja.wikipedia, '2クール目は原作者・鎌池和馬の監修下で、「幻想御手」編の後日談が描かれたアニメオリジナルストーリーとなっている'. NOTE the negative finding: there is NO 監修 or 原案 row in the anime staff table and no per-episode story credit for Kamachi - the on-screen credit (原作 鎌池和馬 + 冬川基) is blanket and does not by itself support the basis.",
+      "sources": [
+        "https://ja.wikipedia.org/wiki/%E3%81%A8%E3%81%82%E3%82%8B%E7%A7%91%E5%AD%A6%E3%81%AE%E8%B6%85%E9%9B%BB%E7%A3%81%E7%A0%B2_(%E3%82%A2%E3%83%8B%E3%83%A1)",
+        "https://toarumajutsunoindex.fandom.com/api.php?action=parse&page=Toaru%20Kagaku%20no%20Railgun%20Manga%20Chapter%20032&prop=wikitext&format=json",
+        "https://toarumajutsunoindex.fandom.com/api.php?action=parse&page=Therestina_Kihara_Lifeline&prop=wikitext&format=json",
+        "https://toarumajutsunoindex.fandom.com/api.php?action=parse&page=Toaru_Anbu_no_Item_Manga_Chapter_010&prop=wikitext&format=json",
+        "https://toarumajutsunoindex.fandom.com/api.php?action=parse&page=Toaru%20Kagaku%20no%20Railgun%20(light%20novel)/Chapter%202&prop=wikitext&format=json"
+      ]
+    },
+    {
+      "episodes": [42, 43, 44, 45, 46, 47, 48],
+      "kind": "adopted",
+      "basis": "author",
+      "note": "Silent Party arc. WHO adopted it: Kamachi Kazuma, by writing the arc's anime-original Chemicaloids into his own 2022 Railgun light novel (ch2 pt3 referbacks to Janie and Febrie; both characters' novel debut is that book, 'referenced-only'), and by continuing the anime's own Therestina thread in Souyaku v7. Weaker than the S1 block: ja.wikipedia's supervision statement does not cover S2, no manga chapter references the arc, and STUDY/Aritomi exist only in anime and games. Medium confidence - if Sean wants a harder basis, the print sources are Otona Anime Vol.31 (2013-08-23, 76pp on Railgun S) and the Railgun S OFFICIAL VISUAL BOOK, neither of which is online.",
+      "sources": [
+        "https://toarumajutsunoindex.fandom.com/api.php?action=parse&page=Toaru%20Kagaku%20no%20Railgun%20(light%20novel)/Chapter%202&prop=wikitext&format=json",
+        "https://toarumajutsunoindex.fandom.com/api.php?action=parse&page=Febrie&prop=wikitext&format=json",
+        "https://toarumajutsunoindex.fandom.com/api.php?action=parse&page=Janie&prop=wikitext&format=json",
+        "https://toarumajutsunoindex.fandom.com/api.php?action=parse&page=Toaru%20Kagaku%20no%20Railgun%20(light%20novel)&prop=wikitext&format=json"
+      ]
+    },
+    {
+      "episodes": [13, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 41, 42, 43, 44, 45, 46, 47, 48],
+      "kind": "divergence",
+      "note": "The stored divergence annotation stays accurate and should be kept even where the type becomes canon: none of these rows adapts the manga's forward course, and two of them conflict with it outright. Kongou Mitsuko is present from S1 ep 1 and befriends Wannai/Awatsuki in ep 13, but in the manga she debuts only in ch 40 and (per the fandom Poltergeist Arc trivia) does not transfer to Academy City until about August 27, after the Poltergeist arc's Aug 2-9 window; Kiyama Harumi and her revived Child Errors never reappear in the manga. The Silent Party arc likewise occupies Aug 24-30, the same days the manga spends on Daihasei preparation (chs 43-44).",
+      "sources": [
+        "https://toarumajutsunoindex.fandom.com/api.php?action=parse&page=Poltergeist_Arc&prop=wikitext&format=json",
+        "https://toarumajutsunoindex.fandom.com/api.php?action=parse&page=Kongou_Mitsuko&prop=wikitext&format=json",
+        "https://toarumajutsunoindex.fandom.com/api.php?action=parse&page=Silent_Party_Arc&prop=wikitext&format=json"
+      ]
+    },
+    {
+      "episodes": [20],
+      "kind": "graft",
+      "note": "ARTWORK ONLY - must not produce an anchor. The Saten/Uiharu/Akemi/Muu/Mako flashback is built from one of the pictures on the COVER of manga ch 17-special-2 ('A Certain Pair's Job Training [Second Half]', vol 3, 2008-11-27), with Saten swapped for Mako so that Saten is the one taking the photo. The chapter's own page lists 'Railgun ep 5' and 'Railgun ep 20 (cover only)' under Adapted To - the chapter's story was adapted back in ep 5; ep 20 borrows only the cover illustration, which is not narrative source content.",
+      "sources": [
+        "https://toarumajutsunoindex.fandom.com/api.php?action=parse&page=Toaru%20Kagaku%20no%20Railgun%20Episode%2020&prop=wikitext&format=json",
+        "https://toarumajutsunoindex.fandom.com/api.php?action=parse&page=Toaru%20Kagaku%20no%20Railgun%20Manga%20Chapter%20017%20special%202&prop=wikitext&format=json"
+      ]
+    },
+    {
+      "episodes": [41],
+      "kind": "graft",
+      "note": "Refines the stored graft {39.5, 40}: confirmed and extended. The episode carries (a) material from the vol-7 special chapter after ch 39, 'The Iron Bridge is a Sign of Love' (its chapter page lists Adapted To = Railgun S eps 16 AND 17), (b) ch 40's rat-buying scene ('slightly altered' per the ch-40 page), and (c) a volume-5 omake 4-koma staged as the Kuroko/Frenda argument over whose Level 5 acquaintance is better. Graft, not anchor.",
+      "sources": [
+        "https://toarumajutsunoindex.fandom.com/api.php?action=parse&page=Toaru%20Kagaku%20no%20Railgun%20S%20Episode%2017&prop=wikitext&format=json",
+        "https://toarumajutsunoindex.fandom.com/api.php?action=parse&page=Toaru%20Kagaku%20no%20Railgun%20Manga%20Chapter%20039%20special&prop=wikitext&format=json",
+        "https://toarumajutsunoindex.fandom.com/api.php?action=parse&page=Toaru%20Kagaku%20no%20Railgun%20Manga%20Chapter%20040&prop=wikitext&format=json"
+      ]
+    },
+    {
+      "episodes": [46],
+      "kind": "graft",
+      "note": "Stored graft {43} re-verified from both sides: ep 46 (S #22 'STUDY') borrows only the Item swimming-pool scene from manga ch 43 'Negotiation' (ch 43 page: Adapted To = Railgun S ep 22, 'Item pool scene only, though slightly altered'). Ch 43 is properly adapted at ep 49; no anchor here.",
+      "sources": [
+        "https://toarumajutsunoindex.fandom.com/api.php?action=parse&page=Toaru%20Kagaku%20no%20Railgun%20S%20Episode%2022&prop=wikitext&format=json",
+        "https://toarumajutsunoindex.fandom.com/api.php?action=parse&page=Toaru%20Kagaku%20no%20Railgun%20Manga%20Chapter%20043&prop=wikitext&format=json"
+      ]
+    },
+    {
+      "episodes": [47],
+      "kind": "graft",
+      "note": "Stored graft {44} re-verified from both sides: ep 47 (S #23 'Silent Party') borrows a single scene from manga ch 44 'Opening' (ch 44 page: Adapted To = Railgun S ep 23, 'Aoki scene only'). Ch 44 is properly adapted at ep 50; no anchor here.",
+      "sources": [
+        "https://toarumajutsunoindex.fandom.com/api.php?action=parse&page=Toaru%20Kagaku%20no%20Railgun%20S%20Episode%2023&prop=wikitext&format=json",
+        "https://toarumajutsunoindex.fandom.com/api.php?action=parse&page=Toaru%20Kagaku%20no%20Railgun%20Manga%20Chapter%20044&prop=wikitext&format=json"
+      ]
+    }
+  ],
+  "repairs": [
+    {"episode": 15, "field": "type", "old": "filler", "new": "canon", "why": "Big Spider arc: anime-original but adopted{author} - ja.wikipedia says the cour was made under Kamachi's supervision, and Kamachi's Item LN v1 ch2 pt1 references Kurozuma Wataru and Big Spider.", "sources": ["https://ja.wikipedia.org/wiki/%E3%81%A8%E3%81%82%E3%82%8B%E7%A7%91%E5%AD%A6%E3%81%AE%E8%B6%85%E9%9B%BB%E7%A3%81%E7%A0%B2_(%E3%82%A2%E3%83%8B%E3%83%A1)", "https://toarumajutsunoindex.fandom.com/api.php?action=parse&page=Toaru_Anbu_no_Item_Manga_Chapter_010&prop=wikitext&format=json"]},
+    {"episode": 16, "field": "type", "old": "filler", "new": "canon", "why": "Big Spider arc: same adopted{author} basis as ep 15.", "sources": ["https://ja.wikipedia.org/wiki/%E3%81%A8%E3%81%82%E3%82%8B%E7%A7%91%E5%AD%A6%E3%81%AE%E8%B6%85%E9%9B%BB%E7%A3%81%E7%A0%B2_(%E3%82%A2%E3%83%8B%E3%83%A1)", "https://toarumajutsunoindex.fandom.com/api.php?action=parse&page=Big_Spider_Arc&prop=wikitext&format=json"]},
+    {"episode": 17, "field": "type", "old": "filler", "new": "canon", "why": "Poltergeist arc opening (Haruue Erii's debut, first quake) inside the Kamachi-supervised second cour; adopted{author}.", "sources": ["https://toarumajutsunoindex.fandom.com/api.php?action=parse&page=Poltergeist_Arc&prop=wikitext&format=json", "https://ja.wikipedia.org/wiki/%E3%81%A8%E3%81%82%E3%82%8B%E7%A7%91%E5%AD%A6%E3%81%AE%E8%B6%85%E9%9B%BB%E7%A3%81%E7%A0%B2_(%E3%82%A2%E3%83%8B%E3%83%A1)"]},
+    {"episode": 18, "field": "type", "old": "filler", "new": "canon", "why": "Poltergeist arc (Asunaro Park quake, Child Error orphanage); adopted{author}.", "sources": ["https://toarumajutsunoindex.fandom.com/api.php?action=parse&page=Poltergeist_Arc&prop=wikitext&format=json", "https://ja.wikipedia.org/wiki/%E3%81%A8%E3%81%82%E3%82%8B%E7%A7%91%E5%AD%A6%E3%81%AE%E8%B6%85%E9%9B%BB%E7%A3%81%E7%A0%B2_(%E3%82%A2%E3%83%8B%E3%83%A1)"]},
+    {"episode": 19, "field": "type", "old": "filler", "new": "canon", "why": "Poltergeist arc (Midsummer Festival quake with Haruue present); adopted{author}.", "sources": ["https://toarumajutsunoindex.fandom.com/api.php?action=parse&page=Poltergeist_Arc&prop=wikitext&format=json", "https://ja.wikipedia.org/wiki/%E3%81%A8%E3%81%82%E3%82%8B%E7%A7%91%E5%AD%A6%E3%81%AE%E8%B6%85%E9%9B%BB%E7%A3%81%E7%A0%B2_(%E3%82%A2%E3%83%8B%E3%83%A1)"]},
+    {"episode": 20, "field": "type", "old": "filler", "new": "canon", "why": "Poltergeist arc proper; adopted{author} - the manga itself (ch 32) shows a photo taken in THIS episode.", "sources": ["https://toarumajutsunoindex.fandom.com/api.php?action=parse&page=Toaru%20Kagaku%20no%20Railgun%20Manga%20Chapter%20032&prop=wikitext&format=json", "https://toarumajutsunoindex.fandom.com/api.php?action=parse&page=Poltergeist_Arc&prop=wikitext&format=json"]},
+    {"episode": 21, "field": "type", "old": "filler", "new": "canon", "why": "Poltergeist arc proper; adopted{author} (Therestina/Ability Body Crystal thread later used by Kamachi in Index v22, NT v4, Souyaku v7).", "sources": ["https://toarumajutsunoindex.fandom.com/api.php?action=parse&page=Therestina_Kihara_Lifeline&prop=wikitext&format=json", "https://toarumajutsunoindex.fandom.com/api.php?action=parse&page=Poltergeist_Arc&prop=wikitext&format=json"]},
+    {"episode": 22, "field": "type", "old": "filler", "new": "canon", "why": "Poltergeist arc proper; adopted{author}.", "sources": ["https://toarumajutsunoindex.fandom.com/api.php?action=parse&page=Therestina_Kihara_Lifeline&prop=wikitext&format=json", "https://toarumajutsunoindex.fandom.com/api.php?action=parse&page=Poltergeist_Arc&prop=wikitext&format=json"]},
+    {"episode": 23, "field": "type", "old": "filler", "new": "canon", "why": "Poltergeist arc proper; adopted{author}.", "sources": ["https://toarumajutsunoindex.fandom.com/api.php?action=parse&page=Therestina_Kihara_Lifeline&prop=wikitext&format=json", "https://toarumajutsunoindex.fandom.com/api.php?action=parse&page=Poltergeist_Arc&prop=wikitext&format=json"]},
+    {"episode": 24, "field": "type", "old": "filler", "new": "canon", "why": "Poltergeist arc finale; adopted{author} - Therestina's incarceration here is picked up by Kamachi in Souyaku v7 ch2 pt6.", "sources": ["https://toarumajutsunoindex.fandom.com/api.php?action=parse&page=Therestina_Kihara_Lifeline&prop=wikitext&format=json", "https://toarumajutsunoindex.fandom.com/api.php?action=parse&page=Poltergeist_Arc&prop=wikitext&format=json"]},
+    {"episode": 41, "field": "type", "old": "filler", "new": "mixed", "why": "S #17 is outside the Silent Party arc and adapts the vol-7 ch-39 special plus ch 40's rat-buying scene plus a vol-5 omake 4-koma; the manga chapter pages list ep 17 under their own Adapted To. Keep the graft annotation; do not create an anchor.", "sources": ["https://toarumajutsunoindex.fandom.com/api.php?action=parse&page=Toaru%20Kagaku%20no%20Railgun%20S%20Episode%2017&prop=wikitext&format=json", "https://toarumajutsunoindex.fandom.com/api.php?action=parse&page=Toaru%20Kagaku%20no%20Railgun%20Manga%20Chapter%20040&prop=wikitext&format=json"]},
+    {"episode": 42, "field": "type", "old": "filler", "new": "canon", "why": "Silent Party arc; adopted{author} on medium evidence (Kamachi's 2022 Railgun LN refers back to Janie and Febrie). Reversible to filler if Sean rejects the basis - see flags.", "sources": ["https://toarumajutsunoindex.fandom.com/api.php?action=parse&page=Toaru%20Kagaku%20no%20Railgun%20(light%20novel)/Chapter%202&prop=wikitext&format=json", "https://toarumajutsunoindex.fandom.com/api.php?action=parse&page=Silent_Party_Arc&prop=wikitext&format=json"]},
+    {"episode": 43, "field": "type", "old": "filler", "new": "canon", "why": "Silent Party arc; adopted{author}, medium (see ep 42).", "sources": ["https://toarumajutsunoindex.fandom.com/api.php?action=parse&page=Toaru%20Kagaku%20no%20Railgun%20(light%20novel)/Chapter%202&prop=wikitext&format=json", "https://toarumajutsunoindex.fandom.com/api.php?action=parse&page=Silent_Party_Arc&prop=wikitext&format=json"]},
+    {"episode": 44, "field": "type", "old": "filler", "new": "canon", "why": "Silent Party arc; adopted{author}, medium (see ep 42).", "sources": ["https://toarumajutsunoindex.fandom.com/api.php?action=parse&page=Toaru%20Kagaku%20no%20Railgun%20(light%20novel)/Chapter%202&prop=wikitext&format=json", "https://toarumajutsunoindex.fandom.com/api.php?action=parse&page=Febrie&prop=wikitext&format=json"]},
+    {"episode": 45, "field": "type", "old": "filler", "new": "canon", "why": "Silent Party arc; adopted{author}, medium (see ep 42).", "sources": ["https://toarumajutsunoindex.fandom.com/api.php?action=parse&page=Toaru%20Kagaku%20no%20Railgun%20(light%20novel)/Chapter%202&prop=wikitext&format=json", "https://toarumajutsunoindex.fandom.com/api.php?action=parse&page=Silent_Party_Arc&prop=wikitext&format=json"]},
+    {"episode": 46, "field": "type", "old": "filler", "new": "canon", "why": "Silent Party arc; adopted{author}, medium. If the basis is rejected this row is MIXED, not filler - it carries ch 43's Item pool scene.", "sources": ["https://toarumajutsunoindex.fandom.com/api.php?action=parse&page=Toaru%20Kagaku%20no%20Railgun%20Manga%20Chapter%20043&prop=wikitext&format=json", "https://toarumajutsunoindex.fandom.com/api.php?action=parse&page=Toaru%20Kagaku%20no%20Railgun%20S%20Episode%2022&prop=wikitext&format=json"]},
+    {"episode": 47, "field": "type", "old": "filler", "new": "canon", "why": "Silent Party arc; adopted{author}, medium. If the basis is rejected this row is MIXED, not filler - it carries ch 44's Aoki scene.", "sources": ["https://toarumajutsunoindex.fandom.com/api.php?action=parse&page=Toaru%20Kagaku%20no%20Railgun%20Manga%20Chapter%20044&prop=wikitext&format=json", "https://toarumajutsunoindex.fandom.com/api.php?action=parse&page=Toaru%20Kagaku%20no%20Railgun%20S%20Episode%2023&prop=wikitext&format=json"]},
+    {"episode": 48, "field": "type", "old": "filler", "new": "canon", "why": "Silent Party arc finale; adopted{author}, medium (see ep 42).", "sources": ["https://toarumajutsunoindex.fandom.com/api.php?action=parse&page=Toaru%20Kagaku%20no%20Railgun%20(light%20novel)/Chapter%202&prop=wikitext&format=json", "https://toarumajutsunoindex.fandom.com/api.php?action=parse&page=Silent_Party_Arc&prop=wikitext&format=json"]}
+  ],
+  "structure": {
+    "notes": "NUMBERING: our cumulative rows map 1:1 onto season episodes with no offset - verified by joining titles, not indexes. ja.wikipedia's 各話リスト gives S1 #1-24 (= our 1-24), S2 #1-24 (= our 25-48), S3 #1-25 (= our 49-73); the join checkpoints are S2 #17 勉強会 = our 41 'Study Group' and S2 #24 Eternal Party = our 48. No recap or half-numbered rows exist inside the target range. TWO ENTRIES ARE NOT IN OUR ROWS and must not be renumbered in: '#13' 炎天下の撮影モデルも楽じゃありませんわね。' is a short parallel episode to S1 #13, released on the DVD bundled with the OFFICIAL VISUAL BOOK (2010-07-27); '#EX 御坂さんはいま注目の的ですから' is the standalone OVA (2010-10-29), set after S1 #12. A third bonus, '#特典 大事なことはぜんぶ銭湯に教わった', came with the Railgun S OFFICIAL VISUAL BOOK Blu-ray (2014-03-27). ARC BOUNDARIES (they disagree, and the disagreement is the interesting part): ja.wikipedia and the ja Railgun wiki give Skill Out/Big Spider = S1 15-16, Poltergeist = S1 20-24, Silent Party = S2 18-24 (= our 42-48); the en toaru fandom's arc infoboxes give Poltergeist = S1 17-24 PLUS S2 #1 (our 25) as its coda, and Silent Party = S2 17-24 (our 41-48). The manga-side map (ja Railgun wiki) is Level Upper = vol1 ch1 - vol3 ch17 (anime 1-12), Sisters = vol4 ch18 - vol7 ch39 + the ch-39 special (anime S2 1-16), Daihasei = vol7 ch43 - vol10 ch70 (anime S3 1-15) - i.e. chs 40-42 are the skipped vol-7 intermission and chs 43-44 are Daihasei's opening, which is why eps 46/47 could pull single scenes from them. STAFF: the ja.wikipedia staff table has rows for 原作 / キャラクター原案 / 監督 / 助監督 / シリーズ構成 / ... and NO 監修 or 原案 row; the episode table has no 原案 column. So no episode-level story credit exists for Kamachi anywhere - the supervision claim lives only in ja.wikipedia prose.",
+    "order_only": []
+  },
+  "flags_for_sean": [
+    "SPLIT EVIDENCE - Silent Party (42-48). Recommended canon + adopted{author} at MEDIUM. The whole author basis for S2 is one line: Kamachi's 2022 15th-anniversary Railgun light novel refers back to Janie and Febrie in ch2 pt3 (the wiki chapter page carries it as an {{Expand}} placeholder with a page-level citation, and both characters' infoboxes list that novel as their 'referenced-only' novel debut) - I could not corroborate it outside the toaru fandom. ja.wikipedia's supervision sentence covers S1's second cour only. The alternative reading is: 42-45 and 48 = filler, 46 and 47 = MIXED (they each carry one manga scene). https://toarumajutsunoindex.fandom.com/api.php?action=parse&page=Toaru%20Kagaku%20no%20Railgun%20(light%20novel)/Chapter%202&prop=wikitext&format=json",
+    "THE SUPERVISION CLAIM IS UNCITED. 'ja.wikipedia: 2クール目は原作者・鎌池和馬の監修下で…' carries no reference, and there is no 監修/原案 credit in the staff table. The claim would be settled by two print sources I could not reach online: Otona Anime Vol.31 (Yosensha, 2013-08-23, pp.2-77 on Railgun S - cited by ja.wikipedia for other production facts) and the Railgun / Railgun S OFFICIAL VISUAL BOOKs. If you want the basis to rest on a declaration rather than on downstream use, that is where to look.",
+    "CONSEQUENCE FOR EP 14 (not a target row). If eps 15-24 become canon + adopted{author}, ep 14 'Special Workshop' sits inside the same anime-original second cour (it aired 2010-01-08; the cour boundary is 13|14) and the fandom calls it 'an anime-original episode ... not adapted from any other media'. It is currently filler with its ch-17 anchor already deleted under A6. Either it joins the adopted block or the block's boundary needs a reason to exclude it - I did not research its franchise carry-forward, and unlike 15-24 it belongs to no arc.",
+    "CONSEQUENCE FOR EP 25 (not a target row). The toaru fandom Poltergeist Arc infobox lists Railgun S ep 1 (our 25) as the arc's final instalment, and that episode's page says 'The library scene is lifted from the 41st Railgun manga chapter, otherwise all the content is an anime original.' Our stored state is filler + partial {~18 setup}. Under this verdict ep 25 would be canon (adopted) and would still be carrying a ch-41 scene - AFL also calls it 'anime canon' (its anime-canon run is 20-25). Worth a follow-up row.",
+    "POSSIBLE EP-12 CHAPTER QUESTION (out of scope, flagged only). The ja Railgun wiki's arc map ends the Level Upper arc at 第3巻第17話「七月二十五日」 and says the anime covered it in S1 eps 1-12, which would put ch 17 inside the ep-1..12 span rather than after it. Our stored anchor is ep 12 -> 16 with continue at 17, and batch-15/A6 already refuted the old 'ep 14 grafts ch 17' claim. I did not research this and am NOT proposing a repair - but the continue-chapter may deserve its own look. https://acertainscientificrailgun.fandom.com/ja/api.php?action=parse&page=%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AA%E3%83%BC&prop=wikitext&format=json",
+    "AFL DISAGREES WITH ITSELF IN A USEFUL WAY. animefillerlist marks 15-16 and 20-25 'anime canon' but 13-14, 17-19 and 41-48 'filler' - i.e. its 'anime canon' tracks the two S1 original ARCS and stops at their edges. That is a starting principle, not a verdict, but it is the same boundary ja.wikipedia draws, and it is the reason 17-19 are medium rather than high here.",
+    "STUDIO BASIS CONSIDERED AND NOT USED. There is a real intra-anime continuity thread (S1's Poltergeist ending -> Railgun S ep 22's prison visit to Therestina; the Endymion space elevator built into Railgun S's backdrop), which would read as adopted{studio}. I did not recommend it because the harder evidence runs through the source side - the manga drawing ep 20's photograph and Kamachi writing Therestina, Kurozuma/Big Spider, Haruue, Edasaki, Janie and Febrie into his own novels - which is an author basis, and because 'the studio kept its own material' is the weaker claim of the two."
+  ]
+}

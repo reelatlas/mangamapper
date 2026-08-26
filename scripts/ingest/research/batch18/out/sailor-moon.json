@@ -1,0 +1,162 @@
+{
+  "series_id": "sailor-moon",
+  "summary": "Eps 167-172 are the ネヘレニア復活編 (\"Nehelenia Revival Arc\"), a six-episode prologue Toei placed at the head of Sailor Stars to bridge SuperS and the manga's Stars arc. Every non-AFL source calls the STORYLINE anime-original (ja.wikipedia: 「序盤の6話分は『ネヘレニア復活編』という形で、第4シリーズと第5シリーズの橋渡し的なエピソードを放送」; en.wikipedia, citing Animedia April 1996, calls it a prologue and names it the anime-original 'Resurrection of Nehelenia Arc'; the old-Wikipedia text preserved on manga.fandom says the episodes 'originated as filler to allow Takeuchi time to begin her new story-arc'). But the arc is NOT uniformly empty of source content: because SuperS dropped the Outer Guardians entirely, the Stars writers used the first two episodes to finally play the Dream-arc material SuperS had to skip. Ep 167 carries Act 38's closing beats (the five entering high school, Chibiusa's aborted return to the 30th century, the Outers with infant Hotaru) plus the opening of Act 44 'Dream 6 - New Guardians Dream' (the 'Happy Outers Family', Hotaru's accelerated growth, her solar-system vision of the Moon swallowed by darkness, and her granting the Outers their crystals/Super forms); ep 168 carries Act 44's core (Sailor Saturn's spirit re-awakening Hotaru, restoring her memories and ageing her -> Super Sailor Saturn; the ten uniting) and the Act 48-49 Eternal beat (the nine pour power into Sailor Moon -> Eternal Moon Article / Eternal Tiare / Eternal Sailor Moon / Starlight Honeymoon Therapy Kiss). Eps 169-172 have no such footing — sailormoon.fandom states outright of 169 and 171 that 'none of these scenes were in the manga', and 172's redemption of Nehelenia is explicitly contrary to the manga, where she is an incarnation of Chaos, is sealed for good in Act 49 and is never redeemed. So the block splits 2 mixed / 4 filler. Neither adopted{author} nor adopted{studio} is supportable: Takeuchi's only anime credit is the blanket 原作/原案 one (ja.wikipedia adds that she is said to have had 軋轢 with the staff over the show's direction), and her documented statements about this season (Original Picture Collection V, Kodansha 1997) are complaints about what the adaptation left out and changed, not an endorsement; no later Toei production carries the Nehelenia revival forward (Crystal, Eternal and Cosmos all re-adapt the manga).",
+  "standings": [
+    {
+      "episodes": [
+        167,
+        168
+      ],
+      "type": "mixed",
+      "confidence": "high",
+      "note": "MIXED, not filler. Anime-original frame (Nehelenia freed from her mirror by Galaxia's disembodied voice, the Mirror Paredri, the Dark Mirror shard lodged in Mamoru's eye) wrapped around real, previously-unadapted manga content that SuperS had skipped. Ep 167: Act 38's closing pages — Usagi/Ami/Makoto/Minako start high school (ja.wikipedia 月野うさぎ: 「第4部と第5部（テレビアニメでは『スターズ』）で都立十番高校に進学し」, i.e. the manga does this at part 4, the anime defers it to Stars) and Chibiusa is about to go back to Crystal Tokyo when the new threat aborts the departure (manga Act 38 ends on exactly that beat with Pegasus; ja.wikipedia ちびうさ: 「『スターズ』序盤ではネヘレニアの事件の影響で30世紀に帰れなくなる」) — plus the opening of Act 44 'Dream 6 - New Guardians Dream': the Outers living together raising the rapidly-growing Hotaru (the 'Happy Outers Family' the SuperS writers had to leave out), her visions of the Moon consumed by darkness and the Princess in danger, and her granting the Outers their power-up (Super Sailor Uranus / Neptune / Pluto debut here; ja.wikipedia 天王はるか and 海王みちる both describe the Sailor Crystal as 「再覚醒したほたるの力で目覚めた」 and date the Transformation Lip Rod's final use to 「スターズ第1話」 = our 167). Ep 168: sailormoon.fandom states 'Half of this episode is based on Act 44 of the manga' — Hotaru's violin/solar-system illusion, Sailor Saturn's spirit telling her the time to awaken has come, restoring her past-life memories and ageing her, then Super Sailor Saturn arriving with the Outers and the ten guardians uniting; all of it matches Act 44's summary beat for beat. Ep 168 also carries the manga's Act 48-49 Eternal beat, relocated: the nine concentrate their power into Sailor Moon, the Crisis Moon Compact becomes the Eternal Moon Article and the Moon Kaleido Scope the Eternal Tiare, Eternal Sailor Moon and Starlight Honeymoon Therapy Kiss debut — ja.wikipedia 月野うさぎ independently pairs each of these with 「原作漫画第4部以降 / 第4部ラスト〜第5部 / 第4部終盤以降」 and 「初代テレビアニメ『スターズ』」. None of this could have been adapted earlier: the Outers do not appear in SuperS at all (ja.wikipedia: 「はるか、みちる、せつな、ほたるはレギュラー登場せず」), and at ep 166 Sailor Moon is still Super, not Eternal. Non-source share is roughly half of each episode, hence mixed rather than canon.",
+      "sources": [
+        "https://sailormoon.fandom.com/api.php?action=parse&page=The%20Flower%20of%20Nightmares%20Scatters:%20The%20Queen%20of%20Darkness%20Returns&prop=wikitext&format=json",
+        "https://sailormoon.fandom.com/api.php?action=parse&page=Saturn%20Awakens:%20The%20Ten%20Sailor%20Guardians%20Unite&prop=wikitext&format=json",
+        "https://sailormoon.fandom.com/wiki/Act_44_Dream_6_-_New_Guardians_Dream",
+        "https://sailormoon.fandom.com/wiki/Act_38_Infinity_12_Infinite_-_Journey",
+        "https://sailormoon.fandom.com/wiki/Act_48_Dream_10_-_Princess_Dream",
+        "https://sailormoon.fandom.com/wiki/Act_49_Dream_11_-_Earth_and_Moon_Dream",
+        "https://ja.wikipedia.org/wiki/%E5%9C%9F%E8%90%A0%E3%81%BB%E3%81%9F%E3%82%8B",
+        "https://ja.wikipedia.org/wiki/%E6%9C%88%E9%87%8E%E3%81%86%E3%81%95%E3%81%8E",
+        "https://ja.wikipedia.org/wiki/%E5%A4%A9%E7%8E%8B%E3%81%AF%E3%82%8B%E3%81%8B",
+        "https://ja.wikipedia.org/wiki/%E6%B5%B7%E7%8E%8B%E3%81%BF%E3%81%A1%E3%82%8B",
+        "https://ja.wikipedia.org/wiki/%E3%81%A1%E3%81%B3%E3%81%86%E3%81%95",
+        "https://en.wikipedia.org/wiki/Sailor_Moon_Sailor_Stars",
+        "https://manga.fandom.com/wiki/List_of_Sailor_Moon_Sailor_Stars_episodes"
+      ]
+    },
+    {
+      "episodes": [
+        169,
+        170,
+        171,
+        172
+      ],
+      "type": "filler",
+      "confidence": "high",
+      "note": "FILLER — zero standing in the source. Once the relocated Dream-arc material is spent at eps 167-168, the remaining four episodes are the anime-original Nehelenia story proper: Nehelenia's mirror-curse epidemic and her abduction of Mamoru (169), the Sailor Teleport to her castle and the guardians being sealed in mirrors in pairs (170), the paired duels inside the nightmare world (171), and Usagi redeeming Nehelenia with compassion so that she is reborn as a child (172). sailormoon.fandom's 'Changes from the Manga' section says flatly of 169 'None of these scenes were in the manga' and of 171 '*None of these scenes were in the manga.'; for 170 and 172 the section lists only contrasts with the manga, no adapted act — and 172's headline contrast is decisive: 'Nehelenia is never redeemed, due to being an incarnation of Chaos', the manga instead cursing her into a hideous form and sealing her away permanently in Act 49, which the anime had already rendered (heavily altered) at ep 166. ja.wikipedia and both fandom wikis name the whole block アニメオリジナル: 「序盤の6話分は『ネヘレニア復活編』という形で、第4シリーズと第5シリーズの橋渡し的なエピソードを放送」 / 「『ネヘレニア復活編』（アニメオリジナル）」; en.wikipedia, citing an April 1996 Animedia report, calls the six a prologue with 'the story proper' beginning at ep 173, and the old-Wikipedia text on manga.fandom says the episodes 'originated as filler to allow Takeuchi time to begin her new story-arc'. What manga material these four do touch is element-level only (see the loose_parallel annotation), not adapted acts. NOTE: AFL labels all six rows 'Manga Canon' — it is simply wrong here for 169-172, and its label is the reason the rows entered this batch.",
+      "sources": [
+        "https://sailormoon.fandom.com/api.php?action=parse&page=The%20Cursed%20Mirror:%20Mamoru%20Caught%20in%20a%20Nightmare&prop=wikitext&format=json",
+        "https://sailormoon.fandom.com/api.php?action=parse&page=For%20Love:%20The%20Endless%20Battle%20in%20the%20Dark%20World&prop=wikitext&format=json",
+        "https://sailormoon.fandom.com/api.php?action=parse&page=Moon%20Power%20of%20Love:%20The%20Nightmare%20Ends&prop=wikitext&format=json",
+        "https://ja.wikipedia.org/wiki/%E7%BE%8E%E5%B0%91%E5%A5%B3%E6%88%A6%E5%A3%AB%E3%82%BB%E3%83%BC%E3%83%A9%E3%83%BC%E3%83%A0%E3%83%BC%E3%83%B3_%28%E3%83%86%E3%83%AC%E3%83%93%E3%82%A2%E3%83%8B%E3%83%A1%29",
+        "https://sailormoon.fandom.com/ja/wiki/%E7%BE%8E%E5%B0%91%E5%A5%B3%E6%88%A6%E5%A3%AB%E3%82%BB%E3%83%BC%E3%83%A9%E3%83%BC%E3%83%A0%E3%83%BC%E3%83%B3_%28%E3%82%A2%E3%83%8B%E3%83%A1%29",
+        "https://en.wikipedia.org/wiki/Sailor_Moon_Sailor_Stars",
+        "https://manga.fandom.com/wiki/List_of_Sailor_Moon_Sailor_Stars_episodes",
+        "https://sailormoon.fandom.com/wiki/Act_49_Dream_11_-_Earth_and_Moon_Dream"
+      ]
+    }
+  ],
+  "annotations": [
+    {
+      "episodes": [
+        167
+      ],
+      "kind": "rearranged",
+      "chapters": "38, 44",
+      "note": "Deferred manga content, not new content. The tail of Act 38 (high-school entry; Chibiusa packing for the 30th century, her departure aborted by the new threat; the Outers taking in infant Hotaru) and the opening of Act 44 (the Outers' household, Hotaru's abnormal growth and her vision of the Moon devoured by darkness, her power-up of Uranus/Neptune/Pluto) land here because SuperS dropped the Outer Guardians wholesale. sailormoon.fandom's episode page states 'This episode is based on part of Act 38'; the Super-form and Sailor-Crystal bullets in the same section are Act 44 material.",
+      "sources": [
+        "https://sailormoon.fandom.com/api.php?action=parse&page=The%20Flower%20of%20Nightmares%20Scatters:%20The%20Queen%20of%20Darkness%20Returns&prop=wikitext&format=json",
+        "https://sailormoon.fandom.com/wiki/Act_38_Infinity_12_Infinite_-_Journey",
+        "https://sailormoon.fandom.com/wiki/Act_44_Dream_6_-_New_Guardians_Dream",
+        "https://ja.wikipedia.org/wiki/%E6%9C%88%E9%87%8E%E3%81%86%E3%81%95%E3%81%8E",
+        "https://ja.wikipedia.org/wiki/%E3%81%A1%E3%81%B3%E3%81%86%E3%81%95"
+      ]
+    },
+    {
+      "episodes": [
+        168
+      ],
+      "kind": "rearranged",
+      "chapters": "44, 48-49",
+      "note": "Act 44's core (Sailor Saturn's spirit re-awakens Hotaru, returns her past-life memories and ages her; Super Sailor Saturn's debut; the ten guardians uniting) plus the Act 48-49 Eternal beat (the nine pour their power into Sailor Moon; Eternal Moon Article, Eternal Tiare, Eternal Sailor Moon and Starlight Honeymoon Therapy Kiss all debut). sailormoon.fandom: 'Half of this episode is based on Act 44 of the manga'. ja.wikipedia dates each Eternal item/form to 原作第4部 (Dream) and to the anime's 『スターズ』, confirming the relocation across the SuperS/Stars seam.",
+      "sources": [
+        "https://sailormoon.fandom.com/api.php?action=parse&page=Saturn%20Awakens:%20The%20Ten%20Sailor%20Guardians%20Unite&prop=wikitext&format=json",
+        "https://sailormoon.fandom.com/wiki/Act_44_Dream_6_-_New_Guardians_Dream",
+        "https://sailormoon.fandom.com/wiki/Act_48_Dream_10_-_Princess_Dream",
+        "https://sailormoon.fandom.com/wiki/Act_49_Dream_11_-_Earth_and_Moon_Dream",
+        "https://ja.wikipedia.org/wiki/%E6%9C%88%E9%87%8E%E3%81%86%E3%81%95%E3%81%8E",
+        "https://ja.wikipedia.org/wiki/%E5%9C%9F%E8%90%A0%E3%81%BB%E3%81%9F%E3%82%8B"
+      ]
+    },
+    {
+      "episodes": [
+        167,
+        168,
+        169,
+        170,
+        171,
+        172
+      ],
+      "kind": "divergence",
+      "note": "The arc's premise is anime-original: Nehelenia is freed from the mirror she sealed herself into by Sailor Galaxia's disembodied voice, plants a Dark Mirror shard in Mamoru's eye, seals the guardians in mirrors, and is finally redeemed by Usagi's compassion and reborn as a child. In the manga none of this happens — Nehelenia is cursed into a hideous form and sealed away permanently at the end of Act 49, is an incarnation of Chaos, and is never redeemed; Galaxia never interacts with her. ja.wikipedia and both fandom wikis name the block 「ネヘレニア復活編」（アニメオリジナル）; en.wikipedia (citing Animedia, April 1996) calls it a prologue, with the story proper resuming at ep 173. Replaces the stored A-7 placeholder divergence note.",
+      "sources": [
+        "https://ja.wikipedia.org/wiki/%E7%BE%8E%E5%B0%91%E5%A5%B3%E6%88%A6%E5%A3%AB%E3%82%BB%E3%83%BC%E3%83%A9%E3%83%BC%E3%83%A0%E3%83%BC%E3%83%B3_%28%E3%83%86%E3%83%AC%E3%83%93%E3%82%A2%E3%83%8B%E3%83%A1%29",
+        "https://sailormoon.fandom.com/ja/wiki/%E7%BE%8E%E5%B0%91%E5%A5%B3%E6%88%A6%E5%A3%AB%E3%82%BB%E3%83%BC%E3%83%A9%E3%83%BC%E3%83%A0%E3%83%BC%E3%83%B3_%28%E3%82%A2%E3%83%8B%E3%83%A1%29",
+        "https://en.wikipedia.org/wiki/Sailor_Moon_Sailor_Stars",
+        "https://sailormoon.fandom.com/api.php?action=parse&page=Moon%20Power%20of%20Love:%20The%20Nightmare%20Ends&prop=wikitext&format=json",
+        "https://sailormoon.fandom.com/wiki/Act_49_Dream_11_-_Earth_and_Moon_Dream"
+      ]
+    },
+    {
+      "episodes": [
+        170,
+        171,
+        172
+      ],
+      "kind": "loose_parallel",
+      "chapters": "45, 47, 50-51",
+      "note": "Element-level carryover only — recorded so it is not mistaken for adaptation. The guardians sealed inside mirror shards and later freed (manga Acts 45 and 47, where Zirconia traps Saturn and Chibi Moon and Sailor Moon frees them), Saturn's Silence Wall and Silence Glaive Surprise (both debut in manga Act 45; ja.wikipedia dates both to 原作第4部 and 初代テレビアニメ『スターズ』), and Chibi Moon fading from existence because Mamoru is lost (an idea from the manga's Stars arc, where Chibiusa ceases to exist after Galaxia kills Mamoru) are re-used inside a scenario with no manga counterpart. No manga act is adapted in 169-172; these rows stay filler.",
+      "sources": [
+        "https://sailormoon.fandom.com/wiki/Act_45_Dream_7_-_Mirror_Dream",
+        "https://sailormoon.fandom.com/wiki/Act_47_Dream_9_-_Dead_Moon_Dream",
+        "https://sailormoon.fandom.com/api.php?action=parse&page=Moon%20Power%20of%20Love:%20The%20Nightmare%20Ends&prop=wikitext&format=json",
+        "https://ja.wikipedia.org/wiki/%E5%9C%9F%E8%90%A0%E3%81%BB%E3%81%9F%E3%82%8B"
+      ]
+    }
+  ],
+  "repairs": [
+    {
+      "episode": 167,
+      "field": "type",
+      "old": "filler",
+      "new": "mixed",
+      "why": "The stored T6 override types 167 filler on the strength of the arc being anime-original. The arc's PREMISE is anime-original, but this episode also carries manga content SuperS never adapted: the tail of Act 38 (the five entering high school; Chibiusa's aborted return to the 30th century) and the opening of Act 44 (the Outers raising the rapidly-growing Hotaru — the 'Happy Outers Family' — her vision of the Moon consumed by darkness, and her granting them their crystals, which is where Super Sailor Uranus/Neptune/Pluto debut). sailormoon.fandom's episode page says outright 'This episode is based on part of Act 38'. Source + non-source in one episode = mixed under T25/T26.",
+      "sources": [
+        "https://sailormoon.fandom.com/api.php?action=parse&page=The%20Flower%20of%20Nightmares%20Scatters:%20The%20Queen%20of%20Darkness%20Returns&prop=wikitext&format=json",
+        "https://sailormoon.fandom.com/wiki/Act_38_Infinity_12_Infinite_-_Journey",
+        "https://sailormoon.fandom.com/wiki/Act_44_Dream_6_-_New_Guardians_Dream",
+        "https://ja.wikipedia.org/wiki/%E6%9C%88%E9%87%8E%E3%81%86%E3%81%95%E3%81%8E",
+        "https://ja.wikipedia.org/wiki/%E3%81%A1%E3%81%B3%E3%81%86%E3%81%95",
+        "https://manga.fandom.com/wiki/List_of_Sailor_Moon_Sailor_Stars_episodes"
+      ]
+    },
+    {
+      "episode": 168,
+      "field": "type",
+      "old": "filler",
+      "new": "mixed",
+      "why": "sailormoon.fandom states 'Half of this episode is based on Act 44 of the manga', and the match is beat-for-beat: Hotaru's violin vision and solar-system illusion, Sailor Saturn's spirit re-awakening her and ageing her, Super Sailor Saturn's debut, the ten guardians uniting. The episode additionally carries the manga's Act 48-49 Eternal beat (Eternal Moon Article, Eternal Tiare, Eternal Sailor Moon, Starlight Honeymoon Therapy Kiss all debut here; ja.wikipedia 月野うさぎ pairs each with 原作第4部 and 初代テレビアニメ『スターズ』). Ep 166 cannot have carried these — Sailor Moon is still Super there. Half source, half anime-original Nehelenia framing = mixed.",
+      "sources": [
+        "https://sailormoon.fandom.com/api.php?action=parse&page=Saturn%20Awakens:%20The%20Ten%20Sailor%20Guardians%20Unite&prop=wikitext&format=json",
+        "https://sailormoon.fandom.com/wiki/Act_44_Dream_6_-_New_Guardians_Dream",
+        "https://sailormoon.fandom.com/wiki/Act_48_Dream_10_-_Princess_Dream",
+        "https://sailormoon.fandom.com/wiki/Act_49_Dream_11_-_Earth_and_Moon_Dream",
+        "https://ja.wikipedia.org/wiki/%E6%9C%88%E9%87%8E%E3%81%86%E3%81%95%E3%81%8E",
+        "https://ja.wikipedia.org/wiki/%E5%9C%9F%E8%90%A0%E3%81%BB%E3%81%9F%E3%82%8B"
+      ]
+    }
+  ],
+  "structure": {
+    "notes": "ROW IDENTITY: clean. sailormoon.fandom, ja.wikipedia and AFL all number Sailor Stars 167-200 in the same cumulative space as our rows, and titles+dates line up one-for-one across the seam (167 = 1996-03-09 'The Flower of Nightmares Scatters / Resurrection of the Queen of Darkness'; 172 = 1996-05-04; 173 = 1996-05-11 'Farewells and Encounters'). No specials or recaps sit inside 167-172; the only special in the wider series is the 1995-04-08 SuperS TV special, which is already outside this range and outside our 200 rows. Note ja.wikipedia records a production tell that matches the arc boundary exactly: the eyecatch has no sound effect for eps 167-172 and gains one from 173 — the same seam every content source draws. ARC SHAPE: Sailor Stars = 6 anime-original prologue episodes (167-172) + 28 episodes adapting the manga's Stars arc (173-200), the same two-part shape as season 2 (R's 13-episode Makaiju arc + Black Moon). MANGA SPACE: 60 numbered Acts + short stories (our 61-chapter figure includes the shorts); Dark Kingdom 1-14, Black Moon 15-26, Infinity 27-38, Dream 39-49, Stars 50-60. The Dream arc is therefore Acts 39-49, and Act 44 is 'Dream 6 - New Guardians Dream' — the act SuperS could not use because Toei wrote the Outer Guardians out of that season entirely (ja.wikipedia: 「はるか、みちる、せつな、ほたるはレギュラー登場せず」). ANCHOR NOTE (deliberately no anchors proposed): eps 167-168 now carry real acts (38 tail, 44, 48-49 elements), but they sit BETWEEN a stored ep166 anchor ending at Act 49 and a stored ep173 anchor starting at Act 50. Anchoring 167/168 at 38/44 would drive the reading position backwards by eleven acts and break monotonicity for a user in the middle of Stars, so the correspondence is recorded as rearranged annotations only. Sean's call.",
+    "order_only": []
+  },
+  "flags_for_sean": [
+    "ADOPTION: recommended NO. adopted{author} fails the batch-18 bar — Takeuchi's only credit here is the blanket one (ja.wikipedia: 原作 plus 原案 for characters/settings/story, theme-song lyrics, movie originals, 監修 on the GAME versions, 「作品の方向性などでスタッフとの軋轢があったと言われている」), and no source credits her with the Nehelenia-revival story or records her declaring it canon. Her documented statements run the other way: per the Original Picture Collection Vol. V (Kodansha, Aug 1997) she listed things she wanted in the anime that were absent (the Eternal uniforms, Sailors Kakyuu/Cosmos/Lethe/Mnemosyne), was surprised the Starlights were leads, and was displeased by their gender change. adopted{studio} also fails: the arc is a scheduling decision (a prologue to let the manga get ahead — Animedia 1996-04 via en.wikipedia; 'originated as filler to allow Takeuchi time to begin her new story-arc' in the old-Wikipedia text), and no later Toei production carries it forward — Crystal, the Eternal films and Cosmos all re-adapt the manga and contain no Nehelenia revival. https://ja.wikipedia.org/wiki/%E7%BE%8E%E5%B0%91%E5%A5%B3%E6%88%A6%E5%A3%AB%E3%82%BB%E3%83%BC%E3%83%A9%E3%83%BC%E3%83%A0%E3%83%BC%E3%83%B3_%28%E3%83%86%E3%83%AC%E3%83%93%E3%82%A2%E3%83%8B%E3%83%A1%29 | https://manga.fandom.com/wiki/List_of_Sailor_Moon_Sailor_Stars_episodes | https://en.wikipedia.org/wiki/Sailor_Moon_Sailor_Stars",
+    "The interesting finding is the inverse of the question asked: the arc is not adopted, but it is not wholly empty either. Restoring source material SuperS skipped is ADAPTATION, not adoption — which is why 167-168 come back as mixed rather than as canon+adopted{studio}.",
+    "POSSIBLE OVERSTATEMENT IN A STORED ANCHOR (not proposed as a repair, flagged only): ep166 is stored as {48-49}, 'heavily altered finale vs Nehelenia'. Ep 166 does render the Nehelenia defeat, but the specific Act 48-49 payload — the Holy Moon Chalice, the Eternal Moon Article, Eternal Sailor Moon, the Eternal Tiare and Starlight Honeymoon Therapy Kiss — is not in ep 166 (Sailor Moon is still Super there); it lands in ep 168. If Sean wants the ep166 anchor tightened, the honest reading is ep166 ~ Act 49's outcome with the Eternal attainment deferred to 168. https://sailormoon.fandom.com/wiki/Act_48_Dream_10_-_Princess_Dream | https://ja.wikipedia.org/wiki/%E6%9C%88%E9%87%8E%E3%81%86%E3%81%95%E3%81%8E",
+    "BORDERLINE ROWS 170 and 172: sailormoon.fandom gives these two a 'Changes from the Manga' list rather than the blunt 'none of these scenes were in the manga' it gives 169 and 171, and both re-use manga furniture (the mirror-sealing of the guardians from Acts 45/47; Saturn's Silence Wall and Silence Glaive Surprise, which debut in Act 45; Chibi Moon fading because Mamoru is lost, an idea from the manga's Stars arc). I judged that element re-use inside a scenario with no manga counterpart is not source content, so 169-172 all stay filler; the loose_parallel annotation on 170-172 records the re-use (171 carries the mirror-sealing motif too, which is why it is inside that annotation despite fandom's blunt 'none of these scenes were in the manga'). If Sean reads element re-use as clearing the mixed bar, 172 is the one that would move.",
+    "AFL LABEL IS WRONG HERE, worth noting for the source-trust ledger: animefillerlist marks all six rows 'Manga Canon' — the strongest possible claim — for a block that ja.wikipedia, en.wikipedia (citing Animedia 1996-04), the Japanese fandom wiki and the English fandom wiki all call anime-original. It is right by accident on 167-168 and wrong on 169-172. https://www.animefillerlist.com/shows/sailor-moon"
+  ]
+}
