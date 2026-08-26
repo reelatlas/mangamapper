@@ -864,4 +864,29 @@ export const RULES: Rule[] = [
     status: 'live',
     see: ['R10', 'A2'],
   },
+  {
+    id: 'A44',
+    aliases: ['anchor suppression', 'ANCHOR_SUPPRESSED', 'anchorless rows', 'position-less rows', 'cover-page serial rule', 'suppressed anchor'],
+    family: 'A',
+    title: 'Position-less rows: a ruled row never takes an anchor',
+    statement:
+      "A canon or mixed row whose source content cannot be a reading position — a cover-page side story running ahead of the main line, a side story with no chapter number, acts that sit behind an earlier anchor, a gag special — is ruled POSITION-LESS in ANCHOR_SUPPRESSED (reason + cite) and every anchor writer refuses it: the AFG chart (syncAnchors), the AFG continua (applyContinua) and the MU frontier (applyMuFrontier). The A1 type gate cannot hold these rows because they are legitimately canon/mixed. The healer removes any standing anchor on a suppressed row (the ruling entry IS the A6 triage); a stored anchor on one is a ruling_violation.",
+    why:
+      "Batch 18 wave 3 (2026-08-26): retyping one-piece 453-456 (Oda's cover-page serial) from filler to mixed would have silently re-created the ep-455 junk anchor Sean deleted under A6 in batch 17 — that deletion lived only in a history apply script, and AFG's chart prints the cover numbers (545-551) on all four rows; 453/454/456 stayed anchorless by an LIS tie-break on chart values, not by rule. Same exposure on gto 27 (a side story with no Lesson number), sailor-moon 167-168 (Acts behind ep 166), railgun 41.",
+    ruledBy: 'Sean',
+    ruledOn: '2026-08-26',
+    origin: 'scripts/ingest/research/batch18/verify/one-piece.md (verifier finding 1)',
+    enforcement: [
+      { path: 'scripts/ingest/lib/rulings/anchor-suppressed.ts', symbol: 'ANCHOR_SUPPRESSED' },
+      { path: 'scripts/ingest/lib/anchors.ts', symbol: 'syncAnchors' },
+      { path: 'scripts/ingest/lib/anchors.ts', symbol: 'applyContinua' },
+      { path: 'scripts/ingest/lib/mu-frontier.ts', symbol: 'applyMuFrontier' },
+      { path: 'scripts/ingest/assert-overrides.ts', symbol: 'assertAnchorSuppression' },
+    ],
+    layer: 'writer',
+    auditClass: ['ruling_violation'],
+    witnesses: ['one-piece', 'gto-great-teacher-onizuka', 'sailor-moon', 'a-certain-scientific-railgun'],
+    status: 'live',
+    see: ['A1', 'A6', 'T28', 'T26', 'G26', 'G32'],
+  },
 ];

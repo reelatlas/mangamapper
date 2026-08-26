@@ -242,6 +242,19 @@
         "filler"
       ],
       "source": "T4.0 D-10 / T4.3 (2026-08-26)"
+    },
+    {
+      "ask": "one-piece 453-456 animate Oda's cover-page story and are mixed — AFG's chart lists the cover chapters; will the refresh write an anchor there?",
+      "expected": [
+        "A44",
+        "A1"
+      ],
+      "terms": [
+        "position-less",
+        "cover-page",
+        "anchor"
+      ],
+      "source": "batch 18 wave 3 verifier (2026-08-26)"
     }
   ]
 }

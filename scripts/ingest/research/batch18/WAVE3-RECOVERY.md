@@ -28,6 +28,17 @@ Four bundled agents, 17 series, 24 rows; all 32 batch-18 verdicts pass
 ## Verification targets (weight-bearing)
 black-clover 55-56 (novel), one-piece 453-456 (cover story canon → mixed + the 455 repair), akame 20-21, 86 ep 10 (canon on the LN), SAO 50 (premise correction + the movie's adoption), kenshin-2023 44 (author repair). The rest agree with stored typing or are single-row filler calls.
 
+## Verification (R24, Fable, ~0.56M) — reports in `verify/`
+
+| verdict | result |
+|---|---|
+| black-clover 13/55/56 | SOUND — 55-56 canon + side_source (three independent legs); fork: ep 56 canon vs mixed (Shippuden-455 symmetry) |
+| 86 ep 10 | SOUND in conclusion — canon + side_story; note overstated the back half; Asato's BD interview (missed) is the strongest source |
+| one-piece | SOUND on evidence; PIPELINE DEFECT: retyping 453-456 mixed re-enables AFG cover-page anchors (the A6 delete was one-time) → **A44 ANCHOR_SUPPRESSED built** (gate in three writers + healer + audit) |
+| akame 20-24 | rows defensible (20 → medium); the basis NEGATIVE IS FALSE — director Kobayashi: the anime ending was Takahiro's own outline, him on site; the manga later changed it → fork: filler + retconned (world-trigger shape) vs canon + adopted{author} + retconned; two false facts in the divergence note |
+| kenshin-2023 44 | **REFUTED as a per-episode act** — the 炸裂弾 line answers a question about ep 25 (a prop redesign); the Rengoku line is block-level consultation; the credit is blanket (Kodachi class); ep 34's basis is independent → filler, keep divergence, note the consultation |
+| SAO row 50 | SOUND — canon + adopted{author} by AUTHORSHIP (he wrote it; "incorporated into LN canon" is uncited, ja-WP 原作未収録); structure: no component → N7 + movie component; audit blind to component-less rows |
+
 ## Decisions for Sean
 1. Kenshin-2023: Watsuki's 脚本監修 is a SERIES-LEVEL regime for S2's anime-original material (34, 44 today; S3 rows will arrive) — encode as a ruling with both halves (his 「自分は漫画家だから」 counterweight is in the flags).
 2. SAO row 50 = Ordinal Scale: canon + adopted{author}, and the component/structure fix (I-family) — a movie numbered into the run.

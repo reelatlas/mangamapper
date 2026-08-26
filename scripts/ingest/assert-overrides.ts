@@ -15,6 +15,7 @@ import { airdateOrderWalk } from './lib/airdate-order';
 import { aflAnimeCanonStanding } from './lib/rulings/source-kinds';
 import { STANDING_ANNOTATIONS } from './lib/rulings/standing-annotations';
 import { upsertAnnotation } from './lib/annotations';
+import { ANCHOR_SUPPRESSED } from './lib/rulings/anchor-suppressed';
 
 const DRY = process.argv.includes('--dry-run');
 
@@ -119,8 +120,27 @@ async function assertStandingAnnotations() {
   console.log(`[assert-overrides] standing annotations (T26): ${n} rows asserted, ${removed} stale ruling rows removed, over ${Object.keys(STANDING_ANNOTATIONS).length} series${DRY ? ' — DRY RUN' : ''}`);
 }
 
+// A44: no anchor stands on a row ruled position-less — the ruling entry IS
+// the A6 triage, so the healer removes what the writers would now refuse.
+async function assertAnchorSuppression() {
+  let removed = 0;
+  for (const [sid, eps] of Object.entries(ANCHOR_SUPPRESSED)) {
+    const rows = await selectAll<{ episode: number; chapter: number; source: string }>('chapter_anchors', 'episode, chapter, source', (q) => q.eq('series_id', sid).in('episode', eps));
+    for (const r of rows) {
+      console.log(`  ${sid} ep${r.episode}: anchor ${r.source} → ch ${r.chapter} on a position-less row → removed (A44)`);
+      if (!DRY) {
+        const { error } = await db.from('chapter_anchors').delete().eq('series_id', sid).eq('episode', r.episode);
+        if (error) throw new Error(`${sid} ep${r.episode}: ${error.message}`);
+      }
+      removed++;
+    }
+  }
+  console.log(`[assert-overrides] anchor suppression (A44): ${Object.values(ANCHOR_SUPPRESSED).flat().length} ruled rows, ${removed} anchors removed${DRY ? ' — DRY RUN' : ''}`);
+}
+
 async function main() {
   await assertStandings();
+  await assertAnchorSuppression();
   await assertMap('types (T6)', EPISODE_TYPE_OVERRIDES, 'type');
   await assertStandingAnnotations();
   await assertMap('air dates (G53)', AIR_DATE_OVERRIDES, 'air_date');

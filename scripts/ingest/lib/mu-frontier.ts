@@ -14,6 +14,7 @@
 
 import { db, fileFlagOnce, selectAll } from './db';
 import { MU_FRONTIER_SUPPRESSED } from './rulings/mu-frontier-suppressed';
+import { isAnchorSuppressed } from './rulings/anchor-suppressed';
 
 export function parseCoverageAll(text: string | null): {
   pairs: { volume: number; chapter: number }[];
@@ -221,6 +222,7 @@ export async function applyMuFrontier(
     .eq('series_id', s.id)
     .eq('number', episode)
     .maybeSingle();
+  if (isAnchorSuppressed(s.id, episode)) return 'refused_episode_type'; // A44: position-less by ruling
   if (epRow && epRow.type !== 'canon' && epRow.type !== 'mixed') {
     await fileFlagOnce(runId, s.id, 'mangaupdates', 'count_mismatch', {
       pinEpisode: episode,

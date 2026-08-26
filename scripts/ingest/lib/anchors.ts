@@ -7,6 +7,7 @@ import { deriveAnchors, deriveBonusChapters, type AfgPage, type AfgContinua } fr
 import { db, fileFlagOnce, selectAll } from './db';
 import { upsertAnnotation } from './annotations';
 import { CONTINUA_SUPPRESSED, registerIds, translateEpisodeNumber } from './resolve';
+import { isAnchorSuppressed } from './rulings/anchor-suppressed';
 
 // heading comparison: decode leftover entities, drop parenthetical year
 // suffixes ("Rurouni Kenshin (1996)"), then collapse to word soup
@@ -139,6 +140,7 @@ export async function applyContinua(
     .eq('series_id', s.id)
     .eq('number', ep)
     .maybeSingle();
+  if (isAnchorSuppressed(s.id, ep)) return 'refused_episode_type'; // A44: position-less by ruling — no continua anchor, no flag needed (the ruling is the record)
   if (epRow && epRow.type !== 'canon' && epRow.type !== 'mixed') {
     await fileFlagOnce(runId, s.id, 'afg', 'count_mismatch', {
       pinEpisode: ep,
@@ -329,6 +331,10 @@ export async function syncAnchors(
       const t = typeByEp.get(a.episode);
       return t === undefined || t === 'canon' || t === 'mixed';
     })
+    // A44 (2026-08-26): rows ruled POSITION-LESS (cover-page serials, side
+    // stories without a chapter number, acts behind an earlier anchor) never
+    // take a chart anchor — the type gate cannot hold them (they are mixed)
+    .filter((a) => !isAnchorSuppressed(seriesId, a.episode))
     .filter((a) => !protectedEps.has(a.episode))
     // curated-CONSISTENCY (2026-08-23, the Boruto ep-219 lesson): a derived
     // row that contradicts the ordering around a research-tier anchor

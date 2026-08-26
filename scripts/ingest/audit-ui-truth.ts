@@ -13,6 +13,7 @@ import { c3Ahead, hasSkipLanguage } from './lib/c3';
 import { COMMUNITY_COUNT_OVERRIDES, CONTINUA_SUPPRESSED, EPISODE_TYPE_OVERRIDES, SOURCE_NUMBERING_SHIFTS, translateEpisodeNumber } from './lib/resolve';
 import { AIRDATE_REGRESSION_THRESHOLD_DAYS, airdateOrderWalk } from './lib/airdate-order';
 import { AIR_DATE_OVERRIDES } from './lib/rulings/air-dates';
+import { ANCHOR_SUPPRESSED } from './lib/rulings/anchor-suppressed';
 import { deriveSourceKind, seriesHasInstrument, seriesHasSource, SOURCE_TYPE_OVERRIDES } from './lib/rulings/source-kinds';
 import { pickManga } from './lib/resolve';
 import { annotationProblem } from './lib/annotations';
@@ -155,6 +156,13 @@ async function main() {
       if (d.value !== row.source_type) classes.ruling_violation.push(`${row.id}: source_type '${row.source_type}' ≠ derived '${d.value}' (${d.reason}; T25)`);
       if (SOURCE_TYPE_OVERRIDES[row.id] && row.source_type !== SOURCE_TYPE_OVERRIDES[row.id]) classes.ruling_violation.push(`${row.id}: source_type '${row.source_type}' ≠ ruled '${SOURCE_TYPE_OVERRIDES[row.id]}' (T25)`);
     }
+  }
+  // A44 anchor suppression (2026-08-26): a stored anchor on a row ruled
+  // position-less (cover-page serials, side stories without a chapter number,
+  // acts behind an earlier anchor) = a writer bypassed the A1 gate stack or
+  // the healer has not run.
+  for (const [sid, eps] of Object.entries(ANCHOR_SUPPRESSED)) {
+    for (const a of anchors) if (a.series_id === sid && eps.includes(a.episode)) classes.ruling_violation.push(`${sid}: ep ${a.episode} carries an anchor (${a.source} → ch ${a.chapter}) on a row ruled position-less (A44)`);
   }
   // G53 air-date overrides (2026-08-26): a stored air_date that disagrees with a ruled one = a writer bypassed filterEpisodeRows or the assert healer has not run.
   for (const [sid, dates] of Object.entries(AIR_DATE_OVERRIDES)) {
