@@ -40,9 +40,18 @@ Read both, fully:
   ANNOTATION on a canon row: `adopted` with a REQUIRED basis (`author` |
   `studio` | `community` — who adopted it, cited), `side_source` (adapts a
   different licensed work — name it), `retconned` (later dropped from canon).
-  AFL/AFG typings are STARTING PRINCIPLES, never verdicts. When the canon
-  share is a single scene, whether it clears `mixed` is a judgment call —
-  present the facts.
+  The `author` basis also covers INCORPORATION: the source's author writing
+  the anime material's EVENTS into the source line (Railgun: the manga shows
+  a photo taken in ep 20; Kamachi's novels carry the arcs' outcomes) — never
+  a blanket credit, never designs without events. AFL/AFG typings are
+  STARTING PRINCIPLES, never verdicts. **The materiality bar (`T28`)**:
+  `mixed` needs a substantial, story-carrying share of the episode's own
+  plot — ask "what is this episode's job?"; an omake or side story that IS
+  the plot counts; an original plot that quotes a fragment (a cameo, one
+  graft, a transplanted beat, a restaged scene) is `filler` and the tie is
+  a MANDATORY `graft` / `partial` / `loose_parallel` annotation with the
+  chapters. Consensus on a block is a strong prior one overlap does not
+  overturn.
 - **Chapter overlap never proves filler (Sean, 2026-08-25, the zatch-bell
   lesson).** Different episodes can legitimately adapt or revisit the SAME
   chapters (ep 10 and ep 60 can both carry key parts of ch 40). "Every
