@@ -203,3 +203,41 @@ distinctions to encode later:
   instrument), so "canon" always answers "canon TO WHAT source".
 - Standing sub-rule effective now: ANY debate about a series' final episodes
   gets annotated in the data so the UI can represent it.
+
+## Restructure-phase charter (Sean's directive, 2026-08-25 — logged pre-compact, NOT started)
+
+**The goal, in his framing:** every rule, skill, logic, tool (fresh-data
+fetchers included), agent definition, learning, and design/data system gets
+updated and applied appropriately — CREATE where missing, IMPROVE or
+CONSOLIDATE where overlapping, REMOVE where dead, EXPAND where thin — so
+that when a problem or ask arises we ALWAYS know exactly where to refer,
+and never overlook an existing rule or learning the way parts of batch 17
+did (documented instances: the hellsing/gintama forks re-derived A4/C2
+rules that already existed; the first C3 healer run missed a query cap and
+mis-stamped C1 straddles until the audit caught it; the eyeshield import
+had taken AFG titles without its flags for months unnoticed). The end
+state: a clean, repeatable, scalable reference structure — best practice,
+where the SEPARATIONS (what lives in §10 vs a skill vs an agent definition
+vs a lib gate vs an audit) are effective, efficient, and self-evident.
+Success test: a cold session can find the governing rule for any ask in
+one hop.
+
+**Source-first typing architecture (extends the taxonomy-v2 notes above):**
+- A first-class SOURCE category per series, tied to the series ID: manga,
+  light novel, webtoon, manhwa, anime-studio-original — plus candidates to
+  consider: web novel, traditional novel, visual novel, game, manhua,
+  doujin, original video work. (series.source_type is the seed; make it
+  exhaustive and first-class.)
+- THEN canon / filler / mixed become relational: they describe how closely
+  an episode ties to THE SOURCE's canon — the semantics are already
+  implicit in our data and logic; make them explicit.
+- The canonical database must ingest any source's info and derive it into
+  ONE consistent, readable representation — the same instrument regardless
+  of source (the LN volume-space instrument ruling is the existing sibling).
+- UI/tag implications to design: the "anime only" tag needs at least a
+  rename; consider additional tags; "manga_only" likely becomes something
+  like "source only" so the comparison column generalizes beyond manga.
+
+**Process note:** the phase STARTS WITH A PLANNING SESSION (Sean +
+strategy: how to segment and sequence the work) — do not begin executing
+items before that plan is agreed.
