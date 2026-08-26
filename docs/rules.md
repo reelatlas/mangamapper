@@ -169,7 +169,7 @@
 - `I37` Continuation handoff: adjoining sibling scope = flow — aka `continuation handoff`, `claimed continuation → handoff`, `continues in X`
 - `I38` The source manga is the ADAPTATION edge of type/format MANGA — aka `manga link selection`, `anime→manga linkage`, `pickManga`
 
-**G — Gates & freshness (sources)** (42)
+**G — Gates & freshness (sources)** (43)
 - `G1` The flag rule: nothing suspicious auto-applies — aka `flag rule`, `the flag rule`, `the confirm queue`, `nothing suspicious ever auto-applies`
 - `G3` Recurring conditions flag once; only Sean dismisses — aka `fileFlagOnce`, `once-per-open-kind`
 - `G4` Permanent conditions leave the open queue *(planned)* — aka `dismissed_permanent`, `permanent-flag disposition`, `A-8`
@@ -212,6 +212,7 @@
 - `G50` New-source checklist: repeatable mechanism or not at all — aka `new-source checklist`, `no one-offs (sources)`
 - `G51` Staging keeps everything, raw HTML included — aka `staging is greedy`, `greedy staging`, `AFG re-fetch lesson`
 - `G52` Canon-tier creation: chartless manga shows still enter — aka `canon-tier creation`, `canon-tier`, `A-9`
+- `G53` Ruled air dates: AIR_DATE_OVERRIDES, re-applied at every write — aka `AIR_DATE_OVERRIDES`, `air-date overrides`, `air date override pass`, `ruled air dates`
 
 **V — Volumes & boundaries** (10)
 - `V1` Monotonic starts, or the row is not data — aka `monotonic-start gate`, `MONOTONIC-START rule`, `monotonic boundaries`, `monotonic starts`, `Sailor Moon v3 report`, `Sailor Moon "v3: chs 10-3"`
@@ -1071,7 +1072,7 @@ A research-ruled per-episode type correction lives ONLY in EPISODE_TYPE_OVERRIDE
 
 - ruled Sean 2026-08-23 (data-pipeline §10 "Episode-type overrides"; §12.47 NEW HEALER; CHUNK1-RECOVERY §11 D4 bullet)
 - layer **writer**
-- enforced: [lib/resolve.ts#EPISODE_TYPE_OVERRIDES](../scripts/ingest/lib/resolve.ts) · [lib/resolve.ts#filterEpisodeRows](../scripts/ingest/lib/resolve.ts) · [assert-type-overrides.ts#main](../scripts/ingest/assert-type-overrides.ts) · [audit-ui-truth.ts#ruling_violation](../scripts/ingest/audit-ui-truth.ts)
+- enforced: [lib/resolve.ts#EPISODE_TYPE_OVERRIDES](../scripts/ingest/lib/resolve.ts) · [lib/resolve.ts#filterEpisodeRows](../scripts/ingest/lib/resolve.ts) · [assert-overrides.ts#main](../scripts/ingest/assert-overrides.ts) · [audit-ui-truth.ts#ruling_violation](../scripts/ingest/audit-ui-truth.ts)
 - audit: `ruling_violation`
 - witnesses: x, eyeshield-21, rurouni-kenshin
 - aliases: EPISODE_TYPE_OVERRIDES, episode-type overrides, eyeshield ep-74 lesson, retype stays research-tier, type corrections via overrides, assert-type-overrides
@@ -2831,6 +2832,20 @@ A manga-sourced show with no per-episode chart anywhere (~0% filler, so AFL neve
 - aliases: canon-tier creation, canon-tier, A-9
 - see: G11, G12, G22, G39, base-type padding, ownership guard
 
+### G53 · Ruled air dates: AIR_DATE_OVERRIDES, re-applied at every write
+
+A research-ruled episode air date (2+ cited sources) lives ONLY in AIR_DATE_OVERRIDES and is re-applied inside filterEpisodeRows at every episode write — a bare DB update is clobbered by the next AFL refresh. Standing rows are asserted by assert-overrides.ts; a stored date that disagrees with a ruled one is a ruling_violation. Claims without a cited date never enter the map.
+
+*Why:* AFL inherits date errors: fist-of-the-north-star carried six wrong dates (ep 108 wore ep 112's) and ranma-1-2 ep 153 wore ep 158's, which faked an order deviation in the batch-17 re-anchor. First /add-rule exercise (2026-08-26): 7 cited rows; kinnikuman 90-119 / 38 / 87 and railgun ep 14 are dateless claims → batch-18 narrow task.
+
+- ruled Sean 2026-08-25 (docs/system-evolution.md "Air-date override pass" (Sean's go); restructure T3.1)
+- layer **writer**
+- enforced: [lib/rulings/air-dates.ts#AIR_DATE_OVERRIDES](../scripts/ingest/lib/rulings/air-dates.ts) · [lib/resolve.ts#filterEpisodeRows](../scripts/ingest/lib/resolve.ts) · [assert-overrides.ts#main](../scripts/ingest/assert-overrides.ts)
+- audit: `ruling_violation`
+- witnesses: fist-of-the-north-star, ranma-1-2
+- aliases: AIR_DATE_OVERRIDES, air-date overrides, air date override pass, ruled air dates
+- see: T6, R3, R20
+
 ## V — Volumes & boundaries
 
 ### V1 · Monotonic starts, or the row is not data
@@ -3889,6 +3904,9 @@ Any component that renders episode-level data consumes the HYDRATED series (getB
 - AFL/AFG advisory → `T4`
 - agent contract → `R8`
 - agent is read-only → `R22`
+- air date override pass → `G53`
+- AIR_DATE_OVERRIDES → `G53`
+- air-date overrides → `G53`
 - airing-lag allowance → `I26`
 - airing-pin rule → `G34`
 - alias defense → `G8`
@@ -4513,6 +4531,7 @@ Any component that renders episode-level data consumes the HYDRATED series (getB
 - REVIEWED_NUMBERED_SPECIALS → `N7`
 - row-count identity → `R19`
 - row-count identity first → `R19`
+- ruled air dates → `G53`
 - ruled extensions → `I27`
 - ruled reorder exemption → `A41`
 - ruled splits stay split → `I20`
@@ -4718,6 +4737,6 @@ Any component that renders episode-level data consumes the HYDRATED series (getB
 
 ## Scoreboard
 
-- rules: 258 (live 242, planned 11, superseded 5)
+- rules: 259 (live 243, planned 11, superseded 5)
 - live data rules with no audit class (the automation backlog): 89
-- by layer: writer 131 · display 23 · both 21 · process 83
+- by layer: writer 132 · display 23 · both 21 · process 83

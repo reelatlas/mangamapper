@@ -64,6 +64,8 @@ export async function applyScope(
 // RULED (Sean's confirm loop via reconcile-structure flags); until then the
 // flag is the research trigger. Every totals writer applies this.
 export { EXTRAS_ADOPTED } from './rulings/extras-adopted';
+export { AIR_DATE_OVERRIDES } from './rulings/air-dates';
+import { AIR_DATE_OVERRIDES } from './rulings/air-dates';
 
 // Community-count rulings (Sean 2026-08-24: the community-consensus episode
 // count is the truth — specials/ep-0s the community numbers are IN; large
@@ -134,7 +136,7 @@ export const translateEpisodeNumber = (seriesId: string, n: number, space: strin
 // Per-series episode-row rulings, applied by EVERY episode writer:
 // source-numbering translation first, then community caps, then type
 // overrides.
-export const filterEpisodeRows = <T extends { number: number; type?: string }>(seriesId: string, rows: T[], space: string): T[] => {
+export const filterEpisodeRows = <T extends { number: number; type?: string; air_date?: string | null }>(seriesId: string, rows: T[], space: string): T[] => {
   const t0 = SOURCE_NUMBERING_SHIFTS[seriesId];
   const t = t0 && (!t0.spaces || t0.spaces.includes(space)) ? t0 : undefined;
   let translated = rows;
@@ -146,8 +148,14 @@ export const filterEpisodeRows = <T extends { number: number; type?: string }>(s
   const o = COMMUNITY_COUNT_OVERRIDES[seriesId];
   const capped = o ? translated.filter((r) => r.number <= o.cap) : translated;
   const types = EPISODE_TYPE_OVERRIDES[seriesId];
-  if (!types) return capped;
-  return capped.map((r) => (types[r.number] && 'type' in r ? { ...r, type: types[r.number] } : r));
+  const dates = AIR_DATE_OVERRIDES[seriesId]; // G53: ruled air dates re-applied at every write
+  if (!types && !dates) return capped;
+  return capped.map((r) => {
+    let out = r;
+    if (types?.[r.number] && 'type' in r) out = { ...out, type: types[r.number] };
+    if (dates?.[r.number] && 'air_date' in r) out = { ...out, air_date: dates[r.number] };
+    return out;
+  });
 };
 
 export function applyEpisodeFloor(

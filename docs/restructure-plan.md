@@ -221,7 +221,7 @@ the new rule**, never a migration script.
 ### T5 — Backlog routing
 | item | route |
 |---|---|
-| AIR_DATE_OVERRIDES | T3.1 exercise 1 |
+| AIR_DATE_OVERRIDES | T3.1 exercise 1 — DONE 2026-08-26 (G53); kinnikuman 90-119/38/87 + railgun ep 14 need cited dates → batch 18 narrow task |
 | AFL non-episode-row audit class | T3.1 exercise 2 (candidate) |
 | Continua chart cross-check gate | add-rule |
 | Permanence locks (15 candidates, listed by T0) | after T4 |
@@ -327,7 +327,7 @@ words after the glossary exists. Rough total: 8–12 sessions.
 | T2.5 | 36 history/dead scripts → scripts/ingest/history/ (README: never run; P34); 23 ledger rules now visibly enforced only by history = the /add-rule backlog (DRIFT-LIST §C2) | T2.4 | done 2026-08-26 |
 | T2.6 | lib-hash.ts stamped into every bundle by build-functions; system-census proves bundles current (P4 live) | T2.1–2.5 | done 2026-08-26 |
 | T2.7 | system-census.ts (7 checks: ledger+citations, unpaged selects, one-hop, rosters, rulings index, generated docs fresh, edge hash) = `npm run system:census` (P33 live) | T2.4, T1.6 | done 2026-08-26 |
-| T3.1 | /add-rule + 2 exercises | T1.2, T2.1 | planned |
+| T3.1 | /add-rule skill written; exercise 1 AIR_DATE_OVERRIDES done (G53: 7 cited rows, audit 7→0, edges deployed); exercise 2 (a second data rule) pending | T1.2, T2.1 | 1 of 2 exercises done 2026-08-26 |
 | T3.2 | PROTOCOL collapse + rules_applied + pin | T1.2, T4.0 | planned |
 | T3.3 | consolidate rework | T2.4, T2.7 | planned |
 | T3.4 | research-batch / apply-batch | T3.2 | planned |

@@ -2,7 +2,7 @@
 
 > GENERATED from `scripts/ingest/lib/rulings/**` by `scripts/restructure/gen-rulings.ts` — do not edit by hand. A ruling is an INSTANCE of a rule (`docs/rules.md`); the map is the record, this is the index.
 
-- rulings: 1645 across 192 series/keys · by Sean: 301 · UNRECORDED reasons: 8 · with a retire condition: 106
+- rulings: 1647 across 192 series/keys · by Sean: 303 · UNRECORDED reasons: 8 · with a retire condition: 106
 
 ## Retire conditions (re-evaluate when…)
 
@@ -861,10 +861,11 @@
 | `N4` | {"anilist_id":3864,"episode_start":null,"episode_end":null,"was":{"episode_start":23,"episode_end":26,"kind":"ova"},"label":"DVD-only release of withheld TV … | AniList 3864 "DVD episodes" was stored spanning eps 23-26 (kind ova) but the four DVD-only episodes are WITHHELD TV eps (production 16/17/18/21) inside the one continuous 26-episode numbering — not OVAs, not a trailing block. A wrong non-season span can mis-shift AFG numbering conversion, so the component is demoted to ORDER-ONLY (null span; it never counts), facts kept in the label | Sean 2026-08-25 · scripts/ingest/research/batch17/out/fist-of-the-blue-sky.json, scripts/ingest/apply-rulings-20260825b.ts, §12.51 |  |
 | `N7` | 3864 | Reviewed as: 4 DVD episodes, AFL numbers 23-26. STALE (DRIFT-LIST §B): the 23-26 span was demoted to order-only on 2026-08-25b, so the component no longer carries an episode span and this entry is inert — kept as the record of the review, not deleted. | session 2026-08-24 | the fotbs 3864 component is confirmed order-only by audit-ui-truth (no numbered span) — then drop the entry |
 
-### fist-of-the-north-star (6)
+### fist-of-the-north-star (7)
 
 | rule | value | reason | ruled | retires when |
 |---|---|---|---|---|
+| `G53` | {"81":"1986-07-24","82":"1986-07-31","85":"1986-08-21","90":"1986-10-16","96":"1986-11-27","108":"1987-02-26"} | Stored dates inherited from animefillerlist are wrong on six rows (ep 96 a whole year off; ep 108 carried ep 112's date), which made the stored order/date pairs look scrambled around eps 79-85. Values per en.wikipedia's episode list (batch-17 verdict, out-of-scope note raised for this pass). | Sean 2026-08-25 · scripts/ingest/research/batch17/out/fist-of-the-north-star.json, https://en.wikipedia.org/wiki/List_of_Fist_of_the_North_Star_episodes |  |
 | `A1` | {"episode":109} | A1 junk anchor: ep 109 is a clip show by 3 independent sources; the stored manual 136 was terminal inflation — the honest terminal ep 108 → 136 lands via this verdict's anchors with a partial annotation for ch 136's closing pages | Sean 2026-08-25 · scripts/ingest/research/batch17/out/fist-of-the-north-star.json, scripts/ingest/apply-research-batch-17.ts, §12.45, CHUNK1-RECOVERY.md §11 |  |
 | `A3` | {"episode":57,"chapter":83,"volume":null,"source":"manual"} | Part 2 end: Rei vs Yuda concludes ~ch 83 (±1). Wikipedia ep list + hokuto.fandom | session 2026-08-23 · scripts/ingest/apply-research-batch-6.ts |  |
 | `A3` | {"episode":109,"chapter":136,"volume":null,"source":"manual"} | series 1 end (Raoh's defeat) = ch 136; HnK2 continues 137. Wikipedia + hokuto.fandom | session 2026-08-23 · scripts/ingest/apply-research-batch-6.ts |  |
@@ -1892,10 +1893,11 @@
 | `A43` | {"episodes":[23],"kind":"divergence","chapters":"150-155","note":"research-tier batch 11 (2026-08-23, agent-verified 2+ sources, full-record): finale has ori… | finale has original epilogue expansion; TCoC specials → post-TCoC continue = 165 | session 2026-08-23 · scripts/ingest/apply-research-batch-11.ts, scratchpad batch11/ranking-of-kings.json (session scratchpad, not on disk), docs/changelog.md §12.30 |  |
 | `R21` | {"file":"scripts/ingest/research/batch15/out/ranking-of-kings.json","anchors":2,"zoneAcks":0} | batch-15 verdict applied as-curated | session 2026-08-24 · scripts/ingest/research/batch15/out/ranking-of-kings.json |  |
 
-### ranma-1-2 (7)
+### ranma-1-2 (8)
 
 | rule | value | reason | ruled | retires when |
 |---|---|---|---|---|
+| `G53` | {"153":"1992-07-31"} | Stored 1992-09-04 is ep 158's date; the Ranma wiki's episode list and the episode page both give 1992-07-31 for "Gosunkugi's Summer Affair!". The wrong date faked an order deviation in the batch-17 re-anchor (join on title/date, R20). | Sean 2026-08-25 · scripts/ingest/research/batch17/out2/ranma-1-2-reanchor.json, https://ranma.fandom.com/wiki/Gosunkugi%27s_Summer_Affair! |  |
 | `A6` | {"episode":14} | A1 junk anchor (D4 triage, verifier-confirmed 6/6): wiki manga=None + AFL Filler + anime-only categories; stored values are chart-misalignment artifacts (production-vs-aired order zones) | Sean 2026-08-25 · scripts/ingest/research/batch17/out2/ranma-1-2-a1.json, scripts/ingest/apply-research-batch-17.ts, §12.45 |  |
 | `A6` | {"episode":90} | A1 junk anchor (D4 triage, verifier-confirmed 6/6): wiki manga=None + AFL Filler + anime-only categories; stored values are chart-misalignment artifacts (production-vs-aired order zones) | Sean 2026-08-25 · scripts/ingest/research/batch17/out2/ranma-1-2-a1.json, scripts/ingest/apply-research-batch-17.ts, §12.45 |  |
 | `A6` | {"episode":123} | A1 junk anchor (D4 triage, verifier-confirmed 6/6): wiki manga=None + AFL Filler + anime-only categories; stored values are chart-misalignment artifacts (production-vs-aired order zones) | Sean 2026-08-25 · scripts/ingest/research/batch17/out2/ranma-1-2-a1.json, scripts/ingest/apply-research-batch-17.ts, §12.45 |  |

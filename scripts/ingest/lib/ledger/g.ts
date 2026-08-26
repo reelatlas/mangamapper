@@ -864,4 +864,26 @@ export const RULES: Rule[] = [
     status: 'live',
     see: ['G11', 'G12', 'G22', 'G39', 'base-type padding', 'ownership guard'],
   },
+  {
+    id: 'G53',
+    aliases: ['AIR_DATE_OVERRIDES', 'air-date overrides', 'air date override pass', 'ruled air dates'],
+    family: 'G',
+    title: 'Ruled air dates: AIR_DATE_OVERRIDES, re-applied at every write',
+    statement:
+      'A research-ruled episode air date (2+ cited sources) lives ONLY in AIR_DATE_OVERRIDES and is re-applied inside filterEpisodeRows at every episode write — a bare DB update is clobbered by the next AFL refresh. Standing rows are asserted by assert-overrides.ts; a stored date that disagrees with a ruled one is a ruling_violation. Claims without a cited date never enter the map.',
+    why: 'AFL inherits date errors: fist-of-the-north-star carried six wrong dates (ep 108 wore ep 112\'s) and ranma-1-2 ep 153 wore ep 158\'s, which faked an order deviation in the batch-17 re-anchor. First /add-rule exercise (2026-08-26): 7 cited rows; kinnikuman 90-119 / 38 / 87 and railgun ep 14 are dateless claims → batch-18 narrow task.',
+    ruledBy: 'Sean',
+    ruledOn: '2026-08-25',
+    origin: 'docs/system-evolution.md "Air-date override pass" (Sean\'s go); restructure T3.1',
+    enforcement: [
+      { path: 'scripts/ingest/lib/rulings/air-dates.ts', symbol: 'AIR_DATE_OVERRIDES' },
+      { path: 'scripts/ingest/lib/resolve.ts', symbol: 'filterEpisodeRows' },
+      { path: 'scripts/ingest/assert-overrides.ts', symbol: 'main' },
+    ],
+    layer: 'writer',
+    auditClass: ['ruling_violation'],
+    witnesses: ['fist-of-the-north-star', 'ranma-1-2'],
+    status: 'live',
+    see: ['T6', 'R3', 'R20'],
+  },
 ];

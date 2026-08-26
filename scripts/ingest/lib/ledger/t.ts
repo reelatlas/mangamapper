@@ -128,7 +128,7 @@ export const RULES: Rule[] = [
     enforcement: [
       { path: 'scripts/ingest/lib/resolve.ts', symbol: 'EPISODE_TYPE_OVERRIDES' },
       { path: 'scripts/ingest/lib/resolve.ts', symbol: 'filterEpisodeRows' },
-      { path: 'scripts/ingest/assert-type-overrides.ts', symbol: 'main' },
+      { path: 'scripts/ingest/assert-overrides.ts', symbol: 'main' },
       { path: 'scripts/ingest/audit-ui-truth.ts', symbol: 'ruling_violation' },
     ],
     layer: 'writer',

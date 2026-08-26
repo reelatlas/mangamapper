@@ -11,6 +11,7 @@
 import { db, selectAll } from './lib/db';
 import { c3Ahead, hasSkipLanguage } from './lib/c3';
 import { COMMUNITY_COUNT_OVERRIDES, CONTINUA_SUPPRESSED, EPISODE_TYPE_OVERRIDES, SOURCE_NUMBERING_SHIFTS } from './lib/resolve';
+import { AIR_DATE_OVERRIDES } from './lib/rulings/air-dates';
 import { REVIEWED_NUMBERED_SPECIALS } from './lib/rulings/reviewed-specials';
 
 async function main() {
@@ -113,6 +114,13 @@ async function main() {
     const row = series.find((s: any) => s.id === sid);
     if (row && (row.aired_episodes > o.cap || (row.total_episodes ?? 0) > o.cap)) {
       classes.ruling_violation.push(`${sid}: totals ${row.aired_episodes}/${row.total_episodes} exceed the community cap ${o.cap}`);
+    }
+  }
+  // G53 air-date overrides (2026-08-26): a stored air_date that disagrees with a ruled one = a writer bypassed filterEpisodeRows or the assert healer has not run.
+  for (const [sid, dates] of Object.entries(AIR_DATE_OVERRIDES)) {
+    for (const [num, want] of Object.entries(dates)) {
+      const row = episodes.find((e: any) => e.series_id === sid && e.number === Number(num));
+      if (row && row.air_date !== want) classes.ruling_violation.push(`${sid}: ep ${num} air_date ${row.air_date} ≠ ruled ${want} (G53)`);
     }
   }
   // SHIFT VERIFICATION (Sean 2026-08-23: rules that move numbering must

@@ -1,21 +1,195 @@
 {
   "_": "One-hop regression cases (T1.6). Each ask is something a cold session actually had to answer; expected = the ledger ids it must land on; terms = words the ask contains that must appear in the rule's title/aliases/statement so the family strip can find it. The batch-17 misses are the first cases. Checked by scripts/restructure/one-hop-check.ts; the cold-session probe (verdict-verifier, different model) uses the same file.",
   "cases": [
-    { "ask": "hellsing/gintama: a chapter already adapted in an earlier episode shows up again — does re-use move the series position, and what does the continue point do?", "expected": ["A31", "A4", "C2"], "terms": ["re-use", "coverage", "parity"], "source": "batch-17 overlook: A4/C2 re-derived from scratch" },
-    { "ask": "a healer stamped 16 of 351 rows and reported success — what rule was violated?", "expected": ["P32"], "terms": ["complete"], "source": "C3 healer 1000-row cap" },
-    { "ask": "eyeshield: AFG titles were imported but the filler flag in the same row was never mapped — which rule?", "expected": ["T15"], "terms": ["flag"], "source": "batch-17 eyeshield import" },
-    { "ask": "an agent proposes a chapter anchor on an episode typed filler", "expected": ["A1", "A6"], "terms": ["filler", "anchor"], "source": "Toriko 263→253 answered with a deletion" },
-    { "ask": "the AFG chart says ep 141 → ch 21 after ep 140 → ch 250; is that a legal back-jump?", "expected": ["A20", "A19"], "terms": ["monotonic", "derived"], "source": "Naruto junk cell vs research back-jumps (A-3 ruling)" },
-    { "ask": "which chapter does the reader continue from when an episode skipped material the next episode will cover?", "expected": ["C2", "C3", "C5"], "terms": ["parity", "skip"], "source": "iruma ep 63 (C3 regime)" },
-    { "ask": "START chapter when an episode opens with the last three pages of the previous chapter", "expected": ["A10"], "terms": ["sliver", "START"], "source": "sliver rule; the 27 seeded starts (A-6)" },
-    { "ask": "MangaUpdates matched Trigun to 'Trigun Maximum' — how is MU identity supposed to be established?", "expected": ["I6"], "terms": ["MangaDex", "bridge"], "source": "batch-17 trigun MU association" },
-    { "ask": "an anchor value of 144 on a manga whose last chapter NUMBER is 143 (AniList count 144)", "expected": ["N22", "N23"], "terms": ["count", "number"], "source": "Tokyo Ghoul 144/143" },
-    { "ask": "a research repair on a row whose source is 'mu' — where must the repaired value live?", "expected": ["P8"], "terms": ["manual"], "source": "hikaru ep-75 wipe" },
-    { "ask": "every chapter of an episode is already claimed by other episodes — is it filler?", "expected": ["T7"], "terms": ["overlap"], "source": "zatch-bell lesson" },
-    { "ask": "a chart's row order differs from ours; can we join chart rows to our episodes by index?", "expected": ["R20"], "terms": ["index-join"], "source": "ranma (A-4 ruling)" },
-    { "ask": "a mid-run recap episode — integer row or fractional?", "expected": ["N9"], "terms": ["fractional"], "source": "mashle recap 6.5" },
-    { "ask": "a volume boundary table reads v3: chs 10-3", "expected": ["V1", "V2"], "terms": ["monotonic"], "source": "Sailor Moon boundaries" },
-    { "ask": "a lib/ file changed — what must happen before commit?", "expected": ["P3"], "terms": ["edge"], "source": "invariant 2" },
-    { "ask": "a series' final episodes are debated by the community (studio ending vs manga)", "expected": ["T13", "T10", "T11"], "terms": ["ending", "annotat"], "source": "X / DSQ / Evangelion classes" }
+    {
+      "ask": "hellsing/gintama: a chapter already adapted in an earlier episode shows up again — does re-use move the series position, and what does the continue point do?",
+      "expected": [
+        "A31",
+        "A4",
+        "C2"
+      ],
+      "terms": [
+        "re-use",
+        "coverage",
+        "parity"
+      ],
+      "source": "batch-17 overlook: A4/C2 re-derived from scratch"
+    },
+    {
+      "ask": "a healer stamped 16 of 351 rows and reported success — what rule was violated?",
+      "expected": [
+        "P32"
+      ],
+      "terms": [
+        "complete"
+      ],
+      "source": "C3 healer 1000-row cap"
+    },
+    {
+      "ask": "eyeshield: AFG titles were imported but the filler flag in the same row was never mapped — which rule?",
+      "expected": [
+        "T15"
+      ],
+      "terms": [
+        "flag"
+      ],
+      "source": "batch-17 eyeshield import"
+    },
+    {
+      "ask": "an agent proposes a chapter anchor on an episode typed filler",
+      "expected": [
+        "A1",
+        "A6"
+      ],
+      "terms": [
+        "filler",
+        "anchor"
+      ],
+      "source": "Toriko 263→253 answered with a deletion"
+    },
+    {
+      "ask": "the AFG chart says ep 141 → ch 21 after ep 140 → ch 250; is that a legal back-jump?",
+      "expected": [
+        "A20",
+        "A19"
+      ],
+      "terms": [
+        "monotonic",
+        "derived"
+      ],
+      "source": "Naruto junk cell vs research back-jumps (A-3 ruling)"
+    },
+    {
+      "ask": "which chapter does the reader continue from when an episode skipped material the next episode will cover?",
+      "expected": [
+        "C2",
+        "C3",
+        "C5"
+      ],
+      "terms": [
+        "parity",
+        "skip"
+      ],
+      "source": "iruma ep 63 (C3 regime)"
+    },
+    {
+      "ask": "START chapter when an episode opens with the last three pages of the previous chapter",
+      "expected": [
+        "A10"
+      ],
+      "terms": [
+        "sliver",
+        "START"
+      ],
+      "source": "sliver rule; the 27 seeded starts (A-6)"
+    },
+    {
+      "ask": "MangaUpdates matched Trigun to 'Trigun Maximum' — how is MU identity supposed to be established?",
+      "expected": [
+        "I6"
+      ],
+      "terms": [
+        "MangaDex",
+        "bridge"
+      ],
+      "source": "batch-17 trigun MU association"
+    },
+    {
+      "ask": "an anchor value of 144 on a manga whose last chapter NUMBER is 143 (AniList count 144)",
+      "expected": [
+        "N22",
+        "N23"
+      ],
+      "terms": [
+        "count",
+        "number"
+      ],
+      "source": "Tokyo Ghoul 144/143"
+    },
+    {
+      "ask": "a research repair on a row whose source is 'mu' — where must the repaired value live?",
+      "expected": [
+        "P8"
+      ],
+      "terms": [
+        "manual"
+      ],
+      "source": "hikaru ep-75 wipe"
+    },
+    {
+      "ask": "every chapter of an episode is already claimed by other episodes — is it filler?",
+      "expected": [
+        "T7"
+      ],
+      "terms": [
+        "overlap"
+      ],
+      "source": "zatch-bell lesson"
+    },
+    {
+      "ask": "a chart's row order differs from ours; can we join chart rows to our episodes by index?",
+      "expected": [
+        "R20"
+      ],
+      "terms": [
+        "index-join"
+      ],
+      "source": "ranma (A-4 ruling)"
+    },
+    {
+      "ask": "a mid-run recap episode — integer row or fractional?",
+      "expected": [
+        "N9"
+      ],
+      "terms": [
+        "fractional"
+      ],
+      "source": "mashle recap 6.5"
+    },
+    {
+      "ask": "a volume boundary table reads v3: chs 10-3",
+      "expected": [
+        "V1",
+        "V2"
+      ],
+      "terms": [
+        "monotonic"
+      ],
+      "source": "Sailor Moon boundaries"
+    },
+    {
+      "ask": "a lib/ file changed — what must happen before commit?",
+      "expected": [
+        "P3"
+      ],
+      "terms": [
+        "edge"
+      ],
+      "source": "invariant 2"
+    },
+    {
+      "ask": "a series' final episodes are debated by the community (studio ending vs manga)",
+      "expected": [
+        "T13",
+        "T10",
+        "T11"
+      ],
+      "terms": [
+        "ending",
+        "annotat"
+      ],
+      "source": "X / DSQ / Evangelion classes"
+    },
+    {
+      "ask": "a stored air date is wrong (AFL inherited it) — where does the corrected date live so a refresh cannot clobber it?",
+      "expected": [
+        "G53"
+      ],
+      "terms": [
+        "air date",
+        "refresh"
+      ],
+      "source": "first /add-rule exercise 2026-08-26"
+    }
   ]
 }
