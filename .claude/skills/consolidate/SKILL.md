@@ -1,122 +1,133 @@
----
-name: consolidate
-description: mangaMapper consolidation pass — verify every rule is enforced through the data logic, clean stale logic, sync all pull/freshness/cross-check mechanisms to current thinking, rescan data, and cut a committed save point. Run after any significant rules/logic change. Invoke with "deep" to add the full-catalog rescan (step 9).
----
+# /consolidate — step 6 of the data cycle (`P1`), systematized
 
-# Consolidation pass (Sean's standing directive, systematized)
-
-> **Rework pending.** This skill predates the data cycle in CLAUDE.md and
-> shows it — step 10 was appended rather than designed in, the `deep` trigger
-> is judgment-heavy, and the healer roster is hardcoded. Planned changes are
-> in `docs/system-evolution.md` §5, to be done after batch 17. Follow it as
-> written until then; do not improvise around it.
-
-Work through EVERY step in order. The principle: rules live in shared lib
-code consumed identically by scripts and edge functions; rulings are
-declarative records; audits verify OUTCOMES so a misbehaving writer
-surfaces as data; incomplete inputs degrade gracefully, never into
-garbage; nothing is presented to Sean unresearched.
+Rewritten 2026-08-26 (restructure T3.3) around the cycle and the mechanical
+checks that now exist. The principle is unchanged: rules live in shared lib
+code (`P2`); rulings are typed records (`lib/rulings/`); audits verify
+OUTCOMES (`P5`); incomplete inputs degrade gracefully (`P6`); nothing
+reaches Sean unresearched (`R1`). What changed: most of what used to be
+judgment is now a script, and the skill says which.
 
 Two modes:
-- **`/consolidate`** — the standard pass: steps 1–8.
-- **`/consolidate deep`** — steps 1–8 PLUS step 9 (full-catalog rescan
-  against current rules, notes re-validated, stale cleanup). Also run
-  deep without being asked when a rule change plausibly invalidates
-  prior per-series decisions — say so when doing it. Expect deep to run
-  often while the data logic is under active design, and to taper off as
-  mangaMapper stabilizes; once the data logic closes, rarely.
+- **`/consolidate`** — the standard pass: steps 0–8.
+- **`/consolidate deep`** — adds step 9 (full-catalog rescan against current
+  rules). Deep is REQUIRED — not offered — when step 0 reports that any
+  ledger record's ENFORCEMENT SITE changed since the last save point
+  (`P21`/`P22`): a gate change plausibly invalidates prior per-series
+  decisions. Say so when it triggers.
 
-## 1. Writer-consistency sweep
-Grep every write site and confirm it goes through the shared gates:
-- `grep -rn "from('episodes')" scripts/ supabase/functions/_src/ | grep -v "select\|delete"` — every insert must pass **filterEpisodeRows** (source-numbering translation → community caps → type overrides).
-- `latest_known_chapters:` writers must use **bestLatestKnown** (same-edition band + chapter-floor + status-string fallback).
-- `from('chapter_anchors')` writers: AFG chart via **syncAnchors** (chapter-space gate + curated-precedence skip), MU via **applyMuFrontier** (scope parse, sibling-scope ceiling, chapter-space, airing-pin rule, scope-consumed, A1 episode-type, MU_FRONTIER_SUPPRESSED, pin-episode redundancy, curated precedence — the D1 gate stack, 2026-08-24), continua via **applyContinua** (identity guard, sanity band, numbering conversion, precedence, suppressions). Manual/research anchors are the trusted tier — and REPAIRS to derivation-tier rows must flip the source to manual (the hikaru ep-75 wipe): a repaired value on a mu/afg/afg-continua row is deleted by that source's next re-derive.
-- Any NEW writer found without gates: wire it through the lib, never inline.
+## 0. Read STATE, run the system census
 
-## 2. Lib → edges
-If anything under `scripts/ingest/lib/` changed since the last deploy:
-`npx tsx scripts/ingest/build-functions.ts` then `npx supabase functions deploy` for ALL FOUR (refresh-afl, refresh-afg, refresh-anilist, refresh-mu). The crons must run the same code as the scripts — always.
+- Read `docs/STATE.md` FIRST. It is the claim to verify; the conversation
+  is not.
+- `npm run system:census` — ledger + citations, unpaged selects (`P32`),
+  one-hop cases, rosters, rulings index, generated docs fresh, edge
+  lib-hash (`P4`). **Red is blocking** during the restructure phase. A red
+  here is a broken link in the reference system, not a data problem — fix
+  the link (or the record), never work around it.
+- Deep trigger: `git diff <last-save-point>..HEAD -- scripts/ingest/lib/`
+  touching a file named in any ledger record's `enforcement` = deep.
+
+## 1. Writer-consistency sweep — mechanical
+
+- `npx tsx scripts/restructure/unpaged-selects.ts` (already in step 0):
+  every catalog read goes through `selectAll`.
+- Every writer goes through the shared gates: episodes via
+  `filterEpisodeRows` (`N13`/`T6`/`G53`), anchors via `syncAnchors` /
+  `applyMuFrontier` / `applyContinua` (`A24`, `G32`, `G22`), totals via
+  `applyEpisodeFloor` (`N1`). A NEW writer found without gates is wired
+  through the lib, never inline (`P2`). Repairs on derivation-tier rows flip
+  the source to manual (`P8`).
+
+## 2. Lib → edges (`P3`)
+
+If step 0's edge-hash line was red or any `scripts/ingest/lib/` file
+changed: `npx tsx scripts/ingest/build-functions.ts`, deploy ALL FOUR
+(refresh-afl/afg/anilist/mu). The hash proves the bundles are current; the
+deploy is your step.
 
 ## 3. Staging freshness
-If a parser changed (lib/afg.ts, lib/wikipedia.ts): restage from stored raw
-(`raw_html` re-parse — no refetch) so staging never holds output a current
-parse wouldn't produce. AFG: re-parse `ingest_afg_pages.raw_html` into
-`raw` (episodes + continua) with content_hash update.
 
-## 4. Healer rescans (all idempotent)
-- `npx tsx --env-file=.env.ingest scripts/ingest/afg-continua-apply.ts`
-- `npx tsx --env-file=.env.ingest scripts/ingest/audit-manga-coverage.ts`
-- `npx tsx --env-file=.env.ingest scripts/ingest/cleanup-flags.ts`
-- `npx tsx --env-file=.env.ingest scripts/ingest/heal-volume-boundaries.ts` — enforces the MONOTONIC-START rule (Sean's Sailor Moon "v3: chs 10-3", 2026-08-24) over stored rows: drops parse artifacts, re-closes neighbours, wipes wholesale-garbage tables. Idempotent; pairs with the `boundaries_degenerate` audit class.
-- `npx tsx --env-file=.env.ingest scripts/ingest/heal-parity-continues.ts` — re-stamps ANIME-PARITY continue points (Sean's C2 rule 2026-08-24); idempotent, converts any fresh anchors (new MU run-end pins, new research rows) that arrived without continue metadata.
-- If numbering/type rulings changed: re-run `resolveSeries` for affected series (stale-zone healing removes stranded rows).
+Parser changed (`lib/afg.ts`, `lib/wikipedia.ts`, `lib/afl.ts`)? Run the
+event healer named in `scripts/ingest/rosters.ts` (`afg-restage.ts` — no
+refetch) so staging never holds output a current parse wouldn't produce
+(`G44`).
 
-## 5. Full census + verification
-`npx tsx --env-file=.env.ingest scripts/ingest/audit-ui-truth.ts`
-- **ruling_violation MUST be 0** — anything else means a writer bypassed a gate; fix the writer, never the data alone.
-- anchor_nonmonotonic / anchor_beyond_chapter_space: each hit is triaged (real reorder → annotate; junk → gate + delete; ruled → suppression), never left unexplained.
-- anchor_beyond_display_total (Sean's Tokyo Ghoul 144/143 rule, 2026-08-24): any END/START/CONTINUE above the same-edition-band display total is a count-space value in a number-space instrument — convert to the chapter number (applyMuFrontier does this for MU pins at the writer; other sources: fix the value + note the conversion), never leave one standing.
-- anchor_on_noncanon_row (A1 outcome check, 2026-08-24): an anchor from ANY source on a filler/anime-only row. Each hit is a triage FORK — junk anchor (delete via research, honest terminal on the last canon/mixed ep) or WRONG ROW TYPE (research anchored it deliberately — retype) — never auto-delete. The MU writer refuses these at the source (D1); extending the gate to AFG writers is Sean's open D4.
-- Compare every class count to the previous census; explain each delta.
-- Review-queue classes (special_numbered_unreviewed, fractional_unmodeled, asterisk_unreviewed) are Sean's — list them, RESEARCH each item first (web, 2+ sources, citations), present verdicts with context, never raw numbers.
+## 4. Healers — `npm run heal`
 
-## 6. Docs + rulings ledger
-- Every new rule → `docs/data-pipeline.md` §10 with its enforcement site.
-- §11 freshness map current for each source's gates.
-- §12 gets a numbered consolidation log entry.
-- New rulings from Sean land as declarative records (lib constants like COMMUNITY_COUNT_OVERRIDES / EPISODE_TYPE_OVERRIDES / SOURCE_NUMBERING_SHIFTS / CONTINUA_SUPPRESSED, or apply-research-batch-N.ts scripts) — reasoning + citations in notes, ALWAYS.
+Runs the HEAL roster's standard entries in order (`P20`): scopes, continua,
+coverage (self-healing), volume boundaries, parity continues (`C2`/`C3`),
+assert-overrides (`T6`/`G53`), watch order, relations, flag cleanup. Event
+healers are listed by `npm run heal -- --list`; run one only on its trigger.
+If numbering/type rulings changed: re-run `resolveSeries` for the affected
+series (stale-zone healing).
 
-## 7. Frontend contract check
-- Episode-level display data comes ONLY from the hydrated series (getById); the shallow list item renders identity fields only.
-- Incomplete data degrades gracefully (pending / hidden / "48-60+"), never NaN or junk.
-- `npx tsc -b --noEmit` (0 errors — `-p .` on the solution tsconfig checks NOTHING; the 2026-08-23 allBoundaries regression slipped through a vacuous pass) and `npm run build` must pass. Regenerate `src/integrations/supabase/types.ts` (`npx supabase gen types typescript --project-id ysjnqbnbtftjdepovpkt --schema public`) after any migration so the gate stays real.
+## 5. Census — `npm run census`, then triage by rule
 
-## 8. Save point
-- Update the memory file (`mangamapper-data-sources.md`) as a REFRESH POINT: current census, new rules, open queues, next steps.
-- Commit with a message that reads as the ruling record; push to main (Vercel deploys from main).
-- Report the census delta and any items awaiting Sean.
+`audit-ui-truth.ts` (every class), `verify-series-display.ts --all`,
+`audit-afg-structure.ts`. Then:
 
-## 9. Deep rescan (only in `deep` mode — see the modes note up top)
-Re-evaluate ALL existing data entries against CURRENT rules, staying
-ahead of stale data instead of waiting for it to surface as a bug.
+- **`ruling_violation` MUST be 0** (`P18`) — a writer bypassed a gate or a
+  healer has not run; fix the writer, never the data alone.
+- `anchor_nonmonotonic` / `anchor_beyond_chapter_space` / `anchor_on_noncanon_row`:
+  each hit is a triage fork (`A6`, `A19`/`A20`, `N28`), never left
+  unexplained and never auto-deleted.
+- `anchor_beyond_display_total`: count-space value in a number-space
+  instrument (`N22`/`N23`) — convert, never leave standing.
+- `continue_skip_unnoted`: `C3` outcome — the parity healer should have
+  stamped it; if not, why not.
+- Compare every class to the previous census and explain each delta
+  (`P17`). A class that moved without an explanation is an unshipped bug.
+- Review-queue classes (`special_numbered_unreviewed`, `fractional_unmodeled`,
+  `asterisk_unreviewed`, `mu_pin_unverified`) are Sean's: list them,
+  RESEARCH each item first (`R1`, `R3`), present verdicts with context.
 
-- **Notes are precedence, not blindfolds.** Rulings, suppressions,
-  overrides, closed flags, and "don't touch" notes are still SCANNED —
-  respect them as the default, but re-check that each one is still
-  valid under current rules:
-  - Note is blocking something **no longer valid** (the rule it encoded
-    was superseded, the source healed, the premise changed) → bring it
-    to Sean's attention with the evidence.
-  - The needed change is **clear-cut** under an established rule →
-    disregard the note, apply the change, update the note to record the
-    supersession, and REPORT it (never silently).
-  - Ambiguous → flag, research first, present a verdict.
-- **Stale cleanup.** Delete no-longer-referenced logic (dead constants,
-  ruling entries pointing at series/episodes that no longer exist,
-  orphaned staging rows, resolved-but-lingering flags, dead scripts).
-  Every deletion is listed in the report.
-- **Permanence tiers.** A series that is FINISHED and FULLY PUBLISHED,
-  with its mapping researched, cross-verified, and Sean-signed, is
-  effectively LOCKED: its decisions are permanent and it drops out of
-  routine deep rescans — revisit only when a rule change explicitly
-  touches it. Airing/ongoing/unverified series stay in the active
-  rescan pool. Over time the locked set grows and deep rescans shrink;
-  that is the goal state.
-- End with the same census gate as step 5 (ruling_violation = 0) and
-  fold results into the step-8 save point.
+## 6. Ledger and rulings
 
-## 10. Close the loop (every pass)
+- A new RULE → `/add-rule` (`P31`), never a doc paragraph. A new RULING →
+  a `RulingEntry` with its reason in the right `lib/rulings/` map (`P29`).
+- `npm run ledger:docs` regenerates `docs/rules.md` and `docs/rulings.md`;
+  the system census refuses stale generated docs.
+- The changelog (`docs/changelog.md`) gets a numbered §12.N entry; a rule
+  ratified in an entry MUST also be a record.
 
-A consolidation that changes nothing durable was a wasted pass. Before
-reporting done:
+## 7. Frontend contract
 
-- **Capture.** For each finding this pass produced, name where it was routed
-  per CLAUDE.md's capture table — §10 rule + writer gate + audit class, an
-  agent/skill trap, a curated map, or a §12 entry. A finding with no durable
-  home will be re-found at full price.
-- **Check the gates are real.** Every rule cited in §10 should have an
-  enforcement site AND an outcome check. Where a rule exists with no audit
-  class behind it, say so — that rule is still costing model attention on
-  every pass and is a candidate for automation.
-- **Report cycle position.** Say plainly where the project now sits in the
-  data cycle and what step is next, so the user is never reconstructing it.
+- Episode-level display reads only the hydrated series (`P37`); incomplete
+  data degrades gracefully (`P6`), never NaN.
+- `npx tsc -b --noEmit` (`scripts/` is in the graph), `npm run lint`,
+  `npm test`, `npm run build` (`P27`). Regenerate
+  `src/integrations/supabase/types.ts` after any migration.
+
+## 8. Save point — write STATE last
+
+- `docs/STATE.md`: phase, track/piece, cycle step, last save point, next
+  action, what awaits Sean, open sidecars. Memory points here; do not
+  restate the position elsewhere.
+- Commit whose message reads as the ruling record (rule ids, witnesses,
+  census delta); push to main.
+- Report the census delta and anything awaiting Sean as explicit open
+  decisions.
+
+## 9. Deep rescan (deep mode)
+
+Re-evaluate existing data against CURRENT rules, ahead of drift.
+
+- **Notes are precedence, not blindfolds** (`P23`): rulings, suppressions,
+  overrides and "don't touch" notes are scanned and re-checked — no longer
+  valid → bring to Sean with evidence; clear-cut under a live rule → apply,
+  update the record's reason, REPORT; ambiguous → research, verdict.
+- **Stale cleanup** (`P24`): dead constants, rulings pointing at rows that
+  no longer exist, orphaned staging, resolved-but-lingering flags. Every
+  deletion listed. `retiresWhen` conditions in `docs/rulings.md` are the
+  worklist — check each.
+- **Permanence tiers** (`P25`, designed; BUILT after T4): two-level deep —
+  routine deep skips LOCKED series; a rule-change deep never does.
+- End with the step-5 census gate and fold results into step 8.
+
+## 10. Close the loop — capture (`P29`)
+
+For each finding: name its durable home — ledger record + gate + audit
+(`/add-rule`), a `RulingEntry`, a research-agent trap, an apply-batch trap,
+a skill fix + changelog entry. A rule cited in `docs/rules.md` with an empty
+audit-class cell is still costing model attention — say which ones this
+pass touched. Report the cycle position plainly: which step is next.

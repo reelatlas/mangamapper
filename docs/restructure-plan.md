@@ -329,8 +329,8 @@ words after the glossary exists. Rough total: 8–12 sessions.
 | T2.7 | system-census.ts (7 checks: ledger+citations, unpaged selects, one-hop, rosters, rulings index, generated docs fresh, edge hash) = `npm run system:census` (P33 live) | T2.4, T1.6 | done 2026-08-26 |
 | T3.1 | /add-rule skill written; exercise 1 AIR_DATE_OVERRIDES done (G53: 7 cited rows, audit 7→0, edges deployed); exercise 2 (a second data rule) pending | T1.2, T2.1 | 1 of 2 exercises done 2026-08-26 |
 | T3.2 | PROTOCOL collapse + rules_applied + pin | T1.2, T4.0 | planned |
-| T3.3 | consolidate rework | T2.4, T2.7 | planned |
-| T3.4 | research-batch / apply-batch | T3.2 | planned |
+| T3.3 | /consolidate rewritten around the cycle: system census step 0, deep REQUIRED on enforcement-site change (P22 live), rosters, STATE read-first/write-last, capture step | T2.4, T2.7 | done 2026-08-26 |
+| T3.4 | /apply-batch + /research-batch on the new homes (ids, rosters, history/, HELD trap, verifier-first); PROTOCOL pointer stays batch-17 until T3.2 | — | done 2026-08-26 |
 | T3.5 | verifier + cold probe | T3.2 | planned |
 | T4.1–4.5 | taxonomy build | T4.0, T3.1 | planned |
 | T5.* | backlog routing | per §3 | planned |

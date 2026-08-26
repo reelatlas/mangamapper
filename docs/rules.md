@@ -278,7 +278,7 @@
 - `P19` After any change, verify the whole series via the app path — aka `the verifier`, `whole-series verifier`, `verify-after-adjust ruling`, `Oshi stale-harness lesson`, `post-adjustment whole-series verification`
 - `P20` Healers are idempotent and run from the roster — aka `healer roster`, `healers idempotent`, `healers idempotent + rostered`
 - `P21` Deep runs when a rule change invalidates prior decisions — aka `deep trigger`, `consolidate deep trigger`, `two modes`
-- `P22` Deep is REQUIRED when a ledger enforcement site changed *(planned)* — aka `sharper deep trigger`, `enforcement-site deep trigger`, `T3.3`
+- `P22` Deep is REQUIRED when a ledger enforcement site changed — aka `sharper deep trigger`, `enforcement-site deep trigger`, `T3.3`
 - `P23` Notes are precedence, not blindfolds — aka `notes are precedence, not blindfolds`, `deep rescan notes rule`
 - `P24` Delete with evidence; every removal is listed — aka `delete with evidence`, `stale cleanup`, `every deletion listed`
 - `P25` Permanence tiers: finished, Sean-signed series are LOCKED *(planned)* — aka `permanence tiers`, `permanence tier`, `LOCKED`, `locked series`, `permanence locks`
@@ -3649,15 +3649,15 @@ Every healer is idempotent — a re-run on a clean catalog changes nothing — a
 - aliases: deep trigger, consolidate deep trigger, two modes
 - see: P22, P23, P25, sliver rule
 
-### P22 · Deep is REQUIRED when a ledger enforcement site changed *(planned)*
+### P22 · Deep is REQUIRED when a ledger enforcement site changed
 
 /consolidate deep is mechanically required whenever any ledger record's enforcement site changed since the last pass; the cheap pass suffices otherwise. Two-level deep: a routine deep skips locked series, a rule-change deep never does.
 
 *Why:* The live trigger ("plausibly invalidates prior decisions") is judgment-heavy; with enforcement sites in the ledger the trigger becomes derivable.
 
-- ruled session 2026-08-24 (docs/system-evolution.md §5 "Sharper deep trigger"; docs/restructure-plan.md §3 T3.3)
+- ruled session 2026-08-26 (docs/system-evolution.md §5 "Sharper deep trigger"; docs/restructure-plan.md §3 T3.3)
 - layer **process**
-- enforced: [docs/system-evolution.md#Sharper `deep` trigger](../docs/system-evolution.md) · [docs/restructure-plan.md#T3.3](../docs/restructure-plan.md)
+- enforced: [.claude/skills/consolidate/SKILL.md](../.claude/skills/consolidate/SKILL.md) · [scripts/restructure/system-census.ts](../scripts/restructure/system-census.ts)
 - **audit: none — automation backlog**
 - aliases: sharper deep trigger, enforcement-site deep trigger, T3.3
 - see: P21, P25, P33
@@ -4737,6 +4737,6 @@ Any component that renders episode-level data consumes the HYDRATED series (getB
 
 ## Scoreboard
 
-- rules: 259 (live 243, planned 11, superseded 5)
+- rules: 259 (live 244, planned 10, superseded 5)
 - live data rules with no audit class (the automation backlog): 89
 - by layer: writer 132 · display 23 · both 21 · process 83

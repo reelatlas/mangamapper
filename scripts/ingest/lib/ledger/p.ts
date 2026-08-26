@@ -410,14 +410,11 @@ export const RULES: Rule[] = [
       '/consolidate deep is mechanically required whenever any ledger record\'s enforcement site changed since the last pass; the cheap pass suffices otherwise. Two-level deep: a routine deep skips locked series, a rule-change deep never does.',
     why: 'The live trigger ("plausibly invalidates prior decisions") is judgment-heavy; with enforcement sites in the ledger the trigger becomes derivable.',
     ruledBy: 'session',
-    ruledOn: '2026-08-24',
+    ruledOn: '2026-08-26',
     origin: 'docs/system-evolution.md §5 "Sharper deep trigger"; docs/restructure-plan.md §3 T3.3',
-    enforcement: [
-      { path: 'docs/system-evolution.md', symbol: 'Sharper `deep` trigger' },
-      { path: 'docs/restructure-plan.md', symbol: 'T3.3' },
-    ],
+    enforcement: [{ path: '.claude/skills/consolidate/SKILL.md' }, { path: 'scripts/restructure/system-census.ts' }],
     layer: 'process',
-    status: 'planned',
+    status: 'live',
     see: ['P21', 'P25', 'P33'],
   },
   {
