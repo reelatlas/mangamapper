@@ -88,9 +88,19 @@ export const seriesHasInstrument = (sourceType: string | null | undefined): bool
 // wins over derivation; it must be a registered kind (ledger-check / the
 // healer refuse anything else).
 export const OVERRIDE_ENTRIES: RulingEntry<string>[] = [
-  // none yet — candidates for Sean (batch 18): solo-leveling and
-  // the-beginning-after-the-end derive `other` (AniList source OTHER) while
-  // each adapts a KR webtoon of a web novel → `manhwa` is the likely ruling.
+  {
+    seriesId: 'outlaw-star',
+    ruleId: 'T25',
+    value: 'original',
+    reason:
+      "AniList says source MANGA, but the show is a co-primary media-mix, not an adaptation: Sunrise's official page credits 原作／矢立 肇、伊東岳彦 on the anime and 漫画／伊東岳彦 as the parallel branch (「メディアミックス作品でもある」); Hajime Yatate — Sunrise's house pseudonym — sits in the MANGA's own vol-1 index; Ito plotted the anime from 1994, the manga started 「テレビの放送に先駆けて」 as a lead-in, and he scripted ep 19 himself. The anime IS its own source; the 3-volume manga is a sibling telling (Sean's A40/G3 rulings already found no chapter mapping meaningful). Distinct from the Evangelion class (T21: manga adapts the anime) — sibling BY DESIGN. Batch 18, verified R24.",
+    ruledBy: 'Sean',
+    ruledOn: '2026-08-26',
+    cite: ['https://www.sunrise-world.net/titles/pickup_094.php', 'https://ja.wikipedia.org/wiki/星方武侠アウトロースター', 'scripts/ingest/research/batch18/verify/outlaw-star.md'],
+  },
+  // candidates for Sean: solo-leveling and the-beginning-after-the-end derive
+  // `other` (AniList source OTHER) while each adapts a KR webtoon of a web
+  // novel → `manhwa` is the likely ruling (T4-GLOSSARY §7).
 ];
 export const SOURCE_TYPE_OVERRIDES: Record<string, string> = toRecord(OVERRIDE_ENTRIES);
 

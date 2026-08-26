@@ -45,7 +45,10 @@ vocabulary clean, adopted → basis, no self-contradiction).
 - Kanzenshuu has no DBS episode guide; AFG no DBS table.
 - sunrise.fandom ja / weblio are ja-WP mirrors — not independent.
 
+## APPLIED 2026-08-26 (changelog §12.57)
+Sean's rulings (with Cursor): boruto A's line + 128-136 / 8-9 / 67-69, ep 34 declined, 282-286 + 93-95 + 106-111 side_source, 221-281 community with the basis sentence; FMA as filed + 42-51 divergence (Asahi) + ep 37 canon/side_source; outlaw-star → original + 26 canon + 2 dates; DBS 94-95 mixed; soul-eater 39-40 mixed + 37 mixed; beyblade as filed + ep 3. Applied through the declarative maps and `npm run heal`; census in §12.57.
+
 ## Outstanding
 - Verification (R24, different model): boruto A + B together (the contradiction), FMA 2003, soul-eater, beyblade, DBS, outlaw-star — all six blocks per the wave plan.
 - Wave 2 (A-7 endings, 8 agents) and wave 3 (narrow bundles + bases) not dispatched.
-- Apply script `apply-research-batch-18.ts` not written (needs the rulings above).
+- No apply script: batch 18 applies through the standing maps (T6 / T26 / G53 / SOURCE_TYPE_OVERRIDES) + `npm run heal`; `curate.ts` produces the blocks.

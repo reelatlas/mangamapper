@@ -369,15 +369,6 @@ export const ENTRIES: RulingEntry<EpisodeTypes>[] = [
     ruledOn: '2026-08-23',
   },
   {
-    seriesId: 'boruto-naruto-next-generations',
-    ruleId: 'T6',
-    value: range(221, 286, 'canon'),
-    reason:
-      "Eps 221-286: five ANIME-CANON arcs between the Kawaki arc end (ep 220 → ch 55) and Code's Assault (287-293 = chs 56-67) — Chunin Re-Exam, Kirigakure war, Kawaki Academy, Labyrinth, Sasuke Retsuden (narutopedia arc pages + animefillerguide + cbr; research batch 11). TRAP: animefillerlist marks 282-293 'Manga Canon' crediting the Sasuke Retsuden SPIN-OFF manga — trusting it would falsely advance Boruto chapter progress. T4.3 (T26/T27, 2026-08-26): anime-only-canon → canon; the override lives as an adopted / side_source annotation (lib/rulings/standing-annotations.ts), mapping null by design.",
-    ruledBy: 'session',
-    ruledOn: '2026-08-23',
-  },
-  {
     seriesId: 'gto-great-teacher-onizuka',
     ruleId: 'T6',
     value: {
@@ -491,7 +482,7 @@ export const ENTRIES: RulingEntry<EpisodeTypes>[] = [
     ruleId: 'T6',
     value: { 24: 'canon' },
     reason:
-      "Ep 24 'Another World: Tomoyo Chapter' (OVA, 2008-07-16) adapts the visual novel's Tomoyo route — an alternate route of the SOURCE, not a studio invention (Clannad Wiki: 'highlighting segments of Tomoyo\'s visual novel route'; en-WP: alternate timeline from the TV series). AFL's anime-canon on a VN series maps filler by T27; the cited route makes it canon relative to the VN. Instrument none (no mapping). T4.3 follow-up 2026-08-26.",
+      "Ep 24 'Another World: Tomoyo Chapter' (OVA, 2008-07-16) adapts the visual novel's Tomoyo route — an alternate route of the SOURCE, not a studio invention (Clannad Wiki: 'highlighting segments of Tomoyo's visual novel route'; en-WP: alternate timeline from the TV series). AFL's anime-canon on a VN series maps filler by T27; the cited route makes it canon relative to the VN. Instrument none (no mapping). T4.3 follow-up 2026-08-26.",
     ruledBy: 'Sean',
     ruledOn: '2026-08-26',
     cite: ['https://clannad.fandom.com/wiki/Another_World:_Tomoyo_Chapter', 'https://en.wikipedia.org/wiki/List_of_Clannad_episodes'],
@@ -501,10 +492,70 @@ export const ENTRIES: RulingEntry<EpisodeTypes>[] = [
     ruleId: 'T6',
     value: { 23: 'filler', 25: 'canon' },
     reason:
-      "Ep 25 'Another World: Kyou Chapter' (OVA, 2009-07-01) adapts the visual novel's Kyou route (Clannad Wiki: 'based on the events of Kyou\'s route'; en-WP: alternate timeline) → canon relative to the VN. Ep 23 'The Event from One Year Before' is an anime-original extra set a year before the story (Clannad Wiki + en-WP) → filler, ruled so it leaves the afl_anime_canon_unruled queue. Ep 24 is the recap (AFL filler, untouched). T4.3 follow-up 2026-08-26.",
+      "Ep 25 'Another World: Kyou Chapter' (OVA, 2009-07-01) adapts the visual novel's Kyou route (Clannad Wiki: 'based on the events of Kyou's route'; en-WP: alternate timeline) → canon relative to the VN. Ep 23 'The Event from One Year Before' is an anime-original extra set a year before the story (Clannad Wiki + en-WP) → filler, ruled so it leaves the afl_anime_canon_unruled queue. Ep 24 is the recap (AFL filler, untouched). T4.3 follow-up 2026-08-26.",
     ruledBy: 'Sean',
     ruledOn: '2026-08-26',
     cite: ['https://clannad.fandom.com/wiki/Another_World:_Kyou_Chapter', 'https://clannad.fandom.com/wiki/The_Event_from_One_Year_Before', 'https://en.wikipedia.org/wiki/List_of_Clannad_episodes'],
+  },
+  {
+    seriesId: 'boruto-naruto-next-generations',
+    ruleId: 'T6',
+    value: {"2": "filler", "3": "filler", "4": "filler", "5": "filler", "6": "filler", "7": "filler", "8": "canon", "9": "canon", "10": "filler", "11": "filler", "12": "filler", "13": "filler", "14": "filler", "15": "filler", "25": "filler", "26": "filler", "27": "filler", "28": "filler", "29": "filler", "30": "filler", "31": "filler", "32": "filler", "33": "filler", "34": "filler", "35": "filler", "36": "filler", "37": "filler", "38": "filler", "42": "filler", "43": "filler", "44": "filler", "45": "filler", "46": "filler", "47": "filler", "51": "filler", "52": "filler", "60": "filler", "67": "canon", "68": "canon", "69": "canon", "70": "filler", "71": "filler", "72": "filler", "73": "filler", "74": "filler", "75": "filler", "76": "filler", "77": "filler", "78": "filler", "79": "filler", "80": "filler", "81": "filler", "82": "filler", "83": "filler", "84": "filler", "85": "filler", "86": "filler", "87": "filler", "88": "filler", "89": "filler", "90": "filler", "91": "filler", "92": "filler", "93": "canon", "94": "canon", "95": "canon", "98": "filler", "99": "filler", "100": "filler", "101": "filler", "102": "filler", "103": "filler", "104": "filler", "105": "filler", "106": "canon", "107": "canon", "108": "canon", "109": "canon", "110": "canon", "111": "canon", "120": "filler", "121": "filler", "122": "filler", "123": "filler", "124": "filler", "125": "filler", "126": "filler", "128": "canon", "129": "canon", "130": "canon", "131": "canon", "132": "canon", "133": "canon", "134": "canon", "135": "canon", "136": "canon", "137": "filler", "141": "filler", "142": "filler", "143": "filler", "144": "filler", "145": "filler", "146": "filler", "147": "filler", "155": "filler", "158": "filler", "159": "filler", "160": "filler", "161": "filler", "162": "filler", "163": "filler", "164": "filler", "165": "filler", "166": "filler", "167": "filler", "168": "filler", "169": "filler", "170": "filler", "171": "filler", "172": "filler", "173": "filler", "174": "filler", "175": "filler", "176": "filler", "177": "filler", "178": "filler", "179": "filler", "180": "filler", "190": "filler", "191": "filler", "209": "filler", "221": "canon", "222": "canon", "223": "canon", "224": "canon", "225": "canon", "226": "canon", "227": "canon", "228": "canon", "229": "canon", "230": "canon", "231": "canon", "232": "canon", "233": "canon", "234": "canon", "235": "canon", "236": "canon", "237": "canon", "238": "canon", "239": "canon", "240": "canon", "241": "canon", "242": "canon", "243": "canon", "244": "canon", "245": "canon", "246": "canon", "247": "canon", "248": "canon", "249": "canon", "250": "canon", "251": "canon", "252": "canon", "253": "canon", "254": "canon", "255": "canon", "256": "canon", "257": "canon", "258": "canon", "259": "canon", "260": "canon", "261": "canon", "262": "canon", "263": "canon", "264": "canon", "265": "canon", "266": "canon", "267": "canon", "268": "canon", "269": "canon", "270": "canon", "271": "canon", "272": "canon", "273": "canon", "274": "canon", "275": "canon", "276": "canon", "277": "canon", "278": "canon", "279": "canon", "280": "canon", "281": "canon", "282": "canon", "283": "canon", "284": "canon", "285": "canon", "286": "canon"},
+    reason:
+      "Batch 18 (2026-08-26), verified R24, SEAN RULED: AFL's 'anime canon' on Boruto is a claim about the manga, not adoption. Kodachi's blanket ストーリー監修 (eps 1-216) is a show-runner credit that also covers rows every list calls filler — REJECTED as an adoption basis (verifier refuted verdict B's 41 rows on the protocol's own test). Adopted on a SPECIFIC act by the source's author: 128-136 Time Slip (Kishimoto's own story, 20th-anniversary project; high), 8-9 (Kishimoto and Kodachi expanded one episode into two; medium), 67-69 Chocho (Kishimoto 原案 + dialogue; repair of stored filler). Ep 34 (Kodachi co-script) declined. 93-95 (親子の日 novel), 106-111 (湯煙忍法帖 novel) and 282-286 (Sasuke Retsuden) adapt licensed novels → canon + side_source (Shippuden 452-457 precedent). 221-281 stay canon + adopted{community} — a DIFFERENT basis from a staff credit: the community and the manga-era story treat the stretch as having happened; written here so it is not 'staff credit for some, vibes for others'. Everything else AFL calls anime canon in 2-105 / 120-209 → filler (adheres to no source).",
+    ruledBy: 'Sean',
+    ruledOn: '2026-08-26',
+    cite: ["scripts/ingest/research/batch18/out/boruto-naruto-next-generations-A.json", "scripts/ingest/research/batch18/out/boruto-naruto-next-generations-B.json", "scripts/ingest/research/batch18/verify/boruto.md", "https://ja.wikipedia.org/wiki/BORUTO-ボルト-_NARUTO_NEXT_GENERATIONS", "https://naruto.fandom.com/wiki/Time_Slip_Arc"],
+  },
+  {
+    seriesId: 'beyblade-metal-fusion',
+    ruleId: 'T6',
+    value: {"3": "filler", "4": "filler", "5": "filler", "6": "filler", "7": "filler", "8": "filler", "9": "filler", "10": "filler", "11": "filler", "15": "filler", "16": "filler", "18": "filler", "20": "filler", "21": "filler", "22": "filler", "23": "filler", "24": "filler", "25": "filler", "26": "filler", "27": "filler", "29": "filler", "31": "filler", "33": "filler", "34": "filler", "35": "filler", "36": "filler", "38": "filler", "39": "filler", "40": "filler", "41": "filler", "42": "filler", "44": "filler", "45": "filler"},
+    reason:
+      "Batch 18 (2026-08-26), verified R24 SOUND, Sean ruled: all 32 AFL 'anime canon' rows adhere to no source — ja.wikipedia (概要 / 作中用語 / アニメオリジナルキャラクター, cited to Adachi's own blog) documents parallel production with settings flowing anime → manga; anime Battle Bladers pairings share zero matchups with manga ch 9-15; the 原作 credit is a media-mix credit, no 監修 → no adoption. Ep 3 repair mixed → filler (Doji/Dark Wolf/Kenta content absent from ch 1-3; the Blader's Spirit line is a rehash).",
+    ruledBy: 'Sean',
+    ruledOn: '2026-08-26',
+    cite: ["scripts/ingest/research/batch18/out/beyblade-metal-fusion.json", "scripts/ingest/research/batch18/verify/beyblade-metal-fusion.md", "https://ja.wikipedia.org/wiki/メタルファイト_ベイブレード", "https://hottate2.exblog.jp/11447754/"],
+  },
+  {
+    seriesId: 'fullmetal-alchemist',
+    ruleId: 'T6',
+    value: {"8": "mixed", "11": "canon", "12": "canon", "16": "canon", "21": "mixed", "22": "canon", "24": "mixed", "29": "mixed", "30": "mixed", "31": "filler", "32": "mixed", "35": "filler", "36": "filler", "37": "canon", "38": "filler", "39": "filler", "40": "mixed", "41": "mixed", "42": "filler", "43": "filler", "44": "filler", "45": "filler", "46": "filler", "47": "filler", "48": "filler", "49": "filler", "50": "filler", "51": "filler"},
+    reason:
+      "Batch 18 (2026-08-26), verified R24, Sean ruled: manga content continues through ep 34 and resurfaces in 40-41 (ch 30, Martel inside Al) — 8/21/24/29/30/32/40/41 mixed, 16/22 canon (fma.fandom 'adapted from' fields verified verbatim); eps 11-12 adapt the first light novel The Land of Sand → canon + side_source (Itachi Shinden precedent); 31/35-36/38-39 anime-original connective → filler; 42-51 Bones' original finale → FILLER for manga standing — Arakawa ORDERED a different ending (Asahi 2005-07-25, her own words), holds no 監修 credit, 'did not write for the television series'; authorised parallel continuity is a divergence annotation, never adopted{author} (the kinnikuman rule). Ep 37 repair filler → canon: adapts Arakawa's bonus chapters + a novel story, the same basis ep 13 is stored canon on.",
+    ruledBy: 'Sean',
+    ruledOn: '2026-08-26',
+    cite: ["scripts/ingest/research/batch18/out/fullmetal-alchemist.json", "scripts/ingest/research/batch18/verify/fullmetal-alchemist.md", "https://web.archive.org/web/20050728025135/http://www.asahi.com/culture/theater/TKY200507250335.html", "https://fma.fandom.com/wiki/Episode_40_(2003_Anime)"],
+  },
+  {
+    seriesId: 'dragon-ball-super',
+    ruleId: 'T6',
+    value: {"16": "filler", "17": "filler", "22": "filler", "50": "filler", "52": "filler", "71": "filler", "72": "filler", "78": "mixed", "79": "filler", "80": "filler", "81": "filler", "90": "filler", "91": "mixed", "94": "mixed", "95": "mixed"},
+    reason:
+      "Batch 18 (2026-08-26), verified R24, Sean ruled: Toriyama's outline is commissioned text expanded by Toei screenwriters (ja.wikipedia verbatim; no 鳥山 in the 脚本 table) → no author adoption; 16/17/22/50/52/71/72/79-81/90 filler (fandom: entire events exclusive to the anime); 78 mixed (manga ch 28 assembly + announcement; chapters '28 (partial)' — ch 30 pairs with eps 82-83, not 78), 91 mixed (ch 31 Buu hibernation), 94-95 mixed on the SAME standard as 91 (one restaged ch-32 scene each; fandom infobox Manga = ch 32).",
+    ruledBy: 'Sean',
+    ruledOn: '2026-08-26',
+    cite: ["scripts/ingest/research/batch18/out/dragon-ball-super.json", "scripts/ingest/research/batch18/verify/dragon-ball-super.md", "https://ja.wikipedia.org/wiki/ドラゴンボール超", "https://dragonball.fandom.com/wiki/Dragon_Ball_Super_outline"],
+  },
+  {
+    seriesId: 'outlaw-star',
+    ruleId: 'T6',
+    value: {"1": "canon", "2": "canon", "3": "canon", "4": "canon", "5": "canon", "6": "canon", "7": "canon", "8": "canon", "9": "canon", "10": "canon", "11": "canon", "12": "canon", "13": "canon", "14": "canon", "15": "canon", "16": "canon", "17": "canon", "18": "canon", "19": "canon", "20": "canon", "21": "canon", "22": "canon", "23": "canon", "24": "canon", "25": "canon", "26": "canon"},
+    reason:
+      "Batch 18 (2026-08-26), verified R24, SEAN RULED the SERIES a studio original (SOURCE_TYPE_OVERRIDES): Sunrise's official page credits 原作 矢立肇・伊東岳彦 on the anime and Yatate (Sunrise's pseudonym) sits in the manga's own vol-1 index — a co-primary media-mix, the manga a sibling telling, not the source (A40/G3 already ruled no chapter mapping meaningful). With the anime as its own source every story episode is canon, including AFL's plain 'Filler' rows 13/14/16/18/19/20 (ep 19 = Ito's own screenplay; none are recaps — Sunrise's episode list). Eps 1-2's overlap with manga vol 1 is a divergence annotation, not a mapping.",
+    ruledBy: 'Sean',
+    ruledOn: '2026-08-26',
+    cite: ["scripts/ingest/research/batch18/out/outlaw-star.json", "scripts/ingest/research/batch18/verify/outlaw-star.md", "https://www.sunrise-world.net/titles/pickup_094.php", "https://ja.wikipedia.org/wiki/星方武侠アウトロースター"],
+  },
+  {
+    seriesId: 'soul-eater',
+    ruleId: 'T6',
+    value: {"37": "mixed", "39": "mixed", "40": "mixed", "41": "filler", "42": "filler", "43": "filler", "44": "filler", "45": "filler", "46": "filler", "47": "filler", "48": "filler", "49": "filler", "50": "filler", "51": "filler"},
+    reason:
+      "Batch 18 (2026-08-26), verified R24, Sean ruled: ep 38 is the last row adapting chapters; 39 mixed (ch 40's opening scene — fandom states the link, en-WP both sides), 40 mixed (ch 44 tail + ch 45 opening grafted, bidirectional fields); 41-51 Bones' original ending with no Ohkubo credit (archived TV Tokyo staff page; ja-WP) → filler, the A-7 class, divergence-annotated. Ep 37 repair canon → mixed: two sources now say no chapter standing (fandom 'no corresponding chapters', ja-WP anime-original from 37; AFG chapters []), ch 38 slivers only — parity with 39.",
+    ruledBy: 'Sean',
+    ruledOn: '2026-08-26',
+    cite: ["scripts/ingest/research/batch18/out/soul-eater.json", "scripts/ingest/research/batch18/verify/soul-eater.md", "https://souleater.fandom.com/wiki/Chapter_40", "https://ja.wikipedia.org/wiki/ソウルイーター"],
   },
 ];
 

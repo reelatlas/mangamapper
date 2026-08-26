@@ -29,6 +29,16 @@ export const ENTRIES: RulingEntry<Record<number, string>>[] = [
     ruledOn: '2026-08-25',
     cite: ['scripts/ingest/research/batch17/out2/ranma-1-2-reanchor.json', 'https://ranma.fandom.com/wiki/Gosunkugi%27s_Summer_Affair!'],
   },
+  {
+    seriesId: 'outlaw-star',
+    ruleId: 'G53',
+    value: { 1: '1998-01-08', 8: '1998-02-26' },
+    reason:
+      "Both stored values are animefillerlist's: ep 1 1998-01-05 → 1998-01-08 (ja-WP, en-WP, fandom, AniList startDate, Sunrise official 放送開始 1998年01月08日); ep 8 1998-12-26 → 1998-02-26 (ja-WP, en-WP, fandom) — the ep-8 typo was the outlaw-star entry in the G54 airdate_regression queue. MAL's Jan 9 / Feb 27 are the post-midnight dates of a 25:15 slot, not a conflict. Ep 23's stored 1998-06-04 is for a broadcast that never happened (Sunrise: 第23話 TV未放映) — left for a ruling on whether G53 may carry NULL.",
+    ruledBy: 'Sean',
+    ruledOn: '2026-08-26',
+    cite: ['scripts/ingest/research/batch18/out/outlaw-star.json', 'scripts/ingest/research/batch18/verify/outlaw-star.md', 'https://www.sunrise-inc.co.jp/work/detail.php?cid=94', 'https://ja.wikipedia.org/wiki/星方武侠アウトロースター'],
+  },
 ];
 
 export const AIR_DATE_OVERRIDES: Record<string, Record<number, string>> = toRecord(ENTRIES);

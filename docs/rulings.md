@@ -2,7 +2,7 @@
 
 > GENERATED from `scripts/ingest/lib/rulings/**` by `scripts/restructure/gen-rulings.ts` — do not edit by hand. A ruling is an INSTANCE of a rule (`docs/rules.md`); the map is the record, this is the index.
 
-- rulings: 1664 across 196 series/keys · by Sean: 318 · UNRECORDED reasons: 8 · with a retire condition: 94
+- rulings: 1675 across 199 series/keys · by Sean: 331 · UNRECORDED reasons: 8 · with a retire condition: 93
 
 ## Retire conditions (re-evaluate when…)
 
@@ -35,7 +35,7 @@
 - **T4.0 studio-original-endings class ruling (DRIFT-LIST A-7: gto 42-43 "caught up" is one of three competing types)** — gto-great-teacher-onizuka (T6)
 - **T4.0 taxonomy v2 unifies the studio-original-ending classes (A-7)** — claymore (T6), gto-great-teacher-onizuka (T6), ajin-demi-human (T6)
 - **Zoku-hen (204688) airs — chain gains an id** — kingdom (I27)
-- **batch-18: Sean rules the adopted.basis (T4-GLOSSARY §7) — the basis here is INFERRED, not signed** — boruto-naruto-next-generations (T26), beastars (T26)
+- **batch-18: Sean rules the adopted.basis (T4-GLOSSARY §7) — the basis here is INFERRED, not signed** — beastars (T26)
 - **flips to mixed if the step-stool line is ever confirmed inside ch 166** — beastars (T6)
 - **repaired §12.45 (rosario ep 11 9→8)** — rosario-vampire (A3)
 - **stitched 2026-08-23 (§12.34 stitch queue: Kingdom S5/S6 → 155)** — kingdom (I33)
@@ -290,6 +290,12 @@
 |---|---|---|---|---|
 | `I11` | film trilogy — movies out of v1 scope (Sean 2026-08-22), re-evaluate with watch-order | The Golden Age Arc is a film trilogy, not a series — movies are out of v1 scope (Sean 2026-08-22); re-evaluate with the watch-order concept. | Sean 2026-08-22 | the watch-order / movies design pass re-evaluates film collections |
 
+### beyblade-metal-fusion (1)
+
+| rule | value | reason | ruled | retires when |
+|---|---|---|---|---|
+| `T6` | {"3":"filler","4":"filler","5":"filler","6":"filler","7":"filler","8":"filler","9":"filler","10":"filler","11":"filler","15":"filler","16":"filler","18":"fil… | Batch 18 (2026-08-26), verified R24 SOUND, Sean ruled: all 32 AFL 'anime canon' rows adhere to no source — ja.wikipedia (概要 / 作中用語 / アニメオリジナルキャラクター, cited to Adachi's own blog) documents parallel production with settings flowing anime → manga; anime Battle Bladers pairings share zero matchups with manga ch 9-15; the 原作 credit is a media-mix credit, no 監修 → no adoption. Ep 3 repair mixed → filler (Doji/Dark Wolf/Kenta content absent from ch 1-3; the Blader's Spirit line is a rehash). | Sean 2026-08-26 · scripts/ingest/research/batch18/out/beyblade-metal-fusion.json, scripts/ingest/research/batch18/verify/beyblade-metal-fusion.md, https://ja.wikipedia.org/wiki/メタルファイト_ベイブレード, https://hottate2.exblog.jp/11447754/ |  |
+
 ### black-butler (18)
 
 | rule | value | reason | ruled | retires when |
@@ -522,7 +528,7 @@
 
 | rule | value | reason | ruled | retires when |
 |---|---|---|---|---|
-| `T26` | [{"episodes":[221,222,223,224,225,226,227,228,229,230,231,232,233,234,235,236,237,238,239,240,241,242,243,244,245,246,247,248,249,250,251,252,253,254,255,256… | T4.0 D-10 ruled consensus rows → canon + adopted. The basis is inferred (community-accepted anime canon; Sasuke Retsuden adapts a licensed novel) and listed for Sean. | session 2026-08-26 · docs/restructure/T4-GLOSSARY.md §3, scripts/ingest/lib/rulings/episode-types.ts boruto | batch-18: Sean rules the adopted.basis (T4-GLOSSARY §7) — the basis here is INFERRED, not signed |
+| `T26` | [{"episodes":[221,222,223,224,225,226,227,228,229,230,231,232,233,234,235,236,237,238,239,240,241,242,243,244,245,246,247,248,249,250,251,252,253,254,255,256… | Batch 18 (2026-08-26), verified R24, SEAN RULED: adoption follows a specific act by the source's author, never a blanket staff credit; licensed novels are side_source (Shippuden precedent); 221-281 community on a stated basis distinct from the rejected credit. | Sean 2026-08-26 · scripts/ingest/research/batch18/verify/boruto.md, scripts/ingest/research/batch18/out/boruto-naruto-next-generations-A.json, scripts/ingest/research/batch18/out/boruto-naruto-next-generations-B.json, docs/restructure/T4-GLOSSARY.md §3 |  |
 | `A3` | {"episode":293,"chapter":67,"volume":17,"source":"manual"} | Ep 293 hiatus finale = end of Ch 67 "Rift". sportskeeda + mangashed + boruto.fandom.com | Sean 2026-08-24 · scripts/ingest/apply-research-batch.ts |  |
 | `G3` | {"flags":"open → confirmed","verdict":"research-tier frontier applied as manual anchor (sources in anchor note); Sean sign-off 2026-08-24"} | open ingest_flags closed with verdict: research-tier frontier applied as manual anchor (sources in anchor note); Sean sign-off 2026-08-24 | Sean 2026-08-24 · scripts/ingest/apply-research-batch.ts |  |
 | `A3` | {"episode":287,"chapter":56,"start_chapter":56,"chapters_adapted":"56 (+start of 57; ch-55 recap; ch-60 bit)","volume":15,"source":"manual","note":"research-… | Code's Assault opens. narutopedia + animefillerguide + arc page | session 2026-08-23 · scripts/ingest/apply-research-batch-11.ts, scratchpad batch11/boruto-naruto-next-generations.json (session scratchpad, not on disk), docs/changelog.md §12.30 |  |
@@ -540,7 +546,7 @@
 | `A3` | {"episode":187,"chapter":23,"volume":null,"source":"manual"} | Ao arc end (chs 16-23 = eps 178-187). narutopedia | session 2026-08-23 · scripts/ingest/apply-research-batch-6.ts |  |
 | `A3` | {"episode":220,"chapter":55,"volume":null,"source":"manual"} | Kawaki arc end (chs 24-55 = eps 188-220; Kurama/Isshiki). narutopedia + cbr | session 2026-08-23 · scripts/ingest/apply-research-batch-6.ts |  |
 | `G3` | {"bookmark":"sean_review_bookmark → confirmed"} | resolved: four interior manga-arc anchors (66/151/187/220 → 10/15/23/55); anime-canon stretches mapped (Sean sign-off 2026-08-23) | Sean 2026-08-23 · scripts/ingest/apply-research-batch-7.ts, docs/changelog.md §12.23 |  |
-| `T6` | {"221":"canon","222":"canon","223":"canon","224":"canon","225":"canon","226":"canon","227":"canon","228":"canon","229":"canon","230":"canon","231":"canon","2… | Eps 221-286: five ANIME-CANON arcs between the Kawaki arc end (ep 220 → ch 55) and Code's Assault (287-293 = chs 56-67) — Chunin Re-Exam, Kirigakure war, Kawaki Academy, Labyrinth, Sasuke Retsuden (narutopedia arc pages + animefillerguide + cbr; research batch 11). TRAP: animefillerlist marks 282-293 'Manga Canon' crediting the Sasuke Retsuden SPIN-OFF manga — trusting it would falsely advance Boruto chapter progress. T4.3 (T26/T27, 2026-08-26): anime-only-canon → canon; the override lives as an adopted / side_source annotation (lib/rulings/standing-annotations.ts), mapping null by design. | session 2026-08-23 |  |
+| `T6` | {"2":"filler","3":"filler","4":"filler","5":"filler","6":"filler","7":"filler","8":"canon","9":"canon","10":"filler","11":"filler","12":"filler","13":"filler… | Batch 18 (2026-08-26), verified R24, SEAN RULED: AFL's 'anime canon' on Boruto is a claim about the manga, not adoption. Kodachi's blanket ストーリー監修 (eps 1-216) is a show-runner credit that also covers rows every list calls filler — REJECTED as an adoption basis (verifier refuted verdict B's 41 rows on the protocol's own test). Adopted on a SPECIFIC act by the source's author: 128-136 Time Slip (Kishimoto's own story, 20th-anniversary project; high), 8-9 (Kishimoto and Kodachi expanded one episode into two; medium), 67-69 Chocho (Kishimoto 原案 + dialogue; repair of stored filler). Ep 34 (Kodachi co-script) declined. 93-95 (親子の日 novel), 106-111 (湯煙忍法帖 novel) and 282-286 (Sasuke Retsuden) adapt licensed novels → canon + side_source (Shippuden 452-457 precedent). 221-281 stay canon + adopted{community} — a DIFFERENT basis from a staff credit: the community and the manga-era story treat the stretch as having happened; written here so it is not 'staff credit for some, vibes for others'. Everything else AFL calls anime canon in 2-105 / 120-209 → filler (adheres to no source). | Sean 2026-08-26 · scripts/ingest/research/batch18/out/boruto-naruto-next-generations-A.json, scripts/ingest/research/batch18/out/boruto-naruto-next-generations-B.json, scripts/ingest/research/batch18/verify/boruto.md, https://ja.wikipedia.org/wiki/BORUTO-ボルト-_NARUTO_NEXT_GENERATIONS, https://naruto.fandom.com/wiki/Time_Slip_Arc |  |
 | `I17` | {"to":"naruto-shippuden","kind":"sequel"} | Boruto continues the Naruto story a generation on — sequel to Shippuden (the Naruto→Shippuden pattern). | session 2026-08-22 · docs/franchise-rulings.md |  |
 
 ### bungo-stray-dogs (16)
@@ -765,10 +771,12 @@
 | `I17` | {"to":"dragon-ball-z","kind":"sequel"} | GT follows Z chronologically (anime-original continuation) — sequel to Z. | session 2026-08-22 · docs/franchise-rulings.md |  |
 | `N7` | 987 | B (medium): A Hero's Legacy = ep 65 epilogue special; community-practice based — re-open if evidence emerges. | Sean 2026-08-23 |  |
 
-### dragon-ball-super (1)
+### dragon-ball-super (3)
 
 | rule | value | reason | ruled | retires when |
 |---|---|---|---|---|
+| `T26` | [{"episodes":[79,80,81],"kind":"divergence","note":"Substitution, not omission: the Zeno Expo exists in the source (manga ch. 28-29) but as a twelve-God-of-D… | Batch 18 (2026-08-26), verified R24, Sean ruled: the Toei-original episodes' relation to Toriyama's outline and Toyotarou's manga, per row. | Sean 2026-08-26 · scripts/ingest/research/batch18/out/dragon-ball-super.json, scripts/ingest/research/batch18/verify/dragon-ball-super.md |  |
+| `T6` | {"16":"filler","17":"filler","22":"filler","50":"filler","52":"filler","71":"filler","72":"filler","78":"mixed","79":"filler","80":"filler","81":"filler","90… | Batch 18 (2026-08-26), verified R24, Sean ruled: Toriyama's outline is commissioned text expanded by Toei screenwriters (ja.wikipedia verbatim; no 鳥山 in the 脚本 table) → no author adoption; 16/17/22/50/52/71/72/79-81/90 filler (fandom: entire events exclusive to the anime); 78 mixed (manga ch 28 assembly + announcement; chapters '28 (partial)' — ch 30 pairs with eps 82-83, not 78), 91 mixed (ch 31 Buu hibernation), 94-95 mixed on the SAME standard as 91 (one restaged ch-32 scene each; fandom infobox Manga = ch 32). | Sean 2026-08-26 · scripts/ingest/research/batch18/out/dragon-ball-super.json, scripts/ingest/research/batch18/verify/dragon-ball-super.md, https://ja.wikipedia.org/wiki/ドラゴンボール超, https://dragonball.fandom.com/wiki/Dragon_Ball_Super_outline |  |
 | `I17` | {"to":"dragon-ball-z","kind":"sequel"} | Super follows Z (set before GT, which it supersedes as continuity) — sequel to Z. | session 2026-08-22 · docs/franchise-rulings.md |  |
 
 ### dragon-ball-z (8)
@@ -941,6 +949,13 @@
 | rule | value | reason | ruled | retires when |
 |---|---|---|---|---|
 | `I17` | {"to":"fruits-basket-2001","kind":"remake"} | Fruits Basket: 2 separate series (2019's three seasons are components); 2019 remakes 2001. | session 2026-08-22 · docs/franchise-rulings.md "Fruits Basket" |  |
+
+### fullmetal-alchemist (2)
+
+| rule | value | reason | ruled | retires when |
+|---|---|---|---|---|
+| `T26` | [{"episodes":[11,12],"kind":"side_source","note":"Adapts the light novel 'Fullmetal Alchemist: The Land of Sand' (鋼の錬金術師1 砂礫の大地), story by Makoto Inoue from … | Batch 18 (2026-08-26), verified R24, Sean ruled: provenance of FMA 2003's split lives here — novel rows as side_source, the finale as a cited divergence (never adopted{author}), connective filler noted so the UI can tell the two filler reasons apart. | Sean 2026-08-26 · scripts/ingest/research/batch18/out/fullmetal-alchemist.json, scripts/ingest/research/batch18/verify/fullmetal-alchemist.md, https://web.archive.org/web/20050728025135/http://www.asahi.com/culture/theater/TKY200507250335.html |  |
+| `T6` | {"8":"mixed","11":"canon","12":"canon","16":"canon","21":"mixed","22":"canon","24":"mixed","29":"mixed","30":"mixed","31":"filler","32":"mixed","35":"filler"… | Batch 18 (2026-08-26), verified R24, Sean ruled: manga content continues through ep 34 and resurfaces in 40-41 (ch 30, Martel inside Al) — 8/21/24/29/30/32/40/41 mixed, 16/22 canon (fma.fandom 'adapted from' fields verified verbatim); eps 11-12 adapt the first light novel The Land of Sand → canon + side_source (Itachi Shinden precedent); 31/35-36/38-39 anime-original connective → filler; 42-51 Bones' original finale → FILLER for manga standing — Arakawa ORDERED a different ending (Asahi 2005-07-25, her own words), holds no 監修 credit, 'did not write for the television series'; authorised parallel continuity is a divergence annotation, never adopted{author} (the kinnikuman rule). Ep 37 repair filler → canon: adapts Arakawa's bonus chapters + a novel story, the same basis ep 13 is stored canon on. | Sean 2026-08-26 · scripts/ingest/research/batch18/out/fullmetal-alchemist.json, scripts/ingest/research/batch18/verify/fullmetal-alchemist.md, https://web.archive.org/web/20050728025135/http://www.asahi.com/culture/theater/TKY200507250335.html, https://fma.fandom.com/wiki/Episode_40_(2003_Anime) |  |
 
 ### fullmetal-alchemist-brotherhood (1)
 
@@ -1852,12 +1867,16 @@
 | `A43` | {"episodes":[25,26],"kind":"divergence","chapters":"anime-original (parallels 25-26)","note":"research-tier batch 10 (2026-08-23, agent-verified 2+ sources, … | Ouran Fair + Éclair are anime-only; Éclair does not exist in the manga | session 2026-08-23 · scripts/ingest/apply-research-batch-10.ts, scratchpad batch10/ouran-high-school-host-club.json (session scratchpad, not on disk), docs/changelog.md §12.29 |  |
 | `A40` | {"table":"series","mapping_mode":"loose"} | pervasive volume-jumping from ep 10 + anime-original finale → loose (sgt-frog class); the MU pin (ch 37) becomes the continue point, not an end anchor. Research-ruled. | session 2026-08-23 · scripts/ingest/apply-research-batch-10.ts, scratchpad batch10/ouran-high-school-host-club.json (session scratchpad, not on disk), docs/changelog.md §12.29 |  |
 
-### outlaw-star (2)
+### outlaw-star (6)
 
 | rule | value | reason | ruled | retires when |
 |---|---|---|---|---|
+| `G53` | {"1":"1998-01-08","8":"1998-02-26"} | Both stored values are animefillerlist's: ep 1 1998-01-05 → 1998-01-08 (ja-WP, en-WP, fandom, AniList startDate, Sunrise official 放送開始 1998年01月08日); ep 8 1998-12-26 → 1998-02-26 (ja-WP, en-WP, fandom) — the ep-8 typo was the outlaw-star entry in the G54 airdate_regression queue. MAL's Jan 9 / Feb 27 are the post-midnight dates of a 25:15 slot, not a conflict. Ep 23's stored 1998-06-04 is for a broadcast that never happened (Sunrise: 第23話 TV未放映) — left for a ruling on whether G53 may carry NULL. | Sean 2026-08-26 · scripts/ingest/research/batch18/out/outlaw-star.json, scripts/ingest/research/batch18/verify/outlaw-star.md, https://www.sunrise-inc.co.jp/work/detail.php?cid=94, https://ja.wikipedia.org/wiki/星方武侠アウトロースター |  |
+| `T25` | original | AniList says source MANGA, but the show is a co-primary media-mix, not an adaptation: Sunrise's official page credits 原作／矢立 肇、伊東岳彦 on the anime and 漫画／伊東岳彦 as the parallel branch (「メディアミックス作品でもある」); Hajime Yatate — Sunrise's house pseudonym — sits in the MANGA's own vol-1 index; Ito plotted the anime from 1994, the manga started 「テレビの放送に先駆けて」 as a lead-in, and he scripted ep 19 himself. The anime IS its own source; the 3-volume manga is a sibling telling (Sean's A40/G3 rulings already found no chapter mapping meaningful). Distinct from the Evangelion class (T21: manga adapts the anime) — sibling BY DESIGN. Batch 18, verified R24. | Sean 2026-08-26 · https://www.sunrise-world.net/titles/pickup_094.php, https://ja.wikipedia.org/wiki/星方武侠アウトロースター, scripts/ingest/research/batch18/verify/outlaw-star.md |  |
+| `T26` | [{"episodes":[1,2],"kind":"divergence","chapters":"vol 1 (ch 1-4)","note":"Same opening events, different execution: the manga's ch 1 antagonist (Wraith, rev… | Batch 18 (2026-08-26), verified R24, Sean ruled the series original (co-primary media-mix); the manga overlap survives as trivia, never as an anchor. | Sean 2026-08-26 · scripts/ingest/research/batch18/out/outlaw-star.json, scripts/ingest/research/batch18/verify/outlaw-star.md, https://www.sunrise-world.net/titles/pickup_094.php |  |
 | `A40` | {"mapping_mode":"loose"} | parallel telling: anime finished ~11 months before the manga; episodic vs manga's direct Leyline drive (Wikipedia + anime-planet) | Sean 2026-08-24 · scripts/ingest/apply-research-batch.ts |  |
 | `G3` | {"flags":"open → confirmed","verdict":"research-tier verdict: loose adaptation — no chapter mapping is meaningful; mapping_mode=loose; Sean sign-off 2026-08-… | open ingest_flags closed with verdict: research-tier verdict: loose adaptation — no chapter mapping is meaningful; mapping_mode=loose; Sean sign-off 2026-08-24 | Sean 2026-08-24 · scripts/ingest/apply-research-batch.ts |  |
+| `T6` | {"1":"canon","2":"canon","3":"canon","4":"canon","5":"canon","6":"canon","7":"canon","8":"canon","9":"canon","10":"canon","11":"canon","12":"canon","13":"can… | Batch 18 (2026-08-26), verified R24, SEAN RULED the SERIES a studio original (SOURCE_TYPE_OVERRIDES): Sunrise's official page credits 原作 矢立肇・伊東岳彦 on the anime and Yatate (Sunrise's pseudonym) sits in the manga's own vol-1 index — a co-primary media-mix, the manga a sibling telling, not the source (A40/G3 already ruled no chapter mapping meaningful). With the anime as its own source every story episode is canon, including AFL's plain 'Filler' rows 13/14/16/18/19/20 (ep 19 = Ito's own screenplay; none are recaps — Sunrise's episode list). Eps 1-2's overlap with manga vol 1 is a divergence annotation, not a mapping. | Sean 2026-08-26 · scripts/ingest/research/batch18/out/outlaw-star.json, scripts/ingest/research/batch18/verify/outlaw-star.md, https://www.sunrise-world.net/titles/pickup_094.php, https://ja.wikipedia.org/wiki/星方武侠アウトロースター |  |
 
 ### owarimonogatari (1)
 
@@ -2194,6 +2213,13 @@
 | rule | value | reason | ruled | retires when |
 |---|---|---|---|---|
 | `A1` | {"episode":92} | A1 junk anchor: pure anime-original beachside comedy episode | Sean 2026-08-25 · scripts/ingest/research/batch17/out/slam-dunk.json, scripts/ingest/apply-research-batch-17.ts, §12.45 |  |
+
+### soul-eater (2)
+
+| rule | value | reason | ruled | retires when |
+|---|---|---|---|---|
+| `T26` | [{"episodes":[39,40,41,42,43,44,45,46,47,48,49,50,51],"kind":"divergence","note":"Divergence point established: ep 38 is the last row that adapts chapters (c… | Batch 18 (2026-08-26), verified R24, Sean ruled: Bones' ending is the A-7 class (no Ohkubo credit) — filler + divergence; the two grafted rows are mixed. | Sean 2026-08-26 · scripts/ingest/research/batch18/out/soul-eater.json, scripts/ingest/research/batch18/verify/soul-eater.md |  |
+| `T6` | {"37":"mixed","39":"mixed","40":"mixed","41":"filler","42":"filler","43":"filler","44":"filler","45":"filler","46":"filler","47":"filler","48":"filler","49":… | Batch 18 (2026-08-26), verified R24, Sean ruled: ep 38 is the last row adapting chapters; 39 mixed (ch 40's opening scene — fandom states the link, en-WP both sides), 40 mixed (ch 44 tail + ch 45 opening grafted, bidirectional fields); 41-51 Bones' original ending with no Ohkubo credit (archived TV Tokyo staff page; ja-WP) → filler, the A-7 class, divergence-annotated. Ep 37 repair canon → mixed: two sources now say no chapter standing (fandom 'no corresponding chapters', ja-WP anime-original from 37; AFG chapters []), ch 38 slivers only — parity with 39. | Sean 2026-08-26 · scripts/ingest/research/batch18/out/soul-eater.json, scripts/ingest/research/batch18/verify/soul-eater.md, https://souleater.fandom.com/wiki/Chapter_40, https://ja.wikipedia.org/wiki/ソウルイーター |  |
 
 ### space-adventure-cobra (1)
 

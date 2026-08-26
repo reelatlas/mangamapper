@@ -607,6 +607,52 @@
    durable guard. Lesson for the floor rule: a >2 overshoot sourced from a
    SINGLE chart row with no corroborating content anywhere is a typo
    candidate, not an adoption candidate.
+57. ✅ **BATCH 18 WAVE 1 — RESEARCHED, VERIFIED, RULED, APPLIED (2026-08-26;
+   the first batch under the three-standing model).** Seven Opus verdicts
+   (~1.13M) on the big `afl_anime_canon_unruled` blocks, six Fable
+   verifications (~0.71M; boruto A+B as one brief), Sean's rulings (with
+   Cursor), applied as DECLARATIVE records only — T6 types in
+   episode-types.ts, T26 annotations in standing-annotations.ts, G53 dates,
+   one SOURCE_TYPE_OVERRIDES entry — then `npm run heal` asserted them (64
+   types, 267 annotation rows, 5 stale override rows REMOVED, 2 dates).
+   Rulings: **boruto** — Kodachi's blanket ストーリー監修 REJECTED as an
+   adoption basis (arc-blind: it also covers undisputed filler; verifier
+   refuted verdict B's 41 rows on the protocol's own test); adopted{author}
+   on a specific author act only — Time Slip 128-136 (Kishimoto's story),
+   8-9, 67-69 (repair); 93-95 / 106-111 / 282-286 adapt licensed novels →
+   canon + side_source (282-286 moved OFF adopted{community}); 221-281 stay
+   canon + adopted{community} with the basis sentence written into the entry
+   (community + manga-era story, NOT a staff credit); the rest of 2-105 /
+   120-209 → filler. **FMA 2003** — 4 canon / 8 mixed / 15 filler (AFL wrong
+   on 12 of 27); 11-12 canon + side_source (Land of Sand novel); Bones'
+   finale 42-51 FILLER for manga standing + a cited divergence carrying
+   Arakawa's own words ("she asked for a different ending", Asahi 2005) —
+   the provenance the type alone cannot hold; ep 37 canon (agrees with 13).
+   **Outlaw Star** — ruled a STUDIO ORIGINAL via SOURCE_TYPE_OVERRIDES
+   (Sunrise's official page: 原作 矢立肇・伊東岳彦 on the anime, Yatate in the
+   manga's index — a co-primary media-mix, sibling by design, distinct from
+   the Evangelion class); all 26 story rows canon (incl. AFL's plain filler
+   13/14/16/18/19/20 — ep 19 is Ito's script); eps 1-2 keep a divergence
+   note, no chapters (A40/G3); two G53 dates (ep 8's typo was a G54 queue
+   row). **DBS** — no author adoption (commissioned outline ≠ declaration);
+   78/91/94-95 mixed on one standard. **Soul Eater** — 39-40 mixed (ch 40
+   opening; ch 44 tail + ch 45 graft), 41-51 filler + divergence (no Ohkubo
+   credit), ep 37 canon → mixed. **Beyblade** — all 32 filler; ep 3 repair.
+   Census deltas, all explained: afl_anime_canon_unruled 22→16 series
+   (wave-1 series drained; the rest are wave-2/3 targets); no_source 37→38
+   and ok_loose 10→9 (outlaw-star left the manga instrument); asterisk
+   134→137 (FMA, DBS, outlaw-star newly annotated); airdate_regression
+   68→67 (outlaw-star ep 8); frontier_tail_null 6→7 and
+   rearranged_zone_unanchored 10→11 are BOTH soul-eater 39-40 — mixed rows
+   past the ep-38 anchor with chapter data and no anchor: honest, and a
+   narrow anchoring question (the verifier notes continue_from_chapter = 37
+   from the ep-36 continua pin while the honest continue-read is ch 40 —
+   C-family, batch 18 narrow). ruling_violation 0; A1 spike 0; display
+   220/0. Mechanism finds: the T26 healer now RECONCILES override kinds
+   (the map is their only writer; stale rows removed); context.ts now
+   prints EVERY ruling on a series (the A40/G3 gap that let an agent
+   propose a mapping Sean had ruled meaningless); validate.ts is the
+   landing gate. Edges deployed. Waves 2-3 parked.
 56. ✅ **T4.3 — THE STANDING MIGRATION: canon / mixed / filler, relative to
    the source (`T27`; T9 superseded by T26; T14 amended; 2026-08-26).**
    'anime-only-canon' left the canonical vocabulary (migration
