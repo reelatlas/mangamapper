@@ -212,7 +212,7 @@
 - `G50` New-source checklist: repeatable mechanism or not at all — aka `new-source checklist`, `no one-offs (sources)`
 - `G51` Staging keeps everything, raw HTML included — aka `staging is greedy`, `greedy staging`, `AFG re-fetch lesson`
 - `G52` Canon-tier creation: chartless manga shows still enter — aka `canon-tier creation`, `canon-tier`, `A-9`
-- `G53` Ruled air dates: AIR_DATE_OVERRIDES, re-applied at every write — aka `AIR_DATE_OVERRIDES`, `air-date overrides`, `air date override pass`, `ruled air dates`
+- `G53` Ruled air dates: AIR_DATE_OVERRIDES, applied at every write — aka `AIR_DATE_OVERRIDES`, `air-date overrides`, `air date override pass`, `ruled air dates`
 
 **V — Volumes & boundaries** (10)
 - `V1` Monotonic starts, or the row is not data — aka `monotonic-start gate`, `MONOTONIC-START rule`, `monotonic boundaries`, `monotonic starts`, `Sailor Moon v3 report`, `Sailor Moon "v3: chs 10-3"`
@@ -2832,7 +2832,7 @@ A manga-sourced show with no per-episode chart anywhere (~0% filler, so AFL neve
 - aliases: canon-tier creation, canon-tier, A-9
 - see: G11, G12, G22, G39, base-type padding, ownership guard
 
-### G53 · Ruled air dates: AIR_DATE_OVERRIDES, re-applied at every write
+### G53 · Ruled air dates: AIR_DATE_OVERRIDES, applied at every write
 
 A research-ruled episode air date (2+ cited sources) lives ONLY in AIR_DATE_OVERRIDES and is re-applied inside filterEpisodeRows at every episode write — a bare DB update is clobbered by the next AFL refresh. Standing rows are asserted by assert-overrides.ts; a stored date that disagrees with a ruled one is a ruling_violation. Claims without a cited date never enter the map.
 
