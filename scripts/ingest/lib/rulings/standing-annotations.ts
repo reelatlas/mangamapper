@@ -244,7 +244,7 @@ export const ENTRIES: RulingEntry<StandingAnnotation[]>[] = [
     value: [
       { episodes: [27], kind: 'side_story', chapters: "GTO (Great Toroko Oppai) Scenes 1-7 (vols 11-12)", note: "Adapts the GTO (ぐれえと・とろこ・おっぱい) / 'Great Toroko Oppai' side story - Scene 1 日本一のアイドル, Scene 2 マネージャーブギ, Scene 3 明日のための\"その1\", Scene 4 事務所がない!, Scene 5 ヘア出し一番搾り, Scene 6 あの娘のスキャンダル!, Scene 7 明日のために.. - with Onizuka taking manga manager Munakata's role. The Scenes are part of the source work (Kodansha's Comic Days serialization carries them; collected in GTO vols 11-12) but carry NO Lesson number." },
       { episodes: [27], kind: 'graft', note: "POSITION WARNING - do not anchor and do not advance the reader. In Kodansha reading order the Scenes sit AFTER Lesson 92 (Scenes 1-3) and AFTER Lesson 97 (Scenes 4-7), while eps 29-33 immediately afterwards go back and adapt Lessons 75-92. Ep 27 therefore grafts material from ahead of its own position, exactly like the stored ep-40 ch-107 graft." },
-      { episodes: [25, 26], kind: 'loose_parallel', note: "Imports Kadena Nao (嘉手納南風) and her brother from Fujisawa's own prequel manga Shonan Junai Gumi! (ch 229 / 241) into the manga nurse Naoko Moritaka's slot, reusing her Queen-of-Hakosuka / Last Signal past and the brother's racing accident, but telling a new story that ja.wikipedia says contradicts SJG continuity (in the anime she has never met Onizuka)." },
+      // [25, 26] loose_parallel REMOVED batch 19 wave 1 (Sean 2026-08-26): SJG contains the race — see the side_source entry below
       { episodes: [34], kind: 'loose_parallel', note: "Reuses only the celebrity hidden-camera-prank twist from the Great Toroko Oppai scene that follows Lesson 97, recast onto Onizuka/Saejima/gold/yakuza; 'rehashed into something completely different whilst using a similar event'." },
       { episodes: [22], kind: 'divergence', note: "Substitutes an original two-episode Hakuba arc for manga Lesson 71 とっておきの場所; ep 21 carries Lesson 70, Lesson 71 itself is never adapted (chapter hole between the stored ep21->70 and ep35->72 anchors). (The fan blog's own CH 70-71 / EP 21-22 heading is a story-unit grouping, not an adaptation claim — Lesson 71 is unadapted.)" },
       { episodes: [24], kind: 'divergence', note: "Anime-first: the manga's own Uchiyamada mid-life/daughter chapter is Lesson 143 中年ペイシェンス (vol 18, 2000-12-15), serialized after this episode aired 2000-03-05. Not an adaptation in either direction on the evidence available." },
@@ -482,11 +482,46 @@ export const ENTRIES: RulingEntry<StandingAnnotation[]>[] = [
     ruledOn: '2026-08-26',
     cite: ["scripts/ingest/research/batch18/out/rurouni-kenshin-2023.json", "scripts/ingest/research/batch18/verify/rurouni-kenshin-2023.md", "https://realsound.jp/movie/2024/11/post-1829130.html"],
   },
+  {
+    seriesId: 'gto-great-teacher-onizuka',
+    ruleId: 'T26',
+    value: [
+      { episodes: [25, 26], kind: 'side_source', note: "Adapts Shonan Junai Gumi! (Tohru Fujisawa, Weekly Shonen Magazine / Kodansha, 267 ch / 31 vols) — the 'Last Signal' arc, tankobon vol 27, SJG ch 234-242: ch 239 Kadena challenges Eikichi, 240-241 'Last Signal 1/2' the Route 134 race, 242 the crash flashback and the second race; the identical ¥30,000,000 for her brother. SJG chapter numbers are ANOTHER work's space — never a GTO Lesson, never an anchor (the row is off-source, position holds at the last anchor). Kodansha's vol-27 blurb, GTO fandom SJG tankobon list, MangaDex chapter titles, ja-WP 嘉手納南風, en-WP." },
+      { episodes: [25, 26], kind: 'divergence', note: "The SJG arc is recast wholesale for the GTO cast — Kadena replaces the manga nurse Moritaka, and ja-WP records the continuity contradiction it creates (in the anime she has never met Onizuka; in SJG she was his class teacher). Restages the arc's spine (ep 26 most closely); SJG's kanji tests / tattoo / Bay Bridge beats have no counterpart." },
+    ],
+    reason: "Batch 19 wave 1 (2026-08-26), verified R24 against five sources incl. Kodansha's own vol-27 product page, Sean ruled: 25-26 CANON + side_source — SJG DOES contain the Eikichi-vs-Kadena race as a nine-chapter story, so the batch-18 ruling's own reopen clause fires; carved out of the A-7 block. Both rows anchor-hostile (another work's chapter space). No GTO Lesson consumed; the ep 21 → 70 / continue 75 chain stands.",
+    ruledBy: 'Sean',
+    ruledOn: '2026-08-26',
+    cite: ['scripts/ingest/research/batch19/out/gto-great-teacher-onizuka.json', 'scripts/ingest/research/batch19/verify/gto.md', 'https://kodansha.co.jp/comic/products/0000004454'],
+  },
+  {
+    seriesId: 'trigun',
+    ruleId: 'T26',
+    value: [
+      { episodes: [18], kind: 'side_source', note: "Adapts Trigun Maximum ch 1 'HERO REBORN' + ch 2 'LINA' (TM vol 1) — the SEQUEL manga's own numbering, NOT convertible to this entry's Trigun (ch 0-20) space; both wikis publish continuous overall numbers (21/22) that must never enter it. trigun.fandom Goodbye_for_Now + TM Chapter 1/2; trigunwiki HERO REBORN + GOODBYE FOR NOW." },
+    ],
+    reason: "Batch 19 wave 1 (2026-08-26), verified R24, Sean ruled: ep 18 is anchor-hostile (A44, another chapter space) and carries the side_source fact. Eps 19-20's Trigun Maximum ties are a batch-20 block look (the dates make ep 19 → TM 3-6 direct, ep 20 one-directional).",
+    ruledBy: 'Sean',
+    ruledOn: '2026-08-26',
+    cite: ['scripts/ingest/research/batch19/out/trigun.json', 'scripts/ingest/research/batch19/verify/trigun.md'],
+  },
+  {
+    seriesId: 'dragon-ball-super',
+    ruleId: 'T26',
+    value: [
+      { episodes: [18, 19, 20, 21, 23, 24, 25, 26, 27], kind: 'side_source', note: "Adapts the theatrical film 『ドラゴンボールZ 復活の「F」』 / Dragon Ball Z: Resurrection 'F' (Toei, 2015-04-18, 94 min) — 原作 AND 脚本 = 鳥山明 (his first sole screenplay); ja-WP in both directions (the TV arc 再構成・再制作 from the film; the film as 原作 of フリーザ復活編). The DBS manga (the series' source) skipped the arc entirely (Kanzenshuu: Beerus ch 1-4 → Champa ch 5+; ja-WP 漫画：未登場; fandom's empty chapter field) and incorporates its events only by reference (ch 5's opener; ch 32 Whis-to-Old-Kai, narration with flashback panels). No chapter position exists in the DBS space — off-source rows, position holds at ep 18's predecessor. Toyotarou's 3-chapter promotional 'DBZ: Resurrection F' manga (chs 1-2 pre-release, ch 3 three days after) stops before Golden Frieza and cannot source 25-27; the Film Animation Comic (2015-12-04) postdates the arc." },
+      { episodes: [19, 20, 21, 23, 24, 25, 26, 27], kind: 'divergence', note: "A nine-episode TV expansion of a 94-minute film: roughly half the runtime is Toei-added material (the thousand-soldier battle extended, Tagoma's death vs the film, Ginyu — who does not appear in the movie — per fandom). Row 22 is filler by batch 18." },
+    ],
+    reason: "Batch 19 wave 1 (2026-08-26), verified R24, Sean ruled: 18-21, 23-27 stay CANON + side_source{the Resurrection 'F' film}, NOT filler under the letter of T27 — a licensed work by the source's author, adapted; the author's sole screenplay and the manga's incorporation of the events are recorded in the note, not stacked as adopted{author}. Nine rows anchor-hostile by shape (no A44 entry needed: side_source rows are off-source). Eps 1-14 (made from Battle of Gods the same way) are NOT extended here — unresearched this wave.",
+    ruledBy: 'Sean',
+    ruledOn: '2026-08-26',
+    cite: ['scripts/ingest/research/batch19/out/dragon-ball-super.json', 'scripts/ingest/research/batch19/verify/dragon-ball-super.md', 'https://ja.wikipedia.org/wiki/ドラゴンボールZ_復活の「F」'],
+  },
   // ---- the A-7 studio-ending class: filler + asterisk, ON THE REVIEW LIST
   ...(
     [
-      ['claymore', span(24, 26), 'Madhouse outran the manga and wrote its own ending (AFG + wheredoestheanimeleaveoff + sportskeeda).'],
-      ['gto-great-teacher-onizuka', [...span(22, 28), 34, 42, 43], 'Anime-original mid-series block (22-28, 34) and the original ending 42-43 after the anime caught the manga (fandom infoboxes N/A; mangashed; wheredoestheanimeleaveoff).'],
+      ['claymore', span(24, 26), 'The studio wrote its own ending 13 already-published chapters short of the manga (tankōbon through Scene 69, magazine through 73 — batch 19 verified against Shueisha); "Madhouse outran the manga" is refuted.'],
+      ['gto-great-teacher-onizuka', [22, 23, 24, 27, 28, 34, 42, 43], 'Anime-original mid-series block (22-24, 27-28, 34; 25-26 carved out batch 19 — they adapt Shonan Junai Gumi!) and the original ending 42-43 after the anime caught the manga (fandom infoboxes N/A; mangashed; wheredoestheanimeleaveoff).'],
       ['chrono-crusade', span(22, 24), 'The anime\'s original ending after departing the manga at ep 13 (Wikipedia lead + MU + ja-WP).'],
       ['sailor-moon', span(167, 172), 'The Nehelenia-revival arc: an anime-original continuation of SuperS\'s villain.'],
       ['twin-star-exorcists', span(21, 50), 'The anime\'s own serialized finale (列島覇乱篇 21-31 / 天地鳴動篇 32-40 / 破星篇 41-50) never returns to the manga and contradicts it (Yuto dies here, survives there). RULED FILLER, batch 18 wave 2 (verified R24): Sukeno\'s only credit is character-DESIGN 監修 (animatetimes: デザイン監修); no story credit; no sequel or game carries the ending; the manga ended with its own ending (ch 134, 2024); Sukeno later imported the anime\'s Basara DESIGNS into the manga (Suzu ch 78, Chijiwa/Yamato/Momochi ch 88, Kinasa ch 104 — alive there) while refusing its EVENTS; and in 2020 he wrote that his goal is a from-episode-1 REMAKE, not a season 2 (@sukeno0723, 2020-07). Community consensus and the author agree: not canon.'],

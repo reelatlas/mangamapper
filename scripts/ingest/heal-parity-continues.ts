@@ -70,6 +70,19 @@ async function main() {
       if (!adjacent) continue;
       const bStart = A === B ? null : (B.start_chapter ?? firstNum(B.chapters_adapted));
       if (bStart == null || !Number.isInteger(B.episode)) continue;
+      // C1 guard (batch 19 wave 1, Sean 2026-08-26 — the soul-eater ep-36
+      // lesson): a stored continue AT OR BELOW the row's own END is a ruled
+      // mid-chapter straddle (C1) or a C3 skip-note shape, never a value for
+      // parity to convert — parity only fills or corrects continues that sit
+      // ABOVE the END. Kind is stamped, value kept.
+      if (A.continue_chapter != null && Number(A.continue_chapter) <= Number(A.chapter)) {
+        if (A.continue_kind !== 'parity') {
+          lines.push(`  ep${A.episode}: kind → parity (C1 straddle: continue ${A.continue_chapter} ≤ END ${A.chapter}; value kept)`);
+          if (!DRY) await db.from('chapter_anchors').update({ continue_kind: 'parity' }).eq('series_id', s.id).eq('episode', A.episode);
+          stamped++;
+        }
+        continue;
+      }
       if (bStart === effective) {
         if (A.continue_chapter != null && A.continue_kind !== 'parity') {
           lines.push(`  ep${A.episode}: kind → parity (continue ${A.continue_chapter} already matches ep${B.episode} start)`);

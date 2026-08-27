@@ -902,7 +902,7 @@ When an episode ends mid-chapter, continue-read is the straddled chapter itself 
 
 - ruled Sean 2026-08-24 (batch-15 DECISIONS-FOR-SEAN "C1 mid-chapter END — RATIFIED"; data-pipeline §11 "AS ONE UNIT" item 3)
 - layer **both**
-- enforced: [lib/c3.ts#c3Ahead](../scripts/ingest/lib/c3.ts) · [research/batch17/PROTOCOL.md](../scripts/ingest/research/batch17/PROTOCOL.md)
+- enforced: [lib/c3.ts#c3Ahead](../scripts/ingest/lib/c3.ts) · [research/batch17/PROTOCOL.md](../scripts/ingest/research/batch17/PROTOCOL.md) · [heal-parity-continues.ts#C1 guard](../scripts/ingest/heal-parity-continues.ts)
 - audit: `continue_skip_unnoted`
 - aliases: C1 rule, mid-chapter straddle, mid-chapter END, straddled chapter
 - see: C5, C3, C2

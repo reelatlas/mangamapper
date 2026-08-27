@@ -16,12 +16,15 @@ export const RULES: Rule[] = [
     statement:
       'When an episode ends mid-chapter, continue-read is the straddled chapter itself — the reader re-reads a few pages, which is fine; no page-level precision hunting. A continue point equal to a chapter the episode already adapted is C1 by definition, never a "skip".',
     why: 'Page-level resume positions cannot be verified from any source; re-reading a few pages is the honest cost.',
+    // batch 19 wave 1 (2026-08-26, the soul-eater ep-36 lesson): the parity healer converted any stored continue that differed from the next anchor's START — it would have flipped a ruled C1 straddle (continue 37 = its own END) to parity 38 on the next heal. The healer now keeps a continue AT OR BELOW its row's END (a C1 straddle or a C3 shape) and only stamps the kind; parity fills or corrects continues ABOVE the END. Sean: 'that is C1 — don't mint a new rule'.
     ruledBy: 'Sean',
     ruledOn: '2026-08-24',
     origin: 'batch-15 DECISIONS-FOR-SEAN "C1 mid-chapter END — RATIFIED"; data-pipeline §11 "AS ONE UNIT" item 3',
     enforcement: [
       { path: 'scripts/ingest/lib/c3.ts', symbol: 'c3Ahead' },
       { path: 'scripts/ingest/research/batch17/PROTOCOL.md' },
+    
+      { path: 'scripts/ingest/heal-parity-continues.ts', symbol: 'C1 guard' },
     ],
     layer: 'both',
     auditClass: ['continue_skip_unnoted'],

@@ -63,6 +63,36 @@ export const ENTRIES: RulingEntry<number[]>[] = [
     ruledOn: '2026-08-26',
     cite: ['scripts/ingest/research/batch18/verify/akame-ga-kill.md'],
   },
+  {
+    seriesId: 'ajin-demi-human',
+    ruleId: 'A44',
+    value: [22],
+    reason:
+      "Mixed row (re-confirmed) that restages the manga's Forge Security arc (ch 32-42) in a substituted setting (ja-WP: 武蔵重工の橋口 for フォージ安全の甲斐と李; 黒木 9巻38話 / 平沢 9巻42話 → 第2期22話): ch 32-37 have no counterpart and the source itself tells readers to go read 32-42. An END of 42 would set coverage to 42 and manufacture a continue of 43 — a false position; even a beat-mapped anchor would START at 38. Position-less by ruling; the post-series resume stays 29 on ep 19.",
+    ruledBy: 'Sean',
+    ruledOn: '2026-08-26',
+    cite: ['scripts/ingest/research/batch19/out/ajin-demi-human.json', 'scripts/ingest/research/batch19/verify/ajin-demi-human.md'],
+  },
+  {
+    seriesId: 'chrono-crusade',
+    ruleId: 'A44',
+    value: [21],
+    reason:
+      "Mixed row (the Magdalene flashback) whose v6 span 36-41 is INFERRED (fandom debut field + en-WP's volume title list), not sourced per episode; an END there would leap the never-adapted Acts 31-35 and drag A4 coverage 30 → 41 past MU's explicit 'Ends at Vol 5, Chap 30'. The stored 2026-08-24 ruling was only an A7 zone bound — no writer refused the row until this entry. Graft{36-41} stays as the annotation, zone-acknowledged.",
+    ruledBy: 'Sean',
+    ruledOn: '2026-08-26',
+    cite: ['scripts/ingest/research/batch19/out/chrono-crusade.json', 'scripts/ingest/research/batch19/verify/chrono-crusade.md'],
+  },
+  {
+    seriesId: 'trigun',
+    ruleId: 'A44',
+    value: [18],
+    reason:
+      "Mixed row adapting Trigun Maximum ch 1-2 — the SEQUEL manga's chapter space, never convertible to this entry's Trigun 0-20 space (both wikis publish continuous overall numbers 21/22). Anchor-eligible by type, anchor-forbidden by chapter space; the MU frontier writer would otherwise pin it. side_source annotation carries the fact.",
+    ruledBy: 'Sean',
+    ruledOn: '2026-08-26',
+    cite: ['scripts/ingest/research/batch19/out/trigun.json', 'scripts/ingest/research/batch19/verify/trigun.md'],
+  },
 ];
 
 export const ANCHOR_SUPPRESSED: Record<string, number[]> = toRecord(ENTRIES);

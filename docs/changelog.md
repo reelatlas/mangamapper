@@ -607,6 +607,61 @@
    durable guard. Lesson for the floor rule: a >2 overshoot sourced from a
    SINGLE chart row with no corroborating content anywhere is a typo
    candidate, not an adoption candidate.
+69. ✅ **BATCH 19 WAVE 1 — research, verify, rule, apply (2026-08-26).** The
+   first anchoring wave after the restructure: A3 frontier tails + B1
+   batch-18 follow-ups as ONE list under `batch19/PROTOCOL.md` (batch 17's
+   shape, rules by id; pinned R31, amended once between waves — C5 not C4;
+   an example volume). Five research-agents (≈973k) → eight verdicts,
+   landing gate 0 failing → eight `verdict-verifier` reports on the other
+   model (≈986k): NOTHING REFUTED, six with corrections that were apply
+   mechanics, rule ids and note text. Sean ruled "as recommended" with four
+   diffs (Cursor concurring). **Applied (42 decisions):** claymore's frontier
+   moves ep 20 → **ep 23 → Scene 59** (anchors 21→57, 22→58, 23→59; continue
+   60 post-series; C8 57 → 60; "Madhouse outran the manga" refuted against
+   Shueisha and rewritten in every ruling text); ajin S2 anchored 14→24,
+   15→25, 16→26, 17→28, 19→27.5 (a documented 26 → 28 → 27.5 reorder; the
+   .5 kept as the catalog's unit with the Kodansha FILE:27 (2) conversion
+   stated), post-series **29**, ep 22 position-less (A44), ep 13's impossible
+   END 21 → 22.5 and its continue 22 → 23 with the stale C3 note rewritten;
+   chrono 15-16 → FILLER (the primary sources backed the batch-18 verifier;
+   the curator's brief had inverted the flag), ep 21 A44, continue 20 → 31;
+   trigun 16 → 20 (finishes ch 20; START 20 under A12), continue **20** with
+   "the space ends — next is Trigun Maximum ch 1" (Sean: not 21, a chapter
+   that does not exist; the durable space ruling is a follow-up), ep 18 A44
+   + side_source{Trigun Maximum ch 1-2}; soul-eater ep 36 END 36 → **37**
+   (afg-continua → manual; AFG's own page-level continua was right), continue
+   **37** = C1 (batch 18's 40 refuted: ch 39's climax is unadapted); gto
+   25-26 → **CANON + side_source{Shonan Junai Gumi! 'Last Signal' ch
+   234-242}** (SJG contains the race — Kodansha's own vol-27 blurb among five
+   sources; carved out of the A-7 divergence span and the 22-26 filler range;
+   the SJG chapters live in the note); railgun 14 stays filler (no
+   incorporation reaches it), 25 partial{~18} → graft{41}, **49 keeps
+   graft{41} with a corrected note** (the verifier caught the verdict's
+   "no source says ch 41" — T#1's own prose says it) and loses only the
+   contradictory partial{40-42}, ep 12 continue 17 → 18 (ch 17 was animated
+   at ep 2; parity resolves against ep 26, the next row with a KNOWN start);
+   DBS 18-27 → **canon + side_source{the Resurrection 'F' film}** (Toriyama's
+   sole screenplay + the manga's incorporation in the note, no
+   adopted{author}; 1-14 untouched). **Healer:** the parity healer gained a
+   C1 GUARD — a continue at or below its own END is a ruled straddle, value
+   kept, kind stamped (it would have flipped soul-eater 36 → 38); C1's ledger
+   record gains the enforcement site → `/consolidate deep` is required
+   (P21). **Census:** ruling_violation 0; frontier_tail_null 7 → **3** (the
+   three parked decisions: prisma-illya + rayearth = D2 scoped entries,
+   apothecary = which of two manga is the source, then T24);
+   rearranged_zone_unanchored 11 → 10; anchor_nonmonotonic 0;
+   verify-series-display 220/0. Akame left the tail class by script (A44
+   rows are not a tail). **Left as ruled / process items:** claymore's three
+   stale loose_parallel{57-59} rows wait for an annotation-delete shape
+   (batch 17's ANNOTATION_DELETIONS is the script-level precedent; no
+   lib/heal path); claymore flag #945 (an MU "EP 24" pin on a filler row —
+   G37 suppression or the P30 redundancy-skip extension); the
+   `loose_parallel` gloss in lib/annotations.ts carries the refuted premise;
+   trigun's display total. Traps captured in WAVE1-RECOVERY.md (a brief can
+   invert a verifier's flag — quote it verbatim; AFG's continua panel is
+   page-level; both Trigun wikis publish continuous numbers across Maximum;
+   cover-only ties are not grafts; ajin's ep-22 fandom air date). Lib changed
+   → four edges rebuilt and deployed. No wave 2 without Sean's go.
 68. ✅ **BATCH 19 E4 — ruled structure (I39): the 32 component-less rows
    (2026-08-26).** `series_components` is rebuilt from the AniList chain by
    four writers, so a hand-inserted structure row is wiped on the next
