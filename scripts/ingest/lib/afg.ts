@@ -271,6 +271,12 @@ const decodeEntities = (s: string) =>
     .replace(/&quot;/g, '"')
     .replace(/&#x([0-9a-f]+);/gi, (_, h) => String.fromCharCode(parseInt(h, 16)));
 
+/** Drop "(p. 23-36)" style page groups (and any other parenthetical) from an
+ * equivalence list so only chapter numbers remain. Exported for tests. */
+export function stripParentheticals(s: string): string {
+  return s.replace(/\([^)]*\)/g, ' ');
+}
+
 export function parseContinua(html: string): AfgContinua | null {
   const i = html.indexOf('continua-manga');
   if (i < 0) return null;
@@ -302,10 +308,16 @@ export function parseContinua(html: string): AfgContinua | null {
 
   // the equivalence list runs to " of the manga" / sentence end ("Chapter
   // 150, 151, 152, 153, 154 and 155 of the manga") — frontier = its max;
-  // continueChapter-1 must agree (the apply step's self-consistency gate)
-  const mCh = /(?:corresponds? to|equivalent to) Chapters? ([^.]*?)(?: of the manga|\.)/i.exec(text);
+  // continueChapter-1 must agree (the apply step's self-consistency gate).
+  // AFG annotates partial chapters with page groups — "Chapter 104
+  // (p. 23-36), 105, 106, 107 and 108 (p. 1-19) of the manga" — so a "."
+  // followed by digits is NOT a sentence end, and every parenthetical is
+  // stripped before the max: page numbers are not chapters (batch 19 wave 2,
+  // 2026-08-27: the lazy `[^.]*?` capture stopped at "p." and rendered a
+  // too-low frontier on 14 series — solo-leveling 104 for AFG's own 108).
+  const mCh = /(?:corresponds? to|equivalent to) Chapters? (.*?)(?: of the manga|\.(?!\s*\d)|$)/i.exec(text);
   const endChapter = mCh
-    ? Math.max(...(mCh[1].match(/\d+/g) ?? ['0']).map(Number)) || null
+    ? Math.max(...(stripParentheticals(mCh[1]).match(/\d+/g) ?? ['0']).map(Number)) || null
     : null;
 
   const continueChapter = num(/start reading from Chapter (\d+)/i.exec(text)?.[1]);
