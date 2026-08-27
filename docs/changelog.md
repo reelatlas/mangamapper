@@ -607,6 +607,27 @@
    durable guard. Lesson for the floor rule: a >2 overshoot sourced from a
    SINGLE chart row with no corroborating content anywhere is a typo
    candidate, not an adoption candidate.
+76. ✅ **The wave-2 open pile RULED and applied (2026-08-27, Sean + Cursor).**
+   (1) Sailor Moon 167-168 anchored under the pages line — 167 → 44 [38],
+   168 → 49 [44], rearranged; the A44 entry superseded (value []); ep 166
+   tightened to Act 49's outcome so the Eternal pages (48-49) are claimed
+   once, at 168; continues 167 → 44, 168 → 50, healer 166 → 38 (C2). (2)
+   hells-paradise 25 → 89 [86] v10 as a MANUAL anchor (A12: the four-page
+   peek at ch 94 is a graft; P8: the next continua re-derive keeps manual
+   precedence), continue 90 post_series = AFG's own resume. (5) The
+   duplicate watch-order entries @24.5 / @112.5 dropped (one entry per
+   AniList work; @24.1 / @112.1 carry the sign-off sentence); RULED_RECORDS
+   pruned. (3)/(4) shugo-chara's reversed pairs and golden-kamuy 44 → batch
+   20 (no G54 ack for a numbering bug; no date without a cite). Deep
+   leftovers: kamisama ep 10 and dragon-maid ep 25 were already RULED AND
+   APPLIED on 2026-08-24 — their HELD texts retired; the C7 gap (the parity
+   healer overwrites curated continues) captured as an /add-rule candidate
+   (system-evolution). Conan 513/584 strict-A4: a narrow research check
+   (ytv / DCW / ja-WP) runs; applied on return. Two cards remain for Sean
+   (WAVE2-RECOVERY §CARDS): rosario 12/13 (the stored values already equal
+   the held repairs — confirm and fix the strings) and iruma 63 (145 [142]
+   rearranged under the pages line, or the 142 ladder). Census: ruling
+   _violation 0, nonmonotonic 0, watch_order 39 entries; display ok.
 75. ✅ **CONSOLIDATE DEEP after batch 19 wave 2 (2026-08-27; the formal G56
    pass, P21).** Trigger: enforcement sites changed since d8f91f5 —
    lib/afg.ts#parseContinua (G22/G38/G44), filterEpisodeRows (G53 NULL +

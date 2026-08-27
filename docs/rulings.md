@@ -2,7 +2,7 @@
 
 > GENERATED from `scripts/ingest/lib/rulings/**` by `scripts/restructure/gen-rulings.ts` — do not edit by hand. A ruling is an INSTANCE of a rule (`docs/rules.md`); the map is the record, this is the index.
 
-- rulings: 1848 across 225 series/keys · by Sean: 506 · UNRECORDED reasons: 8 · with a retire condition: 86
+- rulings: 1846 across 225 series/keys · by Sean: 504 · UNRECORDED reasons: 8 · with a retire condition: 86
 
 ## Retire conditions (re-evaluate when…)
 
@@ -29,12 +29,12 @@
 - **RETIRED 2026-08-26 — batch 19 wave 1 re-ruled ep 14: stays FILLER, no incorporation reaches it (backlinks + Kamachi's later works; verified R24)** — a-certain-scientific-railgun (T6)
 - **RETIRED 2026-08-26 — re-reasoned in batch 19 wave 1 (§12.69): ep 12 continue 17 → 18 parity (ch 17 was animated at ep 2; parity against ep 26, the next row with a KNOWN start)** — a-certain-scientific-railgun (C2)
 - **RETIRED 2026-08-27 (batch 19 wave 2 deep) — the parity healer (heal-parity-continues, C2/C3 with the C1 guard) re-derives every continue catalog-wide on each pass; the batch-17 values were converted 2026-08-24/26 and nothing stands outside the mechanism** — jujutsu-kaisen (C9), oshi-no-ko (C1), rent-a-girlfriend (C9), rent-a-girlfriend (C9), miss-kobayashis-dragon-maid (C9), seraph-of-the-end-vampire-reign (C9), blue-exorcist (C9), food-wars (C9), the-case-study-of-vanitas (C1)
+- **RETIRED 2026-08-27 (deep) — RULED 2026-08-24 (batch16 DECISIONS-FOR-SEAN D1): END 50 / v9 on ja-WP segment order; the stored anchor carries it** — kamisama-kiss (P10)
+- **RETIRED 2026-08-27 (deep) — RULED AND APPLIED 2026-08-24: ep 25 → 48 [40] v5 (the finale adapts 40 + 48 + Elma OL 6; ch 64 is ep 22's), continue 65 post_series — the stored row carries the ruling note; this HELD record is history** — miss-kobayashis-dragon-maid (P10)
 - **RETIRED 2026-08-27 — taxonomy v2 IS the three standings (T4.0, 2026-08-26); the only-ending class stays filler + divergence + asterisk (T13), re-affirmed in episode-types.ts (x, 2026-08-25/26)** — x (T10)
 - **RETIRED — stitched 2026-08-23 (§12.34: Kingdom S5/S6 → 155); the record is history** — kingdom (I33)
 - **RETIRED — stitched 2026-08-23 (§12.34: Rent-a-Girlfriend S4/S5 → 60); the record is history** — rent-a-girlfriend (I33)
 - **Sean rules on the held rosario 12/13 repairs (§12.45 OPEN)** — rosario-vampire (A3), rosario-vampire (A3)
-- **Sean rules the ep 10 segment order (END 25 vs 50)** — kamisama-kiss (P10)
-- **Sean rules the ep 25 endpoint vs ep 22 double-claim** — miss-kobayashis-dragon-maid (P10)
 - **Sean's iruma ep-63 END-convention ruling (§12.45 OPEN)** — welcome-to-demon-school-iruma-kun (A3)
 - **T24 build lands (planned)** — * (T24)
 - **Zoku-hen (204688) airs — chain gains an id** — kingdom (I27)
@@ -1485,7 +1485,7 @@
 | `R12` | {"episode":25,"field":"start_chapter"} | season-envelope start 31 replaced by the per-episode record now that eps 14-24 are exact; ep 25 opens at ch 62 | session 2026-08-24 · scripts/ingest/research/batch16/out/kamisama-kiss.json, scripts/ingest/apply-research-batch-16.ts#REPAIRS_APPROVED |  |
 | `R12` | {"episode":25,"field":"chapters_adapted"} | envelope list replaced; the envelope's factual content now lives in the S2 zone annotation (eps 14-25) | session 2026-08-24 · scripts/ingest/research/batch16/out/kamisama-kiss.json, scripts/ingest/apply-research-batch-16.ts#REPAIRS_APPROVED |  |
 | `R12` | {"episode":10,"field":"chapters_adapted"} | batch-15 error corrected: mixer boy is Kohiruimaki, a named ch-50 character — the goukon merges ch 50's group date with ch 25's beats (UA fandom ch-50 char list + completed-manga-review) | session 2026-08-24 · scripts/ingest/research/batch16/out/kamisama-kiss.json, scripts/ingest/apply-research-batch-16.ts#REPAIRS_APPROVED |  |
-| `P10` | {"episode":10,"field":["end_chapter","volume"],"held":true} | HELD for Sean: if the mixer segment closes the episode, running-order END is arguably 50 (v9) not 25 (v5); segment order not verified frame-level → DECISIONS-FOR-SEAN | session 2026-08-24 · scripts/ingest/research/batch16/out/kamisama-kiss.json, scripts/ingest/apply-research-batch-16.ts#REPAIRS_APPROVED | Sean rules the ep 10 segment order (END 25 vs 50) |
+| `P10` | {"episode":10,"field":["end_chapter","volume"],"held":true} | HELD for Sean: if the mixer segment closes the episode, running-order END is arguably 50 (v9) not 25 (v5); segment order not verified frame-level → DECISIONS-FOR-SEAN | session 2026-08-24 · scripts/ingest/research/batch16/out/kamisama-kiss.json, scripts/ingest/apply-research-batch-16.ts#REPAIRS_APPROVED | RETIRED 2026-08-27 (deep) — RULED 2026-08-24 (batch16 DECISIONS-FOR-SEAN D1): END 50 / v9 on ja-WP segment order; the stored anchor carries it |
 | `R21` | {"file":"scripts/ingest/research/batch16/out/kamisama-kiss.json","anchors":11,"zoneAcks":0} | batch-16 verdict applied as-curated | session 2026-08-24 · scripts/ingest/research/batch16/out/kamisama-kiss.json |  |
 | `T6` | {"10":"mixed"} | Ep 10: ch-25 beats reworked into an anime-only Christmas mixer plus a past-arc graft — canon and original in one episode. | session 2026-08-24 · scripts/ingest/research/batch15/out/kamisama-kiss.json |  |
 | `I24` | {"ids":[14713,20801,21186]} | UNRECORDED — assisted-batch explicit chain (S1 + S2 + Kako-hen OVAs 21186, community-counted 26-29 per REVIEWED_NUMBERED_SPECIALS); a case the relation walker could not derive, per-series detail not written down. | session 2026-08-22 |  |
@@ -1653,7 +1653,7 @@
 
 | rule | value | reason | ruled | retires when |
 |---|---|---|---|---|
-| `P10` | {"episode":25,"field":["end_chapter","volume"],"held":true} | HELD for Sean (convention-sensitive): stored 64 is the manual endpoint ruling; ch 64 now exactly ep 22's (double-claim) — the agent asked to confirm before repairing | session 2026-08-24 · scripts/ingest/research/batch15/out/miss-kobayashis-dragon-maid.json, scripts/ingest/apply-research-batch-15.ts#REPAIRS_APPROVED | Sean rules the ep 25 endpoint vs ep 22 double-claim |
+| `P10` | {"episode":25,"field":["end_chapter","volume"],"held":true} | HELD for Sean (convention-sensitive): stored 64 is the manual endpoint ruling; ch 64 now exactly ep 22's (double-claim) — the agent asked to confirm before repairing | session 2026-08-24 · scripts/ingest/research/batch15/out/miss-kobayashis-dragon-maid.json, scripts/ingest/apply-research-batch-15.ts#REPAIRS_APPROVED | RETIRED 2026-08-27 (deep) — RULED AND APPLIED 2026-08-24: ep 25 → 48 [40] v5 (the finale adapts 40 + 48 + Elma OL 6; ch 64 is ep 22's), continue 65 post_series — the stored row carries the ruling note; this HELD record is history |
 | `R21` | {"file":"scripts/ingest/research/batch15/out/miss-kobayashis-dragon-maid.json","anchors":12,"zoneAcks":1} | batch-15 verdict applied as-curated | session 2026-08-24 · scripts/ingest/research/batch15/out/miss-kobayashis-dragon-maid.json |  |
 | `R21` | {"file":"scripts/ingest/research/batch16/out/miss-kobayashis-dragon-maid.json","anchors":4,"zoneAcks":0} | batch-16 verdict applied as-curated | session 2026-08-24 · scripts/ingest/research/batch16/out/miss-kobayashis-dragon-maid.json |  |
 | `N3` | {"anilistId":98580,"start":14,"end":14,"action":"numbered → order-only (rows deleted, later rows/anchors/annotations shift down)","fractional":{"position":13… | Valentine/Onsen OVA = standalone bonus between seasons; community numbering excludes (Sean sign-off 2026-08-23) | Sean 2026-08-23 · scripts/ingest/apply-research-batch-7.ts, docs/changelog.md §12.23 |  |
@@ -2309,7 +2309,7 @@
 |---|---|---|---|---|
 | `T26` | [{"episodes":[167],"kind":"rearranged","chapters":"38, 44","note":"zone-acknowledged — no anchor by design: Acts 38/44 sit behind ep 166's Act 49 and an anch… | Batch 18 wave 2 (2026-08-26), verified R24, Sean ruled: 167-168 mixed — half of 168 is Act 44 (Saturn re-awakens Hotaru; the Eternal debut) and 167 carries Act 38's tail + Act 44's opening (never adapted in SuperS); 169-172 filler; no adoption (Takeuchi: 原作/原案 + GAME 監修 only, documented friction). No anchors — they would run position backwards from ep 166. | Sean 2026-08-26 · scripts/ingest/research/batch18/out/sailor-moon.json, scripts/ingest/research/batch18/verify/sailor-moon.md |  |
 | `T26` | [{"episodes":[167,168,169,170,171,172],"kind":"divergence","note":"A-7 studio-ending class — RULED FILLER, batch 18 wave 2 (2026-08-26, verified R24): no aut… | T4.0 D-10 parked the A-7 studio-ending class as filler + asterisk on the review list; batch 18 wave 2 RULED it (2026-08-26): every A-7 ending stays filler + divergence — the authors hold 原作 credits only, three mangas printed their own endings, none is carried forward. | Sean 2026-08-26 · docs/restructure/T4-GLOSSARY.md §3, docs/restructure/DRIFT-LIST.md A-7 |  |
-| `A44` | [167,168] | Play never-adapted Dream-arc material (Act 38 tail, Act 44 core, the Eternal debut of Acts 48-49) — mixed — but those Acts sit BEHIND ep 166's stored Act 49: an anchor would run the position backwards. Zone-acknowledged; position-less by ruling. | Sean 2026-08-26 · scripts/ingest/research/batch18/out/sailor-moon.json, scripts/ingest/research/batch18/verify/sailor-moon.md |  |
+| `A44` | [] | SUPERSEDED 2026-08-27 (Sean, the catalog line 'pages, not numbers'): eps 167-168 play never-adapted Dream-arc material (Act 38 tail + Act 44 opening at 167; Act 44 core + the Act 48-49 Eternal beat at 168) — mixed, substantial, FIRST-TIME pages — the saint-seiya 29-30 shape, so they ANCHOR (167 → 44 [38], 168 → 49 [44], rearranged) and ep 166 is tightened to Act 49's outcome. The 2026-08-26 ruling ('those Acts sit BEHIND ep 166's stored Act 49: an anchor would run the position backwards') was the number reading; kept as the record, no episodes suppressed. | Sean 2026-08-27 · scripts/ingest/research/batch18/out/sailor-moon.json, scripts/ingest/research/batch18/verify/sailor-moon.md |  |
 | `I4` | {"afgSlug":"bishoujo-senshi-sailor-moon","match":"sailor-moon"} | AFG's bishoujo-senshi-sailor-moon page is the 90s original, NOT Crystal — a synonym collision (both our entries carry the romaji) found in the 2026-08-24 audit, so the key is ambiguous and needs a ruling. | session 2026-08-24 · docs/franchise-rulings.md "AFG bishoujo-senshi-sailor-moon page = the 90s original" |  |
 | `A7` | {"episode":103,"bound":"character-timing difference (Chibiusa/Chibi Moon deferred vs the manga), not adapted chapters"} | A2: a character-timing difference (Chibiusa/Chibi Moon deferred vs the manga), not adapted chapters — no position to record | session 2026-08-24 · scripts/ingest/research/batch17/out/sailor-moon.json, scripts/ingest/apply-research-batch-17.ts, §12.42 |  |
 | `A7` | {"episode":113,"bound":"character-timing difference (Hotaru introduced mid-season vs Infinity's opening), not adapted chapters"} | A2: a character-timing difference (Hotaru introduced mid-season vs Infinity's opening), not adapted chapters | session 2026-08-24 · scripts/ingest/research/batch17/out/sailor-moon.json, scripts/ingest/apply-research-batch-17.ts, §12.42 |  |
@@ -2674,7 +2674,7 @@
 | `A40` | {"table":"series","mapping_mode":"loose"} | the 2008 series is heavily anime-original with reordering and Motto airs 3 segments/ep in mostly random order — anchors are borrow-maps (anchor = max touched), so loose. | session 2026-08-23 · scripts/ingest/apply-research-batch-12.ts, scratchpad batch12/to-love-ru.json (session scratchpad, not on disk), docs/changelog.md §12.31 |  |
 | `N7` | 5667 | B (medium): OVA 27-32 bridges to Motto; community-practice based — re-open if evidence emerges. | Sean 2026-08-23 |  |
 
-### to-love-ru-darkness (6)
+### to-love-ru-darkness (5)
 
 | rule | value | reason | ruled | retires when |
 |---|---|---|---|---|
@@ -2683,7 +2683,6 @@
 | `N11` | {"drop":[25,26],"shifts":[]} | Queue-2 Group C demotion: the 2nd Specials bonuses AFL numbers as 25-26 are order-only in the community count; trailing, so the rows drop with no shift. | Sean 2026-08-23 |  |
 | `T29` | {"position":12.2,"record":{"kind":"ova","anilistId":13851}} | AniList 13851 'To LOVE-Ru Darkness OVA' format=OVA, 6 eps, from 2012-08-17. en-WP To Love Ru infobox: type=ova, 'To Love Ru Darkness', released August 17, 2012. | Sean 2026-08-27 · scripts/ingest/research/batch19/out/watch-order-kinds.json, https://anilist.co/anime/13851, https://en.wikipedia.org/wiki/To_Love_Ru |  |
 | `T29` | {"position":24.1,"record":{"kind":"special","anilistId":21852}} | AniList 21852 'To LOVE-Ru Darkness 2nd Specials' format=SPECIAL, 2 eps, 2015-10-29 — the '2nd eps 13-14' the entry names. NOTE: appears to be the same work as the @24.5 entry — see flags. | Sean 2026-08-27 · scripts/ingest/research/batch19/out/watch-order-kinds.json, https://anilist.co/anime/21852 |  |
-| `T29` | {"position":24.5,"record":{"kind":"special","anilistId":21852}} | AniList 21852 'To LOVE-Ru Darkness 2nd Specials' format=SPECIAL, 2 eps, 2015-10-29. NOTE: appears to be the same work as the @24.1 entry — see flags. | Sean 2026-08-27 · scripts/ingest/research/batch19/out/watch-order-kinds.json, https://anilist.co/anime/21852 |  |
 
 ### to-your-eternity (19)
 
@@ -2975,7 +2974,7 @@
 | `I24` | {"ids":[10015,15489]} | UNRECORDED — assisted-batch explicit chain (Zexal + Zexal II); a case the relation walker could not derive, per-series detail not written down. | session 2026-08-22 |  |
 | `I17` | {"to":"yu-gi-oh","kind":"spin_off"} | Yu-Gi-Oh: Zexal/Arc-V/VRAINS/Sevens are spin_offs of DM — own story, shared universe. | session 2026-08-22 · docs/franchise-rulings.md "Yu-Gi-Oh" |  |
 
-### yu-yu-hakusho-ghostfiles (27)
+### yu-yu-hakusho-ghostfiles (26)
 
 | rule | value | reason | ruled | retires when |
 |---|---|---|---|---|
@@ -3003,7 +3002,6 @@
 | `N3` | {"cap":112,"note":"TV run = 112; trailing extras (2009 Picture Drama, 2018 OVAs Two Shot/All or Nothing) are order-only — AFL renumbers them after drops, so … | The TV run is 112; the trailing extras (2009 Picture Drama, 2018 OVAs Two Shot / All or Nothing) are order-only. AFL renumbers them after drops, so the numbering-shift drop[113] alone let All or Nothing re-enter as 113 — the cap is the durable instrument (research batch 11). | session 2026-08-23 |  |
 | `N11` | {"drop":[113],"shifts":[]} | Queue-2 Group C demotion: the Picture Drama bonus AFL numbers as 113 is a standalone bonus the community does not number — order-only, row drops (trailing, so no shift). The community cap (N3) is the durable instrument because AFL renumbers after drops. | Sean 2026-08-23 |  |
 | `T29` | {"position":112.1,"record":{"kind":"special","anilistId":6964}} | AniList 6964 'Yuu Yuu Hakusho Picture Drama' format=SPECIAL, 1 ep, 6 min, 2009-10-27. en-WP: Bandai Visual's first Blu-ray set (October 27, 2009) 'contain[ed] a picture drama set after the end of the series'. NOTE: appears to be the same work as the @112.5 entry — see flags. | Sean 2026-08-27 · scripts/ingest/research/batch19/out/watch-order-kinds.json, https://anilist.co/anime/6964, https://en.wikipedia.org/wiki/YuYu_Hakusho_(1992_TV_series) |  |
-| `T29` | {"position":112.5,"record":{"kind":"special","anilistId":6964}} | AniList 6964 'Yuu Yuu Hakusho Picture Drama' format=SPECIAL, 1 ep, 6 min, 2009-10-27. NOTE: appears to be the same work as the @112.1 entry — see flags. | Sean 2026-08-27 · scripts/ingest/research/batch19/out/watch-order-kinds.json, https://anilist.co/anime/6964, https://en.wikipedia.org/wiki/YuYu_Hakusho_(1992_TV_series) |  |
 | `T29` | {"position":112.7,"record":{"kind":"ova","anilistId":102631}} | en-WP YuYu Hakusho (1992 TV series) infobox: type=ova, title 'Yu Yu Hakusho: Two Shot & All or Nothing', 2 episodes, released October 26, 2018; the franchise article: 'A brand new OVA ... was released with a Blu-ray box set ... on October 26, 2018'. DISAGREEMENT: AniList 102631 bundles both shorts as ONE entry with format=SPECIAL. The anilist_id is therefore shared with @112.8 — it is not a per-entry id. | Sean 2026-08-27 · scripts/ingest/research/batch19/out/watch-order-kinds.json, https://anilist.co/anime/102631, https://en.wikipedia.org/wiki/YuYu_Hakusho_(1992_TV_series) |  |
 | `T29` | {"position":112.8,"record":{"kind":"ova","anilistId":102631}} | en-WP YuYu Hakusho (1992 TV series) infobox: type=ova, 'Yu Yu Hakusho: Two Shot & All or Nothing', 2 episodes, released October 26, 2018. DISAGREEMENT: AniList 102631 bundles both shorts as ONE entry with format=SPECIAL; the id is shared with @112.7. | Sean 2026-08-27 · scripts/ingest/research/batch19/out/watch-order-kinds.json, https://anilist.co/anime/102631, https://en.wikipedia.org/wiki/YuYu_Hakusho_(1992_TV_series) |  |
 

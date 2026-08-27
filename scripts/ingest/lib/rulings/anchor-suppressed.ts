@@ -36,11 +36,12 @@ export const ENTRIES: RulingEntry<number[]>[] = [
   {
     seriesId: 'sailor-moon',
     ruleId: 'A44',
-    value: [167, 168],
+    value: [],
     reason:
-      'Play never-adapted Dream-arc material (Act 38 tail, Act 44 core, the Eternal debut of Acts 48-49) — mixed — but those Acts sit BEHIND ep 166\'s stored Act 49: an anchor would run the position backwards. Zone-acknowledged; position-less by ruling.',
+      "SUPERSEDED 2026-08-27 (Sean, the catalog line 'pages, not numbers'): eps 167-168 play never-adapted Dream-arc material (Act 38 tail + Act 44 opening at 167; Act 44 core + the Act 48-49 Eternal beat at 168) — mixed, substantial, FIRST-TIME pages — the saint-seiya 29-30 shape, so they ANCHOR (167 → 44 [38], 168 → 49 [44], rearranged) and ep 166 is tightened to Act 49's outcome. The 2026-08-26 ruling ('those Acts sit BEHIND ep 166's stored Act 49: an anchor would run the position backwards') was the number reading; kept as the record, no episodes suppressed.",
     ruledBy: 'Sean',
-    ruledOn: '2026-08-26',
+    ruledOn: '2026-08-27',
+    supersedes: '2026-08-26 A44 [167, 168] — position-less by the number reading',
     cite: ['scripts/ingest/research/batch18/out/sailor-moon.json', 'scripts/ingest/research/batch18/verify/sailor-moon.md'],
   },
   {

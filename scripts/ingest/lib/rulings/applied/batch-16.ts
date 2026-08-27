@@ -26,7 +26,7 @@ export const ENTRIES: RulingEntry[] = [
     reason: 'HELD for Sean: if the mixer segment closes the episode, running-order END is arguably 50 (v9) not 25 (v5); segment order not verified frame-level → DECISIONS-FOR-SEAN',
     ruledBy: 'session', ruledOn: date,
     cite: ['scripts/ingest/research/batch16/out/kamisama-kiss.json', 'scripts/ingest/apply-research-batch-16.ts#REPAIRS_APPROVED'],
-    retiresWhen: 'Sean rules the ep 10 segment order (END 25 vs 50)',
+    retiresWhen: 'RETIRED 2026-08-27 (deep) — RULED 2026-08-24 (batch16 DECISIONS-FOR-SEAN D1): END 50 / v9 on ja-WP segment order; the stored anchor carries it',
   },
 
   // ---- CURATED_ANNOTATIONS: zone facts the verdicts evidence but did not file

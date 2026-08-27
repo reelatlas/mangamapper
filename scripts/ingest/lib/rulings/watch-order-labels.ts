@@ -50,6 +50,10 @@ export const ENTRIES: RulingEntry<WatchOrderRuling>[] = [
   // pairs, both typed, listed for Sean: to-love-ru-darkness @24.1/@24.5
   // (one work, AniList 21852); yu-yu-hakusho-ghostfiles @112.1/@112.5 (one
   // work, 6964). @112.7/@112.8 share id 102631 but are two shorts.
+  // RULED 2026-08-27 (Sean): one entry per work — @24.1 and @112.1 (the
+  // research-tier records) stay; the untitled @24.5 / @112.5 sign-off
+  // entries were DROPPED (ingest_fractionals + watch_order_entries), their
+  // community-count sentence carried into the surviving entry's note.
   {
     seriesId: 'black-butler',
     ruleId: 'T29',
@@ -331,16 +335,6 @@ export const ENTRIES: RulingEntry<WatchOrderRuling>[] = [
     cite: ['scripts/ingest/research/batch19/out/watch-order-kinds.json', 'https://anilist.co/anime/21852'],
   },
   {
-    seriesId: 'to-love-ru-darkness',
-    ruleId: 'T29',
-    value: { position: 24.5, record: { kind: 'special', anilistId: 21852 } },
-    reason:
-      "AniList 21852 'To LOVE-Ru Darkness 2nd Specials' format=SPECIAL, 2 eps, 2015-10-29. NOTE: appears to be the same work as the @24.1 entry — see flags.",
-    ruledBy: 'Sean',
-    ruledOn: '2026-08-27',
-    cite: ['scripts/ingest/research/batch19/out/watch-order-kinds.json', 'https://anilist.co/anime/21852'],
-  },
-  {
     seriesId: 'yu-gi-oh-2000',
     ruleId: 'T29',
     value: { position: 224.5, record: { kind: 'movie', anilistId: 21265 } },
@@ -356,16 +350,6 @@ export const ENTRIES: RulingEntry<WatchOrderRuling>[] = [
     value: { position: 112.1, record: { kind: 'special', anilistId: 6964 } },
     reason:
       "AniList 6964 'Yuu Yuu Hakusho Picture Drama' format=SPECIAL, 1 ep, 6 min, 2009-10-27. en-WP: Bandai Visual's first Blu-ray set (October 27, 2009) 'contain[ed] a picture drama set after the end of the series'. NOTE: appears to be the same work as the @112.5 entry — see flags.",
-    ruledBy: 'Sean',
-    ruledOn: '2026-08-27',
-    cite: ['scripts/ingest/research/batch19/out/watch-order-kinds.json', 'https://anilist.co/anime/6964', 'https://en.wikipedia.org/wiki/YuYu_Hakusho_(1992_TV_series)'],
-  },
-  {
-    seriesId: 'yu-yu-hakusho-ghostfiles',
-    ruleId: 'T29',
-    value: { position: 112.5, record: { kind: 'special', anilistId: 6964 } },
-    reason:
-      "AniList 6964 'Yuu Yuu Hakusho Picture Drama' format=SPECIAL, 1 ep, 6 min, 2009-10-27. NOTE: appears to be the same work as the @112.1 entry — see flags.",
     ruledBy: 'Sean',
     ruledOn: '2026-08-27',
     cite: ['scripts/ingest/research/batch19/out/watch-order-kinds.json', 'https://anilist.co/anime/6964', 'https://en.wikipedia.org/wiki/YuYu_Hakusho_(1992_TV_series)'],

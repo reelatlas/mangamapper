@@ -40,7 +40,7 @@ export const ENTRIES: RulingEntry[] = [
     reason: 'HELD for Sean (convention-sensitive): stored 64 is the manual endpoint ruling; ch 64 now exactly ep 22\'s (double-claim) — the agent asked to confirm before repairing',
     ruledBy: 'session', ruledOn: date,
     cite: ['scripts/ingest/research/batch15/out/miss-kobayashis-dragon-maid.json', 'scripts/ingest/apply-research-batch-15.ts#REPAIRS_APPROVED'],
-    retiresWhen: 'Sean rules the ep 25 endpoint vs ep 22 double-claim',
+    retiresWhen: "RETIRED 2026-08-27 (deep) — RULED AND APPLIED 2026-08-24: ep 25 → 48 [40] v5 (the finale adapts 40 + 48 + Elma OL 6; ch 64 is ep 22's), continue 65 post_series — the stored row carries the ruling note; this HELD record is history",
   },
 
   // ---- EXCLUDED_ANCHORS: verdict anchors NOT applied
