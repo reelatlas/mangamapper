@@ -16,6 +16,7 @@ import { aflAnimeCanonStanding } from './lib/rulings/source-kinds';
 import { STANDING_ANNOTATIONS } from './lib/rulings/standing-annotations';
 import { upsertAnnotation } from './lib/annotations';
 import { ANCHOR_SUPPRESSED } from './lib/rulings/anchor-suppressed';
+import { LOCKED } from './lib/rulings/permanence';
 
 const DRY = process.argv.includes('--dry-run');
 
@@ -138,9 +139,27 @@ async function assertAnchorSuppression() {
   console.log(`[assert-overrides] anchor suppression (A44): ${Object.values(ANCHOR_SUPPRESSED).flat().length} ruled rows, ${removed} anchors removed${DRY ? ' — DRY RUN' : ''}`);
 }
 
+// P25: series.permanence mirrors the LOCKED map exactly
+async function assertPermanence() {
+  const rows = await selectAll<{ id: string; permanence: string | null }>('series', 'id, permanence');
+  let n = 0;
+  for (const r of rows) {
+    const want = LOCKED.has(r.id) ? 'locked' : null;
+    if ((r.permanence ?? null) === want) continue;
+    n++;
+    console.log(`  ${r.id}: permanence ${r.permanence} → ${want}`);
+    if (!DRY) {
+      const { error } = await db.from('series').update({ permanence: want }).eq('id', r.id);
+      if (error) throw new Error(`${r.id}: ${error.message}`);
+    }
+  }
+  console.log(`[assert-overrides] permanence (P25): ${LOCKED.size} locked, ${n} asserted${DRY ? ' — DRY RUN' : ''}`);
+}
+
 async function main() {
   await assertStandings();
   await assertAnchorSuppression();
+  await assertPermanence();
   await assertMap('types (T6)', EPISODE_TYPE_OVERRIDES, 'type');
   await assertStandingAnnotations();
   await assertMap('air dates (G53)', AIR_DATE_OVERRIDES, 'air_date');

@@ -28,7 +28,9 @@ prior session's list is a claim, the filesystem is the fact. The census
 classes (`anchor_gap_research`, `frontier_tail_null`, `mu_pin_unverified`,
 `asterisk_unreviewed`) are the source of targets; a queue that selects for
 MISSING data never surfaces well-anchored series — an audit class must be
-its own work-list (`R27`).
+its own work-list (`R27`). LOCKED series (`P25`, `lib/rulings/permanence.ts`) are
+excluded from every work-list unless the batch exists BECAUSE a rule
+changed — then say so in the plan.
 
 If a `*-RECOVERY.md` exists in the batch directory, **read it first**. It
 records what landed, what is outstanding, and the source traps already

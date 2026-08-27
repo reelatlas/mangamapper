@@ -120,9 +120,13 @@ Re-evaluate existing data against CURRENT rules, ahead of drift.
   no longer exist, orphaned staging, resolved-but-lingering flags. Every
   deletion listed. `retiresWhen` conditions in `docs/rulings.md` are the
   worklist — check each.
-- **Permanence tiers** (`P25`, designed; BUILT after T4): two-level deep —
-  routine deep skips LOCKED series; a rule-change deep never does.
-- End with the step-5 census gate and fold results into step 8.
+- **Permanence tiers** (`P25`, built 2026-08-26): two-level deep. A
+  routine deep SKIPS series in `lib/rulings/permanence.ts` (LOCKED —
+  Sean-signed); a rule-change deep (step 0 reported an enforcement site
+  changed) never skips them. Every writer still runs on locked series;
+  `permanence_violation` (a locked series with anything open) is the
+  outcome check and MUST be 0. `permanence_candidate` is Sean's signing
+  queue — list it, never sign for him.
 
 ## 10. Close the loop — capture (`P29`)
 

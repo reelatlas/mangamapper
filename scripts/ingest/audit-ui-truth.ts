@@ -15,6 +15,7 @@ import { AIRDATE_REGRESSION_THRESHOLD_DAYS, airdateOrderWalk } from './lib/airda
 import { AIR_DATE_OVERRIDES } from './lib/rulings/air-dates';
 import { ANCHOR_SUPPRESSED } from './lib/rulings/anchor-suppressed';
 import { deriveFormat } from './lib/format';
+import { LOCKED } from './lib/rulings/permanence';
 import { deriveSourceKind, seriesHasInstrument, seriesHasSource, SOURCE_TYPE_OVERRIDES } from './lib/rulings/source-kinds';
 import { pickManga } from './lib/resolve';
 import { annotationProblem } from './lib/annotations';
@@ -85,6 +86,7 @@ async function main() {
     rearranged_zone_unanchored: [], rearranged_zone_acknowledged: [],
     title_incomplete: [], airdate_incomplete: [], airdate_regression: [], airdate_withheld: [], asterisk_unreviewed: [],
     fractional_unmodeled: [], annotation_invalid: [], afl_anime_canon_unruled: [], format_missing: [], episode_without_component: [], watch_order_kind_missing: [],
+    permanence_candidate: [], permanence_violation: [],
     series_without_source_kind: [], no_source: [], no_instrument: [], ok_full: [], ok_no_volume: [], ok_loose: [],
     pending_airing_no_anchor: [], pending_finished_no_totals: [], pending_no_canon: [], pending_other: [],
   };
@@ -675,6 +677,44 @@ async function main() {
         else if (i > 0 && b.chapter_start <= ordered[i - 1].chapter_start) impossible.push(`v${b.volume}:${b.chapter_start} (start ≤ v${ordered[i - 1].volume}'s ${ordered[i - 1].chapter_start})`);
       }
       if (impossible.length) classes.boundaries_degenerate.push(`manga ${mid} (${ss.map((x) => x.id).join(', ')}): ${impossible.slice(0, 6).join(' ')}${impossible.length > 6 ? ` …+${impossible.length - 6}` : ''} — run heal-volume-boundaries.ts`);
+    }
+  }
+
+  // P25 permanence (2026-08-26): the mechanical half of the lock criteria —
+  // finished series (source finished too where an instrument exists) whose
+  // mapping renders full, carrying at least one research/manual-tier anchor
+  // (or nothing to map), with NO open census item on it. Meeting all of it
+  // = permanence_candidate (Sean's signing queue: an entry in
+  // lib/rulings/permanence.ts). A LOCKED series failing any of it =
+  // permanence_violation — data drifted under a lock (P5).
+  {
+    const OPEN_CLASSES = ['integrity_eps_beyond_total', 'integrity_total_beyond_eps', 'integrity_double_claimed', 'integrity_degenerate_span', 'special_numbered_unreviewed', 'anchor_gap_research', 'frontier_tail_null', 'anchor_nonmonotonic', 'anchor_start_offtrend', 'anchor_beyond_chapter_space', 'anchor_beyond_display_total', 'anchor_fractional_chapter', 'anchor_on_noncanon_row', 'continue_skip_unnoted', 'boundaries_degenerate', 'boundaries_wrong_page', 'boundaries_beyond_total', 'ruling_violation', 'repair_on_derivation_tier', 'mu_pin_unverified', 'rearranged_zone_unanchored', 'title_incomplete', 'airdate_incomplete', 'airdate_regression', 'airdate_withheld', 'asterisk_unreviewed', 'fractional_unmodeled', 'annotation_invalid', 'afl_anime_canon_unruled', 'format_missing', 'episode_without_component', 'watch_order_kind_missing', 'series_without_source_kind', 'pending_airing_no_anchor', 'pending_finished_no_totals', 'pending_no_canon', 'pending_other'];
+    const openBy = new Map<string, Set<string>>();
+    const ids = new Set(series.map((s: any) => s.id));
+    for (const c of OPEN_CLASSES) for (const line of classes[c] ?? []) {
+      const sid = String(line).split(/[:\s]/)[0];
+      if (!ids.has(sid)) continue;
+      if (!openBy.has(sid)) openBy.set(sid, new Set());
+      openBy.get(sid)!.add(c);
+    }
+    const full = new Set(classes.ok_full);
+    const noMap = new Set([...classes.no_source, ...classes.no_instrument.map((x: string) => x.split(' ')[0])]);
+    const researched = new Set(anchors.filter((a: any) => a.source !== 'afg' && a.source !== 'mu' && a.source !== 'afg-continua').map((a: any) => a.series_id));
+    const verdict = (row: any): string | null => {
+      if (row.status !== 'finished') return `anime ${row.status}`;
+      if (!row.source_type || row.source_type === 'other') return `source kind ${row.source_type} (a ruling is pending, T25)`;
+      const instrument = !noMap.has(row.id);
+      if (instrument && row.manga_status !== 'finished') return `source ${row.manga_status}`;
+      if (instrument && !full.has(row.id)) return 'mapping not full';
+      if (instrument && !researched.has(row.id)) return 'no research/manual-tier anchor';
+      const open = openBy.get(row.id);
+      if (open?.size) return `open: ${[...open].join(', ')}`;
+      return null;
+    };
+    for (const row of series) {
+      const why = verdict(row);
+      if (LOCKED.has(row.id)) { if (why) classes.permanence_violation.push(`${row.id}: LOCKED but ${why}`); }
+      else if (!why) classes.permanence_candidate.push(`${row.id} (${noMap.has(row.id) ? 'no instrument' : 'full'}) — meets every mechanical criterion; Sean signs → lib/rulings/permanence.ts`);
     }
   }
 

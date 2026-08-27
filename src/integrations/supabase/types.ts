@@ -539,6 +539,7 @@ export type Database = {
           max_adapted_chapter: number | null
           mean_score: number | null
           next_airing_at: string | null
+          permanence: string | null
           popularity: number
           search_text: string
           season: string | null
@@ -587,6 +588,7 @@ export type Database = {
           max_adapted_chapter?: number | null
           mean_score?: number | null
           next_airing_at?: string | null
+          permanence?: string | null
           popularity?: number
           search_text?: string
           season?: string | null
@@ -635,6 +637,7 @@ export type Database = {
           max_adapted_chapter?: number | null
           mean_score?: number | null
           next_airing_at?: string | null
+          permanence?: string | null
           popularity?: number
           search_text?: string
           season?: string | null

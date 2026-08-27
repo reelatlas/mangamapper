@@ -607,6 +607,23 @@
    durable guard. Lesson for the floor rule: a >2 overshoot sourced from a
    SINGLE chart row with no corroborating content anywhere is a typo
    candidate, not an adoption candidate.
+64. ✅ **P25 PERMANENCE TIERS — built (2026-08-26; the first post-restructure
+   /add-rule; Sean's call #1).** The LOCKED ruling map
+   (`lib/rulings/permanence.ts`, Sean-signed entries only — none yet),
+   `series.permanence` mirrored by the healer (migration 20260826500000),
+   and two outcome classes: **`permanence_candidate`** — the mechanical
+   half of the criteria (anime finished; source finished where an
+   instrument exists; mapping full; a research/manual-tier anchor; source
+   kind ruled, never `other`; NO open census item on the series) = Sean's
+   signing queue, 34 today (33 "no instrument" studio originals / VN / game
+   series that pass trivially, and ONE full mapping: dr-stone); and
+   **`permanence_violation`** — a locked series failing any criterion (data
+   drifted under a lock) = 0 and MUST stay 0. Mechanics: routine deep skips
+   LOCKED (consolidate skill step 9); a rule-change deep never does;
+   research work-lists exclude LOCKED unless the batch exists because a
+   rule changed (research-batch skill); every writer still runs. P25 marked
+   live; one-hop case 24. Nothing signed — the census computes the queue,
+   Sean signs. Edges deployed; ruling_violation 0; display 220/0.
 63. ✅ **RESTRUCTURE PHASE CLOSED — P36 passed (2026-08-26).** The cross-model
    frame check ran live in the closing thread (Sean + Cursor): glossary §1
    matches what got built; the success test passes (no "anime only" type;

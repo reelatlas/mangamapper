@@ -288,7 +288,7 @@
 - `P22` Deep is REQUIRED when a ledger enforcement site changed — aka `sharper deep trigger`, `enforcement-site deep trigger`, `T3.3`
 - `P23` Notes are precedence, not blindfolds — aka `notes are precedence, not blindfolds`, `deep rescan notes rule`
 - `P24` Delete with evidence; every removal is listed — aka `delete with evidence`, `stale cleanup`, `every deletion listed`
-- `P25` Permanence tiers: finished, Sean-signed series are LOCKED *(planned)* — aka `permanence tiers`, `permanence tier`, `LOCKED`, `locked series`, `permanence locks`
+- `P25` Permanence tiers: finished, Sean-signed series are LOCKED — aka `permanence tiers`, `permanence tier`, `LOCKED`, `locked series`, `permanence locks`, `permanence_candidate`, `permanence_violation`, `routine deep skips locked`, `signing queue`
 - `P27` Gates before commit: tsc -b (never -p .), lint, test, build — aka `tsc -b gate`, `frontend gate`, `gates before commit`, `gates before any commit`, `frontend gate is tsc -b`
 - `P28` Every piece ends at a save point; the next step is offered — aka `save point`, `next-step offer`, `no silent TODO`, `offer it, don't assume it`
 - `P29` Capture: every learning is routed to a durable, named home — aka `capture`, `capture routing`, `close the loop`, `the capture table`
@@ -3794,18 +3794,18 @@ Logic, rulings, staging rows, flags and scripts are removed only when the invent
 - aliases: delete with evidence, stale cleanup, every deletion listed
 - see: P23, P34
 
-### P25 · Permanence tiers: finished, Sean-signed series are LOCKED *(planned)*
+### P25 · Permanence tiers: finished, Sean-signed series are LOCKED
 
 A series that is FINISHED and FULLY PUBLISHED, with its mapping researched, cross-verified and Sean-signed, is LOCKED: its decisions are permanent and it drops out of routine deep rescans, revisited only when a rule change explicitly touches it. Airing, ongoing and unverified series stay in the active pool. The locked set grows until deep passes become rare.
 
-*Why:* Designed 2026-08-23, never built — the consolidate skill states the clause as live (DRIFT-LIST §B loser). 15 candidates named by §12.46/§12.52; the lock mechanism lands after T4 (plan D-6).
+*Why:* Designed 2026-08-23; BUILT 2026-08-26 as the first post-restructure /add-rule (plan D-6): the LOCKED ruling map (Sean-signed entries only), series.permanence mirrored by the healer, and two outcome classes — permanence_candidate (the mechanical half: anime finished, source finished where an instrument exists, mapping full, a research/manual-tier anchor, no open census item) is the signing queue; permanence_violation (a locked series failing any of it) catches data drifting under a lock. 15 candidates were named by §12.46/§12.52; the census now computes the list.
 
 - ruled Sean 2026-08-23 (data-pipeline §12.24; §12.52; docs/restructure-plan.md §7 D-6)
-- layer **process**
-- enforced: [docs/restructure-plan.md#D-6](../docs/restructure-plan.md) · [docs/system-evolution.md#permanence tiers](../docs/system-evolution.md)
-- **audit: none — automation backlog**
+- layer **both**
+- enforced: [lib/rulings/permanence.ts#LOCKED](../scripts/ingest/lib/rulings/permanence.ts) · [assert-overrides.ts#assertPermanence](../scripts/ingest/assert-overrides.ts) · [audit-ui-truth.ts#permanence_violation](../scripts/ingest/audit-ui-truth.ts) · [supabase/migrations/20260826500000_series_permanence.sql](../supabase/migrations/20260826500000_series_permanence.sql) · [.claude/skills/consolidate/SKILL.md](../.claude/skills/consolidate/SKILL.md) · [.claude/skills/research-batch/SKILL.md](../.claude/skills/research-batch/SKILL.md)
+- audit: `permanence_candidate`, `permanence_violation`
 - witnesses: sket-dance, bobobo-bo-bo-bobo, rurouni-kenshin, hellsing, noragami, rosario-vampire, d-gray-man, arms-alchemy, blade-of-the-immortal-ona, space-adventure-cobra, emma-a-victorian-romance, detective-school-q, fist-of-the-blue-sky, x, tokyo-mew-mew
-- aliases: permanence tiers, permanence tier, LOCKED, locked series, permanence locks
+- aliases: permanence tiers, permanence tier, LOCKED, locked series, permanence locks, permanence_candidate, permanence_violation, routine deep skips locked, signing queue
 - see: P21, P22
 
 ### P27 · Gates before commit: tsc -b (never -p .), lint, test, build
@@ -4618,6 +4618,8 @@ Any component that renders episode-level data consumes the HYDRATED series (getB
 - permanence locks → `P25`
 - permanence tier → `P25`
 - permanence tiers → `P25`
+- permanence_candidate → `P25`
+- permanence_violation → `P25`
 - permanent-flag disposition → `G4`
 - pickManga → `I38`
 - piecewise interpolation → `A33`
@@ -4681,6 +4683,7 @@ Any component that renders episode-level data consumes the HYDRATED series (getB
 - retconned → `T26`
 - retype stays research-tier → `T6`
 - REVIEWED_NUMBERED_SPECIALS → `N7`
+- routine deep skips locked → `P25`
 - row-count identity → `R19`
 - row-count identity first → `R19`
 - ruled air dates → `G53`
@@ -4736,6 +4739,7 @@ Any component that renders episode-level data consumes the HYDRATED series (getB
 - shift verification → `N11`
 - sibling-scope ceiling → `G33`
 - side_source → `T26`
+- signing queue → `P25`
 - single-source final → `C4`
 - single-source-final → `C4`
 - skeptic not second author → `R24`
@@ -4908,6 +4912,6 @@ Any component that renders episode-level data consumes the HYDRATED series (getB
 
 ## Scoreboard
 
-- rules: 266 (live 250, planned 9, superseded 7)
+- rules: 266 (live 251, planned 8, superseded 7)
 - live data rules with no audit class (the automation backlog): 86
-- by layer: writer 137 · display 23 · both 22 · process 84
+- by layer: writer 137 · display 23 · both 23 · process 83

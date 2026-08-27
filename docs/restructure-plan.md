@@ -225,7 +225,7 @@ the new rule**, never a migration script.
 | Air-date order gate (A-11) | T3.1 exercise 2 — DONE 2026-08-26 (G54): 10 dates withheld, airdate_regression queue 68 rows / 46 series → batch 18 |
 | AFL non-episode-row audit class (project-arms 53) | add-rule candidate (sibling of G54, not the same rule) |
 | Continua chart cross-check gate | add-rule |
-| Permanence locks (15 candidates, listed by T0) | after T4 |
+| Permanence locks | BUILT 2026-08-26 (P25 live; permanence_candidate = the signing queue, 34 today) |
 | AFG-expansion typing sweep | heal + census |
 | ch-82-inside-range schema question, D2 | T4.0 agenda |
 | watch_order_entries.kind backfill | T4.1 |
