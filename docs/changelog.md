@@ -653,6 +653,19 @@
    AniList's aired count: the I33 airing lag, no ruling. Lib changed → four
    edges rebuilt and deployed. Next: B1-B5 + A3 waves per the plan, on
    Sean's go.
+   **SIGNED by Sean the same day** (Cursor concurring): the 15 flip to
+   `ruledBy: 'Sean'` — "components now follow the rows; the rows were not
+   renumbered". Forks ruled, no structure invented: **dxd row 0 DROPPED**
+   under N11 (`SOURCE_NUMBERING_SHIFTS` drop [0]; the standing row removed
+   by re-resolving the series through filterEpisodeRows; the special
+   recorded order-only at 36.5 in ingest_fractionals, the seraph precedent);
+   conan = airing lag, no ruling; 5D's 155 and black-cat 24 → lane B4 (a
+   same-date double row and an identity + G53 date question — not component
+   patches); fotbs 23-26 left listed (the span was demoted order-only on
+   08-25; not brought back here). Also logged for after batch 19, not in
+   it: the ARC MODEL (source arcs by ch/vol, anime arcs by name, the
+   mismatches) — `docs/system-evolution.md`; relations, components and
+   annotations cover sequel/prequel, seasons and divergence until then.
 67. ✅ **BATCH 19 E3 — drift item A-6: the sliver rule lifted into lib,
    the seeded starts made provable, deltas listed for Sean (2026-08-26).**
    A10 (START = first chapter animated; a leading partial of the preceding

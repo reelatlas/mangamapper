@@ -134,6 +134,16 @@ export const ENTRIES: RulingEntry<Shift>[] = [
     ruledBy: 'session',
     ruledOn: '2026-08-23',
   },
+  {
+    seriesId: 'high-school-dxd',
+    ruleId: 'N11',
+    value: { drop: [0], shifts: [] },
+    reason:
+      "HERO's Episode 0 ('Holy Behind the Gymnasium', 2018-04-10) is a mid-run special the community's continuous numbering excludes — ruled ORDER-ONLY by Sean on 2026-08-24 (COMMUNITY_COUNT_OVERRIDES cap 48), yet a numbered row 0 stood. Batch 19 E4 fork, Sean 2026-08-26: drop the row, do not rescind. It holds watch position 36.5 (order-only, between BorN and HERO); no anchor or annotation depended on the row.",
+    ruledBy: 'Sean',
+    ruledOn: '2026-08-26',
+    cite: ['scripts/ingest/lib/rulings/community-counts.ts', 'docs/changelog.md §12.68'],
+  },
 ];
 
 export const SOURCE_NUMBERING_SHIFTS: Record<string, Shift> = toRecord(ENTRIES);

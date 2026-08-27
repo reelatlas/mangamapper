@@ -112,6 +112,15 @@ system, motion and component conventions worth codifying. Designing that skill
 now would be guessing at conventions not yet set. Wait until one page is done
 and the repeating parts are visible.
 
+**Arc model (Sean, 2026-08-26 — after batch 19, not in it).** Source arcs
+(chapter / volume spans) and anime arcs (own names, often different, often
+divergent), plus the name mismatches between them, need their own tables and
+a design pass — the same class as franchise-above-series IA. Relations
+(`series_relations` + franchise-rulings), seasons / OVA / movie slots
+(`series_components`, durable since I39) and episode-level divergence
+(annotations) are enough until then. The UI already keeps the word "arc"
+free for it.
+
 ## Type taxonomy — target state (Sean, 2026-08-25)
 
 `episodes.type` is a FILTER dimension. Verified current DB state:

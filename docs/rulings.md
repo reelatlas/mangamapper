@@ -2,7 +2,7 @@
 
 > GENERATED from `scripts/ingest/lib/rulings/**` by `scripts/restructure/gen-rulings.ts` — do not edit by hand. A ruling is an INSTANCE of a rule (`docs/rules.md`); the map is the record, this is the index.
 
-- rulings: 1740 across 207 series/keys · by Sean: 382 · UNRECORDED reasons: 8 · with a retire condition: 88
+- rulings: 1741 across 207 series/keys · by Sean: 398 · UNRECORDED reasons: 8 · with a retire condition: 88
 
 ## Retire conditions (re-evaluate when…)
 
@@ -139,7 +139,7 @@
 
 | rule | value | reason | ruled | retires when |
 |---|---|---|---|---|
-| `I39` | {"extras":[{"anilistId":10067,"kind":"special","label":"Another Epilogue","after":6547,"rows":1},{"anilistId":9062,"kind":"special","label":"Angel Beats! Spe… | Row 14 'Another Epilogue' 2010-12-22 = AniList 10067 (SPECIAL, 2010-12-22); rows 15-16 'Stairway to Heaven' 2010-12-22 and 'Hell's Kitchen' 2015-06-24 = AniList 9062 Tokubetsu-hen (SPECIAL, 2 eps, 2010-12-22 → 2015-06-24). Adopted by the episode floor (EXTRAS_ADOPTED 14-16); formats ruled special (T29). | session 2026-08-26 · https://anilist.co/anime/10067, https://anilist.co/anime/9062, scripts/ingest/lib/rulings/format-overrides.ts |  |
+| `I39` | {"extras":[{"anilistId":10067,"kind":"special","label":"Another Epilogue","after":6547,"rows":1},{"anilistId":9062,"kind":"special","label":"Angel Beats! Spe… | Row 14 'Another Epilogue' 2010-12-22 = AniList 10067 (SPECIAL, 2010-12-22); rows 15-16 'Stairway to Heaven' 2010-12-22 and 'Hell's Kitchen' 2015-06-24 = AniList 9062 Tokubetsu-hen (SPECIAL, 2 eps, 2010-12-22 → 2015-06-24). Adopted by the episode floor (EXTRAS_ADOPTED 14-16); formats ruled special (T29). | Sean 2026-08-26 · https://anilist.co/anime/10067, https://anilist.co/anime/9062, scripts/ingest/lib/rulings/format-overrides.ts |  |
 | `T29` | {"14":"special","15":"special","16":"special"} | Rows 14-16 ('Another Epilogue', 'Stairway to Heaven' — BD/DVD specials 2010-12-22; 'Hell's Kitchen' — the 2015 BD-box special) numbered after the 13-episode TV run; no component covers them (structure: N7 + special components). | Sean 2026-08-26 · https://en.wikipedia.org/wiki/List_of_Angel_Beats!_episodes |  |
 | `N1` | {"adopted":[14,16]} | Episodes 14-16 are the OVA specials — broadcast content the community numbers, so the displayed total floors at our row count rather than the 13-episode source count. | Sean 2026-08-24 |  |
 
@@ -153,7 +153,7 @@
 
 | rule | value | reason | ruled | retires when |
 |---|---|---|---|---|
-| `I39` | {"extras":[{"anilistId":11701,"kind":"ova","label":"The Other - Inga","after":null,"rows":1,"startAt":0}]} | Row 0 'The other' 2012-05-26 = AniList 11701 'Another: The Other - Inga' (OVA, 2012-05-26), the prequel OVA the community numbers 0 (N7). | session 2026-08-26 · https://anilist.co/anime/11701 |  |
+| `I39` | {"extras":[{"anilistId":11701,"kind":"ova","label":"The Other - Inga","after":null,"rows":1,"startAt":0}]} | Row 0 'The other' 2012-05-26 = AniList 11701 'Another: The Other - Inga' (OVA, 2012-05-26), the prequel OVA the community numbers 0 (N7). | Sean 2026-08-26 · https://anilist.co/anime/11701 |  |
 
 ### arms-alchemy (2)
 
@@ -166,7 +166,7 @@
 
 | rule | value | reason | ruled | retires when |
 |---|---|---|---|---|
-| `I39` | {"extras":[{"anilistId":21303,"kind":"special","label":"episode:0 Meeting Time","after":null,"rows":1,"startAt":0}]} | Row 0 'Meeting Time' 2014-11-09 = AniList 21303 'episode:0 Deai no Jikan' (SPECIAL, 2014-11-09), a pre-broadcast special the community numbers 0 (N7); it precedes the S1 component (22 eps, 1-22). | session 2026-08-26 · https://anilist.co/anime/21303 |  |
+| `I39` | {"extras":[{"anilistId":21303,"kind":"special","label":"episode:0 Meeting Time","after":null,"rows":1,"startAt":0}]} | Row 0 'Meeting Time' 2014-11-09 = AniList 21303 'episode:0 Deai no Jikan' (SPECIAL, 2014-11-09), a pre-broadcast special the community numbers 0 (N7); it precedes the S1 component (22 eps, 1-22). | Sean 2026-08-26 · https://anilist.co/anime/21303 |  |
 | `A3` | {"episode":3,"chapter":6,"start_chapter":4,"chapters_adapted":"4, 5, 6","volume":1,"source":"manual","note":"research-tier batch 10 (2026-08-23, agent-verifi… | Karma intro arc (sandwiched by ep 2 end 3 / ep 4 open 8). fandom + Wikipedia | session 2026-08-23 · scripts/ingest/apply-research-batch-10.ts, scratchpad batch10/assassination-classroom.json (session scratchpad, not on disk), docs/changelog.md §12.29 |  |
 | `A3` | {"episode":4,"chapter":10,"start_chapter":8,"chapters_adapted":"8, 9, 10","volume":2,"source":"manual","note":"research-tier batch 10 (2026-08-23, agent-veri… | adapts 8-10 SKIPPING ch 7 (grafted into ep 5) — see continue exception. fandom infobox | session 2026-08-23 · scripts/ingest/apply-research-batch-10.ts, scratchpad batch10/assassination-classroom.json (session scratchpad, not on disk), docs/changelog.md §12.29 |  |
 | `A3` | {"episode":6,"chapter":14,"start_chapter":12,"chapters_adapted":"12, 13, 14","volume":2,"source":"manual","note":"research-tier batch 10 (2026-08-23, agent-v… | midterms end at ch 14 = ep title 'Test Time'. fandom + Wikipedia | session 2026-08-23 · scripts/ingest/apply-research-batch-10.ts, scratchpad batch10/assassination-classroom.json (session scratchpad, not on disk), docs/changelog.md §12.29 |  |
@@ -666,7 +666,7 @@
 
 | rule | value | reason | ruled | retires when |
 |---|---|---|---|---|
-| `I39` | {"extras":[{"anilistId":4059,"kind":"ova","label":"Another World: Tomoyo Chapter","after":2167,"rows":1}]} | Row 24 'Another World: Tomoyo Chapter' 2008-07-16 = AniList 4059 (OVA, 2008-07-16), the DVD OVA after the 23-episode TV run (format ruled ova, T29). | session 2026-08-26 · https://anilist.co/anime/4059, scripts/ingest/lib/rulings/format-overrides.ts |  |
+| `I39` | {"extras":[{"anilistId":4059,"kind":"ova","label":"Another World: Tomoyo Chapter","after":2167,"rows":1}]} | Row 24 'Another World: Tomoyo Chapter' 2008-07-16 = AniList 4059 (OVA, 2008-07-16), the DVD OVA after the 23-episode TV run (format ruled ova, T29). | Sean 2026-08-26 · https://anilist.co/anime/4059, scripts/ingest/lib/rulings/format-overrides.ts |  |
 | `T29` | {"24":"ova"} | Ep 24 'Another World: Tomoyo Chapter' is the DVD OVA (2008-07-16) after the 23-episode TV run (en-WP episode list; Clannad Wiki). Canon (adapts the VN's Tomoyo route, T6 ruling 2026-08-26). | Sean 2026-08-26 · https://en.wikipedia.org/wiki/List_of_Clannad_episodes, https://clannad.fandom.com/wiki/Another_World:_Tomoyo_Chapter |  |
 | `T6` | {"24":"canon"} | Ep 24 'Another World: Tomoyo Chapter' (OVA, 2008-07-16) adapts the visual novel's Tomoyo route — an alternate route of the SOURCE, not a studio invention (Clannad Wiki: 'highlighting segments of Tomoyo's visual novel route'; en-WP: alternate timeline from the TV series). AFL's anime-canon on a VN series maps filler by T27; the cited route makes it canon relative to the VN. Instrument none (no mapping). T4.3 follow-up 2026-08-26. | Sean 2026-08-26 · https://clannad.fandom.com/wiki/Another_World:_Tomoyo_Chapter, https://en.wikipedia.org/wiki/List_of_Clannad_episodes |  |
 
@@ -674,7 +674,7 @@
 
 | rule | value | reason | ruled | retires when |
 |---|---|---|---|---|
-| `I39` | {"extras":[{"anilistId":6351,"kind":"ova","label":"Another World: Kyou Chapter","after":4181,"rows":1}]} | Row 25 'Another World: Kyou Chapter' 2009-07-01 = AniList 6351 (OVA, 2009-07-01), the DVD OVA after the 24-episode run (format ruled ova, T29). | session 2026-08-26 · https://anilist.co/anime/6351, scripts/ingest/lib/rulings/format-overrides.ts |  |
+| `I39` | {"extras":[{"anilistId":6351,"kind":"ova","label":"Another World: Kyou Chapter","after":4181,"rows":1}]} | Row 25 'Another World: Kyou Chapter' 2009-07-01 = AniList 6351 (OVA, 2009-07-01), the DVD OVA after the 24-episode run (format ruled ova, T29). | Sean 2026-08-26 · https://anilist.co/anime/6351, scripts/ingest/lib/rulings/format-overrides.ts |  |
 | `T29` | {"24":"recap","25":"ova"} | Ep 24 'Under the Green Tree' (2009-03-26) is the summary episode — Tomoya tells Ushio the story from meeting Nagisa to her birth (en-WP); ep 25 'Another World: Kyou Chapter' is the DVD OVA (2009-07-01). | Sean 2026-08-26 · https://en.wikipedia.org/wiki/List_of_Clannad_episodes, https://clannad.fandom.com/wiki/Another_World:_Kyou_Chapter |  |
 | `T6` | {"23":"filler","25":"canon"} | Ep 25 'Another World: Kyou Chapter' (OVA, 2009-07-01) adapts the visual novel's Kyou route (Clannad Wiki: 'based on the events of Kyou's route'; en-WP: alternate timeline) → canon relative to the VN. Ep 23 'The Event from One Year Before' is an anime-original extra set a year before the story (Clannad Wiki + en-WP) → filler, ruled so it leaves the afl_anime_canon_unruled queue. Ep 24 is the recap (AFL filler, untouched). T4.3 follow-up 2026-08-26. | Sean 2026-08-26 · https://clannad.fandom.com/wiki/Another_World:_Kyou_Chapter, https://clannad.fandom.com/wiki/The_Event_from_One_Year_Before, https://en.wikipedia.org/wiki/List_of_Clannad_episodes |  |
 
@@ -700,7 +700,7 @@
 | rule | value | reason | ruled | retires when |
 |---|---|---|---|---|
 | `G54` | [2,7,18] | TV Tokyo first aired a 12-session subset (Apr–Jun 1998) before WOWOW ran all 26 (Oct 1998–Apr 1999); rows 2, 7 and 18 carry their TX first-air dates and so regress against WOWOW-dated neighbours — real broadcast order. Session 24 (regresses 146 d against 23's 1999-09-03) is NOT acknowledged: 23's date is suspect (WOWOW's run ended 1999-04-24) → batch-18 G53 candidate. | Sean 2026-08-26 · https://en.wikipedia.org/wiki/List_of_Cowboy_Bebop_episodes, docs/restructure/DRIFT-LIST.md A-11 |  |
-| `I39` | {"extras":[{"anilistId":5,"kind":"movie","label":"Knockin' on Heaven's Door","after":1,"rows":1}]} | Row 27 'The Movie' 2001-09-01 = AniList 5 (MOVIE, 2001-09-01), numbered after the 26 sessions by AFL. The movie-kind component gives the row its format (E2 residual: bebop 27 belongs to E4, Sean 2026-08-26). | session 2026-08-26 · https://anilist.co/anime/5, docs/changelog.md §12.66 |  |
+| `I39` | {"extras":[{"anilistId":5,"kind":"movie","label":"Knockin' on Heaven's Door","after":1,"rows":1}]} | Row 27 'The Movie' 2001-09-01 = AniList 5 (MOVIE, 2001-09-01), numbered after the 26 sessions by AFL. The movie-kind component gives the row its format (E2 residual: bebop 27 belongs to E4, Sean 2026-08-26). | Sean 2026-08-26 · https://anilist.co/anime/5, docs/changelog.md §12.66 |  |
 
 ### d-gray-man (7)
 
@@ -734,7 +734,7 @@
 
 | rule | value | reason | ruled | retires when |
 |---|---|---|---|---|
-| `I39` | {"extras":[{"anilistId":10418,"kind":"ova","label":"The Red Knife Wielder","after":null,"rows":1,"startAt":0}]} | Row 0 'The Red Knife Wielder' 2011-10-08 = AniList 10418 'Akai Knife Tsukai' (OVA, 2011-10-08), the prequel OVA the community numbers 0 (N7). | session 2026-08-26 · https://anilist.co/anime/10418 |  |
+| `I39` | {"extras":[{"anilistId":10418,"kind":"ova","label":"The Red Knife Wielder","after":null,"rows":1,"startAt":0}]} | Row 0 'The Red Knife Wielder' 2011-10-08 = AniList 10418 'Akai Knife Tsukai' (OVA, 2011-10-08), the prequel OVA the community numbers 0 (N7). | Sean 2026-08-26 · https://anilist.co/anime/10418 |  |
 
 ### demon-slayer-kimetsu-no-yaiba (5)
 
@@ -848,7 +848,7 @@
 
 | rule | value | reason | ruled | retires when |
 |---|---|---|---|---|
-| `I39` | {"extras":[{"anilistId":8408,"kind":"special","label":"World at Peace (S1 DVD special)","after":6746,"rows":1}]} | Row 25 'World at Peace' 2011-02-23 = the second of AniList 8408 Durarara!! Specials (2010-08-25 → 2011-02-23); one numbered row (the 12.5 special is order-only). Batch 18 wave 3 found x2 Shou / Ten / Ketsu stored one row too low (25-36 / 37-48 / 49-60) with row 61 outside every component; the extra shifts them to 26-37 / 38-49 / 50-61 — confirmed by title (row 26 = x2 Shou #1, 2015-01-10). Format stays the ruled ova (T29). | session 2026-08-26 · https://anilist.co/anime/8408, scripts/ingest/research/batch18/out/durarara.json |  |
+| `I39` | {"extras":[{"anilistId":8408,"kind":"special","label":"World at Peace (S1 DVD special)","after":6746,"rows":1}]} | Row 25 'World at Peace' 2011-02-23 = the second of AniList 8408 Durarara!! Specials (2010-08-25 → 2011-02-23); one numbered row (the 12.5 special is order-only). Batch 18 wave 3 found x2 Shou / Ten / Ketsu stored one row too low (25-36 / 37-48 / 49-60) with row 61 outside every component; the extra shifts them to 26-37 / 38-49 / 50-61 — confirmed by title (row 26 = x2 Shou #1, 2015-01-10). Format stays the ruled ova (T29). | Sean 2026-08-26 · https://anilist.co/anime/8408, scripts/ingest/research/batch18/out/durarara.json |  |
 | `T26` | [{"episodes":[25],"kind":"loose_parallel","note":"Records the tie without treating it as adaptation: the OVA gives Mairu Orihara, Kururi Orihara and Max Sand… | Batch 18 wave 3 (2026-08-26): filler + loose_parallel (medium). | Sean 2026-08-26 · scripts/ingest/research/batch18/out/durarara.json |  |
 | `T29` | {"25":"ova"} | Row 25 is the S1 OVA 天下泰平 (DVD 13, 2011-02-23) — batch 18 wave 3; the x2 Shou component starts one row late (structure task), so no component covers it. | Sean 2026-08-26 · scripts/ingest/research/batch18/out/durarara.json |  |
 | `T6` | {"25":"filler"} | Batch 18 wave 3 (2026-08-26): the S1 OVA 天下泰平 (DVD 13, 2011-02-23) — 'adapted from' empty where every TV row is filled; no matching Narita short story; pre-debuts vol-4 characters → filler + loose_parallel (medium). STRUCTURE: components off by one from row 25. | Sean 2026-08-26 · scripts/ingest/research/batch18/out/durarara.json |  |
@@ -908,7 +908,7 @@
 
 | rule | value | reason | ruled | retires when |
 |---|---|---|---|---|
-| `I39` | {"spans":{"19603":{"episodeStart":0}}} | AniList 19603's 13 episodes include the one-hour prologue the community (and AFL) number 0: our rows run 0-12 ('Prologue' 2014-10-04 … 'The Final Choice' 2014-12-27) and S2 (20792, 13 eps) continues 13-25 ('Time of Departure' 2015-04-04). The stored 1-13 / 14-26 was one row high and left row 0 outside every component. | session 2026-08-26 · https://anilist.co/anime/19603, https://anilist.co/anime/20792 |  |
+| `I39` | {"spans":{"19603":{"episodeStart":0}}} | AniList 19603's 13 episodes include the one-hour prologue the community (and AFL) number 0: our rows run 0-12 ('Prologue' 2014-10-04 … 'The Final Choice' 2014-12-27) and S2 (20792, 13 eps) continues 13-25 ('Time of Departure' 2015-04-04). The stored 1-13 / 14-26 was one row high and left row 0 outside every component. | Sean 2026-08-26 · https://anilist.co/anime/19603, https://anilist.co/anime/20792 |  |
 | `N3` | {"addRow":{"number":0,"title":"Prologue","type":"anime-only-canon","air_date":"2014-10-04"}} | broadcast prologue; count starts at 0 per Sean. | Sean 2026-08-24 · scripts/ingest/apply-research-batch.ts |  |
 
 ### fatestay-night-unlimited-blade-works (1)
@@ -1183,7 +1183,7 @@
 
 | rule | value | reason | ruled | retires when |
 |---|---|---|---|---|
-| `I39` | {"extras":[{"anilistId":7858,"kind":"ova","label":"Project Pink (OVA)","after":5958,"rows":1}]} | Row 14 'Project Pink' 2010-09-09 = AniList 7858 (OVA, 2010-09-09), numbered between S1 (13) and Forte by AFL. Without it the stored structure was one row low from 14 on: Forte 14-25 while row 26 (2010-12-17) is Forte's finale, the films at 26/27 while rows 27 (2011-06-25 = AniList 9790's date) and 28 (2014-04-26 = AniList 12783's date) are the films. The extra shifts Forte to 15-26 and the films to 27 / 28 — the N7 reviews of 9790 and 12783 stand, their '26' / '27' wording was one row stale. | session 2026-08-26 · https://anilist.co/anime/7858, https://anilist.co/anime/9790, https://anilist.co/anime/12783 |  |
+| `I39` | {"extras":[{"anilistId":7858,"kind":"ova","label":"Project Pink (OVA)","after":5958,"rows":1}]} | Row 14 'Project Pink' 2010-09-09 = AniList 7858 (OVA, 2010-09-09), numbered between S1 (13) and Forte by AFL. Without it the stored structure was one row low from 14 on: Forte 14-25 while row 26 (2010-12-17) is Forte's finale, the films at 26/27 while rows 27 (2011-06-25 = AniList 9790's date) and 28 (2014-04-26 = AniList 12783's date) are the films. The extra shifts Forte to 15-26 and the films to 27 / 28 — the N7 reviews of 9790 and 12783 stand, their '26' / '27' wording was one row stale. | Sean 2026-08-26 · https://anilist.co/anime/7858, https://anilist.co/anime/9790, https://anilist.co/anime/12783 |  |
 | `A18` | reorder regime (batch 17): the anime adapts its short chapters out of order across both seasons, revisiting earlier material after later material | verdict-documented: the anime adapts its short chapters out of order across both seasons, revisiting earlier material after later material | session 2026-08-24 · scripts/ingest/research/batch17/out/heavens-lost-property.json, scripts/ingest/apply-research-batch-17.ts, §12.42 |  |
 | `N7` | 9790 | A (high): Clockwork Angeloid film = ep 26, canon continuation. [E4 2026-08-26: row 27 since the numbered S1 OVA (7858, AFL ep 14) took its structure row under I39 — the review stands, the number was one row stale.] | Sean 2026-08-23 |  |
 | `N7` | 12783 | A (high): Final film = ep 27, canon conclusion. [E4 2026-08-26: row 28 — see 9790.] | Sean 2026-08-23 |  |
@@ -1206,11 +1206,12 @@
 |---|---|---|---|---|
 | `I27` | {"ids":[20935,21424],"extras":[{"id":21817,"after":21424}],"ruledExtent":"AFL page = S1 (25); Fuujin Ranbu (2016, 8 eps, our 26-33, chs 72-107) aired — batch… | AFL-lag class: AFL page = S1 (25); Fuujin Ranbu (2016, 8 eps, our 26-33, chs 72-107) aired — batch 14 (2026-08-23 s2): the stored ep25→107 pin was the S2 endpoint (repaired to 71). The OVA (21817) is two anime-original side stories, order-only. The 1991 OVA (1762) is a separate novel adaptation — excluded. | session 2026-08-23 · docs/data-pipeline.md §12 batch 14 |  |
 
-### high-school-dxd (1)
+### high-school-dxd (2)
 
 | rule | value | reason | ruled | retires when |
 |---|---|---|---|---|
 | `N3` | {"cap":48,"note":"HERO's Episode 0 is a mid-run special the community's continuous numbering excludes — order-only (Sean 2026-08-24)"} | HERO's Episode 0 is a mid-run special the community's continuous numbering excludes; it holds an order-only slot, so the count caps at 48. | Sean 2026-08-24 |  |
+| `N11` | {"drop":[0],"shifts":[]} | HERO's Episode 0 ('Holy Behind the Gymnasium', 2018-04-10) is a mid-run special the community's continuous numbering excludes — ruled ORDER-ONLY by Sean on 2026-08-24 (COMMUNITY_COUNT_OVERRIDES cap 48), yet a numbered row 0 stood. Batch 19 E4 fork, Sean 2026-08-26: drop the row, do not rescind. It holds watch position 36.5 (order-only, between BorN and HERO); no anchor or annotation depended on the row. | Sean 2026-08-26 · scripts/ingest/lib/rulings/community-counts.ts, docs/changelog.md §12.68 |  |
 
 ### high-school-of-the-dead (3)
 
@@ -1369,7 +1370,7 @@
 
 | rule | value | reason | ruled | retires when |
 |---|---|---|---|---|
-| `I39` | {"extras":[{"anilistId":98033,"kind":"ova","label":"Kamisama, Shiawase ni Naru","after":21186,"rows":1}]} | Row 30 'The God at the Eve of Marriage' 2016-12-20 = AniList 98033 (OVA, 2016-12-20), after the Kako-hen OVAs 26-29 (N7-reviewed). | session 2026-08-26 · https://anilist.co/anime/98033, scripts/ingest/lib/rulings/reviewed-specials.ts |  |
+| `I39` | {"extras":[{"anilistId":98033,"kind":"ova","label":"Kamisama, Shiawase ni Naru","after":21186,"rows":1}]} | Row 30 'The God at the Eve of Marriage' 2016-12-20 = AniList 98033 (OVA, 2016-12-20), after the Kako-hen OVAs 26-29 (N7-reviewed). | Sean 2026-08-26 · https://anilist.co/anime/98033, scripts/ingest/lib/rulings/reviewed-specials.ts |  |
 | `A3` | {"episode":13,"chapter":30,"start_chapter":1,"chapters_adapted":"1-30 (vols 1-5) reordered; finale = 26-30","volume":5,"source":"manual","note":"research-tie… | S1 end; ch 31 opens the S2 Izumo arc. mangashed + fandom content match | session 2026-08-23 · scripts/ingest/apply-research-batch-11.ts, scratchpad batch11/kamisama-kiss.json (session scratchpad, not on disk), docs/changelog.md §12.30 |  |
 | `A3` | {"episode":25,"chapter":64,"start_chapter":31,"chapters_adapted":"31-64 (vols 6-11) compressed","volume":11,"source":"manual","note":"research-tier batch 11 … | S2 end; both leave-off sites give 64. WDTALO + mangashed | session 2026-08-23 · scripts/ingest/apply-research-batch-11.ts, scratchpad batch11/kamisama-kiss.json (session scratchpad, not on disk), docs/changelog.md §12.30 |  |
 | `A3` | {"episode":26,"chapter":85,"start_chapter":80,"chapters_adapted":"80-85 (vol 14)","volume":14,"source":"manual","note":"research-tier batch 11 (2026-08-23, a… | Kako-hen OAD 1 — first time-leap — MEDIUM. fandom beat-match + Wikipedia | session 2026-08-23 · scripts/ingest/apply-research-batch-11.ts, scratchpad batch11/kamisama-kiss.json (session scratchpad, not on disk), docs/changelog.md §12.30 |  |
@@ -1834,7 +1835,7 @@
 
 | rule | value | reason | ruled | retires when |
 |---|---|---|---|---|
-| `I39` | {"extras":[{"anilistId":21875,"kind":"movie","label":"No Game No Life: Zero","after":null,"rows":1,"startAt":0}]} | Row 0 'No Game No Life : Zero' 2017-07-15 = AniList 21875 (MOVIE, 2017-07-15), the prequel film the community numbers 0 (N7). Kind movie — the row's format derives movie, no override needed. | session 2026-08-26 · https://anilist.co/anime/21875 |  |
+| `I39` | {"extras":[{"anilistId":21875,"kind":"movie","label":"No Game No Life: Zero","after":null,"rows":1,"startAt":0}]} | Row 0 'No Game No Life : Zero' 2017-07-15 = AniList 21875 (MOVIE, 2017-07-15), the prequel film the community numbers 0 (N7). Kind movie — the row's format derives movie, no override needed. | Sean 2026-08-26 · https://anilist.co/anime/21875 |  |
 
 ### noragami (8)
 
@@ -1950,7 +1951,7 @@
 | rule | value | reason | ruled | retires when |
 |---|---|---|---|---|
 | `G53` | {"1":"1998-01-08","8":"1998-02-26"} | Both stored values are animefillerlist's: ep 1 1998-01-05 → 1998-01-08 (ja-WP, en-WP, fandom, AniList startDate, Sunrise official 放送開始 1998年01月08日); ep 8 1998-12-26 → 1998-02-26 (ja-WP, en-WP, fandom) — the ep-8 typo was the outlaw-star entry in the G54 airdate_regression queue. MAL's Jan 9 / Feb 27 are the post-midnight dates of a 25:15 slot, not a conflict. Ep 23's stored 1998-06-04 is for a broadcast that never happened (Sunrise: 第23話 TV未放映) — left for a ruling on whether G53 may carry NULL. | Sean 2026-08-26 · scripts/ingest/research/batch18/out/outlaw-star.json, scripts/ingest/research/batch18/verify/outlaw-star.md, https://www.sunrise-inc.co.jp/work/detail.php?cid=94, https://ja.wikipedia.org/wiki/星方武侠アウトロースター |  |
-| `I39` | {"spans":{"400":{"episodeEnd":26}}} | AniList 400 counts 24 (TV-aired; eps 16 and 23 were 未放映) but the production space is 26 and our rows are in it — rows 25 'Maze of Despair' and 26 'Return to Space' (1998-06-18/25) are the last two episodes (Sunrise; batch 18 verified). Formats ruled tv (T29); the span is the structure half of that ruling. | session 2026-08-26 · https://www.sunrise-inc.co.jp/work/detail.php?cid=94, scripts/ingest/research/batch18/verify/outlaw-star.md |  |
+| `I39` | {"spans":{"400":{"episodeEnd":26}}} | AniList 400 counts 24 (TV-aired; eps 16 and 23 were 未放映) but the production space is 26 and our rows are in it — rows 25 'Maze of Despair' and 26 'Return to Space' (1998-06-18/25) are the last two episodes (Sunrise; batch 18 verified). Formats ruled tv (T29); the span is the structure half of that ruling. | Sean 2026-08-26 · https://www.sunrise-inc.co.jp/work/detail.php?cid=94, scripts/ingest/research/batch18/verify/outlaw-star.md |  |
 | `T25` | original | AniList says source MANGA, but the show is a co-primary media-mix, not an adaptation: Sunrise's official page credits 原作／矢立 肇、伊東岳彦 on the anime and 漫画／伊東岳彦 as the parallel branch (「メディアミックス作品でもある」); Hajime Yatate — Sunrise's house pseudonym — sits in the MANGA's own vol-1 index; Ito plotted the anime from 1994, the manga started 「テレビの放送に先駆けて」 as a lead-in, and he scripted ep 19 himself. The anime IS its own source; the 3-volume manga is a sibling telling (Sean's A40/G3 rulings already found no chapter mapping meaningful). Distinct from the Evangelion class (T21: manga adapts the anime) — sibling BY DESIGN. Batch 18, verified R24. | Sean 2026-08-26 · https://www.sunrise-world.net/titles/pickup_094.php, https://ja.wikipedia.org/wiki/星方武侠アウトロースター, scripts/ingest/research/batch18/verify/outlaw-star.md |  |
 | `T26` | [{"episodes":[1,2],"kind":"divergence","chapters":"vol 1 (ch 1-4)","note":"Same opening events, different execution: the manga's ch 1 antagonist (Wraith, rev… | Batch 18 (2026-08-26), verified R24, Sean ruled the series original (co-primary media-mix); the manga overlap survives as trivia, never as an anchor. | Sean 2026-08-26 · scripts/ingest/research/batch18/out/outlaw-star.json, scripts/ingest/research/batch18/verify/outlaw-star.md, https://www.sunrise-world.net/titles/pickup_094.php |  |
 | `T29` | {"25":"tv","26":"tv"} | Rows 25-26 ('Maze of Despair', 'Return to Space', 1998-06-18/25) are the series' last two TV episodes in the 26-episode space; the component's 1-24 span is AniList's TV-aired count (16 and 23 were 未放映) — a stale span (I33 reconcile), not a format question. | Sean 2026-08-26 · https://www.sunrise-inc.co.jp/work/detail.php?cid=94, scripts/ingest/research/batch18/verify/outlaw-star.md |  |
@@ -2143,7 +2144,7 @@
 
 | rule | value | reason | ruled | retires when |
 |---|---|---|---|---|
-| `I39` | {"extras":[{"anilistId":44,"kind":"ova","label":"Tsuioku-hen (Trust & Betrayal)","after":45,"rows":4},{"anilistId":401,"kind":"ova","label":"Seisou-hen (Refl… | Rows 95-98 are the four Tsuioku-hen OVAs (AniList 44: OVA, 4 eps, 1999-02-20 → our row 95 1999-02-20) and 99-100 the two Seisou-hen OVAs (AniList 401: OVA, 2 eps, 2001-12-03 → our row 99 2001-12-03), numbered after the 94-episode TV run by AFL and adopted by the episode floor (EXTRAS_ADOPTED 95-100). Formats already ruled ova (T29); these rows give them structure. | session 2026-08-26 · https://anilist.co/anime/44, https://anilist.co/anime/401, scripts/ingest/lib/rulings/format-overrides.ts, docs/restructure/T4-GLOSSARY.md §4 |  |
+| `I39` | {"extras":[{"anilistId":44,"kind":"ova","label":"Tsuioku-hen (Trust & Betrayal)","after":45,"rows":4},{"anilistId":401,"kind":"ova","label":"Seisou-hen (Refl… | Rows 95-98 are the four Tsuioku-hen OVAs (AniList 44: OVA, 4 eps, 1999-02-20 → our row 95 1999-02-20) and 99-100 the two Seisou-hen OVAs (AniList 401: OVA, 2 eps, 2001-12-03 → our row 99 2001-12-03), numbered after the 94-episode TV run by AFL and adopted by the episode floor (EXTRAS_ADOPTED 95-100). Formats already ruled ova (T29); these rows give them structure. | Sean 2026-08-26 · https://anilist.co/anime/44, https://anilist.co/anime/401, scripts/ingest/lib/rulings/format-overrides.ts, docs/restructure/T4-GLOSSARY.md §4 |  |
 | `T29` | {"95":"ova","96":"ova","97":"ova","98":"ova"} | Tsuioku-hen (Trust & Betrayal): four OVAs numbered 95-98 after the 94-episode TV run; canon standing (T23: canon AND OVA), no component covers them. T4-GLOSSARY §4 names them as the FORMAT_OVERRIDES witness. | Sean 2026-08-26 · docs/restructure/T4-GLOSSARY.md §4, https://en.wikipedia.org/wiki/Rurouni_Kenshin:_Trust_%26_Betrayal |  |
 | `T29` | {"99":"ova","100":"ova"} | Seisou-hen (Reflection): the two-part 2001-12 / 2002-03 OVA numbered 99-100 after Tsuioku-hen; stored filler (anime-original epilogue), format ova. No component covers them. | Sean 2026-08-26 · https://en.wikipedia.org/wiki/Rurouni_Kenshin:_Reflection |  |
 | `A3` | {"episode":62,"chapter":151,"volume":18,"source":"manual"} | Kyoto arc end; eps 63+ anime-original. mangashed.com + wheredoestheanimeleaveoff.com + Wikipedia | Sean 2026-08-24 · scripts/ingest/apply-research-batch.ts |  |
@@ -2349,7 +2350,7 @@
 
 | rule | value | reason | ruled | retires when |
 |---|---|---|---|---|
-| `I39` | {"extras":[{"anilistId":21403,"kind":"movie","label":"Ordinal Scale","after":20594,"rows":1}]} | Row 50 is the Ordinal Scale film (AniList 21403: MOVIE, 2017-02-18 = our row 50 date); batch 18 wave 3 verified it and named the missing movie-kind component. The stored spans already skip 50 (26-49 → 51-74). | session 2026-08-26 · https://anilist.co/anime/21403, scripts/ingest/research/batch18/verify/sword-art-online.md |  |
+| `I39` | {"extras":[{"anilistId":21403,"kind":"movie","label":"Ordinal Scale","after":20594,"rows":1}]} | Row 50 is the Ordinal Scale film (AniList 21403: MOVIE, 2017-02-18 = our row 50 date); batch 18 wave 3 verified it and named the missing movie-kind component. The stored spans already skip 50 (26-49 → 51-74). | Sean 2026-08-26 · https://anilist.co/anime/21403, scripts/ingest/research/batch18/verify/sword-art-online.md |  |
 | `T26` | [{"episodes":[50],"kind":"adopted","basis":"author","note":"Ordinal Scale (2017-02-18 movie, AFL #50, AniList 21403): Kawahara Reki wrote story + screenplay … | Batch 18 wave 3 (2026-08-26), verified R24, Sean ruled: canon + adopted{author}. | Sean 2026-08-26 · scripts/ingest/research/batch18/out/sword-art-online.json, scripts/ingest/research/batch18/verify/sword-art-online.md, https://sao-movie.net/staffcast/ |  |
 | `T29` | {"50":"movie"} | Row 50 is the Ordinal Scale MOVIE (2017-02-18; AFL #50; AniList 21403 MOVIE), not Extra Edition — batch 18 wave 3, verified R24. No component covers it (structure task: kind: movie component + N7). | Sean 2026-08-26 · scripts/ingest/research/batch18/verify/sword-art-online.md |  |
 | `T6` | {"50":"canon"} | Batch 18 wave 3 (2026-08-26), verified R24, Sean ruled: row 50 IS the Ordinal Scale MOVIE (2017-02-18; AFL #50; AniList 21403), not Extra Edition. Kawahara wrote story + screenplay (official site 脚本 川原礫・伊藤智彦; ja-WP 川原書き下ろしの完全オリジナル作) and two OS-continuity prose stories (Hopeful Chant, Cordial Chords) → canon + adopted{author} by AUTHORSHIP (not side_source — it adapts no book; 'incorporated into LN canon' is uncited, ja-WP 原作未収録). STRUCTURE (separate): no component — N7 ruling + a kind: movie component; do not renumber. | Sean 2026-08-26 · scripts/ingest/research/batch18/out/sword-art-online.json, scripts/ingest/research/batch18/verify/sword-art-online.md, https://sao-movie.net/staffcast/ |  |

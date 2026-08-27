@@ -2366,7 +2366,7 @@ A numbered non-season entry the community counts inside the run (an OVA, special
 
 *Why:* Batch 19 E4 (2026-08-26): 32 episode rows in 20 series sat outside every component — numbered OVAs / specials / movies with no structure row (kenshin 95-100, SAO 50, angel-beats 14-16, bebop 27, clannad 24, after-story 25, kamisama 30, the episode-0 specials) and stale spans (outlaw-star's 24-of-26, fate/UBW's prologue counted as 1, durarara and heavens-lost-property one row low from a numbered special on). Formats derive from component kinds (T29), so every one of these rows was also format_missing. Fifteen rulings landed; five forks stayed listed for Sean (black-cat 24's date, dxd's row 0 vs its order-only ruling, 5D's 155, fist-of-the-blue-sky 23-26, conan's airing lag).
 
-- ruled session 2026-08-26 (scripts/ingest/research/batch19/PLAN.md E4; changelog §12.68)
+- ruled Sean 2026-08-26 (scripts/ingest/research/batch19/PLAN.md E4; changelog §12.68 (Sean signed the 15 the same day: "components now follow the rows; the rows were not renumbered"; forks: DxD row 0 dropped under N11, the rest not placed))
 - layer **writer**
 - enforced: [lib/rulings/structure.ts#RULED_STRUCTURE](../scripts/ingest/lib/rulings/structure.ts) · [lib/chain.ts#planComponents](../scripts/ingest/lib/chain.ts) · [lib/chain.ts#writeComponents](../scripts/ingest/lib/chain.ts) · [heal-structure.ts#main](../scripts/ingest/heal-structure.ts) · [audit-ui-truth.ts#RULED_EXTRA_KEYS](../scripts/ingest/audit-ui-truth.ts)
 - audit: `ruling_violation`, `episode_without_component`, `special_numbered_unreviewed`
