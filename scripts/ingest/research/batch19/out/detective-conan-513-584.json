@@ -1,0 +1,164 @@
+{
+  "series_id": "detective-conan",
+  "summary": "Two batch-17 rows re-cut under Sean's STRICT A4 line (2026-08-27). The decisive new source is ConanWiki.org (the German Detektiv Conan wiki) via the Wayback Machine — its per-CHAPTER pages carry full file-by-file plot summaries, so for the first time in this series the manga's internal file boundaries can be laid against an episode's own content instead of against a case block. Result: the two rows go opposite ways. Ep 513 (殺意はコーヒーの香り 前編, aired 2008-09-01, NOT 08-18) ends mid-file 629 不可能犯罪 — Conan showing the coffee stains do not line up, the chair having been moved, the room sealed, and no explanation yet — so file 630 苦い真実 (the whole resolution) plays only in ep 514: END 630 → 629. Ep 584 (白鳥警部の失恋) by contrast is CONFIRMED at 708: its closing block — the Detective Boys stopping Shiratori after the rejection, the evening phone call from the fake policeman, Kobayashi walking to the music room and the attacker coming up behind her — is the opening of file 708 桜、満開, not the tail of 707 (707 ends on Kobayashi hurrying off and the hooded figure watching from the alley). Ep 584's START is wrong though: ep 583 covers 705-706 complete (both end on the same beat, Ayumi and Ai finding Kobayashi collapsed), and 584 opens by animating 706 material 583 skipped (the victim's true sex and the three suspects' motives — the pawned ring, the 300-yen plate sold for 500,000, the 5-million-yen debt), so START 705 → 706. One companion anchor is offered for ep 514 (630 [629]) on the wave-2 ep-525 precedent, so the case's last file is a per-episode value rather than a convention.",
+  "anchors": [
+    {
+      "episode": 513,
+      "end_chapter": 629,
+      "start_chapter": 628,
+      "chapters_adapted": "628-629 (629 straddled with ep 514)",
+      "volume": 60,
+      "confidence": "high",
+      "note": "STRICT A4: the furthest file whose pages play in ep 513 is 629 不可能犯罪. The episode runs from the first page of 628 殺意のコーヒー (Somei and Maiko at the Mouri office, the Yoko Okino hook, Nakame's kickback call) to the middle of 629: police arrive, Conan points at the coffee stains, accuses Somei of rearranging the scene, then sees the floor stains do not match the chair legs — someone sat there and moved it, yet the chain was on the door — 'Conan selbst kann sich diese Tat bisher noch nicht erklären'. ConanWiki's chapter-629 page carries exactly that block; its chapter-630 page (苦い真実) starts at Megure and Takagi re-running the case, the two cake slices, the coffee in the plant pot and the missing fork — all of which is ep 514's ytv synopsis. DCW independently summarises ep 513 as ending 'With no way the culprit would've escaped, Conan wonders if this is an impossible crime' (= File 629's title) and its case page's Part 1 section stops at the police suspecting Somei of tampering. A10: START 628 unchanged, the episode opens on 628's first page. Volume 60 = 620-630 (en-WP, DCW).",
+      "sources": [
+        "https://web.archive.org/web/20230419012442/https://conanwiki.org/wiki/Episode_513",
+        "https://web.archive.org/web/20260106055619/https://conanwiki.org/wiki/Kapitel_628",
+        "https://web.archive.org/web/20260109070912/https://conanwiki.org/wiki/Kapitel_629",
+        "https://web.archive.org/web/20260311080311/https://conanwiki.org/wiki/Kapitel_630",
+        "https://www.ytv.co.jp/conan/archive/k20080901.html",
+        "https://www.ytv.co.jp/conan/archive/k20080908.html",
+        "https://www.detectiveconanworld.com/wiki/Season_13",
+        "https://www.detectiveconanworld.com/wiki/Coffee_Aroma_with_Murderous_Intention",
+        "https://www.detectiveconanworld.com/wiki/Volume_60",
+        "https://en.wikipedia.org/wiki/List_of_Case_Closed_volumes_(41%E2%80%9360)"
+      ]
+    },
+    {
+      "episode": 514,
+      "end_chapter": 630,
+      "start_chapter": 629,
+      "chapters_adapted": "629-630 (629 straddled with ep 513)",
+      "volume": 60,
+      "confidence": "high",
+      "note": "COMPANION anchor, not in the row list — offered on the wave-2 ep-525 precedent so the case's last file is a per-episode value rather than the case-block convention. STRICT A4: ep 514 opens on the second half of 629 (Megure has the flat searched, Takagi checks Somei's alibi with the production company and then the pharmacy clerk, who mentions the two calls) and closes on 630 苦い真実 (the two cake slices, the coffee-smelling plant and pen cup, the missing fork, Somei's false confession, the sleeping-Kogoro solution and Maiko's suicide). ConanWiki's chapter-629 page ends exactly where ep 514's first act ends; its chapter-630 page is ep 514's second act; ytv k20080908 and DCW's Part 2 section agree beat for beat. A10: START 629, a substantial leading partial of the preceding file, not a recap sliver.",
+      "sources": [
+        "https://web.archive.org/web/20230419033324/https://conanwiki.org/wiki/Episode_514",
+        "https://web.archive.org/web/20260109070912/https://conanwiki.org/wiki/Kapitel_629",
+        "https://web.archive.org/web/20260311080311/https://conanwiki.org/wiki/Kapitel_630",
+        "https://www.ytv.co.jp/conan/archive/k20080908.html",
+        "https://www.detectiveconanworld.com/wiki/Coffee_Aroma_with_Murderous_Intention",
+        "https://www.detectiveconanworld.com/wiki/Volume_60"
+      ]
+    },
+    {
+      "episode": 584,
+      "end_chapter": 708,
+      "start_chapter": 706,
+      "chapters_adapted": "706-708 (706 straddled with ep 583; 708 straddled with ep 585)",
+      "volume": 68,
+      "confidence": "high",
+      "note": "STRICT A4 CONFIRMS the stored END: file 708 桜、満開 does play in ep 584. File 707 桜の少女は？ ends on Kobayashi hurrying away after failing to remember the bookshop and a figure in a cap and hooded jacket watching from a side alley (ConanWiki ch 707, last paragraph); file 708 OPENS with Kobayashi telling Shiratori he must be mistaking her for Sato, the Detective Boys stopping him, Conan following the stranger, and then the evening phone call summoning 'Kobayashi' to the music room and the attack. Ep 584's own last block is exactly that: the Detective Boys hold Shiratori back, then that evening Kobayashi, working late, is phoned by a man claiming to be a policeman who says he has found the 0-9 truck and asks to meet in the music room; she goes, and 'jemand Fremdes' creeps up behind her and attacks (ConanWiki ep 584; ytv k20100821 ends on the same walk; DCW's ep-584 summary ends '…when a presence behind her shocks her'). A10 moves the START: ep 583 covers 705-706 COMPLETE (ConanWiki's ch-706 page and its ep-583 page end on the identical beat — Ayumi and Ai finding Kobayashi collapsed by the toilet), and ep 584 then animates 706 pages ep 583 skipped — the victim Akira Sumida being a woman and the three suspects' motives (Kagitani's pawned keepsake ring, Takimoto's 300-yen plate sold as a 500,000-yen antique, Kodama's 5-million-yen debt), which ConanWiki places in ch 706 as Shiratori's explanation to Conan and which ytv k20100821 gives its whole opening paragraph. So START 706, not 705 (705 is the fireworks and the murder — ep 583's alone). Volume = the END file's volume: 708 opens vol 68 (en-WP, DCW Volume 68 = 708-718).",
+      "sources": [
+        "https://web.archive.org/web/20230418093210/https://conanwiki.org/wiki/Episode_584",
+        "https://web.archive.org/web/20230419013536/https://conanwiki.org/wiki/Episode_583",
+        "https://web.archive.org/web/20260108104613/https://conanwiki.org/wiki/Kapitel_706",
+        "https://web.archive.org/web/20260103014851/https://conanwiki.org/wiki/Kapitel_707",
+        "https://web.archive.org/web/20251230162129/https://conanwiki.org/wiki/Kapitel_708",
+        "https://www.ytv.co.jp/conan/archive/k20100814.html",
+        "https://www.ytv.co.jp/conan/archive/k20100821.html",
+        "https://www.ytv.co.jp/conan/archive/k20100828.html",
+        "https://www.detectiveconanworld.com/wiki/Season_15",
+        "https://www.detectiveconanworld.com/wiki/Kobayashi-sensei%27s_Love",
+        "https://www.detectiveconanworld.com/wiki/Volume_67",
+        "https://www.detectiveconanworld.com/wiki/Volume_68",
+        "https://en.wikipedia.org/wiki/List_of_Case_Closed_volumes_(61%E2%80%9380)"
+      ]
+    }
+  ],
+  "continue_points": [],
+  "anchor_hostile": [],
+  "annotations": [
+    {
+      "episodes": [513, 514],
+      "kind": "partial",
+      "chapters": "629",
+      "note": "File 629 不可能犯罪 straddles the 513/514 boundary: ep 513 stops after Conan shows the floor stains do not match the chair legs and calls the crime impossible; ep 514 resumes inside the same file with Megure ordering the flat searched and Takagi checking Somei's alibi. Listed in chapters_adapted on both rows; only ep 513's coverage is first-time for the 628-629 stretch."
+    },
+    {
+      "episodes": [583, 584],
+      "kind": "partial",
+      "chapters": "706",
+      "note": "File 706 小林先生の誤解 straddles the 583/584 boundary in the OTHER direction from the stored data: ep 583 runs to the end of 706 (Kobayashi overhears the officers, Ayumi and Ai find her collapsed), and ep 584 re-opens on that beat and then animates 706 pages ep 583 skipped — the victim's true sex and the three suspects' motives, restaged as a Megure interrogation. That first-time 706 coverage is why ep 584's START is 706, not 707 and not the case-block 705."
+    },
+    {
+      "episodes": [584, 585],
+      "kind": "partial",
+      "chapters": "708",
+      "note": "File 708 桜、満開 straddles the 584/585 boundary: ep 584 carries its opening (the Detective Boys stopping Shiratori, the fake-policeman phone call, the walk to the music room and the attack from behind), ep 585 re-opens on the walk and plays the ambush, the reveal that it is Sato in disguise, the solution and Shiratori's confession. Confirms — rather than contradicts — the batch-19 ep-585 anchor 712 [708]."
+    }
+  ],
+  "repairs": [
+    {
+      "episode": 513,
+      "field": "end_chapter",
+      "old": 630,
+      "new": 629,
+      "why": "STRICT A4 (Sean 2026-08-27). Batch 17 wrote the CASE's last file onto the first part. File 630 苦い真実 is the entire resolution — the two cake slices, the coffee-smelling plant pot and pen cup, the missing fork, Somei's false confession, the sleeping-Kogoro solution and Maiko's suicide — and none of it plays in ep 513, whose ytv synopsis stops at Conan deducing murder over the coffee cup and whose full plot (ConanWiki) ends on the unexplained impossible crime, i.e. mid-file 629. DCW's own ep-513 line ends at the same place ('Conan wonders if this is an impossible crime' = File 629's title). Same shape as the ruled 524 → 636 / 525 → 637.",
+      "sources": [
+        "https://web.archive.org/web/20230419012442/https://conanwiki.org/wiki/Episode_513",
+        "https://web.archive.org/web/20260311080311/https://conanwiki.org/wiki/Kapitel_630",
+        "https://www.ytv.co.jp/conan/archive/k20080901.html",
+        "https://www.detectiveconanworld.com/wiki/Season_13"
+      ]
+    },
+    {
+      "episode": 513,
+      "field": "chapters_adapted",
+      "old": "628-630",
+      "new": "628-629 (629 straddled with ep 514)",
+      "why": "Follows the END repair; 630 is ep 514's alone. START 628 and volume 60 are unchanged.",
+      "sources": [
+        "https://web.archive.org/web/20260106055619/https://conanwiki.org/wiki/Kapitel_628",
+        "https://web.archive.org/web/20260109070912/https://conanwiki.org/wiki/Kapitel_629"
+      ]
+    },
+    {
+      "episode": 584,
+      "field": "start_chapter",
+      "old": 705,
+      "new": 706,
+      "why": "A10 per-episode START. File 705 小林先生の恋 (the police-HQ banter, Shiratori's warning call, the fireworks, the murder Kobayashi witnesses) is entirely ep 583's; ep 584 opens on 706 material — the victim Akira Sumida turning out to be a woman and the three suspects' motives — which ep 583 did not animate. Batch 17's 705 was the case-block start, the same convention Sean declined for 524.",
+      "sources": [
+        "https://web.archive.org/web/20260107121207/https://conanwiki.org/wiki/Kapitel_705",
+        "https://web.archive.org/web/20260108104613/https://conanwiki.org/wiki/Kapitel_706",
+        "https://web.archive.org/web/20230419013536/https://conanwiki.org/wiki/Episode_583",
+        "https://www.ytv.co.jp/conan/archive/k20100814.html",
+        "https://www.ytv.co.jp/conan/archive/k20100821.html"
+      ]
+    },
+    {
+      "episode": 584,
+      "field": "chapters_adapted",
+      "old": "705-708",
+      "new": "706-708 (706 straddled with ep 583; 708 straddled with ep 585)",
+      "why": "Follows the START repair; the END 708 is unchanged and confirmed.",
+      "sources": [
+        "https://web.archive.org/web/20230418093210/https://conanwiki.org/wiki/Episode_584",
+        "https://www.ytv.co.jp/conan/archive/k20100821.html"
+      ]
+    },
+    {
+      "episode": 584,
+      "field": "volume",
+      "old": 67,
+      "new": 68,
+      "why": "Volume on an anchor row is the END chapter's volume everywhere else in this series' lattice (ep 510 END 638 → 61, ep 524 END 636 → 61, ep 585 END 712 → 68, ep 513 END 629 → 60). File 708 opens volume 68 (en-WP vol 68 = 708-718; DCW Volume 68 'chapters = 708-718' and its File 708 section). Batch 17's own verdict text already said 68 — the stored 67 looks like a case-block/START-volume artefact. Raise only if the stored value really is 67.",
+      "sources": [
+        "https://www.detectiveconanworld.com/wiki/Volume_68",
+        "https://en.wikipedia.org/wiki/List_of_Case_Closed_volumes_(61%E2%80%9380)"
+      ]
+    }
+  ],
+  "type_corrections": [],
+  "structure": {
+    "notes": "NEW SOURCE for this series, and the best per-episode splitter found so far: ConanWiki.org (the German Detektiv Conan wiki) publishes a full plot summary PER MANGA CHAPTER (Kapitel NNN) as well as per episode, in the same global file-number space as DCW (Kapitel 628 = 殺意のコーヒー, Band 60; Kapitel 708 = 桜満開, Band 68). Laying the chapter pages against the episode pages resolves multi-part boundaries that DCW and ja-WP only give as case blocks. Caveats: (1) the live site is behind Cloudflare (403 to curl and to WebFetch) — reachable only through web.archive.org; (2) its 'Im Anime' field on a chapter page and its 'Im Manga' field on an episode page are BOTH case-level, so only the prose is per-episode; (3) since 2025 the wiki renumbered its Episode_NNN pages to GERMAN broadcast numbers (the 2026 snapshot of Episode_513 is Japanese ep 473) — use pre-2025 snapshots, or verify the 'Japan Episodennummer' field, before keying anything. Air dates re-verified against three sources: ep 513 = 2008-09-01 (ja-WP 9月1日; DCW SeasonItem|513|560|…|September 1, 2008; ytv page header 2008年9月1日) — the task's tentative 2008-08-18 is wrong and 08-11 belongs to ep 512; ep 584 = 2010-08-21, ep 583 = 2010-08-14, ep 585 = 2010-08-28. Our rows key to DCW's JAPANESE 'episode' column (513 = int 560; 584 = int 635), as batch 19 established. Volume boundaries re-checked: vol 60 = 620-630, vol 67 = 697-707, vol 68 = 708-718. Per-episode file split of the two cases: 182 (628-630, eps 513-514) = 628 + first half of 629 / second half of 629 + 630; 206 (705-708, eps 583-585) = 705-706 / 706-tail + 707 + 708-opening / 708.",
+    "order_only": []
+  },
+  "flags_for_sean": [
+    "ep 584's END is NOT a case-block artefact — strict A4 keeps 708. The episode really does animate the opening of file 708 (the Detective Boys stopping Shiratori, the fake-policeman phone call, the music-room walk and the attack). Only its START and volume need repairing. Batch 19's ep-585 anchor 712 [708] is unaffected: 708 legitimately straddles 584/585.",
+    "ep 514 is a COMPANION anchor (630 [629]) beyond the row list, on the ep-525 precedent from wave 2 — take it or drop it, but if it is dropped, file 630 is carried by no anchored row once ep 513 moves to 629.",
+    "ep 513's stored continue point (613, parity, A18 reorder regime) does NOT change: 613 sits far below 628 and the next unanimated block is still 613-618 (eps 516-517). Only the note's 'skip on arrival' list needs one character: 628-630 becomes 628-629, since 630 is not animated until ep 514 a week later. Flagging rather than emitting a continue repair because I could not read the stored note text.",
+    "ep 584 START 706 vs 707 is the one soft edge. It rests on ep 584 animating 706 pages ep 583 skipped (victim's sex + the three motives, ytv k20100821's whole first paragraph, matching ConanWiki ch 706's 'Shiratori explains the motives' block). If Sean reads that opening block as a recap/restaging of ground ep 583 already covered, the A10 sliver clause applies and START becomes 707. The END is unaffected either way.",
+    "ep 584 volume: the task says the stored row is vol 67 but batch 17's own verdict JSON says 68. If the DB really holds 67 this is a real repair; if it holds 68, ignore that repair entry."
+  ]
+}

@@ -623,7 +623,13 @@
    APPLIED on 2026-08-24 — their HELD texts retired; the C7 gap (the parity
    healer overwrites curated continues) captured as an /add-rule candidate
    (system-evolution). Conan 513/584 strict-A4: a narrow research check
-   (ytv / DCW / ja-WP) runs; applied on return. Two cards remain for Sean
+   (ytv / DCW / ja-WP) returned and is APPLIED: 513 → 629 [628] (file 630 is
+   entirely ep 514's), 514 → 630 [629] as the companion anchor (the ep-525
+   precedent), 584's END 708 CONFIRMED (file 708's opening plays in 584)
+   with START 705 → 706; three straddle annotations (629 / 706 / 708); 513's
+   613 continue stands (C1 guard). New source for the series: ConanWiki.org's
+   per-CHAPTER plot summaries (German; Cloudflare-403 live — pre-2025
+   Wayback snapshots). Two cards remain for Sean
    (WAVE2-RECOVERY §CARDS): rosario 12/13 (the stored values already equal
    the held repairs — confirm and fix the strings) and iruma 63 (145 [142]
    rearranged under the pages line, or the 142 ladder). Census: ruling
