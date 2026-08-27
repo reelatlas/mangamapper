@@ -98,6 +98,8 @@ Read both, fully:
 
 ## Traps that have cost real time
 
+- **MangaBaka is peek-only, never a citation.** Its `anime.start/end` field is MangaUpdates' coverage prose copied verbatim (the same MU "EP N" pins G56 treats as filler-row noise); its search ranks side works over the main series; its relations are untyped. Cite AniList / MU / the wikis directly instead.
+
 - **A season typed from one "the ending is anime-original" claim** can be
   wrong for most of the season (Ajin S2: 14-22 adapt ch 23-42; only 23-26
   are the studio ending). Type the A-7 class ROW BY ROW.

@@ -121,6 +121,21 @@ a design pass — the same class as franchise-above-series IA. Relations
 (annotations) are enough until then. The UI already keeps the word "arc"
 free for it.
 
+**MangaBaka (Sean + Cursor, 2026-08-26 — PEEK ONLY, never a source; do not
+ingest).** A library/metadata aggregator over AniList / MAL / MU (CC BY-NC-SA,
+schema unstable). Its `anime.start/end` is MU's coverage prose verbatim
+(Claymore: "Vol 11, Chap 59 (Original Ending EP 24-26)" — ch 59 right, the
+EP 24-26 pin is exactly the filler pin G56 retired); its search ranks
+bangai-hen / doujin over the main series; its relations are untyped dumps
+(hundreds of parody rows, chronology unknown). Not used for: episode types,
+ep↔ch maps, arcs, continue-read, totals or ids (AniList + MangaDex already
+cover those). Four IDEAS to weigh at the IA / search pass, not data: (1)
+language + official/native title traits for `search_text`; (2) a
+`merged_with` / `state: active` identity marker (we have dispositions —
+compare, don't add); (3) third-party fields nested under `source.*` (our
+staging-vs-canonical split already says this); (4) never ingest an untyped
+relation dump — our `series_relations` keep AniList's typed kinds.
+
 ## Type taxonomy — target state (Sean, 2026-08-25)
 
 `episodes.type` is a FILTER dimension. Verified current DB state:
