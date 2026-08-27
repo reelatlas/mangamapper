@@ -297,7 +297,7 @@
 - `P32` Completeness is an outcome: walks prove processed = total — aka `completeness as an outcome`, `completeness sidecar`, `T2.3`, `healer-pagination trap`
 - `P33` System census checks the reference structure mechanically — aka `system census`, `T2.7`, `three rosters`, `T2.4`
 - `P34` Historical apply scripts are kept as records, non-runnable — aka `history/`, `historical apply scripts non-runnable`, `history non-runnable`, `T2.5`, `D-5`
-- `P36` Cross-model check the frames, not just the data *(planned)* — aka `cross-model check the frames`, `frame check after T4.0`, `principle 8`
+- `P36` Cross-model check the frames, not just the data — aka `cross-model check the frames`, `frame check after T4.0`, `principle 8`
 - `P37` Episode-level display reads only the hydrated series — aka `metadata contract`, `card-hydration rule`, `hydration contract`, `hydrated series only`
 
 ## A — Anchors & position
@@ -3914,9 +3914,9 @@ One-shot apply scripts move to history/ with their reasoning extracted first; th
 - aliases: history/, historical apply scripts non-runnable, history non-runnable, T2.5, D-5
 - see: P24, P33, P16
 
-### P36 · Cross-model check the frames, not just the data *(planned)*
+### P36 · Cross-model check the frames, not just the data
 
-The spec-writer cannot see their own bad frame: a pass by a different model over the plan and the rule framing (the one that produced restructure-plan v2) is repeated after the T4.0 glossary session, before the taxonomy build. Data verification (R23) covers verdicts; this covers the spec that pointed the agents.
+The spec-writer cannot see their own bad frame: a pass by a different model over the plan and the rule framing (the one that produced restructure-plan v2) is repeated after the T4.0 glossary session — and again after the build, against what got built. PERFORMED 2026-08-26 (Sean + Cursor, live in the closing thread): the frame held — glossary §1 matches the build, the success test passes (no 'anime only' type; Madoka is not Black Clover 130-157), and T28 / A44 / the incorporation basis are growth on the frame, not a second system. Data verification (R23) covers verdicts; this covers the spec that pointed the agents.
 
 *Why:* The residual blind spot the session cannot cover itself is a subtly wrong SPEC — agents pointed at the wrong chapter space, a mis-scoped target (CLAUDE.md "How steps 3–4 run in practice").
 
@@ -4908,6 +4908,6 @@ Any component that renders episode-level data consumes the HYDRATED series (getB
 
 ## Scoreboard
 
-- rules: 266 (live 249, planned 10, superseded 7)
+- rules: 266 (live 250, planned 9, superseded 7)
 - live data rules with no audit class (the automation backlog): 86
 - by layer: writer 137 · display 23 · both 22 · process 84

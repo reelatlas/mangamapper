@@ -1,6 +1,6 @@
 # Restructure phase — the plan (v2, agreed 2026-08-25)
 
-Status: **T0–T2 done; T3.1 (skill + both exercises: G53, G54), T3.3, T3.4 done. T4.0 RULED 2026-08-26 → docs/restructure/T4-GLOSSARY.md is the ruled record and the build order; A-11 EXECUTED 2026-08-26 as G54; T4 build COMPLETE and consolidated deep 2026-08-26 (T4.1-T4.5 + batch 18: T25-T29, A44, T28; §12.62). Next: the P36 frame check, then the phase closes.** v1 was drafted from a disk survey, cross-checked
+Status: **RESTRUCTURE PHASE CLOSED 2026-08-26 — P36 frame check passed (Sean + Cursor: the frame holds). T0–T4 + batch 18 done; ledger 267 rules; census all rule classes 0. Next phase = Sean's three calls: permanence add-rule, batch 19, the UI chip pass.** v1 was drafted from a disk survey, cross-checked
 by a second model (Cursor/Grok), re-checked against the tree, and folded.
 This file is the phase's tracked board: every piece has an id, a track, a
 dependency and a status; the board is updated at every save point. When the

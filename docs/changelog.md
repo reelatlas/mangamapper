@@ -607,6 +607,21 @@
    durable guard. Lesson for the floor rule: a >2 overshoot sourced from a
    SINGLE chart row with no corroborating content anywhere is a typo
    candidate, not an adoption candidate.
+63. ✅ **RESTRUCTURE PHASE CLOSED — P36 passed (2026-08-26).** The cross-model
+   frame check ran live in the closing thread (Sean + Cursor): glossary §1
+   matches what got built; the success test passes (no "anime only" type;
+   Madoka is not Black Clover 130-157); T28, A44 and the incorporation basis
+   are growth on the frame, not a second system. P36 marked live. Cleanup
+   only: T4-GLOSSARY §7 rewritten as RULED / STILL OPEN (twin-star,
+   claymore, gto and the rest were still listed as open). Nothing new
+   started. The phase's record: T0 inventory → T1 ledger (258 → 267 rules,
+   ids cited everywhere) → T2 typed rulings + rosters + history + system
+   census → T3 skills rewritten, /add-rule proven twice (G53, G54) → T4.0
+   glossary ruled → T4.1-T4.5 built (T25 source registry, T26 annotations,
+   T27 three standings, T29 format, T19 words) with batch 18 in the middle
+   (32 verdicts, 19 verifications, T28, A44, ~8M tokens) → consolidate deep
+   (a fixed point). Next phase is Sean's: permanence (P25) as the first
+   /add-rule, batch 19, the UI chip pass.
 62. ✅ **CONSOLIDATE DEEP — the T4 build sealed (2026-08-26; P21 required it:
    T25-T29, T28, A44 changed enforcement sites catalog-wide).** Step 0:
    system census green. Steps 1-2: every writer through the shared gates

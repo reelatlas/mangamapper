@@ -640,7 +640,7 @@ export const RULES: Rule[] = [
     family: 'P',
     title: 'Cross-model check the frames, not just the data',
     statement:
-      'The spec-writer cannot see their own bad frame: a pass by a different model over the plan and the rule framing (the one that produced restructure-plan v2) is repeated after the T4.0 glossary session, before the taxonomy build. Data verification (R23) covers verdicts; this covers the spec that pointed the agents.',
+      'The spec-writer cannot see their own bad frame: a pass by a different model over the plan and the rule framing (the one that produced restructure-plan v2) is repeated after the T4.0 glossary session — and again after the build, against what got built. PERFORMED 2026-08-26 (Sean + Cursor, live in the closing thread): the frame held — glossary §1 matches the build, the success test passes (no \'anime only\' type; Madoka is not Black Clover 130-157), and T28 / A44 / the incorporation basis are growth on the frame, not a second system. Data verification (R23) covers verdicts; this covers the spec that pointed the agents.',
     why: 'The residual blind spot the session cannot cover itself is a subtly wrong SPEC — agents pointed at the wrong chapter space, a mis-scoped target (CLAUDE.md "How steps 3–4 run in practice").',
     ruledBy: 'Sean',
     ruledOn: '2026-08-25',
@@ -650,7 +650,7 @@ export const RULES: Rule[] = [
       { path: 'CLAUDE.md', symbol: 'Model policy' },
     ],
     layer: 'process',
-    status: 'planned',
+    status: 'live',
     see: ['R23', 'R24', 'P1'],
   },
   {
