@@ -607,6 +607,23 @@
    durable guard. Lesson for the floor rule: a >2 overshoot sourced from a
    SINGLE chart row with no corroborating content anywhere is a typo
    candidate, not an adoption candidate.
+65. ✅ **BATCH 19 E1 — `mixed_fragment_only`, the T28 discrepancy queue
+   (2026-08-26; the parked /add-rule, landed as T28's audit class).** A
+   row typed MIXED before the materiality bar whose only recorded source
+   ties are fragment annotations (graft / partial / loose_parallel) and
+   which carries no anchor — T28 would say filler + annotation. The class
+   LISTS, never flips (P23): rows a T6 entry ruled on or after the bar's
+   date are excluded (Sean judged them under it); anchored mixed rows are
+   excluded (a real position is substantial by definition). Queue today:
+   **17 series / 35 rows** — naruto 38/52-55/99, naruto-shippuden 89/90/213,
+   chrono-crusade 8/14/17/21, bleach 32/46/284, tokyo-mew-mew 19/21/37,
+   heavens-lost-property 18/23/24, eyeshield 39/66, and single rows on
+   zatch-bell 122, saint-seiya 64, trigun 6, ippo 76, rosario 14, fire-force
+   25, dsq 1, ranma 130, sailor-moon 36, black-butler 37. Caveat the class
+   cannot judge: a `partial` written before T28 often means "adapts PART of
+   its chapters" (a substantial share) — those stay mixed; the queue is
+   for Sean's per-row call, not a verdict. No data changed. Nothing else
+   started (E2 next, on Sean's go).
 64. ✅ **P25 PERMANENCE TIERS — built (2026-08-26; the first post-restructure
    /add-rule; Sean's call #1).** The LOCKED ruling map
    (`lib/rulings/permanence.ts`, Sean-signed entries only — none yet),

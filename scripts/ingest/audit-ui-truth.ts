@@ -16,6 +16,7 @@ import { AIR_DATE_OVERRIDES } from './lib/rulings/air-dates';
 import { ANCHOR_SUPPRESSED } from './lib/rulings/anchor-suppressed';
 import { deriveFormat } from './lib/format';
 import { LOCKED } from './lib/rulings/permanence';
+import { ENTRIES as TYPE_RULINGS } from './lib/rulings/episode-types';
 import { deriveSourceKind, seriesHasInstrument, seriesHasSource, SOURCE_TYPE_OVERRIDES } from './lib/rulings/source-kinds';
 import { pickManga } from './lib/resolve';
 import { annotationProblem } from './lib/annotations';
@@ -86,7 +87,7 @@ async function main() {
     rearranged_zone_unanchored: [], rearranged_zone_acknowledged: [],
     title_incomplete: [], airdate_incomplete: [], airdate_regression: [], airdate_withheld: [], asterisk_unreviewed: [],
     fractional_unmodeled: [], annotation_invalid: [], afl_anime_canon_unruled: [], format_missing: [], episode_without_component: [], watch_order_kind_missing: [],
-    permanence_candidate: [], permanence_violation: [],
+    permanence_candidate: [], permanence_violation: [], mixed_fragment_only: [],
     series_without_source_kind: [], no_source: [], no_instrument: [], ok_full: [], ok_no_volume: [], ok_loose: [],
     pending_airing_no_anchor: [], pending_finished_no_totals: [], pending_no_canon: [], pending_other: [],
   };
@@ -680,6 +681,36 @@ async function main() {
     }
   }
 
+  // T28 discrepancy queue (E1, 2026-08-26 — the parked add-rule): a row typed
+  // MIXED before the materiality bar whose only recorded source ties are
+  // fragment annotations (graft / partial / loose_parallel) and which carries
+  // no anchor. The bar says such a row is filler + annotation; this class
+  // LISTS the rows for Sean's reversal — it never flips one (P23). Rows a
+  // T6 entry ruled on or after the bar's date are excluded: Sean already
+  // judged them under it.
+  {
+    const FRAGMENT = new Set(['graft', 'partial', 'loose_parallel']);
+    const ruledUnderBar = new Set<string>();
+    for (const e of TYPE_RULINGS) if (e.ruledOn >= '2026-08-26') for (const n of Object.keys(e.value)) ruledUnderBar.add(`${e.seriesId}#${n}`);
+    const anchored = new Set(anchors.map((a: any) => `${a.series_id}#${a.episode}`));
+    const kindsBy = new Map<string, Set<string>>();
+    for (const a of await selectAll<any>('episode_annotations', 'series_id, episode, kind')) {
+      const k = `${a.series_id}#${a.episode}`;
+      if (!kindsBy.has(k)) kindsBy.set(k, new Set());
+      kindsBy.get(k)!.add(a.kind);
+    }
+    const hitsBy = new Map<string, string[]>();
+    for (const e of episodes) {
+      if (e.type !== 'mixed') continue;
+      const k = `${e.series_id}#${e.number}`;
+      if (anchored.has(k) || ruledUnderBar.has(k)) continue;
+      const kinds = kindsBy.get(k);
+      if (!kinds || ![...kinds].every((x) => FRAGMENT.has(x))) continue;
+      if (!hitsBy.has(e.series_id)) hitsBy.set(e.series_id, []);
+      hitsBy.get(e.series_id)!.push(`${e.number} [${[...kinds].join('+')}]`);
+    }
+    for (const [sid, rows] of hitsBy) classes.mixed_fragment_only.push(`${sid}: ${rows.length} mixed row(s) with only fragment ties and no anchor — ${rows.join(', ')} — T28 would say filler + annotation; Sean confirms the reverse or keeps the call`);
+  }
   // P25 permanence (2026-08-26): the mechanical half of the lock criteria —
   // finished series (source finished too where an instrument exists) whose
   // mapping renders full, carrying at least one research/manual-tier anchor

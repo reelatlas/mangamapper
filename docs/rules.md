@@ -99,7 +99,7 @@
 - `T25` Source is series identity: the SOURCE_KINDS registry — aka `SOURCE_KINDS`, `source kinds registry`, `source-kinds`, `D-9`, `source is identity`, `source is series identity`, `SOURCE_TYPE_OVERRIDES`, `hasInstrument`, `hasSource vs hasInstrument`, `series_without_source_kind`, `studio original`, `fail closed source`, `visual novel source`, `game source`
 - `T26` Overrides are annotations, never a fourth episode type — aka `overrides are annotations`, `adopted annotation`, `adopted`, `retconned`, `side_source`, `adopted basis`, `community canon is not a type`, `no fourth type`, `D-10 annotations`, `annotation_invalid`
 - `T27` Standing is canon / mixed / filler, relative to the source — aka `three standings`, `canon mixed filler only`, `anime-only-canon retired`, `AFL anime_canon mapping`, `aflAnimeCanon`, `afl_anime_canon_unruled`, `standing migration`, `D-10 standing`, `anime only retired`
-- `T28` mixed needs a substantial share: the episode's job decides — aka `materiality bar for mixed`, `episode job test`, `what is this episode's job`, `fragment is an annotation`, `slivers are not mixed`, `Claymore-26 shape`, `mixed threshold`
+- `T28` mixed needs a substantial share: the episode's job decides — aka `mixed_fragment_only`, `T28 discrepancy queue`, `materiality bar for mixed`, `episode job test`, `what is this episode's job`, `fragment is an annotation`, `slivers are not mixed`, `Claymore-26 shape`, `mixed threshold`
 - `T29` The format axis: derived, stored, never a type — aka `format axis`, `episodes.format`, `FORMAT_OVERRIDES`, `heal-format`, `format_missing`, `episode_without_component`, `watch_order_kind_missing`, `D-11`, `tv ova special movie recap`
 
 **N — Numbering, counts & chapter spaces** (31)
@@ -1399,10 +1399,10 @@ An episode is `mixed` only when a SUBSTANTIAL share of its own plot is the sourc
 
 - ruled Sean 2026-08-26 (batch 18 wave 2 ruling; scripts/ingest/research/batch18/PROTOCOL.md (pinned for wave 3))
 - layer **process**
-- enforced: [research/batch18/PROTOCOL.md](../scripts/ingest/research/batch18/PROTOCOL.md) · [research/batch18/curate.ts](../scripts/ingest/research/batch18/curate.ts)
-- **audit: none — automation backlog**
+- enforced: [research/batch18/PROTOCOL.md](../scripts/ingest/research/batch18/PROTOCOL.md) · [research/batch18/curate.ts](../scripts/ingest/research/batch18/curate.ts) · [audit-ui-truth.ts#mixed_fragment_only](../scripts/ingest/audit-ui-truth.ts)
+- audit: `mixed_fragment_only`
 - witnesses: claymore, a-certain-scientific-railgun, soul-eater, dragon-ball-super, fullmetal-alchemist
-- aliases: materiality bar for mixed, episode job test, what is this episode's job, fragment is an annotation, slivers are not mixed, Claymore-26 shape, mixed threshold
+- aliases: mixed_fragment_only, T28 discrepancy queue, materiality bar for mixed, episode job test, what is this episode's job, fragment is an annotation, slivers are not mixed, Claymore-26 shape, mixed threshold
 - see: T7, T8, A10, T26, T27, A43
 
 ### T29 · The format axis: derived, stored, never a type
@@ -4511,6 +4511,7 @@ Any component that renders episode-level data consumes the HYDRATED series (getB
 - missed edge deploy → `P3`
 - mixed = canon AND non-canon → `T2`
 - mixed threshold → `T28`
+- mixed_fragment_only → `T28`
 - Monogatari precedent → `N8`
 - monotonic boundaries → `V1`
 - monotonic starts → `V1`
@@ -4809,6 +4810,7 @@ Any component that renders episode-level data consumes the HYDRATED series (getB
 - T2.5 → `P34`
 - T2.6 → `P4`
 - T2.7 → `P33`
+- T28 discrepancy queue → `T28`
 - T3.1 → `P31`
 - T3.3 → `P22`
 - Table/QuickList integrity → `G6`

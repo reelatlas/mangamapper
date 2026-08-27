@@ -603,7 +603,7 @@ export const RULES: Rule[] = [
   },
   {
     id: 'T28',
-    aliases: ['materiality bar for mixed', 'episode job test', "what is this episode's job", 'fragment is an annotation', 'slivers are not mixed', 'Claymore-26 shape', 'mixed threshold'],
+    aliases: ['mixed_fragment_only', 'T28 discrepancy queue', 'materiality bar for mixed', 'episode job test', "what is this episode's job", 'fragment is an annotation', 'slivers are not mixed', 'Claymore-26 shape', 'mixed threshold'],
     family: 'T',
     title: "mixed needs a substantial share: the episode's job decides",
     statement:
@@ -616,9 +616,10 @@ export const RULES: Rule[] = [
     enforcement: [
       { path: 'scripts/ingest/research/batch18/PROTOCOL.md' },
       { path: 'scripts/ingest/research/batch18/curate.ts' },
+      { path: 'scripts/ingest/audit-ui-truth.ts', symbol: 'mixed_fragment_only' },
     ],
     layer: 'process',
-    auditClass: [],
+    auditClass: ['mixed_fragment_only'],
     witnesses: ['claymore', 'a-certain-scientific-railgun', 'soul-eater', 'dragon-ball-super', 'fullmetal-alchemist'],
     status: 'live',
     see: ['T7', 'T8', 'A10', 'T26', 'T27', 'A43'],
