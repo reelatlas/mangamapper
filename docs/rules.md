@@ -26,7 +26,7 @@
 - `A7` Proven zone-level-only knowledge is acknowledged, not open — aka `zone-acknowledged`, `zone-acknowledged marker`, `acknowledged approximation`
 - `A8` END = last mainline chapter in running order (honest record) — aka `END = running order`, `honest record`, `anchor = honest record`, `finale anchors to what it adapts`, `END definition`
 - `A9` An END below its START is lifted to the max adapted chapter — aka `running-order END normalization`, `running-order END convention`, `Dagashi S1 normalization`
-- `A10` Sliver rule: START = first chapter animated — aka `sliver rule`, `START = first chapter animated`, `A1 + sliver rule`
+- `A10` Sliver rule: START = first chapter animated — aka `sliver rule`, `START = first chapter animated`, `A1 + sliver rule`, `A-6`, `E3`, `batch-19 E3`, `start_sliver_mismatch`, `start_without_span`, `seeded starts`
 - `A11` Majority rule for START (superseded by the sliver rule) *(superseded)* — aka `majority rule`, `START majority rule`, `first FULL chapter rule`
 - `A12` Relocated openers are never the START — aka `AoT ep-87 rule`, `AoT-87 rule`, `relocated openers`, `relocated openers are never the START`
 - `A13` An episode row displays the FIRST chapter it animates — aka `first-chapter ruling`, `first-chapter display`, `episode display = FIRST chapter animated`, `display shows START`, `display anchors at starts`, `display/continue split`
@@ -437,10 +437,10 @@ START (chapter_anchors.start_chapter) is the first chapter the episode animates.
 
 - ruled Sean 2026-08-23 (data-pipeline §10 "Sliver rule (Sean 2026-08-23 s2, MHA ep 170)")
 - layer **writer**
-- enforced: [history/apply-research-batch-14.ts#main](../scripts/ingest/history/apply-research-batch-14.ts) · [history/apply-research-batch-17.ts#main](../scripts/ingest/history/apply-research-batch-17.ts) · [research/batch17/PROTOCOL.md](../scripts/ingest/research/batch17/PROTOCOL.md)
-- **audit: none — automation backlog**
-- witnesses: my-hero-academia, hajime-no-ippo-the-fighting
-- aliases: sliver rule, START = first chapter animated, A1 + sliver rule
+- enforced: [lib/sliver.ts#sliverStart](../scripts/ingest/lib/sliver.ts) · [research/batch19/apply-e3.ts#SEEDED_SPANS](../scripts/ingest/research/batch19/apply-e3.ts) · [audit-ui-truth.ts#start_sliver_mismatch](../scripts/ingest/audit-ui-truth.ts) · [history/apply-research-batch-14.ts#main](../scripts/ingest/history/apply-research-batch-14.ts) · [history/apply-research-batch-17.ts#main](../scripts/ingest/history/apply-research-batch-17.ts) · [research/batch17/PROTOCOL.md](../scripts/ingest/research/batch17/PROTOCOL.md)
+- audit: `start_sliver_mismatch`, `start_without_span`
+- witnesses: my-hero-academia, hajime-no-ippo-the-fighting, we-never-learn-bokuben, oshi-no-ko, attack-on-titan
+- aliases: sliver rule, START = first chapter animated, A1 + sliver rule, A-6, E3, batch-19 E3, start_sliver_mismatch, start_without_span, seeded starts
 - see: A11, A12, A13, A2
 - supersedes: A11
 
@@ -3973,6 +3973,7 @@ Any component that renders episode-level data consumes the HYDRATED series (getB
 - A-11 → `G54`
 - A-4 → `R20`
 - A-5 → `T8`
+- A-6 → `A10`
 - A-8 → `G4`
 - A-9 → `G52`
 - A1 / D1 episode-type refusal → `G36`
@@ -4108,6 +4109,7 @@ Any component that renders episode-level data consumes the HYDRATED series (getB
 - backwards-jumping successor → `A17`
 - base-type padding → `T17`
 - batch-19 E2 → `G55`
+- batch-19 E3 → `A10`
 - Berserk Memorial class → `I23`
 - best-available latest_known → `N27`
 - bestLatestKnown → `N27`
@@ -4290,6 +4292,7 @@ Any component that renders episode-level data consumes the HYDRATED series (getB
 - DSQ class → `T11`
 - duplicate rule → `I12`
 - E2 → `G55`
+- E3 → `A10`
 - early D4 signal → `R28`
 - early-stop → `I22`
 - edge hash → `P4`
@@ -4752,6 +4755,7 @@ Any component that renders episode-level data consumes the HYDRATED series (getB
 - section header envelope → `A36`
 - sections never arcs → `T19`
 - seed is a fact only → `I10`
+- seeded starts → `A10`
 - series window → `G55`
 - series_external_ids → `I2`
 - series_relations vocabulary → `I17`
@@ -4811,6 +4815,8 @@ Any component that renders episode-level data consumes the HYDRATED series (getB
 - START = first chapter animated → `A10`
 - START majority rule → `A11`
 - start sanity → `A21`
+- start_sliver_mismatch → `A10`
+- start_without_span → `A10`
 - start-sanity guard → `A21`
 - stitch candidacy → `I24`
 - stitch finalize gate → `I25`
@@ -4940,5 +4946,5 @@ Any component that renders episode-level data consumes the HYDRATED series (getB
 ## Scoreboard
 
 - rules: 267 (live 252, planned 8, superseded 7)
-- live data rules with no audit class (the automation backlog): 86
+- live data rules with no audit class (the automation backlog): 85
 - by layer: writer 138 · display 23 · both 23 · process 83

@@ -607,6 +607,38 @@
    durable guard. Lesson for the floor rule: a >2 overshoot sourced from a
    SINGLE chart row with no corroborating content anywhere is a typo
    candidate, not an adoption candidate.
+67. ✅ **BATCH 19 E3 — drift item A-6: the sliver rule lifted into lib,
+   the seeded starts made provable, deltas listed for Sean (2026-08-26).**
+   A10 (START = first chapter animated; a leading partial of the preceding
+   chapter counts unless ≤5 pages or sliver wording) lived only as
+   duplicated code in the batch-14 and batch-17 apply scripts; the 27
+   batch-8/9 starts seeded by `history/apply-start-chapters.ts` under the
+   earlier MAJORITY rule were never re-normalized — and could not be: their
+   rows carry NO `chapters_adapted`, and the batch-8/9 verdict files never
+   reached git (the seeding script's inline comments are the only span
+   record). Built: **lib** `lib/sliver.ts#sliverStart` (the batch-14/17
+   logic verbatim, 10 tests: MHA 170, AoT 87's relocated opener, bokuben's
+   wordy "2nd half", the 6-page bar, unquantified "tail" = scraps);
+   **two listing classes** over every MANUAL anchor — `start_sliver_mismatch`
+   (stored START ≠ what the rule derives from the row's own record) and
+   `start_without_span` (a START with no record cannot be proven); **the
+   sign sheet** `research/batch19/apply-e3.ts` (dry-run by default;
+   `--apply` after Sean signs) — (1) START moves derived at run time, (2)
+   the 27 spans transcribed verbatim from the seeding comments as
+   `chapters_adapted` so the rows become provable. **The A-6 answer:** under
+   A10 all 27 seeded starts STAND — 23 open on their own start chapter, the
+   three that open on a tail are 1-page scraps (oshi-no-ko 34 `114 p.18`,
+   jujutsu-kaisen 34 `90 p.21`) or already start on the partial (aot 73
+   "half of 112"; jjk 42 `120 p.7-19`). The catalog-wide re-run found the
+   drift elsewhere: 243 manual anchors open on a partial of start−1, 241
+   stand as scraps, **2 move** — both batch 12, pre-rule: we-never-learn
+   ep 6 `17 → 16` ("16 (2nd half)", wordy share) and my-hero-academia ep 61
+   `118 → 117` (`117 p10-15`, exactly 6 pages). A10's ledger record now
+   points at the lib, the sheet and the classes (was: two history scripts,
+   no audit class). Nothing written to anchors: `start_sliver_mismatch` 2 /
+   `start_without_span` 27 stay in the census until Sean signs
+   (`apply-e3.ts --apply`), then both go to 0. ruling_violation 0. Lib
+   changed → four edges rebuilt and deployed. E4 next, on Sean's go.
 66. ✅ **BATCH 19 E2 — G55 series-window identity gate; the namesake
    contamination purged (2026-08-26).** The wiki backfill found episode
    lists by NAME and merged a namesake's page. A catalog probe (every row

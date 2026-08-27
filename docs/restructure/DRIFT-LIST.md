@@ -22,7 +22,7 @@ name no audit class. 247 are bundles. 52 rules live ONLY in the change log.
 | A-3 | Both, by tier: AFG-derived anchors may drop non-monotonic junk; research/manual anchors render as stored. |
 | A-4 | Research never index-joins. A writer-side title-join (or refuse pages whose order ≠ ours) is `/add-rule` BACKLOG — not a T3.1 proving exercise. |
 | A-5 | Re-staged content with nothing new = filler; mixed needs new canon. detective-conan 128/1000/1001 become a named re-check task (list, not vibe). |
-| A-6 | Healer over the 27 seeded starts under the sliver rule; deltas listed; Sean signs. |
+| A-6 | ✅ EXECUTED 2026-08-26 as batch 19 E3 (§12.67): lib/sliver.ts + two census classes + `apply-e3.ts` sign sheet. The 27 stand under A10 (their spans, from the seeding comments, become chapters_adapted on signature); the catalog re-run found 2 batch-12 moves (bokuben 6, MHA 61). Sean signs `--apply`. |
 | A-7 | Parked to T4.0 with the evidence. Nothing retyped now. |
 | A-8 | `dismissed_permanent` disposition + reason; permanent conditions leave the open queue. |
 | A-9 | canon-tier creation is a standing rule; the system census finds whether the path exists — never rebuilt from the log. |
