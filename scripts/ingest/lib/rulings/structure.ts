@@ -172,6 +172,17 @@ export const ENTRIES: RulingEntry<RuledStructure>[] = [
     ruledOn: '2026-08-26',
     cite: ['https://anilist.co/anime/19603', 'https://anilist.co/anime/20792'],
   },
+  // ---- batch 19 wave 2 (2026-08-27; verified R24; Sean ruled, B4-5 (A))
+  {
+    seriesId: 'black-cat',
+    ruleId: 'I39',
+    value: { spans: { 68: { episodeEnd: 24 } } },
+    reason:
+      "The community numbers 24 with the DVD-only 遠ざかる猫 'The Distant Cat' as #15 (en-WP's table 1-24; AFL 24; blackcat.fandom; syoboi TID 685 1-24 — Animax aired all 24; the R2 DVDs; Crunchyroll; Funimation); only AniList 68 (TV, 23) and ja-WP's TBS column count 23 (ja-WP: 全24話（未放送1話）, '#15（未放送）', '#23（#24）気ままな猫'). Our rows are the DVD numbering, so component 68 spanning 1-23 left row 24 気ままな猫 — the TV FINALE, 2006-03-30, the ask's refuted premise — uncovered and format-less. The outlaw-star shape ('components follow the rows; the rows were not renumbered'), N3/N4; I39's extras cannot model an insert INSIDE a member's span. Row 15 = AniList 2589 (OVA, DVD street date 2006-07-26; FIRST BROADCAST Animax 2006-05-23 — G53); format stays tv (Sean: it was broadcast, on Animax; the span derives it). TRAP: a mid-run insert — our 16-24 = TV 15-23; join ja-WP / AniList by title or date, never index (R20).",
+    ruledBy: 'Sean',
+    ruledOn: '2026-08-27',
+    cite: ['scripts/ingest/research/batch19/out/black-cat.json', 'scripts/ingest/research/batch19/verify/black-cat.md', 'https://ja.wikipedia.org/wiki/BLACK_CAT', 'https://anilist.co/anime/2589', 'https://cal.syoboi.jp/tid/685'],
+  },
 ];
 
 export const RULED_STRUCTURE: Record<string, RuledStructure> = toRecord(ENTRIES);

@@ -66,6 +66,7 @@ export async function applyScope(
 export { EXTRAS_ADOPTED } from './rulings/extras-adopted';
 export { AIR_DATE_OVERRIDES } from './rulings/air-dates';
 import { AIR_DATE_OVERRIDES } from './rulings/air-dates';
+import { EPISODE_TITLE_OVERRIDES } from './rulings/episode-titles';
 import { aflAnimeCanonStanding, deriveSourceKind, mangaStatusOf } from './rulings/source-kinds';
 import { withholdAirdateRegressions, type AirdateWithheld } from './airdate-order';
 
@@ -161,11 +162,13 @@ export const filterEpisodeRows = <T extends { number: number; type?: string; air
   const standing = aflAnimeCanonStanding(opts?.sourceType);
   const stood = capped.map((r) => ('type' in r && r.type === 'anime-only-canon' ? { ...r, type: standing } : r));
   const types = EPISODE_TYPE_OVERRIDES[seriesId];
-  const dates = AIR_DATE_OVERRIDES[seriesId]; // G53: ruled air dates re-applied at every write
-  const ruled = !types && !dates ? stood : stood.map((r) => {
+  const dates = AIR_DATE_OVERRIDES[seriesId]; // G53: ruled air dates re-applied at every write (a ruled NULL is a value)
+  const titles = EPISODE_TITLE_OVERRIDES[seriesId]; // G53: a transposition carries the title with the date
+  const ruled = !types && !dates && !titles ? stood : stood.map((r) => {
     let out = r;
     if (types?.[r.number] && 'type' in r) out = { ...out, type: types[r.number] };
-    if (dates?.[r.number] && 'air_date' in r) out = { ...out, air_date: dates[r.number] };
+    if (dates && Object.prototype.hasOwnProperty.call(dates, r.number) && 'air_date' in r) out = { ...out, air_date: dates[r.number] };
+    if (titles?.[r.number] && 'title' in r) out = { ...out, title: titles[r.number] };
     return out;
   });
   // G54: after the ruled dates land, a date a year or more out of order

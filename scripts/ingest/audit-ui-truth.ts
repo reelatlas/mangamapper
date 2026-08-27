@@ -20,6 +20,7 @@ import { honestTerminal, pinRedundant } from './lib/honest-terminal';
 import { orphanRecords } from './lib/row-presence';
 import { STANDING_ANNOTATIONS } from './lib/rulings/standing-annotations';
 import { AIR_DATE_OVERRIDES } from './lib/rulings/air-dates';
+import { EPISODE_TITLE_OVERRIDES } from './lib/rulings/episode-titles';
 import { ANCHOR_SUPPRESSED } from './lib/rulings/anchor-suppressed';
 import { deriveFormat } from './lib/format';
 import { LOCKED } from './lib/rulings/permanence';
@@ -262,6 +263,13 @@ async function main() {
       if (row && row.air_date !== want) classes.ruling_violation.push(`${sid}: ep ${num} air_date ${row.air_date} ≠ ruled ${want} (G53)`);
     }
   }
+  // G53 title overrides (2026-08-27): a transposition carries the title with the date — a stored title that disagrees with a ruled one = the same bypass.
+  for (const [sid, titles] of Object.entries(EPISODE_TITLE_OVERRIDES)) {
+    for (const [num, want] of Object.entries(titles)) {
+      const row = episodes.find((e: any) => e.series_id === sid && e.number === Number(num));
+      if (row && row.title !== want) classes.ruling_violation.push(`${sid}: ep ${num} title "${String(row.title).slice(0, 40)}" ≠ ruled "${want.slice(0, 40)}" (G53)`);
+    }
+  }
   // SHIFT VERIFICATION (Sean 2026-08-23: rules that move numbering must
   // prove nothing broke): for every SOURCE_NUMBERING_SHIFTS series, verify
   // outcome-side that (a) no two ADJACENT rows share a non-empty title (the
@@ -401,7 +409,9 @@ async function main() {
         const n = translateEpisodeNumber(sid, ep.number, 'afl');
         if (n == null) continue;
         const row = stored.get(n);
-        if (row && !row.air_date) classes.airdate_withheld.push(`${sid}: ep ${n} stored NULL, AFL says ${ep.airDate} — G53 candidate (cite the correct date) or an ack`);
+        // a ruled NULL (G53, 2026-08-27: an episode with no Japanese broadcast) is the outcome, not a withheld date
+        const ruledNull = AIR_DATE_OVERRIDES[sid] && Object.prototype.hasOwnProperty.call(AIR_DATE_OVERRIDES[sid], n) && AIR_DATE_OVERRIDES[sid][n] === null;
+        if (row && !row.air_date && !ruledNull) classes.airdate_withheld.push(`${sid}: ep ${n} stored NULL, AFL says ${ep.airDate} — G53 candidate (cite the correct date) or an ack`);
       }
       for (const ep of (st.raw?.episodes ?? []) as { number: number; type?: string }[]) {
         if (ep.type !== 'anime-only-canon') continue;

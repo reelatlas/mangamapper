@@ -46,6 +46,37 @@ export const ENTRIES: RulingEntry<RetiredAnnotation>[] = [
     ruledOn: '2026-08-26',
     cite: ['scripts/ingest/research/batch19/verify/a-certain-scientific-railgun.md'],
   },
+  // ---- batch 19 wave 2 (2026-08-27; verified R24; Sean ruled)
+  {
+    seriesId: 'kinnikuman',
+    ruleId: 'A45',
+    value: { episodes: [32, 46], kind: 'rearranged' },
+    reason:
+      "The batch-17 'eps 32,46 rearranged {96-118}: the 21st Chojin Olympics is reordered — Warsman debuts ep 32A vs manga ch 107' was refuted on two independent sources: kinnikuman.fandom's Warsman page (ch 94 USSR contestant; 96 the pachinko bracket; 97 the Screw Driver kill on Teapackman; 107 only the first MENTION of his computer) and ja-WP ウォーズマン (初登場 = ch 94; 第8巻 p.23 = ch 96, p.177 = ch 107), plus dアニメストア's per-episode synopses. The block runs in publication order, EXPANDED (26 chapters over 21 episodes) — replaced by abridged{95-120} with the verified checkpoints (minus the disputed 35=101) on the same rows.",
+    ruledBy: 'Sean',
+    ruledOn: '2026-08-27',
+    cite: ['scripts/ingest/research/batch19/out/kinnikuman.json', 'scripts/ingest/research/batch19/verify/b5a-conan-eyeshield-kinnikuman.md'],
+  },
+  {
+    seriesId: 'eyeshield-21',
+    ruleId: 'A45',
+    value: { episodes: [59, 62], kind: 'rearranged' },
+    reason:
+      "The batch-17 'eps 59,62 rearranged {120-121}: High Wave (ch 120) not revealed until ep 62' was refuted by Bandai Channel's official synopses: ep 59 unveils the High Wave (『ハイ・ウェーブ』 with 大平・大西 joining 筧) and takes its title from ch 121; ep 62 unveils the ULTIMATE 'POSEIDON' formation = ch 124 我の名はポセイドン (18 seconds left). en-WP's fan summary called the Poseidon Formation 'High Wave' (the four-linebacker variant — eyeshield21.fandom High_Wave) — the conflation the stored fact rested on. The Kyoshin game runs strictly forward: abridged{116-126} on 58-63.",
+    ruledBy: 'Sean',
+    ruledOn: '2026-08-27',
+    cite: ['scripts/ingest/research/batch19/out/eyeshield-21.json', 'scripts/ingest/research/batch19/verify/b5a-conan-eyeshield-kinnikuman.md', 'https://www.b-ch.com/titles/8777/059', 'https://www.b-ch.com/titles/8777/062'],
+  },
+  {
+    seriesId: 'tokyo-mew-mew',
+    ruleId: 'A45',
+    value: { episodes: [25, 26, 27], kind: 'partial' },
+    reason:
+      "The batch-17 zone fact 'eps 25,26,27 partial {13-16}: volume 4's internal ch 14 / 15 / 16 split could not be pinned' is SUPERSEDED — the split is pinned by chapter TITLES (en-WP's ChapterList: 14 'Kiss and Tell', 15 'Tokyo Tower Tales', 16 'Young Love'; tokyomewmew.fandom's vol-4 'Chapters included') laid against the volume's four-beat summary → per-episode anchors 25 → 14, 26 → 15, 27 → 16 (rearranged, the A41 settled reorder). A zone annotation next to exact anchors would assert the split is unknown.",
+    ruledBy: 'Sean',
+    ruledOn: '2026-08-27',
+    cite: ['scripts/ingest/research/batch19/out/tokyo-mew-mew.json', 'scripts/ingest/research/batch19/verify/b5b-x-seiya-mewmew.md'],
+  },
 ];
 
 const key = (seriesId: string, episode: number, kind: string) => `${seriesId}#${episode}#${kind}`;

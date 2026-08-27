@@ -708,12 +708,29 @@ export const ENTRIES: RulingEntry<EpisodeTypes>[] = [
     ruledOn: '2026-08-26',
     cite: ["scripts/ingest/research/batch18/out/sword-art-online.json", "scripts/ingest/research/batch18/verify/sword-art-online.md", "https://sao-movie.net/staffcast/"],
   },
+  // ---- batch 19 wave 2 (2026-08-27; verified R24; Sean ruled)
+  {
+    seriesId: 'ghost-in-the-shell-arise-alternative-architecture',
+    ruleId: 'T6',
+    value: { 9: 'canon', 10: 'canon' },
+    reason:
+      "Rides with the T25 `original` ruling (B2-3): under `original` the anime IS the source, and eps 9-10 PYROPHORIC CULT are 完全新作エピソード of the same production (ja-WP 新作エピソード table, 脚本 藤咲淳一; the official site's INTRODUCTION 新劇場版へとつながる; AV Watch 2015-04-06 「新作は話数としては9話と10話にあたり…前日譚」) that lead into 新劇場版 — story episodes of the source → canon, the outlaw-star shape. AFL classes them plain Filler (no anime-only-canon row), so nothing mechanical would retype them: this entry IS the retype (P8). No annotation — no source is overridden (T26).",
+    ruledBy: 'Sean',
+    ruledOn: '2026-08-27',
+    cite: ['scripts/ingest/research/batch19/out/ghost-in-the-shell-arise-alternative-architecture.json', 'scripts/ingest/research/batch19/verify/ghost-in-the-shell-arise-alternative-architecture.md'],
+  },
+  {
+    seriesId: 'ranma-1-2',
+    ruleId: 'T6',
+    value: { 130: 'mixed' },
+    reason:
+      "Sean's T28 call (B5-12, verified R24) under the catalog line 'pages, not numbers': ep 130 is an anime-original Miyakoji-school kidnapping plot whose payoff — ch 58's CLOSING pages (the real Satsuki's reveal, the honeymoon letter and photo, the horse at the Tendo Dojo) — is FIRST-TIME coverage: ep 93 dropped Satsuki AND the monkey and had Ranma fight the grandmother (ranma.fandom Martial Arts Tea Ceremony Arc, 'Changes in anime'), so the verdict's 're-use of a chapter animated 37 episodes earlier' was refuted for exactly these pages. New pages airing first-time are real → MIXED (AFL mixed; AFG row 124 '58' un-struck; ja-WP attaches no アニメオリジナル footnote to 第112話), with graft{58} as the mandatory tie. NO anchor — a first-time sliver inside an original plot is position-less (A44 entry).",
+    ruledBy: 'Sean',
+    ruledOn: '2026-08-27',
+    cite: ['scripts/ingest/research/batch19/out/ranma-1-2.json', 'scripts/ingest/research/batch19/verify/b5c-ranma-bobobo-arms-emma.md'],
+  },
 ];
 
-// MERGED per series (batch 18 wave 3, 2026-08-26): a series may carry several
-// T6 entries (its batch-8 block plus a batch-18 row set); last-wins would
-// silently drop the earlier ruling — the same defect caught on the
-// annotation map in wave 2. Later entries win only on the rows they name.
 export const EPISODE_TYPE_OVERRIDES: Record<string, EpisodeTypes> = ENTRIES.reduce<Record<string, EpisodeTypes>>((acc, e) => {
   acc[e.seriesId] = { ...(acc[e.seriesId] ?? {}), ...e.value };
   return acc;

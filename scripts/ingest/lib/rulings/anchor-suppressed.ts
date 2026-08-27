@@ -93,6 +93,49 @@ export const ENTRIES: RulingEntry<number[]>[] = [
     ruledOn: '2026-08-26',
     cite: ['scripts/ingest/research/batch19/out/trigun.json', 'scripts/ingest/research/batch19/verify/trigun.md'],
   },
+  // ---- batch 19 wave 2 (2026-08-27; verified R24; Sean ruled under the
+  // catalog line 'pages, not numbers': re-shown pages, another chapter space,
+  // or a first-time SLIVER inside an original plot → position-less)
+  {
+    seriesId: 'x',
+    ruleId: 'A44',
+    value: [9, 10, 16, 17, 18],
+    reason:
+      "Five rows of the remix zone hold no truthful continuous position (batch 19 B5-10). Eps 9-10: FORWARD grafts of volume 8's recruitment beats (ch 29-31: Subaru's onmyoji job / the Seishiro illusion at 9; Saiki taking Yuzuriha to recruit Aoki at 10) fused with the bonus chapters 41.5 / 24.5 / 34.5, played BEFORE ch 24 (ep 11) and ch 25 (ep 12) — an END would claim 24-28 unseen and run backwards two rows later (A12). Ep 16: vol 12's opening (42-43) welded to vol 15's close and vol 16's Rainbow Bridge duel (71-78), stopping mid-volume — no boundary lands; the monotone option END 43 exists (true, understates the episode's own title beat, Seishiro's death) and was shown to Sean. Ep 17: largely a clip show + vol 14/15 fragments (54-62, 63, 70.5) + an anime-only scene. Ep 18: vol 13's first beat (49, Inuki's death) + vol 15's Yuzuriha/Kusanagi block (63-70) — the monotone option END 49 exists (forward of ep 15's 41) and was shown to Sean; it claims nothing of the vol-15 half. The per-episode rearranged / side_story / divergence annotations carry the chapters; eps 15 → 41 and 19 → 53 are the zone's two true waypoints (volume boundaries).",
+    ruledBy: 'Sean',
+    ruledOn: '2026-08-27',
+    cite: ['scripts/ingest/research/batch19/out/x.json', 'scripts/ingest/research/batch19/verify/b5b-x-seiya-mewmew.md'],
+  },
+  {
+    seriesId: 'saint-seiya-knights-of-the-zodiac',
+    ruleId: 'A44',
+    value: [32],
+    reason:
+      "Ep 32 opens the anime-exclusive Post-Silver-Saints block (ES wiki: 'Historia exclusiva del anime', 'el segundo arco de relleno') and RE-STAGES ch 18-19's Esmeralda memories and Black Phoenix fight — already ep 15's END 19 — under invented circumstances (Jango's promotion after Ikki's departure, the island's destruction). Re-shown pages are not cited (the catalog line); Jango is NOT an anime invention (ES wiki: manga ch 18) — recorded as loose_parallel{18-19}. Typing stays mixed (no retype: the filler reading rests on one wiki; AFL says mixed) — Sean's call, not made. Contrast eps 29-30, ANCHORED at 24: ch 24's back half airs there first-time.",
+    ruledBy: 'Sean',
+    ruledOn: '2026-08-27',
+    cite: ['scripts/ingest/research/batch19/out/saint-seiya-knights-of-the-zodiac.json', 'scripts/ingest/research/batch19/verify/b5b-x-seiya-mewmew.md'],
+  },
+  {
+    seriesId: 'emma-a-victorian-romance',
+    ruleId: 'A44',
+    value: [2],
+    reason:
+      "No chapter is adapted: Kuga Maki's on-air review (spqr.hatenablog.com 2005-04-10) states 今回は原作に無いシナリオ構成をしていました; ch 2 眼鏡 (the failed glasses gift) appears in no ep-2 synopsis; the only manga-sourced element is Eleanor Campbell's debut, relocated from ch 7 (ep 6's stored END) — rearranged{7}. An END of 7 would claim chs 3-7 after two episodes; A12 forbids a relocated element setting a START. Typing stays canon (no second source; the loose-parallel reading of vol-1 material noted by the verifier) — a future typing pass with eps 4-5.",
+    ruledBy: 'Sean',
+    ruledOn: '2026-08-27',
+    cite: ['scripts/ingest/research/batch19/out/emma-a-victorian-romance.json', 'scripts/ingest/research/batch19/verify/b5c-ranma-bobobo-arms-emma.md'],
+  },
+  {
+    seriesId: 'ranma-1-2',
+    ruleId: 'A44',
+    value: [130],
+    reason:
+      "A first-time SLIVER inside an original plot: ch 58's closing pages (Satsuki's reveal, the honeymoon letter, the horse) air here for the first time — real enough for MIXED (T6 entry) and the graft{58} tie, not a position: an END of 58 would drag the reader from ch 198 (ep 129) back 140 chapters, and A12 forbids a relocated far-earlier beat from setting a START. Ep 93 carries 56-58 as the arc's anchor (rearranged, the A18 regime).",
+    ruledBy: 'Sean',
+    ruledOn: '2026-08-27',
+    cite: ['scripts/ingest/research/batch19/out/ranma-1-2.json', 'scripts/ingest/research/batch19/verify/b5c-ranma-bobobo-arms-emma.md'],
+  },
 ];
 
 export const ANCHOR_SUPPRESSED: Record<string, number[]> = toRecord(ENTRIES);

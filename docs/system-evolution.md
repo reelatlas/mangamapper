@@ -121,6 +121,8 @@ a design pass — the same class as franchise-above-series IA. Relations
 (annotations) are enough until then. The UI already keeps the word "arc"
 free for it.
 
+**Capture from batch 19 wave 2 (2026-08-27).** (a) A **day-of-week audit class** for fixed-slot series is the mechanical form of the "ascending-but-wrong date" trap (SMC 10, shugo 26/88, gx 134 never reached G54): derive each series' modal weekday from its dated rows, list rows off it — an `/add-rule` when a wave produces the next witness, not farmed. (b) **shugo-chara's AFL numbering defect** (73 skipped, 96 printed twice → rows 74-96 are +1; four reversed pairs 75/76, 83/84, 90/91, 107/108 sit in `airdate_regression`) is an N-family renumber (N11 shape) that moves every anchor on those rows — Sean's call, not an air-date edit. (c) **G53 now carries NULL and titles** — the "row-content transposition" class; if a third row field ever needs ruling (a Japanese title, a number), it is the same gate, not a new mechanism. (d) The **C5 "unseen" regime** is for skips the anime never covers; verdicts that deliver chronological-next-unseen values where later coverage is known are converted by the parity healer — the research-agent vocabulary now says so. (e) hells-paradise ep 25 → 94 shows the continua parser's "max of the list" reading a pull-forward SLIVER as the END (AFG's own resume is 90) — if it recurs, the frontier rule wants "the max chapter whose pages are not a parenthesised sliver ahead of the continue" (A12 in lib), a rule candidate with one witness.
+
 **MangaBaka (Sean + Cursor, 2026-08-26 — PEEK ONLY, never a source; do not
 ingest).** A library/metadata aggregator over AniList / MAL / MU (CC BY-NC-SA,
 schema unstable). Its `anime.start/end` is MU's coverage prose verbatim

@@ -607,6 +607,64 @@
    durable guard. Lesson for the floor rule: a >2 overshoot sourced from a
    SINGLE chart row with no corroborating content anywhere is a typo
    candidate, not an adoption candidate.
+74. ✅ **BATCH 19 WAVE 2 APPLIED (2026-08-27; Sean's rulings under the
+   catalog line "pages, not numbers", Cursor concurring) — 27 series moved,
+   one lib bug fixed, G53 extended, the 5D's space renumbered.** (1) **The
+   afg.ts continua parser** (commit 4d2b9cc): "Chapter 104 (p. 23-36), 105 …
+   108 (p. 1-19)" parsed to END 104 because the lazy capture stopped at "p.";
+   fixed in lib (page parentheticals stripped; "." before digits is not a
+   sentence end), 39 unit tests on the 36 staged sentences; afg-restage was
+   skipping continua-only changes (fixed); 18 afg-continua frontiers moved
+   (solo-leveling 104→108, one-punch-man 113→116, hells-paradise 71→94 …),
+   manual anchors on oshi-no-ko / hikaru / hxh now agree with the source;
+   five stale count_mismatch flags closed with the record. (2) **Kinds
+   (T25):** solo-leveling manhwa, the-beginning-after-the-end webtoon (the
+   `webtoon` record now says BY ORIGIN — OEL — never format), Arise AA
+   original + T6 9-10 canon. (3) **B3 air dates (G53):** 36 series / 90
+   ruled rows (82 verdict repairs − city-hunter 13/14, HELD by the verifier
+   on thetv.jp's independent pairing → ORDER_ACK; + dbz-kai's five withheld
+   NULLs and shugo-chara 94-98, DB-confirmed); **G53 now carries NULL**
+   (dbz-kai's eight international-only rows: never broadcast in Japan; an
+   honest gap, never a Toonami date) and **`EPISODE_TITLE_OVERRIDES`** (a
+   row-content transposition carries the title with the date — tanya 5/6,
+   to-love-ru 9/10, blue-lock 15/16, durarara 37/38, initial-d 46-48,
+   golden-kamuy 45/46 (Dōga Gekijō web shorts), dbz-kai 128): same gate,
+   assert, audit class; the G53 record amended. G54 acks: ranma 'all',
+   when-they-cry, f-zero 'all', haikyu, michiko ties, GITS-SAC pairs,
+   city-hunter, black-cat (the walk checks the regressing row — pairs name
+   both). `airdate_withheld` 8 → 0 (the ruled NULLs are outcomes). (4)
+   **Structure:** yu-gi-oh-5d-s N11 `drop [83] + shift −1 from 84, spaces
+   ['afl']` — AFL had numbered the film Bonds Beyond Time as row 83 and
+   omitted ep 145; film @82.5 order-only (movie, 6951); re-resolve → wiki
+   backfill restored 145 → 1..154 contiguous, counts 154, title sweep @0 on
+   every window, flag #1019 closed with the sweep (the 2026-08-23 #793
+   dismissal was wrong). black-cat I39 span 68 → 1-24 (the community
+   numbers 24; row 15 = the Animax-broadcast OVA, date 2006-05-23, tv).
+   34 watch-order kinds → RULED_RECORDS (kind-only records allowed; the
+   three uncitable listed). (5) **B5 anchors (the wave apply, 99
+   decisions):** conan 510/511/**524→636 + 525→637 strict A4**/585;
+   eyeshield 38/43/62→124 (NOT 120 — Bandai Channel synopses; the 120/121
+   swap RETIRED, A45) + 59/63 START repairs; kinnikuman 32/46 (HIGH — dアニメ
+   ストア + ja-WP found), ep 31 END 96, the "reordered Olympics" fact RETIRED
+   (Warsman debuts ch 94, not 107) → abridged{95-120} minus 35=101; x 15→41,
+   19→53, five A44 rows (the END-43 / END-49 options recorded), 20 → 95
+   post-series, the "X/1999" strings parenthesised (no phantom ch 1999); TMM
+   25-28 (vol 4's split pinned by chapter TITLES) + batch 17's parked 38→19
+   / 40→18 as the A41 settled reorder (the zone partial RETIRED); **saint-
+   seiya 29/30 → 24 ANCHORED, rearranged** (ch 24's back half airs there
+   first-time — the pages line; 32 A44); project-arms 44→190 [186] + 43→161
+   (A18); bobobo 3→3 [2] backwards with two parity continues; ranma 93→58
+   [56] and **130 → mixed + graft, A44** (ch 58's ending is first-time —
+   the verifier refuted "re-use"); emma 2 A44. The parity healer then
+   overrode three curated continues (TMM 28, eyeshield 43, arms 43) to C2
+   parity at the next START — C5 says so when future coverage is known;
+   kept. Census: ruling_violation 0, anchor_nonmonotonic 0, display 220/0;
+   the A18 hole work-list gained TMM 19/21/37/41/44 + eyeshield 39. Edges
+   rebuilt + deployed twice. Open for Sean (WAVE2-RECOVERY §APPLIED):
+   hells-paradise 25 → 94 (a pull-forward sliver as END), shugo-chara's
+   four reversed pairs + the AFL 73-skip/double-96 renumber, golden-kamuy
+   44's date, the two watch-order duplicate pairs. NEXT: the formal
+   `/consolidate deep` (G56's + the parser + the G53 gate changed).
 73. ✅ **A42 gets its outcome class — `anchor_without_row` /
    `annotation_without_row` (2026-08-26; the third post-wave-1 /add-rule).**
    Not a new rule: A42 ("an exact anchor with no episode row synthesizes the

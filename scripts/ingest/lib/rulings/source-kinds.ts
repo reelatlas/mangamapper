@@ -50,7 +50,7 @@ export const SOURCE_KINDS = [
   { value: 'manga', noun: 'manga', unit: 'chapter', tailBadge: 'manga only', anilistSources: ['MANGA', 'ONE_SHOT'], countries: ['JP'], aflAnimeCanon: 'filler' },
   { value: 'manhwa', noun: 'manhwa', unit: 'chapter', tailBadge: 'manhwa only', anilistSources: ['MANGA', 'ONE_SHOT'], countries: ['KR'], aflAnimeCanon: 'filler' },
   { value: 'manhua', noun: 'manhua', unit: 'chapter', tailBadge: 'manhua only', anilistSources: ['MANGA', 'ONE_SHOT'], countries: ['CN', 'TW', 'HK'], aflAnimeCanon: 'filler' },
-  { value: 'webtoon', noun: 'webtoon', unit: 'chapter', tailBadge: 'webtoon only', anilistSources: [], aflAnimeCanon: 'filler', note: 'reserved — AniList has no WEBTOON manga format; enters only through SOURCE_TYPE_OVERRIDES' },
+  { value: 'webtoon', noun: 'webtoon', unit: 'chapter', tailBadge: 'webtoon only', anilistSources: [], aflAnimeCanon: 'filler', note: 'by ORIGIN, not format (Sean 2026-08-27, batch 19 B2-2): an original webcomic from outside KR / CN-TW-HK / JP — the OEL Tapas original the-beginning-after-the-end is the first use. A KR vertical-scroll comic is manhwa and a CN one manhua whatever its format (solo-leveling → manhwa). AniList has no WEBTOON manga format; enters only through SOURCE_TYPE_OVERRIDES' },
   { value: 'doujinshi', noun: 'doujinshi', unit: 'chapter', tailBadge: 'doujinshi only', anilistSources: ['DOUJINSHI'], aflAnimeCanon: 'filler' },
   { value: 'light_novel', noun: 'novel', unit: 'volume', tailBadge: 'novel only', anilistSources: ['LIGHT_NOVEL'], aflAnimeCanon: 'filler', note: 'volume-space instrument (T24)' },
   { value: 'web_novel', noun: 'novel', unit: 'volume', tailBadge: 'novel only', anilistSources: ['WEB_NOVEL'], aflAnimeCanon: 'filler' },
@@ -98,9 +98,38 @@ export const OVERRIDE_ENTRIES: RulingEntry<string>[] = [
     ruledOn: '2026-08-26',
     cite: ['https://www.sunrise-world.net/titles/pickup_094.php', 'https://ja.wikipedia.org/wiki/星方武侠アウトロースター', 'scripts/ingest/research/batch18/verify/outlaw-star.md'],
   },
-  // candidates for Sean: solo-leveling and the-beginning-after-the-end derive
-  // `other` (AniList source OTHER) while each adapts a KR webtoon of a web
-  // novel → `manhwa` is the likely ruling (T4-GLOSSARY §7).
+  // ---- batch 19 wave 2, lane B2 (2026-08-27; verified R24; Sean ruled). The
+  // three `other` series were the T25 backlog; each is now a cited kind.
+  {
+    seriesId: 'solo-leveling',
+    ruleId: 'T25',
+    value: 'manhwa',
+    reason:
+      "AniList's `source: OTHER` on the anime (151807) is the error: its ONLY ADAPTATION edge is 105398 — format MANGA, countryOfOrigin KR (the KakaoPage webtoon, 2018-03-04 → 2021-12-29, D&C Media) — so deriveSourceKind(MANGA × KR) already reads manhwa; the override keeps the ruling aligned with the derivation (the god-of-high-school precedent). Aniplex / docomo 原作 credit the webtoon trio (DUBU / Chugong / h-goon, D&C Webtoon Biz.), not the novel; ja-WP: based on the webtoon; all 13 stored anchors are in the webtoon's chapter space (sololeveling.fandom {{WB}} column matches every row; our v7 = 98-110 boundary matches its volume table exactly). Not `webtoon`: that kind is by origin (OEL), and this work is Korean. TRAP (research-agent): the Yen Press PRINT edition re-numbers chapters (vol 1 = 'Chapters 1-3' for webtoon 1-12; vol 7 = 'Chapters 18-21' for 98-110) — never join an anchor on a Yen Press TOC. The stale ja-WP '15 volumes' cite is dropped (ja-WP says 既刊13巻; en-WP / fandom carry 15).",
+    ruledBy: 'Sean',
+    ruledOn: '2026-08-27',
+    cite: ['scripts/ingest/research/batch19/out/solo-leveling.json', 'scripts/ingest/research/batch19/verify/solo-leveling.md', 'https://anilist.co/manga/105398', 'https://sololeveling.fandom.com/wiki/Volume_%26_Chapter'],
+  },
+  {
+    seriesId: 'the-beginning-after-the-end',
+    ruleId: 'T25',
+    value: 'webtoon',
+    reason:
+      "The anime adapts the Tapas WEBCOMIC (story TurtleMe, art Fuyuki23), not TurtleMe's web novel: the anime's own credit block reads verbatim 'Based on the comic series, created by TurtleMe and published by Tapas Entertainment' (official site; reproduced by Animate Times with 原作：TurtleMe / ストーリー監修：TurtleMe); the stored anchors are in the webcomic's chapter numbering (ep 12's 48-56 = the webcomic's season-2 finale ch 56 'All I Need', which adapts NOVEL ch 29 — a far coarser space). AniList carries NO media entry for the novel or the comic (183161 / 194317: source OTHER, only SEQUEL/PREQUEL edges), so derivation cannot produce a kind — the override is the only route. `webtoon`, NOT `manhwa`: the kind is BY ORIGIN (Sean 2026-08-27) — an OEL American Tapas Original (en-WP {{Infobox manhwa | OEL = y}}, 'American web novel series'; launched July 2018 in English on a then-US platform for the NA market; Tapas is Kakao-owned only since May 2021) with no Korean publication of origin; manhwa would assert a country the sources refute. TRAP: the fandom's `episode` field is the raw Tapas index (webcomic ch 48 = Tapas 57) — join on `episode_webtoon` / the chapter number only.",
+    ruledBy: 'Sean',
+    ruledOn: '2026-08-27',
+    cite: ['scripts/ingest/research/batch19/out/the-beginning-after-the-end.json', 'scripts/ingest/research/batch19/verify/the-beginning-after-the-end.md', 'https://en.wikipedia.org/wiki/The_Beginning_After_the_End', 'https://tapas.io/series/The-Beginning-After-the-End'],
+  },
+  {
+    seriesId: 'ghost-in-the-shell-arise-alternative-architecture',
+    ruleId: 'T25',
+    value: 'original',
+    reason:
+      "Alternative Architecture's source is the anime itself: eps 1-8 are a broadcast re-edit of the four 2013-14 Arise theatrical parts (ja-WP 各話リスト's 「オリジナル版エピソード出典」 column: #01-02 → border:4, #03-04 → border:1, #05-06 → border:2, #07-08 → border:3; the official site's INTRODUCTION 再編集 / 冲方丁による初期案 verbatim) and eps 9-10 PYROPHORIC CULT are 完全新作エピソード bridging into 新劇場版. Shirow's 攻殻機動隊 (AniList 31023, 11 ch / 1 vol) draws ADAPTATION edges to the 1995 film, S.A.C., Innocence and the 2026 TV — never to any Arise entry; AA (21056) is source OTHER with NO adaptation edge (ALTERNATIVE → the four films, SEQUEL → 21057). ja-WP's lead prints 「原作は士郎正宗の漫画」 — a franchise credit, not an adaptation (ja-WP itself calls Arise 「第4の攻殻」); Sleepless Eye (78321) is the project's comicalization (T21 direction). `original` per the outlaw-star precedent; a re-cut is the same work. Rides with the T6 retype of 9-10 to canon (EPISODE_TYPE_OVERRIDES) in the same apply — AFL classes them plain Filler, and nothing mechanical would flag it.",
+    ruledBy: 'Sean',
+    ruledOn: '2026-08-27',
+    cite: ['scripts/ingest/research/batch19/out/ghost-in-the-shell-arise-alternative-architecture.json', 'scripts/ingest/research/batch19/verify/ghost-in-the-shell-arise-alternative-architecture.md', 'https://ja.wikipedia.org/wiki/攻殻機動隊ARISE', 'https://anilist.co/anime/21056'],
+  },
 ];
 export const SOURCE_TYPE_OVERRIDES: Record<string, string> = toRecord(OVERRIDE_ENTRIES);
 

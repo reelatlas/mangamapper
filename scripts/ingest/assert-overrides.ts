@@ -11,6 +11,7 @@
 import { db, selectAll } from './lib/db';
 import { EPISODE_TYPE_OVERRIDES } from './lib/resolve';
 import { AIR_DATE_OVERRIDES } from './lib/rulings/air-dates';
+import { EPISODE_TITLE_OVERRIDES } from './lib/rulings/episode-titles';
 import { airdateOrderWalk } from './lib/airdate-order';
 import { aflAnimeCanonStanding } from './lib/rulings/source-kinds';
 import { STANDING_ANNOTATIONS } from './lib/rulings/standing-annotations';
@@ -21,11 +22,11 @@ import { LOCKED } from './lib/rulings/permanence';
 
 const DRY = process.argv.includes('--dry-run');
 
-async function assertMap(label: string, map: Record<string, Record<number, string>>, column: 'type' | 'air_date') {
+async function assertMap(label: string, map: Record<string, Record<number, string | null>>, column: 'type' | 'air_date' | 'title') {
   let fixed = 0, checked = 0;
   for (const [sid, m] of Object.entries(map)) {
     const nums = Object.keys(m).map(Number);
-    const rows = await selectAll<{ number: number; type: string; air_date: string | null }>('episodes', 'number, type, air_date', (q) => q.eq('series_id', sid).in('number', nums));
+    const rows = await selectAll<{ number: number; type: string; air_date: string | null; title: string | null }>('episodes', 'number, type, air_date, title', (q) => q.eq('series_id', sid).in('number', nums));
     for (const r of rows) {
       checked++;
       const want = m[r.number];
@@ -185,6 +186,7 @@ async function main() {
   await assertRetiredAnnotations();
   await assertStandingAnnotations();
   await assertMap('air dates (G53)', AIR_DATE_OVERRIDES, 'air_date');
+  await assertMap('titles (G53)', EPISODE_TITLE_OVERRIDES, 'title');
   await assertAirdateOrder();
 }
 main().then(() => process.exit(0));

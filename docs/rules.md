@@ -220,7 +220,7 @@
 - `G50` New-source checklist: repeatable mechanism or not at all — aka `new-source checklist`, `no one-offs (sources)`
 - `G51` Staging keeps everything, raw HTML included — aka `staging is greedy`, `greedy staging`, `AFG re-fetch lesson`
 - `G52` Canon-tier creation: chartless manga shows still enter — aka `canon-tier creation`, `canon-tier`, `A-9`
-- `G53` Ruled air dates: AIR_DATE_OVERRIDES, applied at every write — aka `AIR_DATE_OVERRIDES`, `air-date overrides`, `air date override pass`, `ruled air dates`
+- `G53` Ruled air dates: AIR_DATE_OVERRIDES, applied at every write — aka `AIR_DATE_OVERRIDES`, `air-date overrides`, `air date override pass`, `ruled air dates`, `EPISODE_TITLE_OVERRIDES`, `ruled titles`, `row-content transposition`, `ruled NULL air date`
 - `G54` Air-date order: a date a year out of order is withheld — aka `A-11`, `air-date order gate`, `airdate regression`, `airdate_regression`, `AIRDATE_ORDER_ACK`, `365-day rule`, `air-date withheld`, `airdate_withheld`
 - `G55` Series window: a row dated outside its series is not its row — aka `series window`, `series-window gate`, `identity gate`, `namesake gate`, `namesake lesson`, `episode_date_off_window`, `AIR_DATE_WINDOW_ACK`, `E2`, `batch-19 E2`, `off-window`
 - `G56` Honest terminal: a covered MU pin is redundant, not a flag — aka `honest terminal`, `honest-terminal redundancy`, `covered pin`, `MU "EP N" pin`, `EP N pin`, `skipped_terminal`, `mu_pin_flag_redundant`, `claymore #945 class`, `pin already covered`
@@ -2958,16 +2958,16 @@ A manga-sourced show with no per-episode chart anywhere (~0% filler, so AFL neve
 
 ### G53 · Ruled air dates: AIR_DATE_OVERRIDES, applied at every write
 
-A research-ruled episode air date (2+ cited sources) lives ONLY in AIR_DATE_OVERRIDES and is re-applied inside filterEpisodeRows at every episode write — a bare DB update is clobbered by the next AFL refresh. Standing rows are asserted by assert-overrides.ts; a stored date that disagrees with a ruled one is a ruling_violation. Claims without a cited date never enter the map.
+A research-ruled episode air date (2+ cited sources) lives ONLY in AIR_DATE_OVERRIDES and is re-applied inside filterEpisodeRows at every episode write — a bare DB update is clobbered by the next AFL refresh. Standing rows are asserted by assert-overrides.ts; a stored date that disagrees with a ruled one is a ruling_violation. Claims without a cited date never enter the map. A ruled value may be NULL: an episode with no Japanese broadcast (dragon-ball-z-kai's eight international-only rows) stores an honest gap (P6), never a foreign dub date. A row-content TRANSPOSITION carries the TITLE with the date (tanya 5/6, to-love-ru 9/10, blue-lock 15/16, durarara 37/38, initial-d 46-48, golden-kamuy 45/46, dbz-kai 128): ruled titles live in EPISODE_TITLE_OVERRIDES under the same gate, assert and audit (batch 19 wave 2, 2026-08-27).
 
 *Why:* AFL inherits date errors: fist-of-the-north-star carried six wrong dates (ep 108 wore ep 112's) and ranma-1-2 ep 153 wore ep 158's, which faked an order deviation in the batch-17 re-anchor. First /add-rule exercise (2026-08-26): 7 cited rows; kinnikuman 90-119 / 38 / 87 and railgun ep 14 are dateless claims → batch-18 narrow task.
 
 - ruled Sean 2026-08-25 (docs/system-evolution.md "Air-date override pass" (Sean's go); restructure T3.1)
 - layer **writer**
-- enforced: [lib/rulings/air-dates.ts#AIR_DATE_OVERRIDES](../scripts/ingest/lib/rulings/air-dates.ts) · [lib/resolve.ts#filterEpisodeRows](../scripts/ingest/lib/resolve.ts) · [assert-overrides.ts#main](../scripts/ingest/assert-overrides.ts)
+- enforced: [lib/rulings/air-dates.ts#AIR_DATE_OVERRIDES](../scripts/ingest/lib/rulings/air-dates.ts) · [lib/rulings/episode-titles.ts#EPISODE_TITLE_OVERRIDES](../scripts/ingest/lib/rulings/episode-titles.ts) · [lib/resolve.ts#filterEpisodeRows](../scripts/ingest/lib/resolve.ts) · [assert-overrides.ts#main](../scripts/ingest/assert-overrides.ts)
 - audit: `ruling_violation`
-- witnesses: fist-of-the-north-star, ranma-1-2
-- aliases: AIR_DATE_OVERRIDES, air-date overrides, air date override pass, ruled air dates
+- witnesses: fist-of-the-north-star, ranma-1-2, dragon-ball-z-kai, saga-of-tanya-the-evil, golden-kamuy
+- aliases: AIR_DATE_OVERRIDES, air-date overrides, air date override pass, ruled air dates, EPISODE_TITLE_OVERRIDES, ruled titles, row-content transposition, ruled NULL air date
 - see: T6, R3, R20, G54
 
 ### G54 · Air-date order: a date a year out of order is withheld
@@ -4367,6 +4367,7 @@ Any component that renders episode-level data consumes the HYDRATED series (getB
 - episode totals derivation → `N34`
 - episode_annotations → `A43`
 - episode_date_off_window → `G55`
+- EPISODE_TITLE_OVERRIDES → `G53`
 - EPISODE_TYPE_OVERRIDES → `T6`
 - episode_without_component → `T29`
 - episode-floor invariant → `N1`
@@ -4781,13 +4782,16 @@ Any component that renders episode-level data consumes the HYDRATED series (getB
 - REVIEWED_NUMBERED_SPECIALS → `N7`
 - routine deep skips locked → `P25`
 - row presence → `A42`
+- row-content transposition → `G53`
 - row-count identity → `R19`
 - row-count identity first → `R19`
 - ruled air dates → `G53`
 - ruled extensions → `I27`
+- ruled NULL air date → `G53`
 - ruled reorder exemption → `A41`
 - ruled splits stay split → `I20`
 - ruled structure → `I39`
+- ruled titles → `G53`
 - RULED_LABELS → `N31`
 - RULED_STRUCTURE → `I39`
 - ruledExtent → `I27`

@@ -144,6 +144,17 @@ export const ENTRIES: RulingEntry<Shift>[] = [
     ruledOn: '2026-08-26',
     cite: ['scripts/ingest/lib/rulings/community-counts.ts', 'docs/changelog.md §12.68'],
   },
+  // ---- batch 19 wave 2 (2026-08-27; verified R24; Sean ruled, B4-4)
+  {
+    seriesId: 'yu-gi-oh-5d-s',
+    ruleId: 'N11',
+    value: { drop: [83], shifts: [{ from: 84, offset: -1 }], spaces: ['afl'] },
+    reason:
+      "AFL numbers the theatrical film 劇場版 遊☆戯☆王 ~超融合!時空を越えた絆~ 'Bonds Beyond Time' (AniList 6951, MOVIE, 2010-01-23) as its row 83, shifting every TV episode +1 from 84 to 155 (AFL 84 'Will the Real Jack Atlas… Part 1' carries ja-WP ep 83's date 2009-11-04; wiki-title-verify: eps 79-117 match @−1 on 35 rows, @0 on 17; eps 118-155 @−1 37 / @0 0), and OMITS real ep 145 光よりも速く!! (2011-01-26) while leaving its own 146 unused. ja-WP 話数 全154話, en-WP (26+38+28+42+20 = 154), yugioh.fandom and AniList 3972 (154) agree; rows 154/155 (→ 153/154) are two distinct episodes in one 最終回1時間スペシャル broadcast — NOT a duplicate (the ask's premise, refuted). The film is order-only @82.5 kind movie (ingest_fractionals + RULED_RECORDS): yugioh.fandom's film page places it before Crash Town with Bruno present, Katsumi Ono's tweet 「クラッシュタウン編」以前 → the range (82, 86). spaces ['afl'] (N12): ja/en-WP, AniList and the fandom are already the 154-space — a blanket shift would poison the wiki fill by −1. Apply sequence: re-resolve → wiki-episodes-backfill (restores 145 in the 'wiki' space) → the N11 outcome check (contiguous 1..154, no adjacent duplicate titles); B3's G53 keys re-keyed to the post-shift numbers (96/100/120/134/146); aired/total → 154; flag #1019 closes only then. Precedent: dr-stone (drop [36], shift −1 from 37, fractional 35.5).",
+    ruledBy: 'Sean',
+    ruledOn: '2026-08-27',
+    cite: ['scripts/ingest/research/batch19/out/yu-gi-oh-5d-s.json', 'scripts/ingest/research/batch19/verify/yu-gi-oh-5d-s.md', 'https://www.animefillerlist.com/shows/yu-gi-oh-5ds', 'https://anilist.co/anime/6951', 'https://ja.wikipedia.org/wiki/遊☆戯☆王5D%27s'],
+  },
 ];
 
 export const SOURCE_NUMBERING_SHIFTS: Record<string, Shift> = toRecord(ENTRIES);

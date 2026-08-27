@@ -2,7 +2,7 @@
 
 > GENERATED from `scripts/ingest/lib/rulings/**` by `scripts/restructure/gen-rulings.ts` — do not edit by hand. A ruling is an INSTANCE of a rule (`docs/rules.md`); the map is the record, this is the index.
 
-- rulings: 1748 across 207 series/keys · by Sean: 406 · UNRECORDED reasons: 8 · with a retire condition: 86
+- rulings: 1848 across 225 series/keys · by Sean: 506 · UNRECORDED reasons: 8 · with a retire condition: 86
 
 ## Retire conditions (re-evaluate when…)
 
@@ -280,6 +280,12 @@
 | `T6` | {"37":"mixed","42":"mixed","44":"canon"} | Final Season: eps 37/42 mix anime-original plots with chs 141 / 155. Ep 44 adapts no chapter (reviewer recap vs every chapter synopsis 149-196); SEAN-RULED anime-only-canon 2026-08-24 on positive evidence: chs 169-171 are the cut Kyuu chapters, 172-176 land in ep 47, and the frame-up / rat-base / kiss-deferral content matches no chapter in 161-179 (the manga's ch-173 first kiss is relocated to the ep-48 finale). T4.3 (T26/T27, 2026-08-26): anime-only-canon → canon; the override lives as an adopted / side_source annotation (lib/rulings/standing-annotations.ts), mapping null by design. | Sean 2026-08-24 · scripts/ingest/research/batch14/out/beastars.json, scripts/ingest/research/batch15/out/beastars-ep44-followup.json | flips to mixed if the step-stool line is ever confirmed inside ch 166 |
 | `I27` | {"ids":[107660,114194,136880,187267],"ruledExtent":"AFL page = S1+S2 (24); FINAL SEASON Part 1 (Dec 2024, our 25-36) + Part 2 (Mar 2026, our 37-48) complete … | AFL-lag class: AFL page = S1+S2 (24); FINAL SEASON Part 1 (Dec 2024, our 25-36) + Part 2 (Mar 2026, our 37-48) complete the manga — flag #854. | session 2026-08-23 · ingest_flags #854 |  |
 
+### beelzebub (1)
+
+| rule | value | reason | ruled | retires when |
+|---|---|---|---|---|
+| `G53` | {"47":"2011-12-18"} | Batch 19 wave 2 lane B3 (ja-WP + en-WP / syoboi / fandom, 2+ sources per row; the contradictions verified R24; Sean ruled B3-7): ep 47: ja-WP 各話リスト gives バブ47「お待たせしました」= 2011年12月18日; en-WP gives December 18, 2011; syoboi Count 47 = 2011-12-18 07:00. Stored 12-08 is a transposition of 12-18. Neighbours 46 | Sean 2026-08-27 · scripts/ingest/research/batch19/out/airdates/beelzebub.json, https://cal.syoboi.jp/tid/2076, https://en.wikipedia.org/wiki/List_of_Beelzebub_episodes, https://ja.wikipedia.org/wiki/%E3%81%B9%E3%82%8B%E3%81%9C%E3%83%90%E3%83%96 |  |
+
 ### berserk (16)
 
 | rule | value | reason | ruled | retires when |
@@ -313,16 +319,18 @@
 |---|---|---|---|---|
 | `I11` | film trilogy — movies out of v1 scope (Sean 2026-08-22), re-evaluate with watch-order | The Golden Age Arc is a film trilogy, not a series — movies are out of v1 scope (Sean 2026-08-22); re-evaluate with the watch-order concept. | Sean 2026-08-22 | the watch-order / movies design pass re-evaluates film collections |
 
-### beyblade-metal-fusion (1)
+### beyblade-metal-fusion (2)
 
 | rule | value | reason | ruled | retires when |
 |---|---|---|---|---|
+| `G53` | {"50":"2010-03-21"} | Batch 19 wave 2 lane B3 (ja-WP + en-WP / syoboi / fandom, 2+ sources per row; the contradictions verified R24; Sean ruled B3-7): ep 50: ja-WP メタルファイト ベイブレード 各話リスト: 第50話 怒りの最終決戦 = 3月21日 (2010); en-WP Beyblade: Metal Fusion season 1 = March 21, 2010; syoboi Count 50 = 2010-03-21 08:30 (TXN). Stored 2010-01- | Sean 2026-08-27 · scripts/ingest/research/batch19/out/airdates/beyblade-metal-fusion.json, https://cal.syoboi.jp/tid/1613, https://en.wikipedia.org/wiki/Beyblade:_Metal_Fusion_season_1, https://ja.wikipedia.org/wiki/%E3%83%A1%E3%82%BF%E3%83%AB%E3%83%95%E3%82%A1%E3%82%A4%E3%83%88_%E3%83%99%E3%82%A4%E3%83%96%E3%83%AC%E3%83%BC%E3%83%89 |  |
 | `T6` | {"3":"filler","4":"filler","5":"filler","6":"filler","7":"filler","8":"filler","9":"filler","10":"filler","11":"filler","15":"filler","16":"filler","18":"fil… | Batch 18 (2026-08-26), verified R24 SOUND, Sean ruled: all 32 AFL 'anime canon' rows adhere to no source — ja.wikipedia (概要 / 作中用語 / アニメオリジナルキャラクター, cited to Adachi's own blog) documents parallel production with settings flowing anime → manga; anime Battle Bladers pairings share zero matchups with manga ch 9-15; the 原作 credit is a media-mix credit, no 監修 → no adoption. Ep 3 repair mixed → filler (Doji/Dark Wolf/Kenta content absent from ch 1-3; the Blader's Spirit line is a rehash). | Sean 2026-08-26 · scripts/ingest/research/batch18/out/beyblade-metal-fusion.json, scripts/ingest/research/batch18/verify/beyblade-metal-fusion.md, https://ja.wikipedia.org/wiki/メタルファイト_ベイブレード, https://hottate2.exblog.jp/11447754/ |  |
 
-### black-butler (18)
+### black-butler (20)
 
 | rule | value | reason | ruled | retires when |
 |---|---|---|---|---|
+| `G53` | {"31":"2010-08-13"} | Batch 19 wave 2 lane B3 (ja-WP + en-WP / syoboi / fandom, 2+ sources per row; the contradictions verified R24; Sean ruled B3-7): ep 31: ja-WP 黒執事 (アニメ) 各話リスト, 黒執事II block: 第7話「殺執事」初放送日 = 2010年8月13日 (第6話 夜露執事 8月6日, 第8話 吐露執事 8月20日). en-WP List of Black Butler episodes: ep 31 / season-2 ep 7 'Deathly Butler' | Sean 2026-08-27 · scripts/ingest/research/batch19/out/airdates/black-butler.json, https://en.wikipedia.org/wiki/List_of_Black_Butler_episodes, https://ja.wikipedia.org/wiki/%E9%BB%92%E5%9F%B7%E4%BA%8B_(%E3%82%A2%E3%83%8B%E3%83%A1) |  |
 | `A3` | {"episode":6,"chapter":14,"start_chapter":12,"chapters_adapted":"12-14","volume":3,"source":"manual","note":"research-tier batch 10 (2026-08-23, agent-verifi… | Jack the Ripper arc conclusion (eps 4-6 = chs 6-14) — MEDIUM. cbr + wiki.gg + screenrant | session 2026-08-23 · scripts/ingest/apply-research-batch-10.ts, scratchpad batch10/black-butler.json (session scratchpad, not on disk), docs/changelog.md §12.29 |  |
 | `A3` | {"episode":15,"chapter":23,"start_chapter":15,"chapters_adapted":"15-23","volume":5,"source":"manual","note":"research-tier batch 10 (2026-08-23, agent-verif… | S1's faithful adaptation ends HERE (ch 23/vol 5); mid-ep already non-canon — MEDIUM. cbr + screenrant + wiki.gg | session 2026-08-23 · scripts/ingest/apply-research-batch-10.ts, scratchpad batch10/black-butler.json (session scratchpad, not on disk), docs/changelog.md §12.29 |  |
 | `A3` | {"episode":38,"chapter":25,"start_chapter":24,"chapters_adapted":"24-25","volume":6,"source":"manual","note":"research-tier batch 10 (2026-08-23, agent-verif… | Book of Circus manga content begins (ep 37 = original prologue) — MEDIUM. wiki.gg + cbr | session 2026-08-23 · scripts/ingest/apply-research-batch-10.ts, scratchpad batch10/black-butler.json (session scratchpad, not on disk), docs/changelog.md §12.29 |  |
@@ -341,6 +349,15 @@
 | `R21` | {"file":"scripts/ingest/research/batch16/out/black-butler.json","anchors":2,"zoneAcks":0} | batch-16 verdict applied as-curated | session 2026-08-24 · scripts/ingest/research/batch16/out/black-butler.json |  |
 | `T6` | {"3":"mixed"} | Ep 3: the Grelle subplot is anime-original inside a canon episode (ScreenRant explicit + fandom differences page; AFL dissents — 2-of-3). | session 2026-08-24 · scripts/ingest/research/batch15/out/black-butler.json |  |
 | `I27` | {"ids":[4898,6707,20606,166715,179054],"extras":[{"id":20670,"after":20606},{"id":21425,"after":20606}],"ruledExtent":"AFL page = S1+S2+Circus (46); Public S… | AFL-lag class: AFL page = S1+S2+Circus (46); Public School Arc TV (2024, our 47-57) + Emerald Witch Arc TV (2025, our 58-70) aired. Book of Murder OVAs (20670) and the Book of the Atlantic film (21425) are order-only after Circus — flag #853. | session 2026-08-23 · ingest_flags #853 |  |
+| `T29` | {"position":46.75,"record":{"kind":"ova","anilistId":20670}} | AniList 20670 format=OVA, 2 eps, 2014-10-25 to 2014-11-15 — the entry's stored date 2014-11-15 is exactly the OVA's endDate (Part 2). en-WP Black Butler infobox: type=ova, 'Black Butler: Book of Murder', released October 25, 2014. | Sean 2026-08-27 · scripts/ingest/research/batch19/out/watch-order-kinds.json, https://anilist.co/anime/20670, https://en.wikipedia.org/wiki/Black_Butler |  |
+
+### black-cat (3)
+
+| rule | value | reason | ruled | retires when |
+|---|---|---|---|---|
+| `G53` | {"15":"2006-05-23"} | First broadcast on any channel is the catalog's air date (the bebop / haruhi convention): Animax 2006-05-23, not the R2 DVD vol-8 street date. Batch 19 wave 2 lane B3 (ja-WP + en-WP / syoboi / fandom, 2+ sources per row; the contradictions verified R24; Sean ruled B3-7): ep 15: The episode has no TBS broadcast. Its first (and only) broadcast is Animax 2006-05-23 23:00 per syoboi's ProgItem for TID 685 Count 15 (Animax also carried 14 on 05-16 an | Sean 2026-08-27 · scripts/ingest/research/batch19/out/airdates/black-cat.json, https://cal.syoboi.jp/tid/685, https://en.wikipedia.org/wiki/List_of_Black_Cat_episodes, https://ja.wikipedia.org/wiki/BLACK_CAT, scripts/ingest/research/batch19/verify/b3-contradictions.md |  |
+| `G54` | [15,16] | A first-run SUBSET (the bebop shape): TBS/MBS skipped #15 遠ざかる猫 entirely (syoboi memo #15はTBS系では未放送); its first and only broadcast is Animax 2006-05-23 (G53, replacing the DVD street date 07-26), which sits after row 14 (01-26) and before row 16 (02-02) in TBS order — row 16 regresses against it. Follows from the B4-5 date ruling (session, from the verdict's flagged candidate; not a separate Sean line). | Sean 2026-08-27 · scripts/ingest/research/batch19/out/airdates/black-cat.json, scripts/ingest/research/batch19/verify/black-cat.md, https://cal.syoboi.jp/tid/685 |  |
+| `I39` | {"spans":{"68":{"episodeEnd":24}}} | The community numbers 24 with the DVD-only 遠ざかる猫 'The Distant Cat' as #15 (en-WP's table 1-24; AFL 24; blackcat.fandom; syoboi TID 685 1-24 — Animax aired all 24; the R2 DVDs; Crunchyroll; Funimation); only AniList 68 (TV, 23) and ja-WP's TBS column count 23 (ja-WP: 全24話（未放送1話）, '#15（未放送）', '#23（#24）気ままな猫'). Our rows are the DVD numbering, so component 68 spanning 1-23 left row 24 気ままな猫 — the TV FINALE, 2006-03-30, the ask's refuted premise — uncovered and format-less. The outlaw-star shape ('components follow the rows; the rows were not renumbered'), N3/N4; I39's extras cannot model an insert INSIDE a member's span. Row 15 = AniList 2589 (OVA, DVD street date 2006-07-26; FIRST BROADCAST Animax 2006-05-23 — G53); format stays tv (Sean: it was broadcast, on Animax; the span derives it). TRAP: a mid-run insert — our 16-24 = TV 15-23; join ja-WP / AniList by title or date, never index (R20). | Sean 2026-08-27 · scripts/ingest/research/batch19/out/black-cat.json, scripts/ingest/research/batch19/verify/black-cat.md, https://ja.wikipedia.org/wiki/BLACK_CAT, https://anilist.co/anime/2589, https://cal.syoboi.jp/tid/685 |  |
 
 ### black-clover (9)
 
@@ -537,10 +554,12 @@
 | `A43` | {"episodes":[38],"kind":"partial","chapters":"ch 35-37 skipped","asterisk_review":"pending (if unset)"} | Shimane opens at 38, skipping 35-37 (also 40, 42 later) | session 2026-08-23 · scripts/ingest/apply-research-batch-8.ts, docs/changelog.md §12.25, session scratchpad batch8/blue-exorcist.json |  |
 | `C9` | {"episode":37,"continue_chapter":38} | Kyoto Saga ends ch 34 but chs 35-37 are SKIPPED by the anime — S3 opens at 38; readers who want everything start at 35, anime-parity continues at 38 (WDTALO) | Sean 2026-08-23 · scripts/ingest/apply-continue-points.ts, docs/changelog.md §12.27, batch 8 verdict (blue-exorcist) | C9 superseded by C2/C3 (b17 continue point = next episode's start, skips noted) — each value stands only where it equals anime parity; re-derive under C2/C3 |
 
-### blue-lock (7)
+### blue-lock (9)
 
 | rule | value | reason | ruled | retires when |
 |---|---|---|---|---|
+| `G53` | {"15":"2023-01-22","16":"2023-01-29"} | Batch 19 wave 2 lane B3 (ja-WP + en-WP / syoboi / fandom, 2+ sources per row; the contradictions verified R24; Sean ruled B3-7): ep 15: ja-WP ブルーロック 各話リスト: 第15話「喰」Aux6 = 1月22日. en-WP Blue Lock season 1: EpisodeNumber 15 'Devour' = 2023-01-22. Weekly TV Asahi NUMAnimation Saturday slot: 14 = 01-15, 15 = 01 \| ep 16: ja-WP: 第16話「三者融合(トライ・セッション)」= 1月29日; en-WP: EpisodeNumber 16 'Tri-Fusion' = 2023-01-29. | Sean 2026-08-27 · scripts/ingest/research/batch19/out/airdates/blue-lock.json, https://en.wikipedia.org/wiki/Blue_Lock_season_1, https://ja.wikipedia.org/wiki/%E3%83%96%E3%83%AB%E3%83%BC%E3%83%AD%E3%83%83%E3%82%AF, scripts/ingest/research/batch19/verify/b3-contradictions.md |  |
+| `G53` | {"15":"Devour","16":"Tri-Fusion"} | Rows 15 and 16 held each other's title AND date: ja-WP 第15話「喰」1月22日 / 第16話「三者融合」1月29日; en-WP Blue Lock season 1 agrees. Titles travel with the dates. | Sean 2026-08-27 · scripts/ingest/research/batch19/out/airdates/blue-lock.json, scripts/ingest/research/batch19/verify/b3-contradictions.md |  |
 | `A3` | {"episode":26,"chapter":100,"volume":12,"source":"manual"} | S2E2 ends ch 100 complete. bluelock fandom Episode_26 + Wikipedia ch list | session 2026-08-23 · scripts/ingest/apply-research-batch-9.ts, docs/changelog.md §12.26, session scratchpad batch9/blue-lock.json |  |
 | `A3` | {"episode":30,"chapter":113,"volume":14,"source":"manual"} | U-20 kickoff; 'The Big Stage' = ch 112 'Grand Stage' (ends 113). fandom Episode_30 + Wikipedia | session 2026-08-23 · scripts/ingest/apply-research-batch-9.ts, docs/changelog.md §12.26, session scratchpad batch9/blue-lock.json |  |
 | `A3` | {"episode":32,"chapter":121,"volume":14,"source":"manual"} | halftime 2-1 = end of ch 121 '1st Half'. fandom Episode_32 + gamerant + Wikipedia | session 2026-08-23 · scripts/ingest/apply-research-batch-9.ts, docs/changelog.md §12.26, session scratchpad batch9/blue-lock.json |  |
@@ -574,7 +593,7 @@
 | `T6` | {"2":"filler","3":"filler","4":"filler","5":"filler","6":"filler","7":"filler","8":"canon","9":"canon","10":"filler","11":"filler","12":"filler","13":"filler… | Batch 18 (2026-08-26), verified R24, SEAN RULED: AFL's 'anime canon' on Boruto is a claim about the manga, not adoption. Kodachi's blanket ストーリー監修 (eps 1-216) is a show-runner credit that also covers rows every list calls filler — REJECTED as an adoption basis (verifier refuted verdict B's 41 rows on the protocol's own test). Adopted on a SPECIFIC act by the source's author: 128-136 Time Slip (Kishimoto's own story, 20th-anniversary project; high), 8-9 (Kishimoto and Kodachi expanded one episode into two; medium), 67-69 Chocho (Kishimoto 原案 + dialogue; repair of stored filler). Ep 34 (Kodachi co-script) declined. 93-95 (親子の日 novel), 106-111 (湯煙忍法帖 novel) and 282-286 (Sasuke Retsuden) adapt licensed novels → canon + side_source (Shippuden 452-457 precedent). 221-281 stay canon + adopted{community} — a DIFFERENT basis from a staff credit: the community and the manga-era story treat the stretch as having happened; written here so it is not 'staff credit for some, vibes for others'. Everything else AFL calls anime canon in 2-105 / 120-209 → filler (adheres to no source). | Sean 2026-08-26 · scripts/ingest/research/batch18/out/boruto-naruto-next-generations-A.json, scripts/ingest/research/batch18/out/boruto-naruto-next-generations-B.json, scripts/ingest/research/batch18/verify/boruto.md, https://ja.wikipedia.org/wiki/BORUTO-ボルト-_NARUTO_NEXT_GENERATIONS, https://naruto.fandom.com/wiki/Time_Slip_Arc |  |
 | `I17` | {"to":"naruto-shippuden","kind":"sequel"} | Boruto continues the Naruto story a generation on — sequel to Shippuden (the Naruto→Shippuden pattern). | session 2026-08-22 · docs/franchise-rulings.md |  |
 
-### bungo-stray-dogs (16)
+### bungo-stray-dogs (17)
 
 | rule | value | reason | ruled | retires when |
 |---|---|---|---|---|
@@ -594,8 +613,9 @@
 | `N9` | {"position":24.5,"title":"Hitori Ayumu (Walking Alone)","disposition":"order_only","source":"ruling"} | OVA aired 2017-08-04 between S2 and S3; adapts ~ch 40 side material; AFL numbers it as ep 25 (SOURCE_NUMBERING_SHIFTS translates). Community TV count = 60. | session 2026-08-23 · scripts/ingest/apply-research-batch-8.ts, docs/changelog.md §12.25, session scratchpad batch8/bungo-stray-dogs.json |  |
 | `G3` | {"flag":"count_mismatch"} | manga Part 1 concluded at ch 130 on 2026-03-04 (ANN); vol 28 March 2026; Part 2 unannounced — expect MU/AniList totals to land, then status flip to finished-part-1. | session 2026-08-23 · scripts/ingest/apply-research-batch-8.ts, docs/changelog.md §12.25, session scratchpad batch8/bungo-stray-dogs.json |  |
 | `N11` | {"drop":[25],"shifts":[{"from":26,"offset":-1}]} | AFL counts the 2017 OVA 'Hitori Ayumu' as ep 25 (aired between S2 and S3), shifting S3+ by +1 against the community's 60-episode TV numbering — fandom's 'Episode 61' = TV ep 60 'Twilight Goodbye'. The OVA holds watch position 24.5 (order-only, adapts ~ch 40 side material). Research batch 8. | session 2026-08-23 |  |
+| `T29` | {"position":24.5,"record":{"kind":"ova","anilistId":21791}} | AniList 21791 'Bungou Stray Dogs: Hitori Ayumu' format=OVA, 1 ep, startDate 2017-08-04 = the entry's stated air date. | Sean 2026-08-27 · scripts/ingest/research/batch19/out/watch-order-kinds.json, https://anilist.co/anime/21791 |  |
 
-### cardcaptor-sakura (9)
+### cardcaptor-sakura (11)
 
 | rule | value | reason | ruled | retires when |
 |---|---|---|---|---|
@@ -608,6 +628,8 @@
 | `T6` | {"4":"filler","5":"mixed","7":"filler","39":"mixed"} | Wood/Rain (4) and Silent (7) are anime-only cards with anime-original plots → filler; 5 (ch-1 flashback video only) and 39 (Cloud, on the premise of ch 33) → mixed. The Clear Card rows moved to their own series. | session 2026-08-23 · scripts/ingest/research/batch14/out/cardcaptor-sakura.json |  |
 | `I27` | {"ids":[232,98554],"ruledExtent":"1998 TV (232, 1-70) + Clear Card PROLOGUE OVA 98554 ('Sakura and the Two Bears', ep 71, adapts chs 46-50 — NOT the Sealed C… | 1998 TV (232, 1-70) + Clear Card PROLOGUE OVA 98554 ('Sakura and the Two Bears', ep 71, adapts chs 46-50 — NOT the Sealed Card film 372 the relation walk bridged through). Clear Card TV (97881) is the SEPARATE series cardcaptor-sakura-clear-card (Sean 2026-08-24: different manga 87296); the community cap 71 keeps the shared AFL page's tail out. | Sean 2026-08-24 · docs/franchise-rulings.md "Cardcaptor Sakura: Clear Card = SEPARATE SERIES" |  |
 | `N7` | 98554 | A (high): Clear Card Prologue OVA = ep 71 — Sean 2026-08-24: Sealed Card is the direct FINALE but stays order-only (@70.2); the Prologue OVA is the bridge to the sequel and acts as ep 71 (community identity). | Sean 2026-08-24 |  |
+| `T29` | {"position":35.1,"record":{"kind":"movie","anilistId":371}} | AniList 371 format=MOVIE, 81 min, 1999-08-21. en-WP: 'Cardcaptor Sakura: The Movie ... is a 1999 Japanese animated fantasy film'. | Sean 2026-08-27 · scripts/ingest/research/batch19/out/watch-order-kinds.json, https://anilist.co/anime/371, https://en.wikipedia.org/wiki/Cardcaptor_Sakura:_The_Movie |  |
+| `T29` | {"position":70.1,"record":{"kind":"movie","anilistId":372}} | AniList 372 'Cardcaptor Sakura Movie: Fuinsareta Card' format=MOVIE, 79 min, 2000-07-15. (The en-WP title 'Cardcaptor Sakura: The Sealed Card' redirects to the franchise article, which describes it as the second film.) | Sean 2026-08-27 · scripts/ingest/research/batch19/out/watch-order-kinds.json, https://anilist.co/anime/372 |  |
 
 ### cardcaptor-sakura-clear-card (9)
 
@@ -664,6 +686,12 @@
 | `A7` | {"episode":21,"bound":"Mary Magdalene flashback pulls v6 material (36-41) far out of order inside an otherwise anime-original stretch — graft, not this episo… | A2: the Mary Magdalene flashback pulls v6 material (36-41) far out of order inside an otherwise anime-original stretch — a graft, not this episode's position | session 2026-08-24 · scripts/ingest/research/batch17/out/chrono-crusade.json, scripts/ingest/apply-research-batch-17.ts, §12.42 |  |
 | `T6` | {"5":"mixed","7":"mixed","8":"mixed","11":"mixed","12":"mixed","14":"mixed","15":"filler","16":"filler","17":"mixed","18":"mixed","19":"mixed","20":"mixed","… | The anime departs after ep 13: 5/7/8/11/12 are original bridges on canon continuity, 14-21 the "primarily original" stretch that still pulls manga beats (Wikipedia lead + MU + ja-WP), 22-24 the original ending. [Batch 19 wave 1 (2026-08-26), verified R24, Sean ruled: 15-16 carved out to FILLER under T28 — ep 15 is the anime-only Order/Pursuers alliance + the Magdalene-reincarnation premise (ja-WP: the manga's Pursuers HUNT the party; Fuji TV synopsis), ep 16 the anime-exclusive Eliza Brown case; the v4 block coherence is the loose_parallel{22-26} annotation. batch19/out/chrono-crusade.json + verify/chrono-crusade.md.] T4.3 (T27, 2026-08-26): anime-only-canon → filler (adheres to no source; the studio-ending class A-7 carries a divergence annotation and stays on the review list — twin-star 21-50 explicitly, T4-GLOSSARY §7). | session 2026-08-24 · scripts/ingest/research/batch17/out/chrono-crusade.json |  |
 
+### city-hunter (1)
+
+| rule | value | reason | ruled | retires when |
+|---|---|---|---|---|
+| `G54` | [13,14] | SPLIT EVIDENCE, HELD (the verifier's call): ja-WP pairs 13 = 6月29日 オレの敵は美女 / 14 = 7月6日 16歳 while en-WP, the fandom and TVmaze (one lineage) pair the titles the other way round — and WEBザテレビジョン (thetv.jp/program/0000854667/) independently numbers 第13話「16歳結婚宣言!」/ 第14話「オレの敵は美女?」 with 1, 11, 12, 15, 16 matching official numbering: exactly a broadcast-order swap. Stored dates stand (13 = 1987-07-06, 14 = 1987-06-29 regresses); the G53 repair is NOT taken. A 1987 newspaper listing / the Yomiuri TV archive would decide it. | Sean 2026-08-27 · scripts/ingest/research/batch19/out/airdates/city-hunter.json, scripts/ingest/research/batch19/verify/b3-contradictions.md, https://thetv.jp/program/0000854667/ |  |
+
 ### clannad (3)
 
 | rule | value | reason | ruled | retires when |
@@ -695,13 +723,20 @@
 | `A43` | {"episode":22,"kind":"loose_parallel","chapters":"ch 57-59"} | loosely parallels the Northern Campaign / Pieta battle with growing variations — anime outran the ongoing manga | Sean 2026-08-23 · scripts/ingest/apply-research-batch-3.ts |  |
 | `A43` | {"episode":23,"kind":"loose_parallel","chapters":"ch 57-59"} | loosely parallels the Northern Campaign / Pieta battle with growing variations — anime outran the ongoing manga | Sean 2026-08-23 · scripts/ingest/apply-research-batch-3.ts |  |
 | `C8` | {"continue_from_chapter":57} | faithful adaptation ends at ch 56 (ep 20); readers continue at 57. | Sean 2026-08-23 · scripts/ingest/apply-research-batch-3.ts |  |
-| `G26` | continua says ep 26 → ch 54, but eps 24-26 are fully anime-original (research 2026-08-23) — the manual ep-20 → ch-56 anchor is the frontier | continua says ep 26 → ch 54, but eps 24-26 are fully anime-original (research 2026-08-23) — the manual ep-20 → ch-56 anchor is the frontier | session 2026-08-23 |  |
+| `G26` | continua says ep 26 → ch 56 (54 until the 2026-08-27 parser fix read past the page group), but eps 24-26 are fully anime-original (research 2026-08-23; batch… | continua says ep 26 → ch 56 (54 until the 2026-08-27 parser fix read past the page group), but eps 24-26 are fully anime-original (research 2026-08-23; batch 19 wave 1 T28) — a wrong-EPISODE pin either way; the manual ep-23 → ch-59 line (batch 19 wave 1) is the frontier | session 2026-08-23 |  |
 | `T6` | {"24":"filler","25":"filler","26":"filler"} | Eps 24-26: fully anime-original ending (the anime stopped 13 already-published chapters short — tankōbon through Scene 69, magazine through 73 — and wrote its own conclusion; "Madhouse outran the manga" was refuted in batch 18/19) — research verdict (AFG + wheredoestheanimeleaveoff + sportskeeda), Sean sign-off. Contrary to the later T11 (DSQ) class; parked under DRIFT-LIST A-7, nothing retyped. T4.3 (T27, 2026-08-26): anime-only-canon → filler (adheres to no source; the studio-ending class A-7 carries a divergence annotation and stays on the review list — twin-star 21-50 explicitly, T4-GLOSSARY §7). | Sean 2026-08-23 |  |
 
-### cowboy-bebop (2)
+### code-geass-lelouch-of-the-rebellion (1)
 
 | rule | value | reason | ruled | retires when |
 |---|---|---|---|---|
+| `G53` | {"5":"2006-11-03","6":"2006-11-10","28":"2008-04-20","29":"2008-04-27"} | Batch 19 wave 2 lane B3 (ja-WP + en-WP / syoboi / fandom, 2+ sources per row; the contradictions verified R24; Sean ruled B3-7): ep 5: ja-WP コードギアス 反逆のルルーシュ 各話リスト: STAGE 5「皇女 と 魔女」= 11月3日; en-WP List of Code Geass season 1 episodes: ep 5 = 2006-11-03. Every R1 date in both sources is a Friday (10/6, 10/1 \| ep 6: ja-WP: STAGE 6「奪われた 仮面」= 11月10日; en-WP ep 6 'The Stolen Mask' = 2006-11-10 (cited to geass.jp/first/story_06.html). Stored 2006-10-09 is not a Code Geass broadcast date a \| ep 28: ja-WP R2 table: TURN 03「囚われ の 学園」= 4月20日; en-WP List of Code Geass season 2 episodes: 'Imprisoned in Campus' = 2008-04-20. R2 ran weekly Sunday 2008-04-06 … 2008-09-28; s \| ep 29: ja-WP: TURN 04「逆襲 の 処刑台」= 4月27日; en-WP: 'Counterattack at the Gallows' = 2008-04-27. Same month-digit corruption as ep 28. | Sean 2026-08-27 · scripts/ingest/research/batch19/out/airdates/code-geass-lelouch-of-the-rebellion.json, https://en.wikipedia.org/wiki/List_of_Code_Geass_season_1_episodes, https://en.wikipedia.org/wiki/List_of_Code_Geass_season_2_episodes, https://ja.wikipedia.org/wiki/%E3%82%B3%E3%83%BC%E3%83%89%E3%82%AE%E3%82%A2%E3%82%B9_%E5%8F%8D%E9%80%86%E3%81%AE%E3%83%AB%E3%83%AB%E3%83%BC%E3%82%B7%E3%83%A5 |  |
+
+### cowboy-bebop (3)
+
+| rule | value | reason | ruled | retires when |
+|---|---|---|---|---|
+| `G53` | {"23":"1999-04-03"} | Batch 19 wave 2 lane B3 (ja-WP + en-WP / syoboi / fandom, 2+ sources per row; the contradictions verified R24; Sean ruled B3-7): ep 23: ja-WP カウボーイビバップ 各話リスト (WOWOW初放送): Session #23「ブレイン・スクラッチ」= 1999年4月2日, in the 金曜 25:00-25:30 slot (= Saturday 01:00 calendar), i.e. 1999-04-03 under the convention our nei | Sean 2026-08-27 · scripts/ingest/research/batch19/out/airdates/cowboy-bebop.json, https://en.wikipedia.org/wiki/List_of_Cowboy_Bebop_episodes, https://ja.wikipedia.org/wiki/%E3%82%AB%E3%82%A6%E3%83%9C%E3%83%BC%E3%82%A4%E3%83%93%E3%83%90%E3%83%83%E3%83%97 |  |
 | `G54` | [2,7,18] | TV Tokyo first aired a 12-session subset (Apr–Jun 1998) before WOWOW ran all 26 (Oct 1998–Apr 1999); rows 2, 7 and 18 carry their TX first-air dates and so regress against WOWOW-dated neighbours — real broadcast order. Session 24 (regresses 146 d against 23's 1999-09-03) is NOT acknowledged: 23's date is suspect (WOWOW's run ended 1999-04-24) → batch-18 G53 candidate. | Sean 2026-08-26 · https://en.wikipedia.org/wiki/List_of_Cowboy_Bebop_episodes, docs/restructure/DRIFT-LIST.md A-11 |  |
 | `I39` | {"extras":[{"anilistId":5,"kind":"movie","label":"Knockin' on Heaven's Door","after":1,"rows":1}]} | Row 27 'The Movie' 2001-09-01 = AniList 5 (MOVIE, 2001-09-01), numbered after the 26 sessions by AFL. The movie-kind component gives the row its format (E2 residual: bebop 27 belongs to E4, Sean 2026-08-26). | Sean 2026-08-26 · https://anilist.co/anime/5, docs/changelog.md §12.66 |  |
 
@@ -727,6 +762,12 @@
 | `R21` | {"file":"scripts/ingest/research/batch15/out/dagashi-kashi.json","anchors":6,"zoneAcks":0} | batch-15 verdict applied as-curated | session 2026-08-24 · scripts/ingest/research/batch15/out/dagashi-kashi.json |  |
 | `T6` | {"10":"mixed","11":"mixed"} | Ep 10 'That's Dagashi!': anime-original sick-Hotaru story with gag fragments only (MAL reader posts, Inquisitr, WDTALO list, fandom); ep 11: second half is anime-original station-farewell framing around chs 50/52/13 (research batch 15). | session 2026-08-24 · scripts/ingest/research/batch15/out/dagashi-kashi.json |  |
 
+### darling-in-the-franxx (1)
+
+| rule | value | reason | ruled | retires when |
+|---|---|---|---|---|
+| `G53` | {"9":"2018-03-10"} | Batch 19 wave 2 lane B3 (ja-WP + en-WP / syoboi / fandom, 2+ sources per row; the contradictions verified R24; Sean ruled B3-7): ep 9: syoboi TID 4788 Count 9 = 2018-03-10 23:30 (the whole run is an unbroken weekly Saturday 23:30 sequence 2018-01-13 … 2018-07-07); en-WP List of Darling in the Franxx epis | Sean 2026-08-27 · scripts/ingest/research/batch19/out/airdates/darling-in-the-franxx.json, https://cal.syoboi.jp/tid/4788, https://en.wikipedia.org/wiki/List_of_Darling_in_the_Franxx_episodes, https://web.archive.org/web/20171226020657/http://darli-fra.jp/story/?no=9 |  |
+
 ### darwin-s-game (1)
 
 | rule | value | reason | ruled | retires when |
@@ -739,6 +780,12 @@
 |---|---|---|---|---|
 | `I39` | {"extras":[{"anilistId":10418,"kind":"ova","label":"The Red Knife Wielder","after":null,"rows":1,"startAt":0}]} | Row 0 'The Red Knife Wielder' 2011-10-08 = AniList 10418 'Akai Knife Tsukai' (OVA, 2011-10-08), the prequel OVA the community numbers 0 (N7). | Sean 2026-08-26 · https://anilist.co/anime/10418 |  |
 
+### death-note (1)
+
+| rule | value | reason | ruled | retires when |
+|---|---|---|---|---|
+| `G53` | {"35":"2007-06-12"} | Batch 19 wave 2 lane B3 (ja-WP + en-WP / syoboi / fandom, 2+ sources per row; the contradictions verified R24; Sean ruled B3-7): ep 35: syoboi TID 945 Count 35 = 2007-06-13 00:56 (NTV), i.e. the Tuesday 2007-06-12 24:56 broadcast; en-WP Death Note (2006 TV series) episode table gives ep 35 'Malice' = 2007 | Sean 2026-08-27 · scripts/ingest/research/batch19/out/airdates/death-note.json, https://cal.syoboi.jp/tid/945, https://en.wikipedia.org/wiki/Death_Note_(2006_TV_series) |  |
+
 ### demon-slayer-kimetsu-no-yaiba (5)
 
 | rule | value | reason | ruled | retires when |
@@ -749,10 +796,11 @@
 | `A3` | {"episode":55,"chapter":127,"volume":null,"source":"manual"} | Swordsmith Village end = ch 127; Hashira Training starts 128 | session 2026-08-23 · scripts/ingest/apply-research-batch-5.ts |  |
 | `T6` | {"27":"filler"} | Batch 18 wave 3 (2026-08-26): a new TV episode (Rengoku's road to the train), 'entirely anime-original… takes place during ch 53' (fandom; ja-WP) → filler + loose_parallel{53-54}. | Sean 2026-08-26 · scripts/ingest/research/batch18/out/demon-slayer-kimetsu-no-yaiba.json |  |
 
-### detective-conan (2)
+### detective-conan (3)
 
 | rule | value | reason | ruled | retires when |
 |---|---|---|---|---|
+| `G53` | {"110":"1998-07-27","111":"1998-08-03","112":"1998-08-10","113":"1998-08-17","114":"1998-08-24","115":"1998-08-31"} | Batch 19 wave 2 lane B3 (ja-WP + en-WP / syoboi / fandom, 2+ sources per row; the contradictions verified R24; Sean ruled B3-7): ep 110: ja-WP: \|7月27日\|\|110\|\|料理教室殺人事件（前編）; DCW Season 3 {{SeasonItem\|110\|116\|Cooking Classroom Murder Case (Part 1)\|July 27, 1998}}. (DCW's first argument is the Jp# column, which \| ep 111: ja-WP: \|8月3日\|\|111\|\|料理教室殺人事件（後編）; DCW Season 3: Jp# 111 = August 3, 1998. A two-parter cannot straddle 07-27 and 08-10 with 08-03 given to a different case. \| ep 112: ja-WP: \|8月10日\|\|112\|\|帝丹小7不思議事件; DCW Season 3: Jp# 112 'The Seven Mysteries of Teitan Elementary School Case' = August 10, 1998. \| ep 113: ja-WP: \|8月17日\|\|113\|\|白い砂浜殺人事件; DCW Season 3: Jp# 113 'The White Sandy Beach Murder Case' = August 17, 1998. \| ep 114: ja-WP: \|8月24日\|\|114\|\|スキューバダイビング殺人事件（前編）; DCW Season 3: Jp# 114 = August 24, 1998. \| ep 115: ja-WP: \|8月31日\|\|115\|\|スキューバダイビング殺人事件（後編）; DCW Season 3: Jp# 115 = August 31, 1998. Ep 116 (09-07) is already correct in our data, so 08-31 is the only slot left. | Sean 2026-08-27 · scripts/ingest/research/batch19/out/airdates/detective-conan.json, https://ja.wikipedia.org/wiki/%E5%90%8D%E6%8E%A2%E5%81%B5%E3%82%B3%E3%83%8A%E3%83%B3%E3%81%AE%E3%82%A2%E3%83%8B%E3%83%A1%E3%82%A8%E3%83%94%E3%82%BD%E3%83%BC%E3%83%89%E4%B8%80%E8%A6%A7, https://www.detectiveconanworld.com/wiki/Season_3 |  |
 | `A18` | reorder regime (chunk 2, verifier-confirmed): 201 of 631 manga episodes start below the running-max chapter — the adaptation freely interleaves backlog cases… | verifier-confirmed: 201 of 631 manga episodes start below the running-max chapter — the adaptation freely interleaves backlog cases; every continue point carries both the parity value and the monotonic alternative | session 2026-08-25 · scripts/ingest/research/batch17/out/detective-conan.json, scripts/ingest/apply-research-batch-17.ts, §12.50 |  |
 | `T6` | {"128":"mixed","1000":"mixed","1001":"mixed"} | Eps 128/1000/1001 are chapter re-runs — re-staged canon content, never position → mixed. Under the later rehash rule (T8, DRIFT-LIST A-5) a re-staging with nothing new is filler; these three are a named re-check task. | Sean 2026-08-25 · scripts/ingest/research/batch17/out/detective-conan.json | A-5 re-check under T8: retype filler if the re-runs add no new canon |
 
@@ -835,10 +883,12 @@
 | `T6` | {"100":"mixed"} | Ep 100: Kanzenshuu ch 323 p.1-11 "Half Filler" + the Dragon Universe manga field — 3 sources vs AFL alone → mixed. | Sean 2026-08-25 · scripts/ingest/research/batch17/out2/dragon-ball-z-a1.json |  |
 | `I17` | {"to":"dragon-ball","kind":"sequel"} | The Naruto/DragonBall baseline: Z is a separate series continuing Dragon Ball — sequel. | session 2026-08-22 · docs/franchise-rulings.md |  |
 
-### dragon-ball-z-kai (7)
+### dragon-ball-z-kai (9)
 
 | rule | value | reason | ruled | retires when |
 |---|---|---|---|---|
+| `G53` | {"101":null,"102":null,"103":null,"106":null,"108":null,"111":null,"113":null,"119":"2014-07-06","128":"2014-09-14","165":null} | NULL = never broadcast in Japan (Sean 2026-08-27: an honest gap, P6 — never a foreign dub date): 101/102/103 carried Toonami dates. Our row space is the international 69-episode Final Chapters numbering (99-167) vs Fuji TV's 99-159 — join JP sources by title. Batch 19 wave 2 lane B3 (ja-WP + en-WP / syoboi / fandom, 2+ sources per row; the contradictions verified R24; Sean ruled B3-7): ep 119: Intl ep 119 = 真打ち登場! 立ちはだかる魔王!! = JP ep 112, aired 2014年7月6日 per ja-WP ドラゴンボール改 魔人ブウ編 table; en-WP List of Dragon Ball Z Kai episodes ep 119 OriginalAirDate = 2014-07-06. \| ep 128: Intl ep 128 = 悪夢再来 不死身の怪物 魔人ブウ! = JP ep 121, aired 2014年9月14日 (ja-WP; en-WP ep 128 OriginalAirDate = 2014-09-14). The stored 2014-11-30 is intl ep 139's date (JP 132 魔人を倒 \| ep 102: Intl ep 102 'A Monster Is Taken Away! The Culprit Is Great Saiyaman?' has NO Japanese broadcast — en-WP prints OriginalAirDate = '—' with the {{efn\|name=Int}} internation \| ep 103: Same class as 102: intl ep 103 'Entering the World Martial Arts Tournament!' is international-only (en-WP OriginalAirDate '—', AltDate February 5, 2017 = Toonami). Absent \| ep 101: Not one of the flagged rows, but the SAME class and it must be handled with 102/103 or the gate will just move: intl ep 101 "Videl's Crisis? Gohan's Urgent Call-out!" is \| 106/108/111/113/165 (already withheld by G54): never broadcast in Japan either — AFL's 2017-02-25 / 03-11 / 04-01 / 04-15 / 2018-06-09 are US Toonami dub premieres (en-WP AltDates); ruled NULL so the withheld value can never re-enter | Sean 2026-08-27 · scripts/ingest/research/batch19/out/airdates/dragon-ball-z-kai.json, https://en.wikipedia.org/wiki/List_of_Dragon_Ball_Z_Kai_episodes, https://ja.wikipedia.org/wiki/%E3%83%89%E3%83%A9%E3%82%B4%E3%83%B3%E3%83%9C%E3%83%BC%E3%83%AB%E6%94%B9, scripts/ingest/research/batch19/verify/b3-contradictions.md |  |
+| `G53` | {"128":"The Nightmare Returns; The Immortal Monster, Majin Buu!"} | Stored row 128 held intl ep 139's title AND date ('Who Will Defeat Majin Buu? The Mightiest of Men Moves Out' = 魔人を倒すのは誰だ? 最強の男始動!!, 2014-11-30 — row 139 carries the same date, a duplicate not a swap; verifier: en-WP 139 = 2014-11-30 = ja JP132). Intl ep 128 = 悪夢再来 不死身の怪物 魔人ブウ! = JP 121, 2014-09-14 (ja-WP 魔人ブウ編; en-WP ep 128) — the date moves under AIR_DATE_OVERRIDES, the title with it. | Sean 2026-08-27 · scripts/ingest/research/batch19/out/airdates/dragon-ball-z-kai.json, scripts/ingest/research/batch19/verify/b3-contradictions.md |  |
 | `R21` | {"file":"scripts/ingest/research/batch14/out/dragon-ball-z-kai.json","anchors":165} | batch-14 verdict applied as-curated | session 2026-08-23 · scripts/ingest/research/batch14/out/dragon-ball-z-kai.json |  |
 | `R21` | {"file":"scripts/ingest/research/batch15/out/dragon-ball-z-kai.json","anchors":6,"zoneAcks":0} | batch-15 verdict applied as-curated | session 2026-08-24 · scripts/ingest/research/batch15/out/dragon-ball-z-kai.json |  |
 | `A6` | {"episode":101} | A1 junk anchor (D4 triage): batch 15 used an anchor to carry a reader position across a filler episode — the facts re-verified, the instrument was wrong; A1 answers the fork batch 15 itself flagged | Sean 2026-08-25 · scripts/ingest/research/batch17/out2/dragon-ball-z-kai-a1.json, scripts/ingest/apply-research-batch-17.ts, §12.45 |  |
@@ -847,10 +897,12 @@
 | `I17` | {"to":"dragon-ball-z","kind":"remake"} | Kai is a superseding re-cut/re-adaptation of Z — remake (not an AniList concept, so the ruling overrides the auto kind). | session 2026-08-22 · docs/franchise-rulings.md |  |
 | `N7` | 11359 | B (medium): Kai special = ep 98; community-practice based — re-open if evidence emerges. | Sean 2026-08-23 |  |
 
-### durarara (4)
+### durarara (6)
 
 | rule | value | reason | ruled | retires when |
 |---|---|---|---|---|
+| `G53` | {"18":"2010-05-14","20":"2010-05-28","37":"2015-03-28","38":"2015-07-04"} | Batch 19 wave 2 lane B3 (ja-WP + en-WP / syoboi / fandom, 2+ sources per row; the contradictions verified R24; Sean ruled B3-7): ep 18: syoboi TID 1802 Count 18 = 2010-05-14 (the S1 run is an unbroken weekly Friday sequence); en-WP Durarara!! season 1: ep 18 'Out of Your Control' = 2010-05-14. Stored 2010 \| ep 20: syoboi TID 1802 Count 20 = 2010-05-28; en-WP: ep 20 'A New King Will Arise' = 2010-05-28. Stored 2010-05-20 is a Thursday, sits before ep 19's correct 05-21, and again ma \| ep 37: Under our ×2 offset (our row = en-WP overall + 1, verified at rows 36/39/40), row 37 is ×2 承 ep 12「郷に入っては郷に従え」/'Adversity Makes a Man Wise', which aired 2015-03-28: syobo \| ep 38: Row 38 is ×2 転 ep 1 'Love Thy Enemy', 2015-07-04: syoboi TID 3799 (転) first entry = 2015-07-04 23:30; en-WP Durarara!!×2 ep 37 = 2015-07-04. APPLY WITH THE TITLE SWAP. | Sean 2026-08-27 · scripts/ingest/research/batch19/out/airdates/durarara.json, https://cal.syoboi.jp/tid/1802, https://cal.syoboi.jp/tid/3625, https://cal.syoboi.jp/tid/3799, https://en.wikipedia.org/wiki/Durarara!!%C3%972, https://en.wikipedia.org/wiki/Durarara!!_season_1, scripts/ingest/research/batch19/verify/b3-contradictions.md |  |
+| `G53` | {"37":"Adversity Makes a Man Strong","38":"Love Thy Enemy"} | Rows 37 and 38 held each other's title AND date (AFL's own transposition, copied verbatim): our 37 = ×2 承 ep 12 郷に入っては郷に従え 'Adversity Makes a Man Wise/Strong' 2015-03-28 (syoboi TID 3625), our 38 = ×2 転 ep 1 'Love Thy Enemy' 2015-07-04 (syoboi TID 3799); en-WP overall list agrees. The AFL wording of the stored title is kept (titles are AFL-space). | Sean 2026-08-27 · scripts/ingest/research/batch19/out/airdates/durarara.json, scripts/ingest/research/batch19/verify/b3-contradictions.md |  |
 | `I39` | {"extras":[{"anilistId":8408,"kind":"special","label":"World at Peace (S1 DVD special)","after":6746,"rows":1}]} | Row 25 'World at Peace' 2011-02-23 = the second of AniList 8408 Durarara!! Specials (2010-08-25 → 2011-02-23); one numbered row (the 12.5 special is order-only). Batch 18 wave 3 found x2 Shou / Ten / Ketsu stored one row too low (25-36 / 37-48 / 49-60) with row 61 outside every component; the extra shifts them to 26-37 / 38-49 / 50-61 — confirmed by title (row 26 = x2 Shou #1, 2015-01-10). Format stays the ruled ova (T29). | Sean 2026-08-26 · https://anilist.co/anime/8408, scripts/ingest/research/batch18/out/durarara.json |  |
 | `T26` | [{"episodes":[25],"kind":"loose_parallel","note":"Records the tie without treating it as adaptation: the OVA gives Mairu Orihara, Kururi Orihara and Max Sand… | Batch 18 wave 3 (2026-08-26): filler + loose_parallel (medium). | Sean 2026-08-26 · scripts/ingest/research/batch18/out/durarara.json |  |
 | `T29` | {"25":"ova"} | Row 25 is the S1 OVA 天下泰平 (DVD 13, 2011-02-23) — batch 18 wave 3; the x2 Shou component starts one row late (structure task), so no component covers it. | Sean 2026-08-26 · scripts/ingest/research/batch18/out/durarara.json |  |
@@ -863,18 +915,20 @@
 | `R21` | {"file":"scripts/ingest/research/batch14/out/edens-zero.json","anchors":50} | batch-14 verdict applied as-curated | session 2026-08-23 · scripts/ingest/research/batch14/out/edens-zero.json |  |
 | `R21` | {"file":"scripts/ingest/research/batch15/out/edens-zero.json","anchors":1,"zoneAcks":0} | batch-15 verdict applied as-curated | session 2026-08-24 · scripts/ingest/research/batch15/out/edens-zero.json |  |
 
-### emma-a-victorian-romance (3)
+### emma-a-victorian-romance (4)
 
 | rule | value | reason | ruled | retires when |
 |---|---|---|---|---|
+| `A44` | [2] | No chapter is adapted: Kuga Maki's on-air review (spqr.hatenablog.com 2005-04-10) states 今回は原作に無いシナリオ構成をしていました; ch 2 眼鏡 (the failed glasses gift) appears in no ep-2 synopsis; the only manga-sourced element is Eleanor Campbell's debut, relocated from ch 7 (ep 6's stored END) — rearranged{7}. An END of 7 would claim chs 3-7 after two episodes; A12 forbids a relocated element setting a START. Typing stays canon (no second source; the loose-parallel reading of vol-1 material noted by the verifier) — a future typing pass with eps 4-5. | Sean 2026-08-27 · scripts/ingest/research/batch19/out/emma-a-victorian-romance.json, scripts/ingest/research/batch19/verify/b5c-ranma-bobobo-arms-emma.md |  |
 | `V6` | {"full":true,"rows":[{"volume":1,"chapter_start":1,"chapter_end":7},{"volume":2,"chapter_start":8,"chapter_end":14},{"volume":3,"chapter_start":15,"chapter_e… | no boundaries stored; mainline 52-chapter space over 7 volumes, agreed exactly by en-WP, ja-WP 目次 and fandom (verifier-confirmed; both final chapters are UNNUMBERED — casual counts read 51, the true count is 52) — FULL replace | session 2026-08-25 · scripts/ingest/research/batch17/out/emma-a-victorian-romance.json, scripts/ingest/apply-research-batch-17.ts, §12.50 |  |
 | `A43` | {"episodes":[19,20,21,22,23],"kind":"divergence","chapters":"38-46","note":"curated span correction (verifier 2026-08-25 — evidence supports 38-46, not 37-46… | curated span correction (verifier: evidence supports 38-46, not 37-46): the O'Donnell kidnapping (chs 38-43) and the American rescue (chs 44-46) are cut entirely and replaced by an invented Viscount-Campbell railway-financing conspiracy (ja-WP verbatim); interpolating these five episodes would place readers inside the unadapted block | session 2026-08-25 · scripts/ingest/research/batch17/out/emma-a-victorian-romance.json, scripts/ingest/apply-research-batch-17.ts, §12.50 |  |
 | `T6` | {"19":"mixed","20":"mixed","21":"mixed","22":"mixed","23":"mixed"} | Eps 19-23: the O'Donnell arc (chs 38-46) replaced by an invented conspiracy while the surrounding canon plays out → mixed. | Sean 2026-08-25 · scripts/ingest/research/batch17/out/emma-a-victorian-romance.json |  |
 
-### eyeshield-21 (9)
+### eyeshield-21 (10)
 
 | rule | value | reason | ruled | retires when |
 |---|---|---|---|---|
+| `A45` | {"episodes":[59,62],"kind":"rearranged"} | The batch-17 'eps 59,62 rearranged {120-121}: High Wave (ch 120) not revealed until ep 62' was refuted by Bandai Channel's official synopses: ep 59 unveils the High Wave (『ハイ・ウェーブ』 with 大平・大西 joining 筧) and takes its title from ch 121; ep 62 unveils the ULTIMATE 'POSEIDON' formation = ch 124 我の名はポセイドン (18 seconds left). en-WP's fan summary called the Poseidon Formation 'High Wave' (the four-linebacker variant — eyeshield21.fandom High_Wave) — the conflation the stored fact rested on. The Kyoshin game runs strictly forward: abridged{116-126} on 58-63. | Sean 2026-08-27 · scripts/ingest/research/batch19/out/eyeshield-21.json, scripts/ingest/research/batch19/verify/b5a-conan-eyeshield-kinnikuman.md, https://www.b-ch.com/titles/8777/059, https://www.b-ch.com/titles/8777/062 |  |
 | `A8` | {"episode":37,"field":"end_chapter"} | ep 37 cannot end at ch 79: the Death March arc is chs 72-88 ending at ep 36 (ch-88 page reverse-maps to ep 36); anchors the left edge of the wave-2 range | Sean 2026-08-25 · scripts/ingest/research/batch17/out/eyeshield-21.json, scripts/ingest/apply-research-batch-17.ts, §12.47 |  |
 | `A18` | reorder regime (batch 17 wave 2, Sean sign-off): documented relocations — Musashi's return (chs 141-142) moved from ep 70 to eps 82-83, ch 131 into ep 87, th… | Sean sign-off; documented relocations: Musashi's return (chs 141-142) moved from ep 70 to eps 82-83, ch 131 into ep 87, the 109/110 and 120/121 swaps, ch 99 backfilled at ep 49, ch 100 backfilled at ep 88 (first-time adaptation, anchored per the zatch-51 precedent) — every jump per-episode evidenced in the verdicts | Sean 2026-08-25 · scripts/ingest/research/batch17/out/eyeshield-21.json, scripts/ingest/research/batch17/out2/eyeshield-21-contested.json, scripts/ingest/apply-research-batch-17.ts, §12.47 |  |
 | `A3` | {"episode":37,"chapter":79,"volume":null,"source":"manual"} | American Death March arc end (ch 71-79/vol 9) — arc-level soft anchor. Wikipedia ch list + animefillerguide | session 2026-08-23 · scripts/ingest/apply-research-batch-6.ts |  |
@@ -884,6 +938,12 @@
 | `N2` | {"delete_episode":155,"delete_anchor":155,"series_patch":{"aired_episodes":145,"total_episodes":145}} | AFG's chart numbers its 145th row "155." — the extend path materialized it as a duplicate finale (no air date), the mu anime-end pin landed on it, totals floored to 155 and the UI synthesized 146-154 as pending. A lone-row overshoot is a typo: the real finale = row 145 (manual anchor ch 240 already stands). Durable guards: COMMUNITY_COUNT_OVERRIDES cap 145 + the EXTRAS_ADOPTED entry ("10 specials beyond 145") removed — its premise was this typo | Sean 2026-08-25 · scripts/ingest/apply-rulings-20260825b.ts, §12.49, §12.47 |  |
 | `N3` | {"cap":145,"note":"AFG's chart typos its finale row as \"155.\" (the page has 145 rows) — the cap keeps the phantom from re-entering via extend/expansion (Se… | AFG's chart typos its finale row as "155." while the page has 145 rows; the anime is 145 episodes on every real source. The cap keeps the phantom from re-entering via extend/expansion (the former EXTRAS_ADOPTED floor rationalized this typo — N2). | Sean 2026-08-25 · docs/data-pipeline.md §12.49 |  |
 | `T6` | {"39":"mixed","45":"filler","46":"filler","51":"filler","66":"mixed","74":"mixed","88":"mixed","89":"filler","90":"filler","91":"filler","92":"filler","93":"… | The import took AFG titles but never mapped its filler flag, so every row defaulted canon. Base verdict + contested re-research; the 19-block verified per-episode AND double-sourced via ja-WP's 備考 column. 45/46 exhibition, 89-95 Cream Puff Cup, 96 recap, 97-105 Death Game (101 EXCLUDED — canon island chs 168-169), 108 whodunnit, 51 fake-Eyeshield, 109/110 (relocation hypothesis REFUTED on content) → filler. 39 recap + canon scene, 66 ch-133 tag, 88 ch-100 4-koma intervals in original framing (wiki states mixed outright), 74 ch-150 content in a flagged-original episode → mixed. | Sean 2026-08-25 · scripts/ingest/research/batch17/out/eyeshield-21.json, scripts/ingest/research/batch17/out2/eyeshield-21-contested.json |  |
+
+### f-zero-gp-legend (1)
+
+| rule | value | reason | ruled | retires when |
+|---|---|---|---|---|
+| `G54` | all | Our episode numbering follows the English 4Kids broadcast order, which reordered a block of the Japanese run, while air_date is the Japanese TV Tokyo first broadcast (weekly Tuesday 18:00): EN6=JP9 (2003-12-02), EN9=JP10, EN10=JP12, EN11=JP13 (2004-01-06), EN12=JP11, EN13=JP6 (2003-11-11) per fzero.fandom's JP/EN fields, confirmed on TVmaze's Japanese-order list. Every stored date in rows 5-15 is correct for its title. Join any Japanese source by TITLE, never number. | Sean 2026-08-27 · scripts/ingest/research/batch19/out/airdates/f-zero-gp-legend.json, scripts/ingest/research/batch19/verify/b3-contradictions.md |  |
 
 ### fairy-tail (2)
 
@@ -898,7 +958,7 @@
 |---|---|---|---|---|
 | `I17` | {"to":"fairy-tail","kind":"sequel"} | Fairy Tail (2009+2014+Final) is ONE series; 100 Years Quest is a separate sequel series. | session 2026-08-22 · docs/franchise-rulings.md "Fairy Tail" |  |
 
-### fate-kaleid-liner-prisma-illya (4)
+### fate-kaleid-liner-prisma-illya (5)
 
 | rule | value | reason | ruled | retires when |
 |---|---|---|---|---|
@@ -906,6 +966,7 @@
 | `N3` | {"anilistId":18851,"start":11,"end":11,"action":"numbered → order-only (rows deleted, later rows/anchors/annotations shift down)","fractional":{"position":10… | Undoukai DE Dance = mid-run bonus OVA the community numbering excludes (Sean sign-off 2026-08-23) | Sean 2026-08-23 · scripts/ingest/apply-research-batch-7.ts, docs/changelog.md §12.23 |  |
 | `G37` | multi-manga entry pending the D2 split — the MU pin conflates S1's first-manga completion onto the 3rei!!-adapting movie episode | The entry's seasons adapt THREE different manga (S1 eps 1-10 = the 1st series' 14-chapter space, 2wei!/Herz!, 3rei!!) but the entry holds ONE chapter space. MU's "Vol 2, Chap 14" states S1's completion of the FIRST manga; the run-end assumption would land it on ep 42 — the movie, which adapts 3rei!! 29-39. The scope-consumed check misses it by one chapter (research ENDs stop at 13; 14 is the unadapted epilogue), so no structural gate can refuse the pin. | Sean 2026-08-24 | D2 lands (Clear-Card-style scoped entries split the multi-manga run) |
 | `N11` | {"drop":[11],"shifts":[{"from":12,"offset":-1}]} | Queue-2 Group C demotion: the Undoukai DE Dance bonus AFL numbers as 11 is order-only in the community count; the row drops and later AFL rows shift down by one. | Sean 2026-08-23 |  |
+| `T29` | {"position":10.5,"record":{"kind":"ova","anilistId":18851}} | AniList 18851 'Undoukai DE Dance!' format=OVA, 1 ep, 2014-03-07. No en-WP video infobox exists for it (the franchise article lists only the TV seasons, the two films and Prisma Phantasm). | Sean 2026-08-27 · scripts/ingest/research/batch19/out/watch-order-kinds.json, https://anilist.co/anime/18851 |  |
 
 ### fate-stay-night-unlimited-blade-works (2)
 
@@ -996,6 +1057,12 @@
 | `A43` | {"episodes":[19,20,21,22,23],"kind":"rearranged","chapters":"44-58 interleaved","asterisk_review":"pending (if unset)"} | Autumn Election prelims non-linear (presentations reordered); converges at ep 24 = 58-60 | session 2026-08-23 · scripts/ingest/apply-research-batch-9.ts, docs/changelog.md §12.26, session scratchpad batch9/food-wars.json |  |
 | `C9` | {"episode":73,"continue_chapter":265} | S4 finale montage super-condenses 265-276 — read from 265 despite the credits coverage | Sean 2026-08-23 · scripts/ingest/apply-continue-points.ts, docs/changelog.md §12.27, batch 9 verdict (food-wars) | C9 superseded by C2/C3 (b17 continue point = next episode's start, skips noted) — each value stands only where it equals anime parity; re-derive under C2/C3 |
 
+### fruits-basket (1)
+
+| rule | value | reason | ruled | retires when |
+|---|---|---|---|---|
+| `G53` | {"8":"2001-08-23"} | Batch 19 wave 2 lane B3 (ja-WP + en-WP / syoboi / fandom, 2+ sources per row; the contradictions verified R24; Sean ruled B3-7): ep 8: syoboi TID 213 Count 8 = 2001-08-23 18:00 (TV Tokyo), inside an unbroken weekly Thursday sequence 2001-07-05 onward; en-WP Fruits Basket (2001 TV series): ep 8 "Don't Cry | Sean 2026-08-27 · scripts/ingest/research/batch19/out/airdates/fruits-basket.json, https://cal.syoboi.jp/tid/213, https://en.wikipedia.org/wiki/Fruits_Basket_(2001_TV_series) |  |
+
 ### fruits-basket-2019 (1)
 
 | rule | value | reason | ruled | retires when |
@@ -1024,12 +1091,22 @@
 |---|---|---|---|---|
 | `A1` | {"episode":26} | ep 26 is anime-original filler (A1: filler rows never take anchors) and the stored ch-280/v25 value is the Gantz:O MOVIE endpoint — wrong instrument on a forbidden row | session 2026-08-24 · scripts/ingest/research/batch17/out/gantz.json, scripts/ingest/apply-research-batch-17.ts, §12.42 |  |
 
-### ghost-in-the-shell-stand-alone-complex (2)
+### ghost-in-the-shell-arise-alternative-architecture (2)
 
 | rule | value | reason | ruled | retires when |
 |---|---|---|---|---|
+| `T25` | original | Alternative Architecture's source is the anime itself: eps 1-8 are a broadcast re-edit of the four 2013-14 Arise theatrical parts (ja-WP 各話リスト's 「オリジナル版エピソード出典」 column: #01-02 → border:4, #03-04 → border:1, #05-06 → border:2, #07-08 → border:3; the official site's INTRODUCTION 再編集 / 冲方丁による初期案 verbatim) and eps 9-10 PYROPHORIC CULT are 完全新作エピソード bridging into 新劇場版. Shirow's 攻殻機動隊 (AniList 31023, 11 ch / 1 vol) draws ADAPTATION edges to the 1995 film, S.A.C., Innocence and the 2026 TV — never to any Arise entry; AA (21056) is source OTHER with NO adaptation edge (ALTERNATIVE → the four films, SEQUEL → 21057). ja-WP's lead prints 「原作は士郎正宗の漫画」 — a franchise credit, not an adaptation (ja-WP itself calls Arise 「第4の攻殻」); Sleepless Eye (78321) is the project's comicalization (T21 direction). `original` per the outlaw-star precedent; a re-cut is the same work. Rides with the T6 retype of 9-10 to canon (EPISODE_TYPE_OVERRIDES) in the same apply — AFL classes them plain Filler, and nothing mechanical would flag it. | Sean 2026-08-27 · scripts/ingest/research/batch19/out/ghost-in-the-shell-arise-alternative-architecture.json, scripts/ingest/research/batch19/verify/ghost-in-the-shell-arise-alternative-architecture.md, https://ja.wikipedia.org/wiki/攻殻機動隊ARISE, https://anilist.co/anime/21056 |  |
+| `T6` | {"9":"canon","10":"canon"} | Rides with the T25 `original` ruling (B2-3): under `original` the anime IS the source, and eps 9-10 PYROPHORIC CULT are 完全新作エピソード of the same production (ja-WP 新作エピソード table, 脚本 藤咲淳一; the official site's INTRODUCTION 新劇場版へとつながる; AV Watch 2015-04-06 「新作は話数としては9話と10話にあたり…前日譚」) that lead into 新劇場版 — story episodes of the source → canon, the outlaw-star shape. AFL classes them plain Filler (no anime-only-canon row), so nothing mechanical would retype them: this entry IS the retype (P8). No annotation — no source is overridden (T26). | Sean 2026-08-27 · scripts/ingest/research/batch19/out/ghost-in-the-shell-arise-alternative-architecture.json, scripts/ingest/research/batch19/verify/ghost-in-the-shell-arise-alternative-architecture.md |  |
+
+### ghost-in-the-shell-stand-alone-complex (5)
+
+| rule | value | reason | ruled | retires when |
+|---|---|---|---|---|
+| `G53` | {"50":"2004-12-04"} | Batch 19 wave 2 lane B3 (ja-WP + en-WP / syoboi / fandom, 2+ sources per row; the contradictions verified R24; Sean ruled B3-7): ep 50: en-WP List of Ghost in the Shell: Stand Alone Complex episodes: overall ep 50 / 2nd GIG ep 24 'IN: Aerial Bombing of Dejima – NUCLEAR POWER' = 2004-12-04, paired with ep | Sean 2026-08-27 · scripts/ingest/research/batch19/out/airdates/ghost-in-the-shell-stand-alone-complex.json, https://en.wikipedia.org/wiki/List_of_Ghost_in_the_Shell:_Stand_Alone_Complex_episodes, https://ja.wikipedia.org/wiki/%E6%94%BB%E6%AE%BB%E6%A9%9F%E5%8B%95%E9%9A%8A_S.A.C._2nd_GIG, scripts/ingest/research/batch19/verify/b3-contradictions.md |  |
+| `G54` | [46,48,50,52] | 2nd GIG's PPV first run aired in monthly PAIRS (ja-WP 月2話ずつ), so rows 45/46, 47/48, 49/50 and 51/52 legitimately carry IDENTICAL dates (en-WP pairs; row 50's 2004-12-04 forced structurally, G53). Ties, not regressions — recorded so no pass re-asks. | Sean 2026-08-27 · scripts/ingest/research/batch19/out/airdates/ghost-in-the-shell-stand-alone-complex.json, scripts/ingest/research/batch19/verify/b3-contradictions.md |  |
 | `N4` | {"anilistId":1566,"start":53,"end":53,"action":"numbered → order-only (rows deleted, later rows/anchors/annotations shift down)","fractional":{"position":52.… | Solid State Society is a FILM — movies are order-only unless community-numbered (Initial D rule; Sean sign-off 2026-08-23) | Sean 2026-08-23 · scripts/ingest/apply-research-batch-7.ts, docs/changelog.md §12.23 |  |
 | `N11` | {"drop":[53],"shifts":[]} | Queue-2 Group C demotion: Solid State Society is a FILM (movies are order-only unless community-numbered); AFL numbers it as 53, so the row drops — trailing, no shift. | Sean 2026-08-23 |  |
+| `T29` | {"position":52.5,"record":{"kind":"special","anilistId":1566}} | AniList 1566 format=SPECIAL, 108 min, 2006-09-01; our stored component kind for 1566 is also [special]. DISAGREEMENT: en-WP calls it 'a 2006 Japanese anime science fiction television film' and Sean's stored order-only ruling reasons from the movies rule ('is a FILM'). Kept as `special` so the AniList format and the stored component kind are not contradicted — see flags. | Sean 2026-08-27 · scripts/ingest/research/batch19/out/watch-order-kinds.json, https://anilist.co/anime/1566, https://en.wikipedia.org/wiki/Ghost_in_the_Shell:_Stand_Alone_Complex_%E2%80%93_Solid_State_Society |  |
 
 ### gintama (3)
 
@@ -1045,10 +1122,12 @@
 |---|---|---|---|---|
 | `T6` | {"4":"canon"} | Batch 18 wave 3 (2026-08-26): AFL's lone 'anime canon' in a 12-for-12 linear adaptation is a mislabel — ep 4 = 写真 (ch 9) + 寺院 (ch 10), fandom both directions + ja-WP titles + MangaDex → canon (research anchor later; MangaDex's EN feed omits ch 11 — off by one from there). | Sean 2026-08-26 · scripts/ingest/research/batch18/out/girls-last-tour.json |  |
 
-### golden-kamuy (14)
+### golden-kamuy (20)
 
 | rule | value | reason | ruled | retires when |
 |---|---|---|---|---|
+| `G53` | {"45":"2023-05-29","46":"2023-06-05"} | Batch 19 wave 2 lane B3 (ja-WP + en-WP / syoboi / fandom, 2+ sources per row; the contradictions verified R24; Sean ruled B3-7): ep 45: ja-WP ゴールデンカムイ 各話リスト: 第四十五話「共犯」Aux5 = 5月29日 (2023); en-WP Golden Kamuy season 4: EpisodeNumber 45 / season ep 9 'Partner in Crime' = 2023-05-29. The stored 2023-06-20 is \| ep 46: ja-WP: 第四十六話「完璧な母」= 6月5日; en-WP Golden Kamuy season 4: EpisodeNumber 46 / season ep 10 'Perfect Mother' = 2023-06-05. Stored 2023-06-27 is ゴールデン道画劇場 #46「メンコ編」's delivery | Sean 2026-08-27 · scripts/ingest/research/batch19/out/airdates/golden-kamuy.json, https://en.wikipedia.org/wiki/Golden_Kamuy_season_4, https://ja.wikipedia.org/wiki/%E3%82%B4%E3%83%BC%E3%83%AB%E3%83%87%E3%83%B3%E3%82%AB%E3%83%A0%E3%82%A4, scripts/ingest/research/batch19/verify/b3-contradictions.md |  |
+| `G53` | {"45":"Partner in Crime","46":"Perfect Mother"} | Rows 45/46 held the titles AND dates of two ゴールデン道画劇場 web shorts ('Shoot and stop! Episode' 2023-06-20 / 'Menko Episode' 06-27) — en-WP's 'List of Golden Kamuy episodes' carries a second {{Episode list}} block under '== Golden Dōga Gekijō ==' whose numbers 1-46 collide with the TV numbers (the scraper trap; verifier: our stored strings are that block's rows 45/46 verbatim). The TV episodes: 第四十五話「共犯」'Partner in Crime' 2023-05-29, 第四十六話「完璧な母」'Perfect Mother' 2023-06-05 (ja-WP + en-WP season 4). | Sean 2026-08-27 · scripts/ingest/research/batch19/out/airdates/golden-kamuy.json, scripts/ingest/research/batch19/verify/b3-contradictions.md, https://en.wikipedia.org/wiki/Golden_Kamuy_season_4 |  |
 | `A3` | {"episode":5,"chapter":21,"start_chapter":18,"chapters_adapted":"18-21","volume":3,"source":"manual","note":"research-tier batch 12 (2026-08-23, agent-verifi… | Escape King arc end — MEDIUM (arc-span interpolation). fandom Story_Arcs + Chapter_21/22 | session 2026-08-23 · scripts/ingest/apply-research-batch-12.ts, scratchpad batch12/golden-kamuy.json (session scratchpad, not on disk), docs/changelog.md §12.31 |  |
 | `A3` | {"episode":10,"chapter":49,"start_chapter":44,"chapters_adapted":"44-49","volume":6,"source":"manual","note":"research-tier batch 12 (2026-08-23, agent-verif… | Kazuo Henmi arc end; ep title = ch 49 'Companion'. fandom + Chapter_49/50 | session 2026-08-23 · scripts/ingest/apply-research-batch-12.ts, scratchpad batch12/golden-kamuy.json (session scratchpad, not on disk), docs/changelog.md §12.31 |  |
 | `A3` | {"episode":12,"chapter":62,"start_chapter":55,"chapters_adapted":"55-62 rearranged (56-59 → OVA 1; 63-69 → OVA 3)","volume":7,"source":"manual","note":"resea… | S1 finale — S1 = vols 1-7 chs 1-62. Wikipedia S1 + fandom | session 2026-08-23 · scripts/ingest/apply-research-batch-12.ts, scratchpad batch12/golden-kamuy.json (session scratchpad, not on disk), docs/changelog.md §12.31 |  |
@@ -1063,11 +1142,16 @@
 | `R12` | {"episode":21,"field":"chapters_adapted"} | precision: opens finishing 118 p.16-18 + 119 fragments before 120-124; end/start/vol unchanged | session 2026-08-24 · scripts/ingest/research/batch15/out/golden-kamuy.json, scripts/ingest/apply-research-batch-15.ts#REPAIRS_APPROVED |  |
 | `R21` | {"file":"scripts/ingest/research/batch15/out/golden-kamuy.json","anchors":7,"zoneAcks":0} | batch-15 verdict applied as-curated | session 2026-08-24 · scripts/ingest/research/batch15/out/golden-kamuy.json |  |
 | `I27` | {"ids":[99699,102977,110355,142343,166521],"extras":[{"id":101830,"after":99699},{"id":124756,"after":102977},{"id":194872,"after":142343}],"ruledExtent":"AF… | AFL-lag class: AFL page = S1+S2 (24); S3 (2020, our 25-36) + S4 (2022, our 37-49) + Final Season (Jan-Mar 2026, our 50-62 → ch 302, NOT the manga end: Bousou Ressha-hen 210073 will adapt 303-314) — flag #856. OVA 1 (101830: chs 55 part-59 + 32), OVAs 2/3/4 (124756: 83-85+104 / 63-69 / 108-113) and OVA 5 (194872: 102, 104-107, 228) are order-only per batch 14. Sapporo Beer Koujou-hen films (196115) = recut of eps 50-55, excluded. | session 2026-08-23 · ingest_flags #856, docs/data-pipeline.md §12 batch 14 | Bousou Ressha-hen (210073) airs — chain gains an id |
+| `T29` | {"position":12.1,"record":{"kind":"ova","anilistId":101830}} | AniList 101830 'Golden Kamuy OVA' format=OVA, 1 ep, 2018-09-19 (bundled with manga vol 15, per the stored note). | Sean 2026-08-27 · scripts/ingest/research/batch19/out/watch-order-kinds.json, https://anilist.co/anime/101830 |  |
+| `T29` | {"position":24.2,"record":{"kind":"ova","anilistId":124756}} | AniList 124756 'Golden Kamuy 2nd Season OVA' format=OVA, 3 eps, 2019-03-19 to 2020-09-18 — the three segments the entry bundles (OVA 2, 3, 4). | Sean 2026-08-27 · scripts/ingest/research/batch19/out/watch-order-kinds.json, https://anilist.co/anime/124756 |  |
+| `T29` | {"position":49.3,"record":{"kind":"ova","anilistId":194872}} | AniList 194872 'Golden Kamuy: Inazuma Goutou to Mamushi no Ogin/Shimaenaga' format=OVA, 1 ep, 2025-10-17 = the entry's stated date. | Sean 2026-08-27 · scripts/ingest/research/batch19/out/watch-order-kinds.json, https://anilist.co/anime/194872 |  |
+| `T29` | {"position":49.4,"record":{"kind":"movie","anilistId":196115}} | AniList 196115 'Golden Kamuy: Sapporo Beer Koujou-hen' format=MOVIE, 2 parts, 68 min, startDate 2025-10-10 = the entry's stated 前編 date (後編 2025-10-31). | Sean 2026-08-27 · scripts/ingest/research/batch19/out/watch-order-kinds.json, https://anilist.co/anime/196115 |  |
 
-### gto-great-teacher-onizuka (37)
+### gto-great-teacher-onizuka (38)
 
 | rule | value | reason | ruled | retires when |
 |---|---|---|---|---|
+| `G53` | {"31":"2000-05-07"} | Batch 19 wave 2 lane B3 (ja-WP + en-WP / syoboi / fandom, 2+ sources per row; the contradictions verified R24; Sean ruled B3-7): ep 31: ja-WP GTO (漫画) 各話リスト: Lesson31「目指せ!! 憧れの沖縄行路」Aux4 = 5月7日 (Lesson30 = 4月30日, Lesson32 = 5月14日); en-WP List of Great Teacher Onizuka episodes: EpisodeNumber 31 'Destination | Sean 2026-08-27 · scripts/ingest/research/batch19/out/airdates/gto-great-teacher-onizuka.json, https://en.wikipedia.org/wiki/List_of_Great_Teacher_Onizuka_episodes, https://ja.wikipedia.org/wiki/GTO_(%E6%BC%AB%E7%94%BB) |  |
 | `T26` | [{"episodes":[27],"kind":"side_story","chapters":"GTO (Great Toroko Oppai) Scenes 1-7 (vols 11-12)","note":"Adapts the GTO (ぐれえと・とろこ・おっぱい) / 'Great Toroko Op… | Batch 18 wave 2 (2026-08-26), verified R24, Sean ruled: ep 27 MIXED — it adapts the Toroko Oppai side story Fujisawa serialized INSIDE GTO (Comic Days feed: Scenes 1-3 between Lesson 92/93, 4-7 between 97/98) — the side story IS the source (T28: an omake that is the episode's plot counts), never side_source; no anchor (Scenes have no Lesson number). 25-26 filler + loose_parallel (a character loan from Shonan Junai Gumi, not an adaptation; re-open if SJG proves to contain an Eikichi-vs-Kadena race). 22/23/24/28/34/42-43 filler; no adoption (Fujisawa 原作 + a voice cameo). | Sean 2026-08-26 · scripts/ingest/research/batch18/out/gto-great-teacher-onizuka.json, scripts/ingest/research/batch18/verify/gto.md, https://comic-days.com/atom/series/10834108156636906135 |  |
 | `T26` | [{"episodes":[25,26],"kind":"side_source","note":"Adapts Shonan Junai Gumi! (Tohru Fujisawa, Weekly Shonen Magazine / Kodansha, 267 ch / 31 vols) — the 'Last… | Batch 19 wave 1 (2026-08-26), verified R24 against five sources incl. Kodansha's own vol-27 product page, Sean ruled: 25-26 CANON + side_source — SJG DOES contain the Eikichi-vs-Kadena race as a nine-chapter story, so the batch-18 ruling's own reopen clause fires; carved out of the A-7 block. Both rows anchor-hostile (another work's chapter space). No GTO Lesson consumed; the ep 21 → 70 / continue 75 chain stands. | Sean 2026-08-26 · scripts/ingest/research/batch19/out/gto-great-teacher-onizuka.json, scripts/ingest/research/batch19/verify/gto.md, https://kodansha.co.jp/comic/products/0000004454 |  |
 | `T26` | [{"episodes":[22,23,24,27,28,34,42,43],"kind":"divergence","note":"A-7 studio-ending class — RULED FILLER, batch 18 wave 2 (2026-08-26, verified R24): no aut… | T4.0 D-10 parked the A-7 studio-ending class as filler + asterisk on the review list; batch 18 wave 2 RULED it (2026-08-26): every A-7 ending stays filler + divergence — the authors hold 原作 credits only, three mangas printed their own endings, none is carried forward. | Sean 2026-08-26 · docs/restructure/T4-GLOSSARY.md §3, docs/restructure/DRIFT-LIST.md A-7 |  |
@@ -1106,10 +1190,11 @@
 | `A3` | {"episode":40,"chapter":102,"start_chapter":102,"chapters_adapted":"102 + 107 (graft)","volume":13,"source":"manual"} | graft from vol 14 — END stays 102; do not advance past 106 | session 2026-08-23 · scripts/ingest/apply-rearranged-anchors.ts, docs/changelog.md §12.32, batch-11 verdict (gto-great-teacher-onizuka) |  |
 | `T6` | {"22":"filler","23":"filler","24":"filler","25":"canon","26":"canon","27":"mixed","28":"filler","34":"filler","42":"filler","43":"filler"} | Anime-original mid-series block (22-28, 34) + the original ending 42-43 (caught up to the manga) — fandom infoboxes list Manga Chapter(s) = N/A; mangashed + wheredoestheanimeleaveoff call 42-43 non-canon (research batch 11). Contrary to the later T11 class; parked under A-7. T4.3 (T27, 2026-08-26): anime-only-canon → filler (adheres to no source; the studio-ending class A-7 carries a divergence annotation and stays on the review list — twin-star 21-50 explicitly, T4-GLOSSARY §7). | session 2026-08-23 |  |
 
-### haikyu (33)
+### haikyu (34)
 
 | rule | value | reason | ruled | retires when |
 |---|---|---|---|---|
+| `G54` | [61,62,63] | Rows 61-62 are the two never-broadcast OVAs 陸VS空 / ボールの"道" (ja-WP Number = OVA, 放送日 -; BD 2020-01-22) placed between seasons 3 and 4 in our row order and carrying their home-video date, so S4 ep 1 (row 63, 2020-01-10 in the stored nominal-Friday convention) regresses against them. Real order, not a typo; the release date stays (Sean: ack, not NULL). | Sean 2026-08-27 · scripts/ingest/research/batch19/out/airdates/haikyu.json, scripts/ingest/research/batch19/verify/b3-contradictions.md |  |
 | `A3` | {"episode":85,"chapter":292,"volume":33,"source":"manual"} | S4 end = Ch 292 "The Same Old Night Never Comes Again". Wikipedia + wheredoestheanimeleaveoff.com + haikyuu.fandom.com | Sean 2026-08-24 · scripts/ingest/apply-research-batch.ts | OVERTAKEN 2026-08-23 — the ep-85 row was converted to OUR numbering (ep 87, +2 for the Riku vs Kuu OVA; batch 7 bookmark closure, N14 Haikyu ep-85 lesson) |
 | `G3` | {"flags":"open → confirmed","verdict":"research-tier frontier applied as manual anchor (sources in anchor note); Sean sign-off 2026-08-24"} | open ingest_flags closed with verdict: research-tier frontier applied as manual anchor (sources in anchor note); Sean sign-off 2026-08-24 | Sean 2026-08-24 · scripts/ingest/apply-research-batch.ts |  |
 | `R21` | {"file":"scripts/ingest/research/batch15/out/haikyu.json","anchors":9,"zoneAcks":0} | batch-15 verdict applied as-curated | session 2026-08-24 · scripts/ingest/research/batch15/out/haikyu.json |  |
@@ -1144,7 +1229,7 @@
 | `A10` | {"episode":74,"start_chapter":243} | 243-246 (span opens on a whole chapter — sliver and majority rules agree) | Sean 2026-08-23 · scripts/ingest/apply-start-chapters.ts, docs/changelog.md §12.27, batch 9 verdict (haikyu) | RETIRED 2026-08-26 — batch 19 E3 (§12.67): lib/sliver.ts re-derived all 27 under A10 and every seed STANDS; the seeding comments became chapters_adapted on Sean's signature (start_without_span 0) |
 | `N7` | 111790 | A (high): Riku vs Kuu OVA = eps 61-62 — our conversion ruling; community counts it. | Sean 2026-08-23 |  |
 
-### hajime-no-ippo-the-fighting (19)
+### hajime-no-ippo-the-fighting (21)
 
 | rule | value | reason | ruled | retires when |
 |---|---|---|---|---|
@@ -1167,6 +1252,8 @@
 | `A2` | {"episode":76,"excluded":true} | Boxer's Fist DVD special adapts only ch 383 p.4-5 (2-page gag) — anchoring END 383 at run position ~270 breaks the curve (sliver-rule spirit: scraps never set position); annotation carries the sliver — encoding decision for Sean | session 2026-08-24 · scripts/ingest/research/batch15/out/hajime-no-ippo-the-fighting.json, scripts/ingest/apply-research-batch-15.ts#EXCLUDED_ANCHORS | OVERTAKEN 2026-08-26 — T28: a sliver inside an original plot is filler + partial/graft annotation, never mixed |
 | `R21` | {"file":"scripts/ingest/research/batch15/out/hajime-no-ippo-the-fighting.json","anchors":6,"zoneAcks":0} | batch-15 verdict applied as-curated | session 2026-08-24 · scripts/ingest/research/batch15/out/hajime-no-ippo-the-fighting.json |  |
 | `N7` | 12069 | Boxer's Fist = community ep 76; counted. | session 2026-08-24 |  |
+| `T29` | {"position":76.3,"record":{"kind":"ova","anilistId":265}} | AniList 265 'Mashiba vs Kimura - Shikei Shikkou' format=OVA, 61 min, 2003-09-05. en-WP Hajime no Ippo infobox: type=ova, released September 5, 2003. | Sean 2026-08-27 · scripts/ingest/research/batch19/out/watch-order-kinds.json, https://anilist.co/anime/265, https://en.wikipedia.org/wiki/Hajime_no_Ippo |  |
+| `T29` | {"position":76.6,"record":{"kind":"special","anilistId":264}} | AniList 264 'Champion Road' format=SPECIAL, 90 min, 2003-04-18; our stored component kind for 264 is also [special]. DISAGREEMENT: en-WP infobox says type=tv film (network Nippon TV, released April 18, 2003) — `movie` is defensible; kept `special` to match AniList + the stored component kind. See flags. | Sean 2026-08-27 · scripts/ingest/research/batch19/out/watch-order-kinds.json, https://anilist.co/anime/264, https://en.wikipedia.org/wiki/Hajime_no_Ippo |  |
 
 ### hanamonogatari (1)
 
@@ -1191,10 +1278,11 @@
 | `N7` | 9790 | A (high): Clockwork Angeloid film = ep 26, canon continuation. [E4 2026-08-26: row 27 since the numbered S1 OVA (7858, AFL ep 14) took its structure row under I39 — the review stands, the number was one row stale.] | Sean 2026-08-23 |  |
 | `N7` | 12783 | A (high): Final film = ep 27, canon conclusion. [E4 2026-08-26: row 28 — see 9790.] | Sean 2026-08-23 |  |
 
-### hell-girl (1)
+### hell-girl (2)
 
 | rule | value | reason | ruled | retires when |
 |---|---|---|---|---|
+| `G53` | {"39":"2007-01-06","40":"2007-01-13","63":"2008-12-13"} | Batch 19 wave 2 lane B3 (ja-WP + en-WP / syoboi / fandom, 2+ sources per row; the contradictions verified R24; Sean ruled B3-7): ep 39: Row 39 = 地獄少女 二籠 ep 13 'Tragedy of the V' (Vの惨劇). syoboi TID 1022 Count 13 = 2007-01-06 19:30; en-WP List of Hell Girl episodes, season 2 ep 13 = 2007-01-06. The 二籠 run w \| ep 40: Row 40 = 二籠 ep 14 'The Peaceful Lakeshore' (静かな湖畔). syoboi TID 1022 Count 14 = 2007-01-13; en-WP season 2 ep 14 = 2007-01-13. Same month-digit corruption as row 39. \| ep 63: Row 63 = 地獄少女 三鼎 ep 11 'Blotted Paper' (滲んだ頁). syoboi TID 1460 Count 11 = 2008-12-13; en-WP season 3 ep 11 = 2008-12-13. 2008-12-23 is a Tuesday and the 三鼎 run was weekly | Sean 2026-08-27 · scripts/ingest/research/batch19/out/airdates/hell-girl.json, https://cal.syoboi.jp/tid/1022, https://cal.syoboi.jp/tid/1460, https://en.wikipedia.org/wiki/List_of_Hell_Girl_episodes |  |
 | `I24` | {"ids":[228,1594,3713,98379]} | UNRECORDED — assisted-batch explicit chain (four Hell Girl seasons); a case the relation walker could not derive, per-series detail not written down. | session 2026-08-22 |  |
 
 ### hellsing (1)
@@ -1287,10 +1375,12 @@
 | `A43` | {"episodes":[87],"kind":"partial","chapters":"197","asterisk_review":"pending (if unset)"} | re-adapts ch 197 pp.12-13 as flashback; linear adaptation is ep 84 | session 2026-08-23 · scripts/ingest/apply-research-batch-8.ts, docs/changelog.md §12.25, session scratchpad batch8/hunter-x-hunter-2011.json |  |
 | `A43` | {"episodes":[96,97],"kind":"rearranged","chapters":"224-229","asterisk_review":"pending (if unset)"} | Zazan side story: 225-227 in both eps; anchor at block end only | session 2026-08-23 · scripts/ingest/apply-research-batch-8.ts, docs/changelog.md §12.25, session scratchpad batch8/hunter-x-hunter-2011.json |  |
 
-### initial-d (1)
+### initial-d (3)
 
 | rule | value | reason | ruled | retires when |
 |---|---|---|---|---|
+| `G53` | {"46":"2004-08-21","47":"2004-10-15"} | Batch 19 wave 2 lane B3 (ja-WP + en-WP / syoboi / fandom, 2+ sources per row; the contradictions verified R24; Sean ruled B3-7): ep 46: Row 46 = Fourth Stage ACT.6「ブラインド・アタック」. ja-WP 頭文字D 各話リスト prints ACT.5 and ACT.6 under one rowspan'd 8月21日 (2004); en-WP List of Initial D episodes gives ACT.6 'Blind Att \| ep 47: Row 47 = ACT.7「嵐のハチゴーターボ」. ja-WP: ACT.7 and ACT.8 share the rowspan'd 10月15日; en-WP: ACT.7 'The Stormy 85 Turbo' = 2004-10-15. APPLY WITH THE TITLE ROTATION. | Sean 2026-08-27 · scripts/ingest/research/batch19/out/airdates/initial-d.json, https://en.wikipedia.org/wiki/List_of_Initial_D_episodes, https://ja.wikipedia.org/wiki/%E9%A0%AD%E6%96%87%E5%AD%97D, scripts/ingest/research/batch19/verify/b3-contradictions.md |  |
+| `G53` | {"46":"Blind Attack","47":"The 85's Raging Turbo","48":"Fateful Battle of the FDs"} | A 3-cycle at rows 46-48 (AFL's own ordering, inherited): ja-WP prints ACT.5+6 under one rowspan'd 8月21日 (2004) and ACT.7+8 under 10月15日, ACT.9 12月17日; en-WP agrees. Correct: 46 = ACT.6 'Blind Attack' 08-21, 47 = ACT.7 'The Stormy 85 Turbo' (AFL wording kept) 10-15, 48 = ACT.8 'Fateful Battle of the FDs' 10-15 (row 48's date was already right; only its title moves). Fourth Stage aired two ACTs per date — equal consecutive dates in 41-64 are correct. | Sean 2026-08-27 · scripts/ingest/research/batch19/out/airdates/initial-d.json, scripts/ingest/research/batch19/verify/b3-contradictions.md |  |
 | `N7` | 187 | Third Stage (a movie mid-sequence) = AFL's ep 40 — the founding precedent: it carries mainline plot and AFL numbers it (movies count only when numbered, N4). | session 2026-08-24 · docs/franchise-rulings.md "Initial D" |  |
 
 ### inuyasha (16)
@@ -1319,6 +1409,12 @@
 | rule | value | reason | ruled | retires when |
 |---|---|---|---|---|
 | `I17` | {"to":"it-wrong-try-pick-girls-dungeon","kind":"side_story"} | DanMachi main = ONE series; Sword Oratoria is the same events from another POV — side_story. | session 2026-08-22 · docs/franchise-rulings.md "DanMachi" |  |
+
+### jojos-bizarre-adventure (1)
+
+| rule | value | reason | ruled | retires when |
+|---|---|---|---|---|
+| `G53` | {"35":"2014-05-30","45":"2014-08-08"} | Batch 19 wave 2 lane B3 (ja-WP + en-WP / syoboi / fandom, 2+ sources per row; the contradictions verified R24; Sean ruled B3-7): ep 35: Ep 35 = Stardust Crusaders ep 9 'Yellow Temperance' / 黄の節制, first broadcast Tokyo MX 2014-05-30 24:30 (listed as 5月31日 / May 31 on ja-WP and en-WP, i.e. 2014-05-30 in thi \| ep 45: Ep 45 = SC ep 19 'Death Thirteen, Part 1' / 死神13 その1, first broadcast 2014-08-08 24:30 (ja-WP 8月9日, en-WP August 9 => 2014-08-08 stored convention). Stored 2014-08-28 is | Sean 2026-08-27 · scripts/ingest/research/batch19/out/airdates/jojos-bizarre-adventure.json, https://en.wikipedia.org/wiki/JoJo%27s_Bizarre_Adventure:_Stardust_Crusaders, https://ja.wikipedia.org/wiki/%E3%82%B8%E3%83%A7%E3%82%B8%E3%83%A7%E3%81%AE%E5%A5%87%E5%A6%99%E3%81%AA%E5%86%92%E9%99%BA_(%E3%83%86%E3%83%AC%E3%83%93%E3%82%A2%E3%83%8B%E3%83%A1) |  |
 
 ### jojos-bizarre-adventure-tv (1)
 
@@ -1449,10 +1545,11 @@
 | `I33` | {"flag":"count_mismatch","aired":129,"trueAired":155} | S5 (130-142, 2024) and S6 part 1 (143-155, Oct-Dec 2025) aired but are not stitched into the entry — extend structure, then anchors 142 → ~490 and 155 → 540 apply (researched, in batch-6 notes). Flag filed once; structure reconciliation is the fix. | session 2026-08-23 · scripts/ingest/apply-research-batch-6.ts | RETIRED — stitched 2026-08-23 (§12.34: Kingdom S5/S6 → 155); the record is history |
 | `I27` | {"ids":[12031,17389,113108,140350,155227,190840],"ruledExtent":"AFL page stops at S3 (104 rows); S5 (2024, our 130-142) + S6 (Oct-Dec 2025, our 143-155) aire… | AFL-lag class: AFL page stops at S3 (104 rows); S5 (2024, our 130-142) + S6 (Oct-Dec 2025, our 143-155) aired — flag #814. Zoku-hen (204688) joins when it airs. | session 2026-08-23 · ingest_flags #814 | Zoku-hen (204688) airs — chain gains an id |
 
-### kinnikuman (2)
+### kinnikuman (3)
 
 | rule | value | reason | ruled | retires when |
 |---|---|---|---|---|
+| `A45` | {"episodes":[32,46],"kind":"rearranged"} | The batch-17 'eps 32,46 rearranged {96-118}: the 21st Chojin Olympics is reordered — Warsman debuts ep 32A vs manga ch 107' was refuted on two independent sources: kinnikuman.fandom's Warsman page (ch 94 USSR contestant; 96 the pachinko bracket; 97 the Screw Driver kill on Teapackman; 107 only the first MENTION of his computer) and ja-WP ウォーズマン (初登場 = ch 94; 第8巻 p.23 = ch 96, p.177 = ch 107), plus dアニメストア's per-episode synopses. The block runs in publication order, EXPANDED (26 chapters over 21 episodes) — replaced by abridged{95-120} with the verified checkpoints (minus the disputed 35=101) on the same rows. | Sean 2026-08-27 · scripts/ingest/research/batch19/out/kinnikuman.json, scripts/ingest/research/batch19/verify/b5a-conan-eyeshield-kinnikuman.md |  |
 | `A18` | reorder regime (batch 17 wave 2, verifier-confirmed both directions): the Kaiju arc is scrambled (1A=ch3, 1B=ch7, 2A=ch5, 2B=ch4, 3A=ch1, 3B=ch6) with later … | verifier-confirmed both directions: the Kaiju arc is scrambled (1A=ch3, 1B=ch7, 2A=ch5, 2B=ch4, 3A=ch1, 3B=ch6) with later grafts (9A carries ch 23, 14A carries ch 9); END non-monotone by design in eps 1-3 | session 2026-08-25 · scripts/ingest/research/batch17/out/kinnikuman.json, scripts/ingest/apply-research-batch-17.ts, §12.47, CHUNK1-RECOVERY.md §14 |  |
 | `T6` | {"120":"filler","121":"filler","122":"filler","123":"filler","124":"filler","125":"filler","126":"filler","127":"filler","128":"filler","129":"filler","130":… | Eps 120-137 are the two anime-original arcs — author-COMMISSIONED but never author-declared canon; the 1991 sequel continuity-overwrites their timeline slot (ja-WP verbatim) and the canon-signal hunt came up empty → filler (were anime-only-canon; T9 discriminator). | Sean 2026-08-25 · scripts/ingest/research/batch17/out/kinnikuman.json |  |
 
@@ -1545,7 +1642,14 @@
 |---|---|---|---|---|
 | `I24` | {"ids":[4382]} | The 2009 rebroadcast entry (4382) is the full 28-episode ordering AFL uses, so the chain is that single entry rather than the 2006 original. | session 2026-08-22 |  |
 
-### miss-kobayashis-dragon-maid (17)
+### michiko-and-hatchin (2)
+
+| rule | value | reason | ruled | retires when |
+|---|---|---|---|---|
+| `G53` | {"6":"2008-11-19"} | Batch 19 wave 2 lane B3 (ja-WP + en-WP / syoboi / fandom, 2+ sources per row; the contradictions verified R24; Sean ruled B3-7): ep 6: Ep 6 'The Saudade of Fools, Part 2' aired the same night as ep 5, on 2008-11-19 (Wed 24:45; published as 2008-11-20 by en-WP and TheTVDB, = 2008-11-19 in this series' sto | Sean 2026-08-27 · scripts/ingest/research/batch19/out/airdates/michiko-and-hatchin.json, https://en.wikipedia.org/wiki/Michiko_%26_Hatchin, https://thetvdb.com/series/michiko-and-hatchin/allseasons/official, scripts/ingest/research/batch19/verify/b3-contradictions.md |  |
+| `G54` | [6,9,17,20] | Four pairs aired as double episodes on one night — TIES, not regressions: 5+6 (2008-11-19), 8+9 (2008-12-10), 16+17 (2009-02-11), 19+20 (2009-03-04) in the stored Wednesday convention (syoboi TID 1503 settles the pairings; ja-WP's other pairings are wrong; the slot is Wed 26:08). The walk treats equal dates as consistent; the ack records the design so no pass re-asks. | Sean 2026-08-27 · scripts/ingest/research/batch19/out/airdates/michiko-and-hatchin.json, scripts/ingest/research/batch19/verify/b3-contradictions.md |  |
+
+### miss-kobayashis-dragon-maid (18)
 
 | rule | value | reason | ruled | retires when |
 |---|---|---|---|---|
@@ -1566,6 +1670,7 @@
 | `C9` | {"episode":25,"continue_chapter":65} | anime end = ch 64 — resume vol 7 ch 65 | Sean 2026-08-23 · scripts/ingest/apply-continue-points.ts, docs/changelog.md §12.27, batch 9 verdict (miss-kobayashis-dragon-maid) | C9 superseded by C2/C3 (b17 continue point = next episode's start, skips noted) — each value stands only where it equals anime parity; re-derive under C2/C3 |
 | `T6` | {"19":"mixed","20":"mixed","21":"mixed","23":"mixed"} | Eps 19-21/23: one segment per episode is anime-original (fandom + Rory Muses per-episode reviews). | session 2026-08-24 · scripts/ingest/research/batch15/out/miss-kobayashis-dragon-maid.json |  |
 | `N11` | {"drop":[14],"shifts":[{"from":15,"offset":-1}]} | Queue-2 Group C demotion: the Valentine/Onsen bonus OVA AFL numbers as 14 is order-only in the community count; the row drops and later AFL rows shift down by one. | Sean 2026-08-23 |  |
+| `T29` | {"position":13.5,"record":{"kind":"ova","anilistId":98580}} | AniList 98580 'Valentine, Soshite Onsen!' format=OVA, 1 ep, 2017-09-20. (en-WP's Dragon Maid article carries video infoboxes only for the TV seasons and the 2025 film.) | Sean 2026-08-27 · scripts/ingest/research/batch19/out/watch-order-kinds.json, https://anilist.co/anime/98580 |  |
 
 ### mob-psycho-100 (4)
 
@@ -1590,7 +1695,7 @@
 |---|---|---|---|---|
 | `I15` | {"action":"delete series + episodes + anchors + components + external ids","sourceMapDisposition":"duplicate"} | Monogatari legacy duplicate — content lives in monogatari-series per the one-series ruling (one continuous story = ONE series). | Sean 2026-08-24 · scripts/ingest/apply-research-batch.ts, docs/franchise-rulings.md |  |
 
-### my-hero-academia (72)
+### my-hero-academia (73)
 
 | rule | value | reason | ruled | retires when |
 |---|---|---|---|---|
@@ -1666,6 +1771,7 @@
 | `I27` | {"ids":[21459,21856,100166,104276,117193,139630,163139,182896],"extras":[{"id":204356,"after":182896},{"id":211711,"after":182896}],"ruledExtent":"post-final… | Post-finale specials join as order-only entries — Sean 2026-08-24: essential canon the community groups with the series. 'No. 170+1: More' (204356, 2026-05-02, ch 431) at community position 170+1; the 'I am a hero too' Eri special (211711, 2026-08-03, ch 431.5) at Sean's 170+1.5, matching the manga's .5 bonus format. Counts stay 170. | Sean 2026-08-24 |  |
 | `N31` | {"position":171,"record":{"chapter":431,"volume":42,"chapters_adapted":"431","kind":"special"}} | 'No. 170+1: More' (AniList 204356, 2026-05-02) adapts ch 431 (vol 42 bonus). Sean 2026-08-24: essential canon the community groups with the series, community-numbered 170+1 — order-only after the FINAL SEASON; counts stay 170. Label PARKED pending the specials/OVAs/movies STATUS design pass. | Sean 2026-08-24 | the STATUS design pass rules on surfacing — then the label is restored (N32) |
 | `N31` | {"position":171.5,"record":{"chapter":431.5,"volume":42,"chapters_adapted":"431.5","kind":"special"}} | 'I am a hero too' Eri special (AniList 211711, 2026-08-03) adapts ch 431.5 (vol 42). Sean's ruling: mangaMapper position 170+1.5, matching the manga's .5 bonus format — order-only after the FINAL SEASON; counts stay 170. Label PARKED pending the specials/OVAs/movies STATUS design pass. | Sean 2026-08-24 | the STATUS design pass rules on surfacing — then the label is restored (N32) |
+| `T29` | {"position":113.1,"record":{"kind":"movie","anilistId":126659}} | AniList 126659 format=MOVIE, 104 min, 2021-08-06 = the entry's stated date. en-WP: 'is a 2021 Japanese animated superhero film'. (AniList 142411 'Tabidachi' is a separate 6-min short, not this entry.) | Sean 2026-08-27 · scripts/ingest/research/batch19/out/watch-order-kinds.json, https://anilist.co/anime/126659, https://en.wikipedia.org/wiki/My_Hero_Academia:_World_Heroes%27_Mission |  |
 
 ### naruto (38)
 
@@ -1805,10 +1911,11 @@
 | `T6` | {"28":"filler"} | Batch 18 wave 3 (2026-08-26): ep 28 — only the start/end of Team Guy's clone fights are in the manga (ch 275-276 seam fragments); all four finishing techniques debut anime-only; AFG N/A → filler + partial (T28). | Sean 2026-08-26 · scripts/ingest/research/batch18/out/naruto-shippuden.json |  |
 | `I17` | {"to":"naruto","kind":"sequel"} | The Naruto→Shippuden baseline: a major narrative shift is a separate series linked as sequel (newer → base). | session 2026-08-22 · docs/franchise-rulings.md |  |
 
-### nisekoi (18)
+### nisekoi (19)
 
 | rule | value | reason | ruled | retires when |
 |---|---|---|---|---|
+| `G53` | {"29":"2015-06-05"} | Batch 19 wave 2 lane B3 (ja-WP + en-WP / syoboi / fandom, 2+ sources per row; the contradictions verified R24; Sean ruled B3-7): ep 29: Ep 29 = Nisekoi: (S2) ep 9 'Cleanup Day / Visiting the Sick' (オソウジ／オミマウ), aired 2015-06-05 (Fri 23:30). Stored 2015-07-05 is a month-digit slip and is what produced the e | Sean 2026-08-27 · scripts/ingest/research/batch19/out/airdates/nisekoi.json, https://anilist.co/anime/20876, https://en.wikipedia.org/wiki/List_of_Nisekoi_episodes, https://ja.wikipedia.org/wiki/%E3%83%8B%E3%82%BB%E3%82%B3%E3%82%A4 |  |
 | `A3` | {"episode":10,"chapter":25,"start_chapter":24,"chapters_adapted":"24-25","volume":3,"source":"manual","note":"research-tier batch 10 (2026-08-23, agent-verif… | 'Lottery' = ch 24 title; exact vol-3 boundary — MEDIUM. fandom + Wikipedia | session 2026-08-23 · scripts/ingest/apply-research-batch-10.ts, scratchpad batch10/nisekoi.json (session scratchpad, not on disk), docs/changelog.md §12.29 |  |
 | `A3` | {"episode":15,"chapter":37,"start_chapter":36,"chapters_adapted":"36-37","volume":5,"source":"manual","note":"research-tier batch 10 (2026-08-23, agent-verif… | 'Three Keys' = chs 36-37 titles — MEDIUM. fandom + Wikipedia | session 2026-08-23 · scripts/ingest/apply-research-batch-10.ts, scratchpad batch10/nisekoi.json (session scratchpad, not on disk), docs/changelog.md §12.29 |  |
 | `A3` | {"episode":20,"chapter":50,"start_chapter":49,"chapters_adapted":"49-50","volume":6,"source":"manual","note":"research-tier batch 10 (2026-08-23, agent-verif… | S1 finale 'Showtime'; S1 = 1-50, continue 51. fandom + mangashed | session 2026-08-23 · scripts/ingest/apply-research-batch-10.ts, scratchpad batch10/nisekoi.json (session scratchpad, not on disk), docs/changelog.md §12.29 |  |
@@ -1982,12 +2089,14 @@
 | `C2` | {"episode":17,"continue_chapter":34} | only pp.2-9 of 34 (batch 12) | session 2026-08-23 · scripts/ingest/apply-research-batch-12.ts, scratchpad batch12/platinum-end.json (session scratchpad, not on disk), docs/changelog.md §12.31 |  |
 | `A43` | {"episodes":[15,16,17,18,19,20,21,22,23,24],"kind":"partial","chapters":"28-58","note":"research-tier batch 12 (2026-08-23, agent-verified 2+ sources, full-r… | second half condensed (~3.1 ch/ep) | session 2026-08-23 · scripts/ingest/apply-research-batch-12.ts, scratchpad batch12/platinum-end.json (session scratchpad, not on disk), docs/changelog.md §12.31 |  |
 
-### prison-school (2)
+### prison-school (4)
 
 | rule | value | reason | ruled | retires when |
 |---|---|---|---|---|
+| `G53` | {"7":"2015-08-21"} | Batch 19 wave 2 lane B3 (ja-WP + en-WP / syoboi / fandom, 2+ sources per row; the contradictions verified R24; Sean ruled B3-7): ep 7: Ep 7 "Meiko's Delicious Restaurant" (メイコトゥイユ / 'Meikotouille') aired 2015-08-21 24:05 (published 2015-08-22). Stored 2015-12-21 is a month-digit slip (12 for 08) - the se | Sean 2026-08-27 · scripts/ingest/research/batch19/out/airdates/prison-school.json, https://anilist.co/anime/20807, https://en.wikipedia.org/wiki/Prison_School |  |
 | `N3` | {"anilistId":21565,"start":13,"end":13,"action":"numbered → order-only (rows deleted, later rows/anchors/annotations shift down)","fractional":{"position":12… | Mad Wax = standalone bonus OVA; community count = 12 (Sean sign-off 2026-08-23) | Sean 2026-08-23 · scripts/ingest/apply-research-batch-7.ts, docs/changelog.md §12.23 |  |
 | `N11` | {"drop":[13],"shifts":[]} | Queue-2 Group C demotion: the Mad Wax bonus OVA AFL numbers as 13 is order-only in the community count; trailing, so the row drops with no shift. | Sean 2026-08-23 |  |
+| `T29` | {"position":12.5,"record":{"kind":"ova","anilistId":21565}} | AniList 21565 'Prison School: Mad Wax' format=OVA, 1 ep, 2016-03-04. (en-WP's Prison School article has no video infobox for it.) | Sean 2026-08-27 · scripts/ingest/research/batch19/out/watch-order-kinds.json, https://anilist.co/anime/21565 |  |
 
 ### project-arms (5)
 
@@ -2023,11 +2132,13 @@
 | `A43` | {"episodes":[23],"kind":"divergence","chapters":"150-155","note":"research-tier batch 11 (2026-08-23, agent-verified 2+ sources, full-record): finale has ori… | finale has original epilogue expansion; TCoC specials → post-TCoC continue = 165 | session 2026-08-23 · scripts/ingest/apply-research-batch-11.ts, scratchpad batch11/ranking-of-kings.json (session scratchpad, not on disk), docs/changelog.md §12.30 |  |
 | `R21` | {"file":"scripts/ingest/research/batch15/out/ranking-of-kings.json","anchors":2,"zoneAcks":0} | batch-15 verdict applied as-curated | session 2026-08-24 · scripts/ingest/research/batch15/out/ranking-of-kings.json |  |
 
-### ranma-1-2 (8)
+### ranma-1-2 (11)
 
 | rule | value | reason | ruled | retires when |
 |---|---|---|---|---|
 | `G53` | {"153":"1992-07-31"} | Stored 1992-09-04 is ep 158's date; the Ranma wiki's episode list and the episode page both give 1992-07-31 for "Gosunkugi's Summer Affair!". The wrong date faked an order deviation in the batch-17 re-anchor (join on title/date, R20). | Sean 2026-08-25 · scripts/ingest/research/batch17/out2/ranma-1-2-reanchor.json, https://ranma.fandom.com/wiki/Gosunkugi%27s_Summer_Affair! |  |
+| `G54` | all | Our row order is not the Japanese broadcast order — it follows the AFL/AFG sequence, which mixes production / home-video order into aired order (the documented ranma trap: the フィギュアスケート編 was pulled and aired later as 熱闘編 7-9; ja-WP 話数は実際に放送された順). Every stored date is right for its row's TITLE (verifier-sampled 16→26 1989-12-15, 18→15 1989-08-26, 28→30 1990-01-26, 63→69 1990-11-09 …). A renumber to broadcast order would be an N-family change that moves every anchor — never an air-date edit. | Sean 2026-08-27 · scripts/ingest/research/batch19/out/airdates/ranma-1-2.json, scripts/ingest/research/batch19/verify/b3-contradictions.md |  |
+| `A44` | [130] | A first-time SLIVER inside an original plot: ch 58's closing pages (Satsuki's reveal, the honeymoon letter, the horse) air here for the first time — real enough for MIXED (T6 entry) and the graft{58} tie, not a position: an END of 58 would drag the reader from ch 198 (ep 129) back 140 chapters, and A12 forbids a relocated far-earlier beat from setting a START. Ep 93 carries 56-58 as the arc's anchor (rearranged, the A18 regime). | Sean 2026-08-27 · scripts/ingest/research/batch19/out/ranma-1-2.json, scripts/ingest/research/batch19/verify/b5c-ranma-bobobo-arms-emma.md |  |
 | `A6` | {"episode":14} | A1 junk anchor (D4 triage, verifier-confirmed 6/6): wiki manga=None + AFL Filler + anime-only categories; stored values are chart-misalignment artifacts (production-vs-aired order zones) | Sean 2026-08-25 · scripts/ingest/research/batch17/out2/ranma-1-2-a1.json, scripts/ingest/apply-research-batch-17.ts, §12.45 |  |
 | `A6` | {"episode":90} | A1 junk anchor (D4 triage, verifier-confirmed 6/6): wiki manga=None + AFL Filler + anime-only categories; stored values are chart-misalignment artifacts (production-vs-aired order zones) | Sean 2026-08-25 · scripts/ingest/research/batch17/out2/ranma-1-2-a1.json, scripts/ingest/apply-research-batch-17.ts, §12.45 |  |
 | `A6` | {"episode":123} | A1 junk anchor (D4 triage, verifier-confirmed 6/6): wiki manga=None + AFL Filler + anime-only categories; stored values are chart-misalignment artifacts (production-vs-aired order zones) | Sean 2026-08-25 · scripts/ingest/research/batch17/out2/ranma-1-2-a1.json, scripts/ingest/apply-research-batch-17.ts, §12.45 |  |
@@ -2035,20 +2146,24 @@
 | `A6` | {"episode":134} | A1 junk anchor (D4 triage, verifier-confirmed 6/6): wiki manga=None + AFL Filler + anime-only categories; stored values are chart-misalignment artifacts (production-vs-aired order zones) | Sean 2026-08-25 · scripts/ingest/research/batch17/out2/ranma-1-2-a1.json, scripts/ingest/apply-research-batch-17.ts, §12.45 |  |
 | `A6` | {"episode":156} | A1 junk anchor (D4 triage, verifier-confirmed 6/6): wiki manga=None + AFL Filler + anime-only categories; stored values are chart-misalignment artifacts (production-vs-aired order zones) | Sean 2026-08-25 · scripts/ingest/research/batch17/out2/ranma-1-2-a1.json, scripts/ingest/apply-research-batch-17.ts, §12.45 |  |
 | `A18` | reorder regime (batch 17 re-anchor 2026-08-25, out2/ranma-1-2-reanchor.json, title-keyed): the aired order genuinely deviates from manga order in the re-anch… | title-keyed re-anchor (never index-join a chart): the aired order genuinely deviates from manga order in the re-anchored zones — eps 22 (59-62), 26 (43-45), 28 (70-73), 125 (179) legitimately sit below their predecessors; every jump documented per-episode in the verdict | session 2026-08-25 · scripts/ingest/research/batch17/out2/ranma-1-2-reanchor.json, scripts/ingest/apply-research-batch-17.ts, §12.45 |  |
+| `T6` | {"130":"mixed"} | Sean's T28 call (B5-12, verified R24) under the catalog line 'pages, not numbers': ep 130 is an anime-original Miyakoji-school kidnapping plot whose payoff — ch 58's CLOSING pages (the real Satsuki's reveal, the honeymoon letter and photo, the horse at the Tendo Dojo) — is FIRST-TIME coverage: ep 93 dropped Satsuki AND the monkey and had Ranma fight the grandmother (ranma.fandom Martial Arts Tea Ceremony Arc, 'Changes in anime'), so the verdict's 're-use of a chapter animated 37 episodes earlier' was refuted for exactly these pages. New pages airing first-time are real → MIXED (AFL mixed; AFG row 124 '58' un-struck; ja-WP attaches no アニメオリジナル footnote to 第112話), with graft{58} as the mandatory tie. NO anchor — a first-time sliver inside an original plot is position-less (A44 entry). | Sean 2026-08-27 · scripts/ingest/research/batch19/out/ranma-1-2.json, scripts/ingest/research/batch19/verify/b5c-ranma-bobobo-arms-emma.md |  |
 
-### rave-master (2)
+### rave-master (3)
 
 | rule | value | reason | ruled | retires when |
 |---|---|---|---|---|
+| `G53` | {"9":"2001-12-08"} | Batch 19 wave 2 lane B3 (ja-WP + en-WP / syoboi / fandom, 2+ sources per row; the contradictions verified R24; Sean ruled B3-7): ep 9: Ep 9 'A Bite to Eat' (プルーのひみつ) aired 2001-12-08; ja-WP 各話リスト 初回放送日 = 12月8日 and en-WP = December 8, 2001. Stored 2001-11-08 is a month-digit slip; it is what produced the | Sean 2026-08-27 · scripts/ingest/research/batch19/out/airdates/rave-master.json, https://en.wikipedia.org/wiki/List_of_Rave_Master_episodes, https://ja.wikipedia.org/wiki/RAVE_(%E6%BC%AB%E7%94%BB) |  |
 | `V2` | {"rows":[{"volume":9,"chapter_start":65,"chapter_end":73},{"volume":10,"chapter_start":74,"chapter_end":79}]} | stored v9 "65-14" and v10 "15-79" are corrupt (omake chapter numbering 0014/0015 polluted the parse); true v9=65-73, v10=74-79 per Wikipedia chapter list + fandom chapter pages | session 2026-08-24 · scripts/ingest/research/batch17/out/rave-master.json, scripts/ingest/apply-research-batch-17.ts, §12.42 |  |
 | `T6` | {"41":"mixed"} | Ep 41: filler sites say filler, but its core IS ch 74 (Let joins / Silver Knights) — chapter overlap in an original frame = mixed. | session 2026-08-24 · scripts/ingest/research/batch17/out/rave-master.json |  |
 
-### reborn (2)
+### reborn (4)
 
 | rule | value | reason | ruled | retires when |
 |---|---|---|---|---|
+| `G53` | {"64":"2008-01-05"} | Batch 19 wave 2 lane B3 (ja-WP + en-WP / syoboi / fandom, 2+ sources per row; the contradictions verified R24; Sean ruled B3-7): ep 64: Ep 64 'The Truth Behind The Rage' (怒りの真相) aired 2008-01-05 (the first Saturday after the 2007-12-29 New Year skip). ja-WP 各話リスト 2008年 and en-WP 'Reborn! season 2' both gi | Sean 2026-08-27 · scripts/ingest/research/batch19/out/airdates/reborn.json, https://en.wikipedia.org/wiki/Reborn!_season_2, https://ja.wikipedia.org/wiki/%E5%AE%B6%E5%BA%AD%E6%95%99%E5%B8%AB%E3%83%92%E3%83%83%E3%83%88%E3%83%9E%E3%83%B3REBORN! |  |
 | `R21` | {"file":"scripts/ingest/research/batch14/out/reborn.json","anchors":173} | batch-14 verdict applied as-curated | session 2026-08-23 · scripts/ingest/research/batch14/out/reborn.json |  |
 | `T6` | {"111":"mixed","112":"mixed"} | Eps 111-112: fights against anime-only characters with anime-original box weapons inside the canon Future Arc (ja.wikipedia アニメオリジナル匣 + fandom Future Arc page). | session 2026-08-23 · scripts/ingest/research/batch14/out/reborn.json |  |
+| `T29` | {"position":203.1,"record":{"kind":"ova","anilistId":8532}} | en-WP Reborn!: 'An original video animation (OVA) was produced under the same staff and cast and was released in October 2009 during the annual Jump Super Anime Tour'; the franchise infobox reads '203 + 2 OVAs' and 'List of Reborn! episodes' carries an == OVAs == table whose first row is this work. DISAGREEMENT: AniList 8532 format=ONA (ja-WP files it under ジャンプアニメ, 上映 at Jump Super Anime Tour 2009, complete-edition DVD 2010-07-21). AniList id now verified (the stored note said unverified). | Sean 2026-08-27 · scripts/ingest/research/batch19/out/watch-order-kinds.json, https://anilist.co/anime/8532, https://en.wikipedia.org/wiki/Reborn!, https://en.wikipedia.org/wiki/List_of_Reborn!_episodes |  |
 
 ### record-of-ragnarok (14)
 
@@ -2143,7 +2258,7 @@
 | `A8` | {"episode":13,"field":"end_chapter"} | S1 finale second half IS ch 10 beat-for-beat (fire attack, blood transfusion, yoko form, Gin, finishing kick); stored END 11 inflated — ch 11 "Blood" is never adapted in S1 | session 2026-08-25 · scripts/ingest/research/batch17/out2/rosario-vampire-asstored.json, scripts/ingest/apply-research-batch-17.ts, §12.46 |  |
 | `A10` | {"episode":13,"field":"start_chapter"} | ch 9's second movement (the rescue decision) opens ep 13; medium confidence per the verifier, better than the stored 10 | session 2026-08-25 · scripts/ingest/research/batch17/out2/rosario-vampire-asstored.json, scripts/ingest/apply-research-batch-17.ts |  |
 
-### rurouni-kenshin (17)
+### rurouni-kenshin (21)
 
 | rule | value | reason | ruled | retires when |
 |---|---|---|---|---|
@@ -2164,6 +2279,10 @@
 | `G3` | {"bookmark":"sean_review_bookmark → confirmed"} | resolved: interior anchors (Kyoto ep 28 → 48) + continua cross-verification + side_story annotations for 95-98 (Sean sign-off 2026-08-23) | Sean 2026-08-23 · scripts/ingest/apply-research-batch-7.ts, docs/changelog.md §12.23 |  |
 | `T6` | {"79":"filler","80":"filler","81":"filler","82":"filler"} | Eps 79-82 were typed mixed, but the whole 63-94 block is anime-original (batch-17 verdict: Wikipedia season-3 "not adapted from the manga" + AFL) — the Shimabara/Christian arc included. Found in Sean's post-switch review: these four mistyped rows were why frontier_tail_null flagged the series (the audit was RIGHT; the earlier "false positive" framing was wrong). Rows 95-98 are the Trust & Betrayal OVAs adopted as episodes — real manga adaptation (Remembrance arc), kept canon, flagged for anchor research. | Sean 2026-08-24 · scripts/ingest/research/batch17/out/rurouni-kenshin.json |  |
 | `N1` | {"adopted":[95,100]} | The 1996 broadcast tail 95-100 overshoots the source count by more than 2; rows 95-98 are the Trust & Betrayal OVAs adopted as episodes (real manga adaptation, the Remembrance arc — see the rurouni-kenshin type ruling), so the floor is adopted rather than flagged. Evidence for 99-100 beyond "broadcast tail" was not recorded at the call site. | session 2026-08-23 |  |
+| `T29` | {"position":94.1,"record":{"kind":"ova","anilistId":44}} | AniList 44 format=OVA, 4 eps, 1999-02-20 to 1999-09-22. en-WP: 'is a Japanese original video animation (OVA) series'. | Sean 2026-08-27 · scripts/ingest/research/batch19/out/watch-order-kinds.json, https://anilist.co/anime/44, https://en.wikipedia.org/wiki/Rurouni_Kenshin:_Trust_%26_Betrayal |  |
+| `T29` | {"position":94.2,"record":{"kind":"ova","anilistId":11441}} | AniList 11441 'Shin Kyoto-hen' format=OVA, 2 eps, from 2011-12-17. en-WP: 'is a two-part original video animation (OVA)'. | Sean 2026-08-27 · scripts/ingest/research/batch19/out/watch-order-kinds.json, https://anilist.co/anime/11441, https://en.wikipedia.org/wiki/Rurouni_Kenshin:_New_Kyoto_Arc |  |
+| `T29` | {"position":94.3,"record":{"kind":"movie","anilistId":46}} | AniList 46 'Ishinshishi e no Requiem' format=MOVIE, 91 min, 1997-12-20. en-WP: 'is a Japanese animated martial arts film'. | Sean 2026-08-27 · scripts/ingest/research/batch19/out/watch-order-kinds.json, https://anilist.co/anime/46, https://en.wikipedia.org/wiki/Rurouni_Kenshin:_The_Motion_Picture |  |
+| `T29` | {"position":94.4,"record":{"kind":"ova","anilistId":401}} | AniList 401 'Seisou-hen' format=OVA, 2 eps, 2001-12-03. en-WP: 'is a Japanese original video animation (OVA)'. | Sean 2026-08-27 · scripts/ingest/research/batch19/out/watch-order-kinds.json, https://anilist.co/anime/401, https://en.wikipedia.org/wiki/Rurouni_Kenshin:_Reflection |  |
 
 ### rurouni-kenshin-2023 (7)
 
@@ -2176,6 +2295,13 @@
 | `T6` | {"34":"canon","44":"filler"} | Eps 34/44 adapt zero chapters (fandom blank + no Act page); 34 is Watsuki's own exhibition storyboard = canon-grade, so anime-only-canon rather than filler. T4.3 (T26/T27): 34 → canon + adopted{author} (Watsuki's storyboard); 44 has no positive canon signal → filler (adheres to no source), on the review list. | session 2026-08-24 · scripts/ingest/research/batch17/out/rurouni-kenshin-2023.json |  |
 | `I24` | {"ids":[142877,171637]} | AniList relation-graph gap found post-recovery: 2023 + Kyoto Disturbance (the 2023 remake is a separate series from the 1996 TV, I16). | session 2026-08-23 |  |
 | `I17` | {"to":"rurouni-kenshin","kind":"remake"} | Rurouni Kenshin: 2 separate series; 2023 remakes 1996. | session 2026-08-22 · docs/franchise-rulings.md "Rurouni Kenshin" |  |
+
+### saga-of-tanya-the-evil (2)
+
+| rule | value | reason | ruled | retires when |
+|---|---|---|---|---|
+| `G53` | {"5":"2017-02-03","6":"2017-02-10"} | Batch 19 wave 2 lane B3 (ja-WP + en-WP / syoboi / fandom, 2+ sources per row; the contradictions verified R24; Sean ruled B3-7): ep 5: Episode 5 is 'My First Battalion' (はじまりの大隊), aired 2017-02-03 (Fri 22:00, AT-X). ja-WP 各話リスト 第伍話 = 2月3日; en-WP episode list ep 5 = February 3, 2017; AniList airing schedu \| ep 6: Episode 6 is 'Beginning of Madness' (狂気の幕開け), aired 2017-02-10. ja-WP 第陸話 = 2月10日; en-WP ep 6 = February 10, 2017; AniList = 2017-02-10. Same transposition as ep 5 - swap | Sean 2026-08-27 · scripts/ingest/research/batch19/out/airdates/saga-of-tanya-the-evil.json, https://anilist.co/anime/21613, https://en.wikipedia.org/wiki/List_of_Saga_of_Tanya_the_Evil_episodes, https://ja.wikipedia.org/wiki/%E5%B9%BC%E5%A5%B3%E6%88%A6%E8%A8%98_(%E3%82%A2%E3%83%8B%E3%83%A1), scripts/ingest/research/batch19/verify/b3-contradictions.md |  |
+| `G53` | {"5":"My First Battalion","6":"Beginning of Madness"} | Rows 5 and 6 held each other's title AND date (AFL-inherited): ja-WP 各話リスト 第伍話 はじまりの大隊 2月3日 / 第陸話 狂気の幕開け 2月10日; en-WP agrees. The dates move under AIR_DATE_OVERRIDES; the titles travel with them. | Sean 2026-08-27 · scripts/ingest/research/batch19/out/airdates/saga-of-tanya-the-evil.json, scripts/ingest/research/batch19/verify/b3-contradictions.md |  |
 
 ### sailor-moon (9)
 
@@ -2191,20 +2317,22 @@
 | `A41` | {"episodes":[73],"kind":"rearranged","chapters":"15-17","note":"curated batch 17: ep 73 condenses the Rubeus abduction motif from chs 15-17 AFTER ep 71 alrea… | ep 73 condenses the Rubeus abduction motif from chs 15-17 AFTER ep 71 already adapted ch 16 — a genuine step back in the loose R-season adaptation, rendered as stored; the rearranged annotation settles the reorder for audits (the derived-start rule keeps ep 72 at 17 rather than following the jump) | session 2026-08-24 · scripts/ingest/research/batch17/out/sailor-moon.json, scripts/ingest/apply-research-batch-17.ts, §12.42 |  |
 | `T6` | {"167":"mixed","168":"mixed","169":"filler","170":"filler","171":"filler","172":"filler"} | Eps 167-172: the Nehelenia-revival arc, an anime-original continuation of SuperS's villain — made for the anime, standing as canon. T4.3 (T27, 2026-08-26): anime-only-canon → filler (adheres to no source; the studio-ending class A-7 carries a divergence annotation and stays on the review list — twin-star 21-50 explicitly, T4-GLOSSARY §7). | session 2026-08-24 · scripts/ingest/research/batch17/out/sailor-moon.json |  |
 
-### sailor-moon-crystal (5)
+### sailor-moon-crystal (6)
 
 | rule | value | reason | ruled | retires when |
 |---|---|---|---|---|
+| `G53` | {"8":"2014-10-18","10":"2014-11-15","29":"2016-04-18"} | Batch 19 wave 2 lane B3 (ja-WP + en-WP / syoboi / fandom, 2+ sources per row; the contradictions verified R24; Sean ruled B3-7): ep 8: Act.8 'Minako -Sailor V-' streamed 2014-10-18. ja-WP 各話リスト Act.8 = 10月18日 (with 5月20日 as the later TV date) and en-WP = October 18, 2014. Stored 2014-11-18 is a month-dig \| ep 10: Act.10 'Moon' (MOON -月-) streamed 2014-11-15, not 11-08. ja-WP Act.10 = 11月15日; en-WP = November 15, 2014. The fortnightly cadence (Act.9 = 11-01, Act.11 = 12-06) confirm \| ep 29: Ep 29 = Crystal season 3 (Death Busters) ep 3 'Infinity 2 Ripples' (無限2 波紋), broadcast 2016-04-18 (Mon 23:00). en-WP = April 18, 2016 and AniList's airing schedule for De | Sean 2026-08-27 · scripts/ingest/research/batch19/out/airdates/sailor-moon-crystal.json, https://anilist.co/anime/21462, https://en.wikipedia.org/wiki/List_of_Sailor_Moon_Crystal_episodes, https://ja.wikipedia.org/wiki/%E7%BE%8E%E5%B0%91%E5%A5%B3%E6%88%A6%E5%A3%AB%E3%82%BB%E3%83%BC%E3%83%A9%E3%83%BC%E3%83%A0%E3%83%BC%E3%83%B3Crystal, scripts/ingest/research/batch19/verify/b3-contradictions.md |  |
 | `A4` | {"episode":39,"field":"end_chapter"} | A4 finale rule: ep 39 adapts Act 38 only; stored 60 was the manga's LAST chapter (Stars 11) filled in as a finale value | session 2026-08-24 · scripts/ingest/research/batch17/out/sailor-moon-crystal.json, scripts/ingest/apply-research-batch-17.ts, §12.42 |  |
 | `V10` | {"episode":39,"field":"volume"} | paired: Act 38 sits in vol 10; v18 is the Stars arc end | session 2026-08-24 · scripts/ingest/research/batch17/out/sailor-moon-crystal.json, scripts/ingest/apply-research-batch-17.ts |  |
 | `V2` | {"rows":[{"volume":4,"chapter_start":14,"chapter_end":17},{"volume":7,"chapter_start":25,"chapter_end":27}]} | restores two of the volumes the monotonic-start heal dropped (their parsed starts were the VOLUME NUMBER — v4 "4", v7 "7" — the corruption signature): true v4 = Acts 14-17 and v7 = Acts 25-27 per the crystal verdict's volume fields (Wikipedia original-18-volume distribution). Shared manga 30092, so this fixes the 90s entry too; heal-volume-boundaries re-closes v3/v6 to 10-13 / 21-24 | session 2026-08-24 · scripts/ingest/research/batch17/out/sailor-moon-crystal.json, scripts/ingest/apply-research-batch-17.ts, §12.42 |  |
 | `R29` | null | REMOVED from REORDER_REGIMES (Sean's post-switch review): it never belonged here — a shared-chapter split (Act 27 over eps 27-28) is not a below-predecessor jump — and its presence LAUNDERED a corrupted verdict tail (eps 29-39 written 10 acts low) into a "ruled" annotation instead of letting the order guard trip. The regime mechanism is a waiver of that guard: list a series ONLY when its verdict documents pervasive out-of-publication-order adaptation | Sean 2026-08-24 · scripts/ingest/research/batch17/out/sailor-moon-crystal.json, scripts/ingest/apply-research-batch-17.ts, §12.42 |  |
 | `I17` | {"to":"sailor-moon","kind":"remake"} | Sailor Moon (90s, 200 eps) is ONE series; Crystal is a separate, superseding re-adaptation — remake. | session 2026-08-22 · docs/franchise-rulings.md "Sailor Moon" |  |
 
-### saint-seiya-knights-of-the-zodiac (6)
+### saint-seiya-knights-of-the-zodiac (7)
 
 | rule | value | reason | ruled | retires when |
 |---|---|---|---|---|
+| `A44` | [32] | Ep 32 opens the anime-exclusive Post-Silver-Saints block (ES wiki: 'Historia exclusiva del anime', 'el segundo arco de relleno') and RE-STAGES ch 18-19's Esmeralda memories and Black Phoenix fight — already ep 15's END 19 — under invented circumstances (Jango's promotion after Ikki's departure, the island's destruction). Re-shown pages are not cited (the catalog line); Jango is NOT an anime invention (ES wiki: manga ch 18) — recorded as loose_parallel{18-19}. Typing stays mixed (no retype: the filler reading rests on one wiki; AFL says mixed) — Sean's call, not made. Contrast eps 29-30, ANCHORED at 24: ch 24's back half airs there first-time. | Sean 2026-08-27 · scripts/ingest/research/batch19/out/saint-seiya-knights-of-the-zodiac.json, scripts/ingest/research/batch19/verify/b5b-x-seiya-mewmew.md |  |
 | `A3` | {"episode":73,"chapter":46,"volume":null,"source":"manual"} | Sanctuary end = vol 13 ch 46 (tankobon numbering — do not mix schemes). Wikipedia ch+ep lists | session 2026-08-23 · scripts/ingest/apply-research-batch-6.ts |  |
 | `A3` | {"episode":114,"chapter":67,"volume":null,"source":"manual"} | Poseidon end = vol 18 ch 67 (chs 47-67 = eps 100-114); Asgard 74-99 = 100% anime-original; Hades = later OVAs. Wikipedia | session 2026-08-23 · scripts/ingest/apply-research-batch-6.ts |  |
 | `V6` | {"manga_anilist_id":31045,"shift":-1,"applies_to":"chapter_start / chapter_end ≥ 30","source":"research","idempotence_marker":"v8 chapter_end 31 → 30"} | the stored space (Wikipedia's 110) contains ONE phantom chapter: "ch 30" 金牛宮の戦闘, which is anime episode 43's title (en-WP even preserved the anime's ruby gloss "Batoru"). True tankōbon space = 109 chapters per Shueisha's own TOCs — UNIFORM −1 for stored values ≥ 30. The verifier REFUTED the verdict's second phantom at ch 53 and its "+2 from 50" leg (Shueisha's vol-15 TOC has 4 chapters); ruling on the verdict as written would have shipped an off-by-one across vols 15-28. Durable guard: the corrected boundaries carry source='research' — Wikipedia re-ingest disagreement FLAGS, never overwrites research rows | Sean 2026-08-25 · scripts/ingest/research/batch17/out/saint-seiya-knights-of-the-zodiac.json, scripts/ingest/apply-rulings-20260825b.ts, scripts/ingest/research/batch17/CHUNK1-RECOVERY.md §14, §12.47 |  |
@@ -2212,7 +2340,7 @@
 | `A10` | {"episode":31,"start_chapter":24,"was":25} | the verdict's ep-31 row is self-inconsistent (start 25 vs chapters_adapted "24-25"): START is the first chapter animated, so start → 24 (post-migration values). Caught by the verifier, fixed at curation | Sean 2026-08-25 · scripts/ingest/research/batch17/out/saint-seiya-knights-of-the-zodiac.json, scripts/ingest/apply-rulings-20260825b.ts, scripts/ingest/research/batch17/CHUNK1-RECOVERY.md §14 |  |
 | `T6` | {"64":"mixed"} | Ep 64: the JP title = ch 39's title, but the Sagittarius trials are Toei's own → mixed. | Sean 2026-08-25 · scripts/ingest/research/batch17/out/saint-seiya-knights-of-the-zodiac.json |  |
 
-### seraph-of-the-end-vampire-reign (15)
+### seraph-of-the-end-vampire-reign (16)
 
 | rule | value | reason | ruled | retires when |
 |---|---|---|---|---|
@@ -2231,6 +2359,7 @@
 | `A6` | {"deleteAnchor":{"episode":25}} | the MU ch-41 pin sat on the dropped OVA row (anime-original — an A1 hit); triage outcome: delete here and re-pin at the real TV finale ep 24 (the ep-24 REPAIR anchor). | session 2026-08-23 · scripts/ingest/apply-research-batch-9.ts, docs/changelog.md §12.26, session scratchpad batch9/seraph-of-the-end-vampire-reign.json |  |
 | `C9` | {"episode":24,"continue_chapter":42} | finale ends ch 41 with altered execution — resume ch 42 | Sean 2026-08-23 · scripts/ingest/apply-continue-points.ts, docs/changelog.md §12.27, batch 9 verdict (seraph-of-the-end-vampire-reign) | C9 superseded by C2/C3 (b17 continue point = next episode's start, skips noted) — each value stands only where it equals anime parity; re-derive under C2/C3 |
 | `N11` | {"drop":[25],"shifts":[]} | AFL counts the anime-original OVA 'Vampire Shahal' (May 2016) as a trailing ep 25; only 24 TV episodes exist. No shift — the row is at the end. The OVA holds watch position 24.5 (order-only, adapts no manga). Research batch 9. | session 2026-08-23 |  |
+| `T29` | {"position":24.5,"record":{"kind":"ova","anilistId":21586}} | AniList 21586 'Owari no Seraph: Kyuuketsuki Shahal' format=OVA, 1 ep, 2016-05-02 = the entry's stated date. en-WP Seraph of the End infobox: type=ova, 'Seraph of the End: Vampire Shahal', released May 2, 2016. | Sean 2026-08-27 · scripts/ingest/research/batch19/out/watch-order-kinds.json, https://anilist.co/anime/21586, https://en.wikipedia.org/wiki/Seraph_of_the_End |  |
 
 ### seven-deadly-sins-four-knights-apocalypse (1)
 
@@ -2278,10 +2407,11 @@
 |---|---|---|---|---|
 | `N7` | 1913 | A (high): the series IS the 5-episode OVA run — numbering 1-5 is its identity (Sean 2026-08-24). | Sean 2026-08-24 |  |
 
-### shugo-chara (3)
+### shugo-chara (4)
 
 | rule | value | reason | ruled | retires when |
 |---|---|---|---|---|
+| `G53` | {"23":"2008-03-15","26":"2008-04-05","88":"2009-06-13","92":"2009-07-11","93":"2009-07-18","94":"2009-07-25","95":"2009-08-01","96":"2009-08-15","97":"2009-0… | Batch 19 wave 2 lane B3 (ja-WP + en-WP / syoboi / fandom, 2+ sources per row; the contradictions verified R24; Sean ruled B3-7): ep 23: Ep 23 'Remake Honey! My Would Be Self!' (リメイクハニー！なりたい自分！) aired 2008-03-15 (Sat, TV Tokyo). ja-WP 第23話 = 3月15日; en-WP 'List of Shugo Chara! episodes' ep 23 = March 15, 20 \| ep 26: Ep 26 'The New Beginning!' (新しいはじまり！) aired Saturday 2008-04-05. ja-WP 第26話 = 4月5日; en-WP ep 26 = April 5, 2008. Stored 2008-04-06 is a Sunday and cannot be right for a S \| ep 88: Our row 88 is 'Save Nana! Guardian Character Nurses, Move Out?' = Shugo Chara!! Doki ep 36, aired 2009-06-13. en-WP Doki ep 36 = June 13, 2009; ja-WP 第87話 = 6月13日. Stored \| ep 92: Our row 92 is 'Full Throttle! My Rhythm!' (全開！僕のリズム) = Doki ep 40, aired 2009-07-11. en-WP Doki ep 40 = July 11, 2009; ja-WP 第91話 = 7月11日. Stored 2010-07-01 has both a wr \| ep 93: Our row 93 is "It's Got to Be Cool! Beat Jumper!" (クールに決めろ！ビートジャンパー！) = Doki ep 41, aired 2009-07-18. en-WP = July 18, 2009; ja-WP 第92話 = 7月18日. Year slip only. \| ep 99: Our row 99 is "Our Feelings United! The Guardians' Battle!" (思いは一つ！ガーディアンの戦い！) = Doki ep 48, aired 2009-09-05. en-WP = September 5, 2009; ja-WP 第99話 = 9月5日. Year slip; th \| ep 100: Our row 100 is 'The Birth of Two Character Transformations!' (誕生！2つのキャラなり！) = Doki ep 49, aired 2009-09-12. en-WP = September 12, 2009; ja-WP 第100話 = 9月12日. Year slip. \| 94-98: the same 2010-for-2009 YEAR-SLIP block (AFL prints 2010 for rows 92-100; the verdict asked for a DB check — confirmed 2026-08-27: 94 2010-07-25, 95 08-01, 96 08-15, 97 08-22, 98 08-29), keyed by title: 'Hoshina Utau, Fly to the Future!' 2009-07-25, 'Onward! The Calico Cat Search Party!?' 08-01, 'Unheard Pleas, Shattered Feelings.' 08-15, 'Tadase and Ikuto, the Horoscope of Fate!' 08-22, 'Reborn!! My Radiant Dancing Princess!' 08-29 (ja-WP 各話リスト + en-WP Doki list) | Sean 2026-08-27 · scripts/ingest/research/batch19/out/airdates/shugo-chara.json, https://en.wikipedia.org/wiki/List_of_Shugo_Chara%21%21_Doki%E2%80%94_episodes, https://en.wikipedia.org/wiki/List_of_Shugo_Chara%21_episodes, https://ja.wikipedia.org/wiki/%E3%81%97%E3%82%85%E3%81%94%E3%82%AD%E3%83%A3%E3%83%A9%21, scripts/ingest/research/batch19/verify/b3-contradictions.md |  |
 | `A7` | {"episode":59,"bound":"partially re-covers ch 22 material already adapted by ep 39 — a re-tread, so ch 22 is not this episode's position"} | A31 re-use never anchors: partially re-covers ch 22 material already adapted by ep 39 — a re-tread, so ch 22 is not this episode's position | session 2026-08-24 · scripts/ingest/research/batch17/out/shugo-chara.json, scripts/ingest/apply-research-batch-17.ts, §12.42 |  |
 | `A7` | {"episode":93,"bound":"Nagihiko's Beat Jumper debut (ch 34) grafted early; ch 34 is properly covered by its own later episode"} | A2: Nagihiko's Beat Jumper debut (ch 34) grafted early; ch 34 is properly covered by its own later episode | session 2026-08-24 · scripts/ingest/research/batch17/out/shugo-chara.json, scripts/ingest/apply-research-batch-17.ts, §12.42 |  |
 | `A18` | reorder regime (batch 17): Doki-era episodes revisit earlier chapters and our DB episode numbering diverges from broadcast order (rows 73-96 — episode-row au… | verdict-documented: Doki-era episodes revisit earlier chapters and our DB episode numbering diverges from broadcast order (rows 73-96 — episode-row audit flagged), so adjacent anchors legitimately step backwards | session 2026-08-24 · scripts/ingest/research/batch17/out/shugo-chara.json, scripts/ingest/apply-research-batch-17.ts, §12.42 |  |
@@ -2305,6 +2435,12 @@
 | rule | value | reason | ruled | retires when |
 |---|---|---|---|---|
 | `A1` | {"episode":92} | A1 junk anchor: pure anime-original beachside comedy episode | Sean 2026-08-25 · scripts/ingest/research/batch17/out/slam-dunk.json, scripts/ingest/apply-research-batch-17.ts, §12.45 |  |
+
+### solo-leveling (1)
+
+| rule | value | reason | ruled | retires when |
+|---|---|---|---|---|
+| `T25` | manhwa | AniList's `source: OTHER` on the anime (151807) is the error: its ONLY ADAPTATION edge is 105398 — format MANGA, countryOfOrigin KR (the KakaoPage webtoon, 2018-03-04 → 2021-12-29, D&C Media) — so deriveSourceKind(MANGA × KR) already reads manhwa; the override keeps the ruling aligned with the derivation (the god-of-high-school precedent). Aniplex / docomo 原作 credit the webtoon trio (DUBU / Chugong / h-goon, D&C Webtoon Biz.), not the novel; ja-WP: based on the webtoon; all 13 stored anchors are in the webtoon's chapter space (sololeveling.fandom {{WB}} column matches every row; our v7 = 98-110 boundary matches its volume table exactly). Not `webtoon`: that kind is by origin (OEL), and this work is Korean. TRAP (research-agent): the Yen Press PRINT edition re-numbers chapters (vol 1 = 'Chapters 1-3' for webtoon 1-12; vol 7 = 'Chapters 18-21' for 98-110) — never join an anchor on a Yen Press TOC. The stale ja-WP '15 volumes' cite is dropped (ja-WP says 既刊13巻; en-WP / fandom carry 15). | Sean 2026-08-27 · scripts/ingest/research/batch19/out/solo-leveling.json, scripts/ingest/research/batch19/verify/solo-leveling.md, https://anilist.co/manga/105398, https://sololeveling.fandom.com/wiki/Volume_%26_Chapter |  |
 
 ### soul-eater (3)
 
@@ -2364,15 +2500,18 @@
 |---|---|---|---|---|
 | `I17` | {"to":"sword-art-online","kind":"spin_off"} | SAO merged into ONE series; Alternative GGO is its own story in the shared universe — spin_off. | session 2026-08-22 · docs/franchise-rulings.md "Sword Art Online" |  |
 
-### that-time-i-got-reincarnated-as-a-slime (3)
+### that-time-i-got-reincarnated-as-a-slime (6)
 
 | rule | value | reason | ruled | retires when |
 |---|---|---|---|---|
 | `R21` | {"file":"scripts/ingest/research/batch14/out/that-time-i-got-reincarnated-as-a-slime.json","anchors":67} | batch-14 verdict applied as-curated | session 2026-08-23 · scripts/ingest/research/batch14/out/that-time-i-got-reincarnated-as-a-slime.json |  |
 | `A18` | reorder regime (batch 17): S1 skips chs 40-42 and 44-45 and jumps to ch 43 + 46-52 for its final four episodes, leaving the skipped block to S2 | verdict-documented: S1 skips chs 40-42 and 44-45 and jumps to ch 43 + 46-52 for its final four episodes, leaving the skipped block to S2 | session 2026-08-24 · scripts/ingest/research/batch17/out/that-time-i-got-reincarnated-as-a-slime.json, scripts/ingest/apply-research-batch-17.ts, §12.42 |  |
 | `T6` | {"30":"mixed"} | Ep 30 (S2E6) adapts chs 54-55 (Rimuru/Hinata) but the whole Tempest segment is anime-original (fandom adaptation notes + batch-14 review). | session 2026-08-23 · scripts/ingest/research/batch14/out/that-time-i-got-reincarnated-as-a-slime.json |  |
+| `T29` | {"position":24.1,"record":{"kind":"ova","anilistId":161802}} | AniList 161802 'Coleus no Yume' format=OVA, 3 eps, 2023-11-01. (The stored note calls it '3 ONA eps'; AniList's format field for the entry is OVA — flagged.) | Sean 2026-08-27 · scripts/ingest/research/batch19/out/watch-order-kinds.json, https://anilist.co/anime/161802 |  |
+| `T29` | {"position":48.2,"record":{"kind":"movie","anilistId":139498}} | AniList 139498 format=MOVIE, 108 min, 2022-11-25. en-WP: 'is a 2022 Japanese animated isekai fantasy film'. | Sean 2026-08-27 · scripts/ingest/research/batch19/out/watch-order-kinds.json, https://anilist.co/anime/139498, https://en.wikipedia.org/wiki/That_Time_I_Got_Reincarnated_as_a_Slime_the_Movie:_Scarlet_Bond |  |
+| `T29` | {"position":72.3,"record":{"kind":"movie","anilistId":182206}} | AniList 182206 'Soukai no Namida-hen' format=MOVIE, 104 min, 2026-02-27 = the entry's stated JP release. | Sean 2026-08-27 · scripts/ingest/research/batch19/out/watch-order-kinds.json, https://anilist.co/anime/182206 |  |
 
-### the-ancient-magus-bride (12)
+### the-ancient-magus-bride (13)
 
 | rule | value | reason | ruled | retires when |
 |---|---|---|---|---|
@@ -2388,6 +2527,19 @@
 | `I24` | {"flag":"count_mismatch","source":"resolve","note":"S2 (2023, 24 eps, two cours) missing from our S1-only entry. For the stitch: S2e1 re-adapts ch 45+47; S2 … | the continua ch-95 anchor was the S2 endpoint bleeding into our S1-only entry; S2 is missing → stitch candidacy. | session 2026-08-23 · scripts/ingest/apply-research-batch-10.ts, scratchpad batch10/the-ancient-magus-bride.json (session scratchpad, not on disk), docs/changelog.md §12.29 |  |
 | `R21` | {"file":"scripts/ingest/research/batch14/out/the-ancient-magus-bride.json","anchors":24} | batch-14 verdict applied as-curated | session 2026-08-23 · scripts/ingest/research/batch14/out/the-ancient-magus-bride.json |  |
 | `R21` | {"file":"scripts/ingest/research/batch15/out/the-ancient-magus-bride.json","anchors":2,"zoneAcks":0} | batch-15 verdict applied as-curated | session 2026-08-24 · scripts/ingest/research/batch15/out/the-ancient-magus-bride.json |  |
+| `T29` | {"position":24.1,"record":{"kind":"ova","anilistId":130713}} | AniList 130713 format=OVA, 3 eps, 2021-09-10 to 2022-09-09. en-WP infobox: type=oad (original animation DVD), 'The Ancient Magus' Bride: The Boy from the West and the Knight of the Blue Storm' — OAD is the home-video-bundle form of OVA. | Sean 2026-08-27 · scripts/ingest/research/batch19/out/watch-order-kinds.json, https://anilist.co/anime/130713, https://en.wikipedia.org/wiki/The_Ancient_Magus%27_Bride |  |
+
+### the-asterisk-war (1)
+
+| rule | value | reason | ruled | retires when |
+|---|---|---|---|---|
+| `G53` | {"23":"2016-06-11"} | Batch 19 wave 2 lane B3 (ja-WP + en-WP / syoboi / fandom, 2+ sources per row; the contradictions verified R24; Sean ruled B3-7): ep 23: Ep 23 = Asterisk War S2 ep 11 'The Lonely Strega' (孤毒の魔女), aired 2016-06-11. en-WP 'The Asterisk War' episode table gives EpisodeNumber 23 / EpisodeNumber2 11 = June 11, | Sean 2026-08-27 · scripts/ingest/research/batch19/out/airdates/the-asterisk-war.json, https://anilist.co/anime/21390, https://en.wikipedia.org/wiki/The_Asterisk_War |  |
+
+### the-beginning-after-the-end (1)
+
+| rule | value | reason | ruled | retires when |
+|---|---|---|---|---|
+| `T25` | webtoon | The anime adapts the Tapas WEBCOMIC (story TurtleMe, art Fuyuki23), not TurtleMe's web novel: the anime's own credit block reads verbatim 'Based on the comic series, created by TurtleMe and published by Tapas Entertainment' (official site; reproduced by Animate Times with 原作：TurtleMe / ストーリー監修：TurtleMe); the stored anchors are in the webcomic's chapter numbering (ep 12's 48-56 = the webcomic's season-2 finale ch 56 'All I Need', which adapts NOVEL ch 29 — a far coarser space). AniList carries NO media entry for the novel or the comic (183161 / 194317: source OTHER, only SEQUEL/PREQUEL edges), so derivation cannot produce a kind — the override is the only route. `webtoon`, NOT `manhwa`: the kind is BY ORIGIN (Sean 2026-08-27) — an OEL American Tapas Original (en-WP {{Infobox manhwa \| OEL = y}}, 'American web novel series'; launched July 2018 in English on a then-US platform for the NA market; Tapas is Kakao-owned only since May 2021) with no Korean publication of origin; manhwa would assert a country the sources refute. TRAP: the fandom's `episode` field is the raw Tapas index (webcomic ch 48 = Tapas 57) — join on `episode_webtoon` / the chapter number only. | Sean 2026-08-27 · scripts/ingest/research/batch19/out/the-beginning-after-the-end.json, scripts/ingest/research/batch19/verify/the-beginning-after-the-end.md, https://en.wikipedia.org/wiki/The_Beginning_After_the_End, https://tapas.io/series/The-Beginning-After-the-End |  |
 
 ### the-case-study-of-vanitas (6)
 
@@ -2400,17 +2552,25 @@
 | `A43` | {"episodes":[5],"kind":"graft","chapters":"Entracte 15.5","asterisk_review":"pending (if unset)"} | bonus intermission 'Chambre d'enfants' (childhood flashback vignette, collected in vol 5) woven into ep 5's flashback — not a mainline position | session 2026-08-23 · scripts/ingest/apply-research-batch-8.ts, docs/changelog.md §12.25, session scratchpad batch8/the-case-study-of-vanitas.json |  |
 | `C1` | {"episode":5,"continue_chapter":10} | ep 5 ends partway into Mémoire 10 — continue reading ch 10 itself (C1 mid-chapter straddle) | Sean 2026-08-23 · scripts/ingest/apply-continue-points.ts, docs/changelog.md §12.27, batch 8 verdict (the-case-study-of-vanitas) | C9 superseded by C2/C3 (b17 continue point = next episode's start, skips noted) — each value stands only where it equals anime parity; re-derive under C2/C3 |
 
-### the-future-diary (1)
+### the-devil-is-a-part-timer (1)
 
 | rule | value | reason | ruled | retires when |
 |---|---|---|---|---|
+| `G53` | {"9":"2013-05-30"} | Batch 19 wave 2 lane B3 (ja-WP + en-WP / syoboi / fandom, 2+ sources per row; the contradictions verified R24; Sean ruled B3-7): ep 9: Ep 9 'The Hero Experiences a Fray' (勇者、修羅場を経験する) aired 2013-05-30. ja-WP はたらく魔王さま! (アニメ) 各話リスト 第9話 Aux5 = 5月30日 (year header 2013年); en-WP 'The Devil Is a Part-Timer! sea | Sean 2026-08-27 · scripts/ingest/research/batch19/out/airdates/the-devil-is-a-part-timer.json, https://en.wikipedia.org/wiki/The_Devil_Is_a_Part-Timer%21_season_1, https://ja.wikipedia.org/wiki/%E3%81%AF%E3%81%9F%E3%82%89%E3%81%8F%E9%AD%94%E7%8E%8B%E3%81%95%E3%81%BE%21%20%28%E3%82%A2%E3%83%8B%E3%83%A1%29 |  |
+
+### the-future-diary (2)
+
+| rule | value | reason | ruled | retires when |
+|---|---|---|---|---|
+| `G53` | {"13":"2012-01-09"} | Batch 19 wave 2 lane B3 (ja-WP + en-WP / syoboi / fandom, 2+ sources per row; the contradictions verified R24; Sean ruled B3-7): ep 13: Ep 13 'Unknown Number' / 'Number Withheld' (非通知設定) aired 2012-01-09, not 2011-01-09 - the series had not started in January 2011 (premiere 2011-10-09), which is exactly w | Sean 2026-08-27 · scripts/ingest/research/batch19/out/airdates/the-future-diary.json, https://en.wikipedia.org/wiki/List_of_Future_Diary_episodes, https://ja.wikipedia.org/wiki/%E6%9C%AA%E6%9D%A5%E6%97%A5%E8%A8%98%20%28%E6%BC%AB%E7%94%BB%29 |  |
 | `N7` | 16762 | A (high): Redial = ep 27 epilogue. | Sean 2026-08-23 |  |
 
-### the-heroic-legend-of-arslan (1)
+### the-heroic-legend-of-arslan (2)
 
 | rule | value | reason | ruled | retires when |
 |---|---|---|---|---|
 | `R21` | {"file":"scripts/ingest/research/batch14/out/the-heroic-legend-of-arslan.json","anchors":25} | batch-14 verdict applied as-curated | session 2026-08-23 · scripts/ingest/research/batch14/out/the-heroic-legend-of-arslan.json |  |
+| `T29` | {"position":25.1,"record":{"kind":"ova","anilistId":21817}} | AniList 21817 'Arslan Senki (TV) OVA' format=OVA, 2 eps, 2016-03-09 and 2016-12-09. en-WP The Heroic Legend of Arslan carries an infobox with type=ova for the TV series' OVAs. | Sean 2026-08-27 · scripts/ingest/research/batch19/out/watch-order-kinds.json, https://anilist.co/anime/21817, https://en.wikipedia.org/wiki/The_Heroic_Legend_of_Arslan |  |
 
 ### the-melancholy-of-haruhi-suzumiya (2)
 
@@ -2483,10 +2643,12 @@
 |---|---|---|---|---|
 | `I27` | {"ids":[101280,108511,116742,156822,182205],"extras":[{"id":161802,"after":101280},{"id":139498,"after":116742},{"id":182206,"after":156822}],"ruledExtent":"… | AFL-lag class: AFL page = S1 (24); S2 (2021, two parts, our 25-48) + S3 (2024, our 49-72) + S4 (airing 2026, our 73-96) — docs §12.19e structure gap, MU out-of-space flag #728. Visions of Coleus OVA (161802), Scarlet Bond (139498) and Tears of the Azure Sea (182206) are anime-original, order-only at their batch-14 placements. | session 2026-08-23 · docs/data-pipeline.md §12.19e, ingest_flags #728 |  |
 
-### to-love-ru (24)
+### to-love-ru (26)
 
 | rule | value | reason | ruled | retires when |
 |---|---|---|---|---|
+| `G53` | {"9":"2008-05-29","10":"2008-06-05"} | Batch 19 wave 2 lane B3 (ja-WP + en-WP / syoboi / fandom, 2+ sources per row; the contradictions verified R24; Sean ruled B3-7): ep 9: Episode 9 is 'From a Shining Star, With Love' (光星より愛を込めて); ja-WP 各話リスト TL第1期 lists it as 話数 9, and en-WP 'To Love Ru season 1' dates that title 2008-05-30 (TBS Fri 01:55) \| ep 10: Episode 10 is 'A Space Entertainer' (宇宙の女芸人……); ja-WP lists it as 話数 10 and en-WP dates that title 2008-06-06 = 2008-06-05 stored convention. Same transposition as ep 9 - | Sean 2026-08-27 · scripts/ingest/research/batch19/out/airdates/to-love-ru.json, https://en.wikipedia.org/wiki/To_Love_Ru_season_1, https://ja.wikipedia.org/wiki/To%20LOVE%E3%82%8B%20-%E3%81%A8%E3%82%89%E3%81%B6%E3%82%8B-, scripts/ingest/research/batch19/verify/b3-contradictions.md |  |
+| `G53` | {"9":"From a Shining Star, With Love","10":"A Space Entertainer"} | Rows 9 and 10 held each other's title AND date: ja-WP 話数 9 光星より愛を込めて / 10 宇宙の女芸人; en-WP 05-30 / 06-06; syoboi TID 1352 #9 2008-05-30 01:55 / #10 06-06 (the stored −1-day convention → 05-29 / 06-05). Titles travel with the dates. | Sean 2026-08-27 · scripts/ingest/research/batch19/out/airdates/to-love-ru.json, scripts/ingest/research/batch19/verify/b3-contradictions.md |  |
 | `A3` | {"episode":1,"chapter":1,"start_chapter":1,"chapters_adapted":"1","volume":1,"source":"manual","note":"research-tier batch 12 (2026-08-23, agent-verified 2+ … | only cleanly mappable 2008 ep — MEDIUM. fandom + Wikipedia | session 2026-08-23 · scripts/ingest/apply-research-batch-12.ts, scratchpad batch12/to-love-ru.json (session scratchpad, not on disk), docs/changelog.md §12.31 |  |
 | `A3` | {"episode":27,"chapter":102,"start_chapter":100,"chapters_adapted":"100-102 (Riko arc)","volume":12,"source":"manual","note":"research-tier batch 12 (2026-08… | OVA 1. fandom + Wikipedia | session 2026-08-23 · scripts/ingest/apply-research-batch-12.ts, scratchpad batch12/to-love-ru.json (session scratchpad, not on disk), docs/changelog.md §12.31 |  |
 | `A3` | {"episode":28,"chapter":104,"start_chapter":73,"chapters_adapted":"73 + 104 (merged)","volume":12,"source":"manual","note":"research-tier batch 12 (2026-08-2… | OVA 2. fandom Siblings + Wikipedia | session 2026-08-23 · scripts/ingest/apply-research-batch-12.ts, scratchpad batch12/to-love-ru.json (session scratchpad, not on disk), docs/changelog.md §12.31 |  |
@@ -2512,13 +2674,16 @@
 | `A40` | {"table":"series","mapping_mode":"loose"} | the 2008 series is heavily anime-original with reordering and Motto airs 3 segments/ep in mostly random order — anchors are borrow-maps (anchor = max touched), so loose. | session 2026-08-23 · scripts/ingest/apply-research-batch-12.ts, scratchpad batch12/to-love-ru.json (session scratchpad, not on disk), docs/changelog.md §12.31 |  |
 | `N7` | 5667 | B (medium): OVA 27-32 bridges to Motto; community-practice based — re-open if evidence emerges. | Sean 2026-08-23 |  |
 
-### to-love-ru-darkness (3)
+### to-love-ru-darkness (6)
 
 | rule | value | reason | ruled | retires when |
 |---|---|---|---|---|
 | `R21` | {"file":"scripts/ingest/research/batch14/out/to-love-ru-darkness.json","anchors":24} | batch-14 verdict applied as-curated | session 2026-08-23 · scripts/ingest/research/batch14/out/to-love-ru-darkness.json |  |
 | `N3` | {"anilistId":21852,"start":25,"end":26,"action":"numbered → order-only (rows deleted, later rows/anchors/annotations shift down)","fractional":{"position":24… | 2nd Specials = standalone bonuses; community count = 24 (Sean sign-off 2026-08-23) | Sean 2026-08-23 · scripts/ingest/apply-research-batch-7.ts, docs/changelog.md §12.23 |  |
 | `N11` | {"drop":[25,26],"shifts":[]} | Queue-2 Group C demotion: the 2nd Specials bonuses AFL numbers as 25-26 are order-only in the community count; trailing, so the rows drop with no shift. | Sean 2026-08-23 |  |
+| `T29` | {"position":12.2,"record":{"kind":"ova","anilistId":13851}} | AniList 13851 'To LOVE-Ru Darkness OVA' format=OVA, 6 eps, from 2012-08-17. en-WP To Love Ru infobox: type=ova, 'To Love Ru Darkness', released August 17, 2012. | Sean 2026-08-27 · scripts/ingest/research/batch19/out/watch-order-kinds.json, https://anilist.co/anime/13851, https://en.wikipedia.org/wiki/To_Love_Ru |  |
+| `T29` | {"position":24.1,"record":{"kind":"special","anilistId":21852}} | AniList 21852 'To LOVE-Ru Darkness 2nd Specials' format=SPECIAL, 2 eps, 2015-10-29 — the '2nd eps 13-14' the entry names. NOTE: appears to be the same work as the @24.5 entry — see flags. | Sean 2026-08-27 · scripts/ingest/research/batch19/out/watch-order-kinds.json, https://anilist.co/anime/21852 |  |
+| `T29` | {"position":24.5,"record":{"kind":"special","anilistId":21852}} | AniList 21852 'To LOVE-Ru Darkness 2nd Specials' format=SPECIAL, 2 eps, 2015-10-29. NOTE: appears to be the same work as the @24.1 entry — see flags. | Sean 2026-08-27 · scripts/ingest/research/batch19/out/watch-order-kinds.json, https://anilist.co/anime/21852 |  |
 
 ### to-your-eternity (19)
 
@@ -2576,10 +2741,11 @@
 |---|---|---|---|---|
 | `I24` | {"ids":[100240,102351]} | AniList relation-graph gap found post-recovery: :re parts 1+2 form the split-off series (Sean 2026-08-24: :re separate from tokyo-ghoul). | session 2026-08-23 |  |
 
-### tokyo-mew-mew (4)
+### tokyo-mew-mew (5)
 
 | rule | value | reason | ruled | retires when |
 |---|---|---|---|---|
+| `A45` | {"episodes":[25,26,27],"kind":"partial"} | The batch-17 zone fact 'eps 25,26,27 partial {13-16}: volume 4's internal ch 14 / 15 / 16 split could not be pinned' is SUPERSEDED — the split is pinned by chapter TITLES (en-WP's ChapterList: 14 'Kiss and Tell', 15 'Tokyo Tower Tales', 16 'Young Love'; tokyomewmew.fandom's vol-4 'Chapters included') laid against the volume's four-beat summary → per-episode anchors 25 → 14, 26 → 15, 27 → 16 (rearranged, the A41 settled reorder). A zone annotation next to exact anchors would assert the split is unknown. | Sean 2026-08-27 · scripts/ingest/research/batch19/out/tokyo-mew-mew.json, scripts/ingest/research/batch19/verify/b5b-x-seiya-mewmew.md |  |
 | `N22` | {"episode":52,"field":"end_chapter"} | stored 32 is MangaDex/AniList padded count-space (5 bonus stories); the 27-chapter mainline is the space our stored volume boundaries use, and ep 52 adapts ch 27 "A Transfer of Power" beat-for-beat (verifier-confirmed via live APIs) | Sean 2026-08-25 · scripts/ingest/research/batch17/out/tokyo-mew-mew.json, scripts/ingest/apply-research-batch-17.ts, §12.50 |  |
 | `N22` | {"total_chapters":27} | the mainline space (our boundaries' space) runs 1-27; AniList's 33 counts the 5 bonus stories — chapter-NUMBER space, not count space; annotated on ep 52 so the UI can surface why | Sean 2026-08-25 · scripts/ingest/research/batch17/out/tokyo-mew-mew.json, scripts/ingest/apply-research-batch-17.ts, §12.50 |  |
 | `N30` | {"episodes":[52],"kind":"side_story","note":"Sean 2026-08-25: the manga volumes include 5 bonus stories outside the 27-chapter mainline — Bonus Comic + After… | the manga volumes include 5 bonus stories outside the 27-chapter mainline (Bonus Comic + Afterward v3, Tokyo Black Cat Girl v4, Petite Mew Mew v5/v7, Sleeping Beauty of Berry Forest v6); AniList/MangaDex count them (33/32), our chapter space and total (27) deliberately exclude them — labeled on the finale row so the UI can surface why | Sean 2026-08-25 · scripts/ingest/research/batch17/out/tokyo-mew-mew.json, scripts/ingest/apply-research-batch-17.ts, §12.50 |  |
@@ -2641,6 +2807,12 @@
 | `A40` | {"mapping_mode":"loose"} | researched loose verdict: episodic, out-of-order, source pool ≈ vols 1-29; final arc = the 1988 film. | session 2026-08-23 · scripts/ingest/apply-research-batch-6.ts |  |
 | `N8` | {"position":193.5,"disposition":"excluded_recap"} | RECAP (rebroadcast of ep 44 + countdown) — recap rule (Monogatari precedent) excludes from count AND watch order; Sean sign-off 2026-08-23 | Sean 2026-08-23 · scripts/ingest/apply-research-batch-7.ts, docs/changelog.md §12.23 |  |
 | `N3` | {"cap":194,"note":"MAL/AniList count the farewell RECAP special (rebroadcast of ep 44 + countdown) as #194; Wikipedia holds it at 193.5 unnumbered — recap ru… | MAL/AniList count the farewell recap special (a rebroadcast of ep 44 plus a countdown) as #194 while Wikipedia holds it at 193.5 unnumbered; under the recap rule (N8, Monogatari precedent) it is excluded and the finale is 194. | session 2026-08-23 |  |
+
+### vampire-knight (1)
+
+| rule | value | reason | ruled | retires when |
+|---|---|---|---|---|
+| `G53` | {"19":"2008-11-10"} | Batch 19 wave 2 lane B3 (ja-WP + en-WP / syoboi / fandom, 2+ sources per row; the contradictions verified R24; Sean ruled B3-7): ep 19: Ep 19 = Vampire Knight Guilty 第6夜 'The Fake Lovers' (偽りの恋人〜ラヴァーズ〜), broadcast 2008-11-10 25:30 (ja-WP 各話リスト 第6夜 = 11月11日, i.e. 2008-11-10 in the Monday convention our row | Sean 2026-08-27 · scripts/ingest/research/batch19/out/airdates/vampire-knight.json, https://en.wikipedia.org/wiki/List_of_Vampire_Knight_episodes, https://ja.wikipedia.org/wiki/%E3%83%B4%E3%82%A1%E3%83%B3%E3%83%91%E3%82%A4%E3%82%A2%E9%A8%8E%E5%A3%AB |  |
 
 ### vinland-saga (4)
 
@@ -2704,10 +2876,11 @@
 | `A3` | {"episode":36,"chapter":73,"start_chapter":69,"chapters_adapted":"69 (p.1, 12-20), 70, 73 (p.4-20)","volume":9,"source":"manual"} | ch 73 pulled ahead — as-stored | session 2026-08-23 · scripts/ingest/apply-rearranged-anchors.ts, docs/changelog.md §12.32, batch-11 verdict (welcome-to-demon-school-iruma-kun) |  |
 | `A3` | {"episode":37,"chapter":74,"start_chapter":71,"chapters_adapted":"71, 72, 74","volume":9,"source":"manual"} | Walter Park reorder pair — as-stored | session 2026-08-23 · scripts/ingest/apply-rearranged-anchors.ts, docs/changelog.md §12.32, batch-11 verdict (welcome-to-demon-school-iruma-kun) |  |
 
-### when-they-cry (1)
+### when-they-cry (2)
 
 | rule | value | reason | ruled | retires when |
 |---|---|---|---|---|
+| `G54` | [27,28] | Row 27 is the Nekogoroshi-hen OVA — a DVD-purchase bonus (ja-WP 各話リスト OVA / 猫殺し編 / Number -; DVD 全9巻 購入特典) carrying a home-video RELEASE date (ANN Vintage 2007-08-02 = stored; en-WP July 27 = the vol-9 street date), slotted by story position between the 2006 season and Kai, whose ep 1 (row 28, 2007-07-06) therefore regresses against it. A release date is not a broadcast date; the row is correctly ordered. | Sean 2026-08-27 · scripts/ingest/research/batch19/out/airdates/when-they-cry.json, scripts/ingest/research/batch19/verify/b3-contradictions.md |  |
 | `N7` | 3652 | A (high): Rei 51-55 is counted as the third entry. | Sean 2026-08-23 |  |
 
 ### world-trigger (5)
@@ -2720,10 +2893,11 @@
 | `R21` | {"file":"scripts/ingest/research/batch15/out/world-trigger.json","anchors":3,"zoneAcks":0} | batch-15 verdict applied as-curated | session 2026-08-24 · scripts/ingest/research/batch15/out/world-trigger.json |  |
 | `T6` | {"48":"filler","49":"filler","50":"filler","51":"filler","52":"filler","53":"filler","54":"filler","55":"filler","56":"filler","57":"filler","58":"filler","5… | Ep 48 is an anime-original breather inside the canon arc; 49-63 is the Fugitive Arc, RETCONNED by S2 → filler, not canon. T4.3 (T27, 2026-08-26): anime-only-canon → filler (adheres to no source; the studio-ending class A-7 carries a divergence annotation and stays on the review list — twin-star 21-50 explicitly, T4-GLOSSARY §7). | session 2026-08-24 · scripts/ingest/research/batch17/out/world-trigger.json |  |
 
-### x (8)
+### x (9)
 
 | rule | value | reason | ruled | retires when |
 |---|---|---|---|---|
+| `A44` | [9,10,16,17,18] | Five rows of the remix zone hold no truthful continuous position (batch 19 B5-10). Eps 9-10: FORWARD grafts of volume 8's recruitment beats (ch 29-31: Subaru's onmyoji job / the Seishiro illusion at 9; Saiki taking Yuzuriha to recruit Aoki at 10) fused with the bonus chapters 41.5 / 24.5 / 34.5, played BEFORE ch 24 (ep 11) and ch 25 (ep 12) — an END would claim 24-28 unseen and run backwards two rows later (A12). Ep 16: vol 12's opening (42-43) welded to vol 15's close and vol 16's Rainbow Bridge duel (71-78), stopping mid-volume — no boundary lands; the monotone option END 43 exists (true, understates the episode's own title beat, Seishiro's death) and was shown to Sean. Ep 17: largely a clip show + vol 14/15 fragments (54-62, 63, 70.5) + an anime-only scene. Ep 18: vol 13's first beat (49, Inuki's death) + vol 15's Yuzuriha/Kusanagi block (63-70) — the monotone option END 49 exists (forward of ep 15's 41) and was shown to Sean; it claims nothing of the vol-15 half. The per-episode rearranged / side_story / divergence annotations carry the chapters; eps 15 → 41 and 19 → 53 are the zone's two true waypoints (volume boundaries). | Sean 2026-08-27 · scripts/ingest/research/batch19/out/x.json, scripts/ingest/research/batch19/verify/b5b-x-seiya-mewmew.md |  |
 | `A3` | {"episode":20,"chapter":84,"volume":17,"source":"manual"} | research-tier (medium confidence): follows manga to ~vol 17/ch 84 at ep 20, then original ending. xtvclamp.fandom.com + Wikipedia + cbr.com | Sean 2026-08-24 · scripts/ingest/apply-research-batch.ts | OVERTAKEN — x ep 20 re-ruled to ch 94 / vol 18 (DRIFT-LIST §A closed items, §12); eps 21-24 retyped (T10 only-ending class) |
 | `G3` | {"flags":"open → confirmed","verdict":"research-tier frontier applied as manual anchor (sources in anchor note); Sean sign-off 2026-08-24"} | open ingest_flags closed with verdict: research-tier frontier applied as manual anchor (sources in anchor note); Sean sign-off 2026-08-24 | Sean 2026-08-24 · scripts/ingest/apply-research-batch.ts |  |
 | `A8` | {"episode":20,"field":"end_chapter"} | Sean ruled 94 (best-supported estimate): ep 20's closing beat (Arashi losing her powers) is vol-18 material per Wikipedia's volume summary; 95 would overshoot a beat the prose places later; the exact digit inside 88-95 is an honest boundary-locked estimate like every X anchor | Sean 2026-08-25 · scripts/ingest/research/batch17/out/x.json, scripts/ingest/apply-research-batch-17.ts, §12.50 |  |
@@ -2746,12 +2920,21 @@
 | `G33` | {"episode":38,"field":"end_chapter"} | stored 544 is the WHOLE-FRANCHISE endpoint (post-season-5 "continue at 544") on this S1-only entry; S1 ends ch 140 (fandom + Wikipedia + Grande Road ep 1 opening at 140-145) | session 2026-08-24 · scripts/ingest/research/batch17/out/yowamushi-pedal.json, scripts/ingest/apply-research-batch-17.ts, §12.42 |  |
 | `V10` | {"episode":38,"field":"volume"} | paired: ch 140 is vol 17 (138-146), not the season-5 franchise volume 63 | session 2026-08-24 · scripts/ingest/research/batch17/out/yowamushi-pedal.json, scripts/ingest/apply-research-batch-17.ts |  |
 
-### yu-gi-oh-2000 (2)
+### yu-gi-oh-2000 (3)
 
 | rule | value | reason | ruled | retires when |
 |---|---|---|---|---|
 | `N4` | {"anilistId":21265,"start":225,"end":225,"action":"numbered → order-only (rows deleted, later rows/anchors/annotations shift down)","fractional":{"position":… | Dark Side of Dimensions is a FILM — order-only per the movies rule (Sean sign-off 2026-08-23) | Sean 2026-08-23 · scripts/ingest/apply-research-batch-7.ts, docs/changelog.md §12.23 |  |
 | `N11` | {"drop":[225],"shifts":[]} | Queue-2 Group C demotion: Dark Side of Dimensions is a FILM (movies are order-only unless community-numbered); AFL numbers it as 225, so the row drops — trailing, no shift. | Sean 2026-08-23 |  |
+| `T29` | {"position":224.5,"record":{"kind":"movie","anilistId":21265}} | AniList 21265 format=MOVIE, 130 min, 2016-04-23. en-WP: 'is a 2016 Japanese animated science fantasy film'. | Sean 2026-08-27 · scripts/ingest/research/batch19/out/watch-order-kinds.json, https://anilist.co/anime/21265, https://en.wikipedia.org/wiki/Yu-Gi-Oh!_The_Dark_Side_of_Dimensions |  |
+
+### yu-gi-oh-5d-s (3)
+
+| rule | value | reason | ruled | retires when |
+|---|---|---|---|---|
+| `G53` | {"23":"2008-09-03","35":"2008-11-26","46":"2009-02-18","96":"2010-02-10","100":"2010-03-10","120":"2010-07-28","134":"2010-11-10","146":"2011-02-02"} | KEYS ARE POST-N11 NUMBERS (the 2026-08-27 drop of AFL's film row 83 shifts 84+ by −1; AIR_DATE_OVERRIDES applies AFTER translation): the verdict's 97/101/121/135/147 are 96/100/120/134/146 here. Batch 19 wave 2 lane B3 (ja-WP + en-WP / syoboi / fandom, 2+ sources per row; the contradictions verified R24; Sean ruled B3-7): ep 23: Our row 23 is 5D's episode 23 'Duel of the Dragons, Part 1 (決勝戦(ファイナルマッチ))'. ja-WP 遊☆戯☆王5D's 各話リスト 放送日 = 9月3日 (2008年) and the Yu-Gi-Oh! Fandom episode page gives japanese \| ep 35: Our row 35 is 5D's episode 35 'Dark Signs, Part 4 (戦慄! 地縛神コカパク・アプ)'. ja-WP 遊☆戯☆王5D's 各話リスト 放送日 = 11月26日 and the Yu-Gi-Oh! Fandom episode page gives japanese air date = 20 \| ep 46: Our row 46 is 5D's episode 46 'Mark of the Spider, Part 2 (17年前の真実 隠されたダークシグナーの罠)'. ja-WP 遊☆戯☆王5D's 各話リスト 放送日 = 2月18日 and the Yu-Gi-Oh! Fandom episode page gives japanese \| ep 96: Our row 97 is 5D's episode 96 'Natural Instincts, Part 1 (結成!チーム5D's)'. ja-WP 遊☆戯☆王5D's 各話リスト 放送日 = 2月10日 and the Yu-Gi-Oh! Fandom episode page gives japanese air date = \| ep 100: Our row 101 is 5D's episode 100 'The Edge of Elimination, Part 1 (窮地 ラスト・ホイーラー遊星)'. ja-WP 遊☆戯☆王5D's 各話リスト 放送日 = 3月10日 and the Yu-Gi-Oh! Fandom episode page gives japanese \| ep 120: Our row 121 is 5D's episode 120 'Tie Those Feelings! The Hand Tied to the Majin! (想いをつなげ! 手をつなぐ魔人)'. ja-WP 遊☆戯☆王5D's 各話リスト 放送日 = 7月28日 and the Yu-Gi-Oh! Fandom episode pa \| ep 134: Our row 135 is 5D's episode 134 'For Synchro's Sake (破滅の道! シンクロ召喚が行きつく未来)'. ja-WP 遊☆戯☆王5D's 各話リスト 放送日 = 11月10日 and the Yu-Gi-Oh! Fandom episode page gives japanese air da \| ep 146: Our row 147 is 5D's episode 146 'The Last Human, Z-ONE (最後の一人 Z-ONE)'. ja-WP 遊☆戯☆王5D's 各話リスト 放送日 = 2月2日 and the Yu-Gi-Oh! Fandom episode page gives japanese air date = 20 | Sean 2026-08-27 · scripts/ingest/research/batch19/out/airdates/yu-gi-oh-5d-s.json, https://ja.wikipedia.org/wiki/%E9%81%8A%E2%98%86%E6%88%AF%E2%98%86%E7%8E%8B5D%27s, https://yugioh.fandom.com/wiki/Yu-Gi-Oh%21_5D%27s_-_Episode_023, https://yugioh.fandom.com/wiki/Yu-Gi-Oh%21_5D%27s_-_Episode_035, https://yugioh.fandom.com/wiki/Yu-Gi-Oh%21_5D%27s_-_Episode_046, https://yugioh.fandom.com/wiki/Yu-Gi-Oh%21_5D%27s_-_Episode_096, https://yugioh.fandom.com/wiki/Yu-Gi-Oh%21_5D%27s_-_Episode_100, scripts/ingest/research/batch19/verify/b3-contradictions.md |  |
+| `N11` | {"drop":[83],"shifts":[{"from":84,"offset":-1}],"spaces":["afl"]} | AFL numbers the theatrical film 劇場版 遊☆戯☆王 ~超融合!時空を越えた絆~ 'Bonds Beyond Time' (AniList 6951, MOVIE, 2010-01-23) as its row 83, shifting every TV episode +1 from 84 to 155 (AFL 84 'Will the Real Jack Atlas… Part 1' carries ja-WP ep 83's date 2009-11-04; wiki-title-verify: eps 79-117 match @−1 on 35 rows, @0 on 17; eps 118-155 @−1 37 / @0 0), and OMITS real ep 145 光よりも速く!! (2011-01-26) while leaving its own 146 unused. ja-WP 話数 全154話, en-WP (26+38+28+42+20 = 154), yugioh.fandom and AniList 3972 (154) agree; rows 154/155 (→ 153/154) are two distinct episodes in one 最終回1時間スペシャル broadcast — NOT a duplicate (the ask's premise, refuted). The film is order-only @82.5 kind movie (ingest_fractionals + RULED_RECORDS): yugioh.fandom's film page places it before Crash Town with Bruno present, Katsumi Ono's tweet 「クラッシュタウン編」以前 → the range (82, 86). spaces ['afl'] (N12): ja/en-WP, AniList and the fandom are already the 154-space — a blanket shift would poison the wiki fill by −1. Apply sequence: re-resolve → wiki-episodes-backfill (restores 145 in the 'wiki' space) → the N11 outcome check (contiguous 1..154, no adjacent duplicate titles); B3's G53 keys re-keyed to the post-shift numbers (96/100/120/134/146); aired/total → 154; flag #1019 closes only then. Precedent: dr-stone (drop [36], shift −1 from 37, fractional 35.5). | Sean 2026-08-27 · scripts/ingest/research/batch19/out/yu-gi-oh-5d-s.json, scripts/ingest/research/batch19/verify/yu-gi-oh-5d-s.md, https://www.animefillerlist.com/shows/yu-gi-oh-5ds, https://anilist.co/anime/6951, https://ja.wikipedia.org/wiki/遊☆戯☆王5D%27s |  |
+| `T29` | {"position":82.5,"record":{"kind":"movie","anilistId":6951}} | The theatrical film 劇場版 遊☆戯☆王 ~超融合!時空を越えた絆~ 'Bonds Beyond Time' (AniList 6951, format MOVIE, 49 min, 2010-01-23), which AFL numbered into the TV run as row 83 (dropped under N11, 2026-08-27). Order-only @82.5: yugioh.fandom's film page places it before Crash Town with Bruno present, and Katsumi Ono's tweet puts it 「クラッシュタウン編」以前 → between ep 82 and ep 83 (range 82-86). The yu-gi-oh-2000 @224.5 shape. | Sean 2026-08-27 · scripts/ingest/research/batch19/out/yu-gi-oh-5d-s.json, scripts/ingest/research/batch19/verify/yu-gi-oh-5d-s.md, https://anilist.co/anime/6951 |  |
 
 ### yu-gi-oh-5ds (1)
 
@@ -2759,16 +2942,18 @@
 |---|---|---|---|---|
 | `I17` | {"to":"yu-gi-oh-gx","kind":"sequel"} | Yu-Gi-Oh: DM→GX→5D's is the sequel chain. | session 2026-08-22 · docs/franchise-rulings.md "Yu-Gi-Oh" |  |
 
-### yu-gi-oh-arc-v (1)
+### yu-gi-oh-arc-v (2)
 
 | rule | value | reason | ruled | retires when |
 |---|---|---|---|---|
+| `G53` | {"19":"2014-08-17"} | Batch 19 wave 2 lane B3 (ja-WP + en-WP / syoboi / fandom, 2+ sources per row; the contradictions verified R24; Sean ruled B3-7): ep 19: Ep 19 'Quiz Quagmire, Part 1' (知識の宇宙!!九庵堂栄太) aired 2014-08-17. ja-WP 遊☆戯☆王ARC-V 各話リスト 第19話 = 8月17日; Yu-Gi-Oh! Fandom 'Yu-Gi-Oh! ARC-V - Episode 019' japanese air date = A | Sean 2026-08-27 · scripts/ingest/research/batch19/out/airdates/yu-gi-oh-arc-v.json, https://ja.wikipedia.org/wiki/%E9%81%8A%E2%98%86%E6%88%AF%E2%98%86%E7%8E%8BARC-V, https://yugioh.fandom.com/wiki/Yu-Gi-Oh%21_ARC-V_-_Episode_019 |  |
 | `I17` | {"to":"yu-gi-oh","kind":"spin_off"} | Yu-Gi-Oh: Zexal/Arc-V/VRAINS/Sevens are spin_offs of DM — own story, shared universe. | session 2026-08-22 · docs/franchise-rulings.md "Yu-Gi-Oh" |  |
 
-### yu-gi-oh-gx (1)
+### yu-gi-oh-gx (2)
 
 | rule | value | reason | ruled | retires when |
 |---|---|---|---|---|
+| `G53` | {"2":"2004-10-13","3":"2004-10-20","14":"2005-01-05","132":"2007-04-18","134":"2007-05-02","144":"2007-07-11"} | Batch 19 wave 2 lane B3 (ja-WP + en-WP / syoboi / fandom, 2+ sources per row; the contradictions verified R24; Sean ruled B3-7): ep 2: Ep 2 'Welcome to Duel Academy (フレイム・ウィングマン)' aired 2004-10-13. ja-WP 遊☆戯☆王デュエルモンスターズGX 各話リスト 放送日 for TURN-2 = 10月13日. SPLIT SOURCE: en-WP's 'Yu-Gi-Oh! GX season 1' table \| ep 3: Ep 3 'A Duel in Love (エトワール・サイバー)' aired 2004-10-20. ja-WP 遊☆戯☆王デュエルモンスターズGX 各話リスト 放送日 for TURN-3 = 10月20日. en-WP season 1 also gives October 20, 2004. Stored 2005-10-20 \| ep 14: Ep 14 'A Spirit Summoned (VS(バーサス)サイコショッカー!?)' aired 2005-01-05. ja-WP 遊☆戯☆王デュエルモンスターズGX 各話リスト 放送日 for TURN-14 = 1月5日 (2005年). en-WP season 1 gives January 5, 2005. Store \| ep 132: Ep 132 'A New World Order (生死を賭けた決闘(デュエル))' aired 2007-04-18. ja-WP 遊☆戯☆王デュエルモンスターズGX 各話リスト 放送日 for TURN-132 = 4月18日. en-WP 'Yu-Gi-Oh! GX season 3' gives April 18, 2007. \| ep 134: Ep 134 'Dueling With The Dark Army (十代VS暗黒界の騎士ズール)' aired 2007-05-02. ja-WP 遊☆戯☆王デュエルモンスターズGX 各話リスト 放送日 for TURN-134 = 5月2日. en-WP season 3 gives May 2, 2007. Stored 2007 \| ep 144: Ep 144 'The Forbidden Ritual, Part 1 (発動!究極封印解放儀式術!)' aired 2007-07-11. ja-WP 遊☆戯☆王デュエルモンスターズGX 各話リスト 放送日 for TURN-144 = 7月11日. en-WP season 3 gives July 11, 2007. Stored | Sean 2026-08-27 · scripts/ingest/research/batch19/out/airdates/yu-gi-oh-gx.json, https://en.wikipedia.org/wiki/Yu-Gi-Oh%21_GX_season_1, https://en.wikipedia.org/wiki/Yu-Gi-Oh%21_GX_season_3, https://ja.wikipedia.org/wiki/%E9%81%8A%E2%98%86%E6%88%AF%E2%98%86%E7%8E%8B%E3%83%87%E3%83%A5%E3%82%A8%E3%83%AB%E3%83%A2%E3%83%B3%E3%82%B9%E3%82%BF%E3%83%BC%E3%82%BAGX, https://yugioh.fandom.com/wiki/Yu-Gi-Oh%21_GX_-_Episode_002, scripts/ingest/research/batch19/verify/b3-contradictions.md |  |
 | `I17` | {"to":"yu-gi-oh","kind":"sequel"} | Yu-Gi-Oh: 8 separate series (distinct protagonists/continuities); DM→GX→5D's is the sequel chain. | session 2026-08-22 · docs/franchise-rulings.md "Yu-Gi-Oh" |  |
 
 ### yu-gi-oh-sevens (1)
@@ -2790,7 +2975,7 @@
 | `I24` | {"ids":[10015,15489]} | UNRECORDED — assisted-batch explicit chain (Zexal + Zexal II); a case the relation walker could not derive, per-series detail not written down. | session 2026-08-22 |  |
 | `I17` | {"to":"yu-gi-oh","kind":"spin_off"} | Yu-Gi-Oh: Zexal/Arc-V/VRAINS/Sevens are spin_offs of DM — own story, shared universe. | session 2026-08-22 · docs/franchise-rulings.md "Yu-Gi-Oh" |  |
 
-### yu-yu-hakusho-ghostfiles (23)
+### yu-yu-hakusho-ghostfiles (27)
 
 | rule | value | reason | ruled | retires when |
 |---|---|---|---|---|
@@ -2817,11 +3002,16 @@
 | `N3` | {"anilistId":6964,"start":113,"end":113,"action":"numbered → order-only (rows deleted, later rows/anchors/annotations shift down)","fractional":{"position":1… | Picture Drama = standalone bonus; community count = 112 (Sean sign-off 2026-08-23) | Sean 2026-08-23 · scripts/ingest/apply-research-batch-7.ts, docs/changelog.md §12.23 |  |
 | `N3` | {"cap":112,"note":"TV run = 112; trailing extras (2009 Picture Drama, 2018 OVAs Two Shot/All or Nothing) are order-only — AFL renumbers them after drops, so … | The TV run is 112; the trailing extras (2009 Picture Drama, 2018 OVAs Two Shot / All or Nothing) are order-only. AFL renumbers them after drops, so the numbering-shift drop[113] alone let All or Nothing re-enter as 113 — the cap is the durable instrument (research batch 11). | session 2026-08-23 |  |
 | `N11` | {"drop":[113],"shifts":[]} | Queue-2 Group C demotion: the Picture Drama bonus AFL numbers as 113 is a standalone bonus the community does not number — order-only, row drops (trailing, so no shift). The community cap (N3) is the durable instrument because AFL renumbers after drops. | Sean 2026-08-23 |  |
+| `T29` | {"position":112.1,"record":{"kind":"special","anilistId":6964}} | AniList 6964 'Yuu Yuu Hakusho Picture Drama' format=SPECIAL, 1 ep, 6 min, 2009-10-27. en-WP: Bandai Visual's first Blu-ray set (October 27, 2009) 'contain[ed] a picture drama set after the end of the series'. NOTE: appears to be the same work as the @112.5 entry — see flags. | Sean 2026-08-27 · scripts/ingest/research/batch19/out/watch-order-kinds.json, https://anilist.co/anime/6964, https://en.wikipedia.org/wiki/YuYu_Hakusho_(1992_TV_series) |  |
+| `T29` | {"position":112.5,"record":{"kind":"special","anilistId":6964}} | AniList 6964 'Yuu Yuu Hakusho Picture Drama' format=SPECIAL, 1 ep, 6 min, 2009-10-27. NOTE: appears to be the same work as the @112.1 entry — see flags. | Sean 2026-08-27 · scripts/ingest/research/batch19/out/watch-order-kinds.json, https://anilist.co/anime/6964, https://en.wikipedia.org/wiki/YuYu_Hakusho_(1992_TV_series) |  |
+| `T29` | {"position":112.7,"record":{"kind":"ova","anilistId":102631}} | en-WP YuYu Hakusho (1992 TV series) infobox: type=ova, title 'Yu Yu Hakusho: Two Shot & All or Nothing', 2 episodes, released October 26, 2018; the franchise article: 'A brand new OVA ... was released with a Blu-ray box set ... on October 26, 2018'. DISAGREEMENT: AniList 102631 bundles both shorts as ONE entry with format=SPECIAL. The anilist_id is therefore shared with @112.8 — it is not a per-entry id. | Sean 2026-08-27 · scripts/ingest/research/batch19/out/watch-order-kinds.json, https://anilist.co/anime/102631, https://en.wikipedia.org/wiki/YuYu_Hakusho_(1992_TV_series) |  |
+| `T29` | {"position":112.8,"record":{"kind":"ova","anilistId":102631}} | en-WP YuYu Hakusho (1992 TV series) infobox: type=ova, 'Yu Yu Hakusho: Two Shot & All or Nothing', 2 episodes, released October 26, 2018. DISAGREEMENT: AniList 102631 bundles both shorts as ONE entry with format=SPECIAL; the id is shared with @112.7. | Sean 2026-08-27 · scripts/ingest/research/batch19/out/watch-order-kinds.json, https://anilist.co/anime/102631, https://en.wikipedia.org/wiki/YuYu_Hakusho_(1992_TV_series) |  |
 
-### zatch-bell (8)
+### zatch-bell (9)
 
 | rule | value | reason | ruled | retires when |
 |---|---|---|---|---|
+| `G53` | {"77":"2004-10-10","131":"2005-11-06"} | Batch 19 wave 2 lane B3 (ja-WP + en-WP / syoboi / fandom, 2+ sources per row; the contradictions verified R24; Sean ruled B3-7): ep 77: Ep 77 'The Return of Sherry and Brago!' (シェリー気高き輪舞(ロンド) 炸裂バベルガ・グラビドン) aired 2004-10-10. ja-WP 金色のガッシュ!! 各話リスト 放送日 = 10月10日 for 話数 77; konjikinogash.fandom.com Episode 77 \| ep 131: Ep 131 'Determination of the King. Friends? The World? Gash's Decision' (王の覚悟 友か? 世界か? ガッシュの決断) aired 2005-11-06. ja-WP 各話リスト 放送日 = 11月6日 for 話数 131; konjikinogash.fandom | Sean 2026-08-27 · scripts/ingest/research/batch19/out/airdates/zatch-bell.json, https://ja.wikipedia.org/wiki/%E9%87%91%E8%89%B2%E3%81%AE%E3%82%AC%E3%83%83%E3%82%B7%E3%83%A5%21%21, https://konjikinogash.fandom.com/wiki/Episode_131, https://konjikinogash.fandom.com/wiki/Episode_77 |  |
 | `A8` | {"episode":120,"field":"end_chapter"} | konjikinogash.fandom per-episode fields: ep 120 ends at ch 184, not 185 (ch 185 opens ep 121) — repairs the base verdict's soft split | session 2026-08-25 · scripts/ingest/research/batch17/out2/zatch-bell-contested.json, scripts/ingest/research/batch17/out/zatch-bell.json, scripts/ingest/apply-research-batch-17.ts, §12.46 |  |
 | `A8` | {"episode":121,"field":"end_chapter"} | paired with ep 120: ep 121 = chs 185-186 ending at 186, not 187 (ch 187 lands at ep 124, anchored by the contested verdict) | session 2026-08-25 · scripts/ingest/research/batch17/out2/zatch-bell-contested.json, scripts/ingest/apply-research-batch-17.ts, §12.46 |  |
 | `A3` | {"episode":51,"end_chapter":22,"start_chapter":22,"chapters_adapted":"22 (Germany half — Brago vs Furigaro; first and only adaptation, held back 41 episodes … | first-time adaptation anchors truthfully at what the row adapts (ch 22, held back 41 episodes); the verdict withheld it pending Sean — ruled 2026-08-25: anchor + annotation, continue via parity (the 'zatch-51 precedent' later applied to trigun ep 9 and eyeshield ep 88) | Sean 2026-08-25 · scripts/ingest/research/batch17/out2/zatch-bell-contested.json, scripts/ingest/apply-research-batch-17.ts, §12.46, CHUNK1-RECOVERY.md §11 |  |

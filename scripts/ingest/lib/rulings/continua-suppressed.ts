@@ -31,7 +31,7 @@ export const ENTRIES: RulingEntry<string>[] = [
   ),
   entry(
     'claymore',
-    'continua says ep 26 → ch 54, but eps 24-26 are fully anime-original (research 2026-08-23) — the manual ep-20 → ch-56 anchor is the frontier',
+    'continua says ep 26 → ch 56 (54 until the 2026-08-27 parser fix read past the page group), but eps 24-26 are fully anime-original (research 2026-08-23; batch 19 wave 1 T28) — a wrong-EPISODE pin either way; the manual ep-23 → ch-59 line (batch 19 wave 1) is the frontier',
     '2026-08-23',
   ),
   entry(
