@@ -607,6 +607,24 @@
    durable guard. Lesson for the floor rule: a >2 overshoot sourced from a
    SINGLE chart row with no corroborating content anywhere is a typo
    candidate, not an adoption candidate.
+79. ✅ **CONSOLIDATE DEEP after batch 20 wave 1 (2026-08-27; P21 — three
+   enforcement sites changed: honest-terminal.ts, mu-frontier.ts' gate
+   stack + mu-coverage.ts, mu-frontier-suppressed.ts).** Steps 0-8 satisfied
+   by §12.78's save point (system census green, edges current, heal + census
+   run, gates green). Rescan: every episode-keyed ruling points at an
+   existing row (T6 / G53 dates + titles / T29 / A44 / T26 / A45 / G54);
+   permanence_violation 0, permanence_candidate 50 listed, none signed;
+   ruling_violation 0, mu_pin_flag_redundant 0, annotation_retired_standing
+   0; the three G36 refusal flags (942 zatch-bell, 944 hellsing, 947
+   slam-dunk) were closed by the writer's own G56 path — the gate proven end
+   to end; the retiresWhen worklist gained only the three G37 entries (each
+   retires when MU's field reads the terminal's chapter). Per-series
+   consequences of the gate change, all explained in §12.78: frontier_tail_
+   null 4 → 8 (honest: shippuden 480-499's old run-end pin was lending
+   positions to un-researched rows; kaguya 41 / heavens 28 are "(Movie)"
+   segments that ARE those entries' — queued as a per-series segment
+   ruling), mu_skipped_terminal membership moved under A4-max semantics.
+   Census unchanged otherwise. NEXT: Sean's go on wave 2 (PLAN.md L-A2).
 78. ✅ **BATCH 20 WAVE 1 APPLIED — the seven G36 refusals closed (2026-08-27;
    Sean's rulings + Cursor's #8 sequence).** Research (7 verdicts, ≈909k)
    → verify (7 reports, ≈900k, nothing refuted on a terminal) → rulings →
