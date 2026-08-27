@@ -406,6 +406,27 @@ export const ENTRIES: RulingEntry<Record<number, RuledAirDate>>[] = [
     ruledOn: '2026-08-27',
     cite: ['scripts/ingest/research/batch19/out/airdates/zatch-bell.json', 'https://ja.wikipedia.org/wiki/%E9%87%91%E8%89%B2%E3%81%AE%E3%82%AC%E3%83%83%E3%82%B7%E3%83%A5%21%21', 'https://konjikinogash.fandom.com/wiki/Episode_131', 'https://konjikinogash.fandom.com/wiki/Episode_77'],
   },
+  // ---- batch 20 wave 1 (2026-08-27; verified R24 — the verifier parsed all 137 ja-WP rows: zero mismatches; Sean ruled)
+  {
+    seriesId: 'kinnikuman',
+    ruleId: 'G53',
+    value: { 38: '1983-12-25', 87: '1985-04-07', 90: '1985-04-28', 91: '1985-05-05', 92: '1985-05-12', 93: '1985-05-19', 94: '1985-05-26', 95: '1985-06-02', 96: '1985-06-09', 97: '1985-06-16', 98: '1985-06-23', 99: '1985-06-30', 100: '1985-07-07', 101: '1985-07-14', 102: '1985-07-21', 103: '1985-07-28', 104: '1985-08-04', 105: '1985-08-11', 106: '1985-08-18', 107: '1985-10-06', 108: '1985-10-13', 109: '1985-10-20', 110: '1985-10-27', 111: '1985-11-03', 112: '1985-11-10', 113: '1985-11-17', 114: '1985-11-24', 115: '1985-12-01', 116: '1985-12-08', 117: '1985-12-15', 118: '1985-12-22', 119: '1985-12-29' },
+    reason:
+      "The dateless kinnikuman claim G53 has waited for since batch 18 ('eps 90-119 one week early', ep 38, ep 87), now cited: the stored column duplicates 1984-01-08 on rows 38/39 and 1985-04-21 on rows 89/90 and drops the 1985-12-29 airing, so rows 38 and 90-119 each carry the NEIGHBOUR's date (ep+1 for 38, ep-1 for 90-119) and row 87 is null; every corrected value is ja-WP 各話リスト's (all Sundays, the 日曜10:00 slot; 107 = 1985-10-06 after the seven-week 傑作選 hiatus), corroborated one day early (Saturday) by kinnikuman.fandom's episode list. Rows 1-37, 39-86, 88-89 and 120-137 already match ja-WP.",
+    ruledBy: 'Sean',
+    ruledOn: '2026-08-27',
+    cite: ['scripts/ingest/research/batch20/out/kinnikuman.json', 'scripts/ingest/research/batch20/verify/kinnikuman.md', 'https://ja.wikipedia.org/wiki/キン肉マン_(テレビアニメ)'],
+  },
+  {
+    seriesId: 'gantz',
+    ruleId: 'G53',
+    value: { 22: '2004-10-21', 25: '2004-11-11' },
+    reason:
+      "The second season ran Thursdays 10:00 on AT-X without a break (ep 14 2004-08-26 → ep 26 2004-11-18): 2004-10-22 is a Friday and 2004-11-10 a Wednesday — AFL's values, inherited; syobocal TID 483 (ChID 20 = AT-X, per-airing rows), gantz.fandom's episode infoboxes, en-WP's episode list and MAL's episode list all give 10-21 and 11-11 (four witnesses). Both errors still ascend, so no order gate saw them (the day-of-week class).",
+    ruledBy: 'Sean',
+    ruledOn: '2026-08-27',
+    cite: ['scripts/ingest/research/batch20/out/gantz.json', 'scripts/ingest/research/batch20/verify/gantz.md', 'https://cal.syoboi.jp/tid/483'],
+  },
 ];
 
 export const AIR_DATE_OVERRIDES: Record<string, Record<number, RuledAirDate>> = toRecord(ENTRIES);

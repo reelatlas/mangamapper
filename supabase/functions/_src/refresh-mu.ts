@@ -54,9 +54,9 @@ async function run() {
         counters.changed++;
 
         // inline upkeep for every series backed by this manga
-        const linked = await selectAll<{ id: string; status: string | null; aired_episodes: number | null; total_chapters: number | null; manga_start_chapter: number | null; manga_status: string | null }>(
+        const linked = await selectAll<{ id: string; status: string | null; aired_episodes: number | null; total_chapters: number | null; manga_start_chapter: number | null; manga_status: string | null; start_date: string | null; end_date: string | null }>(
           'series',
-          'id, status, aired_episodes, total_chapters, manga_start_chapter, manga_status',
+          'id, status, aired_episodes, total_chapters, manga_start_chapter, manga_status, start_date, end_date',
           (q) => q.eq('manga_anilist_id', row.manga_anilist_id),
         );
         for (const s of linked) {

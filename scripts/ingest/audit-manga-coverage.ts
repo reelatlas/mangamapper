@@ -10,6 +10,7 @@
 
 import { db, selectAll, startRun, finishRun, fileFlagOnce } from './lib/db';
 import { seriesHasInstrument, sourceKindOf } from './lib/rulings/source-kinds';
+import { parseCoverageSegments, pickEntrySegments } from './lib/mu-coverage';
 import { applyMuFrontier, bestLatestKnown, crossCheckMangaStatus } from './lib/mu-frontier';
 
 interface MuRaw {
@@ -35,6 +36,7 @@ async function main() {
     stale_anchor_no_frontier: [],
     pending_airing_no_frontier: [],
     pending_finished_unknown_coverage: [],
+    mu_pin_multiwork_unresolved: [],
     no_source: [],
     data_hole_no_manga_link: [],
   };
@@ -63,7 +65,9 @@ async function main() {
       total_chapters: number | null;
       aired_episodes: number | null;
       manga_start_chapter: number | null;
-    }>('series', 'id, status, source_type, manga_status, manga_anilist_id, total_chapters, aired_episodes, manga_start_chapter');
+          start_date: string | null;
+      end_date: string | null;
+    }>('series', 'id, status, source_type, manga_status, manga_anilist_id, total_chapters, aired_episodes, manga_start_chapter, start_date, end_date');
 
     for (const s of series) {
       const hasSource = seriesHasInstrument(s.source_type); // T25: the manga instrument, not mere identity
@@ -113,9 +117,16 @@ async function main() {
           });
         }
       }
+      {
+        // G32 gate 0 listing: a multi-work MU string with no segment marked for this entry keeps today's pin and is listed for a ruling
+        const segs = parseCoverageSegments(mu?.anime?.end ?? null);
+        const yr = (d?: string | null) => (d && /^\d{4}/.test(d) ? Number(d.slice(0, 4)) : null);
+        const pick = pickEntrySegments(segs, { airedEpisodes: s.aired_episodes, startYear: yr(s.start_date), endYear: yr(s.end_date) });
+        if (pick.unresolved) classes.mu_pin_multiwork_unresolved.push(`${s.id}: ${segs.map((x) => `${x.chapter} (${x.label})`).join(' / ')}`);
+      }
       const result = await applyMuFrontier(
         runId,
-        { id: s.id, status: s.status, aired_episodes: s.aired_episodes, total_chapters: s.total_chapters, manga_start_chapter: s.manga_start_chapter },
+        { id: s.id, status: s.status, aired_episodes: s.aired_episodes, total_chapters: s.total_chapters, manga_start_chapter: s.manga_start_chapter, start_date: s.start_date, end_date: s.end_date },
         mu?.anime?.end ?? null,
         anchorMax.get(s.id),
         chapterMax.get(s.id),

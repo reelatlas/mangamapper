@@ -17,18 +17,8 @@ import { MU_FRONTIER_SUPPRESSED } from './rulings/mu-frontier-suppressed';
 import { isAnchorSuppressed } from './rulings/anchor-suppressed';
 import { honestTerminal, pinRedundant } from './honest-terminal';
 
-export function parseCoverageAll(text: string | null): {
-  pairs: { volume: number; chapter: number }[];
-  explicitEp: number | null;
-} {
-  if (!text) return { pairs: [], explicitEp: null };
-  const pairs = [...text.matchAll(/Vol\.?\s*(\d+)\s*,\s*Chap(?:ter)?\.?\s*(\d+)/gi)].map((m) => ({
-    volume: Number(m[1]),
-    chapter: Number(m[2]),
-  }));
-  const ep = pairs.length === 1 ? text.match(/EP\.?\s*(\d+)/i) : null;
-  return { pairs, explicitEp: ep ? Number(ep[1]) : null };
-}
+export { parseCoverageAll, parseCoverageSegments, pickEntrySegments, segmentIsEntry, type CoverageSegment, type EntryWindow } from './mu-coverage';
+import { parseCoverageAll, parseCoverageSegments, pickEntrySegments } from './mu-coverage';
 
 export interface FrontierSeries {
   id: string;
@@ -38,6 +28,9 @@ export interface FrontierSeries {
   // anime status — an MU pin without an explicit episode may only anchor a
   // FINISHED run (see the airing-pin rule below)
   status?: string | null;
+  // the broadcast window (G32 gate 0: a segment labelled with a year inside it is this entry's)
+  start_date?: string | null;
+  end_date?: string | null;
 }
 
 export type FrontierResult =
@@ -71,7 +64,16 @@ export async function applyMuFrontier(
   await db.from('chapter_anchors').delete().eq('series_id', s.id).eq('source', 'mu');
   if (MU_FRONTIER_SUPPRESSED[s.id]) return 'suppressed';
 
-  const { pairs, explicitEp } = parseCoverageAll(muEnd);
+  // G32 gate 0 — labelled segments: only THIS entry's segments may pin
+  const year = (d?: string | null) => (d && /^\d{4}/.test(d) ? Number(d.slice(0, 4)) : null);
+  const segments = parseCoverageSegments(muEnd);
+  const picked = pickEntrySegments(segments, { airedEpisodes: s.aired_episodes, startYear: year(s.start_date), endYear: year(s.end_date) });
+  // an UNRESOLVED string (no entry marker on any segment) keeps today's pin;
+  // the coverage audit lists it (mu_pin_multiwork_unresolved) for a ruling
+  const pairs = segments.length > 1 ? picked.chosen.map((x) => ({ volume: x.volume, chapter: x.chapter })) : parseCoverageAll(muEnd).pairs;
+  const explicitEp = segments.length > 1
+    ? (picked.chosen.find((x) => x.explicitEp != null)?.explicitEp ?? null)
+    : parseCoverageAll(muEnd).explicitEp;
   const scopeStart = s.manga_start_chapter ?? 1;
   const scopeEnd = s.total_chapters ?? Number.POSITIVE_INFINITY;
 
@@ -180,6 +182,13 @@ export async function applyMuFrontier(
   // pin is redundant only when a non-MU anchor covers the pin episode
   // itself.
   if (nonMuMaxEp !== undefined && nonMuMaxEp >= episode) return 'skipped_fresh';
+  // BACKWARDS pin (A4/A19, 2026-08-27 — the kaguya ep-41 case): a pin whose
+  // chapter sits BELOW the researched maximum would render the position
+  // going backwards at the run end (kaguya 40 → 160 then a pin 41 → 137 once
+  // the segment gate dropped the entry's own '(Movie)' segment; heavens-lost-
+  // property 27 → 38 then 28 → 34). Zero progress (== the max) is still
+  // written — the Naruto rule above — but below it the pin adds nothing true.
+  if (nonMuMaxCh !== undefined && coverage.chapter < nonMuMaxCh) return 'no_progress';
   // curated precedence (the same one-anchor-per-episode PK rule as every
   // derived writer): a manual/wiki anchor at the pin episode IS the frontier
   const { data: holder } = await db

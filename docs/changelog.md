@@ -607,6 +607,42 @@
    durable guard. Lesson for the floor rule: a >2 overshoot sourced from a
    SINGLE chart row with no corroborating content anywhere is a typo
    candidate, not an adoption candidate.
+78. ✅ **BATCH 20 WAVE 1 APPLIED — the seven G36 refusals closed (2026-08-27;
+   Sean's rulings + Cursor's #8 sequence).** Research (7 verdicts, ≈909k)
+   → verify (7 reports, ≈900k, nothing refuted on a terminal) → rulings →
+   apply. LIB FIRST: (a) `honestTerminal` takes the MAX-chapter anchor (A4)
+   — hellsing's relocated ep 10 → 2 had hidden the ep-7 → 12 frontier (G56
+   amended, 5 tests); (b) the sibling-ceiling check came up empty (no film
+   / sequel is a catalog entry), so **G32 gate 0 — labelled segments**
+   (`lib/mu-coverage.ts`, pure, 13 tests): MU's per-work segments are read
+   with their labels; an explicit EP dominates, TV / season / year-in-window
+   markers pick this entry's, a Movie / OVA / foreign-year label never wins
+   beside them, a ranged "EP 22-26" is a filler block, and a string with no
+   entry marker is UNRESOLVED — today's pin kept, the series listed
+   (`mu_pin_multiwork_unresolved`, 8) for a ruling, never a title guess;
+   (c) a pin BELOW the researched max is `no_progress` (A4/A19; zero
+   progress still writes — the Naruto rule); (d) three G37 suppressions for
+   pins overstating a placed terminal by an arc / volume boundary (gantz 91,
+   gto 106, toriko 263). DATA: 21 manual anchors incl. the honest terminals
+   slam-dunk 96 → 197, hellsing 10 → 2 (frontier 7 → 12), gantz 21 → 90,
+   gto 41 → 105, **zatch-bell 139 → 212 [212] MIXED** (Sean: a third of the
+   episode of first-time pages is substantial — not the Claymore-24
+   sliver), kinnikuman 119 → 273 (+116-118, 116 START 264 per the
+   verifier's page cite), **toriko 146 → 254** (Toei's synopsis vs the
+   fandom's plateaued "253"); toriko 145's anchor deleted (A1) + filler,
+   144 mixed; 11 curated continues via `writeCuratedContinue` (C7 — the
+   healer converted 0); 26 annotations (slam-dunk 101's graft refuted →
+   loose_parallel{197}); G53 kinnikuman ×32 rows (exact vs all 137 ja-WP
+   rows — the dateless claim since batch 18) + gantz {22, 25}; flags 691 /
+   695 (MU's "editions" = the chapter of its latest-DATED release records,
+   not editions) and 932 dismissed. OUTCOME: `mu_refused_episode_type` 7 →
+   0; ruling_violation 0; anchor_nonmonotonic 0; display 7/7; frontier_
+   tail_null 4 → 8, all honest (shippuden 480-499's old run-end pin had been
+   lending positions to un-researched novel episodes; kaguya 41 /
+   heavens 28 = "(Movie)" segments that ARE those entries' — a per-series
+   segment ruling is queued). NOT written: gto total_chapters 208 → 200 /
+   zatch 324 → 323 (re-derived from AniList; a chapter-count ruling map is
+   the queued /add-rule). Edges deployed. Record: batch20/WAVE1-RECOVERY.md.
 77. ✅ **C7 gets its gate — continue provenance (2026-08-27; /add-rule on
    Sean's go, from Cursor's process nit closing wave 2).** The parity healer
    had converted three JUST-APPLIED curated continues on the same pass

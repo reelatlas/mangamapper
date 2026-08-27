@@ -12,14 +12,25 @@ export type TerminalRow = { number: number; type: string | null };
 export type TerminalAnchor = { episode: number; chapter: number; source: string };
 export type HonestTerminal = { episode: number; chapter: number; source: string };
 
-/** the non-MU anchor on the last canon/mixed row at or before `pinEpisode` that CAN hold a position (A44 position-less rows are skipped — chrono-crusade 21); null when no such row carries one */
+/**
+ * The series' honest terminal at or before `pinEpisode`: the MAX-chapter
+ * non-MU anchor over canon/mixed rows that CAN hold a position (A44
+ * position-less rows skipped — chrono-crusade 21). A4 says coverage is the
+ * max-chapter anchor, never the run-end anchor, because an anime may end on
+ * a relocated earlier block — hellsing (batch 20 wave 1, 2026-08-27): the
+ * last manga row is ep 10 → Order 2 (a relocated flashback) while the
+ * frontier is ep 7 → 12; the first cut of this function read the last row
+ * and could never see MU's "Chap 12" as redundant. Null when no such row
+ * carries an anchor.
+ */
 export const honestTerminal = (rows: TerminalRow[], anchors: TerminalAnchor[], pinEpisode: number, isPositionless: (episode: number) => boolean = () => false): HonestTerminal | null => {
-  const lastCanon = rows
-    .filter((r) => r.number <= pinEpisode && (r.type === 'canon' || r.type === 'mixed') && !isPositionless(r.number))
-    .reduce<number | null>((m, r) => (m == null || r.number > m ? r.number : m), null);
-  if (lastCanon == null) return null;
-  const a = anchors.find((x) => x.episode === lastCanon && x.source !== 'mu');
-  return a ? { episode: a.episode, chapter: Number(a.chapter), source: a.source } : null;
+  const eligible = new Set(rows.filter((r) => r.number <= pinEpisode && (r.type === 'canon' || r.type === 'mixed') && !isPositionless(r.number)).map((r) => r.number));
+  let best: HonestTerminal | null = null;
+  for (const a of anchors) {
+    if (a.source === 'mu' || !eligible.has(a.episode)) continue;
+    if (!best || Number(a.chapter) > best.chapter) best = { episode: a.episode, chapter: Number(a.chapter), source: a.source };
+  }
+  return best;
 };
 
 /** G56: the pin adds nothing when the honest terminal already reaches MU's chapter */

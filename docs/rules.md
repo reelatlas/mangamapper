@@ -201,7 +201,7 @@
 - `G29` Validation tier is event-driven, never scheduled — aka `validation tier is event-driven`
 - `G30` AFG structural cross-check: ±2 aligned, else ruling material — aka `AFG structural cross-check`, `audit-afg-structure`
 - `G31` MU frontier: coverage prose becomes a gated 'mu' anchor — aka `MU-frontier rule`, `MU frontier rule`, `mu frontier`
-- `G32` D1: the MU pin writes only when every gate passes — aka `D1`, `D1 gate stack`, `MU gate stack`, `MU franchise-conflation gates`, `MU writer gates`
+- `G32` D1: the MU pin writes only when every gate passes — aka `D1`, `D1 gate stack`, `MU gate stack`, `MU franchise-conflation gates`, `MU writer gates`, `labelled segments`, `multi-work MU string`, `mu_refused_multiwork`, `G32 gate 0`
 - `G33` Sibling-scope ceiling: a pin stays below the next sibling — aka `D1 sibling-scope ceiling`, `sibling-scope ceiling`, `refused_sibling_scope`
 - `G34` Airing-pin rule: run-end pins apply to finished runs only — aka `airing-pin rule`, `D1 airing-pin`, `TYBW airing pin`
 - `G35` Scope-consumed: research already reached the scope end — aka `D1 scope-consumed`, `scope-consumed`, `scope-consumed refusal`, `refused_scope_consumed`
@@ -2701,16 +2701,16 @@ MangaUpdates' curated anime-coverage field is MULTI-SEGMENT prose: parse ALL "Vo
 
 ### G32 · D1: the MU pin writes only when every gate passes
 
-applyMuFrontier writes a pin only when the whole stack passes, in order: suppression (G37) → sibling-scope filter (G33) → chapter-space / count-space (N28) → airing-pin (G34) → pin-episode redundancy and curated precedence (skips) → scope-consumed (G35) → A1 episode type (G36). Every refusal files a count_mismatch flag (the established withheld-frontier kind) naming its reason, and each refusal is its own census class so a refused frontier never masquerades as "no MU coverage".
+GATE 0 (2026-08-27, batch 20 wave 1): MU writes one coverage sentence per FRANCHISE, one "Vol N, Chap M (label)" segment per work — the frontier reads only THIS entry's segments (an EP inside the run, a TV / season tag, a year inside the broadcast window, or no label); a segment labelled for another work (a film, OVA, remake, unlisted sequel — "(The First Slam Dunk)", "(Ultimate)", "(Scramble for the Throne)") never pins; when no segment carries an entry marker the string is UNRESOLVED — today's pin is kept and the coverage audit lists the series (mu_pin_multiwork_unresolved) for a ruling, never a guess against a title. A ranged "EP 22-26" describes a filler block, never the pin episode. Then: applyMuFrontier writes a pin only when the whole stack passes, in order: suppression (G37) → sibling-scope filter (G33) → chapter-space / count-space (N28) → airing-pin (G34) → pin-episode redundancy and curated precedence (skips) → scope-consumed (G35) → A1 episode type (G36). Every refusal files a count_mismatch flag (the established withheld-frontier kind) naming its reason, and each refusal is its own census class so a refused frontier never masquerades as "no MU coverage".
 
 *Why:* The batch-17 five-case class: MU's prose is franchise-level and a sequel's endpoint sits INSIDE the manga's chapter space where the chapter-space gate cannot see it (ace-ii ep52 → 259, yowamushi ep38 → 544, gantz ep26 → 280 on a filler row, toriko ep147, prisma-illya ep42). First run: mu pins 80→66, every removal triaged.
 
 - ruled Sean 2026-08-24 (batch-17 DECISIONS-FOR-SEAN D1; data-pipeline §12.43; §10 "MU franchise-conflation gates")
 - layer **writer**
-- enforced: [lib/mu-frontier.ts#applyMuFrontier](../scripts/ingest/lib/mu-frontier.ts)
-- audit: `mu_refused_sibling_scope`, `mu_refused_scope_consumed`, `mu_refused_episode_type`, `mu_suppressed`, `anchor_on_noncanon_row`
-- witnesses: ace-of-diamond-act-ii, yowamushi-pedal, gantz, toriko, fate-kaleid-liner-prisma-illya, dragon-ball, the-promised-neverland
-- aliases: D1, D1 gate stack, MU gate stack, MU franchise-conflation gates, MU writer gates
+- enforced: [lib/mu-frontier.ts#applyMuFrontier](../scripts/ingest/lib/mu-frontier.ts) · [lib/mu-coverage.ts#pickEntrySegments](../scripts/ingest/lib/mu-coverage.ts)
+- audit: `mu_refused_sibling_scope`, `mu_refused_scope_consumed`, `mu_refused_episode_type`, `mu_pin_multiwork_unresolved`, `mu_suppressed`, `anchor_on_noncanon_row`
+- witnesses: ace-of-diamond-act-ii, yowamushi-pedal, gantz, toriko, fate-kaleid-liner-prisma-illya, dragon-ball, the-promised-neverland, slam-dunk, kinnikuman, hellsing
+- aliases: D1, D1 gate stack, MU gate stack, MU franchise-conflation gates, MU writer gates, labelled segments, multi-work MU string, mu_refused_multiwork, G32 gate 0
 - see: N28, G33, G34, G35, G36, G37, G31, A26, curated precedence, A1, D4
 
 ### G33 · Sibling-scope ceiling: a pin stays below the next sibling
@@ -3008,7 +3008,7 @@ When an MU frontier pin lands on a row that cannot take an anchor (A1 filler, A4
 - layer **writer**
 - enforced: [lib/honest-terminal.ts#honestTerminal](../scripts/ingest/lib/honest-terminal.ts) · [lib/mu-frontier.ts#skipped_terminal](../scripts/ingest/lib/mu-frontier.ts) · [audit-manga-coverage.ts#mu_skipped_terminal](../scripts/ingest/audit-manga-coverage.ts) · [audit-ui-truth.ts#mu_pin_flag_redundant](../scripts/ingest/audit-ui-truth.ts)
 - audit: `mu_pin_flag_redundant`, `mu_skipped_terminal`
-- witnesses: claymore, rosario-vampire, beelzebub, zatch-bell
+- witnesses: hellsing, claymore, rosario-vampire, beelzebub, zatch-bell
 - aliases: honest terminal, honest-terminal redundancy, covered pin, MU "EP N" pin, EP N pin, skipped_terminal, mu_pin_flag_redundant, claymore #945 class, pin already covered
 - see: G36, G37, G31, A26, A1, A44, P30
 
@@ -4461,6 +4461,7 @@ Any component that renders episode-level data consumes the HYDRATED series (getB
 - full-record protocol → `A30`
 - full-record ruling → `A30`
 - full-source ruling → `G22`
+- G32 gate 0 → `G32`
 - game source → `T25`
 - gates before any commit → `P27`
 - gates before commit → `P27`
@@ -4541,6 +4542,7 @@ Any component that renders episode-level data consumes the HYDRATED series (getB
 - Kenshin rule → `A34`
 - Kingdom S6 lesson → `G44`
 - Kingdom/Beastars/Black Butler class → `I27`
+- labelled segments → `G32`
 - lag rule → `I26`
 - land and checkpoint → `P13`
 - large_diff → `G10`
@@ -4629,10 +4631,12 @@ Any component that renders episode-level data consumes the HYDRATED series (getB
 - MU writer gates → `G32`
 - MU_FRONTIER_SUPPRESSED → `G37`
 - mu_pin_flag_redundant → `G56`
+- mu_refused_multiwork → `G32`
 - mu-558-as-anchor → `A32`
 - MU-frontier rule → `G31`
 - MU-pin episode-keyed redundancy → `A26`
 - muHash → `G42`
+- multi-work MU string → `G32`
 - namesake gate → `G55`
 - namesake guard → `G44`
 - namesake lesson → `G55`

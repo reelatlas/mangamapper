@@ -187,6 +187,8 @@ export const ENTRIES: RulingEntry<EpisodeTypes>[] = [
     value: {
       13: 'filler', 108: 'filler', 118: 'filler', 119: 'filler', 123: 'filler',
       51: 'mixed', 57: 'mixed', 103: 'mixed', 117: 'mixed', 122: 'mixed',
+      // batch 20 wave 1 (Sean 2026-08-27, T28 materiality): ep 139's first act is ch 212 pp. 2-10 of 18 (first-time pages, ~a third of the episode) before the studio ending — a substantial share of canon in an episode that then diverges = MIXED, anchored 212 [212]; NOT the Claymore-24 sliver shape (a few pages of Scene 60)
+      139: 'mixed',
     },
     reason:
       'Contested block, re-researched under the overlap rule (T7): the prior "all 10 filler" proposal rested on exhaustive accounting, ruled insufficient. konjikinogash.fandom per-episode manga_chapter fields + en-WP: 13/108/118/119/123 zero canon (119 = a re-staged REHASH of the ch 35-36 flashback already animated at eps 14-15 — the overlap rule\'s discount case, T8); 51 (ch 22 Germany half, held back 41 eps), 57 (chs 109-110 reworked), 103 (ch 173 opening), 117 (ch 183 closing scene), 122 (ch 186 tail) all carry real canon → mixed.',
@@ -728,6 +730,17 @@ export const ENTRIES: RulingEntry<EpisodeTypes>[] = [
     ruledBy: 'Sean',
     ruledOn: '2026-08-27',
     cite: ['scripts/ingest/research/batch19/out/ranma-1-2.json', 'scripts/ingest/research/batch19/verify/b5c-ranma-bobobo-arms-emma.md'],
+  },
+  // ---- batch 20 wave 1 (2026-08-27; verified R24; Sean ruled)
+  {
+    seriesId: 'toriko',
+    ruleId: 'T6',
+    value: { 145: 'filler', 144: 'mixed' },
+    reason:
+      "Ep 145: Toei's official synopsis is the Four Kings' anime-only combination attacks on Joie (Tornado Leg Boomerang 'only seen on the anime' — toriko.fandom), Jiro/Setsuno sealing the Taste-Changed Teppei, the four-man technique — no page of Gourmet 244-254 plays (verifier: ch 244 ends with Starjun refusing Joie; ch 245 is Starjun's Bloom); the stored 253 [253] anchor was the fandom field's plateau → filler (T28), anchor deleted (A1). Ep 144: half the Gourmet 251-253 Froese/Midora flashback (canon), half Toriko and Starjun returning to fight Joie (anime-original — in the manga Toriko is unconscious) → mixed.",
+    ruledBy: 'Sean',
+    ruledOn: '2026-08-27',
+    cite: ['scripts/ingest/research/batch20/out/toriko.json', 'scripts/ingest/research/batch20/verify/toriko.md'],
   },
 ];
 
