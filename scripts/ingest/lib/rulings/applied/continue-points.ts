@@ -6,7 +6,7 @@ import type { RulingEntry } from '../types';
 
 const ON = '2026-08-23';
 const SCRIPT = 'scripts/ingest/apply-continue-points.ts';
-const RETIRES = 'C9 superseded by C2/C3 (b17 continue point = next episode\'s start, skips noted) — each value stands only where it equals anime parity; re-derive under C2/C3';
+const RETIRES = 'RETIRED 2026-08-27 (batch 19 wave 2 deep) — the parity healer (heal-parity-continues, C2/C3 with the C1 guard) re-derives every continue catalog-wide on each pass; the batch-17 values were converted 2026-08-24/26 and nothing stands outside the mechanism';
 
 const cont = (seriesId: string, episode: number, continue_chapter: number, reason: string, batch: 8 | 9, ruleId: 'C9' | 'C1' = 'C9'): RulingEntry => ({
   seriesId, ruleId, value: { episode, continue_chapter }, reason, ruledBy: 'Sean', ruledOn: ON,

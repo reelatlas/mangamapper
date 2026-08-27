@@ -607,6 +607,40 @@
    durable guard. Lesson for the floor rule: a >2 overshoot sourced from a
    SINGLE chart row with no corroborating content anywhere is a typo
    candidate, not an adoption candidate.
+75. ✅ **CONSOLIDATE DEEP after batch 19 wave 2 (2026-08-27; the formal G56
+   pass, P21).** Trigger: enforcement sites changed since d8f91f5 —
+   lib/afg.ts#parseContinua (G22/G38/G44), filterEpisodeRows (G53 NULL +
+   EPISODE_TITLE_OVERRIDES), annotations.ts (A45 gate), mu-frontier /
+   honest-terminal (G56), row-presence (A42). Steps 0-8 were satisfied by
+   the §12.74 save point (system census green, edges current, restage +
+   heal + census run, gates green). The rescan: (a) **every episode-keyed
+   ruling points at an existing row** (T6 / G53 dates + titles / T29 / A44
+   / T26 / A45 / G54 checked mechanically — the 5D's renumber left no
+   orphan; its three records are post-shift); (b) **retiresWhen sweep** (86
+   conditions): the seven C9 "re-derive under C2/C3" records and x's T10
+   "taxonomy-v2 lands" RETIRED in their applied files (the parity healer is
+   the mechanism; T4.0 landed); kingdom / golden-kamuy I27 still unmet
+   (Zoku-hen NOT_YET_RELEASED; 210073 unstaged); beastars T6, conan T6 (A-5),
+   prisma G37 / rayearth I36 (D2), mashle P16, the I11 film collections and
+   the MHA N31 labels stay parked on their conditions; kamisama-kiss P10,
+   dragon-maid P10, rosario 12/13 and iruma 63 are SEAN'S open rulings and
+   are now listed in STATE; (c) **G56 formal pass**: mu_skipped_terminal 7
+   (beelzebub, chrono-crusade, ajin, detective-school-q, shugo-chara,
+   claymore, rosario), mu_pin_flag_redundant 0, mu_refused_episode_type 7
+   (slam-dunk, toriko, gantz, kinnikuman, hellsing, zatch-bell, gto — G36
+   research items, unchanged); (d) **parser aftermath**: the continua now
+   agrees with every manual / afg anchor it disagreed with (five flags
+   closed in §12.74); dorohedoro's disagreement shrank to one chapter (964
+   annotated); you-and-i-are-polar-opposites' flag 967 dismissed (the series
+   is G26-suppressed); hells-paradise 25 → 94 is Sean's; (e) **Sailor Moon
+   167-168 under the pages line (P23)**: the A44 record says "never-adapted
+   Dream-arc material … behind ep 166's Act 49" — under "pages, not numbers"
+   that is the saint-seiya 29-30 shape: 167 = Act 38's tail + Act 44's
+   opening, 168 = Act 44's core + the Act 48-49 Eternal beat, all FIRST-TIME
+   pages (batch 18, verified) → promotion candidates 167 → 44 [38] and 168 →
+   49 [44], rearranged, with the A44 entry retiring — Sean's decision, listed
+   with the evidence; (f) permanence: 0 locked, permanence_violation 0,
+   permanence_candidate 50 listed, none signed. Census unchanged from §12.74.
 74. ✅ **BATCH 19 WAVE 2 APPLIED (2026-08-27; Sean's rulings under the
    catalog line "pages, not numbers", Cursor concurring) — 27 series moved,
    one lib bug fixed, G53 extended, the 5D's space renumbered.** (1) **The
