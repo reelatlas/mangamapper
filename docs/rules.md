@@ -16,7 +16,7 @@
 
 ## Family strip — one line per rule
 
-**A — Anchors & position** (41)
+**A — Anchors & position** (42)
 - `A1` Filler / anime-only rows never carry anchors — aka `invariant 6`, `hard invariant 6`, `A1 rule`, `filler rows never carry anchors`
 - `A2` Cameo / sliver borrowings are never anchors — aka `A2/A3`, `cameo rule`, `cameo/sliver borrowings`, `A2/A3 rejected-as-anchors`
 - `A3` Exact per-episode adaptation always becomes an anchor — aka `GTO lesson`, `GTO 20/21 lesson`, `rearranged-zone rule`, `rearranged zones`
@@ -58,6 +58,7 @@
 - `A41` A rearranged/graft annotation settles a reorder for audits — aka `ruled reorder exemption`, `rearranged/graft exemption`, `settled reorders`
 - `A42` An exact anchor with no episode row synthesizes the row — aka `anchored row-less episodes`, `cells-at-work 12/13 lesson`, `cells-at-work 12/13`
 - `A43` Annotations are first-class; asterisk review is a queue — aka `asterisk model`, `asterisk review workflow`, `annotations are first-class`, `episode_annotations`
+- `A44` Position-less rows: a ruled row never takes an anchor — aka `anchor suppression`, `ANCHOR_SUPPRESSED`, `anchorless rows`, `position-less rows`, `cover-page serial rule`, `suppressed anchor`
 
 **C — Continue-read regimes** (9)
 - `C1` C1: a mid-chapter ending continues in the straddled chapter — aka `C1 rule`, `mid-chapter straddle`, `mid-chapter END`, `straddled chapter`
@@ -873,6 +874,20 @@ Non-linear facts about an episode (divergence, partial, graft, rearranged, side_
 - witnesses: rurouni-kenshin, gto-great-teacher-onizuka
 - aliases: asterisk model, asterisk review workflow, annotations are first-class, episode_annotations
 - see: R10, A2
+
+### A44 · Position-less rows: a ruled row never takes an anchor
+
+A canon or mixed row whose source content cannot be a reading position — a cover-page side story running ahead of the main line, a side story with no chapter number, acts that sit behind an earlier anchor, a gag special — is ruled POSITION-LESS in ANCHOR_SUPPRESSED (reason + cite) and every anchor writer refuses it: the AFG chart (syncAnchors), the AFG continua (applyContinua) and the MU frontier (applyMuFrontier). The A1 type gate cannot hold these rows because they are legitimately canon/mixed. The healer removes any standing anchor on a suppressed row (the ruling entry IS the A6 triage); a stored anchor on one is a ruling_violation.
+
+*Why:* Batch 18 wave 3 (2026-08-26): retyping one-piece 453-456 (Oda's cover-page serial) from filler to mixed would have silently re-created the ep-455 junk anchor Sean deleted under A6 in batch 17 — that deletion lived only in a history apply script, and AFG's chart prints the cover numbers (545-551) on all four rows; 453/454/456 stayed anchorless by an LIS tie-break on chart values, not by rule. Same exposure on gto 27 (a side story with no Lesson number), sailor-moon 167-168 (Acts behind ep 166), railgun 41.
+
+- ruled Sean 2026-08-26 (scripts/ingest/research/batch18/verify/one-piece.md (verifier finding 1))
+- layer **writer**
+- enforced: [lib/rulings/anchor-suppressed.ts#ANCHOR_SUPPRESSED](../scripts/ingest/lib/rulings/anchor-suppressed.ts) · [lib/anchors.ts#syncAnchors](../scripts/ingest/lib/anchors.ts) · [lib/anchors.ts#applyContinua](../scripts/ingest/lib/anchors.ts) · [lib/mu-frontier.ts#applyMuFrontier](../scripts/ingest/lib/mu-frontier.ts) · [assert-overrides.ts#assertAnchorSuppression](../scripts/ingest/assert-overrides.ts)
+- audit: `ruling_violation`
+- witnesses: one-piece, gto-great-teacher-onizuka, sailor-moon, a-certain-scientific-railgun
+- aliases: anchor suppression, ANCHOR_SUPPRESSED, anchorless rows, position-less rows, cover-page serial rule, suppressed anchor
+- see: A1, A6, T28, T26, G26, G32
 
 ## C — Continue-read regimes
 
@@ -4011,12 +4026,15 @@ Any component that renders episode-level data consumes the HYDRATED series (getB
 - anchor numbering conversion → `N14`
 - anchor numbering translation → `N13`
 - anchor precedence → `A24`
+- anchor suppression → `A44`
 - anchor tier precedence → `A24`
 - anchor_gap_research target → `A39`
+- ANCHOR_SUPPRESSED → `A44`
 - anchor-aware interpolation → `A33`
 - anchor-freshness rule → `A27`
 - anchored interpolation → `A33`
 - anchored row-less episodes → `A42`
+- anchorless rows → `A44`
 - anchors never encode resume positions → `A32`
 - anchorsReachEnd → `A37`
 - AniFiller seed → `I10`
@@ -4177,6 +4195,7 @@ Any component that renders episode-level data consumes the HYDRATED series (getB
 - count mismatch (informational) → `G13`
 - COUNT_MISMATCH_THRESHOLD → `G13`
 - count-space vs number-space → `N22`
+- cover-page serial rule → `A44`
 - coverage = furthest adapted → `A4`
 - coverage = max → `A4`
 - coverage gate → `A37`
@@ -4582,6 +4601,7 @@ Any component that renders episode-level data consumes the HYDRATED series (getB
 - piecewise interpolation → `A33`
 - pin-episode redundancy → `A26`
 - pinned protocol → `R31`
+- position-less rows → `A44`
 - post-adjustment whole-series verification → `P19`
 - predecessor floor → `A17`
 - prequel side-story fallback → `I23`
@@ -4752,6 +4772,7 @@ Any component that renders episode-level data consumes the HYDRATED series (getB
 - successor cap → `A16`
 - successor-span cap → `A16`
 - summary-vs-rows scan → `R25`
+- suppressed anchor → `A44`
 - surfacing parked → `N31`
 - synthesized coverage → `A38`
 - system census → `P33`
@@ -4861,6 +4882,6 @@ Any component that renders episode-level data consumes the HYDRATED series (getB
 
 ## Scoreboard
 
-- rules: 264 (live 247, planned 10, superseded 7)
+- rules: 265 (live 248, planned 10, superseded 7)
 - live data rules with no audit class (the automation backlog): 87
-- by layer: writer 135 · display 23 · both 22 · process 84
+- by layer: writer 136 · display 23 · both 22 · process 84

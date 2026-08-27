@@ -607,6 +607,54 @@
    durable guard. Lesson for the floor rule: a >2 overshoot sourced from a
    SINGLE chart row with no corroborating content anywhere is a typo
    candidate, not an adoption candidate.
+59. ✅ **BATCH 18 WAVE 3 + BATCH CLOSE (2026-08-26): the narrow bundles;
+   rule `A44` (position-less rows); `afl_anime_canon_unruled` drained.**
+   Four bundled Opus agents (~0.82M) over 17 series / 24 rows; six Fable
+   verifications (~0.56M) on the weight-bearing rows. Two verifier
+   refutations, both in the rules' direction: **kenshin-2023 44** — the
+   "named acts" dissolved in context (the 炸裂弾 line answers a question
+   about ep 25, a prop redesign; the Rengoku line is block-level 相談), the
+   脚本監修 credit is the Kodachi class → FILLER, ep 34's ネーム basis stands
+   on its own; **akame** — the verdict's "no source" negative was FALSE:
+   the director states the anime ending was Takahiro's own outline, him on
+   site, and that the manga later changed it → 23-24 filler + RETCONNED
+   (the world-trigger shape, never canon + adopted), 22 divergence, 20/21
+   mixed + position-less. Finds: **black-clover 55-56** adapt a licensed
+   light novel (暴牛の書) → canon + side_source (ep 56's ch-81/82 frame is a
+   partial, not a mix — two licensed works are two standings); **86 ep 10**
+   adapts LN vol 10 → canon + side_story (the LN IS the source; Asato
+   supplied the material and supervised the script); **SAO row 50 is the
+   Ordinal Scale MOVIE** → canon + adopted{author} by authorship (structure
+   task: no component); **one-piece 453-456** animate Oda's cover-page
+   serial → mixed + side_story; girls-last-tour 4 canon (AFL mislabel);
+   beastars 44 basis RULED studio; noragami / sgt-frog / vinland / demon-
+   slayer / durarara / FMAB / HOTD / shippuden 28 / steins-gate filler with
+   their ties. **`A44` ANCHOR_SUPPRESSED** — the one-piece verifier showed
+   that retyping the cover-serial rows mixed would silently re-create the
+   ep-455 junk anchor Sean deleted in batch 17 (that deletion lived only in
+   a history script; AFG prints the cover chapters): a per-episode
+   position-less ruling map gated in syncAnchors / applyContinua /
+   applyMuFrontier, healed, audited (ruling_violation); entries one-piece
+   453-456, gto 27, sailor-moon 167-168, railgun 41, akame 20-21; the
+   rearranged-zone class skips A44 rows. `EPISODE_TYPE_OVERRIDES` now
+   MERGES per series (the annotation map's last-wins defect existed here
+   too — fixed before it bit). Census: afl_anime_canon_unruled 16→1
+   (assassination-classroom ep 0 — a format question for T4.4, dropped from
+   the batch); asterisk_unreviewed 137→146 (nine series newly annotated);
+   frontier_tail_null 7→8 (akame 20-21: mixed rows past the ep-19 anchor,
+   position-less by A44 — the honest null render, not a gap to fill);
+   rearranged_zone_unanchored 11→11 and _acknowledged 6→5 (the class now
+   skips A44 rows before bucketing, so akame 20/21 never enter and
+   sailor-moon 167/168 leave the ack bucket); ruling_violation 0; A1 0;
+   display 220/0.
+   Heal: 11 types, 356 annotation rows, 0 anchors removed (none stood on
+   suppressed rows). Edges deployed. BATCH 18 CLOSED: 32 verdicts, ~5.9M
+   research + ~2.1M verify; the standing maps ARE the ruling record (no
+   apply script); narrow tasks queued in WAVE2/WAVE3-RECOVERY.md (claymore
+   frontier, ajin anchors + continues, soul-eater continue, chrono 15-16,
+   gto 25-26, railgun 14/25, DBS Resurrection 'F', SAO movie component +
+   N7, durarara components, the "row covered by no component" audit
+   class). NEXT: T4.4 format (glossary §6 step 6).
 58. ✅ **BATCH 18 WAVE 2 — THE A-7 STUDIO-ENDING CLASS: researched, verified,
    ruled, applied; rule `T28` (the materiality bar) and the incorporation
    basis ruled (2026-08-26).** Eight Opus verdicts (~1.37M) + seven Fable

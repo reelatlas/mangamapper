@@ -2,7 +2,7 @@
 
 > GENERATED from `scripts/ingest/lib/rulings/**` by `scripts/restructure/gen-rulings.ts` — do not edit by hand. A ruling is an INSTANCE of a rule (`docs/rules.md`); the map is the record, this is the index.
 
-- rulings: 1682 across 199 series/keys · by Sean: 338 · UNRECORDED reasons: 8 · with a retire condition: 93
+- rulings: 1716 across 204 series/keys · by Sean: 373 · UNRECORDED reasons: 8 · with a retire condition: 92
 
 ## Retire conditions (re-evaluate when…)
 
@@ -35,7 +35,6 @@
 - **T4.0 studio-original-endings class ruling (DRIFT-LIST A-7: gto 42-43 "caught up" is one of three competing types)** — gto-great-teacher-onizuka (T6)
 - **T4.0 taxonomy v2 unifies the studio-original-ending classes (A-7)** — claymore (T6), gto-great-teacher-onizuka (T6), ajin-demi-human (T6)
 - **Zoku-hen (204688) airs — chain gains an id** — kingdom (I27)
-- **batch-18: Sean rules the adopted.basis (T4-GLOSSARY §7) — the basis here is INFERRED, not signed** — beastars (T26)
 - **flips to mixed if the step-stool line is ever confirmed inside ch 166** — beastars (T6)
 - **repaired §12.45 (rosario ep 11 9→8)** — rosario-vampire (A3)
 - **stitched 2026-08-23 (§12.34 stitch queue: Kingdom S5/S6 → 155)** — kingdom (I33)
@@ -64,11 +63,19 @@
 | `A7` | {"marker":"zone-acknowledged (batch 15)","episodes":18} | a zone_level_only verdict means the target episode legitimately stays zone-level — the matching episode_annotations row gets the marker appended so audit-ui-truth splits acknowledged rows into rearranged_zone_acknowledged and the open work-list shrinks honestly, never silently | session 2026-08-24 · scripts/ingest/apply-research-batch-15.ts#ZMARK |  |
 | `T24` | {"instrument":"LN VOLUME space","scope":"anchors / frontier / continue-from for light-novel series, same machinery"} | Volume-based instrument for light-novel series (Sean sign-off 2026-08-23): behavior research per series logged as it lands; UI adaptation decided in the UI pass. Recorded in docs §10/§12. | Sean 2026-08-23 · scripts/ingest/apply-research-batch-7.ts, docs/changelog.md §12.23 | T24 build lands (planned) |
 
-### a-certain-scientific-railgun (20)
+### 86-eighty-six (2)
+
+| rule | value | reason | ruled | retires when |
+|---|---|---|---|---|
+| `T26` | [{"episodes":[10],"kind":"side_story","chapters":"LN vol 10: The Banks of Lethe (ch 8), Fido, Varlet; manga vol-1 side story; vol 2 ch 2 opening","note":"Fro… | Batch 18 wave 3 (2026-08-26), verified R24, Sean ruled: canon + side_story. | Sean 2026-08-26 · scripts/ingest/research/batch18/out/86-eighty-six.json, scripts/ingest/research/batch18/verify/86-eighty-six.md, https://hackmd.io/@felza127/86interview5 |  |
+| `T6` | {"10":"canon"} | Batch 18 wave 3 (2026-08-26), verified R24, Sean ruled: ep 10 adapts LN vol 10 — 'The Banks of Lethe' (ch 8, front half), the 'Fido' and 'Varlet' stories (the memory montage, anime-arranged presentation), the manga-vol-1 side story, and vol 2 ch 2's opening (last ~30 s); Asato Asato supplied the vol-10 content to the director ahead of time and supervised the script (BD booklet interview). The LN is the series' SOURCE → canon + side_story (not side_source); 'mixed' recorded as the alternative reading of the montage's presentation. | Sean 2026-08-26 · scripts/ingest/research/batch18/out/86-eighty-six.json, scripts/ingest/research/batch18/verify/86-eighty-six.md, https://hackmd.io/@felza127/86interview5 |  |
+
+### a-certain-scientific-railgun (21)
 
 | rule | value | reason | ruled | retires when |
 |---|---|---|---|---|
 | `T26` | [{"episodes":[20,21,22,23,24],"kind":"adopted","basis":"author","note":"Poltergeist arc. BASIS = INCORPORATION (Sean's batch-18 class ruling): the source's a… | Batch 18 wave 2 (2026-08-26), verified R24, SEAN RULED THE CLASS: incorporating an arc's EVENTS/OUTCOMES into the source line adopts (T26 author basis); importing names/designs does not (Twin Star). Gradient recorded per block. The ep-20 cover-art 'graft' proposed by the verdict is DROPPED (artwork is not source material). 41 mixed under T28 (adapts a whole special chapter). | Sean 2026-08-26 · scripts/ingest/research/batch18/out/a-certain-scientific-railgun.json, scripts/ingest/research/batch18/verify/a-certain-scientific-railgun.md, https://toarumajutsunoindex.fandom.com/wiki/Toaru_Kagaku_no_Railgun_Manga_Chapter_032, https://www.baka-tsuki.org/project/index.php?title=Toaru_Majutsu_no_Index:Railgun_Chapter2 |  |
+| `A44` | [41] | Adapts the ch-39 gag special + ch 40's rat-buying scene + a vol-5 omake inside original framing — mixed under T28, but a gag special and a single scene do not advance the reading position (ch 40 is otherwise adapted by S #16-17's neighbours). Zone-acknowledged; position-less by ruling. | Sean 2026-08-26 · scripts/ingest/research/batch18/out/a-certain-scientific-railgun.json, scripts/ingest/research/batch18/verify/a-certain-scientific-railgun.md |  |
 | `A3` | {"episode":12,"chapter":16,"start_chapter":1,"chapters_adapted":"1-16 (Level Upper main story)","volume":3,"source":"manual","note":"research-tier batch 12 (… | 'AIM Burst' ends the Level Upper climax. fandom Level_Upper_Arc + animefillerlist | session 2026-08-23 · scripts/ingest/apply-research-batch-12.ts, scratchpad batch12/a-certain-scientific-railgun.json (session scratchpad, not on disk), docs/changelog.md §12.31 |  |
 | `A3` | {"episode":14,"chapter":17,"start_chapter":17,"chapters_adapted":"17","volume":3,"source":"manual","note":"research-tier batch 12 (2026-08-23, agent-verified… | ch 17 'Special Workshop' grafted into the original stretch — as-stored. fandom + animefillerlist — CAVEAT (§12.45 / DRIFT-LIST): this row was marked 'as-stored' — confirmation-laundering: the verifier found the ep-12→14 ch-17 graft claim factually false; an inherited stored value was blessed with an invented rationale. Not researched data. | session 2026-08-23 · scripts/ingest/apply-research-batch-12.ts, scratchpad batch12/a-certain-scientific-railgun.json (session scratchpad, not on disk), docs/changelog.md §12.31, docs/changelog.md §12.45 (Batch-12 as-stored sweep) | OVERTAKEN — refuted §12.45 (railgun ep 14 confirmation-laundering; ep-12 continue note still repeats the refuted graft claim — cleanup pending) |
 | `A3` | {"episode":40,"chapter":39,"start_chapter":18,"chapters_adapted":"18-39 (Sisters arc complete)","volume":7,"source":"manual","note":"research-tier batch 12 (… | 'Siblings' ends the Sisters arc. fandom Sisters_Arc + Wikipedia + animefillerlist | session 2026-08-23 · scripts/ingest/apply-research-batch-12.ts, scratchpad batch12/a-certain-scientific-railgun.json (session scratchpad, not on disk), docs/changelog.md §12.31 |  |
@@ -115,6 +122,14 @@
 | `R12` | {"episode":13,"field":"chapters_adapted"} | paired with the start repair — the "13-21 compressed" framing is stale | session 2026-08-24 · scripts/ingest/research/batch15/out/ajin-demi-human.json, scripts/ingest/apply-research-batch-15.ts#REPAIRS_APPROVED |  |
 | `R21` | {"file":"scripts/ingest/research/batch15/out/ajin-demi-human.json","anchors":1,"zoneAcks":0} | batch-15 verdict applied as-curated | session 2026-08-24 · scripts/ingest/research/batch15/out/ajin-demi-human.json |  |
 | `T6` | {"14":"canon","15":"canon","16":"canon","17":"mixed","18":"filler","19":"mixed","20":"filler","21":"filler","22":"mixed","23":"filler","24":"filler","25":"fi… | S2 (14-26) is anime-original from the start with a non-canon ending (WDTALO + mangashed + per-episode breakdown; research batch 12); canon resumes at manga ch 22. Contrary to the later T11 class; parked under A-7. T4.3 (T27, 2026-08-26): anime-only-canon → filler (adheres to no source; the studio-ending class A-7 carries a divergence annotation and stays on the review list — twin-star 21-50 explicitly, T4-GLOSSARY §7). | session 2026-08-23 · scripts/ingest/research/batch15/out/ajin-demi-human.json | T4.0 taxonomy v2 unifies the studio-original-ending classes (A-7) |
+
+### akame-ga-kill (3)
+
+| rule | value | reason | ruled | retires when |
+|---|---|---|---|---|
+| `T26` | [{"episodes":[20,21],"kind":"rearranged","chapters":"41-43, 46, 51-53, 56","note":"ja.wikipedia's phrase for the whole post-ep-19 run is 原作エピソードを流用した — manga… | Batch 18 wave 3 (2026-08-26), verified R24, Sean ruled (with Cursor): 23-24 retconned author outline; 22 divergence; 20/21 mixed, position-less. | Sean 2026-08-26 · scripts/ingest/research/batch18/out/akame-ga-kill.json, scripts/ingest/research/batch18/verify/akame-ga-kill.md, https://animeanime.jp/article/2015/01/20/21646.html, https://animeanime.jp/article/2015/01/21/21664.html |  |
+| `A44` | [20,21] | Mixed rows (the ch 50-53 outline; ch 42-43 and ch 56 beats) inside the anime-original ending: an end-chapter of 53 would skip ch 39/44/45/47-50 (never adapted) and ep 21 reaches back to ch 42-43. The anchor line stops at ep 19 (afg-continua 36). Position-less by ruling. | Sean 2026-08-26 · scripts/ingest/research/batch18/verify/akame-ga-kill.md |  |
+| `T6` | {"20":"mixed","21":"mixed","22":"filler","23":"filler","24":"filler"} | Batch 18 wave 3 (2026-08-26), verified R24, Sean ruled (with Cursor): 20 mixed (MEDIUM — the ch 50-52 outline: Budo beats Tatsumi, Lubbock kills Syura and dies, execution announced; ch 46 unverifiable), 21 mixed (HIGH — ch 42-43 Esdeath vs Najenda/Susanoo never adapted elsewhere; ch 51-53; the ch-56 Budo kill, published AFTER broadcast); both POSITION-LESS (A44: ch 39/44/45/47-50 unadapted). 22 filler + divergence (Kurome's death is not in the director's account). 23-24 FILLER + RETCONNED: director Kobayashi (animeanime.jp 2015-01) states the anime ending — Tatsumi dies vs the Emperor's Teigu, Akame vs Esdeath — was Takahiro's own planned outline, him on site, and that the manga later changed it; standing is relative to the source AS FINISHED (the world-trigger 49-63 shape), never canon + adopted. | Sean 2026-08-26 · scripts/ingest/research/batch18/out/akame-ga-kill.json, scripts/ingest/research/batch18/verify/akame-ga-kill.md, https://animeanime.jp/article/2015/01/20/21646.html |  |
 
 ### ancient-magus-bride (1)
 
@@ -228,7 +243,7 @@
 
 | rule | value | reason | ruled | retires when |
 |---|---|---|---|---|
-| `T26` | [{"episodes":[44],"kind":"adopted","basis":"studio","note":"Adapts no chapter (chs 169-171 are the cut Kyuu chapters, 172-176 land in ep 47); SEAN-RULED cano… | T4.0 D-10: beastars 44 (Sean) → canon + adopted; basis inferred and listed. | session 2026-08-26 · docs/restructure/T4-GLOSSARY.md §3, scripts/ingest/lib/rulings/episode-types.ts beastars | batch-18: Sean rules the adopted.basis (T4-GLOSSARY §7) — the basis here is INFERRED, not signed |
+| `T26` | [{"episodes":[44],"kind":"adopted","basis":"studio","note":"Adapts no chapter (chs 169-171 are the cut Kyuu chapters, 172-176 land in ep 47); Sean ruled cano… | Batch 18 wave 3 (2026-08-26), Sean ruled: beastars 44 canon + adopted{studio} — the provisional marker lifts. | Sean 2026-08-26 · docs/restructure/T4-GLOSSARY.md §3, scripts/ingest/lib/rulings/episode-types.ts beastars |  |
 | `A3` | {"episode":6,"chapter":25,"start_chapter":21,"chapters_adapted":"21, 22, 23, 24, 25","volume":3,"source":"manual","note":"research-tier batch 10 (2026-08-23,… | Black Market visit; exact v3 boundary; SKIPS ch 20 (ep 7 has it). fandom + VIZ v3 + Wikipedia | session 2026-08-23 · scripts/ingest/apply-research-batch-10.ts, scratchpad batch10/beastars.json (session scratchpad, not on disk), docs/changelog.md §12.29 |  |
 | `A3` | {"episode":9,"chapter":36,"start_chapter":33,"chapters_adapted":"33, 34, 35, 36","volume":5,"source":"manual","note":"research-tier batch 10 (2026-08-23, age… | Haru's abduction begins — MEDIUM. fandom + VIZ v5 | session 2026-08-23 · scripts/ingest/apply-research-batch-10.ts, scratchpad batch10/beastars.json (session scratchpad, not on disk), docs/changelog.md §12.29 |  |
 | `A3` | {"episode":12,"chapter":48,"start_chapter":44,"chapters_adapted":"44 (2nd half), 45-48, + ending of 53 grafted","volume":6,"source":"manual","note":"research… | S1 finale; ch 49 never animated. fandom + WDTALO | session 2026-08-23 · scripts/ingest/apply-research-batch-10.ts, scratchpad batch10/beastars.json (session scratchpad, not on disk), docs/changelog.md §12.29 |  |
@@ -319,17 +334,19 @@
 | `T6` | {"3":"mixed"} | Ep 3: the Grelle subplot is anime-original inside a canon episode (ScreenRant explicit + fandom differences page; AFL dissents — 2-of-3). | session 2026-08-24 · scripts/ingest/research/batch15/out/black-butler.json |  |
 | `I27` | {"ids":[4898,6707,20606,166715,179054],"extras":[{"id":20670,"after":20606},{"id":21425,"after":20606}],"ruledExtent":"AFL page = S1+S2+Circus (46); Public S… | AFL-lag class: AFL page = S1+S2+Circus (46); Public School Arc TV (2024, our 47-57) + Emerald Witch Arc TV (2025, our 58-70) aired. Book of Murder OVAs (20670) and the Book of the Atlantic film (21425) are order-only after Circus — flag #853. | session 2026-08-23 · ingest_flags #853 |  |
 
-### black-clover (7)
+### black-clover (9)
 
 | rule | value | reason | ruled | retires when |
 |---|---|---|---|---|
 | `T26` | [{"episodes":[130,132,133,136,137,138,139,140,141,150,151,152,153,154,155,156,157],"kind":"adopted","basis":"author","note":"Tabata-supervised side stories a… | T4.0 D-10: the author-supervised class is canon + adopted{author}, never a fourth type. Basis AUTHOR is explicit in the batch-8 ruling. | Sean 2026-08-26 · docs/restructure/T4-GLOSSARY.md §3, scripts/ingest/lib/rulings/episode-types.ts black-clover |  |
+| `T26` | [{"episodes":[55,56],"kind":"side_source","note":"Adapts 'Black Clover: Abareushi no Sho' (ブラッククローバー 暴牛の書, Viz: 'The Book of the Black Bulls'; fandom romanis… | Batch 18 wave 3 (2026-08-26), verified R24, Sean ruled: novel episodes are side_source; the manga frame on 56 is a partial, never a mix (two licensed works are two standings). | Sean 2026-08-26 · scripts/ingest/research/batch18/out/black-clover.json, scripts/ingest/research/batch18/verify/black-clover.md |  |
 | `A6` | {"episode":3} | A1 junk anchor (D4 triage): ch 1 p.1 + ch 2 p.4-5 slivers per the wiki's own inline refs — annotation, not position | Sean 2026-08-25 · scripts/ingest/research/batch17/out2/black-clover-a1.json, scripts/ingest/apply-research-batch-17.ts, §12.45 |  |
 | `A6` | {"episode":68} | A1 junk anchor (D4 triage): ch 103 p.14-15 sliver — annotation, not position | Sean 2026-08-25 · scripts/ingest/research/batch17/out2/black-clover-a1.json, scripts/ingest/apply-research-batch-17.ts, §12.45 |  |
 | `A6` | {"episode":157} | A1 junk anchor (D4 triage): batch-5 parked ep 129's END on the anime-canon stretch's last row as a frontier hold; ch 228's reverse mapping lists ep 129 only, which still holds ch 228 (afg) — lossless deletion, pre-checked | Sean 2026-08-25 · scripts/ingest/research/batch17/out2/black-clover-a1.json, scripts/ingest/apply-research-batch-17.ts, §12.45 |  |
 | `A3` | {"episode":157,"chapter":228,"volume":null,"source":"manual"} | eps 130-157 = anime-canon stretch (Tabata-supervised, NOT adapted): position holds at ch 227-228 from ep 129; timeskip ep 158 resumes ch 229 — FLAT segment, interpolation naturally holds | session 2026-08-23 · scripts/ingest/apply-research-batch-5.ts |  |
 | `T6` | {"episodes":"130-157 per EPISODE_TYPE_OVERRIDES[\"black-clover\"]","action":"one-time retype of existing rows"} | eps 130-157 = anime-canon stretch (Tabata-supervised, NOT adapted) retyped anime-only-canon/filler per 2-of-3 sources; the EPISODE_TYPE_OVERRIDES entry keeps every future write consistent (the standing ruling lives there — this is its one-time application). | session 2026-08-23 · scripts/ingest/apply-research-batch-8.ts, docs/changelog.md §12.25, session scratchpad batch8/black-clover.json |  |
 | `T6` | {"130":"canon","131":"filler","132":"canon","133":"canon","134":"filler","135":"filler","136":"canon","137":"canon","138":"canon","139":"canon","140":"canon"… | Eps 130-157 adapt zero manga chapters anywhere in the stretch (blackclover.fandom infoboxes all empty + animefillerguide + animefillerlist agree; research batch 8) — manga position holds at ch 228 until canon resumes at ep 158 → ch 229-231. Tabata-supervised side stories = anime-only-canon (T9); the disputed 131/134-135 and the Devil Banishers arc 142-149 = filler (2-of-3 sources). T4.3 (T26/T27, 2026-08-26): anime-only-canon → canon; the override lives as an adopted / side_source annotation (lib/rulings/standing-annotations.ts), mapping null by design. | session 2026-08-23 |  |
+| `T6` | {"13":"filler","55":"canon","56":"canon"} | Batch 18 wave 3 (2026-08-26), verified R24, Sean ruled: 55-56 CANON + side_source — they adapt the licensed light novel Bōgyū no Sho (暴牛の書, Johnny Onda / illus. Tabata, Jump J-Books 2016-08-04; fandom \|chapter=, AFG, en-WP, ja-WP's Fanzell/Dominante/Mariella entries); ep 56 also closes on ch 81 p.14-17 (+ a ch-82 restage) → partial, NO anchor (ep 54 holds END 82). Novel + manga frame is two standings, not a mix — canon (Shippuden 455 stayed mixed because its frame was DISPUTED). 13 filler (empty chapter field, AFG Filler). | Sean 2026-08-26 · scripts/ingest/research/batch18/out/black-clover.json, scripts/ingest/research/batch18/verify/black-clover.md |  |
 
 ### black-lagoon (48)
 
@@ -701,13 +718,15 @@
 |---|---|---|---|---|
 | `N3` | {"addRow":{"number":11,"title":"Sunset Ravens","type":"canon","air_date":"2020-03-20"}} | finale; community list stale — MAL + ANN. | Sean 2026-08-24 · scripts/ingest/apply-research-batch.ts |  |
 
-### demon-slayer-kimetsu-no-yaiba (3)
+### demon-slayer-kimetsu-no-yaiba (5)
 
 | rule | value | reason | ruled | retires when |
 |---|---|---|---|---|
+| `T26` | [{"episodes":[27],"kind":"loose_parallel","chapters":"53-54","note":"Reading-position tie only (T28: record the tie, do not let it colour the typing): the ep… | Batch 18 wave 3 (2026-08-26): filler + loose_parallel. | Sean 2026-08-26 · scripts/ingest/research/batch18/out/demon-slayer-kimetsu-no-yaiba.json |  |
 | `A3` | {"episode":33,"chapter":69,"volume":null,"source":"manual"} | Mugen Train TV arc end (core fight ends ch 66; 67-69 aftermath; ep 27 prologue anime-original) | session 2026-08-23 · scripts/ingest/apply-research-batch-5.ts |  |
 | `A3` | {"episode":44,"chapter":97,"volume":null,"source":"manual"} | Entertainment District end: anime stopped at ch 97; S3E1 picked up 98-99 | session 2026-08-23 · scripts/ingest/apply-research-batch-5.ts |  |
 | `A3` | {"episode":55,"chapter":127,"volume":null,"source":"manual"} | Swordsmith Village end = ch 127; Hashira Training starts 128 | session 2026-08-23 · scripts/ingest/apply-research-batch-5.ts |  |
+| `T6` | {"27":"filler"} | Batch 18 wave 3 (2026-08-26): a new TV episode (Rengoku's road to the train), 'entirely anime-original… takes place during ch 53' (fandom; ja-WP) → filler + loose_parallel{53-54}. | Sean 2026-08-26 · scripts/ingest/research/batch18/out/demon-slayer-kimetsu-no-yaiba.json |  |
 
 ### detective-conan (2)
 
@@ -806,6 +825,13 @@
 | `I24` | {"ids":[6033,20635]} | UNRECORDED — assisted-batch explicit chain (Kai + Kai: The Final Chapters); a case the relation walker could not derive (wrong upstream match or broken/ambiguous relation graph), per-series detail not written down. | session 2026-08-22 |  |
 | `I17` | {"to":"dragon-ball-z","kind":"remake"} | Kai is a superseding re-cut/re-adaptation of Z — remake (not an AniList concept, so the ruling overrides the auto kind). | session 2026-08-22 · docs/franchise-rulings.md |  |
 | `N7` | 11359 | B (medium): Kai special = ep 98; community-practice based — re-open if evidence emerges. | Sean 2026-08-23 |  |
+
+### durarara (2)
+
+| rule | value | reason | ruled | retires when |
+|---|---|---|---|---|
+| `T26` | [{"episodes":[25],"kind":"loose_parallel","note":"Records the tie without treating it as adaptation: the OVA gives Mairu Orihara, Kururi Orihara and Max Sand… | Batch 18 wave 3 (2026-08-26): filler + loose_parallel (medium). | Sean 2026-08-26 · scripts/ingest/research/batch18/out/durarara.json |  |
+| `T6` | {"25":"filler"} | Batch 18 wave 3 (2026-08-26): the S1 OVA 天下泰平 (DVD 13, 2011-02-23) — 'adapted from' empty where every TV row is filled; no matching Narita short story; pre-debuts vol-4 characters → filler + loose_parallel (medium). STRUCTURE: components off by one from row 25. | Sean 2026-08-26 · scripts/ingest/research/batch18/out/durarara.json |  |
 
 ### edens-zero (2)
 
@@ -961,10 +987,12 @@
 | `T26` | [{"episodes":[24],"kind":"partial","chapters":"15 (fragment)","note":"'Has some adapted content from Chapter 15' (fma.fandom) inside an otherwise Bones-origi… | Batch 18 (2026-08-26) T28 repairs, Sean ruled with Cursor: 24, 40, 41 → filler; the ch-15 fragment and the ch-30 Martel beat are recorded as partial/graft so the UI can surface them without painting the rows mixed. | Sean 2026-08-26 · scripts/ingest/research/batch18/verify/fullmetal-alchemist.md |  |
 | `T6` | {"8":"mixed","11":"canon","12":"canon","16":"canon","21":"mixed","22":"canon","24":"filler","29":"mixed","30":"mixed","31":"filler","32":"mixed","35":"filler… | Batch 18 (2026-08-26), verified R24, Sean ruled: manga content continues through ep 34 and resurfaces in 40-41 (ch 30, Martel inside Al) — 8/21/24/29/30/32/40/41 mixed, 16/22 canon (fma.fandom 'adapted from' fields verified verbatim); eps 11-12 adapt the first light novel The Land of Sand → canon + side_source (Itachi Shinden precedent); 31/35-36/38-39 anime-original connective → filler; 42-51 Bones' original finale → FILLER for manga standing — Arakawa ORDERED a different ending (Asahi 2005-07-25, her own words), holds no 監修 credit, 'did not write for the television series'; authorised parallel continuity is a divergence annotation, never adopted{author} (the kinnikuman rule). Ep 37 repair filler → canon: adapts Arakawa's bonus chapters + a novel story, the same basis ep 13 is stored canon on. T28 (2026-08-26, Sean): 24/40/41 → filler — a ch-15 fragment; ch 30's Martel beat as a closer and a recall inside Bones' Lior/Dante plot (graft annotations); coverage stays on 8/21/29/30/32. | Sean 2026-08-26 · scripts/ingest/research/batch18/out/fullmetal-alchemist.json, scripts/ingest/research/batch18/verify/fullmetal-alchemist.md, https://web.archive.org/web/20050728025135/http://www.asahi.com/culture/theater/TKY200507250335.html, https://fma.fandom.com/wiki/Episode_40_(2003_Anime) |  |
 
-### fullmetal-alchemist-brotherhood (1)
+### fullmetal-alchemist-brotherhood (3)
 
 | rule | value | reason | ruled | retires when |
 |---|---|---|---|---|
+| `T26` | [{"episodes":[1],"kind":"divergence","note":"Anime-original prologue (Isaac McDougal, the Freezing Alchemist); ja-WP: faithful except episode 1. Isaac's desi… | Batch 18 wave 3 (2026-08-26): filler + divergence; adoption laid out, not proposed. | Sean 2026-08-26 · scripts/ingest/research/batch18/out/fullmetal-alchemist-brotherhood.json |  |
+| `T6` | {"1":"filler"} | Batch 18 wave 3 (2026-08-26): the Isaac McDougal prologue is anime-original (ja-WP: faithful 'except episode 1'); Isaac's design came from Arakawa's rough illustration and she attended script meetings — commissioned, not declared (the kinnikuman discriminator) → filler + divergence, no adoption. | Sean 2026-08-26 · scripts/ingest/research/batch18/out/fullmetal-alchemist-brotherhood.json |  |
 | `I17` | {"to":"fullmetal-alchemist","kind":"alternative"} | Fullmetal Alchemist: 2 separate series; Brotherhood is an alternative telling of 2003 (mutually divergent — 2003 diverges from the manga). | session 2026-08-22 · docs/franchise-rulings.md "Fullmetal Alchemist" |  |
 
 ### gantz (1)
@@ -988,6 +1016,12 @@
 | `A18` | reorder regime (batch 17): Gintama adapts Lessons far out of publication order across its whole run — S1 shuffles vols 1-34 (ep 25 = L100 pulled ~60 chapters… | verdict-documented jumps: S1 shuffles vols 1-34 (ep 25 = L100 pulled ~60 chapters forward); Gintama' opens on post-timeskip L324-326 then rewinds; Gintama° interleaves the skipped L384-465 backlog; Porori-hen (329-341) is pure backlog slotted between Rakuyou and Silver Soul | session 2026-08-24 · scripts/ingest/research/batch17/out/gintama.json, scripts/ingest/research/batch17/out2/gintama-holes.json, scripts/ingest/apply-research-batch-17.ts, §12.42 |  |
 | `N7` | 126819 | A (high): Semi-Final 368-369, canon prelude to the finale film. | Sean 2026-08-23 |  |
 
+### girls-last-tour (1)
+
+| rule | value | reason | ruled | retires when |
+|---|---|---|---|---|
+| `T6` | {"4":"canon"} | Batch 18 wave 3 (2026-08-26): AFL's lone 'anime canon' in a 12-for-12 linear adaptation is a mislabel — ep 4 = 写真 (ch 9) + 寺院 (ch 10), fandom both directions + ja-WP titles + MangaDex → canon (research anchor later; MangaDex's EN feed omits ch 11 — off by one from there). | Sean 2026-08-26 · scripts/ingest/research/batch18/out/girls-last-tour.json |  |
+
 ### golden-kamuy (14)
 
 | rule | value | reason | ruled | retires when |
@@ -1007,12 +1041,13 @@
 | `R21` | {"file":"scripts/ingest/research/batch15/out/golden-kamuy.json","anchors":7,"zoneAcks":0} | batch-15 verdict applied as-curated | session 2026-08-24 · scripts/ingest/research/batch15/out/golden-kamuy.json |  |
 | `I27` | {"ids":[99699,102977,110355,142343,166521],"extras":[{"id":101830,"after":99699},{"id":124756,"after":102977},{"id":194872,"after":142343}],"ruledExtent":"AF… | AFL-lag class: AFL page = S1+S2 (24); S3 (2020, our 25-36) + S4 (2022, our 37-49) + Final Season (Jan-Mar 2026, our 50-62 → ch 302, NOT the manga end: Bousou Ressha-hen 210073 will adapt 303-314) — flag #856. OVA 1 (101830: chs 55 part-59 + 32), OVAs 2/3/4 (124756: 83-85+104 / 63-69 / 108-113) and OVA 5 (194872: 102, 104-107, 228) are order-only per batch 14. Sapporo Beer Koujou-hen films (196115) = recut of eps 50-55, excluded. | session 2026-08-23 · ingest_flags #856, docs/data-pipeline.md §12 batch 14 | Bousou Ressha-hen (210073) airs — chain gains an id |
 
-### gto-great-teacher-onizuka (35)
+### gto-great-teacher-onizuka (36)
 
 | rule | value | reason | ruled | retires when |
 |---|---|---|---|---|
 | `T26` | [{"episodes":[27],"kind":"side_story","chapters":"GTO (Great Toroko Oppai) Scenes 1-7 (vols 11-12)","note":"Adapts the GTO (ぐれえと・とろこ・おっぱい) / 'Great Toroko Op… | Batch 18 wave 2 (2026-08-26), verified R24, Sean ruled: ep 27 MIXED — it adapts the Toroko Oppai side story Fujisawa serialized INSIDE GTO (Comic Days feed: Scenes 1-3 between Lesson 92/93, 4-7 between 97/98) — the side story IS the source (T28: an omake that is the episode's plot counts), never side_source; no anchor (Scenes have no Lesson number). 25-26 filler + loose_parallel (a character loan from Shonan Junai Gumi, not an adaptation; re-open if SJG proves to contain an Eikichi-vs-Kadena race). 22/23/24/28/34/42-43 filler; no adoption (Fujisawa 原作 + a voice cameo). | Sean 2026-08-26 · scripts/ingest/research/batch18/out/gto-great-teacher-onizuka.json, scripts/ingest/research/batch18/verify/gto.md, https://comic-days.com/atom/series/10834108156636906135 |  |
 | `T26` | [{"episodes":[22,23,24,25,26,27,28,34,42,43],"kind":"divergence","note":"A-7 studio-ending class — filler under T27 (adheres to no source) + asterisk; on Sea… | T4.0 D-10: the A-7 studio-ending class → filler + asterisk, ON THE REVIEW LIST (T4-GLOSSARY §3 / §7). | Sean 2026-08-26 · docs/restructure/T4-GLOSSARY.md §3, docs/restructure/DRIFT-LIST.md A-7 |  |
+| `A44` | [27] | Adapts the Great Toroko Oppai side story (Scenes 1-7) serialized inside GTO between Lessons 92/93 and 97/98 — mixed under T28, but the Scenes have NO Lesson number and sit AHEAD of what eps 29-33 adapt (Lessons 75-92). A reading position cannot be stated; the verdict's own graft note says DO NOT ANCHOR. | Sean 2026-08-26 · scripts/ingest/research/batch18/out/gto-great-teacher-onizuka.json, scripts/ingest/research/batch18/verify/gto.md |  |
 | `A6` | {"table":"chapter_anchors","op":"delete","episode":42,"source":"mu"} | the MU pin sat on the anime-original ep 42 (adapts NO manga; typed anime-only-canon this batch) — an A1 hit triaged to deletion; the true endpoint is ep 41 → 105 (REPAIR anchor). | session 2026-08-23 · scripts/ingest/apply-research-batch-11.ts, scratchpad batch11/gto-great-teacher-onizuka.json (session scratchpad, not on disk), docs/changelog.md §12.30 |  |
 | `A3` | {"episode":2,"chapter":11,"start_chapter":7,"chapters_adapted":"7-11 (eps 1-2 = 1-11)","volume":2,"source":"manual","note":"research-tier batch 11 (2026-08-2… | Nanako arc end; hired. fandom Lesson_2 + Wikipedia | session 2026-08-23 · scripts/ingest/apply-research-batch-11.ts, scratchpad batch11/gto-great-teacher-onizuka.json (session scratchpad, not on disk), docs/changelog.md §12.30 |  |
 | `A3` | {"episode":11,"chapter":36,"start_chapter":34,"chapters_adapted":"34-36","volume":5,"source":"manual","note":"research-tier batch 11 (2026-08-23, agent-verif… | Tomoko pageant end. fandom + Wikipedia | session 2026-08-23 · scripts/ingest/apply-research-batch-11.ts, scratchpad batch11/gto-great-teacher-onizuka.json (session scratchpad, not on disk), docs/changelog.md §12.30 |  |
@@ -1155,10 +1190,12 @@
 |---|---|---|---|---|
 | `N3` | {"cap":48,"note":"HERO's Episode 0 is a mid-run special the community's continuous numbering excludes — order-only (Sean 2026-08-24)"} | HERO's Episode 0 is a mid-run special the community's continuous numbering excludes; it holds an order-only slot, so the count caps at 48. | Sean 2026-08-24 |  |
 
-### high-school-of-the-dead (1)
+### high-school-of-the-dead (3)
 
 | rule | value | reason | ruled | retires when |
 |---|---|---|---|---|
+| `T26` | [{"episodes":[13],"kind":"abridged","note":"Format note, not a typing claim: the OVA OPENS with a fast recap montage of episodes 1-12 (Takashi voiceover, int… | Batch 18 wave 3 (2026-08-26): filler + abridged (recap opening). | Sean 2026-08-26 · scripts/ingest/research/batch18/out/high-school-of-the-dead.json |  |
+| `T6` | {"13":"filler"} | Batch 18 wave 3 (2026-08-26): the Drifters of the Dead OVA — the manga's three extras include no island story; wiki 'Manga Chapters = None'; ja-WP: a 番外編 whose island exists only in the OVA; opens with a recap montage → filler + abridged. | Sean 2026-08-26 · scripts/ingest/research/batch18/out/high-school-of-the-dead.json |  |
 | `N7` | 9515 | B (medium): Drifters of the Dead = ep 13; community-practice based — re-open if evidence emerges. | Sean 2026-08-23 |  |
 
 ### hikaru-no-go (2)
@@ -1646,11 +1683,12 @@
 | `A10` | {"episode":127,"start_chapter":216} | 216-217 (span opens on a whole chapter — sliver and majority rules agree) | Sean 2026-08-23 · scripts/ingest/apply-start-chapters.ts, docs/changelog.md §12.27, batch 9 verdict (naruto) | A-6 healer under the sliver rule |
 | `A10` | {"episode":132,"start_chapter":226} | 226-228 (span opens on a whole chapter — sliver and majority rules agree) | Sean 2026-08-23 · scripts/ingest/apply-start-chapters.ts, docs/changelog.md §12.27, batch 9 verdict (naruto) | A-6 healer under the sliver rule |
 
-### naruto-shippuden (88)
+### naruto-shippuden (90)
 
 | rule | value | reason | ruled | retires when |
 |---|---|---|---|---|
 | `T26` | [{"episodes":[452,453,454,456,457],"kind":"side_source","note":"Adapts the Itachi Shinden NOVEL (Takashi Yano), zero manga pages — Narutopedia + AFG + Wikipe… | T4.0 D-10: Shippuden 452-457 adapt a licensed novel → canon + side_source naming the work; ep 455 stays mixed (disputed ch-678 frame). | Sean 2026-08-26 · docs/restructure/T4-GLOSSARY.md §3, scripts/ingest/lib/rulings/episode-types.ts naruto-shippuden |  |
+| `T26` | [{"episodes":[28],"kind":"partial","chapters":"275-276 (seam fragments)","note":"T28 tie record, not a typing claim: inside the original clone-fight material… | Batch 18 wave 3 (2026-08-26): filler + partial (T28). | Sean 2026-08-26 · scripts/ingest/research/batch18/out/naruto-shippuden.json |  |
 | `A3` | {"episode":199,"chapter":457,"start_chapter":454,"chapters_adapted":"454, 455, 456, 457","volume":49,"source":"manual","note":"research-tier batch 10 (2026-0… | Five Kage Summit convenes; 457 partial. narutopedia + listfist + animefillerguide | session 2026-08-23 · scripts/ingest/apply-research-batch-10.ts, scratchpad batch10/naruto-shippuden.json (session scratchpad, not on disk), docs/changelog.md §12.29 |  |
 | `A3` | {"episode":211,"chapter":481,"start_chapter":480,"chapters_adapted":"480, 481","volume":51,"source":"manual","note":"research-tier batch 10 (2026-08-23, agen… | Sasuke vs Danzo climax — Danzo's death. 3 sources | session 2026-08-23 · scripts/ingest/apply-research-batch-10.ts, scratchpad batch10/naruto-shippuden.json (session scratchpad, not on disk), docs/changelog.md §12.29 |  |
 | `A3` | {"episode":222,"chapter":491,"start_chapter":489,"chapters_adapted":"489, 490, 491","volume":52,"source":"manual","note":"research-tier batch 10 (2026-08-23,… | last canon before the Paradise Life filler (223-242); 491 re-covered at 243. 3 sources | session 2026-08-23 · scripts/ingest/apply-research-batch-10.ts, scratchpad batch10/naruto-shippuden.json (session scratchpad, not on disk), docs/changelog.md §12.29 |  |
@@ -1737,6 +1775,7 @@
 | `A43` | {"episodes":[54,55,56],"kind":"rearranged","chapters":"311-318","asterisk_review":"pending (if unset)"} | wind-nature training chapters adapted early, interleaved with filler framing | session 2026-08-23 · scripts/ingest/apply-research-batch-9.ts, docs/changelog.md §12.26, session scratchpad batch9/naruto-shippuden.json |  |
 | `A43` | {"episodes":[72,73,74],"kind":"rearranged","chapters":"312-319","asterisk_review":"pending (if unset)"} | re-covers 54-56 chapters; non-monotonic 54-74; ep 75 first clean point | session 2026-08-23 · scripts/ingest/apply-research-batch-9.ts, docs/changelog.md §12.26, session scratchpad batch9/naruto-shippuden.json |  |
 | `T6` | {"452":"canon","453":"canon","454":"canon","456":"canon","457":"canon"} | Eps 452-454/456-457 adapt the Itachi Shinden NOVEL — zero manga pages (Narutopedia + AFG + Wikipedia S20). A licensed canon side story = anime-only-canon per the Boruto/Black Clover precedent (T9). Ep 455 stays mixed: disputed ch-678 frame. T4.3 (T26/T27, 2026-08-26): anime-only-canon → canon; the override lives as an adopted / side_source annotation (lib/rulings/standing-annotations.ts), mapping null by design. | session 2026-08-24 · scripts/ingest/research/batch15/out/naruto-shippuden.json |  |
+| `T6` | {"28":"filler"} | Batch 18 wave 3 (2026-08-26): ep 28 — only the start/end of Team Guy's clone fights are in the manga (ch 275-276 seam fragments); all four finishing techniques debut anime-only; AFG N/A → filler + partial (T28). | Sean 2026-08-26 · scripts/ingest/research/batch18/out/naruto-shippuden.json |  |
 | `I17` | {"to":"naruto","kind":"sequel"} | The Naruto→Shippuden baseline: a major narrative shift is a separate series linked as sequel (newer → base). | session 2026-08-22 · docs/franchise-rulings.md |  |
 
 ### nisekoi (18)
@@ -1768,16 +1807,18 @@
 |---|---|---|---|---|
 | `I15` | {"action":"delete series + episodes + anchors + components + external ids","sourceMapDisposition":"duplicate"} | Monogatari legacy duplicate — content lives in monogatari-series per the one-series ruling (one continuous story = ONE series). | Sean 2026-08-24 · scripts/ingest/apply-research-batch.ts, docs/franchise-rulings.md |  |
 
-### noragami (6)
+### noragami (8)
 
 | rule | value | reason | ruled | retires when |
 |---|---|---|---|---|
+| `T26` | [{"episodes":[11,12],"kind":"divergence","note":"S1's Rabo finale is anime-original: the studio's arc to Adachitoka's brief 原作の未来を奪わない形で; Adachitoka supplied… | Batch 18 wave 3 (2026-08-26): filler + divergence; adoption rejected (character 原案 is not a story act). | Sean 2026-08-26 · scripts/ingest/research/batch18/out/noragami.json |  |
 | `A6` | {"episode":12} | A1 junk anchor (D4 triage): the Rabou arc (eps 10-12) is anime-only; ch 11 belongs to ep 9; the honest S1 terminal moves to ep 10 (mixed) END 12 via CURATED_ANCHORS | Sean 2026-08-25 · scripts/ingest/research/batch17/out2/noragami-a1.json, scripts/ingest/apply-research-batch-17.ts, §12.45 |  |
 | `A4` | {"episode":10,"end_chapter":12,"start_chapter":9,"chapters_adapted":"9 (part), 12 (part)","volume":null,"confidence":"high","note":"honest S1 terminal (Sean … | honest S1 terminal replacing the deleted junk ep-12 anchor: ep 10 is the last episode with manga content before the anime-only Rabou arc; DB pre-check confirmed ep 10 typed mixed and previously anchorless | Sean 2026-08-25 · scripts/ingest/research/batch17/out2/noragami-a1.json, scripts/ingest/apply-research-batch-17.ts, §12.45, CHUNK1-RECOVERY.md §11 |  |
 | `A3` | {"episode":12,"chapter":11,"volume":null,"source":"manual"} | S1 manga content = vols 1-3 (ch 11); canon stops mid-ep 10, 10b-12 = anime-original Rabo arc. animefillerguide + blessedyuki + Wikipedia ch list | session 2026-08-23 · scripts/ingest/apply-research-batch-6.ts |  |
 | `A3` | {"episode":25,"chapter":39,"volume":null,"source":"manual"} | Aragoto finale = ch 38-39 (vol 10 end); Ebisu arc (30-39) rearranged — continue 40, re-read 30-39 advised. animefillerguide + wheredoestheanimeleaveoff | session 2026-08-23 · scripts/ingest/apply-research-batch-6.ts |  |
 | `A43` | {"episodes":[25],"kind":"rearranged","chapters":"ch 30-39","asterisk_review":"pending (if unset)"} | Ebisu arc heavily rearranged by the anime — re-read 30-39 advised | session 2026-08-23 · scripts/ingest/apply-research-batch-6.ts |  |
 | `C8` | {"continue_from_chapter":40} | Aragoto finale = ch 38-39; continue 40 (re-read 30-39 advised). | session 2026-08-23 · scripts/ingest/apply-research-batch-6.ts |  |
+| `T6` | {"11":"filler","12":"filler"} | Batch 18 wave 3 (2026-08-26): the S1 Rabo finale is the studio's arc, written to Adachitoka's brief 原作の未来を奪わない形で; Adachitoka gave 原案 for the CHARACTER only (official site 2014-02-06 via ja-WP); Rabo entered the manga in 2021 as a prequel gaiden — character canon, not story adoption → filler + divergence. | Sean 2026-08-26 · scripts/ingest/research/batch18/out/noragami.json |  |
 
 ### one-pace (1)
 
@@ -1785,10 +1826,12 @@
 |---|---|---|---|---|
 | `I11` | fan re-edit of One Piece, not an official series — EXCLUDED (Sean 2026-08-25) | One Pace is a fan re-edit of One Piece, not an official series — EXCLUDED (Sean 2026-08-25, DRIFT-LIST A-10; the earlier note said "pending Sean confirmation" while the exclusion was already applied — the note now matches the apply). | Sean 2026-08-25 · docs/restructure/DRIFT-LIST.md A-10 |  |
 
-### one-piece (19)
+### one-piece (22)
 
 | rule | value | reason | ruled | retires when |
 |---|---|---|---|---|
+| `T26` | [{"episodes":[453,454,455,456],"kind":"side_story","chapters":"cover-page serial ch 543-560 (covers)","note":"The Straw Hat's Separation Serial — Oda's cover… | Batch 18 wave 3 (2026-08-26), verified R24, Sean ruled: the cover-serial rows are mixed + side_story and position-less (A44); every filler row keeps its tie. | Sean 2026-08-26 · scripts/ingest/research/batch18/out/one-piece.json, scripts/ingest/research/batch18/verify/one-piece.md |  |
+| `A44` | [453,454,455,456] | The Straw Hat's Separation Serial: Oda's cover-page side story (ch 543-560 covers) animated during Luffy's Impel Down → Marineford travel. Canon per the wiki's own Canon page and ja-WP (not bold), so the rows are mixed under T28 — but the cover chapters run 5-11 chapters AHEAD of the main-line position (ep 452 ends ch 549; ep 459 holds 551): an anchor here spoils Marineford and states adaptation of single cover pages. AFG's chart prints the cover numbers on all four rows (fixture: 455 → 545-546, 550-551 — the exact junk anchor Sean deleted under A6 in batch 17). Position-less by ruling. | Sean 2026-08-26 · scripts/ingest/research/batch18/out/one-piece.json, scripts/ingest/research/batch18/verify/one-piece.md, https://onepiece.fandom.com/wiki/Straw_Hat%27s_Separation_Serial |  |
 | `A6` | {"episode":50} | A1 junk anchor (D4 triage): AFG reading-position plateau on a noncanon row; 12 slivers preserved as annotations by the verdict, canon neighbours carry position — every nulled row bracketed by real canon-neighbour anchors (verified) | Sean 2026-08-25 · scripts/ingest/research/batch17/out2/one-piece-a1.json, scripts/ingest/apply-research-batch-17.ts, §12.45 |  |
 | `A6` | {"episode":51} | A1 junk anchor (D4 triage): AFG reading-position plateau on a noncanon row; 12 slivers preserved as annotations by the verdict, canon neighbours carry position — every nulled row bracketed by real canon-neighbour anchors (verified) | Sean 2026-08-25 · scripts/ingest/research/batch17/out2/one-piece-a1.json, scripts/ingest/apply-research-batch-17.ts, §12.45 |  |
 | `A6` | {"episode":55} | A1 junk anchor (D4 triage): AFG reading-position plateau on a noncanon row; 12 slivers preserved as annotations by the verdict, canon neighbours carry position — every nulled row bracketed by real canon-neighbour anchors (verified) | Sean 2026-08-25 · scripts/ingest/research/batch17/out2/one-piece-a1.json, scripts/ingest/apply-research-batch-17.ts, §12.45 |  |
@@ -1808,6 +1851,7 @@
 | `A6` | {"episode":626} | A1 junk anchor (D4 triage): AFG reading-position plateau on a noncanon row; 12 slivers preserved as annotations by the verdict, canon neighbours carry position — every nulled row bracketed by real canon-neighbour anchors (verified) | Sean 2026-08-25 · scripts/ingest/research/batch17/out2/one-piece-a1.json, scripts/ingest/apply-research-batch-17.ts, §12.45 |  |
 | `A6` | {"episode":747} | A1 junk anchor (D4 triage): AFG reading-position plateau on a noncanon row; 12 slivers preserved as annotations by the verdict, canon neighbours carry position — every nulled row bracketed by real canon-neighbour anchors (verified) | Sean 2026-08-25 · scripts/ingest/research/batch17/out2/one-piece-a1.json, scripts/ingest/apply-research-batch-17.ts, §12.45 |  |
 | `T6` | {"737":"mixed"} | Ep 737: the Sabo special adapts ch 794 (wiki forward + reverse) — AFL's anime-canon label loses to the explicit chapter mapping → mixed. | Sean 2026-08-25 · scripts/ingest/research/batch17/out2/one-piece-a1.json |  |
+| `T6` | {"213":"filler","215":"filler","453":"mixed","454":"mixed","455":"mixed","456":"mixed","499":"filler","506":"filler","775":"filler","1084":"filler"} | Batch 18 wave 3 (2026-08-26), verified R24, Sean ruled: 453-456 MIXED — they animate Oda's cover-page side story (the Straw Hat's Separation Serial, ch 543-560 covers; the wiki's Canon page files it under Canon, ja-WP does not bold them) — the side story IS the plot (T28); 455 repaired for consistency. POSITION-LESS by A44 (the cover chapters run ahead of the main line; AFG prints them — the ep-455 junk anchor Sean deleted in batch 17). 213/215 (added Davy Back games), 499, 506, 775, 1084 filler with their ties recorded. No adoption (the Canon page files 'Oda's Involvement' under Non-Canon). | Sean 2026-08-26 · scripts/ingest/research/batch18/out/one-piece.json, scripts/ingest/research/batch18/verify/one-piece.md |  |
 
 ### one-punch-man (2)
 
@@ -2083,23 +2127,25 @@
 | `T6` | {"79":"filler","80":"filler","81":"filler","82":"filler"} | Eps 79-82 were typed mixed, but the whole 63-94 block is anime-original (batch-17 verdict: Wikipedia season-3 "not adapted from the manga" + AFL) — the Shimabara/Christian arc included. Found in Sean's post-switch review: these four mistyped rows were why frontier_tail_null flagged the series (the audit was RIGHT; the earlier "false positive" framing was wrong). Rows 95-98 are the Trust & Betrayal OVAs adopted as episodes — real manga adaptation (Remembrance arc), kept canon, flagged for anchor research. | Sean 2026-08-24 · scripts/ingest/research/batch17/out/rurouni-kenshin.json |  |
 | `N1` | {"adopted":[95,100]} | The 1996 broadcast tail 95-100 overshoots the source count by more than 2; rows 95-98 are the Trust & Betrayal OVAs adopted as episodes (real manga adaptation, the Remembrance arc — see the rurouni-kenshin type ruling), so the floor is adopted rather than flagged. Evidence for 99-100 beyond "broadcast tail" was not recorded at the call site. | session 2026-08-23 |  |
 
-### rurouni-kenshin-2023 (6)
+### rurouni-kenshin-2023 (7)
 
 | rule | value | reason | ruled | retires when |
 |---|---|---|---|---|
 | `T26` | [{"episodes":[34],"kind":"adopted","basis":"author","note":"Watsuki's own exhibition storyboard, adapted with zero chapters — canon-grade by the author's han… | T4.0 D-10: kenshin-2023 34 (Watsuki's own storyboard) → canon + adopted{author}. | Sean 2026-08-26 · docs/restructure/T4-GLOSSARY.md §3 |  |
+| `T26` | [{"episodes":[44],"kind":"divergence","note":"京都大火（中編）: adapts zero Acts (fandom chapter= blank; Acts 100/101 → Part One, 102 → Part Three — the shared title… | Batch 18 wave 3 (2026-08-26), verifier REFUTED the per-episode author act, Sean ruled: filler + divergence, no series-level regime. | Sean 2026-08-26 · scripts/ingest/research/batch18/out/rurouni-kenshin-2023.json, scripts/ingest/research/batch18/verify/rurouni-kenshin-2023.md, https://realsound.jp/movie/2024/11/post-1829130.html |  |
 | `A3` | {"episode":47,"chapter":106,"volume":13,"source":"manual"} | Kyoto Disturbance end (Act 106 partially adapted). animefillerguide.com + wheredoestheanimeleaveoff.com + kenshin.fandom.com | Sean 2026-08-24 · scripts/ingest/apply-research-batch.ts |  |
 | `G3` | {"flags":"open → confirmed","verdict":"research-tier frontier applied as manual anchor (sources in anchor note); Sean sign-off 2026-08-24"} | open ingest_flags closed with verdict: research-tier frontier applied as manual anchor (sources in anchor note); Sean sign-off 2026-08-24 | Sean 2026-08-24 · scripts/ingest/apply-research-batch.ts |  |
 | `T6` | {"34":"canon","44":"filler"} | Eps 34/44 adapt zero chapters (fandom blank + no Act page); 34 is Watsuki's own exhibition storyboard = canon-grade, so anime-only-canon rather than filler. T4.3 (T26/T27): 34 → canon + adopted{author} (Watsuki's storyboard); 44 has no positive canon signal → filler (adheres to no source), on the review list. | session 2026-08-24 · scripts/ingest/research/batch17/out/rurouni-kenshin-2023.json |  |
 | `I24` | {"ids":[142877,171637]} | AniList relation-graph gap found post-recovery: 2023 + Kyoto Disturbance (the 2023 remake is a separate series from the 1996 TV, I16). | session 2026-08-23 |  |
 | `I17` | {"to":"rurouni-kenshin","kind":"remake"} | Rurouni Kenshin: 2 separate series; 2023 remakes 1996. | session 2026-08-22 · docs/franchise-rulings.md "Rurouni Kenshin" |  |
 
-### sailor-moon (8)
+### sailor-moon (9)
 
 | rule | value | reason | ruled | retires when |
 |---|---|---|---|---|
 | `T26` | [{"episodes":[167],"kind":"rearranged","chapters":"38, 44","note":"zone-acknowledged — no anchor by design: Acts 38/44 sit behind ep 166's Act 49 and an anch… | Batch 18 wave 2 (2026-08-26), verified R24, Sean ruled: 167-168 mixed — half of 168 is Act 44 (Saturn re-awakens Hotaru; the Eternal debut) and 167 carries Act 38's tail + Act 44's opening (never adapted in SuperS); 169-172 filler; no adoption (Takeuchi: 原作/原案 + GAME 監修 only, documented friction). No anchors — they would run position backwards from ep 166. | Sean 2026-08-26 · scripts/ingest/research/batch18/out/sailor-moon.json, scripts/ingest/research/batch18/verify/sailor-moon.md |  |
 | `T26` | [{"episodes":[167,168,169,170,171,172],"kind":"divergence","note":"A-7 studio-ending class — filler under T27 (adheres to no source) + asterisk; on Sean's ba… | T4.0 D-10: the A-7 studio-ending class → filler + asterisk, ON THE REVIEW LIST (T4-GLOSSARY §3 / §7). | Sean 2026-08-26 · docs/restructure/T4-GLOSSARY.md §3, docs/restructure/DRIFT-LIST.md A-7 |  |
+| `A44` | [167,168] | Play never-adapted Dream-arc material (Act 38 tail, Act 44 core, the Eternal debut of Acts 48-49) — mixed — but those Acts sit BEHIND ep 166's stored Act 49: an anchor would run the position backwards. Zone-acknowledged; position-less by ruling. | Sean 2026-08-26 · scripts/ingest/research/batch18/out/sailor-moon.json, scripts/ingest/research/batch18/verify/sailor-moon.md |  |
 | `I4` | {"afgSlug":"bishoujo-senshi-sailor-moon","match":"sailor-moon"} | AFG's bishoujo-senshi-sailor-moon page is the 90s original, NOT Crystal — a synonym collision (both our entries carry the romaji) found in the 2026-08-24 audit, so the key is ambiguous and needs a ruling. | session 2026-08-24 · docs/franchise-rulings.md "AFG bishoujo-senshi-sailor-moon page = the 90s original" |  |
 | `A7` | {"episode":103,"bound":"character-timing difference (Chibiusa/Chibi Moon deferred vs the manga), not adapted chapters"} | A2: a character-timing difference (Chibiusa/Chibi Moon deferred vs the manga), not adapted chapters — no position to record | session 2026-08-24 · scripts/ingest/research/batch17/out/sailor-moon.json, scripts/ingest/apply-research-batch-17.ts, §12.42 |  |
 | `A7` | {"episode":113,"bound":"character-timing difference (Hotaru introduced mid-season vs Infinity's opening), not adapted chapters"} | A2: a character-timing difference (Hotaru introduced mid-season vs Infinity's opening), not adapted chapters | session 2026-08-24 · scripts/ingest/research/batch17/out/sailor-moon.json, scripts/ingest/apply-research-batch-17.ts, §12.42 |  |
@@ -2154,12 +2200,14 @@
 |---|---|---|---|---|
 | `I17` | {"to":"nanatsu-no-taizai","kind":"sequel"} | Seven Deadly Sins main = ONE series; Four Knights of the Apocalypse is a separate sequel series. | session 2026-08-22 · docs/franchise-rulings.md "Seven Deadly Sins" |  |
 
-### sgt-frog (2)
+### sgt-frog (4)
 
 | rule | value | reason | ruled | retires when |
 |---|---|---|---|---|
+| `T26` | [{"episodes":[180,357],"kind":"divergence","note":"ja-WP ● index: no 原作に沿った内容 segment on either row; 357 is the anime's originally-planned finale (studio end… | Batch 18 wave 3 (2026-08-26): filler; ja-WP's segment-grain ● index is the source of record. | Sean 2026-08-26 · scripts/ingest/research/batch18/out/sgt-frog.json |  |
 | `A40` | {"mapping_mode":"loose"} | 71% filler, manga stories cherry-picked non-linearly across 358 eps — no chapter mapping meaningful (animefillerlist + Wikipedia) | Sean 2026-08-24 · scripts/ingest/apply-research-batch.ts |  |
 | `G3` | {"flags":"open → confirmed","verdict":"research-tier verdict: loose adaptation — no chapter mapping is meaningful; mapping_mode=loose; Sean sign-off 2026-08-… | open ingest_flags closed with verdict: research-tier verdict: loose adaptation — no chapter mapping is meaningful; mapping_mode=loose; Sean sign-off 2026-08-24 | Sean 2026-08-24 · scripts/ingest/apply-research-batch.ts |  |
+| `T6` | {"180":"filler","357":"filler"} | Batch 18 wave 3 (2026-08-26): ja-WP's アニメエピソード一覧 ● index (原作に沿った内容, segment grain, matched stored typing 10/10 on neighbours) gives no ● to either row; 357 is the anime's originally-planned finale (studio ending, no adoption) → filler. | Sean 2026-08-26 · scripts/ingest/research/batch18/out/sgt-frog.json |  |
 
 ### shaman-king-2021 (1)
 
@@ -2241,10 +2289,11 @@
 | `A3` | {"episode":25,"chapter":38,"volume":null,"source":"manual"} | S1 end: "First Contact" adapts missions 37-38 (S1 sprinkles extra missions out of order) | session 2026-08-23 · scripts/ingest/apply-research-batch-5.ts |  |
 | `A3` | {"episode":37,"chapter":60,"volume":null,"source":"manual"} | S2 end = mission 60 (vol 9), continue 61 | session 2026-08-23 · scripts/ingest/apply-research-batch-5.ts |  |
 
-### steins-gate (1)
+### steins-gate (2)
 
 | rule | value | reason | ruled | retires when |
 |---|---|---|---|---|
+| `T6` | {"25":"filler"} | Batch 18 wave 3 (2026-08-26): 'Egoistic Poriomania' — 'entirely anime-original' (wiki), BD-9 unaired special set in America (ja-WP); only carry-forward is downstream (the movie novelisation) → filler; the VN default (T27) holds. | Sean 2026-08-26 · scripts/ingest/research/batch18/out/steins-gate.json |  |
 | `N7` | 10863 | A (high): the Egg OVA = ep 25 epilogue, near-universally counted. | Sean 2026-08-23 |  |
 
 ### summer-time-rendering (10)
@@ -2261,6 +2310,13 @@
 | `A43` | {"episodes":[6],"kind":"partial","chapters":"21-22","note":"research-tier batch 11 (2026-08-23, agent-verified 2+ sources, full-record): post-loop-reset reca… | post-loop-reset recap condensed | session 2026-08-23 · scripts/ingest/apply-research-batch-11.ts, scratchpad batch11/summer-time-rendering.json (session scratchpad, not on disk), docs/changelog.md §12.30 |  |
 | `A43` | {"episodes":[8,9],"kind":"partial","chapters":"33-47","note":"research-tier batch 11 (2026-08-23, agent-verified 2+ sources, full-record): heaviest condensat… | heaviest condensation (page trims) | session 2026-08-23 · scripts/ingest/apply-research-batch-11.ts, scratchpad batch11/summer-time-rendering.json (session scratchpad, not on disk), docs/changelog.md §12.30 |  |
 | `A43` | {"episodes":[25],"kind":"graft","chapters":"139","note":"research-tier batch 11 (2026-08-23, agent-verified 2+ sources, full-record): anime-original epilogue… | anime-original epilogue scenes around the final chapter | session 2026-08-23 · scripts/ingest/apply-research-batch-11.ts, scratchpad batch11/summer-time-rendering.json (session scratchpad, not on disk), docs/changelog.md §12.30 |  |
+
+### sword-art-online (2)
+
+| rule | value | reason | ruled | retires when |
+|---|---|---|---|---|
+| `T26` | [{"episodes":[50],"kind":"adopted","basis":"author","note":"Ordinal Scale (2017-02-18 movie, AFL #50, AniList 21403): Kawahara Reki wrote story + screenplay … | Batch 18 wave 3 (2026-08-26), verified R24, Sean ruled: canon + adopted{author}. | Sean 2026-08-26 · scripts/ingest/research/batch18/out/sword-art-online.json, scripts/ingest/research/batch18/verify/sword-art-online.md, https://sao-movie.net/staffcast/ |  |
+| `T6` | {"50":"canon"} | Batch 18 wave 3 (2026-08-26), verified R24, Sean ruled: row 50 IS the Ordinal Scale MOVIE (2017-02-18; AFL #50; AniList 21403), not Extra Edition. Kawahara wrote story + screenplay (official site 脚本 川原礫・伊藤智彦; ja-WP 川原書き下ろしの完全オリジナル作) and two OS-continuity prose stories (Hopeful Chant, Cordial Chords) → canon + adopted{author} by AUTHORSHIP (not side_source — it adapts no book; 'incorporated into LN canon' is uncited, ja-WP 原作未収録). STRUCTURE (separate): no component — N7 ruling + a kind: movie component; do not renumber. | Sean 2026-08-26 · scripts/ingest/research/batch18/out/sword-art-online.json, scripts/ingest/research/batch18/verify/sword-art-online.md, https://sao-movie.net/staffcast/ |  |
 
 ### sword-art-online-alternative-ggo (1)
 
@@ -2543,12 +2599,14 @@
 | `N8` | {"position":193.5,"disposition":"excluded_recap"} | RECAP (rebroadcast of ep 44 + countdown) — recap rule (Monogatari precedent) excludes from count AND watch order; Sean sign-off 2026-08-23 | Sean 2026-08-23 · scripts/ingest/apply-research-batch-7.ts, docs/changelog.md §12.23 |  |
 | `N3` | {"cap":194,"note":"MAL/AniList count the farewell RECAP special (rebroadcast of ep 44 + countdown) as #194; Wikipedia holds it at 193.5 unnumbered — recap ru… | MAL/AniList count the farewell recap special (a rebroadcast of ep 44 plus a countdown) as #194 while Wikipedia holds it at 193.5 unnumbered; under the recap rule (N8, Monogatari precedent) it is excluded and the finale is 194. | session 2026-08-23 |  |
 
-### vinland-saga (2)
+### vinland-saga (4)
 
 | rule | value | reason | ruled | retires when |
 |---|---|---|---|---|
+| `T26` | [{"episodes":[5],"kind":"graft","chapters":"21.5 (vol-3 gaiden はたらくユルヴァちゃん)","note":"Carries the volume-3 gaiden 'Ylva at Work' (はたらくユルヴァちゃん, Hataraku Yuruva… | Batch 18 wave 3 (2026-08-26): filler + graft (T28); eps 7-8 adapt ch 1-2 AFTER eps 1-6 adapt 2-17 — a deliberate rearrangement. | Sean 2026-08-26 · scripts/ingest/research/batch18/out/vinland-saga.json |  |
 | `A3` | {"episode":24,"chapter":54,"volume":null,"source":"manual"} | S1 end: finale adapts 52-54 | session 2026-08-23 · scripts/ingest/apply-research-batch-5.ts |  |
 | `A3` | {"episode":36,"chapter":78,"volume":null,"source":"manual"} | S2 cour 1 end: adapts 77-78 (animefillerguide single-source, medium confidence) | session 2026-08-23 · scripts/ingest/apply-research-batch-5.ts |  |
+| `T6` | {"5":"filler"} | Batch 18 wave 3 (2026-08-26): only the Ylva cutaway is manga (vol-3 gaiden ch 21.5, transplanted ~5 volumes early); fandom: 'the entirety of this episode excluding the scenes with Ylva is anime original' → filler + graft (T28). | Sean 2026-08-26 · scripts/ingest/research/batch18/out/vinland-saga.json |  |
 
 ### we-never-learn-bokuben (10)
 

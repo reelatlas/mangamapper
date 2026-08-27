@@ -390,6 +390,7 @@ async function main() {
         if (anchoredEps.has(`${a.series_id}#${a.episode}`)) continue;
         const t = epType.get(`${a.series_id}#${a.episode}`);
         if (t === 'filler' || offSource.has(`${a.series_id}#${a.episode}`)) continue; // T26: no source position exists on an adopted / side_source row
+        if (ANCHOR_SUPPRESSED[a.series_id]?.includes(a.episode)) continue; // A44: ruled position-less — not an anchoring target
         // zone-acknowledged rows (batch-15 rule): research established that
         // only zone-level knowledge exists — an acknowledged-approximate
         // review item, not an open research target

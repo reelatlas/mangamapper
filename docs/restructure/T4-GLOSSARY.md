@@ -152,7 +152,7 @@ last, after the big unruled blocks are reviewed**:
    `side_source`) — migration + types regenerated.
 4. ✅ (T27, 2026-08-26) T4.3 the standing migration (§3) with `afl_anime_canon_unruled` and the
    A1 spike check; the T6 map migrated; census deltas explained (changelog §12.56).
-5. **Batch-18 review of the biggest unruled blocks BEFORE step 6** — FMA
+5. ✅ (batch 18, 2026-08-26 — three waves, 32 verdicts; rules T28 + A44; the incorporation basis) **Batch-18 review of the biggest unruled blocks BEFORE step 6** — FMA
    2003 (27), beyblade-metal-fusion (32), dragon-ball-super (15),
    outlaw-star (13), soul-eater (13), twin-star (30), the A-7 endings.
 6. T4.4 `episodes.format` + healer + `FORMAT_OVERRIDES` + watch-order kinds.
@@ -163,7 +163,7 @@ last, after the big unruled blocks are reviewed**:
 ## 7. Open for Sean at batch 18 (recorded, not decided)
 
 `SOURCE_TYPE_OVERRIDES`: outlaw-star RULED original (batch 18 wave 1 — co-primary media-mix, sibling by design; the ledger may want a 'sibling-by-design' note distinct from T21's derivative class). Candidates surfaced by T4.1: solo-leveling and the-beginning-after-the-end derive `other` (AniList source OTHER) though each adapts a KR webtoon → `manhwa`?; ghost-in-the-shell-arise-alternative-architecture derives `other` (a re-cut of Arise — a relation, arguably `original`). ·
-**adopted.basis: boruto 221-281 RULED community (batch 18 wave 1; 282-286 → side_source); beastars 44 = studio still PROVISIONAL (wave 3)** · kenshin-2023 44 (no positive canon signal → filler) · ~~clannad VN-route rows~~ RULED 2026-08-26 as three cited T6 rows (clannad 24 canon, after-story 25 canon, after-story 23 filler) — the VN default stays filler: Steins;Gate 25 is AFL's 'anime canon' = the original OVA · twin-star 21–50 adopted or filler · FMA 2003's second half (community
+**adopted.basis: boruto 221-281 RULED community (wave 1; 282-286 → side_source); beastars 44 RULED studio (wave 3)** · kenshin-2023 44 RULED filler (wave 3: the verifier refuted the per-episode act; no series-level regime) · ~~clannad VN-route rows~~ RULED 2026-08-26 as three cited T6 rows (clannad 24 canon, after-story 25 canon, after-story 23 filler) — the VN default stays filler: Steins;Gate 25 is AFL's 'anime canon' = the original OVA · twin-star 21–50 adopted or filler · FMA 2003's second half (community
 adopted?) · soul-eater ending · claymore / gto / ajin / chrono endings ·
 which `adopted.basis` each ruled consensus row carries · **from wave 1:** DBS Resurrection 'F' eps 18-27 stored canon though the manga skips the arc (side_source to the FILM would carry an author basis — Toriyama wrote its screenplay) · soul-eater continue_from_chapter 37 (ep-36 continua pin) vs honest continue-read ch 40 (C-family) · outlaw-star ep 23 stored 1998-06-04 for a broadcast that never happened (may G53 carry NULL?) · a T-family name for 'authorised parallel continuity' (FMA 2003, Outlaw Star) if Sean wants one · **/add-rule candidate: `mixed_fragment_only` census class** — mixed rows whose only source-tie annotations are graft/partial/loose_parallel, i.e. rows typed before T28 that the bar would question; a queue for Sean's reversal, never an auto-flip · the VN/game
 instrument question when the first mapped example appears.

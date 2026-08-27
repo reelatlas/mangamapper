@@ -53,6 +53,16 @@ export const ENTRIES: RulingEntry<number[]>[] = [
     ruledOn: '2026-08-26',
     cite: ['scripts/ingest/research/batch18/out/a-certain-scientific-railgun.json', 'scripts/ingest/research/batch18/verify/a-certain-scientific-railgun.md'],
   },
+  {
+    seriesId: 'akame-ga-kill',
+    ruleId: 'A44',
+    value: [20, 21],
+    reason:
+      'Mixed rows (the ch 50-53 outline; ch 42-43 and ch 56 beats) inside the anime-original ending: an end-chapter of 53 would skip ch 39/44/45/47-50 (never adapted) and ep 21 reaches back to ch 42-43. The anchor line stops at ep 19 (afg-continua 36). Position-less by ruling.',
+    ruledBy: 'Sean',
+    ruledOn: '2026-08-26',
+    cite: ['scripts/ingest/research/batch18/verify/akame-ga-kill.md'],
+  },
 ];
 
 export const ANCHOR_SUPPRESSED: Record<string, number[]> = toRecord(ENTRIES);

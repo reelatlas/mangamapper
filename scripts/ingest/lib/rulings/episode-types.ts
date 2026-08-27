@@ -16,7 +16,6 @@
 // Consumer shape: Record<seriesId, Record<episode, type>>.
 
 import type { RulingEntry } from './types';
-import { toRecord } from './types';
 
 export const range = (from: number, to: number, type: string) =>
   Object.fromEntries(Array.from({ length: to - from + 1 }, (_, i) => [from + i, type]));
@@ -560,6 +559,163 @@ export const ENTRIES: RulingEntry<EpisodeTypes>[] = [
     ruledOn: '2026-08-26',
     cite: ["scripts/ingest/research/batch18/out/soul-eater.json", "scripts/ingest/research/batch18/verify/soul-eater.md", "https://souleater.fandom.com/wiki/Chapter_40", "https://ja.wikipedia.org/wiki/ソウルイーター"],
   },
+  {
+    seriesId: 'one-piece',
+    ruleId: 'T6',
+    value: {"213": "filler", "215": "filler", "453": "mixed", "454": "mixed", "455": "mixed", "456": "mixed", "499": "filler", "506": "filler", "775": "filler", "1084": "filler"},
+    reason:
+      "Batch 18 wave 3 (2026-08-26), verified R24, Sean ruled: 453-456 MIXED — they animate Oda's cover-page side story (the Straw Hat's Separation Serial, ch 543-560 covers; the wiki's Canon page files it under Canon, ja-WP does not bold them) — the side story IS the plot (T28); 455 repaired for consistency. POSITION-LESS by A44 (the cover chapters run ahead of the main line; AFG prints them — the ep-455 junk anchor Sean deleted in batch 17). 213/215 (added Davy Back games), 499, 506, 775, 1084 filler with their ties recorded. No adoption (the Canon page files 'Oda's Involvement' under Non-Canon).",
+    ruledBy: 'Sean',
+    ruledOn: '2026-08-26',
+    cite: ["scripts/ingest/research/batch18/out/one-piece.json", "scripts/ingest/research/batch18/verify/one-piece.md"],
+  },
+  {
+    seriesId: 'akame-ga-kill',
+    ruleId: 'T6',
+    value: {"20": "mixed", "21": "mixed", "22": "filler", "23": "filler", "24": "filler"},
+    reason:
+      "Batch 18 wave 3 (2026-08-26), verified R24, Sean ruled (with Cursor): 20 mixed (MEDIUM — the ch 50-52 outline: Budo beats Tatsumi, Lubbock kills Syura and dies, execution announced; ch 46 unverifiable), 21 mixed (HIGH — ch 42-43 Esdeath vs Najenda/Susanoo never adapted elsewhere; ch 51-53; the ch-56 Budo kill, published AFTER broadcast); both POSITION-LESS (A44: ch 39/44/45/47-50 unadapted). 22 filler + divergence (Kurome's death is not in the director's account). 23-24 FILLER + RETCONNED: director Kobayashi (animeanime.jp 2015-01) states the anime ending — Tatsumi dies vs the Emperor's Teigu, Akame vs Esdeath — was Takahiro's own planned outline, him on site, and that the manga later changed it; standing is relative to the source AS FINISHED (the world-trigger 49-63 shape), never canon + adopted.",
+    ruledBy: 'Sean',
+    ruledOn: '2026-08-26',
+    cite: ["scripts/ingest/research/batch18/out/akame-ga-kill.json", "scripts/ingest/research/batch18/verify/akame-ga-kill.md", "https://animeanime.jp/article/2015/01/20/21646.html"],
+  },
+  {
+    seriesId: 'black-clover',
+    ruleId: 'T6',
+    value: {"13": "filler", "55": "canon", "56": "canon"},
+    reason:
+      "Batch 18 wave 3 (2026-08-26), verified R24, Sean ruled: 55-56 CANON + side_source — they adapt the licensed light novel Bōgyū no Sho (暴牛の書, Johnny Onda / illus. Tabata, Jump J-Books 2016-08-04; fandom |chapter=, AFG, en-WP, ja-WP's Fanzell/Dominante/Mariella entries); ep 56 also closes on ch 81 p.14-17 (+ a ch-82 restage) → partial, NO anchor (ep 54 holds END 82). Novel + manga frame is two standings, not a mix — canon (Shippuden 455 stayed mixed because its frame was DISPUTED). 13 filler (empty chapter field, AFG Filler).",
+    ruledBy: 'Sean',
+    ruledOn: '2026-08-26',
+    cite: ["scripts/ingest/research/batch18/out/black-clover.json", "scripts/ingest/research/batch18/verify/black-clover.md"],
+  },
+  {
+    seriesId: 'naruto-shippuden',
+    ruleId: 'T6',
+    value: {"28": "filler"},
+    reason:
+      "Batch 18 wave 3 (2026-08-26): ep 28 — only the start/end of Team Guy's clone fights are in the manga (ch 275-276 seam fragments); all four finishing techniques debut anime-only; AFG N/A → filler + partial (T28).",
+    ruledBy: 'Sean',
+    ruledOn: '2026-08-26',
+    cite: ["scripts/ingest/research/batch18/out/naruto-shippuden.json"],
+  },
+  {
+    seriesId: 'noragami',
+    ruleId: 'T6',
+    value: {"11": "filler", "12": "filler"},
+    reason:
+      "Batch 18 wave 3 (2026-08-26): the S1 Rabo finale is the studio's arc, written to Adachitoka's brief 原作の未来を奪わない形で; Adachitoka gave 原案 for the CHARACTER only (official site 2014-02-06 via ja-WP); Rabo entered the manga in 2021 as a prequel gaiden — character canon, not story adoption → filler + divergence.",
+    ruledBy: 'Sean',
+    ruledOn: '2026-08-26',
+    cite: ["scripts/ingest/research/batch18/out/noragami.json"],
+  },
+  {
+    seriesId: 'sgt-frog',
+    ruleId: 'T6',
+    value: {"180": "filler", "357": "filler"},
+    reason:
+      "Batch 18 wave 3 (2026-08-26): ja-WP's アニメエピソード一覧 ● index (原作に沿った内容, segment grain, matched stored typing 10/10 on neighbours) gives no ● to either row; 357 is the anime's originally-planned finale (studio ending, no adoption) → filler.",
+    ruledBy: 'Sean',
+    ruledOn: '2026-08-26',
+    cite: ["scripts/ingest/research/batch18/out/sgt-frog.json"],
+  },
+  {
+    seriesId: 'girls-last-tour',
+    ruleId: 'T6',
+    value: {"4": "canon"},
+    reason:
+      "Batch 18 wave 3 (2026-08-26): AFL's lone 'anime canon' in a 12-for-12 linear adaptation is a mislabel — ep 4 = 写真 (ch 9) + 寺院 (ch 10), fandom both directions + ja-WP titles + MangaDex → canon (research anchor later; MangaDex's EN feed omits ch 11 — off by one from there).",
+    ruledBy: 'Sean',
+    ruledOn: '2026-08-26',
+    cite: ["scripts/ingest/research/batch18/out/girls-last-tour.json"],
+  },
+  {
+    seriesId: 'vinland-saga',
+    ruleId: 'T6',
+    value: {"5": "filler"},
+    reason:
+      "Batch 18 wave 3 (2026-08-26): only the Ylva cutaway is manga (vol-3 gaiden ch 21.5, transplanted ~5 volumes early); fandom: 'the entirety of this episode excluding the scenes with Ylva is anime original' → filler + graft (T28).",
+    ruledBy: 'Sean',
+    ruledOn: '2026-08-26',
+    cite: ["scripts/ingest/research/batch18/out/vinland-saga.json"],
+  },
+  {
+    seriesId: '86-eighty-six',
+    ruleId: 'T6',
+    value: {"10": "canon"},
+    reason:
+      "Batch 18 wave 3 (2026-08-26), verified R24, Sean ruled: ep 10 adapts LN vol 10 — 'The Banks of Lethe' (ch 8, front half), the 'Fido' and 'Varlet' stories (the memory montage, anime-arranged presentation), the manga-vol-1 side story, and vol 2 ch 2's opening (last ~30 s); Asato Asato supplied the vol-10 content to the director ahead of time and supervised the script (BD booklet interview). The LN is the series' SOURCE → canon + side_story (not side_source); 'mixed' recorded as the alternative reading of the montage's presentation.",
+    ruledBy: 'Sean',
+    ruledOn: '2026-08-26',
+    cite: ["scripts/ingest/research/batch18/out/86-eighty-six.json", "scripts/ingest/research/batch18/verify/86-eighty-six.md", "https://hackmd.io/@felza127/86interview5"],
+  },
+  {
+    seriesId: 'demon-slayer-kimetsu-no-yaiba',
+    ruleId: 'T6',
+    value: {"27": "filler"},
+    reason:
+      "Batch 18 wave 3 (2026-08-26): a new TV episode (Rengoku's road to the train), 'entirely anime-original… takes place during ch 53' (fandom; ja-WP) → filler + loose_parallel{53-54}.",
+    ruledBy: 'Sean',
+    ruledOn: '2026-08-26',
+    cite: ["scripts/ingest/research/batch18/out/demon-slayer-kimetsu-no-yaiba.json"],
+  },
+  {
+    seriesId: 'durarara',
+    ruleId: 'T6',
+    value: {"25": "filler"},
+    reason:
+      "Batch 18 wave 3 (2026-08-26): the S1 OVA 天下泰平 (DVD 13, 2011-02-23) — 'adapted from' empty where every TV row is filled; no matching Narita short story; pre-debuts vol-4 characters → filler + loose_parallel (medium). STRUCTURE: components off by one from row 25.",
+    ruledBy: 'Sean',
+    ruledOn: '2026-08-26',
+    cite: ["scripts/ingest/research/batch18/out/durarara.json"],
+  },
+  {
+    seriesId: 'fullmetal-alchemist-brotherhood',
+    ruleId: 'T6',
+    value: {"1": "filler"},
+    reason:
+      "Batch 18 wave 3 (2026-08-26): the Isaac McDougal prologue is anime-original (ja-WP: faithful 'except episode 1'); Isaac's design came from Arakawa's rough illustration and she attended script meetings — commissioned, not declared (the kinnikuman discriminator) → filler + divergence, no adoption.",
+    ruledBy: 'Sean',
+    ruledOn: '2026-08-26',
+    cite: ["scripts/ingest/research/batch18/out/fullmetal-alchemist-brotherhood.json"],
+  },
+  {
+    seriesId: 'high-school-of-the-dead',
+    ruleId: 'T6',
+    value: {"13": "filler"},
+    reason:
+      "Batch 18 wave 3 (2026-08-26): the Drifters of the Dead OVA — the manga's three extras include no island story; wiki 'Manga Chapters = None'; ja-WP: a 番外編 whose island exists only in the OVA; opens with a recap montage → filler + abridged.",
+    ruledBy: 'Sean',
+    ruledOn: '2026-08-26',
+    cite: ["scripts/ingest/research/batch18/out/high-school-of-the-dead.json"],
+  },
+  {
+    seriesId: 'steins-gate',
+    ruleId: 'T6',
+    value: {"25": "filler"},
+    reason:
+      "Batch 18 wave 3 (2026-08-26): 'Egoistic Poriomania' — 'entirely anime-original' (wiki), BD-9 unaired special set in America (ja-WP); only carry-forward is downstream (the movie novelisation) → filler; the VN default (T27) holds.",
+    ruledBy: 'Sean',
+    ruledOn: '2026-08-26',
+    cite: ["scripts/ingest/research/batch18/out/steins-gate.json"],
+  },
+  {
+    seriesId: 'sword-art-online',
+    ruleId: 'T6',
+    value: {"50": "canon"},
+    reason:
+      "Batch 18 wave 3 (2026-08-26), verified R24, Sean ruled: row 50 IS the Ordinal Scale MOVIE (2017-02-18; AFL #50; AniList 21403), not Extra Edition. Kawahara wrote story + screenplay (official site 脚本 川原礫・伊藤智彦; ja-WP 川原書き下ろしの完全オリジナル作) and two OS-continuity prose stories (Hopeful Chant, Cordial Chords) → canon + adopted{author} by AUTHORSHIP (not side_source — it adapts no book; 'incorporated into LN canon' is uncited, ja-WP 原作未収録). STRUCTURE (separate): no component — N7 ruling + a kind: movie component; do not renumber.",
+    ruledBy: 'Sean',
+    ruledOn: '2026-08-26',
+    cite: ["scripts/ingest/research/batch18/out/sword-art-online.json", "scripts/ingest/research/batch18/verify/sword-art-online.md", "https://sao-movie.net/staffcast/"],
+  },
 ];
 
-export const EPISODE_TYPE_OVERRIDES: Record<string, EpisodeTypes> = toRecord(ENTRIES);
+// MERGED per series (batch 18 wave 3, 2026-08-26): a series may carry several
+// T6 entries (its batch-8 block plus a batch-18 row set); last-wins would
+// silently drop the earlier ruling — the same defect caught on the
+// annotation map in wave 2. Later entries win only on the rows they name.
+export const EPISODE_TYPE_OVERRIDES: Record<string, EpisodeTypes> = ENTRIES.reduce<Record<string, EpisodeTypes>>((acc, e) => {
+  acc[e.seriesId] = { ...(acc[e.seriesId] ?? {}), ...e.value };
+  return acc;
+}, {});
