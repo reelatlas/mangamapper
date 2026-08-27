@@ -7,7 +7,7 @@
 // 37-48), (2) re-resolve the series so filterEpisodeRows drops the row.
 // No anchor or annotation depended on row 0 (checked 2026-08-26). Idempotent.
 //   npx tsx --env-file=.env.ingest scripts/ingest/research/batch19/apply-e4.ts
-import { db, startRun, finishRun } from '../../lib/db';
+import { db, selectAll, startRun, finishRun } from '../../lib/db';
 import { resolveSeries } from '../../lib/resolve';
 
 const runId = await startRun('resolve');
@@ -26,8 +26,8 @@ try {
   if (!s?.afl_slug) throw new Error('high-school-dxd has no afl_slug');
   const r = await resolveSeries(runId, s.afl_slug);
   console.log('re-resolved high-school-dxd:', JSON.stringify(r).slice(0, 200));
-  const { data: row0 } = await db.from('episodes').select('number').eq('series_id', 'high-school-dxd').eq('number', 0);
-  console.log('row 0 standing:', row0?.length ?? 0);
+  const row0 = await selectAll<{ number: number }>('episodes', 'number', (q) => q.eq('series_id', 'high-school-dxd').eq('number', 0));
+  console.log('row 0 standing:', row0.length);
   await finishRun(runId, 'ok', { fetched: 1, unchanged: 0, changed: 1, flagged: 0 }, 'E4: dxd row 0 dropped (N11)');
 } catch (e) {
   await finishRun(runId, 'error', { fetched: 0, unchanged: 0, changed: 0, flagged: 0 }, String(e).slice(0, 200));
