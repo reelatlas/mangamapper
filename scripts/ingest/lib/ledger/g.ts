@@ -936,4 +936,28 @@ export const RULES: Rule[] = [
     status: 'live',
     see: ['G54', 'G53', 'G41', 'G44', 'G45', 'N7', 'T29', 'P6', 'P5'],
   },
+  {
+    id: 'G56',
+    aliases: ['honest terminal', 'honest-terminal redundancy', 'covered pin', 'MU "EP N" pin', 'EP N pin', 'skipped_terminal', 'mu_pin_flag_redundant', 'claymore #945 class', 'pin already covered'],
+    family: 'G',
+    title: 'Honest terminal: a covered MU pin is redundant, not a flag',
+    statement:
+      "When an MU frontier pin lands on a row that cannot take an anchor (A1 filler, A44 position-less), the series' honest terminal is the non-MU anchor on the last canon/mixed row at or before the pin episode (lib/honest-terminal.ts; A44 position-less rows are skipped — chrono-crusade 21). If that anchor already reaches MU's coverage chapter the pin is REDUNDANT: applyMuFrontier returns skipped_terminal, writes nothing, and closes its own open refusal flag of that shape. If it does not reach it, the G36 refusal stands and the flag is the research queue. The census lists an open refusal flag whose terminal already covers the pin (mu_pin_flag_redundant); the coverage audit counts the skips (mu_skipped_terminal). MU_FRONTIER_SUPPRESSED (G37) remains the per-series shape for pins wrong for reasons no gate can derive.",
+    why:
+      "MU's anime field names the LAST EPISODE of a studio ending ('Vol 11, Chap 59 (Original Ending EP 24-26)'), which is a filler row, so the G36 refusal re-filed claymore's flag #945 on every run even after batch 19 anchored ep 23 → 59 — the very terminal MU points at. Six open flags shared the shape; three were redundant on the day the rule landed (claymore 24 ← ep 23 → 59; rosario-vampire 26 ← ep 24 → 38; beelzebub 60 ← ep 59 → 121) and three remain honest refusals (zatch-bell 139: ep 138 → 211 is one short of 212; hellsing 13; slam-dunk 101). The batch-19 verifier named the P30 fix (claymore, item 'flag #945 is overstated').",
+    ruledBy: 'Sean',
+    ruledOn: '2026-08-26',
+    origin: 'scripts/ingest/research/batch19/verify/claymore.md; changelog §12.72 (the second post-wave-1 /add-rule)',
+    enforcement: [
+      { path: 'scripts/ingest/lib/honest-terminal.ts', symbol: 'honestTerminal' },
+      { path: 'scripts/ingest/lib/mu-frontier.ts', symbol: 'skipped_terminal' },
+      { path: 'scripts/ingest/audit-manga-coverage.ts', symbol: 'mu_skipped_terminal' },
+      { path: 'scripts/ingest/audit-ui-truth.ts', symbol: 'mu_pin_flag_redundant' },
+    ],
+    layer: 'writer',
+    auditClass: ['mu_pin_flag_redundant', 'mu_skipped_terminal'],
+    witnesses: ['claymore', 'rosario-vampire', 'beelzebub', 'zatch-bell'],
+    status: 'live',
+    see: ['G36', 'G37', 'G31', 'A26', 'A1', 'A44', 'P30'],
+  },
 ];

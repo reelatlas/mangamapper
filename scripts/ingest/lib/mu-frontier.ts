@@ -15,6 +15,7 @@
 import { db, fileFlagOnce, selectAll } from './db';
 import { MU_FRONTIER_SUPPRESSED } from './rulings/mu-frontier-suppressed';
 import { isAnchorSuppressed } from './rulings/anchor-suppressed';
+import { honestTerminal, pinRedundant } from './honest-terminal';
 
 export function parseCoverageAll(text: string | null): {
   pairs: { volume: number; chapter: number }[];
@@ -42,6 +43,7 @@ export interface FrontierSeries {
 export type FrontierResult =
   | 'applied'
   | 'skipped_fresh'
+  | 'skipped_terminal' // G56: the pin lands on a row that cannot take an anchor, but the honest terminal already reaches MU's chapter
   | 'no_progress'
   | 'no_coverage'
   | 'out_of_space'
@@ -222,6 +224,26 @@ export async function applyMuFrontier(
     .eq('series_id', s.id)
     .eq('number', episode)
     .maybeSingle();
+  const cannotAnchor = isAnchorSuppressed(s.id, episode) || (epRow != null && epRow.type !== 'canon' && epRow.type !== 'mixed');
+  if (cannotAnchor) {
+    // G56 honest-terminal redundancy (2026-08-26, the claymore #945 class):
+    // research may already have placed the terminal MU points at — the
+    // non-MU anchor on the last canon/mixed row at or before the pin. If it
+    // reaches MU's chapter the pin adds nothing: skip silently and close
+    // the writer's own stale refusal flag. Otherwise the refusal below
+    // stands — research still owes the terminal.
+    const rows = await selectAll<{ number: number; type: string | null }>('episodes', 'number, type', (q) => q.eq('series_id', s.id).lte('number', episode));
+    const nonMu = await selectAll<{ episode: number; chapter: number; source: string }>('chapter_anchors', 'episode, chapter, source', (q) => q.eq('series_id', s.id).lte('episode', episode).neq('source', 'mu'));
+    const terminal = honestTerminal(rows, nonMu, episode, (n) => isAnchorSuppressed(s.id, n));
+    if (pinRedundant(terminal, coverage.chapter)) {
+      const stale = await selectAll<{ id: number; detail: unknown }>('ingest_flags', 'id, detail', (q) => q.eq('series_key', s.id).eq('source', 'mangaupdates').eq('kind', 'count_mismatch').eq('status', 'open'));
+      for (const f of stale) {
+        if (!/^MU frontier pin lands on/.test(String((f.detail as { note?: string })?.note ?? ''))) continue;
+        await db.from('ingest_flags').update({ status: 'dismissed', resolved_at: new Date().toISOString(), detail: { ...(f.detail as object), dismissed: `G56: the honest terminal ep ${terminal!.episode} → ch ${terminal!.chapter} (${terminal!.source}) already reaches MU's ch ${coverage.chapter} — the pin is redundant` } }).eq('id', f.id);
+      }
+      return 'skipped_terminal';
+    }
+  }
   if (isAnchorSuppressed(s.id, episode)) return 'refused_episode_type'; // A44: position-less by ruling
   if (epRow && epRow.type !== 'canon' && epRow.type !== 'mixed') {
     await fileFlagOnce(runId, s.id, 'mangaupdates', 'count_mismatch', {

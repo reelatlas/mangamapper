@@ -30,6 +30,7 @@ async function main() {
     mu_refused_sibling_scope: [],
     mu_refused_scope_consumed: [],
     mu_refused_episode_type: [],
+    mu_skipped_terminal: [],
     mu_suppressed: [],
     stale_anchor_no_frontier: [],
     pending_airing_no_frontier: [],
@@ -124,6 +125,11 @@ async function main() {
         continue;
       }
       if (result === 'skipped_fresh') {
+        classes.active_anchored.push(s.id);
+        continue;
+      }
+      if (result === 'skipped_terminal') {
+        classes.mu_skipped_terminal.push(s.id); // G56: research already holds the terminal MU points at
         classes.active_anchored.push(s.id);
         continue;
       }

@@ -607,6 +607,32 @@
    durable guard. Lesson for the floor rule: a >2 overshoot sourced from a
    SINGLE chart row with no corroborating content anywhere is a typo
    candidate, not an adoption candidate.
+72. ✅ **G56 — HONEST TERMINAL: a covered MU pin is redundant, not a flag
+   (2026-08-26; the second post-wave-1 /add-rule).** MU's anime field names
+   the LAST EPISODE of a studio ending ("Vol 11, Chap 59 (Original Ending
+   EP 24-26)") — a filler row — so the G36 refusal re-filed claymore's flag
+   #945 on every run even after batch 19 anchored ep 23 → 59, the very
+   terminal MU points at. Built per P31: **lib** `lib/honest-terminal.ts`
+   (pure, 4 tests): the honest terminal = the non-MU anchor on the last
+   canon/mixed row at or before the pin episode; the pin is redundant when
+   it already reaches MU's chapter. **Writer** `applyMuFrontier`: a pin on
+   an A1 / A44 row that is covered returns the new `skipped_terminal`,
+   writes nothing, and CLOSES its own open refusal flag of that shape; an
+   uncovered pin still refuses under G36 (the research queue). **Audit**:
+   `mu_skipped_terminal` in the coverage audit (7 today: claymore,
+   rosario-vampire, beelzebub — whose flags #945 / #946 / #948 the writer
+   dismissed — chrono-crusade (its fresh #1023 closed once the terminal
+   learned to skip A44 position-less rows: ep 21 is mixed but can hold no
+   position, ep 20 → 30 is the terminal), ajin-demi-human (ep 22 A44,
+   terminal ep 19), plus detective-school-q and shugo-chara, which had been
+   refusing silently without an open flag) and `mu_pin_flag_redundant` in
+   the census (an open refusal flag the terminal already covers — 0 after
+   the run). Three refusals stand as honest research items: zatch-bell 139
+   (ep 138 → 211 is one chapter short of MU's 212), hellsing 13, slam-dunk
+   101. Ledger G56 (aliases: honest terminal, covered pin, the claymore #945
+   class; see A26 — the pin-EPISODE redundancy — and G36/G37). Edges
+   rebuilt and deployed (refresh-mu carries the writer). Next /add-rule:
+   `anchor_without_row`.
 71. ✅ **A45 — RETIRED ANNOTATIONS: a refuted fact is retired by ruling
    (2026-08-26; the first post-wave-1 /add-rule, Sean's order: this, then
    the MU "EP N" skip, then `anchor_without_row`).** Research-origin

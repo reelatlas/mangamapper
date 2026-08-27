@@ -177,7 +177,7 @@
 - `I38` The source manga is the ADAPTATION edge of type/format MANGA — aka `manga link selection`, `anime→manga linkage`, `pickManga`
 - `I39` Ruled structure: numbered extras and span overrides — aka `ruled structure`, `RULED_STRUCTURE`, `numbered extras`, `span override`, `heal-structure`, `planComponents`, `E4`, `batch-19 E4`, `structure rows`
 
-**G — Gates & freshness (sources)** (45)
+**G — Gates & freshness (sources)** (46)
 - `G1` The flag rule: nothing suspicious auto-applies — aka `flag rule`, `the flag rule`, `the confirm queue`, `nothing suspicious ever auto-applies`
 - `G3` Recurring conditions flag once; only Sean dismisses — aka `fileFlagOnce`, `once-per-open-kind`
 - `G4` Permanent conditions leave the open queue *(planned)* — aka `dismissed_permanent`, `permanent-flag disposition`, `A-8`
@@ -223,6 +223,7 @@
 - `G53` Ruled air dates: AIR_DATE_OVERRIDES, applied at every write — aka `AIR_DATE_OVERRIDES`, `air-date overrides`, `air date override pass`, `ruled air dates`
 - `G54` Air-date order: a date a year out of order is withheld — aka `A-11`, `air-date order gate`, `airdate regression`, `airdate_regression`, `AIRDATE_ORDER_ACK`, `365-day rule`, `air-date withheld`, `airdate_withheld`
 - `G55` Series window: a row dated outside its series is not its row — aka `series window`, `series-window gate`, `identity gate`, `namesake gate`, `namesake lesson`, `episode_date_off_window`, `AIR_DATE_WINDOW_ACK`, `E2`, `batch-19 E2`, `off-window`
+- `G56` Honest terminal: a covered MU pin is redundant, not a flag — aka `honest terminal`, `honest-terminal redundancy`, `covered pin`, `MU "EP N" pin`, `EP N pin`, `skipped_terminal`, `mu_pin_flag_redundant`, `claymore #945 class`, `pin already covered`
 
 **V — Volumes & boundaries** (10)
 - `V1` Monotonic starts, or the row is not data — aka `monotonic-start gate`, `MONOTONIC-START rule`, `monotonic boundaries`, `monotonic starts`, `Sailor Moon v3 report`, `Sailor Moon "v3: chs 10-3"`
@@ -2997,6 +2998,20 @@ A TV episode row dated more than 45 days before its series' start_date, or more 
 - aliases: series window, series-window gate, identity gate, namesake gate, namesake lesson, episode_date_off_window, AIR_DATE_WINDOW_ACK, E2, batch-19 E2, off-window
 - see: G54, G53, G41, G44, G45, N7, T29, P6, P5
 
+### G56 · Honest terminal: a covered MU pin is redundant, not a flag
+
+When an MU frontier pin lands on a row that cannot take an anchor (A1 filler, A44 position-less), the series' honest terminal is the non-MU anchor on the last canon/mixed row at or before the pin episode (lib/honest-terminal.ts; A44 position-less rows are skipped — chrono-crusade 21). If that anchor already reaches MU's coverage chapter the pin is REDUNDANT: applyMuFrontier returns skipped_terminal, writes nothing, and closes its own open refusal flag of that shape. If it does not reach it, the G36 refusal stands and the flag is the research queue. The census lists an open refusal flag whose terminal already covers the pin (mu_pin_flag_redundant); the coverage audit counts the skips (mu_skipped_terminal). MU_FRONTIER_SUPPRESSED (G37) remains the per-series shape for pins wrong for reasons no gate can derive.
+
+*Why:* MU's anime field names the LAST EPISODE of a studio ending ('Vol 11, Chap 59 (Original Ending EP 24-26)'), which is a filler row, so the G36 refusal re-filed claymore's flag #945 on every run even after batch 19 anchored ep 23 → 59 — the very terminal MU points at. Six open flags shared the shape; three were redundant on the day the rule landed (claymore 24 ← ep 23 → 59; rosario-vampire 26 ← ep 24 → 38; beelzebub 60 ← ep 59 → 121) and three remain honest refusals (zatch-bell 139: ep 138 → 211 is one short of 212; hellsing 13; slam-dunk 101). The batch-19 verifier named the P30 fix (claymore, item 'flag #945 is overstated').
+
+- ruled Sean 2026-08-26 (scripts/ingest/research/batch19/verify/claymore.md; changelog §12.72 (the second post-wave-1 /add-rule))
+- layer **writer**
+- enforced: [lib/honest-terminal.ts#honestTerminal](../scripts/ingest/lib/honest-terminal.ts) · [lib/mu-frontier.ts#skipped_terminal](../scripts/ingest/lib/mu-frontier.ts) · [audit-manga-coverage.ts#mu_skipped_terminal](../scripts/ingest/audit-manga-coverage.ts) · [audit-ui-truth.ts#mu_pin_flag_redundant](../scripts/ingest/audit-ui-truth.ts)
+- audit: `mu_pin_flag_redundant`, `mu_skipped_terminal`
+- witnesses: claymore, rosario-vampire, beelzebub, zatch-bell
+- aliases: honest terminal, honest-terminal redundancy, covered pin, MU "EP N" pin, EP N pin, skipped_terminal, mu_pin_flag_redundant, claymore #945 class, pin already covered
+- see: G36, G37, G31, A26, A1, A44, P30
+
 ## V — Volumes & boundaries
 
 ### V1 · Monotonic starts, or the row is not data
@@ -4216,6 +4231,7 @@ Any component that renders episode-level data consumes the HYDRATED series (getB
 - chToVol → `V3`
 - claimed continuation → handoff → `I37`
 - CLASS_TO_TYPE → `T1`
+- claymore #945 class → `G56`
 - Claymore precedent → `G26`
 - Claymore-26 shape → `T28`
 - close the loop → `P29`
@@ -4269,6 +4285,7 @@ Any component that renders episode-level data consumes the HYDRATED series (getB
 - coverage = max → `A4`
 - coverage gate → `A37`
 - coverage synthesis → `A38`
+- covered pin → `G56`
 - crawl-delay → `G16`
 - cross-check only → `R4`
 - cross-check tier → `G41`
@@ -4340,6 +4357,7 @@ Any component that renders episode-level data consumes the HYDRATED series (getB
 - end+1 default → `C9`
 - ending-debate annotation → `T13`
 - enforcement-site deep trigger → `P22`
+- EP N pin → `G56`
 - episode 0 is real → `G7`
 - episode display = FIRST chapter animated → `A13`
 - episode floor → `N1`
@@ -4478,6 +4496,8 @@ Any component that renders episode-level data consumes the HYDRATED series (getB
 - honest gap > guess → `R13`
 - honest gap beats a plausible guess → `R13`
 - honest record → `A8`
+- honest terminal → `G56`
+- honest-terminal redundancy → `G56`
 - HxH ep-140 lesson → `A24`
 - hydrated series only → `P37`
 - hydration contract → `P37`
@@ -4584,6 +4604,7 @@ Any component that renders episode-level data consumes the HYDRATED series (getB
 - movies count only when numbered → `N4`
 - movies rule → `N4`
 - movies/OVAs excluded → `I13`
+- MU "EP N" pin → `G56`
 - mu anchors are derivations → `G38`
 - mu anchors wiped and rebuilt → `G38`
 - MU class C → `A27`
@@ -4600,6 +4621,7 @@ Any component that renders episode-level data consumes the HYDRATED series (getB
 - MU targets: UNIVERSAL → `G39`
 - MU writer gates → `G32`
 - MU_FRONTIER_SUPPRESSED → `G37`
+- mu_pin_flag_redundant → `G56`
 - mu-558-as-anchor → `A32`
 - MU-frontier rule → `G31`
 - MU-pin episode-keyed redundancy → `A26`
@@ -4688,6 +4710,7 @@ Any component that renders episode-level data consumes the HYDRATED series (getB
 - permanent-flag disposition → `G4`
 - pickManga → `I38`
 - piecewise interpolation → `A33`
+- pin already covered → `G56`
 - pin-episode redundancy → `A26`
 - pinned protocol → `R31`
 - planComponents → `I39`
@@ -4819,6 +4842,7 @@ Any component that renders episode-level data consumes the HYDRATED series (getB
 - skeptic not second author → `R24`
 - skip notes → `C3`
 - skip-on-arrival note → `C3`
+- skipped_terminal → `G56`
 - Slime ← Cells at Work class → `V5`
 - Slime/4KOTA class → `N28`
 - sliver rule → `A10`
@@ -4991,6 +5015,6 @@ Any component that renders episode-level data consumes the HYDRATED series (getB
 
 ## Scoreboard
 
-- rules: 269 (live 254, planned 8, superseded 7)
+- rules: 270 (live 255, planned 8, superseded 7)
 - live data rules with no audit class (the automation backlog): 85
-- by layer: writer 140 · display 23 · both 23 · process 83
+- by layer: writer 141 · display 23 · both 23 · process 83

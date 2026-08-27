@@ -16,6 +16,7 @@ import { offWindowRows, seriesDatesInvalid } from './lib/wiki-identity';
 import { sliverStart } from './lib/sliver';
 import { RULED_STRUCTURE, RULED_EXTRA_KEYS } from './lib/rulings/structure';
 import { RETIRED_ANNOTATIONS } from './lib/rulings/retired-annotations';
+import { honestTerminal, pinRedundant } from './lib/honest-terminal';
 import { STANDING_ANNOTATIONS } from './lib/rulings/standing-annotations';
 import { AIR_DATE_OVERRIDES } from './lib/rulings/air-dates';
 import { ANCHOR_SUPPRESSED } from './lib/rulings/anchor-suppressed';
@@ -88,7 +89,7 @@ async function main() {
     integrity_degenerate_span: degenerateSpans,
     special_numbered_unreviewed: [], anchor_gap_research: [], frontier_tail_null: [],
     anchor_nonmonotonic: [], anchor_start_offtrend: [], start_sliver_mismatch: [], start_without_span: [], anchor_beyond_chapter_space: [], anchor_beyond_display_total: [], anchor_fractional_chapter: [], anchor_on_noncanon_row: [], continue_skip_unnoted: [], boundaries_degenerate: [], ruling_violation: [], repair_on_derivation_tier: [],
-    mu_pin_unverified: [],
+    mu_pin_unverified: [], mu_pin_flag_redundant: [],
     rearranged_zone_unanchored: [], rearranged_zone_acknowledged: [],
     title_incomplete: [], airdate_incomplete: [], airdate_regression: [], airdate_withheld: [], episode_date_off_window: [], asterisk_unreviewed: [],
     fractional_unmodeled: [], annotation_invalid: [], annotation_retired_standing: [], afl_anime_canon_unruled: [], format_missing: [], episode_without_component: [], watch_order_kind_missing: [],
@@ -112,6 +113,21 @@ async function main() {
     // I39: a ruled extra is its own N7 review
     if (c.kind && c.kind !== 'season' && c.episode_start != null && !REVIEWED_NUMBERED_SPECIALS.has(`${c.series_id}:${c.anilist_id}`) && !RULED_EXTRA_KEYS.has(`${c.series_id}:${c.anilist_id}`)) {
       classes.special_numbered_unreviewed.push(`${c.series_id}: ${c.kind} "${c.label ?? c.anilist_id}" numbered ${c.episode_start}-${c.episode_end ?? '?'} [${c.series_id}:${c.anilist_id}]`);
+    }
+  }
+  // G56 outcome check (2026-08-26): an OPEN "MU frontier pin lands on a
+  // filler / position-less row" flag whose honest terminal (the non-MU
+  // anchor on the last canon/mixed row at or before the pin) already
+  // reaches MU's chapter is stale — the writer skips and closes it on its
+  // next pass. Should be 0 after heal; lists, never flips.
+  {
+    const open = await selectAll<{ id: number; series_key: string; detail: { note?: string; pinEpisode?: number; muCoverageChapter?: number } }>('ingest_flags', 'id, series_key, detail', (q) => q.eq('status', 'open').eq('source', 'mangaupdates').eq('kind', 'count_mismatch'));
+    for (const f of open) {
+      if (!/^MU frontier pin lands on/.test(String(f.detail?.note ?? '')) || f.detail?.pinEpisode == null || f.detail?.muCoverageChapter == null) continue;
+      const rows = episodes.filter((e: any) => e.series_id === f.series_key);
+      const nonMu = anchors.filter((a: any) => a.series_id === f.series_key && a.source !== 'mu');
+      const t = honestTerminal(rows, nonMu, f.detail.pinEpisode, (n) => ANCHOR_SUPPRESSED[f.series_key]?.includes(n) ?? false);
+      if (pinRedundant(t, f.detail.muCoverageChapter)) classes.mu_pin_flag_redundant.push(`${f.series_key}: flag #${f.id} pin ep ${f.detail.pinEpisode} → MU ch ${f.detail.muCoverageChapter}, but ep ${t!.episode} → ch ${t!.chapter} (${t!.source}) already covers it — the writer should have skipped + closed it (G56)`);
     }
   }
   // I39 outcome check (batch 19 E4): every ruled extra stands as a component
