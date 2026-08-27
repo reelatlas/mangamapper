@@ -1,0 +1,59 @@
+# mangaMapper research batch 20 — agent protocol (THE HONEST TERMINAL)
+
+You are producing episode→chapter ANCHORS, CONTINUE POINTS and annotation facts for ONE anime series (some tasks bundle two — then ONE output JSON per series). Your output is DATA applied to a database through ruled maps; be exact, cite everything, never guess. Pinned for the batch's lifetime (`R31`). AMENDED 2026-08-26 between wave 1 and wave 2, on the wave-1 verifiers' findings: the post-series continue regime is `C5` (the first draft cited `C4`, which is single-source-final), and the example anchor's volume is 10 (claymore Scene 57 is vol 10). No contract change. The vocabulary (standings, annotation kinds and bases, the materiality bar, the anchoring rules, the traps) lives in your agent definition — this file pins only the task shape, the batch-specific asks and the output JSON.
+
+## The batch-20 mission (wave 1 — lane A1, the seven G36 refusals)
+
+MangaUpdates' "anime coverage" field pins the manga chapter the anime reached — but on these series the pin lands on a FILLER row (an anime-original ending or block), which `A1` forbids as an anchor and `G36` refuses on every run. Your job is the HONEST TERMINAL (`G56`): the last canon/mixed row of the run and the exact chapter it reaches (END, START, chapters_adapted, volume — an anchor with ≥ 2 sources), the post-series continue (`C5`: coverage + 1, or the straddled chapter under `C1`), and a plain statement of whether MU's chapter is actually reached by that row (then the pin is REDUNDANT — G56 covers it) or overstated / in another edition's numbering (then say what MU counted — `G37`). Never anchor a filler row; if a filler-typed row in fact adapts source pages, propose the type repair with ≥ 2 sources (`T28`). Two of the seven (toriko, gto) also carry an EDITION question: MU's chapter numbering diverges >20% from AniList's count — state which numbering is the reading edition (the one our stored anchors and the fandom use) and put the terminal in THAT space.
+
+Pinned rulings you inherit (cite the ids): **"pages, not numbers"** (Sean 2026-08-27) — new pages of a chapter airing for the first time are a real position even when the chapter's number was already an END (anchor + `rearranged`); re-shown pages are never cited; a first-time SLIVER inside an original plot is `A44` position-less. **Continue vocabulary** (`C2`/`C5`): when the anime WILL cover skipped material in known later episodes, continue = the next episode's START (parity) with the unseen range in the note; after the finale, coverage + 1 (`post_series`); a mid-chapter ending continues IN the straddled chapter (`C1`). The apply layer marks every continue you deliver as curated (`C7`) — write the note as the reader's instruction, not as a derivation.
+
+- **A1 honest terminals** — the seven series above; one JSON per series; every TARGET row appears in anchors, anchor_hostile, or a stated A1 reason in summary.
+
+## Read first
+1. Your series context file (path in your task): source kind + chapter space, entry facts, EVERY ruling on the series (a verdict contradicting one is a REPAIR with evidence, never a silent override), all existing anchors (ep→END [START] {chapters_adapted} vol, continue), annotations grouped by fact, volume boundaries, the rows in and near the range with AFL's claim, open flags.
+2. This protocol. 3. Your agent definition's anchoring vocabulary (`A1` `A2` `A10` `A12` `A13` `A44` `C1`–`C3` `C5` `N4` `R20`).
+
+## Rules that bind your output (cite the id in notes)
+- **`A1` filler rows never take anchors; `A44` a ruled position-less row never does either.** A row that looks anchorable but is typed filler → propose the type repair (≥2 sources, `T28` materiality), not an anchor.
+- **END = the furthest MAINLINE chapter the episode adapts in running order (`A4`); START = the first chapter animated under the sliver rule (`A10`: a leading partial of the preceding chapter counts unless ≤5 pages or sliver / teaser / cold-open / recap / flashback; `A12` a relocated far-earlier opener is never the START).** Page splits go in `chapters_adapted`.
+- **Chapter-NUMBER space only**: the manga's own chapter numbering (MU / fandom), never a count with specials, never a sequel's or sibling manga's numbering (Trigun Maximum ≠ Trigun; MKR II ≠ MKR). If the sources' numbering differs from the context's chapter space, state the conversion.
+- **Continue points (`C1` `C2` `C3` `C5`)**: a mid-chapter ending continues IN the straddled chapter (`C1`); skipped material the anime covers in later known episodes → PARITY, continue at the next episode's start and note any later chapter to skip on arrival (`C2`/`C3`); after the anime's last adaptation (a studio ending, a divergence) the POST-SERIES continue is the furthest first-time coverage + 1 (`C5`; coverage per `A4`), with the never-adapted range named. (`C4` is single-source-final — not a continue regime.) Give `kind` ∈ `parity` | `post_series` per continue point. Chapter RE-USE never moves position.
+- **Spinoff / bonus / side-story chapters** stay labeled inside chapters_adapted ("omake 85.5", "Scene 60 opening"), never converted to mainline numbers; a side story with no chapter number is `anchor_hostile`.
+- **Repairs**: if an EXISTING anchor, continue point, annotation or type in the context is wrong, say so with old/new and evidence. Never silently contradict stored data. Repairs on `mu` / `afg` / `afg-continua` rows are re-derived by their source — the apply layer flips them to manual; you only need the evidence.
+- **Standings vocabulary**: canon | mixed | filler only (`T27`); exceptions are annotations (`T26`). A row you retype must meet `T28`.
+
+## Sources (≥2 independent per anchor, with URLs — `R3`)
+- Fandom wikis via the MediaWiki API, NOT HTML: `https://<wiki>.fandom.com/api.php?action=parse&page=<Page_Title>&prop=wikitext&format=json` — episode pages ("Manga counterpart" / "Chapters" fields), chapter pages (the reverse mapping), arc pages.
+- ja.wikipedia 各話リスト and per-character 原作↔アニメ tables (the ajin lesson: 巻話 ↔ 第2期N話 citations are exact), animefillerguide chapter tables, Wikipedia episode + chapter lists (title = title is strong), scene-level comparison blogs where they exist (AllYourAnime, trigunwiki), reddit / MAL "where to continue" threads as a cross-check.
+- Instant answers and content farms are cross-check only, never sole truth. Join on TITLE or DATE, never on index (`R20`); state every numbering conversion.
+
+## Confidence
+- high: 2+ independent sources agree on the exact chapter. medium: one strong source, or an arc-span derivation — include it, marked. Unresolved → the better-supported value, medium, and a `flags_for_sean` entry with the links.
+
+## Operational
+- Per-task scratchpad subdirectory only (`R22`); agents share the scratchpad. macOS: BSD sed; fandom via API not HTML. Read-only: you never touch the database.
+
+## Output — ONE JSON file PER SERIES to the path given in your task, exactly this shape
+{
+  "series_id": "<id>",
+  "summary": "3-6 sentences: what the rows adapt, where the frontier and the honest resume sit, anything surprising",
+  "anchors": [
+    {"episode": 21, "end_chapter": 57, "start_chapter": 57, "chapters_adapted": "57", "volume": 10, "confidence": "high", "note": "why/what — one line, rule ids", "sources": ["url", "url"]}
+  ],
+  "continue_points": [
+    {"episode": 23, "continue_chapter": 60, "kind": "post_series", "note": "ch 60's Last-stand section is nowhere in the anime; 60+ never adapted", "sources": ["url"]}
+  ],
+  "anchor_hostile": [
+    {"episode": 18, "why": "adapts Trigun Maximum ch 1-2 — another chapter space (A44 shape)", "sources": ["url"]}
+  ],
+  "annotations": [{"episodes": [21], "kind": "divergence", "chapters": "57", "note": "close 1:1 adaptation with an inserted anime-original B-plot"}],
+  "repairs": [{"episode": 13, "field": "continue_chapter", "old": 22, "new": 23, "why": "…", "sources": ["url"]}],
+  "type_corrections": [{"episodes": [16], "type": "canon", "note": "…", "sources": ["url", "url"]}],
+  "structure": {"notes": "count / numbering / chapter-space findings", "order_only": []},
+  "flags_for_sean": ["split evidence: …"]
+}
+Types allowed in type_corrections: canon | mixed | filler. Annotation kinds: divergence | partial | graft | rearranged | side_story | loose_parallel | abridged | adopted (basis REQUIRED) | retconned | side_source. Continue kinds: parity | post_series. Every target row must appear in exactly one of: anchors, anchor_hostile, or a note in summary saying why it takes neither (filler under A1).
+
+## Finish
+Return (as your final message) a 5-10 line summary: anchors produced (count, range), continue points, anchor-hostile rows, repairs, unresolved items. The JSON file(s) are the deliverable — written and valid before you finish.
