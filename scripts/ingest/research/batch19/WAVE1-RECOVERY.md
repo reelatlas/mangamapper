@@ -41,3 +41,20 @@ rules by id). Contexts from `context.ts` (scratchpad `b19ctx/`). Landing gate:
 
 ## Next
 Verify (R23/R24, `verdict-verifier` on a different model) over ALL EIGHT — lane A always, B1 always per the plan. Then Sean rules; apply through the maps (`EPISODE_TYPE_OVERRIDES`, standing annotations, `ANCHOR_SUPPRESSED`, continue map, C8) + `npm run heal`.
+
+## Verification (R24, Fable verifiers, 2026-08-26) — 8/8 in `verify/`, ~986k tokens
+
+Nothing REFUTED. Two SOUND (soul-eater, claymore's and chrono's values), six SOUND WITH CORRECTIONS — the corrections are apply mechanics, rule ids and note text, not positions. Wave-1 total ≈ 1.96M (973k research + 986k verify).
+
+| series | verdict | corrections that change what is applied |
+|---|---|---|
+| claymore | SOUND w/ corr | cite C5 not C4; the three loose_parallel deletions are research-origin rows and NO delete path exists (a typed deletion shape is needed — process); flag #945 will NOT close mechanically (MU pin at "EP 24" on a filler row → G37 suppression or extend the redundancy skip, P30); "in print" sentence: tankōbon through 69, magazine through 73 |
+| ajin | SOUND w/ corr | ADD a third ep-13 repair (continue_note → C1 language, else "continue at 23; skip 23"); 22.5 / 27.5 are the fandom/scanlation unit, NOT Kodansha's (FILE:27 (1)/(2)) — state the conversion, Sean picks .5 or whole; ep 19 chapters_adapted → "27 (hospital opening scene only), 27.5 (abridged)", START medium |
+| chrono | SOUND w/ corr | carve 15/16 OUT of the T6 `range(14, 21, 'mixed')`; ADD the A44 entry for ep 21 (the stored ruling is only an A7 bound — no writer refuses the row today); continue note: "never adapted except the ep-22 Satella/Fiore scene (partial, v7)"; C5 not C4 |
+| trigun | SOUND w/ corr | ep-16 continue 20 is a C5 DEVIATION filed as C1 — Sean rules (a) 20, (b) 21 with "continue in Trigun Maximum ch 1", (c) latest_known_chapters = 20 at the manual tier so 21 = displayTotal + 1; ADD the A44 entry for ep 18; add the trigunwiki GOODBYE FOR NOW citation; batch 20: ep 19 → TM 3-6 direct (dates), ep 20 one-directional |
+| soul-eater | SOUND | ep 36 repair on an afg-continua row → manual (P8); continue 37 vs 38 is a rule-reading fork (C1 straddle vs "coverage + 1" on a one-scene END) — Sean rules it explicitly, it recurs; two note fixes |
+| gto | SOUND w/ corr | REMOVE 25, 26 from the A-7 divergence span (standing-annotations.ts:489) or the healer re-stamps "RULED FILLER" on canon rows; remove the loose_parallel from the map; episode-types `range(22, 26, 'filler')` → 22-24; SJG chapters go in the NOTE, not `chapters`; "beat for beat" → "the arc's spine"; the 25/26 split is derived, not sourced |
+| railgun | SOUND w/ corr | ep 49: do NOT delete graft{41} as written — T#1's own prose says the Tokiwadai scene is a redone ch-41 library scene; keep graft{41} with a corrected note (or loose_parallel{41}), delete partial{40-42}; ep 12 continue 18 must resolve parity against ep 26 (the next row with a KNOWN start), not ep 15 |
+| DBS | SOUND w/ corr | side_source{film} is a valid T26 kind (no medium restriction); Reading A is STRONGER than presented — Toriyama wrote the film's 脚本 alone and the DBS manga incorporates the events (ch 5, ch 32): record the author basis?; ep 18 loose_parallel vs the series' own partial precedent (91/94/95); RF-manga ch 3 came out 3 days AFTER the film; animation comic 2015-12-04, 360 pp |
+
+Cross-cutting, fixed between waves (R31 amendment, dated): the PROTOCOL cited `C4` for the post-series regime — it is `C5` (`C4` = single-source-final); the example anchor's volume was 11 (Scene 57 is vol 10). Capture items: lib/annotations.ts glosses `loose_parallel` as "(anime outran the manga)" — the refuted Claymore premise in the vocabulary text; a durable ANNOTATION DELETION shape (no delete path for research-origin rows); the MU "EP N" pin on studio-ending series (P30 candidate: redundancy skip when a non-MU anchor on the last canon/mixed row already covers the pin's chapter).

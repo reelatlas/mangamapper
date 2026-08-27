@@ -91,8 +91,9 @@ Read both, fully:
   ending continues IN the straddled chapter (`C1`); skipped material the
   anime covers later → PARITY, continue at the next episode's start and note
   what to skip on arrival (`C2`/`C3`); after the anime's last adaptation the
-  POST-SERIES continue is the furthest first-time coverage + 1 with the
-  never-adapted range named. Chapter re-use never moves position. Movies
+  POST-SERIES continue is the furthest first-time coverage + 1 (`C5`; coverage
+  per `A4`) with the never-adapted range named — `C4` is single-source-final,
+  not a continue regime. Chapter re-use never moves position. Movies
   count only when numbered (`N4`). Join on title or date, never index (`R20`).
 
 ## Traps that have cost real time
