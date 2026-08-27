@@ -14,6 +14,7 @@ import { COMMUNITY_COUNT_OVERRIDES, CONTINUA_SUPPRESSED, EPISODE_TYPE_OVERRIDES,
 import { AIRDATE_REGRESSION_THRESHOLD_DAYS, airdateOrderWalk } from './lib/airdate-order';
 import { offWindowRows, seriesDatesInvalid } from './lib/wiki-identity';
 import { sliverStart } from './lib/sliver';
+import { RULED_STRUCTURE, RULED_EXTRA_KEYS } from './lib/rulings/structure';
 import { AIR_DATE_OVERRIDES } from './lib/rulings/air-dates';
 import { ANCHOR_SUPPRESSED } from './lib/rulings/anchor-suppressed';
 import { deriveFormat } from './lib/format';
@@ -106,8 +107,28 @@ async function main() {
   // into a run by any source is a research trigger — the reviewed set (with
   // each ruling's reason) lives in lib/rulings/reviewed-specials.ts.
   for (const c of comps) {
-    if (c.kind && c.kind !== 'season' && c.episode_start != null && !REVIEWED_NUMBERED_SPECIALS.has(`${c.series_id}:${c.anilist_id}`)) {
+    // I39: a ruled extra is its own N7 review
+    if (c.kind && c.kind !== 'season' && c.episode_start != null && !REVIEWED_NUMBERED_SPECIALS.has(`${c.series_id}:${c.anilist_id}`) && !RULED_EXTRA_KEYS.has(`${c.series_id}:${c.anilist_id}`)) {
       classes.special_numbered_unreviewed.push(`${c.series_id}: ${c.kind} "${c.label ?? c.anilist_id}" numbered ${c.episode_start}-${c.episode_end ?? '?'} [${c.series_id}:${c.anilist_id}]`);
+    }
+  }
+  // I39 outcome check (batch 19 E4): every ruled extra stands as a component
+  // row with its kind and its row count; every span override is honoured.
+  // A miss means a chain writer bypassed the planner or the healer has not
+  // run — ruling_violation, never silently re-derived here.
+  for (const [sid, ruled] of Object.entries(RULED_STRUCTURE)) {
+    const rows = comps.filter((c) => c.series_id === sid);
+    if (!rows.length) continue; // unstitched — not a violation
+    for (const x of ruled.extras ?? []) {
+      const row = rows.find((c) => c.anilist_id === x.anilistId);
+      if (!row) { classes.ruling_violation.push(`${sid}: ruled extra [${x.anilistId}] ${x.label} has no component row (I39) — run heal-structure`); continue; }
+      const len = row.episode_start != null && row.episode_end != null ? row.episode_end - row.episode_start + 1 : null;
+      if (row.kind !== x.kind || len !== x.rows || (x.startAt != null && row.episode_start !== x.startAt)) classes.ruling_violation.push(`${sid}: ruled extra [${x.anilistId}] stored ${row.kind} ${row.episode_start}-${row.episode_end} ≠ ruled ${x.kind} ×${x.rows}${x.startAt != null ? ` from ${x.startAt}` : ''} (I39)`);
+    }
+    for (const [id, span] of Object.entries(ruled.spans ?? {})) {
+      const row = rows.find((c) => c.anilist_id === Number(id));
+      if (!row) { classes.ruling_violation.push(`${sid}: span override on [${id}] but no such component (I39)`); continue; }
+      if ((span.episodeStart != null && row.episode_start !== span.episodeStart) || (span.episodeEnd != null && row.episode_end !== span.episodeEnd)) classes.ruling_violation.push(`${sid}: [${id}] span ${row.episode_start}-${row.episode_end} ≠ ruled ${span.episodeStart ?? '·'}-${span.episodeEnd ?? '·'} (I39)`);
     }
   }
   // ownership integrity: one AniList entry claimed by two series' components

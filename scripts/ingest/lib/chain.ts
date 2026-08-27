@@ -13,6 +13,7 @@ import { mediaByIds, type AniListMedia } from './anilist';
 import { stageAniList, searchTextFor } from './resolve';
 import { slugify } from './slug';
 import { deriveSourceKind, mangaStatusOf } from './rulings/source-kinds';
+import { planComponents, type PlanMember } from './structure-plan';
 
 export const SERIES_FORMATS = new Set(['TV', 'TV_SHORT', 'ONA']);
 // In-flow movies/OVAs join the chain when the TV path dead-ends before the
@@ -232,54 +233,30 @@ export function aggregate(chain: AniListMedia[], aflSlug: string | null, fallbac
   };
 }
 
-// Shared component writer: replaces a series' components with the chain's,
-// with running episode ranges. extras = in-flow components without episode
-// rows (Kizumonogatari pattern).
+export { planComponents, type PlannedComponent, type PlanMember } from './structure-plan';
+
+// Shared component writer: replaces a series' components with the plan —
+// the chain's members with running episode ranges, ruled extras and span
+// overrides (I39), and order-only extras = in-flow components without
+// episode rows (Kizumonogatari pattern).
 export async function writeComponents(
   seriesId: string,
   chain: AniListMedia[],
   aflSlug: string | null,
   extras?: { id: number; after: number }[],
 ) {
-  await db.from('series_components').delete().eq('series_id', seriesId);
-  let cursor = 0;
-  let order = 0;
-  for (const m of chain) {
-    const len = aired(m);
-    order += 1;
-    const { error } = await db.from('series_components').insert({
-      series_id: seriesId,
-      anilist_id: m.id,
-      season_order: order,
-      // a component with nothing aired holds NO span (a 0-length entry
-      // would produce start > end, e.g. Tokyo Revengers' announced
-      // Santen Sensou-hen at 51-50); the span appears once episodes air
-      episode_start: len > 0 ? cursor + 1 : null,
-      episode_end: len > 0 && (m.episodes != null || m.nextAiringEpisode) ? cursor + len : null,
-      label: m.title.romaji,
-      kind: KIND_BY_FORMAT[m.format ?? ''] ?? 'season',
-      afl_slug: aflSlug,
-      afl_offset: 0,
-    });
-    if (error) throw new Error(`component (${seriesId}/${m.id}): ${error.message}`);
-    cursor += len;
-
-    for (const extra of extras?.filter((x) => x.after === m.id) ?? []) {
-      const em = await getMedia(extra.id);
-      if (!em) continue;
-      order += 1;
-      const { error: exErr } = await db.from('series_components').insert({
-        series_id: seriesId,
-        anilist_id: em.id,
-        season_order: order,
-        episode_start: null,
-        episode_end: null,
-        label: em.title.romaji,
-        kind: KIND_BY_FORMAT[em.format ?? ''] ?? 'season',
-        afl_slug: aflSlug,
-        afl_offset: 0,
-      });
-      if (exErr) throw new Error(`extra component (${seriesId}/${em.id}): ${exErr.message}`);
+  const members: PlanMember[] = chain.map((m) => ({ id: m.id, aired: aired(m), label: m.title.romaji, kind: KIND_BY_FORMAT[m.format ?? ''] ?? 'season', closed: m.episodes != null || !!m.nextAiringEpisode }));
+  const plan = planComponents(seriesId, members, extras);
+  // order-only extras carry the AniList entry's own label and kind
+  for (const row of plan) {
+    if (row.label == null && extras?.some((x) => x.id === row.anilist_id)) {
+      const em = await getMedia(row.anilist_id);
+      if (em) { row.label = em.title.romaji; row.kind = KIND_BY_FORMAT[em.format ?? ''] ?? 'season'; }
     }
+  }
+  await db.from('series_components').delete().eq('series_id', seriesId);
+  for (const row of plan) {
+    const { error } = await db.from('series_components').insert({ series_id: seriesId, ...row, afl_slug: aflSlug, afl_offset: 0 });
+    if (error) throw new Error(`component (${seriesId}/${row.anilist_id}): ${error.message}`);
   }
 }

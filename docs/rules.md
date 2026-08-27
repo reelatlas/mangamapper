@@ -135,7 +135,7 @@
 - `N33` Every non-main entry carries its reasoning in data — aka `research-logged non-main entries`, `non-main entries carry the why`
 - `N34` Episode totals derive, then floor, then cap — aka `episode totals derivation`
 
-**I — Identity, franchise & structure** (38)
+**I — Identity, franchise & structure** (39)
 - `I1` Our slug is the identity — aka `identity`, `our slug is identity`, `canonical identity is ours`, `own-slug identity`
 - `I2` Identity registry: every external id maps INTO our id — aka `identity registry`, `registerIds`, `ID COLLISION`, `series_external_ids`
 - `I3` AFG↔canonical registration by evidence strength — aka `registration tiers`, `AFG match tiers`, `identity-first, flag-first`
@@ -174,6 +174,7 @@
 - `I36` Source-scope: an entry shows ONLY its own range of the manga — aka `source-scope enforcement`, `source-scope rule`, `the Naruto bug`, `scope leakage`, `series_scopes`
 - `I37` Continuation handoff: adjoining sibling scope = flow — aka `continuation handoff`, `claimed continuation → handoff`, `continues in X`
 - `I38` The source manga is the ADAPTATION edge of type/format MANGA — aka `manga link selection`, `anime→manga linkage`, `pickManga`
+- `I39` Ruled structure: numbered extras and span overrides — aka `ruled structure`, `RULED_STRUCTURE`, `numbered extras`, `span override`, `heal-structure`, `planComponents`, `E4`, `batch-19 E4`, `structure rows`
 
 **G — Gates & freshness (sources)** (45)
 - `G1` The flag rule: nothing suspicious auto-applies — aka `flag rule`, `the flag rule`, `the confirm queue`, `nothing suspicious ever auto-applies`
@@ -2359,6 +2360,20 @@ A series' manga is the AniList relation edge of type ADAPTATION whose node is ty
 - aliases: manga link selection, anime→manga linkage, pickManga
 - see: T21, LN class, manga_status vocabulary
 
+### I39 · Ruled structure: numbered extras and span overrides
+
+A numbered non-season entry the community counts inside the run (an OVA, special or movie with its own AniList id, N7) and a chain member whose AniList episode count is not our numbering space are RULED structure (lib/rulings/structure.ts: extras placed after a chain member or first for an episode-0 row, with their row count; span overrides on a member's start or end) and laid out by the ONE planner (lib/chain.ts#planComponents) that every chain writer and the healer (heal-structure.ts) call — never a hand-inserted series_components row, which the next chain rebuild wipes. Identity evidence for an extra is the row's stored air date equalling the AniList entry's start date (the exact join, R20) plus the verdict where one exists. A ruled extra is its own N7 review. The outcome check: every ruled extra stands with its kind and row count and every override is honoured (ruling_violation); a row no component covers is episode_without_component until ruled.
+
+*Why:* Batch 19 E4 (2026-08-26): 32 episode rows in 20 series sat outside every component — numbered OVAs / specials / movies with no structure row (kenshin 95-100, SAO 50, angel-beats 14-16, bebop 27, clannad 24, after-story 25, kamisama 30, the episode-0 specials) and stale spans (outlaw-star's 24-of-26, fate/UBW's prologue counted as 1, durarara and heavens-lost-property one row low from a numbered special on). Formats derive from component kinds (T29), so every one of these rows was also format_missing. Fifteen rulings landed; five forks stayed listed for Sean (black-cat 24's date, dxd's row 0 vs its order-only ruling, 5D's 155, fist-of-the-blue-sky 23-26, conan's airing lag).
+
+- ruled session 2026-08-26 (scripts/ingest/research/batch19/PLAN.md E4; changelog §12.68)
+- layer **writer**
+- enforced: [lib/rulings/structure.ts#RULED_STRUCTURE](../scripts/ingest/lib/rulings/structure.ts) · [lib/chain.ts#planComponents](../scripts/ingest/lib/chain.ts) · [lib/chain.ts#writeComponents](../scripts/ingest/lib/chain.ts) · [heal-structure.ts#main](../scripts/ingest/heal-structure.ts) · [audit-ui-truth.ts#RULED_EXTRA_KEYS](../scripts/ingest/audit-ui-truth.ts)
+- audit: `ruling_violation`, `episode_without_component`, `special_numbered_unreviewed`
+- witnesses: durarara, heavens-lost-property, fate-stay-night-unlimited-blade-works, outlaw-star, angel-beats, assassination-classroom
+- aliases: ruled structure, RULED_STRUCTURE, numbered extras, span override, heal-structure, planComponents, E4, batch-19 E4, structure rows
+- see: N7, T29, I33, I24, P8, P2
+
 ## G — Gates & freshness (sources)
 
 ### G1 · The flag rule: nothing suspicious auto-applies
@@ -4110,6 +4125,7 @@ Any component that renders episode-level data consumes the HYDRATED series (getB
 - base-type padding → `T17`
 - batch-19 E2 → `G55`
 - batch-19 E3 → `A10`
+- batch-19 E4 → `I39`
 - Berserk Memorial class → `I23`
 - best-available latest_known → `N27`
 - bestLatestKnown → `N27`
@@ -4293,6 +4309,7 @@ Any component that renders episode-level data consumes the HYDRATED series (getB
 - duplicate rule → `I12`
 - E2 → `G55`
 - E3 → `A10`
+- E4 → `I39`
 - early D4 signal → `R28`
 - early-stop → `I22`
 - edge hash → `P4`
@@ -4424,6 +4441,7 @@ Any component that renders episode-level data consumes the HYDRATED series (getB
 - hasSource → `T22`
 - hasSource vs hasInstrument → `T25`
 - heal-format → `T29`
+- heal-structure → `I39`
 - heal-volume-boundaries → `V2`
 - healer roster → `P20`
 - healer-pagination trap → `P32`
@@ -4594,6 +4612,7 @@ Any component that renders episode-level data consumes the HYDRATED series (getB
 - nothing reaches Sean unresearched → `R1`
 - nothing suspicious ever auto-applies → `G1`
 - noun only badge → `T19`
+- numbered extras → `I39`
 - numbered specials trigger → `N7`
 - numbered-specials research trigger → `N7`
 - numbered-vs-event rule → `N3`
@@ -4652,6 +4671,7 @@ Any component that renders episode-level data consumes the HYDRATED series (getB
 - piecewise interpolation → `A33`
 - pin-episode redundancy → `A26`
 - pinned protocol → `R31`
+- planComponents → `I39`
 - position-less rows → `A44`
 - post-adjustment whole-series verification → `P19`
 - predecessor floor → `A17`
@@ -4717,7 +4737,9 @@ Any component that renders episode-level data consumes the HYDRATED series (getB
 - ruled extensions → `I27`
 - ruled reorder exemption → `A41`
 - ruled splits stay split → `I20`
+- ruled structure → `I39`
 - RULED_LABELS → `N31`
+- RULED_STRUCTURE → `I39`
 - ruledExtent → `I27`
 - rules live in lib → `P2`
 - rules_applied → `R30`
@@ -4798,6 +4820,7 @@ Any component that renders episode-level data consumes the HYDRATED series (getB
 - source-scope enforcement → `I36`
 - source-scope rule → `I36`
 - sourceType → `T20`
+- span override → `I39`
 - sparse guard → `G12`
 - sparse hold → `G12`
 - sparse-classification hold → `G12`
@@ -4827,6 +4850,7 @@ Any component that renders episode-level data consumes the HYDRATED series (getB
 - straddled chapter → `C1`
 - strict episode-cell parse → `G20`
 - structure reconciliation → `I33`
+- structure rows → `I39`
 - studio original → `T25`
 - studio original label → `T19`
 - successor cap → `A16`
@@ -4945,6 +4969,6 @@ Any component that renders episode-level data consumes the HYDRATED series (getB
 
 ## Scoreboard
 
-- rules: 267 (live 252, planned 8, superseded 7)
+- rules: 268 (live 253, planned 8, superseded 7)
 - live data rules with no audit class (the automation backlog): 85
-- by layer: writer 138 · display 23 · both 23 · process 83
+- by layer: writer 139 · display 23 · both 23 · process 83

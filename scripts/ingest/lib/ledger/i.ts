@@ -774,4 +774,29 @@ export const RULES: Rule[] = [
     status: 'live',
     see: ['T21', 'LN class', 'manga_status vocabulary'],
   },
+  {
+    id: 'I39',
+    aliases: ['ruled structure', 'RULED_STRUCTURE', 'numbered extras', 'span override', 'heal-structure', 'planComponents', 'E4', 'batch-19 E4', 'structure rows'],
+    family: 'I',
+    title: 'Ruled structure: numbered extras and span overrides',
+    statement:
+      "A numbered non-season entry the community counts inside the run (an OVA, special or movie with its own AniList id, N7) and a chain member whose AniList episode count is not our numbering space are RULED structure (lib/rulings/structure.ts: extras placed after a chain member or first for an episode-0 row, with their row count; span overrides on a member's start or end) and laid out by the ONE planner (lib/chain.ts#planComponents) that every chain writer and the healer (heal-structure.ts) call — never a hand-inserted series_components row, which the next chain rebuild wipes. Identity evidence for an extra is the row's stored air date equalling the AniList entry's start date (the exact join, R20) plus the verdict where one exists. A ruled extra is its own N7 review. The outcome check: every ruled extra stands with its kind and row count and every override is honoured (ruling_violation); a row no component covers is episode_without_component until ruled.",
+    why:
+      "Batch 19 E4 (2026-08-26): 32 episode rows in 20 series sat outside every component — numbered OVAs / specials / movies with no structure row (kenshin 95-100, SAO 50, angel-beats 14-16, bebop 27, clannad 24, after-story 25, kamisama 30, the episode-0 specials) and stale spans (outlaw-star's 24-of-26, fate/UBW's prologue counted as 1, durarara and heavens-lost-property one row low from a numbered special on). Formats derive from component kinds (T29), so every one of these rows was also format_missing. Fifteen rulings landed; five forks stayed listed for Sean (black-cat 24's date, dxd's row 0 vs its order-only ruling, 5D's 155, fist-of-the-blue-sky 23-26, conan's airing lag).",
+    ruledBy: 'session',
+    ruledOn: '2026-08-26',
+    origin: 'scripts/ingest/research/batch19/PLAN.md E4; changelog §12.68',
+    enforcement: [
+      { path: 'scripts/ingest/lib/rulings/structure.ts', symbol: 'RULED_STRUCTURE' },
+      { path: 'scripts/ingest/lib/chain.ts', symbol: 'planComponents' },
+      { path: 'scripts/ingest/lib/chain.ts', symbol: 'writeComponents' },
+      { path: 'scripts/ingest/heal-structure.ts', symbol: 'main' },
+      { path: 'scripts/ingest/audit-ui-truth.ts', symbol: 'RULED_EXTRA_KEYS' },
+    ],
+    layer: 'writer',
+    auditClass: ['ruling_violation', 'episode_without_component', 'special_numbered_unreviewed'],
+    witnesses: ['durarara', 'heavens-lost-property', 'fate-stay-night-unlimited-blade-works', 'outlaw-star', 'angel-beats', 'assassination-classroom'],
+    status: 'live',
+    see: ['N7', 'T29', 'I33', 'I24', 'P8', 'P2'],
+  },
 ];

@@ -38,6 +38,7 @@ export const HEAL: RosterEntry[] = [
   { file: 'heal-parity-continues.ts', when: 'standard', note: 'C2 parity continues + C3 skip notes over every anchor (moved from research/batch15/ in T2.4)' },
   { file: 'assert-overrides.ts', when: 'standard', note: 'EPISODE_TYPE_OVERRIDES (T6) + AIR_DATE_OVERRIDES (G53) + the air-date order gate (G54) asserted over standing rows' },
   { file: 'sync-watch-order.ts', when: 'standard', note: 'order-only fractionals → watch_order_entries (N31); kind from the matching order-only component (T29)' },
+  { file: 'heal-structure.ts', when: 'standard', note: 'series_components re-planned for RULED_STRUCTURE series — numbered extras + span overrides through the one planner (I39); before heal-format' },
   { file: 'heal-format.ts', when: 'standard', note: 'episodes.format from the containing component kind + FORMAT_OVERRIDES (T29); null = format_missing queue' },
   { file: 'relations.ts', when: 'standard', note: 'series_relations from AniList edges + ruled overrides (I16)' },
   { file: 'cleanup-flags.ts', when: 'standard', note: 'dismiss exact-duplicate open flags (G3)' },

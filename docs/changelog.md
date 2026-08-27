@@ -607,6 +607,52 @@
    durable guard. Lesson for the floor rule: a >2 overshoot sourced from a
    SINGLE chart row with no corroborating content anywhere is a typo
    candidate, not an adoption candidate.
+68. ✅ **BATCH 19 E4 — ruled structure (I39): the 32 component-less rows
+   (2026-08-26).** `series_components` is rebuilt from the AniList chain by
+   four writers, so a hand-inserted structure row is wiped on the next
+   rebuild — the P8 lesson applied to structure. Built: **the map**
+   `lib/rulings/structure.ts` (`RULED_STRUCTURE`: numbered extras — an OVA /
+   special / movie with its own AniList id placed after a chain member, or
+   first with `startAt: 0` for an episode-0 row, holding `rows` rows; span
+   overrides on a member's start or end); **the planner**
+   `lib/structure-plan.ts#planComponents` (pure, 7 tests) that
+   `writeComponents` and the new standard-roster healer `heal-structure.ts`
+   both call (P2); **census**: a ruled extra is its own N7 review, and every
+   extra / override is asserted as an outcome (ruling_violation). Identity
+   evidence is the exact air-date join (row date = AniList start date, the
+   sync-watch-order rule) plus the batch-18 verdict where one exists.
+   **Fifteen rulings landed** (session, cited; Sean signs at this stop):
+   kenshin 95-98 [44] + 99-100 [401]; SAO 50 [21403]; clannad 24 [4059];
+   after-story 25 [6351]; angel-beats 14 [10067] + 15-16 [9062]; bebop 27
+   [5] (the E2 residual, now a movie component); durarara 25 [8408] — and
+   the batch-18 finding that x2 Shou/Ten/Ketsu sat one row low is fixed by
+   the shift (26-37 / 38-49 / 50-61, row 61 covered); kamisama-kiss 30
+   [98033]; heavens-lost-property 14 [7858] — the OVA AFL numbers 14, which
+   moves Forte to 15-26 and the films to 27 / 28 (their N7 reviews stand;
+   the '26' / '27' wording in reviewed-specials was one row stale); the
+   episode-0 specials assassination-classroom [21303], another [11701],
+   deadman-wonderland [10418], no-game-no-life [21875, movie]; span
+   overrides outlaw-star 400 → 1-26 (Sunrise; batch 18) and fate/UBW 19603
+   → 0-12 (AniList's 13 counts the prologue; S2 13-25). Census:
+   episode_without_component 20 → **5**, format_missing 14 → **5**,
+   special_numbered_unreviewed 0, ruling_violation 0, verify-series-display
+   --all passing. **Five forks stay listed for Sean, none touched:**
+   black-cat 24 — the OVA [2589] by title (Toozakaru Neko = "The Carefree
+   Cat") but our stored date 2006-03-30 is the TV finale's, AniList says
+   2006-07-26 (identity + a G53 date, or a numbering question);
+   high-school-dxd row 0 — Sean ruled HERO's Episode 0 ORDER-ONLY
+   (COMMUNITY_COUNT_OVERRIDES, 2026-08-24) yet a numbered row 0 stands
+   (2018-04-10 "Holy Behind the Gymnasium"): drop the row (N11) or rescind;
+   yu-gi-oh-5d-s 155 — AniList / Wikipedia count 154, our rows 154 and 155
+   both dated 2011-03-30 (a double-length finale split by AFL, or an
+   off-by-one earlier in the run): lane B4; fist-of-the-blue-sky 23-26 — the
+   four DVD episodes' span was demoted to order-only on 2026-08-25b while
+   AFL's rows 23-26 still stand (plus the E2 series-row fault: end_date
+   1987, aired 22): rows drop or the span returns, Sean's call;
+   detective-conan 1211-1212 — future-dated AFL pre-listings ahead of
+   AniList's aired count: the I33 airing lag, no ruling. Lib changed → four
+   edges rebuilt and deployed. Next: B1-B5 + A3 waves per the plan, on
+   Sean's go.
 67. ✅ **BATCH 19 E3 — drift item A-6: the sliver rule lifted into lib,
    the seeded starts made provable, deltas listed for Sean (2026-08-26).**
    A10 (START = first chapter animated; a leading partial of the preceding
