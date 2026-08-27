@@ -37,7 +37,7 @@ This operationalises the standing direction of travel (judgment → writer gate
 → audit class) better than any prose, and it feeds `/consolidate` step 10,
 which hunts exactly these gaps.
 
-## 3. Build `/add-rule` — the missing skill (T3.1, pending)
+## 3. Build `/add-rule` — the missing skill (T3.1) — DONE 2026-08-26; PROVEN by G53, G54, and after batch 19 wave 1 by A45, G56, A42's class (§12.71-§12.73)
 
 The most important repeatable sequence in the project, currently done from
 judgment each time. Building the D1 MU-conflation gate followed it exactly:
@@ -58,7 +58,7 @@ human-shaped hole in it.
 different moment than a consolidation pass), but decide after D4 goes through
 it once.
 
-## 4. Collapse the four `PROTOCOL.md` files (T3.2, pending)
+## 4. Collapse the four `PROTOCOL.md` files (T3.2) — DONE 2026-08-26 (T4.5): vocabulary lives in research-agent.md; a batch PROTOCOL pins only the task shape (batch 18 standing, batch 19 anchoring)
 
 ~88 lines each, largely duplicate, one per batch. Fold into the
 `research-batch` skill plus short per-batch delta files.
@@ -68,7 +68,7 @@ RULE DRIFT** between batches, where batch 15 and batch 17 encoded the same
 rule differently. Reconciling those differences is the point; expect to find
 some and to need Sean's ruling on which version stands.
 
-## 5. Rework `/consolidate` and `/consolidate deep` (T3.3, pending)
+## 5. Rework `/consolidate` and `/consolidate deep` (T3.3) — DONE 2026-08-26 (T3.3/T3.4): steps 0-10 around the mechanical checks; deep triggered by an enforcement-site change (P21); run after wave 1 (§12.70)
 
 The skill predates the data cycle and shows it. Evaluate after batch 17:
 

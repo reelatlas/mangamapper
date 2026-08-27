@@ -627,7 +627,10 @@
    sites, the aliases and the witnesses; its statement now says annotations
    ride only once the row exists. No writer changed (research ahead of rows
    is legitimate; the display synthesizes the row) — so no /consolidate
-   deep. Edges rebuilt and deployed (lib-hash). The three post-wave-1
+   deep for THIS one. Correction for the record: G56 (§12.72) DID change an
+   enforcement site (applyMuFrontier is G36's), so P21 technically fired;
+   the coverage healer's catalog pass (7 skips, 3 refusals, 4 flags closed)
+   was the data pass, and the formal deep is the one after wave 2. Edges rebuilt and deployed (lib-hash). The three post-wave-1
    /add-rules are done (A45, G56, A42's class); next is Sean's go on wave 2.
 72. ✅ **G56 — HONEST TERMINAL: a covered MU pin is redundant, not a flag
    (2026-08-26; the second post-wave-1 /add-rule).** MU's anime field names
