@@ -68,8 +68,8 @@ async function main() {
       if (!Array.isArray(a.episodes)) problems.push('annotations.episodes must be a LIST');
     }
     for (const r of v.repairs ?? []) if (!r.field || r.new === undefined || !r.why || !(r.sources?.length >= 1)) problems.push(`repair ep ${r.episode} needs field/old/new/why/sources`);
-    // row accounting binds lane A1 (the honest terminal): every canon/mixed target row is anchored, hostile, or already carries a stored anchor
-    const anchoringLane = task[2] === 'A1';
+    // row accounting binds lanes A1 (the honest terminal) and A2 (the gap blocks): every canon/mixed target row is anchored, hostile, or already carries a stored anchor
+    const anchoringLane = task[2] === 'A1' || task[2] === 'A2';
     const unaccounted = anchoringLane ? targets.filter((n) => !anchored.has(n) && !hostile.has(n) && !stored.has(n) && effType(n) !== 'filler') : [];
     if (unaccounted.length) problems.push(`canon/mixed target rows with neither an anchor nor an anchor_hostile entry: ${unaccounted.join(',')} (say why in summary if deliberate)`);
     const raw = readFileSync(OUT + f, 'utf8');
