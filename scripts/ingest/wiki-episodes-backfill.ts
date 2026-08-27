@@ -12,12 +12,20 @@
 //     filterEpisodeRows for rows this script CREATES (row-less canon-tier
 //     series get full rows: number/title/date, type from the canon-default
 //     span logic — canon unless the series carries type overrides)
+//   · identity (G55, batch 19 E2 — the namesake lesson): a wiki row dated
+//     before this series began, or long after a finished series ended, is
+//     another show's row (kenshin-2023 25-27 wore the 1996 series; beyblade-x
+//     41-102 wore 2001 Beyblade; the Ranking of Kings spin-off wore the 2021
+//     main series). The row is REFUSED — title and date both — and the
+//     series flagged once; lib/wiki-identity.ts is the one predicate, the
+//     census class episode_date_off_window the outcome check
 // Idempotent; re-runs fill only what is still missing.
 //   npx tsx --env-file=.env.ingest scripts/ingest/wiki-episodes-backfill.ts [seriesId ...]
 
 import { db, selectAll, startRun, finishRun, fileFlagOnce } from './lib/db';
 import { extractTransclusions, findEpisodePages, fetchWikitext, parseEpisodeList, type WikiEpisode } from './lib/wikipedia';
-import { filterEpisodeRows } from './lib/resolve';
+import { filterEpisodeRows, SOURCE_NUMBERING_SHIFTS, translateEpisodeNumber } from './lib/resolve';
+import { dateFit, disambiguatedTitles, pageFitsSeries } from './lib/wiki-identity';
 
 const sleep = (ms: number) => new Promise((r) => setTimeout(r, ms));
 
@@ -27,19 +35,18 @@ const sleep = (ms: number) => new Promise((r) => setTimeout(r, ms));
 // we hold order-only shifts every later episode — the fill poisoned
 // dr-stone 36-94 by one (ep 36 got "Ryusui"). Rules:
 //   · series with a MID-RUN order-only component REQUIRE a declared shift
-//     here before any fill past that position — otherwise skip + flag
+//     before any fill past that position — otherwise skip + flag
 //   · declared shifts also run in CORRECTION mode: a stored row matching
-//     the wiki title at the WRONG offset is rewritten to the right one
-// [from, offset]: our episode n ≥ from maps to wiki number n + offset.
-// (Dr. Stone resolved differently: Wikipedia labels Ryuusui 35.5 — a
-// FRACTIONAL position, meaning wiki already shares our numbering space;
-// the shifted source was AFL, handled by SOURCE_NUMBERING_SHIFTS in
-// lib/resolve. This map stays for sources that flatten inserts into
-// integers.)
-const WIKI_NUMBERING_SHIFTS: Record<string, { from: number; offset: number }[]> = {};
-
-const shiftFor = (sid: string, ep: number): number =>
-  (WIKI_NUMBERING_SHIFTS[sid] ?? []).reduce((s, r) => (ep >= r.from ? s + r.offset : s), 0);
+//     the wiki title at the WRONG (untranslated) number is rewritten
+// Since batch 19 E2 (§E.8 unification) the declaration is the ONE map every
+// source reads — SOURCE_NUMBERING_SHIFTS (N11/N12) with 'wiki' among its
+// spaces (or no space list = every space) — and wiki numbers enter our
+// space through translateEpisodeNumber(…, 'wiki') like every other source's.
+// The script-local WIKI_NUMBERING_SHIFTS map (always empty) is gone.
+const declaresWikiShift = (sid: string): boolean => {
+  const s = SOURCE_NUMBERING_SHIFTS[sid];
+  return !!s && (!s.spaces || s.spaces.includes('wiki'));
+};
 
 async function main() {
   const only = process.argv.slice(2);
@@ -54,10 +61,12 @@ async function main() {
       aired_episodes: number | null;
       total_episodes: number | null;
       start_date: string | null;
+      end_date: string | null;
+      status: string | null;
       source_type: string | null;
       manga_status: string | null;
       popularity: number | null;
-    }>('series', 'id, title, title_native, aired_episodes, total_episodes, start_date, source_type, manga_status, popularity', (q) =>
+    }>('series', 'id, title, title_native, aired_episodes, total_episodes, start_date, end_date, status, source_type, manga_status, popularity', (q) =>
       q.order('popularity', { ascending: false }),
     );
     const eps: any[] = await selectAll<any>('episodes', 'series_id, number, title, air_date');
@@ -79,7 +88,10 @@ async function main() {
 
     for (const t of targets) {
       try {
-        const pages = await findEpisodePages([t.title, t.title_native ?? ''].filter(Boolean));
+        // year-disambiguated forms FIRST (G55): a namesake's plain list page
+        // ("List of Rurouni Kenshin episodes" = 1996) would otherwise win
+        // the prefix search for a remake / spin-off
+        const pages = await findEpisodePages([...disambiguatedTitles(t.title, t.start_date), t.title, t.title_native ?? ''].filter(Boolean));
         counters.fetched++;
         // no list page is NOT terminal — the main-article fallback below
         // still runs (SHY-class: tables live on the series article)
@@ -121,13 +133,8 @@ async function main() {
         // namesake guard for name-only page locks (the Kingdom lesson: the
         // 2007 British drama's list page is "List of Kingdom episodes"): a
         // page whose earliest air date sits years away from our start date
-        // is another show, whatever its name says
-        const datesCompatible = (rows: WikiEpisode[]): boolean => {
-          const ours = t.start_date ? Number(String(t.start_date).slice(0, 4)) : null;
-          const theirs = rows.map((w) => (w.airDate ? Number(String(w.airDate).slice(0, 4)) : NaN)).filter((y) => !Number.isNaN(y));
-          if (ours == null || !theirs.length) return true;
-          return Math.abs(Math.min(...theirs) - ours) <= 1;
-        };
+        // is another show, whatever its name says — lib/wiki-identity (G55)
+        const datesCompatible = (rows: WikiEpisode[]): boolean => pageFitsSeries(t, rows.map((w) => w.airDate));
         // EVIDENCE-LOCKED per-page offsets (Sean's When They Cry case,
         // 2026-08-23): a page's offset into OUR numbering must be PROVEN
         // before its rows merge — votes come from exact air-date matches
@@ -284,6 +291,7 @@ async function main() {
           // is the 2007 British drama; ours is "List of Kingdom (Japanese TV
           // series) episodes")
           for (const cand of [
+            ...disambiguatedTitles(t.title, t.start_date).flatMap((d) => [`List of ${d} episodes`, d]),
             `List of ${t.title} (Japanese TV series) episodes`,
             `List of ${t.title} (TV series) episodes`,
             `List of ${t.title} (anime) episodes`,
@@ -345,7 +353,7 @@ async function main() {
         if (midRunOrderOnly && countAligned && !fractionals.length) {
           console.log(`  ${t.id}: page top ${pageTop} = our count — numbering aligned without fractional separators`);
         }
-        if (midRunOrderOnly && !wikiAligned && !WIKI_NUMBERING_SHIFTS[t.id]) {
+        if (midRunOrderOnly && !wikiAligned && !declaresWikiShift(t.id)) {
           await fileFlagOnce(runId, t.id, 'wikipedia', 'count_mismatch', {
             note: 'mid-run order-only component and the wiki page shows no fractional separators — numbering space unverified; fills past the insert withheld until a shift is declared or alignment verified',
           });
@@ -365,15 +373,29 @@ async function main() {
             });
           }
         }
+        // wiki numbers → OUR space through the one translation every source
+        // uses (N11/N12, 'wiki' space); a number the ruling drops is skipped
         const wikiByNumber = new Map(wiki.filter((w) => Number.isInteger(w.number)).map((w) => [w.number, w]));
+        const wikiByOurs = new Map<number, WikiEpisode>();
+        for (const w of wikiByNumber.values()) {
+          const ours = translateEpisodeNumber(t.id, w.number, 'wiki');
+          if (ours != null) wikiByOurs.set(ours, w);
+        }
         const existing = new Map(eps.filter((e) => e.series_id === t.id).map((e) => [e.number, e]));
         let filled = 0, conflicts = 0, created = 0, corrected = 0;
+        const refused: { number: number; airDate: string; fit: string }[] = [];
         const newRows: any[] = [];
         for (let n = 1; n <= t.aired_episodes; n++) {
-          if (midRunOrderOnly && !wikiAligned && !WIKI_NUMBERING_SHIFTS[t.id] && n >= firstAfterOrderOnly) continue;
-          const shift = shiftFor(t.id, n);
-          const w = wikiByNumber.get(n + shift);
+          if (midRunOrderOnly && !wikiAligned && !declaresWikiShift(t.id) && n >= firstAfterOrderOnly) continue;
+          const w = wikiByOurs.get(n);
           if (!w) continue;
+          // G55 identity gate: a row dated outside this series' run is not
+          // this series' row — nothing from it is written (title included)
+          const fit = dateFit(t, w.airDate);
+          if (fit === 'before_start' || fit === 'after_end') {
+            refused.push({ number: n, airDate: String(w.airDate), fit });
+            continue;
+          }
           const cur = existing.get(n);
           if (!cur) {
             newRows.push({ series_id: t.id, number: n, title: w.title ?? '', type: 'canon', air_date: w.airDate });
@@ -382,8 +404,8 @@ async function main() {
           const curTitle = String(cur.title ?? '').trim();
           const patch: Record<string, unknown> = {};
           // correction mode: a stored title matching the wiki value at the
-          // WRONG offset is a poisoned fill — rewrite to the right one
-          if (shift !== 0 && curTitle) {
+          // WRONG (untranslated) number is a poisoned fill — rewrite it
+          if (w.number !== n && curTitle) {
             const wrong = wikiByNumber.get(n);
             if (wrong?.title && curTitle.toLowerCase() === wrong.title.toLowerCase() && w.title) {
               patch.title = w.title;
@@ -406,6 +428,15 @@ async function main() {
             if (error) throw new Error(error.message);
           }
           created = ruled.length;
+        }
+        if (refused.length) {
+          const first = refused[0], last = refused[refused.length - 1];
+          console.log(`  ${t.id}: G55 REFUSED ${refused.length} row(s) dated outside the series' run (${first.number} ${first.airDate} … ${last.number} ${last.airDate}) — a namesake's page`);
+          await fileFlagOnce(runId, t.id, 'wikipedia', 'match_ambiguous', {
+            note: `G55 identity gate: ${refused.length} wiki row(s) dated ${first.fit === 'before_start' ? 'before the series began' : 'after the series ended'} were refused (eps ${first.number}-${last.number}, ${first.airDate}…${last.airDate}) — the page belongs to a namesake; titles/dates withheld`,
+            refused: refused.slice(0, 20),
+          });
+          counters.flagged++;
         }
         if (conflicts > 3) {
           await fileFlagOnce(runId, t.id, 'wikipedia', 'taxonomy_conflict', {

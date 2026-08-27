@@ -157,6 +157,8 @@ Read both, fully:
   infoboxes; hokuto.fandom has no episode pages but character-page
   `appearances` fields form a reverse index).
 
+- **Namesake pages (G55, batch 19 E2).** A Wikipedia episode list found by NAME can be another show's: "List of Rurouni Kenshin episodes" is the 1996 series, "List of Beyblade episodes" is 2001, and a spin-off's article can REDIRECT to its parent ("Ranking of Kings: The Treasure Chest of Courage" → the 2021 main series' table). Before trusting any episode row from a page, check its air dates sit inside the series' own run; cite the year-disambiguated page ("… (2023 TV series)") when one exists. A stored title/date that predates the series is contamination to report, never evidence.
+
 ## Output
 
 Write exactly the JSON path you are given, valid and complete before you

@@ -386,10 +386,12 @@ export const RULES: Rule[] = [
       'A numbering shift is always DECLARED by ruling, never derived automatically: a series with a mid-run order-only component takes no fill past that position from a per-episode source until a shift is declared or alignment is proven (fractional separators on the page, or page top == our count). Title-alignment verification (stored titles vs the wiki list at offsets −1/0/+1 per quarter of the run) localizes the flip point and is read-only — its findings drive declared shifts.',
     why: "urusei-yatsura's flip point localized a segment-vs-broadcast count; the-ancient-magus-bride S2 aligned by page top == our count. WIKI_NUMBERING_SHIFTS is EMPTY — dr-stone's shifted source was AFL, handled by lib SOURCE_NUMBERING_SHIFTS (the wiki map duplicates that purpose for a source that never needed it: drift).",
     ruledBy: 'Sean',
+    // batch 19 E2 (2026-08-26, §E.8 unification): the script-local WIKI_NUMBERING_SHIFTS map is GONE — a wiki shift is declared in SOURCE_NUMBERING_SHIFTS with 'wiki' among its spaces (N12) and wiki numbers enter our space through translateEpisodeNumber(…, 'wiki') like every other source's.
     ruledOn: '2026-08-23',
     origin: 'wiki-episodes-backfill.ts header; wiki-title-verify.ts header',
     enforcement: [
-      { path: 'scripts/ingest/wiki-episodes-backfill.ts', symbol: 'shiftFor' },
+      { path: 'scripts/ingest/wiki-episodes-backfill.ts', symbol: 'declaresWikiShift' },
+      { path: 'scripts/ingest/lib/rulings/numbering-shifts.ts', symbol: 'SOURCE_NUMBERING_SHIFTS' },
       { path: 'scripts/ingest/wiki-title-verify.ts' },
       { path: 'scripts/ingest/lib/resolve.ts', symbol: 'SOURCE_NUMBERING_SHIFTS' },
     ],

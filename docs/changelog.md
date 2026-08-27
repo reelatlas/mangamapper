@@ -607,6 +607,54 @@
    durable guard. Lesson for the floor rule: a >2 overshoot sourced from a
    SINGLE chart row with no corroborating content anywhere is a typo
    candidate, not an adoption candidate.
+66. ✅ **BATCH 19 E2 — G55 series-window identity gate; the namesake
+   contamination purged (2026-08-26).** The wiki backfill found episode
+   lists by NAME and merged a namesake's page. A catalog probe (every row
+   dated outside its own series' run) found the damage was three series,
+   not two: rurouni-kenshin-2023 25-27 (the 1996 series), beyblade-x
+   41-102 (sixty-two rows of 2001 Beyblade — the plan said 41-44), and
+   ranking-of-kings-the-treasure-chest-of-courage 1-10 (the 2021 main
+   series' first ten). The inline per-page year check had not held (the
+   offset-lock and continuity paths never saw it) and G54 could not name an
+   outlier (a whole block changed era). Built, in the P30 direction:
+   **lib** `lib/wiki-identity.ts` — `dateFit` (a TV row > 45 d before
+   start or > 400 d after a FINISHED end is not the series' row; ep 0 and
+   non-tv formats exempt by structure; a series with end < start is a
+   series-row fault, not windowed), `pageFitsSeries` (the old inline
+   check, now shared), `disambiguatedTitles` (the series' own
+   "(YYYY TV series)" forms tried BEFORE a plain namesake title);
+   **ruling map** `AIR_DATE_WINDOW_ACK` (haruhi 'all' — the same fact as
+   its G54 ack); **writer gate** in `wiki-episodes-backfill.ts` — refused
+   rows write nothing (title included) and flag `match_ambiguous` once;
+   **class** `episode_date_off_window` (lists, never flips); **purge**
+   `research/batch19/apply-e2.ts` — a curated list with the evidence inline,
+   each row re-proven against the predicate before wiping title + date
+   (75 rows wiped, 0 refused). §E.8 unification landed in the same pass:
+   the script-local `WIKI_NUMBERING_SHIFTS` (always empty) is gone — a wiki
+   shift is declared in `SOURCE_NUMBERING_SHIFTS` with 'wiki' among its
+   spaces and wiki numbers enter our space through
+   `translateEpisodeNumber(…, 'wiki')` like every other source's (N21
+   re-pointed). Re-fill through the gate: kenshin-2023 25-47 now carry the
+   2024-25 Kyoto season (44-45 honest nulls), beyblade-x 41-132 the
+   2024-26 BEYBLADE X run (30 rows created, format healed), the Treasure
+   Chest article is a REDIRECT to the parent series' 2021 table — rejected
+   by the gate, its ten rows stay an honest gap (title_incomplete /
+   airdate_incomplete list it). Ledger G55 (aliases: series window,
+   namesake lesson, E2). Census: ruling_violation 0;
+   `episode_date_off_window` 6 = the residual queue for Sean — cowboy-bebop
+   27 "The Movie" 2001 (a movie row with format null → a T29
+   FORMAT_OVERRIDES entry, then exempt), dragon-ball-z-kai 101-103 dated
+   2017 (the cut Great Saiyaman episodes' later broadcast → G55 ack
+   candidate, needs a cite), three single-date typos — the-future-diary 13
+   `2011-01-09` between 2011-12-26 and 2012-01-16, yu-gi-oh-gx 14
+   `2004-01-05` between 2004-12-29 and 2005-01-12, yu-gi-oh-5d-s 35
+   `2008-01-26` between 2008-11-19 and 2008-12-03 (G53 candidates: the
+   pattern is a year/month slip, the cited date is the research step) —
+   and fist-of-the-blue-sky's series row (end_date 1987-03-05 < start
+   2006-10-05; its 26 rows are correctly 2006-07 — the 2006 series had 26
+   episodes, our aired/total say 22: a series-row fault for the AniList
+   refresh / reconcile-structure to look at). Lib changed → four edges
+   rebuilt and deployed. Nothing else started (E3 next, on Sean's go).
 65. ✅ **BATCH 19 E1 — `mixed_fragment_only`, the T28 discrepancy queue
    (2026-08-26; the parked /add-rule, landed as T28's audit class).** A
    row typed MIXED before the materiality bar whose only recorded source

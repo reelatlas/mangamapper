@@ -175,7 +175,7 @@
 - `I37` Continuation handoff: adjoining sibling scope = flow — aka `continuation handoff`, `claimed continuation → handoff`, `continues in X`
 - `I38` The source manga is the ADAPTATION edge of type/format MANGA — aka `manga link selection`, `anime→manga linkage`, `pickManga`
 
-**G — Gates & freshness (sources)** (44)
+**G — Gates & freshness (sources)** (45)
 - `G1` The flag rule: nothing suspicious auto-applies — aka `flag rule`, `the flag rule`, `the confirm queue`, `nothing suspicious ever auto-applies`
 - `G3` Recurring conditions flag once; only Sean dismisses — aka `fileFlagOnce`, `once-per-open-kind`
 - `G4` Permanent conditions leave the open queue *(planned)* — aka `dismissed_permanent`, `permanent-flag disposition`, `A-8`
@@ -220,6 +220,7 @@
 - `G52` Canon-tier creation: chartless manga shows still enter — aka `canon-tier creation`, `canon-tier`, `A-9`
 - `G53` Ruled air dates: AIR_DATE_OVERRIDES, applied at every write — aka `AIR_DATE_OVERRIDES`, `air-date overrides`, `air date override pass`, `ruled air dates`
 - `G54` Air-date order: a date a year out of order is withheld — aka `A-11`, `air-date order gate`, `airdate regression`, `airdate_regression`, `AIRDATE_ORDER_ACK`, `365-day rule`, `air-date withheld`, `airdate_withheld`
+- `G55` Series window: a row dated outside its series is not its row — aka `series window`, `series-window gate`, `identity gate`, `namesake gate`, `namesake lesson`, `episode_date_off_window`, `AIR_DATE_WINDOW_ACK`, `E2`, `batch-19 E2`, `off-window`
 
 **V — Volumes & boundaries** (10)
 - `V1` Monotonic starts, or the row is not data — aka `monotonic-start gate`, `MONOTONIC-START rule`, `monotonic boundaries`, `monotonic starts`, `Sailor Moon v3 report`, `Sailor Moon "v3: chs 10-3"`
@@ -1665,7 +1666,7 @@ A numbering shift is always DECLARED by ruling, never derived automatically: a s
 
 - ruled Sean 2026-08-23 (wiki-episodes-backfill.ts header; wiki-title-verify.ts header)
 - layer **writer**
-- enforced: [wiki-episodes-backfill.ts#shiftFor](../scripts/ingest/wiki-episodes-backfill.ts) · [wiki-title-verify.ts](../scripts/ingest/wiki-title-verify.ts) · [lib/resolve.ts#SOURCE_NUMBERING_SHIFTS](../scripts/ingest/lib/resolve.ts)
+- enforced: [wiki-episodes-backfill.ts#declaresWikiShift](../scripts/ingest/wiki-episodes-backfill.ts) · [lib/rulings/numbering-shifts.ts#SOURCE_NUMBERING_SHIFTS](../scripts/ingest/lib/rulings/numbering-shifts.ts) · [wiki-title-verify.ts](../scripts/ingest/wiki-title-verify.ts) · [lib/resolve.ts#SOURCE_NUMBERING_SHIFTS](../scripts/ingest/lib/resolve.ts)
 - **audit: none — automation backlog**
 - witnesses: dr-stone, the-ancient-magus-bride, urusei-yatsura
 - aliases: declared shifts only, Sean's UY report, title-alignment verification, WIKI_NUMBERING_SHIFTS
@@ -2952,6 +2953,20 @@ Every episode writer walks its rows in number order through the air-date order g
 - aliases: A-11, air-date order gate, airdate regression, airdate_regression, AIRDATE_ORDER_ACK, 365-day rule, air-date withheld, airdate_withheld
 - see: G53, P6, N7, R1
 
+### G55 · Series window: a row dated outside its series is not its row
+
+A TV episode row dated more than 45 days before its series' start_date, or more than 400 days after a FINISHED series' end_date, is not that series' data — whatever page or source it came from. Every per-episode writer refuses such a row (title and date both, lib/wiki-identity.ts dateFit) and flags the series once; standing rows are the census class episode_date_off_window, which lists and never flips. Exempt by structure: episode-0 rows (N7) and rows whose format is not tv (T29). Ruled true deviations live in AIR_DATE_WINDOW_ACK (whole series or an episode list, reason + cite). A series whose end_date precedes its start_date is reported as a series-row fault, not windowed. Wikipedia page discovery tries the series' own year-disambiguated title forms before a plain namesake title.
+
+*Why:* The wiki backfill found episode lists by NAME and merged a namesake's page: rurouni-kenshin-2023 rows 25-27 wore the 1996 series' titles and dates, beyblade-x 41-102 wore sixty-two rows of 2001 Beyblade, and the Ranking of Kings spin-off's ten rows wore the 2021 main series' first ten. A per-page year check existed inline in the script and still let these through (the offset-lock and continuity paths never saw it), and G54's order walk could not name an outlier because a whole block changed era. The durable form is a per-ROW predicate on the outcome (P5), in lib (P2), with the purge as a curated apply (batch19/apply-e2.ts) — the honest gap beats a borrowed title (P6).
+
+- ruled Sean 2026-08-26 (scripts/ingest/research/batch19/PLAN.md E2 (Sean: "yep e2 go"); changelog §12.66)
+- layer **writer**
+- enforced: [lib/wiki-identity.ts#dateFit](../scripts/ingest/lib/wiki-identity.ts) · [lib/wiki-identity.ts#offWindowRows](../scripts/ingest/lib/wiki-identity.ts) · [lib/rulings/air-date-window.ts#AIR_DATE_WINDOW_ACK](../scripts/ingest/lib/rulings/air-date-window.ts) · [wiki-episodes-backfill.ts#dateFit](../scripts/ingest/wiki-episodes-backfill.ts) · [research/batch19/apply-e2.ts#PURGE](../scripts/ingest/research/batch19/apply-e2.ts) · [audit-ui-truth.ts#episode_date_off_window](../scripts/ingest/audit-ui-truth.ts)
+- audit: `episode_date_off_window`
+- witnesses: rurouni-kenshin-2023, beyblade-x, ranking-of-kings-the-treasure-chest-of-courage, the-melancholy-of-haruhi-suzumiya, fist-of-the-blue-sky
+- aliases: series window, series-window gate, identity gate, namesake gate, namesake lesson, episode_date_off_window, AIR_DATE_WINDOW_ACK, E2, batch-19 E2, off-window
+- see: G54, G53, G41, G44, G45, N7, T29, P6, P5
+
 ## V — Volumes & boundaries
 
 ### V1 · Monotonic starts, or the row is not data
@@ -4020,6 +4035,7 @@ Any component that renders episode-level data consumes the HYDRATED series (getB
 - agent is read-only → `R22`
 - air date override pass → `G53`
 - AIR_DATE_OVERRIDES → `G53`
+- AIR_DATE_WINDOW_ACK → `G55`
 - air-date order gate → `G54`
 - air-date overrides → `G53`
 - air-date withheld → `G54`
@@ -4091,6 +4107,7 @@ Any component that renders episode-level data consumes the HYDRATED series (getB
 - b17 D3 form → `T3`
 - backwards-jumping successor → `A17`
 - base-type padding → `T17`
+- batch-19 E2 → `G55`
 - Berserk Memorial class → `I23`
 - best-available latest_known → `N27`
 - bestLatestKnown → `N27`
@@ -4272,6 +4289,7 @@ Any component that renders episode-level data consumes the HYDRATED series (getB
 - dry-run as proposal → `P15`
 - DSQ class → `T11`
 - duplicate rule → `I12`
+- E2 → `G55`
 - early D4 signal → `R28`
 - early-stop → `I22`
 - edge hash → `P4`
@@ -4289,6 +4307,7 @@ Any component that renders episode-level data consumes the HYDRATED series (getB
 - episode job test → `T28`
 - episode totals derivation → `N34`
 - episode_annotations → `A43`
+- episode_date_off_window → `G55`
 - EPISODE_TYPE_OVERRIDES → `T6`
 - episode_without_component → `T29`
 - episode-floor invariant → `N1`
@@ -4426,6 +4445,7 @@ Any component that renders episode-level data consumes the HYDRATED series (getB
 - id/title stable → `I28`
 - id/title/afl_slug never change → `I28`
 - identity → `I1`
+- identity gate → `G55`
 - identity guard → `G23`
 - identity registry → `I2`
 - identity-first, flag-first → `I3`
@@ -4544,7 +4564,9 @@ Any component that renders episode-level data consumes the HYDRATED series (getB
 - MU-frontier rule → `G31`
 - MU-pin episode-keyed redundancy → `A26`
 - muHash → `G42`
+- namesake gate → `G55`
 - namesake guard → `G44`
+- namesake lesson → `G55`
 - naming authority → `I7`
 - Naruto/DragonBall baseline → `I16`
 - Naruto→Shippuden pattern → `I16`
@@ -4574,6 +4596,7 @@ Any component that renders episode-level data consumes the HYDRATED series (getB
 - numbered-vs-event rule → `N3`
 - numbering conversion is the agent's job → `R18`
 - numbering-space translation → `N11`
+- off-window → `G55`
 - offer it, don't assume it → `P28`
 - once-per-open-kind → `G3`
 - one afg id per series → `I5`
@@ -4729,10 +4752,12 @@ Any component that renders episode-level data consumes the HYDRATED series (getB
 - section header envelope → `A36`
 - sections never arcs → `T19`
 - seed is a fact only → `I10`
+- series window → `G55`
 - series_external_ids → `I2`
 - series_relations vocabulary → `I17`
 - series_scopes → `I36`
 - series_without_source_kind → `T25`
+- series-window gate → `G55`
 - settled reorders → `A41`
 - shared chapters → `A31`
 - sharing never moves position → `A31`
@@ -4914,6 +4939,6 @@ Any component that renders episode-level data consumes the HYDRATED series (getB
 
 ## Scoreboard
 
-- rules: 266 (live 251, planned 8, superseded 7)
+- rules: 267 (live 252, planned 8, superseded 7)
 - live data rules with no audit class (the automation backlog): 86
-- by layer: writer 137 · display 23 · both 23 · process 83
+- by layer: writer 138 · display 23 · both 23 · process 83

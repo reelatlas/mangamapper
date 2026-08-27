@@ -12,6 +12,7 @@ import { db, selectAll } from './lib/db';
 import { c3Ahead, hasSkipLanguage } from './lib/c3';
 import { COMMUNITY_COUNT_OVERRIDES, CONTINUA_SUPPRESSED, EPISODE_TYPE_OVERRIDES, SOURCE_NUMBERING_SHIFTS, translateEpisodeNumber } from './lib/resolve';
 import { AIRDATE_REGRESSION_THRESHOLD_DAYS, airdateOrderWalk } from './lib/airdate-order';
+import { offWindowRows, seriesDatesInvalid } from './lib/wiki-identity';
 import { AIR_DATE_OVERRIDES } from './lib/rulings/air-dates';
 import { ANCHOR_SUPPRESSED } from './lib/rulings/anchor-suppressed';
 import { deriveFormat } from './lib/format';
@@ -23,7 +24,7 @@ import { annotationProblem } from './lib/annotations';
 import { REVIEWED_NUMBERED_SPECIALS } from './lib/rulings/reviewed-specials';
 
 async function main() {
-  const series = await selectAll<any>('series', 'id, afl_slug, anilist_id, source_type, manga_status, status, aired_episodes, total_episodes, total_chapters, total_volumes, latest_known_chapters, manga_anilist_id, manga_start_chapter, mapping_mode, asterisk_review');
+  const series = await selectAll<any>('series', 'id, afl_slug, anilist_id, source_type, manga_status, status, start_date, end_date, aired_episodes, total_episodes, total_chapters, total_volumes, latest_known_chapters, manga_anilist_id, manga_start_chapter, mapping_mode, asterisk_review');
   const episodes = await selectAll<any>('episodes', 'series_id, number, type, title, air_date, format');
   const anchors = await selectAll<any>('chapter_anchors', 'series_id, episode, chapter, start_chapter, chapters_adapted, continue_chapter, continue_note, volume, source');
   const comps = await selectAll<any>('series_components', 'series_id, episode_end, episode_start, anilist_id, kind, label');
@@ -85,7 +86,7 @@ async function main() {
     anchor_nonmonotonic: [], anchor_start_offtrend: [], anchor_beyond_chapter_space: [], anchor_beyond_display_total: [], anchor_fractional_chapter: [], anchor_on_noncanon_row: [], continue_skip_unnoted: [], boundaries_degenerate: [], ruling_violation: [], repair_on_derivation_tier: [],
     mu_pin_unverified: [],
     rearranged_zone_unanchored: [], rearranged_zone_acknowledged: [],
-    title_incomplete: [], airdate_incomplete: [], airdate_regression: [], airdate_withheld: [], asterisk_unreviewed: [],
+    title_incomplete: [], airdate_incomplete: [], airdate_regression: [], airdate_withheld: [], episode_date_off_window: [], asterisk_unreviewed: [],
     fractional_unmodeled: [], annotation_invalid: [], afl_anime_canon_unruled: [], format_missing: [], episode_without_component: [], watch_order_kind_missing: [],
     permanence_candidate: [], permanence_violation: [], mixed_fragment_only: [],
     series_without_source_kind: [], no_source: [], no_instrument: [], ok_full: [], ok_no_volume: [], ok_loose: [],
@@ -302,6 +303,23 @@ async function main() {
       const { regressions, withheld } = airdateOrderWalk(sid, rows);
       for (const r of regressions) classes.airdate_regression.push(`${sid}: ep ${r.number} ${r.date} is ${r.days} d before ep ${r.against} ${r.againstDate}${r.days > AIRDATE_REGRESSION_THRESHOLD_DAYS ? ' — block change, gate cannot name the outlier' : ''}`);
       for (const w of withheld) classes.ruling_violation.push(`${sid}: ep ${w.number} air_date ${w.date} stands ${w.days} d out of order — the G54 gate/healer should have withheld it`);
+    }
+    // SERIES WINDOW (G55, 2026-08-26 — batch 19 E2, the namesake lesson):
+    // a TV row dated before its series began or long after a finished
+    // series ended is usually ANOTHER show's row (a namesake's wiki page).
+    // Lists, never flips: contamination → the E2-style purge (title + date
+    // wiped, the honest gap), a true deviation → AIR_DATE_WINDOW_ACK, a
+    // typo → G53. Ep 0 / non-tv formats are exempt by structure. A series
+    // whose end_date precedes its start_date is a series-row fault and is
+    // reported once instead of windowing its rows against garbage.
+    for (const s of series) {
+      const rows = epsBySeries.get(s.id) ?? [];
+      if (seriesDatesInvalid(s)) { classes.episode_date_off_window.push(`${s.id}: series end_date ${s.end_date} precedes start_date ${s.start_date} — series-row fault, rows not windowed`); continue; }
+      const off = offWindowRows(s.id, s, rows);
+      if (!off.length) continue;
+      const early = off.filter((o) => o.fit === 'before_start'), late = off.filter((o) => o.fit === 'after_end');
+      const fmt = (l: typeof off) => (l.length > 4 ? `${l.slice(0, 3).map((o) => `${o.number} ${o.date}`).join(', ')} … ${l[l.length - 1].number} ${l[l.length - 1].date}` : l.map((o) => `${o.number} ${o.date}`).join(', '));
+      classes.episode_date_off_window.push(`${s.id}: ${off.length} row${off.length === 1 ? '' : 's'} outside ${s.start_date}${s.end_date ? `→${s.end_date}` : '→'}${early.length ? ` — before start: ${fmt(early)}` : ''}${late.length ? ` — after end: ${fmt(late)}` : ''} (namesake contamination → purge; true deviation → G55 ack; typo → G53)`);
     }
     // T27 (T4.3): AFL's anime_canon claim is kept in staging (G51); a stored
     // FILLER row AFL calls anime-canon with no ruling on it (no T6 override,

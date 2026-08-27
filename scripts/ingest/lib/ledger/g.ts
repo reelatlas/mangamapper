@@ -910,4 +910,30 @@ export const RULES: Rule[] = [
     status: 'live',
     see: ['G53', 'P6', 'N7', 'R1'],
   },
+  {
+    id: 'G55',
+    aliases: ['series window', 'series-window gate', 'identity gate', 'namesake gate', 'namesake lesson', 'episode_date_off_window', 'AIR_DATE_WINDOW_ACK', 'E2', 'batch-19 E2', 'off-window'],
+    family: 'G',
+    title: 'Series window: a row dated outside its series is not its row',
+    statement:
+      "A TV episode row dated more than 45 days before its series' start_date, or more than 400 days after a FINISHED series' end_date, is not that series' data — whatever page or source it came from. Every per-episode writer refuses such a row (title and date both, lib/wiki-identity.ts dateFit) and flags the series once; standing rows are the census class episode_date_off_window, which lists and never flips. Exempt by structure: episode-0 rows (N7) and rows whose format is not tv (T29). Ruled true deviations live in AIR_DATE_WINDOW_ACK (whole series or an episode list, reason + cite). A series whose end_date precedes its start_date is reported as a series-row fault, not windowed. Wikipedia page discovery tries the series' own year-disambiguated title forms before a plain namesake title.",
+    why:
+      "The wiki backfill found episode lists by NAME and merged a namesake's page: rurouni-kenshin-2023 rows 25-27 wore the 1996 series' titles and dates, beyblade-x 41-102 wore sixty-two rows of 2001 Beyblade, and the Ranking of Kings spin-off's ten rows wore the 2021 main series' first ten. A per-page year check existed inline in the script and still let these through (the offset-lock and continuity paths never saw it), and G54's order walk could not name an outlier because a whole block changed era. The durable form is a per-ROW predicate on the outcome (P5), in lib (P2), with the purge as a curated apply (batch19/apply-e2.ts) — the honest gap beats a borrowed title (P6).",
+    ruledBy: 'Sean',
+    ruledOn: '2026-08-26',
+    origin: 'scripts/ingest/research/batch19/PLAN.md E2 (Sean: "yep e2 go"); changelog §12.66',
+    enforcement: [
+      { path: 'scripts/ingest/lib/wiki-identity.ts', symbol: 'dateFit' },
+      { path: 'scripts/ingest/lib/wiki-identity.ts', symbol: 'offWindowRows' },
+      { path: 'scripts/ingest/lib/rulings/air-date-window.ts', symbol: 'AIR_DATE_WINDOW_ACK' },
+      { path: 'scripts/ingest/wiki-episodes-backfill.ts', symbol: 'dateFit' },
+      { path: 'scripts/ingest/research/batch19/apply-e2.ts', symbol: 'PURGE' },
+      { path: 'scripts/ingest/audit-ui-truth.ts', symbol: 'episode_date_off_window' },
+    ],
+    layer: 'writer',
+    auditClass: ['episode_date_off_window'],
+    witnesses: ['rurouni-kenshin-2023', 'beyblade-x', 'ranking-of-kings-the-treasure-chest-of-courage', 'the-melancholy-of-haruhi-suzumiya', 'fist-of-the-blue-sky'],
+    status: 'live',
+    see: ['G54', 'G53', 'G41', 'G44', 'G45', 'N7', 'T29', 'P6', 'P5'],
+  },
 ];

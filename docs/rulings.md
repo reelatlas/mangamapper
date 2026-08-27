@@ -2,7 +2,7 @@
 
 > GENERATED from `scripts/ingest/lib/rulings/**` by `scripts/restructure/gen-rulings.ts` — do not edit by hand. A ruling is an INSTANCE of a rule (`docs/rules.md`); the map is the record, this is the index.
 
-- rulings: 1724 across 204 series/keys · by Sean: 381 · UNRECORDED reasons: 8 · with a retire condition: 88
+- rulings: 1725 across 204 series/keys · by Sean: 382 · UNRECORDED reasons: 8 · with a retire condition: 88
 
 ## Retire conditions (re-evaluate when…)
 
@@ -2378,11 +2378,12 @@
 |---|---|---|---|---|
 | `R21` | {"file":"scripts/ingest/research/batch14/out/the-heroic-legend-of-arslan.json","anchors":25} | batch-14 verdict applied as-curated | session 2026-08-23 · scripts/ingest/research/batch14/out/the-heroic-legend-of-arslan.json |  |
 
-### the-melancholy-of-haruhi-suzumiya (1)
+### the-melancholy-of-haruhi-suzumiya (2)
 
 | rule | value | reason | ruled | retires when |
 |---|---|---|---|---|
 | `G54` | all | The 2006 broadcast deliberately aired its 14 episodes out of chronological order ("Episode 00" first, the six-part Melancholy arc interleaved); our 28 rows follow the 2009 chronological rebroadcast numbering while the rows keep their ORIGINAL first-air dates (2006 for the original episodes, 2009 for the new ones). Every regression in the series is that design, not a typo. | Sean 2026-08-26 · https://en.wikipedia.org/wiki/List_of_The_Melancholy_of_Haruhi_Suzumiya_episodes, docs/restructure/DRIFT-LIST.md A-11 |  |
+| `G55` | all | Same fact as the G54 acknowledgement: our 28 rows follow the 2009 chronological rebroadcast numbering (start_date 2009) while the fourteen original episodes keep their true 2006 first-air dates. Every 'before start' row in the series is that design, not another show's data. | Sean 2026-08-26 · https://en.wikipedia.org/wiki/List_of_The_Melancholy_of_Haruhi_Suzumiya_episodes, scripts/ingest/lib/rulings/air-date-order.ts |  |
 
 ### the-promised-neverland (4)
 
