@@ -431,7 +431,7 @@ export const solvePosition = (
     if (ep <= aired) {
       const exact = anime.episodes.find((e) => e.number === ep);
       const type = exact?.type ?? episodeTypeAt(mapping, ep);
-      if (type === 'filler' || type === 'anime-only-canon' || exact?.offSource) {
+      if (type === 'filler' || exact?.offSource) {
         return base({ state: 'run', driver: 'ep', ep, type, unit: ep, noManga: true });
       }
       if (exact?.mangaMapping) {
@@ -521,7 +521,7 @@ export interface EpisodeRow {
   ep: number;
   type: EpisodeType;
   title: string | null; // null → rendered as // title_pending
-  vol: number | null;   // null for filler/anime-only (no manga values exist)
+  vol: number | null;   // null for filler and off-source rows (no source values exist)
   ch: string | null;    // display string — confirmed data may be a range ("1088-1089")
 }
 
@@ -560,7 +560,7 @@ export const buildEpisodeList = (anime: AnimeSeries, m: MappingSummary): Episode
     let ch: string | null = null;
     let end: number | null = null;
     // filler and off-source (adopted / side_source, T26) rows keep manga values null by design (— in the UI)
-    if (type !== 'filler' && type !== 'anime-only-canon' && !exact?.offSource) {
+    if (type !== 'filler' && !exact?.offSource) {
       if (exact?.mangaMapping) {
         end = lastChapterNumber(exact.mangaMapping.chapters);
         // display the episode's START (Sean's first-chapter ruling): the

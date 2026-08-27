@@ -7,7 +7,11 @@ import type { EpisodeType } from '../../../src/types/anime';
 
 export const AFL_BASE = 'https://www.animefillerlist.com';
 
-const CLASS_TO_TYPE: Record<string, EpisodeType> = {
+// STAGING vocabulary (G51: AFL's claim is kept verbatim): 'anime-only-canon'
+// is AFL's "anime canon" class, mapped to a standing at write by the series'
+// source kind (T27, filterEpisodeRows) — never a stored type since T4.3.
+export type AflType = EpisodeType | 'anime-only-canon';
+const CLASS_TO_TYPE: Record<string, AflType> = {
   manga_canon: 'canon',
   'mixed_canon/filler': 'mixed',
   filler: 'filler',
@@ -17,7 +21,7 @@ const CLASS_TO_TYPE: Record<string, EpisodeType> = {
 export interface AflEpisode {
   number: number;
   title: string;
-  type: EpisodeType;
+  type: AflType;
   airDate: string | null; // YYYY-MM-DD
 }
 
@@ -29,7 +33,7 @@ export interface AflShowPage {
   canonicalSlug: string | null;
   episodes: AflEpisode[];
   // Quick List, expanded to per-episode numbers, for the integrity check
-  quickList: Partial<Record<EpisodeType, number[]>>;
+  quickList: Partial<Record<AflType, number[]>>;
   integrity: { ok: boolean; mismatches: string[] };
 }
 
@@ -93,7 +97,7 @@ export function parseShowPage(html: string): AflShowPage {
   episodes.length = 0;
   episodes.push(...deduped);
 
-  const quickList: Partial<Record<EpisodeType, number[]>> = {};
+  const quickList: Partial<Record<AflType, number[]>> = {};
   $('#Condensed > div[class]').each((_, el) => {
     const type = CLASS_TO_TYPE[($(el).attr('class') ?? '').trim()];
     if (!type) return;
@@ -106,7 +110,7 @@ export function parseShowPage(html: string): AflShowPage {
 
   // Integrity: per type, the table's episode set must equal the Quick List's.
   const mismatches: string[] = [];
-  const types = new Set<EpisodeType>([
+  const types = new Set<AflType>([
     ...episodes.map((e) => e.type),
     ...(Object.keys(quickList) as EpisodeType[]),
   ]);

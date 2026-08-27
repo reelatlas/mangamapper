@@ -98,11 +98,11 @@ export const mockAnimeData: AnimeSeries[] = [
     genres: ['Action', 'Adventure', 'Fantasy'],
     synopsis: 'Goku and his friends are turned into children by a mysterious wish and must journey to the Demon Realm.',
     episodes: [
-      { number: 8, title: 'The Demon Realm Unveiled', type: 'anime-only-canon', mangaMapping: null, airDate: '2024-12-13' },
-      { number: 7, title: 'Mini Warriors Unite', type: 'anime-only-canon', mangaMapping: null, airDate: '2024-12-06' },
-      { number: 6, title: 'A New Transformation', type: 'anime-only-canon', mangaMapping: null, airDate: '2024-11-29' },
-      { number: 5, title: 'Journey Begins', type: 'anime-only-canon', mangaMapping: null, airDate: '2024-11-22' },
-      { number: 4, title: 'The Shrinking Wish', type: 'anime-only-canon', mangaMapping: null, airDate: '2024-11-15' },
+      { number: 8, title: 'The Demon Realm Unveiled', type: 'canon', mangaMapping: null, airDate: '2024-12-13' },
+      { number: 7, title: 'Mini Warriors Unite', type: 'canon', mangaMapping: null, airDate: '2024-12-06' },
+      { number: 6, title: 'A New Transformation', type: 'canon', mangaMapping: null, airDate: '2024-11-29' },
+      { number: 5, title: 'Journey Begins', type: 'canon', mangaMapping: null, airDate: '2024-11-22' },
+      { number: 4, title: 'The Shrinking Wish', type: 'canon', mangaMapping: null, airDate: '2024-11-15' },
     ]
   },
   {

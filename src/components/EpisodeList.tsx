@@ -44,7 +44,6 @@ const MARKER_COLOR: Record<EpisodeType, string> = {
   canon: 'text-type-canon',
   mixed: 'text-type-mixed',
   filler: 'text-type-filler',
-  'anime-only-canon': 'text-type-anime',
 };
 
 // # symbol = disabled tone OF the section's color; the number = full color
@@ -52,7 +51,6 @@ const HASH_COLOR: Record<EpisodeType, string> = {
   canon: 'text-type-canon/45',
   mixed: 'text-type-mixed/45',
   filler: 'text-type-filler/45',
-  'anime-only-canon': 'text-type-anime/45',
 };
 const NUM_COLOR: Record<EpisodeType, string> = MARKER_COLOR;
 
@@ -62,7 +60,6 @@ const RAIL_COLOR: Record<EpisodeType, string> = {
   canon: 'shadow-[inset_2px_0_0_hsl(var(--type-canon))]',
   mixed: 'shadow-[inset_2px_0_0_hsl(var(--type-mixed))]',
   filler: 'shadow-[inset_2px_0_0_hsl(var(--type-filler))]',
-  'anime-only-canon': 'shadow-[inset_2px_0_0_hsl(var(--type-anime))]',
 };
 // …and so does the jump flash (same ruling): the pulse washes the row in its
 // own type color (--pulse-color feeds .animate-row-pulse in index.css)
@@ -70,17 +67,15 @@ const PULSE_COLOR: Record<EpisodeType, string> = {
   canon: 'hsl(var(--type-canon) / 0.18)',
   mixed: 'hsl(var(--type-mixed) / 0.18)',
   filler: 'hsl(var(--type-filler) / 0.18)',
-  'anime-only-canon': 'hsl(var(--type-anime) / 0.18)',
 };
 
-// interior_v1 banded section headers (index.css); manga_only wears its own
+// interior_v1 banded section headers (index.css); source_only wears its own
 // purple band (2026-08-21, reverses the earlier shares-canon ruling)
 const SECTION_BAND: Record<string, string> = {
   canon: 'section-band-canon',
   mixed: 'section-band-mixed',
   filler: 'section-band-filler',
-  'anime-only-canon': 'section-band-anime',
-  manga_only: 'section-band-manga',
+  source_only: 'section-band-manga',
 };
 
 type ListItem =

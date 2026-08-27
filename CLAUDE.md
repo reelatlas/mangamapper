@@ -41,7 +41,7 @@ Each is a ledger record — cite the id.
    dash. Never NaN, never a fabricated number.
 5. **`R1` Nothing reaches Sean unresearched.** 2+ independent sources with
    citations (`R3`); instant answers and content farms are cross-check only.
-6. **`A1` Filler / anime-only rows never carry chapter anchors.**
+6. **`A1` Filler rows never carry chapter anchors; `A44` position-less rows never do either.**
 7. **`P8` Repairs live at the manual tier.** A repaired value on a
    derivation-tier row (`mu`, `afg`, `afg-continua`) is deleted by that
    source's next re-derive.

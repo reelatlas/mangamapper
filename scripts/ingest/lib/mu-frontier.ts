@@ -210,7 +210,7 @@ export async function applyMuFrontier(
   }
 
   // A1 at the writer (Sean's D1 ruling, 2026-08-24, the gantz/toriko case):
-  // filler and anime-only rows NEVER take anchors (A1, MHA ep 104) — a
+  // filler rows NEVER take anchors (A1, MHA ep 104; A44 position-less rows neither) — a
   // run-end pin landing on one states adaptation for an episode that adapts
   // nothing. Refuse + flag; research records the honest terminal on the
   // last canon/mixed episode instead (toriko ep146→253). Allow-list, so an

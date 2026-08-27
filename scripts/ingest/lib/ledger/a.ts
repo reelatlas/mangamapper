@@ -16,7 +16,7 @@ export const RULES: Rule[] = [
     family: 'A',
     title: 'Filler / anime-only rows never carry anchors',
     statement:
-      'A chapter anchor attaches only to an episode typed canon or mixed. Filler and anime-only rows never carry a chapter anchor from ANY source: every anchor writer refuses or drops the row (allow-list canon/mixed; unknown types fail closed; a row-less episode cannot be typed, so it passes), and the client nulls the mapping of any noncanon row at assembly. An episode that looks anchorable but is typed filler has a type question, not an anchor question.',
+      'A chapter anchor attaches only to an episode typed canon or mixed. Filler rows never carry a chapter anchor from ANY source (T4.3 retired the anime-only-canon type: studio-original rows are canon or filler by source kind, and rows canon by ruling with no source position are annotated adopted / side_source and stay anchorless by A44): every anchor writer refuses or drops the row (allow-list canon/mixed; unknown types fail closed; a row-less episode cannot be typed, so it passes), and the client nulls the mapping of any noncanon row at assembly. An episode that looks anchorable but is typed filler has a type question, not an anchor question.',
     why: 'MHA ep 104 (a filler position-carry anchor) and Toriko ep 147: the anchor a filler row would take is either junk or evidence the row is mistyped — never a position.',
     ruledBy: 'Sean',
     ruledOn: '2026-08-24',

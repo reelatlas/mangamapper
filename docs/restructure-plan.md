@@ -1,6 +1,6 @@
 # Restructure phase — the plan (v2, agreed 2026-08-25)
 
-Status: **T0–T2 done; T3.1 (skill + both exercises: G53, G54), T3.3, T3.4 done. T4.0 RULED 2026-08-26 → docs/restructure/T4-GLOSSARY.md is the ruled record and the build order; A-11 EXECUTED 2026-08-26 as G54; T4.1 (T25), T4.2 (T26), T4.3 (T27) DONE 2026-08-26. Next: the batch-18 review of the big unruled blocks (glossary §6 step 5), then T4.4 format.** v1 was drafted from a disk survey, cross-checked
+Status: **T0–T2 done; T3.1 (skill + both exercises: G53, G54), T3.3, T3.4 done. T4.0 RULED 2026-08-26 → docs/restructure/T4-GLOSSARY.md is the ruled record and the build order; A-11 EXECUTED 2026-08-26 as G54; T4 build COMPLETE 2026-08-26 (T4.1-T4.5 + batch 18: T25-T29, A44, T28). Next: /consolidate deep, then the P36 frame check.** v1 was drafted from a disk survey, cross-checked
 by a second model (Cursor/Grok), re-checked against the tree, and folded.
 This file is the phase's tracked board: every piece has an id, a track, a
 dependency and a status; the board is updated at every save point. When the
@@ -338,5 +338,5 @@ words after the glossary exists. Rough total: 8–12 sessions.
 | T4.3 | standing migration (T27): 977 rows by source kind + T6 + 190 override annotations; afl_anime_canon_unruled queue 24 series; A1 spike 0 | T4.2 | DONE 2026-08-26 |
 | batch-18 review lane | 32 verdicts, 3 waves, 19 verifications; rules T28 (materiality bar), A44 (position-less rows), the incorporation basis; afl_anime_canon_unruled 257→1 | T4.3 | DONE 2026-08-26 (§12.57-59) |
 | T4.4 | format axis (T29): episodes.format derived + stored, FORMAT_OVERRIDES, watch-order kinds, 3 new census classes | review lane | DONE 2026-08-26 |
-| T4.5 | the words (UI strings last; T3.2 / T3.5 land here) | T4.4 | next |
+| T4.5 | the words: canon/mixed/filler + `{noun} only`, anime_only retired, EpisodeType three-valued; T3.2 (vocabulary lives in the agent def; PROTOCOL = task shape) and T3.5 (agent defs) landed | T4.4 | DONE 2026-08-26 |
 | T5.* | backlog routing | per §3 | planned |

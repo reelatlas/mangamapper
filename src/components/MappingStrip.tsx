@@ -9,17 +9,15 @@ const SPAN_COLORS: Record<EpisodeType, string> = {
   canon: 'bg-type-canon',
   mixed: 'bg-type-mixed',
   filler: 'bg-type-filler',
-  'anime-only-canon': 'bg-type-anime',
 };
 
 const SPAN_LABELS: Record<EpisodeType, string> = {
   canon: 'canon',
   mixed: 'mixed',
   filler: 'filler',
-  'anime-only-canon': 'anime_only',
 };
 
-// Dimmed hatch for source material the anime hasn't covered — manga_only's
+// Dimmed hatch for source material the anime hasn't covered — source_only's
 // own purple (2026-08-21, reverses the shares-canon ruling)
 const MANGA_ONLY_BACKGROUND =
   'repeating-linear-gradient(45deg, hsl(var(--type-manga) / 0.4) 0 3px, transparent 3px 6px)';
@@ -38,7 +36,7 @@ const MIN_SEG_PX = 2;
 
 interface Seg {
   key: string;
-  type: EpisodeType | 'manga_only';
+  type: EpisodeType | 'source_only';
   u0: number; // 0-based start in unit space
   units: number;
   hidden: boolean;
@@ -54,7 +52,8 @@ interface MappingStripProps {
   airedEpisodes: number;
   markerEpisode?: number | null; // position indicator, in episode-equivalent units
   markerRest?: boolean;          // dim marker: the series' PRESENT position (inline instrument at rest)
-  mangaAheadUnits?: number;      // manga_only tail width, in episode-equivalents
+  mangaAheadUnits?: number;      // source_only tail width, in episode-equivalents
+  tailBadge?: string | null;     // the `{noun} only` string from the registry (T25)
   mangaAheadChapters?: number | null; // for the tail's tooltip
   onUnitClick?: (unit: number) => void; // click-to-set (the lookup's stripClick)
   // Minimap band: the episode range currently visible in the EpisodeList.
@@ -64,7 +63,7 @@ interface MappingStripProps {
   // Legend-as-filter: types excluded from the active filter selection render
   // as neutral ghosts IN PLACE — strip geometry (units, needle, clicks) never
   // changes, so filtering is purely a view concern.
-  hiddenTypes?: ReadonlySet<EpisodeType | 'manga_only'>;
+  hiddenTypes?: ReadonlySet<EpisodeType | 'source_only'>;
   className?: string;
 }
 
@@ -74,6 +73,7 @@ export const MappingStrip = ({
   markerEpisode,
   markerRest,
   mangaAheadUnits = 0,
+  tailBadge = null,
   mangaAheadChapters,
   onUnitClick,
   viewband,
@@ -115,14 +115,14 @@ export const MappingStrip = ({
       u0 += units;
     }
     if (mangaAheadUnits > 0) {
-      const hidden = hiddenTypes?.has('manga_only') ?? false;
+      const hidden = hiddenTypes?.has('source_only') ?? false;
       out.push({
-        key: 'manga_only',
-        type: 'manga_only',
+        key: 'source_only',
+        type: 'source_only',
         u0,
         units: mangaAheadUnits,
         hidden,
-        title: `+${mangaAheadChapters ?? '?'}ch // manga_only (not_animated)${hidden ? ' (filtered)' : ''}`,
+        title: `+${mangaAheadChapters ?? '?'}ch // ${(tailBadge ?? 'source only').replace(' ', '_')} (not_animated)${hidden ? ' (filtered)' : ''}`,
       });
     }
     return out;
@@ -251,7 +251,7 @@ export const MappingStrip = ({
                 'absolute inset-y-0',
                 r.hidden
                   ? 'bg-muted/60'
-                  : r.type === 'manga_only'
+                  : r.type === 'source_only'
                     ? undefined
                     : SPAN_COLORS[r.type],
               )}
@@ -259,7 +259,7 @@ export const MappingStrip = ({
                 left: r.x,
                 width: r.w,
                 background:
-                  !r.hidden && r.type === 'manga_only' ? MANGA_ONLY_BACKGROUND : undefined,
+                  !r.hidden && r.type === 'source_only' ? MANGA_ONLY_BACKGROUND : undefined,
               }}
               title={r.title}
             />

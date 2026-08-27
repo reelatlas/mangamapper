@@ -607,6 +607,30 @@
    durable guard. Lesson for the floor rule: a >2 overshoot sourced from a
    SINGLE chart row with no corroborating content anywhere is a typo
    candidate, not an adoption candidate.
+61. ✅ **T4.5 — THE WORDS (T19 rewritten; T3.2 + T3.5 landed; 2026-08-26).**
+   Strings only, per Sean's T4.0 D-12 and Cursor's scoping. The display
+   vocabulary is now exactly canon / mixed / filler + `{noun} only`: the
+   `EpisodeType` union is the three standings; TypeBadge kinds are
+   canon | mixed | filler | source_only, the last rendered from the
+   SOURCE_KINDS registry's tailBadge (manga only / manhwa only / novel only;
+   a VN or game series has no tail badge); `MappingSummary` carries
+   `tailBadge` and `sourceLabel` (`studio original` for originals) for the
+   UI pass; the anime_only badge, count, filter and detail-page stat are
+   GONE (they had rendered nothing since T4.3); 'anime-only-canon' is out
+   of every component map, the strip, the episode list, the mocks and the
+   tests. AFL's staging value keeps its own type (`AflType`, G51 — the claim
+   is stored, never typed). CLAUDE.md invariant 6 reads "Filler rows never
+   carry chapter anchors; A44 position-less rows never do either"; A1's
+   statement says the same; lib comments follow. T3.2 PROTOCOL collapse:
+   the vocabulary lives ONLY in the research-agent definition (standings,
+   annotation kinds + bases, T28, the traps); a batch PROTOCOL pins the task
+   shape and cites rules by id (batch 18's is the template; batch 17's is
+   history) — research-batch SKILL.md says so. T3.5: the agent definitions
+   were rewritten incrementally through batch 18 (vocabulary passage, four
+   batch-18 distinctions, nine traps) — done. No data changed; display
+   220/0; tests 41/41. The glossary's §6 build order is complete except
+   step 8. NEXT: `/consolidate deep` (P21 — T4 changed enforcement sites
+   across the catalog), then the P36 cross-model frame check.
 60. ✅ **T4.4 — THE FORMAT AXIS (`T29`; T23 amended; 2026-08-26).** Sean's
    T4.0 D-11 built: `episodes.format` ∈ tv | ova | special | movie | recap,
    nullable, DERIVED (never typed by a source, never a type): a

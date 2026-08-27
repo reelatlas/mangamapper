@@ -4,14 +4,13 @@ import { TypeBadge, type TypeBadgeKind } from './TypeBadge';
 // Episode→chapter row (detail page). Re-skinned onto the card grammar
 // (2026-08-21, EpisodeBadge retirement): TypeBadge is the type token,
 // `#1` never `#0001`, vol/ch as muted-key + foreground-value, and `—` is
-// the universal null for a missing manga position (filler/anime-only) —
+// the universal null for a missing source position (filler / off-source) —
 // `// comments` are reserved for system messages.
 
 const KIND: Record<EpisodeType, TypeBadgeKind> = {
   canon: 'canon',
   mixed: 'mixed',
   filler: 'filler',
-  'anime-only-canon': 'anime_only',
 };
 
 interface MangaMappingDisplayProps {

@@ -55,7 +55,7 @@ export const AnimeCard = ({ anime: listItem, onClose }: AnimeCardProps) => {
   const lookup = usePositionLookup(anime, mapping);
 
   const hasSource = mapping ? mapping.hasInstrument : anime.hasManga; // T25: the manga position needs an instrument
-  // The ep field works for EVERY mapped series (incl. anime-original) —
+  // The ep field works for EVERY mapped series (incl. studio originals) —
   // inline field, strip clicks, and list rows are one instrument. The vol/ch
   // fields are editable only when manga values exist (the hook handles it).
   const lookupEnabled = !!mapping && mapping.airedEpisodes > 0;
@@ -66,7 +66,7 @@ export const AnimeCard = ({ anime: listItem, onClose }: AnimeCardProps) => {
     [anime, mapping],
   );
 
-  // list selection follows the lookup; a manga_only (hatch) position orients
+  // list selection follows the lookup; a source_only (hatch) position orients
   // the list at the nearest aired episode before it
   const selectedEp = useMemo(() => {
     const r = lookup.result;
@@ -95,12 +95,11 @@ export const AnimeCard = ({ anime: listItem, onClose }: AnimeCardProps) => {
     });
   const hiddenTypes = useMemo(() => {
     if (hiddenKinds.size === 0) return undefined;
-    const hidden = new Set<EpisodeType | 'manga_only'>();
+    const hidden = new Set<EpisodeType | 'source_only'>();
     (['canon', 'mixed', 'filler'] as const).forEach((t) => {
       if (hiddenKinds.has(t)) hidden.add(t);
     });
-    if (hiddenKinds.has('anime_only')) hidden.add('anime-only-canon');
-    if (hiddenKinds.has('manga_only')) hidden.add('manga_only');
+    if (hiddenKinds.has('source_only')) hidden.add('source_only');
     return hidden;
   }, [hiddenKinds]);
   const visibleSections = useMemo(
@@ -197,6 +196,7 @@ export const AnimeCard = ({ anime: listItem, onClose }: AnimeCardProps) => {
                       markerEpisode={lookup.markerUnit}
                       markerRest={lookup.markerRest}
                       mangaAheadUnits={mapping.mangaAheadUnits}
+                      tailBadge={mapping.tailBadge}
                       mangaAheadChapters={mapping.mangaAheadChapters}
                       onUnitClick={lookupEnabled ? lookup.stripClick : undefined}
                       viewband={minimapOn ? viewband : null}
@@ -215,9 +215,9 @@ export const AnimeCard = ({ anime: listItem, onClose }: AnimeCardProps) => {
                       <MinimapToggle on={minimapOn} onToggle={toggleMinimap} className="mr-auto" />
                       {/* legend renders purely by count — NO source-type
                           branching. The mock era's two branches each hid real
-                          tags on real data: manga series with anime-original
-                          canon (One Piece's 21 eps), originals with filler
-                          (Super Dragon Ball Heroes). Data decides, not class. */}
+                          tags on real data (originals with filler — Super
+                          Dragon Ball Heroes). Data decides, not class. The
+                          tail badge is the source's own noun (T25). */}
                       {mapping.canonCount > 0 && (
                         <TypeBadge type="canon" count={mapping.canonCount} {...badgeState('canon')} />
                       )}
@@ -231,18 +231,12 @@ export const AnimeCard = ({ anime: listItem, onClose }: AnimeCardProps) => {
                           {...badgeState('filler')}
                         />
                       )}
-                      {mapping.animeOnlyCount > 0 && (
+                      {mapping.mangaAheadChapters != null && mapping.mangaAheadChapters > 0 && mapping.tailBadge && (
                         <TypeBadge
-                          type="anime_only"
-                          count={mapping.animeOnlyCount}
-                          {...badgeState('anime_only')}
-                        />
-                      )}
-                      {mapping.mangaAheadChapters != null && mapping.mangaAheadChapters > 0 && (
-                        <TypeBadge
-                          type="manga_only"
+                          type="source_only"
+                          label={mapping.tailBadge}
                           count={`+${mapping.mangaAheadChapters}ch`}
-                          {...badgeState('manga_only')}
+                          {...badgeState('source_only')}
                         />
                       )}
                     </div>

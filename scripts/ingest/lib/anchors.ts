@@ -129,7 +129,7 @@ export async function applyContinua(
 
   // A1 at the writer (Sean's D4 ruling, 2026-08-25 — extending D1 to the AFG
   // writers after 49/49 audit hits adjudicated 45 junk / 4 mistyped): filler
-  // and anime-only rows NEVER take anchors. A continua end-frontier landing
+  // rows NEVER take anchors (and A44 position-less rows never do). A continua end-frontier landing
   // on one states adaptation for an episode that adapts nothing — refuse the
   // ANCHOR; the continue-from is READING GUIDANCE, not a position, so it
   // still applies. Allow-list (canon/mixed) so unknown types fail closed; a
@@ -313,7 +313,7 @@ export async function syncAnchors(
     .map((a) => ({ ...a, episode: translateEpisodeNumber(seriesId, a.episode, 'afg') }))
     .filter((a): a is typeof anchors[number] => a.episode !== null);
   // A1 at the writer (Sean's D4 ruling, 2026-08-25, extending D1 to the AFG
-  // chart writer): filler and anime-only rows NEVER take anchors. AFG's
+  // chart writer): filler rows NEVER take anchors (A44 position-less rows neither). AFG's
   // chapter column is a READING-POSITION CONVERSION that plateaus across
   // noncanon rows (proven by its own duplicate values — one-piece eps
   // 214/216 both print 313 on rows AFG itself marks *Filler), so a chart

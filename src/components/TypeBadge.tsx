@@ -7,8 +7,10 @@ import { cn } from '@/lib/utils';
 // bands' tint grammar), radius token, no border. Supersedes the naked tag
 // (which superseded brackets, which superseded the S2 tint boxes).
 //
-// manga_only wears its OWN purple (2026-08-21, reverses the shares-canon
-// ruling): same hue as the strip's hatched tail and its section band.
+// source_only ("{noun} only" — manga only / novel only…, from the SOURCE_KINDS
+// registry, T25/T19) wears its OWN purple (2026-08-21): same hue as the
+// strip's hatched tail and its section band. T4.5 (2026-08-26): the
+// anime_only badge is retired — standing is canon | mixed | filler only.
 //
 // Rules (DESIGN_SYSTEM.md):
 // - the badge is the legend unit: counts live INSIDE it (dimmer, one size down)
@@ -17,18 +19,19 @@ import { cn } from '@/lib/utils';
 // - vocabulary: these spans are "sections", never "arcs"
 // ─────────────────────────────────────────────────────────────────────────────
 
-export type TypeBadgeKind = 'canon' | 'mixed' | 'filler' | 'manga_only' | 'anime_only';
+export type TypeBadgeKind = 'canon' | 'mixed' | 'filler' | 'source_only';
 
 const STYLES: Record<TypeBadgeKind, string> = {
   canon: 'text-type-canon bg-type-canon/12',
   mixed: 'text-type-mixed bg-type-mixed/12',
   filler: 'text-type-filler bg-type-filler/12',
-  manga_only: 'text-type-manga bg-type-manga/12',
-  anime_only: 'text-type-anime bg-type-anime/12',
+  source_only: 'text-type-manga bg-type-manga/12',
 };
 
 interface TypeBadgeProps {
   type: TypeBadgeKind;
+  /** the rendered text when it is not the kind itself — the `{noun} only` string for source_only */
+  label?: string;
   count?: ReactNode; // rendered inside the badge, dimmed — the badge IS the legend unit
   className?: string;
   // legend-as-filter: clickable badges toggle their type in the card's filter
@@ -38,7 +41,7 @@ interface TypeBadgeProps {
   dimmed?: boolean;
 }
 
-export const TypeBadge = ({ type, count, className, onClick, pressed, dimmed }: TypeBadgeProps) => {
+export const TypeBadge = ({ type, label, count, className, onClick, pressed, dimmed }: TypeBadgeProps) => {
   const classes = cn(
     // tint chip (trial 2026-08-21): colored text over its own /0.12 wash,
     // radius token — the tint carries the chip, no border
@@ -51,7 +54,7 @@ export const TypeBadge = ({ type, count, className, onClick, pressed, dimmed }: 
   );
   const content = (
     <>
-      {type}
+      {label ?? type}
       {count != null && <span className="text-[0.64rem] opacity-70">{count}</span>}
     </>
   );

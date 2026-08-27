@@ -1,4 +1,4 @@
-import { seriesHasInstrument, seriesHasSource } from '../../../scripts/ingest/lib/rulings/source-kinds';
+import { seriesHasInstrument, seriesHasSource, sourceKindOf } from '../../../scripts/ingest/lib/rulings/source-kinds';
 import type {
   AnimeSeries,
   AnimeStatus,
@@ -230,7 +230,7 @@ export const toAnimeSeries = (
 
 // Contiguous same-type runs; classification gaps and the not-yet-classified
 // tail default to the series' OWN base type (canon for manga series,
-// anime-only for originals — hardcoding canon fabricated "canon" episodes on
+// (T27: canon for every series — a studio original is its own source) — hardcoding canon once fabricated "canon" episodes on
 // Super Dragon Ball Heroes' unclassified tail).
 export const buildSpans = (eps: EpisodeRow[], aired: number, fallback: EpisodeType): EpisodeSpan[] => {
   if (!eps.length) return aired > 0 ? [{ start: 1, end: aired, type: fallback }] : [];
@@ -272,9 +272,9 @@ export const buildMapping = (
   // T27: every series' base standing is canon relative to ITS source — a
   // studio original is its own source; nothing pads 'anime-only-canon' any more
   const spans = buildSpans(eps, aired, 'canon');
-  const counts = { canon: 0, mixed: 0, filler: 0, 'anime-only-canon': 0 };
+  const counts = { canon: 0, mixed: 0, filler: 0 };
   for (const s of spans) counts[s.type] += s.end - s.start + 1;
-  const total = counts.canon + counts.mixed + counts.filler + counts['anime-only-canon'];
+  const total = counts.canon + counts.mixed + counts.filler;
 
   const latestAnchor = anchors.length ? anchors[anchors.length - 1] : null;
   // COVERAGE ≠ run-end (Sean's ruling 2026-08-24, the Ippo finale lesson): an
@@ -379,8 +379,9 @@ export const buildMapping = (
     canonCount: counts.canon,
     mixedCount: counts.mixed,
     fillerCount: counts.filler,
-    animeOnlyCount: counts['anime-only-canon'],
     fillerPercent: total > 0 ? Math.round((counts.filler / total) * 100) : 0,
+    tailBadge: hasInstrument ? sourceKindOf(sourceType)?.tailBadge ?? null : null,
+    sourceLabel: sourceKindOf(sourceType)?.seriesLabel ?? sourceKindOf(sourceType)?.noun ?? 'source',
     continueFrom,
     latestKnown,
     mangaAheadChapters,

@@ -90,7 +90,7 @@
 - `T16` AFG '* Filler' title marker is annotation, not a name — aka `AFG title-marker rule`, `* Filler marker`, `eyeshield title report`, `AFG "* Filler" title-marker rule`
 - `T17` Base-type padding: gaps take the series’ own base type — aka `base-type padding`, `canon-default typing`, `canon-tier spans`, `canon-default`
 - `T18` Legend by count: badges from data, not source-type branches — aka `legend by count`, `legend-by-count`
-- `T19` Type-badge vocabulary (display) — aka `type-badge vocabulary`, `TypeBadgeKind`, `sections never arcs`, `anime_only badge`, `manga_only badge`, `display vocabulary`
+- `T19` Display vocabulary: canon / mixed / filler / {noun} only — aka `type-badge vocabulary`, `TypeBadgeKind`, `sections never arcs`, `source_only badge`, `noun only badge`, `display vocabulary`, `studio original label`, `anime_only badge retired`
 - `T20` source_type derivation (AniList source + country) *(superseded)* — aka `source_type derivation`, `sourceType`, `source typing`, `source_type vocabulary`
 - `T21` Derivative-manga rule (Evangelion class) — aka `derivative-manga rule`, `Evangelion class`, `Evangelion/Madoka class`
 - `T22` manga_status vocabulary and the 'anime_only' homonym — aka `manga_status vocabulary`, `MANGA_STATUS_MAP`, `manga_status 'anime_only'`, `hasSource`, `anime_only homonym`
@@ -304,7 +304,7 @@
 
 ### A1 · Filler / anime-only rows never carry anchors
 
-A chapter anchor attaches only to an episode typed canon or mixed. Filler and anime-only rows never carry a chapter anchor from ANY source: every anchor writer refuses or drops the row (allow-list canon/mixed; unknown types fail closed; a row-less episode cannot be typed, so it passes), and the client nulls the mapping of any noncanon row at assembly. An episode that looks anchorable but is typed filler has a type question, not an anchor question.
+A chapter anchor attaches only to an episode typed canon or mixed. Filler rows never carry a chapter anchor from ANY source (T4.3 retired the anime-only-canon type: studio-original rows are canon or filler by source kind, and rows canon by ruling with no source position are annotated adopted / side_source and stay anchorless by A44): every anchor writer refuses or drops the row (allow-list canon/mixed; unknown types fail closed; a row-less episode cannot be typed, so it passes), and the client nulls the mapping of any noncanon row at assembly. An episode that looks anchorable but is typed filler has a type question, not an anchor question.
 
 *Why:* MHA ep 104 (a filler position-carry anchor) and Toriko ep 147: the anchor a filler row would take is either junk or evidence the row is mistyped — never a position.
 
@@ -1267,18 +1267,18 @@ The type legend and its badges render purely from per-type counts in the data �
 - aliases: legend by count, legend-by-count
 - see: T17, T19
 
-### T19 · Type-badge vocabulary (display)
+### T19 · Display vocabulary: canon / mixed / filler / {noun} only
 
-The display vocabulary is exactly five badge kinds — canon, mixed, filler, manga_only, anime_only — rendered as their literal kind string. The episode type anime-only-canon maps to the badge kind anime_only; manga_only is a derived tail state (published chapters beyond coverage), not a stored episode type; the internal string 'anime-only-canon' never reaches the user. Contiguous same-type runs are 'sections', never 'arcs' (arcs are story arcs).
+The display vocabulary is exactly four badge kinds — canon, mixed, filler (the three standings, T27, rendered as their literal string) and source_only, rendered as the source kind's own `{noun} only` string from the SOURCE_KINDS registry (manga only / manhwa only / novel only — a visual novel or game has no tail badge) — plus the series label for the source kind (`studio original` for originals; else the noun). There is no anime_only badge, count, filter or stat: the words 'anime only', 'anime-only', 'anime_only', 'original canon' and 'anime-original' are retired from every string a user or an agent reads (T4.0 D-12). Format chips (T29) and the adopted chip are separate fields the UI pass may stack; the legend still renders purely from counts.
 
-*Why:* T4.0 D-12: 'anime_only' reads as the wild phrase that usually means filler, and 'manga_only' must generalise beyond manga ('source only' candidate) — the rename surface is exactly these strings plus manga_status 'anime_only' (T22). Recorded as it stands; nothing renamed.
+*Why:* T4.0 D-12 (Sean, 2026-08-26): 'anime only' read as filler to everyone outside the project while it meant four different things inside it; 'manga only' could not generalise to novels. T4.5 renamed the surface (2026-08-26): TypeBadge kinds canon | mixed | filler | source_only (label = registry tailBadge), MappingSummary.tailBadge / sourceLabel, the anime_only stat and filter removed from the detail page, the EpisodeType union reduced to the three standings.
 
-- ruled session 2026-08-21 (src/components/TypeBadge.tsx design-system header; system-evolution D-12)
+- ruled Sean 2026-08-26 (src/components/TypeBadge.tsx design-system header; T4-GLOSSARY §5 (D-12))
 - layer **display**
-- enforced: [src/components/TypeBadge.tsx#TypeBadgeKind](../src/components/TypeBadge.tsx) · [src/components/MangaMappingDisplay.tsx#KIND](../src/components/MangaMappingDisplay.tsx) · [src/components/MappingStrip.tsx#SPAN_LABELS](../src/components/MappingStrip.tsx) · [src/components/AnimeCard.tsx#hiddenTypes](../src/components/AnimeCard.tsx)
+- enforced: [src/components/TypeBadge.tsx#TypeBadgeKind](../src/components/TypeBadge.tsx) · [src/components/MangaMappingDisplay.tsx#KIND](../src/components/MangaMappingDisplay.tsx) · [src/components/MappingStrip.tsx#SPAN_LABELS](../src/components/MappingStrip.tsx) · [src/components/AnimeCard.tsx#hiddenTypes](../src/components/AnimeCard.tsx) · [src/data/catalog/assemble.ts#buildMapping](../src/data/catalog/assemble.ts) · [lib/rulings/source-kinds.ts#SOURCE_KINDS](../scripts/ingest/lib/rulings/source-kinds.ts)
 - **audit: none — automation backlog**
-- aliases: type-badge vocabulary, TypeBadgeKind, sections never arcs, anime_only badge, manga_only badge, display vocabulary
-- see: T1, T18, T22
+- aliases: type-badge vocabulary, TypeBadgeKind, sections never arcs, source_only badge, noun only badge, display vocabulary, studio original label, anime_only badge retired
+- see: T1, T18, T22, T25, T27, T29
 
 ### T20 · source_type derivation (AniList source + country) *(superseded → T25)*
 
@@ -4056,7 +4056,7 @@ Any component that renders episode-level data consumes the HYDRATED series (getB
 - AniList naming authority → `I7`
 - anime only retired → `T27`
 - anime parity → `C2`
-- anime_only badge → `T19`
+- anime_only badge retired → `T19`
 - anime_only homonym → `T22`
 - anime-only-canon ≠ anchor desert → `T14`
 - anime-only-canon has no chapter counterpart → `T14`
@@ -4485,7 +4485,6 @@ Any component that renders episode-level data consumes the HYDRATED series (getB
 - majority rule → `A11`
 - manga link selection → `I38`
 - manga totals (§2) → `N25`
-- manga_only badge → `T19`
 - manga_status 'anime_only' → `T22`
 - manga_status vocabulary → `T22`
 - MANGA_STATUS_MAP → `T22`
@@ -4568,6 +4567,7 @@ Any component that renders episode-level data consumes the HYDRATED series (getB
 - notes are precedence, not blindfolds → `P23`
 - nothing reaches Sean unresearched → `R1`
 - nothing suspicious ever auto-applies → `G1`
+- noun only badge → `T19`
 - numbered specials trigger → `N7`
 - numbered-specials research trigger → `N7`
 - numbered-vs-event rule → `N3`
@@ -4756,6 +4756,7 @@ Any component that renders episode-level data consumes the HYDRATED series (getB
 - SOURCE_KINDS → `T25`
 - source_map dispositions → `I11`
 - SOURCE_NUMBERING_SHIFTS → `N11`
+- source_only badge → `T19`
 - source_type derivation → `T20`
 - source_type vocabulary → `T20`
 - SOURCE_TYPE_OVERRIDES → `T25`
@@ -4791,6 +4792,7 @@ Any component that renders episode-level data consumes the HYDRATED series (getB
 - strict episode-cell parse → `G20`
 - structure reconciliation → `I33`
 - studio original → `T25`
+- studio original label → `T19`
 - successor cap → `A16`
 - successor-span cap → `A16`
 - summary-vs-rows scan → `R25`

@@ -3,10 +3,13 @@
 Research is the dominant token cost in this project. This skill exists so a
 usage limit can never cost more than one wave (`P12`), and so a batch can be
 resumed by any model on any account (`P11`). Updated 2026-08-26 (restructure
-T3.4): rule citations by id; the PROTOCOL collapse (T3.2) and the
-`rules_applied[]` verdict field (`R30`) land after Sean's T4.0 glossary
-session — until then batch 17's `PROTOCOL.md` is the binding contract and
-the research-agent definition carries the vocabulary.
+T3.4; T3.2/T3.5 landed 2026-08-26 with T4.5): rule citations by id. The
+VOCABULARY lives in ONE place — the `research-agent` definition (the three
+standings, the annotation kinds and bases, the materiality bar `T28`, the
+traps); a batch's `PROTOCOL.md` pins only the task shape, the output JSON
+and the batch-specific asks, and cites the rules by id. Batch 18's
+`scripts/ingest/research/batch18/PROTOCOL.md` is the current template;
+batch 17's is history.
 
 **The governing rule: artifacts are the handoff (`P11`).** A verdict JSON on
 disk survives model switches, account switches and hard stops. Conversation

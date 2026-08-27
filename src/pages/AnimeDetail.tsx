@@ -20,7 +20,7 @@ const AnimeDetail = () => {
   const { data: anime, isLoading } = useCatalogSeries(id);
   const { data: mapping } = useCatalogMapping(id);
   const [showAll, setShowAll] = useState(false);
-  const [activeFilters, setActiveFilters] = useState<Set<EpisodeType>>(new Set(['canon', 'mixed', 'filler', 'anime-only-canon']));
+  const [activeFilters, setActiveFilters] = useState<Set<EpisodeType>>(new Set(['canon', 'mixed', 'filler']));
 
   const toggleFilter = useCallback((type: EpisodeType) => {
     setActiveFilters(prev => {
@@ -78,7 +78,6 @@ const AnimeDetail = () => {
   const canonCount = mapping?.canonCount ?? anime.episodes.filter(ep => ep.type === 'canon').length;
   const mixedCount = mapping?.mixedCount ?? anime.episodes.filter(ep => ep.type === 'mixed').length;
   const fillerCount = mapping?.fillerCount ?? anime.episodes.filter(ep => ep.type === 'filler').length;
-  const animeOnlyCount = mapping?.animeOnlyCount ?? anime.episodes.filter(ep => ep.type === 'anime-only-canon').length;
 
   return (
     <div className="min-h-screen bg-background font-mono">
@@ -170,13 +169,6 @@ const AnimeDetail = () => {
               </Card>
               <Card className="border-dashed">
                 <CardContent className="p-3 text-center">
-                  <Tv className="w-4 h-4 mx-auto mb-1 text-type-anime" />
-                  <div className="text-xl font-bold text-type-anime">{animeOnlyCount}</div>
-                  <div className="text-[10px] text-muted-foreground">anime only</div>
-                </CardContent>
-              </Card>
-              <Card className="border-dashed">
-                <CardContent className="p-3 text-center">
                   <SkipForward className="w-4 h-4 mx-auto mb-1 text-type-filler" />
                   <div className="text-xl font-bold text-type-filler">{fillerCount}</div>
                   <div className="text-[10px] text-muted-foreground">filler</div>
@@ -197,7 +189,7 @@ const AnimeDetail = () => {
                       <> · <span className="text-type-filler">filler</span>:{mapping.fillerPercent}%</>
                     )}
                     {mapping.mangaAheadChapters != null && (
-                      <> · <span className="text-type-manga">manga_only</span>:+{mapping.mangaAheadChapters}ch</>
+                      <> · <span className="text-type-manga">{(mapping.tailBadge ?? 'source only').replace(' ', '_')}</span>:+{mapping.mangaAheadChapters}ch</>
                     )}
                   </span>
                 </div>
@@ -206,6 +198,7 @@ const AnimeDetail = () => {
                     spans={mapping.spans}
                     airedEpisodes={mapping.airedEpisodes}
                     mangaAheadUnits={mapping.mangaAheadUnits}
+                      tailBadge={mapping.tailBadge}
                     mangaAheadChapters={mapping.mangaAheadChapters}
                     className="h-2.5"
                   />
@@ -265,15 +258,6 @@ const AnimeDetail = () => {
                   onClick={() => toggleFilter('filler')}
                   pressed={activeFilters.has('filler')}
                   dimmed={!activeFilters.has('filler')}
-                />
-              )}
-              {animeOnlyCount > 0 && (
-                <TypeBadge
-                  type="anime_only"
-                  count={animeOnlyCount}
-                  onClick={() => toggleFilter('anime-only-canon')}
-                  pressed={activeFilters.has('anime-only-canon')}
-                  dimmed={!activeFilters.has('anime-only-canon')}
                 />
               )}
             </div>

@@ -1,4 +1,4 @@
-import { seriesHasInstrument, seriesHasSource } from '../../../scripts/ingest/lib/rulings/source-kinds';
+import { seriesHasInstrument, seriesHasSource, sourceKindOf } from '../../../scripts/ingest/lib/rulings/source-kinds';
 import type { AnimeSeries, EpisodeSpan, MappingSummary, SourceType } from '@/types/anime';
 import { mockAnimeData, getFilteredAnime, searchAnime, getAnimeById } from '@/data/mockAnime';
 import { lastChapterNumber } from '@/lib/mapping';
@@ -145,11 +145,11 @@ const buildMapping = (anime: AnimeSeries): MappingSummary => {
     { start: 1, end: aired, type: 'canon' },
   ];
 
-  const counts = { canon: 0, mixed: 0, filler: 0, 'anime-only-canon': 0 };
+  const counts = { canon: 0, mixed: 0, filler: 0 };
   for (const span of spans) {
     counts[span.type] += span.end - span.start + 1;
   }
-  const total = counts.canon + counts.mixed + counts.filler + counts['anime-only-canon'];
+  const total = counts.canon + counts.mixed + counts.filler;
 
   // A series can end on filler (Naruto: eps 219-220 have no mapping), so the
   // latest CONFIRMED mapping is the newest episode that has one.
@@ -194,7 +194,8 @@ const buildMapping = (anime: AnimeSeries): MappingSummary => {
     canonCount: counts.canon,
     mixedCount: counts.mixed,
     fillerCount: counts.filler,
-    animeOnlyCount: counts['anime-only-canon'],
+    tailBadge: hasInstrument ? sourceKindOf(sourceType)?.tailBadge ?? null : null,
+    sourceLabel: sourceKindOf(sourceType)?.seriesLabel ?? sourceKindOf(sourceType)?.noun ?? 'source',
     fillerPercent: total > 0 ? Math.round((counts.filler / total) * 100) : 0,
     continueFrom,
     latestKnown,

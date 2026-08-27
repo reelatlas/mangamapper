@@ -1,7 +1,7 @@
-// T27 (T4.3): the DATA vocabulary is canon | mixed | filler. 'anime-only-canon'
-// stays in this union only until T4.5 retires the display strings that key on
-// it — no stored row carries it (episodes_type_check).
-export type EpisodeType = 'canon' | 'mixed' | 'filler' | 'anime-only-canon';
+// T27: the standing vocabulary is exactly canon | mixed | filler (relative to
+// the series' source, T25). 'anime-only-canon' was retired from data in T4.3
+// and from the display in T4.5 (2026-08-26).
+export type EpisodeType = 'canon' | 'mixed' | 'filler';
 
 import type { SourceKindValue } from '../../scripts/ingest/lib/rulings/source-kinds';
 
@@ -36,8 +36,11 @@ export interface MappingSummary {
   canonCount: number;
   mixedCount: number;
   fillerCount: number;
-  animeOnlyCount: number;
   fillerPercent: number;          // 0-100, rounded
+  /** T25/T19: the `{noun} only` badge for the unadapted tail ('manga only', 'novel only'…); null when the source has no instrument */
+  tailBadge: string | null;
+  /** T25/T19: the series label for the source kind ('studio original' for originals; else the noun) — stored for the UI pass */
+  sourceLabel: string;
   continueFrom: ContinuePoint | null; // null when there is no source material
   latestKnown: ContinuePoint | null;  // latest episode with a confirmed manga mapping
   // Canon source material never (or not yet) animated — the manga_only zone
