@@ -1,0 +1,126 @@
+{
+  "series_id": "gantz",
+  "summary": "The honest terminal of the 2004 TV series is EPISODE 21 'Brother?' (兄ちゃん?, AT-X 2004-10-14), which adapts the Buddhist Temple mission's climax: chs 80 (tail) - 90, ending exactly where ch 90 'Alone' ends (Kurono teleported back alone, scored 8 points for a running total of 46, demanding Gantz revive Kato/Kishimoto/Sakuraoka, then walking out of the room alone). gantz.fandom's ep-21 infobox ('Adopted Chapter 080 - Chapter 090') and animefillerguide ('The last episode that aired is 21th (08 of the second season) corresponding to Chapter 80 ... 90 of the manga') agree independently, and the fandom chapter pages 80-90 reverse-map beat for beat onto the episode summary (ch 80 leg-shot, 81 Tomashiro/Yuta killed, 82-83 Sakuraoka's death, 84 Togo's death, 86-87 the Kannon shedding its shell, 88-89 Kato's kill and death, 90 the empty room). TARGET ROWS 22-26 take NO anchor under A1: they are the wholly anime-original 玄野星人篇 / 'Kill Kei Kurono' arc — ja.wikipedia labels the block アニメ版オリジナル, gantz.fandom's arc page prints 'chapters: None' and files every hunter in it (Muroto, Kajiura, Furuta, Kanda, Uehara, Nozaki) under 'Filler characters', AFG and AFL both mark 22-26 filler, and the fandom explains the studio wrote them because it had 'not having any more source material to work with'. Ep 26's closing train-station scene is a re-staging of the ch 1-2 opening already animated in ep 1 — re-shown pages, never a position ('pages, not numbers'). MU's pin is therefore RESOLVED but not accurate as an END: MU's anime field reads 'Vol 8, Chap 91 (TV) Original Ending Ep 22-26 / Vol 25, Chap 280 (Gantz:O)'; the ch-280 half is the 2016 Gantz:O FILM (a separate entry) and is what the G36 refusal was choking on (it had been attached to filler ep 26 and was removed in batch 17), while the TV half's ch 91 is one chapter PAST the last adapted chapter — ch 91 'Sexual Harassment?' (Kurono back at school, spotting the original Kishimoto) appears in no episode. MU most likely quoted the manga ARC's end (the fandom arc page spans the Buddhist Temple arc as chs 56-91), so its number happens to coincide with the correct post-series RESUME point rather than with coverage (G37). Two collateral findings: the stored ep-21 continue of 90 is one short (ep 21 covers ch 90 to its final page, so C5 gives 91), and the stored air dates for eps 22 and 25 are each off by one day against syobocal's AT-X airing records and the fandom infoboxes (the S2 slot is Thursday 10:00 on AT-X, unbroken 2004-08-26 through 2004-11-18) — wrong dates that still ascend, so the order gate never saw them.",
+  "anchors": [
+    {
+      "episode": 21,
+      "end_chapter": 90,
+      "start_chapter": 80,
+      "chapters_adapted": "80 (tail; ch 80 split with ep 20) - 90, heavily compressed — eleven chapters in one episode; ch 90 is carried to its final page (Kurono alone in the Gantz room, 8 pts / 46 total, then leaving)",
+      "volume": 8,
+      "confidence": "high",
+      "note": "A4 END = ch 90, the furthest mainline chapter adapted; A10 START = ch 80 (ep 20 stops on ch 80's opening page — Kurono begging Kato to shoot him — and ep 21 opens with the leg-shot two pages later, far more than a sliver). Two independent sources give 80-90; the fandom chapter-page synopses 80-90 match the ep-21 summary beat for beat, including ch 90's closing image. Vol 8 = chs 83-94 (AFG prints the same boundary as our stored table).",
+      "sources": [
+        "https://gantz.fandom.com/api.php?action=parse&page=Episode_21&prop=wikitext&format=json",
+        "https://www.animefillerguide.com/anime/gantz/",
+        "https://gantz.fandom.com/api.php?action=parse&page=Chapter_90&prop=wikitext&format=json",
+        "https://gantz.fandom.com/api.php?action=parse&page=Chapter_89&prop=wikitext&format=json"
+      ]
+    }
+  ],
+  "continue_points": [
+    {
+      "episode": 21,
+      "continue_chapter": 91,
+      "kind": "post_series",
+      "note": "Resume at ch 91 'Sexual Harassment?' (ナンパ?, vol 8). Ep 21 finishes ch 90 — you have already seen Kurono alone in the room, the 8 points and his demand that Gantz bring everyone back — and ch 91 (Kurono back at school, the news report on the Rateiin Temple, spotting the ORIGINAL Kei Kishimoto on the street) is in no episode. Everything from ch 91 to the end of the manga (ch 383, vol 37) is unanimated by this TV series: the Shorty Alien arc onward was replaced by the anime-original eps 22-26. C5: coverage (90) + 1. AFG says the same in words: 'we must start reading from Chapter 91 of the manga, this corresponds to Volume 8'.",
+      "sources": [
+        "https://www.animefillerguide.com/anime/gantz/",
+        "https://gantz.fandom.com/api.php?action=parse&page=Chapter_91&prop=wikitext&format=json",
+        "https://gantz.fandom.com/api.php?action=parse&page=Buddhist_Temple_Alien_Mission_Arc&prop=wikitext&format=json"
+      ]
+    }
+  ],
+  "anchor_hostile": [],
+  "annotations": [
+    {
+      "episodes": [21],
+      "kind": "abridged",
+      "chapters": "80-90",
+      "note": "Eleven chapters compressed into one episode (deaths of Tomashiro/Yuta, Sakuraoka, Togo and Kato all in ~22 minutes). Refines the stored wording: the MISSION's ending is faithful — Kato kills the Kannon and is run through by its tail (chs 88-89) and Kurono returns alone with 8 points (ch 90), exactly as in the manga. The divergence starts AFTER ep 21, at ep 22, not inside it."
+    },
+    {
+      "episodes": [22, 23, 24, 25, 26],
+      "kind": "divergence",
+      "chapters": "n/a",
+      "note": "The anime-original 玄野星人篇 / Kill Kei Kurono Mission (ja-WP: アニメ版オリジナル; fandom arc page: 'chapters: None'). Seven hunters, six of them anime-only 'Filler characters' on the wiki, with Gantz targeting Kurono himself — a scenario that never occurs in the manga. Zero source standing (T27 filler)."
+    },
+    {
+      "episodes": [26],
+      "kind": "divergence",
+      "chapters": "n/a",
+      "note": "The finale's train-station scene re-stages the ch 1-2 opening already animated in ep 1 (Kurono given the choice to live). Re-shown pages — never cited as a position ('pages, not numbers', Sean 2026-08-27); it does not make ep 26 anchorable."
+    }
+  ],
+  "repairs": [
+    {
+      "episode": 21,
+      "field": "continue_chapter",
+      "old": 90,
+      "new": 91,
+      "why": "C5 post-series continue = furthest first-time coverage + 1. Ep 21 does not stop mid-ch-90: it carries ch 90 to its last beat (the empty room, 8 points / 46 total, the demand to Gantz, Kurono walking out alone), so C1 (continue IN the straddled chapter) does not apply. AFG states the resume point as ch 91 explicitly. The stored 90 came from batch 17 following two content farms (MangaShed 'concludes around chapter 89 ... start reading at chapter 90'; wheredoestheanimeleaveoff 'start at Chapter 90') — cross-check-only sources, and their value is the conservative re-read convention rather than a coverage claim.",
+      "sources": [
+        "https://www.animefillerguide.com/anime/gantz/",
+        "https://gantz.fandom.com/api.php?action=parse&page=Chapter_90&prop=wikitext&format=json",
+        "https://gantz.fandom.com/api.php?action=parse&page=Episode_21&prop=wikitext&format=json"
+      ]
+    },
+    {
+      "episode": 21,
+      "field": "continue_note (C3 skip-ahead)",
+      "old": "C3 (Sean 2026-08-25): this episode also covered ch 91 ahead of the continue point — skip on arrival unless re-reading.",
+      "new": null,
+      "why": "Ep 21 never covered ch 91 — the note appears to have been generated from the stored chapters_adapted string, which mentions ch 91 only to say it is NOT adapted. Telling the reader to skip ch 91 on arrival would skip the one chapter the continue point sends them to. Drop the C3 note on this row.",
+      "sources": [
+        "https://gantz.fandom.com/api.php?action=parse&page=Episode_21&prop=wikitext&format=json",
+        "https://gantz.fandom.com/api.php?action=parse&page=Chapter_91&prop=wikitext&format=json"
+      ]
+    },
+    {
+      "episode": 21,
+      "field": "chapters_adapted",
+      "old": "80 (tail)-90, heavily compressed; mission ending altered to set up the anime-original finale; ch 91 (arc aftermath) not faithfully adapted",
+      "new": "80 (tail; ch 80 split with ep 20) - 90, heavily compressed — eleven chapters in one episode; ch 90 is carried to its final page (Kurono alone in the Gantz room, 8 pts / 46 total, then leaving)",
+      "why": "Two defects in the old string: (1) it names ch 91, which is what produced the spurious C3 skip note above; (2) 'mission ending altered' is not what the sources show — chs 88-90 are adapted faithfully (Kato's kill and death, Kurono's 8 points and solitary exit); the alteration is the REPLACEMENT of what follows, i.e. eps 22-26.",
+      "sources": [
+        "https://gantz.fandom.com/api.php?action=parse&page=Chapter_88&prop=wikitext&format=json",
+        "https://gantz.fandom.com/api.php?action=parse&page=Chapter_90&prop=wikitext&format=json",
+        "https://gantz.fandom.com/api.php?action=parse&page=Episode_21&prop=wikitext&format=json"
+      ]
+    },
+    {
+      "episode": 22,
+      "field": "air_date",
+      "old": "2004-10-22",
+      "new": "2004-10-21",
+      "why": "The second season ran Thursdays 10:00 on AT-X without a break (2004-08-26 ep 14 through 2004-11-18 ep 26). 2004-10-22 is a Friday. syobocal's per-airing record for TID 483 (GANTZ 地上波未放映篇, ChID 20 = AT-X) gives ep 22 二度と言うな！ at 2004-10-21 10:00, and the fandom episode page prints '2004 October 21'. Every other stored S2 date in range matches syobocal exactly, so this is a one-row error, not a slot difference. Ascending order is preserved, which is why the order gate never flagged it.",
+      "sources": [
+        "https://cal.syoboi.jp/db.php?Command=ProgLookup&TID=483&Range=20040801_000000-20041231_235959",
+        "https://gantz.fandom.com/api.php?action=parse&page=Episode_22&prop=wikitext&format=json"
+      ]
+    },
+    {
+      "episode": 25,
+      "field": "air_date",
+      "old": "2004-11-10",
+      "new": "2004-11-11",
+      "why": "Same Thursday AT-X slot: 2004-11-10 is a Wednesday. syobocal TID 483 gives ep 25 生きて帰ろうぜ at 2004-11-11 10:00; the fandom episode page prints '2004 November 11'. Eps 24 (11-04) and 26 (11-18) are stored correctly, so 11-10 breaks the weekly cadence by one day while still ascending.",
+      "sources": [
+        "https://cal.syoboi.jp/db.php?Command=ProgLookup&TID=483&Range=20040801_000000-20041231_235959",
+        "https://gantz.fandom.com/api.php?action=parse&page=Episode_25&prop=wikitext&format=json"
+      ]
+    }
+  ],
+  "type_corrections": [],
+  "structure": {
+    "notes": "Chapter space confirmed: 383 chapters / 37 tankōbon volumes (MU series 5186727617 latest_chapter 383, 'status: 37 Volumes (Complete)'), identical to the stored space — gantz carries NO edition question (MU also lists an 18-volume bunkoban, but no anchor here depends on it and every source cited uses the serialization/tankōbon numbering). AFG's 'Volume 8 (contains chapters 83 to 94)' matches the stored v8 boundary exactly, corroborating the volume table at the terminal. Structure: 26 rows in two 13-episode seasons (S1 'the first stage', Fuji TV, syobocal TID 377; S2 '地上波未放映篇', AT-X, TID 483 — syobocal's memo says 話数は前作からの連番で表記, 全13話(#14〜#26), i.e. the same cumulative numbering our rows use). ja-WP's 各話リスト groups S2 as 仏像篇 = eps 14-21 and 玄野星人篇（アニメ版オリジナル）= eps 22-26; ja-WP's prose adds that the director deliberately dropped the チビ星人編 (Shorty Alien arc) and everything after it, closing the show with an original scenario. Arc map through the terminal: Onion chs 1-25 = eps 1-5, Tanaka chs 26-55 = eps 5-14, Buddhist Temple chs 56-91 = eps 15-21 (the arc's chs 91 tail unanimated). MU's anime field mixes two entries in one string — 'Vol 1, Chap 1 (TV) / Vol 21, Chap 238 (Gantz:O)' and 'Vol 8, Chap 91 (TV) Original Ending Ep 22-26 / Vol 25, Chap 280 (Gantz:O) Some differences'. The Gantz:O half (chs 238-280, the Osaka arc) belongs to the 2016 CG film entry, and the 2010/2011 live-action films are separate again; only the TV half is in scope here, and its ch 91 is not reached by any row (G37: overstated by one, almost certainly the ARC boundary rather than coverage). With ep 21 anchored at 90 and its continue at 91, G56 covers everything MU's pin was trying to say.",
+    "order_only": []
+  },
+  "flags_for_sean": [
+    "Ep-21 END: three-way source split resolved in favour of 90. gantz.fandom infobox and animefillerguide both say ep 21 = chs 80-90; MangaShed says the arc 'concludes around chapter 89'; MU says 'Vol 8, Chap 91 (TV)'. Decisive evidence is content-level: the ep-21 summary reproduces ch 90's full contents (8 points, total 46, the demand to Gantz, leaving alone), and ch 91's contents (school, the news report, the original Kishimoto) appear in no episode. https://gantz.fandom.com/wiki/Episode_21 | https://www.animefillerguide.com/anime/gantz/ | https://gantz.fandom.com/wiki/Chapter_91",
+    "Continue moved 90 -> 91 against two content farms that say 90. If you prefer the conservative re-read convention (start at the last chapter the episode touched) over C5, the value is 90 — but note that would also contradict AFG, which is the only per-series source here that states a resume chapter as such.",
+    "Date repairs on eps 22 and 25 are collateral (found while checking row identity, not part of the A1 ask): both are one day off the unbroken Thursday AT-X slot and both still ascend, so no gate would ever catch them. syobocal's XML for TID 483 covers eps 14-26 and agrees with the fandom infoboxes on all 13 rows.",
+    "The stored ep-21 C3 'also covered ch 91 — skip on arrival' note is self-defeating once the continue is 91; it looks like it was auto-derived from a chapters_adapted string that mentioned 91 only in the negative. Worth checking whether any other row's C3 note was generated the same way from a 'not adapted' clause.",
+    "Already resolved, no action: the bogus ep-26 -> ch 280 / v25 anchor (the Gantz:O endpoint) is gone from the stored set and the A1 ruling on ep 26 is recorded; this verdict does not disturb it."
+  ]
+}

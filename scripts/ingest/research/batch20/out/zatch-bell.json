@@ -1,0 +1,164 @@
+{
+  "series_id": "zatch-bell",
+  "summary": "Rows 136-138 are the tail of the manga-adapting run: ep 136 = Level.206 'Arth's Intentions' in full plus the opening pages of Level.207 (Arth leads the group into the return-device room and starts explaining the 28 Demon-World characters), ep 137 = the rest of 207 + 208 'The Light of Hope' (the seal is broken), ep 138 = 209-211, ending exactly on ch 211's last page — Riou announcing that Faudo's target is Japan, 'about an hour from here'. That is the HONEST TERMINAL (G56): ep 138 -> ch 211, vol 22, and the post-series continue is ch 212 (C5, coverage 211 + 1). Ep 138 does NOT straddle into 212, so C1 does not apply. MU's pin ('Vol 22, Chap 212 (Original Ending EP 139-150)') is one chapter AHEAD of the terminal, not redundant and not an edition artifact (G37): it counts the first anime-original episode. Ep 139 'Aim for the Brain! Desperate Re-entry' does restage real, first-time pages of ch 212 — its whole first act (the race after the swimming Faudo, Canchome's distraction, the entry through Faudo's mouth, the gulped seawater, the anatomical-map room, Zaruchim's 'I'm forgetting something') is ch 212 pp. 1-11 read against the MangaDex scan and the Toei official synopsis; from ch 212 p12 (Riou making Faudo cough the group back out) the anime never returns to the manga. Because ~10 of ch 212's 17 story pages carry ep 139's first half, this is a genuine T28 fork rather than a fragment, so a type_correction to mixed is PROPOSED with its counter-evidence stated, and the anchor is WITHHELD in anchor_hostile pending Sean (the zatch-51 precedent). Ep 140 takes neither an anchor nor an anchor_hostile entry: both konjikinogash episode pages give it 'N/A (Filler)', ja-WP bolds it as anime-original and AFL types it Filler — zero source content, filler under A1. Either way the reader-facing answer is stable: resume at ch 212, and ch 212's second half plus 213-323 (the manga's real Faudo conclusion, Clear Note, the ending) are never animated.",
+  "anchors": [
+    {
+      "episode": 136,
+      "end_chapter": 207,
+      "start_chapter": 206,
+      "chapters_adapted": "206, 207 (207 partial - its opening pages only: the return-device room and Arth's explanation of the Demon-World characters; 207 is finished at ep 137)",
+      "volume": 22,
+      "confidence": "medium",
+      "note": "A4: ch 206 'Arth's Intentions' runs in full (its last page is Kiyomaro's 'teach me to read Demon writing, I'll master it in five minutes'), then the episode's closing scene animates ch 207 pp. 1-2 (entering the device room, the 28-character keypad, Kiyomaro asking Arth to read the terminal display). Repairs the stored END 206. Reader-facing continue is 207 under either reading.",
+      "sources": [
+        "https://konjikinogash.fandom.com/api.php?action=parse&page=Episode_136&prop=wikitext&format=json",
+        "https://konjikinogash.fandom.com/api.php?action=parse&page=Anime%20Episodes/Season%203&prop=wikitext&format=json",
+        "https://www.toei-anim.co.jp/tv/GB/episode/summary/136/",
+        "https://mangadex.org/chapter/e4741d87-a214-4b56-879f-e4922a324db2"
+      ]
+    },
+    {
+      "episode": 137,
+      "end_chapter": 208,
+      "start_chapter": 207,
+      "chapters_adapted": "207-208 (207 opens at ep 136 and is completed here; 208 ends on the double-page spread of Faudo rising)",
+      "volume": 22,
+      "confidence": "high",
+      "note": "A4/A10: Kiyomaro masters the device's writing and sets the 90-minute timer (207), Riou's demons destroy Faudo's seal (208). Toei's official synopsis ends the episode on the key being destroyed; stored values confirmed unchanged.",
+      "sources": [
+        "https://konjikinogash.fandom.com/api.php?action=parse&page=Episode_137&prop=wikitext&format=json",
+        "https://www.toei-anim.co.jp/tv/GB/episode/summary/137/",
+        "https://zatchbell.fandom.com/api.php?action=parse&page=Story_Arcs&prop=wikitext&format=json"
+      ]
+    },
+    {
+      "episode": 138,
+      "end_chapter": 211,
+      "start_chapter": 209,
+      "chapters_adapted": "209-211",
+      "volume": 22,
+      "confidence": "high",
+      "note": "THE HONEST TERMINAL (G56): the last row every source calls manga canon. Ends on ch 211's final page - Riou declaring 'Faudo's target will be Japan!!!' and 'about an hour to get there' (the anime says six hours). Ch 212 is NOT entered here, so no C1 straddle. A4.",
+      "sources": [
+        "https://konjikinogash.fandom.com/api.php?action=parse&page=Episode_138&prop=wikitext&format=json",
+        "https://www.toei-anim.co.jp/tv/GB/episode/summary/138/",
+        "https://mangadex.org/chapter/2e523924-936f-4e6d-87b3-74c364a6b50c",
+        "https://ja.wikipedia.org/wiki/%E9%87%91%E8%89%B2%E3%81%AE%E3%82%AC%E3%83%83%E3%82%B7%E3%83%A5!!"
+      ]
+    }
+  ],
+  "continue_points": [
+    {
+      "episode": 138,
+      "continue_chapter": 212,
+      "kind": "post_series",
+      "note": "Resume at Level.212 'The Worst-case Scenario' (vol 22). C5: coverage 211 + 1. The anime never adapts it as canon - the anime-original ending (eps 139-150) restages only ch 212's first eleven pages before leaving the manga for good, so ch 212's second half (Riou coughing the group out of Faudo, his face-to-face with Kiyomaro) and everything from 213 to the final chapter 323 are unanimated: the manga's real Faudo conclusion, Zeon/Dufort, Clear Note and the ending are all ahead of you.",
+      "sources": [
+        "https://mangadex.org/chapter/211bef52-d1e0-4dd0-abe2-f38ed0d0739c",
+        "https://konjikinogash.fandom.com/api.php?action=parse&page=Episode_139&prop=wikitext&format=json",
+        "https://zatchbell.fandom.com/api.php?action=parse&page=Story_Arcs&prop=wikitext&format=json"
+      ]
+    },
+    {
+      "episode": 136,
+      "continue_chapter": 207,
+      "kind": "parity",
+      "note": "Ep 136 stops two pages into ch 207 and ep 137 finishes it - resume IN 207 (C1); the same value the plain 206 + 1 reading gives, so the instruction is safe whichever way the END repair is ruled.",
+      "sources": [
+        "https://konjikinogash.fandom.com/api.php?action=parse&page=Episode_136&prop=wikitext&format=json",
+        "https://www.toei-anim.co.jp/tv/GB/episode/summary/137/"
+      ]
+    }
+  ],
+  "anchor_hostile": [
+    {
+      "episode": 139,
+      "why": "Filler as stored (AFL Filler; ja-WP bolds it as アニメオリジナルストーリー; zatchbell.fandom 'Episodes 139-150 are anime only content'; MU '(Original Ending EP 139-150)'; Sean's batch-17 ruling) - A1 forbids an anchor on a filler row, so none is issued. But the row is NOT contentless: konjikinogash.fandom's per-episode field reads 'Chapter 212 (Partially)' and its own Manga & Anime Differences note says the divergence starts only AFTER the re-entry, and reading ch 212 (MangaDex) against the Toei official synopsis shows the episode's entire first act = ch 212 pp. 1-11, first-time pages, in running order. A type_correction to mixed is proposed below; IF Sean accepts it the anchor would be END 212 / START 212 / chapters_adapted '212 (pp. 1-11 of 17 - through the anatomical-map room; the rest of 212 is never animated)' / vol 22. Withheld pending his ruling, per the zatch-51 precedent.",
+      "sources": [
+        "https://konjikinogash.fandom.com/api.php?action=parse&page=Episode_139&prop=wikitext&format=json",
+        "https://mangadex.org/chapter/211bef52-d1e0-4dd0-abe2-f38ed0d0739c",
+        "https://www.toei-anim.co.jp/tv/GB/episode/summary/139/",
+        "https://www.animefillerlist.com/shows/zatch-bell"
+      ]
+    }
+  ],
+  "annotations": [
+    {
+      "episodes": [136, 137],
+      "kind": "partial",
+      "chapters": "207",
+      "note": "Ch 207 'Offense and Defense' is split across the episode boundary: ep 136's closing scene animates its opening pages (Arth leads the group into the return-device room and explains the 28 Demon-World characters), ep 137 carries the rest (Kiyomaro mastering the terminal and setting the 90-minute timer)."
+    },
+    {
+      "episodes": [139],
+      "kind": "partial",
+      "chapters": "212",
+      "note": "T28 mandatory tie: ep 139's first act restages ch 212 pp. 1-11 for the first time - the group racing after the swimming Faudo, the entry through his mouth, the seawater he gulps, the anatomical-map room, and Zaruchim's 'I'm forgetting something' - before leaving the manga permanently at ch 212 p12, where Riou makes Faudo cough the group back out (never animated). The anime also stretches Riou's 'one hour to Japan' (ch 211) into six hours to make room for the original ending."
+    },
+    {
+      "episodes": [140],
+      "kind": "divergence",
+      "chapters": "212-323",
+      "note": "Zero source content: both konjikinogash pages give ep 140 'N/A (Filler)', ja-WP bolds it as anime-original, AFL types it Filler. From here the anime runs its own ending to ep 150."
+    }
+  ],
+  "repairs": [
+    {
+      "episode": 136,
+      "field": "end_chapter",
+      "old": 206,
+      "new": 207,
+      "why": "Ep 136 does not stop at the end of ch 206: its final scene animates ch 207 pp. 1-2 (entering the device room, the keypad, Kiyomaro asking Arth to read the terminal display). konjikinogash's episode infobox reads 'Chapter 206 / Chapter 207 (Partially)' and its Season 3 list gives 206 + 207; Toei's official synopsis ends ep 136 with 'いよいよ清麿たちはファウードの移動装置に取り組む'; the MangaDex scan puts that beat on ch 207 pp. 1-2, not in 206. A4 (END = furthest mainline chapter adapted in running order).",
+      "sources": [
+        "https://konjikinogash.fandom.com/api.php?action=parse&page=Episode_136&prop=wikitext&format=json",
+        "https://www.toei-anim.co.jp/tv/GB/episode/summary/136/",
+        "https://mangadex.org/chapter/e4741d87-a214-4b56-879f-e4922a324db2"
+      ]
+    },
+    {
+      "episode": 136,
+      "field": "chapters_adapted",
+      "old": "206",
+      "new": "206, 207 (207 partial - its opening pages only; finished at ep 137)",
+      "why": "Page split belongs in chapters_adapted; paired with the end_chapter repair above.",
+      "sources": [
+        "https://konjikinogash.fandom.com/api.php?action=parse&page=Anime%20Episodes/Season%203&prop=wikitext&format=json",
+        "https://mangadex.org/chapter/e4741d87-a214-4b56-879f-e4922a324db2"
+      ]
+    },
+    {
+      "episode": 139,
+      "field": "annotation_note (divergence 212-323, eps 139+150)",
+      "old": "the anime stops adapting at ch 211 and never covers ch 212-323",
+      "new": "the anime's last full adaptation is ch 211 (ep 138); ep 139 restages ch 212 pp. 1-11 (the re-entry into Faudo) before diverging permanently at p12; ch 212's second half and chs 213-323 are never animated",
+      "why": "The stored batch-17 note overstates the cut: ch 212 is partially animated. Verified against the chapter itself (MangaDex) plus konjikinogash's per-episode field and Toei's official ep-139 synopsis, whose first two paragraphs are ch 212's content.",
+      "sources": [
+        "https://mangadex.org/chapter/211bef52-d1e0-4dd0-abe2-f38ed0d0739c",
+        "https://konjikinogash.fandom.com/api.php?action=parse&page=Episode_139&prop=wikitext&format=json",
+        "https://www.toei-anim.co.jp/tv/GB/episode/summary/139/"
+      ]
+    }
+  ],
+  "type_corrections": [
+    {
+      "episodes": [139],
+      "type": "mixed",
+      "note": "PROPOSED, not asserted - Sean's call (T28 fork). FOR: konjikinogash.fandom, the per-episode source batch 17 relied on, distinguishes ep 139 ('Chapter 212 (Partially)') from ep 140+ ('N/A (Filler)') and states the divergence begins only after the re-entry; reading ch 212 on MangaDex against Toei's official ep-139 synopsis shows pp. 1-11 of the chapter's 17 story pages carry the episode's whole first act in running order - a contiguous run, not a cameo or a transplanted beat. AGAINST: four independent block-level sources (AFL Filler, ja-WP bold = アニメオリジナルストーリー, zatchbell.fandom 'Episodes 139-150 are anime only content', MU '(Original Ending EP 139-150)') and Sean's own 2026-08-25 T6 ruling. Nothing reader-facing turns on it: the continue is 212 either way.",
+      "sources": [
+        "https://konjikinogash.fandom.com/api.php?action=parse&page=Episode_139&prop=wikitext&format=json",
+        "https://mangadex.org/chapter/211bef52-d1e0-4dd0-abe2-f38ed0d0739c",
+        "https://www.toei-anim.co.jp/tv/GB/episode/summary/139/"
+      ]
+    }
+  ],
+  "structure": {
+    "notes": "Chapter space is the manga's own Level.1-323 numbering (ja-WP 全323話; MU latest_chapter 323) - the same space our stored anchors use; no edition divergence on this series (the toriko/gto edition question does not apply). Volume 22 = chs 203-212 confirmed by zatchbell.fandom's chapter pages and the ch 212 end-plate 'KONJIKI NO GASH!! 22 - END'; ch 213 opens vol 23, matching the stored boundaries. MangaDex carries an unnumbered volume extra it labels '212.5' inside vol 22 (and 220.5 / 223.5 in vol 23) - volume bonus material, never mainline, never an anchor target; MU's coverage pin is on mainline 212, so the 'MU counted an omake' hypothesis is ruled OUT. Row identity is clean for 136-140: ja-WP, Toei's official list and AFL agree on titles and on 2005-12-11 / 12-18 / 12-25 / 2006-01-08 / 01-15, matching our stored dates (no recap or special is counted anywhere in this range, so no index shift). AFL has a date defect at ep 131 (prints 2005-10-06; ja-WP and Toei give 2005-11-06) - already covered by the stored G53 override. Observation outside this lane: our chapter_space total_chapters=324 sits one above latest_known=323 and above ja-WP's 全323話.",
+    "order_only": []
+  },
+  "flags_for_sean": [
+    "THE FORK (ep 139): is ~10 of ch 212's 17 story pages carrying an episode's first act 'a substantial, story-carrying share' (T28 -> mixed, ep 139 becomes the terminal at 212 and MU's pin turns redundant), or is a block consensus of four sources plus your 2026-08-25 T6 ruling the stronger prior (stays filler, terminal remains ep 138 -> 211 and MU's 212 is one ahead, G37)? The anchor is withheld in anchor_hostile either way; the reader's resume is 212 under both. Evidence: konjikinogash Episode 139 'Chapter 212 (Partially)' + its Manga & Anime Differences ('all events ... after they re-enter Faudo are entirely anime exclusive'); ch 212 pp. 1-11 vs p12 on MangaDex; Toei's official synopsis https://www.toei-anim.co.jp/tv/GB/episode/summary/139/",
+    "ep 136 END 206 -> 207 is a two-page repair (medium confidence): the pages are real and first-time, but two pages is small. Rejecting it changes nothing the reader sees - the continue is 207 either way - so it is purely a display/accounting call.",
+    "Eps 139-150 do not advance the reader at all: whoever finishes the anime resumes at ch 212, the same value delivered on ep 138. If the UI carries the last continue forward, no rows are needed for 140-150; if it does not, they all want continue 212.",
+    "Chapter-space nit outside this lane: stored total_chapters=324 vs latest_known=323 and ja-WP's 全323話 - worth a look at whether an extra is being counted as mainline."
+  ]
+}

@@ -1,0 +1,74 @@
+{
+  "series_id": "hellsing",
+  "summary": "The 2001 Gonzo TV series adapts the Young King OURs manga only through Order 12 and only in its first seven episodes; eps 8-13 are the anime-original Incognito arc (the A-7 studio-ending shape), with ONE island of manga content: ep 10's flashback, which is Order 02 'Master of Monster' relocated out of running order. So the last canon/mixed row is ep 10 and its anchor is END 2 / START 2 / {2} / vol 1 (already stored, re-verified here on the exact title match, the fandom chapter page's reverse mapping and AFL's lone 'Manga Canon' typing in the back half). The FRONTIER of the run, however, is ep 7 (END 12): ep 7 animates Order 11 (funeral, manpower, Wild Geese cut) and the first two thirds of Order 12 (Imperial War Museum, Maxwell's insult, Anderson summoned) and then leaves the chapter for an anime-original Alucard-vs-Anderson duel — Order 12's remainder (Seras' tour-guide defusal, the cafe where Maxwell briefs Integra on MILLENNIUM, the Major/Doctor coda) is never animated, and Millennium never enters the TV series at all. MU's pin is therefore NOT overstated and NOT in another edition's numbering: MU's end field reads 'Vol 2, Chap 12 (2001) / Vol 10, Chap 95 (Ultimate) Skips most of Chap 2', and Order 12 is exactly the last chapter of tankobon vol 2 in ja-WP's own volume table — the pin is REDUNDANT with our stored ep 7 anchor (G56), it merely sat on filler row 13 (A1). Target rows 11, 12 and 13 take NO anchor and NO anchor_hostile entry: they are filler under A1 with zero manga content (Tower of London / SAS-FREAKs / Incognito / Set — fandom episode pages carry 'mangachap = N/A'; AFL and AFG both type all three filler). The post-series continue is proposed as Order 12 under C1 (mid-chapter stop in a straddled chapter) rather than the stored 13, so the reader does not skip the scene that names Millennium.",
+  "anchors": [
+    {
+      "episode": 10,
+      "end_chapter": 2,
+      "start_chapter": 2,
+      "chapters_adapted": "2",
+      "volume": 1,
+      "confidence": "high",
+      "note": "Last canon/mixed row of the run (A1 honest terminal). Integra's surgery is anime-original framing; the flashback inside it — Arthur's deathbed succession, Richard's coup, the dungeon, Alucard revived by her blood, 'my master' — is Order 02, whose title 'Master of Monster' is the episode's own title. Relocated out of running order, so it never moved the frontier (stored `rearranged` fact is correct); END stays 2 and the FRONTIER of the series stays ep 7's Order 12. Confirms the stored anchor unchanged.",
+      "sources": [
+        "https://hellsing.fandom.com/api.php?action=parse&page=Order%2002:%20Master%20of%20Monster&prop=wikitext&format=json",
+        "https://hellsing.fandom.com/api.php?action=parse&page=Order:%2010%E2%80%94Master%20of%20Monster&prop=wikitext&format=json",
+        "https://ja.wikipedia.org/wiki/HELLSING",
+        "https://www.animefillerlist.com/shows/hellsing"
+      ]
+    }
+  ],
+  "continue_points": [
+    {
+      "episode": 10,
+      "continue_chapter": 12,
+      "kind": "post_series",
+      "note": "C1 in the straddled chapter. Resume at Order 12 'Balance of Power (2)' and re-read it from the point where Seras breaks up the Alucard/Anderson standoff: the TV series animates only the museum confrontation (ep 7) and then swaps the rest of the chapter for an anime-original duel, so the cafe scene where Maxwell tells Integra what MILLENNIUM is — the hinge of the entire remaining manga — was never shown, and Order 11's Millennium research and Wild Geese recruitment were cut too. Orders 13-89 (vols 3-10, the whole Millennium war) are never adapted by the 2001 TV series; eps 8-13 replace them with the anime-original Incognito ending.",
+      "sources": [
+        "https://api.mangaupdates.com/v1/series/31591966476",
+        "https://hellsing.fandom.com/api.php?action=parse&page=Order%2012:%20Balance%20of%20Power%20(2)&prop=wikitext&format=json",
+        "https://hellsing.fandom.com/api.php?action=parse&page=Order:%2007%E2%80%94Duel&prop=wikitext&format=json"
+      ]
+    }
+  ],
+  "anchor_hostile": [],
+  "annotations": [
+    {
+      "episodes": [10],
+      "kind": "graft",
+      "chapters": "19 (prologue)",
+      "note": "Arthur Hellsing teaching a young Integra the nature of vampires — the 1-2 page prologue of Order 19 'Elevator Action (6)' — is transplanted into ep 10's flashback (the anime adds Integra's mother's photo on the desk, an anime-original detail). Position-less: a far-later fragment used out of running order, so it does NOT move END (stays 2 under A4/A12) and does NOT move the continue. Medium confidence, single wiki (two pages) — see flags."
+    },
+    {
+      "episodes": [11, 12, 13],
+      "kind": "divergence",
+      "chapters": "13-19",
+      "note": "Extends the stored eps 8,13 divergence fact to the two rows it does not yet cover: eps 11-13 are wholly the anime-original Incognito ending (Round Table/Queen, Tower of London, SAS converted to FREAKs, Incognito fused with Set, Alucard beheaded and restored, Walter's helicopter). Zero manga content — fandom episode pages carry mangavol/mangachap = N/A; the manga's parallel span (Orders 13-19, the Rio/Elevator Action arc) is never adapted."
+    }
+  ],
+  "repairs": [
+    {
+      "episode": 10,
+      "field": "continue_chapter",
+      "old": 13,
+      "new": 12,
+      "why": "C1 over C5: ep 7 stops MID-Order 12, not at its end. It animates the Imperial War Museum standoff (Maxwell's arrival, the 'Protestant sow' insult, Alucard's appearance, Anderson summoned) and then diverges into an anime-original duel; the chapter's remaining third — Seras defusing the standoff as a tour guide, Anderson leaving for Rome, the cafe where Maxwell briefs Integra on Millennium, the Major/Professor coda — never aired, and Millennium is absent from the TV series entirely (ja-WP notes the OVA was commissioned to cover the Millennium chapter). A reader resuming at Order 13 would open on Alucard and Walter discussing Millennium and the flight to Rio without ever having been told what Millennium is. Stored chapters_adapted for ep 7 already records '11-12 (both partial)', so the straddle is already in our data. If Sean prefers a strict C5 coverage+1 reading the value is 13 — flagged.",
+      "sources": [
+        "https://hellsing.fandom.com/api.php?action=parse&page=Order%2012:%20Balance%20of%20Power%20(2)&prop=wikitext&format=json",
+        "https://hellsing.fandom.com/api.php?action=parse&page=Order:%2007%E2%80%94Duel&prop=wikitext&format=json",
+        "https://api.mangaupdates.com/v1/series/31591966476",
+        "https://ja.wikipedia.org/wiki/HELLSING"
+      ]
+    }
+  ],
+  "type_corrections": [],
+  "structure": {
+    "notes": "CHAPTER SPACE: mainline numbering is the Young King OURs 'Order' run, Orders 1-89 (ja-WP: 全89話+特別収録3話; hellsing.fandom has one page per Order 1-89). The extra units are 3 CROSS FIRE side chapters bound into vols 1-3 (89+3 = AniList's total_chapters 92) plus further extras reaching MU's/AniList's 95 — none of them mainline, none of them touched by the TV series. VOLUME BOUNDARY COMPLETION: the context's open 'v10: 80-?' closes at 80-89 (ja-WP vol 10 lists exactly 10 chapters, WOLF FANG (1) through ROMANCIA; hellsing.fandom's last chapter page is Order 89: Romancia). MU FIELD (verbatim, api.mangaupdates.com/v1/series/31591966476): start 'Vol 1, Chap 1 (2001/Ultimate)', end 'Vol 2, Chap 12 (2001) / Vol 10, Chap 95 (Ultimate) Skips most of Chap 2'. The volume+chapter pair matches the tankobon structure exactly (vol 2 = Orders 7-12), so MU is in OUR numbering — the batch trap that 'ch 12' might be a vol-1-2 unit COUNT is defused, and in any case both readings land on the same Order. The trailing 'Skips most of Chap 2' clause is syntactically attached to the Ultimate entry and is NOT true of the TV series, whose ep 10 renders Order 02's main body; treat it as MU prose about the OVA. SOURCE DEFECT WORTH RECORDING: hellsing.fandom chapter-page infobox field 'animeepisode' is unreliable past Order 12 — Order 13 -> 'Episode 10', Order 14 -> 'Episode 11', Order 15 -> 'Episode 10' are impossible (those chapters are the Rio/Hotel arc: Alucard branded a terrorist, the GATE assault, Alhambra; the named TV episodes are Integra's surgery flashback and the Tower of London deployment). Only Order 19's 'Episode 10 (prologue)' survives a content check, via a second page on the same wiki. Do not use that field as a lone reverse index. AFG has NO terminal chapter for this series ('The anime adapted up to chapter – of the manga'); AFL and AFG agree on filler = 4, 8, 9, 11, 12, 13. en-WP 'List of Hellsing episodes' is the 2001 series (G55 date check: Oct 10 2001 - Jan 16 2002) and carries no chapter column.",
+    "order_only": []
+  },
+  "flags_for_sean": [
+    "CONTINUE FORK (ep 10): delivered 12 under C1 (ep 7 stops two-thirds into Order 12, before the cafe Millennium briefing). Strict C5 'furthest first-time coverage + 1' would give the stored 13. The reader cost of 13 is losing the only scene that explains what Millennium is; the cost of 12 is re-reading ~18 pages already animated. Recommend 12; the repair entry carries both.",
+    "ep 10 graft of Order 19's prologue (Arthur teaching young Integra about vampires) rests on hellsing.fandom only — the Order 19 chapter infobox ('animeepisode = Episode 10 (prologue)') plus the wiki's 'Integra's Mother' page describing the same scene inside ep 10 ('Arthur Hellsing's desk as he speaks to their daughter about the nature of Vampires'). Two pages, ONE wiki, and the same infobox field is demonstrably wrong for Orders 13/14/15. Delivered as an annotation only; it moves no number. Drop it if a second independent source cannot be found.",
+    "Suggested resolution for open flag #944: the MU pin (Vol 2 Chap 12) is REDUNDANT, not wrong — it is already carried by the stored ep 7 anchor (END 12, mixed). It cannot sit on ep 13, which has zero manga content. G56 terminal = ep 10 (END 2, last canon/mixed row) with the frontier at ep 7 (END 12)."
+  ]
+}

@@ -1,0 +1,105 @@
+{
+  "series_id": "gto-great-teacher-onizuka",
+  "summary": "The honest terminal is ep 41 'Confessions' (Lesson41 青春少女!! 初めての告白, 2000-08-27): it adapts Lessons 102-105, ending on Lesson 105 'LOVE LOVE LOVE' (vol 13) with Anko's confession to Noboru — exactly as stored, now re-verified against the GTO fandom's per-episode Manga Chapter(s) field, en-WP's volume TOC and Kodansha's own Comic DAYS chapter page for Lesson 105. Eps 42-43 adapt no manga at all (fandom infobox 'Manga Chapter(s) = N/A'; AFL Filler; ja-WP: 原作がまだ未完だったため…その後、アニメオリジナルエピソードによる最終回), so under A1 they take no anchor and the stored filler + divergence typing stands unchanged. The post-series continue is Lesson 106 (C5: coverage 105 + 1) — Lesson 106 'グレートティーチャー冬月‥‥!?', the vol-13 closer, is the one chapter of the Okinawa arc the anime never animated, and WDTALO independently instructs readers to 'start the manga at Chapter 106'. MU's pin is therefore NOT redundant but OVERSTATED by one chapter: MU's anime.end reads 'Vol 13, Chap 106 Original Ending in EP 42-43, Skips chapters' — it rounds the terminal up to the volume-13 boundary and lands the number on ep 42, a filler row (the A6 deletion of 2026-08-23 was correct; G36 refuses it correctly and G56 supersedes it with ep 41 -> 105). On flag #691: MU's latest_chapter 13 is not an edition at all — MU holds exactly THREE release records for GTO (TrollScans Lesson 1, 2011-05-04; AnimeRev Lessons 11-12, 2012-08-12; AnimeRev Lesson 13, 2012-08-17), and its release-derived latest_chapter simply reports the highest of those; 13 matches none of GTO's editions (25-vol tankobon, 23-vol Platinum, 12-vol bunko). The reading edition is Fujisawa's Lesson numbering, 1-200 mainline plus 7 numberless 外伝 'Scene' chapters, which is what our anchors, en-WP, the fandom and Kodansha's Comic DAYS all use; AniList's 208 is a COUNT of units (200 mainline + extras), not a chapter-number ceiling.",
+  "anchors": [
+    {
+      "episode": 38,
+      "end_chapter": 98,
+      "start_chapter": 97,
+      "chapters_adapted": "97-98",
+      "volume": 13,
+      "confidence": "high",
+      "note": "CONFIRMS STORED. Lesson38 突撃! 宝探しでGo! (2000-07-30) = Lesson 97 'Making it a Go with the Sea Turtles' + Lesson 98 'Making It A Go with the Treasure!' — title match on 98 (treasure). Clean boundary behind ep 37 (95-96); no sliver issue under A10. Ch 98 opens vol 13.",
+      "sources": [
+        "https://great-teacher-onizuka-gto.fandom.com/api.php?action=parse&page=Lesson%2038:%20Great%20Treasure%20Onizuka&prop=wikitext&format=json",
+        "https://en.wikipedia.org/wiki/List_of_Great_Teacher_Onizuka_chapters",
+        "https://ja.wikipedia.org/wiki/GTO_(%E6%BC%AB%E7%94%BB)"
+      ]
+    },
+    {
+      "episode": 39,
+      "end_chapter": 102,
+      "start_chapter": 99,
+      "chapters_adapted": "99-102",
+      "volume": 13,
+      "confidence": "high",
+      "note": "CONFIRMS STORED. Lesson39 二人の冒険!! 秘密の洞窟 (2000-08-13) = Lessons 99 'Search Dogs' / 100 'Making the Adventure Go' / 101 'Love Love Go' / 102 'Just Can't Go Straight'. Ends mid-102 — the straddle the stored C1/C2 parity continue to ep 40 already records.",
+      "sources": [
+        "https://great-teacher-onizuka-gto.fandom.com/api.php?action=parse&page=Lesson%2039:%20Alone%20in%20the%20Dark&prop=wikitext&format=json",
+        "https://en.wikipedia.org/wiki/List_of_Great_Teacher_Onizuka_chapters",
+        "https://great-teacher-onizuka-gto.fandom.com/api.php?action=parse&page=GTO%20-%20Volume%2013&prop=wikitext&format=json"
+      ]
+    },
+    {
+      "episode": 40,
+      "end_chapter": 102,
+      "start_chapter": 102,
+      "chapters_adapted": "102 + 107 (graft)",
+      "volume": 13,
+      "confidence": "high",
+      "note": "CONFIRMS STORED. Lesson40 ハート直撃!! 沖縄純愛組 (2000-08-20); fandom field reads 'Manga Chapter(s) = 102, 107'. END stays 102 (A4: furthest MAINLINE chapter in running order): the vol-14 Lesson 107 'White Collar Blues' material (Uchiyamada) is a transplanted fragment inside the Anko plot, a graft, and a graft never moves position. Do not advance the reader past 106.",
+      "sources": [
+        "https://great-teacher-onizuka-gto.fandom.com/api.php?action=parse&page=Lesson%2040:%20Matters%20of%20the%20Heart&prop=wikitext&format=json",
+        "https://great-teacher-onizuka-gto.fandom.com/api.php?action=parse&page=GTO%20-%20Volume%2014&prop=wikitext&format=json",
+        "https://en.wikipedia.org/wiki/List_of_Great_Teacher_Onizuka_chapters"
+      ]
+    },
+    {
+      "episode": 41,
+      "end_chapter": 105,
+      "start_chapter": 102,
+      "chapters_adapted": "102-105",
+      "volume": 13,
+      "confidence": "high",
+      "note": "THE HONEST TERMINAL (G56). CONFIRMS STORED. Lesson41 青春少女!! 初めての告白 (2000-08-27) = Lessons 102-105; END = 105 'LOVE LOVE LOVE' (Kodansha Comic DAYS: Lesson105 LOVE LOVE LOVE), the chapter in which Anko confesses to Noboru — the fandom synopsis states exactly that. START = 102 under A10: ep 40 ended mid-Lesson 102 and ep 41 finishes it (C1 straddle), so the leading partial is real animation, not a recap. Last canon/mixed row of the run; everything after is anime-original.",
+      "sources": [
+        "https://great-teacher-onizuka-gto.fandom.com/api.php?action=parse&page=Lesson%2041:%20Confessions&prop=wikitext&format=json",
+        "https://comic-days.com/episode/10834108156637040037",
+        "https://en.wikipedia.org/wiki/List_of_Great_Teacher_Onizuka_chapters",
+        "https://wheredoestheanimeleaveoff.com/where-does-the-great-teacher-onizuka-anime-end-in-the-manga/",
+        "https://ja.wikipedia.org/wiki/GTO_(%E6%BC%AB%E7%94%BB)"
+      ]
+    }
+  ],
+  "continue_points": [
+    {
+      "episode": 41,
+      "continue_chapter": 106,
+      "kind": "post_series",
+      "note": "CONFIRMS STORED (C5: coverage 105 + 1). Resume at Lesson 106 'グレートティーチャー冬月‥‥!?' — the closing chapter of vol 13, the one Okinawa-arc chapter the anime never animated. Lessons 106-200 (95 of the manga's 200 mainline Lessons, roughly the whole back half) were never adapted; the anime stops mid-arc and replaces the rest with the original Saitou/Miyabi ending in eps 42-43. Ep 40 quoted a fragment of Lesson 107 as a graft, so 107 will read as partly familiar — read it in full anyway. WDTALO independently gives the same instruction ('Start the Great Teacher Onizuka manga at Chapter 106'). Note against MU/content-farm advice of 'start at 107': that skips Lesson 106 entirely.",
+      "sources": [
+        "https://wheredoestheanimeleaveoff.com/where-does-the-great-teacher-onizuka-anime-end-in-the-manga/",
+        "https://comic-days.com/episode/10834108156637040562",
+        "https://great-teacher-onizuka-gto.fandom.com/api.php?action=parse&page=GTO%20-%20Volume%2013&prop=wikitext&format=json",
+        "https://en.wikipedia.org/wiki/List_of_Great_Teacher_Onizuka_chapters"
+      ]
+    }
+  ],
+  "anchor_hostile": [],
+  "annotations": [
+    {
+      "episodes": [40],
+      "kind": "graft",
+      "chapters": "102 + 107",
+      "note": "CONFIRMS STORED. The fandom's per-episode field is explicit ('102, 107'): an Uchiyamada strand from vol-14 Lesson 107 'White Collar Blues' is transplanted into the Okinawa plot. Fragment only — position stays at 102/105 and the post-series continue stays 106."
+    },
+    {
+      "episodes": [42, 43],
+      "kind": "divergence",
+      "chapters": null,
+      "note": "CONFIRMS STORED (batch 18 wave 2, A-7 studio-ending class). Re-verified this batch: fandom infoboxes read 'Manga Chapter(s) = N/A' for both; AFL types both Filler; ja-WP states the manga was unfinished so the anime covered only through the 修学旅行編 of vols 12-13 and then 'アニメオリジナルエピソードによる最終回を迎えた'. The Saitou stabbing, the Board-of-Education official (東京都教育委員会代表) and Mizuki are all listed by ja-WP as アニメ版オリジナルキャラクター."
+    }
+  ],
+  "repairs": [],
+  "type_corrections": [],
+  "structure": {
+    "notes": "CHAPTER SPACE / FLAG #691 (the edition question). The reading edition is Tohru Fujisawa's own Lesson numbering as published by Kodansha: 200 mainline Lessons plus 7 numberless 外伝 'Scene' chapters of the GTO (ぐれえと・とろこ・おっぱい) side story = 207 units in 25 tankobon (ja-WP infobox: 全207話（本編200話+外伝7話）; en-WP's chapter list ends vol 25 at Lesson 200 'Forever' and lists the 7 Scenes separately inside vols 11-12; MangaDex lastChapter=200 / lastVolume=25; Kodansha's Comic DAYS titles the pages 'Lesson106 グレートティーチャー冬月‥‥!?' etc.). Our anchors, en-WP, both fandom wikis and Comic DAYS all sit in this Lesson space — the terminal 105 is in it. AniList's 208 is a COUNT of published units (200 mainline + extras, one above ja-WP's 207), NOT a chapter-number ceiling: the highest legitimate anchor number in this series is 200. Stored total_chapters=208 therefore overstates the mainline number space by 8 and would make a 'continue at 106' UI imply 103 chapters remain when only 95 mainline Lessons do (flagged below, not repaired here — it is a series-level field, not a per-episode one). WHAT MU COUNTS (G37): MU's latest_chapter=13 is neither a volume count nor a re-release. MU's release database holds exactly three release records for GTO — TrollScans vol 1 ch 1 (2011-05-04), AnimeRev vol 2 ch 11-12 (2012-08-12), AnimeRev vol 2 ch 13 (2012-08-17) — and MU's release-derived latest_chapter reports the highest, 13: an abandoned scanlation frontier from 2012, the Dragon Ball class of garbage that sameEditionLatest() already guards against (13 < 0.8 x 208, and 13 < the confirmed anchor floor 105). MU's status string carries no chapter count either ('25 Volumes (Complete) / 12 Volumes (Complete; Bunko)'), so muStatusChapterCount() is null too — latest_known should stay null / come from AniList, and 13 must never be written as a chapter number. For the record 13 matches none of GTO's editions: 25-vol tankobon, 23-vol Platinum Comics 廉価版, 12-vol bunkoban. MU'S ANIME PIN: anime.start='Vol 1, Chap 1' (correct, ep 1), anime.end='Vol 13, Chap 106 Original Ending in EP 42-43, Skips chapters'. The 'Chap 106' is the vol-13 boundary, not the terminal — the anime's last adapted chapter is 105 — and the 'EP 42-43' text is what put the pin on a filler row (the A6 deletion of 2026-08-23). The pin is thus overstated by one chapter AND misplaced by one to two rows; G56's ep 41 -> 105 supersedes it. ROW IDENTITY: our 43 rows = ja-WP's Lesson1-Lesson43; the broadcast also carried two 総集編 recap specials (2000-09-03 and 2000-09-24) which are NOT rows of ours and which ja-WP's own note calls out (放送第42話・第45話は総集編であり、放送ストーリー数は全43話). Our stored dates for eps 38-43 match ja-WP and AFL exactly (07-30, 08-13, 08-20, 08-27, 09-10, 09-17). SOURCE TRAP FOUND: the OTHER GTO fandom (gto.fandom.com, 23 pages) has an 'Anime' page whose date column is shifted +1 slot from ep 31 onward — it prints ep 38=Aug 13, 41=Sep 10, 43=Sep 24 (which is the 総集編2 date) and drops May 7 / May 21. Its titles are correct by NUMBER; its dates are not. Use great-teacher-onizuka-gto.fandom.com (417 pages, per-episode 'Manga Chapter(s)' infobox field, dates correct) — that is the wiki batch 11 cited and the one this verdict uses.",
+    "order_only": []
+  },
+  "flags_for_sean": [
+    "FLAG #691 RESOLVED (recommend closing): MU latest_chapter=13 is release-record-derived garbage — MU holds only 3 scanlation releases for GTO, max ch 13 (TrollScans 2011, AnimeRev 2012). Not an edition, not volumes. Reading edition = Lesson 1-200 mainline + 7 外伝 Scenes, 25 volumes. Evidence: https://api.mangaupdates.com/v1/series/48962893190 and POST https://api.mangaupdates.com/v1/releases/search {\"search\":\"GTO\"}.",
+    "CHAPTER-SPACE QUESTION (series-level field, not repairable through this JSON's per-episode repairs shape): stored total_chapters=208 comes from AniList's unit count. The mainline Lesson numbering ends at 200 (en-WP vol 25 = Lessons 196-200; ja-WP 本編200話+外伝7話; MangaDex lastChapter=200). Consider setting the chapter space to 200 with the 7 外伝 Scenes held outside the number space (they already are — ep 27 is ANCHOR_SUPPRESSED/A44 for exactly that reason). As stored, a reader at continue=106 is told 103 chapters remain when 95 do.",
+    "SPLIT EVIDENCE ON THE TERMINAL CHAPTER, resolved for 105: MangaUpdates ('Vol 13, Chap 106') and MangaShed ('adapts up to around Chapter 106 … start at Chapter 107') both round to the vol-13 boundary; WDTALO ('start the manga at Chapter 106') and the fandom's per-episode field ('102-105' on ep 41, 'N/A' on 42-43) put the last adapted chapter at 105. I went with 105 because the per-episode evidence is chapter-level while the other two are arc-level, and because MangaShed is a content farm that is demonstrably wrong on the same page about volumes (it places Lesson 107 at 'the start of Volume 13' and Lesson 106 'in Volume 12'; Kodansha, en-WP and the fandom all put 98-106 in vol 13 and 107 at the head of vol 14). If Sean wants the conservative read, the only difference is one chapter: continue 107 instead of 106.",
+    "SCOPE: GTO: Paradise Lost (MU 42672427189, 20 vols + a 23-vol 改 re-release) and the 2012 live-action drama are separate entries and were kept out of this verdict entirely — note that MU's release feed for the search term 'GTO' is dominated by Paradise Lost rows, so never derive a GTO frontier from an unfiltered MU release search."
+  ]
+}

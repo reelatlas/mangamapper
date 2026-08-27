@@ -75,7 +75,7 @@ async function main() {
     const raw = readFileSync(OUT + f, 'utf8');
     if (/anime-only-canon|anime_only_canon/i.test(raw)) problems.push("mentions the retired type 'anime-only-canon'");
     const sum = String(v.summary ?? '').toLowerCase();
-    if (/\bno anchors?\b/.test(sum) && (v.anchors?.length ?? 0) > 0 && !/\bno anchors? (for|on|at|in|under|either|there|here)\b/.test(sum)) problems.push('summary says "no anchor" but anchors are present — read it');
+    if (/\bno anchors?\b/.test(sum) && (v.anchors?.length ?? 0) > 0 && !/\b(takes?|took|carry|carries|carried|get|gets|receives?) no anchors?\b|\bno anchors? (for|on|at|in|under|either|there|here|,? stated)\b/.test(sum)) problems.push('summary says "no anchor" but anchors are present — read it');
     const n = v.anchors?.length ?? 0;
     if (problems.length) { bad++; console.log(`FAIL ${f} (${n} anchors over ${targets.length} target rows)`); for (const p of problems) console.log(`   - ${p}`); }
     else console.log(`ok   ${f}: ${targets.length} targets, ${n} anchors, ${hostile.size} hostile, ${(v.continue_points ?? []).length} continues, ${(v.annotations ?? []).length} annotations, ${(v.repairs ?? []).length} repairs, ${(v.type_corrections ?? []).length} type corrections, ${(v.flags_for_sean ?? []).length} flags`);

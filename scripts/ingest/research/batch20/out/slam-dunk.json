@@ -1,0 +1,71 @@
+{
+  "series_id": "slam-dunk",
+  "summary": "The TV series adapts the manga straight through the Interhigh prefectural qualifiers and the training-camp aftermath, and stops there: the HONEST TERMINAL is ep 96 'Basketball Shoes II' = ch 197 'バッシュ (brand-new)' (vol 22's last chapter) — Toei's official synopsis for ep 96 (Haruko notices Hanamichi's shoes are shot; the shop owner he once took 30-yen shoes from gifts him premium red-and-black ones) is ch 197 beat for beat, and it is the payoff to ch 49 'バッシュ' animated back in ep 20. Target rows 97-101 take NO anchor under A1: ja-WP names the endgame Shohoku vs. a mixed Ryonan/Shoyo team as アニメオリジナル, AFG prints 'N/A *Filler' on all five, and Toei/Bandai Channel's synopses describe only that invented practice game. Ep 101's closing tag — Shohoku boarding the shinkansen for Hiroshima together with Kainan (Bandai Channel: 海南大付属高校と共に…広島へと乗りこむ) — is the opening beat of ch 198 '新幹線' quoted inside an original plot: a MANDATORY graft annotation on a filler row, position-less (A44), never an anchor and never a position move. The MU pin is the batch's headline finding: MangaUpdates does NOT say the anime reached ch 276 — its anime field reads 'Vol 22, Chap 197 (TV) / Vol 31, Chap 276 (The First Slam Dunk)'; our stored coverage 276 is the last number of a DUAL-entry prose field and belongs to the 2022 film, a separate entry. Read correctly, MU's TV pin (197) is exactly what ep 96 reaches, so the pin is REDUNDANT with the G56 terminal. Post-series continue: ch 198 (vol 23) — chs 198-276 (vols 23-31) are never adapted by this series; the 2022 film picks up only at ch 223.",
+  "anchors": [
+    {
+      "episode": 96,
+      "end_chapter": 197,
+      "start_chapter": 197,
+      "chapters_adapted": "197",
+      "volume": 22,
+      "confidence": "high",
+      "note": "Honest terminal (G56): the last canon row of the run adapts exactly ch 197 'バッシュ (brand-new)', vol 22's final chapter — Toei's official ep-96 synopsis matches the chapter's plot (worn shoes → Haruko → the sports-shop owner from ch 49 gifts him premium shoes), MU's anime field pins the TV end at 'Vol 22, Chap 197', AFG's chapter table prints '197' on ep 96. START = END = 197 (A4/A10): no leading partial of ch 196 is evidenced — the camp's close and the 20,000-shot finish were spent in eps 93-95 — and the ch-49 callback is a flashback, excluded from START by A10/A12.",
+      "sources": [
+        "https://lineup.toei-anim.co.jp/ja/tv/movie_slumdunk/episode/96/",
+        "https://api.mangaupdates.com/v1/series/55665151734",
+        "https://slamdunk.fandom.com/api.php?action=parse&page=Chapter%20197&prop=wikitext&format=json",
+        "https://www.animefillerguide.com/anime/slam-dunk/"
+      ]
+    }
+  ],
+  "continue_points": [
+    {
+      "episode": 96,
+      "continue_chapter": 198,
+      "kind": "post_series",
+      "note": "C5 post-series: coverage per A4 is ch 197 (ep 96), so resume at ch 198 '新幹線' (vol 23, which collects 198-206). Chs 198-276 — vols 23-31, the whole Nationals arc — are never adapted by this TV series; ep 101's last thirty seconds show the departure that opens ch 198, so read 198 from page one anyway (the train ride, the arrival in Hiroshima and everything after are unanimated here). The 2022 film THE FIRST SLAM DUNK is a separate entry and only starts at ch 223, so 198-222 has no animation at all.",
+      "sources": [
+        "https://www.animefillerguide.com/anime/slam-dunk/",
+        "https://api.mangaupdates.com/v1/series/55665151734",
+        "https://slamdunk.fandom.com/api.php?action=parse&page=Chapter%20198&prop=wikitext&format=json"
+      ]
+    }
+  ],
+  "anchor_hostile": [],
+  "annotations": [
+    {
+      "episodes": [101],
+      "kind": "graft",
+      "chapters": "198 (opening pages — the departure for Hiroshima)",
+      "note": "T28 tie on a filler row: ep 101 is the finale of the anime-original Shohoku vs. Ryonan/Shoyo mixed-team game (76-74, Sakuragi's dunk), and its closing tag transplants the opening beat of ch 198 '新幹線' — Shohoku leaving Kanagawa for Hiroshima together with Kainan, boarding the shinkansen. Bandai Channel's official synopsis ends '海南大付属高校と共に意気揚々と決戦の場、広島へと乗りこむのだった'; slamdunk.fandom's ep-101 synopsis describes the shinkansen boarding; ja-WP states the anime was adapted インターハイに出場決定して試合会場に出発するところまで. Fragment inside an original plot → position-less (A44), no anchor (A1), no move of the continue point. Same shape as the stored ep-92 partial on ch 194.",
+      "sources": [
+        "https://www.b-ch.com/titles/2604/101",
+        "https://slamdunk.fandom.com/api.php?action=parse&page=Episode%20101&prop=wikitext&format=json",
+        "https://ja.wikipedia.org/wiki/SLAM_DUNK"
+      ]
+    }
+  ],
+  "repairs": [
+    {
+      "episode": 101,
+      "field": "mu_coverage_chapter (SERIES-level MU pin, not an episode anchor — A1 still forbids any anchor on this row)",
+      "old": 276,
+      "new": 197,
+      "why": "G37: MangaUpdates' anime field for Slam Dunk carries TWO adaptations in one prose string — start 'Vol 1, Chap 1 (TV) / Vol 25, Chap 223 (The First Slam Dunk)', end 'Vol 22, Chap 197 (TV) / Vol 31, Chap 276 (The First Slam Dunk) Abridged and different with an original epilogue'. Our extraction took the LAST number, which is the 2022 film's end (and coincidentally the manga's total, 276), and pinned it on the TV run's last row. MU never claimed the TV series reached 276. Corrected, MU's TV pin is ch 197 = exactly what ep 96 adapts, so the pin is redundant with the G56 honest terminal and open flag #947 can be closed.",
+      "sources": [
+        "https://api.mangaupdates.com/v1/series/55665151734",
+        "https://www.mangaupdates.com/series/pklldyu/slam-dunk"
+      ]
+    }
+  ],
+  "type_corrections": [],
+  "structure": {
+    "notes": "Row identity: our 101 rows match ja-WP's 各話リスト one-for-one; dates spot-checked across the target range (96 = 1996-02-10 バスケットシューズII, 97 = 02-17, 98 = 02-24, 99 = 03-02, 100 = 03-09, 101 = 03-23 栄光のスラムダンク — note the 03-16 skip, so the finale's date is not +7). AFL has NO page for slam-dunk (404); the 'AFL' column in the context is AFG's data — AFG's table is 101 rows, joins cleanly by title, and marks eps 95 and 97-101 '*Filler / N/A'. Chapter space = the 276-chapter / 31-volume tankobon numbering used by slamdunk.fandom's Chapter N pages and by our stored anchors; ch 197 is vol 22's last chapter and 198 opens vol 23 (matches the stored volume boundaries and AFG's 'Volume 23 (198-206)'). The four 1990s theatrical films are unnumbered side stories (ja-WP: film 2 rearranges the ch-79 digest of Shohoku vs. Tsukubu, film 3 a Ryokufu practice game) — N4, no rows. THE FIRST SLAM DUNK (2022) is a separate entry covering ch 223-276 and must never be attached to these rows. The existing ep-96 anchor (197) came from AFG's continua prose at derivation tier; this verdict supplies the manual-tier evidence plus START/chapters_adapted/volume, so it is a confirmation, not a contradiction.",
+    "order_only": []
+  },
+  "flags_for_sean": [
+    "Open flag #947 resolves as a PARSE defect, not an overstatement: MU's anime.end string holds two works ('Vol 22, Chap 197 (TV) / Vol 31, Chap 276 (The First Slam Dunk)'). Worth an ingest-side guard — any MU coverage string containing '/' plus a parenthesised work name should be split by work before the chapter is taken (same shape will recur on any manga with both a TV run and a later film).",
+    "Ep 101's ch-198 graft rests on the two official synopses (Bandai Channel, Toei) plus fandom describing the boarding, and ja-WP's 'adapted up to their departure for the venue'. What I could NOT verify page-for-page is whether the coda re-stages ch 198's first pages or is an original send-off echoing them; either way it is position-less on a filler row, so the anchor and the continue (198) are unaffected. If you prefer the weaker reading, 'loose_parallel' would be the alternative annotation kind.",
+    "Ep 96 spends a full 22 minutes on one 21-page chapter, so it is heavily padded; AFG does not tag it 'Mixed' and ja-WP does not list it among the anime-original episodes, so I left the stored 'canon' typing alone rather than proposing 'mixed' on padding alone (T28 wants a story-carrying original share, and the expansion here is of the source's own scene)."
+  ]
+}
