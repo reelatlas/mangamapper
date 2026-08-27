@@ -1,0 +1,405 @@
+{
+  "series_id": "kingdom",
+  "summary": "OUR rows 78-102 are Kingdom S3 eps 1-25 (row conversion verified by TITLE and air date against ja-WP's 第3シリーズ 各話リスト, never by index; S1 38 + S2 39 = 77). All 25 target rows are canon and adapt the Coalition Invasion arc in unbroken running order from ch 261's tail through ch 359, inside the stored fence (ep 77 -> 261, ep 103 -> 364); the fandom Season 3 page states the same 261-364 extent. Every row therefore gets an anchor - 25 of 25, no anchor-hostile rows, no filler. Nothing is skipped anywhere in the block, so no parity/continue points are needed. The one real surprise is that kingdom.fandom's per-episode 'adapted from' fields DROP six adapted chapters (274, 306, 310, 311, 339, 340) and carry a copy-paste of Episode 129's field on the Episode 78 page; each omission is restored here with two independent sources (programming-cafe's per-chapter -> episode index, the licensor's per-episode synopses on kingdom-anime.com, the ja-WP episode titles that are literally chapter titles, and a timestamped broadcast-reaction record). Two boundaries stay split-evidence and are marked medium: ep 90's END (313 p.1-4 vs 312) and ep 95's START (326's tail vs 327).",
+  "anchors": [
+    {
+      "episode": 78,
+      "end_chapter": 264,
+      "start_chapter": 262,
+      "chapters_adapted": "261 (p.15-17), 262-264",
+      "volume": 25,
+      "confidence": "high",
+      "note": "S3 ep 1. 261's 3-page tail is a sliver (A10) so START=262; fence ep 77 -> 261 holds. The fandom page's SECOND 'adapted from' line ('439-441 p.1-11') is a verbatim copy of Episode 129's field, not a flash-forward - the broadcast record shows the episode opening on Duke Hyou's charge (ch 262).",
+      "sources": [
+        "https://kingdom.fandom.com/api.php?action=parse&page=Episode_78&prop=wikitext&format=json",
+        "https://programming-cafe.com/amazon/primevideo/anime/anicomi-kingdom-list/",
+        "https://anitubu.com/archives/post-35104.html",
+        "https://kingdom.fandom.com/api.php?action=parse&page=Episode_129&prop=wikitext&format=json"
+      ]
+    },
+    {
+      "episode": 79,
+      "end_chapter": 268,
+      "start_chapter": 265,
+      "chapters_adapted": "265-267, 268 (p.1-13)",
+      "volume": 25,
+      "confidence": "high",
+      "note": "Ends mid-268 (the generals assemble; ep title 一堂に会す = ch 268's title). fandom page-split and pcafe's dual listing of 268 (3-2/3-3) agree.",
+      "sources": [
+        "https://kingdom.fandom.com/api.php?action=parse&page=Episode_79&prop=wikitext&format=json",
+        "https://programming-cafe.com/amazon/primevideo/anime/anicomi-kingdom-list/",
+        "https://ja.wikipedia.org/wiki/%E3%82%AD%E3%83%B3%E3%82%B0%E3%83%80%E3%83%A0_(%E3%82%A2%E3%83%8B%E3%83%A1)"
+      ]
+    },
+    {
+      "episode": 80,
+      "end_chapter": 272,
+      "start_chapter": 269,
+      "chapters_adapted": "268 (p.14-18), 269-271, 272 (p.1-15)",
+      "volume": 25,
+      "confidence": "high",
+      "note": "268's 5-page tail is a sliver (A10) so START=269; ends mid-272 (Duke Hyou's rush). fandom split + pcafe dual-list 272 (3-3/3-4).",
+      "sources": [
+        "https://kingdom.fandom.com/api.php?action=parse&page=Episode_80&prop=wikitext&format=json",
+        "https://programming-cafe.com/amazon/primevideo/anime/anicomi-kingdom-list/"
+      ]
+    },
+    {
+      "episode": 81,
+      "end_chapter": 276,
+      "start_chapter": 273,
+      "chapters_adapted": "272 (p.16-18), 273-275, 276 (to the tower reaching the wall)",
+      "volume": 26,
+      "confidence": "high",
+      "note": "REPAIRS the fandom field twice: it omits ch 274 (Kei Sha's spider trap - the official synopsis is that trap ensnaring the Hyou army) and stops at 275, but the broadcast record ends the episode on Go Hou Mei's siege tower extending to the top of Kankoku Pass = ch 276's climax; pcafe lists 274 in 3-4 and dual-lists 276 (3-4/3-5). START=273 (272's 3-page tail is a sliver, A10).",
+      "sources": [
+        "https://programming-cafe.com/amazon/primevideo/anime/anicomi-kingdom-list/",
+        "https://kingdom-anime.com/story/detail.php?id=1000765&season=3",
+        "https://anitubu.com/archives/post-35797.html",
+        "https://kingdom.fandom.com/api.php?action=parse&page=Episode_81&prop=wikitext&format=json"
+      ]
+    },
+    {
+      "episode": 82,
+      "end_chapter": 280,
+      "start_chapter": 277,
+      "chapters_adapted": "276 (tail, re-entered), 277-280",
+      "volume": 26,
+      "confidence": "medium",
+      "note": "END solid: the episode closes on Ou Hon's arrival repelling Kou Yoku = ch 280's last beat (broadcast record; pcafe dual-lists 280 into 3-6). START: the episode re-opens on the tower bridge already in place (276 re-shown) before Kan Ki's stolen-oil counter (277), so the first NEW chapter is 277; fandom credits 276 whole to this row.",
+      "sources": [
+        "https://anitubu.com/archives/post-48753.html",
+        "https://programming-cafe.com/amazon/primevideo/anime/anicomi-kingdom-list/",
+        "https://kingdom-anime.com/story/detail.php?id=1000938&season=3",
+        "https://kingdom.fandom.com/api.php?action=parse&page=Episode_82&prop=wikitext&format=json"
+      ]
+    },
+    {
+      "episode": 83,
+      "end_chapter": 284,
+      "start_chapter": 281,
+      "chapters_adapted": "281-284",
+      "volume": 27,
+      "confidence": "high",
+      "note": "Mou Ten/Ou Hon vs Kou Yoku/Haku Rei, then Tou vs Rin Bu Kun; ep title 互いの自負 = ch 283. Ends on Man Goku's vengeance unit (284 呪いそのもの) per the broadcast record.",
+      "sources": [
+        "https://kingdom.fandom.com/api.php?action=parse&page=Episode_83&prop=wikitext&format=json",
+        "https://programming-cafe.com/amazon/primevideo/anime/anicomi-kingdom-list/",
+        "https://anitubu.com/archives/post-48999.html"
+      ]
+    },
+    {
+      "episode": 84,
+      "end_chapter": 288,
+      "start_chapter": 285,
+      "chapters_adapted": "285-287, 288 (p.1-10)",
+      "volume": 27,
+      "confidence": "high",
+      "note": "Ep title 穴だらけの荒野 = ch 285. Ends mid-288; fandom split + pcafe dual-list 288 (3-7/3-8).",
+      "sources": [
+        "https://kingdom.fandom.com/api.php?action=parse&page=Episode_84&prop=wikitext&format=json",
+        "https://programming-cafe.com/amazon/primevideo/anime/anicomi-kingdom-list/",
+        "https://ja.wikipedia.org/wiki/%E3%82%AD%E3%83%B3%E3%82%B0%E3%83%80%E3%83%A0_(%E3%82%A2%E3%83%8B%E3%83%A1)"
+      ]
+    },
+    {
+      "episode": 85,
+      "end_chapter": 292,
+      "start_chapter": 288,
+      "chapters_adapted": "288 (p.11-18), 289-291, 292 (p.1-12)",
+      "volume": 27,
+      "confidence": "high",
+      "note": "288's 8-page lead-in exceeds the sliver bar so START=288 (A10); ends on Sei Kai's poison weapon (292) - the broadcast record ends on the poison being fired.",
+      "sources": [
+        "https://kingdom.fandom.com/api.php?action=parse&page=Episode_85&prop=wikitext&format=json",
+        "https://programming-cafe.com/amazon/primevideo/anime/anicomi-kingdom-list/",
+        "https://anitubu.com/archives/post-49512.html"
+      ]
+    },
+    {
+      "episode": 86,
+      "end_chapter": 296,
+      "start_chapter": 292,
+      "chapters_adapted": "292 (p.13-18), 293-296",
+      "volume": 28,
+      "confidence": "high",
+      "note": "292's 6-page lead-in counts as START (A10); ep title 蒙武の檄 = ch 294; ends on the war elephants appearing (296 第二軍動く) per the broadcast record.",
+      "sources": [
+        "https://kingdom.fandom.com/api.php?action=parse&page=Episode_86&prop=wikitext&format=json",
+        "https://programming-cafe.com/amazon/primevideo/anime/anicomi-kingdom-list/",
+        "https://anitubu.com/archives/post-49759.html"
+      ]
+    },
+    {
+      "episode": 87,
+      "end_chapter": 300,
+      "start_chapter": 297,
+      "chapters_adapted": "297-300",
+      "volume": 28,
+      "confidence": "high",
+      "note": "Ep title 窮地の大抜擢 = ch 298. Both sources give 297-300 exactly.",
+      "sources": [
+        "https://kingdom.fandom.com/api.php?action=parse&page=Episode_87&prop=wikitext&format=json",
+        "https://programming-cafe.com/amazon/primevideo/anime/anicomi-kingdom-list/",
+        "https://ja.wikipedia.org/wiki/%E3%82%AD%E3%83%B3%E3%82%B0%E3%83%80%E3%83%A0_(%E3%82%A2%E3%83%8B%E3%83%A1)"
+      ]
+    },
+    {
+      "episode": 88,
+      "end_chapter": 304,
+      "start_chapter": 301,
+      "chapters_adapted": "301-303, 304 (p.1-4)",
+      "volume": 28,
+      "confidence": "high",
+      "note": "Ends on Chou Tou killing Sei Kai and dying in Kan Ki's arms (303) plus 304's opening pages; pcafe dual-lists 304 (3-11/3-12). 304 p.5-13 is claimed by neither episode page - see the partial annotation.",
+      "sources": [
+        "https://kingdom.fandom.com/api.php?action=parse&page=Episode_88&prop=wikitext&format=json",
+        "https://programming-cafe.com/amazon/primevideo/anime/anicomi-kingdom-list/",
+        "https://anitubu.com/archives/post-50255.html"
+      ]
+    },
+    {
+      "episode": 89,
+      "end_chapter": 308,
+      "start_chapter": 305,
+      "chapters_adapted": "304 (p.14-17), 305-307, 308 (p.1-16)",
+      "volume": 29,
+      "confidence": "high",
+      "note": "304's 4-page lead-in is a sliver so START=305 (A10). RESTORES ch 306, which the fandom field skips: the official synopsis and the broadcast record both carry Ou Sen's ambush destroying Ordo's 8,000 mountain elites = ch 306, and pcafe lists 306 in 3-12. Ends mid-308 (ep title 媧燐軍の突撃 = ch 308).",
+      "sources": [
+        "https://programming-cafe.com/amazon/primevideo/anime/anicomi-kingdom-list/",
+        "https://kingdom-anime.com/story/detail.php?id=1000961&season=3",
+        "https://anitubu.com/archives/post-50516.html",
+        "https://kingdom.fandom.com/api.php?action=parse&page=Episode_89&prop=wikitext&format=json"
+      ]
+    },
+    {
+      "episode": 90,
+      "end_chapter": 313,
+      "start_chapter": 309,
+      "chapters_adapted": "308 (p.17-20), 309-312, 313 (p.1-4)",
+      "volume": 29,
+      "confidence": "medium",
+      "note": "RESTORES chs 310-311, which the fandom field skips: the episode's own title 至強 IS ch 310's title (ja-WP), and the broadcast record carries Kan Mei's unveiled war record - the secret wounding of Ou Kotsu - which is ch 311; pcafe lists both in 3-13. END: fandom splits 313 at p.4/p.5 and the broadcast record ends the episode with Mou Bu going down ('I thought it was Mou Bu's defeat' opens the next episode's write-up), so 313's first pages air here; pcafe puts 313 wholly in ep 91 - split evidence, flagged.",
+      "sources": [
+        "https://programming-cafe.com/amazon/primevideo/anime/anicomi-kingdom-list/",
+        "https://ja.wikipedia.org/wiki/%E3%82%AD%E3%83%B3%E3%82%B0%E3%83%80%E3%83%A0_(%E3%82%A2%E3%83%8B%E3%83%A1)",
+        "https://anitubu.com/archives/post-50717.html",
+        "https://kingdom.fandom.com/api.php?action=parse&page=Episode_90&prop=wikitext&format=json"
+      ]
+    },
+    {
+      "episode": 91,
+      "end_chapter": 316,
+      "start_chapter": 313,
+      "chapters_adapted": "313 (p.5-17), 314-316",
+      "volume": 29,
+      "confidence": "high",
+      "note": "Opens on the fallen Mou Bu remembering Shou Hei Kun (313 p.5+), ends with Kan Mei slain and 勝利は目前 (316). Ep title 最強の漢 = ch 313.",
+      "sources": [
+        "https://kingdom.fandom.com/api.php?action=parse&page=Episode_91&prop=wikitext&format=json",
+        "https://programming-cafe.com/amazon/primevideo/anime/anicomi-kingdom-list/",
+        "https://anitubu.com/archives/post-51412.html"
+      ]
+    },
+    {
+      "episode": 92,
+      "end_chapter": 319,
+      "start_chapter": 317,
+      "chapters_adapted": "317-319",
+      "volume": 30,
+      "confidence": "high",
+      "note": "Ep title 函谷関の裏 = ch 317; ends on Ri Boku moving in the dark (319's close) per the broadcast record. Both sources give 317-319.",
+      "sources": [
+        "https://kingdom.fandom.com/api.php?action=parse&page=Episode_92&prop=wikitext&format=json",
+        "https://programming-cafe.com/amazon/primevideo/anime/anicomi-kingdom-list/",
+        "https://anitubu.com/archives/post-51611.html"
+      ]
+    },
+    {
+      "episode": 93,
+      "end_chapter": 322,
+      "start_chapter": 320,
+      "chapters_adapted": "320-322",
+      "volume": 30,
+      "confidence": "high",
+      "note": "Ep title 李牧の行方 tracks ch 320 首謀者の行方; ends on Duke Hyou reaching Ri Boku (322 麃と飛). Both sources agree.",
+      "sources": [
+        "https://kingdom.fandom.com/api.php?action=parse&page=Episode_93&prop=wikitext&format=json",
+        "https://programming-cafe.com/amazon/primevideo/anime/anicomi-kingdom-list/",
+        "https://ja.wikipedia.org/wiki/%E3%82%AD%E3%83%B3%E3%82%B0%E3%83%80%E3%83%A0_(%E3%82%A2%E3%83%8B%E3%83%A1)"
+      ]
+    },
+    {
+      "episode": 94,
+      "end_chapter": 326,
+      "start_chapter": 323,
+      "chapters_adapted": "323-325, 326 (p.1-15)",
+      "volume": 30,
+      "confidence": "high",
+      "note": "Ep title 本能型の極み = ch 323; ends on Duke Hyou's death (326 うまい酒) per the broadcast record. fandom's page split; pcafe puts 326 in 3-17.",
+      "sources": [
+        "https://kingdom.fandom.com/api.php?action=parse&page=Episode_94&prop=wikitext&format=json",
+        "https://programming-cafe.com/amazon/primevideo/anime/anicomi-kingdom-list/",
+        "https://anitubu.com/archives/post-52229.html"
+      ]
+    },
+    {
+      "episode": 95,
+      "end_chapter": 329,
+      "start_chapter": 327,
+      "chapters_adapted": "326 (p.15-end), 327-329",
+      "volume": 31,
+      "confidence": "medium",
+      "note": "START: 326 is a 19-page chapter, so the p.15-end tail the fandom page credits here is ~5 pages = a sliver (A10) -> START=327, and pcafe assigns 326 to ep 94 only. The fandom page writes the tail as 'p.15-21'; if 326 really runs 21 pages the START would be 326. END 329 is agreed by both sources (ep title 政の決断 = ch 327).",
+      "sources": [
+        "https://kingdom.fandom.com/api.php?action=parse&page=Episode_95&prop=wikitext&format=json",
+        "https://programming-cafe.com/amazon/primevideo/anime/anicomi-kingdom-list/",
+        "https://anitubu.com/archives/post-52435.html"
+      ]
+    },
+    {
+      "episode": 96,
+      "end_chapter": 333,
+      "start_chapter": 330,
+      "chapters_adapted": "330-332, 333 (p.1-5)",
+      "volume": 31,
+      "confidence": "high",
+      "note": "Ep title 政、語りかける = ch 330; ends mid-333 (pcafe dual-lists 333 into 3-19/3-20).",
+      "sources": [
+        "https://kingdom.fandom.com/api.php?action=parse&page=Episode_96&prop=wikitext&format=json",
+        "https://programming-cafe.com/amazon/primevideo/anime/anicomi-kingdom-list/",
+        "https://ja.wikipedia.org/wiki/%E3%82%AD%E3%83%B3%E3%82%B0%E3%83%80%E3%83%A0_(%E3%82%A2%E3%83%8B%E3%83%A1)"
+      ]
+    },
+    {
+      "episode": 97,
+      "end_chapter": 337,
+      "start_chapter": 333,
+      "chapters_adapted": "333 (p.6-15), 334-336, 337 (p.1-13)",
+      "volume": 31,
+      "confidence": "high",
+      "note": "333's 10-page lead-in counts as START (A10); ep title 最初の夜 = ch 335; ends mid-337 (pcafe dual-lists 337). 333 p.16-18 is unaccounted by either episode page - see annotation.",
+      "sources": [
+        "https://kingdom.fandom.com/api.php?action=parse&page=Episode_97&prop=wikitext&format=json",
+        "https://programming-cafe.com/amazon/primevideo/anime/anicomi-kingdom-list/",
+        "https://anitubu.com/archives/post-52860.html"
+      ]
+    },
+    {
+      "episode": 98,
+      "end_chapter": 341,
+      "start_chapter": 337,
+      "chapters_adapted": "337 (p.14-end), 338-341",
+      "volume": 32,
+      "confidence": "high",
+      "note": "RESTORES chs 339-340, which the fandom field skips: the broadcast record carries Ei Sei's night round among the sleepless militia = ch 339 巡回の夜, and the official synopsis carries Ri Boku probing the militia and growing suspicious of Sai's resistance = ch 340; pcafe lists both in 3-21. Ep title 秘密の露見 = ch 341, the episode's closing beat.",
+      "sources": [
+        "https://programming-cafe.com/amazon/primevideo/anime/anicomi-kingdom-list/",
+        "https://kingdom-anime.com/story/detail.php?id=1000974&season=3",
+        "https://anitubu.com/archives/post-53060.html",
+        "https://kingdom.fandom.com/api.php?action=parse&page=Episode_98&prop=wikitext&format=json"
+      ]
+    },
+    {
+      "episode": 99,
+      "end_chapter": 345,
+      "start_chapter": 342,
+      "chapters_adapted": "342-345",
+      "volume": 32,
+      "confidence": "high",
+      "note": "Ep title 出し尽くす = ch 344; ends as the gates fall and the Mountain People come into view (345 開く城門). Both sources agree.",
+      "sources": [
+        "https://kingdom.fandom.com/api.php?action=parse&page=Episode_99&prop=wikitext&format=json",
+        "https://programming-cafe.com/amazon/primevideo/anime/anicomi-kingdom-list/",
+        "https://anitubu.com/archives/post-53257.html"
+      ]
+    },
+    {
+      "episode": 100,
+      "end_chapter": 349,
+      "start_chapter": 346,
+      "chapters_adapted": "346-349",
+      "volume": 32,
+      "confidence": "high",
+      "note": "Ep title 破格の加勢 = ch 347; ends on Yo Tan Wa's charge and Hou Ken's appearance (349 軽い). Both sources agree.",
+      "sources": [
+        "https://kingdom.fandom.com/api.php?action=parse&page=Episode_100&prop=wikitext&format=json",
+        "https://programming-cafe.com/amazon/primevideo/anime/anicomi-kingdom-list/",
+        "https://anitubu.com/archives/post-53438.html"
+      ]
+    },
+    {
+      "episode": 101,
+      "end_chapter": 354,
+      "start_chapter": 350,
+      "chapters_adapted": "350-353, 354 (p.1-15)",
+      "volume": 33,
+      "confidence": "high",
+      "note": "Ep title 深謝 = ch 353; the closing 不抜 / thanks beats plus 354's opening aftermath. pcafe dual-lists 354 (3-24/3-25).",
+      "sources": [
+        "https://kingdom.fandom.com/api.php?action=parse&page=Episode_101&prop=wikitext&format=json",
+        "https://programming-cafe.com/amazon/primevideo/anime/anicomi-kingdom-list/",
+        "https://anitubu.com/archives/post-53609.html"
+      ]
+    },
+    {
+      "episode": 102,
+      "end_chapter": 359,
+      "start_chapter": 355,
+      "chapters_adapted": "354 (p.16-18), 355-358, 359 (p.1-13)",
+      "volume": 33,
+      "confidence": "high",
+      "note": "354's 3-page tail is a sliver so START=355 (A10); ep title 巫舞の違い = ch 359, split with ep 103 (pcafe dual-lists 359). Fence ep 103 -> 364 holds.",
+      "sources": [
+        "https://kingdom.fandom.com/api.php?action=parse&page=Episode_102&prop=wikitext&format=json",
+        "https://programming-cafe.com/amazon/primevideo/anime/anicomi-kingdom-list/",
+        "https://ja.wikipedia.org/wiki/%E3%82%AD%E3%83%B3%E3%82%B0%E3%83%80%E3%83%A0_(%E3%82%A2%E3%83%8B%E3%83%A1)"
+      ]
+    }
+  ],
+  "continue_points": [],
+  "anchor_hostile": [],
+  "annotations": [
+    {
+      "episodes": [
+        88,
+        89
+      ],
+      "kind": "partial",
+      "chapters": "304",
+      "note": "304 p.5-13 (the Hi Shin Unit's rest; Duke Hyou and Shin agreeing the bait attack on Kei Sha) is claimed by neither episode page - ep 88 takes p.1-4 and ep 89 opens at p.14; likely trimmed."
+    },
+    {
+      "episodes": [
+        96,
+        97
+      ],
+      "kind": "partial",
+      "chapters": "333",
+      "note": "333 p.16-18 unaccounted: ep 96 takes p.1-5 and ep 97 p.6-15."
+    },
+    {
+      "episodes": [
+        81,
+        82
+      ],
+      "kind": "partial",
+      "chapters": "276",
+      "note": "ch 276 straddles the 2020/2021 hiatus boundary: its climax (Go Hou Mei's tower reaching the wall) closes ep 81, and ep 82 re-enters on the same beat before moving into 277."
+    }
+  ],
+  "repairs": [],
+  "type_corrections": [],
+  "structure": {
+    "notes": "Row conversion: fandom uses the SAME cumulative episode numbering as ours (its Episode 78 page is labelled 'ep number = 78 / season 3 / 1st episode of season 3'), and ja-WP's 第3シリーズ table lists 26 rows whose titles and dates match our rows 78-103 one-for-one (our stored dates are the JST first-broadcast dates; fandom's dates run one day earlier = US date). S3 aired eps 1-4 in April 2020, went on COVID hiatus, re-broadcast 1-4 from 2021-04-04 and resumed with NEW material at ep 5 on 2021-05-03 = our row 82 - the 13-month gap in our date column is real, not a data error. Chapter space: the manga's own numbering (fandom chapter pages, pcafe, MU all agree); volumes taken from the stored boundary table (fandom's Chapter 280 page mis-states vol 28; 280 is vol 26). Coverage is continuous 261(tail)-359 across the 25 target rows with no skipped chapter and no re-use, hence no continue points. DATA DEFECT to know about: kingdom.fandom Episode 78's 'adapted from' field carries a stray second line ('Chapter 439, Chapter 440, and Chapter 441 (p.1-11)') that is verbatim Episode 129's field - a copy-paste, not a flash-forward; the broadcast record shows ep 78 opening on Duke Hyou's charge (ch 262).",
+    "order_only": []
+  },
+  "flags_for_sean": [
+    "fandom omissions restored (2+ sources each): 274 (ep 81), 306 (ep 89), 310 + 311 (ep 90), 339 + 340 (ep 98). Anyone re-deriving these rows from kingdom.fandom alone will re-open the gaps; the pcafe per-chapter index (programming-cafe anicomi-kingdom-list) is the antidote and is chapter-complete for 262-363.",
+    "split evidence, ep 90 END: fandom splits ch 313 at p.4/p.5 (313 p.1-4 closing ep 90) and the broadcast record ends the episode with Mou Bu beaten down, which fits 313's opening pages; pcafe assigns 313 wholly to ep 91. Delivered 313, medium. If Sean prefers the conservative read the END is 312 and ep 91's START is unchanged.",
+    "split evidence, ep 95 START: fandom credits '326 (p.15-21)' to ep 95 but its own Chapter 326 page says the chapter is 19 pages, which makes the tail ~5 pages = a sliver (A10); pcafe assigns 326 to ep 94 only. Delivered START 327, medium.",
+    "fence row 103 (not a target, stored 364, medium): fandom says ep 103 = 359 (p.14-18), 360-363, 364 (p.1-15) while its Episode 104 page says 364 (p.6-17) - self-contradictory overlap - and pcafe assigns 364 to S4 ep 1 only. Stored 364 is left untouched, but its basis is one wiki field; a 363-vs-364 check is worth a future pass.",
+    "kingdom.fandom Episode 78 'adapted from' contains Episode 129's field verbatim (439-441) - a wiki copy-paste defect, reported so no later pass reads it as a flash-forward."
+  ]
+}

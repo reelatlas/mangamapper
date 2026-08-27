@@ -1,0 +1,334 @@
+{
+  "series_id": "eyeshield-21",
+  "summary": "Rows 22-36 are NOT fifteen canon rows: three of them (22, 27, 28) are anime-original and are proposed as type repairs to filler on three independent sources (ja-WP's 備考 column prints アニメオリジナルストーリー on 22 and on the 27/28 rowspan; eyeshield21.fandom files all three under Category:Anime-Original Episodes; animefillerguide marks all three '* Filler' with an N/A chapter cell). The remaining twelve rows carry the NASA Aliens game and the whole Death March and are anchored 53 -> 88 with no interpolation left: ep 23 = 53 + 58-60, ep 24 = 61-64, ep 25 = 65-67, ep 26 = 68-71, ep 29 = 72-74, ep 30 = 75-77, ep 31 = 78 + 80-81, ep 32 = 79, ep 33 = 82-83, ep 34 = 84-85, ep 35 = 85-86, ep 36 = 87-88. Two surprises. (1) The block opens on a SECOND skip nobody had recorded: chapters 49-52, the Ojo-vs-Shinryuji spring final and Shinryuji's debut, are never adapted in running order - the anime reports the result as news at ep 37 (Ikkyu Hosokawa, manga debut 49th Down, has anime debut Episode 37 on his fandom page) and shows only 50-51 as flashback inside ep 106. That makes the stored afg fence ep 21 -> 49 an overshoot; the repair to 48 is proposed on three sources. (2) The anime reorders the Death March's opening: ep 31 plays the Japan cutaway (ch 80-81, Mt Fuji and Shin vs Panther) and holds ch 79 - the Ha-Ha Brothers' desertion and return, confirmed page-level on MangaDex - back to ep 32, whose title is borrowed from ch 86 instead. Every continue delivered here is PARITY at the next episode's START, with the unseen ranges named (49-52 never adapted; 54-57 backfilled at ep 43; 80-81 already seen on arrival).",
+  "anchors": [
+    {
+      "episode": 23,
+      "end_chapter": 60,
+      "start_chapter": 53,
+      "chapters_adapted": "53, 58-60 (chs 54-57 skipped here - Musashi's introduction - and backfilled whole at ep 43)",
+      "volume": 7,
+      "confidence": "high",
+      "note": "A4/A10/A18. eyeshield21.fandom Episode 23 chapters = 53rd Down and Leonard Apollo's page gives chapter 53rd Down / anime Episode 23 - the NASA game being accepted opens the episode. Bandai Channel's official synopsis then runs Panther's introduction and the mutual fascination with Eyeshield 21 (= ch 58 黒い豹, 59 スペースシャトル) and closes on the pre-match bonding; ch 60 戦いの絆's opening page is Kurita's family temple, the party venue en-WP's vol-7 summary names. Ep 24 restarts at ch 61 (its title 電撃!日米決戦 = ch 61 日米決戦, fandom ep-24 chapters = 61st Down), which fences the END.",
+      "sources": [
+        "https://www.b-ch.com/titles/8777/023",
+        "https://eyeshield21.fandom.com/wiki/Episode_23",
+        "https://eyeshield21.fandom.com/wiki/Leonard_Apollo",
+        "https://eyeshield21.fandom.com/wiki/File:60th_Down.jpg",
+        "https://en.wikipedia.org/wiki/List_of_Eyeshield_21_chapters"
+      ]
+    },
+    {
+      "episode": 24,
+      "end_chapter": 64,
+      "start_chapter": 61,
+      "chapters_adapted": "61-64",
+      "volume": 8,
+      "confidence": "medium",
+      "note": "A4. START is sourced twice: fandom Episode 24 chapters = 61st Down, and the episode title 電撃!日米決戦 is ch 61 日米決戦 exactly. END rests on the score: en-WP's ep-25 summary opens 'Trailing 14-6', i.e. the two American touchdowns AND Sena's answering touchdown have already happened, and ch 64's first page is that touchdown run ('the loose ball is now in Eyeshield 21's hands... is he going to score a touchdown all the way from there!?') - so ch 64's opening is inside ep 24. Bandai's synopsis teases only the mid-episode beat (Sena spotting how to bring Homer down), which is ch 63's close.",
+      "sources": [
+        "https://www.b-ch.com/titles/8777/024",
+        "https://eyeshield21.fandom.com/wiki/Episode_24",
+        "https://eyeshield21.fandom.com/wiki/File:64th_Down.jpg",
+        "https://en.wikipedia.org/wiki/List_of_Eyeshield_21_episodes_(1%E2%80%9372)",
+        "https://en.wikipedia.org/wiki/List_of_Eyeshield_21_chapters"
+      ]
+    },
+    {
+      "episode": 25,
+      "end_chapter": 67,
+      "start_chapter": 65,
+      "chapters_adapted": "65-67",
+      "volume": 8,
+      "confidence": "high",
+      "note": "A4/A10. Two independent per-chapter reverse-index hits: eyeshield21.fandom's Morgan page = chapter 65th Down / anime Episode 25, and its Sweeper page = chapter 66th Down / anime Episode 25. Bandai's official synopsis is exactly ch 65-67 - Panther benched by Apollo, Sena's all-out drive to force Apollo's hand (ch 66 大掃除作戦, the sweep) ending at the team's dogeza (ch 67 もしほしいものがあるのなら). END is fenced by ep 26's official synopsis, which opens 'ついに檻から放たれたパンサー' = ch 68 鉄格子は開かれた.",
+      "sources": [
+        "https://www.b-ch.com/titles/8777/025",
+        "https://www.b-ch.com/titles/8777/026",
+        "https://eyeshield21.fandom.com/wiki/Morgan",
+        "https://eyeshield21.fandom.com/wiki/Sweeper",
+        "https://en.wikipedia.org/wiki/List_of_Eyeshield_21_chapters"
+      ]
+    },
+    {
+      "episode": 26,
+      "end_chapter": 71,
+      "start_chapter": 68,
+      "chapters_adapted": "68-71 (ch 71 only its opening: the torn passports and the decision to fly to the USA)",
+      "volume": 9,
+      "confidence": "medium",
+      "note": "A4. START: ep 26's official synopsis opens on Panther released from the cage = ch 68 鉄格子は開かれた; the episode title 野生のリアル is ch 70 野生のリアル, the game's last chapter. END: fandom Episode 26 chapters = 71st Down, and en-WP's vol-9 summary opens 'After the Devil Bats lose by one point, Hiruma shreds the Americans' passports and uses their return tickets to fly to America' - ch 71 USO! USA?, whose own title page already has the team driving in the USA. Marked medium because only the fandom field puts any of ch 71 in this episode; if the episode stops at the whistle, END is 70 (the flight itself is the anime-original ep 27).",
+      "sources": [
+        "https://www.b-ch.com/titles/8777/026",
+        "https://eyeshield21.fandom.com/wiki/Episode_26",
+        "https://eyeshield21.fandom.com/wiki/Volume_9",
+        "https://eyeshield21.fandom.com/wiki/File:71st_Down.jpg",
+        "https://en.wikipedia.org/wiki/List_of_Eyeshield_21_chapters"
+      ]
+    },
+    {
+      "episode": 29,
+      "end_chapter": 74,
+      "start_chapter": 72,
+      "chapters_adapted": "72-74",
+      "volume": 9,
+      "confidence": "medium",
+      "note": "A4. fandom Episode 29 chapters = 72nd/73rd Down and the episode title 結成・デビルガンマンズ! is ch 73 オールスターデビルガンマンズ. END extends one chapter past that field: ch 74 最強の五角形's title page is the five-man beach-football team (Hiruma, Kid, Tetsuma, Sena, Monta) and both en-WP's ep-29 summary and Bandai's synopsis have that team formed AND winning the tournament inside this episode, with Doburoku (the 'old man' Hiruma is courting) saying he will think it over. Ep 30 restarts at ch 75, whose title page is 'Doburoku the Trainer'.",
+      "sources": [
+        "https://www.b-ch.com/titles/8777/029",
+        "https://eyeshield21.fandom.com/wiki/Episode_29",
+        "https://eyeshield21.fandom.com/wiki/File:74th_Down.jpg",
+        "https://en.wikipedia.org/wiki/List_of_Eyeshield_21_episodes_(1%E2%80%9372)"
+      ]
+    },
+    {
+      "episode": 30,
+      "end_chapter": 77,
+      "start_chapter": 75,
+      "chapters_adapted": "75-77",
+      "volume": 9,
+      "confidence": "high",
+      "note": "A4/A10. fandom Episode 30 chapters = 75th/76th/77th Down; the episode title 地獄への境界線 is ch 76 地獄への境界線 exactly; ch 75's title page is 'Doburoku the Trainer', the ranch training Bandai's official synopsis opens on. END: en-WP's ep-30 summary ends with the whole team choosing the Death March = ch 77 地獄に惚れた男達 (vol 9's title chapter).",
+      "sources": [
+        "https://www.b-ch.com/titles/8777/030",
+        "https://eyeshield21.fandom.com/wiki/Episode_30",
+        "https://eyeshield21.fandom.com/wiki/File:75th_Down.jpg",
+        "https://en.wikipedia.org/wiki/List_of_Eyeshield_21_chapters"
+      ]
+    },
+    {
+      "episode": 31,
+      "end_chapter": 81,
+      "start_chapter": 78,
+      "chapters_adapted": "78, 80-81 (ch 79 held back to ep 32)",
+      "volume": 10,
+      "confidence": "medium",
+      "note": "A4/A18. START: ch 78 遥かなるラスベガス is the march being announced and begun, which is Bandai's synopsis for this episode (2000 km, 40 days, Doburoku's warning about Sena's fatal weakness). END: both Bandai and en-WP carry the Japan cutaway to its resolution - Panther challenges Shin on Mt Fuji and loses = ch 80 日本で一番高い場所 + ch 81 進VSパンサー. fandom's ep-31 chapters field lists 78-82, which is over-broad at both ends: ch 79 is ep 32 (see below) and ch 82 is ep 33 (Suzuna's manga debut chapter, and Natsuhiko Taki debuts in ch 83 / ep 33).",
+      "sources": [
+        "https://www.b-ch.com/titles/8777/031",
+        "https://eyeshield21.fandom.com/wiki/Episode_31",
+        "https://en.wikipedia.org/wiki/List_of_Eyeshield_21_episodes_(1%E2%80%9372)",
+        "https://en.wikipedia.org/wiki/List_of_Eyeshield_21_chapters"
+      ]
+    },
+    {
+      "episode": 32,
+      "end_chapter": 79,
+      "start_chapter": 79,
+      "chapters_adapted": "79",
+      "volume": 9,
+      "confidence": "high",
+      "note": "A4/A18 - non-monotone by design, the same shape as the stored eps 37/38 pair. fandom Episode 32 chapters = 79th Down. Page-level confirmation: ch 79 進めデビルバッツ軍! ('Go Forth! Devilbat Troops!') is the second day of the march, the Ha-Ha Brothers' collapse and their return ('You guys came back!'), and eyeshield21.fandom's Ha-Ha Brothers page places Koji's and Shozo's near-desertion exactly there - which is Bandai's ep-32 synopsis word for word (黒木と戸叶が逃げ出し… 次の日、十文字までもが姿を消していた). The episode TITLE 負け犬はいるか is borrowed from ch 86, whose content is ep 35 - do not read the title as the chapter.",
+      "sources": [
+        "https://eyeshield21.fandom.com/wiki/Episode_32",
+        "https://www.b-ch.com/titles/8777/032",
+        "https://eyeshield21.fandom.com/wiki/Ha-Ha_Brothers",
+        "https://mangadex.org/chapter/161393e4-816a-4418-acd2-d08713346aa7"
+      ]
+    },
+    {
+      "episode": 33,
+      "end_chapter": 83,
+      "start_chapter": 82,
+      "chapters_adapted": "82-83",
+      "volume": 10,
+      "confidence": "high",
+      "note": "A4. fandom Episode 33 chapters = 82nd/83rd Down; Natsuhiko Taki's page gives chapter 83rd Down / anime Episode 33. Bandai's official synopsis is ch 82 仲間を探して三千里 beat for beat (the kicked stone lost, Sena separated, the chance meeting with Suzuna, the pro tryout venue) and en-WP's ep-33 summary ends with the tryout starting = ch 83's opening. Suzuna's MANGA debut is this chapter (82nd Down) - in the anime she was already introduced 11 episodes earlier in the anime-original ep 22, so ep 33 stages it as a reunion.",
+      "sources": [
+        "https://www.b-ch.com/titles/8777/033",
+        "https://eyeshield21.fandom.com/wiki/Episode_33",
+        "https://eyeshield21.fandom.com/wiki/Natsuhiko_Taki",
+        "https://eyeshield21.fandom.com/wiki/Suzuna_Taki"
+      ]
+    },
+    {
+      "episode": 34,
+      "end_chapter": 85,
+      "start_chapter": 84,
+      "chapters_adapted": "84-85 (ch 85 shared with ep 35)",
+      "volume": 10,
+      "confidence": "high",
+      "note": "A4. fandom Episode 34 chapters = 84th/85th Down; the episode title ゴーストの胎動 is ch 84 ゴーストの胎動 exactly, and en-WP's ep-34 summary has the losing opponent say he saw a ghost beside Sena (ch 84) and then the pass list read out with Taki's name missing and Sena's called after he leaves = ch 85 ダイヤの原石たち.",
+      "sources": [
+        "https://www.b-ch.com/titles/8777/034",
+        "https://eyeshield21.fandom.com/wiki/Episode_34",
+        "https://en.wikipedia.org/wiki/List_of_Eyeshield_21_chapters",
+        "https://en.wikipedia.org/wiki/List_of_Eyeshield_21_episodes_(1%E2%80%9372)"
+      ]
+    },
+    {
+      "episode": 35,
+      "end_chapter": 86,
+      "start_chapter": 85,
+      "chapters_adapted": "85-86 (ch 85's closing pages - the march restarting with Taki and Suzuna added - open this episode)",
+      "volume": 10,
+      "confidence": "medium",
+      "note": "A4/A10. fandom Episode 35 chapters = 85th/86th Down. Bandai's official synopsis opens '瀧とその妹・鈴音を加え再スタートするデス・マーチ' (ch 85's tail; ep 34 stopped at the announcer calling Sena's name) and then gives Yukimitsu at his limit against Hiruma's leave-the-dropouts stance = ch 86 負け犬はいるか, which en-WP's ep-35 summary states as the whole episode. START marked medium: if that opening is replayed footage rather than new pages of ch 85 it is a recap and START is 86 (A10).",
+      "sources": [
+        "https://www.b-ch.com/titles/8777/035",
+        "https://eyeshield21.fandom.com/wiki/Episode_35",
+        "https://en.wikipedia.org/wiki/List_of_Eyeshield_21_episodes_(1%E2%80%9372)",
+        "https://en.wikipedia.org/wiki/List_of_Eyeshield_21_chapters"
+      ]
+    },
+    {
+      "episode": 36,
+      "end_chapter": 88,
+      "start_chapter": 87,
+      "chapters_adapted": "87-88",
+      "volume": 10,
+      "confidence": "high",
+      "note": "A4. fandom Episode 36 chapters = 87th/88th Down. Ch 87 光の街ラスベガス opens on Sena's split stone and the last stretch, which is Bandai's synopsis (the truck accident just short of the goal); en-WP's ep-36 summary then runs the arrival in Las Vegas, Doburoku's test of the completed Devil Bat Ghost, and Hiruma sending Doburoku to bet on red 21 to clear his debt = ch 88 BLACK JACKは21, vol 10's last chapter. Volume 10's own summary ends on exactly that.",
+      "sources": [
+        "https://www.b-ch.com/titles/8777/036",
+        "https://eyeshield21.fandom.com/wiki/Episode_36",
+        "https://eyeshield21.fandom.com/wiki/Volume_10",
+        "https://eyeshield21.fandom.com/wiki/File:87th_Down.jpg"
+      ]
+    }
+  ],
+  "continue_points": [
+    {
+      "episode": 21,
+      "continue_chapter": 53,
+      "kind": "parity",
+      "note": "C2/C3 parity with the anime: ep 22 is anime-original and ep 23 restarts at ch 53 (Apollo and the NASA game). Chapters 49-52 - the Ojo vs Shinryuji spring final and Shinryuji's debut - are NEVER adapted in running order: the anime only reports the result at ep 37 (Ikkyu Hosokawa, manga debut 49th Down, has anime debut Episode 37) and shows 50-51 as flashback inside ep 106. Read them if you want the Nagas set up; the anime does not.",
+      "sources": [
+        "https://eyeshield21.fandom.com/wiki/Ikkyu_Hosokawa",
+        "https://eyeshield21.fandom.com/wiki/Episode_23",
+        "https://www.b-ch.com/titles/8777/021"
+      ]
+    },
+    {
+      "episode": 23,
+      "continue_chapter": 61,
+      "kind": "parity",
+      "note": "C2/C3 parity with the anime: ep 24 starts at ch 61. Chapters 54-57 (Musashi's introduction) are unseen at this point - the anime backfills them whole at ep 43 (stored anchor 43 -> 57 [54]), so do NOT drop back to 54 here; skip them now and read them when ep 43 arrives.",
+      "sources": [
+        "https://eyeshield21.fandom.com/wiki/Episode_24",
+        "https://eyeshield21.fandom.com/wiki/Episode_43",
+        "https://www.b-ch.com/titles/8777/043"
+      ]
+    },
+    {
+      "episode": 31,
+      "continue_chapter": 79,
+      "kind": "parity",
+      "note": "C2/C3 parity with the anime: ep 32 opens at ch 79 (the Ha-Ha Brothers' desertion and return), which the anime held back after playing the Japan cutaway of chs 80-81 in ep 31. Chapters 54-57 are still unseen too (backfilled at ep 43).",
+      "sources": [
+        "https://eyeshield21.fandom.com/wiki/Episode_32",
+        "https://www.b-ch.com/titles/8777/032"
+      ]
+    },
+    {
+      "episode": 32,
+      "continue_chapter": 82,
+      "kind": "parity",
+      "note": "C2/C3 parity with the anime: ep 33 starts at ch 82. Chapters 80-81 (Mt Fuji, Shin vs Panther) were already animated one episode earlier in ep 31 - skip them on arrival unless re-reading. Chapters 54-57 remain unseen until ep 43.",
+      "sources": [
+        "https://eyeshield21.fandom.com/wiki/Episode_33",
+        "https://www.b-ch.com/titles/8777/031"
+      ]
+    },
+    {
+      "episode": 36,
+      "continue_chapter": 91,
+      "kind": "parity",
+      "note": "C2/C3 parity with the anime: ep 37 is ch 91 alone (Sakuraba's breakdown) and the roster chapters 89-90 arrive at ep 38 - the stored ep-37 continue (89) sends the reader back for them. Chapters 54-57 remain unseen until ep 43.",
+      "sources": [
+        "https://www.b-ch.com/titles/8777/037",
+        "https://www.b-ch.com/titles/8777/038"
+      ]
+    }
+  ],
+  "anchor_hostile": [],
+  "annotations": [
+    {
+      "episodes": [23],
+      "kind": "abridged",
+      "chapters": "53, 58-60",
+      "note": "The NASA Aliens arc is entered by skipping four chapters: ep 23 takes ch 53 (Apollo cancels then stakes the game) and jumps straight to ch 58-60 (Panther, the Shuttle Pass, the party at Kurita's temple), leaving chs 54-57 - Musashi's introduction - unanimated until ep 43."
+    },
+    {
+      "episodes": [22],
+      "kind": "divergence",
+      "chapters": "none",
+      "note": "Anime-original in whole (ja-WP 備考: 22話はアニメオリジナルストーリー; eyeshield21.fandom Category:Anime-Original Episodes; AFG '* Filler', chapter cell N/A). Its one manga tie is a character, not a scene: Suzuna Taki is brought forward from her manga debut in ch 82 (the fandom's own 'Differences from the Manga' line) into an invented skate-race plot. No chapter position."
+    },
+    {
+      "episodes": [27],
+      "kind": "divergence",
+      "chapters": "none",
+      "note": "Anime-original in whole (ja-WP 備考 rowspan over 27-28: アニメオリジナルストーリー; fandom Category:Anime-Original Episodes; AFG '* Filler'). The flight to America with Cerberus swapped for a stuffed toy has no counterpart - the manga crosses the Pacific inside ch 71."
+    },
+    {
+      "episodes": [28],
+      "kind": "graft",
+      "chapters": "72",
+      "note": "Anime-original episode (same three sources as ep 27) whose closing beat quotes the source: Doburoku Sakaki's first appearance - 'Hiruma finally finds what he is looking for' - is his ch 72 debut pulled one episode early (eyeshield21.fandom Doburoku Sakaki: chapter 72nd Down / anime Episode 28). A fragment inside an original plot, so the row stays filler under T28 and takes no anchor (A1); ch 72 is anchored properly at ep 29."
+    },
+    {
+      "episodes": [31, 32],
+      "kind": "rearranged",
+      "chapters": "78-81",
+      "note": "The Death March's opening is re-ordered. Manga order is 78 (the march announced) -> 79 (day two, the Ha-Ha Brothers desert and come back) -> 80-81 (the Japan cutaway: Shin on Mt Fuji, Panther's challenge). The anime plays 78 then 80-81 in ep 31 and gives ch 79 its own episode at ep 32, which additionally borrows its TITLE (負け犬はいるか) from ch 86 - a chapter whose content is ep 35."
+    },
+    {
+      "episodes": [34, 35],
+      "kind": "partial",
+      "chapters": "85",
+      "note": "Chapter 85 ダイヤの原石たち is split across the boundary: ep 34 takes the tryout result (Taki rejected, Sena's name called after he has gone), ep 35 opens on the march restarting with Taki and Suzuna added. Listed in chapters_adapted on both."
+    }
+  ],
+  "repairs": [
+    {
+      "episode": 21,
+      "field": "end_chapter",
+      "old": 49,
+      "new": 48,
+      "why": "The stored value is afg-tier and overshoots by one chapter into material the anime never adapted in running order. Ep 21 is the last two minutes of the Taiyo Sphinx game and nothing more: Bandai Channel's official synopsis ends at '残り時間はわずか2分。このまま泥門デビルバッツは敗退してしまうのか!?', en-WP's ep-21 summary ends 'The match ends with a draw', and eyeshield21.fandom's Episode 21 chapters field lists 48th Down alone - ch 48 跳べデビルバット is the Devil Bat Dive two-point conversion that ties it. Chapter 49 王は神へと挑む starts the Ojo vs Shinryuji spring final, which the anime skips: Ikkyu Hosokawa (manga debut 49th Down) has anime debut Episode 37, where Hiruma merely REPORTS that Ojo lost, and chs 50-51 surface only as the flashback inside ep 106 (stored anchor). chapters_adapted should read '47-48' (ch 47 キャッチの神様 is Monta's catching crisis, which the official synopsis opens on). Sole source for 49 is AFG's chapter column, a reading-position conversion and the last populated cell on that chart.",
+      "sources": [
+        "https://www.b-ch.com/titles/8777/021",
+        "https://eyeshield21.fandom.com/wiki/Episode_21",
+        "https://eyeshield21.fandom.com/wiki/Ikkyu_Hosokawa",
+        "https://en.wikipedia.org/wiki/List_of_Eyeshield_21_episodes_(1%E2%80%9372)",
+        "https://www.animefillerguide.com/anime/eyeshield-21/"
+      ]
+    },
+    {
+      "episode": 21,
+      "field": "chapters_adapted",
+      "old": "47-49",
+      "new": "47-48",
+      "why": "Follows the end_chapter repair above - same evidence. Chapter 49 is not in this episode and is not in any episode in running order.",
+      "sources": [
+        "https://www.b-ch.com/titles/8777/021",
+        "https://eyeshield21.fandom.com/wiki/Episode_21"
+      ]
+    }
+  ],
+  "type_corrections": [
+    {
+      "episodes": [22, 27, 28],
+      "type": "filler",
+      "note": "All three are stored canon and all three are anime-original in whole. Three independent sources agree: (1) ja.Wikipedia's 各話リスト 備考 column prints '22話はアニメオリジナルストーリー' on the 2005-09-07 hour-special row and a rowspan 'アニメオリジナルストーリー' over the 27 and 28 rows; (2) eyeshield21.fandom files Episode 22, Episode 27 and Episode 28 under Category:Anime-Original Episodes, and all three have an EMPTY chapters= field while every neighbouring canon row is populated; (3) animefillerguide marks all three '* Filler' with an N/A chapter cell. T27/T28: ep 22's only source tie is Suzuna's character being brought forward from ch 82 into an invented plot, and ep 28's only tie is Doburoku's ch-72 debut appearing as a closing beat - both fragments, annotated as divergence/graft, neither story-carrying. A1: none of the three takes an anchor.",
+      "sources": [
+        "https://ja.wikipedia.org/wiki/%E3%82%A2%E3%82%A4%E3%82%B7%E3%83%BC%E3%83%AB%E3%83%8921",
+        "https://eyeshield21.fandom.com/wiki/Category:Anime-Original_Episodes",
+        "https://www.animefillerguide.com/anime/eyeshield-21/"
+      ]
+    }
+  ],
+  "structure": {
+    "notes": "Row identity: our rows 18-38 join ja-Wikipedia's 各話リスト, en-Wikipedia's episode list, eyeshield21.fandom's Episode pages and Bandai Channel's b-ch.com/titles/8777/NNN 1:1 by number, title and air date (ep 22 = 謎の少女現る 2005-09-07, ep 32 = 負け犬はいるか 2005-11-09, ep 36 = 最後の試練 2005-12-07). Flag #830's suspected offset does not bite in this range - the differences are translation variants, exactly as batch 19 found for 36-64. Note that eps 22 and 23 aired together as a 2本立て1時間スペシャル on 2005-09-07 and are still two rows everywhere, so no row-count identity problem. SOURCE MAP for this block: (a) animefillerguide's chapter column simply STOPS after ep 21 - every row from 22 on has an empty cell - which is why this gap exists; AFG still carries the filler flags (22, 27, 28 '* Filler'). (b) eyeshield21.fandom's Episode pages carry a chapters= field that is populated on most rows here (23, 24, 26, 29, 30, 31, 32, 33, 34, 35, 36) but is over-broad on ep 31 (78-82) and absent on 25; its 'Nth Down' chapter pages are empty stubs, so the reverse index runs through CHARACTER and TECHNIQUE pages instead - those carry an accurate chapter/episode debut pair (Leonard Apollo 53/ep 23, Morgan 65/ep 25, Sweeper 66/ep 25, Suzuna 82/ep 22-anime, Natsuhiko Taki 83/ep 33, Doburoku 72/ep 28, Ikkyu Hosokawa 49/ep 37) and were the decisive second source on five rows. (c) ja-Wikipedia's episode table has NO 原作 column but DOES have a 備考 column that names anime-original episodes - it is the strongest typing source for this series and independently reproduces the fandom's anime-original category. (d) Bandai Channel's per-episode official synopses remain decisive for content. (e) chapter title pages fetched through the fandom's File: entries and one MangaDex chapter read settled the 63/64 and 78/79/80 boundaries. Chapter space throughout is the manga's own 'Nth Down' numbering (333 chapters, 37 volumes), matching the stored space. NEW STRUCTURE FINDING: chapters 49-52 (Ojo vs Shinryuji, the spring final) are a never-adapted hole in running order - previously unrecorded; only chs 50-51 appear, as flashback, at ep 106.",
+    "order_only": []
+  },
+  "flags_for_sean": [
+    "SECOND GAP, previously unrecorded: chs 49-52 are never adapted in running order. Ep 21 ends at 48, ep 22 is anime-original and ep 23 starts at 53; the anime reports Ojo's loss to Shinryuji as news at ep 37 (Ikkyu Hosokawa's anime debut is Episode 37 while his manga debut is 49th Down) and re-uses 50-51 only as ep 106's flashback. The stored afg fence ep 21 -> 49 is the artefact of that hole; repair proposed. If you decline the repair, the ep-21 continue (53) still holds - it is parity, not END+1.",
+    "eyeshield21.fandom's Patrick Spencer (Panther) and Jeremy Watt pages both give manga debut 58th Down and anime debut 'Episode 21' - unlinked, hand-typed, and inconsistent with everything else (their material is ep 23, and ep 22 in between is anime-original). I treated it as a wiki defect. If it is real, ep 21 closes on a NASA-Aliens teaser from ch 58, which would be a first-time sliver inside an otherwise complete game episode - A44 position-less, not an END.",
+    "Weakest row in the block is the ep 31 / ep 32 interleave. I place ch 79 (Ha-Ha Brothers desert and return - confirmed page-level) at ep 32 and chs 80-81 (Mt Fuji / Shin vs Panther) at ep 31, against the fandom ep-31 field which lists 78-82 in one go. If you would rather keep ep 31 monotone at 78-81 inclusive, ep 32 becomes a re-telling of ch 79 and would need a partial annotation instead of its own anchor - but ja-WP does not mark ep 32 anime-original and AFG does not flag it filler, so it is canon either way.",
+    "ep 26's END (71) rests on the fandom chapters field alone; the alternative is 70 (the game's last chapter and the episode's title chapter) with ch 71's opening pushed into the anime-original ep 27. Marked medium. Nothing downstream moves: ep 29 starts at 72 on both readings.",
+    "OUTSIDE MY RANGE, A1 risk worth a look: eyeshield21.fandom's Category:Anime-Original Episodes also lists eps 15, 16, 53, 78, 126 and 128, and ja-WP's 備考 independently marks 15 AND 16 as アニメオリジナルストーリー - but the T6 override map types none of them filler, and ep 15 carries a stored afg anchor (15 -> 34 [34]). AFG disagrees on ep 15 (it gives ch 34 and flags only 16). Two sources against one on ep 15; a filler row must not carry an anchor.",
+    "ep 24's END (64) is derived from the score line in en-WP's fan-written ep-25 summary ('Trailing 14-6') plus ch 64's opening page, not from a per-episode source. If ep 24 in fact stops at the fumble, END is 63 and ep 25's START is 64 - the block stays consistent either way."
+  ]
+}

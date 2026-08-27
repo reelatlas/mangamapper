@@ -1,0 +1,109 @@
+{
+  "series_id": "naruto-shippuden",
+  "summary": "Rows 480-500 contain ZERO manga pages, so the block takes no anchors at all. 480-483 are the anime-original 少年時代篇 / 'Nostalgic Days' childhood vignettes (AFL filler, AFG 'N/A * Filler', Narutopedia arc page with an empty chapters field, ja-WP: 本編では描かれなかった幼少時代 — 'childhoods never drawn in the main story'), so A1 stands and they take nothing. 484-500 are three licensed light novels animated in blocks that four sources agree on to the episode: 484-488 = Sasuke Shinden: Book of Sunrise (サスケ真伝 来光篇, Shin Towada / illustrated by Kishimoto, Naruto Shinden 'True Stories' vol 3, VIZ 'Naruto: Sasuke's Story—Sunrise'); 489-493 = Shikamaru Hiden: A Cloud Drifting in Silent Darkness (シカマル秘伝 闇の黙に浮ぶ雲, Takashi Yano, Naruto Hiden 'Secret Chronicles' vol 2); 494-500 = Konoha Hiden: The Perfect Day for a Wedding (木ノ葉秘伝 祝言日和, Shō Hinata, Naruto Hiden vol 4). Each block is delivered as ONE side_source annotation in the ruled 452-457 shape (T26) and every one of the 17 rows is anchor_hostile — a side_source row carries no chapter mapping by design (A44: the novel is another work in another unit space). POSITION: no row in 480-500 touches manga ch 700. Narutopedia's ep-479 page carries chapters=699,700 but its own trivia says 'Despite not covering the events of chapter 700, this episode shows its last page'; ja-WP states the anime 'consumed the original's episodes up to chapter 699' at ep 479; en-WP's ep-479 summary ends at Sasuke's departure (ch 699). So the honest terminal stays ep 479 → 699 (fence unmoved) and the post-series continue is ch 700 (C5) — the never-adapted range in this series is exactly ch 700, the fifteen-years-later epilogue, which was animated instead in BORUTO: Naruto Next Generations ep 24 'Boruto and Sarada' (2017-09-13, a loose adaptation per Narutopedia). AFL's 'Manga Canon' label on all 17 novel rows is the defect that manufactured this gap: those episodes adapt no manga at all.",
+  "anchors": [],
+  "continue_points": [
+    {
+      "episode": 479,
+      "continue_chapter": 700,
+      "kind": "post_series",
+      "note": "C5 post-series resume: ep 479 finishes ch 699 and the anime never adapts ch 700 — read ch 700 (the epilogue, 15 years later; vol 72's last chapter) yourself. This value holds unchanged through the finale: eps 480-483 are anime-original and 484-500 adapt three licensed novels, so nothing after ep 479 advances the manga. Ch 700's closing narration page is flashed at the end of ep 479 as an image only; its events are unadapted here and were animated later in Boruto ep 24.",
+      "sources": [
+        "https://naruto.fandom.com/wiki/Naruto_Uzumaki!!_(episode)",
+        "https://ja.wikipedia.org/wiki/NARUTO_-%E3%83%8A%E3%83%AB%E3%83%88-_%E7%96%BE%E9%A2%A8%E4%BC%9D",
+        "https://en.wikipedia.org/wiki/Naruto:_Shippuden_season_21",
+        "https://naruto.fandom.com/wiki/Naruto_Uzumaki!!_(chapter_700)",
+        "https://naruto.fandom.com/wiki/Boruto_and_Sarada"
+      ]
+    }
+  ],
+  "anchor_hostile": [
+    {"episode": 484, "why": "Adapts the licensed novel Sasuke Shinden: Book of Sunrise (サスケ真伝 来光篇, Shin Towada; Naruto Shinden vol 3), zero manga pages — side_source row, no chapter mapping by design (A44, the 452-457 shape). Narutopedia's Manga Chapter field is empty; AFG prints 'NOVEL'.", "sources": ["https://naruto.fandom.com/wiki/Sasuke_Shinden:_Book_of_Sunrise_(Arc)", "https://en.wikipedia.org/wiki/Naruto:_Shippuden_season_22", "https://www.animefillerguide.com/anime/naruto-shippuden/"]},
+    {"episode": 485, "why": "Sasuke Shinden: Book of Sunrise novel block (484-488) — zero manga pages; side_source row carries no anchor (A44).", "sources": ["https://naruto.fandom.com/wiki/Sasuke_Shinden:_Book_of_Sunrise_(Arc)", "https://en.wikipedia.org/wiki/Naruto:_Shippuden_season_22", "https://www.animefillerguide.com/anime/naruto-shippuden/"]},
+    {"episode": 486, "why": "Sasuke Shinden: Book of Sunrise novel block (484-488) — zero manga pages; side_source row carries no anchor (A44).", "sources": ["https://naruto.fandom.com/wiki/Sasuke_Shinden:_Book_of_Sunrise_(Arc)", "https://en.wikipedia.org/wiki/Naruto:_Shippuden_season_22", "https://www.animefillerguide.com/anime/naruto-shippuden/"]},
+    {"episode": 487, "why": "Sasuke Shinden: Book of Sunrise novel block (484-488) — zero manga pages; side_source row carries no anchor (A44).", "sources": ["https://naruto.fandom.com/wiki/Sasuke_Shinden:_Book_of_Sunrise_(Arc)", "https://en.wikipedia.org/wiki/Naruto:_Shippuden_season_22", "https://www.animefillerguide.com/anime/naruto-shippuden/"]},
+    {"episode": 488, "why": "Sasuke Shinden: Book of Sunrise novel block (484-488) — zero manga pages; side_source row carries no anchor (A44). ja-WP's per-episode table groups 484-488 under サスケ真伝 来光篇.", "sources": ["https://naruto.fandom.com/wiki/Sasuke_Shinden:_Book_of_Sunrise_(Arc)", "https://ja.wikipedia.org/wiki/NARUTO_-%E3%83%8A%E3%83%AB%E3%83%88-_%E7%96%BE%E9%A2%A8%E4%BC%9D", "https://www.animefillerguide.com/anime/naruto-shippuden/"]},
+    {"episode": 489, "why": "Adapts the licensed novel Shikamaru Hiden: A Cloud Drifting in Silent Darkness (シカマル秘伝 闇の黙に浮ぶ雲, Takashi Yano; Naruto Hiden vol 2), zero manga pages — side_source row, no chapter mapping (A44).", "sources": ["https://naruto.fandom.com/wiki/Shikamaru_Hiden:_A_Cloud_Drifting_in_Silent_Darkness_(Arc)", "https://en.wikipedia.org/wiki/Naruto:_Shippuden_season_22", "https://www.animefillerguide.com/anime/naruto-shippuden/"]},
+    {"episode": 490, "why": "Shikamaru Hiden novel block (489-493) — zero manga pages; side_source row carries no anchor (A44).", "sources": ["https://naruto.fandom.com/wiki/Shikamaru_Hiden:_A_Cloud_Drifting_in_Silent_Darkness_(Arc)", "https://en.wikipedia.org/wiki/Naruto:_Shippuden_season_22", "https://www.animefillerguide.com/anime/naruto-shippuden/"]},
+    {"episode": 491, "why": "Shikamaru Hiden novel block (489-493) — zero manga pages; side_source row carries no anchor (A44).", "sources": ["https://naruto.fandom.com/wiki/Shikamaru_Hiden:_A_Cloud_Drifting_in_Silent_Darkness_(Arc)", "https://en.wikipedia.org/wiki/Naruto:_Shippuden_season_22", "https://www.animefillerguide.com/anime/naruto-shippuden/"]},
+    {"episode": 492, "why": "Shikamaru Hiden novel block (489-493) — zero manga pages; side_source row carries no anchor (A44).", "sources": ["https://naruto.fandom.com/wiki/Shikamaru_Hiden:_A_Cloud_Drifting_in_Silent_Darkness_(Arc)", "https://en.wikipedia.org/wiki/Naruto:_Shippuden_season_22", "https://www.animefillerguide.com/anime/naruto-shippuden/"]},
+    {"episode": 493, "why": "Shikamaru Hiden novel block (489-493) — zero manga pages; side_source row carries no anchor (A44). ja-WP groups 489-493 under シカマル秘伝 闇の黙に浮ぶ雲.", "sources": ["https://naruto.fandom.com/wiki/Shikamaru_Hiden:_A_Cloud_Drifting_in_Silent_Darkness_(Arc)", "https://ja.wikipedia.org/wiki/NARUTO_-%E3%83%8A%E3%83%AB%E3%83%88-_%E7%96%BE%E9%A2%A8%E4%BC%9D", "https://www.animefillerguide.com/anime/naruto-shippuden/"]},
+    {"episode": 494, "why": "Adapts the licensed novel Konoha Hiden: The Perfect Day for a Wedding (木ノ葉秘伝 祝言日和, Shō Hinata; Naruto Hiden vol 4), zero manga pages — Naruto and Hinata's wedding is the NOVEL's plot, not manga ch 700 (which is the 15-years-later epilogue). Side_source row, no chapter mapping (A44).", "sources": ["https://naruto.fandom.com/wiki/Konoha_Hiden:_The_Perfect_Day_for_a_Wedding_(Arc)", "https://en.wikipedia.org/wiki/Naruto:_Shippuden_season_22", "https://www.animefillerguide.com/anime/naruto-shippuden/"]},
+    {"episode": 495, "why": "Konoha Hiden novel block (494-500) — ep title フルパワー結婚祝い = the novel's chapter 1 'Wedding Presents, Full Throttle!'. Zero manga pages; side_source row carries no anchor (A44).", "sources": ["https://naruto.fandom.com/wiki/Konoha_Hiden:_The_Perfect_Day_for_a_Wedding", "https://en.wikipedia.org/wiki/Naruto:_Shippuden_season_22", "https://www.animefillerguide.com/anime/naruto-shippuden/"]},
+    {"episode": 496, "why": "Konoha Hiden novel block (494-500) — 湯けむりと兵糧丸 ≈ the novel's chapter 3 '肉と湯けむり'. Zero manga pages; side_source row carries no anchor (A44).", "sources": ["https://naruto.fandom.com/wiki/Konoha_Hiden:_The_Perfect_Day_for_a_Wedding", "https://en.wikipedia.org/wiki/Naruto:_Shippuden_season_22", "https://www.animefillerguide.com/anime/naruto-shippuden/"]},
+    {"episode": 497, "why": "Konoha Hiden novel block (494-500) — zero manga pages; side_source row carries no anchor (A44). (The Kazekage's gift thread is Konoha Hiden's own, not Gaara Hiden — Narutopedia assigns the whole arc to Konoha Hiden.)", "sources": ["https://naruto.fandom.com/wiki/Konoha_Hiden:_The_Perfect_Day_for_a_Wedding_(Arc)", "https://en.wikipedia.org/wiki/Naruto:_Shippuden_season_22", "https://www.animefillerguide.com/anime/naruto-shippuden/"]},
+    {"episode": 498, "why": "Konoha Hiden novel block (494-500) — ep title 最後の任務 = the novel's chapters 7-8 'The Final Mission, beginning/end'. Zero manga pages; side_source row carries no anchor (A44).", "sources": ["https://naruto.fandom.com/wiki/Konoha_Hiden:_The_Perfect_Day_for_a_Wedding", "https://en.wikipedia.org/wiki/Naruto:_Shippuden_season_22", "https://www.animefillerguide.com/anime/naruto-shippuden/"]},
+    {"episode": 499, "why": "Konoha Hiden novel block (494-500) — zero manga pages; side_source row carries no anchor (A44).", "sources": ["https://naruto.fandom.com/wiki/Konoha_Hiden:_The_Perfect_Day_for_a_Wedding_(Arc)", "https://en.wikipedia.org/wiki/Naruto:_Shippuden_season_22", "https://www.animefillerguide.com/anime/naruto-shippuden/"]},
+    {"episode": 500, "why": "Series finale, Konoha Hiden novel block (494-500) — zero manga pages. Iruka's Scroll-of-Seals dream is a re-shown Part-I flashback (never cited) and the closing eyecatcher (Naruto passing his forehead protector to Boruto) is an anime original, not a ch-700 page. Side_source row carries no anchor (A44).", "sources": ["https://naruto.fandom.com/wiki/The_Message", "https://en.wikipedia.org/wiki/Naruto:_Shippuden_season_22", "https://www.animefillerguide.com/anime/naruto-shippuden/"]}
+  ],
+  "annotations": [
+    {
+      "episodes": [484, 485, 486, 487, 488],
+      "kind": "side_source",
+      "chapters": null,
+      "note": "Adapts the licensed NOVEL Sasuke Shinden: Book of Sunrise (サスケ真伝 来光篇, written by Shin Towada, illustrated by Masashi Kishimoto; Naruto Shinden / 'True Stories' vol 3, Shueisha 2015-11-04; VIZ: Naruto: Sasuke's Story—Sunrise), zero manga pages — Narutopedia arc page + en-WP season 22 + ja-WP + AFG 'NOVEL'. Canon relative to a licensed franchise side source; the series' own source stays the manga, so no chapter mapping (T26, the ruled 452-457 shape). The anime deviates from the novel in places (Amuda dropped; the Mizukage frees Chino/Nowaki and Sasuke raids the Coliseum) — a novel↔anime difference, not a manga standing."
+    },
+    {
+      "episodes": [489, 490, 491, 492, 493],
+      "kind": "side_source",
+      "chapters": null,
+      "note": "Adapts the licensed NOVEL Shikamaru Hiden: A Cloud Drifting in Silent Darkness (シカマル秘伝 闇の黙に浮ぶ雲, written by Takashi Yano, illustrated by Masashi Kishimoto; Naruto Hiden / 'Secret Chronicles' vol 2, Shueisha 2015-03-04; VIZ: Naruto: Shikamaru's Story—A Cloud Drifting in the Silent Dark), zero manga pages — Narutopedia arc page + en-WP season 22 + ja-WP + AFG 'NOVEL'. Canon + side_source per T26 (452-457 shape); no chapter mapping. The anime drops the novel's chapter 4 entirely (the Shikadai flash-forward) and omits Naruto/Sakura from the reinforcements."
+    },
+    {
+      "episodes": [494, 495, 496, 497, 498, 499, 500],
+      "kind": "side_source",
+      "chapters": null,
+      "note": "Adapts the licensed NOVEL Konoha Hiden: The Perfect Day for a Wedding (木ノ葉秘伝 祝言日和, written by Shō Hinata, illustrated by Masashi Kishimoto; Naruto Hiden / 'Secret Chronicles' vol 4, Shueisha 2015-05-01), zero manga pages — Narutopedia arc page + en-WP season 22 + ja-WP + AFG 'NOVEL'. Naruto and Hinata's wedding is this novel's plot; it is NOT manga ch 700 (the 15-years-later epilogue) and not The Last: Naruto the Movie. Canon + side_source per T26; no chapter mapping."
+    },
+    {
+      "episodes": [479],
+      "kind": "graft",
+      "chapters": "700 (final page only)",
+      "note": "The episode's plot is ch 699; it closes on ch 700's LAST page — the Third Hokage's narration mirroring the manga's first page (Hiruzen is credited as Narration in the episode). Narutopedia states it plainly: 'Despite not covering the events of chapter 700, this episode shows its last page.' A single first-time closing image is a position-less sliver (A44 / 'pages, not numbers'), so END stays 699 and the continue is 700. MEDIUM: the last-page detail rests on Narutopedia's trivia plus the episode's narration credit; that ch 700's EVENTS are unadapted is high-confidence on three sources."
+    }
+  ],
+  "repairs": [
+    {
+      "episode": 479,
+      "field": "note",
+      "old": "\"The Seal of Reconciliation\" = ch 699 (title match); 480+ = novel-based",
+      "new": "ep 479 'Naruto Uzumaki!!' (うずまきナルト!!) adapts ch 699 to its end and shows ch 700's final page as a closing narration image only (Narutopedia: 'despite not covering the events of chapter 700'); ja-WP: the anime consumed the original up to ch 699 here. 480-483 are anime-original; 484-500 adapt three licensed novels (side_source).",
+      "why": "The stored reasoning is a title mis-attribution that invites a wrong future repair: 'The Seal of Reconciliation' (和解の印) is EP 478's title and ch 699's title, while ep 479's title 'Naruto Uzumaki!!' is ch 700's title. The END value 699 is nonetheless correct and unchanged (fence holds) — but a later agent reading the stored note would 'fix' the anchor to 700 on the title match, which three sources refute.",
+      "sources": ["https://naruto.fandom.com/wiki/Naruto_Uzumaki!!_(episode)", "https://naruto.fandom.com/wiki/Naruto_Uzumaki!!_(chapter_700)", "https://en.wikipedia.org/wiki/Naruto:_Shippuden_season_21", "https://ja.wikipedia.org/wiki/NARUTO_-%E3%83%8A%E3%83%AB%E3%83%88-_%E7%96%BE%E9%A2%A8%E4%BC%9D"]
+    },
+    {
+      "episode": 479,
+      "field": "start_chapter",
+      "old": null,
+      "new": 699,
+      "why": "Enrichment of the bare terminal anchor (no contradiction): ep 478 ends mid-699 (stored: {698-699, 699 partial}, continue 699) and ep 479 runs 699 to its end. Narutopedia + AFG both list ep 479 as 699 (+700); en-WP's summary covers exactly ch 699's material (healing at the Valley of the End → Sasuke's pardon and departure).",
+      "sources": ["https://naruto.fandom.com/wiki/Naruto_Uzumaki!!_(episode)", "https://www.animefillerguide.com/anime/naruto-shippuden/", "https://en.wikipedia.org/wiki/Naruto:_Shippuden_season_21"]
+    },
+    {
+      "episode": 479,
+      "field": "chapters_adapted",
+      "old": null,
+      "new": "699",
+      "why": "Enrichment: ch 700 is deliberately EXCLUDED from chapters_adapted — only its final page is shown, as the closing narration image (recorded as the graft annotation). Keeping 700 out of chapters_adapted prevents a healer from deriving END 700.",
+      "sources": ["https://naruto.fandom.com/wiki/Naruto_Uzumaki!!_(episode)", "https://ja.wikipedia.org/wiki/NARUTO_-%E3%83%8A%E3%83%AB%E3%83%88-_%E7%96%BE%E9%A2%A8%E4%BC%9D"]
+    },
+    {
+      "episode": 479,
+      "field": "volume",
+      "old": null,
+      "new": 72,
+      "why": "Enrichment: ch 699 is in vol 72 (691-700) per the stored volume boundaries and Narutopedia's chapter-700 infobox (volume=72).",
+      "sources": ["https://naruto.fandom.com/wiki/Naruto_Uzumaki!!_(chapter_700)", "https://en.wikipedia.org/wiki/List_of_Naruto_chapters_(Part_II)"]
+    }
+  ],
+  "type_corrections": [],
+  "structure": {
+    "notes": "ROW IDENTITY: Narutopedia's episode numbering, en-WP's season-22 list, ja-WP's 各話リスト, AFL and AFG all join to OUR rows 476-500 on title AND air date with no offset (eps 494 and 495 share 2017-02-16 — the one-hour 'NARUTO疾風伝スペシャル 木ノ葉秘伝 ～ナルトの結婚～', counted as two rows by every source and by us). 500 rows total, no recap/special row-count divergence in this range. BLOCK BOUNDARIES agreed by four sources: 480-483 少年時代篇 / 'Nostalgic Days' (anime-original), 484-488 サスケ真伝 来光篇, 489-493 シカマル秘伝 闇の黙に浮ぶ雲, 494-500 木ノ葉秘伝 祝言日和. TRAP 1 — AFL labels all 17 novel rows 'Manga Canon' (and our stored titles carry the VIZ novel names: 'Sasuke's Story: Sunrise', 'Shikamaru's Story…', 'Hidden Leaf Story…'). That label is false: Narutopedia's Manga Chapter field is EMPTY for all of 480-500 and AFG prints 'NOVEL'. AFL's label is what made this range look like an anchor gap. TRAP 2 — ja-WP's episode table has a 通算話 column that reads 700-720 across rows 480-500; those are CUMULATIVE EPISODE numbers (Naruto 220 + Shippuden N), not chapters. An index/column join there would fabricate anchors 700-720 in a manga that ends at 700. TRAP 3 — Narutopedia's ep-479 infobox lists chapters=699, 700 and AFG prints '699, 700', but both are contradicted by Narutopedia's own trivia and by ja-WP: ch 700's events are not adapted. CHAPTER SPACE: the novels have their own chapter numbering (Konoha Hiden = prologue + 8 chapters + epilogue; Shikamaru Hiden = 4 chapters) — never converted to manga numbers (A44). WHERE CH 700 WAS ANIMATED: Boruto: Naruto Next Generations ep 24 'Boruto and Sarada' (2017-09-13) — Narutopedia's chapters field is 700, 705 and its trivia calls it 'an adaptation of Naruto chapter 700, although most of the events drastically differ… including the Five Kage Summit in Konoha, Boruto inviting Shikadai and Inojin to his prank, Boruto's vandalism on the Hokage Rock and Moegi informing Naruto'. That is a different series in our catalog (I17 sequel), so it changes nothing here. Note also that The Last: Naruto the Movie is officially classified as 'chapter 699.5' by the franchise — a film, unnumbered in the manga's own space, so N4 does not apply.",
+    "order_only": []
+  },
+  "flags_for_sean": [
+    "DISPLAY, not data: with 480-500 all anchor-hostile, a reader sitting on any of those 21 rows has no anchor to interpolate from. The honest displayed position for every row 480-500 is 'ch 699 read / resume at 700' — i.e. the ep-479 terminal carried forward unchanged. If the position layer interpolates or shows a dash instead, consider carrying the ep-479 post-series continue across the tail (same question the 452-457 novel block raises at a smaller scale).",
+    "SINGLE SOURCE (low stakes): 'ep 479 shows ch 700's last page' rests on Narutopedia's trivia line, corroborated only indirectly (the episode credits Hiruzen Sarutobi as Narration, and the ch-700 page mirrors the manga's first page). It does not move the anchor either way — one closing image is a position-less sliver — so it is delivered as a graft annotation, not as chapters_adapted.",
+    "TYPE PHILOSOPHY (already ruled, restated for the record): 484-500 are typed canon + side_source following Sean's T4.0 D-10 ruling on 452-457, not filler, even though they contain zero pages of the identified source. If that ruling is ever revisited, this is the largest block it governs (17 rows, the entire series finale)."
+  ]
+}
