@@ -344,7 +344,7 @@ export const ENTRIES: RulingEntry[] = [
     value: { table: 'episodes', type: range(14, 26, 'anime-only-canon') },
     reason: 'ajin S2 (14-26) is anime-original from the start with a non-canon ending (WDTALO + mangashed + per-episode breakdown); canon resumes at manga ch 22. Applied once here; the standing ruling is the EPISODE_TYPE_OVERRIDES entry.',
     ruledBy: 'session', ruledOn: RULED_ON, cite: cite('ajin-demi-human', 'scripts/ingest/lib/resolve.ts EPISODE_TYPE_OVERRIDES ajin-demi-human'),
-    retiresWhen: 'T4.0 studio-original-endings class ruling (DRIFT-LIST A-7: ajin "non-canon ending" → anime-only-canon is one of three competing types)',
+    retiresWhen: 'OVERTAKEN 2026-08-26 — batch 18 wave 2: ajin S2 14-22 adapt ch 23-42 (canon/mixed), only 23-26 are the studio ending (filler + divergence); the season-level premise was wrong (DRIFT-LIST A-7: ajin "non-canon ending" → anime-only-canon was one of three competing types)',
   },
 
   // ---- loose rulings (research-recommended; anchors stored regardless as borrow-maps)

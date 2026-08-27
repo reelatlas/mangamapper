@@ -37,8 +37,7 @@ export const ENTRIES: RulingEntry<EpisodeTypes>[] = [
     ruledBy: 'Sean',
     ruledOn: '2026-08-25',
     cite: [`${B17}/x.json`, 'docs/system-evolution.md "Episode-type taxonomy v2"', 'docs/data-pipeline.md §12.50'],
-    retiresWhen: 'taxonomy-v2 rule lands (T4.0; DRIFT-LIST A-7)',
-    supersedes: '2026-08-23 ruling anime-only-canon for 21-24 (same evidence, different class)',
+    supersedes: '2026-08-23 ruling anime-only-canon for 21-24 (same evidence, different class); the A-7 parking (taxonomy-v2 retiresWhen) RETIRED by T4.0 / batch 18 (2026-08-26) — the only-ending class stays filler + divergence + asterisk (T13)',
   },
   // ---- research batch 15 (2026-08-24, exact-record promotion — 2+ sources each)
   {
@@ -348,7 +347,7 @@ export const ENTRIES: RulingEntry<EpisodeTypes>[] = [
       'Eps 24-26: fully anime-original ending (Madhouse outran the manga) — research verdict (AFG + wheredoestheanimeleaveoff + sportskeeda), Sean sign-off. Contrary to the later T11 (DSQ) class; parked under DRIFT-LIST A-7, nothing retyped. T4.3 (T27, 2026-08-26): anime-only-canon → filler (adheres to no source; the studio-ending class A-7 carries a divergence annotation and stays on the review list — twin-star 21-50 explicitly, T4-GLOSSARY §7).',
     ruledBy: 'Sean',
     ruledOn: '2026-08-23',
-    retiresWhen: 'T4.0 taxonomy v2 unifies the studio-original-ending classes (A-7)',
+    supersedes: 'A-7 parking (2026-08-23): RETIRED by batch 18 wave 2 (2026-08-26) — the studio-ending class is filler + divergence (T27/T28), no adoption basis on any A-7 ending',
   },
   {
     seriesId: 'black-clover',
@@ -381,7 +380,7 @@ export const ENTRIES: RulingEntry<EpisodeTypes>[] = [
       'Anime-original mid-series block (22-28, 34) + the original ending 42-43 (caught up to the manga) — fandom infoboxes list Manga Chapter(s) = N/A; mangashed + wheredoestheanimeleaveoff call 42-43 non-canon (research batch 11). Contrary to the later T11 class; parked under A-7. T4.3 (T27, 2026-08-26): anime-only-canon → filler (adheres to no source; the studio-ending class A-7 carries a divergence annotation and stays on the review list — twin-star 21-50 explicitly, T4-GLOSSARY §7).',
     ruledBy: 'session',
     ruledOn: '2026-08-23',
-    retiresWhen: 'T4.0 taxonomy v2 unifies the studio-original-ending classes (A-7)',
+    supersedes: 'A-7 parking (2026-08-23): RETIRED by batch 18 wave 2 (2026-08-26) — the studio-ending class is filler + divergence (T27/T28), no adoption basis on any A-7 ending',
   },
   {
     seriesId: 'a-certain-scientific-railgun',
@@ -407,7 +406,7 @@ export const ENTRIES: RulingEntry<EpisodeTypes>[] = [
     ruledBy: 'session',
     ruledOn: '2026-08-23',
     cite: [`${B15}/ajin-demi-human.json`],
-    retiresWhen: 'T4.0 taxonomy v2 unifies the studio-original-ending classes (A-7)',
+    supersedes: 'A-7 parking (2026-08-23): RETIRED by batch 18 wave 2 (2026-08-26) — the studio-ending class is filler + divergence (T27/T28), no adoption basis on any A-7 ending',
   },
   {
     seriesId: 'hunter-x-hunter',

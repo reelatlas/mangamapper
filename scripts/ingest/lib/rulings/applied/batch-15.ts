@@ -57,7 +57,7 @@ export const ENTRIES: RulingEntry[] = [
     reason: 'ep typed anime-only-canon; the ch-39 "graft" is a cards-circling cameo — anchoring END 39 would poison the position curve (mainline ~12-13); annotation carries the fact — encoding decision for Sean',
     ruledBy: 'session', ruledOn: date,
     cite: ['scripts/ingest/research/batch15/out/cardcaptor-sakura-clear-card.json', 'scripts/ingest/apply-research-batch-15.ts#EXCLUDED_ANCHORS'],
-    retiresWhen: 'Sean rules the anime-only-canon graft encoding',
+    retiresWhen: 'OVERTAKEN 2026-08-26 — T4.2/T4.3: the class is canon + adopted{basis} or filler + graft/partial annotation (T26/T28); anime-only-canon retired',
   },
   {
     seriesId: 'cardcaptor-sakura-clear-card', ruleId: 'A2',
@@ -65,7 +65,7 @@ export const ENTRIES: RulingEntry[] = [
     reason: 'same class as ep 12: anime-only-canon ep; ch 46 = Mirage debut graft, not the mainline position — annotation carries it',
     ruledBy: 'session', ruledOn: date,
     cite: ['scripts/ingest/research/batch15/out/cardcaptor-sakura-clear-card.json', 'scripts/ingest/apply-research-batch-15.ts#EXCLUDED_ANCHORS'],
-    retiresWhen: 'Sean rules the anime-only-canon graft encoding',
+    retiresWhen: 'OVERTAKEN 2026-08-26 — T4.2/T4.3: the class is canon + adopted{basis} or filler + graft/partial annotation (T26/T28); anime-only-canon retired',
   },
   {
     seriesId: 'hajime-no-ippo-the-fighting', ruleId: 'A2',
@@ -73,7 +73,7 @@ export const ENTRIES: RulingEntry[] = [
     reason: "Boxer's Fist DVD special adapts only ch 383 p.4-5 (2-page gag) — anchoring END 383 at run position ~270 breaks the curve (sliver-rule spirit: scraps never set position); annotation carries the sliver — encoding decision for Sean",
     ruledBy: 'session', ruledOn: date,
     cite: ['scripts/ingest/research/batch15/out/hajime-no-ippo-the-fighting.json', 'scripts/ingest/apply-research-batch-15.ts#EXCLUDED_ANCHORS'],
-    retiresWhen: 'Sean rules the sliver-special encoding',
+    retiresWhen: 'OVERTAKEN 2026-08-26 — T28: a sliver inside an original plot is filler + partial/graft annotation, never mixed',
   },
 
   // ---- SERIES_UPDATES: entry-level updates ratified by the batch

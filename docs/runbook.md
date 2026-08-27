@@ -97,38 +97,27 @@ Rules: `P5` audits verify outcomes · `P2` rules live in lib · `P17` every
 census delta explained · `P18` ruling_violation = 0 · `P20` healers
 idempotent + rostered.
 
-## 5. Script list
+## 5. Script list — the rosters ARE the list
 
-> This list becomes the pull / heal / census rosters in T2.4
-> (`docs/restructure-plan.md`); historical one-shots move to `history/`
-> (`P34`). Until then it is the inventory.
+`scripts/ingest/rosters.ts` is the inventory (T2.4, `P20`/`P33`): every
+script under `scripts/ingest/` is on the PULL, HEAL or CENSUS roster (with
+`when: 'standard'` or an `event` trigger), in LIB_SUPPORT, or in
+`history/` (`P34` — one-shots whose rulings were extracted to
+`lib/rulings/applied/`, never run again). The system census refuses an
+unlisted script. `npm run pull` / `npm run heal` / `npm run census` run the
+standard entries in roster order; `npm run heal -- --list` prints the
+event healers and their triggers.
 
-- `parser-check.ts` — fixture regressions (AFL, AFG, Wikipedia); run after touching any parser.
-- `backfill.ts` — full AFL sweep (honors dispositions, ~65 min, resumable 24 h window).
-- `afg-backfill.ts` — AFG sweep → staging + chapter anchors (`--force` re-fetches after parser changes).
-- `afg-expansion.ts` / `afg-extend.ts` — AFG-only series creation; chain-confirmed component rebuild + episode tail/gap fill for registered pages covering more than we hold (`I29`–`I31`). Run `afg-extend` after registration and whenever AFL lags an airing season.
-- `afg-continua-backfill.ts` — campaign pull of AFG continua (frontiers + boundaries) via `applyContinua` (`G22`).
-- `mu-backfill.ts` — universal MU pull via `lib/mu-frontier` (`G39`).
-- `volumes-backfill.ts [mangaAnilistId ...]` — Wikipedia volume boundaries for anchored manga (an explicit id list overrides the anchored-only default); `V1`, `V5`, `V6`.
-- `wiki-episodes-backfill.ts [ids]` — Wikipedia episode titles/air dates, creating rows for numbers we lack (`G44`, `G45`); also stages fractional watch-order entries into `ingest_fractionals` (`G46`).
-- `sync-watch-order.ts` — mirrors order-only fractionals into `watch_order_entries` (`N31`); run after any fractional disposition change.
-- `rederive-anchors.ts` — recompute anchors from STAGED AFG pages, no refetch (after derivation-logic changes; `G28`).
-- `scopes-apply.ts` — sync curated `series_scopes` into canonical + auto-flag unscoped shared-manga series (`I36`).
-- `stitch.ts [--dry-run]` — multi-season chains; idempotent; override chains, ruled titles and `ruledExtent` extensions live at the top (`I21`–`I28`). Follow an extension with `wiki-episodes-backfill.ts <ids>` + `verify-series-display.ts <ids>`.
-- `verify-series-display.ts [--print] <ids> | --all` — the whole-series verifier through the app's exact code path (`P19`); `--all` sweeps every anchored series and lists reorder holes (the exact-record work-list); `--print` shows rows AND section headers (`A36`).
-- `apply-research-batch-N.ts [--dry-run] [ids]` — research application in the batch-14+ shape: verdict JSONs in-repo (`research/batchN/out`), repairs detected programmatically, type corrections only through `EPISODE_TYPE_OVERRIDES`, order-only dedup, sliver + running-order normalization, one bookmark per series (`P15`, `P16`, `A10`, `A9`, `T6`).
-- `merge.ts` — multi-AFL-page merges (config at top).
-- `relations.ts` — rebuilds `series_relations` (auto + RULED pairs; `I17`).
-- `audit-titles.ts` — periodic corruption re-audit against a fresh AFL index snapshot (`G8`, `I14`).
-- `audit-afg-structure.ts` — structural cross-check of every staged AFG page vs canonical (naming / episode grouping / season hierarchy); classifies aligned vs conflict vs registry-gap; `--register` enters confident matches into the identity registry (`G30`, `I3`). AFG numbers episodes franchise-continuously, so `AFG max > ours` usually means unstitched newer seasons (afg-extend candidates) or a deliberate split of ours; `< ours` means a season-scoped page.
-- `audit-ui-truth.ts` — replicates the card's exact per-series decisions (full / ch-only / pending / no-source / structure-integrity) and carries the outcome audit classes; run after any pipeline batch — a data-level audit can say "resolved" while a UI gate still blanks the display. Keep in lockstep with `src/data/catalog/assemble.ts` (`P5`).
-- `audit-manga-coverage.ts` — frontier / latest_known / cross-check census; self-healing (roster class: heal).
-- `reconcile-structure.ts` — episodes outrunning the component structure walk the chain to the episodes' end; confirm → structure rebuilds, no confirm → accepted-extras flag; ruled extras skipped by name (`I33`). Idempotent — run after AFL refreshes land new trailing episodes.
-- `heal-volume-boundaries.ts` — stored-boundary healer (`V2`).
-- `cleanup-flags.ts` — dedupe exact-duplicate open flags (keeps oldest); never dismisses unique flags.
-- `wayback-recover2.ts` — archive recovery for corruption victims (rendered snapshots + count validation).
-- `rebuild.ts` — **DANGER post-stitching**: re-resolves everything as single-season, clobbering stitched aggregates. Only for canonical-shape migrations; re-run `stitch` after.
-- `pilot.ts` / `cleanup.ts` / `stabilize.ts` / `polish-ids.ts` / `fix-mismatch.ts` / `assisted-prep.ts` — historical one-shots, kept as patterns (→ `history/`, `P34`).
+Healers added in the restructure phase (2026-08-26), all standard:
+`heal-source-kinds.ts` (`T25` — source_type re-derived from staging),
+`assert-overrides.ts` (`T6` types, `T26` annotations with `origin`
+reconciliation, `A44` anchor suppression, `G53` dates, `G54` order gate,
+`T27` standings), `heal-format.ts` (`T29` — episodes.format), plus the event
+healer `anilist-restage.ts` (any MEDIA_FIELDS change in `lib/anilist.ts`).
+Research batches since batch 18 apply through the standing ruling maps and
+`npm run heal` — there is no `apply-research-batch-N.ts` any more
+(`scripts/ingest/research/batch18/{validate,curate}.ts` are the landing and
+curation gates).
 
 ## 6. Flag review
 

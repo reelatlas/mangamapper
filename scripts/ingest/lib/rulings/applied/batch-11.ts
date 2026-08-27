@@ -295,7 +295,7 @@ export const ENTRIES: RulingEntry[] = [
     value: { table: 'episodes', type: { ...range(22, 28, 'anime-only-canon'), ...range(34, 34, 'anime-only-canon'), ...range(42, 43, 'anime-only-canon') } },
     reason: 'gto: anime-original mid-series block (22-28, 34) + the original ending 42-43 (caught up to the manga) — fandom infoboxes list Manga Chapter(s) = N/A; mangashed + WDTALO call 42-43 non-canon. Applied once here; the standing ruling is the EPISODE_TYPE_OVERRIDES entry.',
     ruledBy: 'session', ruledOn: RULED_ON, cite: cite('gto-great-teacher-onizuka', 'scripts/ingest/lib/resolve.ts EPISODE_TYPE_OVERRIDES gto-great-teacher-onizuka'),
-    retiresWhen: 'T4.0 studio-original-endings class ruling (DRIFT-LIST A-7: gto 42-43 "caught up" is one of three competing types)',
+    retiresWhen: 'OVERTAKEN 2026-08-26 — batch 18 wave 2 ruled gto 22-28/34/42-43 filler + divergence (T27/T28); 27 mixed (the Toroko Oppai side story)',
   },
 
   // ---- series update

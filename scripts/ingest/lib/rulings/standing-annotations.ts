@@ -494,8 +494,8 @@ export const ENTRIES: RulingEntry<StandingAnnotation[]>[] = [
   ).map(([seriesId, episodes, why]) => ({
     seriesId,
     ruleId: 'T26',
-    value: [{ episodes, kind: 'divergence' as AnnotationKind, note: `A-7 studio-ending class — filler under T27 (adheres to no source) + asterisk; on Sean's batch-18 review list (adopted{studio} or filler). ${why}` }],
-    reason: 'T4.0 D-10: the A-7 studio-ending class → filler + asterisk, ON THE REVIEW LIST (T4-GLOSSARY §3 / §7).',
+    value: [{ episodes, kind: 'divergence' as AnnotationKind, note: `A-7 studio-ending class — RULED FILLER, batch 18 wave 2 (2026-08-26, verified R24): no author / studio / community basis on any A-7 ending; filler + divergence + asterisk (T27/T28). ${why}` }],
+    reason: 'T4.0 D-10 parked the A-7 studio-ending class as filler + asterisk on the review list; batch 18 wave 2 RULED it (2026-08-26): every A-7 ending stays filler + divergence — the authors hold 原作 credits only, three mangas printed their own endings, none is carried forward.',
     ruledBy: 'Sean' as const,
     ruledOn: '2026-08-26',
     cite: ['docs/restructure/T4-GLOSSARY.md §3', 'docs/restructure/DRIFT-LIST.md A-7'],

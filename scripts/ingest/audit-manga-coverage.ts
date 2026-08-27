@@ -9,7 +9,7 @@
 //   npx tsx --env-file=.env.ingest scripts/ingest/audit-manga-coverage.ts
 
 import { db, selectAll, startRun, finishRun, fileFlagOnce } from './lib/db';
-import { seriesHasInstrument } from './lib/rulings/source-kinds';
+import { seriesHasInstrument, sourceKindOf } from './lib/rulings/source-kinds';
 import { applyMuFrontier, bestLatestKnown, crossCheckMangaStatus } from './lib/mu-frontier';
 
 interface MuRaw {
@@ -72,6 +72,12 @@ async function main() {
       }
       if (!s.manga_anilist_id) {
         classes.data_hole_no_manga_link.push(s.id);
+        // T25/T24 (consolidate deep 2026-08-26): a volume-unit source (light
+        // novel / web novel / novel) has no MANGA link by design — its missing
+        // link is the NOVEL side, the T24 instrument build; the census already
+        // lists it (pending_finished_no_totals). The flag is for chapter-unit
+        // kinds only — it fired on all 33 LN series after T4.1 (dismissed).
+        if (sourceKindOf(s.source_type)?.unit !== 'chapter') continue;
         await fileFlagOnce(runId, s.id, 'resolve', 'count_mismatch', {
           note: 'has a manga source_type but no manga link — pickManga found no ADAPTATION edge',
         });

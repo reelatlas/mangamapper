@@ -607,6 +607,47 @@
    durable guard. Lesson for the floor rule: a >2 overshoot sourced from a
    SINGLE chart row with no corroborating content anywhere is a typo
    candidate, not an adoption candidate.
+62. ✅ **CONSOLIDATE DEEP — the T4 build sealed (2026-08-26; P21 required it:
+   T25-T29, T28, A44 changed enforcement sites catalog-wide).** Step 0:
+   system census green. Steps 1-2: every writer through the shared gates
+   (three new healers rostered; edges current). Step 4: `npm run heal` is a
+   FIXED POINT — source kinds 0 changed, standings 0, types 0 asserted,
+   annotations 356 asserted / 0 stale, dates 0, order gate 0 withheld,
+   watch-order 39 synced, format 0 changed. Step 5: the census did not move
+   a single class against the post-T4.4 run; ruling_violation 0; A1 0;
+   display 220/0. **Step 9 (deep):** (i) `retiresWhen` worklist — four
+   conditions met by batch 18 RETIRED on the standing T6 entries (x,
+   claymore, gto, ajin: the A-7 "taxonomy-v2" parking → superseded text),
+   four applied records marked OVERTAKEN (batch-11 gto, batch-12 ajin,
+   batch-15 graft/sliver encodings → T26/T28); still pending, listed: the
+   continua chart cross-check gate (G26 entry), the D2 split (mu-frontier
+   suppression), fotbs/dr-stone order-only confirmations (reviewed-specials),
+   the STATUS design pass labels (N32), film-collection exclusions, the
+   conan A-5 re-check under T8, the kingdom step-stool line, two override
+   chains awaiting airing, two batch-15/16 Sean items (ep-25 endpoint; ep-10
+   segment order). (ii) Notes as precedence (P23): the A-7 spread note said
+   "on Sean's batch-18 review list" — RULED (wave 2) → rewritten, re-asserted.
+   (iii) Rulings pointing at rows that no longer exist: 0 (all six maps
+   checked). (iv) Flags: 392 open → 358 after cleanup; the +34 were the
+   coverage healer's "has a manga source_type but no manga link" fired on
+   every LN series once hasInstrument came from the source KIND (T4.1) —
+   the missing link on a volume-unit source is the NOVEL side (T24), not a
+   manga hole → the healer now skips volume-unit kinds; the 34 dismissed,
+   listed in the commit. The remaining today-flags (7 afg continua
+   disagreements, 1 afg parse) are real review items. (v) Dead constants:
+   `WIKI_NUMBERING_SHIFTS` (empty, still consulted) stays the §E.8
+   unification sidecar. (vi) Runbook §5 rewritten: the rosters ARE the
+   script list; the restructure-phase healers named; no apply script per
+   batch any more. (vii) Permanence tiers (P25): designed, NOT built —
+   proposed as the first post-phase /add-rule (a LOCKED map + a census
+   class), not bolted onto this pass. (viii) User-visible string flagged,
+   not fixed (Cursor): the detail header and strip tooltip render the tail
+   badge with `replace(' ', '_')` ("manga_only") — the chip pass decides
+   the token grammar. Capture (P29): every batch-18 learning is already a
+   rule (T28, A44, T26's basis), a trap (research-agent.md), a ruling map
+   entry or a census class; nothing left without a home. CYCLE POSITION:
+   between batches; the restructure phase's last step is the P36
+   cross-model frame check.
 61. ✅ **T4.5 — THE WORDS (T19 rewritten; T3.2 + T3.5 landed; 2026-08-26).**
    Strings only, per Sean's T4.0 D-12 and Cursor's scoping. The display
    vocabulary is now exactly canon / mixed / filler + `{noun} only`: the
