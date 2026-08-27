@@ -1,0 +1,145 @@
+{
+  "series_id": "soul-eater",
+  "summary": "The honest post-series resume for Soul Eater is CHAPTER 37, not 38 and not 40. Page-level evidence: animefillerguide's own continua panel states 'The anime ended at episode 36 of Season 1, which corresponds to Chapter 36 (p. 24-41) and 37 (p. 1-30)' and 'start reading from Chapter 37 (p. 31)', and AFG's episode chart gives ep 36 chapters '36, 37' with a page-cited note ('You can verify this in chapter 37 of the manga, from page 18 onward'). Content corroborates: ch 37's closing beat is Shinigami calling in Internal Investigation over a suspected mole (Joe Buttataki's manga debut, Internal Investigation Office debut) — en.wikipedia's vol-10 summary carries it, ep 36's plot on both en.wikipedia and souleater.fandom ends one scene earlier at Medusa's Lair, and the anime never has an internal investigation at all (fandom ep 38: Joe 'had only just arrived at the DWMA, and his task was to create weapons from demon tools ... not to investigate'). So ep 36 ends MID-chapter-37 and no later row finishes it — C1 straddle. Two consequences. First, ep 36's stored anchor (afg-continua END 36) is one chapter short: it is END 37 [START 36]. Second, batch 18's proposed post-series continue of ch 40 is REFUTED: ep 38 lifts only two scenes out of ch 38-39 (Joe's arrival + the Black-Star-vs-Kid duel) and leaves ch 39's whole climax — Joe's murder — unadapted, so a reader dropped at ch 40 would meet Stein arrested for a killing they never saw. Stored ep 37 = filler is CONFIRMED (fandom ep 37 'this episode does not have any corresponding chapters'; ja-WP 第37話以降アニメオリジナル; AFG N/A), as are 39 and 40 (filler, fragments only) — under A1 none of the three takes an anchor. Surprise: AFG types ep 38 filler too (chapters N/A), against AFL 'manga canon', the fandom's bidirectional ch-38/ch-39 fields and Sean's batch-18 ruling; the fandom evidence is the finer of the two and the stored canon typing is left standing, but the dissent is flagged.",
+  "anchors": [
+    {
+      "episode": 36,
+      "end_chapter": 37,
+      "start_chapter": 36,
+      "chapters_adapted": "36-37 (ch 37 only through ~p.30 — the chapter's closing Death Room scene, Shinigami calling in Internal Investigation and Joe Buttataki's manga debut, is NOT adapted)",
+      "volume": 10,
+      "confidence": "high",
+      "note": "REPAIR of the stored afg-continua END 36 (A3/A4). Two independent sources put ch 37 in this episode: AFG's chart row ('36.' -> '36, 37', with the page-cited manga-difference note about ch 37 p.18 onward) and souleater.fandom from both sides (Chapter 37 page: 'It was adapted as Episode 36'; anime correspondent = Episode 36 / Episode 36 page: 'Its corresponding chapter from the manga is Chapter 37'). START 36 keeps parity with the stored ep35 -> 36 {35-36} straddle (fandom Chapter 36 prose: 'It was adapted as Episode 35'). The chapter is NOT completed here — see the continue point.",
+      "sources": [
+        "https://www.animefillerguide.com/soul-eater/",
+        "https://souleater.fandom.com/api.php?action=parse&page=Chapter%2037&prop=wikitext&format=json",
+        "https://souleater.fandom.com/api.php?action=parse&page=Episode%2036&prop=wikitext&format=json",
+        "https://en.wikipedia.org/wiki/List_of_Soul_Eater_chapters",
+        "https://en.wikipedia.org/wiki/List_of_Soul_Eater_episodes"
+      ]
+    },
+    {
+      "episode": 38,
+      "end_chapter": 39,
+      "start_chapter": 38,
+      "chapters_adapted": "38-39 (partial: Joe's arrival at the DWMA and the coffee running gag from ch 38; the Black-Star vs Kid duel from ch 39; both heavily altered)",
+      "volume": 10,
+      "confidence": "high",
+      "note": "CONFIRMS the stored manual anchor, no change (A4). Bidirectional fandom fields: Episode 38 infobox 'anime correspondent = Chapter 38 and Chapter 39'; Chapter 38 page 'the argument between Black-Star and Death the Kid, as well as Joe Buttataki's arrival to Death City, were adapted as part of Episode 38'; Chapter 39 page 'The fight between Black-Star and Death the Kid was adapted as Episode 38'. AFL types this row manga_canon. What is NOT adapted is decisive for the continue: the whole internal-investigation spine of ch 38 (Joe as investigator, the lie-detection interrogations of Spirit and Sid, Marie/Azusa, Marie and Joe's reunion, Maka overhearing Eruka and Crona) and the whole back half of ch 39 (Joe's murder) — fandom's own 'Manga and Anime Differences' on ep 38 spells both out. Chapter 39's 'anime correspondent' field is EMPTY.",
+      "sources": [
+        "https://souleater.fandom.com/api.php?action=parse&page=Episode%2038&prop=wikitext&format=json",
+        "https://souleater.fandom.com/api.php?action=parse&page=Chapter%2038&prop=wikitext&format=json",
+        "https://souleater.fandom.com/api.php?action=parse&page=Chapter%2039&prop=wikitext&format=json",
+        "https://en.wikipedia.org/wiki/List_of_Soul_Eater_chapters"
+      ]
+    }
+  ],
+  "continue_points": [
+    {
+      "episode": 36,
+      "continue_chapter": 37,
+      "kind": "parity",
+      "note": "C1 straddle, NOT C2 parity: ep 36 ends mid-ch-37 (AFG: 'Chapter 36 (p. 24-41) and 37 (p. 1-30)' ... 'start reading from Chapter 37 (p. 31)') and NO later episode finishes it — ch 37's closing scene, Shinigami calling in Internal Investigation because a mole is suspected, is never adapted; the anime rewrites Joe into a demon-tool engineer with no investigation at all. REPAIR of the stored continue 38, whose note ('chs 37 not yet seen at this point') is doubly wrong: ch 37 is not unseen (pp.1-30 are ep 36 itself) and it is not finished either. The cost of the honest value is ~30 pages of re-read; the cost of 38 is losing the inciting beat of the entire Internal Investigation arc.",
+      "sources": [
+        "https://www.animefillerguide.com/soul-eater/",
+        "https://en.wikipedia.org/wiki/List_of_Soul_Eater_chapters",
+        "https://souleater.fandom.com/api.php?action=parse&page=Chapter%2037&prop=wikitext&format=json",
+        "https://souleater.fandom.com/api.php?action=parse&page=Episode%2036&prop=wikitext&format=json"
+      ]
+    },
+    {
+      "episode": 38,
+      "continue_chapter": 37,
+      "kind": "post_series",
+      "note": "The series' post-series resume (C4). Ep 38 is the last row that adapts chapters, but it adapts only fragments and it never picks up the ch-37 tail that ep 36 left, so the furthest COMPLETE first-time coverage is ch 36 and the position stays inside ch 37. REPAIR of the stored 38, and a REFUTATION of the batch-18 proposal of 40. Never-adapted material the reader must not be skipped past: ch 37 pp.~31-40 (the Internal Investigation is called; Joe's manga debut); most of ch 38 (the entire mole hunt, the interrogations, Marie and Joe, Maka overhearing Eruka and Crona); the back half of ch 39 (Joe Buttataki is killed — the anime keeps him alive to the end); the substance of ch 40 (Stein arrested for Joe's murder and escaping with Marie — ep 39 shows only Crona's departure, and inverts it: Spirit finds Crona gone, not Maka, and in the anime Crona never reaches Medusa); and ch 41-43 in full. On arrival the reader will meet two things ep 38 already showed in altered form — the Joe/coffee arrival (ch 38) and the Black-Star vs Kid duel (ch 39) — but both differ enough in the manga (Joe is an internal investigator there) that they are not a true re-read (C3 note, not a skip instruction).",
+      "sources": [
+        "https://www.animefillerguide.com/soul-eater/",
+        "https://souleater.fandom.com/api.php?action=parse&page=Chapter%2039&prop=wikitext&format=json",
+        "https://souleater.fandom.com/api.php?action=parse&page=Chapter%2040&prop=wikitext&format=json",
+        "https://souleater.fandom.com/api.php?action=parse&page=Episode%2038&prop=wikitext&format=json",
+        "https://souleater.fandom.com/api.php?action=parse&page=Episode%2039&prop=wikitext&format=json",
+        "https://en.wikipedia.org/wiki/List_of_Soul_Eater_chapters"
+      ]
+    }
+  ],
+  "anchor_hostile": [],
+  "annotations": [
+    {
+      "episodes": [
+        37
+      ],
+      "kind": "loose_parallel",
+      "chapters": "37 (closing scene) - 38",
+      "note": "REFINEMENT of the stored loose_parallel{38}, keeping the stored filler typing. Ep 37 is anime-original but it rewrites two manga beats rather than adapting them: (a) ch 37's closing Death Room scene, where Shinigami calls in Internal Investigation because a mole is suspected, becomes Death asking Sid 'whether their associate from Oceania has yet arrived' — a technology consultant, no mole, no investigation; (b) ch 38's opening, where Medusa orders Crona to keep searching for the demon tools, becomes the alley scene where Eruka presses Crona about Stein's condition and the Secret Vault. The episode closes on Joe walking into the desert toward Death City. souleater.fandom states outright: 'this episode does not have any corresponding chapters'.",
+      "sources": [
+        "https://souleater.fandom.com/api.php?action=parse&page=Episode%2037&prop=wikitext&format=json",
+        "https://souleater.fandom.com/api.php?action=parse&page=Chapter%2037&prop=wikitext&format=json",
+        "https://souleater.fandom.com/api.php?action=parse&page=Chapter%2038&prop=wikitext&format=json"
+      ]
+    },
+    {
+      "episodes": [
+        36
+      ],
+      "kind": "divergence",
+      "chapters": "37",
+      "note": "Ep 36 stops one scene short of the end of ch 37 and substitutes an anime-original outcome for the chapter's fight: in ch 37 Soul calls the retreat and Mosquito is still a viable opponent threatening his 200-years-ago form, while in ep 36 Maka unleashes Genie Hunter (Majin Hunt) and appears to destroy him. fandom's ep-36 differences section: 'it is not until Chapter 42 that Maka first uses the Majin Hunt'. AFG flags the same difference with a page citation (ch 37 from p.18). Relevant to position because the reader arriving at ch 37 p.31 has already seen a DIFFERENT version of pp.18-30.",
+      "sources": [
+        "https://souleater.fandom.com/api.php?action=parse&page=Episode%2036&prop=wikitext&format=json",
+        "https://www.animefillerguide.com/soul-eater/"
+      ]
+    }
+  ],
+  "repairs": [
+    {
+      "episode": 36,
+      "field": "end_chapter",
+      "old": 36,
+      "new": 37,
+      "why": "The stored value is an afg-continua derivation that read AFG's 'the anime ended at episode 36' as 'ep 36 = ch 36'. AFG's own chart row for ep 36 is '36, 37' and its continua panel is page-level: 'Chapter 36 (p. 24-41) and 37 (p. 1-30)'. souleater.fandom agrees from both sides (Chapter 37: 'It was adapted as Episode 36'; Episode 36: 'Its corresponding chapter from the manga is Chapter 37'). Also set start_chapter 36, chapters_adapted '36-37', volume 10. Derivation-tier row: the apply layer must flip it to manual (P8).",
+      "sources": [
+        "https://www.animefillerguide.com/soul-eater/",
+        "https://souleater.fandom.com/api.php?action=parse&page=Chapter%2037&prop=wikitext&format=json",
+        "https://souleater.fandom.com/api.php?action=parse&page=Episode%2036&prop=wikitext&format=json"
+      ]
+    },
+    {
+      "episode": 36,
+      "field": "continue_chapter",
+      "old": 38,
+      "new": 37,
+      "why": "The stored C2 parity note asserts 'chs 37 not yet seen at this point' — false: ep 36 IS ch 37 pp.1-30. The correct rule here is C1 (mid-chapter ending continues IN the straddled chapter), because ch 37's closing Internal-Investigation scene is not adapted by ep 36 and is not picked up later either (the anime has no internal investigation; fandom ep-38 differences). AFG's continua text says the same in words: 'start reading from Chapter 37 (p. 31)'.",
+      "sources": [
+        "https://www.animefillerguide.com/soul-eater/",
+        "https://en.wikipedia.org/wiki/List_of_Soul_Eater_chapters",
+        "https://souleater.fandom.com/api.php?action=parse&page=Episode%2038&prop=wikitext&format=json"
+      ]
+    },
+    {
+      "episode": 38,
+      "field": "continue_chapter",
+      "old": 38,
+      "new": 37,
+      "why": "This is the last anchored row, so its continue is the series' post-series position. Ep 38 adapts two scenes of ch 38-39 but never returns to the unadapted tail of ch 37, so the reader's true frontier is still inside ch 37. Stored 38 skips the Internal Investigation being called; batch 18's proposed 40 additionally skips Joe Buttataki's murder (ch 39's climax) and the whole mole hunt, which is exactly what ch 40 opens by reacting to (Stein arrested for that murder) — a broken position. Evidence is page-level on the AFG side and content-level on the fandom/en-WP side.",
+      "sources": [
+        "https://www.animefillerguide.com/soul-eater/",
+        "https://souleater.fandom.com/api.php?action=parse&page=Chapter%2039&prop=wikitext&format=json",
+        "https://souleater.fandom.com/api.php?action=parse&page=Chapter%2040&prop=wikitext&format=json",
+        "https://en.wikipedia.org/wiki/List_of_Soul_Eater_chapters"
+      ]
+    }
+  ],
+  "type_corrections": [],
+  "structure": {
+    "notes": "ROW IDENTITY: AFG's chart prints explicit episode numbers and titles (arc headers are separate single-cell rows) and matches our 51 rows 1:1 on number AND title — joined on title, never on index (R20). No recaps or specials in our row space; the 'Late Show' late-night simulcast and the 2010 Repeat Show are re-airings of the same episodes, not rows. CHAPTER SPACE: serialization numbering, ch 36-39 = vol 10, ch 40-44 = vol 11 (en.wikipedia tankobon table; matches our stored boundaries). AFG CHAPTER-COLUMN SEMANTICS: for Soul Eater AFG's column is an adaptation claim, not a reading-position plateau — it goes N/A (not a repeated number) on every row it calls filler, and its continua panel is separately page-level. AFG DISSENT ON TYPING, flagged not applied: AFG marks eps 37-51 'Filler / N/A' INCLUDING ep 38, against AFL's manga_canon, against souleater.fandom's bidirectional ch-38/ch-39 fields, and against Sean's batch-18 ruling that ep 38 is the last row adapting chapters. The fandom evidence is finer-grained and scene-specific, so ep 38 stays canon with its stored anchor; AFG's read is that the CONTINUOUS adaptation ends at ep 36, which is exactly what the ch-37 continue point encodes. SOURCE TRAP: souleater.fandom's Chapter 36 page has a copy-paste-corrupted infobox (chapter number = 37, english = 'Part 4', next = Chapter 37) — only the prose ('is the thirty-sixth serialized chapter ... adapted as Episode 35') is reliable there. SECOND TRAP re-verified from batch 18: the wiki's anime-before-manga claims on eps 40 and 47 are false — vol 10 shipped 2007-10-22, vol 11 2008-03-22, vol 12 2008-06-21, all before the 2009 episodes. THIRD: fandom's Chapter 40 plot summary omits the Eruka-visits-Crona's-room scene that en.wikipedia's vol-11 summary carries ('Eruka arrives at Crona's room to instruct Crona to leave DWMA'), so the stored eps-39 partial{40} annotation is correct as written and needs no repair.",
+    "order_only": []
+  },
+  "flags_for_sean": [
+    "THE CALL, stated plainly: I am delivering CONTINUE = 37, which is outside the 38/39/40 framing of the ask and matches the series-level afg-continua pin the batch-18 verifier flagged as disagreeing with the ep-38 anchor. AFG turns out to have been right and the C2 parity pass wrong. The defensible alternative is 38 (accept the ~10-page loss of ch 37's closing Internal-Investigation scene to save ~30 pages of re-read). 39 has no support. 40 is refuted: it would drop the reader into ch 40 after Joe's murder without having read it.",
+    "Ep 37 stored type CONFIRMED filler (no repair): souleater.fandom 'this episode does not have any corresponding chapters', ja.wikipedia 第37話以降はアニメオリジナルストーリー, AFG chapters N/A. I did refine the loose_parallel to chapters '37 (closing scene) - 38' because the Joe beat ep 37 rewrites is ch 37's summons, not ch 38's arrival — a note change only, the stored partial{38 (slivers)} can stand alongside it.",
+    "Eps 39 and 40 stored types CONFIRMED filler; under A1 neither takes an anchor and neither may advance the reader. Ep 39's ch-40 tie is one beat, and inverted (fandom: 'In Chapter 40, Maka discovers Crona has left DWMA, but in Episode 39, it was Spirit Albarn who discovered Crona's disappearance'). Ep 40's ch-44-tail/ch-45 graft sits across a wholly unadapted ch 41-43.",
+    "AFG dissent worth a decision even though it is out of scope: AFG types ep 38 filler (chapters N/A). If Sean ever wanted a materiality re-test on ep 38, the case FOR filler is that the episode replaces the chapter's premise (Joe is an engineer, not an investigator) and keeps only two scenes; the case AGAINST is that the Black-Star vs Kid duel is a large, story-carrying block of ch 39 and both wikis map it bidirectionally. I left the stored canon typing untouched. NOTE: the ch-37 continue point holds either way, which is why I did not force the question.",
+    "Adjacent row, no research done, cheap to record: AFG marks ep 32 ('Legend of the Holy Sword 3') Filler / N/A while AFL and our stored data both call it canon. Our data carries no anchor on ep 32, so nothing is currently wrong; it is a candidate if a future pass sweeps the 30-33 zone.",
+    "Open flag #841 (anchors stale, maxAnchorEpisode 36) is now partly answered: the frontier is ep 38 -> ch 39 and there is nothing past it to anchor — eps 39-51 are the studio ending. The count_mismatch on total_chapters=117 vs latest_known=113 is still unexplained (113 serialized + 3 numbered prologues = 116) and I did not chase it."
+  ]
+}

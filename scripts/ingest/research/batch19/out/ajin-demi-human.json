@@ -1,0 +1,223 @@
+{
+  "series_id": "ajin-demi-human",
+  "summary": "Batch 18's standings hold on re-verification and now carry positions. Eps 14-17 and 19 are a clean, anchorable run through manga vol 5-6: ep 14 = ch 23-24, ep 15 = ch 25, ep 16 = ch 26, ep 17 = ch 28, ep 19 = ch 27 + 27.5 (severely abridged) — the anime plays 26, 28, then doubles back to 27/27.5, so the anchors are deliberately NON-MONOTONE (ep 17 END 28 > ep 19 END 27.5) and each START is the first chapter that episode actually animates (A10/A12/A13). Past ep 19 there is no honest position: ep 18 and 20 are anime-original (AllYourAnime's own ep-5 article is headed 'Chapter 29-30' yet opens 'Episode 5 is near entirely original' — the header is a reading-position header), ep 21 is a story-position parallel of ch 31/31.5 only, and ep 22 — the Forge Security arc restaged as the Musashi Heavy Industries battle — is ANCHOR-HOSTILE (A44): it is a very loose reworking scattered across ch 32-42 in a substituted setting with substituted targets, and the same article that calls it an adaptation tells readers to go and read ch 32-42 because the anime does not cover them. Anchoring it at 42 would manufacture a post-series continue of 43 that the evidence refutes. The series' furthest first-time coverage is therefore ch 28 (ep 17) and the honest POST-SERIES continue is ch 29 — ch 29 and 30 are wholly unadapted, 31-42 are substituted, 43/44 survive only as echoes in ep 23, and the manga's real ending (ch 58-85, serialised 2018-2021) postdates the anime entirely. Two stored ep-13 values are wrong and repaired below: its continue point (22, a leftover of the overturned 'S2 adapts nothing' premise) and its END (21, which is impossible next to its own stored START of 22). Target-row disposition: 13 keeps its existing anchor (two repairs below); 14, 15, 16, 17, 19 take the anchors above; 22 is anchor_hostile; 18, 20, 21 and 23 are filler and take NO anchor under A1 — ep 21's ch 31/31.5 story position and ep 23's ch 43/44 echoes stay annotations, as ruled.",
+  "anchors": [
+    {
+      "episode": 14,
+      "end_chapter": 24,
+      "start_chapter": 23,
+      "chapters_adapted": "23, 24",
+      "volume": 5,
+      "confidence": "high",
+      "note": "A10/A13 START = 23: the episode opens on an anime-original Sokabe/Tosaki helicopter scene, then 'incorporates Chapter 23's opening' (Sato's Phase-2 list) — the first chapter animated is 23, and the anime-original cold open is not a chapter. A4 END = 24: ch 24's committee meeting (interrupted by Kishi's murder), Nagai's phone call and the hospital-room confrontation all play out ('the aftermath of this scene is virtually one for one'), and ch 23's closing video is relocated to the end of the episode. Fandom's ch 23 and ch 24 summaries match beat for beat (noodle shop, stolen car, detective's message, fiancee flashback, Kishi news, hospital). NOT coverage of ch 29: Dr Wakai's death is moved forward here but wholly restaged (ja-WP 若井 アニメ版: '生配信中に殺害された。暗殺リストの1番目' vs manga 7巻29話, killed by Takahashi's IBM at the ryotei) — ch 29 itself stays unadapted, which is why the post-series continue is 29.",
+      "sources": [
+        "https://web.archive.org/web/20200217013515/http://www.allyouranime.net/ajin-animemanga-comparison-season-2-episode-1/",
+        "https://ajin.fandom.com/api.php?action=parse&page=Chapter%2023&prop=wikitext&format=json",
+        "https://ajin.fandom.com/api.php?action=parse&page=Chapter%2024&prop=wikitext&format=json",
+        "https://ajin.fandom.com/api.php?action=parse&page=Episode%2014&prop=wikitext&format=json",
+        "https://ja.wikipedia.org/wiki/%E4%BA%9C%E4%BA%BA_(%E6%BC%AB%E7%94%BB)"
+      ]
+    },
+    {
+      "episode": 15,
+      "end_chapter": 25,
+      "start_chapter": 25,
+      "chapters_adapted": "25 (+ Sakurai's airliner assassination: ch 23's off-page kill dramatised with the manga's ch 19-20 Grant Pharmaceutical hijack material)",
+      "volume": 6,
+      "confidence": "high",
+      "note": "A10 START = 25: the pre-credits/opening block (Sato's lackeys making the face mask and booking tickets) is 'None of this is in the manga'; the first chapter animated is 25, where 'the anime and manga then realign as we witness Nagai and Kou both receiving physical training — the adaptation is virtually one for one'. A4 END = 25: Ogura's IBM test, the Iowa story, the gun-range scream and the bathroom confrontation are ch 25 to its close; fandom's ch 25 summary carries the identical run. The airliner sequence is a GRAFT, not coverage — ja-WP 桜井和夫 gives manga 5巻23話 (found dead) vs anime 第2期15話 (killed in first class, exit blown, ditched off Shizuoka) and notes the smuggling method and cabin dialogue reuse '原作の第1ウェーブのグラント製薬への旅客機墜落テロ' (ch 19-20, replaced in S1 ep 11).",
+      "sources": [
+        "https://web.archive.org/web/20200118111123/http://www.allyouranime.net/ajin-animemanga-comparison-season-2-episode-2/",
+        "https://ajin.fandom.com/api.php?action=parse&page=Chapter%2025&prop=wikitext&format=json",
+        "https://ajin.fandom.com/api.php?action=parse&page=Episode%2015&prop=wikitext&format=json",
+        "https://ja.wikipedia.org/wiki/%E4%BA%9C%E4%BA%BA_(%E6%BC%AB%E7%94%BB)"
+      ]
+    },
+    {
+      "episode": 16,
+      "end_chapter": 26,
+      "start_chapter": 26,
+      "chapters_adapted": "26, 28 (opening scene only, pulled forward)",
+      "volume": 6,
+      "confidence": "high",
+      "note": "A10/A13 START = 26: 'Both the manga and the anime open with the same scene of Nagai talking with Dr. Ogura outside' — fandom's ch 26 summary opens on exactly that conversation, and the fandom ep-16 summary opens on it too. A4 END = 26: the target-selection meeting, the IBM/memory exposition, the gun training, the Manabe encounter, the Hirasawa forest talk and Nakano's repeated self-killing ('largely a one for one adaptation') run to ch 26's close. Ch 28's opening scene (Kaito meeting his new cellmate) is a forward GRAFT in the episode's tail — kept in chapters_adapted, not the END, exactly as Sean ruled ep 12's ch-22 opening beat (ep12 -> 21 [20] {20-21, 22 (opening beat, grafted)}). Ch 24's Kishi death is restaged here (ja-WP 岸祐二: manga 5巻24話, sold out by Wakai; anime locates him via his police guard) — re-use of a chapter ep 14 already covered, which never moves position. The late Tosaki/Nagai chat only PARALLELS a ch-29 scene ('it plays very different'), so it is not ch-29 coverage.",
+      "sources": [
+        "https://web.archive.org/web/20200218065712/http://www.allyouranime.net/ajin-animemanga-comparison-season-2-episode-3/",
+        "https://ajin.fandom.com/api.php?action=parse&page=Chapter%2026&prop=wikitext&format=json",
+        "https://ajin.fandom.com/api.php?action=parse&page=Chapter%2028&prop=wikitext&format=json",
+        "https://ajin.fandom.com/api.php?action=parse&page=Episode%2016&prop=wikitext&format=json",
+        "https://ja.wikipedia.org/wiki/%E4%BA%9C%E4%BA%BA_(%E6%BC%AB%E7%94%BB)"
+      ]
+    },
+    {
+      "episode": 17,
+      "end_chapter": 28,
+      "start_chapter": 28,
+      "chapters_adapted": "28",
+      "volume": 6,
+      "confidence": "high",
+      "note": "A10/A13 START = 28 and A4 END = 28: 'this means the anime jumps over chapters 27 and 27.5. Instead we open with content from Chapter 28' — the juvenile-hall staff discussing Kotobuki's escape ('a near one for one adaptation'), the prisoners' interrogation and Kaito's interruption ('pretty similar, with few, if any changes'), the night beating ('this plays near one for one') and the closing rooftop meeting where Kotobuki reveals his winged IBM, which is where ch 28 ends (fandom ch 28 summary carries the same five beats in the same order). Ch 28 is the FURTHEST first-time chapter the whole anime reaches — the series' coverage max under A4. Mixed, not canon, because the anime-original US Department of Defense plotline (Almeida and Myers are ja-WP アニメオリジナルキャラクター) plus the training montage run alongside it as a separable block; this is also the episode where the manga's Forge Safety targets are written off in a news report (ja-WP 甲斐敬一 / 李奈緒美: manga 9巻41話 -> anime 第2期17話).",
+      "sources": [
+        "https://web.archive.org/web/20200118060838/http://www.allyouranime.net/ajin-animemanga-comparison-season-2-episode-4/",
+        "https://ajin.fandom.com/api.php?action=parse&page=Chapter%2028&prop=wikitext&format=json",
+        "https://ajin.fandom.com/api.php?action=parse&page=Episode%2017&prop=wikitext&format=json",
+        "https://ja.wikipedia.org/wiki/%E4%BA%9C%E4%BA%BA_(%E6%BC%AB%E7%94%BB)"
+      ]
+    },
+    {
+      "episode": 19,
+      "end_chapter": 27.5,
+      "start_chapter": 27,
+      "chapters_adapted": "27, 27.5 (severely abridged)",
+      "volume": 6,
+      "confidence": "high",
+      "note": "A13 START = 27: the episode's source content is one continuous flashback block that opens the episode — 'The Anime opens with Shimomura waking up in the hospital, a flashback to how she first met Tosaki' (fandom ep 19: 'she thinks back to when her name was Yoko Tainaka'). Ch 27 is one chapter BEHIND ep 17's ch 28, but A12 does not bar it: it is not a graft leading other source material, it is the episode's entire A-story, and ep 17's START is an exact record, so no successor-span cap can be poisoned. A4 END = 27.5 — the block runs to the end of ch 27.5 (the recorded call, her death and revival, the taking of the new name; fandom ch 27.5 summary ends on exactly that). 27.5 is a real serialised chapter collected in vol 6 as 下村 泉②, not an omake. ABRIDGED: ja-WP 下村泉 アニメ版 '彼女の過去のエピソードは大幅に省略・変更されている… 省略されたのはバイト先・家庭内・学校での出来事や自殺未遂、義父の強姦未遂など'; AYA lists the same cuts. Everything after the flashback (Tosaki's torture, the safe-house raid, the chase) is anime-original — hence mixed.",
+      "sources": [
+        "https://web.archive.org/web/20200118101608/http://www.allyouranime.net/ajin-animemanga-comparison-season-2-episode-6/",
+        "https://ajin.fandom.com/api.php?action=parse&page=Chapter%2027&prop=wikitext&format=json",
+        "https://ajin.fandom.com/api.php?action=parse&page=Chapter%2027.5&prop=wikitext&format=json",
+        "https://ajin.fandom.com/api.php?action=parse&page=Episode%2019&prop=wikitext&format=json",
+        "https://ja.wikipedia.org/wiki/%E4%BA%9C%E4%BA%BA_(%E6%BC%AB%E7%94%BB)"
+      ]
+    }
+  ],
+  "continue_points": [
+    {
+      "episode": 14,
+      "continue_chapter": 25,
+      "kind": "parity",
+      "note": "C2 parity: ep 15 starts at ch 25; ep 14 finishes ch 24 cleanly, so parity and end+1 agree.",
+      "sources": [
+        "https://web.archive.org/web/20200118111123/http://www.allyouranime.net/ajin-animemanga-comparison-season-2-episode-2/"
+      ]
+    },
+    {
+      "episode": 15,
+      "continue_chapter": 26,
+      "kind": "parity",
+      "note": "C2 parity: ep 16 starts at ch 26; ep 15 finishes ch 25, so parity and end+1 agree.",
+      "sources": [
+        "https://web.archive.org/web/20200218065712/http://www.allyouranime.net/ajin-animemanga-comparison-season-2-episode-3/"
+      ]
+    },
+    {
+      "episode": 16,
+      "continue_chapter": 28,
+      "kind": "parity",
+      "note": "C2 parity across a SKIP: ep 17 starts at ch 28, so a viewer in step with the anime resumes at 28. The anime jumps ch 27 and 27.5 here and doubles back to them at ep 19 — a reader who prefers chronological order can read 27/27.5 now instead and will find ep 19 covering them (abridged).",
+      "sources": [
+        "https://web.archive.org/web/20200118060838/http://www.allyouranime.net/ajin-animemanga-comparison-season-2-episode-4/",
+        "https://web.archive.org/web/20200118101608/http://www.allyouranime.net/ajin-animemanga-comparison-season-2-episode-6/"
+      ]
+    },
+    {
+      "episode": 17,
+      "continue_chapter": 27,
+      "kind": "parity",
+      "note": "C2 parity across the BACK-JUMP: the next episode with source content (ep 19) starts at ch 27. C3 skip note required — ch 28 is already covered by this very episode, so skip it on arrival unless re-reading; read 27 and 27.5, then go on to 29.",
+      "sources": [
+        "https://web.archive.org/web/20200118101608/http://www.allyouranime.net/ajin-animemanga-comparison-season-2-episode-6/",
+        "https://web.archive.org/web/20200118060838/http://www.allyouranime.net/ajin-animemanga-comparison-season-2-episode-4/"
+      ]
+    },
+    {
+      "episode": 19,
+      "continue_chapter": 29,
+      "kind": "post_series",
+      "note": "POST-SERIES continue = furthest first-time coverage (ch 28, ep 17) + 1. Ep 19 is the last row that can hold a position, so this is the series' resume point. Never adapted: ch 29 (Tosaki/Sokabe, the Akiyama file, the ryotei meeting crashed — the anime replaces it with the US-agent interrogation at ep 18 and inverts the meeting's outcome at ep 20) and ch 30 (Sato's Marine-Corps past — the anime's only version is the anime-ORIGINAL vol-10 OAD 佐藤ZERO). Ch 31/31.5 survive only as ep 21's story position, ch 32-42 only as ep 22's substituted restaging, ch 43/44 only as ep 23's echoes, and the manga's own final wave (ch 58-85, 2018-2021) postdates the anime. CAVEAT for the reader: from ch 29 on, the manga's continuity is not the anime's — Kai and Li are alive (the anime killed them off-screen at ep 17), Ai dies (ch 45) where the anime keeps her alive, and the siege happens at Forge Security, not Musashi Heavy Industries.",
+      "sources": [
+        "https://web.archive.org/web/20200118060603/http://www.allyouranime.net/ajin-animemanga-comparison-season-2-episode-5/",
+        "https://web.archive.org/web/20200217013651/http://www.allyouranime.net/ajin-animemanga-comparison-season-2-episode-9/",
+        "https://ajin.fandom.com/api.php?action=parse&page=Chapter%2029&prop=wikitext&format=json",
+        "https://ajin.fandom.com/api.php?action=parse&page=Chapter%2030&prop=wikitext&format=json",
+        "https://ja.wikipedia.org/wiki/%E4%BA%9C%E4%BA%BA_(%E6%BC%AB%E7%94%BB)"
+      ]
+    }
+  ],
+  "anchor_hostile": [
+    {
+      "episode": 22,
+      "why": "A44 position-less row. Ep 22 is stored (and re-confirmed) as MIXED and does carry source standing, but its source content cannot be a reading position. AllYourAnime frames the whole episode as 'a very loose, highly reworked adaptation of the manga's Forge Security arc' spread over ELEVEN chapters (32-42) and then, in the same article, tells readers 'I really would suggest fans of the anime take a look at Chapters 32 to 42 as they're really interesting, with plenty of what is essentially unique content' — an arc you must still go and read is not a position. What survives is a set of restaged beats in a SUBSTITUTED setting: the siege is at Musashi Heavy Industries protecting chairman Hashiguchi, not Forge Security protecting Kai and Li (ja-WP states the substitution outright: '原作ではフォージ安全の甲斐と李、アニメ版では武蔵重工の橋口'); ja-WP pins the mercenary deaths as manga 9巻38話 (Kuroki), 9巻40話 (Manabe), 9巻42話 (Hirasawa) -> anime 第2期22話, while Suzumura, who dies at 9巻40話, survives to ep 26. Ch 32-37 (Okuyama's infiltration, Nagai's guard disguise, Tanaka's capture, the head-destruction gambit) have no anime counterpart at all. Anchoring END=42 would set coverage to 42 and manufacture a post-series continue of 43, which the batch-18 verifier already refuted and which would send a reader past 14 chapters they have never seen. The fact is preserved as the existing `partial` annotation (32-42, loose), not as a number.",
+      "sources": [
+        "https://web.archive.org/web/20200217013651/http://www.allyouranime.net/ajin-animemanga-comparison-season-2-episode-9/",
+        "https://ja.wikipedia.org/wiki/%E4%BA%9C%E4%BA%BA_(%E6%BC%AB%E7%94%BB)",
+        "https://ajin.fandom.com/api.php?action=parse&page=Episode%2022&prop=wikitext&format=json",
+        "https://ajin.fandom.com/api.php?action=parse&page=Chapters%20and%20Volumes&prop=wikitext&format=json"
+      ]
+    }
+  ],
+  "annotations": [
+    {
+      "episodes": [
+        16
+      ],
+      "kind": "graft",
+      "chapters": "28 (opening scene, pulled forward)",
+      "note": "Ep 16 closes by pulling ch 28's opening scene forward — Kaito meeting his new cellmate in juvenile detention (fandom ch 28: 'the prison warden decided to forget the entire incident and sent Kotobuki to his new room where he met Kai'; fandom ep 16: 'Meanwhile Kaito meets his new cellmate with some apprehension'; AYA: 'the anime pulls a brief chunk of Chapter 28's content forward'). The body of ch 28 is ep 17. Recorded in chapters_adapted, never as END — the same shape Sean ruled for ep 12's ch-22 opening beat."
+    },
+    {
+      "episodes": [
+        14
+      ],
+      "kind": "divergence",
+      "chapters": "23, 24",
+      "note": "Refines the season-wide divergence for this row, and matters for the continue point: the hit list carries 15 numbered names killed in order instead of the manga's 11 unnumbered ones and Tosaki is removed from it (ja-WP, citing 5巻23話 / 第1期13話); Dr Wakai's death is moved forward from ch 29 but completely restaged as a live-stream killing, first on the list (ja-WP 若井浩明 アニメ版) — ch 29 itself is NOT adapted anywhere in the anime, which is why the post-series continue is 29 and not later."
+    },
+    {
+      "episodes": [
+        22
+      ],
+      "kind": "partial",
+      "chapters": "32-42 (loose)",
+      "note": "REFINEMENT of the stored note, supporting the A44 anchor suppression: the manga's Forge Security arc is restaged, not covered. Ch 32-37 have no counterpart; what carries over is the corporate siege, Nagai's hostage mind-games, the tranquiliser / self-walking-IBM reversal (ch 41-42) and three mercenary deaths (ja-WP 9巻38/40/42話 -> 第2期22話), all in a substituted setting with a substituted target, plus a separable anime-original tail (VX theft, Hashiguchi's murder). AllYourAnime advises anime viewers to read ch 32-42 for themselves."
+    }
+  ],
+  "repairs": [
+    {
+      "episode": 13,
+      "field": "continue_chapter",
+      "old": 22,
+      "new": 23,
+      "why": "C2 parity. The stored value is a leftover of the batch-12 premise that S2 adapts nothing, which batch 18 overturned and this pass re-verified. Ep 13's own stored chapters_adapted already lists 22, 22.5 and ch 23's opening beat, and ep 14 starts at ch 23 — so the honest resume after ep 13 is 23 (C1: a continue equal to a chapter the episode partly adapted is a straddle, not a skip). The KIND must also change from post_series to parity: ep 13 is no longer the anime's last adaptation. AllYourAnime's S1 ep-13 article closes 'how Episode 13 compares with the manga's twenty-second and twenty-second and a half chapters' and notes 'The anime then concludes on just a bit of content from Chapter 23, as Satou sits down for another terrorist video'.",
+      "sources": [
+        "https://web.archive.org/web/20200927204003/http://www.allyouranime.net/ajin-animemanga-comparison-episode-13/",
+        "https://web.archive.org/web/20200217013515/http://www.allyouranime.net/ajin-animemanga-comparison-season-2-episode-1/",
+        "https://ajin.fandom.com/api.php?action=parse&page=Chapter%2023&prop=wikitext&format=json"
+      ]
+    },
+    {
+      "episode": 13,
+      "field": "continue_kind",
+      "old": "post_series",
+      "new": "parity",
+      "why": "Paired with the continue repair. The post-series regime now belongs to ep 19 (continue 29), the last row that can hold a position.",
+      "sources": [
+        "https://web.archive.org/web/20200217013515/http://www.allyouranime.net/ajin-animemanga-comparison-season-2-episode-1/"
+      ]
+    },
+    {
+      "episode": 13,
+      "field": "end_chapter",
+      "old": 21,
+      "new": 22.5,
+      "why": "The stored row is internally impossible: END 21 with START 22 and chapters_adapted '22, 22.5 (escape heavily altered), 23 (opening beat)'. The 21 is the fossil of the 2026-08-23 'honest coverage endpoint' ruling made when S2 was believed to adapt nothing; batch 15 repaired the START and chapters_adapted but left the END behind. Ep 13 demonstrably animates ch 22 (the field scene, the villagers) and ch 22.5 (freeing Ko from the trailer, the cliff jump into the sea) — AllYourAnime compares the episode to 'the manga's twenty-second and twenty-second and a half chapters' and walks both — so A4 END = 22.5, with ch 23's closing video staying a trailing partial in chapters_adapted. Coverage is unaffected (the series max is now 28 via ep 17). Conservative alternative if fractional ENDs are unwelcome on this row: 22.",
+      "sources": [
+        "https://web.archive.org/web/20200927204003/http://www.allyouranime.net/ajin-animemanga-comparison-episode-13/",
+        "https://ajin.fandom.com/api.php?action=parse&page=Chapters%20and%20Volumes&prop=wikitext&format=json"
+      ]
+    }
+  ],
+  "type_corrections": [],
+  "structure": {
+    "notes": "ROW IDENTITY (re-verified, R20): ja-WP's 各話リスト lists #14-#26 under 第2クール with titles matching ours one-for-one (#14 なんかめんどくさくなってきた, #17 反吐が出ますね, #19 飼い犬は大変だな, #22 邪魔してるのはあんたの方だろ, #23 僕はやりませんよ); ajin.fandom's Episode N pages carry the same titles under the same numbers. No recap, no ep 0, no in-run special — no off-by-one risk. CONVERSION: AllYourAnime numbers per season, so its 'Season 2 Episode N' = our row N+13; stated at every citation. Caution — fandom's Episode 22 page carries a WRONG air date (November 19, 2016, which is ep 21's slot); joined by title and summary content instead, never by date or index. CHAPTER SPACE: chapter numbering per ajin.fandom's Chapters and Volumes — vol 5 = 20, 21, 22, 22.5, 23, 24; vol 6 = 25, 26, 27, 27.5, 28; vol 7 = 29, 30, 31, 31.5, 32, 33; vol 8 = 34, 35, 35.5, 36, 37, 38; vol 9 = 39, 40, 41, 42, 43 (released 2016-10-06, two days before S2 premiered). The .5 chapters here are mainline continuations collected in the tankobon (27.5 = 下村 泉②), not omake — 27.5 is a legitimate END. AniList's total_chapters=99 counts ch 0 and the twelve .5 units separately; open flag #705's MU latest_chapter=40 is simply a stale MU record, not a different edition. ADAPTATION ORDER: the covered set across eps 14-19 is 23, 24, 25, 26, [28 opening], 28, then 27, 27.5 — the anchors are intentionally non-monotone at eps 17/19 and the rearranged annotation carries the reason. SOURCE-HEADER TRAP re-confirmed: AllYourAnime's per-article chapter header is a reading-position header, not an adaptation claim — the ep-5 article is headed 'Chapter 29-30' but opens 'Episode 5 is near entirely original', the ep-7 article is headed 'Chapters ??', and the ep-10 article is headed 'Chapters 43-45' although ch 45 never reaches the anime. All judgments here rest on article bodies plus fandom chapter summaries plus ja-WP, never headers. COVERAGE (A4): max first-time chapter = 28 at ep 17; frontier EPISODE with a position = 19.",
+    "order_only": []
+  },
+  "flags_for_sean": [
+    "EP 22 IS THE CALL OF THIS TASK: recommended ANCHOR-HOSTILE (A44), not an END of 42. The alternative — end_chapter 42, start 32, vol 9 — is defensible on AllYourAnime's own header and ja-WP's three 9巻38/40/42話 -> 第2期22話 pairs, but it sets series coverage to 42 and drives the post-series continue to 43, which contradicts the batch-18 verifier's finding (ch 29, 30, 32-37 unadapted) and would skip a reader past fourteen chapters they have never seen. If you take the anchor anyway, the continue MUST be overridden to 29 by hand, or the number will lie.",
+    "EP 13 END 21 -> 22.5 is a REPAIR of a stored value that is self-contradictory today (START 22 > END 21). It is a genuine defect rather than a re-typing, but it touches a manual-tier anchor you personally ruled in batch 12/15, so it is flagged rather than assumed. If a fractional END is unwanted on this row, 22 is the conservative substitute; either value fixes the incoherence.",
+    "EP 16 END: taken as 26, with ch 28's opening scene recorded in chapters_adapted as a forward graft, by direct analogy to your ep-12 ruling (END 21, {20-21, 22 (opening beat, grafted)}). If you would rather END follow the furthest chapter touched, ep 16 becomes END 28 — but then ep 16 and ep 17 both end at 28 and the ep-16 parity continue is unaffected (still 28), so the only difference is the displayed span.",
+    "EP 19 END 27.5 (a real vol-6 chapter, 下村 泉②) rather than 27. chapter_anchors.chapter is numeric by design ('numeric: chapter 545.5 exists'), so it stores cleanly; 27 is equivalent in practice because the parity/post-series continue is 29 either way.",
+    "THE POPULAR ANSWER IS 22, AND IT IS WRONG. The content farms that answer 'where does the Ajin anime leave off' (mangashed.com, wheredoestheanimeleaveoff.com) all say start reading at ch 22 on the premise that 'S2 went fully anime-original' — the same premise batch 18 overturned and this pass re-verified scene by scene. They are cross-check only and they are the likely origin of the stored ep-13 continue of 22. Our answer is 29 with a divergence caveat. Worth expecting user pushback on this one series.",
+    "NOT A REPAIR, but noted: the anime's coverage max (28) now sits at ep 17, while the frontier episode with a position is 19 and the last episode with ANY source standing is 22. If the display derives 'the anime adapted up to X' from the last anchored row rather than the max, this series will read 27.5 instead of 28 (A4 says max)."
+  ]
+}

@@ -1,0 +1,108 @@
+{
+  "series_id": "chrono-crusade",
+  "summary": "Three target rows, and the honest answer is that NONE of them is a chapter position. Eps 15 and 16 do not adapt any Act: ep 15's whole job is the Order/Pursuers ALLIANCE (Duke Duffau walks into the villa and proposes a joint war on Aion) plus the reveal that Rosette is Mary Magdalene's reincarnation and is receiving stigmata, and ja-WP marks BOTH as anime-only — the alliance three separate times (Duffau, Carv and Gurio each carry a manga paragraph in which the Pursuers HUNT Rosette's party, then an 'in the anime' paragraph in which they ally with the Order), and the reincarnation premise explicitly (『アニメでは、ロゼットは普通の人間ではなく、聖女マグダラのマリアの生まれ変わりという設定になっている』), with tropedia filing the reincarnation under its anime-only Boy-Meets-Girl variant. Ep 16 is built end to end on Eliza Brown, whom the fandom describes as 'only appearing in an anime-exclusive for the TV series Chrono Crusade Episode 16', and its one source-flavoured beat — Aion revealing to Satella that he destroyed her family and that her sister lives, then kissing her — is itself in tropedia's ANIME ONLY list. Both fail the T28 materiality bar and are proposed as filler + the loose_parallel already carried by their neighbours 14/17. Ep 21 IS substantially source-derived (the Chrono/Magdalene backstory, ep title マグダレーナ = Act 36's title 'Mary Magdalene'), so `mixed` stands — but no source states which Acts it adapts, the 36-41 span is inferred from a fandom debut field plus the v6 arc extent, the anime rewrites the motive and the death, and an END inside 36-41 would leap the never-adapted Acts 31-35 and drag A4 coverage from 30 to 41 on inferred numbers. It is confirmed position-less (A44 shape), which is what the stored 2026-08-24 ruling already says. The post-series continue therefore sits on ep 20 at Act 31 (coverage 30 + 1), with Acts 7 and 12-18 named as never adapted and 36-41 flagged as seen-but-rewritten.",
+  "anchors": [],
+  "continue_points": [
+    {
+      "episode": 20,
+      "continue_chapter": 31,
+      "kind": "post_series",
+      "note": "POST-SERIES continue on the last anchored row (ep 20 = the adaptation bound, MangaUpdates: 'Ends at Vol 5, Chap 30 (Skips Chap 7, 12-18) Diverges to an original ending'). Coverage = furthest first-time-adapted Act = 30 (A4), so the resume is Act 31 'Raging Fury' (v5). THREE facts the note must carry: (1) NEVER ADAPTED BEHIND the resume — Act 7 'Ghost in the Watch' and Acts 12-18 (incl. Satella's whole manga introduction, Acts 15-17) were skipped outright; a reader who resumes at 31 has never seen them. (2) Acts 22-30 were only LOOSELY retold (eps 14-20), so 31 lands the reader in a manga state that does not match the anime's ep-20 state — ja-WP lists Chrono ripping off Joshua's horns, Chrono time-frozen to stone and Joshua's mental collapse as anime-only outcomes. (3) DO NOT SKIP Acts 36-41 on arrival even though ep 21 showed a version of them: ep 21's Magdalene flashback is a compressed rewrite (fandom's Mary Magdalene page: 'In the anime the plot differs'; ja-WP: in the anime she is a fake saint, a trap sent by God — a motive absent from the manga). Acts 42-56 and the v8 Epilogue are never adapted at all. Batch 17 proposed a full RESTART at Act 1 on WDTALO's recommendation; under the C-rules the stored continue value is the forward number 31, and the restart advice belongs in this note — a reader who wants Moriyama's actual story is better served starting over, and at minimum must read v8 (Acts 49-56) for the real ending.",
+      "sources": [
+        "https://api.mangaupdates.com/v1/series/29425474161",
+        "https://en.wikipedia.org/wiki/List_of_Chrono_Crusade_chapters",
+        "https://ja.wikipedia.org/wiki/%E3%82%AF%E3%83%AD%E3%83%8E%E3%82%AF%E3%83%AB%E3%82%BB%E3%82%A4%E3%83%89",
+        "https://wheredoestheanimeleaveoff.com/where-does-the-chrono-crusade-anime-end-in-the-manga/"
+      ]
+    }
+  ],
+  "anchor_hostile": [
+    {
+      "episode": 21,
+      "why": "CONFIRMS the stored ruling (A7/A2, Sean 2026-08-24: 'the Mary Magdalene flashback pulls v6 material (36-41) far out of order inside an otherwise anime-original stretch — a graft, not this episode's position'). Ep 21 is genuinely source-derived — Fuji TV's own synopsis says the episode exists to tell 『クロノとマグダレーナの悲しく切ない物語』, the episode title マグダレーナ is Act 36's title 'Mary Magdalene', and Magdalene's fandom infobox gives debut-manga = Chapter 36 / debut-anime = Episode 21 — so `mixed` is correct and it takes an annotation, not an anchor. It is position-less for three independent reasons. (1) ZONE-LEVEL ONLY (A3/A7): no source anywhere states which Acts ep 21 adapts. '36-41' is an inference from one debut field plus the extent of the v6 arc (Act 36 'Mary Magdalene' … Act 41 '54 Years Ago', en-WP chapter list); A3 is explicit that zone-level-only knowledge stays an annotation rather than becoming an anchor. (2) POSITION HONESTY: an END anywhere in 36-41 leaps Acts 31-35, which the anime never adapts, and by A4 (coverage = furthest first-time adaptation) it would move the series' declared coverage from 30 to 41 on the strength of inferred numbers, past MangaUpdates' explicit 'Ends at Vol 5, Chap 30' bound. (3) IT IS NOT THE SAME STORY: the anime's version of the Magdalene arc rewrites both the motive and the death — fandom's Mary Magdalene page states outright 'In the anime the plot differs' (manga: Chrono kidnaps her to locate Pandaemonium's head, Pandaemonium's possession forces Aion's hand, she lives on the run with Chrono and is killed by Aion much later; anime: Aion orders the kill during the Ritual of Atonement and she dies at once), and ja-WP adds the anime-only premise that she was a fake saint sent by God as a trap. Keep the stored graft {36-41} annotation and mark it zone-acknowledged (A7).",
+      "sources": [
+        "https://web.archive.org/web/20251115054352/https://www.fujitv.co.jp/b_hp/chrono/backnumber/203000015-21.html",
+        "https://chronocrusade.fandom.com/api.php?action=parse&page=Mary_Magdalene&prop=wikitext&format=json",
+        "https://chronocrusade.fandom.com/api.php?action=parse&page=Chrono_Crusade_Episode_21&prop=wikitext&format=json",
+        "https://en.wikipedia.org/wiki/List_of_Chrono_Crusade_chapters",
+        "https://api.mangaupdates.com/v1/series/29425474161"
+      ]
+    }
+  ],
+  "annotations": [
+    {
+      "episodes": [15, 16],
+      "kind": "loose_parallel",
+      "chapters": "22-26",
+      "note": "MANDATORY T28 tie annotation for the two rows retyped to filler — the same fact already stored on their neighbours 14 and 17, extended to make 14-17 a coherent block. The stretch sits in the manga's v4 interval between the Marionette Train arc (Acts 19-21, ep 13) and the San Francisco carnival (Acts 27-28, ep 18), and it borrows that interval's furniture without adapting its events: like the manga the anime moves the cast to the San Francisco region here (ep 15 introduces Jack Guilliam of the Order's West Coast/San Francisco branch — a real manga character, ja-WP: マグダラ修道会サンフランシスコ支部の牧師で修道騎士, Remington's old friend, active 旅立ち編以降; ep 16 sends Satella to a mine 'in the outskirts of San Francisco'), and ep 15's Chrono monologue on why the Sinners are called Sinners restates the revelation Act 22 'Sinner' carries in the manga (Goodreads/reader summary of v4: the volume opens right after the Rizelle fight with the cast asking what Chrono is, and Chrono is revealed to be a Sinner). Under T28 that is an anime-original plot quoting furniture, not a story-carrying share. Ep 16 additionally restages Harvenheit backstory that the manga establishes elsewhere (Aion destroyed the family; the hornless demon Satella hunts is Aion; her sister Florette is alive as Fiore — ja-WP's Satella manga paragraph) — but the scene that carries it, Aion pinning and kissing Satella after the reveal, is in tropedia's ANIME ONLY list, so no Act number may be attached to it.",
+      "sources": [
+        "https://ja.wikipedia.org/wiki/%E3%82%AF%E3%83%AD%E3%83%8E%E3%82%AF%E3%83%AB%E3%82%BB%E3%82%A4%E3%83%89",
+        "https://tropedia.fandom.com/api.php?action=parse&page=Chrono_Crusade&prop=wikitext&format=json",
+        "https://en.wikipedia.org/wiki/List_of_Chrono_Crusade_chapters",
+        "https://www.goodreads.com/book/show/642463.Chrno_Crusade_Vol_4"
+      ]
+    },
+    {
+      "episodes": [21],
+      "kind": "graft",
+      "chapters": "36-41",
+      "note": "KEEP AS STORED, now zone-acknowledged (A7, batch 19). Research confirms that only zone-level knowledge exists: the span is derived from Magdalene's fandom debut field (manga ch 36 / anime ep 21) plus the v6 arc extent (Act 36 'Mary Magdalene' … Act 41 '54 Years Ago'), and no per-episode source states the Acts. Never promote to an anchor — see the anchor_hostile entry.",
+      "sources": [
+        "https://chronocrusade.fandom.com/api.php?action=parse&page=Mary_Magdalene&prop=wikitext&format=json",
+        "https://en.wikipedia.org/wiki/List_of_Chrono_Crusade_chapters"
+      ]
+    }
+  ],
+  "repairs": [
+    {
+      "episode": 15,
+      "field": "type",
+      "old": "mixed",
+      "new": "filler",
+      "why": "Contradicts the stored T6 override (Sean 2026-08-24, which typed 14-21 mixed as a block) and is therefore filed as a repair, not a silent override. The episode's own plot is two anime-only constructions. (a) THE ALLIANCE: Fuji TV's synopsis makes it the episode's whole job — 『公爵デュフォーからとてつもない提案が上がった。突然セカンドハウスに訪れたデュフォーは、ロゼット達と共に戦いアイオーンを倒そうと言うのだ。悪魔と手を組むという事に揺れるマグダラ中央評議会』. ja-WP contains three separate character entries whose MANGA paragraph is the opposite of this and whose 『アニメでは』 paragraph is this: Duffau (manga: appears only at the final battle and is killed by Aion / anime: 『罪人たちを追い詰めるためマグダラと手を組む』), Carv (manga: pursues Chrono and is beaten by Rosette's party / anime: 『共同戦線を張っている内に人間たちのことを気に入ってしまう』), Gurio (manga: pursues Chrono and is captured by Remington's squad / anime: human form during the alliance). tropedia's manga-only list independently records the opposite relationship — 'Rosette and co get chased into a warehouse by some Pursuers'. (b) THE REINCARNATION/STIGMATA REVEAL: ja-WP 『アニメでは、ロゼットは普通の人間ではなく、聖女マグダラのマリアの生まれ変わりという設定になっている』; tropedia lists 'demon meets reincarnation of girl' as the ANIME version of the premise. What is left is a manga character's introduction (Guilliam) and exposition — furniture, not a story-carrying share (T28). A1 then bars any anchor.",
+      "sources": [
+        "https://web.archive.org/web/20260511210317/https://www.fujitv.co.jp/b_hp/chrono/backnumber/203000015-15.html",
+        "https://ja.wikipedia.org/wiki/%E3%82%AF%E3%83%AD%E3%83%8E%E3%82%AF%E3%83%AB%E3%82%BB%E3%82%A4%E3%83%89",
+        "https://tropedia.fandom.com/api.php?action=parse&page=Chrono_Crusade&prop=wikitext&format=json",
+        "https://en.wikipedia.org/wiki/List_of_Chrono_Crusade_episodes"
+      ]
+    },
+    {
+      "episode": 16,
+      "field": "type",
+      "old": "mixed",
+      "new": "filler",
+      "why": "Contradicts the stored T6 override and is filed as a repair. Fuji TV's synopsis gives the episode's job as an anime-original case: Satella cannot accept the Order's pact with demons, a disappearance case with devil worship behind it reaches her, and she walks into the abandoned mine where the ritual is being held. Its antagonist Eliza Brown is 'a minor antagonist in the Chrono Crusade series, only appearing in an anime-exclusive for the TV series Chrono Crusade Episode 16' (fandom) and has no ja-WP entry at all among the manga's named cast. The one beat that could look like source content — Aion revealing he killed the Harvenheits, that Florette lives, then forcing a kiss on Satella — is listed by tropedia under ANIME ONLY ('He also does this to Satella after revealing he killed her parents and before molesting her'); the underlying facts are manga backstory (ja-WP's Satella manga paragraph: she hunts a hornless demon who turns out to be Aion and searches for her abducted sister Florette) but the manga stages the sisters' confrontation only at the final battle, in v7. Original plot quoting backstory = filler + a mandatory tie annotation (T28); A1 then bars any anchor.",
+      "sources": [
+        "https://web.archive.org/web/20251107062829/https://www.fujitv.co.jp/b_hp/chrono/backnumber/203000015-16.html",
+        "https://chronocrusade.fandom.com/api.php?action=parse&page=Eliza_Brown&prop=wikitext&format=json",
+        "https://tropedia.fandom.com/api.php?action=parse&page=Chrono_Crusade&prop=wikitext&format=json",
+        "https://ja.wikipedia.org/wiki/%E3%82%AF%E3%83%AD%E3%83%8E%E3%82%AF%E3%83%AB%E3%82%BB%E3%82%A4%E3%83%89"
+      ]
+    }
+  ],
+  "type_corrections": [
+    {
+      "episodes": [15, 16],
+      "type": "filler",
+      "note": "See the two repairs entries for the full evidence. Ep 15 = the anime-only Order/Pursuers alliance + the anime-only Magdalene-reincarnation/stigmata premise (ja-WP marks both; three character entries and the Rosette entry). Ep 16 = the anime-exclusive Eliza Brown devil-worship case, whose only source-flavoured beat is itself in tropedia's Anime Only list. Neither clears T28's materiality bar; both take the loose_parallel {22-26} annotation their neighbours 14/17 already carry. This closes the batch-18 flag ('the residual doubt runs the other way on 15/16') and the batch-18 verifier's expectation ('targeted re-look expecting filler'). NOTE FOR THE CURATOR: the task brief characterised the verifier as saying ja-WP places the Order/Pursuers material IN the manga — the verifier's text says the opposite ('ja-WP says the Order/Pursuers alliance and the Magdalene-reincarnation premise are anime-only'), and the primary reading of ja-WP supports the verifier.",
+      "sources": [
+        "https://ja.wikipedia.org/wiki/%E3%82%AF%E3%83%AD%E3%83%8E%E3%82%AF%E3%83%AB%E3%82%BB%E3%82%A4%E3%83%89",
+        "https://tropedia.fandom.com/api.php?action=parse&page=Chrono_Crusade&prop=wikitext&format=json",
+        "https://chronocrusade.fandom.com/api.php?action=parse&page=Eliza_Brown&prop=wikitext&format=json",
+        "https://web.archive.org/web/20260511210317/https://www.fujitv.co.jp/b_hp/chrono/backnumber/203000015-15.html",
+        "https://web.archive.org/web/20251107062829/https://www.fujitv.co.jp/b_hp/chrono/backnumber/203000015-16.html"
+      ]
+    }
+  ],
+  "structure": {
+    "notes": "CHAPTER SPACE (re-verified, agrees with the batch-18 verifier's correction): 56 serialised Acts + 2 tankobon Extras ('Doll in the Skyscraper' after Act 21 in v3; 'Elizabeth, 1921' after Act 48 in v7) + the v8 Epilogue = 59, which is exactly AniList's total_chapters. So 59 is NOT an unsupported value; the open question is the N-family policy on whether extras count, not a data error. Anchors use Act numbers only. VOLUME BOUNDARIES (en-WP chapter list, verified this batch, none currently stored): v1 = Acts 1-6, v2 = 7-14, v3 = 15-21, v4 = 22-28, v5 = 29-35, v6 = 36-42, v7 = 43-48, v8 = 49-56 (+ Epilogue). ADAPTATION SHAPE after this verdict: Acts 1-6 (eps 1-4), 8-11 (eps 9-10), 19-21 (ep 13) adapted; Acts 7 and 12-18 never adapted; Acts 22-30 loosely/divergently paralleled across eps 14, 17-20; eps 5-8, 11-12, 15-16 and 22-24 carry no position; Acts 36-41 grafted (annotation only) at ep 21; Acts 31-35 and 42-56 never adapted. ROW IDENTITY: clean, 24 rows 1:1 with the Fuji TV backnumber index and en-WP. ONE DATE NOTE (not proposed as a repair): Fuji TV's own page for ep 21 reads 第21回 2004年4月28日(水) while our row stores 2004-04-29 — the usual late-night pre/post-midnight convention for the same broadcast; eps 15 and 16 match exactly (3月8日(月) / 3月15日(月)). SOURCE TRAP RE-CONFIRMED: chronocrusade.fandom's `appearances` fields are unreliable in BOTH directions — Jack Guilliam is tagged 'appearances = Anime' and Gurio's page says 'Gurio was found in the anime only', yet ja-WP gives both full manga roles; conversely the infobox debut-manga/debut-anime chapter fields (Magdalene ch 36 / ep 21, Satella ch 15 / ep 6) do check out. Use ja-WP for manga-vs-anime allocation.",
+    "order_only": []
+  },
+  "flags_for_sean": [
+    "EP 21 — THE ONE PRECEDENT TENSION, please rule. I confirmed anchor_hostile, which matches the stored 2026-08-24 ruling. But the LATER trigun ep-9 ruling (Sean, 2026-08-25, A3) went the other way on a superficially similar case: a first-time forward graft (ch 18-19 pulled ~9 chapters ahead) WAS anchored under the zatch-51 precedent, with a parity continue absorbing the position-honesty cost. The two cases differ in the way I think is decisive: trigun ep 9 had an EXACT, sourced chapter identity (the bus sequence = ch 18 into 19) and the anime later covered the intervening chapters, so parity could hold the reader; chrono ep 21 has NO per-episode source at all (36-41 is inferred), the intervening Acts 31-35 are never covered by any episode, and 22-24 are filler so there is no later start to be in parity with — the only available continue would be post_series at 42, which would silently claim 31-41 as seen. If you disagree, the alternative form is: ep 21 END 41, START 36 (A12: the flashback is a relocated block, so 36 is not really a START either), chapters_adapted '36-41 (compressed, divergent flashback)', confidence medium, plus a post_series continue at 42 naming 31-35 as never adapted — I do not recommend it.",
+    "EPS 15/16 RETYPE CONTRADICTS A STORED RULING. The T6 override (2026-08-24) types 14-21 as a mixed block; this verdict carves 15 and 16 out as filler. Knock-on effects: (a) the 'mixed' stretch becomes 14, 17-21; (b) the loose_parallel {22-26} fact must be extended from {14, 17} to {14, 15, 16, 17} so the block stays annotated; (c) A1 then formally bars anchors on 15/16, which is already the de-facto state (they have none). If you prefer the block to stay whole, the counter-argument is only that eps 14-17 read as one arc — no source content is gained by keeping 15/16 mixed.",
+    "AFTER THIS VERDICT, EVERY ROW ON THIS SERIES IS SETTLED except the mixed rows 14 and 17, which have never been examined at row level (batch 17 typed them as part of the block and gave them the {22-26} loose_parallel). Ep 14 has one concrete manga beat cited (tropedia: Satella collecting Rosette and Azmaria in the desert on the cross-country trip, a v4 beat); ep 17 'Accomplices' has none that I found. If 17 turns out to be the same shape as 15/16, the mixed stretch collapses to 14 and 18-21. Not researched here — out of the named target rows.",
+    "CONTINUE VALUE CHOICE. I set ep 20 → 31 post_series (mechanical, A4 coverage 30 + 1) rather than batch 17's proposed restart at Act 1, because the C-rules want a forward number and the restart advice is a note, not a position. If the UI ever surfaces this, the note matters more than usual here: a reader who resumes at 31 has never seen Acts 7 and 12-18, has seen 22-30 only as a loose retelling, and will meet Acts 36-41 as new material despite ep 21 having shown a rewritten version."
+  ]
+}

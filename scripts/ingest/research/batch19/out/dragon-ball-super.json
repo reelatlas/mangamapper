@@ -1,0 +1,157 @@
+{
+  "series_id": "dragon-ball-super",
+  "summary": "The licensed work eps 18-27 realise is the FILM: 『ドラゴンボールZ 復活の「F」』 (Toei, 2015-04-18, 94 min), whose 原作 AND 脚本 are both credited to Akira Toriyama personally — ja.wikipedia states outright that Toriyama's own story outline covers '劇場版アニメ2作品『神と神』と『復活の「F」』を原作に用いて、各1クール分ほどのテレビシリーズアニメとして再構成・再制作した「破壊神ビルス編」と「フリーザ復活編」', and the film article says the same from its side ('テレビアニメシリーズ『ドラゴンボール超』では、本作を原作とした「フリーザ復活編」として、テレビシリーズ複数話分にリメイク・再構成している'). The two rival candidates are weaker: Toyotarou's 3-chapter 'Dragon Ball Z: Resurrection ‘F’' manga (V-Jump, 2015-02-21 to 2015-04-21) is a PROMOTIONAL adaptation of the film published BEFORE the film opened and stops 'フリーザがゴールデンフリーザに変身する直前まで', so it cannot be the source of eps 25-27; the Shueisha Film Animation Comic (2015-12-05, 357 pp) is a screenshot comic OF the film released two months after the arc began airing — a derivative, not a source. The DBS manga's silence is confirmed three independent ways: Kanzenshuu's manga guide (Beerus arc = chapters 01-04, Champa arc = chapters 05-13, with the note that Toyotarou's three-chapter Resurrection ‘F’ manga is why 'the Resurrection ‘F’ story arc that appears in the TV series was omitted from the manga'), ja.wikipedia ('漫画：未登場 / アニメ：第19話 - 第27話' and '「フリーザ復活編」はその事件の顛末が解説で語られたのみで省略されている'), and dragonball.fandom's empty manga-chapters field on the Golden Frieza Saga. NO ANCHORS: nine of the ten rows carry no position in the DBS manga's chapter space and are filed anchor_hostile under the A44 shape; ep 22 is filler by batch 18 (A1, not re-judged — and independently corroborated from the FILM side: ja.wikipedia records that Ginyu does not exist in the film and that Tagoma DIES there, so ep 22 is Toei-original against both works). RECOMMENDATION: canon + side_source{Dragon Ball Z: Resurrection ‘F’ (2015 film)} for 18-21 and 23-27 — the stored canon stands, no type repairs — with the competing 'filler under the letter of T27' reading laid out in the flags. One row is genuinely split: ep 18 sits in 破壊神ビルス編 for ja.wikipedia (which ends the Beerus arc at 第18話) and in the Golden Frieza Saga for dragonball.fandom, and it is the only row in the range with a DBS-manga correspondence at all — its Champa/Vados + Sorbet tag scene parallels the closing pages of manga ch 4 'Battle of Gods', but staged differently, so it is recorded as loose_parallel {4}, not a graft.",
+  "anchors": [],
+  "continue_points": [],
+  "anchor_hostile": [
+    {
+      "episode": 18,
+      "why": "No position in the DBS manga's chapter space (A44 shape). The episode's own plot — Goku leaves Earth and begins training under Whis on Beerus' world — is the Resurrection ‘F’ film's opening situation (and Toyotarou's Resurrection ‘F’ manga ch 2, 'On Beerus' Planet, Whis is seen training Goku and Vegeta'), i.e. a different work. Its only DBS-manga tie is the closing tag — Champa and Vados appearing, and Sorbet resolving to revive Frieza — which parallels the last pages of manga ch 4 'Battle of Gods' (神と神): the chapter's own page lists episode 18 among its adapting episodes. But it is a PARALLEL, not an adaptation, and it cannot be a position anyway: ch 4 was already covered by eps 9-12 and 14, so an END-4 anchor here would record no advance. Note also that the two versions diverge — ja.wikipedia lists among the 相違点 that in the manga 'シャンパがソルベの部下・ガラナを殺害したことがフリーザ復活に間接的に影響している', where the anime has Champa and Vados merely knock Sorbet's ship aside.",
+      "sources": [
+        "https://dragonball.fandom.com/api.php?action=parse&page=Battle%20of%20Gods%20(manga%20chapter)&prop=wikitext&format=json",
+        "https://dragonball.fandom.com/api.php?action=parse&page=I'm%20Here%2C%20Too!%20Training%20Commences%20on%20Beerus'%20World&prop=wikitext&format=json",
+        "https://ja.wikipedia.org/wiki/%E3%83%89%E3%83%A9%E3%82%B4%E3%83%B3%E3%83%9C%E3%83%BC%E3%83%AB%E8%B6%85"
+      ]
+    },
+    {
+      "episode": 19,
+      "why": "Adapts the Resurrection ‘F’ film, a different work in a different medium — no chapter exists in the DBS manga's space for it (A44 shape). ja.wikipedia's ストーリー index for the arc reads 'フリーザ復活編（漫画：未登場 / アニメ：第19話 - 第27話）'. The episode's non-anime-original beats are exactly the film's opening: Mecha Frieza in Earth's Hell, Sorbet and Tagoma summoning Shenron, Frieza revived in pieces and restored in the regeneration chamber, Whis autographing Goku's and Vegeta's gi — all of which are also in Toyotarou's Resurrection ‘F’ manga chs 1-2, published February-March 2015, eight months before this episode aired.",
+      "sources": [
+        "https://ja.wikipedia.org/wiki/%E3%83%89%E3%83%A9%E3%82%B4%E3%83%B3%E3%83%9C%E3%83%BC%E3%83%AB%E8%B6%85",
+        "https://dragonball.fandom.com/api.php?action=parse&page=Despair%20Redux!%20The%20Return%20of%20the%20Evil%20Emperor%2C%20Frieza!&prop=wikitext&format=json",
+        "https://dragonball.fandom.com/api.php?action=parse&page=Chapter%201%20(Resurrection%20%E2%80%98F%E2%80%99)&prop=wikitext&format=json"
+      ]
+    },
+    {
+      "episode": 20,
+      "why": "Same as ep 19 — film material, no DBS-manga chapter space (A44 shape). Jaco warns Bulma of Frieza's approach and the Z Fighters gather; Toyotarou's Resurrection ‘F’ manga ch 2 ends on exactly this beat ('Sorbet points out a spaceship landing…') and ch 3 opens with Jaco's arrival. Kanzenshuu's DBS manga guide runs Beerus arc = chapters 01-04 straight into Champa arc = chapters 05-13 with nothing between.",
+      "sources": [
+        "https://www.kanzenshuu.com/manga/super/",
+        "https://dragonball.fandom.com/api.php?action=parse&page=Chapter%202%20(Resurrection%20%E2%80%98F%E2%80%99)&prop=wikitext&format=json",
+        "https://ja.wikipedia.org/wiki/%E3%83%89%E3%83%A9%E3%82%B4%E3%83%B3%E3%83%9C%E3%83%BC%E3%83%ABZ%20%E5%BE%A9%E6%B4%BB%E3%81%AE%E3%80%8CF%E3%80%8D"
+      ]
+    },
+    {
+      "episode": 21,
+      "why": "Film material, no DBS-manga chapter space (A44 shape). The thousand-soldier battle and Gohan vs Shisami are Resurrection ‘F’ manga ch 3 / the film's second act — and the episode's own page proves the comparison is being made against the Resurrection ‘F’ manga rather than the DBS manga: 'In the Dragon Ball Z: Resurrection ‘F’ manga, Jaco fought alongside the Z-Fighters and handled at least 100 soldiers by himself, here he avoids fighting…'. Toei expands the battle (the saga page: 'Not all of Frieza's soldiers are sent to battle the Z Fighters and the battle is shorter in the film').",
+      "sources": [
+        "https://dragonball.fandom.com/api.php?action=parse&page=The%20Start%20of%20Vengeance!%20The%20Frieza%20Force's%20Malice%20Strikes%20Gohan!&prop=wikitext&format=json",
+        "https://dragonball.fandom.com/api.php?action=parse&page=Chapter%203%20(Resurrection%20%E2%80%98F%E2%80%99)&prop=wikitext&format=json",
+        "https://dragonball.fandom.com/api.php?action=parse&page=Golden%20Frieza%20Saga&prop=wikitext&format=json"
+      ]
+    },
+    {
+      "episode": 23,
+      "why": "Film material with Toei expansion, no DBS-manga chapter space (A44 shape). Goku and Vegeta reach Earth via Instant Transmission — Resurrection ‘F’ manga ch 3 and the film — wrapped in the Toei-only Ginyu/Tagoma thread that ep 22 opened (Vegeta kills Ginyu-in-Tagoma's-body; in the film Tagoma is killed by Frieza before ever reaching Earth, per ja.wikipedia's character notes).",
+      "sources": [
+        "https://dragonball.fandom.com/api.php?action=parse&page=Chapter%203%20(Resurrection%20%E2%80%98F%E2%80%99)&prop=wikitext&format=json",
+        "https://ja.wikipedia.org/wiki/%E3%83%89%E3%83%A9%E3%82%B4%E3%83%B3%E3%83%9C%E3%83%BC%E3%83%ABZ%20%E5%BE%A9%E6%B4%BB%E3%81%AE%E3%80%8CF%E3%80%8D",
+        "https://dragonball.fandom.com/api.php?action=parse&page=Golden%20Frieza%20Saga&prop=wikitext&format=json"
+      ]
+    },
+    {
+      "episode": 24,
+      "why": "Film material, no DBS-manga chapter space (A44 shape). Goku vs Frieza in his final form, the God Kamehameha, and Goku's Super Saiyan God Super Saiyan reveal — the end of Toyotarou's Resurrection ‘F’ manga ch 3 ('Frieza begins showing off his new evolution…') and the film's third act.",
+      "sources": [
+        "https://dragonball.fandom.com/api.php?action=parse&page=Chapter%203%20(Resurrection%20%E2%80%98F%E2%80%99)&prop=wikitext&format=json",
+        "https://ja.wikipedia.org/wiki/%E3%83%89%E3%83%A9%E3%82%B4%E3%83%B3%E3%83%9C%E3%83%BC%E3%83%ABZ%20%E5%BE%A9%E6%B4%BB%E3%81%AE%E3%80%8CF%E3%80%8D",
+        "https://www.animefillerlist.com/shows/dragon-ball-super"
+      ]
+    },
+    {
+      "episode": 25,
+      "why": "Film-only material, no DBS-manga chapter space (A44 shape) and beyond the Resurrection ‘F’ manga's end as well — ja.wikipedia records that Toyotarou's three-part V-Jump manga stops 'フリーザがゴールデンフリーザに変身する直前まで' (just before Frieza transforms into Golden Frieza), which is precisely where this episode starts. Golden Frieza vs Super Saiyan Blue Goku exists only in the film and in this arc.",
+      "sources": [
+        "https://ja.wikipedia.org/wiki/%E3%83%89%E3%83%A9%E3%82%B4%E3%83%B3%E3%83%9C%E3%83%BC%E3%83%ABZ%20%E5%BE%A9%E6%B4%BB%E3%81%AE%E3%80%8CF%E3%80%8D",
+        "https://www.kanzenshuu.com/manga/super/",
+        "https://dragonball.fandom.com/api.php?action=parse&page=Dragon%20Ball%20Z%3A%20Resurrection%20%E2%80%98F%E2%80%99%20(manga)&prop=wikitext&format=json"
+      ]
+    },
+    {
+      "episode": 26,
+      "why": "Film-only material, no DBS-manga chapter space (A44 shape). Goku exploits Golden Frieza's stamina flaw — the film's climax, past the end of the Resurrection ‘F’ manga. The DBS manga's only account of this fight is second-hand and CONTRADICTS the anime's staging: per the saga page, 'According to the Super manga, Super Saiyan God Super Saiyan Goku and Vegeta fought and defeated Golden Frieza together instead of taking turns.'",
+      "sources": [
+        "https://dragonball.fandom.com/api.php?action=parse&page=Golden%20Frieza%20Saga&prop=wikitext&format=json",
+        "https://ja.wikipedia.org/wiki/%E3%83%89%E3%83%A9%E3%82%B4%E3%83%B3%E3%83%9C%E3%83%BC%E3%83%ABZ%20%E5%BE%A9%E6%B4%BB%E3%81%AE%E3%80%8CF%E3%80%8D",
+        "https://www.kanzenshuu.com/manga/super/"
+      ]
+    },
+    {
+      "episode": 27,
+      "why": "Film-only material, no DBS-manga chapter space (A44 shape). Sorbet's shot, Frieza destroying the Earth, Whis's three-minute Temporal Do-Over and the final Kamehameha are the film's ending. The fandom infobox tags this row 'Manga = The Super Warriors Gather! Part 2 (partially)', i.e. DBS manga ch 32 — but that is NOT an adaptation: ch 32 is a Universe Survival recruitment chapter published January 2018 in which 'Old Kai, having been vacationing at the time of Frieza's return to Earth, is told the story of what happened by Whis'. That is the 解説で語られたのみ ja.wikipedia describes — the source narrating these events as backstory, two years and twenty-eight chapters later. It cannot carry a position for this row.",
+      "sources": [
+        "https://dragonball.fandom.com/api.php?action=parse&page=The%20Super%20Warriors%20Gather!%20Part%202&prop=wikitext&format=json",
+        "https://dragonball.fandom.com/api.php?action=parse&page=The%20Earth%20Explodes%3F!%20A%20Decisive%20Kamehameha!&prop=wikitext&format=json",
+        "https://ja.wikipedia.org/wiki/%E3%83%89%E3%83%A9%E3%82%B4%E3%83%B3%E3%83%9C%E3%83%BC%E3%83%AB%E8%B6%85"
+      ]
+    }
+  ],
+  "annotations": [
+    {
+      "episodes": [
+        18,
+        19,
+        20,
+        21,
+        23,
+        24,
+        25,
+        26,
+        27
+      ],
+      "kind": "side_source",
+      "note": "THE WORK: 『ドラゴンボールZ 復活の「F」』 / Dragon Ball Z: Resurrection ‘F’ — Toei Animation theatrical film, released 2015-04-18, 94 minutes, 原作 and 脚本 both credited to 鳥山明 (Akira Toriyama), his first time writing a Dragon Ball screenplay alone; the full script was published by Shueisha the same day as the theatre giveaway guidebook 『鳥山明描き下ろし脚本完全収録 DRAGON BALL 巻「F」』. ja.wikipedia states the relation twice and in both directions: the TV series' arcs 破壊神ビルス編 and フリーザ復活編 were made '劇場版アニメ2作品…を原作に用いて、各1クール分ほどのテレビシリーズアニメとして再構成・再制作した', and the film's own article says '『ドラゴンボール超』では、本作を原作とした「フリーザ復活編」として、テレビシリーズ複数話分にリメイク・再構成している'. This is a SECOND LICENSED WORK, not the series' identified source (the Toyotarou/Toriyama DBS manga), which skips the arc entirely — hence side_source on a canon row rather than filler, and hence no chapter mapping (A1). A parallel manga adaptation of the same film exists and covers the first two thirds: Toyotarou's three-chapter 'Dragon Ball Z: Resurrection ‘F’', V-Jump April/May/June 2015 issues (2015-02-21, 03-20, 04-21), stopping just before Frieza turns Golden — it is a sibling adaptation of the film, published before the film opened, NOT the anime's source, and it is why the DBS manga skipped the arc (Kanzenshuu). Excludes ep 22, which is filler (Ginyu does not appear in the film at all and Tagoma dies there).",
+      "sources": [
+        "https://ja.wikipedia.org/wiki/%E3%83%89%E3%83%A9%E3%82%B4%E3%83%B3%E3%83%9C%E3%83%BC%E3%83%AB%E8%B6%85",
+        "https://ja.wikipedia.org/wiki/%E3%83%89%E3%83%A9%E3%82%B4%E3%83%B3%E3%83%9C%E3%83%BC%E3%83%ABZ%20%E5%BE%A9%E6%B4%BB%E3%81%AE%E3%80%8CF%E3%80%8D",
+        "https://www.kanzenshuu.com/manga/super/",
+        "https://dragonball.fandom.com/api.php?action=parse&page=Dragon%20Ball%20Z%3A%20Resurrection%20%E2%80%98F%E2%80%99%20(manga)&prop=wikitext&format=json",
+        "https://dragonball.fandom.com/api.php?action=parse&page=Golden%20Frieza%20Saga&prop=wikitext&format=json"
+      ]
+    },
+    {
+      "episodes": [
+        18
+      ],
+      "kind": "loose_parallel",
+      "chapters": "4",
+      "note": "The only DBS-manga correspondence anywhere in eps 18-27, and it is a parallel rather than an adaptation. DBS manga ch 4 'Battle of Gods' (神と神, V-Jump 2015-09-19, vol 1) closes on Champa destroying Garana's Frieza-Force ship after they find a Super Dragon Ball, Tagoma reporting the loss to Sorbet, Sorbet declaring that their only option is to revive Frieza, and Vados warning Champa about Beerus. Ep 18 (aired 2015-11-08, i.e. after the chapter) closes on the same three beats, staged differently: Champa and Vados knock Sorbet's ship aside on their way to a meteor, and Sorbet's motive is his army's decline. Both sources record the difference rather than an adaptation — the episode page's Differences list ('In the anime, Champa and Vados knock aside Sorbet's Spaceship whilst flying toward a planet. In the manga, they come across a Frieza Force ship run by Garana and Champa destroys them') and ja.wikipedia's 相違点 lists, which put 'シャンパがソルベの部下・ガラナを殺害したことがフリーザ復活に間接的に影響している' under フリーザ復活編 and the Champa/Vados-meets-the-Kais version under 破壊神ビルス編. Recorded as loose_parallel, NOT graft: nothing is lifted, and ch 4 is already covered by eps 9-12 and 14.",
+      "sources": [
+        "https://dragonball.fandom.com/api.php?action=parse&page=Battle%20of%20Gods%20(manga%20chapter)&prop=wikitext&format=json",
+        "https://dragonball.fandom.com/api.php?action=parse&page=I'm%20Here%2C%20Too!%20Training%20Commences%20on%20Beerus'%20World&prop=wikitext&format=json",
+        "https://ja.wikipedia.org/wiki/%E3%83%89%E3%83%A9%E3%82%B4%E3%83%B3%E3%83%9C%E3%83%BC%E3%83%AB%E8%B6%85"
+      ]
+    },
+    {
+      "episodes": [
+        19,
+        20,
+        21,
+        23,
+        24,
+        25,
+        26,
+        27
+      ],
+      "kind": "divergence",
+      "note": "The TV arc is a nine-episode expansion of a 94-minute film, so roughly half its runtime is Toei-added. dragonball.fandom's saga-level 'Anime, Manga and Movie Differences' list documents the substantive ones: Vegeta trains with Whis for six months before Goku joins (the reverse of the film); Frieza does not destroy North City; not all thousand soldiers are sent in, and the battle is shorter in the film; Goten and Trunks appear (as Gotenks) where the film has neither; Shisami fights Gohan rather than Piccolo and is killed by Tagoma rather than Frieza; Tagoma survives and becomes Frieza's training partner (and then Ginyu's body); Frieza tortures Gohan with Death Beams rather than a single punch; Piccolo is KILLED here and never dies in the film; Frieza fights evenly with Goku in his final form where the film has him barely keeping up; Goku drops out of Super Saiyan Blue before Sorbet's shot where the film keeps him in it. Recorded so the block is not read as a clean transfer of the film.",
+      "sources": [
+        "https://dragonball.fandom.com/api.php?action=parse&page=Golden%20Frieza%20Saga&prop=wikitext&format=json",
+        "https://ja.wikipedia.org/wiki/%E3%83%89%E3%83%A9%E3%82%B4%E3%83%B3%E3%83%9C%E3%83%BC%E3%83%ABZ%20%E5%BE%A9%E6%B4%BB%E3%81%AE%E3%80%8CF%E3%80%8D"
+      ]
+    }
+  ],
+  "repairs": [],
+  "type_corrections": [],
+  "structure": {
+    "notes": "ROW IDENTITY re-verified: our 131 rows == dragonball.fandom's List of Dragon Ball Super episodes (131 numbered rows, no x.5 entries) == ja.wikipedia's 各話リスト == animefillerlist's 1-131. Titles and dates for 18-27 match ours one for one (ep 18 = 2015-11-08 オラも来たぞ! ビルス星で修行開始だ!, ep 27 = 2016-01-17 地球爆発!? 決着のかめはめ波). No shift is possible. THE SOURCE'S CHAPTER SPACE (three independent sources agreeing): Kanzenshuu's DBS manga guide — God of Destruction Beerus arc = chapters 01-04 (published 2015-06-20 to 2015-09-19), God of Destruction Champa arc = chapters 05-13 (2015-10-21 to 2016-06-21), nothing between; ja.wikipedia's ストーリー index — 破壊神ビルス編（漫画：第1巻 / アニメ：第1話-第18話）, フリーザ復活編（漫画：未登場 / アニメ：第19話-第27話）, 破壊神シャンパ編（漫画：第1巻-第2巻 / アニメ：第28話-第46話）; dragonball.fandom's Golden Frieza Saga infobox with an EMPTY manga-chapters field and anime episodes = 16-27. Manga ch 5 'Beerus and Champa' opens 'Sometime has passed since the battle with Golden Frieza' — the source acknowledges the events and declines to show them. ARC BOUNDARY DISAGREEMENT, and it matters for exactly one row: ja.wikipedia ends 破壊神ビルス編 at 第18話 and starts フリーザ復活編 at 第19話; dragonball.fandom starts the Golden Frieza Saga at ep 16; animefillerlist independently marks 16-17 anime_canon, 18-21 and 23-27 manga_canon, 22 anime_canon — i.e. AFL groups 18 with the film block and singles out 22, which is also the batch-18 ruling. THE RESURRECTION ‘F’ MANGA IS A SEPARATE CHAPTER SPACE: three chapters, numbered 1-3, published 2015-02-21 / 2015-03-20 / 2015-04-21 in V-Jump's April, May and June 2015 issues, never collected into a DBS volume. Its rough coverage of the anime is ch 1 ≈ ep 19, ch 2 ≈ eps 18 (training) + 19-20, ch 3 ≈ eps 21, 23, 24, ending just before Golden Frieza. Those numbers must NEVER be converted into DBS-manga chapter numbers (the N-family rule against mixing spaces) — which is the second reason there is no anchor here. A SOURCE-FIELD TRAP FOUND THIS PASS: dragonball.fandom's per-episode 'Differences from the manga' section is ambiguous across this arc about WHICH manga it means. Ep 21's entry names the Resurrection ‘F’ manga explicitly; ep 19's lists three scenes as non-exclusive that exist only in the Resurrection ‘F’ manga; but eps 20, 21, 23, 24, 25, 26 and 27 all carry the flat 'The entire events of this episode were exclusive to the anime', which is true against the DBS manga and false against the Resurrection ‘F’ manga for 20, 21, 23 and 24. Do not read that field as a standing claim in this arc.",
+    "order_only": []
+  },
+  "flags_for_sean": [
+    "THE TWO READINGS, AND WHY THE CHOICE DOES NOT MOVE A SINGLE POSITION. Reading A (recommended): canon + side_source{Dragon Ball Z: Resurrection ‘F’ (2015 film)} for 18-21 and 23-27 — the stored canon stands, no repairs. Justification: these episodes restage a LICENSED franchise work whose original story and screenplay are Toriyama's own, ja.wikipedia calls the film their 原作 in both articles, the events are load-bearing continuity the source manga itself leans on twice (ch 5's opening line, ch 32's Whis-tells-Old-Kai narration), and batch 18's own distinction is that a second licensed work is side_source on a canon row (the Black Clover 55-56 shape), not filler. Reading B (the letter of T27): filler, because standing is measured against the identified SOURCE and the DBS manga has literally zero chapters here — a film is not the manga, and Toyotarou's three-chapter Resurrection ‘F’ one-shot is a different work published before the DBS manga even began. What decides it is a taxonomy question, not an evidence question, and the practical outcome is identical either way: side_source rows carry no mapping by design and filler rows never take anchors (A1), so under BOTH readings eps 18-27 add nothing to the manga position, which sits at ch 4 after ep 18 and resumes at ch 5 for ep 28. My argument for A is that B collapses the distinction between 'Toei invented this' (eps 16-17, 22, 50, 52, 71-72, 79-81, 90-91, 94-95) and 'this is Toriyama's own film restaged' — which is precisely what side_source exists to mark, and a user told 'filler' would skip Frieza's resurrection, Super Saiyan Blue's debut and Frieza's death.",
+    "WHICH WORK TO NAME — I recommend the FILM, and here is why the other two lose. (a) Toyotarou's three-chapter 'Dragon Ball Z: Resurrection ‘F’' manga (V-Jump April-June 2015 issues) is a PROMOTIONAL adaptation published 2015-02-21 to 2015-04-21, before the film opened on 2015-04-18 and eight months before ep 19 aired; ja.wikipedia says it omits and adds scenes relative to the film and stops 'フリーザがゴールデンフリーザに変身する直前まで', so it cannot be the source of eps 25-27 at all. It is a sibling adaptation of the same film. (b) The Shueisha Film Animation Comic (アニメコミックス) for Resurrection ‘F’ was released 2015-12-05, 357 pages — a screenshot comic OF THE FILM published a month AFTER the TV arc started airing; it is downstream of the film, not upstream of the anime. (c) The film itself is what both ja.wikipedia articles name as the arc's 原作. If you would rather name a printed work so the annotation points at something a reader can hold, the honest phrasing is side_source{Dragon Ball Z: Resurrection ‘F’ (2015 film); manga adaptation by Toyotarou, V-Jump 2015, 3 chapters, covers eps ~18-24 only}.",
+    "EP 18 IS THE ONE GENUINELY SPLIT ROW. ja.wikipedia ends 破壊神ビルス編 at 第18話 (so ep 18 belongs to the arc whose manga IS chapters 1-4); dragonball.fandom puts it in the Golden Frieza Saga; AFL calls it manga_canon along with 19-27. Its two halves point different ways: Goku's departure and the start of the Whis training is the film's opening situation (Resurrection ‘F’ manga ch 2 opens on exactly that), while the closing Champa/Vados/Sorbet tag parallels ch 4's last pages. I recommend canon (unchanged) + side_source{film} + loose_parallel {4}. The alternative, if you judge the training half a Toei bridge rather than film content, is filler + loose_parallel {4} — the same shape you already gave eps 16 and 17, whose fandom pages carry the blanket 'entire events exclusive to the anime' that ep 18's page pointedly does NOT.",
+    "NOT RE-JUDGED, AS INSTRUCTED, BUT CORROBORATED FROM A NEW DIRECTION: ep 22 (Ginyu). Batch 18 typed it filler against the DBS manga. It is also filler against the FILM, which is the stronger test here — ja.wikipedia's character section states that in the film Tagoma is blasted into space by Frieza and DIES ('フリーザに宇宙空間へと撃ち飛ばされ死亡した') and that only in 『超』 does he survive to become Frieza's training partner and then lose his body to Ginyu; the fandom saga page says flatly that Ginyu 'did not appear in the movie'. So ep 22 has zero standing in both the source and the side source. No change proposed.",
+    "IF READING B WINS, the knock-on is that eps 15-27 become a thirteen-episode filler block (15 is already filler, 16-17 already filler, 22 already filler), which is a large visible claim on a series where the anime and manga are parallel realisations of one Toriyama outline. Worth deciding once and writing down, because the same question returns for eps 1-14: ja.wikipedia says 破壊神ビルス編 too was made from a FILM (『神と神』) rather than from the manga, and manga chapters 1-4 are a four-chapter digest of a fourteen-episode arc. Whatever you rule for 18-27 should govern 1-14, and today those rows are canon with an afg-continua anchor at ep 131 only."
+  ]
+}

@@ -1,0 +1,115 @@
+{
+  "series_id": "gto-great-teacher-onizuka",
+  "summary": "ANSWER TO SEAN'S QUESTION: yes — Shonan Junai Gumi! contains the Eikichi-vs-Kadena race, as a story, not merely as backstory. SJG tankobon vol 27 holds a nine-chapter 'Last Signal' arc, ch 234-242, whose chapter titles are 'Last Signal 1' (240) and 'Last Signal 2' (241). In ch 239 Kadena challenges Eikichi to a one-on-one race; ch 240-241 ARE that race down Route 134 past Enoshima (Eikichi's Zephyr vs her purple Skyline), ending at the hospital bed of her comatose brother Kadena Kazuhito; ch 242 is the flashback to the crash and closes with Eikichi coming back on Masaki's ZII to race her again and pull her out of her despair. en.wikipedia's SJG character entry states it independently: 'Haunted by guilt over her brother Kazuhito's racing accident that left him comatose, she regains her passion for driving after racing Onizuka, who demonstrates responsible enjoyment of the sport.' The anime's eps 25-26 restage that arc beat for beat — the arrival and the sex-appeal/money-making gimmicks, the boys investigating her hidden motive, the SAME 30,000,000 yen she has raised for her brother, the crooked medical middlemen, the Last Signal race, and her decision to stay — so the batch-18 reading ('only the setup is borrowed and the story is new') is REFUTED and eps 25-26 are canon + side_source{Shonan Junai Gumi!}, not filler + loose_parallel. Neither row takes an anchor: SJG is a different licensed work with its own chapter space (ch 1-267 / 31 volumes), and no GTO Lesson is consumed here — the stored ep21 -> ep29 parity continue at Lesson 75 is unaffected. The recasting is real and gets its own divergence annotation (nurse instead of homeroom teacher; an adult Onizuka who has never met her — ja.wikipedia flags this as an outright contradiction with SJG; the brother recovered and working as a mechanic instead of comatose, renamed Takashi from Kazuhito; an American-doctor scam instead of the coordinators' extra demand; the race a tie instead of her win; the Masaki thread dropped).",
+  "anchors": [],
+  "continue_points": [],
+  "anchor_hostile": [
+    {
+      "episode": 25,
+      "why": "Adapts Shonan Junai Gumi! ch 234-238 — another licensed work's chapter space (A44 shape). The GTO Lesson instrument is untouched by this row: the fandom episode infobox carries 'Manga Chapter(s) = N/A' and the GTO nurse Naoko Moritaka's own Lessons are not adapted here (ja.wikipedia GTO: アニメ版には、『湘南純愛組!』の嘉手納南風が代わりに登場する). Position must not move.",
+      "sources": [
+        "https://great-teacher-onizuka-gto.fandom.com/api.php?action=parse&page=Lesson_25:_Playing_Doctor_-_GTO_Style&prop=wikitext&format=json",
+        "http://shonanjunaigumi.weebly.com/story-arcs.html",
+        "https://ja.wikipedia.org/wiki/GTO_(%E6%BC%AB%E7%94%BB)"
+      ]
+    },
+    {
+      "episode": 26,
+      "why": "Adapts Shonan Junai Gumi! ch 239-242 — another licensed work's chapter space (A44 shape). Fandom episode infobox 'Manga Chapter(s) = N/A'; no GTO Lesson content. Position must not move.",
+      "sources": [
+        "https://great-teacher-onizuka-gto.fandom.com/api.php?action=parse&page=Lesson_26:_Onizuka_Meets_His_Match&prop=wikitext&format=json",
+        "http://shonanjunaigumi.weebly.com/volume-27.html",
+        "https://en.wikipedia.org/wiki/Shonan_Junai_Gumi"
+      ]
+    }
+  ],
+  "annotations": [
+    {
+      "episodes": [
+        25,
+        26
+      ],
+      "kind": "side_source",
+      "chapters": "Shonan Junai Gumi! (Tohru Fujisawa, Weekly Shonen Magazine / Kodansha, 267 ch / 31 vols) ch 234-242 — the 'Last Signal' arc, tankobon vol 27; ep 25 = ch 234-238, ep 26 = ch 239-242. Nao Kadena first appears earlier, ch 229 'Chateau de Riverside'.",
+      "note": "SUPERSEDES the stored loose_parallel on these rows. SJG's Last Signal arc is not backstory the anime borrows — it is a nine-chapter story whose spine the anime restages. Chapter-level correspondence (shonanjunaigumi.weebly.com volume-27 summaries, cross-checked against en.wikipedia and ja.wikipedia): ch 234 Kadena arrives at the school and takes over the Oni-baku's class // ep 25 she arrives as Holy Forest's nurse; ch 235-237 she motivates the class with her looks and the boys try to work out who she is // ep 25 she markets beauty products, supplements and lucky charms and Danma starts to place her; ch 237-238 the purple Skyline, the club job, the money mystery, the break-in, the yakuza-looking men and the 30 MILLION YEN // ep 25's 'Queen of Hakosuka' reveal and ep 26's 30 MILLION YEN raised for her brother's operation (identical figure); ch 239 Kadena challenges Eikichi to a one-on-one race after he learns about the cross she bears // ep 26 Onizuka challenges her to 'Last Light' / 'No Signals'; ch 240-241 the Last Signal race itself, then the hospital and the comatose Kadena Kazuhito // ep 26's race and the brother; ch 242 the flashback crash, the crooked medical coordinators, and Eikichi racing her a second time to pull her out of her despair // ep 26's scam, her collapse into depression, and the race that 'achieves the desired result and she stays on at the school'. en.wikipedia's SJG entry for Kadena independently states the race exists and is what resolves her: 'she regains her passion for driving after racing Onizuka'.",
+      "sources": [
+        "http://shonanjunaigumi.weebly.com/story-arcs.html",
+        "http://shonanjunaigumi.weebly.com/volume-27.html",
+        "https://en.wikipedia.org/wiki/Shonan_Junai_Gumi",
+        "https://en.wikipedia.org/wiki/List_of_Great_Teacher_Onizuka_episodes",
+        "https://ja.wikipedia.org/wiki/%E6%B9%98%E5%8D%97%E7%B4%94%E6%84%9B%E7%B5%84!",
+        "https://great-teacher-onizuka-gto.fandom.com/api.php?action=parse&page=Nao_Kadena&prop=wikitext&format=json"
+      ]
+    },
+    {
+      "episodes": [
+        25,
+        26
+      ],
+      "kind": "divergence",
+      "chapters": "Shonan Junai Gumi! ch 234-242",
+      "note": "The SJG arc is recast wholesale for the GTO cast, and ja.wikipedia says so in as many words: 彼女の登場によって本作品とアニメ版『GTO』との矛盾が生じている. What changes: she is Holy Forest's school NURSE standing in for the GTO manga's Naoko Moritaka, not the Oni-baku's homeroom teacher at Tsujido; Onizuka is an adult teacher who has NEVER MET HER (ja.wikipedia GTO: 設定こそ踏襲するものの、鬼塚とは面識がないことになっている), whereas in SJG she was his teacher and Mariko Izumo's old Purple Haze gang leader; her nickname and car become 'Queen of Hakosuka' rather than SJG's 'Purple Haze Mary' with the purple Kenmeri Skyline; the brother is renamed Takashi (Kazuhito in SJG), was driving HER car when challenged rather than driving a black Levin against her, and has recovered and works as a mechanic at Nerima Daiichi Motors rather than lying comatose; the money is lost to an American doctor who absconds rather than to coordinators demanding a further 10 million; Onizuka issues the challenge and the race ends in a TIE rather than Kadena winning; and the Masaki Kyosuke thread that gives the SJG race its meaning is dropped. The race name is rendered 'No Signals' on en.wikipedia and 'Last Light' on the fandom wiki; ja.wikipedia keeps ラストシグナル.",
+      "sources": [
+        "https://ja.wikipedia.org/wiki/%E6%B9%98%E5%8D%97%E7%B4%94%E6%84%9B%E7%B5%84!",
+        "https://ja.wikipedia.org/wiki/GTO_(%E6%BC%AB%E7%94%BB)",
+        "https://great-teacher-onizuka-gto.fandom.com/api.php?action=parse&page=Takashi_Kadena&prop=wikitext&format=json",
+        "http://shonanjunaigumi.weebly.com/volume-27.html",
+        "https://en.wikipedia.org/wiki/List_of_Great_Teacher_Onizuka_episodes"
+      ]
+    }
+  ],
+  "repairs": [
+    {
+      "episode": 25,
+      "field": "annotation:loose_parallel",
+      "old": "loose_parallel (eps 25,26): 'Imports Kadena Nao and her brother from Fujisawa's own prequel manga Shonan Junai Gumi! (ch 229 / 241) ... but telling a new story'",
+      "new": "REMOVE / supersede with side_source{Shonan Junai Gumi! ch 234-242} + divergence",
+      "why": "The stored annotation's load-bearing claim — 'telling a new story' on top of a borrowed character — is refuted. SJG ch 234-242 is a nine-chapter arc whose plot the two episodes restage, including the Eikichi-vs-Kadena Last Signal race that the stored note assumed was an anime invention. Our apply layer MERGES annotations, so this one must be explicitly deleted rather than left to coexist; the ch '229 / 241' figures in it are a character-debut citation, not the arc range.",
+      "sources": [
+        "http://shonanjunaigumi.weebly.com/story-arcs.html",
+        "http://shonanjunaigumi.weebly.com/volume-27.html",
+        "https://en.wikipedia.org/wiki/Shonan_Junai_Gumi"
+      ]
+    },
+    {
+      "episode": 26,
+      "field": "annotation:loose_parallel",
+      "old": "loose_parallel (eps 25,26) — same stored annotation as ep 25",
+      "new": "REMOVE / supersede with side_source{Shonan Junai Gumi! ch 234-242} + divergence",
+      "why": "Same fact, second row of the pair. Ep 26 is the sharper case: the 30,000,000 yen figure, the crooked medical middlemen, the brother crippled in a Last Signal race and the Onizuka-vs-Kadena Last Signal race itself are all in SJG ch 238-242.",
+      "sources": [
+        "http://shonanjunaigumi.weebly.com/volume-27.html",
+        "https://en.wikipedia.org/wiki/List_of_Great_Teacher_Onizuka_episodes",
+        "https://en.wikipedia.org/wiki/Shonan_Junai_Gumi"
+      ]
+    }
+  ],
+  "type_corrections": [
+    {
+      "episodes": [
+        25,
+        26
+      ],
+      "type": "canon",
+      "note": "REPAIR of the stored filler (and a carve-out from the batch-18 A-7 block ruling on eps 22-28/34/42-43, which stands for every other row in it). These two rows adapt a second LICENSED work by the source's own author — the Black Clover 55-56 shape — so they are canon + side_source, not filler and not mixed: there is no GTO Lesson content in them to make a mixed pair, and the material they do carry is a published Fujisawa story, not studio invention. T28 materiality is met with room to spare: the SJG arc IS the two episodes' plot from the nurse's arrival to the race that resolves her. Sources for the arc's existence and content are independent of each other: shonanjunaigumi.weebly.com's chapter-by-chapter volume-27 summaries and arc index; en.wikipedia's Shonan Junai Gumi character entry ('she regains her passion for driving after racing Onizuka'); ja.wikipedia's SJG entry (Last Signal, Purple Haze Maria, the brother crippled in the race, and the note that the GTO anime restaged the Last Signal duel with the now-teacher Eikichi); MyAnimeList's character page carrying the older English-Wikipedia text ('Onizuka lifts her out of her bad mood by racing her') as cross-check. Neither row may take an anchor (A44 / anchor_hostile above).",
+      "sources": [
+        "http://shonanjunaigumi.weebly.com/story-arcs.html",
+        "http://shonanjunaigumi.weebly.com/volume-27.html",
+        "https://en.wikipedia.org/wiki/Shonan_Junai_Gumi",
+        "https://ja.wikipedia.org/wiki/%E6%B9%98%E5%8D%97%E7%B4%94%E6%84%9B%E7%B5%84!",
+        "https://en.wikipedia.org/wiki/List_of_Great_Teacher_Onizuka_episodes"
+      ]
+    }
+  ],
+  "structure": {
+    "notes": "SJG CHAPTER SPACE, stated so it is never mixed into ours: Shonan Junai Gumi! runs 267 numbered chapters across 31 tankobon (Kodansha, 1990-03 to 1996-09), re-released as 15 deluxe volumes (Tokyopop vols 1-10 and Vertical vols 11-15 in English as 'GTO: The Early Years') — a wholly separate instrument from GTO's 200 Lessons. The GTO fandom wiki's volume list and shonanjunaigumi.weebly.com's arc index agree chapter-for-chapter on titles and volume placement (vol 26 = ch 228-233 'Oni-baku Eviction' arc, vol 27 = ch 234-242 'Last Signal' arc, vol 28 = ch 243-247), which is what makes the ch 234-242 range safe to name. NO GTO POSITION MOVES: eps 25-26 consume no Lesson, so the stored parity chain is untouched — ep 21 -> Lesson 70 with continue 75 at ep 29 stands exactly as stored, and Lessons 71-74 remain the unadapted hole batch 18 identified. ROW IDENTITY unchanged from batch 18: our 43 rows are Lessons 1-43 by title and air date; ep 25 = 2000-03-12, ep 26 = 2000-03-19; the two Fuji TV 総集編 recaps (broadcast slots 42 and 45) are not rows of ours. AFL calls both rows filler, which is now refuted for the same reason its 'anime canon' calls on eps 22 and 24 were refuted in batch 18: AFL is typing against the GTO manga only and has no concept of a sibling-work adaptation. The batch-18 verifier's open item F3 ('unresolved: whether SJG contains an Eikichi-vs-Kadena race — a search synthesis says so; no fetched page confirms') is now closed AFFIRMATIVELY with fetched chapter-level pages.",
+    "order_only": []
+  },
+  "flags_for_sean": [
+    "The one line that sent batch 18 the other way is ja.wikipedia's GTO-side sentence 設定こそ踏襲するものの、鬼塚とは面識がないことになっている ('although the setup is carried over, she has never met Onizuka'). Read in isolation it sounds like only a setup loan. It is a note about the CHARACTER SUBSTITUTION for Naoko Moritaka, and the SJG-side article of the same encyclopedia says the anime restaged the Last Signal duel itself: 教師となった英吉とラストシグナルで対決した. Both facts are true at once — the arc is adapted AND the continuity is contradicted, which is exactly canon + side_source + divergence.",
+    "Source-quality note on shonanjunaigumi.weebly.com, my most detailed source: it is a dedicated fan site with per-volume chapter-by-chapter summaries. I did not rely on it alone — the race's existence and its resolving function are independently in en.wikipedia's SJG character section, the arc's chapter numbering and titles match the GTO fandom wiki's independent volume list exactly, and the 30-million-yen figure it reports for SJG ch 238-239 matches en.wikipedia's ep-26 summary of the anime. If you want a third hard confirmation the cheapest is Vertical's 'GTO: The Early Years' deluxe vol 13/14, which is where original vol 27 lands.",
+    "Scope discipline: this verdict changes ONLY eps 25 and 26. The rest of the batch-18 A-7 ruling is untouched — eps 22, 23, 24, 28 and 34 stay filler + their annotations, eps 42-43 stay filler + divergence with no adoption basis, and ep 27 stays mixed + side_story{Great Toroko Oppai Scenes 1-7} + graft with its A44 suppression. Nothing here weakens the 'no adoption basis for Fujisawa' finding: he holds 原作 credit and a 受験者 voice cameo only, and adapting a second work of his is not an adoption of the anime's own material.",
+    "If you would rather not move these rows off filler, the honest fallback is filler + a strengthened loose_parallel naming ch 234-242 — but I do not recommend it: the anime is not quoting a fragment of SJG, it is telling SJG's arc with different actors, and T28's materiality bar ('what is this episode's job?') answers 'to tell the Kadena Last Signal story' for both rows.",
+    "Small factual corrections to stored/batch-18 text worth carrying: the brother's SJG name is Kazuhito and he is comatose there (four years at the time of ch 241), while the anime's Takashi has recovered with impaired eyesight and works at Nerima Daiichi Motors — ja.wikipedia says 植物状態. Her SJG nickname is パープルヘイズのマリア with a purple Kenmeri (Skyline C110); 'Queen of Hakosuka' is the anime's coinage. The fandom's Nao Kadena page mixes the two continuities: its '== Shonan Junai Gumi ==' section is SJG, but its '== History ==' section is the GTO ANIME plot (Seirin nurse, the American doctor, Uchiyamada, the Yokoyama/Saito conspiracy) despite sitting under a manga-looking heading — do not read it as SJG content."
+  ]
+}

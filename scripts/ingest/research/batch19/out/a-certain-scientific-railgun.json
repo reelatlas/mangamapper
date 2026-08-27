@@ -1,0 +1,122 @@
+{
+  "series_id": "a-certain-scientific-railgun",
+  "summary": "Three narrow follow-ups, and two of the three stored claims turn out to be wrong in the same way — a chapter COVER read as chapter CONTENT. (1) Ep 14 'Special Workshop' stays FILLER and takes no anchor under A1: no chapter titled 特別講習 exists (ch 17 '七月二十五日' is the Level Upper epilogue and its Adapted To names ep 2 only), the toaru fandom's episode page says outright 'This is an anime-original episode, thus it is not adapted from any other media', and the INCORPORATION test Sean ruled the class on finds nothing — the MediaWiki backlink index for the ep-14 page contains no manga chapter and no light-novel page at all (the control, ep 20, is backlinked by manga ch 32 and ch 17-special-2), its only 'Adapted To' is a mobile GAME, its one anime-original esper (Juufuku Miho) carries 'Appears In = Anime and Video Game' with no manga or novel presence, and its other named esper (Kushiro Katabira) is a pre-existing MANGA character (debut ch 4) imported into an original episode — the wrong direction. (2) Ep 25 (Railgun S #1) stays FILLER, but the stored partial {~18 setup} is REFUTED and repaired to graft {41}: the episode page says 'The library scene is lifted from the 41st Railgun manga chapter, otherwise all the content is an anime original', ch 41 'Clique, Part 2' says the same from its own side ('The library scene was incorporated into the first episode of Railgun S'), and the ja Railgun wiki independently starts the Sisters-arc adaptation at 二期第2話 (our ep 26) with 原作 第4巻第18話 — so nothing of ch 18 is in ep 25. One lifted scene inside an otherwise original episode is filler + a mandatory graft under T28. (3) Ep 49's END 43 STANDS (ch 43 '交渉/Negotiation' Adapted To = Railgun T Episode 01; ja Railgun wiki: 大覇星祭編 原作 = 第7巻第43話「交渉」～), but the stored graft {41} does NOT: the T #1 page lists ch 41 as '(cover-only)' and ch 41's own page says 'Kuroko in the hospital scene is, along with all hospital scenes in the first episode of Railgun T, ANIME-ORIGINAL, though it was inspired by this chapter cover'. The ch-41 library confrontation was animated at ep 25, not re-done at ep 49; ep 49's Tokiwadai banter is anime-original, and the ch-41 tie is a borrowed cover illustration — the exact shape the batch-18 verifier ruled must not be carried as a graft (the dropped ep-20 cover graft). chapters_adapted is repaired to '43' and the redundant, contradictory partial {40-42} on ep 49 is proposed for deletion (abridged {40-42} is the correct fact: ch 40's rat scene went to ep 41, ch 41's library scene to ep 25, ch 42 to the T Drama CD only).",
+  "anchors": [
+    {
+      "episode": 49,
+      "end_chapter": 43,
+      "start_chapter": 43,
+      "chapters_adapted": "43",
+      "volume": 7,
+      "confidence": "high",
+      "note": "CONFIRMS the stored END 43 and REPAIRS chapters_adapted (drops the '41 (Tokiwadai confrontation = redone ch 41 library scene)' component — see repairs). T #1 'Level 5' = ch 43 'Negotiation' (交渉): the Daihaseisai committee canvasses the seven Level 5s, Accelerator maims his negotiator, Mugino and Kakine refuse, Misaki accepts on Keitz's advice, Misaki + Gunha are chosen and the committee has a bad feeling — the chapter's synopsis and the episode's synopsis match beat for beat, and the chapter page's Adapted To names this episode. A4/A10: ch 43 is both the first and the furthest mainline chapter the episode adapts; the hospital scenes and the Tokiwadai/Misaki banter that fill the rest are anime-original (ch 41 page, verbatim). Volume 7 (chs 38-44).",
+      "sources": [
+        "https://toarumajutsunoindex.fandom.com/api.php?action=parse&page=Toaru%20Kagaku%20no%20Railgun%20Manga%20Chapter%20043&prop=wikitext&format=json",
+        "https://toarumajutsunoindex.fandom.com/api.php?action=parse&page=Toaru%20Kagaku%20no%20Railgun%20T%20Episode%2001&prop=wikitext&format=json",
+        "https://acertainscientificrailgun.fandom.com/ja/api.php?action=parse&page=%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AA%E3%83%BC&prop=wikitext&format=json"
+      ]
+    }
+  ],
+  "continue_points": [
+    {
+      "episode": 49,
+      "continue_chapter": 44,
+      "kind": "parity",
+      "note": "Ep 49 closes ch 43 completely (Misaki and Gunha chosen = the chapter's last beat) and ep 50 opens at ch 44 'Commencement' — ch 44's own Adapted To lists Railgun T Episode 02 (plus the single Aoki scene borrowed by S #23). Parity with the anime; nothing of ch 44 is seen at ep 49. Consistent with the stored ep-50 anchor (START 44).",
+      "sources": [
+        "https://toarumajutsunoindex.fandom.com/api.php?action=parse&page=Toaru%20Kagaku%20no%20Railgun%20Manga%20Chapter%20044&prop=wikitext&format=json",
+        "https://toarumajutsunoindex.fandom.com/api.php?action=parse&page=Toaru%20Kagaku%20no%20Railgun%20T%20Episode%2001&prop=wikitext&format=json"
+      ]
+    }
+  ],
+  "anchor_hostile": [],
+  "annotations": [
+    {
+      "episodes": [
+        25
+      ],
+      "kind": "graft",
+      "chapters": "41 (Tokiwadai library scene)",
+      "note": "REPLACES the refuted partial {~18 setup}. Railgun S #1 lifts ONE scene from manga ch 41 'Clique, Part 2' (派閥②, vol 7, 2011-05-27): Mikoto studying in the Tokiwadai library, Shokuhou Misaki sitting down to tease her about building a clique, Misaki's Mental Out blocked by Mikoto's electromagnetic barrier, Misaki taking control of every student in the room and then rewinding their memories. Both directions state it: the episode page ('The library scene is lifted from the 41st Toaru Kagaku no Railgun manga chapter, otherwise all the content is an anime original') and the chapter page ('The library scene was incorporated into the first episode of the Toaru Kagaku no Railgun S anime series'). Both pages list the same New Characters for that scene — Shokuhou Misaki and Hokaze Junko — and the ja Railgun wiki records Misaki's 初登場 as 第七巻 (vol 7 = chs 38-44). T28: one lifted scene inside an episode whose job is the season re-introduction (plus the Poltergeist coda — Edasaki Banri confirmed enrolled at Sakugawa) is FILLER + a mandatory graft, not mixed. NO ANCHOR (A1): the scene is out of running order — ch 41 is the vol-7 intermission the TV run otherwise skips, and the position at this point is behind it.",
+      "sources": [
+        "https://toarumajutsunoindex.fandom.com/api.php?action=parse&page=Toaru%20Kagaku%20no%20Railgun%20S%20Episode%2001&prop=wikitext&format=json",
+        "https://toarumajutsunoindex.fandom.com/api.php?action=parse&page=Toaru%20Kagaku%20no%20Railgun%20Manga%20Chapter%20041&prop=wikitext&format=json",
+        "https://acertainscientificrailgun.fandom.com/ja/api.php?action=parse&page=%E9%A3%9F%E8%9C%82%E6%93%8D%E7%A5%88&prop=wikitext&format=json"
+      ]
+    }
+  ],
+  "repairs": [
+    {
+      "episode": 25,
+      "field": "annotation",
+      "old": "partial {~18 setup} — 'S e1 mostly original re-intro; arc proper begins ep 26' (batch 12, A43)",
+      "new": "graft {41 (Tokiwadai library scene)} — DELETE the partial row, INSERT the graft row (annotation PK is series_id+episode+kind, so the partial will not be overwritten by the graft)",
+      "why": "The '~18 setup' claim has no support anywhere and is contradicted by three sources. The toaru fandom's S #1 page says the library scene is the ONLY adapted content and 'otherwise all the content is an anime original'; manga ch 18 '八月十日①' names Railgun S Episode 02 (our ep 26) as its sole adaptation target; and the ja Railgun wiki's arc map gives 妹達（シスターズ）編 = 原作 第4巻第18話「八月十日①」～第7巻第39話, アニメ 二期第2話～第16話 — the Sisters adaptation starts at our ep 26, not ep 25. What ep 25 DOES carry from the source is ch 41's library scene, stated from both sides. The type (filler) is unchanged.",
+      "sources": [
+        "https://toarumajutsunoindex.fandom.com/api.php?action=parse&page=Toaru%20Kagaku%20no%20Railgun%20S%20Episode%2001&prop=wikitext&format=json",
+        "https://toarumajutsunoindex.fandom.com/api.php?action=parse&page=Toaru%20Kagaku%20no%20Railgun%20Manga%20Chapter%20018&prop=wikitext&format=json",
+        "https://acertainscientificrailgun.fandom.com/ja/api.php?action=parse&page=%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AA%E3%83%BC&prop=wikitext&format=json"
+      ]
+    },
+    {
+      "episode": 49,
+      "field": "chapters_adapted",
+      "old": "41 (Tokiwadai confrontation = redone ch 41 library scene), 43",
+      "new": "43",
+      "why": "The ch-41 component is a COVER illustration, not content. Railgun T #1's Adapted From lists exactly two items: ch 41 '(cover-only)' and ch 43. Ch 41's own Adapted To says why: 'Kuroko in the hospital scene is, along with all hospital scenes in the first episode of the Toaru Kagaku no Railgun T anime series, anime-original, though it was inspired by this chapter cover' — i.e. the episode borrows the ch-41 cover art (the four girls visiting the hospitalised Kuroko, with Kuroko's secret album of Mikoto visible on it, which is also why ep 49 ends on Mikoto finding that album). Ch 41's library scene was animated at ep 25 (Railgun S #1), not re-done here, and the episode's Tokiwadai Misaki/Mikoto banter is not in ch 41 (a library, a remote, a memory rewind) nor in ch 43 (an outdoor cafe, Hokaze, Keitz) — it is anime-original. END 43 and START 43 are unchanged. Same class as the ep-20 cover graft the batch-18 verifier ruled must be dropped.",
+      "sources": [
+        "https://toarumajutsunoindex.fandom.com/api.php?action=parse&page=Toaru%20Kagaku%20no%20Railgun%20T%20Episode%2001&prop=wikitext&format=json",
+        "https://toarumajutsunoindex.fandom.com/api.php?action=parse&page=Toaru%20Kagaku%20no%20Railgun%20Manga%20Chapter%20041&prop=wikitext&format=json"
+      ]
+    },
+    {
+      "episode": 49,
+      "field": "annotation",
+      "old": "graft {41} — 'Mikoto/Misaki confrontation at Tokiwadai is a redone version of ch 41's library confrontation (already adapted in S1)'",
+      "new": "DELETE (no replacement annotation)",
+      "why": "Refuted from both sides, and its own note is internally wrong (the ch-41 library scene was adapted in S2 #1 = our ep 25, not 'in S1' — the batch-18 verifier already caught that). The T #1 page tags ch 41 '(cover-only)'; the ch-41 page states the ep-49 hospital scenes are anime-original and merely 'inspired by this chapter cover'. A borrowed cover illustration is artwork, not narrative source content, and a UI would read a graft as content — the exact reason the ep-20 cover graft was dropped. If Sean wants the artwork lineage recorded at all it belongs in prose, not as a graft; I recommend no replacement.",
+      "sources": [
+        "https://toarumajutsunoindex.fandom.com/api.php?action=parse&page=Toaru%20Kagaku%20no%20Railgun%20T%20Episode%2001&prop=wikitext&format=json",
+        "https://toarumajutsunoindex.fandom.com/api.php?action=parse&page=Toaru%20Kagaku%20no%20Railgun%20Manga%20Chapter%20041&prop=wikitext&format=json",
+        "https://toarumajutsunoindex.fandom.com/api.php?action=parse&page=Toaru%20Kagaku%20no%20Railgun%20S%20Episode%2001&prop=wikitext&format=json"
+      ]
+    },
+    {
+      "episode": 49,
+      "field": "annotation",
+      "old": "partial {40-42} — 'vol-7 intermission compressed into Daihasei setup' (batch 12, A43)",
+      "new": "DELETE (the batch-14 abridged {40-42} on the same row is the correct fact and stays)",
+      "why": "It contradicts the row's own abridged {40-42} annotation and the chapter pages. Ep 49 does not compress the vol-7 intermission into anything: ch 40 'Clique, Part 1' Adapted To = Railgun S ep 17 (our 41, rat-buying scene only); ch 41 Adapted To = Railgun S ep 1 (our 25, library scene) + ep 49 cover-only; ch 42 'Adapted To' names only the Toaru Kagaku no Railgun T Drama CD, Part 1 — no TV episode at all. The TV run SKIPS 40-42, which is what abridged {40-42} says. Two annotations asserting opposite things on one row is a defect regardless of which is right.",
+      "sources": [
+        "https://toarumajutsunoindex.fandom.com/api.php?action=parse&page=Toaru%20Kagaku%20no%20Railgun%20Manga%20Chapter%20042&prop=wikitext&format=json",
+        "https://toarumajutsunoindex.fandom.com/api.php?action=parse&page=Toaru%20Kagaku%20no%20Railgun%20Manga%20Chapter%20040&prop=wikitext&format=json",
+        "https://toarumajutsunoindex.fandom.com/api.php?action=parse&page=Toaru%20Kagaku%20no%20Railgun%20Manga%20Chapter%20041&prop=wikitext&format=json"
+      ]
+    },
+    {
+      "episode": 12,
+      "field": "continue_chapter",
+      "old": 17,
+      "new": 18,
+      "why": "OUTSIDE MY ASK — offered because the stored note is the refuted ep-14 claim and the context marks it 'cleanup pending'. The stored value 17 rests entirely on 'ch 17 aftermath comes as ep 14 graft', which A6 already killed. Ch 17 '七月二十五日 / July 25' was in fact animated much EARLIER: its Adapted To names Toaru Kagaku no Railgun Episode 02, and ep 2's own Adapted From says 'The second half of the episode is adapted from Toaru Kagaku no Railgun Manga Chapter 017'. The ja Railgun wiki closes the Level Upper block at 原作 第3巻第17話「七月二十五日」 against アニメ 一期第1話～第12話 — ch 17 is inside the eps 1-12 span, not after it. So a viewer who has finished ep 12 has already seen ch 17 (and chs 17-special-1 / 17-special-2, both animated at ep 5); the next chapter whose content they have NOT seen, and the chapter the anime's next first-time coverage starts at (ep 26 = Railgun S #2), is ch 18. Kind: parity. Ch 16-special ('Kaitabi Hatsuya') is never adapted anywhere and should be named as skipped-forever on arrival. MEDIUM, not high — it is a re-derivation from chapter-side Adapted-To fields rather than a source that states the resume point.",
+      "sources": [
+        "https://toarumajutsunoindex.fandom.com/api.php?action=parse&page=Toaru%20Kagaku%20no%20Railgun%20Manga%20Chapter%20017&prop=wikitext&format=json",
+        "https://toarumajutsunoindex.fandom.com/api.php?action=parse&page=Toaru%20Kagaku%20no%20Railgun%20Episode%2002&prop=wikitext&format=json",
+        "https://acertainscientificrailgun.fandom.com/ja/api.php?action=parse&page=%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AA%E3%83%BC&prop=wikitext&format=json",
+        "https://toarumajutsunoindex.fandom.com/api.php?action=parse&page=Toaru%20Kagaku%20no%20Railgun%20Manga%20Chapter%20018&prop=wikitext&format=json"
+      ]
+    }
+  ],
+  "type_corrections": [],
+  "structure": {
+    "notes": "NUMBERING (re-verified by TITLE + DATE, never by index — R20): our cumulative rows are S1 #1-24 = our 1-24, S2 #1-24 = our 25-48, S3 #1-25 = our 49-73, no offset. Join checkpoints used here: ja.wikipedia 各話リスト #14 特別講習 = our 14 'Special Workshop'; the toaru fandom's Railgun S Episode 01 'Railgun' (超電磁砲), airdate April 12/13 2013 = our 25 (2013-04-12); Railgun T Episode 01 'Level 5' (超能力者), airdate January 10 2020 = our 49 (2020-01-10). animefillerlist uses the same cumulative 1-73 space and its titles match ours row for row (14 'Special Workshop' filler, 25 'Railgun' anime_canon, 49 'Super-powered (Level 5)' manga_canon). MINOR DATE DRIFT, not a shift: the fandom gives ep 14 as January 9 2010 where our row says 2010-01-08 (different broadcaster); the title join is unambiguous. ARC MAP (ja Railgun wiki ストーリー page, an independent Japanese wiki, and the strongest single artefact found this pass): 幻想御手編 = 原作 第1巻第1話～第3巻第17話 / アニメ 一期第1話-第12話; 武装無能力者集団編 = アニメオリジナル, 一期第15-16話; 乱雑解放編 = アニメオリジナル, 一期第20-24話; 妹達編 = 原作 第4巻第18話～第7巻第39話+「鉄橋は恋の合図」 / アニメ 二期第2話-第16話; 革命未明編 = アニメオリジナル, 二期第18-24話; 大覇星祭編 = 原作 第7巻第43話「交渉」～第10巻第70話「約束」. Two consequences: the Sisters adaptation begins at our ep 26 (so ep 25 carries no ch-18 setup), and the Daihaseisai adaptation begins at ch 43 (so ep 49's END 43 / START 43 is right). Chs 40-42 are the vol-7 intermission that belongs to no adapted arc — ch 40's rat scene went to our ep 41, ch 41's library scene to our ep 25, ch 42 nowhere on TV (its only Adapted To is the Railgun T Drama CD Part 1). COVER vs BODY — the distinction this task turns on: the toaru fandom's Adapted From/Adapted To fields tag borrowed CHAPTER COVER art explicitly ('(cover only)' on ch 17-special-2 → ep 20; '(cover-only)' on ch 41 → ep 49). Cover art is not narrative source content and must not become a graft. NEGATIVE FINDING for ep 14: the MediaWiki backlinks index for 'Toaru Kagaku no Railgun Episode 14' contains zero manga-chapter and zero light-novel pages (only character pages, episode navigation and the Level Upper Arc page, whose 'special lessons' sentence is footnoted to ep 14 itself). The same query for ep 20 returns manga ch 32 and ch 17-special-2, and for ep 24 returns the Miracle of Endymion manga ch 8 — so the index does surface real incorporation acts when they exist. Ep 14 has none.",
+    "order_only": []
+  },
+  "flags_for_sean": [
+    "EP 14 — THE ONE ARGUMENT FOR INCLUDING IT, stated fairly so you can reject it knowingly. ja.wikipedia's uncited sentence is '2クール目は原作者・鎌池和馬の監修下で、「幻想御手」編の後日談が描かれたアニメオリジナルストーリーとなっている' — the SECOND COUR is anime-original, made under Kamachi's supervision, and depicts the AFTERMATH of the Level Upper arc. Railgun S1 started 2009-10-03, so the second cour begins at ep 14, and ep 14 is literally a Level Upper aftermath episode (the remedial Special Workshop for Level Upper users; the toaru fandom files it under arcname = Level Upper Arc). So the SUPERVISION reading reaches ep 14 and would put it with 15-24. The INCORPORATION reading you actually ruled on does not reach it: no manga chapter, no Kamachi novel and no later anime carries anything from ep 14 forward, and its only downstream use is a mobile game (Toaru Majutsu no Index: Imaginary Fest). I recommend filler, unchanged — but if you ever move the basis from incorporation to declared supervision, ep 14 joins the block and ep 13 (first cour, 2009-12-25) still does not. https://ja.wikipedia.org/wiki/%E3%81%A8%E3%81%82%E3%82%8B%E7%A7%91%E5%AD%A6%E3%81%AE%E8%B6%85%E9%9B%BB%E7%A3%81%E7%A0%B2_(%E3%82%A2%E3%83%8B%E3%83%A1)",
+    "EP 25 AND THE ADOPTED BLOCK — does AFL's 'anime canon' on 20-25 change anything? My answer: not on its own, and I recommend leaving ep 25 filler. The case FOR extending the block: animefillerlist's anime_canon run is exactly 20-25 (I re-fetched and parsed it: 20,21,22,23,24,25 anime_canon, 26 manga_canon), and the toaru fandom's Poltergeist Arc infobox lists Railgun S Episode 1 as the arc's ninth and final instalment (AnimeD = eps 17-24 + S #1), with ep 25's own Major Events being 'Edasaki Banri is confirmed to be enrolled in Sakugawa Middle School' — the arc's outcome. The case AGAINST: ja.wikipedia and the ja Railgun wiki both end the Poltergeist arc at 一期第24話, ja.wikipedia's supervision sentence covers S1's cour only, and the specific incorporation acts you ruled on (manga ch 31 naming Haruue Erii, ch 32's phone photo taken in ep 20, Souyaku v7's imprisoned Therestina) all point at eps 17-24, not at ep 25. Ep 25 is also the one row in the block that carries real manga content, which filler + graft {41} records cleanly. If you DO extend the block, ep 25 becomes canon + adopted{author} and KEEPS graft {41} — the same shape as eps 46 and 47, which are canon + adopted and each carry a single-scene graft.",
+    "A TENSION IN THE LOAD-BEARING EP-20 ACT (raised, not re-litigated — you have ruled). Manga ch 32's page carries the referback verbatim: 'The picture on Mikoto's phone featuring Haruue Erii was taken in Toaru Kagaku no Railgun Episode 20 during the Poltergeist Arc.' But the SAME page's character list tags Haruue Erii '(cameo, cover-only)', and the page's body synopsis (Amai Ao, Keitz, the telephone booth, the Gekota dream, Touma and the blimp) contains no phone-photo scene. The batch-18 verifier held the body reading and called the cover-only tag the wiki's error. I flag it only because this task turned on exactly that distinction twice (ep 20 / ch 17-special-2 and ep 49 / ch 41): if the ch-32 photo is on the chapter's COVER, the ep-20 act is artwork rather than an event, and the incorporation basis for 20-24 rests on ch 31's naming of Haruue in the chapter BODY ('New Characters: Haruue Erii (in name only)') plus the Kamachi novels — still sufficient, but a different sentence. https://toarumajutsunoindex.fandom.com/api.php?action=parse&page=Toaru%20Kagaku%20no%20Railgun%20Manga%20Chapter%20032&prop=wikitext&format=json",
+    "THE EP-12 CONTINUE REPAIR IS OUTSIDE MY THREE ROWS. I included it because the stored note is the refuted ep-14 ch-17 graft claim that the context marks 'cleanup pending', and because the correct answer fell out of the same chapter pages I fetched anyway (ch 17 → ep 2, ch 18 → ep 26). If you would rather have it researched as its own row, delete the repair and keep 17 — but do not keep the NOTE, which repeats a claim A6 killed.",
+    "EP 49'S TOKIWADAI SCENE — the honest residue. Ep 49 does contain a Mikoto/Misaki confrontation at Tokiwadai in which Misaki mass-controls the surrounding students to make a point and Mikoto's electric barrier keeps her out, which is structurally the same beat as ch 41's library scene. That resemblance is presumably what the batch-12/14 researchers saw. But no source attributes it to ch 41 — the episode page attributes ch 41 to the COVER, the chapter page attributes the ep-49 hospital scenes to the cover and calls them anime-original, and the scene's staging (school grounds, broadcasting fake support for the opening ceremony) matches neither ch 41 nor ch 43. I recommend recording nothing. If you want it recorded, loose_parallel {41} is the only kind that would not overstate it."
+  ]
+}

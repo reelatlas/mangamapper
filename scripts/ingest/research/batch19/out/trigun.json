@@ -1,0 +1,93 @@
+{
+  "series_id": "trigun",
+  "summary": "Ep 16 'Fifth Moon' FINISHES chapter 20 and is the honest terminal anchor for the whole series. Two independent wikis carry the mapping in both directions: trigun.fandom's episode page ('This episode covers Chapter 16 and Chapter 20 of the manga') and its Chapter 20 page (anime = Episode 15 + Episode 16), and trigunwiki.com's episode page ('loosely adapted from portions of the Trigun chapters SCARS and FIFTH MOON') and its FIFTH MOON chapter page, which splits the chapter explicitly — 'Legato and the Gung-Ho Guns gathering at Jeneora Rock as well as the end of Vash's fight with Dominique was adapted into episode 15' and 'Vash having his Angel Arm forcibly activated to destroy the fifth moon was adapted into episode 16'. The episode title is the chapter title. Ep 16 therefore carries ch 20's climax AND its closing beat (the news of the Augusta/fifth-moon incident spreading; the manga's 'for the next 2 years Vash the Stampede would be forgotten'), so END = 20, and ch 20 is the FINAL chapter of Trigun — the source is exhausted, which retires open flag #943 (the MU frontier pin that landed on filler ep 19). START = 20, not 16: the E.G. Mine confrontation is a re-staged fragment of ch 16 sitting mid-episode, a relocated earlier block that A12 keeps out of START, and trigunwiki assigns the rest of ch 16 to ep 13. Ep 18 is confirmed anchor-hostile: it adapts Trigun Maximum ch 1 'HERO REBORN' and ch 2 'LINA', a different chapter space (I6), and both wikis tempt a writer with a continuous number for them — trigun.fandom calls TM ch 1 'the twenty-first chapter of the Trigun manga' and trigunwiki's infobox carries ch_number_max=1 alongside ch_number_all=21. Neither number may ever enter this space, which stops at 20.",
+  "anchors": [
+    {
+      "episode": 16,
+      "end_chapter": 20,
+      "start_chapter": 20,
+      "chapters_adapted": "16 (E.G. Mine confrontation only, re-staged), 20 (the Angel Arm / Fifth Moon climax through the chapter's closing 'the news spreads' beat; ch 20's middle is skipped)",
+      "volume": 3,
+      "confidence": "high",
+      "note": "The ask's first branch: ep 16 FINISHES ch 20, it is not a fragment. Ep 15 stopped partway into ch 20 at Dominique's defeat; ep 16 takes the chapter's climax (Vash's Angel Arm forcibly activated, Augusta levelled, a crater burned into the fifth moon) and its closing beat (the incident spreading as news; Bernardelli writing Meryl and Milly off — the manga's 'for the next 2 years Vash the Stampede would be forgotten'). END = 20 under A8/A4: ch 20 is the last mainline chapter in running order AND the last chapter of the Trigun chapter space, so this row is the series terminal. START = 20 under A12 — the ch-16 tie is the E.G. Mine confrontation restaged in mid-episode, a relocated earlier fragment, and it stays in chapters_adapted with the stored partial{16} annotation rather than becoming the start. The stored divergence{20} annotation stands and is why the confidence rests on chapter IDENTITY, not on beat-for-beat fidelity: in the manga Knives forces the Angel Arm during his own resurrection from a Plant, in the anime Legato forces it during the Rai-Dei duel at Augusta (trigunwiki's stated key difference). Ch 20's MIDDLE — Knives' resurrection, the two brothers' confrontation, Wolfwood's new assignment, the doctor (Conrad) — is never animated anywhere in the 1998 series; that is what the continue point is for.",
+      "sources": [
+        "https://trigun.fandom.com/api.php?action=parse&page=Fifth_Moon&prop=wikitext&format=json",
+        "https://trigun.fandom.com/api.php?action=parse&page=Chapter_20&prop=wikitext&format=json",
+        "https://trigunwiki.com/w/api.php?action=parse&page=FIFTH%20MOON%20(episode)&prop=wikitext&format=json",
+        "https://trigunwiki.com/w/api.php?action=parse&page=FIFTH%20MOON%20(chapter)&prop=wikitext&format=json",
+        "https://trigunwiki.com/w/api.php?action=parse&page=SCARS&prop=wikitext&format=json"
+      ]
+    }
+  ],
+  "continue_points": [
+    {
+      "episode": 16,
+      "continue_chapter": 20,
+      "kind": "post_series",
+      "note": "C1-shaped and deliberately NOT 21. Ch 20 is 'the twentieth and final chapter of Trigun' (trigunwiki) — there is no ch 21 in this chapter space, so any forward number would be fabricated (the space is 0-20 mainline plus two unnumbered bonus tracks). Resuming AT ch 20 is also the honest reading position on its own merits: ep 16 adapts only the chapter's climax, and the substantial middle the anime never animates sits inside it — Knives spawning from the Plant after his recovery, the Vash/Knives confrontation about the scars and the Angel Arm memory block, Legato being overpowered by Knives, Wolfwood's new assignment and Dr. Conrad's appearance. A reader picks up ch 20 from the Dominique aftermath and reads it through, then continues in Trigun Maximum ch 1 'HERO REBORN' — a SEPARATE chapter space and a separate work (I6), which the anime itself already burned through divergently in eps 18-20. Under C1 a continue equal to a chapter the episode adapted is legal by definition and never a skip.",
+      "sources": [
+        "https://trigunwiki.com/w/api.php?action=parse&page=FIFTH%20MOON%20(chapter)&prop=wikitext&format=json",
+        "https://trigun.fandom.com/api.php?action=parse&page=Chapter_20&prop=wikitext&format=json",
+        "https://trigun.fandom.com/api.php?action=parse&page=Trigun_Volume_3_(Tokuma_Shoten_Release)&prop=wikitext&format=json"
+      ]
+    }
+  ],
+  "anchor_hostile": [
+    {
+      "episode": 18,
+      "why": "CONFIRMED (the ask's second branch). Ep 18 'Goodbye for Now' (今は、さよなら) adapts Trigun Maximum ch 1 'HERO REBORN' and ch 2 'LINA' — another chapter space, A44 shape, and the I6 ruling already separates the two works in our data (the MU association to 'Trigun Maximum' was deleted as a wrong auto-match). Four citations, two independent wikis, mapping confirmed in both directions: trigun.fandom's ep-18 page says 'This episode covers Chapter 1 and Chapter 2 of Trigun Maximum' and carries the {{Maximum}} navigation template rather than {{Trigun}}; its TM Chapter 1 and TM Chapter 2 pages each carry anime = Episode 18; trigunwiki's HERO REBORN page states 'This chapter was adapted into episode 18 of the anime'. The episode's content confirms it — Vash living as Eriks two years after the fifth-moon incident, Lina, the fake-Vash bandits, the strip-and-beg bargain, Wolfwood's return of the repaired gun, the haircut — none of which exists anywhere in Trigun ch 0-20. THE TRAP TO RECORD: both wikis publish a continuous overall number for these chapters (trigun.fandom: TM ch 1 'is the twenty-first chapter of the Trigun manga', TM ch 2 'the twenty-second'; trigunwiki's infobox: ch_number_max=1, ch_number_all=21). 21 and 22 are NOT valid in our space, which ends at 20; a naive reader of either infobox would write them.",
+      "sources": [
+        "https://trigun.fandom.com/api.php?action=parse&page=Goodbye_for_Now&prop=wikitext&format=json",
+        "https://trigun.fandom.com/api.php?action=parse&page=TM_Chapter_1&prop=wikitext&format=json",
+        "https://trigun.fandom.com/api.php?action=parse&page=TM_Chapter_2&prop=wikitext&format=json",
+        "https://trigunwiki.com/w/api.php?action=parse&page=HERO%20REBORN&prop=wikitext&format=json"
+      ]
+    }
+  ],
+  "annotations": [
+    {
+      "episodes": [18],
+      "kind": "side_source",
+      "chapters": "Trigun Maximum ch 1 'HERO REBORN' + ch 2 'LINA' (TM vol 1) — NOT convertible to this chapter space",
+      "note": "PROPOSED addition alongside the stored divergence fact on 18/19/20. Trigun Maximum is a separately titled, separately volumed, separately licensed continuation with its own chapter numbering, so under T26 the correct label for an episode that adapts it is side_source with the work named — which also makes the anchorless status structural rather than an omission (side_source rows carry no mapping by design). Unlike eps 19-20, whose TM correspondence the sources disagree about, ep 18's is exact and doubly attested in both directions. The stored divergence{none in this chapter space} fact on 18/19/20 should stay as the zone statement.",
+      "sources": [
+        "https://trigun.fandom.com/api.php?action=parse&page=Goodbye_for_Now&prop=wikitext&format=json",
+        "https://trigun.fandom.com/api.php?action=parse&page=TM_Chapter_1&prop=wikitext&format=json",
+        "https://trigunwiki.com/w/api.php?action=parse&page=HERO%20REBORN&prop=wikitext&format=json"
+      ]
+    },
+    {
+      "episodes": [16],
+      "kind": "divergence",
+      "chapters": "20",
+      "note": "KEEP AS STORED, re-verified with a cleaner statement of the difference. trigunwiki: 'The Fifth moon incident occurs shortly after Vash's fight with Dominique in the manga; in the anime it occurs during his fight with Rai-Dei. Knives emerges from the plant he was in to heal his body and personally causes Vash to activate his Angel Arm in the manga, not Legato.' The Rai-Dei duel that replaces it is anime-original at this point and was only LATER written into the source — trigunwiki: 'Elements of Vash's battle with Rai-Dei were later incorporated into the Trigun Maximum chapters RESUME OUR BUSINESS, SAMURAI SHOWDOWN and WOLFWOOD' (Trigun Maximum, i.e. a different chapter space; noted for the record, not as an adoption basis and not as a position).",
+      "sources": [
+        "https://trigunwiki.com/w/api.php?action=parse&page=FIFTH%20MOON%20(episode)&prop=wikitext&format=json",
+        "https://trigun.fandom.com/api.php?action=parse&page=Chapter_20&prop=wikitext&format=json"
+      ]
+    }
+  ],
+  "repairs": [
+    {
+      "episode": 15,
+      "field": "continue_kind",
+      "old": "post_series",
+      "new": "parity",
+      "why": "Bookkeeping consequence of the new ep-16 anchor: ep 15 is no longer the last adapting row, so its continue is no longer post_series. The value does not change — ep 15 ends partway into ch 20 (C1) and the next canon/mixed episode (16) starts in ch 20 (C2 parity), so continue_chapter stays 20 — only the regime flips. The post_series continue now belongs to ep 16 (supplied above). Low stakes, but leaving two post_series continue points on one series would misstate where the run ends.",
+      "sources": [
+        "https://trigunwiki.com/w/api.php?action=parse&page=FIFTH%20MOON%20(chapter)&prop=wikitext&format=json",
+        "https://trigun.fandom.com/api.php?action=parse&page=Fifth_Moon&prop=wikitext&format=json"
+      ]
+    }
+  ],
+  "type_corrections": [],
+  "structure": {
+    "notes": "CHAPTER SPACE CONFIRMED: Trigun (the original) = ch 0-20 mainline, three Tokuma Shoten volumes (re-cut as two Shonen Gahosha/Young King volumes; chapter numbers follow the two-volume release per trigun.fandom's own note). Ch 20 'FIFTH MOON' is the final chapter — trigunwiki: 'This is the final chapter of Trigun. The story is continued in Trigun Maximum'; trigun.fandom's ch 20 page sets next = TM Chapter 1. Ch 20's own oddity, worth recording: trigunwiki notes 'This chapter was not serialized in Monthly Shonen Captain or Young King OURs' — it is a volume-only bridge chapter written after Shonen Captain folded. NUMBERING TRAP (the reason ep 18 must never be anchored): BOTH wikis publish a continuous overall count across the two works — trigun.fandom prose calls TM ch 1/2 'the twenty-first/twenty-second chapter of the Trigun manga', and trigunwiki's chapter infobox carries the pair ch_number_max=1 / ch_number_all=21 next to Trigun's own ch_number_tri=20 / ch_number_all=20. Our space ends at 20; 21+ belongs to Trigun Maximum. OPEN FLAG #943 RESOLVED: the MU frontier pin landed on filler ep 19 with muCoverageChapter=6 (a residue of the deleted wrong MU match, I6). With ep 16 anchored at END 20 the honest terminal now sits on the last canon/mixed row and equals the source's last chapter — the series is fully covered in chapter terms and the pin can be dropped rather than relocated. SOURCE DISCREPANCY, resolved in favour of the stored data: trigun.fandom's Chapter 16 infobox reads anime = Episode 12 + Episode 16, but trigunwiki's SCARS page says 'Portions of this chapter was adapted into episode 13 ... Vash's confrontation with E.G. Mine was adapted in episode 16' — the stored partial{16} on eps 13 and 16 is right, and the fandom infobox is off by one (the same class of infobox unreliability recorded for rosario-vampire). No repair to the ep-12 anchor (END 15).",
+    "order_only": []
+  },
+  "flags_for_sean": [
+    "EP 16'S CONTINUE IS 20, NOT 21 — please sanity-check the shape. Ch 20 is the last chapter in this space, so 'coverage + 1' has no referent; I refused to write 21. Continuing AT 20 is independently correct because ch 20's middle (Knives' resurrection, the brothers' confrontation, Wolfwood's reassignment) is never animated, and C1 explicitly permits a continue equal to an adapted chapter. If the schema or the UI needs a strictly-forward value for a post_series continue, this series is a genuine counterexample and the honest render is 'source complete — continue in Trigun Maximum', not a number.",
+    "EP 18 TYPE QUESTION, deliberately NOT decided here because it was outside the ask. Ep 18 is stored `mixed` (AFL agrees), yet its content is a close adaptation of TM ch 1-2 — which under T27 would make it `canon` + `side_source`, not `mixed`. Two things stop me short: (a) I did not audit ep 18's anime-original share closely enough to rule out mixed (the opening July/Angel-Arm flashback and Wolfwood's 'KNIVES written in red at Carcasses' hook are candidates), and (b) it cannot be settled alone — fandom maps ep 19 to TM ch 3-6 and ep 20 to TM ch 12, yet 19 and 20 are stored filler. Either all three are side_source-annotated rows or none is. Recommend a narrow batch-20 look at 18-20 as a block. Whatever the type, all three stay anchorless (different chapter space).",
+    "TRIGUN MAXIMUM ABSORBED THE ANIME'S RAI-DEI DUEL. trigunwiki records that elements of ep 16's Vash-vs-Rai-Dei fight were later written into TM chapters RESUME OUR BUSINESS / SAMURAI SHOWDOWN / WOLFWOOD. I am explicitly NOT reading that as an `adopted` basis on this row: it is incorporation into a DIFFERENT chapter space (Trigun Maximum), one wiki's claim, and it does not touch ch 20's position. Recorded in the ep-16 divergence note so nobody re-discovers it as new evidence."
+  ]
+}

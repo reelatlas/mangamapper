@@ -1,0 +1,173 @@
+{
+  "series_id": "claymore",
+  "summary": "Eps 21/22/23 are one-to-one adaptations of Scenes 57/58/59 and take clean anchors: ep 21 = Scene 57 (vol 10), ep 22 = Scene 58 (vol 11), ep 23 = Scene 59 (vol 11), each START = END with no straddle. The episode boundaries land exactly on the manga's own chapter boundaries — ep 21 ends where Scene 57 ends (four of five captains down, Rigaldo turning on Miria), ep 22 ends where Scene 58 ends (Rigaldo's arm severed, Clare watching on awakened legs), ep 23 ends where Scene 59 ends (Rigaldo shredded). What makes 21-23 mixed rather than canon is not the A-plot but the anime-original Raki/Isley/Priscilla B-plot cut through all three (claymorenew's per-episode 'Manga versus anime' lists cite only the cavern sequence, the five rank-and-file deaths being shown on screen, and Raki's arrival in town). That moves the adaptation frontier from the stored ep 20 -> ch 56 to ep 23 -> ch 59 — which is exactly what MangaUpdates' own anime field has said all along ('Vol 11, Chap 59 (Original Ending EP 24-26)'), and what resolves open flag #945 without putting a pin on filler ep 24. The honest post-series resume is Scene 60: ch 60 exists in the anime only as two displaced fragments on FILLER rows (its opening in ep 24, its Jean-sacrifice close transplanted into ep 26's volcano finale) and its middle — Jean stopping Helen in place, the six survivors' last stand, Deneve taking Undine's sword before that stand — never reached the screen in context. Chapters 61-155 (95 numbered Scenes) were never adapted at all; 61-73 of those were already in print when the finale aired, so the stored 'Madhouse outran the ongoing manga' premise is backwards (Shueisha: vol 12 = SCENE64-69 on sale 2007-04-04, vol 13 = SCENE70-73 on sale 2007-10-04, against a 2007-09-25 finale).",
+  "anchors": [
+    {
+      "episode": 21,
+      "end_chapter": 57,
+      "start_chapter": 57,
+      "chapters_adapted": "57",
+      "volume": 10,
+      "confidence": "high",
+      "note": "A4/A10: the whole of Scene 57 and nothing else. The episode's cold open is a flashback recap of eps 19-20 and the Isley-orders-Rigaldo beat inside it is Scene 56's office scene already animated at the end of ep 20 — flashback/recap, so it never sets START (A10); the first new manga content is Scene 57's Pieta counterattack (Team Undine vs the Mannequin, Jean's Drill Sword vs the Tyrannosaur, Flora and Clare mincing the Stegosaur, ch 57 pp 162-166), and the episode closes on Scene 57's last pages (Rigaldo's 5:3 body count, his awakening as the Silver Lion, Veronica cut in two, Undine killed, Jean impaled, Flora split, Rigaldo turning on Miria and the Paburo four, ch 57 pp 168-189). Corroborated by title: the episode is ピエタ侵攻 I and Shueisha's vol-10 contents table names SCENE57 ピエタ侵攻 I. Original material inside the episode (the five rank-and-file deaths dramatized on screen where the manga only reports them as a body count; the Raki/Priscilla cavern B-plot) is why the row is mixed, not canon — it adds no other chapter. claymorenew's ep-21 page ends its summary with 'Clare awakens and attacks', the first beat of Scene 58; ep 22 restages that beat from its own start, so it is recorded as a trailing teaser, not an END claim (same treatment as the stored ep 17 -> 49 anchor, whose ch-50 cold-open teaser sits in chapters_adapted and not in END).",
+      "sources": [
+        "https://claymorenew.fandom.com/api.php?action=parse&page=Anime%20Scene%2021&prop=wikitext&format=json",
+        "https://claymorenew.fandom.com/api.php?action=parse&page=Scene%2057&prop=wikitext&format=json",
+        "https://claymore.fandom.com/api.php?action=parse&page=Chapter_57&prop=wikitext&format=json",
+        "https://en.wikipedia.org/wiki/List_of_Claymore_episodes",
+        "https://books.shueisha.co.jp/items/contents.html?jdcn=08874103873220315501",
+        "https://www.animefillerguide.com/anime/claymore/"
+      ]
+    },
+    {
+      "episode": 22,
+      "end_chapter": 58,
+      "start_chapter": 58,
+      "chapters_adapted": "58",
+      "volume": 11,
+      "confidence": "high",
+      "note": "A4/A10: Scene 58 end to end, no straddle at either edge. The cold open is a flashback montage (Rigaldo sensing the captains, his awakening, the decapitations) — excluded from START by A10 — and the first new content is Scene 58's opening, which claymore.fandom's ch-58 synopsis states in the same words the episode does ('Four of the five leaders have already fallen... Rigardo leaps towards Miria... Extending her arm, Helen fends off his attack'). The episode ends on Scene 58's final two pages (Rigaldo's arm severed while holding Miria, Clare watching from a distance on a hock-jointed awakened leg, ch 58 pp 36-37). Title corroboration: the episode is ピエタ侵攻 II and Shueisha's vol-11 contents table names SCENE58 ピエタ侵攻 II (p 7). AFG independently places eps 21-23 on ch 57-59. Anime-original content: the Raki/Priscilla cavern conversation and the Isley party's ride toward Pieta (claymorenew 'Manga versus anime' lists the cavern sequence only) — the reason the row is mixed.",
+      "sources": [
+        "https://claymorenew.fandom.com/api.php?action=parse&page=Anime%20Scene%2022&prop=wikitext&format=json",
+        "https://claymorenew.fandom.com/api.php?action=parse&page=Scene%2058&prop=wikitext&format=json",
+        "https://claymore.fandom.com/api.php?action=parse&page=Chapter_58&prop=wikitext&format=json",
+        "https://en.wikipedia.org/wiki/List_of_Claymore_episodes",
+        "https://books.shueisha.co.jp/items/contents.html?jdcn=08874281873220315501",
+        "https://www.animefillerguide.com/anime/claymore/"
+      ]
+    },
+    {
+      "episode": 23,
+      "end_chapter": 59,
+      "start_chapter": 59,
+      "chapters_adapted": "59",
+      "volume": 11,
+      "confidence": "high",
+      "note": "A4/A10: Scene 59 end to end. The episode's cold open IS Scene 59's cold open (Rigaldo staring at the stump, Clare's awakened legs, ch 59 pp 39-41), so START = 59 with no borrowed sliver of 58 — the anime reproduces the manga's own chapter break, where 58 ends on the severing and 59 opens on the reveal. Body and close follow 59 in order: Helen snatches and chops up the arm (p 46), Clare's uncontrolled charges (pp 42-43), Helen's Limb Stretching drawing Rigaldo's attention (p 58), the left arm sprouting bladed mandibles into a claw that lets her anchor and turn (p 60), Rigaldo shredded (pp 68-69). This is the anime's last chapter of adaptation: MangaUpdates' anime field independently reads 'Vol 11, Chap 59 (Original Ending EP 24-26)' and AFG says eps 21-23 correspond to ch 57-59. Original material: Raki's arrival in Pieta and the inn infirmary interlude (claymorenew lists Raki's entrance as the sole original) — mixed, not canon. Not claimed as an END: en.wikipedia's summary adds 'as Jean regains consciousness' at the very end; Jean's revival belongs to Scene 60 in the manga, but it is a closing shot with no Scene-60 scene attached, claymorenew's ep-23 page does not carry it, and Scene 60's opening properly lands in ep 24 (already annotated partial{60}) — a sliver, so END stays 59.",
+      "sources": [
+        "https://claymorenew.fandom.com/api.php?action=parse&page=Anime%20Scene%2023&prop=wikitext&format=json",
+        "https://claymorenew.fandom.com/api.php?action=parse&page=Scene%2059&prop=wikitext&format=json",
+        "https://claymore.fandom.com/api.php?action=parse&page=Chapter_59&prop=wikitext&format=json",
+        "https://api.mangaupdates.com/v1/series/73617992386",
+        "https://en.wikipedia.org/wiki/List_of_Claymore_episodes",
+        "https://www.animefillerguide.com/anime/claymore/"
+      ]
+    }
+  ],
+  "continue_points": [
+    {
+      "episode": 20,
+      "continue_chapter": 57,
+      "kind": "parity",
+      "note": "C2 parity, matching the pattern Sean set on eps 1/7/8/10/16/19: ep 20 finishes Scene 56 (the battle group awaiting the Northern Army, ch 56 pp 154-157) and ep 21 starts at Scene 57 — nothing is skipped and nothing is straddled, so the reader resumes at 57 and will see 57-59 again in eps 21-23. This is the parity continue for ep 20 specifically; it is NOT the series' post-anime resume any more (see the C8 repair).",
+      "sources": [
+        "https://claymorenew.fandom.com/api.php?action=parse&page=Scene%2056&prop=wikitext&format=json",
+        "https://claymorenew.fandom.com/api.php?action=parse&page=Anime%20Scene%2021&prop=wikitext&format=json",
+        "https://www.animefillerguide.com/anime/claymore/"
+      ]
+    },
+    {
+      "episode": 23,
+      "continue_chapter": 60,
+      "kind": "post_series",
+      "note": "C4 post-series resume. Ep 23 is the last row that carries a position (ch 59); everything after it is filler under Sean's T28 ruling. Ch 60 is the honest resume even though ep 24 opens on its first section and ep 26 transplants its closing beat: both fragments sit on FILLER rows (A1 — fragments there never move position), the anime replaces ch 60's middle outright (Jean stops Helen in the manga; Priscilla's re-awakening interrupts the mercy-kill in the anime) and never shows the six survivors' last stand, and ep 26's Jean sacrifice happens in an invented volcano with an invented trigger. A reader sent to 61 would lose Jean's actual death, Deneve taking Undine's sword before the last stand, and Miria's 'get ready for the end'. Never-adapted range: ch 60 in context plus ch 61-155 entirely (95 numbered Scenes untouched); of those, ch 61-73 were ALREADY IN PRINT before the finale aired (Shueisha: vol 12 = SCENE64-69 on sale 2007-04-04, vol 13 = SCENE70-73 on sale 2007-10-04; finale 2007-09-25).",
+      "sources": [
+        "https://claymorenew.fandom.com/api.php?action=parse&page=Scene%2060&prop=wikitext&format=json",
+        "https://claymore.fandom.com/api.php?action=parse&page=Chapter_60&prop=wikitext&format=json",
+        "https://api.mangaupdates.com/v1/series/73617992386",
+        "https://books.shueisha.co.jp/items/contents.html?jdcn=08874348873220315501",
+        "https://books.shueisha.co.jp/items/contents.html?jdcn=08874430873220315501"
+      ]
+    }
+  ],
+  "anchor_hostile": [],
+  "annotations": [],
+  "repairs": [
+    {
+      "episode": 23,
+      "field": "series_continue_from_chapter (C8)",
+      "old": 57,
+      "new": 60,
+      "why": "The stored C8 ruling ('faithful adaptation ends at ch 56 (ep 20); readers continue at 57') rests on AFG's summary line, which types eps 21-23 filler while its own footnote says they 'coincide with the events of the manga... correspond to chapters 57 to 59'. Eps 21/22/23 adapt Scenes 57/58/59 in full and in order (anchors above, batch-18 verdict verified R24), so a reader sent to 57 re-reads three chapters they have just watched beat for beat. The post-anime resume is Scene 60. MangaUpdates' anime field independently ends the adaptation at 'Vol 11, Chap 59'.",
+      "sources": [
+        "https://api.mangaupdates.com/v1/series/73617992386",
+        "https://www.animefillerguide.com/anime/claymore/",
+        "https://claymorenew.fandom.com/api.php?action=parse&page=Scene%2059&prop=wikitext&format=json",
+        "https://claymorenew.fandom.com/api.php?action=parse&page=Scene%2060&prop=wikitext&format=json"
+      ]
+    },
+    {
+      "episode": 20,
+      "field": "frontier (A3 ruling text)",
+      "old": "ep 20 -> ch 56 is the frontier — 'last faithful episode -> ch 54-56; eps 21-23 loose parallels of 57-59, 24-26 fully anime-original'",
+      "new": "The ep 20 -> ch 56 ANCHOR is correct and unchanged (AFG independently: ep 20 = 'Chapters 54 (pp. 26-30), 55 and 56'). What is wrong is the frontier claim attached to it: the frontier is ep 23 -> ch 59. Eps 21-23 are not loose parallels — they are section-by-section adaptations of Scenes 57/58/59.",
+      "why": "claymorenew's per-episode summaries track the three Scenes beat for beat and its 'Manga versus anime' lists name only the anime-original B-plot items; claymore.fandom's ch-58 and ch-59 synopses match eps 22 and 23 in order; en.wikipedia's ep-21 summary ends exactly where Scene 57 ends; the anime episode titles ピエタ侵攻 I / II are Shueisha's own tankōbon titles for SCENE57 / SCENE58; AFG and MangaUpdates both put the last adapted chapter at 59. No anchor value changes — this repairs the ruling's reasoning and moves the terminal row.",
+      "sources": [
+        "https://claymorenew.fandom.com/api.php?action=parse&page=Anime%20Scene%2021&prop=wikitext&format=json",
+        "https://claymore.fandom.com/api.php?action=parse&page=Chapter_58&prop=wikitext&format=json",
+        "https://books.shueisha.co.jp/items/contents.html?jdcn=08874103873220315501",
+        "https://api.mangaupdates.com/v1/series/73617992386",
+        "https://www.animefillerguide.com/anime/claymore/"
+      ]
+    },
+    {
+      "episode": 21,
+      "field": "annotation",
+      "old": "loose_parallel {ch 57-59} (A43, Sean 2026-08-23) — 'loosely parallels the Northern Campaign / Pieta battle with growing variations — anime outran the ongoing manga'",
+      "new": "delete — superseded by the stored divergence {57} annotation (batch 18, verified R24) and by the ep 21 -> 57 anchor in this verdict",
+      "why": "The context shows BOTH the batch-18 divergence {57} annotation and the older loose_parallel {ch 57-59} annotation on this row; apply merges rather than replaces. Leaving a loose_parallel spanning 57-59 on a row now anchored at a single chapter contradicts the anchor and re-asserts the refuted 'outran the manga' premise.",
+      "sources": [
+        "https://claymorenew.fandom.com/api.php?action=parse&page=Anime%20Scene%2021&prop=wikitext&format=json",
+        "https://claymorenew.fandom.com/api.php?action=parse&page=Scene%2057&prop=wikitext&format=json"
+      ]
+    },
+    {
+      "episode": 22,
+      "field": "annotation",
+      "old": "loose_parallel {ch 57-59} (A43, Sean 2026-08-23)",
+      "new": "delete — superseded by the stored divergence {58} annotation and by the ep 22 -> 58 anchor",
+      "why": "Same duplication as ep 21. Ep 22 is Scene 58 end to end; a 57-59 loose parallel on the row is both wrong in span and wrong in kind.",
+      "sources": [
+        "https://claymorenew.fandom.com/api.php?action=parse&page=Anime%20Scene%2022&prop=wikitext&format=json",
+        "https://claymore.fandom.com/api.php?action=parse&page=Chapter_58&prop=wikitext&format=json"
+      ]
+    },
+    {
+      "episode": 23,
+      "field": "annotation",
+      "old": "loose_parallel {ch 57-59} (A43, Sean 2026-08-23)",
+      "new": "delete — superseded by the stored divergence {59} annotation and by the ep 23 -> 59 anchor",
+      "why": "Same duplication as eps 21-22. Ep 23 reproduces Scene 59 including its cold open and its final pages.",
+      "sources": [
+        "https://claymorenew.fandom.com/api.php?action=parse&page=Anime%20Scene%2023&prop=wikitext&format=json",
+        "https://claymore.fandom.com/api.php?action=parse&page=Chapter_59&prop=wikitext&format=json"
+      ]
+    },
+    {
+      "episode": 24,
+      "field": "ruling_reason_text",
+      "old": "\"Madhouse outran the ongoing manga\" / \"anime outran the ongoing manga\" (carried in the T6, A6, A43 and G26 notes, Sean 2026-08-23)",
+      "new": "The anime stopped 13 already-published chapters short of the manga's serialized frontier and wrote an original conclusion because the manga was still running (ja.wikipedia: 放送当時は原作が連載中だった事情から終盤はアニメオリジナルの展開で完結した).",
+      "why": "Re-verified against the publisher this batch (batch 18 raised it; the context still carries the old text). Shueisha's own volume contents pages: vol 11 (SCENE58-63) on sale 2006-11-02, vol 12 (SCENE64-69) 2007-04-04, vol 13 (SCENE70-73 + 2 EXTRA SCENEs) 2007-10-04. The anime's last adapted chapter, Scene 59, was in a volume printed ten months before ep 23 aired (2007-09-04), and Scenes 60-69 were in print in tankōbon before the finale (2007-09-25). The premise is factually inverted and would mislead any future re-research.",
+      "sources": [
+        "https://books.shueisha.co.jp/items/contents.html?jdcn=08874281873220315501",
+        "https://books.shueisha.co.jp/items/contents.html?jdcn=08874348873220315501",
+        "https://books.shueisha.co.jp/items/contents.html?jdcn=08874430873220315501",
+        "https://ja.wikipedia.org/wiki/CLAYMORE"
+      ]
+    }
+  ],
+  "type_corrections": [],
+  "structure": {
+    "notes": "ROW IDENTITY: 26 rows, one season, no OVA/special/recap. AFL (26 rows, our exact air dates), AFG (26), en.wikipedia (26) and ja.wikipedia's 各話 table (SCENE01-26) all join to our rows directly; ja-WP prints each date one day later (SCENE21 8月22日 etc.) because it records the 01:26 JST slot — a slot convention, not a numbering shift. No index joins were used: eps 21/22 join by TITLE to the manga (ピエタ侵攻 I / II), eps 20-24 join by date across AFL/AFG/en-WP/ja-WP. CHAPTER SPACE verified against the publisher, not a wiki: Shueisha's contents tables give vol 10 = SCENE52-56 北の戦乱 III-VII + SCENE57 ピエタ侵攻 I, vol 11 = SCENE58 ピエタ侵攻 II / SCENE59 ピエタ侵攻 III / SCENE60 ピエタ侵攻 IV / SCENE61 ピエタ侵攻 V / SCENE62-63 楽園の血族 I-II. That CONFIRMS the stored volume boundaries v10: 52-57 and v11: 58-63 exactly, and it fixes claymorenew's typo on its Scene 60 page (it prints ピエタ侵攻 VI; the volume prints IV). The 'Scene N' numbering used by both fandom wikis IS our chapter space. AniList's total_chapters=159 vs 155 numbered Scenes is explained by the EXTRA SCENEs (Shueisha's vol-13 table lists EXTRA SCENE1 戦士の矜持 and EXTRA SCENE2 幻影と凶戦士 after SCENE73) — extras are labeled units and must never be converted into mainline numbers. CHAPTER BOUNDARIES vs EPISODE BOUNDARIES: unusually clean here — the 20/21, 21/22 and 22/23 episode breaks fall on the 56/57, 57/58 and 58/59 chapter breaks, so no continue override is needed between 21 and 22 or between 22 and 23 (END+1 is correct at both). TITLE LINEAGE: eps 18-20 are 北の戦乱 I-III against Scenes 50-56's 北の戦乱 arc, eps 21-22 are ピエタ侵攻 I-II against Scenes 57-58's tankōbon titles, eps 23-24 are 臨界点 I-II — 臨界点 exists in no tankōbon, but claymorenew records it as Scene 59's ORIGINAL Monthly Shonen Jump title (May 2006 issue), retitled ピエタ侵攻 III for volume 11; that magazine title is single-sourced (claymorenew) and is treated here as supporting colour, not as an anchor's evidence. Eps 25-26 (誰が為に, 受け継ぐものへ) are the first titles with no manga counterpart at all. AFG SELF-CONTRADICTION worth recording: its episode table marks 21-23 filler while its own footnote says they 'coincide with the events of the manga... (These episodes correspond to chapters 57 to 59)'; AFL types the same three Mixed Canon/Filler. MU CROSS-CHECK: MangaUpdates' anime field ('Vol 11, Chap 59 ... Skips Chap 2') independently corroborates BOTH the new frontier and the stored ep-1 abridged{2} annotation.",
+    "order_only": []
+  },
+  "flags_for_sean": [
+    "OPEN FLAG #945 RESOLVES with these anchors. The flag withheld a MU frontier pin because it landed on ep 24 (typed filler, A1 forbids the anchor) with muCoverageChapter 59. With ep 23 -> 59 anchored, the honest terminal sits on the last non-filler row and MU's chapter value is confirmed by MU's own series field ('Vol 11, Chap 59'). Ep 24 still takes no pin and no anchor.",
+    "EP 24 TAKES NO ANCHOR, by design. Sean's T28 ruling (2026-08-26) keeps 24-26 filler; the stored partial{60 (opening section)} and graft{60 (Jean's sacrifice, transplanted)} annotations already carry the Scene-60 tie. A1: filler rows never take anchors, and ch 60's fragments there are out of order (opening in 24, close in 26, middle dropped), so any position would be false. Nothing in this verdict contradicts that ruling.",
+    "CONTINUE-POINT JUDGMENT CALL, stated openly: I put the post-series resume at 60, not 61. Reader cost of 60: the first pages (Rigaldo's corpse, Clare unable to revert, her plea to Helen) were seen in ep 24 and the Jean-sacrifice beat was seen — in a different place, with a different trigger — in ep 26. Reader cost of 61: they never learn that Jean dies in Pieta stopping Helen, never see the six-warrior last stand, and lose the setup for the seven-year timeskip. 60 is the smaller loss and it is the only value consistent with A1 (fragments on filler rows do not advance position). If you prefer to spare the double-read, the alternative is 61 with a 'ch 60 partly seen out of context' note — but I do not recommend it.",
+    "THE GARDEN-PATH SENTENCE, restated so it is not re-learned: en.wikipedia's List of Claymore episodes says 'The remaining 2 episodes follow an original storyline not found in the manga written by Yagi'. 'written by Yagi' modifies 'the manga'. It is not an author-basis claim for the ending. claymore.fandom's Anime page copies it verbatim, so it is one source, not two.",
+    "SINGLE-SOURCE ITEM, marked: Scene 59's original Monthly Shonen Jump title 臨界点 (which would make ep 23's title 臨界点 I a direct title join) rests on claymorenew alone — Shueisha's contents table prints only the tankōbon title ピエタ侵攻 III, and I could not find an independent MSJ 2006年5月号 table of contents. The ep 23 -> 59 anchor does NOT depend on it (claymorenew + claymore.fandom ch-59 synopsis + en-WP + AFG + MU all pair them on content).",
+    "STALE ANNOTATIONS: the context shows eps 21/22/23 carrying BOTH the batch-18 divergence {57}/{58}/{59} annotations and the older A43 loose_parallel {ch 57-59} annotation. Three repairs above ask for the loose_parallel rows to be dropped; apply merges rather than replaces, so they will otherwise persist alongside anchors that contradict them."
+  ]
+}
