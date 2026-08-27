@@ -10,7 +10,9 @@
 import { toSet, type RulingEntry } from './types';
 
 export const ENTRIES: RulingEntry<'locked'>[] = [
-  // none yet — the permanence_candidate census class is Sean's signing queue
+  // NONE BY RULING (Sean, 2026-08-26): no series is locked until the UI pass
+  // has shown the data is complete for what he wants to surface — candidates
+  // stay a queue. A session never signs a lock; only an entry here does.
 ];
 
 export const LOCKED: Set<string> = toSet(ENTRIES);
