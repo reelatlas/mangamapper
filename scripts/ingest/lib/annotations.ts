@@ -5,11 +5,15 @@
 // (scripts, edge functions, the T4.3 standing migration) goes through
 // upsertAnnotation so a malformed record cannot land (P2). The migration's
 // check constraints mirror this file; the census class annotation_invalid
-// keeps the two in lockstep (P5).
+// keeps the two in lockstep (P5). A45 (2026-08-26): a key retired by ruling
+// (lib/rulings/retired-annotations.ts) is refused here — the retirement is
+// the one durable delete shape for an annotation fact.
 //
 // T26: an author / studio / community override of the source is an
 // ANNOTATION, never a fourth episode type — the episode's standing stays
 // canon / mixed / filler relative to the source; the exception lives here.
+
+import { isAnnotationRetired } from './rulings/retired-annotations';
 
 export const ANNOTATION_KINDS = [
   'divergence', // the episode departs from the source material it adapts
@@ -17,7 +21,7 @@ export const ANNOTATION_KINDS = [
   'graft', // scenes from elsewhere in the source woven in (bonus / fractional chapters)
   'rearranged', // adapts source out of the source's order (settles a reorder for audits, A42)
   'side_story', // a side story / pilot one-shot outside the mainline
-  'loose_parallel', // loosely parallels the source with growing variation (anime outran the manga)
+  'loose_parallel', // loosely parallels the source with growing variation (an original stretch that tracks a source arc's shape without adapting it)
   'abridged', // compresses source material
   'adopted', // T26: outside the source, ruled CANON by Sean — basis REQUIRED
   'retconned', // T26: material later dropped from canon (world-trigger 49-63)
@@ -43,6 +47,7 @@ export type AnnotationRow = {
 /** the shape rules, as data — the migration's constraints say the same thing */
 export const annotationProblem = (a: AnnotationRow): string | null => {
   if (!(ANNOTATION_KINDS as readonly string[]).includes(a.kind)) return `kind '${a.kind}' is not in the vocabulary`;
+  if (isAnnotationRetired(a.series_id, a.episode, a.kind)) return `retired by ruling (A45, lib/rulings/retired-annotations.ts) — the fact was refuted; do not re-insert`;
   if (a.kind === 'adopted' && !a.basis) return "kind 'adopted' requires basis author | studio | community";
   if (a.kind !== 'adopted' && a.basis) return `basis is only for kind 'adopted' (got ${a.kind})`;
   if (a.basis && !(ADOPTED_BASES as readonly string[]).includes(a.basis)) return `basis '${a.basis}' is not author | studio | community`;

@@ -15,6 +15,8 @@ import { AIRDATE_REGRESSION_THRESHOLD_DAYS, airdateOrderWalk } from './lib/airda
 import { offWindowRows, seriesDatesInvalid } from './lib/wiki-identity';
 import { sliverStart } from './lib/sliver';
 import { RULED_STRUCTURE, RULED_EXTRA_KEYS } from './lib/rulings/structure';
+import { RETIRED_ANNOTATIONS } from './lib/rulings/retired-annotations';
+import { STANDING_ANNOTATIONS } from './lib/rulings/standing-annotations';
 import { AIR_DATE_OVERRIDES } from './lib/rulings/air-dates';
 import { ANCHOR_SUPPRESSED } from './lib/rulings/anchor-suppressed';
 import { deriveFormat } from './lib/format';
@@ -89,7 +91,7 @@ async function main() {
     mu_pin_unverified: [],
     rearranged_zone_unanchored: [], rearranged_zone_acknowledged: [],
     title_incomplete: [], airdate_incomplete: [], airdate_regression: [], airdate_withheld: [], episode_date_off_window: [], asterisk_unreviewed: [],
-    fractional_unmodeled: [], annotation_invalid: [], afl_anime_canon_unruled: [], format_missing: [], episode_without_component: [], watch_order_kind_missing: [],
+    fractional_unmodeled: [], annotation_invalid: [], annotation_retired_standing: [], afl_anime_canon_unruled: [], format_missing: [], episode_without_component: [], watch_order_kind_missing: [],
     permanence_candidate: [], permanence_violation: [], mixed_fragment_only: [],
     series_without_source_kind: [], no_source: [], no_instrument: [], ok_full: [], ok_no_volume: [], ok_loose: [],
     pending_airing_no_anchor: [], pending_finished_no_totals: [], pending_no_canon: [], pending_other: [],
@@ -392,6 +394,17 @@ async function main() {
       const problem = annotationProblem(a);
       if (problem) classes.annotation_invalid.push(`${a.series_id} ep ${a.episode} ${a.kind}: ${problem}`);
     }
+    // A45 (2026-08-26): a standing row on a key retired by ruling is the
+    // outcome the gate forbids and the healer removes — ruling_violation;
+    // a retired key that is ALSO a standing T26 ruling is a contradiction
+    // between two maps — ruling_violation too (fix the maps, never the data).
+    for (const a of annos) {
+      if (RETIRED_ANNOTATIONS.has(`${a.series_id}#${a.episode}#${a.kind}`)) {
+        classes.annotation_retired_standing.push(`${a.series_id} ep ${a.episode} ${a.kind} — retired by ruling (A45), still stored; run assert-overrides`);
+        classes.ruling_violation.push(`${a.series_id}: ep ${a.episode} annotation ${a.kind} is retired by ruling (A45) but still stored`);
+      }
+    }
+    for (const [sid, list] of Object.entries(STANDING_ANNOTATIONS)) for (const st of list) for (const ep of st.episodes) if (RETIRED_ANNOTATIONS.has(`${sid}#${ep}#${st.kind}`)) classes.ruling_violation.push(`${sid}: ep ${ep} ${st.kind} is BOTH a standing T26 ruling and retired (A45) — the maps contradict`);
     const kindsBy = new Map<string, Set<string>>();
     for (const a of annos) {
       if (!kindsBy.has(a.series_id)) kindsBy.set(a.series_id, new Set());

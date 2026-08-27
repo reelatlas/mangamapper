@@ -16,7 +16,7 @@
 
 ## Family strip — one line per rule
 
-**A — Anchors & position** (42)
+**A — Anchors & position** (43)
 - `A1` Filler / anime-only rows never carry anchors — aka `invariant 6`, `hard invariant 6`, `A1 rule`, `filler rows never carry anchors`
 - `A2` Cameo / sliver borrowings are never anchors — aka `A2/A3`, `cameo rule`, `cameo/sliver borrowings`, `A2/A3 rejected-as-anchors`
 - `A3` Exact per-episode adaptation always becomes an anchor — aka `GTO lesson`, `GTO 20/21 lesson`, `rearranged-zone rule`, `rearranged zones`
@@ -59,6 +59,7 @@
 - `A42` An exact anchor with no episode row synthesizes the row — aka `anchored row-less episodes`, `cells-at-work 12/13 lesson`, `cells-at-work 12/13`
 - `A43` Annotations are first-class; asterisk review is a queue — aka `asterisk model`, `asterisk review workflow`, `annotations are first-class`, `episode_annotations`
 - `A44` Position-less rows: a ruled row never takes an anchor — aka `anchor suppression`, `ANCHOR_SUPPRESSED`, `anchorless rows`, `position-less rows`, `cover-page serial rule`, `suppressed anchor`
+- `A45` Retired annotations: a refuted fact is retired by ruling — aka `retired annotations`, `RETIRED_ANNOTATIONS`, `annotation retirement`, `annotation-delete shape`, `annotation deletion`, `annotation_retired_standing`, `retire an annotation`
 
 **C — Continue-read regimes** (9)
 - `C1` C1: a mid-chapter ending continues in the straddled chapter — aka `C1 rule`, `mid-chapter straddle`, `mid-chapter END`, `straddled chapter`
@@ -891,6 +892,20 @@ A canon or mixed row whose source content cannot be a reading position — a cov
 - witnesses: one-piece, gto-great-teacher-onizuka, sailor-moon, a-certain-scientific-railgun
 - aliases: anchor suppression, ANCHOR_SUPPRESSED, anchorless rows, position-less rows, cover-page serial rule, suppressed anchor
 - see: A1, A6, T28, T26, G26, G32
+
+### A45 · Retired annotations: a refuted fact is retired by ruling
+
+A stored annotation proven wrong is RETIRED by a typed ruling (lib/rulings/retired-annotations.ts: series, episodes, kind, reason, cite) — never by a hand delete and never by an apply script's one-shot. The retirement is the one mechanism: the writer gate (upsertAnnotation / annotationProblem) refuses the retired key so no research apply can re-insert it; the healer (assert-overrides) removes a standing row on a retired key whatever its origin; the census lists a standing retired row (annotation_retired_standing → ruling_violation) and a key that is both retired and a standing T26 ruling (the maps contradict → ruling_violation). Every retirement carries the evidence that refuted the fact (P24).
+
+*Why:* Research-origin annotation rows had no delete path: the T26 healer reconciles only ruling-origin rows, lib/annotations.ts exposed no delete, and batch 17's script-level ANNOTATION_DELETIONS were one-shots a re-run could undo. Claymore's batch-3 loose_parallel{57-59} rows survived two refutations (batch 18 verified the 1:1 Scene adaptation; batch 19 anchored 21→57, 22→58, 23→59) and stood beside the divergence{57}/{58}/{59} rulings that superseded them; the batch-19 verifier named the gap. First /add-rule after wave 1 (Sean, 2026-08-26).
+
+- ruled Sean 2026-08-26 (scripts/ingest/research/batch19/verify/claymore.md (item 4); changelog §12.71)
+- layer **writer**
+- enforced: [lib/rulings/retired-annotations.ts#RETIRED_ANNOTATIONS](../scripts/ingest/lib/rulings/retired-annotations.ts) · [lib/annotations.ts#annotationProblem](../scripts/ingest/lib/annotations.ts) · [assert-overrides.ts#assertRetiredAnnotations](../scripts/ingest/assert-overrides.ts) · [audit-ui-truth.ts#annotation_retired_standing](../scripts/ingest/audit-ui-truth.ts)
+- audit: `annotation_retired_standing`, `ruling_violation`, `annotation_invalid`
+- witnesses: claymore, a-certain-scientific-railgun
+- aliases: retired annotations, RETIRED_ANNOTATIONS, annotation retirement, annotation-delete shape, annotation deletion, annotation_retired_standing, retire an annotation
+- see: A43, T26, P24, A6, P8
 
 ## C — Continue-read regimes
 
@@ -4094,9 +4109,13 @@ Any component that renders episode-level data consumes the HYDRATED series (getB
 - anime-only-canon has no chapter counterpart → `T14`
 - anime-only-canon retired → `T27`
 - anime→manga linkage → `I38`
+- annotation deletion → `A45`
 - annotation kind vocabulary → `R10`
 - annotation kinds → `R10`
+- annotation retirement → `A45`
 - annotation_invalid → `T26`
+- annotation_retired_standing → `A45`
+- annotation-delete shape → `A45`
 - annotations are first-class → `A43`
 - ANY debate about final episodes → `T13`
 - AoT 88-89 lesson → `A26`
@@ -4728,6 +4747,9 @@ Any component that renders episode-level data consumes the HYDRATED series (getB
 - research-logged non-main entries → `N33`
 - restage from raw → `G28`
 - retconned → `T26`
+- retire an annotation → `A45`
+- retired annotations → `A45`
+- RETIRED_ANNOTATIONS → `A45`
 - retype stays research-tier → `T6`
 - REVIEWED_NUMBERED_SPECIALS → `N7`
 - routine deep skips locked → `P25`
@@ -4969,6 +4991,6 @@ Any component that renders episode-level data consumes the HYDRATED series (getB
 
 ## Scoreboard
 
-- rules: 268 (live 253, planned 8, superseded 7)
+- rules: 269 (live 254, planned 8, superseded 7)
 - live data rules with no audit class (the automation backlog): 85
-- by layer: writer 139 · display 23 · both 23 · process 83
+- by layer: writer 140 · display 23 · both 23 · process 83

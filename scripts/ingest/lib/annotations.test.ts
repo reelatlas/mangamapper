@@ -8,13 +8,18 @@ describe('annotationProblem (T26)', () => {
     expect([...ADOPTED_BASES]).toEqual(['author', 'studio', 'community']);
   });
   it('accepts a well-formed research annotation', () => {
-    expect(annotationProblem({ series_id: 'claymore', episode: 21, kind: 'loose_parallel', chapters: 'ch 57-59', note: 'anime outran the manga' })).toBeNull();
+    expect(annotationProblem({ series_id: 'claymore', episode: 19, kind: 'divergence', chapters: '54-55', note: 'the closing scene restaged' })).toBeNull();
   });
   it('adopted requires a basis; basis is only for adopted', () => {
     expect(annotationProblem({ series_id: 'black-clover', episode: 130, kind: 'adopted' })).toMatch(/requires basis/);
     expect(annotationProblem({ series_id: 'black-clover', episode: 130, kind: 'adopted', basis: 'author' })).toBeNull();
     expect(annotationProblem({ series_id: 'x', episode: 1, kind: 'graft', basis: 'studio' })).toMatch(/only for kind 'adopted'/);
     expect(annotationProblem({ series_id: 'x', episode: 1, kind: 'adopted', basis: 'fans' as never })).toMatch(/not author/);
+  });
+  it('A45: a key retired by ruling is refused, its neighbours are not', () => {
+    expect(annotationProblem({ series_id: 'claymore', episode: 21, kind: 'loose_parallel', chapters: 'ch 57-59', note: 'x' })).toMatch(/retired by ruling/);
+    expect(annotationProblem({ series_id: 'claymore', episode: 21, kind: 'divergence', chapters: '57', note: 'x' })).toBeNull();
+    expect(annotationProblem({ series_id: 'claymore', episode: 20, kind: 'loose_parallel', chapters: 'x', note: 'x' })).toBeNull();
   });
   it('side_source must name the work', () => {
     expect(annotationProblem({ series_id: 'naruto-shippuden', episode: 452, kind: 'side_source' })).toMatch(/name the work/);

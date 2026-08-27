@@ -10,6 +10,7 @@ import { ENTRIES as EAIR } from './air-dates';
 import { ENTRIES as EORD } from './air-date-order';
 import { ENTRIES as EWIN } from './air-date-window';
 import { ENTRIES as ESTRUCT } from './structure';
+import { ENTRIES as ERET } from './retired-annotations';
 import { OVERRIDE_ENTRIES as ESRC } from './source-kinds';
 import { ENTRIES as ESTAND } from './standing-annotations';
 import { ENTRIES as EANCH } from './anchor-suppressed';
@@ -55,4 +56,4 @@ import { ENTRIES as E36 } from './ruled-splits';
 import { ENTRIES as E37 } from './title-exclusions';
 import { ENTRIES as E38 } from './watch-order-labels';
 
-export const ALL_RULINGS: RulingEntry[] = [...EAIR, ...EORD, ...EWIN, ...ESTRUCT, ...ESRC, ...ESTAND, ...EANCH, ...EFMT, ...EPERM, ...E0, ...E1, ...E2, ...E3, ...E4, ...E5, ...E6, ...E7, ...E8, ...E9, ...E10, ...E11, ...E12, ...E13, ...E14, ...E15, ...E16, ...E17, ...E18, ...E19, ...E20, ...E21, ...E22, ...E23, ...E24, ...E25, ...E26, ...E27, ...E28, ...E29, ...E30, ...E31, ...E32, ...E33, ...E34, ...E35, ...E36, ...E37, ...E38];
+export const ALL_RULINGS: RulingEntry[] = [...EAIR, ...EORD, ...EWIN, ...ESTRUCT, ...ERET, ...ESRC, ...ESTAND, ...EANCH, ...EFMT, ...EPERM, ...E0, ...E1, ...E2, ...E3, ...E4, ...E5, ...E6, ...E7, ...E8, ...E9, ...E10, ...E11, ...E12, ...E13, ...E14, ...E15, ...E16, ...E17, ...E18, ...E19, ...E20, ...E21, ...E22, ...E23, ...E24, ...E25, ...E26, ...E27, ...E28, ...E29, ...E30, ...E31, ...E32, ...E33, ...E34, ...E35, ...E36, ...E37, ...E38];

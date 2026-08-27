@@ -607,6 +607,30 @@
    durable guard. Lesson for the floor rule: a >2 overshoot sourced from a
    SINGLE chart row with no corroborating content anywhere is a typo
    candidate, not an adoption candidate.
+71. ✅ **A45 — RETIRED ANNOTATIONS: a refuted fact is retired by ruling
+   (2026-08-26; the first post-wave-1 /add-rule, Sean's order: this, then
+   the MU "EP N" skip, then `anchor_without_row`).** Research-origin
+   annotation rows had no delete path (the T26 healer reconciles only
+   ruling-origin rows; lib/annotations.ts exposed no delete; batch 17's
+   ANNOTATION_DELETIONS were script one-shots a re-run could undo) — the
+   batch-19 verifier named the gap on claymore's three batch-3
+   loose_parallel{57-59} rows, refuted twice and still standing beside the
+   divergence rulings that superseded them. Built per P31: **map**
+   `lib/rulings/retired-annotations.ts` (RulingEntry: series, episodes,
+   kind, reason, cite; witnesses claymore 21-23 loose_parallel, railgun 25
+   partial{~18}, railgun 49 partial{40-42} — the two wave-1 script deletions
+   now durable); **gate** `annotationProblem` / `upsertAnnotation` refuse a
+   retired key (no apply can re-insert it); **healer** `assert-overrides
+   → assertRetiredAnnotations` removes a standing row on a retired key
+   whatever its origin (ran: 5 ruled keys, 3 standing rows removed — the
+   claymore three); **census** `annotation_retired_standing` (→
+   ruling_violation) plus a maps-contradiction check (retired ∩ standing
+   T26 → ruling_violation). Ledger A45 (aliases: retired annotations,
+   annotation-delete shape, annotation retirement). Also fixed the
+   `loose_parallel` gloss in lib/annotations.ts — "(anime outran the manga)"
+   was the refuted Claymore premise baked into the vocabulary text. Census:
+   annotation_retired_standing 0, ruling_violation 0, no other delta. Edges
+   rebuilt and deployed; 68 tests. Next /add-rule: the MU "EP N" pin skip.
 70. ✅ **CONSOLIDATE DEEP — batch 19 wave 1 closing pass (2026-08-26; P21:
    C1's enforcement site changed).** Step 0 green. **The C1 guard,
    catalog-wide:** 2,342 stored continues sit at or below their own END (the

@@ -280,6 +280,19 @@
         "routine deep"
       ],
       "source": "P25 build (2026-08-26)"
+    },
+    {
+      "ask": "research refuted a stored annotation (claymore's loose_parallel rows) — how is an annotation deleted durably, and what stops a re-run apply from putting it back?",
+      "expected": [
+        "A45",
+        "P24"
+      ],
+      "terms": [
+        "retired",
+        "annotation",
+        "refuted"
+      ],
+      "source": "batch-19 wave 1 verifier (claymore item 4): research-origin rows had no delete path"
     }
   ]
 }

@@ -893,4 +893,28 @@ export const RULES: Rule[] = [
     status: 'live',
     see: ['A1', 'A6', 'T28', 'T26', 'G26', 'G32'],
   },
+  {
+    id: 'A45',
+    aliases: ['retired annotations', 'RETIRED_ANNOTATIONS', 'annotation retirement', 'annotation-delete shape', 'annotation deletion', 'annotation_retired_standing', 'retire an annotation'],
+    family: 'A',
+    title: 'Retired annotations: a refuted fact is retired by ruling',
+    statement:
+      "A stored annotation proven wrong is RETIRED by a typed ruling (lib/rulings/retired-annotations.ts: series, episodes, kind, reason, cite) — never by a hand delete and never by an apply script's one-shot. The retirement is the one mechanism: the writer gate (upsertAnnotation / annotationProblem) refuses the retired key so no research apply can re-insert it; the healer (assert-overrides) removes a standing row on a retired key whatever its origin; the census lists a standing retired row (annotation_retired_standing → ruling_violation) and a key that is both retired and a standing T26 ruling (the maps contradict → ruling_violation). Every retirement carries the evidence that refuted the fact (P24).",
+    why:
+      "Research-origin annotation rows had no delete path: the T26 healer reconciles only ruling-origin rows, lib/annotations.ts exposed no delete, and batch 17's script-level ANNOTATION_DELETIONS were one-shots a re-run could undo. Claymore's batch-3 loose_parallel{57-59} rows survived two refutations (batch 18 verified the 1:1 Scene adaptation; batch 19 anchored 21→57, 22→58, 23→59) and stood beside the divergence{57}/{58}/{59} rulings that superseded them; the batch-19 verifier named the gap. First /add-rule after wave 1 (Sean, 2026-08-26).",
+    ruledBy: 'Sean',
+    ruledOn: '2026-08-26',
+    origin: 'scripts/ingest/research/batch19/verify/claymore.md (item 4); changelog §12.71',
+    enforcement: [
+      { path: 'scripts/ingest/lib/rulings/retired-annotations.ts', symbol: 'RETIRED_ANNOTATIONS' },
+      { path: 'scripts/ingest/lib/annotations.ts', symbol: 'annotationProblem' },
+      { path: 'scripts/ingest/assert-overrides.ts', symbol: 'assertRetiredAnnotations' },
+      { path: 'scripts/ingest/audit-ui-truth.ts', symbol: 'annotation_retired_standing' },
+    ],
+    layer: 'writer',
+    auditClass: ['annotation_retired_standing', 'ruling_violation', 'annotation_invalid'],
+    witnesses: ['claymore', 'a-certain-scientific-railgun'],
+    status: 'live',
+    see: ['A43', 'T26', 'P24', 'A6', 'P8'],
+  },
 ];

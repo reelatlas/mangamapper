@@ -16,6 +16,7 @@ import { aflAnimeCanonStanding } from './lib/rulings/source-kinds';
 import { STANDING_ANNOTATIONS } from './lib/rulings/standing-annotations';
 import { upsertAnnotation } from './lib/annotations';
 import { ANCHOR_SUPPRESSED } from './lib/rulings/anchor-suppressed';
+import { retiredBySeries, RETIRED_ANNOTATIONS } from './lib/rulings/retired-annotations';
 import { LOCKED } from './lib/rulings/permanence';
 
 const DRY = process.argv.includes('--dry-run');
@@ -121,6 +122,26 @@ async function assertStandingAnnotations() {
   console.log(`[assert-overrides] standing annotations (T26): ${n} rows asserted, ${removed} stale ruling rows removed, over ${Object.keys(STANDING_ANNOTATIONS).length} series${DRY ? ' — DRY RUN' : ''}`);
 }
 
+// A45: no annotation row stands on a key retired by ruling — any origin.
+// The retirement entry IS the P24 deletion record; the writer gate refuses
+// the key, so removing the standing row is the whole reconciliation.
+async function assertRetiredAnnotations() {
+  let removed = 0;
+  for (const [sid, list] of retiredBySeries()) {
+    const rows = await selectAll<{ episode: number; kind: string; origin: string | null }>('episode_annotations', 'episode, kind, origin', (q) => q.eq('series_id', sid).in('episode', list.map((x) => x.episode)));
+    for (const r of rows) {
+      if (!list.some((x) => x.episode === r.episode && x.kind === r.kind)) continue;
+      console.log(`  ${sid} ep${r.episode} ${r.kind} (${r.origin ?? 'research'}): retired by ruling → removed (A45)`);
+      if (!DRY) {
+        const { error } = await db.from('episode_annotations').delete().eq('series_id', sid).eq('episode', r.episode).eq('kind', r.kind);
+        if (error) throw new Error(`${sid} ep${r.episode} ${r.kind}: ${error.message}`);
+      }
+      removed++;
+    }
+  }
+  console.log(`[assert-overrides] retired annotations (A45): ${RETIRED_ANNOTATIONS.size} ruled keys, ${removed} standing rows removed${DRY ? ' — DRY RUN' : ''}`);
+}
+
 // A44: no anchor stands on a row ruled position-less — the ruling entry IS
 // the A6 triage, so the healer removes what the writers would now refuse.
 async function assertAnchorSuppression() {
@@ -161,6 +182,7 @@ async function main() {
   await assertAnchorSuppression();
   await assertPermanence();
   await assertMap('types (T6)', EPISODE_TYPE_OVERRIDES, 'type');
+  await assertRetiredAnnotations();
   await assertStandingAnnotations();
   await assertMap('air dates (G53)', AIR_DATE_OVERRIDES, 'air_date');
   await assertAirdateOrder();
