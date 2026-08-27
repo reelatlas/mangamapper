@@ -18,6 +18,7 @@
 import { db, selectAll } from './lib/db';
 import { seriesHasInstrument } from './lib/rulings/source-kinds';
 import { c3Ahead, hasSkipLanguage, c3Note } from './lib/c3';
+import { isCuratedContinue } from './lib/continues';
 
 const DRY = process.argv.includes('--dry-run');
 const ONLY = process.argv.slice(2).filter((a) => !a.startsWith('--'));
@@ -39,7 +40,7 @@ async function main() {
     .filter((s: any) => seriesHasInstrument(s.source_type)); // T25
   let converted = 0, stamped = 0, postSeries = 0;
   for (const s of targets) {
-    const anchors = await selectAll<any>('chapter_anchors', 'episode, chapter, start_chapter, chapters_adapted, continue_chapter, continue_kind, source', (q) => q.eq('series_id', s.id).order('episode'));
+    const anchors = await selectAll<any>('chapter_anchors', 'episode, chapter, start_chapter, chapters_adapted, continue_chapter, continue_kind, continue_source, source', (q) => q.eq('series_id', s.id).order('episode'));
     if (anchors.length < 2) continue;
     const eps = await selectAll<any>('episodes', 'number, type', (q) => q.eq('series_id', s.id).order('number'));
     const typeOf = new Map(eps.map((e: any) => [e.number, e.type]));
@@ -50,6 +51,20 @@ async function main() {
       const B = anchors[i + 1];
       const isLast = !B;
       const effective = A.continue_chapter ?? A.chapter + 1;
+      // C7 (2026-08-27): a CURATED continue (continue_source 'manual' — an
+      // apply or a ruling) is never converted; the healer fills only an
+      // ABSENT kind. Before the marker existed the healer converted three
+      // just-applied continues on the same pass (tokyo-mew-mew 28,
+      // eyeshield-21 43, project-arms 43).
+      if (isCuratedContinue(A)) {
+        if (A.continue_kind == null) {
+          const kind = isLast && s.status === 'finished' ? 'post_series' : 'parity';
+          lines.push(`  ep${A.episode}: curated continue ${A.continue_chapter} — kind → ${kind} (C7: value and note kept)`);
+          if (!DRY) await db.from('chapter_anchors').update({ continue_kind: kind }).eq('series_id', s.id).eq('episode', A.episode);
+          stamped++;
+        }
+        continue;
+      }
       if (isLast) {
         // finale semantics: a stored continue on the run-end anchor of a
         // finished series is the post-series resume (coverage max + 1)
@@ -103,7 +118,7 @@ async function main() {
       lines.push(`  ep${A.episode}: continue ${A.continue_chapter ?? `(default ${effective})`} → ${bStart} [parity] — ${skipNote.slice(0, 110)}`);
       if (!DRY) {
         const { error: e2 } = await db.from('chapter_anchors')
-          .update({ continue_chapter: bStart, continue_kind: 'parity', continue_note: note })
+          .update({ continue_chapter: bStart, continue_kind: 'parity', continue_note: note, continue_source: 'healer' })
           .eq('series_id', s.id).eq('episode', A.episode);
         if (e2) throw new Error(`${s.id} ep${A.episode}: ${e2.message}`);
       }
@@ -124,13 +139,14 @@ async function main() {
     // selectAll pages (P32) — the catalog holds >1000 continue-bearing anchors
     // and the client caps unpaged selects at 1000 (the audit caught exactly
     // this: 351 hits vs the 16 an unpaged first run saw)
-    const all = await selectAll<{ series_id: string; episode: number; chapter: number | null; chapters_adapted: string | null; continue_chapter: number | null; continue_note: string | null }>(
+    const all = await selectAll<{ series_id: string; episode: number; chapter: number | null; chapters_adapted: string | null; continue_chapter: number | null; continue_note: string | null; continue_source: string | null }>(
       'chapter_anchors',
-      'series_id,episode,chapter,chapters_adapted,continue_chapter,continue_note',
+      'series_id,episode,chapter,chapters_adapted,continue_chapter,continue_note,continue_source',
       (q) => q.not('continue_chapter', 'is', null).order('series_id').order('episode'),
     );
     for (const a of all) {
       if (ONLY.length && !ONLY.includes(a.series_id)) continue;
+      if (isCuratedContinue(a)) continue; // C7: a curated note is the apply's to write — continue_skip_unnoted lists a missing skip line, the healer never rewrites it
       const ahead = c3Ahead(a.chapters_adapted, a.continue_chapter);
       if (!ahead.length || hasSkipLanguage(a.continue_note)) continue;
       const note = c3Note(a.continue_note, ahead);

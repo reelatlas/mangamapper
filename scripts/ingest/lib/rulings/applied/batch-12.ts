@@ -255,10 +255,10 @@ const AS_STORED_SWEEP: Record<string, { reason: string; retiresWhen: string }> =
   [`${ROSARIO}#5`]: { reason: 'as-stored row re-checked in the §12.45 sweep: CONFIRMED.', retiresWhen: '' },
   [`${ROSARIO}#7`]: { reason: 'as-stored row re-checked in the §12.45 sweep: CONFIRMED.', retiresWhen: '' },
   [`${ROSARIO}#8`]: { reason: 'as-stored row re-checked in the §12.45 sweep: CONFIRMED.', retiresWhen: '' },
-  [`${IRUMA}#63`]: { reason: 'as-stored row re-checked in the §12.45 sweep: CONFIRMED as stored; OPEN FOR SEAN — END convention (142 stored vs 145 = max adapted; A8 running-order vs A4 coverage).', retiresWhen: "Sean's iruma ep-63 END-convention ruling (§12.45 OPEN)" },
+  [`${IRUMA}#63`]: { reason: 'as-stored row re-checked in the §12.45 sweep: CONFIRMED as stored; OPEN FOR SEAN — END convention (142 stored vs 145 = max adapted; A8 running-order vs A4 coverage).', retiresWhen: 'RETIRED 2026-08-27 — RULED (card a): 145 [142] rearranged under the pages line; the stored row carries it' },
   [`${IRUMA}#64`]: { reason: 'as-stored row re-checked in the §12.45 sweep: CONFIRMED.', retiresWhen: '' },
-  [`${ROSARIO}#12`]: { reason: 'medium-confidence repair HELD for Sean (§12.45).', retiresWhen: "Sean rules on the held rosario 12/13 repairs (§12.45 OPEN)" },
-  [`${ROSARIO}#13`]: { reason: 'medium-confidence repair HELD for Sean (§12.45).', retiresWhen: "Sean rules on the held rosario 12/13 repairs (§12.45 OPEN)" },
+  [`${ROSARIO}#12`]: { reason: 'medium-confidence repair HELD for Sean (§12.45).', retiresWhen: 'RETIRED 2026-08-27 — RULED (card a): the held values (12 = 9 [9], 13 = 10 [9]) confirmed; chapters_adapted strings corrected' },
+  [`${ROSARIO}#13`]: { reason: 'medium-confidence repair HELD for Sean (§12.45).', retiresWhen: 'RETIRED 2026-08-27 — RULED (card a): the held values (12 = 9 [9], 13 = 10 [9]) confirmed; chapters_adapted strings corrected' },
   [`${RAILGUN}#63`]: { reason: 'start REPAIRED 43→68 in batch 14 (§12.34).', retiresWhen: 'OVERTAKEN — start repaired 43→68 (batch 14, §12.34)' },
   ['ajin-demi-human#13']: { reason: 'start/chapters_adapted REPAIRED in batch 15 (REPAIRS_APPROVED).', retiresWhen: 'OVERTAKEN — start/chapters_adapted repaired in batch 15' },
 };

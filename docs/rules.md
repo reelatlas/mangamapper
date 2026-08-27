@@ -68,7 +68,7 @@
 - `C4` C4: single-source-final — aka `C4 rule`, `single-source-final`, `single-source final`, `do-not-demote`
 - `C5` Continue-read is a regime choice governed by coverage — aka `continue-read regimes`, `regime choice`, `continue point (b17)`, `continue point`, `C1 C2 C3`, `continue-read = a regime choice`
 - `C6` continue_kind vocabulary: parity \| unseen \| post_series — aka `continue_kind`, `continue_kind vocabulary`, `parity | unseen | post_series`
-- `C7` Curated continue metadata survives writers and healers — aka `parity-continue preservation`, `continue fields survive re-derive`, `curated continues`, `CURATED_CONTINUES`
+- `C7` Curated continue metadata survives writers and healers — aka `parity-continue preservation`, `continue fields survive re-derive`, `curated continues`, `CURATED_CONTINUES`, `continue_source`, `continue provenance`, `continue_provenance_missing`, `curated continue overwritten`, `writeCuratedContinue`
 - `C8` AFG continue-from is reading guidance, not the frontier — aka `continue-from is guidance`, `continue-from-is-guidance`, `sanity band`, `40-chapter band`, `three-numbers model`
 - `C9` Default continue = anchor end + 1 (superseded by C2) *(superseded)* — aka `continue-reading points`, `end+1 default`, `default continue = end + 1`, `apply-continue-points`
 
@@ -996,14 +996,14 @@ chapter_anchors.continue_kind takes exactly one of: parity (continue = the next 
 
 continue_chapter / continue_kind / continue_note are curated data that may live on derived rows. Every delete+reinsert rebuild of afg or afg-continua anchors carries them over by episode (for continua only when the fresh pin lands on the same episode), so the hourly cron cannot erode the parity conversion one series at a time. The parity healer fills only ABSENT metadata; a curated continue with its kind and note is never overwritten by a healer.
 
-*Why:* refresh-afg's rebuild dropped continue fields until preservation was added; batch-17 curated continues (trigun) had to survive the C3 pass.
+*Why:* refresh-afg's rebuild dropped continue fields until preservation was added; batch-17 curated continues (trigun) had to survive the C3 pass. GAP CLOSED 2026-08-27 (batch 19 wave 2 close, Cursor's process nit): the parity healer had converted three JUST-APPLIED curated continues (tokyo-mew-mew 28 → 20, eyeshield-21 43 → 101, project-arms 43 → 186) because nothing on the row said curated — only the C1 guard protected a value. `continue_source` (migration 20260827100000: manual | healer | source, backfilled from the writers' own note shapes — 618 manual / 2,492 healer / 1 source) is the marker: the healer skips manual rows (stamping an absent kind only) and marks its own writes healer; writers preserve it through rebuilds; applies write through lib/continues.ts#writeCuratedContinue. The three values stay at C2 (C5: known future coverage → parity), marked healer.
 
 - ruled session 2026-08-24 (data-pipeline §12.38 "CRON REVIEW" (preservation added to syncAnchors + applyContinua); apply-research-batch-17 CURATED_CONTINUES)
 - layer **writer**
-- enforced: [lib/anchors.ts#syncAnchors](../scripts/ingest/lib/anchors.ts) · [lib/anchors.ts#applyContinua](../scripts/ingest/lib/anchors.ts) · [history/apply-research-batch-17.ts#CURATED_CONTINUES](../scripts/ingest/history/apply-research-batch-17.ts) · [heal-parity-continues.ts](../scripts/ingest/heal-parity-continues.ts)
-- **audit: none — automation backlog**
-- witnesses: trigun
-- aliases: parity-continue preservation, continue fields survive re-derive, curated continues, CURATED_CONTINUES
+- enforced: [lib/anchors.ts#syncAnchors](../scripts/ingest/lib/anchors.ts) · [lib/anchors.ts#applyContinua](../scripts/ingest/lib/anchors.ts) · [history/apply-research-batch-17.ts#CURATED_CONTINUES](../scripts/ingest/history/apply-research-batch-17.ts) · [heal-parity-continues.ts](../scripts/ingest/heal-parity-continues.ts) · [lib/continues.ts#isCuratedContinue](../scripts/ingest/lib/continues.ts) · [lib/continues.ts#writeCuratedContinue](../scripts/ingest/lib/continues.ts) · [audit-ui-truth.ts#classes.continue_provenance_missing](../scripts/ingest/audit-ui-truth.ts)
+- audit: `ruling_violation`, `continue_provenance_missing`
+- witnesses: trigun, tokyo-mew-mew, eyeshield-21, project-arms
+- aliases: parity-continue preservation, continue fields survive re-derive, curated continues, CURATED_CONTINUES, continue_source, continue provenance, continue_provenance_missing, curated continue overwritten, writeCuratedContinue
 - see: C2, C6, A24, invariant 7
 
 ### C8 · AFG continue-from is reading guidance, not the frontier
@@ -4268,8 +4268,11 @@ Any component that renders episode-level data consumes the HYDRATED series (getB
 - continue fields survive re-derive → `C7`
 - continue point → `C5`
 - continue point (b17) → `C5`
+- continue provenance → `C7`
 - continue_kind → `C6`
 - continue_kind vocabulary → `C6`
+- continue_provenance_missing → `C7`
+- continue_source → `C7`
 - continue-from is guidance → `C8`
 - continue-from-is-guidance → `C8`
 - continue-read = a regime choice → `C5`
@@ -4293,6 +4296,7 @@ Any component that renders episode-level data consumes the HYDRATED series (getB
 - cross-check tier → `G41`
 - cross-model check the frames → `P36`
 - cross-model verification → `R23`
+- curated continue overwritten → `C7`
 - curated continues → `C7`
 - curated precedence → `A24`
 - CURATED_CONTINUES → `C7`
@@ -5013,6 +5017,7 @@ Any component that renders episode-level data consumes the HYDRATED series (getB
 - Wikipedia fill is fill-only → `G45`
 - Wikipedia page discovery → `G43`
 - work-list from disk → `P11`
+- writeCuratedContinue → `C7`
 - X 21-24 class → `T10`
 - X only-ending → `T10`
 - YYH class → `N20`
@@ -5025,5 +5030,5 @@ Any component that renders episode-level data consumes the HYDRATED series (getB
 ## Scoreboard
 
 - rules: 270 (live 255, planned 8, superseded 7)
-- live data rules with no audit class (the automation backlog): 84
+- live data rules with no audit class (the automation backlog): 83
 - by layer: writer 141 · display 23 · both 23 · process 83

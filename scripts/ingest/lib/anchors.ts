@@ -59,7 +59,7 @@ export async function applyContinua(
   // lands on the same episode
   const { data: prevContinua } = await db
     .from('chapter_anchors')
-    .select('episode, continue_chapter, continue_kind, continue_note')
+    .select('episode, continue_chapter, continue_kind, continue_note, continue_source')
     .eq('series_id', s.id)
     .eq('source', 'afg-continua')
     .not('continue_chapter', 'is', null)
@@ -191,7 +191,7 @@ export async function applyContinua(
     source: 'afg-continua',
     note: `AFG continua table: "${continua.text.slice(0, 180)}"`,
     ...(prevContinua && prevContinua.episode === ep
-      ? { continue_chapter: prevContinua.continue_chapter, continue_kind: prevContinua.continue_kind, continue_note: prevContinua.continue_note }
+      ? { continue_chapter: prevContinua.continue_chapter, continue_kind: prevContinua.continue_kind, continue_note: prevContinua.continue_note, continue_source: prevContinua.continue_source } // C7: the marker travels with the fields
       : {}),
   });
   if (error) throw new Error(`applyContinua(${s.id}): ${error.message}`);
@@ -291,9 +291,9 @@ export async function syncAnchors(
   // fields are CURATED data that may live on derived rows — the
   // delete+reinsert rebuild must carry them over by episode, or the hourly
   // cron erodes the catalog-wide parity conversion one series at a time.
-  const prevCont = await selectAll<{ episode: number; continue_chapter: number | null; continue_kind: string | null; continue_note: string | null }>(
+  const prevCont = await selectAll<{ episode: number; continue_chapter: number | null; continue_kind: string | null; continue_note: string | null; continue_source: string | null }>(
     'chapter_anchors',
-    'episode, continue_chapter, continue_kind, continue_note',
+    'episode, continue_chapter, continue_kind, continue_note, continue_source',
     (q) => q.eq('series_id', seriesId).eq('source', 'afg').not('continue_chapter', 'is', null),
   );
   const contByEp = new Map(prevCont.map((c) => [c.episode, c]));
@@ -358,6 +358,7 @@ export async function syncAnchors(
       continue_chapter: contByEp.get(a.episode)?.continue_chapter ?? null,
       continue_kind: contByEp.get(a.episode)?.continue_kind ?? null,
       continue_note: contByEp.get(a.episode)?.continue_note ?? null,
+      continue_source: contByEp.get(a.episode)?.continue_source ?? null, // C7
     }));
   for (let i = 0; i < rows.length; i += 500) {
     const { error } = await db.from('chapter_anchors').upsert(rows.slice(i, i + 500));

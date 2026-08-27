@@ -32,7 +32,11 @@ applied.
    (`N3`); numbering → `SOURCE_NUMBERING_SHIFTS` (`N11`) — all under
    `lib/rulings/`, never a direct row write. Deletions cite `A1`/`A6`;
    curated anchors/continues cite `A24`/`C5`; a repair on a derivation-tier
-   row flips the source to manual (`P8`).
+   row flips the source to manual (`P8`). Curated continue points are
+   written ONLY through `lib/continues.ts#writeCuratedContinue` (`C7`,
+   2026-08-27): it stamps `continue_source = 'manual'`, which is what stops
+   the parity healer from converting the value on the next heal (it did, to
+   three just-applied continues, before the marker existed).
 3. **Dry run** — `apply-research-batch-N.ts --dry-run`. Read the output as
    a proposal. Every line is a change you are authorising.
 4. **Apply.** The script is idempotent and file-driven; re-running as later

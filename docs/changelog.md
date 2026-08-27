@@ -607,6 +607,34 @@
    durable guard. Lesson for the floor rule: a >2 overshoot sourced from a
    SINGLE chart row with no corroborating content anywhere is a typo
    candidate, not an adoption candidate.
+77. ✅ **C7 gets its gate — continue provenance (2026-08-27; /add-rule on
+   Sean's go, from Cursor's process nit closing wave 2).** The parity healer
+   had converted three JUST-APPLIED curated continues on the same pass
+   (tokyo-mew-mew 28 → 20, eyeshield-21 43 → 101, project-arms 43 → 186):
+   C7 said "fills only ABSENT metadata" but nothing on the row said curated
+   — only the C1 guard (a value ≤ END) protected a value. Built per P31:
+   **migration** 20260827100000 `chapter_anchors.continue_source`
+   (manual | healer | source), backfilled from the writers' own note shapes
+   (618 manual — every batch apply incl. batch 15's note-less rows; 2,492
+   healer; 1 source); **lib** `lib/continues.ts` (pure: isCuratedContinue,
+   curatedOverwritten, continueUnprovenanced, the healer-note prefixes; the
+   DB helper `writeCuratedContinue` every apply uses from now on — the
+   apply-batch skill says so), 4 tests; **healer** heal-parity-continues
+   skips 'manual' rows (stamping an absent kind only) and marks its own
+   writes 'healer'; the C3 skip-note pass skips curated notes too (a
+   missing skip line on a curated row is the apply's to write —
+   continue_skip_unnoted lists it); **writers** syncAnchors / applyContinua
+   carry the marker through every rebuild; **audit** `ruling_violation`
+   (a manual row wearing the healer's note = overwritten) +
+   `continue_provenance_missing` (a continue with no marker); **ledger** C7
+   amended (enforcement, classes, witnesses, aliases continue_source /
+   continue provenance). Proof: the gated healer over the catalog —
+   converted 0, stamped 67 absent kinds, nothing else touched; both classes
+   0. The three values stay at C2 parity (C5: known future coverage) and are
+   marked healer. Also this pass: Rosario 12/13 confirmed (card a — the
+   strings corrected, HELD texts retired), Iruma 63 → 145 [142] rearranged
+   (card a), Conan 513/514/584 (§12.76). Edges rebuilt + deployed; types
+   regenerated. NEXT: batch 20 planning from disk.
 76. ✅ **The wave-2 open pile RULED and applied (2026-08-27, Sean + Cursor).**
    (1) Sailor Moon 167-168 anchored under the pages line — 167 → 44 [38],
    168 → 49 [44], rearranged; the A44 entry superseded (value []); ep 166
