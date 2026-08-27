@@ -73,3 +73,26 @@ Nothing REFUTED outright. Two premises refuted against our own data or a second 
 | emma 2 | SOUND | no second typing source; the loose-parallel reading noted |
 
 Cross-cutting for the apply: the afg.ts continua fix (P2 → restage G44 → re-derive G38 → the 14 series' census triage → consolidate deep); the source-kinds.ts comment (lines 101-103) replaced; every B3 repair keyed to the POST-shift numbers where 5D's shifts; the two verdict-string fixes (X "1999", bobobo's note) at curation.
+
+## SEAN'S RULINGS — wave 2 (2026-08-27, with Cursor concurring) — THE APPLY LIST
+
+**The catalog line, stated by Sean ("pages, not numbers"):** new pages of a chapter airing for the first time are a real position even when the chapter's number was already an END — anchor them, `rearranged` records the order (A31 / A4 / A41). Pages already shown, shown again (recap, cold open, flashback, transplanted sliver) are not cited unless a genuine retelling. A44 (position-less) is for re-shown material, another chapter space, or a first-time SLIVER inside an original plot. No rewind exception.
+
+| # | ruling | apply |
+|---|---|---|
+| B2-1 | solo-leveling → `manhwa` | SOURCE_TYPE_OVERRIDES (T25); the Yen Press re-chaptering trap → SOURCE NOTE / research-agent; stale ja-WP cite dropped |
+| B2-2 | the-beginning-after-the-end → `webtoon` (by ORIGIN — the OEL Tapas original; manhwa = KR) | SOURCE_TYPE_OVERRIDES; note the origin-vs-format criterion on the `webtoon` registry record; replace the source-kinds.ts:101-103 comment |
+| B2-3 | Arise AA → `original` + T6 `{9: canon, 10: canon}`; NO new kind (the re-cut fact lives in components/relations) | SOURCE_TYPE_OVERRIDES + EPISODE_TYPE_OVERRIDES in one motion |
+| B4-4 | 5D's: row 155 stays; N11 `drop [83], shift −1 from 84, spaces: ['afl']`; film order-only @82.5 movie (AniList 6951; cite the fandom placement + Ono's tweet) | numbering-shifts entry + ingest_fractionals record → re-resolve → wiki-episodes-backfill (restores row 145) → N11 outcome check (contiguous 1..154); B3's 97/101/121/135/147 re-keyed to 96/100/120/134/146; aired/total → 154; #1019 stays open until done; NO A44 entries |
+| B4-5 | black-cat: (A) `spans: { 68: { episodeEnd: 24 } }` (I39); row 15 air_date → 2006-05-23 (G53, Animax first broadcast); format **tv** (derives from the span; note the TBS omission + Animax premiere) | structure.ts + air-dates.ts |
+| B4-6 | watch-order kinds: the 34 → RULED_RECORDS; 3 flagged stay; the two duplicate pairs (to-love-ru-darkness @24.1/@24.5; yyh @112.1/@112.5) listed for Sean | watch-order-labels.ts + sync-watch-order |
+| B3-7 | 82 − 2 repairs (city-hunter 13/14 HELD → ORDER_ACK 13-14); DBZ Kai's eight → NULL + note (never aired in JP); the seven transpositions as title + date; ORDER_ACK: ranma (all), when-they-cry [27], f-zero (all), haikyu [61, 62], michiko pairs, GITS-SAC 2nd GIG pairs, city-hunter [13, 14]; + SMC 10, shugo 26/88, gx 134 as G53 | air-dates.ts (G53) + air-date-order.ts (G54) + an apply for the title swaps / NULLs; capture the day-of-week class candidate |
+| B5-8 | Conan: **strict A4 — 524 → 636, 525 → 637**; no convention; batch-17's 513 / 584 re-look later (two rows) | wave apply |
+| B5-9 | eyeshield 3 anchors + 3 repairs; kinnikuman 2 anchors (46 → high), rearranged → abridged WITHOUT the `35=101` checkpoint, ep 31 END 96, fix the 47B prose | wave apply |
+| B5-10 | x 2 anchors + 5 hostile (fix the "X/1999" strings; ep-15 annotation text; show the ep-18 END-49 option in the note); saint-seiya 32 hostile; emma 2 hostile (no retype) | wave apply + A44 entries where hostile rows are canon/mixed on sourced series |
+| B5-11 | regimes: TMM A41 settled reorder (25-28 AND the parked 38→19 / 40→18); project-arms A18 + anchor ep 43 (155-161); bobobo 3 + the ep-2 note naming chs 4-5; **saint-seiya 29 → 24, 30 → 24 ANCHORED (rearranged; first-time back half of ch 24), not hostile** | wave apply + reorder-regime entries |
+| B5-12 | ranma 130 → **mixed** + graft{58 closing pages, first-time}, NO anchor (a first-time sliver inside an original plot); anchor ep 93 → 58 [56] v6 | T6 + annotation + wave apply |
+| lib | **afg.ts continua parser: strip page parentheticals before the max; a "." followed by digits is not a sentence end** → unit tests on the 14 sentences → afg-restage (G44, re-parse raw_html) → afg-continua-apply (G38 re-derive) → census triage of the 14 (akame 19 → 38 updates the A44 reason text) → edges | FIRST in the apply |
+| parked | Sailor Moon 167-168 (A44) — re-look under the page test at the next deep; D2; apothecary; the trigun space ruling | — |
+
+Order: parser fix + restage + re-derive → maps (kinds, T6, A44, G53/G54, N11, I39, regimes, RULED_RECORDS) → the wave apply script (anchors / continues / annotations / repairs / title-date swaps / NULLs) → 5D's sequence → heal → census → the formal consolidate deep (G56's) → capture.
