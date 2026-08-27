@@ -1,0 +1,275 @@
+{
+  "series_id": "saint-seiya-knights-of-the-zodiac",
+  "summary": "The Poseidon block (rows 100-113, plus the stored ep-114 fence) adapts tankobon chapters 46-66 in OUR space, i.e. volumes 14-18, in strict running order and with almost no padding once the Asgard filler (74-99) ends. Every one of the 14 target rows takes an anchor: ep 100 -> 48 [46] through ep 113 -> 64 [62], monotone and strictly inside the stored fence (ep 73 -> 45, ep 114 -> 66). The chapter space was verified three ways: the ES wiki's per-chapter pages ARE our space; en-WP's 'List of Saint Seiya chapters (series)' is OUR+1 from ch 30 up (the phantom 'ch 30'); and SaintSeiyaPedia (independent, French, non-Fandom) is OUR exactly below 46 and OUR+1 from 47 up because it numbers the Cygnus 'Natassja' omake as its chapter 046 - two DIFFERENT causes producing the same +1 offset in exactly this range, which is a trap. Two findings matter beyond the anchors. (1) Chapter 47 (Sorrento's Dead End Symphony kills Aldebaran; Athena escorted to the undersea sanctuary) is the ONLY Poseidon-arc chapter with no animated counterpart anywhere in the TV series - Toei spent it on the anime-original Sorrento vs Siegfried duel in filler ep 97 - and ch 46's Kido-mansion raid (Aiolia and Seiya vs the Marina soldiers) is likewise never animated, so ch 46 is only partly adapted and is SPLIT across eps 100 and 104 as two separate flashbacks. (2) The anime runs the seven Marina General duels in PARALLEL where the manga runs them consecutively (Baian dies during Shun vs Io; Shiryu vs Krishna opens before Shun vs Io ends), which is why eps 102-105 each carry a chapter tail plus a chapter head rather than clean 1:1 blocks. The manga finished the arc (ch 66, WSJ installment #157, Jan 1989) about two months before the anime finished it (ep 114, 1 Apr 1989), so unlike the Sanctuary arc the anime was NOT ahead of the source here.",
+  "anchors": [
+    {
+      "episode": 100,
+      "end_chapter": 48,
+      "start_chapter": 46,
+      "chapters_adapted": "46 (opening - Julian Solo's 16th-birthday party and Saori's refused proposal, replayed as her flashback; first-time pages), 48 (Athena's audience with Poseidon: the 30-day deluge, the 150-day flood, his offer to take the whole rainfall on her alone, her acceptance). Ch 47 not adapted; ch 46's Kido-mansion raid not adapted",
+      "volume": 14,
+      "confidence": "high",
+      "note": "A4/A10 on a T27 mixed row: the source share is ch 46's opening (SaintSeiyaPedia's magazine installment #113 'Kasho Julian') carried as flashback and ch 48's audience, whose beats (30 days / 150 days / all the water on Athena alone / she accepts and follows him) match ES ch-48 and SSP ch-049 word for word. The Toei share is everything at Asgard (Hilda and Freya, the whirlpool entrance) and the Thetis Death-Trap-Coral duel, which SSP's own fight index lists as fight #154 with NO manga counterpart. Sea Dragon's closing ambush is Toei's staging of the ch-49 confrontation that ep 101 actually plays out, so it does not move the END.",
+      "sources": [
+        "https://saintseiya.fandom.com/es/api.php?action=parse&page=Episodio_100&prop=wikitext&format=json",
+        "http://www.saintseiyapedia.com/wiki/Episode_100",
+        "http://www.saintseiyapedia.com/wiki/StS_Chapitre_049",
+        "https://saintseiya.fandom.com/es/api.php?action=parse&page=Saint%20Seiya%20-%20Cap%C3%ADtulo%2046%20%22El%20templo%20submarino%22&prop=wikitext&format=json"
+      ]
+    },
+    {
+      "episode": 101,
+      "end_chapter": 49,
+      "start_chapter": 48,
+      "chapters_adapted": "48 (tail - the seven Mammoth Pillars and the Main Breadwinner, Athena sealed inside as the human pillar; Thetis's Rozan challenge restaged as Kiki's report to Shiryu), 49 (Sea Dragon's 'you should have sent the Gold Saints', the Marina soldiers, Thetis's explanation of the seven pillars, the split-up, Seiya vs Baian's God Breath)",
+      "volume": 14,
+      "confidence": "high",
+      "note": "A4/A10 on a T27 mixed row. The ES per-fight index pins Seiya vs Baian at Capitulo 49 / Episodio 101 -> Capitulo 50 / Episodio 102, and SSP's fight #157 gives the same episode span; SSP's ch-050 (= OUR 49) recit ends exactly where ep 101 ends (God Breath, before Rising Billows). The Toei share is the Asgard material (Hyoga's farewell to Hilda) and the fact that only Seiya and Shun fight the Marina soldiers (all four Bronze Saints do in the manga).",
+      "sources": [
+        "https://saintseiya.fandom.com/es/api.php?action=parse&page=Baian%20de%20Sea%20Horse/Enfrentamientos&prop=wikitext&format=json",
+        "http://www.saintseiyapedia.com/wiki/Episode_101",
+        "http://www.saintseiyapedia.com/wiki/StS_Chapitre_050",
+        "https://saintseiya.fandom.com/es/api.php?action=parse&page=Episodio_101&prop=wikitext&format=json"
+      ]
+    },
+    {
+      "episode": 102,
+      "end_chapter": 50,
+      "start_chapter": 49,
+      "chapters_adapted": "49 (tail - Rising Billows hurls Seiya to the surface, his return and first landed Ryusei Ken), 50 (the Pegasus Cloth turns gold, Baian's Scale pulverised; Shun reaches the South Pacific pillar and is met by Io of Scylla; Shiryu and Kiki arrive, Kiki stays on Thetis)",
+      "volume": 15,
+      "confidence": "high",
+      "note": "A4/A10. Two per-fight indexes agree: ES gives Kiki vs Thetis = Capitulo 50 / Episodio 102 -> Episodio 103 and Baian's defeat at Capitulo 50 / Episodio 102; SSP fights #158 and #159 give the same episode spans and its ep-102 comparison states outright that the Shun/Io duel already opens here (the ES episode synopsis omits it - it is incomplete, not contradictory).",
+      "sources": [
+        "http://www.saintseiyapedia.com/wiki/Episode_102",
+        "https://saintseiya.fandom.com/es/api.php?action=parse&page=Saint%20Seiya%20-%20Cap%C3%ADtulo%2050%20%22Las%20armaduras%20de%20bronce%20y%20oro%22&prop=wikitext&format=json",
+        "https://saintseiya.fandom.com/es/api.php?action=parse&page=Kiki/Enfrentamientos&prop=wikitext&format=json",
+        "http://www.saintseiyapedia.com/wiki/StS_Chapitre_051"
+      ]
+    },
+    {
+      "episode": 103,
+      "end_chapter": 51,
+      "start_chapter": 50,
+      "chapters_adapted": "50 (Seiya cannot dent the North Pacific pillar; Shaina rescues Kiki and hands over the Libra Cloth; the shield brings the pillar down and the sea ceiling drops), 51 (Io's six beasts - Eagle Clutch, Wolf's Fang, Queen Bee's Stinger, Serpent Strangler, Vampire Inhale, Grizzly Slap - and Shun's Spider Net)",
+      "volume": 15,
+      "confidence": "high",
+      "note": "A4/A10. ES pins Io vs Shun at Capitulo 51 / Episodio 103 -> Capitulo 52 / Episodio 105; the ES ch-50 and SSP ch-051 synopses both end with the North Pacific pillar destroyed and Shun meeting Io, and SSP's ep-103 recit runs precisely from Seiya's failed cosmo to the Spider Net. The episode's opening restatement of Shun meeting Io is re-shown material from ep 102 and is not cited as a position.",
+      "sources": [
+        "http://www.saintseiyapedia.com/wiki/Episode_103",
+        "https://saintseiya.fandom.com/es/api.php?action=parse&page=Io%20de%20Scylla/Enfrentamientos&prop=wikitext&format=json",
+        "https://saintseiya.fandom.com/es/api.php?action=parse&page=Saint%20Seiya%20-%20Cap%C3%ADtulo%2051%20%22%C2%A1Lucha%20a%20muerte%20bajo%20el%20pilar%20del%20Pac%C3%ADfico%20Sur!%22&prop=wikitext&format=json",
+        "http://www.saintseiyapedia.com/wiki/StS_Chapitre_052"
+      ]
+    },
+    {
+      "episode": 104,
+      "end_chapter": 53,
+      "start_chapter": 51,
+      "chapters_adapted": "51 (rest - Casting Net, Spiral Duct, the last beasts destroyed, Great Capture, Io's Big Tornado), 52 (Shun's seventh sense, the chain and Cloth turn gold), 53 (opening - Shiryu reaches the Indian Ocean pillar and is cut by Krishna's golden lance); plus ch 46's Poseidon-awakening pages (Cape Sounion, the trident, Thetis, the undersea temple) carried as a second flashback - first-time material, see the 'rearranged' annotation",
+      "volume": 15,
+      "confidence": "high",
+      "note": "A4. ES pins Krishna vs Shiryu at Capitulo 53 / Episodio 104 -> Capitulo 54 / Episodio 106 and SSP's ep-104 comparison confirms the Krishna duel opens before the Io duel closes ('les affrontements contre ces Generaux sont successifs' in the manga only); SSP's ep-104 recit shows the lance already wounding Shiryu, which is ch 53's opening, not ch 52's meeting. The ch-46 flashback is 'pages, not numbers': SSP's ep-100 comparison says explicitly that Poseidon's awakening and his meeting with Thetis are shown 'plus tard' - here - so these are first-time pages and do not pull the END backwards.",
+      "sources": [
+        "http://www.saintseiyapedia.com/wiki/Episode_104",
+        "https://saintseiya.fandom.com/es/api.php?action=parse&page=Krishna%20de%20Chrysaor/Enfrentamientos&prop=wikitext&format=json",
+        "https://saintseiya.fandom.com/es/api.php?action=parse&page=Saint%20Seiya%20-%20Cap%C3%ADtulo%2052%20%22La%20cadena%20dorada%22&prop=wikitext&format=json",
+        "http://www.saintseiyapedia.com/wiki/StS_Chapitre_053"
+      ]
+    },
+    {
+      "episode": 105,
+      "end_chapter": 53,
+      "start_chapter": 52,
+      "chapters_adapted": "52 (tail - Kiki brings the Libra Cloth, Shun's nunchaku, Io impales himself, the South Pacific pillar falls), 53 (Shiryu vs Krishna: the Dragon shield cut, Shura's Excalibur in his right arm, the golden lance and the upper Chrysaor Scale severed). The closing shot - Krishna crouching and levitating - is ch 54's opening panel and is left to ep 106",
+      "volume": 15,
+      "confidence": "high",
+      "note": "A4. ES ch-52 ends with Io's death and the pillar's destruction and ES ch-53 ends with the lance and Scale cut; SSP's ep-105 recit covers exactly that span and stops on Krishna's levitation, which is ES ch-54's first sentence. END stays 53 so the reader's next chapter is 54, where ep 106 starts.",
+      "sources": [
+        "http://www.saintseiyapedia.com/wiki/Episode_105",
+        "https://saintseiya.fandom.com/es/api.php?action=parse&page=Saint%20Seiya%20-%20Cap%C3%ADtulo%2053%20%22La%20Lanza%20Dorada%20contra%20Excalibur%22&prop=wikitext&format=json",
+        "http://www.saintseiyapedia.com/wiki/StS_Chapitre_054",
+        "https://saintseiya.fandom.com/es/api.php?action=parse&page=Episodio_105&prop=wikitext&format=json"
+      ]
+    },
+    {
+      "episode": 106,
+      "end_chapter": 55,
+      "start_chapter": 54,
+      "chapters_adapted": "54 (Krishna's Kundalini and Maha Roshini, Shiryu blinded, the star life points cut with Excalibur, Kiki guides him and the Indian Ocean pillar falls), 55 (Hyoga meets 'Camus' at the Antarctic pillar and is felled; Seiya meets 'Marin' who claims to be Seika; Shun finds them both and is attacked by 'Ikki')",
+      "volume": 16,
+      "confidence": "high",
+      "note": "A4/A10. ES pins Krishna's defeat at Capitulo 54 / Episodio 106 and Kasa's three ambushes at Capitulo 55 / Episodio 106; the ES ch-54 and ch-55 synopses and SSP's ep-106 recit describe the same run end to end.",
+      "sources": [
+        "http://www.saintseiyapedia.com/wiki/Episode_106",
+        "https://saintseiya.fandom.com/es/api.php?action=parse&page=Kasa%20de%20Lyumnades/Enfrentamientos&prop=wikitext&format=json",
+        "https://saintseiya.fandom.com/es/api.php?action=parse&page=Saint%20Seiya%20-%20Cap%C3%ADtulo%2055%20%22El%20cazador%20de%20corazones%22&prop=wikitext&format=json",
+        "http://www.saintseiyapedia.com/wiki/StS_Chapitre_056"
+      ]
+    },
+    {
+      "episode": 107,
+      "end_chapter": 56,
+      "start_chapter": 55,
+      "chapters_adapted": "55 (tail - Kasa of Lyumnades unmasked, the Thunder Wave and Great Capture, Shun felled by the Salamander Shock), 56 (Ikki's Hoo Genma Ken, Kasa's death on the memory of Esmeralda, the Antarctic pillar destroyed with a Libra weapon)",
+      "volume": 16,
+      "confidence": "high",
+      "note": "A4/A10. ES pins Shun vs Kasa ending at Capitulo 55 / Episodio 107 and Ikki vs Kasa at Capitulo 56 / Episodio 107; SSP fight #165 gives the same episode and its recit matches ES ch-56 beat for beat.",
+      "sources": [
+        "http://www.saintseiyapedia.com/wiki/Episode_107",
+        "https://saintseiya.fandom.com/es/api.php?action=parse&page=Kasa%20de%20Lyumnades/Enfrentamientos&prop=wikitext&format=json",
+        "https://saintseiya.fandom.com/es/api.php?action=parse&page=Saint%20Seiya%20-%20Cap%C3%ADtulo%2056%20%22El%20contraataque%20de%20la%20ira%22&prop=wikitext&format=json",
+        "http://www.saintseiyapedia.com/wiki/StS_Chapitre_057"
+      ]
+    },
+    {
+      "episode": 108,
+      "end_chapter": 57,
+      "start_chapter": 57,
+      "chapters_adapted": "57 (Hyoga staunches the wound at Kasa's pillar and walks to the Arctic pillar; Isaac of Kraken; the Siberian training flashback and the lost eye; the Aurora Borealis knocks Hyoga out)",
+      "volume": 16,
+      "confidence": "high",
+      "note": "A4. A clean one-chapter episode: ES ch-57 opens on exactly the beat ep 108 opens on ('Hyoga se habia levantado en el pilar de Kaysa y se tapo la hemorragia') and closes on the Aurora Borealis, as does SSP's ep-108 recit; ES pins Isaac vs Hyoga at Capitulo 57 / Episodio 108 -> Capitulo 58 / Episodio 109.",
+      "sources": [
+        "http://www.saintseiyapedia.com/wiki/Episode_108",
+        "https://saintseiya.fandom.com/es/api.php?action=parse&page=Isaac%20de%20Kraken/Enfrentamientos&prop=wikitext&format=json",
+        "https://saintseiya.fandom.com/es/api.php?action=parse&page=Saint%20Seiya%20-%20Cap%C3%ADtulo%2057%20%22Isaac,%20el%20viejo%20amigo%20que%20se%20volvi%C3%B3%20fr%C3%ADo%22&prop=wikitext&format=json",
+        "http://www.saintseiyapedia.com/wiki/StS_Chapitre_058"
+      ]
+    },
+    {
+      "episode": 109,
+      "end_chapter": 58,
+      "start_chapter": 58,
+      "chapters_adapted": "58 (Kiki arrives with the Libra Cloth and is attacked, Hyoga's Aurora Execution defeats Isaac, the Arctic pillar falls, Isaac's dying revelation that Sea Dragon is behind the war; Ikki is intercepted by Sea Dragon)",
+      "volume": 17,
+      "confidence": "high",
+      "note": "A4. ES pins Isaac's defeat at Capitulo 58 / Episodio 109 and Kiki vs Isaac at Episodio 109; ES ch-58 and SSP's ep-109 recit both run from Kiki's arrival to Ikki facing Sea Dragon. The Sanctuary interlude (Aiolia chafing under Dohko's order) is displaced from its manga position but is the same ch-58 material.",
+      "sources": [
+        "http://www.saintseiyapedia.com/wiki/Episode_109",
+        "https://saintseiya.fandom.com/es/api.php?action=parse&page=Isaac%20de%20Kraken/Enfrentamientos&prop=wikitext&format=json",
+        "https://saintseiya.fandom.com/es/api.php?action=parse&page=Saint%20Seiya%20-%20Cap%C3%ADtulo%2058%20%22Muere,%20amigo%20m%C3%ADo...%22&prop=wikitext&format=json",
+        "http://www.saintseiyapedia.com/wiki/StS_Chapitre_059"
+      ]
+    },
+    {
+      "episode": 110,
+      "end_chapter": 59,
+      "start_chapter": 58,
+      "chapters_adapted": "58 (tail - the Galaxian Explosion and the removed helmet), 59 (Kanon of Gemini revealed, Ikki sent off by the Golden Triangle; Shaina finishes Thetis and is beaten by Poseidon; the Kanon/Sorrento exchange; Shun at the South Atlantic pillar, the Dead End Symphony cut off by Athena's song)",
+      "volume": 17,
+      "confidence": "high",
+      "note": "A4/A10. ES pins Kanon vs Ikki at StS 58 / Ep 110 -> StS 59 / Ep 110 and Sorrento vs Shun at StS 59 / Ep 110 -> StS 61 / Ep 111; ES ch-59 ends exactly where ep 110 ends (Athena's cosmo interrupting the flute). The inserted flashback explaining Sorrento's survival of Siegfried is Toei's Asgard continuity - see the annotation - but the episode's job is ch 58-59, so it stays canon under T28.",
+      "sources": [
+        "http://www.saintseiyapedia.com/wiki/Episode_110",
+        "https://saintseiya.fandom.com/es/api.php?action=parse&page=Sorrento%20de%20Siren/Enfrentamientos&prop=wikitext&format=json",
+        "https://saintseiya.fandom.com/es/api.php?action=parse&page=Saint%20Seiya%20-%20Cap%C3%ADtulo%2059%20%22%C2%A1De%20nuevo%20G%C3%A9minis!%22&prop=wikitext&format=json",
+        "http://www.saintseiyapedia.com/wiki/StS_Chapitre_060"
+      ]
+    },
+    {
+      "episode": 111,
+      "end_chapter": 61,
+      "start_chapter": 60,
+      "chapters_adapted": "60 (Seiya finds Shaina fallen and attacks Poseidon, his Cloth destroyed; Shiryu and Hyoga come to help and are struck down; the Gold Saints held back at the Sanctuary by Dohko; the Sagittarius Cloth flies to the undersea sanctuary and clads Seiya), 61 (opening - Shun's Nebula Stream and Nebula Storm against Sorrento's Dead End Climax)",
+      "volume": 17,
+      "confidence": "high",
+      "note": "A4/A10. ES pins Sorrento vs Shun ending at StS 61 / Ep 111 and the first Poseidon round at StS 60 / Ep 111; ES ch-60 ends with the Sagittarius Cloth clothing Seiya, which is also where SSP's ep-111 recit puts it. Sorrento's actual defeat is shown at the head of ep 112, so ep 111 stops mid-ch-61.",
+      "sources": [
+        "http://www.saintseiyapedia.com/wiki/Episode_111",
+        "https://saintseiya.fandom.com/es/api.php?action=parse&page=Sorrento%20de%20Siren/Enfrentamientos&prop=wikitext&format=json",
+        "https://saintseiya.fandom.com/es/api.php?action=parse&page=Saint%20Seiya%20-%20Cap%C3%ADtulo%2060%20%22%C2%A1Que%20resuenen%20las%20oraciones%20de%20Atenea!%22&prop=wikitext&format=json",
+        "http://www.saintseiyapedia.com/wiki/StS_Chapitre_061"
+      ]
+    },
+    {
+      "episode": 112,
+      "end_chapter": 62,
+      "start_chapter": 61,
+      "chapters_adapted": "61 (tail - Sorrento felled by the Nebula Storm, Kiki brings the Libra Cloth and the South Atlantic pillar falls; Ikki returns from the Golden Triangle and lands the Hoo Genma Ken), 62 (Kanon's Cape Sounion flashback: Saga's twin, the prison, the trident, Athena's urn, Poseidon freed and the plan to keep him asleep in Julian Solo). Ch 62's three Golden Arrow shots are held back to ep 113",
+      "volume": 18,
+      "confidence": "high",
+      "note": "A4/A10. The Japanese episode title is a fusion of both chapter titles - ch 61 'Sokoku! Futatsu no Tamashii' (Two Souls) plus ch 62 'Kaio Fukkatsu no Nazo' (Mystery of Poseidon's Resurrection) - which is the strongest possible title evidence for a 61-62 span; ES pins Kanon vs Ikki round two at StS 61 / Ep 112 -> StS 64 / Ep 113. SSP's ep-112 recit ends on Seiya merely RAISING the Sagittarius bow, so the shots belong to ep 113.",
+      "sources": [
+        "http://www.saintseiyapedia.com/wiki/Episode_112",
+        "https://en.wikipedia.org/wiki/List_of_Saint_Seiya_chapters_(series)",
+        "https://saintseiya.fandom.com/es/api.php?action=parse&page=Kanon%20de%20Gemini/Enfrentamientos&prop=wikitext&format=json",
+        "https://saintseiya.fandom.com/es/api.php?action=parse&page=Saint%20Seiya%20-%20Cap%C3%ADtulo%2062%20%22El%20misterio%20tras%20la%20resurrecci%C3%B3n%20del%20Emperador%20de%20los%20mares%22&prop=wikitext&format=json"
+      ]
+    },
+    {
+      "episode": 113,
+      "end_chapter": 64,
+      "start_chapter": 62,
+      "chapters_adapted": "62 (the first two Golden Arrow shots - back into Seiya's chest, then into Shaina's back), 63 (Shiryu takes the third, the five Saints pour their cosmo into the arrow and it strikes Poseidon's brow; Ikki, Sorrento and Kiki fell the North Atlantic pillar; Poseidon fully awakens and the Aquarius Cloth reaches Hyoga), 64 (opening - Hyoga's Aurora Execution turned aside by the trident, Shiryu blocks it with a Libra shield and dons the Libra Cloth)",
+      "volume": 18,
+      "confidence": "high",
+      "note": "A4 - the episode reaches into ch 64. ES pins the third Poseidon round at StS 64 / Ep 113 -> StS 65 / Ep 114 and SSP's fight #174 gives the same Ep 113 -> Ep 114 span; ES ch-64's synopsis ('Hyoga ... ataca a Poseidon con la Ejecucion Aurora ... Shiryu lo protege con el Escudo de la Armadura de Libra que lo cubre') is exactly how SSP's ep-113 recit closes. The three simultaneous attacks that fell Poseidon - ch 64's other half - open ep 114, so the reader continues IN ch 64 (C1).",
+      "sources": [
+        "http://www.saintseiyapedia.com/wiki/Episode_113",
+        "https://saintseiya.fandom.com/es/api.php?action=parse&page=Seiya%20de%20Pegasus/Enfrentamientos&prop=wikitext&format=json",
+        "https://saintseiya.fandom.com/es/api.php?action=parse&page=Saint%20Seiya%20-%20Cap%C3%ADtulo%2064%20%22Las%20tres%20flechas%22&prop=wikitext&format=json",
+        "http://www.saintseiyapedia.com/wiki/StS_Chapitre_065"
+      ]
+    }
+  ],
+  "continue_points": [
+    {
+      "episode": 100,
+      "continue_chapter": 48,
+      "kind": "parity",
+      "note": "C2 parity at ep 101's START: ep 100 shows only ch 48's audience scene and ep 101 finishes ch 48 (the seven pillars, Athena sealed in the Main Breadwinner), so resume inside ch 48. WHAT THE ANIME NEVER SHOWS YOU: chapter 47 in full - Thetis and Sea Dragon's council, and Sorrento's Dead End Symphony killing Aldebaran of Taurus at the Graad clinic - has no animated counterpart anywhere in the TV series; Toei spent it on the anime-original Sorrento vs Siegfried duel in filler ep 97, and Aldebaran was instead ambushed by Syd and Bud at the start of the Asgard filler. Chapter 46's other half (the night raid on the Kido mansion, Aiolia's Lightning Plasma, Thetis's failed abduction) is also never animated. Read both on your own.",
+      "sources": [
+        "https://saintseiya.fandom.com/es/api.php?action=parse&page=Sorrento%20de%20Siren/Enfrentamientos&prop=wikitext&format=json",
+        "http://www.saintseiyapedia.com/wiki/Episode_100",
+        "https://saintseiya.fandom.com/es/api.php?action=parse&page=Aldebaran%20de%20Taurus&prop=wikitext&format=json",
+        "https://saintseiya.fandom.com/es/api.php?action=parse&page=Soldados%20Marinos/Enfrentamientos&prop=wikitext&format=json"
+      ]
+    }
+  ],
+  "anchor_hostile": [],
+  "annotations": [
+    {
+      "episodes": [100, 104],
+      "kind": "rearranged",
+      "chapters": "46",
+      "note": "Chapter 46 is SPLIT across two flashbacks and is never shown whole. Ep 100 plays its opening (Julian Solo's 16th-birthday party and Saori's refused proposal) as Saori's memory; ep 104 plays the rest (the light at Cape Sounion, the trident, Thetis, the descent to the undersea temple and Julian donning the Scale) as a second flashback intercut with the Shun vs Io duel. SaintSeiyaPedia's ep-100 sheet states the awakening and the Thetis meeting are events 'que la serie TV ne montrera que plus tard'. Ch 46's remaining strand - the night raid on the Kido mansion, repelled by Aiolia and Seiya - is never animated at all (the ES wiki's Marina-soldier fight index gives StS 46 with no episode)."
+    },
+    {
+      "episodes": [100, 101],
+      "kind": "divergence",
+      "chapters": "46-49",
+      "note": "The anime replaces the manga's three abduction attempts (a Marina, then Thetis, then Sorrento) and the Rozan challenge with the Asgard bridge: Saori is carried off from Asgard at the close of the filler arc, Hilda and Freya point Seiya and Shun at the whirlpool entrance, and an invented Thetis Death-Trap-Coral duel fills the arrival (SSP fight #154, no manga counterpart). In the manga all four Bronze Saints arrive together via the Rozan waterfall; in the anime Seiya and Shun go first and Shiryu, Hyoga and Kiki follow separately."
+    },
+    {
+      "episodes": [102, 103, 104, 105],
+      "kind": "rearranged",
+      "chapters": "49-53",
+      "note": "The anime runs the Marina General duels in PARALLEL where the manga runs them consecutively: Baian dies in the middle of Shun vs Io (ep 103), and Shiryu vs Krishna opens before Shun vs Io ends (ep 104). This is why each of these episodes carries one chapter's tail plus the next chapter's head instead of a clean 1:1 block. SaintSeiyaPedia states it on both the ep-103 and ep-104 sheets ('Dans le manga, les affrontements contre ces Generaux sont successifs')."
+    },
+    {
+      "episodes": [110],
+      "kind": "divergence",
+      "chapters": "58-59",
+      "note": "An anime-original flashback showing how Sorrento of Siren survived Siegfried's suicide dive is inserted into otherwise faithful ch 58-59 material; it exists only because the Asgard arc is filler. Shun also recognises Sorrento here, which is impossible in the manga where they have never met."
+    },
+    {
+      "episodes": [112, 113],
+      "kind": "rearranged",
+      "chapters": "62",
+      "note": "The anime unpicks ch 62's two interleaved threads: ep 112 takes the whole Kanon / Cape Sounion flashback, ep 113 takes the two Golden Arrow shots that the manga intercuts with it. Ep 112 therefore ends on Seiya merely raising the Sagittarius bow."
+    }
+  ],
+  "repairs": [],
+  "type_corrections": [],
+  "structure": {
+    "notes": "CHAPTER SPACES (four of them; every value above is in OUR space). (1) OUR space = the true tankobon chapter numbering, 109 mainline chapters, which is what saintseiya.fandom.com/es uses page for page: its Capitulo 46 'El templo submarino' is the Poseidon arc's first chapter and its Capitulo 66 'Mas alla de las azules olas' is its last. This matches the stored volume boundaries exactly (v14 46-49, v15 50-53, v16 54-57, v17 58-61, v18 62-66) and the stored fence (ep 73 -> 45 = 'Athena Revives!!', ep 114 -> 66). (2) en.wikipedia's 'List of Saint Seiya chapters (series)' is OUR+1 from ch 30 upward - the V6 phantom - so its vol 14 reads 047-050 and its vol 18 reads 063-067; convert by -1. (3) SaintSeiyaPedia (saintseiyapedia.com, French, NOT Fandom) is OUR EXACTLY below 46 (its 029 = 'Sanctuary! The Twelve Palaces', 030 = 'Gemini's Labyrinth' - it has NO phantom Taurus chapter, an independent confirmation of V6) but OUR+1 from 47 upward, because it numbers the Cygnus omake 'Natassja of the Lands of Ice' as its chapter 046. TWO DIFFERENT CAUSES produce the same +1 offset in exactly the Poseidon range - do not assume a source that agrees with en-WP here agrees with it at ch 35. SSP's last chapter is its 110, i.e. 109 mainline + the omake, which is the V6 count. (4) Weekly Shonen Jump installment numbering: the Poseidon arc is installments #113-157 (8 Mar 1988 - 4 Jan 1989) and the series' last installment is #246; a tankobon chapter merges 1-3 installments. FLAG #702 RESOLVED: AniList's chapterCount 249 is the MAGAZINE-INSTALLMENT count (246 plus specials), not a chapter count; the reading edition is the 109-chapter tankobon, and MU's latest_chapter 33 is neither (it is not a usable space for this series). ROW IDENTITY: AnimeFillerList's rows 95-114 carry our titles and our air dates one for one, with no recap or special counted - no index shift anywhere in the block - and its typing agrees with the stored types (100-101 Mixed Canon/Filler, 102-114 Manga Canon). COVERAGE: the Poseidon arc's own ES-wiki page states manga chs 46-66 = anime eps 100-114, magazine #113-157, volumes 14-18 - identical to what the row-by-row work produced. NEVER ADAPTED IN THE TV SERIES: all of ch 47, and ch 46's Kido-mansion raid. The manga finished the arc about two months before the anime did (ch 66 in the 13 Feb 1989 issue vs ep 114 on 1 Apr 1989), so the anime was not running ahead of the source in this block.",
+    "order_only": []
+  },
+  "flags_for_sean": [
+    "Ep 113 END = 64, not 63: the episode's last three minutes (Hyoga's Aurora Execution turned aside, Shiryu blocking with a Libra shield and donning the Libra Cloth) are ch 64's opening, and both per-fight indexes pin that round at StS 64 / Ep 113. If you would rather not credit an 18-page chapter for its first third, 63 is the conservative alternative - but then ep 114's START should be recorded as 64, not 65.",
+    "Ch 47 is a permanent hole in the anime's coverage of the arc (Sorrento kills Aldebaran) and ch 46 is only half-adapted (the Kido-mansion raid is skipped). Both are carried in the ep-100 continue note. If you want them visible in the UI beyond the note, they would need a first-class 'never adapted' instrument - there is none today.",
+    "Possible pre-existing anchor defect OUTSIDE this block, raised only as an observation (not researched, no repair proposed): stored ep 43 -> 30, but in OUR space ch 30 is 'Gemini's Labyrinth' while ep 43 is the Taurus duel, which the batch-17 annotation itself says sits inside ch 29 - and SaintSeiyaPedia's independent chapter list confirms 029 = Twelve Palaces / 030 = Gemini's Labyrinth with no Taurus chapter. It is defensible if ep 43 ends on the Saints entering the Gemini temple (ep 44's stored START is also 30). Worth a look when eps 41-45 are next touched.",
+    "Sources note for the verifier: the ES wiki's '/Enfrentamientos' subpages carry a per-fight index whose fight numbers (#154-#175) are identical to SaintSeiyaPedia's, so those two tables are ONE lineage - the ES chapter column is the part SSP does not publish. The anchors above do not rest on that index alone: each is confirmed by comparing two narrative descriptions per side (ES chapter synopsis + SSP chapter recit vs ES episode synopsis + SSP episode recit/comparaison), plus en-WP for chapter titles and numbering."
+  ]
+}
