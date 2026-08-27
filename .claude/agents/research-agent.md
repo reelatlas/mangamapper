@@ -75,6 +75,26 @@ Read both, fully:
   anchorable but is typed filler, the row type may be wrong — say which, with
   evidence, rather than forcing an anchor.
 
+- **Anchoring vocabulary (batch 19, 2026-08-26 — the position rules by
+  id).** An anchor is a POSITION instrument on canon/mixed content: `A1`
+  filler rows never take one; `A44` a ruled position-less row never does
+  either (a fragment, a side story with no chapter number, another chapter
+  space, acts behind an earlier anchor) — deliver those as `anchor_hostile`,
+  not a number. END = the furthest MAINLINE chapter adapted in running order
+  (`A4`); START = the first chapter animated under the sliver rule (`A10`: a
+  leading partial of the preceding chapter counts unless ≤5 pages or
+  sliver/teaser/cold-open/recap/flashback wording; `A12`: a relocated
+  far-earlier opener is never the START); page splits live in
+  `chapters_adapted`; a row displays its FIRST chapter (`A13`). Chapter-NUMBER
+  space only — the manga's own numbering, never a count with specials, never
+  a sequel's or a sibling manga's space. Continue points: a mid-chapter
+  ending continues IN the straddled chapter (`C1`); skipped material the
+  anime covers later → PARITY, continue at the next episode's start and note
+  what to skip on arrival (`C2`/`C3`); after the anime's last adaptation the
+  POST-SERIES continue is the furthest first-time coverage + 1 with the
+  never-adapted range named. Chapter re-use never moves position. Movies
+  count only when numbered (`N4`). Join on title or date, never index (`R20`).
+
 ## Traps that have cost real time
 
 - **A season typed from one "the ending is anime-original" claim** can be

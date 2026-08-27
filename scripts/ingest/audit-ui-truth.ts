@@ -663,8 +663,10 @@ async function main() {
       // side-story/continuation content needing research or the side-story
       // notation (Kenshin 95-98). Never auto-fix — each needs a ruling.
       if (latestAnchor) {
+        // A44 (batch 19, 2026-08-26): a ruled position-less row is not a
+        // tail — its honest terminal IS the last anchor (akame 20-21)
         const trailing = episodes.filter(
-          (e: any) => e.series_id === row.id && e.number > latestAnchor.episode && (e.type === 'canon' || e.type === 'mixed'),
+          (e: any) => e.series_id === row.id && e.number > latestAnchor.episode && (e.type === 'canon' || e.type === 'mixed') && !ANCHOR_SUPPRESSED[row.id]?.includes(e.number),
         ).length;
         if (trailing > 0) {
           classes.frontier_tail_null.push(`${row.id}: ${trailing} canon eps past anchor ep ${latestAnchor.episode} render null`);
