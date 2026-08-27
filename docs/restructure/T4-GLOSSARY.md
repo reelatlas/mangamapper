@@ -155,7 +155,7 @@ last, after the big unruled blocks are reviewed**:
 5. ✅ (batch 18, 2026-08-26 — three waves, 32 verdicts; rules T28 + A44; the incorporation basis) **Batch-18 review of the biggest unruled blocks BEFORE step 6** — FMA
    2003 (27), beyblade-metal-fusion (32), dragon-ball-super (15),
    outlaw-star (13), soul-eater (13), twin-star (30), the A-7 endings.
-6. T4.4 `episodes.format` + healer + `FORMAT_OVERRIDES` + watch-order kinds.
+6. ✅ (T29, 2026-08-26) T4.4 `episodes.format` + healer + `FORMAT_OVERRIDES` + watch-order kinds.
 7. T4.5 the words: badge strings, `{noun} only`, `studio original` label,
    `anime only` retired in agent/PROTOCOL text (T3.2 / T3.5 land here).
 8. `/consolidate deep`; then the cross-model frame check (`P36`).

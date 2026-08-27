@@ -29,17 +29,28 @@ async function main() {
       source: string | null;
       disposition: string;
     }>('ingest_fractionals', 'series_id, position, title, air_date, note, source, disposition', (q) => q.eq('disposition', 'order_only'));
+    // T29 (T4.4): an entry's kind comes from a ruling (RULED_RECORDS) or from
+    // the order-only component whose AniList start date EQUALS the entry's
+    // air date — an exact join, never a title guess (R20). Else null: the
+    // watch_order_kind_missing census class is the queue.
+    const orderOnly = await selectAll<{ series_id: string; kind: string | null; anilist_id: number | null }>('series_components', 'series_id, kind, anilist_id', (q) => q.is('episode_start', null));
+    const alIds = orderOnly.map((c) => c.anilist_id).filter((n): n is number => n != null);
+    const al = alIds.length ? await selectAll<{ anilist_id: number; raw: any }>('ingest_anilist_media', 'anilist_id, raw', (q) => q.in('anilist_id', alIds)) : [];
+    const startBy = new Map(al.map((r) => { const d = r.raw?.startDate; return [r.anilist_id, d?.year ? `${d.year}-${String(d.month ?? 1).padStart(2, '0')}-${String(d.day ?? 1).padStart(2, '0')}` : null]; }));
+    const kindByDate = new Map<string, string>();
+    for (const c of orderOnly) { const d = c.anilist_id != null ? startBy.get(c.anilist_id) : null; if (d && c.kind) kindByDate.set(`${c.series_id}|${d}`, c.kind); }
     let n = 0;
     for (const f of fr) {
       const label = RULED_LABELS[f.series_id]?.[Number(f.position)] ?? null;
       const rec = RULED_RECORDS[f.series_id]?.[Number(f.position)];
+      const derivedKind = rec?.kind ?? (f.air_date ? kindByDate.get(`${f.series_id}|${f.air_date}`) ?? null : null);
       const row: Record<string, unknown> = {
         series_id: f.series_id,
         position: f.position,
         title: f.title ?? '(untitled)',
         air_date: f.air_date,
         note: f.note,
-        kind: rec?.kind ?? null,
+        kind: derivedKind,
         chapter: rec?.chapter ?? null,
         volume: rec?.volume ?? null,
         chapters_adapted: rec?.chapters_adapted ?? null,

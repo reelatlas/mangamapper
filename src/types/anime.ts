@@ -100,6 +100,8 @@ export interface Episode {
   airDate: string;
   /** T26: canon by ruling but outside the source (adopted / side_source annotation) — no source position exists, render the honest dash */
   offSource?: boolean;
+  /** T29: the format axis (tv / ova / special / movie / recap), independent of type; null = not yet derivable. Stored now, surfaced at the UI pass. */
+  format?: 'tv' | 'ova' | 'special' | 'movie' | 'recap' | null;
 }
 
 export interface TrackingRanking {

@@ -56,7 +56,7 @@ export async function verifySeries(id: string, print = false): Promise<string[]>
   const row = rowData as SeriesRow | null;
   if (!row) return [`${id}: series not found`];
 
-  const eps = await selectAll<DbEpisodeRow>('episodes', 'number, title, type, air_date', (q) => q.eq('series_id', id).order('number'));
+  const eps = await selectAll<DbEpisodeRow>('episodes', 'number, title, type, air_date, format', (q) => q.eq('series_id', id).order('number'));
   const anchors = await selectAll<AnchorRow>('chapter_anchors', 'episode, volume, chapter, start_chapter', (q) => q.eq('series_id', id).order('episode'));
   const annos = await selectAll<{ episode: number; kind: string }>('episode_annotations', 'episode, kind', (q) => q.eq('series_id', id).order('episode'));
   let boundaries: Boundary[] = [];

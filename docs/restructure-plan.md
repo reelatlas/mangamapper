@@ -337,5 +337,6 @@ words after the glossary exists. Rough total: 8–12 sessions.
 | T4.2 | annotation kinds (T26): adopted{basis} / retconned / side_source, lib/annotations.ts gate + migration + annotation_invalid | T4.1 | DONE 2026-08-26 |
 | T4.3 | standing migration (T27): 977 rows by source kind + T6 + 190 override annotations; afl_anime_canon_unruled queue 24 series; A1 spike 0 | T4.2 | DONE 2026-08-26 |
 | batch-18 review lane | 32 verdicts, 3 waves, 19 verifications; rules T28 (materiality bar), A44 (position-less rows), the incorporation basis; afl_anime_canon_unruled 257→1 | T4.3 | DONE 2026-08-26 (§12.57-59) |
-| T4.4–4.5 | format → words | review lane | next: T4.4 |
+| T4.4 | format axis (T29): episodes.format derived + stored, FORMAT_OVERRIDES, watch-order kinds, 3 new census classes | review lane | DONE 2026-08-26 |
+| T4.5 | the words (UI strings last; T3.2 / T3.5 land here) | T4.4 | next |
 | T5.* | backlog routing | per §3 | planned |

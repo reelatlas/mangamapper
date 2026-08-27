@@ -255,6 +255,19 @@
         "anchor"
       ],
       "source": "batch 18 wave 3 verifier (2026-08-26)"
+    },
+    {
+      "ask": "kenshin 95-98 are canon OVAs and SAO row 50 is a movie — where does 'OVA' / 'movie' live, and can it change the canon badge?",
+      "expected": [
+        "T29",
+        "T23"
+      ],
+      "terms": [
+        "format",
+        "axis",
+        "never a type"
+      ],
+      "source": "T4.4 (2026-08-26)"
     }
   ]
 }

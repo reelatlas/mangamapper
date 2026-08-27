@@ -494,10 +494,11 @@ export const RULES: Rule[] = [
     origin: 'system-evolution "Type taxonomy — target state (Sean, 2026-08-25)"',
     enforcement: [
       { path: 'supabase/migrations/20260822000000_catalog_pipeline.sql' },
+      { path: 'scripts/ingest/lib/format.ts', symbol: 'deriveFormat' },
       { path: 'docs/system-evolution.md' },
     ],
     layer: 'writer',
-    auditClass: [],
+    auditClass: ['format_missing'],
     witnesses: ['rurouni-kenshin', 'kenichi-the-mightiest-disciple'],
     status: 'live',
     see: ['T1', 'T20'],
@@ -619,5 +620,30 @@ export const RULES: Rule[] = [
     witnesses: ['claymore', 'a-certain-scientific-railgun', 'soul-eater', 'dragon-ball-super', 'fullmetal-alchemist'],
     status: 'live',
     see: ['T7', 'T8', 'A10', 'T26', 'T27', 'A43'],
+  },
+  {
+    id: 'T29',
+    aliases: ['format axis', 'episodes.format', 'FORMAT_OVERRIDES', 'heal-format', 'format_missing', 'episode_without_component', 'watch_order_kind_missing', 'D-11', 'tv ova special movie recap'],
+    family: 'T',
+    title: 'The format axis: derived, stored, never a type',
+    statement:
+      "episodes.format ∈ tv | ova | special | movie | recap is a second, independent axis beside standing (T27) — stored now, surfaced at the UI pass, and NEVER inferred into a type (T23). It is DERIVED by heal-format.ts through deriveFormat: a FORMAT_OVERRIDES ruling (reason + cite) wins; else the containing component's kind (season → tv; ova / special / movie carry their own); a row no component covers and no ruling names stays NULL — the honest gap, listed by format_missing, with the structure cause named by episode_without_component (a numbered special / movie / OVA with no component, or a stale span → N7 + a kind component, never a renumber). watch_order_entries.kind comes from a RULED_RECORDS ruling or an EXACT air-date join to the order-only component (never a title guess); the rest is watch_order_kind_missing. A stored format that disagrees with the derivation is a ruling_violation.",
+    why:
+      "T4.0 D-11 (Sean, 2026-08-26): kenshin's Trust & Betrayal rows are canon AND OVAs; SAO row 50 is the Ordinal Scale MOVIE numbered into the run; Clannad After Story 24 is a recap and 25 an OVA; assassination-classroom ep 0 is a numbered special AFL calls anime canon — every one of these was a typing question until format became its own axis. Built T4.4; the 32 rows covered by no component (20 series) are the first honest queue it produced.",
+    ruledBy: 'Sean',
+    ruledOn: '2026-08-26',
+    origin: 'docs/restructure/T4-GLOSSARY.md §4 (D-11); restructure T4.4',
+    enforcement: [
+      { path: 'scripts/ingest/lib/format.ts', symbol: 'deriveFormat' },
+      { path: 'scripts/ingest/lib/rulings/format-overrides.ts', symbol: 'FORMAT_OVERRIDES' },
+      { path: 'scripts/ingest/heal-format.ts', symbol: 'main' },
+      { path: 'scripts/ingest/sync-watch-order.ts', symbol: 'main' },
+      { path: 'supabase/migrations/20260826400000_episode_format.sql' },
+    ],
+    layer: 'writer',
+    auditClass: ['format_missing', 'episode_without_component', 'watch_order_kind_missing', 'ruling_violation'],
+    witnesses: ['rurouni-kenshin', 'sword-art-online', 'clannad-after-story', 'durarara'],
+    status: 'live',
+    see: ['T23', 'T27', 'N7', 'N31', 'I33'],
   },
 ];

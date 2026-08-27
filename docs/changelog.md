@@ -607,6 +607,35 @@
    durable guard. Lesson for the floor rule: a >2 overshoot sourced from a
    SINGLE chart row with no corroborating content anywhere is a typo
    candidate, not an adoption candidate.
+60. ✅ **T4.4 — THE FORMAT AXIS (`T29`; T23 amended; 2026-08-26).** Sean's
+   T4.0 D-11 built: `episodes.format` ∈ tv | ova | special | movie | recap,
+   nullable, DERIVED (never typed by a source, never a type): a
+   `FORMAT_OVERRIDES` ruling wins, else the containing component's kind
+   (season → tv; ova / special / movie carry their own), else NULL — the
+   honest gap. `lib/format.ts#deriveFormat` is the one derivation;
+   `heal-format.ts` (standard roster, batched writes) asserts it; the census
+   checks stored = derived (ruling_violation) and lists `format_missing`
+   (the queue) and `episode_without_component` (the structure cause behind
+   most of it: 32 rows / 20 series — numbered specials, movies and OVAs
+   with no component, or stale spans like outlaw-star's 1-24). Migration
+   `20260826400000_episode_format.sql`. First heal over 19,863 rows: tv
+   19,745 · ova 85 · special 10 · movie 4 · recap 1 · null 18 (14 series).
+   Overrides (cited): kenshin 95-98 ova (Tsuioku-hen) + 99-100 ova
+   (Seisou-hen); SAO 50 movie; clannad 24 ova; after-story 24 recap, 25
+   ova; durarara 25 ova; outlaw-star 25-26 tv (a stale span, I33);
+   angel-beats 14-16 special. `watch_order_entries.kind`: now derived at
+   sync from a RULED_RECORDS ruling or an EXACT air-date join to the
+   order-only component (never a title guess — a title match probe hit
+   13/37 with wrong hits); the remainder is `watch_order_kind_missing`.
+   Captured for the app: `Episode.format` rides the hydrated series
+   (stored, unsurfaced until the UI pass). Defects caught by the mechanism
+   itself: `FORMAT_OVERRIDES` was last-wins per series (kenshin's second
+   entry hid the first — the healer's null count exposed it; merged, the
+   same fix as T6 / T26); the first heal wrote row-by-row and timed out at
+   ~3k rows (batched by series × format: 32 s). Census otherwise unchanged;
+   ruling_violation 0; display 220/0; edges deployed. NEXT: T4.5 the words
+   (badge strings, `{noun} only`, `studio original`, retire 'anime only' in
+   agent/PROTOCOL text — T3.2/T3.5 land here) → `/consolidate deep` → P36.
 59. ✅ **BATCH 18 WAVE 3 + BATCH CLOSE (2026-08-26): the narrow bundles;
    rule `A44` (position-less rows); `afl_anime_canon_unruled` drained.**
    Four bundled Opus agents (~0.82M) over 17 series / 24 rows; six Fable

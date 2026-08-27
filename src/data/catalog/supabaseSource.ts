@@ -35,7 +35,7 @@ async function allEpisodes(seriesId: string): Promise<EpisodeRow[]> {
   for (let from = 0; ; from += 1000) {
     const { data, error } = await supabase
       .from('episodes')
-      .select('number, title, type, air_date')
+      .select('number, title, type, air_date, format')
       .eq('series_id', seriesId)
       .order('number')
       .range(from, from + 999);

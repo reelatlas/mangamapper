@@ -52,6 +52,16 @@ Read both, fully:
   a MANDATORY `graft` / `partial` / `loose_parallel` annotation with the
   chapters. Consensus on a block is a strong prior one overlap does not
   overturn.
+- **Four distinctions batch 18 paid for.** `mixed` is source + anime-
+  original in one episode, never two canons. A second LICENSED work is
+  `side_source` on a canon row (Black Clover 55-56 adapt a novel). If the
+  series' identified source IS the light novel, a numbered volume of it is
+  plain canon (+ `side_story` when it is not mainline volume progression) —
+  86 ep 10, not the Black Clover shape. `retconned` is FILLER + annotation
+  relative to the source as finished — never canon + adopted + retconned
+  (Akame 23-24: the author's own outline, later overwritten by his manga).
+  Remake episode numbers and inherited titles are not adaptation (kenshin-
+  2023 ep 44 ≠ 1996 ep 44; 京都大火「中編」≠ Act 101).
 - **Chapter overlap never proves filler (Sean, 2026-08-25, the zatch-bell
   lesson).** Different episodes can legitimately adapt or revisit the SAME
   chapters (ep 10 and ep 60 can both carry key parts of ch 40). "Every

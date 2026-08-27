@@ -2,7 +2,7 @@
 
 > GENERATED from `scripts/ingest/lib/rulings/**` by `scripts/restructure/gen-rulings.ts` — do not edit by hand. A ruling is an INSTANCE of a rule (`docs/rules.md`); the map is the record, this is the index.
 
-- rulings: 1716 across 204 series/keys · by Sean: 373 · UNRECORDED reasons: 8 · with a retire condition: 92
+- rulings: 1724 across 204 series/keys · by Sean: 381 · UNRECORDED reasons: 8 · with a retire condition: 92
 
 ## Retire conditions (re-evaluate when…)
 
@@ -137,10 +137,11 @@
 |---|---|---|---|---|
 | `I27` | {"ids":[98436,154364,166452],"extras":[{"id":130713,"after":98436}],"ruledExtent":"AFL page = S1 (24); SEASON 2 (2023, two cours, our 25-48) aired — batch-10… | AFL-lag class: AFL page = S1 (24); SEASON 2 (2023, two cours, our 25-48) aired — batch-10 stitch flag. The 2021 OVA 'Nishi no Shounen to Seiran no Kishi' (130713) is order-only between S1 and S2. | session 2026-08-23 |  |
 
-### angel-beats (1)
+### angel-beats (2)
 
 | rule | value | reason | ruled | retires when |
 |---|---|---|---|---|
+| `T29` | {"14":"special","15":"special","16":"special"} | Rows 14-16 ('Another Epilogue', 'Stairway to Heaven' — BD/DVD specials 2010-12-22; 'Hell's Kitchen' — the 2015 BD-box special) numbered after the 13-episode TV run; no component covers them (structure: N7 + special components). | Sean 2026-08-26 · https://en.wikipedia.org/wiki/List_of_Angel_Beats!_episodes |  |
 | `N1` | {"adopted":[14,16]} | Episodes 14-16 are the OVA specials — broadcast content the community numbers, so the displayed total floors at our row count rather than the 13-episode source count. | Sean 2026-08-24 |  |
 
 ### angel-heart (1)
@@ -655,16 +656,18 @@
 | `A7` | {"episode":21,"bound":"Mary Magdalene flashback pulls v6 material (36-41) far out of order inside an otherwise anime-original stretch — graft, not this episo… | A2: the Mary Magdalene flashback pulls v6 material (36-41) far out of order inside an otherwise anime-original stretch — a graft, not this episode's position | session 2026-08-24 · scripts/ingest/research/batch17/out/chrono-crusade.json, scripts/ingest/apply-research-batch-17.ts, §12.42 |  |
 | `T6` | {"5":"mixed","7":"mixed","8":"mixed","11":"mixed","12":"mixed","14":"mixed","15":"mixed","16":"mixed","17":"mixed","18":"mixed","19":"mixed","20":"mixed","21… | The anime departs after ep 13: 5/7/8/11/12 are original bridges on canon continuity, 14-21 the "primarily original" stretch that still pulls manga beats (Wikipedia lead + MU + ja-WP), 22-24 the original ending. T4.3 (T27, 2026-08-26): anime-only-canon → filler (adheres to no source; the studio-ending class A-7 carries a divergence annotation and stays on the review list — twin-star 21-50 explicitly, T4-GLOSSARY §7). | session 2026-08-24 · scripts/ingest/research/batch17/out/chrono-crusade.json |  |
 
-### clannad (1)
+### clannad (2)
 
 | rule | value | reason | ruled | retires when |
 |---|---|---|---|---|
+| `T29` | {"24":"ova"} | Ep 24 'Another World: Tomoyo Chapter' is the DVD OVA (2008-07-16) after the 23-episode TV run (en-WP episode list; Clannad Wiki). Canon (adapts the VN's Tomoyo route, T6 ruling 2026-08-26). | Sean 2026-08-26 · https://en.wikipedia.org/wiki/List_of_Clannad_episodes, https://clannad.fandom.com/wiki/Another_World:_Tomoyo_Chapter |  |
 | `T6` | {"24":"canon"} | Ep 24 'Another World: Tomoyo Chapter' (OVA, 2008-07-16) adapts the visual novel's Tomoyo route — an alternate route of the SOURCE, not a studio invention (Clannad Wiki: 'highlighting segments of Tomoyo's visual novel route'; en-WP: alternate timeline from the TV series). AFL's anime-canon on a VN series maps filler by T27; the cited route makes it canon relative to the VN. Instrument none (no mapping). T4.3 follow-up 2026-08-26. | Sean 2026-08-26 · https://clannad.fandom.com/wiki/Another_World:_Tomoyo_Chapter, https://en.wikipedia.org/wiki/List_of_Clannad_episodes |  |
 
-### clannad-after-story (1)
+### clannad-after-story (2)
 
 | rule | value | reason | ruled | retires when |
 |---|---|---|---|---|
+| `T29` | {"24":"recap","25":"ova"} | Ep 24 'Under the Green Tree' (2009-03-26) is the summary episode — Tomoya tells Ushio the story from meeting Nagisa to her birth (en-WP); ep 25 'Another World: Kyou Chapter' is the DVD OVA (2009-07-01). | Sean 2026-08-26 · https://en.wikipedia.org/wiki/List_of_Clannad_episodes, https://clannad.fandom.com/wiki/Another_World:_Kyou_Chapter |  |
 | `T6` | {"23":"filler","25":"canon"} | Ep 25 'Another World: Kyou Chapter' (OVA, 2009-07-01) adapts the visual novel's Kyou route (Clannad Wiki: 'based on the events of Kyou's route'; en-WP: alternate timeline) → canon relative to the VN. Ep 23 'The Event from One Year Before' is an anime-original extra set a year before the story (Clannad Wiki + en-WP) → filler, ruled so it leaves the afl_anime_canon_unruled queue. Ep 24 is the recap (AFL filler, untouched). T4.3 follow-up 2026-08-26. | Sean 2026-08-26 · https://clannad.fandom.com/wiki/Another_World:_Kyou_Chapter, https://clannad.fandom.com/wiki/The_Event_from_One_Year_Before, https://en.wikipedia.org/wiki/List_of_Clannad_episodes |  |
 
 ### claymore (12)
@@ -826,11 +829,12 @@
 | `I17` | {"to":"dragon-ball-z","kind":"remake"} | Kai is a superseding re-cut/re-adaptation of Z — remake (not an AniList concept, so the ruling overrides the auto kind). | session 2026-08-22 · docs/franchise-rulings.md |  |
 | `N7` | 11359 | B (medium): Kai special = ep 98; community-practice based — re-open if evidence emerges. | Sean 2026-08-23 |  |
 
-### durarara (2)
+### durarara (3)
 
 | rule | value | reason | ruled | retires when |
 |---|---|---|---|---|
 | `T26` | [{"episodes":[25],"kind":"loose_parallel","note":"Records the tie without treating it as adaptation: the OVA gives Mairu Orihara, Kururi Orihara and Max Sand… | Batch 18 wave 3 (2026-08-26): filler + loose_parallel (medium). | Sean 2026-08-26 · scripts/ingest/research/batch18/out/durarara.json |  |
+| `T29` | {"25":"ova"} | Row 25 is the S1 OVA 天下泰平 (DVD 13, 2011-02-23) — batch 18 wave 3; the x2 Shou component starts one row late (structure task), so no component covers it. | Sean 2026-08-26 · scripts/ingest/research/batch18/out/durarara.json |  |
 | `T6` | {"25":"filler"} | Batch 18 wave 3 (2026-08-26): the S1 OVA 天下泰平 (DVD 13, 2011-02-23) — 'adapted from' empty where every TV row is filled; no matching Narita short story; pre-debuts vol-4 characters → filler + loose_parallel (medium). STRUCTURE: components off by one from row 25. | Sean 2026-08-26 · scripts/ingest/research/batch18/out/durarara.json |  |
 
 ### edens-zero (2)
@@ -1916,13 +1920,14 @@
 | `A43` | {"episodes":[25,26],"kind":"divergence","chapters":"anime-original (parallels 25-26)","note":"research-tier batch 10 (2026-08-23, agent-verified 2+ sources, … | Ouran Fair + Éclair are anime-only; Éclair does not exist in the manga | session 2026-08-23 · scripts/ingest/apply-research-batch-10.ts, scratchpad batch10/ouran-high-school-host-club.json (session scratchpad, not on disk), docs/changelog.md §12.29 |  |
 | `A40` | {"table":"series","mapping_mode":"loose"} | pervasive volume-jumping from ep 10 + anime-original finale → loose (sgt-frog class); the MU pin (ch 37) becomes the continue point, not an end anchor. Research-ruled. | session 2026-08-23 · scripts/ingest/apply-research-batch-10.ts, scratchpad batch10/ouran-high-school-host-club.json (session scratchpad, not on disk), docs/changelog.md §12.29 |  |
 
-### outlaw-star (6)
+### outlaw-star (7)
 
 | rule | value | reason | ruled | retires when |
 |---|---|---|---|---|
 | `G53` | {"1":"1998-01-08","8":"1998-02-26"} | Both stored values are animefillerlist's: ep 1 1998-01-05 → 1998-01-08 (ja-WP, en-WP, fandom, AniList startDate, Sunrise official 放送開始 1998年01月08日); ep 8 1998-12-26 → 1998-02-26 (ja-WP, en-WP, fandom) — the ep-8 typo was the outlaw-star entry in the G54 airdate_regression queue. MAL's Jan 9 / Feb 27 are the post-midnight dates of a 25:15 slot, not a conflict. Ep 23's stored 1998-06-04 is for a broadcast that never happened (Sunrise: 第23話 TV未放映) — left for a ruling on whether G53 may carry NULL. | Sean 2026-08-26 · scripts/ingest/research/batch18/out/outlaw-star.json, scripts/ingest/research/batch18/verify/outlaw-star.md, https://www.sunrise-inc.co.jp/work/detail.php?cid=94, https://ja.wikipedia.org/wiki/星方武侠アウトロースター |  |
 | `T25` | original | AniList says source MANGA, but the show is a co-primary media-mix, not an adaptation: Sunrise's official page credits 原作／矢立 肇、伊東岳彦 on the anime and 漫画／伊東岳彦 as the parallel branch (「メディアミックス作品でもある」); Hajime Yatate — Sunrise's house pseudonym — sits in the MANGA's own vol-1 index; Ito plotted the anime from 1994, the manga started 「テレビの放送に先駆けて」 as a lead-in, and he scripted ep 19 himself. The anime IS its own source; the 3-volume manga is a sibling telling (Sean's A40/G3 rulings already found no chapter mapping meaningful). Distinct from the Evangelion class (T21: manga adapts the anime) — sibling BY DESIGN. Batch 18, verified R24. | Sean 2026-08-26 · https://www.sunrise-world.net/titles/pickup_094.php, https://ja.wikipedia.org/wiki/星方武侠アウトロースター, scripts/ingest/research/batch18/verify/outlaw-star.md |  |
 | `T26` | [{"episodes":[1,2],"kind":"divergence","chapters":"vol 1 (ch 1-4)","note":"Same opening events, different execution: the manga's ch 1 antagonist (Wraith, rev… | Batch 18 (2026-08-26), verified R24, Sean ruled the series original (co-primary media-mix); the manga overlap survives as trivia, never as an anchor. | Sean 2026-08-26 · scripts/ingest/research/batch18/out/outlaw-star.json, scripts/ingest/research/batch18/verify/outlaw-star.md, https://www.sunrise-world.net/titles/pickup_094.php |  |
+| `T29` | {"25":"tv","26":"tv"} | Rows 25-26 ('Maze of Despair', 'Return to Space', 1998-06-18/25) are the series' last two TV episodes in the 26-episode space; the component's 1-24 span is AniList's TV-aired count (16 and 23 were 未放映) — a stale span (I33 reconcile), not a format question. | Sean 2026-08-26 · https://www.sunrise-inc.co.jp/work/detail.php?cid=94, scripts/ingest/research/batch18/verify/outlaw-star.md |  |
 | `A40` | {"mapping_mode":"loose"} | parallel telling: anime finished ~11 months before the manga; episodic vs manga's direct Leyline drive (Wikipedia + anime-planet) | Sean 2026-08-24 · scripts/ingest/apply-research-batch.ts |  |
 | `G3` | {"flags":"open → confirmed","verdict":"research-tier verdict: loose adaptation — no chapter mapping is meaningful; mapping_mode=loose; Sean sign-off 2026-08-… | open ingest_flags closed with verdict: research-tier verdict: loose adaptation — no chapter mapping is meaningful; mapping_mode=loose; Sean sign-off 2026-08-24 | Sean 2026-08-24 · scripts/ingest/apply-research-batch.ts |  |
 | `T6` | {"1":"canon","2":"canon","3":"canon","4":"canon","5":"canon","6":"canon","7":"canon","8":"canon","9":"canon","10":"canon","11":"canon","12":"canon","13":"can… | Batch 18 (2026-08-26), verified R24, SEAN RULED the SERIES a studio original (SOURCE_TYPE_OVERRIDES): Sunrise's official page credits 原作 矢立肇・伊東岳彦 on the anime and Yatate (Sunrise's pseudonym) sits in the manga's own vol-1 index — a co-primary media-mix, the manga a sibling telling, not the source (A40/G3 already ruled no chapter mapping meaningful). With the anime as its own source every story episode is canon, including AFL's plain 'Filler' rows 13/14/16/18/19/20 (ep 19 = Ito's own screenplay; none are recaps — Sunrise's episode list). Eps 1-2's overlap with manga vol 1 is a divergence annotation, not a mapping. | Sean 2026-08-26 · scripts/ingest/research/batch18/out/outlaw-star.json, scripts/ingest/research/batch18/verify/outlaw-star.md, https://www.sunrise-world.net/titles/pickup_094.php, https://ja.wikipedia.org/wiki/星方武侠アウトロースター |  |
@@ -2108,10 +2113,12 @@
 | `A8` | {"episode":13,"field":"end_chapter"} | S1 finale second half IS ch 10 beat-for-beat (fire attack, blood transfusion, yoko form, Gin, finishing kick); stored END 11 inflated — ch 11 "Blood" is never adapted in S1 | session 2026-08-25 · scripts/ingest/research/batch17/out2/rosario-vampire-asstored.json, scripts/ingest/apply-research-batch-17.ts, §12.46 |  |
 | `A10` | {"episode":13,"field":"start_chapter"} | ch 9's second movement (the rescue decision) opens ep 13; medium confidence per the verifier, better than the stored 10 | session 2026-08-25 · scripts/ingest/research/batch17/out2/rosario-vampire-asstored.json, scripts/ingest/apply-research-batch-17.ts |  |
 
-### rurouni-kenshin (14)
+### rurouni-kenshin (16)
 
 | rule | value | reason | ruled | retires when |
 |---|---|---|---|---|
+| `T29` | {"95":"ova","96":"ova","97":"ova","98":"ova"} | Tsuioku-hen (Trust & Betrayal): four OVAs numbered 95-98 after the 94-episode TV run; canon standing (T23: canon AND OVA), no component covers them. T4-GLOSSARY §4 names them as the FORMAT_OVERRIDES witness. | Sean 2026-08-26 · docs/restructure/T4-GLOSSARY.md §4, https://en.wikipedia.org/wiki/Rurouni_Kenshin:_Trust_%26_Betrayal |  |
+| `T29` | {"99":"ova","100":"ova"} | Seisou-hen (Reflection): the two-part 2001-12 / 2002-03 OVA numbered 99-100 after Tsuioku-hen; stored filler (anime-original epilogue), format ova. No component covers them. | Sean 2026-08-26 · https://en.wikipedia.org/wiki/Rurouni_Kenshin:_Reflection |  |
 | `A3` | {"episode":62,"chapter":151,"volume":18,"source":"manual"} | Kyoto arc end; eps 63+ anime-original. mangashed.com + wheredoestheanimeleaveoff.com + Wikipedia | Sean 2026-08-24 · scripts/ingest/apply-research-batch.ts |  |
 | `G3` | {"flags":"open → confirmed","verdict":"research-tier frontier applied as manual anchor (sources in anchor note); Sean sign-off 2026-08-24"} | open ingest_flags closed with verdict: research-tier frontier applied as manual anchor (sources in anchor note); Sean sign-off 2026-08-24 | Sean 2026-08-24 · scripts/ingest/apply-research-batch.ts |  |
 | `R21` | {"file":"scripts/ingest/research/batch14/out/rurouni-kenshin.json","anchors":33} | batch-14 verdict applied as-curated | session 2026-08-23 · scripts/ingest/research/batch14/out/rurouni-kenshin.json |  |
@@ -2311,11 +2318,12 @@
 | `A43` | {"episodes":[8,9],"kind":"partial","chapters":"33-47","note":"research-tier batch 11 (2026-08-23, agent-verified 2+ sources, full-record): heaviest condensat… | heaviest condensation (page trims) | session 2026-08-23 · scripts/ingest/apply-research-batch-11.ts, scratchpad batch11/summer-time-rendering.json (session scratchpad, not on disk), docs/changelog.md §12.30 |  |
 | `A43` | {"episodes":[25],"kind":"graft","chapters":"139","note":"research-tier batch 11 (2026-08-23, agent-verified 2+ sources, full-record): anime-original epilogue… | anime-original epilogue scenes around the final chapter | session 2026-08-23 · scripts/ingest/apply-research-batch-11.ts, scratchpad batch11/summer-time-rendering.json (session scratchpad, not on disk), docs/changelog.md §12.30 |  |
 
-### sword-art-online (2)
+### sword-art-online (3)
 
 | rule | value | reason | ruled | retires when |
 |---|---|---|---|---|
 | `T26` | [{"episodes":[50],"kind":"adopted","basis":"author","note":"Ordinal Scale (2017-02-18 movie, AFL #50, AniList 21403): Kawahara Reki wrote story + screenplay … | Batch 18 wave 3 (2026-08-26), verified R24, Sean ruled: canon + adopted{author}. | Sean 2026-08-26 · scripts/ingest/research/batch18/out/sword-art-online.json, scripts/ingest/research/batch18/verify/sword-art-online.md, https://sao-movie.net/staffcast/ |  |
+| `T29` | {"50":"movie"} | Row 50 is the Ordinal Scale MOVIE (2017-02-18; AFL #50; AniList 21403 MOVIE), not Extra Edition — batch 18 wave 3, verified R24. No component covers it (structure task: kind: movie component + N7). | Sean 2026-08-26 · scripts/ingest/research/batch18/verify/sword-art-online.md |  |
 | `T6` | {"50":"canon"} | Batch 18 wave 3 (2026-08-26), verified R24, Sean ruled: row 50 IS the Ordinal Scale MOVIE (2017-02-18; AFL #50; AniList 21403), not Extra Edition. Kawahara wrote story + screenplay (official site 脚本 川原礫・伊藤智彦; ja-WP 川原書き下ろしの完全オリジナル作) and two OS-continuity prose stories (Hopeful Chant, Cordial Chords) → canon + adopted{author} by AUTHORSHIP (not side_source — it adapts no book; 'incorporated into LN canon' is uncited, ja-WP 原作未収録). STRUCTURE (separate): no component — N7 ruling + a kind: movie component; do not renumber. | Sean 2026-08-26 · scripts/ingest/research/batch18/out/sword-art-online.json, scripts/ingest/research/batch18/verify/sword-art-online.md, https://sao-movie.net/staffcast/ |  |
 
 ### sword-art-online-alternative-ggo (1)

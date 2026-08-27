@@ -71,7 +71,7 @@
 - `C8` AFG continue-from is reading guidance, not the frontier — aka `continue-from is guidance`, `continue-from-is-guidance`, `sanity band`, `40-chapter band`, `three-numbers model`
 - `C9` Default continue = anchor end + 1 (superseded by C2) *(superseded)* — aka `continue-reading points`, `end+1 default`, `default continue = end + 1`, `apply-continue-points`
 
-**T — Typing & taxonomy** (28)
+**T — Typing & taxonomy** (29)
 - `T1` Episode-type vocabulary: four stored tokens — aka `four tokens`, `AFL class map`, `CLASS_TO_TYPE`, `episodes.type vocabulary`, `type_corrections allowed types`
 - `T2` Episode-type semantics (Sean 2026-08-25) — aka `episode-type semantics`, `Sean's vocabulary`, `typing vocabulary`, `filler = zero canon`, `consensus-canon`, `mixed = canon AND non-canon`
 - `T3` Filler = outside both canons (b17 D3 form) *(superseded)* — aka `b17 D3`, `outside both canons`, `b17 D3 form`
@@ -100,6 +100,7 @@
 - `T26` Overrides are annotations, never a fourth episode type — aka `overrides are annotations`, `adopted annotation`, `adopted`, `retconned`, `side_source`, `adopted basis`, `community canon is not a type`, `no fourth type`, `D-10 annotations`, `annotation_invalid`
 - `T27` Standing is canon / mixed / filler, relative to the source — aka `three standings`, `canon mixed filler only`, `anime-only-canon retired`, `AFL anime_canon mapping`, `aflAnimeCanon`, `afl_anime_canon_unruled`, `standing migration`, `D-10 standing`, `anime only retired`
 - `T28` mixed needs a substantial share: the episode's job decides — aka `materiality bar for mixed`, `episode job test`, `what is this episode's job`, `fragment is an annotation`, `slivers are not mixed`, `Claymore-26 shape`, `mixed threshold`
+- `T29` The format axis: derived, stored, never a type — aka `format axis`, `episodes.format`, `FORMAT_OVERRIDES`, `heal-format`, `format_missing`, `episode_without_component`, `watch_order_kind_missing`, `D-11`, `tv ova special movie recap`
 
 **N — Numbering, counts & chapter spaces** (31)
 - `N1` Episode-floor invariant — aka `episode-floor invariant`, `episode floor`, `floor rule`, `EXTRAS_ADOPTED`
@@ -1327,8 +1328,8 @@ Format (tv / ova / special / movie / recap) is orthogonal to canon standing: epi
 
 - ruled Sean 2026-08-25 (system-evolution "Type taxonomy — target state (Sean, 2026-08-25)")
 - layer **writer**
-- enforced: [supabase/migrations/20260822000000_catalog_pipeline.sql](../supabase/migrations/20260822000000_catalog_pipeline.sql) · [docs/system-evolution.md](../docs/system-evolution.md)
-- **audit: none — automation backlog**
+- enforced: [supabase/migrations/20260822000000_catalog_pipeline.sql](../supabase/migrations/20260822000000_catalog_pipeline.sql) · [lib/format.ts#deriveFormat](../scripts/ingest/lib/format.ts) · [docs/system-evolution.md](../docs/system-evolution.md)
+- audit: `format_missing`
 - witnesses: rurouni-kenshin, kenichi-the-mightiest-disciple
 - aliases: format ⟂ canon standing, format-is-orthogonal, format is orthogonal to standing, never overload episodes.type
 - see: T1, T20
@@ -1403,6 +1404,20 @@ An episode is `mixed` only when a SUBSTANTIAL share of its own plot is the sourc
 - witnesses: claymore, a-certain-scientific-railgun, soul-eater, dragon-ball-super, fullmetal-alchemist
 - aliases: materiality bar for mixed, episode job test, what is this episode's job, fragment is an annotation, slivers are not mixed, Claymore-26 shape, mixed threshold
 - see: T7, T8, A10, T26, T27, A43
+
+### T29 · The format axis: derived, stored, never a type
+
+episodes.format ∈ tv | ova | special | movie | recap is a second, independent axis beside standing (T27) — stored now, surfaced at the UI pass, and NEVER inferred into a type (T23). It is DERIVED by heal-format.ts through deriveFormat: a FORMAT_OVERRIDES ruling (reason + cite) wins; else the containing component's kind (season → tv; ova / special / movie carry their own); a row no component covers and no ruling names stays NULL — the honest gap, listed by format_missing, with the structure cause named by episode_without_component (a numbered special / movie / OVA with no component, or a stale span → N7 + a kind component, never a renumber). watch_order_entries.kind comes from a RULED_RECORDS ruling or an EXACT air-date join to the order-only component (never a title guess); the rest is watch_order_kind_missing. A stored format that disagrees with the derivation is a ruling_violation.
+
+*Why:* T4.0 D-11 (Sean, 2026-08-26): kenshin's Trust & Betrayal rows are canon AND OVAs; SAO row 50 is the Ordinal Scale MOVIE numbered into the run; Clannad After Story 24 is a recap and 25 an OVA; assassination-classroom ep 0 is a numbered special AFL calls anime canon — every one of these was a typing question until format became its own axis. Built T4.4; the 32 rows covered by no component (20 series) are the first honest queue it produced.
+
+- ruled Sean 2026-08-26 (docs/restructure/T4-GLOSSARY.md §4 (D-11); restructure T4.4)
+- layer **writer**
+- enforced: [lib/format.ts#deriveFormat](../scripts/ingest/lib/format.ts) · [lib/rulings/format-overrides.ts#FORMAT_OVERRIDES](../scripts/ingest/lib/rulings/format-overrides.ts) · [heal-format.ts#main](../scripts/ingest/heal-format.ts) · [sync-watch-order.ts#main](../scripts/ingest/sync-watch-order.ts) · [supabase/migrations/20260826400000_episode_format.sql](../supabase/migrations/20260826400000_episode_format.sql)
+- audit: `format_missing`, `episode_without_component`, `watch_order_kind_missing`, `ruling_violation`
+- witnesses: rurouni-kenshin, sword-art-online, clannad-after-story, durarara
+- aliases: format axis, episodes.format, FORMAT_OVERRIDES, heal-format, format_missing, episode_without_component, watch_order_kind_missing, D-11, tv ova special movie recap
+- see: T23, T27, N7, N31, I33
 
 ## N — Numbering, counts & chapter spaces
 
@@ -4214,6 +4229,7 @@ Any component that renders episode-level data consumes the HYDRATED series (getB
 - curation principle → `P10`
 - D-10 annotations → `T26`
 - D-10 standing → `T27`
+- D-11 → `T29`
 - D-5 → `P34`
 - D-9 → `T25`
 - D1 → `G32`
@@ -4274,12 +4290,14 @@ Any component that renders episode-level data consumes the HYDRATED series (getB
 - episode totals derivation → `N34`
 - episode_annotations → `A43`
 - EPISODE_TYPE_OVERRIDES → `T6`
+- episode_without_component → `T29`
 - episode-floor invariant → `N1`
 - episode-list locks → `G44`
 - episode-row ruling order → `N18`
 - episode-type overrides → `T6`
 - episode-type semantics → `T2`
 - episodes writer gate → `N18`
+- episodes.format → `T29`
 - episodes.type vocabulary → `T1`
 - etiquette → `G16`
 - Evangelion class → `T21`
@@ -4329,7 +4347,10 @@ Any component that renders episode-level data consumes the HYDRATED series (getB
 - floor rule → `N1`
 - floor-rule typo lesson → `N2`
 - format ⟂ canon standing → `T23`
+- format axis → `T29`
 - format is orthogonal to standing → `T23`
+- format_missing → `T29`
+- FORMAT_OVERRIDES → `T29`
 - format-is-orthogonal → `T23`
 - formulas never bridge a reorder → `A18`
 - four tokens → `T1`
@@ -4380,6 +4401,7 @@ Any component that renders episode-level data consumes the HYDRATED series (getB
 - hasInstrument → `T25`
 - hasSource → `T22`
 - hasSource vs hasInstrument → `T25`
+- heal-format → `T29`
 - heal-volume-boundaries → `V2`
 - healer roster → `P20`
 - healer-pagination trap → `P32`
@@ -4816,6 +4838,7 @@ Any component that renders episode-level data consumes the HYDRATED series (getB
 - translated-max merge boundary → `N19`
 - triage lane → `R27`
 - tsc -b gate → `P27`
+- tv ova special movie recap → `T29`
 - two modes → `P21`
 - two-chunk rule → `P12`
 - two-source rule → `R3`
@@ -4857,6 +4880,7 @@ Any component that renders episode-level data consumes the HYDRATED series (getB
 - volume-boundary identity + numbering space → `V5`
 - volumes-staleness event → `V8`
 - walk refuses ambiguity → `I22`
+- watch_order_kind_missing → `T29`
 - watch-order entries → `N31`
 - watch-order entries: canonical + surfaced-by-ruling → `N31`
 - watch-order v2 unit rendering → `N32`
@@ -4882,6 +4906,6 @@ Any component that renders episode-level data consumes the HYDRATED series (getB
 
 ## Scoreboard
 
-- rules: 265 (live 248, planned 10, superseded 7)
-- live data rules with no audit class (the automation backlog): 87
-- by layer: writer 136 · display 23 · both 22 · process 84
+- rules: 266 (live 249, planned 10, superseded 7)
+- live data rules with no audit class (the automation backlog): 86
+- by layer: writer 137 · display 23 · both 22 · process 84

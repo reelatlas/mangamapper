@@ -147,6 +147,7 @@ export type Database = {
       episodes: {
         Row: {
           air_date: string | null
+          format: string | null
           number: number
           series_id: string
           title: string
@@ -154,6 +155,7 @@ export type Database = {
         }
         Insert: {
           air_date?: string | null
+          format?: string | null
           number: number
           series_id: string
           title?: string
@@ -161,6 +163,7 @@ export type Database = {
         }
         Update: {
           air_date?: string | null
+          format?: string | null
           number?: number
           series_id?: string
           title?: string

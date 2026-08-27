@@ -14,6 +14,7 @@ import { COMMUNITY_COUNT_OVERRIDES, CONTINUA_SUPPRESSED, EPISODE_TYPE_OVERRIDES,
 import { AIRDATE_REGRESSION_THRESHOLD_DAYS, airdateOrderWalk } from './lib/airdate-order';
 import { AIR_DATE_OVERRIDES } from './lib/rulings/air-dates';
 import { ANCHOR_SUPPRESSED } from './lib/rulings/anchor-suppressed';
+import { deriveFormat } from './lib/format';
 import { deriveSourceKind, seriesHasInstrument, seriesHasSource, SOURCE_TYPE_OVERRIDES } from './lib/rulings/source-kinds';
 import { pickManga } from './lib/resolve';
 import { annotationProblem } from './lib/annotations';
@@ -21,7 +22,7 @@ import { REVIEWED_NUMBERED_SPECIALS } from './lib/rulings/reviewed-specials';
 
 async function main() {
   const series = await selectAll<any>('series', 'id, afl_slug, anilist_id, source_type, manga_status, status, aired_episodes, total_episodes, total_chapters, total_volumes, latest_known_chapters, manga_anilist_id, manga_start_chapter, mapping_mode, asterisk_review');
-  const episodes = await selectAll<any>('episodes', 'series_id, number, type, title, air_date');
+  const episodes = await selectAll<any>('episodes', 'series_id, number, type, title, air_date, format');
   const anchors = await selectAll<any>('chapter_anchors', 'series_id, episode, chapter, start_chapter, chapters_adapted, continue_chapter, continue_note, volume, source');
   const comps = await selectAll<any>('series_components', 'series_id, episode_end, episode_start, anilist_id, kind, label');
   const bounds = await selectAll<any>('volume_boundaries', 'manga_anilist_id, volume, chapter_start, chapter_end');
@@ -83,7 +84,7 @@ async function main() {
     mu_pin_unverified: [],
     rearranged_zone_unanchored: [], rearranged_zone_acknowledged: [],
     title_incomplete: [], airdate_incomplete: [], airdate_regression: [], airdate_withheld: [], asterisk_unreviewed: [],
-    fractional_unmodeled: [], annotation_invalid: [], afl_anime_canon_unruled: [],
+    fractional_unmodeled: [], annotation_invalid: [], afl_anime_canon_unruled: [], format_missing: [], episode_without_component: [], watch_order_kind_missing: [],
     series_without_source_kind: [], no_source: [], no_instrument: [], ok_full: [], ok_no_volume: [], ok_loose: [],
     pending_airing_no_anchor: [], pending_finished_no_totals: [], pending_no_canon: [], pending_other: [],
   };
@@ -156,6 +157,28 @@ async function main() {
       if (d.value !== row.source_type) classes.ruling_violation.push(`${row.id}: source_type '${row.source_type}' ≠ derived '${d.value}' (${d.reason}; T25)`);
       if (SOURCE_TYPE_OVERRIDES[row.id] && row.source_type !== SOURCE_TYPE_OVERRIDES[row.id]) classes.ruling_violation.push(`${row.id}: source_type '${row.source_type}' ≠ ruled '${SOURCE_TYPE_OVERRIDES[row.id]}' (T25)`);
     }
+  }
+  // T29 format axis (T4.4, 2026-08-26): every row's format must equal the
+  // derivation (component kind + FORMAT_OVERRIDES) — a disagreement is a
+  // healer that has not run or a writer that bypassed it; NULL is the honest
+  // gap and its own queue (format_missing), and the structure gap behind
+  // most nulls — a row no component covers — is named separately.
+  {
+    const compsBy = new Map<string, any[]>();
+    for (const c of comps) { if (c.episode_start == null) continue; if (!compsBy.has(c.series_id)) compsBy.set(c.series_id, []); compsBy.get(c.series_id)!.push(c); }
+    const missingBy = new Map<string, number[]>();
+    const uncoveredBy = new Map<string, number[]>();
+    for (const e of episodes) {
+      const comp = (compsBy.get(e.series_id) ?? []).find((c: any) => e.number >= c.episode_start && (c.episode_end == null || e.number <= c.episode_end));
+      const want = deriveFormat(e.series_id, e.number, comp?.kind ?? null);
+      if ((want ?? null) !== (e.format ?? null)) classes.ruling_violation.push(`${e.series_id}: ep ${e.number} format '${e.format}' ≠ derived '${want}' (T29)`);
+      if (!want) { if (!missingBy.has(e.series_id)) missingBy.set(e.series_id, []); missingBy.get(e.series_id)!.push(e.number); }
+      if (!comp) { if (!uncoveredBy.has(e.series_id)) uncoveredBy.set(e.series_id, []); uncoveredBy.get(e.series_id)!.push(e.number); }
+    }
+    for (const [sid, nums] of missingBy) classes.format_missing.push(`${sid}: ${nums.length} rows with no format (${nums.slice(0, 6).join(', ')}${nums.length > 6 ? '…' : ''}) — no component covers them and no FORMAT_OVERRIDES ruling`);
+    for (const [sid, nums] of uncoveredBy) classes.episode_without_component.push(`${sid}: ${nums.length} episode rows covered by no component (${nums.slice(0, 6).join(', ')}${nums.length > 6 ? '…' : ''}) — a numbered special / movie / OVA with no structure row (N7 + kind component), or a stale component span`);
+    const wo = await selectAll<any>('watch_order_entries', 'series_id, position, kind, title');
+    for (const w of wo) if (!w.kind) classes.watch_order_kind_missing.push(`${w.series_id} @${w.position}: "${String(w.title).slice(0, 40)}" has no kind`);
   }
   // A44 anchor suppression (2026-08-26): a stored anchor on a row ruled
   // position-less (cover-page serials, side stories without a chapter number,
