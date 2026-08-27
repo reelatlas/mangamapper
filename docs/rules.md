@@ -56,7 +56,7 @@
 - `A39` Canon gap >12 episodes between anchors = research target — aka `anchor_gap_research target`
 - `A40` Loose series: anchors are borrow-maps, exempt from integrity — aka `loose exemption`, `loose ruling`, `borrow-maps render as stored`, `mapping_mode loose`
 - `A41` A rearranged/graft annotation settles a reorder for audits — aka `ruled reorder exemption`, `rearranged/graft exemption`, `settled reorders`
-- `A42` An exact anchor with no episode row synthesizes the row — aka `anchored row-less episodes`, `cells-at-work 12/13 lesson`, `cells-at-work 12/13`
+- `A42` An exact anchor with no episode row synthesizes the row — aka `anchored row-less episodes`, `cells-at-work 12/13 lesson`, `cells-at-work 12/13`, `anchor_without_row`, `annotation_without_row`, `orphan anchor`, `orphan records`, `row presence`
 - `A43` Annotations are first-class; asterisk review is a queue — aka `asterisk model`, `asterisk review workflow`, `annotations are first-class`, `episode_annotations`
 - `A44` Position-less rows: a ruled row never takes an anchor — aka `anchor suppression`, `ANCHOR_SUPPRESSED`, `anchorless rows`, `position-less rows`, `cover-page serial rule`, `suppressed anchor`
 - `A45` Retired annotations: a refuted fact is retired by ruling — aka `retired annotations`, `RETIRED_ANNOTATIONS`, `annotation retirement`, `annotation-delete shape`, `annotation deletion`, `annotation_retired_standing`, `retire an annotation`
@@ -854,16 +854,16 @@ An episode carrying a rearranged or graft annotation is a settled reorder: the n
 
 ### A42 · An exact anchor with no episode row synthesizes the row
 
-An exact anchor record proves its episode exists. For any integer-numbered anchor at or below aired_episodes that has no episode row, assembly synthesizes a canon, title-pending row so every consumer (anchor points, frontier, reorder detection) sees the record; a real row always wins. Source row sparseness never hides a researched record from the mapping layer.
+An exact anchor record proves its episode exists. For any integer-numbered anchor at or below aired_episodes that has no episode row, assembly synthesizes a canon, title-pending row so every consumer (anchor points, frontier, reorder detection) sees the record; a real row always wins. Source row sparseness never hides a researched record from the mapping layer. The OUTCOME is listed (2026-08-26): every anchor or annotation standing on a row the sources have not produced is a census line (anchor_without_row / annotation_without_row — the per-row twin of the aired>rows queue), named as AFL lag, a staging fault, a row-less series, or — when the episode exceeds aired_episodes and synthesis refuses it — a numbering fault; never auto-deleted (A6), the rows may still arrive. An annotation on a row-less episode rides only once the row exists.
 
 *Why:* cells-at-work eps 12/13 had research anchors but no AFL/wiki rows; the anchors were invisible and re-flagged as holes.
 
 - ruled session 2026-08-24 (data-pipeline §11 "Anchored row-less episodes (the cells-at-work 12/13 lesson, 2026-08-24)")
 - layer **display**
-- enforced: [src/data/catalog/assemble.ts#toEpisodes](../src/data/catalog/assemble.ts)
-- **audit: none — automation backlog**
-- witnesses: cells-at-work
-- aliases: anchored row-less episodes, cells-at-work 12/13 lesson, cells-at-work 12/13
+- enforced: [src/data/catalog/assemble.ts#toEpisodes](../src/data/catalog/assemble.ts) · [lib/row-presence.ts#orphanRecords](../scripts/ingest/lib/row-presence.ts) · [audit-ui-truth.ts#anchor_without_row](../scripts/ingest/audit-ui-truth.ts)
+- audit: `anchor_without_row`, `annotation_without_row`
+- witnesses: cells-at-work, to-love-ru, we-never-learn-bokuben, shy
+- aliases: anchored row-less episodes, cells-at-work 12/13 lesson, cells-at-work 12/13, anchor_without_row, annotation_without_row, orphan anchor, orphan records, row presence
 - see: A1, A33, episode-floor invariant
 
 ### A43 · Annotations are first-class; asterisk review is a queue
@@ -4107,6 +4107,7 @@ Any component that renders episode-level data consumes the HYDRATED series (getB
 - anchor tier precedence → `A24`
 - anchor_gap_research target → `A39`
 - ANCHOR_SUPPRESSED → `A44`
+- anchor_without_row → `A42`
 - anchor-aware interpolation → `A33`
 - anchor-freshness rule → `A27`
 - anchored interpolation → `A33`
@@ -4130,6 +4131,7 @@ Any component that renders episode-level data consumes the HYDRATED series (getB
 - annotation retirement → `A45`
 - annotation_invalid → `T26`
 - annotation_retired_standing → `A45`
+- annotation_without_row → `A42`
 - annotation-delete shape → `A45`
 - annotations are first-class → `A43`
 - ANY debate about final episodes → `T13`
@@ -4674,6 +4676,8 @@ Any component that renders episode-level data consumes the HYDRATED series (getB
 - only ending → `T10`
 - only-ending class → `T10`
 - order-only components never count → `N4`
+- orphan anchor → `A42`
+- orphan records → `A42`
 - orphaned-verdict review → `R26`
 - Oshi ep-4 lesson → `A21`
 - Oshi no Ko rule → `R4`
@@ -4776,6 +4780,7 @@ Any component that renders episode-level data consumes the HYDRATED series (getB
 - retype stays research-tier → `T6`
 - REVIEWED_NUMBERED_SPECIALS → `N7`
 - routine deep skips locked → `P25`
+- row presence → `A42`
 - row-count identity → `R19`
 - row-count identity first → `R19`
 - ruled air dates → `G53`
@@ -5016,5 +5021,5 @@ Any component that renders episode-level data consumes the HYDRATED series (getB
 ## Scoreboard
 
 - rules: 270 (live 255, planned 8, superseded 7)
-- live data rules with no audit class (the automation backlog): 85
+- live data rules with no audit class (the automation backlog): 84
 - by layer: writer 141 · display 23 · both 23 · process 83

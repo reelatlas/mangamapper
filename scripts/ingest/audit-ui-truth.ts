@@ -17,6 +17,7 @@ import { sliverStart } from './lib/sliver';
 import { RULED_STRUCTURE, RULED_EXTRA_KEYS } from './lib/rulings/structure';
 import { RETIRED_ANNOTATIONS } from './lib/rulings/retired-annotations';
 import { honestTerminal, pinRedundant } from './lib/honest-terminal';
+import { orphanRecords } from './lib/row-presence';
 import { STANDING_ANNOTATIONS } from './lib/rulings/standing-annotations';
 import { AIR_DATE_OVERRIDES } from './lib/rulings/air-dates';
 import { ANCHOR_SUPPRESSED } from './lib/rulings/anchor-suppressed';
@@ -89,7 +90,7 @@ async function main() {
     integrity_degenerate_span: degenerateSpans,
     special_numbered_unreviewed: [], anchor_gap_research: [], frontier_tail_null: [],
     anchor_nonmonotonic: [], anchor_start_offtrend: [], start_sliver_mismatch: [], start_without_span: [], anchor_beyond_chapter_space: [], anchor_beyond_display_total: [], anchor_fractional_chapter: [], anchor_on_noncanon_row: [], continue_skip_unnoted: [], boundaries_degenerate: [], ruling_violation: [], repair_on_derivation_tier: [],
-    mu_pin_unverified: [], mu_pin_flag_redundant: [],
+    mu_pin_unverified: [], mu_pin_flag_redundant: [], anchor_without_row: [], annotation_without_row: [],
     rearranged_zone_unanchored: [], rearranged_zone_acknowledged: [],
     title_incomplete: [], airdate_incomplete: [], airdate_regression: [], airdate_withheld: [], episode_date_off_window: [], asterisk_unreviewed: [],
     fractional_unmodeled: [], annotation_invalid: [], annotation_retired_standing: [], afl_anime_canon_unruled: [], format_missing: [], episode_without_component: [], watch_order_kind_missing: [],
@@ -113,6 +114,29 @@ async function main() {
     // I39: a ruled extra is its own N7 review
     if (c.kind && c.kind !== 'season' && c.episode_start != null && !REVIEWED_NUMBERED_SPECIALS.has(`${c.series_id}:${c.anilist_id}`) && !RULED_EXTRA_KEYS.has(`${c.series_id}:${c.anilist_id}`)) {
       classes.special_numbered_unreviewed.push(`${c.series_id}: ${c.kind} "${c.label ?? c.anilist_id}" numbered ${c.episode_start}-${c.episode_end ?? '?'} [${c.series_id}:${c.anilist_id}]`);
+    }
+  }
+  // A42 outcome check (2026-08-26, the third post-wave-1 /add-rule): an
+  // anchor or annotation standing on an episode row the sources have not
+  // produced. The display synthesizes the row (A42) so nothing is hidden
+  // from the mapping — but the missing row is a fact to see: AFL lag
+  // (research ahead of rows), a staging fault (cells-at-work's AFL page
+  // staged 0 rows), a row-less series carrying only an MU pin, or a record
+  // past aired_episodes (a numbering fault, named as such). Lists, never
+  // deletes (A6) — the rows may still arrive.
+  {
+    const airedBy = new Map<string, number | null>(series.map((s: any) => [s.id, s.aired_episodes]));
+    const annosAll = await selectAll<{ series_id: string; episode: number; kind: string }>('episode_annotations', 'series_id, episode, kind');
+    const grp = <T extends { series_id: string; episode: number }>(list: { record: T; beyondAired: boolean }[], label: (r: T) => string) => {
+      const by = new Map<string, { items: string[]; beyond: number }>();
+      for (const o of list) { if (!by.has(o.record.series_id)) by.set(o.record.series_id, { items: [], beyond: 0 }); const g = by.get(o.record.series_id)!; g.items.push(label(o.record) + (o.beyondAired ? '!' : '')); if (o.beyondAired) g.beyond++; }
+      return by;
+    };
+    for (const [sid, g] of grp(orphanRecords(episodes, anchors.map((a: any) => ({ series_id: a.series_id, episode: a.episode, source: a.source })), airedBy), (r) => `${r.episode} (${(r as any).source})`)) {
+      classes.anchor_without_row.push(`${sid}: ${g.items.length} anchor${g.items.length === 1 ? '' : 's'} on rows that do not exist — ${g.items.join(', ')}${g.beyond ? ` — ${g.beyond} past aired_episodes (numbering fault)` : ` (${(airedBy.get(sid) ?? '?')} aired; AFL lag / staging fault / row-less series — the display synthesizes the row, A42)`}`);
+    }
+    for (const [sid, g] of grp(orphanRecords(episodes, annosAll, airedBy), (r) => `${r.episode}:${r.kind}`)) {
+      classes.annotation_without_row.push(`${sid}: ${g.items.length} annotation${g.items.length === 1 ? '' : 's'} on rows that do not exist — ${g.items.join(', ')}${g.beyond ? ` — ${g.beyond} past aired_episodes` : ''}`);
     }
   }
   // G56 outcome check (2026-08-26): an OPEN "MU frontier pin lands on a

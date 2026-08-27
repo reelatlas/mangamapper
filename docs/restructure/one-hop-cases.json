@@ -306,6 +306,18 @@
         "pin"
       ],
       "source": "batch-19 wave 1 verifier (claymore: 'flag #945 resolves' overstated)"
+    },
+    {
+      "ask": "research anchored episodes whose rows AFL never produced (cells-at-work 12-13) — do the anchors render, and where do I see which anchors sit on missing rows?",
+      "expected": [
+        "A42"
+      ],
+      "terms": [
+        "row-less",
+        "synthesizes",
+        "anchor_without_row"
+      ],
+      "source": "consolidate deep after batch 19 wave 1: 21 orphan anchors invisible except via the aired>rows queue"
     }
   ]
 }

@@ -607,6 +607,28 @@
    durable guard. Lesson for the floor rule: a >2 overshoot sourced from a
    SINGLE chart row with no corroborating content anywhere is a typo
    candidate, not an adoption candidate.
+73. ✅ **A42 gets its outcome class — `anchor_without_row` /
+   `annotation_without_row` (2026-08-26; the third post-wave-1 /add-rule).**
+   Not a new rule: A42 ("an exact anchor with no episode row synthesizes the
+   row", the cells-at-work 12/13 lesson) was a display-only record with an
+   EMPTY audit-class cell. The consolidate-deep probe found what it was
+   hiding: 21 anchors on 9 series and 20 annotations on 3 series standing on
+   rows the sources never produced — visible only through the aired>rows
+   queue. Built: `lib/row-presence.ts#orphanRecords` (pure, 4 tests; a
+   record past aired_episodes is flagged as a NUMBERING FAULT, since
+   assembly refuses to synthesize it) and two census classes that LIST,
+   never delete (A6): `anchor_without_row` — cells-at-work 12-13 / 20-21
+   (its AFL page staged 0 rows), to-love-ru 39-44 and bokuben 26 (AFL lag,
+   research ahead of rows), shy 24 / orient 24 / cells-at-work-code-black 13
+   / one-piece-log-fish-man-island-saga 21 (row-less series carrying one MU
+   pin each), arslan 33, shounan-junai-gumi 1-5 (a row-less series with
+   research anchors); `annotation_without_row` — to-love-ru, bokuben,
+   shounan-junai-gumi. A42's record gains the lib + census enforcement
+   sites, the aliases and the witnesses; its statement now says annotations
+   ride only once the row exists. No writer changed (research ahead of rows
+   is legitimate; the display synthesizes the row) — so no /consolidate
+   deep. Edges rebuilt and deployed (lib-hash). The three post-wave-1
+   /add-rules are done (A45, G56, A42's class); next is Sean's go on wave 2.
 72. ✅ **G56 — HONEST TERMINAL: a covered MU pin is redundant, not a flag
    (2026-08-26; the second post-wave-1 /add-rule).** MU's anime field names
    the LAST EPISODE of a studio ending ("Vol 11, Chap 59 (Original Ending
