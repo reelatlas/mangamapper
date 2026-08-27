@@ -607,6 +607,49 @@
    durable guard. Lesson for the floor rule: a >2 overshoot sourced from a
    SINGLE chart row with no corroborating content anywhere is a typo
    candidate, not an adoption candidate.
+70. ✅ **CONSOLIDATE DEEP — batch 19 wave 1 closing pass (2026-08-26; P21:
+   C1's enforcement site changed).** Step 0 green. **The C1 guard,
+   catalog-wide:** 2,342 stored continues sit at or below their own END (the
+   C1 / C3 shapes — mostly AFG-derived parity rows); exactly ONE would have
+   been converted by the old parity healer (soul-eater 36 → 38); the guard
+   now protects all 2,342 from future neighbour changes. `npm run heal` was
+   idempotent (0 changes). **Deep rescan (P23/P24):** (1) `retiresWhen`
+   worklist — RETIRED the 27 A-6 seeded-start records (E3), claymore's T6
+   "nothing retyped until T4.0" hold, railgun's three ep-12 / ep-14 notes
+   (wave 1), two stitched I33 records; DROPPED the fotbs 3864 and dr-stone
+   142876 N7 reviewed-specials entries on their own condition (both
+   components are order-only). Still open by design: T24, D2 (prisma /
+   rayearth), the Sean forks (rosario 12/13, kamisama ep 10, dragon-maid ep
+   25, iruma ep 63), the airing-event chains (kingdom Zoku-hen, golden-kamuy).
+   (2) Stale flags — seven dismissed with reasons (#817 / #787 kenshin-2023
+   after E2; #943 trigun; #841 soul-eater; #849 railgun; #928 / #439 chrono).
+   (3) Rulings on rows that do not exist: 29 hits, all explained — N8/N2
+   drop rulings by design, and ANCHORS RESEARCHED AHEAD OF ROWS on
+   cells-at-work 12-13 / 20-21, to-love-ru 39-44, bokuben 18-26 — the
+   `integrity_total_beyond_eps` queue (AFL lag, and cells-at-work's AFL page
+   staged 0 rows). Ran the `wiki-episodes-backfill` EVENT (the PLAN's
+   post-E2 item) over the 12 queue series through the G55 gate: dai +83
+   rows, 5D's row 155 and prince-of-tennis row 1 recreated; **G55 fired for
+   real — prince-of-tennis's page family carried 24 rows dated 2006-2009 (a
+   namesake) and refused every one** (flag #1017); cells-at-work /
+   to-love-ru / bokuben found pages but could not offset-lock (queue stays).
+   (4) A probe false positive worth recording: 28 I-family rulings look like
+   "series that no longer exist" because I11/I15/I17/I24/I27 are keyed by
+   AFL slug / franchise key by design. **Census deltas (all explained):**
+   integrity_total_beyond_eps 12 → 9 and title_incomplete 28 → 25 (the
+   backfill); anchor_gap_research 10 → 11 (dai's 83 new canon rows are
+   unanchored past ep 17 — batch 20 A2 territory); ruling_violation 0;
+   verify-series-display 220/0; permanence_violation 0 (no locks);
+   permanence_candidate 38 = Sean's signing queue after the UI pass. Four
+   edges rebuilt and deployed (lib-hash current). **Capture (P29):** rule →
+   C1's healer site (done this wave); class candidate → `anchor_without_row`
+   (an anchor whose episode row does not exist — today invisible except via
+   the aired>rows queue); process items unchanged and queued for after this
+   pass — the annotation-delete shape, the MU "EP N" pin skip / G37, the
+   `loose_parallel` gloss, trigun's durable space ruling. Traps → the
+   research-agent definition at the next batch close (WAVE1-RECOVERY §Traps).
+   Cycle position: batch 19 wave 1 CLOSED; next is Sean's go on the three
+   /add-rules or wave 2 (B2-B5), with D2 / apothecary parked.
 69. ✅ **BATCH 19 WAVE 1 — research, verify, rule, apply (2026-08-26).** The
    first anchoring wave after the restructure: A3 frontier tails + B1
    batch-18 follow-ups as ONE list under `batch19/PROTOCOL.md` (batch 17's

@@ -62,15 +62,7 @@ export const ENTRIES: RulingEntry<number>[] = [
     ruledBy: 'session',
     ruledOn: '2026-08-24',
   },
-  {
-    seriesId: 'fist-of-the-blue-sky',
-    ruleId: 'N7',
-    value: 3864,
-    reason: 'Reviewed as: 4 DVD episodes, AFL numbers 23-26. STALE (DRIFT-LIST §B): the 23-26 span was demoted to order-only on 2026-08-25b, so the component no longer carries an episode span and this entry is inert — kept as the record of the review, not deleted.',
-    ruledBy: 'session',
-    ruledOn: '2026-08-24',
-    retiresWhen: 'the fotbs 3864 component is confirmed order-only by audit-ui-truth (no numbered span) — then drop the entry',
-  },
+  // DROPPED 2026-08-26 (P24, consolidate deep after batch 19 wave 1): the fist-of-the-blue-sky 3864 component is confirmed ORDER-ONLY by the census (null span) — the entry's own retire condition; the review is preserved in git history.
   {
     seriesId: 'hajime-no-ippo-the-fighting',
     ruleId: 'N7',
@@ -79,15 +71,7 @@ export const ENTRIES: RulingEntry<number>[] = [
     ruledBy: 'session',
     ruledOn: '2026-08-24',
   },
-  {
-    seriesId: 'dr-stone',
-    ruleId: 'N7',
-    value: 142876,
-    reason: "Ryuusui: order-only at position 36 (after Stone Wars) — Sean confirmed 2026-08-24; the community places it mid-run. STALE wording (DRIFT-LIST §B): the source comment's \"his 'ep 95' was a typo\" aside records a superseded exchange; the ruling that stands is order-only at 36 (SOURCE_NUMBERING_SHIFTS drops AFL's row 36). As an order-only component it carries no numbered span, so this entry is inert — kept as the record.",
-    ruledBy: 'Sean',
-    ruledOn: '2026-08-24',
-    retiresWhen: 'the dr-stone 142876 component is confirmed order-only by audit-ui-truth (no numbered span) — then drop the entry',
-  },
+  // DROPPED 2026-08-26 (P24, consolidate deep after batch 19 wave 1): the dr-stone 142876 component is confirmed ORDER-ONLY by the census (null span) — the entry's own retire condition; the review is preserved in git history.
   // ── Queue-2 Groups A+B, Sean sign-off 2026-08-23: continuation/finale
   // content the community counts as episodic canon (kind stays on the
   // component for UI differentiation later).

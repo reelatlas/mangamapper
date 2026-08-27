@@ -200,6 +200,6 @@ export const ENTRIES: RulingEntry[] = [
   {
     seriesId: 'rent-a-girlfriend', ruleId: 'I33', value: { flag: 'count_mismatch', aired: 36 },
     reason: 'S4 (our eps 37-48, 2025; ends ~ch 214/vol 25 per WDTALO — single source, verify) and S5 (airing 2026) are not stitched; the old MU ch-255 pin was S5-era curation. Kingdom-class stitch, queued on AniList recovery, then anchor research.',
-    ruledBy: 'session', ruledOn: ON, cite: cite('rent-a-girlfriend'), retiresWhen: 'stitched 2026-08-23 (§12.34 stitch queue: Rent-a-Girlfriend S4/S5 → 60)',
+    ruledBy: 'session', ruledOn: ON, cite: cite('rent-a-girlfriend'), retiresWhen: 'RETIRED — stitched 2026-08-23 (§12.34: Rent-a-Girlfriend S4/S5 → 60); the record is history',
   },
 ];

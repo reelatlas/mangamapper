@@ -249,7 +249,7 @@ const ROSARIO = 'rosario-vampire';
 const IRUMA = 'welcome-to-demon-school-iruma-kun';
 const LAUNDERED = `CAVEAT (§12.45 / DRIFT-LIST): this row was marked 'as-stored' — confirmation-laundering: the verifier found the ep-12→14 ch-17 graft claim factually false; an inherited stored value was blessed with an invented rationale. Not researched data.`;
 const AS_STORED_SWEEP: Record<string, { reason: string; retiresWhen: string }> = {
-  [`${RAILGUN}#14`]: { reason: LAUNDERED, retiresWhen: 'OVERTAKEN — refuted §12.45 (railgun ep 14 confirmation-laundering; ep-12 continue note still repeats the refuted graft claim — cleanup pending)' },
+  [`${RAILGUN}#14`]: { reason: LAUNDERED, retiresWhen: 'OVERTAKEN — refuted §12.45; the ep-12 continue was re-derived in batch 19 wave 1 (17 → 18 parity against ep 26; ch 17 was animated at ep 2) — cleanup DONE 2026-08-26 (§12.69)' },
   [`${ROSARIO}#11`]: { reason: "CAVEAT (§12.45 as-stored sweep): REPAIRED 9→8/v2 — the wiki is off-by-one from ep 11 (new source trap); the 'as-stored' 9 was a laundered inherited value.", retiresWhen: 'repaired §12.45 (rosario ep 11 9→8)' },
   [`${ROSARIO}#3`]: { reason: 'as-stored row re-checked in the §12.45 sweep: CONFIRMED.', retiresWhen: '' },
   [`${ROSARIO}#5`]: { reason: 'as-stored row re-checked in the §12.45 sweep: CONFIRMED.', retiresWhen: '' },
@@ -291,7 +291,7 @@ const continueEntry = ([sid, ep, cont, why]: ContinueRow): RulingEntry => {
   if (sid === RAILGUN && ep === 12) {
     e.reason = `${why} — CAVEAT (§12.45): this note repeats the REFUTED ep-14 ch-17 graft claim (confirmation-laundering); cleanup pending.`;
     e.cite = cite(sid, SWEEP);
-    e.retiresWhen = 'OVERTAKEN — the ep-14 graft claim was refuted §12.45; this continue note must be re-reasoned';
+    e.retiresWhen = 'RETIRED 2026-08-26 — re-reasoned in batch 19 wave 1 (§12.69): ep 12 continue 17 → 18 parity (ch 17 was animated at ep 2; parity against ep 26, the next row with a KNOWN start)';
   }
   return e;
 };
@@ -337,7 +337,7 @@ export const ENTRIES: RulingEntry[] = [
     value: { table: 'episodes', type: { ...range(13, 13, 'anime-only-canon'), ...range(15, 24, 'anime-only-canon'), ...range(41, 48, 'anime-only-canon') } },
     reason: "railgun: S1 back half (Big Spider/Poltergeist) + S's Silent Party are anime-original (director-confirmed; animefillerlist + fandom arc pages + Wikipedia). Ep 14 EXCEPTED from the retype because it 'grafts manga ch 17' — CAVEAT (§12.45): that graft claim is the refuted as-stored laundering; the ep-14 exception rests on it. Applied once here; the standing ruling is the EPISODE_TYPE_OVERRIDES entry.",
     ruledBy: 'session', ruledOn: RULED_ON, cite: cite(RAILGUN, 'scripts/ingest/lib/resolve.ts EPISODE_TYPE_OVERRIDES a-certain-scientific-railgun', SWEEP),
-    retiresWhen: 'the ep-14 exception is re-ruled after the §12.45 refutation (railgun ep 14 confirmation-laundering)',
+    retiresWhen: 'RETIRED 2026-08-26 — batch 19 wave 1 re-ruled ep 14: stays FILLER, no incorporation reaches it (backlinks + Kamachi\'s later works; verified R24)',
   },
   {
     seriesId: 'ajin-demi-human', ruleId: 'T6',

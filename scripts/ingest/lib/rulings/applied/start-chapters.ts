@@ -6,7 +6,7 @@ import type { RulingEntry } from '../types';
 
 const ON = '2026-08-23';
 const SCRIPT = 'scripts/ingest/apply-start-chapters.ts';
-const RETIRES = 'A-6 healer under the sliver rule';
+const RETIRES = 'RETIRED 2026-08-26 — batch 19 E3 (§12.67): lib/sliver.ts re-derived all 27 under A10 and every seed STANDS; the seeding comments became chapters_adapted on Sean\'s signature (start_without_span 0)';
 
 const start = (seriesId: string, episode: number, start_chapter: number, reason: string, majority = false): RulingEntry => ({
   seriesId, ruleId: majority ? 'A11' : 'A10', value: { episode, start_chapter }, reason: `${reason}${majority ? ' (majority rule decided this value; sliver rule may differ)' : ' (span opens on a whole chapter — sliver and majority rules agree)'}`,

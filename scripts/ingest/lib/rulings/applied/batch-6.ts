@@ -59,5 +59,5 @@ export const ENTRIES: RulingEntry[] = [
   cont('d-gray-man', 206, 'Hallow ends ch 206-208 page-level; safe continue 206+.'),
 
   { seriesId: 'urusei-yatsura', ruleId: 'A40', value: { mapping_mode: 'loose' }, reason: 'researched loose verdict: episodic, out-of-order, source pool ≈ vols 1-29; final arc = the 1988 film.', ...base },
-  { seriesId: 'kingdom', ruleId: 'I33', value: { flag: 'count_mismatch', aired: 129, trueAired: 155 }, reason: 'S5 (130-142, 2024) and S6 part 1 (143-155, Oct-Dec 2025) aired but are not stitched into the entry — extend structure, then anchors 142 → ~490 and 155 → 540 apply (researched, in batch-6 notes). Flag filed once; structure reconciliation is the fix.', ...base, retiresWhen: 'stitched 2026-08-23 (§12.34 stitch queue: Kingdom S5/S6 → 155)' },
+  { seriesId: 'kingdom', ruleId: 'I33', value: { flag: 'count_mismatch', aired: 129, trueAired: 155 }, reason: 'S5 (130-142, 2024) and S6 part 1 (143-155, Oct-Dec 2025) aired but are not stitched into the entry — extend structure, then anchors 142 → ~490 and 155 → 540 apply (researched, in batch-6 notes). Flag filed once; structure reconciliation is the fix.', ...base, retiresWhen: 'RETIRED — stitched 2026-08-23 (§12.34: Kingdom S5/S6 → 155); the record is history' },
 ];
