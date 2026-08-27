@@ -638,7 +638,11 @@
    no audit class). Nothing written to anchors: `start_sliver_mismatch` 2 /
    `start_without_span` 27 stay in the census until Sean signs
    (`apply-e3.ts --apply`), then both go to 0. ruling_violation 0. Lib
-   changed → four edges rebuilt and deployed. E4 next, on Sean's go.
+   changed → four edges rebuilt and deployed. **SIGNED by Sean the same
+   day** (Cursor concurring: "both moves are A10 as already ruled"):
+   `--apply` wrote the 2 START moves and the 27 span records;
+   start_sliver_mismatch 0 / start_without_span 0 / ruling_violation 0.
+   E4 next, as its own stop.
 66. ✅ **BATCH 19 E2 — G55 series-window identity gate; the namesake
    contamination purged (2026-08-26).** The wiki backfill found episode
    lists by NAME and merged a namesake's page. A catalog probe (every row
