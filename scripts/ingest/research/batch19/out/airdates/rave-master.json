@@ -1,0 +1,27 @@
+{
+  "series_id": "rave-master",
+  "summary": "One real typo. Rave Master (Groove Adventure Rave) aired weekly Saturdays from 2001-10-13; ja-WP's 各話リスト carries a 初回放送日 column that gives ep 9 as 12月8日, matching en-WP's 2001-12-08. Stored dates carry no day shift for this series.",
+  "anchors": [],
+  "continue_points": [],
+  "anchor_hostile": [],
+  "annotations": [],
+  "repairs": [
+    {
+      "episode": 9,
+      "field": "air_date",
+      "old": "2001-11-08",
+      "new": "2001-12-08",
+      "why": "Ep 9 'A Bite to Eat' (プルーのひみつ) aired 2001-12-08; ja-WP 各話リスト 初回放送日 = 12月8日 and en-WP = December 8, 2001. Stored 2001-11-08 is a month-digit slip; it is what produced the flagged regression against ep 8 (2001-12-01, correct). Eps 10 and 11 (12-15, 12-22) are correct.",
+      "sources": [
+        "https://ja.wikipedia.org/wiki/RAVE_(%E6%BC%AB%E7%94%BB)",
+        "https://en.wikipedia.org/wiki/List_of_Rave_Master_episodes"
+      ]
+    }
+  ],
+  "type_corrections": [],
+  "structure": {
+    "notes": "51 rows, weekly Saturdays 2001-10-13 to 2002-09-28; numbering matches ja-WP and en-WP one-to-one.",
+    "order_only": []
+  },
+  "flags_for_sean": []
+}

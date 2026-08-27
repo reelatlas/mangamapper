@@ -1,0 +1,27 @@
+{
+  "series_id": "the-devil-is-a-part-timer",
+  "summary": "The withheld ep 9 is recoverable and AFL's day/month were right: 2015-05-30 is a year corruption of 2013-05-30. Season 1 ran weekly Thursdays 2013-04-04 to 2013-06-27 with no skips, and both ja-WP's 各話リスト (初放送日) and en-WP's season-1 table give 第9話 勇者、修羅場を経験する = 2013-05-30. No day shift for this series (stored ep 8 = 2013-05-23 = published).",
+  "anchors": [],
+  "continue_points": [],
+  "anchor_hostile": [],
+  "annotations": [],
+  "repairs": [
+    {
+      "episode": 9,
+      "field": "air_date",
+      "old": null,
+      "new": "2013-05-30",
+      "why": "Ep 9 'The Hero Experiences a Fray' (勇者、修羅場を経験する) aired 2013-05-30. ja-WP はたらく魔王さま! (アニメ) 各話リスト 第9話 Aux5 = 5月30日 (year header 2013年); en-WP 'The Devil Is a Part-Timer! season 1' ep 9 = May 30, 2013. AFL's withheld 2015-05-30 is the same 05-30 with a corrupted year, which is why G55/G54 held it back. Eps 8 (05-23) and 10 (06-06) bracket it exactly one week either side.",
+      "sources": [
+        "https://ja.wikipedia.org/wiki/%E3%81%AF%E3%81%9F%E3%82%89%E3%81%8F%E9%AD%94%E7%8E%8B%E3%81%95%E3%81%BE%21%20%28%E3%82%A2%E3%83%8B%E3%83%A1%29",
+        "https://en.wikipedia.org/wiki/The_Devil_Is_a_Part-Timer%21_season_1"
+      ]
+    }
+  ],
+  "type_corrections": [],
+  "structure": {
+    "notes": "13 rows = season 1 only (2013-04-04..06-27, Thu, Tokyo MX). Season 2 (2022/2023) is not in this series' rows.",
+    "order_only": []
+  },
+  "flags_for_sean": []
+}

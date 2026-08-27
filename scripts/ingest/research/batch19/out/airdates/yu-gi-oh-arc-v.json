@@ -1,0 +1,27 @@
+{
+  "series_id": "yu-gi-oh-arc-v",
+  "summary": "One real typo, on the flagged row itself. ARC-V aired weekly Sundays on TV Tokyo from 2014-04-06; ja-WP's 各話リスト gives 第19話 = 8月17日 and the Yu-Gi-Oh! Fandom episode page for ARC-V 019 gives japanese air date = August 17, 2014 with the English title 'Quiz Quagmire: Part 1' - matching our row's stored title. Our numbering matches ja-WP 1:1 in this zone (eps 17, 18, 20, 21 all agree).",
+  "anchors": [],
+  "continue_points": [],
+  "anchor_hostile": [],
+  "annotations": [],
+  "repairs": [
+    {
+      "episode": 19,
+      "field": "air_date",
+      "old": "2014-04-17",
+      "new": "2014-08-17",
+      "why": "Ep 19 'Quiz Quagmire, Part 1' (知識の宇宙!!九庵堂栄太) aired 2014-08-17. ja-WP 遊☆戯☆王ARC-V 各話リスト 第19話 = 8月17日; Yu-Gi-Oh! Fandom 'Yu-Gi-Oh! ARC-V - Episode 019' japanese air date = August 17, 2014, english title 'Quiz Quagmire: Part 1'. Stored 2014-04-17 is a month-digit slip (04 for 08) and is a Thursday, not a Sunday. Eps 18 (2014-08-10) and 20 (2014-08-24) bracket it exactly one week either side.",
+      "sources": [
+        "https://ja.wikipedia.org/wiki/%E9%81%8A%E2%98%86%E6%88%AF%E2%98%86%E7%8E%8BARC-V",
+        "https://yugioh.fandom.com/wiki/Yu-Gi-Oh%21_ARC-V_-_Episode_019"
+      ]
+    }
+  ],
+  "type_corrections": [],
+  "structure": {
+    "notes": "148 rows; ja-WP numbers 1-148 continuously and our rows match in the checked zone (17-21).",
+    "order_only": []
+  },
+  "flags_for_sean": []
+}

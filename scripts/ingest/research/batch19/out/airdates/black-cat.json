@@ -1,0 +1,33 @@
+{
+  "series_id": "black-cat",
+  "summary": "Air-date lane only, and this one is a TRUE deviation rather than a typo. #15「遠ざかる猫」 was never broadcast in the TBS terrestrial run: ja-WP states the DVD newly included the TV-unaired #15 and renumbered everything after it, en-WP prints OriginalAirDate = '-' and says the episode 'was broadcast exclusively on Animax', and syoboi holds a single ProgItem for Count 15 — Animax (ch21), 2006-05-23 23:00 — while TBS/MBS/others jump 14 → 16. Ep 16's stored 2006-02-02 is therefore CORRECT; ep 15's stored 2006-07-26 is neither a TBS nor an Animax date (it looks like a DVD volume street date). Our 24-row space is the DVD numbering, which is what the sources use.",
+  "anchors": [],
+  "continue_points": [],
+  "anchor_hostile": [],
+  "annotations": [],
+  "repairs": [
+    {
+      "episode": 15,
+      "field": "air_date",
+      "old": "2006-07-26",
+      "new": "2006-05-23",
+      "why": "The episode has no TBS broadcast. Its first (and only) broadcast is Animax 2006-05-23 23:00 per syoboi's ProgItem for TID 685 Count 15 (Animax also carried 14 on 05-16 and 16 on 05-30, so the Animax run is contiguous and includes #15). ja-WP: 「DVD版では、テレビ未放送の#15「遠ざかる猫」が新たに収録され、以降の話数が1話ずつ加算されている」; en-WP: OriginalAirDate '-' + 'The 15th episode was broadcast exclusively on Animax'. Stored 2006-07-26 is supported by no source. If the field's semantic is strictly 'first terrestrial broadcast', the honest value is NULL instead — Sean's call.",
+      "sources": [
+        "https://ja.wikipedia.org/wiki/BLACK_CAT",
+        "https://en.wikipedia.org/wiki/List_of_Black_Cat_episodes",
+        "https://cal.syoboi.jp/tid/685"
+      ]
+    }
+  ],
+  "type_corrections": [],
+  "structure": {
+    "notes": "24 rows = the DVD numbering (23 TV-broadcast episodes + the unaired #15). syoboi, ja-WP and en-WP all use the same 24-episode DVD numbering, so no conversion is needed.",
+    "order_only": [
+      15
+    ]
+  },
+  "flags_for_sean": [
+    "AIRDATE_ORDER_ACK candidate — black-cat ep 15: a first-run SUBSET. TBS (and MBS/ch48/ch79) skipped #15 entirely; it premiered on Animax on 2006-05-23, i.e. AFTER the TBS finale #24 on 2006-03-31. Any correct date for row 15 will sit out of order relative to rows 16-24. Two coherent options: (a) air_date = 2006-05-23 (Animax first broadcast) + an order ack; (b) air_date = NULL (never aired in the run our other rows describe).",
+    "Convention note: our Black Cat rows use the NOMINAL Thursday (TBS 25:25 = Friday 01:25). syoboi prints the Friday calendar date, en-WP the Thursday. Rows 14/16/17 are internally consistent with the Thursday convention, so I did not touch them."
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "series_id": "saga-of-tanya-the-evil",
+  "summary": "Rows 5 and 6 have their whole CONTENT transposed - title AND date together. ja-WP gives 第伍話 はじまりの大隊 (2月3日) and 第陸話 狂気の幕開け (2月10日); en-WP's episode list gives ep 5 'My First Battalion' = 2017-02-03 and ep 6 'Beginning of Madness' = 2017-02-10; AniList's airing schedule agrees. Our ep 5 stores 'Beginning of Madness' + 2017-02-10 and our ep 6 stores 'My First Battalion' + 2017-02-03. Both dates are therefore wrong for their episode numbers, and the fix must swap the TITLES in the same operation or the rows will end up self-inconsistent. Eps 4, 7, 8 are correct and there is no numbering shift (the 2017-02-17 recap 6.5 is correctly absent from our rows).",
+  "anchors": [],
+  "continue_points": [],
+  "anchor_hostile": [],
+  "annotations": [],
+  "repairs": [
+    {
+      "episode": 5,
+      "field": "air_date",
+      "old": "2017-02-10",
+      "new": "2017-02-03",
+      "why": "Episode 5 is 'My First Battalion' (はじまりの大隊), aired 2017-02-03 (Fri 22:00, AT-X). ja-WP 各話リスト 第伍話 = 2月3日; en-WP episode list ep 5 = February 3, 2017; AniList airing schedule ep 5 = 2017-02-03. NOTE: our row 5 currently also holds ep 6's TITLE - swap the titles of rows 5 and 6 together with these dates.",
+      "sources": [
+        "https://ja.wikipedia.org/wiki/%E5%B9%BC%E5%A5%B3%E6%88%A6%E8%A8%98_(%E3%82%A2%E3%83%8B%E3%83%A1)",
+        "https://en.wikipedia.org/wiki/List_of_Saga_of_Tanya_the_Evil_episodes",
+        "https://anilist.co/anime/21613"
+      ]
+    },
+    {
+      "episode": 6,
+      "field": "air_date",
+      "old": "2017-02-03",
+      "new": "2017-02-10",
+      "why": "Episode 6 is 'Beginning of Madness' (狂気の幕開け), aired 2017-02-10. ja-WP 第陸話 = 2月10日; en-WP ep 6 = February 10, 2017; AniList = 2017-02-10. Same transposition as ep 5 - swap the titles with the dates.",
+      "sources": [
+        "https://ja.wikipedia.org/wiki/%E5%B9%BC%E5%A5%B3%E6%88%A6%E8%A8%98_(%E3%82%A2%E3%83%8B%E3%83%A1)",
+        "https://en.wikipedia.org/wiki/List_of_Saga_of_Tanya_the_Evil_episodes",
+        "https://anilist.co/anime/21613"
+      ]
+    }
+  ],
+  "type_corrections": [],
+  "structure": {
+    "notes": "12 rows; the 2017-02-17 recap (en-WP ep '6.5', 戦況報告) is not one of our rows, so ep 7 = 2017-02-24 is correct and there is no off-by-one.",
+    "order_only": []
+  },
+  "flags_for_sean": [
+    "saga-of-tanya-the-evil: NOT an air-date-only defect. Rows 5 and 6 hold each other's title AND date. Applying only the air_date repairs would leave ep 5 titled 'Beginning of Madness' with 2017-02-03 - wrong. The episode_title field of rows 5 and 6 must be swapped in the same apply (ep 5 -> 'My First Battalion', ep 6 -> 'Beginning of Madness'). Any chapter anchors already attached to rows 5/6 should be checked against the same transposition."
+  ]
+}

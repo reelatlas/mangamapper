@@ -1,0 +1,29 @@
+{
+  "series_id": "prison-school",
+  "summary": "The ep-8 regression is a FALSE positive: ep 8 (2015-08-28) is correct and the typo is on ep 7. The 12 TV episodes aired weekly with no skips from 2015-07-11 to 2015-09-26 (published Saturday 01:05 dates); our stored per-episode dates are one day earlier (the Friday 25:05 slot), e.g. stored ep 6 = 2015-08-14 vs published 2015-08-15. The repair keeps that stored convention.",
+  "anchors": [],
+  "continue_points": [],
+  "anchor_hostile": [],
+  "annotations": [],
+  "repairs": [
+    {
+      "episode": 7,
+      "field": "air_date",
+      "old": "2015-12-21",
+      "new": "2015-08-21",
+      "why": "Ep 7 \"Meiko's Delicious Restaurant\" (メイコトゥイユ / 'Meikotouille') aired 2015-08-21 24:05 (published 2015-08-22). Stored 2015-12-21 is a month-digit slip (12 for 08) - the series had ended by December 2015 - and it is what produced the ep-8 regression; ep 8 (2015-08-28, published 08-29) is correct.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Prison_School",
+        "https://anilist.co/anime/20807"
+      ]
+    }
+  ],
+  "type_corrections": [],
+  "structure": {
+    "notes": "12 TV rows, weekly, no skips. The 2016-03-04 'Mad Wax' OVA is our stored series end date but is not one of the 12 flagged rows.",
+    "order_only": []
+  },
+  "flags_for_sean": [
+    "prison-school: our stored series START (2015-07-11) uses the published Saturday date while the per-episode rows use the Friday one - a one-day convention mismatch between the series header and the episode rows, worth a sweep beyond this series."
+  ]
+}

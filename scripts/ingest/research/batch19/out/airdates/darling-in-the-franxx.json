@@ -1,0 +1,30 @@
+{
+  "series_id": "darling-in-the-franxx",
+  "summary": "Air-date lane only. Ep 10's stored 2018-03-17 is CORRECT; the regression is caused by ep 9, whose stored 2018-10-10 is a month-digit corruption of 2018-03-10. The show ran a clean weekly Saturday 23:30 MBS/TBS slot from 2018-01-13, so eps 8/9/10/11 = 03-03 / 03-10 / 03-17 / 03-24 with no gaps. One repair, no true deviation.",
+  "anchors": [],
+  "continue_points": [],
+  "anchor_hostile": [],
+  "annotations": [],
+  "repairs": [
+    {
+      "episode": 9,
+      "field": "air_date",
+      "old": "2018-10-10",
+      "new": "2018-03-10",
+      "why": "syoboi TID 4788 Count 9 = 2018-03-10 23:30 (the whole run is an unbroken weekly Saturday 23:30 sequence 2018-01-13 … 2018-07-07); en-WP List of Darling in the Franxx episodes: ep 9 'Triangle Bomb' = 2018-03-10, cited to the official site darli-fra.jp/story/?no=9. 2018-10-10 is three months after the series ended.",
+      "sources": [
+        "https://cal.syoboi.jp/tid/4788",
+        "https://en.wikipedia.org/wiki/List_of_Darling_in_the_Franxx_episodes",
+        "https://web.archive.org/web/20171226020657/http://darli-fra.jp/story/?no=9"
+      ]
+    }
+  ],
+  "type_corrections": [],
+  "structure": {
+    "notes": "24 rows, 1:1 with ja-WP 第N話 / en-WP EpisodeNumber. No specials or recaps in the row space.",
+    "order_only": []
+  },
+  "flags_for_sean": [
+    "Ep 10 (The City of Eternity) needs no repair: 2018-03-17 is confirmed by syoboi and en-WP. ja-WP's 各話リスト for this series carries no 放送日 column, so syoboi + en-WP (which cites the official darli-fra.jp story pages) are the two sources."
+  ]
+}

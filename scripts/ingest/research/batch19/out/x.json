@@ -1,0 +1,182 @@
+{
+  "series_id": "x",
+  "summary": "The seven anchorless rows in 9-19 split cleanly into two shapes. Eps 9 and 10 are FORWARD grafts: both are built out of volume 8's recruitment beats (Subaru's onmyoji job and the Seishiro illusion at ep 9; Saiki taking Yuzuriha to recruit Aoki at ep 10 - en.wikipedia's vol-8 summary lists exactly these two beats in that order) fused with three per-volume bonus chapters (41.5, 24.5, 34.5). Anchoring them would claim chs 24-28 the viewer has not seen and would have to be walked back at ep 11 (ch 24) and ep 12 (ch 25), so they stay anchor-hostile with the stored 'rearranged' annotations carrying the chapter facts. Eps 15-19 are the remix zone, and inside it exactly two rows land on a VOLUME boundary and move the continuous position forward: ep 15 is volume 11 whole (ch 39-41, closing on Subaru's barrier saving Kamui) and ep 19 is volume 13's back half (ch 51-53, the Yamanote Line block, closing on Yuto postponing the fight - vol 13's last beat). Those two are delivered as anchors; eps 16, 17 and 18 reach into vols 14-16 out of order (ep 16 jumps to the Rainbow Bridge and Seishiro's death in vol 16, then eps 17-18 fall back to vols 14-15 and ep 19 to vol 13) and cannot carry a truthful continuous END. Re-confirmed for the record: NO source anywhere maps an X episode to a chapter - the x1999/xtvclamp fandom (one wiki, 162 pages) has no manga-counterpart field and its '(chapter)' pages are VOLUMES with empty summaries; ja.wikipedia's episode table has no chapter column; MangaDex carries the 1-95 numbering but zero chapter titles. Everything below is volume-boundary derivation, marked medium, exactly as Sean already accepted for eps 2/3/4/6/11/12/13/14.",
+  "anchors": [
+    {
+      "episode": 15,
+      "end_chapter": 41,
+      "start_chapter": 39,
+      "chapters_adapted": "39-41 (volume 11 whole), plus bonus ch 48.5 'X/1999 - Seiichiro Aoki' and vol-12 / vol-13 grafts (see annotations)",
+      "volume": 11,
+      "confidence": "medium",
+      "note": "A4/A10: ep 15's spine is volume 11 entire - Nataku calling Fuma his father, the barrier-stone attack where Nataku hesitates to kill his creator, Kamui unable to raise a barrier and beaten, and the volume's closing beat, Subaru's barrier appearing to save him. All four beats are en-WP's vol-11 summary in order; MangaDex fixes vol 11 = ch 39-41. START 39 because the cold open (Saiki remembering Aoki's training) is the vol-12 BONUS chapter 48.5, not mainline (A12).",
+      "sources": [
+        "https://en.wikipedia.org/wiki/List_of_X_episodes",
+        "https://en.wikipedia.org/wiki/List_of_X_chapters",
+        "https://x1999.fandom.com/api.php?action=parse&page=Guardian%20(episode)&prop=wikitext&format=json",
+        "https://api.mangadex.org/manga/19121da9-452e-4f98-8eb4-4ef63cf7186f/aggregate"
+      ]
+    },
+    {
+      "episode": 19,
+      "end_chapter": 53,
+      "start_chapter": 51,
+      "chapters_adapted": "51-53 (volume 13's back half - the Yamanote Line block), plus bonus ch 53.5 'X/1999 - Karen Kasumi'; Nataku learning he was cloned from Tojo's granddaughter is grafted from vol 12",
+      "volume": 13,
+      "confidence": "medium",
+      "note": "A4: ep 19 IS vol 13's closing block - the Yamanote Line attacked, Karen drugging Aoki and going in his place, Karen overpowering Nataku, Yuto's water attack, a weakened Aoki arriving and Yuto postponing the battle. That last beat is literally the final sentence of en-WP's vol-13 summary, and MangaDex fixes vol 13 = ch 49-53, so END 53 is boundary-locked. Karen's mother flashback is the volume's bonus ch 53.5. START 51 is the CONSERVATIVE end of a 51-52 range: vol 13's five beats map 1:1 onto its five chapters (49 Inuki's death, 50 Saiki decapitated / Shinjuku destroyed, 51 the aftermath, 52 Yamanote attacked, 53 Karen vs Nataku and Yuto), but that 1:1 reading is a derivation, not a source statement - see flags.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/List_of_X_episodes",
+        "https://en.wikipedia.org/wiki/List_of_X_chapters",
+        "https://x1999.fandom.com/api.php?action=parse&page=Inferno%20(episode)&prop=wikitext&format=json",
+        "https://api.mangadex.org/manga/19121da9-452e-4f98-8eb4-4ef63cf7186f/aggregate"
+      ]
+    }
+  ],
+  "continue_points": [
+    {
+      "episode": 15,
+      "continue_chapter": 42,
+      "kind": "parity",
+      "note": "C2 parity: ep 16 opens on vol 12's first beat (Fuma destroying Subaru's barrier and taking his right eye, ch 42). On arrival the reader will re-meet two things ep 15 already animated out of order - the barrier lesson at Hinoto's (mid vol 12) and Saiki's decapitation (vol 13, ~ch 49-50); C3 'skip on arrival unless re-reading'.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/List_of_X_chapters",
+        "https://en.wikipedia.org/wiki/List_of_X_episodes"
+      ]
+    },
+    {
+      "episode": 19,
+      "continue_chapter": 54,
+      "kind": "parity",
+      "note": "C2 parity: after ep 19 the continuous coverage ends at ch 53 (vol 13 closed). Chs 54-78 are only PARTIALLY animated and wholly out of order - ep 17 took vol 14's Kakyo-and-Kamui dream material and vol 15's Kakyo/Hokuto opening, ep 18 took vol 15's Yuzuriha/Kusanagi block (ch 63-70), ep 16 took vol 15's tail and vol 16's Rainbow Bridge duel (ch 71-78). A reader resuming at 54 reads them in the manga's own order and will recognise the animated fragments as they arrive (C3).",
+      "sources": [
+        "https://en.wikipedia.org/wiki/List_of_X_chapters",
+        "https://en.wikipedia.org/wiki/List_of_X_episodes"
+      ]
+    },
+    {
+      "episode": 20,
+      "continue_chapter": 95,
+      "kind": "post_series",
+      "note": "C5 post-series: ep 20 is the last manga-derived episode (21-24 are the studio ending, ruled filler under T10), and Sean's A8 ruling puts its furthest first-time coverage at ch 94. Continue = 94 + 1 = 95, the final beat of volume 18 (Kamui visiting Karen after Nataku's burial and growing suspicious of Hinoto), which the anime never animates. NEVER-ADAPTED RANGE to name for the reader: ch 86-93 (the close of vol 17 - Fuma offering Subaru Seishiro's left eye - and most of vol 18: Ginza, Karen and Aoki against Nataku, Nataku's death), plus the unanimated remainder of chs 54-62 and 79-85. After ch 95 the manga is on indefinite hiatus; only the uncollected 'Shumatsu III' block (tankobon vol 18.5, 2023) follows.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/List_of_X_chapters",
+        "https://ja.wikipedia.org/wiki/X_(%E6%BC%AB%E7%94%BB)",
+        "https://api.mangadex.org/manga/19121da9-452e-4f98-8eb4-4ef63cf7186f/aggregate"
+      ]
+    }
+  ],
+  "anchor_hostile": [
+    {
+      "episode": 9,
+      "why": "A44 shape - a FORWARD graft that would have to be walked back. Ep 9 is the volume-8 Subaru introduction (the onmyoji job, the Seishiro illusion, Sorata and Arashi finding him: en-WP's vol-8 summary carries exactly this as its third beat, ch 29-31) fused with the vol-11 bonus chapter 41.5 'X/1999 - Subaru Sumeragi', whose one-line description ('one of Subaru's jobs as an onmyoji and how it relates to his own attachment to Seishiro') is the episode's own plot. The anime plays it BEFORE ch 24 (Tokiko's death, ep 11) and ch 25 (ep 12). An END of 29-30 here would tell the reader they have seen chs 24-28 - they have not - and would force ep 11's 24 and ep 12's 25 to run backwards. Stored annotation 'eps 9 rearranged {29-30, 41.5}' already carries the fact.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/List_of_X_chapters",
+        "https://en.wikipedia.org/wiki/List_of_X_episodes",
+        "https://x1999.fandom.com/api.php?action=parse&page=Onmyou%20(episode)&prop=wikitext&format=json"
+      ]
+    },
+    {
+      "episode": 10,
+      "why": "Same A44 shape as ep 9. Ep 10 is volume 8's SECOND beat - 'Saiki takes Yuzuriha to meet the Dragon of Heaven Seiichiro Aoki in order to reunite all the Dragons of Heaven' (en-WP vol 8, ch 29-31) - wrapped around two bonus chapters: ch 24.5 'X/1999 - Yuzuriha Nekoi' (how Yuzuriha came to Tokyo hoping someone would see Inuki, and Kusanagi being the first) and ch 34.5 'X/1999 - Kusanagi Shiyu'. The fandom episode page's character list (Yuzuriha, Inuki, Saiki, Kusanagi, four flashback classmates, Yuzuriha's grandmother, Aoki) corroborates beat for beat. Relocated ahead of ch 24/25 exactly like ep 9; stored annotation 'eps 10 rearranged {29, 24.5, 34.5}' carries it. NOTE the local inversion: in the manga the Aoki recruitment (ep 10) PRECEDES the Subaru introduction (ep 9); the anime swaps them.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/List_of_X_chapters",
+        "https://en.wikipedia.org/wiki/List_of_X_episodes",
+        "https://x1999.fandom.com/api.php?action=parse&page=Inuki%20(episode)&prop=wikitext&format=json"
+      ]
+    },
+    {
+      "episode": 16,
+      "why": "Two disjoint blocks, neither of which yields a truthful END. Ep 16 opens on volume 12's first two beats (Fuma overpowering Subaru and granting his wish of losing his right eye, ch 42-43), then jumps ~28 chapters to volume 15's closing beat (the possessed Hinoto sending Subaru to the Rainbow Bridge) and volume 16's opening block (the Subaru/Seishiro duel, Hokuto's dying spell reversing the attack, Subaru impaling Seishiro, Seishiro's death, Subaru losing the ability to create barriers). Vol 16 is ch 71-78 and ep 16 stops at roughly its third of six narrative beats - no chapter boundary lands there, so any digit inside 71-78 would be invented. An END of 43 would understate the episode's own title beat; an END inside 71-78 would claim chs 44-70 the viewer has not seen and would be walked back at eps 17, 18 and 19.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/List_of_X_chapters",
+        "https://en.wikipedia.org/wiki/List_of_X_episodes",
+        "https://x1999.fandom.com/api.php?action=parse&page=Slaughter%20(episode)&prop=wikitext&format=json",
+        "https://api.mangadex.org/manga/19121da9-452e-4f98-8eb4-4ef63cf7186f/aggregate"
+      ]
+    },
+    {
+      "episode": 17,
+      "why": "Largely a clip show, and what is not recap is out-of-order fragments. The Kakyo/Hinoto exchange about being unable to change the future they have seen and Kakyo telling Kamui the Sacred Sword can bring Fuma back are volume 14 beats (ch 54-62); Kakyo remembering meeting Hokuto in a dream while imprisoned and wishing to go outside with her is volume 15's OPENING beat (ch 63) and overlaps the vol-15 bonus ch 70.5; Kotori's dream reunion with Kamui has no manga counterpart at all (x1999 fandom, Kotori Monou page). Fragments from two volumes plus a recap plus an original scene give no continuous END, and any value would sit behind ep 16's vol-16 material and ahead of eps 18-19's vols 13/15.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/List_of_X_chapters",
+        "https://en.wikipedia.org/wiki/List_of_X_episodes",
+        "https://x1999.fandom.com/api.php?action=parse&page=Wish%20(episode)&prop=wikitext&format=json"
+      ]
+    },
+    {
+      "episode": 18,
+      "why": "Ep 18 fuses volume 13's OPENING beat with volume 15's middle. Inuki dying to save Yuzuriha from Beast, and Kusanagi rescuing her, is the first sentence of en-WP's vol-13 summary (ch 49); the date, Yuzuriha telling Kusanagi she likes him and their agreeing to stay in touch, and Fuma testing her until a second inugami is embodied are vol 15's beats 2-3 (ch 63-70). The anime also REVERSES the manga's order of the two deaths - Saiki dies before Inuki here (ep 15), where vol 13 kills Inuki first. An END at 49 would sit behind ep 15's 41... it would in fact be forward, but it would then be contradicted by ep 19's ch 51-53 only if the vol-15 half were ignored; an END inside 63-70 claims chs 54-62 that ep 19 does not deliver and that only ep 17 fragments. Neither value is a truthful continuous position, so the row stays a zone: ch 49 + ch 63-70.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/List_of_X_chapters",
+        "https://en.wikipedia.org/wiki/List_of_X_episodes",
+        "https://x1999.fandom.com/api.php?action=parse&page=Newborn%20(episode)&prop=wikitext&format=json"
+      ]
+    }
+  ],
+  "annotations": [
+    {
+      "episodes": [15],
+      "kind": "side_story",
+      "chapters": "48.5",
+      "note": "Ep 15's cold open - Saiki remembering training with Aoki and telling Hinoto that, although he is not a Dragon of Heaven, he is happy to be destined to protect her - is volume 12's bonus chapter 'X/1999 - Seiichiro Aoki' (ch 48.5), described by en-WP as 'a chapter on how Aoki, before he was married, trained Saiki, who wished to protect Hinoto'. Pulled forward out of vol 12 and used as the episode's framing device. Not mainline; excluded from the START (A12)."
+    },
+    {
+      "episodes": [15],
+      "kind": "rearranged",
+      "chapters": "49-50",
+      "note": "Saiki's death is relocated. In the manga Fuma decapitates Saiki in volume 13 AFTER Beast kills Inuki; the anime fires it inside the vol-11 attack at the end of ep 15 and holds Inuki's death back to ep 18, inverting the two. Ep 15's closing image (Subaru wounded, Aoki holding Saiki's corpse) therefore fuses vol 11's close, vol 12's opening and vol 13's second beat."
+    },
+    {
+      "episodes": [15],
+      "kind": "divergence",
+      "chapters": "39-41",
+      "note": "The barrier stone attacked is changed: the manga's vol-11 target is Sunshine 60 (ja-WP lists the thirteen barriers and Tojo Pharmaceuticals is not among them), while the anime stages the attack at the Tojo Pharmaceuticals building so that Nataku's creator, Chairman Tojo, is physically present when Nataku hesitates. The anime also moves Kamui's barrier lesson at Hinoto's (mid vol 12) to BEFORE the attack."
+    },
+    {
+      "episodes": [16],
+      "kind": "rearranged",
+      "chapters": "42-43, 70-78",
+      "note": "Refinement of the stored eps 15-20 'rearranged' fact: ep 16 is vol 12's opening (Subaru overpowered, right eye taken, ch 42-43) welded directly to volume 15's CLOSING beat (the possessed Hinoto sending Subaru to the Rainbow Bridge, ~ch 70) and volume 16's opening block (the duel, Hokuto's dying spell, Seishiro's death, Subaru losing his barriers, ch 71-78). The stored note omits the vol-15 hand-off."
+    },
+    {
+      "episodes": [17],
+      "kind": "rearranged",
+      "chapters": "54-62, 63, 70.5",
+      "note": "Ep 17's non-recap material is vol 14 (Kakyo and Hinoto on the unchangeable future; Kakyo telling Kamui the Sacred Sword can bring Fuma back; Kakyo wanting Fuma to kill him) plus volume 15's opening beat, Kakyo meeting Hokuto in a dream while imprisoned, which also touches the vol-15 bonus ch 70.5."
+    },
+    {
+      "episodes": [18],
+      "kind": "rearranged",
+      "chapters": "49, 63-70",
+      "note": "Ep 18 = vol 13's first beat (Beast kills Inuki, Kusanagi rescues Yuzuriha, ch 49) + vol 15's beats 2-3 (Yuzuriha's confession to Kusanagi; Fuma testing her until a second inugami is embodied, ch 63-70). In the manga Kamui fights Fuma in that scene and Yuzuriha's inugami saves HIM; the anime removes Kamui and puts Kusanagi in ambush instead."
+    },
+    {
+      "episodes": [19],
+      "kind": "side_story",
+      "chapters": "53.5",
+      "note": "Karen's flashback - her mother calling her a demon for manipulating fire, and a priest telling her afterwards not to believe it - is volume 13's bonus chapter 'X/1999 - Karen Kasumi' (ch 53.5), animated inside the Yamanote Line block rather than as a separate unit."
+    },
+    {
+      "episodes": [19],
+      "kind": "divergence",
+      "chapters": "",
+      "note": "Ep 19's cold open, Aoki asking his wife for a divorce so his family will not be dragged into the battles, is anime-only: ja.wikipedia's Aoki entry states it explicitly ('TV anime version: when going to the decisive battle, he himself asked his wife for a divorce so as not to involve his family'), against the movie's different fate for him. The Nataku-learns-he-was-cloned-from-the-granddaughter scene is also moved - in the manga it is KAMUI who learns this, from Nataku's creator, in vol 12."
+    }
+  ],
+  "repairs": [],
+  "type_corrections": [],
+  "structure": {
+    "notes": "CHAPTER SPACE re-verified this pass and unchanged: MangaDex's aggregate for X gives v1 1-7, v2 8-10, v3 11-13, v4 14-17, v5 18-21, v6 22-24, v7 25-28, v8 29-31, v9 32-34, v10 35-38, v11 39-41, v12 42-48, v13 49-53, v14 54-62, v15 63-70, v16 71-78, v17 79-87, v18 88-95, with one '.5' bonus chapter per volume from v5 to v17 (21.5, 24.5, 28.5, 31.5, 34.5, 38.5, 41.5, 48.5, 53.5, 62.5, 70.5, 78.5, 87.5) matching en-WP's second ChapterList entry per volume one-for-one. SOURCE EXHAUSTION - four negatives worth recording so nobody re-pays for them: (1) x1999.fandom.com has 162 pages total; its eighteen '<Name> (chapter)' pages use Infobox Volume, show 'Volume N.jpg' and carry tankobon release dates - they are VOLUMES, and every Summary/Plot section on them is EMPTY. (2) Its episode pages carry no manga-counterpart field; what they DO carry that is useful is a per-episode character list (ep 10's includes the four flashback classmates and Yuzuriha's grandmother; ep 19's includes 'Karen's Mother (flashback)'), which is a decent independent corroboration of which bonus chapter an episode is using. (3) ja.wikipedia's 各話リスト for X has columns 話数/サブタイトル/脚本/絵コンテ/演出/作画監督 only - no chapter column - and its 単行本 table lists ISBNs and dates only, no 収録話. (4) MangaDex holds the 1-95 numbering but ZERO chapter titles (the feed returns no titled chapters), so no title-to-title join is possible either. ADAPTATION SHAPE: eps 1-14 linear over vols 1-10 with three out-of-order character-introduction episodes built on bonus chapters (7, 9, 10); eps 15-20 remix vols 11-18; eps 21-24 the studio ending. Inside 15-20 the reach by episode is ep 15 vol 11 (+ grafts from 12, 13), ep 16 vols 12 + 15-16, ep 17 vols 14-15, ep 18 vols 13 + 15, ep 19 vol 13, ep 20 vols 16-18.",
+    "order_only": []
+  },
+  "flags_for_sean": [
+    "METHOD, unchanged from batch 17 and re-verified this pass: no source in existence maps an X episode to a chapter. Both anchors below are volume-boundary derivations from en-WP episode summaries against en-WP volume summaries with MangaDex supplying the numbers, so both are medium by definition. I anchored ONLY the two rows whose closing beat is a volume boundary (ep 15 = vol 11's close, ep 19 = vol 13's close) and left 16/17/18 as zones rather than invent a digit inside vols 15-16.",
+    "ep 19 START 51 is the conservative end of a 51-52 range. Vol 13's five narrative beats in en-WP's summary map 1:1 onto its five chapters (49/50/51/52/53), which would make ep 19 START 52; I chose 51 so the reader is never told they can skip something. If you prefer the 1:1 reading, START 52 with chapters_adapted '52-53'.",
+    "eps 9 and 10 - if a REORDER_REGIME is ever introduced for x (the detective-conan machinery), the values are ep 10 -> ch 29 and ep 9 -> ch 30 (vol 8, START 29), with the continue held at 24. I did not deliver them as anchors because the position would have to run backwards at ep 11 (ch 24) and ep 12 (ch 25) and because a reader shown 'ch 30' after ep 10 has not seen chs 24-28.",
+    "ep 16 is the row I would most like a second opinion on. It is the only pre-ending episode that reaches volume 16, and it carries Seishiro's death - the single biggest event in the back half. If you would rather encode SOMETHING there than nothing, the two candidate rulings are (a) END 43 (vol 12's opening, true but understates the episode's own title beat) with the Rainbow Bridge block as a graft annotation, or (b) a zone marker at vol 16. I would not invent a digit inside 71-78: ep 16 stops at roughly beat 3 of the volume's 6 and ep 20 picks the volume up again at beat 5.",
+    "TYPING QUESTION (not corrected, flagging only): ep 17 is stored canon and AFL calls it canon, but it is largely a clip-show recap whose one anime-original scene (Kotori's dream reunion) the fandom explicitly says 'did not take place in the manga', with the remaining material being fragments of vols 14-15. Under T28 that reads as 'mixed' rather than plain canon. One source only on the original-scene side, so I did not raise a type_correction.",
+    "Open flag #845 stays explained rather than closed, same as batch 17: ep 20 IS the last anchorable row because 21-24 are the ruled studio ending. What this pass adds is that eps 15 and 19 are now anchored, so the frontier between ep 14's ch 38 and ep 20's ch 94 is no longer a single 56-chapter interpolation gap - it now has two true waypoints at 41 and 53.",
+    "Entry-fact gap still open (batch 17 raised it): AniList manga 30027 reports chapters/volumes null and status RELEASING; ja-WP says 休載中 (on hiatus) with 18 volumes as of 2002-09-17 plus the 2023 vol 18.5 reprint of the uncollected Shumatsu III block, and MangaUpdates gives '18.5 Volumes (Hiatus/Discontinued)' latest_chapter 99. The mapping still has no ceiling, which is what makes the post-series continue of 95 hard to render honestly."
+  ]
+}

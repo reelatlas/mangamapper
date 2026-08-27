@@ -1,0 +1,25 @@
+{
+  "series_id": "f-zero-gp-legend",
+  "summary": "Air-date lane. NO REPAIRS — all three flagged rows are a TRUE broadcast-order deviation. Our row space is the ENGLISH (4Kids/FoxBox) broadcast order while air_date holds the ORIGINAL JAPANESE first broadcast, and the English release reordered a block of episodes. fzero.fandom's episode infoboxes state both numbers explicitly ('episode number = 9/6' etc., JP/EN), and every one of them matches our stored title+date pairs exactly; TVmaze's Japanese-order list independently confirms every date. Nothing to fix; this needs an AIRDATE_ORDER_ACK.",
+  "anchors": [],
+  "continue_points": [],
+  "anchor_hostile": [],
+  "annotations": [],
+  "repairs": [],
+  "type_corrections": [],
+  "structure": {
+    "notes": "51 rows = the English 4Kids broadcast order. ja-WP F-ZERO ファルコン伝説 各話リスト numbers by Japanese order (1 伝説・スタート!! 2003-10-07 … weekly Tuesday). The reordered block is JP 6-13 -> EN 6-13.",
+    "order_only": [
+      6,
+      9,
+      10,
+      11,
+      12,
+      13
+    ]
+  },
+  "flags_for_sean": [
+    "AIRDATE_ORDER_ACK — f-zero-gp-legend eps 6, 9, 10, 11, 12, 13. Mechanism: our episode numbering follows the English 4Kids broadcast order, which reordered a block of the Japanese run, while air_date is the Japanese TV Tokyo first broadcast (weekly Tuesday 18:00). The JP->EN map, from fzero.fandom's 'episode number = JP/EN' fields and confirmed against TVmaze's Japanese-order episode list: EN5=JP5 (2003-11-04), EN6=JP9 (2003-12-02), EN7=JP7 (2003-11-18), EN8=JP8 (2003-11-25), EN9=JP10 (2003-12-09), EN10=JP12 (2003-12-23), EN11=JP13 (2004-01-06), EN12=JP11 (2003-12-16), EN13=JP6 (2003-11-11), EN14=JP14 (2004-01-13), EN15=JP15 (2004-01-20). Every stored date in rows 5-15 is correct.",
+    "STRUCTURE FLAG for other lanes: because our F-Zero row space is the English order, any join to a Japanese per-episode source (ja-WP 各話リスト, syoboi) must go through the title, never the number. ja-WP's 第N話 numbering is the Japanese order."
+  ]
+}

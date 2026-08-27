@@ -1,0 +1,28 @@
+{
+  "series_id": "beyblade-metal-fusion",
+  "summary": "Air-date lane only. Stored ep 50 (2010-01-24) is in fact ep 42's date; the real broadcast of 第50話「怒りの最終決戦」 was 2010-03-21, the Sunday between ep 49 (03-14) and ep 51 (03-28). Three sources agree. One repair, no true deviation.",
+  "anchors": [],
+  "continue_points": [],
+  "anchor_hostile": [],
+  "annotations": [],
+  "repairs": [
+    {
+      "episode": 50,
+      "field": "air_date",
+      "old": "2010-01-24",
+      "new": "2010-03-21",
+      "why": "ja-WP メタルファイト ベイブレード 各話リスト: 第50話 怒りの最終決戦 = 3月21日 (2010); en-WP Beyblade: Metal Fusion season 1 = March 21, 2010; syoboi Count 50 = 2010-03-21 08:30 (TXN). Stored 2010-01-24 is 第42話「ドラゴンの制裁」's date — a mis-join, not a typo of 03-21.",
+      "sources": [
+        "https://ja.wikipedia.org/wiki/%E3%83%A1%E3%82%BF%E3%83%AB%E3%83%95%E3%82%A1%E3%82%A4%E3%83%88_%E3%83%99%E3%82%A4%E3%83%96%E3%83%AC%E3%83%BC%E3%83%89",
+        "https://en.wikipedia.org/wiki/Beyblade:_Metal_Fusion_season_1",
+        "https://cal.syoboi.jp/tid/1613"
+      ]
+    }
+  ],
+  "type_corrections": [],
+  "structure": {
+    "notes": "Weekly Sunday 08:30 TV Tokyo slot, no hiatus in the Feb–Mar 2010 block; 51 rows = 第1話–第51話.",
+    "order_only": []
+  },
+  "flags_for_sean": []
+}

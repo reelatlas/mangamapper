@@ -1,0 +1,30 @@
+{
+  "series_id": "gto-great-teacher-onizuka",
+  "summary": "Air-date lane only. The withheld ep 31 is Lesson31「目指せ!! 憧れの沖縄行路」 (Destination: Okinawa), broadcast 2000-05-07 — the Sunday between ep 30 (04-30) and ep 32 (05-14), both of which are already correct in our data. AFL's 2014-02-07 is unsupported by anything; the series ended 2000-09-24. One repair, no true deviation.",
+  "anchors": [],
+  "continue_points": [],
+  "anchor_hostile": [],
+  "annotations": [],
+  "repairs": [
+    {
+      "episode": 31,
+      "field": "air_date",
+      "old": null,
+      "new": "2000-05-07",
+      "why": "ja-WP GTO (漫画) 各話リスト: Lesson31「目指せ!! 憧れの沖縄行路」Aux4 = 5月7日 (Lesson30 = 4月30日, Lesson32 = 5月14日); en-WP List of Great Teacher Onizuka episodes: EpisodeNumber 31 'Destination: Okinawa' = 2000-05-07. Both neighbours stored in the DB match those sources exactly, so 05-07 is the only slot.",
+      "sources": [
+        "https://ja.wikipedia.org/wiki/GTO_(%E6%BC%AB%E7%94%BB)",
+        "https://en.wikipedia.org/wiki/List_of_Great_Teacher_Onizuka_episodes"
+      ]
+    }
+  ],
+  "type_corrections": [],
+  "structure": {
+    "notes": "43 rows = Lesson1–Lesson43, 1:1 with ja-WP and en-WP. The episode list lives on ja-WP's GTO (漫画) article, not on a 'GREAT TEACHER ONIZUKA' page (which does not exist).",
+    "order_only": []
+  },
+  "flags_for_sean": [
+    "AFL's 2014-02-07 for this row is rejected: the anime ran 1999-06-30 to 2000-09-24 and there is no 2014 broadcast behind that date.",
+    "Note for the neighbourhood: ja-WP and our data agree that Lesson33 aired 5月28日, i.e. 2000-05-21 was a genuine no-episode week. Not a deviation."
+  ]
+}

@@ -1,0 +1,145 @@
+{
+  "series_id": "eyeshield-21",
+  "summary": "All three rows are anchorable. Ep 38 is the roster-decision half of the ch 89-90 pair the anime split across eps 37-39 (Bandai Channel's official synopsis is literally the regular-lineup final test and Yukimitsu's hope = ch 90 'The Player Who Was Too Slow'); ep 37 already carried ch 91, so END is non-monotone here by design. Ep 43 is a clean four-chapter backfill: Musashi's introduction (ch 54-57), skipped when the anime ran the NASA Aliens arc at eps 22-24, animated whole here with an anime-original Fall-Tournament framing - the same shape as the stored ep-88 ch-100 backfill, so it is anchored at 54-57 and the continue point holds position at ch 99. Ep 62 is the surprise: it does NOT carry ch 120. Bandai Channel's official synopses show the Kyoshin Poseidons game running strictly forward - ep 59 is where the HIGH WAVE (ch 120) is unveiled (the synopsis names Ohira and Onishi joining Kakei), ep 60 is the Moby Dick Anchor, ep 61 is Mizumachi's one-year-ago flashback (ch 123), and ep 62 is the ULTIMATE 'POSEIDON' formation plus Kyoshin's go-ahead touchdown with 18 seconds left = ch 124 'We Are The Poseidons', the last chapter of volume 14. The stored 'eps 59,62 rearranged {120-121}' annotation rests on en-WP's fan-written ep-62 summary calling the Poseidon Formation 'High Wave' (it is the four-linebacker variant of High Wave, per the fandom technique page) and is refuted; ep 63's derived START of 122 falls with it.",
+  "anchors": [
+    {
+      "episode": 38,
+      "end_chapter": 90,
+      "start_chapter": 89,
+      "chapters_adapted": "89-90 (ch 89 shared with ep 39, which carries Suzuna's cheer-captain appointment)",
+      "volume": 11,
+      "confidence": "high",
+      "note": "A4/A10. Bandai Channel's official synopsis: '秋大会を目前にひかえ、レギュラー決定の最終テストを行うデビルバッツ… 雪光もまた、レギュラー入りの確かな手ごたえを感じていた… レギュラーメンバー発表日を迎えるが…' = the Sunday-match/roster beat of ch 89 決戦は日曜日 and all of ch 90 遅すぎたアスリート ('The Player Who Was Too Slow', Yukimitsu). en-WP's vol-11 summary puts the roster announcement and Yukimitsu's exclusion in exactly this pair, and its ep-38 summary says the same. Confirms the stored 'eps 37,38 rearranged {89-91}' annotation: ep 37 (Sakuraba's breakdown) is ch 91, so ep 38's END sits BELOW ep 37's - non-monotone by design (A18).",
+      "sources": [
+        "https://www.b-ch.com/titles/8777/038",
+        "https://en.wikipedia.org/wiki/List_of_Eyeshield_21_chapters",
+        "https://en.wikipedia.org/wiki/List_of_Eyeshield_21_episodes_(1%E2%80%9372)"
+      ]
+    },
+    {
+      "episode": 43,
+      "end_chapter": 57,
+      "start_chapter": 54,
+      "chapters_adapted": "54-57 (backfill of chapters skipped at eps 22-24; anime-original Fall-Tournament framing and a Bando/Kotaro appearance added)",
+      "volume": 7,
+      "confidence": "high",
+      "note": "A4/A12. eyeshield21.fandom's Episode 43 page carries chapters = 54th-57th Down; the episode title 伝説の60ヤードマグナム is ch 55 60ヤードの伝説; Bandai Channel's official synopsis (Musashi the legendary kicker who quit, Sena and Monta hunting him, the soccer-club mix-up, the PK challenge on condition he rejoin) is en-WP's volume-7 summary of ch 54-57 nearly beat for beat. First-time coverage, not a re-run: the anime jumped from Suzuna's debut (ep 22) straight to the NASA Aliens accepting the match (ep 23 = ch 58-60), leaving 54-57 unanimated until here. Anchored at the backfilled chapters exactly as the stored ep-88 ch-100 backfill is (A18 reorder regime); the continue point below keeps the reader's position from being dragged back.",
+      "sources": [
+        "https://eyeshield21.fandom.com/wiki/Episode_43",
+        "https://www.b-ch.com/titles/8777/043",
+        "https://en.wikipedia.org/wiki/List_of_Eyeshield_21_chapters",
+        "https://en.wikipedia.org/wiki/List_of_Eyeshield_21_episodes_(1%E2%80%9372)"
+      ]
+    },
+    {
+      "episode": 62,
+      "end_chapter": 124,
+      "start_chapter": 124,
+      "chapters_adapted": "124",
+      "volume": 14,
+      "confidence": "high",
+      "note": "A4. Bandai Channel's official synopsis: '巨深の究極フォーメーション『ポセイドン』により、パスもランも防がれ… 再逆転のタッチダウンを許してしまう泥門… 残り時間は18秒' = ch 124 我の名はポセイドン ('We Are The Poseidons'), whose content en-WP's volume-14 summary ends on ('Kyoshin scores and when there is only 18 seconds left they are winning by 17-12'). NOT ch 120: the High Wave is unveiled in ep 59 (its official synopsis names 大平・大西 joining 筧 for 『ハイ・ウェーブ』) and the Moby Dick Anchor in ep 60. en-WP's ep-62 summary calls the Poseidon Formation 'High Wave' because it is the four-linebacker variant of High Wave (eyeshield21.fandom's High Wave page) - that conflation is the source of the stored swap annotation, which this refutes.",
+      "sources": [
+        "https://www.b-ch.com/titles/8777/062",
+        "https://www.b-ch.com/titles/8777/059",
+        "https://eyeshield21.fandom.com/wiki/Volume_14",
+        "https://eyeshield21.fandom.com/wiki/High_Wave",
+        "https://en.wikipedia.org/wiki/List_of_Eyeshield_21_chapters"
+      ]
+    }
+  ],
+  "continue_points": [
+    {
+      "episode": 38,
+      "continue_chapter": 92,
+      "kind": "parity",
+      "note": "C2/C3 parity with the anime: ch 91 was already animated at ep 37 and ep 40 restarts at ch 92 (ep 39 is the clip show plus ch 89's Suzuna fragment), so END+1 (91) would send the reader back over material already seen. Chapters 54-57 are still unseen at this point - the anime backfills them at ep 43.",
+      "sources": [
+        "https://www.b-ch.com/titles/8777/039",
+        "https://www.b-ch.com/titles/8777/040"
+      ]
+    },
+    {
+      "episode": 43,
+      "continue_chapter": 99,
+      "kind": "parity",
+      "note": "C2/C3 parity: this episode adds no forward position - it fills the ch 54-57 hole behind the frontier. Position stays where ep 42 left it (ch 99, the stored ep-42 continue point); ep 44 restarts at ch 101, and chs 99 and 100 are the remaining backfills (ep 49 and ep 88 respectively). END+1 (58) would be badly wrong.",
+      "sources": [
+        "https://eyeshield21.fandom.com/wiki/Episode_43",
+        "https://en.wikipedia.org/wiki/List_of_Eyeshield_21_episodes_(1%E2%80%9372)"
+      ]
+    }
+  ],
+  "anchor_hostile": [],
+  "annotations": [
+    {
+      "episodes": [38, 39],
+      "kind": "partial",
+      "chapters": "89",
+      "note": "Chapter 89 決戦は日曜日 is split: ep 38 takes the roster/Sunday-match beat, ep 39 (the clip show) takes Suzuna's appointment as the Devil Bats' 盛り上げ隊長. Listed in chapters_adapted on ep 38; ep 39 stays unanchored (stored 'partial {89}' annotation)."
+    },
+    {
+      "episodes": [43],
+      "kind": "graft",
+      "chapters": "54-57",
+      "note": "Confirms the stored annotation with a per-episode source: eyeshield21.fandom's Episode 43 page lists 54th-57th Down. The whole episode is the backfill; the running-order Fall-Tournament framing around it (and the Bando kicker's appearance) is anime-original."
+    },
+    {
+      "episodes": [58, 59, 60, 61, 62, 63],
+      "kind": "abridged",
+      "chapters": "116-126",
+      "note": "REFUTES the stored 120/121 swap. The Kyoshin Poseidons game runs strictly forward across six episodes: ep 58 = 116-118 (Komusubi vs Mizumachi), ep 59 = 119-121 (泥門チビーズ = ch 119 チビVSデカ, the High Wave reveal = ch 120, the hidden ace Ishimaru = ch 121, which supplies the episode title), ep 60 = 122 (Kakei vs Sena, Moby Dick Anchor), ep 61 = 123 そして一年後 (Mizumachi's swimming flashback), ep 62 = 124 (Poseidon Formation, 18 seconds left), ep 63 = 125-126 (the 30 cm stop and the Devil Bat Dive). Source: Bandai Channel's per-episode official synopses."
+    }
+  ],
+  "repairs": [
+    {
+      "episode": 62,
+      "field": "annotation",
+      "old": "eps 59,62 rearranged {120-121}: ep 59's title is ch 121 '裏エースの男' exactly, yet Kyoshin's High Wave (ch 120) is not revealed until ep 62 - the two chapters appear to be swapped in the anime.",
+      "new": "DELETE. There is no swap. Ep 59's official synopsis unveils the High Wave (ch 120) - '2メートルコンビの大平・大西を加えた『ハイ・ウェーブ』によりあっという間に攻撃権は巨深へと移ってしまう' - and then takes its title from ch 121, which it also adapts. What ep 62 unveils is the ULTIMATE 'POSEIDON' formation = ch 124 我の名はポセイドン. en-WP's fan-written ep-62 summary names it 'High Wave' because the Poseidon Formation is the four-linebacker variant of High Wave (eyeshield21.fandom, High Wave page).",
+      "why": "The stored annotation is built on a single English fan summary's loose naming of a formation; the Japanese official synopses for eps 59-62 and the chapter titles both contradict it.",
+      "sources": [
+        "https://www.b-ch.com/titles/8777/059",
+        "https://www.b-ch.com/titles/8777/062",
+        "https://eyeshield21.fandom.com/wiki/High_Wave",
+        "https://en.wikipedia.org/wiki/List_of_Eyeshield_21_chapters"
+      ]
+    },
+    {
+      "episode": 63,
+      "field": "start_chapter",
+      "old": 122,
+      "new": 125,
+      "why": "Chapters 122, 123 and 124 are eps 60, 61 and 62 (Bandai Channel official synopses: Moby Dick Anchor / Mizumachi's one-year-ago flashback / the Poseidon Formation and the 18-second mark). Ep 63's own official synopsis begins at 'あとわずか30センチのところで、水町の執念の追走により止められてしまうアイシールド21！残り時間わずか2秒' = ch 125 0コンマの決戦, and ends with the Devil Bat Dive = ch 126 最後の花火 - exactly the opening of en-WP's volume-15 summary. The stored END (126) is right; the stored START was derived from the previous anchor rather than sourced (batch-17's own note cites only the volume-15 summary for the END). chapters_adapted should read '125-126'.",
+      "sources": [
+        "https://www.b-ch.com/titles/8777/063",
+        "https://www.b-ch.com/titles/8777/060",
+        "https://www.b-ch.com/titles/8777/061",
+        "https://en.wikipedia.org/wiki/List_of_Eyeshield_21_chapters"
+      ]
+    },
+    {
+      "episode": 59,
+      "field": "start_chapter",
+      "old": 121,
+      "new": 119,
+      "why": "Same evidence chain. Ep 59's official synopsis opens on 'セナ・モン太・小結「泥門チビーズ」の活躍で再び攻撃権を奪った泥門' = ch 119 チビVSデカ ('Pipsqueak vs. Goliath'), then unveils the High Wave = ch 120, and the episode's title 裏エースの男 is ch 121. The stored END (121) is correct; only the START and chapters_adapted ('119-121') change. Marked medium: the 118/119 boundary between eps 58 and 59 is not separately attested - eyeshield21.fandom's ep-58 page lists only 116th Down, while its official synopsis covers the Komusubi-vs-Mizumachi material of 117-118.",
+      "sources": [
+        "https://www.b-ch.com/titles/8777/059",
+        "https://www.b-ch.com/titles/8777/058",
+        "https://en.wikipedia.org/wiki/List_of_Eyeshield_21_chapters"
+      ]
+    }
+  ],
+  "type_corrections": [],
+  "structure": {
+    "notes": "Row identity: our 145 rows join en-WP, eyeshield21.fandom and Bandai Channel 1:1 by number, title and air date across the whole 36-64 range checked here (ep 38 = レギュラー決定!? 2005-12-21, ep 43 = 伝説の60ヤードマグナム 2006-02-01, ep 62 = 戦慄!モビィディック・アンカー 2006-06-14) - no offset, so flag #830's suspected numbering offset does not bite in this range (the wiki/stored title differences are translation variants: 'The New Starting Lineup' vs 'The New Starting Lineup?!', 'Terror!' vs 'Senritsu!'). eyeshield21.fandom's episode pages carry a chapters= field but it is populated on only a minority of pages (36, 43, 44, 58 yes; 37, 38, 39, 42, 59-63 empty) and its chapter ('Nth Down') pages are empty stubs, so the reverse index batch 17 used at ch 103 is not generally available. ja.Wikipedia's アイシールド21 episode table has NO 原作 column - it is staff-credits only - so the ajin-style per-episode Japanese chapter source does not exist for this series. The source that DOES exist and was decisive here is Bandai Channel's per-episode official synopsis (https://www.b-ch.com/titles/8777/NNN, in the static HTML under bch-p-heading-mov__detail-txt) - a licensor-side primary text, independent of both wikis. en-WP's per-episode ShortSummary field is fan-written and was wrong on a named technique (ep 62) and on scores; treat it as cross-check only. Chapter numbering used throughout is the manga's own 'Nth Down' numbering (333 chapters, 37 volumes), matching the stored chapter space.",
+    "order_only": []
+  },
+  "flags_for_sean": [
+    "The ep-62 finding cascades: if the 120/121 swap annotation is deleted and ep 63's START moves to 125, the whole Kyoshin block becomes monotone and eps 60, 61 become anchorable at ch 122 and ch 123 (not in this lane's row list). Eps 60-61 currently have no anchors, so nothing breaks if the cascade is declined - but the stored ep-63 chapters_adapted {122-126} would keep double-counting 122-124.",
+    "ep 58 possible one-chapter under-claim: stored END=116 comes from eyeshield21.fandom's ep-58 chapters field, which lists only 116th Down; the official synopsis covers the Komusubi-vs-Mizumachi exchanges that en-WP's volume-14 summary places in 117-118. Not repaired - a single-source disagreement, and 117-118 have to sit somewhere in eps 58-59 either way.",
+    "ep 43 continue point: I kept it at 99, matching the stored ep-42 continue. Note that the stored continue points from ep 22 onward all ignore the 54-57 hole (they name 99 as the next unseen chapter while 54-57 were still unanimated). If Sean wants strict chronological-next-unseen values across this series, every continue point between eps 22 and 42 should read 54, and ep 43 is the episode that closes the hole. That is a series-wide question, not a row question, so I have not proposed it as repairs.",
+    "ep 43 typing: stored canon. The four adapted chapters carry the whole episode (T28 materiality clearly met) and the anime-original element is framing plus one out-of-place Bando kicker, so canon looks right - but if Sean reads the Bando material as a substantial second strand, mixed would be the alternative. No retype proposed."
+  ]
+}

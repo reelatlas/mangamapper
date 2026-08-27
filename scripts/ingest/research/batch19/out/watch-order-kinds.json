@@ -1,0 +1,384 @@
+{
+  "series_id": "watch-order-kinds",
+  "summary": "All 37 order-only watch-order entries were resolved against AniList's `format` field (GraphQL Media query, id or search) and, where a page exists, en-Wikipedia's animanga video infobox / lead sentence. 34 of the 37 map cleanly onto the T29 vocabulary (ova | special | movie | recap) and are delivered in structure.order_only: 20 ova, 6 special, 8 movie, 0 recap. THREE entries could not be cited as any of the four kinds and are in flags_for_sean rather than guessed: cells-at-work @11.5 (both AniList and en-WP call the Pocari Sweat collab an ONA), high-school-dxd @36.5 (AniList counts 'Holy Behind the Gymnasium' inside the TV run of HERO — 13 eps from 2018-04-10 — and en-WP lists it as season episode 0 / overall 41 in the TV episode table; ja-WP numbers it life.00), and the-heroic-legend-of-arslan @25.2 (AniList 21424 format=TV, 8 eps — this is the missing season-2 component, not an order-only bonus, exactly as the stored note says). Four entries look like TWO pairs of duplicates (to-love-ru-darkness @24.1 vs @24.5, and yu-yu-hakusho-ghostfiles @112.1 vs @112.5) — each pair resolves to a single AniList work; both members are typed here, and the duplication is flagged for Sean. yu-yu-hakusho @112.7 and @112.8 are NOT duplicates (two distinct 2018 shorts) but share one AniList id, 102631, because AniList bundles them as a single entry. Four entries carry a source disagreement on the kind (GITS Solid State Society, Ippo Champion Road, Reborn @203.1, YYH @112.7/.8) — each is typed to the source that does not contradict stored data, with the disagreement flagged.",
+  "structure": {
+    "notes": "METHOD (R3, R20). Every kind below is cited from a queried AniList `format` field and/or an en-Wikipedia statement — never from the entry's title. AniList was queried live via https://graphql.anilist.co (Media(id:){format episodes duration startDate endDate}); ids not present in our components were found by Media(search:) and confirmed by matching the entry's stated air date to the AniList startDate/endDate, never by index or by title similarity alone.\n\nDATE CONFIRMATIONS (the ask's 'a kind may be derivable from an order-only component whose AniList start date equals the entry's air date'): black-butler @46.75 2014-11-15 = AniList 20670 endDate (Book of Murder is a 2-episode OVA, 2014-10-25 / 2014-11-15, so the stored entry is its Part 2); bungo-stray-dogs @24.5 2017-08-04 = AniList 21791 startDate; seraph @24.5 2016-05-02 = AniList 21586 startDate; golden-kamuy @49.3 2025-10-17 = AniList 194872 startDate; golden-kamuy @49.4 2025-10-10 = AniList 196115 startDate (前編; 後編 2025-10-31); my-hero-academia @113.1 2021-08-06 = AniList 126659 startDate; cells-at-work @11.5 2019-07-08 = AniList 138675 startDate; high-school-dxd @36.5 2018-04-10 = AniList 97767 (HERO) startDate — i.e. Episode 0 IS the season's first broadcast, which is why AniList counts HERO at 13 episodes while our component spans 12 rows (37-48).\n\nTIE-BREAK POLICY where AniList and Wikipedia disagree, stated once so the choices are auditable: (1) never contradict stored data (a stored component kind or a stored ruling); (2) otherwise prefer the classification that matches how the work was actually distributed — a home-video/box-set bundle is `ova`, a one-off broadcast or event screening is `special`, a theatrical release is `movie`; (3) flag the disagreement either way. Applied: GITS @52.5 -> special (AniList SPECIAL + our stored component kind [special] for id 1566; en-WP says 'television film' and Sean's order-only rationale invoked the movies rule); hajime-no-ippo @76.6 -> special (AniList SPECIAL + stored component kind [special] for id 264; en-WP infobox says type=tv film); reborn @203.1 -> ova (en-WP states 'An original video animation (OVA) ... released in October 2009 during the annual Jump Super Anime Tour' and 'List of Reborn! episodes' has an == OVAs == table; AniList 8532 says ONA; no stored component exists to contradict); yu-yu-hakusho @112.7/@112.8 -> ova (en-WP infobox type=ova, 'Two Shot & All or Nothing', 2 episodes, 2018-10-26, bundled with a Blu-ray box; AniList 102631 says SPECIAL).\n\nANILIST ID NOTES. reborn @203.1 = AniList 8532 — the stored note said 'AniList id not verified'; it is now verified by native title (家庭教師ヒットマンREBORN! ボンゴレファミリー総登場! ボンゴレ式修学旅行、来る!!) and by ja-WP's ジャンプアニメ section describing the same Jump Super Anime Tour 2009 screening plus the 2010-07-21 complete-edition DVD. yu-yu-hakusho @112.7 and @112.8 SHARE AniList id 102631 (one AniList entry, 'Yuu☆Yuu☆Hakusho: TWO SHOTS / Noru ka Soru ka', eps=1, 29 min) covering both shorts — the id is not per-entry and must not be used as a uniqueness key. cardcaptor-sakura's two films are AniList 371 (1999-08-21) and 372 (2000-07-15). my-hero-academia @113.1 is AniList 126659, NOT 142411 ('Tabidachi', a separate 6-minute short).\n\nKIND TALLY of the 34 delivered: ova = black-butler @46.75, bungo @24.5, fate-kaleid @10.5, golden-kamuy @12.1 / @24.2 / @49.3, hajime-no-ippo @76.3, dragon-maid @13.5, prison-school @12.5, reborn @203.1, kenshin @94.1 / @94.2 / @94.4, seraph @24.5, slime @24.1, magus-bride @24.1, arslan @25.1, to-love-ru-darkness @12.2, yyh @112.7 / @112.8 (20). special = GITS @52.5, hajime-no-ippo @76.6, to-love-ru-darkness @24.1 / @24.5, yyh @112.1 / @112.5 (6). movie = cardcaptor @35.1 / @70.1, golden-kamuy @49.4, my-hero-academia @113.1, kenshin @94.3, slime @48.2 / @72.3, yu-gi-oh-2000 @224.5 (8). recap = none: no entry in this set is a recap, and none was assigned one to fill the vocabulary.",
+    "order_only": [
+      {
+        "series_id": "black-butler",
+        "position": 46.75,
+        "kind": "ova",
+        "anilist_id": 20670,
+        "note": "AniList 20670 format=OVA, 2 eps, 2014-10-25 to 2014-11-15 — the entry's stored date 2014-11-15 is exactly the OVA's endDate (Part 2). en-WP Black Butler infobox: type=ova, 'Black Butler: Book of Murder', released October 25, 2014.",
+        "sources": [
+          "https://anilist.co/anime/20670",
+          "https://en.wikipedia.org/wiki/Black_Butler"
+        ]
+      },
+      {
+        "series_id": "bungo-stray-dogs",
+        "position": 24.5,
+        "kind": "ova",
+        "anilist_id": 21791,
+        "note": "AniList 21791 'Bungou Stray Dogs: Hitori Ayumu' format=OVA, 1 ep, startDate 2017-08-04 = the entry's stated air date.",
+        "sources": [
+          "https://anilist.co/anime/21791"
+        ]
+      },
+      {
+        "series_id": "cardcaptor-sakura",
+        "position": 35.1,
+        "kind": "movie",
+        "anilist_id": 371,
+        "note": "AniList 371 format=MOVIE, 81 min, 1999-08-21. en-WP: 'Cardcaptor Sakura: The Movie ... is a 1999 Japanese animated fantasy film'.",
+        "sources": [
+          "https://anilist.co/anime/371",
+          "https://en.wikipedia.org/wiki/Cardcaptor_Sakura:_The_Movie"
+        ]
+      },
+      {
+        "series_id": "cardcaptor-sakura",
+        "position": 70.1,
+        "kind": "movie",
+        "anilist_id": 372,
+        "note": "AniList 372 'Cardcaptor Sakura Movie: Fuinsareta Card' format=MOVIE, 79 min, 2000-07-15. (The en-WP title 'Cardcaptor Sakura: The Sealed Card' redirects to the franchise article, which describes it as the second film.)",
+        "sources": [
+          "https://anilist.co/anime/372"
+        ]
+      },
+      {
+        "series_id": "fate-kaleid-liner-prisma-illya",
+        "position": 10.5,
+        "kind": "ova",
+        "anilist_id": 18851,
+        "note": "AniList 18851 'Undoukai DE Dance!' format=OVA, 1 ep, 2014-03-07. No en-WP video infobox exists for it (the franchise article lists only the TV seasons, the two films and Prisma Phantasm).",
+        "sources": [
+          "https://anilist.co/anime/18851"
+        ]
+      },
+      {
+        "series_id": "ghost-in-the-shell-stand-alone-complex",
+        "position": 52.5,
+        "kind": "special",
+        "anilist_id": 1566,
+        "note": "AniList 1566 format=SPECIAL, 108 min, 2006-09-01; our stored component kind for 1566 is also [special]. DISAGREEMENT: en-WP calls it 'a 2006 Japanese anime science fiction television film' and Sean's stored order-only ruling reasons from the movies rule ('is a FILM'). Kept as `special` so the AniList format and the stored component kind are not contradicted — see flags.",
+        "sources": [
+          "https://anilist.co/anime/1566",
+          "https://en.wikipedia.org/wiki/Ghost_in_the_Shell:_Stand_Alone_Complex_%E2%80%93_Solid_State_Society"
+        ]
+      },
+      {
+        "series_id": "golden-kamuy",
+        "position": 12.1,
+        "kind": "ova",
+        "anilist_id": 101830,
+        "note": "AniList 101830 'Golden Kamuy OVA' format=OVA, 1 ep, 2018-09-19 (bundled with manga vol 15, per the stored note).",
+        "sources": [
+          "https://anilist.co/anime/101830"
+        ]
+      },
+      {
+        "series_id": "golden-kamuy",
+        "position": 24.2,
+        "kind": "ova",
+        "anilist_id": 124756,
+        "note": "AniList 124756 'Golden Kamuy 2nd Season OVA' format=OVA, 3 eps, 2019-03-19 to 2020-09-18 — the three segments the entry bundles (OVA 2, 3, 4).",
+        "sources": [
+          "https://anilist.co/anime/124756"
+        ]
+      },
+      {
+        "series_id": "golden-kamuy",
+        "position": 49.3,
+        "kind": "ova",
+        "anilist_id": 194872,
+        "note": "AniList 194872 'Golden Kamuy: Inazuma Goutou to Mamushi no Ogin/Shimaenaga' format=OVA, 1 ep, 2025-10-17 = the entry's stated date.",
+        "sources": [
+          "https://anilist.co/anime/194872"
+        ]
+      },
+      {
+        "series_id": "golden-kamuy",
+        "position": 49.4,
+        "kind": "movie",
+        "anilist_id": 196115,
+        "note": "AniList 196115 'Golden Kamuy: Sapporo Beer Koujou-hen' format=MOVIE, 2 parts, 68 min, startDate 2025-10-10 = the entry's stated 前編 date (後編 2025-10-31).",
+        "sources": [
+          "https://anilist.co/anime/196115"
+        ]
+      },
+      {
+        "series_id": "hajime-no-ippo-the-fighting",
+        "position": 76.3,
+        "kind": "ova",
+        "anilist_id": 265,
+        "note": "AniList 265 'Mashiba vs Kimura - Shikei Shikkou' format=OVA, 61 min, 2003-09-05. en-WP Hajime no Ippo infobox: type=ova, released September 5, 2003.",
+        "sources": [
+          "https://anilist.co/anime/265",
+          "https://en.wikipedia.org/wiki/Hajime_no_Ippo"
+        ]
+      },
+      {
+        "series_id": "hajime-no-ippo-the-fighting",
+        "position": 76.6,
+        "kind": "special",
+        "anilist_id": 264,
+        "note": "AniList 264 'Champion Road' format=SPECIAL, 90 min, 2003-04-18; our stored component kind for 264 is also [special]. DISAGREEMENT: en-WP infobox says type=tv film (network Nippon TV, released April 18, 2003) — `movie` is defensible; kept `special` to match AniList + the stored component kind. See flags.",
+        "sources": [
+          "https://anilist.co/anime/264",
+          "https://en.wikipedia.org/wiki/Hajime_no_Ippo"
+        ]
+      },
+      {
+        "series_id": "miss-kobayashis-dragon-maid",
+        "position": 13.5,
+        "kind": "ova",
+        "anilist_id": 98580,
+        "note": "AniList 98580 'Valentine, Soshite Onsen!' format=OVA, 1 ep, 2017-09-20. (en-WP's Dragon Maid article carries video infoboxes only for the TV seasons and the 2025 film.)",
+        "sources": [
+          "https://anilist.co/anime/98580"
+        ]
+      },
+      {
+        "series_id": "my-hero-academia",
+        "position": 113.1,
+        "kind": "movie",
+        "anilist_id": 126659,
+        "note": "AniList 126659 format=MOVIE, 104 min, 2021-08-06 = the entry's stated date. en-WP: 'is a 2021 Japanese animated superhero film'. (AniList 142411 'Tabidachi' is a separate 6-min short, not this entry.)",
+        "sources": [
+          "https://anilist.co/anime/126659",
+          "https://en.wikipedia.org/wiki/My_Hero_Academia:_World_Heroes%27_Mission"
+        ]
+      },
+      {
+        "series_id": "prison-school",
+        "position": 12.5,
+        "kind": "ova",
+        "anilist_id": 21565,
+        "note": "AniList 21565 'Prison School: Mad Wax' format=OVA, 1 ep, 2016-03-04. (en-WP's Prison School article has no video infobox for it.)",
+        "sources": [
+          "https://anilist.co/anime/21565"
+        ]
+      },
+      {
+        "series_id": "reborn",
+        "position": 203.1,
+        "kind": "ova",
+        "anilist_id": 8532,
+        "note": "en-WP Reborn!: 'An original video animation (OVA) was produced under the same staff and cast and was released in October 2009 during the annual Jump Super Anime Tour'; the franchise infobox reads '203 + 2 OVAs' and 'List of Reborn! episodes' carries an == OVAs == table whose first row is this work. DISAGREEMENT: AniList 8532 format=ONA (ja-WP files it under ジャンプアニメ, 上映 at Jump Super Anime Tour 2009, complete-edition DVD 2010-07-21). AniList id now verified (the stored note said unverified).",
+        "sources": [
+          "https://anilist.co/anime/8532",
+          "https://en.wikipedia.org/wiki/Reborn!",
+          "https://en.wikipedia.org/wiki/List_of_Reborn!_episodes"
+        ]
+      },
+      {
+        "series_id": "rurouni-kenshin",
+        "position": 94.1,
+        "kind": "ova",
+        "anilist_id": 44,
+        "note": "AniList 44 format=OVA, 4 eps, 1999-02-20 to 1999-09-22. en-WP: 'is a Japanese original video animation (OVA) series'.",
+        "sources": [
+          "https://anilist.co/anime/44",
+          "https://en.wikipedia.org/wiki/Rurouni_Kenshin:_Trust_%26_Betrayal"
+        ]
+      },
+      {
+        "series_id": "rurouni-kenshin",
+        "position": 94.2,
+        "kind": "ova",
+        "anilist_id": 11441,
+        "note": "AniList 11441 'Shin Kyoto-hen' format=OVA, 2 eps, from 2011-12-17. en-WP: 'is a two-part original video animation (OVA)'.",
+        "sources": [
+          "https://anilist.co/anime/11441",
+          "https://en.wikipedia.org/wiki/Rurouni_Kenshin:_New_Kyoto_Arc"
+        ]
+      },
+      {
+        "series_id": "rurouni-kenshin",
+        "position": 94.3,
+        "kind": "movie",
+        "anilist_id": 46,
+        "note": "AniList 46 'Ishinshishi e no Requiem' format=MOVIE, 91 min, 1997-12-20. en-WP: 'is a Japanese animated martial arts film'.",
+        "sources": [
+          "https://anilist.co/anime/46",
+          "https://en.wikipedia.org/wiki/Rurouni_Kenshin:_The_Motion_Picture"
+        ]
+      },
+      {
+        "series_id": "rurouni-kenshin",
+        "position": 94.4,
+        "kind": "ova",
+        "anilist_id": 401,
+        "note": "AniList 401 'Seisou-hen' format=OVA, 2 eps, 2001-12-03. en-WP: 'is a Japanese original video animation (OVA)'.",
+        "sources": [
+          "https://anilist.co/anime/401",
+          "https://en.wikipedia.org/wiki/Rurouni_Kenshin:_Reflection"
+        ]
+      },
+      {
+        "series_id": "seraph-of-the-end-vampire-reign",
+        "position": 24.5,
+        "kind": "ova",
+        "anilist_id": 21586,
+        "note": "AniList 21586 'Owari no Seraph: Kyuuketsuki Shahal' format=OVA, 1 ep, 2016-05-02 = the entry's stated date. en-WP Seraph of the End infobox: type=ova, 'Seraph of the End: Vampire Shahal', released May 2, 2016.",
+        "sources": [
+          "https://anilist.co/anime/21586",
+          "https://en.wikipedia.org/wiki/Seraph_of_the_End"
+        ]
+      },
+      {
+        "series_id": "that-time-i-got-reincarnated-as-a-slime",
+        "position": 24.1,
+        "kind": "ova",
+        "anilist_id": 161802,
+        "note": "AniList 161802 'Coleus no Yume' format=OVA, 3 eps, 2023-11-01. (The stored note calls it '3 ONA eps'; AniList's format field for the entry is OVA — flagged.)",
+        "sources": [
+          "https://anilist.co/anime/161802"
+        ]
+      },
+      {
+        "series_id": "that-time-i-got-reincarnated-as-a-slime",
+        "position": 48.2,
+        "kind": "movie",
+        "anilist_id": 139498,
+        "note": "AniList 139498 format=MOVIE, 108 min, 2022-11-25. en-WP: 'is a 2022 Japanese animated isekai fantasy film'.",
+        "sources": [
+          "https://anilist.co/anime/139498",
+          "https://en.wikipedia.org/wiki/That_Time_I_Got_Reincarnated_as_a_Slime_the_Movie:_Scarlet_Bond"
+        ]
+      },
+      {
+        "series_id": "that-time-i-got-reincarnated-as-a-slime",
+        "position": 72.3,
+        "kind": "movie",
+        "anilist_id": 182206,
+        "note": "AniList 182206 'Soukai no Namida-hen' format=MOVIE, 104 min, 2026-02-27 = the entry's stated JP release.",
+        "sources": [
+          "https://anilist.co/anime/182206"
+        ]
+      },
+      {
+        "series_id": "the-ancient-magus-bride",
+        "position": 24.1,
+        "kind": "ova",
+        "anilist_id": 130713,
+        "note": "AniList 130713 format=OVA, 3 eps, 2021-09-10 to 2022-09-09. en-WP infobox: type=oad (original animation DVD), 'The Ancient Magus' Bride: The Boy from the West and the Knight of the Blue Storm' — OAD is the home-video-bundle form of OVA.",
+        "sources": [
+          "https://anilist.co/anime/130713",
+          "https://en.wikipedia.org/wiki/The_Ancient_Magus%27_Bride"
+        ]
+      },
+      {
+        "series_id": "the-heroic-legend-of-arslan",
+        "position": 25.1,
+        "kind": "ova",
+        "anilist_id": 21817,
+        "note": "AniList 21817 'Arslan Senki (TV) OVA' format=OVA, 2 eps, 2016-03-09 and 2016-12-09. en-WP The Heroic Legend of Arslan carries an infobox with type=ova for the TV series' OVAs.",
+        "sources": [
+          "https://anilist.co/anime/21817",
+          "https://en.wikipedia.org/wiki/The_Heroic_Legend_of_Arslan"
+        ]
+      },
+      {
+        "series_id": "to-love-ru-darkness",
+        "position": 12.2,
+        "kind": "ova",
+        "anilist_id": 13851,
+        "note": "AniList 13851 'To LOVE-Ru Darkness OVA' format=OVA, 6 eps, from 2012-08-17. en-WP To Love Ru infobox: type=ova, 'To Love Ru Darkness', released August 17, 2012.",
+        "sources": [
+          "https://anilist.co/anime/13851",
+          "https://en.wikipedia.org/wiki/To_Love_Ru"
+        ]
+      },
+      {
+        "series_id": "to-love-ru-darkness",
+        "position": 24.1,
+        "kind": "special",
+        "anilist_id": 21852,
+        "note": "AniList 21852 'To LOVE-Ru Darkness 2nd Specials' format=SPECIAL, 2 eps, 2015-10-29 — the '2nd eps 13-14' the entry names. NOTE: appears to be the same work as the @24.5 entry — see flags.",
+        "sources": [
+          "https://anilist.co/anime/21852"
+        ]
+      },
+      {
+        "series_id": "to-love-ru-darkness",
+        "position": 24.5,
+        "kind": "special",
+        "anilist_id": 21852,
+        "note": "AniList 21852 'To LOVE-Ru Darkness 2nd Specials' format=SPECIAL, 2 eps, 2015-10-29. NOTE: appears to be the same work as the @24.1 entry — see flags.",
+        "sources": [
+          "https://anilist.co/anime/21852"
+        ]
+      },
+      {
+        "series_id": "yu-gi-oh-2000",
+        "position": 224.5,
+        "kind": "movie",
+        "anilist_id": 21265,
+        "note": "AniList 21265 format=MOVIE, 130 min, 2016-04-23. en-WP: 'is a 2016 Japanese animated science fantasy film'.",
+        "sources": [
+          "https://anilist.co/anime/21265",
+          "https://en.wikipedia.org/wiki/Yu-Gi-Oh!_The_Dark_Side_of_Dimensions"
+        ]
+      },
+      {
+        "series_id": "yu-yu-hakusho-ghostfiles",
+        "position": 112.1,
+        "kind": "special",
+        "anilist_id": 6964,
+        "note": "AniList 6964 'Yuu Yuu Hakusho Picture Drama' format=SPECIAL, 1 ep, 6 min, 2009-10-27. en-WP: Bandai Visual's first Blu-ray set (October 27, 2009) 'contain[ed] a picture drama set after the end of the series'. NOTE: appears to be the same work as the @112.5 entry — see flags.",
+        "sources": [
+          "https://anilist.co/anime/6964",
+          "https://en.wikipedia.org/wiki/YuYu_Hakusho_(1992_TV_series)"
+        ]
+      },
+      {
+        "series_id": "yu-yu-hakusho-ghostfiles",
+        "position": 112.5,
+        "kind": "special",
+        "anilist_id": 6964,
+        "note": "AniList 6964 'Yuu Yuu Hakusho Picture Drama' format=SPECIAL, 1 ep, 6 min, 2009-10-27. NOTE: appears to be the same work as the @112.1 entry — see flags.",
+        "sources": [
+          "https://anilist.co/anime/6964",
+          "https://en.wikipedia.org/wiki/YuYu_Hakusho_(1992_TV_series)"
+        ]
+      },
+      {
+        "series_id": "yu-yu-hakusho-ghostfiles",
+        "position": 112.7,
+        "kind": "ova",
+        "anilist_id": 102631,
+        "note": "en-WP YuYu Hakusho (1992 TV series) infobox: type=ova, title 'Yu Yu Hakusho: Two Shot & All or Nothing', 2 episodes, released October 26, 2018; the franchise article: 'A brand new OVA ... was released with a Blu-ray box set ... on October 26, 2018'. DISAGREEMENT: AniList 102631 bundles both shorts as ONE entry with format=SPECIAL. The anilist_id is therefore shared with @112.8 — it is not a per-entry id.",
+        "sources": [
+          "https://anilist.co/anime/102631",
+          "https://en.wikipedia.org/wiki/YuYu_Hakusho_(1992_TV_series)"
+        ]
+      },
+      {
+        "series_id": "yu-yu-hakusho-ghostfiles",
+        "position": 112.8,
+        "kind": "ova",
+        "anilist_id": 102631,
+        "note": "en-WP YuYu Hakusho (1992 TV series) infobox: type=ova, 'Yu Yu Hakusho: Two Shot & All or Nothing', 2 episodes, released October 26, 2018. DISAGREEMENT: AniList 102631 bundles both shorts as ONE entry with format=SPECIAL; the id is shared with @112.7.",
+        "sources": [
+          "https://anilist.co/anime/102631",
+          "https://en.wikipedia.org/wiki/YuYu_Hakusho_(1992_TV_series)"
+        ]
+      }
+    ]
+  },
+  "flags_for_sean": [
+    "UNCITABLE KIND (1 of 3) — cells-at-work @11.5 'Heat Stress: If There Was Pocari Sweat' (2019-07-08): BOTH sources call it an ONA, which is not a T29 kind. AniList 138675 'Pocari Sweat web movie: Hataraku Saibou Dai 11.5-wa Necchuushou - Moshimo Pocari Sweat ga Attara' format=ONA, 10 min, 2019-07-08 (https://anilist.co/anime/138675); en-WP 'List of Cells at Work! episodes' lists it as 'EpisodeNumber = 11.5<br />(ONA)' (https://en.wikipedia.org/wiki/List_of_Cells_at_Work!_episodes). Not guessed. If you want it typed inside the current vocabulary, `special` is the nearest fit (a promotional bonus short outside the broadcast run); the alternative is adding `ona` to the T29 kind list — note the same question will recur for slime @24.1, whose stored note calls it '3 ONA eps' while AniList 161802 says OVA.",
+    "UNCITABLE KIND (2 of 3) — high-school-dxd @36.5 'Holy Behind the Gymnasium (HERO Episode 0)' (2018-04-10): no source classifies it as ova/special/movie/recap. AniList has NO separate entry; 97767 'High School DxD HERO' is format=TV with episodes=13 and startDate 2018-04-10 — i.e. Episode 0 is counted as part of the TV run and IS the season's first broadcast (https://anilist.co/anime/97767). en-WP 'High School DxD Hero' lists it in the season's TV episode table as season episode 0 / overall 41, aired April 10, 2018 (https://en.wikipedia.org/wiki/High_School_DxD_Hero). ja-WP numbers it 'life.00 体育館裏のホーリー' in the 第4期 episode list and explains 前作後半がオリジナル展開になったこともあり第0話として改めて描かれ、第1話より原作第9巻のストーリーとなる — it re-does BorN's anime-original ending before the season proper starts (https://ja.wikipedia.org/wiki/ハイスクールD×D). So it is a broadcast TV episode numbered 0, not a bonus: it is NOT a recap (it re-animates rather than recaps) and not an OVA/special/movie. Two defensible rulings: (a) keep it order-only and extend T29 with a kind for a numbered-zero broadcast episode, or (b) treat it as a real row and extend the HERO component to 13 rows (37-49), which is what AniList's count implies.",
+    "UNCITABLE KIND (3 of 3) — the-heroic-legend-of-arslan @25.2 'Arslan Senki: Fuujin Ranbu': AniList 21424 format=TV, 8 eps, 2016-07-03 to 2016-08-21 (https://anilist.co/anime/21424). This is a TV SEASON, not an order-only bonus, and our own components table already carries it as '21424 [season] 26-33'. The stored note says the same ('Not order-only - this is the missing season 2 component'). No kind assigned; the fix is structural — the order-only entry should be retired now that the season component exists.",
+    "PROBABLE DUPLICATE ENTRY — to-love-ru-darkness @24.1 and @24.5 both resolve to the single AniList work 21852 'To LOVE-Ru Darkness 2nd Specials' (format=SPECIAL, 2 eps, 2015-10-29, https://anilist.co/anime/21852): @24.1 names it explicitly ('2nd eps 13-14', chs 43-47) and @24.5 is the untitled '2nd Specials = standalone bonuses; community count = 24' entry from your 2026-08-23 sign-off. Both are typed `special` above so neither is left unresolved, but one of the two positions should almost certainly be dropped. I could not tell from the context which is the keeper — @24.1 carries the chapter detail, @24.5 carries your sign-off.",
+    "PROBABLE DUPLICATE ENTRY — yu-yu-hakusho-ghostfiles @112.1 and @112.5 both resolve to AniList 6964 'Yuu Yuu Hakusho Picture Drama' (format=SPECIAL, 1 ep, 6 min, 2009-10-27, https://anilist.co/anime/6964): @112.1 is the batch-14 research-tier entry, @112.5 is the untitled 'Picture Drama = standalone bonus; community count = 112' entry from your 2026-08-23 sign-off. Both typed `special`; one position is redundant.",
+    "SHARED ANILIST ID, NOT A DUPLICATE — yu-yu-hakusho-ghostfiles @112.7 'Two Shot' and @112.8 'All or Nothing' are two DIFFERENT 2018 shorts (Two Shot adapts the vol-7 unnumbered bonus chapter; All or Nothing adapts ch 173-174) but AniList indexes them as one entry, 102631 'Yuu☆Yuu☆Hakusho: TWO SHOTS / Noru ka Soru ka' (eps=1, https://anilist.co/anime/102631). Both rows therefore carry the same anilist_id by necessity. Any uniqueness check on (series_id, anilist_id) will false-positive here.",
+    "KIND DISAGREEMENT — ghost-in-the-shell-stand-alone-complex @52.5 'Solid State Society': typed `special` (AniList 1566 format=SPECIAL, 108 min, 2006-09-01, and our stored component for 1566 is kind [special]). But en-WP opens 'is a 2006 Japanese anime science fiction television film' (https://en.wikipedia.org/wiki/Ghost_in_the_Shell:_Stand_Alone_Complex_%E2%80%93_Solid_State_Society) and your own stored ruling reasons from the movies rule ('Solid State Society is a FILM — movies are order-only unless community-numbered'). If the kind should match the RATIONALE you applied, this is `movie`; I did not overwrite the stored component kind on my own authority.",
+    "KIND DISAGREEMENT — hajime-no-ippo-the-fighting @76.6 'Champion Road': typed `special` (AniList 264 format=SPECIAL, 90 min, 2003-04-18, and our stored component for 264 is kind [special]). en-WP's Hajime no Ippo infobox says type=tv film, network Nippon TV (https://en.wikipedia.org/wiki/Hajime_no_Ippo), and the stored watch-order note itself calls it '(TV film)'. `movie` is defensible.",
+    "KIND DISAGREEMENT — reborn @203.1: typed `ova` on en-Wikipedia's explicit wording (franchise infobox '203 + 2 OVAs'; 'An original video animation (OVA) was produced ... released in October 2009 during the annual Jump Super Anime Tour'; 'List of Reborn! episodes' == OVAs == table). AniList 8532 says format=ONA (https://anilist.co/anime/8532). ja-WP files it under ジャンプアニメ as an event SCREENING (上映) with a 2010-07-21 complete-edition DVD, which reads closer to `special` than to either. Also: the stored note's 'AniList id not verified' can be cleared — 8532 is confirmed by native title.",
+    "KIND DISAGREEMENT — yu-yu-hakusho-ghostfiles @112.7 / @112.8: typed `ova` on en-WP (infobox type=ova, 'Two Shot & All or Nothing', 2 episodes, released October 26, 2018, bundled with the anniversary Blu-ray box). AniList 102631 says format=SPECIAL. The stored notes for both entries already say '(2018 OVA)', so `ova` also matches stored data.",
+    "MINOR — that-time-i-got-reincarnated-as-a-slime @24.1 'Visions of Coleus': typed `ova` from AniList 161802 format=OVA (3 eps, 2023-11-01, https://anilist.co/anime/161802). The stored note describes it as '3 ONA eps released 202…'. AniList disagrees with our own note; nothing else contradicts OVA, so OVA is delivered."
+  ]
+}

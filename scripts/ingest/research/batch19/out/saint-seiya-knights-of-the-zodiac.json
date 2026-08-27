@@ -1,0 +1,56 @@
+{
+  "series_id": "saint-seiya-knights-of-the-zodiac",
+  "summary": "All three target rows come back anchor-hostile, and for the same reason each time: every chapter they touch was already reached by an earlier anchored episode, so an anchor would move the reader BACKWARDS rather than forwards. Eps 29 and 30 are the Jamian abduction, and the Spanish Saint Seiya wiki's page for manga chapter 24 puts the ENTIRE sequence inside ch 24 - Saori kidnapped by Jamian's crows, Seiya's pursuit, Shaina arriving, the jump from the cliff, Saori's cosmo turning the crows on Jamian, and the arrival of Capella, Dante and Algol - which en.wikipedia's volume-6 summary corroborates beat for beat. Ch 24 is already the stored END at ep 25 and eps 27-28 already stand at ch 25, so eps 29-30 add no position; the stored 'eps 27,28,29,30,31 rearranged {24-25}' annotation is the right home for the fact and ep 31's stored {24-25} already books the ch-24 tail. Ep 32 opens the anime-exclusive Post-Silver-Saints block: the ES wiki's arc page labels it 'Historia exclusiva del anime' and its Relleno page says the Death Queen Island confrontation 'occurs in the manga, but under other circumstances and much earlier', i.e. it re-stages material from ch 18-19 that ep 15 already reached. One correction to the record: Jango is NOT an anime invention - the ES wiki's own character page gives his manga debut as chapter 18, as the Black Saints' leader and guardian of the Phoenix Cloth. All three rows sit at chapters <= 25, i.e. entirely below the V6/N22 phantom-chapter migration threshold (stored >= 30), so nothing here interacts with the -1 shift.",
+  "anchors": [],
+  "continue_points": [],
+  "anchor_hostile": [
+    {
+      "episode": 29,
+      "why": "A44 / re-use. The whole episode is inside manga chapter 24 'To Fight For Athena!' (戦え！女神のもとで, vol 6). The ES wiki's chapter-24 page runs: the Bronze Saints return the Sagittarius Cloth, Saori reveals she is Athena, THEN 'Saori es secuestrada por Jamian de Cuervo con ayuda de sus aves y Seiya va a salvarla, ahi se enfrenta al Santo de Plata' - which is exactly ep 29 (Jamian's crows take Saori, Seiya pursues, is nearly beaten, gets up). en-WP's vol-6 summary gives the same sequence. Ch 24 is ALREADY the stored END at ep 25 (whose Japanese title is ch 24's title), and eps 27-28 already stand at ch 25, so an END of 24 here would run the reader backwards two chapters for material the position has already passed. The stored 'eps 27,28,29,30,31 rearranged {24-25}' annotation carries it; position holds at the stored ep-28 continue of 24.",
+      "sources": [
+        "https://saintseiya.fandom.com/es/api.php?action=parse&page=Saint%20Seiya%20-%20Cap%C3%ADtulo%2024%20%22%C2%A1Luchen!%20Al%20lado%20de%20Atenea%22&prop=wikitext&format=json",
+        "https://saintseiya.fandom.com/es/api.php?action=parse&page=Episodio_029&prop=wikitext&format=json",
+        "https://en.wikipedia.org/wiki/List_of_Saint_Seiya_chapters_(series)"
+      ]
+    },
+    {
+      "episode": 30,
+      "why": "A44 / re-use, same chapter as ep 29. The ES chapter-24 page carries ep 30's every beat: 'cuando llega Shaina de Ofiuco... Seiya salta con Saori a un precipicio... ambos se salvan pero Pegaso queda mal herido. Atenea se enfrenta con su cosmos a Cuervo, pero llegan los Santos de Auriga, Perseo y Cerbero'. That last clause is ep 30's closing image (two more Silver Saints arriving) and it is still ch 24; ch 24's page even lists Dante de Cerberus and Capella de Auriga as debuting there. en-WP's vol-6 summary closes the volume the same way ('Three more Silver Saints attack Saori, but they are confronted by Ikki'). So ep 30's END would be 24 - behind ep 25's 24 (equal) and behind eps 27-28's 25. No new position. Ep 31's stored anchor already books the ch-24 tail as START 24 (Sean's A10 ruling), which is the correct place for it in a monotone series.",
+      "sources": [
+        "https://saintseiya.fandom.com/es/api.php?action=parse&page=Saint%20Seiya%20-%20Cap%C3%ADtulo%2024%20%22%C2%A1Luchen!%20Al%20lado%20de%20Atenea%22&prop=wikitext&format=json",
+        "https://saintseiya.fandom.com/es/api.php?action=parse&page=Episodio_030&prop=wikitext&format=json",
+        "https://en.wikipedia.org/wiki/List_of_Saint_Seiya_chapters_(series)"
+      ]
+    },
+    {
+      "episode": 32,
+      "why": "A44 / re-use inside an anime-exclusive arc. Ep 32 opens the four-episode 'Arco Post-Silver Saints' (eps 32-35), which the ES wiki's arc page marks 'el segundo arco de relleno' and 'Historia exclusiva del anime', and which its Relleno page describes as 'Ikki regresa a la Isla Death Queen... donde es interceptado por los Fenix negros y su lider Jango. Este evento ocurre en el manga, pero bajo otras circunstancias y mucho antes que el momento en el que se presenta en el anime'. The manga material it re-stages - the Esmeralda memories and the Death Queen Island / Black Phoenix confrontation - lies in ch 18-19, which the stored ep-15 anchor already reached as END 19 {18-19}. Chapter re-use never moves position, and the anime's own additions here (Jango as the island's new leader after Ikki's departure, the volcanic destruction of the island, Athena rescuing the Saints) have no manga counterpart at all.",
+      "sources": [
+        "https://saintseiya.fandom.com/es/api.php?action=parse&page=Arco%20Post-Silver%20Saints&prop=wikitext&format=json",
+        "https://saintseiya.fandom.com/es/api.php?action=parse&page=Relleno&prop=wikitext&format=json",
+        "https://en.wikipedia.org/wiki/List_of_Saint_Seiya_chapters_(series)",
+        "https://en.wikipedia.org/wiki/List_of_Saint_Seiya_episodes"
+      ]
+    }
+  ],
+  "annotations": [
+    {
+      "episodes": [32],
+      "kind": "loose_parallel",
+      "chapters": "18-19",
+      "note": "Correction to a natural misreading: Jango is NOT an anime invention. The ES wiki's Jango page gives Manga = 'Saint Seiya Capitulo #18' and describes him as the manga's leader of the Death Queen Island Black Saints and guardian of the Phoenix Cloth; what is anime-exclusive is his promotion to island leader AFTER Ikki's departure, his worldwide terrorist attacks, the Black Phoenix's re-appearance and the island's destruction. Ep 32 therefore re-stages ch 18-19's Esmeralda memories and Black Phoenix fight under invented circumstances, ~17 episodes after ep 15 already animated them."
+    }
+  ],
+  "repairs": [],
+  "type_corrections": [],
+  "structure": {
+    "notes": "CHAPTER SPACE - nothing in this verdict touches the migration. Every chapter named here is <= 25, and the ruled V6/N22 space migration is a uniform -1 for stored values >= 30 (phantom ch 30 'Battle in the Golden Bull Palace' = anime ep 43's title, PROVEN by the batch-17 verifier via en-WP's preserved ruby gloss 'Batoru'; the once-suspected phantom ch 53 REFUTED by Shueisha's vol-15 TOC; true tankobon count 109). So no conversion applies and none is proposed. CHAPTER-24 INTERNAL SHAPE, newly pinned this pass from the ES wiki's per-chapter page (a source the batch-17 verdict did not use - it worked from the arc tables and volume summaries): ch 24 runs (1) the Saints return the Sagittarius Cloth and try to quit, (2) Saori reveals she is Athena and tells the Aiolos/Mitsumasa story, (3) Jamian's crows abduct her, (4) Seiya's pursuit and the cliff jump, (5) Saori's cosmo turns the crows on Jamian, (6) Capella, Dante and Algol arrive and Ikki confronts them, beating Cerberus first. Our anchors distribute those six beats as ep 25 -> (1)(2), eps 29-30 -> (3)(4)(5)(6-head), ep 31 -> (6-tail) + ch 25. Ch 25's own page confirms the anime's inversion: in the manga Ikki destroys Capella and Dante FIRST and Algol's Medusa duel closes the chapter, whereas the anime plays Algol at eps 27-28 and Capella/Dante at ep 31. ARC BOUNDARIES re-confirmed: ES 'Arco de los Silver Saints' = tomos caps 20-25 / eps 23-31; 'Arco Post-Silver Saints' = eps 32-35, anime-only.",
+    "order_only": []
+  },
+  "flags_for_sean": [
+    "If a REORDER_REGIME is ever introduced for this series, the values for the two hostile Jamian rows are ep 29 -> END 24 START 24 and ep 30 -> END 24 START 24 (vol 6), both carrying ch 24's back half, which no earlier episode covered even though ch 24 itself was already reached at ep 25. I did not deliver them as anchors because the stored series is strictly monotone and eps 27-28 already stand at ch 25.",
+    "TYPING QUESTION on ep 32 (flagged, NOT corrected). The row is stored mixed and AFL agrees, but the ES wiki calls eps 32-35 an 'arco de relleno' / 'Historia exclusiva del anime' outright, and under T28 an anime-original plot that merely re-stages a scene the anime already animated (ch 18-19 at ep 15) is filler with a mandatory loose_parallel annotation - which the block already has ('eps 32,33,34,35 side_story {19}'). Rows 33, 34 and 35 are already typed filler, so retyping 32 would align the block. I stopped short of a type_correction because both dissenting statements come from ONE wiki (saintseiya.fandom es), and AFL - our other typing source - says mixed. This is the same call the batch-17 verdict declined to make; it is a Sean ruling, not a research finding.",
+    "Position through eps 29-32 holds at the stored ep-28 continue of 24 (C3: 'this episode also covered ch 25 ahead of the continue point - skip on arrival'). I deliberately did not emit continue_points, because with no anchor on any of the three rows a continue row would be orphaned. The next real movement is ep 31's stored continue of 26.",
+    "Open flag #702 unchanged by this pass: MU's latest_chapter 33 is unusable for this series and AniList's 249 is a magazine-installment count. Nothing in the three target rows depends on either."
+  ]
+}

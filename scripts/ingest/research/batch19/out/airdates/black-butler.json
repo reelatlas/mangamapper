@@ -1,0 +1,27 @@
+{
+  "series_id": "black-butler",
+  "summary": "Air-date lane only. The withheld ep 31 is 黒執事II 第7話「殺執事」 (Deathly Butler), broadcast 2010-08-13 — AFL's 2017-08-13 is a YEAR corruption of the same day/month, so AFL's day was right and only its year was wrong. Weekly Friday slot: 07-30 / 08-06 / 08-13 / 08-20 / 08-27 across our rows 29–33, all neighbours already correct. One repair, no true deviation.",
+  "anchors": [],
+  "continue_points": [],
+  "anchor_hostile": [],
+  "annotations": [],
+  "repairs": [
+    {
+      "episode": 31,
+      "field": "air_date",
+      "old": null,
+      "new": "2010-08-13",
+      "why": "ja-WP 黒執事 (アニメ) 各話リスト, 黒執事II block: 第7話「殺執事」初放送日 = 2010年8月13日 (第6話 夜露執事 8月6日, 第8話 吐露執事 8月20日). en-WP List of Black Butler episodes: ep 31 / season-2 ep 7 'Deathly Butler', OriginalAirDate = 2010-08-13. AFL's 2017-08-13 is the same 08-13 with a corrupted year.",
+      "sources": [
+        "https://ja.wikipedia.org/wiki/%E9%BB%92%E5%9F%B7%E4%BA%8B_(%E3%82%A2%E3%83%8B%E3%83%A1)",
+        "https://en.wikipedia.org/wiki/List_of_Black_Butler_episodes"
+      ]
+    }
+  ],
+  "type_corrections": [],
+  "structure": {
+    "notes": "Our rows 25–36 are 黒執事II 第1話–第12話 (2010-07-02 … 2010-09-17); row N − 24 = the season-2 episode number. Confirmed at rows 29/30/32/33 against ja-WP.",
+    "order_only": []
+  },
+  "flags_for_sean": []
+}

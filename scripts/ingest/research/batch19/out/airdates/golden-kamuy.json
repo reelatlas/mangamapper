@@ -1,0 +1,42 @@
+{
+  "series_id": "golden-kamuy",
+  "summary": "Air-date lane, and the flagged row is innocent. Ep 47 'Steamship' (蒸気船) = 2023-06-12 is CORRECT. The regression comes from rows 45 and 46, which are not TV episodes at all: they carry the titles and delivery dates of the ゴールデン道画劇場 WEB SHORTS #45「撃ちてし止まむ！編」(2023-06-20) and #46「メンコ編」(2023-06-27). en-WP's 'List of Golden Kamuy episodes' page holds the shorts in a second table that uses the same EpisodeNumber field, so an ingest that swept the page picked up shorts #45/#46 in place of TV eps 45/46. The real rows 45 and 46 are 第四十五話「共犯」 (2023-05-29) and 第四十六話「完璧な母」 (2023-06-05).",
+  "anchors": [],
+  "continue_points": [],
+  "anchor_hostile": [],
+  "annotations": [],
+  "repairs": [
+    {
+      "episode": 45,
+      "field": "air_date",
+      "old": "2023-06-20",
+      "new": "2023-05-29",
+      "why": "ja-WP ゴールデンカムイ 各話リスト: 第四十五話「共犯」Aux5 = 5月29日 (2023); en-WP Golden Kamuy season 4: EpisodeNumber 45 / season ep 9 'Partner in Crime' = 2023-05-29. The stored 2023-06-20 is the delivery date of ゴールデン道画劇場 #45「撃ちてし止まむ！編」, a web short.",
+      "sources": [
+        "https://ja.wikipedia.org/wiki/%E3%82%B4%E3%83%BC%E3%83%AB%E3%83%87%E3%83%B3%E3%82%AB%E3%83%A0%E3%82%A4",
+        "https://en.wikipedia.org/wiki/Golden_Kamuy_season_4"
+      ]
+    },
+    {
+      "episode": 46,
+      "field": "air_date",
+      "old": "2023-06-27",
+      "new": "2023-06-05",
+      "why": "ja-WP: 第四十六話「完璧な母」= 6月5日; en-WP Golden Kamuy season 4: EpisodeNumber 46 / season ep 10 'Perfect Mother' = 2023-06-05. Stored 2023-06-27 is ゴールデン道画劇場 #46「メンコ編」's delivery date.",
+      "sources": [
+        "https://ja.wikipedia.org/wiki/%E3%82%B4%E3%83%BC%E3%83%AB%E3%83%87%E3%83%B3%E3%82%AB%E3%83%A0%E3%82%A4",
+        "https://en.wikipedia.org/wiki/Golden_Kamuy_season_4"
+      ]
+    }
+  ],
+  "type_corrections": [],
+  "structure": {
+    "notes": "62 rows = the 62 TV episodes (S1 1-12, S2 13-24, S3 25-36, S4 37-49, 最終章 50-62, last = 第六十二話 2026-03-30). ja-WP confirms 全13話 for 最終章 and 第六十二話 as the finale, so there is no room in the row space for the web shorts.",
+    "order_only": []
+  },
+  "flags_for_sean": [
+    "TITLES AT ROWS 45/46 ARE ALSO WRONG and must be fixed with the dates: stored 'Shoot and stop! Episode' and 'Menko Episode' are ゴールデン道画劇場 web shorts. Correct titles: 45 = 'Partner in Crime' (共犯), 46 = 'Perfect Mother' (完璧な母). Anything else keyed to rows 45/46 (typing, chapter anchors) was derived against the wrong content and should be re-checked.",
+    "SOURCE TRAP worth capturing: en-WP's 'List of Golden Kamuy episodes' contains a second, much longer set of {{Episode list}} blocks under '== Golden Dōga Gekijō ==' whose EpisodeNumber values (1-46) collide with the TV episode numbers. Any scraper of that page must scope to the season subpages ({{:Golden Kamuy season N}}) and ignore everything after the 'Golden Dōga Gekijō' heading.",
+    "Ep 47 needs no repair: 2023-06-12 is confirmed by ja-WP (第四十七話「蒸気船」6月12日) and en-WP."
+  ]
+}

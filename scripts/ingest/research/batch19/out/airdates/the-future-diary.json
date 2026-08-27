@@ -1,0 +1,29 @@
+{
+  "series_id": "the-future-diary",
+  "summary": "One repair covers both the G54 regression and the G55 off-window flag: they are the same row and the same defect, a year corruption. Future Diary aired weekly from 2011-10-09/10 through 2012-04-16; en-WP's episode list gives ep 13 'Number Withheld' (非通知設定) = 2012-01-09, and the weekly cadence around it (ep 12 = 2011-12-26, ep 14 = 2012-01-16) forces the same value. ja-WP confirms the title/number pairing (第13話 非通知設定) but carries no date column.",
+  "anchors": [],
+  "continue_points": [],
+  "anchor_hostile": [],
+  "annotations": [],
+  "repairs": [
+    {
+      "episode": 13,
+      "field": "air_date",
+      "old": "2011-01-09",
+      "new": "2012-01-09",
+      "why": "Ep 13 'Unknown Number' / 'Number Withheld' (非通知設定) aired 2012-01-09, not 2011-01-09 - the series had not started in January 2011 (premiere 2011-10-09), which is exactly what the G55 off-window check caught. en-WP 'List of Future Diary episodes' ep 13 = January 9, 2012; the surrounding weekly run (ep 11 = 2011-12-19, ep 12 = 2011-12-26, ep 14 = 2012-01-16, ep 15 = 2012-01-23) fixes it uniquely; ja-WP 未来日記 (漫画) 各話リスト confirms 第13話 = 非通知設定.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/List_of_Future_Diary_episodes",
+        "https://ja.wikipedia.org/wiki/%E6%9C%AA%E6%9D%A5%E6%97%A5%E8%A8%98%20%28%E6%BC%AB%E7%94%BB%29"
+      ]
+    }
+  ],
+  "type_corrections": [],
+  "structure": {
+    "notes": "27 rows = 26 TV + the 2013-06-19 'Redial' OVA. Weekly, one skip in early March 2012 (ep 20 = 2012-02-27, ep 21 = 2012-03-12).",
+    "order_only": []
+  },
+  "flags_for_sean": [
+    "the-future-diary: single-strong-source on the exact date. ja-WP's 各話リスト for this series has no 放送日 column, so the corroboration is en-WP plus the unbroken weekly cadence of eps 11/12/14/15, not a second independent date table. The year 2011 -> 2012 correction is certain regardless (G55 proves 2011-01-09 is impossible); only the day would be at risk, and eps 12 and 14 pin it."
+  ]
+}

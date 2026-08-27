@@ -1,0 +1,28 @@
+{
+  "series_id": "beelzebub",
+  "summary": "Air-date lane (G53) only; no anchors. Stored ep 47 (2011-12-08) is a digit transposition of the real 2011-12-18. Beelzebub aired weekly Sunday 07:00 on ytv/NTV; バブ45=12/4, バブ46=12/11, バブ47=12/18, バブ48=12/25, and 2012-01-08 for バブ49 — all three sources agree and the neighbours stored in the DB are already correct. One repair, no true deviation.",
+  "anchors": [],
+  "continue_points": [],
+  "anchor_hostile": [],
+  "annotations": [],
+  "repairs": [
+    {
+      "episode": 47,
+      "field": "air_date",
+      "old": "2011-12-08",
+      "new": "2011-12-18",
+      "why": "ja-WP 各話リスト gives バブ47「お待たせしました」= 2011年12月18日; en-WP gives December 18, 2011; syoboi Count 47 = 2011-12-18 07:00. Stored 12-08 is a transposition of 12-18. Neighbours 46 (12-11) and 48 (12-25) are already correct, so the row itself is the defect.",
+      "sources": [
+        "https://ja.wikipedia.org/wiki/%E3%81%B9%E3%82%8B%E3%81%9C%E3%83%90%E3%83%96",
+        "https://en.wikipedia.org/wiki/List_of_Beelzebub_episodes",
+        "https://cal.syoboi.jp/tid/2076"
+      ]
+    }
+  ],
+  "type_corrections": [],
+  "structure": {
+    "notes": "Our row numbers map 1:1 onto the ja-WP バブNN numbering (60 rows = バブ1–バブ60 incl. the two split 53-A/B and 55-A/B counts as stored). No numbering conversion needed.",
+    "order_only": []
+  },
+  "flags_for_sean": []
+}

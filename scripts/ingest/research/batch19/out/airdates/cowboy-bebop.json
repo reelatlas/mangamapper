@@ -1,0 +1,30 @@
+{
+  "series_id": "cowboy-bebop",
+  "summary": "Air-date lane only. Ep 24's stored 1999-04-10 is CORRECT for our house convention; the regression is caused by ep 23, whose stored 1999-09-03 is a month-digit corruption of 1999-04-03. Session #23 'Brain Scratch' aired in the WOWOW first-run slot 金曜25:00 on Friday 1999-04-02 (ja-WP and en-WP both print the nominal Friday); our rows print the post-midnight Saturday calendar date, which is 1999-04-03 — the same convention as our already-correct rows 22 (03-27), 24 (04-10), 25 (04-17) and 26 (04-24). Not a TX/WOWOW split issue: rows 22-26 are all in the WOWOW first-run block.",
+  "anchors": [],
+  "continue_points": [],
+  "anchor_hostile": [],
+  "annotations": [],
+  "repairs": [
+    {
+      "episode": 23,
+      "field": "air_date",
+      "old": "1999-09-03",
+      "new": "1999-04-03",
+      "why": "ja-WP カウボーイビバップ 各話リスト (WOWOW初放送): Session #23「ブレイン・スクラッチ」= 1999年4月2日, in the 金曜 25:00-25:30 slot (= Saturday 01:00 calendar), i.e. 1999-04-03 under the convention our neighbouring rows use. en-WP List of Cowboy Bebop episodes: ep 23 = 1999-04-02 (same nominal Friday). Stored 1999-09-03 is outside the WOWOW run entirely (which ended 1999-04-24).",
+      "sources": [
+        "https://ja.wikipedia.org/wiki/%E3%82%AB%E3%82%A6%E3%83%9C%E3%83%BC%E3%82%A4%E3%83%93%E3%83%90%E3%83%83%E3%83%97",
+        "https://en.wikipedia.org/wiki/List_of_Cowboy_Bebop_episodes"
+      ]
+    }
+  ],
+  "type_corrections": [],
+  "structure": {
+    "notes": "26 rows = Session #1–#26 in the WOWOW first-run order (1998-10-23 … 1999-04-23 nominal). The TV Tokyo run aired only a 12-episode subset in a different order and is not our row space.",
+    "order_only": []
+  },
+  "flags_for_sean": [
+    "Convention note (whole series, not a single-row defect): our Cowboy Bebop per-episode dates are the ja/en-WP nominal Friday PLUS ONE DAY — the post-midnight Saturday calendar date of the WOWOW 金曜25:00 slot (verified at rows 22, 24, 25, 26). I set ep 23 to 1999-04-03 to stay inside that convention. If Sean would rather normalise the whole series onto the nominal broadcast day, the value is 1999-04-02 and rows 22/24/25/26 all need the same -1 shift.",
+    "Also note the series-level start date 1998-04-03 is the TV TOKYO premiere (which began with Session #2), while the per-episode dates are the WOWOW first run. Not in scope for this lane, but the two fields describe different broadcasts."
+  ]
+}

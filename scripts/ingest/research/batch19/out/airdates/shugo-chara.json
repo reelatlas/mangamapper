@@ -1,0 +1,106 @@
+{
+  "series_id": "shugo-chara",
+  "summary": "Two different defects are tangled here. (1) Real date typos: ep 23 has a month slip, ep 26 is one day late, ep 88 duplicates ep 89's date, and a whole BLOCK - our rows 92 through 100 - carries the year 2010 where the true year is 2009 (the E2 residual; the gate only saw it at ep 101 because 92-100 ascend among themselves). (2) The four remaining regressions (76, 84, 91, 108) are NOT date errors: in each case the stored date is correct for the stored TITLE, and the rows are simply out of broadcast order. Underneath that sits a NUMBERING defect inherited from AFL: AFL's shugo-chara list has 127 rows but skips the number 73 and prints 96 twice, so our rows 74-96 are one HIGHER than the true cumulative episode number, and four adjacent pairs are listed in reverse broadcast order. Sources: ja-WP's three 各話リスト tables (初放送日 column) and en-WP's three per-season episode lists, which agree with each other exactly.",
+  "anchors": [],
+  "continue_points": [],
+  "anchor_hostile": [],
+  "annotations": [],
+  "repairs": [
+    {
+      "episode": 23,
+      "field": "air_date",
+      "old": "2008-08-15",
+      "new": "2008-03-15",
+      "why": "Ep 23 'Remake Honey! My Would Be Self!' (リメイクハニー！なりたい自分！) aired 2008-03-15 (Sat, TV Tokyo). ja-WP 第23話 = 3月15日; en-WP 'List of Shugo Chara! episodes' ep 23 = March 15, 2008. Stored 2008-08-15 is a month-digit slip and is what produced the ep-24 regression; ep 24 (2008-03-22) is correct.",
+      "sources": [
+        "https://ja.wikipedia.org/wiki/%E3%81%97%E3%82%85%E3%81%94%E3%82%AD%E3%83%A3%E3%83%A9%21",
+        "https://en.wikipedia.org/wiki/List_of_Shugo_Chara%21_episodes"
+      ]
+    },
+    {
+      "episode": 26,
+      "field": "air_date",
+      "old": "2008-04-06",
+      "new": "2008-04-05",
+      "why": "Ep 26 'The New Beginning!' (新しいはじまり！) aired Saturday 2008-04-05. ja-WP 第26話 = 4月5日; en-WP ep 26 = April 5, 2008. Stored 2008-04-06 is a Sunday and cannot be right for a Saturday-morning TV Tokyo show. Not flagged by G54 (it still ascends) - incidental find while checking the ep-24 regression.",
+      "sources": [
+        "https://ja.wikipedia.org/wiki/%E3%81%97%E3%82%85%E3%81%94%E3%82%AD%E3%83%A3%E3%83%A9%21",
+        "https://en.wikipedia.org/wiki/List_of_Shugo_Chara%21_episodes"
+      ]
+    },
+    {
+      "episode": 88,
+      "field": "air_date",
+      "old": "2009-06-20",
+      "new": "2009-06-13",
+      "why": "Our row 88 is 'Save Nana! Guardian Character Nurses, Move Out?' = Shugo Chara!! Doki ep 36, aired 2009-06-13. en-WP Doki ep 36 = June 13, 2009; ja-WP 第87話 = 6月13日. Stored 2009-06-20 duplicates row 89's date. Not in the bundle, but it is a real duplicate-date defect in the same zone and should be repaired with the rest.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/List_of_Shugo_Chara%21%21_Doki%E2%80%94_episodes",
+        "https://ja.wikipedia.org/wiki/%E3%81%97%E3%82%85%E3%81%94%E3%82%AD%E3%83%A3%E3%83%A9%21"
+      ]
+    },
+    {
+      "episode": 92,
+      "field": "air_date",
+      "old": "2010-07-01",
+      "new": "2009-07-11",
+      "why": "Our row 92 is 'Full Throttle! My Rhythm!' (全開！僕のリズム) = Doki ep 40, aired 2009-07-11. en-WP Doki ep 40 = July 11, 2009; ja-WP 第91話 = 7月11日. Stored 2010-07-01 has both a wrong year (2010; the series ended 2010-03-27) and a wrong day. First row of the 92-100 year-slip block.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/List_of_Shugo_Chara%21%21_Doki%E2%80%94_episodes",
+        "https://ja.wikipedia.org/wiki/%E3%81%97%E3%82%85%E3%81%94%E3%82%AD%E3%83%A3%E3%83%A9%21"
+      ]
+    },
+    {
+      "episode": 93,
+      "field": "air_date",
+      "old": "2010-07-18",
+      "new": "2009-07-18",
+      "why": "Our row 93 is \"It's Got to Be Cool! Beat Jumper!\" (クールに決めろ！ビートジャンパー！) = Doki ep 41, aired 2009-07-18. en-WP = July 18, 2009; ja-WP 第92話 = 7月18日. Year slip only.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/List_of_Shugo_Chara%21%21_Doki%E2%80%94_episodes",
+        "https://ja.wikipedia.org/wiki/%E3%81%97%E3%82%85%E3%81%94%E3%82%AD%E3%83%A3%E3%83%A9%21"
+      ]
+    },
+    {
+      "episode": 99,
+      "field": "air_date",
+      "old": "2010-09-05",
+      "new": "2009-09-05",
+      "why": "Our row 99 is \"Our Feelings United! The Guardians' Battle!\" (思いは一つ！ガーディアンの戦い！) = Doki ep 48, aired 2009-09-05. en-WP = September 5, 2009; ja-WP 第99話 = 9月5日. Year slip; this row plus ep 100 is what produced the ep-101 regression, because ep 101 (2009-09-19) is correct.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/List_of_Shugo_Chara%21%21_Doki%E2%80%94_episodes",
+        "https://ja.wikipedia.org/wiki/%E3%81%97%E3%82%85%E3%81%94%E3%82%AD%E3%83%A3%E3%83%A9%21"
+      ]
+    },
+    {
+      "episode": 100,
+      "field": "air_date",
+      "old": "2010-09-12",
+      "new": "2009-09-12",
+      "why": "Our row 100 is 'The Birth of Two Character Transformations!' (誕生！2つのキャラなり！) = Doki ep 49, aired 2009-09-12. en-WP = September 12, 2009; ja-WP 第100話 = 9月12日. Year slip.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/List_of_Shugo_Chara%21%21_Doki%E2%80%94_episodes",
+        "https://ja.wikipedia.org/wiki/%E3%81%97%E3%82%85%E3%81%94%E3%82%AD%E3%83%A3%E3%83%A9%21"
+      ]
+    }
+  ],
+  "type_corrections": [],
+  "structure": {
+    "notes": "127 rows = 51 (Shugo Chara!, 2007-10-06..2008-09-27) + 51 (Doki, 2008-10-04..2009-09-26) + 25 (Party!, 2009-10-03..2010-03-27), all Saturday mornings on TV Tokyo. ja-WP numbers 1-127 continuously and en-WP has one list per season; the two agree. AFL's numbering does not.",
+    "order_only": [
+      75,
+      76,
+      83,
+      84,
+      90,
+      91,
+      107,
+      108
+    ]
+  },
+  "flags_for_sean": [
+    "shugo-chara: the 2010-for-2009 YEAR SLIP is a BLOCK, not two rows. AFL prints 2010 for its rows 92 through 100 inclusive. The bundle only exposed 92, 93, 99, 100 (the rest ascend among themselves and never tripped G54). If our DB holds rows 94-98 with AFL's values, they need the same year repair; the correct dates, keyed by TITLE: 'Hoshina Utau, Fly to the Future!' = 2009-07-25; 'Onward! The Calico Cat Search Party!?' = 2009-08-01; 'Rima, Yaya, and the Pearls that Bind Them!' = 2009-08-08; 'Unheard Pleas, Shattered Feelings.' = 2009-08-15; 'Tadase and Ikuto, the Horoscope of Fate!' = 2009-08-22; 'Reborn!! My Radiant Dancing Princess!' = 2009-08-29. Please confirm against the DB before applying - I could not see those rows.",
+    "shugo-chara: AFL NUMBERING DEFECT inherited into our rows. animefillerlist.com/shows/shugo-chara has 127 rows numbered 1-127 but SKIPS the number 73 and prints 96 TWICE. Consequence: our rows 74 through 96 are one HIGHER than the true cumulative episode number (our 74 = Doki ep 22 = true cumulative 73; our 92 = Doki ep 40 = true 91), while rows 1-72 and 99-127 are correctly numbered. Two of our rows also cannot both be 96. This is an N-family repair, not an air-date one - but every anchor on rows 74-96 is attached to the wrong episode until it is fixed.",
+    "shugo-chara: AIRDATE_ORDER_ACK candidate for four adjacent pairs whose stored dates are CORRECT for their titles but listed in reverse broadcast order - rows 75/76 (2009-03-21 / 2009-03-14), 83/84 (2009-05-16 / 2009-05-09), 90/91 (2009-07-04 / 2009-06-27) and 107/108 (2009-11-07 / 2009-10-31). Do NOT repair these dates: the alternative fix is to swap the two rows' title+date together, which only makes sense as part of the renumbering above."
+  ]
+}

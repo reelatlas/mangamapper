@@ -25,6 +25,25 @@ async function main() {
     let v: any;
     try { v = JSON.parse(readFileSync(OUT + f, 'utf8')); } catch (e) { console.log(`FAIL ${f}: does not parse — ${e}`); bad++; continue; }
     if (!v.series_id) { console.log(`FAIL ${f}: no series_id`); bad++; continue; }
+    // B4's watch-order kinds file: one entry per null-kind order-only entry, kind from the vocabulary, cited
+    if (v.series_id === 'watch-order-kinds') {
+      const KINDS = new Set(['ova', 'special', 'movie', 'recap']);
+      const want = await selectAll<{ series_id: string; position: number }>('watch_order_entries', 'series_id, position', (q) => q.is('kind', null));
+      const seriesIds = new Set((await selectAll<{ id: string }>('series', 'id')).map((s) => s.id));
+      const got = new Set<string>();
+      for (const e of v.structure?.order_only ?? []) {
+        if (!seriesIds.has(e.series_id)) problems.push(`${e.series_id}@${e.position}: unknown series`);
+        if (!KINDS.has(e.kind)) problems.push(`${e.series_id}@${e.position}: kind '${e.kind}' not in ova|special|movie|recap`);
+        if (!(e.sources?.length >= 1)) problems.push(`${e.series_id}@${e.position}: no source`);
+        got.add(`${e.series_id}@${Number(e.position)}`);
+      }
+      const missing = want.filter((w) => !got.has(`${w.series_id}@${Number(w.position)}`));
+      const flagged = (v.flags_for_sean ?? []).length;
+      if (missing.length && missing.length > flagged) problems.push(`${missing.length} null-kind entries neither ruled nor flagged: ${missing.slice(0, 8).map((w) => `${w.series_id}@${w.position}`).join(', ')}`);
+      if (problems.length) { bad++; console.log(`FAIL ${f}`); for (const p of problems) console.log(`   - ${p}`); }
+      else console.log(`ok   ${f}: ${(v.structure?.order_only ?? []).length} kinds ruled of ${want.length} null-kind entries, ${flagged} flags`);
+      continue;
+    }
     const task = TARGETS.find((t) => t[0] === v.series_id);
     if (!task) { console.log(`FAIL ${f}: no TARGETS entry for ${v.series_id}`); bad++; continue; }
     const { data: s } = await db.from('series').select('total_chapters, latest_known_chapters').eq('id', v.series_id).maybeSingle();
@@ -68,7 +87,9 @@ async function main() {
       if (!Array.isArray(a.episodes)) problems.push('annotations.episodes must be a LIST');
     }
     for (const r of v.repairs ?? []) if (!r.field || r.new === undefined || !r.why || !(r.sources?.length >= 1)) problems.push(`repair ep ${r.episode} needs field/old/new/why/sources`);
-    const unaccounted = targets.filter((n) => !anchored.has(n) && !hostile.has(n) && !stored.has(n) && effType(n) !== 'filler');
+    // row accounting binds the ANCHORING lanes (A3 / B1 / B5); B2 (source kinds) and B4 (identity) deliver structure + flags by design
+    const anchoringLane = task[2] === 'A3' || task[2] === 'B1' || task[2] === 'B5';
+    const unaccounted = anchoringLane ? targets.filter((n) => !anchored.has(n) && !hostile.has(n) && !stored.has(n) && effType(n) !== 'filler') : [];
     if (unaccounted.length) problems.push(`canon/mixed target rows with neither an anchor nor an anchor_hostile entry: ${unaccounted.join(',')} (say why in summary if deliberate)`);
     const raw = readFileSync(OUT + f, 'utf8');
     if (/anime-only-canon|anime_only_canon/i.test(raw)) problems.push("mentions the retired type 'anime-only-canon'");

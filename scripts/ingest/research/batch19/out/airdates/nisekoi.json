@@ -1,0 +1,28 @@
+{
+  "series_id": "nisekoi",
+  "summary": "The ep-30 regression is a FALSE positive: ep 30 (2015-06-12) is correct and the typo is on ep 29. Rows 21-32 are Nisekoi: (season 2) eps 1-12, which aired weekly Fridays 2015-04-10 to 2015-06-26 with no skips; ja-WP's episode table labels them '第9話（第29話）' etc., confirming our cumulative numbering. No shift between stored and published dates.",
+  "anchors": [],
+  "continue_points": [],
+  "anchor_hostile": [],
+  "annotations": [],
+  "repairs": [
+    {
+      "episode": 29,
+      "field": "air_date",
+      "old": "2015-07-05",
+      "new": "2015-06-05",
+      "why": "Ep 29 = Nisekoi: (S2) ep 9 'Cleanup Day / Visiting the Sick' (オソウジ／オミマウ), aired 2015-06-05 (Fri 23:30). Stored 2015-07-05 is a month-digit slip and is what produced the ep-30 regression; ep 30 (2015-06-12) is correct. The S2 run is strictly weekly 04-10..06-26, which fixes ep 9 uniquely.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/List_of_Nisekoi_episodes",
+        "https://anilist.co/anime/20876",
+        "https://ja.wikipedia.org/wiki/%E3%83%8B%E3%82%BB%E3%82%B3%E3%82%A4"
+      ]
+    }
+  ],
+  "type_corrections": [],
+  "structure": {
+    "notes": "Rows 21-32 = Nisekoi: S2 eps 1-12 (+20 offset); ja-WP prints the cumulative number in the same table, so the join is exact. Season-2 OVA (2016-01-04) is not among our rows.",
+    "order_only": []
+  },
+  "flags_for_sean": []
+}

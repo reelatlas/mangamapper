@@ -1,0 +1,109 @@
+{
+  "series_id": "yu-gi-oh-5d-s",
+  "summary": "Ten G54/G55 flags resolve into eight real date defects plus one structural order deviation. Structure first: our 155 rows are the 154 Japanese TV episodes PLUS the 2010 theatrical film 'Bonds Beyond Time' (超融合!時空を越えた絆) inserted at row 83 with its correct Japanese release date 2010-01-23 - so rows 1-82 map 1:1 to the Japanese episode numbers and rows 84-155 map to Japanese episodes 83-154. That +1 offset, verified by title against the Yu-Gi-Oh! Fandom episode pages (our 97 = ep 96 'Natural Instincts, Part 1', our 101 = ep 100 'The Edge of Elimination, Part 1', our 135 = ep 134 'For Synchro's Sake', our 147 = ep 146 'The Last Human, Z-ONE'), makes every remaining date check unambiguous. Four of the flagged rows (47, 102, 148, and 84) turned out to be correct with the typo on their PREDECESSOR. No day shift between stored and published dates for this series.",
+  "anchors": [],
+  "continue_points": [],
+  "anchor_hostile": [],
+  "annotations": [],
+  "repairs": [
+    {
+      "episode": 23,
+      "field": "air_date",
+      "old": "2009-09-03",
+      "new": "2008-09-03",
+      "why": "Our row 23 is 5D's episode 23 'Duel of the Dragons, Part 1 (決勝戦(ファイナルマッチ))'. ja-WP 遊☆戯☆王5D's 各話リスト 放送日 = 9月3日 (2008年) and the Yu-Gi-Oh! Fandom episode page gives japanese air date = 2008-09-03. Stored 2009-09-03 is a year slip - the series premiered 2008-04-02 and its ep 23 slot is 2008-09-03; 2009-09-03 falls inside the ep-70s zone. Rows 1-82 map 1:1 to the Japanese episode numbers.",
+      "sources": [
+        "https://ja.wikipedia.org/wiki/%E9%81%8A%E2%98%86%E6%88%AF%E2%98%86%E7%8E%8B5D%27s",
+        "https://yugioh.fandom.com/wiki/Yu-Gi-Oh%21_5D%27s_-_Episode_023"
+      ]
+    },
+    {
+      "episode": 35,
+      "field": "air_date",
+      "old": "2008-01-26",
+      "new": "2008-11-26",
+      "why": "Our row 35 is 5D's episode 35 'Dark Signs, Part 4 (戦慄! 地縛神コカパク・アプ)'. ja-WP 遊☆戯☆王5D's 各話リスト 放送日 = 11月26日 and the Yu-Gi-Oh! Fandom episode page gives japanese air date = 2008-11-26. Stored 2008-01-26 is a month/day corruption; 2008-01-26 is also before the 2008-04-02 premiere, which is what tripped G55. Rows 1-82 map 1:1 to the Japanese episode numbers.",
+      "sources": [
+        "https://ja.wikipedia.org/wiki/%E9%81%8A%E2%98%86%E6%88%AF%E2%98%86%E7%8E%8B5D%27s",
+        "https://yugioh.fandom.com/wiki/Yu-Gi-Oh%21_5D%27s_-_Episode_035"
+      ]
+    },
+    {
+      "episode": 46,
+      "field": "air_date",
+      "old": "2009-02-28",
+      "new": "2009-02-18",
+      "why": "Our row 46 is 5D's episode 46 'Mark of the Spider, Part 2 (17年前の真実 隠されたダークシグナーの罠)'. ja-WP 遊☆戯☆王5D's 各話リスト 放送日 = 2月18日 and the Yu-Gi-Oh! Fandom episode page gives japanese air date = 2009-02-18. Stored 2009-02-28 is a day-digit slip; 2009-02-28 is a Saturday and 5D's aired Wednesdays. Ep 47 (2009-02-25) is correct, so the flagged ep-47 regression is caused by this row. Rows 1-82 map 1:1 to the Japanese episode numbers.",
+      "sources": [
+        "https://ja.wikipedia.org/wiki/%E9%81%8A%E2%98%86%E6%88%AF%E2%98%86%E7%8E%8B5D%27s",
+        "https://yugioh.fandom.com/wiki/Yu-Gi-Oh%21_5D%27s_-_Episode_046"
+      ]
+    },
+    {
+      "episode": 97,
+      "field": "air_date",
+      "old": "2010-01-27",
+      "new": "2010-02-10",
+      "why": "Our row 97 is 5D's episode 96 'Natural Instincts, Part 1 (結成!チーム5D's)'. ja-WP 遊☆戯☆王5D's 各話リスト 放送日 = 2月10日 and the Yu-Gi-Oh! Fandom episode page gives japanese air date = 2010-02-10. Stored 2010-01-27 duplicates row 95's date (2010-01-27). Rows 84+ carry a +1 offset against the Japanese episode number because our row 83 is the 2010 movie - see structure notes.",
+      "sources": [
+        "https://ja.wikipedia.org/wiki/%E9%81%8A%E2%98%86%E6%88%AF%E2%98%86%E7%8E%8B5D%27s",
+        "https://yugioh.fandom.com/wiki/Yu-Gi-Oh%21_5D%27s_-_Episode_096"
+      ]
+    },
+    {
+      "episode": 101,
+      "field": "air_date",
+      "old": "2010-03-20",
+      "new": "2010-03-10",
+      "why": "Our row 101 is 5D's episode 100 'The Edge of Elimination, Part 1 (窮地 ラスト・ホイーラー遊星)'. ja-WP 遊☆戯☆王5D's 各話リスト 放送日 = 3月10日 and the Yu-Gi-Oh! Fandom episode page gives japanese air date = 2010-03-10. Stored 2010-03-20 has transposed day digits; 2010-03-20 is a Saturday. Ep 102 (2010-03-17) is correct, so the flagged ep-102 regression is caused by this row. Rows 84+ carry a +1 offset against the Japanese episode number because our row 83 is the 2010 movie - see structure notes.",
+      "sources": [
+        "https://ja.wikipedia.org/wiki/%E9%81%8A%E2%98%86%E6%88%AF%E2%98%86%E7%8E%8B5D%27s",
+        "https://yugioh.fandom.com/wiki/Yu-Gi-Oh%21_5D%27s_-_Episode_100"
+      ]
+    },
+    {
+      "episode": 121,
+      "field": "air_date",
+      "old": "2010-06-30",
+      "new": "2010-07-28",
+      "why": "Our row 121 is 5D's episode 120 'Tie Those Feelings! The Hand Tied to the Majin! (想いをつなげ! 手をつなぐ魔人)'. ja-WP 遊☆戯☆王5D's 各話リスト 放送日 = 7月28日 and the Yu-Gi-Oh! Fandom episode page gives japanese air date = 2010-07-28. Stored 2010-06-30 is a month/day corruption. Rows 84+ carry a +1 offset against the Japanese episode number because our row 83 is the 2010 movie - see structure notes.",
+      "sources": [
+        "https://ja.wikipedia.org/wiki/%E9%81%8A%E2%98%86%E6%88%AF%E2%98%86%E7%8E%8B5D%27s",
+        "https://yugioh.fandom.com/wiki/Yu-Gi-Oh%21_5D%27s_-_Episode_120"
+      ]
+    },
+    {
+      "episode": 135,
+      "field": "air_date",
+      "old": "2010-10-10",
+      "new": "2010-11-10",
+      "why": "Our row 135 is 5D's episode 134 'For Synchro's Sake (破滅の道! シンクロ召喚が行きつく未来)'. ja-WP 遊☆戯☆王5D's 各話リスト 放送日 = 11月10日 and the Yu-Gi-Oh! Fandom episode page gives japanese air date = 2010-11-10. Stored 2010-10-10 is a month-digit slip; note the run skipped 2010-11-03. Rows 84+ carry a +1 offset against the Japanese episode number because our row 83 is the 2010 movie - see structure notes.",
+      "sources": [
+        "https://ja.wikipedia.org/wiki/%E9%81%8A%E2%98%86%E6%88%AF%E2%98%86%E7%8E%8B5D%27s",
+        "https://yugioh.fandom.com/wiki/Yu-Gi-Oh%21_5D%27s_-_Episode_134"
+      ]
+    },
+    {
+      "episode": 147,
+      "field": "air_date",
+      "old": "2011-02-11",
+      "new": "2011-02-02",
+      "why": "Our row 147 is 5D's episode 146 'The Last Human, Z-ONE (最後の一人 Z-ONE)'. ja-WP 遊☆戯☆王5D's 各話リスト 放送日 = 2月2日 and the Yu-Gi-Oh! Fandom episode page gives japanese air date = 2011-02-02. Stored 2011-02-11 has transposed day digits; 2011-02-11 is a Friday. Ep 148 (2011-02-09) is correct, so the flagged ep-148 regression is caused by this row. Rows 84+ carry a +1 offset against the Japanese episode number because our row 83 is the 2010 movie - see structure notes.",
+      "sources": [
+        "https://ja.wikipedia.org/wiki/%E9%81%8A%E2%98%86%E6%88%AF%E2%98%86%E7%8E%8B5D%27s",
+        "https://yugioh.fandom.com/wiki/Yu-Gi-Oh%21_5D%27s_-_Episode_146"
+      ]
+    }
+  ],
+  "type_corrections": [],
+  "structure": {
+    "notes": "155 rows = 154 TV episodes (TV Tokyo, Wednesdays, 2008-04-02..2011-03-30) + the 2010-01-23 film at row 83. Offset: our row N = Japanese episode N for N<=82, and Japanese episode N-1 for N>=84.",
+    "order_only": [
+      83
+    ]
+  },
+  "flags_for_sean": [
+    "yu-gi-oh-5d-s: AIRDATE_ORDER_ACK candidate, eps 83 -> 84. Mechanism: row 83 is the movie 'Bonds Beyond Time' (Japanese theatrical release 2010-01-23), inserted at its story position between TV episodes 82 (2009-10-28) and 83 (2009-11-04). A theatrical release date will always regress against the surrounding weekly broadcast; the row is correctly placed. Row 83's stored date 2010-01-23 is correct and should not be touched.",
+    "yu-gi-oh-5d-s: the movie insertion means our episode numbers 84-155 are one HIGHER than the Japanese/Fandom episode numbers for the same episode. That is a real structural fact (not a defect) but any future per-episode join for this series must be done on TITLE or DATE, never on the number."
+  ]
+}

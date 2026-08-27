@@ -1,0 +1,52 @@
+{
+  "series_id": "hell-girl",
+  "summary": "Air-date lane; both flagged rows are innocent and the damage sits on their predecessors. Ep 41 (二籠 ep 15 'For the Sake of This Country', 2007-01-20) and ep 64 (三鼎 ep 12 'The Midsummer Chart', 2008-12-20) are both CORRECT. What breaks the order is (a) rows 39 and 40, which store 2007-12-06 / 2007-12-13 where 二籠 eps 13 and 14 actually aired 2007-01-06 / 2007-01-13 — a month-digit corruption in both — and (b) row 63, which stores 2008-12-23 where 三鼎 ep 11 'Blotted Paper' aired 2008-12-13. Three repairs, no true deviation.",
+  "anchors": [],
+  "continue_points": [],
+  "anchor_hostile": [],
+  "annotations": [],
+  "repairs": [
+    {
+      "episode": 39,
+      "field": "air_date",
+      "old": "2007-12-06",
+      "new": "2007-01-06",
+      "why": "Row 39 = 地獄少女 二籠 ep 13 'Tragedy of the V' (Vの惨劇). syoboi TID 1022 Count 13 = 2007-01-06 19:30; en-WP List of Hell Girl episodes, season 2 ep 13 = 2007-01-06. The 二籠 run was weekly Saturday 2006-10-07 … 2007-03-31, so a December 2007 date is outside it entirely; 12 vs 01 is a month-digit corruption.",
+      "sources": [
+        "https://cal.syoboi.jp/tid/1022",
+        "https://en.wikipedia.org/wiki/List_of_Hell_Girl_episodes"
+      ]
+    },
+    {
+      "episode": 40,
+      "field": "air_date",
+      "old": "2007-12-13",
+      "new": "2007-01-13",
+      "why": "Row 40 = 二籠 ep 14 'The Peaceful Lakeshore' (静かな湖畔). syoboi TID 1022 Count 14 = 2007-01-13; en-WP season 2 ep 14 = 2007-01-13. Same month-digit corruption as row 39.",
+      "sources": [
+        "https://cal.syoboi.jp/tid/1022",
+        "https://en.wikipedia.org/wiki/List_of_Hell_Girl_episodes"
+      ]
+    },
+    {
+      "episode": 63,
+      "field": "air_date",
+      "old": "2008-12-23",
+      "new": "2008-12-13",
+      "why": "Row 63 = 地獄少女 三鼎 ep 11 'Blotted Paper' (滲んだ頁). syoboi TID 1460 Count 11 = 2008-12-13; en-WP season 3 ep 11 = 2008-12-13. 2008-12-23 is a Tuesday and the 三鼎 run was weekly Saturday; rows 62 (12-06) and 64 (12-20) are correct and leave exactly 12-13.",
+      "sources": [
+        "https://cal.syoboi.jp/tid/1460",
+        "https://en.wikipedia.org/wiki/List_of_Hell_Girl_episodes"
+      ]
+    }
+  ],
+  "type_corrections": [],
+  "structure": {
+    "notes": "90 rows = 26 (S1) + 26 (二籠, rows 27-52) + 26 (三鼎, rows 53-78) + 12 (宵伽, rows 79-90). Row N - 26 = the 二籠 episode number; row N - 52 = the 三鼎 episode number. Both offsets verified by title against en-WP.",
+    "order_only": []
+  },
+  "flags_for_sean": [
+    "Neither flagged row needs a repair: ep 41 = 2007-01-20 (二籠 ep 15) and ep 64 = 2008-12-20 (三鼎 ep 12) are both confirmed by syoboi and en-WP. Applying only the flagged rows would have made the data worse.",
+    "Minor, out of scope, not blocking: row 65 (三鼎 ep 13 'Six Coin Lanterns') stores 2008-12-28, which matches en-WP; syoboi gives 2008-12-27 17:00. A one-day disagreement between the two sources, and a Sunday vs Saturday question in a Saturday-slot run. Flagging rather than touching it."
+  ]
+}

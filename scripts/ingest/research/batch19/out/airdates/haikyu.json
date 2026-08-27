@@ -1,0 +1,22 @@
+{
+  "series_id": "haikyu",
+  "summary": "Air-date lane. NO REPAIR on the flagged row — ep 63's stored 2020-01-10 is consistent with its own block. The regression is structural: rows 61 and 62 are the two OVAs 「陸 VS 空」 (Land vs. Air) and 「ボールの\"道\"」 (The Path of the Ball), which were NEVER BROADCAST — ja-WP's 各話リスト prints 放送日 = '-' for both, en-WP says they 'were released on January 22, 2020', and 2020-01-22 is the Blu-ray/DVD street date our rows are storing. Because our row space puts those two OVAs BEFORE season 4's first episode (our row 63 = TO THE TOP ep 1), a home-video release date lands ahead of the TV dates that follow it.",
+  "anchors": [],
+  "continue_points": [],
+  "anchor_hostile": [],
+  "annotations": [],
+  "repairs": [],
+  "type_corrections": [],
+  "structure": {
+    "notes": "87 rows = 25 (S1) + 25 (S2) + 10 (S3) + 2 OVAs (rows 61-62) + 25 (S4, rows 63-87). en-WP's overall numbering excludes the OVAs, so our row N = en-WP N-2 for N >= 63. Verified at 63/64/65 by title.",
+    "order_only": [
+      61,
+      62
+    ]
+  },
+  "flags_for_sean": [
+    "AIRDATE_ORDER_ACK candidate — haikyu rows 61-62. Mechanism: two never-broadcast OVAs placed between season 3 and season 4 in our row order, carrying their 2020-01-22 home-video release date, which is later than season 4 eps 1-2 (2020-01-10/17 as we store them). Two coherent fixes: (a) register the order ack and keep 2020-01-22; (b) set rows 61-62 air_date NULL (ja-WP prints 放送日 '-' for both) and keep the release date wherever release dates live. I lean (b) — they genuinely never aired.",
+    "Convention note (whole S4 block, not a single-row defect): our rows 63/64/65 store 2020-01-10 / 01-17 / 01-24, exactly ONE DAY earlier than ja-WP and en-WP (2020-01-11 / 01-18 / 01-25). The MBS スーパーアニメイズム slot is Friday 26:25 JST = Saturday 02:25, so ours is the nominal Friday. It is systematic across the block, so I did not repair ep 63 in isolation — a whole-series normalisation decision would touch all 25 S4 rows. Note the series-level end date (2020-12-19) uses the Saturday convention, so the two fields disagree.",
+    "Ep 63 = TO THE TOP ep 1 'Introductions' / 自己紹介, en-WP overall number 61. Our overall numbers run +2 against en-WP from row 63 on, because en-WP excludes the two OVAs from the overall count."
+  ]
+}

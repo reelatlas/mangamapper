@@ -1,0 +1,85 @@
+{
+  "series_id": "dragon-ball-z-kai",
+  "summary": "Air-date lane, and the single biggest structural finding in this bundle. Our 167-row space is the INTERNATIONAL (Funimation 'Final Chapters') numbering; the Japanese Fuji TV broadcast of the Buu arc was only 61 episodes numbered 99-159, so EIGHT episodes in our space — 101, 102, 103, 106, 108, 111, 113 and 165 — were NEVER BROADCAST IN JAPAN. en-WP prints OriginalAirDate = '—' for exactly those eight and ja-WP's 各話リスト does not contain their titles at all. Every 2017/2018 date in this series (stored on 102/103, claimed by AFL for 106/108/111/113/165) is the US TOONAMI English-dub premiere, one day earlier than en-WP's Sunday convention. Separately, two rows are genuine typos: ep 119 (2014-06-06 for 2014-07-06) and ep 128 (2014-11-30, which is in fact ep 139's date and title).",
+  "anchors": [],
+  "continue_points": [],
+  "anchor_hostile": [],
+  "annotations": [],
+  "repairs": [
+    {
+      "episode": 119,
+      "field": "air_date",
+      "old": "2014-06-06",
+      "new": "2014-07-06",
+      "why": "Intl ep 119 = 真打ち登場! 立ちはだかる魔王!! = JP ep 112, aired 2014年7月6日 per ja-WP ドラゴンボール改 魔人ブウ編 table; en-WP List of Dragon Ball Z Kai episodes ep 119 OriginalAirDate = 2014-07-06. Stored 06-06 is a month-digit corruption; neighbours 118 (2014-06-29) and 120 (2014-07-13) are already correct.",
+      "sources": [
+        "https://ja.wikipedia.org/wiki/%E3%83%89%E3%83%A9%E3%82%B4%E3%83%B3%E3%83%9C%E3%83%BC%E3%83%AB%E6%94%B9",
+        "https://en.wikipedia.org/wiki/List_of_Dragon_Ball_Z_Kai_episodes"
+      ]
+    },
+    {
+      "episode": 128,
+      "field": "air_date",
+      "old": "2014-11-30",
+      "new": "2014-09-14",
+      "why": "Intl ep 128 = 悪夢再来 不死身の怪物 魔人ブウ! = JP ep 121, aired 2014年9月14日 (ja-WP; en-WP ep 128 OriginalAirDate = 2014-09-14). The stored 2014-11-30 is intl ep 139's date (JP 132 魔人を倒すのは誰だ? 最強の男始動!!) — and our stored TITLE for row 128 is that same ep-139 title, so the whole row is a duplicate of 139's data. Neighbours 127 (2014-09-07) and 129 (2014-09-21) are correct.",
+      "sources": [
+        "https://ja.wikipedia.org/wiki/%E3%83%89%E3%83%A9%E3%82%B4%E3%83%B3%E3%83%9C%E3%83%BC%E3%83%AB%E6%94%B9",
+        "https://en.wikipedia.org/wiki/List_of_Dragon_Ball_Z_Kai_episodes"
+      ]
+    },
+    {
+      "episode": 102,
+      "field": "air_date",
+      "old": "2017-01-28",
+      "new": null,
+      "why": "Intl ep 102 'A Monster Is Taken Away! The Culprit Is Great Saiyaman?' has NO Japanese broadcast — en-WP prints OriginalAirDate = '—' with the {{efn|name=Int}} international-only marker, and ja-WP's 魔人ブウ編 table (JP eps 99-159) does not contain the episode. The stored 2017-01-28 is the US Toonami premiere (en-WP AltDate January 29, 2017; AFL/our rows use the Saturday, en-WP the Sunday). Every other row in this series stores a Japanese date, so an honest gap is the right value.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/List_of_Dragon_Ball_Z_Kai_episodes",
+        "https://ja.wikipedia.org/wiki/%E3%83%89%E3%83%A9%E3%82%B4%E3%83%B3%E3%83%9C%E3%83%BC%E3%83%AB%E6%94%B9"
+      ]
+    },
+    {
+      "episode": 103,
+      "field": "air_date",
+      "old": "2017-02-04",
+      "new": null,
+      "why": "Same class as 102: intl ep 103 'Entering the World Martial Arts Tournament!' is international-only (en-WP OriginalAirDate '—', AltDate February 5, 2017 = Toonami). Absent from ja-WP's JP 99-159 table.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/List_of_Dragon_Ball_Z_Kai_episodes",
+        "https://ja.wikipedia.org/wiki/%E3%83%89%E3%83%A9%E3%82%B4%E3%83%B3%E3%83%9C%E3%83%BC%E3%83%AB%E6%94%B9"
+      ]
+    },
+    {
+      "episode": 101,
+      "field": "air_date",
+      "old": "(stored value not shown in bundle; expected 2017-01-21)",
+      "new": null,
+      "why": "Not one of the flagged rows, but the SAME class and it must be handled with 102/103 or the gate will just move: intl ep 101 \"Videl's Crisis? Gohan's Urgent Call-out!\" is international-only (en-WP OriginalAirDate '—', AltDate January 22, 2017). Verify the stored value before applying.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/List_of_Dragon_Ball_Z_Kai_episodes",
+        "https://ja.wikipedia.org/wiki/%E3%83%89%E3%83%A9%E3%82%B4%E3%83%B3%E3%83%9C%E3%83%BC%E3%83%AB%E6%94%B9"
+      ]
+    }
+  ],
+  "type_corrections": [],
+  "structure": {
+    "notes": "167 rows = intl numbering. JP-only mapping in scope: 104=JP101, 105=JP102, 107=JP103, 109=JP104, 110=JP105, 112=JP106, 114=JP107, 115=JP108, 119=JP112, 127=JP120, 128=JP121, 129=JP122, 130=JP123, 131=JP124. Intl-only (no JP airing): 101,102,103,106,108,111,113,165.",
+    "order_only": [
+      101,
+      102,
+      103,
+      106,
+      108,
+      111,
+      113,
+      165
+    ]
+  },
+  "flags_for_sean": [
+    "THE FIVE WITHHELD ROWS (106, 108, 111, 113, 165) SHOULD STAY NULL. None of them was ever broadcast in Japan; AFL's 2017-02-25 / 2017-03-11 / 2017-04-01 / 2017-04-15 / 2018-06-09 are the US Toonami English-dub premieres (en-WP AltDates: February 26 2017, March 12 2017, April 2 2017, April 16 2017, June 9 2018 — AFL runs one day earlier for the 2017 block). Accepting AFL's claim would put a US dub date into a column that otherwise holds Japanese first-broadcast dates.",
+    "AIRDATE_ORDER_ACK alternative — if Sean decides air_date means 'first broadcast anywhere', then the eight international-only rows (101, 102, 103, 106, 108, 111, 113, 165) all legitimately carry 2017/2018 Toonami dates and the whole series needs an order ack, because those rows are interleaved among 2014-2015 Japanese dates. My recommendation is NULL + an honest gap (P6), not the ack.",
+    "STRUCTURE: our row space is the international 69-episode Final Chapters numbering (99-167); the Fuji TV broadcast numbered the same arc 99-159 (61 episodes). Row N in 99-167 does NOT equal JP episode N — e.g. our 104 = JP 101, our 128 = JP 121, our 139 = JP 132. Anything that joins this series to a Japanese per-episode source must go through the title, never the number.",
+    "Stored TITLE at row 128 is wrong as well: it holds intl ep 139's title ('Who Will Defeat Majin Buu? The Mightiest of Men Move Out' = 魔人を倒すのは誰だ? 最強の男始動!!). Row 128's title should be 'The Nightmare Returns; The Immortal Monster, Majin Buu!' (悪夢再来 不死身の怪物 魔人ブウ!). Check whether row 139 also carries 2014-11-30 (a duplicate rather than a swap) before applying."
+  ]
+}

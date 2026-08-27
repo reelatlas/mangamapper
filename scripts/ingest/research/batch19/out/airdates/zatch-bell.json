@@ -1,0 +1,38 @@
+{
+  "series_id": "zatch-bell",
+  "summary": "Two flagged regressions, two repairs, but they sit differently: the ep-78 flag is a FALSE positive (ep 78's 2004-10-17 is correct and its predecessor ep 77 carries the typo), while the ep-131 flag is caused by ep 131's own date. Zatch Bell aired weekly Sundays on Fuji TV from 2003-04-06; ja-WP's 各話リスト carries a 放送日 column and konjikinogash.fandom.com's episode pages carry a japan_airdate field plus the VIZ English title, so each row can be matched by title as well as by number. Our 150 rows map 1:1 to that numbering - no shift, no order deviation.",
+  "anchors": [],
+  "continue_points": [],
+  "anchor_hostile": [],
+  "annotations": [],
+  "repairs": [
+    {
+      "episode": 77,
+      "field": "air_date",
+      "old": "2004-10-24",
+      "new": "2004-10-10",
+      "why": "Ep 77 'The Return of Sherry and Brago!' (シェリー気高き輪舞(ロンド) 炸裂バベルガ・グラビドン) aired 2004-10-10. ja-WP 金色のガッシュ!! 各話リスト 放送日 = 10月10日 for 話数 77; konjikinogash.fandom.com Episode 77 gives japan_airdate = October 10, 2004 and viz_title = 'The Return of Sherry and Brago!', which is our row's stored title. Stored 2004-10-24 duplicates ep 79's date and is what produced the ep-78 regression; ep 78 (2004-10-17) is correct.",
+      "sources": [
+        "https://ja.wikipedia.org/wiki/%E9%87%91%E8%89%B2%E3%81%AE%E3%82%AC%E3%83%83%E3%82%B7%E3%83%A5%21%21",
+        "https://konjikinogash.fandom.com/wiki/Episode_77"
+      ]
+    },
+    {
+      "episode": 131,
+      "field": "air_date",
+      "old": "2005-10-06",
+      "new": "2005-11-06",
+      "why": "Ep 131 'Determination of the King. Friends? The World? Gash's Decision' (王の覚悟 友か? 世界か? ガッシュの決断) aired 2005-11-06. ja-WP 各話リスト 放送日 = 11月6日 for 話数 131; konjikinogash.fandom.com Episode 131 gives japan_airdate = November 6, 2005. Stored 2005-10-06 is a month-digit slip; eps 130 (2005-10-30) and 132 (2005-11-13) bracket it exactly one week either side.",
+      "sources": [
+        "https://ja.wikipedia.org/wiki/%E9%87%91%E8%89%B2%E3%81%AE%E3%82%AC%E3%83%83%E3%82%B7%E3%83%A5%21%21",
+        "https://konjikinogash.fandom.com/wiki/Episode_131"
+      ]
+    }
+  ],
+  "type_corrections": [],
+  "structure": {
+    "notes": "150 rows; ja-WP (at 金色のガッシュ!! #アニメ) numbers 1-150 with a 放送日 column and notes the schedule interruptions (2003-06-29, 2004-07-25, 2005-07-31 preempted by FNSの日; 2006-03-26 aired eps 149+150 as a one-hour special). konjikinogash.fandom.com carries per-episode japan_airdate AND viz_title, so title joins are safe here.",
+    "order_only": []
+  },
+  "flags_for_sean": []
+}

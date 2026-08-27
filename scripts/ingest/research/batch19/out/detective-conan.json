@@ -1,0 +1,170 @@
+{
+  "series_id": "detective-conan",
+  "summary": "All four target rows are two-block episodes: half of the episode closes the case the previous episode started, the other half opens the case the next episode finishes. Detective Conan World's per-episode manga-source field, ja.Wikipedia's 各話リスト 原作 column, ja.Wikipedia's 漫画エピソード一覧 (per-case reverse index) and — decisively — Yomiuri TV's own 事件ファイル archive synopses all agree on which files sit in which half, so every row is anchorable. Ep 510 = the conclusion of the Red/White/Yellow arson case (file 624) + the opening of the paper-airplane case (file 638); ep 511 finishes that case (638-640). Ep 524 = a grafted cold open from the closing pages of file 654 (the 654/655 junction) plus the whole sports-car arson block 635-637. Ep 585 = the conclusion of the purse-snatcher case (file 708, title-matched: 時を超える桜の恋 <-> 708 桜、満開) + the opening of the Kirin's Horn case (file 712). The one surprise is that the batch-17 annotation on 510/511 records ja.WP as CONTRADICTING DCW; it does not — ja.WP's 原作 column uses a rowspan that gives ep 510 BOTH blocks, exactly as DCW does, so the sources agree and the row is anchorable after all (repair proposed). Also confirmed in passing: our rows key to DCW's JAPANESE 'episode' field (510/511 = DCW 510/511, int-episode 557/558), i.e. the batch-17 prose that called it the international column is inverted.",
+  "anchors": [
+    {
+      "episode": 510,
+      "end_chapter": 638,
+      "start_chapter": 624,
+      "chapters_adapted": "624 (conclusion of the 622-624 arson case) + 638 (opening of the 638-640 paper-airplane case)",
+      "volume": 61,
+      "confidence": "medium",
+      "note": "A4/A10: the A-part closes the Red/White/Yellow case that ep 509 began (ytv ep-510 synopsis opens on Conan decoding Kaito's diary - the car associations - then the culprit reveal and Subaru moving into the Kudo house = file 624 'A New Neighbour'/新たな隣人); the B-part ('後日' in the same synopsis) opens the paper-airplane case and ends as Shinichi and Subaru both decode SOS = file 638 紙飛行機. END = 638, the furthest mainline file adapted in running order; 639-640 are ep 511's. Exact file boundary inside 622-624 (623 vs 624) and inside 638-640 (638 vs part of 639) is not attested by any source - conservative values taken, hence medium.",
+      "sources": [
+        "https://www.detectiveconanworld.com/wiki/Season_13",
+        "https://www.detectiveconanworld.com/wiki/Volume_60",
+        "https://www.detectiveconanworld.com/wiki/Volume_61",
+        "https://www.ytv.co.jp/conan/archive/k20080728.html",
+        "https://ja.wikipedia.org/wiki/%E5%90%8D%E6%8E%A2%E5%81%B5%E3%82%B3%E3%83%8A%E3%83%B3%E3%81%AE%E3%82%A2%E3%83%8B%E3%83%A1%E3%82%A8%E3%83%94%E3%82%BD%E3%83%BC%E3%83%89%E4%B8%80%E8%A6%A7",
+        "https://en.wikipedia.org/wiki/List_of_Case_Closed_volumes_(61%E2%80%9380)"
+      ]
+    },
+    {
+      "episode": 511,
+      "end_chapter": 640,
+      "start_chapter": 638,
+      "chapters_adapted": "638-640 (638 straddled with ep 510's B-part)",
+      "volume": 61,
+      "confidence": "high",
+      "note": "A4: ep 511 is the last episode of the paper-airplane case, so END = the case's last file 640 レスキュー. A10: the ytv synopsis re-opens on the SOS decode (the tail of 638) before moving to the antenna mark (639 メッセージ) and the squid plane / rescue (640), so START = 638. DCW's per-episode manga-source gives V61 F8~10 (638-640) and ja.WP's 原作 column gives File.638-640 for this row; ja.WP's 漫画エピソード一覧 lists manga case 185 as anime 511 with a footnote that only its 前編 aired as ep 510's B-part.",
+      "sources": [
+        "https://www.detectiveconanworld.com/wiki/Season_13",
+        "https://www.detectiveconanworld.com/wiki/Volume_61",
+        "https://www.ytv.co.jp/conan/archive/k20080804.html",
+        "https://ja.wikipedia.org/wiki/%E5%90%8D%E6%8E%A2%E5%81%B5%E3%82%B3%E3%83%8A%E3%83%B3%E3%81%AE%E6%BC%AB%E7%94%BB%E3%82%A8%E3%83%94%E3%82%BD%E3%83%BC%E3%83%89%E4%B8%80%E8%A6%A7",
+        "https://ja.wikipedia.org/wiki/%E5%90%8D%E6%8E%A2%E5%81%B5%E3%82%B3%E3%83%8A%E3%83%B3%E3%81%AE%E3%82%A2%E3%83%8B%E3%83%A1%E3%82%A8%E3%83%94%E3%82%BD%E3%83%BC%E3%83%89%E4%B8%80%E8%A6%A7",
+        "https://en.wikipedia.org/wiki/List_of_Case_Closed_volumes_(61%E2%80%9380)"
+      ]
+    },
+    {
+      "episode": 524,
+      "end_chapter": 637,
+      "start_chapter": 635,
+      "chapters_adapted": "654 (closing pages, grafted cold open) + 635-637",
+      "volume": 61,
+      "confidence": "high",
+      "note": "A12/A4: the grafted lead-in (the antidote wearing off, Ran holding Shinichi's hand, Haibara tranquillising her) is a relocated fragment from the 654/655 junction - ja.WP writes the 原作 as 'File.635 - 637、654終盤', DCW's per-episode field as 'V63 - F2 (part) + V61 - F5~7' - so it is neither the START nor the END. The episode's own running-order material is the sports-car arson case 635-637 (ytv: Agasa's car runs out of gas, the Rolls-Royce driver, the explosion, Conan suspects Ena). END = 637 is the per-episode value DCW prints for this row and the case span ja.WP prints for 524-525, matching the stored lattice convention (cf. eps 513, 584). Volume 61 = files 631-641 (en-WP).",
+      "sources": [
+        "https://www.detectiveconanworld.com/wiki/Season_14",
+        "https://www.detectiveconanworld.com/wiki/The_Blue_Spark_of_Hate",
+        "https://www.detectiveconanworld.com/wiki/Volume_61",
+        "https://www.ytv.co.jp/conan/archive/k20090209.html",
+        "https://ja.wikipedia.org/wiki/%E5%90%8D%E6%8E%A2%E5%81%B5%E3%82%B3%E3%83%8A%E3%83%B3%E3%81%AE%E3%82%A2%E3%83%8B%E3%83%A1%E3%82%A8%E3%83%94%E3%82%BD%E3%83%BC%E3%83%89%E4%B8%80%E8%A6%A7",
+        "https://en.wikipedia.org/wiki/List_of_Case_Closed_volumes_(61%E2%80%9380)"
+      ]
+    },
+    {
+      "episode": 585,
+      "end_chapter": 712,
+      "start_chapter": 708,
+      "chapters_adapted": "708 (conclusion of the 705-708 purse-snatcher case, straddled with ep 584) + 712 (opening of the Kirin's Horn case, straddled with ep 586)",
+      "volume": 68,
+      "confidence": "high",
+      "note": "A4/A10. First half = file 708 桜、満開: ytv's official synopsis for 585 is the music-room ambush, Sato in disguise, Kodama named, the OSAKA UNYU truck and Kobayashi's childhood memory - which is exactly en-WP's volume-68 summary of its opening chapter; ep 584's ytv synopsis ends with Kobayashi walking to the music room, so 708 straddles 584/585. Second half ('後日' in the same synopsis) = file 712 青龍: Kid's notice for the Kirin's Horn, Jirokichi hiring the Detective Boys, the four keys and the horn appearing. DCW prints ep 585's manga-source as '(705-708) (712)' and its Volume 68 Kirin's Horn Case as {{ref anime|585-587}}; the DCW page itself says the case 'spans two and a half episodes, with the latter half of 585 being dedicated to The Kirin's Horn'. END = 712, the furthest mainline file adapted in running order (713-715 are eps 586-587).",
+      "sources": [
+        "https://www.detectiveconanworld.com/wiki/Season_15",
+        "https://www.detectiveconanworld.com/wiki/Kobayashi-sensei%27s_Love",
+        "https://www.detectiveconanworld.com/wiki/Volume_68",
+        "https://www.ytv.co.jp/conan/archive/k20100828.html",
+        "https://www.ytv.co.jp/conan/archive/k20100821.html",
+        "https://en.wikipedia.org/wiki/List_of_Case_Closed_volumes_(61%E2%80%9380)"
+      ]
+    }
+  ],
+  "continue_points": [
+    {
+      "episode": 510,
+      "continue_chapter": 613,
+      "kind": "parity",
+      "note": "A18 reorder regime. After ep 510 every chapter below 613 has been animated; 613-618 (eps 516-517, aired Nov 2008) are the next unseen block. Already animated ahead of that point, skip on arrival: 619-624, 638 (furthest chapter animated by this point: 638). Monotonic alternative (END+1) would be 639 and is wrong - it skips 613-637.",
+      "sources": [
+        "https://ja.wikipedia.org/wiki/%E5%90%8D%E6%8E%A2%E5%81%B5%E3%82%B3%E3%83%8A%E3%83%B3%E3%81%AE%E3%82%A2%E3%83%8B%E3%83%A1%E3%82%A8%E3%83%94%E3%82%BD%E3%83%BC%E3%83%89%E4%B8%80%E8%A6%A7",
+        "https://www.detectiveconanworld.com/wiki/Season_13"
+      ]
+    },
+    {
+      "episode": 511,
+      "continue_chapter": 613,
+      "kind": "parity",
+      "note": "Unchanged from ep 510: eps 511-512 add nothing below 613 (512 is anime-original). Skip on arrival: 619-624, 638-640 (furthest chapter animated by this point: 640). Matches the stored ep-513 continue point (613).",
+      "sources": [
+        "https://ja.wikipedia.org/wiki/%E5%90%8D%E6%8E%A2%E5%81%B5%E3%82%B3%E3%83%8A%E3%83%B3%E3%81%AE%E3%82%A2%E3%83%8B%E3%83%A1%E3%82%A8%E3%83%94%E3%82%BD%E3%83%BC%E3%83%89%E4%B8%80%E8%A6%A7",
+        "https://www.detectiveconanworld.com/wiki/Season_13"
+      ]
+    },
+    {
+      "episode": 524,
+      "continue_chapter": 625,
+      "kind": "parity",
+      "note": "After ep 524 every chapter below 625 has been animated; 625-627 (the Hammer Man case) waits until eps 530-531. Skip on arrival: 628-640, 646-654 (furthest chapter animated by this point: 654). Matches the stored ep-521 continue point (625).",
+      "sources": [
+        "https://ja.wikipedia.org/wiki/%E5%90%8D%E6%8E%A2%E5%81%B5%E3%82%B3%E3%83%8A%E3%83%B3%E3%81%AE%E3%82%A2%E3%83%8B%E3%83%A1%E3%82%A8%E3%83%94%E3%82%BD%E3%83%BC%E3%83%89%E4%B8%80%E8%A6%A7",
+        "https://www.detectiveconanworld.com/wiki/Season_14"
+      ]
+    },
+    {
+      "episode": 585,
+      "continue_chapter": 709,
+      "kind": "parity",
+      "note": "After ep 585 every chapter below 709 has been animated; 709-711 (Eri Kisaki's birthday) waits until eps 589-590. Skip on arrival: 712 (the Kirin's Horn opening carried by this episode's latter half). Sits consistently between the stored ep-563 (687) and ep-597 (719) continue points.",
+      "sources": [
+        "https://ja.wikipedia.org/wiki/%E5%90%8D%E6%8E%A2%E5%81%B5%E3%82%B3%E3%83%8A%E3%83%B3%E3%81%AE%E3%82%A2%E3%83%8B%E3%83%A1%E3%82%A8%E3%83%94%E3%82%BD%E3%83%BC%E3%83%89%E4%B8%80%E8%A6%A7",
+        "https://www.detectiveconanworld.com/wiki/Season_15"
+      ]
+    }
+  ],
+  "anchor_hostile": [],
+  "annotations": [
+    {
+      "episodes": [510],
+      "kind": "graft",
+      "chapters": "624 + 638",
+      "note": "Two-block episode: A-part concludes the 622-624 Red/White/Yellow arson case begun in ep 509; B-part opens the 638-640 paper-airplane case finished in ep 511. DCW and ja.WP AGREE on this (the batch-17 note that they disagree is a rowspan misreading - see repairs). The anime's title コナンvsW暗号ミステリー ('double code mystery') names the two codes the episode carries, one per half."
+    },
+    {
+      "episodes": [510, 511],
+      "kind": "partial",
+      "chapters": "638",
+      "note": "File 638 straddles the 510/511 boundary: ep 510's B-part ends on the SOS decode and ep 511's ytv synopsis re-opens on it. Listed in chapters_adapted on both rows; only ep 510's first-time coverage moves position."
+    },
+    {
+      "episodes": [524],
+      "kind": "graft",
+      "chapters": "654 (closing pages) + 635-637",
+      "note": "Confirms the stored annotation with the exact wording of both sources: ja.WP 'File.635 - 637、654終盤', DCW per-episode 'V63 - F2 (part)'. DCW's combined infobox writes the graft as V63 F2-3 (654-655) and its Manga-to-anime-changes note attributes the scene to the manga version of The Revolving Sushi Mystery Part 1 (= file 655), so the grafted fragment sits exactly on the 654/655 junction. It is a relocated fragment (A12) and takes neither START nor END."
+    },
+    {
+      "episodes": [585],
+      "kind": "graft",
+      "chapters": "708 + 712",
+      "note": "Confirms the stored annotation and fixes the halves: first half = file 708 (case conclusion, straddled with ep 584), latter half = file 712 (Kirin's Horn opening, straddled with ep 586). File 712 is pulled forward past 709-711, which eps 589-590 adapt a month later."
+    }
+  ],
+  "repairs": [
+    {
+      "episode": 510,
+      "field": "annotation_note",
+      "old": "DCW gives ep 510 two disjoint mainline segments (V60 F3-5 = 622-624 and V61 F8-10 = 638-640); ja.WP splits them as ep 509 = 622-624 and ep 510 = 638-640. Sources disagree on the split; no anchor emitted at 510.",
+      "new": "DCW and ja.WP agree: ep 510 carries BOTH blocks. ja.WP's 原作 column is a rowspan table - ep 509's cell 'File.622 - 624' has rowspan=2 and covers ep 510's first physical row, while ep 510's second physical row opens 'File.638 - 640' with rowspan=2 covering ep 511. DCW's Volume 60 page labels the 622-624 case '509-510 (Conan vs. Double Code Mystery, First Half)' and its Volume 61 page labels the 638-640 case '510-511 (... Latter Half)'; ja.WP's 漫画エピソード一覧 adds the footnote that the 前編 of manga case 185 aired as ep 510's B-part. Anchor emitted (624 -> 638).",
+      "why": "The batch-17 note treats a rowspan grouping as a per-episode split and concludes the sources conflict; they do not, and the false conflict is the stated reason no anchor was emitted at ep 510.",
+      "sources": [
+        "https://ja.wikipedia.org/wiki/%E5%90%8D%E6%8E%A2%E5%81%B5%E3%82%B3%E3%83%8A%E3%83%B3%E3%81%AE%E3%82%A2%E3%83%8B%E3%83%A1%E3%82%A8%E3%83%94%E3%82%BD%E3%83%BC%E3%83%89%E4%B8%80%E8%A6%A7",
+        "https://ja.wikipedia.org/wiki/%E5%90%8D%E6%8E%A2%E5%81%B5%E3%82%B3%E3%83%8A%E3%83%B3%E3%81%AE%E6%BC%AB%E7%94%BB%E3%82%A8%E3%83%94%E3%82%BD%E3%83%BC%E3%83%89%E4%B8%80%E8%A6%A7",
+        "https://www.detectiveconanworld.com/wiki/Volume_60",
+        "https://www.detectiveconanworld.com/wiki/Volume_61"
+      ]
+    }
+  ],
+  "type_corrections": [],
+  "structure": {
+    "notes": "Column-semantics recheck (the batch-17 inversion): our rows key to DCW's JAPANESE 'episode' field, not its 'int-episode' field. DCW's page for our rows 510/511 carries episode=509-511 with int-episode=556-558, and the air dates (2008-07-28, 2008-08-04) match the Japanese numbering exactly; likewise 524 (int 575) and 585 (int 637). Joined by title+date throughout, never by index (R20). File = chapter in DCW; converted to global chapter numbers with en-WP's volume lists (vol 60 = 620-630, vol 61 = 631-641, vol 63 = 653-663, vol 67 = 697-707, vol 68 = 708-718) - all four target volumes verified against DCW's own Volume pages. ja.WP's 各話リスト uses rowspans in the 原作 column; a naive line-wise read attributes a block to the wrong row (this is what produced the batch-17 'sources disagree' note on 510/511). The batch-17 lattice convention of putting the CASE's last file as END on one episode of a multi-episode case (eps 513, 583/584) was preserved for ep 524 (END=637 for a 524-525 case); the ytv synopses suggest the anime's internal split is 635-636 / 636-637, which is flagged rather than applied. Yomiuri TV's own 事件ファイル archive (www.ytv.co.jp/conan/archive/kYYYYMMDD.html) turned out to be a per-episode PRIMARY source with a full pre-broadcast synopsis - the single best tool for splitting a multi-episode case, and independent of both wikis.",
+    "order_only": []
+  },
+  "flags_for_sean": [
+    "ep 510 START: no source resolves the ep-509/510 boundary inside files 622-624. I took 624 (ep 510's ytv synopsis is the diary decode + culprit reveal + Subaru moving in = file 624 新たな隣人, and 3 files over 23+11 minutes gives ~11 min/file). A content-farm blog (detective-conan-blog.com, cross-check only) says ep 510 = 623-624; if the car-nickname reveal is the tail of file 623 then START should be 623. END is unaffected.",
+    "ep 510 END: took 638 (conservative). ja.WP calls ep 510's B-part the 前編 of the 3-file case; if the B-part runs into 639 メッセージ the END would be 639. ep 511's END (640) is not in doubt.",
+    "ep 524 END: emitted 637, the value DCW prints per-episode and the case span ja.WP prints for 524-525, consistent with the stored lattice (ep 513 -> 630, ep 584 -> 708 use the same convention). Strict per-episode A4 from the ytv synopses would give 636 for ep 524 (635 燃える + 636 火種) and 637 for ep 525 (バチバチ = the static-electricity trick). If Sean prefers strict A4 ends, ep 524 -> 636 and ep 525 should be anchored at 637 (ep 525 is not in this lane's row list).",
+    "ep 524 graft source chapter: ja.WP says 654終盤 (closing pages of 654), DCW's per-episode field says 'V63 - F2 (part)' = 654, but DCW's combined infobox says 654-655 and its manga-to-anime note attributes the scene to the manga version of the Revolving Sushi case's first chapter = 655. Recorded as '654 (closing pages)' since two sources say 654 and only DCW's infobox says 655; the fragment sits on the 654/655 junction either way. It carries no position.",
+    "Adjacent rows this lane did not touch but that now look one-file wide: ep 509 (622-623), ep 525 (636-637), ep 583 (705-706), ep 586 (712-713). None has a stored anchor; ep 584's stored END=708 is defensible (its ytv synopsis reaches the music-room scene that opens 708) but is the case-block convention, not a per-episode value."
+  ]
+}

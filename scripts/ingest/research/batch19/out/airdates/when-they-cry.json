@@ -1,0 +1,20 @@
+{
+  "series_id": "when-they-cry",
+  "summary": "The ep-28 regression is a TRUE order deviation, not a date error, and no repair is warranted. Our row 27 'Cat Killing' is the Nekogoroshi-hen OVA (ひぐらしのなく頃に外伝 猫殺し編) - a home-video bonus for buyers of all nine season-1 DVD volumes, never broadcast - and it is placed in list order between season 1 (row 26, 2006-09-26) and Kai (row 28 onward), even though it shipped after Kai had already started airing on 2007-07-06. ja-WP lists it as an OVA appended to the season-1 table with '-' for 初放送日. ANN gives its vintage as 2007-08-02, matching our stored value; en-WP says July 27, 2007. I am NOT proposing a change: our stored 2007-08-02 has the stronger citation, and either value still sits after row 28.",
+  "anchors": [],
+  "continue_points": [],
+  "anchor_hostile": [],
+  "annotations": [],
+  "repairs": [],
+  "type_corrections": [],
+  "structure": {
+    "notes": "79 rows spanning 2006-2021. Row 27 is an OVA, not a broadcast episode; rows 28-51 are Kai (2007-07-06..12-17, weekly). Note ja-WP's season-1 broadcast dates are the Wednesday 02:00 Kansai TV slot (2006-04-05..09-27) while our rows and en-WP use the Tuesday-night/April-4 convention.",
+    "order_only": [
+      27
+    ]
+  },
+  "flags_for_sean": [
+    "when-they-cry: AIRDATE_ORDER_ACK candidate, eps 27 -> 28. Mechanism: row 27 is the Nekogoroshi-hen OVA, a DVD-purchase bonus with a home-video RELEASE date (2007-08-02 per ANN; 2007-07-27 per en-WP), slotted in list position 27 between the 2006 TV season and the 2007 Kai season whose first episode aired 2007-07-06. A release date is not a broadcast date and will always regress against Kai's opening episodes; the row is correctly ordered by story position, not by date.",
+    "when-they-cry: split evidence on the exact Nekogoroshi-hen date - ANN encyclopedia (anime id 8766) says 2007-08-02 (= our stored value, and what AFL carries), en-WP's series overview says July 27, 2007 (the ninth DVD volume's street date), ja-WP says only '2007年7月下旬' (late July 2007). No repair proposed; flagging so the value is not 'corrected' later on the weaker source."
+  ]
+}

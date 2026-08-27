@@ -1,0 +1,85 @@
+{
+  "series_id": "detective-conan",
+  "summary": "Air-date lane only, and much bigger than the two flagged rows. Rows 110–115 hold the right SIX dates but permuted: stored {110:08-10, 111:07-27, 112:08-03} against the true {110:07-27, 111:08-03, 112:08-10}, and stored {113:08-24, 114:08-31, 115:08-17} against the true {113:08-17, 114:08-24, 115:08-31} — two independent 3-cycles inside two blocks of three. ja-WP's 名探偵コナンのアニメエピソード一覧 and Detective Conan World's Season 3 table agree episode-for-episode, and rows 109 (07-13), 116 (09-07) and 117 (09-14) are already correct, which pins both ends. Six repairs, no true deviation.",
+  "anchors": [],
+  "continue_points": [],
+  "anchor_hostile": [],
+  "annotations": [],
+  "repairs": [
+    {
+      "episode": 110,
+      "field": "air_date",
+      "old": "1998-08-10",
+      "new": "1998-07-27",
+      "why": "ja-WP: |7月27日||110||料理教室殺人事件（前編）; DCW Season 3 {{SeasonItem|110|116|Cooking Classroom Murder Case (Part 1)|July 27, 1998}}. (DCW's first argument is the Jp# column, which is our row space; the second, 116, is the Int# column — do not key on it.)",
+      "sources": [
+        "https://ja.wikipedia.org/wiki/%E5%90%8D%E6%8E%A2%E5%81%B5%E3%82%B3%E3%83%8A%E3%83%B3%E3%81%AE%E3%82%A2%E3%83%8B%E3%83%A1%E3%82%A8%E3%83%94%E3%82%BD%E3%83%BC%E3%83%89%E4%B8%80%E8%A6%A7",
+        "https://www.detectiveconanworld.com/wiki/Season_3"
+      ]
+    },
+    {
+      "episode": 111,
+      "field": "air_date",
+      "old": "1998-07-27",
+      "new": "1998-08-03",
+      "why": "ja-WP: |8月3日||111||料理教室殺人事件（後編）; DCW Season 3: Jp# 111 = August 3, 1998. A two-parter cannot straddle 07-27 and 08-10 with 08-03 given to a different case.",
+      "sources": [
+        "https://ja.wikipedia.org/wiki/%E5%90%8D%E6%8E%A2%E5%81%B5%E3%82%B3%E3%83%8A%E3%83%B3%E3%81%AE%E3%82%A2%E3%83%8B%E3%83%A1%E3%82%A8%E3%83%94%E3%82%BD%E3%83%BC%E3%83%89%E4%B8%80%E8%A6%A7",
+        "https://www.detectiveconanworld.com/wiki/Season_3"
+      ]
+    },
+    {
+      "episode": 112,
+      "field": "air_date",
+      "old": "1998-08-03",
+      "new": "1998-08-10",
+      "why": "ja-WP: |8月10日||112||帝丹小7不思議事件; DCW Season 3: Jp# 112 'The Seven Mysteries of Teitan Elementary School Case' = August 10, 1998.",
+      "sources": [
+        "https://ja.wikipedia.org/wiki/%E5%90%8D%E6%8E%A2%E5%81%B5%E3%82%B3%E3%83%8A%E3%83%B3%E3%81%AE%E3%82%A2%E3%83%8B%E3%83%A1%E3%82%A8%E3%83%94%E3%82%BD%E3%83%BC%E3%83%89%E4%B8%80%E8%A6%A7",
+        "https://www.detectiveconanworld.com/wiki/Season_3"
+      ]
+    },
+    {
+      "episode": 113,
+      "field": "air_date",
+      "old": "1998-08-24",
+      "new": "1998-08-17",
+      "why": "ja-WP: |8月17日||113||白い砂浜殺人事件; DCW Season 3: Jp# 113 'The White Sandy Beach Murder Case' = August 17, 1998.",
+      "sources": [
+        "https://ja.wikipedia.org/wiki/%E5%90%8D%E6%8E%A2%E5%81%B5%E3%82%B3%E3%83%8A%E3%83%B3%E3%81%AE%E3%82%A2%E3%83%8B%E3%83%A1%E3%82%A8%E3%83%94%E3%82%BD%E3%83%BC%E3%83%89%E4%B8%80%E8%A6%A7",
+        "https://www.detectiveconanworld.com/wiki/Season_3"
+      ]
+    },
+    {
+      "episode": 114,
+      "field": "air_date",
+      "old": "1998-08-31",
+      "new": "1998-08-24",
+      "why": "ja-WP: |8月24日||114||スキューバダイビング殺人事件（前編）; DCW Season 3: Jp# 114 = August 24, 1998.",
+      "sources": [
+        "https://ja.wikipedia.org/wiki/%E5%90%8D%E6%8E%A2%E5%81%B5%E3%82%B3%E3%83%8A%E3%83%B3%E3%81%AE%E3%82%A2%E3%83%8B%E3%83%A1%E3%82%A8%E3%83%94%E3%82%BD%E3%83%BC%E3%83%89%E4%B8%80%E8%A6%A7",
+        "https://www.detectiveconanworld.com/wiki/Season_3"
+      ]
+    },
+    {
+      "episode": 115,
+      "field": "air_date",
+      "old": "1998-08-17",
+      "new": "1998-08-31",
+      "why": "ja-WP: |8月31日||115||スキューバダイビング殺人事件（後編）; DCW Season 3: Jp# 115 = August 31, 1998. Ep 116 (09-07) is already correct in our data, so 08-31 is the only slot left.",
+      "sources": [
+        "https://ja.wikipedia.org/wiki/%E5%90%8D%E6%8E%A2%E5%81%B5%E3%82%B3%E3%83%8A%E3%83%B3%E3%81%AE%E3%82%A2%E3%83%8B%E3%83%A1%E3%82%A8%E3%83%94%E3%82%BD%E3%83%BC%E3%83%89%E4%B8%80%E8%A6%A7",
+        "https://www.detectiveconanworld.com/wiki/Season_3"
+      ]
+    }
+  ],
+  "type_corrections": [],
+  "structure": {
+    "notes": "Our rows 109-117 match ja-WP 第N話 and DCW's Jp# column 1:1 by title. DCW's second SeasonItem argument (Int#) runs +6 here and must never be joined on (batch-17 ruling).",
+    "order_only": []
+  },
+  "flags_for_sean": [
+    "The gate flagged only 111 and 115, but the true defect spans 110-115: each block of three (110-112 and 113-115) has its dates rotated within the block. Applying only the two flagged rows would leave four wrong dates that happen to be monotone. All six repairs should go together.",
+    "1998-07-20 is a genuine no-episode week (ja-WP and DCW both jump 07-13 -> 07-27). Not a deviation, just a gap."
+  ]
+}

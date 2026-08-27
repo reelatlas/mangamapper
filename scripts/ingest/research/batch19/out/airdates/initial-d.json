@@ -1,0 +1,41 @@
+{
+  "series_id": "initial-d",
+  "summary": "Air-date lane. Rows 46, 47 and 48 are a 3-CYCLE PERMUTATION inherited straight from AFL: AFL lists 46 'Fateful Battle of the FDs' 2004-10-15, 47 'Blind Attack' 2004-08-21, 48 \"The 85's Raging Turbo\" 2004-10-15, i.e. ACT.8, ACT.6, ACT.7 in place of ACT.6, ACT.7, ACT.8. Each stored row is internally consistent (its title and its date belong to the same episode), so only the row-number assignment is wrong. ja-WP and en-WP agree on the Fourth Stage order: ACT.5+ACT.6 aired together 2004-08-21, ACT.7+ACT.8 together 2004-10-15, ACT.9+ACT.10 together 2004-12-17. Rows 45 (ACT.5) and 49 (ACT.9) are correct and pin the offset at row N = ACT.(N-40).",
+  "anchors": [],
+  "continue_points": [],
+  "anchor_hostile": [],
+  "annotations": [],
+  "repairs": [
+    {
+      "episode": 46,
+      "field": "air_date",
+      "old": "2004-10-15",
+      "new": "2004-08-21",
+      "why": "Row 46 = Fourth Stage ACT.6「ブラインド・アタック」. ja-WP 頭文字D 各話リスト prints ACT.5 and ACT.6 under one rowspan'd 8月21日 (2004); en-WP List of Initial D episodes gives ACT.6 'Blind Attack' = 2004-08-22 under its post-midnight convention for the second half of each double bill. Our rows use the ja convention (rows 45 and 48 both store the first date of their pair), so 2004-08-21. APPLY WITH THE TITLE ROTATION.",
+      "sources": [
+        "https://ja.wikipedia.org/wiki/%E9%A0%AD%E6%96%87%E5%AD%97D",
+        "https://en.wikipedia.org/wiki/List_of_Initial_D_episodes"
+      ]
+    },
+    {
+      "episode": 47,
+      "field": "air_date",
+      "old": "2004-08-21",
+      "new": "2004-10-15",
+      "why": "Row 47 = ACT.7「嵐のハチゴーターボ」. ja-WP: ACT.7 and ACT.8 share the rowspan'd 10月15日; en-WP: ACT.7 'The Stormy 85 Turbo' = 2004-10-15. APPLY WITH THE TITLE ROTATION.",
+      "sources": [
+        "https://ja.wikipedia.org/wiki/%E9%A0%AD%E6%96%87%E5%AD%97D",
+        "https://en.wikipedia.org/wiki/List_of_Initial_D_episodes"
+      ]
+    }
+  ],
+  "type_corrections": [],
+  "structure": {
+    "notes": "82 rows: 1-26 First Stage, 27-39 Second Stage, row 40 = a non-TV entry (Extra Stage / Third Stage class, unverified), 41-64 = Fourth Stage ACT.1-24, 65-78 Fifth Stage, 79-82 Final Stage. Offset row N = ACT.(N-40) confirmed at rows 45 (ACT.5) and 49 (ACT.9) by title AND date. en-WP's overall numbering is different (its ACT.5 is ep 48) — never index-join it.",
+    "order_only": []
+  },
+  "flags_for_sean": [
+    "TITLES MUST ROTATE WITH THE DATES at initial-d 46/47/48. Correct assignment: 46 = 'Blind Attack' (ACT.6), 47 = 'The Stormy 85 Turbo' / \"The 85's Raging Turbo\" (ACT.7), 48 = 'Fateful Battle of the FDs' (ACT.8). Row 48's DATE (2004-10-15) is already right for ACT.8, so only its title changes. The defect is AFL's own ordering (https://www.animefillerlist.com/shows/initial-d rows 45-48), copied verbatim into our data — verify against ja-WP/en-WP rather than re-deriving from AFL.",
+    "Not a deviation but structurally important: Fourth Stage aired TWO episodes per date (ACT.1+2 2004-04-16, 3+4 06-19, 5+6 08-21, 7+8 10-15, 9+10 12-17, 11+12 2005-02-18, and so on to ACT.23+24 2006-02-17). Equal consecutive dates in rows 41-64 are correct and the G54 gate must not read them as defects. en-WP splits each pair across midnight (+1 day on the second); ja-WP and our rows do not."
+  ]
+}

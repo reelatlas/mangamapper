@@ -1,0 +1,73 @@
+{
+  "series_id": "project-arms",
+  "summary": "Row 44 ('Arcadia' / 幻境（アルカディア）, 2002-02-02, The 2nd Chapter ep 18) IS exactly anchorable and gets an anchor: END 190 / START 186 / vol 18, in the 242-chapter space the batch-17 rebuild established. The episode is the Keith Violet / March Hare fight and it maps chapter-for-chapter onto the manga's ch 186-190: ch 186 幻境（アルカディア）— Violet's March Hare altering perception, the blue-rose meadow that was Alice's vision of the outside world; ch 187 死王（バロール）— the Eye of Balor and Al working out that she harnesses nanomachine light particles; ch 188 神槍（ミストルテイン）— Hayato fully synchronising with the White Knight and taking on its senses (Shogakukan's own v18 blurb: 隼人は…「騎士（ナイト）」と完全に同化。ARMS同士の戦いをダイレクトに人間の感覚で味わって…); ch 189 記憶（リメンブランス）— Violet's memory of once questioning her humanity to Mama Maria; ch 190 聖餐（サクラメント）— the church, White Alice / Black Alice and Takeshi. The episode title is the exact title of ch 186. The block sits AHEAD of eps 45-47 because the anime pulls the whole fight forward from inside the Karion Tower to the bridge before the island, so the anchor is a forward jump and needs one parity continue point (ep 44 → ch 162, ep 45's stored START) plus a skip note for when the reader reaches 186-190 again. The stored ep-48 span already excludes 186-190, so nothing there needs repairing; only the '~' in the stored ep-44 annotation is now removable.",
+  "anchors": [
+    {
+      "episode": 44,
+      "end_chapter": 190,
+      "start_chapter": 186,
+      "chapters_adapted": "186-190",
+      "volume": 18,
+      "confidence": "high",
+      "note": "A4 END = 190 (聖餐 Sacrament, the last chapter of the Violet block before ch 191 神卵 Humpty Dumpty, which the anime keeps back for ep 48); A10 START = 186 幻境（アルカディア）, whose title IS the episode title on ja.wikipedia's 各話リスト (第18話（44）幻境（アルカディア）, 2月2日). Beat-for-beat: en.wikipedia's ep-44 synopsis runs March Hare / altered perception (186) -> light-particle Balor eye (187) -> Hayato fully awakening and gaining the White Knight's senses (188, quoted almost verbatim by Shogakukan's v18 TOC blurb) -> Violet's Mama Maria memory (189 記憶 Remembrance) -> the church, White/Black Alice, Takeshi (190 聖餐 Sacrament). Chapter titles and volume boundaries from Shogakukan's own per-volume TOCs via Kinokuniya (v17 = 177-187 ending 幻境/死王; v18 = 188-198 opening 神槍/記憶/聖餐/神卵/転移) cross-checked against the MangaDex chapter feed (186 Arcadia, 187 Balor, 188 Mistilteinn, 189 Remembrance, 190 Sacrament) — zero mismatches, so END 190 lands in v18. Forward jump relative to eps 45-47: see the rearranged annotation and the continue point.",
+      "sources": [
+        "https://ja.wikipedia.org/wiki/ARMS",
+        "https://en.wikipedia.org/wiki/Project_ARMS",
+        "https://www.kinokuniya.co.jp/f/dsg-01-9784091248978",
+        "https://www.kinokuniya.co.jp/f/dsg-01-9784091248985",
+        "https://api.mangadex.org/manga/9c5eda08-09b5-4f52-85db-d8eb80000492/feed?limit=500&order%5Bchapter%5D=asc"
+      ]
+    }
+  ],
+  "continue_points": [
+    {
+      "episode": 44,
+      "continue_chapter": 162,
+      "kind": "parity",
+      "note": "C2/C3 parity with the anime. Ep 44 ends at ch 190 but that block was pulled forward out of order — the chronological next-unseen chapter after eps 43-44 is ch 162 要塞 Fortress, which is ep 45's stored START (arrival at the Karion Fortress island). A derived END+1 = 191 would skip ~28 chapters the anime is about to adapt in eps 45-48. C3 note to carry: when the reader reaches ch 186 on the way through eps 45-48, chs 186-190 have already been seen and can be skipped (ep 48's stored span already omits them).",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Project_ARMS",
+        "https://api.mangadex.org/manga/9c5eda08-09b5-4f52-85db-d8eb80000492/feed?limit=500&order%5Bchapter%5D=asc"
+      ]
+    }
+  ],
+  "anchor_hostile": [],
+  "annotations": [
+    {
+      "episodes": [44],
+      "kind": "rearranged",
+      "chapters": "186-190",
+      "note": "Confirms and sharpens the stored '~186-190' fact: the span is exactly 186-190, no tilde needed. In the manga the Keith Violet / March Hare fight happens LATE inside the Karion Tower — ja.wikipedia's character article puts Violet's defeat at カリヨンタワーの決戦終盤 with Hayato breaking the Eye of Balor, and Shogakukan's v18 blurb places it immediately after Keith Silver's defeat (キース・シルバーを敗ったのも束の間、今度はキース・バイオレットが現れた). The anime stages the identical fight on the BRIDGE to the island, before the party ever reaches the fortress, so eps 45-47 then go back to ch 162-177 and ep 48 resumes at ~178 with 186-190 already spent.",
+      "sources": [
+        "https://ja.wikipedia.org/wiki/ARMS%E3%81%AE%E7%99%BB%E5%A0%B4%E4%BA%BA%E7%89%A9",
+        "https://www.kinokuniya.co.jp/f/dsg-01-9784091248985",
+        "https://en.wikipedia.org/wiki/Project_ARMS"
+      ]
+    }
+  ],
+  "repairs": [
+    {
+      "episode": 44,
+      "field": "annotation.chapters",
+      "old": "~186-190",
+      "new": "186-190",
+      "why": "The approximation is no longer needed. Shogakukan's v17 and v18 TOCs plus the MangaDex feed give the five chapter titles, and en.wikipedia's ep-44 synopsis matches all five in order (Arcadia / Balor / Mistilteinn / Remembrance / Sacrament). Cosmetic but it makes the annotation consistent with the new exact anchor.",
+      "sources": [
+        "https://www.kinokuniya.co.jp/f/dsg-01-9784091248978",
+        "https://www.kinokuniya.co.jp/f/dsg-01-9784091248985",
+        "https://en.wikipedia.org/wiki/Project_ARMS"
+      ]
+    }
+  ],
+  "type_corrections": [],
+  "structure": {
+    "notes": "Chapter space held at 242 across 22 volumes (the batch-17 rebuild) and independently re-verified on the two volumes this row touches: Kinokuniya's 出版社内容情報 for v17 (ISBN 9784091248978) lists 11 chapters 崩壊/死生/脈動/銀光/戦鬼/溶融/炎熱/予言/宿命/幻境（アルカディア）/死王（バロール）= ch 177-187, and for v18 (9784091248985) 11 chapters 神槍（ミストルテイン）/記憶/聖餐/神卵/転移/激震/帰還/黙示/地上/激突/侵食 = ch 188-198 — exactly the stored V6 boundaries. Episode numbering re-checked without an index join (R20): ja.wikipedia's 各話リスト prints The 2nd Chapter's numbers as 第N話（通し話数）, so 第18話（44）幻境（アルカディア）2月2日 is our row 44 by BOTH number and date, and en.wikipedia's EpisodeNumber/EpisodeNumber2 pair (44 / 18) agrees. The deleted row 53 stays deleted: ja.wikipedia's ゲーム section confirms 『PROJECT ARMS』 was a Bandai PlayStation 2 title released 2002年3月28日, two days BEFORE the finale aired on 3月30日 — the N2/N3 ruling and the 52-episode cap are unaffected by anything here.",
+    "order_only": []
+  },
+  "flags_for_sean": [
+    "EP 44 IS A DELIBERATE FORWARD (out-of-order) ANCHOR. Batch 17 withheld it because 'an anchor there would break monotonicity'. I am proposing it because the mapping is now exact on five chapters and because the ep-44 parity continue point (ch 162) keeps a reader's position correct across the jump. If Sean would rather keep the lattice monotonic, the fallback is anchor_hostile on ep 44 with the sharpened rearranged annotation — but then the continue point above is still worth taking.",
+    "ADJACENT, NOT ACTED ON: eps 43 and 46 are still unanchored (batch 17 could not source them). en.wikipedia now carries full per-episode synopses for the whole run, which is a better source than was available then — ep 46 in particular reads as ch 167-176 material (Huey Graham and the Next, Dewey Graham's hologram, the central processing unit). Worth a narrow follow-up.",
+    "TITLE-JOIN TRAP TO AVOID on this series: ep 46 is titled 要塞（フォートレス）and ch 162 is titled 要塞 Fortress, but en.wikipedia's ep-45 synopsis puts the arrival at the island (ch 162) in ep 45, not 46, and ep 46 is already inside the fortress. The stored ep-45 START of 162 is right; do NOT re-key it off that title collision. Ep 44's title identity is safe because 幻境（アルカディア）is a distinctive coined reading and the four following beats corroborate it independently.",
+    "MangaDex's English chapter titles for this series are a fan translation and do not always match the Shogakukan Japanese titles (e.g. ch 175 is 'Reunion' on MangaDex but batch 17 read it as 交差（ジャンクション）). For chapters 186-190 the two agree, so the anchor does not depend on that; anywhere else on this series, prefer the Kinokuniya TOCs."
+  ]
+}

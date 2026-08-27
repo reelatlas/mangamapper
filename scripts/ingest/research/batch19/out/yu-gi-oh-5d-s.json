@@ -1,0 +1,67 @@
+{
+  "series_id": "yu-gi-oh-5d-s",
+  "summary": "Row 155 is NOT a duplicate and must not be dropped. Rows 154 'Clashing Souls!' and 155 'Shining Forth To The Future' are two genuinely distinct, separately produced episodes that shared ONE broadcast slot: ja-WP's 各話リスト gives them 話数 153 and 154 with a rowspan'd 放送日 of 2011年3月30日 footnoted 最終回1時間スペシャル (final one-hour special), each with its own 脚本/コンテ/演出/作画監督 and its own キーカード; en-WP's season-5 list and yugioh.fandom's Episode 153 / Episode 154 pages agree, the latter stating 'It first aired together with Episode 154 ... as a one hour finale special on March 30, 2011'. The real defect is elsewhere: our numbering runs +1 against every independent source from the 84th episode onward, because ANIMEFILLERLIST INSERTS THE THEATRICAL MOVIE 'Bonds Beyond Time' (2010-01-23) into the TV list as its row 83. AFL is where our rows come from — our stored titles at 150-155 match AFL's wording exactly ('Entrusted Feelings of My Father', 'Converging Wishes') rather than Wikipedia's ('Feelings Entrusted of My Father', 'Gathering Wishes'), and our aired_episodes=155 equals AFL's maximum row number, while AniList, ja-WP, en-WP and the fandom wiki all count 154. AFL additionally OMITS a real episode — ja/en-WP 145 'Faster Than Light!!' (光よりも速く!!, 2011-01-26) — and leaves its own number 146 unused, so AFL prints 154 rows across the number range 1-155. Both errors are inherited by us unless our row 83 and our 146 say otherwise. This series' source kind is `original` (the anime itself; manga link NONE, chapter space empty), so no row here can take a chapter anchor at all — rows 154 and 155 are A44 anchor-hostile by construction, not by content.",
+  "anchors": [],
+  "continue_points": [],
+  "anchor_hostile": [
+    {
+      "episode": 154,
+      "why": "source kind = original (the anime is its own source; manga link NONE, total_chapters=null). No episode of this series has a chapter position to hold — A44 applies to the whole row space, not to this row specifically. Row 154 is a real episode (ja-WP 話数 153 「ぶつかり合う魂!」, aired 2011-03-30 as the first half of the 最終回1時間スペシャル).",
+      "sources": [
+        "https://ja.wikipedia.org/wiki/%E9%81%8A%E2%98%86%E6%88%AF%E2%98%86%E7%8E%8B5D%27s",
+        "https://en.wikipedia.org/wiki/Yu-Gi-Oh!_5D%27s_season_5",
+        "https://yugioh.fandom.com/wiki/Yu-Gi-Oh!_5D%27s_-_Episode_153"
+      ]
+    },
+    {
+      "episode": 155,
+      "why": "source kind = original — no chapter space (A44). Row 155 is a real episode, NOT a duplicate of 154: ja-WP 話数 154 「光り差す未来へ」, the series finale, sharing the 2011-03-30 slot with 話数 153 under the 最終回1時間スペシャル footnote; it has its own writer (吉田伸), director (小野勝巳), animation director (丸山修二), ending theme (Future Colors) and insert songs (Clear Mind / YAKUSOKU NO MELODY).",
+      "sources": [
+        "https://ja.wikipedia.org/wiki/%E9%81%8A%E2%98%86%E6%88%AF%E2%98%86%E7%8E%8B5D%27s",
+        "https://en.wikipedia.org/wiki/Yu-Gi-Oh!_5D%27s_season_5",
+        "https://yugioh.fandom.com/wiki/Yu-Gi-Oh!_5D%27s_-_Episode_154"
+      ]
+    }
+  ],
+  "annotations": [],
+  "repairs": [
+    {
+      "episode": 83,
+      "field": "row",
+      "old": 83,
+      "new": "drop",
+      "why": "The extra row is 83, not 155. animefillerlist's Yu-Gi-Oh! 5D's list carries row 83 = 'Bonds Beyond Time' dated 2010-01-23 (id=\"eps-83\", type 'Manga Canon') — that is the THEATRICAL FILM 劇場版 遊☆戯☆王 ~超融合!時空を越えた絆~ (AniList 6951, format=MOVIE, 49 min, released 2010-01-23), not a TV episode. en-WP's season-4 episode list carries the same film with EpisodeNumber = 'Movie', which is almost certainly where AFL picked it up. Inserting it shifts AFL's TV numbering +1 from row 84 onward: AFL 84 'Will the Real Jack Atlas, Please Stand Up, Part 1' is dated 2009-11-04, which is ja-WP episode 83's air date, and the +1 offset then holds all the way to AFL 155 = ja-WP 154. Our rows inherit it (our 150 'The Revived Hero' = ja-WP 149, aired 2011-02-23; our 154/155 = ja-WP 153/154). CAVEAT, stated plainly: I am read-only on the database and could not observe our stored row 83 — the context file listed only rows 150-155. The inference rests on (a) our stored titles at 150-155 matching AFL's wording exactly rather than Wikipedia's, and (b) our aired_episodes=155 matching AFL's maximum row number against a 154-episode consensus. VERIFY BEFORE APPLYING: if stored row 83 reads 'Bonds Beyond Time' / 2010-01-23, this repair is correct; if it reads '容疑者!?ジャック・アトラス' / 'Suspect!? Jack Atlas' / 2009-11-04, our list is already clean at 83 and the +1 offset enters somewhere else — re-run the join by air date, never by index (R20). Preferred disposition rather than a bare delete: retire row 83 and register the film as an order-only watch-order entry at @82.5 with kind `movie` and anilist_id 6951, exactly as yu-gi-oh-2000 @224.5 already handles The Dark Side of Dimensions under the movies rule.",
+      "sources": [
+        "https://www.animefillerlist.com/shows/yu-gi-oh-5ds",
+        "https://anilist.co/anime/6951",
+        "https://en.wikipedia.org/wiki/List_of_Yu-Gi-Oh!_5D%27s_episodes",
+        "https://ja.wikipedia.org/wiki/%E9%81%8A%E2%98%86%E6%88%AF%E2%98%86%E7%8E%8B5D%27s"
+      ]
+    }
+  ],
+  "type_corrections": [],
+  "structure": {
+    "notes": "IDENTITY OF ROW 155 — settled, three independent sources.\n1. ja.wikipedia 遊☆戯☆王5D's, infobox 話数 = 全154話 and 各話リスト: !153 「ぶつかり合う魂!」 with 放送日 rowspan=\"2\"|3月30日<ref>最終回1時間スペシャル</ref>, and !154 「光り差す未来へ」 sharing that cell. Distinct staff per row (153: 脚本 鈴木やすゆき, 演出 政木伸一, 作監 こかいゆうじ, キーカード クリムゾン・ブレーダー; 154: 脚本 吉田伸, コンテ/演出 小野勝巳, 作監 丸山修二, キーカード ジャンク・ウォリアー with a footnote explaining that because two episodes aired in one day the card was published on the official site instead of on-air).\n2. en.wikipedia 'Yu-Gi-Oh! 5D's season 5': ep 153 'Clashing Souls!' 2011-03-30 and ep 154 'Shining Forth To The Future' 2011-03-30; the series-overview totals on 'List of Yu-Gi-Oh! 5D's episodes' are 26+38+28+42+20 = 154.\n3. yugioh.fandom (MediaWiki API, action=parse&prop=wikitext): 'Yu-Gi-Oh! 5D's - Episode 153' — episode number = 153, japanese air date = March 30, 2011, prose 'It first aired together with Episode 154 ... as a one hour finale special on March 30, 2011'; 'Episode 154' — 'the one-hundred-and-fifty-fourth and final episode'.\n4. AniList 3972: format=TV, episodes=154, 2008-04-02 to 2011-03-30.\n=> Two rows sharing one air date is CORRECT here (an N11 same-date pair, not a duplicate). No row must be dropped at 154/155, and no air_date repair is warranted: 2011-03-30 is right for both.\n\nWHERE THE OFF-BY-ONE ACTUALLY IS. Our rows are AFL-shaped. AFL (https://www.animefillerlist.com/shows/yu-gi-oh-5ds) publishes 154 rows spread over the number range 1-155, because it (a) inserts the FILM 'Bonds Beyond Time' as row 83 with the film's theatrical date 2010-01-23, and (b) skips number 146 while omitting a real episode. Verified by a date join (title/date, never index — R20):\n  * AFL 1-82 == ja-WP 1-82 (AFL 51 = 2009-03-25 = ja 51; AFL 52 = 2009-04-01 = ja 52; AFL 53 = 2009-04-08 = ja 53).\n  * AFL 83 = 'Bonds Beyond Time', 2010-01-23 = AniList 6951 (MOVIE) release date. Not a TV episode.\n  * AFL 84 onward = ja-WP N-1, each carrying ja-WP's correct air date (AFL 84 -> 2009-11-04 = ja 83; AFL 150 'The Revived Hero' -> 2011-02-23 = ja 149 「蘇った英雄」; AFL 154 -> ja 153; AFL 155 -> ja 154).\n  * AFL has NO row for ja/en-WP episode 145 「光よりも速く!!」 'Faster Than Light!!' (2011-01-26), and leaves its own number 146 unused. AFL 147 'The Last Human, Z-ONE' = ja 146 (whose true date is 2011-02-02; AFL prints 2011-02-11, an AFL date typo — AFL 148 'A Hope Bound for the Future!' 2011-02-09 = ja 147 is correct again).\nSo a clean 5D's row space is 154 rows: drop the movie row, restore 'Faster Than Light!!', and renumber the tail down by one so our N matches ja-WP / en-WP / AniList / fandom N. That is a structural act — Sean rules it; the repairs block proposes only the movie row, and the missing episode is raised as a flag rather than invented as a row.\n\nOPEN FLAG #1019 (taxonomy_conflict, 'wiki titles disagree with stored titles on many rows — numbering offset suspected', conflicts=103) is explained by exactly this: the movie insertion at 83 makes every later row's title belong to the previous episode. (103 conflicting rows is larger than the 73 rows 83-155 that the offset alone touches, so part of the 103 is the separate, benign fact that AFL prints 4Kids DUB titles for the early episodes — 'On Your Mark, Get Set, Duel!', 'Creepy Crawlies' — where Wikipedia prints translated Japanese titles. The flag should not be dismissed until the offset is fixed.)\n\nNO ANCHORS ARE POSSIBLE ANYWHERE IN THIS SERIES. Entry facts: source kind = original, manga link AniList NONE, total_chapters=null. Yu-Gi-Oh! 5D's has no manga it adapts (the Yu-Gi-Oh! 5D's manga by Masahiro Hikokubo/Masashi Sato is a separate, divergent work, not this anime's source). AFL's blanket 'Manga Canon' typing on all 154 rows is therefore an artifact of AFL's own vocabulary, not a claim about a chapter space. Both target rows go to anchor_hostile under A44.",
+    "order_only": [
+      {
+        "series_id": "yu-gi-oh-5d-s",
+        "position": 82.5,
+        "kind": "movie",
+        "anilist_id": 6951,
+        "note": "PROPOSED, contingent on the row-83 repair: Yu-Gi-Oh! 3D Bonds Beyond Time (劇場版 遊☆戯☆王 ~超融合!時空を越えた絆~), AniList 6951 format=MOVIE, 49 min, 2010-01-23. AFL currently carries it as TV row 83; en-WP's season-4 list carries it as EpisodeNumber = 'Movie'. Under the movies rule it belongs in the watch order, not in the episode rows — the same shape as yu-gi-oh-2000 @224.5. Its diegetic slot is after ja-WP ep 82 (2009-10-28) and before ep 83 (2009-11-04), which is where AFL placed it.",
+        "sources": [
+          "https://anilist.co/anime/6951",
+          "https://en.wikipedia.org/wiki/List_of_Yu-Gi-Oh!_5D%27s_episodes",
+          "https://www.animefillerlist.com/shows/yu-gi-oh-5ds"
+        ]
+      }
+    ]
+  },
+  "flags_for_sean": [
+    "THE ASK'S PREMISE IS REFUTED — do NOT drop row 155. ja-WP 各話リスト (話数 全154話; !153 and !154 sharing a rowspan'd 3月30日 cell footnoted 最終回1時間スペシャル), en-WP 'Yu-Gi-Oh! 5D's season 5' (153 'Clashing Souls!' / 154 'Shining Forth To The Future', both 2011-03-30), yugioh.fandom Episode 153 ('It first aired together with Episode 154 ... as a one hour finale special') and AniList 3972 (episodes=154) all agree: two distinct episodes, one broadcast. The community counts 154 EPISODES, and our 155 comes from an extra row far earlier in the list. Sources: https://ja.wikipedia.org/wiki/%E9%81%8A%E2%98%86%E6%88%AF%E2%98%86%E7%8E%8B5D%27s | https://en.wikipedia.org/wiki/Yu-Gi-Oh!_5D%27s_season_5 | https://yugioh.fandom.com/wiki/Yu-Gi-Oh!_5D%27s_-_Episode_153 | https://yugioh.fandom.com/wiki/Yu-Gi-Oh!_5D%27s_-_Episode_154 | https://anilist.co/anime/3972",
+    "VERIFY BEFORE APPLYING THE ROW-83 REPAIR (I am read-only and the context listed only rows 150-155). Query our stored rows 82-84 and 145-147 for this series. Expected if the diagnosis is right: row 83 = 'Bonds Beyond Time' / 2010-01-23; row 84 = 'Will the Real Jack Atlas, Please Stand Up, Part 1' / 2009-11-04; no row titled 'Faster Than Light!!'; number 146 either absent or filled with 'The Last Human, Z-ONE'. If row 83 instead reads 'Suspect!? Jack Atlas' / 2009-11-04 then our ingest already dropped the movie and the +1 offset enters elsewhere — in that case re-derive the join by AIR DATE against ja-WP, not by index (R20), because AFL's own dates for rows 84+ are ja-WP's dates for episode N-1 and will look 'correct' row-by-row while the numbering is wrong.",
+    "MISSING EPISODE, not just a misnumbered one: ja-WP 話数 145 「光よりも速く!!」 / en-WP 145 'Faster Than Light!!', aired 2011-01-26, has NO row on animefillerlist at all (AFL jumps 145 -> 147 and leaves 146 unused). If our rows came from AFL we are missing a real episode of the WRGP/Ark Cradle finale run. This is the opposite of the 'which row is the duplicate' question the task expected and it cannot be fixed by deleting anything — a row has to be ADDED. I did not invent it; sources: https://ja.wikipedia.org/wiki/%E9%81%8A%E2%98%86%E6%88%AF%E2%98%86%E7%8E%8B5D%27s | https://en.wikipedia.org/wiki/Yu-Gi-Oh!_5D%27s_season_5 | https://www.animefillerlist.com/shows/yu-gi-oh-5ds",
+    "AFL DATE ERROR worth recording as a source trap: AFL row 147 'The Last Human, Z-ONE' is dated 2011-02-11; the true date of ja-WP 146 「最後の一人 Z-ONE」 is 2011-02-02 (a digit transposition). AFL's neighbouring rows are correct, so a date-based join to AFL will orphan exactly this one row. Also note the genuine two-week broadcast gap between ja-WP 151 (2011-03-09) and 152 (2011-03-23) — there is no episode on 2011-03-16, so a 'missing week' is not evidence of a missing row here.",
+    "TYPING NOT REVIEWED, but worth knowing: AFL types all 154 of its rows 'Manga Canon' for a series whose source kind is `original` (no manga link, empty chapter space). Whatever standings we store for 5D's cannot have come from a real source comparison. Out of scope for this lane (identity, not placement) — raising it so it is not mistaken for a settled typing."
+  ]
+}

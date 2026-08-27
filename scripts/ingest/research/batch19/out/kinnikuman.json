@@ -1,0 +1,120 @@
+{
+  "series_id": "kinnikuman",
+  "summary": "Both rows anchor cleanly, and the reason batch 17 could not place them turns out to be a false premise. The 21st Chojin Olympics block is NOT reordered: kinnikuman.fandom's Warsman page carries a chapter-by-chapter narrative with per-sentence chapter citations, and read against ja.Wikipedia's A/B segment titles it shows eps 31-47 tracking chapters 95-120 in strict publication order - heavily EXPANDED (25 chapters across 21 episodes / 42 segments), not rearranged. Warsman does not debut at ch 107: he is a contestant from ch 94, is drawn into the bracket in ch 96 and kills Teapackman in ch 97; ch 107 コンピューター超人 is merely where his internal fighting computer is first mentioned, mid-way through the Ramenman match. Ep 32 = ch 97-98 (32A 'Warsman, The Iron Claw' is ch 97's Warsman-vs-Teapackman plus the Cubeman/Mindpuzzleman undercard at the baseball ground; 32B 'The Killer Wax Hold' is ch 98's King Cobra wax sequence, which eps 33A/33B then resolve). Ep 46 = ch 118-119 (46A's 'good, clean fight' is ch 118's ending, where Warsman turns on Robin Mask and fights fairly; 46B's 'perfect Pallo Special' is ch 119). Two repairs fall out: delete the rearranged annotation, and extend ep 31's END to 96 - its unidentified B-segment 超人はパチンコ玉 is the giant pachinko machine that draws the bracket in ch 96.",
+  "anchors": [
+    {
+      "episode": 32,
+      "end_chapter": 98,
+      "start_chapter": 97,
+      "chapters_adapted": "97-98 (98 straddled with ep 33, which finishes the King Cobra match)",
+      "volume": 8,
+      "confidence": "high",
+      "note": "A4/A10. 32A ウォーズマン・鉄のツメの巻: kinnikuman.fandom's Episode 32A summary is 'In the A-Block, Warsman takes on Teapackman, meanwhile the B-block matches are relegated to the sidelines of a baseball game, starting with Cubeman vs. Mindpuzzleman' = chapter 97 犠牲者続出！！ verbatim (its own page: 'Cubeman beats Mindpuzzleman, Warsman kills Teapackman... Block B placed in the off-field at Koushien during a baseball game'); the Warsman page cites ch 97 for the Teapackman kill. 32B 見たか!ロウ固め殺法の巻 is the wax hold, which chapter 98's story text carries ('King Cobra keeps flicking wax at Kinnikuman until most of his body is covered in it'), so the episode reaches into 98; eps 33A/33B then finish that match ('Kinnikuman struggles in King Cobra's death grip' / 'fights out of King Cobra's grip'). Volume 8 = chs 95-108 (fandom volume list).",
+      "sources": [
+        "https://kinnikuman.fandom.com/wiki/Episode_32A",
+        "https://kinnikuman.fandom.com/wiki/Chapter_97",
+        "https://kinnikuman.fandom.com/wiki/Chapter_98",
+        "https://kinnikuman.fandom.com/wiki/Warsman",
+        "https://ja.wikipedia.org/wiki/%E3%82%AD%E3%83%B3%E8%82%89%E3%83%9E%E3%83%B3_(%E3%83%86%E3%83%AC%E3%83%93%E3%82%A2%E3%83%8B%E3%83%A1)",
+        "https://kinnikuman.fandom.com/wiki/List_of_Kinnikuman_Chapters/Volumes_1-10"
+      ]
+    },
+    {
+      "episode": 46,
+      "end_chapter": 119,
+      "start_chapter": 118,
+      "chapters_adapted": "118-119 (118 straddled with ep 45, 119 straddled with ep 47)",
+      "volume": 9,
+      "confidence": "medium",
+      "note": "A4/A10. Chapter 118 ends with 'Warsman thus changes his mind about his evil ways, but is attacked by Robin, who then proceeds to slap Bibimba. Warsman attacks Robin and continues to fight FAIRLY against Kinnikuman' - which is exactly kinnikuman.fandom's Episode 46A summary, 'A good, clean fight between Kinnikuman and Warsman' (ja.WP title 死闘90分! 一本勝負の巻, the 90-minute one-fall final). The first part of ch 118 is ep 45B 火事場のクソ力!の巻 ('Robin Mask's desire for revenge goes one step too far'). 46B ギブアップ!? キン肉マンの巻 is 'Not even the Kinniku Buster can help Kinnikuman escape from Warsman's perfect Pallo Special' = ch 119, where the Warsman page places the Palo Special overcoming Kinnikuman's Fire of Inner Strength. END = 119, straddled with ep 47 (stored 119-120: 47A is ch 119's 30-minute overheat limit, 47B is ch 120's Kinniku Buster finish). Medium: the 118/119 line inside ep 46 rests on a single wiki's citation chain, with the ja.WP segment titles as corroboration.",
+      "sources": [
+        "https://kinnikuman.fandom.com/wiki/Episode_46A",
+        "https://kinnikuman.fandom.com/wiki/Episode_46B",
+        "https://kinnikuman.fandom.com/wiki/Episode_45B",
+        "https://kinnikuman.fandom.com/wiki/Warsman",
+        "https://ja.wikipedia.org/wiki/%E3%82%AD%E3%83%B3%E8%82%89%E3%83%9E%E3%83%B3_(%E3%83%86%E3%83%AC%E3%83%93%E3%82%A2%E3%83%8B%E3%83%A1)",
+        "https://kinnikuman.fandom.com/wiki/List_of_Kinnikuman_Chapters/Volumes_1-10"
+      ]
+    }
+  ],
+  "continue_points": [
+    {
+      "episode": 32,
+      "continue_chapter": 98,
+      "kind": "parity",
+      "note": "C1: the episode ends mid-chapter-98 with Kinnikuman immobilised in King Cobra's wax; ep 33 finishes that chapter (33A Brocken Jr. vs Watchman with Kinnikuman still trapped, 33B the escape). Resume inside ch 98, not at 99.",
+      "sources": [
+        "https://kinnikuman.fandom.com/wiki/Chapter_98",
+        "https://kinnikuman.fandom.com/wiki/Episode_33A"
+      ]
+    },
+    {
+      "episode": 46,
+      "continue_chapter": 119,
+      "kind": "parity",
+      "note": "C1: the episode ends mid-chapter-119, with Kinnikuman still locked in the Palo Special; ep 47A carries the rest of 119 (the 30-minute overheat limit) and 47B ch 120. Resume inside ch 119, not at 120. Consistent with the stored ep-47 anchor 119-120.",
+      "sources": [
+        "https://kinnikuman.fandom.com/wiki/Episode_46B",
+        "https://kinnikuman.fandom.com/wiki/Warsman"
+      ]
+    }
+  ],
+  "anchor_hostile": [],
+  "annotations": [
+    {
+      "episodes": [27, 47],
+      "kind": "abridged",
+      "chapters": "95-120",
+      "note": "REPLACES the stored 'eps 32,46 rearranged {96-118}' fact. The 21st Chojin Olympics block runs in publication order and is EXPANDED, not reordered: 26 chapters (95-120) across 21 episodes / 42 A-B segments, roughly 1.6 segments per chapter. Verified checkpoints: 31A=95, 31B=96, 32A=97, 32B/33=98, 35=101, 36A=102, 36B=103, 37=104-105, 38-40=106-108, 42A=111, 42B=113, 43=114, 45B/46A=118, 46B/47A=119, 47B=120."
+    },
+    {
+      "episodes": [32, 33],
+      "kind": "partial",
+      "chapters": "98",
+      "note": "Chapter 98 straddles the 32/33 boundary: ep 32B animates the wax-hold sequence, eps 33A/33B the escape and Brocken Jr. vs Watchman. Listed in chapters_adapted on ep 32."
+    },
+    {
+      "episodes": [45, 46, 47],
+      "kind": "partial",
+      "chapters": "118-119",
+      "note": "Both of ep 46's chapters are shared: ch 118 with ep 45B (Robin Mask turning on Warsman) and ch 119 with ep 47A (the 30-minute overheat limit). Only first-time coverage moves position."
+    }
+  ],
+  "repairs": [
+    {
+      "episode": 32,
+      "field": "annotation",
+      "old": "eps 32,46 rearranged {96-118}: The 21st Chojin Olympics is reordered: Warsman debuts in ep 32A whereas his manga debut is ch 107 (コンピューター超人), while the fandom Chapter pages map ...",
+      "new": "DELETE the rearranged fact (replace with the abridged annotation above). Warsman's manga debut is not ch 107: kinnikuman.fandom's Warsman page cites ch 94 for his entry as the USSR's contestant, ch 96 for his bracket draw and ch 97 for his Screw Driver kill on Teapackman, and states that ch 107 is merely where 'Warsman's fighting computer was first mentioned' - during the later Ramenman match. The block is in publication order.",
+      "why": "The stored annotation reads the chapter TITLE コンピューター超人 as a debut chapter. The character page's citation chain shows Warsman fighting from ch 97 onward, and every episode checkpoint from 31 to 47 lines up monotonically, so the premise for calling eps 32 and 46 unanchorable does not hold.",
+      "sources": [
+        "https://kinnikuman.fandom.com/wiki/Warsman",
+        "https://kinnikuman.fandom.com/wiki/Chapter_96",
+        "https://kinnikuman.fandom.com/wiki/Chapter_97",
+        "https://kinnikuman.fandom.com/wiki/Episode_32A"
+      ]
+    },
+    {
+      "episode": 31,
+      "field": "end_chapter",
+      "old": 95,
+      "new": 96,
+      "why": "Batch 17 left ep 31's END at 95 because '31B 超人はパチンコ玉 could not be identified'. It is chapter 96 パノラマトーナメント表の巻: kinnikuman.fandom's Episode 31B summary is 'The Chojin tournament match-ups are determined by a giant pinball machine', and the Warsman page says 'He is assigned his place in the final matches via a giant pachinko machine' citing ch 96, whose own page summary is 'The twelve finalists of Chojin Olympics are paired up in the tournament.' chapters_adapted should read '95-96'; volume stays 8.",
+      "sources": [
+        "https://kinnikuman.fandom.com/wiki/Episode_31B",
+        "https://kinnikuman.fandom.com/wiki/Chapter_96",
+        "https://kinnikuman.fandom.com/wiki/Warsman"
+      ]
+    }
+  ],
+  "type_corrections": [],
+  "structure": {
+    "notes": "Chapter space: the manga's own chapter numbering, volume 8 = chs 95-108 and volume 9 = chs 109-120 per kinnikuman.fandom's List of Kinnikuman Chapters/Volumes 1-10 (which prints both the Japanese and English chapter titles) - consistent with the stored volumes on eps 36, 37 (v8) and 47, 48 (v9). Row identity: our rows are whole broadcast episodes; the anime is two half-episodes (A/B) per broadcast, and BOTH the fandom (Episode 32A / Episode 32B pages) and ja.Wikipedia (two subtitle rows per 話数 rowspan) index by segment, so every join here was done segment-wise and then merged back to the row. Air dates differ by one day between the two sources (fandom Episode 32A says November 12, 1983; ja.WP and our row say November 13) - a consistent off-by-one on the fandom's side across the range, so rows were keyed by episode number + segment title, not by date. The load-bearing discovery for this series: kinnikuman.fandom's CHARACTER pages carry a per-sentence chapter-citation narrative (the Warsman page cites 30+ individual chapters across the arc) that is far richer than its Chapter pages, which are empty stubs from ch 114 onward, and richer than its ~20 match pages. That reverse index is what makes eps 42-47 mappable at all.",
+    "order_only": []
+  },
+  "flags_for_sean": [
+    "The rearranged->abridged repair opens the rest of the block: with publication order established, eps 33, 34, 35 (chs 98-101), 38-41 (chs 106-108 plus the 109-110 training), 42, 43, 44, 45 (chs 111-118) all become anchorable from the same Warsman-page citation chain. None of them is in this lane's row list and none currently carries an anchor, so nothing breaks if the follow-up is deferred.",
+    "ep 46 END is the softer of the two values. If Sean prefers the conservative reading, END=118 (46A alone) is defensible and 46B's Palo Special would fold into ep 47's 119. I took 119 because the Warsman page explicitly places the Palo Special vs the Fire of Inner Strength in ch 119 and because two segments for a single chapter would be slow even by this adaptation's expanded pacing.",
+    "Single-wiki risk: apart from ja.Wikipedia's segment titles (which are staff-credit tables with no 原作 column - they give titles only), everything here is kinnikuman.fandom. The corroboration is internal but across independent page families (Episode pages, Chapter pages, character pages, the volume chapter list), and the ja.WP titles independently match the chapter titles at 31A (ゴール前の死闘), 37B (土俵際にかけろ), 43A (コンピュータ超人), 47A/47B. There is no second English or Japanese wiki for this series that carries per-episode chapter data."
+  ]
+}

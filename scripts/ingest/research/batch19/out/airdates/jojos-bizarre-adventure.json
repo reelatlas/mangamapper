@@ -1,0 +1,40 @@
+{
+  "series_id": "jojos-bizarre-adventure",
+  "summary": "Both G54 regressions (eps 36 and 46) are FALSE positives: eps 36 and 46 carry correct dates and the typo is on the PRECEDING row each time. Our stored dates for this series run one day EARLIER than en-WP/ja-WP, which list the Tokyo MX Friday 24:30 slot on the following Saturday calendar date (stored ep 34 = 2014-05-23 vs 2014-05-24; stored ep 44 = 2014-08-01 vs 2014-08-02); repairs below keep that stored convention. Row numbering is the standard cumulative TV numbering (our ep 34-48 = Stardust Crusaders eps 8-22) and needs no change. No order deviation.",
+  "anchors": [],
+  "continue_points": [],
+  "anchor_hostile": [],
+  "annotations": [],
+  "repairs": [
+    {
+      "episode": 35,
+      "field": "air_date",
+      "old": "2014-06-30",
+      "new": "2014-05-30",
+      "why": "Ep 35 = Stardust Crusaders ep 9 'Yellow Temperance' / 黄の節制, first broadcast Tokyo MX 2014-05-30 24:30 (listed as 5月31日 / May 31 on ja-WP and en-WP, i.e. 2014-05-30 in this series' stored -1-day convention). Stored 2014-06-30 is a month digit slip (06 for 05) and is what produced the ep-36 regression; ep 36 (2014-06-06 = en-WP 6/7) is correct.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/JoJo%27s_Bizarre_Adventure:_Stardust_Crusaders",
+        "https://ja.wikipedia.org/wiki/%E3%82%B8%E3%83%A7%E3%82%B8%E3%83%A7%E3%81%AE%E5%A5%87%E5%A6%99%E3%81%AA%E5%86%92%E9%99%BA_(%E3%83%86%E3%83%AC%E3%83%93%E3%82%A2%E3%83%8B%E3%83%A1)"
+      ]
+    },
+    {
+      "episode": 45,
+      "field": "air_date",
+      "old": "2014-08-28",
+      "new": "2014-08-08",
+      "why": "Ep 45 = SC ep 19 'Death Thirteen, Part 1' / 死神13 その1, first broadcast 2014-08-08 24:30 (ja-WP 8月9日, en-WP August 9 => 2014-08-08 stored convention). Stored 2014-08-28 is a day-digit slip and produced the ep-46 regression; ep 46 (2014-08-15 = en-WP 8/16) is correct.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/JoJo%27s_Bizarre_Adventure:_Stardust_Crusaders",
+        "https://ja.wikipedia.org/wiki/%E3%82%B8%E3%83%A7%E3%82%B8%E3%83%A7%E3%81%AE%E5%A5%87%E5%A6%99%E3%81%AA%E5%86%92%E9%99%BA_(%E3%83%86%E3%83%AC%E3%83%93%E3%82%A2%E3%83%8B%E3%83%A1)"
+      ]
+    }
+  ],
+  "type_corrections": [],
+  "structure": {
+    "notes": "Rows 34-48 = Stardust Crusaders eps 8-22 (cumulative numbering, +26 offset from the SC season number). No inserted/omitted rows found in the flagged zones.",
+    "order_only": []
+  },
+  "flags_for_sean": [
+    "jojos-bizarre-adventure: stored dates for this series sit ONE DAY before every published date (MX Friday 24:30 slot vs the Saturday calendar date used by en-WP and ja-WP). The two repairs preserve that convention. If Sean prefers the published Saturday dates, the whole series needs a +1 day shift, not just these rows."
+  ]
+}

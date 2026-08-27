@@ -1,0 +1,63 @@
+{
+  "series_id": "durarara",
+  "summary": "Air-date lane only; four repairs across two different mechanisms. Season 1: eps 18 and 20 hold junk (2010-05-17 is a Monday, 2010-05-20 a Thursday) where syoboi and en-WP both give the weekly Friday 2010-05-14 and 2010-05-28 — AFL carries the same two wrong values, so the defect is inherited. Season ×2: rows 37 and 38 are TRANSPOSED — our ×2 rows run one ahead of en-WP's overall numbering (our 36 = en 35, our 39 = en 38, our 40 = en 39), so row 37 should be ×2 承 ep 12 'Adversity Makes a Man Wise' (2015-03-28) and row 38 should be ×2 転 ep 1 'Love Thy Enemy' (2015-07-04); the stored pairs are internally consistent but assigned to the wrong row numbers.",
+  "anchors": [],
+  "continue_points": [],
+  "anchor_hostile": [],
+  "annotations": [],
+  "repairs": [
+    {
+      "episode": 18,
+      "field": "air_date",
+      "old": "2010-05-17",
+      "new": "2010-05-14",
+      "why": "syoboi TID 1802 Count 18 = 2010-05-14 (the S1 run is an unbroken weekly Friday sequence); en-WP Durarara!! season 1: ep 18 'Out of Your Control' = 2010-05-14. Stored 2010-05-17 is a Monday and matches AFL's (wrong) value.",
+      "sources": [
+        "https://cal.syoboi.jp/tid/1802",
+        "https://en.wikipedia.org/wiki/Durarara!!_season_1"
+      ]
+    },
+    {
+      "episode": 20,
+      "field": "air_date",
+      "old": "2010-05-20",
+      "new": "2010-05-28",
+      "why": "syoboi TID 1802 Count 20 = 2010-05-28; en-WP: ep 20 'A New King Will Arise' = 2010-05-28. Stored 2010-05-20 is a Thursday, sits before ep 19's correct 05-21, and again matches AFL's wrong value.",
+      "sources": [
+        "https://cal.syoboi.jp/tid/1802",
+        "https://en.wikipedia.org/wiki/Durarara!!_season_1"
+      ]
+    },
+    {
+      "episode": 37,
+      "field": "air_date",
+      "old": "2015-07-04",
+      "new": "2015-03-28",
+      "why": "Under our ×2 offset (our row = en-WP overall + 1, verified at rows 36/39/40), row 37 is ×2 承 ep 12「郷に入っては郷に従え」/'Adversity Makes a Man Wise', which aired 2015-03-28: syoboi TID 3625 (承) Count 12 = 2015-03-28 23:30; en-WP Durarara!!×2 ep 36 = 2015-03-28. APPLY WITH THE TITLE SWAP (see flag).",
+      "sources": [
+        "https://cal.syoboi.jp/tid/3625",
+        "https://en.wikipedia.org/wiki/Durarara!!%C3%972"
+      ]
+    },
+    {
+      "episode": 38,
+      "field": "air_date",
+      "old": "2015-03-28",
+      "new": "2015-07-04",
+      "why": "Row 38 is ×2 転 ep 1 'Love Thy Enemy', 2015-07-04: syoboi TID 3799 (転) first entry = 2015-07-04 23:30; en-WP Durarara!!×2 ep 37 = 2015-07-04. APPLY WITH THE TITLE SWAP.",
+      "sources": [
+        "https://cal.syoboi.jp/tid/3799",
+        "https://en.wikipedia.org/wiki/Durarara!!%C3%972"
+      ]
+    }
+  ],
+  "type_corrections": [],
+  "structure": {
+    "notes": "Rows 1-24 = season 1 (offset 0 vs en-WP). Row 25 = an extra (unverified) entry. Rows 26-61 = ×2 承/転/結, offset +1 vs en-WP overall numbering.",
+    "order_only": []
+  },
+  "flags_for_sean": [
+    "TITLES ALSO TRANSPOSED at durarara 37/38 — stored 37 = 'Love Thy Enemy', 38 = 'Adversity Makes a Man Strong'; correct is 37 = 'Adversity Makes a Man Wise' (承 ep 12) and 38 = 'Love Thy Enemy' (転 ep 1). AFL has the same transposition (its 37/38 rows are identical to ours), so this is an inherited defect, not a local one. Apply date + title together and re-check typing/anchors on both rows.",
+    "Our ×2 rows run +1 against en-WP's overall numbering (our 36 = en 35 'No Use Crying over Spilt Milk', our 39 = en 38, our 40 = en 39), i.e. one extra row sits between S1 ep 24 and ×2 ep 1 — presumably the S1 DVD-only special, consistent with our 61 rows vs en-WP's 60 TV episodes. S1 itself is offset 0 (our 18 = en 18). I did NOT verify what row 25 holds; worth a look before any bulk ×2 operation."
+  ]
+}

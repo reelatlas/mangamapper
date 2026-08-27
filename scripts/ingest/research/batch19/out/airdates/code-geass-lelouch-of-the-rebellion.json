@@ -1,0 +1,62 @@
+{
+  "series_id": "code-geass-lelouch-of-the-rebellion",
+  "summary": "Air-date lane only. Two flagged rows, four repairs. Ep 6's stored 2006-10-09 is nowhere near STAGE 6's real 2006-11-10, and its predecessor ep 5 is also a day early (11-02 vs 11-03). Ep 30's stored 2008-05-04 is CORRECT — TURN 05 did air 2008-05-04 — and the regression the gate saw is caused entirely by its two predecessors: rows 28 and 29 carry 2008-08-20 / 2008-08-27 where TURN 03 and TURN 04 actually aired 2008-04-20 / 2008-04-27 (month 08 for 04). No true deviation; the R2 run was a clean weekly Sunday 17:00 MBS/TBS slot.",
+  "anchors": [],
+  "continue_points": [],
+  "anchor_hostile": [],
+  "annotations": [],
+  "repairs": [
+    {
+      "episode": 5,
+      "field": "air_date",
+      "old": "2006-11-02",
+      "new": "2006-11-03",
+      "why": "ja-WP コードギアス 反逆のルルーシュ 各話リスト: STAGE 5「皇女 と 魔女」= 11月3日; en-WP List of Code Geass season 1 episodes: ep 5 = 2006-11-03. Every R1 date in both sources is a Friday (10/6, 10/13, 10/20, 10/27, 11/3, 11/10, 11/17…); 2006-11-02 is a Thursday and breaks that.",
+      "sources": [
+        "https://ja.wikipedia.org/wiki/%E3%82%B3%E3%83%BC%E3%83%89%E3%82%AE%E3%82%A2%E3%82%B9_%E5%8F%8D%E9%80%86%E3%81%AE%E3%83%AB%E3%83%AB%E3%83%BC%E3%82%B7%E3%83%A5",
+        "https://en.wikipedia.org/wiki/List_of_Code_Geass_season_1_episodes"
+      ]
+    },
+    {
+      "episode": 6,
+      "field": "air_date",
+      "old": "2006-10-09",
+      "new": "2006-11-10",
+      "why": "ja-WP: STAGE 6「奪われた 仮面」= 11月10日; en-WP ep 6 'The Stolen Mask' = 2006-11-10 (cited to geass.jp/first/story_06.html). Stored 2006-10-09 is not a Code Geass broadcast date at all.",
+      "sources": [
+        "https://ja.wikipedia.org/wiki/%E3%82%B3%E3%83%BC%E3%83%89%E3%82%AE%E3%82%A2%E3%82%B9_%E5%8F%8D%E9%80%86%E3%81%AE%E3%83%AB%E3%83%AB%E3%83%BC%E3%82%B7%E3%83%A5",
+        "https://en.wikipedia.org/wiki/List_of_Code_Geass_season_1_episodes"
+      ]
+    },
+    {
+      "episode": 28,
+      "field": "air_date",
+      "old": "2008-08-20",
+      "new": "2008-04-20",
+      "why": "ja-WP R2 table: TURN 03「囚われ の 学園」= 4月20日; en-WP List of Code Geass season 2 episodes: 'Imprisoned in Campus' = 2008-04-20. R2 ran weekly Sunday 2008-04-06 … 2008-09-28; stored 2008-08-20 is a Wednesday and a month-digit corruption of 04-20.",
+      "sources": [
+        "https://ja.wikipedia.org/wiki/%E3%82%B3%E3%83%BC%E3%83%89%E3%82%AE%E3%82%A2%E3%82%B9_%E5%8F%8D%E9%80%86%E3%81%AE%E3%83%AB%E3%83%AB%E3%83%BC%E3%82%B7%E3%83%A5",
+        "https://en.wikipedia.org/wiki/List_of_Code_Geass_season_2_episodes"
+      ]
+    },
+    {
+      "episode": 29,
+      "field": "air_date",
+      "old": "2008-08-27",
+      "new": "2008-04-27",
+      "why": "ja-WP: TURN 04「逆襲 の 処刑台」= 4月27日; en-WP: 'Counterattack at the Gallows' = 2008-04-27. Same month-digit corruption as ep 28.",
+      "sources": [
+        "https://ja.wikipedia.org/wiki/%E3%82%B3%E3%83%BC%E3%83%89%E3%82%AE%E3%82%A2%E3%82%B9_%E5%8F%8D%E9%80%86%E3%81%AE%E3%83%AB%E3%83%AB%E3%83%BC%E3%82%B7%E3%83%A5",
+        "https://en.wikipedia.org/wiki/List_of_Code_Geass_season_2_episodes"
+      ]
+    }
+  ],
+  "type_corrections": [],
+  "structure": {
+    "notes": "50 rows = STAGE 1–25 (R1) + TURN 01–25 (R2). The two R1 recap specials (STAGE 8.5 総集編 2006-12-01 and STAGE 17.5 2007-02-16) are NOT rows in our space — verified because row 7 = STAGE 7 and row 8 = STAGE 8. R2 starts at row 26.",
+    "order_only": []
+  },
+  "flags_for_sean": [
+    "Ep 30 (Turn 05 - Knights of the Round) needs NO repair: 2008-05-04 is confirmed by ja-WP (5月4日) and en-WP. The G54 regression at ep 30 was produced by the typos at eps 28 and 29."
+  ]
+}

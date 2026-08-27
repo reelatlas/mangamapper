@@ -1,0 +1,44 @@
+{
+  "series_id": "emma-a-victorian-romance",
+  "summary": "Row 2 ('Two Worlds' / 二つの世界, 2005-04-09) is ANCHOR-HOSTILE: there is no chapter it adapts. The episode is a ball at which Eleanor Campbell makes her society debut, an umbrella-shop trip with Eleanor, Grace and Vivi, William buying a parasol for Emma, the parasol ending up with a servant and Eleanor misreading it, plus household work at Mrs Stownar's. Eleanor's manga debut is ch 7 父、リチャード・ジョーンズ (fandom ch-7 page Debut list), which is already the stored anchor for ep 6 — so her appearance here is the relocated fragment the stored `rearranged {7}` annotation records, not a position. The chapter that sits at this point of the manga, ch 2 眼鏡 'The Glasses', is NOT what ep 2 stages: ch 2 is William trying to give Emma a new pair of GLASSES and the gift not coming off, plus Emma's flashback to first wearing glasses — none of which appears in any ep-2 synopsis, and a contemporary on-air review by the Victorian domestic-service researcher Kuga Maki states flatly 今回は原作に無いシナリオ構成をしていました ('this time the scenario was constructed from material not in the original') and contrasts specific anime-only behaviour against the manga (原作では荷物を持つような真似もしませんでした). So batch 17's decision to leave ep 2 unanchored is CONFIRMED with better evidence, not overturned. Chapter space stays the 52 MAINLINE chapters (v1 = 1-7): no Further Tales number is used anywhere here.",
+  "anchors": [],
+  "continue_points": [],
+  "anchor_hostile": [
+    {
+      "episode": 2,
+      "why": "A44 shape — no chapter to anchor. (1) The episode's only manga-sourced element is Eleanor Campbell, whose manga debut is ch 7; ch 7 is already ep 6's stored END, so an END of 7 on ep 2 would run ahead of ep 3 (ch 3, stored) and would claim a reader has covered chs 3-7 after two episodes. A12 also forbids a relocated element from setting a START. (2) The chapter that would sit here by interpolation, ch 2 眼鏡 'The Glasses', is not adapted in this episode: ch 2 is William's attempt to present Emma with new glasses — which does not come off (二人が出会って直後の第２話では眼鏡プレゼントが実現しなかった) — plus Emma's flashback to first putting glasses on, and neither beat is in en.wikipedia's, the fandom's or Apple TV's ep-2 synopsis, nor in the detailed on-air scene-by-scene review. (3) That review, written the day after broadcast by a Victorian-service researcher who compares each episode against the manga, says the episode's scenario is not in the original and criticises specific inventions (William giving a parasol to a servant; William carrying luggage — 原作では荷物を持つような真似もしませんでした). What remains — the ball, the umbrella shop, Vivi and her lady's maid, the kitchen work — has no chapter counterpart. Confirms the batch-17 non-anchor.",
+      "sources": [
+        "https://spqr.hatenablog.com/entry/20050410/p1",
+        "https://en.wikipedia.org/wiki/List_of_Emma_episodes",
+        "https://emmaavictorianromance.fandom.com/api.php?action=parse&page=Two_Worlds&prop=wikitext&format=json",
+        "https://emmaavictorianromance.fandom.com/api.php?action=parse&page=The_Father,_Richard_Jones&prop=wikitext&format=json",
+        "http://meganekkokyodan.org/iincho/この眼鏡っ娘マンガがすごい！/この眼鏡っ娘マンガがすごい！第116回：森薫「エ/"
+      ]
+    }
+  ],
+  "annotations": [
+    {
+      "episodes": [2],
+      "kind": "rearranged",
+      "chapters": "7",
+      "note": "Confirms the stored fact and tightens the citation. Eleanor Campbell's manga debut is ch 7 父、リチャード・ジョーンズ — the fandom's ch-7 page lists her (with Richard Jones) under Debut, and her own character infobox gives her first appearance only as an ANIME entry, 'Two Worlds' (ep 2). The anime brings her society debut forward roughly five chapters, to an episode built otherwise from invented material; ch 7 itself stays where the stored ep-6 anchor puts it. The stored note's aside that 'the parasol subplot around it has no manga counterpart' is supported by the same on-air review, but see the flag: the fandom's Teresa Hamilton page does place a parasol in the manga, and that claim is unverified.",
+      "sources": [
+        "https://emmaavictorianromance.fandom.com/api.php?action=parse&page=The_Father,_Richard_Jones&prop=wikitext&format=json",
+        "https://emmaavictorianromance.fandom.com/api.php?action=parse&page=Eleanor_Campbell&prop=wikitext&format=json",
+        "https://spqr.hatenablog.com/entry/20050410/p1"
+      ]
+    }
+  ],
+  "repairs": [],
+  "type_corrections": [],
+  "structure": {
+    "notes": "Chapter space re-confirmed as the 52 MAINLINE chapters over 7 volumes and NOT AniList's 72: ja.wikipedia's 原作コミック目次 lists 第一話 訪問 … 最終話 しあわせの花 across volumes 1-7 (v1 = 訪問 / 眼鏡 / 南からの訪問者 / ラブレター / 写真 / ふたつの時計 / 父、リチャード・ジョーンズ = ch 1-7, matching the stored V6 boundaries) and then restarts at 第一話 夢の水晶宮 for volume 8, with a footnote that only the afterword says volumes 8-10 are 番外編. The fandom's 'Chapters and Volumes' page gives the identical mainline 1-52 and a separately numbered Further Tales 1-20. Open flag #710 therefore resolves in MU's favour (52), unchanged from batch 17; no Further Tales chapter is numbered into the mainline space in this verdict. Episode numbering: our rows 1-24 match en.wikipedia's S1 1-12 / S2 1-12 and ja.wikipedia's 第一章-最終章 by TITLE and DATE (ep 2 = 第二章 二つの世界, 2005-04-09); the unaired recap 'Intermission' (幕間) is not one of our rows and must stay out.",
+    "order_only": []
+  },
+  "flags_for_sean": [
+    "EP 2 CONFIRMED UNANCHORABLE — this is a confirmation of batch 17, now with a source batch 17 only cited in passing: Kuga Maki's contemporary episode-2 review (spqr.hatenablog.com, 2005-04-10) explicitly says the episode's scenario is not in the original, and separately establishes that ch 2's glasses gift is NOT what ep 2 shows.",
+    "TYPING QUESTION RAISED, NOT ASSERTED: if ep 2 adapts no chapter and its only manga content is one relocated character debut, the T27/T28-consistent standing would be filler + the rearranged annotation, not canon. Our store and AFL both say canon, and I did not find a second independent source that types it, so I am NOT proposing a type correction — but the row is worth a look in any future typing pass, together with eps 4 and 5, which are unanchored for the same reason.",
+    "SOURCE CAUTION: emmaavictorianromance.fandom's Teresa Hamilton page has, under a '=== Manga ===' heading, 'Will gives her the parasol he bought for Emma after his second gift is turned down, and Eleanor sees her with it'. That cannot sit in ch 2 (whose gift is the glasses, and whose one debut is Teresa herself) and cannot precede Eleanor's ch-7 debut, and the same section mixes in a second-season anime fact — so it reads as ep-2 anime content mis-filed under Manga. Do not use it to place a parasol in the early chapters. Note the verdict is robust either way: if the parasol IS manga, it is post-ch-7 material relocated forward, which is still anchor-hostile on ep 2.",
+    "ADJACENT: ch 2 眼鏡 may never be adapted at all in season 1 — no episode synopsis in the run mentions the glasses gift or Emma's first-glasses flashback, and the motif only returns in manga volume 7 (the broken lens replaced). If that holds it is a C3 'skip on arrival'-style fact rather than an anchor change, but it should be checked before anyone builds continue points across eps 1-3."
+  ]
+}

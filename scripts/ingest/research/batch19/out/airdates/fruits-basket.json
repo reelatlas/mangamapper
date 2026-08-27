@@ -1,0 +1,29 @@
+{
+  "series_id": "fruits-basket",
+  "summary": "Air-date lane only. The withheld ep 8 is 2001-08-23 — the Thursday 18:00 TV Tokyo slot ran unbroken 08-09 / 08-16 / 08-23 / 08-30 / 09-06 across our rows 6-10, and both sources give 08-23 for ep 8. AFL's 2017-12-23 is unsupported by anything (the series ended 2001-12-27); its day '23' happens to match, but the month and year do not. One repair, no true deviation.",
+  "anchors": [],
+  "continue_points": [],
+  "anchor_hostile": [],
+  "annotations": [],
+  "repairs": [
+    {
+      "episode": 8,
+      "field": "air_date",
+      "old": null,
+      "new": "2001-08-23",
+      "why": "syoboi TID 213 Count 8 = 2001-08-23 18:00 (TV Tokyo), inside an unbroken weekly Thursday sequence 2001-07-05 onward; en-WP Fruits Basket (2001 TV series): ep 8 \"Don't Cry, For the Snow will Surely Melt\" = 2001-08-23. Neighbours 7 (08-16) and 9 (08-30) stored in the DB are already correct and leave exactly this slot.",
+      "sources": [
+        "https://cal.syoboi.jp/tid/213",
+        "https://en.wikipedia.org/wiki/Fruits_Basket_(2001_TV_series)"
+      ]
+    }
+  ],
+  "type_corrections": [],
+  "structure": {
+    "notes": "26 rows = 第1話–第26話, weekly Thursday 18:00 TV Tokyo, no specials in the row space.",
+    "order_only": []
+  },
+  "flags_for_sean": [
+    "AFL's claim of 2017-12-23 for this row is rejected outright: the series ran 2001-07-05 to 2001-12-27 and there is no 2017 rebroadcast that would produce that date. Do not carry it forward."
+  ]
+}

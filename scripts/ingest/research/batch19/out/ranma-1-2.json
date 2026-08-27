@@ -1,0 +1,49 @@
+{
+  "series_id": "ranma-1-2",
+  "summary": "Row 130 ('The Missing Matriarch of Martial Arts Tea!', 1992-02-21, production 124 / Nettouhen 112) takes NO anchor. Its whole manga tie is the CLOSING BEAT of ch 58 'Proposal Accepted' — the real Satsuki appearing, she and Sentaro falling in love at first sight, the honeymoon letter and photo, and the horse turning up at the Tendo Dojo — restaged at the end of an otherwise anime-original story (the Miyakoji rival school kidnapping Sentaro's grandmother, the hanafuda challenge cards, the Ino/Shika/Cho elders, the ice maze). Everything ch 58 actually is — the monkey 'Miss Satsuki' (Sanae), the tea-ceremony match, Sentaro's attempt to murder Ranma and Sanae so he can marry Akane, Akane's kick — is absent from ep 130, and ranma.fandom states outright that Sanae 'never appear[s] in the 1989 anime'. That material was already animated (in altered form) by ep 93 'The Gentle Art of Martial Tea Ceremony', whose infobox reads ch 56 + 57 + 58. So under T28 the tie is a FRAGMENT / transplanted beat, not a substantial share: the mandatory annotation is the existing `graft` on ch 58, and the honest standing is filler — but that contradicts AFL ('mixed'), our stored type ('mixed') and ja.wikipedia (which does NOT mark 第112話 with its アニメオリジナル footnote), so it is flagged as Sean's call rather than asserted. Either way the row is anchor-hostile: an END of 58 would throw a reader's position back from ch 198 (ep 129) to ch 58, and A12 forbids a relocated far-earlier beat from setting a START.",
+  "anchors": [],
+  "continue_points": [],
+  "anchor_hostile": [
+    {
+      "episode": 130,
+      "why": "A44 shape. The only source material in the episode is the last few pages of ch 58 ('Proposal Accepted') — Satsuki's reveal, the instant mutual love, the honeymoon letter/photo and the horse arriving at the Tendo Dojo — transplanted into an anime-original plot. Ch 56-58 were already adapted by ep 93 (ep-93 infobox manga = Chapter 56 / Chapter 57 / Chapter 58; the arc's 'Chapters Covered' table gives ch 58 the anime counterparts 'The Gentle Art of Martial Tea Ceremony' AND 'The Missing Matriarch of Martial Arts Tea!'). An END/START of 58 here would drag position back from ch 198 (ep 129, stored) to ch 58 — 140 chapters — and A12 forbids a relocated far-earlier beat from being the START. Chapter re-use never moves position (C-rules). Recorded as a graft annotation instead, consistent with the batch-17 ruling and with ep 93, which is also unanchored today.",
+      "sources": [
+        "https://ranma.fandom.com/api.php?action=parse&page=The%20Missing%20Matriarch%20of%20Martial%20Arts%20Tea!&prop=wikitext&format=json",
+        "https://ranma.fandom.com/api.php?action=parse&page=Chapter_58&prop=wikitext&format=json",
+        "https://ranma.fandom.com/api.php?action=parse&page=Martial_Arts_Tea_Ceremony_Arc&prop=wikitext&format=json",
+        "https://ranma.fandom.com/api.php?action=parse&page=The%20Gentle%20Art%20of%20Martial%20Tea%20Ceremony&prop=wikitext&format=json"
+      ]
+    }
+  ],
+  "annotations": [
+    {
+      "episodes": [130],
+      "kind": "graft",
+      "chapters": "58",
+      "note": "T28 FRAGMENT ruling, refining the stored batch-17 note. The grafted material is specifically ch 58's CLOSING SECTION: the real Satsuki Miyakoji arrives, she and Sentaro fall in love on sight, Ranma gets the honeymoon letter and photo, and Sentaro + Satsuki turn up at the Tendo Dojo on Tsukikage. Ep 130 restages exactly those beats (Satsuki lowers her hood at the Miyakoji school, the pair stare at each other till sunrise, Sentaro proposes, the honeymoon letter arrives, then the two appear on Tsukikage). The rest of ep 130 — the Miyakoji/Daimonji feud, the grandmother's kidnapping, the three hanafuda cards, the ice maze, Ranma freezing the Miyakoji elders — has no manga counterpart; the Satsuki character page carries two entirely different 'Manga' and 'Anime' biographies, and the arc page's 'Changes in anime' says Satsuki 'is introduced later in mostly filler episode'. Ch 58's own substance (Sanae the monkey, the tea-ceremony match, Sentaro's murder attempt, Akane's kick) is NOT in ep 130 and Sanae 'never appear[s] in the 1989 anime' at all. SOURCE CORRECTION to the stored note: the ch-58 PAGE infobox names only ep 93; it is the arc page's 'Chapters Covered' table that names both episodes."
+    }
+  ],
+  "repairs": [],
+  "type_corrections": [
+    {
+      "episodes": [130],
+      "type": "filler",
+      "note": "T28 materiality: the episode's job is an anime-original Miyakoji-school kidnapping adventure; its manga content is one transplanted closing beat of a chapter already animated 37 episodes earlier. Under T27/T28 that is filler + a MANDATORY graft annotation (ch 58), not mixed. CONTESTED — see flags: AFL types it 'mixed', animefillerguide leaves it un-struck with chapter '58', and ja.wikipedia's 各話リスト does not attach its {{efn|name=\"original\"|アニメオリジナル作品。}} marker to 第112話 (it does attach it to our 127, 131 and 134). Sean's call; A1 makes no practical difference here because the row is anchor-hostile either way.",
+      "sources": [
+        "https://ranma.fandom.com/api.php?action=parse&page=Martial_Arts_Tea_Ceremony_Arc&prop=wikitext&format=json",
+        "https://ranma.fandom.com/api.php?action=parse&page=Satsuki_Miyakoji&prop=wikitext&format=json",
+        "https://ranma.fandom.com/api.php?action=parse&page=Sanae&prop=wikitext&format=json",
+        "https://ranma.fandom.com/api.php?action=parse&page=Chapter_58&prop=wikitext&format=json"
+      ]
+    }
+  ],
+  "structure": {
+    "notes": "Numbering re-verified for this row without any index join (R20): ranma.fandom's ep-130 infobox itself prints all three numbers — 124 (production) / 130 (aired) / 112 (Nettouhen) — and animefillerguide carries 'The Missing Matriarch Of Martial Arts Tea!' at ITS row 124, i.e. the production index, with chapter column '58'. That is consistent with the stored A18 reorder regime (AFG's chapter column is production-indexed, its title column is aired-ordered in the 14-30 zone). ja.wikipedia's Nettouhen list gives 第112話 格闘茶道! さらわれた家元, 2月21日 — same title, same date as our row 130. ja.wikipedia's anime-original footnote {{efn|name=\"original\"|アニメオリジナル作品。}} maps cleanly onto our filler rows in this neighbourhood (ja 109 = our 127, ja 113 = our 131, ja 116 = our 134) and is NOT attached to ja 112 = our 130 — recorded as the counter-evidence to the type correction. The G53 ep-153 date ruling is untouched and was not needed for this row.",
+    "order_only": []
+  },
+  "flags_for_sean": [
+    "EP 130 T28 CALL (the mixed_fragment_only queue item): my finding is FRAGMENT — one transplanted closing beat of ch 58 inside an original plot — so the T28-consistent standing is filler + the graft annotation. It is contested: AFL says mixed, AFG lists it un-struck with '58', ja.wikipedia does not flag it as anime-original. Evidence FOR fragment: ranma.fandom's arc page calls it a 'mostly filler episode'; Sanae (the monkey who IS ch 57-58's premise) never appears in the 1989 anime; the Satsuki page carries two different manga/anime biographies. Recommend: filler + keep the graft annotation, no anchor either way.",
+    "ADJACENT (out of scope, re-raised from batch 17): ep 93 'The Gentle Art of Martial Tea Ceremony' is still UNANCHORED although its infobox reads Chapter 56 / 57 / 58 and the Martial Arts Tea Ceremony Arc table names it as the anime counterpart of all three chapters. Anchoring ep 93 at END 58 [START 56] v6 would make ep 130's ch-58 tie unambiguously pure re-use. Also note ep 93's own Trivia line ('holding on the battle with Sanae the monkey until a later episode') is WRONG — the Sanae page says she never appears in the 1989 anime — so do not use that Trivia line as evidence for anything.",
+    "SOURCE CORRECTION to the stored ep-130 annotation text: it says 'the ch 58 page names BOTH this episode and ep 93'. Today the Chapter 58 infobox's anime field names only 'The Gentle Art of Martial Tea Ceremony'; the two-episode claim comes from the arc page's 'Chapters Covered' table. The conclusion is unchanged; only the citation moves."
+  ]
+}

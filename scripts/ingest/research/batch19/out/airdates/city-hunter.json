@@ -1,0 +1,41 @@
+{
+  "series_id": "city-hunter",
+  "summary": "Air-date lane only. ja-WP's 各話リスト pairs 第13話「オレの敵は美女？史上最大の美女地獄!!」 with 6月29日 and 第14話「16歳結婚宣言！アイドルに熱いキッス」 with 7月6日; our stored data has those two dates the other way round. The episode NUMBERING is not in doubt — Sunrise's own work page lists 13 = オレの敵は美女, 14 = 16歳結婚宣言, matching our titles — and the slot was a weekly Monday 19:00 YTV/NTV one with stored ep 12 = 1987-06-22 and ep 15 = 1987-07-13 already correct, leaving exactly 06-29 and 07-06 for 13 and 14 in that order. Medium confidence: en-WP, cityhunter.fandom and TVmaze all carry the opposite title↔date pairing, but they are one lineage (TVmaze even re-sorted the titles to make en-WP's dates ascend).",
+  "anchors": [],
+  "continue_points": [],
+  "anchor_hostile": [],
+  "annotations": [],
+  "repairs": [
+    {
+      "episode": 13,
+      "field": "air_date",
+      "old": "1987-07-06",
+      "new": "1987-06-29",
+      "why": "ja-WP シティーハンター 各話リスト: |13||6月29日||オレの敵は美女？史上最大の美女地獄!!. Structural check: the show ran weekly Monday 19:00 with no documented hiatus before 1987-12-28; stored 12 = 06-22 and 15 = 07-13 leave only 06-29 and 07-06 for 13 and 14 in numeric order. Sunrise's official work page (cid=80) independently confirms the title↔number pairing.",
+      "sources": [
+        "https://ja.wikipedia.org/wiki/%E3%82%B7%E3%83%86%E3%82%A3%E3%83%BC%E3%83%8F%E3%83%B3%E3%82%BF%E3%83%BC_(%E3%82%A2%E3%83%8B%E3%83%A1)",
+        "https://www.sunrise-inc.co.jp/work/detail.php?cid=80"
+      ]
+    },
+    {
+      "episode": 14,
+      "field": "air_date",
+      "old": "1987-06-29",
+      "new": "1987-07-06",
+      "why": "ja-WP: |14||7月6日||16歳結婚宣言！アイドルに熱いキッス. Same structural argument as ep 13.",
+      "sources": [
+        "https://ja.wikipedia.org/wiki/%E3%82%B7%E3%83%86%E3%82%A3%E3%83%BC%E3%83%8F%E3%83%B3%E3%82%BF%E3%83%BC_(%E3%82%A2%E3%83%8B%E3%83%A1)",
+        "https://www.sunrise-inc.co.jp/work/detail.php?cid=80"
+      ]
+    }
+  ],
+  "type_corrections": [],
+  "structure": {
+    "notes": "51 rows = the 1987 'City Hunter 1' season, weekly Monday 19:00 YTV/NTV; only documented hiatus in scope is 1987-12-28 (year-end specials).",
+    "order_only": []
+  },
+  "flags_for_sean": [
+    "SPLIT EVIDENCE, city-hunter 13/14. ja-WP says 13 = 6/29, 14 = 7/6. en-WP (https://en.wikipedia.org/wiki/List_of_City_Hunter_episodes), cityhunter.fandom's Episode Guide and TVmaze show 49258->7067 (https://api.tvmaze.com/shows/7067/episodes) all pair 'My Foe is A Beautiful Lady' with July 6 and 'She's Getting Married At Age Sixteen' with June 29 — i.e. they agree with ja-WP on the TITLE↔DATE pairing but disagree on which title is ep 13. Our stored data matches the en-WP lineage. These three are NOT independent (fandom copies en-WP; TVmaze reorders titles so the dates ascend). I could not reach a 1987 Japanese broadcast schedule (animedb.jp is an SPA; Jikan/MAL was returning 504). If Sean wants a stronger footing than ja-WP + Sunrise numbering + the weekly-Monday structure, this pair is the one to hold back.",
+    "The alternative reading is that eps 13 and 14 aired in SWAPPED order (a true broadcast-order deviation, production 13 airing second). No source states that; nothing in ja-WP's notes mentions it. If Sean prefers that reading, the stored dates are already right and this becomes an AIRDATE_ORDER_ACK for eps 13-14 instead."
+  ]
+}

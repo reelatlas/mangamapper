@@ -1,0 +1,29 @@
+{
+  "series_id": "death-note",
+  "summary": "Air-date lane only. Ep 36's stored 2007-06-19 is CORRECT for our house convention; the regression is caused by ep 35, whose stored 2008-06-12 is a YEAR corruption — the day and month are right. Death Note ran a weekly NTV Tuesday 24:56 slot, so ep 34 = Tue 2007-06-05, ep 35 = Tue 2007-06-12, ep 36 = Tue 2007-06-19, ep 37 = Tue 2007-06-26 in the nominal-Tuesday convention our rows use. One repair, no true deviation.",
+  "anchors": [],
+  "continue_points": [],
+  "anchor_hostile": [],
+  "annotations": [],
+  "repairs": [
+    {
+      "episode": 35,
+      "field": "air_date",
+      "old": "2008-06-12",
+      "new": "2007-06-12",
+      "why": "syoboi TID 945 Count 35 = 2007-06-13 00:56 (NTV), i.e. the Tuesday 2007-06-12 24:56 broadcast; en-WP Death Note (2006 TV series) episode table gives ep 35 'Malice' = 2007-06-13 under the post-midnight convention. Our rows 34/36/37 store the nominal Tuesday (06-05 / 06-19 / 06-26), so the value consistent with them is 2007-06-12. The series ended 2007-06-27; 2008 is impossible.",
+      "sources": [
+        "https://cal.syoboi.jp/tid/945",
+        "https://en.wikipedia.org/wiki/Death_Note_(2006_TV_series)"
+      ]
+    }
+  ],
+  "type_corrections": [],
+  "structure": {
+    "notes": "37 rows = 第1話–第37話, 1:1 with en-WP. No recaps or specials in the row space.",
+    "order_only": []
+  },
+  "flags_for_sean": [
+    "Convention note (whole series, not a single-row defect): our per-episode Death Note dates are the NOMINAL Tuesday, one day earlier than syoboi/en-WP, which print the post-midnight Wednesday (NTV 24:56). Verified at rows 34, 36, 37. Meanwhile the series-level start (2006-10-04) and the en-WP end (2007-06-27) use the Wednesday convention — the two fields are inconsistent with each other. Worth a whole-series normalisation decision, out of scope for one row."
+  ]
+}

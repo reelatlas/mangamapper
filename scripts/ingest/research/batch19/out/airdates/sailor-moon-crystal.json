@@ -1,0 +1,49 @@
+{
+  "series_id": "sailor-moon-crystal",
+  "summary": "Two flagged regressions, and both are caused by the flagged row's own date - plus one unflagged neighbour (ep 10) that is also wrong. Seasons 1-2 (rows 1-26) were streamed fortnightly on Niconico from 2014-07-05; ja-WP's Act table carries both the stream date and the later Tokyo MX date, and our stored rows use the STREAM date. Season 3 (rows 27-39) was a weekly Monday 23:00 TV broadcast from 2016-04-04.",
+  "anchors": [],
+  "continue_points": [],
+  "anchor_hostile": [],
+  "annotations": [],
+  "repairs": [
+    {
+      "episode": 8,
+      "field": "air_date",
+      "old": "2014-11-18",
+      "new": "2014-10-18",
+      "why": "Act.8 'Minako -Sailor V-' streamed 2014-10-18. ja-WP 各話リスト Act.8 = 10月18日 (with 5月20日 as the later TV date) and en-WP = October 18, 2014. Stored 2014-11-18 is a month-digit slip; it is what produced the ep-9 regression, because ep 9 (2014-11-01) is correct.",
+      "sources": [
+        "https://ja.wikipedia.org/wiki/%E7%BE%8E%E5%B0%91%E5%A5%B3%E6%88%A6%E5%A3%AB%E3%82%BB%E3%83%BC%E3%83%A9%E3%83%BC%E3%83%A0%E3%83%BC%E3%83%B3Crystal",
+        "https://en.wikipedia.org/wiki/List_of_Sailor_Moon_Crystal_episodes"
+      ]
+    },
+    {
+      "episode": 10,
+      "field": "air_date",
+      "old": "2014-11-08",
+      "new": "2014-11-15",
+      "why": "Act.10 'Moon' (MOON -月-) streamed 2014-11-15, not 11-08. ja-WP Act.10 = 11月15日; en-WP = November 15, 2014. The fortnightly cadence (Act.9 = 11-01, Act.11 = 12-06) confirms it. NOT flagged by G54 because 11-08 still ascends after ep 9 - an incidental find while checking the ep-9 regression.",
+      "sources": [
+        "https://ja.wikipedia.org/wiki/%E7%BE%8E%E5%B0%91%E5%A5%B3%E6%88%A6%E5%A3%AB%E3%82%BB%E3%83%BC%E3%83%A9%E3%83%BC%E3%83%A0%E3%83%BC%E3%83%B3Crystal",
+        "https://en.wikipedia.org/wiki/List_of_Sailor_Moon_Crystal_episodes"
+      ]
+    },
+    {
+      "episode": 29,
+      "field": "air_date",
+      "old": "2016-04-08",
+      "new": "2016-04-18",
+      "why": "Ep 29 = Crystal season 3 (Death Busters) ep 3 'Infinity 2 Ripples' (無限2 波紋), broadcast 2016-04-18 (Mon 23:00). en-WP = April 18, 2016 and AniList's airing schedule for Death Busters-hen gives ep 3 = 2016-04-18. Stored 2016-04-08 is a day-digit slip (08 for 18); eps 28 (04-11) and 30 (04-25) are correct.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/List_of_Sailor_Moon_Crystal_episodes",
+        "https://anilist.co/anime/21462"
+      ]
+    }
+  ],
+  "type_corrections": [],
+  "structure": {
+    "notes": "39 rows = 26 (Crystal S1+S2, fortnightly Niconico stream 2014-07-05..2015-07-18) + 13 (Death Busters, weekly Mondays 2016-04-04..06-27). Rows 1-26 store the STREAM date, not the 2015-2016 Tokyo MX rebroadcast date that ja-WP prints in its second column.",
+    "order_only": []
+  },
+  "flags_for_sean": []
+}

@@ -1,0 +1,86 @@
+{
+  "series_id": "yu-gi-oh-gx",
+  "summary": "Six real date defects, four of them the cause of a flagged regression and two found alongside. GX aired weekly Wednesdays on TV Tokyo 2004-10-06 to 2008-03-26 and our 180 rows map 1:1 to ja-WP's TURN-1..TURN-180 - no shift, no inserted rows, no order deviation. Two of the flags (eps 4 and 133/134) turned out to be caused by their PREDECESSOR, and one row (ep 2) required a third source to break a tie: en-WP repeats AFL's 2004-10-10, but that is a Sunday, and ja-WP plus the Yu-Gi-Oh! Fandom episode page both give 2004-10-13.",
+  "anchors": [],
+  "continue_points": [],
+  "anchor_hostile": [],
+  "annotations": [],
+  "repairs": [
+    {
+      "episode": 2,
+      "field": "air_date",
+      "old": "2004-10-10",
+      "new": "2004-10-13",
+      "why": "Ep 2 'Welcome to Duel Academy (フレイム・ウィングマン)' aired 2004-10-13. ja-WP 遊☆戯☆王デュエルモンスターズGX 各話リスト 放送日 for TURN-2 = 10月13日. SPLIT SOURCE: en-WP's 'Yu-Gi-Oh! GX season 1' table also prints 2004-10-10, but 2004-10-10 is a Sunday and cannot be a TV Tokyo Wednesday slot; ja-WP and the Yu-Gi-Oh! Fandom episode page both give October 13, 2004, so en-WP (and the AFL row derived from it) is the one in error. GX aired Wednesdays on TV Tokyo from 2004-10-06.",
+      "sources": [
+        "https://ja.wikipedia.org/wiki/%E9%81%8A%E2%98%86%E6%88%AF%E2%98%86%E7%8E%8B%E3%83%87%E3%83%A5%E3%82%A8%E3%83%AB%E3%83%A2%E3%83%B3%E3%82%B9%E3%82%BF%E3%83%BC%E3%82%BAGX",
+        "https://en.wikipedia.org/wiki/Yu-Gi-Oh%21_GX_season_1",
+        "https://yugioh.fandom.com/wiki/Yu-Gi-Oh%21_GX_-_Episode_002"
+      ]
+    },
+    {
+      "episode": 3,
+      "field": "air_date",
+      "old": "2005-10-20",
+      "new": "2004-10-20",
+      "why": "Ep 3 'A Duel in Love (エトワール・サイバー)' aired 2004-10-20. ja-WP 遊☆戯☆王デュエルモンスターズGX 各話リスト 放送日 for TURN-3 = 10月20日. en-WP season 1 also gives October 20, 2004. Stored 2005-10-20 is a year slip and is what produced the flagged ep-4 regression; ep 4 (2004-10-27) is correct. GX aired Wednesdays on TV Tokyo from 2004-10-06.",
+      "sources": [
+        "https://ja.wikipedia.org/wiki/%E9%81%8A%E2%98%86%E6%88%AF%E2%98%86%E7%8E%8B%E3%83%87%E3%83%A5%E3%82%A8%E3%83%AB%E3%83%A2%E3%83%B3%E3%82%B9%E3%82%BF%E3%83%BC%E3%82%BAGX",
+        "https://en.wikipedia.org/wiki/Yu-Gi-Oh%21_GX_season_1"
+      ]
+    },
+    {
+      "episode": 14,
+      "field": "air_date",
+      "old": "2004-01-05",
+      "new": "2005-01-05",
+      "why": "Ep 14 'A Spirit Summoned (VS(バーサス)サイコショッカー!?)' aired 2005-01-05. ja-WP 遊☆戯☆王デュエルモンスターズGX 各話リスト 放送日 for TURN-14 = 1月5日 (2005年). en-WP season 1 gives January 5, 2005. Stored 2004-01-05 is a year slip and also falls before the 2004-10-06 premiere, which is what tripped G55; ep 13 (2004-12-29) and ep 15 (2005-01-12) bracket it. GX aired Wednesdays on TV Tokyo from 2004-10-06.",
+      "sources": [
+        "https://ja.wikipedia.org/wiki/%E9%81%8A%E2%98%86%E6%88%AF%E2%98%86%E7%8E%8B%E3%83%87%E3%83%A5%E3%82%A8%E3%83%AB%E3%83%A2%E3%83%B3%E3%82%B9%E3%82%BF%E3%83%BC%E3%82%BAGX",
+        "https://en.wikipedia.org/wiki/Yu-Gi-Oh%21_GX_season_1"
+      ]
+    },
+    {
+      "episode": 132,
+      "field": "air_date",
+      "old": "2007-04-08",
+      "new": "2007-04-18",
+      "why": "Ep 132 'A New World Order (生死を賭けた決闘(デュエル))' aired 2007-04-18. ja-WP 遊☆戯☆王デュエルモンスターズGX 各話リスト 放送日 for TURN-132 = 4月18日. en-WP 'Yu-Gi-Oh! GX season 3' gives April 18, 2007. Stored 2007-04-08 is a day-digit slip and is a Sunday; ep 131 (2007-04-11) and ep 133 (2007-04-25) bracket it. GX aired Wednesdays on TV Tokyo from 2004-10-06.",
+      "sources": [
+        "https://ja.wikipedia.org/wiki/%E9%81%8A%E2%98%86%E6%88%AF%E2%98%86%E7%8E%8B%E3%83%87%E3%83%A5%E3%82%A8%E3%83%AB%E3%83%A2%E3%83%B3%E3%82%B9%E3%82%BF%E3%83%BC%E3%82%BAGX",
+        "https://en.wikipedia.org/wiki/Yu-Gi-Oh%21_GX_season_3"
+      ]
+    },
+    {
+      "episode": 134,
+      "field": "air_date",
+      "old": "2007-05-04",
+      "new": "2007-05-02",
+      "why": "Ep 134 'Dueling With The Dark Army (十代VS暗黒界の騎士ズール)' aired 2007-05-02. ja-WP 遊☆戯☆王デュエルモンスターズGX 各話リスト 放送日 for TURN-134 = 5月2日. en-WP season 3 gives May 2, 2007. Stored 2007-05-04 is a Friday. NOT flagged by G54 (it still ascends after ep 133) - incidental find while checking the ep-132 regression. GX aired Wednesdays on TV Tokyo from 2004-10-06.",
+      "sources": [
+        "https://ja.wikipedia.org/wiki/%E9%81%8A%E2%98%86%E6%88%AF%E2%98%86%E7%8E%8B%E3%83%87%E3%83%A5%E3%82%A8%E3%83%AB%E3%83%A2%E3%83%B3%E3%82%B9%E3%82%BF%E3%83%BC%E3%82%BAGX",
+        "https://en.wikipedia.org/wiki/Yu-Gi-Oh%21_GX_season_3"
+      ]
+    },
+    {
+      "episode": 144,
+      "field": "air_date",
+      "old": "2007-06-11",
+      "new": "2007-07-11",
+      "why": "Ep 144 'The Forbidden Ritual, Part 1 (発動!究極封印解放儀式術!)' aired 2007-07-11. ja-WP 遊☆戯☆王デュエルモンスターズGX 各話リスト 放送日 for TURN-144 = 7月11日. en-WP season 3 gives July 11, 2007. Stored 2007-06-11 is a month-digit slip and is a Monday; ep 143 (2007-07-04) and ep 145 (2007-07-18) bracket it. GX aired Wednesdays on TV Tokyo from 2004-10-06.",
+      "sources": [
+        "https://ja.wikipedia.org/wiki/%E9%81%8A%E2%98%86%E6%88%AF%E2%98%86%E7%8E%8B%E3%83%87%E3%83%A5%E3%82%A8%E3%83%AB%E3%83%A2%E3%83%B3%E3%82%B9%E3%82%BF%E3%83%BC%E3%82%BAGX",
+        "https://en.wikipedia.org/wiki/Yu-Gi-Oh%21_GX_season_3"
+      ]
+    }
+  ],
+  "type_corrections": [],
+  "structure": {
+    "notes": "180 rows = ja-WP TURN-1..TURN-180, weekly Wednesdays with occasional skips (e.g. 2007-08-01 between TURN-146 and TURN-147). No offset against ja-WP or the Yu-Gi-Oh! Fandom numbering.",
+    "order_only": []
+  },
+  "flags_for_sean": [
+    "yu-gi-oh-gx: ep 2 is a SPLIT-EVIDENCE repair. en-WP 'Yu-Gi-Oh! GX season 1' agrees with our stored 2004-10-10; ja-WP 各話リスト and yugioh.fandom.com 'Yu-Gi-Oh! GX - Episode 002' both give 2004-10-13. Tiebreak: 2004-10-10 is a Sunday and every other GX episode is a Wednesday, so en-WP is wrong. Flagging in case Sean wants a third confirmation before applying.",
+    "yu-gi-oh-gx: eps 134 (2007-05-04 -> 2007-05-02) and, in the shugo-chara/5D's pattern, the general shape here - a wrong date that still ascends never reaches G54. Worth a systematic day-of-week check for fixed-slot series: GX is Wednesday-only, so any stored non-Wednesday date in this series is a defect by construction."
+  ]
+}

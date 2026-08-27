@@ -1,0 +1,27 @@
+{
+  "series_id": "vampire-knight",
+  "summary": "One real typo, on the flagged row itself. Rows 14-26 are Vampire Knight Guilty, a weekly Monday 25:30 run from 2008-10-06; our stored rows use the Monday calendar date while ja-WP prints the Tuesday one (stored ep 17 = 2008-10-27 vs ja-WP 第4夜 10月28日), and en-WP uses the Monday convention like us.",
+  "anchors": [],
+  "continue_points": [],
+  "anchor_hostile": [],
+  "annotations": [],
+  "repairs": [
+    {
+      "episode": 19,
+      "field": "air_date",
+      "old": "2008-10-10",
+      "new": "2008-11-10",
+      "why": "Ep 19 = Vampire Knight Guilty 第6夜 'The Fake Lovers' (偽りの恋人〜ラヴァーズ〜), broadcast 2008-11-10 25:30 (ja-WP 各話リスト 第6夜 = 11月11日, i.e. 2008-11-10 in the Monday convention our rows use; en-WP 'List of Vampire Knight episodes' Guilty ep 6 = November 10, 2008). Stored 2008-10-10 is a month-digit slip and is not even a Monday. Eps 18 (11-03) and 20 (11-17) bracket it exactly one week either side.",
+      "sources": [
+        "https://ja.wikipedia.org/wiki/%E3%83%B4%E3%82%A1%E3%83%B3%E3%83%91%E3%82%A4%E3%82%A2%E9%A8%8E%E5%A3%AB",
+        "https://en.wikipedia.org/wiki/List_of_Vampire_Knight_episodes"
+      ]
+    }
+  ],
+  "type_corrections": [],
+  "structure": {
+    "notes": "26 rows = 13 (Vampire Knight, 2008-04-07..06-30) + 13 (Guilty, 2008-10-06..12-29), weekly Mondays 25:30 on TV Tokyo. en-WP's Guilty table has an unrelated typo at its ep 3 (prints 2008-10-14 for what ja-WP gives as 10月21日); that row is not in the flagged set but is worth knowing if our ep 16 is ever checked.",
+    "order_only": []
+  },
+  "flags_for_sean": []
+}

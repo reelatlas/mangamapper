@@ -1,0 +1,30 @@
+{
+  "series_id": "michiko-and-hatchin",
+  "summary": "The withheld ep 6 is recoverable: AFL's 2015-11-19 is a YEAR corruption of 2008-11-19, and 11-19 is exactly right. Michiko & Hatchin aired in Fuji TV's Wednesday late-night 'NOISE' block (Wed 24:45 = Thu 00:45); en-WP and TheTVDB list the Thursday calendar date and our stored rows list the Wednesday one (stored ep 5 = 2008-11-19 vs published 2008-11-20). Eps 5 and 6 aired BACK-TO-BACK on the same night, so the repaired ep 6 date TIES ep 5 rather than exceeding it - that is correct, not a defect. The same double-broadcast happened for eps 8+9, 16+17 and 19+20.",
+  "anchors": [],
+  "continue_points": [],
+  "anchor_hostile": [],
+  "annotations": [],
+  "repairs": [
+    {
+      "episode": 6,
+      "field": "air_date",
+      "old": null,
+      "new": "2008-11-19",
+      "why": "Ep 6 'The Saudade of Fools, Part 2' aired the same night as ep 5, on 2008-11-19 (Wed 24:45; published as 2008-11-20 by en-WP and TheTVDB, = 2008-11-19 in this series' stored Wednesday convention, cf. stored ep 5 = 2008-11-19 vs en-WP 2008-11-20). AFL's withheld 2015-11-19 is the same 11-19 with a corrupted year. G55/G54 flagged it only because of the year.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Michiko_%26_Hatchin",
+        "https://thetvdb.com/series/michiko-and-hatchin/allseasons/official"
+      ]
+    }
+  ],
+  "type_corrections": [],
+  "structure": {
+    "notes": "22 rows = 22 broadcast episodes over 18 broadcast nights; ja-WP's 各話リスト carries cast only (no per-episode dates), so en-WP + TheTVDB were the date sources.",
+    "order_only": []
+  },
+  "flags_for_sean": [
+    "michiko-and-hatchin: AIRDATE_ORDER_ACK candidate (TIES, not regressions). Four pairs aired as double episodes on one night: 5+6 (2008-11-19), 8+9 (2008-12-10), 16+17 (2009-02-11) and 19+20 (2009-03-04) in stored convention. Any G54 rule that requires strictly-increasing dates will keep flagging these; equal dates are the truth here. Broadcast Thursdays skipped: 2008-10-23, 2008-11-26, 2008-12-24, 2008-12-31, 2009-02-25 (stored convention).",
+    "michiko-and-hatchin: stored dates are the Wednesday-night JST date, one day before the published Thursday date; ja-WP gives the run as 2008-10-15 - 2009-03-18 (Wednesday convention) while our stored series start/end (2008-10-16 / 2009-03-19) use the Thursday one - a series-level start/end vs per-episode convention mismatch worth a look."
+  ]
+}

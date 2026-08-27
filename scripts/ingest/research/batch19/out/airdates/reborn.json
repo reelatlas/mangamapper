@@ -1,0 +1,27 @@
+{
+  "series_id": "reborn",
+  "summary": "The ep-65 regression is a FALSE positive: ep 65 (2008-01-12) is correct and the typo is on ep 64. REBORN! aired weekly Saturdays on TV Tokyo and skipped 2007-12-29, so 標的63 (12-22) is followed by 標的64 on 2008-01-05. Both ja-WP (2008年 放送リスト) and en-WP's season-2 table give 標的64 怒りの真相 = 2008-01-05 and 標的65 決着! = 2008-01-12.",
+  "anchors": [],
+  "continue_points": [],
+  "anchor_hostile": [],
+  "annotations": [],
+  "repairs": [
+    {
+      "episode": 64,
+      "field": "air_date",
+      "old": "2008-01-18",
+      "new": "2008-01-05",
+      "why": "Ep 64 'The Truth Behind The Rage' (怒りの真相) aired 2008-01-05 (the first Saturday after the 2007-12-29 New Year skip). ja-WP 各話リスト 2008年 and en-WP 'Reborn! season 2' both give January 5, 2008. Stored 2008-01-18 is not even a Saturday and is what produced the ep-65 regression; ep 65 (2008-01-12), ep 66 (01-19) and ep 67 (01-26) are correct.",
+      "sources": [
+        "https://ja.wikipedia.org/wiki/%E5%AE%B6%E5%BA%AD%E6%95%99%E5%B8%AB%E3%83%92%E3%83%83%E3%83%88%E3%83%9E%E3%83%B3REBORN!",
+        "https://en.wikipedia.org/wiki/Reborn!_season_2"
+      ]
+    }
+  ],
+  "type_corrections": [],
+  "structure": {
+    "notes": "203 rows; ja-WP numbers episodes 標的1..203 continuously and matches our numbering in this zone (標的63 = our ep 63).",
+    "order_only": []
+  },
+  "flags_for_sean": []
+}

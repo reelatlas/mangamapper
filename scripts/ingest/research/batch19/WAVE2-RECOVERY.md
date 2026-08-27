@@ -1,0 +1,43 @@
+# Batch 19 — wave 2 recovery record (2026-08-26)
+
+Lanes B2 (source kinds) · B3 (air dates, two bundles) · B4 (identity + watch-order kinds) · B5 (rearranged zones, three bundles) under the pinned `batch19/PROTOCOL.md` (amended once between waves — C5). Contexts: `context.ts` (B2/B4/B5) + `context-extra.ts` (B3 bundles, B4 kinds) → scratchpad `b19ctx2/`. Gates: `validate.ts` 24 verdicts / 0 failing; `validate-airdates.ts` 41 verdicts / 82 repairs / 53 flags / 0 failing. **Usage: ≈1.62M research tokens** (7 agents: B2 170k · B3-1 274k · B3-2 254k · B4 172k · B5-a 331k · B5-b 226k · B5-c 196k).
+
+## Landed
+
+| lane | series | delivered | weight-bearing |
+|---|---|---|---|
+| B2 | solo-leveling | source = the Korean webtoon (AniList ADAPTATION edge 105398, KR) → **manhwa**; the 13 stored anchors ARE in the webtoon space (fandom {{WB}} column matches every sampled row) | kind ruling |
+| B2 | the-beginning-after-the-end | source = the Tapas webcomic (OEL American original; no AniList media entry at all) → **webtoon**, not manhwa (country-gated to KR) | kind ruling; trap: the fandom `episode` field is the raw Tapas index |
+| B2 | ghost-in-the-shell-arise-alternative-architecture | a re-cut of the Arise OVAs + 2 new episodes; Shirow's manga has no edge to it → **original**; CONSEQUENCE: eps 9-10 stored filler would contradict `original` (aflAnimeCanon = canon) — retype in the same motion or rule | kind ruling + a typing consequence |
+| B4 | yu-gi-oh-5d-s | **premise refuted**: row 155 is a real episode (final 1-hour special = two episodes, one broadcast; ja-WP 全154話). Our +1 = AFL numbers the film *Bonds Beyond Time* (AniList 6951) as row 83; AND AFL OMITS real ep 145 「光よりも速く!!」 (2011-01-26). Proposed: row 83 → order-only @82.5 kind movie (N11 drop) + ADD ep 145; rows 154/155 anchor-hostile (source = original) | structure: a drop AND an insert — Sean |
+| B4 | black-cat | **premise refuted**: row 24 = 気ままな猫, the TV finale, date right. The OVA 遠ざかる猫 (AniList 2589) sits at our ROW 15 (DVD numbering: ja-WP 「#15（未放送）」; TV = 23 eps). Component 68 spans 1-23 → row 24 uncovered. Two dispositions: extend the span to 1-24 (DVD numbering stands), or retire row 15 to @14.5 kind ova and renumber | structure — Sean |
+| B4 | watch-order-kinds | 34 of 37 kinds ruled (20 ova, 8 movie, 6 special), each from a live AniList `format` query / en-WP; 3 uncitable flagged (cells-at-work @11.5 = ONA on both sources; high-school-dxd @36.5 counted inside HERO's 13; arslan @25.2 = TV, the missing S2 component); 2 probable duplicate pairs (to-love-ru-darkness @24.1/@24.5; yyh @112.1/@112.5); Reborn's id confirmed 8532 | rulings (sync-watch-order RULED_RECORDS) |
+| B3 | 41 series | **82 air-date repairs**, 53 flags, 0 unresolved. TRUE deviations (AIRDATE_ORDER_ACK candidates): ranma (whole series — rows are not broadcast order), when-they-cry (row 27 = the Nekogoroshi-hen OVA), f-zero (rows in the 4Kids order, JP dates), haikyu (rows 61/62 = never-broadcast OVAs), michiko (double broadcasts = ties), yu-gi-oh-5d-s 83/84, GITS 2nd GIG monthly pairs. **DBZ Kai: 8 rows NEVER aired in Japan** (101, 102, 103, 106, 108, 111, 113, 165 — US Toonami dates) → NULL. **Row-content TRANSPOSITIONS** (title travels with the date — an air_date-only apply leaves the row self-inconsistent): tanya 5/6, to-love-ru 9/10, blue-lock 15/16, durarara 37/38, initial-d 46/47/48 (a 3-cycle), shugo-chara ×4; golden-kamuy 45/46 hold web-short titles. AFL numbering defects found: shugo-chara skips no. 73 / prints 96 twice (rows 74-96 are +1); 5D's film at 83 (above) | verify the contradictions; typos apply as G53 |
+| B5 | detective-conan | 4 anchors (510→638 [624] medium, 511→640, 524→637, 585→712), 4 parity continues; the batch-17 "sources disagree" note was a rowspan misreading | contradicts a stored note |
+| B5 | eyeshield-21 | 3 anchors (38→90, 43→57, 62→**124** — NOT ch 120: Bandai Channel's official synopses run the Kyoshin game strictly forward); repairs: delete the 120/121 swap annotation, ep 63 START 122→125, ep 59 START 121→119 | contradicts stored data |
+| B5 | kinnikuman | 2 anchors (32→98, 46→119) with C1 continues; the stored "21st Olympics reordered" premise is false → delete the rearranged fact (abridged with 16 checkpoints instead); ep 31 END 95→96 | contradicts stored data; rests on one wiki |
+| B5 | x | 2 waypoints (15→41 vol 11 whole; 19→53) inside the 38→94 gap; 5 hostile (9/10 forward grafts of vol 8; 16-18 remix vols 13-16); C5 continue ep 20 → 95 with 86-93 never adapted | the ep-20 ruling respected |
+| B5 | saint-seiya | 0 anchors, 3 hostile — the ES wiki's ch-24 page places the whole Jamian sequence inside ch 24 (already ep 25's END); Jango is NOT an anime invention | zone acknowledged |
+| B5 | tokyo-mew-mew | 4 anchors (25→14, 26→15, 27→16, 28→13 [12]) — vol 4's split RESOLVED (en-WP ChapterList + fandom titles + ja-WP bold); NON-MONOTONE behind ep 18's stored 17 — a ruling (or demote the ep 17/18 forward grafts) | non-monotone — Sean |
+| B5 | ranma-1-2 | 130 anchor-hostile + T28: a FRAGMENT (ch 58's closing beat inside an original plot) → filler + graft proposed (contested: AFL mixed); ep 93 anchorable at 56-58, unanchored | a T28 call — Sean |
+| B5 | bobobo | 3 → END 3 [2] {2-3 reversed}, a BACKWARD anchor; two load-bearing parity continues (ep 2 → 2, ep 3 → 6) | out-of-order — Sean |
+| B5 | project-arms | 44 → END 190 [186] v18 — a FORWARD anchor batch 17 withheld for monotonicity; continue 162 parity | out-of-order — Sean |
+| B5 | emma | 2 anchor-hostile, confirming batch 17 (Kuga Maki: 原作に無いシナリオ) | — |
+
+## Traps learned this wave (→ research-agent.md at capture)
+- Wrong dates that still ASCEND never reach the G54 walk (sailor-moon-crystal 10, shugo-chara 26/88, gx 134) — a day-of-week check on fixed-slot series would catch them mechanically (a class candidate).
+- Adjacent-row content transpositions carry the TITLE with the date; an air_date-only repair leaves the row self-inconsistent — the apply must move both.
+- International-only episodes (DBZ Kai's eight): AFL prints the Toonami date; a Japanese air date does not exist — NULL is the honest value, not a G53 candidate.
+- Licensor-side per-episode synopses in static HTML are decisive for multi-episode cases: Yomiuri TV `ytv.co.jp/conan/archive/kYYYYMMDD.html`, Bandai Channel `b-ch.com/titles/<id>/NNN`; syobocal (`cal.syoboi.jp`) is a strong third source for 2002+ air dates.
+- TBATE's fandom `episode` field is the raw Tapas index (webcomic ch 48 = Tapas 57) — never join on it.
+- AFL numbering defects seen: a film numbered into the run (5D's 83), a real episode omitted (5D's 145), a number skipped + one printed twice (shugo-chara 73/96).
+- A "last canon/mixed row" can be an A44 position-less row (G56 lesson, applies to any terminal derivation).
+
+## Apply-layer notes
+- B2 kinds → SOURCE_TYPE_OVERRIDES (T25); the registry needs `webtoon` live (it is reserved); Arise AA's 9-10 typing rides with the kind.
+- B3 repairs → AIR_DATE_OVERRIDES (G53, cited) + AIRDATE_ORDER_ACK entries (G54) for the true deviations; the DBZ-Kai eight → NULL with a note (not G53); the transpositions → title AND date repairs in one motion.
+- B4 5D's → an N11 drop [83] + order-only @82.5 (movie, 6951) + a NEW row 145 (a structure insert — writer path?); black-cat → a span override (I39) or a renumber — Sean.
+- B5 anchors → manual tier via the wave apply; the tokyo-mew-mew / bobobo / project-arms out-of-order anchors need the rearranged facts ruled (A42 zones) or the census's anchor_nonmonotonic fires.
+
+## Next
+VERIFY (R24, different model): B2 (3, always), B4 (2, structure claims), B5 (10), and B3's CONTRADICTIONS as one verifier task (DBZ Kai never-aired, the transposition pairs, the true deviations, city-hunter's split) — 16 verifiers → two batches of 8. Then Sean rules, apply through the maps + the wave apply script, then the formal consolidate deep (G56's).

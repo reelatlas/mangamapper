@@ -1,0 +1,27 @@
+{
+  "series_id": "the-asterisk-war",
+  "summary": "One real typo, on the flagged row itself. Rows 13-24 are Gakusen Toshi Asterisk season 2, a strictly weekly Saturday 22:30 run from 2016-04-02 to 2016-06-18 with no skips, so ep 23 = season-2 ep 11 = 2016-06-11 is forced. No day shift between stored and published dates for this series.",
+  "anchors": [],
+  "continue_points": [],
+  "anchor_hostile": [],
+  "annotations": [],
+  "repairs": [
+    {
+      "episode": 23,
+      "field": "air_date",
+      "old": "2015-12-11",
+      "new": "2016-06-11",
+      "why": "Ep 23 = Asterisk War S2 ep 11 'The Lonely Strega' (孤毒の魔女), aired 2016-06-11. en-WP 'The Asterisk War' episode table gives EpisodeNumber 23 / EpisodeNumber2 11 = June 11, 2016; AniList's airing schedule for Gakusen Toshi Asterisk 2 gives ep 11 = 2016-06-11. Stored 2015-12-11 belongs to the season-1 window (S1 ran 2015-10-03..12-19) - a year+month corruption, not a real date. Eps 22 (2016-06-04) and 24 (2016-06-18) are correct.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/The_Asterisk_War",
+        "https://anilist.co/anime/21390"
+      ]
+    }
+  ],
+  "type_corrections": [],
+  "structure": {
+    "notes": "24 rows = 12 + 12; S1 Sat 20:30 2015-10-03..12-19, S2 Sat 22:30 2016-04-02..06-18. Cumulative numbering matches en-WP's dual EpisodeNumber/EpisodeNumber2 columns exactly.",
+    "order_only": []
+  },
+  "flags_for_sean": []
+}

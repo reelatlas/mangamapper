@@ -1,0 +1,41 @@
+{
+  "series_id": "to-love-ru",
+  "summary": "Rows 9 and 10 have their whole CONTENT transposed - title AND date together - exactly like the tanya case. ja-WP's 各話リスト gives 9 光星より愛を込めて ('From a Shining Star, With Love') then 10 宇宙の女芸人…… ('A Space Entertainer'); en-WP's season-1 table gives those same two titles the dates 2008-05-30 and 2008-06-06. Our row 9 stores 'A Space Entertainer' + 2008-06-05 and our row 10 stores 'From a Shining Star, With Love' + 2008-05-29. Stored dates for this series run one day before the published Friday date (the TBS Fri 01:55 slot, i.e. Thursday night), so the repaired values are 2008-05-29 and 2008-06-05 - the same two values, swapped. Eps 8, 11 and 12 are correct and there is no numbering shift.",
+  "anchors": [],
+  "continue_points": [],
+  "anchor_hostile": [],
+  "annotations": [],
+  "repairs": [
+    {
+      "episode": 9,
+      "field": "air_date",
+      "old": "2008-06-05",
+      "new": "2008-05-29",
+      "why": "Episode 9 is 'From a Shining Star, With Love' (光星より愛を込めて); ja-WP 各話リスト TL第1期 lists it as 話数 9, and en-WP 'To Love Ru season 1' dates that title 2008-05-30 (TBS Fri 01:55) = 2008-05-29 in this series' stored one-day-earlier convention (cf. stored ep 8 = 2008-05-22 vs published 2008-05-23, stored ep 12 = 2008-06-19 vs published 2008-06-20). NOTE: our row 9 currently also holds ep 10's TITLE - swap the titles of rows 9 and 10 together with these dates.",
+      "sources": [
+        "https://ja.wikipedia.org/wiki/To%20LOVE%E3%82%8B%20-%E3%81%A8%E3%82%89%E3%81%B6%E3%82%8B-",
+        "https://en.wikipedia.org/wiki/To_Love_Ru_season_1"
+      ]
+    },
+    {
+      "episode": 10,
+      "field": "air_date",
+      "old": "2008-05-29",
+      "new": "2008-06-05",
+      "why": "Episode 10 is 'A Space Entertainer' (宇宙の女芸人……); ja-WP lists it as 話数 10 and en-WP dates that title 2008-06-06 = 2008-06-05 stored convention. Same transposition as ep 9 - swap the titles with the dates.",
+      "sources": [
+        "https://ja.wikipedia.org/wiki/To%20LOVE%E3%82%8B%20-%E3%81%A8%E3%82%89%E3%81%B6%E3%82%8B-",
+        "https://en.wikipedia.org/wiki/To_Love_Ru_season_1"
+      ]
+    }
+  ],
+  "type_corrections": [],
+  "structure": {
+    "notes": "44 rows = 26 (To Love-Ru, TBS Fri 01:55, 2008-04-04..09-26) + 12 (Motto To Love-Ru, 2010) + 6 OVA. Stored per-episode dates sit one day before the published Friday date throughout.",
+    "order_only": []
+  },
+  "flags_for_sean": [
+    "to-love-ru: NOT an air-date-only defect. Rows 9 and 10 hold each other's title AND date; applying only the air_date repairs would leave row 9 titled 'A Space Entertainer' with 2008-05-29. Swap episode_title on rows 9 and 10 in the same apply (ep 9 -> 'From a Shining Star, With Love', ep 10 -> 'A Space Entertainer'), and re-check any anchors attached to those two rows.",
+    "to-love-ru: en-WP's season-1 table is sloppy on a few dates elsewhere (it prints ep 11 = 2008-06-12 and ep 16 = 2008-07-19, both Thursdays, where the TBS slot is Friday). It is reliable for eps 9/10 because ja-WP independently fixes the title-to-number order and the weekly Friday cadence from 2008-04-04 fixes the dates. Our stored ep 11 (2008-06-12) happens to coincide with en-WP's typo but is correct under the stored -1-day convention (true 2008-06-13)."
+  ]
+}

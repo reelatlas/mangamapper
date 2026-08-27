@@ -1,0 +1,161 @@
+{
+  "series_id": "tokyo-mew-mew",
+  "summary": "All four target rows anchor, and volume 4's internal split - the item batch 17 explicitly could not pin - is now resolved. The fandom's volume-4 page and en.wikipedia's chapter list independently give the chapter TITLES: ch 14 'Kiss and Tell', ch 15 'Tokyo Tower Tales' (en-WP prints it as 'Tokyo Power Tales', a typo), ch 16 'Young Love', with vol 3 running ch 10 'Shall We Dance?', 11 'Cruise Control', 12 'Alien Invasion', 13 'The Truth About Cats and Dogs'. Laid against the volume summaries' beat order and the episode summaries the mapping is unambiguous: ep 25 = ch 14 (the mew-aqua search opens volume 4, with Masaya's appointment set and the cocoon planted), ep 26 = ch 15 (the Tokyo Tower cocoon/waiburn battle - the chapter title IS the episode), ep 27 = ch 16 (Ichigo arrives hours late and Masaya says he loves her; the rest of the episode is anime-original and its closing beat starts ch 12's cat arc), ep 28 = ch 12-13 (Ichigo stuck as a cat, taken in at Masaya's house, the kiss, the grey cat naming himself Alto). ja.wikipedia bolds all four as 原作を元にしたエピソード and states independently that the cat form and Alto both debut at ep 28 in the 2002 anime. THE ONE THING TO RULE: these four ENDs (14, 15, 16, 13) all sit BEHIND ep 18's stored END of 17, so accepting them makes this the first non-monotone END run in the series - see flags.",
+  "anchors": [
+    {
+      "episode": 25,
+      "end_chapter": 14,
+      "start_chapter": 14,
+      "chapters_adapted": "14, plus the cocoon planting relocated from ch 12-13",
+      "volume": 4,
+      "confidence": "medium",
+      "note": "A4/A10: ch 14 'Kiss and Tell' opens volume 4 with 'The girls begin their search for mew aqua' and Masaya arranging to meet Ichigo - ep 25 is exactly that, with Ryou and Keiichiro deciding mew aqua lies underground, Ichigo cancelling and then re-agreeing to the date at the nurse's office, and the episode closing as the Mews rush to Tokyo Tower, i.e. immediately before ch 15's battle. The anime shows Quiche PLANTING the cocoon, which the manga only has the other Mews investigate back in ch 12-13. ja-WP bolds ep 25 as manga-based.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/List_of_Tokyo_Mew_Mew_chapters",
+        "https://tokyomewmew.fandom.com/api.php?action=parse&page=Tokyo%20Mew%20Mew%204&prop=wikitext&format=json",
+        "https://en.wikipedia.org/wiki/List_of_Tokyo_Mew_Mew_episodes",
+        "https://ja.wikipedia.org/wiki/%E6%9D%B1%E4%BA%AC%E3%83%9F%E3%83%A5%E3%82%A6%E3%83%9F%E3%83%A5%E3%82%A6"
+      ]
+    },
+    {
+      "episode": 26,
+      "end_chapter": 15,
+      "start_chapter": 15,
+      "chapters_adapted": "15",
+      "volume": 4,
+      "confidence": "high",
+      "note": "Chapter 15 is titled 'Tokyo Tower Tales' (tokyomewmew.fandom volume-4 page) and volume 4's middle beat is 'a dust waiburn hatches from the cocoon on the radio tower... Mint senses that a mew aqua is in the air near the top of the tower... The Mew Mews defeat the waiburn'. Ep 26 is that battle end to end, and it closes on 'it is already past the time she was supposed to meet Masaya, Ichigo... rushes to their agreed upon meeting place' - the exact hinge into ch 16, which ep 27 picks up. Title, beat order and episode boundary all agree.",
+      "sources": [
+        "https://tokyomewmew.fandom.com/api.php?action=parse&page=Tokyo%20Mew%20Mew%204&prop=wikitext&format=json",
+        "https://en.wikipedia.org/wiki/List_of_Tokyo_Mew_Mew_chapters",
+        "https://en.wikipedia.org/wiki/List_of_Tokyo_Mew_Mew_episodes",
+        "https://ja.wikipedia.org/wiki/%E6%9D%B1%E4%BA%AC%E3%83%9F%E3%83%A5%E3%82%A6%E3%83%9F%E3%83%A5%E3%82%A6"
+      ]
+    },
+    {
+      "episode": 27,
+      "end_chapter": 16,
+      "start_chapter": 16,
+      "chapters_adapted": "16 (the confession only), plus the first cat transformation restaged from ch 12",
+      "volume": 4,
+      "confidence": "medium",
+      "note": "A4/A10: ch 16 'Young Love' opens with the volume's third beat - Ichigo arriving almost two hours late, Masaya still waiting, hugging her and telling her he loves her, and Ichigo confessing back without his seeing her ears. Ep 27's first act is that scene verbatim (the anime hides the ears under a handkerchief instead of his jacket, and drops the rain). The rest of ch 16 - Alto naming himself, the Sunday date and the Blue Knight's debut - is NOT here: the anime already spent the Blue Knight at ep 17, so ep 27 fills the back half with an original cafe raid for the Mew Aqua Rod and then triggers ch 12's cat transformation as its cliffhanger. END stays 16 because the ch-12 tail is behind it.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/List_of_Tokyo_Mew_Mew_chapters",
+        "https://tokyomewmew.fandom.com/api.php?action=parse&page=Tokyo%20Mew%20Mew%204&prop=wikitext&format=json",
+        "https://en.wikipedia.org/wiki/List_of_Tokyo_Mew_Mew_episodes",
+        "https://ja.wikipedia.org/wiki/%E6%9D%B1%E4%BA%AC%E3%83%9F%E3%83%A5%E3%82%A6%E3%83%9F%E3%83%A5%E3%82%A6"
+      ]
+    },
+    {
+      "episode": 28,
+      "end_chapter": 13,
+      "start_chapter": 12,
+      "chapters_adapted": "12-13, plus the grey cat's 'Alto' self-introduction pulled back from ch 16",
+      "volume": 3,
+      "confidence": "high",
+      "note": "The volume-3 cat arc: ch 12 'Alien Invasion' and ch 13 'The Truth About Cats and Dogs' - Ichigo stuck as a black cat, Masaya finding her and taking her home, his DOG driving her out, the stolen kiss that turns her human, changing back, and the grey cat who kisses her. Ep 28 is that block (the anime has her kiss the dog by accident instead of the sleeping Masaya) and it is the only place in the run the material appears. ja.wikipedia states independently that the cat form appears '第28話から' in the 2002 anime and that Alto likewise appears from ep 28, against the manga's 原作中期. END 13 = the chapter whose English title is literally the episode's dog/cat premise; the cocoon subplot that shares chs 12-13 was moved to eps 25-26.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/List_of_Tokyo_Mew_Mew_chapters",
+        "https://tokyomewmew.fandom.com/api.php?action=parse&page=Tokyo%20Mew%20Mew%203&prop=wikitext&format=json",
+        "https://en.wikipedia.org/wiki/List_of_Tokyo_Mew_Mew_episodes",
+        "https://ja.wikipedia.org/wiki/%E6%9D%B1%E4%BA%AC%E3%83%9F%E3%83%A5%E3%82%A6%E3%83%9F%E3%83%A5%E3%82%A6"
+      ]
+    }
+  ],
+  "continue_points": [
+    {
+      "episode": 25,
+      "continue_chapter": 15,
+      "kind": "parity",
+      "note": "C2 parity - ep 26 starts ch 15. Chs 11-13 are still unseen at this point: ch 11 'Cruise Control' is never adapted anywhere in the 52-episode run, and chs 12-13 arrive out of order at ep 28. Ch 16-17 were already animated ahead of time at eps 17-18 (C3, skip on arrival).",
+      "sources": [
+        "https://en.wikipedia.org/wiki/List_of_Tokyo_Mew_Mew_chapters",
+        "https://en.wikipedia.org/wiki/List_of_Tokyo_Mew_Mew_episodes"
+      ]
+    },
+    {
+      "episode": 26,
+      "continue_chapter": 16,
+      "kind": "parity",
+      "note": "C2 parity - ep 27 starts ch 16 (its confession scene). Same standing gap: ch 11 never adapted, chs 12-13 held back to ep 28. A reader arriving at ch 16 will find its Blue Knight half already animated at ep 17 (C3).",
+      "sources": [
+        "https://en.wikipedia.org/wiki/List_of_Tokyo_Mew_Mew_chapters",
+        "https://en.wikipedia.org/wiki/List_of_Tokyo_Mew_Mew_episodes"
+      ]
+    },
+    {
+      "episode": 27,
+      "continue_chapter": 12,
+      "kind": "parity",
+      "note": "C2 parity - ep 28 starts ch 12. NAME THE HOLE: ch 11 'Cruise Control' (Pie attacking a cruise ship) is never adapted in any of the 52 episodes, so a reader who has not already read it at the stored ep-17/18 continue of 11 should read it here rather than be walked past it.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/List_of_Tokyo_Mew_Mew_chapters",
+        "https://en.wikipedia.org/wiki/List_of_Tokyo_Mew_Mew_episodes"
+      ]
+    },
+    {
+      "episode": 28,
+      "continue_chapter": 18,
+      "kind": "parity",
+      "note": "C2/C3 - ep 28 closes the backfill: chs 12 through 17 are now all animated (12-13 here, 14-16 at eps 25-27, 16-17 ahead of time at eps 17-18), and ch 11 is permanently skipped. The next unseen chapter is 18 'Rescue Mission', which the anime does not reach until ep 40, with ch 19 at ep 38 and chs 20-21 at ep 36 - so a reader resuming at 18 runs ahead of the anime on three chapters. This lands on the same value as the stored ep-36 continue of 18, which is the consistency check.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/List_of_Tokyo_Mew_Mew_chapters",
+        "https://en.wikipedia.org/wiki/List_of_Tokyo_Mew_Mew_episodes"
+      ]
+    }
+  ],
+  "anchor_hostile": [],
+  "annotations": [
+    {
+      "episodes": [25],
+      "kind": "graft",
+      "chapters": "12-13",
+      "note": "The anime shows Quiche planting the cocoon at the top of Tokyo Tower and states its one-month timer. In the manga the cocoon is never seen being planted - it exists off-page while the other Mew Mews 'investigate a strange cocoon near the town's radio tower' in chs 12-13, a scene the anime deletes from ep 28's cat arc and converts into this set-up instead. The archaeological-site rod that becomes the Mew Aqua Rod is anime-original."
+    },
+    {
+      "episodes": [26],
+      "kind": "divergence",
+      "chapters": "15",
+      "note": "The resolution of the tower battle is rewritten. In ch 15 MINT senses the mew aqua at the top of the tower, flies up for it and gains a new power that clears the dust, and the five combine to finish the waiburn; the anime gives the finish to Ichigo with the anime-original Mew Aqua Rod, and adds Quiche siphoning some of the mew aqua into the alien dimension, partly revealing Deep Blue - a hook the manga does not have here."
+    },
+    {
+      "episodes": [27],
+      "kind": "divergence",
+      "chapters": "16",
+      "note": "Ep 27 keeps only ch 16's opening confession and replaces the chapter's whole back half (Alto naming himself, the Sunday date, Quiche's attack, the Blue Knight's debut) with an original cafe raid in which the aliens steal the now-spent Mew Aqua Rod - necessarily, since ep 17 had already spent the Blue Knight's debut. The manga's rain and Masaya's jacket become a handkerchief."
+    },
+    {
+      "episodes": [28],
+      "kind": "graft",
+      "chapters": "16",
+      "note": "The grey cat introduces himself as 'Alto' here. In the manga he is unnamed when he first kisses Ichigo in ch 13; he only gives his name two chapters later, in ch 16, during the Sunday-date scene the anime never animates - so ep 28 pulls the naming back into the ch 12-13 arc. The anime also swaps the manga's stolen kiss on the sleeping Masaya for an accidental kiss on his dog."
+    }
+  ],
+  "repairs": [
+    {
+      "episode": 25,
+      "field": "annotation:partial{13-16}",
+      "old": "eps 25,26,27 partial {13-16}: 'Volume 4's internal ch 14 / 15 / 16 split could not be pinned to a source: en.wikipedia and the fandom volume page both summarise volume 4 as a whole (four narrative beats across three chapters) and no per-chapter page exists past ch 7. Zone-level only: eps 25-27 sit inside chs 14-16.'",
+      "new": "SUPERSEDED - the split is now pinned. Both en.wikipedia's chapter list and tokyomewmew.fandom's volume-4 page carry the chapter TITLES (14 'Kiss and Tell', 15 'Tokyo Tower Tales', 16 'Young Love'), and laid against volume 4's four-beat summary they resolve the split cleanly: ch 14 = the mew-aqua search and Masaya's appointment (ep 25), ch 15 = the Tokyo Tower waiburn battle (ep 26), ch 16 = the late arrival and confession, then Alto, the Sunday date and the Blue Knight (ep 27 takes only the confession; ep 17 had already taken the Blue Knight). Recommend replacing the zone annotation with the three per-episode anchors.",
+      "why": "Batch 17 worked only from the volume SUMMARIES; it did not read the ChapterList field on en-WP's Graphic novel list template nor the fandom volume pages' 'Chapters included' section, both of which title chapters 10-27 individually. Titles + beat order settle it.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/List_of_Tokyo_Mew_Mew_chapters",
+        "https://tokyomewmew.fandom.com/api.php?action=parse&page=Tokyo%20Mew%20Mew%204&prop=wikitext&format=json",
+        "https://tokyomewmew.fandom.com/api.php?action=parse&page=Tokyo%20Mew%20Mew%203&prop=wikitext&format=json"
+      ]
+    }
+  ],
+  "type_corrections": [],
+  "structure": {
+    "notes": "CHAPTER SPACE unchanged and re-confirmed: the mainline runs 1-27 (Sean's N22 ruling), v1 1-4, v2 5-9, v3 10-13, v4 14-16, v5 17-20, v6 21-24, v7 25-27, matching the stored volume boundaries exactly on both en-WP and the fandom volume pages. NEW THIS PASS - the per-chapter TITLE table, which is what unlocked volume 4: 10 'Shall We Dance?', 11 'Cruise Control', 12 'Alien Invasion', 13 'The Truth About Cats and Dogs', 14 'Kiss and Tell', 15 'Tokyo Tower Tales', 16 'Young Love', 17 'The Blue Knight', 18 'Rescue Mission', 19 'Truth or Dare', 20 'Masaya Confessions', 21 'Who is the Blue Knight?', 22 'A Kiss for Kish', 23 'Finding Masaya', 24 'A Dome of Doom', 25 'Deep Blue Revealed', 26 'You Love the Earth', 27 'A Transfer of Power'. Chapters 1-9 are untitled in Japanese and were merged by Tokyopop into two named blocks ('In the Beginning' 1-4, 'Three Plus Two' 5-9), which is why the fandom's chapter-page namespace stops at ch 7. SOURCE NOTE: en-WP prints ch 15 as 'Tokyo POWER Tales' where the fandom has 'Tokyo TOWER Tales'; the chapter is the Tokyo Tower battle, so en-WP has a typo - do not treat the two spellings as different chapters. NEGATIVE re-verified: MangaDex holds Tokyo Mew Mew as metadata only (manga id aed24b2e-b574-4204-9702-cda5cfc567de, lastChapter 32) and its feed returns ZERO chapters, so there is no MangaDex numbering to reconcile against - the 32/33 figures are padded count-space, as already ruled. ADAPTATION SHAPE with this pass folded in: linear eps 1-13 (chs 1-10), forward graft eps 17-18 (chs 16-17), BACKFILL eps 25-28 (chs 14, 15, 16, 12-13 in that broadcast order), then eps 36/38/40/41 backfilling chs 20-21/19/18/21, then linear again eps 45-52 (chs 22-27). Ch 11 is never adapted.",
+    "order_only": []
+  },
+  "flags_for_sean": [
+    "THE RULING THIS VERDICT NEEDS: accepting eps 25 -> 14, 26 -> 15, 27 -> 16, 28 -> 13 makes the END sequence non-monotone for the first time in this series (…, ep 17 -> 16, ep 18 -> 17, ep 25 -> 14, ep 26 -> 15, ep 27 -> 16, ep 28 -> 13, ep 36 -> 21, …). The evidence for the four values is strong and they make the reader's shown position far MORE true than the status quo, which interpolates ep 18's 17 towards ep 36's 21 and therefore shows a reader sitting around chs 18-19 during eps 25-28 - chapters the anime does not touch until eps 38 and 40. If the position math cannot take a backward END, the fallback is to keep them as the existing 'rearranged {12-17}' annotation and instead promote only the repair (the volume-4 split is now knowable either way). This is the same fork batch 17 raised and it is now backed by chapter titles rather than by beat guessing.",
+    "The two forward grafts that CAUSE the non-monotonicity are the stored ep 17 -> 16 and ep 18 -> 17. If you would rather keep the anchor series monotone by fixing the cause instead of the symptom, the alternative shape is: demote eps 17-18 to graft annotations on ch 16-17 (ep 17 takes only the Blue Knight's debut, ep 18 only his duel with Quiche - both already noted as partial in their stored anchor text), and let eps 25-28 carry 14/15/16/13 as the first genuine coverage of volume 4. That would make 25-28 monotone against ep 13's ch 10 and would put the series back in order. I am not proposing it as a repair because it would delete two anchors Sean already accepted; it is a ruling.",
+    "ep 25's END of 14 is the weakest of the four (medium). Ch 14 'Kiss and Tell' and ep 25 share the volume's opening beat (the mew-aqua search) and Masaya's appointment, but the anime restructures everything around them - it substitutes an underground search and the archaeological rod for the manga's street fight and phone call. The claim rests on ch 14 being volume 4's first chapter and ep 25 being the episode that ends immediately before ch 15's battle; it is boundary reasoning, not a stated mapping.",
+    "The fandom episode-infobox 'chapter' field is still only filled for eps 1-4 and every page from ep 7 on carries a literal '...' placeholder, so nothing above comes from that field. The useful fandom asset for chs 10-27 is the VOLUME pages' 'Chapters included' list, which is what this pass used.",
+    "Open flag #958 can be narrowed: item (4) of the batch-17 notes ('VOLUME 4 INTERNAL SPLIT UNRESOLVED') is resolved by this verdict. The chapter-space item (27 vs AniList 33) is already ruled under N22 and is untouched here."
+  ]
+}

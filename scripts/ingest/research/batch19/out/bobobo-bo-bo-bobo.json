@@ -1,0 +1,68 @@
+{
+  "series_id": "bobobo-bo-bo-bobo",
+  "summary": "Row 3 ('Wacky Quacker Cooks His Own Goose' / 26歳のアヒルパンツさぁー!, 2003-11-22) IS exactly anchorable and gets an anchor: END 3 / START 2 / vol 1. The episode plays ch 3 'Hajike Festival' first (Bo-bobo and Beauty arriving at Hajike Village dragging the giant burger, the Dynamite Bros. and the Wig-Out Festival) and then goes on to ch 2 'Pervert' (Kilalino the Hair Hunt assassin and his 26-year-old duck underwear 'Takashi', whom the episode is named after) — an INTERNAL reversal on top of the ep 2/3 block reversal batch 17 already recorded. Three independent lines pin it: bobobo.fandom's Kilalino-and-Takashi infobox reads Debut (Manga) Chapter 2 / Debut (Anime) Episode 3; the fandom's ch-3 page ('Hajike Festival (Chapter)') and en.wikipedia's ep-3 synopsis describe the same beats in the same order (giant burger costume, then the Dynamite Bros., then the duck-underwear Hair Hunter); and the neighbours close the span exactly — ep 2 holds ch 4-5, ep 4 opens at ch 6. Because ep 2 already ran ahead to ch 4-5, this is a backwards END and the position lattice needs two explicit parity continue points (ep 2 → ch 2, ep 3 → ch 6), otherwise a derived END+1 after ep 3 would send a reader back to ch 4, which they have already seen. This resolves batch 17's deliberate non-anchor on ep 3.",
+  "anchors": [
+    {
+      "episode": 3,
+      "end_chapter": 3,
+      "start_chapter": 2,
+      "chapters_adapted": "2-3 (played in reverse inside the episode: ch 3 first, then ch 2; ch 2's opening Maruhage block-leaders' conference was already used to cold-open ep 1)",
+      "volume": 1,
+      "confidence": "high",
+      "note": "A4 END = 3, the furthest mainline chapter adapted; A10 START = 2, the earliest chapter of the covered span (the ch-2 material is the bulk of the chapter, not a sliver, so it is not excluded). Backwards relative to ep 2's END 5 — the anime swapped the pair; see the rearranged annotation and the two parity continue points. Ch 3 'Hajike Festival': fandom chapter page has Beauty dragging the giant burger with Bo-bobo inside into Hajike Village, then the Dynamite Brothers declaring a match — en-WP ep 3: 'head to a Wig-Out Festival, where the audience discovers the value of giant burger costumes and why dynamite should never play the stock market'. Ch 2 'Pervert': Kilalino + his duck underwear Takashi, whose fandom infobox reads Debut (Manga) Chapter 2 / Debut (Anime) Episode 3 — en-WP ep 3 closes 'The duo then encounters a Hair Hunter who wears underwear with a duck sticking out of the front of it', and the episode's Japanese title 26歳のアヒルパンツさぁー! ('26-Year-Old Duck Underwear') is Takashi, listed as age 26 on that infobox. Span closure: ch 1 = ep 1, ch 4-5 = ep 2 (stored), ch 6 = ep 4's START (stored).",
+      "sources": [
+        "https://bobobo.fandom.com/api.php?action=parse&page=Kilalino_and_Takashi&prop=wikitext&format=json",
+        "https://bobobo.fandom.com/api.php?action=parse&page=Wacky_Quacker_Cooks_His_Own_Goose&prop=wikitext&format=json",
+        "https://bobobo.fandom.com/api.php?action=parse&page=Hajike_Festival_(Chapter)&prop=wikitext&format=json",
+        "https://en.wikipedia.org/wiki/List_of_Bobobo-bo_Bo-bobo_episodes",
+        "https://en.wikipedia.org/wiki/List_of_Bobobo-bo_Bo-bobo_chapters"
+      ]
+    }
+  ],
+  "continue_points": [
+    {
+      "episode": 2,
+      "continue_chapter": 2,
+      "kind": "parity",
+      "note": "C2 parity with the anime. Ep 2 ends at ch 5 but chs 2-3 are still unseen (ep 1's stored continue point already says so), and ep 3 is where the anime goes back and covers them. So the honest resume after ep 2 is ch 2, not ch 6 — the derived END+1 would strand chs 2-3 forever. New continue point; nothing stored on this row today.",
+      "sources": [
+        "https://bobobo.fandom.com/api.php?action=parse&page=Let's_Get_Wiggy_With_It&prop=wikitext&format=json",
+        "https://bobobo.fandom.com/api.php?action=parse&page=Wacky_Quacker_Cooks_His_Own_Goose&prop=wikitext&format=json"
+      ]
+    },
+    {
+      "episode": 3,
+      "continue_chapter": 6,
+      "kind": "parity",
+      "note": "C2 parity with the anime, and REQUIRED because of the backwards END. After ep 3 a viewer has seen chs 1-5 (ch 1 in ep 1, chs 4-5 in ep 2, chs 2-3 here), so the chronological next-unseen chapter is 6 — which is exactly ep 4's stored START. A derived END+1 = 4 would send the reader back over material ep 2 already animated; chapter re-use never moves position.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/List_of_Bobobo-bo_Bo-bobo_episodes",
+        "https://bobobo.fandom.com/api.php?action=parse&page=Bababa-ba_Ba-baba!_The_Honorable_King_Nosehair&prop=wikitext&format=json"
+      ]
+    }
+  ],
+  "anchor_hostile": [],
+  "annotations": [
+    {
+      "episodes": [3],
+      "kind": "rearranged",
+      "chapters": "2-3",
+      "note": "Refines the stored eps 2,3 rearranged fact with the INTERNAL order. Not only is the ch 2-3 block played after ch 4-5 (bobobo.fandom's ep-2 page: 'A major difference from the manga is that this happened after the events of episode 3'); inside ep 3 the two chapters are themselves reversed — en.wikipedia's synopsis runs Wig-Out Festival / giant burger / Dynamite Bros. (ch 3) FIRST and the duck-underwear Hair Hunter (ch 2) SECOND, which is why the ep-3 page's 'Changes from the manga' opens 'In the manga, Bo-bobo and Beauty meet Killalino before approaching Hajike Village'. The anchor is still END 3 / START 2 because A4 takes the furthest chapter in manga running order.",
+      "sources": [
+        "https://bobobo.fandom.com/api.php?action=parse&page=Wacky_Quacker_Cooks_His_Own_Goose&prop=wikitext&format=json",
+        "https://en.wikipedia.org/wiki/List_of_Bobobo-bo_Bo-bobo_episodes"
+      ]
+    }
+  ],
+  "repairs": [],
+  "type_corrections": [],
+  "structure": {
+    "notes": "Chapter space unchanged and re-confirmed: the reading edition is the 21-volume / 230-chapter tankoubon numbering; en.wikipedia's chapter list enumerates ch 1 'Hair', 2 'Pervert' (変態), 3 'Hajike Festival' (ハジケ祭り), 4 'Christmas', 5 'Myth', 6 'Party' … with v1 = 1-10, matching the stored boundaries. Open flag #709 (MU latestChapter 40) stays resolved in favour of AniList's 230 / MU is not the reading edition. Row-count identity checked: our 76 rows are 1:1 with en.wikipedia's ep 1-76 and with bobobo.fandom's episode pages; there is no recap or 0.5 row to shift the join, and every source here was joined on TITLE, never on index (R20). Note for anyone extending this lattice: animefillerguide has NO Bobobo entry and the fandom episode pages carry no manga-counterpart field, so per-episode ties must be built from the character/location infobox 'Debut (Manga) / Debut (Anime)' pairs plus title and content matching — which is exactly what pins ep 3.",
+    "order_only": []
+  },
+  "flags_for_sean": [
+    "EP 3 IS A DELIBERATE BACKWARDS ANCHOR. Batch 17 withheld it precisely to avoid one ('anchoring it would put a backwards END into the series'). I am proposing it because the evidence is exact and because the catalog already accepts backwards ENDs in rearranged zones when parity continue points carry the position (ranma eps 22/23/26/28/125 under A18). If Sean prefers the batch-17 posture, the fallback is: no anchor on ep 3, but STILL take the two continue points above — the ep-2 → ch 2 continue is needed either way, or chs 2-3 are never handed to the reader.",
+    "The ep-3 anchor's start_chapter 2 slightly overlaps ep 1's stored graft (ch 2's opening block-leaders' conference cold-opens ep 1). That overlap is annotation-only and does not move ep 1's END (1) — chapter overlap never proves anything about typing or position by itself.",
+    "Confidence note: this is a gag series with no published per-episode chapter map anywhere, so 'high' here means five artefacts agreeing on chapter IDENTITY (an infobox debut pair, an episode-title-to-character identity, two content matches, and both neighbours closing the span), not a quoted mapping. It is materially better evidenced than the surrounding medium-confidence eps 1-4 anchors, which I did not re-open."
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "series_id": "ghost-in-the-shell-stand-alone-complex",
+  "summary": "Air-date lane only. Ep 51's stored 2005-01-08 is CORRECT; the regression is caused by ep 50, whose stored 2005-12-04 is a YEAR corruption of 2004-12-04. 2nd GIG (our rows 27-52) was a pay-per-view Perfect Choice run that aired TWO EPISODES PER MONTH — ja-WP: 「2004年1月から2005年1月まで月2話ずつパーフェクト・チョイス (PPV) にて放送」 — so 49+50 share 2004-12-04 and 51+52 share 2005-01-08. 2005-12-04 is eleven months after the series ended. One repair, no true deviation.",
+  "anchors": [],
+  "continue_points": [],
+  "anchor_hostile": [],
+  "annotations": [],
+  "repairs": [
+    {
+      "episode": 50,
+      "field": "air_date",
+      "old": "2005-12-04",
+      "new": "2004-12-04",
+      "why": "en-WP List of Ghost in the Shell: Stand Alone Complex episodes: overall ep 50 / 2nd GIG ep 24 'IN: Aerial Bombing of Dejima – NUCLEAR POWER' = 2004-12-04, paired with ep 49 on the same date (as 45/46, 47/48 and 51/52 are). ja-WP 攻殻機動隊 S.A.C. 2nd GIG: the Perfect Choice run was 2004年1月 – 2005年1月, 月2話ずつ, which makes 2005-12-04 impossible and fixes the pairing structure.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/List_of_Ghost_in_the_Shell:_Stand_Alone_Complex_episodes",
+        "https://ja.wikipedia.org/wiki/%E6%94%BB%E6%AE%BB%E6%A9%9F%E5%8B%95%E9%9A%8A_S.A.C._2nd_GIG"
+      ]
+    }
+  ],
+  "type_corrections": [],
+  "structure": {
+    "notes": "52 rows = S.A.C. season 1 (1-26) + 2nd GIG (27-52); row N - 26 = the 2nd GIG episode number, verified at row 49 = 2nd GIG 23 'The Day the Bridge Falls – MARTIAL LAW'.",
+    "order_only": []
+  },
+  "flags_for_sean": [
+    "Not a deviation but worth knowing: 2nd GIG's PPV first run aired in monthly PAIRS, so rows 45/46, 47/48, 49/50 and 51/52 legitimately carry IDENTICAL dates. The G54 order gate must treat equal consecutive dates as fine for this series. ja-WP's 各話リスト for 2nd GIG carries no 放送日 column, so the exact per-episode dates come from en-WP with ja-WP supplying the run window and the two-per-month structure."
+  ]
+}
