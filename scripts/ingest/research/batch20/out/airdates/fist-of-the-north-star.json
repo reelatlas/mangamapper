@@ -1,0 +1,56 @@
+{
+  "series_id": "fist-of-the-north-star",
+  "summary": "Lane B (G53) only; no anchors, no type work. The wave-3 premise is confirmed live: AFL (slug hokuto-no-ken) prints 1985-05-16 for ep 29 and our row carries it, while ja-WP's 各話リスト prints 5月9日. I parsed BOTH full episode lists (152 dated rows each) and diffed them against all 152 stored rows. Result: ja-WP and en-WP agree with each other on every date except ep 29, so no offset or renumbering hides behind that row — rows 27-31 join 1:1 on title AND date across ja-WP, en-WP, Toei's official 作品ラインナップ and TheTVDB, and stored 27/28/30/31 are exactly right. Ep 29 itself I could NOT resolve: 05-16 = en-WP (unsourced, stable since 2009) + AFL + MAL (MAL carries en-WP's titles verbatim); 05-09 = ja-WP (unsourced but older and far richer — per-episode 脚本/絵コンテ/演出/作画監督/美術, already 1985年5月9日 in the main 北斗の拳 article on 2008-05-31) + TheTVDB, whose Japanese titles reproduce ja-WP's own line-break spacing and which is therefore a mirror, not a second lineage. Both candidates are Thursdays on the Fuji TV 19:00 slot, so the slot witness is silent, and both implied gaps (21 vs 14 days) occur elsewhere in this run. No repair proposed for ep 29 — the standoff and my lean go to Sean. What the full-list diff DID find, out of ask: three stored dates that are not Thursdays at all — ep 53 (Wed), ep 60 (Sun), ep 126 (Mon) — each inherited verbatim from AFL and each contradicted by ja-WP, en-WP and TheTVDB together. All three still ASCEND, so the order gate never saw them; this is the same defect class as the six rows Sean ruled on 2026-08-25 (81, 82, 85, 90, 96, 108), which are stored correctly today.",
+  "anchors": [],
+  "continue_points": [],
+  "anchor_hostile": [],
+  "annotations": [],
+  "repairs": [
+    {
+      "episode": 53,
+      "field": "air_date",
+      "old": "1985-11-27",
+      "new": "1985-11-28",
+      "why": "OUT OF ASK (found by the full 152-row diff, reported because it is a clean G53 defect). Stored 1985-11-27 is a WEDNESDAY; the series ran Thursdays 19:00 on Fuji TV and every other stored date is a Thursday. ja-WP 各話リスト: 第53話||11月28日||死兆星迫る!! レイ! 天は残酷に時を刻む!; en-WP: November 28, 1985; TheTVDB S02E31 (same JP title): November 28, 1985. Neighbours 52 (11-21) and 54 (12-05) are stored correctly, so the row itself is the defect; AFL's live page prints the wrong 1985-11-27, which is where our value came from.",
+      "sources": [
+        "https://ja.wikipedia.org/wiki/%E5%8C%97%E6%96%97%E3%81%AE%E6%8B%B3_(%E3%83%86%E3%83%AC%E3%83%93%E3%82%A2%E3%83%8B%E3%83%A1)",
+        "https://en.wikipedia.org/wiki/List_of_Fist_of_the_North_Star_episodes",
+        "https://thetvdb.com/series/fist-of-the-north-star/allseasons/official"
+      ]
+    },
+    {
+      "episode": 60,
+      "field": "air_date",
+      "old": "1986-01-19",
+      "new": "1986-01-23",
+      "why": "OUT OF ASK (full-list diff). Stored 1986-01-19 is a SUNDAY. ja-WP: 第60話||1月23日||南斗白鷺拳シュウ! お前はこの世紀末に何を見るのか!!; en-WP: January 23, 1986; TheTVDB S03E03 (same JP title): January 23, 1986. Neighbours 59 (01-16) and 61 (01-30) are stored correctly and the Thursday cadence is unbroken with 01-23 in place. AFL's live page prints the wrong 1986-01-19.",
+      "sources": [
+        "https://ja.wikipedia.org/wiki/%E5%8C%97%E6%96%97%E3%81%AE%E6%8B%B3_(%E3%83%86%E3%83%AC%E3%83%93%E3%82%A2%E3%83%8B%E3%83%A1)",
+        "https://en.wikipedia.org/wiki/List_of_Fist_of_the_North_Star_episodes",
+        "https://thetvdb.com/series/fist-of-the-north-star/allseasons/official"
+      ]
+    },
+    {
+      "episode": 126,
+      "field": "air_date",
+      "old": "1987-08-03",
+      "new": "1987-08-13",
+      "why": "OUT OF ASK (full-list diff). Stored 1987-08-03 is a MONDAY. ja-WP: 第126話||8月13日||あえて世紀末に愛を説く! その名はレイア!!; en-WP: August 13, 1987; TheTVDB S06E04 (same JP title): August 13, 1987. Neighbours 125 (07-30) and 127 (08-20) are stored correctly; with 08-13 the run is Thursday-clean (a 14-day gap at 126 is ordinary for this series). AFL's live page prints the wrong 1987-08-03.",
+      "sources": [
+        "https://ja.wikipedia.org/wiki/%E5%8C%97%E6%96%97%E3%81%AE%E6%8B%B3_(%E3%83%86%E3%83%AC%E3%83%93%E3%82%A2%E3%83%8B%E3%83%A1)",
+        "https://en.wikipedia.org/wiki/List_of_Fist_of_the_North_Star_episodes",
+        "https://thetvdb.com/series/fist-of-the-north-star/allseasons/official"
+      ]
+    }
+  ],
+  "type_corrections": [],
+  "structure": {
+    "notes": "ROW IDENTITY, rows 27-31 (OUR numbering = ja-WP 第N話 = en-WP EpisodeNumber = Toei lineup episode/N/ = AFL row N; 1:1, no shift anywhere in the 152 rows; joined on title AND date, never on index — R20).\n| row | JP title (ja-WP / Toei) | stored title (= AFL) | stored date | ja-WP | en-WP | AFL live | TheTVDB | status |\n| 27 | 悪党だけが笑っている! こんな時代が気にいらねえ!! | Only Villains Can Smile! How I Hate This Age!! | 1985-04-25 | 4月25日 | 1985-04-25 | 1985-04-25 | Apr 25, 1985 (S02E05) | agree |\n| 28 | レイ! お前の涙は俺の拳で受けてやる!! | Rei! I'll Stop Your Tears with My Fist!! | 1985-05-02 | 5月2日 | 1985-05-02 | 1985-05-02 | May 2, 1985 (S02E06) | agree |\n| 29 | 命ごいは遅すぎる! 地獄へ落ちろ牙大王!! | It's Too Late to Beg for Mercy! Go to Hell, King Fang!! | 1985-05-16 | 5月9日 | 1985-05-16 | 1985-05-16 | May 9, 1985 (S02E07) | CONFLICT — unresolved, no repair, see flag |\n| 30 | 宿命はしのびよる! ジャギお前は何者!! | Destiny Draws Near! Jagi, Who are You!! | 1985-05-30 | 5月30日 | 1985-05-30 | 1985-05-30 | May 30, 1985 (S02E08) | agree |\n| 31 | 地獄の鉄仮面! 北斗を名のる凶悪なる者よ!! | The Hellish Iron Mask! - He Who Terrorizes in the Name of the North Star!! | 1985-06-06 | 6月6日 | 1985-06-06 | 1985-06-06 | Jun 6, 1985 (S02E09) | agree |\nEp 29 is a Thursday under BOTH candidate dates (Fuji TV 木曜19:00), so the day-of-week witness cannot decide it.\nFULL-LIST DIFF (all 152 rows): ja-WP 各話リスト vs en-WP's {{Episode list}} blocks differ on exactly ONE row — ep 29. Every other date matches, including the New-Year 21-day gap at ep 12 and the 14-day gaps at 33/42/46/58/… Against OUR stored rows the diff returns four rows: 29 (the standoff) and 53 / 60 / 126, where ja-WP and en-WP agree AGAINST the stored value.\nDAY-OF-WEEK SWEEP: exactly three stored dates are not Thursdays — 53 (Wed), 60 (Sun), 126 (Mon) — and all three still ASCEND between their neighbours, so no order/monotonicity gate could ever have flagged them (the 'wrong dates that still ascend' trap). ja-WP's 152 dates are Thursdays without exception.\nSOURCE LINEAGE for this series: AFL's row TITLES track en-WP (AFL rows 31-33 are en-WP's 'A / B' dual titles cut at the slash), but AFL's DATE column is not a clean copy of en-WP — it carries the three non-Thursday dates above, which en-WP does not have. So AFL is a compilation with a demonstrably noisy date column; it is not an independent confirmation of ep 29's 1985-05-16, and it is the origin of the three defects repaired here. MAL's episode list is en-WP verbatim (titles included). hokuto.fandom (ja), weblio and atwiki are verbatim ja-WP mirrors. TheTVDB's Japanese titles reproduce ja-WP's cell line breaks as spaces (e.g. 'レイ! お前の涙は 俺の拳で受けてやる!!'), i.e. it mirrors ja-WP.\nAFL row count = 152 = our row count (no recap/special counting difference; no N11 issue anywhere in this series).\nTITLE NOTE (no repair): stored ep 29 renders 牙大王 as 'King Fang' (AFL) where en-WP uses 'Boss Fang' — a translation choice, not a defect.",
+    "order_only": []
+  },
+  "flags_for_sean": [
+    "UNRESOLVED ep 29 air date (G53) — no repair proposed, your call. Stored = 1985-05-16 (en-WP, unsourced, in place since at least 2009-05-27 / oldid 292611478; AFL prints the same; MAL copies en-WP). Rival = 1985-05-09 (ja-WP 各話リスト, unsourced, already in the main 北斗の拳 article on 2008-05-31 / oldid 19985165 — i.e. BEFORE en-WP's list carried dates; TheTVDB agrees but mirrors ja-WP). MY LEAN: 1985-05-09. Reasons — ja-WP's list is the older and materially richer compilation (per-episode staff credits transcribed from broadcast), en-WP otherwise reproduces ja-WP's 152 dates exactly, and a single divergent row inside an otherwise perfect copy reads more like a transcription slip than an independent correction. AGAINST the lean — ja's date needs TWO dark Thursdays (1985-05-16 and 05-23) where en's needs one (05-23); both shapes occur in this run (21-day gaps at eps 12, 73, 90), so the gap pattern proves nothing, and AFL's date column is not a pure en-WP copy, so 05-16 may have its own lineage. WHAT WOULD SETTLE IT: a May-1985 Japanese newspaper/TV-Guide listing for the Fuji Thursday 19:00 slot, or a 北斗の拳 fanbook / DVD-BOX booklet 放送日 table. Checked and empty: Toei's per-episode pages (lineup.toei-anim.co.jp/ja/tv/hokuto/episode/28-30 — synopsis, no 放送日), syobocal (starts 2002), アニメスタッフデータベース (staff, no dates), 放送ライブラリー, kioku.tv (season-level only), teleco.tv's 'プレイバック！TVガイド' archive (only 1985-07-28, 08-03, 09-17, 12-19 exist), animedb.jp (now a news site), MADB (SPA, no reachable episode API), AniDB (Cloudflare 403).",
+    "OUT OF ASK but true and cheap: three stored dates are not Thursdays and are wrong on three sources each — ep 53 1985-11-27 -> 1985-11-28, ep 60 1986-01-19 -> 1986-01-23, ep 126 1987-08-03 -> 1987-08-13. All three came from AFL, all three still ascend between their neighbours (no order gate could catch them), and after these three the stored calendar is Thursday-clean and identical to ja-WP on 151 of 152 rows (ep 29 being the sole remainder). Same defect class as the six rows you ruled on 2026-08-25.",
+    "PIPELINE NOTE worth keeping for the traps list: for this series AFL's date column carries at least three non-Thursday dates that no other source has, while its title column is en-WP verbatim — an AFL date is not a witness for a pre-2000 series, and a day-of-week sweep over the whole run (not just the regressions) is what surfaces it."
+  ]
+}
