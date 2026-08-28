@@ -226,5 +226,11 @@ finish. Keep all scratch files in the per-task scratchpad directory you are
 given — never a shared path; parallel agents collide otherwise.
 
 Your final message is a 5–10 line summary: anchors produced (count + range),
-confidence mix, repairs proposed, structure findings, unresolved items. The
-JSON is the deliverable; the summary is for the curator.
+confidence mix, repairs proposed, structure findings, unresolved items —
+**followed by the RECAP BASELINE (Sean 2026-08-28, a standing process rule):
+one line per row you name, stored first, then the delta —
+`ep N — stored: {canon|mixed|filler} [+ annotation kinds] → proposed: {same |
+new type | annotation change | no type change}`.** The stored type is in your
+context; a block of retypes is a table, never a sentence; unchanged rows in the
+ask still show their stored type once; identity/date-only repairs still show
+the stored type. The JSON is the deliverable; the summary is for the curator.

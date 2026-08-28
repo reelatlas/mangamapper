@@ -62,7 +62,11 @@ under a running wave is how drift re-enters.
 
 ## 4. Land and checkpoint — every wave, without exception (`P13`)
 
-1. **Validate** every new verdict parses and carries `series_id`.
+1. **Validate** every new verdict parses and carries `series_id`; then print
+   the **recap baseline** (`research/batchN/baseline.ts <verdict.json>` —
+   one line per named row, stored type first, then the delta; a block of
+   retypes is a table) and carry it into the recovery record — Sean 2026-08-28,
+   a standing process rule: no recap names a row without its stored standing.
 2. **Contradiction scan** (`R25`) — mechanically compare each verdict's
    summary against its own rows. Self-consistent-but-wrong is the failure
    mode that has actually shipped.

@@ -34,6 +34,12 @@ errors.
 
 ## How to report
 
+**Recap baseline (Sean 2026-08-28):** every row you name carries its stored
+standing first, then what the verdict proposes and what you conclude —
+`ep N — stored: {canon|mixed|filler} [+ annotations] → verdict: … → verifier: …`.
+A block is a table, never a sentence.
+
+
 For each finding: the file, the specific claim, why it is wrong or
 unsupported, and what evidence would settle it. Rank by damage: a wrong
 anchor that will render to users outranks a thin citation on a correct value.

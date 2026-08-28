@@ -19,6 +19,23 @@ so `docs/rulings.md` can answer "why was X deleted" in one hop.
 Anything an agent proposes that is not in a curated map gets REPORTED, not
 applied.
 
+## The recap baseline (Sean 2026-08-28 — a standing process rule)
+
+Whenever a row is named in a recap — a landing, `WAVE*-RECOVERY.md`, THE
+DECISIONS, an apply dry-run, the apply recap — every episode is ONE LINE,
+stored first, then the delta:
+
+    ep N — stored: {canon|mixed|filler} [+ annotation kinds] → proposed: {same | new type | annotation change | no type change}
+
+A block of retypes is a TABLE, never a sentence ("12 rows → filler" is not a
+recap). Unchanged rows in the ask still show their stored type once — that is
+the baseline Sean reads against. Identity/date-only repairs still show the
+stored type. GENERATE it: `research/batchN/baseline.ts <verdict.json>` prints
+the block from the DB + the verdict (P5 — it cannot drift); paste it into the
+recovery record and the decision list, and make every apply script's dry-run
+line carry the stored type beside the stored value. A recovery record or a
+decision list without it does not ship.
+
 ## Sequence
 
 1. **Read `docs/STATE.md`, then the verdicts — do not skim them** (`P15`).
