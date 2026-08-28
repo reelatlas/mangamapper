@@ -695,6 +695,42 @@
    sibling telling with no comparison instrument); Boruto is the candidate
    second witness, research first. Lane L-P (row-grain alignment, one arc
    per wave) is Sean's to fund.
+88. ✅ **BATCH 20 WAVE 5 APPLIED — dragon-ball-super under T30 (2026-08-28;
+   Sean's GO after the account switch; the series-wide re-pass, waves
+   5c-5f).** Every one of the 131 rows judged under the parallel standing,
+   none projected: 14 by the arc proxy (42-46, 68-76 = D), 9 by batch 19
+   (the film arc), ~68 by manga pages, and 41 by the four re-pass verdicts
+   (`out/dragon-ball-super-w5c..w5f.json`, all validated, 0 anchors).
+   Applied: (1) **11 type flips, all upward** (T6, pinned canon because
+   AFL's anime-canon re-derives to filler on a manga-kind series): 16/17
+   (Whis's students — the node every telling states and none depicts;
+   medium), 50 (installs the destroyed time machine + Black's Time Ring
+   that 51/53 run on), 78 (ch 28 carries the whole episode), 79-81 (the
+   Zeno Expo — ch 30 opens on its outcome), 90 (Gohan's power-up + team
+   leadership → 97/124), 91 (the gathering; Buu's hibernation = ch 31's
+   close; medium), 94/95 (ch 32: the revival, Frieza's power-up, the
+   off-screen fight). Types 99/4/28 → **110/3/18**. Four holds with
+   evidence: 4 (+ graft{2}), 15, 22 (+ loose_parallel{film}; the film
+   throws Tagoma into space in its first act), 52 (the closest hold —
+   nothing later depends on the Gohan visit). 1/2/89 stay mixed (E: story
+   + a self-contained D block). (2) the A45 retirement of 78
+   rearranged{28} (wrong KIND on a parallel telling — neither work
+   re-orders the other; divergence{28-29} replaces it) with the
+   standing-annotations entry re-noted to the T30 state (the first
+   collision of a retirement with a standing T26 ruling — the gate refused
+   the re-insert exactly as designed, and the standing map was updated
+   rather than the gate bypassed). (3) 17 row annotations (re-noted or
+   added: 6 side_source{Battle of Gods}, 105 divergence{38-39}, …; no
+   blanket arc stamps). (4) **61 episode_correspondence rows** (aligned /
+   divergent / anime_only) from the verdicts — correspondence_incomplete
+   94 → **67 canon/mixed rows** and the chapter side now names its
+   uncovered runs (4, 6-13, 14, 18-26, 27, 33, 41-42): lane L-P's queue.
+   Census: ruling_violation 0, parallel_has_anchor 0, arc_row_conflict 0,
+   annotation_invalid 0; display verify 0 failing; edges redeployed (the
+   T6 map is lib). Traps for the record: ep 115's fandom `Manga =` field
+   points two chapters early (never derive it mechanically); fandom's
+   ep-95 air date is a Saturday (Kanzenshuu: the 18th); AFL's buckets are
+   not a B/D oracle (its anime-canon held both the lifts and the holds).
 85. ✅ **CONSOLIDATE DEEP after batch 20 wave 4 (2026-08-28; P21 —
    `applyEpisodeFloor`'s input changed: `translatedMax`).** Steps 0-8
    satisfied by §12.84's save point. Rescan (step 9): (a) the floor probe
