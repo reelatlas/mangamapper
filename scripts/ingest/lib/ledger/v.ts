@@ -199,4 +199,23 @@ export const RULES: Rule[] = [
     status: 'live',
     see: ['V3', 'full-record protocol', 'A18'],
   },
+  {
+    id: 'V11',
+    aliases: ['anchor volume mismatch', 'anchor_volume_mismatch', 'volume vs table', 'wrong chapter space by volume', 'seiya +1 space witness'],
+    family: 'V',
+    title: "Anchor volume = the boundary table's volume for its chapter",
+    statement:
+      "For every anchor whose manga has a boundary table, the table's volume for the anchor's chapter must equal the stored volume; a disagreement means the anchor is in the WRONG CHAPTER SPACE (a migration that missed rows, a +1 edition, a count space) or carries a stale volume — either way a value that renders wrong. Only table-derived volumes count (never the ratio fallback); a NULL stored volume is not a mismatch (ok_no_volume). Every hit is a triage fork for Sean — the anchor's space or the table's — never auto-repaired.",
+    why:
+      "Batch 17's saint-seiya rows 43-72 were applied in Wikipedia's phantom +1 space AFTER the one-shot N22 migration had run (guarded on a sentinel, retired to history/ — P34), and nothing compared an anchor with its own table: seven rows sat outside their volume range for two days and ep 43 → 30 named 'Gemini's Labyrinth' for the Taurus duel. The class caught what no gate could, and it is the outcome proof for any future space migration (marker-keyed, P5).",
+    ruledBy: 'Sean',
+    ruledOn: '2026-08-27',
+    origin: 'scripts/ingest/research/batch20/verify/saint-seiya-knights-of-the-zodiac.md; WAVE2-RECOVERY §THE DECISIONS 1; changelog §12.80',
+    enforcement: [{ path: 'scripts/ingest/audit-ui-truth.ts', symbol: 'anchor_volume_mismatch' }],
+    layer: 'writer',
+    auditClass: ['anchor_volume_mismatch'],
+    witnesses: ['saint-seiya-knights-of-the-zodiac'],
+    status: 'live',
+    see: ['N22', 'V6', 'V10', 'V3', 'P5', 'P34'],
+  },
 ];

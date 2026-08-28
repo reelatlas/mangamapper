@@ -225,7 +225,7 @@
 - `G55` Series window: a row dated outside its series is not its row — aka `series window`, `series-window gate`, `identity gate`, `namesake gate`, `namesake lesson`, `episode_date_off_window`, `AIR_DATE_WINDOW_ACK`, `E2`, `batch-19 E2`, `off-window`
 - `G56` Honest terminal: a covered MU pin is redundant, not a flag — aka `honest terminal`, `honest-terminal redundancy`, `covered pin`, `MU "EP N" pin`, `EP N pin`, `skipped_terminal`, `mu_pin_flag_redundant`, `claymore #945 class`, `pin already covered`
 
-**V — Volumes & boundaries** (10)
+**V — Volumes & boundaries** (11)
 - `V1` Monotonic starts, or the row is not data — aka `monotonic-start gate`, `MONOTONIC-START rule`, `monotonic boundaries`, `monotonic starts`, `Sailor Moon v3 report`, `Sailor Moon "v3: chs 10-3"`
 - `V2` Stored-boundary heal: max-weight increasing subsequence — aka `heal-volume-boundaries`, `boundary heal`, `Ippo v61 partial-boundary principle`, `Urusei Yatsura wipe`
 - `V3` Boundary-aware volumes everywhere; ratio only as fallback — aka `boundary-aware volumes`, `boundary-aware volumes everywhere`, `volume ratio fallback`, `chToVol`, `Kenshin ep-29 wobble`
@@ -236,6 +236,7 @@
 - `V8` Volumes-staleness event — aka `volumes-staleness event`, `VOLUME_STALE_MARGIN`, `event-driven validation tier`
 - `V9` A volume spans its start to the next volume's start − 1 — aka `boundary span definition`, `volume span`
 - `V10` A verdict's volume is the END chapter's volume — aka `volume = END's volume`, `verdict volume`
+- `V11` Anchor volume = the boundary table's volume for its chapter — aka `anchor volume mismatch`, `anchor_volume_mismatch`, `volume vs table`, `wrong chapter space by volume`, `seiya +1 space witness`
 
 **R — Research protocol** (30)
 - `R1` Research first — nothing reaches Sean unresearched — aka `invariant 5`, `hard invariant 5`, `research-first rule`, `RESEARCH-FIRST rule`, `Sean's accuracy directive`, `nothing reaches Sean unresearched`
@@ -3150,6 +3151,20 @@ The volume on a research anchor is the volume of its END chapter, read from the 
 - aliases: volume = END's volume, verdict volume
 - see: V3, full-record protocol, A18
 
+### V11 · Anchor volume = the boundary table's volume for its chapter
+
+For every anchor whose manga has a boundary table, the table's volume for the anchor's chapter must equal the stored volume; a disagreement means the anchor is in the WRONG CHAPTER SPACE (a migration that missed rows, a +1 edition, a count space) or carries a stale volume — either way a value that renders wrong. Only table-derived volumes count (never the ratio fallback); a NULL stored volume is not a mismatch (ok_no_volume). Every hit is a triage fork for Sean — the anchor's space or the table's — never auto-repaired.
+
+*Why:* Batch 17's saint-seiya rows 43-72 were applied in Wikipedia's phantom +1 space AFTER the one-shot N22 migration had run (guarded on a sentinel, retired to history/ — P34), and nothing compared an anchor with its own table: seven rows sat outside their volume range for two days and ep 43 → 30 named 'Gemini's Labyrinth' for the Taurus duel. The class caught what no gate could, and it is the outcome proof for any future space migration (marker-keyed, P5).
+
+- ruled Sean 2026-08-27 (scripts/ingest/research/batch20/verify/saint-seiya-knights-of-the-zodiac.md; WAVE2-RECOVERY §THE DECISIONS 1; changelog §12.80)
+- layer **writer**
+- enforced: [audit-ui-truth.ts#anchor_volume_mismatch](../scripts/ingest/audit-ui-truth.ts)
+- audit: `anchor_volume_mismatch`
+- witnesses: saint-seiya-knights-of-the-zodiac
+- aliases: anchor volume mismatch, anchor_volume_mismatch, volume vs table, wrong chapter space by volume, seiya +1 space witness
+- see: N22, V6, V10, V3, P5, P34
+
 ## R — Research protocol
 
 ### R1 · Research first — nothing reaches Sean unresearched
@@ -4105,8 +4120,10 @@ Any component that renders episode-level data consumes the HYDRATED series (getB
 - anchor precedence → `A24`
 - anchor suppression → `A44`
 - anchor tier precedence → `A24`
+- anchor volume mismatch → `V11`
 - anchor_gap_research target → `A39`
 - ANCHOR_SUPPRESSED → `A44`
+- anchor_volume_mismatch → `V11`
 - anchor_without_row → `A42`
 - anchor-aware interpolation → `A33`
 - anchor-freshness rule → `A27`
@@ -4840,6 +4857,7 @@ Any component that renders episode-level data consumes the HYDRATED series (getB
 - sections never arcs → `T19`
 - seed is a fact only → `I10`
 - seeded starts → `A10`
+- seiya +1 space witness → `V11`
 - series window → `G55`
 - series_external_ids → `I2`
 - series_relations vocabulary → `I17`
@@ -5001,6 +5019,7 @@ Any component that renders episode-level data consumes the HYDRATED series (getB
 - volume = END's volume → `V10`
 - volume ratio fallback → `V3`
 - volume span → `V9`
+- volume vs table → `V11`
 - VOLUME_STALE_MARGIN → `V8`
 - volume-boundary identity → `V5`
 - volume-boundary identity + numbering space → `V5`
@@ -5022,6 +5041,7 @@ Any component that renders episode-level data consumes the HYDRATED series (getB
 - Wikipedia page discovery → `G43`
 - work-list from disk → `P11`
 - writeCuratedContinue → `C7`
+- wrong chapter space by volume → `V11`
 - X 21-24 class → `T10`
 - X only-ending → `T10`
 - YYH class → `N20`
@@ -5033,6 +5053,6 @@ Any component that renders episode-level data consumes the HYDRATED series (getB
 
 ## Scoreboard
 
-- rules: 270 (live 255, planned 8, superseded 7)
+- rules: 271 (live 256, planned 8, superseded 7)
 - live data rules with no audit class (the automation backlog): 83
-- by layer: writer 141 · display 23 · both 23 · process 83
+- by layer: writer 142 · display 23 · both 23 · process 83

@@ -16,6 +16,12 @@ The census class `anchor_gap_research` lists runs of canon/mixed rows with NO an
 
 - **A2 gap blocks** — hunter-x-hunter 79-91, saint-seiya 100-113 (inside the Asgard filler 74-99, `A1`), yu-yu-hakusho 27-43, bleach 152-165, eyeshield-21 22-36, kingdom 78-102, d-gray-man 1-50 (25 canon/mixed rows), naruto-shippuden 480-500; one JSON per series; every canon/mixed TARGET row appears in anchors or anchor_hostile.
 
+## The batch-20 mission (wave 3 — lane C narrow follow-ups, lane B numbering & dates; ADDED 2026-08-27, no contract change)
+
+**Lane C — narrow follow-ups.** One row or one small block each, named by the prior wave that flagged it; the prior verdict / verifier report is in your task and is a starting point with citations, never the verdict. Deliver exactly the ask: anchors (≥ 2 sources, `A4`/`A10`, "pages, not numbers") or `anchor_hostile` for the named rows, repairs with old → new, type corrections under `T28`, the continue where the ask names one (`C1`/`C2`/`C3`/`C5`). Rows outside the ask are not yours unless the ask says "series-wide". Output = the batch's JSON shape, one file per series in `out/`.
+
+**Lane B — numbering and air dates (`N11` / `G53` / `G54`).** Output = the batch-19 B3 shape, one file per series in `out/airdates/`: `repairs` only (`field` = `air_date` or `title`, `old` / `new` / `why`, ≥ 2 sources per repair — ja-WP 各話リスト, en-WP, syobocal `cal.syoboi.jp` per-airing, the broadcaster's own archive), `flags_for_sean` for TRUE deviations (a real out-of-order broadcast is a `G54` ack, never a repair) and for numbering findings, `structure.notes` for the row-identity map. A renumbering (`N11`: AFL skips a number / prints one twice) is delivered as the explicit row → title → date table for the affected span, in OUR numbering with the AFL numbers beside it — the apply layer decides the shift. Never index-join (`R20`); join on title AND date; a day-of-week that breaks the slot is a witness, not proof (a holiday move is real).
+
 ## Read first
 1. Your series context file (path in your task): source kind + chapter space, entry facts, EVERY ruling on the series (a verdict contradicting one is a REPAIR with evidence, never a silent override), all existing anchors (ep→END [START] {chapters_adapted} vol, continue), annotations grouped by fact, volume boundaries, the rows in and near the range with AFL's claim, open flags.
 2. This protocol. 3. Your agent definition's anchoring vocabulary (`A1` `A2` `A10` `A12` `A13` `A44` `C1`–`C3` `C5` `N4` `R20`).
