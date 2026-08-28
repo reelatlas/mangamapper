@@ -1,0 +1,196 @@
+{
+  "series_id": "dragon-ball-super",
+  "summary": "Eps 77-131 are the Universe Survival / Tournament of Power arc; the manga's version of it is chapters 27-42 (volumes 5-9, 16 chapters at 45 pages, 2017-08-21 to 2018-11-20/21) — agreed by dragonball.fandom's arc infobox, Kanzenshuu's arc page and ja-WP's 書誌情報 table. DIRECTION (T21) is the headline and it is not close: the anime aired first for every single row (ep 77 preceded ch 27 by six and a half months) and the anime FINISHED when the manga had reached ch 34 — chapters 35-42, i.e. Hit vs Jiren, Kefla, Kale's rampage, Ultra Instinct, Jiren's backstory and the finale, were all published after the series ended. ja-WP states outright that from 破壊神シャンパ編 onward the TV staff and the manga staff worked 同時進行 from one written Toriyama outline and are 相互に補完する関係性; Kanzenshuu says the same; AniList's own graph types the manga (id 86508) as ALTERNATIVE to the anime, not ADAPTATION — which is the root cause of open flag #1016 and is correct, not a defect. So 'canon' on these rows can only mean 'this content also exists in the source', never 'this episode adapts chapter N'. dragonball.fandom carries a bidirectional counterpart map (episode infobox `Manga =` and chapter infobox `episode =`) that agrees with itself on all 55 rows and is non-monotonic (ep 100 -> chs 37-38 while ep 104 -> ch 35): the manga runs the tournament in a different order, with Kale's rampage doing most of the eliminating and Kefla fighting Gohan rather than Goku. Exactly seven rows have an EMPTY counterpart field in both directions: 79, 80, 81 and 90 (already ruled filler in batch 18) plus 105, 113 and 120, which are stored canon and which I propose as canon -> filler with divergence annotations — ja-WP's per-character 漫画版 notes confirm each independently, most bluntly for ep 120, whose central creation Koicéareta gets the four-word entry 「漫画版には登場しない。」. Everything else in the range keeps its stored type and takes an arc-level `divergence`; seven near-the-line rows (87, 88, 106, 121, 124, 125, 126) are flagged for Sean rather than retyped, because the source does carry their outcomes, only staged differently. No anchors (lane pin), no retcon, no side_source and no adoption anywhere in 77-131. ANCHORS: none, by the lane pin — every one of the 55 target rows takes no anchor this wave; the ten filler rows in the range (79, 80, 81, 90, 91, 94, 95 as ruled in batch 18, plus 105, 113 and 120 as proposed here) could not take one in any case under A1.",
+  "anchors": [],
+  "continue_points": [],
+  "anchor_hostile": [],
+  "annotations": [
+    {
+      "episodes": [
+        77,
+        78,
+        82,
+        83,
+        84,
+        85,
+        86,
+        87,
+        88,
+        89,
+        92,
+        93,
+        96,
+        97,
+        98,
+        99,
+        100,
+        101,
+        102,
+        103,
+        104,
+        106,
+        107,
+        108,
+        109,
+        110,
+        111,
+        112,
+        114,
+        115,
+        116,
+        117,
+        118,
+        119,
+        121,
+        122,
+        123,
+        124,
+        125,
+        126,
+        127,
+        128,
+        129,
+        130,
+        131
+      ],
+      "kind": "divergence",
+      "chapters": "27-42",
+      "note": "ARC-LEVEL. Every canon/mixed row in 77-131 stands in a DIVERGENCE relation to the source, not an adaptation relation (T21): the TV series and Toyotarou's manga were made 同時進行 by separate staffs from one written Toriyama outline (ja-WP 漫画版との相違点; Kanzenshuu manga guide; AniList relationType ALTERNATIVE), and the anime aired first throughout — ch 27 is six and a half months later than ep 77 and chs 35-42 postdate the finale entirely. 55 episodes against 16 monthly 45-page chapters is roughly 4:1 compression, so the manga states in a panel what the anime plays as an act. The differences are structural, not cosmetic: the Zen Exhibition is a twelve-God battle royal, Goku LOSES to Top rather than drawing, Kale's Legendary rampage (chs 37-38) eliminates most of Universes 2, 3, 4, 6 and 10 in place of the anime's individual fights, Kefla fights GOHAN and they knock each other out (ch 39), Ultra Instinct Sign arrives from Kaioken exhaustion against Jiren rather than from the Spirit Bomb or from Kefla, Goku never uses Super Saiyan God, Super Saiyan 3 or Blue Kaioken in the tournament, Vegeta reaches Super Saiyan God SS Evolved for his own reasons rather than for Cabba's promise, Top never enters a God of Destruction Mode, Jiren's wish (reviving his master Gicchin, killed by a demon) is stated outright in ch 41 where the anime never reveals it, and the erasure ORDER of the universes differs (Universe 3 is third in the manga and sixth in the anime; Universe 4 second rather than fifth). What is shared is the spine: the announcement, the ten-man teams, the 48-minute survival format, Frieza's recruitment, Universe 9 erased first, Goku's Ultra Instinct, Universes 7 and 11 last, and Android 17 winning and wishing the erased universes back.",
+      "sources": [
+        "https://ja.wikipedia.org/wiki/%E3%83%89%E3%83%A9%E3%82%B4%E3%83%B3%E3%83%9C%E3%83%BC%E3%83%AB%E8%B6%85",
+        "https://www.kanzenshuu.com/manga/super/",
+        "https://dragonball.fandom.com/api.php?action=parse&page=Universe%20Survival%20Saga&prop=wikitext&format=json",
+        "https://graphql.anilist.co (Media(id:21175,type:ANIME){relations} -> node 86508 MANGA, relationType = ALTERNATIVE)",
+        "https://dragonball.news/news/180309ar.html"
+      ]
+    },
+    {
+      "episodes": [
+        105
+      ],
+      "kind": "divergence",
+      "chapters": "38-40 (the manga's substituted version)",
+      "note": "Substitution, not omission — the 79-81 shape. Roshi's Universe 4 sweep does not exist in the source: Caway is eliminated 「戦闘シーンが無いまま」, Dercori and Ganos by the rampaging Kale in ch 38, Roshi never uses Max Power and never uses the Evil Containment Wave in the tournament, and Roshi himself is still competing in ch 39 (one of the twelve left at 15 minutes) and eliminates a Pride Trooper before Jiren takes him out. Recorded on the retyped filler row so the block is not read as an omission.",
+      "sources": [
+        "https://dragonball.fandom.com/api.php?action=parse&page=A%20Valiant%20Fight%21%20Master%20Roshi%27s%20Blaze%20of%20Glory%21&prop=wikitext&format=json",
+        "https://ja.wikipedia.org/wiki/%E3%83%89%E3%83%A9%E3%82%B4%E3%83%B3%E3%83%9C%E3%83%BC%E3%83%AB%E8%B6%85%E3%81%AE%E7%99%BB%E5%A0%B4%E4%BA%BA%E7%89%A9",
+        "https://dragonball.fandom.com/api.php?action=parse&page=Universe%206%27s%20Last%20Resort&prop=wikitext&format=json",
+        "https://dragonball.fandom.com/api.php?action=parse&page=Sign%20of%20Son%20Goku%27s%20Awakening&prop=wikitext&format=json"
+      ]
+    },
+    {
+      "episodes": [
+        113
+      ],
+      "kind": "divergence",
+      "chapters": "37 (the manga's substituted version)",
+      "note": "Substitution, not omission. Goku and Caulifla never fight in the source; Caulifla's tournament is Frieza's (ch 37, where Golden Frieza overwhelms her), Kale's Legendary awakening is triggered by Frieza rather than by Goku, Caulifla never becomes a Super Saiyan 2 and Goku never uses Super Saiyan 3 in the Tournament of Power. The two versions reconverge only at Kefla's formation, which the manga stages in ch 38 with Cabba's help as Kale is about to be eliminated by Tupper.",
+      "sources": [
+        "https://dragonball.fandom.com/api.php?action=parse&page=With%20Great%20Joy%21%20The%20Fighting%20Freak%20Saiyans%27%20Battle%20Rejoined%21&prop=wikitext&format=json",
+        "https://ja.wikipedia.org/wiki/%E3%83%89%E3%83%A9%E3%82%B4%E3%83%B3%E3%83%9C%E3%83%BC%E3%83%AB%E8%B6%85%E3%81%AE%E7%99%BB%E5%A0%B4%E4%BA%BA%E7%89%A9",
+        "https://dragonball.fandom.com/api.php?action=parse&page=Awaken%2C%20Super%20Saiyan%20Kale&prop=wikitext&format=json",
+        "https://dragonball.fandom.com/api.php?action=parse&page=Universe%206%27s%20Last%20Resort&prop=wikitext&format=json"
+      ]
+    },
+    {
+      "episodes": [
+        120
+      ],
+      "kind": "divergence",
+      "chapters": "38 (the manga's substituted version)",
+      "note": "Substitution, not omission. The episode's central creation, Koicéareta (Koitsukai + Pancéa + Borareta), 「漫画版には登場しない」 — it does not exist in the source at all. Universe 3's whole offensive is one page of ch 38: Mule orders Paparoni to fuse with his three allies straight into Agnilasa, and the rampaging Kale kicks the fusion off the arena in a single blow, erasing Universe 3 as the THIRD universe (it is the sixth in the anime). Biarra, whom 17 and 18 grind down here, is eliminated in the source 「戦闘シーンが無いまま」.",
+      "sources": [
+        "https://dragonball.fandom.com/api.php?action=parse&page=A%20Perfect%20Survival%20Strategy%21%20The%203rd%20Universe%27s%20Menacing%20Assassin%21&prop=wikitext&format=json",
+        "https://ja.wikipedia.org/wiki/%E3%83%89%E3%83%A9%E3%82%B4%E3%83%B3%E3%83%9C%E3%83%BC%E3%83%AB%E8%B6%85%E3%81%AE%E7%99%BB%E5%A0%B4%E4%BA%BA%E7%89%A9",
+        "https://dragonball.fandom.com/api.php?action=parse&page=Universe%206%27s%20Last%20Resort&prop=wikitext&format=json"
+      ]
+    },
+    {
+      "episodes": [
+        114,
+        115,
+        116
+      ],
+      "kind": "divergence",
+      "chapters": "37-39",
+      "note": "The single largest structural divergence of the arc, flagged so nobody reads the counterpart numbers as an adaptation: in the anime Kefla fights GOKU and it is Kefla's attack that triggers Ultra Instinct Sign for the second time (116). In the source Kefla never fights Goku at all — she eliminates seven fighters, six of them Pride Troopers, then fights GOHAN in ch 39 and the two knock each other out simultaneously; Goku's Ultra Instinct Sign comes later in the same chapter, out of Kaioken exhaustion against Jiren. Also: Champa gives Caulifla the Potara in the anime, Caulifla steals them from Fuwa in the manga; Kale never regains control of the Legendary form in the manga; Kefla is never shown in base form.",
+      "sources": [
+        "https://dragonball.fandom.com/api.php?action=parse&page=Sign%20of%20Son%20Goku%27s%20Awakening&prop=wikitext&format=json",
+        "https://ja.wikipedia.org/wiki/%E3%83%89%E3%83%A9%E3%82%B4%E3%83%B3%E3%83%9C%E3%83%BC%E3%83%AB%E8%B6%85%E3%81%AE%E7%99%BB%E5%A0%B4%E4%BA%BA%E7%89%A9",
+        "https://dragonball.fandom.com/api.php?action=parse&page=Bloodcurdling%21%20The%20Explosive%20Birth%20of%20a%20New%20Super%20Warrior%21&prop=wikitext&format=json"
+      ]
+    },
+    {
+      "episodes": [
+        127,
+        128,
+        129,
+        130,
+        131
+      ],
+      "kind": "divergence",
+      "chapters": "40-42",
+      "note": "The finale reaches the same destination by a different road, and the last four of these chapters were published seven to eight months AFTER the episodes aired. Shared: Jiren's backstory and his wish to revive Gicchin (the manga states it outright in ch 41 — the anime shows a partial flashback and never reveals the wish), Goku's Perfected Ultra Instinct and its wearing off, Vegeta's elimination, Frieza taking Jiren over the edge with him, Android 17 as the last man standing, and 17's wish restoring the erased universes. Different: in the manga 17 only FAKES his self-destruction and fully expects to survive, and is not revealed to be alive until after Goku, Frieza and Jiren are out; Vegeta rather than Frieza saves Goku from falling; Vegeta is eliminated much later, alongside Goku, after Ultra Instinct has already come and gone; 17's motive for the wish is spite at the Zenos' erasure rules rather than Goku's influence; and the restored fighters reappear in the stands rather than in their own universes.",
+      "sources": [
+        "https://dragonball.fandom.com/api.php?action=parse&page=Ultra%20Instinct%20%28chapter%29&prop=wikitext&format=json",
+        "https://dragonball.fandom.com/api.php?action=parse&page=Battle%27s%20End%20and%20Aftermath&prop=wikitext&format=json",
+        "https://dragonball.fandom.com/api.php?action=parse&page=A%20Miraculous%20Conclusion%21%20Farewell%20Goku%21%20Until%20We%20Meet%20Again%21&prop=wikitext&format=json"
+      ]
+    }
+  ],
+  "repairs": [],
+  "type_corrections": [
+    {
+      "episodes": [
+        105
+      ],
+      "type": "filler",
+      "note": "T28: zero standing in the source. The episode's entire job — Master Roshi eliminating Caway, Dercori (Evil Containment Wave) and Ganos (Max Power Kamehameha) and collapsing from the strain — happens nowhere in the manga. Its counterpart field is EMPTY in both directions (the episode infobox's `Manga =` is blank, and no chapter page 27-42 lists ep 105 in its `episode =` field), the only two such rows besides the four already ruled filler and eps 113/120. fandom's Differences section lists five points, all negative: Caway eliminated by an unknown warrior, Dercori by Kale, Ganos by Kale, 'Master Roshi never uses his Max Power state in the manga', Ganos never transforms. ja-WP's character page says the same independently and per character: キャウェイ 「漫画版では戦闘シーンが無いまま脱落していた」; ダーコリ 「漫画版では札術は使わず…侮っていたケールから強烈な反撃を食らい返り討ちにされた」; ガノス 「漫画版では暴走したケールに太刀打ちできずにシャンツァと共に落とされた」. In the source Roshi is still competing in ch 39 and himself eliminates a Pride Trooper before Jiren removes him. AFL says 'manga canon', but AFL typed this row on its 2017-08-27 broadcast, ten months before ch 38 existed — cross-check only (see structure §6). Carries a `divergence` annotation naming chs 38-40 (the 79-81 substitution shape).",
+      "sources": [
+        "https://dragonball.fandom.com/api.php?action=parse&page=A%20Valiant%20Fight%21%20Master%20Roshi%27s%20Blaze%20of%20Glory%21&prop=wikitext&format=json",
+        "https://ja.wikipedia.org/wiki/%E3%83%89%E3%83%A9%E3%82%B4%E3%83%B3%E3%83%9C%E3%83%BC%E3%83%AB%E8%B6%85%E3%81%AE%E7%99%BB%E5%A0%B4%E4%BA%BA%E7%89%A9",
+        "https://dragonball.fandom.com/api.php?action=parse&page=Universe%206%27s%20Last%20Resort&prop=wikitext&format=json",
+        "https://dragonball.fandom.com/api.php?action=parse&page=Sign%20of%20Son%20Goku%27s%20Awakening&prop=wikitext&format=json"
+      ]
+    },
+    {
+      "episodes": [
+        113
+      ],
+      "type": "filler",
+      "note": "T28: zero standing in the source. The whole episode is Goku vs Caulifla, Kale joining in, and Goku's brief Super Saiyan 3. The counterpart field is EMPTY in both directions. fandom states it three separate times across three episode pages — 'Goku never fought Caulifla in the manga' (113), 'In the manga, Goku never fought Caulifla, only Kale' (114), 'Goku and Kefla only fought in the anime' (116) — plus 'Caulifla transforming into a Super Saiyan 2 is an occurrence that only happens in the anime' and 'Goku never transforms into a Super Saiyan 3 in the Tournament of Power in the manga'. ja-WP independently gives Caulifla's manga tournament as Cabba then Frieza only, and Kefla's as Gohan only 「その後は悟飯と戦い、相打ちとなる形で脱落した」; Kale's Legendary awakening in ch 37 is triggered by Frieza, not by Goku. AFL 'manga canon' is again a broadcast-date label (2017-10-29, eight months before ch 37). Carries a `divergence` annotation naming ch 37.",
+      "sources": [
+        "https://dragonball.fandom.com/api.php?action=parse&page=With%20Great%20Joy%21%20The%20Fighting%20Freak%20Saiyans%27%20Battle%20Rejoined%21&prop=wikitext&format=json",
+        "https://ja.wikipedia.org/wiki/%E3%83%89%E3%83%A9%E3%82%B4%E3%83%B3%E3%83%9C%E3%83%BC%E3%83%AB%E8%B6%85%E3%81%AE%E7%99%BB%E5%A0%B4%E4%BA%BA%E7%89%A9",
+        "https://dragonball.fandom.com/api.php?action=parse&page=Awaken%2C%20Super%20Saiyan%20Kale&prop=wikitext&format=json",
+        "https://dragonball.fandom.com/api.php?action=parse&page=Signs%20of%20a%20Turnabout%21%20The%20Autonomous%20Ultra%20Instinct%20Erupts%21&prop=wikitext&format=json"
+      ]
+    },
+    {
+      "episodes": [
+        120
+      ],
+      "type": "filler",
+      "note": "T28: zero standing in the source. The episode is Universe 3's offensive — 17 and 18 grinding down Biarra, then Koitsukai, Pancéa and Borareta merging into KOICEARETA and being beaten by Gohan's Kamehameha. ja-WP's entry for コイチアレータ is decisive and independent: 「漫画版には登場しない。」 — the episode's central creation does not exist in the manga. ja-WP also gives ビアラ 「漫画版では戦闘シーンが無いまま脱落していた」 and ボラレータ 「…その後は戦闘シーンが無いまま脱落していた」. fandom agrees from the other side (counterpart field EMPTY in both directions; 'In the manga, they only merged together to become Agnilaza'; 'Biarra is eliminated by Android 18 in the anime and by an unknown warrior in the manga'). In ch 38 Universe 3's entire contribution is one page: Mule panics at Kale, Paparoni fuses straight into Agnilasa, Kale kicks it out, Universe 3 is erased third. AFL 'manga canon' is a 2017-12-17 broadcast label, seven months before ch 38. Carries a `divergence` annotation naming ch 38.",
+      "sources": [
+        "https://dragonball.fandom.com/api.php?action=parse&page=A%20Perfect%20Survival%20Strategy%21%20The%203rd%20Universe%27s%20Menacing%20Assassin%21&prop=wikitext&format=json",
+        "https://ja.wikipedia.org/wiki/%E3%83%89%E3%83%A9%E3%82%B4%E3%83%B3%E3%83%9C%E3%83%BC%E3%83%AB%E8%B6%85%E3%81%AE%E7%99%BB%E5%A0%B4%E4%BA%BA%E7%89%A9",
+        "https://dragonball.fandom.com/api.php?action=parse&page=Universe%206%27s%20Last%20Resort&prop=wikitext&format=json",
+        "https://dragonball.fandom.com/api.php?action=parse&page=All-Out%20War%21%20The%20Ultimate%20Four-Fold%20Union%20vs.%20the%207th%20Universe%27s%20Total%20Offensive%21&prop=wikitext&format=json"
+      ]
+    }
+  ],
+  "structure": {
+    "notes": "=== 1. ROW IDENTITY (checked first, R20/G56) ===\nOUR 131 rows == dragonball.fandom's \"List of Dragon Ball Super episodes\" (131 numbered rows, no x.5) == ja-WP 各話リスト == animefillerlist's 1-131 (AFL live scrape 2026-08-28: 131 parsed rows, no doubled or skipped number). Titles and dates for 77-131 match ours one for one (77 = 2017-02-05 やろうぜ全王様! 宇宙一武道会!!; 131 = 2018-03-25). No shift is possible; every join below is on TITLE.\n\n=== 2. THE SOURCE, ITS CHAPTER SPACE, AND THE MISSING LINK (structure finding, flag #1016) ===\nThe identified source is the Toyotarou/Toriyama DBS MANGA. Its AniList entry is id 86508 (MAL 89734, ドラゴンボール超, MANGA, start 2015-06-20, Story&Art = Toyotarou, Original Creator + Supervisor = Akira Toriyama). AniList reports chapters = null and volumes = null, so the chapter space cannot be filled from AniList; Kanzenshuu's manga guide gives 104 chapters (series on hiatus since the 2025 one-shot).\nROOT CAUSE OF #1016, and it is not a data defect: on AniList the edge between anime 21175 and manga 86508 is relationType = ALTERNATIVE, not ADAPTATION/SOURCE. pickManga only accepts ADAPTATION edges, so it correctly found none. AniList's own graph is asserting the same thing every other source asserts (see §3): neither work adapts the other.\n\n=== 3. DIRECTION (T21) — ONE ANSWER FOR THE WHOLE ARC, FIVE INDEPENDENT SUPPORTS ===\nFor 77-131 the anime does NOT adapt the manga and the manga does NOT adapt the anime. Both are simultaneous realisations of Akira Toriyama's written story outline (ストーリー原案), delivered to each staff as TEXT.\n (a) ja-WP ドラゴンボール超 §漫画版との相違点: 「そのストーリー原案を基にして、テレビシリーズと漫画版それぞれのスタッフが同時進行で作品を制作しているため、大筋の物語の展開は同一だが…どちらか一方のみにしかない場面があるなど、相互に補完する関係性となっている」 — explicitly scoped 「破壊神シャンパ編」以降, i.e. it covers 宇宙サバイバル編.\n (b) ja-WP §宇宙サバイバル編: 「メインとなるストーリーやキャラクターは鳥山の原案が基になっており、アニメスタッフによりディティールアップが加えられている」 (cited to the Dragon Ball official site's 2018-03-09 staff feature).\n (c) Kanzenshuu manga guide: \"While both the manga and TV series are based on the same general story developed by Toriyama, each often go with their own separate take on events; this is in contrast to the development of the original Dragon Ball and Dragon Ball Z TV series, which were nearly direct adaptations of the original Dragon Ball manga series.\"\n (d) THE DATES SETTLE IT MECHANICALLY. Anime 77 aired 2017-02-05; manga ch 27 was published 2017-08-21 — six and a half months LATER. The anime ENDED 2018-03-25; at that date the manga had published through ch 34 (2018-03-20). Chapters 35-42 — Hit vs Jiren, Kefla, Kale's rampage, Ultra Instinct, Jiren's backstory, the finale — were ALL published after the anime finished (35 = 2018-04-20 … 42 = 2018-11-20/21). Not one episode in 77-131 could have adapted its counterpart chapter, and eight of the sixteen chapters postdate the entire series. (Chapter dates: fandom chapter infoboxes AND Kanzenshuu's arc page, which agree except ch 42, 11-20 vs 11-21.)\n (e) ja-WP character notes show the outline flowing to BOTH sides and being expanded differently in each: 「鳥山の最初の原案では［ジレンの］性格の情報が無く、アニメスタッフにより正義のヒーローという設定が提案されたが、鳥山からジレンはしゃべらないキャラクターであることと両親と師匠を殺されたという設定を提示された…」 and 「［トッポの］破壊神候補という設定は鳥山の原案にあったもので、そこからアニメスタッフにより設定が膨らまされた」.\nCONSEQUENCE FOR THE CATALOG: \"canon\" on these rows can only mean \"this episode's content also exists in the source\", never \"this episode adapts chapter N\". A per-row chapter number here is a COUNTERPART, not an adaptation position. (No anchors are proposed — this is the identity lane.)\n\n=== 4. THE ARC TABLE (arc -> episodes -> manga chapters -> direction -> rule) ===\nThe manga's arc is 宇宙サバイバル編 / \"Tournament of Power arc\" = chapters 27-42 (16 chapters, 45 pages each = 720 pp), volumes 5-9, 2017-08-21 -> 2018-11-20/21. Three independent sources agree on the range: dragonball.fandom's Universe Survival Saga infobox (manga chapters = 27-42, anime episodes = 77-131, volumes 5-9); Kanzenshuu's arc page (\"Corresponding: Dragon Ball Super Chapters 27 - 42 (16 chapters)\"); ja-WP's 書誌情報 table (rowspan=16, 其之二十七 修行と日常 そして… through 其之四十二 決着と結末, labelled 宇宙サバイバル編). COMPRESSION: 55 TV episodes (~21 min each) against 16 monthly chapters — roughly 4:1.\n\n  A. Prelude / the Tournament announced .... eps 77-78 .... chs 27-28 .... parallel (anime first by 6.5 months) .... T21 / T26 divergence\n  B. The Zen Exhibition Match ............. eps 79-81 .... chs 28-29 (a DIFFERENT match) .... parallel, substitution .... T27 filler + T26 divergence (RULED, batch 18)\n  C. Goku vs Top, the rules, team-forming . eps 82-83 .... chs 29-30 .... parallel .... canon + divergence\n  D. Recruitment .......................... eps 84-96 .... chs 30-32 .... parallel .... canon, except ruled 89 mixed and 90/91/94/95 filler\n  E. Tournament opening ................... eps 97-104 ... chs 33-36 .... parallel, ~4x expanded .... canon + divergence\n  F. Tournament middle .................... eps 105-121 .. chs 34-39 .... parallel; the manga replaces most of the anime's individual fights with ONE Kale rampage .... canon + divergence, EXCEPT 105 / 113 / 120 which have no counterpart at all\n  G. Endgame (Jiren, Ultra Instinct) ...... eps 122-131 .. chs 39-42 .... parallel; every chapter here was published AFTER the anime ended .... canon + divergence\n\n=== 5. THE PER-EPISODE COUNTERPART MAP (bidirectional, dragonball.fandom) ===\nThe wiki carries the mapping in BOTH directions and the two agree with no exception: each episode page's infobox `Manga =` field, and each chapter page's infobox `episode =` field. Read as counterpart, not adaptation (§3).\n 77->27,28 | 78->28 | 79 EMPTY | 80 EMPTY | 81 EMPTY | 82->29,30 | 83->30 | 84->31 | 85->30,31 | 86->31 | 87->31 | 88->31 | 89->32 | 90 EMPTY | 91->31 | 92->32 | 93->32 | 94->32 | 95->32 | 96->32,33 | 97->33 | 98->34 | 99->34 | 100->37,38 | 101->33,38 | 102->36 | 103->38 | 104->35 | 105 EMPTY | 106->34 | 107->34,39 | 108->34 | 109->35 | 110->35 | 111->35,38 | 112->36,37,38 | 113 EMPTY | 114->37,38 | 115->36 | 116->39 | 117->36 | 118->38,39 | 119->36 | 120 EMPTY | 121->38 | 122->39,40 | 123->39,40 | 124->39,40,42 | 125->40 | 126->40 | 127->40,41 | 128->40,42 | 129->41 | 130->41,42 | 131->42\nNOTE THE NON-MONOTONICITY: ep 100 -> 37-38 while ep 104 -> 35 and ep 115 -> 36. The manga does not run the tournament in the anime's order (Kale's rampage is early and does most of the eliminating; Kefla fights Gohan, not Goku; Ultra Instinct arrives from Kaioken exhaustion, not from Kefla). Any future anchoring lane must treat this as a reorder, not a defect.\nSEVEN ROWS HAVE AN EMPTY FIELD IN BOTH DIRECTIONS: 79, 80, 81, 90 (all already typed filler, batch 18) and 105, 113, 120 (stored canon). That is the wiki's own systematic screen, and it lands exactly on the four already-ruled rows plus three.\n\n=== 6. THE THREE ZERO-STANDING ROWS (type_corrections, T28) ===\n ep 105 \"A Valiant Fight! Master Roshi's Blaze of Glory!\" — the whole episode is Master Roshi sweeping three Universe 4 fighters (Caway, Dercori via the Evil Containment Wave, Ganos via a Max-Power Kamehameha) and collapsing. In the manga NONE of it happens: fandom's Differences list gives all five points (Caway eliminated by an unknown warrior; Dercori and Ganos by Kale; \"Master Roshi never uses his Max Power state in the manga\"; Ganos never transforms), and ja-WP's character page says the same independently — キャウェイ「漫画版では戦闘シーンが無いまま脱落していた」, ダーコリ「漫画版では札術は使わず通常格闘のみ…侮っていたケールから強烈な反撃を食らい返り討ちにされた」, ガノス「漫画版では暴走したケールに太刀打ちできずにシャンツァと共に落とされた」. Roshi himself is still competing in ch 39 (listed among the twelve remaining fighters at 15 minutes left) and a Pride Trooper is eliminated BY him there (ja-WP: 「残りの宇宙が第7宇宙と第11宇宙だけになった時も生き残っていたが、亀仙人に攻撃が全く通用せず落とされた」). Zero standing -> filler; the tie is a substitution, so `divergence` naming chs 38-40.\n ep 113 \"With Great Joy! The Fighting Freak Saiyans' Battle Rejoined!\" — the whole episode is Goku vs Caulifla (and then Kale joining in), ending on Kale going Legendary. fandom: \"Goku never fought Caulifla in the manga\", \"Caulifla transforming into a Super Saiyan 2 is an occurrence that only happens in the anime\", \"Goku never transforms into a Super Saiyan 3 in the Tournament of Power in the manga\" (repeated on 114 and 116). ja-WP independently: カリフラ's manga account is Cabba, then Frieza — 「第6宇宙のサイヤ人を執拗に狙うフリーザに超サイヤ人となって善戦するが、ゴールデンフリーザ相手には手も足も出ずに痛めつけられた」 — and ケフラ「その後は悟飯と戦い、相打ちとなる形で脱落した」. Kale's awakening in the manga is triggered by Frieza, in ch 37. Zero standing -> filler + `divergence` naming ch 37.\n ep 120 \"A Perfect Survival Strategy! The 3rd Universe's Menacing Assassin!\" — the episode's whole plot is Universe 3's offensive: 17/18 vs Biarra, then Koitsukai + Pancéa + Borareta merging into KOICEARETA and fighting Gohan, Goku and Vegeta. ja-WP's entry for コイチアレータ ends with four words: 「漫画版には登場しない。」 — the episode's central entity does not exist in the manga. ja-WP also gives ビアラ「漫画版では戦闘シーンが無いまま脱落していた」 and ボラレータ「…その後は戦闘シーンが無いまま脱落していた」. fandom's Differences say the same from the other side (\"In the manga, they only merged together to become Agnilaza\"; \"Biarra is eliminated by Android 18 in the anime and by an unknown warrior in the manga\") and the counterpart field is empty in both directions. Zero standing -> filler + `divergence` naming ch 38.\nAFL calls all three \"manga canon\" — but AFL typed them as they AIRED (2017-08-27 / 2017-10-29 / 2017-12-17), between eight and eleven months before chs 37-38 were published (2018-06-21 / 2018-07-21). Its label on this arc cannot be a claim about the manga's content, and batch 18 already overrode AFL on 79-81/90/91/94/95. AFL is cross-check only here.\n\n=== 7. WHAT I DID NOT RETYPE, AND WHY (the T28 border) ===\nThe tournament rows differ from the manga on almost every page — but \"different\" is `divergence` on a canon row, not filler. My screen was: does the EPISODE'S JOB happen in the source at all? 105/113/120 fail it outright. Seven rows sit close to the line and are in flags_for_sean rather than in type_corrections, because on each of them the source does carry the episode's outcome, only staged differently: 87 (17 joins after the poacher business — ch 31 has both, compressed), 88 (the Gohan/Piccolo training: the manga has it happen but \"it was never shown\", and ch 39 leans on its result), 106 (Tien's elimination and the invisible fighter's unmasking both occur, by different hands), 121 (Agnilasa is formed and Universe 3 is erased in ch 38 — but by ONE Kale kick, not by a five-on-one battle), 124/125/126 (Gohan, Dyspo and Top are all eliminated in ch 40/42, but Top's God-of-Destruction Mode \"is never seen or mentioned in the manga\" and Top and Dyspo go out together when Jiren refuses to save them).\n\n=== 8. NO `retconned`, NO `side_source`, NO `adopted` IN THIS RANGE ===\n`retconned` needs the source's version to OVERWRITE the anime's; nothing here does. Both realisations stand and both continue past ep 131 — the manga runs on into the Galactic Patrol Prisoner arc (ch 43+) and the 2018 film Dragon Ball Super: Broly proceeds from the anime's ending. `side_source` is a batch-19 fact confined to eps 18-27 (the Resurrection 'F' film); no other licensed work is realised in 77-131. `adopted{author}` would need Toyotarou or Toriyama writing the ANIME-original material's events into the manga: they did not — the manga's Zen Expo, its Roshi, its Caulifla and its Universe 3 are all different, which is the opposite of incorporation.",
+    "order_only": []
+  },
+  "flags_for_sean": [
+    "THE STANDING QUESTION THIS ARC ACTUALLY POSES, AND MY RECOMMENDATION. For 77-131 the manga is not the anime's source in any temporal sense — every chapter postdates its episode, and half the arc's chapters postdate the whole series (§3). Under the letter of T27 ('canon = adheres to the source') a reader could argue that NOTHING here adapts anything, so nothing here is canon. I recommend against that reading and in favour of the practice batch 18 already established on this series: type each row by whether its content EXISTS in the manga, because the reader instrument is a chapter position and a user told 'filler' would skip the Tournament of Power. What I do ask you to rule once, in words, is the UI consequence: on this series a per-row chapter number is a COUNTERPART, not an adaptation position, and the surface should not say 'adapts chapter N'. The same ruling governs eps 28-76 (Champa and Future Trunks) — ja-WP's 同時進行 statement is scoped 「破壊神シャンパ編」以降 — which is the open question batch 19's flag 5 left behind.",
+    "STRUCTURE / OPEN FLAG #1016 — the missing manga link, and why it is not a bug. The manga is AniList id 86508 (MAL 89734, ドラゴンボール超, Story & Art Toyotarou, Original Creator + Supervisor Akira Toriyama, start 2015-06-20). pickManga found no ADAPTATION edge because AniList types the 21175 <-> 86508 relation as ALTERNATIVE — AniList's graph is agreeing with ja-WP and Kanzenshuu that neither work adapts the other. If you link it, link it manually and record the direction; do NOT relax pickManga's ADAPTATION filter to catch it, because ALTERNATIVE edges elsewhere point at remakes and spin-offs. Note also that AniList reports chapters = null and volumes = null for 86508, so the chapter space would still be empty after linking; Kanzenshuu's manga guide gives 104 chapters (hiatus since the 2025 one-shot) and the Universe Survival arc as 27-42 across volumes 5-9.",
+    "THE T28 BORDER — SEVEN ROWS I DID NOT RETYPE, FOR YOU TO RULE THE BAR ON ONCE. My screen was 'does the episode's JOB happen in the source at all', which 105/113/120 fail outright. These seven pass only on outcome, and a stricter bar — the one you applied to 91/94/95, where an episode with one restaged scene became filler — would move several of them: ep 87 (canon) the whole poacher-spaceship raid is anime-only, but ch 31 does have Goku helping 17 clear the island's poachers and 17 then agreeing to join; ep 88 (canon) is the closest call in the range — fandom says 'Though Gohan did still train with Piccolo prior to the Tournament in the manga, it was NEVER SHOWN', and Cabba's visit to Renso 'was never seen or mentioned in the manga', so the episode dramatises an event the source only implies, which is precisely the 94/95 shape you ruled filler; ch 39 does lean on the training's result ('in the brief period of their training, Gohan has regained his sense of battle'); ep 106 (canon) the sniper hunt is anime-only; Tien's elimination and the invisible fighter's unmasking both occur in the source but by different hands (Frost eliminates Tien; 17 locates Damon by hearing); ep 121 (canon) Agnilasa fights all of Universe 7 for a full episode; in ch 38 Kale kicks the fusion off in one blow — if you retype it, the mandatory tie is loose_parallel {38}; eps 124/125/126 (canon) Gohan, Dyspo and Top are all eliminated in the source too, but Top's God of Destruction Mode 'is never seen or mentioned in the manga' and in ch 40 Top and Dyspo go out together when Jiren refuses to save them from a breaking rock. Rule the bar and I will apply it uniformly rather than row by row.",
+    "AFL IS NOT A WITNESS ON THIS ARC AND THE DATES PROVE IT. AFL prints 'manga canon' on 105, 113 and 120 (and on every tournament row). Those episodes aired 2017-08-27, 2017-10-29 and 2017-12-17; their supposed counterpart chapters 37 and 38 were published 2018-06-21 and 2018-07-21. AFL's label cannot have been a claim about the manga's content when it was written. Its 'anime canon' rows in this range (78-81, 90, 91, 94, 95) do track the Toei-invented recruitment episodes and batch 18 already used them; its tournament-block labels are a blanket. AFG is a copy of AFL's type column on this series and is not a second source.",
+    "NO RETCON, NO SIDE_SOURCE, NO ADOPTION IN 77-131 — stated because the ask names all three. Nothing in the manga overwrites the anime: both realisations stand, the manga continues into the Galactic Patrol Prisoner arc from ch 43 and the 2018 film Dragon Ball Super: Broly proceeds from the anime's ending, so `retconned` has no subject here. `side_source` remains confined to the batch-19 block 18-27 (the Resurrection 'F' film); no licensed work other than the manga is realised in this range. `adopted{author}` would require Toyotarou or Toriyama writing the ANIME-original material's events into the manga line — they did the opposite: the manga's Zen Expo, its Master Roshi, its Caulifla and its Universe 3 are all different, and ja-WP records the outline flowing OUT to both staffs (Jiren's murdered-master backstory to both; the justice-hero setting invented by the anime staff and moved to Toppo) rather than back in from the anime.",
+    "ANCHORS ARE OUT OF SCOPE THIS WAVE (your pin) BUT THE GROUND IS NOW MAPPED, AND IT IS HOSTILE. The bidirectional counterpart map in structure §5 could in principle carry a per-row number for 45 canon/mixed rows, and the stored ep 131 -> 42 (afg-continua) is consistent with ch 42 ending the arc. Two reasons to think hard before any anchoring lane runs here: (a) a counterpart is not an adaptation, so an anchor would assert something the sources deny; (b) the map is badly non-monotonic — ep 100 -> chs 37-38 while ep 104 -> ch 35 and ep 115 -> ch 36 — because the manga runs the tournament in a different order. If you do want positions, the honest instrument is probably block-level (77-96 -> 27-32, 97-131 -> 33-42) plus the post-series continue at ch 43, not a per-episode END.",
+    "ONE SMALL DATE CONFLICT, RECORDED FOR COMPLETENESS: dragonball.fandom's ch 42 infobox gives release 2018-11-20; Kanzenshuu's arc page gives 21 November 2018. Every other chapter date in 27-42 agrees between the two sources. Nothing in this verdict turns on it — both are after the anime's 2018-03-25 finale."
+  ]
+}
