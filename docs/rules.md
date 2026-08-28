@@ -1553,7 +1553,7 @@ Wikipedia fractional episode numbers (35.5, 13.5, 0.5) are the community notatio
 
 ### N11 · Source numbering translation (the Ryuusui lesson)
 
-Every per-episode source lives in its OWN numbering space. A watch-order entry a source NUMBERS but our community count holds order-only shifts every later row — titles AND types — so SOURCE_NUMBERING_SHIFTS declares drop + shift per series and filterEpisodeRows translates for EVERY episode writer: the insert's own row drops (it exists as a component, never an episode) and source n ≥ from maps to n + offset. A rule that moves numbering must prove nothing broke: outcome-side, no two adjacent rows share a non-empty title and the run is contiguous 1..max.
+Every per-episode source lives in its OWN numbering space. A watch-order entry a source NUMBERS but our community count holds order-only shifts every later row — titles AND types — so SOURCE_NUMBERING_SHIFTS declares drop + shift per series and filterEpisodeRows translates for EVERY episode writer: the insert's own row drops (it exists as a component, never an episode) and source n ≥ from maps to n + offset. A rule that moves numbering must prove nothing broke: outcome-side, no two adjacent rows share a non-empty title and the run is contiguous 1..max. THIRD FORM (batch 20 wave 3, 2026-08-27, shugo-chara): `resort {from, to, start}` — when a source's numbers inside a span are wrong AS A SEQUENCE (a skipped number, a doubled number, transposed pairs) the span's rows are renumbered by POSITION in a stable air-date order (applyNumberingShift, pure; resort → collapse exact same-number+type duplicates keeping the first → drop → shifts). The AFL parser keeps duplicate-number rows so a resort can see both (the doubled '96' was a swallowed episode); translateEpisodeNumber refuses a bare number inside a resort span. A renumber verdict is the per-row identity table; the apply re-keys anchors and annotations old → true in the same motion.
 
 *Why:* AFL numbered Ryuusui as dr-stone ep 36; our eps 36-58 were +1 poisoned in title and type. Sean 2026-08-23: rules that move numbering must prove nothing broke.
 
@@ -2963,7 +2963,7 @@ A research-ruled episode air date (2+ cited sources) lives ONLY in AIR_DATE_OVER
 
 *Why:* AFL inherits date errors: fist-of-the-north-star carried six wrong dates (ep 108 wore ep 112's) and ranma-1-2 ep 153 wore ep 158's, which faked an order deviation in the batch-17 re-anchor. First /add-rule exercise (2026-08-26): 7 cited rows; kinnikuman 90-119 / 38 / 87 and railgun ep 14 are dateless claims → batch-18 narrow task.
 
-- ruled Sean 2026-08-25 (docs/system-evolution.md "Air-date override pass" (Sean's go); restructure T3.1)
+- ruled Sean 2026-08-25 (docs/system-evolution.md "Air-date override pass" (Sean's go); restructure T3.1 Per-episode ruling maps (dates, titles, types) MERGE entries for the same series per key — toMergedRecord, 2026-08-27: a batch may rule new rows on an already-ruled series, and a last-wins record silently dropped the earlier entry (golden-kamuy 45/46 vs 25-44; the healer count of ruled rows checked is the outcome check).)
 - layer **writer**
 - enforced: [lib/rulings/air-dates.ts#AIR_DATE_OVERRIDES](../scripts/ingest/lib/rulings/air-dates.ts) · [lib/rulings/episode-titles.ts#EPISODE_TITLE_OVERRIDES](../scripts/ingest/lib/rulings/episode-titles.ts) · [lib/resolve.ts#filterEpisodeRows](../scripts/ingest/lib/resolve.ts) · [assert-overrides.ts#main](../scripts/ingest/assert-overrides.ts)
 - audit: `ruling_violation`

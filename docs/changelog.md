@@ -607,6 +607,45 @@
    durable guard. Lesson for the floor rule: a >2 overshoot sourced from a
    SINGLE chart row with no corroborating content anywhere is a typo
    candidate, not an adoption candidate.
+83. ✅ **CONSOLIDATE DEEP after batch 20 wave 3 (2026-08-27; P21 — three
+   enforcement sites changed: the N11 `resort` form + `applyNumberingShift`
+   on the AFL write path, the AFL parser keeping duplicate-number rows, and
+   `toMergedRecord` for the title/date maps).** Steps 0-8 satisfied by
+   §12.82's save point (system census green, edges current, heal + census
+   run, gates green). Rescan (step 9): (a) shugo-chara after the renumber —
+   the batch-17 `rearranged {28 after 29}` fact (now on row 74) was a
+   NUMBERING artefact (74 → 28 precedes 75 → 29 in true numbering) → retired
+   by ruling (A45, the healer removed 1 row); the batch-17 A18 reorder-regime
+   reason amended — the rows-73-96 divergence was the AFL bug, the regime
+   now rests on the genuine Doki-era revisits (97 rearranged {32}, 98 graft
+   {34}); anchors 74-80 monotone; 127 rows = total. (b) Stale cleanup (P24):
+   flags #1039 (solo-leveling continua vs the manual 110 — explained) and
+   #1040 (FotNS edition — #688's twin) dismissed; #845 (x frontier), #1035
+   (rosario frontier), #890 / #956 / #958 (batch 14/17 notes), #1028 (TBATE
+   no manga link, a standing marker) stay open on their merits. (c)
+   permanence_violation 0; the retiresWhen worklist unchanged. Census after
+   the deep: display 219/0; ruling_violation 0; nonmonotonic 0; airdate_
+   regression 0; anchor_gap_research 7; anchor_volume_mismatch 20 (the
+   review queue). CAPTURE (P29, step 10): eight wave-3 traps → research-
+   agent.md (mirror-wiki aliases via siteinfo; a task premise is a claim;
+   web-short contamination is a block; the syobocal rule — earliest airing
+   per Count without 再, the ghost-row trap struck; a renumber verdict is the
+   identity table; a doubled AFL number is a swallowed episode; MU remake
+   segments; a finale's source share can be a coda); two → apply-batch (the
+   merge builder + the assert counts as the outcome check; re-key after a
+   renumber, the resort on the write path); the ledger: N11's statement
+   gains the third form (resort by date-ordered position; the parser stays
+   faithful; translateEpisodeNumber refuses a resort span; the identity
+   table + re-key), G53's statement gains the merge rule. QUEUED for Sean:
+   the per-series MU segment rulings /add-rule (10 unresolved strings + the
+   in-window-Movie gap, FotNS witness); healer-on-regime (a dry-run list
+   first); the chapter-count ceiling map; the day-of-week class (49 series
+   / 252 rows probed); the review queues (anchor_volume_mismatch 20; shugo
+   82-96 typing — the canon-typed divergence block; TBATE 13-22; TMM 38 →
+   20 [19]; FotNS 29-56 + ep 29's date; the two annotation-text refinements
+   from kinnikuman / eyeshield). NEXT: Sean's choice — waves 4-5 (dai ×3,
+   FotNS 29-56, DBS identity; L-D in eights), a review queue, or an
+   /add-rule.
 82. ✅ **BATCH 20 WAVE 3 APPLIED — narrow follow-ups, numbering & dates
    (2026-08-27; Sean's eleven rulings as written, Cursor concurring).**
    Research (8 verdicts, ≈1.53M) → verify (8 reports, ≈1.13M; nothing

@@ -17,6 +17,16 @@ export type RetiredAnnotation = { episodes: number[]; kind: AnnotationKind };
 
 export const ENTRIES: RulingEntry<RetiredAnnotation>[] = [
   {
+    seriesId: 'shugo-chara',
+    ruleId: 'A45',
+    value: { episodes: [74], kind: 'rearranged' },
+    reason:
+      "The batch-17 'rearranged {28-28 after 29}' fact (stored on old row 76, re-keyed to 74 by the N11 resort 2026-08-27) was a NUMBERING artefact, not an anime reorder: AFL had transposed its 75/76, so White Day (ch 28) appeared to follow Utau's visit (ch 29). In true numbering 74 = White Day = ch 28 precedes 75 = ch 29 — the stored anchors are monotone (74 → 28, 75 → 29, 76 → 30). The verifier (batch 20 wave 3) named it; retired at the deep (P23).",
+    ruledBy: 'Sean',
+    ruledOn: '2026-08-27',
+    cite: ['scripts/ingest/research/batch20/out/airdates/shugo-chara.json', 'scripts/ingest/research/batch20/verify/shugo-chara.md', 'docs/changelog.md §12.82'],
+  },
+  {
     seriesId: 'claymore',
     ruleId: 'A45',
     value: { episodes: [21, 22, 23], kind: 'loose_parallel' },

@@ -874,7 +874,7 @@ export const RULES: Rule[] = [
     why: 'AFL inherits date errors: fist-of-the-north-star carried six wrong dates (ep 108 wore ep 112\'s) and ranma-1-2 ep 153 wore ep 158\'s, which faked an order deviation in the batch-17 re-anchor. First /add-rule exercise (2026-08-26): 7 cited rows; kinnikuman 90-119 / 38 / 87 and railgun ep 14 are dateless claims → batch-18 narrow task.',
     ruledBy: 'Sean',
     ruledOn: '2026-08-25',
-    origin: 'docs/system-evolution.md "Air-date override pass" (Sean\'s go); restructure T3.1',
+    origin: 'docs/system-evolution.md "Air-date override pass" (Sean\'s go); restructure T3.1 Per-episode ruling maps (dates, titles, types) MERGE entries for the same series per key — toMergedRecord, 2026-08-27: a batch may rule new rows on an already-ruled series, and a last-wins record silently dropped the earlier entry (golden-kamuy 45/46 vs 25-44; the healer count of ruled rows checked is the outcome check).',
     enforcement: [
       { path: 'scripts/ingest/lib/rulings/air-dates.ts', symbol: 'AIR_DATE_OVERRIDES' },
       { path: 'scripts/ingest/lib/rulings/episode-titles.ts', symbol: 'EPISODE_TITLE_OVERRIDES' },
