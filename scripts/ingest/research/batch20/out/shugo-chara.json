@@ -1,0 +1,232 @@
+{
+  "series_id": "shugo-chara",
+  "summary": "TYPING PASS on rows 82-96 in OUR CURRENT (post-N11-resort) numbering, joined on JP title + air date, never on AFL's numbers. Every one of these fifteen rows sits inside the anime-original Lulu de Morcerf / ナゾたま (?-egg) stretch that the anime inserted INSIDE the ch-32 split: ep 80 animates ch 31 + the first part of ch 32, and ch 32's remainder does not resume until ep 97 (fence intact, both directions on shugochara.fandom). ja-WP's 各話リスト marks episodes with '☆' = ほぼ全編アニメオリジナルエピソード, and it marks 82-90 and 93-96 (as well as 81) — thirteen of my fifteen rows; the two unmarked rows, 91 and 92, are the Rhythm / Beat Jumper pair. ja-WP's own per-character comparison (ガーディアン (しゅごキャラ!)) states the manga hatches Rhythm during the Ikuto-rescue arc (ch 34) and that 'アニメ版ではリズムの誕生の時期がこれより早く変更されている' — the anime moved the hatch EARLIER, and Pony Canyon's official per-episode synopses plus Bandai Channel put that hatch in ep 91, with ep 92 showing an already-born Rhythm. So ep 91 is one transplanted beat of ch 34 (the hatch, the childhood-basketball memory, the Beat Jumper debut, Beat Dunk) restaged inside a wholly original plot (an exhibition game, the anime-only 'Urban Street' kids, Kukai's visit, an Easter luring machine), while ch 34's own narrative — Nobuko Saeki, Rima learning the Nadeshiko secret, Temari's re-hatch, Yamato Maihime, Queen's Waltz — is delivered intact at ep 98, which is already anchored {33-34}. Under T28 that is FILLER + a mandatory graft tie, not mixed, and no anchor is issued anywhere in 82-96: anchoring ep 91 to ch 34 would place a reader four chapters ahead of the anime's own frontier (ch 32 first part) and spoil ch 32-33, which the anime has not yet shown. Result: twelve type corrections canon -> filler (83, 86-96), confirmation of the three rows already typed filler (82, 84, 85), the divergence block restated with a corrected span and wording, and the stored graft {34} moved from ep 92 to ep 91 with ep 92 downgraded to loose_parallel (re-use of an already-grafted chara-nari). AFL is the provenance of the wrong types: its live page prints 'manga_canon' on every row of this block except three.",
+  "anchors": [],
+  "continue_points": [
+    {
+      "episode": 80,
+      "continue_chapter": 32,
+      "kind": "parity",
+      "note": "C1 (optional, not part of the ask — Sean may drop it): ep 80 ends INSIDE ch 32 (it animates ch 31 + ch 32's first part) and the next sixteen episodes (81-96) adapt nothing at all, so a reader who has watched through ep 96 is still positioned in ch 32; the anime resumes ch 32's remainder at ep 97. Stored data carries no continue on ep 80 today, which leaves the whole original stretch without a reader instruction. Do NOT read past ch 32 before ep 97.",
+      "sources": [
+        "https://shugochara.fandom.com/api.php?action=parse&page=Shugo_Chara!_Episode_080&prop=wikitext&format=json",
+        "https://shugochara.fandom.com/api.php?action=parse&page=Chapter_32&prop=wikitext&format=json",
+        "https://shugochara.fandom.com/api.php?action=parse&page=Shugo_Chara!_Episode_097&prop=wikitext&format=json"
+      ]
+    }
+  ],
+  "anchor_hostile": [
+    {
+      "episode": 91,
+      "why": "A44 / T28 — position-less. Ep 91 ('全開！僕のリズム', 2009-07-11) does carry FIRST-TIME pages of ch 34 (Rhythm hatches, Nagihiko's childhood-basketball memory, the Beat Jumper debut and Beat Dunk), but they are one transplanted beat restaged inside an anime-original episode: the exhibition game, the anime-only 'Urban Street' children, Kukai's visit and Easter's new X-egg luring machine are nowhere in the manga, and ch 34's own narrative (Nobuko Saeki, Rima learning the Nadeshiko secret, Temari's re-hatch, Yamato Maihime, Queen's Waltz) is animated intact at ep 98, which is anchored {33-34}. ja-WP's character comparison says outright that the anime moved Rhythm's birth earlier than the manga's placement. An anchor here would tell a reader at ep 91 that they are at ch 34 while the anime has not yet animated ch 32's remainder or ch 33 (both arrive at ep 97) — a false position. Tie delivered as graft {34} instead (A1/A31: re-use and relocation never move position).",
+      "sources": [
+        "https://ja.wikipedia.org/wiki/%E3%82%AC%E3%83%BC%E3%83%87%E3%82%A3%E3%82%A2%E3%83%B3_(%E3%81%97%E3%82%85%E3%81%94%E3%82%AD%E3%83%A3%E3%83%A9!)",
+        "https://www.ponican.jp/shugo-chara/story/91.html",
+        "https://shugochara.fandom.com/api.php?action=parse&page=Chapter_34&prop=wikitext&format=json",
+        "https://shugochara.fandom.com/api.php?action=parse&page=Rhythm&prop=wikitext&format=json"
+      ]
+    },
+    {
+      "episode": 92,
+      "why": "A44 / A31 — position-less. Ep 92 ('クールに決めろ！ビートジャンパー！', 2009-07-18) shows an ALREADY-born Rhythm character-changing Nagihiko and Beat Jumper being used again (Pony Canyon: '新しく生まれたなぎひこのしゅごキャラ＝リズムはガーディアンでも人気！') — re-use of the chara-nari grafted one week earlier, not first-time source pages. Its other thread, Amu meeting the mysterious boy (Hikaru) in town, is the anime's own re-staging of a character ja-WP says was 大幅に改変 relative to the manga's Gozen, and no source ties it to a chapter. shugochara.fandom's 'chapter = 34' on this page (and ch 34's reverse link to ep 92) is a title-match artefact: the hatch that ch 34 actually contains is in ep 91, and the wiki's own Rhythm page says 'He hatches in Episode 91'.",
+      "sources": [
+        "https://www.ponican.jp/shugo-chara/story/92.html",
+        "https://shugochara.fandom.com/api.php?action=parse&page=Rhythm&prop=wikitext&format=json",
+        "https://ja.wikipedia.org/wiki/%E3%81%97%E3%82%85%E3%81%94%E3%82%AD%E3%83%A3%E3%83%A9!"
+      ]
+    }
+  ],
+  "annotations": [
+    {
+      "episodes": [82, 83, 84, 85, 86, 87, 88, 89, 90, 93, 94, 95, 96],
+      "kind": "divergence",
+      "chapters": "none (inside the ch 32 split — 32's remainder resumes at ep 97)",
+      "note": "Mandatory tie for the filler rows of the Lulu / ナゾたま stretch. These thirteen rows adapt NO manga pages: the antagonist (ルル・ド・モルセール), her ジュエリー and the ナゾたま are all labelled アニメオリジナル by ja-WP, and ja-WP's 各話リスト marks every one of them '☆' (ほぼ全編アニメオリジナルエピソード). The block sits INSIDE the ch-32 split, not between ch 32 and ch 33 — this refines the stored 'divergence {none (between 32 and 33)}' wording, which was keyed to the pre-resort rows 86-96 and did not cover 82-85. Rows 85 and 86 are additionally a tie-in: ja-WP notes they are the character-introduction / prequel content for the Nintendo DS game 「ノリノリ!キャラなりズム♪」, i.e. anime-first material, not an adaptation of anything (no side_source)."
+    },
+    {
+      "episodes": [91],
+      "kind": "graft",
+      "chapters": "34",
+      "note": "Ch 34's Rhythm-hatch beat (the second egg cracking, the childhood-basketball memory, the Beat Jumper transformation, Beat Dunk) transplanted early into an anime-original basketball episode; ja-WP: 'アニメ版ではリズムの誕生の時期がこれより早く変更されている'. Ch 34's own narrative arrives at ep 98 (anchored {33-34}). This REPLACES the stored graft-{34} keying on ep 92."
+    },
+    {
+      "episodes": [92],
+      "kind": "loose_parallel",
+      "chapters": "34",
+      "note": "Beat Jumper / Rhythm re-used a week after the ep-91 graft, with no first-time ch-34 pages: the episode's own plot is Rhythm's unauthorised character changes and Amu's first street meeting with the boy who will be revealed as Hikaru — the anime's own altered handling of the manga's Gozen (ja-WP: 原作での御前であるひかるの存在が大幅に改変されている). shugochara.fandom's chapter=34 field here is a title match, not an adaptation claim."
+    }
+  ],
+  "repairs": [
+    {
+      "episode": 91,
+      "field": "annotation_episodes",
+      "old": "graft {34} on eps [92, 98]",
+      "new": "graft {34} on eps [91, 98]",
+      "why": "The batch-17 fact placed Nagihiko's Beat Jumper debut on the episode TITLED 'It's Got to Be Cool! Beat Jumper!' (our row 92). The debut is one episode earlier: Pony Canyon's official synopsis for 第91話 has Nagihiko's second egg starting to move and Amu saying a Guardian Character is about to be born, and Bandai Channel prints the same text for Doki #40 = 第91話; the 第92話 synopsis opens with Rhythm ALREADY born ('新しく生まれた…リズム'). shugochara.fandom's own Rhythm page states 'He hatches in Episode 91'. Ep 98 stays in the fact-block as the row that covers ch 34 properly.",
+      "sources": [
+        "https://www.ponican.jp/shugo-chara/story/91.html",
+        "https://www.ponican.jp/shugo-chara/story/92.html",
+        "https://www.b-ch.com/titles/7242/040",
+        "https://shugochara.fandom.com/api.php?action=parse&page=Rhythm&prop=wikitext&format=json"
+      ]
+    },
+    {
+      "episode": 92,
+      "field": "annotation_kind",
+      "old": "graft {34}",
+      "new": "loose_parallel {34}",
+      "why": "With the graft moved to ep 91, ep 92's only tie to ch 34 is the continued USE of the Beat Jumper chara-nari (A31: re-use never anchors and is not a graft of first-time pages). Delivered as loose_parallel so the row still carries the mandatory tie required of a filler row.",
+      "sources": [
+        "https://www.ponican.jp/shugo-chara/story/92.html",
+        "https://shugochara.fandom.com/api.php?action=parse&page=Shugo_Chara!_Episode_092&prop=wikitext&format=json"
+      ]
+    },
+    {
+      "episode": 82,
+      "field": "annotation_episodes",
+      "old": "divergence {none (between 32 and 33)} on 10 rows (86-96 minus 95)",
+      "new": "divergence {none (inside the ch 32 split — 32's remainder resumes at ep 97)} on 82, 83, 84, 85, 86, 87, 88, 89, 90, 93, 94, 95, 96",
+      "why": "Two changes, both evidence-driven. (a) SPAN: the stored block starts at 86, but rows 82-85 are the same anime-original stretch (ja-WP marks 82, 83, 84, 85 '☆' exactly as it marks 86-90/93-96), and the newly inserted row 95 ('りまとやや、真珠の絆！', 2009-08-08 — the episode the AFL duplicate-96 defect had lost) belongs in the block too; rows 91/92 leave the block because they carry the ch-34 graft tie. (b) WORDING: the run does not sit 'between 32 and 33' — ep 80 stops mid-ch-32 and ep 97 resumes ch 32's remainder, so the block sits INSIDE the ch-32 split (this is the same fact the stored 'eps 80,97 rearranged {32}' annotation records).",
+      "sources": [
+        "https://ja.wikipedia.org/wiki/%E3%81%97%E3%82%85%E3%81%94%E3%82%AD%E3%83%A3%E3%83%A9!",
+        "https://shugochara.fandom.com/api.php?action=parse&page=Chapter_32&prop=wikitext&format=json",
+        "https://www.ponican.jp/shugo-chara/story/95.html"
+      ]
+    }
+  ],
+  "type_corrections": [
+    {
+      "episodes": [83],
+      "type": "filler",
+      "note": "'すれちがいの音楽博覧会？' (2009-05-16). ja-WP 各話リスト marks 第83話 '☆' = ほぼ全編アニメオリジナル. Pony Canyon's official synopsis: Lulu, worried Easter's violin plan is working, has Nana infiltrate Easter; Lulu frees Ikuto and turns a child's egg into a ナゾたま (Dancing Dream) at the music fair. Lulu, her ジュエリー and the ナゾたま are all アニメオリジナル per ja-WP's 用語 section; shugochara.fandom's episode page carries no chapter field and no manga chapter page lists ep 83. Stored type canon comes from AFL, which prints 'manga_canon' on this row (its no. 83).",
+      "sources": [
+        "https://ja.wikipedia.org/wiki/%E3%81%97%E3%82%85%E3%81%94%E3%82%AD%E3%83%A3%E3%83%A9!",
+        "https://www.ponican.jp/shugo-chara/story/83.html",
+        "https://shugochara.fandom.com/api.php?action=parse&page=Shugo_Chara!_Episode_083&prop=wikitext&format=json"
+      ]
+    },
+    {
+      "episodes": [86],
+      "type": "filler",
+      "note": "'響け歌声！あの日のあたしに!!' (2009-06-06). ja-WP '☆', and ja-WP's own footnote says 85/86 are the character-introduction / 前日談 content for the DS game 「ノリノリ!キャラなりズム♪」 — anime-first material with no manga counterpart (Yua Sakurai and her chara Cecil exist in no chapter). Official synopsis: Yua's ナゾたま battle. No chapter field on the fandom episode page; no chapter page lists it.",
+      "sources": [
+        "https://ja.wikipedia.org/wiki/%E3%81%97%E3%82%85%E3%81%94%E3%82%AD%E3%83%A3%E3%83%A9!",
+        "https://www.ponican.jp/shugo-chara/story/86.html",
+        "https://shugochara.fandom.com/api.php?action=parse&page=Shugo_Chara!_Episode_086&prop=wikitext&format=json"
+      ]
+    },
+    {
+      "episodes": [87],
+      "type": "filler",
+      "note": "'ナナを救え！しゅごキャラナース出動？' (2009-06-13). ja-WP '☆'. Official synopsis: Nana (an anime-original Guardian Character belonging to the anime-original Lulu) falls ill and Amu's charas nurse her at Lulu's house. Nothing in the manga has Nana or Lulu. Fandom episode page: no chapter field.",
+      "sources": [
+        "https://ja.wikipedia.org/wiki/%E3%81%97%E3%82%85%E3%81%94%E3%82%AD%E3%83%A3%E3%83%A9!",
+        "https://www.ponican.jp/shugo-chara/story/87.html",
+        "https://shugochara.fandom.com/api.php?action=parse&page=Shugo_Chara!_Episode_087&prop=wikitext&format=json"
+      ]
+    },
+    {
+      "episodes": [88],
+      "type": "filler",
+      "note": "'激突！ナゾたま大暴走!!' (2009-06-20). ja-WP '☆'. Official synopsis: Amu learns Lulu has been extracting ナゾたま; Lulu's motive (her mother's film career) and the mass ナゾたま extraction are the anime's own antagonist plot — ja-WP labels ナゾたま and the ジュエリー アニメオリジナル outright. No chapter field, no chapter page reference.",
+      "sources": [
+        "https://ja.wikipedia.org/wiki/%E3%81%97%E3%82%85%E3%81%94%E3%82%AD%E3%83%A3%E3%83%A9!",
+        "https://www.ponican.jp/shugo-chara/story/88.html",
+        "https://shugochara.fandom.com/api.php?action=parse&page=Shugo_Chara!_Episode_088&prop=wikitext&format=json"
+      ]
+    },
+    {
+      "episodes": [89],
+      "type": "filler",
+      "note": "'心、わかりあえて。' (2009-06-27). ja-WP '☆'. The Lulu arc's RESOLUTION — Lulu's giant ナゾたま battle, Dream Dream, Nana's rebirth, Lulu leaving for France. The antagonist and the resolution are both anime-original (the batch-17 divergence fact says the same); no chapter page lists this episode.",
+      "sources": [
+        "https://ja.wikipedia.org/wiki/%E3%81%97%E3%82%85%E3%81%94%E3%82%AD%E3%83%A3%E3%83%A9!",
+        "https://www.ponican.jp/shugo-chara/story/89.html",
+        "https://shugochara.fandom.com/api.php?action=parse&page=Shugo_Chara!_Episode_089&prop=wikitext&format=json"
+      ]
+    },
+    {
+      "episodes": [90],
+      "type": "filler",
+      "note": "'伝えたい！このキモチ！' (2009-07-04). ja-WP '☆' (with a note that its working title was 「街の中心で愛を叫ぶ?」). Official synopsis: the anime-original 『アイサケ』 shout-your-love event, into which Death-Rebel Ikuto intrudes. No manga counterpart; no chapter field on the fandom page.",
+      "sources": [
+        "https://ja.wikipedia.org/wiki/%E3%81%97%E3%82%85%E3%81%94%E3%82%AD%E3%83%A3%E3%83%A9!",
+        "https://www.ponican.jp/shugo-chara/story/90.html",
+        "https://shugochara.fandom.com/api.php?action=parse&page=Shugo_Chara!_Episode_090&prop=wikitext&format=json"
+      ]
+    },
+    {
+      "episodes": [91],
+      "type": "filler",
+      "note": "'全開！僕のリズム' (2009-07-11). NOT '☆' on ja-WP — because it does carry source material: ch 34's Rhythm hatch / Beat Jumper debut, moved earlier than the manga (ja-WP ガーディアン page: 'アニメ版ではリズムの誕生の時期がこれより早く変更されている'). But under T28 that is one transplanted, restaged beat inside a wholly anime-original episode (the exhibition game, the anime-only 'Urban Street' kids, Kukai's visit, Easter's new luring machine), while ch 34's own story — Saeki, Rima learning the secret, Temari's re-hatch, Yamato Maihime, Queen's Waltz — is animated at ep 98 (anchored {33-34}). Filler + the mandatory graft {34} tie; no anchor (see anchor_hostile). If Sean prefers 'mixed' here, it must still be anchor-free: ch 34 sits four chapters ahead of the anime's frontier at this point.",
+      "sources": [
+        "https://ja.wikipedia.org/wiki/%E3%82%AC%E3%83%BC%E3%83%87%E3%82%A3%E3%82%A2%E3%83%B3_(%E3%81%97%E3%82%85%E3%81%94%E3%82%AD%E3%83%A3%E3%83%A9!)",
+        "https://www.ponican.jp/shugo-chara/story/91.html",
+        "https://www.b-ch.com/titles/7242/040",
+        "https://shugochara.fandom.com/api.php?action=parse&page=Chapter_34&prop=wikitext&format=json"
+      ]
+    },
+    {
+      "episodes": [92],
+      "type": "filler",
+      "note": "'クールに決めろ！ビートジャンパー！' (2009-07-18). Also not '☆' on ja-WP, but its source tie is re-use, not first-time pages: Pony Canyon's synopsis has Rhythm ALREADY born and character-changing Nagihiko without permission, and the B-plot is Amu's street meeting with the boy later revealed as Hikaru — the anime's own altered handling of the manga's Gozen (ja-WP: 原作での御前であるひかるの存在が大幅に改変されている). Filler + loose_parallel {34}; the fandom's 'chapter = 34' here is a title match (its own Rhythm page places the hatch in ep 91).",
+      "sources": [
+        "https://www.ponican.jp/shugo-chara/story/92.html",
+        "https://ja.wikipedia.org/wiki/%E3%81%97%E3%82%85%E3%81%94%E3%82%AD%E3%83%A3%E3%83%A9!",
+        "https://shugochara.fandom.com/api.php?action=parse&page=Rhythm&prop=wikitext&format=json"
+      ]
+    },
+    {
+      "episodes": [93],
+      "type": "filler",
+      "note": "'ほしな歌唄、未来への飛翔！' (2009-07-25). ja-WP '☆'. Official synopsis: Utau's new-song concert, with the Guardians secretly clearing X-eggs so the concert can go ahead. An anime-original showcase episode; no chapter page lists it and the fandom episode page has an empty chapter field.",
+      "sources": [
+        "https://ja.wikipedia.org/wiki/%E3%81%97%E3%82%85%E3%81%94%E3%82%AD%E3%83%A3%E3%83%A9!",
+        "https://www.ponican.jp/shugo-chara/story/93.html",
+        "https://shugochara.fandom.com/api.php?action=parse&page=Shugo_Chara!_Episode_093&prop=wikitext&format=json"
+      ]
+    },
+    {
+      "episodes": [94],
+      "type": "filler",
+      "note": "'進め！みけねこ捜索隊!?' (2009-08-01). ja-WP '☆'. Official synopsis: Yaya's stray kitten and a school-wide owner hunt, interrupted by Death-Rebel Ikuto. Anime-original; empty chapter field, no chapter page reference.",
+      "sources": [
+        "https://ja.wikipedia.org/wiki/%E3%81%97%E3%82%85%E3%81%94%E3%82%AD%E3%83%A3%E3%83%A9!",
+        "https://www.ponican.jp/shugo-chara/story/94.html",
+        "https://shugochara.fandom.com/api.php?action=parse&page=Shugo_Chara!_Episode_094&prop=wikitext&format=json"
+      ]
+    },
+    {
+      "episodes": [95],
+      "type": "filler",
+      "note": "'りまとやや、真珠の絆！' (2009-08-08) — the row INSERTED by the 2026-08-27 N11 resort (AFL had printed no. 96 twice and lost it). ja-WP marks 第95話 '☆'. Official synopsis: Rima and Yaya are shut inside a hidden room behind the courtyard during cleaning day and Yaya tells Rima a story. Anime-original; the fandom episode page has an empty chapter field. It joins the divergence block rather than the stored types, which never had a row for it.",
+      "sources": [
+        "https://ja.wikipedia.org/wiki/%E3%81%97%E3%82%85%E3%81%94%E3%82%AD%E3%83%A3%E3%83%A9!",
+        "https://www.ponican.jp/shugo-chara/story/95.html",
+        "https://www.b-ch.com/titles/7242/044"
+      ]
+    },
+    {
+      "episodes": [96],
+      "type": "filler",
+      "note": "'届かない声、くだかれる思い。' (2009-08-15). ja-WP '☆'. Official synopsis: Amu and Ami spot a flyer for newcomer artist 'DL' (the controlled Ikuto); the Guardians infiltrate the concert and fail to reach him. The episode's only manga-facing content is the closing hook (Tadase agreeing to tell Amu about his past), which is PAID OFF by ch 32's flashback at ep 97 — the hook itself animates no pages. Empty chapter field; ch 32's page lists eps 80 and 97 only.",
+      "sources": [
+        "https://ja.wikipedia.org/wiki/%E3%81%97%E3%82%85%E3%81%94%E3%82%AD%E3%83%A3%E3%83%A9!",
+        "https://www.ponican.jp/shugo-chara/story/96.html",
+        "https://shugochara.fandom.com/api.php?action=parse&page=Chapter_32&prop=wikitext&format=json"
+      ]
+    }
+  ],
+  "structure": {
+    "notes": "ROW-BY-ROW DISPOSITION, rows 82-96 in OUR CURRENT (post-resort) numbering. Joined on JP title + air date against ja-WP しゅごキャラ! 各話リスト (which numbers cumulatively 1-127 and matches our post-resort rows exactly), Pony Canyon's official special site (ponican.jp/shugo-chara/story/NN.html — numbered cumulatively too) and Bandai Channel (b-ch.com/titles/7242/0NN, Doki #NN = cumulative NN+51; spot-checked 031=82, 033=84, 035=86, 040=91, 041=92, 044=95, 045=96). AFL's numbers are NEVER used below.\n\n  row | JP title | date | ja-WP ☆ | stored type | VERDICT | tie\n   82 | 熱闘！私がエースになる！ | 2009-05-09 | ☆ | filler | filler (CONFIRMED, A1 — no anchor) | divergence {none}\n   83 | すれちがいの音楽博覧会？ | 2009-05-16 | ☆ | canon | FILLER (correction) | divergence {none}\n   84 | 二階堂先生は先生だったぁ!? | 2009-05-23 | ☆ | filler | filler (CONFIRMED) | divergence {none}\n   85 | ち～す！噂のギャル登場!! | 2009-05-30 | ☆ | filler | filler (CONFIRMED; DS-game 前日談) | divergence {none}\n   86 | 響け歌声！あの日のあたしに!! | 2009-06-06 | ☆ | canon | FILLER (correction; DS-game tie-in) | divergence {none}\n   87 | ナナを救え！しゅごキャラナース出動？ | 2009-06-13 | ☆ | canon | FILLER | divergence {none}\n   88 | 激突！ナゾたま大暴走!! | 2009-06-20 | ☆ | canon | FILLER | divergence {none}\n   89 | 心、わかりあえて。 | 2009-06-27 | ☆ | canon | FILLER | divergence {none}\n   90 | 伝えたい！このキモチ！ | 2009-07-04 | ☆ | canon | FILLER | divergence {none}\n   91 | 全開！僕のリズム | 2009-07-11 | (no ☆) | canon | FILLER + graft | graft {34} — anchor_hostile\n   92 | クールに決めろ！ビートジャンパー！ | 2009-07-18 | (no ☆) | canon | FILLER | loose_parallel {34} — anchor_hostile\n   93 | ほしな歌唄、未来への飛翔！ | 2009-07-25 | ☆ | canon | FILLER | divergence {none}\n   94 | 進め！みけねこ捜索隊!? | 2009-08-01 | ☆ | canon | FILLER | divergence {none}\n   95 | りまとやや、真珠の絆！ | 2009-08-08 | ☆ | canon | FILLER | divergence {none}   [row inserted by the N11 resort]\n   96 | 届かない声、くだかれる思い。 | 2009-08-15 | ☆ | canon | FILLER | divergence {none}\n\nTHE ☆ MARKER. ja-WP's 各話リスト opens with '話数内の「☆」は、ほぼ全編アニメオリジナルエピソードの回' — an explicit per-episode anime-original marker, and the strongest per-row source this series has (the episode table carries no chapter column). Inside 81-98 it marks 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 93, 94, 95, 96 and leaves 91, 92, 97, 98 unmarked. 97 and 98 are our two anchored canon rows, which is a clean control: the marker tracks adaptation, not arc grouping.\n\nTHE FENCE HOLDS. ep 80 -> ch 32 [31] {31-32 (32 first part)}: shugochara.fandom's Episode 080 infobox reads 'chapter = 31, 32' and ch 31's page lists eps 79/80. ep 97 -> ch 33 [32] {32-33}: the Episode 097 infobox reads 'chapter = 32, 33', ch 32's page lists eps 80 and 97 (both directions), ch 33's lists 97 and 98. Independent corroboration for ep 97 = ch 32's remainder: ch 32's character list is exactly the Tadase flashback cast the episode animates — Betty, Yui Hotori, Mizue Hotori, Tadase's Grandmother, Alto Tsukiyomi, Tsukasa Amakawa — none of whom appear in any episode 81-96. No repair to either fence anchor is needed and none is proposed.\n\nCH 34 IS SPLIT ACROSS EP 91 AND EP 98 (the reason 91/92 are not '☆'). Manga ch 34, in order: the Guardians thank Nobuko Saeki -> she makes Nagihiko admit he was Nadeshiko -> Rima overhears and calls him a liar -> X-eggs on the stairs -> a basketball duel -> Rhythm hatches -> Beat Jumper / Beat Dunk -> Temari re-hatches -> Yamato Maihime -> Queen's Waltz with Rima. The anime pulled ONLY the hatch section forward into ep 91's original basketball story and kept the rest for ep 98 ('復活！輝きの舞姫！' — Saeki's horoscope, Rima's 'I won't hold hands with a liar', Temari's re-hatch, Yamato Maihime), which is already anchored {33-34}. ja-WP states the relocation as a fact in both its なぎひこ and リズム entries. Because the relocated pages sit AHEAD of the anime's own frontier (ch 32 first part) rather than behind it, the 'pages, not numbers' anchor+rearranged shape does not apply here; A44 position-less + graft does.\n\nWHERE THE WRONG TYPES CAME FROM. animefillerlist's live page prints 'manga_canon' on this whole stretch except three rows (its 84/85/86 = our 82/84/85), i.e. it calls the Lulu ?-egg arc manga canon. AFL+AFG count as one source (AFG's type column mirrors it). ja-WP, the licensor synopses and the fandom's chapter fields agree against it 13 rows out of 15.\n\nNOT MY ASK, BUT THE SAME DEFECT CONTINUES BELOW 82: rows 70, 71, 73, 78 and 81 are stored canon while ja-WP marks all five '☆' (81 '潜入！イースター社!?' is a pure Yoru/Kiseki original with no chapter field on the fandom page; 78 'あむちゃんのなが〜い一日!?' likewise sits between the ch-30 and ch-30/31 anchors). Listed in flags, not corrected here.",
+    "order_only": []
+  },
+  "flags_for_sean": [
+    "THE ONE JUDGMENT FORK — ep 91. It genuinely animates ch 34's Rhythm-hatch pages for the FIRST time (ja-WP says the anime moved the birth earlier; Pony Canyon and Bandai Channel put it in 第91話; the fandom's Rhythm page says 'He hatches in Episode 91'). I typed it FILLER + graft {34} under T28 ('a transplanted beat, a restaged scene' inside an original plot) and refused an anchor under A44, because ch 34 is four chapters ahead of the anime's frontier at that point — ep 80 stopped mid-ch-32 and ch 32's remainder + ch 33 do not air until eps 97/98, so an anchor at 91 would spoil two unadapted chapters and would have to step backwards at 97. If you rule it 'mixed' instead, it must still carry NO anchor for the same reason; the tie annotation carries the fact either way.",
+    "THE STORED GRAFT IS ONE ROW OUT. 'eps 92,98 graft {34}' names the episode TITLED Beat Jumper; the debut is in ep 91 and ep 92 opens with Rhythm already born. Repairs proposed: graft {34} -> eps [91, 98]; ep 92 -> loose_parallel {34}. Note also that the A7 ruling text in code is still keyed to EPISODE 93 ('Nagihiko's Beat Jumper debut (ch 34) grafted early') — a PRE-RESORT key that the 2026-08-27 renumber should have moved to 92, and that this verdict says should now read 91. Worth re-keying in the same sitting as the annotation repair.",
+    "DIVERGENCE BLOCK: span and wording. Stored is 'eps 86-96 (10 rows) divergence {none (between 32 and 33)}'. Rows 82-85 belong to the same original stretch (ja-WP '☆' on all four) and the inserted row 95 has no annotation at all, while 91/92 leave the block for the graft tie. And the run does not sit between ch 32 and ch 33 — it sits INSIDE the ch-32 split (ep 80 = ch 32 part 1, ep 97 = ch 32 remainder), which is what the stored 'eps 80,97 rearranged {32}' fact already records.",
+    "THE SAME AFL LIE CONTINUES BELOW MY ASK: rows 70, 71, 73, 78, 81 are stored canon but ja-WP marks each '☆' (ほぼ全編アニメオリジナル) and none has a chapter field on shugochara.fandom. Row 81 in particular sits between the ep-80 fence anchor and my block and is plainly part of the same original stretch (Yoru and Kiseki infiltrating Easter for the tuning fork). A small follow-up lane-C ask (rows 66-81) would close the Doki block completely; I did not type them because they are outside this ask.",
+    "OPTIONAL CONTINUE. I delivered one continue point (ep 80 -> ch 32, C1) because the typing pass leaves sixteen consecutive rows with no reader instruction: a viewer at ep 96 is still inside ch 32. Drop it if you would rather keep this file annotations-only — no other continue in the span changes.",
+    "EPS 85/86 ARE A GAME TIE-IN, NOT A SIDE SOURCE. ja-WP footnotes both as 'DSソフト「ノリノリ!キャラなりズム♪」のキャラクター紹介編であり、ゲーム本編の前日談的内容' — the episodes precede and set up the game (released 2009-07-30), so the anime is the source of that material, not an adapter of it. No side_source annotation (T26); plain filler with the divergence tie."
+  ]
+}
