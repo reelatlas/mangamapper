@@ -70,7 +70,8 @@ const ranges = (s: string): [number, number][] => s.split(',').map((p) => p.trim
 
 async function main() {
   const index: string[] = [];
-  for (const [id, range, lane, ask] of TARGETS) { // (the wave tag is for the gates)
+  for (const [id, range, lane, ask, wave] of TARGETS) {
+    // a series with more than one TARGETS entry gets one context file per entry (`<id>-w<wave>-<range>.md`), else `<id>.md`
     const { data: s } = await db.from('series').select('*').eq('id', id).maybeSingle();
     if (!s) { console.log('MISSING', id); continue; }
     const comps = await selectAll<any>('series_components', '*', (q) => q.eq('series_id', id).order('season_order'));
@@ -131,7 +132,8 @@ async function main() {
     lines.push('');
     lines.push('## Open flags');
     lines.push(flags.map((f) => `#${f.id} [${f.kind}] ${JSON.stringify(f.detail).slice(0, 400)}`).join('\n') || 'none');
-    writeFileSync(`${OUT}/${id}.md`, lines.join('\n'));
+    const dup = TARGETS.filter((t) => t[0] === id).length > 1;
+    writeFileSync(`${OUT}/${id}${dup ? `-w${wave}-${range.replace(/[^0-9a-z]+/gi, '_')}` : ''}.md`, lines.join('\n'));
     index.push(`${lane}  ${id} ${range} — anchors ${anchors.length}, rows ${eps.length}, kind ${s.source_type}`);
   }
   console.log(index.join('\n'));
