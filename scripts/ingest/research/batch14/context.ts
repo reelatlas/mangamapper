@@ -1,6 +1,6 @@
 import { writeFileSync } from 'node:fs';
-import { db } from '/Users/sean/Projects/mangamapper/scripts/ingest/lib/db';
-import { EPISODE_TYPE_OVERRIDES, SOURCE_NUMBERING_SHIFTS, COMMUNITY_COUNT_OVERRIDES, EXTRAS_ADOPTED } from '/Users/sean/Projects/mangamapper/scripts/ingest/lib/resolve';
+import { db } from '../../lib/db';
+import { EPISODE_TYPE_OVERRIDES, SOURCE_NUMBERING_SHIFTS, COMMUNITY_COUNT_OVERRIDES, EXTRAS_ADOPTED } from '../../lib/resolve';
 const OUT = process.argv[2] ?? '/tmp/batch14-ctx'; // pass an output dir; mkdir it first
 // [id, target episode range (OUR numbering), kind, extra ask]
 const TARGETS: [string, string, 'gap' | 'stitch', string][] = [

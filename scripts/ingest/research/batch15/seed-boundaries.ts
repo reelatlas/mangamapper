@@ -10,7 +10,7 @@
 //     chapter pages agreeing (ch 39 = v8, ch 46 = v10).
 // Full-replace per manga, source 'research'. Idempotent.
 //   npx tsx --env-file=.env.ingest scripts/ingest/research/batch15/seed-boundaries.ts
-import { db } from '/Users/sean/Projects/mangamapper/scripts/ingest/lib/db';
+import { db } from '../../lib/db';
 
 const SEEDS: { mangaId: number; cite: string; vols: [number, number, number][] }[] = [
   {

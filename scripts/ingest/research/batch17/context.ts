@@ -5,8 +5,8 @@
 // Same context-file shape as batches 14-16.
 //   npx tsx --env-file=.env.ingest scripts/ingest/research/batch17/context.ts <outdir>
 import { writeFileSync } from 'node:fs';
-import { db } from '/Users/sean/Projects/mangamapper/scripts/ingest/lib/db';
-import { EPISODE_TYPE_OVERRIDES, SOURCE_NUMBERING_SHIFTS, COMMUNITY_COUNT_OVERRIDES, EXTRAS_ADOPTED } from '/Users/sean/Projects/mangamapper/scripts/ingest/lib/resolve';
+import { db } from '../../lib/db';
+import { EPISODE_TYPE_OVERRIDES, SOURCE_NUMBERING_SHIFTS, COMMUNITY_COUNT_OVERRIDES, EXTRAS_ADOPTED } from '../../lib/resolve';
 const OUT = process.argv[2] ?? '/tmp/batch17-ctx'; // pass an output dir; mkdir it first
 // [id, target episodes (OUR numbering), kind, extra ask]
 // gap = unanchored canon stretch (density per protocol: cheap per-episode
