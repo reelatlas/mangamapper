@@ -19,6 +19,7 @@ import { contentHash } from './lib/hash';
 import { searchAnime } from './lib/anilist';
 import { db, selectAll, startRun, finishRun, fileFlagOnce } from './lib/db';
 import { stageAniList, registerIds, applyScope, applyEpisodeFloor, filterEpisodeRows } from './lib/resolve';
+import { syncMintedRows } from './lib/minted';
 import { aired, walkChain, aggregate, writeComponents, ownedAnilistIds } from './lib/chain';
 import { syncAnchors } from './lib/anchors';
 import { slugify } from './lib/slug';
@@ -191,7 +192,7 @@ async function main() {
         await registerIds(id, { anilist: chain[0].id, mal: chain[0].idMal, afg: t.slug });
         for (const m of chain) owned.add(m.id);
 
-        await db.from('episodes').delete().eq('series_id', id);
+        // G57: no unfiltered delete — the expansion mints its rows as 'afg' (upsert + re-stamp) and deletes only its own stale rows
         const epRows = page.episodes.map((e) => ({
           series_id: id!,
           number: e.number,
@@ -202,10 +203,7 @@ async function main() {
         // per-series rulings (community caps + type overrides) apply to
         // every episode writer, expansion included
         const ruledRows = filterEpisodeRows(id!, epRows, 'afg');
-        for (let i = 0; i < ruledRows.length; i += 500) {
-          const { error } = await db.from('episodes').insert(ruledRows.slice(i, i + 500));
-          if (error) throw new Error(error.message);
-        }
+        await syncMintedRows(id!, ruledRows, 'afg', Math.max(afgMax, ruledRows.reduce((m, r) => Math.max(m, r.number), 0)));
         await writeComponents(id, chain, null);
         await syncAnchors(runId, id, t.slug, page);
 

@@ -12,6 +12,7 @@ import type { AniListMedia } from './anilist';
 import { EXTRAS_ADOPTED } from './rulings/extras-adopted';
 import { COMMUNITY_COUNT_OVERRIDES } from './rulings/community-counts';
 import { SOURCE_NUMBERING_SHIFTS, applyNumberingShift, translatedMax } from './rulings/numbering-shifts';
+import { syncMintedRows } from './minted';
 import { EPISODE_TYPE_OVERRIDES } from './rulings/episode-types';
 
 export type StageOutcome = 'unchanged' | 'changed' | 'held';
@@ -496,20 +497,16 @@ export async function resolveSeries(runId: number, slug: string): Promise<{ epis
         { onAirdateWithheld: (w) => (stitchedWithheld = w), sourceType: existing.source_type },
       );
       if (stitchedWithheld.length) await flagAirdateWithheld(runId, slug, 'afl', stitchedWithheld);
+      // G57 (2026-08-28): upsert AFL's rows stamped minted_by = 'afl' (re-stamping
+      // in place any number another writer minted), then delete ONLY AFL's own
+      // stale rows up to the translated max — a row another writer minted inside
+      // the range (5D's wiki-backfilled 145; the stitched blocks) survives. The
+      // STALE-ZONE healing (Sean 2026-08-23: pre-translation leftovers wearing
+      // shifted titles above the translated max) is the same rule with the
+      // ceiling at the source max — still only AFL's own rows.
       const ourPageMax = stitchedRows.reduce((m, e) => Math.max(m, e.number), 0);
-      await db.from('episodes').delete().eq('series_id', existing.id).lte('number', ourPageMax);
-      // STALE-ZONE healing (Sean 2026-08-23): when translation SHRINKS the
-      // range (ourMax < source max), rows stranded in (ourMax, sourceMax]
-      // are pre-translation leftovers wearing shifted titles — purge them
-      // (an AFG tail re-extends; stale wrong data never self-heals)
-      const srcMax = page.episodes.reduce((m, e) => Math.max(m, e.number), 0);
-      if (srcMax > ourPageMax) {
-        await db.from('episodes').delete().eq('series_id', existing.id).gt('number', ourPageMax).lte('number', srcMax);
-      }
-      for (let i = 0; i < stitchedRows.length; i += 500) {
-        const { error } = await db.from('episodes').insert(stitchedRows.slice(i, i + 500));
-        if (error) throw new Error(`episodes refresh (${slug}): ${error.message}`);
-      }
+      const srcMax = translatedMax(existing.id, page.episodes, 'afl', SOURCE_NUMBERING_SHIFTS);
+      await syncMintedRows(existing.id, stitchedRows, 'afl', Math.max(ourPageMax, srcMax));
       await db.from('series').update({ updated_at: new Date().toISOString() }).eq('id', existing.id);
       return { episodes: stitchedRows.length, flagged: false };
     }
@@ -644,16 +641,8 @@ export async function resolveSeries(runId: number, slug: string): Promise<{ epis
   // translated-max boundary (see the stitched-guard note): never delete past
   // what the translated rows refill
   const ourMax = rows.reduce((m, e) => Math.max(m, e.number), 0) || aflMax;
-  const { error: e5 } = await db.from('episodes').delete().eq('series_id', id).lte('number', ourMax);
-  if (e5) throw new Error(`episodes clear (${slug}): ${e5.message}`);
-  // stale-zone healing (see the stitched-guard note)
-  if (aflMax > ourMax) {
-    await db.from('episodes').delete().eq('series_id', id).gt('number', ourMax).lte('number', aflMax);
-  }
-  for (let i = 0; i < rows.length; i += 500) {
-    const { error: e6 } = await db.from('episodes').insert(rows.slice(i, i + 500));
-    if (e6) throw new Error(`episodes insert (${slug}): ${e6.message}`);
-  }
+  // G57: upsert + re-stamp, then delete only AFL's own stale rows ≤ max(ourMax, aflMax) — never a foreign writer's row (see the stitched-guard note)
+  await syncMintedRows(id, rows, 'afl', Math.max(ourMax, aflMax));
 
   // Baseline component row — kept in step by every resolve; the stitcher
   // replaces these with full chains for multi-season series.

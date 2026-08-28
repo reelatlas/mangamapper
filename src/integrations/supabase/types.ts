@@ -12,6 +12,31 @@ export type Database = {
   __InternalSupabase: {
     PostgrestVersion: "14.17"
   }
+  graphql_public: {
+    Tables: {
+      [_ in never]: never
+    }
+    Views: {
+      [_ in never]: never
+    }
+    Functions: {
+      graphql: {
+        Args: {
+          extensions?: Json
+          operationName?: string
+          query?: string
+          variables?: Json
+        }
+        Returns: Json
+      }
+    }
+    Enums: {
+      [_ in never]: never
+    }
+    CompositeTypes: {
+      [_ in never]: never
+    }
+  }
   public: {
     Tables: {
       anime_progress: {
@@ -151,6 +176,7 @@ export type Database = {
         Row: {
           air_date: string | null
           format: string | null
+          minted_by: string
           number: number
           series_id: string
           title: string
@@ -159,6 +185,7 @@ export type Database = {
         Insert: {
           air_date?: string | null
           format?: string | null
+          minted_by: string
           number: number
           series_id: string
           title?: string
@@ -167,6 +194,7 @@ export type Database = {
         Update: {
           air_date?: string | null
           format?: string | null
+          minted_by?: string
           number?: number
           series_id?: string
           title?: string
@@ -1065,6 +1093,9 @@ export type CompositeTypes<
     : never
 
 export const Constants = {
+  graphql_public: {
+    Enums: {},
+  },
   public: {
     Enums: {},
   },

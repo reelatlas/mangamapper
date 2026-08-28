@@ -177,7 +177,7 @@
 - `I38` The source manga is the ADAPTATION edge of type/format MANGA — aka `manga link selection`, `anime→manga linkage`, `pickManga`
 - `I39` Ruled structure: numbered extras and span overrides — aka `ruled structure`, `RULED_STRUCTURE`, `numbered extras`, `span override`, `heal-structure`, `planComponents`, `E4`, `batch-19 E4`, `structure rows`
 
-**G — Gates & freshness (sources)** (46)
+**G — Gates & freshness (sources)** (47)
 - `G1` The flag rule: nothing suspicious auto-applies — aka `flag rule`, `the flag rule`, `the confirm queue`, `nothing suspicious ever auto-applies`
 - `G3` Recurring conditions flag once; only Sean dismisses — aka `fileFlagOnce`, `once-per-open-kind`
 - `G4` Permanent conditions leave the open queue *(planned)* — aka `dismissed_permanent`, `permanent-flag disposition`, `A-8`
@@ -224,6 +224,7 @@
 - `G54` Air-date order: a date a year out of order is withheld — aka `A-11`, `air-date order gate`, `airdate regression`, `airdate_regression`, `AIRDATE_ORDER_ACK`, `365-day rule`, `air-date withheld`, `airdate_withheld`
 - `G55` Series window: a row dated outside its series is not its row — aka `series window`, `series-window gate`, `identity gate`, `namesake gate`, `namesake lesson`, `episode_date_off_window`, `AIR_DATE_WINDOW_ACK`, `E2`, `batch-19 E2`, `off-window`
 - `G56` Honest terminal: a covered MU pin is redundant, not a flag — aka `honest terminal`, `honest-terminal redundancy`, `covered pin`, `MU "EP N" pin`, `EP N pin`, `skipped_terminal`, `mu_pin_flag_redundant`, `claymore #945 class`, `pin already covered`
+- `G57` Row provenance: a writer deletes only rows it minted — aka `row provenance`, `minted_by`, `a writer deletes only rows it minted`, `row_minted_by_missing`, `the 5D 145 lesson`, `no delete-then-insert`
 
 **V — Volumes & boundaries** (11)
 - `V1` Monotonic starts, or the row is not data — aka `monotonic-start gate`, `MONOTONIC-START rule`, `monotonic boundaries`, `monotonic starts`, `Sailor Moon v3 report`, `Sailor Moon "v3: chs 10-3"`
@@ -3013,6 +3014,20 @@ When an MU frontier pin lands on a row that cannot take an anchor (A1 filler, A4
 - aliases: honest terminal, honest-terminal redundancy, covered pin, MU "EP N" pin, EP N pin, skipped_terminal, mu_pin_flag_redundant, claymore #945 class, pin already covered
 - see: G36, G37, G31, A26, A1, A44, P30
 
+### G57 · Row provenance: a writer deletes only rows it minted
+
+Every episodes row names the writer that minted it (minted_by: afl | afg | wiki | stitch | anilist | manual; nullable until backfilled, no default). An episode writer never deletes a numeric range: it UPSERTS its rows by (series_id, number) — re-stamping minted_by in place when it takes over a number another writer minted (the source that carries a number owns it) — and then deletes ONLY its own rows, inside its translated range, whose number its payload no longer carries. A row nobody carries survives; an unstamped row is nobody and is never deleted. One shared write path (lib/minted.ts#syncMintedRows) for scripts and edges.
+
+*Why:* resolveSeries, stitch and afg-expansion deleted a range and re-inserted their own rows, so a row another writer minted inside it died on the next cron: yu-gi-oh-5d-s 145 (the wiki backfill) was eaten by the crons of 2026-08-28 and its aired/total re-floored — caught only by the census contiguity check; the re-resolve-risk probe found four more series carrying such rows (dbz-kai 139, detective-school-q 19, kenichi 1-50, hayate 5-23).
+
+- ruled Sean 2026-08-28 (changelog §12.84-§12.85; the batch-20 wave-4 deep probe; Sean + Cursor 2026-08-28 (minted_by not origin; nullable → backfill → NOT NULL; upsert + re-stamp, never delete-then-insert))
+- layer **writer**
+- enforced: [lib/minted.ts#syncMintedRows](../scripts/ingest/lib/minted.ts) · [lib/resolve.ts#resolveSeries](../scripts/ingest/lib/resolve.ts) · [stitch.ts](../scripts/ingest/stitch.ts) · [afg-expansion.ts](../scripts/ingest/afg-expansion.ts) · [audit-ui-truth.ts#row_minted_by_missing](../scripts/ingest/audit-ui-truth.ts)
+- audit: `row_minted_by_missing`
+- witnesses: yu-gi-oh-5d-s, dragon-ball-z-kai, detective-school-q, kenichi-the-mightiest-disciple, hayate-the-combat-butler
+- aliases: row provenance, minted_by, a writer deletes only rows it minted, row_minted_by_missing, the 5D 145 lesson, no delete-then-insert
+- see: N1, N11, N20, G44, A42, P5, P9, P34
+
 ## V — Volumes & boundaries
 
 ### V1 · Monotonic starts, or the row is not data
@@ -4030,6 +4045,7 @@ Any component that renders episode-level data consumes the HYDRATED series (getB
 - 40-chapter band → `C8`
 - 6–8 wave cap → `P12`
 - a wave is the unit of loss → `P12`
+- a writer deletes only rows it minted → `G57`
 - A-11 → `G54`
 - A-4 → `R20`
 - A-5 → `T8`
@@ -4614,6 +4630,7 @@ Any component that renders episode-level data consumes the HYDRATED series (getB
 - MHA 107/113 report → `A18`
 - mid-chapter END → `C1`
 - mid-chapter straddle → `C1`
+- minted_by → `G57`
 - missed edge deploy → `P3`
 - mixed = canon AND non-canon → `T2`
 - mixed threshold → `T28`
@@ -4668,6 +4685,7 @@ Any component that renders episode-level data consumes the HYDRATED series (getB
 - next-step offer → `P28`
 - no blanket precedence rule → `R2`
 - no degenerate component spans → `I35`
+- no delete-then-insert → `G57`
 - no digit-mashing → `G20`
 - no fourth type → `T26`
 - no one-offs → `P9`
@@ -4807,6 +4825,8 @@ Any component that renders episode-level data consumes the HYDRATED series (getB
 - REVIEWED_NUMBERED_SPECIALS → `N7`
 - routine deep skips locked → `P25`
 - row presence → `A42`
+- row provenance → `G57`
+- row_minted_by_missing → `G57`
 - row-content transposition → `G53`
 - row-count identity → `R19`
 - row-count identity first → `R19`
@@ -4953,6 +4973,7 @@ Any component that renders episode-level data consumes the HYDRATED series (getB
 - tail honesty → `A37`
 - tail honesty / coverage gate → `A37`
 - taxonomy_conflict (MU status) → `G41`
+- the 5D 145 lesson → `G57`
 - the ambiguity rule → `I4`
 - the apply discipline → `P15`
 - the capture table → `P29`
@@ -5053,6 +5074,6 @@ Any component that renders episode-level data consumes the HYDRATED series (getB
 
 ## Scoreboard
 
-- rules: 271 (live 256, planned 8, superseded 7)
+- rules: 272 (live 257, planned 8, superseded 7)
 - live data rules with no audit class (the automation backlog): 83
-- by layer: writer 142 · display 23 · both 23 · process 83
+- by layer: writer 143 · display 23 · both 23 · process 83

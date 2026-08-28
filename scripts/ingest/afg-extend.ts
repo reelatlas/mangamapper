@@ -160,7 +160,7 @@ async function main() {
           .filter((e) => !have.has(e.number))
           .map((e) => ({ series_id: s.id, number: e.number, title: e.title, type: e.type, air_date: null })), 'afg');
         for (let i = 0; i < fill.length; i += 500) {
-          const { error } = await db.from('episodes').insert(fill.slice(i, i + 500));
+          const { error } = await db.from('episodes').insert(fill.slice(i, i + 500).map((r) => ({ ...r, minted_by: 'afg' }))); // G57: the fill is AFG's
           if (error) throw new Error(error.message);
         }
 

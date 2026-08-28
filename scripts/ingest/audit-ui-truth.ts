@@ -33,7 +33,7 @@ import { REVIEWED_NUMBERED_SPECIALS } from './lib/rulings/reviewed-specials';
 
 async function main() {
   const series = await selectAll<any>('series', 'id, afl_slug, anilist_id, source_type, manga_status, status, start_date, end_date, aired_episodes, total_episodes, total_chapters, total_volumes, latest_known_chapters, manga_anilist_id, manga_start_chapter, mapping_mode, asterisk_review');
-  const episodes = await selectAll<any>('episodes', 'series_id, number, type, title, air_date, format');
+  const episodes = await selectAll<any>('episodes', 'series_id, number, type, title, air_date, format, minted_by');
   const anchors = await selectAll<any>('chapter_anchors', 'series_id, episode, chapter, start_chapter, chapters_adapted, continue_chapter, continue_note, continue_source, volume, source');
   const comps = await selectAll<any>('series_components', 'series_id, episode_end, episode_start, anilist_id, kind, label');
   const bounds = await selectAll<any>('volume_boundaries', 'manga_anilist_id, volume, chapter_start, chapter_end');
@@ -91,7 +91,7 @@ async function main() {
     integrity_eps_beyond_total: [], integrity_total_beyond_eps: [], integrity_double_claimed: [],
     integrity_degenerate_span: degenerateSpans,
     special_numbered_unreviewed: [], anchor_gap_research: [], frontier_tail_null: [],
-    anchor_volume_mismatch: [],
+    anchor_volume_mismatch: [], row_minted_by_missing: [],
     anchor_nonmonotonic: [], anchor_start_offtrend: [], start_sliver_mismatch: [], start_without_span: [], anchor_beyond_chapter_space: [], anchor_beyond_display_total: [], anchor_fractional_chapter: [], anchor_on_noncanon_row: [], continue_skip_unnoted: [], continue_provenance_missing: [], boundaries_degenerate: [], ruling_violation: [], repair_on_derivation_tier: [],
     mu_pin_unverified: [], mu_pin_flag_redundant: [], anchor_without_row: [], annotation_without_row: [],
     rearranged_zone_unanchored: [], rearranged_zone_acknowledged: [],
@@ -279,6 +279,12 @@ async function main() {
       const row = episodes.find((e: any) => e.series_id === sid && e.number === Number(num));
       if (row && row.title !== want) classes.ruling_violation.push(`${sid}: ep ${num} title "${String(row.title).slice(0, 40)}" ≠ ruled "${want.slice(0, 40)}" (G53)`);
     }
+  }
+  // G57 row provenance (2026-08-28): every row names its minter; a null is nobody's — no writer may delete it and this class lists it until the backfill / a writer stamps it
+  {
+    const missing = new Map<string, number[]>();
+    for (const e of episodes) if (!e.minted_by) { if (!missing.has(e.series_id)) missing.set(e.series_id, []); missing.get(e.series_id)!.push(e.number); }
+    for (const [sid, nums] of missing) classes.row_minted_by_missing.push(`${sid}: ${nums.length} rows without minted_by (${nums.slice(0, 8).join(',')}${nums.length > 8 ? '…' : ''})`);
   }
   // SHIFT VERIFICATION (Sean 2026-08-23: rules that move numbering must
   // prove nothing broke): for every SOURCE_NUMBERING_SHIFTS series, verify
@@ -863,7 +869,7 @@ async function main() {
   // lib/rulings/permanence.ts). A LOCKED series failing any of it =
   // permanence_violation — data drifted under a lock (P5).
   {
-    const OPEN_CLASSES = ['integrity_eps_beyond_total', 'integrity_total_beyond_eps', 'integrity_double_claimed', 'integrity_degenerate_span', 'special_numbered_unreviewed', 'anchor_gap_research', 'frontier_tail_null', 'anchor_nonmonotonic', 'anchor_start_offtrend', 'anchor_volume_mismatch', 'anchor_beyond_chapter_space', 'anchor_beyond_display_total', 'anchor_fractional_chapter', 'anchor_on_noncanon_row', 'continue_skip_unnoted', 'continue_provenance_missing', 'boundaries_degenerate', 'boundaries_wrong_page', 'boundaries_beyond_total', 'ruling_violation', 'repair_on_derivation_tier', 'mu_pin_unverified', 'rearranged_zone_unanchored', 'title_incomplete', 'airdate_incomplete', 'airdate_regression', 'airdate_withheld', 'asterisk_unreviewed', 'fractional_unmodeled', 'annotation_invalid', 'afl_anime_canon_unruled', 'format_missing', 'episode_without_component', 'watch_order_kind_missing', 'series_without_source_kind', 'pending_airing_no_anchor', 'pending_finished_no_totals', 'pending_no_canon', 'pending_other'];
+    const OPEN_CLASSES = ['integrity_eps_beyond_total', 'integrity_total_beyond_eps', 'integrity_double_claimed', 'integrity_degenerate_span', 'special_numbered_unreviewed', 'anchor_gap_research', 'frontier_tail_null', 'anchor_nonmonotonic', 'anchor_start_offtrend', 'anchor_volume_mismatch', 'row_minted_by_missing', 'anchor_beyond_chapter_space', 'anchor_beyond_display_total', 'anchor_fractional_chapter', 'anchor_on_noncanon_row', 'continue_skip_unnoted', 'continue_provenance_missing', 'boundaries_degenerate', 'boundaries_wrong_page', 'boundaries_beyond_total', 'ruling_violation', 'repair_on_derivation_tier', 'mu_pin_unverified', 'rearranged_zone_unanchored', 'title_incomplete', 'airdate_incomplete', 'airdate_regression', 'airdate_withheld', 'asterisk_unreviewed', 'fractional_unmodeled', 'annotation_invalid', 'afl_anime_canon_unruled', 'format_missing', 'episode_without_component', 'watch_order_kind_missing', 'series_without_source_kind', 'pending_airing_no_anchor', 'pending_finished_no_totals', 'pending_no_canon', 'pending_other'];
     const openBy = new Map<string, Set<string>>();
     const ids = new Set(series.map((s: any) => s.id));
     for (const c of OPEN_CLASSES) for (const line of classes[c] ?? []) {

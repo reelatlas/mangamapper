@@ -17,6 +17,7 @@
 import { db, selectAll, startRun, finishRun, fileFlagOnce } from './lib/db';
 import { type AniListMedia } from './lib/anilist';
 import { stageAniList, registerIds, applyScope, applyEpisodeFloor, filterEpisodeRows } from './lib/resolve';
+import { syncMintedRows } from './lib/minted';
 import { slugify } from './lib/slug';
 import type { AflShowPage } from './lib/afl';
 import { getMedia, aired, walkChain, aggregate, writeComponents, ownedAnilistIds } from './lib/chain';
@@ -190,11 +191,8 @@ async function main() {
       // range — rows beyond it (AFG/Wikipedia fills on a ruled extension)
       // survive the re-stitch
       const aflTop = epRows.reduce((m, r) => Math.max(m, r.number), 0);
-      await db.from('episodes').delete().eq('series_id', series.id).lte('number', aflTop);
-      for (let i = 0; i < epRows.length; i += 500) {
-        const { error } = await db.from('episodes').insert(epRows.slice(i, i + 500));
-        if (error) throw new Error(`episodes (${cand.slug}): ${error.message}`);
-      }
+      // G57: the stitcher mints its rows as 'stitch' (upsert + re-stamp) and deletes only its own stale rows ≤ aflTop
+      await syncMintedRows(series.id, epRows, 'stitch', aflTop);
 
       await writeComponents(series.id, chain, cand.slug, override?.extras);
 

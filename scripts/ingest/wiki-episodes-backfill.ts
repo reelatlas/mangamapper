@@ -424,7 +424,7 @@ async function main() {
         if (newRows.length) {
           const ruled = filterEpisodeRows(t.id, newRows, 'wiki', { sourceType: t.source_type });
           for (let i = 0; i < ruled.length; i += 500) {
-            const { error } = await db.from('episodes').insert(ruled.slice(i, i + 500));
+            const { error } = await db.from('episodes').insert(ruled.slice(i, i + 500).map((r) => ({ ...r, minted_by: 'wiki' }))); // G57: a wiki-created row is the wiki's — no AFL re-resolve may delete it
             if (error) throw new Error(error.message);
           }
           created = ruled.length;

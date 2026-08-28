@@ -961,4 +961,29 @@ export const RULES: Rule[] = [
     status: 'live',
     see: ['G36', 'G37', 'G31', 'A26', 'A1', 'A44', 'P30'],
   },
+  {
+    id: 'G57',
+    aliases: ['row provenance', 'minted_by', 'a writer deletes only rows it minted', 'row_minted_by_missing', 'the 5D 145 lesson', 'no delete-then-insert'],
+    family: 'G',
+    title: 'Row provenance: a writer deletes only rows it minted',
+    statement:
+      'Every episodes row names the writer that minted it (minted_by: afl | afg | wiki | stitch | anilist | manual; nullable until backfilled, no default). An episode writer never deletes a numeric range: it UPSERTS its rows by (series_id, number) — re-stamping minted_by in place when it takes over a number another writer minted (the source that carries a number owns it) — and then deletes ONLY its own rows, inside its translated range, whose number its payload no longer carries. A row nobody carries survives; an unstamped row is nobody and is never deleted. One shared write path (lib/minted.ts#syncMintedRows) for scripts and edges.',
+    why:
+      'resolveSeries, stitch and afg-expansion deleted a range and re-inserted their own rows, so a row another writer minted inside it died on the next cron: yu-gi-oh-5d-s 145 (the wiki backfill) was eaten by the crons of 2026-08-28 and its aired/total re-floored — caught only by the census contiguity check; the re-resolve-risk probe found four more series carrying such rows (dbz-kai 139, detective-school-q 19, kenichi 1-50, hayate 5-23).',
+    ruledBy: 'Sean',
+    ruledOn: '2026-08-28',
+    origin: 'changelog §12.84-§12.85; the batch-20 wave-4 deep probe; Sean + Cursor 2026-08-28 (minted_by not origin; nullable → backfill → NOT NULL; upsert + re-stamp, never delete-then-insert)',
+    enforcement: [
+      { path: 'scripts/ingest/lib/minted.ts', symbol: 'syncMintedRows' },
+      { path: 'scripts/ingest/lib/resolve.ts', symbol: 'resolveSeries' },
+      { path: 'scripts/ingest/stitch.ts' },
+      { path: 'scripts/ingest/afg-expansion.ts' },
+      { path: 'scripts/ingest/audit-ui-truth.ts', symbol: 'row_minted_by_missing' },
+    ],
+    layer: 'writer',
+    auditClass: ['row_minted_by_missing'],
+    witnesses: ['yu-gi-oh-5d-s', 'dragon-ball-z-kai', 'detective-school-q', 'kenichi-the-mightiest-disciple', 'hayate-the-combat-butler'],
+    status: 'live',
+    see: ['N1', 'N11', 'N20', 'G44', 'A42', 'P5', 'P9', 'P34'],
+  },
 ];
