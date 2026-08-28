@@ -25,6 +25,7 @@ export const PULL: RosterEntry[] = [
   { file: 'afg-continua-backfill.ts', when: 'standard', note: 'continua tables for staged AFG pages missing a parse' },
   { file: 'mu-backfill.ts', when: 'standard', note: 'MangaUpdates, universal targets, MangaDex-bridge identity (I6), frontier gate stack (G32)' },
   { file: 'volumes-backfill.ts', when: 'event', trigger: 'volumes-staleness flag (V8) or a new anchored manga', note: 'Wikipedia chapter-list ingest into volume_boundaries (V5/V6)' },
+  { file: 'minted-by-backfill.ts', when: 'event', trigger: 'row_minted_by_missing census rows (G57: an unstamped episode row — nobody may delete it until its minter is inferred from the writers\' reach)', note: 'row provenance backfill by reach: afl → afg → stitch → wiki → anilist; --restamp re-infers every row' },
   { file: 'wiki-episodes-backfill.ts', when: 'event', trigger: 'title_incomplete / airdate_incomplete census rows, or a ruled extension', note: 'Wikipedia episode titles/dates under evidence-locked offsets (G41)' },
   { file: 'afg-expansion.ts', when: 'event', trigger: 'audit-afg-structure reports unregistered AFG-only pages', note: 'creates canonical series from AFG-only pages behind exact-match-or-flag (I30/I31)' },
 ];
