@@ -1,0 +1,293 @@
+{
+  "series_id": "kinnikuman",
+  "summary": "Lane C follow-up on the 21st Chojin Olympics block, and it closes the gap batch 19 flagged: with publication order established, eps 33-45 map one-to-one onto chapters 98-118 and every fence holds (32 -> 98 [97] / 36 -> 103 [102] / 37 -> 105 [104] / 46 -> 119 [118]). Ten anchors delivered; the eleventh target row, ep 41, is NOT anchorable - it is wholly anime-original (the Daisetsuzan mountain training and the giant bear Gorota, an anime-only character, where the anime gives the Kinniku Buster an origin story the manga never had: in the manga the Buster's 'first public showing' is ch 120, inside the Warsman final itself). Two independent per-episode sources carry the block: kinnikuman.fandom's Episode 33A-47B pages (which exist for this whole range, unlike the Dream-Tag range wave 1 worked) plus its Chapter 96-121 pages and the 21st Chojin Olympics Arc citation chain, read against Toei Animation's official per-broadcast synopses and ja-WP's A/B segment titles; ja-WP's per-character 巻頁 citations independently fix the volume boundaries (vol 8 = 95-108, vol 9 = 109-121: 'それぞれの特訓!!の巻'第9巻9頁 = ch 109, 'コピー超人…!?の巻'第9巻87頁 = ch 114, 'タイム・リミット30分!!の巻'第9巻148頁 = ch 119). On ep 47 the answer to the ask is: the finisher divergence is an ANNOTATION on a canon row (T26/T27), not a retype - the episode's job is exactly chs 119-120's job (break the Palo Special, hit the Kinniku Buster, win, unmask), and the anime changes only the MECHANISM (it deletes Warsman's 30-minute overheat weakness, has the Fire of Inner Strength short his circuits instead, then has him rise after the Buster and lose to a Furinkazan). Stored 47 -> 120 [119] stands unchanged. One surprise: ch 121 超人オリンピック総集編の巻 is a real ~14-page post-tournament retrospective chapter (ja-WP cites 第9巻177頁/186頁 for Robin Mask's and Skull Bozu's comments in it) that the anime NEVER adapts - so ep 47's stored continue note ('chs 121 not yet seen at this point') should say 'never animated', not 'not yet'.",
+  "anchors": [
+    {
+      "episode": 33,
+      "end_chapter": 98,
+      "start_chapter": 98,
+      "chapters_adapted": "98 (second half; ep 32B animates the wax-hold opening - the existing eps 32,33 partial{98} fact)",
+      "volume": 8,
+      "confidence": "high",
+      "note": "A4/A10 + 'pages, not numbers': ch 98's number was already ep 32's END, but ep 33 animates its remaining pages for the first time, so it takes a real position. 33A ブロッケンJr.の挑戦の巻 = ch 98's Brocken Jr. vs Watchman half (fandom 33A: 'Brocken Jr. battles Watchman... Meanwhile, Kinnikuman struggles in King Cobra's death grip'; Toei ep 33 verbatim: 「一方のＡブロックでは、ウォッチマンがブロッケンＪｒに対してＫＯ時間を予告していた」 = ch 98's 'Watchman puts Brocken Jr. into a sleeper hold and says that after 2 minutes Brocken Jr. will pass out'). 33B 出た! キン肉マン必殺技の巻 = ch 98's ending (fandom 33B: 'Kinnikuman fights out of King Cobra's grip'; ch 98 ends with the candle head catching fire and Benkiman flushing King Cobra). Ep 34A opens on ch 99 (the horse race), so ep 33 stops on ch 98's last page - no continue needed.",
+      "sources": [
+        "https://kinnikuman.fandom.com/api.php?action=parse&page=Episode_33A&prop=wikitext&format=json",
+        "https://kinnikuman.fandom.com/api.php?action=parse&page=Episode_33B&prop=wikitext&format=json",
+        "https://kinnikuman.fandom.com/api.php?action=parse&page=Chapter_98&prop=wikitext&format=json",
+        "https://lineup.toei-anim.co.jp/ja/tv/kinniku/episode/33/",
+        "https://kinnikuman.fandom.com/api.php?action=parse&page=21st_Chojin_Olympics_Arc&prop=wikitext&format=json"
+      ]
+    },
+    {
+      "episode": 34,
+      "end_chapter": 100,
+      "start_chapter": 99,
+      "chapters_adapted": "99, 100 (100 straddled with ep 35A, which finishes the Ramenman vs Brocken Jr. match)",
+      "volume": 8,
+      "confidence": "high",
+      "note": "A4/A10. 34A コンクリートデスマッチの巻 = ch 99 競馬にかけろ!!の巻 (fandom 34A: 'After the second round's equestrian opening ceremony devolves into a race to the finish line, the Chairman oversees the construction of a Concrete Death Match ring' = ch 99's horse race + 'the ring is filled with concrete so the match will be a concrete death match'). 34B ブロッケンJr.猛攻の巻 reaches into ch 100: Toei ep 34 verbatim 「Ｂブロックのリキシマン対キューブマンの試合は最短試合時間の記録を作って、リキシマンが勝ち名乗りを上げる」 - the Wolfman(=Rikishiman)/Cubeman match is DECIDED here, and ch 100 is where it is decided ('with only three minutes on the clock - Wolfman is declared the winner'); fandom 34B: 'Ramenman and Brocken Jr face off in the concrete ring. Rikishiman and Cubeman have a staring contest' = ch 100's opening bell. Ch 100 is finished in ep 35A (C1 continue).",
+      "sources": [
+        "https://kinnikuman.fandom.com/api.php?action=parse&page=Episode_34A&prop=wikitext&format=json",
+        "https://kinnikuman.fandom.com/api.php?action=parse&page=Episode_34B&prop=wikitext&format=json",
+        "https://kinnikuman.fandom.com/api.php?action=parse&page=Chapter_99&prop=wikitext&format=json",
+        "https://kinnikuman.fandom.com/api.php?action=parse&page=Chapter_100&prop=wikitext&format=json",
+        "https://lineup.toei-anim.co.jp/ja/tv/kinniku/episode/34/"
+      ]
+    },
+    {
+      "episode": 35,
+      "end_chapter": 101,
+      "start_chapter": 100,
+      "chapters_adapted": "100 (finished from ep 34B), 101",
+      "volume": 8,
+      "confidence": "high",
+      "note": "A4/A10; this REPLACES the batch-19 checkpoint '35=101' the verifier told us to drop - it is 100-101, and both halves are sourced. 35A 秘技・万里の長城の巻 is ch 100's conclusion: Toei ep 35 verbatim 「ラーメンマン対ブロッケンＪｒの試合は、実力差を見せ付ける形でラーメンマンの勝利で終わる」, and ja-WP ラーメンマン's match record prints the divergence that explains the segment title - 「○ブロッケンJr.（ロメロスペシャル ※アニメでは秘技・万里の長城）」 (the manga finish is the Romero Special, ch 100; the anime substitutes the 万里の長城, an anime-only technique that KOs Brocken Jr.). 35B 米ソ超人激突!の巻 = ch 101 便器の底は無限大!!の巻 - kinnikuman.fandom's Chapter 101 infobox carries an explicit reverse index, |anime=[[Episode 35A]]/[[Episode 35B|35B]], and ch 101's story is exactly Warsman vs Pentagon ('a battle between American Pentagon and the Russian Warsman is a good representation of the Cold War') plus Benkiman's handicap demonstration, which Toei's ep-35 line 「ベンキーマンの恐怖のデモンストレーションが行われようとしていた」 matches.",
+      "sources": [
+        "https://kinnikuman.fandom.com/api.php?action=parse&page=Chapter_101&prop=wikitext&format=json",
+        "https://kinnikuman.fandom.com/api.php?action=parse&page=Episode_35A&prop=wikitext&format=json",
+        "https://kinnikuman.fandom.com/api.php?action=parse&page=Episode_35B&prop=wikitext&format=json",
+        "https://lineup.toei-anim.co.jp/ja/tv/kinniku/episode/35/",
+        "https://ja.wikipedia.org/wiki/%E3%83%A9%E3%83%BC%E3%83%A1%E3%83%B3%E3%83%9E%E3%83%B3"
+      ]
+    },
+    {
+      "episode": 38,
+      "end_chapter": 107,
+      "start_chapter": 106,
+      "chapters_adapted": "106-107",
+      "volume": 8,
+      "confidence": "high",
+      "note": "A4/A10. 38A 棺桶デスマッチの巻 = ch 106 魔性のリング!!の巻: Toei ep 38 verbatim 「準決勝第二試合、ラーメンマン対ウォーズマンのリングは金網で囲まれていた。しかも、どちらか一方が用意された棺桶に叩き込まれるまで戦いが終わらないという棺桶デスマッチ」 = ch 106's 'the match will be a coffin death match, a match where the winner is declared when they force their opponent into their coffin', and Toei's 「ラーメンマンは準々決勝でブロッケンＪｒに受けたダメージが回復していなかった」 is ch 106's bandage sequence. 38B 戦う機械超人の巻 = ch 107 コンピューター超人の巻: fandom 38B 'Mr. Barracuda reveals that Warsman is a fighting computer programmed to recognize Ramenman's signature techniques' = the arc page's ch-107 citation ('It was during this fight that it was revealed that Warsman has a fighting computer'). Volume 8 = chs 95-108 (fandom volume list; ja-WP ウォーズマン cites 「コンピューター超人の巻」『キン肉マン 第8巻』177頁).",
+      "sources": [
+        "https://kinnikuman.fandom.com/api.php?action=parse&page=Episode_38A&prop=wikitext&format=json",
+        "https://kinnikuman.fandom.com/api.php?action=parse&page=Episode_38B&prop=wikitext&format=json",
+        "https://kinnikuman.fandom.com/api.php?action=parse&page=Chapter_106&prop=wikitext&format=json",
+        "https://lineup.toei-anim.co.jp/ja/tv/kinniku/episode/38/",
+        "https://ja.wikipedia.org/wiki/%E3%82%A6%E3%82%A9%E3%83%BC%E3%82%BA%E3%83%9E%E3%83%B3"
+      ]
+    },
+    {
+      "episode": 39,
+      "end_chapter": 109,
+      "start_chapter": 108,
+      "chapters_adapted": "108-109",
+      "volume": 9,
+      "confidence": "high",
+      "note": "A4/A10. 39A 死のベアークローの巻 = ch 108 地獄の棺桶!!の巻 (Toei ep 39 verbatim 「ボロボロになったラーメンマンはウォーズマンに止めを刺され、棺桶へと放り込まれてしまう」 = ch 108's Screwdriver through the ring bell and the body thrown into the coffin; fandom 39A 'the brutal steel cage casket match continues'). 39B スクランブル・ソフト返しの巻 = ch 109 それぞれの特訓!!の巻 - BOTH of that chapter's halves: fandom 39B 'Warsman shows mercy during a training exercise' is the death-row demonstration where he spares the grandfather (fandom Warsman page, ref ch 109: 'Warsman kills all 149 prisoners... but allows one elderly man to live'), and the segment title is Kinnikuman's Bear-Claw disarm, which is ch 109's other half ('Kinnikuman managed to figure out how to disarm Warsman of his Bear Claws by kicking the fist they're attached to away'). Toei ep 40 opens 「ベアクロー対策も完成し」, i.e. the counter is finished before ep 40. A10: ep 39A's opening recap of ch 107 is the series' standard A-part 前回のあらすじ narration, not a START. Volume 9 begins at ch 109 (ja-WP ウォーズマン cites 「それぞれの特訓!!の巻」『キン肉マン 第9巻』9頁).",
+      "sources": [
+        "https://kinnikuman.fandom.com/api.php?action=parse&page=Episode_39A&prop=wikitext&format=json",
+        "https://kinnikuman.fandom.com/api.php?action=parse&page=Episode_39B&prop=wikitext&format=json",
+        "https://kinnikuman.fandom.com/api.php?action=parse&page=Chapter_109&prop=wikitext&format=json",
+        "https://kinnikuman.fandom.com/api.php?action=parse&page=Warsman&prop=wikitext&format=json",
+        "https://lineup.toei-anim.co.jp/ja/tv/kinniku/episode/39/",
+        "https://ja.wikipedia.org/wiki/%E3%82%A6%E3%82%A9%E3%83%BC%E3%82%BA%E3%83%9E%E3%83%B3"
+      ]
+    },
+    {
+      "episode": 40,
+      "end_chapter": 110,
+      "start_chapter": 110,
+      "chapters_adapted": "110 (ep 40A; ep 40B ラーメンマンとの誓いの巻 has no identified manga counterpart - see flags)",
+      "volume": 9,
+      "confidence": "high",
+      "note": "A4/A10. 40A 覆面はぎデスマッチ!の巻 is ch 110 幻の秘密兵器!!の巻 beat for beat - Toei ep 40 verbatim: 「ベアクロー対策も完成し、キン肉マンは決勝戦の調印式会場でウォーズマンを挑発。挑発に乗ったウォーズマンのベアクローを破るが、幻の必殺技と呼ばれるパロ・スペシャルによって危機におちいる。テリーマンの援護でプールへと逃れたキン肉マンだったが、水面には何故か身体とは別の場所に顔が浮かんでいた」 = ch 110's press conference / contract signing / the disarm / the Palo Special / Terryman kicking him into the pool / the face coming off, which is what makes Barracuda declare the mask-removal match (the segment's title). Corroborated by the fandom Warsman page (ref ch 110: 'He then is seen at Toshima Pool Park for a press conference') and ja-WP ウォーズマン, which cites the Palo Special to 「幻の秘密兵器!!の巻」『キン肉マン 第9巻』31頁. END = 110: ch 111's own opening is 'The day of the finals has arrived', which the anime plays in ep 42A, and eps 40B/41 sit between them.",
+      "sources": [
+        "https://lineup.toei-anim.co.jp/ja/tv/kinniku/episode/40/",
+        "https://kinnikuman.fandom.com/api.php?action=parse&page=Chapter_110&prop=wikitext&format=json",
+        "https://kinnikuman.fandom.com/api.php?action=parse&page=Warsman&prop=wikitext&format=json",
+        "https://ja.wikipedia.org/wiki/%E3%82%A6%E3%82%A9%E3%83%BC%E3%82%BA%E3%83%9E%E3%83%B3"
+      ]
+    },
+    {
+      "episode": 42,
+      "end_chapter": 113,
+      "start_chapter": 111,
+      "chapters_adapted": "111-113",
+      "volume": 9,
+      "confidence": "medium",
+      "note": "A4/A10. START 111 よみがえる獣性!!の巻: fandom 42A 'Kinnikuman and Warsman weigh in before the finals' = ch 111's weigh-in (Bibimba's belt, Warsman 5kg over, Kinnikuman swapping masks with Meat to hide), and the ja-WP segment title 決戦の日きたる!の巻 is ch 111's own opening line ('The day of the finals has arrived in the national coliseum'). Ch 112 ああ!!ラーメンマンの巻 is the second half of 42A - fandom's 'Warsman and Barracuda have a disagreement' = ch 112's scale-smashing rage, the chains and Barracuda taking off his mask to calm him. 42B バラクーダの正体は!?の巻 = ch 113 役者がそろった!!の巻: Toei ep 42 verbatim 「動揺するウォーズマンを鎮めようと、バラクーダは非情にも止めを刺すよう指示を出す。それを阻止したキン肉マンは、ラーメンマンの仇討ちを宣言。耳を傾けていたバラクーダは、自分の正体について語り始める…」 = the arc page's ch-113 citation ('Warsman is stopped from killing a catatonic Ramenman, only for Robin Mask to reveal his true identity'). MEDIUM because the 113/114 line is a cliffhanger: Toei's 「語り始める…」 could bleed Robin's ch-114 explanation into 42B; if it does, ep 42's END is 114 and ep 43's START is unchanged.",
+      "sources": [
+        "https://kinnikuman.fandom.com/api.php?action=parse&page=Episode_42A&prop=wikitext&format=json",
+        "https://kinnikuman.fandom.com/api.php?action=parse&page=Episode_42B&prop=wikitext&format=json",
+        "https://kinnikuman.fandom.com/api.php?action=parse&page=Chapter_111&prop=wikitext&format=json",
+        "https://kinnikuman.fandom.com/api.php?action=parse&page=Chapter_113&prop=wikitext&format=json",
+        "https://lineup.toei-anim.co.jp/ja/tv/kinniku/episode/42/"
+      ]
+    },
+    {
+      "episode": 43,
+      "end_chapter": 115,
+      "start_chapter": 114,
+      "chapters_adapted": "114-115",
+      "volume": 9,
+      "confidence": "high",
+      "note": "A4/A10. 43A 恐怖! コンピュータ超人の巻 = ch 114 コピー超人…!?の巻: Toei ep 43 verbatim 「ウォーズマンがロビンマスクのコピー超人だと知ったキン肉マンは、動きを読み切って試合を優勢に進める」 = ch 114's 'Kinnikuman reveals that Warsman is merely copying Robin Mask's fighting style, which makes him predictable, and easily counters Warsman's moves'; ja-WP ウォーズマン cites the 異名 コピー超人 to 「コピー超人…!?の巻」『キン肉マン 第9巻』87頁. 43B 引き裂かれたマスクの巻 = ch 115 ぶきみな笑い!?の巻: Toei's 「突如として、ウォーズマンの顔に不気味な「ウォーズマンスマイル」が浮かぶ」 IS the chapter title, and the arc page cites ch 115 for 'Warsman reverts to his own style, then removes Kinnikuman's mask... Underneath each of Kinnikuman's masks is another mask' - the multi-mask trick fandom 43B names.",
+      "sources": [
+        "https://kinnikuman.fandom.com/api.php?action=parse&page=Episode_43A&prop=wikitext&format=json",
+        "https://kinnikuman.fandom.com/api.php?action=parse&page=Episode_43B&prop=wikitext&format=json",
+        "https://kinnikuman.fandom.com/api.php?action=parse&page=Chapter_114&prop=wikitext&format=json",
+        "https://lineup.toei-anim.co.jp/ja/tv/kinniku/episode/43/",
+        "https://ja.wikipedia.org/wiki/%E3%82%A6%E3%82%A9%E3%83%BC%E3%82%BA%E3%83%9E%E3%83%B3"
+      ]
+    },
+    {
+      "episode": 44,
+      "end_chapter": 117,
+      "start_chapter": 116,
+      "chapters_adapted": "116-117 (117 straddled with ep 45A, which carries the plea and the 天の声)",
+      "volume": 9,
+      "confidence": "medium",
+      "note": "A4/A10. START 116 rests on a NAME conversion that two sources state independently: the anime's キン肉ガード IS the manga's 肉のカーテン (ja-WP キン肉マンの技一覧: 「『第21回超人オリンピック』の決勝戦、キン肉マン対ウォーズマン戦の中でキン肉真弓からキン肉マンに伝授される… アニメでは名前がキン肉ガードに変更された」; ja fandom キン肉マン (テレビアニメ) 原作との主な相違点: 「肉のカーテン→キン肉ガードなど、技の名称も一部異なっている」), and 肉のカーテン is ch 116's own title, cited by the arc page for 'Warsman starts to remove Kinnikuman's actual mask, revealing black hair, until Kinnikuman performs the Muscle Curtain'. Toei ep 44 verbatim 「キン肉マンのマスクが破られた… そこで大王は、キン肉族に伝わる防御技術の極意・キン肉ガードをキン肉マンに伝授する」. END 117 天の声!?の巻 is the softer half: Toei ends ep 44 on 「ウォーズマンは、キン肉ガードによって攻撃を防がれると、動きを止めて何かの計算を始めた!」 and fandom 44B has 'Warsman finds Kinnikuman's weak spot' plus the girl pleading for Kinnikuman's life - the arc page's ch-117 beat ('Bibimba begs Warsman to stop, after he leaves Kinnikuman a bloody mess, but Robin Mask threatens to return him to the streets'; ja-WP records that ビビンバ is replaced by 翔野ナツコ in the anime). MEDIUM: the alternative reading, ep 44 = 116 only with all of 117 in ep 45A, is live and changes only this END - the continue is 117 either way.",
+      "sources": [
+        "https://ja.wikipedia.org/wiki/%E3%82%AD%E3%83%B3%E8%82%89%E3%83%9E%E3%83%B3%E3%81%AE%E6%8A%80%E4%B8%80%E8%A6%A7",
+        "https://kinnikuman.fandom.com/ja/api.php?action=parse&page=%E3%82%AD%E3%83%B3%E8%82%89%E3%83%9E%E3%83%B3%20(%E3%83%86%E3%83%AC%E3%83%93%E3%82%A2%E3%83%8B%E3%83%A1)&prop=wikitext&format=json",
+        "https://kinnikuman.fandom.com/api.php?action=parse&page=21st_Chojin_Olympics_Arc&prop=wikitext&format=json",
+        "https://kinnikuman.fandom.com/api.php?action=parse&page=Episode_44A&prop=wikitext&format=json",
+        "https://kinnikuman.fandom.com/api.php?action=parse&page=Episode_44B&prop=wikitext&format=json",
+        "https://lineup.toei-anim.co.jp/ja/tv/kinniku/episode/44/"
+      ]
+    },
+    {
+      "episode": 45,
+      "end_chapter": 118,
+      "start_chapter": 117,
+      "chapters_adapted": "117 (finished from ep 44B), 118 (118 straddled with ep 46A - the stored eps 45,46,47 partial{118-119} fact)",
+      "volume": 9,
+      "confidence": "high",
+      "note": "A4/A10. 45A ロビンマスクの復讐の巻 = ch 117 天の声!?の巻, and Toei's synopsis reproduces the chapter's TITLE beat: 「ウォーズマンはキン肉マンの腕をガッチリと決め、容赦のないエルボー・スタンプの雨を降らせる。あまりにも残虐なファイトを止めさせようとナツコが懇願するが、ウォーズマンの耳には届かない。傷付き、疲れ果て、勝負をあきらめてしまおうとしたその時、どこからともなくキン肉マンの耳に声が聞こえてきた…」 - the voice from nowhere IS 天の声, and the plea is the arc page's ch-117 citation. 45B 火事場のクソ力!の巻 = ch 118 未知の力の巻: fandom 45B 'Kinnikuman turns the tide on Warsman when he starts acting on pure instinct. Robin Mask's desire for revenge goes one step too far' = the arc page's ch-118 chain (Kinnikuman refuses to throw Warsman onto his own Bear Claw; Warsman changes his mind; Robin attacks him and slaps Bibimba). Ch 118's ending - Warsman fighting fairly - is ep 46A (stored 46 -> 119 [118]), so ep 45 ends mid-118 (C1).",
+      "sources": [
+        "https://lineup.toei-anim.co.jp/ja/tv/kinniku/episode/45/",
+        "https://kinnikuman.fandom.com/api.php?action=parse&page=Episode_45A&prop=wikitext&format=json",
+        "https://kinnikuman.fandom.com/api.php?action=parse&page=Episode_45B&prop=wikitext&format=json",
+        "https://kinnikuman.fandom.com/api.php?action=parse&page=21st_Chojin_Olympics_Arc&prop=wikitext&format=json",
+        "https://kinnikuman.fandom.com/api.php?action=parse&page=Warsman&prop=wikitext&format=json"
+      ]
+    }
+  ],
+  "continue_points": [
+    {
+      "episode": 34,
+      "continue_chapter": 100,
+      "kind": "parity",
+      "note": "C1 straddle: ep 34B stops with Ramenman and Brocken Jr. still trading blows in the concrete ring; ep 35A plays the rest of ch 100 (Ramenman's reversal and the win). Resume inside ch 100, not at 101.",
+      "sources": [
+        "https://kinnikuman.fandom.com/api.php?action=parse&page=Chapter_100&prop=wikitext&format=json",
+        "https://lineup.toei-anim.co.jp/ja/tv/kinniku/episode/35/"
+      ]
+    },
+    {
+      "episode": 40,
+      "continue_chapter": 111,
+      "kind": "parity",
+      "note": "C2 parity with the anime: ep 40A finishes ch 110 on its last page (the mask-removal match declared), and the anime's next SOURCE content is ep 42A = ch 111 よみがえる獣性!!の巻. Ep 41 in between adapts nothing - it is the anime-original Daisetsuzan training and the bear Gorota - so a reader at parity resumes at ch 111 and loses nothing by watching 41 first.",
+      "sources": [
+        "https://lineup.toei-anim.co.jp/ja/tv/kinniku/episode/41/",
+        "https://kinnikuman.fandom.com/api.php?action=parse&page=Gorota&prop=wikitext&format=json",
+        "https://kinnikuman.fandom.com/api.php?action=parse&page=Chapter_111&prop=wikitext&format=json"
+      ]
+    },
+    {
+      "episode": 45,
+      "continue_chapter": 118,
+      "kind": "parity",
+      "note": "C1 straddle: ep 45B stops as Robin Mask's revenge goes too far; ep 46A plays out the rest of ch 118 (Warsman turning on Robin and fighting Kinnikuman cleanly). Resume inside ch 118, not at 119 - consistent with the stored ep 46 -> 119 [118].",
+      "sources": [
+        "https://kinnikuman.fandom.com/api.php?action=parse&page=21st_Chojin_Olympics_Arc&prop=wikitext&format=json",
+        "https://kinnikuman.fandom.com/api.php?action=parse&page=Episode_46A&prop=wikitext&format=json"
+      ]
+    }
+  ],
+  "anchor_hostile": [
+    {
+      "episode": 41,
+      "why": "A1 + T28: ep 41 (41A パロ・スペシャルを破れの巻 / 41B 出た! キン肉バスターの巻) adapts ZERO source pages - it is the anime-original winter training on the Daisetsuzan mountains and the giant bear Gorota, an anime-only character. The manga has no mountain training before the Warsman final (its training chapter, ch 109 それぞれの特訓!!の巻, is the dojo session already animated in ep 39B), and the Kinniku Buster's manga debut is ch 120, inside the final itself - the anime invents the Gorota fight to give the move an origin. See type_corrections: the row should be filler, and a filler row takes no anchor.",
+      "sources": [
+        "https://kinnikuman.fandom.com/api.php?action=parse&page=Gorota&prop=wikitext&format=json",
+        "https://kinnikuman.fandom.com/api.php?action=parse&page=Kinniku_Buster&prop=wikitext&format=json",
+        "https://lineup.toei-anim.co.jp/ja/tv/kinniku/episode/41/",
+        "https://ja.wikipedia.org/wiki/%E3%82%A6%E3%82%A9%E3%83%BC%E3%82%BA%E3%83%9E%E3%83%B3"
+      ]
+    }
+  ],
+  "annotations": [
+    {
+      "episodes": [47],
+      "kind": "divergence",
+      "chapters": "119-120",
+      "note": "THE FINISHER DIVERGENCE (the ep-47 ask; T26/T27 - an annotation on a CANON row, not a retype). In the manga Warsman releases the Palo Special because his fighting computer shorts out past 30 minutes (ch 119 タイム・リミット30分!!の巻) and the Kinniku Buster ends the match (ch 120 勝利をわが手に!!の巻). The anime deletes the time weakness, runs the bout past an hour, has Ramenman's spirit-voice fire the 火事場のクソ力 so that KINNIKUMAN's surge overloads the circuits, and then has Warsman rise after the Buster under his own will for a further exchange that ends with a 風林火山. Two independent sources: ja-WP ウォーズマン (「アニメでは時間によってショートする弱点がなくなっており一時間以上の死闘を演じ… 最後は風林火山を受けて今度こそKOされた」; its match record prints 「×キン肉マン（キン肉バスター）※アニメ版ではさらに「風林火山」で決着」) and kinnikuman.fandom's Warsman page, whose record line reads 'X Kinnikuman (Kinniku Buster - 35 mins) (Manga) [ch 120] (Kinniku Buster -> Fu Rin Ka Zan) (Anime)' with the trivia 'In the anime, Warsman doesn't have this weakness... the inner computer malfunction are induced by the Kinnikuman's Fire of Inner Strength'. T28 materiality: the episode's job IS chs 119-120's job - break the hold, hit the Buster, win the V2, take the unmasking - and every participant, outcome and consequence is the manga's; only the mechanism and one appended exchange are the studio's, which is a divergence on a canon row, not a second plot. Stored 47 -> 120 [119] is unchanged."
+    },
+    {
+      "episodes": [42, 43, 44, 45, 46, 47],
+      "kind": "divergence",
+      "chapters": "111-120",
+      "note": "Staging of the 21st Chojin Olympics FINAL: the anime moves the venue from the manga's 国立競技場 to an original 東京グレートプレイランド (ja fandom キン肉マン (テレビアニメ) 原作との主な相違点: 「超人オリンピックザ・ビッグファイト決勝戦の会場が国立競技場ではなく東京グレートプレイランドに変更されている」), and throughout the arc the manga's ビビンバ is replaced by 翔野ナツコ (ja-WP ウォーズマン: 「ビビンバ（アニメでは翔野ナツコ）」), who in the anime is given a tie to Robin Mask's dead wife. The match beats themselves are chs 111-120."
+    },
+    {
+      "episodes": [35],
+      "kind": "divergence",
+      "chapters": "100",
+      "note": "Ramenman finishes Brocken Jr. with the Romero Special in ch 100; the anime substitutes an anime-only technique, 秘技・万里の長城, which becomes ep 35A's title (ja-WP ラーメンマン's match record: 「○ブロッケンJr.（ロメロスペシャル ※アニメでは秘技・万里の長城）」; its technique list marks 万里の長城 「アニメのみの使用であり、この技でブロッケンJr.をKOしている」). Same chapter, different finish."
+    },
+    {
+      "episodes": [44],
+      "kind": "divergence",
+      "chapters": "116",
+      "note": "Name conversion, not a content change: the anime's 極意・キン肉ガード (ep 44A's title) is the manga's 肉のカーテン (ch 116's title) - ja-WP キン肉マンの技一覧 「アニメでは名前がキン肉ガードに変更された」, ja fandom 「肉のカーテン→キン肉ガード」. Recorded so a later reader does not treat the segment title as evidence of an anime-original technique."
+    },
+    {
+      "episodes": [34, 35],
+      "kind": "partial",
+      "chapters": "100",
+      "note": "Chapter 100 傷だらけの勝利の巻 straddles the 34/35 boundary: ep 34B animates the opening bell and the Wolfman/Cubeman decision, ep 35A the Ramenman reversal and the win. Listed in both rows' chapters_adapted."
+    },
+    {
+      "episodes": [44, 45],
+      "kind": "partial",
+      "chapters": "117",
+      "note": "Chapter 117 天の声!?の巻 straddles 44/45: ep 44B has Warsman finding the weak spot and Natsuko pleading, ep 45A the elbow stamps and the voice that is the chapter's title beat. Medium - see the ep-44 anchor note for the alternative reading (all of 117 inside ep 45)."
+    }
+  ],
+  "repairs": [
+    {
+      "episode": 47,
+      "field": "continue_note",
+      "old": "parity with anime (Sean C2 2026-08-24): ep 48 starts ch 122; chs 121 not yet seen at this point (chronological next-unseen...)",
+      "new": "C2 parity with the anime: ep 48 starts at ch 122 地獄からきた7人の巻. Ch 121 超人オリンピック総集編の巻 is NEVER animated - it is a post-tournament retrospective (the competitors' interview comments after the Big Fight) that the anime skips entirely, so read it now as a bonus or skip it for good; it is not 'coming later'.",
+      "why": "The stored note says 'chs 121 not yet seen at this point', which tells the reader the chapter is still ahead of them in the anime. It is not: the anime goes straight from ch 120's unmasking to ch 122's Seven Devil Chojin (ep 48A: 'Kinnikuman inadvertently releases the Seven Devil Chojin'; Toei ep 48 verbatim 「キン肉マンは超人オリンピックＶ２達成を喜んでいる最中、ひょんなことから大気圏外に飛ばされ、妙な建物にあるスイッチを何気なく押す」). Ch 121 is a real ~14-page chapter of retrospective comments, not a chapter-number gap: ja-WP cites it twice by page - 「超人オリンピック総集編の巻」『キン肉マン 第9巻』186頁 (Robin Mask calling Warsman a 'ウスノロ' and vowing to beat Kinnikuman himself; Skull Bozu's 'テリーマンをつぶしたのはこのオレだ!') and 177頁 - and ja-WP ロビンマスク contrasts it with the anime, which instead has Robin respecting Warsman and Kinnikuman. The continue_chapter value 122 is CORRECT and unchanged; only the note is wrong.",
+      "sources": [
+        "https://ja.wikipedia.org/wiki/%E3%83%AD%E3%83%93%E3%83%B3%E3%83%9E%E3%82%B9%E3%82%AF",
+        "https://ja.wikipedia.org/wiki/%E3%82%AD%E3%83%B3%E8%82%89%E3%83%9E%E3%83%B3%E3%81%AE%E7%99%BB%E5%A0%B4%E4%BA%BA%E7%89%A9",
+        "https://lineup.toei-anim.co.jp/ja/tv/kinniku/episode/48/",
+        "https://kinnikuman.fandom.com/api.php?action=parse&page=List_of_Kinnikuman_Chapters/Volumes_1-10&prop=wikitext&format=json"
+      ]
+    },
+    {
+      "episode": 35,
+      "field": "annotation",
+      "old": "eps 32,46 abridged {95-120} checkpoint list, which prints '35=101'",
+      "new": "The checkpoint should read 35 = 100-101 (35A finishes ch 100, 35B is ch 101). The batch-19 verifier already told us to drop or mark '35=101' as unverified; this verdict resolves it rather than dropping it. Every other checkpoint in that annotation (31A=95, 31B=96, 32A=97, 32B/33=98, 36A=102, 36B=103, 37=104-105, 45B/46A=118, 46B/47A=119, 47B=120) holds; '38-40=106-108' should read 38=106-107, 39=108-109, 40=110; '42A=111, 42B=113, 43=114' should read 42=111-113, 43=114-115.",
+      "why": "The stored abridged{95-120} fact carries a checkpoint list that this lane has now measured row by row; leaving the old checkpoints in place would contradict the anchors delivered here.",
+      "sources": [
+        "https://kinnikuman.fandom.com/api.php?action=parse&page=Chapter_101&prop=wikitext&format=json",
+        "https://lineup.toei-anim.co.jp/ja/tv/kinniku/episode/35/"
+      ]
+    }
+  ],
+  "type_corrections": [
+    {
+      "episodes": [41],
+      "type": "filler",
+      "note": "T28/T27. Ep 41 has ZERO standing in the source. Toei's own synopsis: 「ウォーズマンとの試合に備え、キン肉マンはテリーマンとブロッケンJr.をパートナーに冬の大雪山で山ごもりを敢行する。キン肉マンはキン肉族に伝わる風習に倣い、キン肉ドームでキャンプイン。テリーマンとブロッケンJr.は巨大熊の五郎太が暴れていると聞いて退治に向かうが、五郎太は予想外の力を秘めていた」 - none of this is in chs 109-112. kinnikuman.fandom's Gorota page states outright 'He is an anime-only character... He has only appeared in the anime', and its Kinniku Buster page dates the move's first use to 'the fight with Warsman (Super Bear Gorota in the anime)', i.e. the anime relocated the Buster's debut into an invented bear fight; ja-WP ウォーズマン confirms the manga debut is inside the final itself (「本邦初公開のキン肉バスターを受け敗北する」, ch 120). The manga's only pre-final training is ch 109's dojo session, already animated in ep 39B. Anime-original in both segments -> filler (A1: no anchor)."
+    }
+  ],
+  "structure": {
+    "notes": "ROW IDENTITY: our 137 rows = ja-WP's 137 = kinnikuman.fandom's 137 broadcasts. Each broadcast is two ~11-minute segments; ja-WP prints them as a rowspan=2 pair (A title on the number row, B title on the following row) and the fandom indexes them as Episode NNA / Episode NNB, so every join here was made segment-wise on TITLE and merged back to the row (R20 - never by index). The fandom's episode pages run one calendar DAY early throughout this range (Episode 33A says November 19, 1983; ja-WP and our row say November 20), a consistent off-by-one on that wiki, so dates were not used as the join key.\nCHAPTER SPACE: the classic manga's own numbering. Volume 8 = chs 95-108, volume 9 = chs 109-121, volume 10 = chs 122-134 (kinnikuman.fandom List of Kinnikuman Chapters/Volumes 1-10, which prints Japanese and English titles). Independently confirmed by ja-WP's per-character 巻頁 citations, which are the strongest source this series has: 「パノラマトーナメント表の巻」第8巻23頁 (ch 96), 「便器づまりにご注意!!の巻」第8巻123頁 (ch 103), 「コンピューター超人の巻」第8巻177頁 (ch 107), 「それぞれの特訓!!の巻」第9巻9頁 (ch 109), 「幻の秘密兵器!!の巻」第9巻31頁 (ch 110), 「コピー超人…!?の巻」第9巻87頁 (ch 114), 「タイム・リミット30分!!の巻」第9巻148頁 (ch 119), 「勝利をわが手に!!の巻」第9巻169頁 (ch 120), 「超人オリンピック総集編の巻」第9巻177頁/186頁 (ch 121). Every stored volume in the range (36/37 = v8, 46/47 = v9, 48 = v10) agrees.\nWHAT MADE THIS RANGE MAPPABLE (unlike wave 1's): kinnikuman.fandom HAS Episode 30A-50B pages and Chapter 96-121 pages here - the numbered episode pages stop in the 50s and the chapter pages above 121 are missing, which is why the Dream-Tag range had none. Chapter pages 96-113 carry real story sections; 115-121 are '(More to Come)' stubs, so the finals' interior boundaries lean on the 21st Chojin Olympics Arc page's per-sentence chapter citations plus Toei's synopses. A THIRD reverse index exists but only on three chapters: the Chapter infobox's |anime= field is filled for ch 101 (Episode 35A/35B), 102 (36A) and 103 (36B) and is '.' or empty everywhere else - do not read the empty ones as 'not adapted'.\nSOURCE INDEPENDENCE (a trap closed): Toei Animation's lineup pages (lineup.toei-anim.co.jp/ja/tv/kinniku/episode/N/) are the licensor's per-broadcast synopsis. dアニメストア republishes them, and so does ふらっと動画 (douga.flat-flat.jp/titles/S001284/N), whose per-episode text is Toei's copy VERBATIM - flat-flat is a convenient single-page mirror of all 137 synopses but it is NOT a second source. Every anchor here therefore pairs Toei with a fandom page and/or a ja-WP 巻頁 citation.\nCH 121 IS REAL AND NEVER ADAPTED: 超人オリンピック総集編の巻 is not a numbering artefact but a ~14-page post-tournament retrospective closing volume 9. The anime jumps ch 120 -> ch 122. See the ep-47 continue repair.\nBLOCK SHAPE: chs 95-120 across eps 31-47 is an EXPANSION (26 chapters / 17 broadcasts / 34 segments), in strict publication order, with three anime-original segments inserted between ch 110 and ch 111 (40B, 41A, 41B) and repeated one-chapter-over-two-segments stretches in the final (117, 118, 119).",
+    "order_only": []
+  },
+  "flags_for_sean": [
+    "EP 40 MAY BE `mixed`, and I did not propose the retype. 40A is unambiguously ch 110 (Toei beat for beat), but 40B ラーメンマンとの誓いの巻 - fandom: 'Nervous about his De-Masking Deathmatch, Kinnikuman runs away from home. When found, he promises to defeat Warsman for Ramenman' - has no counterpart I could source in chs 110-112. The structural case that it is anime-original is good (ch 110 runs straight into ch 111's 'the day of the finals has arrived', which the anime plays in ep 42A; ch 112's Kinnikuman-meets-the-comatose-Ramenman beat is in ep 42, per Toei's 「試合開始直前、生ける屍のようになったラーメンマンの姿を目にする」; and 40B leads directly into the wholly original ep 41). But that is an argument from ABSENCE, and Toei's ep-40 blurb stops at the A-part, so I would be retyping a row on a silence. If Sean wants it settled, the deciding evidence is 10 minutes of ep 40B on Toei's own 40th-anniversary YouTube upload (watch?v=OpRc0dW1O0A).",
+    "SPLIT EVIDENCE on ep 44's END (116 vs 117) and ep 42's END (113 vs 114). Both are one-chapter cliffhanger boundaries inside the final, derived from Toei's closing sentence read against the arc page's citation chain, and neither moves any continue point: ep 44's continue is 117 under either reading, ep 43's START is 114 under either. Fixed pins in the final that survive every reading: 111 (42A weigh-in), 113 (42B, the Barracuda reveal), 114 (43A, コピー超人), 115 (43B, the Warsman Smile / the torn mask), 116 (44A, キン肉ガード = 肉のカーテン), 117 (45A, 天の声), 118 (45B/46A), 119 (46B/47A), 120 (47B).",
+    "The batch-19 `eps 32,46 abridged {95-120}` annotation's checkpoint list is now measurably wrong in three places (35, 38-40, 42-43) - see repairs. The one the batch-19 verifier told us to drop, '35=101', turns out to be an under-count rather than an error: ep 35 is 100-101, and kinnikuman.fandom's Chapter 101 |anime= field naming BOTH 35A and 35B is what settles it.",
+    "Ep 47's answer to the lane-C ask, stated plainly for the ruling: CANON + divergence annotation, not mixed. Two wikis document the Furinkazan finish and the deleted 30-minute weakness, but no source claims the anime invented a separate PLOT in ep 47 - the participants, the outcome, the V2 and Warsman's self-unmasking are all ch 119-120. If Sean reads the appended post-Buster exchange as its own story-carrying block, the T28 call would flip to mixed; I read it as a re-staging of the same beat and therefore an annotation."
+  ]
+}
