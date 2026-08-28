@@ -25,7 +25,8 @@ async function main() {
     let v: any;
     try { v = JSON.parse(readFileSync(OUT + f, 'utf8')); } catch (e) { console.log(`FAIL ${f}: does not parse — ${e}`); bad++; continue; }
     if (!v.series_id) { console.log(`FAIL ${f}: no series_id`); bad++; continue; }
-    const task = TARGETS.find((t) => t[0] === v.series_id);
+    const w3 = f.endsWith('-w3.json');
+    const task = TARGETS.filter((t) => t[0] === v.series_id).find((t) => (w3 ? t[2] === 'C' : t[2] !== 'C')) ?? TARGETS.find((t) => t[0] === v.series_id);
     if (!task) { console.log(`FAIL ${f}: no TARGETS entry for ${v.series_id}`); bad++; continue; }
     const { data: s } = await db.from('series').select('total_chapters, latest_known_chapters').eq('id', v.series_id).maybeSingle();
     const space = Math.max(s?.total_chapters ?? 0, s?.latest_known_chapters ?? 0);

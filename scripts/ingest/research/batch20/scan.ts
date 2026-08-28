@@ -21,8 +21,10 @@ async function main() {
   let warn = 0;
   for (const f of files) {
     const v = JSON.parse(readFileSync(OUT + f, 'utf8'));
-    const task = TARGETS.find((t) => t[0] === v.series_id);
-    if (!task || task[2] !== 'A2') continue;
+    // a series can have one TARGETS entry per wave (kinnikuman-w3.json, eyeshield-21-w3.json): match the file's wave suffix to the lane
+    const w3 = f.endsWith('-w3.json');
+    const task = TARGETS.filter((t) => t[0] === v.series_id).find((t) => (w3 ? t[2] === 'C' : t[2] !== 'C')) ?? TARGETS.find((t) => t[0] === v.series_id);
+    if (!task || (task[2] !== 'A2' && task[2] !== 'C')) continue; // lane C narrow follow-ups get the same fence / monotone / orphan checks (FotNS 1-28 is a gap block)
     if (only.size && !only.has(v.series_id)) continue;
     const [lo, hi] = [Math.min(...ranges(task[1]).map((r) => r[0])), Math.max(...ranges(task[1]).map((r) => r[1]))];
     const stored = await selectAll<any>('chapter_anchors', 'episode, chapter, start_chapter, continue_chapter, source', (q) => q.eq('series_id', v.series_id).order('episode'));
