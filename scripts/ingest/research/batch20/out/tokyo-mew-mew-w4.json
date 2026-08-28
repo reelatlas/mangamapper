@@ -1,0 +1,92 @@
+{
+  "series_id": "tokyo-mew-mew",
+  "summary": "ONE ROW, read on the pages. The wave-3 verifier's out-of-ask doubt is CONFIRMED and becomes a repair: ep 38 does not stop at chapter 19. The TokyoPop volume-5 scan (Internet Archive item manga_Tokyo_Mew_Mew) was read leaf by leaf with the printed folios fixing the arithmetic (page = 2*leaf+2 on the right, 2*leaf+3 on the left; folios 77, 80, 109, 112, 125 and the TOC's 'About the Fifth Volume = 148' all land exactly). Chapter 19 'Truth or Dare' runs pp 76-107 and ENDS on Masaya's 'I'm sorry... but I knew. / I knew you were a Mew Mew. / I figured it out.' (pp 106-107). Chapter 20 'Masaya Confessions' opens on its title illustration at p 108 and its first scene, pp 109-121, is Masaya's account of HOW he worked it out (the campus park, 'until that rainy day', the Tokyo Tower call, 'I need to go to her now... but what can I do?'), then p 118 'If you didn't want me to know, I thought I'd play it cool by keeping it a secret. / I'd play along.' + 'I LOVE YOU.' (pp 118-119), then pp 120-121 'So you knew I was hiding this from you?' / 'Likewise. I didn't ask because I wanted to be with you.' / 'Then this will be... our little secret, okay? Kinda like don't ask, don't tell.' Ep 38's payload is BOTH: TV Aichi's own per-episode archive (the broadcaster that carried the show) says the woken Aoyama 'いちごの正体に前から気付いていたと話す' (ch 19 p 107) and then 'それでもなお好きだという青山くんの告白' (ch 20 p 118-119) and 'これからは、２人の秘密にしようと約束するのだった' (ch 20 pp 120-121); en-WP independently gives 'Masaya tells her that he already knew... He pretended not to know because it was what she seemed to want.' Chapter 20's number was already an END-range member at ep 36 — but ep 36's share is ch 20's TAIL (Ichigo as a cat, Tart's attack, Alto's rescue, 'Ryou?!' and TO BE CONTINUED, pp ~134-147), so pp 108-121 are FIRST-TIME pages at ep 38. Under 'pages, not numbers' (Sean 2026-08-27) that is an anchor: REPAIR 38 -> 20 [19] v5, with `rearranged`. The continue is unchanged (18, parity with ep 40). Ep 38 is the only target row and it takes an anchor.",
+  "anchors": [
+    {
+      "episode": 38,
+      "end_chapter": 20,
+      "start_chapter": 19,
+      "chapters_adapted": "19 (the chapter's closing beats, pp 102-107 - Kish carried off, 'He saw all of it. The battle, the transformation... everything', and Masaya's 'I'm sorry... but I knew. I knew you were a Mew Mew. I figured it out.' pp 106-107) - 20 (the chapter's OPENING confession scene, pp 108-121 - how he worked it out, 'I love you', and 'Then this will be... our little secret, okay?'; ch 20's tail, pp ~128-147, was animated first at ep 36)",
+      "volume": 5,
+      "confidence": "high",
+      "note": "A4 / A41 and 'pages, not numbers' (Sean 2026-08-27) - REPAIR of the stored 38 -> 19 [19]. Manga side, page-verified in the TokyoPop volume-5 scan (folios read: 77, 80, 109, 112, 125; page = 2*leaf+2 right / +3 left, confirmed against the TOC's 'About the Fifth Volume 148' at leaf 73 and 'Another Story 150' at leaf 74): ch 19 title page p 76, chapter ends p 107 on 'I knew you were a Mew Mew. / I figured it out.'; ch 20 title illustration p 108, first scene pp 109-121. Anime side, two independent texts. (1) TV Aichi's own back-number page for 02/12/21 第38話「聖夜の奇跡、秘密の消えた夜」: 「目覚めた青山くんは、いちごの正体に前から気付いていたと話す。それでもなお好きだという青山くんの告白にうれし涙をながすいちご。これからは、２人の秘密にしようと約束するのだった。」 - three beats that are ch 19 p 107, ch 20 pp 118-119 ('I love you' / 'I thought I'd play it cool by keeping it a secret. I'd play along.'), and ch 20 pp 120-121 ('Then this will be... our little secret, okay? Kinda like don't ask, don't tell.'). (2) en-WP ep 38: 'Masaya tells her that he already knew, and that it does not bother him. He pretended not to know because it was what she seemed to want.' - the second clause exists ONLY on ch 20 p 118; it is not on any page of ch 19. FIRST-TIME test (A4, 'pages, not numbers'): ch 20's number was already inside ep 36's anchor (36 -> 21 [20]), but ep 36's ch-20 share is the chapter's TAIL - en-WP ep 36: 'Ichigo changes into a cat again... is saved by Alto who also kisses her to change her back... shocked when he suddenly changes into Ryou' = pp ~134-147 (the scan: 'Alto?!' at pp 144-145, 'Ryou?!' + TO BE CONTINUED at pp 146-147). Nothing before ep 38 animates pp 108-121. END = 20 (the furthest mainline chapter in running order); START = 19 (its share is ~6 pages and carries the episode's title beat - the secret that vanishes - so it is not the A10 <=5-page leading sliver; see flags for the alternative reading). Volume 5 for both chapters, matching the stored v5: 17-20 boundary.",
+      "sources": [
+        "https://web.archive.org/web/20051001061446/http://www.tv-aichi.co.jp:80/mewmew/kako/052/index38.html",
+        "https://en.wikipedia.org/wiki/List_of_Tokyo_Mew_Mew_episodes",
+        "https://archive.org/details/manga_Tokyo_Mew_Mew",
+        "https://en.wikipedia.org/wiki/List_of_Tokyo_Mew_Mew_chapters",
+        "https://tokyomewmew.fandom.com/api.php?action=parse&page=Episode%2038%3A%20Miracle%20Of%20The%20Holy%20Night%20-%20No%20Secrets%20Anymore%21&prop=wikitext&format=json"
+      ]
+    }
+  ],
+  "continue_points": [
+    {
+      "episode": 38,
+      "continue_chapter": 18,
+      "kind": "parity",
+      "note": "UNCHANGED by the repair - the stored value is right and stays right. C2/C3 parity: the next episode carrying source pages is ep 40, which starts ch 18 'Rescue Mission' (stored anchor 40 -> 18 [18]); ep 39 is filler. With ep 38 the reader has seen chs 1-10, 12-17, 19 and 20's opening; ch 18 is the one remaining unseen chapter before the anime moves on, and it arrives at ep 40, so resume at 18 and skip forward past chs 19-21 on arrival (they are already animated at eps 36 / 38 / 41). The standing hole is unchanged: ch 11 'Cruise Control' is never adapted anywhere in the 52 episodes.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/List_of_Tokyo_Mew_Mew_episodes",
+        "https://en.wikipedia.org/wiki/List_of_Tokyo_Mew_Mew_chapters"
+      ]
+    }
+  ],
+  "anchor_hostile": [],
+  "annotations": [
+    {
+      "episodes": [38],
+      "kind": "rearranged",
+      "chapters": "19-20",
+      "note": "REPLACES the stored `rearranged {19}` (batch 19). A41 settled reorder, 'pages, not numbers': chapter 20 is split across two episodes in REVERSE order. Ep 36 (2002-12-07) took ch 20's TAIL - Ichigo turning into a cat, Tart's attack, Alto's rescue and the Alto = Ryou reveal, pp ~134-147 - as the payoff it needed for the Mew Project history it then imports from ch 21; ep 38 (2002-12-21) takes ch 20's HEAD two weeks later, pp 108-121, together with ch 19's closing pages 102-107. So both the chapter NUMBER 20 and the chapter number 19 sit behind ep 36's END of 21, and ch 20's head is animated after its own tail. The pages are first-time in both cases, so both rows anchor."
+    },
+    {
+      "episodes": [38],
+      "kind": "partial",
+      "chapters": "19-20",
+      "note": "REPLACES the stored `partial {19}`. Ep 38 takes only the closing pages of ch 19 (pp 102-107) and only the opening scene of ch 20 (pp 108-121). Ch 19's body - the lunch date, Kish's attack and the forced mid-fight transformation, pp 76-101 - is not animated as written (see the divergence note); ch 20's remainder - Ichigo's 'that's not my only secret' cat explanation and the hug (pp 122-124), the aliens' 'Deep Blue will be awake soon' (p 125), the lunch epilogue (pp 126-127), the date with Ichigo's parents (pp 128-133) and the cat/Alto tail (pp ~134-147) - is either at ep 36 or nowhere. Neither synopsis places pp 122-127 in ep 38, so they are left uncited."
+    },
+    {
+      "episodes": [38],
+      "kind": "divergence",
+      "chapters": "19",
+      "note": "The reveal is relocated wholesale. In ch 19 Masaya learns the truth because Kish attacks their lunch date and Ichigo is FORCED to transform in front of him ('He saw all of it. The battle, the transformation... everything', p 103); in the anime the setting is the original Christmas two-parter - the Odaiba tree, the mew-aqua explosion, Masaya struck in the chest and hospitalised, and Ichigo telling him VOLUNTARILY at the tree (TV Aichi ep 38; en-WP ep 38). Only the chapter's closing beat - 'I knew you were a Mew Mew. I figured it out.' - survives verbatim, which is why ch 19 contributes its tail pages and not its body."
+    }
+  ],
+  "repairs": [
+    {
+      "episode": 38,
+      "field": "end_chapter",
+      "old": 19,
+      "new": 20,
+      "why": "Ep 38's payload does not stop at ch 19's last page. The manga's 'I already knew' has TWO halves and the anime uses both: ch 19 p 107 ('I knew you were a Mew Mew. I figured it out.') and ch 20 pp 118-121 ('If you didn't want me to know, I thought I'd play it cool by keeping it a secret. I'd play along.' / 'I love you.' / 'Then this will be... our little secret, okay?'). TV Aichi's official back-number synopsis for the episode names all three beats in order and ends on the promise to keep it their secret - which is ch 20 p 121, not any page of ch 19 - and en-WP's summary independently carries 'He pretended not to know because it was what she seemed to want', which is ch 20 p 118 only. Ch 20's title illustration is p 108 in the TokyoPop volume, page-verified. These pages are first-time at ep 38 (ep 36's ch-20 share is the chapter's tail, pp ~134-147), so under 'pages, not numbers' (Sean 2026-08-27) END moves 19 -> 20 with a `rearranged` annotation. START stays 19 and volume stays 5.",
+      "sources": [
+        "https://web.archive.org/web/20051001061446/http://www.tv-aichi.co.jp:80/mewmew/kako/052/index38.html",
+        "https://en.wikipedia.org/wiki/List_of_Tokyo_Mew_Mew_episodes",
+        "https://archive.org/details/manga_Tokyo_Mew_Mew"
+      ]
+    },
+    {
+      "episode": 38,
+      "field": "chapters_adapted",
+      "old": "19 (Ichigo tells Masaya she is a Mew Mew; he already knew)",
+      "new": "19 (the chapter's closing beats, pp 102-107 - Kish carried off, 'He saw all of it. The battle, the transformation... everything', and Masaya's 'I'm sorry... but I knew. I knew you were a Mew Mew. I figured it out.' pp 106-107) - 20 (the chapter's OPENING confession scene, pp 108-121 - how he worked it out, 'I love you', and 'Then this will be... our little secret, okay?'; ch 20's tail, pp ~128-147, was animated first at ep 36)",
+      "why": "Follows the END repair; states the page split so a future reader can see which pages of each chapter this row owns and which pages ep 36 owns. The 'Ichigo tells Masaya she is a Mew Mew' clause in the stored text is the ANIME's staging (she tells him at the tree); in the manga she never tells him - he tells her. Kept out of the new text for that reason.",
+      "sources": [
+        "https://archive.org/details/manga_Tokyo_Mew_Mew",
+        "https://web.archive.org/web/20051001061446/http://www.tv-aichi.co.jp:80/mewmew/kako/052/index38.html"
+      ]
+    }
+  ],
+  "type_corrections": [],
+  "structure": {
+    "notes": "CHAPTER SPACE unchanged (N22): every value above is in the 27-chapter Nakayoshi mainline, v5 = 17-20, matching the stored boundaries. No conversion was needed and no storefront/print re-numbering is involved. PAGE MAP INSTRUMENT: the Internet Archive item manga_Tokyo_Mew_Mew is public (7 TokyoPop volumes, per-volume _jp2.zip); individual leaves render as JPEG through the BookReader image endpoint (BookReaderImages.php?zip=/31/items/manga_Tokyo_Mew_Mew/<file>_jp2.zip&file=<...>_NNNN.jp2&scale=1) without borrowing, and the item's _djvu.xml gives per-leaf OCR that makes a scan-read cheap to target. VOLUME 5 = 91 leaves, each leaf one two-page spread; the arithmetic is page = 2*leaf+2 (RIGHT page, read first - the volume is unflipped right-to-left) and 2*leaf+3 (LEFT). Verified against four printed folios (77 at leaf 37, 80 at leaf 39, 109 at leaf 53, 112 at leaf 55, 125 at leaf 61) and against the volume's own TOC ('About the Fifth Volume 148' = leaf 73, 'Tokyo Mew Mew Another Story 150' = leaf 74). CHAPTER BOUNDARIES READ: ch 19 'Truth or Dare' title illustration p 76, story pp 77-107, ends on 'I knew you were a Mew Mew. / I figured it out.' (pp 106-107, after the kiss spread pp 104-105); ch 20 'Masaya Confessions' title illustration p 108, first scene pp 109-121, cat-secret pp 122-124, aliens/Deep Blue p 125, lunch epilogue pp 126-127, date with Ichigo's parents pp 128-133, Tart attacks cat-Ichigo pp ~134-145, 'Ryou?!' + TO BE CONTINUED pp 146-147. ONE ANOMALY WORTH RECORDING: the 'SPECIAL THANKS!! / Appeared in Nakayoshi magazine March 2002 thru June 2002 issues' credit sits at p 127, i.e. twenty pages before the volume's TO BE CONTINUED at p 147. It is NOT a chapter boundary: there is no title illustration anywhere in pp 128-147, en-WP's and the fandom's chapter lists both give volume 5 exactly four chapters (17-20), the volume's own TOC lists four, and the next entry after 'Masaya Confessions' in all three is 'About the Fifth Volume' at p 148 - so pp 128-147 are the back half of ch 20. Anyone re-reading this volume should not take that credit line as a chapter end. SOURCE LINEAGE (re-confirmed): tokyomewmew.fandom's VOLUME pages are en-WP's summaries verbatim - one lineage, not two - so the volume prose is cited once; the fandom's own Episode 38 page carries a genuinely different (if thin) text ('Ichigo and Aoyama have had a few secrets they've kept from each other but tonight they both come clean with each other') and is cited as a weak third leg only. TV AICHI IS A NEW SOURCE FOR THIS SERIES and it is licensor-tier: the broadcaster's back-number archive at tv-aichi.co.jp/mewmew/kako/052/indexNN.html carries a full official per-episode synopsis plus the staff credits. Only a subset of the 52 pages survives in the Wayback Machine - present: 02, 03, 04, 06, 07, 08, 12, 17, 18, 21, 23, 26, 28, 29, 30, 32, 38, 39, 41, 42, 43, 50, 51; ABSENT: 36, 37, 40, 45 (checked, 'not archived'). ja-WP carries no per-episode synopses and its 太字 marking does not bold row 38 (consistent with the wave-3 finding that the bolding is unreliable in both directions - this row demonstrably adapts two chapters).",
+    "order_only": []
+  },
+  "flags_for_sean": [
+    "THE ALTERNATIVE READING OF START, stated so it is not re-litigated silently. Ep 38's ch-19 share is about six pages (102-107) and the manga's staging of them (a forced transformation during a Kish attack) is replaced by the anime's Christmas/hospital two-parter, so a strict reader could call the ch-19 material a leading fragment and file the row as 38 -> 20 [20]. I kept START = 19 because (a) it is above A10's <=5-page sliver threshold, (b) it is not a teaser/cold-open/recap - it is the beat the episode's Japanese title names (秘密の消えた夜, 'the night the secret vanished'), and (c) batch 19 already ruled ch 19's payload onto this row. If you prefer [20], the END, the volume, the continue and every annotation above are unaffected.",
+    "CONSEQUENCE FOR THE A41 SEQUENCE. With this repair the run reads 36 -> 21 [20], 38 -> 20 [19], 40 -> 18 [18], 41 -> 21 [21], 45 -> 22 [22]. Ep 38 stops being a two-chapter drop behind ep 36 and becomes a one-chapter drop; the shape is unchanged (still a settled reorder, still monotone-violating, still inside the ruled A41 regime) and needs no new tolerance.",
+    "EP 36 IS CONSISTENT AND NEEDS NO REPAIR, but its stored chapters_adapted text can now be page-located if you ever want it: '20 (Alto = Ryou reveal)' = ch 20 pp ~134-147 (Tart attacks cat-Ichigo, Alto arrives and kisses her back to human, 'Ryou?!' and TO BE CONTINUED on p 147), and '21 (Mew Project history)' = vol 6 pp 5-13. The two rows now partition chapter 20 cleanly, tail-first: ep 36 pp ~134-147, ep 38 pp 108-121. Pages 122-133 (Ichigo's 'that's not my only secret' cat explanation, the hug, the Deep Blue line, the lunch epilogue, the date with her parents) are claimed by neither synopsis and are left uncited rather than assigned.",
+    "NOT RESOLVED, POSITION-NEUTRAL: whether ep 38 also animates ch 20 pp 122-124 (Ichigo explaining that she turns into a cat when she gets excited, and the closing hug). TV Aichi's synopsis ends on the secret-keeping promise (p 121) and en-WP ends on the anime-original necklace; the anime established Ichigo's cat transformation back at eps 12/28, so the manga's explanation scene would be redundant there. If it is in the episode, END and START are unchanged.",
+    "USEFUL BEYOND THIS ROW: TV Aichi's surviving back-number pages (list in structure.notes) are an official per-episode synopsis for 23 of the 52 rows, including 39, 41, 42, 43, 50 and 51. Nothing in this batch has used them before; they would be the second independent leg for several rows that currently rest on en-WP alone."
+  ]
+}
