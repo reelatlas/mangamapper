@@ -2,8 +2,11 @@
 // one-off): whenever a row is named in a recap — a landing, WAVE*-RECOVERY,
 // THE DECISIONS, an apply recap — every episode is ONE LINE, stored first,
 // then the delta:
-//   series | ep N — stored: {canon|mixed|filler} [+ annotation kinds] → proposed: {same | new type | annotation change | no type change}
-// The SERIES column is mandatory (Sean 2026-08-28: a row without its series is no context).
+//   ep N — stored: {canon|mixed|filler} [+ annotation kinds] → proposed: {same | new type | annotation change | no type change}
+// The SERIES is the table's TITLE when a table covers one series (this printer:
+// one file = one series, so the heading is the series); a table that mixes
+// series carries a `series` column instead (Sean 2026-08-28: a row without its
+// series is no context; a whole column for one series is noise).
 // A block of retypes is a table, never a sentence; unchanged rows in the ask
 // still show the stored type once (the baseline); identity/date-only repairs
 // still show the stored type. GENERATED here from the DB + the verdict so it
@@ -47,8 +50,8 @@ async function main() {
     const newAnc = new Map<number, string>(); for (const a of v.anchors ?? []) newAnc.set(Number(a.episode), `${a.end_chapter}${a.start_chapter != null ? ` [${a.start_chapter}]` : ''}`);
     const hostile = new Set<number>((v.anchor_hostile ?? []).map((h: any) => Number(h.episode)));
     const repairs = new Map<number, string[]>(); for (const r of v.repairs ?? []) { if (!repairs.has(Number(r.episode))) repairs.set(Number(r.episode), []); repairs.get(Number(r.episode))!.push(String(r.field)); }
-    console.log(`\n## ${sid} — recap baseline (${f.split('/').pop()}; ${named.size} rows named)`);
-    console.log('| series | ep | stored | → proposed |\n|---|---|---|---|');
+    console.log(`\n### ${sid} — recap baseline (${f.split('/').pop()}; ${named.size} rows named)`);
+    console.log('| ep | stored | → proposed |\n|---|---|---|');
     for (const n of [...named].sort((a, b) => a - b)) {
       const stored = `${typeOf.get(n) ?? 'NO ROW'}${ancOf.has(n) ? ` · anchor ${ancOf.get(n)}` : ''}${annOf.has(n) ? ` + ${annOf.get(n)!.join(', ')}` : ''}`;
       const delta: string[] = [];
@@ -57,7 +60,7 @@ async function main() {
       if (hostile.has(n)) delta.push('anchor_hostile');
       if (newAnn.has(n)) delta.push(`+ ${newAnn.get(n)!.join(', ')}`);
       if (repairs.has(n)) delta.push(`repair ${repairs.get(n)!.join('/')}`);
-      console.log(`| ${sid} | ${n} | ${stored} | ${delta.length ? delta.join('; ') : 'no type change'} |`);
+      console.log(`| ${n} | ${stored} | ${delta.length ? delta.join('; ') : 'no type change'} |`);
     }
   }
   process.exit(0);

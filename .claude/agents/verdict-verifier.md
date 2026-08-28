@@ -36,7 +36,7 @@ errors.
 
 **Recap baseline (Sean 2026-08-28):** every row you name carries its stored
 standing first, then what the verdict proposes and what you conclude —
-`series | ep N — stored: {canon|mixed|filler} [+ annotations] → verdict: … → verifier: …` — the series column first, always.
+`ep N — stored: {canon|mixed|filler} [+ annotations] → verdict: … → verifier: …`; the SERIES is the table's TITLE when the table covers one series (no series column); a table that mixes series carries a `series` column as its first column — either way a row is never shown without its series (Sean 2026-08-28).
 A block is a table, never a sentence.
 
 

@@ -228,10 +228,9 @@ given — never a shared path; parallel agents collide otherwise.
 Your final message is a 5–10 line summary: anchors produced (count + range),
 confidence mix, repairs proposed, structure findings, unresolved items —
 **followed by the RECAP BASELINE (Sean 2026-08-28, a standing process rule):
-one line per row you name — the SERIES first, then the stored standing, then
-the delta — `series | ep N — stored: {canon|mixed|filler} [+ annotation kinds]
-→ proposed: {same | new type | annotation change | no type change}`; a table's
-first column is the series (a row without it is no context).** The stored type is in your
+one line per row you name, stored first, then the delta — `ep N — stored:
+{canon|mixed|filler} [+ annotation kinds] → proposed: {same | new type |
+annotation change | no type change}`; the SERIES is the table's TITLE when the table covers one series (no series column); a table that mixes series carries a `series` column as its first column — either way a row is never shown without its series (Sean 2026-08-28).** The stored type is in your
 context; a block of retypes is a table, never a sentence; unchanged rows in the
 ask still show their stored type once; identity/date-only repairs still show
 the stored type. The JSON is the deliverable; the summary is for the curator.
