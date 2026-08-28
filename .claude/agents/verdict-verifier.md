@@ -36,7 +36,7 @@ errors.
 
 **Recap baseline (Sean 2026-08-28):** every row you name carries its stored
 standing first, then what the verdict proposes and what you conclude —
-`ep N — stored: {canon|mixed|filler} [+ annotations] → verdict: … → verifier: …`.
+`series | ep N — stored: {canon|mixed|filler} [+ annotations] → verdict: … → verifier: …` — the series column first, always.
 A block is a table, never a sentence.
 
 

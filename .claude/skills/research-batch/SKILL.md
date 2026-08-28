@@ -64,8 +64,8 @@ under a running wave is how drift re-enters.
 
 1. **Validate** every new verdict parses and carries `series_id`; then print
    the **recap baseline** (`research/batchN/baseline.ts <verdict.json>` —
-   one line per named row, stored type first, then the delta; a block of
-   retypes is a table) and carry it into the recovery record — Sean 2026-08-28,
+   one line per named row — the series, then the stored type, then the delta;
+   a block of retypes is a table) and carry it into the recovery record — Sean 2026-08-28,
    a standing process rule: no recap names a row without its stored standing.
 2. **Contradiction scan** (`R25`) — mechanically compare each verdict's
    summary against its own rows. Self-consistent-but-wrong is the failure
@@ -76,7 +76,7 @@ under a running wave is how drift re-enters.
 5. **Update `docs/STATE.md`, report usage, STOP for a decision.** Never roll
    into the next wave automatically. **The stop-for-Sean recap — the chat
    message itself, not the recovery file — carries the recap baseline table
-   (`ep | stored | → proposed`) for every row whose type or annotation
+   (`series | ep | stored | → proposed` — the series column first, always) for every row whose type or annotation
    changes or that he is asked to rule on; unchanged rows in the ask are one
    summary line after the table** (Sean 2026-08-28: "don't tell me to open
    the recovery file for the baseline — put it in the message"; a sentence

@@ -25,7 +25,10 @@ Whenever a row is named in a recap — a landing, `WAVE*-RECOVERY.md`, THE
 DECISIONS, an apply dry-run, the apply recap — every episode is ONE LINE,
 stored first, then the delta:
 
-    ep N — stored: {canon|mixed|filler} [+ annotation kinds] → proposed: {same | new type | annotation change | no type change}
+    series | ep N — stored: {canon|mixed|filler} [+ annotation kinds] → proposed: {same | new type | annotation change | no type change}
+
+The SERIES column comes first in every table (Sean 2026-08-28: a row without
+its series is no context).
 
 A block of retypes is a TABLE, never a sentence ("12 rows → filler" is not a
 recap). Unchanged rows in the ask still show their stored type once — that is
