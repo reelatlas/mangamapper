@@ -22,7 +22,7 @@ Lanes C (narrow follow-ups) + B (numbering & dates), PLAN.md L-C + L-B, under `b
 - **Web-short contamination is a BLOCK, not a row** (golden-kamuy 25-46 = 22 rows, the exact flag count) — when AFL's title authority stops mid-series, en-WP's second `{{Episode list}}` fills the rest.
 - **syobocal keeps pre-emption ghosts**: cancelled schedule rows (Flag 0) sit beside the reruns that aired; join on the Flag, not the Count.
 - **An AFL renumber can be non-monotone** (shugo-chara: a skipped number, a doubled number AND three transposed pairs) — deliver the per-row identity table; the shift map is decided at apply, not by the agent.
-- **MU's coverage string grows new segments** (FotNS: a 2026 remake) — a segment picker keyed on year/season tags needs re-checking whenever a remake airs.
+- **MU's coverage string grows new segments** (FotNS: a 2026 remake) — checked this session on the verdict's string shape with `pickEntrySegments` (window 1984-1988): '(1983 S1)' / '(1983 S2)' chosen, **'(2026 S1)' correctly foreign** (an out-of-window year beats the season tag), BUT **'(1986 Movie/Legend of Raoh 1)' is also chosen** — a Movie label with an in-window year passes as this entry's. No data effect today (the chosen max is still 210, the stored terminal) — a lib gap with a witness for the per-series MU segment rulings /add-rule: a Movie/OVA label must lose even when its year is in-window.
 - TheTVDB's per-language episode texts (broadcaster-sourced) are a per-episode content source for series with none (x).
 
 ## Next
