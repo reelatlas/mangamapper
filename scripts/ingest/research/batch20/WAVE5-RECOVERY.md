@@ -33,6 +33,9 @@ DBS IDENTITY (Sean's go; Cursor's pin: standings + T21 direction only, NO anchor
 
 **Recommend 1**, with the identity recorded as a series-level `I`-family ruling (the direction table above, "manga = an ALTERNATIVE realization of the same outline; standings relative to it; the link is manual") — and the T28 bar ruled once for the seven outcome-only rows (recommend: the JOB test the agent used — a row whose content the manga does not carry is filler with a `divergence` tie even when the outcome coincides; that makes the seven filler too — Sean's call).
 
+## RULED (Sean 2026-08-28, before verify)
+**Reading 1** — the source stays the manga (AniList 86508, a manual link), standings RELATIVE TO THE MANGA. **T28 = the CONTENT test** — the seven outcome-only rows (87, 88, 106, 121, 124, 125, 126) go filler + `divergence`. **No fourth standing.** CONSTRAINT: the I-family ruling must say the manga is an **ALTERNATIVE**, not an adaptation — chapter numbers on this series are CORRESPONDENCE, never "this episode adapted ch N" (most chapters published after the episode) — and **`anchor_gap_research` must not turn 77-131 into a 93-row A2 wave** (the class needs a series-level suppression for ALTERNATIVE-source series, decided at apply). Verify on that (two tasks dispatched).
+
 ## Traps learned (→ research-agent.md at capture)
 - **AniList's ALTERNATIVE relation is a signal, not a defect**: when an anime→manga edge is ALTERNATIVE and both works cite one outline, the manga is not the source — an identity finding, not a missing link.
 - **A fandom "exclusive to the anime" boilerplate can be true against the manga and still be a FILM's sequence** (DBS ep 6 — the Battle of Gods film): check the third work before typing.
