@@ -74,7 +74,13 @@ under a running wave is how drift re-enters.
 4. **Write/refresh the recovery record** — landed, outstanding, traps
    learned this wave.
 5. **Update `docs/STATE.md`, report usage, STOP for a decision.** Never roll
-   into the next wave automatically.
+   into the next wave automatically. **The stop-for-Sean recap — the chat
+   message itself, not the recovery file — carries the recap baseline table
+   (`ep | stored | → proposed`) for every row whose type or annotation
+   changes or that he is asked to rule on; unchanged rows in the ask are one
+   summary line after the table** (Sean 2026-08-28: "don't tell me to open
+   the recovery file for the baseline — put it in the message"; a sentence
+   like "53, 105, 113, 120 → filler" is not a substitute).
 
 ## 5. Verification tier (`R23`/`R24`)
 
@@ -93,6 +99,9 @@ lesson: `A4`/`C2` re-derived from scratch). Research is for what only
 sources can answer.
 
 ## Next step — offer it, don't assume it
+
+Every recap in this section is a chat message with the baseline table in
+it — the landing, the verify recap, the decisions. No table, no recap.
 
 When a wave has landed and been checkpointed, report and ASK:
 

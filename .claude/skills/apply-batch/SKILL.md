@@ -34,7 +34,10 @@ stored type. GENERATE it: `research/batchN/baseline.ts <verdict.json>` prints
 the block from the DB + the verdict (P5 — it cannot drift); paste it into the
 recovery record and the decision list, and make every apply script's dry-run
 line carry the stored type beside the stored value. A recovery record or a
-decision list without it does not ship.
+decision list without it does not ship — **and neither does the CHAT recap
+(step 4 of the cycle, the stop for Sean, the post-apply report): the table
+goes in the message itself, every changed row, unchanged rows in one summary
+line after it. Never point Sean at the file for the baseline.**
 
 ## Sequence
 
