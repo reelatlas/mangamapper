@@ -19,7 +19,56 @@
 import type { RulingEntry } from './types';
 import { toRecord } from './types';
 
-export type Shift = { drop: number[]; shifts: { from: number; offset: number }[]; spaces?: string[] };
+export type Shift = {
+  drop: number[];
+  shifts: { from: number; offset: number }[];
+  spaces?: string[];
+  // resort (N11, batch 20 wave 3 — shugo-chara): the source's numbering inside
+  // [from, to] is WRONG AS A SEQUENCE (a skipped number, a doubled number,
+  // transposed pairs), so the rows are renumbered by POSITION, never by
+  // number: the span's rows are ordered by their staged AIR DATE (a STABLE
+  // sort — ties and null dates keep payload order) and the k-th becomes
+  // `start + k`. The date, not the list order, is the key because inside a
+  // transposed pair AFL's own list order IS the transposition (shugo-chara 75
+  // = 03-21 printed before 76 = 03-14) while the dates are true. Runs BEFORE
+  // drop / shifts, on source numbers; a doubled source number (AFL prints 96
+  // twice) yields two rows — which is why the write path, not the parser,
+  // collapses duplicate numbers (applyNumberingShift). Limitation, stated:
+  // a whole block of year-off dates inside the span sorts as a block, so it
+  // must sit at one end of the span (shugo-chara's 2010-dated 92-96 block is
+  // last); a G53 map fixes the dates AFTER translation.
+  resort?: { from: number; to: number; start: number };
+};
+
+// The translation every episode writer applies (filterEpisodeRows) — pure.
+// 1. resort (payload order) → 2. collapse exact same-number+type duplicates
+// keeping the FIRST (the wiki-edit artefact the AFL parser used to drop; moved
+// here so staging stays a faithful parse, G44, and a resort can see both rows)
+// → 3. drop → 4. shifts.
+export const applyNumberingShift = <T extends { number: number; type?: string }>(t: Shift, rows: T[]): T[] => {
+  let out: T[] = rows;
+  if (t.resort) {
+    const { from, to, start } = t.resort;
+    const inSpan = (r: T) => r.number >= from && r.number <= to;
+    const span = out.filter(inSpan).map((r, i) => ({ r, i }));
+    const key = (x: { r: T; i: number }) => String((x.r as { air_date?: string | null; airDate?: string | null }).air_date ?? (x.r as { airDate?: string | null }).airDate ?? '');
+    span.sort((a, b) => (key(a) < key(b) ? -1 : key(a) > key(b) ? 1 : a.i - b.i)); // stable: ties / null dates keep payload order
+    const renumbered = new Map(span.map((x, k) => [x.i, start + k]));
+    let i = 0;
+    out = out.map((r) => (inSpan(r) ? { ...r, number: renumbered.get(i++)! } : r));
+  }
+  const seen = new Set<string>();
+  out = out.filter((r) => {
+    const key = `${r.number}#${r.type ?? ''}`;
+    if (seen.has(key)) return false;
+    seen.add(key);
+    return true;
+  });
+  return out
+    .filter((r) => !t.drop.includes(r.number))
+    .map((r) => ({ ...r, number: r.number + t.shifts.reduce((acc, x) => (r.number >= x.from ? acc + x.offset : acc), 0) }));
+};
+
 
 export const ENTRIES: RulingEntry<Shift>[] = [
   {
@@ -154,6 +203,16 @@ export const ENTRIES: RulingEntry<Shift>[] = [
     ruledBy: 'Sean',
     ruledOn: '2026-08-27',
     cite: ['scripts/ingest/research/batch19/out/yu-gi-oh-5d-s.json', 'scripts/ingest/research/batch19/verify/yu-gi-oh-5d-s.md', 'https://www.animefillerlist.com/shows/yu-gi-oh-5ds', 'https://anilist.co/anime/6951', 'https://ja.wikipedia.org/wiki/遊☆戯☆王5D%27s'],
+  },
+  {
+    seriesId: 'shugo-chara',
+    ruleId: 'N11',
+    value: { drop: [], shifts: [], resort: { from: 74, to: 96, start: 73 }, spaces: ['afl'] },
+    reason:
+      "Batch 20 wave 3 (verified R24, Sean ruled 2026-08-27 — 'the span is AFL payload order through both 96s'): AFL's list skips no. 73, transposes 75/76, 83/84 and 90/91, and prints 96 twice, so its numbers 74-96 are wrong as a SEQUENCE while its row ORDER is the true broadcast order (every stored date in the span is the true TV-Tokyo Saturday date of the title beside it — ja-WP 各話リスト, en-WP EpisodeNumber2, syobocal ChID 7 TIDs 1233/1510/1777, 41/41 rows). The 24 payload rows numbered 74-96 (two 96s) become 73-96 by position: rows 74-95 → 73-94, the first '96' (りまとやや、真珠の絆！ 2009-08-08 — the row that vanished when the parser collapsed same-number rows) → 95, the second '96' → 96; 97+ unchanged. A monotone shift fixes 16 of 22 rows and cannot express the pairs. The G53 date map is keyed on OUR numbers and was re-keyed with this entry (air-dates.ts); the 107/108 transposition is outside the span (a G53 title+date swap).",
+    ruledBy: 'Sean',
+    ruledOn: '2026-08-27',
+    cite: ['scripts/ingest/research/batch20/out/airdates/shugo-chara.json', 'scripts/ingest/research/batch20/verify/shugo-chara.md'],
   },
 ];
 

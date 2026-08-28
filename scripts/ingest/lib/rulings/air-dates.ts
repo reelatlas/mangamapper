@@ -6,7 +6,7 @@
 // the outcome check. Only rows with a CITED date enter (R3): the kinnikuman
 // set ("eps 90-119 one week early", ep 38, ep 87) and railgun ep 14 are
 // claims without dates in any verdict → batch-18 narrow task, not entries.
-import { toRecord, type RulingEntry } from './types';
+import { toMergedRecord, type RulingEntry } from './types';
 
 // A ruled value may be NULL (2026-08-27): an episode with no Japanese
 // broadcast (dragon-ball-z-kai's eight international-only rows) stores an
@@ -309,7 +309,8 @@ export const ENTRIES: RulingEntry<Record<number, RuledAirDate>>[] = [
   {
     seriesId: 'shugo-chara',
     ruleId: 'G53',
-    value: { 23: '2008-03-15', 26: '2008-04-05', 88: '2009-06-13', 92: '2009-07-11', 93: '2009-07-18', 94: '2009-07-25', 95: '2009-08-01', 96: '2009-08-15', 97: '2009-08-22', 98: '2009-08-29', 99: '2009-09-05', 100: '2009-09-12' },
+    // RE-KEYED 2026-08-27 (batch 20 wave 3, the N11 resort — keys are OUR numbers after translation): 88 → 87, 92 → 91, 93 → 92, 94 → 93, 95 → 94; 95 (= AFL's first '96', true 「りまとやや、真珠の絆！」) added; 96-100 unchanged; + the three Saturday-slot AFL typos 35 / 37 / 46 and the 107/108 transposition (dates travel with the titles, episode-titles.ts)
+    value: { 23: '2008-03-15', 26: '2008-04-05', 35: '2008-06-07', 37: '2008-06-21', 46: '2008-08-23', 87: '2009-06-13', 91: '2009-07-11', 92: '2009-07-18', 93: '2009-07-25', 94: '2009-08-01', 95: '2009-08-08', 96: '2009-08-15', 97: '2009-08-22', 98: '2009-08-29', 99: '2009-09-05', 100: '2009-09-12', 107: '2009-10-31', 108: '2009-11-07' },
     reason:
       "Batch 19 wave 2 lane B3 (ja-WP + en-WP / syoboi / fandom, 2+ sources per row; the contradictions verified R24; Sean ruled B3-7): ep 23: Ep 23 'Remake Honey! My Would Be Self!' (リメイクハニー！なりたい自分！) aired 2008-03-15 (Sat, TV Tokyo). ja-WP 第23話 = 3月15日; en-WP 'List of Shugo Chara! episodes' ep 23 = March 15, 20 | ep 26: Ep 26 'The New Beginning!' (新しいはじまり！) aired Saturday 2008-04-05. ja-WP 第26話 = 4月5日; en-WP ep 26 = April 5, 2008. Stored 2008-04-06 is a Sunday and cannot be right for a S | ep 88: Our row 88 is 'Save Nana! Guardian Character Nurses, Move Out?' = Shugo Chara!! Doki ep 36, aired 2009-06-13. en-WP Doki ep 36 = June 13, 2009; ja-WP 第87話 = 6月13日. Stored | ep 92: Our row 92 is 'Full Throttle! My Rhythm!' (全開！僕のリズム) = Doki ep 40, aired 2009-07-11. en-WP Doki ep 40 = July 11, 2009; ja-WP 第91話 = 7月11日. Stored 2010-07-01 has both a wr | ep 93: Our row 93 is \"It's Got to Be Cool! Beat Jumper!\" (クールに決めろ！ビートジャンパー！) = Doki ep 41, aired 2009-07-18. en-WP = July 18, 2009; ja-WP 第92話 = 7月18日. Year slip only. | ep 99: Our row 99 is \"Our Feelings United! The Guardians' Battle!\" (思いは一つ！ガーディアンの戦い！) = Doki ep 48, aired 2009-09-05. en-WP = September 5, 2009; ja-WP 第99話 = 9月5日. Year slip; th | ep 100: Our row 100 is 'The Birth of Two Character Transformations!' (誕生！2つのキャラなり！) = Doki ep 49, aired 2009-09-12. en-WP = September 12, 2009; ja-WP 第100話 = 9月12日. Year slip. | 94-98: the same 2010-for-2009 YEAR-SLIP block (AFL prints 2010 for rows 92-100; the verdict asked for a DB check — confirmed 2026-08-27: 94 2010-07-25, 95 08-01, 96 08-15, 97 08-22, 98 08-29), keyed by title: 'Hoshina Utau, Fly to the Future!' 2009-07-25, 'Onward! The Calico Cat Search Party!?' 08-01, 'Unheard Pleas, Shattered Feelings.' 08-15, 'Tadase and Ikuto, the Horoscope of Fate!' 08-22, 'Reborn!! My Radiant Dancing Princess!' 08-29 (ja-WP 各話リスト + en-WP Doki list)",
     ruledBy: 'Sean',
@@ -418,6 +419,16 @@ export const ENTRIES: RulingEntry<Record<number, RuledAirDate>>[] = [
     cite: ['scripts/ingest/research/batch20/out/hunter-x-hunter.json', 'scripts/ingest/research/batch20/verify/hunter-x-hunter.md'],
   },
   {
+    seriesId: 'golden-kamuy',
+    ruleId: 'G53',
+    value: { 25: '2020-10-05', 26: '2020-10-12', 27: '2020-10-19', 28: '2020-10-26', 29: '2020-11-02', 30: '2020-11-09', 31: '2020-11-16', 32: '2020-11-23', 33: '2020-11-30', 34: '2020-12-07', 35: '2020-12-14', 36: '2020-12-21', 37: '2022-10-03', 38: '2022-10-10', 39: '2022-10-17', 40: '2022-10-24', 41: '2022-10-31', 42: '2022-11-07', 43: '2023-05-15', 44: '2023-05-22' },
+    reason:
+      "Batch 20 wave 3 (verified R24, Sean ruled 2026-08-27, ONE atomic block with the titles): rows 25-46 held the Golden Dōga Gekijō web shorts' titles AND dates verbatim — AFL's title authority stops at row 24 and en-WP's second {{Episode list}} block (== Golden Dōga Gekijō ==, shorts #1-46) filled 25-46 (rows 45/46 ruled in batch 19; 47-62 clean). True S3/S4 dates from ja-WP 各話リスト 第三期/第四期 + en-WP seasons 3/4 + goldenkamuy.fandom Episode_N + syobocal TID 6441 (the earliest airing per Count whose flag lacks 再; TV = TOKYO MX Monday 23:00, the shorts are Tuesdays). S4 was a split broadcast (37-42 in 2022, a main-staff-death suspension, 43-49 from 2023-05-15) — the 5-month gap is real, no G54 ack. Applied as a block: 38-44 alone leaves row 37 above the new 38.",
+    ruledBy: 'Sean',
+    ruledOn: '2026-08-27',
+    cite: ['scripts/ingest/research/batch20/out/airdates/golden-kamuy.json', 'scripts/ingest/research/batch20/verify/golden-kamuy.md'],
+  },
+  {
     seriesId: 'kinnikuman',
     ruleId: 'G53',
     value: { 38: '1983-12-25', 87: '1985-04-07', 90: '1985-04-28', 91: '1985-05-05', 92: '1985-05-12', 93: '1985-05-19', 94: '1985-05-26', 95: '1985-06-02', 96: '1985-06-09', 97: '1985-06-16', 98: '1985-06-23', 99: '1985-06-30', 100: '1985-07-07', 101: '1985-07-14', 102: '1985-07-21', 103: '1985-07-28', 104: '1985-08-04', 105: '1985-08-11', 106: '1985-08-18', 107: '1985-10-06', 108: '1985-10-13', 109: '1985-10-20', 110: '1985-10-27', 111: '1985-11-03', 112: '1985-11-10', 113: '1985-11-17', 114: '1985-11-24', 115: '1985-12-01', 116: '1985-12-08', 117: '1985-12-15', 118: '1985-12-22', 119: '1985-12-29' },
@@ -439,4 +450,4 @@ export const ENTRIES: RulingEntry<Record<number, RuledAirDate>>[] = [
   },
 ];
 
-export const AIR_DATE_OVERRIDES: Record<string, Record<number, RuledAirDate>> = toRecord(ENTRIES);
+export const AIR_DATE_OVERRIDES: Record<string, Record<number, RuledAirDate>> = toMergedRecord(ENTRIES);

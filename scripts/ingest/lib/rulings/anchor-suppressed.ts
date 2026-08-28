@@ -98,6 +98,22 @@ export const ENTRIES: RulingEntry<number[]>[] = [
   // catalog line 'pages, not numbers': re-shown pages, another chapter space,
   // or a first-time SLIVER inside an original plot → position-less)
   {
+    seriesId: 'eyeshield-21',
+    ruleId: 'A44',
+    value: [39],
+    reason: "Batch 20 wave 3 (verified R24, Sean ruled 2026-08-27): ep 39 is the clip show + TV-interview plot whose only source content is ch 89 pp 14-15 (Suzuna in the BATS cheer uniform) — two pages of an 18-page chapter anchored on ep 38, page-verified; a first-time sliver inside an original plot is position-less (A44). The stored partial {89} carries the tie; its stored 'mixed' type is a T28 card (two pages).",
+    ruledBy: 'Sean', ruledOn: '2026-08-27',
+    cite: ['scripts/ingest/research/batch20/out/eyeshield-21-w3.json', 'scripts/ingest/research/batch20/verify/eyeshield-tmm-w3.md'],
+  },
+  {
+    seriesId: 'tokyo-mew-mew',
+    ruleId: 'A44',
+    value: [19, 21, 37, 44],
+    reason: "Batch 20 wave 3 (verified R24, Sean ruled 2026-08-27): the A18 reorder holes inside the ruled settled-reorder regime (A41) hold no truthful continuous position — 19 / 21 / 37 (mixed) quote fragments of chapters already reached or later delivered whole (the tie annotations name them; the dub pages for 19/21 are independent witnesses), 44 is anime-original (T6 filler) restaging ch 18 / ch 22 beats. Ep 41 was the one anchorable hole (→ 21 [21], first-time pages of ch 21's red-tide half).",
+    ruledBy: 'Sean', ruledOn: '2026-08-27',
+    cite: ['scripts/ingest/research/batch20/out/tokyo-mew-mew.json', 'scripts/ingest/research/batch20/verify/eyeshield-tmm-w3.md'],
+  },
+  {
     seriesId: 'x',
     ruleId: 'A44',
     value: [9, 10, 16, 17, 18],

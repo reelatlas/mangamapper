@@ -11,7 +11,7 @@ import type { AniListMedia } from './anilist';
 // file exports the consumer lookup; re-exported below at the old names.
 import { EXTRAS_ADOPTED } from './rulings/extras-adopted';
 import { COMMUNITY_COUNT_OVERRIDES } from './rulings/community-counts';
-import { SOURCE_NUMBERING_SHIFTS } from './rulings/numbering-shifts';
+import { SOURCE_NUMBERING_SHIFTS, applyNumberingShift } from './rulings/numbering-shifts';
 import { EPISODE_TYPE_OVERRIDES } from './rulings/episode-types';
 
 export type StageOutcome = 'unchanged' | 'changed' | 'held';
@@ -133,6 +133,8 @@ export const translateEpisodeNumber = (seriesId: string, n: number, space: strin
   const t = SOURCE_NUMBERING_SHIFTS[seriesId];
   if (!t || (t.spaces && !t.spaces.includes(space))) return n;
   if (t.drop.includes(n)) return null;
+  // a resort span is translated by payload POSITION, which a bare number cannot carry — refuse (the caller treats null as "no claim")
+  if (t.resort && n >= t.resort.from && n <= t.resort.to) return null;
   return n + t.shifts.reduce((s, x) => (n >= x.from ? s + x.offset : s), 0);
 };
 
@@ -147,12 +149,8 @@ export const filterEpisodeRows = <T extends { number: number; type?: string; air
 ): T[] => {
   const t0 = SOURCE_NUMBERING_SHIFTS[seriesId];
   const t = t0 && (!t0.spaces || t0.spaces.includes(space)) ? t0 : undefined;
-  let translated = rows;
-  if (t) {
-    translated = rows
-      .filter((r) => !t.drop.includes(r.number))
-      .map((r) => ({ ...r, number: r.number + t.shifts.reduce((s, x) => (r.number >= x.from ? s + x.offset : s), 0) }));
-  }
+  // N11: resort (payload order) → collapse exact duplicates → drop → shifts (lib/rulings/numbering-shifts.ts, pure)
+  const translated = t ? applyNumberingShift(t, rows) : applyNumberingShift({ drop: [], shifts: [] }, rows);
   const o = COMMUNITY_COUNT_OVERRIDES[seriesId];
   const capped = o ? translated.filter((r) => r.number <= o.cap) : translated;
   // T27 (T4.3): AFL's `anime_canon` class ('anime-only-canon' in staging, kept

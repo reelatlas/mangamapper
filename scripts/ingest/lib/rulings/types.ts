@@ -41,4 +41,14 @@ export const toRecord = <V>(entries: RulingEntry<V>[]): Record<string, V> => {
   return out;
 };
 
+// Per-episode maps MERGE entries for the same series (a batch may add rows to a
+// series already ruled — golden-kamuy's 45/46 in batch 19, 25-44 in batch 20);
+// toRecord's last-wins silently dropped the earlier entry (found 2026-08-27
+// when the golden-kamuy titles never asserted). Later entries win per KEY.
+export const toMergedRecord = <V extends Record<number, unknown>>(entries: RulingEntry<V>[]): Record<string, V> => {
+  const out: Record<string, V> = {};
+  for (const e of entries) out[e.seriesId] = { ...(out[e.seriesId] ?? {}), ...e.value } as V;
+  return out;
+};
+
 export const toSet = (entries: RulingEntry<unknown>[]): Set<string> => new Set(entries.map((e) => e.seriesId));

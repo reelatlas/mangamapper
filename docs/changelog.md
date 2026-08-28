@@ -607,6 +607,68 @@
    durable guard. Lesson for the floor rule: a >2 overshoot sourced from a
    SINGLE chart row with no corroborating content anywhere is a typo
    candidate, not an adoption candidate.
+82. ✅ **BATCH 20 WAVE 3 APPLIED — narrow follow-ups, numbering & dates
+   (2026-08-27; Sean's eleven rulings as written, Cursor concurring).**
+   Research (8 verdicts, ≈1.53M) → verify (8 reports, ≈1.13M; nothing
+   refuted on an anchor value) → rulings → apply (`apply-wave3.ts`, 168
+   decisions, file-driven + overlay). LIB FIRST (P2 → P3): **the N11
+   `resort` form** (`lib/rulings/numbering-shifts.ts` — a source's numbers
+   inside a span are wrong AS A SEQUENCE, so the span's rows are renumbered
+   by POSITION in a stable air-date order, never by number; `applyNumbering
+   Shift` is pure: resort → collapse exact same-number+type duplicates
+   keeping the first → drop → shifts; `translateEpisodeNumber` refuses a
+   resort span), the AFL parser now KEEPS duplicate-number rows (G44: a
+   faithful parse — the Boruto-182 collapse moved to the write path), and
+   **`toMergedRecord`** for the title and date maps (`toRecord` was
+   last-wins: a second entry for a series silently dropped the first —
+   golden-kamuy's batch-19 45/46 vs batch-20 25-44 was the witness; the
+   types map already merged). 140 tests (the shugo-chara identity table:
+   the three transposed pairs, the doubled 96, the real staged payload with
+   its year-off block and the 88/89 tie). **shugo-chara**: AFL's rows 74-96
+   (two "96"s) re-fetched and re-staged (127 rows), resolved under `resort
+   {74-96 → 73}` — rows 74-95 → 73-94 with 75/83/90 on their own numbers,
+   the first "96" (りまとやや、真珠の絆！ 2009-08-08, the row the old dedup
+   swallowed) → 95, the second → 96; anchors and annotations RE-KEYED old →
+   true (76 → 74, 77 → 76, 78 → 77, 80 → 79, 81 → 80; the divergence block
+   87-96 → 86-96 with the restored 95 joining it; 93's graft → 92); the G53
+   date map re-keyed + 35/37/46 + 95; the 107/108 transposition a G53
+   title+date swap outside the span; 126 → 127 rows = total; the four
+   regression pairs close with NO G54 ack. **golden-kamuy** rows 25-44 as
+   ONE atomic G53 title+date block (the Dōga Gekijō shorts' names and dates
+   verbatim; 45/46 ruled in batch 19; row 37 above the new 38 was why 38-44
+   alone could not apply); #860 = no offset. **Anchors 45**: solo-leveling
+   13-25 → 46-110 (fence 25 → 108 REPAIRED to 110; continue 111), kinnikuman
+   33-45 → 98-118 (44 → 116 per the verifier, the 117 straddle dropped; 41
+   → filler T6 — the anime-original Gorota training; 47 stays canon +
+   divergence), FotNS 1-28 → 1-36 over a reordered Part 1 (ch 6/8-10 only
+   at ep 22; backwards parity 13 → 6; ep 5 → filler + graft{8} T6), TBATE
+   12 → 56 / 23 → 84 [81] manual (**24 → filler T6 + graft{86} — the
+   verifier's T28 reading; terminal 23, continue 85 post_series**),
+   eyeshield 60 → 123 [122] / 61 → 123 (high — the ep-60 fork closed by a
+   third witness; 39 A44), TMM 41 → 21 [21] (the TokyoPop vol-6 scan read
+   page by page; 19/21/37/44 A44; 44 → filler T6). **x 17 → mixed** (T6;
+   `rearranged {54-62, 63}` — ep 0 is outside the entry). 50 curated
+   continues (C7) incl. **rosario-vampire S1's thirteen** (the C2-backwards
+   values derived from the stored rows — 1 → 2, 2 → 5, 3 → 3, 5 → 4, 6 →
+   18, 7 → 12, 8 → 13, 9 → 14, 10 → 8, 11 → 9, 12 → 9, 13 → 20 post_series
+   — with 6/7/11/17 named; the parity healer is NOT turned on for regime
+   series: Conan / Gintama / Hayate store parity by hand — a dry-run list
+   then an /add-rule, not this wave). 43 annotations; flags 688 / 860 / 937
+   / 1029 dismissed. Edges rebuilt + deployed twice (P3). CENSUS: display
+   219/0; ruling_violation 0; nonmonotonic 0; provenance 0; **airdate_
+   regression 5 → 0** (the four shugo pairs + golden-kamuy 44); frontier_
+   tail_null 8 → 7 (TBATE 24 filler); integrity_total_beyond_eps 10 → 9
+   (shugo 127 = total); anchor_gap_research 6 → 7 (FotNS 1-28 closed → its
+   next-worst 109-151 surfaces; **shugo-chara 81-96 NEW at 13** — the
+   restored row 95 tipped the anime-original-arc block (rows 82-96 typed
+   canon with `divergence {none}`) over the threshold: a T28 typing lane,
+   not an anchoring gap); anchor_volume_mismatch 20 unchanged. NOT written
+   (recorded): kinnikuman's abridged-checkpoint note and eyeshield's
+   abridged-split note (annotation text refinements); TBATE 13-22's types
+   and row 24's date, TMM 38 → 20 [19], FotNS 29-56 + ep 29's date, the
+   day-of-week queue — lanes. NEXT: /consolidate deep (P21 — the N11 form
+   and the parser change are enforcement sites; the merge builder changed
+   what two maps contain).
 81. ✅ **CONSOLIDATE DEEP after batch 20 wave 2 (2026-08-27; P21 — the
    saint-seiya re-migration changed stored values, a census class was
    added).** Steps 0-8 satisfied by §12.80's save point (system census

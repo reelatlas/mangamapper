@@ -85,17 +85,11 @@ export function parseShowPage(html: string): AflShowPage {
   });
   episodes.sort((a, b) => a.number - b.number);
 
-  // Wiki-edit artifacts: the same episode row duplicated (Boruto ep 182).
-  // Same number + same type collapses to one; differing types stay so the
-  // integrity check flags the page instead of us silently picking a side.
-  const deduped: AflEpisode[] = [];
-  for (const e of episodes) {
-    const prev = deduped[deduped.length - 1];
-    if (prev && prev.number === e.number && prev.type === e.type) continue;
-    deduped.push(e);
-  }
-  episodes.length = 0;
-  episodes.push(...deduped);
+  // Duplicate-number rows are KEPT here (G44: staging is a faithful parse).
+  // The wiki-edit artefact (Boruto ep 182: the same row twice) is collapsed on
+  // the write path by applyNumberingShift — same number + same type keeps the
+  // first, exactly the old predicate — and a ruled N11 resort (shugo-chara's
+  // doubled 96 = two different episodes) can renumber both rows by position.
 
   const quickList: Partial<Record<AflType, number[]>> = {};
   $('#Condensed > div[class]').each((_, el) => {

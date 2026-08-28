@@ -10,9 +10,29 @@
 // by assert-overrides.ts, a disagreeing stored title is a ruling_violation.
 // Titles are AFL-space strings (the stored wording is kept where it was
 // merely transposed); a title never enters without a cited pairing (R3).
-import { toRecord, type RulingEntry } from './types';
+import { toMergedRecord, type RulingEntry } from './types';
 
 export const ENTRIES: RulingEntry<Record<number, string>>[] = [
+  {
+    seriesId: 'golden-kamuy',
+    ruleId: 'G53',
+    value: { 25: "To Karafuto", 26: "Stenka", 27: "Igogusa", 28: "The Immortal Sugimoto Harakiri Show", 29: "The Border", 30: "Bad Sign", 31: "Meko Oyasi", 32: "Manslayer", 33: "Revolutionary", 34: "Catching Up to the Wolf", 35: "Sin and Impurity", 36: "To Live", 37: "Rushin' Outta Russia", 38: "Cocoon", 39: "The Smell of Sulfur", 40: "Spoiled Rich Kid", 41: "Cinematograph", 42: "Sweet Lies", 43: "Fleeing Karafuto", 44: "Brown Bear Man" },
+    reason:
+      "Batch 20 wave 3 (verified R24, Sean ruled 2026-08-27, one atomic block with the dates — air-dates.ts): rows 25-44 held the Golden Dōga Gekijō shorts' titles verbatim ('Are you tired? Episode' … 'Fukujusō Episode'); the TV titles from en-WP seasons 3/4 + goldenkamuy.fandom + ja-WP 各話リスト, 1:1 by number and date. Flag #860 = no offset.",
+    ruledBy: 'Sean',
+    ruledOn: '2026-08-27',
+    cite: ['scripts/ingest/research/batch20/out/airdates/golden-kamuy.json', 'scripts/ingest/research/batch20/verify/golden-kamuy.md'],
+  },
+  {
+    seriesId: 'shugo-chara',
+    ruleId: 'G53',
+    value: { 107: "Yaya's Enthusiastic Gardening!", 108: 'The Place Eggs Return To' },
+    reason:
+      "Batch 20 wave 3 (verified R24, Sean ruled 2026-08-27): AFL's Party rows 107/108 hold each other's title AND date — ja-WP しゅごキャラ! パーティー! 各話リスト, en-WP and syobocal ChID 7 agree: 107 = ややの張り切りガーデニング!! 2009-10-31, 108 = たまごの帰る場所！ 2009-11-07. A transposition carries the title with the date; both rows are filler, no anchors. Outside the N11 resort span (74-96).",
+    ruledBy: 'Sean',
+    ruledOn: '2026-08-27',
+    cite: ['scripts/ingest/research/batch20/out/airdates/shugo-chara.json', 'scripts/ingest/research/batch20/verify/shugo-chara.md'],
+  },
   {
     seriesId: 'yu-yu-hakusho-ghostfiles',
     ruleId: 'G53',
@@ -95,4 +115,4 @@ export const ENTRIES: RulingEntry<Record<number, string>>[] = [
   },
 ];
 
-export const EPISODE_TITLE_OVERRIDES: Record<string, Record<number, string>> = toRecord(ENTRIES);
+export const EPISODE_TITLE_OVERRIDES: Record<string, Record<number, string>> = toMergedRecord(ENTRIES);
