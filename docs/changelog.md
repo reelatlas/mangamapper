@@ -607,6 +607,35 @@
    durable guard. Lesson for the floor rule: a >2 overshoot sourced from a
    SINGLE chart row with no corroborating content anywhere is a typo
    candidate, not an adoption candidate.
+85. ✅ **CONSOLIDATE DEEP after batch 20 wave 4 (2026-08-28; P21 —
+   `applyEpisodeFloor`'s input changed: `translatedMax`).** Steps 0-8
+   satisfied by §12.84's save point. Rescan (step 9): (a) the floor probe
+   over every N11 series — none other is inflated by the raw max (dr-stone
+   94 vs 57 and dragon-maid 25 vs 19 are AFL covering one season of a
+   stitched chain, not the 5D's shape; 5D's 154/154, shugo 127/127 hold);
+   (b) the re-resolve-risk probe over every AFL-backed series — FIVE carry
+   rows the translated AFL payload lacks: yu-gi-oh-5d-s 145, dragon-ball-z-
+   kai 139, detective-school-q 19, kenichi 1-50 and hayate 5-23 (stitched
+   blocks) — the ROW-PROVENANCE /add-rule's witnesses (a re-resolve cannot
+   tell a wiki-inserted or stitched row from a stale one; the contiguity
+   check is the outcome guard meanwhile) — listed, not touched; (c) stale
+   cleanup: nothing new (the wave's flags closed at apply; retiresWhen
+   unchanged; permanence_violation 0). Census unchanged from §12.84 (display
+   219/0, ruling_violation 0, airdate_regression 0, anchor_gap_research 6,
+   anchor_volume_mismatch 20). CAPTURE (P29): seven wave-4 traps →
+   research-agent.md (Wayback licensor archives + a site's Firestore as a
+   primary; ☆ as a control that under-marks; title ≠ beat and Pony Canyon
+   = Bandai Channel; AFL dates on pre-2000 series; wiki revision lineage,
+   fabricating summarisers; game tie-ins that precede the game; a finale
+   coda / an adventuring arc the source lacks); three → apply-batch (a
+   renumber sweeps every rulings map incl. `applied/`; a same-kind upsert
+   replaces a fact — no A45; a cron re-resolve can drop backfilled rows and
+   re-floor counts); the N1 ledger statement gains the floor's input rule.
+   QUEUED for Sean: the row-provenance /add-rule (five witnesses); the
+   shugo 67-81 follow-up (☆ rows stored canon); MU segment rulings; the
+   chapter-count ceiling; healer-on-regime; the day-of-week class; the
+   anchor_volume_mismatch review (20). NEXT: Sean's choice — DBS identity
+   first, dai last (waves 5-6), or a queue.
 84. ✅ **BATCH 20 WAVE 4 APPLIED — the standing lies wave 3 left (2026-08-28;
    Sean's rulings, Cursor's START call).** Research (4 verdicts, ≈734k) →
    verify (4 reports, ≈518k; nothing refuted on a value; the FotNS ep-29
