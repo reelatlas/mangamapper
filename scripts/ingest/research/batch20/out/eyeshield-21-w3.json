@@ -1,0 +1,114 @@
+{
+  "series_id": "eyeshield-21",
+  "summary": "Lane C follow-up on three rows only (60, 61, 39); nothing else in the series is touched. The Kyoshin Poseidons block runs strictly forward, as batch 19 established, and eps 60-61 are the two rows it left unanchored. Ep 60 is the second half opening: Kakei's counter-read of the Wishbone, the one-on-one he asks for, and the Moby Dick Anchor crushing the Devil Bat Ghost - all of chapter 122 - and, on two independent witnesses, it runs on into ch 123's game beats and ends on Monta's touchdown that puts Deimon ahead 12-10 for the first time (en-WP's ep-60 summary states the go-ahead touchdown outright; Bandai's ep-61 synopsis opens with the lead as an accomplished fact, exactly as Bandai's ep-60 synopsis opens with ep 59's Wishbone). Ep 61 is then the post-comeback stalemate plus Mizumachi's swimming past - ch 123's 'And One Year Later' pages, which the manga places BEFORE the comeback and the anime plays after it, a small relocation inside the A18 regime. Ep 39 is the clip show: its only source content is Suzuna's cheer-captain beat, page-verified as ch 89 pp 14-15 (two pages of an 18-page chapter whose substance is anchored on ep 38) inside a wholly anime-original TV-interview plot - a first-time sliver in an original episode, so A44 position-less rather than an anchor. The one genuinely unresolved thing is ep 60's tail: the licensor synopsis stops at the Moby Dick Anchor (it stops one chapter early on ep 59 too), so 122 remains the conservative alternative and the delivered continue of 123 protects the reader either way.",
+  "anchors": [
+    {
+      "episode": 60,
+      "end_chapter": 123,
+      "start_chapter": 122,
+      "chapters_adapted": "122-123 (ch 123's game beats only: Kakei's 'block everyone but Eyeshield 21' counter, Hiruma's long pass to Taki, Monta's touchdown for the 12-10 first lead; ch 123's Mizumachi flashback pages are held back to ep 61)",
+      "volume": 14,
+      "confidence": "medium",
+      "note": "A4/A10/A18. START: Bandai's official synopsis opens on the Wishbone pressing Kyoshin - that is ch 121's touchdown, already animated at ep 59 (en-WP ep 59: 'The hidden ace of the Deimon Devil Bats appears, being the crucial key to their new formation: Wishbone'), so it is a recap lead-in and START is 122 under A10. The episode's own body is ch 122 He Who Brings Down the Curtain, page-verified: 'the match has finally gone into the second half' (ch 122 p12), Kakei's counter to the Wishbone and 'I'll block him, one on one' (p10), and the Devil Bat Ghost 'has been crushed' by the Moby Dick Anchor (p17-19) - Bandai: '筧は自分とアイシールド21が1対1で勝負することに勝機を見出し… デビルバットゴーストを発動するセナに対し、筧もまた必殺タックル\"モビィディック・アンカー\"を発動させる'. END 123 rests on two independent witnesses that the go-ahead score is inside this episode: en-WP's ep-60 summary ('Hiruma finds another way to overcome their new plan, and they score another touchdown, putting the Devil Bats in the lead') and Bandai's ep-61 synopsis, which opens with the lead as already achieved ('とうとう逆転に成功し、この試合初めてリードした泥門デビルバッツ') exactly as Bandai's ep-60 synopsis opens with ep 59's Wishbone. Ch 123's last page is that comeback (ch 123 p22: 'MADE A COMEBACK!! Poseidon 10 - Devilbats 12, seven minutes left'). Medium, not high: the licensor synopsis stops at the Moby Dick Anchor, and 122 is the honest alternative - see flags. The continue of 123 is correct under either reading.",
+      "sources": [
+        "https://www.b-ch.com/titles/8777/060",
+        "https://www.b-ch.com/titles/8777/061",
+        "https://en.wikipedia.org/wiki/List_of_Eyeshield_21_episodes_(1%E2%80%9372)",
+        "https://en.wikipedia.org/wiki/List_of_Eyeshield_21_chapters",
+        "https://api.mangadex.org/chapter?manga=30460ee1-e7c1-4b1a-90a0-6861f9992c17&chapter=122",
+        "https://api.mangadex.org/chapter?manga=30460ee1-e7c1-4b1a-90a0-6861f9992c17&chapter=123"
+      ]
+    },
+    {
+      "episode": 61,
+      "end_chapter": 123,
+      "start_chapter": 123,
+      "chapters_adapted": "123 (the 'And One Year Later' pages: Mizumachi's middle-school swimming past and the team-mates who abandoned his standard - manga pp 13-21 of the chapter, played here AFTER the comeback the manga puts them before; the post-comeback stalemate that frames them is ch 124's opening)",
+      "volume": 14,
+      "confidence": "medium",
+      "note": "A4/A18. Bandai's official synopsis is the whole record of this episode: '逆転の勢いそのままに試合の流れは泥門かと思われたが、巨深も粘りを見せ、試合は膠着状態へと突入する。緊迫した試合を繰り広げる両チームの中でも一際闘志を見せる巨深・水町。彼には水泳で全国制覇を目指しながら仲間に裏切られた過去があった' - that flashback is ch 123 そして一年後, page-verified (ch 123 p15: the national title, then 'we're tired of matching up to your standards / you're weird'; p17: 'those upperclassmen are now third-years, this is their last tournament… so we can't lose'). en-WP's ep-61 summary independently gives the episode as the post-lead stalemate ('The game continues with a stalemate with both teams trying to break the trend and score'), which is ch 124's opening situation (ch 124 p02: 'seven minutes left, the Deimon Devilbats have finally made a comeback, 12 to 10'). END stays 123 and NOT 124: ch 124's payload - the Poseidon formation, Kyoshin's go-ahead touchdown, 18 seconds left - is ep 62 (stored anchor, batch 19), so claiming 124 here would tell a reader they had seen it. Position-safe under both readings of ep 60: if ep 60 in fact stopped at ch 122, this row is simply the whole of ch 123.",
+      "sources": [
+        "https://www.b-ch.com/titles/8777/061",
+        "https://www.b-ch.com/titles/8777/062",
+        "https://en.wikipedia.org/wiki/List_of_Eyeshield_21_episodes_(1%E2%80%9372)",
+        "https://en.wikipedia.org/wiki/List_of_Eyeshield_21_chapters",
+        "https://api.mangadex.org/chapter?manga=30460ee1-e7c1-4b1a-90a0-6861f9992c17&chapter=123",
+        "https://api.mangadex.org/chapter?manga=30460ee1-e7c1-4b1a-90a0-6861f9992c17&chapter=124"
+      ]
+    }
+  ],
+  "continue_points": [
+    {
+      "episode": 60,
+      "continue_chapter": 123,
+      "kind": "parity",
+      "note": "C1/C2 parity: ep 61 opens inside ch 123 - its 'And One Year Later' flashback pages have not been shown yet - so resume AT ch 123 rather than at 124. Nothing is skipped: the anime is running the Kyoshin game forward from ch 116.",
+      "sources": [
+        "https://www.b-ch.com/titles/8777/061",
+        "https://en.wikipedia.org/wiki/List_of_Eyeshield_21_chapters"
+      ]
+    },
+    {
+      "episode": 61,
+      "continue_chapter": 124,
+      "kind": "parity",
+      "note": "C2 parity: ep 62 starts ch 124 我の名はポセイドン (the Poseidon formation and Kyoshin's go-ahead touchdown, stored anchor 62 -> 124). Chapter 123 is fully animated by the end of this episode; nothing before it is outstanding in this block.",
+      "sources": [
+        "https://www.b-ch.com/titles/8777/062",
+        "https://en.wikipedia.org/wiki/List_of_Eyeshield_21_chapters"
+      ]
+    }
+  ],
+  "anchor_hostile": [
+    {
+      "episode": 39,
+      "why": "A44 position-less: an anime-original episode whose only source content is a two-page sliver. Ep 39 クリスマスボウルへの道 is the clip show - Bandai: Suzuna, ALREADY appointed 盛り上げ隊長, plants a Monthly American Football article claiming Eyeshield 21 is a heart-throb, a TV crew turns up to interview him, Sena runs from them and Suzuna presses him on why he hides his identity; en-WP: 'This leads to a quick review of the previous 38 episodes'; ja-WP marks the row as half of a 2本立て1時間スペシャル with ep 40. The chapter tie is Suzuna's appearance as the Devil Bats' cheer captain, page-verified as ch 89 決戦は日曜日 pp 14-15 (Suzuna in the BATS cheer uniform; 'aren't you glad now that you have a cheerleader?') - two pages of an 18-page chapter whose substance (the Sunday match, the roster announcement, the tournament bracket, Hiruma's 'regular members, here they are!!') is already anchored on ep 38 (89-90). A first-time sliver inside an original plot takes no anchor (A44, the ranma-130 shape) and the tie is carried by the stored partial{89} annotation (T28: the materiality bar is not met - the episode's job is the recap plus the interview chase, not ch 89).",
+      "sources": [
+        "https://www.b-ch.com/titles/8777/039",
+        "https://en.wikipedia.org/wiki/List_of_Eyeshield_21_episodes_(1%E2%80%9372)",
+        "https://api.mangadex.org/chapter?manga=30460ee1-e7c1-4b1a-90a0-6861f9992c17&chapter=89",
+        "https://ja.wikipedia.org/wiki/%E3%82%A2%E3%82%A4%E3%82%B7%E3%83%BC%E3%83%AB%E3%83%8921"
+      ]
+    }
+  ],
+  "annotations": [
+    {
+      "episodes": [60, 61],
+      "kind": "rearranged",
+      "chapters": "123",
+      "note": "Chapter 123 そして一年後 is split and re-ordered. In the manga the chapter runs: Kakei's 'block everyone but Eyeshield 21' plan -> Hiruma's long pass to Taki -> Mizumachi's one-year-ago swimming flashback -> Monta's touchdown for the 12-10 comeback on its last page. The anime plays the game beats and the comeback at the end of ep 60 and holds the flashback back to ep 61, where it is the episode's payload (Bandai 060 / 061; en-WP ep 60 'they score another touchdown, putting the Devil Bats in the lead', ep 61 'the game continues with a stalemate'). A18 reorder regime; both rows carry END 123."
+    },
+    {
+      "episodes": [39],
+      "kind": "partial",
+      "chapters": "89",
+      "note": "Confirms the stored eps 38/39 partial{89} split at page level: ch 89's Suzuna cheer-captain pages are pp 14-15 (the BATS uniform, 'let me tell you, Suzuna… aren't you glad now that you have a cheerleader?'), and the rest of the chapter - the Sunday-match talk, the tournament bracket spread, Hiruma reading out the regular members - is ep 38's material. Ep 39 keeps the beat as background to an anime-original plot (Suzuna is already 盛り上げ隊長 when the episode opens), which is why it is A44 rather than an anchor."
+    }
+  ],
+  "repairs": [
+    {
+      "episode": 60,
+      "field": "annotation:abridged{116-126}",
+      "old": "eps 58,59,60,61,62,63 abridged {116-126}: '… ep 60 = 122 (Kakei vs Sena, Moby Dick Anchor), ep 61 = 123 そして一年後 (Mizumachi's swimming flashback), ep 62 = 124 …'",
+      "new": "Same annotation, per-episode split refined for eps 60-61: ep 60 = 122-123 (Kakei's counter-read and the Moby Dick Anchor crushing the Devil Bat Ghost = ch 122; then ch 123's game beats through Monta's touchdown and Deimon's first lead, 12-10), ep 61 = ch 123's 'And One Year Later' flashback pages, played after the comeback rather than before it, inside the post-comeback stalemate that opens ch 124. Everything else in the annotation (58 = 116-118, 59 = 119-121, 62 = 124, 63 = 125-126, 'strictly forward, no 120/121 swap') stands.",
+      "why": "The annotation's 60/61 split was a prediction made from Bandai's synopses alone in batch 19 (its own flag says 'eps 60, 61 become anchorable at ch 122 and ch 123 - not in this lane's row list'). Two witnesses put ch 123's comeback inside ep 60 (en-WP's ep-60 summary; Bandai's ep-61 synopsis opening with the lead already taken), and Bandai's ep-61 synopsis makes Mizumachi's ch-123 flashback that episode's payload - so ch 123 is split across the two rows rather than sitting whole in ep 61. Declining the refinement costs nothing structurally (both rows still carry END 123); accepting it is what makes the ep-60 continue of 123 legible.",
+      "sources": [
+        "https://www.b-ch.com/titles/8777/060",
+        "https://www.b-ch.com/titles/8777/061",
+        "https://en.wikipedia.org/wiki/List_of_Eyeshield_21_episodes_(1%E2%80%9372)",
+        "https://api.mangadex.org/chapter?manga=30460ee1-e7c1-4b1a-90a0-6861f9992c17&chapter=123"
+      ]
+    }
+  ],
+  "type_corrections": [],
+  "structure": {
+    "notes": "ROW IDENTITY (R20, join on title + date, never index): ja-WP's 各話リスト and Bandai Channel agree 1:1 with our rows across 58-63 - 58 悪魔vs海の神 2006-05-17, 59 裏エースの男 05-24, 60 フィールドの約束! 05-31, 61 勝利への執念! 06-07, 62 戦慄! モビィディック・アンカー!! 06-14, 63 30センチの攻防! 06-21 - and ep 39 クリスマスボウルへの道 2006-01-11 (ja-WP: rowspan 2本立て1時間スペシャル with ep 40). TITLE != CONTENT, both directions, in this block: ep 62's title names the Moby Dick Anchor although the technique's decisive first use is ep 60 (ep 62's synopsis is the Poseidon formation = ch 124), and ep 59's title is ch 121 although its synopsis stops at ch 120 - the licensor synopsis is decisive about what IS in an episode, not about what is not. SOURCE LINEAGE: TV Tokyo's archived back-number page (web.archive.org 20071020040502 .../backno53.html) carries the eps 53-59 synopses VERBATIM identical to Bandai Channel's - they are one licensor text, not two sources; tvguide.or.jp is the same text again. eyeshield21.fandom's Episode 59-63 pages have EMPTY chapters= fields (58 has 116th Down; the batch-19 note holds), and its 121st/122nd/123rd Down chapter pages are empty stubs, so the fandom carries nothing on eps 60-61 - the independent legs here are en-WP's episode summaries (fan-written, cross-check tier) and MangaDex's page images of chs 121-124 (primary, page-level). Chapter space unchanged: the manga's own 'Nth Down' numbering, 333 chapters; v14 = 116-124 confirms volume 14 for both anchors. Chapter-title table used: 119 チビVSデカ, 120 HIGH WAVE, 121 裏エースの男 (Hidden Ace - the Wishbone chapter, ending on Ishimaru's touchdown), 122 終幕を下ろす者 (He Who Brings Down the Curtain), 123 そして一年後, 124 我の名はポセイドン.",
+    "order_only": []
+  },
+  "flags_for_sean": [
+    "THE ONE FORK - ep 60's tail (END 123 vs 122). Delivered 123 at medium. FOR: en-WP's ep-60 summary states the go-ahead touchdown happens in this episode, and Bandai's ep-61 synopsis opens with 'とうとう逆転に成功し、この試合初めてリードした' - the lead as an accomplished fact, the same construction Bandai uses at ep 60 for ep 59's Wishbone and at ep 62 for the lead again. AGAINST: the licensor synopsis for ep 60 stops at the Moby Dick Anchor, which is ch 122's last beat, and en-WP's episode summaries for this arc are demonstrably loose (its ep-60 score '14-12' cannot be reconciled with ch 124's 12-10, and batch 19 caught its ep-62 technique conflation). If you take 122, ep 61 becomes the whole of ch 123 and nothing else changes: both continues (60 -> 123, 61 -> 124) are correct under either reading, and ep 62's stored 124 is untouched. No page-level source for the anime's cut exists; I could not find a second licensor-independent Japanese per-episode text (dアニメストア's episode list is JS-rendered, TELASA's pages are a JS app, and the TV Tokyo site's story pages are Flash).",
+    "ep 39 typing (out of the anchor question, in scope for the ask). Stored type is mixed (your T6 ruling, 2026-08-25) and AFL makes no claim on the row. On T28 as written the row reads FILLER: the episode's job is a 38-episode clip show plus an anime-original magazine/TV-interview chase, and the source content is two pages of ch 89 quoted as background. I have NOT proposed the retype - the A44 anchor_hostile shape is identical under either type and the mixed typing is yours - but if you want the T28 line applied consistently this row is the cleanest candidate in the series after 15/16 (which the wave-2 verifier queued).",
+    "Inherited and still open (batch 19 flag, not re-researched here): ep 58's stored END of 116 comes from the fandom's chapters= field listing only 116th Down, while the Komusubi-vs-Mizumachi exchanges that Bandai's ep-58 synopsis describes are en-WP's vol-14 material for 117-118. If 58 is really 116-118, nothing in this verdict moves (ep 59's stored START of 119 already assumes it).",
+    "Consistency note for the apply layer: eps 60 and 61 both carry END 123, which is flat rather than ascending. That is the same shape the A18/A41 regime already tolerates on this series (eps 37/38 and 31/32 regress outright), and it is annotated rearranged{123}."
+  ]
+}

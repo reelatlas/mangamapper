@@ -1,0 +1,134 @@
+{
+  "series_id": "tokyo-mew-mew",
+  "summary": "Five holes inside the A41 settled reorder, and only one of them is a position. Chapter 21 'Who is the Blue Knight?' was read page by page in the TokyoPop volume-6 scan (Internet Archive, manga_Tokyo_Mew_Mew): it runs pp 5-41 and holds THREE things - Keiichiro telling the Mew Project history (pp 5-12), Masaya's recurring dream and Pie's 'death to Tokyo Harbor' plan (pp 18-20), and the harbour red-tide battle with Lettuce diving for the third mew aqua (pp 22-38), closing on Masaya's 'I don't want you to fight anymore' (pp 40-41); chapter 22 opens at p 42/43 with the illustration page and immediately carries the 'could Masaya be the Blue Knight?' scene (pp 44-45) and Kish's kidnapping. So ep 36 took ch 21's history half and ep 41 takes its red-tide half - FIRST-TIME pages of a chapter whose number was already an END, which is the 'pages, not numbers' shape: ep 41 anchors at 21 with a rearranged annotation. The other four rows carry no first-time source pages at all. Ep 19 is an original beach story that previews Lettuce's mermaid form (the manga's undersea rescue is ch 21, and ja-WP states the 2002 anime re-rules the transformation as mew-aqua-triggered where the manga has it at will); ep 21 re-uses the mew-aqua briefing; ep 37 is the original Christmas set-up whose ch-19/20 payload lands at ep 38; ep 44's citywide forest echoes ch 18's Tokyo Dome trees (animated at ep 40) and its 'Ryou cannot be the Blue Knight' beat is an anime deduction - the manga's Blue-Knight question is about MASAYA, sits in ch 22 and is delivered by ep 45. All four are A44 anchor_hostile; ep 44 additionally reads FILLER on T28 despite AFL calling it canon, and that is proposed as a type correction.",
+  "anchors": [
+    {
+      "episode": 41,
+      "end_chapter": 21,
+      "start_chapter": 21,
+      "chapters_adapted": "21 (the Tokyo-harbour red-tide half of the chapter - Pie's pollution chimera anima, the Mew Mews fighting the fish monsters, Lettuce going underwater and the third mew aqua; the Mew Project history half of the same chapter was animated at ep 36)",
+      "volume": 6,
+      "confidence": "high",
+      "note": "A4/A41 and 'pages, not numbers' (Sean 2026-08-27). Manga side, page-verified in the TokyoPop volume-6 scan: ch 21 pp 18-20 Pie and Kish plan 'Death to Tokyo Harbor! … the Tokyo Continental Renaissance needs to get started before Deep Blue wakes up'; pp 26-33 the sea battle, Lettuce diving ('it's dark and I'm scared… but I have to do this!', 'can't breathe!!!'); pp 30-31 'Ribbon… Aqua Drops!!' and 'the third mew aqua!'. Anime side: en-WP's ep-41 summary is that scene end to end - 'The aliens decide to use special chimera animas to release pollutants into Tokyo Bay… Mew Lettuce and Ryou arrive by boat… Retasu tries to save the drowning Ryou. Her emotions activate the mew aqua around his neck, causing her legs to change to a porpoise fin… The mew aqua weakens the remaining chimera anima' - and en-WP's own volume-6 summary states the manga beat in the same order ('Pie uses a chimera anima to infect the ocean waters with a red tide. While the other Mew Mews fight Pie and the monster, Lettuce detects a mew aqua and uses it to clean the water'). These are first-time pages: ep 36 covered only the history half (stored anchor 36 -> 21 {20, 21 (Mew Project history)}), and ep 19's fin was a preview inside an original plot. END = START = 21; the chapter's closing Masaya scene (pp 40-41) is not in the anime here.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/List_of_Tokyo_Mew_Mew_episodes",
+        "https://en.wikipedia.org/wiki/List_of_Tokyo_Mew_Mew_chapters",
+        "https://archive.org/details/manga_Tokyo_Mew_Mew",
+        "https://tokyomewmew.fandom.com/api.php?action=parse&page=Tokyo%20Mew%20Mew%206&prop=wikitext&format=json"
+      ]
+    }
+  ],
+  "continue_points": [
+    {
+      "episode": 41,
+      "continue_chapter": 22,
+      "kind": "parity",
+      "note": "C2 parity: the next episode that carries source pages is ep 45, which starts ch 22 'A Kiss for Kish' (stored anchor 45 -> 22; eps 42-44 carry none). With this episode chapters 12 through 21 are all animated - the vol-4/5 backfills closed at ep 40 and ch 21's second half closes here. The one standing hole is unchanged: ch 11 'Cruise Control' is never adapted anywhere in the 52 episodes. On arrival at ch 22 a reader will find its Blue-Knight reveal ahead of the anime, which reaches it at ep 45 (C3).",
+      "sources": [
+        "https://en.wikipedia.org/wiki/List_of_Tokyo_Mew_Mew_chapters",
+        "https://en.wikipedia.org/wiki/List_of_Tokyo_Mew_Mew_episodes"
+      ]
+    }
+  ],
+  "anchor_hostile": [
+    {
+      "episode": 19,
+      "why": "A44 position-less: a wholly anime-original beach story with a technique preview, no source pages. en-WP: the Mews at the beach, Retasu who cannot swim, the girl Iruka who fears the water, the storm and chimera animas, and Mew Lettuce's legs turning into a porpoise tail to save two children. The 4Kids dub page for the same episode (independent of en-WP) gives the identical plot with the light that triggers the fin. Nothing of it is in the manga: chapters 17-20 are the Blue Knight, the Tokyo Dome rescue, the forced transformation and Masaya's confession (vol-5 chapter list), and the mermaid form's manga home is ch 21's undersea rescue - which the anime does not reach until ep 41. ja-WP moreover states that in the 2002 anime the mermaid form is triggered by reacting to mew aqua whereas the manga (and Nyu) let her transform at will, i.e. the form's rules here are an anime invention. Keeps the stored loose_parallel{21}. NOTE the typing tension: ja-WP bolds this row as 原作を元にした and AFL calls it mixed, so it is left mixed - see flags.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/List_of_Tokyo_Mew_Mew_episodes",
+        "https://tokyomewmew.fandom.com/api.php?action=parse&page=Episode%2019%3A%20A%20Girl%20with%20a%20Porpoise&prop=wikitext&format=json",
+        "https://ja.wikipedia.org/wiki/%E6%9D%B1%E4%BA%AC%E3%83%9F%E3%83%A5%E3%82%A6%E3%83%9F%E3%83%A5%E3%82%A6",
+        "https://en.wikipedia.org/wiki/List_of_Tokyo_Mew_Mew_chapters"
+      ]
+    },
+    {
+      "episode": 21,
+      "why": "A44 position-less: an anime-original episode built on RE-USED exposition. en-WP: Mint dreams of her lorikeet; 'at the cafe, Ryou and Keiichirou tell the girls about a substance called mew aqua and its power'; Mint quits over Ichigo's date, Zakuro talks her round, and the mew aqua they find turns out to be a fake. The dub page for the same episode says the same ('Elliot discovers the Blue Aqua, the elemental substance that turned Bridget into a mermaid… What happens when Corina leaves and turns in her Power Pendant?'). Mint quitting, the lorikeet dream and the fake mew aqua have no chapter; the mew-aqua briefing is a restatement of material already animated with chs 8-9 (eps 11-12), and re-shown pages are never cited (Sean 2026-08-27). Keeps the stored loose_parallel{8-9}.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/List_of_Tokyo_Mew_Mew_episodes",
+        "https://tokyomewmew.fandom.com/api.php?action=parse&page=Episode%2021%3A%20One%20Flew%20Out%20Of%20The%20Mew%20Mew%27s%20Nest&prop=wikitext&format=json",
+        "https://en.wikipedia.org/wiki/List_of_Tokyo_Mew_Mew_chapters"
+      ]
+    },
+    {
+      "episode": 37,
+      "why": "A44 position-less: the anime-original set-up half of a two-parter whose source payload is in the other half. en-WP ep 37: Ichigo's guilt at lying to Masaya, the shopping trip with Zakuro, the 'Tears for Christmas' necklace, the meeting at the Odaiba tree, the aliens' attack and mew aqua materialising at the top of the tree - none of which exists in the manga, where the reveal happens mid-fight when Quiche attacks the pair (vol-5 summary; chapter titles 19 'Truth or Dare', 20 'Masaya Confessions'). The payload - Ichigo telling Masaya she is a Mew Mew and his 'I already knew' - is ep 38, which is anchored. The fandom's ep-37 page adds only the same set-up in shorter form; ja-WP does not bold the row. Keeps the stored eps 37,38 partial{19}.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/List_of_Tokyo_Mew_Mew_episodes",
+        "https://tokyomewmew.fandom.com/api.php?action=parse&page=Episode%2037%3A%20The%20Shining%20Tear%20-%20Celebrating%20Christmas%20With%20Just%20The%20Two%20Of%20Us%21&prop=wikitext&format=json",
+        "https://ja.wikipedia.org/wiki/%E6%9D%B1%E4%BA%AC%E3%83%9F%E3%83%A5%E3%82%A6%E3%83%9F%E3%83%A5%E3%82%A6"
+      ]
+    },
+    {
+      "episode": 44,
+      "why": "A44 position-less: an anime-original episode with two echoes and no source pages, despite being typed canon. en-WP (the fandom page is a verbatim copy, so this is one source, not two): 'Ryou and Keiichiro learn that mew aqua may have been made by the aliens… trees grow out of control, turning the city into a forest… Tart arrives and turns the tree into a chimera anima. During the fight, Mew Ichigo realizes that Ryou cannot be the Blue Knight as they both appear at the battle… they are unable to figure out what caused the forest.' Neither event is in vol 6: chapter 21 is the history + the harbour red tide (read page by page), 22 is the kidnapping and Masaya's Blue-Knight reveal, 23-24 are the heat dome and Deep Blue. The forest echoes ch 18's mew-aqua trees around the Tokyo Dome, which the anime already animated at ep 40 (en-WP ep 40: 'uses his powers to make trees grow around the Dome so the roots support it'). The Blue-Knight identity thread in the manga is about MASAYA, not Ryou, and sits at ch 22 pp 44-45 ('Why does Masaya remind me of the Blue Knight? They can't possibly be the same person… Masaya can't be the Blue Knight! That's completely impossible!') - the anime delivers it at ep 45, which is anchored 22. Keeps the stored loose_parallel{18}; see type_corrections.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/List_of_Tokyo_Mew_Mew_episodes",
+        "https://archive.org/details/manga_Tokyo_Mew_Mew",
+        "https://en.wikipedia.org/wiki/List_of_Tokyo_Mew_Mew_chapters",
+        "https://ja.wikipedia.org/wiki/%E6%9D%B1%E4%BA%AC%E3%83%9F%E3%83%A5%E3%82%A6%E3%83%9F%E3%83%A5%E3%82%A6"
+      ]
+    }
+  ],
+  "annotations": [
+    {
+      "episodes": [41],
+      "kind": "rearranged",
+      "chapters": "21",
+      "note": "A41 settled reorder, 'pages, not numbers': chapter 21 is split across two widely separated episodes. Ep 36 took its opening half (Keiichiro's account of the Mew Project and Ryou's self-experiment, ch 21 pp 5-12) as the payoff of the Alto = Ryou reveal; ep 41 takes its second half (Pie's Tokyo-harbour red tide and Lettuce's undersea mew aqua, pp 22-38) five episodes later, after the vol-4/5 backfills at eps 38 and 40. The chapter NUMBER was already an END at ep 36, but these are first-time pages, so the row anchors."
+    },
+    {
+      "episodes": [41],
+      "kind": "divergence",
+      "chapters": "21",
+      "note": "The rescue is rewritten around Ryou. In the manga Lettuce simply detects the mew aqua in the polluted water and uses it to clean the sea; in the anime the boat is destroyed, Ryou is thrown in and drowning, and it is Lettuce's emotion that activates the mew aqua hanging round HIS neck - which is also what turns her legs into the porpoise fin. ja-WP states the rule difference explicitly: in the 2002 anime Lettuce fights in human form underwater and only becomes a mermaid when reacting to mew aqua, where the manga and Nyu let her transform at will."
+    },
+    {
+      "episodes": [19],
+      "kind": "loose_parallel",
+      "chapters": "21",
+      "note": "Confirms the stored annotation. Mew Lettuce's porpoise fin is previewed in this original beach story; its manga home is the ch-21 undersea rescue that the anime animates at ep 41, and the manga's version is a deliberate transformation rather than a mew-aqua reaction (ja-WP). No chapter pages are adapted here."
+    },
+    {
+      "episodes": [21],
+      "kind": "loose_parallel",
+      "chapters": "8-9",
+      "note": "Confirms the stored annotation. The mew-aqua briefing Ryou and Keiichiro give here restates material already animated with chs 8-9 at eps 11-12; Mint's lorikeet dream, her walkout and the fake mew aqua are anime-original. Re-shown material is never cited as a position."
+    },
+    {
+      "episodes": [37],
+      "kind": "partial",
+      "chapters": "19",
+      "note": "Confirms the stored eps 37/38 split: ep 37 is the original Christmas set-up (the necklace, the Odaiba tree, mew aqua materialising) and ep 38 carries the source payload - Ichigo telling Masaya she is a Mew Mew and his 'I already knew'. See flags for a numbering doubt about whether that payload is ch 19 or ch 20; it does not affect this row."
+    },
+    {
+      "episodes": [44],
+      "kind": "loose_parallel",
+      "chapters": "18",
+      "note": "Confirms the stored annotation and adds the second echo. The city turning into a forest echoes the mew-aqua trees that grow around the Tokyo Dome in ch 18 - already animated at ep 40 - and the 'Ryou cannot be the Blue Knight' realisation echoes the manga's Blue-Knight question, which is about Masaya, sits in ch 22 (pp 44-45) and is answered at ep 45. Neither is adapted here."
+    }
+  ],
+  "repairs": [],
+  "type_corrections": [
+    {
+      "episodes": [44],
+      "type": "filler",
+      "note": "PROPOSAL, medium confidence - stored canon and AFL also says canon, which is why it is offered rather than asserted. On T27/T28 a row with zero source pages is filler: the citywide forest, the alien-made-mew-aqua theory and the Ryou/Blue Knight deduction have no counterpart in volume 6, whose four chapters were read page by page (21 = history + harbour red tide, 22 = the Masaya Blue-Knight question and Kish's kidnapping, 23-24 = the heat dome and Deep Blue), and the two ties are echoes of ch 18 (animated at ep 40) and of ch 22 (animated at ep 45). ja-WP does not bold the row as 原作を元にした. WHY IT MATTERS: as a canon row with no anchor it interpolates a position between ep 40's ch 18 and ep 45's ch 22, showing a reader a chapter this episode does not touch; typed filler it shows nothing, which is true. If you prefer the smallest move, 'mixed' is wrong for the same reason (there is no source half) - the honest fallback is to leave it canon and accept the interpolation, which is what the current data does.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/List_of_Tokyo_Mew_Mew_episodes",
+        "https://archive.org/details/manga_Tokyo_Mew_Mew",
+        "https://ja.wikipedia.org/wiki/%E6%9D%B1%E4%BA%AC%E3%83%9F%E3%83%A5%E3%82%A6%E3%83%9F%E3%83%A5%E3%82%A6"
+      ]
+    }
+  ],
+  "structure": {
+    "notes": "CHAPTER SPACE unchanged (N22): the 27-chapter mainline, v6 = 21-24, matching the stored boundaries; no conversion was needed. NEW SOURCE FOUND, and it is the one that settles this lane: the TokyoPop English volumes are on the Internet Archive as a public item, 'MANGA: Tokyo Mew Mew' (identifier manga_Tokyo_Mew_Mew), one file per volume; the page images can be pulled individually out of the *_jp2.zip without borrowing. Volume 6 is 94 two-page spreads = pp 1-188, and reading it gives the internal chapter split the wikis do not: ch 21 runs pp 5-41 (Keiichiro's Mew Project history pp 5-12 -> Masaya's recurring dream and Pie's 'Death to Tokyo Harbor' pp 18-20 -> the harbour battle, Lettuce underwater, 'Ribbon Aqua Drops' and 'the third mew aqua' pp 22-38 -> Masaya's 'I don't want you to fight anymore' pp 40-41) and ch 22 opens on its illustration page at p 42/43, carrying 'could Masaya be the Blue Knight?' (pp 44-45) and Kish's kidnapping (pp 48-50). This is the same instrument that would settle the vol-4 split batch 19 had to derive from Tokyopop pun titles, and vol 5 (chs 17-20) is available in the same item. SOURCE LINEAGE WARNING re-confirmed: tokyomewmew.fandom's VOLUME synopses and its Episode 44 summary are verbatim copies of en-WP - one lineage, not two; its 2002-series episode pages carry no chapters= field at all (the pages for eps 19 and 21 in Category:Episodes are the 4Kids 'Mew Mew Power' dub articles, which ARE independent of en-WP and were used as such). ja-WP's 太字 = 原作を元にした marking is unreliable per-episode in BOTH directions: it bolds 19 and 21 (which carry no source pages) and does NOT bold 38, 41 or 47 (which do) - use it only as corroboration, never alone.",
+    "order_only": []
+  },
+  "flags_for_sean": [
+    "TYPING CONSISTENCY. Four rows in this lane are the same shape - an anime-original plot with an echo of a chapter - but they are typed three ways in the store: 19 mixed, 21 mixed, 37 mixed, 44 canon. I proposed the retype only for 44 (canon is unsupportable for an episode with no counterpart, and canon rows interpolate). If you apply T28 uniformly, 19, 21 and 37 are filler too; against that, AFL calls 19 and 21 mixed and ja-WP bolds them, which is presumably where the stored typing came from. All four are A44 either way, so nothing in this verdict depends on the answer.",
+    "OUT OF ASK, UNRESOLVED - the stored ep 38 -> 19 may be ch 20. TokyoPop's titles are 19 'Truth or Dare' and 20 'Masaya Confessions', and en-WP's vol-5 summary runs 'Ichigo is forced to reveal that she is Mew Ichigo' (the forced transformation) and only afterwards 'Masaya confesses that he already knew' - so the beat ep 38 actually animates (Ichigo telling him voluntarily at the Christmas tree, and his 'I already knew') looks like ch 20's, with ch 19's forced mid-fight reveal replaced by the anime's Christmas two-parter. I did not resolve it: I opened the vol-5 scan but its page order past the mid-volume is not what the spread count predicted and I did not want to spend the lane's budget outside its rows. The volume-5 scan in manga_Tokyo_Mew_Mew is the instrument that would settle it, along with the stored ep 36 -> {20 (Alto = Ryou), 21} claim, since ch 20's tail is the Alto = Ryou reveal.",
+    "ep 41's anchor makes the END sequence flat rather than backwards (36 -> 21, 38 -> 19, 40 -> 18, 41 -> 21, 45 -> 22): it re-reaches the number ep 36 already reached rather than going behind it, so it needs no new tolerance beyond the A41 regime you already ruled. Its continue of 22 agrees with the stored ep-40 continue of 22.",
+    "Cross-check offered for a stored row outside the ask: en-WP's ep-40 summary opens 'Masaya is having weird dreams in which an unidentified voice is telling him to wake up' - that is ch 21 pp 18-20 (page-verified: 'Why do I keep having this dream?… Who is it?'), i.e. ep 40 may carry a third fragment of ch 21 alongside its ch-18 anchor. Position-neutral (ep 41 reaches 21 anyway); noted only so the ch-21 accounting is complete: history -> ep 36, Masaya's dream -> possibly ep 40, red tide -> ep 41, closing Masaya scene -> nowhere."
+  ]
+}
