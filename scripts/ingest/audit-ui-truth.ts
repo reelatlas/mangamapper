@@ -91,6 +91,7 @@ async function main() {
     integrity_eps_beyond_total: [], integrity_total_beyond_eps: [], integrity_double_claimed: [],
     integrity_degenerate_span: degenerateSpans,
     special_numbered_unreviewed: [], anchor_gap_research: [], frontier_tail_null: [],
+    anchor_volume_mismatch: [],
     anchor_nonmonotonic: [], anchor_start_offtrend: [], start_sliver_mismatch: [], start_without_span: [], anchor_beyond_chapter_space: [], anchor_beyond_display_total: [], anchor_fractional_chapter: [], anchor_on_noncanon_row: [], continue_skip_unnoted: [], continue_provenance_missing: [], boundaries_degenerate: [], ruling_violation: [], repair_on_derivation_tier: [],
     mu_pin_unverified: [], mu_pin_flag_redundant: [], anchor_without_row: [], annotation_without_row: [],
     rearranged_zone_unanchored: [], rearranged_zone_acknowledged: [],
@@ -548,6 +549,7 @@ async function main() {
       }
     }
     const spaceOf = new Map(series.map((s: any) => [s.id, Math.max(s.total_chapters ?? 0, s.latest_known_chapters ?? 0)]));
+    const mangaOf = new Map<string, number | null>(series.map((s: any) => [s.id, s.manga_anilist_id ?? null]));
     // DISPLAY total per the same-edition band rule (assemble.ts totalChapters,
     // mirrored by applyMuFrontier's count→number conversion): for finished
     // manga the position row's denominator is MU's last chapter NUMBER when
@@ -604,7 +606,21 @@ async function main() {
         }
       }
       const space = spaceOf.get(sid) ?? 0;
+      const mangaId = mangaOf.get(sid);
+      const tableVols = mangaId != null ? boundsBy.get(mangaId) : undefined;
       for (const a of list) {
+        // ANCHOR VOLUME vs THE BOUNDARY TABLE (Sean 2026-08-27, batch 20 wave
+        // 2 — the saint-seiya witness): an anchor whose stored volume is not
+        // the table's volume for its chapter is in the WRONG CHAPTER SPACE
+        // (a migration that missed rows, a +1 edition, a typo). Batch 17's
+        // seiya rows 43-72 sat in the phantom +1 space for two days with
+        // nothing to trip; seven rows disagreed with their own table. Only
+        // TABLE-derived volumes count (never the ratio fallback); a NULL
+        // stored volume is not a mismatch (ok_no_volume covers it).
+        if (tableVols?.length && a.volume != null) {
+          const tv = tableVols.find((b: any) => a.chapter >= b.chapter_start && (b.chapter_end === null || a.chapter <= b.chapter_end))?.volume;
+          if (tv != null && tv !== a.volume) classes.anchor_volume_mismatch.push(`${sid}: ep ${a.episode}→ch${a.chapter} stored v${a.volume}, the boundary table says v${tv} (${a.source}) — wrong chapter space or a stale volume`);
+        }
         if (space > 0 && a.chapter > space + 10) {
           classes.anchor_beyond_chapter_space.push(`${sid}: ep ${a.episode}→ch${a.chapter} exceeds manga space (${space})`);
         }
@@ -847,7 +863,7 @@ async function main() {
   // lib/rulings/permanence.ts). A LOCKED series failing any of it =
   // permanence_violation — data drifted under a lock (P5).
   {
-    const OPEN_CLASSES = ['integrity_eps_beyond_total', 'integrity_total_beyond_eps', 'integrity_double_claimed', 'integrity_degenerate_span', 'special_numbered_unreviewed', 'anchor_gap_research', 'frontier_tail_null', 'anchor_nonmonotonic', 'anchor_start_offtrend', 'anchor_beyond_chapter_space', 'anchor_beyond_display_total', 'anchor_fractional_chapter', 'anchor_on_noncanon_row', 'continue_skip_unnoted', 'continue_provenance_missing', 'boundaries_degenerate', 'boundaries_wrong_page', 'boundaries_beyond_total', 'ruling_violation', 'repair_on_derivation_tier', 'mu_pin_unverified', 'rearranged_zone_unanchored', 'title_incomplete', 'airdate_incomplete', 'airdate_regression', 'airdate_withheld', 'asterisk_unreviewed', 'fractional_unmodeled', 'annotation_invalid', 'afl_anime_canon_unruled', 'format_missing', 'episode_without_component', 'watch_order_kind_missing', 'series_without_source_kind', 'pending_airing_no_anchor', 'pending_finished_no_totals', 'pending_no_canon', 'pending_other'];
+    const OPEN_CLASSES = ['integrity_eps_beyond_total', 'integrity_total_beyond_eps', 'integrity_double_claimed', 'integrity_degenerate_span', 'special_numbered_unreviewed', 'anchor_gap_research', 'frontier_tail_null', 'anchor_nonmonotonic', 'anchor_start_offtrend', 'anchor_volume_mismatch', 'anchor_beyond_chapter_space', 'anchor_beyond_display_total', 'anchor_fractional_chapter', 'anchor_on_noncanon_row', 'continue_skip_unnoted', 'continue_provenance_missing', 'boundaries_degenerate', 'boundaries_wrong_page', 'boundaries_beyond_total', 'ruling_violation', 'repair_on_derivation_tier', 'mu_pin_unverified', 'rearranged_zone_unanchored', 'title_incomplete', 'airdate_incomplete', 'airdate_regression', 'airdate_withheld', 'asterisk_unreviewed', 'fractional_unmodeled', 'annotation_invalid', 'afl_anime_canon_unruled', 'format_missing', 'episode_without_component', 'watch_order_kind_missing', 'series_without_source_kind', 'pending_airing_no_anchor', 'pending_finished_no_totals', 'pending_no_canon', 'pending_other'];
     const openBy = new Map<string, Set<string>>();
     const ids = new Set(series.map((s: any) => s.id));
     for (const c of OPEN_CLASSES) for (const line of classes[c] ?? []) {

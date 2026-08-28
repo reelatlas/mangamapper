@@ -14,6 +14,16 @@ import { toRecord, type RulingEntry } from './types';
 
 export const ENTRIES: RulingEntry<Record<number, string>>[] = [
   {
+    seriesId: 'yu-yu-hakusho-ghostfiles',
+    ruleId: 'G53',
+    value: { 42: 'A Matter of Love and Death' },
+    reason:
+      "Batch 20 wave 2 (verified R24, Sean ruled 2026-08-27): the stored 'A Master of Love and Death' is a typo — en-WP 'Yu Yu Hakusho season 2' (ep 42, 1993-08-07), yuyuhakusho.fandom Episode_42 and its Season 2 guide all read 'Matter'. Cosmetic; the wave's joins were made on date + the JP subtitle (覆面戦士の厳しき素顔 is ep 43; ep 42 = 1993-08-07).",
+    ruledBy: 'Sean',
+    ruledOn: '2026-08-27',
+    cite: ['scripts/ingest/research/batch20/out/yu-yu-hakusho-ghostfiles.json', 'scripts/ingest/research/batch20/verify/yu-yu-hakusho-ghostfiles.md'],
+  },
+  {
     seriesId: 'saga-of-tanya-the-evil',
     ruleId: 'G53',
     value: { 5: 'My First Battalion', 6: 'Beginning of Madness' },

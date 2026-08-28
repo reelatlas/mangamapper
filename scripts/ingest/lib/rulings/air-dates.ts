@@ -408,6 +408,16 @@ export const ENTRIES: RulingEntry<Record<number, RuledAirDate>>[] = [
   },
   // ---- batch 20 wave 1 (2026-08-27; verified R24 — the verifier parsed all 137 ja-WP rows: zero mismatches; Sean ruled)
   {
+    seriesId: 'hunter-x-hunter',
+    ruleId: 'G53',
+    value: { 83: '2004-04-07', 84: '2004-04-07' },
+    reason:
+      "Batch 20 wave 2 (verified R24, Sean ruled 2026-08-27): G.I. Final DVD vol 3 (OVA eps 5-6 = OUR rows 83-84) is dated 4月7日 by ja-WP's 各話リスト, 2004.4.7 by Nippon Animation's own goods-net DVD page and April 7 by en-WP; the stored 2004-03-07 follows hunterpedia's typo. The verifier's witness: 2004-03-07 is a SUNDAY while every other release date across all three OVA blocks, in both date regimes, is a Wednesday. Ascending-but-wrong — the order gate could not see it. The block's two-valued regime (ja-WP's table vs Nippon Animation's sell-through schedule, 2-3 weeks apart on five of seven volumes) is a series-level fork left open; only 83/84, where both regimes agree, are repaired.",
+    ruledBy: 'Sean',
+    ruledOn: '2026-08-27',
+    cite: ['scripts/ingest/research/batch20/out/hunter-x-hunter.json', 'scripts/ingest/research/batch20/verify/hunter-x-hunter.md'],
+  },
+  {
     seriesId: 'kinnikuman',
     ruleId: 'G53',
     value: { 38: '1983-12-25', 87: '1985-04-07', 90: '1985-04-28', 91: '1985-05-05', 92: '1985-05-12', 93: '1985-05-19', 94: '1985-05-26', 95: '1985-06-02', 96: '1985-06-09', 97: '1985-06-16', 98: '1985-06-23', 99: '1985-06-30', 100: '1985-07-07', 101: '1985-07-14', 102: '1985-07-21', 103: '1985-07-28', 104: '1985-08-04', 105: '1985-08-11', 106: '1985-08-18', 107: '1985-10-06', 108: '1985-10-13', 109: '1985-10-20', 110: '1985-10-27', 111: '1985-11-03', 112: '1985-11-10', 113: '1985-11-17', 114: '1985-11-24', 115: '1985-12-01', 116: '1985-12-08', 117: '1985-12-15', 118: '1985-12-22', 119: '1985-12-29' },

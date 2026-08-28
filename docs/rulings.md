@@ -2,7 +2,7 @@
 
 > GENERATED from `scripts/ingest/lib/rulings/**` by `scripts/restructure/gen-rulings.ts` — do not edit by hand. A ruling is an INSTANCE of a rule (`docs/rules.md`); the map is the record, this is the index.
 
-- rulings: 1852 across 225 series/keys · by Sean: 510 · UNRECORDED reasons: 8 · with a retire condition: 89
+- rulings: 1856 across 225 series/keys · by Sean: 514 · UNRECORDED reasons: 8 · with a retire condition: 89
 
 ## Retire conditions (re-evaluate when…)
 
@@ -741,7 +741,7 @@
 | `G54` | [2,7,18] | TV Tokyo first aired a 12-session subset (Apr–Jun 1998) before WOWOW ran all 26 (Oct 1998–Apr 1999); rows 2, 7 and 18 carry their TX first-air dates and so regress against WOWOW-dated neighbours — real broadcast order. Session 24 (regresses 146 d against 23's 1999-09-03) is NOT acknowledged: 23's date is suspect (WOWOW's run ended 1999-04-24) → batch-18 G53 candidate. | Sean 2026-08-26 · https://en.wikipedia.org/wiki/List_of_Cowboy_Bebop_episodes, docs/restructure/DRIFT-LIST.md A-11 |  |
 | `I39` | {"extras":[{"anilistId":5,"kind":"movie","label":"Knockin' on Heaven's Door","after":1,"rows":1}]} | Row 27 'The Movie' 2001-09-01 = AniList 5 (MOVIE, 2001-09-01), numbered after the 26 sessions by AFL. The movie-kind component gives the row its format (E2 residual: bebop 27 belongs to E4, Sean 2026-08-26). | Sean 2026-08-26 · https://anilist.co/anime/5, docs/changelog.md §12.66 |  |
 
-### d-gray-man (7)
+### d-gray-man (8)
 
 | rule | value | reason | ruled | retires when |
 |---|---|---|---|---|
@@ -752,6 +752,7 @@
 | `A3` | {"episode":116,"chapter":206,"volume":null,"source":"manual"} | Hallow ends ch 206-208 (page-level per animefillerguide); safe continue 206+ — corrects the ~218 guess. animefillerguide + mangashed | session 2026-08-23 · scripts/ingest/apply-research-batch-6.ts |  |
 | `A43` | {"episodes":[103],"kind":"divergence","chapters":"~ch 157 area","asterisk_review":"pending (if unset)"} | 2006 finale replaced the canonical Attack on HQ with an anime-original ending | session 2026-08-23 · scripts/ingest/apply-research-batch-6.ts |  |
 | `C8` | {"continue_from_chapter":206} | Hallow ends ch 206-208 page-level; safe continue 206+. | session 2026-08-23 · scripts/ingest/apply-research-batch-6.ts |  |
+| `T6` | {"28":"filler","37":"filler","40":"filler"} | Batch 20 wave 2 (verified R24, Sean ruled 2026-08-27): ep 28 'Exorcist Krory' (Krory's solo mission, the stained-glass Innocence) adapts no manga page — dgrayman.fandom's episode page has no chapter field and no chapter page names it; ep 40 'Requiem Rose' opens the anime-original Lulu Bell arc, its only manga content a spoken recap of ch 44 already animated in ep 39 (the balcony flashback may be ch 30's Lenalee exchange — loose_parallel {30, 44}); ep 37 is Daisya Barry's anime-original origin story (the wiki's Second Filler Arc list 'Episodes 35-37', no chapter field, no reverse-index entry, a JP witness; the Order in Crisis arc box '36-39' is arc-granular and already holds filler-typed ep 36) — loose_parallel {30, 43}. AFL and AFG both print Manga Canon on all three and are ONE source (AFG reproduces AFL's column). T28: an original plot quoting a fragment is filler with the tie annotated. | Sean 2026-08-27 · scripts/ingest/research/batch20/out/d-gray-man.json, scripts/ingest/research/batch20/verify/d-gray-man.md |  |
 
 ### dagashi-kashi (5)
 
@@ -925,7 +926,7 @@
 | `A43` | {"episodes":[19,20,21,22,23],"kind":"divergence","chapters":"38-46","note":"curated span correction (verifier 2026-08-25 — evidence supports 38-46, not 37-46… | curated span correction (verifier: evidence supports 38-46, not 37-46): the O'Donnell kidnapping (chs 38-43) and the American rescue (chs 44-46) are cut entirely and replaced by an invented Viscount-Campbell railway-financing conspiracy (ja-WP verbatim); interpolating these five episodes would place readers inside the unadapted block | session 2026-08-25 · scripts/ingest/research/batch17/out/emma-a-victorian-romance.json, scripts/ingest/apply-research-batch-17.ts, §12.50 |  |
 | `T6` | {"19":"mixed","20":"mixed","21":"mixed","22":"mixed","23":"mixed"} | Eps 19-23: the O'Donnell arc (chs 38-46) replaced by an invented conspiracy while the surrounding canon plays out → mixed. | Sean 2026-08-25 · scripts/ingest/research/batch17/out/emma-a-victorian-romance.json |  |
 
-### eyeshield-21 (10)
+### eyeshield-21 (11)
 
 | rule | value | reason | ruled | retires when |
 |---|---|---|---|---|
@@ -939,6 +940,7 @@
 | `N2` | {"delete_episode":155,"delete_anchor":155,"series_patch":{"aired_episodes":145,"total_episodes":145}} | AFG's chart numbers its 145th row "155." — the extend path materialized it as a duplicate finale (no air date), the mu anime-end pin landed on it, totals floored to 155 and the UI synthesized 146-154 as pending. A lone-row overshoot is a typo: the real finale = row 145 (manual anchor ch 240 already stands). Durable guards: COMMUNITY_COUNT_OVERRIDES cap 145 + the EXTRAS_ADOPTED entry ("10 specials beyond 145") removed — its premise was this typo | Sean 2026-08-25 · scripts/ingest/apply-rulings-20260825b.ts, §12.49, §12.47 |  |
 | `N3` | {"cap":145,"note":"AFG's chart typos its finale row as \"155.\" (the page has 145 rows) — the cap keeps the phantom from re-entering via extend/expansion (Se… | AFG's chart typos its finale row as "155." while the page has 145 rows; the anime is 145 episodes on every real source. The cap keeps the phantom from re-entering via extend/expansion (the former EXTRAS_ADOPTED floor rationalized this typo — N2). | Sean 2026-08-25 · docs/data-pipeline.md §12.49 |  |
 | `T6` | {"39":"mixed","45":"filler","46":"filler","51":"filler","66":"mixed","74":"mixed","88":"mixed","89":"filler","90":"filler","91":"filler","92":"filler","93":"… | The import took AFG titles but never mapped its filler flag, so every row defaulted canon. Base verdict + contested re-research; the 19-block verified per-episode AND double-sourced via ja-WP's 備考 column. 45/46 exhibition, 89-95 Cream Puff Cup, 96 recap, 97-105 Death Game (101 EXCLUDED — canon island chs 168-169), 108 whodunnit, 51 fake-Eyeshield, 109/110 (relocation hypothesis REFUTED on content) → filler. 39 recap + canon scene, 66 ch-133 tag, 88 ch-100 4-koma intervals in original framing (wiki states mixed outright), 74 ch-150 content in a flagged-original episode → mixed. | Sean 2026-08-25 · scripts/ingest/research/batch17/out/eyeshield-21.json, scripts/ingest/research/batch17/out2/eyeshield-21-contested.json |  |
+| `T6` | {"15":"filler","16":"filler","22":"filler","27":"filler","28":"filler"} | Batch 20 wave 2 (verified R24, Sean ruled 2026-08-27): eps 22, 27, 28 are anime-original on three independent sources — ja-WP 各話リスト 備考 prints アニメオリジナルストーリー (verbatim, the 27/28 rowspan), eyeshield21.fandom Category:Anime-Original Episodes (via the API), AFG '* Filler' with an N/A chapter cell — and the fandom `chapters=` field is empty on all three while the neighbours are populated (AFL is silent, so no one-source problem). Ep 28's Doburoku debut is a ch-72 fragment tie (graft, T28), not mixed. Eps 15 and 16 (out of the wave's range, the verifier's finding): ja-WP row 15 `rowspan=2` アニメオリジナルストーリー covers 16; the fandom lists both; ch 34 page-checked is ep 17's material, so the afg anchor 15 → 34 was a chart artefact (deleted, A1). | Sean 2026-08-27 · scripts/ingest/research/batch20/out/eyeshield-21.json, scripts/ingest/research/batch20/verify/eyeshield-21.md |  |
 
 ### f-zero-gp-legend (1)
 
@@ -1329,10 +1331,11 @@
 |---|---|---|---|---|
 | `I24` | {"ids":[967,1356]} | UNRECORDED — post-recovery relation-graph gap (Hokuto no Ken + Hokuto no Ken 2); per-series detail not written down. | session 2026-08-23 |  |
 
-### hunter-x-hunter (23)
+### hunter-x-hunter (24)
 
 | rule | value | reason | ruled | retires when |
 |---|---|---|---|---|
+| `G53` | {"83":"2004-04-07","84":"2004-04-07"} | Batch 20 wave 2 (verified R24, Sean ruled 2026-08-27): G.I. Final DVD vol 3 (OVA eps 5-6 = OUR rows 83-84) is dated 4月7日 by ja-WP's 各話リスト, 2004.4.7 by Nippon Animation's own goods-net DVD page and April 7 by en-WP; the stored 2004-03-07 follows hunterpedia's typo. The verifier's witness: 2004-03-07 is a SUNDAY while every other release date across all three OVA blocks, in both date regimes, is a Wednesday. Ascending-but-wrong — the order gate could not see it. The block's two-valued regime (ja-WP's table vs Nippon Animation's sell-through schedule, 2-3 weeks apart on five of seven volumes) is a series-level fork left open; only 83/84, where both regimes agree, are repaired. | Sean 2026-08-27 · scripts/ingest/research/batch20/out/hunter-x-hunter.json, scripts/ingest/research/batch20/verify/hunter-x-hunter.md |  |
 | `A3` | {"episode":31,"chapter":38,"start_chapter":38,"chapters_adapted":"38","volume":5,"source":"manual","note":"research-tier batch 12 (2026-08-23, agent-verified… | Hunter Exam conclusion. hunterpedia + Wikipedia | session 2026-08-23 · scripts/ingest/apply-research-batch-12.ts, scratchpad batch12/hunter-x-hunter.json (session scratchpad, not on disk), docs/changelog.md §12.31 |  |
 | `A3` | {"episode":36,"chapter":43,"start_chapter":43,"chapters_adapted":"43 + 44 p.1-9","volume":5,"source":"manual","note":"research-tier batch 12 (2026-08-23, age… | Zoldyck arc end. hunterpedia + Wikipedia arc split | session 2026-08-23 · scripts/ingest/apply-research-batch-12.ts, scratchpad batch12/hunter-x-hunter.json (session scratchpad, not on disk), docs/changelog.md §12.31 |  |
 | `A3` | {"episode":44,"chapter":63,"start_chapter":59,"chapters_adapted":"59 + 63 (60-62 in eps 41-42)","volume":7,"source":"manual","note":"research-tier batch 12 (… | Heavens Arena end, exact vol-7 boundary. hunterpedia + Wikipedia | session 2026-08-23 · scripts/ingest/apply-research-batch-12.ts, scratchpad batch12/hunter-x-hunter.json (session scratchpad, not on disk), docs/changelog.md §12.31 |  |
@@ -2343,7 +2346,7 @@
 | `V6` | {"manga_anilist_id":31045,"shift":-1,"applies_to":"chapter_start / chapter_end ≥ 30","source":"research","idempotence_marker":"v8 chapter_end 31 → 30"} | the stored space (Wikipedia's 110) contains ONE phantom chapter: "ch 30" 金牛宮の戦闘, which is anime episode 43's title (en-WP even preserved the anime's ruby gloss "Batoru"). True tankōbon space = 109 chapters per Shueisha's own TOCs — UNIFORM −1 for stored values ≥ 30. The verifier REFUTED the verdict's second phantom at ch 53 and its "+2 from 50" leg (Shueisha's vol-15 TOC has 4 chapters); ruling on the verdict as written would have shipped an off-by-one across vols 15-28. Durable guard: the corrected boundaries carry source='research' — Wikipedia re-ingest disagreement FLAGS, never overwrites research rows | Sean 2026-08-25 · scripts/ingest/research/batch17/out/saint-seiya-knights-of-the-zodiac.json, scripts/ingest/apply-rulings-20260825b.ts, scripts/ingest/research/batch17/CHUNK1-RECOVERY.md §14, §12.47 |  |
 | `N22` | {"shift":-1,"applies_to":"chapter / start_chapter / continue_chapter ≥ 30","note_suffix":"space migration −1 (phantom ch 30 removed, Sean 2026-08-25)"} | every saint-seiya anchor value ≥ 30 (chapter, start, continue) shifts −1 into the true 109-chapter NUMBER space — run AFTER the batch apply so the fresh wave-2 anchors (delivered in stored space; all ≤46, where only the −1 applies) convert too. series.total_chapters (249) is AniList count-space and is untouched (one display, one space) | Sean 2026-08-25 · scripts/ingest/research/batch17/out/saint-seiya-knights-of-the-zodiac.json, scripts/ingest/apply-rulings-20260825b.ts, scripts/ingest/research/batch17/CHUNK1-RECOVERY.md §14, §12.47 |  |
 | `A10` | {"episode":31,"start_chapter":24,"was":25} | the verdict's ep-31 row is self-inconsistent (start 25 vs chapters_adapted "24-25"): START is the first chapter animated, so start → 24 (post-migration values). Caught by the verifier, fixed at curation | Sean 2026-08-25 · scripts/ingest/research/batch17/out/saint-seiya-knights-of-the-zodiac.json, scripts/ingest/apply-rulings-20260825b.ts, scripts/ingest/research/batch17/CHUNK1-RECOVERY.md §14 |  |
-| `T6` | {"64":"mixed"} | Ep 64: the JP title = ch 39's title, but the Sagittarius trials are Toei's own → mixed. | Sean 2026-08-25 · scripts/ingest/research/batch17/out/saint-seiya-knights-of-the-zodiac.json |  |
+| `T6` | {"64":"mixed"} | Ep 64: the JP title = ch 38's title (OUR 109-chapter space; the batch-17 text said 39 in Wikipedia's phantom +1 space — corrected by the batch-20 N22 re-migration, 2026-08-27), but the Sagittarius trials are Toei's own → mixed. | Sean 2026-08-25 · scripts/ingest/research/batch17/out/saint-seiya-knights-of-the-zodiac.json |  |
 
 ### seraph-of-the-end-vampire-reign (16)
 
@@ -2981,10 +2984,11 @@
 | `I24` | {"ids":[10015,15489]} | UNRECORDED — assisted-batch explicit chain (Zexal + Zexal II); a case the relation walker could not derive, per-series detail not written down. | session 2026-08-22 |  |
 | `I17` | {"to":"yu-gi-oh","kind":"spin_off"} | Yu-Gi-Oh: Zexal/Arc-V/VRAINS/Sevens are spin_offs of DM — own story, shared universe. | session 2026-08-22 · docs/franchise-rulings.md "Yu-Gi-Oh" |  |
 
-### yu-yu-hakusho-ghostfiles (26)
+### yu-yu-hakusho-ghostfiles (27)
 
 | rule | value | reason | ruled | retires when |
 |---|---|---|---|---|
+| `G53` | {"42":"A Matter of Love and Death"} | Batch 20 wave 2 (verified R24, Sean ruled 2026-08-27): the stored 'A Master of Love and Death' is a typo — en-WP 'Yu Yu Hakusho season 2' (ep 42, 1993-08-07), yuyuhakusho.fandom Episode_42 and its Season 2 guide all read 'Matter'. Cosmetic; the wave's joins were made on date + the JP subtitle (覆面戦士の厳しき素顔 is ep 43; ep 42 = 1993-08-07). | Sean 2026-08-27 · scripts/ingest/research/batch20/out/yu-yu-hakusho-ghostfiles.json, scripts/ingest/research/batch20/verify/yu-yu-hakusho-ghostfiles.md |  |
 | `A3` | {"episode":25,"chapter":50,"start_chapter":49,"chapters_adapted":"49 (2nd half)-50","volume":6,"source":"manual","note":"research-tier batch 11 (2026-08-23, … | Spirit Detective TV end; ch 51 slides into ep 26. fandom + Wikipedia + saga page | session 2026-08-23 · scripts/ingest/apply-research-batch-11.ts, scratchpad batch11/yu-yu-hakusho-ghostfiles.json (session scratchpad, not on disk), docs/changelog.md §12.30 |  |
 | `A3` | {"episode":44,"chapter":78,"start_chapter":77,"chapters_adapted":"77-78","volume":9,"source":"manual","note":"research-tier batch 11 (2026-08-23, agent-verif… | mid-Dark Tournament clean boundary — MEDIUM. fandom + Wikipedia | session 2026-08-23 · scripts/ingest/apply-research-batch-11.ts, scratchpad batch11/yu-yu-hakusho-ghostfiles.json (session scratchpad, not on disk), docs/changelog.md §12.30 |  |
 | `A3` | {"episode":66,"chapter":112,"start_chapter":112,"chapters_adapted":"112","volume":13,"source":"manual","note":"research-tier batch 11 (2026-08-23, agent-veri… | Dark Tournament end (52-112). fandom + saga + Wikipedia | session 2026-08-23 · scripts/ingest/apply-research-batch-11.ts, scratchpad batch11/yu-yu-hakusho-ghostfiles.json (session scratchpad, not on disk), docs/changelog.md §12.30 |  |

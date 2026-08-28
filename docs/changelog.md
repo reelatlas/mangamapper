@@ -607,6 +607,73 @@
    durable guard. Lesson for the floor rule: a >2 overshoot sourced from a
    SINGLE chart row with no corroborating content anywhere is a typo
    candidate, not an adoption candidate.
+80. ✅ **BATCH 20 WAVE 2 APPLIED — the eight small gap blocks + the
+   saint-seiya re-migration (2026-08-27; Sean's rulings, Cursor
+   concurring).** Research (8 verdicts, ≈1.43M) → verify (8 reports,
+   ≈1.24M; Fable over Opus, R24) → rulings → apply (`apply-wave2.ts`, 334
+   decisions, file-driven off the verdicts with a curated overlay — P10).
+   STEP 0, THE SYSTEMIC FIX: batch 17's saint-seiya rows 43-72 had never
+   received the N22 −1 space migration (the one-shot script was guarded on
+   v8's end and retired to history/, P34; nothing compared an anchor's
+   volume with its table) — seven rows sat outside their own volume range,
+   ep 43 → 30 named "Gemini's Labyrinth" for the Taurus duel. The
+   re-migration is MARKER-KEYED: every saint-seiya anchor row without the
+   "space migration −1" marker shifted chapter / start / continue ≥ 30 by
+   −1 and was stamped (30 rows moved, 30 stamped only), the three +1-space
+   annotations (43 {30→29}, 47 {32→31}, 64 {39→38}) and the T6 text (ch 39
+   → 38) with them; the wave's 100-113 rows arrived in OUR space and were
+   stamped, not shifted. **`anchor_volume_mismatch` — a new census class
+   (P5)**: an anchor whose stored volume is not the boundary table's for
+   its chapter (table-derived only). First catalog run 27: seiya's 7 →
+   **0** after step 0 (the proof), 20 remain across eight series
+   (sailor-moon 3, black-lagoon 5, naruto 4, oshi-no-ko 2, AoT 2, beastars
+   2, mashle 1, skip-beat 1 — ±1 in both directions, the stale hand-typed
+   volume signature; a review queue, listed not blocking per Sean).
+   DATA: **117 manual anchors** — hxh 79-91 → 145-183 (80 START 143, A10,
+   the verifier), yyh 27-43 → 53-76 (six C1 continues on plain chapter
+   straddles — Sean: the ledger's C1 wins over the protocol's "filler
+   boundary" wording, fixed at capture), bleach 152-165 → 254-280 (153
+   END 263 — first-time pages, the verifier; the un-cross-cut reorder
+   `rearranged` 155-159), eyeshield 22-36 → 60-88 on 12 rows (**22/27/28
+   → filler T6** on three sources; the delivered fence repair 21 → 48
+   REFUTED on the pages — ch 49 pp 1-12 ARE the Taiyo draw, AFG's 47-49
+   stands; a second never-adapted range: ch 49's tail + 50-52; the 31/32
+   reorder real), kingdom 78-102 → 264-359 (six chapters the fandom's
+   per-episode fields DROP restored on pcafe + licensor synopses; 103 =
+   364 closes the 363/364 check), d-gray-man 1-50 → 22 anchors + 3
+   hostile (**28/37/40 → filler T6**; fence 51 → 46 [45] v5; the two
+   reorders 6-7 {2-4} / 26 {29}; **continues 5/6/24 → 2/3/29 — the
+   verifier's refutation: C2 is the NEXT canon row's START, the bobobo
+   precedent**), seiya 100-113 → 48-64 (a third V6 witness from
+   SaintSeiyaPedia; ch 47 has NO animated counterpart; Aldebaran left for
+   dead, not killed), naruto-shippuden 480-500 **0 anchors by design**:
+   17 `side_source` novel rows in the ruled 452-457 shape (Sasuke Shinden
+   484-488 / Shikamaru Hiden 489-493 / Konoha Hiden 494-500, four sources
+   each, no `chapters=` on any of the 21 infoboxes), ep 479 → 699 [699]
+   {699} v72 with the 478/479 notes repaired (the title-match reasoning
+   was inverted) and **continue 700 post_series** (C5; Boruto ep 24
+   carries ch 700). 50 curated continues (C7), 104 annotations, eyeshield
+   15/16 → filler T6 (two sources; the afg anchor 15 → 34 DELETED, A1 — ch
+   34 is ep 17's), hxh 83/84 → 2004-04-07 G53 (the Sunday witness), yyh 42
+   "Master" → "Matter" G53, 9 boundary rows (yyh v6-v9, bleach v28-32),
+   flags 677 / 702 dismissed (release-date artefact / WSJ installment
+   count). RULED NOT DATA: the shippuden display question — novel rows
+   stay a dash (T26 / P6), the continue lives on 479; a UI-pass note.
+   Edges rebuilt + deployed (lib/rulings changed, P3). CENSUS: display
+   219/0; ruling_violation 0; anchor_nonmonotonic 0 (all five END
+   regressions annotated rearranged); continue_provenance_missing 0;
+   continue_skip_unnoted 1 → 0 (eyeshield 31's C3 wording); anchor_gap_
+   research 11 → 6 (the eight blocks closed; the class then surfaces each
+   series' NEXT-worst run: kingdom 104-128, bleach 168-202, shippuden
+   374-392 — new targets, not regressions); mu_pin_unverified 30 → 29;
+   frontier_tail_null 8 unchanged (shippuden's tail is the ruled dash).
+   CI: 15 red runs on main were TS2307 from five batch14-17 scripts
+   importing lib/ by an absolute /Users/sean path (green locally, never on
+   a runner) — relative imports, pushed. NEXT: /consolidate deep (P21 —
+   the migration changed stored values on one series catalog-wide; a
+   census class was added), then capture (the C1 protocol line; the ")
+   /Vol" splitter finding on bleach #677; the "never adapted" instrument;
+   the day-of-week class; the anchor_volume_mismatch ledger record).
 79. ✅ **CONSOLIDATE DEEP after batch 20 wave 1 (2026-08-27; P21 — three
    enforcement sites changed: honest-terminal.ts, mu-frontier.ts' gate
    stack + mu-coverage.ts, mu-frontier-suppressed.ts).** Steps 0-8 satisfied

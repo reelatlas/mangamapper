@@ -222,6 +222,26 @@ export const ENTRIES: RulingEntry<EpisodeTypes>[] = [
     cite: [`${B17}/eyeshield-21.json`, `${B17b}/eyeshield-21-contested.json`],
   },
   {
+    seriesId: 'eyeshield-21',
+    ruleId: 'T6',
+    value: { 22: 'filler', 27: 'filler', 28: 'filler', 15: 'filler', 16: 'filler' },
+    reason:
+      "Batch 20 wave 2 (verified R24, Sean ruled 2026-08-27): eps 22, 27, 28 are anime-original on three independent sources — ja-WP 各話リスト 備考 prints アニメオリジナルストーリー (verbatim, the 27/28 rowspan), eyeshield21.fandom Category:Anime-Original Episodes (via the API), AFG '* Filler' with an N/A chapter cell — and the fandom `chapters=` field is empty on all three while the neighbours are populated (AFL is silent, so no one-source problem). Ep 28's Doburoku debut is a ch-72 fragment tie (graft, T28), not mixed. Eps 15 and 16 (out of the wave's range, the verifier's finding): ja-WP row 15 `rowspan=2` アニメオリジナルストーリー covers 16; the fandom lists both; ch 34 page-checked is ep 17's material, so the afg anchor 15 → 34 was a chart artefact (deleted, A1).",
+    ruledBy: 'Sean',
+    ruledOn: '2026-08-27',
+    cite: ['scripts/ingest/research/batch20/out/eyeshield-21.json', 'scripts/ingest/research/batch20/verify/eyeshield-21.md'],
+  },
+  {
+    seriesId: 'd-gray-man',
+    ruleId: 'T6',
+    value: { 28: 'filler', 37: 'filler', 40: 'filler' },
+    reason:
+      "Batch 20 wave 2 (verified R24, Sean ruled 2026-08-27): ep 28 'Exorcist Krory' (Krory's solo mission, the stained-glass Innocence) adapts no manga page — dgrayman.fandom's episode page has no chapter field and no chapter page names it; ep 40 'Requiem Rose' opens the anime-original Lulu Bell arc, its only manga content a spoken recap of ch 44 already animated in ep 39 (the balcony flashback may be ch 30's Lenalee exchange — loose_parallel {30, 44}); ep 37 is Daisya Barry's anime-original origin story (the wiki's Second Filler Arc list 'Episodes 35-37', no chapter field, no reverse-index entry, a JP witness; the Order in Crisis arc box '36-39' is arc-granular and already holds filler-typed ep 36) — loose_parallel {30, 43}. AFL and AFG both print Manga Canon on all three and are ONE source (AFG reproduces AFL's column). T28: an original plot quoting a fragment is filler with the tie annotated.",
+    ruledBy: 'Sean',
+    ruledOn: '2026-08-27',
+    cite: ['scripts/ingest/research/batch20/out/d-gray-man.json', 'scripts/ingest/research/batch20/verify/d-gray-man.md'],
+  },
+  {
     seriesId: 'trigun',
     ruleId: 'T6',
     value: { 6: 'mixed', 16: 'mixed' },
@@ -245,7 +265,7 @@ export const ENTRIES: RulingEntry<EpisodeTypes>[] = [
     seriesId: 'saint-seiya-knights-of-the-zodiac',
     ruleId: 'T6',
     value: { 64: 'mixed' },
-    reason: "Ep 64: the JP title = ch 39's title, but the Sagittarius trials are Toei's own → mixed.",
+    reason: "Ep 64: the JP title = ch 38's title (OUR 109-chapter space; the batch-17 text said 39 in Wikipedia's phantom +1 space — corrected by the batch-20 N22 re-migration, 2026-08-27), but the Sagittarius trials are Toei's own → mixed.",
     ruledBy: 'Sean',
     ruledOn: '2026-08-25',
     cite: [`${B17}/saint-seiya-knights-of-the-zodiac.json`],
