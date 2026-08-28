@@ -211,37 +211,56 @@
   ],
   "annotations": [
     {
-      "episodes": [47],
+      "episodes": [
+        47
+      ],
       "kind": "divergence",
       "chapters": "119-120",
       "note": "THE FINISHER DIVERGENCE (the ep-47 ask; T26/T27 - an annotation on a CANON row, not a retype). In the manga Warsman releases the Palo Special because his fighting computer shorts out past 30 minutes (ch 119 タイム・リミット30分!!の巻) and the Kinniku Buster ends the match (ch 120 勝利をわが手に!!の巻). The anime deletes the time weakness, runs the bout past an hour, has Ramenman's spirit-voice fire the 火事場のクソ力 so that KINNIKUMAN's surge overloads the circuits, and then has Warsman rise after the Buster under his own will for a further exchange that ends with a 風林火山. Two independent sources: ja-WP ウォーズマン (「アニメでは時間によってショートする弱点がなくなっており一時間以上の死闘を演じ… 最後は風林火山を受けて今度こそKOされた」; its match record prints 「×キン肉マン（キン肉バスター）※アニメ版ではさらに「風林火山」で決着」) and kinnikuman.fandom's Warsman page, whose record line reads 'X Kinnikuman (Kinniku Buster - 35 mins) (Manga) [ch 120] (Kinniku Buster -> Fu Rin Ka Zan) (Anime)' with the trivia 'In the anime, Warsman doesn't have this weakness... the inner computer malfunction are induced by the Kinnikuman's Fire of Inner Strength'. T28 materiality: the episode's job IS chs 119-120's job - break the hold, hit the Buster, win the V2, take the unmasking - and every participant, outcome and consequence is the manga's; only the mechanism and one appended exchange are the studio's, which is a divergence on a canon row, not a second plot. Stored 47 -> 120 [119] is unchanged."
     },
     {
-      "episodes": [42, 43, 44, 45, 46, 47],
+      "episodes": [
+        42,
+        43,
+        44,
+        45,
+        46,
+        47
+      ],
       "kind": "divergence",
       "chapters": "111-120",
       "note": "Staging of the 21st Chojin Olympics FINAL: the anime moves the venue from the manga's 国立競技場 to an original 東京グレートプレイランド (ja fandom キン肉マン (テレビアニメ) 原作との主な相違点: 「超人オリンピックザ・ビッグファイト決勝戦の会場が国立競技場ではなく東京グレートプレイランドに変更されている」), and throughout the arc the manga's ビビンバ is replaced by 翔野ナツコ (ja-WP ウォーズマン: 「ビビンバ（アニメでは翔野ナツコ）」), who in the anime is given a tie to Robin Mask's dead wife. The match beats themselves are chs 111-120."
     },
     {
-      "episodes": [35],
+      "episodes": [
+        35
+      ],
       "kind": "divergence",
       "chapters": "100",
       "note": "Ramenman finishes Brocken Jr. with the Romero Special in ch 100; the anime substitutes an anime-only technique, 秘技・万里の長城, which becomes ep 35A's title (ja-WP ラーメンマン's match record: 「○ブロッケンJr.（ロメロスペシャル ※アニメでは秘技・万里の長城）」; its technique list marks 万里の長城 「アニメのみの使用であり、この技でブロッケンJr.をKOしている」). Same chapter, different finish."
     },
     {
-      "episodes": [44],
+      "episodes": [
+        44
+      ],
       "kind": "divergence",
       "chapters": "116",
       "note": "Name conversion, not a content change: the anime's 極意・キン肉ガード (ep 44A's title) is the manga's 肉のカーテン (ch 116's title) - ja-WP キン肉マンの技一覧 「アニメでは名前がキン肉ガードに変更された」, ja fandom 「肉のカーテン→キン肉ガード」. Recorded so a later reader does not treat the segment title as evidence of an anime-original technique."
     },
     {
-      "episodes": [34, 35],
+      "episodes": [
+        34,
+        35
+      ],
       "kind": "partial",
       "chapters": "100",
       "note": "Chapter 100 傷だらけの勝利の巻 straddles the 34/35 boundary: ep 34B animates the opening bell and the Wolfman/Cubeman decision, ep 35A the Ramenman reversal and the win. Listed in both rows' chapters_adapted."
     },
     {
-      "episodes": [44, 45],
+      "episodes": [
+        44,
+        45
+      ],
       "kind": "partial",
       "chapters": "117",
       "note": "Chapter 117 天の声!?の巻 straddles 44/45: ep 44B has Warsman finding the weak spot and Natsuko pleading, ep 45A the elbow stamps and the voice that is the chapter's title beat. Medium - see the ep-44 anchor note for the alternative reading (all of 117 inside ep 45)."
@@ -275,9 +294,17 @@
   ],
   "type_corrections": [
     {
-      "episodes": [41],
+      "episodes": [
+        41
+      ],
       "type": "filler",
-      "note": "T28/T27. Ep 41 has ZERO standing in the source. Toei's own synopsis: 「ウォーズマンとの試合に備え、キン肉マンはテリーマンとブロッケンJr.をパートナーに冬の大雪山で山ごもりを敢行する。キン肉マンはキン肉族に伝わる風習に倣い、キン肉ドームでキャンプイン。テリーマンとブロッケンJr.は巨大熊の五郎太が暴れていると聞いて退治に向かうが、五郎太は予想外の力を秘めていた」 - none of this is in chs 109-112. kinnikuman.fandom's Gorota page states outright 'He is an anime-only character... He has only appeared in the anime', and its Kinniku Buster page dates the move's first use to 'the fight with Warsman (Super Bear Gorota in the anime)', i.e. the anime relocated the Buster's debut into an invented bear fight; ja-WP ウォーズマン confirms the manga debut is inside the final itself (「本邦初公開のキン肉バスターを受け敗北する」, ch 120). The manga's only pre-final training is ch 109's dojo session, already animated in ep 39B. Anime-original in both segments -> filler (A1: no anchor)."
+      "note": "T28/T27. Ep 41 has ZERO standing in the source. Toei's own synopsis: 「ウォーズマンとの試合に備え、キン肉マンはテリーマンとブロッケンJr.をパートナーに冬の大雪山で山ごもりを敢行する。キン肉マンはキン肉族に伝わる風習に倣い、キン肉ドームでキャンプイン。テリーマンとブロッケンJr.は巨大熊の五郎太が暴れていると聞いて退治に向かうが、五郎太は予想外の力を秘めていた」 - none of this is in chs 109-112. kinnikuman.fandom's Gorota page states outright 'He is an anime-only character... He has only appeared in the anime', and its Kinniku Buster page dates the move's first use to 'the fight with Warsman (Super Bear Gorota in the anime)', i.e. the anime relocated the Buster's debut into an invented bear fight; ja-WP ウォーズマン confirms the manga debut is inside the final itself (「本邦初公開のキン肉バスターを受け敗北する」, ch 120). The manga's only pre-final training is ch 109's dojo session, already animated in ep 39B. Anime-original in both segments -> filler (A1: no anchor). [sources: the anchor_hostile entry's four citations, copied onto this record at landing — a shape fix, not a new claim]",
+      "sources": [
+        "https://kinnikuman.fandom.com/api.php?action=parse&page=Gorota&prop=wikitext&format=json",
+        "https://kinnikuman.fandom.com/api.php?action=parse&page=Kinniku_Buster&prop=wikitext&format=json",
+        "https://lineup.toei-anim.co.jp/ja/tv/kinniku/episode/41/",
+        "https://ja.wikipedia.org/wiki/%E3%82%A6%E3%82%A9%E3%83%BC%E3%82%BA%E3%83%9E%E3%83%B3"
+      ]
     }
   ],
   "structure": {
