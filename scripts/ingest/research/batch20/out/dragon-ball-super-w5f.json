@@ -1,0 +1,363 @@
+{
+  "series_id": "dragon-ball-super",
+  "summary": "Twelve rows re-judged under the PARALLEL-TELLING definition (T30, Sean 2026-08-28), which replaces the wave-5 content test on this series: standing is FROM THE OUTLINE OR NOT, so an anime-only episode is canon (B) when it is a load-bearing node of an arc both tellings share, and filler (D) only when it is studio padding no telling's story depends on. ALL TWELVE CONFIRM AS CANON; NOTHING IS REFUTED TO D, and there are no type changes to propose. Eight are C (a beat the chapters carry, staged differently): 51 (ch 16 -- Trunks meets Mai AND ch 16's closing 'Whis suggests visiting Shin', the same investigation beat), 112 (Cabba's elimination, ch 38), 116 (Kefla's elimination, ch 39), 118 (the Universe 2 and 6 erasures, ch 38-39), 121 (Agnilasa, 18's elimination, Universe 3 erased -- all ch 38), 124 (Gohan and Dyspo eliminated, ch 39-40), 125 (ch 40's Frieza-attacks-the-weakened-Top set-up) and 126, which the ch-40 page settles outright: 'the force of his aura knocking Top out of the ring onto some debris' is the same pairing and the same outcome shape as the episode, and Top is eliminated before the finale in both tellings. Four are B (no counterpart pages, but the arc cannot proceed without them): 53 -- the manga gives the Universe 10 node to Shin and Kibito (ch 16's closing scene) and ch 16 states the substitution in one sentence, with both versions reaching the same outcome ('the beginning of Zamasu's obsession with Goku'), and eps 54, 58-59 and 61 all run off it; 113 -- ja-WP says in its own words that the anime's Kefla fusion happens because Goku corners Caulifla and Kale in the fight that starts here, and ep 114 literally opens mid-transformation; 115 -- the anime's route to the Ultra Instinct node the manga awakens in ch 39, and Jiren wakes to that ki (ja-WP) and re-enters the endgame; 120 -- it eliminates Biarra (eliminated in the manga too) and leaves Universe 3 with exactly the four fighters ch 38 fuses into Agnilasa, and ep 121 has no opening without it. Two rows are held at MEDIUM (113 and 120): each has zero counterpart pages and its standing rests entirely on the node it produces. THE DELETE TEST did the work on the three weakest rows -- 114, 121 and 126 each open mid-beat on 113, 120 and 125 respectively. ANCHORS: none, ever, on this series; the chapter numbers below are correspondence (A46). RECAP BASELINE: ep 51 — stored: canon → proposed: no type change (canon, C) | ep 53 — stored: canon → proposed: no type change (canon, B) | ep 112 — stored: canon → proposed: no type change (canon, C) | ep 113 — stored: canon → proposed: no type change (canon, B) | ep 115 — stored: canon → proposed: no type change (canon, B) | ep 116 — stored: canon → proposed: no type change (canon, C) | ep 118 — stored: canon → proposed: no type change (canon, C) | ep 120 — stored: canon → proposed: no type change (canon, B) | ep 121 — stored: canon → proposed: no type change (canon, C) | ep 124 — stored: canon → proposed: no type change (canon, C) | ep 125 — stored: canon → proposed: no type change (canon, C) | ep 126 — stored: canon → proposed: no type change (canon, C)",
+  "anchors": [],
+  "continue_points": [],
+  "anchor_hostile": [],
+  "type_corrections": [],
+  "confirmations": [
+    {
+      "episode": 51,
+      "standing": "C",
+      "confidence": "high",
+      "chain": "C, not one beat but two. ch 16 carries (a) Future Trunks meeting Mai -- 'Future Trunks also meets Mai, who is lovestruck by him, and tells her that she is still alive in the future' -- and (b) the episode's CLOSING node: ch 16 ends with 'Beerus wonders about a present Goku Black appearing and doing the same thing, and Whis suggests visiting Shin and asking him about anything suspicious', which is the anime's 'Beerus thinks of Goku Black and the Ki that he let off, finding it to be familiar as Whis agrees and decides to do some investigating on the matter'. Bidirectional: ep 51's infobox Manga = 'Future Trunks's Past' (ch 16) and ch 16's episode= field names 49, 51, 54. LOAD-BEARING in the anime's telling on top of that: Bulma reveals CELL'S second Time Machine and undertakes to repair it -- ep 54 has 'Bulma and her team put the finishing touches to the rebuilt Time Machine' and ep 56 opens 'Goku, Vegeta, and Future Trunks arrive in the Alternate Timeline after the Time Machine has been repaired'. The manga reaches the same place by a different device (ch 16: 'their hands are tied until they accumulate enough energy for the Time Machine' -- Trunks's own machine), so the vehicle is the anime's and the destination is shared. The Mai relationship this episode opens is paid off at ep 67's farewell. No D block: the King Kai gag and the Brief/Bikini return are seconds (ch 16 has the Briefs meeting Future Trunks too), not a self-contained slice-of-life plot -- so canon, not mixed.",
+      "sources": [
+        "https://dragonball.fandom.com/api.php?action=parse&page=Feelings%20That%20Transcend%20Time%3A%20Trunks%20and%20Mai&prop=wikitext&format=json",
+        "https://dragonball.fandom.com/api.php?action=parse&page=Future%20Trunks%27s%20Past&prop=wikitext&format=json",
+        "https://dragonball.fandom.com/api.php?action=parse&page=He%20Who%20is%20of%20Saiyan%20Blood%20Trunks%27s%20Resolve&prop=wikitext&format=json",
+        "https://dragonball.fandom.com/api.php?action=parse&page=Rematch%20with%20Goku%20Black%21%20Enter%20Super%20Saiyan%20Ros%C3%A9&prop=wikitext&format=json"
+      ]
+    },
+    {
+      "episode": 53,
+      "standing": "B",
+      "confidence": "high",
+      "chain": "B confirmed: the anime's telling of a node BOTH tellings carry, with the vehicle substituted. The manga's version is ch 16's closing scene -- Shin and Kibito visit Universe 10, Kibito spars with Zamasu, Shin tells him of Majin Buu's defeat -- and ch 16's own difference note states the substitution in one sentence: 'In the manga, Zamasu fights against Kibito. In the anime they never met, instead, Goku went with Beerus and Whis to their world and Goku fought him instead.' The episode page says the same from its side and names the shared OUTCOME: 'In both versions this leads to the beginning of Zamasu's obsession with Goku and a deeper hatred towards the mortals.' What depends on it in the anime's telling: (1) ep 54 opens with the report -- 'Whis returns to Earth along with Beerus and Goku and they explain the situation to Trunks and the others. Trunks struggles to accept that Zamasu may not be Goku Black'; (2) the SECOND Universe 10 trip (eps 58-59) is the same party returning -- ja-WP's Beerus entry names both visits in sequence ('ゴクウブラックと第10宇宙の界王神見習いザマスの気が似ていることに疑念を抱き、ウイス、悟空とともに第10宇宙の界王神界を訪れる。その後ウイス、悟空、東の界王神とともに再び第10宇宙の界王神界を訪れ...ザマスを消滅させる'); (3) Zamasu's fixation on Goku, established here by the spar, is Goku Black's stated motive at ep 61 ('Goku Black tells Goku about how he, as a god, was pitifully defeated by a mere human, and developed a hatred for Goku'). Not D: the arc does not proceed without the identification of Zamasu. Not mixed: the Krillin/18/Marron scene on Earth is a character beat inside the arc, not a self-contained padding plot. The wave-5 'filler + partial{16-17}' conversion is WITHDRAWN under T30 -- it was the manga-relative content test.",
+      "sources": [
+        "https://dragonball.fandom.com/api.php?action=parse&page=Uncover%20Black%27s%20Identity%21%20Off%20to%20the%2010th%20Universe%27s%20World%20of%20the%20Kai%27s%21&prop=wikitext&format=json",
+        "https://dragonball.fandom.com/api.php?action=parse&page=Future%20Trunks%27s%20Past&prop=wikitext&format=json",
+        "https://dragonball.fandom.com/api.php?action=parse&page=Zamas%3A%20The%20Next%20Lord%20of%20Lords%20from%20Universe%2010&prop=wikitext&format=json",
+        "https://dragonball.fandom.com/api.php?action=parse&page=He%20Who%20is%20of%20Saiyan%20Blood%20Trunks%27s%20Resolve&prop=wikitext&format=json",
+        "https://dragonball.fandom.com/api.php?action=parse&page=Zamasu%27s%20Ambition%20The%20Storied%20%22Project%200%20Mortals%22%20of%20Terror&prop=wikitext&format=json",
+        "https://ja.wikipedia.org/w/api.php?action=parse&page=%E3%83%89%E3%83%A9%E3%82%B4%E3%83%B3%E3%83%9C%E3%83%BC%E3%83%AB%E8%B6%85%E3%81%AE%E7%99%BB%E5%A0%B4%E4%BA%BA%E7%89%A9&prop=wikitext&format=json"
+      ]
+    },
+    {
+      "episode": 112,
+      "standing": "C",
+      "confidence": "high",
+      "chain": "C at the node, B on the beat the anime's endgame runs on. Shared: Cabba's ELIMINATION happens in both tellings -- ja-WP キャベ '漫画版ではカリフラたちと共にゴールデンフリーザに立ち向かうも全く敵わず、暴走して暴れ回った後に脱落の危機に陥ったケールの身代わりとなって脱落した' (manga: he is eliminated shielding Kale, ch 38) vs the anime's 'Cabba is eliminated by Frieza'; and ch 36 opens on the same node as this episode's second half (Vegeta confronting Top and Dyspo right after Hit's elimination). Bidirectional: ep 112 infobox Manga = ch 36; chs 36, 37 and 38 all name 112 in their episode= fields. LOAD-BEARING anime-only beat: Vegeta catches Cabba and they make the Super-Dragon-Ball promise -- ja-WP キャベ 'あわや脱落というところでベジータに助けられ、どちらかの宇宙が生き残ったら超ドラゴンボールで復活させる約束をした'. The anime's telling then leans on that promise four times: ep 123 -- the manga chapter's OWN difference note says it, 'In the manga, Vegeta evolves his Super Saiyan Blue form because of his desire to get stronger his own way...; In the anime, he unlocks his new transformation out of his desire to keep his promise to Cabba' (ch 40 + ep 123); ep 126 -- 'he is still determined to win and keep his promise to Cabba', and ja-WP トッポ has Top mocking 'ベジータとキャベとの約束' as what triggers the beating that eliminates him; ep 128 -- 'Vegeta remembers his family and his promise to Cabba, and manages to pull himself back up into the arena'; ep 131 -- ja-WP キャベ '17号の願いで復活した後、ベジータたちが優勝し、約束を果たしてくれたと喜んだ'. This is the textbook B chain: an anime-only node three later episodes state their motive from.",
+      "sources": [
+        "https://dragonball.fandom.com/api.php?action=parse&page=A%20Saiyan%20Oath%21%20Vegeta%27s%20Resolve%21&prop=wikitext&format=json",
+        "https://dragonball.fandom.com/api.php?action=parse&page=Quirky%20Competitors&prop=wikitext&format=json",
+        "https://dragonball.fandom.com/api.php?action=parse&page=Universe%206%27s%20Last%20Resort&prop=wikitext&format=json",
+        "https://dragonball.fandom.com/api.php?action=parse&page=Jiren%20vs.%20Universe%207&prop=wikitext&format=json",
+        "https://dragonball.fandom.com/api.php?action=parse&page=Body%2C%20Soul%20and%20Power%20Unleashed%21%20Goku%20and%20Vegeta%21&prop=wikitext&format=json",
+        "https://dragonball.fandom.com/api.php?action=parse&page=Surpass%20Even%20a%20God%21%20Vegeta%27s%20Sacrifice%20Strike%21&prop=wikitext&format=json",
+        "https://dragonball.fandom.com/api.php?action=parse&page=To%20the%20Noble%2C%20Proud%20End%21%20Vegeta%20Falls%21&prop=wikitext&format=json",
+        "https://ja.wikipedia.org/w/api.php?action=parse&page=%E3%83%89%E3%83%A9%E3%82%B4%E3%83%B3%E3%83%9C%E3%83%BC%E3%83%AB%E8%B6%85%E3%81%AE%E7%99%BB%E5%A0%B4%E4%BA%BA%E7%89%A9&prop=wikitext&format=json"
+      ]
+    },
+    {
+      "episode": 113,
+      "standing": "B",
+      "confidence": "medium",
+      "chain": "B confirmed, and it is the weakest-looking row in the ask, so the chain is stated in full. No chapter's episode= field names 113 and its infobox Manga field is EMPTY -- under the withdrawn content test that is what made it a filler candidate. Under T30 it is the first half of the two-episode node that produces KEFLA, which the manga carries (ch 38, the Potara fusion). The mechanism is stated by ja-WP, not inferred: カリフラ '脱落したヒットやキャベの分も生き残るために強くなろうと考え、悟空から超サイヤ人3への覚醒の仕方を聞き出すために交戦' (this episode's premise, caused by ep 112's eliminations) ... '今度はケールも戦いに参戦させ、息の合ったコンビネーションで悟空を追い詰めるが...暴走状態の超サイヤ人を使いこなしたケールと組んでも超サイヤ人ゴッドの悟空に追い詰められ、シャンパから事前に渡されていたポタラによってケールと合体し、ケフラとなる' -- i.e. ja-WP says the anime's fusion happens BECAUSE Goku corners Caulifla and Kale in the fight that starts here. ケール says the same from Kale's side ('カリフラに「一緒に超サイヤ人になろうぜ」と参戦を勧められ承諾し参戦'). fandom ep 114 agrees: 'In the anime, Caulifla and Kale fuse together because they are overpowered and are about to be eliminated by Goku. In the manga, Cabba assists in their fusion just as Kale is about to be eliminated by Tupper.' DELETE TEST: ep 114 opens mid-beat -- 'While Kale is transforming into her Legendary Super Saiyan form' -- so 114 cannot start without 113. Second thread: Whis's on-screen note that Caulifla and Kale's attacks are sharpening Goku's senses is the anime's on-ramp to the Ultra Instinct reactivation of ep 115. Held at MEDIUM: nothing is eliminated in the episode and its own content has no counterpart pages; the standing rests entirely on the node it produces.",
+      "sources": [
+        "https://dragonball.fandom.com/api.php?action=parse&page=With%20Great%20Joy%21%20The%20Fighting%20Freak%20Saiyans%27%20Battle%20Rejoined%21&prop=wikitext&format=json",
+        "https://dragonball.fandom.com/api.php?action=parse&page=Bloodcurdling%21%20The%20Explosive%20Birth%20of%20a%20New%20Super%20Warrior%21&prop=wikitext&format=json",
+        "https://dragonball.fandom.com/api.php?action=parse&page=Universe%206%27s%20Last%20Resort&prop=wikitext&format=json",
+        "https://ja.wikipedia.org/w/api.php?action=parse&page=%E3%83%89%E3%83%A9%E3%82%B4%E3%83%B3%E3%83%9C%E3%83%BC%E3%83%AB%E8%B6%85%E3%81%AE%E7%99%BB%E5%A0%B4%E4%BA%BA%E7%89%A9&prop=wikitext&format=json"
+      ]
+    },
+    {
+      "episode": 115,
+      "standing": "B",
+      "confidence": "high",
+      "chain": "B: the anime's route to the node both tellings turn on -- Goku's Ultra Instinct in the Tournament of Power. The manga awakens it against Jiren in ch 39 ('Sign of Son Goku's Awakening'); the anime routes the SECOND awakening through Kefla here ('Goku reactivates his Ultra Instinct Sign for the second time'). What depends on it: (1) ep 116 opens on it -- 'Goku regains his Ultra Instinct Sign form, and also gains a new control over the form' -- and ends with Kefla's elimination, which the manga carries in ch 39; (2) Jiren's return to the fight, which the whole endgame runs on: ja-WP ジレン 'しばらくは瞑想を続けていたが、悟空がケフラと戦っていた際に彼の「身勝手の極意」による気に反応し、目を覚まして動き出す' (fandom ep 116: 'Jiren senses Goku's power and awakens from his meditation'); (3) the mastered form of eps 129-130 is the third step of the same progression. Kefla herself is a manga node (ch 38-39). The episode's own content -- Goku vs Kefla, Blue Kaio-ken, the second UI activation -- is stated absent from the manga by the episode's Differences, which is what B means. NOTE for the correspondence layer: ep 115's infobox Manga field points at ch 36, but ch 36's summary carries none of this episode's content (only Catopesra is common) -- the episode-side field is single-valued and loose here; the honest tie is node-level on ch 38-39.",
+      "sources": [
+        "https://dragonball.fandom.com/api.php?action=parse&page=Goku%20vs.%20Kefla%21%20Super%20Saiyan%20Blue%20Beaten%3F&prop=wikitext&format=json",
+        "https://dragonball.fandom.com/api.php?action=parse&page=Signs%20of%20a%20Turnabout%21%20The%20Autonomous%20Ultra%20Instinct%20Erupts%21&prop=wikitext&format=json",
+        "https://dragonball.fandom.com/api.php?action=parse&page=Universe%206%27s%20Last%20Resort&prop=wikitext&format=json",
+        "https://dragonball.fandom.com/api.php?action=parse&page=Sign%20of%20Son%20Goku%27s%20Awakening&prop=wikitext&format=json",
+        "https://ja.wikipedia.org/w/api.php?action=parse&page=%E3%83%89%E3%83%A9%E3%82%B4%E3%83%B3%E3%83%9C%E3%83%BC%E3%83%AB%E8%B6%85%E3%81%AE%E7%99%BB%E5%A0%B4%E4%BA%BA%E7%89%A9&prop=wikitext&format=json"
+      ]
+    },
+    {
+      "episode": 116,
+      "standing": "C",
+      "confidence": "high",
+      "chain": "C: Kefla's ELIMINATION is in both tellings and both are bidirectionally indexed -- ep 116 infobox Manga = 'Sign of Son Goku's Awakening' (ch 39) and ch 39's episode= field names 116. The manga eliminates her in a mutual knockout with Gohan ('Gohan and Kefla, at their limit rush towards each other for one final attack ... eliminating them in the process'), the anime by Goku's Ultra Instinct Kamehameha; fandom states the pair: 'Kefla (Caulifla and Kale) are eliminated by Goku in his Ultra Instinct Sign state in the anime and by Gohan in his Potential Unleashed state in the manga'. Load-bearing either way: Universe 6 is reduced to Saonel and Pilina (eliminated at ep 118, with U6 erased -- the manga erases U6 in ch 39 at the same node), and Jiren wakes to Goku's ki here and re-enters the fight for eps 122-131 (ja-WP ジレン; fandom ep 116 Major Events 'Jiren awakens from his meditation'). Confirmed, no change.",
+      "sources": [
+        "https://dragonball.fandom.com/api.php?action=parse&page=Signs%20of%20a%20Turnabout%21%20The%20Autonomous%20Ultra%20Instinct%20Erupts%21&prop=wikitext&format=json",
+        "https://dragonball.fandom.com/api.php?action=parse&page=Sign%20of%20Son%20Goku%27s%20Awakening&prop=wikitext&format=json",
+        "https://ja.wikipedia.org/w/api.php?action=parse&page=%E3%83%89%E3%83%A9%E3%82%B4%E3%83%B3%E3%83%9C%E3%83%BC%E3%83%AB%E8%B6%85%E3%81%AE%E7%99%BB%E5%A0%B4%E4%BA%BA%E7%89%A9&prop=wikitext&format=json"
+      ]
+    },
+    {
+      "episode": 118,
+      "standing": "C",
+      "confidence": "high",
+      "chain": "C: the episode's job is TWO ERASURES and both tellings carry both. ep 118 Major Events: 'Universe 2 and Universe 6 are erased by Zeno and Future Zeno'; the manga erases Universe 2 in ch 38 ('Kale also eliminates the final two combatants of Team Universe 2, Zarbuto and Rabanra, with their universe being promptly erased') and Universe 6 in ch 39. Bidirectional: ep 118 infobox Manga = ch 38, ch 38's and ch 39's episode= fields both name 118. Divergent in staging only, and fandom lists the differences as an executioner swap, never an absence: 'Zirloin, Rabanra and Zarbuto are eliminated by Goku in the anime and by Kale in the manga'; 'Saonel and Pilina are eliminated by Gohan and Piccolo in the anime and by Kale in the manga' (ja-WP サオネル/ピリナ: '後に暴走したケールの説得を試みるも場外に落とされた'); the erasure ORDER differs (3rd/4th vs 4th/6th). Load-bearing: from here only Universes 3, 7 and 11 remain -- ep 120 opens on exactly that count ('only three universes now remain'). Confirmed, no change.",
+      "sources": [
+        "https://dragonball.fandom.com/api.php?action=parse&page=Accelerating%20Tragedy%20Vanishing%20Universes&prop=wikitext&format=json",
+        "https://dragonball.fandom.com/api.php?action=parse&page=Universe%206%27s%20Last%20Resort&prop=wikitext&format=json",
+        "https://dragonball.fandom.com/api.php?action=parse&page=Sign%20of%20Son%20Goku%27s%20Awakening&prop=wikitext&format=json",
+        "https://dragonball.fandom.com/api.php?action=parse&page=A%20Perfect%20Survival%20Strategy%21%20The%203rd%20Universe%27s%20Menacing%20Assassin%21&prop=wikitext&format=json",
+        "https://ja.wikipedia.org/w/api.php?action=parse&page=%E3%83%89%E3%83%A9%E3%82%B4%E3%83%B3%E3%83%9C%E3%83%BC%E3%83%AB%E8%B6%85%E3%81%AE%E7%99%BB%E5%A0%B4%E4%BA%BA%E7%89%A9&prop=wikitext&format=json"
+      ]
+    },
+    {
+      "episode": 120,
+      "standing": "B",
+      "confidence": "medium",
+      "chain": "B: no chapter's episode= field names 120 and its infobox Manga field is EMPTY, and its headline fusion is explicitly absent from the manga -- ja-WP's コイチアレータ sub-entry (nested under ボラレータ) ends '漫画版には登場しない。' and fandom says 'In the anime, Pancea, Koitsukai, and Borareta merge together to become Koiceareta before later merging with Paparoni to become Agnilaza. In the manga, they only merged together to become Agnilaza.' What survives that: the episode DELIVERS the manga's roster and its next node. (1) Biarra is eliminated in both tellings -- 'Biarra is eliminated by Android 18 in the anime and by an unknown warrior in the manga' (ja-WP ビアラ '漫画版では戦闘シーンが無いまま脱落していた'); (2) that leaves Universe 3 with exactly the four fighters the manga fuses into AGNILASA in ch 38 ('Mule emerges from his robot suit and orders Paparoni to fuse with his allies ... he along with Borareta, Pancea, and Koitsukai fuse to become the towering Agnilasa'), and the episode ends on Paparoni announcing that fusion; (3) DELETE TEST: ep 121 opens 'Paparoni unleashes Universe 3's final tactic and merges with Koiceareta to become the gigantic Agnilasa' -- 121 has no opening without 120. Universe 3's erasure (ep 121 / ch 38) is a node both tellings carry. Held at MEDIUM: the intermediate three-way fusion is genuinely the anime's own invention and the episode eliminates only one fighter -- but the arc does not proceed to 121 without it.",
+      "sources": [
+        "https://dragonball.fandom.com/api.php?action=parse&page=A%20Perfect%20Survival%20Strategy%21%20The%203rd%20Universe%27s%20Menacing%20Assassin%21&prop=wikitext&format=json",
+        "https://dragonball.fandom.com/api.php?action=parse&page=All-Out%20War%21%20The%20Ultimate%20Four-Fold%20Union%20vs.%20the%207th%20Universe%27s%20Total%20Offensive%21&prop=wikitext&format=json",
+        "https://dragonball.fandom.com/api.php?action=parse&page=Universe%206%27s%20Last%20Resort&prop=wikitext&format=json",
+        "https://ja.wikipedia.org/w/api.php?action=parse&page=%E3%83%89%E3%83%A9%E3%82%B4%E3%83%B3%E3%83%9C%E3%83%BC%E3%83%AB%E8%B6%85%E3%81%AE%E7%99%BB%E5%A0%B4%E4%BA%BA%E7%89%A9&prop=wikitext&format=json"
+      ]
+    },
+    {
+      "episode": 121,
+      "standing": "C",
+      "confidence": "high",
+      "chain": "C on three counted beats. ep 121 Major Events: Agnilasa fought and beaten, 'Android 18 is eliminated', 'Universe 3 is erased by Zeno and Future Zeno'. All three are in the manga: ch 38 has Agnilasa formed on Mule's order and knocked off the arena (by Kale, in one page), 'As Team Universe 3 lost their last four fighters in one go, their universe is also erased', and 18 is eliminated there too -- fandom's own pairing, 'Android 18 was eliminated by her own self sacrifice to save Android 17 in the anime and by either Damom or Gamisalas in the manga'; ja-WP パパロニ '漫画版では暴走したケールの強さに焦ったミュールの指示によって登場したが、隙をついたケールの蹴り一発で場外に落とされ脱落した'. Bidirectional: ep 121 infobox Manga = ch 38, ch 38's episode= field names 121. The staging is opposite in scale (a five-on-one that costs Universe 7 a fighter vs a single kick) -- that is divergence, not absence. Load-bearing: the episode closes on Universe 11 stepping forward ('The group is then interrupted by Team Universe 11 and Jiren assures them that this victory will be their last'), which is the whole of eps 122-131. Confirmed, no change.",
+      "sources": [
+        "https://dragonball.fandom.com/api.php?action=parse&page=All-Out%20War%21%20The%20Ultimate%20Four-Fold%20Union%20vs.%20the%207th%20Universe%27s%20Total%20Offensive%21&prop=wikitext&format=json",
+        "https://dragonball.fandom.com/api.php?action=parse&page=Universe%206%27s%20Last%20Resort&prop=wikitext&format=json",
+        "https://ja.wikipedia.org/w/api.php?action=parse&page=%E3%83%89%E3%83%A9%E3%82%B4%E3%83%B3%E3%83%9C%E3%83%BC%E3%83%AB%E8%B6%85%E3%81%AE%E7%99%BB%E5%A0%B4%E4%BA%BA%E7%89%A9&prop=wikitext&format=json"
+      ]
+    },
+    {
+      "episode": 124,
+      "standing": "C",
+      "confidence": "high",
+      "chain": "C: the episode's job is two ELIMINATIONS the endgame's count depends on, and both happen in both tellings. ep 124 Major Events: 'Gohan and Dyspo are eliminated'. Manga: Gohan is eliminated in ch 39 in the mutual knockout with Kefla; Dyspo in ch 40, stranded with Top on a rock after Frieza destroys the debris ('Frieza then jumps back to the ring, and destroys all of the floating debris that creates a path to the ring, leaving Dyspo and Top stranded on a single rock'). fandom states both pairs: 'Gohan is eliminated by his own self-sacrifice in stopping Dyspo in the anime and by Kefla in the manga'; 'Dyspo is eliminated by Gohan and Frieza in the anime and as a result of Frieza in the manga'. Bidirectional: ep 124 infobox Manga = ch 39, and chs 39, 40 and 42 all name 124. Load-bearing: after this episode Universe 7 is Goku, Vegeta, Frieza and 17 -- exactly the roster of eps 125-131 and of the manga's ch 40-42 endgame; ja-WP トッポ marks the same hinge ('ディスポの脱落後は今度は悟飯の脱落で代わったフリーザと17号のタッグと交戦し'). Incidental confirmation of the wave-5c ruling on ep 90: this episode contains its payoff line, 'Frieza agrees to follow Gohan's plan since he is the leader of Team Universe 7, after all'. Confirmed, no change.",
+      "sources": [
+        "https://dragonball.fandom.com/api.php?action=parse&page=A%20Storm-and-Stress%20Assault%21%20Gohan%27s%20Last%20Stand%21&prop=wikitext&format=json",
+        "https://dragonball.fandom.com/api.php?action=parse&page=Sign%20of%20Son%20Goku%27s%20Awakening&prop=wikitext&format=json",
+        "https://dragonball.fandom.com/api.php?action=parse&page=Jiren%20vs.%20Universe%207&prop=wikitext&format=json",
+        "https://ja.wikipedia.org/w/api.php?action=parse&page=%E3%83%89%E3%83%A9%E3%82%B4%E3%83%B3%E3%83%9C%E3%83%BC%E3%83%AB%E8%B6%85%E3%81%AE%E7%99%BB%E5%A0%B4%E4%BA%BA%E7%89%A9&prop=wikitext&format=json"
+      ]
+    },
+    {
+      "episode": 125,
+      "standing": "C",
+      "confidence": "high",
+      "chain": "C at the node, with the headline transformation as the anime's own. Shared: ch 40 carries this episode's set-up beat -- 'As Top watches from a distance, Frieza belittles him for relying on another for survival, attacking Top and bringing him on the brink of elimination' -- which fandom pairs directly with the episode: 'Top never fought Android 17 or Golden Frieza in the manga, instead Frieza in his Final Form attacked Top when he was already weakened.' Bidirectional: ep 125 infobox Manga = 'Jiren vs. Universe 7' (ch 40), ch 40's episode= field names 122-128. Anime-only inside it: Top's God of Destruction Mode ('never seen or mentioned in the manga'; ja-WP トッポ describes it only in the anime narrative, '自らに破壊のエネルギーを纏わせることで「破壊神モード」となってパワーアップ'). LOAD-BEARING: DELETE TEST -- ep 126 opens 'Android 17 refuses to give up, despite Top's overwhelming powers', i.e. with Destroyer Top already on the board; and the elimination that closes ep 126 is the elimination of a Destroyer-Mode Top, which is why it costs Vegeta his Final Explosion. Top's elimination before the Goku/Jiren finale is a node both tellings carry. Confirmed, no change.",
+      "sources": [
+        "https://dragonball.fandom.com/api.php?action=parse&page=A%20Commanding%20Presence%21%20The%20Advent%20of%20Top%20the%20Destroyer%21&prop=wikitext&format=json",
+        "https://dragonball.fandom.com/api.php?action=parse&page=Surpass%20Even%20a%20God%21%20Vegeta%27s%20Sacrifice%20Strike%21&prop=wikitext&format=json",
+        "https://dragonball.fandom.com/api.php?action=parse&page=Jiren%20vs.%20Universe%207&prop=wikitext&format=json",
+        "https://ja.wikipedia.org/w/api.php?action=parse&page=%E3%83%89%E3%83%A9%E3%82%B4%E3%83%B3%E3%83%9C%E3%83%BC%E3%83%AB%E8%B6%85%E3%81%AE%E7%99%BB%E5%A0%B4%E4%BA%BA%E7%89%A9&prop=wikitext&format=json"
+      ]
+    },
+    {
+      "episode": 126,
+      "standing": "C",
+      "confidence": "high",
+      "chain": "C -- and the ch-40 page settles the call that was closest at wave 5. ch 40's own summary carries the beat: 'As Top tries to attack Vegeta from behind, the Saiyan prince completely disregards the Universe 11 warrior and powers up, the force of his aura knocking Top out of the ring onto some debris, with Beerus noting that Vegeta's aura changed.' Same pairing, same two fighters, same outcome shape; the manga finishes Top by stranding him (Frieza's debris shot) while the anime finishes him with Vegeta's Final Explosion -- fandom: 'Top is eliminated by Vegeta in the anime and as a result of Frieza in the manga.' Bidirectional: ep 126 infobox Manga = ch 40, ch 40's episode= field names 126. Top's elimination is a node both tellings require before the Goku/Jiren finale. The anime's motive thread is ep 112's promise, and ja-WP トッポ states the beat verbatim -- 'ベジータとキャベとの約束を「邪魔なだけだ」と否定し、とどめを刺そうとするが...キャベとの約束を貶したことでベジータによって一方的に叩きのめされる'. Load-bearing forward: the Final Explosion is why Vegeta cannot become a Super Saiyan at ep 128 and why he ends by handing Goku his energy. Confirmed, no change.",
+      "sources": [
+        "https://dragonball.fandom.com/api.php?action=parse&page=Surpass%20Even%20a%20God%21%20Vegeta%27s%20Sacrifice%20Strike%21&prop=wikitext&format=json",
+        "https://dragonball.fandom.com/api.php?action=parse&page=Jiren%20vs.%20Universe%207&prop=wikitext&format=json",
+        "https://dragonball.fandom.com/api.php?action=parse&page=To%20the%20Noble%2C%20Proud%20End%21%20Vegeta%20Falls%21&prop=wikitext&format=json",
+        "https://ja.wikipedia.org/w/api.php?action=parse&page=%E3%83%89%E3%83%A9%E3%82%B4%E3%83%B3%E3%83%9C%E3%83%BC%E3%83%AB%E8%B6%85%E3%81%AE%E7%99%BB%E5%A0%B4%E4%BA%BA%E7%89%A9&prop=wikitext&format=json"
+      ]
+    }
+  ],
+  "annotations": [],
+  "correspondence": [
+    {
+      "episode": 51,
+      "chapters": "16",
+      "alignment": "divergent",
+      "note": "Two shared beats. (a) Future Trunks meets Mai: ch 16 'Future Trunks also meets Mai, who is lovestruck by him, and tells her that she is still alive in the future' -- the anime differs only in the trigger ('Future Trunks recognizes Mai by sight in the manga whereas in the anime he only finds out once her name is called out') and adds Trunks telling her about her future self, which the manga does not. (b) The closing node: ch 16 ends with Beerus wondering about a present Goku Black and 'Whis suggests visiting Shin and asking him about anything suspicious'; the anime ends with Beerus recognising Black's ki as familiar and Whis resolving to investigate. Bidirectional: ep 51 infobox Manga = ch 16, ch 16's episode= names 49, 51, 54.",
+      "sources": [
+        "https://dragonball.fandom.com/api.php?action=parse&page=Feelings%20That%20Transcend%20Time%3A%20Trunks%20and%20Mai&prop=wikitext&format=json",
+        "https://dragonball.fandom.com/api.php?action=parse&page=Future%20Trunks%27s%20Past&prop=wikitext&format=json"
+      ]
+    },
+    {
+      "episode": 51,
+      "chapters": null,
+      "alignment": "anime_only",
+      "note": "Cell's second Time Machine (Bulma reveals it and undertakes the repair -- the anime's vehicle for the return trip in ep 56; the manga simply recharges Trunks's own machine, ch 16 'their hands are tied until they accumulate enough energy for the Time Machine'), the resistance flashback ('exclusive to the anime' per the episode's Differences -- its CONTENT is ch 14's premise, restaged), Goku Black's musing on his evolving power, and Goku being turned away by King Kai.",
+      "sources": [
+        "https://dragonball.fandom.com/api.php?action=parse&page=Feelings%20That%20Transcend%20Time%3A%20Trunks%20and%20Mai&prop=wikitext&format=json",
+        "https://dragonball.fandom.com/api.php?action=parse&page=Future%20Trunks%27s%20Past&prop=wikitext&format=json",
+        "https://dragonball.fandom.com/api.php?action=parse&page=Rematch%20with%20Goku%20Black%21%20Enter%20Super%20Saiyan%20Ros%C3%A9&prop=wikitext&format=json"
+      ]
+    },
+    {
+      "episode": 53,
+      "chapters": "16-17",
+      "alignment": "divergent",
+      "note": "The Universe 10 node, with the vehicle substituted -- the manga's version is ch 16's closing scene (Shin and Kibito visit Universe 10; Kibito spars with Zamasu; Shin tells him of Majin Buu's defeat) and ch 17's Gowasu tea exchange ('Gowasu tells him that that's the job of the God of Destruction while they, as Supreme Kais, are to maintain the peace ... begins to prepare tea for him') plus Zamasu watching Goku's Hit fight on GodTube. ch 16 states the substitution itself: 'In the manga, Zamasu fights against Kibito. In the anime they never met, instead, Goku went with Beerus and Whis to their world and Goku fought him instead.' Both versions reach the same outcome -- the episode page: 'In both versions this leads to the beginning of Zamasu's obsession with Goku and a deeper hatred towards the mortals.' Node-level, NOT page-level: no chapter's episode= field names 53 and the episode's Manga field is empty.",
+      "sources": [
+        "https://dragonball.fandom.com/api.php?action=parse&page=Uncover%20Black%27s%20Identity%21%20Off%20to%20the%2010th%20Universe%27s%20World%20of%20the%20Kai%27s%21&prop=wikitext&format=json",
+        "https://dragonball.fandom.com/api.php?action=parse&page=Future%20Trunks%27s%20Past&prop=wikitext&format=json",
+        "https://dragonball.fandom.com/api.php?action=parse&page=Zamas%3A%20The%20Next%20Lord%20of%20Lords%20from%20Universe%2010&prop=wikitext&format=json"
+      ]
+    },
+    {
+      "episode": 53,
+      "chapters": null,
+      "alignment": "anime_only",
+      "note": "The Earth-side interlude: Future Trunks meets Android 18 and Marron with Krillin and half-draws his sword. A character beat inside the arc, not a self-contained subplot -- it is not what keeps the row canon and it is not enough D for mixed.",
+      "sources": [
+        "https://dragonball.fandom.com/api.php?action=parse&page=Uncover%20Black%27s%20Identity%21%20Off%20to%20the%2010th%20Universe%27s%20World%20of%20the%20Kai%27s%21&prop=wikitext&format=json"
+      ]
+    },
+    {
+      "episode": 112,
+      "chapters": "36",
+      "alignment": "divergent",
+      "note": "The episode's second half and ch 36's opening are the same node: Vegeta faces Top (and Dyspo) immediately after Hit's elimination, in Perfected Super Saiyan Blue. Divergent in the exchange -- ch 36: 'In the manga, Dyspo calls Vegeta the second fiddle to Goku which angers the latter. In the anime, Top is the one who responded...'; 'In the manga, Vegeta easily knocks Dyspo out of the way before fighting Top. In the anime, Vegeta never confronted Dyspo at all.' ch 36's episode= field names 112.",
+      "sources": [
+        "https://dragonball.fandom.com/api.php?action=parse&page=A%20Saiyan%20Oath%21%20Vegeta%27s%20Resolve%21&prop=wikitext&format=json",
+        "https://dragonball.fandom.com/api.php?action=parse&page=Quirky%20Competitors&prop=wikitext&format=json"
+      ]
+    },
+    {
+      "episode": 112,
+      "chapters": "37-38",
+      "alignment": "divergent",
+      "note": "Cabba's last stand and elimination. Manga: he fights Golden Frieza alongside Caulifla (ch 37) and is eliminated in ch 38 taking Kale's place ('脱落の危機に陥ったケールの身代わりとなって脱落した', ja-WP). Anime: Frieza confronts him alone, and Cabba's Super Saiyan 2 (anime-only) and Monna's elimination by Cabba (manga: by an unknown warrior) belong to this telling. chs 37 and 38 both name 112.",
+      "sources": [
+        "https://dragonball.fandom.com/api.php?action=parse&page=A%20Saiyan%20Oath%21%20Vegeta%27s%20Resolve%21&prop=wikitext&format=json",
+        "https://dragonball.fandom.com/api.php?action=parse&page=Awaken%2C%20Super%20Saiyan%20Kale&prop=wikitext&format=json",
+        "https://dragonball.fandom.com/api.php?action=parse&page=Universe%206%27s%20Last%20Resort&prop=wikitext&format=json",
+        "https://ja.wikipedia.org/w/api.php?action=parse&page=%E3%83%89%E3%83%A9%E3%82%B4%E3%83%B3%E3%83%9C%E3%83%BC%E3%83%AB%E8%B6%85%E3%81%AE%E7%99%BB%E5%A0%B4%E4%BA%BA%E7%89%A9&prop=wikitext&format=json"
+      ]
+    },
+    {
+      "episode": 112,
+      "chapters": null,
+      "alignment": "anime_only",
+      "note": "Vegeta catching Cabba and the Super-Dragon-Ball promise ('どちらかの宇宙が生き残ったら超ドラゴンボールで復活させる約束', ja-WP キャベ). Load-bearing in the anime's telling only: ch 40's own difference note says 'In the anime, he unlocks his new transformation out of his desire to keep his promise to Cabba' (ep 123's Evolved), and eps 126, 128 and 131 all state the promise on screen.",
+      "sources": [
+        "https://dragonball.fandom.com/api.php?action=parse&page=Jiren%20vs.%20Universe%207&prop=wikitext&format=json",
+        "https://dragonball.fandom.com/api.php?action=parse&page=Body%2C%20Soul%20and%20Power%20Unleashed%21%20Goku%20and%20Vegeta%21&prop=wikitext&format=json",
+        "https://dragonball.fandom.com/api.php?action=parse&page=To%20the%20Noble%2C%20Proud%20End%21%20Vegeta%20Falls%21&prop=wikitext&format=json",
+        "https://ja.wikipedia.org/w/api.php?action=parse&page=%E3%83%89%E3%83%A9%E3%82%B4%E3%83%B3%E3%83%9C%E3%83%BC%E3%83%AB%E8%B6%85%E3%81%AE%E7%99%BB%E5%A0%B4%E4%BA%BA%E7%89%A9&prop=wikitext&format=json"
+      ]
+    },
+    {
+      "episode": 113,
+      "chapters": null,
+      "alignment": "anime_only",
+      "note": "The whole episode -- Goku vs Caulifla, the Super Saiyan 3 demonstration, Kale joining in -- has no counterpart pages: the infobox Manga field is empty and no chapter's episode= field names 113 ('Goku never fought Caulifla in the manga'; 'Goku never transforms into a Super Saiyan 3 in the Tournament of Power in the manga'). It is the anime's run-up to a node the manga does carry: ja-WP カリフラ has the fusion caused by exactly this fight ('超サイヤ人ゴッドの悟空に追い詰められ、シャンパから事前に渡されていたポタラによってケールと合体し、ケフラとなる'), and Kefla is formed in ch 38. Correspondence is NODE-level via ep 114 -> ch 37-38; do not give this row a chapter.",
+      "sources": [
+        "https://dragonball.fandom.com/api.php?action=parse&page=With%20Great%20Joy%21%20The%20Fighting%20Freak%20Saiyans%27%20Battle%20Rejoined%21&prop=wikitext&format=json",
+        "https://dragonball.fandom.com/api.php?action=parse&page=Bloodcurdling%21%20The%20Explosive%20Birth%20of%20a%20New%20Super%20Warrior%21&prop=wikitext&format=json",
+        "https://dragonball.fandom.com/api.php?action=parse&page=Universe%206%27s%20Last%20Resort&prop=wikitext&format=json",
+        "https://ja.wikipedia.org/w/api.php?action=parse&page=%E3%83%89%E3%83%A9%E3%82%B4%E3%83%B3%E3%83%9C%E3%83%BC%E3%83%AB%E8%B6%85%E3%81%AE%E7%99%BB%E5%A0%B4%E4%BA%BA%E7%89%A9&prop=wikitext&format=json"
+      ]
+    },
+    {
+      "episode": 115,
+      "chapters": "38-39",
+      "alignment": "divergent",
+      "note": "Node-level, not page-level. The manga's Kefla is formed in ch 38 and fights GOHAN, and Goku's Ultra Instinct Sign awakens in ch 39 against JIREN; the anime routes both through this episode (Goku vs Kefla; UI Sign for the second time). fandom states the substitution from both sides: 'In the manga, Kefla attempts to take on Jiren before being confronted by Gohan. In the anime, Kefla only ever confronted Goku'; 'Goku ... never used [Blue Kaio-ken] in the manga at any point'; 'In the manga, Goku only ever entered into [UI Sign] once during his fight with Jiren.' CAUTION for the apply layer: the episode-side infobox Manga field points at ch 36, but ch 36's summary carries none of this episode's content -- that field is single-valued and loose here.",
+      "sources": [
+        "https://dragonball.fandom.com/api.php?action=parse&page=Goku%20vs.%20Kefla%21%20Super%20Saiyan%20Blue%20Beaten%3F&prop=wikitext&format=json",
+        "https://dragonball.fandom.com/api.php?action=parse&page=Universe%206%27s%20Last%20Resort&prop=wikitext&format=json",
+        "https://dragonball.fandom.com/api.php?action=parse&page=Sign%20of%20Son%20Goku%27s%20Awakening&prop=wikitext&format=json",
+        "https://dragonball.fandom.com/api.php?action=parse&page=Quirky%20Competitors&prop=wikitext&format=json"
+      ]
+    },
+    {
+      "episode": 116,
+      "chapters": "39",
+      "alignment": "divergent",
+      "note": "Kefla's elimination -- the same node, two executioners: 'Kefla (Caulifla and Kale) are eliminated by Goku in his Ultra Instinct Sign state in the anime and by Gohan in his Potential Unleashed state in the manga' (ch 39: the mutual knockout with Gohan, after which Universe 6 is erased -- the anime defers that to ep 118). Bidirectional: ep 116 Manga = ch 39, ch 39's episode= names 116. Also here and anime-only: Jiren waking to Goku's Ultra Instinct ki.",
+      "sources": [
+        "https://dragonball.fandom.com/api.php?action=parse&page=Signs%20of%20a%20Turnabout%21%20The%20Autonomous%20Ultra%20Instinct%20Erupts%21&prop=wikitext&format=json",
+        "https://dragonball.fandom.com/api.php?action=parse&page=Sign%20of%20Son%20Goku%27s%20Awakening&prop=wikitext&format=json"
+      ]
+    },
+    {
+      "episode": 118,
+      "chapters": "38-39",
+      "alignment": "divergent",
+      "note": "Two erasures, both in both tellings, both staged differently. Universe 2: ch 38 has Kale eliminating Zarbuto and Rabanra and the universe erased at once; the anime has Goku, 17 and 18 beat Zirloin, Zarbuto and Rabanra after their love-powered transformation (anime-only). Universe 6: ch 39 erases it after Kefla's elimination; the anime erases it here, after Gohan and Piccolo eliminate Saonel and Pilina (whom ch 38 has Kale knock off; the Namekian-assimilation backstory is the anime's). Erasure ORDER differs (anime 3rd and 4th; manga 4th and 6th). ch 38's and ch 39's episode= fields both name 118.",
+      "sources": [
+        "https://dragonball.fandom.com/api.php?action=parse&page=Accelerating%20Tragedy%20Vanishing%20Universes&prop=wikitext&format=json",
+        "https://dragonball.fandom.com/api.php?action=parse&page=Universe%206%27s%20Last%20Resort&prop=wikitext&format=json",
+        "https://dragonball.fandom.com/api.php?action=parse&page=Sign%20of%20Son%20Goku%27s%20Awakening&prop=wikitext&format=json",
+        "https://ja.wikipedia.org/w/api.php?action=parse&page=%E3%83%89%E3%83%A9%E3%82%B4%E3%83%B3%E3%83%9C%E3%83%BC%E3%83%AB%E8%B6%85%E3%81%AE%E7%99%BB%E5%A0%B4%E4%BA%BA%E7%89%A9&prop=wikitext&format=json"
+      ]
+    },
+    {
+      "episode": 120,
+      "chapters": "38",
+      "alignment": "divergent",
+      "note": "Node-level: Universe 3's last-resort fusion. The manga does it once, in ch 38 -- Mule orders Paparoni to fuse and he, Borareta, Pancea and Koitsukai become Agnilasa; the anime splits it in two, with the three-way Koiceareta formed here (ja-WP's コイチアレータ sub-entry: '漫画版には登場しない。') and Paparoni joining at ep 121. Biarra's elimination, which clears the roster to exactly those four, happens in both ('by Android 18 in the anime and by an unknown warrior in the manga'; ja-WP ビアラ '漫画版では戦闘シーンが無いまま脱落していた'). No chapter's episode= field names 120 -- the tie is at node level only.",
+      "sources": [
+        "https://dragonball.fandom.com/api.php?action=parse&page=A%20Perfect%20Survival%20Strategy%21%20The%203rd%20Universe%27s%20Menacing%20Assassin%21&prop=wikitext&format=json",
+        "https://dragonball.fandom.com/api.php?action=parse&page=Universe%206%27s%20Last%20Resort&prop=wikitext&format=json",
+        "https://ja.wikipedia.org/w/api.php?action=parse&page=%E3%83%89%E3%83%A9%E3%82%B4%E3%83%B3%E3%83%9C%E3%83%BC%E3%83%AB%E8%B6%85%E3%81%AE%E7%99%BB%E5%A0%B4%E4%BA%BA%E7%89%A9&prop=wikitext&format=json"
+      ]
+    },
+    {
+      "episode": 120,
+      "chapters": null,
+      "alignment": "anime_only",
+      "note": "Universe 3's coordinated offensive on Team Universe 7 (Koitsukai's 3D Scan analysis, Gohan holding the three off so Goku and Vegeta can recover stamina) and the Koiceareta merge itself.",
+      "sources": [
+        "https://dragonball.fandom.com/api.php?action=parse&page=A%20Perfect%20Survival%20Strategy%21%20The%203rd%20Universe%27s%20Menacing%20Assassin%21&prop=wikitext&format=json",
+        "https://ja.wikipedia.org/w/api.php?action=parse&page=%E3%83%89%E3%83%A9%E3%82%B4%E3%83%B3%E3%83%9C%E3%83%BC%E3%83%AB%E8%B6%85%E3%81%AE%E7%99%BB%E5%A0%B4%E4%BA%BA%E7%89%A9&prop=wikitext&format=json"
+      ]
+    },
+    {
+      "episode": 121,
+      "chapters": "38",
+      "alignment": "divergent",
+      "note": "Three counted beats, all in ch 38: Agnilasa formed and beaten, Android 18 eliminated, Universe 3 erased. Scale is the divergence -- 'In the anime, Agnilasa was portrayed as a serious threat, taking the combined efforts of Goku, Vegeta, Gohan, Android 17, and Frieza to eliminate him. In the manga, Agnilasa was effortlessly and defeated single-handedly by Kale'; 18 is eliminated 'by her own self sacrifice to save Android 17 in the anime and by either Damom or Gamisalas in the manga'; U3 is erased 6th in the anime, 3rd in the manga. ch 38's episode= names 121.",
+      "sources": [
+        "https://dragonball.fandom.com/api.php?action=parse&page=All-Out%20War%21%20The%20Ultimate%20Four-Fold%20Union%20vs.%20the%207th%20Universe%27s%20Total%20Offensive%21&prop=wikitext&format=json",
+        "https://dragonball.fandom.com/api.php?action=parse&page=Universe%206%27s%20Last%20Resort&prop=wikitext&format=json",
+        "https://ja.wikipedia.org/w/api.php?action=parse&page=%E3%83%89%E3%83%A9%E3%82%B4%E3%83%B3%E3%83%9C%E3%83%BC%E3%83%AB%E8%B6%85%E3%81%AE%E7%99%BB%E5%A0%B4%E4%BA%BA%E7%89%A9&prop=wikitext&format=json"
+      ]
+    },
+    {
+      "episode": 124,
+      "chapters": "39-40",
+      "alignment": "divergent",
+      "note": "Two eliminations the endgame's count depends on. Gohan: eliminated here by his own self-sacrifice against Dyspo; in ch 39 by the mutual knockout with Kefla. Dyspo: eliminated here by Gohan and Frieza; in ch 40 'as a result of Frieza' -- Frieza destroys the debris path and leaves Dyspo and Top stranded on a rock. Frieza's Golden form against Dyspo and Dyspo's Super Maximum Light Speed Mode are the anime's. chs 39, 40 and 42 all name 124.",
+      "sources": [
+        "https://dragonball.fandom.com/api.php?action=parse&page=A%20Storm-and-Stress%20Assault%21%20Gohan%27s%20Last%20Stand%21&prop=wikitext&format=json",
+        "https://dragonball.fandom.com/api.php?action=parse&page=Sign%20of%20Son%20Goku%27s%20Awakening&prop=wikitext&format=json",
+        "https://dragonball.fandom.com/api.php?action=parse&page=Jiren%20vs.%20Universe%207&prop=wikitext&format=json"
+      ]
+    },
+    {
+      "episode": 125,
+      "chapters": "40",
+      "alignment": "divergent",
+      "note": "The same set-up beat, one work at a time: ch 40 has Frieza belittling Top for relying on another and attacking him 'bringing him on the brink of elimination'; the anime has 17 and Golden Frieza wear him down first -- 'Top never fought Android 17 or Golden Frieza in the manga, instead Frieza in his Final Form attacked Top when he was already weakened.' Everything from Top's resolve onward -- the God of Destruction Mode, the Energy of Destruction, the crest -- is the anime's ('never seen or mentioned in the manga'). ch 40's episode= names 125.",
+      "sources": [
+        "https://dragonball.fandom.com/api.php?action=parse&page=A%20Commanding%20Presence%21%20The%20Advent%20of%20Top%20the%20Destroyer%21&prop=wikitext&format=json",
+        "https://dragonball.fandom.com/api.php?action=parse&page=Jiren%20vs.%20Universe%207&prop=wikitext&format=json",
+        "https://ja.wikipedia.org/w/api.php?action=parse&page=%E3%83%89%E3%83%A9%E3%82%B4%E3%83%B3%E3%83%9C%E3%83%BC%E3%83%AB%E8%B6%85%E3%81%AE%E7%99%BB%E5%A0%B4%E4%BA%BA%E7%89%A9&prop=wikitext&format=json"
+      ]
+    },
+    {
+      "episode": 126,
+      "chapters": "40",
+      "alignment": "divergent",
+      "note": "Top's exit, same pairing and same shape, different finisher. ch 40: 'As Top tries to attack Vegeta from behind, the Saiyan prince completely disregards the Universe 11 warrior and powers up, the force of his aura knocking Top out of the ring onto some debris' -- Top survives on the debris and is finished by Frieza's stranding. Anime: Vegeta, provoked by Top mocking his promise to Cabba (ja-WP トッポ), eliminates him with the Final God Explosion. fandom: 'In the manga, the only fight involving Vegeta and Top is with Vegeta using his Super Saiyan Blue form and Top using his Base form'; 'Top is eliminated by Vegeta in the anime and as a result of Frieza in the manga.' ch 40's episode= names 126.",
+      "sources": [
+        "https://dragonball.fandom.com/api.php?action=parse&page=Surpass%20Even%20a%20God%21%20Vegeta%27s%20Sacrifice%20Strike%21&prop=wikitext&format=json",
+        "https://dragonball.fandom.com/api.php?action=parse&page=Jiren%20vs.%20Universe%207&prop=wikitext&format=json",
+        "https://ja.wikipedia.org/w/api.php?action=parse&page=%E3%83%89%E3%83%A9%E3%82%B4%E3%83%B3%E3%83%9C%E3%83%BC%E3%83%AB%E8%B6%85%E3%81%AE%E7%99%BB%E5%A0%B4%E4%BA%BA%E7%89%A9&prop=wikitext&format=json"
+      ]
+    }
+  ],
+  "repairs": [],
+  "structure": {
+    "notes": "=== 1. ROW IDENTITY FIRST (R20) === All twelve rows joined on TITLE + AIR DATE, never index. dragonball.fandom's 'List of Dragon Ball Super episodes' parses to 131 rows with no x.5 entries and no doubled or skipped number; animefillerlist's live table also parses to 131 rows and its titles are our stored titles verbatim (e.g. AFL 51 'Feelings That Travel Beyond Time - Trunks and Mai', 126 'Surpass Even a God! Vegeta's Desperate Blow!!'). The fandom page titles are localised differently from ours (ours 'A Saiyan's Vow! Vegeta's Resoution!!' = fandom 'A Saiyan Oath! Vegeta's Resolve!'; ours 'The Fiercely Overwhelming Assault! Gohan's Last Stand!!' = fandom 'A Storm-and-Stress Assault! Gohan's Last Stand!') -- same episode, confirmed by the Japanese title and airdate field on each page.\n\n=== 2. THE CHAPTER-SIDE REVERSE INDEX, RE-READ FOR THESE ROWS === Recomputed from the chapter pages' episode= fields: ch 16 -> 49, 51, 54 | ch 17 -> 54, 55, 57 | ch 36 -> 102, 112, 115, 117, 119 | ch 37 -> 100, 112, 114 | ch 38 -> 100, 101, 103, 111, 112, 114, 118, 121 | ch 39 -> 107, 116, 118, 122, 123, 124 | ch 40 -> 122-128. This reproduces the w5b verifier's map exactly. Of my twelve rows, THREE appear in no chapter's field and carry an empty episode-side Manga field: 53, 113, 120. Under the withdrawn content test that emptiness is what made a row a filler candidate; under T30 it is only a statement that the correspondence is node-level rather than page-level, which is why all three are delivered as B with a named chain and not as an anchor of any kind.\n\n=== 3. A FIELD THAT DOES NOT SURVIVE READING (ep 115) === ep 115's infobox Manga field points at ch 36 ('Quirky Competitors') and ch 36's episode= field names 115 back -- but ch 36's summary carries none of ep 115's content (Goku vs Kefla, Blue Kaio-ken, the second Ultra Instinct activation); ch 36 is the Vegeta/Top opening, 17 vs Botamo, the Universe 10 trio, 18 vs the Kamikaze Fireballs and the invisible fighters. The only thing in common is Catopesra's presence. The episode-side Manga field is SINGLE-VALUED (it names one chapter, never a list) and here it is loose. ep 115's correspondence is therefore given at node level on ch 38-39 (where the manga puts Kefla and Goku's Ultra Instinct), with the ch-36 field named so the apply layer does not re-derive it. Same caution applies wherever a row's only tie is the episode-side field.\n\n=== 4. THE DELETE TEST IS WHAT DECIDED THE THREE WEAKEST ROWS === For 113, 120 and 125 the question 'does the arc proceed identically without this episode' has a mechanical answer, because the NEXT episode opens mid-beat on it: ep 114 opens 'While Kale is transforming into her Legendary Super Saiyan form'; ep 121 opens 'Paparoni unleashes Universe 3's final tactic and merges with Koiceareta'; ep 126 opens 'Android 17 refuses to give up, despite Top's overwhelming powers'. Each of those next episodes is itself C (Kefla in ch 38; Agnilasa and Universe 3's erasure in ch 38; Top's elimination in ch 40). A row the shared-node episode cannot start without is load-bearing by construction.\n\n=== 5. AFL IS STILL NOT A B/D ORACLE (cross-check only, R1) === AFL's live table labels all twelve rows 'Manga Canon'. That is a blanket over the whole tournament block (every row 82-131 except 89/90/91/94/95) and it is contradicted by the pages on rows where the manga carries nothing at all (53, 113, 120 have EMPTY counterpart fields in both directions). It agrees with this verdict's outcome on all twelve, which is a coincidence of a blanket, not a confirmation -- the same blanket was wrong about 90 and 91, which wave 5c lifted the other way.\n\n=== 6. WHAT 'CANON' MEANS HERE (A46) === Nothing in this file is an adaptation claim. Every chapter cited postdates its episode: ch 16 (2016-09-21) vs ep 51 (2016-07-10) and ep 53 (2016-07-31); ch 36-40 (2018) vs eps 112-126 (2017-11 to 2018-03). The numbers in `correspondence` are correspondence rows, never anchors, and three of the twelve rows (53, 113, 120) must never be given a chapter position at all.",
+    "order_only": []
+  },
+  "flags_for_sean": [
+    "NO ROW REFUTED. The ask allowed for the finding 'nothing later depends on this, so it is D' and I looked for it specifically on 113, 115, 120 and 125 (the four whose headline content the manga does not carry). None of the four survives the delete test: the next episode opens mid-beat on each of 113, 120 and 125, and 115 is where Goku re-enters Ultra Instinct and Jiren wakes to it. If Sean wants a stricter B bar than 'the next shared-node episode cannot start without it', 113 and 120 are the two rows that would move -- they are the two delivered at MEDIUM and the only two of the twelve with zero counterpart pages AND no elimination that both tellings record (120 does eliminate Biarra, whom the manga also eliminates; 113 eliminates nobody).",
+    "ep 113 is the closest call in the ask. FOR canon: ja-WP states the anime's Kefla fusion as caused by this fight ('超サイヤ人ゴッドの悟空に追い詰められ...ポタラによってケールと合体し、ケフラとなる'), fandom ep 114 says the same ('because they are overpowered and are about to be eliminated by Goku'), and Kefla is a manga node (ch 38). AGAINST: the episode's own content is a fight that never happens, nobody is eliminated, and the load-bearing beat is arguably ep 114's rather than 113's. If Sean reads it the second way the row is D (filler) with a correspondence row of alignment anime_only -- it is NOT a mixed candidate either way, since there is no slice-of-life block in it.",
+    "CONSISTENCY WITH WAVE 5c, stated so the two waves cannot drift: my ep 112 chain and w5c's ep 90 chain are the same shape (an anime-only designation that three later episodes state their motive from), and they intersect -- ep 124, one of my rows, contains w5c's ep-90 payoff line verbatim ('Frieza agrees to follow Gohan's plan since he is the leader of Team Universe 7, after all'). If ep 90 is B then ep 112's promise thread is B a fortiori; the reverse also holds.",
+    "THE T6 OVERRIDE MAP DOES NOT NEED TOUCHING FOR THESE TWELVE (unlike w5c's 78/90/91): all twelve are stored canon and stay canon, so there is no stored ruling to repair. What DOES need a decision is whether the wave-5 / verifier proposals that were 'accepted' in WAVE5-RECOVERY's THE DECISIONS table for 113, 115, 116, 118, 120, 121, 124, 125 and 126 (all -> filler) are formally withdrawn in the record as well as in the data -- this verdict is the withdrawal for nine of those rows, and 51 and 53 for the 1-76 half.",
+    "ep 53's wave-5 annotation proposal (partial{16-17}) is NOT carried forward. Its factual half is right -- the Gowasu tea exchange is doubled in ch 16 and ch 17 -- but `partial` is the vocabulary of 'only this fragment has source standing', which is the manga-relative test T30 replaces. The fact now lives in the correspondence row divergent{16-17}. Same reasoning as w5c's re-noting of ep 91's partial{31}; Sean may prefer to keep an annotation as well as the row.",
+    "ep 115's episode-side Manga field (ch 36) is wrong on the pages -- see structure note 3. If the apply layer ever derives correspondence from that field mechanically it will place ep 115 two chapters early. Recommend the correspondence row in this file (node-level, ch 38-39) rather than the field.",
+    "NO ANCHORS, per the series ruling. Rows 53, 113 and 120 in particular must never carry a chapter position: no chapter page names them and their manga counterparts are node-level substitutions, not pages."
+  ]
+}
