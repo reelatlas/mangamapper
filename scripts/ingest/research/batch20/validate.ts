@@ -27,8 +27,11 @@ async function main() {
     if (!v.series_id) { console.log(`FAIL ${f}: no series_id`); bad++; continue; }
     // a series can have one TARGETS entry per wave: `<id>-w<N>.json` names the wave; no suffix = the series' lowest wave
     const mine = TARGETS.filter((t) => t[0] === v.series_id).sort((a, b) => a[4] - b[4]);
-    const wv = /-w(\d)\.json$/.exec(f)?.[1];
-    const task = (wv ? mine.find((t) => t[4] === Number(wv)) : mine[0]) ?? mine[0];
+    const wv = /-w(\d)[a-z]?\.json$/.exec(f)?.[1];
+    const sameWave = wv ? mine.filter((t) => t[4] === Number(wv)) : [];
+    const touched = [...(v.anchors ?? []), ...(v.anchor_hostile ?? []), ...(v.repairs ?? []), ...(v.continue_points ?? [])].map((x: any) => Number(x.episode)).concat(...[...(v.type_corrections ?? []), ...(v.annotations ?? [])].map((x: any) => (x.episodes ?? []).map(Number)));
+    const inRange = (t: (typeof mine)[number]) => touched.length > 0 && touched.every((n) => ranges(t[1]).some(([a, b]) => n >= a && n <= b));
+    const task = (sameWave.length > 1 ? sameWave.find(inRange) ?? sameWave[0] : sameWave[0]) ?? mine[0];
     if (!task) { console.log(`FAIL ${f}: no TARGETS entry for ${v.series_id}`); bad++; continue; }
     const { data: s } = await db.from('series').select('total_chapters, latest_known_chapters').eq('id', v.series_id).maybeSingle();
     const space = Math.max(s?.total_chapters ?? 0, s?.latest_known_chapters ?? 0);

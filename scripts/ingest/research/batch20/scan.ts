@@ -23,8 +23,11 @@ async function main() {
     const v = JSON.parse(readFileSync(OUT + f, 'utf8'));
     // a series can have one TARGETS entry per wave: `<id>-w<N>.json` names the wave; no suffix = the series' lowest wave
     const mine = TARGETS.filter((t) => t[0] === v.series_id).sort((a, b) => a[4] - b[4]);
-    const wv = /-w(\d)\.json$/.exec(f)?.[1];
-    const task = (wv ? mine.find((t) => t[4] === Number(wv)) : mine[0]) ?? mine[0];
+    const wv = /-w(\d)[a-z]?\.json$/.exec(f)?.[1];
+    const sameWave = wv ? mine.filter((t) => t[4] === Number(wv)) : [];
+    const touched = [...(v.anchors ?? []), ...(v.anchor_hostile ?? []), ...(v.repairs ?? []), ...(v.continue_points ?? [])].map((x: any) => Number(x.episode)).concat(...[...(v.type_corrections ?? []), ...(v.annotations ?? [])].map((x: any) => (x.episodes ?? []).map(Number)));
+    const inRange = (t: (typeof mine)[number]) => touched.length > 0 && touched.every((n) => ranges(t[1]).some(([a, b]) => n >= a && n <= b));
+    const task = (sameWave.length > 1 ? sameWave.find(inRange) ?? sameWave[0] : sameWave[0]) ?? mine[0];
     if (!task || (task[2] !== 'A2' && task[2] !== 'C')) continue; // lane C narrow follow-ups get the same fence / monotone / orphan checks (FotNS 1-28 is a gap block)
     if (only.size && !only.has(v.series_id)) continue;
     const [lo, hi] = [Math.min(...ranges(task[1]).map((r) => r[0])), Math.max(...ranges(task[1]).map((r) => r[1]))];
