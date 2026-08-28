@@ -1,0 +1,549 @@
+{
+ "series_id": "dragon-ball-super",
+ "summary": "Sixteen Universe Survival rows re-judged under T30 (the parallel standing): from the outline or not, with B proved by naming the later beats that depend on the episode. ALL SIXTEEN COME BACK CANON — five lifts (79, 80, 81, 94, 95 → canon) and eleven confirmations — and no row in this ask is D. The finding that carries the Zeno Expo block is in the manga's own pages: ch 30 opens with the Grand Minister announcing that the Zenos, 'having enjoyed the Zeno Expo, have decided to proceed with the Tournament of Power' and then giving the tournament's rules — so the Expo is a node BOTH tellings' plots turn on, realized as a twelve-God battle royale in ch 28-29 and as three Universe 7 vs Universe 9 matches in eps 79-81. Inside that block ep 80 carries the public reveal of the mortal-level rankings and the erasure stipulation (ch 30 carries the same reveal) and is the stated cause of Gohan's training (ep 88 opens on it); ep 81 makes Goku the enemy of every universe, which is why Top intrudes in ep 82, and closes on the Tournament of Power's ruleset that eps 97-131 run on. Eps 94-95 are not a sabotage side-story with a graft: ch 32 carries Frieza's 24-hour revival, the Capsule-Corp assembly, the power-up ('he trained in thousands of simulations of image training' = the anime's True Golden Frieza, the form he fights eps 108/124/125 in) and even the fight that delays them, whose Battles list reads 'Goku vs. Frieza (Final Form) (off-screen)'; and the anime's assassins are cashed in ep 125, where Frieza blocks Top's Energy of Destruction 'remembering dealing with this energy prior to the tournament'. The eleven stored-canon rows all hold: 87 and 88 are the 17 recruitment and the Gohan power-up, both nodes ch 31 states and ch 39 pays off in words; 98/99/103/106/107 are eliminations and erasures the tournament count depends on, all of which happen in the manga by other hands; 102/104/109 are shared fights (ch 36 / ch 35); 105 is the one row with no page-level counterpart, held as B because its three Universe 4 eliminations all happen in ch 38 and because Roshi's Max Power and Evil Containment Wave are the whole mechanism of ep 107. NO ANCHORS — every chapter named here was published after its episode aired (ep 79 = 2017-02-19 vs ch 28 = 2017-09-21), so the numbers are correspondence (A46).",
+ "anchors": [],
+ "continue_points": [],
+ "anchor_hostile": [],
+ "type_corrections": [
+  {
+   "episodes": [
+    79
+   ],
+   "stored": "filler",
+   "type": "canon",
+   "change": true,
+   "confidence": "medium",
+   "why": "B under T30. The node is the Zeno Expo, and the manga's own plot turns on it: ch 30 opens 'Grand Minister announces Zeno and Future Zeno, having enjoyed the Zeno Expo, have decided to proceed with the Tournament of Power and he explains the rules' — the arc does NOT proceed identically without the Expo. ch 28 calls it (the Grand Minister 'announces a quick Zeno Expo and quickly creates a Tournament stage'), and both chapter pages state the substitution in terms: 'In the anime, prior to the Tournament, the Zeno Expo took place involving three fighters from Universe 7 matched up against three fighters from Universe 9. In the manga, instead of this there was a match between all of the Gods of Destruction.' Ep 79 is that node's first match. Its own downstream load: the Trio of Danger are established here as Universe 7's known enemies whose ki cannot be sensed, and ep 98 cashes it explicitly — Goku 'excited to fight them again, especially Bergamo, commenting that Bergamo hid his power in the Zeno Expo'; and Top makes his first, cloaked appearance (nullifying Buu's stray blast), the introduction ch 28 gives as Belmod presenting his God-of-Destruction successor. HELD AT MEDIUM and stated honestly: Buu's victory itself has no later consequence — Buu never fights the Tournament of Power (he hibernates, ep 91) — and no chapter page's episode= field lists ep 79. This row is carried by the block.",
+   "sources": [
+    "https://dragonball.fandom.com/api.php?action=parse&page=The%209th%20Universe%27s%20Kicking%20Basil%20vs.%20The%207th%20Universe%27s%20Majin%20Buu%21%21&prop=wikitext&format=json",
+    "https://dragonball.fandom.com/api.php?action=parse&page=The%20Gods%20of%20Destruction%20From%20All%2012%20Universes&prop=wikitext&format=json",
+    "https://dragonball.fandom.com/api.php?action=parse&page=The%20Man%20Named%20Jiren&prop=wikitext&format=json",
+    "https://dragonball.fandom.com/api.php?action=parse&page=Toppo%2C%20Universe%2011%20God%20of%20Destruction%20Candidate%21&prop=wikitext&format=json",
+    "https://www.kanzenshuu.com/episode/super/eps-079/",
+    "https://dragonball.fandom.com/api.php?action=parse&page=Ah%2C%20the%20Uncertainty%21%20A%20Universe%20Despairs%21&prop=wikitext&format=json"
+   ]
+  },
+  {
+   "episodes": [
+    80
+   ],
+   "stored": "filler",
+   "type": "canon",
+   "change": true,
+   "confidence": "high",
+   "why": "B under T30, and the strongest of the three Expo rows. The episode does the arc's stakes-setting: after the Gohan-Lavender match the Grand Minister reads out Zeno's mortal-level rankings (Universe 7 second from bottom at 3.18, Universe 9 last at 1.86), reveals to every god that the LOSING UNIVERSES WILL BE ERASED, and names Universes 1, 5, 8 and 12 exempt for scoring above 7 — Kanzenshuu's summary carries the same block verbatim. The manga states exactly that in ch 30: 'He elaborates the losing universes will be erased, which sends everyone into utter chaos... Universes 1, 5, 8, and 12 are exempt because they have a mortal level above 7. Whis tells Beerus Universe 7's level is 3.5, which is second to last.' Two further dependencies: ep 88 opens with Goku telling Piccolo that 'Gohan did well at the Zen Exhibition Match, but considering his original power he should have done way better, as he is out of practice' — this episode is the stated cause of the Gohan training (88) and test (90); and Lavender's poison, shown here, is why Goku and Vegeta arrive in ep 98 with a counter (ja-WP ラベンダー: 「力の大会では、全覧試合で攻撃を見せていたこともあり、悟空やベジータには毒攻撃を気のバリアで塞がれる」).",
+   "sources": [
+    "https://dragonball.fandom.com/api.php?action=parse&page=Awaken%20Your%20Dormant%20Fighting%20Spirit%21%20Gohan%27s%20Fight%21&prop=wikitext&format=json",
+    "https://dragonball.fandom.com/api.php?action=parse&page=The%20Man%20Named%20Jiren&prop=wikitext&format=json",
+    "https://www.kanzenshuu.com/episode/super/eps-080/",
+    "https://ja.wikipedia.org/wiki/%E3%83%89%E3%83%A9%E3%82%B4%E3%83%B3%E3%83%9C%E3%83%BC%E3%83%AB%E8%B6%85%E3%81%AE%E7%99%BB%E5%A0%B4%E4%BA%BA%E7%89%A9",
+    "https://dragonball.fandom.com/api.php?action=parse&page=Gohan%20and%20Piccolo%20Master%20and%20Pupil%20Clash%20in%20Max%20Training%21&prop=wikitext&format=json",
+    "https://dragonball.fandom.com/api.php?action=parse&page=Ah%2C%20the%20Uncertainty%21%20A%20Universe%20Despairs%21&prop=wikitext&format=json"
+   ]
+  },
+  {
+   "episodes": [
+    81
+   ],
+   "stored": "filler",
+   "type": "canon",
+   "change": true,
+   "confidence": "high",
+   "why": "B under T30. Three loads, each named downstream. (1) Bergamo's speech makes Goku 'the enemy of every universe' and Bergamo's petition to rescind the erasure fails — which is precisely why Top intrudes: fandom's ep-82 Differences read 'In the anime, Top himself chooses to face Goku, wanting to hand out punishment for what he believes are Goku's evil doing ways. In the manga, Top faces Goku merely because of Zeno's suggestion... and Top does not hold any kind of grudge against him', and ja-WP's Top entry says the same (「悟空とベルガモの戦いの決着後に突如乱入し、悟空を全宇宙の敵と見なし」). (2) The episode closes with the Grand Minister announcing the TOURNAMENT OF POWER'S RULES — a simultaneous battle royale of 80 fighters from 8 universes, ring-out only, 100 takks (48 minutes), no flight, no weapons, no killing — the ruleset every one of eps 97-131 runs on; the manga gives the identical ruleset in ch 30 immediately after the Expo. (3) Structurally the anime's Goku-vs-Bergamo occupies the slot the manga fills with Goku vs Top (ch 29), which the anime relocates to ep 82. Nothing here is padding.",
+   "sources": [
+    "https://dragonball.fandom.com/api.php?action=parse&page=Bergamo%20the%20Crusher%20vs.%20Goku%21%20Whose%20Strength%20Reaches%20the%20Wild%20Blue%20Yonder%3F&prop=wikitext&format=json",
+    "https://dragonball.fandom.com/api.php?action=parse&page=The%20Man%20Named%20Jiren&prop=wikitext&format=json",
+    "https://dragonball.fandom.com/api.php?action=parse&page=Toppo%2C%20Universe%2011%20God%20of%20Destruction%20Candidate%21&prop=wikitext&format=json",
+    "https://dragonball.fandom.com/api.php?action=parse&page=Goku%20Must%20Pay%20The%20Warrior%20of%20Justice%20Top%20Barges%20In%21&prop=wikitext&format=json",
+    "https://ja.wikipedia.org/wiki/%E3%83%89%E3%83%A9%E3%82%B4%E3%83%B3%E3%83%9C%E3%83%BC%E3%83%AB%E8%B6%85%E3%81%AE%E7%99%BB%E5%A0%B4%E4%BA%BA%E7%89%A9",
+    "https://www.kanzenshuu.com/episode/super/eps-081/"
+   ]
+  },
+  {
+   "episodes": [
+    94
+   ],
+   "stored": "filler",
+   "type": "canon",
+   "change": true,
+   "confidence": "high",
+   "why": "C/B under T30 — the recruitment's completion, not a sabotage side-story. ch 32 carries this episode's spine twice over: Goku's confession of the deal ('Frieza says that he agreed to fully revive him upon the Tournament's completion' — the scene ep 94 opens on), the 24-hour revival arrangement ('Goku then goes to Earth's Hell where he sees Frieza and asks him if he'd like to get out of there for 24 hours'), and the assembly of the whole Universe 7 team at Capsule Corporation, which the episode's own Differences name as the shared scene. Without the revival there is no tenth member — the roster eps 96-131 and chs 33-42 both run on. The Quitela/Sidra sabotage plot is the anime's own (ch 32: 'Universes 9 nor 4 never tried to sabotage Universe 7 chance of entering the Tournament of Power in the manga, so the Universe 9 assassins do not appear'), but it is not padding beside the story: it is the anime's staging of the delay ch 32 states, and it is cashed in ep 125, where Frieza blocks Top's Energy of Destruction 'remembering dealing with this energy prior to the tournament (when Universe 9 sent its assassins against him)'. Under T28 the anime-original share is not a self-contained block carrying the episode, so canon rather than mixed.",
+   "sources": [
+    "https://dragonball.fandom.com/api.php?action=parse&page=The%20Evil%20Emperor%20Returns%21%20A%20Reception%20from%20Mysterious%20Assassins%3F&prop=wikitext&format=json",
+    "https://dragonball.fandom.com/api.php?action=parse&page=The%20Super%20Warriors%20Gather%21%20Part%202&prop=wikitext&format=json",
+    "https://www.kanzenshuu.com/episode/super/eps-094/",
+    "https://dragonball.fandom.com/api.php?action=parse&page=A%20Commanding%20Presence%21%20The%20Advent%20of%20Top%20the%20Destroyer%21&prop=wikitext&format=json"
+   ]
+  },
+  {
+   "episodes": [
+    95
+   ],
+   "stored": "filler",
+   "type": "canon",
+   "change": true,
+   "confidence": "high",
+   "why": "C/B under T30 — a power-up later fights depend on, which is Sean's own named B example. (1) Frieza declares that his mental training in Hell has removed the Golden form's stamina drain and names himself TRUE GOLDEN FRIEZA (fandom and Kanzenshuu both: 'his energy control skills have greatly improved, making him into the True Golden Freeza'). That is the form he actually fights the tournament in — ep 108 (vs Gohan), ep 124 (vs Dyspo), ep 125 (vs Top) all name True Golden Frieza in their battle lists. The manga states the same node in a clause in ch 32: 'Goku says that somehow Frieza has grown even stronger, and Frieza says that he trained in thousands of simulations of image training.' (2) The episode ends on Goku vs Frieza — which ch 32 has off-page: its Battles list reads 'Goku vs. Frieza (Final Form) (off-screen)' and the two arrive at Capsule Corp 'battered and bruised from a battle'. The assassin battle is the anime's telling of that occasion, and ep 125 depends on it. The stored filler typing came from the manga-relative content test (one restaged ch-32 scene); under T30 it does not survive.",
+   "sources": [
+    "https://dragonball.fandom.com/api.php?action=parse&page=Most%20Heinous%21%20Most%20Evil%21%20Frieza%27s%20Rampage%21&prop=wikitext&format=json",
+    "https://dragonball.fandom.com/api.php?action=parse&page=The%20Super%20Warriors%20Gather%21%20Part%202&prop=wikitext&format=json",
+    "https://www.kanzenshuu.com/episode/super/eps-095/",
+    "https://dragonball.fandom.com/api.php?action=parse&page=Frieza%20and%20Frost%21%20A%20Mutual%20Malevolence%3F&prop=wikitext&format=json",
+    "https://dragonball.fandom.com/api.php?action=parse&page=A%20Storm-and-Stress%20Assault%21%20Gohan%27s%20Last%20Stand%21&prop=wikitext&format=json",
+    "https://dragonball.fandom.com/api.php?action=parse&page=A%20Commanding%20Presence%21%20The%20Advent%20of%20Top%20the%20Destroyer%21&prop=wikitext&format=json"
+   ]
+  }
+ ],
+ "confirmations": [
+  {
+   "episode": 79,
+   "standing": "B",
+   "chain": "Node = the Zeno Expo (ch 28 calls it; ch 30 says the tournament proceeds because the Zenos enjoyed it). Depends on it: ep 98 (Goku fights the Trio of Danger again and the episode says so — 'Bergamo hid his power in the Zeno Expo'); ep 81-82 (Top, first seen cloaked here, intrudes). Honest limit: Buu's own win leads nowhere — Buu never fights the tournament (ep 91's hibernation) — and no chapter page lists ep 79.",
+   "sources": [
+    "https://dragonball.fandom.com/api.php?action=parse&page=The%209th%20Universe%27s%20Kicking%20Basil%20vs.%20The%207th%20Universe%27s%20Majin%20Buu%21%21&prop=wikitext&format=json",
+    "https://dragonball.fandom.com/api.php?action=parse&page=The%20Gods%20of%20Destruction%20From%20All%2012%20Universes&prop=wikitext&format=json",
+    "https://dragonball.fandom.com/api.php?action=parse&page=The%20Man%20Named%20Jiren&prop=wikitext&format=json",
+    "https://dragonball.fandom.com/api.php?action=parse&page=Ah%2C%20the%20Uncertainty%21%20A%20Universe%20Despairs%21&prop=wikitext&format=json",
+    "https://www.kanzenshuu.com/episode/super/eps-079/"
+   ]
+  },
+  {
+   "episode": 80,
+   "standing": "B",
+   "chain": "Node = the Expo + the public stakes. Depends on it: every tournament row (the erasure stipulation and the mortal-level rankings are announced here, and ch 30 announces the same); ep 88 → ep 90 (Piccolo trains and tests Gohan BECAUSE of his showing here — ep 88 states it); ep 98 (the ki barrier against Lavender's poison, ja-WP ラベンダー).",
+   "sources": [
+    "https://dragonball.fandom.com/api.php?action=parse&page=Awaken%20Your%20Dormant%20Fighting%20Spirit%21%20Gohan%27s%20Fight%21&prop=wikitext&format=json",
+    "https://dragonball.fandom.com/api.php?action=parse&page=The%20Man%20Named%20Jiren&prop=wikitext&format=json",
+    "https://dragonball.fandom.com/api.php?action=parse&page=Gohan%20and%20Piccolo%20Master%20and%20Pupil%20Clash%20in%20Max%20Training%21&prop=wikitext&format=json",
+    "https://dragonball.fandom.com/api.php?action=parse&page=Ah%2C%20the%20Uncertainty%21%20A%20Universe%20Despairs%21&prop=wikitext&format=json",
+    "https://ja.wikipedia.org/wiki/%E3%83%89%E3%83%A9%E3%82%B4%E3%83%B3%E3%83%9C%E3%83%BC%E3%83%AB%E8%B6%85%E3%81%AE%E7%99%BB%E5%A0%B4%E4%BA%BA%E7%89%A9",
+    "https://www.kanzenshuu.com/episode/super/eps-080/"
+   ]
+  },
+  {
+   "episode": 81,
+   "standing": "B",
+   "chain": "Node = the Expo's conclusion and the tournament's ruleset. Depends on it: ep 82 (Top attacks Goku as 'the enemy of all universes' — the grudge Bergamo manufactures here; fandom ep-82 Differences and ja-WP トッポ both say the manga's Top has no such grudge); eps 97-131 (the ring-out/48-minute/80-fighter rules announced at the end of this episode; ch 30 gives the same rules).",
+   "sources": [
+    "https://dragonball.fandom.com/api.php?action=parse&page=Bergamo%20the%20Crusher%20vs.%20Goku%21%20Whose%20Strength%20Reaches%20the%20Wild%20Blue%20Yonder%3F&prop=wikitext&format=json",
+    "https://dragonball.fandom.com/api.php?action=parse&page=Goku%20Must%20Pay%20The%20Warrior%20of%20Justice%20Top%20Barges%20In%21&prop=wikitext&format=json",
+    "https://dragonball.fandom.com/api.php?action=parse&page=The%20Man%20Named%20Jiren&prop=wikitext&format=json",
+    "https://dragonball.fandom.com/api.php?action=parse&page=Toppo%2C%20Universe%2011%20God%20of%20Destruction%20Candidate%21&prop=wikitext&format=json",
+    "https://ja.wikipedia.org/wiki/%E3%83%89%E3%83%A9%E3%82%B4%E3%83%B3%E3%83%9C%E3%83%BC%E3%83%AB%E8%B6%85%E3%81%AE%E7%99%BB%E5%A0%B4%E4%BA%BA%E7%89%A9"
+   ]
+  },
+  {
+   "episode": 87,
+   "standing": "C",
+   "chain": "Node = Android 17 joins Team Universe 7 — ch 31 carries it ('Android 17 eventually agrees to enter after believing that he owes Krillin for having the bomb taken out of him'; ch 31's episode= field lists ep 87). Depends on it: 17 fights the whole tournament and is Universe 7's last man standing, winning it and making the wish that restores the erased universes (ep 131). The poacher raid is not a block beside the recruitment — it is the anime's mechanism FOR it ('Android 17 agrees to join the Tournament of Power after Goku helps him save the island from the poachers'), and ch 31 has its miniature (Goku helps 17 remove the poachers from the island).",
+   "sources": [
+    "https://dragonball.fandom.com/api.php?action=parse&page=Hunt%20the%20Poaching%20Ring%21%20Goku%20and%20Android%2017%27s%20Joint%20Struggle%21&prop=wikitext&format=json",
+    "https://dragonball.fandom.com/api.php?action=parse&page=The%20Super%20Warriors%20Gather%21&prop=wikitext&format=json",
+    "https://www.kanzenshuu.com/episode/super/eps-087/",
+    "https://dragonball.fandom.com/api.php?action=parse&page=First%20Time%20Exchanging%20Blows%21%20Android%2017%20vs.%20Goku%21%21&prop=wikitext&format=json"
+   ]
+  },
+  {
+   "episode": 88,
+   "standing": "C",
+   "chain": "Node = Piccolo trains Gohan back to Potential Unleashed. The manga has it off-page and says so on both ends: ch 31 closes with Piccolo taking senzu and declaring he will train Gohan in time for the tournament, and ch 39 states the result — 'Piccolo tells Krillin that in the brief period of their training, Gohan has regained his sense of battle and is now more powerful than he has ever been'; fandom's ep-88 Differences: 'Though Gohan did still train with Piccolo prior to the Tournament in the manga, it was never shown unlike in the anime.' Depends on it: ep 90 (the test), ep 103 (Gohan transforms into Potential Unleashed on screen to face Obni), eps 118 and 124 (Gohan fights the endgame in it), and the Gohan-Piccolo double-team the two agree to here, used from ep 98. The Cabba/Renso scene is the anime's route into ch 32's Caulifla recruitment (ep 89).",
+   "sources": [
+    "https://dragonball.fandom.com/api.php?action=parse&page=Gohan%20and%20Piccolo%20Master%20and%20Pupil%20Clash%20in%20Max%20Training%21&prop=wikitext&format=json",
+    "https://dragonball.fandom.com/api.php?action=parse&page=The%20Super%20Warriors%20Gather%21&prop=wikitext&format=json",
+    "https://dragonball.fandom.com/api.php?action=parse&page=Sign%20of%20Son%20Goku%27s%20Awakening&prop=wikitext&format=json",
+    "https://www.kanzenshuu.com/episode/super/eps-088/",
+    "https://dragonball.fandom.com/api.php?action=parse&page=Gohan%2C%20Get%20Ruthless%21%20Showdown%20with%20the%2010th%20Universe%21&prop=wikitext&format=json"
+   ]
+  },
+  {
+   "episode": 94,
+   "standing": "C",
+   "chain": "Node = Frieza's 24-hour revival and the team's assembly, both in ch 32. Depends on it: the tenth-member roster of eps 96-131; and ep 125, where the anime-only assassin plot is explicitly cashed (Frieza blocks Top's Energy of Destruction 'remembering dealing with this energy prior to the tournament').",
+   "sources": [
+    "https://dragonball.fandom.com/api.php?action=parse&page=The%20Evil%20Emperor%20Returns%21%20A%20Reception%20from%20Mysterious%20Assassins%3F&prop=wikitext&format=json",
+    "https://dragonball.fandom.com/api.php?action=parse&page=The%20Super%20Warriors%20Gather%21%20Part%202&prop=wikitext&format=json",
+    "https://www.kanzenshuu.com/episode/super/eps-094/",
+    "https://dragonball.fandom.com/api.php?action=parse&page=A%20Commanding%20Presence%21%20The%20Advent%20of%20Top%20the%20Destroyer%21&prop=wikitext&format=json"
+   ]
+  },
+  {
+   "episode": 95,
+   "standing": "C",
+   "chain": "Node = Frieza's power-up (ch 32: 'thousands of simulations of image training'; the anime names it True Golden Frieza) and the Goku-vs-Frieza fight ch 32 runs off-screen. Depends on it: eps 108, 124 and 125, whose battle lists all name True Golden Frieza — the form exists because of this episode; and ep 125's Energy-of-Destruction callback.",
+   "sources": [
+    "https://dragonball.fandom.com/api.php?action=parse&page=Most%20Heinous%21%20Most%20Evil%21%20Frieza%27s%20Rampage%21&prop=wikitext&format=json",
+    "https://dragonball.fandom.com/api.php?action=parse&page=The%20Super%20Warriors%20Gather%21%20Part%202&prop=wikitext&format=json",
+    "https://www.kanzenshuu.com/episode/super/eps-095/",
+    "https://dragonball.fandom.com/api.php?action=parse&page=Frieza%20and%20Frost%21%20A%20Mutual%20Malevolence%3F&prop=wikitext&format=json",
+    "https://dragonball.fandom.com/api.php?action=parse&page=A%20Storm-and-Stress%20Assault%21%20Gohan%27s%20Last%20Stand%21&prop=wikitext&format=json",
+    "https://dragonball.fandom.com/api.php?action=parse&page=A%20Commanding%20Presence%21%20The%20Advent%20of%20Top%20the%20Destroyer%21&prop=wikitext&format=json"
+   ]
+  },
+  {
+   "episode": 98,
+   "standing": "C",
+   "chain": "Node = Universe 9 wiped out and erased — ch 34 is titled 'The First Doomed Universe' and ends on the same erasure (different hands: Frost sweeps U9's rank and file, Frieza takes the Trio of Danger; the anime gives them to Goku and Vegeta). Depends on it: the first erasure is the stake every later row plays under, and the fighter count starts here. This episode also cashes eps 79-81 by name.",
+   "sources": [
+    "https://dragonball.fandom.com/api.php?action=parse&page=Ah%2C%20the%20Uncertainty%21%20A%20Universe%20Despairs%21&prop=wikitext&format=json",
+    "https://dragonball.fandom.com/api.php?action=parse&page=The%20First%20Doomed%20Universe&prop=wikitext&format=json",
+    "https://www.kanzenshuu.com/episode/super/eps-098/",
+    "https://ja.wikipedia.org/wiki/%E3%83%89%E3%83%A9%E3%82%B4%E3%83%B3%E3%83%9C%E3%83%BC%E3%83%AB%E8%B6%85%E3%81%AE%E7%99%BB%E5%A0%B4%E4%BA%BA%E7%89%A9"
+   ]
+  },
+  {
+   "episode": 99,
+   "standing": "C",
+   "chain": "Node = Krillin's elimination by Frost — ch 34 has it in one beat ('Frost takes the opportunity to knock off a distracted Krillin'). The eliminations the anime gives Krillin and 18 all happen in the manga by other hands (Dium by Android 17; Shosa by the rampaging Kale; ja-WP マジョラ 「漫画版では戦闘シーンが無いまま脱落していた」). Depends on it: Universe 7 is down to nine, and Krillin is in the stands for the rest — which ch 36 itself needs, since it is Krillin shouting from the stands that breaks Ribrianne's confidence and lets Android 18 turn that fight around.",
+   "sources": [
+    "https://dragonball.fandom.com/api.php?action=parse&page=Show%20Them%21%20Krillin%27s%20Underlying%20Strength%21&prop=wikitext&format=json",
+    "https://dragonball.fandom.com/api.php?action=parse&page=The%20First%20Doomed%20Universe&prop=wikitext&format=json",
+    "https://dragonball.fandom.com/api.php?action=parse&page=Quirky%20Competitors&prop=wikitext&format=json",
+    "https://ja.wikipedia.org/wiki/%E3%83%89%E3%83%A9%E3%82%B4%E3%83%B3%E3%83%9C%E3%83%BC%E3%83%AB%E8%B6%85%E3%81%AE%E7%99%BB%E5%A0%B4%E4%BA%BA%E7%89%A9",
+    "https://www.kanzenshuu.com/episode/super/eps-099/"
+   ]
+  },
+  {
+   "episode": 102,
+   "standing": "C",
+   "chain": "Node = Universe 2's Kamikaze Fireballs go on the offensive — ch 36 carries it (they take on Android 18 in their transformed state; Ribrianne's beauty-powered strength fails her). Both fighters the anime eliminates here are eliminated in the manga too, by other hands (ja-WP ビカル and カクンサ). Depends on it: Universe 2's roster is cut down here, which eps 117-118 and ch 38's erasure of Universe 2 finish.",
+   "sources": [
+    "https://dragonball.fandom.com/api.php?action=parse&page=The%20Power%20of%20Love%20Explodes%3F%20The%202nd%20Universe%27s%20Witchy%20Warriors%21&prop=wikitext&format=json",
+    "https://dragonball.fandom.com/api.php?action=parse&page=Quirky%20Competitors&prop=wikitext&format=json",
+    "https://ja.wikipedia.org/wiki/%E3%83%89%E3%83%A9%E3%82%B4%E3%83%B3%E3%83%9C%E3%83%BC%E3%83%AB%E8%B6%85%E3%81%AE%E7%99%BB%E5%A0%B4%E4%BA%BA%E7%89%A9",
+    "https://www.kanzenshuu.com/episode/super/eps-102/"
+   ]
+  },
+  {
+   "episode": 103,
+   "standing": "C",
+   "chain": "Node = Universe 10's elimination and erasure — both tellings carry it (the manga makes U10 the fifth erased, ch 38; the anime the second). Botamo's elimination is ch 36's (by Android 17, one punch), Obni's and Rubalt's are ch 38's (by Kale and by Frieza); ja-WP's Obni entry has him as Universe 10's last man in the manga too. Depends on it: a universe leaves the board, and Gohan fights in Potential Unleashed on screen from here — the state the manga simply keeps him in throughout.",
+   "sources": [
+    "https://dragonball.fandom.com/api.php?action=parse&page=Gohan%2C%20Get%20Ruthless%21%20Showdown%20with%20the%2010th%20Universe%21&prop=wikitext&format=json",
+    "https://dragonball.fandom.com/api.php?action=parse&page=Universe%206%27s%20Last%20Resort&prop=wikitext&format=json",
+    "https://dragonball.fandom.com/api.php?action=parse&page=Quirky%20Competitors&prop=wikitext&format=json",
+    "https://ja.wikipedia.org/wiki/%E3%83%89%E3%83%A9%E3%82%B4%E3%83%B3%E3%83%9C%E3%83%BC%E3%83%AB%E8%B6%85%E3%81%AE%E7%99%BB%E5%A0%B4%E4%BA%BA%E7%89%A9",
+    "https://www.kanzenshuu.com/episode/super/eps-103/"
+   ]
+  },
+  {
+   "episode": 104,
+   "standing": "C",
+   "chain": "Node = Goku and Hit's united front against Universe 11's speed — ch 35 ('Hit vs. Jiren') has the same configuration: Goku faces Top AND Dyspo, Hit takes on Jiren, and Goku joins Hit against him. K'nsi is eliminated in both tellings (by Hit in the anime, by Kefla in the manga). Depends on it: ep 109 (Goku's own assault on Jiren) and ep 111 (Hit eliminated by Jiren) proceed from the alliance formed here; ch 35 does the same work.",
+   "sources": [
+    "https://dragonball.fandom.com/api.php?action=parse&page=A%20Transcendent%20Light-Speed%20Battle%20Erupts%21%20Goku%20and%20Hit%27s%20United%20Front%21&prop=wikitext&format=json",
+    "https://dragonball.fandom.com/api.php?action=parse&page=Hit%20vs.%20Jiren&prop=wikitext&format=json",
+    "https://www.kanzenshuu.com/episode/super/eps-104/"
+   ]
+  },
+  {
+   "episode": 105,
+   "standing": "B",
+   "chain": "Node = three Universe 4 eliminations plus Master Roshi's showcase. All three fighters are eliminated in the manga too — ja-WP: キャウェイ 「漫画版では戦闘シーンが無いまま脱落していた」, ダーコリ 「侮っていたケールから強烈な反撃を食らい返り討ちにされた」, ガノス 「暴走したケールに太刀打ちできずにシャンツァと共に落とされた」 — and in ch 38 Ganos's fall is the elimination that erases Universe 4 outright: eliminations the tournament count depends on. Depends on it inside the anime's telling: Roshi's Max Power state and his Evil Containment Wave are established here and are the entire mechanism of ep 107 (Frost's Evil Containment Wave Reflection, Roshi freeing Vegeta, Roshi's exit). The manga puts Roshi's showcase and his 'how to move well' teaching in ch 39, where it triggers Goku's Ultra Instinct — same node, different place. No chapter page lists ep 105; the correspondence is node-level (the ep-90 shape).",
+   "sources": [
+    "https://dragonball.fandom.com/api.php?action=parse&page=A%20Valiant%20Fight%21%20Master%20Roshi%27s%20Blaze%20of%20Glory%21&prop=wikitext&format=json",
+    "https://dragonball.fandom.com/api.php?action=parse&page=Universe%206%27s%20Last%20Resort&prop=wikitext&format=json",
+    "https://dragonball.fandom.com/api.php?action=parse&page=Sign%20of%20Son%20Goku%27s%20Awakening&prop=wikitext&format=json",
+    "https://ja.wikipedia.org/wiki/%E3%83%89%E3%83%A9%E3%82%B4%E3%83%B3%E3%83%9C%E3%83%BC%E3%83%AB%E8%B6%85%E3%81%AE%E7%99%BB%E5%A0%B4%E4%BA%BA%E7%89%A9",
+    "https://www.kanzenshuu.com/episode/super/eps-105/",
+    "https://dragonball.fandom.com/api.php?action=parse&page=Revenge%20%E2%80%98%E2%80%98F%E2%80%99%E2%80%99%21%20A%20Cunning%20Trap%20is%20Set%3F&prop=wikitext&format=json"
+   ]
+  },
+  {
+   "episode": 106,
+   "standing": "C",
+   "chain": "Node = Tien Shinhan's elimination — ch 34 carries it ('Frost suddenly charges at Tien and lands a hard punch, eliminating him'); the anime gives it to Harmira. Harmira, Prum and Dr. Rota are all eliminated in both tellings (ja-WP ハーミラ 「その後は戦闘シーンが無いまま脱落していた」; Prum by Android 18 in the manga). Depends on it: Universe 7 is down to eight and Tien is out for the rest of the tournament — the roster the endgame counts.",
+   "sources": [
+    "https://dragonball.fandom.com/api.php?action=parse&page=Find%20them%20Out%21%20Deathmatch%20with%20a%20Furtive%20Attacker%21&prop=wikitext&format=json",
+    "https://dragonball.fandom.com/api.php?action=parse&page=The%20First%20Doomed%20Universe&prop=wikitext&format=json",
+    "https://ja.wikipedia.org/wiki/%E3%83%89%E3%83%A9%E3%82%B4%E3%83%B3%E3%83%9C%E3%83%BC%E3%83%AB%E8%B6%85%E3%81%AE%E7%99%BB%E5%A0%B4%E4%BA%BA%E7%89%A9"
+   ]
+  },
+  {
+   "episode": 107,
+   "standing": "C",
+   "chain": "Node = Master Roshi's exit and the Frieza-Frost axis. Ch 34 is where Frieza allies with Frost and where Frost turns on Master Roshi with Goku stepping in to block — the same configuration this episode plays at length; Auta Magetta and Maji-Kayo are eliminated in both tellings (ch 38, by Kale). Roshi's elimination is a node both carry: the manga holds it to ch 39, where Jiren removes him after his teaching moment (ch 39's episode= field lists ep 107). Depends on it: Universe 7 down to seven, and Goku freed from covering Roshi.",
+   "sources": [
+    "https://dragonball.fandom.com/api.php?action=parse&page=Revenge%20%E2%80%98%E2%80%98F%E2%80%99%E2%80%99%21%20A%20Cunning%20Trap%20is%20Set%3F&prop=wikitext&format=json",
+    "https://dragonball.fandom.com/api.php?action=parse&page=The%20First%20Doomed%20Universe&prop=wikitext&format=json",
+    "https://dragonball.fandom.com/api.php?action=parse&page=Sign%20of%20Son%20Goku%27s%20Awakening&prop=wikitext&format=json",
+    "https://dragonball.fandom.com/api.php?action=parse&page=Universe%206%27s%20Last%20Resort&prop=wikitext&format=json"
+   ]
+  },
+  {
+   "episode": 109,
+   "standing": "C",
+   "chain": "Node = Goku's first sustained assault on Jiren fails completely — ch 35 has it (Instant Transmission, a barrage and the Burst Kamehameha cannot move Jiren an inch; Whis tells Krillin from the stands that Goku has nothing stronger available). Depends on it: ep 110, where being caught in the Spirit Bomb's own blast pushes Goku into Ultra Instinct Sign; the manga reaches the same threshold in ch 39 by Kaioken exhaustion. The wall Goku must pass is built here in both tellings.",
+   "sources": [
+    "https://dragonball.fandom.com/api.php?action=parse&page=The%20Mightiest%20Enemy%20Zeroes%20in%20on%20Goku%21%20Launch%20the%20Knockout%20Spirit%20Bomb%20Now%21&prop=wikitext&format=json",
+    "https://dragonball.fandom.com/api.php?action=parse&page=Hit%20vs.%20Jiren&prop=wikitext&format=json",
+    "https://dragonball.fandom.com/api.php?action=parse&page=Sign%20of%20Son%20Goku%27s%20Awakening&prop=wikitext&format=json",
+    "https://dragonball.fandom.com/api.php?action=parse&page=Goku%20Enkindled%21%20The%20Awakened%20One%27s%20New%20Ultra%20Instinct%21&prop=wikitext&format=json"
+   ]
+  }
+ ],
+ "annotations": [
+  {
+   "episodes": [
+    79,
+    80,
+    81
+   ],
+   "kind": "divergence",
+   "chapters": "28-30",
+   "note": "RE-NOTED, not withdrawn, and now sits on canon rows. The stored fact — that the anime's Zeno Expo and the manga's Zen Exhibition Match are different matches — is exactly right and is stated on both chapter pages: ch 28/29 'In the anime, prior to the Tournament, the Zeno Expo took place involving three fighters from Universe 7 matched up against three fighters from Universe 9. In the manga, instead of this there was a match between all of the Gods of Destruction, which is cancelled as the Omni-Kings can't follow the movements and replaced with a single match between Goku and Top.' What changes is what it implies: under T30 a different telling of a shared node is a divergence on a canon row, not zero standing. The range runs to ch 30 because the mortal-level ranking, the erasure stipulation and the tournament's rules — eps 80 and 81's second half — are ch 30's content, and ch 30 states that the tournament proceeds because the Zenos enjoyed the Expo."
+  },
+  {
+   "episodes": [
+    94,
+    95
+   ],
+   "kind": "partial",
+   "chapters": "32",
+   "note": "RE-NOTED, not withdrawn (the ep-91 precedent). As a statement of WHERE the counterpart pages are, the stored partial{32} is still right: ch 32 is the chapter these two episodes correspond to, and its episode= field lists both. Its other half — 'only one restaged scene has source standing' — was the manga-relative content test and does not decide the type under T30: ch 32 carries the 24-hour revival, the Capsule-Corp assembly, Frieza's image-training power-up and the off-screen Goku-vs-Frieza fight, which is most of what these two episodes are about."
+  },
+  {
+   "episodes": [
+    94,
+    95
+   ],
+   "kind": "divergence",
+   "chapters": "32",
+   "note": "Same node, different telling: the manga has no Universe 9/4 sabotage plot at all ('Universes 9 nor 4 never tried to sabotage Universe 7 chance of entering the Tournament of Power in the manga, so the Universe 9 assassins do not appear in the manga. Likewise, Goku and Frieza's battle happens off-screen'), and it stages the assembly on the morning of the tournament rather than the night before. The anime spends two episodes on what ch 32 states in two clauses."
+  },
+  {
+   "episodes": [
+    105
+   ],
+   "kind": "divergence",
+   "chapters": "38-39",
+   "note": "NEW row annotation on a canon row. The manga substitutes rather than omits: Caway, Dercori and Ganos are all eliminated, but by the rampaging Kale in ch 38 (Ganos's fall erases Universe 4) or off-page, Master Roshi never uses Max Power or the Evil Containment Wave in the tournament, and Roshi's own showcase is held to ch 39, where he eliminates a Pride Trooper and his 'we master the martial arts to conquer ourselves — let me teach you how to move well' lesson triggers Goku's Ultra Instinct Sign before Jiren removes him. This is the tie the wave-5b verifier derived; it survives the withdrawal of that wave's retype because it describes where the manga's version is, not whether the row has standing."
+  }
+ ],
+ "correspondence": [
+  {
+   "episode": 79,
+   "chapters": "28",
+   "alignment": "divergent",
+   "note": "The Zeno Expo node. ch 28 has the Grand Minister call the Zen Exhibition Match for the Future Zeno's benefit and run it as a twelve-God battle royale; the anime runs three Universe 7 vs Universe 9 matches, of which Good Buu vs Basil is the first. Top's cloaked debut here is ch 28's introduction of him as Belmod's God-of-Destruction successor. No chapter's episode= field lists ep 79 — node-level correspondence.",
+   "sources": [
+    "https://dragonball.fandom.com/api.php?action=parse&page=The%20Gods%20of%20Destruction%20From%20All%2012%20Universes&prop=wikitext&format=json",
+    "https://dragonball.fandom.com/api.php?action=parse&page=The%209th%20Universe%27s%20Kicking%20Basil%20vs.%20The%207th%20Universe%27s%20Majin%20Buu%21%21&prop=wikitext&format=json"
+   ]
+  },
+  {
+   "episode": 80,
+   "chapters": "28-30",
+   "alignment": "divergent",
+   "note": "Two halves. The match (Gohan vs Lavender) belongs to the anime's version of the Expo (ch 28-29's battle royale). The announcement that closes the episode — the mortal-level rankings, the erasure of the losing universes, the exemption of Universes 1/5/8/12 — is ch 30's content, delivered there right after the Expo. No chapter's episode= field lists ep 80.",
+   "sources": [
+    "https://dragonball.fandom.com/api.php?action=parse&page=The%20Man%20Named%20Jiren&prop=wikitext&format=json",
+    "https://dragonball.fandom.com/api.php?action=parse&page=The%20Gods%20of%20Destruction%20From%20All%2012%20Universes&prop=wikitext&format=json",
+    "https://dragonball.fandom.com/api.php?action=parse&page=Awaken%20Your%20Dormant%20Fighting%20Spirit%21%20Gohan%27s%20Fight%21&prop=wikitext&format=json",
+    "https://www.kanzenshuu.com/episode/super/eps-080/"
+   ]
+  },
+  {
+   "episode": 81,
+   "chapters": "29-30",
+   "alignment": "divergent",
+   "note": "The Expo's headline match and the ruleset. The anime plays Goku vs Bergamo in the slot ch 29 fills with Goku vs Top (which the anime relocates to ep 82), and the Grand Minister's Tournament of Power rules that close the episode are ch 30's ('The usage of weapons is banned, and an opponent must be thrown off the stage... 100 takks... all the warriors will be fighting simultaneously'). No chapter's episode= field lists ep 81.",
+   "sources": [
+    "https://dragonball.fandom.com/api.php?action=parse&page=Toppo%2C%20Universe%2011%20God%20of%20Destruction%20Candidate%21&prop=wikitext&format=json",
+    "https://dragonball.fandom.com/api.php?action=parse&page=The%20Man%20Named%20Jiren&prop=wikitext&format=json",
+    "https://dragonball.fandom.com/api.php?action=parse&page=Bergamo%20the%20Crusher%20vs.%20Goku%21%20Whose%20Strength%20Reaches%20the%20Wild%20Blue%20Yonder%3F&prop=wikitext&format=json"
+   ]
+  },
+  {
+   "episode": 87,
+   "chapters": "31",
+   "alignment": "divergent",
+   "note": "Android 17's recruitment. Bidirectional: ep 87's infobox names ch 31 and ch 31's episode= field lists 87. The manga's route is 17's debt to Krillin; the anime's is the Galactic Poacher raid, which ch 31's trivia calls out ('There is no scene about the Galactic Poachers in the manga') while ch 31 itself has Goku helping 17 clear poachers off the island.",
+   "sources": [
+    "https://dragonball.fandom.com/api.php?action=parse&page=The%20Super%20Warriors%20Gather%21&prop=wikitext&format=json",
+    "https://dragonball.fandom.com/api.php?action=parse&page=Hunt%20the%20Poaching%20Ring%21%20Goku%20and%20Android%2017%27s%20Joint%20Struggle%21&prop=wikitext&format=json"
+   ]
+  },
+  {
+   "episode": 88,
+   "chapters": "31",
+   "alignment": "divergent",
+   "note": "Gohan's training. ch 31 closes on Piccolo declaring he will train Gohan in time for the tournament; the anime spends the episode on the training itself. ch 31's episode= field lists 88. The Cabba/Renso scene is the anime's setup for ch 32's Caulifla recruitment; Renso himself 'does not appear in the manga version'.",
+   "sources": [
+    "https://dragonball.fandom.com/api.php?action=parse&page=The%20Super%20Warriors%20Gather%21&prop=wikitext&format=json",
+    "https://dragonball.fandom.com/api.php?action=parse&page=The%20Super%20Warriors%20Gather%21%20Part%202&prop=wikitext&format=json",
+    "https://dragonball.fandom.com/api.php?action=parse&page=Gohan%20and%20Piccolo%20Master%20and%20Pupil%20Clash%20in%20Max%20Training%21&prop=wikitext&format=json"
+   ]
+  },
+  {
+   "episode": 88,
+   "chapters": "39",
+   "alignment": "divergent",
+   "note": "The manga's payoff for the same node, stated rather than shown: in ch 39 Piccolo tells Krillin that 'in the brief period of their training, Gohan has regained his sense of battle and is now more powerful than he has ever been'.",
+   "sources": [
+    "https://dragonball.fandom.com/api.php?action=parse&page=Sign%20of%20Son%20Goku%27s%20Awakening&prop=wikitext&format=json",
+    "https://dragonball.fandom.com/api.php?action=parse&page=Gohan%20and%20Piccolo%20Master%20and%20Pupil%20Clash%20in%20Max%20Training%21&prop=wikitext&format=json"
+   ]
+  },
+  {
+   "episode": 94,
+   "chapters": "32",
+   "alignment": "divergent",
+   "note": "Frieza's 24-hour revival and the Universe 7 assembly at Capsule Corporation. ch 32's episode= field lists 94; ep 94's infobox names ch 32. The manga runs the assembly on the morning of the tournament and never shows Baba's palace.",
+   "sources": [
+    "https://dragonball.fandom.com/api.php?action=parse&page=The%20Super%20Warriors%20Gather%21%20Part%202&prop=wikitext&format=json",
+    "https://dragonball.fandom.com/api.php?action=parse&page=The%20Evil%20Emperor%20Returns%21%20A%20Reception%20from%20Mysterious%20Assassins%3F&prop=wikitext&format=json"
+   ]
+  },
+  {
+   "episode": 94,
+   "chapters": null,
+   "alignment": "anime_only",
+   "note": "The Universe 4 / Universe 9 sabotage plot (Quitela persuades Sidra; Roh sends assassins) and the handover of Monster Island to Trunks, Goten and Marron. ch 32: 'Universes 9 nor 4 never tried to sabotage Universe 7 chance of entering the Tournament of Power in the manga.' Not detached padding — ep 125 depends on it.",
+   "sources": [
+    "https://dragonball.fandom.com/api.php?action=parse&page=The%20Super%20Warriors%20Gather%21%20Part%202&prop=wikitext&format=json",
+    "https://dragonball.fandom.com/api.php?action=parse&page=A%20Commanding%20Presence%21%20The%20Advent%20of%20Top%20the%20Destroyer%21&prop=wikitext&format=json"
+   ]
+  },
+  {
+   "episode": 95,
+   "chapters": "32",
+   "alignment": "divergent",
+   "note": "Frieza's power-up and the Goku-vs-Frieza fight. ch 32 states the power-up in a clause ('he trained in thousands of simulations of image training') where the anime stages it as the True Golden Frieza declaration, and runs the fight off-screen — its Battles list reads 'Goku vs. Frieza (Final Form) (off-screen)' and the two arrive 'battered and bruised from a battle'. ch 32's episode= field lists 95.",
+   "sources": [
+    "https://dragonball.fandom.com/api.php?action=parse&page=The%20Super%20Warriors%20Gather%21%20Part%202&prop=wikitext&format=json",
+    "https://dragonball.fandom.com/api.php?action=parse&page=Most%20Heinous%21%20Most%20Evil%21%20Frieza%27s%20Rampage%21&prop=wikitext&format=json",
+    "https://www.kanzenshuu.com/episode/super/eps-095/"
+   ]
+  },
+  {
+   "episode": 95,
+   "chapters": null,
+   "alignment": "anime_only",
+   "note": "The Universe 9 assassin battle, Sidra's Energy of Destruction, and Frieza's bid to defect to Universe 9. Absent from the manga; cashed in ep 125.",
+   "sources": [
+    "https://dragonball.fandom.com/api.php?action=parse&page=The%20Super%20Warriors%20Gather%21%20Part%202&prop=wikitext&format=json",
+    "https://dragonball.fandom.com/api.php?action=parse&page=Most%20Heinous%21%20Most%20Evil%21%20Frieza%27s%20Rampage%21&prop=wikitext&format=json",
+    "https://dragonball.fandom.com/api.php?action=parse&page=A%20Commanding%20Presence%21%20The%20Advent%20of%20Top%20the%20Destroyer%21&prop=wikitext&format=json"
+   ]
+  },
+  {
+   "episode": 98,
+   "chapters": "34",
+   "alignment": "divergent",
+   "note": "Universe 9 wiped out and erased first. Same node, different hands: in ch 34 Frost eliminates Universe 9's rank and file and Frieza takes the Trio of Danger; in the anime Goku and Vegeta do it with a unison God Final Kamehameha. ch 34's episode= field lists 98.",
+   "sources": [
+    "https://dragonball.fandom.com/api.php?action=parse&page=The%20First%20Doomed%20Universe&prop=wikitext&format=json",
+    "https://dragonball.fandom.com/api.php?action=parse&page=Ah%2C%20the%20Uncertainty%21%20A%20Universe%20Despairs%21&prop=wikitext&format=json"
+   ]
+  },
+  {
+   "episode": 99,
+   "chapters": "34",
+   "alignment": "divergent",
+   "note": "Krillin eliminated by Frost — ch 34 does it in one beat on 'a distracted Krillin' with nothing else to his name, where the anime gives him four eliminations first (Dium, Shosa, Majora, and the assist on Bota Magetta). ch 34's episode= field lists 99.",
+   "sources": [
+    "https://dragonball.fandom.com/api.php?action=parse&page=The%20First%20Doomed%20Universe&prop=wikitext&format=json",
+    "https://dragonball.fandom.com/api.php?action=parse&page=Show%20Them%21%20Krillin%27s%20Underlying%20Strength%21&prop=wikitext&format=json",
+    "https://ja.wikipedia.org/wiki/%E3%83%89%E3%83%A9%E3%82%B4%E3%83%B3%E3%83%9C%E3%83%BC%E3%83%AB%E8%B6%85%E3%81%AE%E7%99%BB%E5%A0%B4%E4%BA%BA%E7%89%A9"
+   ]
+  },
+  {
+   "episode": 102,
+   "chapters": "36",
+   "alignment": "divergent",
+   "note": "Universe 2's Kamikaze Fireballs. ch 36 confines them to a fight with Android 18 and shows them only transformed; the anime widens the same offensive to Goku, Vegeta and Android 17 and gives 17 the Bikal and Kakunsa eliminations the manga assigns elsewhere. ch 36's episode= field lists 102.",
+   "sources": [
+    "https://dragonball.fandom.com/api.php?action=parse&page=Quirky%20Competitors&prop=wikitext&format=json",
+    "https://dragonball.fandom.com/api.php?action=parse&page=The%20Power%20of%20Love%20Explodes%3F%20The%202nd%20Universe%27s%20Witchy%20Warriors%21&prop=wikitext&format=json",
+    "https://ja.wikipedia.org/wiki/%E3%83%89%E3%83%A9%E3%82%B4%E3%83%B3%E3%83%9C%E3%83%BC%E3%83%AB%E8%B6%85%E3%81%AE%E7%99%BB%E5%A0%B4%E4%BA%BA%E7%89%A9"
+   ]
+  },
+  {
+   "episode": 103,
+   "chapters": "36, 38",
+   "alignment": "divergent",
+   "note": "Universe 10's fall. Botamo's elimination is ch 36's (Android 17, one punch); Obni's and Rubalt's are ch 38's (Kale; Frieza), where Universe 10 is the fifth universe erased against the anime's second. ch 38's episode= field lists 103.",
+   "sources": [
+    "https://dragonball.fandom.com/api.php?action=parse&page=Universe%206%27s%20Last%20Resort&prop=wikitext&format=json",
+    "https://dragonball.fandom.com/api.php?action=parse&page=Quirky%20Competitors&prop=wikitext&format=json",
+    "https://dragonball.fandom.com/api.php?action=parse&page=Gohan%2C%20Get%20Ruthless%21%20Showdown%20with%20the%2010th%20Universe%21&prop=wikitext&format=json"
+   ]
+  },
+  {
+   "episode": 104,
+   "chapters": "35",
+   "alignment": "divergent",
+   "note": "Goku and Hit against Universe 11's speed. ch 35 has Goku fighting Top and Dyspo together and then joining Hit against Jiren; the anime pairs Hit with Dyspo directly and has Goku use Super Saiyan God, which he never uses in the manga's tournament. ch 35's episode= field lists 104.",
+   "sources": [
+    "https://dragonball.fandom.com/api.php?action=parse&page=Hit%20vs.%20Jiren&prop=wikitext&format=json",
+    "https://dragonball.fandom.com/api.php?action=parse&page=A%20Transcendent%20Light-Speed%20Battle%20Erupts%21%20Goku%20and%20Hit%27s%20United%20Front%21&prop=wikitext&format=json"
+   ]
+  },
+  {
+   "episode": 105,
+   "chapters": "38-39",
+   "alignment": "divergent",
+   "note": "Node-level, not page-level — no chapter's episode= field lists ep 105. The three Universe 4 fighters Roshi eliminates here are all eliminated in ch 38 by the rampaging Kale or off-page (Ganos's fall is what erases Universe 4), and Master Roshi's own showcase is held to ch 39, where he eliminates Kahseral and his lesson on 'how to move well' triggers Goku's Ultra Instinct Sign before Jiren removes him.",
+   "sources": [
+    "https://dragonball.fandom.com/api.php?action=parse&page=Universe%206%27s%20Last%20Resort&prop=wikitext&format=json",
+    "https://dragonball.fandom.com/api.php?action=parse&page=Sign%20of%20Son%20Goku%27s%20Awakening&prop=wikitext&format=json",
+    "https://dragonball.fandom.com/api.php?action=parse&page=A%20Valiant%20Fight%21%20Master%20Roshi%27s%20Blaze%20of%20Glory%21&prop=wikitext&format=json",
+    "https://ja.wikipedia.org/wiki/%E3%83%89%E3%83%A9%E3%82%B4%E3%83%B3%E3%83%9C%E3%83%BC%E3%83%AB%E8%B6%85%E3%81%AE%E7%99%BB%E5%A0%B4%E4%BA%BA%E7%89%A9"
+   ]
+  },
+  {
+   "episode": 106,
+   "chapters": "34",
+   "alignment": "divergent",
+   "note": "Tien Shinhan's elimination. ch 34 has Frost do it with a single punch after Tien's Neo Tri-Beam fails; the anime gives it to Harmira at the end of a sniper hunt the manga does not run. ch 34's episode= field lists 106.",
+   "sources": [
+    "https://dragonball.fandom.com/api.php?action=parse&page=The%20First%20Doomed%20Universe&prop=wikitext&format=json",
+    "https://dragonball.fandom.com/api.php?action=parse&page=Find%20them%20Out%21%20Deathmatch%20with%20a%20Furtive%20Attacker%21&prop=wikitext&format=json"
+   ]
+  },
+  {
+   "episode": 107,
+   "chapters": "34",
+   "alignment": "divergent",
+   "note": "The Frieza-Frost axis and Frost turning on Master Roshi — ch 34 has both (Frieza's plan with Frost; Frost preparing to fight Master Roshi with Goku blocking the blow). ch 34's episode= field lists 107. NOTE the wiki contradicts itself here: ep 107's Differences say 'Frost never confronts Master Roshi or Vegeta in the manga', which ch 34's own summary refutes.",
+   "sources": [
+    "https://dragonball.fandom.com/api.php?action=parse&page=The%20First%20Doomed%20Universe&prop=wikitext&format=json",
+    "https://dragonball.fandom.com/api.php?action=parse&page=Revenge%20%E2%80%98%E2%80%98F%E2%80%99%E2%80%99%21%20A%20Cunning%20Trap%20is%20Set%3F&prop=wikitext&format=json"
+   ]
+  },
+  {
+   "episode": 107,
+   "chapters": "39",
+   "alignment": "divergent",
+   "note": "Master Roshi's elimination. ch 39's episode= field lists 107: in the manga Roshi survives to the last twelve, eliminates the Pride Trooper Kahseral, teaches Goku the lesson that triggers Ultra Instinct Sign, and is then removed by a chop from Jiren; in the anime he eliminates himself voluntarily here after freeing Vegeta from Frost's reflected Evil Containment Wave.",
+   "sources": [
+    "https://dragonball.fandom.com/api.php?action=parse&page=Sign%20of%20Son%20Goku%27s%20Awakening&prop=wikitext&format=json",
+    "https://dragonball.fandom.com/api.php?action=parse&page=Revenge%20%E2%80%98%E2%80%98F%E2%80%99%E2%80%99%21%20A%20Cunning%20Trap%20is%20Set%3F&prop=wikitext&format=json"
+   ]
+  },
+  {
+   "episode": 109,
+   "chapters": "35",
+   "alignment": "divergent",
+   "note": "Goku's first sustained assault on Jiren and its total failure. ch 35 runs it with Instant Transmission and the Burst Kamehameha and no Spirit Bomb ('Goku never uses the Spirit Bomb against Jiren in the manga'), and has Goku fight Jiren alongside Hit rather than alone. ch 35's episode= field lists 109.",
+   "sources": [
+    "https://dragonball.fandom.com/api.php?action=parse&page=Hit%20vs.%20Jiren&prop=wikitext&format=json",
+    "https://dragonball.fandom.com/api.php?action=parse&page=The%20Mightiest%20Enemy%20Zeroes%20in%20on%20Goku%21%20Launch%20the%20Knockout%20Spirit%20Bomb%20Now%21&prop=wikitext&format=json"
+   ]
+  }
+ ],
+ "repairs": [],
+ "structure": {
+  "notes": "=== 1. ROW IDENTITY (R20 — title + date, never index) ===\nAll 16 target rows were joined on the fandom episode page's Airdate against our numbering: 79 = 2017-02-19, 80 = 02-26, 81 = 03-05, 87 = 04-23, 88 = 04-30, 94 = 06-11, 95 = 06-18, 98 = 07-09, 99 = 07-16, 102 = 08-06, 103 = 08-13, 104 = 08-20, 105 = 08-27, 106 = 09-03, 107 = 09-17, 109 = 10-08 (all Sundays, the 9:00 Fuji TV slot). dragonball.fandom's 'List of Dragon Ball Super episodes' parses to 131 numbered rows with no x.5. The fandom page TITLES are localised differently from our stored titles (ours 'Universe 9's Basil The Kicker VS Universe 7's Majin Buu!!' = fandom 'The 9th Universe's Kicking Basil vs. The 7th Universe's Majin Buu!!'); the join is on the number + date, confirmed by the Japanese title on each page.\nSOURCE DEFECT WORTH A CHECK: fandom's ep-95 infobox prints 'June 17, 2017', a Saturday. Kanzenshuu has 18 June 2017 (Sunday, Fuji TV) — the slot. The 107 gap (09-03 → 09-17) is real: ja-WP's 休止 list records 2017年9月10日 preempted by FNS 27時間テレビ.\n\n=== 2. THE FINDING THAT CARRIES 79-81 (new this wave) ===\nChapter 30's opening paragraph: 'Grand Minister announces Zeno and Future Zeno, having enjoyed the ZENO EXPO, have decided to proceed with the Tournament of Power and he explains the rules the two Omni-Kings have decided.' The MANGA'S OWN PLOT depends on the Expo happening and being enjoyable — which is the T30 load-bearing test passed from the other side. ch 28 calls the Expo ('the Grand Minister announces a quick Zeno Expo and quickly creates a Tournament stage'), ch 28-29 run it as a twelve-God battle royale that the Grand Minister cancels, and ch 29 replaces it with Goku vs Top. Both chapter pages state the substitution against the anime in terms. ch 30 also carries what eps 80-81 announce: the erasure of the losing universes, the exemption of Universes 1/5/8/12, Universe 7's mortal level second from last, and the tournament's full ruleset.\n\n=== 3. THE COUNTERPART MAP FOR THESE 16 ROWS (bidirectional, recomputed) ===\nChapter-side episode= fields: ch 28 → 77,78 | ch 29 → 82 | ch 30 → 82,83,85 | ch 31 → 84,85,86,87,88,91 | ch 32 → 27,89,92,93,94,95,96 | ch 33 → 96,97,101 | ch 34 → 98,99,106,107,108 | ch 35 → 104,109,110,111 | ch 36 → 102,112,115,117,119 | ch 37 → 100,112,114 | ch 38 → 100,101,103,111,112,114,118,121 | ch 39 → 107,116,118,122,123,124 | ch 40 → 122-128. Of my 16 rows, FOUR appear in no chapter's field at all — 79, 80, 81 and 105 — which is exactly why the manga-relative test typed them filler and exactly the ep-90 shape Sean lifted at wave 5c. Their correspondence in this verdict is stated at NODE level and must never become an anchor.\n\n=== 4. DATES — WHY THESE NUMBERS ARE CORRESPONDENCE, NOT ADAPTATION (A46) ===\nEvery chapter cited here postdates its episode, most by six to twelve months: ep 79 = 2017-02-19 vs ch 28 = 2017-09-21; ep 87/88 = 2017-04-23/30 vs ch 31 = 2017-12-16; eps 94/95 = 2017-06-11/18 vs ch 32 = 2018-01-20; ep 105 = 2017-08-27 vs ch 38 = 2018-07-21 and ch 39 = 2018-08-21. No episode in this ask could have adapted the chapter it corresponds to.\n\n=== 5. WHAT WOULD HAVE MADE A ROW D, AND WHY NONE OF THESE IS ===\nThe test applied was Sean's: name the later beat that fails without this episode. Rows pass on a named dependency — an elimination or erasure the tournament count carries (98, 99, 102, 103, 105, 106, 107), a recruitment (87, 94), a power-up a later fight uses (88, 95, 109), the rules and stakes the whole tournament runs on (80, 81), or an alliance a later fight proceeds from (104). The single row whose OWN beat leads nowhere is 79 (Buu wins and then never fights the tournament at all); it is held as B on the block's node and on ep 98's explicit callback, at MEDIUM, and is named in the flags as the place a split would happen.\n\n=== 6. AFL IS STILL NOT A B/D ORACLE ===\nAFL's live buckets put 79, 80, 81, 94 and 95 in 'Anime Canon' and the tournament rows in 'Manga Canon'. The wave-5c finding stands: 'Anime Canon' means anime-original but in continuity, not load-bearing (it also covers the ruled-D rows 16/17/22/50/52/71/72). Cross-check only (R1).",
+  "order_only": []
+ },
+ "flags_for_sean": [
+  "THE FIVE RETYPES CONTRADICT A STORED RULING AND ARE PROPOSED AS REPAIRS, NOT SILENT OVERRIDES. EPISODE_TYPE_OVERRIDES (T6, Sean 2026-08-26, scripts/ingest/lib/rulings/episode-types.ts) pins 79/80/81 = filler ('fandom: entire events exclusive to the anime') and 94/95 = filler (the 2026-08-26 T28 content test: 'original episodes with one restaged ch-31 / ch-32 scene each'). Both were right under the manga-relative test and both fail T30. The T6 entry must be edited together with the type rows or the resolver re-imposes filler on the next run (P8).",
+  "NOTHING IN THIS ASK GOES TO D, AND THAT IS THE FINDING. Sixteen rows, five lifts, eleven confirmations, zero conversions to filler. The Universe Survival arc's anime-only material is not padding: it is the anime's realization of nodes ch 28-39 carry (the Expo, the recruitments, the eliminations, the power-ups). If Sean expected the re-pass to find studio padding inside the shared arc, the honest answer for THESE rows is that there is none — the D rows of this series are the ones already typed D (42-46, 68-76 and the bridge rows).",
+  "ep 79 IS THE WEAKEST OF THE FIVE (delivered MEDIUM) and is where a split would go. Against: Buu's victory leads nowhere — Buu never fights the Tournament of Power (ep 91's hibernation removes him) — and no chapter page lists ep 79. For: the Expo is a node the MANGA's plot turns on (ch 30's 'having enjoyed the Zeno Expo'), the Trio of Danger established here are what ep 98 fights and says so, and Top's cloaked debut is ch 28's introduction. If Sean wants 79 to stay filler, 80 and 81 still lift on their own (the erasure stipulation, the mortal-level rankings and the tournament's ruleset are all in these two episodes and all in ch 30).",
+  "SOURCE SELF-CONTRADICTION, flagged so nobody re-derives from the wrong half: fandom's ep-107 Differences say 'Frost never confronts Master Roshi or Vegeta in the manga', but ch 34's own summary has Frost preparing to fight Master Roshi with Goku stepping in to block. Trust the chapter page — the wave-5b verifier found the same class of error (the Differences lists are written per episode and drift).",
+  "ANNOTATION RE-NOTING, not deletion (the ep-91 precedent): the stored divergence on 79-81 and the stored partial{32} on 94-95 were written under the manga-relative test. Their factual halves are exactly right and I keep them; the half that says 'only this much has source standing' is the test T30 replaces. My proposed texts are in the annotations array. I also propose a NEW row divergence{38-39} on ep 105 — the wave-5b verifier's tie, which survives the withdrawal of that wave's retype because it describes where the manga's version is, not whether the row has standing.",
+  "ONE DATE TO CHECK (not proposed as a repair, since the ask is standings): fandom's ep-95 infobox prints 'June 17, 2017', a Saturday; Kanzenshuu has 18 June 2017, Sunday, the Fuji TV slot. If our stored date for ep 95 is 06-17 it came from the fandom typo. The ep 106 → 107 two-week gap is real (ja-WP: 2017-09-10 preempted by FNS 27時間テレビ).",
+  "NO ANCHORS, by the series ruling (A46). Four of these rows — 79, 80, 81, 105 — appear in no chapter's episode= field at all; their correspondence rows are node-level and must never be converted into a position."
+ ]
+}
