@@ -17,6 +17,16 @@ export type RetiredAnnotation = { episodes: number[]; kind: AnnotationKind };
 
 export const ENTRIES: RulingEntry<RetiredAnnotation>[] = [
   {
+    seriesId: 'dragon-ball-super',
+    ruleId: 'A45',
+    value: { episodes: [78], kind: 'rearranged' },
+    reason:
+      "The batch-18 rearranged{28} fact ('the manga announces the tournament in ch 28, same position; only the detailed rules are deferred to ch 30') is true but the KIND is wrong on a parallel telling (I40): rearranged means one work re-orders the other's material, and neither telling adapts the other — the same node staged differently is divergence{28-29}, which the wave-5c verdict writes in its place (and the correspondence rows aligned{28} + divergent{28-29} carry the position). Retired at the wave-5 apply (Sean 2026-08-28).",
+    ruledBy: 'Sean',
+    ruledOn: '2026-08-28',
+    cite: ['scripts/ingest/research/batch20/out/dragon-ball-super-w5c.json', 'scripts/ingest/research/batch20/WAVE5-RECOVERY.md'],
+  },
+  {
     seriesId: 'shugo-chara',
     ruleId: 'A45',
     value: { episodes: [74], kind: 'rearranged' },
