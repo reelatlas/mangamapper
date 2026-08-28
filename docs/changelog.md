@@ -607,6 +607,51 @@
    durable guard. Lesson for the floor rule: a >2 overshoot sourced from a
    SINGLE chart row with no corroborating content anywhere is a typo
    candidate, not an adoption candidate.
+81. ✅ **CONSOLIDATE DEEP after batch 20 wave 2 (2026-08-27; P21 — the
+   saint-seiya re-migration changed stored values, a census class was
+   added).** Steps 0-8 satisfied by §12.80's save point (system census
+   green, edges current, heal + census run, gates green; CI green again on
+   main after the absolute-path import fix). Rescan (step 9): (a) the
+   migrated series — every episode-keyed ruling points at a row (T6 / G53
+   / A44 / T26 asserted by the healer roster); the healer re-derived the
+   parity continues in OUR space; and **the batch-17 notes' PROSE still
+   narrated chapters in the +1 space** ("(ch 30)" on ep 44, whose stored
+   START is now 29) — re-spaced −1 on 27 rows (42-72), pre-marker text
+   only, each row printed (P23, clear-cut under the live rule). (b) The
+   verifier's lib finding on bleach #677: `parseCoverageSegments` split
+   only on " / ", so MU's ") /Vol" string was ONE segment and the pick was
+   right by luck — the splitter now takes `\s*\/\s*(?=Vol)` (1 test;
+   134 pass); consequence, exactly as G32 gate 0 rules it: bleach and
+   bleach-thousand-year-blood-war are UNRESOLVED ("(Bleach)" / "(TYBW
+   P4)" carry no entry marker), today's pins kept, `mu_pin_multiwork_
+   unresolved` 8 → 10 — both join the queued per-series segment rulings;
+   edges rebuilt + deployed (P3). (c) Stale cleanup (P24): flag #830
+   (eyeshield's suspected row offset) dismissed — two waves joined rows
+   18-64 to four sources 1:1; the retiresWhen worklist (9 live G53
+   entries) unchanged; permanence_violation 0, permanence_candidate 50
+   listed, none signed. Census after the deep: display 219/0,
+   ruling_violation 0, anchor_nonmonotonic 0, continue_skip_unnoted 0,
+   anchor_volume_mismatch 20 (the review queue, seiya 0), anchor_gap_
+   research 6, mu_pin_unverified 29. CAPTURE (P29, step 10): the C1 line
+   in batch 20's PROTOCOL.md and the A2 mission text ("filler boundary" →
+   ANY mid-chapter ending; the ledger's C1 wins — Sean); seven wave-2
+   traps → research-agent.md (a finale gap block is an identity question;
+   ja-WP's 通算話 column; read wiki fields in both directions / AFG's
+   column can stop / AFL+AFG are one source for types; re-derive a
+   derivation-tier fence on the PAGES; the stored volume as a chapter-
+   space check; two-valued OVA date regimes; un-cross-cutting; C2 parity
+   is the next canon row's START even backwards); two apply-batch traps
+   (marker-keyed migrations with a census proof; file-driven apply + a
+   curated overlay); the N22 record's reason amended (marker-keyed). Still
+   QUEUED for Sean (never farmed): the `anchor_volume_mismatch` ledger
+   record + its 20-row review (sailor-moon 3, black-lagoon 5, naruto 4,
+   oshi-no-ko 2, AoT 2, beastars 2, mashle 1, skip-beat 1); the day-of-
+   week audit class (six witnesses); a first-class "never adapted"
+   instrument (seiya 47, eyeshield 49-52, d-gray-man 30, shippuden 700);
+   the hxh OVA date regime; eyeshield 53/78/126/128 and bleach 156/160/161
+   T28 cards; d-gray-man 29-30 / 33-34 as side_source; `anime-only-canon`
+   in the stored 452-457 T6 reason text (history, not a type). NEXT: Sean's
+   choice — wave 3 (L-C + L-B), the review queue, or the /add-rules.
 80. ✅ **BATCH 20 WAVE 2 APPLIED — the eight small gap blocks + the
    saint-seiya re-migration (2026-08-27; Sean's rulings, Cursor
    concurring).** Research (8 verdicts, ≈1.43M) → verify (8 reports,

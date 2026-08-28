@@ -25,7 +25,7 @@ export const ENTRIES: RulingEntry[] = [
   {
     seriesId: SS, ruleId: 'N22',
     value: { shift: -1, applies_to: 'chapter / start_chapter / continue_chapter ≥ 30', note_suffix: 'space migration −1 (phantom ch 30 removed, Sean 2026-08-25)' },
-    reason: 'every saint-seiya anchor value ≥ 30 (chapter, start, continue) shifts −1 into the true 109-chapter NUMBER space — run AFTER the batch apply so the fresh wave-2 anchors (delivered in stored space; all ≤46, where only the −1 applies) convert too. series.total_chapters (249) is AniList count-space and is untouched (one display, one space)',
+    reason: 'every saint-seiya anchor value ≥ 30 (chapter, start, continue) shifts −1 into the true 109-chapter NUMBER space — run AFTER the batch apply so the fresh wave-2 anchors (delivered in stored space; all ≤46, where only the −1 applies) convert too. AMENDED 2026-08-27 (batch 20 wave 2, §12.80): the one-shot ran BEFORE the batch-17 gap-tier rows 43-72 were written in the +1 space and its v8-end guard could never re-run, so the migration is now MARKER-KEYED — every saint-seiya anchor row without the note marker shifts and is stamped (apply-wave2.ts step 0); the `anchor_volume_mismatch` census class is the outcome check (7 → 0). series.total_chapters (249) is AniList count-space and is untouched (one display, one space)',
     ruledBy: 'Sean', ruledOn: D, cite: [`${OUT}/saint-seiya-knights-of-the-zodiac.json`, SCRIPT, `${RECOVERY} §14`, '§12.47'],
   },
   // ---- 1. saint-seiya ep-31 verdict row defect

@@ -40,8 +40,12 @@ export type CoverageSegment = { volume: number; chapter: number; label: string; 
 export function parseCoverageSegments(text: string | null): CoverageSegment[] {
   if (!text) return [];
   const out: CoverageSegment[] = [];
-  // split on the " / " work separator; a segment without a Vol/Chap pair (e.g. "TBA") is dropped
-  for (const part of text.split(/\s\/\s/)) {
+  // split on the "/" work separator — MU writes " / " but also ") /Vol" (bleach:
+  // "Vol 54, Chap 479 (Bleach) /Vol 74, Chap 705 (TYBW P4)"); until batch 20
+  // wave 2 the strict `\s\/\s` left that string ONE segment and the pick was
+  // right by luck (the verifier's finding). A segment without a Vol/Chap pair
+  // (e.g. "TBA") is dropped.
+  for (const part of text.split(/\s*\/\s*(?=Vol\.?\s*\d)/i)) {
     const m = part.match(/Vol\.?\s*(\d+)\s*,?\s*Chap(?:ter)?\.?\s*(\d+)/i);
     if (!m) continue;
     const label = (part.match(/\(([^)]*)\)/)?.[1] ?? '').trim();

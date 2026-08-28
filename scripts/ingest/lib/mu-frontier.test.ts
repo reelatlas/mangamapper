@@ -57,6 +57,13 @@ describe('pickEntrySegments — controls that keep today\'s behaviour', () => {
     const b = pick('Vol 13, Chap 87 Page 15 (1997) / Vol 13, Chap 91 (Golden Age Arc) / Vol 29, Chap 249 (2017) All change/skip material', { airedEpisodes: 25, startYear: 1997, endYear: 1998 });
     expect(b.chosen).toEqual([87]); expect(b.foreign).toEqual([249]); // the bare title 'Golden Age Arc' is undecidable, not foreign — it simply is not chosen
   });
+  it('bleach: ") /Vol" (no space before the slash) still splits; "(Bleach)" and "(TYBW P4)" carry no entry marker → UNRESOLVED, today\'s pin kept (batch 20 wave 2 verifier)', () => {
+    const segs = parseCoverageSegments('Vol 54, Chap 479 (Bleach) /Vol 74, Chap 705 (TYBW P4)');
+    expect(segs.map((x) => x.chapter)).toEqual([479, 705]);
+    const p = pickEntrySegments(segs, { airedEpisodes: 366, startYear: 2004, endYear: 2012 });
+    expect(p.chosen.map((x) => x.chapter)).toEqual([479, 705]);
+    expect(p.unresolved).toBe(true);
+  });
   it('no entry marker anywhere → UNRESOLVED: every segment kept (today\'s max) and the series listed, never refused', () => {
     const p = pickEntrySegments(parseCoverageSegments('Vol 16, Chap 194 (Dragon Ball) / Vol 42, Chap 519 (DBZ/Kai)'), { airedEpisodes: 291, startYear: 1989, endYear: 1996 });
     expect(p.unresolved).toBe(true); expect(p.chosen.map((x) => x.chapter)).toEqual([194, 519]);
