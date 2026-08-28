@@ -1,0 +1,125 @@
+{
+  "series_id": "the-beginning-after-the-end",
+  "summary": "Lane C, three rows, all in the WEBCOMIC's own chapter numbering (T25; the `episode_webtoon` / page-title N, never the Tapas scene index). Ep 12 (S1 finale) HOLDS at 56 [48]: its closing 'two years later — Note the Masked Swordsman' beat is a timeskip TAG, not ch 57; ch 57's own scene is the Dragonspine Inn / Turman humiliation (fandom's fight page), which the anime never animates — AFG's own table orphans 57 (ep 12 = 48-56, ep 17 = 58-62). Ep 23 (S2 ep 11 'The King Celebrates') = 81-84 and the stored afg-continua END 84 is CONFIRMED, not repaired: the task's premise 'AFG 81-85' is not what the live page says — AFG prints 'Chapter 81, 82, 83 and 84 ... start reading from Chapter 86', an internal inconsistency of its own (85 is accounted to nobody), and the episode's four beats land exactly on 81 'Different' (Kathyln, the expulsion), 82 'The Announcement', 83 'A Ball' (Eleanor's birthday) and 84 \"A Gentleman's Agreement\" (the Gideon deal closing the episode). Ep 24 (the finale, aired 2026-06-24 after a World-Cup week's delay) is ~3/4 an ANIME-ORIGINAL arc: the antagonist Shiun, the church duel and the mana-beast attack on Xyrus City exist nowhere in the source (no fandom page for Shiun; the source runs party → uniforms → ceremony across five character synopses), and AFG types the row Filler / N-A. Its closing act does adapt one real source scene — the Xyrus Academy opening ceremony with Tessia on the student-council stage = ch 86 'Welcome to Xyrus Academy' (webcomic season 4's opener) — so I deliver ep 24 → 86 with a proposed type of `mixed` and the post-series continue at 87 (C5), naming ch 85 'Anticipation' (webcomic season 3's finale, the academy uniforms) as skipped and ch 87-88 (the Nicolas Dreyl dispute, Lilia, Clive, the source's real reunion) as unseen. The anime's night reunion is its own staging, not 88's pages — that fork and the mixed/filler fork are both in flags_for_sean.",
+  "anchors": [
+    {
+      "episode": 12,
+      "end_chapter": 56,
+      "start_chapter": 48,
+      "chapters_adapted": "48-56",
+      "volume": 6,
+      "confidence": "high",
+      "note": "HOLDS as stored (no repair). A4/A10 + 'pages, not numbers': the episode runs the guild registration under the alias Note (ch 48 'The Adventurer's Guild'), the exam, the B-rank cohort and the Beast Glades boar to ch 56 'All I Need' (the webcomic's own season-2 finale). The ch-57 ask resolves NEGATIVE: the last beat is a bare 'two years later, Arthur is famous as Note the Masked Swordsman' TAG (viewers' contemporaneous reaction: '2年後〜で無理やり終わらせた感じ'), and no page of ch 57 is animated — ch 57's content is the Dragonspine Inn scene in which the drunk B-class Turman challenges the masked swordsman and is humiliated (never animated in S1 or in S2 ep 1, which opens on an anime-original Arachne quest). A first-time TEASER is not a position (A10 sliver wording); END stays 56. Volume: the wiki's per-chapter print column shows Vol 5 through ch 52 and Vol 8 from ch 77, and Yen Press Vol 6's blurb opens after the rank examination with the Beast Glades training — ch 56 sits in Vol 6.",
+      "sources": [
+        "https://www.animefillerguide.com/anime/the-beginning-after-the-end/",
+        "https://en.wikipedia.org/wiki/The_Beginning_After_the_End",
+        "https://tbate.fandom.com/api.php?action=parse&page=Dragonspine_Inn_Accident&prop=wikitext&format=json",
+        "https://tbate.fandom.com/api.php?action=parse&page=Episode_57&prop=wikitext&format=json",
+        "https://animenian.com/31766.html",
+        "https://yenpress.com/titles/9781975373115-the-beginning-after-the-end-vol-6-comic"
+      ]
+    },
+    {
+      "episode": 23,
+      "end_chapter": 84,
+      "start_chapter": 81,
+      "chapters_adapted": "81-84",
+      "volume": 8,
+      "confidence": "high",
+      "note": "CONFIRMS the stored afg-continua END 84 and adds the START and the span (A4/A10). Beat-for-beat: Kathyln Glayder's ice wall is resolved, Jamiel Tridant lies, Vincent testifies, Arthur calls Director Cynthia Goodsky who expels the students, Kathyln invites him to tea = ch 81 'Different' (the ice wall itself closes ch 80 'A Chill in the Air', which AFG gives to ep 22); the three kingdoms' public announcement of the new continent and the unveiling of the Six Lances = ch 82 'The Announcement'; Eleanor's birthday party, the sibling dance, Lilia's reunion on the terrace = ch 83 'A Ball' (novel ch 41); Gideon reporting the approved steam engine, Arthur refusing to hand over more ideas and Gideon agreeing to supply whatever he needs = ch 84 \"A Gentleman's Agreement\" (novel ch 41-42), which is where the episode's source content stops — the party closes with the Phoenix pendants and an anime-original stinger of the hooded man. Ch 85 'Anticipation' (the academy uniforms, per Lilia Helstea/Synopsis) is NOT in this episode. Volume 8 = ch 77-88 (wiki print column; Yen Press Vol 8's blurb is exactly this block: Eleanor's birthday gift, the new continent, the coming Xyrus enrollment, the princess of Sapin).",
+      "sources": [
+        "https://www.animefillerguide.com/anime/the-beginning-after-the-end/",
+        "https://en.wikipedia.org/wiki/The_Beginning_After_the_End",
+        "https://tbate.fandom.com/api.php?action=parse&page=Kathyln_Glayder/Synopsis&prop=wikitext&format=json",
+        "https://tbate.fandom.com/api.php?action=parse&page=Lilia_Helstea/Synopsis&prop=wikitext&format=json",
+        "https://tbate.fandom.com/api.php?action=parse&page=Template:List_of_Season_3_Chapters&prop=wikitext&format=json",
+        "https://saikyo2dome-tbate.com/story/s2-11",
+        "https://animenian.com/39702.html",
+        "https://yenpress.com/titles/9798855413441-the-beginning-after-the-end-vol-8-comic"
+      ]
+    },
+    {
+      "episode": 24,
+      "end_chapter": 86,
+      "start_chapter": 86,
+      "chapters_adapted": "86",
+      "volume": 8,
+      "confidence": "medium",
+      "note": "The finale's ONLY source block: after the anime-original Shiun arc, Arthur and Elijah attend the Xyrus Academy opening ceremony and Tessia appears on the stage as a member of the student council = ch 86 'Welcome to Xyrus Academy' (novel ch 43 'Xyrus Academy'; webcomic SEASON 4's opening chapter — Tessia Eralith/Synopsis opens its Season 4 with 'Tessia was present for the opening ceremony ... along with the rest of the student council, gave an opening speech'). START = END = 86: nothing of ch 85 is evidenced on screen and everything before the ceremony is original, so there is no leading partial to carry a START (A10). Depends on the ep-24 type_correction below — under A1 a filler ruling deletes this anchor and the honest terminal falls back to ep 23 → 84 (see flags).",
+      "sources": [
+        "https://en.wikipedia.org/wiki/The_Beginning_After_the_End",
+        "https://tbate.fandom.com/api.php?action=parse&page=Tessia_Eralith/Synopsis&prop=wikitext&format=json",
+        "https://tbate.fandom.com/api.php?action=parse&page=Template:List_of_Season_4_Chapters&prop=wikitext&format=json",
+        "https://animenian.com/39702.html",
+        "https://tapas.io/series/111423/episodes?page=7&sort=OLDEST&max_limit=20"
+      ]
+    }
+  ],
+  "continue_points": [
+    {
+      "episode": 24,
+      "continue_chapter": 87,
+      "kind": "post_series",
+      "note": "C5 — the anime's furthest first-time coverage is ch 86 (the Xyrus Academy opening ceremony), so read on from ch 87 'Miss President'. Two things to know on arrival: (1) ch 85 'Anticipation' — webcomic season 3's own finale, in which Arthur and Elijah receive their academy uniforms — is SKIPPED by the anime entirely (ep 23 stops at 84, ep 24 resumes at 86); back up one chapter if you want it. (2) The anime's closing night reunion is its own staging: in the source Arthur and Tessia's reunion plays out across ch 87-88 quite differently (the dispute with the noble Nicolas Dreyl, Lilia, the student-council vice president Clive, then the awkward night apology and the Elderwood Guardian's beast will as a gift), so 87 and 88 are worth reading in full rather than skipped as 'already seen'. Also never animated further back: ch 57 'The Masked Swordsman' (the Dragonspine Inn / Turman scene).",
+      "sources": [
+        "https://tbate.fandom.com/api.php?action=parse&page=Tessia_Eralith/Synopsis&prop=wikitext&format=json",
+        "https://tbate.fandom.com/api.php?action=parse&page=Lilia_Helstea/Synopsis&prop=wikitext&format=json",
+        "https://www.animefillerguide.com/anime/the-beginning-after-the-end/",
+        "https://www.dexerto.fr/anime/ou-reprendre-webtoon-the-beginning-after-the-end-apres-final-saison-2-1651914/"
+      ]
+    }
+  ],
+  "anchor_hostile": [],
+  "annotations": [
+    {
+      "episodes": [12],
+      "kind": "loose_parallel",
+      "chapters": "57",
+      "note": "The closing 'two years later — Note the Masked Swordsman' tag anticipates ch 57's PREMISE (Note's two-year reputation) without animating any of its pages; ch 57's actual scene (Dragonspine Inn, Turman's challenge and humiliation) is not in the anime, and AFG's table assigns 57 to no episode."
+    },
+    {
+      "episodes": [23],
+      "kind": "divergence",
+      "chapters": "81-84",
+      "note": "Faithful to 81-84 with one anime-original insert: the season-long 'mysterious hooded group' thread, which closes the episode on a stinger of Shiun watching the party. No such observer exists in the source at this point."
+    },
+    {
+      "episodes": [24],
+      "kind": "divergence",
+      "chapters": "86",
+      "note": "Roughly three quarters of the finale is anime-original: the summons to the ruined church, the duel with Shiun, his transformation into a mana beast, the attack on Xyrus City and his execution, plus the hooded woman who resembles Director Cynthia Goodsky. Shiun has no page on the source wiki and appears in none of the character synopses that cover this stretch (Lucas, Elijah, Kathyln, Lilia, Tessia); the source runs Eleanor's party (83-84) → the uniforms (85) → the ceremony (86) with no such antagonist."
+    },
+    {
+      "episodes": [24],
+      "kind": "loose_parallel",
+      "chapters": "87-88",
+      "note": "The final scene — Sylvie running ahead at night, Arthur and Tessia re-staging their first meeting — is the anime's own reunion. The source's reunion (ch 87 'Miss President' / 88 'A Lovely Reunion') is built on material the anime never animated: the post-ceremony dispute with Nicolas Dreyl, Lilia's intervention, Clive being thrown, then the cafeteria incident with Charles Ravenpor II and the apology walk. A restaging, not an adaptation — so it does not move the END past 86."
+    }
+  ],
+  "repairs": [],
+  "type_corrections": [
+    {
+      "episodes": [24],
+      "type": "mixed",
+      "note": "T28. The row is stored `canon`, which no source supports: the Shiun church duel and the mana-beast rampage that fill roughly three quarters of the episode are anime-original (absent from every source-side synopsis covering webcomic seasons 3-4; no wiki page for Shiun; AFG marks the row 'Filler / N-A'). It is not pure filler either: the closing act adapts a real, complete source scene — the Xyrus Academy opening ceremony with the student council on stage, ch 86 — which is the episode's titular payoff ('The King Enrols' / 王様、入学する。) and the destination the whole season was travelling toward. Source + anime-original in one episode = `mixed` (T27). See flags_for_sean for the filler alternative and its consequences.",
+      "sources": [
+        "https://www.animefillerguide.com/anime/the-beginning-after-the-end/",
+        "https://tbate.fandom.com/api.php?action=parse&page=Tessia_Eralith/Synopsis&prop=wikitext&format=json",
+        "https://tbate.fandom.com/api.php?action=parse&page=Lucas_Wykes/Synopsis&prop=wikitext&format=json",
+        "https://en.wikipedia.org/wiki/The_Beginning_After_the_End",
+        "https://animenian.com/39702.html"
+      ]
+    }
+  ],
+  "structure": {
+    "notes": "CHAPTER SPACE (unchanged from batch 19's T25 ruling). Anchors are in the WEBCOMIC's own chapter numbers — tbate.fandom's `episode_webtoon` field / the 'Chapter N' label in the season tables / the 'N. Title' label on Tapas. NEVER the fandom `episode` field or the Tapas `data-scene-number`, which count prologues, giveaways, contests and season breaks: ch 84 = Tapas scene 103, ch 86 = scene 108 (the gap grows as the run goes on). Confirmed live on the Tapas episode endpoint for this range (scene 100 = '81. Different', 101 = '82. The Announcement', 102 = '83. A Ball', 103 = \"84. A Gentleman's Agreement\", 105 = '85. Anticipation', 108 = '86. Welcome to Xyrus Academy', 109 = '87. Miss President', 110 = '88. A Lovely Reunion').\n\nWHERE THE ANIME STOPS RELATIVE TO THE WEBCOMIC'S OWN SEASONS. Webcomic season 3 = ch 57-85 (May 29 2020 - Nov 27 2020), season 4 = ch 86-125 (Jan 1 2021 - Oct 15 2021); the fandom chapter tables and en-WP's Seasons table agree on both boundary dates (en-WP's '23 episodes' count for season 3 is wrong against its own dates — 57-85 is 29). Anime S2 therefore does NOT end on a source-season boundary: it stops one chapter short of season 3's finale (85 is skipped) and takes season 4's opening chapter (86) as its closing scene, replacing 85's quiet lead-in with the original Shiun climax.\n\nPRINT VOLUMES (Yen Press, from the wiki's per-chapter print column). Vol 5 = ...-52; Vol 6 starts at 53 (its blurb opens right after the rank examination, with the Beast Glades training) and contains ch 56; Vol 8 = 77-88; Vol 9 = 89-98; Vol 10 = 99-108. Vol 8's blurb is a clean description of anime eps 22-24's block.\n\nAFG's TABLE FOR SEASON 2 (this is the only per-episode chart that exists for this series; the fandom's anime 'Adapted From' column is EMPTY for all 24 rows). 13-16 Filler N/A · 17 = 58-62 · 18 = 63-67 · 19 = 68-72 · 20 = 72-75 · 21 Filler N/A · 22 = 76-80 · 23 = 81-84 · 24 Filler N/A. Two AFG defects to record: (a) its continua table says 'The anime ended at episode 23 (11 of Season 2)' — stale, 24 episodes aired and ep 24 aired 2026-06-24; (b) its continua text is internally inconsistent, listing 81-84 as the frontier and then telling readers to start at 86, leaving 85 accounted to nobody. Our stored ep23→84 (afg-continua) came from the frontier list and is CORRECT; the task's premise 'AFG 81-85' does not appear on the live page.\n\nCHAPTERS THE ANIME NEVER ADAPTS inside its own span: ch 57 'The Masked Swordsman' (the Dragonspine Inn / Turman scene — ep 12 shows only a timeskip tag, S2 ep 1 opens on an original Arachne quest, and AFG's ep 17 starts at 58) and ch 85 'Anticipation' (the academy uniforms).\n\nAIR DATE FINDING FOR ROW 24 (lane B input, not repaired here — our rows 13-24 carry no titles or dates at all). The finale aired 2026-06-24, not 2026-06-17: the series was pre-empted one week for FIFA World Cup 2026 coverage. Three independent witnesses — the official site's story article for s2-12 carries publication_date 2026-06-22T08:59Z (the same Monday-before-Wednesday pattern as every other episode), tbate.fandom's Anime infobox gives the S2 run as 4/1/2026-6/24/2026, and the pre-emption was reported at the time. en-WP's episode table still prints June 17 and is wrong; en-WP's prose ('April 2 to June 24') is an ANN announcement date, not the broadcast schedule (ep 1 aired April 1).",
+    "order_only": []
+  },
+  "flags_for_sean": [
+    "FORK 1 — ep 24's TYPE (this decides whether the 86 anchor lives). I deliver `mixed`; the defensible alternative is `filler` + the mandatory graft annotation {86}. FOR mixed: the ceremony is a complete source scene, is the episode's titular payoff, and carries the story into the academy arc. FOR filler: by runtime the source block is ~1/5 of the episode and T28's letter calls an original plot that quotes a transplanted beat plus a restaged scene FILLER; AFG types the row Filler. CONSEQUENCES if you rule filler: A1 deletes the ep-24 anchor, the honest terminal becomes ep 23 → 84, and the post-series continue moves from 87 to 85 — which is in fact the more reader-safe number, since it hands the reader ch 85 (never animated) at the cost of re-reading the ceremony they just watched. Evidence links: https://www.animefillerguide.com/anime/the-beginning-after-the-end/ · https://tbate.fandom.com/api.php?action=parse&page=Tessia_Eralith/Synopsis&prop=wikitext&format=json · https://animenian.com/39702.html",
+    "FORK 2 — ep 24's END, 86 vs 88. I rule 86 and treat the closing night reunion as an anime staging (loose_parallel 87-88), because the source's reunion is inseparable from material the anime never animated (the Nicolas Dreyl dispute, Lilia, Clive, the Charles Ravenpor cafeteria scene) and because the anime's version — Sylvie running ahead, the two re-enacting their first meeting — is not in the source. Dexerto.fr's where-to-resume piece independently says the finale ends at ch 86 and to resume at 87 (cross-check tier only; it is the same outlet that once printed the Tapas scene index as a chapter count). If you read the night scene as a compressed adaptation of ch 88's reconciliation instead, END becomes 88 and the continue 89. https://www.dexerto.fr/anime/ou-reprendre-webtoon-the-beginning-after-the-end-apres-final-saison-2-1651914/",
+    "OUT OF SCOPE BUT LOAD-BEARING — the whole of season 2 is stored `canon` (24/24 rows) while AFG marks five S2 rows filler (13-16 and 21) on top of ep 24, and the content evidence backs it for at least 13-16: the Arachne village, Tessia's boar quest, the storm island and the sabotage-plot framing have no counterpart in the source, which goes straight from ch 56 to ch 57's timeskip and then the Dire Tombs (58-62 = ep 17). This series has NO AFL page, so nothing but a research pass can correct those types. Recommend a small lane-A row-by-row pass on rows 13-22 before anyone trusts the S2 block's standings.",
+    "ANCHOR-SPACE HEALTH — with these three anchors the series has researched positions at 12, 23 and 24, but rows 13-22 still carry nothing at all (no stored anchors between ep 12 and ep 23). AFG alone covers 17-22 (58-80); that is one source, and its chapter column for this series is a real per-episode claim rather than a reading-position header, but it should be corroborated before it becomes anchors.",
+    "AIR DATES / TITLES — rows 13-24 have no titles and no dates in our data. en-WP's S2 table is a usable source for titles (English + 日本語 + romaji) but its ep-12 date (2026-06-17) is wrong; the true date is 2026-06-24 (World Cup pre-emption), corroborated by the official site's own story publication timestamps and tbate.fandom's run field. Route to lane B."
+  ]
+}
