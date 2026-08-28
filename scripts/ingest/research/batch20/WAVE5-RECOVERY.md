@@ -36,6 +36,41 @@ DBS IDENTITY (Sean's go; Cursor's pin: standings + T21 direction only, NO anchor
 ## RULED (Sean 2026-08-28, before verify)
 **Reading 1** — the source stays the manga (AniList 86508, a manual link), standings RELATIVE TO THE MANGA. **T28 = the CONTENT test** — the seven outcome-only rows (87, 88, 106, 121, 124, 125, 126) go filler + `divergence`. **No fourth standing.** CONSTRAINT: the I-family ruling must say the manga is an **ALTERNATIVE**, not an adaptation — chapter numbers on this series are CORRESPONDENCE, never "this episode adapted ch N" (most chapters published after the episode) — and **`anchor_gap_research` must not turn 77-131 into a 93-row A2 wave** (the class needs a series-level suppression for ALTERNATIVE-source series, decided at apply). Verify on that (two tasks dispatched).
 
+## Verification (R24, Fable verifiers, 2026-08-28) — `verify/dragon-ball-super-w5a.md` / `-w5b.md` (≈364k; wave ≈865k)
+
+**Direction SOUND on both halves** — every support verbatim (ja-WP 同時進行 / 相互に補完 scoped 破壊神シャンパ編以降; Kanzenshuu's "separate take"; the vol-1 Free Talk "the original story you give me is text"; the V Jump interview; the dates — the anime ended 2018-03-25 at ch 34, ch 35 April 2018); no source claims adaptation either way; AniList 21175 has no ADAPTATION edge, 86508 ALTERNATIVE (its own ADAPTATION edge points at the Battle of Gods film). Nuance for the I-ruling: the anime staff consult Toyotarou's panels for composition (ja-WP §211; V Jump) — reference, not adaptation. The 77-131 counterpart map recomputed from all 16 chapter pages' `episode =` fields reproduces the verdict; the rows absent from EVERY chapter field are exactly {79, 80, 81, 90, 105, 113, 120}.
+
+**Retypes:** 53 → filler holds (partial{16-17}; the note's "ch 18" → 18-19); 105/113/120 → filler sound (105's tie 38-39; one Borareta quote is Nigrissi's/Narirama's). **Under Sean's CONTENT test the verifier retypes the seven outcome-only rows AND four more** (99, 115, 116, 118) — roughly half the tournament block — and names seven Tier-2 rows (98, 102, 103, 104, 107, 109, 112: one scene carried, the headline fight absent) as `mixed?` — Sean's bar. Slips: the verdict's ep-106 text describes ep 119's content; the arc note contradicts itself on Blue Kaioken; ep 6's "zero pages" overstated (ch 3 carries the King Vegeta flashback).
+
+## THE DECISIONS (step 4 — Sean)
+
+| ep | stored | → verdict | → verifier / recommendation |
+|---|---|---|---|
+| 53 | canon | filler + partial{17} | filler + partial{16-17} — accept |
+| 105 | canon | filler + divergence{38-40} | filler + divergence{38-39} — accept |
+| 113 | canon | filler + divergence{37} | unchanged — accept |
+| 120 | canon | filler + divergence{38} | unchanged — accept |
+| 87 | canon | + arc divergence | filler + partial{31} (the ruled 91 shape) — accept |
+| 88 | canon | + arc divergence | filler + divergence{31} — accept |
+| 106 | canon | + arc divergence | filler + divergence{34} (Harmira/Prum) — accept |
+| 121 | canon | + arc divergence | filler + divergence{38} — accept |
+| 124 | canon | + arc divergence | filler + divergence{39-40} — accept |
+| 125 | canon | + arc divergence | filler + divergence{40} — accept |
+| 126 | canon | + arc divergence | filler + divergence{40} (closest call; mixed if the ch-40 aura knockback counts) — recommend filler |
+| 99 | canon | + arc divergence | filler + divergence{34} — the content test, accept |
+| 115 | canon | + row divergence{37-39} | filler + divergence{38-39} — accept |
+| 116 | canon | + row divergence{37-39} | filler + divergence{39} — accept |
+| 118 | canon | + arc divergence | filler + divergence{38-39} — accept |
+| 98, 102, 103, 104, 107, 109, 112 | canon | + arc divergence | **`mixed?` — one scene carried, the headline fight absent: SEAN'S BAR** (recommend mixed + divergence: source and non-source in one episode is the T27 definition of mixed; binary filler would overstate) |
+| 6 | canon | canon + side_source{BoG film} | agree under the batch-19 film precedent — accept |
+| 4 | filler | no change | a film subplot — same rule as 6; stays filler (no annotation needed) — accept |
+| 51 | canon | + arc divergence | mixed + divergence{14-26} (one manga beat, Trunks meets Mai) — recommend accept |
+| 13 | canon | + arc divergence | no change (ja-WP records the absorption beat as a difference) — accept |
+
+Unchanged in the ask: 1-3, 5, 7-12, 14 (canon, + arc divergence{1-4}); 28-41 (canon, + divergence{5-13}); 47-49, 54-67 (canon, + divergence{14-26}); 77-78, 82-86, 89, 92-93, 96-97, 100-101, 108, 110-111, 114, 117, 119, 122-123, 127-131 (canon/mixed, + the arc divergence{27-42}); the filler rows 4, 15-17, 22, 42-46, 50, 52, 68-76, 79-81, 90-91, 94-95; batch 19's 18-21 / 23-27 not re-opened.
+
+**Series-level (the I-family ruling, at apply):** source = the manga, AniList 86508 linked MANUALLY (a one-hop ruling; AniList's edge is ALTERNATIVE and correct); the manga is an ALTERNATIVE realization of Toriyama's text outline — chapter numbers on this series are CORRESPONDENCE, never adaptation; the anime staff reference Toyotarou's panels for composition; **`anchor_gap_research` suppressed for ALTERNATIVE-source series** (a ruling map consulted by the audit — 77-131 is never an A2 wave; positions, if ever, are correspondence anchors ruled one by one); T28 on this series = the content test; no fourth standing.
+
 ## Traps learned (→ research-agent.md at capture)
 - **AniList's ALTERNATIVE relation is a signal, not a defect**: when an anime→manga edge is ALTERNATIVE and both works cite one outline, the manga is not the source — an identity finding, not a missing link.
 - **A fandom "exclusive to the anime" boilerplate can be true against the manga and still be a FILM's sequence** (DBS ep 6 — the Battle of Gods film): check the third work before typing.
