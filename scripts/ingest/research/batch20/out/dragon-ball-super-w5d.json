@@ -1,0 +1,316 @@
+{
+ "series_id": "dragon-ball-super",
+ "summary": "The seven stored-filler rows that sit INSIDE shared or film arcs, re-judged one by one under the parallel-telling definition (T30, Sean 2026-08-28): standing is from-the-outline-or-not, so an anime-only episode is canon (B) when it is a load-bearing node of an arc a telling other than Toei's also carries, and filler (D) only when it is padding no telling's story depends on. THREE MOVE, FOUR HOLD. ep 50 -> canon: Goku Black's pursuit into the present is the anime's telling of the arc's driving machinery - Black destroys the time machine and Beerus and Whis SEE the Time Ring on his hand, and the next three canon rows run on exactly those two facts (ep 51 opens with Bulma producing Cell's time machine because Trunks's is destroyed and with Whis worrying about 'that Time Ring'; ep 53's whole premise is Beerus asking Gowasu about 'somebody on Earth who wears a Time Ring despite not being a Kaioshin and looks exactly like Goku'; ep 54 is the repaired machine's departure). The manga reaches the same Universe-10 node by a different road (its Black never leaves the future - ch 15 ends with him baffled that Trunks vanished, ch 16 has him unable to sense Trunks and flying off - and Trunks's machine is intact, needing only a day of Bulma's fuel). eps 16 and 17 -> canon: their job is the node BOTH other tellings state as a premise and neither depicts - Goku and Vegeta becoming Whis's students on Beerus's planet. The 2015 film opens on it ('Goku and Vegeta are training on Beerus' Planet with Whis, unaware that Frieza has been revived'; ja-WP's film article has Vegeta training because he will not let Kakarrot get a head start - i.e. the film's order is the reverse of the anime's), the Resurrection 'F' promotional manga opens on it (ch 2), the Super manga opens ch 5 on it ('Goku and Vegeta continue training under Whis on Beerus' Planet') and ch 27 still runs on it. ep 17 additionally carries Pan's birth and Krillin's police career, both of which the film already presupposes (Piccolo babysits Pan in Resurrection 'F'; Krillin's police-officer occupation is sourced to that film) and the manga carries downstream. HOLDING FILLER: ep 4 (the Pilaf Gang's boat-and-shark boarding is Toei comedy - the film simply has them 'sneak into the party', the manga's party chapter ch 3 does not have them at all and ch 4 lists them only as background, and the anime, unlike the film, gives them no plot function: it drops the gunpoint scene and has Videl volunteer her pregnancy exactly as ch 4 does), ep 15 (Mr. Satan and the Snakians - ja-WP's character list ends Galbi's and Bibidi's entries with 'does not appear in the manga version'), ep 22 (Tagoma survives, trains with Frieza and loses his body to Ginyu - in the film Frieza blasts Tagoma into space right after his revival and Ginyu is not in the film at all; the arc proceeds identically without it, as the film itself proves), and ep 52 (Future Trunks's downtime visit to Gohan; the manga spends the same wait on a meal at Capsule Corp, and no later beat in either telling depends on the visit). Two annotations are row facts, not standings: a graft on ep 4 (its closing minutes are ch 2's opening beats, replayed at the head of ep 5) and a loose_parallel on ep 22 (its cliffhanger restages the film's 'Frieza incapacitates Gohan, Piccolo intervenes' beat with Piccolo dying instead of reviving him). No anchors: positions on this series are correspondence (A46).",
+ "anchors": [],
+ "continue_points": [],
+ "anchor_hostile": [],
+ "type_corrections": [
+  {
+   "episodes": [
+    4
+   ],
+   "stored": "filler",
+   "type": "filler",
+   "change": false,
+   "confidence": "high",
+   "why": "D holds under the parallel definition. The episode's job is the Pilaf Gang's approach to the Princess Bulma - Pilaf fishing on a desert island, the Dragon Radar dropped in the sea, the sinking boat, the shark, Goten and Trunks tossing them a rope ladder - framed by Vegeta's gravity training and Goku's Kamehameha practice (fandom and Kanzenshuu agree beat for beat). No telling's story depends on any of it. THE FILM (the work this arc descends from) has the gang 'sneak into the party' in one sentence and then USES them: Mai holds Trunks at gunpoint, Gohan snaps the bullets, one hits Videl and one hits Beerus's forehead, and Dende, healing Videl, discovers the pregnancy the Super Saiyan God ritual needs. THE ANIME DROPS ALL OF THAT: its party has a water squirt-gun gag instead of Mai's pistol, Beerus's anger comes from the pudding, and in ep 9 Videl volunteers her pregnancy herself - which is exactly the manga's version (ch 4: 'Videl reveals that she is pregnant'). So in the anime's telling the gang has no plot function at all. THE MANGA does not have them at the party either: ch 3, the party chapter, has no Pilaf, Mai or Shu anywhere in its summary or its appearance list; ch 4 lists the three only among background appearances at the ritual. Their later cast status - kid Mai and Trunks, the Capsule Corp tutor scene, Pilaf improving the time machine in ep 54 - is inherited from the FILM (Battle of Gods: the youth wish, Trunks calling Mai his girlfriend, the two sitting in a tree at the end) and the manga carries it independently of this episode (ja-WP's character list describes the manga's own home-tutor scene teaching Trunks and the kid Pilaf Gang about parallel worlds, and Future Trunks meets kid Mai in ch 16 = ep 51). Nothing in ep 51 or ch 16 depends on ep 4. The one real tie is the episode's last two minutes (see the graft annotation): King Kai explaining the God of Destruction and Beerus and Whis landing on his planet are ch 2's opening beats, and ep 5 re-shows the landing at its head - a fragment inside an original plot, T28's sliver, so it does not lift the row.",
+   "sources": [
+    "https://dragonball.fandom.com/api.php?action=parse&page=Bid%20for%20the%20Dragon%20Balls%21%20Pilaf%20and%20Crew%27s%20Impossible%20Mission%21&prop=wikitext&format=json",
+    "https://www.kanzenshuu.com/episode/super/eps-004/",
+    "https://dragonball.fandom.com/api.php?action=parse&page=Goku%20Defeated&prop=wikitext&format=json",
+    "https://dragonball.fandom.com/api.php?action=parse&page=The%20Rage%20of%20Beerus&prop=wikitext&format=json",
+    "https://dragonball.fandom.com/api.php?action=parse&page=Battle%20of%20Gods%20%28manga%20chapter%29&prop=wikitext&format=json",
+    "https://dragonball.fandom.com/api.php?action=parse&page=Dragon%20Ball%20Z%3A%20Battle%20of%20Gods&prop=wikitext&format=json",
+    "https://dragonball.fandom.com/api.php?action=parse&page=Thanks%20for%20Waiting%2C%20Lord%20Beerus%21%20A%20Super%20Saiyan%20God%20Is%20Born%20at%20Last%21&prop=wikitext&format=json",
+    "https://www.kanzenshuu.com/episode/super/eps-005/"
+   ]
+  },
+  {
+   "episodes": [
+    15
+   ],
+   "stored": "filler",
+   "type": "filler",
+   "change": false,
+   "confidence": "high",
+   "why": "D holds. The whole episode is Mr. Satan's press conference about having 'defeated the God of Destruction Beebus' and the visit of the lion-like Snakians, whose hero Galbi challenges him and is routed by the sight of Satan's dog Bee; Goku is dragged in as Satan's stand-in and hides from Chi-Chi (Kanzenshuu and fandom agree; fandom's Differences: 'The entire events of this episode were exclusive to the anime'). Every character it introduces is anime-only by ja-WP's own character list: Galbi's entry ends 'does not appear in the manga version', as do the entries for Bibidi (Satan's invented 'Beebus') and the Moginan aliens of the same block. It is not the film's either - the 2015 film's opening moves are Sorbet and Tagoma coming to Earth for the Dragon Balls (ja-WP's plot), which the anime stages in ep 19. Nothing later in any telling refers back: the Snakians never return, and the arc's plot (Frieza's revival, the thousand-soldier battle, Goku's return) is untouched by the episode's existence. AFL, cross-check only, also buckets 15 as plain Filler, unlike 16/17/22/50/52 which it calls 'Anime Canon'.",
+   "sources": [
+    "https://dragonball.fandom.com/api.php?action=parse&page=Valiant%20Mr.%20Satan%2C%20Work%20a%20Miracle%21%20A%20Challenge%20from%20Outer%20Space%21&prop=wikitext&format=json",
+    "https://www.kanzenshuu.com/episode/super/eps-015/",
+    "https://ja.wikipedia.org/wiki/%E3%83%89%E3%83%A9%E3%82%B4%E3%83%B3%E3%83%9C%E3%83%BC%E3%83%AB%E8%B6%85%E3%81%AE%E7%99%BB%E5%A0%B4%E4%BA%BA%E7%89%A9",
+    "https://ja.wikipedia.org/wiki/%E3%83%89%E3%83%A9%E3%82%B4%E3%83%B3%E3%83%9C%E3%83%BC%E3%83%ABZ_%E5%BE%A9%E6%B4%BB%E3%81%AE%E3%80%8CF%E3%80%8D",
+    "https://www.animefillerlist.com/shows/dragon-ball-super"
+   ]
+  },
+  {
+   "episodes": [
+    16
+   ],
+   "stored": "filler",
+   "type": "canon",
+   "change": true,
+   "confidence": "medium",
+   "why": "B under the parallel definition: an anime-only telling of a node that every other telling states as an established premise and none of them depicts. The episode's own Major Events are 'Vegeta leaves Earth to go train with Whis on Beerus' planet' and 'Vegeta receives new Battle Armor from Bulma' - Bulma has been buying Whis meals to keep him friendly, Vegeta runs into them returning from a tempura restaurant and demands to be taken to Beerus's planet. THE NODE IS IN THE OTHER TELLINGS. The 2015 film opens on it: 'Goku and Vegeta are training on Beerus' Planet with Whis, unaware that Frieza has been revived', and ja-WP's film article gives Vegeta's reason in his own words - he trains under Whis because he will not let Kakarrot get a head start alone (the film's order is Goku first, Vegeta following; the anime reverses it, which fandom's Golden Frieza Saga page lists as an anime/film difference). The Resurrection 'F' promotional manga opens its ch 2 with 'Whis is seen training Goku and Vegeta'. The Super manga opens ch 5 with 'Goku and Vegeta continue training under Whis on Beerus' Planet' and is still running on the arrangement at ch 27 (Vegeta training with Whis; Goku asking Whis to train him again). ja-WP's film article even points the other way explicitly: Vegeta's improved battle armour in the film is the one whose acquisition 'Dragon Ball Super depicted' - i.e. this episode fills in the film's premise. LOAD-BEARING IN THE ANIME'S TELLING, by name: ep 18 (stored canon + side_source{film}) opens with Whis and Goku arriving on Beerus's planet and Goku astonished at how much stronger Vegeta has got 'since he last saw him' - the six-month head start this episode starts; eps 19-27 turn on both Saiyans being off Earth when Frieza attacks (the film's premise); ep 28, the manga's ch 5 counterpart, opens on the state itself ('Goku and Vegeta are continuing their training under Whis' guidance on Beerus' planet'). Its opening scene is a shared thread too: the two Kaioshin puzzling over planets vanishing 'as if by magic' is the anime's version of ch 3's Old Kai noticing a force destroying planets while Beerus is on Earth and spotting Champa and Vados. Held at MEDIUM: the arc fandom files this row under (Golden Frieza) is the one the Super manga skips, so the shared-arc leg is satisfied at the SEAM between two shared arcs (Beerus, ch 1-4 -> Universe 6, ch 5-13) rather than inside one, and no telling depicts the transition itself - that is the honest argument for leaving it D, and it is in the flags. The old filler call was correct only under the manga-relative test (fandom: 'The entire events of this episode were exclusive to the anime'; no chapter's episode= field names 16).",
+   "sources": [
+    "https://dragonball.fandom.com/api.php?action=parse&page=Vegeta%20Becomes%20a%20Student%3F%21%20Win%20Over%20Whis%21&prop=wikitext&format=json",
+    "https://www.kanzenshuu.com/episode/super/eps-016/",
+    "https://dragonball.fandom.com/api.php?action=parse&page=Beerus%20and%20Champa&prop=wikitext&format=json",
+    "https://dragonball.fandom.com/api.php?action=parse&page=Life%2C%20Training%20and%20More&prop=wikitext&format=json",
+    "https://dragonball.fandom.com/api.php?action=parse&page=The%20Rage%20of%20Beerus&prop=wikitext&format=json",
+    "https://dragonball.fandom.com/api.php?action=parse&page=Dragon%20Ball%20Z%3A%20Resurrection%20%E2%80%98F%E2%80%99&prop=wikitext&format=json",
+    "https://dragonball.fandom.com/api.php?action=parse&page=Chapter%202%20%28Resurrection%20%E2%80%98F%E2%80%99%29&prop=wikitext&format=json",
+    "https://dragonball.fandom.com/api.php?action=parse&page=Golden%20Frieza%20Saga&prop=wikitext&format=json",
+    "https://ja.wikipedia.org/wiki/%E3%83%89%E3%83%A9%E3%82%B4%E3%83%B3%E3%83%9C%E3%83%BC%E3%83%ABZ_%E5%BE%A9%E6%B4%BB%E3%81%AE%E3%80%8CF%E3%80%8D",
+    "https://www.kanzenshuu.com/episode/super/eps-018/",
+    "https://www.kanzenshuu.com/episode/super/eps-028/"
+   ]
+  },
+  {
+   "episodes": [
+    17
+   ],
+   "stored": "filler",
+   "type": "canon",
+   "change": true,
+   "confidence": "medium",
+   "why": "B, the same shape as ep 16 and with two further shared nodes. Major Events: 'Pan is born', 'Krillin is revealed to have become a policeman', 'Goku leaves with Whis to train with him and Vegeta on Beerus' Planet'; Kanzenshuu opens it 'It has been more than half a year since Vegeta left to train with Whis. Gohan and Videl's daughter Pan has been born'. ALL THREE ARE FACTS THE OTHER TELLINGS ALREADY CARRY. Pan: the 2015 film has Piccolo babysitting her while Gohan and Videl shop, and ja-WP's film article states outright that the daughter Videl was carrying in Battle of Gods 'was safely born and named Pan' (fandom's film article dates the film 'just after Pan is born'); Pan then exists in the Super manga (she has her own chapter, 'Operation: Kidnap Pan', in the Super Hero arc). Krillin the police officer: fandom's Krillin article sources the occupation to Resurrection 'F' itself, and the manga carries it downstream (ja-WP's Super Hero-arc synopsis has Krillin leading the police squad that raids the party). Goku joining the training: the premise of the film, of the Resurrection 'F' promotional manga (ch 2) and of the Super manga's ch 5 and ch 27. LOAD-BEARING IN THE ANIME'S TELLING: ep 18 (canon + side_source{film}) is Goku's arrival on Beerus's planet with Whis, which this episode arranges (Bulma promises to call him the next time Whis turns up), and it is where the six-month gap this episode counts is paid off; the film's own plot then needs both Saiyans absent (eps 19-24). Held at MEDIUM for the same reason as ep 16: no telling DEPICTS the transition, and the episode's connective tissue (the Chi-Chi/Mr. Satan argument about how to raise Pan, the traffic-stop gag) is Toei's. The old filler call rests on fandom's blanket 'The entire events of this episode were exclusive to the anime', which is a manga-relative statement.",
+   "sources": [
+    "https://dragonball.fandom.com/api.php?action=parse&page=Pan%20is%20Born%21%20And%20Goku%20Goes%20on%20a%20Training%20Journey%3F%21&prop=wikitext&format=json",
+    "https://www.kanzenshuu.com/episode/super/eps-017/",
+    "https://dragonball.fandom.com/api.php?action=parse&page=Dragon%20Ball%20Z%3A%20Resurrection%20%E2%80%98F%E2%80%99&prop=wikitext&format=json",
+    "https://ja.wikipedia.org/wiki/%E3%83%89%E3%83%A9%E3%82%B4%E3%83%B3%E3%83%9C%E3%83%BC%E3%83%ABZ_%E5%BE%A9%E6%B4%BB%E3%81%AE%E3%80%8CF%E3%80%8D",
+    "https://dragonball.fandom.com/api.php?action=parse&page=Krillin&prop=wikitext&format=json",
+    "https://ja.wikipedia.org/wiki/%E3%83%89%E3%83%A9%E3%82%B4%E3%83%B3%E3%83%9C%E3%83%BC%E3%83%AB%E8%B6%85",
+    "https://dragonball.fandom.com/api.php?action=parse&page=Beerus%20and%20Champa&prop=wikitext&format=json",
+    "https://dragonball.fandom.com/api.php?action=parse&page=Chapter%202%20%28Resurrection%20%E2%80%98F%E2%80%99%29&prop=wikitext&format=json",
+    "https://www.kanzenshuu.com/episode/super/eps-018/",
+    "https://dragonball.fandom.com/api.php?action=parse&page=Operation%3A%20Kidnap%20Pan&prop=wikitext&format=json"
+   ]
+  },
+  {
+   "episodes": [
+    22
+   ],
+   "stored": "filler",
+   "type": "filler",
+   "change": false,
+   "confidence": "high",
+   "why": "D holds, and the film settles it rather than the manga. The episode is Tagoma - kept alive by the anime and hardened by four months as Frieza's sparring partner - tearing Piccolo's arm off and shrugging off Gohan and Gotenks, and then frog-Ginyu writing 'Change' in the dirt and taking his body. IN THE FILM NONE OF THIS EXISTS: Frieza throws Tagoma out of the ship into space right after his revival for advising him to ignore the Saiyans (fandom's Tagoma article, film section; ja-WP's film plot: 弱腰な発言をしたタゴマを宇宙空間に吹き飛ばし), the Earth fight is Gohan defeating Shisami, and fandom's Golden Frieza Saga difference list states it twice over - 'Shisami fights Gohan instead of Piccolo, and is killed by Tagoma instead of by Frieza' and Ginyu 'did not appear in the movie'. The Resurrection 'F' promotional manga follows the film (its ch 3 has Gohan take out Shisami with one punch). The Super manga has no chapters here at all - it skips the arc, narrating only its outcome. The arc proceeds identically without the Ginyu subplot, and the film is the proof: Frieza's revenge reaches exactly the same point (Goku arrives, Golden Frieza, the Earth destroyed, Whis's three-minute rewind) with Tagoma dead in the first act. The row's tie is its cliffhanger only (see the loose_parallel annotation): Frieza incapacitating Gohan and Piccolo stepping in front of the finishing blast is the film's beat restaged - in the film Frieza punches Gohan into cardiac arrest and Piccolo REVIVES him, in the anime Frieza tortures him with Death Beams and Piccolo DIES, which fandom's difference list flags as anime-only ('Piccolo is killed by Frieza ... whereas he is never killed in the film'). Under T28 that closing fragment does not lift an episode whose own plot is the body-swap.",
+   "sources": [
+    "https://dragonball.fandom.com/api.php?action=parse&page=Change%21%20An%20Unexpected%20Return%21%20His%20Name%20Is%20Ginyu%21%21&prop=wikitext&format=json",
+    "https://www.kanzenshuu.com/episode/super/eps-022/",
+    "https://dragonball.fandom.com/api.php?action=parse&page=Tagoma&prop=wikitext&format=json",
+    "https://dragonball.fandom.com/api.php?action=parse&page=Golden%20Frieza%20Saga&prop=wikitext&format=json",
+    "https://dragonball.fandom.com/api.php?action=parse&page=Dragon%20Ball%20Z%3A%20Resurrection%20%E2%80%98F%E2%80%99&prop=wikitext&format=json",
+    "https://ja.wikipedia.org/wiki/%E3%83%89%E3%83%A9%E3%82%B4%E3%83%B3%E3%83%9C%E3%83%BC%E3%83%ABZ_%E5%BE%A9%E6%B4%BB%E3%81%AE%E3%80%8CF%E3%80%8D",
+    "https://dragonball.fandom.com/api.php?action=parse&page=Dragon%20Ball%20Z%3A%20Resurrection%20%E2%80%98F%E2%80%99%20%28manga%29&prop=wikitext&format=json",
+    "https://dragonball.fandom.com/api.php?action=parse&page=Chapter%203%20%28Resurrection%20%E2%80%98F%E2%80%99%29&prop=wikitext&format=json"
+   ]
+  },
+  {
+   "episodes": [
+    50
+   ],
+   "stored": "filler",
+   "type": "canon",
+   "change": true,
+   "confidence": "high",
+   "why": "B, and the clearest lift in this bundle: the episode installs the two facts the arc's next three canon rows run on. Its Major Events are 'Goku fights against Goku Black in the present timeline', 'Goku Black destroys the Time Machine', 'Goku Black is pulled back into Future Trunks' timeline', 'Bulma finds the old Time Machine that Cell traveled in', 'Future Mai wakes up'; Kanzenshuu adds the decisive detail that during the fight 'Beerus and Whis' attention is drawn to the strange ring Black wears on his right hand'. THE CHAIN, BY NAME: ep 51 (stored canon, counterpart ch 16) opens 'Though Black has destroyed Trunks' time machine, Bulma produces another one ... the time machine Cell arrived in', and has Whis refusing to train Goku 'not with all these time machines around. They have even got that Time Ring to worry about now as well'; ep 53 (stored canon) exists because of the ring - Beerus states their business to Gowasu as 'on Earth in Universe 7 there is somebody who wears a Time Ring, despite not being a Kaioshin, and he looks exactly like Goku'; ep 54 is the repaired-and-fuelled machine's departure. THE MANGA'S VERSION OF THE SAME NODE: its Black never leaves the future - ch 15 ends with him firing a Black Kamehameha at the activating time machine and being 'surprised that Future Trunks completely vanished', and ch 16 has him searching for Trunks's ki, finding nothing and flying off - so Trunks's machine is intact and the delay is fuel only ('the fuel needed for his time machine is the same fuel Bulma is currently developing ... it would take a whole day', ch 15; 'their hands are tied until they accumulate enough energy for the Time Machine', ch 16), and the manga reaches Universe 10 by Whis simply suggesting they visit Shin at the end of ch 16. Both tellings arrive at the same node (the investigation of Zamasu, and the Time Ring, which ja-WP records the manga explaining in detail) by different roads - that is B with a divergence, not padding. Filler was the right call only against the manga's pages (fandom: 'The entire events of this episode were exclusive to the anime'; no chapter's episode= field names 50).",
+   "sources": [
+    "https://dragonball.fandom.com/api.php?action=parse&page=Goku%20vs.%20Black%21%20A%20Closed-Off%20Road%20to%20the%20Future%21&prop=wikitext&format=json",
+    "https://www.kanzenshuu.com/episode/super/eps-050/",
+    "https://www.kanzenshuu.com/episode/super/eps-051/",
+    "https://www.kanzenshuu.com/episode/super/eps-053/",
+    "https://dragonball.fandom.com/api.php?action=parse&page=Feelings%20That%20Transcend%20Time%3A%20Trunks%20and%20Mai&prop=wikitext&format=json",
+    "https://dragonball.fandom.com/api.php?action=parse&page=Hope%21%21%20Once%20Again&prop=wikitext&format=json",
+    "https://dragonball.fandom.com/api.php?action=parse&page=Future%20Trunks%27s%20Past&prop=wikitext&format=json",
+    "https://ja.wikipedia.org/wiki/%E3%83%89%E3%83%A9%E3%82%B4%E3%83%B3%E3%83%9C%E3%83%BC%E3%83%AB%E8%B6%85"
+   ]
+  },
+  {
+   "episodes": [
+    52
+   ],
+   "stored": "filler",
+   "type": "filler",
+   "change": false,
+   "confidence": "medium",
+   "why": "D holds, on the load-bearing test rather than on 'the manga does not have it'. The episode is Future Trunks's downtime: Bulma and the Pilaf Gang working on the time machine, kid Trunks failing to impress Mai, and Trunks flying to Gohan's university, meeting Videl, Mr. Satan and baby Pan, re-living Future Gohan's death (a re-animation of the DBZ TV special, per ja-WP) and resolving to make a future where people can smile. The manga spends the same wait differently and fandom pairs the two scenes directly: 'Trunks spends his down time completely differently between the anime and manga. In the anime he goes to see Gohan whereas in the manga he ends up having a meal with his friends and family inside a restaurant in Capsule Corporation' (ch 16). So a downtime beat exists in both tellings - but NOTHING in either telling's later plot depends on this episode's content: the Gohan reunion is never referred back to (ep 67's farewell has Gohan and Piccolo see the pair off and Trunks think of 'his old mentor', a relationship that comes from DBZ, not from this visit), Pan and Trunks never meet again, and Trunks's resolve is stated again in ep 54, the row that actually carries ch 16's material. The machine-repair progress it shows is machinery the anime created for itself in ep 50 and completes in ep 54 (Dr. Brief announces the fuel is stored; Pilaf improves the restart program). This is the closest call of the four holds - see the flag: if the shared downtime NODE is read as enough, the row is B, not mixed, because there is no self-contained anime-original subplot beside it; the whole episode is the downtime.",
+   "sources": [
+    "https://dragonball.fandom.com/api.php?action=parse&page=Master%20and%20Pupil%20Reunited%21%20Gohan%20and%20%22Future%22%20Trunks%21&prop=wikitext&format=json",
+    "https://www.kanzenshuu.com/episode/super/eps-052/",
+    "https://dragonball.fandom.com/api.php?action=parse&page=Future%20Trunks%27s%20Past&prop=wikitext&format=json",
+    "https://ja.wikipedia.org/wiki/%E3%83%89%E3%83%A9%E3%82%B4%E3%83%B3%E3%83%9C%E3%83%BC%E3%83%AB%E8%B6%85",
+    "https://www.kanzenshuu.com/episode/super/eps-054/",
+    "https://www.kanzenshuu.com/episode/super/eps-067/"
+   ]
+  }
+ ],
+ "annotations": [
+  {
+   "episodes": [
+    4
+   ],
+   "kind": "graft",
+   "chapters": "2",
+   "note": "Row fact, not a standing: the last two minutes of an otherwise anime-original episode are ch 2's opening beats - King Kai, cornered, explains what a God of Destruction is and that Beerus destroys whatever annoys him, and Beerus and Whis land on his planet ('King Kai tells him about the identity of the God of Destruction, and just then, Beerus and Whis arrive', ch 2). ch 2's own episode= field names eps 3 and 5, not 4, and ep 5 re-shows the landing at its head, so the graft is a fragment under T28, never a position (A46: no anchors on this series)."
+  },
+  {
+   "episodes": [
+    22
+   ],
+   "kind": "loose_parallel",
+   "chapters": null,
+   "note": "Row fact: the tie is to the FILM, not to a chapter (the Super manga has no Resurrection 'F' chapters). The episode's cliffhanger restages the film's 'Frieza incapacitates Gohan and Piccolo steps in' beat with the outcome inverted - in the film Frieza knocks Gohan out with a blow to the stomach and Piccolo restarts his heart, in the anime Frieza pierces and tortures Gohan with Death Beams and Piccolo takes the finishing blast and dies (fandom's Golden Frieza Saga difference list flags both halves). Everything before it - Tagoma's fight and the Ginyu body-swap - has no counterpart in any telling."
+  }
+ ],
+ "correspondence": [
+  {
+   "episode": 4,
+   "chapters": null,
+   "alignment": "anime_only",
+   "note": "The Pilaf Gang's boarding of the Princess Bulma (the treasure-hunt island, the Dragon Radar dropped in the sea, the sinking boat and shark, the rope ladder), plus Vegeta at 150x gravity and Goku's rebounding Kamehameha. Not in the manga - ch 3, the party chapter, has no Pilaf, Mai or Shu at all and ch 4 lists them only among background appearances - and not in the film, which covers the same ground in one line ('the Pilaf Gang sneaks into the party with the intention of stealing the Dragon Balls').",
+   "sources": [
+    "https://dragonball.fandom.com/api.php?action=parse&page=Bid%20for%20the%20Dragon%20Balls%21%20Pilaf%20and%20Crew%27s%20Impossible%20Mission%21&prop=wikitext&format=json",
+    "https://www.kanzenshuu.com/episode/super/eps-004/",
+    "https://dragonball.fandom.com/api.php?action=parse&page=The%20Rage%20of%20Beerus&prop=wikitext&format=json",
+    "https://dragonball.fandom.com/api.php?action=parse&page=Battle%20of%20Gods%20%28manga%20chapter%29&prop=wikitext&format=json",
+    "https://dragonball.fandom.com/api.php?action=parse&page=Dragon%20Ball%20Z%3A%20Battle%20of%20Gods&prop=wikitext&format=json"
+   ]
+  },
+  {
+   "episode": 4,
+   "chapters": "2",
+   "alignment": "divergent",
+   "note": "Closing fragment only: King Kai's explanation of the God of Destruction and Beerus and Whis's arrival on his planet are ch 2's opening beats, replayed at the head of ep 5 (which is the row ch 2's episode= field names, with ep 3).",
+   "sources": [
+    "https://dragonball.fandom.com/api.php?action=parse&page=Goku%20Defeated&prop=wikitext&format=json",
+    "https://www.kanzenshuu.com/episode/super/eps-004/",
+    "https://www.kanzenshuu.com/episode/super/eps-005/"
+   ]
+  },
+  {
+   "episode": 15,
+   "chapters": null,
+   "alignment": "anime_only",
+   "note": "Mr. Satan's press conference, the Snakian embassy and Galbi's challenge, Goku standing in for Satan. No counterpart in any telling: the Super manga skips the whole Resurrection 'F' block (ja-WP: the arc's outcome is narrated in exposition only) and ja-WP's character list ends Galbi's and Bibidi's entries with 'does not appear in the manga version'.",
+   "sources": [
+    "https://dragonball.fandom.com/api.php?action=parse&page=Valiant%20Mr.%20Satan%2C%20Work%20a%20Miracle%21%20A%20Challenge%20from%20Outer%20Space%21&prop=wikitext&format=json",
+    "https://www.kanzenshuu.com/episode/super/eps-015/",
+    "https://ja.wikipedia.org/wiki/%E3%83%89%E3%83%A9%E3%82%B4%E3%83%B3%E3%83%9C%E3%83%BC%E3%83%AB%E8%B6%85%E3%81%AE%E7%99%BB%E5%A0%B4%E4%BA%BA%E7%89%A9",
+    "https://ja.wikipedia.org/wiki/%E3%83%89%E3%83%A9%E3%82%B4%E3%83%B3%E3%83%9C%E3%83%BC%E3%83%AB%E8%B6%85"
+   ]
+  },
+  {
+   "episode": 16,
+   "chapters": "5",
+   "alignment": "divergent",
+   "note": "Node-level, not page-level: the manga opens ch 5 on the RESULT ('Goku and Vegeta continue training under Whis on Beerus' Planet') and never depicts how it began; the film states the same node with the order reversed (Goku first, Vegeta following because he will not let Kakarrot get a head start). This episode is the anime's telling of the start: Bulma's restaurant campaign to keep Whis friendly, Vegeta demanding to be taken, and Bulma's new battle armour - the very armour ja-WP's film article says Dragon Ball Super showed him acquiring.",
+   "sources": [
+    "https://dragonball.fandom.com/api.php?action=parse&page=Beerus%20and%20Champa&prop=wikitext&format=json",
+    "https://dragonball.fandom.com/api.php?action=parse&page=Dragon%20Ball%20Z%3A%20Resurrection%20%E2%80%98F%E2%80%99&prop=wikitext&format=json",
+    "https://ja.wikipedia.org/wiki/%E3%83%89%E3%83%A9%E3%82%B4%E3%83%B3%E3%83%9C%E3%83%BC%E3%83%ABZ_%E5%BE%A9%E6%B4%BB%E3%81%AE%E3%80%8CF%E3%80%8D",
+    "https://dragonball.fandom.com/api.php?action=parse&page=Golden%20Frieza%20Saga&prop=wikitext&format=json",
+    "https://dragonball.fandom.com/api.php?action=parse&page=Vegeta%20Becomes%20a%20Student%3F%21%20Win%20Over%20Whis%21&prop=wikitext&format=json"
+   ]
+  },
+  {
+   "episode": 16,
+   "chapters": "3",
+   "alignment": "divergent",
+   "note": "Opening scene: the two Kaioshin puzzling over planets that vanished 'as if by magic' is the anime's version of ch 3's Old Kai noticing a force destroying planets while Beerus is on Earth and spotting Champa and Vados - the thread ja-WP records the manga developing further (Champa destroying Sorbet's officer Garana, which is what indirectly triggers Frieza's revival in the manga).",
+   "sources": [
+    "https://dragonball.fandom.com/api.php?action=parse&page=The%20Rage%20of%20Beerus&prop=wikitext&format=json",
+    "https://www.kanzenshuu.com/episode/super/eps-016/",
+    "https://ja.wikipedia.org/wiki/%E3%83%89%E3%83%A9%E3%82%B4%E3%83%B3%E3%83%9C%E3%83%BC%E3%83%AB%E8%B6%85"
+   ]
+  },
+  {
+   "episode": 17,
+   "chapters": "5",
+   "alignment": "divergent",
+   "note": "Node-level: Goku joins the training that ch 5 presents as an established state and ch 27 still runs on (Whis training Vegeta; Goku asking to be trained again). The manga never depicts Goku's departure.",
+   "sources": [
+    "https://dragonball.fandom.com/api.php?action=parse&page=Beerus%20and%20Champa&prop=wikitext&format=json",
+    "https://dragonball.fandom.com/api.php?action=parse&page=Life%2C%20Training%20and%20More&prop=wikitext&format=json",
+    "https://www.kanzenshuu.com/episode/super/eps-017/"
+   ]
+  },
+  {
+   "episode": 17,
+   "chapters": null,
+   "alignment": "anime_only",
+   "note": "Pan's birth and Krillin's police career are dramatised only here. Both are facts the film already presupposes - Piccolo babysits Pan in Resurrection 'F' and ja-WP's article on that film states the daughter Videl was carrying in Battle of Gods was safely born and named Pan; fandom sources Krillin's police-officer occupation to the same film - and both persist in the manga (Pan has her own Super chapter later; Krillin leads a police squad in the manga's Super Hero arc).",
+   "sources": [
+    "https://dragonball.fandom.com/api.php?action=parse&page=Dragon%20Ball%20Z%3A%20Resurrection%20%E2%80%98F%E2%80%99&prop=wikitext&format=json",
+    "https://ja.wikipedia.org/wiki/%E3%83%89%E3%83%A9%E3%82%B4%E3%83%B3%E3%83%9C%E3%83%BC%E3%83%ABZ_%E5%BE%A9%E6%B4%BB%E3%81%AE%E3%80%8CF%E3%80%8D",
+    "https://dragonball.fandom.com/api.php?action=parse&page=Krillin&prop=wikitext&format=json",
+    "https://ja.wikipedia.org/wiki/%E3%83%89%E3%83%A9%E3%82%B4%E3%83%B3%E3%83%9C%E3%83%BC%E3%83%AB%E8%B6%85",
+    "https://dragonball.fandom.com/api.php?action=parse&page=Pan%20is%20Born%21%20And%20Goku%20Goes%20on%20a%20Training%20Journey%3F%21&prop=wikitext&format=json"
+   ]
+  },
+  {
+   "episode": 22,
+   "chapters": null,
+   "alignment": "anime_only",
+   "note": "Tagoma's 'body of steel' fight with the Z Fighters and Ginyu's body-swap into him. Anime-only against every telling: the film blasts Tagoma into space right after Frieza's revival and has Gohan defeat Shisami on Earth, Ginyu is absent from the film, the Resurrection 'F' promotional manga follows the film, and the Super manga has no chapters in this arc. The episode's closing beat (Frieza incapacitating Gohan, Piccolo intervening) is the film's, restaged with Piccolo dying - recorded as the loose_parallel annotation.",
+   "sources": [
+    "https://dragonball.fandom.com/api.php?action=parse&page=Change%21%20An%20Unexpected%20Return%21%20His%20Name%20Is%20Ginyu%21%21&prop=wikitext&format=json",
+    "https://www.kanzenshuu.com/episode/super/eps-022/",
+    "https://dragonball.fandom.com/api.php?action=parse&page=Tagoma&prop=wikitext&format=json",
+    "https://dragonball.fandom.com/api.php?action=parse&page=Golden%20Frieza%20Saga&prop=wikitext&format=json",
+    "https://dragonball.fandom.com/api.php?action=parse&page=Chapter%203%20%28Resurrection%20%E2%80%98F%E2%80%99%29&prop=wikitext&format=json"
+   ]
+  },
+  {
+   "episode": 50,
+   "chapters": "15-16",
+   "alignment": "divergent",
+   "note": "Same node, opposite staging: after Trunks escapes, the manga's Black stays in the future - ch 15 ends with him 'surprised that Future Trunks completely vanished' and ch 16 has him unable to sense Trunks and flying off - while the anime's Black follows the machine into the present, fights Goku and is pulled back. The wait that follows is the same node in both (the manga: a day of Bulma's fuel, ch 15/16), but the anime adds the machine's destruction, so its wait is a REPAIR (eps 51-54). The Time Ring that Beerus and Whis spot on Black's hand here is what sends them to Universe 10 in ep 53; the manga gets there by Whis suggesting a visit to Shin at the end of ch 16 and explains the Time Rings in its own text (ja-WP).",
+   "sources": [
+    "https://dragonball.fandom.com/api.php?action=parse&page=Hope%21%21%20Once%20Again&prop=wikitext&format=json",
+    "https://dragonball.fandom.com/api.php?action=parse&page=Future%20Trunks%27s%20Past&prop=wikitext&format=json",
+    "https://www.kanzenshuu.com/episode/super/eps-050/",
+    "https://www.kanzenshuu.com/episode/super/eps-053/",
+    "https://ja.wikipedia.org/wiki/%E3%83%89%E3%83%A9%E3%82%B4%E3%83%B3%E3%83%9C%E3%83%BC%E3%83%AB%E8%B6%85"
+   ]
+  },
+  {
+   "episode": 50,
+   "chapters": null,
+   "alignment": "anime_only",
+   "note": "Goku vs Goku Black in the present, the destruction of Trunks's time machine, Beerus and Whis noticing the Time Ring, Bulma remembering Cell's time machine, and Future Mai waking. The manga has none of these pages; they are nonetheless the machinery eps 51, 53 and 54 run on.",
+   "sources": [
+    "https://dragonball.fandom.com/api.php?action=parse&page=Goku%20vs.%20Black%21%20A%20Closed-Off%20Road%20to%20the%20Future%21&prop=wikitext&format=json",
+    "https://www.kanzenshuu.com/episode/super/eps-050/",
+    "https://www.kanzenshuu.com/episode/super/eps-051/"
+   ]
+  },
+  {
+   "episode": 52,
+   "chapters": null,
+   "alignment": "anime_only",
+   "note": "Future Trunks's visit to Gohan, Videl, Mr. Satan and baby Pan, the Future Gohan flashback, and the day's repair work with the Pilaf Gang. The manga fills the same wait with a meal at Capsule Corporation (ch 16); fandom compares the two directly. Node-level the two tellings agree that Trunks has downtime here; nothing in either telling's later plot depends on the visit.",
+   "sources": [
+    "https://dragonball.fandom.com/api.php?action=parse&page=Master%20and%20Pupil%20Reunited%21%20Gohan%20and%20%22Future%22%20Trunks%21&prop=wikitext&format=json",
+    "https://www.kanzenshuu.com/episode/super/eps-052/",
+    "https://dragonball.fandom.com/api.php?action=parse&page=Future%20Trunks%27s%20Past&prop=wikitext&format=json"
+   ]
+  }
+ ],
+ "repairs": [],
+ "structure": {
+  "notes": "=== 1. ROW IDENTITY (R20 - joined on title, never on index) === All seven target rows were matched by TITLE and air date against AFL's live table (scraped 2026-08-28; it parses to 131 rows with no doubled or skipped number): 4 'Aim for the Dragon Balls! Pilaf Gang in Action!' 2015-08-02; 15 'Make a Miracle, Satan the Hero! A Challenge from Outer Space' 2015-10-18; 16 'Vegeta Becomes an Apprentice?! Winning Whis Over!' 2015-10-25; 17 'Pan is Born! And Goku Goes on a Training Trip?!' 2015-11-01; 22 'Change! an Unexpected Return! His Name Is Ginyu!!' 2015-12-06; 50 'Goku Vs Black! The Closed Path to the Future' 2016-07-03; 52 'Teacher and Student Reunited - Son Gohan and \"Future\" Trunks' 2016-07-17. All seven match our stored titles; the fandom pages use their own translations of the same Japanese titles (e.g. ours 'Vegeta Becomes an Apprentice?!...' = fandom 'Vegeta Becomes a Student?! Win Over Whis!'). === 2. COUNTERPART FIELDS, BOTH DIRECTIONS === All seven rows have an EMPTY or absent Manga= field on their fandom episode page, and no Super chapter's episode= field names any of them (the fields for the surrounding chapters read: ch 1 -> eps 1, 2; ch 2 -> eps 3, 5; ch 3 -> eps 7, 8; ch 4 -> eps 9, 10, 11, 12, 14, 18; ch 5 -> ep 28; ch 14 -> ep 47; ch 15 -> eps 48, 49; ch 16 -> eps 49, 51, 54). That emptiness is what produced the stored filler typing under the manga-relative test; under T30 it is not a verdict, only the observation that these rows have no counterpart PAGES. === 3. THE THREE ARC REGIMES THESE ROWS SIT IN === (a) eps 1-14 Battle of Gods: shared with the manga (ch 1-4) and descended from the 2013 film - ep 4 sits here. (b) eps 15-27 Resurrection 'F': the manga SKIPS it (ja-WP: the arc's outcome is told in exposition only; V-Jump tells readers doing a full run-through to insert the film's Animation Comic), and the licensed work the arc realises is the 2015 film (batch 19's ruling; eps 18-27 stored canon + side_source) - eps 15, 16, 17, 22 sit here. For rows in this arc the B question therefore has to be asked against the FILM and against the manga's own premises, not against chapters that do not exist. (c) eps 47-67 Future Trunks: shared with the manga (ch 14-26) - eps 50 and 52 sit here. === 4. AFL IS NOT A B/D ORACLE, AND THIS BUNDLE SHOWS BOTH FAILURE DIRECTIONS === AFL's live buckets for these rows: Filler = 4, 15; Anime Canon = 16, 17, 22, 50, 52. Its Filler bucket agrees with both of my holds there, and its Anime Canon bucket contains all three of my lifts - but it also contains 22 and 52, which stay D on the evidence above. Cross-check only (R1), exactly as wave 5c found. === 5. NO ANCHORS === Every chapter number in this verdict is CORRESPONDENCE (A46/T30), and the publication dates show why it can be nothing else: ch 5 (2015-10-21) PRECEDES eps 16 and 17 (2015-10-25 / 2015-11-01) by days, while ch 15 (2016-08-20) and ch 16 (2016-09-21) POSTDATE ep 50 (2016-07-03) by six and eleven weeks. Neither work adapts the other; the numbers locate the other telling's version of the same node.",
+  "order_only": []
+ },
+ "flags_for_sean": [
+  "THE THREE LIFTS CONTRADICT STORED T6 OVERRIDES AND ARE PROPOSED AS REPAIRS, NOT SILENT OVERRIDES: EPISODE_TYPE_OVERRIDES pins 16, 17 and 50 as filler (batch 18, decided relative to the manga and verified under that test). Each was right under the manga-relative test and each fails the parallel definition. The T6 entries for 16/17/50 must be updated together with the type rows or the resolver re-imposes filler on the next run (P8). The four holds (4, 15, 22, 52) need no T6 change.",
+  "eps 16 / 17 ARE THE BOUNDARY CALL OF THIS BUNDLE (delivered at MEDIUM). For canon: the node they carry - Goku and Vegeta as Whis's students on Beerus's planet - is stated as an established premise by the film, by the Resurrection 'F' promotional manga and by the Super manga's ch 5 and ch 27, and the anime's ep 18 and ep 28 (both stored canon) run on what these two episodes set up. Against canon: the arc fandom files them under is the one the manga skips, no telling DEPICTS the transition, and the episodes' connective tissue (Bulma's restaurant campaign, Krillin's punch, the Chi-Chi/Satan argument, the traffic stop) is Toei's. If you read 'the manga states the state, it does not carry the node' as decisive, both stay filler; the evidence in this verdict supports either call and I took the one Sean's ep-90 ruling models (the manga states the node in one clause, the anime dramatises it).",
+  "ANNOTATION QUESTION ON 16/17 IF THEY LIFT: the surrounding arc rows 18-27 carry side_source{Dragon Ball Z: Resurrection 'F' (2015 film)}. I did NOT add side_source to 16/17, because their content is not the film's pages - only the premise is (the batch-19 ep-6 precedent applies where the episode's 'anime-exclusive' events ARE the film's scenes, which is not the case here). If you would rather have the whole 15-27 block carry one film annotation, adding side_source{Resurrection 'F' film} to 16/17 is defensible; adding it to the two rows that stay filler (15, 22) is not.",
+  "ep 52 IS THE CLOSEST HOLD (delivered at MEDIUM). Both tellings pause here while the time machine is prepared, and fandom pairs the two versions explicitly (anime: Trunks visits Gohan; manga: a meal at Capsule Corp, ch 16). I kept D because no later beat in either telling depends on the episode's content. If you read the shared DOWNTIME node as enough, ep 52 becomes canon (B) - not mixed, since the whole episode is that downtime and there is no self-contained anime-original subplot beside it.",
+  "ep 50's LIFT ALSO CHANGES HOW ep 52 READS, if you want them consistent: once ep 50 is canon, the machine-repair thread it starts is the anime's telling of the manga's fuel wait, and ep 52 is one day of that thread. I judged the two separately on the load-bearing test (50's outputs are consumed by 51/53/54 by name; 52's are not), which is what produced the split verdict.",
+  "ep 4's graft{2} is deliberately an ANNOTATION, not a mixed typing: the ch-2 beats occupy the episode's last two minutes and ep 5 replays the arrival, so under T28 the row's own plot is the Pilaf comedy. If you disagree and count the King Kai exposition as story-carrying, the row would be mixed - but never canon.",
+  "A SERIES-LEVEL FACT WORTH RECORDING WITH THE I-RULING: the anime's Battle of Gods arc drops the FILM's Pilaf plot function (Mai's pistol, the stray bullet, Dende discovering Videl's pregnancy) and instead has Videl volunteer the pregnancy exactly as manga ch 4 does. Two works that do not adapt each other making the same change against the film they both descend from is the parallel identity showing in the pages again - the same kind of evidence wave 5c found in eps 1-2.",
+  "NO ANCHORS were produced (A46). ep 50 in particular must never be given a chapter anchor: no chapter's episode= field names it, and ch 15/16 are the manga's DIFFERENT road to the same node."
+ ]
+}
