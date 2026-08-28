@@ -25,6 +25,8 @@ export type SeriesRow = {
   cover_url: string | null;
   status: string;
   source_type: string | null;
+  /** I40: adaptation | parallel | null (no source) — the UI pass reads it; a parallel series draws the correspondence views */
+  source_relation: string | null;
   manga_status: string | null;
   manga_anilist_id: number | null;
   aired_episodes: number;
@@ -43,7 +45,7 @@ export type SeriesRow = {
 };
 
 export const SERIES_COLS =
-  'id, title, title_native, cover_url, status, source_type, manga_status, manga_anilist_id, aired_episodes, total_episodes, total_volumes, total_chapters, manga_start_volume, manga_start_chapter, popularity, genres, synopsis_html, external_links, search_text, latest_known_chapters, mapping_mode';
+  'id, title, title_native, cover_url, status, source_type, source_relation, manga_status, manga_anilist_id, aired_episodes, total_episodes, total_volumes, total_chapters, manga_start_volume, manga_start_chapter, popularity, genres, synopsis_html, external_links, search_text, latest_known_chapters, mapping_mode';
 
 export type EpisodeRow = { number: number; title: string; type: string; air_date: string | null; format?: string | null };
 export type AnchorRow = { episode: number; volume: number | null; chapter: number; start_chapter: number | null };

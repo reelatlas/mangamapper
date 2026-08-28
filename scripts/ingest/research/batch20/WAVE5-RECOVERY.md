@@ -220,3 +220,183 @@ Sean rules the identity (above) → **VERIFY (R24)**: two verifier tasks (the di
 | 129 | canon | + divergence{27-42}, divergence{40-42} |
 | 130 | canon | + divergence{27-42}, divergence{40-42} |
 | 131 | canon · anchor 42 | + divergence{27-42}, divergence{40-42} |
+
+
+## THE MODEL RULED (Sean 2026-08-28 — the DBS strategy session; built as §12.87)
+
+The timelines: **A** manga-only from the outline (canon, chapter side) · **B** anime-only from the outline (canon) · **C** both (canon) · **D** studio padding, not the outline (filler) · **E** D with A/B/C in one episode (mixed, unless the `T28` sliver → filler). `type` answers FROM THE OUTLINE OR NOT; the compare layer (arcs + correspondence rows) answers how the two tellings sit on it. Stored: `series.source_relation = parallel` (I40; `parallel`, not `alternative` — series_relations spends that word on FMA 2003 ↔ Brotherhood), the manga link 86508 as part of the ruling, `series_arcs` (8 ruled arcs) and `episode_correspondence` (aligned | divergent | anime_only | manga_only; HELD until Sean evaluates the table below). NO anchors (the AFG-continua ep 131 → ch 42 pin was removed and listed). The wave-5 content-test conversions (22 rows → filler) are WITHDRAWN under T30; wave 5c researches 90 / 91 / 1 / 2 / 78 / 89 under the load-bearing test. Lane **L-P** (row-grain alignment, one arc per wave) populates the correspondence until `correspondence_incomplete` is empty — Sean's to fund.
+
+## dragon-ball-super — the full evaluation table under I40 / T30 / A46 (generated 2026-08-28; stored first)
+
+Columns: **stored** = the DB right now (type + annotations); **wave 5** = what the research verdict / verifier proposed under the content test (type corrections and row-level annotations only — the blanket arc-level `divergence{range}` stamps are NOT applied: the arc's note carries them); **→ proposed** = what the row becomes under the parallel rule (T30: from the outline or not; A46: correspondence rows instead of anchors). "row …" names the episode_correspondence row the apply would write; "pending (L-P)" = a canon row in a shared arc whose alignment is not yet researched — it renders an honest dash until lane L-P reaches its arc. Totals: 5 lifts, 6 pending w5c research, 120 rows with no type change.
+
+### Battle of Gods — shared, eps 1-14 ↔ ch 1-4
+
+| ep | title | stored | wave 5 | → proposed |
+|---|---|---|---|---|
+| 1 | The Peace Reward - Who Will Get the 100 Million Zeni? | mixed | — | **pending w5c research** (mixed under E = story + padding, or canon) |
+| 2 | To the Promised Resort! Vegeta Goes on a Family Trip!? | mixed | — | **pending w5c research** (mixed under E = story + padding, or canon) |
+| 3 | Where's the Rest of the Dream?! In Search of the Super Saiyan God! | canon | — | canon — no change; row pending (L-P: arc ↔ ch 1-4) |
+| 4 | Aim for the Dragon Balls! Pilaf Gang in Action! | filler | — | filler — no change (D: padding inside a shared arc) |
+| 5 | The Ultimate Fight on King Kai's Planet! Goku Vs the God of Destruction Beerus | canon | — | canon — no change; row pending (L-P: arc ↔ ch 1-4) |
+| 6 | Don't Anger the God of Destruction! Excitement at the Birthday Party | canon |  + side_source | canon — no change; + side_source{Battle of Gods film} (the manga has nothing here; the film does) |
+| 7 | How Dare You Hurt My Bulma! Vegeta's Sudden, Angry Shift?! | canon | — | canon — no change; row pending (L-P: arc ↔ ch 1-4) — fandom index: ch 3 |
+| 8 | Goku Arrives! A Last Chance from Beerus Sama?! | canon | — | canon — no change; row pending (L-P: arc ↔ ch 1-4) — fandom index: ch 3 |
+| 9 | Sorry for the Wait, Beerus Sama. The Super Saiyan God is Finally Born! | canon | — | canon — no change; row pending (L-P: arc ↔ ch 1-4) — fandom index: ch 4 |
+| 10 | Unleash It, Goku! The Power of the Super Saiyan God!! | canon | — | canon — no change; row pending (L-P: arc ↔ ch 1-4) — fandom index: ch 4 |
+| 11 | Let's Keep Going, Beerus Sama! Our Battle of Gods! | canon | — | canon — no change; row pending (L-P: arc ↔ ch 1-4) — fandom index: ch 4 |
+| 12 | The Universe Crumbles?! Clash! God of Destruction Vs. Super Saiyan God | canon | — | canon — no change; row pending (L-P: arc ↔ ch 1-4) — fandom index: ch 4 |
+| 13 | Goku, Surpass the Super Saiyan God! | canon | — | canon — no change; row aligned{4} (ch 4 carries the Beerus Ball beat; the "anime-exclusive" boilerplate is false here) |
+| 14 | This Is Every Ounce of Power I Have! The Battle of Gods' Conclusion! | canon | — | canon — no change; row pending (L-P: arc ↔ ch 1-4) — fandom index: ch 4 |
+
+### Resurrection 'F' — side_source, eps 15-27
+
+| ep | title | stored | wave 5 | → proposed |
+|---|---|---|---|---|
+| 15 | Make a Miracle, Satan the Hero! A Challenge from Outer Space | filler | — | filler — no change (D: a Toei bridge inside the film arc) |
+| 16 | Vegeta Becomes an Apprentice?! Winning Whis Over! | filler | — | filler — no change (D: a Toei bridge inside the film arc) |
+| 17 | Pan is Born! And Goku Goes on a Training Trip?! | filler | — | filler — no change (D: a Toei bridge inside the film arc) |
+| 18 | I'm Here, Too! Training Begins On Beerus' Planet! | canon + loose_parallel{4}, side_source | — | no change (batch 19: the 2015 film, side_source) |
+| 19 | Despair Rises! The Emperor of Evil, Frieza, Resurrected! | canon + side_source, divergence | — | no change (batch 19: the 2015 film, side_source) |
+| 20 | Jaco's Warning! Frieza and His 1000 Troops Approach | canon + divergence, side_source | — | no change (batch 19: the 2015 film, side_source) |
+| 21 | The Start of Revenge! the Malice of Frieza Army Strikes Gohan! | canon + divergence, side_source | — | no change (batch 19: the 2015 film, side_source) |
+| 22 | Change! an Unexpected Return! His Name Is Ginyu!! | filler | — | filler — no change (D: a Toei bridge inside the film arc) |
+| 23 | The Earth! Gohan! Absolute Peril! Hurry and Get Here, Son Goku!! | canon + side_source, divergence | — | no change (batch 19: the 2015 film, side_source) |
+| 24 | Clash! Frieza Vs Son Goku - This Is The Result of My Training! | canon + side_source, divergence | — | no change (batch 19: the 2015 film, side_source) |
+| 25 | An All-Out Battle! The Revenge of Golden Frieza | canon + side_source, divergence | — | no change (batch 19: the 2015 film, side_source) |
+| 26 | A Glint of Hope Shines Through in a Crisis! Time to Fight Back, Son Goku! | canon + side_source, divergence | — | no change (batch 19: the 2015 film, side_source) |
+| 27 | The Earth Explodes?! The Deciding Kamehameha | canon + divergence, side_source | — | no change (batch 19: the 2015 film, side_source) |
+
+### Universe 6 — shared, eps 28-41 ↔ ch 5-13
+
+| ep | title | stored | wave 5 | → proposed |
+|---|---|---|---|---|
+| 28 | The God of Destruction from Universe 6 - His Name Is Champa | canon | — | canon — no change; row pending (L-P: arc ↔ ch 5-13) |
+| 29 | The Martial Arts Match Has Been Decided! The Team Captain Is Stronger Than Goku | canon | — | canon — no change; row pending (L-P: arc ↔ ch 5-13) |
+| 30 | A Review Before the 'Martial Arts Match' - Who Are the Last Two Members?! | canon | — | canon — no change; row pending (L-P: arc ↔ ch 5-13) |
+| 31 | Off to Zuno Sama's! Find Out Where Super Dragon Balls Are! | canon | — | canon — no change; row pending (L-P: arc ↔ ch 5-13) |
+| 32 | The Match Begins! Let's All Go to the Nameless Planet! | canon | — | canon — no change; row pending (L-P: arc ↔ ch 5-13) |
+| 33 | Behold, Universe 6! This Is the Super Saiyan? Son Goku! | canon | — | canon — no change; row pending (L-P: arc ↔ ch 5-13) |
+| 34 | Piccolo Vs. Frost - Put It All on the Special Beam Cannon! | canon | — | canon — no change; row pending (L-P: arc ↔ ch 5-13) |
+| 35 | Turn Rage into Strength! Vegeta's Full-On Battle | canon | — | canon — no change; row pending (L-P: arc ↔ ch 5-13) |
+| 36 | An Unexpected Desperate Battle! Vegeta's Furious Explosion! | canon | — | canon — no change; row pending (L-P: arc ↔ ch 5-13) |
+| 37 | Don't Forget Your Saiyan Pride! Vegeta Vs the Saiyan of Universe 6 | canon | — | canon — no change; row pending (L-P: arc ↔ ch 5-13) |
+| 38 | The Ultimate Warrior of Universe 6! Assassin Hit Appears!! | canon | — | canon — no change; row pending (L-P: arc ↔ ch 5-13) |
+| 39 | The Advanced 'Time-Skip' Fights Back?! Will it Come Forth? Goku's New Technique! | canon | — | canon — no change; row pending (L-P: arc ↔ ch 5-13) |
+| 40 | At Last, It Comes to an End! Is the Winner Beerus? Or is it Champa? | canon | — | canon — no change; row pending (L-P: arc ↔ ch 5-13) |
+| 41 | Come, God of Dragons - And Pretty Please Grant My Wish! | canon | — | canon — no change; row pending (L-P: arc ↔ ch 5-13) |
+
+### Copy-Vegeta — anime_only, eps 42-46
+
+| ep | title | stored | wave 5 | → proposed |
+|---|---|---|---|---|
+| 42 | Trouble at the Victory Celebration! Showdown at Last?! Monaka vs. Son Goku | filler | — | filler — no change (D, the arc) |
+| 43 | Goku's 'Ki' is Out of Control?! Looking After Pan is A Lot of Trouble | filler | — | filler — no change (D, the arc) |
+| 44 | Seal of Planet Potofu - Secret of the Superhuman Water is Unleashed | filler | — | filler — no change (D, the arc) |
+| 45 | Vegeta Disappears?! The Threat Of Duplicated Vegeta! | filler | — | filler — no change (D, the arc) |
+| 46 | Goku vs. Duplicated Vegeta! Who's Gonna Win?! | filler | — | filler — no change (D, the arc) |
+
+### Future Trunks — shared, eps 47-67 ↔ ch 14-26
+
+| ep | title | stored | wave 5 | → proposed |
+|---|---|---|---|---|
+| 47 | An SOS from the Future! A Dark New Enemy Emerges!! | canon | — | canon — no change; row pending (L-P: arc ↔ ch 14-26) |
+| 48 | Hope!! Once More Awaken in the Present, Trunks | canon | — | canon — no change; row pending (L-P: arc ↔ ch 14-26) |
+| 49 | A Message from the Future - Goku Black Strikes! | canon | — | canon — no change; row pending (L-P: arc ↔ ch 14-26) — fandom index: ch 16 |
+| 50 | Goku Vs Black! The Closed Path to the Future | filler | — | filler — no change (D: padding inside a shared arc) |
+| 51 | Feelings That Travel Beyond Time - Trunks and Mai | canon | — | canon — no change (B); row divergent{16: Trunks meets Mai is the one shared beat} |
+| 52 | Teacher and Student Reunited - Son Gohan and "Future" Trunks | filler | — | filler — no change (D: padding inside a shared arc) |
+| 53 | Uncover Black's Identity! To the Sacred World of the Kais! | canon | → filler + partial{17} | canon — no change (B: the anime's telling; the wave-5 "→ filler" is withdrawn); row divergent{16-17} |
+| 54 | The One Who Inherits the Saiyan Blood - Trunk's Resolve | canon | — | canon — no change; row pending (L-P: arc ↔ ch 14-26) — fandom index: ch 16, 17 |
+| 55 | I Want to See Son Goku - Zen-Oh Sama's Summoning! | canon | — | canon — no change; row pending (L-P: arc ↔ ch 14-26) — fandom index: ch 17 |
+| 56 | Rematch With Goku Black! Super Saiyan Rosé Appears | canon | — | canon — no change; row pending (L-P: arc ↔ ch 14-26) |
+| 57 | The God With the Immortal Body - Zamasu Descends | canon | — | canon — no change; row pending (L-P: arc ↔ ch 14-26) — fandom index: ch 17 |
+| 58 | Zamasu and Black - The Mystery of the Two Deepens | canon | — | canon — no change; row pending (L-P: arc ↔ ch 14-26) |
+| 59 | Protect Supreme Kai Gowasu — Destroy Zamasu! | canon | — | canon — no change; row pending (L-P: arc ↔ ch 14-26) |
+| 60 | Back to the Future - Goku Black's Identity is Revealed!! | canon | — | canon — no change; row pending (L-P: arc ↔ ch 14-26) |
+| 61 | Zamasu's Ambition — The Awful "Zero Mortal Plan" Is Revealed | canon | — | canon — no change; row pending (L-P: arc ↔ ch 14-26) |
+| 62 | I'll Protect the World! Trunks’ Furious Super Power Explodes!! | canon | — | canon — no change; row pending (L-P: arc ↔ ch 14-26) |
+| 63 | Don’t Disrespect Saiyan Cells! Vegeta’s Heroic Battle Begins!! | canon | — | canon — no change; row pending (L-P: arc ↔ ch 14-26) |
+| 64 | Revere Him! Praise Him! Fusion Zamasu's Explosive Birth!! | canon | — | canon — no change; row pending (L-P: arc ↔ ch 14-26) |
+| 65 | Is This the Final Judgement?! The Ultimate Power of the Absolute God | canon | — | canon — no change; row pending (L-P: arc ↔ ch 14-26) |
+| 66 | The Climactic Battle! The Miraculous Power of a Relentless Warrior! | canon | — | canon — no change; row pending (L-P: arc ↔ ch 14-26) |
+| 67 | With New Hope!! In Our Hearts - Farewell, Trunks | canon | — | canon — no change; row pending (L-P: arc ↔ ch 14-26) |
+
+### Toei interludes — anime_only, eps 68-76
+
+| ep | title | stored | wave 5 | → proposed |
+|---|---|---|---|---|
+| 68 | Come Forth, Shenron! Whose Wish Will Be Granted?! | filler | — | filler — no change (D, the arc) |
+| 69 | Goku vs Arale! A Ridiculous Battle Will End The Earth?! | filler | — | filler — no change (D, the arc) |
+| 70 | Champa's Challenge! This Time We Fight With Baseball! | filler | — | filler — no change (D, the arc) |
+| 71 | The Death of Goku! The Guaranteed Assassination Mission | filler | — | filler — no change (D, the arc) |
+| 72 | Will There Be A Counterattack?! The Invisible Killing Strike!! | filler | — | filler — no change (D, the arc) |
+| 73 | Gohan's Misfortune! An Unexpected Great Saiyaman Movie?! | filler | — | filler — no change (D, the arc) |
+| 74 | For the Ones He Loves! The Unbeatable Great Saiyaman!! | filler | — | filler — no change (D, the arc) |
+| 75 | Goku and Krillin Back to the Old Training Grounds | filler | — | filler — no change (D, the arc) |
+| 76 | Defeat These Terrifying Enemies! Krillin's Fighting Spirit Returns! | filler | — | filler — no change (D, the arc) |
+
+### Universe Survival — shared, eps 77-131 ↔ ch 27-42
+
+| ep | title | stored | wave 5 | → proposed |
+|---|---|---|---|---|
+| 77 | Let's Do it, Zen-Oh Sama! The All-Universe Martial Arts Tournament!! | canon | — | canon — no change; row pending (L-P: arc ↔ ch 27-42) — fandom index: ch 27, 28 |
+| 78 | The Gods of Every Universe In Shock?! Losers Erased In The Tournament Of Power | mixed + rearranged{28} | — | **pending w5c research** (mixed under E = story + padding, or canon) — fandom index: ch 28 |
+| 79 | Universe 9’s Basil The Kicker VS Universe 7’s Majin Buu!! | filler + divergence | — | **lift → canon (B)**; row divergent{28-30: the manga's Zen Exhibition, a twelve-God battle royal} |
+| 80 | Awaken Your Sleeping Battle Spirit! Son Gohan's Fight!! | filler + divergence | — | **lift → canon (B)**; row divergent{28-30} |
+| 81 | Bergamo The Crusher VS Son Goku! Which One Wields The Limitless Power!? | filler + divergence | — | **lift → canon (B)**; row divergent{28-30} |
+| 82 | Never Forgive Son Goku! Toppo The Warrior Of Justice Intrudes!! | canon | — | canon — no change; row pending (L-P: arc ↔ ch 27-42) — fandom index: ch 29, 30 |
+| 83 | Form the Universe 7 Representing Team! Who are the Strongest Ten?! | canon | — | canon — no change; row pending (L-P: arc ↔ ch 27-42) — fandom index: ch 30 |
+| 84 | Son Goku The Recruiter Invites Krillin And No. 18 | canon | — | canon — no change; row pending (L-P: arc ↔ ch 27-42) — fandom index: ch 31 |
+| 85 | The Universes Begin To Make Their Moves Their Individual Motives | canon | — | canon — no change; row pending (L-P: arc ↔ ch 27-42) — fandom index: ch 30, 31 |
+| 86 | Fists Cross For The First Time! Android #17 Vs Son Goku!! | canon | — | canon — no change; row pending (L-P: arc ↔ ch 27-42) — fandom index: ch 31 |
+| 87 | Hunt the Poachers! Goku and No. 17's United Front!! | canon | — | canon — no change (B: the anime's telling; the wave-5 "→ filler" is withdrawn); row divergent{31} — fandom index: ch 31 |
+| 88 | Gohan And Piccolo Teacher And Pupil Clash In Max Training! | canon | — | canon — no change (B: the anime's telling; the wave-5 "→ filler" is withdrawn); row divergent{31} — fandom index: ch 31 |
+| 89 | An Unknown Beauty Appears! The Tenshin-style Dojo's Mystery?! | mixed | — | **pending w5c research** (mixed under E = story + padding, or canon) — fandom index: ch 32 |
+| 90 | See The Wall That Must Be Passed! Goku Vs Gohan | filler | — | **pending w5c research** (filler (D) unless load-bearing → canon (B)) |
+| 91 | Which Universe Will Survive?! The Strongest Warriors Are Gathering!! | filler + partial{31} | — | **pending w5c research** (filler (D) unless load-bearing → canon (B)) — fandom index: ch 31 |
+| 92 | Emergency Development! The Incomplete Ten Members!! | canon | — | canon — no change; row pending (L-P: arc ↔ ch 27-42) — fandom index: ch 32 |
+| 93 | You're The Tenth Warrior! Goku Goes To See Frieza!! | canon | — | canon — no change; row pending (L-P: arc ↔ ch 27-42) — fandom index: ch 32 |
+| 94 | The Emperor of Evil Returns! A Reception of Mysterious Assassins?! | filler + partial{32}, divergence{32} | — | **lift → canon (B)**; row divergent{32: Frieza's recruitment} — fandom index: ch 32 |
+| 95 | The Worst! The Most Evil! Frieza's Rampage!! | filler + partial{32}, divergence{32} | — | **lift → canon (B)**; row divergent{32} — fandom index: ch 32 |
+| 96 | The Time Is Here! To The World Of Void For The Fate Of The Universe!! | canon | — | canon — no change; row pending (L-P: arc ↔ ch 27-42) — fandom index: ch 32, 33 |
+| 97 | Survive! The Tournament Of Power Begins At Last!! | canon | — | canon — no change; row pending (L-P: arc ↔ ch 27-42) — fandom index: ch 33 |
+| 98 | Oh, Uncertainty! A Universe  Despairs!! | canon | — | canon — no change (B: the anime's telling; the wave-5 "→ filler" is withdrawn); row divergent{34} — fandom index: ch 34 |
+| 99 | Show Them! Krillin's True Power!! | canon | — | canon — no change (B: the anime's telling; the wave-5 "→ filler" is withdrawn); row divergent{34} — fandom index: ch 34 |
+| 100 | Out Of Control! The Savage Berserker Awakens!! | canon | — | canon — no change; row pending (L-P: arc ↔ ch 27-42) — fandom index: ch 37, 38 |
+| 101 | The Impending Warriors of Justice! The Pride Troopers!! | canon | — | canon — no change; row pending (L-P: arc ↔ ch 27-42) — fandom index: ch 33, 38 |
+| 102 | The Power of Love Explodes?! Universe 2's Little Witch Warriors!! | canon | — | canon — no change (B: the anime's telling; the wave-5 "→ filler" is withdrawn); row divergent{36} — fandom index: ch 36 |
+| 103 | Gohan, Show No Mercy! Showdown With Universe 10!! | canon | — | canon — no change (B: the anime's telling; the wave-5 "→ filler" is withdrawn); row divergent{36, 38} — fandom index: ch 38 |
+| 104 | The Ultimate High Speed Battle Begins! Goku and Hit Join Forces!! | canon | — | canon — no change (B: the anime's telling; the wave-5 "→ filler" is withdrawn); row divergent{35} — fandom index: ch 35 |
+| 105 | A Desperate Battle! Master Roshi's Sacrifice!! | canon | → filler + divergence{38-40} | canon — no change (B: the anime's telling; the wave-5 "→ filler" is withdrawn); row divergent{38-39} |
+| 106 | Find Him! Death Match With An Invisible Attacker!! | canon | — | canon — no change (B: the anime's telling; the wave-5 "→ filler" is withdrawn); row divergent{34} — fandom index: ch 34 |
+| 107 | Revenge "F"! The Cunning Trap?! | canon | — | canon — no change (B: the anime's telling; the wave-5 "→ filler" is withdrawn); row divergent{34} — fandom index: ch 34, 39 |
+| 108 | Frieza and Frost! Conjoined Malice?! | canon | — | canon — no change; row pending (L-P: arc ↔ ch 27-42) — fandom index: ch 34 |
+| 109 | The Ultimate Enemy Approaches Goku! Now, Let Loose! The Killer Spirit Bomb!! | canon | — | canon — no change (B: the anime's telling; the wave-5 "→ filler" is withdrawn); row divergent{35} — fandom index: ch 35 |
+| 110 | Son Goku Wakes! New Level of The Awakened!! | canon | — | canon — no change; row pending (L-P: arc ↔ ch 27-42) — fandom index: ch 35 |
+| 111 | The Surreal Supreme Battle! Hit vs Jiren!! | canon | — | canon — no change; row pending (L-P: arc ↔ ch 27-42) — fandom index: ch 35, 38 |
+| 112 | A Saiyan's Vow! Vegeta's Resoution!! | canon | — | canon — no change (B: the anime's telling; the wave-5 "→ filler" is withdrawn); row divergent{37-38} — fandom index: ch 36, 37, 38 |
+| 113 | With Great Joy! The Repeat Battle-Crazy Saiyan Fight!! | canon | → filler + divergence{37} | canon — no change (B: the anime's telling; the wave-5 "→ filler" is withdrawn); row divergent{37} |
+| 114 | Intimidating Passion! The Birth of a New Super Warrior!! | canon |  + divergence{37-39} | canon — no change; row pending (L-P: arc ↔ ch 27-42) — fandom index: ch 37, 38 |
+| 115 | Goku vs Kefla! Super Saiyan Blue Defeated?! | canon |  + divergence{37-39} | canon — no change (B: the anime's telling; the wave-5 "→ filler" is withdrawn); row divergent{38-39} — fandom index: ch 36 |
+| 116 | The Sign of a Comeback! Ultra Instinct's Huge Explosion!! | canon |  + divergence{37-39} | canon — no change (B: the anime's telling; the wave-5 "→ filler" is withdrawn); row divergent{39} — fandom index: ch 39 |
+| 117 | Showdown of Love! Androids vs Universe 2!! | canon | — | canon — no change; row pending (L-P: arc ↔ ch 27-42) — fandom index: ch 36 |
+| 118 | Accelerated Tragedy - Vanishing Universes... | canon | — | canon — no change (B: the anime's telling; the wave-5 "→ filler" is withdrawn); row divergent{38-39} — fandom index: ch 38, 39 |
+| 119 | Unavoidable?! The Fierce Stealth Attack!! | canon | — | canon — no change; row pending (L-P: arc ↔ ch 27-42) — fandom index: ch 36 |
+| 120 | The Perfect Survival Tactic! Universe 3's Menacing Assassin!! | canon | → filler + divergence{38} | canon — no change (B: the anime's telling; the wave-5 "→ filler" is withdrawn); row divergent{38} |
+| 121 | All-Out War! The Ultimate Quadruple Merge vs Universe 7's Full-Scale Attack!! | canon | — | canon — no change (B: the anime's telling; the wave-5 "→ filler" is withdrawn); row divergent{38} — fandom index: ch 38 |
+| 122 | For One's Own Pride! Vegeta's Challenge to be the Strongest!! | canon | — | canon — no change; row pending (L-P: arc ↔ ch 27-42) — fandom index: ch 39, 40 |
+| 123 | Body and Soul, Full Power Release! Goku and Vegeta!! | canon | — | canon — no change; row pending (L-P: arc ↔ ch 27-42) — fandom index: ch 39, 40 |
+| 124 | The Fiercely Overwhelming Assault! Gohan's Last Stand!! | canon | — | canon — no change (B: the anime's telling; the wave-5 "→ filler" is withdrawn); row divergent{39-40} — fandom index: ch 39, 40, 42 |
+| 125 | With Imposing Presence! God of Destruction Toppo Descends!! | canon | — | canon — no change (B: the anime's telling; the wave-5 "→ filler" is withdrawn); row divergent{40} — fandom index: ch 40 |
+| 126 | Surpass Even a God! Vegeta's Desperate Blow!! | canon | — | canon — no change (B: the anime's telling; the wave-5 "→ filler" is withdrawn); row divergent{40} — fandom index: ch 40 |
+| 127 | The Approaching Wall! The Final Barrier of Hope!! | canon |  + divergence{40-42} | canon — no change; row pending (L-P: arc ↔ ch 27-42) — fandom index: ch 40, 41 |
+| 128 | Noble Pride to the End! Vegeta Falls!! | canon |  + divergence{40-42} | canon — no change; row pending (L-P: arc ↔ ch 27-42) — fandom index: ch 40, 42 |
+| 129 | Limit Super Surpassed! Ultra Instinct Mastered!! | canon |  + divergence{40-42} | canon — no change; row pending (L-P: arc ↔ ch 27-42) — fandom index: ch 41 |
+| 130 | The Greatest Showdown of All Time! The Ultimate Survival Battle!! | canon |  + divergence{40-42} | canon — no change; row pending (L-P: arc ↔ ch 27-42) — fandom index: ch 41, 42 |
+| 131 | The Miraculous Conclusion! Farewell, Goku! Until We Meet Again!! | canon |  + divergence{40-42} | canon — no change; row pending (L-P: arc ↔ ch 27-42) — fandom index: ch 42 |
+
+### Galactic Patrol Prisoner → Granolah → Super Hero — manga_only, ch 43-open
+
+No episodes. The reading view's "manga only" tail (timeline A); no continue point is written on a parallel series (A46) — this arc IS the tail.
+

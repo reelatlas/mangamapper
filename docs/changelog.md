@@ -647,6 +647,54 @@
    /apply-batch, /research-batch — a process, not a ledger standing). NEXT:
    Sean's go on wave 5 = DBS identity (dai last; shugo 67-81 whenever; MU
    segments a queue).
+87. ✅ **PARALLEL TELLINGS — I40 / T30 / A46 built (2026-08-28; the DBS
+   strategy session, Sean + Cursor + Claude; one /add-rule motion, three
+   records).** The finding: dragon-ball-super's anime and Toyotarou's manga
+   are two official realizations of Toriyama's unpublished outline (ja-WP
+   同時進行; Kanzenshuu; AniList's edge ALTERNATIVE and correct) — the
+   catalog carried `source_type manga` with NO manga linked and wave 5's
+   content test would have typed 22 Tournament of Power rows filler. Sean's
+   model — the timelines: A manga-only / B anime-only / C both / D studio
+   padding / E mixed; type answers FROM THE OUTLINE OR NOT, the compare
+   layer answers how the two tellings sit on it. Built: (1) `series.
+   source_relation` adaptation | parallel | null (I40; derived by resolve,
+   chain#aggregate and heal-source-kinds through `lib/rulings/source-
+   relations.ts`; the value is `parallel`, not `alternative`, because
+   series_relations already spends that word on FMA 2003 ↔ Brotherhood — two
+   animes, a different object); (2) a RULED manga link for a parallel series
+   (`pickMangaNode` honours `MANGA_LINK_OVERRIDES` from the STAGED relations
+   whatever the edge type; every picker — resolve, chain, the healer, the
+   census — calls it; the healer re-resolves a mismatched link rather than
+   hand-writing it); (3) T30 standing on a parallel series: canon = the
+   story in any telling, filler = D, mixed under the unchanged T28 bar; the
+   outline made citable by proxy (in the manga / a load-bearing node of a
+   shared arc / a whole anime-only arc = D unless adopted{author});
+   (4) A46 positions are correspondence: `series_arcs` (arc grain; shared |
+   anime_only | manga_only | side_source; must partition 1..N on a parallel
+   series) + `episode_correspondence` (row grain; aligned | divergent |
+   anime_only | manga_only; one episode may carry several rows) — both
+   focused views (watching / reading) are projections of one structure;
+   NO anchor or continue on a parallel series (syncAnchors / applyContinua /
+   applyMuFrontier / writeCuratedContinue refuse; assert-overrides removes
+   standing rows: DBS ep 131 → ch 42, today's AFG-continua pin, removed and
+   listed); (5) six census classes: source_relation_missing (0),
+   parallel_has_anchor (0), arcs_not_partition (0), arc_row_conflict (0),
+   correspondence_invalid (0), correspondence_incomplete (1 = DBS's 94
+   canon/mixed rows with no row yet — lane L-P's queue, an honest dash until
+   researched); anchor_gap_research 6 → 5 and ok_no_volume 10 → 9 are DBS
+   moving to `ok_parallel`; ruling_violation 0; (6) migration
+   20260829100000, types regenerated, 6 unit tests (the witness's arcs
+   partition 1..131; the split example 100-110 aligned / 111-120 divergent),
+   four edges rebuilt + deployed; (7) DBS after the heal: relation parallel,
+   link 86508 (manga_status publishing), 0 anchors, 8 arcs, types UNCHANGED
+   99/4/28 — every episode-level change is HELD for Sean's row-by-row
+   evaluation (WAVE5-RECOVERY §the full evaluation table: 5 proposed lifts
+   79-81 / 94-95 → canon B, 6 rows pending the w5c research on 90 / 91 and
+   the four stored-mixed rows, 120 no type change; the 22 wave-5 "→ filler"
+   conversions withdrawn under T30). Outlaw Star stays T25 original (a
+   sibling telling with no comparison instrument); Boruto is the candidate
+   second witness, research first. Lane L-P (row-grain alignment, one arc
+   per wave) is Sean's to fund.
 85. ✅ **CONSOLIDATE DEEP after batch 20 wave 4 (2026-08-28; P21 —
    `applyEpisodeFloor`'s input changed: `translatedMax`).** Steps 0-8
    satisfied by §12.84's save point. Rescan (step 9): (a) the floor probe

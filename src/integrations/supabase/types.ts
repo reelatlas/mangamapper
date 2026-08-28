@@ -10,7 +10,7 @@ export type Database = {
   // Allows to automatically instantiate createClient with right options
   // instead of createClient<Database, { PostgrestVersion: 'XX' }>(URL, KEY)
   __InternalSupabase: {
-    PostgrestVersion: "14.17"
+    PostgrestVersion: "14.5"
   }
   graphql_public: {
     Tables: {
@@ -165,6 +165,50 @@ export type Database = {
         Relationships: [
           {
             foreignKeyName: "episode_annotations_series_id_fkey"
+            columns: ["series_id"]
+            isOneToOne: false
+            referencedRelation: "series"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      episode_correspondence: {
+        Row: {
+          alignment: string
+          ch_end: number | null
+          ch_start: number | null
+          created_at: string
+          episode: number | null
+          id: number
+          note: string | null
+          origin: string
+          series_id: string
+        }
+        Insert: {
+          alignment: string
+          ch_end?: number | null
+          ch_start?: number | null
+          created_at?: string
+          episode?: number | null
+          id?: number
+          note?: string | null
+          origin?: string
+          series_id: string
+        }
+        Update: {
+          alignment?: string
+          ch_end?: number | null
+          ch_start?: number | null
+          created_at?: string
+          episode?: number | null
+          id?: number
+          note?: string | null
+          origin?: string
+          series_id?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "episode_correspondence_series_id_fkey"
             columns: ["series_id"]
             isOneToOne: false
             referencedRelation: "series"
@@ -575,6 +619,7 @@ export type Database = {
           search_text: string
           season: string | null
           season_year: number | null
+          source_relation: string | null
           source_type: string | null
           start_date: string | null
           status: string
@@ -624,6 +669,7 @@ export type Database = {
           search_text?: string
           season?: string | null
           season_year?: number | null
+          source_relation?: string | null
           source_type?: string | null
           start_date?: string | null
           status: string
@@ -673,6 +719,7 @@ export type Database = {
           search_text?: string
           season?: string | null
           season_year?: number | null
+          source_relation?: string | null
           source_type?: string | null
           start_date?: string | null
           status?: string
@@ -690,6 +737,56 @@ export type Database = {
           updated_at?: string
         }
         Relationships: []
+      }
+      series_arcs: {
+        Row: {
+          ch_end: number | null
+          ch_start: number | null
+          created_at: string
+          ep_end: number | null
+          ep_start: number | null
+          kind: string
+          label: string
+          note: string | null
+          ordinal: number
+          origin: string
+          series_id: string
+        }
+        Insert: {
+          ch_end?: number | null
+          ch_start?: number | null
+          created_at?: string
+          ep_end?: number | null
+          ep_start?: number | null
+          kind: string
+          label: string
+          note?: string | null
+          ordinal: number
+          origin?: string
+          series_id: string
+        }
+        Update: {
+          ch_end?: number | null
+          ch_start?: number | null
+          created_at?: string
+          ep_end?: number | null
+          ep_start?: number | null
+          kind?: string
+          label?: string
+          note?: string | null
+          ordinal?: number
+          origin?: string
+          series_id?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "series_arcs_series_id_fkey"
+            columns: ["series_id"]
+            isOneToOne: false
+            referencedRelation: "series"
+            referencedColumns: ["id"]
+          },
+        ]
       }
       series_components: {
         Row: {

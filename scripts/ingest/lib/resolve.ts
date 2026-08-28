@@ -68,7 +68,8 @@ export { EXTRAS_ADOPTED } from './rulings/extras-adopted';
 export { AIR_DATE_OVERRIDES } from './rulings/air-dates';
 import { AIR_DATE_OVERRIDES } from './rulings/air-dates';
 import { EPISODE_TITLE_OVERRIDES } from './rulings/episode-titles';
-import { aflAnimeCanonStanding, deriveSourceKind, mangaStatusOf } from './rulings/source-kinds';
+import { aflAnimeCanonStanding, deriveSourceKind, mangaStatusOf, seriesHasSource } from './rulings/source-kinds';
+import { deriveSourceRelation, pickMangaNode } from './rulings/source-relations';
 import { withholdAirdateRegressions, type AirdateWithheld } from './airdate-order';
 
 // Community-count rulings (Sean 2026-08-24: the community-consensus episode
@@ -423,12 +424,11 @@ export function fuzzyDate(d: { year: number | null; month: number | null; day: n
   return `${d.year}-${String(d.month ?? 1).padStart(2, '0')}-${String(d.day ?? 1).padStart(2, '0')}`;
 }
 
-// The source manga: ADAPTATION edge, format MANGA, most popular on ties.
-export function pickManga(media: AniListMedia) {
-  const candidates = media.relations.edges
-    .filter((e) => e.relationType === 'ADAPTATION' && e.node.type === 'MANGA' && e.node.format === 'MANGA')
-    .sort((a, b) => (b.node.popularity ?? 0) - (a.node.popularity ?? 0));
-  return candidates[0]?.node ?? null;
+// The source manga: ADAPTATION edge, format MANGA, most popular on ties —
+// or, on a series whose link is a RULING (I40: a parallel telling has no
+// ADAPTATION edge), the ruled node. The node always comes from staging.
+export function pickManga(media: AniListMedia, seriesId?: string | null) {
+  return pickMangaNode(media.relations.edges, seriesId);
 }
 
 // A season of natural lag between AFL's classified count and AniList's aired
@@ -460,12 +460,6 @@ export async function resolveSeries(runId: number, slug: string): Promise<{ epis
     await fileFlagOnce(runId, slug, 'resolve', 'parse_integrity', { empty: true });
     return { episodes: 0, flagged: true };
   }
-
-  // AniList's ADAPTATION edge is DIRECTIONLESS: on an anime-original show
-  // (source=ORIGINAL) the linked manga is an adaptation OF the anime, not
-  // source material — never attach it (Evangelion/Madoka class, 2026-08-23).
-  const mangaEdge = pickManga(media);
-  const manga = media.source === 'ORIGINAL' ? null : mangaEdge;
 
   // A STITCHED series (multiple components) is owned by the stitcher — a
   // plain resolve would collapse it back to one season. Refresh only the
@@ -530,6 +524,14 @@ export async function resolveSeries(runId: number, slug: string): Promise<{ epis
     if (!id) throw new Error(`resolve (${slug}): could not assign id`);
   }
 
+  // AniList's ADAPTATION edge is DIRECTIONLESS: on an anime-original show
+  // (source=ORIGINAL) the linked manga is an adaptation OF the anime, not
+  // source material — never attach it (Evangelion/Madoka class, 2026-08-23).
+  // I40 (2026-08-28): a parallel series' link is a ruling keyed by OUR id
+  // (dragon-ball-super → 86508, an ALTERNATIVE edge) — hence after the id.
+  const mangaEdge = pickManga(media, id);
+  const manga = media.source === 'ORIGINAL' ? null : mangaEdge;
+
   // the AFL max IN OUR SPACE (N11 translation first — the raw page max floored 5D's back to 155 on every re-resolve, undoing the ruled 154; 2026-08-28)
   const aflMax = translatedMax(id, page.episodes, 'afl', SOURCE_NUMBERING_SHIFTS);
   const anilistAired = media.nextAiringEpisode
@@ -583,6 +585,7 @@ export async function resolveSeries(runId: number, slug: string): Promise<{ epis
     format: media.format,
     status: STATUS_MAP[media.status] ?? 'finished',
     source_type: derived.value,
+    source_relation: deriveSourceRelation(id, seriesHasSource(derived.value)), // I40
     start_date: fuzzyDate(media.startDate),
     end_date: fuzzyDate(media.endDate),
     season: media.season,

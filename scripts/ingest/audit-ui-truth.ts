@@ -27,16 +27,21 @@ import { deriveFormat } from './lib/format';
 import { LOCKED } from './lib/rulings/permanence';
 import { ENTRIES as TYPE_RULINGS } from './lib/rulings/episode-types';
 import { deriveSourceKind, seriesHasInstrument, seriesHasSource, SOURCE_TYPE_OVERRIDES } from './lib/rulings/source-kinds';
+import { deriveSourceRelation, isParallelSeries, MANGA_LINK_OVERRIDES } from './lib/rulings/source-relations';
+import { arcOfEpisode, arcsPartitionProblems, RULED_ARCS } from './lib/rulings/arcs';
+import { correspondenceCoverage, correspondenceProblem, type Alignment } from './lib/rulings/correspondence';
 import { pickManga } from './lib/resolve';
 import { annotationProblem } from './lib/annotations';
 import { REVIEWED_NUMBERED_SPECIALS } from './lib/rulings/reviewed-specials';
 
 async function main() {
-  const series = await selectAll<any>('series', 'id, afl_slug, anilist_id, source_type, manga_status, status, start_date, end_date, aired_episodes, total_episodes, total_chapters, total_volumes, latest_known_chapters, manga_anilist_id, manga_start_chapter, mapping_mode, asterisk_review');
+  const series = await selectAll<any>('series', 'id, afl_slug, anilist_id, source_type, source_relation, manga_status, status, start_date, end_date, aired_episodes, total_episodes, total_chapters, total_volumes, latest_known_chapters, manga_anilist_id, manga_start_chapter, mapping_mode, asterisk_review');
   const episodes = await selectAll<any>('episodes', 'series_id, number, type, title, air_date, format, minted_by');
   const anchors = await selectAll<any>('chapter_anchors', 'series_id, episode, chapter, start_chapter, chapters_adapted, continue_chapter, continue_note, continue_source, volume, source');
   const comps = await selectAll<any>('series_components', 'series_id, episode_end, episode_start, anilist_id, kind, label');
   const bounds = await selectAll<any>('volume_boundaries', 'manga_anilist_id, volume, chapter_start, chapter_end');
+  const arcRows = await selectAll<any>('series_arcs', 'series_id, ordinal, label, kind, ep_start, ep_end, ch_start, ch_end, origin');
+  const corrRows = await selectAll<any>('episode_correspondence', 'id, series_id, episode, ch_start, ch_end, alignment, origin');
 
   const epsBy = new Map<string, { max: number; lastCanon: number; count: number }>();
   for (const e of episodes) {
@@ -98,7 +103,8 @@ async function main() {
     title_incomplete: [], airdate_incomplete: [], airdate_regression: [], airdate_withheld: [], episode_date_off_window: [], asterisk_unreviewed: [],
     fractional_unmodeled: [], annotation_invalid: [], annotation_retired_standing: [], afl_anime_canon_unruled: [], format_missing: [], episode_without_component: [], watch_order_kind_missing: [],
     permanence_candidate: [], permanence_violation: [], mixed_fragment_only: [],
-    series_without_source_kind: [], no_source: [], no_instrument: [], ok_full: [], ok_no_volume: [], ok_loose: [],
+    series_without_source_kind: [], no_source: [], no_instrument: [], ok_full: [], ok_no_volume: [], ok_loose: [], ok_parallel: [],
+    source_relation_missing: [], parallel_has_anchor: [], arcs_not_partition: [], arc_row_conflict: [], correspondence_invalid: [], correspondence_incomplete: [],
     pending_airing_no_anchor: [], pending_finished_no_totals: [], pending_no_canon: [], pending_other: [],
   };
   // T26: annotations are read once up front — the adopted / side_source rows
@@ -223,7 +229,7 @@ async function main() {
       if (row.source_type == null) classes.series_without_source_kind.push(`${row.id}: source_type NULL — AniList source ${rawBy.get(row.anilist_id)?.source ?? '?'} needs a SOURCE_KINDS record or a SOURCE_TYPE_OVERRIDES ruling`);
       const media = rawBy.get(row.anilist_id);
       if (!media) continue;
-      const node = pickManga(media);
+      const node = pickManga(media, row.id);
       const d = deriveSourceKind(row.id, { source: media.source, mangaCountry: node ? node.countryOfOrigin : null, hasMangaEdge: !!node });
       if (d.value !== row.source_type) classes.ruling_violation.push(`${row.id}: source_type '${row.source_type}' ≠ derived '${d.value}' (${d.reason}; T25)`);
       if (SOURCE_TYPE_OVERRIDES[row.id] && row.source_type !== SOURCE_TYPE_OVERRIDES[row.id]) classes.ruling_violation.push(`${row.id}: source_type '${row.source_type}' ≠ ruled '${SOURCE_TYPE_OVERRIDES[row.id]}' (T25)`);
@@ -685,6 +691,59 @@ async function main() {
   }
   const lightNovel: string[] = [];
 
+  // I40 / T30 / A46 — parallel tellings (Sean 2026-08-28). The relation is
+  // derived (identity + the ruling map) and stored; a ruled manga link must be
+  // the stored link; a parallel series carries NO anchors (its positions are
+  // correspondence: series_arcs + episode_correspondence); ruled arcs mirror
+  // the map, partition 1..N on a parallel series, and a canon row inside an
+  // anime_only arc (studio padding, timeline D) is a conflict unless
+  // adopted{author}; correspondence_incomplete is the L-P work queue.
+  {
+    const adoptedAuthor = new Set<string>();
+    for (const a of await selectAll<any>('episode_annotations', 'series_id, episode, kind, basis')) if (a.kind === 'adopted' && a.basis === 'author') adoptedAuthor.add(`${a.series_id}#${a.episode}`);
+    const num = (v: any) => (v == null ? null : Number(v));
+    for (const row of series) {
+      const hasSrc = seriesHasSource(row.source_type);
+      const wantRel = deriveSourceRelation(row.id, hasSrc);
+      if (hasSrc && !row.source_relation) classes.source_relation_missing.push(row.id);
+      if ((row.source_relation ?? null) !== wantRel) classes.ruling_violation.push(`${row.id}: source_relation '${row.source_relation}' ≠ derived '${wantRel}' (I40) — run heal-source-kinds`);
+      const ruledLink = MANGA_LINK_OVERRIDES[row.id];
+      if (ruledLink != null && row.manga_anilist_id !== ruledLink) classes.ruling_violation.push(`${row.id}: manga link ${row.manga_anilist_id} ≠ ruled ${ruledLink} (I40) — re-resolve (heal-source-kinds)`);
+      const parallel = isParallelSeries(row.id);
+      const mine = anchors.filter((a: any) => a.series_id === row.id);
+      if (parallel && mine.length) classes.parallel_has_anchor.push(`${row.id}: ${mine.length} anchor(s) on a parallel series — ${mine.map((a: any) => `ep ${a.episode}→ch ${a.chapter} (${a.source})`).join(', ')} (A46) — run assert-overrides`);
+      const ruled = RULED_ARCS[row.id];
+      if (parallel && !ruled) classes.arcs_not_partition.push(`${row.id}: a parallel series with no RULED_ARCS entry (A46)`);
+      if (!ruled) continue;
+      const eMax = epsBy.get(row.id)?.max ?? 0;
+      const problems = arcsPartitionProblems(ruled, parallel ? eMax : 0);
+      if (problems.length) classes.arcs_not_partition.push(`${row.id}: ${problems.join('; ')} (A46)`);
+      const stored = arcRows.filter((a: any) => a.series_id === row.id).sort((x: any, y: any) => x.ordinal - y.ordinal);
+      const mirrors = stored.length === ruled.length && ruled.every((a, i) => { const s = stored[i]; return s && s.kind === a.kind && s.label === a.label && (s.ep_start ?? null) === (a.epStart ?? null) && (s.ep_end ?? null) === (a.epEnd ?? null) && num(s.ch_start) === (a.chStart ?? null) && num(s.ch_end) === (a.chEnd ?? null); });
+      if (!mirrors) classes.ruling_violation.push(`${row.id}: series_arcs (${stored.length} rows) ≠ RULED_ARCS (${ruled.length}) (A46) — run assert-overrides`);
+      const eps = episodes.filter((x: any) => x.series_id === row.id);
+      for (const ep of eps) {
+        const arc = arcOfEpisode(ruled, ep.number);
+        if (arc?.kind === 'anime_only' && ep.type !== 'filler' && !adoptedAuthor.has(`${row.id}#${ep.number}`)) classes.arc_row_conflict.push(`${row.id}: ep ${ep.number} is ${ep.type} inside the anime_only arc '${arc.label}' — studio padding is filler (T30) unless adopted{author}`);
+      }
+      if (parallel) {
+        const rows = corrRows.filter((c: any) => c.series_id === row.id).map((c: any) => ({ episode: c.episode, chStart: num(c.ch_start), chEnd: num(c.ch_end), alignment: c.alignment as Alignment }));
+        const cov = correspondenceCoverage(ruled, rows, eps);
+        if (cov.episodesUncovered.length || cov.chaptersUncovered.length) {
+          const runs: string[] = [];
+          for (const n of cov.episodesUncovered) { const last = runs[runs.length - 1]; const [, b] = last ? last.split('-').map(Number) : [0, -2]; if (last && (b ?? Number(last)) === n - 1) runs[runs.length - 1] = `${last.split('-')[0]}-${n}`; else runs.push(String(n)); }
+          classes.correspondence_incomplete.push(`${row.id}: ${cov.episodesUncovered.length} canon/mixed episode(s) with no correspondence row (${runs.join(', ')}); chapters uncovered ${cov.chaptersUncovered.map(([a, b]) => (a === b ? `${a}` : `${a}-${b}`)).join(', ') || 'none'} (A46 — the L-P queue; renders an honest dash)`);
+        }
+      }
+    }
+    const epSet = new Set(episodes.map((x: any) => `${x.series_id}#${x.number}`));
+    for (const c of corrRows) {
+      const p = correspondenceProblem({ episode: c.episode, chStart: num(c.ch_start), chEnd: num(c.ch_end), alignment: c.alignment });
+      if (p) classes.correspondence_invalid.push(`${c.series_id}: row #${c.id} ${p}`);
+      else if (c.episode != null && !epSet.has(`${c.series_id}#${c.episode}`)) classes.correspondence_invalid.push(`${c.series_id}: row #${c.id} names ep ${c.episode}, which has no episode row`);
+    }
+  }
+
   for (const row of series) {
     const e = epsBy.get(row.id) ?? { max: 0, lastCanon: 0, count: 0 };
     // lockstep with buildMapping: row-less canon-tier series default to
@@ -711,6 +770,8 @@ async function main() {
     if (!seriesHasInstrument(row.source_type)) { classes.no_instrument.push(`${row.id} (${row.source_type})`); continue; }
     if (row.source_type === 'light_novel') lightNovel.push(row.id);
     if (row.mapping_mode === 'loose') { classes.ok_loose.push(row.id); continue; }
+    // A46: a parallel series' instrument is the correspondence, not anchors — the gap / tail / pending / MU-pin classes do not apply
+    if (isParallelSeries(row.id)) { classes.ok_parallel.push(row.id); continue; }
     const latestAnchor = anchBy.get(row.id) ?? null;
     let latestKnown: { volume: number | null; chapters: number } | null = null;
     if (latestAnchor) latestKnown = { volume: latestAnchor.volume ?? volumeFor(row, latestAnchor.chapter), chapters: latestAnchor.chapter };
@@ -869,7 +930,7 @@ async function main() {
   // lib/rulings/permanence.ts). A LOCKED series failing any of it =
   // permanence_violation — data drifted under a lock (P5).
   {
-    const OPEN_CLASSES = ['integrity_eps_beyond_total', 'integrity_total_beyond_eps', 'integrity_double_claimed', 'integrity_degenerate_span', 'special_numbered_unreviewed', 'anchor_gap_research', 'frontier_tail_null', 'anchor_nonmonotonic', 'anchor_start_offtrend', 'anchor_volume_mismatch', 'row_minted_by_missing', 'anchor_beyond_chapter_space', 'anchor_beyond_display_total', 'anchor_fractional_chapter', 'anchor_on_noncanon_row', 'continue_skip_unnoted', 'continue_provenance_missing', 'boundaries_degenerate', 'boundaries_wrong_page', 'boundaries_beyond_total', 'ruling_violation', 'repair_on_derivation_tier', 'mu_pin_unverified', 'rearranged_zone_unanchored', 'title_incomplete', 'airdate_incomplete', 'airdate_regression', 'airdate_withheld', 'asterisk_unreviewed', 'fractional_unmodeled', 'annotation_invalid', 'afl_anime_canon_unruled', 'format_missing', 'episode_without_component', 'watch_order_kind_missing', 'series_without_source_kind', 'pending_airing_no_anchor', 'pending_finished_no_totals', 'pending_no_canon', 'pending_other'];
+    const OPEN_CLASSES = ['integrity_eps_beyond_total', 'integrity_total_beyond_eps', 'integrity_double_claimed', 'integrity_degenerate_span', 'special_numbered_unreviewed', 'anchor_gap_research', 'frontier_tail_null', 'anchor_nonmonotonic', 'anchor_start_offtrend', 'anchor_volume_mismatch', 'row_minted_by_missing', 'source_relation_missing', 'parallel_has_anchor', 'arcs_not_partition', 'arc_row_conflict', 'correspondence_invalid', 'correspondence_incomplete', 'anchor_beyond_chapter_space', 'anchor_beyond_display_total', 'anchor_fractional_chapter', 'anchor_on_noncanon_row', 'continue_skip_unnoted', 'continue_provenance_missing', 'boundaries_degenerate', 'boundaries_wrong_page', 'boundaries_beyond_total', 'ruling_violation', 'repair_on_derivation_tier', 'mu_pin_unverified', 'rearranged_zone_unanchored', 'title_incomplete', 'airdate_incomplete', 'airdate_regression', 'airdate_withheld', 'asterisk_unreviewed', 'fractional_unmodeled', 'annotation_invalid', 'afl_anime_canon_unruled', 'format_missing', 'episode_without_component', 'watch_order_kind_missing', 'series_without_source_kind', 'pending_airing_no_anchor', 'pending_finished_no_totals', 'pending_no_canon', 'pending_other'];
     const openBy = new Map<string, Set<string>>();
     const ids = new Set(series.map((s: any) => s.id));
     for (const c of OPEN_CLASSES) for (const line of classes[c] ?? []) {

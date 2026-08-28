@@ -19,6 +19,9 @@ import { upsertAnnotation } from './lib/annotations';
 import { ANCHOR_SUPPRESSED } from './lib/rulings/anchor-suppressed';
 import { retiredBySeries, RETIRED_ANNOTATIONS } from './lib/rulings/retired-annotations';
 import { LOCKED } from './lib/rulings/permanence';
+import { arcsPartitionProblems, RULED_ARCS } from './lib/rulings/arcs';
+import { RULED_CORRESPONDENCE, upsertCorrespondence } from './lib/rulings/correspondence';
+import { SOURCE_RELATION_OVERRIDES } from './lib/rulings/source-relations';
 
 const DRY = process.argv.includes('--dry-run');
 
@@ -178,8 +181,75 @@ async function assertPermanence() {
   console.log(`[assert-overrides] permanence (P25): ${LOCKED.size} locked, ${n} asserted${DRY ? ' — DRY RUN' : ''}`);
 }
 
+// A46: series_arcs mirrors RULED_ARCS (origin 'ruling'); a parallel series'
+// arcs must partition 1..N — a map that does not is refused, never half-written.
+async function assertArcs() {
+  let n = 0, removed = 0, refused = 0;
+  for (const [sid, arcs] of Object.entries(RULED_ARCS)) {
+    const parallel = SOURCE_RELATION_OVERRIDES[sid]?.relation === 'parallel';
+    const { data: maxRow } = await db.from('episodes').select('number').eq('series_id', sid).order('number', { ascending: false }).limit(1);
+    const problems = arcsPartitionProblems(arcs, parallel ? maxRow?.[0]?.number ?? 0 : 0);
+    if (problems.length) { refused++; console.log(`  ${sid}: RULED_ARCS refused — ${problems.join('; ')}`); continue; }
+    const rows = arcs.map((a, i) => ({ series_id: sid, ordinal: i + 1, label: a.label, kind: a.kind, ep_start: a.epStart ?? null, ep_end: a.epEnd ?? null, ch_start: a.chStart ?? null, ch_end: a.chEnd ?? null, note: a.note, origin: 'ruling' }));
+    n += rows.length;
+    if (!DRY) {
+      const { error } = await db.from('series_arcs').upsert(rows, { onConflict: 'series_id,ordinal' });
+      if (error) throw new Error(`${sid} arcs: ${error.message}`);
+    }
+    const stale = await selectAll<{ ordinal: number }>('series_arcs', 'ordinal', (q) => q.eq('series_id', sid).eq('origin', 'ruling').gt('ordinal', rows.length));
+    for (const r of stale) {
+      removed++;
+      console.log(`  ${sid} arc #${r.ordinal}: ruling row not in RULED_ARCS → removed (stale)`);
+      if (!DRY) await db.from('series_arcs').delete().eq('series_id', sid).eq('ordinal', r.ordinal);
+    }
+  }
+  console.log(`[assert-overrides] arcs (A46): ${n} rows asserted over ${Object.keys(RULED_ARCS).length} series, ${removed} stale removed, ${refused} maps refused${DRY ? ' — DRY RUN' : ''}`);
+}
+
+// A46: ruled correspondence rows mirror RULED_CORRESPONDENCE (origin 'ruling');
+// research rows (an apply) are left alone.
+async function assertCorrespondence() {
+  let n = 0, removed = 0;
+  for (const [sid, rows] of Object.entries(RULED_CORRESPONDENCE)) {
+    const want = new Set(rows.map((r) => `${r.episode ?? '-'}:${r.chStart ?? '-'}-${r.chEnd ?? '-'}:${r.alignment}`));
+    for (const r of rows) { n++; if (!DRY) await upsertCorrespondence(sid, r, 'ruling'); }
+    const stored = await selectAll<{ id: number; episode: number | null; ch_start: number | null; ch_end: number | null; alignment: string }>('episode_correspondence', 'id, episode, ch_start, ch_end, alignment', (q) => q.eq('series_id', sid).eq('origin', 'ruling'));
+    for (const s of stored) {
+      const key = `${s.episode ?? '-'}:${s.ch_start == null ? '-' : Number(s.ch_start)}-${s.ch_end == null ? '-' : Number(s.ch_end)}:${s.alignment}`;
+      if (want.has(key)) continue;
+      removed++;
+      console.log(`  ${sid} correspondence ${key}: ruling row not in RULED_CORRESPONDENCE → removed (stale)`);
+      if (!DRY) await db.from('episode_correspondence').delete().eq('id', s.id);
+    }
+  }
+  console.log(`[assert-overrides] correspondence (A46): ${n} ruled rows asserted, ${removed} stale removed${DRY ? ' — DRY RUN' : ''}`);
+}
+
+// A46: no anchor and no continue point stands on a PARALLEL series — the
+// writers now refuse them; the relation ruling is the A6 triage record, so
+// the healer removes what the writers would refuse and lists each row.
+async function assertParallelNoAnchors() {
+  let removed = 0;
+  for (const [sid, r] of Object.entries(SOURCE_RELATION_OVERRIDES)) {
+    if (r.relation !== 'parallel') continue;
+    const rows = await selectAll<{ episode: number; chapter: number; source: string }>('chapter_anchors', 'episode, chapter, source', (q) => q.eq('series_id', sid));
+    for (const a of rows) {
+      console.log(`  ${sid} ep${a.episode}: anchor ${a.source} → ch ${a.chapter} on a parallel series → removed (A46; the ep→ch is correspondence, not a position)`);
+      if (!DRY) {
+        const { error } = await db.from('chapter_anchors').delete().eq('series_id', sid).eq('episode', a.episode);
+        if (error) throw new Error(`${sid} ep${a.episode}: ${error.message}`);
+      }
+      removed++;
+    }
+  }
+  console.log(`[assert-overrides] parallel series (A46): ${Object.values(SOURCE_RELATION_OVERRIDES).filter((r) => r.relation === 'parallel').length} ruled, ${removed} anchors removed${DRY ? ' — DRY RUN' : ''}`);
+}
+
 async function main() {
   await assertStandings();
+  await assertParallelNoAnchors();
+  await assertArcs();
+  await assertCorrespondence();
   await assertAnchorSuppression();
   await assertPermanence();
   await assertMap('types (T6)', EPISODE_TYPE_OVERRIDES, 'type');

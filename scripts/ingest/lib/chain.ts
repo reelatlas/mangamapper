@@ -12,7 +12,8 @@ import { db, selectAll } from './db';
 import { mediaByIds, type AniListMedia } from './anilist';
 import { stageAniList, searchTextFor } from './resolve';
 import { slugify } from './slug';
-import { deriveSourceKind, mangaStatusOf } from './rulings/source-kinds';
+import { deriveSourceKind, mangaStatusOf, seriesHasSource } from './rulings/source-kinds';
+import { deriveSourceRelation, pickMangaNode } from './rulings/source-relations';
 import { planComponents, type PlanMember } from './structure-plan';
 
 export const SERIES_FORMATS = new Set(['TV', 'TV_SHORT', 'ONA']);
@@ -164,11 +165,11 @@ export function aggregate(chain: AniListMedia[], aflSlug: string | null, fallbac
 
   // derivative-manga rule holds here too: a source=ORIGINAL head never
   // claims its ADAPTATION edge (that manga adapts the anime)
-  const mangaEdge = head.relations.edges
-    .filter((e) => e.relationType === 'ADAPTATION' && e.node.type === 'MANGA' && e.node.format === 'MANGA')
-    .sort((a, b) => (b.node.popularity ?? 0) - (a.node.popularity ?? 0))[0]?.node;
-  const manga = head.source === 'ORIGINAL' ? undefined : mangaEdge;
+  // I40: the same picker as resolve.ts — a ruled link (a parallel telling) wins
   const seriesId = slugify(head.title.english ?? head.title.romaji ?? fallbackTitle);
+  const mangaEdge = pickMangaNode(head.relations.edges, seriesId) ?? undefined;
+  const manga = head.source === 'ORIGINAL' ? undefined : mangaEdge;
+  const sourceKindValue = deriveSourceKind(seriesId, { source: head.source, mangaCountry: mangaEdge ? mangaEdge.countryOfOrigin : null, hasMangaEdge: !!mangaEdge }).value;
 
   const dedupBy = <T>(items: T[], key: (t: T) => string) => {
     const m = new Map<string, T>();
@@ -191,7 +192,8 @@ export function aggregate(chain: AniListMedia[], aflSlug: string | null, fallbac
     format: head.format,
     status,
     // T25: the shared registry derivation (unified with resolve.ts, T2 edge)
-    source_type: deriveSourceKind(seriesId, { source: head.source, mangaCountry: mangaEdge ? mangaEdge.countryOfOrigin : null, hasMangaEdge: !!mangaEdge }).value,
+    source_type: sourceKindValue,
+    source_relation: deriveSourceRelation(seriesId, seriesHasSource(sourceKindValue)), // I40
     start_date: head.startDate.year
       ? `${head.startDate.year}-${String(head.startDate.month ?? 1).padStart(2, '0')}-${String(head.startDate.day ?? 1).padStart(2, '0')}`
       : null,

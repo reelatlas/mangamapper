@@ -1,0 +1,261 @@
+{
+  "series_id": "dragon-ball-super",
+  "summary": "Six rows re-judged under Sean's PARALLEL-TELLING definition (2026-08-28), which replaces wave 5's content test on this series: standing is FROM THE OUTLINE OR NOT, so an anime-only episode is canon (B) when it is a load-bearing story node of an arc both tellings share, filler (D) only when it is studio padding no telling's story depends on, and mixed when both sit in one episode. THREE ROWS MOVE, THREE HOLD. ep 90 -> canon: the episode's own job is Gohan's power-up (Piccolo hands him over, Gohan fights at full Potential Unleashed and states he is aiming for an 'ultimate form' beyond) and it closes on Goku naming Gohan LEADER of Team Universe 7 - a designation the anime's telling then leans on twice in the tournament (ep 97 opens with Gohan giving the U7 strategy; ep 124 says outright that 'Frieza agrees to follow Gohan's plan since he is the leader of Team Universe 7'). The manga's version of the same node is ch 31's closing panel (Piccolo declares he will train Gohan for the tournament); the leader designation is anime-only (dragonball.fandom's Team Universe 7 infobox: 'Gohan (anime only)'). ep 91 -> canon: the episode IS the recruitment phase's assembly - the manga's ch 31 is titled 'The Super Warriors Gather!' - and its closing beat, Good Buu's hibernation, is the same node ch 31 closes on and the direct cause of eps 92-95 (Frieza recruited as the tenth), which the manga carries in ch 32; Hit recruiting Frost puts on the board a warrior who fights in the manga's tournament too, and Brianne de Chateau/Ribrianne exists in the manga with a different setting (ja-WP). ep 78 -> canon: ch 28 carries the same node (the Grand Minister assembles every universe's gods, the Tournament of Power is announced, the losing universes are erased, the Zeno Expo is called) and the Expo itself is Sean's own named example of B; nothing in the episode is padding, so the mixed typing no longer applies. HOLDING: eps 1 and 2 stay mixed - the story they carry is manga ch 1's (Goku farming, Beerus's banquet and half-planet destruction, Mr. Satan's 100-million prize freeing Goku to train, the Kais sensing the loss; then Beerus recalling the Super Saiyan God), and beside it each runs a self-contained slice-of-life D block (Goten and Trunks' wedding-present errand and the giant snake in ep 1; Vegeta's family resort trip in ep 2, which fandom lists as 'exclusive to the anime'). ep 89 stays mixed - Cabba recruiting Caulifla is ch 32's own scene (four documented differences) and Tien's recruitment is stated in ch 32 in one clause, but the Yurin/Tien-dojo incident that occupies most of the runtime is a self-contained anime-original (ja-WP: Yurin 'does not appear in the manga version'). ANCHORS: none - positions on this series are correspondence, never adaptation (every one of these chapters was published after its episode aired).",
+  "anchors": [],
+  "continue_points": [],
+  "anchor_hostile": [],
+  "type_corrections": [
+    {
+      "episodes": [78],
+      "stored": "mixed",
+      "type": "canon",
+      "change": true,
+      "confidence": "high",
+      "why": "T27/T28 under the parallel definition. Manga ch 28 'The Gods of Destruction From All 12 Universes' carries this episode's whole job: the Grand Minister summons every universe's gods, the Tournament of Power is announced with its date, the losing universes' erasure is stated, and the Zeno Expo is called on the spot (the manga runs it as a twelve-God battle royale, the anime as three one-on-one matches). That is C, not padding, and the Expo half is Sean's own named example of B ('the Zeno Expo as the anime's version of the recruitment'). Nothing in the episode is D: the Goten-vs-Trunks sparring is a few seconds inside the recruitment scene. The bidirectional counterpart fields agree (ep 78 infobox Manga = ch 28; ch 28 infobox episode = 77, 78). The mixed typing was a manga-relative call (batch 18: 'ch 28's assembly and announcement carry the episode' + an anime-original Expo) and does not survive the new definition.",
+      "sources": [
+        "https://dragonball.fandom.com/api.php?action=parse&page=Even%20the%20Universes%27%20Gods%20are%20Appalled%3F%21%20The%20Lose-and-Perish%20Tournament%20of%20Power&prop=wikitext&format=json",
+        "https://dragonball.fandom.com/api.php?action=parse&page=The%20Gods%20of%20Destruction%20From%20All%2012%20Universes&prop=wikitext&format=json",
+        "https://www.kanzenshuu.com/episode/super/eps-078/"
+      ]
+    },
+    {
+      "episodes": [90],
+      "stored": "filler",
+      "type": "canon",
+      "change": true,
+      "confidence": "high",
+      "why": "B under the parallel definition: a power-up the arc's later plot depends on, plus the team's command structure. The episode (fandom and Kanzenshuu agree line for line) is Piccolo finishing Gohan's training, the 2-on-2 test, then Gohan at full Potential Unleashed against Goku - Gohan states he is aiming for an 'ultimate form' never seen before and goes about it differently from Goku - and it ends with 'Goku announces that he's selected Gohan to be the Universe 7 team leader'. The anime's telling then depends on that: ep 97 opens the Tournament of Power with 'Gohan goes over the strategy again with Universe 7: stick together and always fight with superior numbers' and ep 124 states 'Frieza agrees to follow Gohan's plan since he is the leader of Team Universe 7, after all'. The arc exists in the manga and so does the node: ch 31 closes with Piccolo declaring he will train Gohan up in time for the tournament (Gohan then fights the manga's tournament in the same unlocked state). The leader designation itself is anime-only, which is what B means. Filler was the right call only under the manga-relative test (fandom's flat 'The entire events of this episode were exclusive to the anime'; no chapter's episode= field lists 90).",
+      "sources": [
+        "https://dragonball.fandom.com/api.php?action=parse&page=Staring%20Down%20the%20Wall%20to%20be%20Overcome%20Goku%20vs.%20Gohan&prop=wikitext&format=json",
+        "https://www.kanzenshuu.com/episode/super/eps-090/",
+        "https://dragonball.fandom.com/api.php?action=parse&page=A%20Storm-and-Stress%20Assault%21%20Gohan%27s%20Last%20Stand%21&prop=wikitext&format=json",
+        "https://dragonball.fandom.com/api.php?action=parse&page=Survive%21%20The%20Tournament%20of%20Power%20Begins%20at%20Last%21&prop=wikitext&format=json",
+        "https://dragonball.fandom.com/api.php?action=parse&page=Team%20Universe%207&prop=wikitext&format=json",
+        "https://dragonball.fandom.com/api.php?action=parse&page=The%20Super%20Warriors%20Gather%21&prop=wikitext&format=json"
+      ]
+    },
+    {
+      "episodes": [91],
+      "stored": "filler",
+      "type": "canon",
+      "change": true,
+      "confidence": "medium",
+      "why": "B/C under the parallel definition: the episode's job is the gathering itself - the manga's counterpart chapter is literally titled 'The Super Warriors Gather!' (ch 31) - and its closing beat is a shared, load-bearing node: Good Buu falls into a two-month hibernation, which is exactly how ch 31 closes (Mr. Satan finds Buu asleep and contacts Bulma) and which causes eps 92-95, the manga's ch 32 reaching the same place (Frieza recruited as the tenth member). The two versions differ only in staging, and fandom's Differences section compares them directly ('In the anime, everyone learns of Buu's hibernation after they had finally found ten members. In the manga, they found out before they knew whether or not Gohan was entering'). The other segments are the anime's telling of the same shared premise, not padding: Hit recruits Frost, who fights in the manga's tournament too (ja-WP's Frost entry describes his manga-version conduct in the Tournament of Power); Brianne de Chateau/Ribrianne is introduced and exists in the manga with a different setting (ja-WP: 'in the manga version the setting differs greatly'); U9's collapse, U11's Pride Troopers and U10's team are the rival teams the tournament runs on. The one genuinely detachable gag (the Turtle Hermit training against his own lechery with Puar) is texture inside that montage, not a self-contained subplot - which is why this is canon rather than mixed. Held at MEDIUM: the source-shared share is one closing node and the judgment rests on the generous B bar Sean set with the Zeno Expo example; the stored partial{31} annotation remains true as a statement of WHERE the counterpart pages are.",
+      "sources": [
+        "https://dragonball.fandom.com/api.php?action=parse&page=Which%20Universe%20Will%20Win%20Their%20Place%3F%20The%20Mighty%20Warriors%20Gradually%20Assemble%21&prop=wikitext&format=json",
+        "https://www.kanzenshuu.com/episode/super/eps-091/",
+        "https://dragonball.fandom.com/api.php?action=parse&page=The%20Super%20Warriors%20Gather%21&prop=wikitext&format=json",
+        "https://dragonball.fandom.com/api.php?action=parse&page=The%20Super%20Warriors%20Gather%21%20Part%202&prop=wikitext&format=json",
+        "https://ja.wikipedia.org/wiki/%E3%83%89%E3%83%A9%E3%82%B4%E3%83%B3%E3%83%9C%E3%83%BC%E3%83%AB%E8%B6%85%E3%81%AE%E7%99%BB%E5%A0%B4%E4%BA%BA%E7%89%A9"
+      ]
+    },
+    {
+      "episodes": [1],
+      "stored": "mixed",
+      "type": "mixed",
+      "change": false,
+      "confidence": "high",
+      "why": "Mixed stands - story plus D padding in one episode, which is what the parallel definition's mixed means. The story is manga ch 1's own: Goku farming while Goten brings lunch, Beerus's banquet on an alien planet and its destruction, Mr. Satan handing over the 100-million World Peace prize so Chi-Chi will let Goku go train with King Kai, the Kais sensing a planet vanish - all four beats are in ch 1 (with the differences the chapter page itself lists: Goku's image training against Frieza/Cell/Buu is cut, Beerus destroys the whole planet over poison rather than half over grease). Beside it runs a self-contained D block: Goten and Trunks' hunt for a wedding present for Videl and the giant-snake fight (the episode's only listed battle), plus the Mr. Satan press conference and the Gohan/Videl shopping scene - none of it in ch 1, and none of it in the Battle of Gods film, whose plot begins with Beerus's awakening and Goku already on King Kai's planet.",
+      "sources": [
+        "https://dragonball.fandom.com/api.php?action=parse&page=A%20Peacetime%20Reward%20Who%20Gets%20the%20100%2C000%2C000%20Zeni%3F%21&prop=wikitext&format=json",
+        "https://dragonball.fandom.com/api.php?action=parse&page=God%20of%20Destruction%27s%20Premonition&prop=wikitext&format=json",
+        "https://www.kanzenshuu.com/episode/super/eps-001/"
+      ]
+    },
+    {
+      "episodes": [2],
+      "stored": "mixed",
+      "type": "mixed",
+      "change": false,
+      "confidence": "high",
+      "why": "Mixed stands. The shared story: Goku reaches King Kai's planet and starts the training ch 1 set up and ch 2 shows him still doing, and Beerus recalls the Super Saiyan God of his prophetic dream and resolves to find him - the arc's inciting node, which in the manga happens at the ch-1 banquet (fandom's Differences: 'In the manga, Beerus recalls the name Super Saiyan God after visiting the unnamed planet where he is presented with a feast. In the anime he does not and only recalls the name after destroying Mogina instead'). Beside it, roughly half the episode is Vegeta's family resort trip, which the same list calls 'exclusive to the anime' - pure slice-of-life, Sean's own named D shape, and the arc proceeds identically without it. Story + D in one episode = mixed.",
+      "sources": [
+        "https://dragonball.fandom.com/api.php?action=parse&page=To%20the%20Promised%20Resort%21%20Vegeta%20Takes%20a%20Family%20Trip%21&prop=wikitext&format=json",
+        "https://dragonball.fandom.com/api.php?action=parse&page=God%20of%20Destruction%27s%20Premonition&prop=wikitext&format=json",
+        "https://www.kanzenshuu.com/episode/super/eps-002/"
+      ]
+    },
+    {
+      "episodes": [89],
+      "stored": "mixed",
+      "type": "mixed",
+      "change": false,
+      "confidence": "high",
+      "why": "Mixed stands, and it is the cleanest example of the shape in the ask. C: Cabba recruiting Caulifla is ch 32's own scene (ch 32's episode= field lists 89; the differences are documented - in the manga they fight and Cabba wins her over as a Super Saiyan telling her there are other Super Saiyans in Universe 7; in the anime they do not fight and he challenges her lifestyle), and it is heavily load-bearing in both tellings (Caulifla and Kale -> Kefla). B: the episode's frame is the recruitment of Tien and Master Roshi, both of whom fight the tournament in both tellings; ch 32 states the outcome in one clause ('Goku soon arrives telling them all that he's recruited Tien Shinhan'; Bulma offers to pay Android 18 and Master Roshi). D: the Yurin revenge plot - her talisman brainwashing of the dojo students and of Roshi - occupies most of the runtime and is self-contained; fandom calls the whole dojo/Yurin encounter 'exclusive to the anime' and ja-WP's Yurin entry ends 'does not appear in the manga version'. D beside B/C in one episode = mixed.",
+      "sources": [
+        "https://dragonball.fandom.com/api.php?action=parse&page=A%20Mysterious%20Beauty%20Appears%21%20The%20Enigma%20of%20the%20Tien%20Shin-Style%20Dojo%3F&prop=wikitext&format=json",
+        "https://dragonball.fandom.com/api.php?action=parse&page=The%20Super%20Warriors%20Gather%21%20Part%202&prop=wikitext&format=json",
+        "https://ja.wikipedia.org/wiki/%E3%83%89%E3%83%A9%E3%82%B4%E3%83%B3%E3%83%9C%E3%83%BC%E3%83%AB%E8%B6%85%E3%81%AE%E7%99%BB%E5%A0%B4%E4%BA%BA%E7%89%A9",
+        "https://www.kanzenshuu.com/episode/super/eps-089/"
+      ]
+    }
+  ],
+  "annotations": [
+    {
+      "episodes": [1, 2],
+      "kind": "divergence",
+      "chapters": "1",
+      "note": "Both episodes correspond to manga ch 1 (ch 1's episode= field names eps 1 AND 2; both episode infoboxes name ch 1). Same node, different telling: the anime drops Goku's image training against Frieza/Cell/Buu, has Beerus destroy half a planet over greasy food where the manga destroys all of it over poison, and defers Beerus's recollection of the Super Saiyan God from the ch-1 banquet to ep 2's Mogina detour. Each episode also runs an anime-original slice-of-life block beside the ch-1 story (see the type note)."
+    },
+    {
+      "episodes": [78],
+      "kind": "divergence",
+      "chapters": "28-29",
+      "note": "The Zeno Expo substitution reaches back to ep 78: ch 28 announces the tournament, the erasure of losing universes and the Expo exactly as the episode does, but the manga's Expo is a twelve-God-of-Destruction battle royale (ch 28-29) while the anime plays three one-on-one matches against Universe 9's Trio of Danger, of which Buu vs Basil starts here. Same fact already stored on eps 79-81; ep 78 carries its opening."
+    },
+    {
+      "episodes": [89],
+      "kind": "divergence",
+      "chapters": "32",
+      "note": "The episode's source-side content is ch 32: Cabba recruits Caulifla (manga: they fight, Cabba wins her over as a Super Saiyan by telling her there are other Super Saiyans in U7; anime: no fight, he challenges her wasted potential) and Tien's recruitment, which ch 32 states in a single clause. The Yurin / Tien-Shin-Style-Dojo incident that fills the rest of the episode is anime-original (ja-WP: Yurin does not appear in the manga version)."
+    },
+    {
+      "episodes": [90],
+      "kind": "divergence",
+      "chapters": "31",
+      "note": "The manga's version of the Gohan power-up node is a single beat at the end of ch 31 - Piccolo takes senzu and declares he will train Gohan up in time for the tournament - with the result simply visible when Gohan fights the manga's tournament. The anime spends ep 88 on the training and ep 90 on the test (2-on-2, then Gohan at full Potential Unleashed vs Goku at SSB Kaio-ken) and adds a beat the manga has no counterpart for: Goku naming Gohan leader of Team Universe 7 (fandom's Team Universe 7 infobox marks the leader field 'anime only'), which the anime's own telling then uses in eps 97 and 124."
+    },
+    {
+      "episodes": [91],
+      "kind": "partial",
+      "chapters": "31",
+      "note": "RE-NOTED, not withdrawn: the stored fact - that the counterpart pages for this episode are ch 31's closing scene (Good Buu's hibernation), the rest being the anime's own recruitment vignettes across Universes 2, 6, 9, 10 and 11 - is still exactly right as a statement of WHERE the manga's pages are. Under the parallel definition it no longer decides the type: ch 31 is titled 'The Super Warriors Gather!', the hibernation is the node both tellings turn on (it causes eps 92-95 / ch 32's Frieza recruitment), and the vignettes put on the board warriors who fight the manga's tournament too (Frost, Ribrianne, the Universe 11 trio). Differences in staging: the manga has Mr. Satan discover Buu after his talk-show appearance and phone Bulma, and the news reaches Goku on the way to Piccolo rather than at a strategy meeting."
+    }
+  ],
+  "correspondence": [
+    {
+      "episode": 1,
+      "chapters": "1",
+      "alignment": "divergent",
+      "note": "Goku farming with Goten, Beerus's banquet planet and its destruction, Mr. Satan's 100-million prize freeing Goku to train with King Kai, the Kais sensing a planet vanish - all four in ch 1, each told with small differences (image training cut; whole planet vs half; poison vs grease; a different limo driver).",
+      "sources": [
+        "https://dragonball.fandom.com/api.php?action=parse&page=God%20of%20Destruction%27s%20Premonition&prop=wikitext&format=json",
+        "https://dragonball.fandom.com/api.php?action=parse&page=A%20Peacetime%20Reward%20Who%20Gets%20the%20100%2C000%2C000%20Zeni%3F%21&prop=wikitext&format=json"
+      ]
+    },
+    {
+      "episode": 1,
+      "chapters": null,
+      "alignment": "anime_only",
+      "note": "Mr. Satan's press conference reintroducing Buu, the Gohan/Videl shopping scene, and Goten and Trunks' wedding-present errand with the giant-snake fight. Not in ch 1 and not in the Battle of Gods film (whose plot opens with Beerus's awakening and Goku already training at King Kai's) - the D block that keeps the row mixed.",
+      "sources": [
+        "https://www.kanzenshuu.com/episode/super/eps-001/",
+        "https://dragonball.fandom.com/api.php?action=parse&page=Dragon%20Ball%20Z%3A%20Battle%20of%20Gods&prop=wikitext&format=json"
+      ]
+    },
+    {
+      "episode": 2,
+      "chapters": "1",
+      "alignment": "divergent",
+      "note": "Beerus recalling the Super Saiyan God and resolving to find him - ch 1 places it at the banquet, the anime after the Mogina detour - and Goku's arrival on King Kai's planet to train, which ch 1 sets up and ch 2 opens on. The Mogina planet itself and the resort trip are the anime's own staging.",
+      "sources": [
+        "https://dragonball.fandom.com/api.php?action=parse&page=To%20the%20Promised%20Resort%21%20Vegeta%20Takes%20a%20Family%20Trip%21&prop=wikitext&format=json",
+        "https://dragonball.fandom.com/api.php?action=parse&page=God%20of%20Destruction%27s%20Premonition&prop=wikitext&format=json"
+      ]
+    },
+    {
+      "episode": 2,
+      "chapters": null,
+      "alignment": "anime_only",
+      "note": "Vegeta's family resort trip ('exclusive to the anime' per the episode's own Differences list) and Whis/Beerus's dinosaur-meat trip to Mogina. Slice-of-life D beside the ch-1 node.",
+      "sources": [
+        "https://dragonball.fandom.com/api.php?action=parse&page=To%20the%20Promised%20Resort%21%20Vegeta%20Takes%20a%20Family%20Trip%21&prop=wikitext&format=json",
+        "https://www.kanzenshuu.com/episode/super/eps-002/"
+      ]
+    },
+    {
+      "episode": 78,
+      "chapters": "28",
+      "alignment": "aligned",
+      "note": "The tournament's announcement node: the Grand Minister gathers every universe's gods, the Tournament of Power is set, the losing universes will be erased, the Zeno Expo is called. Bidirectional: ep 78's infobox names ch 28, ch 28's infobox names eps 77 and 78.",
+      "sources": [
+        "https://dragonball.fandom.com/api.php?action=parse&page=The%20Gods%20of%20Destruction%20From%20All%2012%20Universes&prop=wikitext&format=json",
+        "https://www.kanzenshuu.com/episode/super/eps-078/"
+      ]
+    },
+    {
+      "episode": 78,
+      "chapters": "28-29",
+      "alignment": "divergent",
+      "note": "The Expo itself: a twelve-God-of-Destruction battle royale in the manga (ch 28's closing, into ch 29) vs three one-on-one matches vs Universe 9 in the anime, whose first (Good Buu vs Basil) starts in this episode. Also: the anime front-loads the erasure stipulation that the manga states as the Zenos' own decision to cut the universes.",
+      "sources": [
+        "https://dragonball.fandom.com/api.php?action=parse&page=The%20Gods%20of%20Destruction%20From%20All%2012%20Universes&prop=wikitext&format=json",
+        "https://dragonball.fandom.com/api.php?action=parse&page=Even%20the%20Universes%27%20Gods%20are%20Appalled%3F%21%20The%20Lose-and-Perish%20Tournament%20of%20Power&prop=wikitext&format=json"
+      ]
+    },
+    {
+      "episode": 89,
+      "chapters": "32",
+      "alignment": "divergent",
+      "note": "Cabba recruits Caulifla (ch 32's opening; four documented differences, including the fight the manga has and the anime does not, and the stolen cargo being shared with poor children in the manga only) and Tien's recruitment, which ch 32 states in one clause. ch 32's episode= field lists ep 89.",
+      "sources": [
+        "https://dragonball.fandom.com/api.php?action=parse&page=The%20Super%20Warriors%20Gather%21%20Part%202&prop=wikitext&format=json",
+        "https://dragonball.fandom.com/api.php?action=parse&page=A%20Mysterious%20Beauty%20Appears%21%20The%20Enigma%20of%20the%20Tien%20Shin-Style%20Dojo%3F&prop=wikitext&format=json"
+      ]
+    },
+    {
+      "episode": 89,
+      "chapters": null,
+      "alignment": "anime_only",
+      "note": "The Yurin / Tien-Shin-Style-Dojo incident (her talisman brainwashing of the students and of Master Roshi). ja-WP's Yurin entry: 'does not appear in the manga version'; fandom: the whole encounter is 'exclusive to the anime'.",
+      "sources": [
+        "https://ja.wikipedia.org/wiki/%E3%83%89%E3%83%A9%E3%82%B4%E3%83%B3%E3%83%9C%E3%83%BC%E3%83%AB%E8%B6%85%E3%81%AE%E7%99%BB%E5%A0%B4%E4%BA%BA%E7%89%A9",
+        "https://www.kanzenshuu.com/episode/super/eps-089/"
+      ]
+    },
+    {
+      "episode": 90,
+      "chapters": "31",
+      "alignment": "divergent",
+      "note": "The Gohan power-up node. Manga: ch 31 closes with Piccolo declaring he will train Gohan in time for the tournament (the result is simply present when Gohan fights). Anime: ep 88 is the training, ep 90 the test - Piccolo hands Gohan over, the 2-on-2, then Gohan at full Potential Unleashed vs Goku (SS2 -> SSB -> SSB Kaio-ken). No chapter's episode= field lists ep 90; the correspondence is at node level, not page level.",
+      "sources": [
+        "https://dragonball.fandom.com/api.php?action=parse&page=The%20Super%20Warriors%20Gather%21&prop=wikitext&format=json",
+        "https://www.kanzenshuu.com/episode/super/eps-090/"
+      ]
+    },
+    {
+      "episode": 90,
+      "chapters": null,
+      "alignment": "anime_only",
+      "note": "Goku names Gohan leader of Team Universe 7 (fandom's Team Universe 7 infobox: leader = Gohan, 'anime only'). Load-bearing in the anime's telling: ep 97 opens the tournament with Gohan setting the U7 strategy, and ep 124 states 'Frieza agrees to follow Gohan's plan since he is the leader of Team Universe 7, after all'. Also anime-only: the Universe 10 interlude (Rumsshi delivers Murichim's ten warriors to Gowasu), which introduces a team that fights from ep 97 on.",
+      "sources": [
+        "https://dragonball.fandom.com/api.php?action=parse&page=Team%20Universe%207&prop=wikitext&format=json",
+        "https://dragonball.fandom.com/api.php?action=parse&page=A%20Storm-and-Stress%20Assault%21%20Gohan%27s%20Last%20Stand%21&prop=wikitext&format=json"
+      ]
+    },
+    {
+      "episode": 91,
+      "chapters": "31",
+      "alignment": "divergent",
+      "note": "Good Buu's hibernation - ch 31's closing beat (Mr. Satan finds Buu asleep after his talk show and phones Bulma) vs the anime's (Bulma brings the news to the U7 strategy meeting). ch 31's episode= field lists ep 91; ep 91's infobox names ch 31. The node's consequence is the same in both: the team is one short and Frieza becomes the tenth (eps 92-95 / ch 32).",
+      "sources": [
+        "https://dragonball.fandom.com/api.php?action=parse&page=The%20Super%20Warriors%20Gather%21&prop=wikitext&format=json",
+        "https://dragonball.fandom.com/api.php?action=parse&page=Which%20Universe%20Will%20Win%20Their%20Place%3F%20The%20Mighty%20Warriors%20Gradually%20Assemble%21&prop=wikitext&format=json"
+      ]
+    },
+    {
+      "episode": 91,
+      "chapters": null,
+      "alignment": "anime_only",
+      "note": "The other universes' assembly vignettes: Hit recruits Frost (Frost fights the manga's tournament - ja-WP's manga-version note has him eliminating Krillin and Tien on Frieza's advice), Universe 9's collapse under Sidra, the Universe 11 trio, Universe 2's idol-warrior audition introducing Brianne de Chateau / Ribrianne (ja-WP: 'in the manga version the setting differs greatly' - she is not a transforming type there), Universe 10's team dance, and Vegeta entering the Hyperbolic Time Chamber. The anime's telling of a premise both tellings run on, not padding.",
+      "sources": [
+        "https://ja.wikipedia.org/wiki/%E3%83%89%E3%83%A9%E3%82%B4%E3%83%B3%E3%83%9C%E3%83%BC%E3%83%AB%E8%B6%85%E3%81%AE%E7%99%BB%E5%A0%B4%E4%BA%BA%E7%89%A9",
+        "https://www.kanzenshuu.com/episode/super/eps-091/"
+      ]
+    }
+  ],
+  "repairs": [],
+  "structure": {
+    "notes": "=== 1. ROW IDENTITY (checked first, R20) === All six target rows were joined on TITLE + AIR DATE, never index. dragonball.fandom's 'List of Dragon Ball Super episodes' numbers 1-131 with no x.5 rows; each target page's Airdate field matches our stored date exactly: 1 = July 5 2015, 2 = July 12 2015, 78 = February 12 2017, 89 = May 7 2017, 90 = May 14 2017, 91 = May 21 2017. The fandom page titles are localised differently from our stored titles (e.g. ours 'See The Wall That Must Be Passed! Goku Vs Gohan' = fandom 'Staring Down the Wall to be Overcome Goku vs. Gohan'; ours 'Which Universe Will Survive?!...' = fandom 'Which Universe Will Win Their Place?...') - same episode, same date, confirmed by the Japanese title on each page. AFL's live table also parses to 131 rows with no doubled or skipped number.\n\n=== 2. THE COUNTERPART FIELDS FOR THESE SIX ROWS (bidirectional) === ep 1 -> ch 1 and ep 2 -> ch 1 (ch 1's episode= field names BOTH: '1', '2'); ep 78 -> ch 28 (ch 28's episode= names 77, 78); ep 89 -> ch 32 (ch 32's episode= names 27, 89, 92-96); ep 91 -> ch 31 (ch 31's episode= names 84-88, 91); ep 90 -> EMPTY in both directions (no chapter page lists 90) - which is why it was typed filler under the manga-relative test and why its correspondence here is stated at NODE level (ch 31's Piccolo beat), never as a page claim.\n\n=== 3. AFL IS NOT A B/D ORACLE (a negative finding worth recording) === AFL's live buckets (scraped 2026-08-28, 131 rows): Mixed Canon/Filler = 1, 2, 89; Filler = 4, 15, 42-46, 68-70, 73-76; Anime Canon = 16, 17, 22, 50, 52, 71, 72, 78, 79, 80, 81, 90, 91, 94, 95; Manga Canon = everything else. It is tempting to read 'Anime Canon' as B and 'Filler' as D - the three rows this verdict moves are all in AFL's Anime Canon bucket and the ruled D rows 4/15/42-46/68-70/73-76 are all in AFL's Filler bucket - but the mapping FAILS on seven rows: 16, 17, 22, 50, 52, 71, 72 sit in AFL's 'Anime Canon' bucket and are ruled D by Sean's own definition (the T6 overrides). AFL's 'Anime Canon' means 'anime-original but in continuity', not 'load-bearing node'. Use it as a cross-check only (R1); it cannot decide the B/D line.\n\n=== 4. AN INDEPENDENT CONFIRMATION OF THE PARALLEL IDENTITY, FROM EPS 1-2 === ja-WP records that the manga's Beerus arc is 'a digest of the film 神と神' and the anime is that film re-composed - but the Battle of Gods film contains NEITHER the farming prologue NOR Mr. Satan's prize money (its plot opens with Beerus's awakening and Goku already training on King Kai's planet). Both tellings nevertheless open with the same prologue beats (Goku on the tractor with Goten; Mr. Satan handing over the 100 million; the Kais sensing a planet destroyed). Two works that do not adapt each other and do not take those beats from the film both have them - i.e. they came from Toriyama's outline. This is the wave-5 identity showing up in the pages, one arc before the arcs the ja-WP 同時進行 statement is scoped to.\n\n=== 5. WHAT 'CANON' MEANS ON THE THREE MOVED ROWS === Nothing here is an adaptation claim. Every chapter cited postdates its episode (ch 28 = 2017-09-21 vs ep 78 = 2017-02-12; ch 31 = 2017-12-16 vs eps 90/91 = 2017-05-14/21; ch 1 = 2015-06-20 vs ep 1 = 2015-07-05 is the only pair the other way round, and the manga still is not the anime's source). The numbers in this verdict are CORRESPONDENCE, as ruled at wave 5.",
+    "order_only": []
+  },
+  "flags_for_sean": [
+    "CONSISTENCY: the new definition is not confined to these six rows. Sean's own B example - 'the Zeno Expo as the anime's version of the recruitment' - is eps 79-81, which are stored filler + divergence and were re-affirmed under the CONTENT test at wave 5; on the definition as written they are B (canon + divergence{28-29}), the same shape as ep 78 here. Likewise eps 87 and 88 (ruled filler + partial/divergence{31} at wave 5) carry the recruitment of Android 17 and Gohan's training - both load-bearing nodes ch 31 states - and eps 94/95 carry Frieza's recruitment, which ch 32 states. Wave 5's whole tournament-block table (99, 105, 113, 115, 116, 118, 120, 121, 124-126) was decided on the CONTENT test the new definition replaces. NOT re-opened here (outside the ask) - but they cannot stay as ruled if the parallel definition is now the series' standard. A series-wide re-pass on the D/B line is the honest next step.",
+    "ANNOTATION KIND on ep 78: the stored fact is `rearranged{28}` ('the manga announces the tournament in ch 28, same position; only the detailed rules are deferred to ch 30 - the anime front-loads the erasure stipulation'). The fact is true, but `rearranged` implies one work re-orders the other's material, which the parallel identity says never happens here. Recommend re-kinding it to `divergence{28}` and letting my new divergence{28-29} carry the Expo substitution; if Sean prefers, both can stand.",
+    "ANNOTATION NOTE on ep 91: the stored partial{31} note says 'Only the closing scene (Buu's hibernation, manga ch. 31) has source standing; roughly nineteen minutes of the episode are anime-original recruitment vignettes.' Its factual half is right and I keep it; its 'has source standing' half is the manga-relative test and is what the new definition overrides. Recommend re-noting rather than deleting (my proposed text is in the annotation entry).",
+    "THE CLOSEST CALL IS ep 91 (delivered at MEDIUM). Against canon: only the closing beat has counterpart pages, and the episode's middle is five short vignettes with a comedy interlude (the Turtle Hermit vs Puar). For canon: the episode's job is the gathering, which is what ch 31 is titled and about; the hibernation is the node both tellings pivot on; every warrior introduced fights the tournament in both tellings. If Sean reads the vignettes as texture rather than story, the alternative is mixed (story node + D), not filler - ep 91 has a genuine shared node either way.",
+    "ep 89 boundary, stated explicitly: I held mixed because the Yurin plot is a self-contained anime-original filling most of the runtime. If Sean instead counts the Tien/Roshi recruitment FRAME as B (both fight the tournament in both tellings; ch 32 states Tien's recruitment in a clause), ep 89 becomes canon and the D share shrinks to the Yurin comedy. The evidence in this verdict supports either call; mixed is the conservative one and matches the stored type.",
+    "ep 2 boundary: I held mixed because Vegeta's family resort trip is slice-of-life, Sean's own named D shape. A generous reading would make it B (it establishes the changed Vegeta that ep 7's 'How dare you hurt my Bulma' - manga ch 3 - turns on). If Sean takes that reading, ep 2 goes canon; ep 1's snake errand has no such payoff and would keep ep 1 mixed either way.",
+    "NO ANCHORS were produced, per the series ruling (positions here are correspondence). The correspondence array in this file is deliberately node-level; ep 90 in particular must never be given a chapter anchor - no chapter page lists it, and its manga counterpart is a single declarative panel."
+  ]
+}

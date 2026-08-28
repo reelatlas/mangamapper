@@ -318,6 +318,20 @@
         "anchor_without_row"
       ],
       "source": "consolidate deep after batch 19 wave 1: 21 orphan anchors invisible except via the aired>rows queue"
+    },
+    {
+      "ask": "dragon-ball-super: the anime and the manga are both made from Toriyama's outline — which one is the source, are the Tournament of Power episodes the manga skips filler, and what do chapter numbers on this series mean?",
+      "expected": [
+        "I40",
+        "T30",
+        "A46"
+      ],
+      "terms": [
+        "parallel",
+        "outline",
+        "correspondence"
+      ],
+      "source": "the DBS strategy session 2026-08-28 (batch 20 wave 5): the content test would have typed the anime's own telling filler"
     }
   ]
 }

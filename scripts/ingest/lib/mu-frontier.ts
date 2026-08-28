@@ -15,6 +15,7 @@
 import { db, fileFlagOnce, selectAll } from './db';
 import { MU_FRONTIER_SUPPRESSED } from './rulings/mu-frontier-suppressed';
 import { isAnchorSuppressed } from './rulings/anchor-suppressed';
+import { isParallelSeries } from './rulings/source-relations';
 import { honestTerminal, pinRedundant } from './honest-terminal';
 
 export { parseCoverageAll, parseCoverageSegments, pickEntrySegments, segmentIsEntry, type CoverageSegment, type EntryWindow } from './mu-coverage';
@@ -63,6 +64,7 @@ export async function applyMuFrontier(
 ): Promise<FrontierResult> {
   await db.from('chapter_anchors').delete().eq('series_id', s.id).eq('source', 'mu');
   if (MU_FRONTIER_SUPPRESSED[s.id]) return 'suppressed';
+  if (isParallelSeries(s.id)) return 'suppressed'; // A46: an MU frontier is not a position on a parallel telling
 
   // G32 gate 0 — labelled segments: only THIS entry's segments may pin
   const year = (d?: string | null) => (d && /^\d{4}/.test(d) ? Number(d.slice(0, 4)) : null);

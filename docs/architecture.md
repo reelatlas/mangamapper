@@ -132,6 +132,9 @@ Canonical (anon `SELECT` via RLS):
 - `episodes` — pk (series_id, number); `type` check-constrained to the four tokens; title/air date.
 - `chapter_anchors` — per-episode ep↔chapter record with `source` provenance (afg / afg-continua / mu / wiki / manual / research): `chapter` (END), `start_chapter`, `chapters_adapted`, `volume`, `note`, and the continue-read fields `continue_chapter` / `continue_kind` / `continue_note`.
 - `episode_annotations` — first-class non-linear facts per episode (rearranged, graft, partial, divergence, …) with their evidence.
+- `series.source_relation` — I40 (2026-08-28): `adaptation` | `parallel` | NULL (no source). HOW the anime stands to its linked work; derived by the resolver / heal-source-kinds from `lib/rulings/source-relations.ts` (a parallel series' manga link is part of the ruling — AniList has no ADAPTATION edge for it).
+- `series_arcs` — A46: the arc-grain correspondence (`shared` | `anime_only` | `manga_only` | `side_source`, episode + chapter ranges, note); ruled rows mirrored from `lib/rulings/arcs.ts` by assert-overrides; must partition 1..N on a parallel series.
+- `episode_correspondence` — A46: the row-grain correspondence (`aligned` | `divergent` | `anime_only` | `manga_only`; one episode may carry several chapter ranges). The watching and reading views of a parallel series are projections of these two tables; a parallel series carries NO chapter_anchors.
 - `volume_boundaries` — per manga (AniList id) volume → first chapter, with source.
 - `watch_order_entries` — canonical order-only entries (fractional watch positions) surfaced by ruling.
 

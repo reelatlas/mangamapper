@@ -16,7 +16,7 @@
 
 ## Family strip — one line per rule
 
-**A — Anchors & position** (43)
+**A — Anchors & position** (44)
 - `A1` Filler / anime-only rows never carry anchors — aka `invariant 6`, `hard invariant 6`, `A1 rule`, `filler rows never carry anchors`
 - `A2` Cameo / sliver borrowings are never anchors — aka `A2/A3`, `cameo rule`, `cameo/sliver borrowings`, `A2/A3 rejected-as-anchors`
 - `A3` Exact per-episode adaptation always becomes an anchor — aka `GTO lesson`, `GTO 20/21 lesson`, `rearranged-zone rule`, `rearranged zones`
@@ -60,6 +60,7 @@
 - `A43` Annotations are first-class; asterisk review is a queue — aka `asterisk model`, `asterisk review workflow`, `annotations are first-class`, `episode_annotations`
 - `A44` Position-less rows: a ruled row never takes an anchor — aka `anchor suppression`, `ANCHOR_SUPPRESSED`, `anchorless rows`, `position-less rows`, `cover-page serial rule`, `suppressed anchor`
 - `A45` Retired annotations: a refuted fact is retired by ruling — aka `retired annotations`, `RETIRED_ANNOTATIONS`, `annotation retirement`, `annotation-delete shape`, `annotation deletion`, `annotation_retired_standing`, `retire an annotation`
+- `A46` Positions on a parallel series are correspondence — aka `correspondence`, `correspondence not adaptation`, `series_arcs`, `episode_correspondence`, `RULED_ARCS`, `RULED_CORRESPONDENCE`, `arcs partition`, `aligned divergent anime_only manga_only`, `no anchors on a parallel series`, `parallel_has_anchor`, `arcs_not_partition`, `correspondence_incomplete`, `correspondence_invalid`, `the L-P queue`, `two views one table`, `honest dash on a parallel series`
 
 **C — Continue-read regimes** (9)
 - `C1` C1: a mid-chapter ending continues in the straddled chapter — aka `C1 rule`, `mid-chapter straddle`, `mid-chapter END`, `straddled chapter`
@@ -72,7 +73,7 @@
 - `C8` AFG continue-from is reading guidance, not the frontier — aka `continue-from is guidance`, `continue-from-is-guidance`, `sanity band`, `40-chapter band`, `three-numbers model`
 - `C9` Default continue = anchor end + 1 (superseded by C2) *(superseded)* — aka `continue-reading points`, `end+1 default`, `default continue = end + 1`, `apply-continue-points`
 
-**T — Typing & taxonomy** (29)
+**T — Typing & taxonomy** (30)
 - `T1` Episode-type vocabulary: four stored tokens — aka `four tokens`, `AFL class map`, `CLASS_TO_TYPE`, `episodes.type vocabulary`, `type_corrections allowed types`
 - `T2` Episode-type semantics (Sean 2026-08-25) — aka `episode-type semantics`, `Sean's vocabulary`, `typing vocabulary`, `filler = zero canon`, `consensus-canon`, `mixed = canon AND non-canon`
 - `T3` Filler = outside both canons (b17 D3 form) *(superseded)* — aka `b17 D3`, `outside both canons`, `b17 D3 form`
@@ -102,6 +103,7 @@
 - `T27` Standing is canon / mixed / filler, relative to the source — aka `three standings`, `canon mixed filler only`, `anime-only-canon retired`, `AFL anime_canon mapping`, `aflAnimeCanon`, `afl_anime_canon_unruled`, `standing migration`, `D-10 standing`, `anime only retired`
 - `T28` mixed needs a substantial share: the episode's job decides — aka `mixed_fragment_only`, `T28 discrepancy queue`, `materiality bar for mixed`, `episode job test`, `what is this episode's job`, `fragment is an annotation`, `slivers are not mixed`, `Claymore-26 shape`, `mixed threshold`
 - `T29` The format axis: derived, stored, never a type — aka `format axis`, `episodes.format`, `FORMAT_OVERRIDES`, `heal-format`, `format_missing`, `episode_without_component`, `watch_order_kind_missing`, `D-11`, `tv ova special movie recap`
+- `T30` Standing on a parallel series: from the outline or not — aka `parallel standing`, `from the outline or not`, `the timelines model`, `timeline D`, `studio padding`, `the story test`, `load-bearing test`, `B vs D proxy`, `anime-only telling`, `arc_row_conflict`, `DBS standing`
 
 **N — Numbering, counts & chapter spaces** (31)
 - `N1` Episode-floor invariant — aka `episode-floor invariant`, `episode floor`, `floor rule`, `EXTRAS_ADOPTED`
@@ -136,7 +138,7 @@
 - `N33` Every non-main entry carries its reasoning in data — aka `research-logged non-main entries`, `non-main entries carry the why`
 - `N34` Episode totals derive, then floor, then cap — aka `episode totals derivation`
 
-**I — Identity, franchise & structure** (39)
+**I — Identity, franchise & structure** (40)
 - `I1` Our slug is the identity — aka `identity`, `our slug is identity`, `canonical identity is ours`, `own-slug identity`
 - `I2` Identity registry: every external id maps INTO our id — aka `identity registry`, `registerIds`, `ID COLLISION`, `series_external_ids`
 - `I3` AFG↔canonical registration by evidence strength — aka `registration tiers`, `AFG match tiers`, `identity-first, flag-first`
@@ -176,6 +178,7 @@
 - `I37` Continuation handoff: adjoining sibling scope = flow — aka `continuation handoff`, `claimed continuation → handoff`, `continues in X`
 - `I38` The source manga is the ADAPTATION edge of type/format MANGA — aka `manga link selection`, `anime→manga linkage`, `pickManga`
 - `I39` Ruled structure: numbered extras and span overrides — aka `ruled structure`, `RULED_STRUCTURE`, `numbered extras`, `span override`, `heal-structure`, `planComponents`, `E4`, `batch-19 E4`, `structure rows`
+- `I40` Source relation: adaptation or parallel telling — aka `source relation`, `source_relation`, `parallel telling`, `parallel tellings`, `parallel series`, `SOURCE_RELATION_OVERRIDES`, `MANGA_LINK_OVERRIDES`, `pickMangaNode`, `ruled manga link`, `the DBS relation`, `dual adaptation`, `ALTERNATIVE edge`, `two realizations of one outline`, `source_relation_missing`
 
 **G — Gates & freshness (sources)** (47)
 - `G1` The flag rule: nothing suspicious auto-applies — aka `flag rule`, `the flag rule`, `the confirm queue`, `nothing suspicious ever auto-applies`
@@ -910,6 +913,20 @@ A stored annotation proven wrong is RETIRED by a typed ruling (lib/rulings/retir
 - aliases: retired annotations, RETIRED_ANNOTATIONS, annotation retirement, annotation-delete shape, annotation deletion, annotation_retired_standing, retire an annotation
 - see: A43, T26, P24, A6, P8
 
+### A46 · Positions on a parallel series are correspondence
+
+On a parallel series (I40) chapter numbers are CORRESPONDENCE, never adaptation: no anchor and no continue point ever stands on it (syncAnchors, applyContinua, applyMuFrontier and writeCuratedContinue refuse; assert-overrides removes standing rows and lists each; parallel_has_anchor is the outcome check). The instrument is two ruled tables: series_arcs (arc grain — shared | anime_only | manga_only | side_source; PERMITTED on any series, REQUIRED to partition 1..N on a parallel one, chapter ranges never overlapping; arcs_not_partition) and episode_correspondence (row grain — aligned = timeline C, divergent = the same outline node told differently, anime_only = timeline B, manga_only = timeline A; one episode may carry several rows, e.g. ch 100-110 aligned + 111-120 divergent; correspondence_invalid). Studio padding (timeline D) is the episode's type and carries no row. Both focused views — watching (order, arcs, which episodes are B vs C, how the manga range splits, what the manga has that the show does not) and reading (aligned / same-arc divergent / manga-only / not animated) — are projections of the same rows; nothing is stored twice and a canon row in a shared arc with no row renders an honest dash (P6), never an assumed alignment. Completeness is mechanical: correspondence_incomplete lists every canon/mixed episode and every chapter of a shared arc no row covers — the work queue (lane L-P, one arc per wave), never a promise.
+
+*Why:* dragon-ball-super: a 131-episode anime against a 104-chapter monthly manga that compresses ~4:1, diverges at load-bearing beats and continues 62 chapters past the finale. Interpolated 'you have read up to ch N' positions would be fabricated; today's AFG-continua cron had already pinned ep 131 → ch 42 as if adapted. Sean's ask (2026-08-28): a viewer must see which episodes line up, which diverge inside a shared arc, which are the anime's own, which are padding, and what the manga has that the show does not — and a reader the inverse — from one structure, so the next braid (Boruto is the candidate second witness) is a map entry, not a one-off (P9). Annotations could not carry it: one divergence row per episode, no chapter-keyed rows, absence indistinguishable from unresearched.
+
+- ruled Sean 2026-08-28 (the DBS strategy session 2026-08-28; scripts/ingest/research/batch20/WAVE5-RECOVERY.md; changelog §12.87)
+- layer **both**
+- enforced: [lib/rulings/arcs.ts#arcsPartitionProblems](../scripts/ingest/lib/rulings/arcs.ts) · [lib/rulings/correspondence.ts#correspondenceCoverage](../scripts/ingest/lib/rulings/correspondence.ts) · [lib/rulings/correspondence.ts#upsertCorrespondence](../scripts/ingest/lib/rulings/correspondence.ts) · [lib/anchors.ts#syncAnchors](../scripts/ingest/lib/anchors.ts) · [lib/anchors.ts#applyContinua](../scripts/ingest/lib/anchors.ts) · [lib/mu-frontier.ts#applyMuFrontier](../scripts/ingest/lib/mu-frontier.ts) · [lib/continues.ts#writeCuratedContinue](../scripts/ingest/lib/continues.ts) · [assert-overrides.ts#assertParallelNoAnchors](../scripts/ingest/assert-overrides.ts) · [assert-overrides.ts#assertArcs](../scripts/ingest/assert-overrides.ts) · [audit-ui-truth.ts#correspondence_incomplete](../scripts/ingest/audit-ui-truth.ts) · [supabase/migrations/20260829100000_source_relation_correspondence.sql](../supabase/migrations/20260829100000_source_relation_correspondence.sql)
+- audit: `parallel_has_anchor`, `arcs_not_partition`, `correspondence_invalid`, `correspondence_incomplete`, `ruling_violation`
+- witnesses: dragon-ball-super
+- aliases: correspondence, correspondence not adaptation, series_arcs, episode_correspondence, RULED_ARCS, RULED_CORRESPONDENCE, arcs partition, aligned divergent anime_only manga_only, no anchors on a parallel series, parallel_has_anchor, arcs_not_partition, correspondence_incomplete, correspondence_invalid, the L-P queue, two views one table, honest dash on a parallel series
+- see: I40, T30, A1, A44, C5, P6, P9, T21
+
 ## C — Continue-read regimes
 
 ### C1 · C1: a mid-chapter ending continues in the straddled chapter
@@ -1438,6 +1455,20 @@ episodes.format ∈ tv | ova | special | movie | recap is a second, independent 
 - witnesses: rurouni-kenshin, sword-art-online, clannad-after-story, durarara
 - aliases: format axis, episodes.format, FORMAT_OVERRIDES, heal-format, format_missing, episode_without_component, watch_order_kind_missing, D-11, tv ova special movie recap
 - see: T23, T27, N7, N31, I33
+
+### T30 · Standing on a parallel series: from the outline or not
+
+On a series whose source_relation is 'parallel' (I40) the three standings measure FROM THE OUTLINE OR NOT, never 'in the manga or not': canon = the story in ANY official telling (timeline A manga-only, B anime-only, C both); filler = timeline D, studio padding no telling's story depends on; mixed = D and A/B/C in one episode under the unchanged T28 sliver bar (one restaged beat never lifts D). The outline is uncitable, so membership is proven by proxy: (1) in the manga → from the outline; (2) anime-only but a LOAD-BEARING node of an arc both tellings share (the later beats that depend on it are named) → B, canon, with the manga's version of the node cited as correspondence (A46); (3) a whole anime-only arc no other telling carries → D by default — an anime_only arc (A46) whose rows are canon is arc_row_conflict unless a citation proves the author's hand (adopted{author}, T26). Which of C / B a canon row is lives in the correspondence rows, never in a fourth type (T27) and never in a blanket per-row annotation. A film adapted by the anime stays side_source (T26), not A-E.
+
+*Why:* dragon-ball-super, batch 20 wave 5 → the strategy session of 2026-08-28: the wave's content test ('is it in the manga?') proposed 22 Tournament of Power rows as filler — the anime's own telling of the outline's arc — which would have told a viewer to skip the story; the retired anime-only-canon type was the other wrong answer (T27). Sean's timelines model (A manga-only / B anime-only / C both / D studio padding / E mixed) is the ruling; the load-bearing test is what keeps ep 50 (slice-of-life inside Future Trunks) D while ep 98 (an elimination) is B.
+
+- ruled Sean 2026-08-28 (the DBS strategy session 2026-08-28; scripts/ingest/research/batch20/WAVE5-RECOVERY.md; changelog §12.87)
+- layer **both**
+- enforced: [lib/rulings/source-relations.ts#isParallelSeries](../scripts/ingest/lib/rulings/source-relations.ts) · [lib/rulings/arcs.ts#arcOfEpisode](../scripts/ingest/lib/rulings/arcs.ts) · [audit-ui-truth.ts#arc_row_conflict](../scripts/ingest/audit-ui-truth.ts) · [.claude/agents/research-agent.md](../.claude/agents/research-agent.md)
+- audit: `arc_row_conflict`
+- witnesses: dragon-ball-super
+- aliases: parallel standing, from the outline or not, the timelines model, timeline D, studio padding, the story test, load-bearing test, B vs D proxy, anime-only telling, arc_row_conflict, DBS standing
+- see: I40, A46, T27, T28, T26, A1
 
 ## N — Numbering, counts & chapter spaces
 
@@ -2391,6 +2422,20 @@ A numbered non-season entry the community counts inside the run (an OVA, special
 - witnesses: durarara, heavens-lost-property, fate-stay-night-unlimited-blade-works, outlaw-star, angel-beats, assassination-classroom
 - aliases: ruled structure, RULED_STRUCTURE, numbered extras, span override, heal-structure, planComponents, E4, batch-19 E4, structure rows
 - see: N7, T29, I33, I24, P8, P2
+
+### I40 · Source relation: adaptation or parallel telling
+
+series.source_relation names HOW the anime stands to its linked source work — 'adaptation' (the anime adapts the work; the default) or 'parallel' (two official realizations of ONE unpublished outline; neither adapts the other) — and is NULL when the series has no source (T25 original). It is DERIVED (deriveSourceRelation: identity × the SOURCE_RELATION_OVERRIDES ruling map) by the resolver, chain.ts#aggregate and heal-source-kinds, never hand-written. A parallel series' manga link is part of the ruling (mangaAnilistId) because AniList carries no ADAPTATION edge for it: pickMangaNode honours the ruled id from the STAGED relations whatever the edge type (an id absent from staging is null, never invented) and every picker (resolve, chain, the healer, the census) calls the same function. The relation — never the series id — is what the writers, the census and the display read: standing on a parallel series is T30, positions are A46, and anchor_gap_research / frontier_tail_null / the pending classes skip it (ok_parallel).
+
+*Why:* dragon-ball-super (batch 20 wave 5, 2026-08-28): the Toei series and Toyotarou's manga were produced 同時進行 from Toriyama's text outline (ja-WP; Kanzenshuu); AniList's edge is ALTERNATIVE and correct, so the catalog carried source_type manga with NO manga linked, no chapter space, and 99 canon rows typed against a work it did not name; a content-test reading would have turned the Tournament of Power into 22 filler rows. One series, one relation, two directions — not two catalog series (FMA 2003 / Brotherhood are two animes: series_relations 'alternative', a different object, which is why the value is 'parallel'), not an outline source kind (the outline has no units — the instrument stays the manga), not a per-series audit suppression list. Outlaw Star stays T25 original: a sibling telling with no comparison instrument (A40).
+
+- ruled Sean 2026-08-28 (scripts/ingest/research/batch20/WAVE5-RECOVERY.md; the DBS strategy session 2026-08-28 (Sean + Cursor + Claude: the timelines model A/B/C/D/E); changelog §12.87)
+- layer **both**
+- enforced: [lib/rulings/source-relations.ts#deriveSourceRelation](../scripts/ingest/lib/rulings/source-relations.ts) · [lib/rulings/source-relations.ts#pickMangaNode](../scripts/ingest/lib/rulings/source-relations.ts) · [lib/resolve.ts#pickManga](../scripts/ingest/lib/resolve.ts) · [lib/chain.ts](../scripts/ingest/lib/chain.ts) · [heal-source-kinds.ts#main](../scripts/ingest/heal-source-kinds.ts) · [audit-ui-truth.ts#source_relation_missing](../scripts/ingest/audit-ui-truth.ts) · [supabase/migrations/20260829100000_source_relation_correspondence.sql](../supabase/migrations/20260829100000_source_relation_correspondence.sql)
+- audit: `source_relation_missing`, `ruling_violation`
+- witnesses: dragon-ball-super, outlaw-star
+- aliases: source relation, source_relation, parallel telling, parallel tellings, parallel series, SOURCE_RELATION_OVERRIDES, MANGA_LINK_OVERRIDES, pickMangaNode, ruled manga link, the DBS relation, dual adaptation, ALTERNATIVE edge, two realizations of one outline, source_relation_missing
+- see: T25, T21, T30, A46, I16, A40, P9
 
 ## G — Gates & freshness (sources)
 
@@ -4125,7 +4170,9 @@ Any component that renders episode-level data consumes the HYDRATED series (getB
 - alias defense → `G8`
 - alias-corruption defense → `G8`
 - alias-corruption exclusion → `I14`
+- aligned divergent anime_only manga_only → `A46`
 - alignment gate → `N16`
+- ALTERNATIVE edge → `I40`
 - ambiguity rule → `I4`
 - anchor = honest record → `A8`
 - anchor density → `R14`
@@ -4154,6 +4201,7 @@ Any component that renders episode-level data consumes the HYDRATED series (getB
 - anime parity → `C2`
 - anime_only badge retired → `T19`
 - anime_only homonym → `T22`
+- anime-only telling → `T30`
 - anime-only-canon ≠ anchor desert → `T14`
 - anime-only-canon has no chapter counterpart → `T14`
 - anime-only-canon retired → `T27`
@@ -4178,7 +4226,10 @@ Any component that renders episode-level data consumes the HYDRATED series (getB
 - api.php rule → `R6`
 - apply-batch sequence → `P15`
 - apply-continue-points → `C9`
+- arc_row_conflict → `T30`
 - arc-block anchors → `A22`
+- arcs partition → `A46`
+- arcs_not_partition → `A46`
 - artifacts are the handoff → `P11`
 - as-stored rendering → `A19`
 - assert-type-overrides → `T6`
@@ -4188,6 +4239,7 @@ Any component that renders episode-level data consumes the HYDRATED series (getB
 - audits verify outcomes → `P5`
 - author-declaration discriminator → `T9`
 - authoritative sources write canonical → `G5`
+- B vs D proxy → `T30`
 - b17 D3 → `T3`
 - b17 D3 form → `T3`
 - backwards-jumping successor → `A17`
@@ -4314,6 +4366,10 @@ Any component that renders episode-level data consumes the HYDRATED series (getB
 - continue-reading points → `C9`
 - continues in X → `I37`
 - contradiction scan → `R25`
+- correspondence → `A46`
+- correspondence not adaptation → `A46`
+- correspondence_incomplete → `A46`
+- correspondence_invalid → `A46`
 - count mismatch → `G13`
 - count mismatch (informational) → `G13`
 - COUNT_MISMATCH_THRESHOLD → `G13`
@@ -4353,6 +4409,7 @@ Any component that renders episode-level data consumes the HYDRATED series (getB
 - D4 early signal → `R28`
 - Dagashi S1 normalization → `A9`
 - data cycle → `P1`
+- DBS standing → `T30`
 - declared shifts only → `N21`
 - dedup guard → `I30`
 - deep rescan notes rule → `P23`
@@ -4381,6 +4438,7 @@ Any component that renders episode-level data consumes the HYDRATED series (getB
 - Dr. Stone / Ryuusui lesson → `N11`
 - dry-run as proposal → `P15`
 - DSQ class → `T11`
+- dual adaptation → `I40`
 - duplicate rule → `I12`
 - E2 → `G55`
 - E3 → `A10`
@@ -4403,6 +4461,7 @@ Any component that renders episode-level data consumes the HYDRATED series (getB
 - episode job test → `T28`
 - episode totals derivation → `N34`
 - episode_annotations → `A43`
+- episode_correspondence → `A46`
 - episode_date_off_window → `G55`
 - EPISODE_TITLE_OVERRIDES → `G53`
 - EPISODE_TYPE_OVERRIDES → `T6`
@@ -4484,6 +4543,7 @@ Any component that renders episode-level data consumes the HYDRATED series (getB
 - franchise baseline → `I15`
 - franchise evaluation → `I18`
 - freshness map → `G47`
+- from the outline or not → `T30`
 - frontend gate → `P27`
 - frontend gate is tsc -b → `P27`
 - frontier_tail_null triage → `A35`
@@ -4534,6 +4594,7 @@ Any component that renders episode-level data consumes the HYDRATED series (getB
 - historical apply scripts non-runnable → `P34`
 - history non-runnable → `P34`
 - history/ → `P34`
+- honest dash on a parallel series → `A46`
 - honest gap > guess → `R13`
 - honest gap beats a plausible guess → `R13`
 - honest record → `A8`
@@ -4595,6 +4656,7 @@ Any component that renders episode-level data consumes the HYDRATED series (getB
 - LN instrument ruling → `T24`
 - LN volume-space instrument → `T24`
 - LNDS → `A20`
+- load-bearing test → `T30`
 - LOCKED → `P25`
 - locked series → `P25`
 - look for a second wiki → `R7`
@@ -4607,6 +4669,7 @@ Any component that renders episode-level data consumes the HYDRATED series (getB
 - majority rule → `A11`
 - manga link selection → `I38`
 - manga totals (§2) → `N25`
+- MANGA_LINK_OVERRIDES → `I40`
 - manga_status 'anime_only' → `T22`
 - manga_status vocabulary → `T22`
 - MANGA_STATUS_MAP → `T22`
@@ -4683,6 +4746,7 @@ Any component that renders episode-level data consumes the HYDRATED series (getB
 - never silently contradict stored data → `R12`
 - new-source checklist → `G50`
 - next-step offer → `P28`
+- no anchors on a parallel series → `A46`
 - no blanket precedence rule → `R2`
 - no degenerate component spans → `I35`
 - no delete-then-insert → `G57`
@@ -4742,6 +4806,11 @@ Any component that renders episode-level data consumes the HYDRATED series (getB
 - ownership guard → `I21`
 - padded finale → `T11`
 - page discovery token agreement → `G43`
+- parallel series → `I40`
+- parallel standing → `T30`
+- parallel telling → `I40`
+- parallel tellings → `I40`
+- parallel_has_anchor → `A46`
 - parity \| unseen \| post_series → `C6`
 - parity continue → `C2`
 - parity-continue preservation → `C7`
@@ -4757,6 +4826,7 @@ Any component that renders episode-level data consumes the HYDRATED series (getB
 - permanence_violation → `P25`
 - permanent-flag disposition → `G4`
 - pickManga → `I38`
+- pickMangaNode → `I40`
 - piecewise interpolation → `A33`
 - pin already covered → `G56`
 - pin-episode redundancy → `A26`
@@ -4832,11 +4902,14 @@ Any component that renders episode-level data consumes the HYDRATED series (getB
 - row-count identity first → `R19`
 - ruled air dates → `G53`
 - ruled extensions → `I27`
+- ruled manga link → `I40`
 - ruled NULL air date → `G53`
 - ruled reorder exemption → `A41`
 - ruled splits stay split → `I20`
 - ruled structure → `I39`
 - ruled titles → `G53`
+- RULED_ARCS → `A46`
+- RULED_CORRESPONDENCE → `A46`
 - RULED_LABELS → `N31`
 - RULED_STRUCTURE → `I39`
 - ruledExtent → `I27`
@@ -4879,6 +4952,7 @@ Any component that renders episode-level data consumes the HYDRATED series (getB
 - seeded starts → `A10`
 - seiya +1 space witness → `V11`
 - series window → `G55`
+- series_arcs → `A46`
 - series_external_ids → `I2`
 - series_relations vocabulary → `I17`
 - series_scopes → `I36`
@@ -4907,6 +4981,7 @@ Any component that renders episode-level data consumes the HYDRATED series (getB
 - source is series identity → `T25`
 - source kinds registry → `T25`
 - source numbering translation → `N11`
+- source relation → `I40`
 - source spaces → `N12`
 - source suppressions → `G26`
 - source typing → `T20`
@@ -4914,6 +4989,9 @@ Any component that renders episode-level data consumes the HYDRATED series (getB
 - source_map dispositions → `I11`
 - SOURCE_NUMBERING_SHIFTS → `N11`
 - source_only badge → `T19`
+- source_relation → `I40`
+- source_relation_missing → `I40`
+- SOURCE_RELATION_OVERRIDES → `I40`
 - source_type derivation → `T20`
 - source_type vocabulary → `T20`
 - SOURCE_TYPE_OVERRIDES → `T25`
@@ -4954,6 +5032,7 @@ Any component that renders episode-level data consumes the HYDRATED series (getB
 - structure rows → `I39`
 - studio original → `T25`
 - studio original label → `T19`
+- studio padding → `T30`
 - successor cap → `A16`
 - successor-span cap → `A16`
 - summary-vs-rows scan → `R25`
@@ -4981,17 +5060,22 @@ Any component that renders episode-level data consumes the HYDRATED series (getB
 - the curated map decides → `P10`
 - the cycle → `P1`
 - the data cycle → `P1`
+- the DBS relation → `I40`
 - the flag rule → `G1`
 - the four crons → `G47`
 - the governing rule → `P11`
+- the L-P queue → `A46`
 - the Naruto bug → `I36`
 - the reference point (watch order) → `N32`
 - the standing goal → `P30`
+- the story test → `T30`
+- the timelines model → `T30`
 - the verifier → `P19`
 - three rosters → `P33`
 - three standings → `T27`
 - three-numbers model → `C8`
 - ties escalate to research → `R2`
+- timeline D → `T30`
 - title-alignment verification → `N21`
 - title-join rule → `R20`
 - title-token overlap gate → `V5`
@@ -5005,6 +5089,8 @@ Any component that renders episode-level data consumes the HYDRATED series (getB
 - tsc -b gate → `P27`
 - tv ova special movie recap → `T29`
 - two modes → `P21`
+- two realizations of one outline → `I40`
+- two views one table → `A46`
 - two-chunk rule → `P12`
 - two-source rule → `R3`
 - TYBW airing pin → `G34`
@@ -5074,6 +5160,6 @@ Any component that renders episode-level data consumes the HYDRATED series (getB
 
 ## Scoreboard
 
-- rules: 272 (live 257, planned 8, superseded 7)
+- rules: 275 (live 260, planned 8, superseded 7)
 - live data rules with no audit class (the automation backlog): 83
-- by layer: writer 143 · display 23 · both 23 · process 83
+- by layer: writer 143 · display 23 · both 26 · process 83

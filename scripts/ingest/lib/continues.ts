@@ -11,6 +11,8 @@
 //   source — afg-continua's parsed continue-from (re-derived by the source)
 // Pure predicates here; the DB write helper is what every apply uses so the
 // marker can never be forgotten (P2).
+import { isParallelSeries } from './rulings/source-relations';
+
 export type ContinueSource = 'manual' | 'healer' | 'source';
 
 export type ContinueRow = { continue_chapter: number | null; continue_kind?: string | null; continue_note?: string | null; continue_source?: ContinueSource | string | null };
@@ -32,6 +34,7 @@ export type CuratedContinue = { chapter: number; kind: 'parity' | 'post_series';
 
 /** The one way an apply writes a continue: value + kind + note + the 'manual' marker. */
 export async function writeCuratedContinue(seriesId: string, episode: number, c: CuratedContinue): Promise<void> {
+  if (isParallelSeries(seriesId)) throw new Error(`continue ${seriesId} ep${episode}: a parallel series has no continue point — the manga_only arc is the tail (A46)`);
   const { db } = await import('./db'); // lazy: the predicates above stay pure
   const { error } = await db.from('chapter_anchors').update({ continue_chapter: c.chapter, continue_kind: c.kind, continue_note: c.note.slice(0, 600), continue_source: 'manual' }).eq('series_id', seriesId).eq('episode', episode);
   if (error) throw new Error(`continue ${seriesId} ep${episode}: ${error.message}`);

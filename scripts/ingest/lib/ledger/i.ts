@@ -799,4 +799,31 @@ export const RULES: Rule[] = [
     status: 'live',
     see: ['N7', 'T29', 'I33', 'I24', 'P8', 'P2'],
   },
+  {
+    id: 'I40',
+    aliases: ['source relation', 'source_relation', 'parallel telling', 'parallel tellings', 'parallel series', 'SOURCE_RELATION_OVERRIDES', 'MANGA_LINK_OVERRIDES', 'pickMangaNode', 'ruled manga link', 'the DBS relation', 'dual adaptation', 'ALTERNATIVE edge', 'two realizations of one outline', 'source_relation_missing'],
+    family: 'I',
+    title: 'Source relation: adaptation or parallel telling',
+    statement:
+      "series.source_relation names HOW the anime stands to its linked source work — 'adaptation' (the anime adapts the work; the default) or 'parallel' (two official realizations of ONE unpublished outline; neither adapts the other) — and is NULL when the series has no source (T25 original). It is DERIVED (deriveSourceRelation: identity × the SOURCE_RELATION_OVERRIDES ruling map) by the resolver, chain.ts#aggregate and heal-source-kinds, never hand-written. A parallel series' manga link is part of the ruling (mangaAnilistId) because AniList carries no ADAPTATION edge for it: pickMangaNode honours the ruled id from the STAGED relations whatever the edge type (an id absent from staging is null, never invented) and every picker (resolve, chain, the healer, the census) calls the same function. The relation — never the series id — is what the writers, the census and the display read: standing on a parallel series is T30, positions are A46, and anchor_gap_research / frontier_tail_null / the pending classes skip it (ok_parallel).",
+    why:
+      "dragon-ball-super (batch 20 wave 5, 2026-08-28): the Toei series and Toyotarou's manga were produced 同時進行 from Toriyama's text outline (ja-WP; Kanzenshuu); AniList's edge is ALTERNATIVE and correct, so the catalog carried source_type manga with NO manga linked, no chapter space, and 99 canon rows typed against a work it did not name; a content-test reading would have turned the Tournament of Power into 22 filler rows. One series, one relation, two directions — not two catalog series (FMA 2003 / Brotherhood are two animes: series_relations 'alternative', a different object, which is why the value is 'parallel'), not an outline source kind (the outline has no units — the instrument stays the manga), not a per-series audit suppression list. Outlaw Star stays T25 original: a sibling telling with no comparison instrument (A40).",
+    ruledBy: 'Sean',
+    ruledOn: '2026-08-28',
+    origin: 'scripts/ingest/research/batch20/WAVE5-RECOVERY.md; the DBS strategy session 2026-08-28 (Sean + Cursor + Claude: the timelines model A/B/C/D/E); changelog §12.87',
+    enforcement: [
+      { path: 'scripts/ingest/lib/rulings/source-relations.ts', symbol: 'deriveSourceRelation' },
+      { path: 'scripts/ingest/lib/rulings/source-relations.ts', symbol: 'pickMangaNode' },
+      { path: 'scripts/ingest/lib/resolve.ts', symbol: 'pickManga' },
+      { path: 'scripts/ingest/lib/chain.ts' },
+      { path: 'scripts/ingest/heal-source-kinds.ts', symbol: 'main' },
+      { path: 'scripts/ingest/audit-ui-truth.ts', symbol: 'source_relation_missing' },
+      { path: 'supabase/migrations/20260829100000_source_relation_correspondence.sql' },
+    ],
+    layer: 'both',
+    auditClass: ['source_relation_missing', 'ruling_violation'],
+    witnesses: ['dragon-ball-super', 'outlaw-star'],
+    status: 'live',
+    see: ['T25', 'T21', 'T30', 'A46', 'I16', 'A40', 'P9'],
+  },
 ];

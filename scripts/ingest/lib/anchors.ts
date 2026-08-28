@@ -8,6 +8,7 @@ import { db, fileFlagOnce, selectAll } from './db';
 import { upsertAnnotation } from './annotations';
 import { CONTINUA_SUPPRESSED, registerIds, translateEpisodeNumber } from './resolve';
 import { isAnchorSuppressed } from './rulings/anchor-suppressed';
+import { isParallelSeries } from './rulings/source-relations';
 
 // heading comparison: decode leftover entities, drop parenthetical year
 // suffixes ("Rurouni Kenshin (1996)"), then collapse to word soup
@@ -43,6 +44,12 @@ export async function applyContinua(
   // WRONG for a series must not re-enter on any refresh — same-episode
   // precedence can't stop it landing on a different episode
   if (CONTINUA_SUPPRESSED[seriesId]) {
+    await db.from('chapter_anchors').delete().eq('series_id', seriesId).eq('source', 'afg-continua');
+    return 'suppressed';
+  }
+  // A46 (2026-08-28): positions on a PARALLEL series are correspondence, never
+  // anchors — the continua's ep→ch is a counterpart, not an adaptation frontier
+  if (isParallelSeries(seriesId)) {
     await db.from('chapter_anchors').delete().eq('series_id', seriesId).eq('source', 'afg-continua');
     return 'suppressed';
   }
@@ -245,6 +252,8 @@ export async function syncAnchors(
 ): Promise<{ anchors: number; withheld: boolean }> {
   const anchors = deriveAnchors(page.episodes);
   if (!anchors.length) return { anchors: 0, withheld: false };
+  // A46: no anchors on a parallel series (the ruling is the record; the healer removes standing rows)
+  if (isParallelSeries(seriesId)) return { anchors: 0, withheld: false };
 
   const { data: maxRow } = await db
     .from('episodes')

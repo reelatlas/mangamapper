@@ -649,4 +649,28 @@ export const RULES: Rule[] = [
     status: 'live',
     see: ['T23', 'T27', 'N7', 'N31', 'I33'],
   },
+  {
+    id: 'T30',
+    aliases: ['parallel standing', 'from the outline or not', 'the timelines model', 'timeline D', 'studio padding', 'the story test', 'load-bearing test', 'B vs D proxy', 'anime-only telling', 'arc_row_conflict', 'DBS standing'],
+    family: 'T',
+    title: 'Standing on a parallel series: from the outline or not',
+    statement:
+      "On a series whose source_relation is 'parallel' (I40) the three standings measure FROM THE OUTLINE OR NOT, never 'in the manga or not': canon = the story in ANY official telling (timeline A manga-only, B anime-only, C both); filler = timeline D, studio padding no telling's story depends on; mixed = D and A/B/C in one episode under the unchanged T28 sliver bar (one restaged beat never lifts D). The outline is uncitable, so membership is proven by proxy: (1) in the manga → from the outline; (2) anime-only but a LOAD-BEARING node of an arc both tellings share (the later beats that depend on it are named) → B, canon, with the manga's version of the node cited as correspondence (A46); (3) a whole anime-only arc no other telling carries → D by default — an anime_only arc (A46) whose rows are canon is arc_row_conflict unless a citation proves the author's hand (adopted{author}, T26). Which of C / B a canon row is lives in the correspondence rows, never in a fourth type (T27) and never in a blanket per-row annotation. A film adapted by the anime stays side_source (T26), not A-E.",
+    why:
+      "dragon-ball-super, batch 20 wave 5 → the strategy session of 2026-08-28: the wave's content test ('is it in the manga?') proposed 22 Tournament of Power rows as filler — the anime's own telling of the outline's arc — which would have told a viewer to skip the story; the retired anime-only-canon type was the other wrong answer (T27). Sean's timelines model (A manga-only / B anime-only / C both / D studio padding / E mixed) is the ruling; the load-bearing test is what keeps ep 50 (slice-of-life inside Future Trunks) D while ep 98 (an elimination) is B.",
+    ruledBy: 'Sean',
+    ruledOn: '2026-08-28',
+    origin: 'the DBS strategy session 2026-08-28; scripts/ingest/research/batch20/WAVE5-RECOVERY.md; changelog §12.87',
+    enforcement: [
+      { path: 'scripts/ingest/lib/rulings/source-relations.ts', symbol: 'isParallelSeries' },
+      { path: 'scripts/ingest/lib/rulings/arcs.ts', symbol: 'arcOfEpisode' },
+      { path: 'scripts/ingest/audit-ui-truth.ts', symbol: 'arc_row_conflict' },
+      { path: '.claude/agents/research-agent.md' },
+    ],
+    layer: 'both',
+    auditClass: ['arc_row_conflict'],
+    witnesses: ['dragon-ball-super'],
+    status: 'live',
+    see: ['I40', 'A46', 'T27', 'T28', 'T26', 'A1'],
+  },
 ];
