@@ -301,7 +301,7 @@ export const ENTRIES: RulingEntry<StandingAnnotation[]>[] = [
     value: [
       { episodes: [94, 95], kind: 'partial', chapters: "32 (one restaged scene each)", note: "Ep 94 carries the Team U7 assembly at Capsule Corp, ep 95 Goku and Frieza's battered arrival (ch 32) — one restaged scene each inside anime-original two-parters. T28 → filler + partial (same shape as 91)." },
     ],
-    reason: "Batch 18 (2026-08-26) T28 repairs, Sean ruled: 91, 94, 95 → filler — original episodes with one restaged ch-31 / ch-32 scene each; 78 stays mixed (ch 28's assembly and announcement carry the episode).",
+    reason: "SUPERSEDED ON STANDING, KEPT AS THE WHERE-fact (T30 re-pass 2026-08-28: 91/94/95 are CANON — the partial rows state where the counterpart pages lie, not a typing). Original ruling — batch 18 (2026-08-26) T28 repairs, Sean ruled: 91, 94, 95 → filler — original episodes with one restaged ch-31 / ch-32 scene each; 78 stays mixed (ch 28's assembly and announcement carry the episode).",
     ruledBy: 'Sean',
     ruledOn: '2026-08-26',
     cite: ["scripts/ingest/research/batch18/verify/dragon-ball-super.md"],

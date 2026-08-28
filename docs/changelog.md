@@ -731,6 +731,36 @@
    points two chapters early (never derive it mechanically); fandom's
    ep-95 air date is a Saturday (Kanzenshuu: the 18th); AFL's buckets are
    not a B/D oracle (its anime-canon held both the lifts and the holds).
+89. ✅ **CONSOLIDATE DEEP after wave 5 (2026-08-28; §12.87-§12.88 changed
+   enforcement sites — P21 required, not offered).** Steps 0-8 satisfied by
+   §12.88's save point (system census OK, edges current, heal + census run,
+   ruling_violation 0, display 218/0). Deep (step 9): (a) **the
+   parallel-candidate probe** — every catalog series scanned for an
+   ALTERNATIVE-edged manga with no (or a dwarfed) ADAPTATION pick: 19 hits,
+   ALL the LN/VN media-mix shape (monogatari, SAO, apothecary, steins-gate,
+   fate, konosuba, 86, dxd, danmachi, …) where the anime and the sibling
+   manga both adapt a CITABLE work — none is the DBS shape. The boundary is
+   now in the I40 record: `parallel` requires the common source to be
+   uncitable; a citable common source keeps relation `adaptation` of that
+   work. Zero new parallel witnesses; Boruto (an ADAPTATION edge — invisible
+   to this probe by construction) stays the research-first candidate.
+   (b) Every standing DBS ruling re-checked under T30: relations I17
+   (sequel to Z) unaffected; the RoF side_source block (batch 19) stands;
+   the batch-18 partial{32} entry's reason amended (SUPERSEDED ON STANDING,
+   KEPT AS THE WHERE-fact — its rows are canon now); STANDING_ANNOTATIONS
+   confirmed to CONCATENATE per series (no last-wins hazard).
+   (c) Stale cleanup (P24): flag #1016 ('manga source_type but no manga
+   link') DISMISSED with the I40 resolution note — the ALTERNATIVE edge was
+   correct all along; no retiresWhen condition touches DBS; no orphaned
+   rulings. (d) Permanence: 0 locked, permanence_violation 0. Capture
+   (step 10): the probe boundary → the I40 record; two apply-batch traps
+   (an A45 retirement colliding with a standing T26 ruling → update the
+   standing map, never bypass the gate; canon rows on a parallel series
+   must be T6-pinned or aflAnimeCanon re-derives them to filler); edges
+   redeployed after the lib-tier record edits. I40/T30/A46 all carry audit
+   classes — no empty cells added this batch. Cycle position: batch 20
+   resumes at step 1 (plan) — dai 18-99 ×3 LAST, FotNS 29-56, L-D in
+   eights; shugo 67-81 whenever; lane L-P and the queues await Sean.
 85. ✅ **CONSOLIDATE DEEP after batch 20 wave 4 (2026-08-28; P21 —
    `applyEpisodeFloor`'s input changed: `translatedMax`).** Steps 0-8
    satisfied by §12.84's save point. Rescan (step 9): (a) the floor probe
