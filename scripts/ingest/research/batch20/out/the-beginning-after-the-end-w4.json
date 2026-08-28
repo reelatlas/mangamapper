@@ -1,0 +1,273 @@
+{
+  "series_id": "the-beginning-after-the-end",
+  "summary": "Lane C wave 4, rows 13-22 (= anime S2 eps 1-10), IDENTITY FIRST then TYPES. (1) Identity: all ten rows get a title and an air date. The Japanese titles are confirmed by TWO primaries that agree character-for-character - the official site's own story articles (saikyo2dome-tbate.com/story/s2-01..s2-12, whose Firestore-backed article documents I read directly) and syobocal's SubTitles list for TID 7805 - and en-WP's ja titles match both; the English titles are MAL's (= Crunchyroll's, the space our S1 rows already store) and AFG agrees on all ten. The dates are Wednesdays 2026-04-01 through 2026-06-03, corroborated four ways (syobocal's earliest non-re airing per Count, en-WP, MAL, tbate.fandom's S2 table) and by the official site's own Monday-before-broadcast publication cadence. Rows 13-22 have NO slot moves; the only move in the season is the one that shifted the FINALE (row 24) from 2026-06-17 to 2026-06-24 - syobocal shows no airing at all in the 06-17 week and the official site skipped a publication Monday (s2-11 published 06-08, s2-12 on 06-22), and AniList's endDate for 194317 is 2026-06-24. (2) Types: AFG marks 13-16 and 21 filler against our stored canon 24/24, and the content evidence backs it row by row - the Arachne village, Tessia's boar quest, the storm island and the Jasmine farewell duel have no counterpart anywhere in the webcomic, whose two-year timeskip is a single chapter (57, itself never animated) and whose own account of Tessia's two years (Xyrus Academy, Student Council President) CONTRADICTS ep 14. Rows 17-20 and 22 are confirmed canon. (3) Anchors: the five canon rows are anchored for the first time - 17 -> 62 [58], 18 -> 67 [63], 19 -> 72 [68], 20 -> 75 [72], 22 -> 80 [75] - closing the whole 13-22 hole between the stored ep 12 -> 56 and ep 23 -> 84. Two mid-chapter continues (C1/C2, ch 72 and ch 75, both page-split across a row boundary). Surprise: ch 75 'Home Sweet Home' is split ACROSS the filler row - ep 20 takes its opening (the homecoming, the beast core to Reynolds) and ep 22 its closing night scene (the pillow-wall bedroom talk about the academy), which is why ep 22's START is 75 and not AFG's 76.",
+  "anchors": [
+    {
+      "episode": 17,
+      "end_chapter": 62,
+      "start_chapter": 58,
+      "chapters_adapted": "58-62",
+      "volume": 6,
+      "confidence": "high",
+      "note": "A4/A10, webcomic numbering (T25). The first half of the Dire Tombs raid, beat for beat: START 58 = ch 58 'Late to the Party' - the episode opens on Arthur and Jasmine reaching Brald's rendezvous where Elijah, Lucas and the other A-rank hires are already assembled and Brald arrives last (the chapter's own subject; Jasmine/Synopsis: 'Jasmine and Arthur arrived at the dungeon where they formally greeted everyone present'). There is no leading partial to carry the START back: ch 57 'The Masked Swordsman' (the Dragonspine Inn / Turman scene) is animated in no episode (ruled at ep 12, wave 3). Then the first level and the Batrunners with Lucas burning them against orders (59 'The Dire Tombs'), the second level's rising heat and the trap Arthur pulls Samantha out of (60 'Unfamiliar Territory'), the geyser cavern, the Cavern Worm and Oliver's death by steam eruption (61 'Odd Man Out'), the worm's second attack, Brald losing his arm shielding Samantha, Lucas's outburst and Brald handing leadership to Arthur (62 'Unrest') = END. The episode's last shot - the metal wall opening on the crystal meadow - may be ch 63's opening panel; a cliffhanger sliver is not a position (A10/A44). Volume: the wiki's print column is blank for 53-76, but Vol 5 = 41-52 and Vol 8 = 77-88 at 12 chapters each and Yen Press Vol 6's blurb opens immediately after the Kaspian rank exam (ch 51-52), so Vol 6 = 53-64 - ch 62 sits in it (derived, stated as such).",
+      "sources": [
+        "https://www.animefillerguide.com/anime/the-beginning-after-the-end/",
+        "https://en.wikipedia.org/wiki/The_Beginning_After_the_End",
+        "https://tbate.fandom.com/api.php?action=parse&page=Jasmine_Flamesworth/Synopsis&prop=wikitext&format=json",
+        "https://tbate.fandom.com/api.php?action=parse&page=Lucas_Wykes/Synopsis&prop=wikitext&format=json",
+        "https://tbate.fandom.com/api.php?action=parse&page=Template:List_of_Season_3_Chapters&prop=wikitext&format=json",
+        "https://saikyo2dome-tbate.com/story/s2-05",
+        "https://animenian.com/39702.html",
+        "https://yenpress.com/titles/9781975373115-the-beginning-after-the-end-vol-6-comic"
+      ]
+    },
+    {
+      "episode": 18,
+      "end_chapter": 67,
+      "start_chapter": 63,
+      "chapters_adapted": "63-67",
+      "volume": 7,
+      "confidence": "high",
+      "note": "A4/A10. The Elderwood Guardian block. START 63 = ch 63 \"Heart's Desire\" - the episode opens in the crystal-walled lowest floor with the mist inducing hallucinations (Kriol running to his dead fiancee Clara, Jasmine seeing her father, Lucas his brother), exactly the chapter the title names. Then Jasmine's Banshee's Howl clearing the mist onto the vines and the Guardian revealed (64 'Behind the Mist'), Lucas turning on Arthur and Elijah to save himself (65 'The Divide'), Brald severing the Guardian's arm and being impaled (66 'Desperation'), and Arthur's last-resort activation - framed on screen as 'the power Elder Virion spent decades mastering', i.e. the beast will - freezing the Guardian solid so that it shatters (67 \"Dragon's Awakening\") = END. Independent confirmation of the block's far end: the wiki's own reverse index (Arthur Leywin/Battles) dates 'Elderwood Guardian's Fight' to webcomic Episode 64-67 / novel Chapter 33-34, and novel 33's summary is the same kill (Dragon's Awakening, then White Fire / Absolute Zero freezing the beast). en-WP's phrase \"Virion's technique\" is a paraphrase, not a substitution - Virion Eralith carries a beast will of his own (the wiki's character infobox gallery labels his panther 'Beast Will'), so ch 67's event is animated, not replaced. Volume 7 = 65-76 (derived on the same 12-chapter cadence; Yen Press Vol 7's blurb opens 'Deep inside the dungeon, Note and his allies come face-to-face with a massive, never-before-seen threat - an elderwood guardian!').",
+      "sources": [
+        "https://www.animefillerguide.com/anime/the-beginning-after-the-end/",
+        "https://en.wikipedia.org/wiki/The_Beginning_After_the_End",
+        "https://tbate.fandom.com/api.php?action=parse&page=Arthur_Leywin/Battles&prop=wikitext&format=json",
+        "https://tbate.fandom.com/api.php?action=parse&page=Chapter_33&prop=wikitext&format=json",
+        "https://tbate.fandom.com/api.php?action=parse&page=Jasmine_Flamesworth/Synopsis&prop=wikitext&format=json",
+        "https://saikyo2dome-tbate.com/story/s2-06",
+        "https://animenian.com/39702.html",
+        "https://yenpress.com/titles/9798855413434-the-beginning-after-the-end-vol-7-comic"
+      ]
+    },
+    {
+      "episode": 19,
+      "end_chapter": 72,
+      "start_chapter": 68,
+      "chapters_adapted": "68-72",
+      "volume": 7,
+      "confidence": "high",
+      "note": "A4/A10. START 68 = ch 68 'The Calm' - after an anime-original cold open (Lucas surfacing to Shiun and the soldiers, Alice's ring flaring), the episode proper begins inside Elijah's metal shelter with Arthur healing himself and Jasmine from the glove's healing gems and losing his mask to Elijah (a relocated original opener is never the START, A12). Then Elijah's origin - raised by Elder Rahdeas in Darv, no memory of his parents, the metal deviance - and Arthur naming himself Arthur Leywin (69 'Elijah Knight', the chapter that carries his name), Samantha found alive under the metal dome (70 'Rescue'), the blocked exit, the flood and Sylvie arriving grown to carry them out with the beast core and the mask recovered (71 'Escape'), and finally Kaspian at the hospital telling Arthur that Lucas has lodged a complaint and the guild will hold a hearing (72 'Biding Time') = END, reached MID-chapter: ch 72 also contains the statements to Kaspian and the guild-hall confrontation, which ep 20 plays. Volume 7 = 65-76 (derived, see ep 18).",
+      "sources": [
+        "https://www.animefillerguide.com/anime/the-beginning-after-the-end/",
+        "https://en.wikipedia.org/wiki/The_Beginning_After_the_End",
+        "https://tbate.fandom.com/api.php?action=parse&page=Elijah_Knight/Synopsis&prop=wikitext&format=json",
+        "https://tbate.fandom.com/api.php?action=parse&page=Chapter_34&prop=wikitext&format=json",
+        "https://tbate.fandom.com/api.php?action=parse&page=Template:List_of_Season_3_Chapters&prop=wikitext&format=json",
+        "https://saikyo2dome-tbate.com/story/s2-07",
+        "https://animenian.com/39702.html"
+      ]
+    },
+    {
+      "episode": 20,
+      "end_chapter": 75,
+      "start_chapter": 72,
+      "chapters_adapted": "72-75",
+      "volume": 7,
+      "confidence": "high",
+      "note": "A4/A10. START 72 = the rest of ch 72 'Biding Time' that ep 19 left unplayed: the guild's recovery of Brald's body, Arthur's statement to Kaspian, Lucas's testimony that Arthur used the party as decoys, and the confrontation in which Arthur cuts Lucas's ear before Kaspian stops him - the wiki's reverse index files 'Lucas Wykes First Confrontation' at webcomic Episode 72 / novel Chapter 35, and the anime restages it (Lucas's guards attacking Elijah rather than a guild-hall taunt) without moving it. Then Kaspian's House Wykes warning and the hearing itself with Lucas stripped of his A-rank (73 'The Hearing'), the verdict barring Arthur from Xyrus, the reward money, Sylvie's white-cat disguise and Arthur inviting Elijah to the academy (74 'Precautions' - novel ch 35 carries the same title), and the homecoming, Eleanor's welcome and the Elderwood beast core handed to Reynolds (75 'Home Sweet Home') = END, reached MID-chapter: ch 75's closing night scene is played in ep 22. Volume 7 = 65-76 (derived, see ep 18).",
+      "sources": [
+        "https://www.animefillerguide.com/anime/the-beginning-after-the-end/",
+        "https://en.wikipedia.org/wiki/The_Beginning_After_the_End",
+        "https://tbate.fandom.com/api.php?action=parse&page=Arthur_Leywin/Battles&prop=wikitext&format=json",
+        "https://tbate.fandom.com/api.php?action=parse&page=Jasmine_Flamesworth/Synopsis&prop=wikitext&format=json",
+        "https://tbate.fandom.com/api.php?action=parse&page=Volumes_and_Chapters&prop=wikitext&format=json",
+        "https://saikyo2dome-tbate.com/story/s2-08",
+        "https://animenian.com/39702.html"
+      ]
+    },
+    {
+      "episode": 22,
+      "end_chapter": 80,
+      "start_chapter": 75,
+      "chapters_adapted": "75-80",
+      "volume": 8,
+      "confidence": "medium",
+      "note": "A4/A10 + 'pages, not numbers'. END 80 is high-confidence and triple-sourced: the episode closes on Jamiel Tridant's water spell being stopped by a wall of ice, and the wiki's reverse index files 'Bullies in Xyrus City Square' at webcomic Episode 79-80, with ch 80 'A Chill in the Air' being the ice wall itself (wave 3 already fixed ep 23's START at 81 on the same seam). Between: Reynolds having advanced on the core's mana while the core itself survives, Arthur finding the beast will inside it and thinking of Tessia (76 'Within the Core'), Gideon the inventor and the steam-engine bargain (77 'A Brilliant Mind'), the phoenix pendants and Arthur refusing to hand over more knowledge (78 'Not That Nice' - novel ch 40 is titled \"I'm Not That Nice\"), the new continent and the spying mana beast (79 'Revelations'). The START is the medium part: the episode opens on Vincent's academy arrangement and then the night bedroom scene in which Arthur and Elijah lie in bed talking about what they want from Xyrus - that is ch 75's closing sequence (Elijah/Synopsis: after the manor and the shower, 'As the boys laid in bed, Elijah could not help but feel excited over being able to attend Xyrus Academy... Arthur believed their first year might be boring'), first-time pages of a chapter whose opening ep 20 played. Under A10 a leading partial that is not a sliver, teaser or recap carries the START, so START = 75, not AFG's 76; see flags for the alternative. Volume 8 = 77-88 (the wiki's own print column), so END 80 sits in Vol 8 while the START page-partition sits in Vol 7.",
+      "sources": [
+        "https://www.animefillerguide.com/anime/the-beginning-after-the-end/",
+        "https://en.wikipedia.org/wiki/The_Beginning_After_the_End",
+        "https://tbate.fandom.com/api.php?action=parse&page=Arthur_Leywin/Battles&prop=wikitext&format=json",
+        "https://tbate.fandom.com/api.php?action=parse&page=Elijah_Knight/Synopsis&prop=wikitext&format=json",
+        "https://tbate.fandom.com/api.php?action=parse&page=Template:List_of_Season_3_Chapters&prop=wikitext&format=json",
+        "https://saikyo2dome-tbate.com/story/s2-10",
+        "https://animenian.com/39702.html"
+      ]
+    }
+  ],
+  "continue_points": [
+    {
+      "episode": 19,
+      "continue_chapter": 72,
+      "kind": "parity",
+      "note": "Resume at ch 72 'Biding Time' and read it whole. Ep 19 stops part-way into 72 - it plays only Kaspian's hospital visit and the news that Lucas has accused Arthur - and ep 20 opens on the rest of the same chapter (the statements to Kaspian, Lucas's testimony, the severed ear). C1 mid-chapter ending, and parity with ep 20's START (C2), so the two agree.",
+      "sources": [
+        "https://www.animefillerguide.com/anime/the-beginning-after-the-end/",
+        "https://tbate.fandom.com/api.php?action=parse&page=Arthur_Leywin/Battles&prop=wikitext&format=json",
+        "https://animenian.com/39702.html"
+      ]
+    },
+    {
+      "episode": 20,
+      "continue_chapter": 75,
+      "kind": "parity",
+      "note": "Resume at ch 75 'Home Sweet Home'. Ep 20 ends part-way into it (the arrival home, Eleanor's welcome, the beast core handed to Reynolds); the chapter's closing pages - the evening at the Helstea manor and the bedroom conversation about Xyrus Academy - are played at the top of ep 22, with the anime-original Jasmine duel episode (21) in between. C1 mid-chapter ending; parity with ep 22's START (C2). Nothing of the source is skipped across the filler row.",
+      "sources": [
+        "https://tbate.fandom.com/api.php?action=parse&page=Elijah_Knight/Synopsis&prop=wikitext&format=json",
+        "https://animenian.com/39702.html",
+        "https://www.animefillerguide.com/anime/the-beginning-after-the-end/"
+      ]
+    }
+  ],
+  "anchor_hostile": [],
+  "annotations": [
+    {
+      "episodes": [13, 14, 15, 16],
+      "kind": "loose_parallel",
+      "chapters": "57",
+      "note": "The four-episode original arc that opens S2 stands where the source's two-year timeskip stands. The webcomic covers that skip in a single chapter - ch 57 'The Masked Swordsman', in which Note's two-year reputation is established at the Dragonspine Inn - and no page of it is animated in any of these four episodes (no inn, no Turman; ruled at ep 12 in wave 3 and AFG's table assigns 57 to no episode). The tie is the premise only: Arthur two years on, A-rank, adventuring with Jasmine while Sylvie hunts mana cores to grow."
+    },
+    {
+      "episodes": [16],
+      "kind": "loose_parallel",
+      "chapters": "58",
+      "note": "Ep 16's spine - Brald the AA-rank adventurer offering Arthur and Jasmine 'an extraordinary treasure', Jasmine's suspicion that his own party is not coming, and the decision to take one last quest before the academy - dramatises the recruitment that ch 58 'Late to the Party' carries only as its premise (the source states flatly that 'Jasmine and Arthur were recruited into the Dire Tombs Exploration Party' and opens on the rendezvous itself, which ep 17 animates). The episode's own plot around it is anime-original: the homecoming and Adam's spar, Eleanor's dress shopping, and above all Shiun sending Lucas after Brald and mixing a potion in a cave."
+    },
+    {
+      "episodes": [17],
+      "kind": "divergence",
+      "chapters": "58-62",
+      "note": "Faithful to 58-62 with the season-long anime-original thread inserted: on screen Brald's map and 'no traps' assurance come from a hooded man who promised a large reward, which makes the raid a setup by the anime's own antagonist. The source has Brald exploring on his own prior knowledge ('the secret entrance he had marked', 'the monster was not present the last time he explored the level') with no client and no hooded figure. Seconds of screen time, not a share of the plot - the row stays canon (T28)."
+    },
+    {
+      "episodes": [19],
+      "kind": "divergence",
+      "chapters": "68-72",
+      "note": "Two anime-original frames around an otherwise faithful 68-72: the cold open at the dungeon mouth with Shiun and Lucas's soldiers, and Alice's warning ring. The source's Kaspian scene (his arrival with medics and the House Wykes warning, novel ch 34 / webcomic 72) is also relocated from the dungeon exit to the hospital, where it becomes the announcement of the hearing."
+    },
+    {
+      "episodes": [19, 20],
+      "kind": "partial",
+      "chapters": "72",
+      "note": "Ch 72 'Biding Time' is page-split across the two rows: ep 19 takes Kaspian's visit and the hearing's announcement, ep 20 takes the statements, Lucas's testimony and the confrontation in which Arthur cuts his ear (the wiki's reverse index: 'Lucas Wykes First Confrontation' = webcomic Episode 72). Chapter re-use never moves position (A4)."
+    },
+    {
+      "episodes": [20],
+      "kind": "divergence",
+      "chapters": "72-75",
+      "note": "The hearing block is adapted with two studio changes: the Lucas confrontation is restaged (Lucas's hired guards ambush Elijah to stop him testifying, and Arthur intervenes, instead of the source's guild-hall taunt and thrown sword), and the verdict is given a twist - the ban on Arthur attending Xyrus is revealed to be something he arranged with the judge so Lucas would lower his guard. No source-side summary of ch 73-74 carries that twist; the surrounding beats (Kaspian's warning, the rank stripping, the reward money, Sylvie's disguise, Elijah's invitation, the homecoming) are the chapters'."
+    },
+    {
+      "episodes": [21],
+      "kind": "loose_parallel",
+      "chapters": "74-75",
+      "note": "T28 tie on a filler row. The episode's plot is an anime-original farewell duel: Jasmine, healed, delays her departure to 'test Arthur's ability as his master' (the official synopsis's own words), and the episode is built around that fight and Arthur's gift of the dimension ring. In the source Jasmine simply goes - she escorts Elijah to the Helstea manor and leaves Arthur a note saying she had fun adventuring with him and will see him again (Jasmine/Synopsis, the close of the trial block). The episode's other material - Alice healing Elijah, Elijah being outfitted for the academy - restages the bridge the source narrates in a sentence ('For the next few days, Elijah would continue to live with the Leywin and Helstea families as he prepared for Xyrus Academy'), and the guild break-in that finds Jasmine's file is the anime's Shiun thread. A restaging plus a bridge, not an adaptation."
+    },
+    {
+      "episodes": [22],
+      "kind": "partial",
+      "chapters": "75",
+      "note": "Ch 75 'Home Sweet Home' is page-split across the filler row: ep 20 played its opening (the return home, the family, the beast core), and ep 22 opens on its closing pages (the evening at the manor, Arthur and Elijah in bed talking about what each wants from Xyrus Academy). First-time pages, so they carry ep 22's START under A10 / 'pages, not numbers'."
+    }
+  ],
+  "repairs": [
+    {"episode": 13, "field": "title", "old": null, "new": "The King Begins Adventuring", "why": "Row identity: our rows 13-22 carry no title at all. S2 ep 1. English (Crunchyroll/MAL) title; AFG's table prints the same string. Japanese title 王様、冒険する。 (Ousama, Bouken Suru.) per the official site's story article s2-01 and syobocal TID 7805's SubTitles list.", "sources": ["https://myanimelist.net/anime/61831/_/episode", "https://www.animefillerguide.com/anime/the-beginning-after-the-end/", "https://saikyo2dome-tbate.com/story/s2-01", "https://cal.syoboi.jp/tid/7805"]},
+    {"episode": 13, "field": "air_date", "old": null, "new": "2026-04-01", "why": "Wednesday. syobocal's earliest airing for Count 1 is 2026-04-01 23:30 (flag 2 = new programme, no 再); en-WP, MAL and tbate.fandom's S2 table all print April 1, 2026; the official site published the s2-01 story article on Monday 2026-03-30, the cadence it kept all season.", "sources": ["https://cal.syoboi.jp/db.php?Command=ProgLookup&TID=7805&Range=20260325_000000-20260801_000000", "https://en.wikipedia.org/wiki/The_Beginning_After_the_End", "https://myanimelist.net/anime/61831/_/episode", "https://tbate.fandom.com/api.php?action=parse&page=Template:List_of_Season_2_Episodes&prop=wikitext&format=json"]},
+    {"episode": 14, "field": "title", "old": null, "new": "The Princess Begins Adventuring", "why": "S2 ep 2. MAL/Crunchyroll English title, AFG identical. Japanese 王女様、冒険する。 (Oujo-sama, Bouken Suru.) - the season's only episode titled for Tessia rather than Arthur - per the official story article s2-02 and syobocal.", "sources": ["https://myanimelist.net/anime/61831/_/episode", "https://www.animefillerguide.com/anime/the-beginning-after-the-end/", "https://saikyo2dome-tbate.com/story/s2-02", "https://cal.syoboi.jp/tid/7805"]},
+    {"episode": 14, "field": "air_date", "old": null, "new": "2026-04-08", "why": "Wednesday. syobocal Count 2 earliest airing 2026-04-08 23:30; en-WP, MAL and tbate.fandom agree; official article published Monday 2026-04-06.", "sources": ["https://cal.syoboi.jp/db.php?Command=ProgLookup&TID=7805&Range=20260325_000000-20260801_000000", "https://en.wikipedia.org/wiki/The_Beginning_After_the_End", "https://myanimelist.net/anime/61831/_/episode", "https://tbate.fandom.com/api.php?action=parse&page=Template:List_of_Season_2_Episodes&prop=wikitext&format=json"]},
+    {"episode": 15, "field": "title", "old": null, "new": "The King is Stranded", "why": "S2 ep 3. MAL and AFG print the same string. Japanese 王様、遭難する。 (Ousama, Sounan Suru.) per the official story article s2-03 and syobocal.", "sources": ["https://myanimelist.net/anime/61831/_/episode", "https://www.animefillerguide.com/anime/the-beginning-after-the-end/", "https://saikyo2dome-tbate.com/story/s2-03", "https://cal.syoboi.jp/tid/7805"]},
+    {"episode": 15, "field": "air_date", "old": null, "new": "2026-04-15", "why": "Wednesday. syobocal Count 3 earliest airing 2026-04-15 23:30; en-WP and tbate.fandom agree; official article published Monday 2026-04-13. MAL prints 'May 15, 2026' for this episode - a typo in its own ascending list (its eps 2 and 4 are Apr 8 and Apr 22); do not join on it.", "sources": ["https://cal.syoboi.jp/db.php?Command=ProgLookup&TID=7805&Range=20260325_000000-20260801_000000", "https://en.wikipedia.org/wiki/The_Beginning_After_the_End", "https://tbate.fandom.com/api.php?action=parse&page=Template:List_of_Season_2_Episodes&prop=wikitext&format=json", "https://saikyo2dome-tbate.com/story/s2-03"]},
+    {"episode": 16, "field": "title", "old": null, "new": "The King’s Homecoming", "why": "S2 ep 4. MAL and AFG identical (apostrophe normalised to the curly form our S1 rows use). Japanese 王様、帰郷する。 (Ousama, Kikyou Suru.) per the official story article s2-04 and syobocal.", "sources": ["https://myanimelist.net/anime/61831/_/episode", "https://www.animefillerguide.com/anime/the-beginning-after-the-end/", "https://saikyo2dome-tbate.com/story/s2-04", "https://cal.syoboi.jp/tid/7805"]},
+    {"episode": 16, "field": "air_date", "old": null, "new": "2026-04-22", "why": "Wednesday. syobocal Count 4 earliest airing 2026-04-22 23:30; en-WP, MAL and tbate.fandom agree; official article published Monday 2026-04-20.", "sources": ["https://cal.syoboi.jp/db.php?Command=ProgLookup&TID=7805&Range=20260325_000000-20260801_000000", "https://en.wikipedia.org/wiki/The_Beginning_After_the_End", "https://myanimelist.net/anime/61831/_/episode", "https://tbate.fandom.com/api.php?action=parse&page=Template:List_of_Season_2_Episodes&prop=wikitext&format=json"]},
+    {"episode": 17, "field": "title", "old": null, "new": "The King’s Struggles", "why": "S2 ep 5. MAL and AFG identical. Japanese 王様、奮闘する。 (Ousama, Funtou Suru.) per the official story article s2-05 and syobocal.", "sources": ["https://myanimelist.net/anime/61831/_/episode", "https://www.animefillerguide.com/anime/the-beginning-after-the-end/", "https://saikyo2dome-tbate.com/story/s2-05", "https://cal.syoboi.jp/tid/7805"]},
+    {"episode": 17, "field": "air_date", "old": null, "new": "2026-04-29", "why": "Wednesday. syobocal Count 5 earliest airing 2026-04-29 23:30; en-WP, MAL and tbate.fandom agree; official article published Monday 2026-04-27.", "sources": ["https://cal.syoboi.jp/db.php?Command=ProgLookup&TID=7805&Range=20260325_000000-20260801_000000", "https://en.wikipedia.org/wiki/The_Beginning_After_the_End", "https://myanimelist.net/anime/61831/_/episode", "https://tbate.fandom.com/api.php?action=parse&page=Template:List_of_Season_2_Episodes&prop=wikitext&format=json"]},
+    {"episode": 18, "field": "title", "old": null, "new": "The King is Betrayed", "why": "S2 ep 6. MAL ('The King Is Betrayed') and AFG ('The King is Betrayed') agree; tbate.fandom's table also prints 'The King is Betrayed'. en-WP is the outlier with 'The King Gets Serious', which is a literal rendering of the Japanese title rather than the licensor's English one - see flags. Japanese 王様、本気出す。 (Ousama, Honki Dasu.) per the official story article s2-06 and syobocal.", "sources": ["https://myanimelist.net/anime/61831/_/episode", "https://www.animefillerguide.com/anime/the-beginning-after-the-end/", "https://tbate.fandom.com/api.php?action=parse&page=Template:List_of_Season_2_Episodes&prop=wikitext&format=json", "https://saikyo2dome-tbate.com/story/s2-06"]},
+    {"episode": 18, "field": "air_date", "old": null, "new": "2026-05-06", "why": "Wednesday. syobocal Count 6 earliest airing 2026-05-06 23:30; en-WP, MAL and tbate.fandom agree; official article published Monday 2026-05-04.", "sources": ["https://cal.syoboi.jp/db.php?Command=ProgLookup&TID=7805&Range=20260325_000000-20260801_000000", "https://en.wikipedia.org/wiki/The_Beginning_After_the_End", "https://myanimelist.net/anime/61831/_/episode", "https://tbate.fandom.com/api.php?action=parse&page=Template:List_of_Season_2_Episodes&prop=wikitext&format=json"]},
+    {"episode": 19, "field": "title", "old": null, "new": "The King Survives", "why": "S2 ep 7. MAL, AFG and en-WP all identical. Japanese 王様、生還する。 (Ousama, Seikan Suru.) per the official story article s2-07 and syobocal.", "sources": ["https://myanimelist.net/anime/61831/_/episode", "https://www.animefillerguide.com/anime/the-beginning-after-the-end/", "https://en.wikipedia.org/wiki/The_Beginning_After_the_End", "https://saikyo2dome-tbate.com/story/s2-07"]},
+    {"episode": 19, "field": "air_date", "old": null, "new": "2026-05-13", "why": "Wednesday. syobocal Count 7 earliest airing 2026-05-13 23:30; en-WP, MAL and tbate.fandom agree; official article published Monday 2026-05-11.", "sources": ["https://cal.syoboi.jp/db.php?Command=ProgLookup&TID=7805&Range=20260325_000000-20260801_000000", "https://en.wikipedia.org/wiki/The_Beginning_After_the_End", "https://myanimelist.net/anime/61831/_/episode", "https://tbate.fandom.com/api.php?action=parse&page=Template:List_of_Season_2_Episodes&prop=wikitext&format=json"]},
+    {"episode": 20, "field": "title", "old": null, "new": "The King’s Day in Court", "why": "S2 ep 8. AFG and en-WP print 'The King's Day in Court'; MAL prints 'The King's Day In Court' (capitalisation only). Japanese 王様、出廷する。 (Ousama, Shuttei Suru.) per the official story article s2-08 and syobocal.", "sources": ["https://www.animefillerguide.com/anime/the-beginning-after-the-end/", "https://en.wikipedia.org/wiki/The_Beginning_After_the_End", "https://myanimelist.net/anime/61831/_/episode", "https://saikyo2dome-tbate.com/story/s2-08"]},
+    {"episode": 20, "field": "air_date", "old": null, "new": "2026-05-20", "why": "Wednesday. syobocal Count 8 earliest airing 2026-05-20 23:30; en-WP, MAL and tbate.fandom agree; official article published Monday 2026-05-18.", "sources": ["https://cal.syoboi.jp/db.php?Command=ProgLookup&TID=7805&Range=20260325_000000-20260801_000000", "https://en.wikipedia.org/wiki/The_Beginning_After_the_End", "https://myanimelist.net/anime/61831/_/episode", "https://tbate.fandom.com/api.php?action=parse&page=Template:List_of_Season_2_Episodes&prop=wikitext&format=json"]},
+    {"episode": 21, "field": "title", "old": null, "new": "The King’s Gratitude", "why": "S2 ep 9. MAL, AFG and en-WP all identical. Japanese 王様、感謝する。 (Ousama, Kansha Suru.) per the official story article s2-09 and syobocal.", "sources": ["https://myanimelist.net/anime/61831/_/episode", "https://www.animefillerguide.com/anime/the-beginning-after-the-end/", "https://en.wikipedia.org/wiki/The_Beginning_After_the_End", "https://saikyo2dome-tbate.com/story/s2-09"]},
+    {"episode": 21, "field": "air_date", "old": null, "new": "2026-05-27", "why": "Wednesday. syobocal Count 9 earliest airing 2026-05-27 23:30; en-WP, MAL and tbate.fandom agree; official article published Monday 2026-05-25.", "sources": ["https://cal.syoboi.jp/db.php?Command=ProgLookup&TID=7805&Range=20260325_000000-20260801_000000", "https://en.wikipedia.org/wiki/The_Beginning_After_the_End", "https://myanimelist.net/anime/61831/_/episode", "https://tbate.fandom.com/api.php?action=parse&page=Template:List_of_Season_2_Episodes&prop=wikitext&format=json"]},
+    {"episode": 22, "field": "title", "old": null, "new": "The King Negotiates", "why": "S2 ep 10. MAL, AFG and en-WP all identical. Japanese 王様、交渉する。 (Ousama, Koushou Suru.) per the official story article s2-10 (the page is live and titled with it) and syobocal.", "sources": ["https://myanimelist.net/anime/61831/_/episode", "https://www.animefillerguide.com/anime/the-beginning-after-the-end/", "https://en.wikipedia.org/wiki/The_Beginning_After_the_End", "https://saikyo2dome-tbate.com/story/s2-10"]},
+    {"episode": 22, "field": "air_date", "old": null, "new": "2026-06-03", "why": "Wednesday. syobocal Count 10 earliest airing 2026-06-03 23:30; en-WP, MAL and tbate.fandom agree; official article published Monday 2026-06-01.", "sources": ["https://cal.syoboi.jp/db.php?Command=ProgLookup&TID=7805&Range=20260325_000000-20260801_000000", "https://en.wikipedia.org/wiki/The_Beginning_After_the_End", "https://myanimelist.net/anime/61831/_/episode", "https://tbate.fandom.com/api.php?action=parse&page=Template:List_of_Season_2_Episodes&prop=wikitext&format=json"]}
+  ],
+  "type_corrections": [
+    {
+      "episodes": [13],
+      "type": "filler",
+      "note": "T28. Stored canon; no source supports it. The whole episode is a guild quest to a village whose people have been sealed in crystal by an Arachne, ending with Arthur beheading the beast and being scolded at home - none of which exists in the webcomic. At this point the source is at its two-year timeskip: ch 56 'All I Need' closes the Beast Glades training (= our ep 12) and ch 57 opens two years later at the Dragonspine Inn, a scene the anime never animates. 'Arachne' returns nothing on the source wiki (no beast page, no mention in the Arthur Leywin/Battles reverse index, which lists Jasmine's Sparring = webcomic 56 then the Dragonspine Inn Accident = webcomic 57 then the Elderwood Guardian = 64-67, with nothing in between). AFG types the row Filler / N-A. The hooded conspirators who send the overpowered beasts are the anime's own antagonist thread (Shiun, who has no page on the source wiki).",
+      "sources": [
+        "https://www.animefillerguide.com/anime/the-beginning-after-the-end/",
+        "https://tbate.fandom.com/api.php?action=parse&page=Arthur_Leywin/Battles&prop=wikitext&format=json",
+        "https://tbate.fandom.com/api.php?action=parse&page=Template:List_of_Season_3_Chapters&prop=wikitext&format=json",
+        "https://saikyo2dome-tbate.com/story/s2-01",
+        "https://en.wikipedia.org/wiki/The_Beginning_After_the_End",
+        "https://animenian.com/39702.html"
+      ]
+    },
+    {
+      "episodes": [14],
+      "type": "filler",
+      "note": "T28, and the strongest of the five: the episode does not merely add to the source, it CONTRADICTS it. The anime spends the whole episode on Tessia working as an adventurer with the elves Feyrith and Vio, being refused by human villagers, and killing a boar the hooded group sent to get her killed on human soil. The source's own account of the same two years (Tessia Eralith/Synopsis, Season 3) is: 'Tessia relocated to Xyrus City where she would continue her training under the Director of Xyrus Academy Cynthia Goodsky, eventually becoming a deviant in plant magic. In that time, Tessia began attending Xyrus Academy where she was appointed as Student Council President' - she is a student, not an adventurer, and her next appearance in the source is dropping Eleanor's birthday gift off (ch 83). No chapter of the webcomic between 56 and 83 features her. AFG types the row Filler / N-A. No source tie exists, so no tie annotation is possible for this row - the honest record is that it quotes nothing.",
+      "sources": [
+        "https://www.animefillerguide.com/anime/the-beginning-after-the-end/",
+        "https://tbate.fandom.com/api.php?action=parse&page=Tessia_Eralith/Synopsis&prop=wikitext&format=json",
+        "https://tbate.fandom.com/api.php?action=parse&page=Template:List_of_Season_3_Chapters&prop=wikitext&format=json",
+        "https://saikyo2dome-tbate.com/story/s2-02",
+        "https://en.wikipedia.org/wiki/The_Beginning_After_the_End"
+      ]
+    },
+    {
+      "episodes": [15],
+      "type": "filler",
+      "note": "T28. A storm sinks the boats and strands Arthur, Elijah and Lucas on an island where they fight an oversized healing Salamander until Jasmine beheads it - an entire anime-original adventure whose purpose is to introduce Elijah and Lucas before the raid. The source introduces both of them AT the raid: Elijah's own synopsis begins its Dire Tombs section with him volunteering to carry Arthur's and Jasmine's belongings in his dimension ring at the rendezvous (ch 58), and 'Salamander' returns no beast page on the source wiki. The mysterious group's 'our overpowered monsters are killing enough adventurers' scene is the anime's Shiun thread. AFG types the row Filler / N-A. No source tie.",
+      "sources": [
+        "https://www.animefillerguide.com/anime/the-beginning-after-the-end/",
+        "https://tbate.fandom.com/api.php?action=parse&page=Elijah_Knight/Synopsis&prop=wikitext&format=json",
+        "https://tbate.fandom.com/api.php?action=parse&page=Jasmine_Flamesworth/Synopsis&prop=wikitext&format=json",
+        "https://saikyo2dome-tbate.com/story/s2-03",
+        "https://en.wikipedia.org/wiki/The_Beginning_After_the_End",
+        "https://animenian.com/39702.html"
+      ]
+    },
+    {
+      "episodes": [16],
+      "type": "filler",
+      "note": "T28. The episode's job is a homecoming interlude and the anime's conspiracy setup: the spar with Adam, Reynolds and Jasmine comparing notes on Brald, Eleanor's dress fitting, the storage-ring window shopping, Tessia twice failing to knock on the door, and - the load-bearing part - Shiun, a retainer of Lucas's father, pushing Lucas to join Brald's unregistered quest and then mixing a potion for 'my final mission'. Shiun has no page on the source wiki and none of these scenes exists in the webcomic, which narrates the recruitment in one line and opens its next on-page scene at the rendezvous (ch 58). The one source-touching beat - Brald offering Arthur and Jasmine the treasure quest - is ch 58's premise dramatised, which is why the row carries a loose_parallel {58} rather than an anchor (A1: filler rows never take one). AFG types the row Filler / N-A.",
+      "sources": [
+        "https://www.animefillerguide.com/anime/the-beginning-after-the-end/",
+        "https://tbate.fandom.com/api.php?action=parse&page=Jasmine_Flamesworth/Synopsis&prop=wikitext&format=json",
+        "https://tbate.fandom.com/api.php?action=parse&page=Template:List_of_Season_3_Chapters&prop=wikitext&format=json",
+        "https://saikyo2dome-tbate.com/story/s2-04",
+        "https://en.wikipedia.org/wiki/The_Beginning_After_the_End",
+        "https://animenian.com/39702.html"
+      ]
+    },
+    {
+      "episodes": [21],
+      "type": "filler",
+      "note": "T28. The episode's plot is Jasmine's farewell duel - the official synopsis states it as the episode's subject ('before that, Jasmine had one thing left undone: to test his ability as his master') and the fight, with the powder and oil sacks, the numbing agent on her blade and the dimension ring given afterwards, is most of the running time. The source has no such duel: after the trial 'Jasmine escorted Elijah to the Helstea Manor where she left behind a note for Arthur bluntly expressing how she had fun adventuring with him and would see him again soon as she returned to the Twin Horns' (Jasmine/Synopsis), and the wiki's battle index lists her only spar with Arthur at webcomic Episode 56 - S1's ep 12. The rest of the episode is the same shape: Alice healing Elijah and the academy shopping trip stage a bridge the source narrates in one sentence, and Shiun breaking into the guild to read Jasmine's file is the anime's own thread. Original plot quoting a bridge = filler with a loose_parallel {74-75} tie, not mixed. AFG types the row Filler / N-A. Note the consequence for position: ch 75 is page-split around this row (ep 20 takes its opening, ep 22 its close), so nothing of the source is lost by the row taking no anchor (A1).",
+      "sources": [
+        "https://www.animefillerguide.com/anime/the-beginning-after-the-end/",
+        "https://tbate.fandom.com/api.php?action=parse&page=Jasmine_Flamesworth/Synopsis&prop=wikitext&format=json",
+        "https://tbate.fandom.com/api.php?action=parse&page=Arthur_Leywin/Battles&prop=wikitext&format=json",
+        "https://saikyo2dome-tbate.com/story/s2-09",
+        "https://en.wikipedia.org/wiki/The_Beginning_After_the_End",
+        "https://animenian.com/39702.html"
+      ]
+    }
+  ],
+  "structure": {
+    "notes": "ROW IDENTITY TABLE for 13-22 (our row | S2 no. | English title | Japanese title | air date). Row 13 | S2 01 | The King Begins Adventuring | 王様、冒険する。Ousama, Bouken Suru. | 2026-04-01. Row 14 | S2 02 | The Princess Begins Adventuring | 王女様、冒険する。Oujo-sama, Bouken Suru. | 2026-04-08. Row 15 | S2 03 | The King is Stranded | 王様、遭難する。Ousama, Sounan Suru. | 2026-04-15. Row 16 | S2 04 | The King’s Homecoming | 王様、帰郷する。Ousama, Kikyou Suru. | 2026-04-22. Row 17 | S2 05 | The King’s Struggles | 王様、奮闘する。Ousama, Funtou Suru. | 2026-04-29. Row 18 | S2 06 | The King is Betrayed | 王様、本気出す。Ousama, Honki Dasu. | 2026-05-06. Row 19 | S2 07 | The King Survives | 王様、生還する。Ousama, Seikan Suru. | 2026-05-13. Row 20 | S2 08 | The King’s Day in Court | 王様、出廷する。Ousama, Shuttei Suru. | 2026-05-20. Row 21 | S2 09 | The King’s Gratitude | 王様、感謝する。Ousama, Kansha Suru. | 2026-05-27. Row 22 | S2 10 | The King Negotiates | 王様、交渉する。Ousama, Koushou Suru. | 2026-06-03. OUT OF MY ASK but the same table's remaining two rows, for whoever fills them: row 23 | S2 11 | The King Celebrates | 王様、お祝いする。Ousama, Oiwai Suru. | 2026-06-10; row 24 | S2 12 | The King Enrolls | 王様、入学する。Ousama, Nyuugaku Suru. | 2026-06-24.\n\nROW-COUNT IDENTITY (checked first, R20). Season 2 is exactly 12 episodes with no recap, no .5 and no special: AniList 194317 episodes = 12, MAL 61831 lists 12, en-WP's S2 table has 12, AFG's S2 table has 12 numbered 13-24 with our cumulative numbers in the left column and the season numbers in brackets, and syobocal TID 7805 carries Counts 1-12. So our row N = S2 episode N-12 with no shift anywhere, and every source in this verdict was joined on TITLE and DATE, never on index.\n\nTHE ONE SLOT MOVE IN THE SEASON, and it is not in my range. Rows 13-23 aired on eleven consecutive Wednesdays 2026-04-01 .. 2026-06-10. The finale (row 24) then skipped a week: syobocal's per-airing table for TID 7805 has no episode airing between 2026-06-14 and 2026-06-22 (the only entries in that gap are flag-9 marathon reruns, '#1～#11' on 06-22 04:00), and the finale's earliest airing is 2026-06-24 23:30 with the final-episode flag. The official site skipped its Monday publication too (s2-11's story article published 2026-06-08T08:59Z, s2-12's 2026-06-22T08:59Z - a 14-day gap in a schedule that is otherwise exactly 7 days all season). AniList's endDate for 194317 is 2026-06-24 and tbate.fandom's S2 table prints June 24, 2026 for ep 12. The pre-emption was the FIFA World Cup week on the +Ultra block's networks. en-WP's episode table still prints June 17, 2026 for the finale and is wrong; AFG's header ('Original run (anime): April 2, 2025 - June 17, 2026') repeats the same error. Wave 3 already ruled row 24's date; this verdict independently confirms it and records that NO row in 13-22 moved.\n\nCHAPTER SPACE (unchanged, T25). Everything here is the WEBCOMIC's own chapter numbering - tbate.fandom's `episode_webtoon` field / the page-title N / the 'Chapter N' label in Template:List_of_Season_3_Chapters - never the fandom `episode` field or the Tapas scene index (ch 58 = Tapas 70, ch 67 = 82, ch 72 = 87, ch 75 = 91, ch 80 = 98: the drift grows through the range). Where a source-side summary is a NOVEL chapter I say so; the season-3 template's 'Adapted From' column is the webcomic->novel map (webcomic 58-80 = novel 30-36 roughly) and is never mixed into an anchor.\n\nWHAT THE BLOCK ADAPTS. Rows 13-16 are one anime-original arc filling the source's two-year timeskip (which the webcomic covers in ch 57 alone, never animated). Rows 17-20 are the Dire Tombs raid, ch 58-75, in running order with no reordering: 17 = 58-62, 18 = 63-67, 19 = 68-72, 20 = 72-75. Row 21 is an anime-original farewell-duel episode. Row 22 = 75-80 (the Gideon negotiation and the Xyrus square bullying) and hands off to the stored ep 23 = 81-84. Two chapters are page-split across row boundaries - ch 72 across 19/20 and ch 75 across 20/22 (with the filler row 21 sitting inside the split) - and both splits are exactly one partition, which is the health signal that makes the anchors trustworthy.\n\nCHAPTERS THE ANIME NEVER ADAPTS inside its own span, now complete for S2: ch 57 'The Masked Swordsman' (the Dragonspine Inn / Turman scene - ep 12 shows only a timeskip tag, ep 17 starts at 58, AFG assigns 57 to nobody) and ch 85 'Anticipation' (ruled in wave 3).\n\nPRINT VOLUMES. The wiki's Volume Print column gives Vol 4 = 29-40, Vol 5 = 41-52, Vol 8 = 77-88, Vol 9 = 89-98, Vol 10 = 99-108, and is BLANK for 53-76. Twelve chapters per volume through that stretch puts Vol 6 = 53-64 and Vol 7 = 65-76, and both Yen Press blurbs corroborate the seams: Vol 6 opens straight after the Kaspian rank exam (ch 51-52) with the Beast Glades training, and Vol 7 opens 'Deep inside the dungeon, Note and his allies come face-to-face with a massive, never-before-seen threat - an elderwood guardian!' (the Guardian is revealed at ch 64-65). The volumes on eps 17-20 are therefore DERIVED, not printed; ep 22's Vol 8 is the wiki's own.\n\nSOURCES THAT ARE NEW THIS WAVE, for whoever works this series next. (a) The official site is a Firebase SPA, so the story pages are 2.9 kB JS shells - but its Firestore is publicly readable through the same query the app runs: POST https://firestore.googleapis.com/v1/projects/saikyo2dome-prod/databases/(default)/documents/pages/story:runQuery with a structuredQuery over collection 'articles' (or 'lists') filtered publication_date <= now. That returns the FULL Japanese per-episode synopsis text and the publication timestamp for all 24 episodes - a licensor-grade per-episode content witness for a series with no ja-WP 各話リスト. The English side is at /en/story/s2-NN (meta description only, truncated). Story ids are ZERO-PADDED for S2 ('s2-01'), unpadded for S1 ('01'); /story/s2-1 404s, which is why an earlier pass thought eps 1-9 had no page. (b) syobocal TID 7805 = Season 2 (7403 = Season 1); its SubTitles list carries all 12 Japanese titles and ProgLookup gives per-airing dates. (c) tbate.fandom's Arthur Leywin/Battles page is a reverse index that prints novel AND webcomic chapter numbers per fight ('Elderwood Guardian's Fight /// Chapter 33-34 NV Episode 64-67 WB'), which is what independently pins ep 18's END and ep 22's END; the per-chapter Episode_NN pages are EMPTY of summaries for 57-82, so the character /Synopsis pages and the novel Chapter_NN pages are the content witnesses in this range.",
+    "order_only": []
+  },
+  "flags_for_sean": [
+    "EP 22's START, 75 vs 76. I deliver START 75 because the episode opens on the night bedroom conversation between Arthur and Elijah about Xyrus Academy, which is ch 75's closing sequence per Elijah_Knight/Synopsis, and A10 makes a non-sliver leading partial the START. The evidence for it is the JP scene-level recap's ordering plus that synopsis; en-WP's ep-10 summary skips the scene entirely and AFG says 76. If you prefer the consensus number, START 76 with the ch-75 pages recorded only as the partial{75} annotation is defensible and changes nothing else (END 80, the ep-20 continue at 75 still holds). https://tbate.fandom.com/api.php?action=parse&page=Elijah_Knight/Synopsis&prop=wikitext&format=json · https://animenian.com/39702.html",
+    "TITLE CONFLICT on row 18 (S2 ep 6). MAL/Crunchyroll and AFG and tbate.fandom say 'The King is Betrayed'; en-WP says 'The King Gets Serious'. The Japanese is 王様、本気出す。 = 'the king gets serious', so en-WP is a translation of the native title, not the licensor's English one. I deliver the licensor string because our S1 rows store the licensor strings verbatim (our 'The King’s Departure' etc. match MAL/AFG character for character). https://myanimelist.net/anime/61831/_/episode · https://en.wikipedia.org/wiki/The_Beginning_After_the_End",
+    "MAL DATE DEFECT: MAL's S2 list prints 'May 15, 2026' for episode 3 between Apr 8 and Apr 22 - an internal impossibility. syobocal, en-WP, tbate.fandom and the official publication cadence all give 2026-04-15. Do not use MAL as a date source for this series without the ascending check.",
+    "OUT OF MY ASK, ROW 12's CONTINUE. Ep 12 is anchored 56 [48] with a loose_parallel {57} and carries NO continue point. Now that rows 13-16 are typed filler and ep 17's START is confirmed at 58, the reader who stops after ep 12 should be told to read ch 57 - it is the one chapter the anime never adapts anywhere in its run, so a C2/C3 parity continue at 58 would bury it forever. Suggested (your call, ep 12 is a ruled row): ep 12 continue_chapter 57, kind parity, note 'ch 57 \"The Masked Swordsman\" - the Dragonspine Inn scene - is never animated; read it now, the anime resumes at ch 58 in ep 17'.",
+    "TYPE COUNT AFTER THIS VERDICT: S2 becomes 5 filler (13, 14, 15, 16, 21) + 6 canon (17, 18, 19, 20, 22, 23) + 1 filler (24, ruled wave 3) = 6 filler of 12, against AFG's own header claim of '0 filler episodes' on the same page whose table marks six rows Filler/N-A. AFG's summary line and its table disagree with each other; the table is the part that matches the content.",
+    "ROWS 23-24 IDENTITY. Their titles and dates are still empty in our data and are not in my repairs because the rows are ruled: row 23 = 'The King Celebrates' / 王様、お祝いする。 / 2026-06-10, row 24 = 'The King Enrolls' / 王様、入学する。 / 2026-06-24 (AFG prints the British 'The King Enrols'). Same four sources as the rest of the table."
+  ]
+}
