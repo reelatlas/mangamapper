@@ -400,3 +400,16 @@ Columns: **stored** = the DB right now (type + annotations); **wave 5** = what t
 
 No episodes. The reading view's "manga only" tail (timeline A); no continue point is written on a parallel series (A46) — this arc IS the tail.
 
+
+## RULED (Sean 2026-08-28, after wave 5c)
+
+| ep | stored | → ruled |
+|---|---|---|
+| 90 | filler | canon (B) |
+| 91 | filler + partial{31} | canon (B/C); partial{31} kept, note re-worded |
+| 78 | mixed + rearranged{28} | canon (C); rearranged{28} → divergence |
+| 1 | mixed | mixed stands (E) |
+| 2 | mixed | mixed stands (E) |
+| 89 | mixed | mixed stands (E) — "good examples" of the shape |
+
+Sean: every episode must be evaluated under T30, not projected. **Wave 5d** = the series-wide D/B re-pass the w5c agent flagged: the 7 stored-filler rows inside shared / film arcs (4, 15, 16, 17, 22, 50, 52) and a per-row load-bearing check of the 22 withdrawn conversions + the 5 proposed lifts. Dispatched 2026-08-28.
