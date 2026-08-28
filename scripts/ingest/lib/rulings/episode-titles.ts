@@ -14,6 +14,16 @@ import { toMergedRecord, type RulingEntry } from './types';
 
 export const ENTRIES: RulingEntry<Record<number, string>>[] = [
   {
+    seriesId: 'the-beginning-after-the-end',
+    ruleId: 'G53',
+    value: { 13: "The King Begins Adventuring", 14: "The Princess Begins Adventuring", 15: "The King is Stranded", 16: "The King’s Homecoming", 17: "The King’s Struggles", 18: "The King is Betrayed", 19: "The King Survives", 20: "The King’s Day in Court", 21: "The King’s Gratitude", 22: "The King Negotiates" },
+    reason:
+      "Batch 20 wave 4 (verified R24, Sean ruled 2026-08-28): our S2 rows 13-22 carried NO titles — the English titles in the space our S1 rows store (MAL / Crunchyroll; AFG agreeing on all ten), the Japanese titles confirmed character-for-character on the official site's story articles and syobocal TID 7805's SubTitles (12/12). The row-18 en-WP title is a translation of the native title, not the licensed one.",
+    ruledBy: 'Sean',
+    ruledOn: '2026-08-28',
+    cite: ['scripts/ingest/research/batch20/out/the-beginning-after-the-end-w4.json', 'scripts/ingest/research/batch20/verify/the-beginning-after-the-end-w4.md'],
+  },
+  {
     seriesId: 'golden-kamuy',
     ruleId: 'G53',
     value: { 25: "To Karafuto", 26: "Stenka", 27: "Igogusa", 28: "The Immortal Sugimoto Harakiri Show", 29: "The Border", 30: "Bad Sign", 31: "Meko Oyasi", 32: "Manslayer", 33: "Revolutionary", 34: "Catching Up to the Wolf", 35: "Sin and Impurity", 36: "To Live", 37: "Rushin' Outta Russia", 38: "Cocoon", 39: "The Smell of Sulfur", 40: "Spoiled Rich Kid", 41: "Cinematograph", 42: "Sweet Lies", 43: "Fleeing Karafuto", 44: "Brown Bear Man" },

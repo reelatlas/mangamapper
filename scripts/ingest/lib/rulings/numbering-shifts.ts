@@ -70,6 +70,17 @@ export const applyNumberingShift = <T extends { number: number; type?: string }>
 };
 
 
+// The source's highest episode number IN OUR SPACE (N11 / N20, 2026-08-28):
+// the raw page max is wrong whenever a ruling drops or re-sorts rows —
+// yu-gi-oh-5d-s's AFL page runs to 155 because it numbers the film as 83, and
+// the raw max floored aired/total back to 155 on every re-resolve, undoing the
+// batch-19 ruling (154). Translate first, then take the max.
+export const translatedMax = (seriesId: string, rows: { number: number; type?: string }[], space: string, shifts: Record<string, Shift>): number => {
+  const t0 = shifts[seriesId];
+  const t = t0 && (!t0.spaces || t0.spaces.includes(space)) ? t0 : { drop: [], shifts: [] };
+  return applyNumberingShift(t, rows).reduce((m, e) => Math.max(m, e.number), 0);
+};
+
 export const ENTRIES: RulingEntry<Shift>[] = [
   {
     seriesId: 'dr-stone',

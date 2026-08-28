@@ -607,6 +607,53 @@
    durable guard. Lesson for the floor rule: a >2 overshoot sourced from a
    SINGLE chart row with no corroborating content anywhere is a typo
    candidate, not an adoption candidate.
+84. ✅ **BATCH 20 WAVE 4 APPLIED — the standing lies wave 3 left (2026-08-28;
+   Sean's rulings, Cursor's START call).** Research (4 verdicts, ≈734k) →
+   verify (4 reports, ≈518k; nothing refuted on a value; the FotNS ep-29
+   lean refuted on wiki revision lineage) → rulings → apply
+   (`apply-wave4.ts`, 88 decisions). DATA: **TBATE 13-22** — the identity
+   table (20 G53 title + date repairs; the rows had been bare since the
+   AniList component wrote them), **13-16 / 21 → filler** (T6, the
+   anime-original adventuring arc with its ties), five anchors 17 → 62 …
+   22 → 80 closing the hole (two C1 continues), and **row 12 → 58 parity**
+   with ch 57 named never-adapted; **tokyo-mew-mew 38 → 20 [20] v5 high**
+   (the page-mapped repair; Sean: ch 19's three counterpart pages are a
+   leading fragment under A10 — the hxh-80 shape — 19 stays in the record's
+   chapters_adapted and the rearranged {19-20} tie; the same-kind upserts
+   replaced the stored partial/rearranged {19} facts, no A45 needed);
+   **shugo-chara 83, 86-96 → filler** (T6, the Lulu ?-egg arc; ja-WP's ☆ +
+   Pony Canyon's synopses — the resort's honest numbers), **91 = filler +
+   graft {34}** (the Rhythm hatch, a transplanted beat), 92 loose_parallel
+   {34} (A45 retired its title-keyed graft and the two rows' divergence),
+   the divergence block re-spanned 82-96 minus 91/92 ("inside the ch 32
+   split"), the optional continue 80 → 32 (C1), and **the ZONE_ACKS A7
+   bound re-keyed 93 → 91** (the wave-3 resort had re-keyed G53 + A45 but
+   missed that list — the verifier's find); **FotNS 53 / 60 / 126** (G53,
+   the day-of-week sweep's three AFL dates no other source has), **ep 29
+   stays 05-16** (ja-WP's 5/9 = one anonymous 2007 edit after both wikis'
+   first lists read 5/16 — the lineage recorded in the entry's reason).
+   Not this apply: shugo rows 67 / 69 / 70 / 71 / 73 / 78 / 81 (☆, stored
+   canon) — a follow-up. **THE CENSUS CAUGHT A REVERSION (P5 → P9):**
+   `ruling_violation` 1 = yu-gi-oh-5d-s "numbering hole 144/146": today's
+   crons re-resolved 5D's, which (a) rebuilt its rows from AFL alone — the
+   wiki-backfilled row 145 (batch 19) vanished — and (b) FLOORED aired/total
+   back to **155**: `aflMax` was the RAW page max (AFL numbers the film as
+   83), so `applyEpisodeFloor` undid the ruled 154 that batch 19 had set by
+   a direct update. **LIB: `translatedMax`** (numbering-shifts.ts, pure,
+   2 tests) — the source max in OUR space, N11 translation first — now
+   feeds the floor, the count-mismatch flag and the stale-zone cut; the
+   ruled path re-run (resolve → 154/154 → the wiki backfill restores 145 →
+   heal-format) proves it. The dropped-row half is a known sidecar
+   (episodes carry no per-row provenance; a re-resolve cannot tell a
+   wiki-inserted row from a stale one) — queued as an /add-rule, the
+   census's contiguity check being the outcome guard meanwhile. Edges
+   rebuilt + deployed twice (P3). CENSUS: display 219/0; ruling_violation
+   0; airdate_regression 0; anchor_gap_research 7 → 6 (shugo's block is
+   filler now); title_incomplete / integrity_total_beyond_eps back to 25 /
+   9 (the 5D's row); TBATE 12/24 → 2/24 rows missing titles. NEXT:
+   /consolidate DEEP (P21 — `applyEpisodeFloor`'s input changed, an
+   enforcement site), then Sean's choice: DBS identity first, dai last;
+   the shugo 67-81 follow-up; MU segments a queue.
 83. ✅ **CONSOLIDATE DEEP after batch 20 wave 3 (2026-08-27; P21 — three
    enforcement sites changed: the N11 `resort` form + `applyNumberingShift`
    on the AFL write path, the AFL parser keeping duplicate-number rows, and

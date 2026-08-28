@@ -18,7 +18,8 @@ export const ENTRIES: RulingEntry<Record<number, RuledAirDate>>[] = [
   {
     seriesId: 'fist-of-the-north-star',
     ruleId: 'G53',
-    value: { 81: '1986-07-24', 82: '1986-07-31', 85: '1986-08-21', 90: '1986-10-16', 96: '1986-11-27', 108: '1987-02-26' },
+    value: { 53: '1985-11-28', 60: '1986-01-23', 81: '1986-07-24', 82: '1986-07-31', 85: '1986-08-21', 90: '1986-10-16', 96: '1986-11-27', 108: '1987-02-26', 126: '1987-08-13' },
+    // + 53 / 60 / 126 (batch 20 wave 4, verified R24, Sean ruled 2026-08-28): three AFL dates no other source has — Wed / Sun / Mon on a Thursday slot; ja-WP 各話リスト, en-WP (unchanged since 2007-08-20) and TheTVDB agree on the Thursdays; the full-run day-of-week sweep found exactly these three. Ep 29 STAYS 1985-05-16: ja-WP's 5月9日 is one anonymous unsourced 2007-10-01 edit made after both wikis' first dated lists read 5/16 (the verifier's revision-history lineage); no Japanese primary exists online.
     reason:
       'Stored dates inherited from animefillerlist are wrong on six rows (ep 96 a whole year off; ep 108 carried ep 112\'s date), which made the stored order/date pairs look scrambled around eps 79-85. Values per en.wikipedia\'s episode list (batch-17 verdict, out-of-scope note raised for this pass).',
     ruledBy: 'Sean',
@@ -427,6 +428,16 @@ export const ENTRIES: RulingEntry<Record<number, RuledAirDate>>[] = [
     ruledBy: 'Sean',
     ruledOn: '2026-08-27',
     cite: ['scripts/ingest/research/batch20/out/airdates/golden-kamuy.json', 'scripts/ingest/research/batch20/verify/golden-kamuy.md'],
+  },
+  {
+    seriesId: 'the-beginning-after-the-end',
+    ruleId: 'G53',
+    value: { 13: '2026-04-01', 14: '2026-04-08', 15: '2026-04-15', 16: '2026-04-22', 17: '2026-04-29', 18: '2026-05-06', 19: '2026-05-13', 20: '2026-05-20', 21: '2026-05-27', 22: '2026-06-03' },
+    reason:
+      "Batch 20 wave 4 (verified R24, Sean ruled 2026-08-28): our S2 rows 13-22 carried NO dates (the AniList component wrote bare rows) — the identity table: Wednesdays 2026-04-01 … 06-03 on syobocal TID 7805 (the earliest non-再 airing per Count), en-WP's season-2 list, MAL, tbate.fandom, and the official site's Monday-before publication cadence (its Firestore pages/story:runQuery, ids s2-01…). No slot move in 13-22; the finale (row 24) moved 06-17 → 06-24 (a World Cup pre-emption — en-WP and AFG still print June 17, wrong).",
+    ruledBy: 'Sean',
+    ruledOn: '2026-08-28',
+    cite: ['scripts/ingest/research/batch20/out/the-beginning-after-the-end-w4.json', 'scripts/ingest/research/batch20/verify/the-beginning-after-the-end-w4.md'],
   },
   {
     seriesId: 'kinnikuman',

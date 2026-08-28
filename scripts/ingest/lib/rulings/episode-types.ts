@@ -272,6 +272,22 @@ export const ENTRIES: RulingEntry<EpisodeTypes>[] = [
     cite: ['scripts/ingest/research/batch20/out/tokyo-mew-mew.json', 'scripts/ingest/research/batch20/verify/eyeshield-tmm-w3.md'],
   },
   {
+    seriesId: 'the-beginning-after-the-end',
+    ruleId: 'T6',
+    value: { 13: 'filler', 14: 'filler', 15: 'filler', 16: 'filler', 21: 'filler' },
+    reason: "Batch 20 wave 4 (verified R24, Sean ruled 2026-08-28): S2 rows 13-16 and 21 are anime-original (AFG filler; the official site's per-episode synopses; the JP scene-level recap; ≥ 4 sources each) — the 'adventuring' arc the webcomic lacks (row 14: the source's own account of Tessia's two years has her at Xyrus, no adventuring); no story-carrying source share → filler with the ties (loose_parallel {57} on 13-16, {58} on 16, {74-75} on 21; rows 14/15 carry none). 17-20 and 22 confirmed canon and anchored (58-80).",
+    ruledBy: 'Sean', ruledOn: '2026-08-28',
+    cite: ['scripts/ingest/research/batch20/out/the-beginning-after-the-end-w4.json', 'scripts/ingest/research/batch20/verify/the-beginning-after-the-end-w4.md'],
+  },
+  {
+    seriesId: 'shugo-chara',
+    ruleId: 'T6',
+    value: { 83: 'filler', 86: 'filler', 87: 'filler', 88: 'filler', 89: 'filler', 90: 'filler', 91: 'filler', 92: 'filler', 93: 'filler', 94: 'filler', 95: 'filler', 96: 'filler' },
+    reason: "Batch 20 wave 4 (verified R24, Sean ruled 2026-08-28; OUR post-resort numbering): the Lulu ?-egg arc is anime-original — ja-WP 各話リスト's ☆ (ほぼ全編アニメオリジナル) on 81-90 and 93-96 with 91/92/97/98 unmarked as the control, Pony Canyon's official per-episode synopses (= Bandai Channel's text, one licensor source), no chapter field on any of the 13 shugochara.fandom pages; the fence 80 → 32 [31] / 97 → 33 [32] holds. Ep 91 animates ch 34's Rhythm-hatch pages first-time but as a transplanted single beat inside an original plot (T28's fragment branch: filler + graft {34}); ep 92 (titled Beat Jumper) opens with Rhythm already born (loose_parallel {34}). AFL's canon on all twelve is the same lie the resort exposed. Follow-up, not this apply: rows 67, 69, 70, 71, 73, 78, 81 (☆, stored canon).",
+    ruledBy: 'Sean', ruledOn: '2026-08-28',
+    cite: ['scripts/ingest/research/batch20/out/shugo-chara.json', 'scripts/ingest/research/batch20/verify/shugo-chara-w4.md'],
+  },
+  {
     seriesId: 'd-gray-man',
     ruleId: 'T6',
     value: { 28: 'filler', 37: 'filler', 40: 'filler' },

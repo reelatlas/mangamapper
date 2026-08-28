@@ -11,7 +11,7 @@ import type { AniListMedia } from './anilist';
 // file exports the consumer lookup; re-exported below at the old names.
 import { EXTRAS_ADOPTED } from './rulings/extras-adopted';
 import { COMMUNITY_COUNT_OVERRIDES } from './rulings/community-counts';
-import { SOURCE_NUMBERING_SHIFTS, applyNumberingShift } from './rulings/numbering-shifts';
+import { SOURCE_NUMBERING_SHIFTS, applyNumberingShift, translatedMax } from './rulings/numbering-shifts';
 import { EPISODE_TYPE_OVERRIDES } from './rulings/episode-types';
 
 export type StageOutcome = 'unchanged' | 'changed' | 'held';
@@ -533,7 +533,8 @@ export async function resolveSeries(runId: number, slug: string): Promise<{ epis
     if (!id) throw new Error(`resolve (${slug}): could not assign id`);
   }
 
-  const aflMax = page.episodes.reduce((m, e) => Math.max(m, e.number), 0);
+  // the AFL max IN OUR SPACE (N11 translation first — the raw page max floored 5D's back to 155 on every re-resolve, undoing the ruled 154; 2026-08-28)
+  const aflMax = translatedMax(id, page.episodes, 'afl', SOURCE_NUMBERING_SHIFTS);
   const anilistAired = media.nextAiringEpisode
     ? media.nextAiringEpisode.episode - 1
     : media.episodes ?? aflMax;

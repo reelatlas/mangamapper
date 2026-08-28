@@ -3,7 +3,7 @@
 // = the verified identity table (verify/shugo-chara.md): AFL skips 73,
 // transposes 75/76, 83/84, 90/91, prints 96 twice. Pure; no DB.
 import { describe, expect, it } from 'vitest';
-import { applyNumberingShift, SOURCE_NUMBERING_SHIFTS, type Shift } from './rulings/numbering-shifts';
+import { applyNumberingShift, translatedMax, SOURCE_NUMBERING_SHIFTS, type Shift } from './rulings/numbering-shifts';
 
 // AFL payload rows 72-97 in PAGE ORDER (number | true-date | true episode) — from the identity table
 const AFL: { number: number; air_date: string; title: string; type: string; want: number }[] = [
@@ -86,5 +86,18 @@ describe('applyNumberingShift — the old parser dedup lives here now', () => {
   it('drop and shifts keep their semantics (5D\'s shape: drop 83, −1 from 84)', () => {
     const out = applyNumberingShift({ drop: [83], shifts: [{ from: 84, offset: -1 }] }, [{ number: 82 }, { number: 83 }, { number: 84 }, { number: 85 }]);
     expect(out.map((r) => r.number)).toEqual([82, 83, 84]);
+  });
+});
+
+describe('translatedMax — the source max in OUR space (the 5D\'s floor lesson)', () => {
+  it('5D\'s: AFL runs to 155 with the film numbered as 83; drop 83 + −1 from 84 → max 154 (the ruled count), never 155', () => {
+    const rows = Array.from({ length: 155 }, (_, i) => ({ number: i + 1, type: 'canon' }));
+    expect(translatedMax('yu-gi-oh-5d-s', rows, 'afl', SOURCE_NUMBERING_SHIFTS)).toBe(154);
+    expect(translatedMax('yu-gi-oh-5d-s', rows, 'afg', SOURCE_NUMBERING_SHIFTS)).toBe(155); // the ruling is scoped to the afl space
+  });
+  it('shugo-chara: the resort keeps 96 as the span max; a series with no ruling keeps the raw max', () => {
+    const rows = [{ number: 95 }, { number: 96 }, { number: 96 }, { number: 97 }];
+    expect(translatedMax('shugo-chara', rows, 'afl', SOURCE_NUMBERING_SHIFTS)).toBe(97);
+    expect(translatedMax('nobody', rows, 'afl', SOURCE_NUMBERING_SHIFTS)).toBe(97);
   });
 });

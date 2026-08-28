@@ -27,6 +27,22 @@ export const ENTRIES: RulingEntry<RetiredAnnotation>[] = [
     cite: ['scripts/ingest/research/batch20/out/airdates/shugo-chara.json', 'scripts/ingest/research/batch20/verify/shugo-chara.md', 'docs/changelog.md §12.82'],
   },
   {
+    seriesId: 'shugo-chara',
+    ruleId: 'A45',
+    value: { episodes: [91, 92], kind: 'divergence' },
+    reason: "Batch 20 wave 4 (verified R24, Sean ruled 2026-08-28): rows 91/92 leave the anime-original block's divergence {none} fact — 91 carries ch 34's Rhythm-hatch pages as a transplanted beat (graft {34}), 92 (titled Beat Jumper) opens with Rhythm already born (loose_parallel {34}); the block's fact is re-stated on 82-90 + 93-96 with the corrected wording ('inside the ch 32 split').",
+    ruledBy: 'Sean', ruledOn: '2026-08-28',
+    cite: ['scripts/ingest/research/batch20/out/shugo-chara.json', 'scripts/ingest/research/batch20/verify/shugo-chara-w4.md'],
+  },
+  {
+    seriesId: 'shugo-chara',
+    ruleId: 'A45',
+    value: { episodes: [92], kind: 'graft' },
+    reason: "Batch 20 wave 4 (verified R24, Sean ruled 2026-08-28): the batch-17 graft {34} sat on the episode TITLED Beat Jumper (old row 93, re-keyed to 92 by the resort); the debut is ep 91 (Pony Canyon / Bandai 第91話; the fandom's Rhythm page) — the graft moves to 91, ep 92 becomes loose_parallel {34}. Ep 98's graft {34} stays.",
+    ruledBy: 'Sean', ruledOn: '2026-08-28',
+    cite: ['scripts/ingest/research/batch20/out/shugo-chara.json', 'scripts/ingest/research/batch20/verify/shugo-chara-w4.md'],
+  },
+  {
     seriesId: 'claymore',
     ruleId: 'A45',
     value: { episodes: [21, 22, 23], kind: 'loose_parallel' },
