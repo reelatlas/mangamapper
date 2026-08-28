@@ -6,7 +6,9 @@
   "anchor_hostile": [],
   "type_corrections": [
     {
-      "episodes": [78],
+      "episodes": [
+        78
+      ],
       "stored": "mixed",
       "type": "canon",
       "change": true,
@@ -19,7 +21,9 @@
       ]
     },
     {
-      "episodes": [90],
+      "episodes": [
+        90
+      ],
       "stored": "filler",
       "type": "canon",
       "change": true,
@@ -35,7 +39,9 @@
       ]
     },
     {
-      "episodes": [91],
+      "episodes": [
+        91
+      ],
       "stored": "filler",
       "type": "canon",
       "change": true,
@@ -50,7 +56,9 @@
       ]
     },
     {
-      "episodes": [1],
+      "episodes": [
+        1
+      ],
       "stored": "mixed",
       "type": "mixed",
       "change": false,
@@ -63,7 +71,9 @@
       ]
     },
     {
-      "episodes": [2],
+      "episodes": [
+        2
+      ],
       "stored": "mixed",
       "type": "mixed",
       "change": false,
@@ -76,7 +86,9 @@
       ]
     },
     {
-      "episodes": [89],
+      "episodes": [
+        89
+      ],
       "stored": "mixed",
       "type": "mixed",
       "change": false,
@@ -92,31 +104,42 @@
   ],
   "annotations": [
     {
-      "episodes": [1, 2],
+      "episodes": [
+        1,
+        2
+      ],
       "kind": "divergence",
       "chapters": "1",
       "note": "Both episodes correspond to manga ch 1 (ch 1's episode= field names eps 1 AND 2; both episode infoboxes name ch 1). Same node, different telling: the anime drops Goku's image training against Frieza/Cell/Buu, has Beerus destroy half a planet over greasy food where the manga destroys all of it over poison, and defers Beerus's recollection of the Super Saiyan God from the ch-1 banquet to ep 2's Mogina detour. Each episode also runs an anime-original slice-of-life block beside the ch-1 story (see the type note)."
     },
     {
-      "episodes": [78],
+      "episodes": [
+        78
+      ],
       "kind": "divergence",
       "chapters": "28-29",
       "note": "The Zeno Expo substitution reaches back to ep 78: ch 28 announces the tournament, the erasure of losing universes and the Expo exactly as the episode does, but the manga's Expo is a twelve-God-of-Destruction battle royale (ch 28-29) while the anime plays three one-on-one matches against Universe 9's Trio of Danger, of which Buu vs Basil starts here. Same fact already stored on eps 79-81; ep 78 carries its opening."
     },
     {
-      "episodes": [89],
+      "episodes": [
+        89
+      ],
       "kind": "divergence",
       "chapters": "32",
       "note": "The episode's source-side content is ch 32: Cabba recruits Caulifla (manga: they fight, Cabba wins her over as a Super Saiyan by telling her there are other Super Saiyans in U7; anime: no fight, he challenges her wasted potential) and Tien's recruitment, which ch 32 states in a single clause. The Yurin / Tien-Shin-Style-Dojo incident that fills the rest of the episode is anime-original (ja-WP: Yurin does not appear in the manga version)."
     },
     {
-      "episodes": [90],
+      "episodes": [
+        90
+      ],
       "kind": "divergence",
       "chapters": "31",
       "note": "The manga's version of the Gohan power-up node is a single beat at the end of ch 31 - Piccolo takes senzu and declares he will train Gohan up in time for the tournament - with the result simply visible when Gohan fights the manga's tournament. The anime spends ep 88 on the training and ep 90 on the test (2-on-2, then Gohan at full Potential Unleashed vs Goku at SSB Kaio-ken) and adds a beat the manga has no counterpart for: Goku naming Gohan leader of Team Universe 7 (fandom's Team Universe 7 infobox marks the leader field 'anime only'), which the anime's own telling then uses in eps 97 and 124."
     },
     {
-      "episodes": [91],
+      "episodes": [
+        91
+      ],
       "kind": "partial",
       "chapters": "31",
       "note": "RE-NOTED, not withdrawn: the stored fact - that the counterpart pages for this episode are ch 31's closing scene (Good Buu's hibernation), the rest being the anime's own recruitment vignettes across Universes 2, 6, 9, 10 and 11 - is still exactly right as a statement of WHERE the manga's pages are. Under the parallel definition it no longer decides the type: ch 31 is titled 'The Super Warriors Gather!', the hibernation is the node both tellings turn on (it causes eps 92-95 / ch 32's Frieza recruitment), and the vignettes put on the board warriors who fight the manga's tournament too (Frost, Ribrianne, the Universe 11 trio). Differences in staging: the manga has Mr. Satan discover Buu after his talk-show appearance and phone Bulma, and the news reaches Goku on the way to Piccolo rather than at a strategy meeting."
@@ -250,6 +273,7 @@
     "order_only": []
   },
   "flags_for_sean": [
+    "THESE THREE RETYPES CONTRADICT STORED RULINGS AND ARE PROPOSED AS REPAIRS, NOT SILENT OVERRIDES: EPISODE_TYPE_OVERRIDES (T6, Sean 2026-08-26) currently pins 78 = mixed, 90 = filler, 91 = filler, all decided relative to the manga (batch 18, verified R24). Each was correct under that test; each fails the parallel-telling definition Sean issued 2026-08-28, which this task states OVERRIDES it for this series. The T6 entries for 78/90/91 need updating together with the type rows, or the resolver will re-impose filler/mixed on the next run (P8: repairs live at the manual tier).",
     "CONSISTENCY: the new definition is not confined to these six rows. Sean's own B example - 'the Zeno Expo as the anime's version of the recruitment' - is eps 79-81, which are stored filler + divergence and were re-affirmed under the CONTENT test at wave 5; on the definition as written they are B (canon + divergence{28-29}), the same shape as ep 78 here. Likewise eps 87 and 88 (ruled filler + partial/divergence{31} at wave 5) carry the recruitment of Android 17 and Gohan's training - both load-bearing nodes ch 31 states - and eps 94/95 carry Frieza's recruitment, which ch 32 states. Wave 5's whole tournament-block table (99, 105, 113, 115, 116, 118, 120, 121, 124-126) was decided on the CONTENT test the new definition replaces. NOT re-opened here (outside the ask) - but they cannot stay as ruled if the parallel definition is now the series' standard. A series-wide re-pass on the D/B line is the honest next step.",
     "ANNOTATION KIND on ep 78: the stored fact is `rearranged{28}` ('the manga announces the tournament in ch 28, same position; only the detailed rules are deferred to ch 30 - the anime front-loads the erasure stipulation'). The fact is true, but `rearranged` implies one work re-orders the other's material, which the parallel identity says never happens here. Recommend re-kinding it to `divergence{28}` and letting my new divergence{28-29} carry the Expo substitution; if Sean prefers, both can stand.",
     "ANNOTATION NOTE on ep 91: the stored partial{31} note says 'Only the closing scene (Buu's hibernation, manga ch. 31) has source standing; roughly nineteen minutes of the episode are anime-original recruitment vignettes.' Its factual half is right and I keep it; its 'has source standing' half is the manga-relative test and is what the new definition overrides. Recommend re-noting rather than deleting (my proposed text is in the annotation entry).",
