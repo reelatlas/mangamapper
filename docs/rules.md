@@ -1442,7 +1442,7 @@ episodes.format ∈ tv | ova | special | movie | recap is a second, independent 
 
 ### N1 · Episode-floor invariant
 
-Displayed aired/total episode counts are never lower than our own highest episode number. An overshoot of at most 2 (recap / ep-0 numbering) floors automatically in EVERY totals writer; a larger overshoot floors only once RULED (an EXTRAS_ADOPTED entry) — otherwise the writer leaves the totals unchanged and the reconcile-structure flag is the research trigger. A refresh never reverts an adopted floor.
+Displayed aired/total episode counts are never lower than our own highest episode number. An overshoot of at most 2 (recap / ep-0 numbering) floors automatically in EVERY totals writer; a larger overshoot floors only once RULED (an EXTRAS_ADOPTED entry) — otherwise the writer leaves the totals unchanged and the reconcile-structure flag is the research trigger. A refresh never reverts an adopted floor. THE INPUT OF THE FLOOR IS THE SOURCE MAX IN OUR SPACE (2026-08-28, batch 20 wave 4 — translatedMax, N11 translation first): the raw AFL page max floored yu-gi-oh-5d-s back to 155 (AFL numbers the film as 83) on every cron re-resolve, undoing the ruled 154; the same translated max now feeds the count-mismatch flag and the stale-zone cut.
 
 *Why:* Sean 2026-08-24: "how can the total ever be lower than the episode count?" — angel-beats 16 and rurouni-kenshin 100 are real broadcast content AniList does not count.
 
