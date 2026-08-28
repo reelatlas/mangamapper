@@ -1,0 +1,196 @@
+{
+  "series_id": "golden-kamuy",
+  "summary": "Air-date / title lane (G53) only; no anchors touched. Ep 44's stored 2023-06-13 is the same contamination batch 19 found on rows 45/46: it is the delivery date of ゴールデン道画劇場 web short #44「フクジュソウ編」, and the stored title 'Fukujusō Episode' is that short's en-WP row verbatim. The contamination is a BLOCK, not one row: our rows 38-44 hold en-WP's Golden Dōga Gekijō titles #38-#44 verbatim (38 'Grandma's mouth chewing dango Episode' … 44 'Fukujusō Episode'), and the three stored dates I can see (42 = 2023-05-30, 43 = 2023-06-06, 44 = 2023-06-13) are that block's dates exactly. The true S4 rows are 第三十七話-第四十九話 = en-WP 'Golden Kamuy season 4' eps 1-13 = goldenkamuy.fandom Episode_37-49, and they join our rows 37-49 ONE-TO-ONE by title and by date — there is NO numbering offset in this span (flag #860's suspicion is contamination, not a shift), and batch 14's anchors for 37-49 were derived against the correct TV episodes (its notes cite the TV titles/chapters: 41 Cinematograph = ch 205, 42 Sweet Lies = ch 210, 44 = ch 221 'Bear Man'), so no anchor is invalidated. Season 4 is a split broadcast: eps 37-42 aired 2022-10-03…11-07 (Mondays, TOKYO MX 23:00), the run was suspended after ep 42 (main-staff death), the slot ran OAD#1 and reruns of 37-42 from 2022-11-14, the season resumed 2023-04-03 with reruns and new eps 43-49 ran 2023-05-15…06-26 — so the five-month gap between our rows 42 and 43 after repair is REAL, not a defect.",
+  "anchors": [],
+  "continue_points": [],
+  "anchor_hostile": [],
+  "annotations": [],
+  "repairs": [
+    {
+      "episode": 38,
+      "field": "title",
+      "old": "Grandma's mouth chewing dango Episode",
+      "new": "Cocoon",
+      "why": "Stored string is en-WP 'List of Golden Kamuy episodes' § Golden Dōga Gekijō #38 verbatim (a web short, 2022-11-01 per ja-WP / 2023-05-02 per en-WP). TV 第三十八話「繭」= en-WP Golden Kamuy season 4 ep 2 'Cocoon' = goldenkamuy.fandom Episode_38 'Cocoon'. Batch 14's own anchor note for ep 38 already calls it 'Cocoon' (title = ch 175).",
+      "sources": [
+        "https://ja.wikipedia.org/wiki/%E3%82%B4%E3%83%BC%E3%83%AB%E3%83%87%E3%83%B3%E3%82%AB%E3%83%A0%E3%82%A4",
+        "https://en.wikipedia.org/wiki/Golden_Kamuy_season_4",
+        "https://goldenkamuy.fandom.com/api.php?action=parse&page=Episode_38&prop=wikitext&format=json"
+      ]
+    },
+    {
+      "episode": 38,
+      "field": "air_date",
+      "old": "2023-05-02",
+      "new": "2022-10-10",
+      "why": "TV 第三十八話「繭」= 2022年10月10日 (ja-WP 各話リスト 第四期), October 10, 2022 (en-WP season 4 + goldenkamuy.fandom Episode_38), syobocal TID 6441 Count 38 = 2022-10-10 23:00 TOKYO MX. OLD IS INFERRED, VERIFY BEFORE APPLYING: my context printed titles but not dates for rows 38-41; the stored TITLE at this row is en-WP short #38 verbatim and rows 42/43/44 store that block's dates exactly, so the stored date is almost certainly en-WP's short #38 value 2023-05-02 (en-WP dates shorts #38/#39 in May 2023; ja-WP dates them 2022-11-01/11-08 — if the stored value is 2022-11-01 it is still the short's date and the repair stands).",
+      "sources": [
+        "https://ja.wikipedia.org/wiki/%E3%82%B4%E3%83%BC%E3%83%AB%E3%83%87%E3%83%B3%E3%82%AB%E3%83%A0%E3%82%A4",
+        "https://en.wikipedia.org/wiki/Golden_Kamuy_season_4",
+        "https://cal.syoboi.jp/tid/6441",
+        "https://goldenkamuy.fandom.com/api.php?action=parse&page=Episode_38&prop=wikitext&format=json"
+      ]
+    },
+    {
+      "episode": 39,
+      "field": "title",
+      "old": "The world is wide!! Episode",
+      "new": "The Smell of Sulfur",
+      "why": "Stored string is en-WP § Golden Dōga Gekijō #39「世界は広い！！編」verbatim. TV 第三十九話「硫黄のにおい」= en-WP season 4 ep 3 'The Smell of Sulfur' = fandom Episode_39 'The Smell of Sulfur' (the Noboribetsu hot-springs episode our ep-39 anchor covers, chs 191-196).",
+      "sources": [
+        "https://ja.wikipedia.org/wiki/%E3%82%B4%E3%83%BC%E3%83%AB%E3%83%87%E3%83%B3%E3%82%AB%E3%83%A0%E3%82%A4",
+        "https://en.wikipedia.org/wiki/Golden_Kamuy_season_4",
+        "https://goldenkamuy.fandom.com/api.php?action=parse&page=Episode_39&prop=wikitext&format=json"
+      ]
+    },
+    {
+      "episode": 39,
+      "field": "air_date",
+      "old": "2023-05-09",
+      "new": "2022-10-17",
+      "why": "TV 第三十九話 = 2022年10月17日 (ja-WP), October 17, 2022 (en-WP season 4, fandom Episode_39), syobocal TID 6441 Count 39 = 2022-10-17 23:00 TOKYO MX. OLD IS INFERRED (see ep 38): the stored value should be en-WP short #39's 2023-05-09 (ja-WP dates that short 2022-11-08).",
+      "sources": [
+        "https://ja.wikipedia.org/wiki/%E3%82%B4%E3%83%BC%E3%83%AB%E3%83%87%E3%83%B3%E3%82%AB%E3%83%A0%E3%82%A4",
+        "https://en.wikipedia.org/wiki/Golden_Kamuy_season_4",
+        "https://cal.syoboi.jp/tid/6441"
+      ]
+    },
+    {
+      "episode": 40,
+      "field": "title",
+      "old": "Asirpa's clione Episode",
+      "new": "Spoiled Rich Kid",
+      "why": "Stored string is en-WP § Golden Dōga Gekijō #40「〈世界迷作劇場〉アシㇼパの天使編」verbatim. TV 第四十話「ボンボン」= en-WP season 4 ep 4 'Spoiled Rich Kid' = fandom Episode_40; batch 14's ep-40 anchor note already reads \"(title = ch 197 'Pampered Brat'/'Spoiled Rich Kid')\".",
+      "sources": [
+        "https://ja.wikipedia.org/wiki/%E3%82%B4%E3%83%BC%E3%83%AB%E3%83%87%E3%83%B3%E3%82%AB%E3%83%A0%E3%82%A4",
+        "https://en.wikipedia.org/wiki/Golden_Kamuy_season_4",
+        "https://goldenkamuy.fandom.com/api.php?action=parse&page=Episode_40&prop=wikitext&format=json"
+      ]
+    },
+    {
+      "episode": 40,
+      "field": "air_date",
+      "old": "2023-05-16",
+      "new": "2022-10-24",
+      "why": "TV 第四十話 = 2022年10月24日 (ja-WP), October 24, 2022 (en-WP season 4, fandom Episode_40), syobocal TID 6441 Count 40 = 2022-10-24 23:00. OLD IS INFERRED (see ep 38): expected stored value = en-WP short #40's 2023-05-16 (ja-WP agrees on that short's date).",
+      "sources": [
+        "https://ja.wikipedia.org/wiki/%E3%82%B4%E3%83%BC%E3%83%AB%E3%83%87%E3%83%B3%E3%82%AB%E3%83%A0%E3%82%A4",
+        "https://en.wikipedia.org/wiki/Golden_Kamuy_season_4",
+        "https://cal.syoboi.jp/tid/6441"
+      ]
+    },
+    {
+      "episode": 41,
+      "field": "title",
+      "old": "The brown bear man is coming Episode",
+      "new": "Cinematograph",
+      "why": "Stored string is en-WP § Golden Dōga Gekijō #41「ヒグマ男がやってくる編」verbatim (a short teasing ep 44, which is why it reads like ep 44's title). TV 第四十一話「シネマトグラフ」= en-WP season 4 ep 5 'Cinematograph' = fandom Episode_41; batch 14's ep-41 anchor note: 'Cinematograph episode (title = ch 205)'.",
+      "sources": [
+        "https://ja.wikipedia.org/wiki/%E3%82%B4%E3%83%BC%E3%83%AB%E3%83%87%E3%83%B3%E3%82%AB%E3%83%A0%E3%82%A4",
+        "https://en.wikipedia.org/wiki/Golden_Kamuy_season_4",
+        "https://goldenkamuy.fandom.com/api.php?action=parse&page=Episode_41&prop=wikitext&format=json"
+      ]
+    },
+    {
+      "episode": 41,
+      "field": "air_date",
+      "old": "2023-05-22",
+      "new": "2022-10-31",
+      "why": "TV 第四十一話 = 2022年10月31日 (ja-WP), October 31, 2022 (en-WP season 4, fandom Episode_41), syobocal TID 6441 Count 41 = 2022-10-31 23:00. OLD IS INFERRED (see ep 38): expected stored value = short #41's 2023-05-22 — note that date is also TV ep 44's real date, so verify by title before applying.",
+      "sources": [
+        "https://ja.wikipedia.org/wiki/%E3%82%B4%E3%83%BC%E3%83%AB%E3%83%87%E3%83%B3%E3%82%AB%E3%83%A0%E3%82%A4",
+        "https://en.wikipedia.org/wiki/Golden_Kamuy_season_4",
+        "https://cal.syoboi.jp/tid/6441"
+      ]
+    },
+    {
+      "episode": 42,
+      "field": "title",
+      "old": "Today's fortune Episode",
+      "new": "Sweet Lies",
+      "why": "Stored string + stored date are en-WP § Golden Dōga Gekijō #42「今日の運勢編」(2023-05-30) verbatim — a YouTube web short, not a TV episode. TV 第四十二話「甘い嘘」= en-WP season 4 ep 6 'Sweet Lies' = fandom Episode_42; the official site's story/42.html synopsis (Ariko's double-agent gambit) is the ch 207-210 content our ep-42 anchor already carries.",
+      "sources": [
+        "https://ja.wikipedia.org/wiki/%E3%82%B4%E3%83%BC%E3%83%AB%E3%83%87%E3%83%B3%E3%82%AB%E3%83%A0%E3%82%A4",
+        "https://en.wikipedia.org/wiki/Golden_Kamuy_season_4",
+        "https://goldenkamuy.fandom.com/api.php?action=parse&page=Episode_42&prop=wikitext&format=json",
+        "https://kamuy-anime.com/story/42.html"
+      ]
+    },
+    {
+      "episode": 42,
+      "field": "air_date",
+      "old": "2023-05-30",
+      "new": "2022-11-07",
+      "why": "TV 第四十二話「甘い嘘」= 2022年11月7日 (ja-WP 各話リスト), November 7, 2022 (en-WP season 4 ep 6; fandom Episode_42), syobocal TID 6441 Count 42 = 2022-11-07 23:00 TOKYO MX (ChID 19) / BS11. Stored 2023-05-30 is a Tuesday and is web short #42's delivery date; the TV slot is Monday 23:00.",
+      "sources": [
+        "https://ja.wikipedia.org/wiki/%E3%82%B4%E3%83%BC%E3%83%AB%E3%83%87%E3%83%B3%E3%82%AB%E3%83%A0%E3%82%A4",
+        "https://en.wikipedia.org/wiki/Golden_Kamuy_season_4",
+        "https://cal.syoboi.jp/tid/6441",
+        "https://goldenkamuy.fandom.com/api.php?action=parse&page=Episode_42&prop=wikitext&format=json"
+      ]
+    },
+    {
+      "episode": 43,
+      "field": "title",
+      "old": "Nikaidō get well again Episode",
+      "new": "Fleeing Karafuto",
+      "why": "Stored string + stored date are en-WP § Golden Dōga Gekijō #43「二階堂元気になる編」(2023-06-06) verbatim. TV 第四十三話「樺太脱出」= en-WP season 4 ep 7 'Fleeing Karafuto' = fandom Episode_43; the official story/43.html synopsis (Ōdomari confrontation with Tsurumi, Asirpa's arrow) is the ch 211-215 content our ep-43 anchor carries.",
+      "sources": [
+        "https://ja.wikipedia.org/wiki/%E3%82%B4%E3%83%BC%E3%83%AB%E3%83%87%E3%83%B3%E3%82%AB%E3%83%A0%E3%82%A4",
+        "https://en.wikipedia.org/wiki/Golden_Kamuy_season_4",
+        "https://goldenkamuy.fandom.com/api.php?action=parse&page=Episode_43&prop=wikitext&format=json",
+        "https://kamuy-anime.com/story/43.html"
+      ]
+    },
+    {
+      "episode": 43,
+      "field": "air_date",
+      "old": "2023-06-06",
+      "new": "2023-05-15",
+      "why": "TV 第四十三話「樺太脱出」= 2023年5月15日 (ja-WP; the season's second half resumed after the hiatus), May 15, 2023 (en-WP season 4, cited to an ANN report dated 2023-05-15; fandom Episode_43), syobocal TID 6441 Count 43 = 2023-05-15 23:00 TOKYO MX. Stored 2023-06-06 is a Tuesday = web short #43's delivery date.",
+      "sources": [
+        "https://ja.wikipedia.org/wiki/%E3%82%B4%E3%83%BC%E3%83%AB%E3%83%87%E3%83%B3%E3%82%AB%E3%83%A0%E3%82%A4",
+        "https://en.wikipedia.org/wiki/Golden_Kamuy_season_4",
+        "https://cal.syoboi.jp/tid/6441",
+        "https://www.animenewsnetwork.com/news/2023-05-15/golden-kamuy-anime-4th-season-reveals-2-new-cast-members/.198088"
+      ]
+    },
+    {
+      "episode": 44,
+      "field": "title",
+      "old": "Fukujusō Episode",
+      "new": "Brown Bear Man",
+      "why": "Stored string + stored date are en-WP § Golden Dōga Gekijō #44「フクジュソウ編」(2023-06-13) verbatim. TV 第四十四話「ヒグマ男」= en-WP season 4 ep 8 'Brown Bear Man' = fandom Episode_44; the official story/44.html synopsis (gold panning on the Uryū river, Heita, the man-killing bear) is the ch 217-221 content our ep-44 anchor carries.",
+      "sources": [
+        "https://ja.wikipedia.org/wiki/%E3%82%B4%E3%83%BC%E3%83%AB%E3%83%87%E3%83%B3%E3%82%AB%E3%83%A0%E3%82%A4",
+        "https://en.wikipedia.org/wiki/Golden_Kamuy_season_4",
+        "https://goldenkamuy.fandom.com/api.php?action=parse&page=Episode_44&prop=wikitext&format=json",
+        "https://kamuy-anime.com/story/44.html"
+      ]
+    },
+    {
+      "episode": 44,
+      "field": "air_date",
+      "old": "2023-06-13",
+      "new": "2023-05-22",
+      "why": "THE ASK'S ROW. TV 第四十四話「ヒグマ男」= 2023年5月22日 (ja-WP 各話リスト 第四期), May 22, 2023 (en-WP season 4 ep 8; goldenkamuy.fandom Episode_44 'airdate = May 22, 2023'), syobocal TID 6441 Count 44 = 2023-05-22 23:00 TOKYO MX / BS11 (and 05-23 01:26 HBC, 05-26 23:30 Channel NECO). Stored 2023-06-13 is a Tuesday = web short #44's delivery date; the repair also clears the airdate_regression against ep 45 (2023-05-29), since 44 now precedes it by 7 days.",
+      "sources": [
+        "https://ja.wikipedia.org/wiki/%E3%82%B4%E3%83%BC%E3%83%AB%E3%83%87%E3%83%B3%E3%82%AB%E3%83%A0%E3%82%A4",
+        "https://en.wikipedia.org/wiki/Golden_Kamuy_season_4",
+        "https://cal.syoboi.jp/tid/6441",
+        "https://goldenkamuy.fandom.com/api.php?action=parse&page=Episode_44&prop=wikitext&format=json"
+      ]
+    }
+  ],
+  "type_corrections": [],
+  "structure": {
+    "notes": "ROW -> TITLE -> DATE IDENTITY TABLE for 37-49 (our cumulative numbering = ja-WP 通し話数 第N話 = en-WP 'Golden Kamuy season 4' EpisodeNumber = goldenkamuy.fandom Episode_N = the official site's story/N.html — a clean 1:1 join on title AND date; NO numbering offset, R20 join was by title+date, never index). Columns: our row | JP subtitle | EN title | TRUE first-broadcast (TOKYO MX Mon 23:00) | stored value seen in context | verdict.\n37 | あばよロシア | Rushin' Outta Russia | 2022-10-03 | stored title NOT in my context (outside the ±4 window) | VERIFY — predicted contaminated with short #37 'Your Ball. Episode' / 2022-10-25 (see flags)\n38 | 繭 | Cocoon | 2022-10-10 | 'Grandma's mouth chewing dango Episode' | REPAIR title + date (short #38)\n39 | 硫黄のにおい | The Smell of Sulfur | 2022-10-17 | 'The world is wide!! Episode' | REPAIR title + date (short #39)\n40 | ボンボン | Spoiled Rich Kid | 2022-10-24 | 'Asirpa's clione Episode' | REPAIR title + date (short #40)\n41 | シネマトグラフ | Cinematograph | 2022-10-31 | 'The brown bear man is coming Episode' | REPAIR title + date (short #41)\n42 | 甘い嘘 | Sweet Lies | 2022-11-07 | 'Today's fortune Episode' (2023-05-30) | REPAIR title + date (short #42) — old date CONFIRMED stored\n43 | 樺太脱出 | Fleeing Karafuto | 2023-05-15 | 'Nikaidō get well again Episode' (2023-06-06) | REPAIR title + date (short #43) — old date CONFIRMED stored\n44 | ヒグマ男 | Brown Bear Man | 2023-05-22 | 'Fukujusō Episode' (2023-06-13) | REPAIR title + date (short #44) — old date CONFIRMED stored; THE ASK\n45 | 共犯 | Partner in Crime | 2023-05-29 | 'Partner in Crime' (2023-05-29) | CORRECT (batch 19 G53 ruling)\n46 | 完璧な母 | Perfect Mother | 2023-06-05 | 'Perfect Mother' (2023-06-05) | CORRECT (batch 19 G53 ruling)\n47 | 蒸気船 | Steamship | 2023-06-12 | 'Steamship' | CORRECT\n48 | 発射 | Discharge | 2023-06-19 | 'Discharge' | CORRECT\n49 | 消えたカムイ | The Vanished Kamuy | 2023-06-26 | 'The Vanished Kamuy' | CORRECT\nSEASON-4 BROADCAST SHAPE (why the repaired dates jump 5 months between rows 42 and 43, and why this is NOT a G54 deviation): S4 aired eps 37-42 on consecutive Mondays 2022-10-03 … 2022-11-07 and was then suspended (ja-WP records the postponement — 'メインスタッフの逝去による放送の延期' — in the Blu-ray note; BD vols 10-12 slipped from Jan 2023 to Jul 2023). The Monday 23:00 slot then ran OAD#1 (2022-11-14) and reruns of eps 37-42 (2022-11-21 … 12-26, syobocal Flag 8 = 再放送). The official site announced the resumption for 2023-04-03; April 3 – May 8 re-ran eps 37-42 and new episodes 43-49 ran 2023-05-15 … 06-26. After the repairs our rows 37-49 ascend monotonically with one real 5-month gap; no order acknowledgement is needed.\nSHORT-vs-TV DISCRIMINATOR: every TV episode of every season airs MONDAY (TOKYO MX 23:00 — ja-WP 放送局 table for all five seasons); the ゴールデン道画劇場 web shorts were delivered Monday 23:30 on YouTube but en-WP's table dates nearly all of them on the TUESDAY (only #34 2022-10-03 and #41 2023-05-22 are Mondays there). A stored golden-kamuy air_date that is not a Monday is a web-short date."
+  },
+  "flags_for_sean": [
+    "FLAG #860 EXPLAINED, AND IT IS BIGGER THAN THE ASK: the '22 conflicts' are almost certainly rows 25-46 — exactly 22 rows. AFL's page covers only S1+S2 (our rows 1-24) and is the title authority there, so rows 1-24 were filled correctly; rows 25-62 were filled from en-WP's 'List of Golden Kamuy episodes', whose second {{Episode list}} block (== Golden Dōga Gekijō ==) numbers the web shorts 1-46 and therefore overwrote rows 25-46 with shorts #25-#46 (rows 47-62 have no colliding short, and are correct: 47 'Steamship', 48 'Discharge', 49 'The Vanished Kamuy', 50 'Town of Reunions' all match en-WP/ja-WP). The wikipedia backfill's conflict counter now sees the correct TV titles disagreeing with those stored strings — that is the flag, and there is NO numbering offset anywhere. Rows 25-37 are outside my ask so I did not put them in repairs; the predicted stored value → correct value, all cited to en-WP § Golden Dōga Gekijō + ja-WP 各話リスト + en-WP season 3/4: 25 'Are you tired? Episode' 2020-10-20 → 'To Karafuto' 2020-10-05; 26 'Barrel-rolling Episode' 2020-10-27 → 'Stenka' 2020-10-12; 27 'Haaa! Cold Episode' 2020-11-03 → 'Igogusa' 2020-10-19; 28 'Roller skates Episode' 2020-11-10 → 'The Immortal Sugimoto Harakiri Show' 2020-10-26; 29 'Lighthouse Episode' 2020-11-17 → 'The Border' 2020-11-02; 30 'Shiraishi on a dolphin Episode' 2020-11-24 → 'Bad Sign' 2020-11-09; 31 \"It's a dog Episode\" 2020-12-01 → 'Meko Oyasi' 2020-11-16; 32 'Suddenly from under the ice Episode' 2020-12-08 → 'Manslayer' 2020-11-23; 33 'We came by dogs Episode' 2020-12-15 → 'Revolutionary' 2020-11-30; 34 'Ready, set! Episode' 2022-10-03 → 'Catching Up to the Wolf' 2020-12-07; 35 'Running Along the Center of the Lake Episode' 2022-10-11 → 'Sin and Impurity' 2020-12-14; 36 'Five Seconds Before Emerging in a Cocoon Episode' 2022-10-18 → 'To Live' 2020-12-21; 37 'Your Ball. Episode' 2022-10-25 → 'Rushin' Outta Russia' 2022-10-03. Every one of these predicted stored dates ascends, which is why only the 44/45 pair ever tripped airdate_regression.",
+    "ROW 37 IS INSIDE THE ASK SPAN BUT ITS STORED VALUES WERE NOT IN MY CONTEXT (the orientation window prints rows 38-41 and 47-50, titles only). The true row 37 = 第三十七話「あばよロシア」 'Rushin' Outta Russia' 2022-10-03 (ja-WP; en-WP season 4 ep 1; goldenkamuy.fandom Episode_37; syobocal TID 6441 Count 37 = 2022-10-03 23:00). If the stored title is 'Your Ball. Episode' (short #37) it needs the same title+date repair.",
+    "FOUR OF MY REPAIRS CARRY AN INFERRED 'old' (rows 38-41, field air_date): my context gave titles but not dates for those rows. The stored TITLE at each is the web short's string verbatim and the three rows whose dates I can see (42/43/44) hold that same block's dates exactly, so the stored dates are the shorts' — but the exact string should be checked before applying (en-WP dates shorts #38/#39 in May 2023 while ja-WP dates them 2022-11-01/11-08). The 'new' values are certain regardless: 38 = 2022-10-10, 39 = 2022-10-17, 40 = 2022-10-24, 41 = 2022-10-31.",
+    "SYOBOCAL TRAP (worth capturing): cal.syoboi.jp TID 6441 still carries the PRE-HIATUS schedule rows for Counts 43-48 on 2022-11-14, 11-21, 11-28, 12-05, 12-12, 12-19 (Flag 0) alongside the reruns of Counts 37-42 that actually occupied those slots (Flag 8 = 再放送, plus OAD#1 on 2022-11-14). A naive syobocal join would date ep 43 to 2022-11-14 instead of 2023-05-15. Take the LATER, Flag-0/non-rerun airing when a title's schedule was replaced mid-run, and corroborate with ja-WP.",
+    "NO G54 ORDER ACK NEEDED: after the repairs, rows 37-49 are in true broadcast order with a real five-month production hiatus between rows 42 and 43. No anchor, continue point or annotation changes — batch 14's per-episode research for 37-49 was done against the correct TV episodes (its notes name the TV titles and the matching chapters), so this is a pure title/date repair."
+  ]
+}

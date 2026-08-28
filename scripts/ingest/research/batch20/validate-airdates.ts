@@ -19,8 +19,10 @@ async function main() {
     if (!v.series_id || !series.has(v.series_id)) problems.push(`series_id '${v.series_id}' unknown`);
     if ((v.anchors?.length ?? 0) || (v.continue_points?.length ?? 0) || (v.type_corrections?.length ?? 0)) problems.push('B3 verdicts carry repairs + flags only — anchors / continues / type_corrections must be empty');
     for (const r of v.repairs ?? []) {
-      if (r.field !== 'air_date') problems.push(`repair ep ${r.episode}: field '${r.field}' (B3 repairs are air_date)`);
-      if (r.new != null && !ISO.test(String(r.new))) problems.push(`repair ep ${r.episode}: new '${r.new}' is not YYYY-MM-DD`);
+      // lane B (batch 20): a transposition carries the TITLE with the date (G53, episode-titles.ts) — both fields are legal
+      if (r.field !== 'air_date' && r.field !== 'title') problems.push(`repair ep ${r.episode}: field '${r.field}' (lane B repairs are air_date | title)`);
+      if (r.field === 'air_date' && r.new != null && !ISO.test(String(r.new))) problems.push(`repair ep ${r.episode}: new '${r.new}' is not YYYY-MM-DD`);
+      if (r.field === 'title' && !(typeof r.new === 'string' && r.new.trim())) problems.push(`repair ep ${r.episode}: title repair needs a non-empty string`);
       if (!r.why || !(r.sources?.length >= 2)) problems.push(`repair ep ${r.episode}: needs why + ≥2 sources (R3)`);
       repairs++;
     }

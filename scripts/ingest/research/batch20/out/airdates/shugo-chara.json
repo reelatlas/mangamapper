@@ -1,0 +1,108 @@
+{
+  "series_id": "shugo-chara",
+  "summary": "Lane B (N11 / G53 / G54). No true broadcast deviation exists anywhere in rows 70-110: every stored date in the span is the real TV-Tokyo Saturday-09:30 first-run date of the title stored beside it, confirmed line by line against ja-WP 各話リスト, en-WP's three season lists and syobocal's per-airing records for ChID 7. What is wrong is the NUMBERING: our rows are animefillerlist's rows keyed by AFL's printed number, and AFL prints no 73 and prints 96 twice, so our rows 74-95 hold true episodes 73-94, our DB has no row 73, and true ep 95 ('Rima, Yaya, and the Pearls that Bind Them!', 2009-08-08) was lost when the two AFL rows numbered 96 collapsed — 126 rows for a 127-episode show. AFL's list order is additionally transposed at three adjacent pairs inside that span (its 75/76, 83/84, 90/91), which is why exactly those three of our rows carry their own true number and why the census flags an airdate_regression at each; the honest fix is the renumber (sort rows 74-95 by their correct stored date and assign 73-94), not 23 date repairs. Rows 107/108 are a DIFFERENT defect: correctly-numbered Party rows that hold each other's episode, repaired here as a title+date swap. Three genuine date defects sit outside the Doki span and are repaired: rows 35 (Sun), 37 (Tue) and 46 (Thu) carry AFL typos for what are plain Saturdays with no preemption in those weeks.",
+  "anchors": [],
+  "continue_points": [],
+  "anchor_hostile": [],
+  "annotations": [],
+  "repairs": [
+    {
+      "episode": 35,
+      "field": "air_date",
+      "old": "2008-06-01",
+      "new": "2008-06-07",
+      "why": "Ep 35 'Wedding Cake of the First Love!' (初恋のウェディング・ケーキ！) aired Saturday 2008-06-07. ja-WP 第35話 = 6月7日; en-WP 'List of Shugo Chara! episodes' ep 35 = June 7, 2008; syobocal TID 1233 Count 35 = 2008-06-07 09:30 テレビ東京. Stored 2008-06-01 is a Sunday, is AFL's value verbatim, and no テレビ東京 first-run aired that day (syobocal shows only other stations' reruns on 2008-06-01); the ChID-7 first-run run is unbroken 34 = 5/31, 35 = 6/7, 36 = 6/14, so this is a typo, not a schedule move.",
+      "sources": [
+        "https://ja.wikipedia.org/wiki/%E3%81%97%E3%82%85%E3%81%94%E3%82%AD%E3%83%A3%E3%83%A9%21",
+        "https://en.wikipedia.org/wiki/List_of_Shugo_Chara%21_episodes",
+        "https://cal.syoboi.jp/tid/1233"
+      ]
+    },
+    {
+      "episode": 37,
+      "field": "air_date",
+      "old": "2008-06-24",
+      "new": "2008-06-21",
+      "why": "Ep 37 'Golden Prince, Part 2' (黄金の王子！*後編*) aired Saturday 2008-06-21. ja-WP 第37話 = 6月21日; en-WP ep 37 = June 21, 2008; syobocal TID 1233 Count 37 = 2008-06-21 09:30 テレビ東京. Stored 2008-06-24 is a Tuesday (AFL's value); the two-parter's Part 1 is stored correctly at 6/14 and ep 38 at 6/28, so the slot never moved.",
+      "sources": [
+        "https://ja.wikipedia.org/wiki/%E3%81%97%E3%82%85%E3%81%94%E3%82%AD%E3%83%A3%E3%83%A9%21",
+        "https://en.wikipedia.org/wiki/List_of_Shugo_Chara%21_episodes",
+        "https://cal.syoboi.jp/tid/1233"
+      ]
+    },
+    {
+      "episode": 46,
+      "field": "air_date",
+      "old": "2008-08-28",
+      "new": "2008-08-23",
+      "why": "Ep 46 \"Rima's Advent!? The Goddess of Comedy!\" (りま降臨!?お笑いの神様！) aired Saturday 2008-08-23. ja-WP 第46話 = 8月23日; en-WP ep 46 = August 23, 2008; syobocal TID 1233 Count 46 = 2008-08-23 09:30 テレビ東京. Stored 2008-08-28 is a Thursday (AFL's value) and would sit after ep 47's correct 8/30 by only two days; the ChID-7 run is unbroken 45 = 8/16, 46 = 8/23, 47 = 8/30.",
+      "sources": [
+        "https://ja.wikipedia.org/wiki/%E3%81%97%E3%82%85%E3%81%94%E3%82%AD%E3%83%A3%E3%83%A9%21",
+        "https://en.wikipedia.org/wiki/List_of_Shugo_Chara%21_episodes",
+        "https://cal.syoboi.jp/tid/1233"
+      ]
+    },
+    {
+      "episode": 107,
+      "field": "title",
+      "old": "The Place Eggs Return To",
+      "new": "Yaya's Enthusiastic Gardening!",
+      "why": "True ep 107 is ややの張り切りガーデニング!! / 'Yaya's Enthusiastic Gardening!' (Party! ep 5), 2009-10-31; ep 108 is たまごの帰る場所！ / 'The Place Eggs Return To' (Party! ep 6), 2009-11-07. ja-WP 第107話/第108話, en-WP 'List of Shugo Chara Party! episodes' rows 5/6 (EpisodeNumber2 107/108) and syobocal TID 1777 Counts 5 = 2009-10-31 / 6 = 2009-11-07 all agree. AFL lists the two under each other's number and our rows inherited the transposition verbatim (title AND date). Party rows are NOT inside the 74-95 numbering offset, so the exact fix here is to swap the two rows' title+date (G53: a transposition carries the title with the date). Both rows are filler and carry no anchors or annotations.",
+      "sources": [
+        "https://ja.wikipedia.org/wiki/%E3%81%97%E3%82%85%E3%81%94%E3%82%AD%E3%83%A3%E3%83%A9%21",
+        "https://en.wikipedia.org/wiki/List_of_Shugo_Chara_Party%21_episodes",
+        "https://cal.syoboi.jp/tid/1777"
+      ]
+    },
+    {
+      "episode": 107,
+      "field": "air_date",
+      "old": "2009-11-07",
+      "new": "2009-10-31",
+      "why": "Second half of the 107/108 transposition: true ep 107 (Yaya's Enthusiastic Gardening!) aired Saturday 2009-10-31. ja-WP 第107話 = 10月31日; en-WP Party! row 5 = October 31, 2009; syobocal TID 1777 Count 5 = 2009-10-31 09:30 テレビ東京. Apply with the ep-107 title repair, never alone.",
+      "sources": [
+        "https://ja.wikipedia.org/wiki/%E3%81%97%E3%82%85%E3%81%94%E3%82%AD%E3%83%A3%E3%83%A9%21",
+        "https://en.wikipedia.org/wiki/List_of_Shugo_Chara_Party%21_episodes",
+        "https://cal.syoboi.jp/tid/1777"
+      ]
+    },
+    {
+      "episode": 108,
+      "field": "title",
+      "old": "Yaya's Enthusiastic Gardening!",
+      "new": "The Place Eggs Return To",
+      "why": "True ep 108 is たまごの帰る場所！ / 'The Place Eggs Return To' (Party! ep 6), 2009-11-07 — ja-WP 第108話, en-WP Party! row 6 (EpisodeNumber2 108), syobocal TID 1777 Count 6 = 2009-11-07. The mirror of the ep-107 repair; apply the pair together.",
+      "sources": [
+        "https://ja.wikipedia.org/wiki/%E3%81%97%E3%82%85%E3%81%94%E3%82%AD%E3%83%A3%E3%83%A9%21",
+        "https://en.wikipedia.org/wiki/List_of_Shugo_Chara_Party%21_episodes",
+        "https://cal.syoboi.jp/tid/1777"
+      ]
+    },
+    {
+      "episode": 108,
+      "field": "air_date",
+      "old": "2009-10-31",
+      "new": "2009-11-07",
+      "why": "Second half of the 107/108 transposition: true ep 108 (The Place Eggs Return To) aired Saturday 2009-11-07. ja-WP 第108話 = 11月7日; en-WP Party! row 6 = November 7, 2009; syobocal TID 1777 Count 6 = 2009-11-07 09:30 テレビ東京. With the four repairs applied, the 107/108 airdate_regression closes with no G54 ack.",
+      "sources": [
+        "https://ja.wikipedia.org/wiki/%E3%81%97%E3%82%85%E3%81%94%E3%82%AD%E3%83%A3%E3%83%A9%21",
+        "https://en.wikipedia.org/wiki/List_of_Shugo_Chara_Party%21_episodes",
+        "https://cal.syoboi.jp/tid/1777"
+      ]
+    }
+  ],
+  "type_corrections": [],
+  "structure": {
+    "notes": "ROW IDENTITY TABLE, rows 70-110 (OUR row | AFL's printed number | TRUE cumulative episode | JP subtitle | TRUE first-run date | stored date | status).\nSources agreeing on every line: ja-WP しゅごキャラ! 各話リスト (初放送日), en-WP's three season lists (EpisodeNumber2 = the cumulative number), and syobocal per-airing for ChID 7 = テレビ東京 Sat 09:30 (TID 1233 / 1510 / 1777; Party counts 1-25 = cumulative 103-127). AFL is the defect source, not a witness.\n\n  70 | AFL  70 | true  70 | チョコなんか大っきらい!? | 2009-02-14 | stored 2009-02-14 | OK\n  71 | AFL  71 | true  71 | 険しき誠の道！海里再び！ | 2009-02-21 | stored 2009-02-21 | OK\n  72 | AFL  72 | true  72 | 激震！おばあさま登場!! | 2009-02-28 | stored 2009-02-28 | OK\n  73 | (AFL prints no 73) | -- | ROW ABSENT in our DB\n  74 | AFL  74 | true  73 | (秘)！仲直りのレシピ？ | 2009-03-07 | stored 2009-03-07 | NUM\n  75 | AFL  75 | true  75 | バレた!?歌唄が家にやってきた！ | 2009-03-21 | stored 2009-03-21 | OK\n  76 | AFL  76 | true  74 | どっきどきのホワイトデー！ | 2009-03-14 | stored 2009-03-14 | NUM\n  77 | AFL  77 | true  76 | 新たなる敵!?月夜のバトル！ | 2009-03-28 | stored 2009-03-28 | NUM\n  78 | AFL  78 | true  77 | 衝撃！壊された初デート!? | 2009-04-04 | stored 2009-04-04 | NUM\n  79 | AFL  79 | true  78 | あむちゃんのなが～い一日!? | 2009-04-11 | stored 2009-04-11 | NUM\n  80 | AFL  80 | true  79 | イクトとあむ 悲しみのバトル！ | 2009-04-18 | stored 2009-04-18 | NUM\n  81 | AFL  81 | true  80 | 信じるキモチ！プラチナハート！ | 2009-04-25 | stored 2009-04-25 | NUM\n  82 | AFL  82 | true  81 | 潜入！イースター社!? | 2009-05-02 | stored 2009-05-02 | NUM\n  83 | AFL  83 | true  83 | すれちがいの音楽博覧会？ | 2009-05-16 | stored 2009-05-16 | OK\n  84 | AFL  84 | true  82 | 熱闘！私がエースになる！ | 2009-05-09 | stored 2009-05-09 | NUM\n  85 | AFL  85 | true  84 | 二階堂先生は先生だったぁ!? | 2009-05-23 | stored 2009-05-23 | NUM\n  86 | AFL  86 | true  85 | ち～す！噂のギャル登場!! | 2009-05-30 | stored 2009-05-30 | NUM\n  87 | AFL  87 | true  86 | 響け歌声！あの日のあたしに!! | 2009-06-06 | stored 2009-06-06 | NUM\n  88 | AFL  88 | true  87 | ナナを救え！しゅごキャラナース出動？ | 2009-06-13 | stored 2009-06-13 | NUM\n  89 | AFL  89 | true  88 | 激突！ナゾたま大暴走！ | 2009-06-20 | stored 2009-06-20 | NUM\n  90 | AFL  90 | true  90 | 伝えたい！このキモチ！ | 2009-07-04 | stored 2009-07-04 | OK\n  91 | AFL  91 | true  89 | 心、わかりあえて。 | 2009-06-27 | stored 2009-06-27 | NUM\n  92 | AFL  92 | true  91 | 全開！僕のリズム！ | 2009-07-11 | stored 2009-07-11 | NUM\n  93 | AFL  93 | true  92 | クールに決めろ！ビートジャンパー！ | 2009-07-18 | stored 2009-07-18 | NUM\n  94 | AFL  94 | true  93 | ほしな歌唄、未来への飛翔！ | 2009-07-25 | stored 2009-07-25 | NUM\n  95 | AFL  95 | true  94 | 進め！みけねこ捜索隊!? | 2009-08-01 | stored 2009-08-01 | NUM\n  ( -- | AFL 96 (1st) | true  95 | りまとやや、真珠の絆！ | 2009-08-08 | NO ROW in our DB )\n  96 | AFL  96 | true  96 | 届かない声、くだかれる思い。 | 2009-08-15 | stored 2009-08-15 | OK\n  97 | AFL  97 | true  97 | 唯世とイクト、運命のホロスコープ！ | 2009-08-22 | stored 2009-08-22 | OK\n  98 | AFL  98 | true  98 | 復活！輝きの舞姫！ | 2009-08-29 | stored 2009-08-29 | OK\n  99 | AFL  99 | true  99 | 思いは一つ！ガーディアンの戦い！ | 2009-09-05 | stored 2009-09-05 | OK\n  100 | AFL 100 | true 100 | 誕生！2つのキャラなり！ | 2009-09-12 | stored 2009-09-12 | OK\n  101 | AFL 101 | true 101 | 破かれた絵本！悲しき秘密！ | 2009-09-19 | stored 2009-09-19 | OK\n  102 | AFL 102 | true 102 | 夢のたまご、なりたい自分。 | 2009-09-26 | stored 2009-09-26 | OK\n  103 | AFL 103 | true 103 | 元気いっぱい転校生！ | 2009-10-03 | stored 2009-10-03 | OK\n  104 | AFL 104 | true 104 | 誕生！ガーディアン見習い!? | 2009-10-10 | stored 2009-10-10 | OK\n  105 | AFL 105 | true 105 | ココロ輝け！歌パワー！ | 2009-10-17 | stored 2009-10-17 | OK\n  106 | AFL 106 | true 106 | ひかるvsウサギ？初仕事は大変！ | 2009-10-24 | stored 2009-10-24 | OK\n  107 | AFL 107 | true 108 | たまごの帰る場所！ | 2009-11-07 | stored 2009-11-07 | SWAP (holds true 108)\n  108 | AFL 108 | true 107 | ややの張り切りガーデニング!! | 2009-10-31 | stored 2009-10-31 | SWAP (holds true 107)\n  109 | AFL 109 | true 109 | おかえり！なでしこ！ | 2009-11-14 | stored 2009-11-14 | OK\n  110 | AFL 110 | true 110 | 魅惑のキャラチェンジ！ | 2009-11-21 | stored 2009-11-21 | OK\n\nWHAT THE STATUS COLUMN MEANS. OK = number and date both true. NUM = the row's TITLE and DATE are a correct, real episode; only the NUMBER it sits under is wrong (no air_date repair is possible or wanted here — N11, Sean: no G54 ack for a numbering bug). SWAP = rows 107/108 hold each other's episode (a pure AFL transposition inside correctly-numbered Party rows) — repaired here as title+date.\n\nTHE DEFECT (N11). Our episode rows ARE animefillerlist's rows keyed by AFL's printed number. AFL's 127-row list prints no number 73 and prints 96 twice ('Rima, Yaya, and the Pearls that Bind Them!' then 'Unheard Pleas, Shattered Feelings.'), so: (a) our rows 74-95 hold true episodes 73-94 — one HIGHER than the truth; (b) our DB has no row 73 and only 126 rows, because the two AFL rows numbered 96 collapsed to one and true ep 95 ('Rima, Yaya, and the Pearls that Bind Them!' / りまとやや、真珠の絆！, 2009-08-08, AFL type manga_canon) was LOST; (c) our row 96 onwards is back in true numbering. AFL's list ORDER is also transposed at three adjacent pairs inside the span — its 75/76, 83/84 and 90/91 hold (true 75, true 74), (true 83, true 82), (true 90, true 89) — which is why those three of our rows carry their own true number while their neighbours are +1, and why the census sees an airdate_regression at each.\n\nTHE FIX, STATED AS AN OUTCOME (per row, not as a formula). Rows 74-95 must be renumbered to the true numbers in the table above; the simplest exact recipe is: take our rows 74-95, sort by their STORED air_date (every one is correct), and assign 73, 74, ... 94 in that order. That single operation absorbs both the +1 offset and the three transposed pairs. Number 95 then falls free and is exactly where the missing true ep 95 (2009-08-08) is inserted; rows 96-127 keep their numbers, with 107/108's contents swapped by the repairs in this verdict.\n\nWHY A MONOTONE SOURCE_NUMBERING_SHIFTS ENTRY IS NOT ENOUGH (worth Sean's eye before apply). The Shift shape is drop[] + shifts[{from,offset}] — a monotone step function on the SOURCE number. {drop: [], shifts: [{from: 74, offset: -1}, {from: 97, offset: +1}]} would fix 18 of the 22 rows but (i) leaves the three transposed pairs swapped against broadcast (74=Utau's visit / 3-21 before 75=White Day / 3-14 — the regression survives, only renumbered), and (ii) maps BOTH AFL rows numbered 96 onto 95, so the second still overwrites the first and number 96 is left empty. The AFL→ours map that is actually true is: 74->73, 75->75, 76->74, 77->76, 78->77, 79->78, 80->79, 81->80, 82->81, 83->83, 84->82, 85->84, 86->85, 87->86, 88->87, 89->88, 90->90, 91->89, 92->91, 93->92, 94->93, 95->94, 96(first row printed)->95, 96(second)->96, 97-106 identity, 107->108, 108->107, 109-127 identity. Expressing it needs either a per-number map (with the duplicate disambiguated by AFL's LIST POSITION, not its printed number) or a G53 title+date block over 73-96.\n\nCONSEQUENCE FOR THE STORED G53 MAP (must move with the rows). AIR_DATE_OVERRIDES['shugo-chara'] is keyed by our CURRENT numbers and is applied AFTER translation in filterEpisodeRows, so a renumber silently re-points it. Re-key: 88->87, 92->91, 93->92, 94->93, 95->94; 23, 26, 96, 97, 98, 99, 100 unchanged; add 35 = 2008-06-07, 37 = 2008-06-21, 46 = 2008-08-23 (this verdict), and 95 = 2009-08-08 for the inserted row. Left un-re-keyed, the override that reads '92: 2009-07-11' would stamp 7-11 onto Beat Jumper (true 92, 7-18).\n\nCONSEQUENCE FOR ANCHORS AND ANNOTATIONS (they travel with the row). Anchored rows in the span become: our 75 stays 75 (ch 29), 76->74 (ch 28), 77->76 (ch 29-30), 78->77 (ch 30), 80->79 (ch 30-31), 81->80 (ch 31-32). That REMOVES the ep-75/76 non-monotonicity: in true numbering 74 = White Day = ch 28 comes before 75 = Utau's visit = ch 29. The stored 'rearranged {28-28 after 29}' annotation on ep 76 and the A18 'reorder regime, rows 73-96' ruling are, for this pair, artifacts of the AFL numbering bug rather than an anime reorder — see flags. Also moving: the graft annotation on our 93 -> 92, and the divergence block eps 87-96 -> 86-96 (with the inserted true 95 to be typed).\n\nROW COUNT. 126 stored rows vs total_episodes 127; the renumber + the one insert makes 127. No other row in 70-110 has a wrong date: every stored date in the span is the true first-run TV Tokyo date of the title it sits with.",
+    "order_only": []
+  },
+  "flags_for_sean": [
+    "NUMBERING (N11) — the ask's core answer, stated per row in structure.notes. Our rows 74-95 hold TRUE episodes 73-94; rows 75, 83 and 90 are the three that coincidentally hold their own true number (AFL's list transposes its 75/76, 83/84, 90/91); row 96 onwards is already true. Nothing in 74-95 is an air_date defect — every stored date is the correct date for the title stored with it, so the correct instrument is the renumber, exactly as ruled (no G54 ack for a numbering bug). Recipe that is provably exact: sort our rows 74-95 by stored air_date and assign 73..94 in that order.",
+    "A MONOTONE SHIFT CANNOT EXPRESS THIS DEFECT. SOURCE_NUMBERING_SHIFTS is drop[] + shifts[{from,offset}], a monotone step function on the source number: {shifts:[{from:74,offset:-1},{from:97,offset:+1}]} fixes 18 of 22 rows but leaves the three transposed pairs reversed against broadcast AND maps both AFL rows numbered 96 onto our 95 (the second overwrites the first; number 96 ends up empty). Either the shape needs a per-number map with the duplicate disambiguated by AFL's LIST POSITION, or the span is pinned as a G53 title+date block over 73-96. Sean's call — I have given the exact target for every row either way.",
+    "MISSING EPISODE. True ep 95 'Rima, Yaya, and the Pearls that Bind Them!' (りまとやや、真珠の絆！), aired 2009-08-08 (ja-WP 第95話 / en-WP Doki row 44 / syobocal TID 1510 Count 95), has NO row in our DB — 126 rows for 127 episodes. It exists on AFL as the FIRST of the two rows printed '96' (typed manga_canon there, with AFL's 2010 year slip on the date). After the renumber, number 95 is free and this row belongs there. Its typing is not mine to rule: it sits inside the batch-17 'Lulu ?-egg arc' block (our rows 87-96 = true 86-96) that AFL calls canon and fandom records no chapter counterpart for, so it most likely joins that divergence annotation.",
+    "THE G53 MAP MUST BE RE-KEYED IF THE RENUMBER LANDS. AIR_DATE_OVERRIDES['shugo-chara'] is applied AFTER numbering translation in filterEpisodeRows, so the batch-19 keys point at the wrong rows the moment the span moves: 88->87, 92->91, 93->92, 94->93, 95->94 (23, 26, 96-100 unchanged). Un-re-keyed, '92: 2009-07-11' would stamp 7-11 onto Beat Jumper (true 92, 7-18) — a new defect created by the fix.",
+    "ANCHOR / ANNOTATION CONSEQUENCE (not a repair I am making, but it should be decided in the same sitting). After the renumber the anchored rows in the span become 75 (unchanged, ch 29), 76->74 (ch 28), 77->76, 78->77, 80->79, 81->80, and the ep-75/76 NON-MONOTONICITY DISAPPEARS: true 74 = White Day = ch 28 precedes true 75 = Utau's visit = ch 29. The stored annotation 'eps 76 rearranged {28-28 after 29}' and the A18 ruling 'reorder regime ... rows 73-96 ... adjacent anchors legitimately step backwards' are, for this pair, artifacts of AFL's numbering, not of the anime. Recommend re-deriving both after the renumber. The graft annotation on our 93 moves to 92; the divergence block 87-96 becomes 86-96.",
+    "GATE MISMATCH: batch20/validate-airdates.ts (copied from batch 19) rejects any repair whose field is not 'air_date', but this task's lane-B ask explicitly allows 'title' repairs and the 107/108 transposition cannot be honestly expressed without them (EPISODE_TITLE_OVERRIDES exists for exactly this — 'a transposition carries the title with the date'). Four of my seven repairs are the 107/108 pair (two title, two air_date). The gate needs the title field allowed, or those two rows need to travel as a structure finding.",
+    "NO G54 ACK ANYWHERE IN THIS SERIES. All four regression pairs have prosaic causes: 75/76, 83/84 and 90/91 are the AFL numbering/order defect (fix = renumber), 107/108 is an AFL transposition (fix = the four repairs here). Shugo Chara! never moved off Saturday 09:30 テレビ東京 in 127 episodes — syobocal's ChID-7 first-run sequence is unbroken week by week apart from the three New Year skips already carried correctly in our data (2007-12-22 -> 2008-01-05, 2008-12-27 -> 2009-01-10, 2009-12-26 -> 2010-01-09). order_only is therefore empty in this verdict, superseding the batch-19 verdict's provisional listing of the eight rows."
+  ]
+}
