@@ -1,0 +1,65 @@
+{
+  "series_id": "btooom",
+  "summary": "MU's unverified pin for the 2012 finale (ep 12 'Bonds' / 絆 → Vol 9, Chap 50) is CONFIRMED on the pages. Chapter 50 is titled 絆 (vol 9, opening at p. 9 per the volume's own TOC) and its content is the finale beat for beat: Ryota's guilt over Taira's death, Himiko handing him all eight IC chips and asking to be killed (vol 9 pp 16-18, 28), his refusal and 'I'd never abandon you, in real life or in the game' (p 30), the hand-clasp and the kiss (pp 32-37), the trembling / Oda's taunt in his head / 'we'll go back together and be a couple for real' (pp 38-46), and — the chapter's LAST pages (pp 50-54) — Tyrannos' boss ordering the island repaired within a day while Iida, in the helicopter, silently says 'I'm sorry Ryouta… this is all I can do for you'. en-WP's and btooom.fandom's episode summaries both end on exactly that panel, so the episode ends ON ch 50's final page: no mid-chapter straddle, and the post-series continue is C5 = 51 with ch 51-125 (vols 9-27) never adapted. The episode also has a START worth recording: its pre-credit Taira sequence (the Yuzuhiko/Akiko hallucinations, the climb down the ladder, the fall, 'I don't have eight chips' → 'I can definitely go home!!') is ch 47's CLOSING pages (vol 8 pp ~86-98), first-time material ep 11 skipped — ep 11's own cast list credits Taira only 'in Ryota's mind'. So ep 12 = ch 47 tail (relocated) + ch 48 from ~p 118 + ch 49 + ch 50 complete; END 50, START 47, volume 9. One source-quality finding for later waves: btooom.fandom's per-episode 'manga chapters' field is EMPTY on ep 12 and UNDERCOUNTS on ep 11 (prints '44 (pg. 37), 45, 46 (pg. 53)' while ep 11 demonstrably adapts ch 47 pp 71-81 and ch 48 pp 117-119).",
+  "anchors": [
+    {
+      "episode": 12,
+      "end_chapter": 50,
+      "start_chapter": 47,
+      "chapters_adapted": "47 (closing pages ~86-98, relocated), 48 (from ~p 118), 49, 50 (complete, to its last page)",
+      "volume": 9,
+      "confidence": "high",
+      "note": "MU pin VERIFIED, not corrected (A4/A10, 'pages, not numbers'): the episode plays ch 50 to its final panel — Iida's 'I'm sorry Ryouta… this is all I can do for you' + the 'technicians dispatched to the island, the fourth night' caption (vol 9 pp 50-54) — which en-WP's and the fandom's ep-12 summaries both use as their closing line. START = 47 under A10: the pre-OP Taira delirium (Yuzuhiko/Akiko illusions, the ladder fall, 'I haven't collected enough chips') is ch 47 vol 8 pp ~86-98, ~13 first-time pages ep 11 did not animate (ep 11's fandom cast list credits Taira only '(in Ryota's mind)'), so it is not a sliver/recap. Volume 9 confirmed by the vol 9 TOC (第50話 絆 p.009) and MangaDex's volume map (v8 = 46-49, v9 = 50-53).",
+      "sources": [
+        "https://mangadex.org/chapter/365b6ca7-2fa4-43b8-ba8a-4dd0ccb3dc58",
+        "https://en.wikipedia.org/wiki/List_of_Btooom!_episodes",
+        "https://btooom.fandom.com/api.php?action=parse&page=Bonds&prop=wikitext&format=json",
+        "https://mangadex.org/chapter/561417c4-1a8f-48ce-abb7-12d8ad043401",
+        "https://api.mangadex.org/manga/805c3a24-64c3-410f-9216-c828ab6b60f2/aggregate",
+        "https://www.mangaupdates.com/series/x08qap6/btooom"
+      ]
+    }
+  ],
+  "continue_points": [
+    {
+      "episode": 12,
+      "continue_chapter": 51,
+      "kind": "post_series",
+      "note": "C5: the anime stops on ch 50's last page (Iida's apology, the repair order), so resume at ch 51 'TEAM/チーム' (vol 9 p 55). Nothing before it is left unseen — eps 1-12 run ch 1-50 in order, with compressions only. Chapters 51-125 (the rest of vols 9-27, incl. the Dark Ending volume) were never animated; there is no second season.",
+      "sources": [
+        "https://mangadex.org/chapter/365b6ca7-2fa4-43b8-ba8a-4dd0ccb3dc58",
+        "https://btooom.fandom.com/api.php?action=parse&page=Chapters&prop=wikitext&format=json",
+        "https://www.mangaupdates.com/series/x08qap6/btooom"
+      ]
+    }
+  ],
+  "anchor_hostile": [],
+  "annotations": [
+    {
+      "episodes": [
+        12
+      ],
+      "kind": "rearranged",
+      "chapters": "47 (closing pages ~86-98)",
+      "note": "The manga cross-cuts Taira's collapse into ch 47 between Ryota/Himiko's chip search (pp 61-81); the anime un-interleaves it and plays the whole Taira delirium as ep 12's opening, after ep 11 had already animated ch 47 pp ~52-81 and ch 48 pp 99-117. Same shape as the bleach 152-159 un-cross-cutting: a back-jump at the episode's head, not a recap."
+    },
+    {
+      "episodes": [
+        12
+      ],
+      "kind": "abridged",
+      "chapters": "47",
+      "note": "btooom.fandom's Bonds page: 'compared to the manga, the anime did not reveal any flashbacks of Taira's family or scenes of his son fighting back Yakuza punks' — ch 47's Taira family flashback pages (vol 8 pp ~54-60) are dropped by both ep 11 and ep 12."
+    }
+  ],
+  "repairs": [],
+  "type_corrections": [],
+  "structure": {
+    "notes": "CHAPTER SPACE: the manga's own numbering (Shinchosha / BUNCH COMICS, 125 chapters in 27 volumes; MU status string '26 Volumes + 1 Dark Ending Volume'). MangaDex's volume map and btooom.fandom's Chapters list agree exactly: vol 7 = 42-45, vol 8 = 46-49, vol 9 = 50-53, vol 10 = 54-57. No edition question — the anchor's ch 50 sits in the serialization/tankobon space every source uses. VOLUME 8 PAGE LAYOUT (from the tankobon scan, printed page numbers): ch 47 starts p 52, ch 48 starts p 99, ch 48's last page is p 147; VOLUME 9 TOC (read from the volume's own contents page): 第50話 絆 p.009, 第51話 チーム p.055, 第52話 スカウト p.102, 第53話 サディスト p.149. MU COVERAGE STRING: a single unlabelled segment, anime.start 'Vol 1, Chap 1' / anime.end 'Vol 9, Chap 50' — one adaptation, no multi-work ambiguity (G32 gate 0 clean); the pin is REDUNDANT with the honest terminal rather than overstated, and now carries citations at the manual tier. SOURCE QUALITY (for later waves on rows 1-11): btooom.fandom's episode infoboxes carry a 'manga chapters' field for eps 1-11 but it is EMPTY for ep 12, and it UNDERCOUNTS on ep 11 — it prints '44 (pg. 37), 45, 46 (pg. 53)' while ep 11's own synopsis ends on the corpse-chip discovery (ch 47 vol 8 pp 71-81) and the ladder / homing-BIM cliffhanger (ch 48 vol 8 pp 117-119). Read that field as a floor, never as the episode's range. ja-WP's 各話リスト for this series has no chapter column at all (staff columns only), so the per-episode evidence here is the tankobon pages plus the two episode-summary sources.",
+    "order_only": []
+  },
+  "flags_for_sean": [
+    "START fork (A10 vs A12): ep 12's ~13-page pre-credit Taira sequence is ch 47's closing pages, first-time and story-carrying, so I read the START as 47 (A10 — not a sliver, not a recap). If you prefer to treat a relocated pre-OP block as a non-START opener (the A12 spirit), the row's START becomes 48 and the ch-47 pages stay only in chapters_adapted + the `rearranged` annotation. The END (50) and volume (9) are unaffected either way.",
+    "Exact ep 11 / ep 12 seam inside ch 48 is approximate: ep 11 ends at the ladder + homing-BIM approach (vol 8 pp 117-119) and ep 12 resumes there, but I could not tell from the two summaries whether ep 12 also re-plays ch 48's opening Ryota-childhood flashback (pp 100-103). Written as 'from ~p 118'; it does not move the anchor."
+  ]
+}
