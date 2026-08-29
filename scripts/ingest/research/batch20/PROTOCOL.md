@@ -84,3 +84,14 @@ Return (as your final message) a 5-10 line summary: anchors produced (count, ran
 ## Amendment 2026-08-28 (after wave 5 — Sean's ruling, not a drift)
 
 On dragon-ball-super the wave-5 pin "T28 = the content test" is SUPERSEDED by `T30` (rule I40 / T30 / A46, changelog §12.87): the series is a PARALLEL telling — standing is from-the-outline-or-not (canon = the story in any telling; filler = studio padding; mixed under the unchanged T28 bar), chapter numbers are correspondence rows, never anchors. Wave 5c (90 / 91 / 1 / 2 / 78 / 89) is researched under T30; the w5a/w5b verdicts' "→ filler" conversions are withdrawn at curation. Every other wave of this batch is unaffected (no other series is parallel).
+
+## Amendment 2026-08-28b (wave 6 — the shape, pinned before dispatch; R31)
+
+Wave 6 = **FotNS 29-56** (lane A2, the GAP shape unchanged) + **L-D ×7** (lane
+C, the MUPIN shape): mu_pin_unverified verification. An L-D verdict touches
+ONE row (the finale) plus its continue: a CONFIRMED pin re-lands as a
+manual-tier anchor with two citations; a WRONG pin lands as a repair with
+old → new and what MU actually counted (edition / franchise space / another
+season / whole-manga count — G37); an anime-original finale is
+anchor_hostile + the honest terminal (A1/G56). The recap baseline rule
+applies: every named row as `ep N — stored → proposed`, stored first.
