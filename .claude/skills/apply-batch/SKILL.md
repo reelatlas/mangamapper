@@ -111,6 +111,10 @@ ruled), add it to `lib/rulings/index.ts`, move the script to
 - **A renumber re-key must sweep EVERY rulings map, `applied/` included** — the wave-3 shugo-chara resort re-keyed G53 and A45 but missed `ZONE_ACKS` (the A7 bounds in `applied/batch-17.ts`); the verifier found it a wave later. Grep `lib/rulings` recursively for the series id and every key in the span before the apply.
 - **A same-kind annotation upsert REPLACES the stored fact — no A45 needed** (`upsertAnnotation` keys on series + episode + kind; TMM 38's new partial/rearranged replaced the old ones). An A45 entry for a kind you re-insert would delete the new fact on every heal. A45 is for a kind that must NOT stand any more (shugo 91/92's divergence; 92's title-keyed graft).
 - **A cron re-resolve rebuilds rows from AFL alone and can drop a wiki-backfilled row and re-floor the counts** (5D's 145 + 154 → 155, caught by the census's contiguity check): after any apply that inserts rows a source lacks, the ruled path is resolve → wiki backfill → heal, and `translatedMax` keeps the floor honest; row provenance on episodes is the durable fix (queued).
+- **A continue on a row whose anchor the same apply deletes lands NOTHING**
+  (wave 6, regenesis): `writeCuratedContinue` UPDATEs chapter_anchors by
+  (series, episode) and raises no error on a missing row. Place the continue
+  on the surviving terminal row — the verifier caught it pre-apply.
 - **An A45 retirement can collide with a standing T26 ruling** (wave 5, 2026-08-28):
   the gate refuses the healer's own re-insert (dragon-ball-super 78
   `rearranged`). Right fix: update the STANDING_ANNOTATIONS entry to the

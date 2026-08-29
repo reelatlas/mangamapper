@@ -807,6 +807,31 @@
    last COMPLETE chapter; '(Including OVA)' mixes adaptations; an unlabelled
    1→N on a sequel entry = the predecessor's run) → recovery file +
    research-agent already carries the shapes. L-D remainder: 22 pins.
+92. ✅ **CONSOLIDATE DEEP after wave 6 (2026-08-28; the T28 exception, N35
+   and the G32 season fix changed enforcement sites — P21).** Steps 0-8
+   satisfied by §12.91's save point (system census OK, edges current at
+   d4665adaf335, 156 tests, ruling_violation 0, display 219/0). Deep:
+   (a) **the T28 sole-adaptation probe** — all 703 graft/partial annotations
+   scanned mechanically for the SOLE half of the new exception (chapters
+   covered by no other row's span): **21 candidates on filler rows**, of
+   which the honest queue for Sean's load-bearing judgment is ~17 —
+   excluding dragon-ball-super 4 (a false positive by construction: a
+   parallel series has no anchors, correspondence is its instrument) and
+   noting that claymore 24/26 and soul-eater 39/40 are T28's own FOUNDING
+   filler rulings (re-open only deliberately: Jean's sacrifice in claymore
+   26 is the sharpest load-bearing case). The full list is in this entry's
+   commit; candidates: bleach 147/148 {247}, fma 24/40/41, clear-card
+   12/14, shugo-chara 127 {42}, chrono-crusade 22 (volume-space), dbz
+   39-43 {246}, zatch-bell 99 {163}, railgun 25 {41}, TBATE 24 {86} (ruled
+   this batch — not load-bearing). A `sole_graft_candidate` audit class is
+   the natural /add-rule when Sean wants the queue standing (needs the
+   parallel-series and volume-space exclusions). (b) apply-batch gains the
+   continue-on-deleted-row trap (the regenesis catch). (c) Permanence: 0
+   locked, permanence_violation 0; no stale rulings; no retiresWhen
+   touched. Cycle position: step 1 — Sean picks wave 7 (recommend L-D ×8
+   of the 22 remaining pins; then FotNS 109-151 / kingdom / bleach /
+   shippuden / four-knights; dai 18-99 ×3 LAST; regenesis S2 = the
+   parallel-candidate research).
 85. ✅ **CONSOLIDATE DEEP after batch 20 wave 4 (2026-08-28; P21 —
    `applyEpisodeFloor`'s input changed: `translatedMax`).** Steps 0-8
    satisfied by §12.84's save point. Rescan (step 9): (a) the floor probe
