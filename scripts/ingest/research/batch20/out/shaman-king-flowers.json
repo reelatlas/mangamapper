@@ -1,0 +1,59 @@
+{
+  "series_id": "shaman-king-flowers",
+  "summary": "The MU pin is CONFIRMED, not overstated: ep 13 (the 2024 finale) really does reach Reincarnation 29, the LAST chapter of the 29-chapter / 6-volume Flowers manga. Both directions of the ask come back negative — the finale contains NO Shaman King: The Super Star material (Super Star's Reincarnation 0/1 beats — Alumi's ride to Satoya-mura, Morimura, Oume Kaizou, Sati — are absent from the episode, and no Super Star chapter page carries an `episode=` value), and it is not an anime-original ending: it adapts Reincarnation 26-29 straight through, with anime-original CLARIFYING scenes appended to the last sequence (Yoh and Anna appearing in the Great Spirit, Hana's tears, the Great Spirit sprouting green, Sakurai stating outright that he will come back alive to see Chiharu — all left implicit in the manga). That share is a coda-scale insert inside the adaptation of ch 29's climax, so the row stays canon with a `divergence` annotation (T28), not mixed. The fandom's per-episode `adaptation` fields form a complete, page-partitioned cover of ch 1-29 across the 13 rows with no gaps and no duplicate claims, and an independent Japanese chapter-by-chapter comparison blog states the ep 13 span verbatim (今回原作でいうと26廻～29廻の部分です / 綺麗に4話分です). Flowers is therefore FULLY adapted; because Jump X folded in Oct 2014 the manga itself was cut short mid-story, so the anime's abrupt ending is the manga's ending. The honest post-series continue is C5 coverage+1 = 30, which sits exactly one past the display total of 29 and means 'nothing remains in this work' — the actual reader instruction is a DIFFERENT licensed work (Shaman King: The Super Star, from Reincarnation 0/1, its own chapter space, never convertible into Flowers' numbering), and the catalog has no cross-work pointer to hold it (flagged).",
+  "anchors": [
+    {
+      "episode": 13,
+      "end_chapter": 29,
+      "start_chapter": 26,
+      "chapters_adapted": "26-29",
+      "volume": 6,
+      "confidence": "high",
+      "note": "A4 END = Reincarnation 29, the manga's final chapter (fandom chapter box: '29th and final chapter', next = Reincarnation 0 (Super Star)). A10 START = 26: the official synopsis' opening recall '羊介に吹き飛ばされた後' is ch 25's beat, already animated as ep 12's own ending (fandom partitions 23-25 to ep 12; the blog counts ep 12 as '原作3話分、約90ページ') — a re-shown recall is never the START. All four chapters sit in vol 6 (fandom chapter boxes vol=6; blog: '原作6巻 ... 原作23～29廻'). MU's pin 'Vol 6, Chap 29' is REDUNDANT, not overstated — G56 covers it, G37 does not apply. Page budget ≈ 89 pp (18+19+22+30), matching ep 12's ≈90 pp.",
+      "sources": [
+        "https://shamanking.fandom.com/api.php?action=parse&page=It%27s_Love!!!&prop=wikitext&format=json",
+        "https://shamanking.fandom.com/api.php?action=parse&page=Reincarnation%2029%20(Flowers)&prop=wikitext&format=json",
+        "https://rabiralife.com/flowers06/",
+        "https://shamanking-project.com/story/",
+        "https://api.mangaupdates.com/v1/series/15172931231"
+      ]
+    }
+  ],
+  "continue_points": [
+    {
+      "episode": 13,
+      "continue_chapter": 30,
+      "kind": "post_series",
+      "note": "C5 post-series: coverage is complete (ch 1-29, every chapter of the finished 6-volume manga, adapted first-time across eps 1-13 with no never-adapted range), so coverage+1 = 30 — exactly one past the display total of 29 and never further, the ruled marker for 'nothing remains to read in this work'. NOT a real chapter: Flowers has 29. The reader's actual next step is a DIFFERENT licensed work — SHAMAN KING THE SUPER STAR (Kodansha, Shonen Magazine Edge 2018-2024, 10 volumes), starting at its Reincarnation 0 prologue / Reincarnation 1 'She Came in a Sidecar!'; that is a separate chapter space and is never converted into Flowers' numbering (N-family, the Boruto class). Flowers itself ends mid-story: Jump X ceased publication in Oct 2014 and the serialization was cut short, which is why the anime's ending feels abrupt — the anime did not stop early, the manga did.",
+      "sources": [
+        "https://shamanking.fandom.com/api.php?action=parse&page=Reincarnation%2029%20(Flowers)&prop=wikitext&format=json",
+        "https://en.wikipedia.org/wiki/Shaman_King:_Flowers",
+        "https://rabiralife.com/flowers06/"
+      ]
+    }
+  ],
+  "anchor_hostile": [],
+  "annotations": [
+    {
+      "episodes": [13],
+      "kind": "divergence",
+      "chapters": "26-29",
+      "note": "Faithful adaptation of Reincarnation 26-29 with anime-original CLARIFYING scenes appended to the closing sequence: Yoh and Anna appear in the Great Spirit so Hana grasps that he is loved, Hana weeps, green sprouts in the Great Spirit, and Sakurai says outright that he will return alive to see Chiharu (the manga only has him ask for his aircraft to be sent home). The comparison blog calls the run '漫画にはない追加シーンの連続' and the anime '解答編' to the manga's exam paper, and notes both reach '同じひとつの結末'. T28: a coda-scale clarifying insert inside the episode's job (ch 29's climax) is not a story-carrying share — the row stays canon, not mixed. Dialogue trims elsewhere (real place names, aircraft and unit names, historical detail) are abridgement in the same direction.",
+      "sources": [
+        "https://rabiralife.com/flowers06/",
+        "https://shamanking.fandom.com/api.php?action=parse&page=It%27s_Love!!!&prop=wikitext&format=json"
+      ]
+    }
+  ],
+  "repairs": [],
+  "type_corrections": [],
+  "structure": {
+    "notes": "CHAPTER SPACE: one space, no edition question. The Flowers manga numbers its chapters 'Reincarnation 1-29' (第N廻); Shueisha's Young Jump Comics edition (6 vols, Aug 2012 - Dec 2014) and Kodansha's Magazine Edge KC re-release (6 vols, Jul-Sep 2021) both hold 6 volumes and do not renumber. AniList total_chapters=29 / total_volumes=6, MU status='6 Volumes (Complete)' / latest_chapter=29 — all agree with the fandom's 1-29. MU coverage string carries ONE unlabelled segment (start 'Vol 1, Chap 1', end 'Vol 6, Chap 29'), so G32 gate 0 is clean: only one adaptation of this work exists.\n\nCOMPLETE COVERAGE SET (shamanking.fandom per-episode `adaptation` field, page-partitioned; every shared chapter split exactly once): ep 1 = 1-2 | 2 = 3-4 | 3 = 5-6 | 4 = 7-8 | 5 = 9-10 | 6 = 11-12 | 7 = 13-15 (pp. 1-9) | 8 = 15-16 | 9 = 17-18 | 10 = 19-21 (pp. 1-2) | 11 = 21-22 | 12 = 23-25 | 13 = 26-29. Contiguous 1-29, no gaps, no never-adapted range, no duplicate claim. Ch 26-29 appear in NO other episode (sole-adaptation check clean).\n\nVOLUME 6 = ch 23-29 (fandom chapter boxes vol=6 on 25/26/27/28/29; the comparison blog's vol-6 post covers '原作23～29廻、アニメ12～13話分'). Our stored volume boundaries table is empty (0 rows); this is the only boundary this task touched.\n\nSUPER STAR IS ANOTHER SPACE: The Super Star restarts at Reincarnation 0 (prologue, Apr 2018) / Reincarnation 1 and runs to 第68廻 across 10 volumes. Its chapter pages carry an EMPTY `episode=` field — no Super Star chapter is claimed by any Flowers episode. Its ch 0 scenes (Alumi riding to Sakurai's hometown, Sakurai's skeleton flying the recovered Zero with Hana aboard, young Sati) are absent from ep 13's character/spirit lists. Nothing in the finale reaches into it.\n\nAIR-DATE CONVENTION (NOT a repair, recorded so no one 'fixes' it): TV Tokyo carried the series 水曜 0:00 (火曜深夜). ja-WP prints the finale as 4月3日 (the calendar Wednesday); our stored 2024-04-02, the fandom's 'April 2, 2024' and the blog's '最速放映日：2024年4月2日（火）' are the Tuesday-night convention. Both are the same broadcast; our whole run is stored consistently on the Tuesday convention (ep 1 = Jan 9 vs ja-WP's Jan 10).\n\nMINOR SOURCE DISCREPANCY (no effect): fandom gives ch 29's Japanese subtitle as 亡零(11) while the blog writes 亡零⑩ — a one-off disagreement on the SUBTITLE index within the 'Death Zero' run, not on the chapter number; both call 第29廻 the 最終廻.\n\nNO AFL / AFG PAGE for this series (animefillerlist.com/shows/shaman-king-flowers and animefillerguide.com/shaman-king-flowers both 404) — the context's 'AFL: canon' is not backed by a live page; types here rest on the wiki + the blog, not on a filler site.",
+    "order_only": []
+  },
+  "flags_for_sean": [
+    "MECHANISM GAP (the ask's 'flag if the mechanism does not exist'): shaman-king-flowers is the clean specimen of a FULLY ADAPTED finished manga whose story continues in a DIFFERENT work. `continue_chapter` is an integer in this entry's own chapter space, so the only honest value is C5's coverage+1 = 30 ('nothing remains here'), and the real instruction — 'continue in SHAMAN KING THE SUPER STAR from Reincarnation 0/1' — survives only as prose in continue_note. There is no `next_work` / follow-on pointer in the schema (grep: none). This is the same D2 family as magic-knight-rayearth's ep 21-49 ruling (a sibling work with its own numbering that the current model cannot address); worth adding to that specimen list rather than inventing a per-series hack (P9).",
+    "MU PIN VERDICT = CONFIRMED / REDUNDANT (G56, not G37). MU's 'Vol 6, Chap 29' is exactly what ep 13 reaches; the pin is re-landed here at manual tier with START 26, chapters_adapted 26-29 and vol 6, which the derivation-tier row did not carry. No repair is proposed against the stored value.",
+    "The finale's anime-original coda (Yoh + Anna in the Great Spirit) is the only original material in the episode and is ruled a `divergence` on a canon row under T28, not a mixed typing. If a later pass wants a minute/page share for it, the source is the comparison blog's ep-13 section; nobody has published a timecode."
+  ]
+}
