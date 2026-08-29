@@ -1,0 +1,75 @@
+{
+  "series_id": "mf-ghost",
+  "summary": "The pin is WRONG and the cause is exactly the suspected one. MangaUpdates writes MF Ghost's coverage as THREE season-labelled segments — anime.start 'Vol 1, Chap 1 (S1) / Vol 5, Chap 57 (S2) / Vol 10, Chap 117 (S3)', anime.end 'Vol 5, Chap 56 (S1) / Vol 10, Chap 116 (S2) / Vol 17, Chap 194 (S3)' — and our stored ep-12 anchor (194, vol 17) is the (S3) segment: the endpoint of the 3rd Season (Turn25-37, TOKYO MX Jan-Mar 2026, AniList 185753). Our entry is the 2023 1st Season alone (AniList 143327, 12 rows, Turn01-Turn12, 2023-10-02 to 2023-12-18) — not stitched, no S2/S3 rows — so MU's own (S1) segment is the relevant one: Vol 5, Chap 56 as the last FULLY adapted chapter. Researched on the pages, Turn12 'Inherited Perception' adapts the tail of ch 52 (pp 14-16), ch 53-56 in full, and the first 2 pages of ch 57 'The White Reaper Descends' (mfghost.fandom's page-partitioned chapters_adapted fields — Turn11 ends at 52 p13, Turn13 opens on 57; programming-cafe's bidirectional anicomi index prints Turn12 = 第5巻 53〜57 and maps ch 57 to BOTH 12 and 2-1(13)). So ep 12 = START 53 (A10: the 3-page lead-in of ch 52 is a sliver, ≤5 pages), END 57, volume 5 — a 137-chapter, 12-volume correction. The honest resume is ch 57 (C1: the episode ends 2 pages into it); ch 58-275 are untouched by this entry, and the 2nd Season restarts at ch 57, so a viewer who intends to watch S2 should stop there.",
+  "anchors": [
+    {
+      "episode": 12,
+      "end_chapter": 57,
+      "start_chapter": 53,
+      "chapters_adapted": "52 (pp 14-16), 53, 54, 55, 56, 57 (pp 1-2)",
+      "volume": 5,
+      "confidence": "high",
+      "note": "S1 finale. START 53 under A10 — the leading 3 pages of ch 52 are a sliver (≤5 pp), and ch 52's body is Turn11's (fandom Turn11 = 49-51 + 52 pp 1-13; programming-cafe gives Turn11 = 49〜52, Turn12 = 53〜57). END 57 under A8/A4 + 'pages, not numbers': the episode animates ch 57 pp 1-2 (Kanata past checkpoint 1, provisional 13th) for the first time before the credits; MU's (S1) segment records 56 because 56 is the last chapter adapted IN FULL. Volume 5 = ch 47-58 (Kodansha vol 5, 2019-05-07). All 12 rows of this entry are canon; no anime-original block anywhere in S1.",
+      "sources": [
+        "https://mfghost.fandom.com/api.php?action=parse&page=Turn12&prop=wikitext&format=json",
+        "https://mfghost.fandom.com/api.php?action=parse&page=Chapter_057&prop=wikitext&format=json",
+        "https://mfghost.fandom.com/api.php?action=parse&page=Chapter_056&prop=wikitext&format=json",
+        "https://mfghost.fandom.com/api.php?action=parse&page=Volume_05&prop=wikitext&format=json",
+        "https://programming-cafe.com/amazon/primevideo/anime/anicomi-mfghost-list/",
+        "https://mfg-anime.com/php/avex/api.php?mode=46&id=1001222"
+      ]
+    }
+  ],
+  "continue_points": [
+    {
+      "episode": 12,
+      "continue_chapter": 57,
+      "kind": "post_series",
+      "note": "Resume at ch 57 'The White Reaper Descends' (vol 5). C1: the finale stops 2 pages into ch 57, so the straddled chapter is the resume point; C5 coverage+1 would give the same instruction only if 57 were counted whole, and it is not. This entry is the 2023 1st Season alone: ch 58-275 (the manga's remaining run, complete at 23 volumes) are never adapted here. If you intend to watch MF Ghost 2nd Season (Turn13-24, Oct-Dec 2024), stop at the end of ch 57 — that season restarts at ch 57 and runs to ch 116; the 3rd Season (Turn25-37, Jan-Mar 2026) then covers ch 117-194.",
+      "sources": [
+        "https://mfghost.fandom.com/api.php?action=parse&page=Turn13&prop=wikitext&format=json",
+        "https://programming-cafe.com/amazon/primevideo/anime/anicomi-mfghost-list/",
+        "https://api.mangaupdates.com/v1/series/19921883029"
+      ]
+    }
+  ],
+  "anchor_hostile": [],
+  "annotations": [],
+  "repairs": [
+    {
+      "episode": 12,
+      "field": "end_chapter",
+      "old": 194,
+      "new": 57,
+      "why": "G37/G32 gate 0 — the stored value is MU's (S3) SEGMENT, not this entry's. MU's anime.end is 'Vol 5, Chap 56 (S1) / Vol 10, Chap 116 (S2) / Vol 17, Chap 194 (S3)'; ch 194 is where the 3rd Season (Turn25-37, Jan-Mar 2026, AniList 185753) ends. Our entry is the 1st Season only (AniList 143327, 12 aired rows, 2023). Ep 12 in fact reaches ch 57 (mfghost.fandom Turn12 chapters_adapted = 52 pp 14-16, 53-56, 57 pp 1-2; programming-cafe's anicomi index = 第5巻 53〜57, with ch 57 mapped to episodes 12 and 2-1(13)); MU's own (S1) segment says 56, the last chapter adapted in full.",
+      "sources": [
+        "https://api.mangaupdates.com/v1/series/19921883029",
+        "https://mfghost.fandom.com/api.php?action=parse&page=Turn12&prop=wikitext&format=json",
+        "https://programming-cafe.com/amazon/primevideo/anime/anicomi-mfghost-list/",
+        "https://ja.wikipedia.org/wiki/MF%E3%82%B4%E3%83%BC%E3%82%B9%E3%83%88"
+      ]
+    },
+    {
+      "episode": 12,
+      "field": "volume",
+      "old": 17,
+      "new": 5,
+      "why": "Follows the end_chapter repair: ch 53-57 all sit in volume 5 (Kodansha vol 5 = ch 47-58, released 2019-05-07). Vol 17 is the (S3) segment's volume.",
+      "sources": [
+        "https://mfghost.fandom.com/api.php?action=parse&page=Volume_05&prop=wikitext&format=json",
+        "https://www.kodansha.co.jp/comic/products/0000320849"
+      ]
+    }
+  ],
+  "type_corrections": [],
+  "structure": {
+    "notes": "ROW STRUCTURE: our entry carries 12 rows and is the 2023 1st Season ONLY (component 1 = AniList 143327, eps 1-12, 2023-10-02 → 2023-12-18) — NOT stitched, and no renumbering is proposed. ja-WP's 各話リスト numbers the whole run continuously as Turn01-Turn37 under three 「Chapter =」headers (1st Season Turn01-12 / 2nd Season Turn13-24 / 3rd Season Turn25-37), so any future stitch must join on title+date, never index. Row 12 stored title 'Inherited Perception' and date 2023-12-18 match ja-WP (Turn12「うけつがれた感覚」, 12月18日) and the licensor's own episode API (mfg-anime.com id 1001222) — no identity repair. SIBLING ENTRIES not in this row set: MF Ghost 2nd Season = AniList 171642 (12 eps, 2024-10-07 → 2024-12-23, ch 57-116); MF Ghost 3rd Season = AniList 185753 (13 eps, 2026-01-01 → 2026-03-26, ch 117-194, AniList format ONA); a Final Season is announced (AniList 209876, unaired) — ja-WP: 「3rd Season終了後、Final Seasonの制作が決定」. CHAPTER SPACE: the manga's own 話/Turn numbering, 275 chapters in 23 volumes, complete (vol 23 = ch 263-275, 2025-06-06); vol 5 = ch 47-58. This matches our stored total_chapters=275; MU's latest_chapter=262 is a latest-DATED-release artifact, not the ceiling, and no anchor should be taken from it.",
+    "order_only": []
+  },
+  "flags_for_sean": [
+    "LIB GAP (G32 gate 0, lib/mu-coverage.ts): season-labelled segments defeat pickEntrySegments on a SEASON-SCOPED entry. ENTRY_MARKER matches /S\\d+/, so '(S1)', '(S2)' and '(S3)' are ALL classed as this entry's, the pick returns all three, and the caller takes the max — 194 on a 12-episode S1 entry. The code comment states the intended behaviour ('Season splits on a whole-run entry keep today's behaviour'), but this entry is not whole-run. Suggested gate: when the entry's components are a single season (season_order 1 and aired_episodes far below the labelled seasons' total), take the segment whose season tag equals that season, else refuse and list (mu_pin_multiwork_unresolved). mf-ghost is the witness; every season-split anime whose row set is one season has the same shape.",
+    "END FORK (small): I deliver END 57 on the 2-page tail of ch 57 under 'pages, not numbers' (A8/A4). MU's (S1) segment and a strict 'last chapter adapted in full' convention would give 56. The reader instrument is unaffected — display shows START 53 (A13) and the continue is ch 57 either way — so the choice is cosmetic on this row; the page extent (52 pp 14-16 / 57 pp 1-2) is mfghost.fandom's page-partitioned field, corroborated at chapter level by programming-cafe but not page level.",
+    "CATALOG (not a repair): S2 (AniList 171642) and S3 (AniList 185753) exist as separate entries and are absent from this series' components, so the catalog currently shows MF Ghost's coverage stopping at ch 57 while 194 chapters are animated. The continue note is written honestly for a viewer of THIS row set; whether S2/S3 become components or their own rows is a structure ruling, not research.",
+    "CROSS-CHECK DISCARDED: entas-compass.com states S2 ended at '11巻123話' — contradicted by both MU's (S2) segment (ch 116) and programming-cafe's per-episode table (Turn24 = 110-116, Turn25 = 117-118). Content farm, not used."
+  ]
+}
