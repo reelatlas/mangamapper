@@ -1,0 +1,57 @@
+{
+  "series_id": "prison-school",
+  "summary": "MU's pin is CONFIRMED: the 2015 TV finale (ep 12, 'Good Morning, Prison') ends the Male Expulsion arc and runs to the last page of chapter 82 — MU's segment for THIS entry reads exactly 'Vol 9, Chap 82 (OVA abridges Chap 82-89)', and prison-school.fandom's Episode 12 page states 'The episode covers Chapter 76 through Chapter 82 of the manga in plot' (infobox Chapters = 76-82), with ANN's contemporaneous episode review independently describing the same beats. The pin is therefore re-landed at the manual tier as a full anchor (END 82, START 76, chapters_adapted 76-82, vol 9) rather than corrected; nothing about MU's number is overstated and no other edition or chapter space is involved (en-WP's chapter list gives the identical numbering and the identical vol 9 = 79-88 boundary our catalog stores). The finale does NOT end mid-scene — the task's C1 premise fails: the episode's last manga content is chapter 82's closing page (Gakuto and Mitsuko reaching for the same Three Kingdoms book in the library), a clean chapter boundary, so the continue is a plain C5 post_series at 83. What the finale DOES carry past 82 is a post-credits teaser that jumps clean over 83-87 to stage chapter 88's beat (Kate Takenomiya's petition to the Chairman, the noticeboard, the USC marched into the Prison Block) — out of running order, so under A4 it is not the END; it is delivered as a mandatory graft annotation naming ch 88. The Mad Wax OVA's 82-89 is kept strictly out of ep 12 (the OVA is order-only at 12.5 under N3/N11 and carries no row).",
+  "anchors": [
+    {
+      "episode": 12,
+      "end_chapter": 82,
+      "start_chapter": 76,
+      "chapters_adapted": "76-82",
+      "volume": 9,
+      "confidence": "high",
+      "note": "A4 END = ch 82, reached on its last page (the library encounter with Mitsuko); A10 START = ch 76 'The Long Kiss Goodnight' — ep 11 ends at ch 75 and the run is contiguous (ep 9 = 56-61, ep 10 = 62-68, ep 11 = 69-75), and the episode opens on Hana's kiss assault continuing, not on a ch-75 recap sliver. The chapter-88 material in the post-credits epilogue is OUT of running order and is annotated as a graft, not taken as the END (A4). Confirms the stored MU pin (82, vol 9) — G56 redundant-but-correct, no G37 miscount.",
+      "sources": [
+        "https://prison-school.fandom.com/api.php?action=parse&page=Episode_12_(Season_1)&prop=wikitext&format=json",
+        "https://api.mangaupdates.com/v1/series/30484654050",
+        "https://www.animenewsnetwork.com/review/prison-school/episode-12/.93421",
+        "https://prison-school.fandom.com/api.php?action=parse&page=Chapter_82&prop=wikitext&format=json",
+        "https://en.wikipedia.org/wiki/List_of_Prison_School_chapters"
+      ]
+    }
+  ],
+  "continue_points": [
+    {
+      "episode": 12,
+      "continue_chapter": 83,
+      "kind": "post_series",
+      "note": "C5: the TV series' furthest first-time running-order coverage is ch 82, read to its final page, so resume at ch 83 'High and Low' (vol 9). Nothing between 83 and 277 was adapted by the TV series — 83-277 (the whole ASC saga onward) is never-adapted. One warning for the reader: the finale's post-credits epilogue already showed chapter 88's turn (Kate's petition, the imprisonment notice, the USC marched to the Prison Block) — read it in place at 88, do not skip ahead. Chapter 82's own content also plays in the epilogue and again, expanded, in the bonus OVA; re-use never moves position.",
+      "sources": [
+        "https://prison-school.fandom.com/api.php?action=parse&page=Chapter_83&prop=wikitext&format=json",
+        "https://prison-school.fandom.com/api.php?action=parse&page=Episode_12_(Season_1)&prop=wikitext&format=json",
+        "https://api.mangaupdates.com/v1/series/30484654050"
+      ]
+    }
+  ],
+  "anchor_hostile": [],
+  "annotations": [
+    {
+      "episodes": [
+        12
+      ],
+      "kind": "graft",
+      "chapters": "88",
+      "note": "Mandatory tie annotation (T28) for the finale's post-credits epilogue: after closing on ch 82, the episode jumps over the never-adapted 83-87 to stage ch 88's climax — Kate Takenomiya's complaint accepted by the Chairman, the imprisonment notice on the courtyard board, and Mari/Meiko/Hana escorted to the Prison Block by the Aboveground Student Council. ANN calls it 'a brief post-credits sequence'. The staging is compressed and moved (fandom's own Differences note: the ASC confronts the USC in the USC's office in the anime, in the main courtyard in the manga — the manga's escort-through-campus is ch 89). Out of running order, so no END claim (A4); the OVA later adapts 82-89 properly."
+    }
+  ],
+  "repairs": [],
+  "type_corrections": [],
+  "structure": {
+    "notes": "CHAPTER SPACE: one space, the manga's own serialization numbering, agreed by en-WP's List of Prison School chapters, prison-school.fandom's chapter pages and MU (277 chapters / 28 volumes); en-WP's volume TOCs give vol 8 = 69-78 and vol 9 = 79-88, identical to our stored boundaries — no conversion needed and no print/digital re-cut in play. MU SEGMENT (G32): this entry's coverage string is a single work, 'start': 'Vol 1, Chap 1', 'end': 'Vol 9, Chap 82 (OVA abridges Chap 82-89)'. The parenthetical is a SECOND adaptation's coverage (the Mad Wax OVA), not part of the TV pin, and it is itself accurate — prison-school.fandom's OVA 1 page states 'The OVA covers Chapter 82 through Chapter 89 of the manga in plot' — but our catalog holds no OVA row (N3/N11 2026-08-23: Mad Wax is order-only at position 12.5, the row deleted), so 82-89 must never be folded into ep 12 and the OVA takes no anchor (A1/N3). EPISODE->CHAPTER CHAIN (fandom infobox Chapters fields, contiguous and non-overlapping): ep 9 = 56-61, ep 10 = 62-68, ep 11 = 69-75, ep 12 = 76-82; the wiki's Episode Guide states the season 'adapted nine volumes of the original manga', consistent with a vol-9 terminal. ARC FENCE (fandom Story Arcs): Male Expulsion arc = ch 30-81, Mad Wax arc = 82-87, ASC Introductory arc = 88-94 — so the finale closes its arc at 81, plays the whole of 82 (the next arc's opening chapter) as its epilogue, then teases 88 (the arc after that). SOURCE-QUALITY CAVEAT: prison-school.fandom's per-episode Air Date fields are unreliable (eps 10 and 11 both carry 'September 12, 2015', and ep 1 is dated by the Tokyo MX late-night convention while ep 12 is dated by calendar day) — its Chapters fields are the usable part; our stored 2015-09-25 for ep 12 follows the 金曜深夜 convention that ja-WP's broadcast table implies (TOKYO MX 土曜 1:05, run 2015-07-11 - 09-26) and is consistent with the ep-7 G53 ruling, so no date repair is proposed. PREMISE CHECK: the task's 'finale reportedly ends mid-scene (a C1 candidate)' does not hold — ep 12 reaches ch 82's last page and then teases ch 88; there is no straddled chapter.",
+    "order_only": []
+  },
+  "flags_for_sean": [
+    "MU pin CONFIRMED, not corrected: ep 12 -> ch 82 vol 9 stands; the row should move from the mu derivation tier to manual with START 76 / chapters_adapted 76-82 attached (G56 redundant-but-correct; no G37 miscount to record).",
+    "The chapter-88 post-credits teaser is deliberately NOT taken as the END (A4 'in running order') — anchoring ep 12 at 88 would falsely tell a reader that 83-87 were animated. Delivered as a graft annotation instead; if you prefer the 'pages, not numbers' reading (first-time pages of ch 88 did air) the alternative shape would be END 88 + rearranged + continue 83 with 83-87 named as skipped, which I judge worse for the reader.",
+    "Mad Wax OVA (order-only 12.5, no row per N3/N11) abridges ch 82-89, i.e. a viewer who watched it has seen the 83-89 material the TV run skipped. Because the OVA carries no row it can carry no anchor and no continue; ep 12's post-series continue therefore stays 83. If the OVA is ever re-rowed, its honest terminal is ch 89 (fandom OVA 1 page; MU's parenthetical) and its continue 90."
+  ]
+}
