@@ -9,7 +9,11 @@
       "chapters_adapted": "40-42 (ch 40 from the Anya-vs-Meme fight onward; ep 11 already carried ch 40's opening arrival at the bell tower)",
       "volume": 5,
       "confidence": "high",
-      "note": "A4 END = 42, the manga's FINAL chapter: souleater.fandom's Chapter 40/41/42 pages each name Episode 12 as their anime correspondent, the Death Fest Arc page maps ch 38-42 to eps 11-12, and ep 12's own 'Manga and Anime Differences' section compares the episode beat-for-beat with Chapter 42; en-WP's independent episode synopsis carries the same beats (antidote kiss = ch 40, 'both are my partners' = ch 41, triple resonance kills Shaula + spring epilogue = ch 42). A10 START = 40: ep 11 ends where ch 40 opens (Anya lands atop the tower and demands Meme back), so ep 12 opens INSIDE ch 40 with the Meme fight. Space: the fandom / MangaDex magazine-installment numbering (1-42); in the JP tankoubon / Yen Press numbering the same position is the final chapter 31 (see structure.notes). PUBLICATION ORDER IS INVERTED - ch 40/41/42 shipped Sept/Oct/Nov 2014, after the 2014-07-01 finale - so this is a POSITION on content the source carries (T27 standing is measured against the source as finished), not a claim that the episode adapted printed pages."
+      "note": "A4 END = 42, the manga's FINAL chapter: souleater.fandom's Chapter 40/41/42 pages each name Episode 12 as their anime correspondent, the Death Fest Arc page maps ch 38-42 to eps 11-12, and ep 12's own 'Manga and Anime Differences' section compares the episode beat-for-beat with Chapter 42; en-WP's independent episode synopsis carries the same beats (antidote kiss = ch 40, 'both are my partners' = ch 41, triple resonance kills Shaula + spring epilogue = ch 42). A10 START = 40: ep 11 ends where ch 40 opens (Anya lands atop the tower and demands Meme back), so ep 12 opens INSIDE ch 40 with the Meme fight. Space: the fandom / MangaDex magazine-installment numbering (1-42); in the JP tankoubon / Yen Press numbering the same position is the final chapter 31 (see structure.notes). PUBLICATION ORDER IS INVERTED - ch 40/41/42 shipped Sept/Oct/Nov 2014, after the 2014-07-01 finale - so this is a POSITION on content the source carries (T27 standing is measured against the source as finished), not a claim that the episode adapted printed pages.",
+      "sources": [
+        "https://souleater.fandom.com/api.php?action=parse&page=Episode%2012%20(NOT!)&prop=wikitext&format=json (Chapters 19-42 / Volume 5 fields; ch 40/41/42 pages reverse index)",
+        "https://ja.wikipedia.org/wiki/ソウルイーターノット! (全31話 tankobon derivation; the finale beats) + https://api.mangadex.org/manga?title=Soul%20Eater%20Not (lastChapter 42)"
+      ]
     }
   ],
   "continue_points": [
@@ -30,7 +34,9 @@
   "anchor_hostile": [],
   "annotations": [
     {
-      "episodes": [12],
+      "episodes": [
+        12
+      ],
       "kind": "divergence",
       "chapters": "40-42",
       "note": "Same climax, heavily restaged. Anime-exclusive: Tsugumi's Flying Halberd form (in the manga the trio borrow Master's moped and have no flight), Clay fighting in human form with a bladed forearm, a Traitor stabbing himself, the Liz/Patty-with-Kid spring scene, and Sid Barrett's post-credit resurrection (never shown in the manga; also cut from Funimation's US release). Cut from the anime: Death, Death the Kid and all eight Death Scythes arriving to collect Shaula's soul, Akane+Clay's assist in the final fight, the EAT meister Tom, Meme's Texas Mask alias, and Tsugumi's interim third meister Ao Hoshino. Changed: Meme is freed by Tsugumi singing 'Kimi ga Ireba' instead of by her apology. ja-WP's own 'differences from the original' list names the same two headline items (the soul-resonance flight; no Death / Death Scythes on screen)."
