@@ -1,0 +1,79 @@
+{
+  "series_id": "soul-eater-not",
+  "summary": "The MU pin (ep 12 -> 'Vol 5, Chap 41') is RIGHT IN SPIRIT AND WRONG IN NUMBER. Ep 12 does reach the end of the manga, but the manga's last chapter is 42, not 41: souleater.fandom's per-chapter pages and MangaDex's series metadata both end the work at Chapter 42 ('It's a Savage But Super-Fun Life!'), and ep 12 carries ch 40 (Tsugumi's antidote-by-kiss), ch 41 (she chooses BOTH meisters) and ch 42 (the trio's Spring Bird Attack kills Shaula + the spring epilogue). No citable source gives a 41-chapter total: the two citable spaces are 42 (magazine-installment numbering, used by the fandom and MangaDex) and 31 (the JP tankoubon / Yen Press numbered-chapter count, ja-WP's 'zen 31 wa'). MU's '41' is a whole-manga count in AniList's unverified 41-chapter total (G37) - MU has no chapter list for this series and its latest_chapter=19 is a release-record artifact, not an edition. The surprise: PUBLICATION ORDER IS INVERTED. The finale aired 2014-07-01; ch 40/41/42 shipped 2014-09-12, 2014-10-09 and 2014-11-12. Ohkubo cut his page counts from the April 2014 issue expressly so the anime could show the climax first (ANN 2014-03-12; ja-WP quoting his Twitter), so ep 12 is a position on content the source carries, not a claim that the episode adapted printed pages. Standing is unchanged (canon, T27 - the events are all in the source as finished) with a fat divergence annotation: the Flying Halberd is anime-exclusive, Death/Kid/the eight Death Scythes never appear, Akane and Clay's assist is restaged, Tom and Ao Hoshino are cut, Meme is healed by the song rather than the apology, and Sid's resurrection stinger is anime-only. One more defect on the same row: AFL's date column runs a naive 12-week grid Apr 8 -> Jun 24 and misses the broadcast's skip week - TV Tokyo aired ep 12 on Tue 2014-07-01 at 25:40.",
+  "anchors": [
+    {
+      "episode": 12,
+      "end_chapter": 42,
+      "start_chapter": 40,
+      "chapters_adapted": "40-42 (ch 40 from the Anya-vs-Meme fight onward; ep 11 already carried ch 40's opening arrival at the bell tower)",
+      "volume": 5,
+      "confidence": "high",
+      "note": "A4 END = 42, the manga's FINAL chapter: souleater.fandom's Chapter 40/41/42 pages each name Episode 12 as their anime correspondent, the Death Fest Arc page maps ch 38-42 to eps 11-12, and ep 12's own 'Manga and Anime Differences' section compares the episode beat-for-beat with Chapter 42; en-WP's independent episode synopsis carries the same beats (antidote kiss = ch 40, 'both are my partners' = ch 41, triple resonance kills Shaula + spring epilogue = ch 42). A10 START = 40: ep 11 ends where ch 40 opens (Anya lands atop the tower and demands Meme back), so ep 12 opens INSIDE ch 40 with the Meme fight. Space: the fandom / MangaDex magazine-installment numbering (1-42); in the JP tankoubon / Yen Press numbering the same position is the final chapter 31 (see structure.notes). PUBLICATION ORDER IS INVERTED - ch 40/41/42 shipped Sept/Oct/Nov 2014, after the 2014-07-01 finale - so this is a POSITION on content the source carries (T27 standing is measured against the source as finished), not a claim that the episode adapted printed pages."
+    }
+  ],
+  "continue_points": [
+    {
+      "episode": 12,
+      "continue_chapter": 43,
+      "kind": "post_series",
+      "note": "C5: the anime reaches the manga's last chapter, so there is nothing after ep 12 - Soul Eater Not! ends at ch 42 (= Yen Press / JP tankoubon ch 31, vol 5). Two reasons a reader may still open the book: (a) the manga's own telling of the climax differs - Death, Death the Kid and the eight Death Scythes arrive for Shaula's death, Akane and Clay assist the trio, Tsugumi has no flying-halberd form, Meme's healing comes from an apology not the song, Tom and Tsugumi's third meister Ao Hoshino exist only on the page; (b) nine installments were never animated at all: ch 19, 20, 25, 26, 28, 29, 32, 33, 34 (the fandom's chapter pages state 'not adapted' on each; most are the short 'Soul Eater JOT!' vignette installments, Yen Press's JOT Parts 7/9/10 among them). Ep 12's epilogue montage re-uses ARTWORK from ch 25 and ch 26 but none of their narrative - not a position.",
+      "sources": [
+        "https://souleater.fandom.com/api.php?action=parse&page=Chapter%2042%20(NOT!)&prop=wikitext&format=json",
+        "https://souleater.fandom.com/api.php?action=parse&page=Death%20Fest%20Arc&prop=wikitext&format=json",
+        "https://souleater.fandom.com/api.php?action=parse&page=Chapter%2032%20(NOT!)&prop=wikitext&format=json",
+        "https://souleater.fandom.com/api.php?action=parse&page=Chapter%2025%20(NOT!)&prop=wikitext&format=json",
+        "https://api.mangadex.org/manga?title=Soul%20Eater%20Not"
+      ]
+    }
+  ],
+  "anchor_hostile": [],
+  "annotations": [
+    {
+      "episodes": [12],
+      "kind": "divergence",
+      "chapters": "40-42",
+      "note": "Same climax, heavily restaged. Anime-exclusive: Tsugumi's Flying Halberd form (in the manga the trio borrow Master's moped and have no flight), Clay fighting in human form with a bladed forearm, a Traitor stabbing himself, the Liz/Patty-with-Kid spring scene, and Sid Barrett's post-credit resurrection (never shown in the manga; also cut from Funimation's US release). Cut from the anime: Death, Death the Kid and all eight Death Scythes arriving to collect Shaula's soul, Akane+Clay's assist in the final fight, the EAT meister Tom, Meme's Texas Mask alias, and Tsugumi's interim third meister Ao Hoshino. Changed: Meme is freed by Tsugumi singing 'Kimi ga Ireba' instead of by her apology. ja-WP's own 'differences from the original' list names the same two headline items (the soul-resonance flight; no Death / Death Scythes on screen)."
+    }
+  ],
+  "repairs": [
+    {
+      "episode": 12,
+      "field": "end_chapter",
+      "old": 41,
+      "new": 42,
+      "why": "The stored value is MangaUpdates' unverified coverage string 'Vol 5, Chap 41' (one unlabelled segment; MU carries no chapter list for this series and its latest_chapter=19 is a release-record artifact). The manga's final chapter is 42 in the only space with per-chapter evidence - souleater.fandom's chapter pages run 1-42 with vol 5 = ch 37-42, and MangaDex's series record gives lastChapter=42 / lastVolume=5. Ep 12 carries ch 42's content (the trio's Spring Bird Attack kills Shaula; the winter-to-spring epilogue; Tsugumi hands over the witch soul), so the honest END is 42, not 41. G37: MU pinned a whole-manga count using a 41-chapter total that matches AniList's unsourced chapter field and no per-chapter source.",
+      "sources": [
+        "https://souleater.fandom.com/api.php?action=parse&page=Chapter%2042%20(NOT!)&prop=wikitext&format=json",
+        "https://souleater.fandom.com/api.php?action=parse&page=Volume%205%20(NOT!)&prop=wikitext&format=json",
+        "https://api.mangadex.org/manga?title=Soul%20Eater%20Not",
+        "https://api.mangaupdates.com/v1/series/75176602624",
+        "https://souleater.fandom.com/api.php?action=parse&page=Episode%2012%20(NOT!)&prop=wikitext&format=json"
+      ]
+    },
+    {
+      "episode": 12,
+      "field": "air_date",
+      "old": "2014-06-24",
+      "new": "2014-07-01",
+      "why": "G53 / AFL date defect. The stored date is animefillerlist's, which prints a naive weekly grid 2014-04-08 ... 2014-06-24 and misses the broadcast's skip week. syobocal's per-airing rows for TID 3336 give TV Tokyo (ChID 7) Count=12 at 2014-07-02 01:40 JST - i.e. Tue 2014-07-01 25:40 - with no earlier non-rerun airing, and Count=11 at 2014-06-18 01:40 (= Tue 2014-06-17); the Tuesday of 2014-06-24 carries no airing on any channel. ja-WP's broadcast table gives TV Tokyo 2014-04-08 - 7-01 and AniList's endDate is 2014-07-02 (post-midnight convention). Eps 1-11 are correct as stored; only the finale is wrong. Value given in the Tuesday listing convention our other rows use; use 2014-07-02 if the column stores the post-midnight calendar date (see flags).",
+      "sources": [
+        "https://cal.syoboi.jp/db.php?Command=ProgLookup&TID=3336&Range=20140401_000000-20140810_000000",
+        "https://ja.wikipedia.org/wiki/%E3%82%BD%E3%82%A6%E3%83%AB%E3%82%A4%E3%83%BC%E3%82%BF%E3%83%BC%E3%83%8E%E3%83%83%E3%83%88!",
+        "https://graphql.anilist.co (Media id 20547: endDate 2014-07-02)"
+      ]
+    }
+  ],
+  "type_corrections": [],
+  "structure": {
+    "notes": "CHAPTER SPACE (answers open flag #683 - and the flag's own premise is noise: MU's latest_chapter=19 is the chapter of its latest-DATED release records, never an edition signal). THREE spaces exist and the stored one is supported by none of them. (1) Magazine-installment space 1-42 (+ an unnumbered 9.5): souleater.fandom's chapter pages, vol 1 = ch 1-6, vol 2 = 7-15, vol 3 = 16-26, vol 4 = 27-36, vol 5 = 37-42; MangaDex's series record agrees (lastChapter 42, lastVolume 5). The wiki's Chapter 11 infobox misprints 'chapter number = 10' (its prose says eleventh; ch 10 and 11 have distinct JP titles), so 42 is not an inflation. (2) JP tankoubon / Yen Press numbered-chapter space: 31 chapters - ja-WP's infobox says 'zen 31 wa', and the wiki documents the merges that produce it (magazine 9 + 9.5 = tankoubon ch 9; magazine 35 + 36 = Yen Press ch 25 'Preparations'; magazine 27 = YP ch 19; magazine 25 = YP ch 21; the short JOT installments 20-24, 29, 33, 34 become 'Soul Eater JOT, Part N' rather than numbered chapters). Counting forward from the cited 35+36 = YP 25 gives 37=26, 38=27, 39=28, 40=29, 41=30, 42=31 - which lands exactly on ja-WP's total of 31 (derivation, medium confidence: I could not read a Yen Press vol 5 TOC). So ep 12's END is ch 42 in space (1) and the final ch 31 in space (2). (3) The stored space: AniList's chapters=41 (and MU's 'Chap 41'), which no per-chapter source reproduces. Recommend total_chapters 41 -> 42 with the 31-chapter print space documented; as delivered, END 42 exceeds the stored total of 41 until that lands.\n\nPUBLICATION ORDER. The anime OVERTOOK the source in its last three episodes. Vol 4 (ch 27-36) shipped 2014-04-12, four days after the premiere; vol 5 (ch 37-42) shipped 2014-12-22, six months after the finale; serialization ended in the December Gangan issue, 2014-11-12. Per-installment: ch 37 = June 2014, 38 = July 2014, 39 = 2014-08-12, 40 = 2014-09-12, 41 = 2014-10-09, 42 = 2014-11-12 - every one of them AFTER ep 12 aired on 2014-07-01. ANN (2014-03-12) reports Ohkubo had manuscripts done only through the June issue and 'wants people to watch the climax in the anime first'; ja-WP records the same from his Twitter and notes he cut page counts from the April 2014 issue to avoid spoiling the broadcast. ANN (2014-10-08) confirms the last chapter shipped in the December issue. Consequence for this catalog: souleater.fandom's 'anime correspondent' fields on ch 38-42 are CONTENT correspondences, not adaptation claims - the exact trap this project already records against this wiki (its 'the anime came first' notes on Soul Eater eps 40/47). The correspondence is nonetheless real and the events are in the source as finished, so the row stays canon and takes the position.\n\nEPISODE/CHAPTER MAP AT THE TAIL (fandom chapter + arc + episode pages): ch 36-37 -> ep 10; ch 38 -> eps 10-11; ch 39 -> ep 11; ch 40 -> eps 11 (opening pages) and 12; ch 41 -> ep 12; ch 42 -> ep 12. NEVER ADAPTED (each stated on its own chapter page): ch 19, 20, 25, 26, 28, 29, 32, 33, 34. Ep 12 re-uses artwork from ch 25/26 in its epilogue montage with none of their narrative - not a position (A44 shape, no anchor).\n\nROW IDENTITY / DATES: our 12 rows carry AFL's titles and AFL's naive weekly dates. syobocal shows the run skipped the week of 2014-06-24 on every channel; TV Tokyo aired ep 12 on 2014-07-01 25:40. Only the finale's date is affected.",
+    "order_only": []
+  },
+  "flags_for_sean": [
+    "MU PIN DISPOSITION (lane L-D): the pin's CLAIM is confirmed (ep 12 does reach the end of the manga) but its NUMBER is wrong by one and its space is unverifiable - delivered as a repair 41 -> 42 at the manual tier, G37 (a whole-manga count in AniList's 41-chapter total; MU carries no chapter list here and no label on the segment).",
+    "CHAPTER SPACE FORK (open flag #683): stored total_chapters = 41 (AniList) is supported by no per-chapter source. Citable totals are 42 (fandom + MangaDex, magazine installments) and 31 (ja-WP / Yen Press numbered chapters). I delivered END = 42 in the 42-space; until total_chapters is corrected, the anchor sits one above the stored total. If you prefer the print space instead, the same position is ch 31 of 31 and the whole (single) anchor must move - it is one row, so the conversion is cheap either way.",
+    "PARALLEL-TELLING TEST (I40/T30): the anime aired its climax months BEFORE the manga printed it, at the author's own request - superficially the DBS shape. I recommend NOT parallel. The common source here is not an uncitable outline realized twice: eps 1-9 adapt published chapters straightforwardly, only the final arc overtook serialization (a schedule fact), AniList's edge is ADAPTATION (not ALTERNATIVE), and ja-WP states the anime makes no large changes from the original. Kept as adaptation with a divergence annotation.",
+    "AIR-DATE CONVENTION: I delivered 2014-07-01 (the Tuesday listing convention that our other 11 rows use). If the column stores the post-midnight calendar date, the value is 2014-07-02 (AniList's endDate; syobocal's timestamp 2014-07-02 01:40). en-WP prints 2014-07-03 for this row, which is the AT-X / delayed-station date, not TV Tokyo's - do not take it.",
+    "OUT OF ASK, FOR A LATER WAVE: eps 10-11 (stored mixed) are in the same inverted-publication zone - ch 38 shipped July 2014 and ch 39 on 2014-08-12, both after those episodes aired. Any future anchor on eps 10-11 must be written as a content position with the same caveat, and AFL's 'Mixed Canon/Filler' on eps 10-11 should be re-tested under T28 before it is trusted (the fandom shows both episodes tracking ch 36-39 closely)."
+  ]
+}
