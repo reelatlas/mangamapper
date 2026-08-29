@@ -1,0 +1,68 @@
+{
+  "series_id": "d-frag",
+  "summary": "MU's pin CHAPTER is right and its VOLUME is wrong. Episode 12 (the 2014 finale) adapts ch 35-36 complete: the licensor synopsis (dアニメストア 第12話) opens on Chitose (4) building her sand mountain alone under her sister's eye, Tama (5) smashing it and Roka (4) arriving — that is chapter 35's own flashback (read on the page, MangaDex ch 35 pp 1-3) — and closes with the ponytail-vs-twintail argument (ch 35's last page) and the final Game Creation Club (Temp) vs ex-Student-Council showdown (ch 36). Chapter 36 'And the Finishing Blow Is…' / 「最後の秘技は…」 ends on its own last page with the referee's 'The Game Creation Club (Temp) wins!!' (MangaDex ch 36 p 24), and ch 37 opens a brand-new arc at a shipping port with Shawn Conecone that the anime never touches — so ch 36 is a clean terminal, not a mid-chapter stop. END 36 / START 35 / vol 5. What MU miscounted (G37): its string is 'Vol 4, Chap 36 (Including OVA)' — a COMBINED TV+OVA coverage whose two halves come from different adaptations. Ch 36 is the LAST chapter of volume 5 (vol 4 = ch 22-28, vol 5 = ch 29-36 on both MangaDex's volume aggregate and the fandom volume table); volume 4 is the OVA's volume — the vol-9-bundled OAD 「ウォーター!!」 (ja-WP) adapts ch 26 「Water!!」, a vol-4 chapter the TV run skipped. Our stored anchor inherited MU's wrong volume: repair 4 → 5. The row's stored type (canon) stands; the only non-source material is a short closing tag (Tama joining the club's game session, swearing her goals are unchanged) that is in neither ch 36 nor ch 37 — an anime-original season coda, a T28-immaterial divergence, not mixed.",
+  "anchors": [
+    {
+      "episode": 12,
+      "end_chapter": 36,
+      "start_chapter": 35,
+      "chapters_adapted": "35-36",
+      "volume": 5,
+      "confidence": "high",
+      "note": "A4/A10: the finale adapts ch 35 from its first page (the teachers' basketball flashback, then Chitose/Tama's kindergarten sandbox — dアニメストア's official synopsis for 第12話 describes exactly this) through ch 36's last page (the referee declaring the Game Creation Club (Temp) the winner). No leading sliver of ch 34: ep 11's official synopsis stops with Roka being carried to the infirmary, mid ch 34. Volume 5 per MangaDex's volume aggregate and the fandom volume table (vol 5 = ch 29-36).",
+      "sources": [
+        "https://d-frag.fandom.com/api.php?action=parse&page=Episode_12:_At_this_Rate,_You%27ll_have_Zero_Friends_for_All_Eternity!&prop=wikitext&format=json",
+        "https://animestore.docomo.ne.jp/animestore/ci_pc?workId=11120&partId=11120012",
+        "https://api.mangadex.org/manga/fb1d3464-4160-4339-8a80-dafd86eae398/aggregate",
+        "https://d-frag.fandom.com/api.php?action=parse&page=Manga&prop=wikitext&format=json"
+      ]
+    }
+  ],
+  "continue_points": [
+    {
+      "episode": 12,
+      "continue_chapter": 37,
+      "kind": "post_series",
+      "note": "C5: coverage + 1. Ep 12 ends exactly where ch 36 ends — the ex-Student-Council match is over and won — so start volume 6, chapter 37 'Damn You, Shawn Conecone!!'; nothing in it was animated. Before you go on, note what the 12 TV episodes never showed: ch 8, 10 and 11 were skipped outright (the anime jumps ep 3 = ch 6-7 → ep 4 = ch 9, 12-14), and ch 26 「ウォーター!!」 (vol 4, the shrine-water story) was animated only in the OAD bundled with the vol-9 special edition, not in the TV run. Chapters 24-25 and 29-30 are also not accounted for by any TV episode's chapter field and are likely skipped as well (unverified — see structure notes).",
+      "sources": [
+        "https://api.mangadex.org/manga/fb1d3464-4160-4339-8a80-dafd86eae398/aggregate",
+        "https://d-frag.fandom.com/api.php?action=parse&page=Episode_4:_They%60re_the_Band_of_14_Devils!!&prop=wikitext&format=json",
+        "https://ja.wikipedia.org/wiki/%E3%83%87%E3%82%A3%E3%83%BC%E3%81%B5%E3%82%89%E3%81%90!"
+      ]
+    }
+  ],
+  "anchor_hostile": [],
+  "annotations": [
+    {
+      "episodes": [12],
+      "kind": "divergence",
+      "chapters": "35-36",
+      "note": "Faithful two-chapter adaptation plus a short anime-original closing tag: after the win, Tama sits down to play 'Quest for Porn Mags in Space' with the club while insisting her goals are unchanged. Chapter 36's final page is the referee's victory call (MangaDex ch 36 p 24) and ch 37 opens elsewhere entirely (a night-time port deal with Shawn Conecone), so the tag has no source pages behind it. T28: a season-closing coda is not a story-carrying share of the episode — the row stays canon, not mixed."
+    }
+  ],
+  "repairs": [
+    {
+      "episode": 12,
+      "field": "volume",
+      "old": 4,
+      "new": 5,
+      "why": "G37: the stored value inherited MangaUpdates' coverage string 'Vol 4, Chap 36 (Including OVA)', which pairs the TV finale's CHAPTER with the OVA's VOLUME. Chapter 36 is the last chapter of volume 5 — MangaDex's volume aggregate gives vol 4 = ch 22-28 (+28.5) and vol 5 = ch 29-36 (+36.5), and the d-frag fandom volume table prints the same split (vol 5: ch 29 'The Legendary Amazing Takao-senpai' … ch 36 'My Final Move Is…'). Volume 4 is where the OVA's chapter sits: the vol-9-bundled OAD is titled 「ウォーター!!」 (ja-WP) and ch 26 is 'Water!!', a vol-4 chapter the TV series skipped.",
+      "sources": [
+        "https://api.mangadex.org/manga/fb1d3464-4160-4339-8a80-dafd86eae398/aggregate",
+        "https://d-frag.fandom.com/api.php?action=parse&page=Manga&prop=wikitext&format=json",
+        "https://ja.wikipedia.org/wiki/%E3%83%87%E3%82%A3%E3%83%BC%E3%81%B5%E3%82%89%E3%81%90!"
+      ]
+    }
+  ],
+  "type_corrections": [],
+  "structure": {
+    "notes": "MU PIN VERDICT: chapter CONFIRMED (36), volume WRONG (4 → 5); the pin is otherwise redundant with the manual anchor delivered here. MU record read live: anime = {start: 'Vol 1, Chap 1', end: 'Vol 4, Chap 36 (Including OVA)'}, latest_chapter 182 (api.mangaupdates.com/v1/series/26320078639). CHAPTER SPACE: one space only — the serialization/tankōbon numbering used by MangaDex, the fandom and Seven Seas alike; ch 36 = the last mainline chapter of vol 5, followed by a 7-page volume omake indexed 36.5 (an 'Omega manga' gag strip, not adapted). ROW IDENTITY: our 12 rows = ja-WP's 第1話-第12話; ja-WP additionally lists an OVA 「ウォーター!!」 on the vol-9 special-edition DVD, which is NOT one of our rows. AIR DATE: our stored 2014-03-25 matches ja-WP's TV Tokyo run (2014-01-07 - 2014-03-25, Tue 02:05 = Mon late night); the d-frag fandom episode pages carry sloppy dates (ep 12 '2014-03-23', ep 3 and ep 4 both '2014-01-21') — do NOT join on them. PER-EPISODE CHAPTER FIELDS (d-frag.fandom, orientation only, outside this task's row): ep 1 = 1-3, ep 2 = 4-5, ep 3 = 6-7, ep 4 = 9, 12-14 ('Chapters 10 and 11 were skipped'), ep 5 = 15-16, ep 6 = 17-19, ep 7 = 20-21, ep 8 = 22-23, ep 9 = '?', ep 10 = 31-32, ep 11 = 33-34, ep 12 = 35-36; ch 8 appears in no field either. The 24-30 zone is unresolved: ep 9's official synopsis (Hachi and Ataru fighting over Kenji's briefcase at lunch, then Noe outside the clubroom) reads as ch 27-28, which would leave ch 24, 25, 26, 29 and 30 unanimated by the TV run, but no source states it — treated as unverified in the continue note.",
+    "order_only": []
+  },
+  "flags_for_sean": [
+    "Flag #541 (count_mismatch, 'no coverage frontier') is answerable from this verdict: the frontier is ep 12 → ch 36 of an ongoing manga at 182+ chapters (MU latest_chapter 182), i.e. the anime covers roughly the first 5 of 20+ volumes. Scope is not missing, it was just never anchored above the unverified MU pin.",
+    "Unmapped adaptation: the OAD 「ウォーター!!」 bundled with the vol-9 special edition (2014-09-23) adapts ch 26 「Water!!」 (vol 4) — a chapter the 12 TV episodes skipped. It is not one of our rows. If an OAD row is ever added it takes ch 26; until then a reader who watched our 12 rows has never seen ch 26, which is why the continue note names it.",
+    "The ep-12 closing tag (Tama playing with the club) could not be matched to any manga page: it is not in ch 36 (whose last page is the victory declaration) and not in ch 37 (a new arc). Read as an anime-original coda — confidence medium on the annotation only; it does not move the END.",
+    "Chapters 24-25 and 29-30 are unaccounted for by any episode's chapter field (ep 9's field is literally '?'). If a wave ever anchors eps 8-10, that zone is the thing to settle; the continue note flags it as likely-skipped rather than asserting it."
+  ]
+}
