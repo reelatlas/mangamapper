@@ -413,3 +413,11 @@ No episodes. The reading view's "manga only" tail (timeline A); no continue poin
 | 89 | mixed | mixed stands (E) — "good examples" of the shape |
 
 Sean: every episode must be evaluated under T30, not projected. **Wave 5d** = the series-wide D/B re-pass the w5c agent flagged: the 7 stored-filler rows inside shared / film arcs (4, 15, 16, 17, 22, 50, 52) and a per-row load-bearing check of the 22 withdrawn conversions + the 5 proposed lifts. Dispatched 2026-08-28.
+
+## RULED (Sean 2026-08-28, after the deep — §12.90)
+
+| ep | stored (post-apply) | → ruled |
+|---|---|---|
+| 16 | canon | **mixed** (E: the Whis-student node B + the courting slice-of-life D) |
+| 17 | canon | **mixed** (E: Pan's birth / training node B + the domestic D block) |
+| 50 | canon | canon confirmed |

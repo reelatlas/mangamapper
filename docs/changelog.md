@@ -761,6 +761,16 @@
    classes — no empty cells added this batch. Cycle position: batch 20
    resumes at step 1 (plan) — dai 18-99 ×3 LAST, FotNS 29-56, L-D in
    eights; shugo 67-81 whenever; lane L-P and the queues await Sean.
+90. ✅ **DBS 16/17 → MIXED (Sean 2026-08-28, overriding the w5d verdict's
+   medium-confidence canon).** The E reading: the node (Goku and Vegeta as
+   Whis's students; Pan's birth) is B and real, but a significant share of
+   each episode is anime-only padding outside the outline and the manga
+   (Bulma courting Whis in 16; the domestic slice-of-life in 17) — a
+   self-contained D block beside the story = mixed under T28. T6 map
+   amended with the override reason; ep 50 stays canon as ruled. Types
+   110/3/18 → 108/5/18; ruling_violation 0; edges redeployed (the map is
+   lib). The medium-confidence rows were flagged as exactly the ones where
+   Sean's judgment overrides cleanly — this is that, on the record.
 85. ✅ **CONSOLIDATE DEEP after batch 20 wave 4 (2026-08-28; P21 —
    `applyEpisodeFloor`'s input changed: `translatedMax`).** Steps 0-8
    satisfied by §12.84's save point. Rescan (step 9): (a) the floor probe
