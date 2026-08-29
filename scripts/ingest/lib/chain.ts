@@ -14,6 +14,7 @@ import { stageAniList, searchTextFor } from './resolve';
 import { slugify } from './slug';
 import { deriveSourceKind, mangaStatusOf, seriesHasSource } from './rulings/source-kinds';
 import { deriveSourceRelation, pickMangaNode } from './rulings/source-relations';
+import { ruledChapterSpace } from './rulings/chapter-spaces';
 import { planComponents, type PlanMember } from './structure-plan';
 
 export const SERIES_FORMATS = new Set(['TV', 'TV_SHORT', 'ONA']);
@@ -222,8 +223,7 @@ export function aggregate(chain: AniListMedia[], aflSlug: string | null, fallbac
     external_links: dedupBy(chain.flatMap((m) => m.externalLinks), (l) => l.url ?? l.site),
     manga_anilist_id: manga?.id ?? null,
     manga_status: mangaStatusOf(manga),
-    total_volumes: manga?.volumes ?? null,
-    total_chapters: manga?.chapters ?? null,
+    ...ruledChapterSpace(seriesId, { total_volumes: manga?.volumes ?? null, total_chapters: manga?.chapters ?? null }), // N35
     manga_start_volume: null as number | null,
     manga_start_chapter: null as number | null,
     search_text: searchTextFor(

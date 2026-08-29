@@ -80,3 +80,31 @@ describe('pickEntrySegments — controls that keep today\'s behaviour', () => {
     expect(parseCoverageAll('Vol 13, Chap 106 Original Ending in EP 42-43, Skips chapters').explicitEp).toBeNull();
   });
 });
+
+// wave 6 (2026-08-28): the mf-ghost S3 lesson — season-numbered segments
+// beyond the entry's own season count are another entry's; a stitched
+// whole-run entry keeps its seasons (shy).
+import { parseCoverageSegments as pcs, pickEntrySegments as pes } from './mu-coverage';
+describe('G32 gate 0 — season-scoped entries (wave 6)', () => {
+  const MF = 'Vol 5, Chap 56 (S1) / Vol 10, Chap 116 (S2) / Vol 17, Chap 194 (S3)';
+  it('a single-season entry claims only its own season segment', () => {
+    const picked = pes(pcs(MF), { airedEpisodes: 12, startYear: 2023, endYear: 2023, seasonCount: 1 });
+    expect(picked.unresolved).toBe(false);
+    expect(picked.chosen.map((x) => x.chapter)).toEqual([56]);
+    expect(picked.foreign.map((x) => x.chapter).sort()).toEqual([116, 194]);
+  });
+  it('a stitched two-season entry keeps S1+S2 and takes the S2 endpoint', () => {
+    const SHY = 'Vol 4, Chap 30 (S1) / Vol 9, Chap 74 (S2)';
+    const picked = pes(pcs(SHY), { airedEpisodes: 24, startYear: 2023, endYear: 2024, seasonCount: 2 });
+    expect(picked.chosen.map((x) => x.chapter)).toEqual([30, 74]);
+    expect(picked.foreign).toEqual([]);
+  });
+  it('without an explicit seasonCount today\'s whole-run behaviour is kept (only applyMuFrontier restricts)', () => {
+    const picked = pes(pcs(MF), { airedEpisodes: 12, startYear: 2023, endYear: 2023 });
+    expect(picked.chosen.map((x) => x.chapter)).toEqual([56, 116, 194]);
+  });
+  it('a TV label is unaffected', () => {
+    const picked = pes(pcs('Vol 22, Chap 197 (TV) / Vol 31, Chap 276 (The First Slam Dunk)'), { airedEpisodes: 101, startYear: 1993, endYear: 1996, seasonCount: 1 });
+    expect(picked.chosen.map((x) => x.chapter)).toEqual([197]);
+  });
+});

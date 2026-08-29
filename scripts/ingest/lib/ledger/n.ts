@@ -699,4 +699,29 @@ export const RULES: Rule[] = [
     status: 'live',
     see: ['N1', 'N3', 'N4', 'invariant 4'],
   },
+  {
+    id: 'N35',
+    aliases: ['ruled chapter space', 'chapter space override', 'CHAPTER_SPACE_OVERRIDES', 'ruledChapterSpace', 'totals re-base', 'propagated scalar', 'the 260-that-is-255 class'],
+    family: 'N',
+    title: 'Ruled chapter space: a proven numbering beats AniList totals',
+    statement:
+      "series.total_chapters / total_volumes default to AniList's values (scoped by I36), but when research proves the real numbering differs — a propagated scalar no title, TOC or chapter page instantiates (regenesis: 260 vs Coamix's complete 1-255 index), a count from no sourceable numbering (sacred-beasts: 120 vs the manga's own 1-87 / 15 vols) — the ruled space (lib/rulings/chapter-spaces.ts, reason + cites) WINS at every totals writer: resolveSeries and chain.ts#aggregate apply ruledChapterSpace, assert-overrides asserts it over standing rows, and a stored total that disagrees is ruling_violation. A repair without the map would be deleted by the next re-derive (P8).",
+    why:
+      "Batch 20 wave 6 (2026-08-28): two of seven MU-pin verifications surfaced chapter spaces that were wrong at the SERIES level — fist-of-the-blue-sky-regenesis stored 260 total (ja-WP's infobox scalar, contradicted by its own prose and Coamix's index) and to-the-abandoned-sacred-beasts stored 120 (AniList, matching no numbering; flag #681). Anchors and continues computed against a wrong space misplace the honest dash and the tail badge.",
+    ruledBy: 'Sean',
+    ruledOn: '2026-08-28',
+    origin: 'scripts/ingest/research/batch20/WAVE6-RECOVERY.md; changelog §12.91',
+    enforcement: [
+      { path: 'scripts/ingest/lib/rulings/chapter-spaces.ts', symbol: 'ruledChapterSpace' },
+      { path: 'scripts/ingest/lib/resolve.ts', symbol: 'resolveSeries' },
+      { path: 'scripts/ingest/lib/chain.ts' },
+      { path: 'scripts/ingest/assert-overrides.ts', symbol: 'assertChapterSpaces' },
+      { path: 'scripts/ingest/audit-ui-truth.ts' },
+    ],
+    layer: 'writer',
+    auditClass: ['ruling_violation'],
+    witnesses: ['fist-of-the-blue-sky-regenesis', 'to-the-abandoned-sacred-beasts'],
+    status: 'live',
+    see: ['N3', 'N1', 'I36', 'P8', 'G37'],
+  },
 ];

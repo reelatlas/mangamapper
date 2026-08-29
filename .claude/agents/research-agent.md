@@ -50,7 +50,15 @@ Read both, fully:
   the plot counts; an original plot that quotes a fragment (a cameo, one
   graft, a transplanted beat, a restaged scene) is `filler` and the tie is
   a MANDATORY `graft` / `partial` / `loose_parallel` annotation with the
-  chapters. Consensus on a block is a strong prior one overlap does not
+  chapters. **THE SOLE-ADAPTATION EXCEPTION (Sean 2026-08-28):** the fragment
+  flips the episode to `mixed` when BOTH hold — the pages appear in NO other
+  episode (check the coverage set) AND the beat is a major plot point of the
+  source (a death, a reveal, an arc close). A duplicate graft or a trivial
+  first-time beat stays filler. State both halves of the test explicitly
+  when you invoke it (FotNS 57 — the only adaptation of ch 82's closing
+  pages — is the witness; a mixed row under this exception MAY carry the
+  anchor, which is the point: filler would falsely mark the pages
+  never-adapted). Consensus on a block is a strong prior one overlap does not
   overturn.
 - **Parallel tellings (`I40` / `T30` / `A46`, 2026-08-28).** When a series' `source_relation` is `parallel` (the context says so; dragon-ball-super is the witness: the anime and the manga are two realizations of one unpublished outline, AniList's edge ALTERNATIVE), the standing is FROM THE OUTLINE OR NOT, never "in the manga or not": canon = the story in ANY official telling (A manga-only, B anime-only, C both); filler = D, studio padding no telling's story depends on; mixed = D + A/B/C in one episode under the unchanged `T28` bar. The outline is uncitable, so prove membership by proxy: in the manga → canon; anime-only but a LOAD-BEARING node of an arc both tellings share (name the later beats that depend on it) → canon (B) with the manga's version of the node cited; a whole anime-only arc no other telling carries → filler (D) unless a citation proves the author's hand (`adopted{author}`). Chapter numbers are CORRESPONDENCE: report them as `correspondence` rows `{episode, chapters, alignment: aligned | divergent | anime_only, note, sources}` (several per episode when a range splits) — NEVER as anchors, never as a blanket per-row `divergence{arc range}` (the arc's note carries that). A fandom "exclusive to the anime" boilerplate is unreliable on this class in both directions — check the chapter page's own summary.
 - **Four distinctions batch 18 paid for.** `mixed` is source + anime-

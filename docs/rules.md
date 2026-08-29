@@ -101,11 +101,11 @@
 - `T25` Source is series identity: the SOURCE_KINDS registry — aka `SOURCE_KINDS`, `source kinds registry`, `source-kinds`, `D-9`, `source is identity`, `source is series identity`, `SOURCE_TYPE_OVERRIDES`, `hasInstrument`, `hasSource vs hasInstrument`, `series_without_source_kind`, `studio original`, `fail closed source`, `visual novel source`, `game source`
 - `T26` Overrides are annotations, never a fourth episode type — aka `overrides are annotations`, `adopted annotation`, `adopted`, `retconned`, `side_source`, `adopted basis`, `community canon is not a type`, `no fourth type`, `D-10 annotations`, `annotation_invalid`
 - `T27` Standing is canon / mixed / filler, relative to the source — aka `three standings`, `canon mixed filler only`, `anime-only-canon retired`, `AFL anime_canon mapping`, `aflAnimeCanon`, `afl_anime_canon_unruled`, `standing migration`, `D-10 standing`, `anime only retired`
-- `T28` mixed needs a substantial share: the episode's job decides — aka `mixed_fragment_only`, `T28 discrepancy queue`, `materiality bar for mixed`, `episode job test`, `what is this episode's job`, `fragment is an annotation`, `slivers are not mixed`, `Claymore-26 shape`, `mixed threshold`
+- `T28` mixed needs a substantial share: the episode's job decides — aka `mixed_fragment_only`, `T28 discrepancy queue`, `materiality bar for mixed`, `episode job test`, `what is this episode's job`, `fragment is an annotation`, `slivers are not mixed`, `Claymore-26 shape`, `mixed threshold`, `canon sliver`, `sole adaptation`, `load-bearing sliver`, `graft flip`, `the FotNS-57 test`, `sole-adaptation exception`
 - `T29` The format axis: derived, stored, never a type — aka `format axis`, `episodes.format`, `FORMAT_OVERRIDES`, `heal-format`, `format_missing`, `episode_without_component`, `watch_order_kind_missing`, `D-11`, `tv ova special movie recap`
 - `T30` Standing on a parallel series: from the outline or not — aka `parallel standing`, `from the outline or not`, `the timelines model`, `timeline D`, `studio padding`, `the story test`, `load-bearing test`, `B vs D proxy`, `anime-only telling`, `arc_row_conflict`, `DBS standing`
 
-**N — Numbering, counts & chapter spaces** (31)
+**N — Numbering, counts & chapter spaces** (32)
 - `N1` Episode-floor invariant — aka `episode-floor invariant`, `episode floor`, `floor rule`, `EXTRAS_ADOPTED`
 - `N2` Lone-row overshoot is a typo candidate — aka `floor-rule typo lesson`, `eyeshield-21 155 lesson`
 - `N3` The community-consensus episode count is the truth — aka `community-count rulings`, `community-count rule`, `community count rule`, `numbered-vs-event rule`, `COMMUNITY_COUNT_OVERRIDES`
@@ -137,6 +137,7 @@
 - `N32` Watch-order v2: entries render and count as units *(planned)* — aka `watch-order v2 unit rendering`, `fractional watch-order positions`, `the reference point (watch order)`
 - `N33` Every non-main entry carries its reasoning in data — aka `research-logged non-main entries`, `non-main entries carry the why`
 - `N34` Episode totals derive, then floor, then cap — aka `episode totals derivation`
+- `N35` Ruled chapter space: a proven numbering beats AniList totals — aka `ruled chapter space`, `chapter space override`, `CHAPTER_SPACE_OVERRIDES`, `ruledChapterSpace`, `totals re-base`, `propagated scalar`, `the 260-that-is-255 class`
 
 **I — Identity, franchise & structure** (40)
 - `I1` Our slug is the identity — aka `identity`, `our slug is identity`, `canonical identity is ours`, `own-slug identity`
@@ -1430,7 +1431,7 @@ episodes.type is exactly canon | mixed | filler, each relative to the series' id
 
 ### T28 · mixed needs a substantial share: the episode's job decides
 
-An episode is `mixed` only when a SUBSTANTIAL share of its own plot is the source — the adapted scenes carry the episode's story (a chapter, an omake, a side story or a gag special that IS the episode's plot all count; community 'filler' meaning 'not mainline' does not override a real adaptation). When an original plot merely quotes a fragment — a cameo, a one-off graft, a transplanted single beat, a restaged closing scene, a recall, a rehash — the episode is `filler` and the tie to the source is RECORDED as an annotation (graft / partial / loose_parallel with the chapters and the why), never as the type. The test is 'what is this episode's job?': the studio ending that quotes one manga scene is filler + graft (Claymore 26); the episode that adapts a whole special chapter inside original framing is mixed (Railgun 41). Consensus on a block is a strong prior that one overlap does not overturn.
+An episode is `mixed` only when a SUBSTANTIAL share of its own plot is the source — the adapted scenes carry the episode's story (a chapter, an omake, a side story or a gag special that IS the episode's plot all count; community 'filler' meaning 'not mainline' does not override a real adaptation). When an original plot merely quotes a fragment — a cameo, a one-off graft, a transplanted single beat, a restaged closing scene, a recall, a rehash — the episode is `filler` and the tie to the source is RECORDED as an annotation (graft / partial / loose_parallel with the chapters and the why), never as the type. The test is 'what is this episode's job?': the studio ending that quotes one manga scene is filler + graft (Claymore 26); the episode that adapts a whole special chapter inside original framing is mixed (Railgun 41). THE SOLE-ADAPTATION EXCEPTION (Sean 2026-08-28, wave 6): a fragment flips an otherwise-filler episode to MIXED when BOTH hold — (1) SOLE ADAPTATION: the pages appear in no other episode (checked against the coverage set), and (2) LOAD-BEARING: the beat is a major plot point of the source (a death, a reveal, an arc close), not a cameo or flavor. A duplicate graft or a trivial first-time beat stays filler + annotation. The exception keeps BOTH promises true: the skip advice ('mostly a clip show') and the position record (the pages ARE adapted, so the row may carry the anchor — calling it filler would falsely mark them never-adapted). First witness: fist-of-the-north-star 57 (a clip show whose tail is the only adaptation of ch 82's closing pages, Rei's death) = mixed + partial{82} + anchor 82. Consensus on a block is a strong prior that one overlap does not overturn.
 
 *Why:* Batch 18 wave 2 (Sean, 2026-08-26, with Cursor): verifiers were typing rows mixed on single confirmed scenes — Claymore 24 (the opening section of Scene 60 before the studio ending takes over), soul-eater 40 (Medusa's deal grafted into the original ending), DBS 91/94/95 (one restaged scene each), FMA 40-41 (ch 30's Martel beat as a closer / a recall) — while the community reads every one of those blocks as non-canon. The type must say what the episode IS; the annotation keeps every tie so the UI can surface 'the ch-30 beat is here' without painting the row mixed. Coverage and the frontier stay on the genuinely adapted rows, which is honest.
 
@@ -1438,9 +1439,9 @@ An episode is `mixed` only when a SUBSTANTIAL share of its own plot is the sourc
 - layer **process**
 - enforced: [research/batch18/PROTOCOL.md](../scripts/ingest/research/batch18/PROTOCOL.md) · [research/batch18/curate.ts](../scripts/ingest/research/batch18/curate.ts) · [audit-ui-truth.ts#mixed_fragment_only](../scripts/ingest/audit-ui-truth.ts)
 - audit: `mixed_fragment_only`
-- witnesses: claymore, a-certain-scientific-railgun, soul-eater, dragon-ball-super, fullmetal-alchemist
-- aliases: mixed_fragment_only, T28 discrepancy queue, materiality bar for mixed, episode job test, what is this episode's job, fragment is an annotation, slivers are not mixed, Claymore-26 shape, mixed threshold
-- see: T7, T8, A10, T26, T27, A43
+- witnesses: claymore, a-certain-scientific-railgun, soul-eater, dragon-ball-super, fullmetal-alchemist, fist-of-the-north-star
+- aliases: mixed_fragment_only, T28 discrepancy queue, materiality bar for mixed, episode job test, what is this episode's job, fragment is an annotation, slivers are not mixed, Claymore-26 shape, mixed threshold, canon sliver, sole adaptation, load-bearing sliver, graft flip, the FotNS-57 test, sole-adaptation exception
+- see: T7, T8, A10, T26, T27, A43, A1, A4
 
 ### T29 · The format axis: derived, stored, never a type
 
@@ -1901,6 +1902,20 @@ Single-season: aired = AniList nextAiringEpisode − 1 while airing, else AniLis
 - audit: `integrity_eps_beyond_total`, `integrity_total_beyond_eps`
 - aliases: episode totals derivation
 - see: N1, N3, N4, invariant 4
+
+### N35 · Ruled chapter space: a proven numbering beats AniList totals
+
+series.total_chapters / total_volumes default to AniList's values (scoped by I36), but when research proves the real numbering differs — a propagated scalar no title, TOC or chapter page instantiates (regenesis: 260 vs Coamix's complete 1-255 index), a count from no sourceable numbering (sacred-beasts: 120 vs the manga's own 1-87 / 15 vols) — the ruled space (lib/rulings/chapter-spaces.ts, reason + cites) WINS at every totals writer: resolveSeries and chain.ts#aggregate apply ruledChapterSpace, assert-overrides asserts it over standing rows, and a stored total that disagrees is ruling_violation. A repair without the map would be deleted by the next re-derive (P8).
+
+*Why:* Batch 20 wave 6 (2026-08-28): two of seven MU-pin verifications surfaced chapter spaces that were wrong at the SERIES level — fist-of-the-blue-sky-regenesis stored 260 total (ja-WP's infobox scalar, contradicted by its own prose and Coamix's index) and to-the-abandoned-sacred-beasts stored 120 (AniList, matching no numbering; flag #681). Anchors and continues computed against a wrong space misplace the honest dash and the tail badge.
+
+- ruled Sean 2026-08-28 (scripts/ingest/research/batch20/WAVE6-RECOVERY.md; changelog §12.91)
+- layer **writer**
+- enforced: [lib/rulings/chapter-spaces.ts#ruledChapterSpace](../scripts/ingest/lib/rulings/chapter-spaces.ts) · [lib/resolve.ts#resolveSeries](../scripts/ingest/lib/resolve.ts) · [lib/chain.ts](../scripts/ingest/lib/chain.ts) · [assert-overrides.ts#assertChapterSpaces](../scripts/ingest/assert-overrides.ts) · [audit-ui-truth.ts](../scripts/ingest/audit-ui-truth.ts)
+- audit: `ruling_violation`
+- witnesses: fist-of-the-blue-sky-regenesis, to-the-abandoned-sacred-beasts
+- aliases: ruled chapter space, chapter space override, CHAPTER_SPACE_OVERRIDES, ruledChapterSpace, totals re-base, propagated scalar, the 260-that-is-255 class
+- see: N3, N1, I36, P8, G37
 
 ## I — Identity, franchise & structure
 
@@ -4283,6 +4298,7 @@ Any component that renders episode-level data consumes the HYDRATED series (getB
 - cameo rule → `A2`
 - cameo/sliver borrowings → `A2`
 - canon mixed filler only → `T27`
+- canon sliver → `T28`
 - canon-default → `T17`
 - canon-default typing → `T17`
 - canon-tier → `G52`
@@ -4301,6 +4317,8 @@ Any component that renders episode-level data consumes the HYDRATED series (getB
 - change detection before download → `G15`
 - chapter floor → `N26`
 - chapter overlap never proves filler → `T7`
+- chapter space override → `N35`
+- CHAPTER_SPACE_OVERRIDES → `N35`
 - chapter-floor → `N26`
 - chapter-floor invariant → `N26`
 - chapter-number space → `N22`
@@ -4561,6 +4579,7 @@ Any component that renders episode-level data consumes the HYDRATED series (getB
 - Gintama ep-35 report → `A14`
 - Gintama ep-35 rule → `A14`
 - graceful degradation → `P6`
+- graft flip → `T28`
 - greedy staging → `G51`
 - GTO 20/21 lesson → `A3`
 - GTO lesson → `A3`
@@ -4656,6 +4675,7 @@ Any component that renders episode-level data consumes the HYDRATED series (getB
 - LN instrument ruling → `T24`
 - LN volume-space instrument → `T24`
 - LNDS → `A20`
+- load-bearing sliver → `T28`
 - load-bearing test → `T30`
 - LOCKED → `P25`
 - locked series → `P25`
@@ -4840,6 +4860,7 @@ Any component that renders episode-level data consumes the HYDRATED series (getB
 - prevEnd+1 derivation → `A15`
 - principle 8 → `P36`
 - priority of authority → `G5`
+- propagated scalar → `N35`
 - PROTOCOL pin → `R31`
 - protocol pinned → `R31`
 - protocol preamble → `R21`
@@ -4901,6 +4922,7 @@ Any component that renders episode-level data consumes the HYDRATED series (getB
 - row-count identity → `R19`
 - row-count identity first → `R19`
 - ruled air dates → `G53`
+- ruled chapter space → `N35`
 - ruled extensions → `I27`
 - ruled manga link → `I40`
 - ruled NULL air date → `G53`
@@ -4912,6 +4934,7 @@ Any component that renders episode-level data consumes the HYDRATED series (getB
 - RULED_CORRESPONDENCE → `A46`
 - RULED_LABELS → `N31`
 - RULED_STRUCTURE → `I39`
+- ruledChapterSpace → `N35`
 - ruledExtent → `I27`
 - rules live in lib → `P2`
 - rules_applied → `R30`
@@ -4977,6 +5000,8 @@ Any component that renders episode-level data consumes the HYDRATED series (getB
 - sliver rule → `A10`
 - slivers are not mixed → `T28`
 - small-sample rule → `R28`
+- sole adaptation → `T28`
+- sole-adaptation exception → `T28`
 - source is identity → `T25`
 - source is series identity → `T25`
 - source kinds registry → `T25`
@@ -5052,6 +5077,7 @@ Any component that renders episode-level data consumes the HYDRATED series (getB
 - tail honesty → `A37`
 - tail honesty / coverage gate → `A37`
 - taxonomy_conflict (MU status) → `G41`
+- the 260-that-is-255 class → `N35`
 - the 5D 145 lesson → `G57`
 - the ambiguity rule → `I4`
 - the apply discipline → `P15`
@@ -5062,6 +5088,7 @@ Any component that renders episode-level data consumes the HYDRATED series (getB
 - the data cycle → `P1`
 - the DBS relation → `I40`
 - the flag rule → `G1`
+- the FotNS-57 test → `T28`
 - the four crons → `G47`
 - the governing rule → `P11`
 - the L-P queue → `A46`
@@ -5084,6 +5111,7 @@ Any component that renders episode-level data consumes the HYDRATED series (getB
 - Tokyo Ghoul rule → `N22`
 - Toriko deletion → `A6`
 - Toriko deletion precedent → `A6`
+- totals re-base → `N35`
 - translated-max merge boundary → `N19`
 - triage lane → `R27`
 - tsc -b gate → `P27`
@@ -5160,6 +5188,6 @@ Any component that renders episode-level data consumes the HYDRATED series (getB
 
 ## Scoreboard
 
-- rules: 275 (live 260, planned 8, superseded 7)
+- rules: 276 (live 261, planned 8, superseded 7)
 - live data rules with no audit class (the automation backlog): 83
-- by layer: writer 143 · display 23 · both 26 · process 83
+- by layer: writer 144 · display 23 · both 26 · process 83

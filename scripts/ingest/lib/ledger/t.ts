@@ -603,11 +603,11 @@ export const RULES: Rule[] = [
   },
   {
     id: 'T28',
-    aliases: ['mixed_fragment_only', 'T28 discrepancy queue', 'materiality bar for mixed', 'episode job test', "what is this episode's job", 'fragment is an annotation', 'slivers are not mixed', 'Claymore-26 shape', 'mixed threshold'],
+    aliases: ['mixed_fragment_only', 'T28 discrepancy queue', 'materiality bar for mixed', 'episode job test', "what is this episode's job", 'fragment is an annotation', 'slivers are not mixed', 'Claymore-26 shape', 'mixed threshold', 'canon sliver', 'sole adaptation', 'load-bearing sliver', 'graft flip', 'the FotNS-57 test', 'sole-adaptation exception'],
     family: 'T',
     title: "mixed needs a substantial share: the episode's job decides",
     statement:
-      "An episode is `mixed` only when a SUBSTANTIAL share of its own plot is the source — the adapted scenes carry the episode's story (a chapter, an omake, a side story or a gag special that IS the episode's plot all count; community 'filler' meaning 'not mainline' does not override a real adaptation). When an original plot merely quotes a fragment — a cameo, a one-off graft, a transplanted single beat, a restaged closing scene, a recall, a rehash — the episode is `filler` and the tie to the source is RECORDED as an annotation (graft / partial / loose_parallel with the chapters and the why), never as the type. The test is 'what is this episode's job?': the studio ending that quotes one manga scene is filler + graft (Claymore 26); the episode that adapts a whole special chapter inside original framing is mixed (Railgun 41). Consensus on a block is a strong prior that one overlap does not overturn.",
+      "An episode is `mixed` only when a SUBSTANTIAL share of its own plot is the source — the adapted scenes carry the episode's story (a chapter, an omake, a side story or a gag special that IS the episode's plot all count; community 'filler' meaning 'not mainline' does not override a real adaptation). When an original plot merely quotes a fragment — a cameo, a one-off graft, a transplanted single beat, a restaged closing scene, a recall, a rehash — the episode is `filler` and the tie to the source is RECORDED as an annotation (graft / partial / loose_parallel with the chapters and the why), never as the type. The test is 'what is this episode's job?': the studio ending that quotes one manga scene is filler + graft (Claymore 26); the episode that adapts a whole special chapter inside original framing is mixed (Railgun 41). THE SOLE-ADAPTATION EXCEPTION (Sean 2026-08-28, wave 6): a fragment flips an otherwise-filler episode to MIXED when BOTH hold — (1) SOLE ADAPTATION: the pages appear in no other episode (checked against the coverage set), and (2) LOAD-BEARING: the beat is a major plot point of the source (a death, a reveal, an arc close), not a cameo or flavor. A duplicate graft or a trivial first-time beat stays filler + annotation. The exception keeps BOTH promises true: the skip advice ('mostly a clip show') and the position record (the pages ARE adapted, so the row may carry the anchor — calling it filler would falsely mark them never-adapted). First witness: fist-of-the-north-star 57 (a clip show whose tail is the only adaptation of ch 82's closing pages, Rei's death) = mixed + partial{82} + anchor 82. Consensus on a block is a strong prior that one overlap does not overturn.",
     why:
       "Batch 18 wave 2 (Sean, 2026-08-26, with Cursor): verifiers were typing rows mixed on single confirmed scenes — Claymore 24 (the opening section of Scene 60 before the studio ending takes over), soul-eater 40 (Medusa's deal grafted into the original ending), DBS 91/94/95 (one restaged scene each), FMA 40-41 (ch 30's Martel beat as a closer / a recall) — while the community reads every one of those blocks as non-canon. The type must say what the episode IS; the annotation keeps every tie so the UI can surface 'the ch-30 beat is here' without painting the row mixed. Coverage and the frontier stay on the genuinely adapted rows, which is honest.",
     ruledBy: 'Sean',
@@ -620,9 +620,9 @@ export const RULES: Rule[] = [
     ],
     layer: 'process',
     auditClass: ['mixed_fragment_only'],
-    witnesses: ['claymore', 'a-certain-scientific-railgun', 'soul-eater', 'dragon-ball-super', 'fullmetal-alchemist'],
+    witnesses: ['claymore', 'a-certain-scientific-railgun', 'soul-eater', 'dragon-ball-super', 'fullmetal-alchemist', 'fist-of-the-north-star'],
     status: 'live',
-    see: ['T7', 'T8', 'A10', 'T26', 'T27', 'A43'],
+    see: ['T7', 'T8', 'A10', 'T26', 'T27', 'A43', 'A1', 'A4'],
   },
   {
     id: 'T29',

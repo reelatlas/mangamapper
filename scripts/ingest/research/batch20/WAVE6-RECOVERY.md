@@ -32,3 +32,6 @@
 
 ## Next
 The two verifier reports → Sean rules → /apply-batch wave 6 → the cycle (dai 18-99 ×3 still LAST; L-D wave 7 in eights).
+
+## APPLIED (§12.91, 2026-08-28 — Sean ruled, incl. the T28 sole-adaptation exception + N35 + the G32 season fix)
+34 manual anchors, 1 deleted (regenesis 12), 14 continues (regenesis's on ep 9), 26 annotations (incl. FotNS 57 partial{82} + 58 rearranged{80} A42 ack, v9), 4 retypes, 3 flags resolved; totals re-based ×2 (N35); census clean (ruling_violation 0, nonmonotonic 0, display 219/0); deltas explained in §12.91. L-D remainder: 22 pins (wave 7). Follow-ups: regenesis 10/11 typing + S2 parallel-candidate research; FotNS 109-151; four-knights 1-23 (new).

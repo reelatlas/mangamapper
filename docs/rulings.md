@@ -2,7 +2,7 @@
 
 > GENERATED from `scripts/ingest/lib/rulings/**` by `scripts/restructure/gen-rulings.ts` — do not edit by hand. A ruling is an INSTANCE of a rule (`docs/rules.md`); the map is the record, this is the index.
 
-- rulings: 1877 across 225 series/keys · by Sean: 535 · UNRECORDED reasons: 8 · with a retire condition: 89
+- rulings: 1881 across 227 series/keys · by Sean: 539 · UNRECORDED reasons: 8 · with a retire condition: 89
 
 ## Retire conditions (re-evaluate when…)
 
@@ -1014,7 +1014,14 @@
 | `G38` | {"deleteAnchors":{"source":"mu"}} | mu anchors were derived against the conflated (Hokuto no Ken) scope — wiped; the MU writer re-derives on the next run. | Sean 2026-08-24 · scripts/ingest/apply-research-batch.ts |  |
 | `N4` | {"anilist_id":3864,"episode_start":null,"episode_end":null,"was":{"episode_start":23,"episode_end":26,"kind":"ova"},"label":"DVD-only release of withheld TV … | AniList 3864 "DVD episodes" was stored spanning eps 23-26 (kind ova) but the four DVD-only episodes are WITHHELD TV eps (production 16/17/18/21) inside the one continuous 26-episode numbering — not OVAs, not a trailing block. A wrong non-season span can mis-shift AFG numbering conversion, so the component is demoted to ORDER-ONLY (null span; it never counts), facts kept in the label | Sean 2026-08-25 · scripts/ingest/research/batch17/out/fist-of-the-blue-sky.json, scripts/ingest/apply-rulings-20260825b.ts, §12.51 |  |
 
-### fist-of-the-north-star (8)
+### fist-of-the-blue-sky-regenesis (2)
+
+| rule | value | reason | ruled | retires when |
+|---|---|---|---|---|
+| `T6` | {"12":"filler"} | Batch 20 wave 6 (verified R24), Sean ruled 2026-08-28: ep 12 is the Nahash/Genesis branch aired ahead of the ReGenesis comic (ja-WP 「コミック版に先駆けて」) and exists in NO chapter of the instrument (the original Souten no Ken, N35 space 255) — filler + divergence; the stored MU anchor 88 was the 2006 TV series' endpoint (G37) and is deleted (A1). The honest terminal is ep 9 → 254 v22 (medium) with the post_series continue 255 ON EP 9 (the verifier's apply-blocking catch: a continue on a row whose anchor is deleted lands nothing). | Sean 2026-08-28 · scripts/ingest/research/batch20/out/fist-of-the-blue-sky-regenesis.json, scripts/ingest/research/batch20/verify/fist-of-the-blue-sky-regenesis.md |  |
+| `N35` | {"chapters":255} | The instrument is the ORIGINAL 蒼天の拳 (the anime's 原作 credit; AniList ADAPTATION edge 100408 → 31148) and its real length is 255 chapters: Coamix's own digital index runs 1-255 complete with zero gaps and nothing above (243 天授の儀 終焉 … 255 第62代北斗神拳伝承者), ja-WP's prose says 全255話. The stored/AniList/MU/fandom 260 is a propagated scalar — no title, TOC or chapter page names 256-260 anywhere (the verifier hunted them; ja-WP's own infobox prints 260 against its prose, which is where the scalar likely came from). Batch 20 wave 6, verified R24. | Sean 2026-08-28 · scripts/ingest/research/batch20/out/fist-of-the-blue-sky-regenesis.json, scripts/ingest/research/batch20/verify/fist-of-the-blue-sky-regenesis.md |  |
+
+### fist-of-the-north-star (9)
 
 | rule | value | reason | ruled | retires when |
 |---|---|---|---|---|
@@ -1026,6 +1033,7 @@
 | `C8` | {"continue_from_chapter":211} | HnK2 end = ch 210; ch 211-245 never animated. | session 2026-08-23 · scripts/ingest/apply-research-batch-6.ts |  |
 | `T6` | {"5":"filler"} | Batch 20 wave 3 (verified R24, Sean ruled 2026-08-27): ep 5 is an anime-invented castle and Joker's fire trap (Toei's own synopsis; ja-WP's anime-original marker; the fandom King-arc page) with the Shin-betrayal backstory delivered only as flashback (A44) — T28's fragment branch: filler + graft {8}. AFL 'Mixed' / AFG unmarked are the dissent (one lineage). | Sean 2026-08-27 · scripts/ingest/research/batch20/out/fist-of-the-north-star.json, scripts/ingest/research/batch20/verify/fist-of-the-north-star.md |  |
 | `T6` | {"58":"mixed","61":"filler","75":"mixed","78":"filler","83":"filler","84":"mixed","86":"mixed","91":"mixed"} | 61/78/83 zero canon (Bugal filler, recap-block opener, filler — hokuto.fandom + Finn Clark part-3/4 reviews; AFL dissents, ruled fandom + accounting beats AFL); 58/75/84/86/91 carry canon alongside original material → mixed. | Sean 2026-08-25 · scripts/ingest/research/batch17/out/fist-of-the-north-star.json |  |
+| `T6` | {"53":"filler","54":"mixed","57":"mixed"} | Batch 20 wave 6 (verified R24), Sean ruled 2026-08-28: 53 → filler + graft{78} (its ch-78 fragment DUPLICATES coverage — ep 52's C1 straddle enters 78 and ep 54 partials 78-79 — so the T28 sole-adaptation exception does not apply); 54 → mixed + partial{78-79} (a substantial share); 57 → MIXED under the sole-adaptation exception, its first ruling: the clip show's tail is the ONLY adaptation of ch 82's closing pages (Rei's death — fandom Filler page: 'Clip show until Rei's death at the end'; hokutosite/RQ87 agree) — load-bearing + sole, so the row keeps the anchor (repaired 83 → 82) and the skip advice lives in partial{82}. | Sean 2026-08-28 · scripts/ingest/research/batch20/out/fist-of-the-north-star-w6.json, scripts/ingest/research/batch20/verify/fist-of-the-north-star-w6.md |  |
 
 ### food-wars (33)
 
@@ -2709,6 +2717,12 @@
 | `N11` | {"drop":[25,26],"shifts":[]} | Queue-2 Group C demotion: the 2nd Specials bonuses AFL numbers as 25-26 are order-only in the community count; trailing, so the rows drop with no shift. | Sean 2026-08-23 |  |
 | `T29` | {"position":12.2,"record":{"kind":"ova","anilistId":13851}} | AniList 13851 'To LOVE-Ru Darkness OVA' format=OVA, 6 eps, from 2012-08-17. en-WP To Love Ru infobox: type=ova, 'To Love Ru Darkness', released August 17, 2012. | Sean 2026-08-27 · scripts/ingest/research/batch19/out/watch-order-kinds.json, https://anilist.co/anime/13851, https://en.wikipedia.org/wiki/To_Love_Ru |  |
 | `T29` | {"position":24.1,"record":{"kind":"special","anilistId":21852}} | AniList 21852 'To LOVE-Ru Darkness 2nd Specials' format=SPECIAL, 2 eps, 2015-10-29 — the '2nd eps 13-14' the entry names. NOTE: appears to be the same work as the @24.5 entry — see flags. | Sean 2026-08-27 · scripts/ingest/research/batch19/out/watch-order-kinds.json, https://anilist.co/anime/21852 |  |
+
+### to-the-abandoned-sacred-beasts (1)
+
+| rule | value | reason | ruled | retires when |
+|---|---|---|---|---|
+| `N35` | {"chapters":87,"volumes":15} | The manga's own numbering is 1-87 across 15 volumes: ja-WP 全87話, en-WP's chapter list, MangaDex lastChapter 87.5, and Magazine Pocket's own 第N話 issue titles all agree; the stored total_chapters 120 (AniList) matches no sourceable numbering. Closes flag #681. The full volume-boundary table (v1 1-5 … v15 80-87) is in the wave-6 verdict's structure.notes. Batch 20 wave 6. | Sean 2026-08-28 · scripts/ingest/research/batch20/out/to-the-abandoned-sacred-beasts.json, https://ja.wikipedia.org/wiki/かつて神だった獣たちへ, https://en.wikipedia.org/wiki/To_the_Abandoned_Sacred_Beasts |  |
 
 ### to-your-eternity (19)
 

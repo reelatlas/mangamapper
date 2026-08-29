@@ -69,7 +69,10 @@ export async function applyMuFrontier(
   // G32 gate 0 — labelled segments: only THIS entry's segments may pin
   const year = (d?: string | null) => (d && /^\d{4}/.test(d) ? Number(d.slice(0, 4)) : null);
   const segments = parseCoverageSegments(muEnd);
-  const picked = pickEntrySegments(segments, { airedEpisodes: s.aired_episodes, startYear: year(s.start_date), endYear: year(s.end_date) });
+  // the mf-ghost S3 lesson (wave 6): a season-numbered segment beyond this entry's own
+  // season count is another entry's — count the seasons we actually contain
+  const { count: seasonComponents } = await db.from('series_components').select('*', { count: 'exact', head: true }).eq('series_id', s.id).eq('kind', 'season');
+  const picked = pickEntrySegments(segments, { airedEpisodes: s.aired_episodes, startYear: year(s.start_date), endYear: year(s.end_date), seasonCount: Math.max(1, seasonComponents ?? 0) });
   // an UNRESOLVED string (no entry marker on any segment) keeps today's pin;
   // the coverage audit lists it (mu_pin_multiwork_unresolved) for a ruling
   const pairs = segments.length > 1 ? picked.chosen.map((x) => ({ volume: x.volume, chapter: x.chapter })) : parseCoverageAll(muEnd).pairs;

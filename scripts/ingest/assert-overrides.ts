@@ -22,6 +22,7 @@ import { LOCKED } from './lib/rulings/permanence';
 import { arcsPartitionProblems, RULED_ARCS } from './lib/rulings/arcs';
 import { RULED_CORRESPONDENCE, upsertCorrespondence } from './lib/rulings/correspondence';
 import { SOURCE_RELATION_OVERRIDES } from './lib/rulings/source-relations';
+import { CHAPTER_SPACE_OVERRIDES } from './lib/rulings/chapter-spaces';
 
 const DRY = process.argv.includes('--dry-run');
 
@@ -245,8 +246,27 @@ async function assertParallelNoAnchors() {
   console.log(`[assert-overrides] parallel series (A46): ${Object.values(SOURCE_RELATION_OVERRIDES).filter((r) => r.relation === 'parallel').length} ruled, ${removed} anchors removed${DRY ? ' — DRY RUN' : ''}`);
 }
 
+// N35: series totals mirror the ruled chapter space (a re-derive cannot undo it)
+async function assertChapterSpaces() {
+  let n = 0;
+  for (const [sid, r] of Object.entries(CHAPTER_SPACE_OVERRIDES)) {
+    const { data: s } = await db.from('series').select('total_chapters, total_volumes').eq('id', sid).maybeSingle();
+    if (!s) continue;
+    const want = { total_chapters: r.chapters, total_volumes: r.volumes ?? s.total_volumes };
+    if (s.total_chapters === want.total_chapters && s.total_volumes === want.total_volumes) continue;
+    n++;
+    console.log(`  ${sid}: totals ${s.total_chapters}/${s.total_volumes} → ${want.total_chapters}/${want.total_volumes} (N35)`);
+    if (!DRY) {
+      const { error } = await db.from('series').update(want).eq('id', sid);
+      if (error) throw new Error(`${sid}: ${error.message}`);
+    }
+  }
+  console.log(`[assert-overrides] chapter spaces (N35): ${Object.keys(CHAPTER_SPACE_OVERRIDES).length} ruled, ${n} asserted${DRY ? ' — DRY RUN' : ''}`);
+}
+
 async function main() {
   await assertStandings();
+  await assertChapterSpaces();
   await assertParallelNoAnchors();
   await assertArcs();
   await assertCorrespondence();

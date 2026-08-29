@@ -70,6 +70,7 @@ import { AIR_DATE_OVERRIDES } from './rulings/air-dates';
 import { EPISODE_TITLE_OVERRIDES } from './rulings/episode-titles';
 import { aflAnimeCanonStanding, deriveSourceKind, mangaStatusOf, seriesHasSource } from './rulings/source-kinds';
 import { deriveSourceRelation, pickMangaNode } from './rulings/source-relations';
+import { ruledChapterSpace } from './rulings/chapter-spaces';
 import { withholdAirdateRegressions, type AirdateWithheld } from './airdate-order';
 
 // Community-count rulings (Sean 2026-08-24: the community-consensus episode
@@ -609,12 +610,15 @@ export async function resolveSeries(runId: number, slug: string): Promise<{ epis
     external_links: media.externalLinks,
     manga_anilist_id: manga?.id ?? null,
     manga_status: mangaStatusOf(manga),
-    ...(await applyScope(slug, {
-      total_volumes: manga?.volumes ?? null,
-      total_chapters: manga?.chapters ?? null,
-      manga_start_volume: null,
-      manga_start_chapter: null,
-    })),
+    ...(await (async () => {
+      const scoped = await applyScope(slug, {
+        total_volumes: manga?.volumes ?? null,
+        total_chapters: manga?.chapters ?? null,
+        manga_start_volume: null,
+        manga_start_chapter: null,
+      });
+      return { ...scoped, ...ruledChapterSpace(id, scoped) }; // N35: a ruled chapter space wins
+    })()),
     search_text: searchTextFor(
       [media.title.english, media.title.romaji, media.title.native, page.title],
       media.synonyms,

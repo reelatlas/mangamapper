@@ -55,7 +55,7 @@ export function parseCoverageSegments(text: string | null): CoverageSegment[] {
   return out;
 }
 
-export type EntryWindow = { airedEpisodes: number; startYear?: number | null; endYear?: number | null };
+export type EntryWindow = { airedEpisodes: number; startYear?: number | null; endYear?: number | null; /** how many seasons THIS entry contains (series_components kind=season; default 1). A season-numbered segment label above it names ANOTHER entry (the mf-ghost S3 lesson, wave 6). */ seasonCount?: number };
 
 // "this entry" markers anywhere in the label: a TV tag, a season tag (also
 // "S1+OVA", "S2P2", "Season 3"), an episode ("E13", "EP 119"), a year inside
@@ -74,6 +74,16 @@ export function segmentIsEntry(seg: CoverageSegment, w: EntryWindow): boolean | 
     const lo = w.startYear - 1, hi = (w.endYear ?? w.startYear) + 1;
     if (years.some((y) => y >= lo && y <= hi)) return true;
     return false; // a year outside the window names another work ("(2001)" vs Ultimate 2006; "(1998)" vs the 2011 series)
+  }
+  const season = /(^|[^A-Za-z])S(\d+)(P\d+)?(?![A-Za-z0-9])/i.exec(label) ?? /Season\s*(\d+)/i.exec(label);
+  if (season) {
+    const n = Number(season[2] ?? season[1]);
+    // the mf-ghost lesson (wave 6, 2026-08-28): "Vol 5, Chap 56 (S1) / … (S2) / Vol 17, Chap 194 (S3)"
+    // on a single-season entry — a season number beyond the entry's own season count is another
+    // entry's segment, never this one's. A whole-run (stitched) entry keeps its seasons.
+    // only restrict when the caller SUPPLIED a season count (applyMuFrontier does,
+    // from series_components); without it today's whole-run behaviour is kept
+    if (Number.isFinite(n) && w.seasonCount != null) return n <= w.seasonCount;
   }
   if (ENTRY_MARKER.test(label)) return true;
   if (FOREIGN_LABEL.test(label)) return false;

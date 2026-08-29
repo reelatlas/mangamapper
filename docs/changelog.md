@@ -771,6 +771,42 @@
    110/3/18 → 108/5/18; ruling_violation 0; edges redeployed (the map is
    lib). The medium-confidence rows were flagged as exactly the ones where
    Sean's judgment overrides cleanly — this is that, on the record.
+91. ✅ **BATCH 20 WAVE 6 APPLIED (2026-08-28; FotNS 29-56 + L-D ×7; two
+   verifier reports, both sound; Sean ruled incl. TWO NEW RULE MOTIONS).**
+   (1) **The T28 SOLE-ADAPTATION EXCEPTION** (a universal rule, not a FotNS
+   ruling): a fragment flips an otherwise-filler episode to MIXED when it is
+   the SOLE adaptation of a LOAD-BEARING source beat — both halves required;
+   a duplicate graft or trivial first-time beat stays filler. Keeps both
+   promises true (skip advice AND the position record — filler would falsely
+   mark the pages never-adapted). First witness fist-of-the-north-star 57
+   (mixed + partial{82} + anchor repaired 83 → 82); the mixed_fragment_only
+   census message now states the criterion (its 16 rows = the triage queue);
+   ledger statement + research-agent.md amended. (2) **N35 ruled chapter
+   spaces** (lib/rulings/chapter-spaces.ts → resolve + chain + the healer +
+   ruling_violation): regenesis 260 → 255 (Coamix's complete index; the five
+   a propagated scalar), sacred-beasts 120 → 87/15 (flag #681). (3) **The
+   G32 season-segment fix** (the mf-ghost lesson): a season-numbered label
+   beyond the entry's OWN season count (series_components) is another
+   entry's segment — an S1-only entry no longer inherits S3's endpoint;
+   soft default keeps whole-run behaviour; 4 new tests (18/18). (4) Applied:
+   34 manual anchors (FotNS 29-56 complete, ch 36-82, incl. the ep-57 fence
+   repair and ep 58 → 80 + rearranged{80} A42 ack; the seven L-D finales),
+   1 anchor DELETED (regenesis 12 — the 2006 series' pin, G37/A1), 14
+   curated continues (regenesis's moved to the ep-9 terminal — the
+   verifier's apply-blocking catch), 26 annotations (the verifier's
+   ≈246-254 text fix folded), 4 T6 retypes (FotNS 53 filler / 54 mixed /
+   57 mixed; regenesis 12 filler), 3 flags resolved (771 / 681 / 541).
+   Census deltas all explained: mu_pin_unverified 29 → 23 (six verified;
+   regenesis's deleted; four-knights-of-apocalypse is NEW cron drift, also
+   +1 anchor_gap_research — queued); frontier_tail_null +1 = regenesis
+   10-11 (flagged anime-original, follow-up typing); annotation_without_row
+   +1 = shy 24 (the known AFL-lag synthesized row, same as its
+   anchor_without_row); asterisk_unreviewed +6 (sign-off queue);
+   ruling_violation 0, anchor_nonmonotonic 0, display 219/0 after the A42
+   ack. Traps: the four MU string pathologies (season labels; 'Abridged' =
+   last COMPLETE chapter; '(Including OVA)' mixes adaptations; an unlabelled
+   1→N on a sequel entry = the predecessor's run) → recovery file +
+   research-agent already carries the shapes. L-D remainder: 22 pins.
 85. ✅ **CONSOLIDATE DEEP after batch 20 wave 4 (2026-08-28; P21 —
    `applyEpisodeFloor`'s input changed: `translatedMax`).** Steps 0-8
    satisfied by §12.84's save point. Rescan (step 9): (a) the floor probe

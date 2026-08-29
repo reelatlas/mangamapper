@@ -16,7 +16,6 @@
 // Consumer shape: Record<seriesId, Record<episode, type>>.
 
 import type { RulingEntry } from './types';
-
 export const range = (from: number, to: number, type: string) =>
   Object.fromEntries(Array.from({ length: to - from + 1 }, (_, i) => [from + i, type]));
 
@@ -818,6 +817,27 @@ export const ENTRIES: RulingEntry<EpisodeTypes>[] = [
     ruledOn: '2026-08-27',
     cite: ['scripts/ingest/research/batch20/out/toriko.json', 'scripts/ingest/research/batch20/verify/toriko.md'],
   },
+  {
+    seriesId: 'fist-of-the-north-star',
+    ruleId: 'T6',
+    value: { 53: 'filler', 54: 'mixed', 57: 'mixed' },
+    reason:
+      "Batch 20 wave 6 (verified R24), Sean ruled 2026-08-28: 53 → filler + graft{78} (its ch-78 fragment DUPLICATES coverage — ep 52's C1 straddle enters 78 and ep 54 partials 78-79 — so the T28 sole-adaptation exception does not apply); 54 → mixed + partial{78-79} (a substantial share); 57 → MIXED under the sole-adaptation exception, its first ruling: the clip show's tail is the ONLY adaptation of ch 82's closing pages (Rei's death — fandom Filler page: 'Clip show until Rei's death at the end'; hokutosite/RQ87 agree) — load-bearing + sole, so the row keeps the anchor (repaired 83 → 82) and the skip advice lives in partial{82}.",
+    ruledBy: 'Sean',
+    ruledOn: '2026-08-28',
+    cite: ['scripts/ingest/research/batch20/out/fist-of-the-north-star-w6.json', 'scripts/ingest/research/batch20/verify/fist-of-the-north-star-w6.md'],
+  },
+  {
+    seriesId: 'fist-of-the-blue-sky-regenesis',
+    ruleId: 'T6',
+    value: { 12: 'filler' },
+    reason:
+      "Batch 20 wave 6 (verified R24), Sean ruled 2026-08-28: ep 12 is the Nahash/Genesis branch aired ahead of the ReGenesis comic (ja-WP 「コミック版に先駆けて」) and exists in NO chapter of the instrument (the original Souten no Ken, N35 space 255) — filler + divergence; the stored MU anchor 88 was the 2006 TV series' endpoint (G37) and is deleted (A1). The honest terminal is ep 9 → 254 v22 (medium) with the post_series continue 255 ON EP 9 (the verifier's apply-blocking catch: a continue on a row whose anchor is deleted lands nothing).",
+    ruledBy: 'Sean',
+    ruledOn: '2026-08-28',
+    cite: ['scripts/ingest/research/batch20/out/fist-of-the-blue-sky-regenesis.json', 'scripts/ingest/research/batch20/verify/fist-of-the-blue-sky-regenesis.md'],
+  },
+
 ];
 
 export const EPISODE_TYPE_OVERRIDES: Record<string, EpisodeTypes> = ENTRIES.reduce<Record<string, EpisodeTypes>>((acc, e) => {

@@ -30,6 +30,7 @@ import { deriveSourceKind, seriesHasInstrument, seriesHasSource, SOURCE_TYPE_OVE
 import { deriveSourceRelation, isParallelSeries, MANGA_LINK_OVERRIDES } from './lib/rulings/source-relations';
 import { arcOfEpisode, arcsPartitionProblems, RULED_ARCS } from './lib/rulings/arcs';
 import { correspondenceCoverage, correspondenceProblem, type Alignment } from './lib/rulings/correspondence';
+import { CHAPTER_SPACE_OVERRIDES } from './lib/rulings/chapter-spaces';
 import { pickManga } from './lib/resolve';
 import { annotationProblem } from './lib/annotations';
 import { REVIEWED_NUMBERED_SPECIALS } from './lib/rulings/reviewed-specials';
@@ -707,6 +708,8 @@ async function main() {
       const wantRel = deriveSourceRelation(row.id, hasSrc);
       if (hasSrc && !row.source_relation) classes.source_relation_missing.push(row.id);
       if ((row.source_relation ?? null) !== wantRel) classes.ruling_violation.push(`${row.id}: source_relation '${row.source_relation}' ≠ derived '${wantRel}' (I40) — run heal-source-kinds`);
+      const space = CHAPTER_SPACE_OVERRIDES[row.id];
+      if (space && (row.total_chapters !== space.chapters || (space.volumes != null && row.total_volumes !== space.volumes))) classes.ruling_violation.push(`${row.id}: totals ${row.total_chapters}/${row.total_volumes} ≠ ruled ${space.chapters}/${space.volumes ?? '·'} (N35) — run assert-overrides`);
       const ruledLink = MANGA_LINK_OVERRIDES[row.id];
       if (ruledLink != null && row.manga_anilist_id !== ruledLink) classes.ruling_violation.push(`${row.id}: manga link ${row.manga_anilist_id} ≠ ruled ${ruledLink} (I40) — re-resolve (heal-source-kinds)`);
       const parallel = isParallelSeries(row.id);
@@ -920,7 +923,7 @@ async function main() {
       if (!hitsBy.has(e.series_id)) hitsBy.set(e.series_id, []);
       hitsBy.get(e.series_id)!.push(`${e.number} [${[...kinds].join('+')}]`);
     }
-    for (const [sid, rows] of hitsBy) classes.mixed_fragment_only.push(`${sid}: ${rows.length} mixed row(s) with only fragment ties and no anchor — ${rows.join(', ')} — T28 would say filler + annotation; Sean confirms the reverse or keeps the call`);
+    for (const [sid, rows] of hitsBy) classes.mixed_fragment_only.push(`${sid}: ${rows.length} mixed row(s) with only fragment ties and no anchor — ${rows.join(', ')} — T28: a fragment keeps mixed ONLY if it is the SOLE adaptation of a load-bearing source beat (the FotNS-57 test, 2026-08-28); otherwise filler + annotation — triage each`);
   }
   // P25 permanence (2026-08-26): the mechanical half of the lock criteria —
   // finished series (source finished too where an instrument exists) whose
