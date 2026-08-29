@@ -1,0 +1,60 @@
+{
+  "series_id": "shy",
+  "summary": "MU's unverified pin on ep 24 is CORRECT and is the S2 finale's coverage, not S1's. Our row 24 is S2 ep 12 (第24話「どうか元気で」, 2024-09-24) and it adapts SHY ch 72-74 in running order: ch 72 任務完了 (Keheheh captured), ch 73 涅槃寂静 (Utsuro entrusts her ring and vanishes), ch 74 どうか元気で (the press conference and the goodbyes) — the chapter's Japanese title IS the episode's title. Ch 74 sits in volume 9, which MangaDex's volume aggregate (vol 9 = ch 69-77) and Akita Shoten's own vol-9 blurb (「東京奪還編、決着!!」) both confirm, so MU's \"Vol 9, Chap 74 (S2)\" segment is right in both fields and the pin is REDUNDANT once the manual anchor lands (G56). Ep 23 ends on the last page of ch 71 (Shy passes out), so there is no leading straddle and START = 72 (A10). One wrinkle: the anime closes on Teru's monologue and the Teru/Iko 「ヒーローですから」 beat instead of ch 74's final panel (Spirit phoning about Tzveta's ring, the hook into ch 75) — recorded as a divergence, not a C1, because ch 75's own first page restates that context and both the wiki (unqualified \"Chapter 74\") and Lnovel put the resume at 9巻75話. The post-series resume is ch 75; ch 82 and 83 are already animated (eps 14 and 13) and must be skipped on arrival.",
+  "anchors": [
+    {
+      "episode": 24,
+      "end_chapter": 74,
+      "start_chapter": 72,
+      "chapters_adapted": "72-74",
+      "volume": 9,
+      "confidence": "high",
+      "note": "A4 END = ch 74 「どうか元気で」, whose title is the episode's own title; A10 START = ch 72 whole (ep 23 closes on ch 71's last page — Shy passing out — with no page split, and the wiki page-qualifies splits elsewhere, e.g. ep 22 = \"Chapter 68 (p. 1-2)\"). Volume 9 per MangaDex's volume aggregate (vol 9 = ch 69-77) and Akita Shoten's vol-9 blurb 「東京奪還編、決着!!」. MU's S2 segment \"Vol 9, Chap 74 (S2)\" is confirmed — pin REDUNDANT (G56), no G37 correction needed.",
+      "sources": [
+        "https://shy.fandom.com/api.php?action=parse&page=Episode_24&prop=wikitext&format=json",
+        "https://shy.fandom.com/api.php?action=parse&page=Chapter_74&prop=wikitext&format=json",
+        "https://api.mangadex.org/manga/4809bb6c-1af2-41c5-9291-983027602d7f/aggregate",
+        "https://ja.wikipedia.org/wiki/SHY_(%E6%BC%AB%E7%94%BB)",
+        "https://shy-anime.com/story/2nd/24",
+        "https://www.akitashoten.co.jp/comics/4253220436"
+      ]
+    }
+  ],
+  "continue_points": [
+    {
+      "episode": 24,
+      "continue_chapter": 75,
+      "kind": "post_series",
+      "note": "C5: the anime's running-order frontier is ch 74, so resume at ch 75 「スペース・イン・ザ・スペースシップ」 (volume 9). On arrival, SKIP ch 82 「ゴースト・イン・ザ・レイン」 and ch 83 「ヒーローズ・ハイ」 — both were already animated out of order as ep 14 and ep 13 (C3 skip note). Never adapted: ch 75-81 and ch 84-293 (the manga ran to 293 chapters / 33 volumes). Ch 74's very last panel (Spirit phoning about Tzveta's ring) was not animated, but ch 75 opens by restating it, so there is nothing to go back for.",
+      "sources": [
+        "https://shy.fandom.com/api.php?action=parse&page=Chapter_75&prop=wikitext&format=json",
+        "https://shy.fandom.com/api.php?action=parse&page=Chapter_83&prop=wikitext&format=json",
+        "https://shy.fandom.com/api.php?action=parse&page=Episode_13&prop=wikitext&format=json",
+        "https://lnovel.jp/series/4319/",
+        "https://ja.wikipedia.org/wiki/SHY_(%E6%BC%AB%E7%94%BB)"
+      ]
+    }
+  ],
+  "anchor_hostile": [],
+  "annotations": [
+    {
+      "episodes": [24],
+      "kind": "divergence",
+      "chapters": "74",
+      "note": "The finale ends on Teru's closing monologue (with an inserted Stigma line) and the Teru/Iko 「ヒーローですから」 exchange in place of ch 74's final panel, Spirit's call about Tzveta's ring — the hook into ch 75. Everything else in the episode tracks ch 72-74 in order; the omission is one panel, so this is a divergence annotation, not a C1 mid-chapter continue."
+    }
+  ],
+  "repairs": [],
+  "type_corrections": [],
+  "structure": {
+    "notes": "ONE chapter space: the Weekly Shonen Champion serialization, 1-293 in 33 volumes (ja-WP 話数=全293話 / 巻数=全33巻; AniList 293; MangaDex lastChapter 293, lastVolume 33). Flag #771 (\"MU chapter numbering diverges >20% from AniList count — likely different editions\") is a FALSE alarm: MU's series record lists status \"33 Volumes (Complete)\" and its latest_chapter is 211 today (210 when the flag fired) — that field is the chapter of MU's latest-DATED release records, not an edition signal and not a ceiling. There is no second edition; the reading edition is the serialization space our anchor uses. Row identity: our 24 rows stitch two seasons (S1 eps 1-12, 2023-10-03..12-19; S2 『東京奪還編』 eps 13-24, 2024-07-02..09-24) and ja-WP numbers them cumulatively 1-24, so row 24 = S2's 12th episode; no numbering fork. MU's coverage string parses cleanly per season: start \"Vol 1, Chap 1 (S1) / Vol 4, Chap 31 (S2)\", end \"Vol 4, Chap 30 (S1) / Vol 9, Chap 74 (S2) Also adapted Chap 82&83\" — the segment for THIS entry's S2 finale is Vol 9 / Chap 74 and it is correct. Volume boundary evidence gathered on the way (MangaDex aggregate): vol 8 = ch 60-68, vol 9 = ch 69-77, vol 10 = ch 78-86 + 86.5; corroborated by shy.fandom chapter pages (ch 71 = \"the third chapter of Volume 9\", ch 74 = \"the sixth chapter of Volume 9\"). Out-of-order grafts in the run (not this task's rows, listed for the record, all from shy.fandom episode infoboxes cross-checked against the chapter pages' reverse `episode` field): ep 12 = ch 29, 30, 36; ep 13 = ch 83 then 31; ep 14 = ch 82, 32, 33 (p. 1-10). Chapter 83's Japanese title ヒーローズ・ハイ is ep 13's title exactly — title = title. shy.fandom is a single wiki (shy.fandom.com, \"Shy Wiki\"); its episode pages and its chapter pages are one source, so the second source for the anchor is MangaDex's volume aggregate + chapter titles plus ja-WP's per-episode アニメ版あらすじ and the official site's ep-24 synopsis.",
+    "order_only": []
+  },
+  "flags_for_sean": [
+    "C1 vs C5 fork on the finale (I chose C5 = 75): shy.fandom's ep-24 infobox lists \"Chapter 74\" UNQUALIFIED while the same wiki page-qualifies partial chapters elsewhere (ep 22 = \"Chapter 68 (p. 1-2)\", ep 14 = \"Chapter 33 (p. 1-10)\"), and Lnovel independently instructs readers to resume at 9巻75話. But a beat-by-beat fan log of the broadcast (sayo.blog) shows the episode closing on Teru's monologue and the Teru/Iko exchange, where ch 74 closes on Spirit's phone call about Tzveta's ring. Strict C1 (\"ANY mid-chapter ending continues in the straddled chapter\") would put the continue at 74; I did not, because the unanimated material is a single hook panel that ch 75's first page restates. Recorded as a divergence annotation instead. https://sayo.blog/shy_24/",
+    "Flag #771 recommend DISMISS: no edition divergence exists. MU's own record says \"33 Volumes (Complete)\" and its latest_chapter (211) is a latest-DATED-release artifact, not a chapter ceiling; ja-WP, AniList and MangaDex all agree the manga is 293 chapters / 33 volumes.",
+    "Flag #377 [parse_integrity] {\"empty\":true} was not investigated — outside this task's one-row scope; note that AFL/AFG appear to have no per-episode chapter data for this series (nothing in the context's TARGET/AFL columns), so the flag may simply be an absent source page.",
+    "Coverage gap for a future lane, not this task: after this verdict the series still has exactly ONE anchor (ep 24). Eps 1-23 are unanchored and the run is not a clean 1:1 walk — eps 12/13/14 graft ch 36, 83 and 82 out of order (a `graft` annotation and an A12 'relocated opener is never the START' call would be needed on eps 13 and 14). shy.fandom carries per-episode `adapted from` fields with page splits for the whole run, so the block is cheap to close.",
+    "The context file's TARGET rows / rows-near-the-range blocks were EMPTY for this series, so ep 24's stored standing was not printed to me; I propose no type change and the recap baseline line below records it as unprinted rather than guessing canon."
+  ]
+}
