@@ -1,0 +1,127 @@
+{
+  "series_id": "fist-of-the-blue-sky-regenesis",
+  "summary": "THE PIN IS ANOTHER ADAPTATION'S (G37). MangaUpdates' coverage string on Souten no Ken (MU 67026286308) is a SINGLE UNLABELLED segment, start 'Vol 1, Chap 1' / end 'Vol 8, Chap 88' — the 2006 TV series, not this 2018 ONA: the 2006 anime is the one that starts at chapter 1, its ep 25 carries chapter 86's own title (祝宴と銃声) and its finale is chapter 88 蘇る想い (Yu Ling's memory returning); REGENESIS opens AFTER that point and MU's ReGenesis-manga entry (55727817104) carries a NULL anime field. THE SPACE: the 88 lives in the ORIGINAL 蒼天の拳's numbering (22 volumes), which is also the space our instrument must use — the anime's 原作 credit on ja-WP's staff table is 漫画「蒼天の拳」 for BOTH the 2006 series and REGENESIS, and AniList's ADAPTATION edge for anime 100408 points at manga 31148 (the original), not at the 2017 sequel manga 蒼天の拳 リジェネシス (AniList 107892, 6 vols / ~30 ch — a space in which 'chapter 88' cannot exist). So the stored totals do NOT mix editions; they are the original's — but they are 5 chapters LONG: Coamix's own digital index (mangahot.jp) runs 1-255 and ja-WP says 全255話, while AniList/MU/the fandom all print 260. Repair proposed, flagged. EP 12 IS ANIME-ORIGINAL: the official COAMIX synopsis has the whole episode on Kenshiro vs Simeon Nagit of 天斗聖陰拳, a fist ja-WP says appears 「『REGENESIS』より登場する」 and was put on screen 「コミック版に先駆けて」 (ahead of the comic) — the Nahash / Genesis branch ja-WP describes as 「原作版の途中から分岐してアニメオリジナルストーリーに繋がる」. Filler under T27, anchor_hostile under A1, MU's 88 deleted. The honest terminal is ep 9: eps 7-9 skip the Du Tianfeng sea battle (190-195) and the entire Liu Zongwu / 天授の儀 arc (196-243) and restage the manga's CLOSING Kenshiro-Yasaka resolution at Ningbo's Taishoin (鎮魂の塔 = ch 233, 勾玉 = ch 251, 北斗の末裔 = ch 246, Erika's forgiveness at Fei Yan's grave = ch ≈254, all vol 22) — a terminal near the manga's last page reached over a 56-chapter hole.",
+  "anchors": [
+    {
+      "episode": 9,
+      "end_chapter": 254,
+      "start_chapter": 254,
+      "chapters_adapted": "≈254 (vol 22 — Yasaka before Fei Yan's grave, Erika's mercy and the magatama's history; the episode's other half, Guise's burn marks and the Nahash, is anime-original)",
+      "volume": 22,
+      "confidence": "medium",
+      "note": "HONEST TERMINAL (G56/A4), delivered because the finale is anime-original (A1). The COAMIX synopsis for ep 9 is the manga's closing beat: 「飛燕の墓前でエリカが手を合わせていた。許しを請うべくエリカの前に進み出るヤサカ。エリカはヤサカの胸元に光る勾玉を目にし、勾玉に秘められた驚きの来歴を語る」 — ja-WP's Yasaka entry puts exactly that scene AFTER the 天授の儀 and after the duel he loses (「飛燕の墓前でエリカと会い、葉から借り受けた拳銃を渡し…一応の赦しを得た」), citing 原作22巻245話 for the preceding beat, i.e. vol 22 / ch 245+. Coamix's own chapter index puts the post-ritual tail at 244 長き旅の果てに → 246 北斗の末裔 → 251 勾玉の思い → 253 桜下の語らい → 254 慈悲深き幼心 → 255 第62代北斗神拳伝承者; 254 (慈悲深き幼心 — 'the merciful child's heart') is the grave-forgiveness chapter. MEDIUM: no source names the chapter number for this episode — the sourced band is 253-255, vol 22, and the arc placement (the manga's final chapters) is what is firm. Ep 9 is also a `rearranged` position: ch 190-243 are jumped, not adapted.",
+      "sources": [
+        "https://souten-regenesis.com/story/662",
+        "https://ja.wikipedia.org/wiki/%E8%92%BC%E5%A4%A9%E3%81%AE%E6%8B%B3",
+        "https://mangahot.jp/site/works/b_R0002",
+        "https://hokuto.fandom.com/api.php?action=parse&page=Souten_no_Ken:_Re:Genesis&prop=wikitext&format=json"
+      ]
+    }
+  ],
+  "continue_points": [
+    {
+      "episode": 12,
+      "continue_chapter": 255,
+      "kind": "post_series",
+      "note": "C5 — furthest first-time coverage (ep 9 ≈ ch 254, vol 22) + 1. READ THE NOTE BEFORE THE NUMBER: this anime never adapts ch 89-104 (the tail of the Zhang Lieshan arc the 2006 series stopped inside), ch 190-195 (the Du Tianfeng sea battle) or ch 196-243 (the whole Liu Zongwu arc and the 天授の儀) — hokuto.fandom: 'abridged, truncated versions of the Liu Feiyan and Yasaka arcs, and completely skips the Liu Zongwu arc'. A viewer who has seen eps 1-12 has seen the manga's ENDING (246-255, restaged) but not its last third; the useful resume is ch 190 (or 89), and ch 255 第62代北斗神拳伝承者 is the manga's final chapter — after it the story continues only in the separate 蒼天の拳 リジェネシス manga (its own chapter space, 6 vols, AniList 107892). Flagged for Sean: C5 gives 255, the reader-honest resume is 190.",
+      "sources": [
+        "https://hokuto.fandom.com/api.php?action=parse&page=Souten_no_Ken:_Re:Genesis&prop=wikitext&format=json",
+        "https://mangahot.jp/site/works/b_R0002",
+        "https://en.wikipedia.org/wiki/Fist_of_the_Blue_Sky"
+      ]
+    }
+  ],
+  "anchor_hostile": [
+    {
+      "episode": 12,
+      "why": "Anime-original (A1 — a filler row takes no anchor). The COAMIX per-episode synopsis for 第12話 朋友を想う拳 is entirely 拳志郎 vs シメオン・ナギット of 天斗聖陰拳 and the 'truth' of Guise's death; ja-WP states the anime 「内容は原作版の途中から分岐してアニメオリジナルストーリーに繋がる形となっており、コミック版に先駆けて新たな拳法「天斗聖陰拳」が登場する」 and files 天斗聖陰拳 as 「『REGENESIS』より登場する」, with シメオン・ナギット / ヒムカ / シャムラ in a ジェネシス character block described only in anime terms. The original manga's arcs (Japan, Ling Wang, Zhang Taiyan, Zhang Lieshan, Liu Feiyan, Liu Zongwu/Yasaka, Initiation Ritual — ch 1-255) contain no Nahash, no Genesis and no Tento Seiin Ken. MU's stored 88 is the 2006 TV series' endpoint (see repairs / structure).",
+      "sources": [
+        "https://souten-regenesis.com/story/704",
+        "https://ja.wikipedia.org/wiki/%E8%92%BC%E5%A4%A9%E3%81%AE%E6%8B%B3",
+        "https://hokuto.fandom.com/api.php?action=parse&page=Story_Arcs_-_Souten_no_Ken&prop=wikitext&format=json"
+      ]
+    }
+  ],
+  "annotations": [
+    {
+      "episodes": [
+        12
+      ],
+      "kind": "divergence",
+      "chapters": "unpinned — the manga's Guise death sits in the Liu Feiyan arc (ch 105-136); no source pins the exact chapter",
+      "note": "Ep 12's payoff (Simeon Nagit was Guise's killer) REPLACES the manga's version: ja-WP's Guise entry has him mortally wounded by Liu Fei Yan himself in a challenge over Erika, dying watched by Kenshiro and Yu Ling, and adds 「アニメ版『REGENESIS』では、飛燕ではなくヤサカに殺されたと思われていたが、実際に手を下したのは天斗聖陰拳のシメオン・ナギットだった」. No manga pages are adapted in this episode, so no graft/partial tie is claimed (T28) — this is a divergence from, not a quotation of, the source."
+    },
+    {
+      "episodes": [
+        9
+      ],
+      "kind": "rearranged",
+      "chapters": "≈246-255 reached over the never-adapted 190-243",
+      "note": "Eps 7-9 relocate the manga's closing Kenshiro-Yasaka resolution: the COAMIX synopses put ep 7 at Ningbo's 泰聖院 with the 鎮魂の塔 broken open and the 勾玉 revealed (Coamix's chapter index: 233 鎮魂の塔, 251 勾玉の思い), ep 8 on Yasaka learning Hokuto blood runs in him (246 北斗の末裔) and ep 9 on the grave forgiveness (≈254) — all of which the manga places AFTER the 天授の儀 (243 天授の儀 終焉) that the anime never animates."
+    }
+  ],
+  "repairs": [
+    {
+      "episode": 12,
+      "field": "end_chapter",
+      "old": 88,
+      "new": null,
+      "why": "G37 + A1. The stored value is MU's curated anime-coverage string on the ORIGINAL manga (MU 67026286308: {start: 'Vol 1, Chap 1', end: 'Vol 8, Chap 88'}) — one unlabelled segment describing the 2006 TV series (26 eps, AniList 1541), which is the adaptation that starts at chapter 1. Proof it is the 2006 series' endpoint: Coamix's chapter index gives ch 86 祝宴と銃声 — the verbatim title of the 2006 anime's ep 25 — and ch 88 蘇る想い / 89 記憶の扉, i.e. Yu Ling's memory returning, which is the 2006 finale (ep 26 より良い明日へ). REGENESIS begins after that point (en-WP: it 'picks up from where the 2006 anime series left off'), so 88 sits BEHIND this series' first episode, not at its end. MU's entry for the ReGenesis manga carries a null anime field, so MU never claimed this anime at all. The row is also anime-original, so it can carry no anchor (A1).",
+      "sources": [
+        "https://api.mangaupdates.com/v1/series/67026286308",
+        "https://api.mangaupdates.com/v1/series/55727817104",
+        "https://mangahot.jp/site/works/b_R0002",
+        "https://en.wikipedia.org/wiki/Fist_of_the_Blue_Sky"
+      ]
+    },
+    {
+      "episode": null,
+      "field": "total_chapters",
+      "old": 260,
+      "new": 255,
+      "why": "N-family chapter-space correction (flag + repair, never silent). The manga's own numbering ends at 255: Coamix's official digital index (mangahot.jp, ©Coamix) lists 1.賞金首・閻王の巻 … 243.天授の儀 終焉!!の巻 … 255.第62代北斗神拳伝承者!!の巻 with no chapter above 255, and ja-WP states 『週刊コミックバンチ』…全255話. AniList 31148 (260), MU 67026286308 (latest_chapter 260) and hokuto.fandom's arc list ('Initiation Ritual Arc, chapters 196-260') share one +5 overcount. Volumes (22) are correct in every source. NOT an edition mix — the sequel manga 蒼天の拳 リジェネシス is a separate work (AniList 107892: 6 vols / ~30 ch; MU 55727817104: 6 volumes) and is not in this space.",
+      "sources": [
+        "https://mangahot.jp/site/works/b_R0002",
+        "https://ja.wikipedia.org/wiki/%E8%92%BC%E5%A4%A9%E3%81%AE%E6%8B%B3",
+        "https://api.mangaupdates.com/v1/series/67026286308"
+      ]
+    },
+    {
+      "episode": null,
+      "field": "latest_known_chapter",
+      "old": 260,
+      "new": 255,
+      "why": "Same correction as total_chapters — the completed manga's last chapter is 255 (Coamix's index; ja-WP 全255話).",
+      "sources": [
+        "https://mangahot.jp/site/works/b_R0002",
+        "https://ja.wikipedia.org/wiki/%E8%92%BC%E5%A4%A9%E3%81%AE%E6%8B%B3"
+      ]
+    }
+  ],
+  "type_corrections": [
+    {
+      "episodes": [
+        12
+      ],
+      "type": "filler",
+      "note": "T27 — zero standing in the identified source (蒼天の拳, the original manga our instrument is keyed to). The whole episode is the anime's Nahash/Genesis branch: 拳志郎 vs シメオン・ナギット of 天斗聖陰拳, a school ja-WP files as 「『REGENESIS』より登場する」 and says the anime introduced 「コミック版に先駆けて」 (ahead of the comic). AFL prints 'Manga Canon' on all 12 rows — its unresearched default; AFL has no chapter data for this show. NOTE the T26 question Sean may want to rule instead: this material also exists in the SEPARATE licensed 蒼天の拳 リジェネシス manga (2017-2025, AniList 107892), which hokuto.fandom says was 'being made simultaneously' and 'depicted differently' — but the anime PRECEDED it on this material and en-WP states the anime 'is not a direct adaptation of the manga of the same name', so it is not `side_source` (and side_source would require a canon row).",
+      "sources": [
+        "https://souten-regenesis.com/story/704",
+        "https://ja.wikipedia.org/wiki/%E8%92%BC%E5%A4%A9%E3%81%AE%E6%8B%B3",
+        "https://en.wikipedia.org/wiki/Fist_of_the_Blue_Sky"
+      ]
+    }
+  ],
+  "structure": {
+    "notes": "CHAPTER SPACE (the ask's first question). The 88 lives in the ORIGINAL 蒼天の拳's chapter numbering, and that is the space our instrument must use. (a) The anime's own 原作 credit, on ja-WP's staff table which prints 第1作 and REGENESIS side by side, is 漫画「蒼天の拳」（原哲夫 監修 武論尊） for BOTH. (b) AniList's ADAPTATION edge for anime 100408 (REGENESIS) is manga 31148 = Souten no Ken, 22 vols; the 2017 sequel manga is a different node (107892 Souten no Ken: Regenesis, 6 vols / ~30 chapters — 'Vol 8, Chap 88' cannot exist there, and MU's entry for it, 55727817104, has anime {start: null, end: null}). (c) The internal check passes in the original's space only: 255 chapters / 22 volumes ≈ 11.6 per volume, so ch 88 → vol 8 (MU's own pairing) and ch 245 → vol 22 (ja-WP cites 原作22巻245話 on the Yasaka entry). So the stored 260/22 is the ORIGINAL's, not a mix of editions — it is simply 5 chapters long (see repairs). Authorship, verified against the task's provisional note: the ORIGINAL is 堀江信彦 原作 / 原哲夫 作画 / 武論尊 監修; the sequel manga リジェネシス is 原哲夫 原作 / 辻秀輝 (Tsuji Hideki) 作画 / 八津弘幸 (Yatsu Hiroyuki) 脚本・監修 — there is no 'Yashiro Kuu'. WHAT MU COUNTED (G37). MU 67026286308's anime field is one unlabelled segment {start 'Vol 1, Chap 1', end 'Vol 8, Chap 88'} = the 2006 TV series (AniList 1541, 26 eps): only the 2006 series starts at ch 1; Coamix's chapter index shows ch 86 祝宴と銃声!!の巻 is the verbatim title of 2006 ep 25 and ch 88 蘇る想い / 89 記憶の扉 is the memory-return finale animated as 2006 ep 26. Our REGENESIS row inherits the string because both anime hang off the same manga node — the same string legitimately belongs to the 2006 series entry in our catalogue, and should be suppressed here. WHAT THIS ANIME ACTUALLY ADAPTS (from Coamix's per-episode synopses, the Coamix chapter index, ja-WP's character entries and hokuto.fandom's arc list — arc numbers below are the fandom's, whose tail runs +5): eps 1-6 = the Liu Feiyan / Erika 'List of Hope' block, opening around ch 105-108 (105 天が必要とする漢, 107 希望の目録, 108 心優しき鏢局 — the 鏢局 escort agency of ep 1's Harbin scenes) and running to ch 189 (ep 6 ends on the fledgling swallows leaving the nest = ch 189 巣立ちする子燕!!の巻, with 186 北斗の文句は俺に言え / 188 最期の笑顔 as ep 6's tank confrontation and Fei Yan's death) — heavily abridged, and with settings changed (ja-WP: 「飛燕やヤサカなど一部の人物の設定が変更され、それに伴いストーリーもコミックス版とは異なっている」; Fei Yan's terminal illness is called out as an anime-original addition). Ch 89-104 are skipped outright. Eps 7-9 = the manga's CLOSING Yasaka resolution relocated to Ningbo (ep 7 泰聖院 / 鎮魂の塔 / 勾玉; ep 8 Yasaka learns he is 北斗の末裔; ep 9 the grave forgiveness) — i.e. ch ≈246-255, reached by jumping ch 190-195 (the Du Tianfeng sea battle) and 196-243 (the Liu Zongwu arc and the 天授の儀, which ends at 243 天授の儀 終焉). From ep 9's second half onward the Nahash / Genesis / 天斗聖陰拳 branch takes over: eps 10-12 have no counterpart anywhere in ch 1-255. ROW IDENTITY: our 12 rows match ja-WP's and en-WP's REGENESIS 第1期 list one-for-one by title; our stored dates are the Amazon Prime advance dates (ep 12 = 2018-06-18; TV/TOKYO MX was 2018-06-26) — consistent across all 12 rows, not a defect, and not part of this ask. Our entry covers season 1 only (AniList 100408, 12 eps); S2 (AniList 102860, eps 13-24) is a separate entity and a separate question.",
+    "order_only": []
+  },
+  "flags_for_sean": [
+    "G37 SUPPRESSION: MU's coverage string on Souten no Ken is the 2006 TV series' (start 'Vol 1, Chap 1' → end 'Vol 8, Chap 88'), harvested onto this 2018 entry through the shared manga node (AniList 31148 carries ADAPTATION edges to anime 1541, 100408 and 102860). The pin should be suppressed for fist-of-the-blue-sky-regenesis and — if we hold a 2006 series row — is the CORRECT pin there (its finale reaches ch 88 蘇る想い).",
+    "TOTALS: stored 260 chapters vs the manga's own 255 (Coamix's index; ja-WP 全255話). AniList, MU and hokuto.fandom all print 260 — one shared +5. Repair proposed; volumes (22) are right. Not an edition mix.",
+    "ROWS 10 AND 11 ARE ALMOST CERTAINLY THE SAME SHAPE AS 12 (out of this ask's scope, same evidence class): COAMIX's synopses have ep 10 on シャムラ ambushing Ramon and a hooded stranger who is 流緋鶴 — a character ja-WP marks 「アニメにのみ登場する」 — and ep 11 on 拳志郎 vs シャムラ naming 天斗聖陰拳. Both are Genesis-branch material absent from ch 1-255. Recommend a follow-up typing pass on eps 9-12 (ep 9 is arguably `mixed`: the grave scene is the manga's, the Nahash half is not). The honest terminal delivered here assumes 10-12 are not canon; if 10/11 stay canon they will simply hold no anchor.",
+    "CONTINUE FORK: C5 gives 255 (coverage 254 + 1), which is technically true and practically thin — this anime reaches the manga's ENDING while never adapting ch 89-104 and 190-243 (56+ chapters). If you want the reader instruction to dominate, the resume should be ch 190 (a C3-style skip statement) with 254 kept as the frontier. I delivered the ruled C5 value with the never-adapted ranges named in the note.",
+    "PARALLEL-TELLING QUESTION FOR SEASON 2 (not this entry): hokuto.fandom says the anime's second half 'follows the same story outline as the Re:Genesis manga (they were being made simultaneously), but depicted differently', and en-WP says the anime 'is not a direct adaptation of the manga of the same name, but instead... mixes plot elements from the unadapted latter half of the original Sōten no Ken manga and the ongoing Re:Genesis manga'. That is a T30-adjacent shape for the S2 entry (AniList 102860) — worth an identity ruling before anyone anchors S2. It does not change ep 12: the anime aired this material first, and our source of record is the original manga.",
+    "EP 9's ANCHOR IS MEDIUM AND IS THE ONLY POSITION S1 HAS ABOVE ep 6. Firm: the material is vol 22, the manga's closing chapters (ja-WP cites 原作22巻245話 at the adjacent beat; the Coamix index gives 246 北斗の末裔, 251 勾玉の思い, 253-255). Soft: which of 253/254/255 carries the grave-forgiveness pages — no source states it. If you want a high-confidence terminal, ep 6 → 189 (巣立ちする子燕, matched exactly by the official synopsis's closing image) is the safe one, but it is NOT the furthest chapter (A4)."
+  ]
+}
