@@ -1,0 +1,77 @@
+{
+  "series_id": "orange",
+  "summary": "MU's pin is CONFIRMED on content: the 2016 TV series adapts Takano Ichigo's main story to its last page, and ep 13 (titled LAST LETTER after the manga's final chapter) covers the Valentine chapter (ch 21) plus the final chapter (ch 22 = LAST LETTER, ending on the time capsule being buried) — so ep 13 -> END 22 [START 21] {21-22} vol 5 re-lands as a manual-tier anchor (G56; the mu pin is REDUNDANT, not wrong). The SUSPECT COUNT is real and is an N35 candidate: the main story is 22 chapters (LETTER 1-21 + LAST LETTER) in 5 tankobon — ja-WP prints '全22話（本編）', Futabasha's own site announced '第21話' in Monthly Action 2015-09 and the 最終回 in the 2015-10 issue, and MU's entry is '5 Volumes (Complete)' with anime end 'Vol 5, Chap 22'; our stored total_chapters=39 / total_volumes=7 is AniList's UNIT count for the whole 7-volume ACTION COMICS line, i.e. the main 22 PLUS the two 番外編 volumes (6: orange -未来- / -須和弘人- / -大切な人-; 7: -大切なあなたへ-) whose side stories carry NO chapter numbers — and no two sources agree on how many those are (AniList 39, MangaDex 33 = our latest_known, MU's separate 'Orange: Future' entry 16 over 2 volumes). Our mapping space must be the main story's own LETTER numbering 1-22 / vols 1-5; the continue is post-series and lands outside it. Two AFL-sourced row-identity defects surfaced on the same row: AFL invents the title 'LETTER 13' (the official site, ja-WP and en-WP all print LAST LETTER) and dates the finale 2016-09-25, while syobocal's first airing and ja-WP's broadcast period both give Monday 2016-09-26 00:00 (TOKYO MX / AT-X) — AFL's rows 10-12 carry the same one-day-early shift.",
+  "anchors": [
+    {
+      "episode": 13,
+      "end_chapter": 22,
+      "start_chapter": 21,
+      "chapters_adapted": "21-22 (ch 21 = the Valentine's Day chapter, from its opening letter page; ch 22 = LAST LETTER, complete, through the time capsule burial)",
+      "volume": 5,
+      "confidence": "high",
+      "note": "A4 END: ch 22 is the main story's final chapter (titled LAST LETTER, not 'LETTER 22'), and ep 13 plays it to its last beat — en-WP's episode summary closes with 'Kakeru adds his own letter in the time capsule before it is buried', which is exactly ja-WP's plot close for the manga ('5人と翔は10年後の自分たちに向けてタイムカプセルを埋め、物語は幕を閉じる'). The chapter NUMBER 22 is fixed by three independents: ja-WP's infobox 話数=全22話（本編）, Futabasha's own special site ('2015.07.25 第21話掲載の月刊アクション9月号' + '最終回は8月25日発売の10月号') which puts the finale one chapter after 21, and MU's coverage segment 'Vol 5, Chap 22'. A10 START: mechacomic's per-unit source labels show the last two chapters of the main story are LETTER 21 then LAST LETTER; the volume-5 review reading them in order gives the same two units as バレンタイン (opening on the letter page '2月14日') then 最後の日 ('2月15日'); ep 12 ends with Naho telling Kakeru to wait until Valentine's Day and ep 13 opens on Valentine's Day itself, so ep 13 starts at ch 21's first page — no sliver, no relocated opener. Volume 5 per MU's segment and the fandom Volumes table.",
+      "sources": [
+        "https://ja.wikipedia.org/wiki/Orange_(%E9%AB%98%E9%87%8E%E8%8B%BA%E3%81%AE%E6%BC%AB%E7%94%BB)",
+        "https://www.futabasha.co.jp/introduction/orange/pc/",
+        "https://www.mangaupdates.com/series/hyaxvax/orange-takano-ichigo",
+        "https://mechacomic.jp/books/77695",
+        "https://en.wikipedia.org/wiki/Orange_(manga)",
+        "https://oshirukomoe.jugem.jp/?eid=1661",
+        "https://comic-action.com/episode/2550912965407070141"
+      ]
+    }
+  ],
+  "continue_points": [
+    {
+      "episode": 13,
+      "continue_chapter": 23,
+      "kind": "post_series",
+      "note": "C5 post-series: the anime adapted the SOURCE TO ITS END — ch 22 (LAST LETTER) is the main story's final chapter, so nothing of the 22-chapter main line is left to read and the never-adapted mainline range is EMPTY. Chapter 23 does not exist in the main story's space (that is the honest statement to show a reader): what follows in the tankobon line is the 番外編 of volumes 6-7 — orange -未来-, orange -須和弘人-, -大切な人- (vol 6, 2017) and vol 7 -大切なあなたへ- (2022, incl. -芽野貴子-, -井村あずさ-, -成瀬翔- #1-#3) — titled side stories with NO chapter numbers, which the continuous whole-line numbering used by MangaDex and the scanlators starts at 23 (23 = orange -未来-). Vol 6's -未来- is what the 2016 anime FILM orange -未来- adapts (side_source territory; that film is not one of our components). If the space is re-based to 22 (see the N35 flag) this continue is out of range and the honest UI state is 'fully adapted — no mainline chapters remain; next is the side-story volumes 6-7'.",
+      "sources": [
+        "https://ja.wikipedia.org/wiki/Orange_(%E9%AB%98%E9%87%8E%E8%8B%BA%E3%81%AE%E6%BC%AB%E7%94%BB)",
+        "https://www.mangaupdates.com/series/38ekz7a/orange-future",
+        "https://mechacomic.jp/books/77695"
+      ]
+    }
+  ],
+  "anchor_hostile": [],
+  "annotations": [],
+  "repairs": [
+    {
+      "episode": 13,
+      "field": "title",
+      "old": "LETTER 13",
+      "new": "LAST LETTER",
+      "why": "The finale's official title is LAST LETTER — the TV anime's own story page lists the thirteenth entry as 'LAST LETTER' (with its staff credits), ja-WP's 各話リスト prints LAST LETTER in row 13 where rows 1-12 are LETTER01-LETTER12, and en-WP's episode list prints 'LAST LETTER' citing TOKYO MX. 'LETTER 13' is AFL's pattern-filled title (animefillerlist row 13) and the same string sits on the low-quality fandom episode page; no primary source uses it. The name is not incidental: the manga's own final chapter is titled LAST LETTER (Futabasha's webアクション chapter page; mechacomic's source labels run LETTER 1 … LETTER 21, LAST LETTER).",
+      "sources": [
+        "http://web.archive.org/web/20160928002823/http://orange-anime.com:80/story/",
+        "https://ja.wikipedia.org/wiki/Orange_(%E9%AB%98%E9%87%8E%E8%8B%BA%E3%81%AE%E6%BC%AB%E7%94%BB)",
+        "https://en.wikipedia.org/wiki/Orange_(manga)",
+        "https://comic-action.com/episode/2550912965407070141"
+      ]
+    },
+    {
+      "episode": 13,
+      "field": "air_date",
+      "old": "2016-09-25",
+      "new": "2016-09-26",
+      "why": "G53/G54: the series ran in TOKYO MX's 月曜 0:00-0:30 slot (late Sunday night), so the calendar date is the Monday. syobocal's per-airing rows for TID 4229 give the FIRST airing of Count 13 as 2016-09-26 00:00 on TOKYO MX and AT-X (no 再 airing before it), and ja-WP's broadcast period is 2016年7月4日 - 9月26日 with every prior week on a Monday. Our stored 2016-09-25 is AFL's value; AFL prints Mondays for eps 1-9 and then switches to Sundays for 10-13 (09-04 / 09-11 / 09-18 / 09-25), so this is a four-row block defect, not one row — rows 10-12 need the same +1 day (see flags). If our rows 1-9 already hold the Monday dates, repairing 13 alone still leaves 10-12 inconsistent; the block should be repaired together.",
+      "sources": [
+        "https://cal.syoboi.jp/db.php?Command=ProgLookup&TID=4229",
+        "https://ja.wikipedia.org/wiki/Orange_(%E9%AB%98%E9%87%8E%E8%8B%BA%E3%81%AE%E6%BC%AB%E7%94%BB)"
+      ]
+    }
+  ],
+  "type_corrections": [],
+  "structure": {
+    "notes": "CHAPTER SPACE (N35 candidate — count is suspect, confirmed). The main story = 22 chapters, unit 「LETTER ○」, collected in 5 tankobon: ja-WP infobox 話数=全22話（本編）, 巻数=ACTION：全7巻（本編5巻、番外編2巻）; Futabasha's special site announced '第21話' in Monthly Action's 2015-09 issue and 'the 最終回' in the 2015-10 issue (so 21 -> final = 22); mechacomic's storefront re-cut (118 units, a re-cut and therefore NOT a chapter space — used only for its per-unit SOURCE labels) labels units 1-75 as LETTER 1 … LETTER 21 and units 76-80 as 'LAST LETTER', then units 81-118 as titled side stories with no numbers (未来 / 須和弘人 #1-#3 / 大切な人 / 萩田朔 / 茅野貴子 / 村坂あずさ / 須和弘人 / 成瀬翔 #1-#3 / orange×夢みる太陽). MU's main entry is '5 Volumes (Complete)' with the coverage segment 'Vol 1, Chap 1' -> 'Vol 5, Chap 22' (one work, no label — G32 gate 0 is not exercised here), and MU carries the 番外編 as a SEPARATE series, 'Orange: Future' ('2 Volume (Complete)', described as 'The 6th and 7th volumes of Orange', its coverage segments labelled '(Movie)' for the 2016 film). WHAT 39 COUNTS: our stored total_chapters=39 / total_volumes=7 is AniList 65573 (endDate 2022), a UNIT count of the whole 7-volume ACTION COMICS line = the 22 mainline chapters plus the two side-story volumes' pieces. Nobody reproduces 39: MangaDex's entry for the same line prints lastChapter 33 / lastVolume 7 (33 = 22 mainline + 11 side stories when the three-part -須和弘人- counts as one) and that 33 is also MU's latest_chapter (its latest-DATED release records: 'A pair of 2+' vol 7 ch 29 and ch 33 — a release index, not an edition signal), while MU's Future entry counts 16 across vols 6-7; ja-WP's own itemisation of vols 6-7 lists 13 pieces (22+13 = 35). PROPOSED SPACE (do not apply here — flagged for Sean): total_chapters 22, total_volumes 5, i.e. the main story's own LETTER numbering, which is where every anchor and MU's pin already live; vols 6-7 are numberless side stories (A44 territory) and the film orange -未来- (AniList 97669, not one of our components) adapts vol 6. VOLUME BOUNDARIES are only partly resolved and are NOT delivered: ja-WP gives per-volume ISSUE ranges (v1 別マ 2012-04→07, v2 08→11, v3 別マ 2012-12 + 月アク 2014-04→, v4 月アク 2014-10→2015-02, v5 月アク 2015-06→10) while the fandom Volumes table gives per-volume CHAPTER ranges (v1 1-4, v2 5-8, v3 9-12, v4 13-16, v5 17-22); the two are not reconcilable without the tankobon TOCs (openBD and Google Books carry no TOC for these ISBNs, and the Futabasha product pages are JS-only). Both readings put ch 21-22 in volume 5, which is all this anchor needs; MU's segment says vol 5 too. ROW IDENTITY: AFL is the only source for our ep-13 title and date and is wrong on both (title 'LETTER 13' is pattern-filled; the dates for rows 10-13 are one day early against syobocal and ja-WP). AniList anime 21647 = 13 eps, one season, no specials — row count matches AFL's 13 and ja-WP's 全13話, so no join hazard.",
+    "order_only": []
+  },
+  "flags_for_sean": [
+    "N35 (chapter space re-base, evidence complete, NOT applied): stored total_chapters=39 / total_volumes=7 is AniList's unit count for the whole 7-volume line; the mapping space — and MU's pin, and this anchor — live in the MAIN STORY's numbering, 22 chapters (LETTER 1-21 + LAST LETTER) over 5 volumes (ja-WP 全22話（本編）; Futabasha's 第21話 -> 最終回; MU '5 Volumes (Complete)'). Competing counts for the same line: AniList 39, MangaDex 33 (= our latest_known), MU-Future 16 over vols 6-7, ja-WP's itemisation 13 side pieces. Recommend 22 / 5 with vols 6-7 recorded as numberless side-story material.",
+    "MU pin verdict: CONFIRMED and therefore REDUNDANT (G56) — 'Vol 5, Chap 22' is exactly the honest terminal; the row should carry the manual-tier anchor with citations rather than the mu-tier pin. No G37 overstatement here: MU's main entry counts only the 5 main-story volumes, and it puts the 番外編 in a separate entry whose coverage is the FILM.",
+    "AFL date block: AFL prints Mondays for eps 1-9 and Sundays for eps 10-13 (2016-09-04 / 09-11 / 09-18 / 09-25). syobocal TID 4229 gives the first airings as 2016-09-05 / 09-12 / 09-19 / 09-26 00:00 (TOKYO MX + AT-X, 月曜 0:00 slot). I repaired only my row (13); rows 10-12 need the same +1 day as one atomic block — a lane-B sweep, with rows 1-9 checked to confirm they already hold the Monday dates.",
+    "The 2016 anime FILM orange -未来- (AniList 97669) adapts vol 6's -未来- / -須和弘人-; it is not a component of our entry. If it is ever added, it is canon + side_source naming the 番外編 volume, and it takes no mainline chapter anchor (the side stories have no chapter numbers).",
+    "orangetakanoichigo.fandom is the only per-volume chapter table found and is low quality (episode airdate fields are 'TBA'/Amazon dates, ep 13 titled 'LETTER 13'); its v5 = Letter 17-22 disagrees with the issue-range arithmetic from ja-WP (v5 = 18-22). Not load-bearing for this anchor, but do not build volume boundaries on it alone."
+  ]
+}
