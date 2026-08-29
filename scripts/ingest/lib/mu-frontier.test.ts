@@ -103,6 +103,13 @@ describe('G32 gate 0 — season-scoped entries (wave 6)', () => {
     const picked = pes(pcs(MF), { airedEpisodes: 12, startYear: 2023, endYear: 2023 });
     expect(picked.chosen.map((x) => x.chapter)).toEqual([56, 116, 194]);
   });
+  it('the cobra lesson: a SINGLE foreign-labelled segment yields nothing (the frontier refuses)', () => {
+    const picked = pes(pcs('Vol 8, Chap 14 (1983)'), { airedEpisodes: 13, startYear: 2010, endYear: 2010, seasonCount: 1 });
+    expect(picked.chosen).toEqual([]);
+    expect(picked.foreign.map((x) => x.chapter)).toEqual([14]);
+    // a single UNLABELLED segment keeps today's behaviour
+    expect(pes(pcs('Vol 8, Chap 74'), { airedEpisodes: 24, seasonCount: 2 }).chosen.map((x) => x.chapter)).toEqual([74]);
+  });
   it('a TV label is unaffected', () => {
     const picked = pes(pcs('Vol 22, Chap 197 (TV) / Vol 31, Chap 276 (The First Slam Dunk)'), { airedEpisodes: 101, startYear: 1993, endYear: 1996, seasonCount: 1 });
     expect(picked.chosen.map((x) => x.chapter)).toEqual([197]);

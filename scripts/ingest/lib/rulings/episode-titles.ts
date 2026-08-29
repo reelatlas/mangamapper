@@ -123,6 +123,17 @@ export const ENTRIES: RulingEntry<Record<number, string>>[] = [
     ruledOn: '2026-08-27',
     cite: ['scripts/ingest/research/batch19/out/airdates/dragon-ball-z-kai.json', 'scripts/ingest/research/batch19/verify/b3-contradictions.md'],
   },
+  {
+    seriesId: 'orange',
+    ruleId: 'G53',
+    value: { 13: 'LAST LETTER' },
+    reason:
+      "AFL prints 'LETTER 13'; the episode's real title is LAST LETTER (the official site's story page, ja-WP 各話リスト, en-WP — and the manga's own final chapter is titled LAST LETTER, Futabasha's webアクション page). Batch 20 wave 7.",
+    ruledBy: 'Sean',
+    ruledOn: '2026-08-28',
+    cite: ['scripts/ingest/research/batch20/out/orange.json'],
+  },
+
 ];
 
 export const EPISODE_TITLE_OVERRIDES: Record<string, Record<number, string>> = toMergedRecord(ENTRIES);

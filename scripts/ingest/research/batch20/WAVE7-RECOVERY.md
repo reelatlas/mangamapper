@@ -25,3 +25,6 @@ Across waves 6-7: **8 confirmed, 4 wrong-in-part, 3 another work's entirely** (r
 
 ## Next
 Sean rules the bar → /apply-batch wave 7 (incl. the G32 single-segment fix + N35 entries + the T28 flips) → /consolidate deep (gate change) → wave 8 (L-D ×8 of 15, or a gap block).
+
+## RULED + APPLIED (§12.93, 2026-08-28 — Sean with Cursor)
+S2 = the Outlaw Star class, NOT parallel (no comparison instrument; author credit does not mint correspondence — now in the I40 record + research-agent). regenesis 9 → mixed / 10-11 → filler / 12 re-confirmed; S2 stays out. 6 manual anchors + cobra's DELETED (no continue; arc-level queued); N35 ×2; G53 orange block + soul-eater-not; the second G32 gate fix (single foreign segment refuses — 19/19). HELD: killing-bites dates (ep 11/12 collision — lane-B pair); the T28 six PARKED. Census clean (ruling_violation 0, display 219/0); mu_pin 23 → 17.

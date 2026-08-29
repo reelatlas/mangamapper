@@ -459,6 +459,27 @@ export const ENTRIES: RulingEntry<Record<number, RuledAirDate>>[] = [
     ruledOn: '2026-08-27',
     cite: ['scripts/ingest/research/batch20/out/gantz.json', 'scripts/ingest/research/batch20/verify/gantz.md', 'https://cal.syoboi.jp/tid/483'],
   },
+  {
+    seriesId: 'orange',
+    ruleId: 'G53',
+    value: { 10: '2016-09-05', 11: '2016-09-12', 12: '2016-09-19', 13: '2016-09-26' },
+    reason:
+      "AFL's rows 10-13 are one day early as one block (stored Sundays; the broadcast is 月曜 0:00 MX/AT-X = Monday): syobocal TID 4229 per-airing + ja-WP's 7/4-9/26 run. One atomic repair, not four one-offs (the wave-7 orange verdict named the block). Batch 20 wave 7.",
+    ruledBy: 'Sean',
+    ruledOn: '2026-08-28',
+    cite: ['scripts/ingest/research/batch20/out/orange.json', 'https://cal.syoboi.jp/db.php?Command=ProgLookup&TID=4229'],
+  },
+  {
+    seriesId: 'soul-eater-not',
+    ruleId: 'G53',
+    value: { 12: '2014-07-01' },
+    reason:
+      "AFL runs a naive 12-week grid from the premiere and misses the broadcast's skip week: the finale aired Tue 2014-07-01 (syobocal TID 3336: TV Tokyo Count=12 at 07-02 01:40 = 07-01 25:40; ja-WP 4/8-7/1; AniList endDate 07-02). Stored 06-24 repaired. Batch 20 wave 7.",
+    ruledBy: 'Sean',
+    ruledOn: '2026-08-28',
+    cite: ['scripts/ingest/research/batch20/out/soul-eater-not.json', 'https://cal.syoboi.jp/db.php?Command=ProgLookup&TID=3336'],
+  },
+
 ];
 
 export const AIR_DATE_OVERRIDES: Record<string, Record<number, RuledAirDate>> = toMergedRecord(ENTRIES);

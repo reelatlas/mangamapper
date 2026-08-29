@@ -2,7 +2,7 @@
 
 > GENERATED from `scripts/ingest/lib/rulings/**` by `scripts/restructure/gen-rulings.ts` — do not edit by hand. A ruling is an INSTANCE of a rule (`docs/rules.md`); the map is the record, this is the index.
 
-- rulings: 1881 across 227 series/keys · by Sean: 539 · UNRECORDED reasons: 8 · with a retire condition: 89
+- rulings: 1887 across 229 series/keys · by Sean: 545 · UNRECORDED reasons: 8 · with a retire condition: 89
 
 ## Retire conditions (re-evaluate when…)
 
@@ -1014,11 +1014,12 @@
 | `G38` | {"deleteAnchors":{"source":"mu"}} | mu anchors were derived against the conflated (Hokuto no Ken) scope — wiped; the MU writer re-derives on the next run. | Sean 2026-08-24 · scripts/ingest/apply-research-batch.ts |  |
 | `N4` | {"anilist_id":3864,"episode_start":null,"episode_end":null,"was":{"episode_start":23,"episode_end":26,"kind":"ova"},"label":"DVD-only release of withheld TV … | AniList 3864 "DVD episodes" was stored spanning eps 23-26 (kind ova) but the four DVD-only episodes are WITHHELD TV eps (production 16/17/18/21) inside the one continuous 26-episode numbering — not OVAs, not a trailing block. A wrong non-season span can mis-shift AFG numbering conversion, so the component is demoted to ORDER-ONLY (null span; it never counts), facts kept in the label | Sean 2026-08-25 · scripts/ingest/research/batch17/out/fist-of-the-blue-sky.json, scripts/ingest/apply-rulings-20260825b.ts, §12.51 |  |
 
-### fist-of-the-blue-sky-regenesis (2)
+### fist-of-the-blue-sky-regenesis (3)
 
 | rule | value | reason | ruled | retires when |
 |---|---|---|---|---|
 | `T6` | {"12":"filler"} | Batch 20 wave 6 (verified R24), Sean ruled 2026-08-28: ep 12 is the Nahash/Genesis branch aired ahead of the ReGenesis comic (ja-WP 「コミック版に先駆けて」) and exists in NO chapter of the instrument (the original Souten no Ken, N35 space 255) — filler + divergence; the stored MU anchor 88 was the 2006 TV series' endpoint (G37) and is deleted (A1). The honest terminal is ep 9 → 254 v22 (medium) with the post_series continue 255 ON EP 9 (the verifier's apply-blocking catch: a continue on a row whose anchor is deleted lands nothing). | Sean 2026-08-28 · scripts/ingest/research/batch20/out/fist-of-the-blue-sky-regenesis.json, scripts/ingest/research/batch20/verify/fist-of-the-blue-sky-regenesis.md |  |
+| `T6` | {"9":"mixed","10":"filler","11":"filler"} | Batch 20 wave 7 (Sean ruled 2026-08-28, with Cursor): vs the instrument (the original 蒼天の拳, 255 chs) eps 10-11 have zero pages — the Nahash/Genesis branch is Hara's ANIME-FIRST continuation (his interview on the anime's own site: the anime came first, he worked its ending, 「マンガとアニメは別物です」), which makes it a NEW WORK in the Outlaw Star / T21 class, never canon to the 255 and never DBS-parallel (no comparison instrument: only the opening arc and climax touch the ReGenesis manga, the middles are disjoint, and no source maps an episode to a chapter — author credit does not mint correspondence; adopted{author} does not fire because Hara wrote none of it into 31148). Ep 9 → MIXED: its first half adapts the manga's close (the anchor 254 v22 stays), its second half opens the Nahash branch — a real share, not a sliver (T28). S2 stays OUT of the catalog; if ever added it is its own original-class series (AniList 102860), not rows here. | Sean 2026-08-28 · scripts/ingest/research/batch20/out/fist-of-the-blue-sky-regenesis-w7.json, scripts/ingest/research/batch20/WAVE7-RECOVERY.md |  |
 | `N35` | {"chapters":255} | The instrument is the ORIGINAL 蒼天の拳 (the anime's 原作 credit; AniList ADAPTATION edge 100408 → 31148) and its real length is 255 chapters: Coamix's own digital index runs 1-255 complete with zero gaps and nothing above (243 天授の儀 終焉 … 255 第62代北斗神拳伝承者), ja-WP's prose says 全255話. The stored/AniList/MU/fandom 260 is a propagated scalar — no title, TOC or chapter page names 256-260 anywhere (the verifier hunted them; ja-WP's own infobox prints 260 against its prose, which is where the scalar likely came from). Batch 20 wave 6, verified R24. | Sean 2026-08-28 · scripts/ingest/research/batch20/out/fist-of-the-blue-sky-regenesis.json, scripts/ingest/research/batch20/verify/fist-of-the-blue-sky-regenesis.md |  |
 
 ### fist-of-the-north-star (9)
@@ -2024,6 +2025,14 @@
 | `A3` | {"episode":12,"chapter":37,"volume":null,"source":"manual"} | S1 end: Dark Matter Thieves = ch 32-37 (Boros) | session 2026-08-23 · scripts/ingest/apply-research-batch-5.ts |  |
 | `A3` | {"episode":24,"chapter":85,"volume":null,"source":"manual"} | S2 end mid-chapter 84/85, continue 86 (manga numbering, not webcomic) | session 2026-08-23 · scripts/ingest/apply-research-batch-5.ts |  |
 
+### orange (3)
+
+| rule | value | reason | ruled | retires when |
+|---|---|---|---|---|
+| `G53` | {"10":"2016-09-05","11":"2016-09-12","12":"2016-09-19","13":"2016-09-26"} | AFL's rows 10-13 are one day early as one block (stored Sundays; the broadcast is 月曜 0:00 MX/AT-X = Monday): syobocal TID 4229 per-airing + ja-WP's 7/4-9/26 run. One atomic repair, not four one-offs (the wave-7 orange verdict named the block). Batch 20 wave 7. | Sean 2026-08-28 · scripts/ingest/research/batch20/out/orange.json, https://cal.syoboi.jp/db.php?Command=ProgLookup&TID=4229 |  |
+| `G53` | {"13":"LAST LETTER"} | AFL prints 'LETTER 13'; the episode's real title is LAST LETTER (the official site's story page, ja-WP 各話リスト, en-WP — and the manga's own final chapter is titled LAST LETTER, Futabasha's webアクション page). Batch 20 wave 7. | Sean 2026-08-28 · scripts/ingest/research/batch20/out/orange.json |  |
+| `N35` | {"chapters":22,"volumes":5} | The main story is 22 chapters (LETTER 1-21 + LAST LETTER) in 5 tankobon (ja-WP 話数=全22話（本編）; Futabasha's own site dates 第21話 and the 最終回; MU '5 Volumes (Complete)'). The stored 39/7 is AniList's unit count of the whole 7-volume ACTION COMICS line (mainline + numberless 番外編 volumes) that nobody reproduces; the side stories (-未来- etc., adapted by the 2016 FILM) are outside our instrument. Batch 20 wave 7. | Sean 2026-08-28 · scripts/ingest/research/batch20/out/orange.json |  |
+
 ### oshi-no-ko (33)
 
 | rule | value | reason | ruled | retires when |
@@ -2479,6 +2488,13 @@
 | `T26` | [{"episodes":[39,40,41,42,43,44,45,46,47,48,49,50,51],"kind":"divergence","note":"Divergence point established: ep 38 is the last row that adapts chapters (c… | Batch 18 (2026-08-26), verified R24, Sean ruled: Bones' ending is the A-7 class (no Ohkubo credit) — filler + divergence; the two grafted rows are mixed. | Sean 2026-08-26 · scripts/ingest/research/batch18/out/soul-eater.json, scripts/ingest/research/batch18/verify/soul-eater.md |  |
 | `T26` | [{"episodes":[37],"kind":"partial","chapters":"38 (slivers)","note":"Joe's arrival and an Eruka/Crona beat are ch-38 slivers inside an otherwise original epi… | Batch 18 (2026-08-26) T28 repairs, Sean ruled: 37, 39, 40 → filler — the ch-40 opening scene (39, partial) and the grafted ch-44/45 Medusa deal (40, graft) are fragments inside Bones' original ending; the ties stay as annotations. | Sean 2026-08-26 · scripts/ingest/research/batch18/verify/soul-eater.md |  |
 | `T6` | {"37":"filler","39":"filler","40":"filler","41":"filler","42":"filler","43":"filler","44":"filler","45":"filler","46":"filler","47":"filler","48":"filler","4… | Batch 18 (2026-08-26), verified R24, Sean ruled: ep 38 is the last row adapting chapters; 39 mixed (ch 40's opening scene — fandom states the link, en-WP both sides), 40 mixed (ch 44 tail + ch 45 opening grafted, bidirectional fields); 41-51 Bones' original ending with no Ohkubo credit (archived TV Tokyo staff page; ja-WP) → filler, the A-7 class, divergence-annotated. Ep 37 repair canon → mixed: two sources now say no chapter standing (fandom 'no corresponding chapters', ja-WP anime-original from 37; AFG chapters []), ch 38 slivers only — parity with 39. T28 (2026-08-26, Sean): 37/39/40 → filler — a ch-38 sliver, the ch-40 opening scene, the grafted ch-44/45 deal, each inside Bones' original ending; the ties are annotations. | Sean 2026-08-26 · scripts/ingest/research/batch18/out/soul-eater.json, scripts/ingest/research/batch18/verify/soul-eater.md, https://souleater.fandom.com/wiki/Chapter_40, https://ja.wikipedia.org/wiki/ソウルイーター |  |
+
+### soul-eater-not (2)
+
+| rule | value | reason | ruled | retires when |
+|---|---|---|---|---|
+| `G53` | {"12":"2014-07-01"} | AFL runs a naive 12-week grid from the premiere and misses the broadcast's skip week: the finale aired Tue 2014-07-01 (syobocal TID 3336: TV Tokyo Count=12 at 07-02 01:40 = 07-01 25:40; ja-WP 4/8-7/1; AniList endDate 07-02). Stored 06-24 repaired. Batch 20 wave 7. | Sean 2026-08-28 · scripts/ingest/research/batch20/out/soul-eater-not.json, https://cal.syoboi.jp/db.php?Command=ProgLookup&TID=3336 |  |
+| `N35` | {"chapters":42} | The manga's last magazine chapter is 42 (souleater.fandom chapter pages; MangaDex lastChapter 42; the finale adapts 40-42); the stored 41 is AniList's unsourced total that no per-chapter source reproduces. The JP tankobon / Yen Press numbering is a THIRD space (31, via the 35+36 merge) — our instrument stays the magazine numbering the anchors use. Batch 20 wave 7. | Sean 2026-08-28 · scripts/ingest/research/batch20/out/soul-eater-not.json |  |
 
 ### space-adventure-cobra (1)
 

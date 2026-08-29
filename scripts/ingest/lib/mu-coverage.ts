@@ -101,6 +101,10 @@ export type SegmentPick = { chosen: CoverageSegment[]; foreign: CoverageSegment[
  * never a guess against a title.
  */
 export function pickEntrySegments(segments: CoverageSegment[], w: EntryWindow): SegmentPick {
+  // the cobra lesson (wave 7, 2026-08-28): a SINGLE segment with a label is tested like any
+  // other — 'Vol 8, Chap 14 (1983)' on the 2010 entry pinned unexamined for months. A lone
+  // FOREIGN segment yields nothing (the frontier refuses); unlabelled/undecidable keeps today's path.
+  if (segments.length === 1 && segmentIsEntry(segments[0], w) === false) return { chosen: [], foreign: segments, unresolved: false, reason: `the only segment is another work's: ${segments[0].chapter} (${segments[0].label})` };
   if (segments.length <= 1) return { chosen: segments, foreign: [], unresolved: false, reason: 'single segment' };
   // an explicit episode inside the run is the strongest marker: when any segment carries one, only those segments are this entry's ("(1983 EP 119)" beats a sequel's "(Perfect Origin S2)")
   const withEp = segments.filter((x) => x.explicitEp != null && x.explicitEp <= w.airedEpisodes);

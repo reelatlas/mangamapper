@@ -838,6 +838,17 @@ export const ENTRIES: RulingEntry<EpisodeTypes>[] = [
     cite: ['scripts/ingest/research/batch20/out/fist-of-the-blue-sky-regenesis.json', 'scripts/ingest/research/batch20/verify/fist-of-the-blue-sky-regenesis.md'],
   },
 
+  {
+    seriesId: 'fist-of-the-blue-sky-regenesis',
+    ruleId: 'T6',
+    value: { 9: 'mixed', 10: 'filler', 11: 'filler' },
+    reason:
+      "Batch 20 wave 7 (Sean ruled 2026-08-28, with Cursor): vs the instrument (the original 蒼天の拳, 255 chs) eps 10-11 have zero pages — the Nahash/Genesis branch is Hara's ANIME-FIRST continuation (his interview on the anime's own site: the anime came first, he worked its ending, 「マンガとアニメは別物です」), which makes it a NEW WORK in the Outlaw Star / T21 class, never canon to the 255 and never DBS-parallel (no comparison instrument: only the opening arc and climax touch the ReGenesis manga, the middles are disjoint, and no source maps an episode to a chapter — author credit does not mint correspondence; adopted{author} does not fire because Hara wrote none of it into 31148). Ep 9 → MIXED: its first half adapts the manga's close (the anchor 254 v22 stays), its second half opens the Nahash branch — a real share, not a sliver (T28). S2 stays OUT of the catalog; if ever added it is its own original-class series (AniList 102860), not rows here.",
+    ruledBy: 'Sean',
+    ruledOn: '2026-08-28',
+    cite: ['scripts/ingest/research/batch20/out/fist-of-the-blue-sky-regenesis-w7.json', 'scripts/ingest/research/batch20/WAVE7-RECOVERY.md'],
+  },
+
 ];
 
 export const EPISODE_TYPE_OVERRIDES: Record<string, EpisodeTypes> = ENTRIES.reduce<Record<string, EpisodeTypes>>((acc, e) => {

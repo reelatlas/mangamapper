@@ -832,6 +832,33 @@
    of the 22 remaining pins; then FotNS 109-151 / kingdom / bleach /
    shippuden / four-knights; dai 18-99 ×3 LAST; regenesis S2 = the
    parallel-candidate research).
+93. ✅ **BATCH 20 WAVE 7 APPLIED (2026-08-28; L-D ×7 + the regenesis-S2
+   identity; Sean ruled with Cursor).** THE S2 RULING: regenesis S2 is the
+   OUTLAW STAR class (anime-first, Hara's spine, 「マンガとアニメは別物です」),
+   NOT parallel — parallel requires a comparison instrument and author
+   credit does not mint correspondence (the I40 record and research-agent
+   now say so; the parallel relation keeps ONE witness). S2 stays out of
+   the catalog; if ever added it is its own original-class series. Rows:
+   regenesis 9 → mixed (the Nahash half is a real share; anchor 254 v22
+   stays), 10/11 → filler + divergence, 12 re-confirmed. Applied: 6 manual
+   anchors (shaman-king-flowers 26-29 v6 whole-run-true; prison-school
+   76-82 v9 + graft{88}; killing-bites 29-30 v6; soul-eater-not 40-42 v5;
+   drifters 40-45 v4 — the stored 56 was the OVA block's; orange 21-22
+   v5), 1 DELETED (cobra ep 13 — the 1983 series' pin in a story-level
+   numbering; closes #701; NO continue, six out-of-order stories from
+   three magazines; arc-level treatment queued), 6 continues, 10
+   annotations; N35 ×2 (soul-eater-not 42; orange 22/5 — AniList's
+   whole-line unit count reproduced by nobody); G53: orange rows 10-13
+   one atomic +1-day block + the LAST LETTER title; soul-eater-not 07-01
+   (AFL's naive grid missed a skip week). THE SECOND G32 GATE FIX (the
+   cobra lesson): a SINGLE foreign-labelled segment now yields nothing —
+   19/19 tests. HELD: the killing-bites date (the slot check surfaced an
+   ep-11/12 collision — both rows need sourced dates, a lane-B two-row
+   follow-up); the T28 six stay PARKED (unruled; claymore 26 its own
+   decision). Census: mu_pin_unverified 23 → 17 (all seven out),
+   frontier_tail_null −1 (regenesis 10/11 now filler), asterisk +6,
+   ruling_violation 0, display 219/0. L-D: 14/29 checked → 8 confirmed /
+   4 part-wrong / 3 another work's; six MU pathologies documented.
 85. ✅ **CONSOLIDATE DEEP after batch 20 wave 4 (2026-08-28; P21 —
    `applyEpisodeFloor`'s input changed: `translatedMax`).** Steps 0-8
    satisfied by §12.84's save point. Rescan (step 9): (a) the floor probe
