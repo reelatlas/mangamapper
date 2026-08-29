@@ -95,3 +95,16 @@ old → new and what MU actually counted (edition / franchise space / another
 season / whole-manga count — G37); an anime-original finale is
 anchor_hostile + the honest terminal (A1/G56). The recap baseline rule
 applies: every named row as `ep N — stored → proposed`, stored first.
+
+## Amendment 2026-08-28c (wave 7 — pinned before dispatch; R31)
+
+Wave 7 = **L-D ×7** (the MUPIN shape, amendment 2026-08-28b unchanged) +
+**regenesis-S2** (lane I, the I40/T30 parallel-candidate test — standings and
+identity only, NO anchors): is the 2018 second cour / S2 of 蒼天の拳
+REGENESIS an ADAPTATION of the ReGenesis manga, a PARALLEL telling of it
+(both realizations of Hara's continuation — the I40 boundary: parallel
+requires the common source be UNCITABLE; if the anime adapts the citable
+ReGenesis manga, the relation is adaptation OF THAT WORK and the question is
+which work our S1-only entry's instrument should be), or anime-original?
+Deliver the identity verdict + arc/direction table + flags; row changes only
+for rows our catalog actually holds.
