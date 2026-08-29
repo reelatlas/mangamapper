@@ -1,0 +1,60 @@
+{
+  "series_id": "to-the-abandoned-sacred-beasts",
+  "summary": "MU's unverified frontier pin for the 2019 finale (ep 12 → Vol 6, Chap 30) is CONFIRMED, and the finale is NOT anime-original: ep 12 「追う者たち」 adapts ch 28-30 (the close of the Bold Creek arc — the Hank/Miles duel decided by Martin Wall's Alphard gas, Cain's raid on the camp, the Hank–Cain confrontation), so A1 does not bite and the stored `canon` type stands. The per-episode field on totheabandonedsacredbeasts.fandom (page-partitioned chapter ranges across the whole run: ep 11 = ch 22 pp32-43, 23-27; ep 12 = ch 28, 29, 30 “with some parts removed”) agrees exactly with MU's single-work coverage segment, and Kodansha's own Magazine Pocket numbers 死者の要塞 as 第29話 — our ch-30 anchor sits in the manga's own 1-87 space (en-WP chapter list; MangaDex lastChapter 87.5), NOT in AniList's stored 120. The episode stops INSIDE ch 30: the volume-6 blurb and the wiki's volume/chapter pages put the undead Bold Creek residents' assault on Coup de Grace, the massacre of the controlled townsfolk and Cain's Newfort ultimatum to President Richard AFTER the Hank–Cain fight, and all three are cut or restaged in the anime — so the post-series resume is C1 inside ch 30, not 31. Everything from ch 31 (空隙の寂静 / “A Moment's Peace”) to the ch 87 finale (vols 6-15) is never animated. Surprising: the anime reorders heavily from ep 1 on (ep 1 = ch 2 pp27-28 + ch 6 pp16-31; ep 2 = ch 11 then ch 1), so the run is not a chapter-linear adaptation even though its terminal is clean.",
+  "anchors": [
+    {
+      "episode": 12,
+      "end_chapter": 30,
+      "start_chapter": 28,
+      "chapters_adapted": "28-30 (ch 30 partial — the episode stops before the chapter's closing beats)",
+      "volume": 6,
+      "confidence": "high",
+      "note": "A4 END = ch 30 死者の要塞② (vol 6), the furthest mainline chapter reached; A10 START = ch 28 不死身の獣⑤ (vol 5), taken in full — ep 11 ends at ch 27, and the licensor synopsis opens ep 12 on 「対峙する二人の擬神兵ハンクとマイルズ」 = the last part of 不死身の獣. MU's curated pin (“Vol 6, Chap 30”, one work, one unlabelled segment — G32) is therefore REDUNDANT, not overstated: re-landing it at manual tier with citations (G56). Volume shown = 6 (the END chapter's volume); ch 28 itself is vol 5.",
+      "sources": [
+        "https://totheabandonedsacredbeasts.fandom.com/api.php?action=parse&page=Episode_12&prop=wikitext&format=json",
+        "https://totheabandonedsacredbeasts.fandom.com/api.php?action=parse&page=Episode_11&prop=wikitext&format=json",
+        "https://katsu-kami.com/story/12.html",
+        "https://katsu-kami.com/story/11.html",
+        "https://en.wikipedia.org/wiki/To_the_Abandoned_Sacred_Beasts",
+        "https://api.mangaupdates.com/v1/series/27129913019",
+        "https://pocket.shonenmagazine.com/episode/10834108156640534199"
+      ]
+    }
+  ],
+  "continue_points": [
+    {
+      "episode": 12,
+      "continue_chapter": 30,
+      "kind": "post_series",
+      "note": "C1 — the finale ends part-way through ch 30, so resume IN ch 30 rather than at 31. The manga's order (vol 6 publisher blurb + the wiki's Volume 6 summary) is: Miles falls → Cain appears → the Hank–Cain fight → the Bold Creek residents rise as an undead army and attack Coup de Grace → the occupiers must gun down the controlled townsfolk (「ボルドクリークの一件」) → Cain rides to Newfort with the Ogre and Griffin Incarnates to force his “peace” on President Richard. The anime stops at the Hank–Cain fight: it relocates Miglieglia's undead to the Southern capital, never shows the Bold Creek massacre, and replaces the Newfort scene with an original coda (Cain viewing Elaine's preserved body). Those beats are load-bearing for the next arc — école is entered precisely to learn who the child Incarnate controlling the Bold Creek townsfolk was. C3: nothing is covered later (this is the last episode); ch 31 空隙の寂静 through ch 87 (the final chapter, vol 15) is never adapted.",
+      "sources": [
+        "https://totheabandonedsacredbeasts.fandom.com/api.php?action=parse&page=Volume_6&prop=wikitext&format=json",
+        "https://www.penguinrandomhouse.com/books/568063/to-the-abandoned-sacred-beasts-6-by-maybe/9781947194052/",
+        "https://totheabandonedsacredbeasts.fandom.com/api.php?action=parse&page=Episode_12&prop=wikitext&format=json",
+        "https://ja.wikipedia.org/wiki/%E3%81%8B%E3%81%A4%E3%81%A6%E7%A5%9E%E3%81%A0%E3%81%A3%E3%81%9F%E7%8D%A3%E3%81%9F%E3%81%A1%E3%81%B8"
+      ]
+    }
+  ],
+  "anchor_hostile": [],
+  "annotations": [
+    {
+      "episodes": [
+        12
+      ],
+      "kind": "divergence",
+      "chapters": "28-30",
+      "note": "Adapts ch 28-30 but restages them: Hank fights Miles and Cain in werewolf form (human form in the manga) and at night/dawn (daytime in the manga); Miglieglia's undead are moved from the Bold Creek fortress to the assault on the Southern capital (with Ogre and Griffin Incarnates added there); the Bold Creek massacre and Cain's Newfort meeting with President Richard are dropped; Cain wounding Hank's hand becomes Hank piercing Cain's hand and a new awakened power; the closing Cain/Elaine's-corpse scene is lifted from much earlier in the manga. Substantial, story-carrying source content throughout — T28 keeps this canon, not mixed and not filler."
+    }
+  ],
+  "repairs": [],
+  "type_corrections": [],
+  "structure": {
+    "notes": "CHAPTER SPACE (answers open flag #681). The manga's own numbering is 1-87 in 15 tankōbon: ja-WP infobox 話数 = 全87話; en-WP's volume/chapter list runs 1-87 and ends 「最終話 かつて神だった獣たちへ」 as #87; MangaDex's series record gives lastChapter 87.5; the fandom wiki carries Chapter 1-87 pages (+ 37.1 / 37.5 / 72.5 side stories). Kodansha's own Magazine Pocket uses the same numbers (【第1話】獣狩り; 【第29話】死者の要塞). So the READING EDITION = the 87-chapter serialization/tankōbon space, and our ep-12 anchor (ch 30, vol 6) is in it. AniList's stored total_chapters = 120 is NOT the manga's chapter numbering and should not be used as a ceiling; MU's latest_chapter = 8 is the usual latest-DATED-release artifact, not a count. VOLUME BOUNDARIES (en-WP chapter list, corroborated by the wiki's Volume pages; none stored today): v1 1-5, v2 6-10, v3 11-16, v4 17-22, v5 23-28, v6 29-33, v7 34-37 (+ side story フレスヴェルグの風), v8 38-42, v9 43-47, v10 48-52, v11 53-59, v12 60-66, v13 67-72 (+ side story 擬神兵が来る!), v14 73-79, v15 80-87. SOURCE QUALITY: totheabandonedsacredbeasts.fandom's per-episode `Chapters` field is page-partitioned across the whole run and self-consistent (ch 10 pp1-7 in ep 5 / pp8-45 in ep 6; ch 19 pp17-24 in ep 9 / pp1-16 in ep 10; ch 20 pp1-14 in ep 9 / pp19-32 in ep 10) — no off-by-one against the licensor synopses at eps 10, 11 and 12, so the ep-12 field is trustworthy. NOT ANCHORED HERE but visible for a later pass: the run is heavily reordered (ep 1 = ch 2 pp27-28 + ch 6 pp16-25, 27-31; ep 2 = ch 11 pp14, 16-30 then ch 1; ep 7 = ch 11 pp1-13, ch 12, ch 13; ep 8 = ch 13 pp30-33, ch 16 pp1-3+14-15, ch 14, ch 15), and ja-WP records one wholly anime-original Incarnate, Edgar Beckford / Basilisk (cited to a 2019-07-01 tweet by the author Maybe).",
+    "order_only": []
+  },
+  "flags_for_sean": [
+    "Flag #681 (count_mismatch) can be closed on the evidence above: the reading edition is the 87-chapter tankōbon/serialization space (ja-WP 全87話, en-WP chapter list, MangaDex lastChapter 87.5, Magazine Pocket 第N話 labels). The stored chapter space total_chapters = 120 (AniList 85649) is unexplained and does not match any numbering I could source — recommend re-basing the series' chapter space to 87 / 15 volumes so the ch-30 anchor and any future 31-87 work are in one space.",
+    "Continue fork (small): I deliver C1 → 30 because the finale demonstrably stops before ch 30's closing beats (undead Bold Creek residents → the massacre → Cain's Newfort ultimatum, all after the Hank–Cain fight per the vol-6 blurb and the wiki's Volume 6 summary). The alternative reading is C5 → 31 (coverage + 1), which is what MangaUpdates' pin and the content-farm page wheredoestheanimeleaveoff.com ('start at Volume 6, Chapter 31', cross-check only) imply. If a page-level source ever fixes ch 30's internal order, this is the one value to revisit; 30 costs a reader a few re-read pages, 31 costs them the arc's climax.",
+    "No page ranges exist for ep 12's ch 28/29 on the fandom field (it gives them bare, with 'with some parts removed' only on ch 30), so chapters_adapted is stated at chapter granularity rather than page granularity — the pages line (A4/A10) is satisfied by the ep 11 boundary at ch 27 and the licensor synopsis, not by an explicit page split."
+  ]
+}
