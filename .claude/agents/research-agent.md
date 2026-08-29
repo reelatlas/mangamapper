@@ -54,7 +54,11 @@ Read both, fully:
   flips the episode to `mixed` when BOTH hold — the pages appear in NO other
   episode (check the coverage set) AND the beat is a major plot point of the
   source (a death, a reveal, an arc close). A duplicate graft or a trivial
-  first-time beat stays filler. State both halves of the test explicitly
+  first-time beat stays filler. **Fragments AGGREGATE:** mixed if their
+  aggregate share is a substantial, story-carrying part of this episode's
+  plot, OR any one fragment is sole + load-bearing. Count is not share
+  (five cameos stay slivers); duplicates of pages covered elsewhere do not
+  add; every tie is still annotated; otherwise filler. State both halves of the test explicitly
   when you invoke it (FotNS 57 — the only adaptation of ch 82's closing
   pages — is the witness; a mixed row under this exception MAY carry the
   anchor, which is the point: filler would falsely mark the pages
