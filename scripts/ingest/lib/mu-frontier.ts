@@ -75,8 +75,12 @@ export async function applyMuFrontier(
   const picked = pickEntrySegments(segments, { airedEpisodes: s.aired_episodes, startYear: year(s.start_date), endYear: year(s.end_date), seasonCount: Math.max(1, seasonComponents ?? 0) });
   // an UNRESOLVED string (no entry marker on any segment) keeps today's pin;
   // the coverage audit lists it (mu_pin_multiwork_unresolved) for a ruling
-  const pairs = segments.length > 1 ? picked.chosen.map((x) => ({ volume: x.volume, chapter: x.chapter })) : parseCoverageAll(muEnd).pairs;
-  const explicitEp = segments.length > 1
+  // the cobra caller-bypass (wave 7 deep, 2026-08-28): a SINGLE labelled-foreign
+  // segment must refuse here too — before this, only multi-segment strings
+  // consulted the pick, so '(1983)' / '(As of EP 1168)' pins landed unexamined (P5)
+  const usePick = segments.length > 1 || (segments.length === 1 && picked.chosen.length === 0);
+  const pairs = usePick ? picked.chosen.map((x) => ({ volume: x.volume, chapter: x.chapter })) : parseCoverageAll(muEnd).pairs;
+  const explicitEp = usePick
     ? (picked.chosen.find((x) => x.explicitEp != null)?.explicitEp ?? null)
     : parseCoverageAll(muEnd).explicitEp;
   const scopeStart = s.manga_start_chapter ?? 1;

@@ -859,6 +859,28 @@
    frontier_tail_null −1 (regenesis 10/11 now filler), asterisk +6,
    ruling_violation 0, display 219/0. L-D: 14/29 checked → 8 confirmed /
    4 part-wrong / 3 another work's; six MU pathologies documented.
+94. ✅ **CONSOLIDATE DEEP after wave 7 (2026-08-28; the G32 single-segment
+   gate changed — P21).** THE DEEP EARNED ITS KEEP TWICE. (a) The
+   single-foreign-segment probe (202 MU strings): 5 refusal candidates,
+   each triaged — one-piece-log ('As of EP 1168' = the FRANCHISE frontier
+   on a 21-ep Log entry: correctly refused), cardcaptor-sakura ('Movie 2'
+   endpoint on the TV entry: correct), sailor-moon-crystal ('Cosmos Movie
+   2' — the '(1996)' text has no chapter pair and never was a segment; 39
+   manual anchors govern: correct), d-frag / prison-school (the label is
+   an ASIDE mentioning the OVA, but both rows hold wave-6/7 MANUAL
+   anchors: zero data effect; the fail-closed refusal is acceptable
+   G-family behaviour for future cases). (b) **The P5 catch: the wave-7
+   gate fix was BYPASSED at the call site** — applyMuFrontier consulted
+   pickEntrySegments only for multi-segment strings, so a single foreign
+   label still pinned. Outcome-verified (one-piece-log's pin survived the
+   heal), the caller patched (usePick when the single segment is foreign),
+   re-healed: the pin is deleted, the series moved to
+   pending_finished_unknown_coverage (honest; stays on the L-D queue),
+   mu_pin_unverified 17 → 16. Verifying OUTCOMES, not intentions, is the
+   whole point of the deep. Edges redeployed; 157 tests; ruling_violation
+   0. Permanence 0 locked / 0 violations; no stale rulings. Cycle: step 1
+   — Sean picks wave 8 (L-D ×8 of ~16, or a gap block; dai LAST; the T28
+   six + claymore 26 still parked for his ruling).
 85. ✅ **CONSOLIDATE DEEP after batch 20 wave 4 (2026-08-28; P21 —
    `applyEpisodeFloor`'s input changed: `translatedMax`).** Steps 0-8
    satisfied by §12.84's save point. Rescan (step 9): (a) the floor probe
