@@ -877,7 +877,13 @@
    re-healed: the pin is deleted, the series moved to
    pending_finished_unknown_coverage (honest; stays on the L-D queue),
    mu_pin_unverified 17 → 16. Verifying OUTCOMES, not intentions, is the
-   whole point of the deep. Edges redeployed; 157 tests; ruling_violation
+   whole point of the deep. Post-patch deltas, each named:
+   mu_pin_unverified 17 → 15 (one-piece-log AND sgt-frog — its foreign
+   pin cleared the same way, now pending); anchor_without_row −1
+   (one-piece-log's row-less pin); frontier_tail_null +1 = sailor-moon
+   (its MU tail pin past ep 199 was also foreign-labelled and refused —
+   a 1-row research crumb, queued); ok_full −1 /
+   pending_finished_no_totals +1 (the reclassifications). Edges redeployed; 157 tests; ruling_violation
    0. Permanence 0 locked / 0 violations; no stale rulings. Cycle: step 1
    — Sean picks wave 8 (L-D ×8 of ~16, or a gap block; dai LAST; the T28
    six + claymore 26 still parked for his ruling).
