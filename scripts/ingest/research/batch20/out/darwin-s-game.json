@@ -1,0 +1,84 @@
+{
+  "series_id": "darwin-s-game",
+  "summary": "The 2020 finale (ep 11 'Sunset Ravens', canon) adapts game#29 through the OPENING of game#31 — all of it inside tankoubon vol 8 (29-32). It opens exactly on ch 29's warehouse scene (Kaname's speech to the Eighth mob and his decision to start the clan battle himself — the official Aniplex synopsis for ep 11 is a paraphrase of those pages), runs the Wang fight to its end in ch 30, keeps ch 30's closing Oboro / Game Master coda (Oboro's manga debut is ch 30, his anime debut ep 11), and then animates the first section of ch 31: the Sunset Ravens' D-Game-ban notice, Shibuya becoming their territory, the snipers cutting down clans that try to plant a flag, the member profiles, Kotori's reaction and the Danjou Boxing Club following suit. MU's pin ('Vol 8, Chap 30 Abridged') is therefore UNDERSTATED by one chapter: it names the last FULLY adapted chapter, not the furthest chapter reached (A4, 'pages, not numbers'). Repair 30 -> 31 with START 29, volume 8 unchanged. The episode stops mid-chapter, so the post-series resume is IN game#31 (C1 + C5): everything after the ban sequence in ch 31 (the assassination of the analyst writing the 'case D' report; Hiiragi Suzune and Amagasa's introduction) and all of 32-125 is never animated. ja-WP's own summary caps the anime at vols 1-8, which is consistent; the fandom episode infobox's extra 'Volume 9' tag could not be corroborated and is flagged.",
+  "anchors": [
+    {
+      "episode": 11,
+      "end_chapter": 31,
+      "start_chapter": 29,
+      "chapters_adapted": "29-30 in full; 31 partial (the chapter's opening ~18 pp: the 'case D' report frame, the Sunset Ravens D-Game-ban notice, the Shibuya flag-planting suppression, the member profiles, Kotori's reaction and the Danjou Boxing Club follow-up). Remainder of 31 (the analyst's assassination, Suzune/Amagasa) not animated.",
+      "volume": 8,
+      "confidence": "high",
+      "note": "A4 END = furthest mainline chapter adapted in running order = 31 (its opening section is animated as the finale's epilogue; 'pages, not numbers'). A10 START = 29: the episode opens on ch 29 p1-10 (Kaname's extended speech + he initiates the clan battle); ch 28 ends on the vol-7 last page ('第7巻／完') which the wiki assigns to ep 10 (ep 10 = Volume 7 only). Volume 8 = ch 29-32 per the wiki volume page and MangaDex's volume aggregate. Repairs the mu-tier pin 30 -> 31.",
+      "sources": [
+        "https://darwins-game.fandom.com/api.php?action=parse&page=Episode_11&prop=wikitext&format=json",
+        "https://darwins-game.fandom.com/api.php?action=parse&page=Anime&prop=wikitext&format=json",
+        "https://darwins-game.com/story/",
+        "https://api.mangadex.org/manga/b5f23eb3-7ff7-4a80-ae74-2686e65ccd57/aggregate",
+        "https://darwins-game.fandom.com/api.php?action=parse&page=Volume_8&prop=wikitext&format=json",
+        "https://anitubu.com/archives/post-34549.html",
+        "https://ja.wikipedia.org/wiki/%E3%83%80%E3%83%BC%E3%82%A6%E3%82%A3%E3%83%B3%E3%82%BA%E3%82%B2%E3%83%BC%E3%83%A0"
+      ]
+    }
+  ],
+  "continue_points": [
+    {
+      "episode": 11,
+      "continue_chapter": 31,
+      "kind": "post_series",
+      "note": "Resume at game#31 (vol 8) and skim its first ~18 pages — the anime already played the D-Game-ban notice and the Shibuya-territory scenes. New from there: the assassination of the analyst writing the 'case D' report, then Hiiragi Suzune and Amagasa's introduction; ch 32 through the manga's end at 125 is never animated. C1 (the finale ends mid-chapter, so the continue is IN the straddled chapter) + C5 (post-series).",
+      "sources": [
+        "https://darwins-game.fandom.com/api.php?action=parse&page=Chapter_31&prop=wikitext&format=json",
+        "https://darwins-game.fandom.com/api.php?action=parse&page=Chapter_32&prop=wikitext&format=json",
+        "https://comic-compass.com/darwinsgame-anime-continued-comic-number/"
+      ]
+    }
+  ],
+  "anchor_hostile": [],
+  "annotations": [
+    {
+      "episodes": [11],
+      "kind": "divergence",
+      "chapters": "29-31",
+      "note": "Close but compressed adaptation with anime-original inserts: Kaname's Darwin's-Game speech is extended, more of the Inukai/Keiichi fight is shown, Shuka arrives during the Kaname-Ryuuji confrontation with Wang, the ch-31 flag-suppression sequence is expanded to include every member (all in black, raven-themed), and two short anime-original scenes close the episode (Kaname & Shuka; the Ravens discussing the clan). The source still carries the episode's whole plot, so the standing stays canon under T27/T28 — the inserts are not a story-carrying original share."
+    }
+  ],
+  "repairs": [
+    {
+      "episode": 11,
+      "field": "end_chapter",
+      "old": 30,
+      "new": 31,
+      "why": "G37 — what MU counted: MU's single-work segment reads 'Vol 8, Chap 30 Abridged', i.e. the last chapter the finale adapts COMPLETELY (the Wang defeat and ch 30's closing Oboro / Game Master coda). The episode then animates the opening section of ch 31 as its epilogue: the D-Game-ban notice (ch 31 p3), Shibuya declared Sunset Ravens territory and the snipers stopping rival clans from planting flags (ch 31 pp 4-8) — the fandom's own 'Anime Differences' for ep 11 says that scene 'is expanded to include all of the members', and live broadcast reactions at 00:24 JST quote the ban ('Dゲーム禁止…', 'みんな黒い服になってるのか', 'エンブレムかっこええ'). A4: END is the furthest mainline chapter adapted, not the last complete one. MU is understated by one chapter, not in another edition's space (fandom, MangaDex and MU all place 29-32 in vol 8).",
+      "sources": [
+        "https://api.mangaupdates.com/v1/series/28035998976",
+        "https://darwins-game.fandom.com/api.php?action=parse&page=Episode_11&prop=wikitext&format=json",
+        "https://anitubu.com/archives/post-34549.html",
+        "https://comic-compass.com/darwinsgame-anime-continued-comic-number/"
+      ]
+    },
+    {
+      "episode": 11,
+      "field": "start_chapter",
+      "old": null,
+      "new": 29,
+      "why": "The mu-tier pin carries no START. The episode opens on game#29 pp 1-10 — Kaname at the warehouse ('I was overly optimistic to think that D-Game was separate from the rest of the world'), then he starts the Eighth vs Sunset Ravens clan battle himself. The official Aniplex synopsis for ep 11 is that beat verbatim ('これまでの自分の考えの甘さに気づき、ついに覚悟を決める。王との決着をつけるべく、自らクランバトルを仕掛けるのだった'), and the fandom's first ep-11 difference is 'Kaname's speech about the Darwin's Game is extended'. Ep 10 is tagged Volume 7 only and ch 28 closes the volume ('『ダーウィンズゲーム』第7巻／完'), so no ch-28 leading partial belongs to ep 11 (A10).",
+      "sources": [
+        "https://darwins-game.com/story/",
+        "https://darwins-game.fandom.com/api.php?action=parse&page=Episode_11&prop=wikitext&format=json",
+        "https://darwins-game.fandom.com/api.php?action=parse&page=Anime&prop=wikitext&format=json"
+      ]
+    }
+  ],
+  "type_corrections": [],
+  "structure": {
+    "notes": "CHAPTER SPACE: one space, the manga's own game#N numbering; vol 7 = 25-28, vol 8 = 29-32 (+32.5 omake), vol 9 = 33-36 — identical on the fandom volume pages and MangaDex's volume aggregate, and MU's 'Vol 8' agrees. 125 chapters / 30 volumes (ja-WP: 全125話 + epilogue), matching the stored space (total_chapters 125). MU's latest_chapter 114 is a release-record artefact, not a ceiling. ROW IDENTITY: our 11 rows = the 11 TV episodes; the fandom and ja-WP additionally carry the recap '4.5話 記憶 (Log Line)', which our rows do NOT count — no shift, ep 11 = 'Sunset Ravens' / 血盟 on both. Our stored air date 2020-03-20 is the late-night slot whose calendar timestamp is 2020-03-21 00:00 JST (the live-tweet timeline for the finale runs 2020-03-21 00:0x-00:26); ja-WP's 'to March 21' is that same broadcast — no date repair. MU SEGMENT (G32 gate 0): this series' anime field is a single unlabelled work — start 'Vol 1, Chap 1', end 'Vol 8, Chap 30 Abridged'; no multi-work ambiguity, the pin is simply one chapter short. FANDOM 'VOLUME 9' TAG: the wiki's Anime table gives ep 11 'Volume 8 / Volume 9 / Anime Original'; I could not corroborate any vol-9 content — none of vol 9's cast (Hiiragi Suzune, Amagasa, Themis, Maria Anderson, the Saigou siblings, Ouji, Kanehira) appears in the wiki's own ep-11 character list, and ch 33/34's pages are the Suzune/Amagasa forest hunt and Maria Anderson's arrival in Japan, neither of which is in the anime. The two scenes that might have prompted it (Kaname & Shuka; the Ravens discussing the clan) are labelled anime-original by the same wiki page. Treated as unsupported; flagged. AUTHORSHIP: the official site credits ep 11's script to 深山 秀 (FLIPFLOPs) — the manga's own writer — which is consistent with the finale tracking the source closely; it is not an `adopted` basis (no anime-original material is carried back into the manga).",
+    "order_only": []
+  },
+  "flags_for_sean": [
+    "MU pin verdict: UNDERSTATED, not wrong-space. 'Vol 8, Chap 30 Abridged' = the last fully adapted chapter; the honest END is 31 (its opening section). If the writer keeps re-deriving the mu tier, the 31 must land at the manual tier (P8).",
+    "darwins-game.fandom's Anime table tags ep 11 'Volume 9' in addition to Volume 8; no vol-9 content could be located in the episode (cast and ch 33/34 pages both argue against). I did not act on the tag; if a verifier finds a vol-9 beat, the END would move.",
+    "A web summariser claimed a C-part showing Kaname sent to an island Hunting Game; the raw live-tweet timeline for the broadcast (00:23-00:26 JST) shows the ban montage, the ED and the cast roll and nothing of the kind. Treated as fabricated, not as evidence.",
+    "Japanese continuation sites (comic-compass: 'game#29～game#31（冒頭）まで', mangandenchi/collectnews: '8巻31話の途中まで') agree with the 31 reading but are affiliate content farms — used as cross-check only; the primary evidence is the fandom episode page's own 'Anime Differences' plus the ch-31 pages that scene sits on, corroborated by the broadcast reaction timeline. wheredoestheanimeleaveoff.com says 'start at Chapter 30' and is the same class of source — it agrees with MU and is likely derived from it."
+  ]
+}
