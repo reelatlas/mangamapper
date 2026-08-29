@@ -1,0 +1,58 @@
+{
+  "series_id": "killing-bites",
+  "summary": "The MU pin is CORRECT and now rests on evidence rather than on MangaUpdates alone: ep 12 (Final Bite, 今までありがとな) adapts the tail of ch 29 plus the whole of ch 30 — the last chapter of vol 6 and of the manga's 第1章 (Destroyal arc). The task premise that the tournament ending is anime-divergent FAILS on the sources: ja-WP's manga character entries describe exactly the anime's beats (Eruza finishes the dying Pangolin and is then knocked out by Ui's accidental somersault kick, making Ui the champion; after the Destroyal Nomoto takes his payout, returns to normal life, is fatally slashed by Hitomi under Shidou's orders and is saved by the Ishida Zaibatsu via theriomorphosis surgery), and the fandom's Nomoto synopsis places all of it inside the Destroyal arc. Ch 30's own title is the episode's title and its scene: the junkyard reunion where the two thank each other before Hitomi cuts him down. The only anime-original material in the row is the closing montage that compresses arc 2's premise (the therianthrope special zone, non-lethal Killing Bites as entertainment, Nomoto with two young female brutes) — ja-WP states Kuroi Tasuku, a 第2章 character, appears there in ONE anime-only cut. That coda is a sliver of the episode's running time against two chapters of adapted plot, so the row stays canon (T27/T28) with a divergence annotation; it adapts no pages of ch 31+. Honest terminal and frontier coincide at ch 30; the post-series continue is ch 31 and ch 31-141 (the manga is ongoing, 27 volumes as of 2026-06-29) is never animated.",
+  "anchors": [
+    {
+      "episode": 12,
+      "end_chapter": 30,
+      "start_chapter": 29,
+      "chapters_adapted": "29 (from the chameleon assassins being put down / Ui declared champion) - 30",
+      "volume": 6,
+      "confidence": "high",
+      "note": "A4 END = ch 30, the last chapter of vol 6 and of the Destroyal arc: title 今までありがとな = ch 30 'Thanks for everything' AND its content (the junkyard reunion, the mutual thanks, Hitomi's ordered slash, Nomoto's survival via Ishida's surgery) per ja-WP's 野本裕也 entry and the fandom's Nomoto/Synopsis Destroyal-arc close. A10 START = ch 29: ep 11 ends inside ch 29 ('This is a serious breach of the rules' — the presidents' rule-violation dispute, the blackout, the chameleons infiltrating) and ep 12 opens on that scene's resolution, which is not a recap/cold-open sliver; ch 29 and ch 30 are both vol 6 (fandom Chapters and Volumes; MangaDex volume field). The MU pin 'Vol 6, Chap 30' is CONFIRMED and therefore redundant with this manual anchor (G56); nothing is overstated (G37 not invoked).",
+      "sources": [
+        "https://killing-bites.fandom.com/wiki/Chapter_30",
+        "https://killing-bites.fandom.com/wiki/Nomoto_Yuuya/Synopsis",
+        "https://ja.wikipedia.org/wiki/%E3%82%AD%E3%83%AA%E3%83%B3%E3%82%B0%E3%83%90%E3%82%A4%E3%83%84",
+        "https://en.wikipedia.org/wiki/Killing_Bites",
+        "https://api.mangadex.org/manga/076b3757-2050-4362-b0ad-52513ecefa3f/feed?translatedLanguage%5B%5D=en&order%5Bchapter%5D=asc",
+        "https://killing-bites.fandom.com/wiki/Chapters_and_Volumes",
+        "https://thetv.jp/program/0000932647/plot/"
+      ]
+    }
+  ],
+  "continue_points": [
+    {
+      "episode": 12,
+      "continue_chapter": 31,
+      "kind": "post_series",
+      "note": "C5: the anime adapts the manga's 第1章 complete (ch 1-30) and ends on ch 30's last pages, so resume at ch 31 'To Become the Killing Bites Champion' — the first chapter of the Carrot Field arc (Pure vs Kuroi Tasuku at the auditions, Nomoto interfering). Nothing from ch 31 onward is animated: ch 31-141 (the manga is ongoing; 27 volumes as of 2026-06-29) is a never-adapted range. The finale's closing montage only GLIMPSES that premise — a Tokyo-Bay therianthrope special zone, Nomoto backing two young female brutes — it adapts none of ch 31's pages, so a reader loses nothing by starting at 31.",
+      "sources": [
+        "https://api.mangadex.org/manga/076b3757-2050-4362-b0ad-52513ecefa3f/feed?translatedLanguage%5B%5D=en&order%5Bchapter%5D=asc",
+        "https://killing-bites.fandom.com/wiki/Chapter_31",
+        "https://ja.wikipedia.org/wiki/%E3%82%AD%E3%83%AA%E3%83%B3%E3%82%B0%E3%83%90%E3%82%A4%E3%83%84",
+        "https://thetv.jp/program/0000932647/plot/"
+      ]
+    }
+  ],
+  "anchor_hostile": [],
+  "annotations": [
+    {
+      "episodes": [12],
+      "kind": "divergence",
+      "chapters": "30",
+      "note": "Faithful adaptation of ch 29-30 with an anime-original closing coda: the flash-forward montage (therianthrope special zone, non-lethal Killing Bites as mainstream entertainment, Nomoto training two young female brutes) compresses the premise the manga only sets up at the end of ch 30 and develops in ch 31-34. ja-WP records that Kuroi Tasuku — a 第2章 character — appears in the TV anime's final episode in one cut, in the scene where Pure comes to the special zone; that cameo exists only in the anime. Sliver share of the episode, so the row stays canon under T28, not mixed."
+    }
+  ],
+  "repairs": [],
+  "type_corrections": [],
+  "structure": {
+    "notes": "MU coverage string for this entry is a SINGLE unlabelled segment — {'start': 'Vol 1, Chap 1', 'end': 'Vol 6, Chap 30'} (api.mangaupdates.com/v1/series/5351157989); there is no second adaptation and no label ambiguity, so the G32 segment picker has nothing to disambiguate. Chapter space: the manga's own serialization numbering (月刊ヒーローズ / ヒーローズコミックス). Volume boundaries confirmed for the anime's span by two independent sources — killing-bites.fandom Chapters and Volumes and the MangaDex volume field: v1=1-5, v2=6-10, v3=11-15, v4=16-20, v5=21-25, v6=26-30, v7=31-34. Arc structure: 第1章 (Destroyal) = ch 1-30, 第2章 (Carrot Field) starts at ch 31; ja-WP states the TV anime is 「第1章エピソードのアニメ化」 and the licensor EPG text closes with 「第二部は原作コミックスにて連載中」. Row-count identity: our 12 rows = ja-WP's 各話リスト (1st Bite … Final Bite) = en-WP's 12 rows, joined on title and (for ep 11/12) on date; WEBザテレビジョン numbers the same episodes 第2話-第13話 because it counts the pre-broadcast cast special as its first entry — never index-join that table (R20). Volume-end bonus manga 「導け!オシエちゃん」(v1-10) and 「ひた隠せ!稲葉さん」(v11-) are side stories serialized inside the source's tankoubon and are unadapted; the MU 'Side Story' relations are the spin-off 『ほしがりすぎでしょ!? 稲葉さん』(3 vols), also unadapted. Rows 1-11 were not audited (out of lane): the 12 episodes cover 30 chapters at ~2.5 chapters/episode with no reported skips, and ep 6's title 「そんな事、私が知るか」 = ch 15's title, exactly on that pace.",
+    "order_only": []
+  },
+  "flags_for_sean": [
+    "PREMISE FAILED (a task premise is a claim, not a fact): the ask reports the anime's tournament-arc ending as anime-divergent. Two sources say it is not. ja-WP's 中西獲座 entry: she finishes the dying Pangolin and is then beaten by Rabbit's accidental somersault kick, becoming the last eliminated; its 稲葉初 entry: Ui wins the Destroyal by that same fluke — i.e. anime ep 11 exactly. ja-WP's 野本裕也 entry: after the Destroyal he takes a 300-million-yen payout, returns to ordinary life, is fatally wounded by Hitomi acting on Shidou's orders and survives via Ishida's theriomorphosis surgery — i.e. anime ep 12 exactly. The fandom's Nomoto/Synopsis places all of it inside the Destroyal-arc section. No A1 anchor-hostile case arises.",
+    "AIR DATE (out of lane, do not apply blind): our stored ep 12 date is 2018-04-01, a Sunday. The production station MBS aired the finale Sat 2018-03-31 02:25 (EPG-listed as Fri 3/30 late-night); en-WP's episode table runs 2018-01-13 … 2018-03-31 and ja-WP gives MBS 放送終了 3月31日. 2018-04-01 is BS-TBS's Sun 00:30 slot (ja-WP 放送局 table: BS-TBS 1月14日 - 4月1日). If rows 1-11 hold the MBS Saturday dates this is a one-row G53 repair to 2018-03-31; if the whole run is stored on the BS-TBS regime it is a series-level regime choice, not an error. I could not see rows 1-11's stored dates from the context, so this is a flag, not a repair.",
+    "START page split underdetermined: no source gives page counts for the ep 11 / ep 12 seam. START = 29 rests on en-WP's ep 11 summary ending inside ch 29's material (rule-violation dispute, blackout, chameleons infiltrating) and on the ch 29 vs ch 30 cast split on the fandom chapter pages (Shinozaki Mai and Inaba Ui in 29 and not in 30; the coup cast opens 30). If a page-level source later shows ep 12 opening at ch 30's first page, only start_chapter/chapters_adapted move — the END (30) and the continue (31) are unaffected."
+  ]
+}
