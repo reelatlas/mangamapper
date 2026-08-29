@@ -1,0 +1,90 @@
+{
+  "series_id": "drifters",
+  "summary": "MU's pin is WRONG for our entry and its own label says why: the coverage string reads \"Vol 5, Chap 56 Page 8 (Including OVAs)\" — that terminal belongs to the OVA block (eps 13-15), not to TV ep 12 (G37). AFG independently pins ch 56 p 8 to OVA 3 \"The Outlandish Knight\" (its ep 15 = Act 54's title). Our entry is the 12-episode TV run, and ep 12 (みつめて☆新選組～熱血九州男児の唄～) adapts Acts 40-45: it opens exactly at Act 40 p 1 (the melee + Nobunaga's volley orders — Act 39 ends on Toshizo's \"SHIMAZU!!\", which is ep 11's last beat) and stops MID-Act 45 at Toyohisa's collapse (p 9 of 18). Act 45 pp 10-18 (the morning after: San-Germi berating Nobunaga over the burnt capital, Yoichi and Shara stitching Toyohisa, the closing Gu-Binnen spread) are the OPENINGS of OVA eps 13 and 14 — not in the TV run. So the honest terminal is 45 in Volume 4 (vol 4 = Acts 36-47), not 56 in vol 5, and the resume is C1 inside Act 45. Chapter space is the manga's own continuous 幕 (\"Act\") numbering, 1-86 in tankoubon plus unvolumed 87+; MU/AniList's 85 and the fandom's Chapter pages sit in that same space, so the pin was in the right space but on the wrong block of episodes.",
+  "anchors": [
+    {
+      "episode": 12,
+      "end_chapter": 45,
+      "start_chapter": 40,
+      "chapters_adapted": "40-45 (Act 45 pp 1-9 of 18 only)",
+      "volume": 4,
+      "confidence": "high",
+      "note": "A4/A10: START is clean at Act 40 p 1 — Act 39 ends on the shadowed Toshizo growling 'SHIMAZU!!', which is ep 11's closing shot, and Act 40 opens on the melee with Nobunaga ordering Yoichi to extend the line of fire, which is ep 12's opening per NBCUni's own synopsis; no leading partial. END = Act 45, reached mid-chapter at Toyohisa's collapse (Act 45 p 9, 'I won't move from this spot' → 'HEY, TOYO!!'); pp 10-18 are the morning-after and the Gu-Binnen spread, which open OVA eps 13 and 14 instead. The episode's wordless closing montage (Kanno, Scipio, Tamon, Shylock, the Wild Bunch, Joan, Anastasia, and the Akechi Mitsuhide reveal) is a season-2 teaser of cast from later acts and is A44 position-less — it does not move the END.",
+      "sources": [
+        "https://mangadex.org/chapter/cdd20b73-d5f5-45f5-b5a5-e828fcdc6b9b",
+        "https://mangadex.org/chapter/770de1b2-8fc3-4acb-a0a3-b7cb95ccdb94",
+        "https://mangadex.org/chapter/2a259c09-ac89-4e1d-bada-d1bab100ae46",
+        "https://web.archive.org/web/20161227042443/http://www.nbcuni.co.jp/rondorobe/anime/drifters/story/12.html",
+        "https://web.archive.org/web/20171231202109/http://www.nbcuni.co.jp/rondorobe/anime/drifters/story/13.html",
+        "https://drifters.fandom.com/wiki/Episode_12",
+        "https://drifters.fandom.com/wiki/Volume_4",
+        "https://en.wikipedia.org/wiki/Drifters_(manga)"
+      ]
+    }
+  ],
+  "continue_points": [
+    {
+      "episode": 12,
+      "continue_chapter": 45,
+      "kind": "post_series",
+      "note": "C1: the TV run stops mid-Act 45. Resume IN Act 45 — from the ruined-city page (p 10) onward: San-Germi and Nobunaga arguing over the thirty percent of Verlina that burned, Yoichi and Shara stitching Toyohisa, Nobunaga's 'destroying feudal rule is my specialty' plan, and the closing Gu-Binnen harbour spread; then Act 46 on. Nothing from Act 46 forward is in the 12-episode TV series. (The three OVAs — eps 13-15, not rows in this entry — carry Act 45 pp 10-18 and run to Act 56 p 7.)",
+      "sources": [
+        "https://mangadex.org/chapter/cdd20b73-d5f5-45f5-b5a5-e828fcdc6b9b",
+        "https://web.archive.org/web/20171231202109/http://www.nbcuni.co.jp/rondorobe/anime/drifters/story/13.html",
+        "https://www.animefillerguide.com/anime/drifters/"
+      ]
+    }
+  ],
+  "anchor_hostile": [],
+  "annotations": [
+    {
+      "episodes": [12],
+      "kind": "partial",
+      "chapters": "45",
+      "note": "only Act 45 pp 1-9 (the Toshizo duel's close, the Black King's retreat order, Toyohisa's collapse); pp 10-18 first appear in the OVA block, outside this entry"
+    },
+    {
+      "episodes": [12],
+      "kind": "divergence",
+      "chapters": "40-45",
+      "note": "close adaptation of Acts 40-45 with an anime-original closing montage (a silent parade of Kanno Naoshi, Scipio, Yamaguchi Tamon, Shylock VIII, the Wild Bunch, Joan, Anastasia and the Akechi Mitsuhide reveal, under the ep-12-only ED 「流浪の柘榴」) teasing the announced second season"
+    }
+  ],
+  "repairs": [
+    {
+      "episode": 12,
+      "field": "end_chapter",
+      "old": 56,
+      "new": 45,
+      "why": "G37: MU's curated string is 'Vol 5, Chap 56 Page 8 (Including OVAs)' — 56 p 8 is the resume point after the OVA block (AFG attributes Act 53-56 p 1-7 to OVA 3 'The Outlandish Knight'), not after TV ep 12. Our entry is the 12-episode TV run; ep 12 stops at Act 45 p 9 (Toyohisa's collapse), and Act 45 pp 10-18 open OVA eps 13/14. Contemporary Japanese readers said the same on the day after broadcast ('4巻 第36幕 … 第45幕 What bout my star? の前半まで').",
+      "sources": [
+        "https://api.mangaupdates.com/v1/series/12950101701",
+        "https://www.animefillerguide.com/anime/drifters/",
+        "https://mangadex.org/chapter/cdd20b73-d5f5-45f5-b5a5-e828fcdc6b9b",
+        "https://detail.chiebukuro.yahoo.co.jp/qa/question_detail/q13168351683"
+      ]
+    },
+    {
+      "episode": 12,
+      "field": "volume",
+      "old": 5,
+      "new": 4,
+      "why": "Act 45 is in tankoubon volume 4 (vol 4 = Acts 36-47; vol 5 = Acts 48-59) per en-WP's volume/chapter table and the Drifters Wiki volume pages; vol 5 was correct only for MU's OVA-inclusive 56.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Drifters_(manga)",
+        "https://drifters.fandom.com/wiki/Volume_4",
+        "https://drifters.fandom.com/wiki/Volume_5"
+      ]
+    }
+  ],
+  "type_corrections": [],
+  "structure": {
+    "notes": "CHAPTER SPACE: Drifters chapters are 'Acts' (第N幕), numbered continuously across volumes — vol 1 = 1-11, vol 2 = 12-22, vol 3 = 23-35, vol 4 = 36-47, vol 5 = 48-59, vol 6 = 60-71, vol 7 = 72-86, 87+ unvolumed (en-WP volume table; Drifters Wiki Volume/Chapter pages; MangaDex aggregate). ja-WP's manga article uses the same numbers (it writes them as both 第45幕 and 第35話); MU's latest_chapter 85 and AniList's latest_known 85 are in this space, so the stored '56' was in the right numbering but on the wrong episodes. ROW IDENTITY: our entry holds the 12 TV rows only; ja-WP numbers the anime's episodes 第一幕-第十二幕 plus OVA 第十三幕/第十四幕 and a short, en-WP adds a 15th OVA ('The Outlandish Knight', bundled with manga vol 6, 2018-11-30) — none of those three are rows here and their coverage must not be counted into ep 12. EPISODE-TITLE PATTERN (orientation only, never an anchor on its own): every TV title is an Act title — ep 11 = Act 39, ep 12 = Act 40's title みつめて☆新選組 concatenated with Act 44's 熱血九州男児の唄, ep 13 = Act 49 'Rewrite', ep 14 = Act 50 'BRING ON A WAR', ep 15 = Act 54. PAGE MAP OF ACT 45 (18 story pp, read from the tankoubon-paginated scans, vol pp 185-189 visible on the last five): pp 1-9 the duel's end → Black King's 'I am telling you to retreat' → dragon knight carries Toshizo off → Toyohisa collapses [ep 12]; pp 10-17 the morning after, San-Germi vs Nobunaga, the stitching scene, Nobunaga's plan [OVA ep 13]; pp 17-18 the Gu-Binnen ships and guild spread, '第45幕/完' [OVA ep 14].",
+    "order_only": []
+  },
+  "flags_for_sean": [
+    "Provenance of ep 12's closing Akechi Mitsuhide beat is unresolved and does NOT affect the anchor. ja-WP's character section says Akechi 'appears formally in 第45幕, both that and the 第34幕 back-view being absent from the magazine run and added in tankoubon'; but the tankoubon-paginated scan of Act 45 (vol pp 185-189, ending '第45幕/完' on the Gu-Binnen spread) contains neither the Rasputin/Black King exchange nor Akechi. So ep 12's coda is either a revised-printing insert in Act 45 or an anime-original season-2 teaser. Under A4/A44 the END is Act 45 either way (the last adapted running-order pages are Act 45 pp 1-9).",
+    "MU pin disposition: the stored ep-12 → 56 row is a mu-tier value whose own label ('Including OVAs') scopes it to eps 13-15, which are not rows in this entry. Recommend the manual anchor 12 → 45 [40] vol 4 with the pin marked overstated for this entry (G37/G56), not merely redundant.",
+    "Cross-checks only, not cited as primary: a Yahoo Chiebukuro answer posted the morning after the finale enumerates Acts 36-45 and stops at '第45幕 … の前半まで' (the first half), and a manga-reader's episode-12 review the same day says the anime went 'to about where vol 4 ends' and that Akechi appears in the very last scene. Both agree with the page reading."
+  ]
+}
