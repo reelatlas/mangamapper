@@ -108,3 +108,18 @@ ReGenesis manga, the relation is adaptation OF THAT WORK and the question is
 which work our S1-only entry's instrument should be), or anime-original?
 Deliver the identity verdict + arc/direction table + flags; row changes only
 for rows our catalog actually holds.
+
+## Amendment 2026-09-02 (wave 8 — pinned before dispatch; R31)
+
+Wave 8 = **L-D ×7** (the MUPIN shape, amendment 2026-08-28b unchanged;
+work-list from disk = the mu_pin_unverified census head: handa-kun, uq-holder,
+orient, made-in-abyss, masamune-kun-s-revenge, ranking-of-kings-the-treasure-
+chest-of-courage, pluto) + **one-piece-log-fish-man-island-saga** (lane A1,
+the TERMINAL shape — its franchise-frontier pin was refused §12.94; the true
+terminal of the Log entry in One Piece's chapter space). Two asks carry an
+IDENTITY preface (the-treasure-chest, one-piece-log: bare or missing rows —
+the row → title → air date table in structure.notes + `repairs`, the
+wave-4 TBATE shape). Row-less targets (orient, one-piece-log 7-21) still
+take anchors: research runs ahead of rows (A42). No contract change. The
+killing-bites ep 11/12 date pair (lane B) is deferred to wave 9 under the
+8-agent cap (P12).
