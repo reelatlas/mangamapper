@@ -1,0 +1,119 @@
+{
+  "series_id": "orient",
+  "summary": "ORIENT's 24 TV episodes adapt manga chapters 1-115 densely and in order, in one continuous chapter space (1-156 / 22 vols) that survives the Weekly-Shonen-Magazine-to-Bessatsu move. MU's coverage string is HALF right: its first-cour segment 'Vol 6, Chap 46 (S1P1)' is CONFIRMED for ep 12 (which then trails a 5-page teaser of ch 47 that ep 13 restages and completes — a sliver, not a position, A10/A44), but its second-cour segment 'Vol 13, Chap 113 (S1P2)' is UNDERSTATED and internally inconsistent: ch 113 is the LAST chapter of volume 12 and the last chapter of the WSM run, while volume 13 (Kodansha 初出: 別マガ 2021年3-6月号) is ch 114-117. Episode 24 reaches ch 115 「誓い」 — the official synopsis names both the ch-114 honours ceremony (Kojiro and his father Jisai's mystery) and the bushi's 「誓い」, and the chapter pages' casts for 114/115 (Kuroko Usami, Aoshi Sanada, Shunrai Yamamoto, the Tanegashima, the full Obsidian Eight) are the finale's cast and are absent from ch 113. So the pin is repaired 113 → 115, volume 13 unchanged, and the post-series resume is ch 116 with ch 116-156 (the Houjo arc onward, through vol 22) never adapted. This entry holds ZERO episode rows (flag #438), so the row -> title -> air-date table for all 24 episodes is delivered in structure.notes from three agreeing sources; flag #769 resolves as no edition split — MU's latest_chapter 121 is its scanlation release ceiling.",
+  "anchors": [
+    {
+      "episode": 12,
+      "end_chapter": 46,
+      "start_chapter": 43,
+      "chapters_adapted": "43-46 (+ ch 47 pp. 1-5 as a trailing teaser, not the END — see note)",
+      "volume": 6,
+      "confidence": "high",
+      "note": "First cour's finale. orient.fandom's page-partitioned field gives ep 12 = ch 43, 44, 45, 46, 47 (pp. 1-5) and ep 13 = ch 47 (pp. 2-4, 6-18), 48-52; MU's string independently splits the cours at the same seam (P1 end 'Vol 6, Chap 46' / P2 start 'Vol 6, Chap 47'). END = 46 (A4): the ch-47 tail is 5 pages of an 18-page chapter, three of which (pp. 2-4) are re-staged in ep 13 — a teaser at exactly A10's <=5-page sliver threshold, so it is not the position; the official ep-12 synopsis likewise stops at 「鐘巻武士団が進む先は……」, before Shiryu Castle (ch 47 紫龍城). START = 43 (ep 11 ends cleanly on ch 42). Volume from Kodansha's official 目次 for vol 6 = 第43話-第52話. MU's S1P1 segment is CONFIRMED and REDUNDANT (G56).",
+      "sources": [
+        "https://orient.fandom.com/api.php?action=parse&page=Episode_12&prop=wikitext&format=json",
+        "https://orient.fandom.com/api.php?action=parse&page=Episode_13&prop=wikitext&format=json",
+        "https://api.mangaupdates.com/v1/series/54514846320",
+        "https://orient-anime.jp/story/detail/?id=1001034",
+        "https://www.kodansha.co.jp/comic/products/0000322212"
+      ]
+    },
+    {
+      "episode": 24,
+      "end_chapter": 115,
+      "start_chapter": 112,
+      "chapters_adapted": "111 (pp. 17-18), 112-115",
+      "volume": 13,
+      "confidence": "high",
+      "note": "Series finale (2nd cour ep 12). orient.fandom gives ep 24 = ch 111 (pp. 17-18), 112, 113, 114, 115 — ep 23 ended at ch 111 p. 16, so the 2-page lead-in is a <=5-page sliver and START = 112 (A10). END = 115 (A4) 「誓い」, the last chapter of the Awaji Island Recapture Operation arc: the official orient-anime.jp synopsis for 第24話 names the ch-114 material (「小次郎は父・自斎の謎を解き明かすことができるのか」 = the 軍功 honours ceremony where Kojiro shows Jisai's Uesugi-sealed scroll to Tatsuomi; ch 114's cast list carries Jisai in flashback) AND the ch-115 beat (「淡路島奪還作戦に関わったすべての武士たちが願った『誓い』とは」 = Michiru's last day and her death, closing on Katsumi taken by the Obsidian Eight — ch 115's cast is the only one that holds Kuroko Usami, Aoshi Sanada, Shunrai Yamamoto, Mamori/Shige Tanegashima and all eight black dogs). Volume 13 = ch 114-117 per Kodansha's official 初出 (別マガ 2021年3月号〜6月号) and per Magazine Pocket's 【第115話】誓い (2021-03-09 = 別マガ 2021年4月号). Ch 116 「強くならなきゃ」 opens the Houjo arc and is NOT in the episode.",
+      "sources": [
+        "https://orient.fandom.com/api.php?action=parse&page=Episode_24&prop=wikitext&format=json",
+        "https://orient-anime.jp/story/detail/?id=1001121",
+        "https://www.kodansha.co.jp/comic/products/0000354463",
+        "https://orient.fandom.com/api.php?action=parse&page=Chapter_114&prop=wikitext&format=json",
+        "https://orient.fandom.com/api.php?action=parse&page=Chapter_115&prop=wikitext&format=json",
+        "https://pocket.shonenmagazine.com/episode/3269632237276099042"
+      ]
+    }
+  ],
+  "continue_points": [
+    {
+      "episode": 12,
+      "continue_chapter": 47,
+      "kind": "parity",
+      "note": "Resume at ch 47 「紫龍城」. Ep 12 closes on a 5-page teaser of ch 47 and ep 13 opens by re-staging pp. 2-4 and then adapting pp. 6-18 — so parity with the next episode's start (C2) and the mid-chapter straddle (C1) give the same value; a reader who starts at ch 47 loses nothing and re-reads only the pages ep 13 re-shows. Nothing between ch 1 and 46 is skipped.",
+      "sources": [
+        "https://orient.fandom.com/api.php?action=parse&page=Episode_12&prop=wikitext&format=json",
+        "https://orient.fandom.com/api.php?action=parse&page=Episode_13&prop=wikitext&format=json",
+        "https://api.mangaupdates.com/v1/series/54514846320"
+      ]
+    },
+    {
+      "episode": 24,
+      "continue_chapter": 116,
+      "kind": "post_series",
+      "note": "Post-series resume (C5 = furthest first-time coverage + 1, coverage per A4). The anime adapts ch 1-115 with no gap; ch 116 「強くならなきゃ」 - 156 (the Houjo arc through the finale, i.e. the rest of vol 13 and vols 14-22) is NEVER adapted, and neither is the vol-13 bonus chapter 115.5 「つぐみとみちるのワクワク女子会」. Start at ch 116, not at vol 14 as the fan 'where to continue' pages say.",
+      "sources": [
+        "https://orient.fandom.com/api.php?action=parse&page=Episode_24&prop=wikitext&format=json",
+        "https://www.kodansha.co.jp/comic/products/0000354463",
+        "https://ja.wikipedia.org/wiki/%E3%82%AA%E3%83%AA%E3%82%A8%E3%83%B3%E3%83%88_(%E6%BC%AB%E7%94%BB)",
+        "https://api.mangadex.org/manga/55a96d76-10a2-4c4b-bc60-3a4aa8325e50"
+      ]
+    }
+  ],
+  "anchor_hostile": [],
+  "annotations": [
+    {
+      "episodes": [
+        12
+      ],
+      "kind": "partial",
+      "chapters": "47 (pp. 1-5)",
+      "note": "Trailing 5-page teaser of ch 47 (the bands gathering at Harima / Shiryu Castle) closes the cour; pp. 2-4 are re-staged and pp. 6-18 adapted in ep 13. Sliver at the A10 threshold — annotated, never the END."
+    },
+    {
+      "episodes": [
+        12
+      ],
+      "kind": "divergence",
+      "chapters": "43-46",
+      "note": "orient.fandom's 'Differences from the manga' for ep 12: the anime ADDS scenes introducing Tatsuomi Uesugi, Kanetatsu Naoe, Masaki Amakasu, the Amako and Shimazu bands and Kijinosuke Noguchi ahead of their manga entrances — expansion inside a canon episode, not a second source."
+    },
+    {
+      "episodes": [
+        24
+      ],
+      "kind": "partial",
+      "chapters": "111 (pp. 17-18)",
+      "note": "Two-page carry-over of ep 23's cliffhanger (ch 111 ends at p. 18); excluded from START by A10's <=5-page sliver rule."
+    }
+  ],
+  "repairs": [
+    {
+      "episode": 24,
+      "field": "end_chapter",
+      "old": 113,
+      "new": 115,
+      "why": "The stored anchor is MangaUpdates' unverified coverage pin ('Vol 13, Chap 113 (S1P2)') and it is BOTH understated and internally inconsistent (G37): ch 113 is the LAST chapter of volume 12 and the last chapter of the Weekly Shonen Magazine run (WSM 2021 #6), while volume 13 — the volume MU itself names — is ch 114-117 per Kodansha's official 初出 (別冊少年マガジン 2021年3月号〜6月号), a boundary MU's own release records repeat (c 116/117 tagged v13). Ep 24 adapts through ch 115: the official synopsis names the ch-114 honours ceremony and Jisai thread and the ch-115 「誓い」, and orient.fandom's page-level field reads 111 (pp. 17-18), 112-115. What MU counted: the end of the WSM serialization / the end of vol 12 — two chapters short of the finale's true end. Volume 13 stands; the anchor also gains START 112.",
+      "sources": [
+        "https://orient.fandom.com/api.php?action=parse&page=Episode_24&prop=wikitext&format=json",
+        "https://orient-anime.jp/story/detail/?id=1001121",
+        "https://www.kodansha.co.jp/comic/products/0000354463",
+        "https://www.kodansha.co.jp/comic/products/0000347248",
+        "https://api.mangaupdates.com/v1/series/54514846320"
+      ]
+    }
+  ],
+  "type_corrections": [],
+  "structure": {
+    "notes": "ROW IDENTITY (flag #438: this entry holds ZERO episode rows; AFL staged an empty page — the anchors below are delivered ahead of the rows, A42). The 24 rows can be minted from a sourced identity: ja-WP 各話リスト, en-WP \"Orient (manga)\" #Episodes and syobocal (TID 6215 cour 1 / TID 6393 cour 2, ChID 7 = TV Tokyo) agree on ALL 24 titles and dates; the official site's per-episode STORY pages carry the same JP titles. Our numbering is cumulative 1-24; the catalog's components are cour 1 = eps 1-12 (AniList 128034, \"ORIENT\") and cour 2 = eps 13-24 (AniList 146637, \"ORIENT: Awajishima Gekitou-hen\").\n\n  our N | component | JP title | EN title | air date (JST) | chapters (orient.fandom episode pages)\n   1 | c1 ep 1 | 武蔵と小次郎 | Musashi & Kojiro | 2022-01-06 | 1\n   2 | c1 ep 2 | 武士の誇り | Bushi's Pride | 2022-01-13 | 2-3\n   3 | c1 ep 3 | 外の世界 | The Outside World | 2022-01-20 | 4-7, 8 (pp. 1-8)\n   4 | c1 ep 4 | 小雨田武士団 | The Kosameda Band | 2022-01-27 | 8 (pp. 8-20), 9-11, 12 (pp. 1-11), 13 (pp. 6-9)\n   5 | c1 ep 5 | 明日を選ぶ | Choosing Tomorrow | 2022-02-03 | 12 (pp. 12-20), 13 (pp. 1-5, 9-19), 14-16\n   6 | c1 ep 6 | もっと強く | Getting Stronger | 2022-02-10 | 17-20\n   7 | c1 ep 7 | 水の中では生きられない | You Can't Survive Underwater | 2022-02-17 | 21-25, 26 (pp. 16-18)\n   8 | c1 ep 8 | 黒曜の女神 | The Obsidian Goddess | 2022-02-24 | 26 (pp. 1-16), 27-30\n   9 | c1 ep 9 | 武士の生き方 | A Bushi's Way of Life | 2022-03-03 | 31-35\n  10 | c1 ep10 | 女神の力 | The Goddess's Power | 2022-03-10 | 36-39\n  11 | c1 ep11 | 刀に宿るもの | What's in a Katana | 2022-03-24 (postponed from 03-17; aired back-to-back with ep 12) | 40-42\n  12 | c1 ep12 | この道の先に | Where This Road Leads | 2022-03-24 | 43-46, 47 (pp. 1-5)\n  13 | c2 ep 1 | 上杉武士団 | The Uesugi Band | 2022-07-12 | 47 (pp. 2-4, 6-18), 48-52\n  14 | c2 ep 2 | 船上の屈辱 | Shipboard Disgrace | 2022-07-19 | 53-59\n  15 | c2 ep 3 | 間者 | Equals | 2022-07-26 | 60-63, 64 (pp. 1-7)\n  16 | c2 ep 4 | 軍神闘衣 | The War God's Mantle | 2022-08-02 | 64 (pp. 8-17), 65-68, 101 (pp. 13-15) [flash-forward graft]\n  17 | c2 ep 5 | 石の記憶 | Memories of Stone | 2022-08-09 | 69-73, 74 (pp. 1-9)\n  18 | c2 ep 6 | 軍師対決 | Tactician Battle | 2022-08-16 | 74 (pp. 10-18), 75-83\n  19 | c2 ep 7 | 託されたもの | A Matter of Trust | 2022-08-23 | 84-89\n  20 | c2 ep 8 | 存在証明 | Leaving Your Mark | 2022-08-30 | 90-94\n  21 | c2 ep 9 | 島津決裂 | Clash of the Shimazu | 2022-09-06 | 95-99, 100 (pp. 1-16)\n  22 | c2 ep10 | 兄と弟 | Older and Younger Brothers | 2022-09-13 | 100 (pp. 17-18), 101-105, 106 (pp. 1-11)\n  23 | c2 ep11 | 黒き女神の大剣 | Greatsword of the Black Goddess | 2022-09-20 | 106 (pp. 11-18), 107-110, 111 (pp. 1-16)\n  24 | c2 ep12 | 誓い | A Vow | 2022-09-27 | 111 (pp. 17-18), 112-115\n\nSLOT / DATE CHECKS (G53/G54): cour 1 = TV Tokyo Thu 00:00 (Wed late night) — eps 1-10 are ten consecutive Thursdays; ep 11 was PREEMPTED on 2022-03-17 by earthquake news (2022 Fukushima quake) and aired back-to-back with ep 12 on 2022-03-24 as an hour block (syobocal carries both the cancelled 03-17 airing and a \"#11～#12\" 03-24 block; ja-WP and en-WP both print 3月24日 for eps 11 AND 12; ANN's headline \"rescheduled for March 23\" is the same airing named by its Wednesday-night clock). Cour 2 = TV Tokyo Tue 01:30 (Mon late night) — twelve consecutive Tuesdays 07-12 … 09-27. No out-of-order broadcast; no date deviates from its slot.\n\nCHAPTER SPACE (flag #769 — MU latest_chapter 121 vs AniList 156): there is ONE continuous chapter numbering, 1-156 in 22 volumes, and no edition split. ORIENT ran in Weekly Shonen Magazine 2018 #28 - 2021 #6 and then MOVED to Bessatsu Shonen Magazine 2021年3月号 - 2024年11月号; the numbering did NOT restart at the move — ch 113 is the last WSM chapter (WSM 2021 #6, 2021-01-06) and ch 114 the first Bessatsu chapter (別マガ 2021年3月号), which Kodansha's own 初出 lines prove volume by volume: vol 12 初出 = 『週刊少年マガジン』2020年第45号〜第48号、第50号〜2021年第1号、第4・5合併号、第6号 (10 chapters = 104-113); vol 13 初出 = 『別冊少年マガジン』2021年3月号〜6月号 (4 chapters = 114-117); vol 14 初出 = 『別冊少年マガジン』2021年7月号〜10月号 (118-121). ja-WP's infobox states 全156話 / 全22巻 and MangaDex's series record gives lastChapter 156 / lastVolume 22 — AniList's 156 IS our space; no conversion is needed for either anchor. MU's latest_chapter 121 is the ceiling of MU's RELEASE records (Sense-Scans etc.; the newest is 2023-03-12 v14 c120) — a release-record artifact, not an edition and not a chapter count (the standing MU trap). Magazine Pocket splits the 47-page ch 115 into digital units 【第115話(1)】/【第115話(2)】 — a storefront re-cut that keeps the serialization number 第115話, not a renumber.\n\nVOLUME BOUNDARIES touched by these anchors (0 stored; official 目次/初出 where available): vol 5 = ch 33-42 (Kodansha 目次), vol 6 = ch 43-52 (Kodansha 目次: 第43話 黒の会合 … 第52話 三すくみ) + omake 52.5, vol 11 = …-103, vol 12 = ch 104-113, vol 13 = ch 114-117 + omake 115.5 (つぐみとみちるのワクワク女子会), vol 14 = ch 118-121. MU's own release records agree (c 116/117 tagged v13; c 118/120 tagged v14).\n\nEPISODE-TITLE TRAP: this anime borrows chapter titles one to two chapters BEHIND the episode's own coverage — ep 11 「刀に宿るもの」 = ch 41's title, ep 12 「この道の先に」 = ch 42's title (Kodansha vol 5 目次), while ep 11 adapts 40-42 and ep 12 adapts 43-46. So the ep 24 / ch 115 title identity 「誓い」 is NOT by itself proof of coverage; the ep-24 verdict rests on the official synopsis's CONTENT (Kojiro/Jisai's mystery = ch 114's ceremony and Jisai flashback; the bushi's 「誓い」 = ch 115) plus the chapter pages' cast lists.\n\nCOVERAGE SHAPE: the run is a dense, gapless, page-partitioned adaptation of ch 1-115 in order (eps 1-12 = ch 1-46/47, eps 13-24 = ch 47-115) with exactly one out-of-order fragment — ep 16 grafts ch 101 pp. 13-15 as a flash-forward, and ep 22 adapts ch 101 in full. No filler episode, no recap; all 24 rows are canon adaptations when they are minted. Nothing between ch 1 and 115 is skipped, so the post-series continue is a clean coverage+1.",
+    "order_only": []
+  },
+  "flags_for_sean": [
+    "SPLIT EVIDENCE on ep 24 (resolved, but name it): two fan aggregators say the anime ends at ch 113 — MU's pin itself, and wheredoestheanimeleaveoff.com ('you can pick up the manga at Chapter 114. The anime adapts all of Volume 12'), which is plausibly downstream of MU. Both are volume-level roundings and both contradict the OFFICIAL ep-24 synopsis, which names the ch-114 ceremony/Jisai thread and the ch-115 「誓い」; a third content farm (newstisiki) rounds the other way ('3期は原作14巻から', i.e. past 117) while the same search's other page says the 2nd cour covered '原作6巻〜13巻の途中まで'. I took the primary (official synopsis + page-partitioned wiki + Kodansha volume 初出) over the aggregators. URL: https://wheredoestheanimeleaveoff.com/where-does-the-orient-anime-leave-off-in-the-manga/",
+    "JUDGMENT FORK on ep 12's END (46 vs 47): orient.fandom credits ep 12 with ch 47 pp. 1-5. I ruled 46 — the tail is 5 pages at A10's sliver threshold, pp. 2-4 are re-adapted in ep 13, the official synopsis stops before Shiryu Castle, and MU independently splits the cours at 46/47. If Sean prefers the strict 'pages, not numbers' reading (first-time pages = a real position), the value would be 47 + a `rearranged`/`partial` note and the continue would still be 47. Flagging because the two readings display different numbers.",
+    "FLAG #769 can be CLOSED as 'no edition split': one continuous space 1-156 / 22 vols across the WSM->Bessatsu move (Kodansha 初出 per volume; ja-WP 全156話; MangaDex lastChapter 156). MU's latest_chapter 121 is the ceiling of its scanlation RELEASE records (newest 2023-03-12 v14 c120), not an edition and not a count — the standing MU trap. AniList's 156 is our space.",
+    "FLAG #438 (empty AFL page, zero episode rows): the 24-row identity table in structure.notes is sourced three ways (ja-WP, en-WP, syobocal TID 6215/6393 ChID 7) and they agree on every title and date, including the earthquake-preempted ep 11 airing back-to-back with ep 12 on 2022-03-24. Rows can be minted from it; every row is a canon adaptation (no filler, no recap in the run), and the per-episode chapter map is in the same table if a full anchoring pass is wanted later.",
+    "0 volume boundaries are stored for this series; the note carries vols 5, 6, 11-14 from Kodansha's official 目次/初出 if a boundary pass wants a starting point."
+  ]
+}
