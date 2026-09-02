@@ -97,7 +97,11 @@ Read both, fully:
   (`A4`); START = the first chapter animated under the sliver rule (`A10`: a
   leading partial of the preceding chapter counts unless ≤5 pages or
   sliver/teaser/cold-open/recap/flashback wording; `A12`: a relocated
-  far-earlier opener is never the START); page splits live in
+  far-earlier opener is never the START); an END never ADVANCES on a tail
+  the next episode owns (`A47`, the A10 twin: a ≤5-page or teaser-worded
+  trailing scrap of chapter X when the next anchored episode STARTS on X is
+  that episode's — END stays X-1, the tail stays in `chapters_adapted` and a
+  `partial` names it; a finale's tail stands, C1); page splits live in
   `chapters_adapted`; a row displays its FIRST chapter (`A13`). Chapter-NUMBER
   space only — the manga's own numbering, never a count with specials, never
   a sequel's or a sibling manga's space. Continue points: a mid-chapter
@@ -231,6 +235,16 @@ Read both, fully:
 - **A game tie-in episode that PRECEDES the game is anime-original**, not side_source (shugo 85/86 set up the DS game): the anime is the source of that material.
 - **A finale can be a coda** (TBATE 24: a half-sentence of ch 86 + a restaged reunion) and an "adventuring" arc the source lacks is filler even when the cast is canon (TBATE 13-16) — say how much of the episode the source occupies before choosing mixed.
 - **Namesake pages (G55, batch 19 E2).** A Wikipedia episode list found by NAME can be another show's: "List of Rurouni Kenshin episodes" is the 1996 series, "List of Beyblade episodes" is 2001, and a spin-off's article can REDIRECT to its parent ("Ranking of Kings: The Treasure Chest of Courage" → the 2021 main series' table). Before trusting any episode row from a page, check its air dates sit inside the series' own run; cite the year-disambiguated page ("… (2023 TV series)") when one exists. A stored title/date that predates the series is contamination to report, never evidence.
+
+- **MU segment boundaries are a CONVENTION, not coverage (batch 20 wave 8).** A chapter a season finale straddles is assigned to the NEXT segment ("Vol 4, Chap 25 (S1) / Vol 4, Chap 26 (Movie 3)" — made-in-abyss ep 13 animates 11 of ch 26's 16 pages): the pin names the last chapter adapted IN FULL. Read the pages; the END is 26 and the continue is IN it.
+- **MU counts a MAGAZINE serialization's end when a manga moves magazines mid-run** (orient: "Vol 13, Chap 113" — 113 is vol 12's last WSM chapter; vol 13 = 114-117 in Bessatsu, per Kodansha's per-volume 初出 and its own マガポケ notice). A pin that names the last chapter of the volume BEFORE the one it cites is this shape.
+- **A side-story / anthology entry inherits the MAIN series' pin verbatim** ("Vol 12, Chap 155 (S1) The Treasure Chest of Courage covers skipped content" — the prose is MU's note ABOUT the spin-off; the number is the main anime's endpoint). On such an entry the pin is always G37; the honest instrument is a per-segment chapter map, anchors only where a row carries first-time mainline pages (the-treasure-chest ep 10 = the opening of part two).
+- **A correct chapter can carry the wrong VOLUME** when the main story ends before the last tankōbon (handa-kun: ch 31 is vol 6's last page; vol 7 = four post-completion extras). Check the publisher's own volume copy ("本編はこれにて完結"), not the volume count.
+- **onepiece.fandom's parent-episode pages of the 2011-12 era carry EMPTY `chapter` fields** — the One Piece Log episode table and opwiki.org's per-episode page ranges carry the numbers; a fandom page with no chapter field is silence, not "no chapters".
+- **AFL's simulcast-era date column is a MIXED lineage** (one-piece-log: row 1 the JP Sunday, rows 2-6 Crunchyroll's US Saturday — one day early). Sweep day-of-week against the JP slot over the whole run; a block that shifts at row 2 is the seeder, and the rows that arrive later will carry the same defect.
+- **An anime can borrow chapter TITLES one to two chapters BEHIND the content** (orient ep 12 「この道の先に」 = ch 42's title while the episode adapts 43-46): a title match is a floor for coverage, never the END.
+- **Japanese 「原作」 comparison threads for PLUTO mean Tezuka's 1964 地上最大のロボット**, not Urasawa's manga — not anime-vs-source evidence.
+- **dic.pixiv.net serves through a fetch proxy when the live page is Cloudflare-403** (ranking-tcoc: the segment-by-segment 原作 / オリジナルエピソード table lived there and nowhere readable else) — say what tier it is (cross-check) and pair every claim with a source you read directly.
 
 ## Output
 

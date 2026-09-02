@@ -127,6 +127,10 @@ ruled), add it to `lib/rulings/index.ts`, move the script to
   saint-seiya "+2 from 50" and the rayearth 14-chapter conclusion were
   refuted before apply; curation reads the verifier first.
 
+- **A chapter range inside note text is not a page count** (A47's first census run, wave 8): kimi-ni-todoke's `46 — 44-45 skipped` and detective-conan's `638 (opening of the 638-640 …)` parsed as 2- and 3-page tails. The sliver parsers (`lib/sliver.ts`) count a range as pages only behind a page marker; read every new listing class's first run for false positives BEFORE reporting the backlog.
+- **The END-side normalizer runs in the apply (A47)**: curated anchors go through `sliverEnd` with the next anchored row's START, and the dry run prints "(A47 normalized from N)" beside each move — a delivered END the gate moves is the ruling doing its job, not a defect in the verdict; name the tail on the row as a `partial`.
+- **Row-less landings are legal by ruling (A42, wave 8)**: an anchor on a row AFL has not staged (orient's EMPTY page, one-piece-log 7-21) lands and is listed under `anchor_without_row`; the display synthesizes the row. Never mint the row from research in the apply — a row lineage is a G57 decision.
+
 ## The standing goal (`P30`)
 
 Every rule applied here should end up enforced by a writer gate and

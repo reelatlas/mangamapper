@@ -887,6 +887,41 @@
    0. Permanence 0 locked / 0 violations; no stale rulings. Cycle: step 1
    — Sean picks wave 8 (L-D ×8 of ~16, or a gap block; dai LAST; the T28
    six + claymore 26 still parked for his ruling).
+97. ✅ **CONSOLIDATE DEEP after wave 8 (2026-09-02; P21 — A47 changed an
+   enforcement site, and §12.95's resolve fix changed I39's).** System
+   census green (ledger 277 rules + citations, one-hop 29/29, rosters,
+   rulings index, generated docs, edge hash current in all four, component
+   writers). Deep rescan: (a) the A47 backlog re-derived over every standing
+   manual anchor through the one lib function — **62 rows, every one the
+   rule's shape** (page-marked 1-5-page tails, or sliver / opening /
+   flashback wording; dragon-ball-z-kai 19, d-gray-man 9, kingdom 5, reborn
+   4, world-trigger / edens-zero / bleach 3, and 15 singles); the migration
+   is WRITTEN (`batch20/a47-migrate.ts`: dry-run prints the block; --apply
+   moves END, stamps the per-row N22 marker, adds partial{tail} where none
+   stands; continues untouched — they already sit on the next START) and
+   NOT run: Sean signs it as one block (the A47 record: a listing class).
+   The two false positives the first run exposed (chapter ranges in note
+   text) are fixed in the parser and pinned by tests. (b) I39 after the
+   resolve fix: heal-structure re-planned 1 (outlaw-star), 15 current;
+   ruling_violation 0. (c) `retiresWhen` worklist: 0 entries. (d)
+   Permanence: 0 locked, 0 violations, 53 candidates (handa-kun new).
+   (e) Standing item re-surfaced by the scopes healer, NOT a delta:
+   ranking-of-kings (afl `ranking-kings`) and the-treasure-chest share
+   manga 114388 with no `series_scopes` row (printed every heal since the
+   entry landed; flag #432 on the main entry is a different, older
+   count_mismatch — AFL classified 1 of 23) — a scope ruling for Sean (part
+   one 1-155 for the main entry?). (f) Cron-borne between saves, A42-listed:
+   deadman-wonderland afg-continua 13 and assassination-classroom mu 48 on
+   rows AFL has not staged. CAPTURE (P29): A47 → the research-agent
+   anchoring vocabulary; nine wave-8 traps → research-agent (MU
+   segment-boundary convention, magazine-move count, the anthology pin, the
+   volume-only error, onepiece.fandom's empty parent chapter fields, AFL's
+   mixed simulcast date lineage, title-lag joins, PLUTO's 原作 trap, pixiv
+   via a fetch proxy); three apply-batch traps (ranges in note text are not
+   pages; the END normalizer in the apply; row-less landings by A42).
+   Rules without an audit class: 83 (A47 shipped with one). Cycle: step 1
+   — wave 9 awaits Sean's go (the 8 remaining pins + the killing-bites date
+   pair; PROTOCOL amendment to cite A47 at dispatch).
 96. ✅ **BATCH 20 WAVE 8 APPLIED + A47 THE END-SIDE SLIVER (2026-09-02;
    Sean ruled "full set, ready to proceed").** Landed 8/8 (§12.95), verified
    4/4 by Fable verifiers over the Opus verdicts (made-in-abyss, orient,
