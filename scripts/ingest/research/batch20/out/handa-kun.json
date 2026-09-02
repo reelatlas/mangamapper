@@ -1,0 +1,66 @@
+{
+  "series_id": "handa-kun",
+  "summary": "MU's pin for the 2016 finale is 'Vol 7, Chap 31'. The CHAPTER is right, the VOLUME is wrong. Handa-kun's main story is 31 chapters and it ENDS IN VOLUME 6: BookLive's publisher copy for vol 6 says '本編はこれにて完結' (176 pp, 2016-07-12) while vol 7 (156 pp, 2016-09-12) is '「はんだくん」本編完結後に描かれた番外編３本' plus magazine-only colour 4-koma and bonus illustrations, and the scanned tankobon's own last page reads 「はんだくん」SON / 'HANDA-KUN CILT 6 SON'. Ep 12 「半田くんと文化祭」 adapts ch 30 (Cultural Festival 2 — the black-uniform gang's raid, the Handa clone army, Eraser's hypnosis fortune-telling) and then ch 31 (After the Festival — the samurai-helmet 'King' crown, Kawafuji's objection, the burning Handa mikoshi, and the manga's closing 'good morning'), running in order and finishing on the manga's final page; the ep-12 live-tweet timeline matches ch 30 pp 1-12 and ch 31 pp 1-38 beat for beat. The START is 30, not 29: ep 11 「半田くんと文化祭準備」 already carried ch 29 in full — its log has Romeo's death, King Lear, Queen Elizabeth I, the Spanish Armada line and Kawafuji's arrival (ch 29 pp 9-24), and ch 29's last page (the gang arriving at the gate) was ep 11's C-part teaser. So the honest terminal is ep 12 → 31 [30] vol 6, the anime adapts the source to its very last page, and the post-series continue is ch 32 — the first of the four vol-7 番外編 (MangaDex labels them 31.5-31.8; ch 32 is 「半田くんとTVアニメ」, written about the anime itself while it aired). No back-reach: ep 12 needs no `rearranged`.",
+  "anchors": [
+    {
+      "episode": 12,
+      "end_chapter": 31,
+      "start_chapter": 30,
+      "chapters_adapted": "30-31",
+      "volume": 6,
+      "confidence": "high",
+      "note": "A4 END = ch 31, the final mainline chapter, adapted through its last page (the manga's 「はんだくん」SON page: Handa's 'good morning' / the wall coming down — ep-12 log 02:23:39 '半田くんがおはよ言った！', 02:24:22 '結局壁を外したんだね'). A10 START = ch 30: the episode's cold open is ch 30 p2 (the delinquents buying the Handa-chan doujin — log 02:00:32), the clone army is ch 30 pp 8-9 (log 02:03:50-02:04:15) and Eraser's hypnosis fortune-telling is ch 30 p11 (log 02:05:02-02:05:40); ch 29 is NOT here — it is ep 11's (Romeo dies / King Lear / Elizabeth I / 'I go to destroy the Spanish Armada' / Kawafuji = ch 29 pp 9-24, ep-11 log 02:20:42-02:23:30). Volume is 6, not MU's 7: vol 6 = ch 26-31 and closes the main story; vol 7 holds only the four post-completion 番外編. No re-shown or relocated pages, so no `rearranged` (A4, 'pages, not numbers').",
+      "sources": [
+        "https://www.tbs.co.jp/anime/handaanime/story/",
+        "https://anitubu.com/archives/11000423.html",
+        "https://anitubu.com/archives/10740671.html",
+        "https://mangadex.org/chapter/67bd4175-153b-41ed-b51e-4fea1a5e96ee",
+        "https://mangadex.org/chapter/f6a8a1cb-4b2b-48b8-88f8-688c96f9265f",
+        "https://booklive.jp/product/index/title_id/267561/vol_no/006",
+        "https://api.mangadex.org/manga/fcd036fc-54c0-4f33-bc53-1725a7c4c9cd/aggregate"
+      ]
+    }
+  ],
+  "continue_points": [
+    {
+      "episode": 12,
+      "continue_chapter": 32,
+      "kind": "post_series",
+      "note": "C5: coverage (ch 31, the manga's final mainline chapter) + 1. The anime adapts the main story to its last page, so nothing of chapters 1-31 is left to read after ep 12 except the possible ch-20 gap named in flags. Ch 32-35 are the four 番外編 Yoshino drew AFTER the main story finished, collected only in vol 7 (2016-09-12) and never animated — ch 32 「半田くんとTVアニメ」 is itself a strip about the TV anime. Reader warning: MangaDex numbers those four units 31.5 / 31.6 / 31.7 / 31.8 (a scanlator label); in the catalog's 35-unit space they are 32-35.",
+      "sources": [
+        "https://booklive.jp/product/index/title_id/267561/vol_no/007",
+        "https://api.mangadex.org/manga/fcd036fc-54c0-4f33-bc53-1725a7c4c9cd/aggregate",
+        "https://ja.wikipedia.org/wiki/%E3%81%B0%E3%82%89%E3%81%8B%E3%82%82%E3%82%93"
+      ]
+    }
+  ],
+  "anchor_hostile": [],
+  "annotations": [],
+  "repairs": [
+    {
+      "episode": 12,
+      "field": "volume",
+      "old": 7,
+      "new": 6,
+      "why": "G37: MU's coverage segment 'Vol 7, Chap 31' has the right chapter in the wrong volume. Chapter 31 「半田くんと祭りのあと」 is the LAST chapter of tankobon volume 6: the scanned volume ends 'HANDA-KUN CILT 6 SON' / 「はんだくん」SON right after it, the scan's credits page reads 'Cilt 6 / Bolum 31', MangaDex's aggregate puts 26-31 in vol 6, and BookLive's publisher blurb for vol 6 (176 pp, 2016-07-12) says '本編はこれにて完結' while vol 7 (156 pp, 2016-09-12) is described as '「はんだくん」本編完結後に描かれた番外編３本' + colour 4-koma + bonus illustrations. Volume 7 contains no part of what the anime adapted.",
+      "sources": [
+        "https://booklive.jp/product/index/title_id/267561/vol_no/006",
+        "https://booklive.jp/product/index/title_id/267561/vol_no/007",
+        "https://mangadex.org/chapter/67bd4175-153b-41ed-b51e-4fea1a5e96ee",
+        "https://api.mangadex.org/manga/fcd036fc-54c0-4f33-bc53-1725a7c4c9cd/aggregate"
+      ]
+    }
+  ],
+  "type_corrections": [],
+  "structure": {
+    "notes": "CHAPTER SPACE. The reading edition is the standard Gangan Comics ONLINE tankobon numbering: 31 mainline chapters (vols 1-6) plus four post-completion 番外編 in vol 7 = 35 units, which is exactly AniList's 35. Volume table, agreed by two independent scanlation groups' volume tags on MangaDex (Mavi Manga tr, complete 1-31 + extras; a pt-br group for 16-30) and corroborated by BookLive's page counts: vol 1 = 1-5, vol 2 = 6-10, vol 3 = 11-15, vol 4 = 16-20, vol 5 = 21-25, vol 6 = 26-31 (173 story pp vs BookLive's 176), vol 7 = the four extras (158 pp vs BookLive's 156). MangaDex's aggregate shows ch 11-12 double-tagged vol 2/vol 3 — an uploader artifact; the complete tr run assigns 6-10 to vol 2 and 11-15 to vol 3. MangaDex labels the vol-7 units 31.5-31.8 ('Extra Arc: ...' + 'Handa-kun Special Chapter'); those are scanlator labels, not the manga's own numbering. Serialization ran Monthly Shonen Gangan 2013-11 to 2016-10 (36 issues, 35 chapters) — so ch 26-31 were all in print (vol 6, 2016-07-12) well before the finale aired 2016-09-23; no anime-ahead-of-manga problem. ADAPTATION ORDER. The anime is episodic and reorders freely; by exact title identity between ja-WP's 各話リスト and the chapter titles: ep 1 = 1; ep 2 = [anime-original 「1話の続き」], 3, 4; ep 3 = 5, 6, 2; ep 4 = 7, 8, 9; ep 5 = 11, 12; ep 6 = 13, 10, 14; ep 7 = 15, 18; ep 8 = 21-25; ep 9 = [「カエル」 unmatched], 19; ep 10 = 16, 17; ep 11 = 26, 27, 28, 29; ep 12 = 30, 31. Every mainline chapter except ch 20 has a titled episode segment. Ep 12 is the only row in this ask; the ep-11 mapping above is offered as orientation for a later pass (a future ep-11 anchor is END 29 / START 26, not 28).",
+    "order_only": []
+  },
+  "flags_for_sean": [
+    "Flag #698 (count_mismatch) is ANSWERED and can be closed: there is no second edition. MU's `latest_chapter` 20 is the release-record artifact the trap describes — the ENGLISH scanlation stops at ch 20 (MangaDex's en uploads run 1-20 and stop; the Turkish group carried 21-31 + the four extras), while MU's own record says '7 Volumes (Complete)' and its coverage string reaches ch 31. AniList's 35 = 31 mainline + the 4 vol-7 番外編. Our stored space (35 / 7 vols) is correct.",
+    "MU pin verdict: CONFIRMED on the chapter, WRONG on the volume (G37). 31 is the finale's own furthest first-time chapter AND the whole run's maximum — not a whole-manga count, not another season's endpoint, not a franchise-continuous space. Since G56's honest terminal now lands on the same chapter, the pin is redundant and should re-land at the manual tier with volume 6.",
+    "NOT IN MY ASK, but visible from the title map and worth a later row-level pass: ep 9 [stored filler | AFL filler] carries 「半田くんとストーカー」 as its second segment — the exact title of ch 19, and TBS's own ep-9 synopsis ('相沢は半田がストーカー被害にあっていることに気付く。半田軍による組織的ストーカー撃退作戦開始！') is ch 19's premise. If that holds at page level the row is mixed, not filler (T28), with ch 19 the tie. I did not verify ch 19's pages against the episode. https://www.tbs.co.jp/anime/handaanime/story/story09.html",
+    "UNRESOLVED: chapter 20's identity. It is the only mainline chapter with no title-matched episode segment, and ep 9's first segment 「半田くんとカエル」 is the only episode segment with no chapter — a natural pairing, but MangaDex's en/pt-br/tr uploads of ch 20 all 404 on the image node right now and its en title field is blank (tr renders it 'Handa-kun ve Topluluk'), so I could not read it. If ch 20 is NOT the frog chapter it is a never-adapted gap that belongs in the ep-12 continue note; the C5 value (32) is unaffected either way.",
+    "Ep 11's C-part teaser is ch 29's last page (the black-uniform gang arriving at the gate), i.e. the source pages are already spent in ep 11 — ep 12 re-establishes the gang from ch 30's own opening, so no re-shown pages are cited on ep 12 and no `rearranged` is warranted."
+  ]
+}
