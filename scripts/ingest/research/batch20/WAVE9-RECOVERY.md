@@ -88,3 +88,21 @@ Across waves 6-9: **17 confirmed, 9 wrong-in-part (made-in-abyss +1 partial; ori
 
 ## Next
 Verifiers (erased, code-black, killing-bites, gangsta) → Sean rules → apply-wave9.ts → consolidate (deep only if a gate changes) → the L-D lane is CLOSED; the next block is FotNS 109-151.
+
+## Verification tier (R23/R24 — Fable verifiers over the Opus verdicts; reports in verify/)
+| verdict | result |
+|---|---|
+| killing-bites (dates) | SOUND: syobocal 4796 reproduces every start time; no station aired ep 11 on 03-31; 04-01 is BS-TBS's Count 12; rows 1-10 = the MBS calendar regime (DB-confirmed) → one G53 entry {11: 03-24, 12: 03-31} (P8). |
+| gangsta | SOUND (terminal 28 [26] v5 on three witnesses + MangaDex's back-matter; ep 12 09-20 → 09-24 = ABC's first airing) **WITH CORRECTIONS: the series-wide "ABC regime" block is WRONG** under the earliest-airing rule — rows 5-9 are already correct (MX aired them first), only rows 10-12 are wrong (→ 09-10 / 09-17 / 09-24, the dropped #9.5 week) — a THREE-row G53, not eight. |
+| erased | terminal SOUND (ep 11 → 35 [33] v6; the cut-over pinned tighter — ch 35 through the gossip-cameraman beat, closing page unadapted → C1 in 35); ep 12 filler + A1 deletion SOUND; **the fork is STRONGER than stated**: the anime's final line 「一緒に雪やどりしてもいいですか？」 is ch 44's verbatim (same 高架下, same snow) while every surrounding detail differs and the page post-dates production — T28's default for a restaged closing scene is filler + annotation; the sole-adaptation exception is Sean's call and changes the TYPE only (A44 position-less and continue 35 either way). Citation: 「第十一話の途中から」 is ja-WP's own sentence, not the interview's — soften. N35 49 = 44 + 5, flag #675, ep 11 mixed — SOUND. |
+| cells-at-work-code-black | SOUND WITH CORRECTIONS: the three-way refusal stands (MU's string live; ep 13 = ch 10 verbatim on four witnesses; ep 8 = 16 AND 17; 14 in ep 6, 15 in ep 7 — only ch 11 is partly skipped); END 11 is A47's finale clause's own output (medium right); identity 13/13 on four sources; 48-ceiling on four; flag #786 = Orphan Black confirmed. **Correction A (renders): the ch-11 tail is the syringe-and-waking beat, NOT "closing pages" — ch 11 runs on past it (the second body's cast, the 顆粒球輸血 reveal), none animated** → fix chapters_adapted + the partial and continue notes at apply, values unchanged. Nits: the Kodansha blurb is a premise line, not page evidence; `R9` does not resolve; the `rearranged` on ep 13 alone will look arbitrary once eps 6-13 are staged. |
+
+## THE DECISIONS (Sean rules at curation — recommendations marked)
+1. **Apply the nine as delivered**, with the verifier corrections riding the apply (code-black's tail wording; gangsta's three-row block instead of eight; erased's citation softening). *Recommend: yes.*
+2. **erased ep 12: filler (recommended) or mixed** under the sole-adaptation exception — one verbatim line of ch 44 in a restaged scene whose every other detail differs; position and continue unchanged either way. *Recommend: filler + loose_parallel{42-44} naming the line match.*
+3. **code-black**: END 11 (A47's finale clause; recommended) vs 10; land only the finale anchor + the ep-8 frontier (ch 17, G56) now, the other map anchors with the rows. *Recommend: as stated.*
+4. **G53 ×3**: killing-bites {11, 12}; gangsta {10, 11, 12} (the verifier's three-row block); no G54 acks. *Recommend: yes.*
+5. **N35 notes**: nagatoro 189 → 154 (a unit count on no source's arithmetic); code-black 50 → 48; four-knights' space max 103 stale → a re-derive (MU: 120 / 27 vols), not a ruling; girls-last-tour 47 stands. *Recommend: rule nagatoro + code-black; re-derive four-knights.*
+6. **Flags closable**: #729, #664, #675, #782, #823, #786 (three of them G55 namesake contamination). *Recommend: dismiss with the answers.*
+7. **A44 candidates** (queue, not this apply): tsugumomo ep 8's second segment (an unnumbered vol-5 extra); the four from the A47 pass (d-gray-man 66, reborn 159 / 178 / 189).
+8. **Queue**: four-knights 1-23 gap block (fence now manual); code-black's 12 map anchors when AFL stages rows; gangsta rows 10-12 land now, nothing else owed.
