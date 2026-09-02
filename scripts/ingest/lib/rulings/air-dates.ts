@@ -480,6 +480,26 @@ export const ENTRIES: RulingEntry<Record<number, RuledAirDate>>[] = [
     cite: ['scripts/ingest/research/batch20/out/soul-eater-not.json', 'https://cal.syoboi.jp/db.php?Command=ProgLookup&TID=3336'],
   },
 
+  {
+    seriesId: 'one-piece-log-fish-man-island-saga',
+    ruleId: 'G53',
+    value: { 2: '2024-11-10', 3: '2024-11-17', 4: '2024-11-24', 5: '2024-12-01', 6: '2024-12-08' },
+    reason:
+      "Batch 20 wave 8 (verified R24), Sean ruled 2026-09-02: rows 2-6 stored AFL's Saturdays = Crunchyroll's US dates, one day early against the Fuji TV Sunday 09:30 JST slot (ja-WP ONE PIECE LOG table, onepiece.fandom's Log episode table, opwiki, MAL — fandom's crunchyAirdate prints the stored values exactly); row 1 alone held the JP date, so AFL's simulcast-era column is a MIXED lineage. One block, not five one-offs. Rows 7-21 will arrive from the same seeder one day early — extend this entry when they land.",
+    ruledBy: 'Sean',
+    ruledOn: '2026-09-02',
+    cite: ['scripts/ingest/research/batch20/out/one-piece-log-fish-man-island-saga.json', 'scripts/ingest/research/batch20/verify/one-piece-log-fish-man-island-saga.md'],
+  },
+  {
+    seriesId: 'ranking-of-kings-the-treasure-chest-of-courage',
+    ruleId: 'G53',
+    value: { 1: '2023-04-14', 2: '2023-04-21', 3: '2023-04-28', 4: '2023-05-05', 5: '2023-05-12', 6: '2023-05-19', 7: '2023-05-26', 8: '2023-06-02', 9: '2023-06-09', 10: '2023-06-16' },
+    reason:
+      "Batch 20 wave 8 (verified R24), Sean ruled 2026-09-02: the anthology's ten rows carried NO air dates (no AFL page). The post-midnight calendar dates of the Noitamina 木曜24:55 slot, agreed by ja-WP 各話リスト（勇気の宝箱）, en-WP's 2023 episode table, syobocal TID 6691 ProgLookup (ChID 3, every slot slip 00:55-01:55 verified) and the official STORY pages; Fuji TV's own listing and the fandom print the previous Thursday (the broadcaster's evening convention) — the calendar date is the catalog's convention.",
+    ruledBy: 'Sean',
+    ruledOn: '2026-09-02',
+    cite: ['scripts/ingest/research/batch20/out/ranking-of-kings-the-treasure-chest-of-courage.json', 'scripts/ingest/research/batch20/verify/ranking-of-kings-the-treasure-chest-of-courage.md', 'https://cal.syoboi.jp/db.php?Command=ProgLookup&TID=6691'],
+  },
 ];
 
 export const AIR_DATE_OVERRIDES: Record<string, Record<number, RuledAirDate>> = toMergedRecord(ENTRIES);

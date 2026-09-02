@@ -51,3 +51,52 @@ export const sliverStart = (chaptersAdapted: string | null | undefined, start: n
   const substantive = !SCRAPPY.test(lead) && (WORDY.test(lead) || pages >= 6);
   return substantive ? { start: leadNum, lead, leadChapter: leadNum, pages, reason: 'substantive' } : { start, lead, leadChapter: leadNum, pages, reason: 'scraps' };
 };
+
+// END-SIDE SLIVER (A47, Sean 2026-09-02 — the A10 twin; witnesses orient ep 12
+// and one-piece-log ep 10). END is the furthest MAINLINE chapter the episode
+// adapts (A4) — but an END does not ADVANCE on a trailing scrap of the next
+// chapter that the NEXT episode owns: a tail of at most 5 pages (or
+// sliver / teaser / cold-open wording) of chapter X, when the next anchored
+// episode STARTS on X, is that episode's chapter — the position stays on
+// X-1 and the tail is recorded (chapters_adapted keeps it; a `partial`
+// annotation names it). Without a next episode (a finale) the tail stands:
+// there is no one to own it, and the reader continues IN it (C1). Only a
+// tail of exactly `end` moves; a record whose trailing segment already sits
+// beyond END is normalized already. Pure; unit-tested; the apply layer
+// normalizes through it and the census proves standing rows
+// (end_sliver_mismatch).
+export type EndSliverVerdict = {
+  /** the END the rule derives (equals `end` when nothing moves) */
+  end: number;
+  /** the trailing segment of chapters_adapted, as written */
+  tail: string;
+  /** the chapter the trailing segment names */
+  tailChapter: number | null;
+  /** page count the record states for the trailing partial (0 = unquantified) */
+  pages: number;
+  reason: 'no-tail' | 'tail-not-end' | 'no-next' | 'next-not-on-end' | 'substantive' | 'owned-tail';
+};
+
+/** the last comma-separated segment of a chapters_adapted record (commas inside parentheses do not split) */
+export const trailingSegment = (chaptersAdapted: string | null | undefined): string => {
+  const parts = String(chaptersAdapted ?? '').split(/,(?![^()]*\))|\s·\s/).map((x) => x.trim()).filter(Boolean); // commas (outside parens) or the ' · ' separator some records use
+  return parts[parts.length - 1] ?? '';
+};
+
+/** A47: derive the END the end-side sliver rule gives a record; `nextStart` is the next anchored episode's START (null = no next anchor) */
+export const sliverEnd = (chaptersAdapted: string | null | undefined, end: number, nextStart: number | null): EndSliverVerdict => {
+  const tail = trailingSegment(chaptersAdapted);
+  // a range segment ("43-46") names its upper bound; a single chapter names itself
+  const m = tail.match(/^(\d+)(?:\s*[-–]\s*(\d+))?(?!\.)/);
+  const tailNum = m ? Number(m[2] ?? m[1]) : NaN;
+  if (!tail || !Number.isInteger(tailNum) || tailNum < 1) return { end, tail, tailChapter: null, pages: 0, reason: 'no-tail' };
+  if (m?.[2]) return { end, tail, tailChapter: tailNum, pages: 0, reason: 'tail-not-end' }; // a whole range is never a scrap
+  if (tailNum !== end) return { end, tail, tailChapter: tailNum, pages: 0, reason: 'tail-not-end' };
+  if (nextStart == null) return { end, tail, tailChapter: tailNum, pages: 0, reason: 'no-next' };
+  if (nextStart !== end) return { end, tail, tailChapter: tailNum, pages: 0, reason: 'next-not-on-end' };
+  // a range counts as PAGES only behind a page marker (p. / pp. / page): '46 — 44-45 skipped' and
+  // '638 (opening of the 638-640 …)' name chapters, not pages (the first census run listed both)
+  const pages = /\bp(?:p|ages?|g)?\.?\s*\d/i.test(tail) ? statedPages(tail) : 0;
+  const scraps = SCRAPPY.test(tail) || (pages > 0 && pages <= 5 && !WORDY.test(tail));
+  return scraps ? { end: end - 1, tail, tailChapter: tailNum, pages, reason: 'owned-tail' } : { end, tail, tailChapter: tailNum, pages, reason: 'substantive' };
+};

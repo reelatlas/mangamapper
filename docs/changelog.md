@@ -887,6 +887,57 @@
    0. Permanence 0 locked / 0 violations; no stale rulings. Cycle: step 1
    — Sean picks wave 8 (L-D ×8 of ~16, or a gap block; dai LAST; the T28
    six + claymore 26 still parked for his ruling).
+96. ✅ **BATCH 20 WAVE 8 APPLIED + A47 THE END-SIDE SLIVER (2026-09-02;
+   Sean ruled "full set, ready to proceed").** Landed 8/8 (§12.95), verified
+   4/4 by Fable verifiers over the Opus verdicts (made-in-abyss, orient,
+   one-piece-log, ranking-tcoc — all SOUND, no value moves; corrections
+   citation-level). RULED: (1) the eight fold as delivered — every anchor at
+   the MANUAL tier (P8), 29 anchors / 12 continues (C7) / 39 annotations;
+   repairs ride the anchor write (made-in-abyss 25 → 26 with C1 IN 26;
+   orient 113 → 115 v13; handa-kun v7 → v6; ranking-tcoc 155 v12 → 161 v13
+   as a labelled floor); one-piece-log's 21-row terminal chain 598 → 653
+   with C5 → 654. (2) **A47, the END-side sliver — A10's twin** (the Fable
+   verifier found the ledger had no END-side rule; the same fork had been
+   called 46 on orient ep 12 and 618 on one-piece-log ep 10): an END never
+   advances on a ≤5-page (or teaser-worded) tail of the chapter the NEXT
+   anchored episode starts on — the tail is that episode's; the position
+   stays on X-1, chapters_adapted keeps the tail and a `partial` names it;
+   a finale's tail stands (no owner; C1). Built as gate → edges → audit →
+   ledger (/add-rule, P31): lib/sliver.ts#sliverEnd (pure; 8 tests incl.
+   the two false positives the first census run exposed — chapter ranges
+   in note text are not page counts; a range counts only behind a page
+   marker); the apply layer normalizes through it (one-piece-log ep 10
+   618 → 617 mechanically, orient ep 12 stays 46 — the dry run printed the
+   move); census class `end_sliver_mismatch` (listing, Sean signs; A6);
+   ledger A47 with witnesses orient + one-piece-log; one-hop case 29/29.
+   (3) ranking-tcoc typing — the verifier read dic.pixiv.net's segment
+   table in full: eps 3 + 5 → filler (both wholly original; ja-WP's
+   ドドン / フレン), eps 1 / 7 / 8 → mixed (a confirmed tankōbon 描き下ろし
+   half + an original half), 2 / 6 / 9 stay canon by default with their
+   flags (one source), 4 + 10 stand; the F2/F3 chapter-map edits ride the
+   annotation overlay. (4) Row-less landings by ruling: orient (AFL page
+   EMPTY) and one-piece-log 7-21 (AFL lag) land as A42 anchor_without_row —
+   research ahead of rows; the sourced identity tables sit in the verdicts.
+   (5) G53: one-piece-log dates 2-6 (+1 day; AFL's simulcast-era column is a
+   MIXED lineage — row 1 JP, 2-6 Crunchyroll US) and ranking-tcoc's 10
+   titles + 10 dates (bare rows). (6) Flags #687 / #698 / #769 dismissed
+   with their "no edition" answers. Edges rebuilt + deployed twice (the
+   parser refinement). CENSUS, every delta named: mu_pin_unverified 15 → 8
+   (the seven pins verified); anchor_without_row 8 → 11 (orient ×2,
+   one-piece-log ×15 by ruling; deadman-wonderland afg-continua 13 and
+   assassination-classroom mu 48 are CRON-borne between saves, A42-listed);
+   annotation_without_row 4 → 6 (the same two series); title_incomplete
+   26 → 25 / airdate_incomplete 23 → 22 (ranking-tcoc); asterisk_unreviewed
+   161 → 168 (seven series newly annotated); ok_full 237 → 238 +
+   permanence_candidate 52 → 53 (handa-kun); pending_finished_no_totals
+   33 → 32 (one-piece-log now anchored); **end_sliver_mismatch NEW = 62**
+   (the A47 backlog: dragon-ball-z-kai 19, d-gray-man 9, kingdom 5, reborn
+   4, world-trigger / edens-zero / bleach 3 … — every one the rule's shape;
+   Sean's signing queue, recommend a one-shot per-row migration in the
+   batch-14 A10 style, marker-stamped per N22); ruling_violation 0; display
+   218 verified / 0 failing (+1). 164 tests. The L-D lane: 22/29 checked —
+   11 confirmed / 8 wrong-in-part / 3 another work's; 8 pins remain
+   (wave 9 with the killing-bites date pair).
 95. ✅ **WAVE 8 DISPATCHED + THE RESOLVE CALL-SITE CATCH (2026-09-02;
    Sean's post-compact go).** Census recomputed from disk before planning
    (P11 / R27): ruling_violation 1 — outlaw-star [400] span 1-24 ≠ ruled

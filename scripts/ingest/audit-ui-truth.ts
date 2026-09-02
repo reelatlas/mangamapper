@@ -13,7 +13,7 @@ import { c3Ahead, hasSkipLanguage } from './lib/c3';
 import { COMMUNITY_COUNT_OVERRIDES, CONTINUA_SUPPRESSED, EPISODE_TYPE_OVERRIDES, SOURCE_NUMBERING_SHIFTS, translateEpisodeNumber } from './lib/resolve';
 import { AIRDATE_REGRESSION_THRESHOLD_DAYS, airdateOrderWalk } from './lib/airdate-order';
 import { offWindowRows, seriesDatesInvalid } from './lib/wiki-identity';
-import { sliverStart } from './lib/sliver';
+import { sliverStart, sliverEnd } from './lib/sliver';
 import { RULED_STRUCTURE, RULED_EXTRA_KEYS } from './lib/rulings/structure';
 import { RETIRED_ANNOTATIONS } from './lib/rulings/retired-annotations';
 import { honestTerminal, pinRedundant } from './lib/honest-terminal';
@@ -98,7 +98,7 @@ async function main() {
     integrity_degenerate_span: degenerateSpans,
     special_numbered_unreviewed: [], anchor_gap_research: [], frontier_tail_null: [],
     anchor_volume_mismatch: [], row_minted_by_missing: [],
-    anchor_nonmonotonic: [], anchor_start_offtrend: [], start_sliver_mismatch: [], start_without_span: [], anchor_beyond_chapter_space: [], anchor_beyond_display_total: [], anchor_fractional_chapter: [], anchor_on_noncanon_row: [], continue_skip_unnoted: [], continue_provenance_missing: [], boundaries_degenerate: [], ruling_violation: [], repair_on_derivation_tier: [],
+    anchor_nonmonotonic: [], anchor_start_offtrend: [], start_sliver_mismatch: [], start_without_span: [], end_sliver_mismatch: [], anchor_beyond_chapter_space: [], anchor_beyond_display_total: [], anchor_fractional_chapter: [], anchor_on_noncanon_row: [], continue_skip_unnoted: [], continue_provenance_missing: [], boundaries_degenerate: [], ruling_violation: [], repair_on_derivation_tier: [],
     mu_pin_unverified: [], mu_pin_flag_redundant: [], anchor_without_row: [], annotation_without_row: [],
     rearranged_zone_unanchored: [], rearranged_zone_acknowledged: [],
     title_incomplete: [], airdate_incomplete: [], airdate_regression: [], airdate_withheld: [], episode_date_off_window: [], asterisk_unreviewed: [],
@@ -592,6 +592,23 @@ async function main() {
       if (!a.chapters_adapted) { classes.start_without_span.push(`${a.series_id}: ep ${a.episode} start ch${a.start_chapter} has no chapters_adapted record — unprovable under A10 (apply-e3 carries the seeding record)`); continue; }
       const v = sliverStart(a.chapters_adapted, a.start_chapter);
       if (v.start !== a.start_chapter) classes.start_sliver_mismatch.push(`${a.series_id}: ep ${a.episode} start ch${a.start_chapter} but the record opens on ch${v.start} '${v.lead.slice(0, 40)}' (≈${v.pages || '?'} p, ${v.reason}) — A10 says ${v.start}; Sean signs`);
+    }
+    // END-SIDE SLIVER (A47, Sean 2026-09-02 — the A10 twin; witnesses orient
+    // ep 12, one-piece-log ep 10): the ONE derivation in lib/sliver.ts
+    // (sliverEnd) re-run over every manual anchor with a chapters_adapted
+    // record and a NEXT anchored episode — an END that advanced on a ≤5-page
+    // (or teaser-worded) tail of the chapter the next episode STARTS on is
+    // that episode's chapter. Listing class, never flips (Sean signs each).
+    for (const [, list] of bySeries) {
+      const sorted = [...list].sort((x: any, y: any) => x.episode - y.episode);
+      for (let i = 0; i < sorted.length; i++) {
+        const a = sorted[i];
+        if (a.source !== 'manual' || !a.chapters_adapted) continue;
+        const next = sorted[i + 1];
+        const nextStart = next ? (next.start_chapter ?? next.chapter) : null;
+        const v = sliverEnd(a.chapters_adapted, a.chapter, nextStart);
+        if (v.end !== a.chapter) classes.end_sliver_mismatch.push(`${a.series_id}: ep ${a.episode} END ch${a.chapter} but its tail '${v.tail.slice(0, 40)}' (≈${v.pages || '?'} p) is ep ${next.episode}'s (START ${nextStart}) — A47 says ${v.end}; Sean signs`);
+      }
     }
     for (const [sid, list] of bySeries) {
       // LOOSE series are ruled non-linear — their anchors are borrow-maps

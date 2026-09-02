@@ -140,3 +140,6 @@ Verify the four → Sean rules the bar → apply-wave8.ts (8 verdicts: anchors t
 6. **Out-of-ask queue**: handa-kun ep 9 filler → mixed candidate (a narrow lane-C row); masamune ch 28 franchise-skipped (a note for the R entry); flags #687 / #698 / #769 closable as "no edition". *Recommend: queue / close at apply.*
 7. **The refresh-anilist edge** (§12.95): hash the structural subset + batch the edge. *Recommend: a G-family /add-rule after wave 9, not mid-wave.*
 8. **Wave 9** = the 8 remaining pins + the killing-bites ep 11/12 date pair. *Recommend: go after apply-wave8 + consolidate.*
+
+## RULED + APPLIED (§12.96, 2026-09-02 — Sean: "I agree with your assessment, full set, ready to proceed")
+Applied as delivered (29 manual anchors, 12 continues, 39 annotations); A47 the END-side sliver built via /add-rule (one-piece-log ep 10 → 617 by the gate; orient ep 12 stays 46); ranking-tcoc 3 + 5 → filler, 1 / 7 / 8 → mixed, 2 / 6 / 9 canon-by-default with flags; row-less landings A42; G53 ×25; flags #687 / #698 / #769 dismissed. Census explained in §12.96; `end_sliver_mismatch` NEW = 62 = the A47 signing queue. Next: /consolidate deep → capture → wave 9.

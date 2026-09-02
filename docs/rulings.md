@@ -2,7 +2,7 @@
 
 > GENERATED from `scripts/ingest/lib/rulings/**` by `scripts/restructure/gen-rulings.ts` — do not edit by hand. A ruling is an INSTANCE of a rule (`docs/rules.md`); the map is the record, this is the index.
 
-- rulings: 1887 across 229 series/keys · by Sean: 545 · UNRECORDED reasons: 8 · with a retire condition: 89
+- rulings: 1891 across 231 series/keys · by Sean: 549 · UNRECORDED reasons: 8 · with a retire condition: 89
 
 ## Retire conditions (re-evaluate when…)
 
@@ -2018,6 +2018,12 @@
 | `T6` | {"737":"mixed"} | Ep 737: the Sabo special adapts ch 794 (wiki forward + reverse) — AFL's anime-canon label loses to the explicit chapter mapping → mixed. | Sean 2026-08-25 · scripts/ingest/research/batch17/out2/one-piece-a1.json |  |
 | `T6` | {"213":"filler","215":"filler","453":"mixed","454":"mixed","455":"mixed","456":"mixed","499":"filler","506":"filler","775":"filler","1084":"filler"} | Batch 18 wave 3 (2026-08-26), verified R24, Sean ruled: 453-456 MIXED — they animate Oda's cover-page side story (the Straw Hat's Separation Serial, ch 543-560 covers; the wiki's Canon page files it under Canon, ja-WP does not bold them) — the side story IS the plot (T28); 455 repaired for consistency. POSITION-LESS by A44 (the cover chapters run ahead of the main line; AFG prints them — the ep-455 junk anchor Sean deleted in batch 17). 213/215 (added Davy Back games), 499, 506, 775, 1084 filler with their ties recorded. No adoption (the Canon page files 'Oda's Involvement' under Non-Canon). | Sean 2026-08-26 · scripts/ingest/research/batch18/out/one-piece.json, scripts/ingest/research/batch18/verify/one-piece.md |  |
 
+### one-piece-log-fish-man-island-saga (1)
+
+| rule | value | reason | ruled | retires when |
+|---|---|---|---|---|
+| `G53` | {"2":"2024-11-10","3":"2024-11-17","4":"2024-11-24","5":"2024-12-01","6":"2024-12-08"} | Batch 20 wave 8 (verified R24), Sean ruled 2026-09-02: rows 2-6 stored AFL's Saturdays = Crunchyroll's US dates, one day early against the Fuji TV Sunday 09:30 JST slot (ja-WP ONE PIECE LOG table, onepiece.fandom's Log episode table, opwiki, MAL — fandom's crunchyAirdate prints the stored values exactly); row 1 alone held the JP date, so AFL's simulcast-era column is a MIXED lineage. One block, not five one-offs. Rows 7-21 will arrive from the same seeder one day early — extend this entry when they land. | Sean 2026-09-02 · scripts/ingest/research/batch20/out/one-piece-log-fish-man-island-saga.json, scripts/ingest/research/batch20/verify/one-piece-log-fish-man-island-saga.md |  |
+
 ### one-punch-man (2)
 
 | rule | value | reason | ruled | retires when |
@@ -2164,6 +2170,14 @@
 | `A43` | {"episodes":[18,19],"kind":"rearranged","chapters":"~110-117 + ~131-138","note":"research-tier batch 11 (2026-08-23, agent-verified 2+ sources, full-record):… | Miranjo/Bosse backstory interleaved as one flashback block | session 2026-08-23 · scripts/ingest/apply-research-batch-11.ts, scratchpad batch11/ranking-of-kings.json (session scratchpad, not on disk), docs/changelog.md §12.30 |  |
 | `A43` | {"episodes":[23],"kind":"divergence","chapters":"150-155","note":"research-tier batch 11 (2026-08-23, agent-verified 2+ sources, full-record): finale has ori… | finale has original epilogue expansion; TCoC specials → post-TCoC continue = 165 | session 2026-08-23 · scripts/ingest/apply-research-batch-11.ts, scratchpad batch11/ranking-of-kings.json (session scratchpad, not on disk), docs/changelog.md §12.30 |  |
 | `R21` | {"file":"scripts/ingest/research/batch15/out/ranking-of-kings.json","anchors":2,"zoneAcks":0} | batch-15 verdict applied as-curated | session 2026-08-24 · scripts/ingest/research/batch15/out/ranking-of-kings.json |  |
+
+### ranking-of-kings-the-treasure-chest-of-courage (3)
+
+| rule | value | reason | ruled | retires when |
+|---|---|---|---|---|
+| `G53` | {"1":"2023-04-14","2":"2023-04-21","3":"2023-04-28","4":"2023-05-05","5":"2023-05-12","6":"2023-05-19","7":"2023-05-26","8":"2023-06-02","9":"2023-06-09","10… | Batch 20 wave 8 (verified R24), Sean ruled 2026-09-02: the anthology's ten rows carried NO air dates (no AFL page). The post-midnight calendar dates of the Noitamina 木曜24:55 slot, agreed by ja-WP 各話リスト（勇気の宝箱）, en-WP's 2023 episode table, syobocal TID 6691 ProgLookup (ChID 3, every slot slip 00:55-01:55 verified) and the official STORY pages; Fuji TV's own listing and the fandom print the previous Thursday (the broadcaster's evening convention) — the calendar date is the catalog's convention. | Sean 2026-09-02 · scripts/ingest/research/batch20/out/ranking-of-kings-the-treasure-chest-of-courage.json, scripts/ingest/research/batch20/verify/ranking-of-kings-the-treasure-chest-of-courage.md, https://cal.syoboi.jp/db.php?Command=ProgLookup&TID=6691 |  |
+| `G53` | {"1":"Kage's Errand / The Prince and Money","2":"Beasts of the Wilderness / A Mysterious Desert","3":"Hiling's Old Friend / Daida and Magic","4":"Immortality… | Batch 20 wave 8 (verified R24), Sean ruled 2026-09-02: the anthology's ten rows carried NO titles (no AFL page). English titles per en-WP's 2023 episode table + ousamaranking.fandom (the catalog's convention, as TBATE / orange); multi-segment rows joined with ' / ' in broadcast order (syobocal joins the same segments with ／; the JP titles are in the verdict's structure.notes). All ten agree across ja-WP, en-WP, syobocal and the official STORY pages. | Sean 2026-09-02 · scripts/ingest/research/batch20/out/ranking-of-kings-the-treasure-chest-of-courage.json, scripts/ingest/research/batch20/verify/ranking-of-kings-the-treasure-chest-of-courage.md |  |
+| `T6` | {"1":"mixed","3":"filler","5":"filler","7":"mixed","8":"mixed"} | Batch 20 wave 8 (verified R24), Sean ruled 2026-09-02 ('full set'): the 2023 anthology's rows were BARE defaults (no AFL page; all ten stored canon). The verifier read dic.pixiv.net's segment-by-segment article in full and ja-WP's アニメオリジナルのキャラクター list: ep 3 (both segments original; ドドン) and ep 5 (all three segments original; フレン, and ja-WP's 白王 entry separates the manga fact from the anime plot) are wholly anime-original → filler (T28, two sources). Eps 1, 7 and 8 pair a confirmed tankōbon 描き下ろし bonus chapter (1B vol 8 / 7A vol 3 / 8A vol 10 — pixiv volume numbers + MangaDex placement + es-la titles) with an original segment (1A, 7B チャンピオン, 8B) → mixed (T27: source and non-source in one episode). Eps 2, 6 and 9 stay canon by default with their flags open (one source on the original half); 4 (vol 9 「不死」 + divergence) and 10 (mainline 156-161+) stand. No anchor is affected: rows 1-9 are A44 position-less. | Sean 2026-09-02 · scripts/ingest/research/batch20/out/ranking-of-kings-the-treasure-chest-of-courage.json, scripts/ingest/research/batch20/verify/ranking-of-kings-the-treasure-chest-of-courage.md |  |
 
 ### ranma-1-2 (11)
 

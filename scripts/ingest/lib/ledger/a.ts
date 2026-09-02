@@ -953,4 +953,28 @@ export const RULES: Rule[] = [
     status: 'live',
     see: ['I40', 'T30', 'A1', 'A44', 'C5', 'P6', 'P9', 'T21'],
   },
+  {
+    id: 'A47',
+    aliases: ['END-side sliver', 'end sliver', 'owned tail', 'tail sliver', 'the A10 twin', 'sliverEnd', 'end_sliver_mismatch', 'END does not advance on a tail', 'trailing scrap'],
+    family: 'A',
+    title: 'End-side sliver: an END never advances on an owned tail',
+    statement:
+      "END (chapter_anchors.chapter) is the furthest mainline chapter the episode adapts (A4) — but it does not ADVANCE on a trailing scrap of the next chapter that the NEXT episode owns: a tail of at most 5 pages (or sliver / teaser / cold-open wording) of chapter X, when the next anchored episode STARTS on X, is that episode's chapter; the position stays on X-1, the tail stays in chapters_adapted and a `partial` annotation names it. Without a next anchored episode (a finale) the tail stands and the reader continues IN it (C1). The apply layer normalizes curated anchors through lib/sliver.ts#sliverEnd (the one derivation, P2); the census re-runs it over every manual anchor with a record (end_sliver_mismatch — a listing class, Sean signs each move).",
+    why:
+      "orient ep 12 (wave 8): ch 47 pp 1-5 close the first cour as a teaser and ep 13 re-stages pp 2-4 and finishes the chapter — the Opus author ruled END 46 'by analogy with A10' and the Fable verifier found the ledger had no END-side rule at all (A10 governs STARTs only), so the same fork on one-piece-log ep 10 (618 pp 3-4, ep 11 starts on 618) had been called the other way (618). Sean ruled 2026-09-02: one rule, applied to both — 46 and 617; display impact zero (A13 shows the START; the continues are unchanged).",
+    ruledBy: 'Sean',
+    ruledOn: '2026-09-02',
+    origin: 'scripts/ingest/research/batch20/WAVE8-RECOVERY.md §THE DECISIONS item 2; verify/orient.md (the verifier\'s finding); changelog §12.96',
+    enforcement: [
+      { path: 'scripts/ingest/lib/sliver.ts', symbol: 'sliverEnd' },
+      { path: 'scripts/ingest/research/batch20/apply-wave8.ts', symbol: 'sliverEnd' },
+      { path: 'scripts/ingest/audit-ui-truth.ts', symbol: 'end_sliver_mismatch' },
+      { path: 'scripts/ingest/lib/sliver.test.ts', symbol: 'sliverEnd (A47' },
+    ],
+    layer: 'writer',
+    auditClass: ['end_sliver_mismatch'],
+    witnesses: ['orient', 'one-piece-log-fish-man-island-saga'],
+    status: 'live',
+    see: ['A10', 'A4', 'A13', 'C1', 'T28', 'P2'],
+  },
 ];

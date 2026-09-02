@@ -332,6 +332,18 @@
         "correspondence"
       ],
       "source": "the DBS strategy session 2026-08-28 (batch 20 wave 5): the content test would have typed the anime's own telling filler"
+    },
+    {
+      "ask": "the episode's last two pages are the first pages of the next chapter and the next episode starts on that chapter and replays them — does END advance to it?",
+      "expected": [
+        "A47"
+      ],
+      "terms": [
+        "END",
+        "tail",
+        "next episode"
+      ],
+      "source": "batch 20 wave 8 (2026-09-02): the orient ep-12 46/47 fork the Fable verifier found unruled (A10 governs STARTs only) and the one-piece-log ep-10 618 call — Sean ruled the END-side twin; WAVE8-RECOVERY §THE DECISIONS item 2"
     }
   ]
 }

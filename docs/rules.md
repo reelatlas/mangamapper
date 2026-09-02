@@ -16,7 +16,7 @@
 
 ## Family strip — one line per rule
 
-**A — Anchors & position** (44)
+**A — Anchors & position** (45)
 - `A1` Filler / anime-only rows never carry anchors — aka `invariant 6`, `hard invariant 6`, `A1 rule`, `filler rows never carry anchors`
 - `A2` Cameo / sliver borrowings are never anchors — aka `A2/A3`, `cameo rule`, `cameo/sliver borrowings`, `A2/A3 rejected-as-anchors`
 - `A3` Exact per-episode adaptation always becomes an anchor — aka `GTO lesson`, `GTO 20/21 lesson`, `rearranged-zone rule`, `rearranged zones`
@@ -61,6 +61,7 @@
 - `A44` Position-less rows: a ruled row never takes an anchor — aka `anchor suppression`, `ANCHOR_SUPPRESSED`, `anchorless rows`, `position-less rows`, `cover-page serial rule`, `suppressed anchor`
 - `A45` Retired annotations: a refuted fact is retired by ruling — aka `retired annotations`, `RETIRED_ANNOTATIONS`, `annotation retirement`, `annotation-delete shape`, `annotation deletion`, `annotation_retired_standing`, `retire an annotation`
 - `A46` Positions on a parallel series are correspondence — aka `correspondence`, `correspondence not adaptation`, `series_arcs`, `episode_correspondence`, `RULED_ARCS`, `RULED_CORRESPONDENCE`, `arcs partition`, `aligned divergent anime_only manga_only`, `no anchors on a parallel series`, `parallel_has_anchor`, `arcs_not_partition`, `correspondence_incomplete`, `correspondence_invalid`, `the L-P queue`, `two views one table`, `honest dash on a parallel series`
+- `A47` End-side sliver: an END never advances on an owned tail — aka `END-side sliver`, `end sliver`, `owned tail`, `tail sliver`, `the A10 twin`, `sliverEnd`, `end_sliver_mismatch`, `END does not advance on a tail`, `trailing scrap`
 
 **C — Continue-read regimes** (9)
 - `C1` C1: a mid-chapter ending continues in the straddled chapter — aka `C1 rule`, `mid-chapter straddle`, `mid-chapter END`, `straddled chapter`
@@ -927,6 +928,20 @@ On a parallel series (I40) chapter numbers are CORRESPONDENCE, never adaptation:
 - witnesses: dragon-ball-super
 - aliases: correspondence, correspondence not adaptation, series_arcs, episode_correspondence, RULED_ARCS, RULED_CORRESPONDENCE, arcs partition, aligned divergent anime_only manga_only, no anchors on a parallel series, parallel_has_anchor, arcs_not_partition, correspondence_incomplete, correspondence_invalid, the L-P queue, two views one table, honest dash on a parallel series
 - see: I40, T30, A1, A44, C5, P6, P9, T21
+
+### A47 · End-side sliver: an END never advances on an owned tail
+
+END (chapter_anchors.chapter) is the furthest mainline chapter the episode adapts (A4) — but it does not ADVANCE on a trailing scrap of the next chapter that the NEXT episode owns: a tail of at most 5 pages (or sliver / teaser / cold-open wording) of chapter X, when the next anchored episode STARTS on X, is that episode's chapter; the position stays on X-1, the tail stays in chapters_adapted and a `partial` annotation names it. Without a next anchored episode (a finale) the tail stands and the reader continues IN it (C1). The apply layer normalizes curated anchors through lib/sliver.ts#sliverEnd (the one derivation, P2); the census re-runs it over every manual anchor with a record (end_sliver_mismatch — a listing class, Sean signs each move).
+
+*Why:* orient ep 12 (wave 8): ch 47 pp 1-5 close the first cour as a teaser and ep 13 re-stages pp 2-4 and finishes the chapter — the Opus author ruled END 46 'by analogy with A10' and the Fable verifier found the ledger had no END-side rule at all (A10 governs STARTs only), so the same fork on one-piece-log ep 10 (618 pp 3-4, ep 11 starts on 618) had been called the other way (618). Sean ruled 2026-09-02: one rule, applied to both — 46 and 617; display impact zero (A13 shows the START; the continues are unchanged).
+
+- ruled Sean 2026-09-02 (scripts/ingest/research/batch20/WAVE8-RECOVERY.md §THE DECISIONS item 2; verify/orient.md (the verifier's finding); changelog §12.96)
+- layer **writer**
+- enforced: [lib/sliver.ts#sliverEnd](../scripts/ingest/lib/sliver.ts) · [research/batch20/apply-wave8.ts#sliverEnd](../scripts/ingest/research/batch20/apply-wave8.ts) · [audit-ui-truth.ts#end_sliver_mismatch](../scripts/ingest/audit-ui-truth.ts) · [lib/sliver.test.ts#sliverEnd (A47](../scripts/ingest/lib/sliver.test.ts)
+- audit: `end_sliver_mismatch`
+- witnesses: orient, one-piece-log-fish-man-island-saga
+- aliases: END-side sliver, end sliver, owned tail, tail sliver, the A10 twin, sliverEnd, end_sliver_mismatch, END does not advance on a tail, trailing scrap
+- see: A10, A4, A13, C1, T28, P2
 
 ## C — Continue-read regimes
 
@@ -4469,6 +4484,10 @@ Any component that renders episode-level data consumes the HYDRATED series (getB
 - empty hold → `G11`
 - END = running order → `A8`
 - END definition → `A8`
+- END does not advance on a tail → `A47`
+- end sliver → `A47`
+- end_sliver_mismatch → `A47`
+- END-side sliver → `A47`
 - end+1 default → `C9`
 - ending-debate annotation → `T13`
 - enforcement-site deep trigger → `P22`
@@ -4822,6 +4841,7 @@ Any component that renders episode-level data consumes the HYDRATED series (getB
 - override > AFL > AFG → `T4`
 - overrides are annotations → `T26`
 - own-slug identity → `I1`
+- owned tail → `A47`
 - ownedAnilistIds → `I21`
 - ownership guard → `I21`
 - padded finale → `T11`
@@ -4998,6 +5018,7 @@ Any component that renders episode-level data consumes the HYDRATED series (getB
 - Slime ← Cells at Work class → `V5`
 - Slime/4KOTA class → `N28`
 - sliver rule → `A10`
+- sliverEnd → `A47`
 - slivers are not mixed → `T28`
 - small-sample rule → `R28`
 - sole adaptation → `T28`
@@ -5076,9 +5097,11 @@ Any component that renders episode-level data consumes the HYDRATED series (getB
 - Table/QuickList integrity → `G6`
 - tail honesty → `A37`
 - tail honesty / coverage gate → `A37`
+- tail sliver → `A47`
 - taxonomy_conflict (MU status) → `G41`
 - the 260-that-is-255 class → `N35`
 - the 5D 145 lesson → `G57`
+- the A10 twin → `A47`
 - the ambiguity rule → `I4`
 - the apply discipline → `P15`
 - the capture table → `P29`
@@ -5112,6 +5135,7 @@ Any component that renders episode-level data consumes the HYDRATED series (getB
 - Toriko deletion → `A6`
 - Toriko deletion precedent → `A6`
 - totals re-base → `N35`
+- trailing scrap → `A47`
 - translated-max merge boundary → `N19`
 - triage lane → `R27`
 - tsc -b gate → `P27`
@@ -5188,6 +5212,6 @@ Any component that renders episode-level data consumes the HYDRATED series (getB
 
 ## Scoreboard
 
-- rules: 276 (live 261, planned 8, superseded 7)
+- rules: 277 (live 262, planned 8, superseded 7)
 - live data rules with no audit class (the automation backlog): 83
-- by layer: writer 144 · display 23 · both 26 · process 83
+- by layer: writer 145 · display 23 · both 26 · process 83

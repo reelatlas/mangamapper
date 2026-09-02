@@ -849,6 +849,16 @@ export const ENTRIES: RulingEntry<EpisodeTypes>[] = [
     cite: ['scripts/ingest/research/batch20/out/fist-of-the-blue-sky-regenesis-w7.json', 'scripts/ingest/research/batch20/WAVE7-RECOVERY.md'],
   },
 
+  {
+    seriesId: 'ranking-of-kings-the-treasure-chest-of-courage',
+    ruleId: 'T6',
+    value: { 1: 'mixed', 3: 'filler', 5: 'filler', 7: 'mixed', 8: 'mixed' },
+    reason:
+      "Batch 20 wave 8 (verified R24), Sean ruled 2026-09-02 ('full set'): the 2023 anthology's rows were BARE defaults (no AFL page; all ten stored canon). The verifier read dic.pixiv.net's segment-by-segment article in full and ja-WP's アニメオリジナルのキャラクター list: ep 3 (both segments original; ドドン) and ep 5 (all three segments original; フレン, and ja-WP's 白王 entry separates the manga fact from the anime plot) are wholly anime-original → filler (T28, two sources). Eps 1, 7 and 8 pair a confirmed tankōbon 描き下ろし bonus chapter (1B vol 8 / 7A vol 3 / 8A vol 10 — pixiv volume numbers + MangaDex placement + es-la titles) with an original segment (1A, 7B チャンピオン, 8B) → mixed (T27: source and non-source in one episode). Eps 2, 6 and 9 stay canon by default with their flags open (one source on the original half); 4 (vol 9 「不死」 + divergence) and 10 (mainline 156-161+) stand. No anchor is affected: rows 1-9 are A44 position-less.",
+    ruledBy: 'Sean',
+    ruledOn: '2026-09-02',
+    cite: ['scripts/ingest/research/batch20/out/ranking-of-kings-the-treasure-chest-of-courage.json', 'scripts/ingest/research/batch20/verify/ranking-of-kings-the-treasure-chest-of-courage.md'],
+  },
 ];
 
 export const EPISODE_TYPE_OVERRIDES: Record<string, EpisodeTypes> = ENTRIES.reduce<Record<string, EpisodeTypes>>((acc, e) => {

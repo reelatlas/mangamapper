@@ -134,6 +134,16 @@ export const ENTRIES: RulingEntry<Record<number, string>>[] = [
     cite: ['scripts/ingest/research/batch20/out/orange.json'],
   },
 
+  {
+    seriesId: 'ranking-of-kings-the-treasure-chest-of-courage',
+    ruleId: 'G53',
+    value: { 1: "Kage's Errand / The Prince and Money", 2: "Beasts of the Wilderness / A Mysterious Desert", 3: "Hiling's Old Friend / Daida and Magic", 4: "Immortality and the Three Brothers", 5: "The Laws of the Underworld / A White Horse in Love / The Gentle Soldier, Hokuro", 6: "Bojji the King / The Melancholy of King Daida", 7: "The Snake Charmer with the Crooked Smile / The Big Four's Banquet", 8: "Kage's Yearning / A Great Mother", 9: "Miranjo and the Demon / The Prince and His Treasures", 10: "Return of the Sword King" },
+    reason:
+      "Batch 20 wave 8 (verified R24), Sean ruled 2026-09-02: the anthology's ten rows carried NO titles (no AFL page). English titles per en-WP's 2023 episode table + ousamaranking.fandom (the catalog's convention, as TBATE / orange); multi-segment rows joined with ' / ' in broadcast order (syobocal joins the same segments with ／; the JP titles are in the verdict's structure.notes). All ten agree across ja-WP, en-WP, syobocal and the official STORY pages.",
+    ruledBy: 'Sean',
+    ruledOn: '2026-09-02',
+    cite: ['scripts/ingest/research/batch20/out/ranking-of-kings-the-treasure-chest-of-courage.json', 'scripts/ingest/research/batch20/verify/ranking-of-kings-the-treasure-chest-of-courage.md'],
+  },
 ];
 
 export const EPISODE_TITLE_OVERRIDES: Record<string, Record<number, string>> = toMergedRecord(ENTRIES);
