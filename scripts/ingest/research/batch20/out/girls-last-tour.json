@@ -1,0 +1,64 @@
+{
+  "series_id": "girls-last-tour",
+  "summary": "MU's pin is HALF right: the CHAPTER (32) is confirmed, the VOLUME (5) is wrong. Girls' Last Tour is a strictly linear 12-for-12 adaptation whose episode titles are its chapter titles; ep 12 接続／仲間 adapts ch 31 「接続」(Connection) and ch 32 「仲間」(Friend), which are the LAST TWO CHAPTERS OF VOLUME 4 (vol 4 = ch 25-32), not volume 5 (vol 5 opens at ch 33 「水路」 Waterway). Both directions agree: girls-last-tour.fandom's chapter pages carry |anime = Episode 12 / |tankoubon = Volume 4 Chapter 31 and 32 (\"the last chapter of the manga featured in the Anime\"), Category:Episode 12 contains exactly those two chapter pages, and a SECOND, independent wiki (girlslasttour.miraheze.org) prints the full ep→chapter table with ep 12 = Chapter 31 Connection + Chapter 32 Friend plus the flat statement \"The anime covers manga volumes 1 to 4\". MangaDex's all-language aggregate independently places 31/32 in vol 4 and 33 in vol 5, and its Italian/Finnish feeds title ch 31 connessione/Yhteydet and ch 32 amico/Toverit. The batch-18 chapter-space question is SETTLED and is not an N35 defect: the manga is 47 tankoubon chapters across 6 volumes — 8/8/8/8/8/7, the final volume carrying SEVEN (41-47), so 6×8=48 was the wrong premise. Stored total_chapters=47 is correct; latest_known=39 is MU's release-record artifact, not a ceiling.",
+  "anchors": [
+    {
+      "episode": 12,
+      "end_chapter": 32,
+      "start_chapter": 31,
+      "chapters_adapted": "31-32",
+      "volume": 4,
+      "confidence": "high",
+      "note": "Finale = ch 31 接続 (Connection) + ch 32 仲間 (Friend), in order, complete; ja-WP's 各話リスト gives 第12話 = 接続／仲間 = exactly those two chapter titles. Ep 11 ends at ch 30 過去 (fandom Past page: |anime = Episode 11 Part 3), so START 31 is clean — no leading partial, A10 not engaged; A47 does not bite (finale, no next episode owns a tail, C1). A4 END = 32, the last chapter of VOLUME 4. Chapter space = the tankoubon numbering 1-47 (the fandom's chapter pages also carry a second |webManga index — ch 31 = web 27, ch 32 = web 28 — which is the Kurage Bunch serialization count, NOT our space).",
+      "sources": [
+        "https://girls-last-tour.fandom.com/api.php?action=parse&page=Connection&prop=wikitext&format=json",
+        "https://girls-last-tour.fandom.com/api.php?action=parse&page=Friend&prop=wikitext&format=json",
+        "https://girlslasttour.miraheze.org/w/api.php?action=parse&page=Girls%27%20Last%20Tour%20(anime)&prop=wikitext&format=json",
+        "https://girls-last-tour.fandom.com/api.php?action=query&list=categorymembers&cmtitle=Category:Episode%2012&cmlimit=50&format=json",
+        "https://ja.wikipedia.org/wiki/%E5%B0%91%E5%A5%B3%E7%B5%82%E6%9C%AB%E6%97%85%E8%A1%8C",
+        "https://api.mangadex.org/manga/5b93fa0f-0640-49b8-974e-954b9959929b/aggregate"
+      ]
+    }
+  ],
+  "continue_points": [
+    {
+      "episode": 12,
+      "continue_chapter": 33,
+      "kind": "post_series",
+      "note": "C5. Ep 12 ends on ch 32's last page (it is a whole chapter, and the chapter that closes vol 4) — no straddle, so C1 does not apply. Resume at ch 33 「水路」 (Waterway), the first chapter of volume 5. NEVER ANIMATED: ch 33-47 — all of volume 5 (33 Waterway, 34 Injury, 35 Art, 36 Clothes, 37 Tobacco, 38 Explosion, 39 Oblivion, 40 Hometown) and all of volume 6 (41 Blizzard, 42 Space, 43 Book, 44 Loss, 45 Sleep, 46 Silence, 47 Last Stop), plus the volume omake (33.5, 39.5-39.7, 43.5-43.6, 44.5, 47.5) and the extra epilogue chapter printed only in the volume-6 limited edition.",
+      "sources": [
+        "https://girls-last-tour.fandom.com/api.php?action=parse&page=Volume%205&prop=wikitext&format=json",
+        "https://girls-last-tour.fandom.com/api.php?action=parse&page=Volume%206&prop=wikitext&format=json",
+        "https://api.mangadex.org/manga/5b93fa0f-0640-49b8-974e-954b9959929b/aggregate"
+      ]
+    }
+  ],
+  "anchor_hostile": [],
+  "annotations": [],
+  "repairs": [
+    {
+      "episode": 12,
+      "field": "volume",
+      "old": 5,
+      "new": 4,
+      "why": "G37: MU's coverage string reads \"Vol 5, Chap 32\" but chapter 32 「仲間」 is the LAST chapter of VOLUME 4, not a volume-5 chapter. Volume 4 = ch 25 Train, 26 Wavelength, 27 Capture, 28 Culture, 29 Destruction, 30 Past, 31 Connection, 32 Friend; volume 5 opens at ch 33 Waterway. Three independent sources: girls-last-tour.fandom's Volume 4 contents list AND both chapter pages' |tankoubon = [[Volume 4]] Chapter 31 / Chapter 32 fields; girlslasttour.miraheze.org's anime page trivia \"The anime covers manga volumes 1 to 4\"; MangaDex's all-language aggregate, which tags ch 25-32 volume 4 and ch 33 volume 5. MU is internally inconsistent here — its own status field says \"6 Volumes (Complete) / 47 Chapters (Complete)\", which under the published 8/8/8/8/8/7 split puts 32 in vol 4. The chapter number itself is CORRECT and needs no change.",
+      "sources": [
+        "https://girls-last-tour.fandom.com/api.php?action=parse&page=Volume%204&prop=wikitext&format=json",
+        "https://girlslasttour.miraheze.org/w/api.php?action=parse&page=Girls%27%20Last%20Tour%20(anime)&prop=wikitext&format=json",
+        "https://api.mangaupdates.com/v1/series/65172390077",
+        "https://api.mangadex.org/manga/5b93fa0f-0640-49b8-974e-954b9959929b/aggregate"
+      ]
+    }
+  ],
+  "type_corrections": [],
+  "structure": {
+    "notes": "N35 ANSWER — THE CHAPTER SPACE IS 47 AND STORED IS CORRECT; batch 18's open discrepancy is CLOSED, no repair needed. The reading space is the tankoubon numbering 1-47 across 6 volumes: vol 1 = 1-8, vol 2 = 9-16, vol 3 = 17-24, vol 4 = 25-32, vol 5 = 33-40, vol 6 = 41-47. Batch 18 inferred \"8 chapters per volume ⇒ 48\" from vols 1-2; the FINAL volume carries SEVEN (41 Blizzard, 42 Space, 43 Book, 44 Loss, 45 Sleep, 46 Silence, 47 Last Stop), so 5×8 + 7 = 47. MangaUpdates' own status field states \"6 Volumes (Complete) / 47 Chapters (Complete)\" independently of AniList. So stored total_chapters=47 / total_volumes=6 need no change. latest_known=39 is MU's `latest_chapter` field, i.e. the chapter of MU's latest-DATED release records (vol 5 holds the omake 39.5/39.6/39.7, the likely last-dated uploads) — it is not a ceiling and not an edition signal; the ceiling is 47.\n\nTWO OTHER NUMBER SPACES EXIST AND NEITHER IS OURS. (1) The Kurage Bunch WEB SERIALIZATION index: girls-last-tour.fandom's chapter pages carry a |webManga field beside |tankoubon — ch 30 = web 26, ch 31 = web 27, ch 32 = web 28 (offset -4 in this region). The anime's endpoint in that space would be web 28; do not mix it with our 32. (2) MangaDex's ENGLISH feed, which batch 18 already flagged: it drops 住居 (Residence/House) and by ch 28+ runs THREE low — EN 28 'Connection', 29 'Comrade', 30 'Channel', 31 'Injury', 32 'Art', 33 'Clothes' where the tankoubon reads 31 Connection, 32 Friend, 33 Waterway, 34 Injury, 35 Art, 36 Clothes. MangaDex's ALL-LANGUAGE aggregate and its Italian and Finnish feeds DO use the tankoubon space (it 31 connessione / 32 amico / 33 corso d'acqua; fi 31 Yhteydet / 32 Toverit / 33 Vesiväylä) and corroborate the fandom.\n\nFULL EP→CHAPTER MAP, corroborated on TWO INDEPENDENT WIKIS (girls-last-tour.fandom via chapter-page |anime fields + Category:Episode N reverse index; girlslasttour.miraheze.org via its {{Episode}} chapterNumber table — different host, different template scheme, not a mirror): 1 = 1-2, 2 = 3-5, 3 = 6-8, 4 = 9-10, 5 = 11-13, 6 = 14-16, 7 = 17-18, 8 = 19-21, 9 = 22-24, 10 = 25-27, 11 = 28-30, 12 = 31-32. Twelve episodes, thirty-two chapters, no gap and no overlap. This map also RETIRES the batch-18 warning about eps 7+ (the fandom places Labyrinth at ch 17, and miraheze agrees) and independently re-confirms the applied ep-4 = ch 9-10 repair.",
+    "order_only": []
+  },
+  "flags_for_sean": [
+    "CONFIRMED-WITH-CORRECTION, not a wrong pin: MU's ch 32 for ep 12 is right and re-lands as a manual-tier anchor with two independent wikis behind it; only the VOLUME field is wrong (5 → 4). The single repair is `volume`.",
+    "OPEN FLAG #782 IS NAMESAKE CONTAMINATION (G55), not a numbering-space mismatch — recommend closing it. The flag records pages:[\"List of Girls episodes\"], wikiMax 62. HBO's drama series 'Girls' ran exactly 62 episodes over six seasons; Girls' Last Tour has 12. The scraper matched an unrelated show's episode list on the leading word. Open flag #823 (\"wiki titles disagree with stored titles on many rows — numbering offset suspected\", 12 conflicts = every row) is almost certainly the same page bleeding titles onto all twelve rows: our stored titles agree with ja-WP's 各話リスト row for row (第12話 接続／仲間 = stored 'Connection/Friends'), so there is no offset. Both flags should be closed as source-identity errors, and the scrape scoped to a year-disambiguated page.",
+    "Cosmetic only, no repair proposed: stored title 'Connection/Friends' vs the wikis' 'Connection, Friend' (仲間 is singular). The slash form matches ja-WP's <hr /> subtitle convention used across all twelve of our rows; leaving it alone keeps the run consistent.",
+    "Note for whoever anchors eps 1-11 later: the map in structure.notes is now double-sourced end to end and every row is already typed canon, so the whole run is anchorable without new research."
+  ]
+}

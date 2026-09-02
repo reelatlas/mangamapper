@@ -1,0 +1,121 @@
+{
+  "series_id": "erased",
+  "summary": "MU's CHAPTER is right, its ROW is wrong. Ch 35 is genuinely the last manga chapter the anime reaches — but it is reached in EPISODE 11, not in the finale. ja.wikipedia's テレビアニメ section, citing the official site's 三部けい×伊藤智彦 interview, states it flatly: 「第十話までは比較的原作に沿っていたが、この時点ではまだ原作が完結していなかったため、第十一話の途中からは原作とはやや違うオリジナルストーリーとなっている。ただし原作サイドから終わり方は伝えられており、大凡の結末は同じ」 — from PARTWAY THROUGH EP 11 the anime is an original story; the author only conveyed the general ending. The official per-episode synopsis for 第十二話「宝物」 is 100% the anime-invented staging: the whole episode is the rainy HOSPITAL ROOFTOP standoff, Satoru in a wheelchair, Yashiro's muscle-relaxant in Kumi's IV drip, Satoru rolling himself over the edge, Yashiro catching him, the rescue mat. The manga's climax is somewhere else entirely: per ja-WP's own 原作 plot summary, Satoru relapses into a SECOND one-year coma after a chance meeting with Airi, regains his memories at the station where he once saw her off, then exposes Yashiro at the 「さざんかの集い」 rehab gathering, where Yashiro kidnaps Kumi and lures him onto a SUSPENSION BRIDGE that he sets alight to die together — none of which is animated. So ep 12 is a studio ending (T27) and cannot carry an anchor (A1); the honest terminal is ep 11 → ch 35, and the post-series continue is ch 35 itself (C1: ch 35 is only part-adapted). Chapter-space question answered: stored 49 = the 44-chapter main story + the 5-chapter vol-9 外伝『僕だけがいない街 Re』; there is no edition divergence.",
+  "anchors": [
+    {
+      "episode": 11,
+      "end_chapter": 35,
+      "start_chapter": 33,
+      "chapters_adapted": "33-35 (34 and 35 abridged; ch 32 cut entirely)",
+      "volume": 6,
+      "confidence": "high",
+      "note": "THE HONEST TERMINAL (G56/A1): ep 11 「未来」 is the last row with source content, and it is MIXED — its first part adapts ch 33 'Wake Up: August 2003' (Satoru comes out of the fifteen-year coma with his post-1988-02-15 memory gone), ch 34 'Closed Door: August 2003 - February 2004' (Sachiko's care, rehab, grown-up Kayo visiting with her baby) and ch 35 'Key 2004.04' (Kumi Kitamaru, the leukaemia patient he befriends in the hospital), after which it turns anime-original. A4 END = 35: bokumachi.fandom's Kumi Kitamaru page gives her debut as |Manga = [[35. Key 2004.04]] and |Anime = [[Episode 11]] — a two-way reverse index onto ch 35 — and MU's own coverage string independently pins the run at \"Vol 6, Chap 35\". The chapters' own date subtitles track the official ep-11 synopsis in order (2003年8月 → 2003年8月〜2004年2月 → 2004.04), and ch 35 is the last chapter of volume 6 (vol 6 = 31-35), so the volume field is right. START = 33 (A10/A12): ep 10 ends at ch 31 'Defeat' with the car going into the lake; ch 32 'Spider's Thread' (Yashiro's 1971-1987 backstory) is CUT — bokumachi.fandom's Yashiro's Brother page records |Anime = \"Cut, Concept Character\" and MU's start string lists 32 among the skipped chapters — and ep 11's opening line 「悟が冷たい水の底に沈んだ日から年月は流れ」 is a recap of ep 10, never a START (A10). `abridged` is annotated: MU names 34 and 35 as skipped/abridged, and the anime compresses ch 35's April-2004 material into autumn 2003. A47 does not bite — no later episode owns a ch-35 tail; ep 12 carries no source chapter at all.",
+      "sources": [
+        "https://bokumachi.fandom.com/api.php?action=parse&page=Kumi%20Kitamaru&prop=wikitext&format=json",
+        "https://bokumachi.fandom.com/api.php?action=parse&page=List%20of%20Chapters&prop=wikitext&format=json",
+        "https://api.mangaupdates.com/v1/series/60899029545",
+        "https://bokumachi-anime.com/story/11/",
+        "https://bokumachi.fandom.com/api.php?action=parse&page=Yashiro%27s%20Brother&prop=wikitext&format=json",
+        "https://ja.wikipedia.org/wiki/%E5%83%95%E3%81%A0%E3%81%91%E3%81%8C%E3%81%84%E3%81%AA%E3%81%84%E8%A1%97"
+      ]
+    }
+  ],
+  "continue_points": [
+    {
+      "episode": 12,
+      "continue_chapter": 35,
+      "kind": "post_series",
+      "note": "Resume at ch 35 「鍵 2004.04」 (Key). C1 + C5: the anime's last adaptation stops INSIDE an abridged ch 35 — ep 11 takes only Kumi Kitamaru's introduction from it and drops the chance meeting with Airi that sends Satoru into his second collapse, so a reader who starts at 36 loses the hinge of the manga's whole ending. Re-reading Kumi's introduction costs one short chapter and is the safe boundary. NEVER ANIMATED IN ANY FORM: ch 36 'Starting Point: May 2004' through ch 44 'Final Chapter' — the second one-year coma, waking in July 2005, finding Airi at the station and getting every memory back, the 「さざんかの集い」 gathering staged as Yashiro's trap, Kumi's kidnapping, the burning suspension bridge and Satoru's dive, and the 2012 epilogue (Yashiro's death sentence, Satoru's success as a manga artist, the snowy reunion with Airi under the overpass). Also never animated: ch 45-49, the volume-9 外伝『僕だけがいない街 Re』 side stories (Kayo, Kenya, Sachiko, Airi). WARNING FOR THE READER'S NOTE: the anime's own last two episodes tell a DIFFERENT version of that ending — the manga's is not a continuation of what ep 12 showed but a replacement for it.",
+      "sources": [
+        "https://api.mangaupdates.com/v1/series/60899029545",
+        "https://ja.wikipedia.org/wiki/%E5%83%95%E3%81%A0%E3%81%91%E3%81%8C%E3%81%84%E3%81%AA%E3%81%84%E8%A1%97",
+        "https://bokumachi.fandom.com/api.php?action=parse&page=List%20of%20Chapters&prop=wikitext&format=json"
+      ]
+    }
+  ],
+  "anchor_hostile": [
+    {
+      "episode": 12,
+      "why": "A1 — the target row is the STUDIO ENDING and takes no anchor. The official synopsis for 第十二話「宝物」 describes the entire episode as one anime-invented scene: 「小雨が降る病院の屋上で、悟は八代と対峙していた」 … 八代のシナリオは、悟の新たな友人・久美の点滴に筋弛緩剤を混入して殺害した上で、悟をその実行者に仕立ててから殺すというもの … 悟は自らの手で屋上の縁に車椅子を進めて行く … それを掴み助けたのは…他ならぬ八代だった … 彼が眼下に臨んだ視界の中には、救助マットの上で微笑む悟とその仲間の姿があった. Not one beat of that staging exists in the manga: ja-WP's 原作 summary puts the confrontation at the 「さざんかの集い」 and on a burning 吊り橋 in August 2005, with Kumi kidnapped rather than poisoned, Satoru walking on crutches as a bluff rather than in a wheelchair, and Satoru dragging Yashiro into the river rather than landing on a rescue mat. ja-WP, citing the official Sanbe×Ito interview, dates the divergence to 「第十一話の途中から」 and calls what follows an オリジナルストーリー. The episode reaches the same OUTCOME as the source (Yashiro exposed and arrested; Satoru a manga artist; the snowy reunion with Airi under the overpass where they parted) because the author conveyed the ending to the staff — but it adapts no pages in running order, so there is no position to give (A4/A44).",
+      "sources": [
+        "https://bokumachi-anime.com/story/12/",
+        "https://ja.wikipedia.org/wiki/%E5%83%95%E3%81%A0%E3%81%91%E3%81%8C%E3%81%84%E3%81%AA%E3%81%84%E8%A1%97",
+        "https://api.mangaupdates.com/v1/series/60899029545"
+      ]
+    }
+  ],
+  "annotations": [
+    {
+      "episodes": [11],
+      "kind": "abridged",
+      "chapters": "33-35",
+      "note": "The 2003 wake-up arc is compressed: ch 34 and 35 are abridged (MU's own start string names 34 and 35 as skipped/abridged), ch 35's April-2004 material is relocated to autumn 2003, and the chance meeting with Airi that ends ch 35/36 in the manga is dropped."
+    },
+    {
+      "episodes": [11],
+      "kind": "divergence",
+      "chapters": "36-37",
+      "note": "From partway through the episode the anime departs the source: Yashiro re-enters as 西園 at Satoru's hospital in autumn 2003 and the memory reveal happens on the roof, where the manga keeps him away until ch 37 「足音」 (July 2005) and restores Satoru's memory at the station after a second one-year coma. Official interview basis (ja-WP): 「第十一話の途中からは原作とはやや違うオリジナルストーリー」."
+    },
+    {
+      "episodes": [12],
+      "kind": "divergence",
+      "chapters": "36-44",
+      "note": "The whole finale is the studio's own realization of an ending the author described but did not draw for it; ja-WP records 「原作サイドから終わり方は伝えられており、大凡の結末は同じ」. Setting, mechanism and timeframe all differ from ch 36-44."
+    },
+    {
+      "episodes": [12],
+      "kind": "loose_parallel",
+      "chapters": "42-44",
+      "note": "Mandatory tie (T28). The finale restages, without adapting, three beats the manga carries: Yashiro using Kumi as bait (manga ch 42 'Target' — a kidnapping, not a sabotaged IV), Yashiro's admission that Satoru is what makes him feel alive and the gambit that traps him (manga ch 43 'Confession', on the burning suspension bridge), and the closing epilogue of ch 44 'Final Chapter' — Satoru successful as a manga artist and the snowy reunion with the grown Airi under the overpass where the two had been separated, which the anime reproduces in setting and event but not from the page."
+    }
+  ],
+  "repairs": [
+    {
+      "episode": 12,
+      "field": "end_chapter",
+      "old": 35,
+      "new": null,
+      "why": "A1 forbids the anchor here once the row is typed filler, and the value is on the wrong row regardless: ch 35 is reached in EPISODE 11 (Kumi Kitamaru debuts in ch 35 and in ep 11 — bokumachi.fandom's two-way field), while ep 12 is the anime-original hospital-rooftop close. Delete the mu-tier anchor from ep 12 and land the value on ep 11 as the manual-tier anchor in this verdict (the toriko shape: a pin whose number is right but whose ROW cannot hold it). MU's chapter and volume are both correct as a coverage statement about the RUN — G56 covers it — so this is not a G37 numbering error; it is a row-placement error created by MU pinning coverage to the last aired episode.",
+      "sources": [
+        "https://bokumachi.fandom.com/api.php?action=parse&page=Kumi%20Kitamaru&prop=wikitext&format=json",
+        "https://bokumachi-anime.com/story/12/",
+        "https://ja.wikipedia.org/wiki/%E5%83%95%E3%81%A0%E3%81%91%E3%81%8C%E3%81%84%E3%81%AA%E3%81%84%E8%A1%97"
+      ]
+    }
+  ],
+  "type_corrections": [
+    {
+      "episodes": [12],
+      "type": "filler",
+      "note": "T27: a STUDIO ENDING is filler by name. The manga had not finished when the finale was made (ch 44 ran in Young Ace's April 2016 issue, on sale 2016-03-04; the episode aired 2016-03-25 with production long locked), so the staff built their own close from an ending the author described to them — ja-WP, citing the official 三部けい×伊藤智彦 interview: 「第十一話の途中からは原作とはやや違うオリジナルストーリーとなっている。ただし原作サイドから終わり方は伝えられており、大凡の結末は同じ」; in that same interview Sanbe says the manga's ending got 「新しいシチュエーション」 with the page count to support it while 「アニメの方は尺がないからもっと端的にやらないといけない」. The official ep-12 synopsis is the hospital roof from first line to last; the manga's is the さざんかの集い and a burning suspension bridge. NOT `retconned`: unlike Akame 23-24 the source was not overwritten — the manga's own ending stands and reaches the same outcome. The tie is annotated `divergence` (36-44) plus `loose_parallel` (42-44) as T28 requires. Stored type is canon, on AFL's blanket 'Manga Canon' label for all 12 rows, which is exactly the A-7 class the traps warn about — AFL never marks a from-the-outline studio ending.",
+      "sources": [
+        "https://ja.wikipedia.org/wiki/%E5%83%95%E3%81%A0%E3%81%91%E3%81%8C%E3%81%84%E3%81%AA%E3%81%84%E8%A1%97",
+        "https://bokumachi-anime.com/story/12/",
+        "https://bokumachi-anime.com/special/interview/",
+        "https://api.mangaupdates.com/v1/series/60899029545"
+      ]
+    },
+    {
+      "episodes": [11],
+      "type": "mixed",
+      "note": "T28: source and anime-original in one episode, both story-carrying. Source half — ch 33 (the 2003 awakening from the fifteen-year coma, the lost memory), ch 34 (rehab under Sachiko, grown Kayo's visit with her baby) and ch 35 (Kumi Kitamaru; her debut chapter per bokumachi.fandom, her debut EPISODE per the same field and per the official synopsis 「悟は院内で知り合った久美という少女と友人になっていた」). Original half — Yashiro walking into Satoru's hospital as 西園 in autumn 2003 and the rooftop 「八代、俺の記憶は戻っているぞ」, where the manga withholds him to ch 37 (July 2005) and restores the memory at the station after a second one-year coma. ja-WP's official-interview line dates the switch to 「第十一話の途中から」, and a Japanese episode review of the same broadcast puts it the same way (アニメオリジナル展開: on the roof it is 八代 who appears, where the manga has Airi handle the press). Stored type is canon (AFL's blanket label). NOTE: ep 11 is outside the literal target row, but the ask's branch (3) requires the honest terminal on the last canon/mixed row and the terminal is unusable without the correct typing on it.",
+      "sources": [
+        "https://ja.wikipedia.org/wiki/%E5%83%95%E3%81%A0%E3%81%91%E3%81%8C%E3%81%84%E3%81%AA%E3%81%84%E8%A1%97",
+        "https://bokumachi-anime.com/story/11/",
+        "https://bokumachi.fandom.com/api.php?action=parse&page=Kumi%20Kitamaru&prop=wikitext&format=json",
+        "https://bokunoiroironakansou.hatenablog.com/entry/2016/03/27/193839"
+      ]
+    }
+  ],
+  "structure": {
+    "notes": "N35 ANSWER — WHAT THE STORED 49 COUNTS. It is a UNIT count, not an edition: 44 mainline chapters + 5 side-story chapters. ja-WP's 概要 states 「単行本は本編が全8巻（外伝を含めると全9巻）」 and that after the main serialization ended, the 外伝『僕だけがいない街 Re』 — a short-story collection focused on the supporting cast — ran in Young Ace from the July 2016 to the December 2016 issue and was published as volume 9 without the 'Re' on the cover. bokumachi.fandom's List of Chapters carries exactly 44 numbered chapters plus a separate 'Gaiden' block, and MangaDex folds the gaiden into the same title as ch 45-49 with lastChapter 49 / lastVolume 9 — which is where AniList's 49 comes from. THE MAINLINE READING SPACE IS 1-44; the terminal delivered here (35) sits far below the seam, so no conversion is involved.\n\nVOLUME BOUNDARIES (bokumachi.fandom List of Chapters, 6 per volume until the end): vol 1 = 1-6, vol 2 = 7-12, vol 3 = 13-18, vol 4 = 19-24, vol 5 = 25-30, vol 6 = 31-35 (five), vol 7 = 36-40 (five), vol 8 = 41-44 (four), vol 9 = the Re gaiden. Ch 35 is vol 6's last chapter, so MU's \"Vol 6\" is correct.\n\nOPEN FLAG #675 IS A FALSE ALARM — recommend closing. It reads \"MU chapter numbering diverges >20% from AniList count — likely different editions\", anilistCount 49 vs muLatestChapter 29. There is no edition divergence: MU's `latest_chapter` field is the chapter of its latest-DATED release records (the documented trap), not a ceiling, and MU's own status field says \"9 Volumes (Complete)\" — the same nine volumes as everyone else. AniList's 49 is 44 + 5 as above. The two sources agree on the work; only one field was misread.\n\nWHAT MU'S COVERAGE STRING ACTUALLY SAYS (both segments, this entry only): start = \"Vol 1, Chap 1 Skips/Abridges Chap 28, 29, 32, 34 and 35\", end = \"Vol 6, Chap 35 - Adapts the full story but condenses and alters the events of Vol 6 to 8 and skips Vol 9\". Read together those are consistent with this verdict rather than against it: 35 is the furthest chapter TOUCHED and it is touched in abridged form; \"condenses and alters Vol 6 to 8\" is the divergence, not coverage; \"skips Vol 9\" is the gaiden. The phrase \"adapts the full story\" is MU describing the STORY reaching its end, not the pages being animated — treating it as coverage is what would produce a false END of 44.\n\nCHAPTERS THE ANIME NEVER ANIMATED AT ALL, for the reader's note: 32 (Yashiro's 1971-1987 backstory — bokumachi.fandom marks his brother 'Cut, Concept Character' in the anime), and 36-44 in full. 28 and 29 are named by MU as skipped/abridged inside the 1988 arc (eps 9-10 territory, outside this task's scope and not researched here).",
+    "order_only": []
+  },
+  "flags_for_sean": [
+    "THE ONE FORK, stated plainly. I typed ep 12 FILLER + divergence(36-44) + loose_parallel(42-44). The competing reading is MIXED under the sole-adaptation exception, on the strength of the closing epilogue: the anime's last scene — Satoru successful as a manga artist, snow, the overpass where he and Airi were separated, Airi running up to him — is ch 44's last scene in setting and event, it appears in no other episode, and 'the series' final scene' clears the major-plot-point half of the test. I rejected it for two reasons and want it on the record. (a) The exception is about PAGES surfacing in an otherwise-original episode; here the official source-side interview says the run from mid-ep 11 is an オリジナルストーリー built from an ending the author DESCRIBED, and the surrounding beats (rooftop vs burning bridge, IV drip vs kidnapping, wheelchair vs crutch bluff, 2003 vs 2005) are nowhere near the page — the convergence is on the outline, not the drawing. (b) The exception's own justification is that filler would falsely mark the pages never-adapted; here the opposite is true. An END of 44 would push the C5 continue to 45 and tell a reader that ch 36-44 are behind them when nine chapters of the manga's ending — the second coma, the station reunion, the さざんかの集い, the bridge, the 2012 epilogue — are unseen. The filler reading is the one that keeps the position honest. If you take the mixed reading instead, the continue must still be forced to 35, not 45.",
+    "SCOPE EXTENSION, please confirm: the ask names only ep 12, but the honest terminal falls on ep 11, so this verdict also carries an anchor AND a type correction (canon → mixed) for ep 11. Nothing below ep 11 was researched — eps 1-10 keep their stored canon typing untouched, and MU's claim that ch 28/29 are skipped or abridged inside eps 9-10 is recorded in structure.notes but NOT verified here.",
+    "One fan source disagrees with the END and I did not follow it: a tumblr anime-vs-manga comparison maps ep 11 to 'chapters 33-36' and ep 12 to 'chapters 37-44'. Its ep-12 range is plainly a beats-not-pages mapping (it also describes the manga's bridge and the anime's roof as the same slot), and its ep-11 upper bound of 36 has nothing behind it; MU and the fandom's Kumi field both stop at 35, and ch 36 'Starting Point: May 2004' belongs to the second-coma sequence the anime does not have. Flagging it so a later verifier does not read the difference as an unexamined conflict.",
+    "Not proposed as a repair, but worth knowing when the series' remaining rows are anchored: the anime's ep 12 and the manga's ch 44 were three weeks apart (Young Ace April 2016 on sale 2016-03-04 vs broadcast 2016-03-25), so any per-episode source that pairs late episodes with late chapters here is at high risk of the documented 'chapter serialized after the episode' trap. Anchors on this tail should rest on the wiki's two-way character-debut fields and the licensor synopses, as this one does."
+  ]
+}
