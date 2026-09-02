@@ -1,0 +1,68 @@
+{
+  "series_id": "the-seven-deadly-sins-four-knights-of-the-apocalypse",
+  "summary": "MU PIN CONFIRMED, on the pages. MU's coverage string is per-adaptation and carries two segments — anime.start 'Vol 1, Chap 1 (S1) / Vol 9, Chap 77 (S2)', anime.end 'Vol 9, Chap 77 (S1) / Vol 14, Chap 120 Page 12 (S2)'. Our entry is S1 only (24 rows), so the governing segment is 'Vol 9, Chap 77 (S1)' and the stored pin took it correctly — no G37 leak. Two independent page-level sources agree that ep 24 'Advent' (2024-03-31) adapts ch 75 p.13-20, ch 76, and ch 77 p.1-7: nanatsu-no-taizai.fandom's episode-24 infobox chapter field (page-partitioned against ep 23's 75 p.1-13 and ep 25's 77 p.7-20) and programming-cafe's anicomi reverse index, whose 話数→アニメ話数 column splits ch 75 across 1-23/1-24 and ch 77 across 1-24/2-1. END = 77, START = 75, volume 9 (fandom's Volume 9 page and programming-cafe's 単行本 column both close vol 9 exactly on ch 77). A47 does not demote the END: ep 24's tail of ch 77 is 7 pages, above the 5-page scrap bar and carrying the finale's own climax (Arthur's advent / the King's Authority opening), and ep 24 is this entry's finale so the tail has no next-episode owner (C1). The one surprise is a 2-page out-of-order fragment — fandom's field also lists ch 80 p.14-15 (the distant characters reacting to Arthur) — which cannot move the END: it is out of running order (A4), it is re-adapted in full by S2 ep 25, and programming-cafe's reverse index does not carry it; it is delivered as a graft annotation, medium. The continue is C1 IN the straddled chapter: ch 77, vol 9 — S2 restarts there (MU's own S2 start segment is 'Vol 9, Chap 77'). S1 adapts ch 1 → 77 p.7 with no skipped CHAPTER.",
+  "anchors": [
+    {
+      "episode": 24,
+      "end_chapter": 77,
+      "start_chapter": 75,
+      "chapters_adapted": "75 (p.13-20), 76, 77 (p.1-7), 80 (p.14-15 — relocated 2-page beat, out of running order)",
+      "volume": 9,
+      "confidence": "high",
+      "note": "MU's S1 segment 'Vol 9, Chap 77 (S1)' CONFIRMED on the pages. END 77 (A4): ep 24 plays ch 77 p.1-7, the finale's Arthur-advent climax; A47 does not demote it — 7 pages is above the scrap bar, no teaser/cold-open wording, and as this entry's finale the tail has no next-episode owner (C1). START 75 (A10): the leading partial ch 75 p.13-20 is 8 pages of real content, ep 23 having taken 75 p.1-13; programming-cafe's reverse index independently splits ch 75 across ep 1-23 and 1-24. Ch 80 p.14-15 does NOT advance the END — out of running order (A4), duplicated in full by S2 ep 25, and absent from programming-cafe's reverse index; carried in chapters_adapted and annotated graft. Volume 9 = ch 69-77 (both sources close vol 9 on 77). Row displays 75 (A13).",
+      "sources": [
+        "https://nanatsu-no-taizai.fandom.com/api.php?action=parse&page=Four%20Knights%20of%20the%20Apocalypse%20Episode%2024&prop=wikitext&format=json",
+        "https://programming-cafe.com/amazon/primevideo/anime/anicomi-mokushirokunoyonkishi-list/",
+        "https://nanatsu-no-taizai.fandom.com/api.php?action=parse&page=Volume%209%20(4KOA)&prop=wikitext&format=json",
+        "https://nanatsu-no-taizai.fandom.com/api.php?action=parse&page=Chapter%2077%20(4KOA)&prop=wikitext&format=json",
+        "https://nanatsu-no-taizai.fandom.com/api.php?action=parse&page=Four%20Knights%20of%20the%20Apocalypse%20Episode%2025&prop=wikitext&format=json"
+      ]
+    }
+  ],
+  "continue_points": [
+    {
+      "episode": 24,
+      "continue_chapter": 77,
+      "kind": "post_series",
+      "note": "C1 — the finale ends MID-chapter 77 (p.7 of 20), so resume IN ch 77 (vol 9): pages 1-7 were animated at the very end of 'Advent', the rest of the chapter was not. Independently corroborated by the next adaptation's own start: S2 ep 25 'King's Authority' opens on ch 77 p.7, and MU's S2 start segment is likewise 'Vol 9, Chap 77'. Nothing before ch 77 is left unread — S1 adapts ch 1 through 77 p.7 with no skipped chapter (the only intra-chapter omission the page-split fields show is ch 25 p.17-19, in ep 9). One thing already glimpsed out of order: ch 80 p.14-15 (the reaction shots to Arthur's advent) played inside ep 24; read them in place when you reach ch 80.",
+      "sources": [
+        "https://nanatsu-no-taizai.fandom.com/api.php?action=parse&page=Four%20Knights%20of%20the%20Apocalypse%20Episode%2024&prop=wikitext&format=json",
+        "https://nanatsu-no-taizai.fandom.com/api.php?action=parse&page=Four%20Knights%20of%20the%20Apocalypse%20Episode%2025&prop=wikitext&format=json",
+        "https://programming-cafe.com/amazon/primevideo/anime/anicomi-mokushirokunoyonkishi-list/"
+      ]
+    }
+  ],
+  "anchor_hostile": [],
+  "annotations": [
+    {
+      "episodes": [24],
+      "kind": "partial",
+      "chapters": "75 (p.13-20), 77 (p.1-7)",
+      "note": "Both ends of the episode are page splits: ch 75 is shared with ep 23 (p.1-13 there, p.13-20 here) and ch 77 is shared with S2 ep 25 (p.1-7 here, p.7-20 there). Named per A47/A10 so the boundary is visible; neither split moves the anchor."
+    },
+    {
+      "episodes": [24],
+      "kind": "graft",
+      "chapters": "80 (p.14-15)",
+      "note": "A 2-page beat lifted forward out of running order — the distant characters (Pellegarde, Gowther, Howzer, Edlin, Dolchomonte) reacting to Arthur's advent, which in the manga sits inside ch 80 'King Arthur vs. Lancelot'. MEDIUM: only the fandom episode field carries it, its own Manga/Anime Differences section describes the same beat as an anime addition, and programming-cafe's reverse index assigns ch 80 solely to ep 25. Position-irrelevant either way — ep 25 adapts ch 80 in full, so these are not sole-adaptation pages and the END stays 77 (A4)."
+    },
+    {
+      "episodes": [24],
+      "kind": "divergence",
+      "chapters": "75-76",
+      "note": "The Melagaland battle is materially EXTENDED for the finale — anime-added exchanges (Meian no Ori, the stretching arms, Deadly Poison at Percival and Isolde, Isolde's mini-Percival bombs, Critical Over, Tristan's kill). These are elaborations of the source's own beats inside adapted chapters, not an original plot line, so the row stays canon under T28; no anime-original story share."
+    }
+  ],
+  "repairs": [],
+  "type_corrections": [],
+  "structure": {
+    "notes": "PIN VERDICT (G31/G32/G37/G56). MU series 64495369812 'Mokushiroku no Yonkishi': anime.start = 'Vol 1, Chap 1 (S1) / Vol 9, Chap 77 (S2)', anime.end = 'Vol 9, Chap 77 (S1) / Vol 14, Chap 120 Page 12 (S2)'. Per-work segments: our entry is the 2023-24 S1 (24 rows, AniList 148862), so the S1 segment governs and the stored ep24 -> 77 v9 is the CORRECT segment — no G37 leak, the pin is REDUNDANT with the researched anchor and can re-land at manual tier with the citations above.\n\nOPEN FLAG #729 (count_mismatch, spaceMax 103 vs muCoverageChapter 120) RESOLVES as a false alarm on two counts. (a) The 120 is the S2 segment's chapter, not this entry's coverage; the S1 segment's 77 sits well inside the stored space. (b) The space max itself is understated: MU's own latest_chapter field reads 103 while its coverage string cites ch 120 — the latest_chapter trap (it is the chapter of MU's latest-DATED release records, not the frontier). MU's status field reads '27 Volumes (Ongoing) / Part 1: 15 Volumes (Complete) / Part 2: 12 Volumes (Ongoing)', i.e. the manga is far past 103. Recommend re-deriving the chapter space before the flag is judged, and clearing #729 either way.\n\nCHAPTER SPACE. One space throughout: the manga's own serialization numbering (Weekly Shonen Magazine), used identically by nanatsu-no-taizai.fandom's chapter infoboxes (|chapter=, |wsm=, |volume=), by programming-cafe's 話数 column, and by MU. No edition conversion, no sibling-manga space (the parent Nanatsu no Taizai has its own numbering and is not involved). Volume boundary at the anchor: vol 9 = ch 69-77 (fandom Volume 9 page lists exactly 69,70,71,72,73,74,75,76,77; programming-cafe's 単行本 column opens 第9巻 at 69 and 第10巻 at 78; ISBN 978-4065294871, 2022-11-17). MU pins the same volume 9.\n\nORIENTATION ONLY — the S1 arc/episode/chapter table for the QUEUED GAP BLOCK (rows 1-23). NO ANCHORS ARE PROPOSED BELOW EP 24; these values are a starting point for the block wave, from the fandom episode infoboxes' page-partitioned |chapters= fields, cross-read against programming-cafe's episode table and its chapter->episode reverse index (both directions agree on every boundary I spot-checked in the 68-86 range). ep 1: 1, 2(p.2-9) | 2: 2(p.10-40), 3, 4(p.2-3) | 3: 4(p.4-20), 5, 6, 7 | 4: 8-10 | 5: 11-13 | 6: 14, 15, 16, 17(p.2-7) | 7: 17(p.7-20), 18, 19, 20, 21(p.1-2) | 8: 20(p.20), 21(p.3-20), 22, 23 | 9: 24, 25(p.1-16, p.20), 26 | 10: 27-29 | 11: 30, 31 | 12: 32, 33, 34, 35(p.1-8) | 13: 35(p.9-20), 36, 37, 38(p.1-15) | 14: 38(p.16-21), 39, 40, 41(p.1-3) | 15: 41(p.4-20), 42-45, 46(p.1-16) | 16: 46(p.17-20), 47-50 | 17: 51-54, 55(p.1) | 18: 55(p.2-21), 56, 57, 58(p.15-20) | 19: 58(p.1-14), 59, 60, 61 | 20: 62-64 | 21: 65-68 | 22: 69(p.1-7, p.14-20), 70, 71, 72 | 23: 69(p.8-13), 73, 74, 75(p.1-13) | 24: 75(p.13-20), 76, 77(p.1-7) [+ 80 p.14-15 graft]. Two shapes the block wave should expect: (i) an UN-CROSS-CUTTING reorder at eps 22/23 — ch 69 is page-partitioned across the two rows (p.1-7+14-20 in ep 22, p.8-13 in ep 23) because the anime separates the two parallel threads Suzuki cut together, so ep 23's START is 69 by pages while its running-order body is 73-75 (the bleach 152-159 shape: expect a START back-jump plus a 'rearranged' annotation, not a plain range); (ii) ch 25 p.17-19 is the run's only intra-chapter omission (ep 9 takes 25 p.1-16 and p.20). Chapter-level, S1 is a straight continuous adaptation of ch 1 through ch 77 p.7 with NO skipped chapter and no anime-original episode — consistent with AFL typing every row canon.\n\nSOURCE HYGIENE. sevendeadlysins.fandom.com is an ALIAS of nanatsu-no-taizai.fandom.com (identical siteinfo base 'https://nanatsu-no-taizai.fandom.com/wiki/Nanatsu_no_Taizai_Wiki') — ONE wiki, not two sources. animefillerguide has no page for this series (404 on /anime/the-seven-deadly-sins-four-knights-of-the-apocalypse/). ja.wikipedia's '黙示録の四騎士' is a disambiguation page; the article is '黙示録の四騎士 (漫画)' and its 各話リスト carries staff and 初放送日 columns only — NO 原作 column, so it is a date/title witness here, not a chapter witness. ja-WP does confirm the target row's air date: 第24話 降臨 = 2024年3月31日, matching stored. Independence of the two chapter sources: the fandom field is a page-level editorial reading of the episode; programming-cafe's anicomi list is a separately compiled bidirectional 単行本/話数/アニメ話数 table — they agree without sharing wording or page splits (pc gives no page numbers), which is why both are cited.\n\nDATE DEFECT NOTED, NOT PROPOSED (row 23 is not this task's row). nanatsu-no-taizai.fandom's Episode 23 page prints |airdate = March 17, 2024, the same date as Episode 22; ja-WP gives 第23話 = 2024年3月24日 and 第22話 = 3月17日 on an unbroken Sunday slot. The fandom value is the error. Flagged for whoever takes rows 1-23 — check our stored ep 23 date against ja-WP before trusting any fandom date on this wiki.",
+    "order_only": []
+  },
+  "flags_for_sean": [
+    "Flag #729 (count_mismatch) should be CLEARED: the 120 that tripped it is MU's S2 segment and this entry is S1-only; the S1 segment (ch 77) is inside the space. Separately, the stored space max 103 is stale — MU's own coverage string cites ch 120 and its status reads 27 volumes across two parts, so latest_known 103 (MU's latest_chapter, a release-record artifact) understates the frontier. Worth a space re-derive.",
+    "MEDIUM, one source: the ch 80 p.14-15 graft in ep 24. nanatsu-no-taizai.fandom's episode-24 |chapters= field lists it; the SAME page's Manga/Anime Differences section calls the same beat an anime addition, and programming-cafe's reverse index puts ch 80 wholly in ep 25. Delivered as a graft annotation and kept out of the END (out of running order, re-adapted in full by ep 25). If you would rather not carry a contested annotation, dropping it changes no position.",
+    "The anchor is delivered as END 77 / START 75 — one chapter WIDER at the start than programming-cafe's episode-level table (which prints ep 24 = 76-77 and ep 23 = 73-75). The two are not in conflict: pc's own reverse index splits ch 75 across '1-23,1-24', and the fandom field gives the page boundary (p.13). START 75 is A10-correct (8 pages, real content). Noting it because a future joiner reading only pc's episode table would see 76.",
+    "Rows 1-23 remain the queued anchor_gap_research block — the orientation table in structure.notes is a starting point with citations, NOT anchors, and the eps 22/23 ch-69 un-cross-cutting needs the bleach-152 treatment (START back-jump + rearranged) rather than a plain range."
+  ]
+}
