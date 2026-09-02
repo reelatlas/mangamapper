@@ -1,0 +1,75 @@
+{
+  "series_id": "cells-at-work-code-black",
+  "summary": "MU's pin is WRONG in three separate ways and the entry holds no episode rows, so this verdict delivers the identity table plus one anchor. The 13-episode 2021 anime adapts the manga's Part 1 (ch 1-10, vols 1-2) OUT OF ORDER, relocating six early Part-2 chapters (ch 12-17, vol 3 — set in a second body) into the first body's story: eps 1-5 = ch 1-5 (+ the two-part 出張版 prequel), eps 6-8 = ch 13+14 / 15+12 / 16+17, eps 9-13 = ch 6-10 one chapter per episode (ja-WP names the mapping explicitly and the fandom's per-episode 'Manga Adaptation' column agrees row for row; five of those five late episodes carry their chapter's Japanese title VERBATIM). The finale (ep 13) is ch 10 心筋梗塞、蘇生、変化 — a verbatim title identity — plus a post-credits tail on ch 11's closing pages (the syringe/transfusion into a new, dirtier body: ja-WP calls it 原作第11話, Kodansha's own vol-3 blurb describes exactly that scene as vol 3's opening beat). Under A47's finale clause that tail stands, so ep 13 END = 11 (v3) with a `partial`, and the reader continues IN ch 11 (C1) — ch 11's middle (the benign colon polyp) is never animated, ch 12-17 were already animated out of order in eps 6-8 (skip on arrival, C3), and ch 18-48 are never adapted. MU's stored 'Vol 3, Chap 16' is a series-FRONTIER estimate parked on the finale row (the finale's own position is ch 11), it is one chapter short of the true frontier (ch 17, in ep 8), and its skip list is false on two of three chapters: ch 14 is ep 6's second half and ch 15 is ep 7's first half; only ch 11 is partly skipped.",
+  "anchors": [
+    {
+      "episode": 13,
+      "end_chapter": 11,
+      "start_chapter": 10,
+      "chapters_adapted": "10; 11 (closing pages only — the post-credits transfusion into the second body)",
+      "volume": 3,
+      "confidence": "medium",
+      "note": "Ep 13 心筋梗塞、蘇生、変化 is ch 10 心筋梗塞、蘇生、変化 verbatim (title identity + content: chest compressions, defibrillation, the stent, the body's lifestyle 変化) — that half is high-confidence on three sources. The END then ADVANCES to 11 on the post-credits tail: ja-WP states the epilogue depicts 原作第11話 (Part 2's prologue — the transfer to another body by transfusion), and Kodansha's own vol-3 copy describes that same scene as the volume's opening beat, so the pages are ch 11's. A47's finale clause: without a next episode the tail stands and the reader continues IN it (C1). Volume = the END chapter's volume (ch 11 = vol 3; ch 10 = vol 2). Marked medium because the fandom's per-episode chapter column credits ep 13 with ch 10 only — see flags_for_sean; the reader-facing continue is 11 either way.",
+      "sources": [
+        "https://ja.wikipedia.org/w/api.php?action=parse&page=%E3%81%AF%E3%81%9F%E3%82%89%E3%81%8F%E7%B4%B0%E8%83%9EBLACK&prop=wikitext&format=json",
+        "https://cellsatwork.fandom.com/api.php?action=parse&page=Cells%20at%20Work!%20CODE%20BLACK%20(anime)&prop=wikitext&format=json",
+        "https://www.kodansha.co.jp/comic/products/0000319895",
+        "https://en.wikipedia.org/wiki/Cells_at_Work!_Code_Black",
+        "https://saibou-black.com/story/"
+      ]
+    }
+  ],
+  "continue_points": [
+    {
+      "episode": 13,
+      "continue_chapter": 11,
+      "kind": "post_series",
+      "note": "C1/A47: the finale ends INSIDE ch 11 — only its closing pages (the transfusion into the second body) are animated, so resume at ch 11 and read it whole; its middle (the benign colon polyp of 平和、ポリープ、天変地異) is never animated. Then SKIP ch 12-17 on arrival (C3): the anime already played them out of order in eps 6-8 (13+14 → ep 6, 15+12 → ep 7, 16+17 → ep 8), relocated into the first body. From ch 18 the manga is never adapted — ch 18-48 (vols 4-8: the diabetes, depression, cancer and reconstruction arcs) have no anime.",
+      "sources": [
+        "https://ja.wikipedia.org/w/api.php?action=parse&page=%E3%81%AF%E3%81%9F%E3%82%89%E3%81%8F%E7%B4%B0%E8%83%9EBLACK&prop=wikitext&format=json",
+        "https://cellsatwork.fandom.com/api.php?action=parse&page=Cells%20at%20Work!%20CODE%20BLACK%20(anime)&prop=wikitext&format=json",
+        "https://www.kodansha.co.jp/comic/products/0000319895"
+      ]
+    }
+  ],
+  "anchor_hostile": [],
+  "annotations": [
+    {
+      "episodes": [13],
+      "kind": "partial",
+      "chapters": "11",
+      "note": "Only ch 11's closing pages are animated, as ep 13's post-credits epilogue (the syringe draws AA2153, U-1196 and the others into a new, dirtier body). Ch 11's own story — the returned peace and the benign colon polyp — is not animated."
+    },
+    {
+      "episodes": [13],
+      "kind": "rearranged",
+      "chapters": "10",
+      "note": "Ep 13's main body reaches BACK to ch 10: the series frontier was already ch 17 at ep 8, because eps 6-8 pulled vol 3's ch 12-17 forward and restaged them inside the first body before the anime returned to Part 1's ch 6-10 in eps 9-13 (ja-WP: アニメ版第9話からは原作第6話以降の各話に基づく)."
+    }
+  ],
+  "repairs": [
+    {
+      "episode": 13,
+      "field": "end_chapter",
+      "old": 16,
+      "new": 11,
+      "why": "The stored value is MangaUpdates' curated anime-coverage pin (anime.end = 'Vol 3, Chap 16 (Skips Chap 11, 14-15)', verified live on the MU API 2026-09-02, single segment, no label — so it is this entry's TV adaptation). It is not ep 13's position: ep 13 adapts ch 10 in full (verbatim title identity) plus ch 11's closing pages. MU's 16 is a series-FRONTIER estimate stored as the finale row's END (G37), and it is one chapter short even as a frontier — ep 8 ふくらはぎ、肺血栓、機転 adapts BOTH ch 16 ふくらはぎ、パワハラ、悪夢再び and ch 17 肺血栓、機転、再会 (ja-WP footnotes the two anime-original veteran RBCs' deaths as 原作第17話に基づく; the fandom's per-episode column lists ch 16 AND ch 17). MU's skip list is also false on two of three: ch 14 is ep 6's second half (Gran's death — 尿路感染、沈黙、涙) and ch 15 is ep 7's first half (皮脂、加齢臭 — the sebum/body-odour beat); only ch 11 is partly skipped. Volume stays 3 (ch 11 is vol 3) by coincidence, not by agreement.",
+      "sources": [
+        "https://api.mangaupdates.com/v1/series/12384533054",
+        "https://ja.wikipedia.org/w/api.php?action=parse&page=%E3%81%AF%E3%81%9F%E3%82%89%E3%81%8F%E7%B4%B0%E8%83%9EBLACK&prop=wikitext&format=json",
+        "https://cellsatwork.fandom.com/api.php?action=parse&page=Cells%20at%20Work!%20CODE%20BLACK%20(anime)&prop=wikitext&format=json"
+      ]
+    }
+  ],
+  "type_corrections": [],
+  "structure": {
+    "notes": "IDENTITY (A42 — the entry holds ZERO episode rows; no `repairs` are filed for rows that do not exist, this table is the staging input). Sources: ja-WP 各話リスト, en-WP 'Cells at Work! Code Black' episode table, syobocal TID 5849 (per-airing, TOKYO MX ChID 19 — earliest airing per Count, none 再-flagged), official site saibou-black.com/story (JP titles). All three agree on every date and title.\n\n| # | JP title | EN title | air date (JST) | manga chapters |\n| 1 | 喫煙、細菌、終わりの始まり。 | Smoking, Bacteria, and the Beginning of the End | 2021-01-10 | ch 1 + 出張版 (prequel) |\n| 2 | 肝臓、アルコール、誇り。 | The Liver, Alcohol, and Pride | 2021-01-17 | ch 2 (+ 出張版後編 per fandom) |\n| 3 | 興奮、膨張、虚無。 | Excitement, Swelling, and Emptiness | 2021-01-19 | ch 3 |\n| 4 | 最前線、淋菌、葛藤。 | Forefront, Gonococci, and Conflict | 2021-01-19 | ch 4 |\n| 5 | 過重労働、脱毛、錯乱。 | Overwork, Hair Loss, and Delirium | 2021-01-24 | ch 5 |\n| 6 | 腎臓、尿路結石、涙。 | Kidneys, Kidney Stones, and Tears | 2021-01-31 | ch 13 + 14 |\n| 7 | カフェイン、誘惑、嫉妬。 | Caffeine, Temptation, and Jealousy | 2021-02-07 | ch 15 + 12 |\n| 8 | ふくらはぎ、肺血栓、機転。 | Calves, Pulmonary Embolism, and Quick Thinking | 2021-02-14 | ch 16 + 17 (+ ch 6's fatty-liver scene) |\n| 9 | 異変、水虫、働く意味。 | Calamity, Athlete's Foot, and the Meaning of Work | 2021-02-21 | ch 6 |\n| 10 | 胃潰瘍、友情、喪失。 | Stomach Ulcer, Friendship, and Loss | 2021-02-28 | ch 7 |\n| 11 | 自暴自棄、痛風、反乱。 | Desperation, Gout, and Rebellion | 2021-03-07 | ch 8 |\n| 12 | 復帰、心臓、終焉。 | Return, the Heart, and Demise | 2021-03-14 | ch 9 |\n| 13 | 心筋梗塞、蘇生、変化。 | Cardiac Arrest, Revival, and a Change | 2021-03-21 | ch 10 + ch 11 (closing pages) |\n\nDATE NOTES. Regular slot = TOKYO MX Sunday 00:00 (i.e. Saturday late night — which is why ANN and the PV announce a 'January 9' debut for an episode whose clock date is 2021-01-10; the honest air date is 01-10, as ja-WP, en-WP and syobocal all record). Eps 3 and 4 aired TOGETHER as a one-hour special outside the normal slot on Tue 2021-01-19 01:40 JST (syobocal PID 537171, SubTitle '#3～#4', ProgComment '!放送日移動注意 1時間スペシャル' linking the official notice saibou-black.com/news/?id=56114); ja-WP: 全13話を11週で放送. Funimation streamed the series from 2021-01-07, TWO DAYS AHEAD of the Japanese broadcast — never take the simulcast date as the air date (the one-piece-log lesson, G53). syobocal also carries one stray record with Count=4 on 2021-01-31 00:00 duplicating ep 6's slot; it is an editor artifact, the #3/#4 airing is the 01-19 special row.\n\nADAPTATION STRUCTURE (why the anime is a reorder, not a straight run). ja-WP: 原作では第1部および出張版と第2部以降は別の世界（体）での話であるが、アニメ版では第1部（第1-2巻）をベースに、出張版や第2部初期（第3巻）のエピソードも織り交ぜて一つの世界（体）の物語に再構成している。具体的には、原作第1話と出張版を基にアニメ版第1話が、原作第13・14話、第15・12話、第16・17話の各2話を基にアニメ版第6・7・8話がそれぞれ作られている。アニメ版第9話からは原作第6話以降の各話に基づくが、原作第6話の脂肪肝の場面がアニメ版第8話に取り込まれている。最終話となる第13話エピローグでは、原作の第2部プロローグ（原作第11話）だった輸血による別の世界（体）への転移が描かれた。 The fandom's anime page carries an independent per-episode 'Manga Adaptation' column that matches this row for row (1: 24.5+1, 2: 31.5+2, 3: 3, 4: 4, 5: 5, 6: 13+14, 7: 15+12, 8: 16+17, 9: 6, 10: 7, 11: 8, 12: 9, 13: 10) — it credits ep 13 with ch 10 only and does not list the ch 11 tail. Eps 9-13 additionally carry VERBATIM chapter-title identity (異変、水虫、働く意味 / 胃潰瘍、友情、喪失 / 自暴自棄、痛風、反乱 / 復帰、心臓、終焉 / 心筋梗塞、蘇生、変化).\n\nFRONTIER vs FINALE (G56). The series' furthest first-time coverage is ch 17, reached in EP 8, not in the finale: ep 8's title takes 肺血栓 and 機転 straight from ch 17 肺血栓、機転、再会, and ja-WP footnotes the two anime-original veteran red blood cells dying in the dislodged thrombus as 原作第17話に基づく. The finale's own END is ch 11. When rows are staged, the whole 13-row anchor set is derivable from the table above (ep 8 = END 17 v3 START 16 is the frontier row); this verdict deliberately anchors only the target row.\n\nCHAPTER SPACE — 50 vs 48 (N35). The manga's own numbering runs 1-48 and stops there: ja-WP 話数 = 全48話+出張版（前後編）+特別編（2話）, and MU's latest_chapter = 48. AniList's total_chapters = 50 is a UNIT count = 48 numbered chapters + the two-part 出張版 prequel (『月刊少年シリウス』2019年2月号・3月号, collected at the back of vols 4 and 5; the fandom's infobox says the same, 'chapters = 50 (main storyline) + 2 (special editions)', where its extra 2 are the uncollected tie-in 特別編 「乳がん検診を受けよう！」 and 「がん、検診、予防。」). The mainline number ceiling is 48; the 出張版 stays labelled inside chapters_adapted and is never converted to 49/50 (R9). latest_known = 48 is therefore correct and total_chapters = 50 should be read as a unit count, not a number ceiling.\n\nVOLUME BOUNDARIES (fandom volume list, cross-checked against Kodansha's per-volume 初出 and ja-WP's serialization spans). v1 = 1-5; v2 = 6-10 (Part 1 ends at ch 10); v3 = 11-17 (Kodansha 初出 for vol 3 lists exactly seven issues); v4 = 18-24 + 出張版前編; v5 = 25-31 + 出張版後編; v6 = 32-36; v7 = 37-41; v8 = 42-48. ja-WP's serialization spans agree: 第1話-第10話 = 1-2巻, 第11話-第31話 = 3-5巻, 第32話-第41話 = 6-7巻, 第42話-最終話 = 8巻.\n\nSOURCE CAUTION. ja-WP's per-character section (AC1677) says he dies 第10話; the chapter that carries his death is ch 7 胃潰瘍、友情、喪失 ('Loss'), animated as ep 10 — the sentence appears to have taken the ANIME's episode number into a 原作-numbered paragraph. Nothing in this verdict depends on it, but a future reader of that section should not join on it.",
+    "order_only": []
+  },
+  "flags_for_sean": [
+    "FORK on ep 13's END (the only judgement call here). END = 11 applies A47's finale clause to the post-credits tail: ja-WP explicitly attributes the epilogue to 原作第11話 and Kodansha's vol-3 blurb ('ある日突然、血管内に入ってきた謎の管に、白血球たちと共に吸い込まれてしまう。目を覚ますと、そこは以前に輪をかけてブラックな、別の体だった') is the same scene, so the pages are ch 11's; the fandom's per-episode column, the only per-episode chart that exists, credits ep 13 with ch 10 only. If you prefer the conservative read (an anime coda that quotes ch 11's last beat), the anchor is ep 13 → END 10, START 10, vol 2, with the ch 11 tie kept as the `partial`. The reader-facing continue is 11 under EITHER reading, so the fork moves the displayed END and volume, nothing else.",
+    "MU pin refused, three defects in one string (G37): 'Vol 3, Chap 16 (Skips Chap 11, 14-15)' is (a) a series-frontier estimate stored as the finale row's END — ep 13's own position is ch 11; (b) one chapter short even as a frontier — ep 8 adapts ch 16 AND ch 17; (c) wrong on its skip list — ch 14 is in ep 6, ch 15 is in ep 7, and only ch 11 is partially skipped. Nothing in the string survives as an anchor; the honest frontier is ch 17 at ep 8 (G56).",
+    "STAGING: this entry has zero episode rows, so the ep 13 anchor lands ahead of its row (A42). The identity table in structure.notes is ready to stage all 13 rows (title JP/EN + air date, three sources agreeing), and the per-episode chapter map would land 12 further anchors — including the frontier row ep 8 (END 17, START 16, v3) — without new research.",
+    "Open flag #786 (count_mismatch, wikiMax 50, pages ['List of Orphan Black episodes']) is a G55 NAMESAKE contamination: 'Code Black' matched the unrelated live-action series Orphan Black (2013, 50 episodes). The correct page is en-WP 'Cells at Work! Code Black', whose episode table holds exactly 13 rows matching our aired count. The flag can be closed as a false positive rather than researched as a numbering-space question."
+  ]
+}
