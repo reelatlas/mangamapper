@@ -1,0 +1,79 @@
+{
+  "series_id": "gangsta",
+  "summary": "MU's pin for GANGSTA. — anime.end \"Vol 5, Chap 28\" (a single unlabelled segment; the 2015 TV series is the only adaptation) — is CONFIRMED on pages. Episode 12 'ODDS AND ENDS' adapts ch 26 (from Alex's dream to the chapter's end; ch 26's opening Yang/Delico pages were animated in ep 11), ch 27's Monroe-mansion thread and ch 28 through its LAST story page: the finale's closing scene is Worick, thrown from the mansion window, recalling Monroe's line 'no matter how you struggle, a normal and a Twilight can never be the same' (どうあがいてもノーマルと黄昏種は同じになれない) — which is the last page of ch 28 and of tankōbon vol 5 (the MangaDex vol-5 upload shows only the Extra 4-koma, Kohske's afterword and the '第6巻 来春発売予定' teaser after it). So the anime does NOT stop mid-chapter: there is no C1 straddle, the post-series continue is C5 → ch 29 (the opening of vol 6, Galahad and Doug's recording), and ch 29-57 have never been animated. The pin therefore re-lands as a manual-tier anchor with START and the page split, and is redundant with the honest terminal (G56) rather than wrong. Two side findings: the finale's stored air date 2015-09-20 belongs to no broadcast of ep 12 (it is TOKYO MX's ep 11 slot) — AFL's date column here is a mixed lineage (ABC dates for eps 1-4, MX dates for 5-12) that also drops the unaired '#9.5' recap week; and ja-WP now records the manga as resumed in Comic Bunch Kai from 2026-07-03, which resolves open flag #664 in AniList's favour.",
+  "anchors": [
+    {
+      "episode": 12,
+      "end_chapter": 28,
+      "start_chapter": 26,
+      "chapters_adapted": "26 (from Alex's dream/flashback to the chapter's end — the chapter's opening Yang & Delico search pages are in ep 11), 27 (the Striker / Monroe-mansion thread; ch 27's Delico–Heather beats were animated in ep 11), 28 (in full, to its final story page)",
+      "volume": 5,
+      "confidence": "high",
+      "note": "A4 END = 28: the episode's last scene IS ch 28's last story page (Worick after the fall recalling Monroe's 'a normal and a Twilight can never be the same') — the JP scene-by-scene recap and the fandom chapter page agree beat for beat, and the MangaDex vol-5 upload shows only volume back-matter after that page. A10 START = 26: the episode opens INSIDE ch 26 on Alex's dream and carries roughly four fifths of the chapter (Joel striking Marco, Nic in the rain, Worick/Miles suspecting Ivan, Striker's arrival) — nowhere near the 5-page sliver bar. A47 is not engaged: this is the finale, its trailing pages have no next owner (C1 note in the continue). MU's 'Vol 5, Chap 28' CONFIRMED, so the pin is redundant with the terminal (G56), not a G37 mis-count.",
+      "sources": [
+        "https://gangsta.fandom.com/api.php?action=parse&page=Episode_12&prop=wikitext&format=json",
+        "https://gangsta.fandom.com/api.php?action=parse&page=Chapter_28&prop=wikitext&format=json",
+        "https://karatakewarityoppu.hatenablog.com/entry/2015/09/24/GANGSTA._%E7%AC%AC12%E8%A9%B1%EF%BC%88%E6%9C%80%E7%B5%82%E8%A9%B1%EF%BC%89%E3%80%8CODDS_AND_ENDS%E3%80%8D_%E3%81%82%E3%82%89%E3%81%99%E3%81%98%EF%BC%86%E6%84%9F%E6%83%B3",
+        "https://www.animefillerguide.com/anime/gangsta/",
+        "https://api.mangadex.org/manga/4e6c7ed7-2111-4a3b-b34c-fbf07b1884c4/aggregate",
+        "https://api.mangaupdates.com/v1/series/45202533166"
+      ]
+    }
+  ],
+  "continue_points": [
+    {
+      "episode": 12,
+      "continue_chapter": 29,
+      "kind": "post_series",
+      "note": "C5 post-series continue: start at ch 29 (vol 6's opening — the Guild clearing its dead, Galahad playing Doug's recorded farewell, Loretta's reunion with Galahad, Beretta showing Striker the captive Connie). The finale ends on ch 28's LAST story page, not inside it, so C1 does not apply and nothing needs re-reading. Never adapted: ch 29 to the current frontier (57 as of 2026-09); the manga went on hiatus in 2018 and resumed in Comic Bunch Kai on 2026-07-03.",
+      "sources": [
+        "https://gangsta.fandom.com/api.php?action=parse&page=Chapter_29&prop=wikitext&format=json",
+        "https://www.animefillerguide.com/anime/gangsta/",
+        "https://api.mangaupdates.com/v1/series/45202533166",
+        "https://ja.wikipedia.org/wiki/GANGSTA."
+      ]
+    }
+  ],
+  "anchor_hostile": [],
+  "annotations": [
+    {
+      "episodes": [12],
+      "kind": "partial",
+      "chapters": "26, 27",
+      "note": "Both bracketing chapters are shared with ep 11: ch 26's opening pages (Yang and Delico's street search, Loretta's car) and ch 27's Delico–Heather beats were animated in ep 11 (fandom ep 11 field = 24, 25, 26; Heather's first appearance is bolded on both the ep 11 page and the ch 27 page), while ep 12 carries the remainder of 26 and 27's Monroe-mansion thread. The page split is in chapters_adapted; the END is unaffected."
+    },
+    {
+      "episodes": [12],
+      "kind": "rearranged",
+      "chapters": "26-28",
+      "note": "The finale interleaves the three chapters' threads rather than playing them in serialized order: the JP scene-by-scene recap has Worick thrown from the window (ch 28 mid), Delico glimpsing Erica across the rooftops (ch 28 late), THEN Monroe and Ivan leaving for their meeting (ch 27's closing scene), and only then ch 28's final page. ANN's contemporaneous review describes the same close (Worick bleeding outside while Monroe overlooks Ergastulum)."
+    }
+  ],
+  "repairs": [
+    {
+      "episode": 12,
+      "field": "air_date",
+      "old": "2015-09-20",
+      "new": "2015-09-24",
+      "why": "G53: 2015-09-20 is not ep 12's date on ANY broadcaster — it is TOKYO MX's slot for ep 11. syobocal's per-airing rows for TID 3815 give ep 12 (Count 12) as ABCテレビ 2015-09-24 02:45 (the first Japanese airing), then TOKYO MX 09-27 23:00, テレビ愛知 09-28, BS11 10-01; ja-WP's 放送局 table has ABC running 2015-07-02 → 2015-09-24 (12 episodes, the '9.5' recap 未放送) and TOKYO MX 07-05 → 09-27, and a contemporaneous Japanese recap of the finale is dated 2015-09-24. Our stored dates for eps 1-4 (07-02/09/16/23) are the ABC regime, so 09-24 keeps the row in the same regime; if Sean prefers the TOKYO MX regime the value is 2015-09-27. Either way the stored value is wrong. Cause: AFL's column mixes ABC dates (rows 1-4) with MX dates (rows 5-12) and omits the MX recap week of 09-06, pushing rows 10-12 one week early.",
+      "sources": [
+        "https://cal.syoboi.jp/db.php?Command=ProgLookup&TID=3815&Range=20150701_000000-20151231_000000",
+        "https://ja.wikipedia.org/wiki/GANGSTA.",
+        "https://gangsta.fandom.com/api.php?action=parse&page=List_of_Episodes&prop=wikitext&format=json",
+        "https://karatakewarityoppu.hatenablog.com/entry/2015/09/24/GANGSTA._%E7%AC%AC12%E8%A9%B1%EF%BC%88%E6%9C%80%E7%B5%82%E8%A9%B1%EF%BC%89%E3%80%8CODDS_AND_ENDS%E3%80%8D_%E3%81%82%E3%82%89%E3%81%99%E3%81%98%EF%BC%86%E6%84%9F%E6%83%B3"
+      ]
+    }
+  ],
+  "type_corrections": [],
+  "structure": {
+    "notes": "CHAPTER SPACE. The manga's own serialization numbering; no edition question. gangsta.fandom's List of Chapters and MangaDex's volume aggregate agree exactly on the tankōbon boundaries: vol 4 = 17-22, vol 5 = 23-28, vol 6 = 29-34, vol 7 = 35-41. MU's latest_chapter 57 matches our stored latest_known 57 and MangaDex's highest numbered upload (57). MangaDex's vol-5 slot also carries 28.1-28.7 (volume extras) — bonus units, not mainline numbers.\n\nMU SEGMENT (G32). MU series 45202533166 carries ONE unlabelled coverage segment, anime.start 'Vol 1, Chap 1' / anime.end 'Vol 5, Chap 28'; the 2015 Manglobe TV series is the only adaptation, so there is no label to pick and no franchise/other-season space in play. The wave-8 made-in-abyss caution (MU assigning a straddled chapter to the NEXT segment) does not bite here: the anime plays ch 28 to its final page.\n\nEPISODE→CHAPTER FIELDS (fandom, via API). ep 10 = 23, 24, 25; ep 11 = 24, 25, 26; ep 12 = 26, 27, 28. The fields under-report the interleave (ep 11 in fact also carries ch 27's Delico–Heather beats — Heather is bolded as a first appearance on the ch 27 page), the known 'read the field in both directions' trap; they are right about the FRONTIER, which is what the anchor needs.\n\nPAGE-LEVEL CHECK ON THE TERMINAL. MangaDex's English ch 28 upload is 30 images: the story, then p28 = the volume's 'Extra' 4-koma with Kohske's afterword ('ではまた次巻で！'), p29 = a Doug/Galahad mourning montage and p30 = the '第6巻 来春発売予定 — Their last reunion…' teaser. i.e. ch 28's story ends ~p27 with the Worick flashback, and that beat is the finale's closing scene. (Individual interior pages 23-27 404'd on the MangaDex@Home node on repeated tries; the back-matter pages 28-30 rendered, which is what establishes where the volume's story stops.)\n\nROW IDENTITY / DATES. syobocal TID 3815 per-airing rows (no 再 flags in the window), earliest airing per Count:\nep | ABC (ChID 67) | TOKYO MX (19) | AFL prints | stored\n1 | 07-02 | 07-05 | 07-02 | —\n2 | 07-09 | 07-12 | 07-09 | —\n3 | 07-16 | 07-19 | 07-16 | —\n4 | 07-23 | 07-26 | 07-23 | —\n5 | 08-06 | 08-02 | 08-02 | —\n6 | 08-13 | 08-09 | 08-09 | —\n7 | 08-20 | 08-16 | 08-16 | —\n8 | 08-27 | 08-23 | 08-23 | —\n9 | 09-03 | 08-30 | 08-30 | —\n9.5 recap | 未放送 | 09-06 | (absent) | (no row in our catalog)\n10 | 09-10 | 09-13 | 09-06 | —\n11 | 09-17 | 09-20 | 09-13 | —\n12 | 09-24 | 09-27 | 09-20 | 2015-09-20\nABC skipped one week (no airing 07-30) and never aired the '#9.5' recap. Only ep 12 is in this task's scope; rows 5-11 need the lane-B pass.",
+    "order_only": []
+  },
+  "flags_for_sean": [
+    "MU pin CONFIRMED, not repaired: ep 12 → ch 28, vol 5. The stored row already holds 28/v5 at the `mu` derivation tier; the deliverable here is the same value re-landed at the manual tier WITH start_chapter 26 and the page split, so a re-derive cannot silently move it (P8).",
+    "SERIES-WIDE DATE LINEAGE (lane B, not repaired here): AFL's column for gangsta is a mixed lineage — ABC (Thursday late-night) dates for eps 1-4, TOKYO MX (Sunday) dates for eps 5-12, and the MX recap week of 2015-09-06 omitted, which puts rows 10-12 one week early. Under an ABC first-broadcast regime the corrections would be ep 5 08-02→08-06, 6 08-09→08-13, 7 08-16→08-20, 8 08-23→08-27, 9 08-30→09-03, 10 09-06→09-10, 11 09-13→09-17, 12 09-20→09-24 (syobocal TID 3815). I propose only ep 12 (my row); the block should be repaired atomically or not at all.",
+    "OPEN FLAG #664 (taxonomy_conflict, MU 'hiatus' vs our 'publishing') resolves in AniList's favour as of today: ja-WP records GANGSTA. as having moved from 月刊コミックバンチ to コミックバンチKai and serializing again from 2026-07-03; MU's own status string says 'Returns July 3, 2026 from Hiatus'. The two sources now agree the manga is publishing — the flag can be closed rather than researched.",
+    "Our catalog has no row for the '#9.5' recap (TOKYO MX 2015-09-06, unaired on ABC). That is the correct shape for the anchor work — it is a recap with no new source pages (T27 filler if ever ingested) — but it is the reason AFL's tail dates drift; noting it so a future date pass does not 'fix' the drift by inserting a row.",
+    "gangsta.fandom's per-episode infobox DATE fields (ep 11 '18th September', ep 12 '25th September') match no broadcaster and disagree with the same wiki's List of Episodes (09-20 / 09-27, the MX regime). Do not use the fandom infobox dates for this series."
+  ]
+}

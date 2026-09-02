@@ -1,0 +1,61 @@
+{
+  "series_id": "magi-adventure-of-sinbad",
+  "summary": "MU's pin is CORRECT and the finale is a canon row, so the pin is redundant with the honest terminal (G56). The 2016 TV series adapts the Sinbad no Bouken spin-off manga in ITS OWN Night numbering (1-182 / 19 vols — never the Magi main series' Night space, which is disjoint: Magi's Night 55 is 'Determination', vol 6, Balbadd). Ep 1 is new, eps 2-6 are the five 2014-15 OVAs re-cut (ja-WP: 加筆・修正), eps 7-13 are new; the run ends inside the Artemyra Arc, which both Magi wikis map as Nights 46-55 -> episodes 11-13, and the Slave Arc (Night 56 'A Visitor' onward) carries NO episodes. Ep 13 'Magi' takes its title and its spine from Night 54 'Magi' (the second audience with Mira, the trade alliance, Mira naming Scheherazade and explaining what a Magi is) and closes on Night 55 'The Little Princess of Artemyra' (departure from Artemyra, Parsine Pratemia joining as envoy, Mira's daughters seeing them off, Pisti's debut) — END 55, START 54, vol 7. The finale's last minute is an anime-original still-image montage teasing characters whose chapters were never animated (young Masrur, Judar, Falan, Drakon having taken Serendine): a teaser, not coverage, so the END does not advance past 55. The task premise 'through the Sasan / Artemyra / Heliohapt arcs' fails: Heliohapt is Nights 82-111 and is not animated at all. Post-series continue = Night 56; Nights 56-182 (Slave, Heliohapt, Dark Continent, Parthevia, Sindria Foundation, Sindrian War, Epilogue arcs) have never been animated.",
+  "anchors": [
+    {
+      "episode": 13,
+      "end_chapter": 55,
+      "start_chapter": 54,
+      "chapters_adapted": "54-55",
+      "volume": 7,
+      "confidence": "high",
+      "note": "A4 END = Night 55 'The Little Princess of Artemyra', the last chapter of the Artemyra Arc: both Magi wikis map Artemyra 46-55 onto episodes 11-13 and give the Slave Arc (56+) no episodes, and the second wiki states the series 'adapts the first 55 chapters'. Page-level confirmation of 55 in the finale: Pisti's debut (fandom's Night 55 character list; her infobox gives AoS Night 55 as her first manga appearance) plus Parsine Pratemia joining as Artemyra's envoy and Mira's daughters seeing the party off — all present in ep 13 per the episode recap. A10 START = Night 54 'Magi': the episode's own title is Night 54's title AND its content (the licensor synopsis opens on the SECOND audience with Mira after the djinn-equip battle, the trade alliance, and Mira starting to explain the Magi), while ep 12 (魔装vs魔装) already settled the Cerberus/Valefor fight of Nights 52-53. A47 does not bite: this is the finale, so its tail stands (no next episode owns it); the anime-original closing montage is a teaser of never-adapted material, not pages of Night 56. Volume 7 = Nights 48-58 on both wikis and Shogakukan's own vol-7 copy calls it 'the volume containing the popular Artemyra arc'.",
+      "sources": [
+        "https://magi.fandom.com/api.php?action=parse&page=Artemyra_Arc&prop=wikitext&format=json",
+        "https://magi.fandom.com/api.php?action=parse&page=Story_Arcs&prop=wikitext&format=json",
+        "https://magi-labyrinthofmagic.fandom.com/api.php?action=parse&page=Magi:_Adventure_of_Sinbad_(anime)&prop=wikitext&format=json",
+        "https://web.archive.org/web/20160708141034/http://www.project-magi.com/sinbad/story/13.html",
+        "https://web.archive.org/web/20160704051034/http://www.project-magi.com/sinbad/story/12.html",
+        "https://magi.fandom.com/api.php?action=parse&page=Adventure_of_Sinbad:_Night_55&prop=wikitext&format=json",
+        "https://magi.fandom.com/api.php?action=parse&page=Manga&prop=wikitext&format=json",
+        "https://magi-labyrinthofmagic.fandom.com/api.php?action=parse&page=Adventure_of_Sinbad:_Volume_7&prop=wikitext&format=json",
+        "https://www.shogakukan.co.jp/books/09126266",
+        "https://ameblo.jp/azuki2-anime/entry-12177525698.html"
+      ]
+    }
+  ],
+  "continue_points": [
+    {
+      "episode": 13,
+      "continue_chapter": 56,
+      "kind": "post_series",
+      "note": "C5: the anime's furthest first-time coverage is Night 55 (the close of the Artemyra Arc), so resume at Night 56 'A Visitor' — the opening chapter of the Slave Arc, which no episode touches. Nights 56-182 (Slave 56-81, Heliohapt 82-111, Dark Continent 112-119, Parthevia 120-129, Sindria Foundation 130-149, Sindrian War 150-177, Epilogue 178-182) are never animated; the finale's silent closing montage of Masrur, Judar, Falan and Drakon/Serendine only teases them. Night 55 ends on a chapter boundary (the departure from Artemyra), so no C1 straddle.",
+      "sources": [
+        "https://magi.fandom.com/api.php?action=parse&page=Story_Arcs&prop=wikitext&format=json",
+        "https://magi-labyrinthofmagic.fandom.com/api.php?action=parse&page=Magi:_Adventure_of_Sinbad_(anime)&prop=wikitext&format=json",
+        "https://api.mangaupdates.com/v1/series/19473864953"
+      ]
+    }
+  ],
+  "anchor_hostile": [],
+  "annotations": [
+    {
+      "episodes": [
+        13
+      ],
+      "kind": "divergence",
+      "chapters": "55",
+      "note": "The finale closes on an anime-original still-image montage (no dialogue) teasing characters and beats from chapters the anime never adapts: young Masrur and Judar (with Falan), and Drakon having taken Serendine from Barbarossa in her wedding dress. Two independent episode accounts describe it as images only. It is a teaser, not adaptation — do NOT read it as coverage of Night 56+ (T28: far below the materiality bar, so ep 13 stays canon, not mixed)."
+    }
+  ],
+  "repairs": [],
+  "type_corrections": [],
+  "structure": {
+    "notes": "CHAPTER SPACE. The instrument is the Sinbad no Bouken spin-off's OWN chapter numbering: Nights 1-182 in 19 tankobon (magi.fandom's full arc/chapter list; MangaUpdates 'latest_chapter 182 / 19 Volumes (Complete)'; MangaDex lastChapter 182 / lastVolume 19) — exactly our stored space. NO conversion to the Magi main series exists: both works number chapters 'Night N' and the spaces are disjoint (Magi's own Night 55 is 'Determination', vol 6, Balbadd Arc; AoS's Night 55 is 'The Little Princess of Artemyra', vol 7, Artemyra Arc). Any source that writes 'Night 55' unqualified must be checked for which work it means. VOLUME 7. magi.fandom's volume TOC and the second wiki's volume page both give AoS vol 7 = Nights 48-58, and Shogakukan's own vol-7 blurb ('大人気アルテミュラ編収録の第7巻') confirms the Artemyra arc sits there; the two wikis disagree only on vol 6's last chapter (46 vs 47), which does not touch our anchor. MU'S STRING. api.mangaupdates.com/v1/series/19473864953 carries a SINGLE unlabelled segment — anime.start 'Vol 1, Chap 1', anime.end 'Vol 7, Chap 55' — not a per-adaptation split, so there is no OVA-vs-TV label to pick (G32 gate 0 is trivially satisfied). The OVA trap does NOT bite: the five OVAs bundled with manga vols 3-7 (2014-05-16 .. 2015-07-15) cover the Baal and Valefor dungeon captures = Nights ~5-29, so a pin on the OVA block would read ~Chap 29 / vol 5, not 55. MU's 55 is the TV finale's endpoint; the pin is CONFIRMED and therefore REDUNDANT with the honest terminal (G56), and it sits on a canon row, so A1/G36 never fire here. ENTRY STRUCTURE. ja-WP (マギ (漫画), AoS anime section): ep 1 is new, eps 2-6 are the OVAs 加筆・修正 (revised), eps 7 onward are new — so rows 2-6 of this TV entry carry material the separate 2014 OVA entry also carries; that is an entry-identity fact, not a typing one. ja-WP's 各話リスト for the TV series has NO 原作 column (storyboard/direction/animation-director only), so the per-episode chapter mapping rests on the two wikis' arc tables plus the licensor's per-episode synopses (project-magi.com, recovered from the Wayback Machine; the live site's story pages are gone). WIKI INDEPENDENCE CAVEAT. magi.fandom.com and magi-labyrinthofmagic.fandom.com share the sitename 'Magi Wiki' but are SEPARATE wikis (different page sets — Artemyra_Arc does not exist on the second; different templates, ArcList vs Arc; different Magi-side chapter counts, 17 vs 16 for the Dungeon Arc, with websunday citations only on the second; different vol-6 boundary). Their AoS arc lists are nevertheless near-verbatim, so I treat them as partially dependent and did not rest the anchor on them alone — the licensor synopses for eps 12 and 13, the Shogakukan volume copy, and the episode recap carry the page-level content check. AIR DATES (orientation only, no repair asked or proposed). Eps 12 and 13 both aired 2016-07-02 as a double bill: the terrestrial TBS/MBS premiere was pushed from 4/16 to 4/23 by the Kumamoto earthquake (official site notices cited by ja-WP), so the 13 episodes were compressed into the remaining slots; BS-TBS ran 2016-04-17 - 07-03. Our stored 2016-07-02 for ep 13 agrees with magi.fandom's list and with TV Guide's episode page. TASK PREMISE. The ask's 'Sasan / Artemyra / Heliohapt arcs' is wrong on the third: the Heliohapt Arc is Nights 82-111 and is not animated in any form; the TV run stops at the end of the Artemyra Arc (Night 55) with the Slave Arc (56-81) entirely unadapted.",
+    "order_only": []
+  },
+  "flags_for_sean": [
+    "START-side residue (does not change the delivered value): viewer accounts note ep 13 opens on a bath/naked gag before the audience with Mira. That may be the closing pages of Night 53 rather than the opening of Night 54; under A10 a <=5-page or recap-worded lead-in does not move the START, and the licensor synopsis for ep 13 states the Cerberus fight as already-finished background, so START stays 54. No page-level check was possible: MangaDex holds the AoS title (ac54cf12-1d69-4bcc-8d14-eaec4b4da6b1, lastChapter 182) but its /aggregate feed is EMPTY — there are no chapter uploads in any language, so no pages could be read directly.",
+    "The two Magi fandom hostnames are two SEPARATE wikis, not aliases (unlike the x1999/xtvclamp case): different page sets, templates and volume boundaries — but their Adventure of Sinbad arc tables read as copies of a common ancestor. If a later wave needs 'two wikis' on this franchise, count them as one AoS source and pair with the licensor site."
+  ]
+}
