@@ -1,0 +1,67 @@
+{
+  "series_id": "tsugumomo",
+  "summary": "MU's S1 pin is CONFIRMED: the 2017 finale (ep 12 'Partner', 2017-06-18) closes the Sunao Sumeragi duel and its aftermath at manga ch 30 'Reward' (ごほうび), volume 6 — the same value MU's S1 segment carries ('Vol 6, Chap 30 (S1)'), and MU's own S2 START segment ('Vol 6, Chap 31 (S2)') independently fixes the seam at 30/31. The row is canon; it is not an anime-original ending. The episode does touch two LATER chapters, but only as single relocated scenes: Suzuri's ultimatum to Sunao (the うそこん setup, tsugumomo.fandom assigns it to ch 32) and Kiriha's transfer into Kazuya's class (the opening of ch 35 'Counselling Office 1', vol 7) — both chapters are adapted properly in the SEPARATE Tsugu Tsugumomo entry (ep 13 = ch 35-36, ep 14 = ch 31-33, which itself says the Suzuri flashbacks were 'adapted earlier in Episode 12'). Under A8/A2/A47 those fragments never advance the END: the episode's main content in running order ends at ch 30, so the anchor is 30 and the post-series continue is ch 31 「記憶」 (C5), with the two out-of-order scenes named so the reader recognises them on arrival (C3). Nothing in the run is filler-typed and no repair is needed; the S2 value did not leak into the stored pin (no G37).",
+  "anchors": [
+    {
+      "episode": 12,
+      "end_chapter": 30,
+      "start_chapter": 28,
+      "chapters_adapted": "28 (tail; ep 11 covers 24-28), 29, 30, 32 (one relocated scene: Suzuri's ultimatum to Sunao), 35 (one relocated scene: Kiriha transfers into Kazuya's class)",
+      "volume": 6,
+      "confidence": "high",
+      "note": "A8/A4: END = the last chapter adapted as the episode's MAIN content in running order — the duel's conclusion (28 tail-29) plus all of ch 30 'Reward' (recovery, dinner, the bath, Kiriha's promised reward, the next morning). The ch-32 and ch-35 scenes are relocated single scenes, not main content (A2), and both chapters are owned by later episodes of the S2 entry (ep 13 starts on ch 35; ep 14 covers 31-33) so the END does not advance on them (A47). START 28 under A10: the episode opens mid-duel continuing ep 11's cliffhanger (official synopsis: 「決闘は終盤」) and tsugumomo.fandom lists ch 28 on BOTH ep 11 and ep 12 — no page split is published, so the leading partial counts. Volume 6 = ch 30-34 (fandom Volume 6, ISBN 978-4-575-83926-5), matching MU's 'Vol 6'. MU's pin is therefore REDUNDANT (G56/A26), not wrong.",
+      "sources": [
+        "https://tsugumomo.fandom.com/api.php?action=parse&page=Episode_12&prop=wikitext&format=json",
+        "https://api.mangaupdates.com/v1/series/74995395800",
+        "https://tsugumomo.fandom.com/api.php?action=parse&page=Volume_6&prop=wikitext&format=json",
+        "https://tsugumomo.fandom.com/api.php?action=parse&page=Story_Arcs&prop=wikitext&format=json",
+        "http://web.archive.org/web/20210921143751/http://tsugumomo.com/season1/story/episode/406/",
+        "https://ja.wikipedia.org/w/api.php?action=parse&page=%E3%81%A4%E3%81%90%E3%82%82%E3%82%82&prop=wikitext&format=json"
+      ]
+    }
+  ],
+  "continue_points": [
+    {
+      "episode": 12,
+      "continue_chapter": 31,
+      "kind": "post_series",
+      "note": "C5 post-series: season 1's furthest first-time main coverage is ch 30 'Reward' (adapted in full — MU's S2 segment starts at ch 31), so resume at ch 31 「記憶」. C3: two scenes past that point were already shown out of order in ep 12 — Suzuri's ultimatum to Sunao (the うそこん setup, ch 32) and Kiriha transferring into Kazuya's class (the opening of ch 35) — read them in place rather than skipping; ch 31 and 33-34 were never animated in this season.",
+      "sources": [
+        "https://api.mangaupdates.com/v1/series/74995395800",
+        "https://tsugumomo.fandom.com/api.php?action=parse&page=Episode_12&prop=wikitext&format=json",
+        "https://tsugumomo.fandom.com/api.php?action=parse&page=Episode_14&prop=wikitext&format=json"
+      ]
+    }
+  ],
+  "anchor_hostile": [],
+  "annotations": [
+    {
+      "episodes": [
+        12
+      ],
+      "kind": "rearranged",
+      "chapters": "32, 35",
+      "note": "Two later scenes are pulled forward into the finale: Suzuri's ultimatum to Sunao (kill the winner or marry him — the うそこん setup the wiki files under ch 32) and Kiriha's transfer into Kazuya's class (the opening of ch 35 'Counselling Office 1', vol 7). Both chapters are adapted in the separate Tsugu Tsugumomo entry (ep 13 = 35-36, ep 14 = 31-33), whose own page states the Suzuri flashbacks were 'adapted earlier in Episode 12'. Neither fragment moves the position (A2/A47)."
+    },
+    {
+      "episodes": [
+        12
+      ],
+      "kind": "divergence",
+      "chapters": "28-30",
+      "note": "Anime-original connective material inside an otherwise faithful adaptation: Kasumi's fantasy about what happened to Kazuya, Kasumi bursting into the room, and a montage of short vignettes (Kokuyou telepathing Kukuri about money, Taguri with her photo album, Honoka fanning herself, Nakajima and Nanako, Hiroshi and Tatami, Tadataka in his office). Slivers well below the T28 materiality bar — the row stays canon; the closing beat is NOT anime-original (it is ch 35 relocated)."
+    }
+  ],
+  "repairs": [],
+  "type_corrections": [],
+  "structure": {
+    "notes": "MU string, both segments: anime.start = 'Vol 1, Chap 1 (S1) / Vol 6, Chap 31 (S2)', anime.end = 'Vol 6, Chap 30 (S1) / Vol 14, Chap 71 Page 23 (S2) Abridged'. This entry is S1 only (12 rows), so the governing segment is the S1 one — stored value 30 v6 matches it, i.e. the S2 value did NOT leak (no G37). MU's S2 start segment is the strongest independent corroboration of the seam: S1 ends on ch 30, S2 resumes at ch 31. | Per-episode chapter map, S1 (tsugumomo.fandom episode infobox 'chapters' fields, corroborated by the wiki's Story Arcs arc→episode table and by chapter titles matching episode titles): 1 = 1-2; 2 = 3-5; 3 = 5-8; 4 = 8-10; 5 = 10-11; 6 = 12-13; 7 = 14-15; 8 = 19 + the unnumbered extra 「コミックハイ！出張版 モテモテフレグランス」; 9 = 16-18; 10 = 20-23; 11 = 24-28; 12 = 28-30 (+ relocated 32, 35). The field is straddle-aware (5, 8, 10, 28 each appear on two consecutive rows) and honest about the real 8/9 reorder (ep 8 = ch 19, ep 9 = ch 16-18), which is why I trust it at page grain. | Chapter space: the manga's own numbering (fandom Chapter N pages = MU's numbering; AniList latest_known 185 vs MU latest_chapter 186 — no edition question at this end of the run). Volume boundary confirmed for the anchor: vol 5 ends at ch 29 + the extra, vol 6 = ch 30-34 (172 pp, ISBN 978-4-575-83926-5, 2011-07-12), vol 7 opens at ch 35; ja-WP's arc/volume list agrees (皇すなお編 = 5巻-6巻, お悩み相談室編 = 7巻-9巻). | S1/S2 seam is a genuine reorder, not a gap: anime order across the seam is 28-30 → [ch 32 scene] → [ch 35 scene] | ep 13 = 35-36 → ep 14 = 31-33 → ep 15 = 37-40. Ch 34 「かずやの拳」 appears in no episode of either season per the wiki's fields. | Row identity confirmed: ep 12 = 十二本目 パートナー, 2017-06-18 (ja-WP 各話リスト; fandom; the archived official site page) — matches the stored row.",
+    "order_only": []
+  },
+  "flags_for_sean": [
+    "MU pin VERIFIED, no change: stored ep12 → 30 v6 (mu tier) is the correct S1 value; per the wave-6 shape it should re-land at the manual tier with the citations above, gaining start_chapter 28 and the chapters_adapted string.",
+    "START 28 rests on one wiki field (the ep 11 and ep 12 infoboxes both list ch 28) plus the official synopsis showing the episode opens mid-duel; no page split for ch 28 is published anywhere I could find (MangaDex holds only a fan-coloured partial upload of this series, so no page counts). END 30 is the double-sourced value; if the ch-28 tail turns out to be scraps the START would be 29 — the display would move one chapter, the position instrument would not.",
+    "Outside this ask but adjacent: ep 8's second segment (モテモテフレグランス) adapts an UNNUMBERED extra chapter printed in volume 5 between ch 29 and ch 30 (コミックハイ！出張版) — a side story serialized inside the source, so canon/mixed with a side_story annotation, and position-less under A44 if anyone later tries to anchor that row. This is very likely the one stored `mixed` row the context mentions.",
+    "A Japanese aggregator/AI claim circulates that S1 'covers up to ch 35 (vol 7)'. It counts the relocated closing scene as coverage. MU's own S2 start (ch 31) and the S2 episode map (ep 13 = 35-36, ep 14 = 31-33) refute it as a POSITION; the fragments are recorded as `rearranged` instead."
+  ]
+}
