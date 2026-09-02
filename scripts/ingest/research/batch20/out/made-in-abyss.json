@@ -1,0 +1,76 @@
+{
+  "series_id": "made-in-abyss",
+  "summary": "Lane L-D, MU pin verification on the 2017 S1 finale (ep 13 'The Challengers', a one-hour special). The stored anchor is MU's franchise-wide coverage string, whose S1 segment reads 'Vol 4, Chap 25 (S1)'. The right segment was picked (G37: the Movie-3 ch 38 and S2 ch 60 segments must never touch this 13-row S1 entry), but the value is UNDERSTATED by one partial chapter: ep 13 adapts ch 23 -> 26 and stops inside ch 26, after roughly p 11 of its 16 pages (madeinabyss.fandom's per-scene page-level refs; the episode's last adapted beats are the Water-shroom operation on Riko's arm, Nanachi accepting Riko's invitation, and the departure from Nanachi's hideout — all ch 26 pp 1-11). animefillerguide independently prints S1 = 'manga 1 to 26' AND Movie 3 = 'chapters 26 to 38' — the overlap IS the straddle; MU itself pins Movie 3's START at 'Vol 4, Chap 26', i.e. MU assigns the straddled chapter wholly to the film. Takeshobo's own WEBコミックガンマ viewer (archived) shows ch 26 has exactly 16 pages, so 11/16 is a real mid-chapter stop, not a rounding artefact. So the anchor is ep 13 -> END 26, START 23, vol 4, and the continue is C1 IN ch 26 (post_series: the rest of ch 26 — the trio reaching the Garden of the Flowers of Fortitude and spotting Bondrewd's Umbra Hand with the Blaze Reap — is first animated by Dawn of the Deep Soul, a separate catalog entry). The finale's closing Mail-Balloon sequence (the balloon's ascent through every layer, Nat and Shiggy retrieving it in the 1st Layer, Orth carpeted in Eternal Fortune petals) is anime-original per the wiki's own Anime-only Content list, and the ch 24 pp 15-16 Bondrewd/Mitty-lamp beat is moved to after the credits — two annotations on a row that stays CANON: the epilogue is a ~2-3 minute coda inside a ~47-minute special that otherwise adapts four chapters straight, well under the T28 bar for mixed, and ep 13 sits inside ch 26 on pp 1-7 alone (the operation and Nanachi joining) even if the whole balloon sequence is discounted.",
+  "anchors": [
+    {
+      "episode": 13,
+      "end_chapter": 26,
+      "start_chapter": 23,
+      "chapters_adapted": "23-26 (ch 23 pp 1-18, ch 24 pp 1-16 with pp 15-16 relocated to after the credits, ch 25 pp 1-20, ch 26 pp 1-11 of 16)",
+      "volume": 4,
+      "confidence": "high",
+      "note": "A4 END = ch 26, adapted partially (pp 1-11 of 16: Water-shroom operation, Nanachi joins, departure from the hideout) — a substantial, story-carrying part, not an A10 sliver. A10 START = ch 23 p 1 (Nanachi dragging the unconscious Reg home); the episode's opening montage of Riko and Reg's adventures up to ep 12's ending is recap and is not counted. Volume 4 is the END chapter's volume (ch 25-32 = vol 4; ch 23-24 are vol 3). END has three independent sources; START rests on the fandom's page-level refs plus ch 23's own synopsis matching the episode's first scene and ep 12's refs ending at ch 22 pp 19-20.",
+      "sources": [
+        "https://madeinabyss.fandom.com/api.php?action=parse&page=Made_in_Abyss_Episode_13&prop=wikitext&format=json",
+        "https://madeinabyss.fandom.com/api.php?action=parse&page=List_of_Made_in_Abyss_Episodes/S1&prop=wikitext&format=json",
+        "https://www.animefillerguide.com/anime/made-in-abyss/",
+        "https://web.archive.org/web/20240425202236/https://webcomicgamma.takeshobo.co.jp/_files/madeinabyss/026/",
+        "https://madeinabyss.fandom.com/api.php?action=parse&page=Made_in_Abyss_Chapter_026&prop=wikitext&format=json",
+        "https://miabyss.com/story13.html"
+      ]
+    }
+  ],
+  "continue_points": [
+    {
+      "episode": 13,
+      "continue_chapter": 26,
+      "kind": "post_series",
+      "note": "C1: ep 13 ends MID-chapter — inside ch 26 'A Fresh Start' (16 pages), after the departure from Nanachi's hideout around p 11. Resume IN ch 26; its remaining pages (the trio reaching the Garden of the Flowers of Fortitude in the 4th Layer, Reg spotting an Umbra Hand carrying the lost Blaze Reap) are not in S1 — they are first animated by the film Dawn of the Deep Soul, which is a separate catalog entry (AFG: the film adapts ch 26-38; MU's own anime.start pins the film at 'Vol 4, Chap 26'). A reader continuing after the TV series therefore re-reads ch 26's first half; nothing below ch 26 is unadapted (S1 covers ch 1-26 continuously).",
+      "sources": [
+        "https://madeinabyss.fandom.com/api.php?action=parse&page=Made_in_Abyss_Chapter_026&prop=wikitext&format=json",
+        "https://www.animefillerguide.com/anime/made-in-abyss/",
+        "https://api.mangaupdates.com/v1/series/22899415114"
+      ]
+    }
+  ],
+  "anchor_hostile": [],
+  "annotations": [
+    {
+      "episodes": [13],
+      "kind": "divergence",
+      "chapters": "26",
+      "note": "Anime-original epilogue: after the departure the Mail Balloon's ascent through every layer the party has crossed, Nat and Shiggy retrieving it in the 1st Layer, and Orth carpeted in Eternal Fortune petals — listed under 'Anime-only Content / Season 1 / Episode 13' on the wiki's Series Continuity page. (The episode page instead cites ch 26 pp 8-11 for the release itself, so only the balloon's journey and the surface scenes are certainly original.) A ~2-3 minute coda in a ~47-minute one-hour special that otherwise adapts ch 23-26 straight: below the T28 materiality bar, so the row stays canon. Also anime-original in this episode: the book Nanachi reads in Sereny shows the updated Map of the Abyss rather than the manga's old map (ch 23 p 2)."
+    },
+    {
+      "episodes": [13],
+      "kind": "rearranged",
+      "chapters": "24",
+      "note": "Ch 24 pp 15-16 (Bondrewd noticing Mitty's life signature has vanished and thanking Nanachi) is moved from immediately after Mitty's release to a post-credits scene at the end of the episode; the pages themselves are adapted, so the END is unaffected (A4, running order)."
+    }
+  ],
+  "repairs": [
+    {
+      "episode": 13,
+      "field": "end_chapter",
+      "old": 25,
+      "new": 26,
+      "why": "G37/G56: MU's franchise-wide coverage string's S1 segment ('Vol 4, Chap 25 (S1)') is in the correct chapter space (the manga's own numbering; ch 25 and 26 are both vol 4) and the correct segment was picked, but it names the last chapter adapted IN FULL. Ep 13 continues into ch 26 for 11 of its 16 pages — the Water-shroom operation, Riko's arm, Nanachi joining the party and the departure from the hideout — which A4 counts as the END. MU's own anime.start assigns the straddled chapter to the next work ('Vol 4, Chap 26 (Movie 3)'), which is a boundary convention, not a different edition or a franchise-continuous space. The re-landed value is manual-tier per P8 (the stored row is derivation-tier 'mu' and would otherwise be re-derived back to 25).",
+      "sources": [
+        "https://madeinabyss.fandom.com/api.php?action=parse&page=Made_in_Abyss_Episode_13&prop=wikitext&format=json",
+        "https://www.animefillerguide.com/anime/made-in-abyss/",
+        "https://api.mangaupdates.com/v1/series/22899415114",
+        "https://web.archive.org/web/20240425202236/https://webcomicgamma.takeshobo.co.jp/_files/madeinabyss/026/"
+      ]
+    }
+  ],
+  "type_corrections": [],
+  "structure": {
+    "notes": "ROW IDENTITY: ep 13 = 挑む者たち / 'The Challengers', aired 2017-09-29, the 13th and final episode of the 2017 TV series, broadcast as a one-hour special (ja-WP メイドインアビス (アニメ) 各話リスト; madeinabyss.fandom; animatetimes 1506590601 '最終話1時間SP') — matches the stored row exactly, no numbering or date issue. CHAPTER SPACE: the manga's own serialization numbering (WEBコミックガンマ / Takeshobo tankōbon), which is what MU, the fandom and AniList all use; no edition divergence. VOLUME BOUNDARIES touched here: vol 3 ends at ch 24, vol 4 = ch 25-32 (fandom chapter-page categories 'Volume 03/04 Chapters'; an anicobin commenter on 2017-09-30 states 「4巻が25話から32話まで」; ch 25 was serialized 2015-07-30, after vol 3's 2015-06-20 release). PAGE COUNTS (Takeshobo's own archived viewer, data/NNNN.ptimg.json enumeration): ch 23 = 19, ch 24 = 17, ch 25 = 20, ch 26 = 16 — the fandom infobox agrees exactly on 23/25/26 and is one low on 24 (likely the title page), so the wiki's page-level refs sit in the publisher's page space. EPISODE->CHAPTER for the block around the target (fandom List of Episodes/S1, per-scene refs): ep 11 = ch 20-21, ep 12 = ch 21 pp 11-18 + ch 22 pp 1-20 (+ a vol-6 side-story chapter), ep 13 = ch 23 pp 1-18, ch 24 pp 1-16, ch 25 pp 1-20, ch 26 pp 1-11. SEASON-LEVEL CROSS-CHECK: AFG 'SEASON 1 ... Adapted from manga 1 to 26' and 'Movie 3 ... adapts chapters 26 to 38'; content farms (epicstream, wheredoestheanimeleaveoff, sportskeeda — cross-check tier only) all say S1 concludes with ch 26 'A New Start' and advise resuming at ch 26. NOT USED as primary: the anicobin comment thread and the content farms.",
+    "order_only": []
+  },
+  "flags_for_sean": [
+    "START = 23 is one wiki deep: the fandom's page-level refs (ep 13 opens on ch 23 p 1; ep 12's refs end at ch 22 pp 19-20) plus the match between ch 23's own synopsis ('Nanachi drags Reg back to their hideout') and the episode's first post-recap scene. No second source publishes per-episode starts for this series (AFG is season-level; ja-WP has no chapter column). If you want the anchor's START at medium while the END stays high, that is the honest split.",
+    "The wiki contradicts itself by one beat on the Mail Balloon: the Episode 13 page cites ch 26 pp 8-11 for 'they release a Mail Balloon, and its progress to Orth is shown', while the Series Continuity page lists the balloon sequence (ascent, Nat and Shiggy's pickup, Orth's petals) as anime-only. Either reading leaves ep 13 inside ch 26 (pp 1-7 = the operation + Nanachi joining are undisputed), so the anchor does not depend on it; the divergence annotation is worded to cover both.",
+    "MU's string is franchise-wide and will keep re-deriving 25 onto this row unless the repaired value is held at the manual tier (P8). MU's segments for the other works (Movie 3 = Vol 5 ch 38, S2 = Vol 10 ch 60) belong to other catalog entries and must not leak into this 13-row S1 entry (G37)."
+  ]
+}
