@@ -1,0 +1,61 @@
+{
+  "series_id": "pluto",
+  "summary": "MU's pin is CONFIRMED at the page level. PLUTO (Urasawa x Tezuka) is a finished 65-act, 8-volume manga, and the 2023 Netflix ONA adapts it one volume per episode: Shogakukan's own digital serialization index (bigcomics.jp, the licensor) groups the 65 acts into the eight tankobon exactly as en-WP's volume list does, with vol 8 = Act 56 'Formula for Destruction' through the finale act 'The Greatest Robot in History' (the licensor labels that last unit 最終回 rather than Act.65; its pager counts it as unit 65). Ep 8 starts on Act 56 - the official anime site's 第8話 synopsis is Atom waking and then 一心不乱に謎の数式を書き始める / 「地球を滅ぼす数式」, which is Act 56 破壊の数式 - and runs to Act 65's LAST PAGES: the manga's closing epilogue (Brau 1589 escapes and impales the Thracian teddy-bear supercomputer Dr. Roosevelt with the spear lodged in his own body) is on screen in the finale. So ep 8 = Acts 56-65, vol 8, END 65 - MU's 'Vol 8, Chap 65' is right and re-lands as a manual anchor (G56/G32). Nothing is anime-original in ep 8: producer Maruyama says they only 'took out the small bits that would work in manga but not animation', and the only structural change touching the finale is a RELOCATION - the Dr. Roosevelt / President Alexander introduction (manga Act 14, vol 2) is withheld to ep 8's cold open, which under A12 is never the START. The whole 65-act run is animated, so the post-series continue is 66 = one past the total: nothing left to read (C5).",
+  "anchors": [
+    {
+      "episode": 8,
+      "end_chapter": 65,
+      "start_chapter": 56,
+      "chapters_adapted": "56-65",
+      "volume": 8,
+      "confidence": "high",
+      "note": "Finale = manga vol 8 in full. START Act 56 破壊の数式 (A10: the official 第8話 synopsis opens on Alexander/Dr. Roosevelt then Atom waking and writing 地球を滅ぼす数式 = Act 56; the awakening itself, Act 55 大いなる目覚め, is ep 7's close per its own official synopsis and per episodic reviews). END Act 65 史上最大のロボット, reached on PAGES not just number (A4): the manga's very last sequence — Brau 1589 escaping and impaling the Thracian teddy-bear robot Dr. Roosevelt with the spear from his own body — is animated in ep 8. Volume 8 = Acts 56-65 per Shogakukan's own bigcomics.jp index and en-WP's volume list. Confirms MU's 'Vol 8, Chap 65' (G56).",
+      "sources": [
+        "https://bigcomics.jp/series/575e341210e2b/2",
+        "https://bigcomics.jp/series/575e341210e2b/3",
+        "https://en.wikipedia.org/wiki/Pluto:_Urasawa_x_Tezuka",
+        "https://pluto-anime.com/story",
+        "https://anime.eiga.com/news/column/hikawa_rekishi/119879/",
+        "https://mantan-web.jp/article/20230703dog00m200020000c.html",
+        "https://ameblo.jp/hirohouse/entry-10294099508.html",
+        "https://animerants.net/2023/12/16/pluto-thoughts-on-episodes-7-and-8/"
+      ]
+    }
+  ],
+  "continue_points": [
+    {
+      "episode": 8,
+      "continue_chapter": 66,
+      "kind": "post_series",
+      "note": "C5: coverage + 1. Act 65 is the manga's final act and ep 8 plays it to its last page (the Brau 1589 / Dr. Roosevelt epilogue), so 66 is one past the total — the entire 65-act run is animated and there is nothing left to read. No never-adapted range exists; the anime's only omissions are page-level trims inside already-adapted acts (see structure.notes).",
+      "sources": [
+        "https://bigcomics.jp/series/575e341210e2b/3",
+        "https://ameblo.jp/hirohouse/entry-10294099508.html",
+        "https://ja.wikipedia.org/wiki/PLUTO"
+      ]
+    }
+  ],
+  "anchor_hostile": [],
+  "annotations": [
+    {
+      "episodes": [
+        8
+      ],
+      "kind": "rearranged",
+      "chapters": "14",
+      "note": "The Dr. Roosevelt / President Alexander introduction — manga Act 14 'Dr.ルーズベルト', vol 2, i.e. ep 2's volume — is held back and played as ep 8's cold open ('すべて予定通り'). A12: a relocated far-earlier opener is never the START, so ep 8's START stays Act 56. Support: the official 第8話 synopsis opens on that scene while the official 第2話 synopsis does not mention Roosevelt at all; two independent comparison write-ups state the reveal is 'delayed until the final episode' (cross-check tier). Medium confidence — flagged."
+    }
+  ],
+  "repairs": [],
+  "type_corrections": [],
+  "structure": {
+    "notes": "CHAPTER SPACE. 65 acts, 8 tankobon, finished (serialized Big Comic Original 2003-09-05 to 2009-04-04). Shogakukan's own digital index (bigcomics.jp/series/575e341210e2b, pages /1 /2 /3) lists every act under its volume heading and its pager reads '61 - 65', so the site's unit count is 65 and equals the act numbering; note the licensor prints the last unit as 「最終回 史上最大のロボットの巻」, NOT 'Act.65' — a label, not a different space (A13/N-family: do not read the missing 'Act.65' string as a missing chapter). Official act titles carry the Tezuka-homage suffix 「〜の巻」 which en-WP's list drops (Act 56 破壊の数式の巻 = 'Formula for Destruction').\n\nVOLUME BOUNDARIES (our catalog stores none; offered for the volume table, two independent sources — Shogakukan bigcomics.jp + en-WP's volume list sourced to Shogakukan/Viz): v1 = Acts 1-7; v2 = 8-15; v3 = 16-23; v4 = 24-31; v5 = 32-39; v6 = 40-47; v7 = 48-55; v8 = 56-65. Sum = 65.\n\nEPISODE <-> VOLUME. One episode per volume, stated three ways independently: MANTANWEB's release announcement ('アニメは1話60分の全8話で、原作コミックス全8巻を丁寧に描ききる'), Hikawa Ryusuke's anime.eiga.com column ('原作単行本全8巻に対応する全8話'), and Nikkei xTREND's Maruyama/Maki interview ('ほとんど原作を網羅した形で、省略しない形で、完全に映像化している'). en-WP says the same. The vol 7/8 seam is checked on content, not on that claim: ep 7's official synopsis ends on Tenma injecting the emotion into the sleeping Atom ('しかしそのロボットが目覚めることはなかった。ある感情を注入されるまでは……' = Acts 54/55), ep 8's begins with the awakening and the antiproton-bomb formula (Act 56 破壊の数式).\n\nEPISODE TITLES / ROW IDENTITY. There are no Japanese episode titles to repair to. ja-WP's PLUTO 各話リスト sets 'Title = !INVISIBLE' (staff columns only, no title column, no chapter column); the official site and Netflix JP label the rows 第1話…第8話 / エピソード1…8, and en-WP uses Netflix's English 'Episode 1'…'Episode 8'. Our stored 'Episode 8' is correct; no title or air-date repair (all eight released 2023-10-26).\n\nMU / G32. mangaupdates series 36529479380 carries ONE unlabelled coverage segment — anime.start 'Vol 1, Chap 1', anime.end 'Vol 8, Chap 65' — and there is only one adaptation, so no segment-picking ambiguity. latest_chapter = 65 and the volume field '8 Volumes (Complete)' agree with the act numbering; unlike soul-eater-not (G37) the whole-manga count and the coverage coincide here BECAUSE the run is fully adapted, and the anchor is delivered on the pages, not on the count.\n\nWHAT THE ANIME OMITS (page-level trims inside acts that ARE adapted; none of them create a never-adapted range and none of them sit in ep 8): the Gesicht/Brau memory-chip exchange (Act 15), Adolf's robot maid and the anti-robot league's hoods (Act 17), most of Act 18 (Adolf's son and the zeronium discovery), part of Uran's post-Atom grief round (Act 37). Producer Maruyama: they 'just took out the small bits that would work in manga but not animation' — cuts only, no anime-original story. If rows 2/3/5 are ever anchored, they are candidates for an `abridged` annotation, not for a gap.\n\nTRAP AVOIDED. Japanese Q&A threads comparing PLUTO with 「原作」 usually mean TEZUKA's 地上最大のロボット, not Urasawa's manga (e.g. 'アトムが100万馬力に改造されるのは原作のみ', 'ゲジヒトは角に裂かれて死ぬのが原作' — both describe the 1964 Astro Boy arc, not the PLUTO manga). Those are not anime-vs-PLUTO divergences.",
+    "order_only": []
+  },
+  "flags_for_sean": [
+    "MU PIN CONFIRMED (lane L-D): ep 8 -> Vol 8, Chap 65 is right on the pages. Re-land as a manual-tier anchor with START 56 / chapters_adapted 56-65; no repair, no G37 edition question (one adaptation, one unlabelled MU segment).",
+    "The `rearranged` annotation (Act 14's Dr. Roosevelt introduction relocated to ep 8's cold open) is MEDIUM: one strong source (the official 第8話 synopsis opens on that scene; the official 第2話 synopsis never mentions Roosevelt) plus two content-site comparisons (gamerant, fandomwire) that both say the reveal is 'delayed until the final episode'. Drop the annotation if you want anchors-grade support only; it does not touch the anchor (A12).",
+    "Volume boundaries are EMPTY for this series. structure.notes carries the full v1-v8 act table from two independent sources (Shogakukan's bigcomics.jp index + en-WP's Shogakukan/Viz-sourced volume list) if you want to seed the table.",
+    "Licensor labelling: bigcomics.jp prints the last act as 「最終回 史上最大のロボットの巻」 rather than 'Act.65'. Any future scrape of that index must not read the absent 'Act.65' string as a missing chapter — the site's own pager ('61 - 65') counts it as unit 65."
+  ]
+}
