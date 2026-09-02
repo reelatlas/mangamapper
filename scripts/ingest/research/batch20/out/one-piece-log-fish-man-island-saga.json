@@ -1,0 +1,429 @@
+{
+  "series_id": "one-piece-log-fish-man-island-saga",
+  "summary": "SPECIAL EDITED VERSION 『ONE PIECE』魚人島編 (One Piece Log: Fish-Man Island Saga, Fuji TV Sun 09:30, 2024-11-03 → 2025-03-30, 21 eps) is a re-cut of the parent anime's Return to Sabaody + Fish-Man Island arcs — 57 parent episodes (517-541, 543-573) condensed into 21, with new video/audio and new next-episode previews but NO new story material. Its coverage in One Piece's own chapter space is a single unbroken run: ch 598 → ch 653, i.e. the Fish-Man Island Saga end to end. Every one of the 21 rows is canon and every one takes an anchor: ep 1 STARTs at ch 598 p.1 (「Two Years Later」, the timeskip return) and the TERMINAL is ep 21 — END ch 653 「The Hero Hat」 (pp. 4, 6-19), the last chapter of the Fish-Man Island Arc and of the Fish-Man Island Saga, vol 66. Two independent wikis agree page-for-page: onepiece.fandom's Log episode table (Log ep → parent eps → manga chapters) and opwiki.org's per-Log-episode 'Umgesetzte Kapitel' field, which prints the exact page ranges. The Log deliberately DROPS the two parent episodes that are not straight Fish-Man Island manga: parent 542 (the anime-original Toriko crossover special, our stored filler row) and parent 574 (新世界へ！, ch 654 pp.2-19 + 655 p.2) — onepiece.fandom's Episode 574 page states outright that it 'is the only episode of the saga not to be reworked into Special Edited Version'. So the honest terminal is 653, NOT 655: ch 654-655 are never in this entry, and the post-series continue is ch 654 (C5 = 653 + 1). G37: MU's former pin 'As of EP 1168' was the PARENT franchise's frontier (One Piece the ongoing TV series, Elbaf era) and has nothing to do with this entry — refused/deleted §12.94, and correctly so; this entry's coverage ceiling is 653 and 653 alone. IDENTITY: rows 7-21 do not exist yet (flag #166); the row → title → JP air date table for all 21 is in structure.notes from three agreeing sources (ja-WP, onepiece.fandom, opwiki.org). Rows 2-6 carry the CRUNCHYROLL (US) date, one day early — five air_date repairs; note 2025-03-09 was a broadcast skip week (ep 19 aired 2025-03-16).",
+  "anchors": [
+    {
+      "episode": 1,
+      "end_chapter": 599,
+      "start_chapter": 598,
+      "chapters_adapted": "598 (pp. 1-3, 6-18, 20-24), 599 (pp. 2, 4-19)",
+      "volume": 61,
+      "confidence": "high",
+      "note": "A4/A10. Condenses parent eps 517, 518 and the first part of 519. START = ch 598 p.1 (the two-years-later opening, a full chapter, not a sliver). Ends on ch 599's last page.",
+      "sources": [
+        "https://onepiece.fandom.com/api.php?action=parse&page=Special%20Edited%20Version%20-%20One%20Piece%3A%20Fish-Man%20Island%20Saga&prop=wikitext&format=json",
+        "https://opwiki.org/wiki/Episode_001_(Special_Edited_Version)"
+      ]
+    },
+    {
+      "episode": 2,
+      "end_chapter": 601,
+      "start_chapter": 600,
+      "chapters_adapted": "600 (pp. 2-19), 601 (pp. 2-19)",
+      "volume": 61,
+      "confidence": "high",
+      "note": "A4/A10. Condenses the rest of parent ep 519 plus 520 and 521. Both chapters run to their last page.",
+      "sources": [
+        "https://onepiece.fandom.com/api.php?action=parse&page=Special%20Edited%20Version%20-%20One%20Piece%3A%20Fish-Man%20Island%20Saga&prop=wikitext&format=json",
+        "https://opwiki.org/wiki/Episode_002_(Special_Edited_Version)"
+      ]
+    },
+    {
+      "episode": 3,
+      "end_chapter": 603,
+      "start_chapter": 602,
+      "chapters_adapted": "602 (pp. 2-17), 603 (pp. 2-17)",
+      "volume": 61,
+      "confidence": "high",
+      "note": "A4/A10. Condenses parent ep 522 and the first part of 523; last row of the Return to Sabaody arc portion. Matches our stored parent anchor 523 → 604 [603].",
+      "sources": [
+        "https://onepiece.fandom.com/api.php?action=parse&page=Special%20Edited%20Version%20-%20One%20Piece%3A%20Fish-Man%20Island%20Saga&prop=wikitext&format=json",
+        "https://opwiki.org/wiki/Episode_003_(Special_Edited_Version)"
+      ]
+    },
+    {
+      "episode": 4,
+      "end_chapter": 605,
+      "start_chapter": 604,
+      "chapters_adapted": "604 (pp. 3-13, 15-19), 605 (pp. 2-19)",
+      "volume": 62,
+      "confidence": "high",
+      "note": "A4/A10. Condenses the rest of parent 523 plus 524 and the first part of 525. p.14 of ch 604 is the only page dropped.",
+      "sources": [
+        "https://onepiece.fandom.com/api.php?action=parse&page=Special%20Edited%20Version%20-%20One%20Piece%3A%20Fish-Man%20Island%20Saga&prop=wikitext&format=json",
+        "https://opwiki.org/wiki/Episode_004_(Special_Edited_Version)"
+      ]
+    },
+    {
+      "episode": 5,
+      "end_chapter": 607,
+      "start_chapter": 606,
+      "chapters_adapted": "606 (pp. 2-17), 607 (pp. 2-17)",
+      "volume": 62,
+      "confidence": "high",
+      "note": "A4/A10. Condenses the rest of parent 525 plus 526 and the first part of 527.",
+      "sources": [
+        "https://onepiece.fandom.com/api.php?action=parse&page=Special%20Edited%20Version%20-%20One%20Piece%3A%20Fish-Man%20Island%20Saga&prop=wikitext&format=json",
+        "https://opwiki.org/wiki/Episode_005_(Special_Edited_Version)"
+      ]
+    },
+    {
+      "episode": 6,
+      "end_chapter": 609,
+      "start_chapter": 608,
+      "chapters_adapted": "608 (pp. 2-17), 609 (pp. 3-19)",
+      "volume": 62,
+      "confidence": "high",
+      "note": "A4/A10. Condenses the rest of parent 527 plus 528.",
+      "sources": [
+        "https://onepiece.fandom.com/api.php?action=parse&page=Special%20Edited%20Version%20-%20One%20Piece%3A%20Fish-Man%20Island%20Saga&prop=wikitext&format=json",
+        "https://opwiki.org/wiki/Episode_006_(Special_Edited_Version)"
+      ]
+    },
+    {
+      "episode": 7,
+      "end_chapter": 611,
+      "start_chapter": 610,
+      "chapters_adapted": "610 (pp. 2-15), 611 (pp. 2-17)",
+      "volume": 62,
+      "confidence": "high",
+      "note": "A4/A10. Condenses parent eps 529 and 530. Row does not exist yet (A42).",
+      "sources": [
+        "https://onepiece.fandom.com/api.php?action=parse&page=Special%20Edited%20Version%20-%20One%20Piece%3A%20Fish-Man%20Island%20Saga&prop=wikitext&format=json",
+        "https://opwiki.org/wiki/Episode_007_(Special_Edited_Version)"
+      ]
+    },
+    {
+      "episode": 8,
+      "end_chapter": 613,
+      "start_chapter": 612,
+      "chapters_adapted": "612 (pp. 3-19), 613 (pp. 2-17)",
+      "volume": 62,
+      "confidence": "high",
+      "note": "A4/A10. Condenses parent eps 531 and 532. Row does not exist yet (A42).",
+      "sources": [
+        "https://onepiece.fandom.com/api.php?action=parse&page=Special%20Edited%20Version%20-%20One%20Piece%3A%20Fish-Man%20Island%20Saga&prop=wikitext&format=json",
+        "https://opwiki.org/wiki/Episode_008_(Special_Edited_Version)"
+      ]
+    },
+    {
+      "episode": 9,
+      "end_chapter": 615,
+      "start_chapter": 614,
+      "chapters_adapted": "614 (pp. 2-17), 615 (pp. 2-17)",
+      "volume": 63,
+      "confidence": "high",
+      "note": "A4/A10. Condenses parent eps 533 and 534. Spans the v62/v63 boundary (614 = v62, 615 = v63); volume field carries the END chapter's volume. Row does not exist yet (A42).",
+      "sources": [
+        "https://onepiece.fandom.com/api.php?action=parse&page=Special%20Edited%20Version%20-%20One%20Piece%3A%20Fish-Man%20Island%20Saga&prop=wikitext&format=json",
+        "https://opwiki.org/wiki/Episode_009_(Special_Edited_Version)"
+      ]
+    },
+    {
+      "episode": 10,
+      "end_chapter": 618,
+      "start_chapter": 616,
+      "chapters_adapted": "616 (pp. 2-17), 617 (pp. 2-17), 618 (pp. 3-4)",
+      "volume": 63,
+      "confidence": "high",
+      "note": "A4 'pages, not numbers': the episode reaches ch 618 only for pp. 3-4, but those are first-time pages in running order, so END = 618 and the continue is C1 IN ch 618. Condenses parent 535, 536 and the opening of 537 (our stored parent anchor 537 → 618 agrees). Row does not exist yet (A42).",
+      "sources": [
+        "https://onepiece.fandom.com/api.php?action=parse&page=Special%20Edited%20Version%20-%20One%20Piece%3A%20Fish-Man%20Island%20Saga&prop=wikitext&format=json",
+        "https://opwiki.org/wiki/Episode_010_(Special_Edited_Version)"
+      ]
+    },
+    {
+      "episode": 11,
+      "end_chapter": 620,
+      "start_chapter": 618,
+      "chapters_adapted": "618 (pp. 4-19), 619 (pp. 2-17), 620 (pp. 2-16)",
+      "volume": 63,
+      "confidence": "high",
+      "note": "A10: the leading partial of ch 618 is 16 pages, far above the 5-page sliver bar and not a recap, so START = 618. Ends mid-ch 620 (p.16 of 17) — C1. Condenses the rest of parent 537 plus 538 and 539. Row does not exist yet (A42).",
+      "sources": [
+        "https://onepiece.fandom.com/api.php?action=parse&page=Special%20Edited%20Version%20-%20One%20Piece%3A%20Fish-Man%20Island%20Saga&prop=wikitext&format=json",
+        "https://opwiki.org/wiki/Episode_011_(Special_Edited_Version)"
+      ]
+    },
+    {
+      "episode": 12,
+      "end_chapter": 622,
+      "start_chapter": 621,
+      "chapters_adapted": "620 (p. 17), 621 (pp. 2-17), 622 (pp. 3-19)",
+      "volume": 63,
+      "confidence": "high",
+      "note": "A10 sliver rule: the leading partial of ch 620 is ONE page (p.17), ≤ 5 pages, so it is not the START — START = 621 (our stored parent anchor 540 → 622 [621] agrees). Condenses parent eps 540 and 541. Row does not exist yet (A42).",
+      "sources": [
+        "https://onepiece.fandom.com/api.php?action=parse&page=Special%20Edited%20Version%20-%20One%20Piece%3A%20Fish-Man%20Island%20Saga&prop=wikitext&format=json",
+        "https://opwiki.org/wiki/Episode_012_(Special_Edited_Version)"
+      ]
+    },
+    {
+      "episode": 13,
+      "end_chapter": 625,
+      "start_chapter": 623,
+      "chapters_adapted": "623 (pp. 2-19), 624 (pp. 2-17), 625 (pp. 2-19)",
+      "volume": 63,
+      "confidence": "high",
+      "note": "A4/A10. Condenses parent 543, 544, 545 and the opening of 546. The Log SKIPS parent 542 entirely (the anime-original Toriko crossover special, our stored filler row) — the chapter run stays unbroken. Row does not exist yet (A42).",
+      "sources": [
+        "https://onepiece.fandom.com/api.php?action=parse&page=Special%20Edited%20Version%20-%20One%20Piece%3A%20Fish-Man%20Island%20Saga&prop=wikitext&format=json",
+        "https://opwiki.org/wiki/Episode_013_(Special_Edited_Version)"
+      ]
+    },
+    {
+      "episode": 14,
+      "end_chapter": 628,
+      "start_chapter": 626,
+      "chapters_adapted": "626 (pp. 4-19), 627 (pp. 3-19), 628 (pp. 3-13, 15-19)",
+      "volume": 64,
+      "confidence": "high",
+      "note": "A4/A10. Condenses the rest of parent 546 plus 547 and 548. Spans the v63/v64 boundary (626 = v63, 627-628 = v64); volume field carries the END chapter's volume. Row does not exist yet (A42).",
+      "sources": [
+        "https://onepiece.fandom.com/api.php?action=parse&page=Special%20Edited%20Version%20-%20One%20Piece%3A%20Fish-Man%20Island%20Saga&prop=wikitext&format=json",
+        "https://opwiki.org/wiki/Episode_014_(Special_Edited_Version)"
+      ]
+    },
+    {
+      "episode": 15,
+      "end_chapter": 631,
+      "start_chapter": 629,
+      "chapters_adapted": "629 (pp. 2-16, 18-19), 630 (pp. 2-8, 10-19), 631 (pp. 2-19)",
+      "volume": 64,
+      "confidence": "high",
+      "note": "A4/A10. Condenses parent eps 549, 550 and 551. Row does not exist yet (A42).",
+      "sources": [
+        "https://onepiece.fandom.com/api.php?action=parse&page=Special%20Edited%20Version%20-%20One%20Piece%3A%20Fish-Man%20Island%20Saga&prop=wikitext&format=json",
+        "https://opwiki.org/wiki/Episode_015_(Special_Edited_Version)"
+      ]
+    },
+    {
+      "episode": 16,
+      "end_chapter": 633,
+      "start_chapter": 632,
+      "chapters_adapted": "632 (pp. 2-19), 633 (pp. 2-19)",
+      "volume": 64,
+      "confidence": "high",
+      "note": "A4/A10. Condenses parent eps 552 and 553. Row does not exist yet (A42).",
+      "sources": [
+        "https://onepiece.fandom.com/api.php?action=parse&page=Special%20Edited%20Version%20-%20One%20Piece%3A%20Fish-Man%20Island%20Saga&prop=wikitext&format=json",
+        "https://opwiki.org/wiki/Episode_016_(Special_Edited_Version)"
+      ]
+    },
+    {
+      "episode": 17,
+      "end_chapter": 636,
+      "start_chapter": 634,
+      "chapters_adapted": "634 (pp. 3-4, 7-19), 635 (pp. 2-19), 636 (pp. 2-17)",
+      "volume": 64,
+      "confidence": "high",
+      "note": "A4/A10. Condenses parent 554, 555, 556 and the opening of 557 (our stored parent anchor 557 → 636 agrees). Ends mid-ch 636 (pp. 18-19 are in ep 18) — C1. Row does not exist yet (A42).",
+      "sources": [
+        "https://onepiece.fandom.com/api.php?action=parse&page=Special%20Edited%20Version%20-%20One%20Piece%3A%20Fish-Man%20Island%20Saga&prop=wikitext&format=json",
+        "https://opwiki.org/wiki/Episode_017_(Special_Edited_Version)"
+      ]
+    },
+    {
+      "episode": 18,
+      "end_chapter": 640,
+      "start_chapter": 637,
+      "chapters_adapted": "636 (pp. 18-19), 637 (pp. 2-19), 638 (pp. 2-19), 639 (pp. 2-10, 12-19), 640 (pp. 2-11, 13-19)",
+      "volume": 65,
+      "confidence": "high",
+      "note": "A10 sliver rule: the leading partial of ch 636 is TWO pages (pp. 18-19), ≤ 5 pages, so START = 637. Condenses the rest of parent 557 plus 558-561 (stored parent 561 → 640 agrees). Row does not exist yet (A42).",
+      "sources": [
+        "https://onepiece.fandom.com/api.php?action=parse&page=Special%20Edited%20Version%20-%20One%20Piece%3A%20Fish-Man%20Island%20Saga&prop=wikitext&format=json",
+        "https://opwiki.org/wiki/Episode_018_(Special_Edited_Version)"
+      ]
+    },
+    {
+      "episode": 19,
+      "end_chapter": 644,
+      "start_chapter": 641,
+      "chapters_adapted": "641 (pp. 2-14, 16-19), 642 (pp. 6-9, 11-19), 643 (pp. 2-14, 16-19), 644 (pp. 4-6, 8-19)",
+      "volume": 65,
+      "confidence": "high",
+      "note": "A4/A10. Condenses parent 562, 563, 564 and the opening of 565 (stored parent 564 → 644 agrees). Row does not exist yet (A42).",
+      "sources": [
+        "https://onepiece.fandom.com/api.php?action=parse&page=Special%20Edited%20Version%20-%20One%20Piece%3A%20Fish-Man%20Island%20Saga&prop=wikitext&format=json",
+        "https://opwiki.org/wiki/Episode_019_(Special_Edited_Version)"
+      ]
+    },
+    {
+      "episode": 20,
+      "end_chapter": 648,
+      "start_chapter": 645,
+      "chapters_adapted": "645 (pp. 2-15, 17-19), 646 (pp. 2-19), 647 (pp. 2-19), 648 (pp. 2-8, 11-19)",
+      "volume": 66,
+      "confidence": "high",
+      "note": "A4/A10. Condenses the rest of parent 565 plus 566, 567 and 568 (stored parent 568 → 648 agrees). Spans the v65/v66 boundary (645-646 = v65, 647-648 = v66); volume field carries the END chapter's volume. Row does not exist yet (A42).",
+      "sources": [
+        "https://onepiece.fandom.com/api.php?action=parse&page=Special%20Edited%20Version%20-%20One%20Piece%3A%20Fish-Man%20Island%20Saga&prop=wikitext&format=json",
+        "https://opwiki.org/wiki/Episode_020_(Special_Edited_Version)"
+      ]
+    },
+    {
+      "episode": 21,
+      "end_chapter": 653,
+      "start_chapter": 649,
+      "chapters_adapted": "649 (pp. 4-19), 650 (pp. 2-8, 10-17), 651 (pp. 3-5, 12-13, 15-19), 652 (pp. 7-9, 15-17), 653 (pp. 4, 6-19)",
+      "volume": 66,
+      "confidence": "high",
+      "note": "THE TERMINAL (G56). A4/A10: condenses parent 569-573 and runs to the last page of ch 653 「The Hero Hat」 — onepiece.fandom's Chapter 653 page states it is 'the last chapter of the Fish-Man Island Arc and the Fish-Man Island Saga'. Content check on pages: the Shyarly/Camie farewell (653), the three-needle New World Log Pose (653), the pinky promise with Shirahoshi (653), the straw-hat-for-the-hero-kid beat (653), Big Mom's candy call and Luffy's declaration of war (651), the Tamatebako bomb (652) and the Smoker/Tashigi G-5 scene (652) — every character in the fandom episode page's appearance list falls inside 649-653. The episode does NOT reach ch 654: parent ep 574 (ch 654 pp.2-19 + 655 p.2) is the ONE saga episode not reworked into the Log. Row does not exist yet (A42).",
+      "sources": [
+        "https://onepiece.fandom.com/api.php?action=parse&page=Special%20Edited%20Version%20-%20One%20Piece%3A%20Fish-Man%20Island%20Saga&prop=wikitext&format=json",
+        "https://opwiki.org/wiki/Episode_021_(Special_Edited_Version)",
+        "https://onepiece.fandom.com/api.php?action=parse&page=Chapter%20653&prop=wikitext&format=json",
+        "https://onepiece.fandom.com/api.php?action=parse&page=Episode%20574&prop=wikitext&format=json"
+      ]
+    }
+  ],
+  "continue_points": [
+    {
+      "episode": 10,
+      "continue_chapter": 618,
+      "kind": "parity",
+      "note": "C1: the episode stops two pages into ch 618 (pp. 3-4). Resume IN ch 618 — you have seen only its opening pages; ep 11 replays from p.4.",
+      "sources": [
+        "https://opwiki.org/wiki/Episode_010_(Special_Edited_Version)",
+        "https://opwiki.org/wiki/Episode_011_(Special_Edited_Version)"
+      ]
+    },
+    {
+      "episode": 11,
+      "continue_chapter": 620,
+      "kind": "parity",
+      "note": "C1: the episode stops at ch 620 p.16 of 17. Resume IN ch 620 — its last page opens ep 12.",
+      "sources": [
+        "https://opwiki.org/wiki/Episode_011_(Special_Edited_Version)",
+        "https://opwiki.org/wiki/Episode_012_(Special_Edited_Version)"
+      ]
+    },
+    {
+      "episode": 17,
+      "continue_chapter": 636,
+      "kind": "parity",
+      "note": "C1: the episode stops at ch 636 p.17 of 19. Resume IN ch 636 — pp. 18-19 open ep 18.",
+      "sources": [
+        "https://opwiki.org/wiki/Episode_017_(Special_Edited_Version)",
+        "https://opwiki.org/wiki/Episode_018_(Special_Edited_Version)"
+      ]
+    },
+    {
+      "episode": 21,
+      "continue_chapter": 654,
+      "kind": "post_series",
+      "note": "C5 = furthest first-time coverage (653) + 1. The Log ends exactly where the Fish-Man Island Saga ends; ch 654 「Gam」 opens the Punk Hazard Arc and is NEVER adapted in this entry. No further One Piece Log entry exists (no Punk Hazard Special Edited Version has been announced as of 2026-09), so the reader continues either at manga ch 654 or, in the anime, in the PARENT One Piece series at episode 574 「新世界へ！最強の海をめざして」 (ch 654 pp.2-19 + ch 655 p.2), then 575-578 (the anime-original Z's Ambition arc, filler) and 579+ for Punk Hazard.",
+      "sources": [
+        "https://onepiece.fandom.com/api.php?action=parse&page=Episode%20574&prop=wikitext&format=json",
+        "https://onepiece.fandom.com/api.php?action=parse&page=Punk%20Hazard%20Arc&prop=wikitext&format=json",
+        "https://opwiki.org/wiki/Episode_021_(Special_Edited_Version)"
+      ]
+    }
+  ],
+  "anchor_hostile": [],
+  "annotations": [
+    {
+      "episodes": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21
+      ],
+      "kind": "abridged",
+      "chapters": "598-653",
+      "note": "The whole entry is a condensation: 57 parent TV episodes re-cut into 21, with scenes trimmed and a handful of manga pages dropped inside otherwise complete chapters (e.g. 604 p.14, 630 p.9, 642 pp.2-5, 648 pp.9-10). Chapter COVERAGE is nevertheless continuous 598 → 653 with no gap. New music, new SFX, Dolby Atmos re-dub and new next-episode previews are presentation, not story — T28: no new anime-original segment exists in any of the 21 episodes, so no row is mixed or filler."
+    }
+  ],
+  "repairs": [
+    {
+      "episode": 2,
+      "field": "air_date",
+      "old": "2024-11-09",
+      "new": "2024-11-10",
+      "why": "Stored value is the CRUNCHYROLL (US) date, one day before the Japanese broadcast. Our catalog keys One Piece rows to the Japanese air date (parent ep 517 is stored 2011-10-02 = the ja-WP JP date, not the 2011-10-01 simulcast). JP slot is Fuji TV Sunday 09:30; 2024-11-09 is a Saturday and breaks the slot. Three sources give 2024-11-10.",
+      "sources": [
+        "https://ja.wikipedia.org/w/api.php?action=parse&page=ONE%20PIECE%E3%81%AE%E3%82%A2%E3%83%8B%E3%83%A1%E3%82%A8%E3%83%94%E3%82%BD%E3%83%BC%E3%83%89%E4%B8%80%E8%A6%A7&prop=wikitext&format=json",
+        "https://onepiece.fandom.com/api.php?action=parse&page=Episode%202%20(Special%20Edited%20Version)&prop=wikitext&format=json",
+        "https://opwiki.org/wiki/Episode_002_(Special_Edited_Version)"
+      ]
+    },
+    {
+      "episode": 3,
+      "field": "air_date",
+      "old": "2024-11-16",
+      "new": "2024-11-17",
+      "why": "Same defect: stored = Crunchyroll US date (Saturday). JP broadcast 2024-11-17 (Sunday 09:30, Fuji TV).",
+      "sources": [
+        "https://ja.wikipedia.org/w/api.php?action=parse&page=ONE%20PIECE%E3%81%AE%E3%82%A2%E3%83%8B%E3%83%A1%E3%82%A8%E3%83%94%E3%82%BD%E3%83%BC%E3%83%89%E4%B8%80%E8%A6%A7&prop=wikitext&format=json",
+        "https://onepiece.fandom.com/api.php?action=parse&page=Episode%203%20(Special%20Edited%20Version)&prop=wikitext&format=json",
+        "https://opwiki.org/wiki/Episode_003_(Special_Edited_Version)"
+      ]
+    },
+    {
+      "episode": 4,
+      "field": "air_date",
+      "old": "2024-11-23",
+      "new": "2024-11-24",
+      "why": "Same defect: stored = Crunchyroll US date (Saturday). JP broadcast 2024-11-24.",
+      "sources": [
+        "https://ja.wikipedia.org/w/api.php?action=parse&page=ONE%20PIECE%E3%81%AE%E3%82%A2%E3%83%8B%E3%83%A1%E3%82%A8%E3%83%94%E3%82%BD%E3%83%BC%E3%83%89%E4%B8%80%E8%A6%A7&prop=wikitext&format=json",
+        "https://onepiece.fandom.com/api.php?action=parse&page=Episode%204%20(Special%20Edited%20Version)&prop=wikitext&format=json",
+        "https://opwiki.org/wiki/Episode_004_(Special_Edited_Version)"
+      ]
+    },
+    {
+      "episode": 5,
+      "field": "air_date",
+      "old": "2024-11-30",
+      "new": "2024-12-01",
+      "why": "Same defect: stored = Crunchyroll US date (Saturday). JP broadcast 2024-12-01.",
+      "sources": [
+        "https://ja.wikipedia.org/w/api.php?action=parse&page=ONE%20PIECE%E3%81%AE%E3%82%A2%E3%83%8B%E3%83%A1%E3%82%A8%E3%83%94%E3%82%BD%E3%83%BC%E3%83%89%E4%B8%80%E8%A6%A7&prop=wikitext&format=json",
+        "https://onepiece.fandom.com/api.php?action=parse&page=Episode%205%20(Special%20Edited%20Version)&prop=wikitext&format=json",
+        "https://opwiki.org/wiki/Episode_005_(Special_Edited_Version)"
+      ]
+    },
+    {
+      "episode": 6,
+      "field": "air_date",
+      "old": "2024-12-07",
+      "new": "2024-12-08",
+      "why": "Same defect: stored = Crunchyroll US date (Saturday). JP broadcast 2024-12-08.",
+      "sources": [
+        "https://ja.wikipedia.org/w/api.php?action=parse&page=ONE%20PIECE%E3%81%AE%E3%82%A2%E3%83%8B%E3%83%A1%E3%82%A8%E3%83%94%E3%82%BD%E3%83%BC%E3%83%89%E4%B8%80%E8%A6%A7&prop=wikitext&format=json",
+        "https://onepiece.fandom.com/api.php?action=parse&page=Episode%206%20(Special%20Edited%20Version)&prop=wikitext&format=json",
+        "https://opwiki.org/wiki/Episode_006_(Special_Edited_Version)"
+      ]
+    }
+  ],
+  "type_corrections": [],
+  "structure": {
+    "notes": "IDENTITY — row → JP title → English (Crunchyroll) title → JAPANESE air date, all 21 rows, agreed by three independent sources (ja.wikipedia 'ONE PIECEのアニメエピソード一覧' § 'SPECIAL EDITED VERSION 『ONE PIECE』 魚人島編'; onepiece.fandom per-episode 'Episode N (Special Edited Version)' pages; opwiki.org 'Episode 0NN (Special Edited Version)' pages). Rows 7-21 DO NOT EXIST in our catalog yet (flag #166, AFL lag) — this table is the identity source for when they land; no `repairs` entries are given for them because a row cannot be repaired before it exists.\n1 | 再出発！集う麦わらの一味！ | The New Beginning! The Straw Hats Reunite! | 2024-11-03\n2 | 出航！新世界への冒険の夜明け | Setting Sail! The Dawn of the Adventure to the New World | 2024-11-10\n3 | 驚愕の真実 大恩人くま | A Shocking Revelation - A Great Benefactor, Kuma | 2024-11-17\n4 | 深海の冒険！迫りくる海底の脅威 | A Deep Sea Adventure! A Looming Undersea Threat | 2024-11-24\n5 | 海底火山噴火！麦わらの一味大混乱 | Undersea Volcanic Eruption! The Straw Hats in Turmoil | 2024-12-01\n6 | 人魚達の楽園！ついに魚人島上陸 | Mermaids' Paradise! Landing at Fish-Man Island | 2024-12-08\n7 | 海底の恐怖！ホーディの野望 | A Terror in the Deep Sea! Hody's Ambition | 2024-12-15\n8 | 弱虫で泣き虫！人魚姫しらほし | A Coward Crybaby! Shirahoshi, the Mermaid Princess | 2024-12-22\n9 | 誘拐事件発生!? ルフィとしらほし | Kidnapping?! Luffy and Shirahoshi | 2024-12-29\n10 | 襲撃開始！ホーディとデッケン | A Raid Begins! Hody and Decken | 2025-01-05\n11 | ジンベエの告白 魚人族の衝撃の歴史 | Jinbe's Confession - A Shocking History of the Fish-Men | 2025-01-12\n12 | 魚人島の過去！オトヒメとタイガー | Fish-Man Island's Past! Otohime and Tiger | 2025-01-19\n13 | タイガーの無念 オトヒメが描く未来！ | Tiger's Regret - The Future That Otohime Envisions! | 2025-01-26\n14 | オトヒメの悲劇 ホーディの宣戦布告 | The Tragedy of Otohime - Hody Declares War | 2025-02-02\n15 | ホーディの異変！立ち向かう王子達 | Hody's Accident! The Princes Strike Back | 2025-02-09\n16 | しらほし悲痛の叫び ルフィ出陣！ | Shirahoshi's Desperate Cry - Luffy Begins His Attack! | 2025-02-16\n17 | 大乱戦！麦わらの一味VS10万の敵 | Battle Royal! The Straw Hats vs. 100,000 Opponents | 2025-02-23\n18 | 魚人島壊滅の危機！古の方舟ノア | Fish-Man Island Faces Destruction! Noah, the Ancient Ark | 2025-03-02\n19 | ルフィVSホーディ！渾身の火拳銃（レッドホーク） | Luffy vs. Hody! All-Out Red Hawk | 2025-03-16\n20 | 未来の約束 タイヨウへと続く道 | The Promise of the Future - The Road Toward the Sun | 2025-03-23\n21 | さらば魚人島！最強の海〝新世界〟へ | Goodbye, Fish-Man Island! To the New World, the Mightiest Sea in the World | 2025-03-30\n\nSCHEDULE NOTES. Fuji TV, Sundays 09:30. The premiere was moved from the announced 2024-10-27 to 2024-11-03 by the MLB World Series live broadcast (ONE PIECE.com / @OPcom_info). There is a ONE-WEEK SKIP between ep 18 (2025-03-02) and ep 19 (2025-03-16): no Log episode aired on 2025-03-09 (ja-WP, onepiece.fandom and opwiki.org all print the gap; Bandai Channel's 2025-03-06 notice moved ep 19's streaming date to 2025-03-20 'due to a change in the TV broadcast'). This is a real broadcast gap, not a missing row — 21 rows is the full run (dアニメストア workId 27403 lists 全21話).\n\nCORRESPONDENCE — Log episode → parent One Piece episodes condensed → manga chapters (page level from opwiki.org; parent-episode sets from onepiece.fandom's Log episode table and the per-episode `og-episode` field). Our stored PARENT afg-tier anchors were used as a cross-check only and agree at every boundary:\n 1 → 517, 518, 519(a) → 598-599\n 2 → 519(b), 520, 521 → 600-601\n 3 → 522, 523(a) → 602-603\n 4 → 523(b), 524, 525(a) → 604-605\n 5 → 525(b), 526, 527(a) → 606-607\n 6 → 527(b), 528 → 608-609\n 7 → 529, 530 → 610-611\n 8 → 531, 532 → 612-613\n 9 → 533, 534 → 614-615\n10 → 535, 536, 537(a) → 616-617 + 618 pp.3-4\n11 → 537(b), 538, 539 → 618 pp.4-19, 619, 620 pp.2-16\n12 → 540, 541 → 620 p.17, 621, 622\n13 → 543, 544, 545, 546(a) → 623-625   [parent 542 SKIPPED]\n14 → 546(b), 547, 548 → 626-628\n15 → 549, 550, 551 → 629-631\n16 → 552, 553 → 632-633\n17 → 554, 555, 556, 557(a) → 634-635 + 636 pp.2-17\n18 → 557(b), 558, 559, 560, 561 → 636 pp.18-19, 637-640\n19 → 562, 563, 564, 565(a) → 641-644\n20 → 565(b), 566, 567, 568 → 645-648\n21 → 569, 570, 571, 572, 573 → 649-653\n\nWHAT THE LOG DROPS. Two parent episodes of the 517-574 span are NOT reworked: (a) parent 542 「チーム結成！チョッパーを救え」, the anime-original Toriko × One Piece crossover special — our catalog already types parent 542 filler, and the Log's chapter run is unbroken across it; (b) parent 574 「新世界へ！最強の海をめざして」 (ch 654 pp.2-19 + ch 655 p.2) — onepiece.fandom's Episode 574 page states 'It is the only episode of the saga not to be reworked into Special Edited Version'. That is exactly why the terminal is 653 and not 655: the Log's own last title 「さらば魚人島！最強の海〝新世界〟へ」 fuses the titles of parent 573 AND 574, but the CONTENT is parent 569-573 only. The title is a merge, not a coverage claim (the 'title ≠ content' trap).\n\nCHAPTER SPACE. One Piece's own serialized chapter numbering (the space our parent one-piece anchors and the volume boundary table use). v61 = 595-603, v62 = 604-614, v63 = 615-626, v64 = 627-636, v65 = 637-646, v66 = 647-656; the entry's coverage 598-653 sits inside v61-v66. No conversion is needed and none was applied. Three anchors span a volume boundary (ep 9: 614/615; ep 14: 626/627; ep 20: 646/647) — the `volume` field carries the END chapter's volume in each case.\n\nG37 — THE MU PIN. MangaUpdates' former coverage pin on this entry, 'As of EP 1168', is the PARENT franchise's frontier: One Piece the ongoing TV series was at episode 1168 in its own count, an episode of the Elbaf era roughly 500 chapters past anything this entry contains. It is not a chapter number at all and it is not this entry's coverage; the refusal/deletion in §12.94 (G32 single foreign segment) was correct. This entry's honest ceiling is chapter 653 — the pin is not 'redundant', it was simply about a different work.\n\nTYPES. All 21 rows are canon. The Log adds no story: onepiece.fandom's per-episode 'Edit Notes' record only CUTS (ep 1: the Chocolat/Nami exchange removed; ep 15: a compression around Robin's clone), never additions, and the new element of the re-edit is presentation — remastered line work and shading, remade cuts, new music and SFX, a Dolby Atmos re-dub, and newly produced next-episode previews. Under T28 new framing/preview material is not a standing change, so no row is mixed and none is filler. The one anime-original episode inside the parent span (542) was excluded from the Log outright.",
+    "order_only": []
+  },
+  "flags_for_sean": [
+    "Rows 7-21 do not exist (flag #166, count_mismatch anilistAired 21 / aflClassified 6). Fifteen of the 21 anchors here are anchor_without_row (A42) until AFL catches up or the rows are seeded from the identity table in structure.notes.",
+    "The stored dates on rows 2-6 are the CRUNCHYROLL (US) dates, exactly one day before the Japanese broadcast; row 1 alone carries the JP date. Whatever seeded rows 1-6 (AFL) will seed rows 7-21 the same way — if the rows land from that source, expect fifteen more one-day-early dates. The JP dates for all 21 are in structure.notes.",
+    "Title variant, ep 2: stored 'Setting Sail! The Dawn of Adventure to the New World'; the Crunchyroll title on onepiece.fandom is 'Setting Sail! The Dawn of the Adventure to the New World' (one word) and the same wiki's Log table translates it 'Set Sail! The Dawn of Adventure to the New World'. Two renderings of one title — not proposed as a repair; flagging so a later title sweep does not treat it as a defect.",
+    "Ep 10's END (ch 618) rests on TWO first-time pages (pp. 3-4). Delivered as an anchor under 'pages, not numbers' with a C1 continue IN 618; if you would rather the two-page tail not move the frontier, the conservative alternative is END 617 + a graft annotation for 618 pp.3-4. Ep 11 carries 618 pp.4-19 either way, so the entry's frontier is unaffected.",
+    "Chapter completeness: opwiki gives page ranges but not each chapter's total page count, so 'the episode finished chapter N' is inferred from the next episode starting at N+1 for every row except 10, 11 and 17 (where the overlap proves the mid-chapter stop directly). If a chapter's last pages were dropped somewhere in 1-9, 12-16 or 18-21, the END number is still correct — only the C1 judgement would change."
+  ]
+}
