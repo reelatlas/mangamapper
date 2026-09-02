@@ -8,9 +8,10 @@
 //   5. rulings index: every file under lib/rulings/ (except index/types) is imported by index.ts
 //   6. generated docs are not stale: gen-docs + gen-rulings reproduce docs/rules.md and docs/rulings.md byte-for-byte
 //   7. edge bundles carry the CURRENT lib hash (T2.6 — a lib change without a rebuild is drift)
+//   8. component writers: series_components is written only by chain.ts / resolve.ts, both via planComponents (I39 / P2)
 //   npx tsx scripts/restructure/system-census.ts
 import { spawnSync } from 'node:child_process';
-import { readdirSync, readFileSync, existsSync } from 'node:fs';
+import { readdirSync, readFileSync, existsSync, statSync } from 'node:fs';
 import { join } from 'node:path';
 import { ROSTERED, LIB_SUPPORT } from '../ingest/rosters';
 import { libHash } from '../ingest/lib-hash';
@@ -75,6 +76,30 @@ for (const [label, script, out] of [['rules.md', 'scripts/restructure/gen-docs.t
   });
   console.log(`  ${bad.length ? 'FAIL' : 'ok  '} edge bundles: lib-hash ${hash.slice(0, 12)}… ${bad.length ? `STALE in ${bad.join(', ')} — run build-functions + deploy all four (P3)` : 'current in all four'}`);
   if (bad.length) fails.push('edge bundles');
+}
+
+// 8. component writers (I39 / P2): series_components spans are laid out by ONE
+// planner. Every insert/upsert/update on the table outside lib/chain.ts
+// (writeComponents) and lib/resolve.ts (the baseline row) is drift, and both
+// callers must actually call planComponents — the 2026-09-02 catch was a
+// raw AniList count written at the resolve call site (outlaw-star 1-24 ≠
+// ruled 1-26 on every AniList refresh). history/ and research/ are skipped.
+{
+  const ALLOWED = new Set(['scripts/ingest/lib/chain.ts', 'scripts/ingest/lib/resolve.ts']);
+  const files: string[] = [];
+  const walk = (p: string) => { for (const f of readdirSync(p)) { const full = join(p, f); if (statSync(full).isDirectory()) { if (!/node_modules|history|research|fixtures/.test(f)) walk(full); } else if (full.endsWith('.ts') && !full.endsWith('.test.ts')) files.push(full); } };
+  walk(join(ROOT, 'scripts/ingest')); walk(join(ROOT, 'supabase/functions/_src'));
+  const bad: string[] = [];
+  for (const f of files) {
+    const rel = f.replace(ROOT + '/', '');
+    const src = readFileSync(f, 'utf8');
+    const writes = [...src.matchAll(/from\(\s*['"`]series_components['"`]\s*\)\s*\.(insert|upsert|update)\(/g)];
+    if (!writes.length) continue;
+    if (!ALLOWED.has(rel)) bad.push(`${rel} (${writes.length} write${writes.length > 1 ? 's' : ''} outside the planner's callers)`);
+    else if (!/planComponents\(/.test(src)) bad.push(`${rel} writes series_components without calling planComponents`);
+  }
+  console.log(`  ${bad.length ? 'FAIL' : 'ok  '} component writers: ${bad.length ? bad.join('; ') : 'only chain.ts + resolve.ts write series_components, both through planComponents (I39/P2)'}`);
+  if (bad.length) fails.push('component writers');
 }
 
 console.log(fails.length ? `[system-census] ${fails.length} check(s) FAILED: ${fails.join(', ')}` : '[system-census] OK');

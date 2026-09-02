@@ -887,6 +887,44 @@
    0. Permanence 0 locked / 0 violations; no stale rulings. Cycle: step 1
    — Sean picks wave 8 (L-D ×8 of ~16, or a gap block; dai LAST; the T28
    six + claymore 26 still parked for his ruling).
+95. ✅ **WAVE 8 DISPATCHED + THE RESOLVE CALL-SITE CATCH (2026-09-02;
+   Sean's post-compact go).** Census recomputed from disk before planning
+   (P11 / R27): ruling_violation 1 — outlaw-star [400] span 1-24 ≠ ruled
+   1-26 (I39) — where the 08-28 save recorded 0. Cause traced, not guessed:
+   `resolveSeries`'s baseline component upsert wrote AniList's raw episode
+   count (`media.episodes ?? anilistAired`) straight into series_components,
+   bypassing `planComponents` — the SAME P5 class as the §12.94 G32
+   call-site bypass (the planner's own outlaw-star test passed all along;
+   the bug was the caller). The daily AniList edge re-resolved outlaw-star
+   on 08-29 08:12 (series.updated_at; count_mismatch flags #1055-1056
+   minted the same minute) and again today. FIX: the baseline row's span
+   now comes from the planner (P2); four edges rebuilt + deployed (P3);
+   heal-structure re-planned 1-24 → 1-26 (1 series, 15 current); census
+   ruling_violation 1 → 0, episode_without_component 3 → 2 (rows 25-26
+   back inside a component), no other class moved; 157 tests, build green.
+   GATE ADDED (P30): system-census check 8 "component writers" —
+   series_components may be written only by lib/chain.ts and lib/resolve.ts,
+   and both must call planComponents; any other writer is red.
+   FINDING FOR SEAN (not acted on — a design decision): the daily
+   `refresh-anilist` edge has NOT completed a run since 08-24 — every 08:10
+   run sits `running` forever (killed mid-invocation; the 08-26 restage was
+   a manual run). Today's run reached staging and flipped 675 / 719 hashes
+   (contentHash covers popularity / favourites / trending / averageScore —
+   volatile fields, so nearly every media "changes" whenever the run gets
+   that far) and re-resolved 100 series before dying. Two decisions: hash
+   the STRUCTURAL subset only (G-family staging), and batch the edge the
+   way refresh-afl / refresh-mu already run ("batch of 20"). Until then the
+   catalog's AniList-derived fields are as of the last completed sweep.
+   WAVE 8 dispatched (8 research-agents): L-D ×7 = the mu_pin_unverified
+   census head (handa-kun, uq-holder, orient, made-in-abyss,
+   masamune-kun-s-revenge, ranking-of-kings-the-treasure-chest-of-courage,
+   pluto) + one-piece-log-fish-man-island-saga's true terminal (lane A1;
+   its franchise-frontier pin was refused §12.94). PROTOCOL amendment
+   2026-09-02 pinned (R31); two asks carry the identity preface (bare or
+   missing rows). The killing-bites ep 11/12 date pair is deferred to wave
+   9 under the 8-agent cap (P12). Wave 9 queue = the 8 remaining pins
+   (tsugumomo, girls-last-tour, four-knights, cells-at-work-code-black,
+   magi-sinbad, gangsta, erased, nagatoro) + killing-bites.
 85. ✅ **CONSOLIDATE DEEP after batch 20 wave 4 (2026-08-28; P21 —
    `applyEpisodeFloor`'s input changed: `translatedMax`).** Steps 0-8
    satisfied by §12.84's save point. Rescan (step 9): (a) the floor probe

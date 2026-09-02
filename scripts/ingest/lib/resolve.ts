@@ -72,6 +72,7 @@ import { aflAnimeCanonStanding, deriveSourceKind, mangaStatusOf, seriesHasSource
 import { deriveSourceRelation, pickMangaNode } from './rulings/source-relations';
 import { ruledChapterSpace } from './rulings/chapter-spaces';
 import { withholdAirdateRegressions, type AirdateWithheld } from './airdate-order';
+import { planComponents } from './structure-plan';
 
 // Community-count rulings (Sean 2026-08-24: the community-consensus episode
 // count is the truth — specials/ep-0s the community numbers are IN; large
@@ -652,13 +653,19 @@ export async function resolveSeries(runId: number, slug: string): Promise<{ epis
   await syncMintedRows(id, rows, 'afl', Math.max(ourMax, aflMax));
 
   // Baseline component row — kept in step by every resolve; the stitcher
-  // replaces these with full chains for multi-season series.
+  // replaces these with full chains for multi-season series. The SPAN comes
+  // from the one planner (I39 / P2): a ruled span override (outlaw-star's
+  // 1-26 over AniList's 24) must survive every re-resolve. Writing AniList's
+  // raw count here bypassed the planner, so each AniList refresh re-broke
+  // the ruling (ruling_violation 1, caught 2026-09-02 — the P5 class of the
+  // §12.94 call-site catch; system-census now lists component writers).
+  const planned = planComponents(id, [{ id: media.id, aired: anilistAired, label: media.title.romaji, kind: 'season', closed: media.episodes != null || !!media.nextAiringEpisode }]).find((r) => r.anilist_id === media.id)!;
   const { error: e7 } = await db.from('series_components').upsert({
     series_id: id,
     anilist_id: media.id,
     season_order: 1,
-    episode_start: 1,
-    episode_end: media.episodes ?? anilistAired ?? null,
+    episode_start: planned.episode_start,
+    episode_end: planned.episode_end,
     afl_slug: slug,
     afl_offset: 0,
   });
