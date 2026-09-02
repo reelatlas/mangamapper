@@ -1,0 +1,65 @@
+{
+  "series_id": "don-t-toy-with-me-miss-nagatoro",
+  "summary": "MU's S1 pin is CONFIRMED. Episode 12 (2021-06-27, the S1 finale) adapts mainline chapters 43-46 in running order — the whole back half of tankobon volume 6 — and closes on ch 46's final beat (the concert announcement, Nagatoro dragging Senpai to the auditorium), so the END is 46 with no mid-chapter straddle. START is 43 (the episode opens on ch 43's material: Senpai showing the paintings, the girls scouting the President's work, the counter-plan; the manga plays that as a flashback, the anime plays it chronologically). The post-credits scene is the EPILOGUE OF CHAPTER 8 — first-time pages (episode 4 adapted ch 8 but replaced the real cheek kiss with the doll gag), a back-reach that is annotated `rearranged` and does not move the END (A4, 'pages, not numbers'). Independent confirmation of the terminal: Kodansha's own volume-6 TOC lists eight chapters ending with the title the episode's second segment carries verbatim (愛とか言われちゃってますよぉセンパーイ？ = ch 46), ja-WP's 各話リスト prints that title pair for 第12話, and the licensor's story page #12 synopsis matches the ch 43-46 span. MU's string is 'Vol 1, Chap 1 (S1) / Vol 7, Chap 47 (S2)' → 'Vol 6, Chap 46 (S1) / Vol 12, Chap 91 (S2)': this entry is S1 only, the S1 segment is the one that binds (G32/G37 — the S2 value belongs to 2nd Attack, a separate entry), and the S1 pin is REDUNDANT with the honest terminal (G56). Chapter space: the mainline ceiling is 154, not 189 (see structure).",
+  "anchors": [
+    {
+      "episode": 12,
+      "end_chapter": 46,
+      "start_chapter": 43,
+      "chapters_adapted": "43-46; ch 8 epilogue (post-credits scene, first animated here)",
+      "volume": 6,
+      "confidence": "high",
+      "note": "A4 END = 46, the furthest first-time mainline chapter in running order and the last chapter of vol 6; the episode plays ch 46 to its last beat (concert announcement → auditorium), so no C1 straddle. A10 START = 43 (no leading partial of ch 42 — ep 11 finished on 42). The ch 8 epilogue is a back-reach behind the END, kept in chapters_adapted and annotated `rearranged` per 'pages, not numbers' (A12: a relocated far-earlier scene is never the START, and here it is a closer). Confirms the stored mu-tier value 46 v6; re-landed at manual tier.",
+      "sources": [
+        "https://nagatoro.fandom.com/api.php?action=parse&page=Episode%2012&prop=wikitext&format=json",
+        "https://www.kodansha.co.jp/comic/products/0000325743",
+        "https://ja.wikipedia.org/wiki/%E3%82%A4%E3%82%B8%E3%82%89%E3%81%AA%E3%81%84%E3%81%A7%E3%80%81%E9%95%B7%E7%80%9E%E3%81%95%E3%82%93",
+        "https://www.nagatorosan.jp/1st/story/index.html",
+        "https://nagatoro.fandom.com/api.php?action=parse&page=Chapter%2046&prop=wikitext&format=json"
+      ]
+    }
+  ],
+  "continue_points": [
+    {
+      "episode": 12,
+      "continue_chapter": 47,
+      "kind": "post_series",
+      "note": "C5: coverage +1. Season 1 ends on the last page of ch 46, which is also the last chapter of volume 6 — resume at ch 47 「センパイと私の仲なんスから〜」, the opening chapter of volume 7. Two chapters inside the covered range were never animated in this season and can be read at leisure: ch 31 「冒険心ってものがセンパイに足りないとこなんですよ」 and ch 33 「センパイ、弁当なんですか？」 (both vol 5, self-contained gag chapters) — no S1 episode page names either (C3 skip note). Most Bonus / Side Story extras are likewise unadapted or adapted out of order. (Continuation note, not a mapping claim: the 2023 second season 2nd Attack — a separate catalog entry — begins at exactly ch 47; its first episode carries that chapter's title verbatim.)",
+      "sources": [
+        "https://nagatoro.fandom.com/api.php?action=parse&page=Chapter%2047&prop=wikitext&format=json",
+        "https://ja.wikipedia.org/wiki/%E3%82%A4%E3%82%B8%E3%82%89%E3%81%AA%E3%81%84%E3%81%A7%E3%80%81%E9%95%B7%E7%80%9E%E3%81%95%E3%82%93",
+        "https://api.mangaupdates.com/v1/series/1927268806"
+      ]
+    }
+  ],
+  "anchor_hostile": [],
+  "annotations": [
+    {
+      "episodes": [
+        12
+      ],
+      "kind": "rearranged",
+      "chapters": "8 (epilogue), 43",
+      "note": "Two reorderings. (1) The post-credits scene animates the EPILOGUE of ch 8 — Nagatoro's real kiss on the cheek — for the first time: ep 4 adapted ch 8 but swapped that ending for an anime-original doll gag, so these are first-time pages reached out of order 38 chapters behind the END (they do not move it, A4). (2) Ch 43 opens in the manga with the panel-decorating walk and tells the art-room scene as Senpai's flashback; the episode plays the same material chronologically."
+    },
+    {
+      "episodes": [
+        12
+      ],
+      "kind": "divergence",
+      "chapters": "46",
+      "note": "Ch 46's Public Morals Committee confrontation is a short corridor scene in the manga in which Senpai and the girls do not intervene; the anime relocates it to the disciplinary room and adds a defence of the President's painting (Yoshi's speech is anime-original). Anime-original padding only — the episode's plot is the source's throughout, so the row stays canon under T28."
+    }
+  ],
+  "repairs": [],
+  "type_corrections": [],
+  "structure": {
+    "notes": "CHAPTER SPACE (N35 candidate). The mainline ceiling is 154, agreed by three independent sources: MangaUpdates' record (latest_chapter 154; status string '20 Volumes (Complete) / 154 Chapters + 26 Bonus + 6 Side Story (Complete)'), MangaDex's series metadata for Ijiranaide, Nagatoro-san (lastChapter 154, lastVolume 20), and nagatoro.fandom's Category:Chapters, which holds exactly 154 pages titled 'Chapter N' (max 154) plus 51 non-mainline pages (Bonus 0-29, Side Story 1-10, Anime Extra 1-4, Issue 1-5, one crossover, one index page). Our stored total_chapters=189 is therefore a UNIT count, not a mainline chapter number: 154 mainline + extras (MU's own extras count, 26+6=32, gives 186; the fandom counts more extras than MU does, so no source reproduces 189 exactly). latest_known=154 is the correct mainline ceiling and is the space every anchor here lives in. Recommend treating 189 as a unit count (display/ceiling logic should use 154).\n\nVOLUME 6 CONTENTS (publisher primary, Kodansha product page 0000325743, 目次 in order): センパイはどう思ってんスか？(ch 39) / 素直じゃないんだからー、センパイはー (40) / だっ大丈夫っすスか センパイー (41) / センパイは勝負を甘く見てますね (42) / センパイはいい勝負出来ますよ!! (43) / トロキャットなめてんじゃねぇ (44) / 非モテはぐフナセンパイにもついに春が到来っスかー!? (45) / 愛とか言われちゃってますよぉセンパーイ？ (46) + おまけ1, おまけ2. Volume 6 = ch 39-46, released 2019-11-08, 初出 マガジンポケット 2019年6/12号〜9/18号. The eight titles match nagatoro.fandom's Chapter 39-46 pages one for one, which validates the fandom's numbering against the publisher; ch 47 is vol 7's opener on both.\n\nS1 COVERAGE SET (fandom episode pages, every 'Chapter N' link swept across all 12 pages): 1: 1-3 | 2: 4,5,12,6 + Bonus 5 | 3: 17,18,11,10 + Side Story 2 | 4: 7,19,8 + Side Story 1, Bonus 10 | 5: 16,20,21 + Bonus 9, Bonus 4 | 6: 9,14,22,23 | 7: 24-27 + Bonus 7 | 8: 15,35,28,29 + Side Story 5, Bonus 2 | 9: 32,13,34 + Side Story 4 | 10: 30,36,37,38 + Bonus 8, vol-1 back-cover story | 11: 39-42 | 12: 43-46 + ch 8 epilogue. The season bundles 3-4 chapters per episode and reorders freely within the 1-46 range, but the frontier advances monotonically to 46; the only mainline chapters ≤46 never animated are 31 and 33.\n\nMU PIN. anime.end = 'Vol 6, Chap 46 (S1) / Vol 12, Chap 91 (S2)'; anime.start = 'Vol 1, Chap 1 (S1) / Vol 7, Chap 47 (S2)'. This catalog entry is the 2021 12-episode S1 only, so the binding segment is the '(S1)' one (G32) — 46, matching the researched terminal exactly, hence REDUNDANT under G56. The 91 belongs to 2nd Attack (a separate entry); if it ever lands on this entry it is a G37 leak. MU's start segment for S2 ('Chap 47') independently corroborates that S1 stops at 46.",
+    "order_only": []
+  },
+  "flags_for_sean": [
+    "N35 candidate: stored total_chapters=189 for AniList 100664 is a unit count (mainline + bonus/side-story extras); the mainline ceiling is 154 (MU latest_chapter, MangaDex lastChapter, 154 fandom 'Chapter N' pages). No source reproduces 189 exactly — MU's own arithmetic is 154+26+6=186. Anchors here are in the 1-154 mainline space.",
+    "AniList's GraphQL API returned 403 ('temporarily disabled due to severe stability issues') during this task on 2026-09-02 — the 189/154 figures were cross-checked against MangaDex and MU instead, not re-read from AniList.",
+    "The 2023 season 2nd Attack (ch 47-91 per MU) is a separate catalog entry; nothing here should be applied to it. If the two entries are ever merged, the S1 terminal above becomes an interior anchor, not a frontier."
+  ]
+}
