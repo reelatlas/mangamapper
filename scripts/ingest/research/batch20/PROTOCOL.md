@@ -123,3 +123,20 @@ wave-4 TBATE shape). Row-less targets (orient, one-piece-log 7-21) still
 take anchors: research runs ahead of rows (A42). No contract change. The
 killing-bites ep 11/12 date pair (lane B) is deferred to wave 9 under the
 8-agent cap (P12).
+
+## Amendment 2026-09-02b (wave 9 — pinned before dispatch; R31)
+
+Wave 9 = **L-D ×8** (the MUPIN shape, amendment 2026-08-28b unchanged;
+work-list from disk = the 8 remaining mu_pin_unverified: tsugumomo,
+girls-last-tour, erased, the-seven-deadly-sins-four-knights-of-the-apocalypse,
+cells-at-work-code-black (row-less, A42), magi-adventure-of-sinbad, gangsta,
+don-t-toy-with-me-miss-nagatoro) + **the killing-bites ep 11/12 date pair**
+(lane B, the batch-19 B3 shape to out/airdates/). NEW RULE IN FORCE, ruled at
+wave 8 (§12.96): **`A47` the END-side sliver, A10's twin** — an END never
+ADVANCES on a trailing scrap (≤5 pages, or sliver / teaser / cold-open
+wording) of the chapter the NEXT episode starts on; that tail is the next
+episode's, the END stays one chapter back, the tail stays in
+chapters_adapted and a `partial` names it; a finale's tail stands (no owner;
+C1). Deliver page splits in chapters_adapted as before — the apply layer
+normalizes through `lib/sliver.ts#sliverEnd` and prints every move. No other
+contract change.

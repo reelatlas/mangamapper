@@ -82,6 +82,10 @@ describe('sliverEnd (A47 — the END-side twin, Sean 2026-09-02)', () => {
     expect(sliverEnd('637, 638 (opening of the 638-640 paper-airplane case)', 638, 638).reason).toBe('substantive');
     expect(sliverEnd('312 (pp. 1-18), 313 (p.1-4)', 313, 313).end).toBe(312);
   });
+  it('a tail that is the episode\'s ONLY record never moves (d-gray-man 66: one page of 78; reborn 159: a sliver of 232)', () => {
+    expect(sliverEnd('78 (approx. p13 only)', 78, 78).reason).toBe('sole-segment');
+    expect(sliverEnd('232 (sliver; mostly anime-original baseball)', 232, 232).end).toBe(232);
+  });
   it('a whole trailing range is never a scrap', () => {
     expect(sliverEnd('598-599', 599, 599).reason).toBe('tail-not-end');
   });

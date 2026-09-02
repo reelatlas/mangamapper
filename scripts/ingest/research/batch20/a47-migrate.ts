@@ -51,7 +51,36 @@ async function main() {
     }
     n++;
   }
-  await finishRun(runId, 'ok', { fetched: anchors.length, unchanged: anchors.length - n, changed: n, flagged: 0 }, `a47-migrate: ${n} END(s) moved off owned tails`);
+  // REVERT pass (2026-09-02, the d-gray-man 66 catch): a marked row whose tail is its ONLY segment was moved to a
+  // chapter it never adapts — the refined rule (sole-segment) no longer moves it; restore END from the marker text.
+  let reverted = 0;
+  for (const a of await selectAll<any>('chapter_anchors', 'series_id, episode, chapter, chapters_adapted, note', (q) => q.eq('source', 'manual').like('note', `${MARK}%`))) {
+    const v = sliverEnd(a.chapters_adapted, a.chapter + 1, a.chapter + 1); // re-derive from the ORIGINAL end (marker rows moved by exactly one)
+    if (v.reason !== 'sole-segment') continue;
+    const m = String(a.note).match(/END (\d+) → (\d+):/);
+    const orig = m ? Number(m[1]) : a.chapter + 1;
+    const note = `(A47 revert) ${String(a.note).replace(/^\[A47 migrated 2026-09-02\] END \d+ → \d+: [^.]*\. /, '')}`.slice(0, 600);
+    console.log(`  REVERT ${a.series_id} ep ${a.episode}: END ${a.chapter} → ${orig} (the tail is the row's only record — A44 judgment, not a derivation)`);
+    const { error } = await db.from('chapter_anchors').update({ chapter: orig, note }).eq('series_id', a.series_id).eq('episode', a.episode);
+    if (error) throw new Error(`${a.series_id} ep${a.episode} revert: ${error.message}`);
+    reverted++;
+  }
+  if (reverted) console.log(`[a47-migrate] ${reverted} reverted (sole-segment rows)`);
+  // a moved END can step back across a volume boundary — re-derive the volume from the boundary table for every marked row (the first run left 4 stale: oshi-no-ko 21, saint-seiya 112, dbz-kai 93 / 132)
+  let vols = 0;
+  const marked = await selectAll<any>('chapter_anchors', 'series_id, episode, chapter, volume', (q) => q.eq('source', 'manual').or(`note.like.${MARK}%,note.like.%(A47 revert)%`));
+  const seriesIds = [...new Set(marked.map((m) => m.series_id))];
+  const mangaOf = new Map((await selectAll<any>('series', 'id, manga_anilist_id', (q) => q.in('id', seriesIds))).map((s) => [s.id, s.manga_anilist_id]));
+  const bounds = await selectAll<any>('volume_boundaries', 'manga_anilist_id, volume, chapter_start, chapter_end', (q) => q.in('manga_anilist_id', [...new Set([...mangaOf.values()].filter(Boolean))]));
+  for (const m of marked) {
+    const b = bounds.find((x) => x.manga_anilist_id === mangaOf.get(m.series_id) && x.chapter_start <= m.chapter && (x.chapter_end == null || m.chapter <= x.chapter_end));
+    if (!b || b.volume === m.volume) continue;
+    console.log(`  volume ${m.series_id} ep ${m.episode} (ch ${m.chapter}): v${m.volume} → v${b.volume} (boundary table)`);
+    const { error } = await db.from('chapter_anchors').update({ volume: b.volume }).eq('series_id', m.series_id).eq('episode', m.episode);
+    if (error) throw new Error(`${m.series_id} ep${m.episode} volume: ${error.message}`);
+    vols++;
+  }
+  await finishRun(runId, 'ok', { fetched: anchors.length, unchanged: anchors.length - n, changed: n + vols, flagged: 0 }, `a47-migrate: ${n} END(s) moved off owned tails, ${vols} volume(s) re-derived`);
   console.log(`[a47-migrate] ${n} applied`);
 }
 main().then(() => process.exit(0)).catch((e) => { console.error(e); process.exit(1); });

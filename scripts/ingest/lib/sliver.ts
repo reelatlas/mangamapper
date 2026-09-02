@@ -74,7 +74,7 @@ export type EndSliverVerdict = {
   tailChapter: number | null;
   /** page count the record states for the trailing partial (0 = unquantified) */
   pages: number;
-  reason: 'no-tail' | 'tail-not-end' | 'no-next' | 'next-not-on-end' | 'substantive' | 'owned-tail';
+  reason: 'no-tail' | 'tail-not-end' | 'sole-segment' | 'no-next' | 'next-not-on-end' | 'substantive' | 'owned-tail';
 };
 
 /** the last comma-separated segment of a chapters_adapted record (commas inside parentheses do not split) */
@@ -92,6 +92,10 @@ export const sliverEnd = (chaptersAdapted: string | null | undefined, end: numbe
   if (!tail || !Number.isInteger(tailNum) || tailNum < 1) return { end, tail, tailChapter: null, pages: 0, reason: 'no-tail' };
   if (m?.[2]) return { end, tail, tailChapter: tailNum, pages: 0, reason: 'tail-not-end' }; // a whole range is never a scrap
   if (tailNum !== end) return { end, tail, tailChapter: tailNum, pages: 0, reason: 'tail-not-end' };
+  // the tail is the episode's ONLY record: there is no earlier chapter to fall back to — X-1 would be a
+  // chapter the episode never adapts (d-gray-man 66: '78 (approx. p13 only)'). Never move; such a row is
+  // a judgment call (a one-page fragment → A44 position-less, or the value stands) — listed, not derived.
+  if (leadingSegment(chaptersAdapted) === tail) return { end, tail, tailChapter: tailNum, pages: 0, reason: 'sole-segment' };
   if (nextStart == null) return { end, tail, tailChapter: tailNum, pages: 0, reason: 'no-next' };
   if (nextStart !== end) return { end, tail, tailChapter: tailNum, pages: 0, reason: 'next-not-on-end' };
   // a range counts as PAGES only behind a page marker (p. / pp. / page): '46 — 44-45 skipped' and

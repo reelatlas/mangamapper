@@ -887,6 +887,31 @@
    0. Permanence 0 locked / 0 violations; no stale rulings. Cycle: step 1
    — Sean picks wave 8 (L-D ×8 of ~16, or a gap block; dai LAST; the T28
    six + claymore 26 still parked for his ruling).
+98. ✅ **THE A47 BLOCK SIGNED + APPLIED; WAVE 9 DISPATCHED (2026-09-02;
+   Sean: "yes sign it then wave 9 go").** `a47-migrate.ts --apply`: 62
+   ENDs moved off owned tails, per-row N22 marker, partial{tail} added
+   where none stood, continues untouched. The outcome census then earned
+   its keep twice (P5): (a) anchor_volume_mismatch 20 → 24 — four moved
+   ENDs stepped back across a volume boundary with a stale volume
+   (oshi-no-ko 21, saint-seiya 112, dbz-kai 93 / 132): the migration gained
+   a boundary-table re-derive pass over every marked row → 20; (b)
+   anchor_nonmonotonic 0 → 1 — d-gray-man 66's ONLY record is one page of
+   ch 78 ('78 (approx. p13 only)'), so "X-1" moved it to 77, a chapter the
+   episode never adapts: a FABRICATION the rule's mechanization allowed.
+   Refined: `sliverEnd` returns `sole-segment` and never moves a row whose
+   tail is its only segment (test pinned); the migration's revert pass
+   restored the four such rows (d-gray-man 66, reborn 159 / 178 / 189 —
+   original-plot rows quoting a sliver; A44 judgment candidates, queued for
+   Sean); edges rebuilt + deployed (the third lib change today); A47's
+   record amended (statement, witnesses + d-gray-man / reborn / dbz-kai,
+   see + A44 / N22). Net: 58 moved, 4 reverted, 4 volumes re-derived;
+   end_sliver_mismatch 0, anchor_nonmonotonic 0, anchor_volume_mismatch 20,
+   ruling_violation 0, display 218/0. WAVE 9 DISPATCHED (8 agents): the 8
+   remaining pins — tsugumomo, girls-last-tour + erased (bundled, one JSON
+   each), four-knights (the fence of the queued 1-23 block), code-black
+   (row-less, identity preface), sinbad, gangsta, nagatoro — + the
+   killing-bites ep 11/12 date pair (lane B); PROTOCOL amendment
+   2026-09-02b pinned (A47 in force).
 97. ✅ **CONSOLIDATE DEEP after wave 8 (2026-09-02; P21 — A47 changed an
    enforcement site, and §12.95's resolve fix changed I39's).** System
    census green (ledger 277 rules + citations, one-hop 29/29, rosters,
