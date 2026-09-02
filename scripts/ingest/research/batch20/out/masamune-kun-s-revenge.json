@@ -1,0 +1,61 @@
+{
+  "series_id": "masamune-kun-s-revenge",
+  "summary": "MU's pin is CORRECT and re-lands as a manual-tier anchor: ep 12 (the 2017 S1 finale, 'Don't Let Go of the Mic, Even if You Die' / 死んでもマイクを手放すな) ends on manga ch 29, vol 6. The episode title IS ch 29's title — Ichijinsha's own digital serialization prints 第29話「死んでもマイクを手放すな」 — and vol 6's TOC runs 24-29, so the anime finishes exactly on the volume's last chapter. MU's coverage string carries TWO labelled segments ('Vol 6, Chap 29 (S1) / Vol 10, Chap 49 (S2)'); our entry is S1-only and the stored value took the S1 segment, so no S2 leak (no G37). The surprise is a SKIP, not an original ending: the anime jumps ch 27 → 29 and never animates ch 28 「宴の終わり、後の祭」 (the 後夜祭 ball the ep-11 synopsis set up as the bet's prize) — es.fandom's per-episode list gives ep 12 = ch 26, 27, 29, and the official ep-12 synopsis has only the 打ち上げ/karaoke. I found NO support for the ask's 'anime-original epilogue' premise (the episodic reviewer who read the manga says the close was not anime-original), so no C1 and no divergence annotation — the continue is C5 post-series at ch 30 (vol 7) with ch 28 named as the unread hole. Chapter space: the stored 54 is a UNIT count (49 numbered mainline chapters in vols 1-10 + 4 half-numbered side chapters + vol 8's two-part ch 35); the number ceiling is 49, which is what latest_known already holds (N35 statement, no repair).",
+  "anchors": [
+    {
+      "episode": 12,
+      "end_chapter": 29,
+      "start_chapter": 26,
+      "chapters_adapted": "26-27, 29 (ch 28 not adapted)",
+      "volume": 6,
+      "confidence": "high",
+      "note": "A4 END = 29, the last chapter of vol 6: the episode's title IS ch 29's title (Ichijinsha's digital serialization prints 第29話「死んでもマイクを手放すな」) and the content beat matches — the karaoke after-party contest (official synopsis: 打ち上げを開催するもカラオケ勝負に). Confirms MU's S1 segment 'Vol 6, Chap 29 (S1)' (G56: the pin is REDUNDANT, not wrong). A10 START = 26: es.fandom's per-episode list gives ch 26, 27, 29, and ep 11 ends mid-play (Class A performing with no prince, Masamune running to the stage) so ep 12 opens inside the Snow White block (Parts 4-5 = ch 26-27) — START is medium-confidence, END/volume are high (4 sources).",
+      "sources": [
+        "https://masamunekuns-revenge.fandom.com/api.php?action=parse&page=Episode_12&prop=wikitext&format=json",
+        "https://masamunekuns-revenge.fandom.com/es/api.php?action=parse&page=Episodio_12&prop=wikitext&format=json",
+        "https://comic-days.com/episode/3269754496321029589",
+        "https://masamunekuns-revenge.fandom.com/api.php?action=parse&page=Volume_6&prop=wikitext&format=json",
+        "http://masamune-tv.com/1st/story/12.php",
+        "https://api.mangaupdates.com/v1/series/57039028471"
+      ]
+    }
+  ],
+  "continue_points": [
+    {
+      "episode": 12,
+      "continue_chapter": 30,
+      "kind": "post_series",
+      "note": "C5: coverage per A4 is ch 29 (vol 6's last chapter, fully animated), so resume at ch 30 「巴里とオがつくマドモアゼル」 / 'The Wee Parisian Mademoiselle' (vol 7) — MU's other segment independently starts the second season at 'Vol 7, Chap 30'. FIRST read the one chapter this entry skipped: ch 28 「宴の終わり、後の祭」 (the 後夜祭 ball) is never animated in these 12 episodes — the anime jumps 27 → 29.",
+      "sources": [
+        "https://api.mangaupdates.com/v1/series/57039028471",
+        "https://masamunekuns-revenge.fandom.com/api.php?action=parse&page=Volume_7&prop=wikitext&format=json",
+        "https://masamunekuns-revenge.fandom.com/es/api.php?action=parse&page=Episodio_12&prop=wikitext&format=json"
+      ]
+    }
+  ],
+  "anchor_hostile": [],
+  "annotations": [
+    {
+      "episodes": [
+        12
+      ],
+      "kind": "abridged",
+      "chapters": "26-29",
+      "note": "The episode adapts ch 26-27 (Yasaka Fest's Snow White Parts 4-5) then jumps straight to ch 29 (the karaoke contest): ch 28 「宴の終わり、後の祭」 — the 後夜祭 the ep-11 official synopsis sets up as the prize (後夜祭で愛姫と踊れるという勝負) — is not animated. es.fandom lists ep 12 = ch 26, 27, 29; the official and Bandai Channel synopses for ep 12 describe only the after-party karaoke, with the play results announced there instead of at the ball. Medium confidence on the exact skipped-page extent; the type stays canon (no anime-original block, T27/T28)."
+    }
+  ],
+  "repairs": [],
+  "type_corrections": [],
+  "structure": {
+    "notes": "CHAPTER SPACE (N35 statement, no repair): stored total_chapters=54 / latest_known=49 / 10 volumes. The 54 is a UNIT count, not a number ceiling. Summing the tankōbon TOCs of vols 1-10 gives exactly 54 entries — v1 4 (ch 1-4), v2 5 (5-9), v3 6 (9.5, 10, 11, 12, 12.5, 13), v4 6 (14, 14.5, 15-18), v5 6 (19, 20, 20.5, 21-23), v6 6 (24-29), v7 5 (30-34), v8 6 (ch 35 printed as Part 1 + Part 2, then 36-39), v9 5 (40-44), v10 5 (45-49) — i.e. 49 NUMBERED mainline chapters + 4 half-numbered side chapters + ch 35 counted twice. The mainline ceiling is 49 ('Dead or Love?', vol 10), which is exactly what latest_known holds and what MU's latest_chapter=49 and status '10 Volumes (Complete) + After School Volume (Complete)' say. Anchors must stay in this 1-49 space. (The wiki's Manga index page and its Volume_3 page disagree on whether vol 3's extra is 11.5 or 12.5; the COUNT is 6 either way. MangaDex's decimals — 4.5, 9.4, 13.5, 20.1/20.2, 23.5, 29.4/29.5 — are scanlator omake labels, not a numbering space.)\nVOLUME BOUNDARIES (we store none; two sources agree — fandom volume TOCs + MangaDex's volume mapping): v1 1-4, v2 5-9, v3 9.5-13, v4 14-18, v5 19-23, v6 24-29, v7 30-34, v8 35-39, v9 40-44, v10 45-49. Ch 29 sits in v6 (matches the stored anchor's volume).\nADJACENT WORKS — do not let them into this space: vol 11 = 『政宗くんのリベンジ after school』, a separate short serialization whose 7 chapters both the fandom wiki and MangaDex number CONTINUOUSLY as 50-56 (MangaDex's series record therefore reads lastChapter 56 / lastVolume 11); vols 12-13 = 『政宗くんのリベンジ -engagement-』 (2023). ja-WP prints the line as 全13巻 for that reason. There is also a 新装版 (2023-24) that re-cuts the run into 7 volumes — a print re-edition, never an anchor space.\nMU COVERAGE STRING (G32 segment discipline): anime.start = 'Vol 1, Chap 1 (S1) / Vol 7, Chap 30 (S2)', anime.end = 'Vol 6, Chap 29 (S1) / Vol 10, Chap 49 (S2)'. This entry is the 12-episode 2017 S1 only (Masamune-kun's Revenge R is a separate entry), so the correct segment is the (S1) one. The stored pin took it correctly — the (S2) value did NOT leak, so there is no G37 defect here; the pin is simply now corroborated and manual.\nEPISODE↔CHAPTER TITLE LINE (S1, title=title, for orientation): ep 1 豚足と呼ばれた男 = ch 1; ep 2 シンデレラは笑わない = ch 2; ep 3 吉乃のマジックショー = ch 4; ep 4 今そこにある危機 = ch 7; ep 5 ミステリアス・キャット = ch 8; ep 6 突撃!お宅訪問戦 = ch 12; ep 7 綱手島事件 = ch 13; ep 8 君じゃないんだ = ch 16; ep 9 愛とも恋ともいうけれど = ch 18; ep 10 疑惑の新学期 = ch 19; ep 11 八坂祭の白雪姫 = ch 23; ep 12 死んでもマイクを手放すな = ch 29. Every S1 episode takes its title from a chapter inside its own range, and the range END is the title chapter for ep 12. Rows 1-11 were out of scope for this task and take no anchors from it.\nWIKI FIELD CAUTION: the English wiki's per-episode 'chapters' field is populated for only 6 of 12 rows and is not consistently START or END (ep 11 = 'Chapter 22' = that row's START; ep 12 = 'Chapter 29' = that row's END). The Spanish wiki mirrors the English rows 1-4 verbatim but carries independently-added ranges on eps 6, 7, 10, 11, 12 — treat it as ONE wiki family with an extra editor, which is why ep 12's START is called medium and not high.",
+    "order_only": []
+  },
+  "flags_for_sean": [
+    "PIN VERDICT: CONFIRMED (case 1). ep 12 → ch 29, vol 6 is right; the MU row can be re-landed at the manual tier with the citations above. No G37 — MU's S2 segment ('Vol 10, Chap 49 (S2)') did not leak into our S1-only entry.",
+    "ASK PREMISE NOT CONFIRMED: 'the finale ends mid-chapter with an anime-original close'. No source I could reach says so. Random Curiosity's episodic reviewer, answering a reader who asked exactly this ('Was this an anime-original thing…?'), replies 'As far as I know this was not anime original, just a convenient location to end the arc' (archived 2025-02-14 snapshot of randomc.net/2017/03/23/masamune-kun-no-revenge-12-end/), and the episode stops on vol 6's last chapter — a volume boundary, not a straddle. So: no C1, no divergence annotation, C5 post-series at 30. If a page-level source for an original epilogue exists, this is the one value to revisit (it would move the continue from 30 into 29).",
+    "The REAL finding is the skip, not the ending: ch 28 「宴の終わり、後の祭」 is never animated by this entry, and MU's own S2 segment starts the sequel at 'Vol 7, Chap 30' — so ch 28 appears to be skipped by the FRANCHISE, not just by S1. Worth checking on the Masamune-kun's Revenge R entry when its turn comes (its ep 1 = ch 30 by title, 巴里とオがつくマドモアゼル).",
+    "ep 12 START = 26 is MEDIUM (one wiki source + the ep-11 handoff beat); END = 29 and volume = 6 are HIGH (fandom episode infobox, Ichijinsha's Comic Days chapter title, vol 6 TOC, MU's S1 segment, official synopsis content beat). If the display should not show a medium START, drop start_chapter and keep chapters_adapted as the note.",
+    "N35: total_chapters 54 is a unit count (49 mainline numbers + 4 half-numbered side chapters + ch 35's two printed parts). latest_known 49 is the honest number ceiling and needs no change; nothing in the catalog should ever anchor above 49 in this space.",
+    "The catalog stores 0 volume boundaries for this series; the v1-v10 table in structure.notes is two-source and ready to ingest if wanted."
+  ]
+}
