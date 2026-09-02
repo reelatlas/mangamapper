@@ -1,0 +1,60 @@
+{
+  "series_id": "uq-holder",
+  "summary": "MU's pin for uq-holder is CONFIRMED: the 2017 TV finale (ep 12, 'Adeat! Everlasting Feelings') really does reach manga ch 134 (vol 14) in RUNNING order — it is not a far-forward graft and not another entry's endpoint. Ep 11 adapts ch 127-131 and ep 12 continues straight into ch 132 ('Operation: Rescue Negi' — Fate pulls the astral bodies, Touta lends Eva his time), ch 133 ('The Long 37 Seconds' — holding out for Asuna) and ch 134 ('It's Good to See You Again' — Asuna's return, the MotB's retreat with Asuna in tow, and the whole post-battle coda: Jinbei/Gengorou, Shinobu, Mizore and Ayaka, Fate's parting warning). The official uqholder.jp STORY text for episode 12 and Kodansha's own vol-14 blurb print the SAME '37 seconds' premise, and vol 14's TOC (Kodansha; en-WP chapter list) is exactly 133-136 — so MU's 'Vol 14, Chap 134' sits in the reading edition's own numbering. The episode ALSO relocates one earlier chapter to its closing scene: ch 96 ('Touta's Shout', vol 9), Touta's proposal to Yukihime and her rejection — first-time pages, but far behind the frontier, so `rearranged` in chapters_adapted, never the START (A12) and never the END (A4). Everything after 134 is unadapted (135-192, 58 chapters, the Parallel World arc onward), and the run itself is full of holes: only ~52 of the first 134 chapters were animated at all.",
+  "anchors": [
+    {
+      "episode": 12,
+      "end_chapter": 134,
+      "start_chapter": 132,
+      "chapters_adapted": "132-134; + ch 96 relocated as the closing scene",
+      "volume": 14,
+      "confidence": "high",
+      "note": "MU pin CONFIRMED and promoted to manual with START/pages (A4 END = furthest first-time mainline chapter in running order; A10 START = 132, the chapter ep 11 stopped short of; A12 the relocated ch 96 closing scene is never the START). Beat check: ch 132 = the astral-body talk with Negi (Fate pulls the true forms, Touta gives his time to Eva); ch 133 = the 37-second hold-out named in both the anime's official synopsis and Kodansha's vol-14 blurb; ch 134 = Asuna's arrival ('久しぶり') through the arc's coda (Jinbei/Gengorou, Shinobu, Mizore & Ayaka, Fate's warning) — the episode plays that coda, so 134 is reached in full, not clipped. Vol 14 = ch 133-136 per Kodansha's own TOC, so MU's 'Vol 14, Chap 134' is in the reading edition's numbering (G56 makes the pin redundant, not wrong).",
+      "sources": [
+        "https://uq-holder.fandom.com/api.php?action=parse&page=Episode_12&prop=wikitext&format=json",
+        "https://web.archive.org/web/20180104164808/http://uqholder.jp/story/",
+        "https://kc.kodansha.co.jp/product?isbn=9784065101797",
+        "https://en.wikipedia.org/wiki/List_of_UQ_Holder!_chapters",
+        "https://anime.astronerdboy.com/2017/12/uq-holder-magister-negi-magi-2-12.html"
+      ]
+    }
+  ],
+  "continue_points": [
+    {
+      "episode": 12,
+      "continue_chapter": 135,
+      "kind": "post_series",
+      "note": "C5: coverage (ch 134, played through the arc's closing coda) + 1. Ch 135 'Jinbei's Power Explosion Panic!' opens the Parallel World arc — a clean arc boundary, so there is no straddle to finish (C1 does not apply). NEVER ADAPTED after the anime: 135-192 (58 chapters, the whole remainder). NEVER ADAPTED inside the run (C3 — the anime skipped these outright, so a reader who wants the story whole should back up rather than resume at 135): 2, 8-9, 11, 13-14, 27-28, 34, 43-69 (the Mahora Investigation arc and the opening of the Mahora Martial Arts Tournament arc), 72-94 (the rest of the Tournament arc and the whole Dana Training arc), 97, 99, 104-109 (Fairyland Hall), 112-125 (the Negi Springfield arc's build-up). The commonly given community resume is ch 43 for the full story, ch 135 to continue from where the anime stopped.",
+      "sources": [
+        "https://uq-holder.fandom.com/api.php?action=parse&page=Chapter_135&prop=wikitext&format=json",
+        "https://uq-holder.fandom.com/api.php?action=parse&page=Episode_12&prop=wikitext&format=json",
+        "https://en.wikipedia.org/wiki/List_of_UQ_Holder!_chapters"
+      ]
+    }
+  ],
+  "anchor_hostile": [],
+  "annotations": [
+    {
+      "episodes": [12],
+      "kind": "rearranged",
+      "chapters": "96",
+      "note": "The finale's closing scene is manga ch 96 'Touta's Shout' (vol 9, immediately after the Dana arc): Touta's proposal to Yukihime and her rejection. First-time pages (no other episode carries ch 96 — ep 9 took 95/98/100/110), but ~38 chapters behind the frontier, so they are chapters_adapted + `rearranged`, not the END (A4) and not the START (A12). AstroNerdBoy names the insertion explicitly ('the anime brings in the Touta confession to Eva (as Yukihime) from after the Dana arc and inserts it'); the ja-language episode recap describes the same beat (プロポーズ → だが断る)."
+    },
+    {
+      "episodes": [12],
+      "kind": "divergence",
+      "chapters": "133-134",
+      "note": "The phantasmagoria in which Negi's former students confront him is in the source, but the anime enlarges it into a full Negima! class-3-A set piece (every 3-A girl gets a line/attack) and drops Albireo Imma from the fight. An expansion of a source beat, not a separate original plot — the episode's job is still ch 132-134, so the row stays canon under T28."
+    }
+  ],
+  "repairs": [],
+  "type_corrections": [],
+  "structure": {
+    "notes": "CHAPTER SPACE / flag #687 answered: there is NO edition divergence. MU's series record (id 51860729602) reads status '28 Volumes (Complete)', anime {start: 'Vol 1, Chap 1', end: 'Vol 14, Chap 134'} — a SINGLE unlabeled segment — and Kodansha's own product page for vol 14 lists its four chapters as 長き37秒 / 久しぶり / 甚平衛の能力炸裂パニック！ / オトナの階段を駆け上がれ = ch 133-136, identical to en-WP's chapter list and to our stored boundary v14: 133-136. MU's `latest_chapter` = 130 is the known latest-DATED-release-record artifact, NOT a count and NOT an edition signal; the reading edition is the Bessatsu Shonen Magazine serialization / Kodansha tankobon numbering (192 chapters, 28 volumes), the same space our anchor and the fandom use. Recommend closing #687 on that basis.\n\nCOVERAGE MAP (uq-holder.fandom episode infoboxes, ep 1-12): 1 = ch 1 (+ a ch 129 flash-forward); 2 = 3-6; 3 = 7, 10; 4 = 12, 15-20; 5 = 20-26, 29-30; 6 = 12, 16, 101-103; 7 = 31-33, 35-36; 8 = 37-42; 9 = 95, 98, 100, 110; 10 = 70-71, 111, 126, 129; 11 = 127-131; 12 = 96, 132-134. So the TV run animates only ~52 of the first 134 chapters and jumps ch 42 -> 95/101 -> 126 -> 134. The frontier and the last manga row are the SAME row here (ep 12), so there is no honest-terminal split.\n\nOAD CHECK (trap c): three OADs exist (amor primus~First Love~ bundled with vol 14, 2017-09-08; Setsuna de Eien na First Kiss; Karin-senpai no Ienai Himitsu) and are NOT in our catalog (component 1: eps 1-12 only). MU's coverage string is one unlabeled segment whose end matches the TV finale exactly, so the pin is the TV entry's, not an OAD's.\n\nAIR DATE (no repair): ja-WP gives the TOKYO MX slot as Tue 00:00-00:30 (Monday late night), run 2017-10-03 -> 2017-12-19 in calendar dates; uq-holder.fandom prints Dec 19, 2017 for ep 12. Our stored 2017-12-18 is the Monday-late-night convention AniList/MAL use for the whole run (their run is 2017-10-02 -> 2017-12-18), so the stored value is internally consistent with its regime — a repair here would be a whole-run regime change, not a row fix. Noted, not proposed.",
+    "order_only": []
+  },
+  "flags_for_sean": [
+    "Flag #687 (count_mismatch, MU latest_chapter 130 vs AniList 192) is resolvable as a non-issue: MU's own record says '28 Volumes (Complete)' and its Vol-14/Chap-134 pin matches Kodansha's vol-14 TOC exactly; 130 is MU's latest-DATED release-record artifact, not a chapter count. One numbering space, no edition fork.",
+    "The ep-12 air date is a regime question, not a row error: ja-WP + fandom say 2017-12-19 (calendar, Tue 00:00 slot), AniList/MAL + our stored row say 2017-12-18 (Monday late night). Consistent across the whole 12-row run either way — flagging only so a future lane-B sweep does not 'repair' one row into the other regime."
+  ]
+}
