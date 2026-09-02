@@ -1,0 +1,491 @@
+{
+  "series_id": "ranking-of-kings-the-treasure-chest-of-courage",
+  "summary": "The Treasure Chest of Courage is an ANTHOLOGY, and nine of its ten rows have no forward position. Sixteen of its seventeen segments are either tankobon 描き下ろし bonus chapters — which are the source (published inside the volume by Toka, the GTO/Toroko rule) but carry no number in the manga's own 第N話 numbering — or anime-original vignettes filling gaps the 2021-22 TV series left; both are A44 position-less, so rows 1-9 are delivered as anchor_hostile with the chapter map and side_story annotations rather than as numbers. The one exception is the finale: 第十話「剣王の復活」 adapts the OPENING OF THE MANGA'S PART TWO — ousamaranking.fandom's Chapter 156-161 summaries match it beat for beat (Desha in the Divine Treasure Vault, the cursed swords, the demon child, Despa fishing Ouken's head out of the lake, Ouken human again, Desha's connection going dead), with ch 157's Kuhya-inn scene moved to the episode's close. So the stored MU pin is wrong twice over: 'Vol 12, Chap 155 (S1)' is literally labelled S1, is the last chapter of part one, and is the 2021-22 series' endpoint, not this entry's (G37) — and it also UNDER-states this entry, which reaches at least ch 161 in volume 13. END 161 is delivered as a verified floor at medium confidence: the finale's last act (Ouken storming the vault, the god he kills, Desha's cape and crown) runs on into ch 162+, and no readable source summarises 162-167 chapter by chapter. Identity is also delivered: all ten rows were bare, and title + air date now rest on ja-WP, en-WP, syobocal TID 6691 and the official site's per-episode STORY pages.",
+  "anchors": [
+    {
+      "episode": 10,
+      "end_chapter": 161,
+      "start_chapter": 156,
+      "chapters_adapted": "156-161 (vol 13, the opening of the manga's part two); the episode's closing act (Ouken at the Divine Treasure Vault) carries on into ch 162+ of the same volume, chapter boundary unverified",
+      "volume": 13,
+      "confidence": "medium",
+      "note": "A4/A10. The only row in the run that carries first-time MAINLINE pages. START = 156 (the episode opens on ch 156's first pages: Bojji and Kage on the wagon passing the ruined Desha), not a sliver. END 161 is a VERIFIED floor, not a ceiling — see the end_chapter repair and flags_for_sean. Everything else in this anthology is tankobon bonus-chapter or anime-original material with no mainline position (A44).",
+      "sources": [
+        "https://ousamaranking.fandom.com/api.php?action=parse&page=Chapter_156&prop=wikitext&format=json",
+        "https://ousamaranking.fandom.com/api.php?action=parse&page=Chapter_161&prop=wikitext&format=json",
+        "https://ousamaranking.fandom.com/api.php?action=parse&page=Special_Episode_10&prop=wikitext&format=json",
+        "https://osama-ranking-treasurechest.com/story/?id=10",
+        "https://ousamaranking.fandom.com/api.php?action=parse&page=Volume_13&prop=wikitext&format=json"
+      ]
+    }
+  ],
+  "continue_points": [
+    {
+      "episode": 10,
+      "continue_chapter": 162,
+      "kind": "post_series",
+      "note": "C5: resume at ch 162 (vol 13). Expect a SHORT OVERLAP — the finale's last act (Ouken storming the Divine Treasure Vault, the god he kills, Desha's abandoned cape and crown, and the report that Desha traded his memories) plays out over the chapters immediately after 161, and this verdict could not fix that boundary. Nothing later is animated: the anime never touches vol 13's remaining Bojji-and-Kage material in the Kuhya Kingdom, nor vol 14 (168-179 + bonus) onward, so ch 162 to the manga's current frontier is never-adapted.",
+      "sources": [
+        "https://ousamaranking.fandom.com/api.php?action=parse&page=Volume_13&prop=wikitext&format=json",
+        "https://ousamaranking.fandom.com/api.php?action=parse&page=Volume_14&prop=wikitext&format=json",
+        "https://api.mangadex.org/manga/7e2933d2-8587-4c0f-b69c-4233864b96a8/aggregate"
+      ]
+    }
+  ],
+  "anchor_hostile": [
+    {
+      "episode": 1,
+      "why": "A44 position-less: an anthology of tankobon 描き下ろし (draw-for-the-volume) bonus chapters, which carry NO chapter number in the manga's own numbering (MangaDex labels them N.5 as a scanlation convention; the 単話版 digital edition publishes only the numbered 第N話). Segment A カゲのおつかい is a Despa-training interlude (candidate: vol 5's bonus 'A Safe Haven', described by the fandom's manga page as 'an interlude during Bojji's training under Despa' — NOT confirmed); segment B 王子とお金 is the volume-8 bonus chapter (MangaDex 104.5, titled 'Inversion de Despa' / Despa's investment in the es-la release — the segment ends with Despa lending the poor girl money as an investment). Either way: no mainline chapter, no forward position (A1/A44).",
+      "sources": [
+        "https://osama-ranking-treasurechest.com/story/?id=01",
+        "https://ousamaranking.fandom.com/api.php?action=parse&page=Special_Episode_1&prop=wikitext&format=json",
+        "https://ousamaranking.fandom.com/api.php?action=parse&page=Ousama_Ranking_(manga)&prop=wikitext&format=json",
+        "https://api.mangadex.org/manga/7e2933d2-8587-4c0f-b69c-4233864b96a8/aggregate",
+        "https://dic.pixiv.net/a/%E7%8E%8B%E6%A7%98%E3%83%A9%E3%83%B3%E3%82%AD%E3%83%B3%E3%82%B0%E5%8B%87%E6%B0%97%E3%81%AE%E5%AE%9D%E7%AE%B1"
+      ]
+    },
+    {
+      "episode": 2,
+      "why": "A44 position-less: 荒野の獣 is the volume-6 描き下ろし bonus chapter (MangaDex vol 6 carries bonus 80.5), an interstitial set between the 2021 TV series' eps 11 and 12; ふしぎな砂漠 (the oasis and the regenerating beast on the road to the Bosse Kingdom) has no identified manga counterpart. Bonus chapters have no number in the source's numbering, so there is no END and no START (A44).",
+      "sources": [
+        "https://osama-ranking-treasurechest.com/story/?id=02",
+        "https://ousamaranking.fandom.com/api.php?action=parse&page=Special_Episode_2&prop=wikitext&format=json",
+        "https://api.mangadex.org/manga/7e2933d2-8587-4c0f-b69c-4233864b96a8/aggregate",
+        "https://dic.pixiv.net/a/%E7%8E%8B%E6%A7%98%E3%83%A9%E3%83%B3%E3%82%AD%E3%83%B3%E3%82%B0%E5%8B%87%E6%B0%97%E3%81%AE%E5%AE%9D%E7%AE%B1"
+      ]
+    },
+    {
+      "episode": 3,
+      "why": "A44 position-less: ヒリングの旧友 fills the gap between Hiling and Dorshe's exile and their reunion with Anne — its antagonist ドドン is listed by ja-WP under アニメオリジナルのキャラクター (『いずれも勇気の宝箱に登場』), i.e. anime-original; ダイダと魔法 is a childhood vignette with no identified manga counterpart. No mainline chapter is adapted, so no anchor (A1/A44). See flags_for_sean — the canon/original split of this row is unresolved and NO type change is proposed.",
+      "sources": [
+        "https://osama-ranking-treasurechest.com/story/?id=03",
+        "https://ousamaranking.fandom.com/api.php?action=parse&page=Special_Episode_3&prop=wikitext&format=json",
+        "https://ja.wikipedia.org/wiki/%E7%8E%8B%E6%A7%98%E3%83%A9%E3%83%B3%E3%82%AD%E3%83%B3%E3%82%B0"
+      ]
+    },
+    {
+      "episode": 4,
+      "why": "A44 position-less: the episode adapts the volume-9 描き下ろし bonus chapter 'Immortality' (不死) — ousamaranking.fandom's Treasure Chest of Courage page names it from the teaser ('a flashback to Desha's revolution in the Underworld … adapted from the Volume 9 bonus chapter, \"Immortality\"'), its Volume 9 page lists 'Bonus Chapter, \"Immortality\"' after ch 117, its manga page describes that bonus chapter as 'a background chapter about the princes of the Underworld, and their revolution against their father, the god Satun' — exactly the official synopsis for 第四話 — and MangaDex's vol 9 carries the bonus as 117.5, titled 'Inmortalidad' in the es-la release. A bonus chapter is the SOURCE (it is published inside the tankobon by the author), but it has no mainline number, so it takes no anchor (A44); the annotation carries the mapping.",
+      "sources": [
+        "https://ousamaranking.fandom.com/api.php?action=parse&page=Ousama_Ranking:_Treasure_Chest_of_Courage&prop=wikitext&format=json",
+        "https://ousamaranking.fandom.com/api.php?action=parse&page=Volume_9&prop=wikitext&format=json",
+        "https://ousamaranking.fandom.com/api.php?action=parse&page=Ousama_Ranking_(manga)&prop=wikitext&format=json",
+        "https://osama-ranking-treasurechest.com/story/?id=04",
+        "https://api.mangadex.org/manga/7e2933d2-8587-4c0f-b69c-4233864b96a8/aggregate"
+      ]
+    },
+    {
+      "episode": 5,
+      "why": "A44 position-less: three segments, none of them mainline. 冥府の掟 is built around フレン, whom ja-WP lists under アニメオリジナルのキャラクター; 恋する白馬 expands a one-line manga gag (Despa's horse Hakuou grew fat while he was away — ja-WP's 白王 entry); 優しき兵士ホクロ is Hokuro's backstory (candidate: the volume-7 bonus chapter, MangaDex 92.5, es-la 'Devocion inquebrantable' — NOT confirmed). No chapter number, no position.",
+      "sources": [
+        "https://osama-ranking-treasurechest.com/story/?id=05",
+        "https://ousamaranking.fandom.com/api.php?action=parse&page=Special_Episode_5&prop=wikitext&format=json",
+        "https://ja.wikipedia.org/wiki/%E7%8E%8B%E6%A7%98%E3%83%A9%E3%83%B3%E3%82%AD%E3%83%B3%E3%82%B0",
+        "https://api.mangadex.org/manga/7e2933d2-8587-4c0f-b69c-4233864b96a8/aggregate"
+      ]
+    },
+    {
+      "episode": 6,
+      "why": "A44 position-less: both segments are post-part-one epilogue vignettes (Bojji touring the town as king; Daida as king with Miranjo teaching the children — ja-WP notes Miranjo's teaching role only as 『勇気の宝箱』6話), and the segment's lost bird ピッピ is on ja-WP's アニメオリジナルのキャラクター list. No mainline chapter is adapted.",
+      "sources": [
+        "https://osama-ranking-treasurechest.com/story/?id=06",
+        "https://ousamaranking.fandom.com/api.php?action=parse&page=Special_Episode_6&prop=wikitext&format=json",
+        "https://ja.wikipedia.org/wiki/%E7%8E%8B%E6%A7%98%E3%83%A9%E3%83%B3%E3%82%AD%E3%83%B3%E3%82%B0"
+      ]
+    },
+    {
+      "episode": 7,
+      "why": "A44 position-less: 薄ら笑いの蛇使い adapts the volume-3 描き下ろし bonus chapter 「笑う門には福来る」 ('Those Who Smile Will Be Blessed With Good Fortune And Happiness') — the fandom's Volume 3 page lists it after ch 41, its manga page describes it as 'a flashback chapter about Bebin, and his path to the Big Four' (the official synopsis for the segment: young Bebin loses to Apeas and goes looking for a sword master), and its Treasure Chest page flags it from the teaser; MangaDex carries the vol-3 bonus as 41.5. 四天王の宴 is anime-original in at least its antagonist (チャンピオン is on ja-WP's アニメオリジナルのキャラクター list). Bonus chapters carry no mainline number (A44).",
+      "sources": [
+        "https://ousamaranking.fandom.com/api.php?action=parse&page=Volume_3&prop=wikitext&format=json",
+        "https://ousamaranking.fandom.com/api.php?action=parse&page=Ousama_Ranking_(manga)&prop=wikitext&format=json",
+        "https://ousamaranking.fandom.com/api.php?action=parse&page=Ousama_Ranking:_Treasure_Chest_of_Courage&prop=wikitext&format=json",
+        "https://osama-ranking-treasurechest.com/story/?id=07",
+        "https://ja.wikipedia.org/wiki/%E7%8E%8B%E6%A7%98%E3%83%A9%E3%83%B3%E3%82%AD%E3%83%B3%E3%82%B0",
+        "https://api.mangadex.org/manga/7e2933d2-8587-4c0f-b69c-4233864b96a8/aggregate"
+      ]
+    },
+    {
+      "episode": 8,
+      "why": "A44 position-less: カゲのあこがれ is Kage's childhood in the Bo Kingdom with his mother (candidate: the volume-10 描き下ろし, MangaDex 129.5, es-la 'Aspiracion' — あこがれ = yearning / aspiration; supported by dic.pixiv.net's article, which I could only read through search-engine excerpts, so treat as cross-check); 偉大な母 is Bosse's courtship of Sheena and Bojji's birth, which the fandom's manga page lists as 'Bonus Chapter 1 (untitled) — an expanded version of Bosse and Sheena's first meeting' in volume 1 (MangaDex 13.5). Both are bonus chapters: no mainline number, no position.",
+      "sources": [
+        "https://osama-ranking-treasurechest.com/story/?id=08",
+        "https://ousamaranking.fandom.com/api.php?action=parse&page=Special_Episode_8&prop=wikitext&format=json",
+        "https://ousamaranking.fandom.com/api.php?action=parse&page=Ousama_Ranking_(manga)&prop=wikitext&format=json",
+        "https://api.mangadex.org/manga/7e2933d2-8587-4c0f-b69c-4233864b96a8/aggregate",
+        "https://dic.pixiv.net/a/%E7%8E%8B%E6%A7%98%E3%83%A9%E3%83%B3%E3%82%AD%E3%83%B3%E3%82%B0%E5%8B%87%E6%B0%97%E3%81%AE%E5%AE%9D%E7%AE%B1"
+      ]
+    },
+    {
+      "episode": 9,
+      "why": "A44 position-less: ミランジョと魔神 is young Miranjo meeting the demon child in the forest (a prequel vignette to the Miranjo material the 2021 series already adapted from vol 11) and 王子と宝物 is Bojji's farewell-gift round on the day he abdicates — a coda that sits AFTER ch 155, the end of part one, and before ch 156. Neither carries a mainline chapter number in running order (A44); the second is an epilogue the manga does not number.",
+      "sources": [
+        "https://osama-ranking-treasurechest.com/story/?id=09",
+        "https://ousamaranking.fandom.com/api.php?action=parse&page=Special_Episode_9&prop=wikitext&format=json",
+        "https://ousamaranking.fandom.com/api.php?action=parse&page=Ousama_Ranking_(manga)&prop=wikitext&format=json"
+      ]
+    }
+  ],
+  "annotations": [
+    {
+      "episodes": [
+        1
+      ],
+      "kind": "side_story",
+      "chapters": "vol 8 描き下ろし bonus chapter (MangaDex 104.5, 'Despa's investment') for segment B 王子とお金; segment A カゲのおつかい is an unidentified Despa-training interlude",
+      "note": "Tankobon bonus chapters are part of the SOURCE (published inside the volume by Toka) but carry no mainline number — side_story, never side_source (the GTO/Toroko rule)."
+    },
+    {
+      "episodes": [
+        2
+      ],
+      "kind": "side_story",
+      "chapters": "vol 6 描き下ろし bonus chapter (MangaDex 80.5) for segment A 荒野の獣; segment B ふしぎな砂漠 unidentified",
+      "note": "Set between eps 11 and 12 of the 2021 TV series, i.e. inside the road-to-the-Underworld stretch of vols 5-6."
+    },
+    {
+      "episodes": [
+        4
+      ],
+      "kind": "side_story",
+      "chapters": "vol 9 描き下ろし 「不死」 / 'Immortality' (MangaDex 117.5)",
+      "note": "The whole episode is that one bonus chapter — the Underworld princes' revolution against Satun and the birth of Ouken's immortality."
+    },
+    {
+      "episodes": [
+        4,
+        5
+      ],
+      "kind": "divergence",
+      "chapters": "vol 9 描き下ろし 'Immortality' and its ep-5 continuation 冥府の掟",
+      "note": "フレン, Ouken's second-in-command and the driver of ep 5's A-segment, is listed by ja-WP under アニメオリジナルのキャラクター — an anime-original character woven through the adapted bonus chapter and its sequel segment."
+    },
+    {
+      "episodes": [
+        7
+      ],
+      "kind": "side_story",
+      "chapters": "vol 3 描き下ろし 「笑う門には福来る」 / 'Those Who Smile Will Be Blessed With Good Fortune And Happiness' (MangaDex 41.5) for segment A",
+      "note": "Bebin's path to the Big Four. Segment B 四天王の宴 has no identified manga counterpart and its antagonist is anime-original."
+    },
+    {
+      "episodes": [
+        8
+      ],
+      "kind": "side_story",
+      "chapters": "vol 1 描き下ろし bonus chapter (MangaDex 13.5, 'an expanded version of Bosse and Sheena's first meeting') for segment B 偉大な母; vol 10 描き下ろし (MangaDex 129.5, 'Aspiracion') is the candidate for segment A カゲのあこがれ",
+      "note": "The fandom's manga page notes the first two bonus chapters are REMAKES of earlier main-story material with expanded page counts — so 偉大な母 is a re-telling, never first-time mainline pages."
+    },
+    {
+      "episodes": [
+        10
+      ],
+      "kind": "rearranged",
+      "chapters": "156-157",
+      "note": "The manga cross-cuts Bojji/Kage with Desha from ch 156; the episode front-loads the Desha/Ouken thread and moves ch 157's Kuhya-Kingdom inn scene (Bojji entrusting his gold to Kage) to the episode's closing minute."
+    }
+  ],
+  "repairs": [
+    {
+      "episode": 1,
+      "field": "title",
+      "old": null,
+      "new": "Kage's Errand / The Prince and Money",
+      "why": "Row identity: our rows 1-10 are bare (no title, no air date; afl_slug null — the series has no AnimeFillerList page). English title from en-WP's 'The Treasure Chest of Courage (2023)' {{Episode table}}, corroborated by ousamaranking.fandom's Special Episode 1 page (infobox title and/or the per-segment section headings). Japanese title: カゲのおつかい／王子とお金 — ja-WP 各話リスト（勇気の宝箱）, syobocal TID 6691's SubTitles list (which joins the segments with ／), and the official site's STORY page for 第一話. Multi-segment episodes are joined with ' / ' in the order broadcast.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Ranking_of_Kings",
+        "https://ousamaranking.fandom.com/api.php?action=parse&page=Special_Episode_1&prop=wikitext&format=json",
+        "https://ja.wikipedia.org/wiki/%E7%8E%8B%E6%A7%98%E3%83%A9%E3%83%B3%E3%82%AD%E3%83%B3%E3%82%B0",
+        "https://cal.syoboi.jp/db.php?Command=TitleLookup&TID=6691",
+        "https://osama-ranking-treasurechest.com/story/?id=01"
+      ]
+    },
+    {
+      "episode": 2,
+      "field": "title",
+      "old": null,
+      "new": "Beasts of the Wilderness / A Mysterious Desert",
+      "why": "Row identity: our rows 1-10 are bare (no title, no air date; afl_slug null — the series has no AnimeFillerList page). English title from en-WP's 'The Treasure Chest of Courage (2023)' {{Episode table}}, corroborated by ousamaranking.fandom's Special Episode 2 page (infobox title and/or the per-segment section headings). Japanese title: 荒野の獣／ふしぎな砂漠 — ja-WP 各話リスト（勇気の宝箱）, syobocal TID 6691's SubTitles list (which joins the segments with ／), and the official site's STORY page for 第二話. Multi-segment episodes are joined with ' / ' in the order broadcast.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Ranking_of_Kings",
+        "https://ousamaranking.fandom.com/api.php?action=parse&page=Special_Episode_2&prop=wikitext&format=json",
+        "https://ja.wikipedia.org/wiki/%E7%8E%8B%E6%A7%98%E3%83%A9%E3%83%B3%E3%82%AD%E3%83%B3%E3%82%B0",
+        "https://cal.syoboi.jp/db.php?Command=TitleLookup&TID=6691",
+        "https://osama-ranking-treasurechest.com/story/?id=02"
+      ]
+    },
+    {
+      "episode": 3,
+      "field": "title",
+      "old": null,
+      "new": "Hiling's Old Friend / Daida and Magic",
+      "why": "Row identity: our rows 1-10 are bare (no title, no air date; afl_slug null — the series has no AnimeFillerList page). English title from en-WP's 'The Treasure Chest of Courage (2023)' {{Episode table}}, corroborated by ousamaranking.fandom's Special Episode 3 page (infobox title and/or the per-segment section headings). Japanese title: ヒリングの旧友／ダイダと魔法 — ja-WP 各話リスト（勇気の宝箱）, syobocal TID 6691's SubTitles list (which joins the segments with ／), and the official site's STORY page for 第三話. Multi-segment episodes are joined with ' / ' in the order broadcast.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Ranking_of_Kings",
+        "https://ousamaranking.fandom.com/api.php?action=parse&page=Special_Episode_3&prop=wikitext&format=json",
+        "https://ja.wikipedia.org/wiki/%E7%8E%8B%E6%A7%98%E3%83%A9%E3%83%B3%E3%82%AD%E3%83%B3%E3%82%B0",
+        "https://cal.syoboi.jp/db.php?Command=TitleLookup&TID=6691",
+        "https://osama-ranking-treasurechest.com/story/?id=03"
+      ]
+    },
+    {
+      "episode": 4,
+      "field": "title",
+      "old": null,
+      "new": "Immortality and the Three Brothers",
+      "why": "Row identity: our rows 1-10 are bare (no title, no air date; afl_slug null — the series has no AnimeFillerList page). English title from en-WP's 'The Treasure Chest of Courage (2023)' {{Episode table}}, corroborated by ousamaranking.fandom's Special Episode 4 page (infobox title and/or the per-segment section headings). Japanese title: 不死と三兄弟 — ja-WP 各話リスト（勇気の宝箱）, syobocal TID 6691's SubTitles list (which joins the segments with ／), and the official site's STORY page for 第四話. Multi-segment episodes are joined with ' / ' in the order broadcast.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Ranking_of_Kings",
+        "https://ousamaranking.fandom.com/api.php?action=parse&page=Special_Episode_4&prop=wikitext&format=json",
+        "https://ja.wikipedia.org/wiki/%E7%8E%8B%E6%A7%98%E3%83%A9%E3%83%B3%E3%82%AD%E3%83%B3%E3%82%B0",
+        "https://cal.syoboi.jp/db.php?Command=TitleLookup&TID=6691",
+        "https://osama-ranking-treasurechest.com/story/?id=04"
+      ]
+    },
+    {
+      "episode": 5,
+      "field": "title",
+      "old": null,
+      "new": "The Laws of the Underworld / A White Horse in Love / The Gentle Soldier, Hokuro",
+      "why": "Row identity: our rows 1-10 are bare (no title, no air date; afl_slug null — the series has no AnimeFillerList page). English title from en-WP's 'The Treasure Chest of Courage (2023)' {{Episode table}}, corroborated by ousamaranking.fandom's Special Episode 5 page (infobox title and/or the per-segment section headings). Japanese title: 冥府の掟／恋する白馬／優しき兵士ホクロ — ja-WP 各話リスト（勇気の宝箱）, syobocal TID 6691's SubTitles list (which joins the segments with ／), and the official site's STORY page for 第五話. Multi-segment episodes are joined with ' / ' in the order broadcast.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Ranking_of_Kings",
+        "https://ousamaranking.fandom.com/api.php?action=parse&page=Special_Episode_5&prop=wikitext&format=json",
+        "https://ja.wikipedia.org/wiki/%E7%8E%8B%E6%A7%98%E3%83%A9%E3%83%B3%E3%82%AD%E3%83%B3%E3%82%B0",
+        "https://cal.syoboi.jp/db.php?Command=TitleLookup&TID=6691",
+        "https://osama-ranking-treasurechest.com/story/?id=05"
+      ]
+    },
+    {
+      "episode": 6,
+      "field": "title",
+      "old": null,
+      "new": "Bojji the King / The Melancholy of King Daida",
+      "why": "Row identity: our rows 1-10 are bare (no title, no air date; afl_slug null — the series has no AnimeFillerList page). English title from en-WP's 'The Treasure Chest of Courage (2023)' {{Episode table}}, corroborated by ousamaranking.fandom's Special Episode 6 page (infobox title and/or the per-segment section headings). Japanese title: 王になったボッジ／ダイダ王の憂鬱 — ja-WP 各話リスト（勇気の宝箱）, syobocal TID 6691's SubTitles list (which joins the segments with ／), and the official site's STORY page for 第六話. Multi-segment episodes are joined with ' / ' in the order broadcast.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Ranking_of_Kings",
+        "https://ousamaranking.fandom.com/api.php?action=parse&page=Special_Episode_6&prop=wikitext&format=json",
+        "https://ja.wikipedia.org/wiki/%E7%8E%8B%E6%A7%98%E3%83%A9%E3%83%B3%E3%82%AD%E3%83%B3%E3%82%B0",
+        "https://cal.syoboi.jp/db.php?Command=TitleLookup&TID=6691",
+        "https://osama-ranking-treasurechest.com/story/?id=06"
+      ]
+    },
+    {
+      "episode": 7,
+      "field": "title",
+      "old": null,
+      "new": "The Snake Charmer with the Crooked Smile / The Big Four's Banquet",
+      "why": "Row identity: our rows 1-10 are bare (no title, no air date; afl_slug null — the series has no AnimeFillerList page). English title from en-WP's 'The Treasure Chest of Courage (2023)' {{Episode table}}, corroborated by ousamaranking.fandom's Special Episode 7 page (infobox title and/or the per-segment section headings). Japanese title: 薄ら笑いの蛇使い／四天王の宴 — ja-WP 各話リスト（勇気の宝箱）, syobocal TID 6691's SubTitles list (which joins the segments with ／), and the official site's STORY page for 第七話. Multi-segment episodes are joined with ' / ' in the order broadcast.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Ranking_of_Kings",
+        "https://ousamaranking.fandom.com/api.php?action=parse&page=Special_Episode_7&prop=wikitext&format=json",
+        "https://ja.wikipedia.org/wiki/%E7%8E%8B%E6%A7%98%E3%83%A9%E3%83%B3%E3%82%AD%E3%83%B3%E3%82%B0",
+        "https://cal.syoboi.jp/db.php?Command=TitleLookup&TID=6691",
+        "https://osama-ranking-treasurechest.com/story/?id=07"
+      ]
+    },
+    {
+      "episode": 8,
+      "field": "title",
+      "old": null,
+      "new": "Kage's Yearning / A Great Mother",
+      "why": "Row identity: our rows 1-10 are bare (no title, no air date; afl_slug null — the series has no AnimeFillerList page). English title from en-WP's 'The Treasure Chest of Courage (2023)' {{Episode table}}, corroborated by ousamaranking.fandom's Special Episode 8 page (infobox title and/or the per-segment section headings). Japanese title: カゲのあこがれ／偉大な母 — ja-WP 各話リスト（勇気の宝箱）, syobocal TID 6691's SubTitles list (which joins the segments with ／), and the official site's STORY page for 第八話. Multi-segment episodes are joined with ' / ' in the order broadcast.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Ranking_of_Kings",
+        "https://ousamaranking.fandom.com/api.php?action=parse&page=Special_Episode_8&prop=wikitext&format=json",
+        "https://ja.wikipedia.org/wiki/%E7%8E%8B%E6%A7%98%E3%83%A9%E3%83%B3%E3%82%AD%E3%83%B3%E3%82%B0",
+        "https://cal.syoboi.jp/db.php?Command=TitleLookup&TID=6691",
+        "https://osama-ranking-treasurechest.com/story/?id=08"
+      ]
+    },
+    {
+      "episode": 9,
+      "field": "title",
+      "old": null,
+      "new": "Miranjo and the Demon / The Prince and His Treasures",
+      "why": "Row identity: our rows 1-10 are bare (no title, no air date; afl_slug null — the series has no AnimeFillerList page). English title from en-WP's 'The Treasure Chest of Courage (2023)' {{Episode table}}, corroborated by ousamaranking.fandom's Special Episode 9 page (infobox title and/or the per-segment section headings). Japanese title: ミランジョと魔神／王子と宝物 — ja-WP 各話リスト（勇気の宝箱）, syobocal TID 6691's SubTitles list (which joins the segments with ／), and the official site's STORY page for 第九話. Multi-segment episodes are joined with ' / ' in the order broadcast.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Ranking_of_Kings",
+        "https://ousamaranking.fandom.com/api.php?action=parse&page=Special_Episode_9&prop=wikitext&format=json",
+        "https://ja.wikipedia.org/wiki/%E7%8E%8B%E6%A7%98%E3%83%A9%E3%83%B3%E3%82%AD%E3%83%B3%E3%82%B0",
+        "https://cal.syoboi.jp/db.php?Command=TitleLookup&TID=6691",
+        "https://osama-ranking-treasurechest.com/story/?id=09"
+      ]
+    },
+    {
+      "episode": 10,
+      "field": "title",
+      "old": null,
+      "new": "Return of the Sword King",
+      "why": "Row identity: our rows 1-10 are bare (no title, no air date; afl_slug null — the series has no AnimeFillerList page). English title from en-WP's 'The Treasure Chest of Courage (2023)' {{Episode table}}, corroborated by ousamaranking.fandom's Special Episode 10 page (infobox title and/or the per-segment section headings). Japanese title: 剣王の復活 — ja-WP 各話リスト（勇気の宝箱）, syobocal TID 6691's SubTitles list (which joins the segments with ／), and the official site's STORY page for 第十話. Multi-segment episodes are joined with ' / ' in the order broadcast.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Ranking_of_Kings",
+        "https://ousamaranking.fandom.com/api.php?action=parse&page=Special_Episode_10&prop=wikitext&format=json",
+        "https://ja.wikipedia.org/wiki/%E7%8E%8B%E6%A7%98%E3%83%A9%E3%83%B3%E3%82%AD%E3%83%B3%E3%82%B0",
+        "https://cal.syoboi.jp/db.php?Command=TitleLookup&TID=6691",
+        "https://osama-ranking-treasurechest.com/story/?id=10"
+      ]
+    },
+    {
+      "episode": 1,
+      "field": "air_date",
+      "old": null,
+      "new": "2023-04-14",
+      "why": "Three independent sources agree on the post-midnight calendar date: ja-WP 各話リスト（勇気の宝箱）初放送日, en-WP's episode table {{Start date}}, and syobocal's ProgLookup for TID 6691 (earliest non-再 airing on ChID 3 = フジテレビ). The ノイタミナ slot is 金曜0:55 / 木曜深夜, so Fuji TV's own listing prints the previous evening (e.g. 24:55 on 2023-04-13 for row 1) and ousamaranking.fandom uses that Thursday date — the JST calendar date after midnight is the value delivered here. syobocal also records the slot slips en-WP footnotes (row 1 at 01:10, 2 at 01:05, 4 at 01:25, 5 at 01:55, 6 at 01:05, 7 at 01:15, 10 at 01:10).",
+      "sources": [
+        "https://ja.wikipedia.org/wiki/%E7%8E%8B%E6%A7%98%E3%83%A9%E3%83%B3%E3%82%AD%E3%83%B3%E3%82%B0",
+        "https://en.wikipedia.org/wiki/Ranking_of_Kings",
+        "https://cal.syoboi.jp/db.php?Command=ProgLookup&TID=6691&Range=20230401_000000-20230801_000000"
+      ]
+    },
+    {
+      "episode": 2,
+      "field": "air_date",
+      "old": null,
+      "new": "2023-04-21",
+      "why": "Three independent sources agree on the post-midnight calendar date: ja-WP 各話リスト（勇気の宝箱）初放送日, en-WP's episode table {{Start date}}, and syobocal's ProgLookup for TID 6691 (earliest non-再 airing on ChID 3 = フジテレビ). The ノイタミナ slot is 金曜0:55 / 木曜深夜, so Fuji TV's own listing prints the previous evening (e.g. 24:55 on 2023-04-13 for row 1) and ousamaranking.fandom uses that Thursday date — the JST calendar date after midnight is the value delivered here. syobocal also records the slot slips en-WP footnotes (row 1 at 01:10, 2 at 01:05, 4 at 01:25, 5 at 01:55, 6 at 01:05, 7 at 01:15, 10 at 01:10).",
+      "sources": [
+        "https://ja.wikipedia.org/wiki/%E7%8E%8B%E6%A7%98%E3%83%A9%E3%83%B3%E3%82%AD%E3%83%B3%E3%82%B0",
+        "https://en.wikipedia.org/wiki/Ranking_of_Kings",
+        "https://cal.syoboi.jp/db.php?Command=ProgLookup&TID=6691&Range=20230401_000000-20230801_000000"
+      ]
+    },
+    {
+      "episode": 3,
+      "field": "air_date",
+      "old": null,
+      "new": "2023-04-28",
+      "why": "Three independent sources agree on the post-midnight calendar date: ja-WP 各話リスト（勇気の宝箱）初放送日, en-WP's episode table {{Start date}}, and syobocal's ProgLookup for TID 6691 (earliest non-再 airing on ChID 3 = フジテレビ). The ノイタミナ slot is 金曜0:55 / 木曜深夜, so Fuji TV's own listing prints the previous evening (e.g. 24:55 on 2023-04-13 for row 1) and ousamaranking.fandom uses that Thursday date — the JST calendar date after midnight is the value delivered here. syobocal also records the slot slips en-WP footnotes (row 1 at 01:10, 2 at 01:05, 4 at 01:25, 5 at 01:55, 6 at 01:05, 7 at 01:15, 10 at 01:10).",
+      "sources": [
+        "https://ja.wikipedia.org/wiki/%E7%8E%8B%E6%A7%98%E3%83%A9%E3%83%B3%E3%82%AD%E3%83%B3%E3%82%B0",
+        "https://en.wikipedia.org/wiki/Ranking_of_Kings",
+        "https://cal.syoboi.jp/db.php?Command=ProgLookup&TID=6691&Range=20230401_000000-20230801_000000"
+      ]
+    },
+    {
+      "episode": 4,
+      "field": "air_date",
+      "old": null,
+      "new": "2023-05-05",
+      "why": "Three independent sources agree on the post-midnight calendar date: ja-WP 各話リスト（勇気の宝箱）初放送日, en-WP's episode table {{Start date}}, and syobocal's ProgLookup for TID 6691 (earliest non-再 airing on ChID 3 = フジテレビ). The ノイタミナ slot is 金曜0:55 / 木曜深夜, so Fuji TV's own listing prints the previous evening (e.g. 24:55 on 2023-04-13 for row 1) and ousamaranking.fandom uses that Thursday date — the JST calendar date after midnight is the value delivered here. syobocal also records the slot slips en-WP footnotes (row 1 at 01:10, 2 at 01:05, 4 at 01:25, 5 at 01:55, 6 at 01:05, 7 at 01:15, 10 at 01:10).",
+      "sources": [
+        "https://ja.wikipedia.org/wiki/%E7%8E%8B%E6%A7%98%E3%83%A9%E3%83%B3%E3%82%AD%E3%83%B3%E3%82%B0",
+        "https://en.wikipedia.org/wiki/Ranking_of_Kings",
+        "https://cal.syoboi.jp/db.php?Command=ProgLookup&TID=6691&Range=20230401_000000-20230801_000000"
+      ]
+    },
+    {
+      "episode": 5,
+      "field": "air_date",
+      "old": null,
+      "new": "2023-05-12",
+      "why": "Three independent sources agree on the post-midnight calendar date: ja-WP 各話リスト（勇気の宝箱）初放送日, en-WP's episode table {{Start date}}, and syobocal's ProgLookup for TID 6691 (earliest non-再 airing on ChID 3 = フジテレビ). The ノイタミナ slot is 金曜0:55 / 木曜深夜, so Fuji TV's own listing prints the previous evening (e.g. 24:55 on 2023-04-13 for row 1) and ousamaranking.fandom uses that Thursday date — the JST calendar date after midnight is the value delivered here. syobocal also records the slot slips en-WP footnotes (row 1 at 01:10, 2 at 01:05, 4 at 01:25, 5 at 01:55, 6 at 01:05, 7 at 01:15, 10 at 01:10).",
+      "sources": [
+        "https://ja.wikipedia.org/wiki/%E7%8E%8B%E6%A7%98%E3%83%A9%E3%83%B3%E3%82%AD%E3%83%B3%E3%82%B0",
+        "https://en.wikipedia.org/wiki/Ranking_of_Kings",
+        "https://cal.syoboi.jp/db.php?Command=ProgLookup&TID=6691&Range=20230401_000000-20230801_000000"
+      ]
+    },
+    {
+      "episode": 6,
+      "field": "air_date",
+      "old": null,
+      "new": "2023-05-19",
+      "why": "Three independent sources agree on the post-midnight calendar date: ja-WP 各話リスト（勇気の宝箱）初放送日, en-WP's episode table {{Start date}}, and syobocal's ProgLookup for TID 6691 (earliest non-再 airing on ChID 3 = フジテレビ). The ノイタミナ slot is 金曜0:55 / 木曜深夜, so Fuji TV's own listing prints the previous evening (e.g. 24:55 on 2023-04-13 for row 1) and ousamaranking.fandom uses that Thursday date — the JST calendar date after midnight is the value delivered here. syobocal also records the slot slips en-WP footnotes (row 1 at 01:10, 2 at 01:05, 4 at 01:25, 5 at 01:55, 6 at 01:05, 7 at 01:15, 10 at 01:10).",
+      "sources": [
+        "https://ja.wikipedia.org/wiki/%E7%8E%8B%E6%A7%98%E3%83%A9%E3%83%B3%E3%82%AD%E3%83%B3%E3%82%B0",
+        "https://en.wikipedia.org/wiki/Ranking_of_Kings",
+        "https://cal.syoboi.jp/db.php?Command=ProgLookup&TID=6691&Range=20230401_000000-20230801_000000"
+      ]
+    },
+    {
+      "episode": 7,
+      "field": "air_date",
+      "old": null,
+      "new": "2023-05-26",
+      "why": "Three independent sources agree on the post-midnight calendar date: ja-WP 各話リスト（勇気の宝箱）初放送日, en-WP's episode table {{Start date}}, and syobocal's ProgLookup for TID 6691 (earliest non-再 airing on ChID 3 = フジテレビ). The ノイタミナ slot is 金曜0:55 / 木曜深夜, so Fuji TV's own listing prints the previous evening (e.g. 24:55 on 2023-04-13 for row 1) and ousamaranking.fandom uses that Thursday date — the JST calendar date after midnight is the value delivered here. syobocal also records the slot slips en-WP footnotes (row 1 at 01:10, 2 at 01:05, 4 at 01:25, 5 at 01:55, 6 at 01:05, 7 at 01:15, 10 at 01:10).",
+      "sources": [
+        "https://ja.wikipedia.org/wiki/%E7%8E%8B%E6%A7%98%E3%83%A9%E3%83%B3%E3%82%AD%E3%83%B3%E3%82%B0",
+        "https://en.wikipedia.org/wiki/Ranking_of_Kings",
+        "https://cal.syoboi.jp/db.php?Command=ProgLookup&TID=6691&Range=20230401_000000-20230801_000000"
+      ]
+    },
+    {
+      "episode": 8,
+      "field": "air_date",
+      "old": null,
+      "new": "2023-06-02",
+      "why": "Three independent sources agree on the post-midnight calendar date: ja-WP 各話リスト（勇気の宝箱）初放送日, en-WP's episode table {{Start date}}, and syobocal's ProgLookup for TID 6691 (earliest non-再 airing on ChID 3 = フジテレビ). The ノイタミナ slot is 金曜0:55 / 木曜深夜, so Fuji TV's own listing prints the previous evening (e.g. 24:55 on 2023-04-13 for row 1) and ousamaranking.fandom uses that Thursday date — the JST calendar date after midnight is the value delivered here. syobocal also records the slot slips en-WP footnotes (row 1 at 01:10, 2 at 01:05, 4 at 01:25, 5 at 01:55, 6 at 01:05, 7 at 01:15, 10 at 01:10).",
+      "sources": [
+        "https://ja.wikipedia.org/wiki/%E7%8E%8B%E6%A7%98%E3%83%A9%E3%83%B3%E3%82%AD%E3%83%B3%E3%82%B0",
+        "https://en.wikipedia.org/wiki/Ranking_of_Kings",
+        "https://cal.syoboi.jp/db.php?Command=ProgLookup&TID=6691&Range=20230401_000000-20230801_000000"
+      ]
+    },
+    {
+      "episode": 9,
+      "field": "air_date",
+      "old": null,
+      "new": "2023-06-09",
+      "why": "Three independent sources agree on the post-midnight calendar date: ja-WP 各話リスト（勇気の宝箱）初放送日, en-WP's episode table {{Start date}}, and syobocal's ProgLookup for TID 6691 (earliest non-再 airing on ChID 3 = フジテレビ). The ノイタミナ slot is 金曜0:55 / 木曜深夜, so Fuji TV's own listing prints the previous evening (e.g. 24:55 on 2023-04-13 for row 1) and ousamaranking.fandom uses that Thursday date — the JST calendar date after midnight is the value delivered here. syobocal also records the slot slips en-WP footnotes (row 1 at 01:10, 2 at 01:05, 4 at 01:25, 5 at 01:55, 6 at 01:05, 7 at 01:15, 10 at 01:10).",
+      "sources": [
+        "https://ja.wikipedia.org/wiki/%E7%8E%8B%E6%A7%98%E3%83%A9%E3%83%B3%E3%82%AD%E3%83%B3%E3%82%B0",
+        "https://en.wikipedia.org/wiki/Ranking_of_Kings",
+        "https://cal.syoboi.jp/db.php?Command=ProgLookup&TID=6691&Range=20230401_000000-20230801_000000"
+      ]
+    },
+    {
+      "episode": 10,
+      "field": "air_date",
+      "old": null,
+      "new": "2023-06-16",
+      "why": "Three independent sources agree on the post-midnight calendar date: ja-WP 各話リスト（勇気の宝箱）初放送日, en-WP's episode table {{Start date}}, and syobocal's ProgLookup for TID 6691 (earliest non-再 airing on ChID 3 = フジテレビ). The ノイタミナ slot is 金曜0:55 / 木曜深夜, so Fuji TV's own listing prints the previous evening (e.g. 24:55 on 2023-04-13 for row 1) and ousamaranking.fandom uses that Thursday date — the JST calendar date after midnight is the value delivered here. syobocal also records the slot slips en-WP footnotes (row 1 at 01:10, 2 at 01:05, 4 at 01:25, 5 at 01:55, 6 at 01:05, 7 at 01:15, 10 at 01:10).",
+      "sources": [
+        "https://ja.wikipedia.org/wiki/%E7%8E%8B%E6%A7%98%E3%83%A9%E3%83%B3%E3%82%AD%E3%83%B3%E3%82%B0",
+        "https://en.wikipedia.org/wiki/Ranking_of_Kings",
+        "https://cal.syoboi.jp/db.php?Command=ProgLookup&TID=6691&Range=20230401_000000-20230801_000000"
+      ]
+    },
+    {
+      "episode": 10,
+      "field": "end_chapter",
+      "old": 155,
+      "new": 161,
+      "why": "G37: the stored pin is ANOTHER ENTRY's frontier. MangaUpdates' coverage segment reads 'Vol 12, Chap 155 (S1) The Treasure Chest of Courage covers skipped content' — the label is literally '(S1)', i.e. the 2021-22 TV series' endpoint, and ch 155 / vol 12 is the last chapter of the manga's PART ONE (第一部 = 第1〜155話 / 第1〜12巻; 第二部 = 第156話〜 / 第13巻〜; the volume split is confirmed by MangaDex's aggregate, where vol 12 = 142-155 + bonus and vol 13 = 156-167 + bonus, and by our own stored boundary v13: 156-167). This entry's finale does not stop at 155: it adapts the OPENING of part two. ousamaranking.fandom's Chapter 156-161 summaries match ep 10 beat for beat — ch 156 the wagon and Desha entering the Divine Treasure Vault with the Ranking judge; ch 157 Kuhya Kingdom / the inn / Bojji entrusting his gold to Kage, and the cursed blood-drinking swords; ch 158 the speared corpse, the prison, the demon child, Despa and the Captain at the lake; ch 159 the rope, the catfish, Ouken whole again, Desha making his wish; ch 160 Ouken human, the rotting carcass, the lost connection to Desha; ch 161 Despa's flashback, the knights' report, Ouken riding to the treasury and seeing an armoured man. The delivered END is a VERIFIED FLOOR (A4): the episode's last act — Ouken beating the golem gatekeepers, the god fight, Desha's cape and crown — runs on into ch 162+ of the same volume, and no source I could read summarises 162-167 chapter by chapter (the fandom's chapter pages stop at 161). See flags_for_sean.",
+      "sources": [
+        "https://ousamaranking.fandom.com/api.php?action=parse&page=Chapter_156&prop=wikitext&format=json",
+        "https://ousamaranking.fandom.com/api.php?action=parse&page=Chapter_157&prop=wikitext&format=json",
+        "https://ousamaranking.fandom.com/api.php?action=parse&page=Chapter_158&prop=wikitext&format=json",
+        "https://ousamaranking.fandom.com/api.php?action=parse&page=Chapter_159&prop=wikitext&format=json",
+        "https://ousamaranking.fandom.com/api.php?action=parse&page=Chapter_160&prop=wikitext&format=json",
+        "https://ousamaranking.fandom.com/api.php?action=parse&page=Chapter_161&prop=wikitext&format=json",
+        "https://ousamaranking.fandom.com/api.php?action=parse&page=Special_Episode_10&prop=wikitext&format=json",
+        "https://osama-ranking-treasurechest.com/story/?id=10",
+        "https://api.mangadex.org/manga/7e2933d2-8587-4c0f-b69c-4233864b96a8/aggregate"
+      ]
+    },
+    {
+      "episode": 10,
+      "field": "volume",
+      "old": 12,
+      "new": 13,
+      "why": "Follows the end_chapter repair: ch 156-161 are volume 13 (MangaDex aggregate vol 13 = 156-167 + bonus 167.5; ousamaranking.fandom's Volume 13 page lists Chapter 156 … Chapter 167 plus the bonus chapter 'Poise of the Poison Forest'; our own stored boundary already reads v13: 156-167). Volume 12 was the volume of MU's (S1) pin, not of this entry's finale.",
+      "sources": [
+        "https://api.mangadex.org/manga/7e2933d2-8587-4c0f-b69c-4233864b96a8/aggregate",
+        "https://ousamaranking.fandom.com/api.php?action=parse&page=Volume_13&prop=wikitext&format=json"
+      ]
+    }
+  ],
+  "type_corrections": [],
+  "structure": {
+    "notes": "ROW IDENTITY (our rows 1-10 were BARE: no title, no air date, afl_slug null — AnimeFillerList has no page for this entry, so there is no filler table to join against). Row | JP title (syobocal joins segments with the full-width slash) | EN title | air date (JST calendar date after midnight):\n 1 | カゲのおつかい／王子とお金 | Kage's Errand / The Prince and Money | 2023-04-14 (01:10)\n 2 | 荒野の獣／ふしぎな砂漠 | Beasts of the Wilderness / A Mysterious Desert | 2023-04-21 (01:05)\n 3 | ヒリングの旧友／ダイダと魔法 | Hiling's Old Friend / Daida and Magic | 2023-04-28 (00:55)\n 4 | 不死と三兄弟 | Immortality and the Three Brothers | 2023-05-05 (01:25)\n 5 | 冥府の掟／恋する白馬／優しき兵士ホクロ | The Laws of the Underworld / A White Horse in Love / The Gentle Soldier, Hokuro | 2023-05-12 (01:55)\n 6 | 王になったボッジ／ダイダ王の憂鬱 | Bojji the King / The Melancholy of King Daida | 2023-05-19 (01:05)\n 7 | 薄ら笑いの蛇使い／四天王の宴 | The Snake Charmer with the Crooked Smile / The Big Four's Banquet | 2023-05-26 (01:15)\n 8 | カゲのあこがれ／偉大な母 | Kage's Yearning / A Great Mother | 2023-06-02 (00:55)\n 9 | ミランジョと魔神／王子と宝物 | Miranjo and the Demon / The Prince and His Treasures | 2023-06-09 (00:55)\n10 | 剣王の復活 | Return of the Sword King | 2023-06-16 (01:10)\nSources: ja-WP 各話リスト（勇気の宝箱）; en-WP 'The Treasure Chest of Courage (2023)' episode table; syobocal TID 6691 (SubTitles list + ProgLookup, earliest airing per Count on ChID 3 = Fuji TV, no 再 flag); the official site's per-episode STORY pages (?id=01 … ?id=10, which also print the segment split and the per-segment staff). All four agree. Date convention: the Noitamina slot is 木曜24:55 / 金曜0:55 — Fuji TV's own listings print the Thursday (and ousamaranking.fandom copies that: 'April 13, 2023' for row 1); ja-WP, en-WP and syobocal all use the post-midnight calendar date, which is what is delivered.\n\nROW COUNT. Exactly 10 episodes (ja-WP 話数=全10話, en-WP, the official site's STORY nav 01-10, AniList 153452). syobocal's ProgLookup carries two further slot rows numbered Count 11 (2023-06-23) and Count 12 (2023-06-30) with EMPTY subtitles: the 06-23 slot carried the special programme 「王様ランキング 勇気の記念碑」 (a talk/retrospective special, flagged separately in the same feed), not an 11th episode. Our 10 rows are correct; do not grow the run from syobocal's Count column.\n\nCHAPTER SPACE. One space: the manga's own 第N話 numbering. 第一部 = ch 1-155 = volumes 1-12; 第二部 = ch 156- = volume 13 onward. MangaDex's aggregate for the series (id 7e2933d2-8587-4c0f-b69c-4233864b96a8) reproduces the tankobon exactly — vol 1 = 1-13, vol 12 = 142-155, vol 13 = 156-167, vol 14 = 168-179 — and every volume ends with a 描き下ろし (drawn-for-the-volume) BONUS chapter that the scanlations label N.5 (13.5, 27.5, 41.5, 55.5, 68.5, 80.5, 92.5, 104.5, 117.5, 129.5, 141.5, 155.5, 167.5, 180.5, 193.5, 205.5 …). Those .5 labels are NOT the source's numbering: the 単話版 digital edition (comic.k-manga / cmoa title 249627, 302 units) publishes only 第N話 units, and ja-WP names the bonus chapters by title alone ('コミックス14巻描き下ろし「冥府に迫る影」', 'コミックス15巻描き下ろしエピソード「盗賊首領 オヤーブ」') — which is exactly MangaDex's 180.5 ('Whereabouts of the Underworld' / 'La sombra se acerca al inframundo') and 193.5, confirming that the .5 units ARE the tankobon bonus chapters. A bonus chapter published inside the tankobon IS the source (the GTO/Toroko rule) — so these rows are not side_source; they are canon/side_story with NO mainline number, i.e. A44 position-less.\nOur stored volume boundary v13: 156-167 agrees with MangaDex. Note also that the mainline has moved past our stored latest_known=276 (cmoa lists 302 単話版 units as of this research); that is a freshness fact for the manga row, not an edition difference.\n\nWHAT THE ANTHOLOGY ADAPTS, per segment (17 segments over 10 rows):\n 1A カゲのおつかい — Despa-training interlude; unidentified (vol 5's bonus 'A Safe Haven' is the candidate, unconfirmed)\n 1B 王子とお金 — vol 8 描き下ろし (MangaDex 104.5, 'Despa's investment')\n 2A 荒野の獣 — vol 6 描き下ろし (MangaDex 80.5); set between eps 11-12 of the 2021 TV series\n 2B ふしぎな砂漠 — unidentified\n 3A ヒリングの旧友 — anime-original antagonist ドドン (ja-WP アニメオリジナルのキャラクター); fills the Hiling/Dorshe exile gap\n 3B ダイダと魔法 — unidentified childhood vignette\n 4  不死と三兄弟 — vol 9 描き下ろし 「不死」 / 'Immortality' (MangaDex 117.5), with anime-original フレン added\n 5A 冥府の掟 — built on anime-original フレン\n 5B 恋する白馬 — expansion of a manga one-liner about Despa's horse\n 5C 優しき兵士ホクロ — unidentified (vol 7 bonus, MangaDex 92.5 'Devocion inquebrantable', is the candidate)\n 6A 王になったボッジ — post-part-one vignette; anime-original ピッピ\n 6B ダイダ王の憂鬱 — post-part-one vignette\n 7A 薄ら笑いの蛇使い — vol 3 描き下ろし 「笑う門には福来る」 (MangaDex 41.5)\n 7B 四天王の宴 — anime-original antagonist チャンピオン (ja-WP)\n 8A カゲのあこがれ — vol 10 描き下ろし candidate (MangaDex 129.5 'Aspiracion')\n 8B 偉大な母 — vol 1 描き下ろし (MangaDex 13.5), itself an expanded remake of Bosse and Sheena's first meeting\n 9A ミランジョと魔神 — young Miranjo and the demon child; prequel vignette\n 9B 王子と宝物 — Bojji's farewell gifts, a coda sitting after ch 155\n10  剣王の復活 — MAINLINE part two: ch 156-161 verified page-for-page, continuing into 162+\n\nTHE HONEST INSTRUMENT. Nine of ten rows take NO anchor: an anthology of volume bonus chapters and gap-filling originals has no forward position, and the chapter map above (plus the side_story annotations) is the whole instrument for rows 1-9. Only row 10 is anchorable, and it is the entry's terminal.\n\nTHE MU PIN (G37, confirmed wrong). MangaUpdates' segment for this work reads 'Vol 12, Chap 155 (S1) The Treasure Chest of Courage covers skipped content'. The '(S1)' label is the 2021-22 TV series' coverage, and ch 155/vol 12 is the last chapter of part one — the main anime's endpoint, not this entry's. The prose after it ('covers skipped content') is MU's note ABOUT this spin-off, not a chapter claim for it. Stored as this entry's end it is a textbook G37 (another entry's frontier stored as this one's end) and it is also an UNDER-statement: ep 10 adapts ch 156-161+, i.e. past MU's number, in volume 13.",
+    "order_only": []
+  },
+  "flags_for_sean": [
+    "ep 10 END is a VERIFIED FLOOR, not a ceiling. ousamaranking.fandom's per-chapter summaries stop at Chapter 161 (the wiki's chapter pages 156-161 were written/edited in Aug 2026 and 162+ do not exist yet). Chapters 156-161 map onto ep 10 beat for beat, but the episode's final act — Ouken beating the golem gatekeepers, addressing the judge's 'superiors', killing a nameless god, finding Desha's cape and crown, and telling his knights that Desha traded his memories — clearly runs into ch 162 and beyond (vol 13 ends at 167). I could not find a second source that summarises 162-167 chapter by chapter: dic.pixiv.net is Cloudflare-403 with no Wayback capture, kurieisha/doublesama block scripted fetches, the storefronts publish no TOC, and MangaDex carries no chapter titles for 162-167. RECOMMEND: re-check the fandom's Chapter 162-167 pages in a later wave and lift END to the true furthest chapter (my expectation is 164-165, with vol 13's tail returning to Bojji and Kage in Kuhya) — delivered at medium confidence for exactly this reason.",
+    "NO type corrections are proposed and all ten rows stay `canon` — deliberately. Six of the seventeen segments are confidently tied to a tankobon 描き下ろし bonus chapter (1B vol 8, 2A vol 6, 4 vol 9, 7A vol 3, 8A vol 10 cand., 8B vol 1) and one row (10) is mainline; the remaining segments are gap-fillers whose manga status I could not settle in either direction. ja-WP does list four ANIME-ORIGINAL characters, all in this anthology — ドドン (ep 3 ヒリングの旧友), フレン (eps 4 and 5 冥府の掟), ピッピ (ep 6 王になったボッジ), チャンピオン (ep 7 四天王の宴) — which is real evidence that eps 3, 5, 6 and 7 carry anime-original material, but a T28 retype (mixed, or filler for a wholly original row) needs the segment-level split and a second source, and the settling document is the tankobon 描き下ろし table, which is not published anywhere I could read. An honest 'canon + side_story + no anchor' beats a guessed filler here; flagging rather than retyping.",
+    "Cross-check-only source used and labelled: dic.pixiv.net's 王様ランキング勇気の宝箱 article states that ep 1's 王子とお金 comes from the vol-8 描き下ろし, ep 2's 荒野の獣 from the vol-6 描き下ろし (and sits between S1 eps 11-12), ep 4 from the vol-9 描き下ろし, and ep 8's カゲのあこがれ from the vol-10 描き下ろし. The live page is Cloudflare-403 and has no Wayback capture, so I could only read it through search-engine excerpts. Each claim I used is corroborated by a source I read directly (MangaDex's bonus-chapter volume placement and es-la titles; the fandom's manga/volume pages; the official per-episode synopses) — none of it stands on the excerpt alone.",
+    "Title language: delivered ENGLISH titles (en-WP + ousamaranking.fandom), matching the catalog's convention in batch 20 (TBATE, orange). Multi-segment rows are joined with ' / ' in broadcast order; syobocal joins the same segments with the full-width ／ and ja-WP/en-WP split them into sub-rows. If the catalog would rather store the Japanese string, every JP title is in structure.notes.",
+    "Air-date convention fork: Fuji TV's own listing and ousamaranking.fandom date every episode to the previous THURSDAY (24:55); ja-WP, en-WP and syobocal use the Friday post-midnight date. Delivered the post-midnight date (3 sources vs 1). If the catalog's house rule is the broadcaster's own calendar day, every date shifts back one day as a block."
+  ]
+}
