@@ -2432,7 +2432,7 @@ A numbered non-season entry the community counts inside the run (an OVA, special
 
 - ruled Sean 2026-08-26 (scripts/ingest/research/batch19/PLAN.md E4; changelog §12.68 (Sean signed the 15 the same day: "components now follow the rows; the rows were not renumbered"; forks: DxD row 0 dropped under N11, the rest not placed))
 - layer **writer**
-- enforced: [lib/rulings/structure.ts#RULED_STRUCTURE](../scripts/ingest/lib/rulings/structure.ts) · [lib/chain.ts#planComponents](../scripts/ingest/lib/chain.ts) · [lib/chain.ts#writeComponents](../scripts/ingest/lib/chain.ts) · [heal-structure.ts#main](../scripts/ingest/heal-structure.ts) · [audit-ui-truth.ts#RULED_EXTRA_KEYS](../scripts/ingest/audit-ui-truth.ts)
+- enforced: [lib/rulings/structure.ts#RULED_STRUCTURE](../scripts/ingest/lib/rulings/structure.ts) · [lib/chain.ts#planComponents](../scripts/ingest/lib/chain.ts) · [lib/chain.ts#writeComponents](../scripts/ingest/lib/chain.ts) · [heal-structure.ts#main](../scripts/ingest/heal-structure.ts) · [audit-ui-truth.ts#RULED_EXTRA_KEYS](../scripts/ingest/audit-ui-truth.ts) · [lib/resolve.ts#resolveSeries](../scripts/ingest/lib/resolve.ts) · [scripts/restructure/system-census.ts#component writers](../scripts/restructure/system-census.ts)
 - audit: `ruling_violation`, `episode_without_component`, `special_numbered_unreviewed`
 - witnesses: durarara, heavens-lost-property, fate-stay-night-unlimited-blade-works, outlaw-star, angel-beats, assassination-classroom
 - aliases: ruled structure, RULED_STRUCTURE, numbered extras, span override, heal-structure, planComponents, E4, batch-19 E4, structure rows

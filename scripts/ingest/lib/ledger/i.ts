@@ -792,6 +792,8 @@ export const RULES: Rule[] = [
       { path: 'scripts/ingest/lib/chain.ts', symbol: 'writeComponents' },
       { path: 'scripts/ingest/heal-structure.ts', symbol: 'main' },
       { path: 'scripts/ingest/audit-ui-truth.ts', symbol: 'RULED_EXTRA_KEYS' },
+      { path: 'scripts/ingest/lib/resolve.ts', symbol: 'resolveSeries' },
+      { path: 'scripts/restructure/system-census.ts', symbol: 'component writers' },
     ],
     layer: 'writer',
     auditClass: ['ruling_violation', 'episode_without_component', 'special_numbered_unreviewed'],
