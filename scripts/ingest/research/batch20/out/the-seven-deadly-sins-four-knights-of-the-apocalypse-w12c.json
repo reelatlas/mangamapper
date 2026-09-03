@@ -1,0 +1,242 @@
+{
+  "series_id": "the-seven-deadly-sins-four-knights-of-the-apocalypse",
+  "summary": "Sub-block C (rows 13-18) is a straight, dense, chapter-continuous adaptation of ch 35 p.9 through ch 58 p.20 (vol 5 -> vol 7) with NO skipped chapter, no anime-original episode and no type change: all six rows stay canon. Three independent instruments agree on every boundary — nanatsu-no-taizai.fandom's page-partitioned |chapters= fields, programming-cafe's anicomi table (episode column AND chapter->episode reverse index), and a per-episode manga-reader review blog that prints '今回のアニメ第N話の内容は原作X巻第M話〜第M話の内容です' for every episode of the run; the licensor's own per-episode synopses (7sins-4knights.net/story/N.html) and ja-WP's 各話リスト corroborate content and dates. Every page split is EXACT: 35 (8+12=20), 38 (15+6=21), 41 (3+17=20), 46 (16+4=20), 55 (1+20=21), 58 (6+14=20) — each sums to the chapter page count on the fandom chapter page, which is what makes the partition trustworthy (the bleach-152 signal). A47 demotes two ENDs that the raw fields would advance: ep 14's 3-page tail of ch 41 and ep 17's 1-page tail of ch 55 are the NEXT episode's (END 40 and 54; the tails stay in chapters_adapted with a partial), and A10 keeps ep 16's 4-page leading scrap of ch 46 out of its START (START 47). The one structural surprise is at the block's top edge: ep 18 ends on ch 58's CLOSING pages (p.15-20, the Guinevere/Lancelot 'あなたの恋人よ' kiss) while ep 19 opens on ch 58 p.1-14 (the hunt for Gawain) — an un-cross-cutting reorder inside one chapter, so ep 18's END is 58 with a rearranged annotation and the continue is C1 IN ch 58. Six anchors, five continue points, no anchor_hostile rows, no repairs.",
+  "anchors": [
+    {
+      "episode": 13,
+      "end_chapter": 38,
+      "start_chapter": 35,
+      "chapters_adapted": "35 (p.9-20), 36, 37, 38 (p.1-15)",
+      "volume": 5,
+      "confidence": "high",
+      "note": "START 35 (A10): the leading partial ch 35 p.9-20 is 12 pages of real content (ep 12 took p.1-8) — programming-cafe's reverse index independently splits ch 35 across '1-12,1-13'. END 38 (A4): ep 13 plays 15 of ch 38's 21 pages — far above the A47 scrap bar, so the END advances even though ep 14 starts on ch 38 (p.16). Both bracketing splits sum exactly to the fandom chapter pages' own page counts (35 = 20, 38 = 21). Volume 5 = the END chapter's volume (V10); vol 5 = ch 33-41. Row displays 35 (A13). Faithfulness clause: the only manga/anime differences are censorship of the baby-Percival gags — canon.",
+      "sources": [
+        "https://nanatsu-no-taizai.fandom.com/api.php?action=parse&page=Four%20Knights%20of%20the%20Apocalypse%20Episode%2013&prop=wikitext&format=json",
+        "https://nissi0725.livedoor.blog/archives/26546009.html",
+        "https://programming-cafe.com/amazon/primevideo/anime/anicomi-mokushirokunoyonkishi-list/",
+        "https://nanatsu-no-taizai.fandom.com/api.php?action=parse&page=Chapter%2038%20(4KOA)&prop=wikitext&format=json",
+        "https://7sins-4knights.net/story/13.html"
+      ]
+    },
+    {
+      "episode": 14,
+      "end_chapter": 40,
+      "start_chapter": 38,
+      "chapters_adapted": "38 (p.16-21), 39, 40, 41 (p.1-3)",
+      "volume": 5,
+      "confidence": "high",
+      "note": "START 38 (A10): the leading partial ch 38 p.16-21 is 6 pages — above the ≤5 sliver bar and no teaser wording, so it counts; programming-cafe's reverse index likewise splits ch 38 across '1-13,1-14'. END 40, NOT 41 (A47): the trailing scrap of ch 41 is 3 pages (p.1-3 of 20) and the next anchored episode, ep 15, STARTS on ch 41 (p.4) — so the tail is ep 15's, the END stays one chapter back, and the tail is named in chapters_adapted with a `partial`. Both independent instruments back the demotion in their own way: programming-cafe's episode table prints ep 14 = 38~40 and its reverse index assigns ch 41 solely to ep 15; the review blog's 'ep 14 = 5巻38話〜41話' is the raw field's view, which A47 overrides. Volume 5 (V10; vol 5 = ch 33-41).",
+      "sources": [
+        "https://nanatsu-no-taizai.fandom.com/api.php?action=parse&page=Four%20Knights%20of%20the%20Apocalypse%20Episode%2014&prop=wikitext&format=json",
+        "https://programming-cafe.com/amazon/primevideo/anime/anicomi-mokushirokunoyonkishi-list/",
+        "https://nissi0725.livedoor.blog/archives/26635461.html",
+        "https://nanatsu-no-taizai.fandom.com/api.php?action=parse&page=Chapter%2041%20(4KOA)&prop=wikitext&format=json",
+        "https://7sins-4knights.net/story/14.html"
+      ]
+    },
+    {
+      "episode": 15,
+      "end_chapter": 46,
+      "start_chapter": 41,
+      "chapters_adapted": "41 (p.4-20), 42, 43, 44, 45, 46 (p.1-16)",
+      "volume": 6,
+      "confidence": "high",
+      "note": "The block's fastest row — ~113 source pages ('かなり進みましたね' in the review blog's own words). START 41 (A10): ch 41 p.4-20 = 17 pages, and ep 14's 3-page opener of that chapter was demoted to a tail by A47, so ep 15 owns ch 41. END 46 (A4): ep 15 plays 16 of ch 46's 20 pages — the bulk, not a scrap, so A47 does not demote even though ep 16 opens on ch 46 p.17. This anchor CROSSES a volume boundary (vol 5 = 33-41, vol 6 = 42-50): the anchor's volume is the END chapter's (V10) = 6, and the blog names the same crossing ('原作5巻第41話〜6巻第46話'). Faithfulness clause: several manga beats are cut or re-staged (Sin's Dark-Talisman briefing, Elgin's name and epithet, the opening sword exchange, Percival's healing moved into a flashback, Sleipnir left unnamed) — alterations inside adapted chapters, so the row stays canon.",
+      "sources": [
+        "https://nanatsu-no-taizai.fandom.com/api.php?action=parse&page=Four%20Knights%20of%20the%20Apocalypse%20Episode%2015&prop=wikitext&format=json",
+        "https://nissi0725.livedoor.blog/archives/26725240.html",
+        "https://programming-cafe.com/amazon/primevideo/anime/anicomi-mokushirokunoyonkishi-list/",
+        "https://nanatsu-no-taizai.fandom.com/api.php?action=parse&page=Volume%206%20(4KOA)&prop=wikitext&format=json",
+        "https://7sins-4knights.net/story/15.html"
+      ]
+    },
+    {
+      "episode": 16,
+      "end_chapter": 50,
+      "start_chapter": 47,
+      "chapters_adapted": "46 (p.17-20), 47, 48, 49, 50",
+      "volume": 6,
+      "confidence": "high",
+      "note": "START 47, NOT 46 (A10): the leading partial of ch 46 is 4 pages (p.17-20 of 20) — at or below the ≤5-page sliver bar, so it does not set the START; it stays in chapters_adapted with a `partial`. programming-cafe agrees in both directions (episode table 47~50; reverse index assigns ch 46 solely to ep 15). END 50 (A4): ch 50 is adapted to its last page — the fandom field carries no page range and ep 17 opens cleanly on ch 51 — so this row needs no continue point. Volume 6 (V10; vol 6 = ch 42-50, so ep 16 lands exactly on the volume's final chapter). Faithfulness clause: only gore censorship differs (Doronach's bisection, Fiddich's and Sleipnir's disintegration) — canon.",
+      "sources": [
+        "https://nanatsu-no-taizai.fandom.com/api.php?action=parse&page=Four%20Knights%20of%20the%20Apocalypse%20Episode%2016&prop=wikitext&format=json",
+        "https://programming-cafe.com/amazon/primevideo/anime/anicomi-mokushirokunoyonkishi-list/",
+        "https://nissi0725.livedoor.blog/archives/26812452.html",
+        "https://nanatsu-no-taizai.fandom.com/api.php?action=parse&page=Chapter%2046%20(4KOA)&prop=wikitext&format=json",
+        "https://7sins-4knights.net/story/16.html"
+      ]
+    },
+    {
+      "episode": 17,
+      "end_chapter": 54,
+      "start_chapter": 51,
+      "chapters_adapted": "51, 52, 53, 54, 55 (p.1)",
+      "volume": 7,
+      "confidence": "high",
+      "note": "START 51 = a clean chapter open (ep 16 ended on ch 50's last page). END 54, NOT 55 (A47): the trailing scrap of ch 55 is ONE page (p.1 of 21) and the next anchored episode, ep 18, STARTS on ch 55 (p.2) — the tail is ep 18's, the END stays at 54, and the single page is named in chapters_adapted with a `partial`. Both independent instruments read it the same way: programming-cafe's episode table prints 51~54 and its reverse index assigns ch 55 solely to ep 18, and the review blog writes 'ep 17 = 原作7巻第51話〜第54話'. Volume 7 (V10; vol 7 = ch 51-59). Faithfulness clause: the fandom page lists a long block of omitted manga details (the guards stopping the group, Dreyfus and Hendrickson talking, Meliodas' Boar Hat and pudding explanations) — cuts inside adapted chapters, so the row stays canon.",
+      "sources": [
+        "https://nanatsu-no-taizai.fandom.com/api.php?action=parse&page=Four%20Knights%20of%20the%20Apocalypse%20Episode%2017&prop=wikitext&format=json",
+        "https://nissi0725.livedoor.blog/archives/26895983.html",
+        "https://programming-cafe.com/amazon/primevideo/anime/anicomi-mokushirokunoyonkishi-list/",
+        "https://nanatsu-no-taizai.fandom.com/api.php?action=parse&page=Chapter%2055%20(4KOA)&prop=wikitext&format=json",
+        "https://7sins-4knights.net/story/17.html"
+      ]
+    },
+    {
+      "episode": 18,
+      "end_chapter": 58,
+      "start_chapter": 55,
+      "chapters_adapted": "55 (p.2-21), 56, 57, 58 (p.15-20)",
+      "volume": 7,
+      "confidence": "high",
+      "note": "START 55 (A10): the leading partial ch 55 p.2-21 is 20 of 21 pages — ep 17 took only the splash page, so ep 18 owns ch 55. END 58 (A4), and A47 does NOT demote it: ep 18 plays ch 58 p.15-20 = 6 pages, above the ≤5 scrap bar, with no teaser/cold-open wording, and — decisively — these are NOT the pages ep 19 starts on. Ep 19 opens on ch 58 p.1-14 (the hunt for Gawain), so ep 18's 6 pages are its own, exclusive, first-time content: the anime UN-CROSS-CUTS ch 58, moving its closing Lancelot thread (the mysterious girl, 'あなたの恋人よ', the kiss) to ep 18's cliffhanger and holding the chapter's search thread for ep 19 — the bleach 152-159 shape, annotated `rearranged`. Two independent sources put ch 58 in ep 18: the fandom field's p.15-20 and the review blog's 'ep 18 = 原作7巻第55話〜第58話', which also compares the kiss scene's dialogue line-by-line against the manga page ('原作では「さっさと帰って寝な 嬢ちゃん」が、アニメでは「お嬢ちゃん」') — proof the scene is source, not an anime addition. programming-cafe's episode table prints 55~57 and its reverse index assigns ch 58 to ep 19 only; that is its consistent behaviour on every UNEVEN page split in this run (it also gave ch 41, 46 and 55 to a single episode while splitting only the near-even 35 and 38), not a contradiction. Volume 7 (V10; vol 7 = ch 51-59).",
+      "sources": [
+        "https://nanatsu-no-taizai.fandom.com/api.php?action=parse&page=Four%20Knights%20of%20the%20Apocalypse%20Episode%2018&prop=wikitext&format=json",
+        "https://nissi0725.livedoor.blog/archives/26981156.html",
+        "https://nanatsu-no-taizai.fandom.com/api.php?action=parse&page=Chapter%2058%20(4KOA)&prop=wikitext&format=json",
+        "https://nanatsu-no-taizai.fandom.com/api.php?action=parse&page=Four%20Knights%20of%20the%20Apocalypse%20Episode%2019&prop=wikitext&format=json",
+        "https://7sins-4knights.net/story/18.html"
+      ]
+    }
+  ],
+  "continue_points": [
+    {
+      "episode": 13,
+      "continue_chapter": 38,
+      "kind": "parity",
+      "note": "C1 — ep 13 stops MID-chapter 38 (p.15 of 21), so resume IN ch 38 (vol 5): the Ardbeg rescue's closing pages are still unread and ep 14 opens on exactly them (p.16). Nothing before ch 38 is left behind — the run is chapter-continuous from ch 1 to here.",
+      "sources": [
+        "https://nanatsu-no-taizai.fandom.com/api.php?action=parse&page=Four%20Knights%20of%20the%20Apocalypse%20Episode%2013&prop=wikitext&format=json",
+        "https://nanatsu-no-taizai.fandom.com/api.php?action=parse&page=Four%20Knights%20of%20the%20Apocalypse%20Episode%2014&prop=wikitext&format=json"
+      ]
+    },
+    {
+      "episode": 14,
+      "continue_chapter": 41,
+      "kind": "parity",
+      "note": "C1 — ep 14 stops 3 pages INTO ch 41 (p.1-3 of 20), so resume IN ch 41 (vol 5). Those three pages have been seen; the rest of ch 41 has not, and ep 15 picks it up at p.4. The END is 40 rather than 41 only because A47 hands that 3-page tail to ep 15 — the reading position is still inside ch 41.",
+      "sources": [
+        "https://nanatsu-no-taizai.fandom.com/api.php?action=parse&page=Four%20Knights%20of%20the%20Apocalypse%20Episode%2014&prop=wikitext&format=json",
+        "https://nanatsu-no-taizai.fandom.com/api.php?action=parse&page=Four%20Knights%20of%20the%20Apocalypse%20Episode%2015&prop=wikitext&format=json"
+      ]
+    },
+    {
+      "episode": 15,
+      "continue_chapter": 46,
+      "kind": "parity",
+      "note": "C1 — ep 15 stops MID-chapter 46 (p.16 of 20), so resume IN ch 46 (vol 6). The last four pages of 'The Realization' are unread and ep 16 opens on them. Ch 46 is vol 6's fifth chapter; nothing from vol 5 is left behind.",
+      "sources": [
+        "https://nanatsu-no-taizai.fandom.com/api.php?action=parse&page=Four%20Knights%20of%20the%20Apocalypse%20Episode%2015&prop=wikitext&format=json",
+        "https://nanatsu-no-taizai.fandom.com/api.php?action=parse&page=Four%20Knights%20of%20the%20Apocalypse%20Episode%2016&prop=wikitext&format=json"
+      ]
+    },
+    {
+      "episode": 17,
+      "continue_chapter": 55,
+      "kind": "parity",
+      "note": "C1 — ep 17 shows only ch 55's opening page (the Tristan splash), so resume IN ch 55 (vol 7): p.2 onwards is unread and ep 18 plays it. The END is 54 rather than 55 because A47 gives that single page to ep 18; the reading position is nonetheless inside ch 55.",
+      "sources": [
+        "https://nanatsu-no-taizai.fandom.com/api.php?action=parse&page=Four%20Knights%20of%20the%20Apocalypse%20Episode%2017&prop=wikitext&format=json",
+        "https://nanatsu-no-taizai.fandom.com/api.php?action=parse&page=Four%20Knights%20of%20the%20Apocalypse%20Episode%2018&prop=wikitext&format=json"
+      ]
+    },
+    {
+      "episode": 18,
+      "continue_chapter": 58,
+      "kind": "parity",
+      "note": "C1 — resume IN ch 58 (vol 7), and read it from the START. Ep 18 jumped to the chapter's CLOSING pages (p.15-20, Lancelot and the mysterious girl) for its cliffhanger and has NOT shown p.1-14 — the hunt for Gawain, Chion and Jade, Gawain hiding as Tantal, Pellegarde reaching Liones. Ep 19 plays those pages next, so parity is exact: pick ch 58 up at page 1 and expect its last six pages to be a re-read.",
+      "sources": [
+        "https://nanatsu-no-taizai.fandom.com/api.php?action=parse&page=Four%20Knights%20of%20the%20Apocalypse%20Episode%2018&prop=wikitext&format=json",
+        "https://nanatsu-no-taizai.fandom.com/api.php?action=parse&page=Four%20Knights%20of%20the%20Apocalypse%20Episode%2019&prop=wikitext&format=json",
+        "https://nissi0725.livedoor.blog/archives/27069253.html"
+      ]
+    }
+  ],
+  "anchor_hostile": [],
+  "annotations": [
+    {
+      "episodes": [13],
+      "kind": "partial",
+      "chapters": "35 (p.9-20), 38 (p.1-15)",
+      "note": "Both ends are page splits: ch 35 is shared with ep 12 (p.1-8 there, p.9-20 here) and ch 38 with ep 14 (p.1-15 here, p.16-21 there). Named per A10/A47 so the boundary is visible; neither split moves the anchor (12 and 15 pages, both far above the scrap bar)."
+    },
+    {
+      "episodes": [14],
+      "kind": "partial",
+      "chapters": "38 (p.16-21), 41 (p.1-3)",
+      "note": "The 6-page opener of ch 38 sets the START (A10); the 3-page tail of ch 41 does NOT set the END (A47) — ep 15 starts on ch 41 p.4, so the tail is ep 15's and ep 14's END stays 40."
+    },
+    {
+      "episodes": [15],
+      "kind": "partial",
+      "chapters": "41 (p.4-20), 46 (p.1-16)",
+      "note": "Ch 41 is shared with ep 14 (p.1-3 there) and ch 46 with ep 16 (p.17-20 there). Ep 15 holds the bulk of both, so it owns the START (41) and the END (46)."
+    },
+    {
+      "episodes": [15],
+      "kind": "divergence",
+      "chapters": "41-46",
+      "note": "Faithfulness clause (T28, Sean 2026-09-02): several source beats are cut or re-staged inside the adapted chapters — Sin's Dark-Talisman briefing and strategy, Elgin's name and epithet, the opening sword exchange with Nasiens, Percival's group-healing moved into a flashback, Sleipnir left unnamed. Alterations of the source's own events, no original story share; the row stays canon."
+    },
+    {
+      "episodes": [16],
+      "kind": "partial",
+      "chapters": "46 (p.17-20)",
+      "note": "A 4-page leading scrap of ch 46 opens the episode. Below the A10 sliver bar, so it does NOT set the START (which is 47); it is carried here so the ch-46 split (p.1-16 in ep 15) stays visible."
+    },
+    {
+      "episodes": [17],
+      "kind": "partial",
+      "chapters": "55 (p.1)",
+      "note": "A single page of ch 55 (the Tristan splash) closes the episode. A47: the next episode starts on ch 55, and one page is far below the scrap bar, so the END stays 54."
+    },
+    {
+      "episodes": [17],
+      "kind": "divergence",
+      "chapters": "51-54",
+      "note": "Faithfulness clause: a long list of source details is omitted — the guards stopping Donny, Nasiens and Anne before Lancelot intervenes; Dreyfus talking with Hendrickson; Meliodas explaining the Boar Hat, the Coffin fragment and the pudding. Cuts inside adapted chapters; canon."
+    },
+    {
+      "episodes": [18],
+      "kind": "partial",
+      "chapters": "55 (p.2-21), 58 (p.15-20)",
+      "note": "Ch 55 is shared with ep 17 (p.1 there, p.2-21 here — 20 of 21 pages, so ep 18 owns the START) and ch 58 with ep 19 (p.15-20 here, p.1-14 there)."
+    },
+    {
+      "episodes": [18],
+      "kind": "rearranged",
+      "chapters": "58 (p.15-20)",
+      "note": "An un-cross-cutting reorder inside one chapter: Suzuki cuts ch 58 between the hunt for Gawain (p.1-14) and Lancelot's meeting with the mysterious girl (p.15-20); the anime separates the threads, running the Lancelot thread as ep 18's closing cliffhanger and holding the hunt for ep 19's opening. Ep 18's 6 pages are exclusive first-time content, so the END advances to 58 (A47's page bar not met, and the pages are not ep 19's), while the continue is C1 back at ch 58 p.1. A second, smaller reorder in the same episode: the anime also plays Bartra's new prophecy before the OP, which the manga places later in the span (noted by the review blog)."
+    },
+    {
+      "episodes": [13],
+      "kind": "divergence",
+      "chapters": "38",
+      "note": "Faithfulness clause: only censorship differs in the baby-Percival sequence (his body covered; poking Ardbeg's eye instead of urinating on him; a stomach press instead of a choke). Canon."
+    },
+    {
+      "episodes": [14],
+      "kind": "divergence",
+      "chapters": "39-40",
+      "note": "Faithfulness clause: gore reduced (Fiddich dismembers Tamdhu into many pieces rather than three, less blood), and one small studio-made beat — Gowther shown revealing Ardbeg's circumstances to Anghalhad through his power. Noted, never weighed toward mixed."
+    },
+    {
+      "episodes": [16],
+      "kind": "divergence",
+      "chapters": "47-50",
+      "note": "Faithfulness clause: censorship only (Doronach's bisection cut; Fiddich's and Sleipnir's disintegration under Shining Road not shown; Nasiens does not identify Lancelot's arrows). Canon."
+    }
+  ],
+  "repairs": [],
+  "type_corrections": [],
+  "structure": {
+    "notes": "SUB-BLOCK C, rows 13-18 (lane A2, wave 12). HANDOFFS: my first row, ep 13, OPENS on ch 35 p.9 (vol 5) — sub-block B's ep 12 closes on ch 35 p.8, so the ch-35 split (8 + 12 = 20 pages) is the seam. My last row, ep 18, CLOSES on ch 58 p.20 (vol 7) and hands to sub-block D's ep 19, which STARTS on ch 58 p.1 — a page-level back-jump inside one chapter (see the rearranged annotation); sub-block D should expect ep 19's START to be 58 by pages with its running-order body at 59-61, not a plain 58-61 range. ENDs across my block are monotone (38, 40, 46, 50, 54, 58) and sit inside the outer fence ch 1 -> ch 77 (ep 24).\n\nVOLUME BOUNDARY TABLE (the stored table is EMPTY; delivered here for v1-v9, the whole S1 span). v1 = 1-5 (ISBN 978-4065229828), v2 = 6-14 (978-4065235799), v3 = 15-23 (978-4065248386), v4 = 24-32 (978-4065259993), v5 = 33-41 (978-4065266014), v6 = 42-50 (978-4065272862), v7 = 51-59 (978-4065279113), v8 = 60-68 (978-4065286562), v9 = 69-77 (978-4065294871). THREE independent instruments agree chapter for chapter: nanatsu-no-taizai.fandom's Volume N (4KOA) pages (each lists its nine chapters explicitly; v1 lists five), the |volume= field on every 4KOA chapter infobox, and programming-cafe's 単行本 column (which opens 第5巻 at 33, 第6巻 at 42, 第7巻 at 51, 第8巻 at 60, 第9巻 at 69). A fourth, weaker corroboration is per-episode: the review blog labels every episode with its volume ('第13話 = 原作5巻', '第15話 = 原作5巻…6巻', '第17話/第18話 = 原作7巻'), which matches. Kodansha's own kc.kodansha.co.jp product pages render client-side and expose no 初出 text for these KC volumes — the ISBNs above are the citable publisher key; no 初出 claim is made from them. Anchor volumes follow V10 (the END chapter's volume): ep 13 -> 5, ep 14 -> 5, ep 15 -> 6, ep 16 -> 6, ep 17 -> 7, ep 18 -> 7. Note ep 15 CROSSES the v5/v6 boundary (START 41 in v5, END 46 in v6) and ep 16 lands exactly on v6's last chapter (50).\n\nCHAPTER SPACE. One space throughout: the manga's own Weekly Shonen Magazine serialization numbering, used identically by the fandom chapter infoboxes (|chapter=, |wsm= issue, |volume=), by programming-cafe's 話数 column and by MU. No edition conversion; the parent Nanatsu no Taizai has its own numbering and is not involved.\n\nPAGE-PARTITION EXACTNESS (the trust signal). Every split in this block sums to the chapter's own page count as printed on its fandom chapter page: ch 35 = 20 pages (ep 12 p.1-8 + ep 13 p.9-20), ch 38 = 21 (ep 13 p.1-15 + ep 14 p.16-21), ch 41 = 20 (ep 14 p.1-3 + ep 15 p.4-20), ch 46 = 20 (ep 15 p.1-16 + ep 16 p.17-20), ch 55 = 21 (ep 17 p.1 + ep 18 p.2-21), ch 58 = 20 (ep 18 p.15-20 + ep 19 p.1-14). Each shared chapter is split exactly once across two rows with no page counted twice and none lost — the bleach-152 signal that these fields are a real page-level reading rather than a reading-position header.\n\nTHE THIRD INSTRUMENT (new this sub-block). nissi0725.livedoor.blog is a per-episode review blog by a manga reader who prints, in every episode article, the sentence '今回のアニメ第N話の内容は原作X巻第M話〜第M話の内容です'. Recovered via the monthly archives (2024-01.html, 2024-02.html), it gives: ep 12 = 4巻32-35, ep 13 = 5巻35-38, ep 14 = 5巻38-41, ep 15 = 5巻41〜6巻46, ep 16 = 6巻46-50, ep 17 = 7巻51-54, ep 18 = 7巻55-58, ep 19 = 7巻58〜8巻61. That is the fandom fields' boundary set exactly, INCLUDING the small tails at 41 and 58 and the correct exclusion of ch 55 from ep 17 — and it is independent of the fandom (it is a Japanese watch-along written from the tankobon, and it quotes manga dialogue line by line, e.g. the ep-18 kiss scene's '嬢ちゃん' -> 'お嬢ちゃん' change). It is a fan source and is used as a corroborator alongside the fandom field, never alone.\n\nWHERE THE THREE INSTRUMENTS DIVERGE, AND WHY IT IS NOT A CONFLICT. programming-cafe's anicomi list carries two tables. Its EPISODE table gives ep 13 = 35~38, 14 = 38~40, 15 = 41~46, 16 = 47~50, 17 = 51~54, 18 = 55~57, 19 = 58~61. Its chapter->episode REVERSE index splits only the near-even shares (ch 35 -> '1-12,1-13'; ch 38 -> '1-13,1-14') and assigns every UNEVEN split to a single episode (41 -> 1-15, 46 -> 1-15, 55 -> 1-18, 58 -> 1-19). So programming-cafe systematically drops a small fragment rather than contradicting it — which is exactly what A47/A10 do anyway at ch 41 (ep 14 END 40), ch 46 (ep 16 START 47) and ch 55 (ep 17 END 54), and is why its ep 18 = 55~57 is not evidence against ep 18's 6-page share of ch 58 (fandom + the blog both carry it, and the blog compares the scene's manga dialogue directly).\n\nTYPES. All six rows stay canon; AFL's canon claim is right on every one. There is no anime-original episode and no skipped chapter anywhere in ch 35-58 — the run is continuous. Every per-episode Manga/Anime Differences list on the wiki is cuts, censorship or re-staging (the faithfulness clause, T28 2026-09-02), plus one small studio-made beat in ep 14 (Gowther shown revealing Ardbeg's past to Anghalhad) which is noted as divergence and not weighed toward mixed. No recap segments appear in this block, so the recap clause never fires.\n\nSOURCE HYGIENE (inherited from wave 9, re-confirmed). sevendeadlysins.fandom.com is an ALIAS of nanatsu-no-taizai.fandom.com — ONE wiki, cited once. animefillerguide has no page for this series. ja.wikipedia's article is '黙示録の四騎士 (漫画)' (the bare title is a disambiguation page); its 各話リスト has staff and 初放送日 only — no 原作 column — and it confirms every stored title and date in this block (第13話 追い詰められる者 1月14日 … 第18話 予言の騎士の邂逅 2月18日), all on the unbroken Sunday 16:30 TBS slot. NEW this sub-block: the licensor's own per-episode synopses are LIVE at https://7sins-4knights.net/story/N.html (the /story/ index loads them by XHR via assets/js/story.js — fetch the numbered fragment directly; 4knights-anime.com is dead and has no Wayback capture, and the TV Tokyo path 404s). b-ch.com renders its synopses client-side and yielded nothing.",
+    "order_only": []
+  },
+  "flags_for_sean": [
+    "ep 18 END 58 — the one judgement call in the block. Ep 18 plays ch 58 p.15-20 (6 pages, the Guinevere/Lancelot kiss) as its cliffhanger while ep 19 plays ch 58 p.1-14; A47 does not demote (above the 5-page bar, no teaser wording, and the pages are NOT the ones the next episode starts on), so the END advances to 58 with a `rearranged` annotation and a C1 continue back at ch 58 p.1. Two sources carry it (fandom's page-partitioned field; the review blog's 'ep 18 = 原作7巻第55話〜第58話', which quotes the scene's manga dialogue). programming-cafe's episode table says 55~57 — its consistent behaviour on uneven splits, not a contradiction. If you would rather the END stay at 57, the continue does not move (it is 58 either way) and only the anchor's end_chapter changes.",
+    "VOLUME BOUNDARIES: the stored table is empty for this manga and the full v1-v9 table (chapter ranges + ISBNs, three agreeing sources) is in structure.notes. Worth landing as boundary rows for the whole S1 span in one go rather than per sub-block — six anchors here carry volumes 5/5/6/6/7/7 that the empty table cannot currently corroborate.",
+    "A NEW REUSABLE INSTRUMENT for this series: nissi0725.livedoor.blog publishes a per-episode 原作X巻第M話〜第M話 line for the whole run (S1 and S2). Recovered through the monthly archives, not search. It agreed with the fandom fields on all eight boundaries I checked, including the two that A47 demotes. Fan-tier, so paired with the fandom field everywhere, never cited alone — but it is the cheapest cross-check for the remaining sub-blocks and for S2.",
+    "Also newly located: the licensor's per-episode synopses at https://7sins-4knights.net/story/<N>.html (XHR fragments behind the /story/ index). Every episode of S1 and S2 has one. The context's 4knights-anime.com is dead with no Wayback capture — worth correcting in the series' source notes."
+  ]
+}
