@@ -1,0 +1,200 @@
+{
+  "series_id": "dragon-quest-the-adventure-of-dai",
+  "summary": "Episodes 48-53 adapt the Hadlar Royal Guard block continuously and with zero filler: catalog chapters 170-193 (vols 19-21), ~4 chapters an episode, every episode ending mid-chapter. The block's one structural surprise is a chapter-SPACE finding, not a content one: dragonquest.fandom numbers the mainline chapters continuously, while OUR catalog (total_chapters=349 and the stored v1-v37 boundary table) counts the unnumbered vol-13 side story 【番外編】勇者アバン as chapter 122 — so from that point on the fandom's number is one BELOW ours, and every anchor here is delivered in the catalog's space (fandom + 1). The check that settles it: the fandom's own chapter-page `volume` fields agree with our stored volume table only under the +1 conversion (fandom ch 179 'The Assassin's Dagger!! Fenbren' is fandom vol 20 = catalog 180 in our v20 180-189; read as '179' it would land in our v19). Content-wise the run also REORDERS three times: ep 51 opens on a cold-open graft of ch 189 (Hadlar coughing blood / Hym's pledge, shown straight instead of as ch 189's flashback), ep 52 pulls Hyunckel's Field-of-Death scenes forward out of ch 190 and shows one panel of ch 194, and ep 53 then adapts 189 and 190 in running order — so the ENDs (A4, running order) are 173 / 178 / 182 / 185 / 188 / 193 and the grafts stay in chapters_adapted. Continues are all C1: every one of eps 49-53 stops inside a chapter the next episode finishes.",
+  "anchors": [
+    {
+      "episode": 48,
+      "end_chapter": 173,
+      "start_chapter": 170,
+      "chapters_adapted": "170 (bulk; ep 47 took only its opening), 171, 172, 173",
+      "volume": 19,
+      "confidence": "high",
+      "note": "CATALOG chapter space (= fandom 169-172 + 1; see structure.notes). START 170 by A10 + the bulk rule: the ch-170 page credits '47 (partial), 48' with ep 48 unmarked, and TV Tokyo's licensor synopsis opens the episode on '北の勇者ノヴァ登場' — ch 170 is titled 北の勇者 'The Hero of the North'. The synopsis then runs Nova vs Hym and 'オリハルコン戦士の真の恐ろしさ' = ch 171 超金属の驚異 / ch 172 無敵!!親衛騎団 (which namesakes the episode title ハドラー親衛騎団). The episode's own Manga-differences list closes on 'Matoriv does not call Medroa a double-edged sword' = ch 173 両刃の剣, and ch 173 is credited to ep 48 alone, so the END is a clean chapter boundary (no continue needed). A4/A10.",
+      "sources": [
+        "https://dragonquest.fandom.com/wiki/The_Adventure_of_Dai_(2020)_episode_48",
+        "https://dragonquest.fandom.com/wiki/The_Adventure_of_Dai_chapter_169",
+        "https://www.tv-tokyo.co.jp/broad_tvtokyo/program/detail/202109/25972_202109110930.html",
+        "https://en.wikipedia.org/wiki/List_of_Dragon_Quest:_The_Adventure_of_Dai_volumes"
+      ]
+    },
+    {
+      "episode": 49,
+      "end_chapter": 178,
+      "start_chapter": 174,
+      "chapters_adapted": "174, 175, 176, 177, 178 (partial)",
+      "volume": 19,
+      "confidence": "high",
+      "note": "CATALOG space (= fandom 173-177 + 1). Clean START: ch 174 is credited to ep 49 alone and ch 173 to ep 48 alone. Namesake is exact — ch 174 激突!!!集団戦闘 is read 'Gekitotsu!!! PATI BATORU' (en-WP's own transliteration), i.e. the episode title パーティーバトル開始. TV Tokyo's synopsis names the five-man party vs the Royal Guard and 'チームワーク' = ch 178 正邪のチームワーク, and the episode's last Manga-difference is 'Albinass does tell the Guard to evade the Medroa' — the Medroa climax inside ch 178, which ep 50 then completes. END 178 mid-chapter (A4; A47 does not demote it — ep 49's share of 178 carries the chapter's climax, not a teaser scrap).",
+      "sources": [
+        "https://dragonquest.fandom.com/wiki/The_Adventure_of_Dai_(2020)_episode_49",
+        "https://dragonquest.fandom.com/wiki/The_Adventure_of_Dai_chapter_177",
+        "https://www.tv-tokyo.co.jp/broad_tvtokyo/program/detail/202109/25972_202109180930.html",
+        "https://en.wikipedia.org/wiki/List_of_Dragon_Quest:_The_Adventure_of_Dai_volumes"
+      ]
+    },
+    {
+      "episode": 50,
+      "end_chapter": 182,
+      "start_chapter": 178,
+      "chapters_adapted": "178 (completion), 179, 180, 181, 182 (partial)",
+      "volume": 20,
+      "confidence": "high",
+      "note": "CATALOG space (= fandom 177-181 + 1). START 178 under A10 — the leading partial counts (it is not a sliver/teaser/cold open: the episode's first four Manga-differences are all ch-178 aftermath, Block's leg, Sigma's line, the Guard's three Zooms). The ch-178 page credits '49 (partial), 50' with ep 50 unmarked (bulk here); NB the episode page's own forward field marks 178 '(partial)' too — the two directions of the one wiki disagree on the mark, not on the chapter. TV Tokyo's synopsis is entirely Chiu / 獣王遊撃隊 / 死の大地 = ch 179 決戦場への誘い! through ch 181 小さき者の意地!, and the episode's Manga-differences close on 'Fenbren torturing Chiu is abridged' and 'Baran's face is seen' — the Baran rescue that gives ch 182 its title 意外なる救援 'Unexpected Reinforcements'. END 182 mid-chapter, C1.",
+      "sources": [
+        "https://dragonquest.fandom.com/wiki/The_Adventure_of_Dai_(2020)_episode_50",
+        "https://dragonquest.fandom.com/wiki/The_Adventure_of_Dai_chapter_181",
+        "https://www.tv-tokyo.co.jp/broad_tvtokyo/program/detail/202109/25972_202109250930.html",
+        "https://en.wikipedia.org/wiki/List_of_Dragon_Quest:_The_Adventure_of_Dai_volumes"
+      ]
+    },
+    {
+      "episode": 51,
+      "end_chapter": 185,
+      "start_chapter": 182,
+      "chapters_adapted": "182 (completion), 183, 184, 185 (partial); cold-open graft: 189 (partial)",
+      "volume": 20,
+      "confidence": "high",
+      "note": "CATALOG space (= fandom 181-184 + 1, plus fandom 188 = catalog 189). The episode OPENS on a graft, not on mainline: its first Manga-difference is 'Hadlar coughing blood and Hym making his pledge are shown earlier and not via flashback' — material the manga carries inside ch 189 開かれし扉!!!, which ep 53 adapts in running order. A12/A10: a relocated later opener is never the START, so START = the mainline resumption at ch 182. Mynavi/Dengeki's episode write-ups confirm the mainline opening beat — Popp, Hyunckel and Crocodine reach the Field of Death, find Chiu and realise Baran saved him = ch 182's second half. TV Tokyo: 'バランの真意は一体!?' = ch 183 真魔大戦勃発!!?, 'ヒュンケルは友のためバランに立ち向かう' = ch 184 誓いの魔槍 into ch 185 勝負…!!! (the 無刀陣 / Bloody Scryde duel that gives the episode its title). END 185 mid-chapter (A4 running order — the ch-189 graft never advances the END), C1.",
+      "sources": [
+        "https://dragonquest.fandom.com/wiki/The_Adventure_of_Dai_(2020)_episode_51",
+        "https://dragonquest.fandom.com/wiki/The_Adventure_of_Dai_chapter_184",
+        "https://www.tv-tokyo.co.jp/broad_tvtokyo/program/detail/202110/25972_202110020930.html",
+        "https://en.wikipedia.org/wiki/List_of_Dragon_Quest:_The_Adventure_of_Dai_volumes",
+        "https://news.mynavi.jp/article/20211001-1988395/"
+      ]
+    },
+    {
+      "episode": 52,
+      "end_chapter": 188,
+      "start_chapter": 185,
+      "chapters_adapted": "185 (completion), 186, 187, 188 (partial); grafts: 190 (partial), 194 (1 panel)",
+      "volume": 20,
+      "confidence": "high",
+      "note": "CATALOG space (= fandom 184-187 + 1; grafts = fandom 189 and 193 + 1). START 185 under A10 — the episode opens on ch 185's aftermath (its first Manga-differences are 'Baran's introduction is longer, Leona questioning him' and 'Amy is seen nursing Hyunckel'), not a sliver. Exact namesake: ch 186 父子竜出陣!!! IS the episode title 父子竜出陣. TV Tokyo: 'ダイと父バランが共闘し魔宮の門を破壊する作戦' = ch 187 突撃!! 大魔宮, and the synopsis's closing line '魔宮の門には親子を待ち構える者の姿が―！' is Fenbren at the undersea gate = the opening of ch 188 海底の復讐者!! — the episode also stages his Twin Sword Pinning, so A47 does not demote the END to 187 (the share is a fought scene, not a ≤5-page teaser). The two grafts: Hyunckel's Field-of-Death scenes are 'added much earlier than his appearance' (out of ch 190 戦火の告白, adapted in place in ep 53) and one panel of ch 194 (adapted in ep 54). END 188 mid-chapter, C1.",
+      "sources": [
+        "https://dragonquest.fandom.com/wiki/The_Adventure_of_Dai_(2020)_episode_52",
+        "https://dragonquest.fandom.com/wiki/The_Adventure_of_Dai_chapter_187",
+        "https://www.tv-tokyo.co.jp/broad_tvtokyo/program/detail/202110/25972_202110090930.html",
+        "https://en.wikipedia.org/wiki/List_of_Dragon_Quest:_The_Adventure_of_Dai_volumes"
+      ]
+    },
+    {
+      "episode": 53,
+      "end_chapter": 193,
+      "start_chapter": 188,
+      "chapters_adapted": "188 (completion), 189, 190 (remainder; its Hyunckel scenes ran in ep 52), 191, 192, 193 (partial)",
+      "volume": 21,
+      "confidence": "high",
+      "note": "CATALOG space (= fandom 187-192 + 1). START 188 under A10 — the episode continues the undersea gate fight ('Dai charged his sword with Draconic Aura when he kills Fenbren'); TV Tokyo: 'ダイたちは魔宮の門の前でハドラー親衛騎団と激闘'. Namesake: ch 191 ハドラー不敵な挑戦! = the episode title ハドラーの挑戦; TV Tokyo's closing line '奥には超魔生物と化したハドラーが一人待ち構えていた' is that chapter's setup, and ch 192 決意の先陣!! is the Dai/Baran argument over who takes the lead. The END reaches ch 193 爆弾を抱えた魔王!!!: the episode's last Manga-difference is Hadlar bombarding Dai with Boom, and the p-tenchan321 episode write-up (cross-check tier) reports the episode closes on the reveal that Hadlar is carrying a bomb inside his body — ch 193's title beat. A47 considered and not applied: ep 54 does start on 193, but ep 53's share carries the chapter's own title event, not a teaser scrap. END 193 mid-chapter, C1.",
+      "sources": [
+        "https://dragonquest.fandom.com/wiki/The_Adventure_of_Dai_(2020)_episode_53",
+        "https://dragonquest.fandom.com/wiki/The_Adventure_of_Dai_chapter_192",
+        "https://www.tv-tokyo.co.jp/broad_tvtokyo/program/detail/202110/25972_202110160930.html",
+        "https://en.wikipedia.org/wiki/List_of_Dragon_Quest:_The_Adventure_of_Dai_volumes",
+        "https://p-tenchan321.hatenablog.com/entry/dai53"
+      ]
+    }
+  ],
+  "continue_points": [
+    {
+      "episode": 49,
+      "continue_chapter": 178,
+      "kind": "parity",
+      "note": "ends inside ch 178 正邪のチームワーク, on Popp's Medroa; ep 50 finishes the chapter (C1)",
+      "sources": [
+        "https://dragonquest.fandom.com/wiki/The_Adventure_of_Dai_chapter_177"
+      ]
+    },
+    {
+      "episode": 50,
+      "continue_chapter": 182,
+      "kind": "parity",
+      "note": "ends inside ch 182 意外なる救援, on Baran's face; ep 51 finishes the chapter (C1)",
+      "sources": [
+        "https://dragonquest.fandom.com/wiki/The_Adventure_of_Dai_chapter_181"
+      ]
+    },
+    {
+      "episode": 51,
+      "continue_chapter": 185,
+      "kind": "parity",
+      "note": "ends inside ch 185 勝負…!!! (the Hyunckel/Baran duel); ep 52 finishes the chapter (C1). This episode also cold-opens with part of ch 189 — no skip is needed, ep 53 adapts 189 in place",
+      "sources": [
+        "https://dragonquest.fandom.com/wiki/The_Adventure_of_Dai_chapter_184"
+      ]
+    },
+    {
+      "episode": 52,
+      "continue_chapter": 188,
+      "kind": "parity",
+      "note": "ends inside ch 188 海底の復讐者!! (Fenbren at the undersea gate); ep 53 finishes the chapter (C1). Its grafts of ch 190 and one panel of ch 194 need no skip — eps 53 and 54 adapt those chapters in place",
+      "sources": [
+        "https://dragonquest.fandom.com/wiki/The_Adventure_of_Dai_chapter_187"
+      ]
+    },
+    {
+      "episode": 53,
+      "continue_chapter": 193,
+      "kind": "parity",
+      "note": "ends inside ch 193 爆弾を抱えた魔王!!!, on the reveal that Hadlar carries the black core; ep 54 continues in the same chapter (C1)",
+      "sources": [
+        "https://dragonquest.fandom.com/wiki/The_Adventure_of_Dai_chapter_192",
+        "https://dragonquest.fandom.com/wiki/The_Adventure_of_Dai_(2020)_episode_54"
+      ]
+    }
+  ],
+  "anchor_hostile": [],
+  "annotations": [
+    {
+      "episodes": [
+        51,
+        53
+      ],
+      "kind": "rearranged",
+      "chapters": "189",
+      "note": "ch 189 開かれし扉!!! is split across two episodes out of order: ep 51 cold-opens with Hadlar coughing blood and Hym's pledge (the manga carries them as a flashback inside 189) played straight, and ep 53 adapts 189 in running order. The ch-189 page credits both episodes ('51 (partial), 53'); the graft never advances ep 51's END (A4)."
+    },
+    {
+      "episodes": [
+        52,
+        53
+      ],
+      "kind": "rearranged",
+      "chapters": "190",
+      "note": "Hyunckel's Field-of-Death scenes from ch 190 戦火の告白 are 'added much earlier than his appearance' in ep 52; the rest of 190 runs in ep 53. The ch-190 page credits '52 (partial), 53 (partial)'."
+    },
+    {
+      "episodes": [
+        52
+      ],
+      "kind": "graft",
+      "chapters": "194 (1 panel)",
+      "note": "a single panel of ch 194 攻撃不能...!? appears in ep 52; ch 194 itself is adapted in ep 54. The chapter page credits ep 54 only — the panel is recorded on the episode page's forward field."
+    },
+    {
+      "episodes": [
+        48,
+        49,
+        50,
+        51,
+        52,
+        53
+      ],
+      "kind": "divergence",
+      "chapters": "170-193",
+      "note": "faithfulness-clause divergences only: each episode's page lists a long block of line-level alterations (cut internal monologue spoken aloud, added flashbacks, an added Fenbren report in ep 51, Popp's game-status page shown in ep 52). No anime-original plot; all six rows stay canon (T27/T28 faithfulness clause)."
+    }
+  ],
+  "repairs": [],
+  "type_corrections": [],
+  "structure": {
+    "notes": "CHAPTER SPACE — the finding of this sub-block, and a SERIES-LEVEL fork for the whole of wave 13. Two numbering spaces are in play. (1) OUR catalog: total_chapters=349 and the stored volume table (v13: 114-122, v14: 123-132, v15: 133-141, v16: 142-151, v17: 152-161, v18: 162-170, v19: 171-179, v20: 180-189, v21: 190-198) — identical to en-WP's 'List of ... volumes' running numbers, which reserve a slot for the UNNUMBERED vol-13 side story 【番外編】勇者アバン (en-WP prints it as '* SP.' between *121 覇者の剣 and vol 14's *123 決勝戦の異変!!, so its numbering skips 122). (2) dragonquest.fandom numbers mainline chapters continuously and gives the 番外編 no number, so fandom 122 = 決勝戦の異変!! = catalog 123. From there on FANDOM = CATALOG - 1. Both wikis agree on the physical volume contents (fandom's own 'The Adventure of Dai volumes' page lists the 番外編 at the end of vol 13); ja-WP states the mainline is 全343話 '読切や番外編を除いて', and 343 mainline + 5 pre-serialisation 読切 + 1 番外編 = 349 = our total. Confirmed independently by the wave-13 sub-block C agent and the coordinator (2026-09-02): the fandom's own 'The Hero Avan' page gives previous chapter 121 / next chapter 122 in TANKOBON terms, and en-WP + MangaDex agree with our numbering from 123 on. The decisive check available here is the stored VOLUME table: the fandom's own chapter-page `volume` fields line up with it only under the +1 conversion (fandom ch 179 凶刃!!フェンブレン is fandom vol 20; as catalog 180 it sits in our v20 180-189, whereas an anchor written '179' would fall in our v19 — an anchor_volume_mismatch). EVERY anchor in this file is therefore in the CATALOG space, with the fandom number given in each note; the fandom source URLs use the fandom number (catalog - 1). Batch 17's stored anchors (eps 1-17, ch 1-60) sit below the divergence and are unaffected, so they cannot arbitrate — but sub-block c (eps 30-35) and everything after crosses ch 122 and needs the SAME ruling or the seven files will not join. VOLUME FIELD CONVENTION: all 18 stored dai anchors carry the volume of their END chapter (ep 4 END 12 = v2 while its START 9 is v1); this file follows that. FENCE / HANDOFF: my first row (ep 48) opens on catalog ch 170 北の勇者 — ep 47 (sub-block e) took only its opening, so the two rows share ch 170 and A47 may apply to ep 47's END; my last row (ep 53) ends inside catalog ch 193, and ep 54 (sub-block g) starts on 193 per its fandom page (fandom '192 (partial), 193, 194, 195, 196' = catalog 193 (partial), 194-197). ENDs within this file are strictly monotone: 173 < 178 < 182 < 185 < 188 < 193, all above the lower fence ep 17 -> 60. ROW IDENTITY: ja-WP's 各話リスト（2020）confirms our six rows' titles and dates exactly (第48話 ハドラー親衛騎団 9月11日 ... 第53話 ハドラーの挑戦 10月16日) and carries NO 原作 column; TV Tokyo's per-broadcast pages confirm the same titles/dates and supply the licensor synopses used above. The fandom's 'episode 37.5' recap special remains outside our 1-100 numbering. NO filler in this block: all six rows are dense, continuous adaptation.",
+    "order_only": []
+  },
+  "flags_for_sean": [
+    "CHAPTER-SPACE FORK (series-level, affects all seven wave-13 sub-blocks and the ep-100 MU pin): dragonquest.fandom's chapter numbers run ONE BELOW our catalog's from ch 123 on, because our total (349) and our stored volume table count the unnumbered vol-13 side story 【番外編】勇者アバン as chapter 122 and the fandom does not. This file delivers the CATALOG space (fandom + 1), justified by the stored volume boundaries; if a sibling sub-block delivers raw fandom numbers the files will disagree by 1 at the ep 47/48 and ep 53/54 seams. One ruling is needed for the whole wave. RULED by the coordinator mid-task (2026-09-02): OUR chapter = fandom + 1 for fandom N >= 122 — this file already complies. Evidence: en-WP volume list ('* SP.' with no number between *121 and *123), fandom's own 'The Adventure of Dai volumes' page (番外編 listed inside vol 13), ja-WP '読切や番外編を除いて全343話'. Cross-confirmed by sub-block C (fandom's 'The Hero Avan' page prev 121 / next 122 tankobon; MangaDex agrees with our numbering from 123).",
+    "One-wiki disagreement on ch 178's split marks: the ep-50 page's forward field says '177 (partial)' (= catalog 178) while the ch-178 page's reverse field leaves ep 50 unmarked (i.e. bulk). Both directions are the same wiki. START 178 is delivered under A10 (a leading partial counts unless it is a sliver/teaser/cold open) and does not depend on which mark is right.",
+    "A47 was considered and NOT applied on eps 49, 50, 51, 52, 53 — every one of them ends inside the chapter the next episode starts on, but in each case the share carries a named, fought scene or the chapter's own title beat rather than a <=5-page or teaser-worded scrap. The tightest of the five is ep 52's share of ch 188 (Fenbren's confrontation at the gate + his Twin Sword Pinning); if the apply layer's sliverEnd disagrees there, ep 52's END demotes to 187 and 188 stays in chapters_adapted as a partial.",
+    "No per-episode licensor STORY pages survive for this range: dq-dai.com is 403 to fetch and the Wayback Machine holds its /episode/ pages only up to ep 15. TV Tokyo's per-broadcast programme pages (cited per anchor) are the licensor instrument used instead."
+  ]
+}
