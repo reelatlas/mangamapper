@@ -1,0 +1,197 @@
+{
+  "series_id": "naruto-shippuden",
+  "summary": "Rows 385-392 are the close of the anime arc 忍界大戦・うちはオビト (Birth of the Ten-Tails' Jinchūriki), and they run a clean monotone 653 → 660 inside the fence (ep 384 ends on ch 652, ep 393 opens inside ch 660). Ch 653 is split across TWO episodes: ep 385 takes its first half (Naruto reaffirms Obito's existence → 'there is no shortcut to being Hokage'), ep 386 its second half (Obito's Team-Minato reminiscence → Naruto's outstretched hand); the padding that makes one 17-page chapter fill 40 minutes is a set of newly-animated Obito/Kakashi/Rin vignettes the manga only alludes to (the Academy sparring match, Minato handing out chūnin-exam forms on the bridge, Rin bandaging Obito's hand), so the stored `mixed` on both rows stands. Ep 387 = 654 + 655 in full, ep 391 = the rest of 656 + all of 657, ep 392 = 658, 659 and most of 660 (it stops on Shukaku deflecting the Susanoo sword and Madara reattaching the chain — mid-660, C1). THE FINDING: ep 388 'My First Friend' is stored (and AFL-labelled) FILLER, but three independent sources refute that — Narutopedia's episode infobox carries chapters=656 and its arc page counts ep 388 inside the arc's canon run ('episodes 378 to 388 … interposed by two Hanabi stand-alone episodes', i.e. 389-390 only); ja-WP's 各話リスト bolds 376/377, 389/390 and 394+ as anime-original and leaves 388 unbolded; AFG prints '* Mixed' with the canon windows 2:05-5:18 and 20:42-21:05. What sits between those windows is a retrospective of Gaara's ALREADY-ANIMATED Part-I childhood (ANN's reviewer: 'if you've been watching this series for a while, you've seen everything there is to see in this episode'), which under the T28 recap clause counts for nothing; the remainder is pure ch-656 adaptation, so ep 388 is proposed CANON. It matters: ch 656's opening third (Naruto's Big Ball Rasenshuriken landing, Hashirama's Wood Dragon and torii seals, Gaara's request to Shukaku, the beasts agreeing to join) is adapted ONLY here — ep 391 recaps that beat in one line and then continues from 656's middle. Eps 389-390 (the Hanabi two-parter) are confirmed filler on four sources and take nothing (A1).",
+  "anchors": [
+    {
+      "episode": 385,
+      "end_chapter": 653,
+      "start_chapter": 653,
+      "chapters_adapted": "653 (first half: Naruto reaffirms Obito's existence, the 'Second Six Paths' retort, the shortcut-to-Hokage argument)",
+      "volume": 68,
+      "confidence": "high",
+      "note": "A4/A10: the episode opens exactly on ch 653's first page (ep 384 closes on ch 652's last beat, 'I am Obito Uchiha') and stops mid-chapter — Narutopedia's ep-385 summary is verbatim ch 653's first paragraph, and en-WP's season-18 summary runs the same beats and no further. A47 is NOT engaged: ep 386 also starts on 653, but ep 385's 653 material is its whole canon content and the chapter's OPENING, not a trailing scrap of a chapter reached from behind. TITLE TRAP: the episode's title うちはオビト is ch 599's title, not this chapter's — the content, not the title, sets the anchor. Ch 653 = vol 68 (648-657).",
+      "sources": [
+        "https://naruto.fandom.com/wiki/Obito_Uchiha_(episode)",
+        "https://naruto.fandom.com/wiki/I%27m_Watching_You",
+        "https://en.wikipedia.org/wiki/Naruto:_Shippuden_season_18"
+      ]
+    },
+    {
+      "episode": 386,
+      "end_chapter": 653,
+      "start_chapter": 653,
+      "chapters_adapted": "653 (second half: Obito's Team-Minato/Rin reminiscence, the bonds argument, Naruto's outstretched hand)",
+      "volume": 68,
+      "confidence": "high",
+      "note": "A4: finishes ch 653 — the episode ends on the chapter's last beat (Naruto reaches his hand out and calls Obito back to Konoha), which is where ch 654 opens ('Naruto reaches out his hand to Obito. However, instead of accepting it…'). Narutopedia ep-386 chapters=653 and its summary is ch 653's closing paragraph verbatim; en-WP's summary ends on the same beat. No continue: the row lands on a chapter boundary. Ch 653 = vol 68.",
+      "sources": [
+        "https://naruto.fandom.com/wiki/I%27m_Always_Watching",
+        "https://naruto.fandom.com/wiki/I%27m_Watching_You",
+        "https://naruto.fandom.com/wiki/It_was_Obito_Uchiha",
+        "https://en.wikipedia.org/wiki/Naruto:_Shippuden_season_18"
+      ]
+    },
+    {
+      "episode": 387,
+      "end_chapter": 655,
+      "start_chapter": 654,
+      "chapters_adapted": "654, 655",
+      "volume": 68,
+      "confidence": "high",
+      "note": "A4/A10: two full chapters. START = ch 654's first page (Obito strangles the outstretched hand); END = ch 655's last page (Naruto's Big Ball Rasenshuriken swollen into a beacon that lights his comrades' footsteps) — Narutopedia's ep-387 chapters=654, 655 and both chapter pages' closing lines match the episode's closing line word for word; en-WP's summary ends identically. Clean chapter boundary, so no continue point (ep 388 opens on ch 656's first page). Chs 654-655 = vol 68.",
+      "sources": [
+        "https://naruto.fandom.com/wiki/The_Promise_That_Was_Kept",
+        "https://naruto.fandom.com/wiki/It_was_Obito_Uchiha",
+        "https://naruto.fandom.com/wiki/Furrow",
+        "https://en.wikipedia.org/wiki/Naruto:_Shippuden_season_18"
+      ]
+    },
+    {
+      "episode": 388,
+      "end_chapter": 656,
+      "start_chapter": 656,
+      "chapters_adapted": "656 (opening third: the Big Ball Rasenshuriken lands and Hashirama pins Madara with the Wood Dragon and the Gate of the Great God torii, Sai escorts Naruto, Gaara asks Shukaku for help and the tanuki agrees, the other beasts join to repay Naruto)",
+      "volume": 68,
+      "confidence": "medium",
+      "note": "CONDITIONAL ON THE TYPE REPAIR BELOW (A1: a filler row may not carry this anchor — if Sean keeps ep 388 filler, drop this anchor and read the ch-656 opening as covered nowhere). The anchor itself is solid on content: Narutopedia's ep-388 infobox reads chapters=656 and its summary + en-WP's summary both run ch 656's opening beats in the chapter's own order; AFG marks the canon windows at 2:05-5:18 and 20:42-21:05. This is the ONLY adaptation of ch 656's opening third — ep 391 replays it in a single recap line ('Madara is subjugated by Hashirama after Naruto's earlier attack failed') and then continues from 656's middle. Ends mid-656 → C1. A47 not engaged: 656 is the episode's whole (and leading) source content, not a trailing scrap. Ch 656 = vol 68.",
+      "sources": [
+        "https://naruto.fandom.com/wiki/My_First_Friend",
+        "https://naruto.fandom.com/wiki/Shift",
+        "https://en.wikipedia.org/wiki/Naruto:_Shippuden_season_18",
+        "https://www.animefillerguide.com/anime/naruto-shippuden/"
+      ]
+    },
+    {
+      "episode": 391,
+      "end_chapter": 657,
+      "start_chapter": 656,
+      "chapters_adapted": "656 (remainder: Yin-Kurama assures Minato that Obito will survive, Obito's Samsara of Heavenly Life resolve, Black Zetsu seizes his body, Madara fully revived), 657",
+      "volume": 68,
+      "confidence": "high",
+      "note": "A4/A10: START = ch 656's middle (Kurama's line to Minato) — the pages ep 388 did not take; the episode's first line ('Madara is subjugated by Hashirama after Naruto's earlier attack failed to deal damage') is a one-sentence recap of ep 388's beat, not a re-adaptation, so it does not move the START back. END = ch 657's last page ('Madara eyes his target to the tailed beasts, determined to hunt them down'). Narutopedia ep-391 chapters=656, 657; both chapter pages' beat order matches the episode's; en-WP's summary runs 656-middle → 657-end. Clean END boundary → no continue (ep 392 opens on 658). Chs 656-657 = vol 68.",
+      "sources": [
+        "https://naruto.fandom.com/wiki/Madara_Uchiha_Arises",
+        "https://naruto.fandom.com/wiki/Shift",
+        "https://naruto.fandom.com/wiki/Madara_Uchiha_is_Back",
+        "https://en.wikipedia.org/wiki/Naruto:_Shippuden_season_18"
+      ]
+    },
+    {
+      "episode": 392,
+      "end_chapter": 660,
+      "start_chapter": 658,
+      "chapters_adapted": "658, 659, 660 (through Shukaku deflecting the Susanoo sword with its Absolute Defence and Madara breaking and reattaching Gaara's chain; the rest of 660 opens ep 393)",
+      "volume": 69,
+      "confidence": "high",
+      "note": "A4/A10: START = ch 658's first page (the Alliance falls back and the beasts charge); the run 658 → 659 → 660 is monotone and matches the chapter pages beat for beat (Sand Buckshot and the Desert Layered Imperial Funeral Seal = 658; the Demonic Statue summoned, Kakashi's Kamui takes its arm, Limbo: Border Jail and the chains = 659; Naruto unable to leave Tailed Beast Mode, Gaara's Desert Hands, Shukaku's Bunpuku memory and the 'heart/acceptance' realisation = 660). It stops MID-660: ch 660's tail (B severing a tentacle, Kurama's favour to Gaara, Naruto ejected and falling) is ep 393's opening, whose Narutopedia infobox reads chapters=660, 661, 662 → C1 continue at 660. A47 not engaged: ep 392 carries roughly the first two-thirds of 660, not a ≤5-page scrap. Ch 660 = vol 69 (658-668). END 660 sits under the fence anchor ep 393 → 661.",
+      "sources": [
+        "https://naruto.fandom.com/wiki/The_Hidden_Heart_(episode)",
+        "https://naruto.fandom.com/wiki/Tailed_Beasts_vs._Madara%E2%80%A6!!",
+        "https://naruto.fandom.com/wiki/Limbo:_Border_Jail%E2%80%A6!!",
+        "https://naruto.fandom.com/wiki/The_Hidden_Heart",
+        "https://en.wikipedia.org/wiki/Naruto:_Shippuden_season_18"
+      ]
+    }
+  ],
+  "continue_points": [
+    {
+      "episode": 385,
+      "continue_chapter": 653,
+      "kind": "parity",
+      "note": "C1: the episode stops in the middle of ch 653 (after the shortcut-to-Hokage exchange) — ep 386 finishes the chapter. Resume inside ch 653, at Obito's reminiscence of Rin.",
+      "sources": [
+        "https://naruto.fandom.com/wiki/Obito_Uchiha_(episode)",
+        "https://naruto.fandom.com/wiki/I%27m_Always_Watching",
+        "https://naruto.fandom.com/wiki/I%27m_Watching_You"
+      ]
+    },
+    {
+      "episode": 388,
+      "continue_chapter": 656,
+      "kind": "parity",
+      "note": "C1: the episode stops inside ch 656 (the beasts set out for Madara). Resume inside ch 656 at Kurama's assurance to Minato — the anime returns to that exact point in ep 391, after the two anime-original Hanabi episodes 389-390, which cover no manga at all.",
+      "sources": [
+        "https://naruto.fandom.com/wiki/My_First_Friend",
+        "https://naruto.fandom.com/wiki/Shift",
+        "https://naruto.fandom.com/wiki/Madara_Uchiha_Arises"
+      ]
+    },
+    {
+      "episode": 392,
+      "continue_chapter": 660,
+      "kind": "parity",
+      "note": "C1: the episode stops in the middle of ch 660, on Shukaku's Absolute Defence and Madara reattaching the chain. Resume inside ch 660 — its last pages (Killer B severing a tentacle, Kurama asking Gaara a favour, Naruto ejected from Tailed Beast Mode and falling) open ep 393, which runs on through 661-662.",
+      "sources": [
+        "https://naruto.fandom.com/wiki/The_Hidden_Heart_(episode)",
+        "https://naruto.fandom.com/wiki/The_Hidden_Heart",
+        "https://naruto.fandom.com/wiki/A_True_Ending",
+        "https://en.wikipedia.org/wiki/Naruto:_Shippuden_season_18"
+      ]
+    }
+  ],
+  "anchor_hostile": [],
+  "annotations": [
+    {
+      "episodes": [385, 386],
+      "kind": "partial",
+      "chapters": "653",
+      "note": "One 17-page chapter stretched over two full episodes. The manga's ch 653 only ALLUDES to Obito's memories ('Obito reflects more on his past and Rin'); the anime dramatises them as newly-animated Team-Minato vignettes that are not in the manga's own Obito-past chapters (601-606, adapted much earlier) — the Academy sparring match in which child Obito and child Kakashi use the same moves as their adult fight, Minato handing his team chūnin-exam application forms on the bridge where Kakashi would later hand them to Team 7, Rin bandaging Obito's hand, child Guy, a jōnin posting exam results. Narutopedia's per-episode trivia records these as the anime's own scenes. That inserted material is roughly half of each episode's running time, which is why both rows are `mixed` and not `canon` (T28); it is anime-original expansion, NOT a recap of already-animated events, so the recap clause does not apply here."
+    },
+    {
+      "episodes": [388],
+      "kind": "divergence",
+      "chapters": "656",
+      "note": "T28 RECAP CLAUSE: the source adaptation occupies only AFG's windows 2:05-5:18 and 20:42-21:05; everything between is a retrospective of Gaara's Part-I childhood — the villagers' fear, Yashamaru, the Fourth Kazekage, and his first meeting with Naruto — all of it already animated in Naruto Part I and progressing nothing (ANN's episode review: 'you've seen everything there is to see in this episode… this episode utterly destroys what little momentum the last episode succeeded in building'). A recap segment counts for nothing in the standing; the remainder is pure ch-656 adaptation, hence canon + this divergence record rather than mixed or filler."
+    },
+    {
+      "episodes": [391],
+      "kind": "partial",
+      "chapters": "656, 657",
+      "note": "Picks ch 656 up mid-chapter (Yin-Kurama's assurance to Minato) after the ep 388 / 389-390 break and finishes it, then adapts 657 whole. The opening line about Hashirama having subjugated Madara is a one-sentence recap of ep 388's beat, not a re-adaptation."
+    },
+    {
+      "episodes": [392],
+      "kind": "partial",
+      "chapters": "660",
+      "note": "Chs 658 and 659 are adapted whole; ch 660 is split — the episode ends on Shukaku's Absolute Defence and Madara reattaching Gaara's chain, and 660's last pages open ep 393. Contrary to the stored batch-8 note, this episode is NOT 'largely anime-original': every beat in Narutopedia's and en-WP's summaries maps onto 658-660 in the chapters' own order."
+    }
+  ],
+  "repairs": [
+    {
+      "episode": 392,
+      "field": "annotation_note",
+      "old": "eps 391,392 partial {656-660}: research-tier batch 8 (2026-08-23): ep 391 = 656-657; ep 392 largely anime-original; 658-660 compressed around the boundary",
+      "new": "ep 391 = ch 656 (remainder) + 657 in full; ep 392 = ch 658 and 659 in full + ch 660 up to Shukaku's Absolute Defence (660's tail opens ep 393). Neither episode is 'largely anime-original'.",
+      "why": "The stored batch-8 note's claim that ep 392 is largely anime-original is contradicted by the page-level record: Narutopedia's ep-392 infobox reads chapters=658, 659, 660 and both its summary and en-WP's season-18 summary walk 658 → 659 → 660 in the chapters' own beat order with no original plot. Leaving the note in place invites a future agent to demote the row or refuse its anchor. The 391 half of the note (656-657) is correct and is kept.",
+      "sources": [
+        "https://naruto.fandom.com/wiki/The_Hidden_Heart_(episode)",
+        "https://naruto.fandom.com/wiki/Tailed_Beasts_vs._Madara%E2%80%A6!!",
+        "https://naruto.fandom.com/wiki/Limbo:_Border_Jail%E2%80%A6!!",
+        "https://en.wikipedia.org/wiki/Naruto:_Shippuden_season_18"
+      ]
+    }
+  ],
+  "type_corrections": [
+    {
+      "episodes": [388],
+      "type": "canon",
+      "note": "Stored filler (AFL: filler) → canon. THREE independent sources refute 'filler': (1) Narutopedia's ep-388 infobox carries arc=Birth of the Ten-Tails' Jinchūriki and chapters=656 — while eps 389 and 390 carry NO arc field and NO chapters field, the standard tell for anime-original rows; the same wiki's arc page states the arc runs 'from episodes 378 to 388' and is 'interposed by two stand-alone episodes involving Hanabi Hyūga', naming 389-390 and not 388. (2) ja-WP's 各話リスト bolds anime-original subtitles — 376/377 (九尾強奪指令 / ナルト対メカナルト), 389/390 (憧れの姉さま / ハナビの決意) and the whole 394+ ナルトの背中 block are bold; ep 388 最初の友 is UNBOLDED, i.e. the positive claim that it is adapted. (3) AFG prints '* Mixed, in this episode we only watch from minute 2:05 to 5:18 and then from minute 20:42 to 21:05' — a canon/non-canon split, not filler. CANON rather than mixed under the T28 RECAP CLAUSE: the ~15 minutes between AFG's windows are a retrospective of Gaara's already-animated Part-I childhood (ANN's review: 'you've seen everything there is to see in this episode'), which progresses nothing and counts for nothing in the standing; the remainder is pure ch-656 adaptation with no anime-original plot. This matters for position, not just labels: ch 656's opening third (the Wood Dragon and torii seals on Madara, Gaara's request to Shukaku, the beasts agreeing) is adapted ONLY in this episode — ep 391 recaps it in one line and resumes from 656's middle — so a filler typing would mark those pages never-adapted.",
+      "sources": [
+        "https://naruto.fandom.com/wiki/My_First_Friend",
+        "https://naruto.fandom.com/wiki/Birth_of_the_Ten-Tails%27_Jinch%C5%ABriki",
+        "https://ja.wikipedia.org/wiki/NARUTO_-%E3%83%8A%E3%83%AB%E3%83%88-_%E7%96%BE%E9%A2%A8%E4%BC%9D",
+        "https://www.animefillerguide.com/anime/naruto-shippuden/",
+        "https://www.animenewsnetwork.com/review/naruto-shippuden/episode-388/.81526"
+      ]
+    }
+  ],
+  "structure": {
+    "notes": "ROW IDENTITY: Narutopedia's episode numbers, ja-WP's 各話リスト (話数 column), en-WP's season-18 list, AFL and AFG all join to OUR rows 385-393 on TITLE and AIR DATE with no offset. Eps 389 and 390 share the air date 2014-12-04 (the 映画公開直前スペシャル 日向の姉妹〜変わらぬ運命〜 hour block) and every source counts them as two rows, as we do; ja-WP's 通算話 column reads 605-613 across rows 385-393 — those are CUMULATIVE episode numbers (Naruto 220 + Shippuden N), never chapters, and an index join there would fabricate anchors in the 600s that happen to look plausible for this arc. WHERE MY FIRST ROW OPENS: ep 385 opens on ch 653's first page. Ep 384 (another agent's block) is Narutopedia chapters=651, 652 and closes on ch 652's last beat — Naruto declaring 'you are Obito Uchiha' and that he will tear off the real mask — so there is no seam question at 384/385. UPPER FENCE: my ENDs run 653, 653, 655, 656, 657, 660, all monotone and all under the stored fence anchor ep 393 → 661; ep 392's continue points into ep 393's material (ch 660's tail). CHAPTER SPACE: the manga's own numbering, 700 chapters / 72 volumes; the arc's own chapter table on Narutopedia gives 653-657 = vol 68 and 658-668 = vol 69, matching our stored volume boundaries exactly. TITLE TRAPS IN THIS BLOCK: ep 385 うちはオビト is ch 599's title, not ch 653's (it adapts 653); ep 392 裏の心 IS ch 660's title (a true match); ep 386 ちゃんと見てる is a near-match for ch 653 'I'm Watching You' — Narutopedia itself disambiguates the two with a {{looking for}} hatnote. SOURCE BEHAVIOUR: AFG's CHAPTER column is empty from the mid-300s on in this series (the known 'AFG's chapter column can simply stop mid-series' shape) — in this range AFG is a TYPE source with timestamps only, and its type column is NOT a copy of AFL's here (they disagree on ep 388: AFL filler, AFG mixed), so they count as two. AFL and AFG also disagree on 385/386 in the other direction — AFL says mixed, AFG prints no marker at all (i.e. treats them as canon); we keep the stored `mixed`, because the padding is demonstrably large (one 17-page chapter across two episodes) and Narutopedia's own trivia records the inserted vignettes as anime scenes. A47: no END in this block advances on a trailing scrap — ep 385's and ep 388's shared-chapter content is each episode's LEADING and only source content, not a tail of a chapter the next episode starts on, so no END is pulled back. FILLER ROWS (A1, no anchors): 389 and 390 are the Hinata/Hanabi two-parter — no arc field, no chapters field on Narutopedia, bold on ja-WP, 'Filler' on both AFL and AFG, and the arc page names them as the block that interposes the arc. Their content is a retelling of Part-I events (the Hyūga heiress duel, Neji's Chūnin-Exam match, Pain's assault) from Hanabi's point of view; the stored `graft` annotation with a null chapters field is left as-is.",
+    "order_only": []
+  },
+  "flags_for_sean": [
+    "TYPE FORK, ep 388 (the one judgment call in this block). That ep 388 is NOT filler is high-confidence (Narutopedia chapters=656 + arc membership 378-388; ja-WP unbolded among bolded neighbours; AFG '* Mixed'). Whether it is CANON or MIXED turns on how you read the ~15-minute Gaara retrospective. I read it as a RECAP (already-animated Part-I backstory, progressing nothing — ANN: 'you've seen everything there is to see in this episode'), which under the T28 recap clause counts for nothing and leaves a pure ch-656 remainder → canon. The counter-reading: AFG itself calls the episode 'Mixed', the retrospective is newly animated rather than recycled footage, and its framing beat (Son Gokū asking Gaara whether he is Naruto's friend, Gaara answering 'my first friend') is not in ch 656's summary and may be the studio's own. If you take that reading, ep 388 → mixed instead. EITHER WAY the anchor is unchanged (canon and mixed both take anchors); only a decision to LEAVE it filler kills the anchor, and that would mark ch 656's opening third never-adapted, which is false.",
+    "FENCE, outside my block — the stored ep 393 → 661 may be one chapter short. Narutopedia's ep-393 infobox reads chapters=660, 661, 662; the episode's title 本当の終わり matches ch 662 'The True End'; en-WP's season-18 summary for ep 393 runs through Sasuke being impaled by Madara and Sakura/Karin's grief, which is ch 662's material; and the stored continue on ep 393 is already 663 (parity), which only makes sense if 662 was covered. Under A4 the END would be 662, vol 69. I did NOT repair it — it is another block's row and I verified it only at summary level, not page level — but it is a cheap check for whoever holds 393.",
+    "AFL DEFECT RECORD for this series' type column: AFL prints 'filler' on ep 388, which three sources contradict, and 'mixed' on eps 385/386, where AFG prints nothing. Where AFL and AFG disagree in this range, AFG's timestamped windows proved the better instrument (they name the exact canon minutes); AFL's per-row labels in the war arc should not be taken as a standing on their own."
+  ]
+}
