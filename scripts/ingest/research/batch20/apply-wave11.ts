@@ -29,11 +29,16 @@ const SERIES: { sid: string; files: string[]; upperFence: number }[] = [
 const FENCE_REPAIR: { sid: string; episode: number; set: Record<string, unknown>; why: string }[] = [
   { sid: 'kingdom', episode: 103, set: { chapter: 363, start_chapter: 360, chapters_adapted: '359 (p.14-18), 360-363, 364 (p.1-5)' }, why: 'A47 (kingdom-w11a): the S3 finale ends on ch 364\'s first pages (Kyou Kai rejoining the unit, 364 p.1-5 — the fandom\'s Episode 103 page contradicts its own infobox; pcafe assigns 364 to S4 ep 1; ep 104 opens on 364 p.6) — the tail is ep 104\'s; END 364 → 363 (closes the wave-2 flag).' },
   { sid: 'bleach', episode: 203, set: { start_chapter: 313, chapters_adapted: '313, 314, 315' }, why: 'Enrichment (bleach-w11b, three sources; the verifier: carry the span so start_without_span cannot list it): ep 203 opens on ch 313 — the 202 → 203 seam is no longer interpolated.' },
+  { sid: 'naruto-shippuden', episode: 393, set: { chapter: 662, start_chapter: 660, chapters_adapted: '660 (tail), 661, 662', volume: 69 }, why: 'The wave-11 shippuden verifier CONFIRMED the flag: ep 393 adapts ch 660\'s tail + 661 + 662 in full (its last line = ch 662\'s last sentence verbatim; Narutopedia infobox 660, 661, 662; AFG; en-WP) — the stored END 661 was one short and contradicted its own continue 663. 661 → 662 [660] v69.' },
   { sid: 'bleach', episode: 167, set: { start_chapter: 284, chapters_adapted: '284, 285, 286 (p.1-8)' }, why: 'Enrichment (bleach-w11a + the verifier): ep 167 = ch 284-286 p.8 in front of the 22-episode Amagai arc (A47: an 8-page share is substantive — END 286 stands); its continue 286 is precedented (127 → 229, 146 → 247 across filler blocks). Sean ruled the fence-row addition in scope.' },
 ];
 // continues on rows outside the target ranges (fence-row additions — kept only where Sean rules them in scope)
 const CONTINUE_SKIP = new Set<string>([]); // e.g. 'bleach#167' to drop the addition
 const NOTE_FIX: Record<string, string> = {};
+// chapters_adapted corrections from the verifiers (the value stands; the record's wording is fixed)
+const CA_OVERRIDE: Record<string, string> = {
+  'naruto-shippuden#388': '656 (opening third: the Big Ball Rasenshuriken lands and Hashirama pins Madara with the Wood Dragon, Sai escorts Naruto, Gaara asks Shukaku for help and the tanuki agrees, the other beasts join to repay Naruto)', // the Gate of the Great God torii beat is ep 391's (verifier)
+};
 
 async function main() {
   const runId = DRY ? 0 : await startRun('resolve');
@@ -58,7 +63,7 @@ async function main() {
       const vol = volOf(verdict.end); const agentVol = a.volume != null ? Number(a.volume) : null;
       if (vol != null && agentVol !== vol) revol++;
       const fix = NOTE_FIX[`${sid}#${a.episode}#anchor`];
-      const row = { series_id: sid, episode: Number(a.episode), chapter: verdict.end, start_chapter: a.start_chapter != null ? Number(a.start_chapter) : null, chapters_adapted: a.chapters_adapted ?? null, volume: vol ?? agentVol, source: 'manual', note: `${moved ? `A47: END normalized ${a.end_chapter} → ${verdict.end}. ` : ''}${fix ? `${fix} ` : ''}${a.note ?? ''} [${(a.sources ?? []).slice(0, 2).join(' ; ')}] ${B}`.slice(0, 600) };
+      const row = { series_id: sid, episode: Number(a.episode), chapter: verdict.end, start_chapter: a.start_chapter != null ? Number(a.start_chapter) : null, chapters_adapted: CA_OVERRIDE[`${sid}#${a.episode}`] ?? a.chapters_adapted ?? null, volume: vol ?? agentVol, source: 'manual', note: `${moved ? `A47: END normalized ${a.end_chapter} → ${verdict.end}. ` : ''}${fix ? `${fix} ` : ''}${a.note ?? ''} [${(a.sources ?? []).slice(0, 2).join(' ; ')}] ${B}`.slice(0, 600) };
       console.log(`  anchor ep ${row.episode} → ${row.start_chapter ?? '·'}-${row.chapter} v${row.volume}${moved ? ` (A47 normalized from ${a.end_chapter})` : ''}${vol != null && agentVol !== vol ? ` (volume derived: agent said v${agentVol})` : ''}`);
       if (!DRY) { const { error } = await db.from('chapter_anchors').upsert(row, { onConflict: 'series_id,episode' }); if (error) throw new Error(`${sid} ep${a.episode}: ${error.message}`); }
       anchors++;
