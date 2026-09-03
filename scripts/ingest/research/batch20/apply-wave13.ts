@@ -33,9 +33,12 @@ const ANNOTATION_ADD: { sid: string; episode: number; kind: AnnotationKind; chap
   { sid: 'dragon-quest-the-adventure-of-dai', episode: 17, kind: 'rearranged', chapters: '60', note: 'The a-c verifier: ep 17\'s ch-60 share is the relocated Crocodine-sends-Dai beat (the fandom ep-17 差分 verbatim) — a relocation, not first-time coverage; END 59 (A47).' },
 ];
 // A47 CONVENTION (Sean rules, WAVE13-RECOVERY §THE DECISIONS): A/B HOLD on 最初/序盤 tails; C ADVANCED on the same shape (30 → 108, 31 → 111, 32 → 114). Under the HOLD convention: 30 → 107, 31 → 110, 32 → 113 + partials; continues unchanged.
-const HOLD_C = true;
-const END_OVERRIDE: Record<string, number> = HOLD_C ? { 'dragon-quest-the-adventure-of-dai#30': 107, 'dragon-quest-the-adventure-of-dai#31': 110, 'dragon-quest-the-adventure-of-dai#32': 113 } : {};
+// THE A47 CONVENTION FOR THIS SERIES (Sean rules, WAVE13-RECOVERY §THE DECISIONS): A47 as written is an EXCEPTION that needs evidence — a ≤5-page tail or scrappy wording; an unquantified 最初/序盤 share is a real share of unknown size → the END ADVANCES (A4), the tail named as `partial`. C/D/E/F/G delivered that way (holds only on quantified tails: 46, 47, 56, 57); A/B held on position language. Under the ruled convention A/B's four position-language holds ADVANCE (23 → 82, 25 → 90, 28 → 101, 29 → 104 — their continues already sit there); ep 17 → 59 stands on the relocation evidence. HOLD_C = false leaves C as delivered.
+const HOLD_C = false;
+const END_OVERRIDE: Record<string, number> = HOLD_C ? { 'dragon-quest-the-adventure-of-dai#30': 107, 'dragon-quest-the-adventure-of-dai#31': 110, 'dragon-quest-the-adventure-of-dai#32': 113 } : { 'dragon-quest-the-adventure-of-dai#23': 82, 'dragon-quest-the-adventure-of-dai#25': 90, 'dragon-quest-the-adventure-of-dai#28': 101, 'dragon-quest-the-adventure-of-dai#29': 104 };
 const HOLD_PARTIALS: { episode: number; chapters: string }[] = HOLD_C ? [{ episode: 30, chapters: '108 (序盤 — ep 31 starts on it)' }, { episode: 31, chapters: '111 (序盤 — ep 32 starts on it)' }, { episode: 32, chapters: '114 (序盤 — ep 33 starts on it)' }] : [];
+// the d-g verifier: D's ep 39 START 135 and E's ep 42 START 150 applied opposite rules to the same shape (a first-time remainder of a chapter three back) — one rule: E's (the stored ep-7 shape): START = the running-order chapter, the back-jump stays `rearranged`
+const START_OVERRIDE: Record<string, number> = { 'dragon-quest-the-adventure-of-dai#39': 138 };
 // continues on rows outside the target ranges (fence-row additions — kept only where Sean rules them in scope)
 const CONTINUE_SKIP = new Set<string>([]); // e.g. 'bleach#167' to drop the addition
 const NOTE_FIX: Record<string, string> = {};
@@ -63,11 +66,12 @@ async function main() {
       const ruled = END_OVERRIDE[`${sid}#${a.episode}`];
       const verdict = ruled != null ? { ...sliverEnd(a.chapters_adapted, ruled, nextStart), end: ruled } : sliverEnd(a.chapters_adapted, Number(a.end_chapter), nextStart);
       const moved = verdict.end !== Number(a.end_chapter); if (moved) normalized++;
+      const startMoved = START_OVERRIDE[`${sid}#${a.episode}`] != null && START_OVERRIDE[`${sid}#${a.episode}`] !== Number(a.start_chapter);
       const vol = volOf(verdict.end); const agentVol = a.volume != null ? Number(a.volume) : null;
       if (vol != null && agentVol !== vol) revol++;
       const fix = NOTE_FIX[`${sid}#${a.episode}#anchor`];
-      const row = { series_id: sid, episode: Number(a.episode), chapter: verdict.end, start_chapter: a.start_chapter != null ? Number(a.start_chapter) : null, chapters_adapted: CA_OVERRIDE[`${sid}#${a.episode}`] ?? a.chapters_adapted ?? null, volume: vol ?? agentVol, source: 'manual', note: `${moved ? `A47: END normalized ${a.end_chapter} → ${verdict.end}. ` : ''}${fix ? `${fix} ` : ''}${a.note ?? ''} [${(a.sources ?? []).slice(0, 2).join(' ; ')}] ${B}`.slice(0, 600) };
-      console.log(`  anchor ep ${row.episode} → ${row.start_chapter ?? '·'}-${row.chapter} v${row.volume}${moved ? ` (A47 normalized from ${a.end_chapter})` : ''}${vol != null && agentVol !== vol ? ` (volume derived: agent said v${agentVol})` : ''}`);
+      const row = { series_id: sid, episode: Number(a.episode), chapter: verdict.end, start_chapter: START_OVERRIDE[`${sid}#${a.episode}`] ?? (a.start_chapter != null ? Number(a.start_chapter) : null), chapters_adapted: CA_OVERRIDE[`${sid}#${a.episode}`] ?? a.chapters_adapted ?? null, volume: vol ?? agentVol, source: 'manual', note: `${moved ? `A47: END normalized ${a.end_chapter} → ${verdict.end}. ` : ''}${fix ? `${fix} ` : ''}${a.note ?? ''} [${(a.sources ?? []).slice(0, 2).join(' ; ')}] ${B}`.slice(0, 600) };
+      console.log(`  anchor ep ${row.episode} → ${row.start_chapter ?? '·'}-${row.chapter} v${row.volume}${moved ? ` (ruled/A47: END from ${a.end_chapter})` : ''}${startMoved ? ` (ruled: START from ${a.start_chapter})` : ''}${vol != null && agentVol !== vol ? ` (volume derived: agent said v${agentVol})` : ''}`);
       if (!DRY) { const { error } = await db.from('chapter_anchors').upsert(row, { onConflict: 'series_id,episode' }); if (error) throw new Error(`${sid} ep${a.episode}: ${error.message}`); }
       anchors++;
     }
