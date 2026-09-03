@@ -152,3 +152,20 @@ ep 152 → 210; neighbouring sub-blocks are other agents' rows — deliver only
 yours, ENDs monotone within the outer fence, a revisit `rearranged`; the
 landing scan checks monotonicity ACROSS the seven files. `A47` (the
 END-side sliver) binds every END. No contract change.
+
+## Amendment 2026-09-02d (wave 11 — pinned before dispatch; R31)
+
+Wave 11 = the three remaining mid-size gap blocks (lane A2, the GAP shape
+unchanged) as EIGHT sub-blocks: **kingdom 104-128** (104-110 / 111-116 /
+117-122 / 123-128; fence 364 → 441), **bleach 190-202** (190-196 /
+197-202; fence 286 → 315; rows 168-189 are filler by type and not targets),
+**naruto-shippuden 374-392** (374-384 / 385-392; fence 633 → 661; 376-377
+and 388-390 filler by type). Files: `<id>-w11a.json` … in sub-block order per
+series (kingdom a-d, bleach a-b, naruto-shippuden a-b). Rules ruled since
+wave 9 in force: `A47` (the END-side sliver — deliver chapters_adapted as a
+COMMA list, never prose); **the T28 recap clause** (a recap segment counts
+for nothing in the standing; the remainder decides) and **the faithfulness
+clause** (alterations / cuts / reorders keep canon while faithful; a small
+studio-made beat is noted as divergence, never weighed toward mixed). The
+landing scan checks monotonicity across each series' files. No contract
+change.
