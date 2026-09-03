@@ -1,0 +1,193 @@
+{
+  "series_id": "the-seven-deadly-sins-four-knights-of-the-apocalypse",
+  "summary": "Rows 1-6 are a straight, continuous, faithful adaptation of Mokushiroku no Yonkishi ch 1 through ch 17 p.7 with NO skipped chapter and no anime-original episode — all six stay canon (T27/T28 faithfulness clause; the only manga/anime deltas the wiki records are small cuts, small added beats and one within-chapter reorder). Six anchors delivered, ep 1 → 2 [1] v1 through ep 6 → 17 [14] v3, every one on two independent instruments: nanatsu-no-taizai.fandom's page-partitioned |chapters= episode fields and programming-cafe's anicomi tables, which carry BOTH directions (an episode→chapter table and a chapter→アニメ話数 reverse index) and agree on every boundary in ch 1-17. The licensor's own per-episode synopses (7sins-4knights.net/story/N.html — the context's 4knights-anime.com is NXDOMAIN; the live official host is 7sins-4knights.net) are a third read and confirm each episode's opening beat. A47 bites exactly once: ep 2's trailing 2 pages of ch 4 (p.2-3, the magic awakening) are a scrap of the chapter ep 3 starts on, so ep 2's END stays 3 with the tail in chapters_adapted + a partial; the other two straddles (ep 1's 8 pages of ch 2, ep 6's 6 pages of ch 17) are above the scrap bar and the ENDs advance. Three C1 parity continues (eps 1, 2, 6 end mid-chapter); eps 3/4/5 end on a chapter's last page and take none. The stored volume table was EMPTY — v1-v9 is delivered in structure.notes from the fandom volume pages, whose ISBNs, JP release dates and page counts match Kodansha's own catalog records exactly, cross-checked against programming-cafe's 単行本 column and against the sum of the fandom chapter infoboxes' |pages= fields. Two small oddities worth the curator's eye: ep 2 is TITLED 未知なる力 = ch 4's title while adapting ch 2-3 (a title running AHEAD of content, the orient trap inverted), and ep 5's fandom character list ends on ch 14's opening trio (Anghalhad, Calden, Ironside) although both chapter sources stop ep 5 at ch 13 — either a sub-5-page epilogue tag or the 次回予告 cast; A47 leaves END 13 either way.",
+  "anchors": [
+    {
+      "episode": 1,
+      "end_chapter": 2,
+      "start_chapter": 1,
+      "chapters_adapted": "1, 2 (p.2-9)",
+      "volume": 1,
+      "confidence": "high",
+      "note": "START 1 (A13/A10 — the manga's first chapter, no leading partial; ch 1 is a 70-page double-length opener, which is why one episode holds it plus a tail). END 2 (A4): the episode's closing sequence — burying Varghese, the two-day descent of God's Finger, the Roc, the fall into Britannia and the red fox — is ch 2 p.2-9, 8 pages. A47 does NOT demote: 8 pages is above the 5-page scrap bar, it is the episode's own closing act (no teaser/cold-open wording), and ep 2 takes the remainder p.10-40. Two independent sources put ch 2 in ep 1: the fandom episode field's page split and programming-cafe in BOTH directions (episode table '第1話 … 第1巻 1～2'; reverse index ch 2 → '1-1,1-2'). The fandom's own Chapter 2 page |episodes= field likewise lists ep 1 and ep 2. Volume 1 = ch 1-5 (see structure.notes).",
+      "sources": [
+        "https://nanatsu-no-taizai.fandom.com/api.php?action=parse&page=Four%20Knights%20of%20the%20Apocalypse%20Episode%201&prop=wikitext&format=json",
+        "https://programming-cafe.com/amazon/primevideo/anime/anicomi-mokushirokunoyonkishi-list/",
+        "https://nanatsu-no-taizai.fandom.com/api.php?action=parse&page=Chapter%202%20(4KOA)&prop=wikitext&format=json",
+        "https://7sins-4knights.net/story/1.html"
+      ]
+    },
+    {
+      "episode": 2,
+      "end_chapter": 3,
+      "start_chapter": 2,
+      "chapters_adapted": "2 (p.10-40), 3, 4 (p.2-3)",
+      "volume": 1,
+      "confidence": "high",
+      "note": "START 2 (A10): the leading partial is ch 2 p.10-40 — 31 pages of a 40-page chapter, the whole fox/performers/Donny/wolf sequence, far above the sliver bar. END 3 under A47: the episode's last 2 pages are ch 4 p.2-3 (the green magic erupting around Percival), a ≤5-page trailing scrap of the very chapter ep 3 STARTS on (ch 4 p.4-20), so the END stays 3, the tail stays in chapters_adapted and the partial annotation names it. Both sources independently produce that same shape: programming-cafe's episode table prints ep 2 = '2～3' and its reverse index assigns ch 4 solely to '1-3'; the fandom field is what supplies the page numbers. Volume 1 = ch 1-5. NOTE the title trap: this episode is titled 未知なる力, which is ch 4's title, while its body is ch 2-3 — a title running one to two chapters AHEAD of content (the orient trap inverted); the title is not evidence of coverage.",
+      "sources": [
+        "https://nanatsu-no-taizai.fandom.com/api.php?action=parse&page=Four%20Knights%20of%20the%20Apocalypse%20Episode%202&prop=wikitext&format=json",
+        "https://programming-cafe.com/amazon/primevideo/anime/anicomi-mokushirokunoyonkishi-list/",
+        "https://nanatsu-no-taizai.fandom.com/api.php?action=parse&page=Chapter%204%20(4KOA)&prop=wikitext&format=json",
+        "https://7sins-4knights.net/story/2.html"
+      ]
+    },
+    {
+      "episode": 3,
+      "end_chapter": 7,
+      "start_chapter": 4,
+      "chapters_adapted": "4 (p.4-20), 5, 6, 7",
+      "volume": 2,
+      "confidence": "high",
+      "note": "START 4 (A10): the leading partial is ch 4 p.4-20, 17 of the chapter's 20 pages (the whole Pellegarde duel from the awakening on) — real content, so the START is 4 and not 5. END 7 (A4): the episode closes exactly on ch 7's last beat — Nasiens knocking Percival out with an injection — and ep 4 opens on ch 8 パーシバル、実験台になる with no page split on either side, so this is a clean chapter boundary and no C1 continue is owed. Corroboration in both directions: programming-cafe's episode table gives ep 3 = '4～5 / 第2巻 6～7' and its reverse index puts ch 6 and ch 7 in '1-3'; the fandom episode page's |arc= field also carries BOTH Percival arc and Echo Gorge arc, and ch 7 is the first Echo Gorge chapter. The row spans two volumes (ch 4-5 = v1, ch 6-7 = v2); the anchor's volume is the END chapter's, v2 = ch 6-14.",
+      "sources": [
+        "https://nanatsu-no-taizai.fandom.com/api.php?action=parse&page=Four%20Knights%20of%20the%20Apocalypse%20Episode%203&prop=wikitext&format=json",
+        "https://programming-cafe.com/amazon/primevideo/anime/anicomi-mokushirokunoyonkishi-list/",
+        "https://nanatsu-no-taizai.fandom.com/api.php?action=parse&page=Volume%202%20(4KOA)&prop=wikitext&format=json",
+        "https://7sins-4knights.net/story/3.html"
+      ]
+    },
+    {
+      "episode": 4,
+      "end_chapter": 10,
+      "start_chapter": 8,
+      "chapters_adapted": "8, 9, 10",
+      "volume": 2,
+      "confidence": "high",
+      "note": "A clean three-chapter block with no page split at either end: the fandom episode field lists ch 8, 9, 10 unqualified, and programming-cafe agrees in both directions (episode table ep 4 = '8～10'; reverse index ch 8 / 9 / 10 → '1-4' only, ch 11 → '1-5' only). START 8 (A10 — no leading partial; ep 3 ended on ch 7's last page), END 10 (A4). Ends on a chapter's last page, so no continue is owed. Licensor synopsis confirms the episode's spine — Percival captured by Nasiens and used as a guinea pig (ch 8) through Sin and Donny entering the gorge. Volume 2 = ch 6-14.",
+      "sources": [
+        "https://nanatsu-no-taizai.fandom.com/api.php?action=parse&page=Four%20Knights%20of%20the%20Apocalypse%20Episode%204&prop=wikitext&format=json",
+        "https://programming-cafe.com/amazon/primevideo/anime/anicomi-mokushirokunoyonkishi-list/",
+        "https://7sins-4knights.net/story/4.html"
+      ]
+    },
+    {
+      "episode": 5,
+      "end_chapter": 13,
+      "start_chapter": 11,
+      "chapters_adapted": "11, 12, 13",
+      "volume": 2,
+      "confidence": "high",
+      "note": "Clean three-chapter block: fandom lists ch 11, 12, 13 unqualified; programming-cafe's episode table gives ep 5 = '11～13' and its reverse index assigns ch 11 / 12 / 13 to '1-5' only and ch 14 to '1-6' only. START 11 (A10), END 13 (A4) — ch 13 さらなる決意 is also the episode's own title, and the licensor synopsis matches (Ordo revealed as the monster, Talisker exposed, Percival and Nasiens joining forces). Ends on a chapter's last page → no continue owed. One observation that does not move the anchor: the fandom episode page's character list ends with Anghalhad, Calden and Ironside — exactly ch 14's opening trio, in ch 14's own order — so ep 5 probably closes on a short Sistana tag (or the list includes the 次回予告 cast). Even if a few pages of ch 14 played, A47 leaves the END at 13, because ep 6 STARTS on ch 14 and no source gives that tail more than a handful of pages; it is therefore not carried in chapters_adapted. Volume 2 = ch 6-14.",
+      "sources": [
+        "https://nanatsu-no-taizai.fandom.com/api.php?action=parse&page=Four%20Knights%20of%20the%20Apocalypse%20Episode%205&prop=wikitext&format=json",
+        "https://programming-cafe.com/amazon/primevideo/anime/anicomi-mokushirokunoyonkishi-list/",
+        "https://nanatsu-no-taizai.fandom.com/api.php?action=parse&page=Chapter%2014%20(4KOA)&prop=wikitext&format=json",
+        "https://7sins-4knights.net/story/5.html"
+      ]
+    },
+    {
+      "episode": 6,
+      "end_chapter": 17,
+      "start_chapter": 14,
+      "chapters_adapted": "14, 15, 16, 17 (p.2-7)",
+      "volume": 3,
+      "confidence": "high",
+      "note": "START 14 (A10 — no leading partial; ep 5 ended on ch 13's last page, and the licensor synopsis opens ep 6 exactly on ch 14's first beat, Ironside in Sistana using Duke Calden to make the townsfolk search). END 17 (A4): the episode's closing 6 pages are ch 17 p.2-7, the opening of 悪との対峙, and ep 7 takes p.7-20. A47 was applied and does NOT demote — 6 pages is above the ≤5-page scrap bar and the beat is the episode's cliffhanger confrontation, not a teaser or cold-open. Both instruments put ch 17 in this episode independently: programming-cafe's episode table prints ep 6 = '14 / 第3巻 15～17' and its reverse index splits ch 17 across '1-6,1-7'; the fandom field supplies the page boundary. The row spans two volumes (ch 14 = v2, ch 15-17 = v3); the anchor's volume is the END chapter's, v3 = ch 15-23. Ends mid-chapter → C1 continue in ch 17. See flags: the 6-page tail is one page above the A47 bar and the wiki's endpoints overlap on p.7, so if p.7 is a shared page this is 5 full pages plus a fragment; I keep END 17 because both chapter-level sources assert ch 17 for ep 6 and the wave-9 anchor treated the identical ch 77 p.1-7 shape the same way.",
+      "sources": [
+        "https://nanatsu-no-taizai.fandom.com/api.php?action=parse&page=Four%20Knights%20of%20the%20Apocalypse%20Episode%206&prop=wikitext&format=json",
+        "https://programming-cafe.com/amazon/primevideo/anime/anicomi-mokushirokunoyonkishi-list/",
+        "https://nanatsu-no-taizai.fandom.com/api.php?action=parse&page=Four%20Knights%20of%20the%20Apocalypse%20Episode%207&prop=wikitext&format=json",
+        "https://7sins-4knights.net/story/6.html"
+      ]
+    }
+  ],
+  "continue_points": [
+    {
+      "episode": 1,
+      "continue_chapter": 2,
+      "kind": "parity",
+      "note": "C1 — ep 1 stops MID-chapter 2 (p.9 of 40, on Percival meeting the red fox), so resume IN ch 2 (vol 1): pages 2-9 are already animated, the rest of the chapter is not. Ep 2 restarts on exactly that page (ch 2 p.10), so this is parity with the next episode's start and nothing before it is left unread.",
+      "sources": [
+        "https://nanatsu-no-taizai.fandom.com/api.php?action=parse&page=Four%20Knights%20of%20the%20Apocalypse%20Episode%201&prop=wikitext&format=json",
+        "https://nanatsu-no-taizai.fandom.com/api.php?action=parse&page=Four%20Knights%20of%20the%20Apocalypse%20Episode%202&prop=wikitext&format=json",
+        "https://programming-cafe.com/amazon/primevideo/anime/anicomi-mokushirokunoyonkishi-list/"
+      ]
+    },
+    {
+      "episode": 2,
+      "continue_chapter": 4,
+      "kind": "parity",
+      "note": "C1 — ep 2 stops MID-chapter 4: its final 2 pages are ch 4 p.2-3 (the magic erupting), so resume IN ch 4 (vol 1) and expect the first couple of pages to be familiar; the episode's END is 3 because A47 hands that scrap to ep 3, which starts on ch 4 p.4. Nothing is skipped — ch 1 through ch 4 p.3 is continuous.",
+      "sources": [
+        "https://nanatsu-no-taizai.fandom.com/api.php?action=parse&page=Four%20Knights%20of%20the%20Apocalypse%20Episode%202&prop=wikitext&format=json",
+        "https://nanatsu-no-taizai.fandom.com/api.php?action=parse&page=Four%20Knights%20of%20the%20Apocalypse%20Episode%203&prop=wikitext&format=json",
+        "https://programming-cafe.com/amazon/primevideo/anime/anicomi-mokushirokunoyonkishi-list/"
+      ]
+    },
+    {
+      "episode": 6,
+      "continue_chapter": 17,
+      "kind": "parity",
+      "note": "C1 — ep 6 stops MID-chapter 17 (p.7 of 20, at the start of the confrontation with Ironside), so resume IN ch 17 (vol 3): pages 2-7 are already animated, p.7-20 are not. Ep 7 restarts on ch 17 p.7, so this is parity with the next episode's start; ch 1-16 are fully covered with no skipped chapter.",
+      "sources": [
+        "https://nanatsu-no-taizai.fandom.com/api.php?action=parse&page=Four%20Knights%20of%20the%20Apocalypse%20Episode%206&prop=wikitext&format=json",
+        "https://nanatsu-no-taizai.fandom.com/api.php?action=parse&page=Four%20Knights%20of%20the%20Apocalypse%20Episode%207&prop=wikitext&format=json",
+        "https://programming-cafe.com/amazon/primevideo/anime/anicomi-mokushirokunoyonkishi-list/"
+      ]
+    }
+  ],
+  "anchor_hostile": [],
+  "annotations": [
+    {
+      "episodes": [1],
+      "kind": "partial",
+      "chapters": "2 (p.2-9)",
+      "note": "Ch 2 is split across two rows: p.2-9 here (the descent from God's Finger and the meeting with the fox), p.10-40 in ep 2. Named per A10/A47 so the boundary is visible; the split does not move the END (8 pages, above the scrap bar)."
+    },
+    {
+      "episodes": [2],
+      "kind": "partial",
+      "chapters": "2 (p.10-40), 4 (p.2-3)",
+      "note": "Both ends of the episode are page splits: the leading partial is ch 2 p.10-40 (p.2-9 played in ep 1) and the trailing scrap is ch 4 p.2-3, which under A47 belongs to ep 3 (it starts on ch 4 p.4) — hence END 3, not 4."
+    },
+    {
+      "episodes": [3],
+      "kind": "partial",
+      "chapters": "4 (p.4-20)",
+      "note": "Leading partial: ch 4 p.2-3 played at the end of ep 2, so this row opens on p.4. 17 of 20 pages — the START is 4 under A10."
+    },
+    {
+      "episodes": [6],
+      "kind": "partial",
+      "chapters": "17 (p.2-7)",
+      "note": "Trailing partial: ch 17 is split with ep 7 (p.2-7 here, p.7-20 there). 6 pages, above A47's scrap bar and carrying the episode's cliffhanger, so the END advances to 17."
+    },
+    {
+      "episodes": [2],
+      "kind": "divergence",
+      "chapters": "2-3",
+      "note": "Faithfulness-clause alterations only (T28 as amended 2026-09-02): a flashback of Varghese's death added when Percival is asked about Ironside, Percival's back scar shown, an added beat of Elva struggling to fit the helmet on him, and the manga's Elva groping gag cut/censored. Small studio beats inside adapted chapters — the row stays canon, nothing weighs toward mixed."
+    },
+    {
+      "episodes": [3],
+      "kind": "divergence",
+      "chapters": "4-7",
+      "note": "Faithfulness-clause alterations: Pellegarde's post-escape search scene omitted, one Camelot knight design swapped, a red crystal added to the conference room, the hooded figure's four prophecy lines illustrated with added imagery. Elaborations and cuts within adapted chapters — canon."
+    },
+    {
+      "episodes": [5],
+      "kind": "divergence",
+      "chapters": "11-13",
+      "note": "Faithfulness-clause alterations: Donny's repeated arrow attempts on Talisker's familiar cut, Percival's recital of Varghese's motto after Hail Impact cut, Talisker's transformation of Ordo newly SHOWN (implied in the manga), Percival throwing his 'sword', and a spoken exchange added to the Nasiens/Ordo reunion the manga plays silent. Canon."
+    },
+    {
+      "episodes": [6],
+      "kind": "divergence",
+      "chapters": "14-17",
+      "note": "Faithfulness-clause alterations, including one within-chapter reorder: the 'what do we do next' talk moved to before the meal (after it in the manga), the fish gags cut, Percival made to want the confrontation on sighting Ironside at the townspeople's gathering, and an added beat of Duke Calden trying to strike Ironside before his familiar stops him. Order and detail changes inside adapted chapters — canon, not rearranged at chapter level."
+    }
+  ],
+  "repairs": [],
+  "type_corrections": [],
+  "structure": {
+    "notes": "SCOPE. Rows 1-6 of the wave-12 gap block (sub-block A of four). No fence below — ep 1 opens on the manga's ch 1. HANDOFF: my last row is ep 6, END 17, stopping at ch 17 p.7; the next agent's block (rows 7-12) must START ep 7 on ch 17 (p.7-20) — the fandom ep-7 field and programming-cafe's reverse index (ch 17 → '1-6,1-7') both say so — and its ENDs must stay monotone up to the outer fence, the wave-9 manual anchor ep 24 → 77 [75] v9.\n\nCHAPTER SPACE. One space throughout: the manga's own Weekly Shonen Magazine serialization numbering, used identically by nanatsu-no-taizai.fandom's chapter infoboxes (|chapter=, |wsm=, |volume=, |pages=), by programming-cafe's 話数 column and by MU. No edition conversion; the parent Nanatsu no Taizai has its own numbering and is not involved (the fandom's Chapter 1 (4KOA) page even links |prev = Chapter 346 of the parent, labelled 'prequel' — do not let that leak a number into this space).\n\nVOLUME BOUNDARY TABLE v1-v9 (the stored table is EMPTY; this is the deliverable). Chapters from the fandom Volume pages' ==Chapters== lists, cross-checked chapter-by-chapter against the fandom chapter infoboxes' |volume= fields and against programming-cafe's 単行本 column (which opens each volume at exactly the same chapter); JP dates/ISBNs from the same fandom pages and verified identical on Kodansha's own product records via ja-WP's 書誌情報 citations.\n  v1 = ch 1-5   | 2021-04-16 | ISBN 978-4-06-522982-8 | 192p (Kodansha: 192p, same ISBN)\n  v2 = ch 6-14  | 2021-06-17 | ISBN 978-4-06-523579-9 | 192p (Kodansha: 192p, same ISBN)\n  v3 = ch 15-23 | 2021-09-17 | ISBN 978-4-06-524838-6 | 200p (Kodansha: 200p, same ISBN)\n  v4 = ch 24-32 | 2021-11-17 | ISBN 978-4-06-525999-3 | 200p\n  v5 = ch 33-41 | 2022-01-17 | ISBN 978-4-06-526601-4 | 200p\n  v6 = ch 42-50 | 2022-03-17 | ISBN 978-4-06-527286-2 | 192p\n  v7 = ch 51-59 | 2022-05-17 | ISBN 978-4-06-527911-3 | 192p\n  v8 = ch 60-68 | 2022-08-17 | ISBN 978-4-06-528656-2\n  v9 = ch 69-77 | 2022-11-17 | ISBN 978-4-06-529487-1  (matches the wave-9 anchor's v9)\nNote the shape of v1: it holds only FIVE chapters because ch 1 is a 70-page double-length opener and ch 2-3 run 40 and 30 pages; every later volume holds nine ~20-page chapters. An arithmetic check on the fandom's per-chapter |pages= fields confirms each volume: v1 = 70+40+30+20+24 = 184 story pages in a 192-page book; v2 = 20+21+20+20+20+20+26+20+20 = 187 in 192. Kodansha's own product pages carry release date / ISBN / page count but NO 初出 chapter list, so the chapter→volume mapping rests on the two wiki/table sources above with the publisher records used as an identity check on the volumes themselves.\n\nPER-CHAPTER PAGE COUNTS used for the A10/A47 decisions (fandom chapter infoboxes): 1=70, 2=40, 3=30, 4=20, 5=24, 6=20, 7=21, 8=20, 9=20, 10=20, 11=20, 12=26, 13=20, 14=20, 15=20, 16=21, 17=20, 18=20, 19=20, 20=24, 21=20.\n\nCOVERAGE / CONTINUITY. Ch 1-17 are adapted continuously with NO skipped chapter and no anime-original episode, so there is no C2/C3 skip continue anywhere in rows 1-6. Verified in the reverse direction as well: programming-cafe's chapter→アニメ話数 index assigns 1→1-1, 2→1-1/1-2, 3→1-2, 4→1-3, 5→1-3, 6→1-3, 7→1-3, 8→1-4, 9→1-4, 10→1-4, 11→1-5, 12→1-5, 13→1-5, 14→1-6, 15→1-6, 16→1-6, 17→1-6/1-7 — no chapter unassigned, no chapter jumping backwards.\n\nA47 LEDGER for this sub-block (one demotion, two non-demotions): ep 2's tail = ch 4 p.2-3, 2 pages, of the chapter ep 3 starts on → DEMOTED, END 3. ep 1's tail = ch 2 p.2-9, 8 pages → not demoted, END 2. ep 6's tail = ch 17 p.2-7, 6 pages → not demoted, END 17. Every tail stays in chapters_adapted with a partial annotation.\n\nTITLES RUN AHEAD OF CONTENT here — do not use a title match as coverage evidence on this series. Ep 2 is titled 未知なる力 = ch 4's title while adapting ch 2-3 (+2 pages of ch 4); ep 3 is titled 〈黙示録の四騎士〉 = ch 5's title while adapting ch 4-7; ep 4 is titled 木霊の谷の悪魔 = ch 7's title while adapting ch 8-10; ep 6 is titled 戦慄のシスタナ = ch 16's title while adapting ch 14-17. Only ep 1 (ch 1) and ep 5 (ch 13) share a title with a chapter they actually contain.\n\nTYPES. All six rows stay canon. The wiki's Manga/Anime Differences sections record only faithfulness-clause material — cuts (Donny's arrows, the fish gags, the Elva gag), small added studio beats (a flashback insert, an added helmet gag, Calden's attempted strike, a spoken reunion), one within-chapter reorder (the talk before the meal) and design/censorship changes. No original story share anywhere, so nothing reaches the T28 materiality bar for mixed and no recap segment exists in this block.\n\nDATES AND TITLES VERIFIED, NO REPAIRS. ja-WP's 各話リスト for 黙示録の四騎士 (漫画) confirms all six stored dates and titles: 第1話 少年は旅立つ 2023年10月8日, 第2話 未知なる力 10月15日, 第3話 〈黙示録の四騎士〉 10月22日, 第4話 木霊の谷の悪魔 10月29日, 第5話 さらなる決意 11月5日, 第6話 戦慄のシスタナ 11月19日. The Nov-12 gap between eps 5 and 6 is REAL (a broadcast break, not a defect) — ja-WP, the fandom episode pages and the licensor site all carry it, and ep 7 resumes the Sunday slot on 11月26日. Nothing to repair in rows 1-6. The wave-9 note that the fandom's Episode 23 |airdate= is wrong (it repeats ep 22's March 17) still stands for whoever takes rows 19-23; it does not touch this sub-block.\n\nSOURCE HYGIENE / CORRECTIONS TO THE CONTEXT'S TRAP LIST. (a) The licensor host named in the context, 4knights-anime.com, does NOT resolve (NXDOMAIN). The live official site is https://7sins-4knights.net/ and its per-episode synopses are at /story/N.html (loaded by /assets/js/story.js into the /story/ page; N is the plain episode number, S1 1-24 and S2 25-36) — a usable licensor instrument for the rest of this block. TV Tokyo's /anime/4knights/story/ is a 404. (b) sevendeadlysins.fandom.com is confirmed an ALIAS of nanatsu-no-taizai.fandom.com — ONE wiki, one source; the fandom episode field, the fandom chapter |episodes= field and the fandom volume pages are all that one source. (c) programming-cafe's anicomi page is the independent second instrument and it is genuinely bidirectional: an episode→chapter table (with the 単行本 column) and a separate chapter→アニメ話数 reverse index, compiled without page numbers, so agreement with the fandom's page-partitioned fields is real corroboration and not copying. (d) animefillerguide has no page for this series (404), and ja-WP's episode list has staff and 初放送日 columns only — a date/title witness, never a chapter witness.",
+    "order_only": []
+  },
+  "flags_for_sean": [
+    "BORDERLINE A47, ep 6: the tail is ch 17 p.2-7 — 6 pages, one above the ≤5-page scrap bar — and this wiki writes overlapping endpoints at some splits (ep 7 takes '17 p.7~20', i.e. p.7 appears on both sides), so if p.7 is a shared page the true tail is 5 full pages plus a fragment and A47 would demote the END to 16. I keep END 17 because (i) both chapter-level instruments assert ch 17 for ep 6 independently, (ii) the beat is the episode's cliffhanger, not a teaser, and (iii) the wave-9 anchor treated the identical ch 77 p.1-7 shape as above the bar. If you would rather apply the strict reading, ep 6 becomes END 16 [14] v3 with 17 (p.2-7) still in chapters_adapted and the same partial annotation; the C1 continue stays ch 17 either way.",
+    "UNRESOLVED, low stakes, ep 5: the fandom episode page's 'Characters in Order of Appearance' ends with Anghalhad, Calden and Ironside — exactly ch 14's opening trio, in ch 14's own order — while BOTH chapter instruments stop ep 5 at ch 13 and give ch 14 wholly to ep 6. Either the anime closes ep 5 with a short Sistana tag lifted from the top of ch 14, or the wiki's list includes the next-episode-preview cast. I could not settle it (the wiki's ep-5 Plot section is empty and the licensor synopsis stops earlier). The anchor is unaffected: A47 keeps END 13 whichever it is, and I did not put ch 14 in ep 5's chapters_adapted without page evidence.",
+    "The context's licensor host is wrong and should be corrected in the series context for sub-blocks B/C/D: 4knights-anime.com is NXDOMAIN; use https://7sins-4knights.net/story/N.html (plain episode number, S1 1-24, S2 25-36) for the official per-episode synopses.",
+    "Volume boundaries v1-v9 are delivered in structure.notes and are ready to load into the empty stored table; note the unusual v1 = ch 1-5 only (ch 1 is a 70-page opener), which will look like an off-by-four to anyone assuming nine chapters per volume."
+  ]
+}
