@@ -197,3 +197,26 @@ clause + boundary, the faithfulness clause. Source hygiene from batch 17 /
 flag #929: the fandom's forward and reverse mappings are ONE wiki —
 independence rests on en-WP's volume list, ja-WP's 各話リスト and the
 licensor's story pages. No contract change.
+
+Wave 14 = **dragon-quest-the-adventure-of-dai 60-100** (the LAST gap block,
+wave 2 of 2) as SEVEN sub-blocks (60-65 / 66-71 / 72-77 / 78-83 / 84-89 /
+90-95 / 96-100; files `-w14a` … `-w14g`; the 96-100 agent also VERIFIES the
+ep-100 MU pin). **CONTRACT CHANGE, pinned for the wave (Sean ruled
+2026-09-02, N35 sourceShifts): every chapter number is delivered in the
+PRINTED space — the tankōbon's 1-348.** The stored anchors, volume table
+(v13 = 114-121, v14 = 122-131 … v37 = 341-348) and totals in your context
+are already printed. The lists are not: en-WP's volume list, AniList,
+MangaUpdates and MangaDex number the unnumbered 番外編「勇者アバン」 as
+their 122, so their N ≥ 123 = printed N − 1 (their 349 = printed 348);
+dragonquest.fandom matches the print up to 206, numbers vol 22's unnumbered
+extra as its 207, so ITS N ≥ 208 = printed N − 1 too. State the conversion
+you applied on every row whose source number differs. **Unnumbered extras
+and one-shots are noted, never numbered**: ep 61 adapts 「勇者アバン」 out of
+order → a `side_story` annotation naming it (title, printed at the back of
+vol 13 between ch 121 and 122); the same for any 読切 an episode adapts.
+Lower fence ep 59 → 216 [213] v24 (manual); upper fence the ep-100 MU pin
+348 v37 (verify or repair it with sources). Rules in force as wave 13, plus
+A47's unproven-tail convention: hold an END only on a page count ≤ 5 or
+teaser wording — an unquantified 'opening of X' ADVANCES to X with a
+`partial`. Eps 85-87 carry a real reorder (`rearranged` with the
+back-jump START, never a plain range).

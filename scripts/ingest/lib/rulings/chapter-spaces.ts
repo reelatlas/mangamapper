@@ -6,7 +6,11 @@
 // never undo it (P8). Pure (no db import).
 import { toRecord, type RulingEntry } from './types';
 
-export type ChapterSpace = { chapters: number; volumes?: number };
+/** a per-SOURCE chapter-number shift into the ruled space (N35 sourceShifts, 2026-09-02 — the Dai case): a source that numbers
+ * an unnumbered extra, or omits a numbered one, runs off the printed numbering from `from` on; `delta` converts its number to ours */
+export type ChapterShiftSource = 'wikipedia' | 'mu' | 'afg' | 'fandom';
+export type ChapterShift = { source: ChapterShiftSource; from: number; delta: number; note?: string };
+export type ChapterSpace = { chapters: number; volumes?: number; sourceShifts?: ChapterShift[] };
 
 export const ENTRIES: RulingEntry<ChapterSpace>[] = [
   {
@@ -69,6 +73,25 @@ export const ENTRIES: RulingEntry<ChapterSpace>[] = [
     ruledOn: '2026-09-02',
     cite: ['scripts/ingest/research/batch20/out/cells-at-work-code-black.json', 'scripts/ingest/research/batch20/verify/cells-at-work-code-black.md'],
   },
+  {
+    seriesId: 'dragon-quest-the-adventure-of-dai',
+    ruleId: 'N35',
+    value: {
+      chapters: 348,
+      volumes: 37,
+      sourceShifts: [
+        { source: 'wikipedia', from: 123, delta: -1, note: "en-WP's original-release volume list gives the unnumbered vol-13 番外編「勇者アバン」 a slot (its 122) — every list number ≥ 123 is printed number + 1" },
+        { source: 'mu', from: 123, delta: -1, note: "MangaUpdates counts the same 349 units (its pin 'Vol 37, Chap 349' = printed 第348話)" },
+        { source: 'afg', from: 123, delta: -1, note: 'AniList / aggregator space = the 349-slot list' },
+        { source: 'fandom', from: 208, delta: -1, note: "dragonquest.fandom = the printed numbers through 206, then numbers vol 22's unnumbered extra 大魔宮の秘密 as its 207 — its numbers ≥ 208 are printed + 1" },
+      ],
+    },
+    reason:
+      "Batch 20 wave 13 (verified R24 ×2), Sean ruled 2026-09-02: the catalog follows the PRINTED chapter numbering — the tankōbon number the 348 story chapters contiguously (ja-WP 全343話 + the 5 読切 = 348; vol 14 opens 第122話 決勝戦の異変, vol 37 ends 第348話 さらば!!!愛する地上よ; the fandom's own side-story page navigates 'previous: chapter 121 (tankōbon), next: chapter 122 (tankōbon)'). The stored 349 was en-WP's list construction (adopted by AniList, MangaUpdates and MangaDex's scanlation numbering): it gives the unnumbered 番外編「勇者アバン」 printed at the back of vol 13 its own slot, so every list number ≥ 123 is the printed number + 1 — the same class as orange 39 → 22 and regenesis 260 → 255 (a unit count, not the reading edition). Sean: 'this catalog's job is follow-along in the source, not matching a wiki TOC'. THE UNNUMBERED CHAPTERS ARE STILL FACTS: the 番外編「勇者アバン」 (back of vol 13; adapted by anime ep 61 out of order) and the five 読切 one-shots carry NO mainline number and are recorded as `side_story` annotations naming them when an episode adapts them — never numbered, never counted (Sean 2026-09-02: note them so the UI can represent them later). The volume table is re-based to the printed space (v13 = 114-121, v14 = 122-131 … v37 = 341-348); the wikipedia backfill, the MU pin writer and the AFG anchor writer convert through sourceShifts; the census's anchor_beyond_chapter_space guards the ceiling.",
+    ruledBy: 'Sean',
+    ruledOn: '2026-09-02',
+    cite: ['scripts/ingest/research/batch20/verify/dragon-quest-the-adventure-of-dai-w13abc.md', 'scripts/ingest/research/batch20/verify/dragon-quest-the-adventure-of-dai-w13defg.md', 'scripts/ingest/research/batch20/WAVE13-RECOVERY.md', 'https://ja.wikipedia.org/wiki/DRAGON_QUEST_-ダイの大冒険-'],
+  },
 ];
 
 export const CHAPTER_SPACE_OVERRIDES: Record<string, ChapterSpace> = toRecord(ENTRIES);
@@ -79,3 +102,25 @@ export const ruledChapterSpace = (seriesId: string, totals: { total_chapters: nu
   if (!r) return totals;
   return { total_chapters: r.chapters, total_volumes: r.volumes ?? totals.total_volumes };
 };
+
+/** N35 sourceShifts: convert a chapter number a SOURCE printed into the ruled (printed) space; identity when no shift is ruled or below `from` */
+export type ChapterRole = 'end' | 'start';
+/**
+ * A source's chapter number → the ruled (printed) space. A NEGATIVE shift removes list slots — the numbers
+ * [from + delta, from − 1] name entries the printed space does not number (the Dai 番外編 at list 122). A number
+ * ON a removed slot has no printed twin: as an END (a frontier, a volume's last entry, an anchor's END — the
+ * default) it resolves to the last printed chapter before the slot; as a START (a volume's first entry, an
+ * anchor's START, a continue) to the next printed chapter after it. Everything past the window shifts by delta.
+ */
+export const toRuledChapter = (seriesId: string, source: ChapterShiftSource, chapter: number | null | undefined, role: ChapterRole = 'end'): number | null => {
+  if (chapter == null || !Number.isFinite(chapter)) return chapter ?? null;
+  const shifts = CHAPTER_SPACE_OVERRIDES[seriesId]?.sourceShifts?.filter((x) => x.source === source) ?? [];
+  let out = chapter;
+  for (const sh of shifts) {
+    if (sh.delta < 0 && chapter >= sh.from + sh.delta && chapter < sh.from) { out = role === 'end' ? sh.from + sh.delta - 1 : sh.from + sh.delta; continue; }
+    if (chapter >= sh.from) out += sh.delta;
+  }
+  return out;
+};
+/** the same, keyed by the manga's AniList id (the volumes backfill iterates manga, not series) */
+export const seriesIdsForManga = (mangaAnilistId: number, seriesRows: { id: string; manga_anilist_id: number | null }[]): string[] => seriesRows.filter((r) => r.manga_anilist_id === mangaAnilistId).map((r) => r.id);

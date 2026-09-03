@@ -959,12 +959,12 @@ export const RULES: Rule[] = [
     family: 'A',
     title: 'End-side sliver: an END never advances on an owned tail',
     statement:
-      "END (chapter_anchors.chapter) is the furthest mainline chapter the episode adapts (A4) — but it does not ADVANCE on a trailing scrap of the next chapter that the NEXT episode owns: a tail of at most 5 pages (or sliver / teaser / cold-open wording) of chapter X, when the next anchored episode STARTS on X, is that episode's chapter; the position stays on X-1, the tail stays in chapters_adapted and a `partial` annotation names it. Without a next anchored episode (a finale) the tail stands and the reader continues IN it (C1). A tail that is the episode's ONLY record never moves (X-1 would be a chapter the episode never adapts — d-gray-man 66's one page of 78, reborn 159's sliver of 232): such a row is a judgment call (A44 position-less, or the value stands), listed, never derived. The apply layer normalizes curated anchors through lib/sliver.ts#sliverEnd (the one derivation, P2); the census re-runs it over every manual anchor with a record (end_sliver_mismatch — a listing class, Sean signs each move).",
+      "END (chapter_anchors.chapter) is the furthest mainline chapter the episode adapts (A4) — but it does not ADVANCE on a trailing scrap of the next chapter that the NEXT episode owns: a tail of at most 5 pages (or sliver / teaser / cold-open wording) of chapter X, when the next anchored episode STARTS on X, is that episode's chapter; the position stays on X-1, the tail stays in chapters_adapted and a `partial` annotation names it. Without a next anchored episode (a finale) the tail stands and the reader continues IN it (C1). A tail that is the episode's ONLY record never moves (X-1 would be a chapter the episode never adapts — d-gray-man 66's one page of 78, reborn 159's sliver of 232): such a row is a judgment call (A44 position-less, or the value stands), listed, never derived. The apply layer normalizes curated anchors through lib/sliver.ts#sliverEnd (the one derivation, P2); the census re-runs it over every manual anchor with a record (end_sliver_mismatch — a listing class, Sean signs each move). THE UNPROVEN-TAIL CONVENTION (Sean, wave 13, 2026-09-02): the exception needs EVIDENCE of size — a page count of at most 5, or sliver / teaser / cold-open wording. Position language alone ('the opening of ch 90', 'ch 104's first scene') proves nothing about size, so the END ADVANCES to the furthest chapter played (A4's default), a `partial` names the tail so it is not read as full coverage, and the continue lands in that same chapter. Dai 23 / 25 / 28 / 29 were ruled this way (two agents had held on position language; five had advanced — one convention for the catalog). Sean's stated reasoning is an ASSUMPTION he asked not to be cited as confirmed logic: a source that bothers to cite a chapter usually adapted a meaningful share of it, and a true sliver usually comes with an explanation.",
     why:
       "orient ep 12 (wave 8): ch 47 pp 1-5 close the first cour as a teaser and ep 13 re-stages pp 2-4 and finishes the chapter — the Opus author ruled END 46 'by analogy with A10' and the Fable verifier found the ledger had no END-side rule at all (A10 governs STARTs only), so the same fork on one-piece-log ep 10 (618 pp 3-4, ep 11 starts on 618) had been called the other way (618). Sean ruled 2026-09-02: one rule, applied to both — 46 and 617; display impact zero (A13 shows the START; the continues are unchanged).",
     ruledBy: 'Sean',
     ruledOn: '2026-09-02',
-    origin: 'scripts/ingest/research/batch20/WAVE8-RECOVERY.md §THE DECISIONS item 2; verify/orient.md (the verifier\'s finding); changelog §12.96',
+    origin: 'scripts/ingest/research/batch20/WAVE8-RECOVERY.md §THE DECISIONS item 2; verify/orient.md (the verifier\'s finding); changelog §12.96; the unproven-tail convention: WAVE13-RECOVERY.md §THE DECISIONS item 2, changelog §12.103',
     enforcement: [
       { path: 'scripts/ingest/lib/sliver.ts', symbol: 'sliverEnd' },
       { path: 'scripts/ingest/research/batch20/apply-wave8.ts', symbol: 'sliverEnd' },
@@ -974,7 +974,7 @@ export const RULES: Rule[] = [
     ],
     layer: 'writer',
     auditClass: ['end_sliver_mismatch'],
-    witnesses: ['orient', 'one-piece-log-fish-man-island-saga', 'd-gray-man', 'reborn', 'dragon-ball-z-kai'],
+    witnesses: ['orient', 'one-piece-log-fish-man-island-saga', 'd-gray-man', 'reborn', 'dragon-ball-z-kai', 'dragon-quest-the-adventure-of-dai'],
     status: 'live',
     see: ['A10', 'A4', 'A13', 'A44', 'C1', 'T28', 'P2', 'N22'],
   },

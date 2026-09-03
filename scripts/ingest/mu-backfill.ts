@@ -115,7 +115,7 @@ async function main() {
           if (!srow) continue;
           const { data: epTop } = await db.from('chapter_anchors').select('episode').eq('series_id', sid).neq('source', 'mu').order('episode', { ascending: false }).limit(1);
           const { data: chTop } = await db.from('chapter_anchors').select('chapter').eq('series_id', sid).neq('source', 'mu').order('chapter', { ascending: false }).limit(1);
-          const latest = bestLatestKnown(mu, srow.total_chapters, chTop?.[0]?.chapter ?? 0);
+          const latest = bestLatestKnown(mu, srow.total_chapters, chTop?.[0]?.chapter ?? 0, sid);
           await db.from('series').update({ latest_known_chapters: latest, updated_at: new Date().toISOString() }).eq('id', sid);
           wrote = wrote || latest !== null;
           await crossCheckMangaStatus(runId, sid, srow.manga_status, mu);

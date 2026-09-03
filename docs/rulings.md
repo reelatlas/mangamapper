@@ -2,7 +2,7 @@
 
 > GENERATED from `scripts/ingest/lib/rulings/**` by `scripts/restructure/gen-rulings.ts` — do not edit by hand. A ruling is an INSTANCE of a rule (`docs/rules.md`); the map is the record, this is the index.
 
-- rulings: 1900 across 236 series/keys · by Sean: 558 · UNRECORDED reasons: 8 · with a retire condition: 89
+- rulings: 1901 across 237 series/keys · by Sean: 559 · UNRECORDED reasons: 8 · with a retire condition: 89
 
 ## Retire conditions (re-evaluate when…)
 
@@ -914,6 +914,12 @@
 | `I24` | {"ids":[6033,20635]} | UNRECORDED — assisted-batch explicit chain (Kai + Kai: The Final Chapters); a case the relation walker could not derive (wrong upstream match or broken/ambiguous relation graph), per-series detail not written down. | session 2026-08-22 |  |
 | `I17` | {"to":"dragon-ball-z","kind":"remake"} | Kai is a superseding re-cut/re-adaptation of Z — remake (not an AniList concept, so the ruling overrides the auto kind). | session 2026-08-22 · docs/franchise-rulings.md |  |
 | `N7` | 11359 | B (medium): Kai special = ep 98; community-practice based — re-open if evidence emerges. | Sean 2026-08-23 |  |
+
+### dragon-quest-the-adventure-of-dai (1)
+
+| rule | value | reason | ruled | retires when |
+|---|---|---|---|---|
+| `N35` | {"chapters":348,"volumes":37,"sourceShifts":[{"source":"wikipedia","from":123,"delta":-1,"note":"en-WP's original-release volume list gives the unnumbered vo… | Batch 20 wave 13 (verified R24 ×2), Sean ruled 2026-09-02: the catalog follows the PRINTED chapter numbering — the tankōbon number the 348 story chapters contiguously (ja-WP 全343話 + the 5 読切 = 348; vol 14 opens 第122話 決勝戦の異変, vol 37 ends 第348話 さらば!!!愛する地上よ; the fandom's own side-story page navigates 'previous: chapter 121 (tankōbon), next: chapter 122 (tankōbon)'). The stored 349 was en-WP's list construction (adopted by AniList, MangaUpdates and MangaDex's scanlation numbering): it gives the unnumbered 番外編「勇者アバン」 printed at the back of vol 13 its own slot, so every list number ≥ 123 is the printed number + 1 — the same class as orange 39 → 22 and regenesis 260 → 255 (a unit count, not the reading edition). Sean: 'this catalog's job is follow-along in the source, not matching a wiki TOC'. THE UNNUMBERED CHAPTERS ARE STILL FACTS: the 番外編「勇者アバン」 (back of vol 13; adapted by anime ep 61 out of order) and the five 読切 one-shots carry NO mainline number and are recorded as `side_story` annotations naming them when an episode adapts them — never numbered, never counted (Sean 2026-09-02: note them so the UI can represent them later). The volume table is re-based to the printed space (v13 = 114-121, v14 = 122-131 … v37 = 341-348); the wikipedia backfill, the MU pin writer and the AFG anchor writer convert through sourceShifts; the census's anchor_beyond_chapter_space guards the ceiling. | Sean 2026-09-02 · scripts/ingest/research/batch20/verify/dragon-quest-the-adventure-of-dai-w13abc.md, scripts/ingest/research/batch20/verify/dragon-quest-the-adventure-of-dai-w13defg.md, scripts/ingest/research/batch20/WAVE13-RECOVERY.md, https://ja.wikipedia.org/wiki/DRAGON_QUEST_-ダイの大冒険- |  |
 
 ### durarara (6)
 

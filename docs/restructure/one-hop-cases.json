@@ -344,6 +344,18 @@
         "next episode"
       ],
       "source": "batch 20 wave 8 (2026-09-02): the orient ep-12 46/47 fork the Fable verifier found unruled (A10 governs STARTs only) and the one-piece-log ep-10 618 call — Sean ruled the END-side twin; WAVE8-RECOVERY §THE DECISIONS item 2"
+    },
+    {
+      "ask": "a wiki numbers an unnumbered side chapter (or skips one) so its chapter numbers run one off the printed books — which numbering does the catalog store and how do the crons stop pushing the list's count back?",
+      "expected": [
+        "N35"
+      ],
+      "terms": [
+        "printed",
+        "shift",
+        "numbering"
+      ],
+      "source": "batch 20 wave 13 (2026-09-02): the Dai 348-vs-349 ruling — sourceShifts on the chapter-space ruling, consumed by the wikipedia volume backfill, the MU pin writer and the AFG anchor writer"
     }
   ]
 }

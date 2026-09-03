@@ -250,12 +250,14 @@ async function assertParallelNoAnchors() {
 async function assertChapterSpaces() {
   let n = 0;
   for (const [sid, r] of Object.entries(CHAPTER_SPACE_OVERRIDES)) {
-    const { data: s } = await db.from('series').select('total_chapters, total_volumes').eq('id', sid).maybeSingle();
+    const { data: s } = await db.from('series').select('total_chapters, total_volumes, latest_known_chapters').eq('id', sid).maybeSingle();
     if (!s) continue;
-    const want = { total_chapters: r.chapters, total_volumes: r.volumes ?? s.total_volumes };
-    if (s.total_chapters === want.total_chapters && s.total_volumes === want.total_volumes) continue;
+    // a latest_known above the ruled ceiling is the source's unit count (dai 349 vs the printed 348) — clamp it (N35)
+    const latest = s.latest_known_chapters != null && s.latest_known_chapters > r.chapters ? r.chapters : s.latest_known_chapters;
+    const want = { total_chapters: r.chapters, total_volumes: r.volumes ?? s.total_volumes, latest_known_chapters: latest };
+    if (s.total_chapters === want.total_chapters && s.total_volumes === want.total_volumes && s.latest_known_chapters === want.latest_known_chapters) continue;
     n++;
-    console.log(`  ${sid}: totals ${s.total_chapters}/${s.total_volumes} → ${want.total_chapters}/${want.total_volumes} (N35)`);
+    console.log(`  ${sid}: totals ${s.total_chapters}/${s.total_volumes} → ${want.total_chapters}/${want.total_volumes}${s.latest_known_chapters !== want.latest_known_chapters ? ` (latest_known ${s.latest_known_chapters} → ${want.latest_known_chapters})` : ''} (N35)`);
     if (!DRY) {
       const { error } = await db.from('series').update(want).eq('id', sid);
       if (error) throw new Error(`${sid}: ${error.message}`);

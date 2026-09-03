@@ -17,6 +17,7 @@
 import { findChapterPages, fetchWikitext, parseVolumes, boundariesWithDrops, type WikiVolume } from './lib/wikipedia';
 import { contentHash } from './lib/hash';
 import { db, selectAll, startRun, finishRun, fileFlagOnce } from './lib/db';
+import { toRuledChapter } from './lib/rulings/chapter-spaces';
 
 const sleep = (ms: number) => new Promise((r) => setTimeout(r, ms));
 
@@ -43,7 +44,7 @@ async function main() {
     }>('series', 'id, title, anilist_id, manga_anilist_id, popularity, total_chapters, manga_status', (q) =>
       q.not('manga_anilist_id', 'is', null).order('popularity', { ascending: false }),
     );
-    const targets = new Map<number, { title: string; candidates: string[]; totalChapters: number | null; finished: boolean }>();
+    const targets = new Map<number, { title: string; candidates: string[]; totalChapters: number | null; finished: boolean; seriesId: string }>();
     for (const s of series) {
       if (targets.has(s.manga_anilist_id!)) continue;
       // an explicit id list overrides the anchored-only default (healing a
@@ -60,7 +61,7 @@ async function main() {
         )?.node;
         if (mangaNode?.title.romaji) candidates.unshift(mangaNode.title.romaji);
       }
-      targets.set(s.manga_anilist_id!, { title: s.title, candidates, totalChapters: s.total_chapters, finished: s.manga_status === 'finished' });
+      targets.set(s.manga_anilist_id!, { title: s.title, candidates, totalChapters: s.total_chapters, finished: s.manga_status === 'finished', seriesId: s.id });
     }
     console.log(`[wiki] ${targets.size} manga targets`);
 
@@ -185,11 +186,12 @@ async function main() {
         const later = laterRows.filter((r) => r.volume > lastWiki.volume).map((r) => r.chapter_start);
         if (later.length && (lastWiki.chapterEnd == null || lastWiki.chapterEnd >= Math.min(...later))) lastWiki.chapterEnd = Math.min(...later) - 1;
         await db.from('volume_boundaries').delete().eq('manga_anilist_id', mangaId).eq('source', 'wikipedia');
+        // N35 sourceShifts (2026-09-02): en-WP's list numbering converted into the ruled (printed) space before the rows land
         const rows = bounds.map((b) => ({
           manga_anilist_id: mangaId,
           volume: b.volume,
-          chapter_start: b.chapterStart,
-          chapter_end: b.chapterEnd,
+          chapter_start: toRuledChapter(t.seriesId, 'wikipedia', b.chapterStart, 'start') ?? b.chapterStart,
+          chapter_end: toRuledChapter(t.seriesId, 'wikipedia', b.chapterEnd) ?? b.chapterEnd,
           source: 'wikipedia',
           source_page: pages[0],
         }));

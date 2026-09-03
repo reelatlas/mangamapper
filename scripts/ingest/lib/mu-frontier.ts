@@ -20,6 +20,7 @@ import { honestTerminal, pinRedundant } from './honest-terminal';
 
 export { parseCoverageAll, parseCoverageSegments, pickEntrySegments, segmentIsEntry, type CoverageSegment, type EntryWindow } from './mu-coverage';
 import { parseCoverageAll, parseCoverageSegments, pickEntrySegments } from './mu-coverage';
+import { toRuledChapter, CHAPTER_SPACE_OVERRIDES } from './rulings/chapter-spaces';
 
 export interface FrontierSeries {
   id: string;
@@ -79,7 +80,8 @@ export async function applyMuFrontier(
   // segment must refuse here too — before this, only multi-segment strings
   // consulted the pick, so '(1983)' / '(As of EP 1168)' pins landed unexamined (P5)
   const usePick = segments.length > 1 || (segments.length === 1 && picked.chosen.length === 0);
-  const pairs = usePick ? picked.chosen.map((x) => ({ volume: x.volume, chapter: x.chapter })) : parseCoverageAll(muEnd).pairs;
+  // N35 sourceShifts (2026-09-02): MU's chapter numbers arrive in MU's space — convert into the ruled (printed) space before every gate
+  const pairs = (usePick ? picked.chosen.map((x) => ({ volume: x.volume, chapter: x.chapter })) : parseCoverageAll(muEnd).pairs).map((p) => ({ ...p, chapter: toRuledChapter(s.id, 'mu', p.chapter) ?? p.chapter }));
   const explicitEp = usePick
     ? (picked.chosen.find((x) => x.explicitEp != null)?.explicitEp ?? null)
     : parseCoverageAll(muEnd).explicitEp;
@@ -321,11 +323,21 @@ export function bestLatestKnown(
   mu: { latest_chapter?: number | null; status?: string | null },
   anilistCount: number | null | undefined,
   anchorFloorCh = 0,
+  // N35 (2026-09-02): the ruled chapter space is the ceiling — MU's count is
+  // converted through the series' ruled MU shift (dai: MU's 349 slots = the
+  // printed 348) and capped at the ruled count (orange 22, regenesis 255), so
+  // the coverage healer, the MU backfill and the refresh-mu edge all write the
+  // value assert-overrides would otherwise re-clamp on every heal (P20: a
+  // healer converges in one run; two writers never fight over one column)
+  seriesId?: string,
 ): number | null {
-  return (
+  const raw =
     sameEditionLatest(mu.latest_chapter, anilistCount, anchorFloorCh) ??
-    sameEditionLatest(muStatusChapterCount(mu), anilistCount, anchorFloorCh)
-  );
+    sameEditionLatest(muStatusChapterCount(mu), anilistCount, anchorFloorCh);
+  if (raw == null || !seriesId) return raw;
+  const shifted = toRuledChapter(seriesId, 'mu', raw) ?? raw;
+  const cap = CHAPTER_SPACE_OVERRIDES[seriesId]?.chapters;
+  return cap != null ? Math.min(shifted, cap) : shifted;
 }
 
 // MU's publication status: the explicit `completed` boolean when present

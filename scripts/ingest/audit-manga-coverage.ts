@@ -97,7 +97,7 @@ async function main() {
       const mu = muByManga.get(s.manga_anilist_id);
       if (mu) {
         await crossCheckMangaStatus(runId, s.id, s.manga_status, mu);
-        const editionLatest = bestLatestKnown(mu, s.total_chapters, chapterMax.get(s.id) ?? 0);
+        const editionLatest = bestLatestKnown(mu, s.total_chapters, chapterMax.get(s.id) ?? 0, s.id);
         // same-edition band + confirmed-anchor chapter floor: write the
         // number-space end only when MU tracks the same edition AND the
         // number reaches at least the confirmed anchors (release-derived

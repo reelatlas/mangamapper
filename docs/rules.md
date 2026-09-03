@@ -138,7 +138,7 @@
 - `N32` Watch-order v2: entries render and count as units *(planned)* — aka `watch-order v2 unit rendering`, `fractional watch-order positions`, `the reference point (watch order)`
 - `N33` Every non-main entry carries its reasoning in data — aka `research-logged non-main entries`, `non-main entries carry the why`
 - `N34` Episode totals derive, then floor, then cap — aka `episode totals derivation`
-- `N35` Ruled chapter space: a proven numbering beats AniList totals — aka `ruled chapter space`, `chapter space override`, `CHAPTER_SPACE_OVERRIDES`, `ruledChapterSpace`, `totals re-base`, `propagated scalar`, `the 260-that-is-255 class`
+- `N35` Ruled chapter space: a proven numbering beats AniList totals — aka `ruled chapter space`, `chapter space override`, `CHAPTER_SPACE_OVERRIDES`, `ruledChapterSpace`, `totals re-base`, `propagated scalar`, `the 260-that-is-255 class`, `sourceShifts`, `source chapter shift`, `chapter shift`, `toRuledChapter`, `printed numbering`, `the reading edition`
 
 **I — Identity, franchise & structure** (40)
 - `I1` Our slug is the identity — aka `identity`, `our slug is identity`, `canonical identity is ours`, `own-slug identity`
@@ -931,11 +931,11 @@ On a parallel series (I40) chapter numbers are CORRESPONDENCE, never adaptation:
 
 ### A47 · End-side sliver: an END never advances on an owned tail
 
-END (chapter_anchors.chapter) is the furthest mainline chapter the episode adapts (A4) — but it does not ADVANCE on a trailing scrap of the next chapter that the NEXT episode owns: a tail of at most 5 pages (or sliver / teaser / cold-open wording) of chapter X, when the next anchored episode STARTS on X, is that episode's chapter; the position stays on X-1, the tail stays in chapters_adapted and a `partial` annotation names it. Without a next anchored episode (a finale) the tail stands and the reader continues IN it (C1). A tail that is the episode's ONLY record never moves (X-1 would be a chapter the episode never adapts — d-gray-man 66's one page of 78, reborn 159's sliver of 232): such a row is a judgment call (A44 position-less, or the value stands), listed, never derived. The apply layer normalizes curated anchors through lib/sliver.ts#sliverEnd (the one derivation, P2); the census re-runs it over every manual anchor with a record (end_sliver_mismatch — a listing class, Sean signs each move).
+END (chapter_anchors.chapter) is the furthest mainline chapter the episode adapts (A4) — but it does not ADVANCE on a trailing scrap of the next chapter that the NEXT episode owns: a tail of at most 5 pages (or sliver / teaser / cold-open wording) of chapter X, when the next anchored episode STARTS on X, is that episode's chapter; the position stays on X-1, the tail stays in chapters_adapted and a `partial` annotation names it. Without a next anchored episode (a finale) the tail stands and the reader continues IN it (C1). A tail that is the episode's ONLY record never moves (X-1 would be a chapter the episode never adapts — d-gray-man 66's one page of 78, reborn 159's sliver of 232): such a row is a judgment call (A44 position-less, or the value stands), listed, never derived. The apply layer normalizes curated anchors through lib/sliver.ts#sliverEnd (the one derivation, P2); the census re-runs it over every manual anchor with a record (end_sliver_mismatch — a listing class, Sean signs each move). THE UNPROVEN-TAIL CONVENTION (Sean, wave 13, 2026-09-02): the exception needs EVIDENCE of size — a page count of at most 5, or sliver / teaser / cold-open wording. Position language alone ('the opening of ch 90', 'ch 104's first scene') proves nothing about size, so the END ADVANCES to the furthest chapter played (A4's default), a `partial` names the tail so it is not read as full coverage, and the continue lands in that same chapter. Dai 23 / 25 / 28 / 29 were ruled this way (two agents had held on position language; five had advanced — one convention for the catalog). Sean's stated reasoning is an ASSUMPTION he asked not to be cited as confirmed logic: a source that bothers to cite a chapter usually adapted a meaningful share of it, and a true sliver usually comes with an explanation.
 
 *Why:* orient ep 12 (wave 8): ch 47 pp 1-5 close the first cour as a teaser and ep 13 re-stages pp 2-4 and finishes the chapter — the Opus author ruled END 46 'by analogy with A10' and the Fable verifier found the ledger had no END-side rule at all (A10 governs STARTs only), so the same fork on one-piece-log ep 10 (618 pp 3-4, ep 11 starts on 618) had been called the other way (618). Sean ruled 2026-09-02: one rule, applied to both — 46 and 617; display impact zero (A13 shows the START; the continues are unchanged).
 
-- ruled Sean 2026-09-02 (scripts/ingest/research/batch20/WAVE8-RECOVERY.md §THE DECISIONS item 2; verify/orient.md (the verifier's finding); changelog §12.96)
+- ruled Sean 2026-09-02 (scripts/ingest/research/batch20/WAVE8-RECOVERY.md §THE DECISIONS item 2; verify/orient.md (the verifier's finding); changelog §12.96; the unproven-tail convention: WAVE13-RECOVERY.md §THE DECISIONS item 2, changelog §12.103)
 - layer **writer**
 - enforced: [lib/sliver.ts#sliverEnd](../scripts/ingest/lib/sliver.ts) · [research/batch20/apply-wave8.ts#sliverEnd](../scripts/ingest/research/batch20/apply-wave8.ts) · [research/batch20/a47-migrate.ts#sliverEnd](../scripts/ingest/research/batch20/a47-migrate.ts) · [audit-ui-truth.ts#end_sliver_mismatch](../scripts/ingest/audit-ui-truth.ts) · [lib/sliver.test.ts#sliverEnd (A47](../scripts/ingest/lib/sliver.test.ts)
 - audit: `end_sliver_mismatch`
@@ -1920,16 +1920,16 @@ Single-season: aired = AniList nextAiringEpisode − 1 while airing, else AniLis
 
 ### N35 · Ruled chapter space: a proven numbering beats AniList totals
 
-series.total_chapters / total_volumes default to AniList's values (scoped by I36), but when research proves the real numbering differs — a propagated scalar no title, TOC or chapter page instantiates (regenesis: 260 vs Coamix's complete 1-255 index), a count from no sourceable numbering (sacred-beasts: 120 vs the manga's own 1-87 / 15 vols) — the ruled space (lib/rulings/chapter-spaces.ts, reason + cites) WINS at every totals writer: resolveSeries and chain.ts#aggregate apply ruledChapterSpace, assert-overrides asserts it over standing rows, and a stored total that disagrees is ruling_violation. A repair without the map would be deleted by the next re-derive (P8).
+series.total_chapters / total_volumes default to AniList's values (scoped by I36), but when research proves the real numbering differs — a propagated scalar no title, TOC or chapter page instantiates (regenesis: 260 vs Coamix's complete 1-255 index), a count from no sourceable numbering (sacred-beasts: 120 vs the manga's own 1-87 / 15 vols) — the ruled space (lib/rulings/chapter-spaces.ts, reason + cites) WINS at every totals writer: resolveSeries and chain.ts#aggregate apply ruledChapterSpace, assert-overrides asserts it over standing rows, and a stored total that disagrees is ruling_violation. A repair without the map would be deleted by the next re-derive (P8). SOURCE SHIFTS (Sean 2026-09-02, wave 13 — the Dai case): the catalog follows the PRINTED chapter numbering (the reading edition); when a source numbers an unnumbered extra (en-WP's 349-slot Dai list, adopted by AniList / MU / MangaDex) or omits a numbered chapter, the ruling carries per-source shifts (`sourceShifts`) and every writer that takes chapter numbers from that source converts through `toRuledChapter` — the wikipedia volume backfill, the MU pin writer, the AFG anchor writer; the unnumbered extras and one-shots are recorded as `side_story` annotations when adapted, never numbered.
 
 *Why:* Batch 20 wave 6 (2026-08-28): two of seven MU-pin verifications surfaced chapter spaces that were wrong at the SERIES level — fist-of-the-blue-sky-regenesis stored 260 total (ja-WP's infobox scalar, contradicted by its own prose and Coamix's index) and to-the-abandoned-sacred-beasts stored 120 (AniList, matching no numbering; flag #681). Anchors and continues computed against a wrong space misplace the honest dash and the tail badge.
 
 - ruled Sean 2026-08-28 (scripts/ingest/research/batch20/WAVE6-RECOVERY.md; changelog §12.91)
 - layer **writer**
-- enforced: [lib/rulings/chapter-spaces.ts#ruledChapterSpace](../scripts/ingest/lib/rulings/chapter-spaces.ts) · [lib/resolve.ts#resolveSeries](../scripts/ingest/lib/resolve.ts) · [lib/chain.ts](../scripts/ingest/lib/chain.ts) · [assert-overrides.ts#assertChapterSpaces](../scripts/ingest/assert-overrides.ts) · [audit-ui-truth.ts](../scripts/ingest/audit-ui-truth.ts)
+- enforced: [lib/rulings/chapter-spaces.ts#ruledChapterSpace](../scripts/ingest/lib/rulings/chapter-spaces.ts) · [lib/rulings/chapter-spaces.ts#toRuledChapter](../scripts/ingest/lib/rulings/chapter-spaces.ts) · [lib/mu-frontier.ts#applyMuFrontier](../scripts/ingest/lib/mu-frontier.ts) · [lib/anchors.ts#syncAnchors](../scripts/ingest/lib/anchors.ts) · [volumes-backfill.ts](../scripts/ingest/volumes-backfill.ts) · [lib/resolve.ts#resolveSeries](../scripts/ingest/lib/resolve.ts) · [lib/chain.ts](../scripts/ingest/lib/chain.ts) · [assert-overrides.ts#assertChapterSpaces](../scripts/ingest/assert-overrides.ts) · [audit-ui-truth.ts](../scripts/ingest/audit-ui-truth.ts)
 - audit: `ruling_violation`
-- witnesses: fist-of-the-blue-sky-regenesis, to-the-abandoned-sacred-beasts
-- aliases: ruled chapter space, chapter space override, CHAPTER_SPACE_OVERRIDES, ruledChapterSpace, totals re-base, propagated scalar, the 260-that-is-255 class
+- witnesses: dragon-quest-the-adventure-of-dai, fist-of-the-blue-sky-regenesis, to-the-abandoned-sacred-beasts
+- aliases: ruled chapter space, chapter space override, CHAPTER_SPACE_OVERRIDES, ruledChapterSpace, totals re-base, propagated scalar, the 260-that-is-255 class, sourceShifts, source chapter shift, chapter shift, toRuledChapter, printed numbering, the reading edition
 - see: N3, N1, I36, P8, G37
 
 ## I — Identity, franchise & structure
@@ -4332,6 +4332,7 @@ Any component that renders episode-level data consumes the HYDRATED series (getB
 - change detection before download → `G15`
 - chapter floor → `N26`
 - chapter overlap never proves filler → `T7`
+- chapter shift → `N35`
 - chapter space override → `N35`
 - CHAPTER_SPACE_OVERRIDES → `N35`
 - chapter-floor → `N26`
@@ -4879,6 +4880,7 @@ Any component that renders episode-level data consumes the HYDRATED series (getB
 - prequel-hijack fallback → `I23`
 - prevEnd+1 derivation → `A15`
 - principle 8 → `P36`
+- printed numbering → `N35`
 - priority of authority → `G5`
 - propagated scalar → `N35`
 - PROTOCOL pin → `R31`
@@ -5023,6 +5025,7 @@ Any component that renders episode-level data consumes the HYDRATED series (getB
 - small-sample rule → `R28`
 - sole adaptation → `T28`
 - sole-adaptation exception → `T28`
+- source chapter shift → `N35`
 - source is identity → `T25`
 - source is series identity → `T25`
 - source kinds registry → `T25`
@@ -5044,6 +5047,7 @@ Any component that renders episode-level data consumes the HYDRATED series (getB
 - source-kinds → `T25`
 - source-scope enforcement → `I36`
 - source-scope rule → `I36`
+- sourceShifts → `N35`
 - sourceType → `T20`
 - span override → `I39`
 - sparse guard → `G12`
@@ -5116,6 +5120,7 @@ Any component that renders episode-level data consumes the HYDRATED series (getB
 - the governing rule → `P11`
 - the L-P queue → `A46`
 - the Naruto bug → `I36`
+- the reading edition → `N35`
 - the reference point (watch order) → `N32`
 - the standing goal → `P30`
 - the story test → `T30`
@@ -5134,6 +5139,7 @@ Any component that renders episode-level data consumes the HYDRATED series (getB
 - Tokyo Ghoul rule → `N22`
 - Toriko deletion → `A6`
 - Toriko deletion precedent → `A6`
+- toRuledChapter → `N35`
 - totals re-base → `N35`
 - trailing scrap → `A47`
 - translated-max merge boundary → `N19`

@@ -47,7 +47,7 @@ run('one-hop-check', ['scripts/restructure/one-hop-check.ts']);
 // 5. rulings index completeness
 {
   const dir = join(ROOT, 'scripts/ingest/lib/rulings');
-  const files = [...readdirSync(dir).filter((f) => f.endsWith('.ts') && !['index.ts', 'types.ts'].includes(f)), ...readdirSync(join(dir, 'applied')).filter((f) => f.endsWith('.ts')).map((f) => 'applied/' + f)];
+  const files = [...readdirSync(dir).filter((f) => f.endsWith('.ts') && !f.endsWith('.test.ts') && !['index.ts', 'types.ts'].includes(f)), ...readdirSync(join(dir, 'applied')).filter((f) => f.endsWith('.ts')).map((f) => 'applied/' + f)];
   const index = readFileSync(join(dir, 'index.ts'), 'utf8');
   const notImported = files.filter((f) => !index.includes(`'./${f.replace(/\.ts$/, '')}'`));
   console.log(`  ${notImported.length ? 'FAIL' : 'ok  '} rulings index: ${files.length} files, ${notImported.length} not imported${notImported.length ? ` (${notImported.join(', ')})` : ''}`);

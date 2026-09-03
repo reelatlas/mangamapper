@@ -9,6 +9,7 @@ import { upsertAnnotation } from './annotations';
 import { CONTINUA_SUPPRESSED, registerIds, translateEpisodeNumber } from './resolve';
 import { isAnchorSuppressed } from './rulings/anchor-suppressed';
 import { isParallelSeries } from './rulings/source-relations';
+import { toRuledChapter } from './rulings/chapter-spaces';
 
 // heading comparison: decode leftover entities, drop parenthetical year
 // suffixes ("Rurouni Kenshin (1996)"), then collapse to word soup
@@ -54,6 +55,8 @@ export async function applyContinua(
     return 'suppressed';
   }
   if (!continua || continua.endChapter === null) return 'no_data';
+  // N35 sourceShifts: AFG's chapter numbers into the ruled space (the Dai 348-vs-349 ruling) — END as an end, the continue as a start
+  continua = { ...continua, endChapter: toRuledChapter(seriesId, 'afg', continua.endChapter) ?? continua.endChapter, continueChapter: toRuledChapter(seriesId, 'afg', continua.continueChapter, 'start') ?? continua.continueChapter };
   const { data: s } = await db
     .from('series')
     .select('id, title, title_native, aired_episodes, total_chapters, latest_known_chapters, manga_anilist_id, search_text')
@@ -319,7 +322,7 @@ export async function syncAnchors(
   // source's space — shift-ruled series translate exactly like episode rows
   // (dropped order-only entries never anchor)
   const translated = anchors
-    .map((a) => ({ ...a, episode: translateEpisodeNumber(seriesId, a.episode, 'afg') }))
+    .map((a) => ({ ...a, episode: translateEpisodeNumber(seriesId, a.episode, 'afg'), chapter: toRuledChapter(seriesId, 'afg', a.chapter) ?? a.chapter, startChapter: toRuledChapter(seriesId, 'afg', a.startChapter, 'start') ?? a.startChapter })) // N35 sourceShifts: AFG's chapter column into the ruled space
     .filter((a): a is typeof anchors[number] => a.episode !== null);
   // A1 at the writer (Sean's D4 ruling, 2026-08-25, extending D1 to the AFG
   // chart writer): filler rows NEVER take anchors (A44 position-less rows neither). AFG's

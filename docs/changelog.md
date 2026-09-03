@@ -887,6 +887,63 @@
    0. Permanence 0 locked / 0 violations; no stale rulings. Cycle: step 1
    — Sean picks wave 8 (L-D ×8 of ~16, or a gap block; dai LAST; the T28
    six + claymore 26 still parked for his ruling).
+103. ✅ **BATCH 20 WAVE 13 APPLIED — dai 18-59 CLOSED IN THE PRINTED
+   CHAPTER SPACE; N35 SOURCE SHIFTS BUILT; A47'S UNPROVEN-TAIL CONVENTION
+   (2026-09-02; Sean ruled).** Seven sub-blocks landed 7/7, verified 2/2.
+   SEAN RULED (WAVE13-RECOVERY §THE DECISIONS): (1) apply with the
+   corrections — ep 28's graft → 196 printed (pp 10, 12), ep 17 → 59 + the
+   relocated ch-60 beat as `rearranged`, ep 39 START on the running-order
+   chapter (137 printed; the ch-134 remainder stays a `rearranged` note —
+   ep 42's rule, one rule for the block); (2) **the unproven-tail
+   convention**: A47's exception needs EVIDENCE of size (≤ 5 pages or
+   teaser wording); position language ('the opening of ch 90') proves
+   nothing, so the END advances to the furthest chapter played with a
+   `partial` and the continue lands in it — dai 23 / 25 / 28 / 29 advanced
+   (two agents had held, five had advanced); Sean's reasoning ('a cited
+   chapter usually carries a real share; a true sliver comes with an
+   explanation') recorded as an ASSUMPTION, not confirmed logic — in the
+   A47 record, the research-agent and apply-batch traps; (3) **the chapter
+   space is the PRINTED 348, not the lists' 349** — the session's first
+   recommendation (keep 349) was expediency and was withdrawn: en-WP's
+   volume list gave the unnumbered 番外編「勇者アバン」 (back of vol 13) its
+   own slot and AniList / MangaUpdates / MangaDex inherited it; ja-WP and
+   the tankōbon number 1-348 (verified: Viz's digital release stops at 101
+   so cannot settle an English edition; the fandom's side-story page
+   navigates 'previous: ch 121 (tankōbon), next: ch 122 (tankōbon)'). Same
+   class as orange 39 → 22 and regenesis 260 → 255 (N35). Sean: 'the
+   catalog's job is follow-along in the source'; unnumbered extras and
+   one-shots are NOTED as `side_story` wherever adapted, never numbered.
+   BUILT (the general mechanism, not a one-off): `sourceShifts` on the
+   chapter-space ruling (`{source, from, delta}` per source; dai: en-WP /
+   MU / AFG −1 from 123, the fandom −1 from 208) + `toRuledChapter(series,
+   source, n, role)` — a list number ON a removed slot resolves by ROLE
+   (END → the last printed chapter, START → the next), the one boundary a
+   pure shift cannot express (v13's end 122 → 121); consumed by the
+   wikipedia volumes backfill, applyMuFrontier, syncAnchors (chapter +
+   start), applyContinua (end + continue) and `bestLatestKnown` (MU's
+   349 → 348, capped at the ruled count — the coverage healer, the MU
+   backfill and the refresh-mu edge now write what assert-overrides
+   re-clamped on EVERY heal before: two writers fought over one column;
+   the healer converges now). assert-overrides also clamps latest_known
+   to the ruled space. 4 unit tests; the N35 record's SOURCE SHIFTS
+   paragraph names every site; one-hop case 30. APPLIED (converted at
+   write from the verdicts' list space, the note stamps `list N → printed
+   M`): **42 manual anchors 63 → 216**, 27 continues, 47 annotations, the
+   ep-17 fence repair; the stored volume table re-based in place (v13 =
+   114-121, v14-v37 −1), the ep-100 MU pin 349 → 348 v37, ep 1's graft
+   183 already printed (skipped), totals 349/37 → 348/37, latest_known
+   348; ep 35's divergence on 'list 122' rewritten as `side_story` (the
+   番外編 sits there, not adapted; ep 61 adapts it — wave 14 notes it).
+   CENSUS, every delta named: anchor_beyond_chapter_space 0 (the guard
+   held through the switch); ruling_violation 0; end_sliver_mismatch 0;
+   continue_skip_unnoted 0; anchor_volume_mismatch 20 (UNCHANGED — the
+   wave-9 standing set, none dai); frontier_tail_null 8 (unchanged);
+   anchor_gap_research 1 (dai 60-99 — the last block); display 218 / 0;
+   system census OK (the rulings-index check now skips `*.test.ts`); edges
+   rebuilt + deployed three times (each lib change a deploy, P3). WAVE 14
+   contract pinned in PROTOCOL.md: deliver in the PRINTED space; ep 61 →
+   `side_story`; 85-87 `rearranged`; the 96-100 agent verifies the pin.
+
 102. ✅ **BATCH 20 WAVE 12 APPLIED — four-knights 1-23 CLOSED; ONE GAP BLOCK
    LEFT (2026-09-02; Sean: "yes to all and go").** Four sub-blocks landed
    4/4, verified SOUND by one Fable verifier over the block (23 anchors, 13
