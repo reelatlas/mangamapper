@@ -887,6 +887,38 @@
    0. Permanence 0 locked / 0 violations; no stale rulings. Cycle: step 1
    — Sean picks wave 8 (L-D ×8 of ~16, or a gap block; dai LAST; the T28
    six + claymore 26 still parked for his ruling).
+100. ✅ **BATCH 20 WAVE 10 APPLIED — FotNS 109-151, THE LARGEST GAP BLOCK,
+   CLOSED (2026-09-02; Sean ruled).** Seven sub-blocks (-w10a … -w10g)
+   landed 7/7, verified 3/3 (Fable over Opus: a+b, d+e, f+g — all sound
+   with corrections; nothing refuted on a chapter value). APPLIED: **40
+   manual anchors 137 → 209 across all 39 canon/mixed rows**, 18 continues
+   (C7), 56 annotations; the seven files merged into one episode-sorted
+   list so A47 sees the next START across seams; **VOLUME DERIVED from the
+   boundary table for every anchor** — the a+b verifier refuted two copied
+   volumes and the derivation caught FOUR (117, 119, 123, 126; the END's
+   volume is the convention) — the standing apply shape from here; seam
+   overlays from the verifiers (114 → 145 = B's START; 131 → 179, C1 — ep
+   133 finishes ch 179; 144 → 195 — the no-skip choice; graft{196} on 144;
+   partial{154} on 119; the C3 skip note on 115's continue for its ch-151
+   graft — the census's continue_skip_unnoted 0 → 1 → 0 caught the
+   omission). RULED: five retypes (T6: 131 / 133 / 139 / 140 → mixed, 132
+   → filler — AFL's 'Manga Canon' on 129-140 the only dissent); **ep 130
+   stays canon + divergence under THE RECAP CLAUSE, a T28 amendment Sean
+   ruled on this row: a recap segment does not progress the story and
+   counts for NOTHING in the standing — the remainder decides (pure source
+   → canon with the recap noted; source + original → mixed; nothing else →
+   filler)** — recorded in the T28 record, the T6 entry and the
+   research-agent vocabulary. CENSUS, every delta named: anchor_gap_research
+   6 → 5 (FotNS out; 41 rows); frontier_tail_null 9 → 8 (erased's A44
+   entry, §12.99); continue_skip_unnoted 0 → 1 → 0 (ep 115, fixed at
+   apply); ruling_violation 0; display 218 / 0; anchor_nonmonotonic 0
+   (five rearranged rows carry their rulings). Edges rebuilt + deployed;
+   166 tests; system census OK. CAPTURE: the recap clause (T28 + agent);
+   `chapters_adapted` as a comma list, never prose (the A47 parser reads a
+   prose record as one segment — a no-op on this block; agent trap); the
+   two-digit wave regex in the three landing gates. Remaining gap blocks:
+   kingdom 104-128, bleach 168-202, shippuden 374-392, four-knights 1-23;
+   dai 18-99 ×3 LAST.
 99. ✅ **BATCH 20 WAVE 9 APPLIED + CONSOLIDATED — THE L-D PIN LANE CLOSED
    (2026-09-02; Sean: "great use of the rule and learnings … ready to go").**
    Landed 9/9, verified 4/4 (Fable over Opus; all sound, corrections at

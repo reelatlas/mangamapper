@@ -85,3 +85,6 @@ The apply (drafted, dry-run): derives every anchor's VOLUME from the boundary ta
 3. Forks: 119 END 153 vs 154; 129 START 176 vs 177; 130 canon vs mixed (the clip show share); 133 END 179 vs 180; 144 END 195 vs 194; the 189/190 and 193/194 lines (medium).
 4. Lane-B crumb: AFL's ep-126 date 1987-08-03 (a Monday) → 08-13 per three sources.
 5. After apply: anchor_gap_research loses its largest entry (41 rows); the next blocks queue (kingdom 104-128, bleach 168-202, shippuden 374-392, four-knights 1-23).
+
+## RULED + APPLIED (§12.100, 2026-09-02 — Sean: "everything else is good and ready to go"; ep 130 = THE RECAP CLAUSE)
+Applied with the verifier corrections: 40 manual anchors 137 → 209 (volumes derived from the boundary table — four copied volumes were wrong), 18 continues (seams 114 → 145, 131 → 179, 144 → 195; the C3 skip note on 115), 56 annotations (+ graft{196} on 144, partial{154} on 119); T6 ×5. **Ep 130 stays canon + divergence under the recap clause Sean ruled on this row** (T28 amended: a recap counts for nothing in the standing; the remainder decides). Census: anchor_gap_research 6 → 5, ruling_violation 0, display 218/0. Next: /consolidate → the next gap block.

@@ -29,6 +29,7 @@ const CONTINUE_OVERRIDE: Record<number, { chapter: number; why: string }> = {
   131: { chapter: 179, why: 'C1: ep 131 ends MID-ch 179 (the Hyoh debut) and ep 133 finishes the chapter (the Jūkei revelation) — parity with 133\'s START; the delivered 180 contradicted the ch-179 cast (verifier F1)' },
 };
 const NOTE_FIX: Record<string, string> = {
+  '115#continue': 'C3: SKIP ch 151 on arrival — this episode already grafted ch 151 (Falco\'s Hokuto-Army beat) ahead of the running order; resume at 147 and skip 151 when you reach it.',
   '148#continue': 'ch 202\'s Hyoh/Kuroyasha opening is ep 149\'s (verifier note).',
   '151#continue': 'MEDIUM: whether ep 152 finishes ch 209 is unwitnessed — ch 210\'s cast opens on the duel and Bat\'s arrival follows the final blow (verifier note).',
   '113#anchor': 'ch 142\'s tail is RESTAGED at ep 117 (not animated first-time there) — verifier wording fix.',

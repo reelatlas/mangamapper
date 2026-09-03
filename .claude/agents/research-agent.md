@@ -254,6 +254,9 @@ Read both, fully:
 - **AFL's date column can be a MIXED station lineage on a domestic series too** (gangsta ABC / TOKYO MX; killing-bites MBS / BS-TBS), not only on simulcasts — and the fix is the EARLIEST first airing per Count (syobocal), never "the production station's regime" as a block: gangsta's rows 5-9 were already right because MX aired them first.
 - **A row-less entry's anchors must cover its REORDER ZONE** (code-black): the display interpolates between anchors when no rows exist, so a lone frontier anchor plus a finale anchor rendered a false back-jump — deliver the whole verified map when the run reorders (A42 + `rearranged` on the jump row).
 
+- **THE RECAP CLAUSE (T28, Sean 2026-09-02 — FotNS 130):** a recap / clip-show segment does not progress the story and counts for NOTHING in the standing; judge the REMAINDER of the episode — pure source adaptation → canon (note the recap as `divergence` with its timestamps), source + original plot → mixed, nothing else → filler (T27). Never let a recap's SIZE make a row mixed (ep 130: a 9m28s clip show inside a full adaptation of ch 178 stays canon).
+- **Deliver `chapters_adapted` as a COMMA-SEPARATED chapter list** (`145 (prison), 146, 147-149 (the duel)`), never prose — the A47 normalizer parses the trailing segment; a prose record is one segment to it and the rule silently does nothing (wave 10's a+b verifier).
+
 ## Output
 
 Write exactly the JSON path you are given, valid and complete before you
