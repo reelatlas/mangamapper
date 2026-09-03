@@ -1,0 +1,205 @@
+{
+  "series_id": "fist-of-the-north-star",
+  "summary": "Episodes 115-120 are the Tentei (Celestial Emperor) arc's Falco block and they adapt ch 143-156 -- but NOT in manga order. The manga cross-cuts two threads through ch 146-149 (Kenshiro vs the purple general Solia on the road, and Falco annihilating the Hokuto Army); Toei un-cross-cut them, giving the whole Solia thread to ep 114 and the whole Falco thread to eps 115-116, so ep 115 re-enters ch 145 for Falco's own debut (his first anime appearance is ep 115 per hokuto.fandom's two-way index) and ep 116 closes the thread on ch 149 ('The General's Tears Are Dried' -- the episode's own closing beat). Ep 117 is a second, larger displacement: ch 143-144 (Bat recruiting Ein, Beron's county, Ren's betrayal, Asuka kidnapped) are held back four episodes and played AFTER the Falco material -- hokutosite prints the two running orders side by side ('原作は…全ての郡都と市都陥落 → ファルコによって北斗の軍半壊 → 中央帝都へ / アニメでは ファルコによって北斗の軍半壊 → ベロンの郡都おとされる → 中央帝都へ'). From ep 118 the run is linear again: 150-151 (Shoki's death in the canal), 152-153 (the three gates, Falco's mother, Saiya and the detonator), 154-156 (the duel, the infiltration, Lui revealed). All six rows are canon on all three sources and hokuto.fandom's Filler page lists only 111/130/132 as filler in Hokuto no Ken 2, so no type corrections. Six anchors land inside the outer fence 136 (ep 108) -> 210 (ep 152); two are back-jumps (115 and 117) that carry mandatory `rearranged` annotations, and ep 119's END is held at 153 under A47 because its ch-154 tail is the opening of the duel ep 120 starts on.",
+  "anchors": [
+    {
+      "episode": 115,
+      "end_chapter": 147,
+      "start_chapter": 145,
+      "chapters_adapted": "145 (Falco's debut -- the fleeing governor executed with Gento Ko Ken; the manga's 市都/city is demoted to a 郡都/county), 146 (closing pages: Falco's unit reaches the captured city -- restaged as a canyon ambush) - 147 (Falco's ultimatum to the beaten Hokuto Army: Bat spared, Lin identified, the fist raised over her). Ch 146's main body -- the Mamiya's-village assassination -- is animated in ep 114 with Solia put in Falco's place; ch 151's Shoki/Yuria village flashback is lifted forward into this episode (see the graft annotation)",
+      "volume": 17,
+      "confidence": "medium",
+      "note": "A4/A10/A42. Falco's manga debut is ch 145 and his anime debut is ep 115 (hokuto.fandom appearances: 'Manga (ch. 145-165), Anime (ep. 115-124)'), so the episode opens on ch 145's Falco pages even though ep 114 already used ch 145's prison/Harn-brothers pages -- pages, not numbers, hence `rearranged`. The END is the ch-147 leader ultimatum: hokuto.fandom's in-order cast list for ch 147 runs Kenshiro, Kokuoh, Solia, Falco, Bat, Lin, ... Buzz, Ein, Gil, i.e. the Falco/Bat/Lin confrontation sits in 147 BEFORE the Harn brothers stand (the chapter's title event, which ep 116 plays). MEDIUM because the exact 146/147 seam is inferred from that cast order plus the anime's own scene order, not from a page-level source. A47 does not bind: ep 116 starts on ch 147 but ep 115's share of it is the episode's whole climax, not a <=5-page tail.",
+      "sources": [
+        "https://hokuto.fandom.com/wiki/Falco",
+        "https://hokuto.fandom.com/wiki/HnK_Chapter_145",
+        "https://hokuto.fandom.com/wiki/HnK_Chapter_147",
+        "https://rq87.flyingomelette.com/HNK/1/115/a.html",
+        "https://rq87.flyingomelette.com/HNK/1/115/115.html",
+        "https://hokutosite.sakura.ne.jp/sakuhin/gensaku/hokuto/115.html"
+      ]
+    },
+    {
+      "episode": 116,
+      "end_chapter": 149,
+      "start_chapter": 147,
+      "chapters_adapted": "147 (cont.: the Harn brothers blast out of their concrete, raise the Nanto banner and declare themselves the Nanto Soyoken successors -- the chapter's title event) - 148 (Buzz Harn's death) - 149 (the mortar explosion and Falco's men making a wall of their bodies; 'Lord Falco has already cried for them, until his tears dried up' = 涙枯れし猛将)",
+      "volume": 17,
+      "confidence": "high",
+      "note": "A4/A42. Title-to-content match on the END: ch 149 is 涙枯れし猛将 ('The General's Tears Are Dried') and that line is ep 116's closing beat on both per-episode sources. Buzz Harn's index is 'Manga (ch. 145-148), Anime (ep. 114-116)' and Gil Harn's 'Manga (ch. 145-160), Anime (ep. 114-116)' -- their anime run ends here. `rearranged` because this closes the Falco thread the anime un-cross-cut from ch 146-149 (ep 114 took the Solia thread of the same chapters).",
+      "sources": [
+        "https://hokuto.fandom.com/wiki/HnK_Chapter_149",
+        "https://hokuto.fandom.com/wiki/Buzz_Harn",
+        "https://hokuto.fandom.com/wiki/Gil_Harn",
+        "https://rq87.flyingomelette.com/HNK/1/116/a.html",
+        "https://rq87.flyingomelette.com/HNK/1/116/116.html",
+        "https://hokutosite.sakura.ne.jp/sakuhin/gensaku/hokuto/116.html"
+      ]
+    },
+    {
+      "episode": 117,
+      "end_chapter": 144,
+      "start_chapter": 143,
+      "chapters_adapted": "143 (Bat recruits Ein and the two take Beron's county -- 反逆の蒼き狼たち, 'The Revolt of the Young Wolves') - 144 (Beron's revenge: Ren kidnaps Asuka, Kenshiro kills Ren, Ein kills Beron; Asuka is revealed to be a small child). Ein's past and Joseph are anime-original (the manga only mentions the past, and Goru is the guardian)",
+      "volume": 16,
+      "confidence": "high",
+      "note": "A4/A42 back-jump. Three-way agreement: hokuto.fandom's index gives Beron 'Manga (HnK Chapter 144), Anime (ep. 117)' and Ren 'Manga (ch. 144), Anime (ep. 117)'; RQ87 states 'The events of this episode happen earlier in the manga -starting after Kenshiro defeats Geira' (Geira dies in ch 142); hokutosite prints the two running orders explicitly and notes Beron's manga post was warden of the Class-A rebel camp, changed to the lord of the county Bat and Ein take. This is the block's biggest displacement -- ch 143-144 sit four episodes behind the ch 145-149 material eps 115-116 already played -- hence `rearranged`, not a gap.",
+      "sources": [
+        "https://hokuto.fandom.com/wiki/Beron",
+        "https://hokuto.fandom.com/wiki/Ren",
+        "https://hokuto.fandom.com/wiki/HnK_Chapter_143",
+        "https://rq87.flyingomelette.com/HNK/1/117/a.html",
+        "https://hokutosite.sakura.ne.jp/sakuhin/gensaku/hokuto/117.html"
+      ]
+    },
+    {
+      "episode": 118,
+      "end_chapter": 151,
+      "start_chapter": 150,
+      "chapters_adapted": "150 (Falco lifts the collapsed slave; Rihaku tells the Raoh story -- Falco severing his own right leg to spare the Gento village; Falco summoned before Jakoh, where Sheeno and Jask make their manga debut (Boltz and Taiga in the anime); Shoki's revolt and Falco's mercy-kill; Shoki floated out down the canal and speared) - 151 (Kenshiro's group find the dying Shoki, he dies, Kenshiro hurls the spear back -- in the manga it goes through Sheeno's throat and kills him)",
+      "volume": 17,
+      "confidence": "high",
+      "note": "A4. RQ87's manga-differences list is decisive and per-scene: 'In the manga, Sheeno and Jask made their debut when Falco is summoned before Jako'; 'In the manga, Sheeno is the one who fatally wounds Shoki... hiding beneath the water'; 'In the manga, Sheeno is killed by his own spear when Kenshiro throws it at him'. hokuto.fandom: Sheeno and Jask are both {{1st}} in ch 150, Sheeno {{Death}} in ch 151; Shoki's index is 'Manga (ch. 150-151), Anime (ep. 114-118)'. Not skipped but worth naming: the manga opens this stretch with Gil Harn at his brother's grave, which the anime cannot use because it killed Gil in ep 116.",
+      "sources": [
+        "https://hokuto.fandom.com/wiki/HnK_Chapter_150",
+        "https://hokuto.fandom.com/wiki/HnK_Chapter_151",
+        "https://hokuto.fandom.com/wiki/Shoki",
+        "https://rq87.flyingomelette.com/HNK/1/118/a.html",
+        "https://hokutosite.sakura.ne.jp/sakuhin/gensaku/hokuto/118.html"
+      ]
+    },
+    {
+      "episode": 119,
+      "end_chapter": 153,
+      "start_chapter": 152,
+      "chapters_adapted": "152 (Jakoh's Raoh nightmare; the first gate; Myu's manga debut) - 153 (the electrified second gate, the blackout and Jakoh stabbing his own general's leg, the nunchaku at the last gate, Falco's flashback of Raoh telling him to kill Jakoh and of his mother's prayer, Saiya's debut with the detonator, Falco taking the ancestor's cape) + the opening exchange of ch 154 (Rihaku on the two stars, Falco's blast destroying the nunchaku, the heavens splitting) -- that tail is ep 120's under A47",
+      "volume": 17,
+      "confidence": "medium",
+      "note": "A4 + A47. Saiya's index is 'Manga (ch. 153-160), Anime (ep. 119-122)' and ch 153's cast is Kenshiro, Falco, Saiya {{1st}}, Jako {{Flash}}, Myu -- exactly ep 119's second half, so 153 is reached. The episode then runs a few pages into ch 154 and stops on the cliffhanger; ep 120 STARTS on ch 154 and plays the duel in full, so A47 holds the END at 153 and the tail is carried as a `partial`. The one substantial beat in that tail (Lin hearing the Emperor) is itself a lift-forward: hokutosite says '原作でリンが天帝の声を聞くのは戦いが始まって暫く経ってからだが、アニメでは始まってすぐ'. MEDIUM: I could not page-count ch 154's opening, and if it exceeds five pages the honest END is 154 with a C1 straddle -- see flags_for_sean. The reader's continue is 154 either way.",
+      "sources": [
+        "https://hokuto.fandom.com/wiki/HnK_Chapter_152",
+        "https://hokuto.fandom.com/wiki/HnK_Chapter_153",
+        "https://hokuto.fandom.com/wiki/Saiya",
+        "https://rq87.flyingomelette.com/HNK/1/119/a.html",
+        "https://rq87.flyingomelette.com/HNK/1/119/119.html",
+        "https://hokutosite.sakura.ne.jp/sakuhin/gensaku/hokuto/119.html"
+      ]
+    },
+    {
+      "episode": 120,
+      "end_chapter": 156,
+      "start_chapter": 154,
+      "chapters_adapted": "154 (cont.: the Kenshiro/Falco duel -- Gento Hakuka Dan, Shou no Rin, Tenshou Bu, and Kenshiro sealing his own right leg at the Jouketsukai point) - 155 (Bat, Lin and Ein inside the capital; Myu and Saiya exposed and beaten; Jakoh's tear gas and the trapdoor) - 156 (Lui revealed at the bottom of the pit, Falco's flashback of being ordered to kill one of the twin heiresses, and the sisters reunited)",
+      "volume": 18,
+      "confidence": "high",
+      "note": "A4/C1 pickup. hokuto.fandom's index gives Lui 'Manga (ch. 156-160), Anime (ep. 120-124)', and ch 156's cast carries Lui {{1st}} together with Jako {{Flash}} -- the twin-babies flashback -- which is precisely this episode's climax on both per-episode sources. The episode ends on ch 156's last pages (the reunion); ch 157 'Spill Their Blood!!' opens ep 121, so no continue is owed here.",
+      "sources": [
+        "https://hokuto.fandom.com/wiki/HnK_Chapter_155",
+        "https://hokuto.fandom.com/wiki/HnK_Chapter_156",
+        "https://hokuto.fandom.com/wiki/Lui",
+        "https://rq87.flyingomelette.com/HNK/1/120/a.html",
+        "https://rq87.flyingomelette.com/HNK/1/120/120.html",
+        "https://hokutosite.sakura.ne.jp/sakuhin/gensaku/hokuto/120.html"
+      ]
+    }
+  ],
+  "continue_points": [
+    {
+      "episode": 115,
+      "continue_chapter": 147,
+      "kind": "parity",
+      "note": "Ch 147 straddles eps 115/116: the episode stops with Falco's fist raised over Lin and ep 116 finishes the chapter (the Harn brothers break out and raise the Nanto banner). Resume inside ch 147 (C1).",
+      "sources": [
+        "https://rq87.flyingomelette.com/HNK/1/116/116.html",
+        "https://hokutosite.sakura.ne.jp/sakuhin/gensaku/hokuto/116.html"
+      ]
+    },
+    {
+      "episode": 116,
+      "continue_chapter": 143,
+      "kind": "parity",
+      "note": "Parity with the anime (C2): ep 117 goes BACKWARDS to ch 143 -- Bat recruiting Ein, Beron's county and Asuka's kidnapping, which the anime held over from before the Falco block. If you are reading straight through you have already read 143-144; the first NEW material after this episode is ch 150, which ep 118 opens.",
+      "sources": [
+        "https://hokuto.fandom.com/wiki/Beron",
+        "https://hokutosite.sakura.ne.jp/sakuhin/gensaku/hokuto/117.html"
+      ]
+    },
+    {
+      "episode": 117,
+      "continue_chapter": 150,
+      "kind": "parity",
+      "note": "Parity with the anime (C2): ep 118 starts on ch 150. Nothing to skip on arrival -- ch 145-149 were animated ahead of this episode, in eps 114-116.",
+      "sources": [
+        "https://hokuto.fandom.com/wiki/HnK_Chapter_150",
+        "https://rq87.flyingomelette.com/HNK/1/118/a.html"
+      ]
+    },
+    {
+      "episode": 119,
+      "continue_chapter": 154,
+      "kind": "parity",
+      "note": "Ep 119 stops on the opening pages of ch 154 and ep 120 plays the duel from the top of the same chapter. Resume at ch 154 (A47: the tail is ep 120's; C1 gives the same answer).",
+      "sources": [
+        "https://rq87.flyingomelette.com/HNK/1/120/120.html",
+        "https://hokutosite.sakura.ne.jp/sakuhin/gensaku/hokuto/120.html"
+      ]
+    }
+  ],
+  "anchor_hostile": [],
+  "annotations": [
+    {
+      "episodes": [115, 116],
+      "kind": "rearranged",
+      "chapters": "145-149",
+      "note": "The manga cross-cuts two threads through ch 146-149: Kenshiro delayed on the road by the purple general Solia, and Falco wiping out the Hokuto Army. Toei un-cross-cut them -- ep 114 plays the whole Solia thread (Solia's index is 'Manga (ch. 147-149), Anime (ep. 114)'), so ep 115 re-opens on ch 145 for Falco's own debut and eps 115-116 run the Falco thread of 145-149 straight through. Ep 115's ch-145 pages and ep 116's 147-149 are first-time coverage, not re-shown pages. [batch 20 wave 10b]"
+    },
+    {
+      "episodes": [115],
+      "kind": "graft",
+      "chapters": "151",
+      "note": "The flashback in which Kenshiro and Yuria are given a home by Shoki after the Raoh fight belongs to ch 151, where the manga plays it over the dying Shoki in the canal. The anime lifts it forward to Kenshiro unmasking the Red Light general here and does NOT replay it in ep 118 -- RQ87: 'The flashback where Kenshiro and Yuria enter Shoki's village is shown when Kenshiro and the rest of the North Star army find the fatally wounded Shoki in the manga. In the anime, it was shown earlier, in the episode where Shoki and Kenshiro fight each other.' Not counted toward the END (the series' ep 30 / ep 43 / ep 102 graft precedent). [batch 20 wave 10b]"
+    },
+    {
+      "episodes": [115],
+      "kind": "divergence",
+      "chapters": "145-147",
+      "note": "Two anime-original blocks around the manga spine: the Hokuto Army's charge down the canyon onto Falco's resting legion (in the manga Falco's unit simply arrives as reinforcements at the city the army has taken, and the army is already beaten), and the entire Kenshiro vs Shoki duel -- Shoki is not a Gento Ko Ken practitioner in the manga and does not appear until ch 150, so the anime made him the Red Light general to replace Solia, whom it had already killed in ep 114. Falco's flashback of the infant Lin is also an anime insertion here (the manga keeps it for ch 156). [batch 20 wave 10b]"
+    },
+    {
+      "episodes": [116],
+      "kind": "divergence",
+      "chapters": "147-149",
+      "note": "Jakoh's Raoh nightmare and the Ein-vs-Kenshiro spear traps are anime additions; the concrete block is blown open with dynamite by a Hokuto soldier instead of the brothers arriving on a falling boulder; and the ending is changed outright -- in the manga Gil Harn survives the mortar blast (he is in the manga to ch 160), in the anime he detonates it himself and dies with his brother. [batch 20 wave 10b]"
+    },
+    {
+      "episodes": [117],
+      "kind": "rearranged",
+      "chapters": "143-144",
+      "note": "Ch 143-144 are held back four episodes. hokutosite prints both running orders: manga = all counties and cities fall -> Falco cripples the Hokuto Army -> on to the capital; anime = Falco cripples the Hokuto Army -> Beron's county falls -> on to the capital. Beron's post changes from warden of the Class-A rebel camp to lord of the county Bat and Ein take, Asuka's kidnapping succeeds (it fails in the manga), Goru is replaced by the anime-original Joseph, and Ein's past with Asuka's mother is dramatised (the manga only mentions it). [batch 20 wave 10b]"
+    },
+    {
+      "episodes": [118, 119],
+      "kind": "divergence",
+      "chapters": "150-153",
+      "note": "Jakoh's sons Sheeno and Jask are replaced throughout by the anime-original generals Boltz (Blue Light) and Taiga (Green Light), created by Masami Suda in pre-production. Consequences: Boltz spears Shoki from dry land with Jakoh and Taiga watching (Sheeno does it from under the water, alone); Kenshiro's thrown spear kills Sheeno in the manga but only pins Boltz's cape in the anime, so ep 119 adds a whole Kenshiro vs Boltz duel at the first gate in place of ch 152's scene of Jask presenting his brother's corpse; and Myu is introduced one episode early, seated beside Jakoh in ep 118 (manga: ch 152). [batch 20 wave 10b]"
+    },
+    {
+      "episodes": [120],
+      "kind": "divergence",
+      "chapters": "154-156",
+      "note": "The duel's choreography is reordered -- the Shou no Rin into Jouketsukai sequence comes immediately after the fight starts in the manga and is moved to after Falco cuts off Kenshiro's questions here (which leaves Falco praising a blow he has not yet received). Inside the capital, Jakoh's tear-gas throne and a Bat/Ein vs Taiga fight are added, Taiga stands in for Jask beating Myu and Saiya, and Bat and Lin fall through the trapdoor with Ein instead of finding a hidden switch of their own. [batch 20 wave 10b]"
+    }
+  ],
+  "repairs": [],
+  "type_corrections": [],
+  "structure": {
+    "notes": "CHAPTER SPACE re-verified at this block, three ways and independent of the fandom: en.wikipedia's 'List of Fist of the North Star chapters' numbers v16 = 135-143, v17 = 144-152 ('A Wanted Man by Choice!' 144 ... 'The Black Shadow That Beckons Death' 152) and v18 = 153-161, matching the context's stored volume table and hokuto.fandom's per-chapter `vol` field chapter for chapter; and Coamix's own digital edition indexes 第147話 立ちあがる南斗！の巻 under the same number (comic-zenon.com/episode/14079602755195018391, content_id r_R0009_s0147-0), i.e. the 245-chapter WSJ numbering with no offset at this point in the run. Flag #1047 (MU latest_chapter 71) is unrelated to this block. SOURCES: the wave-3/wave-6 trap holds -- hokuto.fandom has NO per-episode pages in this range (HnK Episode 114-121 are all `missing` via the API) but it does have per-chapter pages with `vol`, `page`, JP title and a cast list in order of appearance, and a per-character `appearances` two-way index that is the decisive instrument here (Falco 145-165 / ep 115-124; Solia 147-149 / ep 114; Buzz Harn 145-148 / ep 114-116; Gil Harn 145-160 / ep 114-116; Shoki 150-151 / ep 114-118; Beron ch 144 / ep 117; Ren ch 144 / ep 117; Saiya 153-160 / ep 119-122; Lui 156-160 / ep 120-124; Taiga and Boltz anime-only). RQ87 (rq87.flyingomelette.com/HNK/1/<ep>/) carries BOTH a 'Manga differences' list and a separate scene-by-scene transcript page at /<ep>/<ep>.html -- the transcript is what settles the episode boundaries. hokutosite's 漫画版との違い is the third, independent, Japanese-side list. AFG has no per-episode chapter column for this series; its block line 'eps 110-122 ~ Adapted from manga 137 to 160' and 'eps 123-152 ~ 161 to 210' is a cross-check only and is consistent with this block (ep 120 -> 156, ep 122 -> 160). ROW IDENTITY: AFG, hokuto.fandom's episodes page, RQ87 and hokutosite all number these six as 115-120 in our cumulative space (= Hokuto no Ken 2 eps 6-11) with the stored titles and the stored air dates (4/23, 5/7, 5/14, 5/28, 6/4, 6/11 1987, including the real two-week gaps before 116 and 118) -- no numbering or date repair is owed. WHERE THIS SUB-BLOCK OPENS AND HANDS OFF: my first row, ep 115, opens on ch 145 (Falco's debut, the executed governor); my last row, ep 120, ends on ch 156's last pages (Lin and Lui reunited) and hands off to ep 121, which opens ch 157 'Spill Their Blood!!'. SEAM WARNING FOR THE 109-114 SUB-BLOCK: on my reading ep 114 adapts the SOLIA thread of ch 146-149 in full (Solia's whole manga life, 147-149, is ep 114 alone) plus ch 145's prison/Harn-brothers pages and ch 146's village assassination restaged into the present. If that agent anchors ep 114 at 149, then eps 115 (147) and 116 (149) are a legitimate un-cross-cutting revisit and my `rearranged` annotation on 115/116 is what carries it; if that agent anchors ep 114 lower (146 or 147), the seam reads as monotone and the annotation is still correct as a description. Either way the anchors here are page-level and do not depend on ep 114's value. NO NEVER-ADAPTED RANGE inside this sub-block: ch 143-156 are all covered (143-144 in ep 117, 145-147 across eps 114/115, 147-149 in ep 116, 150-151 in ep 118, 152-153 in ep 119, 154-156 in ep 120). TYPES: hokuto.fandom's Filler page lists only 111, 130 and 132 as filler in Hokuto no Ken 2 and AFG marks only 111 -- all six target rows are canon on every source, so no T28 correction is proposed.",
+    "order_only": []
+  },
+  "flags_for_sean": [
+    "EP 119's END is the one judgement call in the block. The episode certainly runs a few pages into ch 154 (Rihaku's 'both stars were meant to lead to the same path', Falco's blast destroying the nunchaku, Kenshiro's counter, the heavens splitting, Lin hearing the Emperor) and ep 120 then plays the whole duel from the top of ch 154. I applied A47 and held the END at 153 with a `partial`-shaped tail inside chapters_adapted, because the one load-bearing beat in that tail is itself a lift-forward (hokutosite: in the manga Lin hears the Emperor only a while into the fight) and because ep 120 starts on 154. I could not page-count ch 154's opening; if it is more than five pages the honest value is END 154 with a C1 straddle. The reader's continue is 154 under either reading, so nothing downstream changes.",
+    "EP 115's END (147) rests on hokuto.fandom's in-order cast lists, not on a page-level source: ch 146's list ends '... Falco, Rihaku, Bat' (Falco's unit reaching the beaten army) and ch 147's runs 'Kenshiro, Kokuoh, Solia, Falco, Bat, Lin, Goru, Buzz, Ein, Gil' (the leader ultimatum, then the Harn brothers standing). If you read the ultimatum as still inside ch 146, ep 115 becomes END 146 / ep 116 START 147 and nothing else in the block moves. Marked medium for that reason.",
+    "EP 115 is the most heavily rebuilt of the six -- roughly half the running time is anime-original (the canyon charge and the entire Kenshiro vs Shoki duel). I have kept it canon + divergence because the manga spine (Falco's debut through the ultimatum over Lin) is the episode's own plot and because that is how this series' comparable rows are already ruled (eps 39/40, 42/43 are canon + divergence, not mixed). If you would rather apply T28 to it, the mixed call would be defensible; I did not propose it because the source material carries the episode's job.",
+    "hokuto.fandom's 'Hokuto no Ken episodes' page puts the underground meeting with Lui in its ep 121 summary, one row later than RQ87's scene-by-scene transcript and hokutosite's synopsis, which both end ep 120 with the sisters' reunion. I followed the two per-episode sources plus the wiki's own character index (Lui: 'Manga (ch. 156-160), Anime (ep. 120-124)'), which agrees with them against the wiki's prose summary."
+  ]
+}

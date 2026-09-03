@@ -1,0 +1,189 @@
+{
+  "series_id": "fist-of-the-north-star",
+  "summary": "Episodes 121-126 are the hinge of Hokuto no Ken 2: the last two episodes of the Celestial Emperor arc (Ein's death and Jakoh's fall) and the first four of the Land of Asura arc (the crossing, Falco's death, Alf, Shachi and Leia). They adapt ch 157-171 in unbroken running order at ~2.5 chapters per episode, with no chapter skipped between them and the fence anchors (ep 108 -> 136, ep 152 -> 210). Every boundary here was verified at PAGE level against the scanlated chapters on MangaDex (the same 245-chapter WSJ space the catalog stores; MangaDex's volume grouping reproduces our stored boundaries v18 153-161, v19 162-170, v20 171-179 exactly), on top of three independent per-episode sources: hokuto.fandom's per-chapter cast lists plus its character `appearances` reverse index and its arc headers ('The Celestial Emperor Arc ... adapts Chapters 137 to 160', 'The Land of Asura Arc ... adapts Chapters 161 to 210'), RQ87's 'Manga differences' pages and hokutosite's Japanese 漫画版との違い. Four of the six rows end exactly on a chapter's last page and need no continue. Two do not: ep 123 stops in the middle of ch 163 (p 12 of 19, the Nameless Asura's appearance) -> C1; and ep 126 plays four pages of ch 172 (Shachi and Lin at the shore) in mid-episode before closing on ch 171's last page -> A47 keeps the END at 171 because ep 127 opens on ch 172's first pages, and the tail is named as a `partial`. No type correction is needed: the ocean-crossing and arrival rows (123, 124) carry no anime-original travel arc — their only original material is Rihaku's exposition scene, and both are dense manga adaptation.",
+  "anchors": [
+    {
+      "episode": 121,
+      "end_chapter": 158,
+      "start_chapter": 157,
+      "chapters_adapted": "157-158",
+      "volume": 18,
+      "confidence": "high",
+      "note": "A4/A10. Opens on ch 157 page 1 — 'the sky that was split is now one again' immediately after the Lui/Lin reunion, which is hokutosite's own first sentence for this episode (ルイとリンの再会により、割れていた天は一つへと戻った) — and closes on ch 158's LAST page, Ein dying in Bat's arms. Both endpoints read on the pages. Ch 157 'Wipe Away Their Blood!' is Ein's line to Lin in the pit; ch 158 'A Promise to Asuka!' is his reason for breaking the rock. Ends on a chapter's last page, so no continue.",
+      "sources": [
+        "https://hokuto.fandom.com/api.php?action=parse&page=HnK_Chapter_157&prop=wikitext&format=json",
+        "https://hokuto.fandom.com/api.php?action=parse&page=HnK_Chapter_158&prop=wikitext&format=json",
+        "https://hokuto.fandom.com/wiki/Ein",
+        "https://rq87.flyingomelette.com/HNK/1/121/a.html",
+        "https://hokutosite.sakura.ne.jp/sakuhin/gensaku/hokuto/121.html",
+        "https://mangadex.org/chapter/6c0800c9-82e9-4e39-bec7-528f974c0bb4",
+        "https://mangadex.org/chapter/5bd62062-20f4-443a-bc54-d4ef94c41e47"
+      ]
+    },
+    {
+      "episode": 122,
+      "end_chapter": 160,
+      "start_chapter": 159,
+      "chapters_adapted": "159-160",
+      "volume": 18,
+      "confidence": "high",
+      "note": "A4/A10. Ch 159 'Tears of a Warrior!' (Kenshiro and Falco stop fighting; Falco kills Jakoh — the fandom chapter page marks Jakō {{Death}} here) and ch 160 'A Father's Eternal Soul!' (Lin saves Saiya and is abducted, the capital collapses, Ein's funeral: Mamiya and Asuka are in the chapter's cast list). Ends on ch 160's LAST page — Kenshiro at the grave wearing Ein's glove, 'your death will not have been in vain' — read on the page; no continue. The arc header 'The Celestial Emperor Arc ... adapts Chapters 137 to 160' independently fixes 160 as this arc's (and this episode's) terminal. The episode's closing minutes — Taiga showing Lin the Sea of Death and Kenshiro setting out — are anime-original, not ch 161.",
+      "sources": [
+        "https://hokuto.fandom.com/api.php?action=parse&page=HnK_Chapter_159&prop=wikitext&format=json",
+        "https://hokuto.fandom.com/api.php?action=parse&page=HnK_Chapter_160&prop=wikitext&format=json",
+        "https://hokuto.fandom.com/api.php?action=parse&page=Hokuto%20no%20Ken%20episodes&prop=wikitext&format=json",
+        "https://rq87.flyingomelette.com/HNK/1/122/a.html",
+        "https://hokutosite.sakura.ne.jp/sakuhin/gensaku/hokuto/122.html",
+        "https://mangadex.org/chapter/e7969536-8933-4d90-a8e6-f55427b4524b"
+      ]
+    },
+    {
+      "episode": 123,
+      "end_chapter": 163,
+      "start_chapter": 161,
+      "chapters_adapted": "161-163 (ch 163 pp 1-12 of 19: the landing, the two masked Asura, finding Falco, the Nameless Asura's appearance; the duel from p 13 is ep 124's)",
+      "volume": 18,
+      "confidence": "high",
+      "note": "A4/A10/C1. START 161 is doubly fixed: the fandom arc header opens the Land of Asura arc at ch 161 with this episode, and Akashachi's appearances field reads 'Manga (ch. 161-186), Anime (ep. 123-138)'. Ch 161 page 1 is Falco and Myu at the Sea of Death, which is where the episode's manga content begins. END 163 is a mid-chapter stop: ch 163 page 1 is Akashachi watching Kenshiro row ashore, page 4 the two masked Asura, page 9 Kenshiro finding the broken Falco, pages 11-12 the Nameless Asura appearing with the artificial leg — all in this episode — and page 13 starts 'observe my dance of death', which is ep 124. Twelve of 19 pages is far above A47's sliver bar, so the END advances to 163 and the continue is C1 inside it. The Nameless Asura's index entry ('Manga (ch. 163-164), Anime (ep. 123-124)') is the second source for the 163 touch.",
+      "sources": [
+        "https://hokuto.fandom.com/wiki/Akashachi",
+        "https://hokuto.fandom.com/wiki/Nameless_Asura",
+        "https://hokuto.fandom.com/api.php?action=parse&page=HnK_Chapter_162&prop=wikitext&format=json",
+        "https://hokuto.fandom.com/api.php?action=parse&page=HnK_Chapter_163&prop=wikitext&format=json",
+        "https://rq87.flyingomelette.com/HNK/1/123/a.html",
+        "https://hokutosite.sakura.ne.jp/sakuhin/gensaku/hokuto/123.html",
+        "https://mangadex.org/chapter/a8af0e07-a31c-4b4d-b7ec-dfc6cc68d912",
+        "https://mangadex.org/chapter/f47bc8c3-e1e4-461f-911c-b0a8e197d6e6"
+      ]
+    },
+    {
+      "episode": 124,
+      "end_chapter": 165,
+      "start_chapter": 163,
+      "chapters_adapted": "163 (cont., pp 13-19 — the Ken/Asura clash, compressed) - 165",
+      "volume": 19,
+      "confidence": "high",
+      "note": "A4/A10 (A12 does not apply — 163 is the straddled chapter ep 123 left mid-way, not a relocated opener). The episode runs the rest of the Nameless Asura duel, ch 164 'Together with My Pride!' (the sekkatsukō, Falco's rematch, the Asura split in half — the chapter page marks Nameless Asura {{Death}}), and ch 165 'Men Who Devour the Dead!' (Falco's death, Lin at Kaiser's arena, Alf). END 165 is read on the page: ch 165's last page is Kaiser refusing Alf the cup and sending him after the man with seven scars — 'Too easy!' — which is exactly where the episode's arena thread stops. Falco's death, which the manga puts at the TOP of ch 165, is held to the episode's end (see the rearranged annotation). Ends on a chapter's last page; no continue. Cross-checked by the appearances index: Falco 'Manga (ch. 145-165), Anime (ep. 115-124)', Alf 'Manga (ch. 165-166), Anime (ep. 124-125)'.",
+      "sources": [
+        "https://hokuto.fandom.com/wiki/Falco",
+        "https://hokuto.fandom.com/wiki/Alf",
+        "https://hokuto.fandom.com/api.php?action=parse&page=HnK_Chapter_164&prop=wikitext&format=json",
+        "https://hokuto.fandom.com/api.php?action=parse&page=HnK_Chapter_165&prop=wikitext&format=json",
+        "https://rq87.flyingomelette.com/HNK/1/124/a.html",
+        "https://hokutosite.sakura.ne.jp/sakuhin/gensaku/hokuto/124.html",
+        "https://mangadex.org/chapter/207112d3-f290-4629-89a5-d89c7140c5e3"
+      ]
+    },
+    {
+      "episode": 125,
+      "end_chapter": 168,
+      "start_chapter": 166,
+      "chapters_adapted": "166-168",
+      "volume": 19,
+      "confidence": "high",
+      "note": "A4/A10. Ch 166 'Mask of Ambition!' (Alf's death and Shachi's first appearance — Shachi 'Manga (ch. 166-200), Anime (ep. 125-147)'), ch 167 'The Dark Rakshasa!' (Shachi unmasks, kills the patrolling Asura, Kaiser arrives, Sha and Zhan: 'Manga (ch. 168), Anime (ep. 125)'… their deaths open 168), ch 168 'Demon Hunting — Prologue' (Sha and Zhan killed, Kenshiro saves Tao — Tao 'Manga (ch. 168-192), Anime (ep. 125-149)'). END 168 is read on the page: ch 168's last page is Tao naming Shachi, 'he's the man my sister loves', which is verbatim the episode's closing beat in hokutosite (名はシャチ。僕の姉さんが愛した人だと). Ends on a chapter's last page; no continue.",
+      "sources": [
+        "https://hokuto.fandom.com/wiki/Shachi",
+        "https://hokuto.fandom.com/wiki/Tao",
+        "https://hokuto.fandom.com/wiki/Sha_and_Zhan",
+        "https://hokuto.fandom.com/api.php?action=parse&page=HnK_Chapter_166&prop=wikitext&format=json",
+        "https://hokuto.fandom.com/api.php?action=parse&page=HnK_Chapter_168&prop=wikitext&format=json",
+        "https://rq87.flyingomelette.com/HNK/1/125/a.html",
+        "https://hokutosite.sakura.ne.jp/sakuhin/gensaku/hokuto/125.html",
+        "https://mangadex.org/chapter/6358378a-0be1-468f-a559-97731e941591"
+      ]
+    },
+    {
+      "episode": 126,
+      "end_chapter": 171,
+      "start_chapter": 169,
+      "chapters_adapted": "169-171 + ch 172 pp 3-6 (the Shachi/Lin exchange at the shore, played mid-episode — A47 leaves it out of the END)",
+      "volume": 19,
+      "confidence": "high",
+      "note": "A4/A10/A47. Ch 169 'The Most Sinister Fist' (Tao takes Kenshiro to Leia — Leia 'Manga (ch. 169-200), Anime (ep. 126-148)'), ch 170 'Ambition at Its Peak!' (Shachi kills Kaiser, Kaiser names the three rasho, Han's first appearance — Han 'Manga (ch. 170-177), Anime (ep. 126-129)'), ch 171 'The Reign of the Magic Fist!' (Leia's cave flashback with Kaijin — 'Manga (ch. 171), Anime (ep. 126)' — and Han killing the Asura who asks to serve him). END 171 read on the page: ch 171's last page is Leia's dropped pendant and Kenshiro's 'I'll bring Shachi back alive!', which is the episode's final scene. A47 TEST: the episode also plays ch 172 pp 3-6 (Shachi and Lin at the shore, ending on Shachi's 'Love?!') — four pages, not the episode's tail, and ep 127 OPENS on ch 172 pp 1-2 (the two pirates returning to Akashachi). Under A47 the END therefore stays 171; the four pages stay in chapters_adapted and are named by the `partial` annotation.",
+      "sources": [
+        "https://hokuto.fandom.com/wiki/Leia",
+        "https://hokuto.fandom.com/wiki/Han",
+        "https://hokuto.fandom.com/wiki/Kaijin",
+        "https://hokuto.fandom.com/api.php?action=parse&page=HnK_Chapter_170&prop=wikitext&format=json",
+        "https://hokuto.fandom.com/api.php?action=parse&page=HnK_Chapter_171&prop=wikitext&format=json",
+        "https://rq87.flyingomelette.com/HNK/1/126/a.html",
+        "https://hokutosite.sakura.ne.jp/sakuhin/gensaku/hokuto/126.html",
+        "https://mangadex.org/chapter/c7865115-8cfb-4f2f-9e87-923e21ded56b",
+        "https://mangadex.org/chapter/594959c5-fbfe-4c42-ad16-0416f795224a"
+      ]
+    }
+  ],
+  "continue_points": [
+    {
+      "episode": 123,
+      "continue_chapter": 163,
+      "kind": "parity",
+      "note": "C1. Episode 123 stops in the middle of ch 163 — the Nameless Asura has just appeared with Falco's artificial leg (p 12 of 19). Resume INSIDE ch 163; its last seven pages (the 'dance of death' clash) are episode 124's opening. Nothing is skipped between eps 122 and 123.",
+      "sources": [
+        "https://mangadex.org/chapter/a8af0e07-a31c-4b4d-b7ec-dfc6cc68d912",
+        "https://rq87.flyingomelette.com/HNK/1/123/a.html"
+      ]
+    },
+    {
+      "episode": 126,
+      "continue_chapter": 172,
+      "kind": "parity",
+      "note": "C2/C3 parity with the anime: episode 127 opens on ch 172's first pages (the pirates urging Akashachi to leave), so read on from ch 172 — but four of its pages are already behind you: pp 3-6, Shachi and Lin at the shore up to Shachi's 'Love?!', were played inside episode 126, out of the manga's order.",
+      "sources": [
+        "https://mangadex.org/chapter/594959c5-fbfe-4c42-ad16-0416f795224a",
+        "https://rq87.flyingomelette.com/HNK/1/127/a.html",
+        "https://hokutosite.sakura.ne.jp/sakuhin/gensaku/hokuto/126.html"
+      ]
+    }
+  ],
+  "anchor_hostile": [],
+  "annotations": [
+    {
+      "episodes": [121],
+      "kind": "divergence",
+      "chapters": "157-158",
+      "note": "Near 1:1 with the manga. The only additions are Ein's dying vision of Asuka and the airship over green fields, and Taiga standing at the arrow launcher where the manga has no Jask; the anime also splits Ein's single decisive punch on the pillar into a right then a left. hokutosite 漫画版との違い + RQ87 'Manga Differences'."
+    },
+    {
+      "episodes": [122, 123],
+      "kind": "divergence",
+      "chapters": "159-162",
+      "note": "The anime-original general Taiga replaces the manga's Jask across both rows: he abducts Lin and strikes Saiya in ep 122 (ch 160, where the manga has Jask do it with a club) and he is the dying man Falco finds on the Asura shore in ep 123 (ch 162, Jask {{Death}}). Ein's funeral is moved out of Mamiya's village — Mamiya and Airi are in ch 160's cast but not in the episode — and Jakoh is washed away by an arrow Kenshiro throws rather than by the water bursting on its own. The slaves' release, the wall demolition, Taiga showing Lin the Sea of Death and Kenshiro's departure scene are anime-original."
+    },
+    {
+      "episodes": [123],
+      "kind": "abridged",
+      "chapters": "162",
+      "note": "Two manga sequences are cut: the fishermen killed by Akashachi's crew, and the shipboard duel in which an Asura boards the pirate ship at the sea border ('those who cross it without permission die') and Kenshiro defeats him — ch 162's middle pages. The anime also gives Rihaku the Land-of-Asura exposition the manga delivers through Falco."
+    },
+    {
+      "episodes": [124],
+      "kind": "rearranged",
+      "chapters": "165",
+      "note": "The manga kills Falco at the TOP of ch 165, before the rag takes Lin to Kaiser's arena; the anime plays the arena first and holds Falco's death — with Myu's carrier pigeon — for the episode's last minutes. RQ87 states the swap outright ('In the manga, Falco dies before the rag takes Lin to the arena, in the anime, it's the other way around')."
+    },
+    {
+      "episodes": [125],
+      "kind": "abridged",
+      "chapters": "166-167",
+      "note": "Three manga passages are dropped: Shachi watching the Alf fight to its end and telling Kenshiro there is a second Hokuto style (ch 166), his bringing food to Lin's cell and unmasking there (ch 167 — the anime holds the unmasking until he faces the patrol), and the village interlude that closes ch 167, where an Asura frozen for three days bursts under the Big Dipper and Kenshiro recognises a warped gen'onkai."
+    },
+    {
+      "episodes": [126],
+      "kind": "partial",
+      "chapters": "172",
+      "note": "A47 tail: four pages of ch 172 (pp 3-6 — Shachi and Lin at the shore, Lin's faith in Kenshiro, Shachi's dawning 'Love?!') are played in the middle of this episode, while the episode closes on ch 171's last page. Episode 127 starts on ch 172 pp 1-2, so the END stays 171 and these pages are annotated rather than anchored."
+    }
+  ],
+  "repairs": [],
+  "type_corrections": [],
+  "structure": {
+    "notes": "CHAPTER SPACE. The 245-chapter WSJ numbering the catalog stores is confirmed a third time here: MangaDex's aggregate for Hokuto no Ken (id 75251a47-952c-4e38-b1c6-3572b9bfd481, lastChapter 245) groups vol 18 = 153-161, vol 19 = 162-170, vol 20 = 171-179 — identical to the stored volume boundaries — and hokuto.fandom's per-chapter `vol` fields agree chapter by chapter. No conversion was needed anywhere in this sub-block. Flag #1047 (MU latest_chapter 71) is untouched by this work and remains a MangaUpdates release-record artifact. BLOCK ACCOUNTING. My first row, ep 121, opens on ch 157 page 1 (the panel of Lui's and Lin's clasped hands is the very top of that page and is the beat ep 120 ends on — I have assumed ep 120's END is ch 156; that row is another agent's). My last row, ep 126, ends on ch 171's last page and hands off to ep 127 at ch 172 page 1. Between them ch 157-171 are adapted continuously with nothing skipped: 121 = 157-158, 122 = 159-160, 123 = 161-163a, 124 = 163b-165, 125 = 166-168, 126 = 169-171 (+ 172 pp 3-6). Six ENDs ascend 158 -> 160 -> 163 -> 165 -> 168 -> 171, all inside the outer fence (ep 108 -> 136, ep 152 -> 210); no row revisits an earlier chapter, so no `rearranged` anchor is needed (the one `rearranged` annotation, ep 124, is an internal re-ordering of ch 165, not a chapter regression). SOURCES AND HOW THEY WERE JOINED. Rows were joined on TITLE and AIR DATE, never on index: RQ87 prints both the Hokuto no Ken 2 number and the cumulative number on every page (ep 121 = 'Hokuto no Ken 2 episode 12 / Episode 121 overall', broadcast June 25th 1987 — matching our stored dates for 121-126 exactly, including the two-week gaps before 121, 122 and 126), and hokutosite's page number IS the cumulative number with the same dates (87年6月25日 etc.). hokuto.fandom still has no per-episode pages, but its 245 per-chapter pages carry volume, page count and a cast list in order of appearance, and its character `appearances` fields are a two-way index that pinned every boundary here independently of the episode sites: Ein 140-160/113-122, Asuka 142-160/117-122, Saiya 153-160/119-122, Lui 156-160/120-124, Falco 145-165/115-124, Akashachi 161-186/123-138, Nameless Asura 163-164/123-124, Alf 165-166/124-125, Kaiser 165-170/123-126, Shachi 166-200/125-147, Sha and Zhan 168/125, Tao 168-192/125-149, Leia 169-200/126-148, Kaijin 171/126, Han 170-177/126-129. The same wiki's 'Hokuto no Ken episodes' page carries arc headers that bracket the block ('The Celestial Emperor Arc ... adapts Chapters 137 to 160' ends at ep 122; 'The Land of Asura Arc ... adapts Chapters 161 to 210' begins at ep 123). Jask has 'Manga (ch. 150-162)' and NO anime field — the wiki's own record that Taiga is an anime-original replacement, not an adaptation of Jask. PAGE-LEVEL WORK. Every boundary claim above was read on the scanlated pages (English, MangaDex): 157 p1 (the split sky rejoined), 158 p21 (Ein dies in Bat's arms), 159 p1 (splash), 160 p18 (the glove at the grave), 161 p1 (Falco and Myu at the sea), 162 p13 (the boarding Asura the anime cuts), 162 p18 (Kenshiro asks Akashachi his son's name), 162 p19 (the ship reaching the shore), 163 p1/p4/p9/p12/p13/p19 (the boundary inside 163), 165 p19 (Kaiser sends Alf), 166 p1 (splash), 168 p13 (Tao flees the training hall), 168 p20 ('he's the man my sister loves'), 169 p1 (splash), 171 p16 and p19 (Leia's pendant; 'I'll bring Shachi back alive'), 172 p2/p4/p6 (Akashachi's ship, then Shachi and Lin at the shore, then 'Love?!'). A47 was applied twice and answered differently each time, deliberately: on ep 123 the ch-163 portion is 12 of 19 pages and the END advances; on ep 126 the ch-172 portion is four pages, is not the episode's tail, and ep 127 starts on 172 — so the END stays 171. AFL/AFG were not used: their live pages 404'd at research time for this series, and three independent per-episode sources plus the pages themselves were available.",
+    "order_only": []
+  },
+  "flags_for_sean": [
+    "Fence assumption at the lower edge: my ep 121 START of 157 assumes the neighbouring sub-block gives ep 120 an END of 156. Ch 157's page 1 opens with the clasped-hands panel of the Lui/Lin reunion — the beat ep 120 closes on — so if that agent anchors ep 120 at 157 the two rows will share the page; the rest of ch 157 (the ceiling collapse onward) is unambiguously ep 121's.",
+    "Upper edge, for the 127-132 agent: ep 126 plays ch 172 pp 3-6 out of order in mid-episode, and ep 127 opens on ch 172 pp 1-2. I have kept ep 126's END at 171 under A47 and annotated the four pages as a `partial`; ep 127's START is therefore 172 with those four pages already shown."
+  ]
+}
