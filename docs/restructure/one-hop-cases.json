@@ -368,6 +368,53 @@
         "run_stuck"
       ],
       "source": "2026-09-03: refresh-anilist killed daily for ten days (whole-object hash → everything changed); the budgeted, structure-hashed edge"
+    },
+    {
+      "ask": "an episode's only manga content is a sliver / fragment / graft / page tie — does the row get an anchor, and what type is it?",
+      "expected": [
+        "T28"
+      ],
+      "terms": [
+        "sliver",
+        "weight",
+        "remainder"
+      ],
+      "source": "2026-09-04: the sliver clause (Sean) — a sliver is canon material with no weight; noted with the adapting episode; the remainder decides the type"
+    },
+    {
+      "ask": "a chapter is certainly in the episode but nobody can say how much of it — anchor or withhold?",
+      "expected": [
+        "T28"
+      ],
+      "terms": [
+        "unverified",
+        "queue"
+      ],
+      "source": "2026-09-04: the unverified share — anchor + `unverified` annotation, the census lists it (unverified_share)"
+    },
+    {
+      "ask": "a recap episode retells chapters already covered — which annotation kind, and does it count toward the type?",
+      "expected": [
+        "T28"
+      ],
+      "terms": [
+        "recap",
+        "weightless",
+        "abridged"
+      ],
+      "source": "2026-09-04: `recap` kind (never `abridged`); weightless; the remainder decides"
+    },
+    {
+      "ask": "MangaUpdates' release count lags the manga (its coverage string names a higher chapter) — what does latest_known read?",
+      "expected": [
+        "G38"
+      ],
+      "terms": [
+        "floor",
+        "coverage",
+        "latest_known"
+      ],
+      "source": "2026-09-04: the coverage floor (four-knights 103 → 120)"
     }
   ]
 }

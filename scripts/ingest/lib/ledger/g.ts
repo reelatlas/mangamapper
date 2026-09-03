@@ -591,11 +591,11 @@ export const RULES: Rule[] = [
   },
   {
     id: 'G38',
-    aliases: ['mu anchors wiped and rebuilt', 'mu anchors are derivations', 'delete-at-entry'],
+    aliases: ['mu anchors wiped and rebuilt', 'mu anchors are derivations', 'delete-at-entry', 'coverage floor', 'latest_known floor', 'mu-latest'],
     family: 'G',
     title: '\'mu\' anchors are wiped and re-derived every run',
     statement:
-      'Applying the MU frontier first DELETES the series\' existing \'mu\' anchor and then re-derives it through the gate stack, on every run of every caller (audit-manga-coverage, mu-backfill, refresh-mu). A rule fix therefore heals every series on the next pass; a suppressed series stops after the delete. The same contract holds for afg-continua anchors.',
+      'Applying the MU frontier first DELETES the series\' existing \'mu\' anchor and then re-derives it through the gate stack, on every run of every caller (audit-manga-coverage, mu-backfill, refresh-mu). A rule fix therefore heals every series on the next pass; a suppressed series stops after the delete. The same contract holds for afg-continua anchors. THE COVERAGE FLOOR (Sean 2026-09-04, four-knights): latest_known never sits below a chapter MU's own anime-coverage field names ('Vol 14, Chap 120 Page 12 (S2)' — that chapter exists even when MU's release-derived count lags scanlation at 103), nor below the volume table's last bounded chapter; lib/mu-latest.ts#bestLatestKnown (pure, unit-tested) is the one derivation every writer uses (the coverage healer, mu-backfill, the refresh-mu edge).',
     why: 'Derivation-tier rows are wipe-and-rebuild by contract — which is exactly why a repaired value on a mu row does not survive (hikaru ep-75 wipe → invariant 7: repairs live at the manual tier).',
     ruledBy: 'session',
     ruledOn: '2026-08-23',
@@ -603,10 +603,12 @@ export const RULES: Rule[] = [
     enforcement: [
       { path: 'scripts/ingest/lib/mu-frontier.ts', symbol: 'applyMuFrontier' },
       { path: 'scripts/ingest/lib/anchors.ts', symbol: 'applyContinua' },
+          { path: 'scripts/ingest/lib/mu-latest.ts', symbol: 'bestLatestKnown' },
+      { path: 'scripts/ingest/lib/mu-latest.ts', symbol: 'muCoverageChapterMax' },
     ],
     layer: 'writer',
     auditClass: [],
-    witnesses: [],
+    witnesses: [, 'the-seven-deadly-sins-four-knights-of-the-apocalypse'],
     status: 'live',
     see: ['G31', 'G22', 'G37', 'invariant 7', 'hikaru ep-75 wipe'],
   },
