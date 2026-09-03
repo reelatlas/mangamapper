@@ -1,0 +1,210 @@
+{
+  "series_id": "kingdom",
+  "summary": "OUR rows 104-110 are Kingdom S4 eps 1-7 (row conversion verified by TITLE and air date against ja-WP's 第4シリーズ 各話リスト, never by index; S1 38 + S2 39 + S3 26 = 103). All seven rows are canon and adapt the manga in unbroken running order from ch 364's body through ch 385: eps 104-108 are the whole Sei Kyou / Tonryuu rebellion block (364-378, pcafe's 第4期 成蟜の乱) and eps 109-110 open the Chouyou campaign (379-385, 著雍の戦い). Every row therefore takes an anchor - 7 of 7, no anchor-hostile rows, no filler. Five rows end mid-chapter and carry a C1/parity continue; eps 108 and 110 end on a chapter's last page and need none. Two findings: (1) the LOWER FENCE ep 103 -> 364 is an A47 overshoot - kingdom.fandom's Episode 103 page contradicts itself (infobox '364 p.1-15' vs its own Trivia '364 p.1-5'), Episode 104 claims 364 p.6-17, and pcafe assigns 364 to S4 ep 1 ONLY; a per-episode review confirms the S3 finale ends on Kyou Kai rejoining the Hi Shin Unit (364's opening 5 pages) while ep 104 opens on the snow training and her 'two goals' (364's title beat). Under A47 that 5-page scrap is ep 104's and ep 103's END is 363 - delivered as a repair, which also closes the wave-2 open flag. (2) kingdom.fandom's Episode 110 field silently DROPS ch 384 (the documented drop class: it lists 383 then jumps to 385, and its Episode 111 starts at 386); pcafe lists 384 in 4-7 and ch 386's own summary shows 384-385's outcomes (So Sui wounded by Gai Mou, Kyou Kai's capture of Jun Sou, Ten carried off) already in place - 384 is restored to ep 110.",
+  "anchors": [
+    {
+      "episode": 104,
+      "end_chapter": 366,
+      "start_chapter": 364,
+      "chapters_adapted": "364 (p.6-17), 365-366, 367 (p.1-5)",
+      "volume": 34,
+      "confidence": "high",
+      "note": "S4 ep 1. START=364: its 12-page body (Kyou Kai's snow training and her two goals - ch 364 二つの目標) is far past the sliver bar (A10); only p.1-5 (her rejoining the unit) closed ep 103. END=366 under A47: the 5-page tail of ch 367 (the Ei Sei faction overtaking Ryo Fui's after Sai) is ep 105's, which starts on 367 p.6 - pcafe independently gives 4-1 = 364, 365, 366 and puts 367 in 4-2 only. Ep title 戦後の七国 tracks ch 366 戦後の各国; the licensor synopsis carries Shin's 三千人将 promotion + Kyou Kai's return (364) and Mou Gou's deathbed (365 白老の言葉).",
+      "sources": [
+        "https://kingdom.fandom.com/api.php?action=parse&page=Episode_104&prop=wikitext&format=json",
+        "https://programming-cafe.com/amazon/primevideo/anime/anicomi-kingdom-list/",
+        "https://kingdom-anime.com/story/detail.php?id=1001036&season=4",
+        "https://nihonrekishi.livedoor.blog/archives/15207845.html"
+      ]
+    },
+    {
+      "episode": 105,
+      "end_chapter": 370,
+      "start_chapter": 367,
+      "chapters_adapted": "367 (p.6-18), 368-369, 370 (p.1-7)",
+      "volume": 34,
+      "confidence": "high",
+      "note": "START=367: the 13-page lead-in (Ri Shi baffled by Ryo Fui's calm, the bought-back officials, the Coming-of-Age Ceremony plan) is the chapter's body, not a sliver (A10) - the licensor synopsis opens the episode exactly there. END=370 (ep title 不穏な影 IS ch 370's title): its first 7 pages air here and exceed A47's 5-page bar, so the END advances; the episode closes on Sei Kyou volunteering to sortie for Tonryuu. fandom's page split and pcafe's dual listing of 370 (4-2/4-3) agree.",
+      "sources": [
+        "https://kingdom.fandom.com/api.php?action=parse&page=Episode_105&prop=wikitext&format=json",
+        "https://programming-cafe.com/amazon/primevideo/anime/anicomi-kingdom-list/",
+        "https://kingdom-anime.com/story/detail.php?id=1001044&season=4",
+        "https://kingdom.fandom.com/api.php?action=parse&page=Chapter_367&prop=wikitext&format=json"
+      ]
+    },
+    {
+      "episode": 106,
+      "end_chapter": 373,
+      "start_chapter": 370,
+      "chapters_adapted": "370 (p.8-18), 371-372, 373 (p.1-13)",
+      "volume": 35,
+      "confidence": "high",
+      "note": "START=370 (an 11-page lead-in - the news of the Tonryuu rebellion reaching Kanyou - well past the sliver bar, A10). Ep title 討伐軍出陣 = ch 372's title. END=373: 13 of its 18 pages air here (the Hi Shin Unit arriving to relieve Heki's army, Kyou Kai's Gouriki, the Mei Plains repulse) - not an A47 scrap; ep 107 takes the closing 5 pages. pcafe dual-lists 373 (4-3/4-4).",
+      "sources": [
+        "https://kingdom.fandom.com/api.php?action=parse&page=Episode_106&prop=wikitext&format=json",
+        "https://programming-cafe.com/amazon/primevideo/anime/anicomi-kingdom-list/",
+        "https://kingdom-anime.com/story/detail.php?id=1001054&season=4",
+        "https://kingdom.fandom.com/api.php?action=parse&page=Chapter_373&prop=wikitext&format=json"
+      ]
+    },
+    {
+      "episode": 107,
+      "end_chapter": 376,
+      "start_chapter": 374,
+      "chapters_adapted": "373 (p.14-18), 374-375, 376 (p.1-15)",
+      "volume": 35,
+      "confidence": "high",
+      "note": "START=374: 373's 5-page lead-in (Shin's party reuniting with Heki and moving on Tonryuu - the licensor synopsis's opening line 飛信隊と壁軍が合流し) is exactly at A10's sliver bar, so the first chapter animated here is 374 (ep title 屯留攻城戦 = ch 374's title). END=376: 15 of its 18 pages air (Sei Kyou's jailbreak, the Ho Kaku corridor, Rui running into Shin); ep 108's 3-page lead-in of 376 is the scrap. pcafe puts 376 in 4-4 only.",
+      "sources": [
+        "https://kingdom.fandom.com/api.php?action=parse&page=Episode_107&prop=wikitext&format=json",
+        "https://programming-cafe.com/amazon/primevideo/anime/anicomi-kingdom-list/",
+        "https://kingdom-anime.com/story/detail.php?id=1001055&season=4",
+        "https://kingdom.fandom.com/api.php?action=parse&page=Chapter_376&prop=wikitext&format=json"
+      ]
+    },
+    {
+      "episode": 108,
+      "end_chapter": 378,
+      "start_chapter": 377,
+      "chapters_adapted": "376 (p.16-18), 377-378",
+      "volume": 35,
+      "confidence": "high",
+      "note": "START=377 (A10: 376's 3-page lead-in is a sliver; pcafe gives 4-5 = 377, 378 with 376 in 4-4 only). Ep title 剣と盾 = ch 377's title, whose high point is Sei Kyou's death; 378 正義 closes the Tonryuu rebellion in full, so the row ends on a chapter's last page - no continue. Three sources bound the block at 378: fandom, pcafe, and the subculview correspondence table (4期1話-5話 = 364-378).",
+      "sources": [
+        "https://kingdom.fandom.com/api.php?action=parse&page=Episode_108&prop=wikitext&format=json",
+        "https://programming-cafe.com/amazon/primevideo/anime/anicomi-kingdom-list/",
+        "https://kingdom-anime.com/story/detail.php?id=1001056&season=4",
+        "https://subculview.com/kingdom-manga-anime-guide"
+      ]
+    },
+    {
+      "episode": 109,
+      "end_chapter": 382,
+      "start_chapter": 379,
+      "chapters_adapted": "379-381, 382 (p.1-11)",
+      "volume": 35,
+      "confidence": "high",
+      "note": "The Chouyou campaign opens. START=379 whole (ep title 新たな要所 = ch 379's title; pcafe marks 379 as the head of 第4期 著雍の戦い). END=382 (魏火龍 - the Wei Fire Dragons revealed): 11 of its 18 pages air here, past A47's bar, and the licensor synopsis carries Tou's request to Ou Sen and Ou Hon's objection (380 私情と戦略 / 381 古い人間). pcafe dual-lists 382 (4-6/4-7).",
+      "sources": [
+        "https://kingdom.fandom.com/api.php?action=parse&page=Episode_109&prop=wikitext&format=json",
+        "https://programming-cafe.com/amazon/primevideo/anime/anicomi-kingdom-list/",
+        "https://kingdom-anime.com/story/detail.php?id=1001057&season=4",
+        "https://kingdom.fandom.com/api.php?action=parse&page=Chapter_382&prop=wikitext&format=json"
+      ]
+    },
+    {
+      "episode": 110,
+      "end_chapter": 385,
+      "start_chapter": 382,
+      "chapters_adapted": "382 (p.12-18), 383-385",
+      "volume": 36,
+      "confidence": "high",
+      "note": "START=382 (a 7-page lead-in, past the A10 sliver bar). Ep title 呼びかけ = ch 383's title (Gai Mou calling Shin out to a duel). RESTORES ch 384 一騎討ちの裏, which the fandom field drops (it lists 383 then jumps to 385 with no note, and its Episode 111 starts at 386): pcafe lists 384 in 4-7, and ch 386's own summary has 384-385's outcomes already in place at the start of ep 111 - So Sui gravely wounded by Gai Mou, Kyou Kai's capture of Jun Sou, and Ten carried off (ep 111's licensor synopsis: 乱戦の最中に河了貂が凱孟軍の本陣へと連れ去られ). END=385 仲間割れ, its last page - ep 111 starts on 386, so no continue.",
+      "sources": [
+        "https://programming-cafe.com/amazon/primevideo/anime/anicomi-kingdom-list/",
+        "https://kingdom.fandom.com/api.php?action=parse&page=Episode_110&prop=wikitext&format=json",
+        "https://kingdom-anime.com/story/detail.php?id=1001058&season=4",
+        "https://kingdom.fandom.com/api.php?action=parse&page=Chapter_386&prop=wikitext&format=json"
+      ]
+    }
+  ],
+  "continue_points": [
+    {
+      "episode": 104,
+      "continue_chapter": 367,
+      "kind": "parity",
+      "note": "C1: the episode ends inside ch 367 (its first 5 pages - the Ei Sei faction pulling ahead of Ryo Fui's after Sai). Resume IN 367; ep 105 replays nothing and finishes it from p.6.",
+      "sources": [
+        "https://kingdom.fandom.com/api.php?action=parse&page=Episode_104&prop=wikitext&format=json",
+        "https://kingdom.fandom.com/api.php?action=parse&page=Episode_105&prop=wikitext&format=json"
+      ]
+    },
+    {
+      "episode": 105,
+      "continue_chapter": 370,
+      "kind": "parity",
+      "note": "C1: the episode ends inside ch 370 (p.7, on Sei Kyou volunteering to march). Resume IN 370; ep 106 finishes it from p.8.",
+      "sources": [
+        "https://kingdom.fandom.com/api.php?action=parse&page=Episode_105&prop=wikitext&format=json",
+        "https://programming-cafe.com/amazon/primevideo/anime/anicomi-kingdom-list/"
+      ]
+    },
+    {
+      "episode": 106,
+      "continue_chapter": 373,
+      "kind": "parity",
+      "note": "C1: the episode ends inside ch 373 (p.13, after the Mei Plains repulse). Resume IN 373; ep 107 finishes it from p.14.",
+      "sources": [
+        "https://kingdom.fandom.com/api.php?action=parse&page=Episode_106&prop=wikitext&format=json",
+        "https://programming-cafe.com/amazon/primevideo/anime/anicomi-kingdom-list/"
+      ]
+    },
+    {
+      "episode": 107,
+      "continue_chapter": 376,
+      "kind": "parity",
+      "note": "C1: the episode ends inside ch 376 (p.15, as Rui runs into Shin). Resume IN 376; ep 108 finishes its last three pages.",
+      "sources": [
+        "https://kingdom.fandom.com/api.php?action=parse&page=Episode_107&prop=wikitext&format=json",
+        "https://kingdom.fandom.com/api.php?action=parse&page=Episode_108&prop=wikitext&format=json"
+      ]
+    },
+    {
+      "episode": 109,
+      "continue_chapter": 382,
+      "kind": "parity",
+      "note": "C1: the episode ends inside ch 382 (p.11). Resume IN 382; ep 110 finishes it from p.12.",
+      "sources": [
+        "https://kingdom.fandom.com/api.php?action=parse&page=Episode_109&prop=wikitext&format=json",
+        "https://programming-cafe.com/amazon/primevideo/anime/anicomi-kingdom-list/"
+      ]
+    }
+  ],
+  "anchor_hostile": [],
+  "annotations": [
+    {
+      "episodes": [
+        103,
+        104
+      ],
+      "kind": "partial",
+      "chapters": "364",
+      "note": "A47: ch 364's opening 5 pages (Kyou Kai rejoining the Hi Shin Unit, Ka Ryo Ten calling out to her) close the S3 finale; ep 104 opens at p.6 with the snow training and her two goals - the chapter's title beat. The scrap is ep 104's, so ep 103's END stays 363. p.18 of 364 is claimed by neither episode page."
+    },
+    {
+      "episodes": [
+        104,
+        105
+      ],
+      "kind": "partial",
+      "chapters": "367",
+      "note": "A47: ch 367's first 5 pages (the Ei Sei faction overtaking Ryo Fui's after the Battle of Sai) close ep 104; ep 105 opens at p.6 on Ri Shi's unease and finishes the chapter. The END of ep 104 stays 366."
+    }
+  ],
+  "repairs": [
+    {
+      "episode": 103,
+      "field": "end_chapter",
+      "old": 364,
+      "new": 363,
+      "why": "A47 (the END-side sliver). The stored 364 is a batch-6 arc-level estimate (medium) and the wave-2 verdict flagged it as single-field. kingdom.fandom's Episode 103 page contradicts ITSELF - the infobox says 'Chapter 364 (p.1-15)' while its own Trivia line says 'pages 1-5 of Chapter 364' - and Episode 104's field claims 364 (p.6-17), which only the Trivia reading can be true beside. programming-cafe's chapter->episode index assigns ch 364 to 4-1 (our ep 104) ONLY, and a per-episode review of S3 ep 26 confirms the finale ends on Kyou Kai rejoining the Hi Shin Unit = 364's opening pages, while ep 104's licensor synopsis and review both open on 364's body (Shin's 3000-man promotion, Kyou Kai's return and her two goals). A 5-page trailing scrap of the chapter the next episode starts on is that episode's under A47: ep 103's END is 363 別の道 (which is also literally the episode's title), chapters_adapted '359 (p.14-18), 360-363, 364 (p.1-5)'. This closes the wave-2 open flag; the fence still brackets this block (363 < 366).",
+      "sources": [
+        "https://kingdom.fandom.com/api.php?action=parse&page=Episode_103&prop=wikitext&format=json",
+        "https://kingdom.fandom.com/api.php?action=parse&page=Episode_104&prop=wikitext&format=json",
+        "https://programming-cafe.com/amazon/primevideo/anime/anicomi-kingdom-list/",
+        "https://animenb.com/anime-3-26-55490/"
+      ]
+    }
+  ],
+  "type_corrections": [],
+  "structure": {
+    "notes": "ROW IDENTITY: our rows 104-110 = S4 eps 1-7, joined by TITLE and air date against ja-WP's 第4シリーズ 各話リスト (第1話 戦後の七国 4月10日 ... 第7話 呼びかけ 5月22日), which matches our stored titles/dates one for one; never by index (R20). kingdom.fandom uses the SAME cumulative numbering as ours (its 'ep number' fields read 104-110) but its air dates run one day earlier (US date). CHAPTER SPACE: the manga's own numbering - fandom chapter pages, programming-cafe and the ja aggregators all agree, and pcafe's arc headers (第4期 成蟜の乱 at 364, 第4期 著雍の戦い at 379) match the fandom arc fields (Conspiracy in the Court Arc / Fire Dragons of Wei Arc). VOLUMES from the stored boundary table (v34 = 361-371, v35 = 372-382, v36 = 383-393), taken at the END chapter as every stored kingdom anchor does. PAGE COUNTS used for the A10/A47 calls come from the fandom chapter pages' own 'pages=' field: 364=18, 367=18, 370=18, 373=18, 376=18, 377=21, 378=18, 382=18, 383=18, 384=18, 385=19. COVERAGE is continuous 364(p.6)-385 across the seven rows with nothing skipped and nothing re-used; ENDs are monotone 366 < 370 < 373 < 376 < 378 < 382 < 385, inside the outer fence (ep 103 -> 363 after the repair, ep 129 -> 441). HANDOFF: my last row is ep 110 -> END 385 (its last page); ep 111 - the next sub-block's row - starts on ch 386 by both fandom and pcafe, so there is no straddle to hand across. DATA DEFECTS for the next agent: (1) kingdom.fandom's Episode 111 infobox carries 'ep number = 114' - a typo; the page title, prose and navigation all say 111. (2) The Episode 110 field drops ch 384 with no note (the documented kingdom.fandom drop class: 274, 306, 310-311, 339-340 in the S3 block) - pcafe is the antidote and is chapter-complete for 364-401.",
+    "order_only": []
+  },
+  "flags_for_sean": [
+    "FENCE REPAIR (ep 103, 364 -> 363, A47): this closes the wave-2 flag that ep 103's stored 364 rested on one self-contradictory wiki field. The evidence is the fandom page's own Trivia (364 p.1-5) agreeing with Episode 104's field (364 p.6-17), pcafe assigning 364 to 4-1 only, and a per-episode review showing the S3 finale ending on Kyou Kai's return (364's opening) while ep 104 opens on her two-goals declaration. If you prefer to leave the derivation-tier fence alone, ep 104's anchor is unaffected: its START is 364 either way and the two rows simply share the chapter.",
+    "ch 384 restored to ep 110 on pcafe + a sandwich argument (fandom itself puts 383 and 385 in ep 110 and 386 in ep 111, so 384 either aired here or was skipped outright; ch 386's summary and ep 111's licensor synopsis show 384-385's outcomes already in place). Anyone re-deriving ep 110 from kingdom.fandom alone will re-open the gap.",
+    "364 p.18 is claimed by neither ep 103 nor ep 104 (ep 103 takes p.1-5, ep 104 p.6-17) - a one-page hole in the wiki's bookkeeping, probably just sloppiness rather than a cut.",
+    "kingdom.fandom Episode 111's infobox says 'ep number = 114' (a typo) - reported so the 111-116 sub-block does not read it as a numbering claim."
+  ]
+}
