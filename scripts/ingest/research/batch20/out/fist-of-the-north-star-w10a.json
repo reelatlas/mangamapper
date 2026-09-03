@@ -1,0 +1,144 @@
+{
+  "series_id": "fist-of-the-north-star",
+  "summary": "Rows 109-114 open Hokuto no Ken 2 (our 110 = HnK2 ep 1) and adapt the first stretch of the Tentei (Celestial Emperor) arc, ch 137-149 of the 245-chapter WSJ numbering. Ep 110 is ch 137 alone (the ten-year skip, Joe's death, Mamu's father burned by the Imperial Executioner) minus that chapter's closing pages, which both comparison sites say the anime deletes outright; ep 112 is ch 138-139 (Barona's mistake, Nene's public execution, Bask's death, the reunion); ep 113 is ch 140-142 up to Geira's death. Ep 114 is where the anime stops following the manga's order: Hara cross-cuts the Kenshiro/Solia thread and the Falco/Hokuto-Army thread through ch 145-149, and Toei UN-CROSS-CUTS them — ep 114 plays only the Kenshiro side (the Harn brothers freed from their concrete block, ch 145; the visit to Mamiya's village and the elder's death, ch 146; the whole Ken vs Solia duel, ch 147-149), holding Falco's side back for eps 115-116. So ep 114's END is 149 with a `rearranged` annotation and the next episode back-jumps — the bleach 152-159 shape, and hokutosite says it plainly: 'today onward the Tentei arc's event order differs greatly from the manga'. Eps 109 and 111 take nothing under A1: 109 is a clip show with literally no new animation (RQ87), 111 is flatly アニメオリジナルストーリー (hokutosite) and is the only HnK2 row on hokuto.fandom's Filler page for this span — both stored types confirmed, no T28 repair. No repairs to stored data are proposed; all four anchors sit inside the outer fence (ep 108 -> 136, ep 152 -> 210) and the volumes (16, 16, 16, 17) agree with en.wikipedia's and hokuto.fandom's identical volume boundaries.",
+  "anchors": [
+    {
+      "episode": 110,
+      "end_chapter": 137,
+      "start_chapter": 137,
+      "chapters_adapted": "137 (minus its closing pages — Kenshiro on Kokuoh killing the Imperial Executioner in front of the doubled bounty posters — which the anime cuts entirely and replaces with the cloaked Kenshiro collapsing in a village)",
+      "volume": 16,
+      "confidence": "high",
+      "note": "A4/A10: the whole episode is ch 137. hokuto.fandom's two-way appearance index pins it three times — Joe 'Manga (ch. 137), Anime (ep. 110)', Imperial Executioner 'Manga (ch. 137), Anime (ep. 110)', Mamu 'Manga (ch. 137), Anime (ep. 110)' (Mamu is the girl whose father the convoy captain burns alive, which is ep 110's central scene). RQ87 and hokutosite independently list the same beats and both say the chapter's last pages are dropped, so the row ends mid-chapter (C1 continue below). The relocated imperial-capital/generator opening is NOT counted in the END — forward lift, ep-102 graft precedent; see the divergence annotation and flag.",
+      "sources": [
+        "https://hokuto.fandom.com/api.php?action=parse&page=HnK%20Chapter%20137&prop=wikitext&format=json",
+        "https://hokuto.fandom.com/api.php?action=parse&page=Mamu&prop=wikitext&format=json",
+        "https://rq87.flyingomelette.com/HNK/1/110/a.html",
+        "http://hokutosite.sakura.ne.jp/sakuhin/gensaku/hokuto/110.html"
+      ]
+    },
+    {
+      "episode": 112,
+      "end_chapter": 139,
+      "start_chapter": 138,
+      "chapters_adapted": "138-139 (ch 139 to its last pages — the reunion with Bat, Lin and Rihaku)",
+      "volume": 16,
+      "confidence": "high",
+      "note": "A4/A10: hokuto.fandom's index is exact — Bask 'Manga (ch. 138-139), Anime (ep. 112)'; ch 138's cast is Rihaku/Bat/Lin/Bask{1st}/Barona{1st}/Nene/Jun{Death}/Kenshiro and ch 139's is Kenshiro/Bask{Death}/Barona{Death}/Lin/Rihaku/Bat, which is this episode start to finish. RQ87 and hokutosite both list only ADDITIONS around it (Zorba and Zarji at the fake Hokuto grave, Ken razing County G, Jako's report, Rihaku's dream) and no manga content outside 138-139. The episode ends on ch 139's last page and ep 113 opens ch 140 (Yuria {Mo} — the pearl-necklace scene), so no continue point is needed.",
+      "sources": [
+        "https://hokuto.fandom.com/api.php?action=parse&page=Bask&prop=wikitext&format=json",
+        "https://hokuto.fandom.com/api.php?action=parse&page=HnK%20Chapter%20139&prop=wikitext&format=json",
+        "https://rq87.flyingomelette.com/HNK/1/112/a.html",
+        "http://hokutosite.sakura.ne.jp/sakuhin/gensaku/hokuto/112.html"
+      ]
+    },
+    {
+      "episode": 113,
+      "end_chapter": 142,
+      "start_chapter": 140,
+      "chapters_adapted": "140-142 (ch 142 to Geira's death only; its closing pages — bounty hunters going after Asuka, Ein racing home to save her, and Ein meeting Kenshiro's army with her — are held back, and arrive at ep 117)",
+      "volume": 16,
+      "confidence": "high",
+      "note": "A4/A10. hokuto.fandom's index: Ein 'Manga (ch. 140-160), Anime (ep. 113-122)', Geira 'Manga (ch. 140-142), Anime (ep. 113)', Buzori 'Manga (ch. 141), Anime (ep. 113)' — 140, 141 and 142 all land on this row, and Geira dies in ch 142 as he does here. Both comparison sites name the same omission at the end: RQ87 'When Ein leaves in the manga … his village is being attacked by bandits … This doesn't happen in the anime'; hokutosite 'アインがゲイラ郡都を去った後、賞金首がアスカをねらってくるというシーン削除'. Asuka's own index entry ('Manga (ch. 142-160), Anime (ep. 117-122)') is what proves the cut pages are DEFERRED, not dropped — hence the C2 parity continue, not a C1 straddle.",
+      "sources": [
+        "https://hokuto.fandom.com/api.php?action=parse&page=Geira&prop=wikitext&format=json",
+        "https://hokuto.fandom.com/api.php?action=parse&page=Buzori&prop=wikitext&format=json",
+        "https://rq87.flyingomelette.com/HNK/1/113/a.html",
+        "http://hokutosite.sakura.ne.jp/sakuhin/gensaku/hokuto/113.html"
+      ]
+    },
+    {
+      "episode": 114,
+      "end_chapter": 149,
+      "start_chapter": 145,
+      "chapters_adapted": "145-149, all partial and all restaged: the Harn brothers freed from their concrete block (145, freed by Bat and the Hokuto Army instead of Ein and Kenshiro, at a captured county capital instead of the A-class rebel prison), Kenshiro at Mamiya's village and the elder's death (146, told in the manga as a flashback of Falco's kill, restaged here as Solia killing him in the present), and the whole Kenshiro vs Solia duel to Solia's death (147-149). Falco's own thread through 146-149 is held back for eps 115-116",
+      "volume": 17,
+      "confidence": "high",
+      "note": "A4 + `rearranged`: the anime UN-CROSS-CUTS Hara's two parallel threads (the bleach 152-159 shape), so this row's END runs ahead of ep 115's and ep 115 back-jumps. Chapter identification is exact on hokuto.fandom's index — Mamiya 'Manga (ch. 26-82, 146, 160 …), Anime (ep. 23-58, 65, 114)' (ch 146 <-> ep 114 on the nose), Solia 'Manga (ch. 147-149), Anime (ep. 114)', Buzz Harn 'Manga (ch. 145-148), Anime (ep. 114-116)', Gil Harn 'Manga (ch. 145-160), Anime (ep. 114-116)'. hokutosite states the same three manga events for the row and their displacement: 'ケンがマミヤの村訪問、ハーン兄弟救出、ケンvsソリアといった原作のイベントがあるものの、その目的、場所、時期などが原作と大きく異なる' and '今回から帝都編は、原作と比べてえらくイベントの順番がかわります'; RQ87's Manga-differences list walks the same three, beat for beat (Solia's arm, the elder's death, the concrete block). START = 145 as the lowest chapter of the covered range (the ep-22 and ep-29 precedents); the episode's own opening is anime-original Jako framing, so A12 does not bite.",
+      "sources": [
+        "https://hokuto.fandom.com/api.php?action=parse&page=Solia&prop=wikitext&format=json",
+        "https://hokuto.fandom.com/api.php?action=parse&page=Mamiya&prop=wikitext&format=json",
+        "https://hokuto.fandom.com/api.php?action=parse&page=Buzz_Harn&prop=wikitext&format=json",
+        "https://rq87.flyingomelette.com/HNK/1/114/a.html",
+        "http://hokutosite.sakura.ne.jp/sakuhin/gensaku/hokuto/114.html"
+      ]
+    }
+  ],
+  "continue_points": [
+    {
+      "episode": 110,
+      "continue_chapter": 137,
+      "kind": "parity",
+      "note": "C1: ep 110 stops inside ch 137 — the chapter's last pages (Kenshiro riding Kokuoh past the doubled bounty posters and killing the Imperial Executioner) are cut from the anime and are animated nowhere later, so resume IN ch 137 to read them. Ep 111 is filler and ep 112 opens ch 138, so this is parity as well as a straddle.",
+      "sources": [
+        "https://rq87.flyingomelette.com/HNK/1/110/a.html",
+        "http://hokutosite.sakura.ne.jp/sakuhin/gensaku/hokuto/112.html"
+      ]
+    },
+    {
+      "episode": 113,
+      "continue_chapter": 145,
+      "kind": "parity",
+      "note": "C2/C3 parity at ep 114's START. Ep 113 stops at Geira's death inside ch 142; the rest of ch 142 and all of ch 143-144 (Ein rescuing Asuka, Ein joining the Hokuto Army, the prison raid with Ren and Beron) are animated later, at ep 117 — hokuto.fandom's index puts Asuka, Ren and Beron on ep 117. Skip ahead to ch 145 now and pick 142's tail through 144 up when ep 117 plays them.",
+      "sources": [
+        "https://hokuto.fandom.com/api.php?action=parse&page=Asuka&prop=wikitext&format=json",
+        "https://hokuto.fandom.com/api.php?action=parse&page=Ren&prop=wikitext&format=json",
+        "https://rq87.flyingomelette.com/HNK/1/113/a.html"
+      ]
+    },
+    {
+      "episode": 114,
+      "continue_chapter": 146,
+      "kind": "parity",
+      "note": "C2 parity after a reorder, and it points BACKWARDS (the d-gray-man 5 -> 2 precedent): ep 114 played only the Kenshiro/Solia half of ch 145-149, and eps 115-116 go back to pick up Falco's half of the same chapters — his assault on the Hokuto Army and his confrontation with Bat and Lin. Resume at ch 146 and skip the Solia pages of 147-149 you have already seen. Depends on ep 115's START, which is the neighbouring sub-block's row; see flags.",
+      "sources": [
+        "https://rq87.flyingomelette.com/HNK/1/115/a.html",
+        "http://hokutosite.sakura.ne.jp/sakuhin/gensaku/hokuto/115.html"
+      ]
+    }
+  ],
+  "anchor_hostile": [],
+  "annotations": [
+    {
+      "episodes": [110],
+      "kind": "divergence",
+      "chapters": "137",
+      "note": "Ch 137 is the whole of the row, but the frame is rebuilt: the anime OPENS on the Central Imperial Capital and its slave-driven generators, which the manga does not show until after Solia's death (hokutosite: '発電用の囚人が中央帝都に連れてこられるのは原作ではソリア死後だが、アニメでは物語冒頭' — i.e. ch 150 or later; Jakō's own manga debut is ch 150), adds Jako's report scene, adds Joe and his two friends visiting Kenshiro's fake grave and being attacked by the anime-original Zorba and Zarji, names Joe (unnamed in the manga), and replaces ch 137's closing pages with the cloaked Kenshiro collapsing in a village. The relocated capital material is NOT counted in the END (forward lift, the stored ep-102 graft {129} precedent)."
+    },
+    {
+      "episodes": [112],
+      "kind": "divergence",
+      "chapters": "138-139",
+      "note": "Ch 138-139 run in order but the anime brackets them with original material: Kenshiro destroying Zorba and Zarji at his own grave, County G razed on screen (the manga only mentions the raids), Jako receiving the reports, and Rihaku told of Kokuoh's hoofprints in the western desert. The ch-137 tail Toei deleted (the Imperial Executioner's death at the bounty posters) is listed here by hokutosite as a deletion, not a relocation: '司刑隊隊長が、バット等の賞金があがったのを見た後にケンに葬られる場面が削除'."
+    },
+    {
+      "episodes": [113],
+      "kind": "divergence",
+      "chapters": "140-142",
+      "note": "Ein and Geira are adapted in order, with an added Yuria flashback and pearl-necklace scene at the base, an added convoy report before Ken leaves, an added Jako assassination order, and Ein's manga farewell replaced by a goodbye to Bat and Lin. The chapter's remaining pages (bounty hunters targeting Asuka; Ein saving her) are cut here and reach the screen at ep 117."
+    },
+    {
+      "episodes": [114],
+      "kind": "rearranged",
+      "chapters": "145-149",
+      "note": "Toei un-cross-cuts the manga: Hara alternates Kenshiro-vs-Solia with Falco-vs-the-Hokuto-Army across ch 145-149, and the anime plays the Kenshiro thread whole in this episode, leaving Falco's thread for eps 115-116. Consequence: ep 114's END (149) runs ahead of ep 115's START, and ep 115 back-jumps — one END advance and one START regression, both `rearranged`. hokutosite marks the change at exactly this row: '今回から帝都編は、原作と比べてえらくイベントの順番がかわります'."
+    },
+    {
+      "episodes": [114],
+      "kind": "divergence",
+      "chapters": "145-149",
+      "note": "Every one of the three adapted sequences is restaged. The Harn brothers are freed by Bat and a Hokuto Army man at the last western county capital instead of by Kenshiro and Ein under the A-class rebel prison, and the concrete block is dragged away instead of split (so the brothers never tell Kenshiro about Falco). Kenshiro reaches Mamiya's village because he sees smoke on the march, not to leave Asuka there (Asuka has not been introduced yet in the anime), the village is attacked to lure him out, and the elder is killed on screen by Solia rather than in a Falco flashback; Mamiya and Airi pray at Rei's grave instead of the elder's. Solia fights Kenshiro at the village instead of on the road to Bat and Lin, Falco is never mentioned (no lost-eye story, no life-offered-to-Falco line), and the destroyed arm is switched from left to right. The four-generals coda (Boltz, Taiga, Shoki as Gento masters) is anime-original — Boltz and Taiga exist only in the anime, and Shoki is not a Gento Kō Ken user in the manga."
+    }
+  ],
+  "repairs": [],
+  "type_corrections": [],
+  "structure": {
+    "notes": "CHAPTER SPACE. Unchanged from the wave-6 verdict and re-verified for this span: en.wikipedia's 'List of Fist of the North Star chapters' numbers v16 = 135-143 and v17 = 144-152 with the same titles hokuto.fandom's chapter boxes carry (137 若き狼の叫び!, 145 金色のファルコ!, 146 黄金の刺客!, 147 たちあがる南斗!, 149 涙枯れし猛将!), and both match our stored volume boundaries exactly — every anchor's volume here is derived, not asserted. One caution for later waves: hokuto.fandom carries a 'HnK Chapter 136½ — He Who Rides With Me' between 136 and 137 (a much later bonus chapter about Kokuoh's blind eye, which RQ87 mentions at ep 112). It is NOT in en-WP's tankōbon list and is not part of the 245 mainline numbering; it is never adapted, and it must not be allowed to shift anything.\n\nROW IDENTITY. Our cumulative rows 110-152 are Hokuto no Ken 2 eps 1-43; RQ87 prints both numbers on every page ('Hokuto no Ken 2 episode 5 / Episode 114 overall') and hokutosite and hokuto.fandom's Filler page both use OUR cumulative numbering for HnK2 (the Filler page's HnK2 section reads '111', '130', '132'). No index joins were used anywhere; every claim is joined on a named character or a named beat.\n\nTHE UN-CROSS-CUT ZONE (the block's structural finding). Manga order through this span is: 145 prison / Harn brothers, 146 Mamiya's village + Falco moves on the Hokuto Army, 147 Solia intercepts Kenshiro while Falco closes on Bat and Lin, 148 the duel + Buzz's death, 149 Solia dies and Falco weeps. Anime order is: ep 114 = the Kenshiro column of that table only (145 + 146's village + 147-149's duel); eps 115-116 = the Falco column (146-147 onward, plus the anime-original Kenshiro vs Shoki fight); ep 117 = the material ep 113 skipped (142's tail, 143-144). So the run is NOT monotone across the 114/115 seam and cannot be made so honestly. HANDOFF: ep 115 should open on ch 146 — Falco's unit engaging the Hokuto Army at the captured capital, which the manga puts at the end of ch 146 and continues into 147 (RQ87: 'Falco's scene at the start happens before Solia's debut in the manga', i.e. before ch 147; hokutosite: '原作では落とした市都にファルコ部隊が援軍として訪れる'). The alternative reading is 145, since hokuto.fandom gives Falco 'Manga (ch. 145-165), Anime (ep. 115-124)'; I did not resolve it because ep 115 is not my row. Ep 115 will carry a `rearranged` START regression whichever value it takes.\n\nSOURCES. Three independent per-episode sources, all three live and all three consulted for every row: (1) hokuto.fandom via the MediaWiki API — the 245 chapter pages (volume, page count, JP title, cast in order of appearance), the per-character `appearances` two-way index ('Manga (ch. 147-149), Anime (ep. 114)'), the single 'Hokuto no Ken episodes' page, and the 'Filler' page; (2) rq87.flyingomelette.com/HNK/1/<ep>/a.html — English per-episode synopsis with a dedicated 'Manga differences' section (note: HnK2 episodes live under the /1/ path in OUR cumulative numbering, /HNK/2/ 404s); (3) hokutosite.sakura.ne.jp/sakuhin/gensaku/hokuto/<ep>.html (Shift-JIS, cumulative numbering) — Japanese synopsis with a 漫画版との違い bullet list. AFG has no page for this series at the standard slug (404), so AFL's type column is a single source and was used only as a cross-check; it agrees with all six stored types.\n\nA1 ROWS. Ep 109 — three sources, no dissent: RQ87 'This episode is a clip show of what has happened throughout the first four chapters … it has absolutely no new animation at all'; hokutosite '完全総集編'; hokuto.fandom's Filler page '109 - Clip show'. The stored A1 ruling (2026-08-25) that moved the terminal 136 anchor off this row stands untouched. Ep 111 — RQ87 'This episode is filler, and does not happen in the manga'; hokutosite 'アニメオリジナルストーリー … 北斗の拳２では珍しい完全オリジナルの回'; hokuto.fandom's Filler page lists a bare '111' under Hokuto no Ken 2. Its whole cast (Geld, Muhari, Haru) is anime-only on the wiki's index. Neither row quotes a manga fragment, so there is nothing even to annotate under T28 — no graft, no partial, no type repair.\n\nANIME-ORIGINAL SUBSTITUTIONS worth carrying forward into the later sub-blocks: Jako is a ch-150 character the anime introduces at ep 110 (hokuto.fandom: 'Manga (ch. 150-160), Anime (ep. 110-122)'), so every Jako scene before the capital arc is original framing; Shoki is not a Gento Kō Ken user in the manga and is promoted to General of the Red Light for the anime; Boltz and Taiga are anime-only replacements for Sheeno and Jask; Goru is replaced by an anime character named Joseph. None of these are chapter evidence in either direction.",
+    "order_only": []
+  },
+  "flags_for_sean": [
+    "MONOTONICITY, deliberate: ep 114's END (149) runs ahead of ep 115's START (~146). This is the un-cross-cut shape (bleach 152-159), not an error — Hara cross-cuts Kenshiro/Solia with Falco/Hokuto-Army through ch 145-149 and Toei separates the threads. Alternative if you would rather keep the run monotone: read ep 114's Solia duel as a forward GRAFT and set its END to 146. I rejected that because the duel is the episode's whole plot and its title beat (the Gento Kō Ken introduction), not a fragment — the ep-102 graft {129} precedent is a few pages of bikers, this is two thirds of an episode. The ep 115-120 agent must confirm ep 115's START (146 vs 145); ep 114's continue point depends on it.",
+    "EP 110's forward lift is unnumbered on purpose. hokutosite says the imperial capital's power-generation prisoners appear in the manga only 'ソリア死後' (after ch 149), which makes ch 150 ('死を流す運河!' — the canal that carries the used-up slaves' corpses out of the capital, and Jakō's own first chapter) the obvious candidate, but no source states the chapter and I would not put a number in the data on an inference. It is recorded as prose inside the ep-110 divergence annotation and is not counted in that row's END. If a later sub-block anchors the capital arc it should settle this.",
+    "EP 113's continue is 145 (parity at ep 114's START), NOT the straddled 142, because ch 142's tail and ch 143-144 are demonstrably animated later at ep 117 (hokuto.fandom: Asuka ep 117-122, Ren ep 117, Beron ep 117) — the C2/C3 shape rather than C1. Worth a glance at curation since the row's END is itself a mid-chapter stop."
+  ]
+}
